@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95.ebuild,v 1.1 2006/01/13 13:48:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95.ebuild,v 1.2 2006/02/04 17:23:49 flameeyes Exp $
 
 inherit eutils font autotools flag-o-matic
+
+PATCHLEVEL="1"
 
 IUSE="aalib alsa dv lirc mmx motif nls opengl quicktime X xv zvbi xext"
 
@@ -10,7 +12,8 @@ MY_FONT=tv-fonts-1.1
 DESCRIPTION="TV application for the bttv driver"
 HOMEPAGE="http://bytesex.org/xawtv/"
 SRC_URI="http://dl.bytesex.org/releases/xawtv/${P}.tar.gz
-	X? ( http://dl.bytesex.org/releases/tv-fonts/${MY_FONT}.tar.bz2 )"
+	X? ( http://dl.bytesex.org/releases/tv-fonts/${MY_FONT}.tar.bz2 )
+	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -70,14 +73,11 @@ src_unpack() {
 	unpack ${A}
 	if use X; then
 		cd "${WORKDIR}/${MY_FONT}"
-		epatch "${FILESDIR}/${MY_FONT}-nox.patch"
+		epatch "${WORKDIR}/patches/extra/${MY_FONT}-nox.patch"
 	fi
 	cd "${S}"
-	epatch "${FILESDIR}/${PN}-3.94-allow-xlibs-in-normal-search-path.patch"
-	epatch "${FILESDIR}/${PN}-3.94-no-x11.patch"
-	epatch "${FILESDIR}/${P}-bindnow.patch"
-	epatch "${FILESDIR}/${P}-autocolor.patch"
-	epatch "${FILESDIR}/${P}-sparc.patch"
+
+	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	eautoreconf
 }
 

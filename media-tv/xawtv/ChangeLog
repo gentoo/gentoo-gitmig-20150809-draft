@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.29 2006/01/13 13:48:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.30 2006/02/04 17:23:49 flameeyes Exp $
+
+  04 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/tv-fonts-1.0-gentoo.diff, -files/tv-fonts-1.1-nox.patch,
+  -files/xawtv-3.94-gcc4.patch, -files/xawtv-3.95-autocolor.patch,
+  -files/xawtv-3.95-bindnow.patch, -files/xawtv-3.95-sparc.patch,
+  -files/alevtd-style-mozilla.diff, -xawtv-3.86-r2.ebuild,
+  -xawtv-3.94-r2.ebuild, xawtv-3.95.ebuild:
+  Move patches in a separate patchset out of ${FILESDIR}.
 
 *xawtv-3.95 (13 Jan 2006)
 
