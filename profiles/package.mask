@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4948 2006/02/03 22:24:46 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4949 2006/02/04 00:38:07 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1490,11 +1490,6 @@ net-dialup/hcfusbmodem
 # <liquidx@gentoo.org> (10 Mar 2003)
 # not really stable enough for my tastes. needs testing.
 dev-db/mergeant
-
-# <mkennedy@gentoo.org> (14 Dec 2002)
-# see dev-db/postgresql #11822, net-im/sim #11654, and net-misc/mico
-# (btw, all the other distros are using 2.5.4a)
->=sys-devel/flex-2.5.23
 
 # <phoenix@gentoo.org> (21 Nov 2002)
 # The huge nsplugins mask. These plugins use
