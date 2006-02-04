@@ -1,34 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6a25fb90e7aaa745b897aa073c901406 ChangeLog 1478
-RMD160 c2ef49fa5e174a7206faf21b74d9535e0f3b7dc2 ChangeLog 1478
-SHA256 9f64345b506d457d9fce9a5ecae2b997ff2930020ab9a0e1eaf2042d74be6e7b ChangeLog 1478
+MD5 83e6830874b7ca35ef49b3ad59bac466 ChangeLog 1563
+RMD160 fd1962e4367ff9f26054bcbd9d295bb706cf9c1e ChangeLog 1563
+SHA256 5cf65a39386dfb0e9afd4913aa2fc1e126537fc8cbd88a03394ec4aa1162d3e5 ChangeLog 1563
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-libgda-0.10.1 74
-RMD160 fa6949bedae0740172dc78e728e43bd62a6eb1bf files/digest-ruby-libgda-0.10.1 74
+RMD160 e49431d5695263dd310dd5e20efa18d8684d4906 files/digest-ruby-libgda-0.10.1 74
 SHA256 d657f9a43ed60a35bee960b104511f1d24fcb74261ef4d9ec8a9af8fd76509ce files/digest-ruby-libgda-0.10.1 74
-MD5 a4b34a50cd6ba325e1e9e2e1bf1b9302 files/digest-ruby-libgda-0.12.0 271
-RMD160 b0a4cc6eb95abe26f447486a012fd1f272395186 files/digest-ruby-libgda-0.12.0 271
-SHA256 b773851d732ca0499a78b1648bab98c613f369249eb2f93cad323842f4860dc1 files/digest-ruby-libgda-0.12.0 271
+MD5 234c36d5b3191cebe45a04a18919f588 files/digest-ruby-libgda-0.12.0 271
+RMD160 21df301e2b96a0f58b1ff45f88a3d2a843c63353 files/digest-ruby-libgda-0.12.0 271
+SHA256 bd646ff076536868bda983b1ed3cc59ed4378be820bd27cba848a0cd9ebab302 files/digest-ruby-libgda-0.12.0 271
 MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-libgda-0.14.1 75
-RMD160 ebf4d5f37e45706e78fdca4bac50a0311a6e9b69 files/digest-ruby-libgda-0.14.1 75
+RMD160 78c250bf80fdc18262e8ee04a030aae9157a45fd files/digest-ruby-libgda-0.14.1 75
 SHA256 0ca308d4b2ac8e367873d30133ec61d5592222d3c44a1c676bbd084926b59583 files/digest-ruby-libgda-0.14.1 75
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-RMD160 e11407ce8fd8190481bf0bf20b788cdea87f76b3 metadata.xml 157
+RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
 SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
-MD5 8bc4314b83683bbbbf29dab107d55a2a ruby-libgda-0.10.1.ebuild 471
-RMD160 e61522e5014fc33e9bd949b166d9f6137b8cf0e0 ruby-libgda-0.10.1.ebuild 471
-SHA256 4a7cf52d81bcd417302ab829cfe92b153cf0109462e8a7528adea8275462c039 ruby-libgda-0.10.1.ebuild 471
+MD5 dc3c5102dc848e42ad3425d203a1ef2f ruby-libgda-0.10.1.ebuild 471
+RMD160 961403396c9f27ef14de3e6a4554a58269ca6927 ruby-libgda-0.10.1.ebuild 471
+SHA256 778295f0b946cac5c2ae86ebfd4734394cd99adefc140b8086fe5e41f5cd907c ruby-libgda-0.10.1.ebuild 471
 MD5 504647af7cae108216a68d10c15d069e ruby-libgda-0.12.0.ebuild 523
-RMD160 671afb15fa28e67aaf59380d220d5e569914da66 ruby-libgda-0.12.0.ebuild 523
+RMD160 6c34b345ce5ee2654a441bae09725052b78e58ee ruby-libgda-0.12.0.ebuild 523
 SHA256 1882f633820893a6e6c213b45c86251496d6f02517fa9958ddef9b09484f880b ruby-libgda-0.12.0.ebuild 523
-MD5 df835063729ef19b2ea42667f462abf5 ruby-libgda-0.14.1.ebuild 454
-RMD160 dfe4b51d88ff74b6abc5bf1919cbbfb9dfb28125 ruby-libgda-0.14.1.ebuild 454
-SHA256 600907db0588cbd02140c513057f5a92cfb031eccc36585349ce6f2974fccb49 ruby-libgda-0.14.1.ebuild 454
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD37/+JrHF4yAQTrARAgO2AJ9XwWw4PXY3oVALQKdi5Iktr5FBjACglIXk
-R9Qd5BA+jiSW2LZuWD7z1fk=
-=nZ5F
------END PGP SIGNATURE-----
+MD5 176b9e0f59e9f2252a1fb07c2b89cece ruby-libgda-0.14.1.ebuild 449
+RMD160 f3cf7814035e1e6b8eba427c47a25bf692eb1303 ruby-libgda-0.14.1.ebuild 449
+SHA256 430c3c8a17a99577f8054af6e51ae94ac039ea2825f11738e9aabdba27b40b91 ruby-libgda-0.14.1.ebuild 449
