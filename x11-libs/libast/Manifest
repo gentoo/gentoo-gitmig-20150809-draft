@@ -2,23 +2,51 @@
 Hash: SHA1
 
 MD5 d9ce83f9ce1a1c7982844ca7470be551 ChangeLog 3314
+RMD160 1c08cf7e1a2df3f3e74f62b9424c9a4e3ac4c134 ChangeLog 3314
+SHA256 43faa86eb956b4a04af045378053c64bd2b9e49121a454fad98bede53fcf738d ChangeLog 3314
 MD5 2a9e814b7851e9e22178430153da8110 files/digest-libast-0.5-r2 62
+RMD160 d8b14753731dd4ce0bb8992e015060afbc997f60 files/digest-libast-0.5-r2 62
+SHA256 09da4abe23661eb92ce64e7ceb9195059fddc973890ac7793f472e2365fcc0d9 files/digest-libast-0.5-r2 62
 MD5 0cf4b65fa766332e528bddb7cf3d74e2 files/digest-libast-0.6.1 64
+RMD160 959d746ba11f8b071ad77df5d5382f82cf240e41 files/digest-libast-0.6.1 64
+SHA256 869013c933fff7a8549d00f44a49bec622db7996782be01cee7cc328b5ec595b files/digest-libast-0.6.1 64
 MD5 0cf4b65fa766332e528bddb7cf3d74e2 files/digest-libast-0.6.1-r1 64
+RMD160 959d746ba11f8b071ad77df5d5382f82cf240e41 files/digest-libast-0.6.1-r1 64
+SHA256 869013c933fff7a8549d00f44a49bec622db7996782be01cee7cc328b5ec595b files/digest-libast-0.6.1-r1 64
 MD5 27508ebcac00dcf785546f1bdf412d28 files/digest-libast-0.7 62
+RMD160 9aa6c26a07fd5ef042d757e5d05e27cc2d3a5b4f files/digest-libast-0.7 62
+SHA256 88704afd0a76c135dc6b314bf6f5e174e3fa145b2526980d51f4971d5e97520a files/digest-libast-0.7 62
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-libast-9999 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-libast-9999 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-libast-9999 0
 MD5 e050b956ec4efca8d3dab20f609ba5c1 files/libast-0.6.1-config-warning.patch 6797
+RMD160 f018e0d082bb29c0341cd3fb721e91ac010ff0bb files/libast-0.6.1-config-warning.patch 6797
+SHA256 5fec99a27c953331a717a31dd87d8e04fe98e39f1dac1832c1871f34bd573887 files/libast-0.6.1-config-warning.patch 6797
 MD5 177b67afc64c8e52522833c7ce007ab5 files/libast-64bit.patch 295
-MD5 11b1f2e66569782863ba4ab5e8660df1 libast-0.5-r2.ebuild 865
+RMD160 5e16b5a69e6b1b953df36262fecedd8d3cd96041 files/libast-64bit.patch 295
+SHA256 37847cda4c01e0dafd330a94e2b51f0abe5469c94025979356aca5df729cdd9a files/libast-64bit.patch 295
+MD5 5b6e00417069cb5c9245a265c2850c92 libast-0.5-r2.ebuild 953
+RMD160 1dbc6c0efcac37d0703e358bfd6a236e544f3ee7 libast-0.5-r2.ebuild 953
+SHA256 66dac372c59cf99323f3cedd0fdd94e993d1cce2bea88881f131c6f85227d78e libast-0.5-r2.ebuild 953
 MD5 44c5a6b967f1259df4f297d7f1813368 libast-0.6.1-r1.ebuild 1048
-MD5 4817e8c873a7ae52fbc5794e708a6f7d libast-0.6.1.ebuild 849
+RMD160 1b0c3c3dbe0328939054a76ad3b0f15b5a2c03c2 libast-0.6.1-r1.ebuild 1048
+SHA256 5ac93cd9f5748469815040613228905f8f28b9233e9722a3c95c6e908e9729bc libast-0.6.1-r1.ebuild 1048
+MD5 e464e528a3dc26dc83c6c722a03467f5 libast-0.6.1.ebuild 939
+RMD160 e452e5027d66b0ff7f7559a6e5bc3915ea15b631 libast-0.6.1.ebuild 939
+SHA256 7335531dea204158ae658ab45702cbd6f82b5a4f9ae8bb6fc943794b55f815cc libast-0.6.1.ebuild 939
 MD5 c4e2adc3b71ac3f9936c3db0354bdd35 libast-0.7.ebuild 921
+RMD160 32466e3ad9c2274a897f7dfbaff38bede2691a61 libast-0.7.ebuild 921
+SHA256 4edfa0ae2ed36484811190159c318104ff8d349467d5b12d7bd795930bfadbf2 libast-0.7.ebuild 921
 MD5 cdf153f9f63c593807adda0e8513e79c libast-9999.ebuild 1100
+RMD160 38d27e989348053234df40772742129455178bfb libast-9999.ebuild 1100
+SHA256 f48cd0b1792a9cd223d33642bb589d0497f63f0aa054da6d9218a9adffff07f6 libast-9999.ebuild 1100
 MD5 ec45fec065a8eccc43870fc678126de7 metadata.xml 820
+RMD160 9843e0d03eb4fdf394087b9850e5c23be5b829de metadata.xml 820
+SHA256 1ce13b9a284552eb7d5b5b6f0ef1ce32136a353d86b87adf522958baafb01f0b metadata.xml 820
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD3F9y2+ySkm8kpY0RAm22AJ9v8A7loV5nX5OgbPo0rxDAjFFtmACfZCLH
-w84HSPTvsS4aOhXmsCiHbK0=
-=n0ub
+iD8DBQFD4/c62+ySkm8kpY0RAuhxAJ9VIV4IjlesYkoj6V7ZyBt2sXHvgACeOrve
+KVe0l58HsEmV5MBsCfkxHiU=
+=EpAU
 -----END PGP SIGNATURE-----

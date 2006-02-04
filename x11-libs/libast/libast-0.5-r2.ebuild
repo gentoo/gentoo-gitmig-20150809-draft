@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-0.5-r2.ebuild,v 1.12 2005/07/08 12:13:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-0.5-r2.ebuild,v 1.13 2006/02/04 00:36:22 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE="imlib mmx pcre truetype"
 
-DEPEND="virtual/x11
+DEPEND="|| ( ( x11-libs/libXt x11-proto/xproto x11-libs/libICE x11-libs/libSM x11-libs/libX11 ) virtual/x11 )
 	truetype? ( =media-libs/freetype-1* )
 	imlib? ( media-libs/imlib2 )
 	pcre? ( dev-libs/libpcre )"
