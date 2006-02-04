@@ -1,21 +1,49 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b6d82bac10561c237affc1c8c5394546 ChangeLog 1517
-MD5 1de8261c2fc8ebfe8575aeaa4926b61c files/digest-klamav-0.17.3 66
-MD5 5762e5e731d5d99059311c3000bfa1c3 files/digest-klamav-0.22.1 66
+MD5 ac772888c29c0242dcffa30ec9a72a07 ChangeLog 1781
+RMD160 9f8fc25c9309e90375e5aa11a20a21e40081b0e2 ChangeLog 1781
+SHA256 870a0fcbafb4e53202eccaa6c5f780288ef514d2eaafd2bd935c4eb2d26af065 ChangeLog 1781
+MD5 05418e4762e6978f2b5138c304e5d4bf files/digest-klamav-0.17.3 244
+RMD160 d270520e6329bc0fb4640b211368518d20fd25ce files/digest-klamav-0.17.3 244
+SHA256 8970634eeea0468274112dd440ad2c36372f65aeec73d27d3afad79f14f3cac7 files/digest-klamav-0.17.3 244
+MD5 326f080e1560b4ba7d9a8d13f09b52e5 files/digest-klamav-0.22.1 244
+RMD160 1ece5546f6e2ae34c440de7c6d118eca17c3708d files/digest-klamav-0.22.1 244
+SHA256 e31d9f80c720284dbfd328011e81e115476a17b7787b9af518860b59c98a4bb7 files/digest-klamav-0.22.1 244
 MD5 193ef82b8cec98567eea39ce816cc13f files/digest-klamav-0.30.3 73
+RMD160 7f74b3629f8dddd7e51612da14ab2d2cb63e856b files/digest-klamav-0.30.3 73
+SHA256 6e27363f0832c87977c5a92163b297694e3779829e75f84c2f0174c5c642361a files/digest-klamav-0.30.3 73
 MD5 93111ebf981cc770c210a11f278011e1 files/digest-klamav-0.32 71
+RMD160 78deb919ff91c7f503b045fdeee9fd45d64d538c files/digest-klamav-0.32 71
+SHA256 058fee1b0427bb627d8abd315cd53ea719cbaa823a75f587c86f68f6f4b7feca files/digest-klamav-0.32 71
+MD5 023d210ebe32acd46ccfee7a52e3a19a files/digest-klamav-0.35 259
+RMD160 07310bef54cdeacda7df6819cec2eecb619ab38b files/digest-klamav-0.35 259
+SHA256 0a4d98d27003ee9933b2906fbb2a9d76b7f6d65ed147f0505aa07a8e851baf07 files/digest-klamav-0.35 259
 MD5 c56ae7218aa66579a77f03b7f4353166 files/klamav-0.32-parallelmake.patch 1187
+RMD160 b2e3be531bf6d6675b5f5202a1076b472686f578 files/klamav-0.32-parallelmake.patch 1187
+SHA256 0243e5e4e6bcdc748d8d18daaf92cfeb37f9e2544d64e7fd982f226552ed1b0f files/klamav-0.32-parallelmake.patch 1187
 MD5 663ae694ff0c2c6d89b70af1005ce731 klamav-0.17.3.ebuild 493
+RMD160 0ef257851ac40bb2e35b93bc01c0c4c1aae4c33a klamav-0.17.3.ebuild 493
+SHA256 2e706c799c973e8a888d914c185a8215d3dd1308bc520a2206f03f5eb069ce51 klamav-0.17.3.ebuild 493
 MD5 016c7c8f4c86f116407a7950d9cf21cc klamav-0.22.1.ebuild 494
-MD5 6369e90dd7f4c09818f1b5d69f051396 klamav-0.30.3.ebuild 543
+RMD160 01e6b492d2839246f7f90d5028e2bd2ada1aefd4 klamav-0.22.1.ebuild 494
+SHA256 537aa1f08b6679999e7b2b03546cedb81576f9f62afc4a8442c28b2493eee61d klamav-0.22.1.ebuild 494
+MD5 fd9ca675842baaed5cfefa50509613c3 klamav-0.30.3.ebuild 543
+RMD160 e78c4671f2879c564643296db67c086efc277a0f klamav-0.30.3.ebuild 543
+SHA256 2bea5923be8b10db156efe5305b146b6439095b4b90e9e6abfc825f3239e9568 klamav-0.30.3.ebuild 543
 MD5 e4eb6eda210f1a4e9bd6ff6f9bda9434 klamav-0.32.ebuild 649
+RMD160 e53a5258665261f41a64edb333166acb526f626f klamav-0.32.ebuild 649
+SHA256 def355ffc3d75e388d27c499ec164c2fcac810e805b311c5c29331d3c90f5763 klamav-0.32.ebuild 649
+MD5 6d996d6a6415f567ba13882688fd9efc klamav-0.35.ebuild 728
+RMD160 7573ee066abd7956df52edd4726c2e3131e1310f klamav-0.35.ebuild 728
+SHA256 b114bcadf41ad3163e808083c843a0bc07e1563c99010239ccf8f3fd85a940a0 klamav-0.35.ebuild 728
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwvrdAiZjviIA2XgRAgvKAJ9McVeNXwyWdMvyHQU3mH9IOL/RMwCfdihE
-9cR/gNiG2W3YYaueEDlePjo=
-=FiM/
+iD8DBQFD5Idb7IRIh26aCTkRAmwhAJ9yW//RDxVeigD5NB+Y7ipqdikEFACgoESK
+14vqFEbAp3870vAch+wr5zQ=
+=Ngn1
 -----END PGP SIGNATURE-----
