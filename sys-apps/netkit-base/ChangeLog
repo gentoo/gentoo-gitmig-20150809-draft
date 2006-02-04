@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/netkit-base
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.25 2005/04/29 10:42:33 azarah Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.26 2006/02/04 20:37:23 vapier Exp $
+
+  04 Feb 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/003_all_netkit-base-0.17-gcc4.patch,
+  -files/003_all_netkit-base-0.17-gcc4.patch.bz2,
+  +files/004_all_netkit-base-0.17-misc-fixes.patch,
+  -files/004_all_netkit-base-0.17-misc-fixes.patch.bz2,
+  -files/001_alpha_netkit-base-0.17-ping-fix.patch.bz2,
+  -files/002_all_netkit-base-0.17-wrong-byte-fix.patch.bz2,
+  netkit-base-0.17-r8.ebuild:
+  Uncompress patches #120693 by Simon Stelling and just drop the ping related
+  patches since we dont use ping from this package anymore.
 
   29 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/003_all_netkit-base-0.17-gcc4.patch.bz2,

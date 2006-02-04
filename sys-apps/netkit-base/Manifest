@@ -1,19 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 16f9f6cfe937e7f3bcf6a52d9d1c2f17 ChangeLog 4213
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 e1fb4407613c7df9285bc22e6903d869 netkit-base-0.17-r8.ebuild 1311
-MD5 a6d426736cbb3c0534504a6e2d041b36 files/001_alpha_netkit-base-0.17-ping-fix.patch.bz2 686
+MD5 aca07fc6c20258deb5805ef224e825f7 ChangeLog 4752
+RMD160 b105a3fa176d688e656adcd1c160b2e0b87f49e3 ChangeLog 4752
+SHA256 751ecfc7b80727e11fb90fd740a675b0987da1d81208e60a458ca5848897fe60 ChangeLog 4752
+MD5 060fa9ccf61823f2c8364c976ecf53ac files/003_all_netkit-base-0.17-gcc4.patch 321
+RMD160 27cdb5719874f908a0ad3ef134d711b129ea914b files/003_all_netkit-base-0.17-gcc4.patch 321
+SHA256 8ab9c712ce08fc62591303e54348d9cacd36a6cd5a25b7c002edbdaa16cbba78 files/003_all_netkit-base-0.17-gcc4.patch 321
+MD5 250c30a0b1cbe0cba8048299202e1f12 files/004_all_netkit-base-0.17-misc-fixes.patch 1601
+RMD160 427d6fa945c6bb05c67f8658cfdd536d84c34ca9 files/004_all_netkit-base-0.17-misc-fixes.patch 1601
+SHA256 a820d7daef5b03a821f94f14a2a0998465db579a6abfbad17eece55a1753b1ef files/004_all_netkit-base-0.17-misc-fixes.patch 1601
 MD5 a770366b91d1b0e666ed61ccfff827bc files/digest-netkit-base-0.17-r8 67
-MD5 93d4bc3300be01ea835abfc46863d005 files/002_all_netkit-base-0.17-wrong-byte-fix.patch.bz2 425
+RMD160 9533ea47d8ddd713d2c327f2b3e123e8f0eea5ff files/digest-netkit-base-0.17-r8 67
+SHA256 fc4ef7f7f7a9a06f214531e6b41be6e7510a59f516c10a9da19430a82b7ce27f files/digest-netkit-base-0.17-r8 67
 MD5 9fd363583a8d1e68d34ff81fcf74c034 files/inetd.rc6 580
-MD5 809c07c7f0ff80b272ee8e2b1249c63c files/004_all_netkit-base-0.17-misc-fixes.patch.bz2 722
-MD5 1e5771fef89d824942c9b812bf03a4cf files/003_all_netkit-base-0.17-gcc4.patch.bz2 286
+RMD160 f1a1907f4780466a3db077d0e7d83d9f5522a4a3 files/inetd.rc6 580
+SHA256 beac566412f27c60c315f7c2fbc24fda117be7673c9b0eb8e692441dca79f336 files/inetd.rc6 580
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 eba990d46c1032730428794bcd1bca9b netkit-base-0.17-r8.ebuild 1232
+RMD160 e27401076e8ee37e0469b3dce5784473ad2078c6 netkit-base-0.17-r8.ebuild 1232
+SHA256 85351ee37f4afd1c157d07153bb03cbab1bacea9135e349f928751608def5eca netkit-base-0.17-r8.ebuild 1232
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCchDG1ZcsMnZjRyIRAtQpAKCGU595cNFRC08QcD0wsTH/ZVa0cwCfYcnR
-xVc606Qs6PQ1i+DcsXc+GCo=
-=GZz9
+iD8DBQFD5RCR2+ySkm8kpY0RAvzLAJ9W/JAgeGIjqK761RojJ+WSndRo8ACggXCg
+SMIAtqF0KveeYVqEpWQjhV8=
+=Q83E
 -----END PGP SIGNATURE-----
