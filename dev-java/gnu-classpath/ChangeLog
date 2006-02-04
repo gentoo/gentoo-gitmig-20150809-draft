@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.47 2006/01/23 16:46:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.48 2006/02/04 18:13:29 wormo Exp $
+
+  04 Feb 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  gnu-classpath-0.19.ebuild, gnu-classpath-0.20.ebuild:
+  mark ~ppc (Bug #112207)
 
   23 Jan 2006; Petteri Räty <betelgeuse@gentoo.org>
   -gnu-classpath-0.15-r1.ebuild:

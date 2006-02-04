@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.20.ebuild,v 1.1 2006/01/22 05:53:57 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.20.ebuild,v 1.2 2006/02/04 18:13:29 wormo Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/classpath"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 # Add the doc use flag after the upstream build system is improved
 # See their bug 24025
