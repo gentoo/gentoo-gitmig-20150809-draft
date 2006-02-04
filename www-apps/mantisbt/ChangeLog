@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.25 2006/01/17 22:37:52 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.26 2006/02/04 17:34:50 rl03 Exp $
+
+*mantisbt-1.0.0 (04 Feb 2006)
+
+  04 Feb 2006; Renat Lumpau <rl03@gentoo.org> -mantisbt-1.0.0_rc2.ebuild,
+  -mantisbt-1.0.0_rc3.ebuild, -mantisbt-1.0.0_rc4.ebuild,
+  -mantisbt-1.0.0_rc5.ebuild, +mantisbt-1.0.0.ebuild:
+  Version bump. Still in p.mask pending verification of upstream tickets 5956
+  and 6002.
 
 *mantisbt-1.0.0_rc5 (17 Jan 2006)
 
