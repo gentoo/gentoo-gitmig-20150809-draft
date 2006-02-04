@@ -19,16 +19,16 @@ SHA256 df5d1d227b60729da07bc0e0a01ccdba505aa70622b7705b0d476f4f8e1abd63 files/gn
 MD5 4491f5ada043c04c52d153a8ca3e3e1a files/gnophone-0.2.4-raw2h.c.patch 1109
 RMD160 df8b7fbe224ac11c5947bcf05a7b50bf70a64322 files/gnophone-0.2.4-raw2h.c.patch 1109
 SHA256 3306128121a8e38804f424114ae35e10fd5b53302e1bc767cd32e20e1c5a73af files/gnophone-0.2.4-raw2h.c.patch 1109
-MD5 c64bcda26f616ecc46be987507e3e252 gnophone-0.2.4-r1.ebuild 1453
-RMD160 10ba2d50f22576a0c887e68a390b4b465a4f7766 gnophone-0.2.4-r1.ebuild 1453
-SHA256 da0ad774be64b2e2687cef8c2428dc859bb0c485d8edeca077c21005f6def4c0 gnophone-0.2.4-r1.ebuild 1453
+MD5 671f4679b8b0b5affadbce02dc05973b gnophone-0.2.4-r1.ebuild 1443
+RMD160 c749c6ff63741d7780d8343ed85131e5e7dfb219 gnophone-0.2.4-r1.ebuild 1443
+SHA256 d72db96422027b98e6cfe6d95cbf4f85fc90cc4ea1bcde4fe958aae2084de54e gnophone-0.2.4-r1.ebuild 1443
 MD5 1c3e9641b79caf979de0b8f8e341ab93 metadata.xml 373
 RMD160 4b7e6d826cfe0502b8d79f1fa443be20ab7d4baf metadata.xml 373
 SHA256 89218dd64351b5135859cd75a97bf733f197bbe6a94957e72c0191eda20a7a03 metadata.xml 373
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFD5UIpmdTrptrqvGERAg7LAJ0SKMgifKZtYvg/BT2pzBMbRwJVoACdFy4f
-Uv8Ulx1x1ciSbXpK1GPQ+WE=
-=C602
+iD8DBQFD5UKmmdTrptrqvGERAnpCAJ4lak9M3z/HWaGgkSRn503mMs1k7QCdFMJQ
+Hp3zNF2bDlyBGORx98kc5h4=
+=glee
 -----END PGP SIGNATURE-----
