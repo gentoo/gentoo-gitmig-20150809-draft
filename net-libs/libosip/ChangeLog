@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libosip
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.22 2005/10/18 03:09:07 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.23 2006/02/04 07:40:32 dragonheart Exp $
+
+*libosip-2.2.2 (04 Feb 2006)
+
+  04 Feb 2006; Daniel Black <dragonheart@gentoo.org> +libosip-2.2.2.ebuild:
+  version bump
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org> libosip-2.2.1.ebuild:
   Mark 2.2.1 stable on alpha

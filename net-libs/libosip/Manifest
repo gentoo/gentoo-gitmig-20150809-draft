@@ -1,18 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
 MD5 9c50539aee2c28a817278f3c50ae9878 ChangeLog 3306
-MD5 6db12aae86c36824727616a140006d1c libosip-2.2.1.ebuild 824
-MD5 ac431a00e6d378b190d682af321e6618 libosip-0.9.6.ebuild 774
-MD5 bef19142522b953ef2e7488cb01a82e3 libosip-0.9.7.ebuild 543
-MD5 c31b44fd220e0d9aa00d0639d6a9ff9b files/digest-libosip-0.9.7 65
-MD5 5249f8f6a6158f8730e719f07b021acb files/digest-libosip-2.2.1 66
+RMD160 4ae92110ab3c7888b2f3af1bcb2a1131fe6b79be ChangeLog 3306
+SHA256 241f1cec991983b35c0c85a624f4fbbc7b77f9b9f006b85af50143a5abb5fd2a ChangeLog 3306
 MD5 bdae20c3d071939ffd92629f5d3c00f5 files/digest-libosip-0.9.6 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDVGdhJrHF4yAQTrARAjbrAJ9BEiHsy70O8F/weeGOEr5u8U3fWgCgsI1v
-sbDVD2lrnE9zC7YS32BDfJo=
-=RjJ2
------END PGP SIGNATURE-----
+RMD160 a51cad5c4e931b74c96ce4336b440d46192db63d files/digest-libosip-0.9.6 65
+SHA256 2f068ea58d047ee3d4d390fc7237b73af1f96546db6d49e3bf926a4b6f472ab3 files/digest-libosip-0.9.6 65
+MD5 c31b44fd220e0d9aa00d0639d6a9ff9b files/digest-libosip-0.9.7 65
+RMD160 79d720116f1342057e05f6531609aa85173d9276 files/digest-libosip-0.9.7 65
+SHA256 d394de289b3a08f960ad85459a4712058d20ee8bc9831ead806771a1b6e1017b files/digest-libosip-0.9.7 65
+MD5 5249f8f6a6158f8730e719f07b021acb files/digest-libosip-2.2.1 66
+RMD160 06d291f9ee670d4d54f7bbdf76f3371cf8c3d3a4 files/digest-libosip-2.2.1 66
+SHA256 83002ee819aaf465b2bece4f76a7811ab8778568002386b61ef48511957b1d35 files/digest-libosip-2.2.1 66
+MD5 9ae0f10fe7dfd20ba61ac24eaec6c393 files/digest-libosip-2.2.2 244
+RMD160 d0a15990aad7b91efdda26cb190c11081ee126b4 files/digest-libosip-2.2.2 244
+SHA256 306d1914b910e9342bfd90473ddb7d6bfc3cf65a1a5988db9386e2d7027cf282 files/digest-libosip-2.2.2 244
+MD5 ac431a00e6d378b190d682af321e6618 libosip-0.9.6.ebuild 774
+RMD160 c4464ae1a214c95ac36d4c17ab9881c69f0973bd libosip-0.9.6.ebuild 774
+SHA256 43d1ba4d91783c17b61cc001811eb5d9c927ce888df76ca6ae088a58b5971b1a libosip-0.9.6.ebuild 774
+MD5 bef19142522b953ef2e7488cb01a82e3 libosip-0.9.7.ebuild 543
+RMD160 dd9aba5adc9c227f5105386e9844fbe2d658abe8 libosip-0.9.7.ebuild 543
+SHA256 5a3f5a649ad40ec95ffbc55aceb376d9bf483cdb21391ee33f63117acd282800 libosip-0.9.7.ebuild 543
+MD5 6db12aae86c36824727616a140006d1c libosip-2.2.1.ebuild 824
+RMD160 46dd8f59f6bfbf8777d12d0289d7afa35669e709 libosip-2.2.1.ebuild 824
+SHA256 67d53f92fe61cbcf92bde3cea500bcf3c1487a68c0c26ea6856d95a782c4d1b4 libosip-2.2.1.ebuild 824
+MD5 45198ba722f1264e2e8ce73278c92410 libosip-2.2.2.ebuild 868
+RMD160 25a0c0947ec67141b230918d5829004048941fd2 libosip-2.2.2.ebuild 868
+SHA256 1e08f79b96b1978f6613ae96562f167c8cef5f19f3ab89ad98202ee217921ba6 libosip-2.2.2.ebuild 868
+MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 metadata.xml 217
+SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1 metadata.xml 217
