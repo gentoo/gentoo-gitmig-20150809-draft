@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.6_pre20041219-r1.ebuild,v 1.1 2005/02/23 05:52:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.6_pre20041219-r1.ebuild,v 1.2 2006/02/04 21:14:17 sbriesen Exp $
 
 inherit eutils linux-info
 
@@ -20,8 +20,8 @@ DEPEND="virtual/linux-sources
 	virtual/libc
 	sys-libs/ncurses
 	sys-libs/gdbm
-	dev-lang/tcl
-	X? ( virtual/x11 )"
+	dev-lang/tcl"
+#	X? ( virtual/x11 )
 RDEPEND="${DEPEND}
 	virtual/modutils
 	net-dialup/ppp"

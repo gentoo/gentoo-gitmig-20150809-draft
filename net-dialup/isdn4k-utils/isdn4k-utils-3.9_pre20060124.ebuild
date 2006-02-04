@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.8_pre20050821.ebuild,v 1.4 2006/02/04 21:14:17 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.9_pre20060124.ebuild,v 1.1 2006/02/04 21:14:17 sbriesen Exp $
 
 inherit eutils multilib gnuconfig linux-info
 
@@ -14,9 +14,9 @@ DESCRIPTION="ISDN4Linux Utils"
 SRC_URI="ftp://ftp.isdn4linux.de/pub/isdn4linux/CVS-Snapshots/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.isdn4linux.de/"
 
-KEYWORDS="~alpha amd64 ~ppc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 LICENSE="GPL-2"
-IUSE="X unicode activefilter mschap ipppd isdnlog eurofile usb pcmcia"
+IUSE="X activefilter mschap ipppd isdnlog eurofile usb pcmcia"
 # TODO: mysql postgres oracle radius
 SLOT="0"
 
@@ -32,7 +32,7 @@ DEPEND="virtual/linux-sources
 	eurofile? ( net-ftp/ftpbase )
 	ipppd? ( mschap? ( dev-libs/openssl ) )
 	ipppd? ( activefilter? ( >=virtual/libpcap-0.9.3 ) )"
-#	X? ( virtual/x11 )
+#	X? ( || ( x11-base/xorg-server virtual/x11 ) )
 
 RDEPEND="${DEPEND}
 	virtual/modutils
@@ -43,13 +43,23 @@ S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	# check kernel config
-	CONFIG_CHECK="ISDN ISDN_I4L"
+	CONFIG_CHECK="~ISDN ~ISDN_I4L"
 	if use ipppd; then
-		CONFIG_CHECK="${CONFIG_CHECK} ISDN_PPP"
-		use activefilter && CONFIG_CHECK="${CONFIG_CHECK} IPPP_FILTER"
+		CONFIG_CHECK="${CONFIG_CHECK} ~ISDN_PPP"
+		use activefilter && CONFIG_CHECK="${CONFIG_CHECK} ~IPPP_FILTER"
 	fi
-	use eurofile && CONFIG_CHECK="${CONFIG_CHECK} X25 ISDN_X25"
-	# linux-info_pkg_setup  -> disabled until I have a better solution
+	use eurofile && CONFIG_CHECK="${CONFIG_CHECK} ~X25 ~ISDN_X25"
+	get_version || die "check kernel config failed"  # config checked later in pkg_postinst
+
+	# check for new baselayout
+	#einfo "Checking baselayout"
+	#if [ -f /lib/rcscripts/net.modules.d/ipppd ]; then
+	#	einfo "    new baselayout with ipppd net-module found"
+	#	HAS_NETMODULE=1
+	#else
+	#	einfo "    old baselayout with no ipppd net-module found"
+	#	HAS_NETMODULE=0
+	#fi
 
 	# Get country code from I4L_CC variable
 	# default country: DE (Germany)
@@ -58,7 +68,6 @@ pkg_setup() {
 	I4L_CC_LOW=$(echo -n "${I4L_CC}" | tr "[:upper:]" "[:lower:]")
 
 	# Get language from I4L_LANG variable ('de' or 'en')
-	I4L_LANG=$(echo -n "${I4L_CC}" | tr "[:lower:]" "[:upper:]")
 	if [ -z "${I4L_LANG}" ]; then
 		case "${I4L_CC}" in
 			AT|CH|DE)
@@ -68,8 +77,10 @@ pkg_setup() {
 				I4L_LANG="EN"
 				;;
 		esac
+	else
+		I4L_LANG=$(echo -n "${I4L_LANG}" | tr "[:lower:]" "[:upper:]")
+		[ "${I4L_LANG}" = "DE" -o "${I4L_LANG}" = "EN" ] || I4L_LANG="EN"
 	fi
-	[ "${I4L_LANG}" = "DE" -o "${I4L_LANG}" = "EN" ] || I4L_LANG="EN"
 }
 
 src_unpack() {
@@ -79,6 +90,9 @@ src_unpack() {
 	# apply pcap patch (bug #99190)
 	use ipppd && use activefilter && \
 	epatch "${FILESDIR}/ipppd-pcap-0.9.3.patch"
+
+	# apply gcc4 patch (bug #117573)
+	epatch "${FILESDIR}/eiconctrl-gcc4.patch"
 
 	# patch all Makefiles to use our CFLAGS
 	find . -name "Makefile*" -type f | \
@@ -162,26 +176,29 @@ src_unpack() {
 		-e "s:^\([[:space:]]*\)\(.*chgrp.*capi20.*\)\$:\1true # \2:g" scripts/makedev.sh
 
 	# if specified, convert all relevant files to UTF-8
-	if use unicode; then
-		einfo "Converting configs and docs to UTF-8"
-		for i in isdnlog/samples/{isdn,rate}.conf* isdnlog/*-??.dat \
-			Mini-FAQ/*.txt FAQ/_howto/{pppbind,vbox_sound,xp-howto}.txt \
-			eurofile/TODO isdnlog/{README,Isdn,.country-alias}; do
-			iconv -f latin1 -t utf8 -o "${i}~" "${i}" && mv -f "${i}~" "${i}" || rm -f "${i}~"
-		done
-		for i in isdnlog/TODO; do
-			iconv -f cp850 -t utf8 -o "${i}~" "${i}" && mv -f "${i}~" "${i}" || rm -f "${i}~"
-		done
-	fi
+	# 2006-02-04: commented out because upstream switched to UTF-8
+	#if use unicode; then
+	#	einfo "Converting configs and docs to UTF-8"
+	#	for i in isdnlog/samples/{isdn,rate}.conf* isdnlog/*-??.dat \
+	#		Mini-FAQ/*.txt FAQ/_howto/{pppbind,vbox_sound,xp-howto}.txt \
+	#		eurofile/TODO isdnlog/{README,Isdn,.country-alias}; do
+	#		iconv -f latin1 -t utf8 -o "${i}~" "${i}" && mv -f "${i}~" "${i}" || rm -f "${i}~"
+	#	done
+	#	for i in isdnlog/TODO; do
+	#		iconv -f cp850 -t utf8 -o "${i}~" "${i}" && mv -f "${i}~" "${i}" || rm -f "${i}~"
+	#	done
+	#fi
 
 	# run autoconf
 	gnuconfig_update
 	einfo "Running autoconf"
-	for i in icn imon loop divertctrl eicon hisax ipppd pcbit \
-		isdnctrl iprofd	act2000 eurofile ipppstats isdnlog; do
-		cd $i && autoconf || \
-			die "autoconf failed in dir $i"
-		cd ..
+	for i in act2000 divertctrl doc eicon eurofile FAQ hisax icn imon ipppd \
+		ipppstats iprofd isdnctrl isdnlog loop pcbit isdnlog isdnlog/client \
+		isdnlog/tools/cdb isdnlog/tools/dest isdnlog/tools/zone; do
+		einfo "  Updating ${i}"
+		pushd "${i}" >/dev/null
+		autoconf 2>/dev/null || die "autoconf failed in dir ${i}"
+		popd >/dev/null
 	done
 }
 
@@ -200,12 +217,12 @@ src_install() {
 
 	make DESTDIR="${D}" install || die "make install failed"
 
-	# move leftover firmware files to the right place
-	mv -f "${D}/usr/share/isdn"/{*.bin,*.btl,ISAR.BIN} "${D}${FW_DIR}"
-	rmdir --ignore-fail-on-non-empty "${D}/usr/share/isdn"
-
 	# remove obsolete firmware files (these are in net-dialup/isdn-firmware)
 	rm -f "${D}${FW_DIR}"/{bip1120,dnload,ds4bri,dspdload,loadpg,pc_??_ca,prload,te_????}.*
+
+	# remove obsolete symlink
+	rm -f "${D}/usr/lib/X11/app-defaults"
+	rmdir --ignore-fail-on-non-empty "${D}/usr/lib/X11"
 
 	# install USB hotplug stuff
 	if use usb; then
@@ -317,6 +334,10 @@ pkg_postinst() {
 	einfo "/etc/init.d/isdn will save and restore your isdnctrl config."
 	einfo "it will also handle the modem-register daemon."
 	einfo
+	einfo "/etc/init.d/hisax will load and initialize your hisax based"
+	einfo "cards. If you have such cards, please edit /etc/hisax.conf"
+	einfo "and add the hisax init-script to your default runlevel."
+	einfo
 	if use ipppd; then
 		einfo "/etc/init.d/net.ippp0 will start synchronous PPP connections"
 		einfo "which you need to set up using isdnctrl first!"
@@ -328,4 +349,8 @@ pkg_postinst() {
 		einfo "configs if you have more than one card."
 		einfo
 	fi
+	einfo "If any of the following kernel configuration options is missing, you"
+	einfo "should reconfigure and rebuild your kernel before using isdn4k-utils."
+	linux-info_pkg_setup
+	einfo
 }

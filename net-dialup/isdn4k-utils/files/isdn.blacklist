@@ -5,10 +5,6 @@ hisax
 hisax_fcpcipnp
 hisax_st5481
 
-# handled by hotplug. But it's disabled by default, because mISDN
-# also offers a CAPI 'hfcsusb' module which should be preferred.
-hfc_usb
-
 # temporarily disabled, because we need an init-script first
 #auerswald
 #divas

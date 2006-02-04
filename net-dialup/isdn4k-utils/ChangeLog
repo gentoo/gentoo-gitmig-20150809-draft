@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/isdn4k-utils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.49 2005/12/26 15:11:30 sbriesen Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.50 2006/02/04 21:14:17 sbriesen Exp $
+
+*isdn4k-utils-3.9_pre20060124 (04 Feb 2006)
+
+  04 Feb 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/eiconctrl-gcc4.patch, +files/config-3.9_pre20060124,
+  files/hisax.initd, files/isdn.blacklist, files/isdn.initd,
+  files/isdnlog.initd, +isdn4k-utils-3.9_pre20060124.ebuild:
+  version bumb, some cleanups, added gcc4 patch (bug 117573).
 
   26 Dec 2005; Stefan Briesenick <sbriesen@gentoo.org>
   isdn4k-utils-3.8_pre20050821.ebuild:
