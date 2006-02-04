@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r4.ebuild,v 1.7 2006/01/14 05:43:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r4.ebuild,v 1.8 2006/02/04 10:57:12 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -18,10 +18,13 @@ SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="aalib libcaca arts cle266 esd win32codecs nls dvd X directfb vorbis alsa
-gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc nvidia i8x0
+
+IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via video_cards_i810"
+
+IUSE="aalib libcaca arts esd win32codecs nls dvd X directfb vorbis alsa
+gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc
 samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts asf
-ffmpeg debug modplug"
+ffmpeg debug modplug ${IUSE_VIDEO_CARDS}"
 
 RDEPEND="vorbis? ( media-libs/libvorbis )
 	X? ( || ( (
@@ -31,9 +34,10 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	xv? ( || ( x11-libs/libXv virtual/x11 ) )
 	xvmc? (
 		|| ( x11-libs/libXvMC virtual/x11 )
-		nvidia? ( media-video/nvidia-glx )
-		cle266? ( || ( x11-drivers/xf86-video-via virtual/x11 ) )
-		i8x0? ( || ( x11-drivers/xf86-video-i810 virtual/x11 ) ) )
+		video_cards_nvidia? ( media-video/nvidia-glx )
+		video_cards_via? ( || ( x11-drivers/xf86-video-via virtual/x11 ) )
+		video_cards_i810? ( || ( x11-drivers/xf86-video-i810 virtual/x11 ) )
+	)
 	xinerama? ( || ( x11-libs/libXinerama virtual/x11 ) )
 	win32codecs? ( >=media-libs/win32codecs-0.50 )
 	esd? ( media-sound/esound )
@@ -75,9 +79,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-#	>=sys-devel/automake-1.7
-#	>=sys-devel/autoconf-2.59
-
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
@@ -87,7 +88,6 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches
 
 	AT_M4DIR="m4" eautoreconf
-	elibtoolize
 }
 
 # check for the X11 path for a given library
@@ -137,28 +137,29 @@ src_compile() {
 		myconf="${myconf} --disable-xvmc"
 	else
 		count="0"
-		if use nvidia; then
+		if use video_cards_nvidia; then
 			count="`expr ${count} + 1`"
 			xvmclib="XvMCNVIDIA"
 		fi
 
-		if use i8x0; then
+		if use video_cards_i810; then
 			count="`expr ${count} + 1`"
 			xvmclib="I810XvMC"
 		fi
 
-		if use cle266; then
+		if use video_cards_via; then
 			count="`expr ${count} + 1`"
 			xvmclib="viaXvMC"
 		fi
 
 		if [[ "${count}" -gt "1" ]]; then
 			eerror "Invalid combination of USE flags"
-			eerror "When building support for xvmc, you may only include support for one video card:"
-			eerror "   nvidia, i8x0, cle266"
+			eerror "When building support for xvmc, you may only include support"
+			eerror "for none or one of the following VIDEO_CARDS:"
 			eerror ""
-			eerror "XvMC support will not be built."
-			myconf="${myconf} --disable-xvmc"
+			eerror "nvidia i810 via"
+			eerror ""
+			eerror "XvMC support will try to link against libXvMCW."
 		elif [[ -n "${xvmclib}" ]]; then
 			xvmcconf="--with-xvmc-lib=${xvmclib} --with-xxmc-lib=${xvmclib}"
 			xvmcdir=$(get_x11_dir libXvMC.so)
@@ -244,7 +245,15 @@ pkg_postinst() {
 		einfo "You choose to build win32codecs support but disabled ASF"
 		einfo "demuxer. This way you'll have support for win32codecs in"
 		einfo "formats like AVI or Matroska, but not in WMV/WMA files."
-		einfo
+		einfo ""
 		einfo "To be able to play WMV/WMA files, please add asf useflag."
+	fi
+
+	if ! use mad; then
+		einfo "MAD decoding library is disabled."
+		einfo "This mean that playing mp3 will not be possible with xine-lib"
+		einfo "based players. amaroK will crash trying to."
+		einfo ""
+		einfo "To be able to play mp3 files, please add mad useflag."
 	fi
 }
