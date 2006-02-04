@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR/Net-CIDR-0.11.ebuild,v 1.3 2006/01/31 21:30:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR/Net-CIDR-0.11.ebuild,v 1.4 2006/02/04 00:56:26 agriffis Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Net/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha ~amd64 ~ia64 ~ppc sparc x86"
+KEYWORDS="alpha ~amd64 ia64 ~ppc sparc x86"
 IUSE=""
