@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.10.ebuild,v 1.3 2005/08/17 12:51:36 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.10.ebuild,v 1.4 2006/02/04 14:55:42 nattfodd Exp $
 
 inherit base fixheadtails
 
@@ -24,6 +24,12 @@ RDEPEND="sys-libs/readline
 
 # if using readline, hmake depends also on ncurses; but
 # readline already has this dependency
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/ghc-version.patch
+}
 
 src_compile() {
 	local buildwith
