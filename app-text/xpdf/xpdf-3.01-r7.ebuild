@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r7.ebuild,v 1.2 2006/02/04 16:17:47 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r7.ebuild,v 1.3 2006/02/04 19:06:24 genstef Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ S=${WORKDIR}/${P}-poppler
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use nodrm && epatch ${FILESDIR}/${P}-nodrm.patch
+	use nodrm && epatch ${FILESDIR}/${P}-poppler-nodrm.patch
 }
 
 src_install() {
