@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/amstd-2.0.0.ebuild,v 1.8 2004/06/25 01:52:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/amstd-2.0.0.ebuild,v 1.9 2006/02/04 15:03:00 solar Exp $
 
 DESCRIPTION="Ruby utility collection by Minero Aoki"
 HOMEPAGE="http://www.loveruby.net/en/amstd.html"
