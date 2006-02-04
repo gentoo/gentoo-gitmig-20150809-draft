@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre4-r1.ebuild,v 1.4 2006/02/03 20:10:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre4-r1.ebuild,v 1.5 2006/02/04 04:56:40 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -31,8 +31,8 @@ S=${WORKDIR}/${PN}-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	patch -p1 < ${FILESDIR}/2.1_pre4-r1.patch
+	cd "${S}"
+	patch -p1 < "${FILESDIR}"/2.1_pre4-r1.patch
 }
 
 src_compile() {
@@ -118,7 +118,7 @@ src_install() {
 	dodir /etc/portage
 	keepdir /etc/portage
 
-	doenvd ${FILESDIR}/05portage.envd
+	doenvd "${FILESDIR}"/05portage.envd
 }
 
 pkg_preinst() {
