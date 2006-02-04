@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.15 2006/01/07 07:28:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.16 2006/02/04 01:17:50 vapier Exp $
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_MODULE="e16/e"
@@ -64,14 +64,5 @@ src_install() {
 	exeinto /etc/X11/Sessions
 	doexe "${FILESDIR}"/enlightenment
 
-	dodoc AUTHORS ChangeLog FAQ INSTALL NEWS README* docs/README*
-
-	# fix default xcursor support
-	cd "${D}"/usr/share/enlightenment/themes
-	local deftheme=`readlink DEFAULT`
-	cp -rf ${deftheme} ${deftheme}-xcursors
-	rm DEFAULT
-	ln -s ${deftheme}-xcursors DEFAULT
-	rm -rf ${deftheme}-xcursors/cursors*
-	cp "${FILESDIR}"/cursors.cfg ${deftheme}-xcursors/
+	dodoc AUTHORS ChangeLog INSTALL NEWS README* docs/README*
 }
