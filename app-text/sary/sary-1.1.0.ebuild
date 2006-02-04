@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.1.0.ebuild,v 1.4 2005/02/10 08:50:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.1.0.ebuild,v 1.5 2006/02/04 14:38:16 solar Exp $
 
 IUSE=""
 
