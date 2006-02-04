@@ -2,22 +2,48 @@
 Hash: SHA1
 
 MD5 5c2c4c7cbed85a483d0ede3096c7dcf7 ChangeLog 2651
+RMD160 ea5c00ea377337e53ad6549a904e6d94ec568e0c ChangeLog 2651
+SHA256 70c748a790c1e6ea8f2f5973eb52e0a4f990cb4b660cfe0e4b23352ec36b6f64 ChangeLog 2651
 MD5 8c9da1ab91353ab97d100e499ae722f7 files/digest-flex-2.5.31 131
+RMD160 5a8f2d987764982a9a75548f08ffcdc084e7f0f9 files/digest-flex-2.5.31 131
+SHA256 79b8290044e824b02fe32822d696b2f8e580d66147964cd6ac94de6af68857d6 files/digest-flex-2.5.31 131
 MD5 a50411d58e9407414db98087253bdacd files/digest-flex-2.5.4a-r5 63
+RMD160 c798ce732fdcd129c48305919d971735e7b5b4d5 files/digest-flex-2.5.4a-r5 63
+SHA256 20dd99d2ba78a7231f939e845feee2fa7f6522158889f77eb5d17765bf53ba04 files/digest-flex-2.5.4a-r5 63
 MD5 483b62e5eb13bbcf72e8ec7aaa34f554 files/digest-flex-2.5.4a-r6 137
+RMD160 d179ae0c153ede76083c9e51bf795c1f2003cf76 files/digest-flex-2.5.4a-r6 137
+SHA256 3e20e677f6a05467dfdef44c23ed1047c0c4d1d0ff854724bac359f5491a413e files/digest-flex-2.5.4a-r6 137
 MD5 2e16e2031744c71cd9cd1019ff0a1af3 files/flex-2.5.31-include.patch 387
+RMD160 450ae53279820d2d8c702be0f471be07892f96f0 files/flex-2.5.31-include.patch 387
+SHA256 deb8f99edc8b3eca11515e36db959d27503c5c1fc317a4ead39f40cc0ec61bce files/flex-2.5.31-include.patch 387
 MD5 06f3fd21134a6d82073ce64e2ad60274 files/flex-2.5.4-glibc22.patch 2241
+RMD160 124f5d395b4be1926420ad9dace170ef1eba24da files/flex-2.5.4-glibc22.patch 2241
+SHA256 787c733eb4e4d4272930a43fbf13b045c6ed2b363a3066e42eed38bc3c5b0941 files/flex-2.5.4-glibc22.patch 2241
 MD5 497470663c67fc14a2eb95b51f7f9614 files/flex-2.5.4a-gcc3.patch 277
+RMD160 0b3d5036709dc0ad1757f30560d994aae9182980 files/flex-2.5.4a-gcc3.patch 277
+SHA256 9cd454d441b9bae51d13b92642e44148c27d60e8c44ad8b5c66dcec4bd183911 files/flex-2.5.4a-gcc3.patch 277
 MD5 de46348f431a1b72e51b8f2253ebcaf3 files/flex-2.5.4a-gcc31.patch 3189
+RMD160 134e71593084401c5948e299d73c9689f2a0023a files/flex-2.5.4a-gcc31.patch 3189
+SHA256 f1feed73b370fabc447085bb17bf0e756544bbd287d3957f1e59602585a5f580 files/flex-2.5.4a-gcc31.patch 3189
 MD5 28010d818ed73f21c9d37fd955c9f25b files/flex-2.5.4a-skel.patch 350
+RMD160 64d0168745842c4c14c806d5bb9398dfa37203e1 files/flex-2.5.4a-skel.patch 350
+SHA256 950bf0133a892332d73678b2ca35978abe6184ba9a29e38e60f6e7be773409a8 files/flex-2.5.4a-skel.patch 350
 MD5 8469b176ce2b8fb51558f801837fac0d flex-2.5.31.ebuild 1124
+RMD160 631effe176ed11d40193ba16d06091203a6cf72d flex-2.5.31.ebuild 1124
+SHA256 0a7de7aad30448e4db9961093ab825348769f1fa7b3381a0d4f155ed4263b96b flex-2.5.31.ebuild 1124
 MD5 3f4500ac9117f90f14a3a82e3a5dc488 flex-2.5.4a-r5.ebuild 1304
-MD5 d511626c1fdd1b2689c6fcec7d333c81 flex-2.5.4a-r6.ebuild 1466
+RMD160 5362fd95822598aa3ed519f8d21e185ea22bb04c flex-2.5.4a-r5.ebuild 1304
+SHA256 de0ecc67f9ace3737258c8df6c658d270e885ad4d5627e363acf86aa60c7b72b flex-2.5.4a-r5.ebuild 1304
+MD5 12b2dea51339ce8d4a09d3d5824d87e3 flex-2.5.4a-r6.ebuild 1464
+RMD160 e6318ff1deacaf06b0a41e6790bf9673175c47a6 flex-2.5.4a-r6.ebuild 1464
+SHA256 f1807f1fb77e77baf53218de4f8072333e57809b58af41d6830d457e54f59e0a flex-2.5.4a-r6.ebuild 1464
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDriJq2+ySkm8kpY0RAl6SAKC3YsPnJxTbmIFZGWHkVmFgg3xMMACffent
-R1sBgqwWE4t3PS4f5GdDow4=
-=dSXL
+iD8DBQFD4/e/2+ySkm8kpY0RAs9fAKC4rR0FOIs7lgOn77u8Lg1uWNZ5bACfaPou
+du3FoSGN5lMxIkmBIYu+KYw=
+=dZWM
 -----END PGP SIGNATURE-----
