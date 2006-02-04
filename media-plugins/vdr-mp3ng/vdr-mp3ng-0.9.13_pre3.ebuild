@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.9.13_pre3.ebuild,v 1.1 2006/01/04 02:29:46 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.9.13_pre3.ebuild,v 1.2 2006/02/04 17:49:23 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -36,6 +36,8 @@ vdr-plugin_src_unpack
 		use oss && sed -i "s:#WITH_OSS_OUTPUT:WITH_OSS_OUTPUT:" Makefile
 		use imagemagick && sed -i Makefile -e "s:HAVE_IMLIB2:#HAVE_IMLIB2:" \
 		-e "s:#HAVE_MAGICK:HAVE_MAGICK:"
+
+		has_version ">=vdr-1.3.37" && epatch ${FILESDIR}/${P}-1.3.37.diff
 }
 
 src_install() {

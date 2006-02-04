@@ -1,7 +1,19 @@
-MD5 f84530179f4d6eb52ae9ec8e15f7e4e2 ChangeLog 479
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 aa874dcc9fa2a734ef764aa912dbc5d6 ChangeLog 650
 MD5 46b03067cc8c9cd090efa8917a88a922 files/confd 1771
 MD5 a9eb9beb21097a63ccc0b0adccb47115 files/digest-vdr-mp3ng-0.9.13_pre3 154
 MD5 64850f83317e8aab4bfa1e9f88eddeeb files/mp3ngsources 251
+MD5 aa7b32f894ebbeb60b324427712da7bd files/vdr-mp3ng-0.9.13_pre3-1.3.37.diff 1064
 MD5 c2e80e832f8316d741e9a0f9fab97c4f files/vdr-mp3ng-0.9.13_pre3-gentoo.diff 1313
 MD5 6a8a6784a889090822eb1f33ae8552d0 metadata.xml 479
-MD5 46f0ac221aedb853b90d0dd39edb2fa9 vdr-mp3ng-0.9.13_pre3.ebuild 1516
+MD5 fa786171d2e717301398652768fd2ac3 vdr-mp3ng-0.9.13_pre3.ebuild 1585
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFD5Okxdn07HTTCgIoRArDmAJ9DXW/jomBOXoDhTDsUjhVHsOD2wgCeJbwm
+fTAG4k5XAgNelQ/1S3pRcrw=
+=f7NF
+-----END PGP SIGNATURE-----
