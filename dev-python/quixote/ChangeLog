@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/quixote
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.14 2005/02/19 06:21:42 gongloo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.15 2006/02/04 12:56:54 lucass Exp $
+
+*quixote-2.4 (04 Feb 2006)
+
+  04 Feb 2006; Lukasz Strzygowski <lucass@gentoo.org> +quixote-2.4.ebuild:
+  Version bump: new license and some cleanup, bugs #98006 and #91579.
 
   19 Feb 2005; <gongloo@gentoo.org> quixote-1.0.ebuild:
   Stable on ppc-macos.

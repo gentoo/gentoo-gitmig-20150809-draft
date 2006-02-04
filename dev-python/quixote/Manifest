@@ -1,6 +1,34 @@
-MD5 21726b27f8db2434cf672412779f0d62 ChangeLog 2209
-MD5 a2cfe785f6ad94c61071fa71dbe89aeb metadata.xml 244
-MD5 08c258c3dc13ce92d8bdd6dee0413cc2 quixote-0.6.1.ebuild 785
-MD5 4c48246f07509fbdd89b5d82fc491be1 quixote-1.0.ebuild 791
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c64fab32c78e2d653669568cf0b01e1c ChangeLog 2382
+RMD160 7d8af06e2dacd6f8eef7f4781ddbef778a2e09a4 ChangeLog 2382
+SHA256 09b7942f20ab607781c734b5baffd3bc9eb997de115694bff96403381a35ef8a ChangeLog 2382
 MD5 f0b85ab0bd5e039d101c49571e31286f files/digest-quixote-0.6.1 65
+RMD160 9df84ae679b2d7fb719b38db03dfc36b4b305eaf files/digest-quixote-0.6.1 65
+SHA256 8a35492ad14e471b0d412dbc2c32dba2c2a0f02c13b1ea3b3b4356661f76e075 files/digest-quixote-0.6.1 65
 MD5 d0fe64af7a033c96a95874b7c81439a9 files/digest-quixote-1.0 63
+RMD160 821e1903ae4ef1a3b7e5126555da9341326f228c files/digest-quixote-1.0 63
+SHA256 090675c19cca605bc97e552aa179a3fde420aa65b807c015c75fa709b9f0c43d files/digest-quixote-1.0 63
+MD5 d830e2ca742d99804637ca1689dfbd7b files/digest-quixote-2.4 235
+RMD160 dc54ed698ef1f97527a9a2648f1aa702915d5d52 files/digest-quixote-2.4 235
+SHA256 3063e2dea7b209aa3772cee7bab37cda05e7659787aa86b41eb1370b51d9a0b3 files/digest-quixote-2.4 235
+MD5 a2cfe785f6ad94c61071fa71dbe89aeb metadata.xml 244
+RMD160 79d0580b0cd4fd605d9e95a7734c7a9e431e9af8 metadata.xml 244
+SHA256 8ad3aa86c91e6775ad39afbee2991b80cf166e099da206988259e8bccb0abc80 metadata.xml 244
+MD5 08c258c3dc13ce92d8bdd6dee0413cc2 quixote-0.6.1.ebuild 785
+RMD160 69ac77308c47cca4c8ab3bcf0a93c1c9ca5345f4 quixote-0.6.1.ebuild 785
+SHA256 3060dc202c74442e3e85921afb0b8284ece062ef0cccf0897701905d3de611dd quixote-0.6.1.ebuild 785
+MD5 4c48246f07509fbdd89b5d82fc491be1 quixote-1.0.ebuild 791
+RMD160 3e0e4e67d9318804841c4e8ebb6f74dfcdd5ee7e quixote-1.0.ebuild 791
+SHA256 17788bdc35998636edb0f6c138077e17da7e27f8ccec1a07886cc17b77d76785 quixote-1.0.ebuild 791
+MD5 5bce6cb59d2233c7956198bc5824f9bc quixote-2.4.ebuild 726
+RMD160 4d88f9dc2cdae5375523bd6a30dbdbd828bb3b54 quixote-2.4.ebuild 726
+SHA256 e8081c52dd71a2e3caf2c58907997020740ad74dd1303a8e83b0c8290313a3cd quixote-2.4.ebuild 726
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5KSz2jLqHNfbg2URAkrgAJ94VAeU1vEnL+3nKe3PE1u3OX5OigCgz6oN
+R7w7MORyMdZtmX+bg7kzVVg=
+=Gqin
+-----END PGP SIGNATURE-----
