@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.12.6-r1.ebuild,v 1.1 2006/02/03 23:08:03 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.12.6-r1.ebuild,v 1.2 2006/02/04 19:05:00 chrb Exp $
 
 ETYPE="sources"
 inherit kernel-2 eutils
@@ -12,8 +12,8 @@ EXTRAVERSION=".${KV_EXTRA}-xen"
 
 DESCRIPTION="Full sources for a dom0/domU Linux kernel to run under Xen"
 HOMEPAGE="http://www.cl.cam.ac.uk/Research/SRG/netos/xen/index.html"
-DATE="20060203"
-MY_P="xen-3.0-testing-${DATE}"
+REV="8738"
+MY_P="xen-3.0-testing-${REV}"
 SRC_URI="${KERNEL_URI} mirror://gentoo/${MY_P}.tar.bz2"
 
 KEYWORDS="~x86 ~amd64"
