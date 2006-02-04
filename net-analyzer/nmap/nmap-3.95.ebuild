@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.95.ebuild,v 1.1 2005/12/10 17:47:52 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.95.ebuild,v 1.2 2006/02/04 10:54:53 spock Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd ${S}
 	sed 's:Icon=icon-network:Icon=nmap-logo-64.png:' -i nmapfe.desktop
 	echo ";" >> nmapfe.desktop
+	epatch ${FILESDIR}/nmap-shtool-nls.patch
 }
 
 src_compile() {
