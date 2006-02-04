@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.232 2006/02/03 20:02:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.233 2006/02/04 10:59:28 flameeyes Exp $
+
+  04 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdegraphics-3.5.1-r2.ebuild:
+  Make poppler optional on pdf useflag, if pdf useflag is disabled, don't
+  build kpdf.
 
   03 Feb 2006; Markus Rothe <corsair@gentoo.org>
   kdegraphics-3.4.3-r4.ebuild:
