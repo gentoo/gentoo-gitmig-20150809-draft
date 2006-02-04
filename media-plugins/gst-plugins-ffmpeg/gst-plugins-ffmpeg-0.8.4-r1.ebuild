@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.8.4-r1.ebuild,v 1.9 2005/12/05 23:10:03 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.8.4-r1.ebuild,v 1.10 2006/02/04 16:20:46 blubb Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,7 +27,7 @@ DEPEND="=media-libs/gstreamer-0.8*
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/gst-ffmpeg-gcc4.patch.gz
+	epatch ${FILESDIR}/gst-ffmpeg-gcc4.patch
 
 	# fixes hang on eos (bug #86042)
 	cd ${S}/ext/ffmpeg
