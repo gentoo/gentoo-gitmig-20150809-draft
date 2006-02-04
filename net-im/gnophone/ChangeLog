@@ -1,6 +1,13 @@
 # ChangeLog for net-im/gnophone
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnophone/ChangeLog,v 1.11 2005/03/23 16:18:32 seemant Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnophone/ChangeLog,v 1.12 2006/02/04 23:41:12 dragonheart Exp $
+
+  05 Feb 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/gnophone-0.2.4-audio-phone-compilefault.patch,
+  +files/gnophone-0.2.4-casecompile.patch, -gnophone-0.2.4.ebuild,
+  gnophone-0.2.4-r1.ebuild:
+  removed old version. added patches from bug #66097 thanks to Luther Blissett
+  (compile fault) and bug #67747 thanks to Steve Egbert
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> gnophone-0.2.4.ebuild,
   gnophone-0.2.4-r1.ebuild:
