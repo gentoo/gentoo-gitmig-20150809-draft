@@ -1,10 +1,40 @@
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 ab47808f142c5a54a27a843cfeb55e88 ruby-libglade-0.30.ebuild 852
-MD5 4efeaadc6934431b8a4356941348a93f ChangeLog 2799
-MD5 08ad271503b7021fa43f0545800f22cd ruby-libglade-0.27.ebuild 776
-MD5 988fa79e253038831771547b7bc064fc ruby-libglade-0.34.ebuild 869
-MD5 185dcde65515cc357c509027dbad97a9 ruby-libglade-0.29.ebuild 776
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 892a3abd8a7948f6245e28752dca0171 ChangeLog 2904
+RMD160 96d888d8a0d2814da7c9596ba9c7efff11f6bca7 ChangeLog 2904
+SHA256 046c81805948266018d67cbe5d807f60ea143efae3c7b6fd9400e23638c5e2df ChangeLog 2904
 MD5 ffcb672a96e98b7778db8aa0886dc9ec files/digest-ruby-libglade-0.27 71
-MD5 3b4706cc9d3b5cb2d9d5ec941909a5a2 files/digest-ruby-libglade-0.30 70
-MD5 9c06484497032c542eb25fda52406232 files/digest-ruby-libglade-0.34 71
+RMD160 c69878420329825c210098d875345262165a5f7d files/digest-ruby-libglade-0.27 71
+SHA256 4c8f442f6fcb6803f3b8988fc730650f7cfd07b293634649fa91f07d570a8816 files/digest-ruby-libglade-0.27 71
 MD5 2ab00a8d832b5e206dfa9cc899c6d4e1 files/digest-ruby-libglade-0.29 71
+RMD160 28fb1a359e4cbde5b95d4f93f92c63a9950a31ed files/digest-ruby-libglade-0.29 71
+SHA256 f964a9d77112698399d9f0c3ae8079f38595df928b5d359583bb1ef05079c199 files/digest-ruby-libglade-0.29 71
+MD5 3b4706cc9d3b5cb2d9d5ec941909a5a2 files/digest-ruby-libglade-0.30 70
+RMD160 4887c582c8cfea7038bd2a03751aa09eb69a5900 files/digest-ruby-libglade-0.30 70
+SHA256 7ba2530282fb68738ef6c2d79bec378de15a4dffd5b610c05df7340232d1b8a8 files/digest-ruby-libglade-0.30 70
+MD5 00c7e811d8a4759f11aa3631b6e4f3dc files/digest-ruby-libglade-0.34 259
+RMD160 4b4ccb5638b8f08438b9fa63f0b453835998660a files/digest-ruby-libglade-0.34 259
+SHA256 c9f46c1daa1c569089ea000f43896b5f553d13e68930958d165eb1f133e877e2 files/digest-ruby-libglade-0.34 259
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
+SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
+MD5 08ad271503b7021fa43f0545800f22cd ruby-libglade-0.27.ebuild 776
+RMD160 0a56e043c8851d11a335e4359799e33e9e8234aa ruby-libglade-0.27.ebuild 776
+SHA256 0b213ae631ccf0e9e624451ef69f9ee9b035ceee1a5da02023b14cd8a9d595ab ruby-libglade-0.27.ebuild 776
+MD5 185dcde65515cc357c509027dbad97a9 ruby-libglade-0.29.ebuild 776
+RMD160 e2d34fd909e62df84780c33ddb5c3c65f5beb8bc ruby-libglade-0.29.ebuild 776
+SHA256 00f3bf74c678aac3f87a4e6b8053e229eb617a768f565a124f4de54219c906b6 ruby-libglade-0.29.ebuild 776
+MD5 ab47808f142c5a54a27a843cfeb55e88 ruby-libglade-0.30.ebuild 852
+RMD160 dfe490719a4ac7fc0dbff36feb983c76f924618e ruby-libglade-0.30.ebuild 852
+SHA256 83282e4fcbb75e56c8a8bd9a8403fa67e5177788ba3224869423b3fcaac6be05 ruby-libglade-0.30.ebuild 852
+MD5 6710552743b0c18e44bb44c529fb6238 ruby-libglade-0.34.ebuild 868
+RMD160 5ff32b44afb2c65d498b8cdbbc0e414cda757f9e ruby-libglade-0.34.ebuild 868
+SHA256 5938b46b135a7e80c44355516462ecb76126fa83aa5ea05faccd84fab780b7f5 ruby-libglade-0.34.ebuild 868
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD5PuvJrHF4yAQTrARAltQAJ41pYZ6CBXKT5q+Y+6X791XRR8jpgCeNBlS
+DxFD2ZbXPqBtFRuXpkTOYq8=
+=jbBU
+-----END PGP SIGNATURE-----
