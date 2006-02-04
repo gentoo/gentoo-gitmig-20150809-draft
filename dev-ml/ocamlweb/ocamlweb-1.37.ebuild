@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ocamlweb-1.34.ebuild,v 1.4 2005/02/07 12:19:03 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ocamlweb-1.37.ebuild,v 1.1 2006/02/04 17:05:19 mattam Exp $
 
 DESCRIPTION="O'Caml literate programming tool"
 HOMEPAGE="http://www.lri.fr/~filliatr/ocamlweb/"
@@ -10,10 +10,9 @@ IUSE=""
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 
-DEPEND=">=dev-lang/ocaml-3.06
-<dev-lang/ocaml-3.08
+DEPEND=">=dev-lang/ocaml-3.09
 virtual/tetex"
 
 src_compile() {

@@ -1,4 +1,4 @@
-MD5 10875cfbb8eea74738164aaecc334fb0 ocamlgraph-0.81.ebuild 751
-MD5 15068105fd0be752d235594197020a00 ChangeLog 435
+MD5 ada3d03fb7735c9f6454cdde0387964b ocamlgraph-0.95.ebuild 751
+MD5 54a72b46255359561266c4f67a0f51e8 ChangeLog 614
 MD5 648a541494aceee26dbcfd76164f37ea metadata.xml 157
-MD5 ba513d22f4e8a7de7b3ab289a6a668fc files/digest-ocamlgraph-0.81 66
+MD5 1c00d30d6b944b907dd2f32768bbc346 files/digest-ocamlgraph-0.95 66

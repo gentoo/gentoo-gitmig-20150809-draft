@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocamlweb
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.4 2005/02/07 12:19:03 mattam Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.5 2006/02/04 17:05:18 mattam Exp $
+
+  04 Feb 2006; Matthieu Sozeau <mattam@gentoo.org> -ocamlweb-1.34.ebuild,
+  +ocamlweb-1.37.ebuild:
+  Remove old version and add latest one as unstable.
 
 *ocamlweb-1.36 (07 Feb 2005)
 
