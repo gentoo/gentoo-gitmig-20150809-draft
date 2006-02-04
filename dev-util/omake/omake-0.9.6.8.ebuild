@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.6.5.ebuild,v 1.3 2006/02/04 18:07:20 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.6.8.ebuild,v 1.1 2006/02/04 18:07:20 mattam Exp $
 
 inherit eutils
 
-EXTRAPV="-2"
+EXTRAPV="-1"
 DESCRIPTION="Make replacement"
 HOMEPAGE="http://omake.metaprl.org/"
 SRC_URI="http://omake.metaprl.org/downloads/${P}${EXTRAPV}.tar.gz"
