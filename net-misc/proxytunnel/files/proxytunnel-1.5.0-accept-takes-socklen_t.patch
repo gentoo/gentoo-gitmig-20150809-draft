@@ -1,0 +1,11 @@
+--- proxytunnel.c.orig	2006-02-04 15:20:47.000000000 -0500
++++ proxytunnel.c	2006-02-04 15:21:22.000000000 -0500
+@@ -149,7 +149,7 @@
+ 	int			listen_sd;
+ 	struct sockaddr_in	sa_serv;
+ 	struct sockaddr_in	sa_cli;
+-	size_t			client_len;
++	socklen_t		client_len;
+ 	int			pid = 0;
+ 	int			sd_client;
+ 	char			buf[80];

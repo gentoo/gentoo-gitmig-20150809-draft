@@ -1,7 +1,43 @@
-MD5 04498d51821f2553bfc52be3c2e99c1e ChangeLog 969
-MD5 210340eb860a1c9a5cf63401b5fce5ce proxytunnel-1.2.0.ebuild 795
-MD5 1999d3b9fd76a9a8e58673990c0d5484 proxytunnel-1.2.3.ebuild 797
-MD5 5f4e28b0ae591778e4bf7cc09d5680d8 files/digest-proxytunnel-1.2.0 65
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7a0b1a6485b9a7d9bd62a70348fec93a ChangeLog 1218
+RMD160 9216c64444a2d02d4e2013dd025305b29d1bd6ff ChangeLog 1218
+SHA256 21acd7acc27953742a97be858d2e1a028f4ba3fc30736dfb7c698b90e34095c7 ChangeLog 1218
 MD5 4abbce06d14cb7cd98c338f999b43323 files/1.2.0-makefile.patch 710
+RMD160 c8e51cf8770f05a3beedafe8b93ad1fd1b0c0f8d files/1.2.0-makefile.patch 710
+SHA256 34e845a48fc88a7052b60b7fc14d84d3b140cd8704bf4a4ff81e5005a171bfcf files/1.2.0-makefile.patch 710
 MD5 1ad82e2e6fe4f4e48bfbb25c5ffcac2d files/1.2.3-makefile.patch 759
+RMD160 d5fa484679d2acdbe1abcf32419d7a586a53809a files/1.2.3-makefile.patch 759
+SHA256 cffec4a47d68b97f2a5510c737c3f054587ac7df5beeefee0dab47494928a6bd files/1.2.3-makefile.patch 759
+MD5 5f4e28b0ae591778e4bf7cc09d5680d8 files/digest-proxytunnel-1.2.0 65
+RMD160 f37a9b9cf60666bd51762228e8ae894e82d7b7d1 files/digest-proxytunnel-1.2.0 65
+SHA256 3515c03e974ee607d2062b8b60aeb39bca3cbc35138a398afd37cf581fb8b098 files/digest-proxytunnel-1.2.0 65
 MD5 9fd01b5fdd6549e751ed95892e36d69a files/digest-proxytunnel-1.2.3 65
+RMD160 911e1a3ed304dea59876901d932f34ea018be6fb files/digest-proxytunnel-1.2.3 65
+SHA256 c90f6bad60999e3a0a204cb8e97bc64b8f872021bc2a335b640ee0a44accd5c7 files/digest-proxytunnel-1.2.3 65
+MD5 691e6c6b48fdfbf49ef3230068e21207 files/digest-proxytunnel-1.5.0 241
+RMD160 786c8133aed868dd0a602dde780dd3a8fcb9fd6d files/digest-proxytunnel-1.5.0 241
+SHA256 eacb7daa8042d8539dbfbe58da1868fb91e7b9c52b477d0a630ece403dbc8be1 files/digest-proxytunnel-1.5.0 241
+MD5 83c98e31e1d1a26afe932a923808d0cc files/proxytunnel-1.5.0-accept-takes-socklen_t.patch 313
+RMD160 7d5150813ef3b9becda263206803a55865b4a4d9 files/proxytunnel-1.5.0-accept-takes-socklen_t.patch 313
+SHA256 4b940d961516d6d83b66d29c20510f4d4e4a1e722f3cee6cfa66ff91cd87b274 files/proxytunnel-1.5.0-accept-takes-socklen_t.patch 313
+MD5 a9963d5270246707b3ede285225e3ed1 files/proxytunnel-1.5.0-build.patch 682
+RMD160 ba0f256e71badbdb2e70f4f8d5c70945f3f6d24c files/proxytunnel-1.5.0-build.patch 682
+SHA256 b6b6e5040c7efefb972310e978250527e42f787f657d78ee2205c2d1e072c652 files/proxytunnel-1.5.0-build.patch 682
+MD5 210340eb860a1c9a5cf63401b5fce5ce proxytunnel-1.2.0.ebuild 795
+RMD160 5f249f9a53ba0a9f570d7df05fbe675239b6ae61 proxytunnel-1.2.0.ebuild 795
+SHA256 f6384f93e89c2ae52863d98a5ef3ebc9ca3767f8a073eb17d00e87d46d605ea1 proxytunnel-1.2.0.ebuild 795
+MD5 1999d3b9fd76a9a8e58673990c0d5484 proxytunnel-1.2.3.ebuild 797
+RMD160 5b5834429e6f4894b4fe8fb443972b0ca5da7c7d proxytunnel-1.2.3.ebuild 797
+SHA256 f413c39d596a98147069abb35e3d216e29072711f84a665047a786c3c40f169b proxytunnel-1.2.3.ebuild 797
+MD5 1345973723eeff7150ab023638c10e7d proxytunnel-1.5.0.ebuild 843
+RMD160 8993755d0135f4aad2afac187190df904482d434 proxytunnel-1.5.0.ebuild 843
+SHA256 dc28f495972e7a60db35bf1984ccf2e389ab67ccb6c36f71712cab52ffca0b43 proxytunnel-1.5.0.ebuild 843
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5Q0g2+ySkm8kpY0RAmmkAJ4zbVLimObAHvnV4WcILJOud/ooawCbBu7b
+zkh36+I/aKyPP5aPV2Yz+nI=
+=jV1a
+-----END PGP SIGNATURE-----
