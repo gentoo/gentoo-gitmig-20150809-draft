@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9ae02b3cc459c0587866baae57b3bbc5 ChangeLog 2625
 RMD160 f6cfafbc2c97468836d8d28f93d4c06f33d901f7 ChangeLog 2625
 SHA256 0b71d5afda297f66d1c5354f991c213bb8130cd5bdfb2faf5efd348792f27dd3 ChangeLog 2625
@@ -34,3 +37,10 @@ SHA256 07b8ec5349a8ad2867447d59943d4af9ffc73413b62bbba3fb7ffa31216195eb speech-d
 MD5 affcab3398f69106c5fb550744efd7c6 speech-dispatcher-0.6.ebuild 880
 RMD160 64c90a623402531f94a188c472b5fa150b5a966e speech-dispatcher-0.6.ebuild 880
 SHA256 9db20dc2652644722dc47f49d79659779ccd0b904566d7bdeedb7498128cedcf speech-dispatcher-0.6.ebuild 880
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5OfjJrHF4yAQTrARAoY6AJwN4x6mo9etQFcrdhLy5MDHiCd+ewCfYN6P
+LHuk9DrzRW7t35AlV/C8bG0=
+=k8Dm
+-----END PGP SIGNATURE-----
