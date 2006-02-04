@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r1.ebuild,v 1.10 2006/01/31 19:25:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r1.ebuild,v 1.11 2006/02/04 11:27:28 flameeyes Exp $
 
 ONIGURUMA="onigd2_5_0"
 
@@ -105,7 +105,7 @@ src_install() {
 
 	if use examples; then
 		dodir ${ROOT}usr/share/doc/${PF}
-		cp -dpPR sample ${D}/${ROOT}usr/share/doc/${PF}
+		cp -pPR sample ${D}/${ROOT}usr/share/doc/${PF}
 	fi
 
 	if use ppc-macos ; then
