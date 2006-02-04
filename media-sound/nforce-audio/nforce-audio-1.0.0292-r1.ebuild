@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/nforce-audio-1.0.0292-r1.ebuild,v 1.5 2005/06/09 15:48:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/nforce-audio-1.0.0292-r1.ebuild,v 1.6 2006/02/04 23:29:09 weeve Exp $
 
 inherit eutils linux-mod
 
@@ -61,7 +61,7 @@ src_install() {
 	linux-mod_src_install
 
 	dobin nvmixer
-	dodoc ${S}/ReleaseNotes.html
+	dohtml ${S}/ReleaseNotes.html
 }
 
 pkg_postinst() {
