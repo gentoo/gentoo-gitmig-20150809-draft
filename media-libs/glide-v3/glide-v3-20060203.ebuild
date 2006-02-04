@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-20060203.ebuild,v 1.1 2006/02/04 08:25:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-20060203.ebuild,v 1.2 2006/02/04 21:00:15 spyderous Exp $
 
 inherit multilib eutils
 
@@ -13,11 +13,7 @@ MY_P="${MY_PN}-${PV}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Hardware support for the voodoo3, voodoo4 and voodoo5"
 HOMEPAGE="http://glide.sourceforge.net/"
-# our mirroring system is retarded and broken, i'll remove this later
-# once it figures out wtf is going on
-RESTRICT="mirror"
-SRC_URI="http://dev.gentoo.org/~spyderous/distfiles/${MY_P}.tar.bz2
-	mirror://gentoo/${MY_P}.tar.bz2"
+SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 LICENSE="3DFX"
 SLOT="0"
 KEYWORDS="~x86 -sparc"
