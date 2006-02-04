@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ipython
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.26 2006/01/11 18:40:17 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.27 2006/02/04 01:28:35 marienz Exp $
+
+*ipython-0.7.1 (04 Feb 2006)
+
+  04 Feb 2006; Marien Zwart <marienz@gentoo.org> +ipython-0.7.1.ebuild:
+  Version bump to 0.7.1.fix1, called 0.7.1 in portage.
 
   11 Jan 2006; Marien Zwart <marienz@gentoo.org> ipython-0.7.0.ebuild:
   Dropping keywords for 0.7.0 bump back to ~ppc ~s390 ~x86 instead of straight

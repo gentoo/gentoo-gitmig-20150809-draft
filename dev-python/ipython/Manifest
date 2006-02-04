@@ -1,20 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6c07ad3c79eb948db8c3378f1a102852 ChangeLog 4122
+MD5 e73b80a2fc5241e6860599f609998b4f ChangeLog 4280
+RMD160 273e82fcb897cd1aa0e36867ab11f779d019be8d ChangeLog 4280
+SHA256 ff531ab433eba968cdc61b49bbd5bfa3ca50f3a084ecbaf3e05d3af936726aa2 ChangeLog 4280
 MD5 3a97850f5f76e1bd8fe6082fc70e091d files/digest-ipython-0.6.13 66
+RMD160 caf271325cf7b069966f5e63d8f8e3e600fb9c10 files/digest-ipython-0.6.13 66
+SHA256 3cc6049612dea26c21628e8868f5f742ced2bde622dce320c6282a3733430b58 files/digest-ipython-0.6.13 66
 MD5 7631bba5e54a813acc27c705fd86f421 files/digest-ipython-0.6.14 66
+RMD160 94e3b08586de980fa4fc339a317371ed4fd7c039 files/digest-ipython-0.6.14 66
+SHA256 ee26e2dd2c66e7dee3616152d0648d0d9881892fe6b4668a7ee1e2ff56c4d9db files/digest-ipython-0.6.14 66
 MD5 ba1f7f14c7a2ab29ed1844b33d1c386b files/digest-ipython-0.6.15 66
-MD5 84134fc74d00134bbadc3fdfbc7e2e01 files/digest-ipython-0.7.0 65
+RMD160 f3656dfa97cab78208e6811548acf4235894d455 files/digest-ipython-0.6.15 66
+SHA256 f460dc659073e85091fe55e8289e5df8ffc3ecd7a3ff34d5418f1633f0808f75 files/digest-ipython-0.6.15 66
+MD5 65722ef200a9e468c7748bac8cfc963f files/digest-ipython-0.7.0 241
+RMD160 58d2fa0ecc514e72c6f6ef358deef431df25a818 files/digest-ipython-0.7.0 241
+SHA256 35f9041a1e38dfa0fbd445f5c58e354f538a1f2073228254f7b8f93a1753d9bb files/digest-ipython-0.7.0 241
+MD5 035d06a18d68bbc9300fc96255a0d9c7 files/digest-ipython-0.7.1 256
+RMD160 6f23e021b87e85294ca339a96319d9b3076fd6b8 files/digest-ipython-0.7.1 256
+SHA256 52f23c2bd9b0dcbc39d718946418b5acdaf47136e3d2e52319c4714917ced811 files/digest-ipython-0.7.1 256
 MD5 41da284cfee60d5a59274e429ad7a808 ipython-0.6.13.ebuild 560
+RMD160 4cabfa842ec508b92b4f617878f2700082f931e8 ipython-0.6.13.ebuild 560
+SHA256 b0fb37bdfdee7a610785990821a3e006a80effa92dbb1d3c7f049636df806ea6 ipython-0.6.13.ebuild 560
 MD5 d35091ccc91d50ef92c780b8633b6b80 ipython-0.6.14.ebuild 564
+RMD160 55b1ece3d7eb2cd18fd6997acefe20853cb22f7c ipython-0.6.14.ebuild 564
+SHA256 f8f6b3da4bc12d1701d81a637c25e33ae8ae42d7eb2543b0438a0ff9d119c7bf ipython-0.6.14.ebuild 564
 MD5 0c5977f87953185844d6400f6e54eb39 ipython-0.6.15.ebuild 560
+RMD160 d6268aae202a448b274dd5340bf5f76b19642ad2 ipython-0.6.15.ebuild 560
+SHA256 83bb8473343eedd47cdc0d6a6666d660a2bd16590b69cf262604354f5aeb6d66 ipython-0.6.15.ebuild 560
 MD5 c0b4a2fdbef59e1a9c8a8a44b126e8a2 ipython-0.7.0.ebuild 569
+RMD160 837957d10d7ea1e4ef4a7ad96319c3b6ac8158d7 ipython-0.7.0.ebuild 569
+SHA256 8ff4debd92d88ce1a0582902a544849c5999b5ce3d3f442272ea74b324b39994 ipython-0.7.0.ebuild 569
+MD5 03fab5d078d8bc694bc77dcec457a238 ipython-0.7.1.ebuild 613
+RMD160 389c465d0a65704305009cbdadd2e12d1b02607b ipython-0.7.1.ebuild 613
+SHA256 4ed647b5c6cddb91dfb7fcd65d6f86948bd7d2e65e92803a34dc9c5c199e68c0 ipython-0.7.1.ebuild 613
 MD5 06bf581552d6f6debd761e5135c4cc68 metadata.xml 2253
+RMD160 11b7d3c6141b2b4954c942f490e154fa377af775 metadata.xml 2253
+SHA256 cad8d0fb7419d230ecc674fd8b855926903f2343bc1eaeb6f2e0fd4fe3713827 metadata.xml 2253
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxVEzW78445TWHXcRAj9JAKCCgH702pTlNyQ1eGVUdLjGb9DoGwCgiT41
-LK1JszRRsBEswCcYmBgh5z8=
-=+KY7
+iD8DBQFD5AOmW78445TWHXcRAkwkAKCW5XkUFzf7FQPtOEiumvREjBPCEQCbBsCj
+5Rt7iW9EBagWS67CjBiSqI8=
+=i2Vx
 -----END PGP SIGNATURE-----
