@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.4-r1.ebuild,v 1.14 2005/12/25 20:55:38 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.4-r1.ebuild,v 1.15 2006/02/04 01:35:31 vanquirius Exp $
 
 inherit toolchain-funcs eutils gnuconfig
 
@@ -16,7 +16,8 @@ DEPEND="=net-analyzer/nessus-libraries-${PV}
 	=net-analyzer/libnasl-${PV}
 	tcpd? ( sys-apps/tcp-wrappers )
 	X? ( =x11-libs/gtk+-2* )
-	prelude? ( dev-libs/libprelude )"
+	prelude? ( dev-libs/libprelude )
+	!net-analyzer/nessus-client"
 
 S="${WORKDIR}/${PN}"
 
