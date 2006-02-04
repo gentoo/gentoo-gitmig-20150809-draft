@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.55 2006/02/04 00:12:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.56 2006/02/04 13:57:40 killerfox Exp $
+
+  04 Feb 2006; Rene Nussbaumer <killerfox@gentoo.org>
+  poppler-0.5.0-r4.ebuild:
+  Stable on hppa. See bug #120985.
 
   04 Feb 2006; Stefan Schweizer <genstef@gentoo.org>
   -files/poppler-0.5.0-fontimprove.patch, -poppler-0.3.0.ebuild,
