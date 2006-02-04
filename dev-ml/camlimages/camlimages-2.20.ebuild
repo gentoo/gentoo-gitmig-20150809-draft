@@ -1,25 +1,47 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20.ebuild,v 1.3 2005/06/22 12:02:53 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20.ebuild,v 1.4 2006/02/04 13:36:17 mattam Exp $
 
-inherit findlib
+inherit findlib eutils
 
-IUSE=""
+IUSE="gtk opengl"
 
-DESCRIPTION="Library used by active-dvi"
-HOMEPAGE="http://pauillac.inria.fr/advi/"
+DESCRIPTION="An image manipulation library for ocaml"
+HOMEPAGE="http://pauillac.inria.fr/camlimages/"
 SRC_URI="ftp://ftp.inria.fr/INRIA/caml-light/bazar-ocaml/${P/20/2}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="~amd64 x86 ppc"
 
-DEPEND=">=dev-lang/ocaml-3.06"
+DEPEND=">=dev-lang/ocaml-3.08"
 
 MY_S="${WORKDIR}/${P/20/2}"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
 	cd ${MY_S}
+	if has_version ">=dev-lang/ocaml-3.09";
+	then
+		epatch ${FILESDIR}/${P}-ocaml-3.09.diff
+	fi
+}
+
+src_compile() {
+	local myconf
+
+	cd ${MY_S}
+
+	if !(use gtk);
+	then
+		myconf="--with-lablgtk=/dev/null --with-lablgtk2=/dev/null"
+	fi
+
+	if !(use opengl);
+	then
+		myconf="--with-lablgl=/dev/null"
+	fi
+
 	econf || die
 	emake -j1 || die
 	emake -j1 opt || die
