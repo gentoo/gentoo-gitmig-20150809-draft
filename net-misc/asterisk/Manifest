@@ -1,4 +1,4 @@
-MD5 2773ad62b290efe450ff2614553e8924 ChangeLog 20159
+MD5 0b231fed5aef2b842143ac17936ef6b6 ChangeLog 20298
 MD5 9322226b2f812f260dd052ee9a8ed6a9 asterisk-1.0.10.ebuild 14631
 MD5 68d5fb7fa17a8adb2fde235305eeb444 asterisk-1.0.5-r3.ebuild 12292
 MD5 60c09319bc8263b96943e15c6af270b7 asterisk-1.0.6-r2.ebuild 14064
@@ -7,7 +7,7 @@ MD5 e2203fc118d7898b358862ddc9bcb8d4 asterisk-1.0.8-r1.ebuild 13800
 MD5 2bb329f2fddb62b6cc55b6ec95990528 asterisk-1.0.9-r2.ebuild 13817
 MD5 ccf3f74b0df577c747f8f1c51846f3e2 asterisk-1.2.0.ebuild 8468
 MD5 725495d05db613d568e01624e2bc9736 asterisk-1.2.1.ebuild 9907
-MD5 8aa8d87b12057c0983bde1d7e06cc042 asterisk-1.2.4.ebuild 10050
+MD5 fa0757741a543c08e030e4fb1fb2289c asterisk-1.2.4.ebuild 10058
 MD5 f0fe0308b464c71f83cf2483388c8058 files/1.0.0/asterisk-1.0.1-linux26.diff 474
 MD5 88e8cfc364e9767f104159b374eb5bea files/1.0.0/asterisk-1.0.10-misdn.patch 607
 MD5 27bf961621fb1f521bc11293df8b5ec9 files/1.0.0/asterisk-1.0.10-weak-references.diff 8579

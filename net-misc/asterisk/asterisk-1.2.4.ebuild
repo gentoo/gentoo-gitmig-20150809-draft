@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.4.ebuild,v 1.1 2006/02/02 01:48:28 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.4.ebuild,v 1.2 2006/02/04 23:47:46 stkn Exp $
 
 inherit eutils
 
@@ -244,8 +244,8 @@ src_install() {
 	doman contrib/scripts/safe_asterisk.8
 	doman contrib/scripts/astgenkey.8
 
-	newinitd ${FILESDIR}/1.0.0/asterisk.rc6 asterisk
-	newconfd ${FILESDIR}/1.0.0/asterisk.confd asterisk
+	newinitd ${FILESDIR}/1.0.0/asterisk.rc6.sec asterisk
+	newconfd ${FILESDIR}/1.0.0/asterisk.confd.sec asterisk
 
 	# install standard docs...
 	dodoc BUGS CREDITS LICENSE ChangeLog HARDWARE README README.fpm
