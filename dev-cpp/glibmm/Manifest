@@ -1,12 +1,46 @@
-MD5 0229d067b1800260d5c20eda9cbdca94 ChangeLog 6464
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 de83e5b8634444e624af227c9bfc1b2b ChangeLog 6563
+RMD160 e587e62ac344363fcc4b9184bd131a5ffb1044a1 ChangeLog 6563
+SHA256 684ec91ea715e08f45f7325a0dc2244f7fa290f16e3cdb4d7c324945998e3753 ChangeLog 6563
 MD5 6228c75d9e841f3fc6883a344a98e7c3 files/digest-glibmm-2.4.4 65
+RMD160 8a1a710154fa4fdf6d5d005c2a153f47ade350ac files/digest-glibmm-2.4.4 65
+SHA256 2f181ab936ef5d3dc47c9b92ef2a8c513569c316d7a510368d836c6141c71a69 files/digest-glibmm-2.4.4 65
 MD5 d645a289371e18df9c33719baa37d25d files/digest-glibmm-2.4.7-r1 65
+RMD160 c97551051afbbf16c3e2cbb8884f3928c0a37c79 files/digest-glibmm-2.4.7-r1 65
+SHA256 fd633b4cdd1a3ac8ce0891de6fc08eba29a744fa0e54b276e1f33d3e5a13b69f files/digest-glibmm-2.4.7-r1 65
 MD5 df31c402a8203f95b628cad41a9bafa0 files/digest-glibmm-2.6.1 66
+RMD160 898ccc9a98c096d2c8af9257e438e3a42c1bad1c files/digest-glibmm-2.6.1 66
+SHA256 7dd34b74bc1010fbaf75b93c93215f4e92c37a8a27c37acb877d829b9f5f429b files/digest-glibmm-2.6.1 66
 MD5 d7d279b80710c39fa3970cae4548b325 files/digest-glibmm-2.8.0 66
-MD5 86ae295350f1d4c6c59691ba81768d1f files/digest-glibmm-2.8.1 66
+RMD160 e7ea3852d11b0232c0b05e0b72dd80ef22c3c4d7 files/digest-glibmm-2.8.0 66
+SHA256 abf19e19e8c5e2756bf45173ef13e5b0eb202413cfefae1678c12df527c45059 files/digest-glibmm-2.8.0 66
+MD5 6eea4d62277b35683c5f9f7eceaec877 files/digest-glibmm-2.8.1 244
+RMD160 6155d388389e756d1c638d68d2bc697aa24cc0ae files/digest-glibmm-2.8.1 244
+SHA256 1409c442480064c37e0421f98527ba04b7ce1e8f969f8dbca93bfc2335dac163 files/digest-glibmm-2.8.1 244
 MD5 99d38f342fc31bd084bdb61bf3603ae1 glibmm-2.4.4.ebuild 538
+RMD160 a0823b87b00243fb6cce6444000863965dec9821 glibmm-2.4.4.ebuild 538
+SHA256 973fd43b506385f925d3b7625e7e7e10121ca8b8bd220bb1e818b81215c52fe9 glibmm-2.4.4.ebuild 538
 MD5 8ce03c33ee4c7715e5f4be86dbe27553 glibmm-2.4.7-r1.ebuild 1054
+RMD160 74cbe2e065584b5d8d9c0a99e54c743571e1fa4a glibmm-2.4.7-r1.ebuild 1054
+SHA256 5f21cf2809a4038be263cd93a8444eb72759f6db510193ebe97b61e690bb1caa glibmm-2.4.7-r1.ebuild 1054
 MD5 fecf343fd045f83562986d9c6d29e0c9 glibmm-2.6.1.ebuild 1168
+RMD160 e5be8d681adb1365d8425a8700ecb6dcfa7fe9cf glibmm-2.6.1.ebuild 1168
+SHA256 43a5680bddb931d03ec87e96c73047c10f33884250f8bcf46bc570f0a0923efe glibmm-2.6.1.ebuild 1168
 MD5 2ab74c7a7ad815cd82b32bf8cbbac5c5 glibmm-2.8.0.ebuild 1194
-MD5 972f1404588c9823a0780d52775223a4 glibmm-2.8.1.ebuild 1190
+RMD160 309386691863e71d8954e08c16bae2fc2b4ee4cf glibmm-2.8.0.ebuild 1194
+SHA256 a87379aea9a4c7885f9f94a901c07d9a4615abe6858e56bf673b4a7565e78e1f glibmm-2.8.0.ebuild 1194
+MD5 78479b2ac8db94441577f6e5ea91ae87 glibmm-2.8.1.ebuild 1188
+RMD160 336b325e9343de0e53b58ce5b0eda09cd52162d1 glibmm-2.8.1.ebuild 1188
+SHA256 dc09edd3cfb18efd7a5e974bf08d9988191ba2285625f177d88dfbf826a4ecf1 glibmm-2.8.1.ebuild 1188
 MD5 57fc113c79155fc9e1e055642befa01e metadata.xml 255
+RMD160 c1e23d640a73041f03935350f8f37801b501fcf5 metadata.xml 255
+SHA256 1e5199bee2c4d0abb806c1cd58b1706d527f570dcec26aec624a5c5777763811 metadata.xml 255
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD5NQIJrHF4yAQTrARArgXAJ42Li9Q95dMATcBhNNKFi1IbM1ZtwCbB0s6
+soshHIQjthf11wLXN2V4YEw=
+=2qWm
+-----END PGP SIGNATURE-----
