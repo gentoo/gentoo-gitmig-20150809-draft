@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.54 2006/02/03 23:46:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.55 2006/02/04 00:12:03 genstef Exp $
+
+  04 Feb 2006; Stefan Schweizer <genstef@gentoo.org>
+  -files/poppler-0.5.0-fontimprove.patch, -poppler-0.3.0.ebuild,
+  -poppler-0.3.0-r1.ebuild, -poppler-0.4.2-r1.ebuild, -poppler-0.4.4.ebuild,
+  -poppler-0.5.0.ebuild, -poppler-0.5.0-r2.ebuild, -poppler-0.5.0-r3.ebuild:
+  Remove old ebuilds
 
   03 Feb 2006; Stefan Schweizer <genstef@gentoo.org>
   poppler-0.5.0-r4.ebuild:
