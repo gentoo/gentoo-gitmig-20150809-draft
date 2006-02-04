@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r4.ebuild,v 1.12 2005/08/07 23:03:23 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r4.ebuild,v 1.13 2006/02/04 17:33:53 vapier Exp $
 
 inherit eutils toolchain-funcs elisp-common
 
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}"/patch
+	epatch "${FILESDIR}"/gpm-configure-LANG.patch
 }
 
 src_compile() {
