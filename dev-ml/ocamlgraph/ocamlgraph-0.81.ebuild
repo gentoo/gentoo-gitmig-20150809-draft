@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ocamlgraph-0.95.ebuild,v 1.2 2006/02/04 22:25:39 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ocamlgraph-0.81.ebuild,v 1.3 2006/02/04 22:25:39 mattam Exp $
 
 inherit findlib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.lri.fr/~filliatr/ocamlgraph/"
 SRC_URI="http://www.lri.fr/~filliatr/ftp/ocamlgraph/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 DEPEND=">=dev-lang/ocaml-3.08
 	doc? ( dev-tex/hevea dev-ml/ocamlweb )"
 IUSE="doc"
