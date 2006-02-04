@@ -1,19 +1,67 @@
-MD5 29e3192f3e98274b6b605502807eafb6 ChangeLog 10135
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a5653f083e7e5592fcb381a59bb4c26d ChangeLog 10247
+RMD160 c33b8193721e66f98f2e7efee43a2a29a1edaefa ChangeLog 10247
+SHA256 61e72f368aa0c11744ac9d81615b1a955c4a2d1341296d96c7fe83eb19522017 ChangeLog 10247
 MD5 9bf9811b5db655640e7f280bb9bab24c files/digest-libgcrypt-1.1.12 68
+RMD160 51da08b52848a9938027aed92b0391aacbf905d3 files/digest-libgcrypt-1.1.12 68
+SHA256 f28acb097181dce377c3c6e24392ba44d0ea7c8348406022f265f01cfae49803 files/digest-libgcrypt-1.1.12 68
 MD5 9f546283fe69d56096f3707d52a4668a files/digest-libgcrypt-1.1.94 68
+RMD160 e1170d27a47acb82625f8dac46a0a85dae32b6b9 files/digest-libgcrypt-1.1.94 68
+SHA256 12bca3aeb3823d37db00e3e1695b1328d9f7ab39bfda27b5147a50f38245eac4 files/digest-libgcrypt-1.1.94 68
 MD5 16b1f5ae3cd2e7678379e1c6be616455 files/digest-libgcrypt-1.2.0 67
+RMD160 a94fdbe535ccaf418ddc10794463b5477ae2682c files/digest-libgcrypt-1.2.0 67
+SHA256 eaeb7a949ce25987224706285e911b0a67b36f9f7cf565d8e91b0ca53caeabd2 files/digest-libgcrypt-1.2.0 67
 MD5 1c871fcf508869ff09d46782655c3ca5 files/digest-libgcrypt-1.2.1 67
+RMD160 7297905404fc03fb67353b2319041a478428d243 files/digest-libgcrypt-1.2.1 67
+SHA256 cd040605cdb7239c00dc76297fedd3d0f27de35d603425b6af87efb0d637ef07 files/digest-libgcrypt-1.2.1 67
 MD5 1c871fcf508869ff09d46782655c3ca5 files/digest-libgcrypt-1.2.1-r1 67
+RMD160 7297905404fc03fb67353b2319041a478428d243 files/digest-libgcrypt-1.2.1-r1 67
+SHA256 cd040605cdb7239c00dc76297fedd3d0f27de35d603425b6af87efb0d637ef07 files/digest-libgcrypt-1.2.1-r1 67
 MD5 72e64d81017126496070072ae2f3421b files/digest-libgcrypt-1.2.2 67
+RMD160 2e7a8993986c00e3fa4f0a5bf01bba0ea889141c files/digest-libgcrypt-1.2.2 67
+SHA256 e5952058aa7530ae5b31a769dd6210717a5dd98f5552e49e164edd0e2a0c7161 files/digest-libgcrypt-1.2.2 67
 MD5 72e64d81017126496070072ae2f3421b files/digest-libgcrypt-1.2.2-r1 67
+RMD160 2e7a8993986c00e3fa4f0a5bf01bba0ea889141c files/digest-libgcrypt-1.2.2-r1 67
+SHA256 e5952058aa7530ae5b31a769dd6210717a5dd98f5552e49e164edd0e2a0c7161 files/digest-libgcrypt-1.2.2-r1 67
 MD5 af5915592167ae4fd16bab42364d3c8a files/libgcrypt-1.2.1-GNU-stack-fix.patch 22394
+RMD160 d18e3dc8002ed283fb59893ae908f6d57c799653 files/libgcrypt-1.2.1-GNU-stack-fix.patch 22394
+SHA256 e1cdd45acb164fc9fbf5b925227ad01120ff8473e30dd80c5dcbe0bcaf5afb64 files/libgcrypt-1.2.1-GNU-stack-fix.patch 22394
 MD5 bd80e49e664820c114b28f832dd23e1c files/libgcrypt-1.2.1-info-entry-fix.patch 318
+RMD160 c7ff3ac14882c78d9b1b89695addb76844345e60 files/libgcrypt-1.2.1-info-entry-fix.patch 318
+SHA256 ce89bc4044b9a27ad065a967105e0fa83755ce78e024dc4211e1367999244b6c files/libgcrypt-1.2.1-info-entry-fix.patch 318
 MD5 66effa36b401f2dfc6de7dec7c612f8a files/libgcrypt-1.2.1-ppc64-fix.patch 401
+RMD160 6f245288a3b5abbe763a84990c5946853a943395 files/libgcrypt-1.2.1-ppc64-fix.patch 401
+SHA256 9eabe521e3a36c9a14a6ffd907cf8d89477b99205dd4b45842b77665b629807a files/libgcrypt-1.2.1-ppc64-fix.patch 401
 MD5 e04ce4b3ccafdf1cdc3e2069a75ac11c libgcrypt-1.1.12.ebuild 1123
+RMD160 158389dbe0d4ba6cacee0a380e35ebd8d3974420 libgcrypt-1.1.12.ebuild 1123
+SHA256 287c7f31433e188227d679dbcf9981d43565644fd4e277bf1bdd5c0f05281147 libgcrypt-1.1.12.ebuild 1123
 MD5 aac9d14d38568a9aab54928cc3e05a5c libgcrypt-1.1.94.ebuild 992
+RMD160 517756389d8f727272ccbd484f431aecf6766f05 libgcrypt-1.1.94.ebuild 992
+SHA256 69cd00e4a732d73a1054cdf094e00e3ddd709001a59a9ac403b82f37c9f95522 libgcrypt-1.1.94.ebuild 992
 MD5 dd3b6ee3caf7dc34c0ffa5758993c72a libgcrypt-1.2.0.ebuild 1050
+RMD160 ce132a781bf291b9a933ea85de98b392a7966648 libgcrypt-1.2.0.ebuild 1050
+SHA256 2a1706c3d2c82cb72b93880be3cecee5b08a3505f578570f67d4b0462d0ce1e3 libgcrypt-1.2.0.ebuild 1050
 MD5 12f2bb1634231d638334fbe3fcfe20ce libgcrypt-1.2.1-r1.ebuild 1215
+RMD160 a9fe6cc06f60d0ecbd7a41341ee9c495d726a131 libgcrypt-1.2.1-r1.ebuild 1215
+SHA256 7f1147e0b847a35ab724ed0644a9f0d4d7d923baeb9dfaf66bfffe9309d87913 libgcrypt-1.2.1-r1.ebuild 1215
 MD5 7dc93eccc7b1d3187503d3316fc5c449 libgcrypt-1.2.1.ebuild 1277
-MD5 f01afcca86447642d675afb78e4ff2d9 libgcrypt-1.2.2-r1.ebuild 1278
+RMD160 5ece895939d5bf5ae21fe1ef32021c9615868990 libgcrypt-1.2.1.ebuild 1277
+SHA256 feaf84c3fe087ca5b35fa28b034f44bfdd0b2151e0f1926386293a89bffad15d libgcrypt-1.2.1.ebuild 1277
+MD5 2dc1147f279f5d2ea45c2ffde543268b libgcrypt-1.2.2-r1.ebuild 1279
+RMD160 f42cf1f8dc7048fcc498f45ff243a2c29045bece libgcrypt-1.2.2-r1.ebuild 1279
+SHA256 f02b2ba9918a51d880a711038acbfc66f6f0b8d64cca4eaecc74d24e79088320 libgcrypt-1.2.2-r1.ebuild 1279
 MD5 bd7ce68270a3f982bfb5e09510c48721 libgcrypt-1.2.2.ebuild 1258
+RMD160 c1865994b653ca0e4a4695a9fdc2409fc78756c8 libgcrypt-1.2.2.ebuild 1258
+SHA256 c5b3aa02b552ae77644e21cac3ff159c75dd8b0fc82db58acf350b16fcf745f8 libgcrypt-1.2.2.ebuild 1258
 MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
+RMD160 99eb13264f3656e33d5cbc95ed9319ba50a1e58c metadata.xml 276
+SHA256 abd952a77edadf769a821e7210a01f38850cada9a7677a1561f6aa0ce954f480 metadata.xml 276
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5PWmJrHF4yAQTrARAmMxAJ9kdiFUZ7jfI3dQ6ellL7WYnaBmWwCfbO6b
+5ayPQzcYk8cqh4EvZk9b8bw=
+=DWak
+-----END PGP SIGNATURE-----
