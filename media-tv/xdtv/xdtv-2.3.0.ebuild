@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.0.ebuild,v 1.2 2006/02/02 19:50:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.0.ebuild,v 1.3 2006/02/04 17:32:50 flameeyes Exp $
 
 inherit font multilib autotools flag-o-matic
 
@@ -22,7 +22,7 @@ for lang in ca de en es fr gl it ja pl ru; do
 			aqua_theme? ( mirror://sourceforge/xawdecode/libxdtv-theme-aqua-${lang}-${THEMES_PV}.tar.gz )
 			carbone_theme? ( mirror://sourceforge/xawdecode/libxdtv-theme-carbone-${lang}-${THEMES_PV}.tar.gz )
 		)"
-#	IUSE="${IUSE} linguas_${lang}"
+	IUSE="${IUSE} linguas_${lang}"
 done
 
 SLOT="0"
