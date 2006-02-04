@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/File-Temp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.11 2006/02/01 00:18:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.12 2006/02/04 14:30:39 solar Exp $
+
+  04 Feb 2006; <solar@gentoo.org> :
+  - redigest needed due to bad RMD160. bug #121124
 
   01 Feb 2006; Aron Griffis <agriffis@gentoo.org> File-Temp-0.16.ebuild:
   Mark 0.16 stable on ia64

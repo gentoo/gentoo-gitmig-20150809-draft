@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/File-Temp-0.14.ebuild,v 1.4 2005/08/26 03:08:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/File-Temp-0.14.ebuild,v 1.5 2006/02/04 14:30:39 solar Exp $
 
 inherit perl-module
 
