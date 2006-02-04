@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r3.ebuild,v 1.12 2006/02/03 01:55:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r3.ebuild,v 1.13 2006/02/04 17:49:30 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -123,6 +123,7 @@ src_install() {
 	fperms 600 /etc/ssh/sshd_config
 	dobin contrib/ssh-copy-id
 	newinitd "${FILESDIR}"/sshd.rc6 sshd
+	newconfd "${FILESDIR}"/sshd.confd sshd
 	keepdir /var/empty
 
 	newpamd "${FILESDIR}"/sshd.pam sshd

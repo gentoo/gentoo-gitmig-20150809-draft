@@ -1,51 +1,55 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6,v 1.17 2005/12/10 02:41:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6,v 1.18 2006/02/04 17:49:30 vapier Exp $
 
 depend() {
 	use logger dns
 	need net
 }
 
-[[ -z ${SSH_CONFDIR} ]] && SSH_CONFDIR="/etc/ssh"
+SSHD_CONFDIR=${SSHD_CONFDIR:-/etc/ssh}
 
 checkconfig() {
 	if [[ ! -d /var/empty ]] ; then
 		mkdir -p /var/empty || return 1
 	fi
 
-	if [[ ! -e ${SSH_CONFDIR}/sshd_config ]] ; then
-		eerror "You need an ${SSH_CONFDIR}/sshd_config file to run sshd"
+	if [[ ! -e ${SSHD_CONFDIR}/sshd_config ]] ; then
+		eerror "You need an ${SSHD_CONFDIR}/sshd_config file to run sshd"
 		eerror "There is a sample file in  /usr/share/doc/openssh"
 		return 1
 	fi
 
 	gen_keys || return 1
 
-	/usr/sbin/sshd -t || return 1
+	/usr/sbin/sshd -t ${myopts} || return 1
 }
 
 gen_keys() {
-	if [[ ! -e ${SSH_CONFDIR}/ssh_host_key ]] ; then
+	if [[ ! -e ${SSHD_CONFDIR}/ssh_host_key ]] ; then
 		einfo "Generating Hostkey..."
-		/usr/bin/ssh-keygen -t rsa1 -b 1024 -f ${SSH_CONFDIR}/ssh_host_key -N '' || return 1
+		/usr/bin/ssh-keygen -t rsa1 -b 1024 -f ${SSHD_CONFDIR}/ssh_host_key -N '' || return 1
 	fi
-	if [[ ! -e ${SSH_CONFDIR}/ssh_host_dsa_key ]] ; then
+	if [[ ! -e ${SSHD_CONFDIR}/ssh_host_dsa_key ]] ; then
 		einfo "Generating DSA-Hostkey..."
-		/usr/bin/ssh-keygen -d -f ${SSH_CONFDIR}/ssh_host_dsa_key -N '' || return 1
+		/usr/bin/ssh-keygen -d -f ${SSHD_CONFDIR}/ssh_host_dsa_key -N '' || return 1
 	fi
-	if [[ ! -e ${SSH_CONFDIR}/ssh_host_rsa_key ]] ; then
+	if [[ ! -e ${SSHD_CONFDIR}/ssh_host_rsa_key ]] ; then
 		einfo "Generating RSA-Hostkey..."
-		/usr/bin/ssh-keygen -t rsa -f ${SSH_CONFDIR}/ssh_host_rsa_key -N '' || return 1
+		/usr/bin/ssh-keygen -t rsa -f ${SSHD_CONFDIR}/ssh_host_rsa_key -N '' || return 1
 	fi
 	return 0
 }
 
 start() {
+	local myopts=""
+	[[ ${SVCNAME} != "sshd" ]] && myopts="${myopts} -o PidFile=/var/run/${SVCNAME}.pid"
+	[[ ${SSHD_CONFDIR} != "/etc/ssh" ]] && myopts="${myopts} -f ${SSHD_CONFDIR}/sshd_config"
+
 	checkconfig || return 1
 	ebegin "Starting ${SVCNAME}"
-	/usr/sbin/sshd -o PidFile=/var/run/${SVCNAME}.pid ${SSHD_OPTS}
+	/usr/sbin/sshd ${myopts} ${SSHD_OPTS}
 	eend $?
 }
 
