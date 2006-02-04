@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-0.5.ebuild,v 1.1 2006/01/08 10:11:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-0.5.ebuild,v 1.2 2006/02/04 03:56:31 vapier Exp $
 
 inherit eutils qt3
 
-DESCRIPTION="Twinkle is a soft phone for your VOIP communcations using SIP."
+DESCRIPTION="a soft phone for your VOIP communcations using SIP"
 HOMEPAGE="http://www.twinklephone.com/"
 SRC_URI="http://www.xs4all.nl/~mfnboer/twinkle/download/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"

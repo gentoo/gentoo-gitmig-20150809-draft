@@ -2,27 +2,63 @@
 Hash: SHA1
 
 MD5 e7e9cac98b773cf57a24d132b4669ebc ChangeLog 1545
+RMD160 00db4240bfbd9fa6dab49122879721cdd9d1dd65 ChangeLog 1545
+SHA256 42d83fb371abf187258d19e4112d8459bac5bd6e14b25017f22c7bad46e026f9 ChangeLog 1545
 MD5 dc5a3058857036eb5ca33a35819f1164 files/digest-twinkle-0.3.1 65
+RMD160 17c41aaa7b3486cbdd5ad32728e3e6517bc14fd4 files/digest-twinkle-0.3.1 65
+SHA256 32acb84eb1827562382f3466cba556cedda20cdc8e81032a59ae7af9b33ab9bd files/digest-twinkle-0.3.1 65
 MD5 7190799a48d4e6410e3b085f6060ec58 files/digest-twinkle-0.3.2 65
+RMD160 d78b3476de10c0b3134cae73a094d5a97d35a048 files/digest-twinkle-0.3.2 65
+SHA256 2eb1c8e87a64a4cf5210088dba6202efcbf989c8d6dbe37189fd8fad9f8f2f13 files/digest-twinkle-0.3.2 65
 MD5 7190799a48d4e6410e3b085f6060ec58 files/digest-twinkle-0.3.2-r1 65
+RMD160 d78b3476de10c0b3134cae73a094d5a97d35a048 files/digest-twinkle-0.3.2-r1 65
+SHA256 2eb1c8e87a64a4cf5210088dba6202efcbf989c8d6dbe37189fd8fad9f8f2f13 files/digest-twinkle-0.3.2-r1 65
 MD5 849a2819d504bbbdf7d3cb372179f8bd files/digest-twinkle-0.4.1 65
+RMD160 8a0789ff09ddcc11badc8fa04daf088f8a2e02ed files/digest-twinkle-0.4.1 65
+SHA256 09e7e664c151472f8d8c7e36970b8d1d78049925ecf5a72e4713deb4555f90c0 files/digest-twinkle-0.4.1 65
 MD5 2452597a6d327830aa3d6d13fff65a67 files/digest-twinkle-0.4.2 65
+RMD160 e13765d653263ee78128773f39b979026c9e4434 files/digest-twinkle-0.4.2 65
+SHA256 0aa2fd8658abb7c6c29a9d5c92270c386ae24647ef2bacb83ad1d22314581840 files/digest-twinkle-0.4.2 65
 MD5 e5bcd508b5d591a0e470e4d51ff090ea files/digest-twinkle-0.5 63
+RMD160 343ed06071e0256583c695bbc05007675690aca8 files/digest-twinkle-0.5 63
+SHA256 e9849a9393301c0b7a6cae01f870bc08f29a7e6c7ea8bbc390338f970e75b535 files/digest-twinkle-0.5 63
 MD5 bd526be23363739d99a572793a4340fa files/twinkle-0.3.1-badcflags.patch 1850
+RMD160 37fd2cfe9620f0d940f5dda926f4dc35553528f6 files/twinkle-0.3.1-badcflags.patch 1850
+SHA256 530a8b246f59bc4cd5939e278399e897faef0b2a6769000d6d445e1df516a42c files/twinkle-0.3.1-badcflags.patch 1850
 MD5 e5260d884a6822201c94886d32c5154d files/twinkle-0.3.2-amd64.patch 503
+RMD160 90c8b9d850fb63d2d0b0e4e667857caf47557505 files/twinkle-0.3.2-amd64.patch 503
+SHA256 9e8df785168bf120f600abab49136e608f662e798341dfc0c6b626d300fd2e04 files/twinkle-0.3.2-amd64.patch 503
 MD5 9a6bdc1d520938fd26446b34f7414d06 files/twinkle-0.3.2-badcflags.patch 14878
+RMD160 f7c895eb5aef278335efc0bbe2a073ad1f16fa8b files/twinkle-0.3.2-badcflags.patch 14878
+SHA256 c3e24d50661449eac9a4ee68caad2b8df0e2bfa1d9609e1f7eb2d7d6039843fc files/twinkle-0.3.2-badcflags.patch 14878
 MD5 bed5e3eed5c8eaef4460598e15633da5 files/twinkle-0.4.1-badcflags.patch 492
+RMD160 136c6387c0053d0457e4be766a8bfdbaeaccc5b1 files/twinkle-0.4.1-badcflags.patch 492
+SHA256 7bcb91795fa0e9c0db4dc174151ed9b3850eeca132844330d65d8429949296d9 files/twinkle-0.4.1-badcflags.patch 492
 MD5 81380b5fa13f903ff321873d95ed35bb metadata.xml 458
+RMD160 51da9f8eb28d451a724fa7b687894976057263c1 metadata.xml 458
+SHA256 9ee142b0e5854bae9e0365b52f6f0cf00a3b428c0c199ccce029108d03f42996 metadata.xml 458
 MD5 7abbf78091ee015b297347fb0b1c9d09 twinkle-0.3.1.ebuild 855
+RMD160 3eea0fff20bce988d146b25511e2b3b562a15c9a twinkle-0.3.1.ebuild 855
+SHA256 4f23b2edd73400c8264bed05dda3360764c28fa452b065ecfd80c390d5adfcef twinkle-0.3.1.ebuild 855
 MD5 e2a484f7eed40b4feb94cac24975e8a3 twinkle-0.3.2-r1.ebuild 1031
+RMD160 53ad10102883055d7c0e00d37ea86bd1420d4a30 twinkle-0.3.2-r1.ebuild 1031
+SHA256 317e6234a4bfb1203b24d04a839ddaf0781bef4e3cd775f39c564ca154816177 twinkle-0.3.2-r1.ebuild 1031
 MD5 6927584c0ecd78f39a77a33016dc3df8 twinkle-0.3.2.ebuild 892
+RMD160 12dbc6e4186fc2e882fe3f58004826b89d223a81 twinkle-0.3.2.ebuild 892
+SHA256 e48e45295335d20dfe451f1006b9e8e7bfa5b8980e08d7aed97fc8dbb63a4071 twinkle-0.3.2.ebuild 892
 MD5 10128ef335cfe934c39355c200ec03b7 twinkle-0.4.1.ebuild 995
+RMD160 286e105fcfa8978833691cd07f1a4232d5b5ab65 twinkle-0.4.1.ebuild 995
+SHA256 163aea6f378f2c3963b451bfaf4e1af772873d3dbb2d9266a21b79f5cbb1afed twinkle-0.4.1.ebuild 995
 MD5 297ea0290e47908e78db0014f149a7fa twinkle-0.4.2.ebuild 1002
-MD5 6995f1b931149086ea52c506282c184a twinkle-0.5.ebuild 1000
+RMD160 9880e2f66387c062eda6750f938cb2d527b87f24 twinkle-0.4.2.ebuild 1002
+SHA256 140adcee61eef8037c7f3c69819fd13db6b1eb7373bba741f4aded1d203ed81b twinkle-0.4.2.ebuild 1002
+MD5 8a36bf119ad6f3118041917b2f4b58c5 twinkle-0.5.ebuild 984
+RMD160 a972bc10132a50d3286f91d22df270945aca8b49 twinkle-0.5.ebuild 984
+SHA256 78075b799ee4215b29f6db0d8ea51eedb109128db04d3fb60a60598b66a9cb03 twinkle-0.5.ebuild 984
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwO3OmdTrptrqvGERAsn1AJsFLAr1Dk9vhzDtDmNmBJr9Zc7cLQCfcS4f
-6C3QwyRvwjwMNLKh5h3aSZo=
-=RP2j
+iD8DBQFD5CX62+ySkm8kpY0RAneNAJ0fcrEAkKeIRwl5U+/cWprJ5T/yfQCdFXzA
+ENUF6ekWFZpkb/BPhcZkhzk=
+=ln67
 -----END PGP SIGNATURE-----
