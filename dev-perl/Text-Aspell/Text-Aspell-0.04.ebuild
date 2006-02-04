@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Aspell/Text-Aspell-0.04.ebuild,v 1.9 2006/01/31 21:52:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Aspell/Text-Aspell-0.04.ebuild,v 1.10 2006/02/04 01:17:45 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/H/HA/HANK/${P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha ~amd64 ~hppa ~ia64 ~mips ppc sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"
