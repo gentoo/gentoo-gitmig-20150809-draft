@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.4.6.ebuild,v 1.1 2005/07/30 01:52:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.4.6.ebuild,v 1.2 2006/02/04 02:37:03 vanquirius Exp $
 
 inherit eutils
 
-S=${WORKDIR}/ACE_wrappers
+S="${WORKDIR}/ACE_wrappers"
 DESCRIPTION="The Adaptive Communications Environment"
 SRC_URI="http://deuce.doc.wustl.edu/old_distribution/ACE-${PV}.tar.bz2"
 HOMEPAGE="http://www.cs.wustl.edu/~schmidt/ACE.html"
@@ -12,18 +12,28 @@ HOMEPAGE="http://www.cs.wustl.edu/~schmidt/ACE.html"
 SLOT="0"
 LICENSE="BSD as-is"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
-IUSE="ipv6"
+IUSE="X ipv6"
 
-DEPEND="virtual/libc
-	X? ( virtual/x11 )"
+DEPEND="dev-libs/openssl"
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	X? ( || (
+	( x11-libs/libXt
+	x11-libs/libXaw )
+	virtual/x11 )
+	)"
+
+DEPEND="${DEPEND}
+	X? ( || (
+	( x11-proto/xproto )
+	virtual/x11 )
+	)"
 
 src_compile() {
-	export ACE_ROOT=${S}
+	export ACE_ROOT="${S}"
 	mkdir build
 	cd build
-	ECONF_SOURCE=${S}
+	ECONF_SOURCE="${S}"
 	econf --enable-lib-all $(use_with X) $(use_enable ipv6)
 	# --with-qos needs ACE_HAS_RAPI
 	emake static_libs=1 || die
@@ -38,7 +48,7 @@ src_test() {
 
 src_install() {
 	cd build
-	emake ACE_ROOT=${S} DESTDIR=${D} install || die "failed to install"
+	make ACE_ROOT="${S}" DESTDIR="${D}" install || die "failed to install"
 }
 
 
