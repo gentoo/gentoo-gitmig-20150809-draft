@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/selfhtml-8.1.1.ebuild,v 1.1 2005/12/18 00:28:21 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/selfhtml-8.1.1.ebuild,v 1.2 2006/02/04 11:21:00 flameeyes Exp $
 
 S=${WORKDIR}
 TARGET=/usr/share/doc/${PF}/html
@@ -15,5 +15,5 @@ IUSE=""
 
 src_install() {
 	dodir ${TARGET}
-	cp -dpR ${S}/* ${D}${TARGET}
+	cp -pR ${S}/* ${D}${TARGET}
 }

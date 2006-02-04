@@ -1,6 +1,28 @@
-MD5 8886f45624bc334b9a16a8068a0681ee ChangeLog 1291
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d96709de9cd0a42bdba4bd6db9174877 ChangeLog 1398
+RMD160 0bb79b69cd86ce2ccea66cb5ed9e5205a7e0b5fc ChangeLog 1398
+SHA256 d7cdb64c40a65369efdc313f31cca9a984312d9cab8995d2736a35a68da6e120 ChangeLog 1398
 MD5 b0d2429e030ffd996bd09d0c2dea8c61 files/digest-selfhtml-8.1 60
+RMD160 91621419e0def8ef8b5497ecfa62e329fb3750dc files/digest-selfhtml-8.1 60
+SHA256 57b6d3b63cbc355309a8acea4968f1327fa202ec7ac4c1e00a05c149a6bd5476 files/digest-selfhtml-8.1 60
 MD5 eb5d814e7abc2484f95ed626d2579fac files/digest-selfhtml-8.1.1 61
+RMD160 cc682c1ab68317fc8dfd8e34fc9b4ac2f34b77df files/digest-selfhtml-8.1.1 61
+SHA256 6d100d26c7363ba0c592e25c959dc764c7895683a9584ae41cd8de59ee733ebe files/digest-selfhtml-8.1.1 61
 MD5 035613e4ea415232c9b9fea9783994ce metadata.xml 221
-MD5 6ccb125583f4efb43e3d911ce7ef460d selfhtml-8.1.1.ebuild 651
+RMD160 1b2f671f76e6f5633ecad58b5d2468c6560b99f9 metadata.xml 221
+SHA256 9df9acfdf2e8203b8e0559e8b74ddf9d7b4c5693978c9aedc6ccff32c71cead2 metadata.xml 221
+MD5 c1028c0c488e298c42891c307f662ff4 selfhtml-8.1.1.ebuild 654
+RMD160 9286aad5bbef86cc35d3fd6cdd2a267fefb25e04 selfhtml-8.1.1.ebuild 654
+SHA256 23f3c8e3e968a989bc94e46266d578977669fd38bc06a15d3dc627c09a5dc2bd selfhtml-8.1.1.ebuild 654
 MD5 d4f92364a684606be7ac8b51bfd273d8 selfhtml-8.1.ebuild 645
+RMD160 3850598738e385fed75bcb28248b76970349f2e9 selfhtml-8.1.ebuild 645
+SHA256 e148bdb6f11e5655ec24c80c33accf3f1009a9df0b605ec137f25336cb6722e5 selfhtml-8.1.ebuild 645
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5I4pAiZjviIA2XgRAturAJ9tQN/haAhMPT5/SW2CdXpqxMgAtwCg7djm
+50f5ga4wNG7qR5x1kZLt3KE=
+=xUou
+-----END PGP SIGNATURE-----
