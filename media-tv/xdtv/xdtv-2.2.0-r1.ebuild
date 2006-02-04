@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.6 2005/12/10 15:07:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.7 2006/02/04 17:30:23 flameeyes Exp $
 
-inherit font multilib
+inherit font multilib autotools
 
 IUSE="alsa jpeg encode ffmpeg xvid lirc xinerama
 	neXt Xaw3d mmx zvbi aqua_theme carbone_theme xv debug dvb"
@@ -144,8 +144,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${WORKDIR}/${P}-gcc4-amd64.patch
 
-	autoreconf || die "autoreconf failed"
-	libtoolize --copy --force || die "libtoolize failed"
+	eautoreconf
 }
 
 src_compile() {

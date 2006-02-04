@@ -1,43 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fd863d4bb997f3e7b6e1f2d676ed17e1 ChangeLog 2972
-RMD160 8fcd74cb5107ca351a5d640dce0b40c67ce75be5 ChangeLog 2972
-SHA256 105ba5ac0cd16ebcfe3db4dc6ed88ebf7c696e2e2b033d402db81f4589769443 ChangeLog 2972
+MD5 bc6ce3dd5349349f30c17e619041832c ChangeLog 3200
+RMD160 e242b03d9f8a9539c916232271f7a4fe2a49a5de ChangeLog 3200
+SHA256 d1f23c17d086707cf3da0bc868e4d4f0edcef2b942c1945ca626f6106d5f95ba ChangeLog 3200
 MD5 1e0e7da6d22eed35ae25e84d5b0dcad7 files/digest-xdtv-2.2.0-r1 1777
 RMD160 6339a0c25a7d00a13ffa578b0fd62c1061cf211c files/digest-xdtv-2.2.0-r1 1777
 SHA256 45c5a060e6eaadcb583bc590d8321afa55889cc537ec4a22a0b5bb93df09067e files/digest-xdtv-2.2.0-r1 1777
-MD5 1e0e7da6d22eed35ae25e84d5b0dcad7 files/digest-xdtv-2.2.0-r2 1777
-RMD160 6339a0c25a7d00a13ffa578b0fd62c1061cf211c files/digest-xdtv-2.2.0-r2 1777
-SHA256 45c5a060e6eaadcb583bc590d8321afa55889cc537ec4a22a0b5bb93df09067e files/digest-xdtv-2.2.0-r2 1777
 MD5 9fd96641c3ff2f99648db754523a365b files/digest-xdtv-2.3.0 8635
 RMD160 e00fff9ce9d39b9fd98b88cea3bf25f44b76677b files/digest-xdtv-2.3.0 8635
 SHA256 922be643e0fcd05653e30c45a84b66c6b1297a52cb671bff33b50599dde499ff files/digest-xdtv-2.3.0 8635
-MD5 26b0db8fc43f5f4d60fa824a4ed54082 files/xdtv-2.2.0-memcpy.patch 10418
-RMD160 0780262ef6a7eb12d8d20b6a043d9fa0d7337ead files/xdtv-2.2.0-memcpy.patch 10418
-SHA256 feacbea8e5898c3ee16418d02013032020f6215fda85e7c0025bcfdc568a7c06 files/xdtv-2.2.0-memcpy.patch 10418
-MD5 1e75abf70d879a7e721d60a1ca927fd8 files/xdtv-2.2.0-setXid.patch 481
-RMD160 5d1a41537594bfe837fb327c3d329c1cfe01b89e files/xdtv-2.2.0-setXid.patch 481
-SHA256 b9ee41df13d3438b68230d9af1d06400003d6d10edf4581bddbe321ca7776e36 files/xdtv-2.2.0-setXid.patch 481
 MD5 109eefe229d78684737dd214b4ccde82 files/xdtv-2.3.0-setXid.patch 470
 RMD160 b117b1f8c453b99fe97887f9c126bcf57fd56bed files/xdtv-2.3.0-setXid.patch 470
 SHA256 1ca929d9d908592bc7374d430dd4cb1d850d55634a37334be0764ff66d2a1c70 files/xdtv-2.3.0-setXid.patch 470
 MD5 0dfc4d0a0cad3dc6b761593f69ac917b metadata.xml 252
 RMD160 9fe0fe39a9fa8f2fce26f12d0d5caada0a1593cd metadata.xml 252
 SHA256 4c5fd4c15db1f66e645f0591edae40f860fd78c83b2edc0ae264eef1d03092f5 metadata.xml 252
-MD5 e7b3b7903862a9661ee15fc6391e5f93 xdtv-2.2.0-r1.ebuild 6971
-RMD160 8b00995e9f546b6827d38a73f133ae59f8eb78ec xdtv-2.2.0-r1.ebuild 6971
-SHA256 8d23b4a7906695a1f5a62f72040db96f7fd0533c0439ce0dd69183ce12f7623f xdtv-2.2.0-r1.ebuild 6971
-MD5 624e2e45a5120cc89fc572c4e01ef494 xdtv-2.2.0-r2.ebuild 7005
-RMD160 ba3ebeea64af5a0a1b3f138592d90f246d14858c xdtv-2.2.0-r2.ebuild 7005
-SHA256 ccae1d8fbfeb193d2f4158e7e496dc1b884ae80ec11ac58454a9042d6a8c68f9 xdtv-2.2.0-r2.ebuild 7005
+MD5 1bed878550f20f8e916af5c0f71b3b1c xdtv-2.2.0-r1.ebuild 6901
+RMD160 2433dea0dd2f357899af17cf27415af2e9e1e0da xdtv-2.2.0-r1.ebuild 6901
+SHA256 a2b8f3d30d87ef1252631394ab4c6b7452db3b08adaa6b8b900fbc8e6800afd1 xdtv-2.2.0-r1.ebuild 6901
 MD5 8d106d14c0d0b2acbe641f3a86c79130 xdtv-2.3.0.ebuild 5112
 RMD160 b50b15553855910ebafea9e5fd5514735f52d64e xdtv-2.3.0.ebuild 5112
 SHA256 478d64e3f7109c072f3b55ace087a5f03c77121fd31bc23a021bd4b4e994c969 xdtv-2.3.0.ebuild 5112
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4mKqAiZjviIA2XgRAkELAKDOLIGFwZOb565Zfp3STHkPLtw97ACgw1lB
-6Lg7U3Ls4ldvYeixHrQ2YtQ=
-=eHFF
+iD8DBQFD5OS7AiZjviIA2XgRAkxdAJ0YQw0PpVM6fbCqbTeXxb6lNcYZAwCguNaY
+wHJvcGZq53+/Sn+wcOsvsKs=
+=2tOv
 -----END PGP SIGNATURE-----
