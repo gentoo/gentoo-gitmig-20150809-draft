@@ -1,6 +1,34 @@
-MD5 6c726059a2e3c5cfdf4597f6027cb50d ChangeLog 2928
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c92ef74eff8caf47687a8defcc5b57d6 ChangeLog 3091
+RMD160 4e445146b538c9d623b0bfd50efdea5e0ea3f675 ChangeLog 3091
+SHA256 1c06a4c085ba0515f8911e2a8c31378d80bd9e238742a33167ef791669a0b587 ChangeLog 3091
 MD5 165cdde955fa7f445d03005d25665e20 files/digest-openobex-1.0.0 66
+RMD160 261be07fbb4484770b86fb9fc97cf690be6f329a files/digest-openobex-1.0.0 66
+SHA256 fe0a3356d4591428a83aec35dd30a34c51dabef98fe4e051bab3d6d61159979d files/digest-openobex-1.0.0 66
 MD5 a577e794f16a7f437408fcbd5861b9ed files/digest-openobex-1.0.1 66
+RMD160 b414c8c1f6a9e408e1fd671301901f7f1e983b9f files/digest-openobex-1.0.1 66
+SHA256 d7cd61822712858dff0f6f7747ae4566d225eaaf1a79af499c98206e146f7c54 files/digest-openobex-1.0.1 66
+MD5 8fe13d050110fbeec1d4b636ba431593 files/digest-openobex-1.1 238
+RMD160 68bc310febe646b642fc3e0f69585a9ddda9a8ae files/digest-openobex-1.1 238
+SHA256 50d31bf9f63458cc03e0070d91310c8f6eb31c88de05c221bfcd61cedbf56694 files/digest-openobex-1.1 238
 MD5 04575f2be24f9d061c624e41b93d0394 metadata.xml 414
+RMD160 58804bbdf5cd6b617526bd4d1cdd5228dcb00b3e metadata.xml 414
+SHA256 a3999d1e78c00903e638f09c48189414f8c8e066f56fcdabd91be33ba7362ac5 metadata.xml 414
 MD5 aaf22cbbc6d71ac9d9475ce10b34ed74 openobex-1.0.0.ebuild 615
+RMD160 a42fd1160da96afe0ad28fa2597bb6d51e4b4fef openobex-1.0.0.ebuild 615
+SHA256 334453e89b5000bc9d36a2a4c827f42ac87c1fa272d67987c687f533737a8804 openobex-1.0.0.ebuild 615
 MD5 b1fe0220e290db877f78f6c5996bcd76 openobex-1.0.1.ebuild 914
+RMD160 07fc39bb22aca50fb6710057f37516b3dfa5e670 openobex-1.0.1.ebuild 914
+SHA256 af29ea7dabf5814597bfdea41efc09de7b271ea30be3df8896a3fab380a0f161 openobex-1.0.1.ebuild 914
+MD5 d7221f7e30b203d29d43d06988af9585 openobex-1.1.ebuild 1100
+RMD160 fbe921bfdca1f842c8cd11d03c6f9953bc6972a7 openobex-1.1.ebuild 1100
+SHA256 a32d603f99d3864d08c79a1e5e485670b6597ed6da89574097d6a34935ffdac2 openobex-1.1.ebuild 1100
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5MB8QlM6RnzZP+IRAiRDAKCHb62fxZ8B6lBWQNBmsLWL8+DrkgCgmhti
+drPltTfJ5ti9YBTxGU+sOFo=
+=DTqA
+-----END PGP SIGNATURE-----
