@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/pyflag/pyflag-0.80.ebuild,v 1.1 2006/01/22 05:54:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/pyflag/pyflag-0.80.ebuild,v 1.2 2006/02/04 11:58:19 dragonheart Exp $
 
 inherit eutils autotools
 
@@ -45,11 +45,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-nodbtool.patch"
 	sed -i -e 's/flag_version =.*/flag_version ="$Version: 0.80 Date: Thu Jan 19 00:50:12 EST 2006$"/' \
 		src/pyflag/FlagFramework.py
-	_elibtoolize --copy --force
-	eaclocal -I config
-	eautomake
-	eautoconf
-
+	AT_M4DIR="config" eautoreconf
 }
 
 src_install() {
