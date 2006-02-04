@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4953 2006/02/04 14:54:54 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4954 2006/02/04 16:08:43 spock Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Michał Januszewski <spock@gentoo.org> (04 Feb 2006)
+# Masked pending removal from Portage.
+dev-util/bitkeeper
 
 # Andrej Kacian <andrej@kacian.sk> (04 Feb 2006)
 # Mask for testing, there has been a complete code layout change and at least
