@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.0.ebuild,v 1.2 2005/04/13 18:38:55 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.0_p3.ebuild,v 1.1 2006/02/04 16:30:27 mattam Exp $
 
 inherit eutils
 
@@ -8,26 +8,33 @@ IUSE="norealanalysis ide debug translator doc"
 
 RESTRICT="nostrip"
 
+MY_PV="${PV/_p/pl}"
+MY_P="${PN}-${MY_PV}"
+
 DESCRIPTION="Coq is a proof assistant written in O'Caml"
 HOMEPAGE="http://coq.inria.fr/"
-SRC_URI="ftp://ftp.inria.fr/INRIA/${PN}/V${PV/_/}/${P/_/}.tar.gz
-translator? ( ftp://ftp.inria.fr/INRIA/coq/V8.0/coq-8.0-translator.tar.gz )"
+SRC_URI="ftp://ftp.inria.fr/INRIA/${PN}/V${MY_PV}/${MY_P}.tar.gz
+mirror://gentoo/${P}-ocaml-3.09.patch.gz
+translator? ( ftp://ftp.inria.fr/INRIA/coq/V${MY_PV}/${MY_P}-translator.tar.gz )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
-DEPEND=">=dev-lang/ocaml-3.06
-!>=dev-lang/ocaml-3.08
+DEPEND=">=dev-lang/ocaml-3.08
 ide? ( >=dev-ml/lablgtk-2.2.0 )"
 
-S="${WORKDIR}/${P/_/}"
+S="${WORKDIR}/${MY_P}"
 
 src_unpack()
 {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-byteflags.patch
+
+	if has_version ">=dev-lang/ocaml-3.09";
+	then
+		epatch ${DISTFILES}/${P}-ocaml-3.09.patch.gz
+	fi
 }
 
 src_compile() {
@@ -66,7 +73,7 @@ src_install() {
 	dodoc README CREDITS CHANGES LICENSE
 
 	if use translator; then
-		cd ${WORKDIR}/coq-8.0-translator
+		cd ${WORKDIR}/${MY_P}-translator
 		mv translate-v8 coq-translate-v8
 		dobin coq-translate-v8
 		if use doc; then
