@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/HTML-Tree-3.19.01.ebuild,v 1.6 2006/01/31 21:15:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/HTML-Tree-3.19.01.ebuild,v 1.7 2006/02/04 00:46:51 agriffis Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://seach.cpan.org/search?module=${MY_P}"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha ~amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"
