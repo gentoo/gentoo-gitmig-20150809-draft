@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libgda/ruby-libgda-0.10.1.ebuild,v 1.2 2005/06/26 15:42:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libgda/ruby-libgda-0.10.1.ebuild,v 1.3 2006/02/04 15:08:04 solar Exp $
 
 inherit ruby ruby-gnome2
 
