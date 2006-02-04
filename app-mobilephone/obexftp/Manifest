@@ -1,17 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fcbbb3cd1aac434d17f579860fd7ffb7 ChangeLog 4600
+MD5 a391c41ecbaeef86089525adc93827bd ChangeLog 4741
+RMD160 406e77f81861865c526be86d7d0176816b68b078 ChangeLog 4741
+SHA256 c93ed79a23bd14fdd0b108309f45722d336a3e600a877cbee6a37ad8b83a70b7 ChangeLog 4741
 MD5 c133b8829ba299b03a0e6ab757ab5f22 files/digest-obexftp-0.10.7-r1 66
+RMD160 a488796afb19d7d536eb006e215d5969c4edcd1f files/digest-obexftp-0.10.7-r1 66
+SHA256 16b18ec2b782b80e14f36bee1f821ae3c2b43f74dc31b465cfc4638a342ed3df files/digest-obexftp-0.10.7-r1 66
 MD5 580f449983ce97b01d8306c9056e93b6 files/digest-obexftp-0.18 64
+RMD160 ca2448452de885bae29f854348cdfd3e74f4ddab files/digest-obexftp-0.18 64
+SHA256 710f2b44ac87c8e4f5d283da712b1f61282e4940e8bda60a0df9af6bdc2c12e8 files/digest-obexftp-0.18 64
 MD5 520b09e250d549cadd0b0a39118225ec files/obexftp-0.10.7-t610-jpg.patch 307
+RMD160 146465dca2c2584e5b4379842e22fff15c447b9b files/obexftp-0.10.7-t610-jpg.patch 307
+SHA256 4ee4af7966c5f3ee2619d0eb6f07e91cb9fce534aba573a71232939cdc92987a files/obexftp-0.10.7-t610-jpg.patch 307
 MD5 9860ed702775ec6730786768ec7c1abb metadata.xml 337
+RMD160 5cf9a3d72f755d2e1ba842cd9470d20f65cfb1e9 metadata.xml 337
+SHA256 efb004139cb40ac310a298f9bd06bab4458fa1ac3e3faf6122bb2395e93620e3 metadata.xml 337
 MD5 0a9048c4cb20de34d8f94857ba8f92b4 obexftp-0.10.7-r1.ebuild 981
-MD5 c00c5e0649b60f7fcefde14ca7dc3c05 obexftp-0.18.ebuild 1111
+RMD160 623ee12a2d974eca9f385145278ec19d9831a1fd obexftp-0.10.7-r1.ebuild 981
+SHA256 44c1e55260a84ef7931322f217a1650eee6c1b6a50b35f7e5108ddd7f39d97e4 obexftp-0.10.7-r1.ebuild 981
+MD5 6c5a29313041c8d3ee914ff2bcc92a2a obexftp-0.18.ebuild 1108
+RMD160 24bbce3bdc0bf93d7b5c665d5d89bf15bdc4c744 obexftp-0.18.ebuild 1108
+SHA256 d1196ff151058b6e24963456fb159bcf6a90eb84a793c0f041caed58f54b353c obexftp-0.18.ebuild 1108
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD1ACojG8pv1lIUX4RAv7uAJsE7++1Y6J46uBsUeT8jIzm9DBDYQCfWil3
-gVXhqIvi76RL+iVins8wEgQ=
-=zU1P
+iD8DBQFD5PBnQlM6RnzZP+IRAnvrAJ4w1ZsNdeUgFTUFBh05nmCAgwVeAACgmMhv
+WCwvoOgSrzNtivq9Is2qkJ0=
+=xJLR
 -----END PGP SIGNATURE-----

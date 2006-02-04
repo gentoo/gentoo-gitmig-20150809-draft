@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.18.ebuild,v 1.1 2006/01/22 22:00:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.18.ebuild,v 1.2 2006/02/04 18:20:00 ticho Exp $
 
 DESCRIPTION="File transfer over OBEX for mobile phones"
 SRC_URI="http://triq.net/obexftp/${P}.tar.gz"
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bluetooth debug perl python tcltk"
 
-DEPEND=">=dev-libs/openobex-1.0.0
+DEPEND="=dev-libs/openobex-1.0*
 	bluetooth? ( >=net-wireless/bluez-libs-2.19 )
 	perl? ( >=dev-lang/perl-5.8.6 )
 	python? ( >=dev-lang/python-2.4.2 )
