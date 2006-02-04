@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ba7cea84f020ef5b1d0c4ec2c7080669 ChangeLog 1069
 RMD160 b5febede0161b7ce4b61710481b4b2e1cd42decc ChangeLog 1069
 SHA256 624a4b69cfd519dbbdf14db8ed6277d501559a4420f05882aaa2508890eebb85 ChangeLog 1069
@@ -10,3 +13,12 @@ SHA256 806a0249e1cd3807370ff64f05cce656f06ff893176b1be14679c7a5bbfce85f metadata
 MD5 488f74af8db3991c528df7cf22140684 ruby-freedb-0.5.ebuild 684
 RMD160 8bdc831335ffb9a9e629162e553a63333fe7d327 ruby-freedb-0.5.ebuild 684
 SHA256 1b1f6e62254df911344ea1e5c91f7ce4985afedbd0bad6cc4f507e78615f6a64 ruby-freedb-0.5.ebuild 684
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iQCVAwUBQ+TC4Z4WFLgrx1GWAQIyPQP+J8lk2LyxKXqvJXMKawXpS4Yv5RvaNjmp
+5rr3DlCaGcSWpe+HxnuQwXmQmvfHHbg/dRQnLanT+XTbFv8JA2pcC2BdliioSgub
+cPeec+E0gSLXp7mOha+WBB/YClkpbFP9oO9Wgihkd6bixoO2kpRMytMjkGPWFws6
+old54PJ4EMA=
+=ZtgS
+-----END PGP SIGNATURE-----
