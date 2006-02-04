@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4950 2006/02/04 01:27:03 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4951 2006/02/04 05:46:36 vericgar Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Michael Stewart <vericgar@gentoo.org> (03 Feb 2006)
+# Mask for testing of new version
+>=net-www/apache-2.2.0
+>=dev-libs/apr-1.0.0
+>=dev-libs/apr-util-1.0.0
 
 # Marcelo Goes <vanquirius@gentoo.org> (03 Feb 2006)
 # Masked for testing
@@ -1194,11 +1200,6 @@ www-client/netscape
 # Masked as a new cairo innevitably breaks cairo using apps
 =x11-libs/cairo-0.4.0
 =media-libs/glitz-0.4.0
-
-# Christian Parpart <trapni@gentoo.org> (10 Apr 2005)
-# Before adding for testing ;)
-=dev-libs/apr-1.1.1
-=dev-libs/apr-util-1.1.2
 
 # Jon Portnoy <avenj@gentoo.org> (29 Mar 2005)
 # 2.21 introduces more severe bugs than it fixes. See bug 87091.
