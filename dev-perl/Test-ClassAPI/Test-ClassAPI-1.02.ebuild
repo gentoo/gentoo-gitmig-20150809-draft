@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/Test-ClassAPI-1.02.ebuild,v 1.9 2006/01/31 21:48:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/Test-ClassAPI-1.02.ebuild,v 1.10 2006/02/04 01:15:12 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~adamk/${P}/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha ~amd64 hppa ~ia64 ~mips ppc sparc x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc sparc x86"
 IUSE=""
 
 DEPEND=">=perl-core/File-Spec-0.83
