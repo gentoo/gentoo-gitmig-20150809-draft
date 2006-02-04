@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c9ac25f2842dd14d2c5ae5bd23263d7b ChangeLog 2958
 RMD160 bf15ce2cbe07c522fca160d4f315d84d6b4c2314 ChangeLog 2958
 SHA256 9013fb62111388b99faf1a6705677310548561f831d3a92917660f3c33f30387 ChangeLog 2958
@@ -10,9 +7,9 @@ SHA256 141842212b3abfa3f06655d450fa63aece7ed329b24964e0da50404304ded22d extutils
 MD5 35dfd3fadc28059b716701bdd8295e94 extutils-parsexs-2.11.ebuild 669
 RMD160 0a5b647bdd42d09249eefc5ebfe1a16f5cac51e1 extutils-parsexs-2.11.ebuild 669
 SHA256 8054be63fa34a609193a8cdcef876076c4705e99519cec223b4695dc66f73c32 extutils-parsexs-2.11.ebuild 669
-MD5 36550280e26e5143634bea09cc75615e extutils-parsexs-2.15.ebuild 663
-RMD160 05296ce65714e5f8b34952c1b2ad044c8ded47b5 extutils-parsexs-2.15.ebuild 663
-SHA256 9ea968400329c1cd2c0f97a7fd74bbe8f8ab20cfdeb4cb4910bc7db2e5b96113 extutils-parsexs-2.15.ebuild 663
+MD5 4dde8e31676db469e5bdff91b83d1837 extutils-parsexs-2.15.ebuild 662
+RMD160 aae504ae9cffa2573cb32a18824008209a41382d extutils-parsexs-2.15.ebuild 662
+SHA256 d1a819944207b941f328e94745da2f725b98c2a22eae82a4b611d8aa46f32760 extutils-parsexs-2.15.ebuild 662
 MD5 4f4928dc4faae48f54f55afe8eec4726 files/digest-extutils-parsexs-2.08 72
 RMD160 72e098d32c86fe4a6f0e3bf916a19dff509c3c08 files/digest-extutils-parsexs-2.08 72
 SHA256 a46a8436f981b6d0f7857f9dd48f85368c9df45d46aaa8187f8139ec342f20bc files/digest-extutils-parsexs-2.08 72
@@ -25,10 +22,3 @@ SHA256 061b8c76e3cfa298012a4f64f527023efebc56e6783ce299e4bfffedbef247b7 files/di
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD49yrJrHF4yAQTrARAl23AJ41xaz6cTz/o5wsr1f9/NaY7wJVRACgxMPy
-sBRVZazBsyHUiNeHQy/cb98=
-=KnHb
------END PGP SIGNATURE-----
