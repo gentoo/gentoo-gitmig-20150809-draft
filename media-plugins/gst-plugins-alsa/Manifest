@@ -1,4 +1,4 @@
-MD5 c1b6538a46dc007b1c73e4baedbbadea ChangeLog 7075
+MD5 cf64c6707ec80ecd45905c1bde13a713 ChangeLog 7173
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-alsa-0.10.0 77
 MD5 0558db8f3c6a0a66bc61b6a02f9aeb8d files/digest-gst-plugins-alsa-0.10.1 77
 MD5 4d9a06718bb82db62ea71d1b2fc00ae3 files/digest-gst-plugins-alsa-0.10.2 77
@@ -10,7 +10,7 @@ MD5 c164b0c837ff50746bb8b8ac7bcba3af gst-plugins-alsa-0.10.0.ebuild 347
 MD5 1b7215acc19bff266d362dfee8e96b44 gst-plugins-alsa-0.10.1.ebuild 348
 MD5 7967e521f05755531f32ac8e9e339408 gst-plugins-alsa-0.10.2.ebuild 348
 MD5 e71865f8f646448ec2f305f8cfaf5e12 gst-plugins-alsa-0.8.10.ebuild 382
-MD5 dbfc9542292aef3cef018560f9035edc gst-plugins-alsa-0.8.11.ebuild 386
+MD5 0bca64e632d7094a41293caca15dbc6b gst-plugins-alsa-0.8.11.ebuild 384
 MD5 fbfc38a83be0524c39ae23a0222ffda8 gst-plugins-alsa-0.8.8.ebuild 373
 MD5 93094ed635568f46ed7c00a820bbc053 gst-plugins-alsa-0.8.9.ebuild 382
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
