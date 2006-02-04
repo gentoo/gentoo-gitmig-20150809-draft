@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.4 2005/11/27 17:36:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.5 2006/02/04 00:36:37 vapier Exp $
 
 ECVS_MODULE="eterm/Eterm"
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
@@ -31,7 +31,6 @@ S=${WORKDIR}/${ECVS_MODULE}
 src_unpack() {
 	cvs_src_unpack
 	cd "${S}"
-	# autogen.sh is broken so do this ourselves
 	./autogen.sh || die "autogen failed"
 }
 
