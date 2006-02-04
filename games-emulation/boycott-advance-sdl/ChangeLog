@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/boycott-advance-sdl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/boycott-advance-sdl/ChangeLog,v 1.2 2004/06/24 22:24:44 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/boycott-advance-sdl/ChangeLog,v 1.3 2006/02/04 00:13:47 mr_bones_ Exp $
+
+  04 Feb 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  boycott-advance-sdl-0.2.8.ebuild:
+  dep fix + modular X - patch from Tupone Alfredo via bug #121483
 
 *boycott-advance-sdl-0.2.8 (12 Jan 2004)
 
