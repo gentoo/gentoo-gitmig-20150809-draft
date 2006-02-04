@@ -73,16 +73,16 @@ SHA256 8ffed50f6d6ebbf4159b72279adda848f5932f615901c4066cbbd466f089054f iptables
 MD5 98e049aff157bac29735f232b0513fde iptables-1.3.4.ebuild 5052
 RMD160 a1e1e61bfa18fa05f040a50f946ab64b16c1158b iptables-1.3.4.ebuild 5052
 SHA256 8aeae4c464cd920047da6fe0893af49ec5f7b31d41396797e1c051350050f045 iptables-1.3.4.ebuild 5052
-MD5 c02c37a86fcebbfdbbd6047c2acdd489 iptables-1.3.5.ebuild 5051
-RMD160 babd7c09a937237eccafb6e0b38984efda7fb873 iptables-1.3.5.ebuild 5051
-SHA256 f2b5f13cd69035fefa7d9c55a8ca10c438a0afe7eeabceb24313a9cef2b1e119 iptables-1.3.5.ebuild 5051
+MD5 925412ddd3ef1cda9a5c0016c2268c06 iptables-1.3.5.ebuild 5064
+RMD160 f8e01015e5804862da12168cca8da9bf451dfb14 iptables-1.3.5.ebuild 5064
+SHA256 1a37910c39e95ed8efbf2aaf132fc8c6878b61e0cbeb635ca072d9a68193f94e iptables-1.3.5.ebuild 5064
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD5OmF2+ySkm8kpY0RAn9dAJ9KW20WH3N8W0gBjZQolx/Co9FnkwCfVJiS
-qR4hTUQuoAydZlpQCPhCfhY=
-=k8z3
+iD8DBQFD5SfT2+ySkm8kpY0RAtWRAJ9Ts0i0OvzL+M5f9+NaX0lH1WibAgCfd9cs
+1jHtS7+mIBzBiHt7KL6z27I=
+=4bJA
 -----END PGP SIGNATURE-----
