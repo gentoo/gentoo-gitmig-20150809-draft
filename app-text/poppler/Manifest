@@ -10,9 +10,6 @@ SHA256 51bb8ae71c9ac143ae67a7cecb81aa02fdf8798baf3bc90ebb499692ba5d3ea7 files/di
 MD5 3342aad1175b4b522f84e453999fbb05 files/poppler-0.4.1-cairo-ft.patch 470
 RMD160 f755975637edd27fa4d82c43d2789f489a45b8c8 files/poppler-0.4.1-cairo-ft.patch 470
 SHA256 e9ca00d0a991674199e5214556567e5ad895295bd63d72ce24bf0a6c3b9abb4e files/poppler-0.4.1-cairo-ft.patch 470
-MD5 c6805b961ecb2a526246a39bbff57f23 files/poppler-0.4.2-CAN-2005-3193.patch 3940
-RMD160 62726b5a6d4906994a2817f94adb19683fcf3a07 files/poppler-0.4.2-CAN-2005-3193.patch 3940
-SHA256 e498c4c7c62f7b948a83a25d42b32006bc255b5c467ff5ad7f98861b56ac3cdb files/poppler-0.4.2-CAN-2005-3193.patch 3940
 MD5 85f437a5b01fef3f2139fcee826c4c6a files/poppler-0.4.3-bug117481.patch 2593
 RMD160 edc8fa33d5215097cfd734c29f616c9bc428d27a files/poppler-0.4.3-bug117481.patch 2593
 SHA256 4405f46290c22c1f945b2791b04649cef57b8ae9d5a441d248c2a7ecfd505d7d files/poppler-0.4.3-bug117481.patch 2593
@@ -40,9 +37,6 @@ SHA256 69eec22b540bccfc988b26ad3bf7d29039ff04e2dbc19556281342438604f142 files/po
 MD5 d7766c9a19980b40524d8050a1f25cff files/poppler-0.5.0-try-all-fonts.patch 2867
 RMD160 7488663a61c327e781e0c66b918e1014941a0d63 files/poppler-0.5.0-try-all-fonts.patch 2867
 SHA256 3af95845d30dc3161b2f9a115c3c2bd2464e4854b831d5cd9e52216ba9f52c5f files/poppler-0.5.0-try-all-fonts.patch 2867
-MD5 f52250f6bc64f4201e663a46ed126f9b files/poppler-gcc41.patch 1131
-RMD160 3c4e9596e4ef7f0f749867914c849ad55ee545eb files/poppler-gcc41.patch 1131
-SHA256 af0b3568beabd2a3802e4358ddcc9a90a58d9d5ae39905755f9756c2f9446ff0 files/poppler-gcc41.patch 1131
 MD5 580dbf31fbeac60b3e29d38fdeabc4f1 files/poppler-no-libjpeg.patch 773
 RMD160 06134032489ab5912aa285af85c01b8741f2fb70 files/poppler-no-libjpeg.patch 773
 SHA256 3971c716f4f6267423906243ca0ab196ef654e1f4966d142e535a1254ef6977b files/poppler-no-libjpeg.patch 773
