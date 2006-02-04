@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.15 2006/02/04 17:00:21 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.16 2006/02/04 17:45:17 mattam Exp $
 
 inherit eutils
 
@@ -70,6 +70,13 @@ install_examples() {
 
 src_install () {
 	make install DESTDIR=${D} || die
+
+	# ocamlfind support
+	dodir /usr/lib/ocaml/site-packages
+	dosym /usr/lib/ocaml/lablgtk2 /usr/lib/ocaml/site-packages/lablgtk2
+	insinto /usr/lib/ocaml/lablgtk2
+	doins META
+
 	dodoc CHANGES COPYING README
 	use doc && install_examples
 }
