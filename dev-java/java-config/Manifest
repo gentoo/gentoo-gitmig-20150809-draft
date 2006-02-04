@@ -1,13 +1,49 @@
-MD5 dec13e5515ab969701a0ece9521b7bb4 ChangeLog 13425
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 50b8db5f6c51a49e9dba0d7acea48371 ChangeLog 13540
+RMD160 125abd065ca911e43d9203454b5b3374ada9d5b5 ChangeLog 13540
+SHA256 3400dbe9bebf5ae1d08d98ad416c22f87f8655106cc487132bc1d269a8a25cd5 ChangeLog 13540
 MD5 49e2b6b8988b1dcb838716e5463256f5 files/digest-java-config-1.2.10 70
+RMD160 4ecc24f314cf2ec1c7494dce91d99fa8cadebaa2 files/digest-java-config-1.2.10 70
+SHA256 c663f8c48c948f84f375f34e85691fa08bfe143873830608ad463cb1a07045a3 files/digest-java-config-1.2.10 70
 MD5 78909db2dd94f5ed1060036b0dfced48 files/digest-java-config-1.2.11 70
+RMD160 09fda57a4a1a8954aaa7782033fa18af1b375048 files/digest-java-config-1.2.11 70
+SHA256 3cfe0ef49b75cb6a120b063436537109fc1bda04f482ffe3bb3c1ae64f663e9f files/digest-java-config-1.2.11 70
 MD5 78909db2dd94f5ed1060036b0dfced48 files/digest-java-config-1.2.11-r1 70
+RMD160 09fda57a4a1a8954aaa7782033fa18af1b375048 files/digest-java-config-1.2.11-r1 70
+SHA256 3cfe0ef49b75cb6a120b063436537109fc1bda04f482ffe3bb3c1ae64f663e9f files/digest-java-config-1.2.11-r1 70
 MD5 ad67cc60d7ac3f5053637bfdd519e004 files/digest-java-config-1.2.6 69
+RMD160 17cc2b2c0897369e11f5377e129c1aac40bd05ec files/digest-java-config-1.2.6 69
+SHA256 9c732438a4edbd8c7a89c8bb15ef2653089d63cbf785bd9769fd578233231990 files/digest-java-config-1.2.6 69
 MD5 331da9a2c9211fda3cb94f0fa682c432 files/digest-java-config-1.2.9 69
+RMD160 7d0651d9d4180fb2935817ac941e65a54d0effc9 files/digest-java-config-1.2.9 69
+SHA256 5532b0b6d57b0437653c88e9e88e28f5ff52468208204c30bebed1331ffae9b4 files/digest-java-config-1.2.9 69
 MD5 882665d94cc943f315ec729d990afadf files/java-config-1.2.11-shebang.patch 229
+RMD160 e201dafad76307123139861371ade56f03887342 files/java-config-1.2.11-shebang.patch 229
+SHA256 4068a51515b7510260de57a5872d6e04b1a33d2f9728d77ed00fe7f41cced83a files/java-config-1.2.11-shebang.patch 229
 MD5 85d879eebe40ca9c7e541be9e2c37d53 java-config-1.2.10.ebuild 648
-MD5 e165491c4d0f4e887fbb408fe0f0fc00 java-config-1.2.11-r1.ebuild 821
+RMD160 101dc18a421015599823b708ccefc10e33cc46ed java-config-1.2.10.ebuild 648
+SHA256 473f33b51b3bc2fce02f12d589c9dbc3fa1557dfeda3284efb72645080dcf9e1 java-config-1.2.10.ebuild 648
+MD5 764a6ebfa6d60ee66c8778d1eff6bcd0 java-config-1.2.11-r1.ebuild 820
+RMD160 bf18d7e87c2ebe08d2a2a9ff0973892e83149387 java-config-1.2.11-r1.ebuild 820
+SHA256 642757384ca0b6a105541dafd185aea463ada8b837328f64469f69566356efe5 java-config-1.2.11-r1.ebuild 820
 MD5 b1d3ccd9f5d3617c70e71ee360be9795 java-config-1.2.11.ebuild 735
+RMD160 cca1eed7f7301c9637ff71ed467f12432494b9fe java-config-1.2.11.ebuild 735
+SHA256 7d4b01cd1d1888b7f897e3eaae4fed780197b5fb363e02d9f789a5b2f8dd798f java-config-1.2.11.ebuild 735
 MD5 750ad711b46f01a27e2d2895b0665594 java-config-1.2.6.ebuild 645
+RMD160 d9e49f5abe0f2978906d586d3fc623bc32638a8b java-config-1.2.6.ebuild 645
+SHA256 e94b40fae7597c6c23301640cca27fd8a931711111b53951611b3986d2713769 java-config-1.2.6.ebuild 645
 MD5 c45ffb83f922840acc242b3e8a24ea7f java-config-1.2.9.ebuild 649
+RMD160 c690b8782c68fc9e3a9c00ea03bc709ee2111833 java-config-1.2.9.ebuild 649
+SHA256 04c67ec35936dd222d0be48f23e815b07fc903e08802f2a6da6181857514ccd1 java-config-1.2.9.ebuild 649
 MD5 ff83dbd41edf207798f367c723ab813f metadata.xml 486
+RMD160 158f1d9652c83644739d40c8014d65d487dca4e6 metadata.xml 486
+SHA256 5d3e4a1780efad67e6265b82a4397a2b4fe26c2c0785ee65a3390dd8218c82ce metadata.xml 486
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5OhgJrHF4yAQTrARAicfAKCNJmWayOa0j+NouzUezshq4zHp4ACfdn6s
+4lvbZ9zyYO6NIPa+C2FhW1Y=
+=H+BA
+-----END PGP SIGNATURE-----
