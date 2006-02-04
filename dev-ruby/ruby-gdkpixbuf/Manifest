@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ef7bde8c3affe54f8e231e1c1ccd1db2 ChangeLog 2813
 RMD160 3a62081e7da38e68a7cced61a8a7caac320ece9f ChangeLog 2813
 SHA256 0271857392d781ddc55c5579fe5e0fb853e96b7b84ad119bcd2c365062f259ad ChangeLog 2813
@@ -16,3 +19,10 @@ SHA256 9e793087f19d235ead52705cb82b7b9eebf38608745db869c1e035ac1c2d7627 ruby-gdk
 MD5 07958e33277c58ab0eeb5212c6f7be38 ruby-gdkpixbuf-0.34.ebuild 801
 RMD160 d8e12bad5ecb9781acd65d70f1add34067660608 ruby-gdkpixbuf-0.34.ebuild 801
 SHA256 0e168269bfeeeb756dc5c69f0b2824ee3ee7e0d0cf26df7de6fa1b0379128b0b ruby-gdkpixbuf-0.34.ebuild 801
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5NeeJrHF4yAQTrARAklcAJ0UDTYviVXgW3uNjna0zoF9teJR3ACcDrGL
+7te/JpJ0r5jtz34KwoviVAI=
+=cv96
+-----END PGP SIGNATURE-----
