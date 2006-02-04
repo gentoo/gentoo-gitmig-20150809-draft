@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.45 2006/02/04 16:15:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.46 2006/02/04 20:59:35 zzam Exp $
+
+  04 Feb 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-setup-menu-0.2.3.xml, vdr-1.3.41.ebuild:
+  added config-file for setup-patch
 
   04 Feb 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-1.3.41.ebuild:
   updated patchset, includes newer bugfixes and an updated setup-patch
