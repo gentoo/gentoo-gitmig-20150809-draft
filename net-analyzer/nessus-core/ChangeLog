@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.99 2006/02/04 01:35:30 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.100 2006/02/04 14:57:30 vanquirius Exp $
+
+  04 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> +files/nessusd-r8,
+  nessus-core-2.3.1.ebuild:
+  Add --quiet to initscript for bug 117728. Thanks to Toralf Forster <toralf
+  dot foerster at gmx dot de>.
 
   04 Feb 2006; Marcelo Goes <vanquirius@gentoo.org>
   nessus-core-2.2.4-r1.ebuild, nessus-core-2.2.5.ebuild,
