@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.4.2.ebuild,v 1.6 2005/12/21 13:06:13 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.4.2.ebuild,v 1.7 2006/02/04 21:20:15 agriffis Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gnomebaker/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="dvdr nls mp3 flac vorbis"
-KEYWORDS="amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ia64 ~ppc ~sparc ~x86"
 
 DEPEND=">=gnome-base/libglade-2.0
 	media-libs/libvorbis

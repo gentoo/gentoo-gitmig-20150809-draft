@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/gnomebaker
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.14 2005/12/21 13:06:13 metalgod Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.15 2006/02/04 21:20:15 agriffis Exp $
+
+  04 Feb 2006; Aron Griffis <agriffis@gentoo.org> gnomebaker-0.4.2.ebuild:
+  Mark 0.4.2 stable on ia64
 
   21 Dec 2005; Luis Medinas <metalgod@gentoo.org> -gnomebaker-0.4.ebuild,
   -gnomebaker-0.4.1.ebuild, gnomebaker-0.4.2.ebuild,
