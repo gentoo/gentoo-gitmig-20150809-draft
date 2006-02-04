@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.18 2006/01/22 01:30:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.19 2006/02/04 08:57:22 azarah Exp $
+
+*klibc-1.2.1 (04 Feb 2006)
+
+  04 Feb 2006; Martin Schlemmer <azarah@gentoo.org> +klibc-1.2.1.ebuild:
+  New release.
 
   26 Jan 2006; Joshua Kinard <kumba@gentoo.org>
   +files/klibc-1.1.16-mips-ldpaths.patch, +files/klibc-1.1.16-mips32.patch,
