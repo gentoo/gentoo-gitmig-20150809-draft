@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4949 2006/02/04 00:38:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4950 2006/02/04 01:27:03 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marcelo Goes <vanquirius@gentoo.org> (03 Feb 2006)
+# Masked for testing
+net-analyzer/nessus-client
 
 # Jory A. Pratt <anarchy@gentoo.org> (1 Feb 2006)
 # firefox/thunderbird testing 
