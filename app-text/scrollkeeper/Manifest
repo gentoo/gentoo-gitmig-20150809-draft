@@ -1,10 +1,40 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ae6042f4551182be4f573dbbfaf199ea ChangeLog 9387
+RMD160 49c620782f16c544ddec87e68cc7b6caa47f7a30 ChangeLog 9387
+SHA256 3b860e295a74b01cb965196e2846afc530d3268f4f9543d8de91dccf175a7d49 ChangeLog 9387
 MD5 ca681d7dde4a4d560fa091cf7b7e0d85 files/digest-scrollkeeper-0.3.14-r1 71
+RMD160 c4ee6f8736f4e934acc7238b7c3a0911f6a927da files/digest-scrollkeeper-0.3.14-r1 71
+SHA256 f73253da9a5ee021d67e40fa039291a5e8396f97519ddcba15575b5578df20c6 files/digest-scrollkeeper-0.3.14-r1 71
 MD5 ca681d7dde4a4d560fa091cf7b7e0d85 files/digest-scrollkeeper-0.3.14-r2 71
+RMD160 c4ee6f8736f4e934acc7238b7c3a0911f6a927da files/digest-scrollkeeper-0.3.14-r2 71
+SHA256 f73253da9a5ee021d67e40fa039291a5e8396f97519ddcba15575b5578df20c6 files/digest-scrollkeeper-0.3.14-r2 71
 MD5 a1bbb6129b61f8b8c59a1fcedd8b2b3e files/scrollkeeper-0.3.14-gcc2_fix.patch 692
+RMD160 1d53754deb1b7e7357bd5f59ad93103c529f36b8 files/scrollkeeper-0.3.14-gcc2_fix.patch 692
+SHA256 9d3f098760f8a45d05373682be63460d36fc4fd84a92c6e1cac8f2c85fef8ff6 files/scrollkeeper-0.3.14-gcc2_fix.patch 692
 MD5 06af22aa6855f6289846d84e78f17588 files/scrollkeeper-0.3.14-gentoo.patch 1268
+RMD160 eac201deca9d167a1765998434d08ad039939030 files/scrollkeeper-0.3.14-gentoo.patch 1268
+SHA256 9ef9249c885877abc35c68c52ed92ab2369885f2e7e6878c8533b3e2efaea129 files/scrollkeeper-0.3.14-gentoo.patch 1268
 MD5 4eed4de8024d2cf496f50695b0a5e71f files/scrollkeeper-0.3.14-nls.patch 10005
+RMD160 6558f27d65873434b5b882b13dab2e0dd14cc6e5 files/scrollkeeper-0.3.14-nls.patch 10005
+SHA256 e617ca5eefa3db550d79ed05e6eed1f3b7d3baf6e3bf47cf64f58be721f89c9e files/scrollkeeper-0.3.14-nls.patch 10005
 MD5 865456e567efe5df6f1069f2d99b46ed files/scrollkeeper-logrotate 265
+RMD160 02907a5166168fb38e45dd5deeced635a487f8bf files/scrollkeeper-logrotate 265
+SHA256 089044d39344bddd660a4470e1d5d0c281fd7b3812786b814da13200cb5b8cd7 files/scrollkeeper-logrotate 265
 MD5 50da2ea188fbcc09d9f995915da8af85 metadata.xml 183
+RMD160 d74998001f7c6a71196452b791b2ef9f2a3e66b4 metadata.xml 183
+SHA256 268bafc93fc8cb1b7df50fa8bd23bda7ea44ebbc6afa7759c42656ab0c26a6a1 metadata.xml 183
 MD5 c0a49cf0013e99cd4f74aa19b3762996 scrollkeeper-0.3.14-r1.ebuild 2542
-MD5 a8311bff28006410a177dc0f96429483 scrollkeeper-0.3.14-r2.ebuild 2460
+RMD160 a9c958b4622e962dd049a4b4b3a3a64c87e7e389 scrollkeeper-0.3.14-r1.ebuild 2542
+SHA256 b87bf68ac6d428e9d81a5428460359a8d2b518f31eba527b07a1a151ed854c4a scrollkeeper-0.3.14-r1.ebuild 2542
+MD5 7eba0551e0a2caa910dcc84fed760c6d scrollkeeper-0.3.14-r2.ebuild 2453
+RMD160 0eeb7f9189cc8940ef67a91a1a69dead1530e348 scrollkeeper-0.3.14-r2.ebuild 2453
+SHA256 705b0f0cdb78b61a03bc98fd8bf78b502ae29d2d81da2347588e5ed455ed83c1 scrollkeeper-0.3.14-r2.ebuild 2453
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5SqA2+ySkm8kpY0RAlHAAJkByO53I8Ni7DYTBAFJgIr6i/MC/QCgoJXX
+ZF5OEvtRkGZYRa6VDoy3dRU=
+=zkl4
+-----END PGP SIGNATURE-----
