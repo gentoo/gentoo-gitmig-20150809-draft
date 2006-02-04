@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bb5899e185b0f09c6357e95e28921dc9 ChangeLog 57464
-RMD160 2d102b5cfb2813c841a97a50fe37f8417c3961bc ChangeLog 57464
-SHA256 a9e92ca130add9edaa1e68e2eefa31ab601f251117641a0d14e87917e8e5d9e1 ChangeLog 57464
+MD5 669a4f82aded2eea74fb3e0d4aec7bbb ChangeLog 57606
+RMD160 d34ae526fb7638b2fca8b54f3df458e9e898930c ChangeLog 57606
+SHA256 d79a85509394f31d62e971a605ee1046ee0036bf8a34cd4bb76c76e70abad022 ChangeLog 57606
 MD5 0361b484cca5df06a9d3a66e1d18d733 files/digest-gentoo-sources-2.4.31-r1 144
 RMD160 3ca6fa1dec4e74e44dd9a11192e1c87404474bee files/digest-gentoo-sources-2.4.31-r1 144
 SHA256 c857c13a71e7b9337aa7882f0f1df971590343d862fc9c0aeb5c4f9483312aad files/digest-gentoo-sources-2.4.31-r1 144
@@ -76,19 +73,12 @@ SHA256 dbc0a13ecebc209ec18d3e20fb1cf9809ccddf4b0e002dfc4e965e8c819c44da gentoo-s
 MD5 03d32b09ba993d7184bbacfc34205fc3 gentoo-sources-2.6.15-r2.ebuild 1235
 RMD160 555f56bfd23df39150c476a894bb2b0c84e2b010 gentoo-sources-2.6.15-r2.ebuild 1235
 SHA256 78a0583183cfdd5e4e9f087f2c18d64c07c29d2161a3d81c2f9c067d8d45ebad gentoo-sources-2.6.15-r2.ebuild 1235
-MD5 03bd56e8cd0446698fb4629fe86d1e19 gentoo-sources-2.6.15-r3.ebuild 1235
-RMD160 651be8d5d24808e8b9667a7e2b45f4f4af3f7c60 gentoo-sources-2.6.15-r3.ebuild 1235
-SHA256 6bf4c7819a2ec8f56b6913ddac8519617c549a6d6e182c4b4b2a487e4e446f91 gentoo-sources-2.6.15-r3.ebuild 1235
+MD5 bff909816db76e30e0ea32681a3114a5 gentoo-sources-2.6.15-r3.ebuild 1245
+RMD160 3ae46255de3a82c253760eddadd4af9397da360d gentoo-sources-2.6.15-r3.ebuild 1245
+SHA256 c044aa936624186874776b6f3eb35882510431a02a8131ee7225dba33c244648 gentoo-sources-2.6.15-r3.ebuild 1245
 MD5 975ed45ee3fbba6448ce7d74adb4e19a gentoo-sources-2.6.15.ebuild 1214
 RMD160 faebc1519377beb53fc1e8328315cf76aa40c9d0 gentoo-sources-2.6.15.ebuild 1214
 SHA256 8cf095e9be5bba55cdd00e445116adbcfb2853a0558e0adec0704df0c2da4f16 gentoo-sources-2.6.15.ebuild 1214
 MD5 410c3afeb274354a7ce68257edc18012 metadata.xml 283
 RMD160 fa426498783bbc55b5e1ace3dced6ed35ab83c83 metadata.xml 283
 SHA256 16eda12305d2f4dba1a5650d79f49204d23c82de0d9883424dc74b3d372e45e2 metadata.xml 283
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5L8ATOXg++0VvJQRAkibAKCuNLf4a2PdR6HxwKi+DCHIX/MSPACgqHZ8
-mdXFakhkOywK40/Iwq8F6O8=
-=GiRb
------END PGP SIGNATURE-----
