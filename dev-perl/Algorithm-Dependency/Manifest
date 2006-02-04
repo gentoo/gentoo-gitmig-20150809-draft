@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 03c59eb5ecfd6cb349d6727309f837a6 Algorithm-Dependency-1.101.ebuild 625
-RMD160 a36ded2186e2ed95440ce16aad2e9e293da54877 Algorithm-Dependency-1.101.ebuild 625
-SHA256 7ee770d2001079f17ec74d8edc70426453894d16cece960e1448bfbc4fa61e49 Algorithm-Dependency-1.101.ebuild 625
-MD5 37d9d4e334cdc36b07f90368d4a6bf4e ChangeLog 1329
-RMD160 4c40dd3fa02a393093ada63708b29480e9162925 ChangeLog 1329
-SHA256 d52d1b4c79bf9e034087b6780292c5bb1fb67ac8e4b715f331add642a132a0c5 ChangeLog 1329
+MD5 0d1433119ad560261da19c64368071cd Algorithm-Dependency-1.101.ebuild 625
+RMD160 cf461f45267d9624a91eac0dfe8395dfcc9fda73 Algorithm-Dependency-1.101.ebuild 625
+SHA256 05cbc63508f4d1ccab3a2a1f0d37a00277d7d87933d79e19b4fa1faacbccd7a5 Algorithm-Dependency-1.101.ebuild 625
+MD5 016fcc46f0423c9086427b91d98aca2f ChangeLog 1446
+RMD160 b408ac98876d4abc030a608693dbdb7c5441bcd6 ChangeLog 1446
+SHA256 f3d5e015acf65581d6305157c2f628bc64c564e0d2e8ea3a50158c3b876cd698 ChangeLog 1446
 MD5 6aa8de3d8e467189720157ca1f361904 files/digest-Algorithm-Dependency-1.101 77
 RMD160 c1cd38e85da43f30c6e49428822bef3375737cf8 files/digest-Algorithm-Dependency-1.101 77
 SHA256 589dd6bafeccf37e12fa5a8fc0f3bc022a9f6e9d7c4afcc75b8d16be89e54bf0 files/digest-Algorithm-Dependency-1.101 77
@@ -16,7 +16,7 @@ SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD49csJrHF4yAQTrARAuSfAKCwTnH/kFF3e58xf3W5swlOUKMMFgCgvpvK
-OUieyBpNXL1/SoBgv0RlQ2c=
-=gRDp
+iD8DBQFD5NZ7JrHF4yAQTrARAv6mAJwLatirQCD8qy1k6LQqwuOPqpHHbACcDvTN
+uW1ewo73eYdpvkixUiFvZDU=
+=NhfC
 -----END PGP SIGNATURE-----
