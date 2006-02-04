@@ -1,23 +1,49 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0838f567170c3fb17f64b69c5720f854 ChangeLog 5022
+MD5 a9d3f482cbe87c1d14ac37d449ed7aee ChangeLog 5210
+RMD160 25828e1c644536ff0921aad47fe18cee387f35f5 ChangeLog 5210
+SHA256 904e3c3a4b1d198f9ea83b5f12bbc8eaa6732ab6fbb5816e4b75b2bf824fcfcc ChangeLog 5210
 MD5 59ac94a6db4621c0ebd90d8b8fe8d9c0 files/digest-vorbis-tools-1.0-r2 68
+RMD160 b8ad82163df70280f4fb8127379d86363eb698ad files/digest-vorbis-tools-1.0-r2 68
+SHA256 2738406b3dd946a4c026a900f5945d6eeebb71cb17e2b573ae4111c654f6c103 files/digest-vorbis-tools-1.0-r2 68
 MD5 fe964c53d3bcfcd7ddece26fa6ea9a3e files/digest-vorbis-tools-1.0.1 70
+RMD160 05a678e822fecbd4e39528878a4ada1d9fd4e815 files/digest-vorbis-tools-1.0.1 70
+SHA256 2c11413c52a8d2d9bcc9266c345b53d6d9d675fe775e942d4003ff6265c51665 files/digest-vorbis-tools-1.0.1 70
 MD5 fe964c53d3bcfcd7ddece26fa6ea9a3e files/digest-vorbis-tools-1.0.1-r1 70
+RMD160 05a678e822fecbd4e39528878a4ada1d9fd4e815 files/digest-vorbis-tools-1.0.1-r1 70
+SHA256 2c11413c52a8d2d9bcc9266c345b53d6d9d675fe775e942d4003ff6265c51665 files/digest-vorbis-tools-1.0.1-r1 70
 MD5 c6c7f9c0dab0b7b1372a866773587178 files/digest-vorbis-tools-1.1.1 70
+RMD160 dd35d49c594180aa9b5a763ce6a0501af77d5bf9 files/digest-vorbis-tools-1.1.1 70
+SHA256 3e8d5efaa9a6188452396e5e225bfbb3aa02577522e993e1d30d2084142a6e2e files/digest-vorbis-tools-1.1.1 70
 MD5 c6c7f9c0dab0b7b1372a866773587178 files/digest-vorbis-tools-1.1.1-r1 70
+RMD160 dd35d49c594180aa9b5a763ce6a0501af77d5bf9 files/digest-vorbis-tools-1.1.1-r1 70
+SHA256 3e8d5efaa9a6188452396e5e225bfbb3aa02577522e993e1d30d2084142a6e2e files/digest-vorbis-tools-1.1.1-r1 70
 MD5 bc135048b370b69a479ec79194774283 files/vorbis-tools-1.0.1-largefile.patch 458
+RMD160 b21d8d7b75077b0596dfa670fa4e73c6a59f8f0d files/vorbis-tools-1.0.1-largefile.patch 458
+SHA256 186201fa3079a653f4cc4b04d6c562820c40ba332b272fff42f2d54eb7bc7d1a files/vorbis-tools-1.0.1-largefile.patch 458
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+RMD160 68406e733c1a9f26b7ab37e79ab53b3f59305b3a metadata.xml 252
+SHA256 5ab00710d822d203a1a38e1b6a9754137de4fe2cf5c4e79470419ed3f3927450 metadata.xml 252
 MD5 a73db00f1c3bc8ab60df4554fd605bfa vorbis-tools-1.0-r2.ebuild 871
-MD5 b6ec8c81a83937fa8b02b1faf9295fec vorbis-tools-1.0.1-r1.ebuild 1390
+RMD160 b1ebcb35881ef32adb4c2fa1c1450ce128e2c632 vorbis-tools-1.0-r2.ebuild 871
+SHA256 55180ebdb1534504725ccb3f7d45ce8a8c43c2b0f16f95eb7e979b9d93afcdd2 vorbis-tools-1.0-r2.ebuild 871
+MD5 7ea91b7ace733c0e460f96bed6a9bfe4 vorbis-tools-1.0.1-r1.ebuild 1379
+RMD160 467395df12ea3bd952a2c22f5675347dcc40810c vorbis-tools-1.0.1-r1.ebuild 1379
+SHA256 a09a39d64df5f46e4472fb87b9fc0a92a2e2e820219eea60ff7bdb7c8a3a8ff2 vorbis-tools-1.0.1-r1.ebuild 1379
 MD5 08f7faecc3e956ee8567026b16977ce3 vorbis-tools-1.0.1.ebuild 1300
+RMD160 6e9c295e4eb7203665e5c97b542b493e78c4bb72 vorbis-tools-1.0.1.ebuild 1300
+SHA256 38a592773e514455241b2fc7a6c95ce33c95c872551ce795716798f2c1f80f5e vorbis-tools-1.0.1.ebuild 1300
 MD5 232ab4aeb041bc746a09cf1507dde7cc vorbis-tools-1.1.1-r1.ebuild 1543
-MD5 1d1e99776588d7a4c2d006ded8dec7d4 vorbis-tools-1.1.1.ebuild 1347
+RMD160 e52f2b707b2b6be504f01dcd86d2be766f2b5411 vorbis-tools-1.1.1-r1.ebuild 1543
+SHA256 b40612b4dd2091f10935e719a5cb9a983b1219980264749173030682d1f4b5b8 vorbis-tools-1.1.1-r1.ebuild 1543
+MD5 2e2513113b32c5e3bbe336e25533bde2 vorbis-tools-1.1.1.ebuild 1274
+RMD160 0067633e7fbeeed28e18c6b950f9d801122033db vorbis-tools-1.1.1.ebuild 1274
+SHA256 6c641649f1db85db95ce2c55c91bf4ae956ea39d22833d03a60d03050ea89dd3 vorbis-tools-1.1.1.ebuild 1274
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmfyKp5vW4rUFj5oRAiTHAJ4m8dhTo65WjPUKR17Xp5BqW1p+wACgiW6V
-GINqO1VXPLAjstk4PvSAqzc=
-=lymW
+iD8DBQFD5MMbAiZjviIA2XgRAgeXAJ9vbj/hdlwLeWQGafk3fkCbz+CiKgCg3rbe
+mQST8RK6l+MDXnYGhiAAjRI=
+=REIN
 -----END PGP SIGNATURE-----

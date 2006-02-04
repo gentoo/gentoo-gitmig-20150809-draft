@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.1.1.ebuild,v 1.2 2005/10/06 22:29:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.1.1.ebuild,v 1.3 2006/02/04 15:06:49 flameeyes Exp $
 
 IUSE="nls flac speex"
 
@@ -22,13 +22,6 @@ RDEPEND=">=media-libs/libvorbis-1.0
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	autoconf || die "autoconf failed"
-}
 
 src_compile() {
 	use hppa && [ "`gcc-fullversion`" == "3.3.2" ] && replace-flags -march=2.0 -march=1.0

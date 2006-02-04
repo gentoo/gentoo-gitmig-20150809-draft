@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1-r1.ebuild,v 1.2 2005/10/06 22:29:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1-r1.ebuild,v 1.3 2006/02/04 15:06:49 flameeyes Exp $
 
 IUSE="nls flac speex"
 
-inherit toolchain-funcs flag-o-matic
+inherit toolchain-funcs flag-o-matic autotools
 
 DESCRIPTION="tools for using the Ogg Vorbis sound file format"
 HOMEPAGE="http://www.vorbis.com/"
@@ -28,7 +28,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-largefile.patch
-	autoconf || die "autoconf failed"
+	eautoconf
 }
 
 src_compile() {
