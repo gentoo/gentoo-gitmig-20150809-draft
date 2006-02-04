@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.0.ebuild,v 1.1 2005/11/10 22:40:19 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.1.ebuild,v 1.1 2006/02/04 16:46:29 mattam Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://caml.inria.fr/distrib/ocaml-3.09/${P}.tar.bz2"
 
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
-KEYWORDS="-*" # Still breaks a great number of packages
+KEYWORDS="~x86 ~ppc"
 IUSE="tcltk latex"
 
 DEPEND="virtual/libc
@@ -31,11 +31,6 @@ src_compile() {
 
 	local myconf
 	use tcltk || myconf="-no-tk"
-
-	# Fix for bug #23767. Still bugish ?
-	# if [ "${ARCH}" = "sparc" ]; then
-	#	myconf="${myconf} -host sparc-unknown-linux-gnu"
-	# fi
 
 	# Fix for bug #46703
 	export LC_ALL=C

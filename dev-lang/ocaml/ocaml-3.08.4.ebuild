@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.4.ebuild,v 1.5 2005/12/21 14:43:29 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.4.ebuild,v 1.6 2006/02/04 16:46:29 mattam Exp $
 
 inherit flag-o-matic eutils multilib
 
