@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liboil
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.24 2006/02/03 23:38:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.25 2006/02/04 00:03:29 agriffis Exp $
+
+  04 Feb 2006; Aron Griffis <agriffis@gentoo.org> liboil-0.3.6.ebuild:
+  Mark 0.3.6 stable on ia64
 
   03 Feb 2006; Guy Martin <gmsoft@gentoo.org> liboil-0.3.6.ebuild:
   Stable on hppa.
