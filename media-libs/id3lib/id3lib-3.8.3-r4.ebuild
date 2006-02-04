@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r4.ebuild,v 1.2 2005/12/08 22:45:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r4.ebuild,v 1.3 2006/02/04 16:19:20 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -18,9 +18,6 @@ IUSE="doc examples"
 
 RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}
-	sys-devel/autoconf
-	sys-devel/automake
-	sys-devel/libtool
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {

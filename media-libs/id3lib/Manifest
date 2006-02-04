@@ -1,20 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 316cdfa1877938e8b92949e606e92a77 ChangeLog 5551
+MD5 ab9af101ffe455a13849e1c0fd855252 ChangeLog 5693
+RMD160 c61fda436f361fa2c0f854598d07f0d83821bd16 ChangeLog 5693
+SHA256 8e0d453b63a6f0f5a27655e58be2b34d536f75c1a18638dd7f92d1304671e8b0 ChangeLog 5693
 MD5 202375b32b2a80a367a2230716144988 files/digest-id3lib-3.8.3-r3 64
+RMD160 078210090ab7d8081006877f8603b0ff1be81d22 files/digest-id3lib-3.8.3-r3 64
+SHA256 c2f531de71362684a557fecc00b1f070afd3f737dca7add483ff5ce0426de89a files/digest-id3lib-3.8.3-r3 64
 MD5 202375b32b2a80a367a2230716144988 files/digest-id3lib-3.8.3-r4 64
+RMD160 078210090ab7d8081006877f8603b0ff1be81d22 files/digest-id3lib-3.8.3-r4 64
+SHA256 c2f531de71362684a557fecc00b1f070afd3f737dca7add483ff5ce0426de89a files/digest-id3lib-3.8.3-r4 64
 MD5 328ac5b15fbe7f3ccdf72da033a510a0 files/id3lib-3.8.3-autoconf259.patch 1130
+RMD160 bd5205973dfa31542935daa35ad04c6709c08b9d files/id3lib-3.8.3-autoconf259.patch 1130
+SHA256 ffde572cb263cce4585292143a4396ebd12592ac34b398da19d1608f1c2374f9 files/id3lib-3.8.3-autoconf259.patch 1130
 MD5 a1e41e6e42318b7450013fe4e49b21db files/id3lib-3.8.3-doxyinput.patch 977
+RMD160 102b5cad0637776a26505d53d3722e549a7448d3 files/id3lib-3.8.3-doxyinput.patch 977
+SHA256 e7cd2eafe39229fee1195524872be3465d247590b7ead4a9cfa2178102a3d9ea files/id3lib-3.8.3-doxyinput.patch 977
 MD5 875a7dcafeef2a995039075941fb47ae files/id3lib-3.8.3-test_io.patch 281
+RMD160 773e84752a84cd746def0ff4878f4b248d6611e6 files/id3lib-3.8.3-test_io.patch 281
+SHA256 cc124f8805bcb977a1673f0b04fff368dac1af70d78c21da6f0415ce067d7687 files/id3lib-3.8.3-test_io.patch 281
 MD5 e896e39ce5196f4fd2ca6fc7553e2c60 files/id3lib-3.8.3-zlib.patch 833
+RMD160 477f5e846ef7070bd3c10203bbaaa7eeaaedf6f2 files/id3lib-3.8.3-zlib.patch 833
+SHA256 0b5531089422bda659deddcccf0562fcaa96529e74778065e35c848d6cf2a502 files/id3lib-3.8.3-zlib.patch 833
 MD5 333740e9f496bdf8f31a4503405852cb id3lib-3.8.3-r3.ebuild 1318
-MD5 bb66b245039d41694982052a82571bd5 id3lib-3.8.3-r4.ebuild 1414
+RMD160 a1da615b00b8ad27f6fd6d1733c81f5a4f8c9053 id3lib-3.8.3-r3.ebuild 1318
+SHA256 8d35b947caf4cb69ef5f08fbc9dfc890cda90f940254b85cff08a7883d8a66ce id3lib-3.8.3-r3.ebuild 1318
+MD5 2087fb8ca7c4a8bc8b28d97a59634f37 id3lib-3.8.3-r4.ebuild 1355
+RMD160 eef33c1329606a592632928d801978ccccab52c7 id3lib-3.8.3-r4.ebuild 1355
+SHA256 94eaccbca9f610e7e94d21452ee8f9a3d1a07b6887cc7dfe696562ab7bc6d469 id3lib-3.8.3-r4.ebuild 1355
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmLexAiZjviIA2XgRAtFmAKDjE8+9M+1L3lUxhQBj7nO0P3d20ACg8Gpw
-yv6kLe4TlELSSPE0SegEXWE=
-=MzRV
+iD8DBQFD5NQWAiZjviIA2XgRAjDpAJ4kStXuTo61rP+wSGsH42+eyPxZPgCdHquk
+1bPPoRuBTKtgKe65VwT767s=
+=E3D5
 -----END PGP SIGNATURE-----
