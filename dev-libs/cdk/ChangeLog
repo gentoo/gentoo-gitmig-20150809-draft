@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cdk
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.24 2005/12/13 20:37:10 tove Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.25 2006/02/04 18:17:55 agriffis Exp $
+
+  04 Feb 2006; Aron Griffis <agriffis@gentoo.org> cdk-5.0.20050424.ebuild:
+  Mark 5.0.20050424 stable on alpha
 
   13 Dec 2005; Torsten Veller <tove@gentoo.org>
   cdk-4.9.10.20020809-r1.ebuild:
