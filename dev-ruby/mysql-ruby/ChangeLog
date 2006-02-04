@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.23 2006/01/31 20:14:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.24 2006/02/04 15:04:14 solar Exp $
+
+  04 Feb 2006; <solar@gentoo.org> :
+  - redigest needed due to bad RMD160. bug #121124
 
   31 Jan 2006; Aron Griffis <agriffis@gentoo.org> mysql-ruby-2.7.ebuild:
   Mark 2.7 stable on ia64
