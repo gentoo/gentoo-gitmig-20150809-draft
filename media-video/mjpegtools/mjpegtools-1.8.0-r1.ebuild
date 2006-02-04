@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.11 2006/02/04 16:30:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.12 2006/02/04 16:40:23 flameeyes Exp $
 
-inherit flag-o-matic toolchain-funcs eutils autotools
+inherit flag-o-matic toolchain-funcs eutils libtool
 
 DESCRIPTION="Tools for MJPEG video"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
@@ -39,8 +39,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	eautoreconf
 	epatch "${FILESDIR}/${P}-gcc41.patch"
+	elibtoolize
 }
 
 src_compile() {
@@ -73,6 +73,8 @@ src_compile() {
 		myconf="${myconf} --enable-cmov-extension"
 	fi
 
+	append-flags -fno-strict-aliasing
+
 	econf \
 		$(use_with X x) \
 		$(use_enable dga xfree-ext) \
@@ -84,8 +86,7 @@ src_compile() {
 		--enable-largefile \
 		${myconf} || die "configure failed"
 
-#	emake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" -j1 || die "emake failed"
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 
 	cd docs
 	local infofile
