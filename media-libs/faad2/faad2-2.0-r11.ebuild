@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r10.ebuild,v 1.1 2006/01/15 17:52:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r11.ebuild,v 1.1 2006/02/05 23:30:46 flameeyes Exp $
 
 inherit eutils libtool flag-o-matic autotools
 
-PATCHLEVEL="4"
+PATCHLEVEL="5"
 
 DESCRIPTION="AAC audio decoding library"
 HOMEPAGE="http://www.audiocoding.com/"
@@ -37,7 +37,6 @@ src_compile() {
 	# mp4v2 needed for rhythmbox
 	# drm needed for nothing but doesn't hurt
 	econf \
-		--with-mp4v2 \
 		--with-drm \
 		$(use_with xmms) \
 

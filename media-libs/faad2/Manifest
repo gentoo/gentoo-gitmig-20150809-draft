@@ -1,15 +1,55 @@
-MD5 652b208bb6598b403fe506486cd0c9e8 ChangeLog 8820
-MD5 8822829781eb944ed840124f915a2c0b faad2-2.0-r10.ebuild 1481
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 406310c67eb7d46e8669b1d8a68491c4 ChangeLog 9047
+RMD160 e3610b912601b71fede90f46fce3c7c27bb59bc9 ChangeLog 9047
+SHA256 d5a3c189e92bee030b796b618b3e3ec1bb74a063901adbfba1ee684642354c51 ChangeLog 9047
+MD5 54048a1291e1b106b2bc27971f56c535 faad2-2.0-r11.ebuild 1464
+RMD160 f1880d91acb4f843e13227f6becb202ea70464b3 faad2-2.0-r11.ebuild 1464
+SHA256 b94e866b40d3adab06b0de9af73c78772b987733d836d60f9ab600aad761c192 faad2-2.0-r11.ebuild 1464
 MD5 9167396e4beb71ea1c2f38c0933e2241 faad2-2.0-r3.ebuild 2091
+RMD160 e8b7d7c8468da5d6ef0d7bd62ce43ec309b3c9ed faad2-2.0-r3.ebuild 2091
+SHA256 19facd2979c64c8d4174abcb7fe779202474849613c64fdeadcd9cc207d92496 faad2-2.0-r3.ebuild 2091
 MD5 3b8536be60c586dc67be2f19cb5bdf4a faad2-2.0-r7.ebuild 2134
-MD5 de6aa302f0d9b074fc8da5b2c43f4583 files/digest-faad2-2.0-r10 127
+RMD160 a65ed01c8e0cd8c1c85c2eb3dcd852f8b4f824a0 faad2-2.0-r7.ebuild 2134
+SHA256 6a63f00773ea6abb4e7620d2e604836b4787498e158a7a72901402aebce390ed faad2-2.0-r7.ebuild 2134
+MD5 9640728e8e4b1d1726f7189f13f7b390 files/digest-faad2-2.0-r11 473
+RMD160 ae418ef22cbda30819261428f50fc487cf0b040c files/digest-faad2-2.0-r11 473
+SHA256 9c8116b90e712da479a939c9ceff861534435b08f59136e0cce99eb2b5f3ccc2 files/digest-faad2-2.0-r11 473
 MD5 362594a8b2abbbae6e05c2ea1ab32c3f files/digest-faad2-2.0-r3 61
+RMD160 7162b78df6dc3964c0acdd7c3fa350232640a54a files/digest-faad2-2.0-r3 61
+SHA256 5428e4d2d093b83761f063726657fdf33fa682c13d6058d5ee0e13bf3d7cde75 files/digest-faad2-2.0-r3 61
 MD5 362594a8b2abbbae6e05c2ea1ab32c3f files/digest-faad2-2.0-r7 61
+RMD160 7162b78df6dc3964c0acdd7c3fa350232640a54a files/digest-faad2-2.0-r7 61
+SHA256 5428e4d2d093b83761f063726657fdf33fa682c13d6058d5ee0e13bf3d7cde75 files/digest-faad2-2.0-r7 61
 MD5 edab653b8b9960b0ea4a04a745786c5f files/faad2-2.0-amd64.patch 9564
+RMD160 77e3072b171be3a47768a3bdc272a3d88566ab3a files/faad2-2.0-amd64.patch 9564
+SHA256 bfa66e643345e204eb9647883bb724814f487c79f336a26bae9a0d0429dbcc84 files/faad2-2.0-amd64.patch 9564
 MD5 042669e1c5f4755340520e417eafad15 files/faad2-2.0-configure-mpeg4ip.patch 416
+RMD160 7c0941c5c76ff8befb5ac2567053c8edb117ec92 files/faad2-2.0-configure-mpeg4ip.patch 416
+SHA256 42b177730204ea88a6b682a52b2ea27e8e3de88b0a733cf7b758281b059cce8d files/faad2-2.0-configure-mpeg4ip.patch 416
 MD5 c7b0b0563f7c682ecd92ef4c32ceef60 files/faad2-2.0-gcc34.patch 296
+RMD160 8b992a907b90bb7becb0457945adf0cfef2907cc files/faad2-2.0-gcc34.patch 296
+SHA256 34c65024c78b385a42bd2a245559d92b52b422a2ab50d62cc8c47125960fbe58 files/faad2-2.0-gcc34.patch 296
 MD5 f597fe37924ee807ccafd546e2662513 files/faad2-2.0-makefile-space.patch 326
+RMD160 df335a6b9de3d9f9c1e3a1aa26542878c5a6883b files/faad2-2.0-makefile-space.patch 326
+SHA256 da086ad6ede60f6a78bc74ac859676cdc4b5d3e7ae3aa5da617565506133d708 files/faad2-2.0-makefile-space.patch 326
 MD5 1ceab8b26925d147b1e0a359ce23d56e files/faad2-2.0-noext.patch 856
+RMD160 4b4117fc2fd244fa20c501d1c71adf2877a0bbcf files/faad2-2.0-noext.patch 856
+SHA256 f3a0ccd0c5c47274165203c11489a55685891a1eb5c5f6de7b0a018a7900d384 files/faad2-2.0-noext.patch 856
 MD5 9fcaf9f55fd1f37b129ce5457b50e40d files/faad2-gcc4-warnings-and-errors.patch 12071
+RMD160 fdbce480063a4d5a4de63f589b251ef69ada6067 files/faad2-gcc4-warnings-and-errors.patch 12071
+SHA256 60ecc66631fd202dde63f4b43dc6a88008d14f22a916902652561cb81e523c14 files/faad2-gcc4-warnings-and-errors.patch 12071
 MD5 6264dccf9a4c49712b65b406825c5113 files/mp4atom-sliver.patch 659
+RMD160 08e3104023bc9288d83f450d1b4442e41e8ac271 files/mp4atom-sliver.patch 659
+SHA256 8f37bd575870e33001d05bd60a8a9d1fc353e8cf6f25bce835478ee6ce37d88a files/mp4atom-sliver.patch 659
 MD5 fa11072383948db52dccac007cc2c73d metadata.xml 387
+RMD160 891f0392b255f261ca75a0e8541d453579313ace metadata.xml 387
+SHA256 b96036a098648c1ad5fb2105bd2997bed79a5df723389e892627ae2523aae356 metadata.xml 387
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5oq7AiZjviIA2XgRAluyAKCiurfUSerPhIFXolqZ9gAwYTjMXgCfSeI9
+h06LatEm7eqpYG16m6s5IHE=
+=nWTB
+-----END PGP SIGNATURE-----
