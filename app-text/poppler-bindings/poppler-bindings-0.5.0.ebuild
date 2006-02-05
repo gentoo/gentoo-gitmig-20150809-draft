@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.0.ebuild,v 1.6 2006/02/05 10:53:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.0.ebuild,v 1.7 2006/02/05 14:38:33 herbs Exp $
 
-inherit autotools eutils
+inherit autotools eutils multilib
 
 MY_P=${P/-bindings/}
 DESCRIPTION="Poppler bindings are rendering bindings for GUI toolkits for poppler"
@@ -48,6 +48,9 @@ src_unpack(){
 }
 
 src_compile() {
+	# Configure needs help finding qt libs on multilib systems
+	export QTLIB="${QTDIR}/$(get_libdir)"
+
 	econf --disable-poppler-qt4 --enable-opi \
 		$(use_enable cairo cairo-output) \
 		$(use_enable gtk poppler-glib) \
