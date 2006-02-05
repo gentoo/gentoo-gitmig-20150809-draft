@@ -1,14 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.1.ebuild,v 1.2 2006/02/04 18:55:22 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.1-r1.ebuild,v 1.1 2006/02/05 10:37:28 chrb Exp $
 
 inherit mount-boot flag-o-matic
 
 DESCRIPTION="The Xen virtual machine monitor and Xend daemon"
 HOMEPAGE="http://xen.sourceforge.net"
-REV="8738"
-MY_P="xen-3.0-testing-${REV}"
-SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
+#REV="8738"
+#MY_P="xen-3.0-testing-${REV}"
+#SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
+SRC_URI="http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/xen-3.0.1-src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,7 +32,7 @@ DEPEND="sys-apps/iproute2
 	sys-devel/dev86
 	|| ( sys-fs/udev sys-apps/hotplug )"
 
-S="${WORKDIR}/${MY_P}"
+#S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -96,7 +97,7 @@ src_install() {
 	newinitd ${FILESDIR}/xendomains-init xendomains
 
 	# for upstream change tracking
-	dodoc ${S}/XEN-VERSION
+	#dodoc ${S}/XEN-VERSION
 
 	if use screen; then
 		sed -i -e 's/SCREEN="no"/SCREEN="yes"/' ${D}/etc/init.d/xendomains
