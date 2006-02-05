@@ -1,17 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ccdff5176f22b277f679de1681ab8c41 ChangeLog 976
+MD5 72f5837077a9df3346d2f1c90eafaeed ChangeLog 1112
+RMD160 45f0fe2a0443d3ed3fd593a0f089f28a9ae330fb ChangeLog 1112
+SHA256 4dab0cdc7fc602a9ecb2b2d46141fb9c1e1a5ed14dcfc41102fe76a7168f6b86 ChangeLog 1112
 MD5 30c60ba1c3cc53c9aded96b580dcd6a0 cacao-0.91.ebuild 1182
+RMD160 cec62a96b98c828ed94a013b0e89f07dac4ffd05 cacao-0.91.ebuild 1182
+SHA256 f3fd1a9397a941ccac74d126275ebd9a1def6ecc077386207175fd7a5235a82d cacao-0.91.ebuild 1182
 MD5 20725345309b2765bed94acaa33b9d53 cacao-0.93.ebuild 1060
+RMD160 5b0bec2d95f6ede29fcf49a29d7893351dc013a1 cacao-0.93.ebuild 1060
+SHA256 5d3dc9d9f5855fb18c38ddc94eec3a962761764f5af29cbefebde126b8fa22d0 cacao-0.93.ebuild 1060
+MD5 84205af92d304a719bc8879377f3821b cacao-0.94.ebuild 1179
+RMD160 bb70372bda09e5a6b05a8c9cacc24989063397f9 cacao-0.94.ebuild 1179
+SHA256 df9250487831703114d503fd14ae5b5bb4a554781df537950ad62b95df9ea5d6 cacao-0.94.ebuild 1179
 MD5 77af59ed311f182690b4e5dcac85d064 files/0.93-no-exec-stack.patch 403
+RMD160 d2bc6ca0bff8752cef513a05deb1484732d63b09 files/0.93-no-exec-stack.patch 403
+SHA256 79097e272e0250f8a40e87f2c6801f9e05e51c755b7f9b2b835c04d51f2af898 files/0.93-no-exec-stack.patch 403
 MD5 1b8ece1ea129936e89b66052a7f28b0c files/digest-cacao-0.91 64
+RMD160 29ad6953b1ddb8c53071650734cc1a200ab688be files/digest-cacao-0.91 64
+SHA256 5ec08e9eef877b4c76fc5e77ec2d6cb863153c9dbe2203454a2018ed48444486 files/digest-cacao-0.91 64
 MD5 d6095d9ed2b40cc02512dd70e9e90201 files/digest-cacao-0.93 63
+RMD160 39862564e0fe2d79acfb7be49be3575c9bab25d3 files/digest-cacao-0.93 63
+SHA256 f1c02ff3148adb6accf4d1d00102f5f1c4f9597bac433c57f2ff1c6d09e705a3 files/digest-cacao-0.93 63
+MD5 abbfde1ca04e3723dfc85796de448aed files/digest-cacao-0.94 235
+RMD160 5f0bb324e7fef3bca9f7f16f0fada99c8ea90693 files/digest-cacao-0.94 235
+SHA256 90b877be9d0ac357b8840317b7ef88e2e8276fcac1d26807d96be45c312f262f files/digest-cacao-0.94 235
 MD5 ebe9107b21e3ad6b7065a0a95a118869 metadata.xml 364
+RMD160 75afe3d567961bdf4084cd1ee368785c46347158 metadata.xml 364
+SHA256 4d63397a708380d2d8dbd5c15b9a246c4edb9d63cf630a06d16c3533ad17ab66 metadata.xml 364
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD1Q1JQiJ/wx066S4RAuedAJ9Eboyox07r3qgLZvonwtVeYDU0zQCfYLbe
-xoLEDDYB/nC+a7eIUvHmFrk=
-=2QuY
+iD8DBQFD5gVVQiJ/wx066S4RAoqzAJkByY4b657Tpkl1tHX9jtzt91/ZjACgl6e3
+IGzMYjcukTA6HOooyVkws9Y=
+=uzKj
 -----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/cacao
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/ChangeLog,v 1.8 2006/01/23 17:06:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/ChangeLog,v 1.9 2006/02/05 14:01:43 betelgeuse Exp $
+
+*cacao-0.94 (05 Feb 2006)
+
+  05 Feb 2006; Petteri Räty <betelgeuse@gentoo.org> +cacao-0.94.ebuild:
+  Version bump. Fixes bug #121279.
 
   22 Dec 2005; Joshua Nichols <nichoj@gentoo.org> cacao-0.93.ebuild:
   Added ~amd64 keyword (bug #116259).
