@@ -1,12 +1,52 @@
-MD5 4b49c460451acd907c0d1d4ab831673a ChangeLog 7809
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6ee24fe81dbbd5a703ae6795c2f31058 ChangeLog 7941
+RMD160 426bb076a8325014598be3c6baae8f44f99ac32b ChangeLog 7941
+SHA256 af2624fa7eb7be2e116a6ad7f611f6f9f701b2b2079d1c544700856940a44826 ChangeLog 7941
 MD5 fd2f66ff609bafcd303be1db969e9185 files/digest-ndiswrapper-1.2 67
+RMD160 4bcaca148600e5827184bbcea0bc42cc81185af6 files/digest-ndiswrapper-1.2 67
+SHA256 9aa708aab6ade0f2f49f5e37f5303184715f9196cb3f5bbaf1300fc8f9199925 files/digest-ndiswrapper-1.2 67
 MD5 fd2f66ff609bafcd303be1db969e9185 files/digest-ndiswrapper-1.2-r1 67
+RMD160 4bcaca148600e5827184bbcea0bc42cc81185af6 files/digest-ndiswrapper-1.2-r1 67
+SHA256 9aa708aab6ade0f2f49f5e37f5303184715f9196cb3f5bbaf1300fc8f9199925 files/digest-ndiswrapper-1.2-r1 67
 MD5 7c67b35a030ab2acbc09e54ee77a6205 files/digest-ndiswrapper-1.7 67
+RMD160 fbb7b5a7139faa896742986139bccb0a585f13c9 files/digest-ndiswrapper-1.7 67
+SHA256 28f59729f2560231a22dd869015d6b5ffcc953190c1d7483e6bbee2b269d7329 files/digest-ndiswrapper-1.7 67
 MD5 e9d1524fe6a825760376e41b5aa8dc39 files/digest-ndiswrapper-1.8 67
+RMD160 09a8741d01397f71a6cf0c594b2d94ec9b5d4366 files/digest-ndiswrapper-1.8 67
+SHA256 3c0661dc1ac8ffd217b0d07730862306452bfc49844df1c6d7ccedd0a66351d3 files/digest-ndiswrapper-1.8 67
+MD5 79f81be4a77312779222defc7fa4c965 files/digest-ndiswrapper-1.9 247
+RMD160 2549f98823b959f28cab04d0da31eceec2a383a5 files/digest-ndiswrapper-1.9 247
+SHA256 4876ef27c86f076938e3d90bada70721613ddc69a50b482fdba2783c901043e1 files/digest-ndiswrapper-1.9 247
 MD5 69ca885f3c7039ffb61da23aa194653c files/ndiswrapper-1.2-kernel-2.6.14.patch 1162
+RMD160 fc4078f52227336d697d8538c49b875bef7a6984 files/ndiswrapper-1.2-kernel-2.6.14.patch 1162
+SHA256 e81a2692ca682858efde3c33c1566d077d5b1a80ebd86e70975ad443291b4670 files/ndiswrapper-1.2-kernel-2.6.14.patch 1162
 MD5 9cf5a13dc78b9840d419f0656d1dd920 files/ndiswrapper-1.2-suspend2.patch 553
+RMD160 8d3c771105181ab3e4489008d0b6127b6566ae48 files/ndiswrapper-1.2-suspend2.patch 553
+SHA256 34134d00fc5a3ab921e17c87bbd00818e11f6393c2110cc98426eb47ed5cc853 files/ndiswrapper-1.2-suspend2.patch 553
 MD5 8d922dcf7a83d54f22e5831433f2ba65 metadata.xml 542
+RMD160 e59c2c78c37079622472dd297bacfd879c2d766e metadata.xml 542
+SHA256 dcb33f229fcbceb751fbaf3ffb33d55e9357f53081b7f7dac32a18060684a8b4 metadata.xml 542
 MD5 7fb20fd0abf610e5d3111796144ed2fe ndiswrapper-1.2-r1.ebuild 2582
+RMD160 eb35ccb33c2c8f486fafac3e19bb1d71889cc9f3 ndiswrapper-1.2-r1.ebuild 2582
+SHA256 9090da1e86fb1de5252cfe0baa3d04f86a710887344128a30880e5faea437597 ndiswrapper-1.2-r1.ebuild 2582
 MD5 e0270deffdd57fbe8d7d745964b17f00 ndiswrapper-1.2.ebuild 2871
+RMD160 5c4ab35c4e96f78612009bc2e1bffb5918c3cce6 ndiswrapper-1.2.ebuild 2871
+SHA256 1af57972623baa7921b2b17a4f795f2e33debf4431964036ba703bfa6ae1fa14 ndiswrapper-1.2.ebuild 2871
 MD5 d7d611d0df86023d8db9a9c610a047b9 ndiswrapper-1.7.ebuild 2497
+RMD160 b6e148d973380d84fb8c2251a55e15148dd678a5 ndiswrapper-1.7.ebuild 2497
+SHA256 abc0543a0d6b60d358a6ef760dba5eda1647df5a33ddf9a09208c70e57c54530 ndiswrapper-1.7.ebuild 2497
 MD5 2f2df288322fc799b453246295a31ee0 ndiswrapper-1.8.ebuild 2494
+RMD160 e2bc8c0cff8943e511f83692771cc0e9afafcfa9 ndiswrapper-1.8.ebuild 2494
+SHA256 20684ab9285328fa039e3e4fac59784b36003da3d0661452eca4417672c44b43 ndiswrapper-1.8.ebuild 2494
+MD5 905378c25f6d366418563cf581cf1d9f ndiswrapper-1.9.ebuild 2497
+RMD160 f2a44a4bd845a68cc55563a51ff6980c32ce77c3 ndiswrapper-1.9.ebuild 2497
+SHA256 42a7d416682142da1cbb231230493f001bc49c94f86e2d74b12b28d858caec8c ndiswrapper-1.9.ebuild 2497
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5mq5QiJ/wx066S4RApy7AKCMbuR2mdNdOV98QZEWQ8OOVaPbHwCfSvs1
+VXvTblo2O3zNJzR2BAu9pUg=
+=DElR
+-----END PGP SIGNATURE-----
