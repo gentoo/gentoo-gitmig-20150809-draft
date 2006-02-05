@@ -1,12 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.3 2006/02/05 17:52:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.4 2006/02/05 22:48:19 genstef Exp $
 
-inherit autotools eutils flag-o-matic
+inherit eutils autotools
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GPL Ghostscript with better printer support"
 HOMEPAGE="http://www.cups.org/ghostscript.php"
 
+MY_P=espgs-${PV}
+PVM=${PV%.[0-9]}
 SRC_URI="http://ftp.easysw.com/pub/ghostscript/${PV}/espgs-${PV}-source.tar.bz2
 	cjk? ( http://www.matsusaka-u.ac.jp/mirror/gs-cjk/adobe-cmaps-200204.tar.gz
 		http://www.matsusaka-u.ac.jp/mirror/gs-cjk/acro5-cmaps-2001.tar.gz )"
@@ -24,7 +26,6 @@ DEP="virtual/libc
 	X? ( || ( x11-libs/libXt virtual/x11 ) )
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	cups? ( >=net-print/cups-1.1.20 )
-	omni? ( dev-libs/libxml2 )
 	!virtual/ghostscript"
 
 RDEPEND="${DEP}
@@ -35,12 +36,9 @@ RDEPEND="${DEP}
 
 DEPEND="${DEP}
 	gtk? ( dev-util/pkgconfig )"
-
-#	media-libs/fontconfig"
-
 PROVIDE="virtual/ghostscript"
 
-S=${WORKDIR}/espgs-8.15.1
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
@@ -65,7 +63,7 @@ src_unpack() {
 	fi
 
 	# search path fix
-	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/8.15/$(get_libdir):"\
+	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/${PVM}/$(get_libdir):"\
 		Makefile.in || die "sed failed"
 	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/default/ghostscript/:' \
 		Makefile.in || die "sed failed"
@@ -97,8 +95,8 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	make DESTDIR="${D}" soinstall || die "make install failed"
 
-	rm -fr ${D}/usr/share/ghostscript/8.15/doc || die
-	dodoc doc/README doc/COPYING doc/COPYING.LGPL
+	rm -fr ${D}/usr/share/ghostscript/${PVM}/doc || die
+	dodoc doc/README
 	dohtml doc/*.html doc/*.htm
 
 	if use emacs; then
