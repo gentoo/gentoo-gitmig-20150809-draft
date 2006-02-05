@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2ac39f9be6e8c366580c00d38f46919 ChangeLog 1910
-RMD160 af84c70bd46a9d8582f715ceb378a4b5cac20e04 ChangeLog 1910
-SHA256 c37705dcb02223d6731f53ba3fcd36b698ba7dea9672a3fbd182e1f840d9f287 ChangeLog 1910
+MD5 fccd01e24a2955d1df0011b428fd0d1e ChangeLog 2035
+RMD160 8b81f6067ad302a4add3c9f30390319acc12ee75 ChangeLog 2035
+SHA256 adc6fdef7aea5bf9c0d460d5f4d3af1fbd227a328451d122a76943a0129e00fd ChangeLog 2035
 MD5 720fcf8b3c81049cde8cf97914f2e9a8 files/digest-xf86-video-s3virge-1.8.6.5 149
 RMD160 9cb31a3eb3c0fbd182fbbede35abfbf42a5ee568 files/digest-xf86-video-s3virge-1.8.6.5 149
 SHA256 c3d4037d4d5ae7e0442c604c07c529dcda5d8db258f7296cbb794e4f69733194 files/digest-xf86-video-s3virge-1.8.6.5 149
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 7845be8e95ecb1ebc80632f6c2d040bd xf86-video-s3virge-1.8.6.5.ebuild 579
-RMD160 749e4e46f567b12398cf582f916334fc519c9d4f xf86-video-s3virge-1.8.6.5.ebuild 579
-SHA256 60155137add441f259f9b0a6973ae13ddcfb0ef39a1bf0b01bb4589a0f49d262 xf86-video-s3virge-1.8.6.5.ebuild 579
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFD4kRzwUpWvClEHQoRAs3LAJ9TG7fBOGFrwQy7KLAuIbLjTXzAmgCYqX4l
-xEYn+S46dFEm55ACln2rpw==
-=bcqF
------END PGP SIGNATURE-----
+MD5 fa5384aff0166f4254466f00448a89ae xf86-video-s3virge-1.8.6.5.ebuild 585
+RMD160 ee6af9131fbc3b15c73a34b928de1b9e565e748b xf86-video-s3virge-1.8.6.5.ebuild 585
+SHA256 33b139ea13d86f68775862bf687ed1ddcbabd44a2939ad9b3c53abac5ca51a2f xf86-video-s3virge-1.8.6.5.ebuild 585

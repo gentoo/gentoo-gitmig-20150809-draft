@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e5a568423ef41acdbe8093842331c9bf ChangeLog 1910
-RMD160 7b445c71def28bffb6385c3d32a48bc06842e196 ChangeLog 1910
-SHA256 54c8229c98ec1b0270ed83b5d1b5405d22d1a42179c417a6ae2f17cd2c72efdf ChangeLog 1910
+MD5 d938f1deaf2a6bfa3ea9e47f888e7509 ChangeLog 2035
+RMD160 71302510137b6d887dc9a8ff14fd9098b25392ca ChangeLog 2035
+SHA256 496011309f168cca3cafb15277a3b3b315bbb4b486635b8f0093c21127f280f0 ChangeLog 2035
 MD5 e4a15a57a67f6aefb1db8fdc0a9a3984 files/digest-xf86-input-dynapro-1.0.0.5 149
 RMD160 1f4906a17daa542760b84d6b4f93a17b640b87eb files/digest-xf86-input-dynapro-1.0.0.5 149
 SHA256 bfb054a2d070fea3df6a233436562eb7c26a6b33b77e464e3d9949467389c377 files/digest-xf86-input-dynapro-1.0.0.5 149
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 b8d59c97e3fdeaa619c40ad429a7efe5 xf86-input-dynapro-1.0.0.5.ebuild 521
-RMD160 5229f9236ace4e635c4f49166bc80c35ccd07184 xf86-input-dynapro-1.0.0.5.ebuild 521
-SHA256 947b65adab840214785d99c40ccdd42b0b128feb4e7dc57cc3ed30ef05785208 xf86-input-dynapro-1.0.0.5.ebuild 521
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4TohwUpWvClEHQoRAgvAAJ48hRDNmIFc7mx5ZD53oUM6XRbD8ACdFHl4
-jl65T/5eBzO+mfDrs7WyIpg=
-=GNDA
------END PGP SIGNATURE-----
+MD5 f4e58a9e31d27561b933d521a810c81b xf86-input-dynapro-1.0.0.5.ebuild 527
+RMD160 d70b3dbeeb2cfbf18e84bb58aecbf4c228476b52 xf86-input-dynapro-1.0.0.5.ebuild 527
+SHA256 32d30eaaab106235e8692fde8809e830639fa12625504f11328bb61acf39ecfd xf86-input-dynapro-1.0.0.5.ebuild 527

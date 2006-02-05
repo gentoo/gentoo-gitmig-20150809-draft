@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a8d6db054b7fc4ee7012a2dfac409e13 ChangeLog 1807
-RMD160 5171ac633d96ad68d76834259d2c6c2567192e55 ChangeLog 1807
-SHA256 f3e63ea39d08ca52769b5878ad0bb36f2596ee991aae07e5ec3950ba908ea57b ChangeLog 1807
+MD5 e8fe969166e38125760049eaccf0c0d1 ChangeLog 1929
+RMD160 09072eb97814f28622ee57aecc9f5dd298cfbb1a ChangeLog 1929
+SHA256 9bc7880f375c4820b052c069b3340ce54a90627d6c24539bb2b2a009ba639046 ChangeLog 1929
 MD5 c9b78b8df1b995801fa06e9ff3d19aa6 files/digest-xf86-input-fpit-1.0.0.5 146
 RMD160 5a6d4f33791150f80e819f5f9fa03197e9b7ffe6 files/digest-xf86-input-fpit-1.0.0.5 146
 SHA256 407d51e31c5837c7cfd7836a492b5ec5bea5b3ebcdd70a60d7516a61d8cedbf1 files/digest-xf86-input-fpit-1.0.0.5 146
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 220fe73baad8b75dd3efa5134d89ca8e xf86-input-fpit-1.0.0.5.ebuild 512
-RMD160 f8fe43149fb0d44f8c6e25dfdec66a3d8f8d09cc xf86-input-fpit-1.0.0.5.ebuild 512
-SHA256 8b153948ecb42b595f178ecdf47eedccaa35f393e92572c118ceb99bb8c8d109 xf86-input-fpit-1.0.0.5.ebuild 512
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFD4h1UwUpWvClEHQoRAl/RAJdrz2xOE00cimWt/rFH7ztQKZylAJ9rRZbG
-QMwNMv1GBsjsQV2Uyx42tw==
-=/tXH
------END PGP SIGNATURE-----
+MD5 9e5671eff4cdae207324207113bbe8bd xf86-input-fpit-1.0.0.5.ebuild 518
+RMD160 467c863c001d2cc19526d4acc0db1850554037aa xf86-input-fpit-1.0.0.5.ebuild 518
+SHA256 1d09989bfdac19ad3848a1e84b5c1753590e0535d7ec0f2b42e582318b4fbc6d xf86-input-fpit-1.0.0.5.ebuild 518
