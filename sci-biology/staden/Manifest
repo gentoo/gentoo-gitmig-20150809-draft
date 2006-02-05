@@ -1,4 +1,4 @@
-MD5 5c59bb7a3a0da99b8be42226eace7f2b ChangeLog 5267
+MD5 6cc8fe615abb91e0020de247147531d2 ChangeLog 5368
 MD5 e3ce8053514641a26df3ca33f2962e55 files/digest-staden-1.5.3-r1 338
 MD5 10dd81dc9b5fb15600bf8b1d4f7b4c0b files/staden-1.5.3-env 163
 MD5 daf40c222b80ffc48d9a2ac2544ab631 files/staden-1.5.3-getopt.patch 367
@@ -12,4 +12,4 @@ MD5 7e0b4d0414191e2d1e00c65c16f3c377 files/staden-1.5.3-tk_utils.patch 787
 MD5 0857e0bf79953bfa46b1224f6218701a files/staden-1.5.3-top.patch 230
 MD5 690ec96f38a668c6cda216d7a3960ecf files/staden-1.5.3-tracediff.patch 334
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
-MD5 f15f4b672812659af58e22522dff0198 staden-1.5.3-r1.ebuild 9534
+MD5 08c238bbea3b668fa03c0b468d3131bf staden-1.5.3-r1.ebuild 9559

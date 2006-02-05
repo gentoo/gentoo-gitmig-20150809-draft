@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.5.3-r1.ebuild,v 1.2 2005/12/15 03:57:49 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.5.3-r1.ebuild,v 1.3 2006/02/05 06:15:47 ribosome Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -27,7 +27,7 @@ RDEPEND="app-shells/ksh
 	=dev-tcltk/itcl-3.2*
 	dev-tcltk/iwidgets
 	media-libs/libpng
-	virtual/x11"
+	|| ( x11-libs/libX11 virtual/x11 )"
 
 DEPEND="${RDEPEND}
 	dev-lang/perl
