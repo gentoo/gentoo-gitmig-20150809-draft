@@ -1,16 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5a6b4132de916e068205a508f8c537cc ChangeLog 2727
-MD5 9673a4820fb2c204d0e2cd21bc3080b0 files/digest-unieject-5 63
+MD5 036b220afcaa759e80358f9f67e3a652 ChangeLog 2821
+RMD160 823cba89d29922eee9940a0b8a52d7034b747d26 ChangeLog 2821
+SHA256 5b0a799da88bf8b78dca808cc94ee729f86f74f72f157efe630195745bcc3ea3 ChangeLog 2821
 MD5 b942cb8506d7e616d846ed3b8f13d3f6 files/digest-unieject-5.1 65
+RMD160 7a69787f2b041938b62faf99ff00c0172248c0d6 files/digest-unieject-5.1 65
+SHA256 105bf7abde30852f865bb51db61fac6add189017b7e32d7c890644fff510ddaf files/digest-unieject-5.1 65
 MD5 7f0b2989cfdaf436a2cbd458a718368a metadata.xml 366
+RMD160 7d8cca2c7c5bf7e50679e9ba5600f66b6feeec38 metadata.xml 366
+SHA256 4fa6745925c295d3e95641d1e158a0f024a5020fd2188ac1cf906e2836abd2be metadata.xml 366
 MD5 d61c5ff05af32b374a10e41c28fff4f7 unieject-5.1.ebuild 1303
-MD5 8ebd480c7cbb24dd7fa0b8a1cac85f18 unieject-5.ebuild 1061
+RMD160 6f217b9a31ba71ec3b0c21cb8a6196af113ea4d3 unieject-5.1.ebuild 1303
+SHA256 4a672b049b55b6273f9b6c9c02eaf0d0b8bc77180bb594d88653aa9624cde6c2 unieject-5.1.ebuild 1303
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDyAALAiZjviIA2XgRArRJAJ0QaxgUstUitdQT0Jgdj69Isf9j0QCghpr1
-buSoiRq4v69tsk1Ti6XbOFo=
-=O/L1
+iD8DBQFD5o9fAiZjviIA2XgRAqwEAJ96MMZRWWcl4gzrGVnuyk7CA/lFgwCfamzq
+FrYUzf9eg0ZN4QMV2A8sMB8=
+=WsVG
 -----END PGP SIGNATURE-----
