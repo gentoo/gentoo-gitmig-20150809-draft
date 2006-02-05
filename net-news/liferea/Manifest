@@ -2,18 +2,36 @@
 Hash: SHA1
 
 MD5 d73ff3c1cce86ac0ce5e1c6a4a602497 ChangeLog 9241
+RMD160 563429af004932067df6262563a8fe7342825845 ChangeLog 9241
+SHA256 c47c324f05e99a264782a1e3cf919490410aa037e7371a126ea16d52680cf9bb ChangeLog 9241
 MD5 ca0f3d49b323b6401d4b75e56fb151fe files/digest-liferea-0.9.6 66
+RMD160 ae937ae1b821501e19b86a81bfad241caf15f528 files/digest-liferea-0.9.6 66
+SHA256 39bd08e37c99cf30263aa97b49a2ba04a92933d7d87ea79f766f2354ccb62d2e files/digest-liferea-0.9.6 66
 MD5 f309c7f30cee3864c2461a0c5a2b05ef files/digest-liferea-1.0-r1 64
+RMD160 18b3a6b995cbb68e5722585dc4422678a30c3d74 files/digest-liferea-1.0-r1 64
+SHA256 43b655d15e45c07df3753e4590419fd9d55680883e74d110510afe13a08ac007 files/digest-liferea-1.0-r1 64
 MD5 21e442128b3ee664aeec1d24f5a42db5 files/digest-liferea-1.0.3 66
+RMD160 7e208c9e1bedf053e23ce7de809d66d004da89b6 files/digest-liferea-1.0.3 66
+SHA256 2b40bab1cf12a79dcec490cc986ee5cc4be14e0ddbe370dc4fa9824825b72b81 files/digest-liferea-1.0.3 66
 MD5 86662e7c1f5a7d08669b0d6c729de55a files/liferea-firefox-1.5.patch 650
+RMD160 812f9dc7139d98a648b76c406081e03dba40c548 files/liferea-firefox-1.5.patch 650
+SHA256 a1a15d1ded59cb28ac013accf1c3c4a216f2881c1127085ccd320945e81eae0e files/liferea-firefox-1.5.patch 650
 MD5 848125241aa76ebb1329aac056983151 liferea-0.9.6.ebuild 757
+RMD160 71b58252139d26662775841c04c6d7ed9cae7813 liferea-0.9.6.ebuild 757
+SHA256 58a2083f2acb554c35b29a4e3573bd58f4b92f83bf2ce10b5ec0cc090cf7fdb2 liferea-0.9.6.ebuild 757
 MD5 bffcbdddf3249f9fc59d74216e3140b4 liferea-1.0-r1.ebuild 1855
+RMD160 de0778c75b344d13e2c581806a742eaacb4b4c5b liferea-1.0-r1.ebuild 1855
+SHA256 322d4b8314285596dc7cd3d68627340169e8b6023ca2976c6ea3576ffb6c5a55 liferea-1.0-r1.ebuild 1855
 MD5 06249b3b09748e18ac3b600049f4a597 liferea-1.0.3.ebuild 1759
+RMD160 f8d962c7793dc2418e18e28f84c44518d1e89850 liferea-1.0.3.ebuild 1759
+SHA256 fe966b74eeb74ecf533418782201d6b336691e1ebbbb2326fe4f842ae568623b liferea-1.0.3.ebuild 1759
 MD5 e04d992316575de13c0505290156db3e metadata.xml 235
+RMD160 079e638a919cae6181b39aa111378a83a61922b8 metadata.xml 235
+SHA256 262633be7fcc71388185c13aeb6a8962ad13c103b3f75ee962b0cc093eba00b0 metadata.xml 235
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD5k5VZgSmR+etHJoRAjTuAKCcIWGvVHAzwtf7ZxnXJ3vyzG4z2gCdGr4S
-TC9FBXwYdQl7Xmfv4Togqqc=
-=Zn36
+iD8DBQFD5mSaV3J2n04EauwRAvISAKChWY+A6aZoWLjUADOi73U+nohnxgCeMTdq
+KBvap3WHtclYXpYEdOJPFAs=
+=OuEr
 -----END PGP SIGNATURE-----
