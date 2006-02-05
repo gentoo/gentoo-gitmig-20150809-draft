@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.19.ebuild,v 1.4 2006/02/04 18:13:29 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.19.ebuild,v 1.5 2006/02/05 14:25:43 betelgeuse Exp $
 
 inherit eutils autotools
 
@@ -22,13 +22,28 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 		dssi? ( >=media-libs/dssi-0.9 )
 		gtk? ( >=x11-libs/gtk+-2.4
 				>=dev-libs/glib-2.0
-				virtual/x11
+				|| ( (
+					   x11-libs/libICE
+					   x11-libs/libSM
+					   x11-libs/libX11
+					   x11-libs/libXtst
+					 )
+				     virtual/x11
+				   )
 				cairo? ( >=x11-libs/cairo-0.5.0 )
 		     )
 		xml2? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )"
 
 DEPEND="app-arch/zip
 		dev-java/jikes
+		gtk? ( || ( (
+					  x11-libs/libXrender
+					  x11-proto/xextproto
+					  x11-proto/xproto
+					)
+					virtual/x11
+				  )
+			 )
 		${REPEND}"
 
 S=${WORKDIR}/${MY_P}
