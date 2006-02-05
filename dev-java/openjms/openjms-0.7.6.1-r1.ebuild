@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r1.ebuild,v 1.2 2006/01/25 00:16:58 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r1.ebuild,v 1.3 2006/02/05 11:07:58 blubb Exp $
 
 inherit java-pkg eutils
 
@@ -40,8 +40,8 @@ src_unpack() {
 	mv ${WORKDIR}/config ${S}
 
 	cd ${S}
-	epatch ${FILESDIR}/${PV}/buildfile.patch.bz2
-	epatch ${FILESDIR}/${PV}/source.patch.bz2
+	epatch ${FILESDIR}/${PV}/buildfile.patch
+	epatch ${FILESDIR}/${PV}/source.patch
 
 	cd ${S}/lib
 	rm -f *.jar
