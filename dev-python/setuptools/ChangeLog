@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/setuptools
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.1 2005/10/15 05:41:59 pythonhead Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.2 2006/02/05 20:23:19 marienz Exp $
+
+*setuptools-0.6_alpha9 (05 Feb 2006)
+
+  05 Feb 2006; Marien Zwart <marienz@gentoo.org>
+  -setuptools-0.6_alpha5.ebuild, +setuptools-0.6_alpha9.ebuild:
+  Bump to alpha9, use the new --single-version-externally-managed switch to
+  install. Drop alpha5 which does not support that switch (the switch will be
+  used in ebuilds depending on setuptools).
 
 *setuptools-0.6_alpha5 (15 Oct 2005)
 
