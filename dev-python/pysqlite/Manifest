@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 81dd9957637a5e60e98308ff7d815fb2 ChangeLog 5093
-RMD160 c2a564066574745b61f8effe013711dc0029132c ChangeLog 5093
-SHA256 6711c64a7c1f3b61a337563fef4d5a4161e4adeda743f6613cc9c4edd7c4884a ChangeLog 5093
+MD5 7d8c0d75d653f62fb41ba0353a18b1af ChangeLog 5445
+RMD160 6150f43c840a863989dc933b047b05f370ac655a ChangeLog 5445
+SHA256 1da2ca36b1e29661aa0e1c37e3e534cf1541a896416770d0cb16886f183241ea ChangeLog 5445
 MD5 c27bf7af6842480285e9a1bc6422480a files/digest-pysqlite-0.5.1 65
 RMD160 8cfd3f73ab42d076b647658ad4a4aaf458600512 files/digest-pysqlite-0.5.1 65
 SHA256 1a046c8c646cebd3cc4255c4e4c3e8bf5cc83929474e9d479da1ce4053fc7d97 files/digest-pysqlite-0.5.1 65
 MD5 8474697be6f1f182b2e727ae06f3714c files/digest-pysqlite-1.0.1 65
 RMD160 8e79ba6173f74f309323cc0410103c0a7405ffee files/digest-pysqlite-1.0.1 65
 SHA256 6a6dfc6c9db0589115afc888ebce25123580893c2fbc7364b028c9b307cc382c files/digest-pysqlite-1.0.1 65
-MD5 dd51c2919dfa483fcfc70c4c331f4a43 files/digest-pysqlite-2.0.4 65
-RMD160 0b212635fb99eb92d2f24620431b1fbde8b68025 files/digest-pysqlite-2.0.4 65
-SHA256 b11e62c0f648f40d33cd8a81aa03eda788f25a600ab8b165dfd85448519c6a41 files/digest-pysqlite-2.0.4 65
-MD5 99fc7bff5a4b3866154f822eece5a199 files/digest-pysqlite-2.0.5 241
-RMD160 a435a0ee6a84fa00530709a72666960d8ca27e60 files/digest-pysqlite-2.0.5 241
-SHA256 4d76157134d34d6e18e68fc7e34de41a4778c29c359a29a644ce40f70502a5c1 files/digest-pysqlite-2.0.5 241
+MD5 e2d1637a2ffc3058b7837337be889bb8 files/digest-pysqlite-2.0.5 241
+RMD160 753ef4bb45cbcdada0b80a3eedbaca25d0398391 files/digest-pysqlite-2.0.5 241
+SHA256 a6fd9ee4d7bf8bac775d89bc040f821507b7d465b39fdcb0809b1ae5cd8c01c6 files/digest-pysqlite-2.0.5 241
+MD5 e925645fada24044815e72fe5b779f7d files/digest-pysqlite-2.0.7 244
+RMD160 27f21b3e2a73917d507d015f8981ec0ae0b3f26f files/digest-pysqlite-2.0.7 244
+SHA256 c188ddc09e5aa83dbd394d42e57649284a20c2731ad7c61b61abac6c532ad956 files/digest-pysqlite-2.0.7 244
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
@@ -25,16 +25,16 @@ SHA256 77ca826565c809d7ee6687df3ed424ff642b108684c47d78ccdb45294e4d87ef pysqlite
 MD5 7e8ab9fa1b878c10c7c78acc8e45042e pysqlite-1.0.1.ebuild 862
 RMD160 9dbfa35a543cbee2826e7e5e51b7283955e2cf6c pysqlite-1.0.1.ebuild 862
 SHA256 72ac403c9443bfc4e569b8ce85d8ece2a584c8b17daef0f81354bfc963bba347 pysqlite-1.0.1.ebuild 862
-MD5 77cc3cab9ea1cc4a5ebc3b5be7cda4a3 pysqlite-2.0.4.ebuild 1006
-RMD160 f06308becfe5d6483b5d026bbb0a0155181ca578 pysqlite-2.0.4.ebuild 1006
-SHA256 857f5e8f4a2ccfac3a88f3b92d642f1f70c1787b166e56b02bab13addd3b6d40 pysqlite-2.0.4.ebuild 1006
-MD5 dfa51d581d957b33d31bd7197d664698 pysqlite-2.0.5.ebuild 1003
-RMD160 bb6d49f57e4e04ae7d7b842967d21897804eb3ab pysqlite-2.0.5.ebuild 1003
-SHA256 ef6d2a4bd0fab58fc113cd2a4f4641bdfa8dcc348a8560dd54aef24792a374a9 pysqlite-2.0.5.ebuild 1003
+MD5 6cce3f61a9712de9997c225dda511143 pysqlite-2.0.5.ebuild 1026
+RMD160 3e3a9c88895c6e161eed6a18889efa1410fb7123 pysqlite-2.0.5.ebuild 1026
+SHA256 377e6a7c54095625234d7ce386b2f2a5006b74b0a6a22ea1f64c240b86d11207 pysqlite-2.0.5.ebuild 1026
+MD5 d71ca01378e6f3833d2be8d86369d90f pysqlite-2.0.7.ebuild 1431
+RMD160 8e60174e7590820b024ec8188a2db24ba31cdb19 pysqlite-2.0.7.ebuild 1431
+SHA256 ee7167c9be62a2515d44eb152319546d0cc35f177c0ff86a3eff05c24fc57f66 pysqlite-2.0.7.ebuild 1431
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4+V6JrHF4yAQTrARAlneAJ4t51QN0H8o/jaJ7pSNCc3W/5uVdgCdGWLf
-C/J4dvMslVMv6ua6pzrZ5yo=
-=Sd+0
+iD8DBQFD5ovAW78445TWHXcRAq+WAKCL8mCO/wv78m3c3vJZeTHFmOpHEgCcCDkb
+Z7VCbFjyOhC6Qd0Thw5q7Mk=
+=FlO9
 -----END PGP SIGNATURE-----

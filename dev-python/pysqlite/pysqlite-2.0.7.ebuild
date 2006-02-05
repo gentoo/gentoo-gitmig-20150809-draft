@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-2.0.4.ebuild,v 1.1 2005/09/30 09:22:51 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-2.0.7.ebuild,v 1.1 2006/02/05 23:35:13 marienz Exp $
 
 inherit distutils
 
@@ -14,7 +14,8 @@ LICENSE="pysqlite"
 SLOT="2"
 
 DEPEND=">=dev-lang/python-2.3
-	>=dev-db/sqlite-3.1"
+	>=dev-db/sqlite-3.1
+	>=dev-python/setuptools-0.6_alpha9"
 
 src_unpack() {
 	unpack ${A}
@@ -22,7 +23,17 @@ src_unpack() {
 }
 
 src_install() {
-	distutils_src_install
+	${python} setup.py install --root=${D} --no-compile \
+		--single-version-externally-managed "$@" || die
+
+	DDOCS="CHANGELOG COPYRIGHT KNOWN_BUGS MAINTAINERS PKG-INFO"
+	DDOCS="${DDOCS} CONTRIBUTORS TODO"
+	DDOCS="${DDOCS} Change* MANIFEST* README*"
+
+	for doc in ${DDOCS}; do
+		[ -s "$doc" ] && dodoc $doc
+	done
+
 	# Need to do the examples explicitly since dodoc
 	# doesn't do directories properly
 	if use doc ; then
@@ -30,4 +41,9 @@ src_install() {
 		dodir /usr/share/doc/${PF}/code || die
 		cp -r ${S}/doc/code/* ${D}/usr/share/doc/${PF}/code || die
 	fi
+}
+
+src_test() {
+	cd build/lib*
+	PYTHONPATH=. python ../../scripts/test-pysqlite || die "test failed"
 }

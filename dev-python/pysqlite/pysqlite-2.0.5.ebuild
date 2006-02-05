@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-2.0.5.ebuild,v 1.6 2006/02/01 00:01:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-2.0.5.ebuild,v 1.7 2006/02/05 23:35:13 marienz Exp $
 
 inherit distutils
 
@@ -14,7 +14,8 @@ LICENSE="pysqlite"
 SLOT="2"
 
 DEPEND=">=dev-lang/python-2.3
-	>=dev-db/sqlite-3.1"
+	>=dev-db/sqlite-3.1
+	!>=dev-db/sqlite-3.3.3"
 
 src_unpack() {
 	unpack ${A}
