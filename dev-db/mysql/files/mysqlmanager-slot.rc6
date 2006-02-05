@@ -1,12 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysqlmanager-slot.rc6,v 1.2 2005/12/08 17:44:12 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysqlmanager-slot.rc6,v 1.3 2006/02/05 16:59:03 vivo Exp $
 
 # external binaryes used: which, sed, tac
 
 depend() {
 	use dns net localmount netmount nfsmount
+	#provide mysql
 }
 
 # int in_list(char * elem, char * list)
@@ -62,7 +63,7 @@ get_slot_config() {
 				;;
 		esac
 	done
-	
+
 	if [[ ! -r "${MY_CNF}" ]]; then
 		ewarn "Cannot access ${MY_CNF} !"
 		MY_CNF=""
@@ -72,7 +73,7 @@ get_slot_config() {
 		if [[ ! -x "${my_print_defaults}" ]]; then
 			eerror "my_print_defaults NOT found or not executable"
 			my_defaults=""
-		else			
+		else
 			my_defaults=$( ${my_print_defaults} \
 				--loose-verbose \
 				--config-file="${MY_CNF}" \
@@ -200,7 +201,7 @@ stop () {
 	local runwhat pidfile shutdown_elem
 	local PID cnt timeout
 	local retstatus=0
-	local shutdown_list="$(tac "${MYSQL_GLOB_PID_FILE}")"
+	local shutdown_list="$(< "${MYSQL_GLOB_PID_FILE}" )"
 
 	# shutdown in reverse order
 	ebegin

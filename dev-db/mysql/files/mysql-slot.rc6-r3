@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6-r3,v 1.2 2006/02/04 02:21:15 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6-r3,v 1.3 2006/02/05 16:59:03 vivo Exp $
 
 # external binaryes used: which, sed, tac
 
@@ -42,7 +42,7 @@ get_slot_config() {
 	MY_SUFFIX="-${srv_slot}"
 	# srv=array(0 => [srv_slot], 1 => [srv_num] )
 	srv=( ${srv_slot} ${srv_num} )
-	
+
 	local tmp_eval="mysql_slot_${srv_slot}${srv_num:+"_"}${srv_num}[@]"
 	local conf_d_parameters="${!tmp_eval}"
 	if [[ "${srv_slot}" == "0" ]] ; then
@@ -321,7 +321,7 @@ stop() {
 	local runwhat pidfile shutdown_elem
 	local PID cnt timeout=${STOPTIMEOUT:-"120"}
 	local retstatus=0
-	local shutdown_list="$(tac "${MYSQL_GLOB_PID_FILE}")"
+	local shutdown_list="$(< "${MYSQL_GLOB_PID_FILE}" )"
 
 	ebegin "Stopping ${myservice} (pid=${PID})"
 	for shutdown_elem in $shutdown_list; do
