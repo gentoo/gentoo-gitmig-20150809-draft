@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.1-r2.ebuild,v 1.2 2006/02/03 16:32:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.1-r2.ebuild,v 1.3 2006/02/05 12:29:24 flameeyes Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -18,11 +18,10 @@ DEPEND=">=media-libs/freetype-2.0.5
 	>=app-text/poppler-bindings-0.5.0"
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/${P}-poppler.patch.bz2"
+	mirror://gentoo/${P}-poppler-2.patch.bz2"
 
 PATCHES="${FILESDIR}/${P}-saveas.patch
-	${FILESDIR}/post-3.5.1-kdegraphics-CVE-2006-0301.diff
-	${DISTDIR}/${P}-poppler.patch.bz2"
+	${DISTDIR}/${P}-poppler-2.patch.bz2"
 
 pkg_setup() {
 	if ! built_with_use app-text/poppler-bindings qt; then
