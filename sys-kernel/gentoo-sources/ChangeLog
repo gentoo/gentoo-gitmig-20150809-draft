@@ -1,17 +1,17 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.245 2006/02/05 01:29:04 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.246 2006/02/05 01:32:11 dsd Exp $
 
-  05 Feb 2006; Daniel Drake <dsd@gentoo.org> ChangeLog:
+  04 Feb 2006; <plasmaroo@gentoo.org> gentoo-sources-2.6.15-r3.ebuild:
+  Mark stable on IA64.
+
+*gentoo-sources-2.6.15-r3 (04 Feb 2006)
+
+  05 Feb 2006; Daniel Drake <dsd@gentoo.org> gentoo-sources-2.6.15-r3.ebuild:
   Probably The Kernel For 2006.0 (TM): Fix unused CPU on some SMP boards with
   broken BIOSes. Add JMicron JMB360/363 SATA support. Fix for setting date on
   sparc64 (CVE-2006-0482). Fix emu10k1 sound driver. Fix hung dell_rbu
   firmware kernel thread. PCI express mmconfig fix for broken BIOSes.
-
-*gentoo-sources-2.6.15-r3 (04 Feb 2006)
-
-  04 Feb 2006; <plasmaroo@gentoo.org> gentoo-sources-2.6.15-r3.ebuild:
-  Mark stable on IA64.
 
 *gentoo-sources-2.6.15-r2 (31 Jan 2006)
 
