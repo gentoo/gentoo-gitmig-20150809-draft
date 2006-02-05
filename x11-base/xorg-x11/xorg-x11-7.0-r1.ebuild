@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.7 2006/02/05 09:03:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.8 2006/02/05 09:07:27 spyderous Exp $
 
 inherit eutils
 
@@ -273,14 +273,16 @@ RDEPEND="${RDEPEND}
 				video_cards_fglrx? ( x11-drivers/ati-drivers )
 			)
 			(
-				x11-drivers/xf86-video-ati
 				x11-drivers/xf86-video-dummy
-				x11-drivers/xf86-video-mga
-				x11-drivers/xf86-video-nv
-
 				x11-drivers/xf86-video-fbdev
-				x11-drivers/xf86-video-sisusb
-				x11-drivers/xf86-video-v4l
+
+				!hppa? (
+					x11-drivers/xf86-video-ati
+					x11-drivers/xf86-video-mga
+					x11-drivers/xf86-video-nv
+
+					x11-drivers/xf86-video-sisusb
+					x11-drivers/xf86-video-v4l )
 
 				3dfx? ( >=media-libs/glide-v3-3.10 )
 
