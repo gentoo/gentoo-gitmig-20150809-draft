@@ -1,17 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ce266509b8afdbbae483a4e4807ea0f4 ChangeLog 837
+MD5 3da859f03d3e3f9db69a4ce2708b7671 ChangeLog 1003
 MD5 20ef59cb49ea2d8efc392949a8ee307b files/confd 342
 MD5 3f36a51719f6fdfe4cb5697b95863943 files/digest-vdr-powermate-0.0.3 67
 MD5 ade2b90ac7f4c6a301ed1cffb868859e files/rc-addon.sh 1145
+MD5 d9b4aac918011d9b4a65b44916e6fa23 files/vdr-powermate-0.0.3-1.3.38.diff 924
 MD5 aad7ac146115bdd00cf6ad1e75561f56 metadata.xml 530
-MD5 538c7f3fd21535b7baf758379e014388 vdr-powermate-0.0.3.ebuild 521
+MD5 0038a6e4a7870e1f734259d43e4fd654 vdr-powermate-0.0.3.ebuild 561
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 Comment: no further Information
 
-iD8DBQFDyrD7dn07HTTCgIoRAqBqAJ9IzPg2tIiiBoP8eegS5RBzsMTXgQCfTw+I
-9uPFq2NwXYoneTwttGN2LF8=
-=Usui
+iD8DBQFD5la/dn07HTTCgIoRAlw0AKCpqjGCkIgx4sizgcht2SOXOLmjIQCfdPcT
+YWlgaBCFFe0tkmui238oDik=
+=AAhi
 -----END PGP SIGNATURE-----
