@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b0f555fc1e60f1e3351bc6ba20e964a1 ChangeLog 2840
-RMD160 1263c58bb764ef965794697c081a4cd3c1cd50e4 ChangeLog 2840
-SHA256 a208ed3f522902d8a2a2be67e35ec1a30892be78f349ad42535fca9f0c718f37 ChangeLog 2840
+MD5 59fe4e574923b82c2d5bc0569f3edf31 ChangeLog 2951
+RMD160 018a6bd99dab3ac794f97e73ae21eb1991835ae1 ChangeLog 2951
+SHA256 e3def88996ed6b1bbb2b21e46706b91631207e1013cdfc2cce60ad9d123f0c11 ChangeLog 2951
 MD5 af56181885cd6a9d0afb1243414c2ca3 files/digest-vanessa-logger-0.0.4_beta2 77
 RMD160 58cbee015a19f34f298077b0ed75ed1b00df478f files/digest-vanessa-logger-0.0.4_beta2 77
 SHA256 4bb14734d19a86565f90db777fba6fca9db77ed70a7ca1787079ba8e5da9654f files/digest-vanessa-logger-0.0.4_beta2 77
@@ -22,13 +19,6 @@ SHA256 f7f6739976041f2d3349b316b9cd04a35cbcdcc717b2156847b9ff3939acb9e2 vanessa-
 MD5 a61095781c1dbd15ef2b5a0c4c1907a8 vanessa-logger-0.0.6.ebuild 775
 RMD160 07a1b0c3e8643c48201b798f423c6da194bcf678 vanessa-logger-0.0.6.ebuild 775
 SHA256 ea878e2806b02c7d3a297ad304a0d7cc85599c3ccc7b5acc709510ca5a98467f vanessa-logger-0.0.6.ebuild 775
-MD5 5b5cab9e91eb6c21c38ba5774841d577 vanessa-logger-0.0.7.ebuild 783
-RMD160 207f332fa88446b408e67a7f8e70aba4ee496d8f vanessa-logger-0.0.7.ebuild 783
-SHA256 73e865c9a4f838d2d4686abc03aac069e827de67db7bbc3023885491f6cab07c vanessa-logger-0.0.7.ebuild 783
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD4/C4JrHF4yAQTrARAvPMAJ9EcO4/w6m7yGAvb+jcK2WA/CMQswCcC/CJ
-KdzEn+0kEWanZA/C9peol/o=
-=aoaY
------END PGP SIGNATURE-----
+MD5 72030fb273e37f42442927491a88c98b vanessa-logger-0.0.7.ebuild 782
+RMD160 402f47553fc47f5dba8b39997bf423e4d05636f3 vanessa-logger-0.0.7.ebuild 782
+SHA256 6c318d65bb0092378e1849b4806055739d7d283dd2b93492076e6232446c44b4 vanessa-logger-0.0.7.ebuild 782
