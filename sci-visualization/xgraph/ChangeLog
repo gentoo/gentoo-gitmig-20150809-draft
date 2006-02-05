@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/xgraph
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/ChangeLog,v 1.1 2006/01/29 20:23:15 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/ChangeLog,v 1.2 2006/02/05 06:34:05 ribosome Exp $
+
+*xgraph-12.1-r1 (05 Feb 2006)
+
+  05 Feb 2006; Olivier Fisette <ribosome@gentoo.org> +xgraph-12.1-r1.ebuild:
+  Ported to modular X. Ebuild clean-up.
 
   29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> +xgraph-12.1.ebuild:
   Moved from media-gfx/xgraph to sci-visualization/xgraph.
