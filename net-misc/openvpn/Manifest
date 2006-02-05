@@ -1,4 +1,4 @@
-MD5 37fd08b4bcb40c1ae3564a9fc6963b4d ChangeLog 10835
+MD5 55f765e90efe4e8581d1ce8a519e3d14 ChangeLog 10926
 MD5 51eea8a2c9a5189571de49ad32b88ac1 files/digest-openvpn-1.5.0-r1 65
 MD5 64180e225493c8fc2e085071ff65897b files/digest-openvpn-1.6.0 65
 MD5 2d68e6681e5a0b149462220ad10caf66 files/digest-openvpn-2.0.5 65
@@ -9,5 +9,5 @@ MD5 e3c739fa378e74cf7a83a17f4a2e30cc files/openvpn.init 1449
 MD5 88b5014eccbc72e61658ecfaa436c6f0 metadata.xml 449
 MD5 57db3db67cafcb3a5bb7a07eb4a3b884 openvpn-1.5.0-r1.ebuild 1334
 MD5 c0bb9d10424cda8d9361368015b324ca openvpn-1.6.0.ebuild 1338
-MD5 6f6a44e972d87da338dedeb998a63e6f openvpn-2.0.5-r2.ebuild 3860
+MD5 3896ef8b79443f194184dff044ca5637 openvpn-2.0.5-r2.ebuild 3866
 MD5 ad93ca28f8d512eb78e4a35d7c97ff99 openvpn-2.0.5.ebuild 3217
