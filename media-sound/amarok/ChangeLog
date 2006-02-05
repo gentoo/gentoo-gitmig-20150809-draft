@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.101 2006/01/31 10:38:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.102 2006/02/05 17:17:59 flameeyes Exp $
+
+  05 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> amarok-1.3.8.ebuild:
+  Move the $LINGUAS handling to kde eclass.
 
   31 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> amarok-1.3.8.ebuild:
   Make kioslaves an optional dependency on kde useflag, and add a notice about

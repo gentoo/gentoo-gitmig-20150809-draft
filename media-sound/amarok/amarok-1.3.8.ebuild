@@ -1,6 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.8.ebuild,v 1.3 2006/01/31 10:38:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.8.ebuild,v 1.4 2006/02/05 17:17:59 flameeyes Exp $
+
+LANGS="az be bg br ca cs cy da de el en_GB eo es et fi fr ga gl he hi hr hu id is it ja ko ku lo lt nb nds nl nn pa pl pt pt_BR ro ru se sl sq sr sr@Latn ss sv ta tg th tr uk uz zh_CN zh_TW"
+LANGS_DOC="da de et fr it nl pt pt_BR ru sv"
+
+USE_KEG_PACKAGING=1
 
 inherit kde eutils flag-o-matic
 
@@ -64,21 +69,6 @@ pkg_setup() {
 	kde_pkg_setup
 
 	append-flags -fno-inline
-}
-
-src_unpack() {
-	kde_src_unpack
-
-	LANGS="az be bg br ca cs cy da de el en_GB eo es et fi fr ga gl he hi hr hu id is it ja ko ku lo lt nb nds nl nn pa pl pt pt_BR ro ru se sl sq sr sr@Latn ss sv ta tg th tr uk uz zh_CN zh_TW"
-	LANGS_DOC="da de et fr it nl pt pt_BR ru sv"
-
-	MAKE_PO=$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))
-	MAKE_DOC=$(echo $(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d))
-
-	sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_PO}:" ${S}/po/Makefile.am || die "sed for locale failed"
-	sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = \. ${MAKE_DOC} ${PN}:" ${S}/doc/Makefile.am || die "sed for locale failed"
-
-	rm -f ${S}/configure
 }
 
 src_compile() {
