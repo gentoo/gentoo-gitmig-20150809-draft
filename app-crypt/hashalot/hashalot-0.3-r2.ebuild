@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/hashalot-0.3-r1.ebuild,v 1.1 2005/11/24 04:02:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/hashalot-0.3-r2.ebuild,v 1.1 2006/02/05 20:44:18 vapier Exp $
 
 DESCRIPTION="CryptoAPI utils"
 HOMEPAGE="http://www.kerneli.org/"
@@ -19,6 +19,5 @@ src_test() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "install error"
-	mv "${D}"/usr/{sbin,bin} || die
 	dodoc ChangeLog NEWS README
 }
