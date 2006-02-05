@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.6 2006/01/30 19:12:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.7 2006/02/05 09:03:04 spyderous Exp $
 
 inherit eutils
 
@@ -139,6 +139,13 @@ RDEPEND="${RDEPEND}
 	>=sys-apps/portage-2.1_pre4"
 
 # Drivers
+###############################################################################
+###############################################################################
+##                                                                           ##
+##   REMEMBER TO EDIT USE.MASK FILES IF CHANGING ARCHITECTURE DEPENDENCIES   ##
+##                                                                           ##
+###############################################################################
+###############################################################################
 RDEPEND="${RDEPEND}
 	|| (
 			(
@@ -266,53 +273,166 @@ RDEPEND="${RDEPEND}
 				video_cards_fglrx? ( x11-drivers/ati-drivers )
 			)
 			(
-				x11-drivers/xf86-video-apm
-				x11-drivers/xf86-video-ark
 				x11-drivers/xf86-video-ati
-				x11-drivers/xf86-video-chips
-				x11-drivers/xf86-video-cirrus
-				x11-drivers/xf86-video-cyrix
 				x11-drivers/xf86-video-dummy
-				x11-drivers/xf86-video-fbdev
-				x11-drivers/xf86-video-glint
-				x11-drivers/xf86-video-i128
-				x11-drivers/xf86-video-i740
-				x11-drivers/xf86-video-i810
-				x11-drivers/xf86-video-imstt
 				x11-drivers/xf86-video-mga
-				x11-drivers/xf86-video-neomagic
-				x11-drivers/xf86-video-newport
-				x11-drivers/xf86-video-nsc
 				x11-drivers/xf86-video-nv
-				x11-drivers/xf86-video-rendition
-				x11-drivers/xf86-video-s3
-				x11-drivers/xf86-video-s3virge
-				x11-drivers/xf86-video-savage
-				x11-drivers/xf86-video-siliconmotion
-				x11-drivers/xf86-video-sis
+
+				x11-drivers/xf86-video-fbdev
 				x11-drivers/xf86-video-sisusb
-				x11-drivers/xf86-video-tdfx
-				x11-drivers/xf86-video-tga
-				x11-drivers/xf86-video-trident
-				x11-drivers/xf86-video-tseng
 				x11-drivers/xf86-video-v4l
-				x11-drivers/xf86-video-vesa
-				x11-drivers/xf86-video-vga
-				x11-drivers/xf86-video-via
-				x11-drivers/xf86-video-voodoo
 
 				3dfx? ( >=media-libs/glide-v3-3.10 )
 
-				sparc? ( x11-drivers/xf86-video-sunbw2
+				alpha? ( x11-drivers/xf86-video-cirrus
+					x11-drivers/xf86-video-glint
+					x11-drivers/xf86-video-rendition
+					x11-drivers/xf86-video-s3
+					x11-drivers/xf86-video-s3virge
+					x11-drivers/xf86-video-savage
+					x11-drivers/xf86-video-siliconmotion
+					x11-drivers/xf86-video-tdfx
+					x11-drivers/xf86-video-tga
+					x11-drivers/xf86-video-vga
+					x11-drivers/xf86-video-voodoo )
+				amd64? ( x11-drivers/xf86-video-apm
+					x11-drivers/xf86-video-ark
+					x11-drivers/xf86-video-chips
+					x11-drivers/xf86-video-cirrus
+					x11-drivers/xf86-video-cyrix
+					x11-drivers/xf86-video-glint
+					x11-drivers/xf86-video-i128
+					x11-drivers/xf86-video-i810
+					x11-drivers/xf86-video-neomagic
+					x11-drivers/xf86-video-rendition
+					x11-drivers/xf86-video-s3
+					x11-drivers/xf86-video-s3virge
+					x11-drivers/xf86-video-savage
+					x11-drivers/xf86-video-siliconmotion
+					x11-drivers/xf86-video-sis
+					x11-drivers/xf86-video-tdfx
+					x11-drivers/xf86-video-tga
+					x11-drivers/xf86-video-trident
+					x11-drivers/xf86-video-tseng
+					x11-drivers/xf86-video-vesa
+					x11-drivers/xf86-video-vga
+					x11-drivers/xf86-video-via
+					x11-drivers/xf86-video-vmware
+					x11-drivers/xf86-video-voodoo )
+				arm? ( x11-drivers/xf86-video-chips
+					x11-drivers/xf86-video-glint
+					x11-drivers/xf86-video-s3
+					x11-drivers/xf86-video-s3virge
+					x11-drivers/xf86-video-savage
+					x11-drivers/xf86-video-sis
+					x11-drivers/xf86-video-tdfx
+					x11-drivers/xf86-video-trident
+					x11-drivers/xf86-video-vga
+					x11-drivers/xf86-video-voodoo )
+				ia64? ( x11-drivers/xf86-video-apm
+					x11-drivers/xf86-video-ark
+					x11-drivers/xf86-video-chips
+					x11-drivers/xf86-video-cirrus
+					x11-drivers/xf86-video-cyrix
+					x11-drivers/xf86-video-glint
+					x11-drivers/xf86-video-i128
+					x11-drivers/xf86-video-i740
+					x11-drivers/xf86-video-i810
+					x11-drivers/xf86-video-imstt
+					x11-drivers/xf86-video-neomagic
+					x11-drivers/xf86-video-newport
+					x11-drivers/xf86-video-rendition
+					x11-drivers/xf86-video-s3
+					x11-drivers/xf86-video-s3virge
+					x11-drivers/xf86-video-savage
+					x11-drivers/xf86-video-siliconmotion
+					x11-drivers/xf86-video-sis
+					x11-drivers/xf86-video-tdfx
+					x11-drivers/xf86-video-tga
+					x11-drivers/xf86-video-trident
+					x11-drivers/xf86-video-tseng
+					x11-drivers/xf86-video-vesa
+					x11-drivers/xf86-video-vga
+					x11-drivers/xf86-video-via
+					x11-drivers/xf86-video-voodoo )
+				mips? ( x11-drivers/xf86-video-chips
+					x11-drivers/xf86-video-cirrus
+					x11-drivers/xf86-video-glint
+					x11-drivers/xf86-video-newport
+					x11-drivers/xf86-video-s3
+					x11-drivers/xf86-video-s3virge
+					x11-drivers/xf86-video-savage
+					x11-drivers/xf86-video-sis
+					x11-drivers/xf86-video-tdfx
+					x11-drivers/xf86-video-trident
+					x11-drivers/xf86-video-voodoo )
+				ppc? ( x11-drivers/xf86-video-chips
+					x11-drivers/xf86-video-glint
+					x11-drivers/xf86-video-imstt
+					x11-drivers/xf86-video-s3
+					x11-drivers/xf86-video-s3virge
+					x11-drivers/xf86-video-savage
+					x11-drivers/xf86-video-sis
+					x11-drivers/xf86-video-tdfx
+					x11-drivers/xf86-video-trident
+					x11-drivers/xf86-video-vga
+					x11-drivers/xf86-video-voodoo )
+				sparc? ( x11-drivers/xf86-video-apm
+					x11-drivers/xf86-video-ark
+					x11-drivers/xf86-video-chips
+					x11-drivers/xf86-video-cirrus
+					x11-drivers/xf86-video-glint
+					x11-drivers/xf86-video-i128
+					x11-drivers/xf86-video-i740
+					x11-drivers/xf86-video-i810
+					x11-drivers/xf86-video-imstt
+					x11-drivers/xf86-video-neomagic
+					x11-drivers/xf86-video-newport
+					x11-drivers/xf86-video-rendition
+					x11-drivers/xf86-video-s3virge
+					x11-drivers/xf86-video-savage
+					x11-drivers/xf86-video-siliconmotion
+					x11-drivers/xf86-video-sunbw2
 					x11-drivers/xf86-video-suncg14
 					x11-drivers/xf86-video-suncg3
 					x11-drivers/xf86-video-suncg6
 					x11-drivers/xf86-video-sunffb
 					x11-drivers/xf86-video-sunleo
 					x11-drivers/xf86-video-suntcx
-				)
-				x86? ( x11-drivers/xf86-video-vmware )
-				amd64? ( x11-drivers/xf86-video-vmware )
+					x11-drivers/xf86-video-tdfx
+					x11-drivers/xf86-video-tga
+					x11-drivers/xf86-video-trident
+					x11-drivers/xf86-video-vesa
+					x11-drivers/xf86-video-vga
+					x11-drivers/xf86-video-voodoo )
+				x86? ( x11-drivers/xf86-video-apm
+					x11-drivers/xf86-video-ark
+					x11-drivers/xf86-video-chips
+					x11-drivers/xf86-video-cirrus
+					x11-drivers/xf86-video-cyrix
+					x11-drivers/xf86-video-glint
+					x11-drivers/xf86-video-i128
+					x11-drivers/xf86-video-i740
+					x11-drivers/xf86-video-i810
+					x11-drivers/xf86-video-imstt
+					x11-drivers/xf86-video-neomagic
+					x11-drivers/xf86-video-newport
+					x11-drivers/xf86-video-nsc
+					x11-drivers/xf86-video-rendition
+					x11-drivers/xf86-video-s3
+					x11-drivers/xf86-video-s3virge
+					x11-drivers/xf86-video-savage
+					x11-drivers/xf86-video-siliconmotion
+					x11-drivers/xf86-video-sis
+					x11-drivers/xf86-video-tdfx
+					x11-drivers/xf86-video-tga
+					x11-drivers/xf86-video-trident
+					x11-drivers/xf86-video-tseng
+					x11-drivers/xf86-video-vesa
+					x11-drivers/xf86-video-vga
+					x11-drivers/xf86-video-via
+					x11-drivers/xf86-video-vmware
+					x11-drivers/xf86-video-voodoo )
 			)
 		)"
 
