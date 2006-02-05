@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.7 2006/02/03 03:29:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.8 2006/02/05 13:45:51 blubb Exp $
 
 ECVS_SERVER="cvs.winehq.org:/home/wine"
 ECVS_MODULE="wine"
@@ -66,21 +66,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${ECVS_MODULE}
 
 pkg_setup() {
-	if use amd64 ; then
-		if ! has_m32 ; then
-			eerror "Your compiler seems to be unable to compile 32bit code."
-			eerror "Make sure you compile gcc with:"
-			echo
-			eerror "    USE=multilib FEATURES=-sandbox"
-			die "Cannot produce 32bit code"
-		fi
-		if has_multilib_profile ; then
-			export ABI=x86
-		else
-			append-flags -m32
-			append-ldflags -m32
-		fi
-	fi
+	use amd64 && has_multilib_profile && export ABI=x86
 }
 
 src_unpack() {
