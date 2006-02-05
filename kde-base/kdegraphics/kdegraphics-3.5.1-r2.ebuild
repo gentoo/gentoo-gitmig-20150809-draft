@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.1-r2.ebuild,v 1.3 2006/02/04 10:59:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.1-r2.ebuild,v 1.4 2006/02/05 12:14:16 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -37,11 +37,10 @@ DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/kpdf-${PV}-poppler.patch.bz2"
+	mirror://gentoo/kpdf-${PV}-poppler-2.patch.bz2"
 
 PATCHES="${FILESDIR}/kpdf-3.5.1-saveas.patch
-	${FILESDIR}/post-3.5.1-kdegraphics-CVE-2006-0301.diff
-	${DISTDIR}/kpdf-${PV}-poppler.patch.bz2"
+	${DISTDIR}/kpdf-${PV}-poppler-2.patch.bz2"
 
 pkg_setup() {
 	if ! built_with_use virtual/ghostscript X; then

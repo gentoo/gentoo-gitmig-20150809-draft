@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.234 2006/02/04 15:22:26 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.235 2006/02/05 12:14:16 flameeyes Exp $
+
+  05 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdegraphics-3.5.1-r2.ebuild:
+  Fix checking for poppler, don't fail, just don't compile kpdf if not present.
 
   04 Feb 2006; Jose Luis Rivero <yoswink@gentoo.org>
   kdegraphics-3.4.3-r4.ebuild:
