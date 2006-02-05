@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r7.ebuild,v 1.7 2006/02/05 19:41:46 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r7.ebuild,v 1.8 2006/02/05 21:14:49 vapier Exp $
 
 inherit eutils
 
@@ -10,28 +10,27 @@ SRC_URI="http://dev.gentoo.org/~genstef/files/dist/${P}-poppler.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh sparc ~x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~sh sparc ~x86"
 IUSE="nodrm"
 
-RDEPEND="!s390? ( virtual/motif )
-		>=app-text/poppler-0.5.0-r4
-		|| (
-			( x11-libs/libX11 x11-libs/libXpm )
-			virtual/x11
-		)"
+RDEPEND=">=app-text/poppler-0.5.0-r4
+	|| (
+		( x11-libs/libX11 x11-libs/libXpm )
+		virtual/x11
+	)"
 DEPEND="${RDEPEND}"
-
 PROVIDE="virtual/pdfviewer"
+
 S=${WORKDIR}/${P}-poppler
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	use nodrm && epatch ${FILESDIR}/${P}-poppler-nodrm.patch
+	cd "${S}"
+	use nodrm && epatch "${FILESDIR}"/${P}-poppler-nodrm.patch
 }
 
 src_install() {
-	dobin xpdf
+	dobin xpdf || die
 	doman xpdf.1
 	dodoc README ANNOUNCE CHANGES
 }
