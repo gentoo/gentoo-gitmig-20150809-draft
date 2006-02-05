@@ -1,6 +1,6 @@
-MD5 8492720e3ef5c93d02fb501c688889d8 ChangeLog 21534
+MD5 f3c89e5062aee62149e56dc8608c0e3f ChangeLog 21878
 MD5 cfce6770c86e3e3bc76800c6bd6ee8c6 files/digest-net-snmp-5.2.1.2-r1 69
-MD5 92b7d3fe0c5dad9c215a170199e3c66c files/digest-net-snmp-5.2.2-r1 67
+MD5 92b7d3fe0c5dad9c215a170199e3c66c files/digest-net-snmp-5.2.2-r2 67
 MD5 d3cebd37f9a75b0968bd7a60fb68e7eb files/digest-net-snmp-5.3.0.1 69
 MD5 82d14deda5805e21a60de03e0a69659c files/net-snmp-5.2.1-conf-elf-rpm-bz2.patch 4734
 MD5 a63107c1d81a8aeb10e84be0658e2794 files/net-snmp-5.2.1-fix-insecure-fixproc.diff 1639
@@ -12,5 +12,5 @@ MD5 0dbde7b1bdd9c9dc988039e676800337 files/snmpd-5.1.rc6 714
 MD5 791cd8d81154f2c1d01e3f87b86faa44 files/snmptrapd.conf 635
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 MD5 80cb809de03b99eab3c98bd4f37aacbe net-snmp-5.2.1.2-r1.ebuild 5091
-MD5 0d1d4e9dc9a21fa9fb482bc5ebe5506e net-snmp-5.2.2-r1.ebuild 5123
-MD5 900d4e39276160bfc562db333bf38fac net-snmp-5.3.0.1.ebuild 5235
+MD5 9374753fce2fdcc8184b0578ebbbf2fe net-snmp-5.2.2-r2.ebuild 5167
+MD5 b51b9f8d296f617d779a3d47f1d542ba net-snmp-5.3.0.1.ebuild 5279

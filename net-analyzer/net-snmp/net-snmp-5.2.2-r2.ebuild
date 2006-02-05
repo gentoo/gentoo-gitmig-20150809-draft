@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.2-r1.ebuild,v 1.4 2006/02/04 18:10:22 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.2-r2.ebuild,v 1.1 2006/02/05 01:38:42 vanquirius Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="as-is BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="perl ipv6 ssl tcpd X lm_sensors minimal smux selinux doc rpm elf"
+IUSE="doc elf ipv6 lm_sensors mfd-rewrites minimal perl rpm selinux smux ssl tcpd X"
 
 DEPEND=">=sys-libs/zlib-1.1.4
 	ssl? ( >=dev-libs/openssl-0.9.6d )
@@ -93,6 +93,7 @@ src_compile() {
 		--enable-ucd-snmp-compatibility \
 		--enable-shared \
 		--with-zlib \
+		$(use_enable mfd-rewrites) \
 		$(use_enable perl embedded-perl) \
 		$(use_enable ipv6) \
 		$(use_enable !ssl internal-md5) \
