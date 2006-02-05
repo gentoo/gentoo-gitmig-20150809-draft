@@ -1,7 +1,19 @@
-MD5 ecabb7f46695ecd6e1929ff80016eed0 ChangeLog 656
-MD5 062384770da6e845313567b5c7083e43 metadata.xml 936
-MD5 a9c2acac48eeb047b26df354e74d2c6f vdr-timeline-0.9.0-r2.ebuild 854
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5bdd7926873b0624211bd2b509aeea9b ChangeLog 842
 MD5 e2e5bde0bb92e9de8bd3b087dbdae81d files/digest-vdr-timeline-0.9.0-r2 69
 MD5 6c17a26f6bc70cda6094ced3019e13d6 files/vdr-1.3.18-vdr-timeline-0.9.0.diff 3021
 MD5 a878554b2ea0c24071543a524feb3617 files/vdr-1.3.23-vdr-timeline-0.9.0.diff 5167
 MD5 da258cf005e658ff0a661624dd95e2c6 files/vdr-1.3.32-vdr-timeline-0.9.0.diff 839
+MD5 52d88a8e01d23e6880880538eaf641c4 files/vdr-1.3.37-vdr-timeline-0.9.0.diff 5559
+MD5 062384770da6e845313567b5c7083e43 metadata.xml 936
+MD5 bcfdd479d1229136bf79f38cd5f19fac vdr-timeline-0.9.0-r2.ebuild 976
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFD5kxDdn07HTTCgIoRArKxAJ0bK+9lhNjIJAATXLaOVRNuavBkUACfZlNo
+9NcCjL5DxivuDMp54Cdl0b4=
+=Cobt
+-----END PGP SIGNATURE-----
