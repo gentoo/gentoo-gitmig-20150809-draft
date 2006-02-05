@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.14-r1.ebuild,v 1.5 2005/11/28 13:20:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.10.2.ebuild,v 1.1 2006/02/05 21:42:33 dju Exp $
 
 # Please note: apache, java, mono and ruby support disabled for now.
 # Fill a bug if you need it.
 #
 # dju@gentoo.org, 4th July 2005
 
-inherit eutils python perl-app
+inherit eutils perl-app
 
 DESCRIPTION="Clearsilver is a fast, powerful, and language-neutral HTML template system."
 HOMEPAGE="http://www.clearsilver.net/"
@@ -15,7 +15,7 @@ SRC_URI="http://www.clearsilver.net/downloads/${P}.tar.gz"
 
 LICENSE="CS-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="perl python zlib"
 
 DEPEND="python? ( dev-lang/python )
@@ -33,15 +33,12 @@ fi
 src_unpack () {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-python24.patch
-	epatch ${FILESDIR}/${P}-fPIC.patch
-	sed -i s,bin/httpd,bin/apache,g configure || die "sed failed"
+
+	# fix typo in configure
+	sed -i s,\$\?PYTHON_SITE,\$PYTHON_SITE, configure || die "sed failed"
 }
 
 src_compile() {
-#	local jdkhome=`java-config -O`
-#	use java && myconf="${myconf} --with-java=${jdkhome}" \
-
 	econf \
 		$(use_enable perl) \
 		$(use_enable python) \
@@ -52,19 +49,17 @@ src_compile() {
 		"--disable-csharp" \
 		|| die "./configure failed"
 
-	emake || die "make failed"
+	emake || die "emake failed"
 }
 
 src_install () {
 	cd ${S}
-	sed -i s,/usr/local,/usr, scripts/document.py
-	python_version
-	sed -i s,/usr/lib/portage/pym,/usr/lib/python${PYVER}/site-packages, rules.mk
+
 	make DESTDIR=${D} install || die "make install failed"
 
-	dodoc ${DOCS}
+	dodoc ${DOCS} || die "dodoc failed"
 
 	if use perl ; then
-		fixlocalpod
+		fixlocalpod || die "fixlocalpod failed"
 	fi
 }

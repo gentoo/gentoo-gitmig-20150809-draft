@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/clearsilver
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.22 2006/01/12 22:56:36 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.23 2006/02/05 21:42:33 dju Exp $
+
+*clearsilver-0.10.2 (05 Feb 2006)
+
+  05 Feb 2006; Julien Allanos <dju@gentoo.org>
+  -files/clearsilver-0.9.14-fPIC.patch,
+  -files/clearsilver-0.9.14-python24.patch, -clearsilver-0.9.14-r1.ebuild,
+  +clearsilver-0.10.2.ebuild:
+  Version bump to 0.10.2, closes bug #119159. Removed old ebuild.
 
   12 Jan 2006; Julien Allanos <dju@gentoo.org> metadata.xml:
   Removed upstream from metadata.xml.
