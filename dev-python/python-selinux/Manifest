@@ -1,8 +1,25 @@
-MD5 d932db5f12b0d67320623e66f11c393b ChangeLog 4343
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-python-selinux-2.15 0
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 13b7e771009033010e5a8a1797ebce87 ChangeLog 4488
+RMD160 21a2c6bf90a4656674b50cd468bdd15700f4f223 ChangeLog 4488
+SHA256 b784c60b0db6beb777fd49bdcb81d4b80194182da66cca0e2526dd45f3bf69d7 ChangeLog 4488
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-python-selinux-2.16 0
-MD5 135bcb03bcb0dbed4e8bc354e1ff38f3 files/python-selinux-2.15.c.bz2 6831
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-python-selinux-2.16 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-python-selinux-2.16 0
 MD5 d5dc9417a58fe239af4d9e126be2ceff files/python-selinux-2.16.c.bz2 8500
+RMD160 f98aac72c759c37a167ca8589c5544438c9ebcd5 files/python-selinux-2.16.c.bz2 8500
+SHA256 3bcf586902b74c124a8c953ba51bb193ba7732629760f465c41559011bbff1e1 files/python-selinux-2.16.c.bz2 8500
 MD5 c998c579cfc08c6860f78304a67cfce9 metadata.xml 525
-MD5 c614ac830f5ecad17c6be55f351af604 python-selinux-2.15.ebuild 852
+RMD160 adb5c1cbbecac4a5076cfe1622344dbf29967aa5 metadata.xml 525
+SHA256 2ddd57267552f0bc13a0db709e6cf03d89c20d5320ab3cbdb5ffa7abb6c9d2be metadata.xml 525
 MD5 515ce0b804275917b1d3b0331a4d719e python-selinux-2.16.ebuild 901
+RMD160 367357958ce7a28bfc9a27af48991b083fd6f63a python-selinux-2.16.ebuild 901
+SHA256 18d728dc1ccb10cd9fea03ad36e1c3af0b525ef636568e04979fb6292915ebcc python-selinux-2.16.ebuild 901
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5YA9J+ChZlpDtAoRAo87AJ9QxuZxM5HcDAhM5f4WzvQ7E+NwCwCgmpdN
+u0lpIod+hDjuUZpKBuXaXcE=
+=d6w+
+-----END PGP SIGNATURE-----
