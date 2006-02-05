@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.129 2006/02/05 02:04:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.130 2006/02/05 10:53:12 blubb Exp $
+
+  05 Feb 2006; Simon Stelling <blubb@gentoo.org> xpdf-3.01-r7.ebuild:
+  stable wrt bug 120985
 
   05 Feb 2006; Jason Wever <weeve@gentoo.org> xpdf-3.01-r7.ebuild:
   Stable on SPARC wrt security bug #120985.
