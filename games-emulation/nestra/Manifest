@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d098e08e1bce340c7ddd4471c30b4146 ChangeLog 1267
+MD5 d7c80ec71704d352e2359684fca24ce8 ChangeLog 1376
+RMD160 8ed7888e00853aef25df01b2a7943db744363a47 ChangeLog 1376
+SHA256 3e7d10025e2934422fb5636ab242203ef527ed7674eb99ff246db4aca53780ec ChangeLog 1376
 MD5 1b72c901305b3f39e947ffbe00b7a13e files/digest-nestra-0.66-r1 126
+RMD160 7bd2acf9ba037522e50ccf1fbe204c3941ff78ab files/digest-nestra-0.66-r1 126
+SHA256 899f4e927c38908cce810fe21b90161ae64fb8a922225f5e30c68b7612a02d91 files/digest-nestra-0.66-r1 126
 MD5 0ce4563cf54ce668376ab9877fffda1e files/nestra-0.66-exec-stack.patch 235
+RMD160 956b2e474a10ba8c8fadef42bffc3db12dff7123 files/nestra-0.66-exec-stack.patch 235
+SHA256 66d0d08ff4c311dedbbe3ffce3dd07f911e269e1d667b705ac41bfb0e9e6eb52 files/nestra-0.66-exec-stack.patch 235
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 134f0435d6194602b3bd25c1b92eb56c nestra-0.66-r1.ebuild 1464
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwwq/2+ySkm8kpY0RAi+xAJ94+S7IELrDlNgLd/VD3eXZ/krCNQCfSqej
-QKeeA4lEnSa0a8Qjcv/ogAk=
-=pbB7
------END PGP SIGNATURE-----
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 54f781c3156e534698d2896097fb1ad8 nestra-0.66-r1.ebuild 1174
+RMD160 c76212e500a731dd67ad18c088cd4ab7fa51c2c2 nestra-0.66-r1.ebuild 1174
+SHA256 ac39322b150e2a63ef2726620f8d1f0491e3a2472d536b061ed872c0e2377cec nestra-0.66-r1.ebuild 1174
