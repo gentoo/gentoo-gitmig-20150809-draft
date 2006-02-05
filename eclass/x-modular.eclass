@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.42 2006/02/03 18:09:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.43 2006/02/05 22:52:49 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -131,7 +131,7 @@ fi
 DEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.18"
 
-if [[ "${PN/util-macros}" != "${PN}" ]]; then
+if [[ "${PN/util-macros}" = "${PN}" ]]; then
 	DEPEND="${DEPEND}
 		>=x11-misc/util-macros-0.99.2"
 fi
