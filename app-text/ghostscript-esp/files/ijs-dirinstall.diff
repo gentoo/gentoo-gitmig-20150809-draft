@@ -1,0 +1,30 @@
+diff -Nur espgs-8.15.1/ijs.orig/Makefile.in espgs-8.15.1/ijs/Makefile.in
+--- espgs-8.15.1/ijs.orig/Makefile.in	2006-02-05 17:36:14.000000000 +0100
++++ espgs-8.15.1/ijs/Makefile.in	2006-02-05 17:41:57.000000000 +0100
+@@ -326,7 +326,7 @@
+ 	cd $(top_builddir) && $(SHELL) ./config.status $@
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f="`echo $$p | sed -e 's|^.*/||'`"; \
+@@ -355,7 +355,7 @@
+ 	$(LINK) -rpath $(libdir) $(libijs_la_LDFLAGS) $(libijs_la_OBJECTS) $(libijs_la_LIBADD) $(LIBS)
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(bindir)" || $(mkdir_p) "$(DESTDIR)$(bindir)"
++	test -z "$(DESTDIR)$(bindir)" || $(mkdir_p) "$(DESTDIR)$(bindir)"
+ 	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+ 	  p1=`echo $$p|sed 's/$(EXEEXT)$$//'`; \
+ 	  if test -f $$p \
+@@ -495,7 +495,7 @@
+ 	done
+ install-pkgincludeHEADERS: $(pkginclude_HEADERS)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(pkgincludedir)" || $(mkdir_p) "$(DESTDIR)$(pkgincludedir)"
++	test -z "$(DESTDIR)$(pkgincludedir)" || $(mkdir_p) "$(DESTDIR)$(pkgincludedir)"
+ 	@list='$(pkginclude_HEADERS)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \

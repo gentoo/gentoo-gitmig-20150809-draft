@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.2 2006/01/05 22:06:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.3 2006/02/05 17:52:11 genstef Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="http://ftp.easysw.com/pub/ghostscript/${PV}/espgs-${PV}-source.tar.bz2
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE="X cups cjk emacs gtk"
+IUSE="X cups cjk emacs gtk threads"
 
 DEP="virtual/libc
 	>=media-libs/jpeg-6b
@@ -43,18 +43,11 @@ PROVIDE="virtual/ghostscript"
 S=${WORKDIR}/espgs-8.15.1
 
 src_unpack() {
-
 	unpack ${A}
-
 	cd ${S}
-
-	append-flags "-fPIC"
 
 	epatch ${FILESDIR}/gs-${PV}destdir.patch
 	epatch ${FILESDIR}/ghostscript-build.patch
-	if use gtk;then
-		epatch ${FILESDIR}/ghostscript-gtk2.patch
-	fi
 	epatch ${FILESDIR}/ghostscript-scripts.patch
 	epatch ${FILESDIR}/ghostscript-ps2epsi.patch
 	epatch ${FILESDIR}/ghostscript-badc.patch
@@ -63,31 +56,34 @@ src_unpack() {
 	epatch ${FILESDIR}/ghostscript-use-external-freetype.patch
 	epatch ${FILESDIR}/ghostscript-split-font-configuration.patch
 
+	# not submitted
+	epatch ${FILESDIR}/ijs-dirinstall.diff
+	epatch ${FILESDIR}/ghostscript-gtk2.patch
+	if ! use gtk; then
+		sed -i "s:\$(GSSOX)::" src/*.mak || die "gsx sed failed"
+		sed -i "s:.*\$(GSSOX_XENAME)$::" src/*.mak || die "gsxso sed failed"
+	fi
+
 	# search path fix
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/8.15/$(get_libdir):"\
-	Makefile.in || die "sed failed"
+		Makefile.in || die "sed failed"
 	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/default/ghostscript/:' \
-	Makefile.in || die "sed failed"
-	# Add -fPIC to build with AMD64
-	sed -i -e 's/CFLAGS=$(GCFLAGS) $(XCFLAGS) $(ACDEFS)/CFLAGS=$(GCFLAGS) $(XCFLAGS) $(ACDEFS) -fPIC/g' src/unix-gcc.mak || die
+		Makefile.in || die "sed failed"
+
+	eautoreconf
 }
 
 src_compile() {
 	local myconf
-	myconf="--with-ijs --without-gimp-print"
-	use gtk && myconf="${myconf} --with-omni" || myconf="${myconf} --without-omni"
+	myconf="--enable-dynamic --with-ijs --with-omni --with-jbig2dec"
 
 	# gs -DPARANOIDSAFER out.ps
 	myconf="${myconf} --with-fontconfig --with-fontpath=/usr/share/fonts:/usr/share/fonts/ttf/zh_TW:/usr/share/fonts/ttf/zh_CN:/usr/share/fonts/arphicfonts:/usr/share/fonts/ttf/korean/baekmuk:/usr/share/fonts/baekmuk-fonts:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/kochi-substitute"
 
-	use X && myconf="${myconf} --with-x" \
-		|| myconf="${myconf} --without-x"
-
-	use cups && myconf="${myconf} --enable-cups" \
-		|| myconf="${myconf} --disable-cups"
-
-	eautoreconf
-	econf ${myconf} || die "econf failed"
+	econf $(use_with X x) \
+		$(use_enable cups) \
+		$(use_enable threads) \
+		${myconf} || die "econf failed"
 	emake -j1 || die "make failed"
 	emake so -j1 || die "make failed"
 
@@ -98,8 +94,6 @@ src_compile() {
 }
 
 src_install() {
-
-#	dodir /usr/share/ghostscript
 	make DESTDIR="${D}" install || die "make install failed"
 	make DESTDIR="${D}" soinstall || die "make install failed"
 
@@ -123,15 +117,5 @@ src_install() {
 
 	# Install ijs
 	cd ${S}/ijs
-	dodir /usr/bin /usr/include /usr/$(get_libdir)
-	# This is broken - there are not even a 'install_prefix'
-	# anywhere in ${S}/ijs ...
-	einstall install_prefix=${D}
-	einstall
-	dosed "s:^prefix=.*:prefix=/usr:" /usr/bin/ijs-config
-	make DESTDIR="${D}" install || die
-
-	# bug #83876, collision with gcc
-	rm -f ${D}/usr/share/man/de/man1/ansi2knr.1
-	rm -f ${D}/usr/share/man/man1/ansi2knr.1
+	make DESTDIR="${D}" install || die "ijs install failed"
 }
