@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.3.3.ebuild,v 1.2 2006/02/04 18:19:45 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.3.3.ebuild,v 1.3 2006/02/05 02:55:48 wormo Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/jamvm/jamvm-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="-ppc ~x86"
 IUSE="debug"
 
 DEPEND=">=dev-java/gnu-classpath-0.18"
