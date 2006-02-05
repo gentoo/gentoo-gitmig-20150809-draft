@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.5-r1.ebuild,v 1.1 2006/01/25 21:32:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.5-r1.ebuild,v 1.2 2006/02/05 18:34:18 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -38,7 +38,7 @@ src_unpack() {
 # 		-e 's:MAN_PAGE_1_LIST=bochs bximage bochs-dlx:MAN_PAGE_1_LIST=bochs bximage:'
 	sed -i \
 		-e "s:\$(WGET) \$(DLXLINUX_TAR_URL):cp ${DISTDIR}/dlxlinux4.tar.gz .:" \
-		-e 's:BOCHSDIR=:BOCHSDIR=/usr/lib/bochs#:' \
+		-e "s:BOCHSDIR=:BOCHSDIR=/usr/$(get_libdir)/bochs#:" \
 		-e 's: $(BOCHSDIR): $(DESTDIR)$(BOCHSDIR):g' Makefile.in || \
 			die "sed Makefile.in failed"
 
@@ -89,6 +89,7 @@ src_compile() {
 		--enable-ignore-bad-msr \
 		--enable-ne2000 --enable-sb16=linux --enable-slowdown --prefix=/usr \
 		--infodir=/usr/share/info --mandir=/usr/share/man --host=${CHOST} \
+		--libdir=/usr/$(get_libdir) \
 		${myconf} || die "configure failed"
 
 
