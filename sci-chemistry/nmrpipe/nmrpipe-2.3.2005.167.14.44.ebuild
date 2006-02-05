@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-2.3.2005.167.14.44.ebuild,v 1.2 2006/01/29 19:47:31 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-2.3.2005.167.14.44.ebuild,v 1.3 2006/02/05 06:56:17 ribosome Exp $
 
 DESCRIPTION="Spectral visualisation, analysis and Fourier processing"
 # The specific terms of this license are printed automatically on startup
@@ -49,8 +49,9 @@ RDEPEND="${DEPEND}
 	sci-visualization/gnuplot
 	sci-chemistry/rasmol
 	sys-libs/libtermcap-compat
-	virtual/x11
-	x11-libs/xview"
+	sys-libs/ncurses
+	x11-libs/xview
+	|| ( x11-libs/libX11 virtual/x11 )"
 
 S="${WORKDIR}"
 NMRBASE="/opt/${PN}"
