@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.56 2006/01/16 09:17:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.57 2006/02/05 14:44:52 blubb Exp $
+
+  05 Feb 2006; Simon Stelling <blubb@gentoo.org> grub-0.96-r2.ebuild,
+  grub-0.97-r2.ebuild:
+  remove old 2004.3 multilib checks
 
 *grub-1.92 (16 Jan 2006)
 
