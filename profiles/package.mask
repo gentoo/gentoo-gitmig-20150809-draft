@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4962 2006/02/05 21:37:21 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4963 2006/02/05 23:29:51 marienz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marien Zwart <marienz@gentoo.org> (06 Feb 2006)
+# Mask this version as long as setuptools (which it depends on) is masked.
+=dev-python/pysqlite-2.0.7
 
 # Petteri Räty <betelgeuse@gentoo.org> (05 Feb 2006)
 # masked until I get to test more than that it compiles
