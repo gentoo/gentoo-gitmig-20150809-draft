@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.9_beta2.ebuild,v 1.3 2006/01/22 11:00:21 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.9_beta2.ebuild,v 1.4 2006/02/05 21:36:07 flameeyes Exp $
 
 inherit kde
 
@@ -26,3 +26,19 @@ RDEPEND="dev-lang/perl
 	            kde-base/kdegraphics ) )"
 
 need-kde 3.2
+
+LANGS="br ca cs cy da de el en_GB es et eu fi fr ga gl hi hu is it ja lt mt nb nl nn pa pl pt pt_BR ro rw sk sr sr@Latn sv ta tr zh_CN"
+for lang in ${LANGS}; do
+	IUSE="${IUSE} linguas_${lang}"
+done
+
+src_unpack() {
+	kde_src_unpack
+
+	if [[ -n ${LINGUAS} ]]; then
+		MAKE_TRANSL=$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))
+		einfo "Building translations for: ${MAKE_TRANSL}"
+		sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_TRANSL}:" ${S}/translations/Makefile.am || die "sed for locale failed"
+		rm -f ${S}/configure
+	fi
+}

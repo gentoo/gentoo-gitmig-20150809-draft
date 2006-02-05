@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.66 2006/01/22 11:00:21 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.67 2006/02/05 21:36:07 flameeyes Exp $
+
+  05 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> kile-1.9_beta2.ebuild:
+  Add support for building only the selected translations.
 
   22 Jan 2006; Martin Ehmsen <ehmsen@gentoo.org> kile-1.9_beta2.ebuild:
   Added dependency on dev-tex/latex2html. Bug #119828.
