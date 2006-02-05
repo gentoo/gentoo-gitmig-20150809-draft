@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.32 2006/01/08 16:18:27 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.33 2006/02/05 21:48:24 anarchy Exp $
+
+*mozilla-firefox-bin-1.5.0.1 (05 Feb 2006)
+
+  05 Feb 2006; <anarchy@gentoo.org> files/icon/mozillafirefox-bin.desktop,
+  +mozilla-firefox-bin-1.5.0.1.ebuild:
+  revision bump, comment change for desktop entry
 
 *mozilla-firefox-bin-1.5-r2 (08 Jan 2006)
 
