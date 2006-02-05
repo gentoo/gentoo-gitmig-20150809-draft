@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.28.ebuild,v 1.4 2006/01/17 01:11:34 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.28.ebuild,v 1.5 2006/02/05 21:31:45 pebenito Exp $
 
 IUSE="build nls pam"
 
@@ -49,6 +49,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/policycoreutils-1.28-quietlp.diff
+	epatch ${FILESDIR}/policycoreutils-unsigned-char-ppc.diff
 
 	# This warning makes no sense, in this context
 	sed -i -e '/FILE/ s/;/=NULL;/' ${S}/audit2why/audit2why.c \
