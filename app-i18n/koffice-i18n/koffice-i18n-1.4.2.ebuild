@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.4.2.ebuild,v 1.6 2005/12/13 03:45:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.4.2.ebuild,v 1.7 2006/02/05 21:29:43 flameeyes Exp $
 
 inherit kde
 
@@ -22,6 +22,7 @@ nl nn pl pt pt_BR ru sl sr sr@Latn sv ta tg zh_CN"
 
 for X in ${LANGS}; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://kde/stable/koffice-${PV}/src/koffice-l10n/koffice-l10n-${X}-${PV}.tar.bz2 )"
+	IUSE="${IUSE} linguas_${X}"
 done
 
 pkg_setup() {
