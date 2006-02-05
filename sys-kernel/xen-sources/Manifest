@@ -1,5 +1,5 @@
-MD5 4b7c0681389b5dbf784cdea1bb3eae6c ChangeLog 2856
+MD5 de379589bcf3497d878acf723bde8a25 ChangeLog 2935
 MD5 7934c87d6994825fb9e8ff09a531d0ae files/digest-xen-sources-2.6.12.6-r2 63
 MD5 2b3d2f6544952b8d49b77292ed16b249 files/mkbuildtree.patch 698
 MD5 23ec60d5040f966fda250a47d8903428 metadata.xml 252
-MD5 8fefdb3a51a52fb97d54a2c91559fb7b xen-sources-2.6.12.6-r2.ebuild 1219
+MD5 d9063562deaaef8625718e80ac0dccff xen-sources-2.6.12.6-r2.ebuild 1334

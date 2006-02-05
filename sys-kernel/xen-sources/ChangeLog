@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.18 2006/02/05 10:39:07 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.19 2006/02/05 11:05:28 chrb Exp $
+
+  05 Feb 2006; <chrb@gentoo.org> xen-sources-2.6.12.6-r2.ebuild:
+  fix config
 
 *xen-sources-2.6.12.6-r2 (05 Feb 2006)
 
