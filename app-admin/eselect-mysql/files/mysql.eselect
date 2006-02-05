@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: mysql.eselect,v 1.6 2006/02/01 15:32:32 vivo Exp $
+# $Id: mysql.eselect,v 1.7 2006/02/05 14:22:46 vivo Exp $
 
 DESCRIPTION="Manage the /usr/lib/*mysql* links"
 MAINTAINER="vivo@gentoo.org"
-SVN_DATE='$Date: 2006/02/01 15:32:32 $'
+SVN_DATE='$Date: 2006/02/05 14:22:46 $'
 VERSION=$(svn_date_to_version "${SVN_DATE}" )
 MYSQL_SYMLINK_CHECKDIR="${ROOT}/usr/sbin"
 ERR_NOT_FOUND="(not-found)"
@@ -28,7 +28,7 @@ function version4human() {
 function version4bash() {
 	local minor=${1#*.}
 	minor=${minor%%.x*}
-	[[ ${#minor} -eq 1 ]] && minor="0${minor}"
+	[[ ${#minor} -lt 10 ]] && minor="0${minor}"
 	echo "${1%%.*}${minor}"
 }
 
@@ -39,7 +39,7 @@ find_versions() {
 	list=${MYSQL_SYMLINK_CHECKDIR}/mysqld-*
 	[[ ${list##/} == mysqld-* ]] && return
 	for x in ${MYSQL_SYMLINK_CHECKDIR}/mysqld-* ; do
-		versions=( $(version4human ${x##*-}) ${versions[@]} )
+		versions=( $( version4human ${x##*-}) ${versions[@]} )
 	done
 	echo ${versions[@]}
 }
@@ -115,7 +115,9 @@ mysql_lib_symlinks() {
 
 		# waste some time in removing and recreating symlinks
 		for d in $dirlist ; do
-			for soname in $(find "${d}" -name "*.so*" -and -not -type "l") ; do
+			for soname
+			in $( find "${d}" -name "*.so*" -and -not -type "l" 2>/dev/null)
+			do
 				# maxdot is a limit versus infinite loop
 				maxdots=0
 				sonameln=${soname##*/}
@@ -156,7 +158,7 @@ mysql_lib_symlinks() {
 get_version_fromlist() {
 	local version=${1}
 	local -a versions=( $(find_versions) )
-	
+
 	if is_number ${version} ; then
 		if [[ ${version} -gt 0 ]] && [[ ${version} -le ${#versions[@]} ]] ; then
 			version=${versions[(( ${version} - 1 ))]}
@@ -237,7 +239,7 @@ remove_current_version() {
 	local CWD=$(pwd)
 	local lastdir dir linkname
 	local list=$(< $ROOT/var/lib/eselect/mysql/mysql-${version}.filelist )
-	
+
 	for filename in $list ; do
 		linkname="${ROOT}/${filename/"-${version}"/}"
 		[[ -L "${linkname}" ]] && rm -f "${linkname}"
@@ -267,7 +269,7 @@ describe_list() {
 do_list() {
 	versions=( $(find_versions) )
 	current=$(get_current_version)
-	
+
 	write_list_start "Available MySQL versions:"
 
 	if [[ -n "${versions[@]}" ]] ; then
@@ -318,6 +320,36 @@ do_remove() {
 	fi
 
 	remove_current_version "$(version4bash "${version}")"
+	mysql_lib_symlinks
+}
+
+### slot_remove action ###
+
+describe_slot_remove() {
+	echo "Remove symlinks given a MySQL slot (used in the ebuild)"
+}
+
+do_slot_remove() {
+
+	[[ ${#@} -lt 1 ]] &&
+		die -q "Wrong count of paramters."
+	local version=$( version4human ${1} )
+	version=$( get_version_fromlist ${version} )
+	local cur_version=$( get_current_version )
+
+	if [[ ${version} == "${ERR_NOT_FOUND}" ]] ; then
+		die -q "I don't recognise that version of MYSQL"
+	fi
+
+	if [[ -z "${version}" ]] ; then
+		die -q "No symlinks found"
+	fi
+
+	if [[ "${version}" != "${cur_version}" ]] ; then
+		die -q "The version specified is not the current one"
+	fi
+
+	remove_current_version "$( version4bash "${version}" )"
 	mysql_lib_symlinks
 }
 
