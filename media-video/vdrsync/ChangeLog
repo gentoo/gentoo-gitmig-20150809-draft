@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vdrsync
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdrsync/ChangeLog,v 1.2 2005/12/27 17:14:00 zzam Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdrsync/ChangeLog,v 1.3 2006/02/05 23:09:09 ciaranm Exp $
+
+  05 Feb 2006; Ciaran McCreesh <ciaranm@gentoo.org>
+  vdrsync-0.1.3_pre050322.ebuild:
+  Add categories to dep atoms.
 
   27 Dec 2005; Matthias Schwarzott <zzam@gentoo.org>
   vdrsync-0.1.3_pre050322.ebuild:
