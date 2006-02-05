@@ -1,8 +1,34 @@
-MD5 0b6e1250d9870c0607d99dbb740db06d ChangeLog 2088
-MD5 87eb58b955b352f74fbb25d4fcdff8ba extra-syntax-2.ebuild 879
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d0d83d0fe4fe73c5cac6278a64d1e533 ChangeLog 2190
+RMD160 7c02e40d6e374877430bb3a50766ce762226ce01 ChangeLog 2190
+SHA256 092ea9b652ff314427ddc3398f55d554a45c99742da25ba437da6290f6af1a4c ChangeLog 2190
+MD5 064ef0e164e10d21b56919057e716461 extra-syntax-2.ebuild 856
+RMD160 4f13fc1d88ce5ccc6a6414fb5eba1875d6324257 extra-syntax-2.ebuild 856
+SHA256 07feefd7dc16e60b2ffa4314cc4b8a1bb454d49526d1eca7c70486ac88d4c3c2 extra-syntax-2.ebuild 856
 MD5 64129d32a5af560915b1860817134cb7 extra-syntax-3.ebuild 908
+RMD160 b02bbbe2347fc5300025989fbc3990d65d95935f extra-syntax-3.ebuild 908
+SHA256 2c98cdd360f745e0a56167c8d005cb4af314d5fee7d728b606f1c67715095574 extra-syntax-3.ebuild 908
 MD5 da6d707c96880412451cb35ee5b352b3 extra-syntax-4.ebuild 937
+RMD160 3bb4850d65be5db82c8e90d09e8ed250a30caad3 extra-syntax-4.ebuild 937
+SHA256 804fc755b669f15acc99f655d924a195b47a2d08dab0c3af76b287ed5b45ba35 extra-syntax-4.ebuild 937
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-extra-syntax-2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-extra-syntax-2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-extra-syntax-2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-extra-syntax-3 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-extra-syntax-3 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-extra-syntax-3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-extra-syntax-4 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-extra-syntax-4 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-extra-syntax-4 0
 MD5 c12b313eed9efb8f61723cb9ebf22c36 metadata.xml 253
+RMD160 aec1a411ed3592aa10fe3b2b80952362c7bd1b6d metadata.xml 253
+SHA256 e12ae1196e99a89e610778695e0712ce305387072752329dfc7c31c07d4105c3 metadata.xml 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5nh8LLFUmVNQ7rkRAvz2AKCfsLvYs9N87jLeA7HcTdJPf1XCggCeNKQn
+2ztEhGcGpAbA9Cz3KphyHX8=
+=nfBa
+-----END PGP SIGNATURE-----

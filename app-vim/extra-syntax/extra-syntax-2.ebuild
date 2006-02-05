@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/extra-syntax-2.ebuild,v 1.5 2005/09/10 20:16:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/extra-syntax-2.ebuild,v 1.6 2006/02/05 22:13:02 ciaranm Exp $
 
 inherit vim-plugin
 
@@ -17,7 +17,6 @@ RDEPEND="${RDEPEND}
 	app-vim/cfengine-syntax
 	app-vim/doxygen-syntax
 	app-vim/ebnf-syntax
-	app-vim/extra-syntax
 	app-vim/fluxbox-syntax
 	app-vim/gentoo-syntax
 	app-vim/gtk-syntax
