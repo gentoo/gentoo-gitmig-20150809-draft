@@ -1,14 +1,11 @@
-# /etc/conf.d/crypto-loop
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/files/crypto-loop.confd,v 1.1 2005/04/29 23:54:25 vapier Exp $
-
-# Configuration file for /etc/init.d/crypto-loop
+# /etc/conf.d/crypto-loop: Configuration file for /etc/init.d/crypto-loop
 
 # More info can be found at:
 #
-#  http://cvs.gentoo.org/~mkennedy/loop.html
+#  http://dev.gentoo.org/~mkennedy/loop.html
 
-# Specify loopback configurations here. The format of this file is
-# shown in the following commented-out example. One line per loopback
-# configuration.
+# Specify loopback configurations here.  The format of this file is
+# shown in the following commented-out example.  One line per loopback
+# configuration.  For possible hash values, see `man hashalot`.
 
-# loop=/dev/loop0 cipher=serpent keysize=256 device=/dev/system/test other=''
+# loop=/dev/loop0 hash='' cipher=serpent keysize=256 device=/dev/system/test other=''

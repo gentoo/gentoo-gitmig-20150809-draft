@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 5519d8c1358e425e31b3c02dcd368a2f ChangeLog 23476
 RMD160 c923639c56a376d15fffb0a8ee78b554bb72d975 ChangeLog 23476
 SHA256 edc70b8b35d6cd8146c46090ac66c7c82eb75ed537ff183053030d3ba1aad3a4 ChangeLog 23476
-MD5 0b95e856fd2f375270cf2ec4eaa69c8a files/crypto-loop.confd 505
-RMD160 93497ebe75cf15186f5e70b64a246900508ceb69 files/crypto-loop.confd 505
-SHA256 52422b3fc68da0aa5be7e1795a69ae7841d6add5fa6931d93f752f5a12c4ed8b files/crypto-loop.confd 505
+MD5 fc01656c85a58c998f5487eb72f44035 files/crypto-loop.confd 442
+RMD160 cd8177c5b6976f2d5f5f997281a31ce18a64092a files/crypto-loop.confd 442
+SHA256 47c8d7029e0fdf77425c2c5d593a46315d6b3b2539a019af228bcf88ed8168d6 files/crypto-loop.confd 442
 MD5 d20405e12353610b3ef8fbc2e1d57f2a files/crypto-loop.initd 1625
 RMD160 43ce88614ac37c66b83cd2815bb4673254881873 files/crypto-loop.initd 1625
 SHA256 aa3c78518b988e64d899f5e332062da9fe040b43af3c9d71263b15fc627f39ef files/crypto-loop.initd 1625
@@ -145,7 +145,7 @@ SHA256 0c1cec778ea654e08584606e54649decf801cb01562612f270a2c2b47f602f3f util-lin
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD5RMV2+ySkm8kpY0RApZSAKCD91uDQF+QrozpxjIz0I5nemGynwCeM8jt
-+54S+P70ssZ7CwkLErpD0Ww=
-=qzAg
+iD8DBQFD5mQ52+ySkm8kpY0RArfjAJ9J4jPKx0P1WzDrKUQyQVvoDShWBQCgojpO
+O86SWiDOqsQZ+JMTeI+dNh8=
+=yHhe
 -----END PGP SIGNATURE-----
