@@ -1,37 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ec42b3082e9375c712993445785de7b1 ChangeLog 9996
-RMD160 876b718108232e3a0dfc465ee93ff5d7cfa25681 ChangeLog 9996
-SHA256 794fbf21fba9ee89cc1cbdb47dae2dd25303bda1dfb5dda42ae6936bc96af776 ChangeLog 9996
+MD5 9e78246acc04fe9d535a219ae6916a79 ChangeLog 10084
 MD5 36655711685d89d6c886370b1937a993 bug-buddy-2.0.8.ebuild 979
-RMD160 896c8734b4a97548cba4334269636a8025bcd6db bug-buddy-2.0.8.ebuild 979
-SHA256 68ba4ff1747f2ea50ff120ec15c25b1f9edbc2fb4fadba2aa368bdc470e3669b bug-buddy-2.0.8.ebuild 979
 MD5 d583accc79efb5084181644db97d9f7f bug-buddy-2.10.0.ebuild 1142
-RMD160 fe855fb5df009bbf70d7542e6ede19eeced40bf1 bug-buddy-2.10.0.ebuild 1142
-SHA256 119c8d30399cb6a9f20b71eade795a52248f9db93a8a9656e13d04228a43363f bug-buddy-2.10.0.ebuild 1142
-MD5 92a1eb7931b1241c1341bb89b4b5b795 bug-buddy-2.12.1.ebuild 1332
-RMD160 457b465c99c5b0caff58ab6f762418eb01777bc3 bug-buddy-2.12.1.ebuild 1332
-SHA256 b613024d8c9631ffc4e6f616e0c5b103ded7f2f52314a233b29a6466aff1a6fc bug-buddy-2.12.1.ebuild 1332
+MD5 5752a24e02bc0c02dd94d1ed02eb74c2 bug-buddy-2.12.1.ebuild 1329
 MD5 08da40f07e8b341b8d350e8be1ef7323 files/bug-buddy-2.10.0-fbsd.patch 278
-RMD160 d1ee049a32d69ca63f3e4063c11d0bc558ba6886 files/bug-buddy-2.10.0-fbsd.patch 278
-SHA256 ee04f762b750f5692e80422e24e49a893fee9fb8be131fdc494c632af190cefe files/bug-buddy-2.10.0-fbsd.patch 278
 MD5 4d7a28f47d32104e184c44c5f00b9e50 files/digest-bug-buddy-2.0.8 67
-RMD160 bd5b061c2e7a46346985990001830cb0374b01e8 files/digest-bug-buddy-2.0.8 67
-SHA256 ae40e41142dd8e4e4829aafac2629cfd567a146361110e8db4fa47cb551bd1d4 files/digest-bug-buddy-2.0.8 67
 MD5 b49fb0e31813c4682de1a44013d0beab files/digest-bug-buddy-2.10.0 69
-RMD160 ce748dd7110cbd02de73f81baf6040a6e3ca67a0 files/digest-bug-buddy-2.10.0 69
-SHA256 60dcdc9e01d8eba360ba1f4c49eb4d1e4691815359f13864ea18e5bdd28096f0 files/digest-bug-buddy-2.10.0 69
 MD5 2c4826ba1c135ec03bfc30e8d01e39cc files/digest-bug-buddy-2.12.1 69
-RMD160 503868b576570826ed3fc17abcb462ecaad05b2e files/digest-bug-buddy-2.12.1 69
-SHA256 5cb3c8005001f53220273dafa2bb3118bc20e8e069250c0f325beaa5d5d3e733 files/digest-bug-buddy-2.12.1 69
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD49a3JrHF4yAQTrARAtYAAJ9078BNOL7b4U3ijbZW8kl55RiZZACdETfU
-9XnShdlXWmGlgcEzIHLg+Gg=
-=oMLu
------END PGP SIGNATURE-----
