@@ -1,0 +1,19 @@
+# Copyright 2006 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/minimal/make.defaults,v 1.1 2006/02/05 04:15:13 solar Exp $
+
+# - TESTING PROFILE - TESTING PROFILE - 
+#  ------ USE AT YOUR OWN RISK ------
+
+ARCH="x86"
+ACCEPT_KEYWORDS="${ARCH}"
+GRP_STAGE23_USE="${ARCH} crypt dlloader hardened minimal multicall ncurses pic readline zlib"
+USE="-* ${ARCH} ${GRP_STAGE23_USE}"
+USE_ORDER=env:pkg:conf:defaults
+PORTDIR=/usr/portage/
+PKGDIR=${PORTDIR}/packages/${ARCH}/
+
+CFLAGS="-Os -pipe"
+CXXFLAGS="${CFLAGS}"
+FEATURES="sandbox sfperms strict nodoc noinfo noman autoconfig"
+
