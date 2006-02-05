@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/vamps-0.98.ebuild,v 1.3 2006/01/21 17:58:35 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/vamps-0.98.ebuild,v 1.4 2006/02/05 19:48:13 dertobi123 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/vamps/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND=">=media-libs/libdvdread-0.9.4"
 
