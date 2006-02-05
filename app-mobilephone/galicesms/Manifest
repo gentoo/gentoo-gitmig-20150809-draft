@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dfa1f5bd77eb0d6a3168e5ea116e406b ChangeLog 379
+MD5 fed1ae127d5fe27b6c95719bf496000c files/digest-galicesms-1.2.0 65
+MD5 a8894234c9e6b02e92a35c8177449c98 galicesms-1.2.0.ebuild 612
+MD5 95d63746d55eb74efd282093a8321f1b metadata.xml 363
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5dFHjG8pv1lIUX4RAnmYAKDrfQIWt6qNdeMoD7s/RISU80adxACeLfZr
+BOFfaJnSQFMzFoXt2VIyUfE=
+=eBTR
+-----END PGP SIGNATURE-----

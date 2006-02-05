@@ -1,0 +1,10 @@
+# ChangeLog for app-mobilephone/galicesms
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/galicesms/ChangeLog,v 1.1 2006/02/05 10:19:33 mrness Exp $
+
+*galicesms-1.2.0 (05 Feb 2006)
+
+  05 Feb 2006; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +galicesms-1.2.0.ebuild:
+  Initial import from bug #78705.
+
