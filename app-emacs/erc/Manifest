@@ -1,24 +1,61 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9e49f25d484b6fd1e9cb56ed1cde6d13 ChangeLog 2752
+MD5 1009a89751fce8873c953f1693e857cf ChangeLog 2907
+RMD160 7c89cbcab5e3e3e69ccb5a6fb3af5133b74fc519 ChangeLog 2907
+SHA256 666164ce755ec7e2e2934d8a0a10ddadbd574fcedd06e7ee059a6de8c2eb2747 ChangeLog 2907
 MD5 d588aaf74c2e7892c36ff6e48682defe erc-5.0.2.ebuild 686
+RMD160 68e2de614da9452a5469e358ed915ba143d0f326 erc-5.0.2.ebuild 686
+SHA256 8656f3af525e4e299e34febffd46d4fcee560098bcabfbacdab250d6d337583a erc-5.0.2.ebuild 686
 MD5 618a7e12d0c2916ebc0d5a6ddc87d6e1 erc-5.0.3.ebuild 695
+RMD160 f17b6bba474a42623c4cf66fc7269efbd26efef0 erc-5.0.3.ebuild 695
+SHA256 f1182922ad423cfb7ae334991c232e287fa1bc38db78abf8ef3bd15ab41d32fe erc-5.0.3.ebuild 695
 MD5 78be39acf55cbd6d03d8da1183264a1c erc-5.0.4.ebuild 695
+RMD160 0827a9f16fd034b305935b8b065b731b57edc0ed erc-5.0.4.ebuild 695
+SHA256 cf882747209042b3213dc20998484a759bf2851cabe88313bd61cbe4bd74abd6 erc-5.0.4.ebuild 695
+MD5 6580d61ab6a06ddfe3b5294d909f4dfe erc-5.1.1.ebuild 733
+RMD160 52acc5b885c8279d93601e07a2cdd6d4b0431ff0 erc-5.1.1.ebuild 733
+SHA256 c2c0d8ebad0413f6834ea90b6bf9ea5aac9b0ed1d232c9820ad20e78ec1a8b8d erc-5.1.1.ebuild 733
 MD5 3d6866025140c3d7b8c8745bd62dd2e2 erc-5.1.ebuild 731
+RMD160 52691894824b5afab1512ffe7f75a70eb5c90579 erc-5.1.ebuild 731
+SHA256 842bb353217d225ddb81f6505d1768560eb60bed6cb9f8c34b2d4c65923adad5 erc-5.1.ebuild 731
 MD5 bcd491fbc10e0b3fb9a03cefc37fd266 files/5.0.2/50erc-gentoo.el 87
+RMD160 76f03114060f0901df016c28201f03d85148e17f files/5.0.2/50erc-gentoo.el 87
+SHA256 28626783ffe1bd073735cf8a5bc550b964dfd2d8b1cd2f07de05de45013ab26e files/5.0.2/50erc-gentoo.el 87
 MD5 bcd491fbc10e0b3fb9a03cefc37fd266 files/5.0.3/50erc-gentoo.el 87
+RMD160 76f03114060f0901df016c28201f03d85148e17f files/5.0.3/50erc-gentoo.el 87
+SHA256 28626783ffe1bd073735cf8a5bc550b964dfd2d8b1cd2f07de05de45013ab26e files/5.0.3/50erc-gentoo.el 87
 MD5 bcd491fbc10e0b3fb9a03cefc37fd266 files/5.0.4/50erc-gentoo.el 87
+RMD160 76f03114060f0901df016c28201f03d85148e17f files/5.0.4/50erc-gentoo.el 87
+SHA256 28626783ffe1bd073735cf8a5bc550b964dfd2d8b1cd2f07de05de45013ab26e files/5.0.4/50erc-gentoo.el 87
+MD5 bcd491fbc10e0b3fb9a03cefc37fd266 files/5.1.1/50erc-gentoo.el 87
+RMD160 76f03114060f0901df016c28201f03d85148e17f files/5.1.1/50erc-gentoo.el 87
+SHA256 28626783ffe1bd073735cf8a5bc550b964dfd2d8b1cd2f07de05de45013ab26e files/5.1.1/50erc-gentoo.el 87
 MD5 bcd491fbc10e0b3fb9a03cefc37fd266 files/5.1/50erc-gentoo.el 87
+RMD160 76f03114060f0901df016c28201f03d85148e17f files/5.1/50erc-gentoo.el 87
+SHA256 28626783ffe1bd073735cf8a5bc550b964dfd2d8b1cd2f07de05de45013ab26e files/5.1/50erc-gentoo.el 87
 MD5 bbf2a316136100c46b67f11dd4c04629 files/digest-erc-5.0.2 61
+RMD160 2d856e08e022183f7baaddbece25f7a352b1850f files/digest-erc-5.0.2 61
+SHA256 c01d83984411cfe24e6eb317fd5f0770741ef57c9ed43f8f499edf834ae4c7d2 files/digest-erc-5.0.2 61
 MD5 e3caca5f67d85c344b59d357cee50244 files/digest-erc-5.0.3 61
+RMD160 200d88e2b6f0ede1ec12cebf0be5ba53dec80f36 files/digest-erc-5.0.3 61
+SHA256 f84b4f3e3f96a051dfb462ea871260d4ba16cc3576faadec09462476d30d5983 files/digest-erc-5.0.3 61
 MD5 678770ae39d1acf4f6246265102b26d2 files/digest-erc-5.0.4 61
+RMD160 ffcac8adaf612b4696dd2861948231723d2a6136 files/digest-erc-5.0.4 61
+SHA256 0a669d98d1ff955fccdf3f286525dcfccc2d59ac94acc01948212d57ba059bfb files/digest-erc-5.0.4 61
 MD5 ffdaae52510edbbea2b39dbf3346484a files/digest-erc-5.1 59
+RMD160 5fc9780556e5388e9f054f9a8ce43bb5d462e21c files/digest-erc-5.1 59
+SHA256 c2acd1cd26e6ce281c87df8f7a4aeb3d87689a42c9d79d3b86ebb3ad9c1237bd files/digest-erc-5.1 59
+MD5 ebc41997cfe4b375a473c912427ad9f2 files/digest-erc-5.1.1 229
+RMD160 4260128555e5ed04e739b36b840488c1b77a0418 files/digest-erc-5.1.1 229
+SHA256 08d4548a88ecd7edc1152c87a5d27f71350e706d42bb41980e810312373ad9af files/digest-erc-5.1.1 229
 MD5 412b2136b80db7ac2a1fc58fccb01f63 metadata.xml 239
+RMD160 2cdaca82e665ac369d4573dcad74131fc3cfe138 metadata.xml 239
+SHA256 bc74ca14f8742b60e9d2ff045ed346fcd69f7a7527d71dfdce67b366ba5574e8 metadata.xml 239
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD3SwSyiNZaEAZA+ARAn2cAJ9dk0QvwXBVx70dyo0oDyRRGIRdXQCcDLI3
-pn7jutalR/pMgwWwLXu703s=
-=Mhji
+iD8DBQFD5mp5yiNZaEAZA+ARAtiuAJsE+fBGi21ag87jggGw++pf+DW2ugCeIVzF
+i4iqgDxbXsSIf+y5pTq9vW4=
+=Elmc
 -----END PGP SIGNATURE-----
