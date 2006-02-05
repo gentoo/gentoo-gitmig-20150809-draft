@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1716 2006/02/05 14:40:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1717 2006/02/05 21:04:48 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -737,16 +737,6 @@ media-tv/xawtv:xext - Enable use of XFree extentions (DGA,VidMode,DPMS)
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
 media-tv/xdtv:aqua_theme - Enable graphic theme Aqua-style
 media-tv/xdtv:carbone_theme - Adds the Carbone pixmaps theme for the GUI
-media-tv/xdtv:linguas_ca - Enable support for Catalan language
-media-tv/xdtv:linguas_de - Enable support for German language
-media-tv/xdtv:linguas_en - Enable support for English language
-media-tv/xdtv:linguas_es - Enable support for Spanish language
-media-tv/xdtv:linguas_fr - Enable support for French language
-media-tv/xdtv:linguas_gl - Enable support for Gallegan language
-media-tv/xdtv:linguas_it - Enable support for Italian language
-media-tv/xdtv:linguas_ja - Enable support for Japanese language
-media-tv/xdtv:linguas_pl - Enable support for Polish language
-media-tv/xdtv:linguas_ru - Enable support for Russian language
 media-tv/xdtv:zvbi - Enable VBI Decoding Library for Zapping
 media-video/avifile:dmalloc - Enable support for the Debug Malloc Library
 media-video/avifile:dpms - Enable support for DPMS
