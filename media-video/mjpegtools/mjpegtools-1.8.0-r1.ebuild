@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.12 2006/02/04 16:40:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.13 2006/02/05 23:47:39 flameeyes Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -40,6 +40,7 @@ src_unpack() {
 	unpack ${A} ; cd ${S}
 
 	epatch "${FILESDIR}/${P}-gcc41.patch"
+	epatch "${FILESDIR}/${P}-parallelmake.patch"
 	elibtoolize
 }
 
