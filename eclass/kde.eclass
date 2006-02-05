@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.145 2006/02/03 22:30:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.146 2006/02/05 17:09:26 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -15,6 +15,15 @@ IUSE="debug arts xinerama"
 if [[ ${CATEGORY} == "kde-base" ]]; then
 	IUSE="${IUSE} kdeenablefinal"
 fi
+
+# Set USE_KEG_PACKAGING=1 before inheriting if the package use extragear-like
+# packaging and then supports ${LANGS} and ${LANGS_DOC} variables.
+# Don't enable until repoman is fixed.
+# if [[ -n ${USE_KEG_PACKAGING} && -n "${LANGS}${LANGS_DOC}" ]]; then
+# 	for lang in ${LANGS} ${LANGS_DOC}; do
+# 		IUSE="${IUSE} linguas_${lang}"
+# 	done
+# fi
 
 DEPEND=">=sys-devel/automake-1.7.0
 	sys-devel/autoconf
@@ -53,6 +62,27 @@ kde_src_unpack() {
 	base_src_unpack $*
 
 	# kde-specific stuff stars here
+
+	# if extragear-like packaging is enabled, set the translations and the
+	# documentation depending on LINGUAS settings
+	if [[ -n ${USE_KEG_PACKAGING} ]]; then
+		if [[ -z ${LINGUAS} ]]; then
+			einfo "You can drop some of the translations of the interface and"
+			einfo "documentation by setting the \${LINGUAS} variable to the"
+			einfo "languages you want installed."
+			einfo
+			einfo "Enabling all languages"
+		else
+			MAKE_PO=$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))
+			einfo "Enabling translations for: ${MAKE_PO}"
+			MAKE_DOC=$(echo $(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d))
+			einfo "Enabling documentation for: ${MAKE_DOC}"
+
+			sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_PO}:" ${S}/po/Makefile.am || die "sed for locale failed"
+			sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_DOC} ${PN}:" ${S}/doc/Makefile.am || die "sed for locale failed"
+			rm -f ${S}/configure
+		fi
+	fi
 
 	# fix the 'languageChange undeclared' bug group: touch all .ui files, so that the
 	# makefile regenerate any .cpp and .h files depending on them.
