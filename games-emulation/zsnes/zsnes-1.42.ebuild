@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.9 2006/01/04 19:52:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.10 2006/02/05 14:40:24 blubb Exp $
 
 inherit eutils flag-o-matic games
 
@@ -26,16 +26,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PN}_${PV//./_}"
 
 pkg_setup() {
-	use amd64 || return 0
-	if has_m32 ; then
-		export ABI=x86
-	else
-		eerror "Your compiler seems to be unable to compile 32bit code."
-		eerror "Make sure you compile gcc with:"
-		echo
-		eerror "    USE=multilib FEATURES=-sandbox"
-		die "Cannot produce 32bit code"
-	fi
+	use amd64 && export ABI=x86
 	games_pkg_setup
 }
 

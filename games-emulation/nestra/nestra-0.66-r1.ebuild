@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.11 2006/01/10 01:14:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.12 2006/02/05 14:39:14 blubb Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -23,18 +23,7 @@ S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	games_pkg_setup
-	use amd64 || return 0
-	export ABI=x86
-	if has_m32 ; then
-		append-flags -m32
-		append-ldflags -Wl,-m,elf_i386
-	else
-		eerror "Your compiler seems to be unable to compile 32bit code."
-		eerror "Make sure you compile gcc with:"
-		echo
-		eerror "    USE=multilib FEATURES=-sandbox"
-		die "Cannot produce 32bit code"
-	fi
+	use amd64 && export ABI=x86
 }
 
 src_unpack() {
