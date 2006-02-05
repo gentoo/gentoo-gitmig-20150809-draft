@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r2.ebuild,v 1.9 2005/08/21 02:24:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r2.ebuild,v 1.10 2006/02/05 14:44:52 blubb Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -29,14 +29,6 @@ PATCHDIR="${WORKDIR}/gentoo"
 
 pkg_setup() {
 	if use amd64; then
-		if ! has_m32; then
-			eerror "Your compiler seems to be unable to compile 32bit code."
-			eerror "If you are on amd64, make sure you compile gcc with:"
-			echo
-			eerror "    USE=multilib FEATURES=-sandbox"
-			die "Cannot produce 32bit objects!"
-		fi
-
 		ABI_ALLOW="x86"
 		ABI="x86"
 	fi
