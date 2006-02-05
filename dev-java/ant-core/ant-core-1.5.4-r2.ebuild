@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.5.4-r2.ebuild,v 1.6 2006/01/20 04:42:53 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.5.4-r2.ebuild,v 1.7 2006/02/05 11:05:30 blubb Exp $
 
 inherit java-pkg eutils
 
@@ -29,9 +29,9 @@ src_unpack() {
 
 	# Patch build.sh to die with non-zero exit code in case of errors.
 	# This patch may be useful for all ant versions.
-	epatch ${FILESDIR}/build.sh-exit-fix.patch.gz
+	epatch ${FILESDIR}/build.sh-exit-fix.patch
 	# This patch will be used until ant 1.6 is released
-	epatch ${FILESDIR}/rpmbuild.patch.gz
+	epatch ${FILESDIR}/rpmbuild.patch
 }
 
 src_compile() {
