@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.5.1-r1.ebuild,v 1.1 2006/02/05 14:43:04 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.5.1-r1.ebuild,v 1.2 2006/02/05 17:23:32 metalgod Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="GnomeBaker is a GTK2/Gnome cd burning application."
 HOMEPAGE="http://gnomebaker.sf.net"
