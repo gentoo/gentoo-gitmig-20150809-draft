@@ -1,6 +1,6 @@
-MD5 e1c13fda9597865f86078c2f3191b0bf ChangeLog 41145
-RMD160 16ae499f260c5013985af7b65afe9a2fa6b541f8 ChangeLog 41145
-SHA256 97791494803de5b0b8a570d5ea7a5a0c1e60475750891c2f3b4a9106e3b0ce64 ChangeLog 41145
+MD5 38bd8d9c088ce7fbf01d95c48005bb71 ChangeLog 41360
+RMD160 acf902a4a8e5db77383af2c5959da0504b89bd63 ChangeLog 41360
+SHA256 c9bdc5c44f884b9fb6dddcca527aa47cb01764f6d4429960ca6997412128d833 ChangeLog 41360
 MD5 328c58524dbe1f58eea781194cc7de94 files/1.5/mozilla-firefox-1.5-history.patch 2376
 RMD160 2e6a58c257c5a1455c9440b5d1f3829a2149c970 files/1.5/mozilla-firefox-1.5-history.patch 2376
 SHA256 bad2ff1c2534fb55851fb43bbb1a123511e828eca52e88589f8fbdad42e6a6ef files/1.5/mozilla-firefox-1.5-history.patch 2376
@@ -19,6 +19,9 @@ SHA256 13b98b983eb1c0ff81d314e1c5ddd48c2f0b0cbb13f92b94fa1b1d36957c11d5 files/di
 MD5 942724f965942ebb0b378944365971d0 files/digest-mozilla-firefox-1.5-r9 5797
 RMD160 8481d85385633ee60f4116635d6c5d1c117cfdfb files/digest-mozilla-firefox-1.5-r9 5797
 SHA256 30f2e95fb485ef6858d6390b8c921cd368c67a6e65b41a1f818dd4809f4c9e55 files/digest-mozilla-firefox-1.5-r9 5797
+MD5 446aaa8839b673acf8d9346fe219e0d6 files/digest-mozilla-firefox-1.5.0.1 9575
+RMD160 8d6baf9774e68988e50ab63ff11a17808ccb727f files/digest-mozilla-firefox-1.5.0.1 9575
+SHA256 52f5f23d4234acfa8e27f658efc14d2e90af2c1aee4a1fd6936fb0c131a230f5 files/digest-mozilla-firefox-1.5.0.1 9575
 MD5 6a7a2240dc5864e7f8ee444e34e84461 files/firefox.1 2538
 RMD160 4564007d7d5345e9ab09c941015e3cdb78913835 files/firefox.1 2538
 SHA256 3483439a73c74b818bdde98c15223b6d3fcfe78e3ad974fb35f197cf3ad614e7 files/firefox.1 2538
@@ -49,3 +52,6 @@ SHA256 9fc7917cdb2275adb873f1683bbaa2fb57ff9ca56daf6337fad68c5393a60c4f mozilla-
 MD5 cbb5d789ecf331b385b63a1b75447eb5 mozilla-firefox-1.5-r9.ebuild 8402
 RMD160 220e973f575c9ba4f701e11c1340870cd68c4d6e mozilla-firefox-1.5-r9.ebuild 8402
 SHA256 3d63df219c0119abd3a835bb8cf7bf55b250b428e8647628b82fc4145e8780b6 mozilla-firefox-1.5-r9.ebuild 8402
+MD5 ca381b19bc96734ba5aee067d9082760 mozilla-firefox-1.5.0.1.ebuild 8664
+RMD160 3191812cee6e485018527266a225060763d269dd mozilla-firefox-1.5.0.1.ebuild 8664
+SHA256 badab98efe7f63e2df0a510f78595263b88b0db636de7d74bd8c4b5380c8eea9 mozilla-firefox-1.5.0.1.ebuild 8664
