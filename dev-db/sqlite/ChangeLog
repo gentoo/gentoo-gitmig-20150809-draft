@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.102 2006/02/02 18:24:59 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.103 2006/02/05 22:05:04 arj Exp $
+
+  05 Feb 2006; Anders Rune Jensen <arj@gentoo.org>
+  +sqlite-3.3.3-r1.ebuild, +sqlite-2.8.16-r3.ebuild:
+  Make test work. Fixes #121489, #118429, #111774, #105524, #69640,
+  #36076. Fixed multilib-strict problems in 3.3.3 and enabled thread
+  sharing (new feature in 3.3)
 
 *sqlite-3.3.3 (02 Feb 2006)
 
