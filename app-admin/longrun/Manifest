@@ -1,16 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e9d0f6f48c63ef31c7c6b2dd8c16f508 longrun-0.9-r2.ebuild 1631
-MD5 913f3a4af5def87b1d8b84d4da95559f longrun-0.9-r1.ebuild 817
-MD5 434d9b1cf1af8fa8c77905c4459c7fe0 ChangeLog 1759
-MD5 0f5aca3056f50b06e1f68a87bcc0f999 metadata.xml 443
-MD5 228f07c20b6f385b74e39181c7145f11 files/digest-longrun-0.9-r1 138
+MD5 2de7af7f8bcd8413948af668861dea6c ChangeLog 2074
+RMD160 a590c014e905d5ca5d0dd95c300782c35a20eba9 ChangeLog 2074
+SHA256 1e6d1857bea8dee8b1adb09210d9ee20b06e08d3c8975a86b5d8b6cdd2ccb1f7 ChangeLog 2074
+MD5 62746b532af3efb599b4511ecacbee95 files/0.9-makefile_cflags.patch 564
+RMD160 9b9c4aac504a49d13131daf61ab69c0ad3b4d794 files/0.9-makefile_cflags.patch 564
+SHA256 dd594bcef8030ae86a711e520efb81209ae4c57d898a610d5205c0f33cb16028 files/0.9-makefile_cflags.patch 564
 MD5 06f54ba7a3451bfe7d701fb642b64d91 files/digest-longrun-0.9-r2 129
+RMD160 7e78efd3004d674d8b88b942f9a1db85863b5d36 files/digest-longrun-0.9-r2 129
+SHA256 33f32f7eb5807ceeb711ee6dc91474493a4198cc5634b094f52658b5cb2416c3 files/digest-longrun-0.9-r2 129
+MD5 1fcf3cc355e2db619c803d4c4dbb6192 files/digest-longrun-0.9-r3 479
+RMD160 af5778bdc6b5b787107584c36b107d628209e75e files/digest-longrun-0.9-r3 479
+SHA256 eda0f43a2d454b0ef67bd7f114b591590f605019a44e9b08caed1abdb21cc433 files/digest-longrun-0.9-r3 479
+MD5 e9d0f6f48c63ef31c7c6b2dd8c16f508 longrun-0.9-r2.ebuild 1631
+RMD160 6807757c557eaf1c1efda53c4db52bc3e5f62888 longrun-0.9-r2.ebuild 1631
+SHA256 34f3843d6d8f5c91f71e6a977e30a4a0169f625d7182996c1e6828d971fbf85f longrun-0.9-r2.ebuild 1631
+MD5 15f356b2727c817cadd3452acb10150e longrun-0.9-r3.ebuild 1722
+RMD160 454caa11e305ef796812fb500366e7aed9b8cc23 longrun-0.9-r3.ebuild 1722
+SHA256 0f25a917a3bb88bcf21d05aa003437ae82689b0b9161ecf18dbf7b14b42a9323 longrun-0.9-r3.ebuild 1722
+MD5 0f5aca3056f50b06e1f68a87bcc0f999 metadata.xml 443
+RMD160 984d206ce4e34b0c30a022785fe3ca7d111b7e04 metadata.xml 443
+SHA256 14150117dc26f8ed084d191f18b8a180051ee89885d3e5cb88a6d663412fb511 metadata.xml 443
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGhcqQiJ/wx066S4RAk0DAJ9nVUlK+c4+FVFvqmxwtqKCdxl9YwCcD9Hy
-qcGbhUEkU3C+DNwGuF9k6Lw=
-=Isoo
+iD8DBQFD5idqQiJ/wx066S4RAoaRAKCRkgFJwNVMw2Bz1Y19orz1UcawtQCgieU5
+j93HVT+WKwrQdVkK5Dg8HOw=
+=fZpE
 -----END PGP SIGNATURE-----
