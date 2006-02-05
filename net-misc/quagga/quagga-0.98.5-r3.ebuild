@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.5-r3.ebuild,v 1.1 2006/02/04 09:11:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.5-r3.ebuild,v 1.2 2006/02/05 07:12:39 mrness Exp $
 
 inherit eutils multilib
 
@@ -126,7 +126,7 @@ pkg_postinst() {
 	if use tcpmd5; then
 		echo
 		ewarn "TCP MD5 for BGP needs a patched kernel!"
-		einfo "See http://hasso.linux.ee/quagga/bgp-md5.en.php for more info."
+		einfo "See http://hasso.linux.ee/doku.php/english:network:rfc2385 for more info."
 	fi
 
 	if use ipv6; then
