@@ -34,9 +34,9 @@ SHA256 064ddf97649424540df1d4a4727ee4c08d6b2b7389621855601aec58241ac67e files/ic
 MD5 22c0657f6cced2344a1848a5d0566928 files/icon/mozillafirefox-1.5.desktop 259
 RMD160 7b2c3de5bb2e1d136bd6ecfc968dd9f00db04747 files/icon/mozillafirefox-1.5.desktop 259
 SHA256 3c77e8c9261cfb863b9fdd290122f4f14de5302854bd21a450f85f2da68ca15c files/icon/mozillafirefox-1.5.desktop 259
-MD5 2cdd03eb2752bc01ba07ad837e926f39 files/icon/mozillafirefox.desktop 168
-RMD160 5414950bd59f1fbcfadef779b0f048e45b9b282b files/icon/mozillafirefox.desktop 168
-SHA256 7c9fff01a088dc006b04cf5536c3bb73cbde0151f1a12fcc4a7b1217bea9b739 files/icon/mozillafirefox.desktop 168
+MD5 0ad23b50109f7b78b26834bd7dd23ad0 files/icon/mozillafirefox.desktop 184
+RMD160 a0a85b38ef498f30e1fc296ba9acadb30d6b667d files/icon/mozillafirefox.desktop 184
+SHA256 1593428a93d8dace43b0b72e6239878aff24da6ece68da0ad98688a3498c211d files/icon/mozillafirefox.desktop 184
 MD5 c09fc82d7c3c339a4f8ed2bb0834c215 files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch 481
 RMD160 0f71bf56602037d6d4898c8e8180e443db618d5e files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch 481
 SHA256 603cb3e687d33b66022823b0ab8f63505049f54528127e061f29681068d30202 files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch 481
