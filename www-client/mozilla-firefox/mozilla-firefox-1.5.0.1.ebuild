@@ -1,12 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1.ebuild,v 1.1 2006/02/05 13:02:17 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1.ebuild,v 1.2 2006/02/05 21:57:56 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
-MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
-	                 # when older is removed from tree.
-MOZ_PANGO="yes"      # Need to enable for newer .. remove here and in mozconfig
-	                 # when older is removed from tree.
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
