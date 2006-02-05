@@ -25,4 +25,3 @@ video_cards_tga
 video_cards_tseng
 video_cards_vesa
 video_cards_via
-video_cards_voodoo

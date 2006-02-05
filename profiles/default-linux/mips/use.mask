@@ -1,4 +1,23 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.41 2006/01/26 10:17:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.42 2006/02/05 09:00:41 spyderous Exp $
+
+# 2006/02/05 - Donnie Berkholz <spyderous@gentoo.org>
+# Modular X: mask for architectures on which they aren't available
+video_cards_apm
+video_cards_ark
+video_cards_cyrix
+video_cards_i128
+video_cards_i740
+video_cards_i810
+video_cards_imstt
+video_cards_neomagic
+video_cards_nsc
+video_cards_rendition
+video_cards_siliconmotion
+video_cards_tga
+video_cards_tseng
+video_cards_vesa
+video_cards_vga
+video_cards_via
 
 # Diego Pettenò <flameeyes@gentoo.org>
 # Until xine-lib's keywording cannot be maintained, please leave it masked.

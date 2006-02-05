@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.58 2006/01/29 01:11:51 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.59 2006/02/05 09:00:41 spyderous Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -129,3 +129,12 @@ v4l2
 -video_cards_sunffb
 -video_cards_sunleo
 -video_cards_suntcx
+
+# 2006/02/05 - Donnie Berkholz <spyderous@gentoo.org>
+# Modular X: mask for architectures on which they aren't available
+video_cards_cyrix
+video_cards_nsc
+video_cards_s3
+video_cards_sis
+video_cards_tseng
+video_cards_via
