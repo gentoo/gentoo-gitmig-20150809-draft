@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.1 2006/02/04 23:58:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.2 2006/02/05 12:07:30 hansmi Exp $
 
 inherit eutils font autotools flag-o-matic
 
@@ -120,7 +120,7 @@ src_install() {
 	use X || \
 		rm -f ${D}/usr/share/man/man1/{pia,propwatch}.1 \
 			${D}/usr/share/{man,man/fr,man/es}/man1/xawtv.1 \
-			${D}/usr/share/{man,man/es}/man1/{rootv,xawtv-remote}.1
+			${D}/usr/share/{man,man/es}/man1/rootv.1
 
 	use motif || \
 		rm -f ${D}/usr/share/man/man1/{motv,mtt}.1
