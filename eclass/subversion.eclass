@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.26 2006/01/07 23:46:57 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.27 2006/02/05 20:47:17 vapier Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -181,7 +181,11 @@ function subversion_svn_fetch() {
 	fi
 
 	# export to the ${WORKDIR}
-	svn export "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${S}" || die "${ESVN}: can't exportto ${S}."
+	# for the time being, we use `cp -R` instead of `svn export` due to
+	# a bug in svn export handling.  see http://bugs.gentoo.org/119236
+	#svn export "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${S}" || die "${ESVN}: can't export to ${S}."
+	cp -pPR "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${S}" || die "${ESVN}: can't copy to ${S}."
+	find "${S}" -name .svn -print0 | xargs -0 rm -rf {} \;
 	einfo "   exported to: ${S}"
 	echo
 
