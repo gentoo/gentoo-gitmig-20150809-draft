@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r7.ebuild,v 1.8 2006/02/05 21:14:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r7.ebuild,v 1.9 2006/02/05 21:21:37 genstef Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~sh sparc ~x86"
 IUSE="nodrm"
 
 RDEPEND=">=app-text/poppler-0.5.0-r4
+	virtual/motif
 	|| (
 		( x11-libs/libX11 x11-libs/libXpm )
 		virtual/x11
@@ -30,7 +31,7 @@ src_unpack() {
 }
 
 src_install() {
-	dobin xpdf || die
+	dobin xpdf
 	doman xpdf.1
 	dodoc README ANNOUNCE CHANGES
 }
