@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.7-r4.ebuild,v 1.4 2005/10/04 23:43:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.7-r4.ebuild,v 1.5 2006/02/05 21:15:34 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic multilib
 
@@ -135,7 +135,7 @@ src_install() {
 	insopts -m0644 ; doins etc/limits
 	# Output arch-specific cruft
 	case $(tc-arch) in
-		ppc64) echo "hvc0" >> "${D}"/etc/securetty
+		ppc*)  echo "hvc0" >> "${D}"/etc/securetty
 		       echo "hvsi0" >> "${D}"/etc/securetty;;
 		hppa)  echo "ttyB0" >> "${D}"/etc/securetty;;
 		arm)   echo "ttyFB0" >> "${D}"/etc/securetty;;
