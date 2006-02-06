@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.4-r2.ebuild,v 1.2 2006/02/06 12:14:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.7.ebuild,v 1.1 2006/02/06 12:14:19 genstef Exp $
 
 inherit linux-info eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="a Linux file system driver that allows you to mount a WebDAV server
 SRC_URI="mirror://sourceforge/dav/${P}.tar.gz"
 HOMEPAGE="http://dav.sourceforge.net"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="ssl debug socks5"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6 )
@@ -24,7 +24,7 @@ CODA_FS_ERROR="${P} requires kernel support for Coda to be found in filesystems,
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/include-compiler.patch #81507
+	epatch ${FILESDIR}/makefile_0.2.7.patch
 }
 
 src_compile() {
