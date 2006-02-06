@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/arcload
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.4 2006/01/02 07:37:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.5 2006/02/06 05:26:41 kumba Exp $
+
+*arcload-0.5 (10 Feb 2006)
+
+  10 Feb 2006; Joshua Kinard <kumba@gentoo.org> +arcload-0.5.ebuild:
+  Import newer version of ARCLoad.  Now with Filesystem Support.
 
   02 Jan 2006; Joshua Kinard <kumba@gentoo.org> -arcload-0.41.ebuild,
   arcload-0.43-r1.ebuild:
