@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.10a.ebuild,v 1.15 2005/12/29 09:22:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.10a.ebuild,v 1.16 2006/02/06 22:52:13 liquidx Exp $
 
 inherit eutils libtool autotools
 
@@ -24,6 +24,7 @@ src_unpack(){
 	cd ${S}
 
 	epatch ${FILESDIR}/${PV}-fbsd.patch
+	sed -i -e 's:-Werror::' Makefile.am
 	eautoreconf
 	elibtoolize
 }
