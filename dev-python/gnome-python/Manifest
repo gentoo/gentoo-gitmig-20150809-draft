@@ -1,22 +1,76 @@
-MD5 881b8296e11cd6c73428c1406a844b92 ChangeLog 7436
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a70a2adde8de4a358160062748cc8df6 ChangeLog 7549
+RMD160 11ce522f892e698d2288966bbb8da116a166e9bb ChangeLog 7549
+SHA256 94819f0d430d8cd8e231854ed07e170e0db54c33438b5b8d5d22f30df9ea77d6 ChangeLog 7549
 MD5 7fd6852037c022d0f0f2413aabae59b4 files/digest-gnome-python-1.4.2 70
+RMD160 077e0a04ebb3f8e65f0faa1c2e76f926fc548329 files/digest-gnome-python-1.4.2 70
+SHA256 11fc18ddff5913de3cf056ec3a30900074cd2c5f0ebb37e89ad8321d265a2c91 files/digest-gnome-python-1.4.2 70
 MD5 ba9ea8c1b972e53626b9ab2d6cab4225 files/digest-gnome-python-1.4.4 71
+RMD160 239590630f00e7e4b93d6bf3d646fcbdb47af767 files/digest-gnome-python-1.4.4 71
+SHA256 430b0f4ea2ee55e9fdded85a1f9717fe8adc672095fbc1bc88a756f2fcb1c513 files/digest-gnome-python-1.4.4 71
 MD5 ba9ea8c1b972e53626b9ab2d6cab4225 files/digest-gnome-python-1.4.4-r1 71
+RMD160 239590630f00e7e4b93d6bf3d646fcbdb47af767 files/digest-gnome-python-1.4.4-r1 71
+SHA256 430b0f4ea2ee55e9fdded85a1f9717fe8adc672095fbc1bc88a756f2fcb1c513 files/digest-gnome-python-1.4.4-r1 71
 MD5 aa76f5d8b6e152a3b22f18773e522f80 files/digest-gnome-python-2.0.0 71
+RMD160 0360e065950693c2264a9be32b956ba85479fc7e files/digest-gnome-python-2.0.0 71
+SHA256 f6cbaeeaa7f0f68e638c43f11e634246f854f9e7c5ecaa811ea1f3485b8f29d5 files/digest-gnome-python-2.0.0 71
 MD5 aa76f5d8b6e152a3b22f18773e522f80 files/digest-gnome-python-2.0.0-r1 71
+RMD160 0360e065950693c2264a9be32b956ba85479fc7e files/digest-gnome-python-2.0.0-r1 71
+SHA256 f6cbaeeaa7f0f68e638c43f11e634246f854f9e7c5ecaa811ea1f3485b8f29d5 files/digest-gnome-python-2.0.0-r1 71
 MD5 fef37468e0970ab54e2ee7d70deee9be files/digest-gnome-python-2.0.2 71
+RMD160 b8cd16a979d1d4ccd0b6574399b8a750c7c358a8 files/digest-gnome-python-2.0.2 71
+SHA256 149d2bdb1b99c02e1209f90fe33d032f3604afeec3a665cca1de21e66c807cda files/digest-gnome-python-2.0.2 71
 MD5 ce53c6cf0fe7655ed7c57a31f4bb34a1 files/digest-gnome-python-2.10.0 72
+RMD160 ab47c9a82de2be9ef0a7dc46919d436fa8eef9a6 files/digest-gnome-python-2.10.0 72
+SHA256 1ac114366bff9a454997f049169c89fe2d9212ea5f2309fa235493aa993f278f files/digest-gnome-python-2.10.0 72
 MD5 3e55320aadde8f4e5fbe4a611f6d339d files/digest-gnome-python-2.12.0 72
+RMD160 c99cd9358ca17a8388f92eefd0dac80a975fd61d files/digest-gnome-python-2.12.0 72
+SHA256 07468980c6f4f1d761ff4a1951a9b9b9b2dd84e42309e4b15dd3e1c828515622 files/digest-gnome-python-2.12.0 72
 MD5 7009d27303672d1752d0c670f612d7d0 files/digest-gnome-python-2.12.1 72
+RMD160 3e993d7e55676b41f4d6af1abbf8201f6737c1f0 files/digest-gnome-python-2.12.1 72
+SHA256 68c8957f51f9b5c3964f3010452ddedd171512842cf49071a31284a23a35c138 files/digest-gnome-python-2.12.1 72
 MD5 78fc039ea7ba0b6a6b743078337acd9a files/digest-gnome-python-2.6.1 71
+RMD160 50dc554668be15d7dbf2a05fbe50ca6d029fc244 files/digest-gnome-python-2.6.1 71
+SHA256 cf73a6173e5129ff485396e59c81bfb6544aa6c70377c496810eeda6968de824 files/digest-gnome-python-2.6.1 71
 MD5 beaa7c0d8665ad4c48612a1127a1e16f gnome-python-1.4.2.ebuild 1261
+RMD160 1511c19c6fa1ee55b68a9c055bb87d030f82a030 gnome-python-1.4.2.ebuild 1261
+SHA256 c43e20958d19ee51ac1f1531d38f2f8ddbd59c7992fa20dece50607d5192d56a gnome-python-1.4.2.ebuild 1261
 MD5 1e2e39e780cb5a4348242df3ab9bcae5 gnome-python-1.4.4-r1.ebuild 1175
+RMD160 7a678a3440e7b1ee45618dd87fa9cc77e128f4fc gnome-python-1.4.4-r1.ebuild 1175
+SHA256 ec636ca7dac9eebb4d4caf05ba8ce90687d672e9f86dda380ea215a440609054 gnome-python-1.4.4-r1.ebuild 1175
 MD5 54b96012b8c9d68ff22f22fecb2ee06e gnome-python-1.4.4.ebuild 1206
+RMD160 0597b5ce9f787996c6a8b314891da486e6ea9dc6 gnome-python-1.4.4.ebuild 1206
+SHA256 9c302e1623d1f0f7076a1f851791b6aef555664cc53186aed99d3a4c07ecbe60 gnome-python-1.4.4.ebuild 1206
 MD5 0edce250970902c0703835e4ffb75bd8 gnome-python-2.0.0-r1.ebuild 1290
+RMD160 694e8ddeddab2dd95ba7dd08816abbee35de01fd gnome-python-2.0.0-r1.ebuild 1290
+SHA256 57b643f5da1c2a7ffa5feea4fbb005dd92fa26f5fdc4cbcedb8a6f0799db5d98 gnome-python-2.0.0-r1.ebuild 1290
 MD5 973907695edb60ef99341ea61a4f6460 gnome-python-2.0.0.ebuild 1083
+RMD160 e7dbd19129e8ad5129d2471ef0c958adc44d9680 gnome-python-2.0.0.ebuild 1083
+SHA256 95f589b2b338bb9223a308395b9a56b828771740527f934ecdff214a31dd518a gnome-python-2.0.0.ebuild 1083
 MD5 a2f2258f429e0dedf06a920dbd9f6eaa gnome-python-2.0.2.ebuild 1292
+RMD160 49f12ab069e392731b1e4ea9f824bb73c28a6af9 gnome-python-2.0.2.ebuild 1292
+SHA256 808a6cc485f4561d1fec3cbf7ab087340fd38fc808ebd3f302cfabb02fdc23ff gnome-python-2.0.2.ebuild 1292
 MD5 8b72ad43a7164d1f33e2dc1d839686c3 gnome-python-2.10.0.ebuild 1371
+RMD160 24fbda08c55d5127bba9657d88d5be5b21a5534c gnome-python-2.10.0.ebuild 1371
+SHA256 d2346089c276fc4e99bef16ea0fc2bf8b095db119818558d1398315840a40ef0 gnome-python-2.10.0.ebuild 1371
 MD5 e53fb7eed561b01c1690a413f62f5391 gnome-python-2.12.0.ebuild 1383
-MD5 5b433bb79b334c667cfb2d1970ed4f6e gnome-python-2.12.1.ebuild 1382
+RMD160 7a34497aecf1b508fa68698ebc38b42155941497 gnome-python-2.12.0.ebuild 1383
+SHA256 1a1923474a359b86b46080f2d6259353a44d6618daaec973dfa2f9efbfdb7437 gnome-python-2.12.0.ebuild 1383
+MD5 ba60369d7438d378a9b111b25b23c90c gnome-python-2.12.1.ebuild 1383
+RMD160 3ae6483f0a0815877eb576e5fa13f43a1c6f5d58 gnome-python-2.12.1.ebuild 1383
+SHA256 8605af352500654563b1f05fca70df37cdafccb3a3fefdc148c2036c0dc997e0 gnome-python-2.12.1.ebuild 1383
 MD5 c14b64ecfc7f2750f8ea4ec306144de9 gnome-python-2.6.1.ebuild 1558
+RMD160 3d5a01633fe8e024c4fbac974e5352b3f29a4152 gnome-python-2.6.1.ebuild 1558
+SHA256 344851b2ee13de9ba5e23712cdb7a5396da625690f7471b2d3da26ebcc3f2bcd gnome-python-2.6.1.ebuild 1558
 MD5 aab7d8b8a9c5777f5acad94eb998f367 metadata.xml 178
+RMD160 ec0937689a645defb2b870b481c4d4db57a0fa73 metadata.xml 178
+SHA256 ccdf4a821074a281d4fd442460b65f57e77546cea36756c435db5529d22fa2a6 metadata.xml 178
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5rtRJrHF4yAQTrARAtS2AKDGC58CyLf6hRyh05GiGrH+2WKtewCfVZ09
+GsUl3/msGCtHK4cKnSjB5cE=
+=+Xyo
+-----END PGP SIGNATURE-----
