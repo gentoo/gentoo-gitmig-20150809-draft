@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.12.1.ebuild,v 1.2 2006/02/06 23:50:25 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.12.3.ebuild,v 1.1 2006/02/06 23:50:25 compnerd Exp $
 
 inherit eutils gnome2
 
@@ -15,13 +15,16 @@ IUSE="xinerama"
 # not parallel-safe; see bug #14405
 MAKEOPTS="${MAKEOPTS} -j1"
 
-RDEPEND=">=x11-libs/gtk+-2.6
+RDEPEND=" >=x11-libs/gtk+-2.6
 	>=x11-libs/pango-1.2
 	>=gnome-base/gconf-2
 	>=dev-libs/glib-2.6
 	>=x11-libs/startup-notification-0.7
 	!x11-misc/expocity"
 
+# Needed for compositor
+#			x11-libs/libXdamage
+#			x11-libs/libXcomposite
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.9
@@ -43,7 +46,7 @@ src_unpack() {
 
 	# Fix the logout shortcut problems, by moving the keybindings
 	# into here, from control-center, fixes bug #52034
-	epatch ${FILESDIR}/${PN}-2-logout.patch
+	epatch "${FILESDIR}"/${PN}-2-logout.patch
 }
 
 pkg_postinst() {

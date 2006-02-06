@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8283c985059120c0b92e379456c4ac82 ChangeLog 15733
-RMD160 cfd172398239f20592d56aae4f0af82c37bda4f1 ChangeLog 15733
-SHA256 8568e4a124bc3a7af1252d5757f49116d7a6a304bb597b7d30edb2987a42797b ChangeLog 15733
+MD5 a0fd5e3f5f1442046c106ab2b0888d0d ChangeLog 15957
+RMD160 f2adcda5037c7ad0edddaa17139ad7e5c1a13573 ChangeLog 15957
+SHA256 e810ed9f8924c3502820c76db1e393dedb62ade68c732aedf9d7d3cc7cff8ba9 ChangeLog 15957
 MD5 8085853ac850bbbd443d6f4c030f39bf files/digest-metacity-2.10.3 69
 RMD160 d2a94556a655a668ff8a3d498332350279cbd20f files/digest-metacity-2.10.3 69
 SHA256 a0271980559e143058e73ede7418f4670b01d8ca3b4826174529424177dfcfbb files/digest-metacity-2.10.3 69
@@ -13,25 +10,24 @@ SHA256 d6102b99de2e9ad44e252765098cb547c83ea408dd2a432fbf71c6be3a90f0fb files/di
 MD5 52d6f3845641e5004a00cb8fffc1d8a8 files/digest-metacity-2.12.2 69
 RMD160 e131adcfc7d1484f25a80238cfbfe0422633ec67 files/digest-metacity-2.12.2 69
 SHA256 93c358c3166e95dd0e2ffdae08fc6fe83521a43006783993a87a5dfeddd97ecd files/digest-metacity-2.12.2 69
+MD5 82db570bc455da29b1d412e1c103d4ce files/digest-metacity-2.12.3 253
+RMD160 fcf018ebae11f71c99049d151bd6fc00f091c1cf files/digest-metacity-2.12.3 253
+SHA256 a8f9e5c7c4715d089bbdc1ba43202cd4c0a9d21772a2a4b6e0ff2b7059518cdf files/digest-metacity-2.12.3 253
 MD5 98f6fd8a6545a37a2ddf9b0e11ce54f7 files/metacity-2-logout.patch 7363
 RMD160 2e3a64b184d7d0714596025562cffe7903c89d6c files/metacity-2-logout.patch 7363
 SHA256 b2f8fea9a5c0b6220b6d87374ae6f636f23551a120dfb78d0ce5b8787c9ffde5 files/metacity-2-logout.patch 7363
-MD5 32bfb0fc7521103b5b5a4f5c6f32ce3a metacity-2.10.3.ebuild 1257
-RMD160 86a17a5f99d6ede5f148f756e10d0d8590972a1b metacity-2.10.3.ebuild 1257
-SHA256 faaf16864f76fa9f321126efb451fff3acb09bb1eee77e27da3722c925ca75d6 metacity-2.10.3.ebuild 1257
-MD5 7c3acd3b4aaeab17a989e45166252589 metacity-2.12.1.ebuild 1282
-RMD160 28fdb453bfbefcca03c18d2e12448349956e06ed metacity-2.12.1.ebuild 1282
-SHA256 c7154c0823a114c4e3e1bcad1ae33feef0cba817a55d951d66d6d80603865582 metacity-2.12.1.ebuild 1282
+MD5 913c2e6ee89b274bf22957d335be2469 metacity-2.10.3.ebuild 1245
+RMD160 497f2ff44aaa31da63aa14ce003bdd760edb94a6 metacity-2.10.3.ebuild 1245
+SHA256 1d44540204566b7cc404a4d075d82be84160768150f6946717a2df7025b9199a metacity-2.10.3.ebuild 1245
+MD5 e5aaba866655e16effa9c3ad6741687a metacity-2.12.1.ebuild 1268
+RMD160 1b9859f90cab7d65fb752d0eb2544cdd270ee89d metacity-2.12.1.ebuild 1268
+SHA256 956100ead9f81e09c0d1c2852697a7534a03d80c418fc1fca1b8a4bed595d45c metacity-2.12.1.ebuild 1268
 MD5 257b6d3e3a9861f1af05bedd502bf604 metacity-2.12.2.ebuild 1340
 RMD160 fcb2ec1b6a5d35d96cf3739c3ef4c864278a87b9 metacity-2.12.2.ebuild 1340
 SHA256 900f774e868c7cc9ace11423a09a71daa8e2934f607b7d51313ce028c04b77a3 metacity-2.12.2.ebuild 1340
+MD5 51277500e0d363eb8b934112e9656d1c metacity-2.12.3.ebuild 1346
+RMD160 8ed56709b60606c2ca3ea76d063c669c1fb260e1 metacity-2.12.3.ebuild 1346
+SHA256 2032e9b095f864b57d6709374505d3ef1341d279468bf5458f25d8303ec43726 metacity-2.12.3.ebuild 1346
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD59uuJrHF4yAQTrARAumFAJ4vMPJwTA0KrkePl0ASWpQYaCgw5QCfT8Xj
-CJitCyZEB1dHHcToMal7iOQ=
-=KODK
------END PGP SIGNATURE-----
