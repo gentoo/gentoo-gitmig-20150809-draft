@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.12.1.ebuild,v 1.8 2006/02/06 02:58:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.12.1.ebuild,v 1.9 2006/02/06 21:44:38 agriffis Exp $
 
 inherit gnome2 python eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.pygtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE="doc gtkhtml"
 
 RDEPEND=">=dev-lang/python-2.2

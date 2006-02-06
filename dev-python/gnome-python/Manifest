@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a70a2adde8de4a358160062748cc8df6 ChangeLog 7549
-RMD160 11ce522f892e698d2288966bbb8da116a166e9bb ChangeLog 7549
-SHA256 94819f0d430d8cd8e231854ed07e170e0db54c33438b5b8d5d22f30df9ea77d6 ChangeLog 7549
+MD5 da7e3bc8a7bafa6797d85cb45d1f2010 ChangeLog 7659
+RMD160 42fa08cec98ac281065c71747478b753a20fce47 ChangeLog 7659
+SHA256 39bb8190e5c68fed80d23d6c5c22053d7024fd733bfa24bbcb5d5bc255f4fc9e ChangeLog 7659
 MD5 7fd6852037c022d0f0f2413aabae59b4 files/digest-gnome-python-1.4.2 70
 RMD160 077e0a04ebb3f8e65f0faa1c2e76f926fc548329 files/digest-gnome-python-1.4.2 70
 SHA256 11fc18ddff5913de3cf056ec3a30900074cd2c5f0ebb37e89ad8321d265a2c91 files/digest-gnome-python-1.4.2 70
@@ -58,9 +58,9 @@ SHA256 d2346089c276fc4e99bef16ea0fc2bf8b095db119818558d1398315840a40ef0 gnome-py
 MD5 e53fb7eed561b01c1690a413f62f5391 gnome-python-2.12.0.ebuild 1383
 RMD160 7a34497aecf1b508fa68698ebc38b42155941497 gnome-python-2.12.0.ebuild 1383
 SHA256 1a1923474a359b86b46080f2d6259353a44d6618daaec973dfa2f9efbfdb7437 gnome-python-2.12.0.ebuild 1383
-MD5 ba60369d7438d378a9b111b25b23c90c gnome-python-2.12.1.ebuild 1383
-RMD160 3ae6483f0a0815877eb576e5fa13f43a1c6f5d58 gnome-python-2.12.1.ebuild 1383
-SHA256 8605af352500654563b1f05fca70df37cdafccb3a3fefdc148c2036c0dc997e0 gnome-python-2.12.1.ebuild 1383
+MD5 cd7d7b1528f6436f6a3ecd8d58dc4922 gnome-python-2.12.1.ebuild 1382
+RMD160 698f501d9c1a78e89259d7733cfb4a084cf08949 gnome-python-2.12.1.ebuild 1382
+SHA256 e09e8d26886a08ffaf2bafd15b552ef7af678306650f801cce4b9d8d4fbd818c gnome-python-2.12.1.ebuild 1382
 MD5 c14b64ecfc7f2750f8ea4ec306144de9 gnome-python-2.6.1.ebuild 1558
 RMD160 3d5a01633fe8e024c4fbac974e5352b3f29a4152 gnome-python-2.6.1.ebuild 1558
 SHA256 344851b2ee13de9ba5e23712cdb7a5396da625690f7471b2d3da26ebcc3f2bcd gnome-python-2.6.1.ebuild 1558
@@ -68,9 +68,9 @@ MD5 aab7d8b8a9c5777f5acad94eb998f367 metadata.xml 178
 RMD160 ec0937689a645defb2b870b481c4d4db57a0fa73 metadata.xml 178
 SHA256 ccdf4a821074a281d4fd442460b65f57e77546cea36756c435db5529d22fa2a6 metadata.xml 178
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD5rtRJrHF4yAQTrARAtS2AKDGC58CyLf6hRyh05GiGrH+2WKtewCfVZ09
-GsUl3/msGCtHK4cKnSjB5cE=
-=+Xyo
+iD8DBQFD58NQJrHF4yAQTrARAuVvAJ9xvkHGw+K3pmCOyfoElYDyO+bP8ACeO3tU
+ZgS8Fim1Y2IlCWWh1uIFqK4=
+=vZDt
 -----END PGP SIGNATURE-----
