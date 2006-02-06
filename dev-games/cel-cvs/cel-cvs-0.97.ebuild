@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel-cvs/cel-cvs-0.97.ebuild,v 1.10 2005/01/01 17:58:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel-cvs/cel-cvs-0.97.ebuild,v 1.11 2006/02/06 01:21:29 vapier Exp $
 
 ECVS_SERVER="cvs.cel.sourceforge.net:/cvsroot/cel"
 ECVS_MODULE="cel"
@@ -18,7 +18,7 @@ IUSE="python"
 
 RDEPEND="dev-games/crystalspace
 	dev-util/jam
-	!dev-games/cel-cvs
+	!dev-games/cel
 	python? ( virtual/python )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
