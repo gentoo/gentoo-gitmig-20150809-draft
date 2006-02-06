@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/cantus
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.14 2005/12/26 14:45:22 lu_zero Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.15 2006/02/06 20:37:09 chutzpah Exp $
+
+*cantus-20060206 (06 Feb 2006)
+
+  06 Feb 2006; <chutz@gentoo.org> +files/cantus.desktop,
+  +files/cantus-gentoo.patch, +cantus-20060206.ebuild:
+  Version bump to CVS pull. The latest stable version depends on depricated
+  versions of glibmm and gtkmm, and the CVS hasn't been updated in months.
 
   26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> cantus-1.07.ebuild,
   cantus-1.99.9.ebuild:
