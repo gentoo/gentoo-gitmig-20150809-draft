@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.4 2006/02/02 23:24:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.5 2006/02/06 15:18:51 anarchy Exp $
+
+  06 Feb 2006; <anarchy@gentoo.org> enigmail-0.93.1-r3.ebuild:
+  revision to patchset to incude makeopts patch
 
   02 Feb 2006; Luca Barbato <lu_zero@gentoo.org> enigmail-0.93.1-r3.ebuild:
   Marked ~ppc
