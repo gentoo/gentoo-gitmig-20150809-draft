@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.18.ebuild,v 1.4 2006/01/19 19:15:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.18.ebuild,v 1.5 2006/02/06 18:21:18 dertobi123 Exp $
 
 inherit debug eutils kde-functions
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha ~amd64 ~hppa ~ppc ~sparc x86"
 DEPEND="=x11-libs/qt-3*
 	dev-lang/perl
 	kde? ( >=kde-base/kdelibs-3.1
-		   >=kde-base/arts )"
+		   kde-base/arts )"
 
 pkg_setup() {
 	if use oracle && [ -z "$ORACLE_HOME" ] ; then
