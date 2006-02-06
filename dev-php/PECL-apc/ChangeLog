@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PECL-apc
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/ChangeLog,v 1.29 2005/09/10 23:10:10 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/ChangeLog,v 1.30 2006/02/06 20:56:08 blubb Exp $
+
+  06 Feb 2006; Simon Stelling <blubb@gentoo.org> PECL-apc-3.0.6.ebuild:
+  stable on amd64
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> PECL-apc-3.0.6.ebuild:
   Mark 3.0.6 stable on alpha
