@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-2.01.ebuild,v 1.2 2006/01/07 22:19:01 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-2.01.ebuild,v 1.3 2006/02/06 12:55:48 spock Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="xmms"
 
 RDEPEND="virtual/libc
-	 libao
+	 media-libs/libao
 	 xmms? ( >=media-sound/xmms-1.2.2 )"
 
 DEPEND="${RDEPEND}"
