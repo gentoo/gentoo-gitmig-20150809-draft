@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/radeontool-1.5-r3.ebuild,v 1.1 2005/11/10 01:01:35 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/radeontool-1.5-r3.ebuild,v 1.2 2006/02/06 19:31:50 blubb Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://fdd.com/software/radeon/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 
