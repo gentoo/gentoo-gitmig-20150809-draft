@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r2.ebuild,v 1.8 2006/01/03 17:12:13 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r2.ebuild,v 1.9 2006/02/06 10:19:22 herbs Exp $
 
-inherit flag-o-matic qt3
+inherit flag-o-matic qt3 multilib
 
 DESCRIPTION="Collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol"
 HOMEPAGE="http://www.gnupg.org/aegypten/"
@@ -27,6 +27,9 @@ src_compile() {
 	fi
 
 	append-ldflags $(bindnow-flags)
+
+	# Issues finding qt on multilib systems
+	export QTLIB="${QTDIR}/$(get_libdir)"
 
 	econf \
 		--disable-dependency-tracking \
