@@ -1,23 +1,49 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b1db11bd6ee9683d7822d48af232e863 ChangeLog 6753
+MD5 fa546ed893d8562698719ec450d6f9b1 ChangeLog 6867
+RMD160 3d27e36219886458ee5cd5084a0fffd47276060e ChangeLog 6867
+SHA256 81adcdc596f0260ad295ffd57cb0d2491b45c7a049b79fe22f8710e0d38a3695 ChangeLog 6867
 MD5 c7eea8e9fc52ce118ca126979309da45 files/digest-pilot-link-0.11.8 70
+RMD160 3e2b267a1954f3dfb64a9b90b6f4dca3d53f3686 files/digest-pilot-link-0.11.8 70
+SHA256 b78832069494015b873b22bbc31a49b1ff92768c8e257a68af139a6153039a76 files/digest-pilot-link-0.11.8 70
 MD5 c7eea8e9fc52ce118ca126979309da45 files/digest-pilot-link-0.11.8-r1 70
+RMD160 3e2b267a1954f3dfb64a9b90b6f4dca3d53f3686 files/digest-pilot-link-0.11.8-r1 70
+SHA256 b78832069494015b873b22bbc31a49b1ff92768c8e257a68af139a6153039a76 files/digest-pilot-link-0.11.8-r1 70
 MD5 bf74434daf1ebd09156aad1d90c93675 files/pilot-link-0.11.8-java_compile_amd64.patch 579
+RMD160 7dba17a59a303154acbd640e78f9028b54de0507 files/pilot-link-0.11.8-java_compile_amd64.patch 579
+SHA256 e2e6ce08665b39c4f945eae58c2554ad9f2bdbf13c8f19cc3cbf01f8f319bf07 files/pilot-link-0.11.8-java_compile_amd64.patch 579
 MD5 a90104dea453f1eed8b69ed821118caa files/pilot-link-0.11.8-java_fPIC_fix.patch 580
+RMD160 e6baf868f3474ee35f9de7f655c337d881e025e5 files/pilot-link-0.11.8-java_fPIC_fix.patch 580
+SHA256 b6ebf250b977fa0dc33ed7c72bf9f0624a36b388cd0078159ff6c88f62c7df45 files/pilot-link-0.11.8-java_fPIC_fix.patch 580
 MD5 90560348093b5a7b47849896f35b4d54 files/pilot-link-0.11.8-java_install_all.patch 562
+RMD160 e9d7db2998f14a02ba95df1807ca43a25561492b files/pilot-link-0.11.8-java_install_all.patch 562
+SHA256 c2b8dd22d337ce0411103101deccabd1d4421ae239234bd8aa410a97cf6d5a1a files/pilot-link-0.11.8-java_install_all.patch 562
 MD5 a664432d4308170abcc8201e3a1500bf files/pilot-link-0.11.8-java_install_amd64.patch 390
+RMD160 81ce9ff10740eeb3805ae0c6ef2f6d0d36c5cd9e files/pilot-link-0.11.8-java_install_amd64.patch 390
+SHA256 674165c22743a66378d75b6aedff427851259578ade68aa52ddc9e834cb8b840 files/pilot-link-0.11.8-java_install_amd64.patch 390
 MD5 73901859bb01a4c7aa0dbddf1d6e898a files/pilot-link-0.11.8-java_install_ppc.patch 560
+RMD160 4861489cc16ccaa87fed571d89c1cf83b45b93c8 files/pilot-link-0.11.8-java_install_ppc.patch 560
+SHA256 dd0f40f0e13cf86290e44d8891103d2d55eef04f3eeb9ac0edbd5ad9afeb76da files/pilot-link-0.11.8-java_install_ppc.patch 560
 MD5 93ddce2c38bb25e99877e9f08414d740 files/pilot-link-0.11.8-m4.patch 123
+RMD160 7f7eead683cc8366139fedab512511b29c3a156a files/pilot-link-0.11.8-m4.patch 123
+SHA256 cb23fecc34774bf84859658e93e248e15737783963c9f10f1b2a155b6079876f files/pilot-link-0.11.8-m4.patch 123
 MD5 cc5d291e67e5ebc1caa5cc3c401f3ced files/pilot-link-0.11.8-netsync.patch 4371
+RMD160 b5dc7a9fbce293551d0dd264b80ff98bade3dc5f files/pilot-link-0.11.8-netsync.patch 4371
+SHA256 5d64928b175e73c964b142c7a574d0e173633bb785f85b1468a83bf35d83ff5e files/pilot-link-0.11.8-netsync.patch 4371
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
-MD5 2ae3c1861cb08a4a4c769d35edc87a64 pilot-link-0.11.8-r1.ebuild 2237
+RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
+SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
+MD5 95c281c8ab9613ca52c30d2f9a623163 pilot-link-0.11.8-r1.ebuild 2236
+RMD160 c74b88653b6702abba0f3d65a415b672feaa0ae9 pilot-link-0.11.8-r1.ebuild 2236
+SHA256 e9eb8e07453ffc1b68e89d9de1b53220fe76f5cdb076402ff9f89851f0dc2357 pilot-link-0.11.8-r1.ebuild 2236
 MD5 9b169021a24b8ab07a468ec34532b55c pilot-link-0.11.8.ebuild 1879
+RMD160 a710414ec65220293ca6ab9cd867e5cecbfcf166 pilot-link-0.11.8.ebuild 1879
+SHA256 b7eaf2142d3db654a7898ac8fe71431ee650f7a4355b1293653ee3cb42407ba3 pilot-link-0.11.8.ebuild 1879
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDlg6xwUpWvClEHQoRAvtbAJ9mVtF4H+CExHz8ruAbrENkkK45FgCeOfZ7
-hlGI16oAhirRL7ScnDURkIE=
-=0+Z0
+iD8DBQFD5tjBJrHF4yAQTrARAvxXAJ0Ql9rYYKYMi2hbbCivT77Z2wnLHgCg0L0H
+ya9YEwZru6grdKo+Ujpy1v8=
+=jbDF
 -----END PGP SIGNATURE-----
