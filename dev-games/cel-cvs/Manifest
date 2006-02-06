@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 06096064cff2332ac7fcac1f21accc80 ChangeLog 505
 RMD160 65070873b2a11bcaff1ba4750cb16aac60464a71 ChangeLog 505
 SHA256 a0a958ba53fd792fc5cd314a0990322df618decafbf9ceaa90ab58bb92a8ec8a ChangeLog 505
-MD5 34c81b53b2c1375b1f151499f04ea462 cel-cvs-0.97.ebuild 1030
-RMD160 eaf93d4cbba2e2f9a5293460f2d51ee5afb2f12c cel-cvs-0.97.ebuild 1030
-SHA256 2a97e56053751eec5eaccfd8d2c395222827ced8b9e96cf627a93c24e3d7fd26 cel-cvs-0.97.ebuild 1030
+MD5 5c5c7ca14dca25b4efe1527bf0665529 cel-cvs-0.97.ebuild 1030
+RMD160 6d765265b2adeff7fb13bad4d5101240d7024eb6 cel-cvs-0.97.ebuild 1030
+SHA256 16a7f4fa97d900745a4bddd564db8e168a382bfa6b32f513cdb6a32dd6f0b1d4 cel-cvs-0.97.ebuild 1030
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-cel-cvs-0.97 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-cel-cvs-0.97 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-cel-cvs-0.97 0
@@ -16,7 +16,7 @@ SHA256 c96305c874ff05e3287baf97bd5e9d6d58749156b33e596e8c31e1875a81baf1 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD5qSt2+ySkm8kpY0RApjmAKCaX/I0FwdsMYpJ/ycx9Ya/MihABQCfXnTs
-fNYs88AdYxJnWelGl8MHS3k=
-=Wra9
+iD8DBQFD5qTN2+ySkm8kpY0RAq2RAJ9Tose/2Y8hznUNOPXAfPPOiwwx3QCfduoM
+iWs5BtzzTb9vO1jSlPRvhEM=
+=ElL+
 -----END PGP SIGNATURE-----
