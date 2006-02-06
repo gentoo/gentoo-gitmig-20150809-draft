@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1.ebuild,v 1.6 2006/01/22 19:32:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1.ebuild,v 1.7 2006/02/06 17:39:38 wolf31o2 Exp $
 
 
 inherit flag-o-matic eutils games
@@ -29,7 +29,7 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	|| (
-		x11-libs/libX1
+		x11-libs/libX11
 		virtual/x11 )"
 
 src_compile() {
