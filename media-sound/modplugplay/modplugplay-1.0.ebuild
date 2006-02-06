@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/modplugplay/modplugplay-1.0.ebuild,v 1.3 2005/07/25 13:20:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/modplugplay/modplugplay-1.0.ebuild,v 1.4 2006/02/06 20:42:26 flameeyes Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-	$(tc-getCC) -o modplugplay modplugplay.c $(pkg-config libmodplug --cflags --libs)
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o modplugplay modplugplay.c $(pkg-config libmodplug --cflags --libs)
 }
 
 src_install() {
