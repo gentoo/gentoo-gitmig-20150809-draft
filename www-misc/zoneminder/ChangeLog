@@ -1,6 +1,13 @@
 # ChangeLog for www-misc/zoneminder
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.11 2006/02/06 21:51:24 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.12 2006/02/06 22:02:52 rl03 Exp $
+
+*zoneminder-1.22.0 (06 Feb 2006)
+
+  06 Feb 2006; Renat Lumpau <rl03@gentoo.org> +files/postinstall-2.txt,
+  +files/Makefile.am.patch, +files/conf.d, +files/init.d,
+  +files/postupgrade.txt, +zoneminder-1.22.0.ebuild:
+  Version bump
 
   06 Feb 2006; Renat Lumpau <rl03@gentoo.org> -zoneminder-0.9.12.ebuild,
   -zoneminder-1.21.2.ebuild, -zoneminder-1.21.3.ebuild:
