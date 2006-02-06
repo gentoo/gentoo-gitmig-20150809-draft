@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6402cf5bb60c3f762fdd5116790ddb0c ChangeLog 616
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Harness-2.30 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Harness-2.42 0
@@ -8,3 +11,10 @@ MD5 8bb81aafab44bc6848ea40f594b22bfb perl-Test-Harness-2.30.ebuild 470
 MD5 cfcb490b56f28cb1ae7128f72bcb86ce perl-Test-Harness-2.42.ebuild 493
 MD5 75c3f8b1532d49f8f4f0272c3619ac0f perl-Test-Harness-2.52.ebuild 505
 MD5 ed176d29e135953526337f3acddeb207 perl-Test-Harness-2.56.ebuild 505
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD54HqtG5z4I8BtQoRAmYXAKCSFFPK5987YbTLlBzjy152zpwCEgCfaYdX
+Zy54adzGXwOkRFXb0Gag+Ng=
+=Nfvt
+-----END PGP SIGNATURE-----
