@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/gccmakedep
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gccmakedep/ChangeLog,v 1.8 2006/02/02 20:00:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gccmakedep/ChangeLog,v 1.9 2006/02/06 19:33:24 spyderous Exp $
+
+*gccmakedep-1.0.1-r1 (06 Feb 2006)
+
+  06 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/force-rm.patch, -gccmakedep-1.0.1.ebuild,
+  +gccmakedep-1.0.1-r1.ebuild:
+  (#119719) RM needs to use 'rm -f' to ensure non-interactivity.
 
   02 Feb 2006; <nixnut@gentoo.org> gccmakedep-1.0.1.ebuild:
   Added ~ppc keyword. bug 120289
