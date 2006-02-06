@@ -1,13 +1,49 @@
-MD5 5166e30937ac6b615155aba86de3ab4f ChangeLog 15000
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d211e027977fdf027b41edcd1fd0be0b ChangeLog 15104
+RMD160 9f8170e197cc0a07144a39ed5ab5f755041c58ae ChangeLog 15104
+SHA256 392cbf761ee136a2c4333cdf428917d0a77750c67d6e890842d073e068d8885a ChangeLog 15104
 MD5 b1cd4f5d4adf64b0c6ce68ebe818a495 files/digest-gedit-0.9.6-r1 64
+RMD160 9604c5efcc4f8d6c54f033e3c8292dcc5b496566 files/digest-gedit-0.9.6-r1 64
+SHA256 465b5ad26373452acce0319fb87948572e4d151a61dcad663072344cc50b8d51 files/digest-gedit-0.9.6-r1 64
 MD5 763002eaf1fd9644372270e02cd47510 files/digest-gedit-2.10.3 66
+RMD160 9d29fd08ad202e34910abcfafceb41a949c1f0da files/digest-gedit-2.10.3 66
+SHA256 bfaca9859a116fea1713d95f9980d5553c3ac503c90f1746bb8c6ff904883a89 files/digest-gedit-2.10.3 66
 MD5 763002eaf1fd9644372270e02cd47510 files/digest-gedit-2.10.3-r1 66
+RMD160 9d29fd08ad202e34910abcfafceb41a949c1f0da files/digest-gedit-2.10.3-r1 66
+SHA256 bfaca9859a116fea1713d95f9980d5553c3ac503c90f1746bb8c6ff904883a89 files/digest-gedit-2.10.3-r1 66
 MD5 1d8fc370226e4acd4e615525c71b7523 files/digest-gedit-2.10.5 66
+RMD160 1838a53fc06c87554d5bf9885a4b9059928ef13d files/digest-gedit-2.10.5 66
+SHA256 676f4c29f9dc004e6eb4b7fd9ef48b43a1edd4a684ae20f881b66c26212b3b06 files/digest-gedit-2.10.5 66
 MD5 84099540298e65ee9fe99084d68bf64c files/digest-gedit-2.12.1 66
+RMD160 3133823c78703d9b996b15ebeb9413798a1f9dc0 files/digest-gedit-2.12.1 66
+SHA256 87515f7744032a063efc38896edd84d559c3457f12465b738de8a402a1903881 files/digest-gedit-2.12.1 66
 MD5 6f76e9b4ff65bbb24f6e2ce5b47f8a9e files/gedit-2.10.3-save_as.patch 5434
+RMD160 bdb1acdb18c8ae47c1d3aad0027fcf653696d883 files/gedit-2.10.3-save_as.patch 5434
+SHA256 e005550380603696a1787e2b1a3b6759381ab0a92cd793a849a696e50c645409 files/gedit-2.10.3-save_as.patch 5434
 MD5 291dcd2524b897c18af75968be9c0ef3 gedit-0.9.6-r1.ebuild 905
+RMD160 cbe5ae00a817c884d45bb4519a470b8a0d0f5618 gedit-0.9.6-r1.ebuild 905
+SHA256 8e9aa58614d38a3bbdd9a2dbcde3635303b646af0aad65e2c2964bc8ad0a12c2 gedit-0.9.6-r1.ebuild 905
 MD5 2e3a9745a373aa384d93662c048eea05 gedit-2.10.3-r1.ebuild 1078
+RMD160 e9912fef4b2dfa8227456f584dd176f21a282e11 gedit-2.10.3-r1.ebuild 1078
+SHA256 b6eada354aeaae1c68c847b2388fef414105f9378f0c22db16c9acf51eb2b3bf gedit-2.10.3-r1.ebuild 1078
 MD5 8f1e9c292ba4538868f72a7413279984 gedit-2.10.3.ebuild 923
+RMD160 b5d17f1ad8cab0f75b0e6da5bb131e624e9d1f9a gedit-2.10.3.ebuild 923
+SHA256 54ef2da98243cd939d3164e9c569cefbd7a9001c3dbece37ff954cb60540e501 gedit-2.10.3.ebuild 923
 MD5 21be6ae25fea18ed5c0045e4dce9e0bb gedit-2.10.5.ebuild 1024
-MD5 c0da20f0651557001b9e8fe9213121cc gedit-2.12.1.ebuild 980
+RMD160 58430c845f56e6f0e39dfcf70d54ef7968aded1a gedit-2.10.5.ebuild 1024
+SHA256 30fb343beddcc84597ca4b15e4224bbf6cc56f2e34414c414559fab25040de03 gedit-2.10.5.ebuild 1024
+MD5 1bd6fa5d2cf7e51aa9202a0dfdaabc5e gedit-2.12.1.ebuild 981
+RMD160 3be19b784474214779b6b09c2d25755bfce2dc96 gedit-2.12.1.ebuild 981
+SHA256 5e89811cafcf95cc687dc80f815dbcc21df0f3e821b7249fbd729ae2a75b2d32 gedit-2.12.1.ebuild 981
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD5uhmJrHF4yAQTrARAhqUAKCiMUDYstb6Y4GAIDVAb+h7egORfgCfTtyp
+razTc509KZqGu3ymJpkZKtM=
+=GYTo
+-----END PGP SIGNATURE-----

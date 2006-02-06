@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.134 2006/02/03 17:41:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.135 2006/02/06 06:10:36 agriffis Exp $
+
+  06 Feb 2006; Aron Griffis <agriffis@gentoo.org> gedit-2.12.1.ebuild:
+  Mark 2.12.1 stable on alpha
 
   03 Feb 2006; Guy Martin <gmsoft@gentoo.org> gedit-2.12.1.ebuild:
   Stable on hppa.
