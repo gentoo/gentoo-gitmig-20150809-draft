@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.20 2006/01/19 16:45:37 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.21 2006/02/06 20:59:34 blubb Exp $
+
+  06 Feb 2006; Simon Stelling <blubb@gentoo.org>
+  logilab-common-0.9.3.ebuild:
+  stable on amd64
 
 *logilab-common-0.13.0-r1 (19 Jan 2006)
 
