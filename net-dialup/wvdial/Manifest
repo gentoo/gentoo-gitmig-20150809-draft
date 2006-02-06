@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0102275c5e6689c462ba43a94e72adb2 ChangeLog 4123
+MD5 f2ff8e0d9ec28dd0f99ef632ad2891d1 ChangeLog 4234
+RMD160 0e71550977dc097a57c559beafc37c01db8c93c4 ChangeLog 4234
+SHA256 1b493b422a69098af8439891665d6b4d24f6a3d6f3ee61b7bfbcb21518493ccd ChangeLog 4234
 MD5 3827cdddb51c272de82c6ac8b54a862f files/digest-wvdial-1.54.0 64
+RMD160 ad6a29e6ded5e9ca743c97c054bbc17c11d783c2 files/digest-wvdial-1.54.0 64
+SHA256 0d50e2ddf33b13c232f196c4f6806e804eae741051012cfaabed95da2b754112 files/digest-wvdial-1.54.0 64
 MD5 3827cdddb51c272de82c6ac8b54a862f files/digest-wvdial-1.54.0-r1 64
+RMD160 ad6a29e6ded5e9ca743c97c054bbc17c11d783c2 files/digest-wvdial-1.54.0-r1 64
+SHA256 0d50e2ddf33b13c232f196c4f6806e804eae741051012cfaabed95da2b754112 files/digest-wvdial-1.54.0-r1 64
 MD5 3bb0fa07eb7345c3bcc2d997d370ad46 files/digest-wvdial-1.55 62
+RMD160 905e678c35c2f0898b8c20b94a8fd2e5cd789934 files/digest-wvdial-1.55 62
+SHA256 a304095c20774140f5c222b95ba8fec2c20b300caa570267817c8e0e83b036de files/digest-wvdial-1.55 62
 MD5 13027538df397231d92c81c639afac4e files/wvdial-1.54.0-destdir.patch 426
+RMD160 70844bdb1f8d75d30acd9f48425e00ac9bb594e4 files/wvdial-1.54.0-destdir.patch 426
+SHA256 88013af715f2e0ddf528dacd8a4d8e042f1087aa6931b551ef74bf86e65ea5c4 files/wvdial-1.54.0-destdir.patch 426
 MD5 1489ec41710bdf170ba0c316d0a8c454 files/wvdial-1.54.0-makefile.patch 960
+RMD160 f10121bcf6aee4388fb99f4ba9920b3858f7bc20 files/wvdial-1.54.0-makefile.patch 960
+SHA256 ba539e579980c7301d86c013ec897ced324a7f863729db6b787401a960a78fe8 files/wvdial-1.54.0-makefile.patch 960
 MD5 c886af611ca16a54eacb6cf2487e94e7 files/wvdial-1.55-destdir.patch 500
+RMD160 6d39c9cc49cc6e57b4014fa12db6da7bf7f3d9cc files/wvdial-1.55-destdir.patch 500
+SHA256 7c4b949e1863b2e993a56043c7124a46376d5a71d1cc86071b1142a4b4817619 files/wvdial-1.55-destdir.patch 500
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 24b2b9453f0709d547d6b25aae86bd28 wvdial-1.54.0-r1.ebuild 1097
+RMD160 df94c60cc0bb7abe5913b464a33966b142b2fe1e metadata.xml 163
+SHA256 1137a0fd866641cf719b0c2e9e77ca9fa4541a42f2cc851fe4659cf2677acca3 metadata.xml 163
+MD5 db91309fc5b414b32b2c62ce661cb2e8 wvdial-1.54.0-r1.ebuild 1096
+RMD160 c128e3a04a04359c9bfe7bd4824c3da0b196f1af wvdial-1.54.0-r1.ebuild 1096
+SHA256 2b0568f4138d208b5e882607594f96b940543f9176f244d3f90b3ddf929070b3 wvdial-1.54.0-r1.ebuild 1096
 MD5 63189544a387e153bc3e906e0f64d87e wvdial-1.54.0.ebuild 1071
+RMD160 0545f03a2bd473eb93fb01c7ebfd467cabdd7e6f wvdial-1.54.0.ebuild 1071
+SHA256 f8b473d36ab102c440883ac5d4ad661c1778af256d34eef80aa11219d4fc3ca4 wvdial-1.54.0.ebuild 1071
 MD5 67905ddace207be8eb65fe163136d042 wvdial-1.55.ebuild 952
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD477KjG8pv1lIUX4RAg2cAJ9xSNEdRCAfPv6hwTtq1CeOC38MBACfQpvv
-haxT7KePkYVx6oHST8qRymI=
-=pSFM
------END PGP SIGNATURE-----
+RMD160 40933053cdfcd9ae522ee7583955be39e6304467 wvdial-1.55.ebuild 952
+SHA256 a9bdba58f3c09d7e4e9b8bc7f286b8525472e576eb3d0ffbb9b1551643d54a65 wvdial-1.55.ebuild 952
