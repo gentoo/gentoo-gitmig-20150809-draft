@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-2.0.9.ebuild,v 1.2 2006/01/08 17:52:48 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-2.0.9.ebuild,v 1.3 2006/02/06 05:43:47 compnerd Exp $
 
 inherit gnome2 eutils
 
@@ -18,11 +18,11 @@ RDEPEND=">=gnome-base/gconf-2.0
 		 >=dev-python/pygtk-2.4
 		 >=dev-python/gnome-python-2.6
 		 >=gnome-base/gnome-vfs-2.8
-		 >=media-gfx/graphviz
+		 media-gfx/graphviz
 		 >=dev-python/reportlab-1.11"
 DEPEND="${RDEPEND}
 		sys-devel/gettext
-		|| ( sys-libs/glibc libiconv )
+		|| ( sys-libs/glibc dev-libs/libiconv )
 		app-text/scrollkeeper
 		dev-util/pkgconfig"
 
