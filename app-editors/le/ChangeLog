@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/le
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/le/ChangeLog,v 1.7 2005/08/28 17:07:53 metalgod Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/le/ChangeLog,v 1.8 2006/02/06 01:04:04 truedfx Exp $
+
+*le-1.12.5 (06 Feb 2006)
+
+  06 Feb 2006; Harald van Dĳk <truedfx@gentoo.org> +metadata.xml,
+  +le-1.12.5.ebuild:
+  Version bump (#94040) with workaround for linux-headers issue (#121657)
+  Marked myself as maintainer
 
   28 Aug 2005; Luis Medinas <metalgod@gentoo.org> le-1.9.2.ebuild:
   Added ~amd64 keywords. Closes bug #103755.
