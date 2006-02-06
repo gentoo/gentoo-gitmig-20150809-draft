@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.0_p3.ebuild,v 1.1 2006/02/04 16:30:27 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.0_p3.ebuild,v 1.2 2006/02/06 15:18:30 mattam Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_unpack()
 
 	if has_version ">=dev-lang/ocaml-3.09";
 	then
-		epatch ${DISTFILES}/${P}-ocaml-3.09.patch.gz
+		epatch ${WORKDIR}/${P}-ocaml-3.09.patch
 	fi
 }
 
