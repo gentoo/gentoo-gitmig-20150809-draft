@@ -1,0 +1,22 @@
+=== modified file 'setup.py'
+--- setup.py	
++++ setup.py	
+@@ -89,7 +89,8 @@
+     os.chdir("..")
+ 
+ def main():
+-    build_docs()
++    if "NODOCS" not in os.environ:
++        build_docs()
+     data_files = [("pysqlite2-doc",
+                         glob.glob("doc/*.html") \
+                       + glob.glob("doc/*.txt") \
+@@ -119,7 +120,6 @@
+             package_dir = {"pysqlite2": "lib"},
+             packages = ["pysqlite2", "pysqlite2.test"],
+             scripts=[],
+-            data_files = data_files,
+             package_data = package_data,
+ 
+             ext_modules = [Extension( name="pysqlite2._sqlite",
+

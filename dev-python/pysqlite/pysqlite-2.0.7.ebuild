@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-2.0.7.ebuild,v 1.2 2006/02/05 23:42:56 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-2.0.7.ebuild,v 1.3 2006/02/06 22:01:13 marienz Exp $
 
-inherit distutils
+inherit distutils eutils
 
 IUSE="doc"
 DESCRIPTION="Python wrapper for the local database Sqlite"
@@ -15,14 +15,36 @@ SLOT="2"
 
 DEPEND=">=dev-lang/python-2.3
 	>=dev-db/sqlite-3.1
-	>=dev-python/setuptools-0.6_alpha9"
+	>=dev-python/setuptools-0.6_alpha9
+	doc? (
+		dev-python/docutils
+		app-text/silvercity
+		!=app-text/silvercity-0.9.6
+	)"
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e "s:data_files = data_files,:data_files = [],:" ${S}/setup.py
+	cd "${S}"
+
+	# make setup.py not compile docs if NODOCS is set and not install them
+	epatch "${FILESDIR}/${P}-setup.py-doc-fixes.patch"
+
+	# use a nonexistant test file in ${T} instead of / to prevent
+	# sandbox problems
+	sed -i -e 's:/foo/bar/:${T}/foo/bar/:' lib/test/dbapi.py
+}
+
+src_compile() {
+	if ! use doc; then
+		export NODOCS=1
+	fi
+	distutils_src_compile
 }
 
 src_install() {
+	if ! use doc; then
+		export NODOCS=1
+	fi
 	${python} setup.py install --root=${D} --no-compile \
 		--single-version-externally-managed "$@" || die
 
@@ -45,5 +67,5 @@ src_install() {
 
 src_test() {
 	cd build/lib*
-	PYTHONPATH=. python ../../scripts/test-pysqlite || die "test failed"
+	PYTHONPATH=. ${python} ../../scripts/test-pysqlite || die "test failed"
 }
