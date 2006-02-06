@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/libexif-gtk-0.3.5.ebuild,v 1.4 2005/10/13 19:42:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/libexif-gtk-0.3.5.ebuild,v 1.5 2006/02/06 14:34:57 gustavoz Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://libexif.sf.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ia64 ~ppc sparc ~x86"
 
 DEPEND="dev-util/pkgconfig
 		>=x11-libs/gtk+-2.0
