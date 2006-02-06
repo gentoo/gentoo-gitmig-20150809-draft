@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.15 2006/01/31 19:34:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.16 2006/02/06 22:25:05 liquidx Exp $
+
+*pyzor-0.4.0-r2 (06 Feb 2006)
+
+  06 Feb 2006; Alastair Tse <liquidx@gentoo.org> +files/debian_mbox.patch,
+  +files/handle_unknown_encodings.patch, +files/unknown_type.patch,
+  +pyzor-0.4.0-r2.ebuild:
+  including patches that are apparently essential for this to even work.
+  (#120370)
 
   31 Jan 2006; Aron Griffis <agriffis@gentoo.org> pyzor-0.4.0-r1.ebuild:
   Mark 0.4.0-r1 stable on alpha

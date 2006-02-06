@@ -1,28 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 64258178170b77e27c83974bad575524 ChangeLog 1750
-RMD160 5ea1980465c414e235aee922c9b6b7e58eab8312 ChangeLog 1750
-SHA256 36e4e6e3122f3f27f72893fbb38c32fb1218eb5e45a2e2e94f22fa22e821e290 ChangeLog 1750
+MD5 36aa6c24d0c37064a602e9816e3f71ea ChangeLog 2035
+MD5 883d7b506158bac65ae416cfbbb30736 files/debian_mbox.patch 11250
 MD5 3f779e11cd93d820e75567bf24ab2e37 files/digest-pyzor-0.4.0 63
-RMD160 e67bc32cb016a2bc495f4ab99155ce8957b0110b files/digest-pyzor-0.4.0 63
-SHA256 95d3780ce06a3a1744df3111bd206fda0209bd4c257d7ec5fdac72dfc4c77e93 files/digest-pyzor-0.4.0 63
 MD5 3f779e11cd93d820e75567bf24ab2e37 files/digest-pyzor-0.4.0-r1 63
-RMD160 e67bc32cb016a2bc495f4ab99155ce8957b0110b files/digest-pyzor-0.4.0-r1 63
-SHA256 95d3780ce06a3a1744df3111bd206fda0209bd4c257d7ec5fdac72dfc4c77e93 files/digest-pyzor-0.4.0-r1 63
+MD5 3f779e11cd93d820e75567bf24ab2e37 files/digest-pyzor-0.4.0-r2 63
+MD5 82dccdcfa0df0b39e37c784a84c3d1a4 files/handle_unknown_encodings.patch 3216
+MD5 6e1a6983f5565656d563fb0d89bf45a9 files/unknown_type.patch 472
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
-SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
 MD5 27c4e241c491a3ce40991657e49c5a7d pyzor-0.4.0-r1.ebuild 846
-RMD160 a8a8b6a95149efa277884054d4bb020d4a3e1968 pyzor-0.4.0-r1.ebuild 846
-SHA256 87df88ae227a9511a93bb7f70aeaaf34a681c782e4ea669a95b4432efdde114d pyzor-0.4.0-r1.ebuild 846
+MD5 70a5b5d9378db281b30d1c9b7075a725 pyzor-0.4.0-r2.ebuild 1017
 MD5 3c170e1cf94bfddbe3588e4b6e231510 pyzor-0.4.0.ebuild 656
-RMD160 cfb0dffbcba45550bce44d3e6da75d1c40b53338 pyzor-0.4.0.ebuild 656
-SHA256 1d73587173c5ab19ef220619d6a2574fbffff43a54d0177ff3f051ad53afc199 pyzor-0.4.0.ebuild 656
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4+WXJrHF4yAQTrARAoIrAJ0Y6AfhhUZTfCNe5DSyzCo+7I3BogCgujGP
-urQYLazJABnbOPp7KhPhJMY=
-=Ym/7
+iD4DBQFD58zO9ZFPrqoILX8RAhFYAJ97E0WUt81IRAAngYrwPAco3DEgZwCY0/1n
+bE1S4jGUhHu7+8Ql9g8FpA==
+=oSqO
 -----END PGP SIGNATURE-----
