@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.12.3.ebuild,v 1.1 2006/02/06 19:27:57 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.12.3.ebuild,v 1.2 2006/02/06 21:05:04 compnerd Exp $
 
 inherit eutils gnome2 autotools
 
@@ -91,6 +91,6 @@ src_unpack() {
 	_elibtoolize --force --copy || die
 	eautoheader || die
 	eautomake || die
-	intltoolize --foce || die
+	intltoolize --force || die
 	eautoconf || die
 }
