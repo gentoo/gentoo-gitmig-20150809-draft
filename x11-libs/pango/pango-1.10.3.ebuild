@@ -1,43 +1,54 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.8.1.ebuild,v 1.10 2006/02/06 22:27:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.10.3.ebuild,v 1.1 2006/02/06 22:27:30 compnerd Exp $
 
-inherit gnome2 eutils
+inherit eutils gnome2
 
 DESCRIPTION="Text rendering and layout library"
 HOMEPAGE="http://www.pango.org/"
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2"
 
 LICENSE="LGPL-2 FTL"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
-IUSE="doc static"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="doc"
 
-RDEPEND="|| (
-				(
-					x11-libs/libXt
-					x11-libs/libX11
-					x11-libs/libXrender
-				)
-				virtual/x11
-			)
+RDEPEND="|| ( (
+		x11-libs/libXrender
+		x11-libs/libX11
+		x11-libs/libXt
+		)
+	virtual/x11 )
 	virtual/xft
-	>=dev-libs/glib-2.6
+	>=dev-libs/glib-2.5.7
 	>=media-libs/fontconfig-1.0.1
-	>=media-libs/freetype-2"
+	>=media-libs/freetype-2
+	>x11-libs/cairo-0.5.2"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0
-	doc? ( >=dev-util/gtk-doc-1 )"
+	>=dev-util/pkgconfig-0.9
+	|| ( x11-proto/xproto virtual/x11 )
+	doc? (
+		>=dev-util/gtk-doc-1
+		~app-text/docbook-xml-dtd-4.1.2 )"
+
+DOCS="AUTHORS ChangeLog* NEWS README TODO*"
+USE_DESTDIR="1"
+
+
+pkg_setup() {
+	if ! built_with_use -a x11-libs/cairo png X; then
+		einfo "Please re-emerge x11-libs/cairo with the png and X USE flags set"
+		die "cairo needs png and X flags set"
+	fi
+}
 
 src_unpack() {
+	unpack "${A}"
+	cd "${S}"
 
-	unpack ${A}
-
-	cd ${S}
 	# Some enhancements from Redhat
 	epatch ${FILESDIR}/pango-1.0.99.020606-xfonts.patch
-	epatch ${FILESDIR}/${PN}-1.2.2-slighthint.patch
+	epatch ${FILESDIR}/${PN}-1.10.2-slighthint.patch
 
 	# make config file location host specific so that a 32bit and 64bit pango
 	# wont fight with each other on a multilib system
@@ -47,12 +58,7 @@ src_unpack() {
 	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && epatch ${FILESDIR}/pango-1.2.5-lib64.patch
 
 	epunt_cxx
-
 }
-
-DOCS="AUTHORS ChangeLog README INSTALL NEWS TODO*"
-
-G2CONF="${G2CONF} `use_enable static`"
 
 src_install() {
 
@@ -70,10 +76,8 @@ pkg_postinst() {
 		einfo "Generating modules listing..."
 		use amd64 && PANGO_CONFDIR="/etc/pango/${CHOST}"
 		use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && PANGO_CONFDIR="/etc/pango/${CHOST}"
-		PANGO_CONFDIR=${PANGO_CONFDIR:=/etc/pango/}
-		pango-querymodules > /${PANGO_CONFDIR}/pango.modules
+		PANGO_CONFDIR=${PANGO_CONFDIR:=/etc/pango}
+		pango-querymodules > ${PANGO_CONFDIR}/pango.modules
 	fi
 
 }
-
-USE_DESTDIR="1"

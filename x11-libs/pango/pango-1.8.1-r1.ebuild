@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.8.1-r1.ebuild,v 1.11 2005/10/11 14:49:04 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.8.1-r1.ebuild,v 1.12 2006/02/06 22:27:30 compnerd Exp $
 
 inherit gnome2 eutils
 
@@ -13,7 +13,14 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="doc static"
 
-RDEPEND="virtual/x11
+RDEPEND="|| (
+				(
+					x11-libs/libXt
+					x11-libs/libX11
+					x11-libs/libXrender
+				)
+				virtual/x11
+			)
 	virtual/xft
 	>=dev-libs/glib-2.6
 	>=media-libs/fontconfig-1.0.1
