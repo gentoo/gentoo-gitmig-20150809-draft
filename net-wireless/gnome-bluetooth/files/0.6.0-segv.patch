@@ -1,0 +1,9 @@
+--- src/permissiondialog.gob	2005/08/01 22:00:40	1.9
++++ src/permissiondialog.gob	2005/09/05 12:53:05	1.10
+@@ -120,7 +120,6 @@
+         gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (self),
+ 	    "%s", explanation ? explanation :
+ 	    _("An external device is attempting to connect to your computer via Bluetooth. You must decide if you want to accept the connection."));
+-        g_free (title_markup);
+ 
+         /* remember this button */
