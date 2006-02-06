@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: mysql.eselect,v 1.7 2006/02/05 14:22:46 vivo Exp $
+# $Id: mysql.eselect,v 1.8 2006/02/06 10:31:11 vivo Exp $
 
 DESCRIPTION="Manage the /usr/lib/*mysql* links"
 MAINTAINER="vivo@gentoo.org"
-SVN_DATE='$Date: 2006/02/05 14:22:46 $'
+SVN_DATE='$Date: 2006/02/06 10:31:11 $'
 VERSION=$(svn_date_to_version "${SVN_DATE}" )
-MYSQL_SYMLINK_CHECKDIR="${ROOT}/usr/sbin"
+MYSQL_SYMLINK_CHECKDIR="${ROOT}/usr/bin"
 ERR_NOT_FOUND="(not-found)"
 # "unset" is grepped by the MySQL ebuild so don't touch it
 ERR_UNSET="(unset)"
@@ -36,9 +36,8 @@ function version4bash() {
 find_versions() {
 	local versions list
 	# "eselect mysql set 1" will always set the best version
-	list=${MYSQL_SYMLINK_CHECKDIR}/mysqld-*
-	[[ ${list##/} == mysqld-* ]] && return
-	for x in ${MYSQL_SYMLINK_CHECKDIR}/mysqld-* ; do
+	list=$( ls ${MYSQL_SYMLINK_CHECKDIR}/perror-* 2>/dev/null )
+	for x in ${list} ; do
 		versions=( $( version4human ${x##*-}) ${versions[@]} )
 	done
 	echo ${versions[@]}
@@ -177,7 +176,7 @@ get_version_fromlist() {
 }
 
 get_current_version() {
-	link=$(readlink ${MYSQL_SYMLINK_CHECKDIR}/mysqld)
+	link=$(readlink ${MYSQL_SYMLINK_CHECKDIR}/perror)
 	version=${link##*-}
 
 	if ! is_number "${version}" || [[ "${version}" == "" ]] ; then
@@ -312,7 +311,7 @@ describe_remove() {
 
 do_remove() {
 
-	local version=$(readlink "${MYSQL_SYMLINK_CHECKDIR}/mysqld")
+	local version=$(readlink "${MYSQL_SYMLINK_CHECKDIR}/perror")
 	version=$(version4human "${version##*-}")
 
 	if [[ -z "${version}" ]] ; then
