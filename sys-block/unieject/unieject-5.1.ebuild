@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-5.1.ebuild,v 1.3 2006/01/13 19:31:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-5.1.ebuild,v 1.4 2006/02/06 12:54:15 flameeyes Exp $
+
+inherit libtool
 
 DESCRIPTION="Multiplatform command to eject and load CD-Rom drives"
 HOMEPAGE="http://dev.gentoo.org/~flameeyes/projects"
@@ -29,6 +31,8 @@ src_unpack() {
 	# FreeBSD.
 	sed -i -e '/freebsd/s:libcdiomin="0\.76":libcdiomin="0.75":' \
 		${S}/configure
+
+	elibtoolize
 }
 
 src_compile() {
