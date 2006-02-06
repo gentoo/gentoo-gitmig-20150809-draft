@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libksnmp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libksnmp/ChangeLog,v 1.3 2005/12/10 13:27:47 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libksnmp/ChangeLog,v 1.4 2006/02/06 00:05:43 flameeyes Exp $
+
+  06 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libksnmp-0.3-gcc41.patch, libksnmp-0.3.ebuild:
+  Add patch to build with GCC 4.1.
 
   10 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> libksnmp-0.3.ebuild:
   Update $HOMEPAGE value, as the .xhtml version does not exists anymore.
