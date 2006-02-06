@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.3.1_p1.ebuild,v 1.1 2006/02/06 08:23:56 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.3.1_p1.ebuild,v 1.2 2006/02/06 18:28:17 joem Exp $
 
 inherit gnome2 eutils
 
@@ -34,7 +34,7 @@ RDEPEND=">=x11-libs/gtk+-2.5.4
 	avahi? ( >=net-dns/avahi-0.6 )
 	!avahi? ( howl? ( >=net-misc/howl-0.9.8 ) )
 	dbus? ( >=sys-apps/dbus-0.35 )
-	!gstreamer010 ( =media-libs/gst-plugins-0.8*
+	!gstreamer010? ( =media-libs/gst-plugins-0.8*
 	=media-plugins/gst-plugins-gnomevfs-0.8*
 	vorbis? ( =media-plugins/gst-plugins-vorbis-0.8*
 	             =media-plugins/gst-plugins-ogg-0.8* )
@@ -55,6 +55,8 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 
