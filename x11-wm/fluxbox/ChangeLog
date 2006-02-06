@@ -1,6 +1,37 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.178 2006/01/23 19:35:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.179 2006/02/06 00:27:54 ciaranm Exp $
+
+  06 Feb 2006; Ciaran McCreesh <ciaranm@gentoo.org>
+  -files/fluxbox-0.9.9-gcc3.4.patch,
+  -files/0.9.10/fluxbox-0.9.10-all-about-me.patch,
+  -files/0.9.10/fluxbox-0.9.10-amd64-font-fix.patch,
+  -files/0.9.10/fluxbox-0.9.10-eat-this-setlocale.patch,
+  -files/0.9.10/fluxbox-0.9.10-editor-thingies.patch,
+  -files/0.9.10/fluxbox-0.9.10-fancy-gentoo-styledirs.patch,
+  -files/0.9.10/fluxbox-0.9.10-make-pretty-eye-candy-work.patch,
+  -files/0.9.10/fluxbox-0.9.10-menu-include-directories.patch,
+  -files/0.9.10/fluxbox-0.9.10-misc-updates.patch,
+  -files/0.9.10/fluxbox-0.9.10-my-term-is-better-than-your-term.patch,
+  -files/0.9.10/fluxbox-0.9.10-posix-on-toast.patch,
+  -files/0.9.10/fluxbox-0.9.10-super-x-voodoo.patch,
+  -files/0.9.10/fluxbox-0.9.10-super-x-voodoo-two.patch,
+  -files/0.9.10/fluxbox-0.9.10-windowmenu-crash.patch,
+  -files/0.9.10/fluxbox-0.9.10-workspacemenu-crash.patch,
+  -files/0.9.12/fluxbox-0.9.12-3853-zero-is-not-null.patch,
+  -files/0.9.12/fluxbox-0.9.12-our-styles-go-over-here.patch,
+  -files/0.9.10/styles-menu-commonbox,
+  -files/0.9.12/fluxbox-0.9.12-3853-zero-is-still-not-null.patch,
+  -files/0.9.12/fluxbox-0.9.12-pretty-eye-candy.patch,
+  -files/0.9.10/styles-menu-fluxbox,
+  -files/0.9.12/fluxbox-0.9.12-3856-hide-and-seek-is-bad.patch,
+  -files/0.9.12/fluxbox-0.9.12-sweet-sweet-music.patch,
+  -files/0.9.10/styles-menu-user,
+  -files/0.9.12/fluxbox-0.9.12-3860-menu-backups.patch,
+  -files/0.9.12/fluxbox-0.9.12-vi-sucks-use-vim.patch,
+  -files/0.9.12/fluxbox-0.9.12-you-got-mail.patch, -fluxbox-0.9.9.ebuild,
+  -fluxbox-0.9.11.ebuild, -fluxbox-0.9.12-r1.ebuild, -fluxbox-0.9.13.ebuild:
+  Tidy up
 
   23 Jan 2006; Fabian Groffen <grobian@gentoo.org> fluxbox-0.9.14-r1.ebuild:
   Marked ppc-macos stable (bug #120081)
