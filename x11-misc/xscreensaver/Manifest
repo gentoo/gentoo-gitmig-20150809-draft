@@ -1,21 +1,73 @@
-MD5 1bac3ba003c9983ccca0e473a0dfe6cf ChangeLog 21235
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d8ffd827d345c96b4b25988ce534147d ChangeLog 21339
+RMD160 9d3611f7c66a9d2f7376e71b06d374b10cb627a3 ChangeLog 21339
+SHA256 b9834ff547f8f3a657b7818056da1b1eae784d9ffd669bad4c14bec100e6eaef ChangeLog 21339
 MD5 51377e1938cf119bd11972b3c30c0a25 files/desktop_entries/screensaver-properties.desktop 1000
+RMD160 9e331cdba7b943c9e5dc076c3a60e32bf0340111 files/desktop_entries/screensaver-properties.desktop 1000
+SHA256 b2a5d44a6a6463beab7cb1d3b9d9f5613c765b48ce319232517b6097afad1fbd files/desktop_entries/screensaver-properties.desktop 1000
 MD5 64d504c9ea04705ce78f9ffb87c96321 files/digest-xscreensaver-4.20 70
+RMD160 dd62b52f2c855cd613b787cc1d0af528967157de files/digest-xscreensaver-4.20 70
+SHA256 e6ed5e1a0a9bcb2d4185f8af13d099eef3a71e9043d012ff0af66326a1c8cb1a files/digest-xscreensaver-4.20 70
 MD5 24bb039b898635c9224f9866f29757ed files/digest-xscreensaver-4.22-r4 70
+RMD160 da63e77df22f4ec9d82de0c1e15ade1c74f8a77f files/digest-xscreensaver-4.22-r4 70
+SHA256 b6bef3cbc05ebbeedf4b2fdf7fd81440b6ed400aed2705da47504564403451fc files/digest-xscreensaver-4.22-r4 70
 MD5 4e81a52673c939318a008be6a0835435 files/digest-xscreensaver-4.23 70
+RMD160 9b9733f92db626a987ab7064dba7edd63bf43626 files/digest-xscreensaver-4.23 70
+SHA256 1f2f36bf2ff557143d7382b81a83aa9274fd7a8f670dbc2e00f81ff4f9da6aab files/digest-xscreensaver-4.23 70
 MD5 6eb40b28a36f889d0f1919cdbf160ef7 files/pam.d/xscreensaver 79
+RMD160 6d51280f7ad5626c93f43ce2ee2d80b691971990 files/pam.d/xscreensaver 79
+SHA256 53f0ebf0d9c8442c2f513a9a2b8faab71992df4b3475fd1a592f43a0a7dff0c3 files/pam.d/xscreensaver 79
 MD5 23c5d8085eb70d6dc6168857a31cc284 files/xscreensaver-4.14-fortune.patch 348
+RMD160 232c7db18ec261b0ba159074e3f934456b5d492d files/xscreensaver-4.14-fortune.patch 348
+SHA256 97f83fcb438688d76a15bc1b3d2167383fd480635ec8fde370710fa929778301 files/xscreensaver-4.14-fortune.patch 348
 MD5 cd227d954dff63ea80266d1db213b15f files/xscreensaver-4.16-nsfw.patch 1586
+RMD160 9c7634d3a1b4a737411f6cc68bdd86e120ea8451 files/xscreensaver-4.16-nsfw.patch 1586
+SHA256 630d0822873cdcfc6c07ab0a4b8f7e4800452764c934eba4f4ffca923b40d4ac files/xscreensaver-4.16-nsfw.patch 1586
 MD5 deb323da3671e7d537a7d3973e7304ba files/xscreensaver-4.20-norpm.patch 1287
+RMD160 b7bb1dec33328704ecfe5564ac4e9eb297f0ebf8 files/xscreensaver-4.20-norpm.patch 1287
+SHA256 e8658966cb36413459fe9a5f52b2c1e0373499f4f8eb12f554d86a02ecd76988 files/xscreensaver-4.20-norpm.patch 1287
 MD5 f5dcb5acf99e374e9f99a95890b8eb0f files/xscreensaver-4.22-configure.patch 1592
+RMD160 bf43f032b44a8efdab24da59b491400972a61e96 files/xscreensaver-4.22-configure.patch 1592
+SHA256 9be3c8e8d73752b5922a050e0769384854fdf14b5b20b24f23ed589d7dd3e042 files/xscreensaver-4.22-configure.patch 1592
 MD5 e6a4444e1548adf83be31a933c5e19bf files/xscreensaver-4.22-interaggregate.patch 542
+RMD160 81cfadad2781ee597582a3e24a4ed099160aad36 files/xscreensaver-4.22-interaggregate.patch 542
+SHA256 cc684fee40a5b81d3fcf838c06bfb944b5c06fd4d80dd53dcad8386943cc87a7 files/xscreensaver-4.22-interaggregate.patch 542
 MD5 cab8a426e9f99c0b49f598983b896b80 files/xscreensaver-4.22-nsfw-webcollage.patch 5029
+RMD160 586d02cc9b9249015d359d3b4124f85ca9b6d151 files/xscreensaver-4.22-nsfw-webcollage.patch 5029
+SHA256 a4e63f020646ad5007646225e84b563966bf5c84e4cb87da450684f440c63f5f files/xscreensaver-4.22-nsfw-webcollage.patch 5029
 MD5 0802ff58ba46dfdc9d155798ef4936e5 files/xscreensaver-4.22-settings.patch 1766
+RMD160 5a89a757715263a2f37df35c30868f72a0ce22a9 files/xscreensaver-4.22-settings.patch 1766
+SHA256 f4c3229eca0ab9b055f1970c66fcb4488ef8f5095d57f0ce11e193a88380dae4 files/xscreensaver-4.22-settings.patch 1766
 MD5 bd61d24250fdc129cf9b86e154c8c27a files/xscreensaver-4.23-app-defaults.patch 1080
+RMD160 76ef9f99d5f8479621fc4c7a2ea62dad96173804 files/xscreensaver-4.23-app-defaults.patch 1080
+SHA256 02b36425c8c1adda652995ea168db054df7e7cdc78e9a520df47914f2213f95c files/xscreensaver-4.23-app-defaults.patch 1080
 MD5 0ed894eebbc461f9523539a8d273535e files/xscreensaver-4.23-norpm.patch 1775
+RMD160 57cdbe407659219da8a66b59f22695d621f1e338 files/xscreensaver-4.23-norpm.patch 1775
+SHA256 bae37d855e92d48a69e472e450a7aae479e821c45ec05bc91a01a9efe3ef59e4 files/xscreensaver-4.23-norpm.patch 1775
 MD5 e24f49eb6b4473a5fd9f0869065cfe85 files/xscreensaver-4.23-nsfw.patch 6634
+RMD160 2ae760d79f6cbb8c885afca945a7d2c2eff17d3c files/xscreensaver-4.23-nsfw.patch 6634
+SHA256 73b01bd257d459399a94f4b31d8fdef281d217452c56dffef95aa5c9d75bce1c files/xscreensaver-4.23-nsfw.patch 6634
 MD5 7528066fa9a88bd1b6d46224d118dd7b files/xscreensaver-blank-screen.patch 487
+RMD160 304dd508a11972ac06ea157effa7bf11fe9f5154 files/xscreensaver-blank-screen.patch 487
+SHA256 166ba0d6283e262886230439dc69dc5e746fec0c779727a6e2aec4b40d6f7de8 files/xscreensaver-blank-screen.patch 487
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 metadata.xml 166
+SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826 metadata.xml 166
 MD5 30baa75aa8ad6b15fa87c15cce9d3f40 xscreensaver-4.20.ebuild 4842
+RMD160 3aae46fa2a3d26feecf814bbc9616cf72942b803 xscreensaver-4.20.ebuild 4842
+SHA256 24d974644f8009ec797babc3f51499a96bd019404561a496998ffc7241300213 xscreensaver-4.20.ebuild 4842
 MD5 eca40273355199f6c11a72010194217e xscreensaver-4.22-r4.ebuild 5657
-MD5 8d800b1bdb32ff691b97ca0df3fe70ae xscreensaver-4.23.ebuild 5857
+RMD160 d801b04463312f2507679951e1bcb50dcc081842 xscreensaver-4.22-r4.ebuild 5657
+SHA256 6222a0962d238d8f7ad69b20ea47c5b28b30e7f4bf99b9c0922abc2b463ae2f4 xscreensaver-4.22-r4.ebuild 5657
+MD5 dc84d37f715251eb48bd60248a418c8a xscreensaver-4.23.ebuild 5856
+RMD160 e5cb7e11c99051624b1314157f1ede0bd16c6aa0 xscreensaver-4.23.ebuild 5856
+SHA256 0da7eb72c152cd356410cd285320172ea91594151133167a0db6d7cf9af74931 xscreensaver-4.23.ebuild 5856
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD59T9JrHF4yAQTrARAiTnAJ97GMmHZtVcksWLqfgQqR6iUEYCxACgjYWh
+vNdHo2vjSJG30Xgy1cMIS4k=
+=ff1x
+-----END PGP SIGNATURE-----
