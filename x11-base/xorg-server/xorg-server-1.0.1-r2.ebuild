@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1-r2.ebuild,v 1.3 2006/02/03 07:32:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1-r2.ebuild,v 1.4 2006/02/06 23:36:57 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -38,7 +38,7 @@ RDEPEND="x11-libs/libXfont
 	media-fonts/font-misc-misc
 	media-fonts/font-cursor-misc
 	x11-misc/xbitmaps
-	x11-misc/xkbdata
+	|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
 	x11-apps/iceauth
 	x11-apps/rgb
 	x11-apps/xauth
