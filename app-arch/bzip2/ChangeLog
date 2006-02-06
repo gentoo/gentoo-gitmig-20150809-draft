@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/bzip2
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.32 2005/09/09 15:07:17 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.33 2006/02/06 23:20:17 vapier Exp $
+
+*bzip2-1.0.3-r6 (06 Feb 2006)
+
+  06 Feb 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/bzip2-1.0.2-bzgrep.patch, +bzip2-1.0.3-r6.ebuild:
+  Grab patch from Fedora for CAN-2005-0758.
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> bzip2-1.0.3-r5.ebuild:
   Mark 1.0.3-r5 stable on alpha
