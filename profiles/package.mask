@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4970 2006/02/06 19:50:48 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4971 2006/02/06 19:52:16 hanno Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,6 +24,7 @@
 # Hanno Boeck <hanno@gentoo.org> (06 Feb 2006)
 # mask all openhbci-stuff, deprecated in favour of aqbanking
 net-libs/openhbci
+net-libs/openhbci-plugin-ddvcard
 app-office/lxbank
 app-misc/aqmoney
 <=app-office/gnucash-1.8.9
