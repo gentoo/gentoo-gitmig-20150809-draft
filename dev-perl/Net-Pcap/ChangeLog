@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Pcap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/ChangeLog,v 1.12 2006/01/15 10:56:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/ChangeLog,v 1.13 2006/02/06 20:31:44 blubb Exp $
+
+  06 Feb 2006; Simon Stelling <blubb@gentoo.org> Net-Pcap-0.05.ebuild:
+  stable on amd64
 
   15 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> Net-Pcap-0.05.ebuild:
   Stable on ppc.
