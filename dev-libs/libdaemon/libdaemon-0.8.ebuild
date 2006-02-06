@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.8.ebuild,v 1.7 2006/01/11 13:06:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.8.ebuild,v 1.8 2006/02/06 19:44:48 blubb Exp $
 
 DESCRIPTION="Simple library for creating daemon processes in C"
 HOMEPAGE="http://0pointer.de/lennart/projects/libdaemon/"
@@ -8,7 +8,7 @@ SRC_URI="http://0pointer.de/lennart/projects/libdaemon/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sh sparc x86"
+KEYWORDS="amd64 ppc sh sparc x86"
 IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"

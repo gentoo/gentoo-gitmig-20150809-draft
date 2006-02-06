@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.26 2006/01/14 08:04:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.27 2006/02/06 19:50:07 blubb Exp $
+
+  06 Feb 2006; Simon Stelling <blubb@gentoo.org> mm-1.3.0.ebuild:
+  stable on amd64
 
   14 Jan 2006; Daniel Black <dragonheart@gentoo.org> mm-1.4.0.ebuild:
   added revdep-rebuild warning in pkg_postinst as per bug #118668 thanks

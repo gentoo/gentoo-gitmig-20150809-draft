@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/libksba-0.9.11.ebuild,v 1.8 2005/09/19 14:00:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/libksba-0.9.11.ebuild,v 1.9 2006/02/06 19:45:40 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnupg/alpha/libksba//${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ppc64 ~s390 sparc x86"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ~ppc ppc64 ~s390 sparc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/libgpg-error-0.7

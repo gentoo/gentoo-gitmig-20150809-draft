@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/http-fetcher
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/ChangeLog,v 1.16 2005/06/14 10:42:32 ferdy Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/ChangeLog,v 1.17 2006/02/06 19:44:32 blubb Exp $
+
+  06 Feb 2006; Simon Stelling <blubb@gentoo.org> http-fetcher-1.1.0.ebuild:
+  stable on amd64
 
   14 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org>
   http-fetcher-1.1.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbh
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/ChangeLog,v 1.30 2005/08/03 22:11:54 kloeri Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/ChangeLog,v 1.31 2006/02/06 19:43:26 blubb Exp $
+
+  06 Feb 2006; Simon Stelling <blubb@gentoo.org> dbh-1.0.24.ebuild:
+  stable on amd64
 
   03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> dbh-1.0.24.ebuild:
   Stable on alpha.
