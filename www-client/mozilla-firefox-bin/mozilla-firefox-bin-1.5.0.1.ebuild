@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.5.0.1.ebuild,v 1.1 2006/02/05 21:48:24 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.5.0.1.ebuild,v 1.2 2006/02/06 14:21:34 anarchy Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -69,7 +69,7 @@ src_install() {
 	# Locale support
 	strip-linguas ${LANGS} en
 	for X in ${LINGUAS/en}; do
-		xpi_install ${WORKDIR}/firefox-${X}-${PV}.xpi
+		xpi_install ${WORKDIR}/firefox-${X}-${PV}
 	done
 
 	if [ -n ${LINGUAS%% *} ] && [ "${LINGUAS%% *}" != "en" ]; then
