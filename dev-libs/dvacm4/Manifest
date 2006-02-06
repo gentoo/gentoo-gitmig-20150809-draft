@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2169d7175a5aaed46abe887112e3d424 ChangeLog 2017
-MD5 b1bc15ab6bb0c2dc4bde4d182a1dc886 dvacm4-0.3.5-r1.ebuild 724
+MD5 befbe6b1f282d5212003355cf51e1f6d ChangeLog 2107
+RMD160 c352d45655cc9f7ee1530bf7448c5c29aa728c76 ChangeLog 2107
+SHA256 f28e7d5174e08263cbb0f408ec3eecdc74576873f7e3ec914ac1eb12f4fa2921 ChangeLog 2107
+MD5 51bf0e2331349ab1d190cd35743d2ec4 dvacm4-0.3.5-r1.ebuild 720
+RMD160 51f08d6cb9104c7cd521ed981bcc1a4ddab4a5ea dvacm4-0.3.5-r1.ebuild 720
+SHA256 70e28a0a78eda0964735b88c6eaf8eaaa2740dcabe51742df8f11b8a2cf640fa dvacm4-0.3.5-r1.ebuild 720
 MD5 2bda1f5888ffcf0d92932223445e1473 dvacm4-0.3.5.ebuild 612
-MD5 41d7ac32dc54956e937401bb5a2c3810 metadata.xml 156
+RMD160 fadc7dda62a5f6e689dfaadfa4c4f57e7ed7064e dvacm4-0.3.5.ebuild 612
+SHA256 b6bf683122130feeb778529752dba8f5298e5a3ca3a69cb457c07fb84601752c dvacm4-0.3.5.ebuild 612
 MD5 e95d8deaaecfc489effa2663fad68493 files/digest-dvacm4-0.3.5 64
+RMD160 f7ad525a68abfb6798ba9583a618c59c5d8214f2 files/digest-dvacm4-0.3.5 64
+SHA256 9528ca9a74b0acfb63198785b3e3cc7d89957940c0f4edbf800f0cea7dc1f115 files/digest-dvacm4-0.3.5 64
 MD5 e95d8deaaecfc489effa2663fad68493 files/digest-dvacm4-0.3.5-r1 64
+RMD160 f7ad525a68abfb6798ba9583a618c59c5d8214f2 files/digest-dvacm4-0.3.5-r1 64
+SHA256 9528ca9a74b0acfb63198785b3e3cc7d89957940c0f4edbf800f0cea7dc1f115 files/digest-dvacm4-0.3.5-r1 64
 MD5 70555dec8bfe119d1b8c3c60f009daa9 files/dvacm4-0.3.5-fix-underquoted-m4.diff 3564
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLzq2CRZPokWLroQRAp2sAKCcO46dfdQ0bhT4UnWNS2wcuTzrvQCgpyQs
-OK42biAqaEYjPL6UL4ahrjo=
-=fCC6
------END PGP SIGNATURE-----
+RMD160 a58b161b265441d6729e4a7c61eb216754c1bca0 files/dvacm4-0.3.5-fix-underquoted-m4.diff 3564
+SHA256 647b1586335d8ca32dd739a43eb99b3037a17ef94ee4bf72c41ae884bb6834f3 files/dvacm4-0.3.5-fix-underquoted-m4.diff 3564
+MD5 41d7ac32dc54956e937401bb5a2c3810 metadata.xml 156
+RMD160 537178ef5a820896e97475fb9aded47d50474bef metadata.xml 156
+SHA256 0e8490f9c62cb74e5894b52f643a02de0024d97dbfebad43082dce6bcb39555f metadata.xml 156

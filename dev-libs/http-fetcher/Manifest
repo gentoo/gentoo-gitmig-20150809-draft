@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a472bc73fddc7018d09adfcdfd0705af http-fetcher-1.0.3.ebuild 759
-MD5 4f2dfbbbe171fcdf14add4de3d19932d http-fetcher-1.0.2.ebuild 743
-MD5 79d06a0f5d87748dcf79b2c6f66f4855 http-fetcher-1.1.0.ebuild 877
-MD5 2462d793a0d2c26cb4dfe70b6c70bc6e ChangeLog 2798
-MD5 d4c8b46f106b5227d676a585a0f84063 metadata.xml 255
+MD5 674ee82a28b0c7b353656867d7555cf0 ChangeLog 2893
+RMD160 0cd28e052dab54660d10ab432c7fc3f5efb9c5f0 ChangeLog 2893
+SHA256 02bf54d0bf60442aafe6dd33c4708e3dfb7133cac18c566e8c6abd5131c0f27f ChangeLog 2893
 MD5 eac0ac4773ed1cbe44374680c329353f files/digest-http-fetcher-1.0.2 70
+RMD160 1b99059e94d1cd87f8dc614f9ae70fe63b8aa1e6 files/digest-http-fetcher-1.0.2 70
+SHA256 a4d6f559096f8ad06081dad8f3ae8fab20a3dea77cf86c01c8239d53747fea90 files/digest-http-fetcher-1.0.2 70
 MD5 66353698efa4a7df0b6f6834299152aa files/digest-http-fetcher-1.0.3 70
+RMD160 419c29ff0ecf4c4f3d6a3eb56f895687c226a225 files/digest-http-fetcher-1.0.3 70
+SHA256 f7d23d2297060d18c0557dc0bdb4f635925e549fb57cb858a40913ef9cec1f5d files/digest-http-fetcher-1.0.3 70
 MD5 d180063664e90028ec3453192662c0fb files/digest-http-fetcher-1.1.0 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrrTDViELBEf1JB0RArCdAJsELGAHzmkQN669DXUGJnyVQ/Sj1QCeNGbl
-mG6ipx16CbIySLcTTJnRfUM=
-=ktAR
------END PGP SIGNATURE-----
+RMD160 757baef81b58c4b61abfdb9e55b6362f617efc3b files/digest-http-fetcher-1.1.0 70
+SHA256 1e81c8934e57ae0d79eece685d89c03ceef355634a2a80c6a8a9c4f72798000c files/digest-http-fetcher-1.1.0 70
+MD5 4f2dfbbbe171fcdf14add4de3d19932d http-fetcher-1.0.2.ebuild 743
+RMD160 41f7d869cc6a26228f75d99606dd318e5b83a95a http-fetcher-1.0.2.ebuild 743
+SHA256 2c2f6e081eac84ca9b4e1693b423237f0febe30eb72c622d5e207a6e810dee25 http-fetcher-1.0.2.ebuild 743
+MD5 a472bc73fddc7018d09adfcdfd0705af http-fetcher-1.0.3.ebuild 759
+RMD160 8754c68dd6f00f4c73a99fc24264050be6190c53 http-fetcher-1.0.3.ebuild 759
+SHA256 3c6990b35f37552a8631ba8a4326d2640494522aa321e8b11b5ce45811ac5ead http-fetcher-1.0.3.ebuild 759
+MD5 f2845acb0040006fa3f2fee7e31f2bee http-fetcher-1.1.0.ebuild 876
+RMD160 161bbe94c874997c3270e088f0926e794e37d71c http-fetcher-1.1.0.ebuild 876
+SHA256 717343e9c4ecf93c90bf398903f1c02391017af1b38eac0de896ea9cee342224 http-fetcher-1.1.0.ebuild 876
+MD5 d4c8b46f106b5227d676a585a0f84063 metadata.xml 255
+RMD160 a6fc8ba66b7e8d88be82d3310334e2f6ba56baea metadata.xml 255
+SHA256 e125491f883f5a464ccef3de8de9e59c689a45c515bde823ae1e7777b478485b metadata.xml 255

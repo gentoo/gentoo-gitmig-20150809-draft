@@ -1,22 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dbc21aad2e3522670659af5d835224fb libksba-0.9.12.ebuild 785
-MD5 22cac7b18ff235140a01c4b6e2f223d1 libksba-0.4.7.ebuild 614
-MD5 5e974837da54d225c18976fb0d7d5405 libksba-0.9.11.ebuild 778
-MD5 f891f895cfa155d39451df7b84cefc32 libksba-0.9.6.ebuild 694
-MD5 858499b239f34d352331014e529c6f3e ChangeLog 3632
-MD5 fe6498e8ae40c37430b6b07c4ba1547e libksba-0.9.8.ebuild 845
-MD5 94b86fd10cc9a5c194284d58355f97fa files/libksba-0.9.8-m4.patch 261
+MD5 d6265552bf09347dfeceef9190d42594 ChangeLog 3720
+RMD160 147b8b7bddb3eab01a5cb3252297eeea3383c508 ChangeLog 3720
+SHA256 9fc273aff374198ad799f69659312f33d2076b9b1de7c6197e2996261efcdd8e ChangeLog 3720
 MD5 da2b4329ca86c4a9f002c48856ef4123 files/digest-libksba-0.4.7 65
-MD5 24c004110e2ec7dd95837318f73feedc files/digest-libksba-0.9.6 65
-MD5 af87b3024250f157c1cc5523304dd9c5 files/digest-libksba-0.9.8 65
+RMD160 7698d9fd92993de3c1d00f4ee2c6dca2e4c48893 files/digest-libksba-0.4.7 65
+SHA256 a4c41160bee281387ec750b7985aada32f901b76caf343f87902e3d6d8a5d53f files/digest-libksba-0.4.7 65
 MD5 e6e539b2679ae5c66dd51839cf59d8ec files/digest-libksba-0.9.11 66
+RMD160 3a4b924d0a8a4e78fd79b06f9ccad42382bb60a3 files/digest-libksba-0.9.11 66
+SHA256 4d0dddb104dafba7cc72b5e728725211a0b19a1af5580d94ad1da2d2fe1649cf files/digest-libksba-0.9.11 66
 MD5 22be074cfc15845eead90489d55fea41 files/digest-libksba-0.9.12 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDLsSwKRy60XGEcJIRAvKtAKCeserU5GyJpdduhRot+W8kzIGjYQCbBTm6
-pgevqxfm380AiT4OUk7Segs=
-=7xUM
------END PGP SIGNATURE-----
+RMD160 c504ad7f011ac82349fd566c87b55c610e220574 files/digest-libksba-0.9.12 67
+SHA256 7239ae908f877b8e2fe27c72a60a7f109ed0071bf09b3b3e88ad99a75f0a2e64 files/digest-libksba-0.9.12 67
+MD5 24c004110e2ec7dd95837318f73feedc files/digest-libksba-0.9.6 65
+RMD160 0e957d6b6b5b3b80e16bc229c37de7aa39cb7809 files/digest-libksba-0.9.6 65
+SHA256 1299f079adab3c379e0db7e19ae2de2e5e1f882300f6fccec70a04d0960c6261 files/digest-libksba-0.9.6 65
+MD5 af87b3024250f157c1cc5523304dd9c5 files/digest-libksba-0.9.8 65
+RMD160 74c61d74145a4f459d379c9e2aa6fd89b875b5e9 files/digest-libksba-0.9.8 65
+SHA256 ceed8e646fcf396a5db3dc038fc834f135973a76f8660d42e2bd54179e5e878f files/digest-libksba-0.9.8 65
+MD5 94b86fd10cc9a5c194284d58355f97fa files/libksba-0.9.8-m4.patch 261
+RMD160 2ed9a26e0109939deb596199996fe33eb0c9e282 files/libksba-0.9.8-m4.patch 261
+SHA256 f75366cbe920be258b7083cca443cbcd7c26dfa69286da3a48b4da050eb11cc0 files/libksba-0.9.8-m4.patch 261
+MD5 22cac7b18ff235140a01c4b6e2f223d1 libksba-0.4.7.ebuild 614
+RMD160 d31b6771fbb567e23dbe0385ae45f41c1bc58a1d libksba-0.4.7.ebuild 614
+SHA256 2d1dde4cf0fc3dd1ce1031f5b4ce55735724b9993aba0c1d7142c0dfd71470aa libksba-0.4.7.ebuild 614
+MD5 427e5969179918460656dea0aa79854d libksba-0.9.11.ebuild 774
+RMD160 f135015141f5319e86c74faa59a05e63cd1e754e libksba-0.9.11.ebuild 774
+SHA256 931fd6150b80fc1055880b4624f883e2019a48921882d7ddadca4debab1f3ad7 libksba-0.9.11.ebuild 774
+MD5 dbc21aad2e3522670659af5d835224fb libksba-0.9.12.ebuild 785
+RMD160 662dfc9512fadc6a7c050b44cb69804b5ab343cb libksba-0.9.12.ebuild 785
+SHA256 85e50dc326e9916774584e14cdeeb61be7225b991d8334a5e57b8c784b45c6d8 libksba-0.9.12.ebuild 785
+MD5 f891f895cfa155d39451df7b84cefc32 libksba-0.9.6.ebuild 694
+RMD160 01de6800c74e87843bb0d6e22aa12f09c431b174 libksba-0.9.6.ebuild 694
+SHA256 731fe05e9fd6ec4487a68cf7f6a017623b60aa782274985471971aa36406ff8f libksba-0.9.6.ebuild 694
+MD5 fe6498e8ae40c37430b6b07c4ba1547e libksba-0.9.8.ebuild 845
+RMD160 1fcc4cd7e039d65d72f9bb4dbe2059a191d8896a libksba-0.9.8.ebuild 845
+SHA256 3713706864a67be9666c700e24f4754cfdfd4109641b347d4f7ed6363a34f5f1 libksba-0.9.8.ebuild 845
