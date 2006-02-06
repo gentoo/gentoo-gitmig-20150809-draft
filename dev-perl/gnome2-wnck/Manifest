@@ -1,19 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b355d2baf08b975f7886fc34b29d827c ChangeLog 2507
+MD5 fc84676c11388a0316c4ca13b344f5fe ChangeLog 2597
+RMD160 9b86ada1aa6f0beda5e00f9c7f67252177671ad6 ChangeLog 2597
+SHA256 0eb11259e2f3c0a18a63b9d22da2f70bf925f48276e92e2d67cfe47f9ad3ea0f ChangeLog 2597
 MD5 df16ecdd4f7f9ec07c6a5b2dbfc7295b files/digest-gnome2-wnck-0.04-r1 67
+RMD160 3d4d67ed0a2b78d786eea5124527b6d5ead8a18a files/digest-gnome2-wnck-0.04-r1 67
+SHA256 7b558f1f99d52611a1649f9b608fc7675cdd61e449eb6a91b5f917bfabd18017 files/digest-gnome2-wnck-0.04-r1 67
 MD5 7a1c36cf9892603a54849ddef2d48c57 files/digest-gnome2-wnck-0.10 67
+RMD160 4fd9e6b4b0cb846b47cca2f40fb11571967daf55 files/digest-gnome2-wnck-0.10 67
+SHA256 534f81f8b109f7fe2fb137bd8ea96859fc9b1ec514345b2a5513d010aaeeb803 files/digest-gnome2-wnck-0.10 67
 MD5 34682b5ee9e74f49164211770aa71d34 files/digest-gnome2-wnck-0.11 67
+RMD160 2143cd4d7f12d574ca36104ca90e39b405a4c220 files/digest-gnome2-wnck-0.11 67
+SHA256 c50d59a91eb4294cf9d1dac8cb9716caf967ac4b0748e50e9cd14c1923ea1608 files/digest-gnome2-wnck-0.11 67
 MD5 bbf0dd5120c2b7645abecf57d81dcb48 files/window_close_patch 465
+RMD160 e1bcbfa9e37a3080a4357e8850d4b8f1d39093ea files/window_close_patch 465
+SHA256 c758aa60d2507fcea12447e498947de59cf0c3afd28decbc05675fa4358079af files/window_close_patch 465
 MD5 df64e68e2ffb22231dfdce900792b22c gnome2-wnck-0.04-r1.ebuild 873
+RMD160 f7425dd76537800593ed2ac39b03a4af88cfe216 gnome2-wnck-0.04-r1.ebuild 873
+SHA256 8cd00398d5cef51555d0eaf75a3638d9bfd34b181b4c5e2db7fab0204e9cc4ff gnome2-wnck-0.04-r1.ebuild 873
 MD5 9b250b1bc2cb9428cbbfe6c300f59699 gnome2-wnck-0.10.ebuild 870
-MD5 80181818941cfe1b9cc59d5dbab52ae0 gnome2-wnck-0.11.ebuild 872
+RMD160 517298d2b507d7b9ef7d7c7ba638872bf566926a gnome2-wnck-0.10.ebuild 870
+SHA256 85503e72a3dc7ec4b0eaaf63ac2b7709d166e8d1dd3b00e6932b604a96784513 gnome2-wnck-0.10.ebuild 870
+MD5 52a59be1b281b8862008807623798ebe gnome2-wnck-0.11.ebuild 868
+RMD160 06712b299492f41d7275f5a7263f4c8b8e9b1ee9 gnome2-wnck-0.11.ebuild 868
+SHA256 4b248e9f1569e10e3a8afdef9961fb67f48d4282c69eb9c3af458a502a29a68e gnome2-wnck-0.11.ebuild 868
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDzAiWKRy60XGEcJIRApKXAKCMnJjZgLu5qwbKeJYUHjg7oLq+IwCdG4eZ
-lLNGvpg07HWBq7TJUC6bdOA=
-=lXT6
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305

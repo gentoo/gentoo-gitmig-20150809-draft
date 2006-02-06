@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cb937070e96104ed9cf59dbe01470f9c ChangeLog 1636
-RMD160 51018cf9ece24e6617105c7feccb927b9ec73416 ChangeLog 1636
-SHA256 2bd4f2876ce7dbc9af3fc5980d5879dfea5564a45165e645411b46b0a2f3695a ChangeLog 1636
+MD5 ef7d7ef5031968e723b0876d708aef10 ChangeLog 1727
+RMD160 e1a79f1ab9854833d2f2a180a3c2bdfceadd3886 ChangeLog 1727
+SHA256 45bfae91b7ffb88dffbdbe2fc9051dc990109c1bb008f182eda74c741fbc2997 ChangeLog 1727
 MD5 d81d0c51fdf2416f5104c85410f85c53 class-loader-2.02.ebuild 592
 RMD160 826dee53ea0e8d7e6d89582af2a488595c2a0cef class-loader-2.02.ebuild 592
 SHA256 16b09079eae4dd2c0ab8783a10f69e2970502ca2a4ad22f6977b24aa9897ca07 class-loader-2.02.ebuild 592
-MD5 627b69855ee093caa8af8a20b05b3eb8 class-loader-2.03.ebuild 595
-RMD160 7612acfd0f685a7c7b5d5eed785565334f27cbd7 class-loader-2.03.ebuild 595
-SHA256 194a1a3a123d41c586400645565ab9c2e4f84e7345d56324283ec3210beb00ab class-loader-2.03.ebuild 595
+MD5 136ff738dff4f53eb3f1a0dfbe4fd663 class-loader-2.03.ebuild 591
+RMD160 84b6d78f3baecc52ec6f29e205c5ede9a5027c68 class-loader-2.03.ebuild 591
+SHA256 92e33f4dce5ff682fec4a1b4f0adae834de7053302a5cce6b1557b34ec6e52bf class-loader-2.03.ebuild 591
 MD5 1aacf4d1bc67618b17d549ad223c5d84 files/digest-class-loader-2.02 67
 RMD160 849ee53d474d861ffc97f9de243672d3bd1d1db7 files/digest-class-loader-2.02 67
 SHA256 225083fdc33797aa90b51761d34de52da74e7d612bfcfbfd0af846477926ef98 files/digest-class-loader-2.02 67
@@ -19,10 +16,3 @@ SHA256 84ea03972beb304532aa0ac97cc06d7b9313fea8ef8cc17be88d62e8db1dd5af files/di
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD5NblJrHF4yAQTrARAs3qAKCkzoFjRv1l7ur2HORxyn6Mn7KUswCgohdR
-T0thTiQ+1+fbUSM70b49ztg=
-=VlSC
------END PGP SIGNATURE-----
