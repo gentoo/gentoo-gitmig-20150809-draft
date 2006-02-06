@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/arpwatch
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.19 2006/01/28 19:23:06 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.20 2006/02/06 00:36:58 jokey Exp $
+
+*arpwatch-2.1.13-r3 (06 Feb 2006)
+
+  06 Feb 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/arpwatch-2.1.13-lostparams.patch, +arpwatch-2.1.13-r3.ebuild:
+  Added patch to fix missing parameters, bug #119769
 
   28 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
   -files/arpwatch-2.1.11-r1.diff.gz, -files/arpwatch-2.1.13.diff.gz,
