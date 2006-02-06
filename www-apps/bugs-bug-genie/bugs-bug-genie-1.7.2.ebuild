@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/bugs-bug-genie-1.7.1.ebuild,v 1.2 2005/08/21 16:51:17 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/bugs-bug-genie-1.7.2.ebuild,v 1.1 2006/02/06 15:05:54 rl03 Exp $
 
 inherit webapp
-S=${WORKDIR}/BUGS_${PV}
+S=${WORKDIR}/bugs_${PV}
 
-IUSE=""
+IUSE="mysql"
 
 DESCRIPTION="BUGS - The Bug Genie"
 HOMEPAGE="http://bugs-bug-genie.sourceforge.net/"
@@ -16,21 +16,20 @@ KEYWORDS="~x86 ~ppc ~sparc"
 DEPEND="app-arch/unzip"
 RDEPEND=">=net-www/apache-1.3
 		virtual/php
-		>=dev-db/mysql-4"
+		mysql? ( >=dev-db/mysql-4 )"
 
 LICENSE="MPL-1.1"
 
 src_install() {
 	webapp_src_preinst
 	dodoc DISCLAIMER.TXT UPGRADE.TXT README.TXT doc/changelog*
-	dohtml doc/*.htm
 
 	cp -R LICENSE.TXT [[:lower:]][[:lower:]]* ${D}/${MY_HTDOCSDIR}
-	rm -rf ${D}/${MY_HTDOCSDIR}/doc
 
-	local file
-	for file in files include lang smileys themes; do
-		webapp_serverowned ${MY_HTDOCSDIR}/${file}
+	local files="include/userbase_connect.inc.php files include lang smileys
+		themes"
+	for a in files; do
+		webapp_serverowned ${MY_HTDOCSDIR}/${a}
 	done
 	webapp_serverowned ${MY_HTDOCSDIR}
 
