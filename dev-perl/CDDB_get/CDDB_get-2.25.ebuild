@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/CDDB_get-2.25.ebuild,v 1.8 2006/02/04 00:17:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/CDDB_get-2.25.ebuild,v 1.9 2006/02/06 19:59:33 blubb Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://armin.emx.at/cddb/"
 
 SLOT="2"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha ~amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"

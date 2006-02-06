@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/Curses-1.13.ebuild,v 1.6 2006/01/31 20:35:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/Curses-1.13.ebuild,v 1.7 2006/02/06 20:05:34 blubb Exp $
 
 inherit perl-module eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://cpan/authors/id/G/GI/GIRAFFED/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 SRC_TEST="do"
