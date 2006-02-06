@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.7.ebuild,v 1.3 2005/12/13 00:00:17 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.7.ebuild,v 1.4 2006/02/06 15:42:37 rl03 Exp $
 
-inherit webapp versionator
+inherit webapp versionator depend.php
 
 MY_P=${PN}-$(replace_version_separator 3 '-')
 
@@ -15,7 +15,9 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
 IUSE=""
 S=${WORKDIR}/${MY_P}
 
-DEPEND="virtual/httpd-php"
+pkg_setup() {
+	require_php_with_use pcre
+}
 
 src_unpack() {
 	unpack ${A}
