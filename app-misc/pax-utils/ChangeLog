@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.44 2006/02/05 17:27:47 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.45 2006/02/06 09:18:30 corsair Exp $
+
+  06 Feb 2006; Markus Rothe <corsair@gentoo.org> pax-utils-0.1.9.ebuild:
+  Stable on ppc64: bug #121777
 
 *pax-utils-0.1.9 (05 Feb 2006)
 
