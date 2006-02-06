@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.31 2005/09/09 13:09:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.32 2006/02/06 17:45:18 zaheerm Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -52,10 +52,14 @@ SLOT=${PV_MAJ_MIN}
 
 S=${WORKDIR}/${MY_P}
 
+# added to remove circular deps
+# 6/2/2006 - zaheerm
+if [ "${P}" != "${MY_P}" ]; then
 RDEPEND="=media-libs/${MY_P}*"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
+fi
 
 ###
 # internal functions

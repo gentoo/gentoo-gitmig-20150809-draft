@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-base.eclass,v 1.2 2006/01/01 01:14:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-base.eclass,v 1.3 2006/02/06 17:45:18 zaheerm Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -34,10 +34,13 @@ SRC_URI="http://gstreamer.freedesktop.org/src/gst-plugins-base/${MY_P}.tar.bz2"
 
 S=${WORKDIR}/${MY_P}
 
-RDEPEND="=media-libs/${MY_P}"
+# added to remove circular deps
+# 6/2/2006 - zaheerm
+if [ "${PN}" != "${MY_PN}" ]; then
+RDEPEND="=media-libs/gst-plugins-base-0.10*"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
-
+fi
 
 ###
 # public functions
