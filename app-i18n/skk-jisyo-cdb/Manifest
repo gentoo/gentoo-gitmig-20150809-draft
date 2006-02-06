@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 90e79789e497c759dd14bb4706a49d0d ChangeLog 3721
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 45c1c40760791ec8ab0e0d8cae180749 skk-jisyo-cdb-200504.ebuild 651
-MD5 d0a12c414adc40108740becf4fcd7fa5 skk-jisyo-cdb-200410.ebuild 648
-MD5 de714678457dbeb068d6e0f1445e53ba skk-jisyo-cdb-200501.ebuild 655
-MD5 53e306e7198620db00987e73690df965 skk-jisyo-cdb-200507.ebuild 654
+MD5 2887d363a2a9e22d44eca822affa48eb ChangeLog 3819
+RMD160 8c081c6e2586c98322236f3c97ccc5d2bb87dd00 ChangeLog 3819
+SHA256 c3a2472a42316e1ecab66f1cfee78017380c1f074acc2a3a516c8a93ab332533 ChangeLog 3819
 MD5 e7d95873f36cd7835d335fc3b75b2157 files/digest-skk-jisyo-cdb-200410 73
+RMD160 18b531516f54b605e560ccf599c8009dc19edd93 files/digest-skk-jisyo-cdb-200410 73
+SHA256 3228bc149b21abe4d158104d70ed0372afa2095ad5d058bd29bb17cbf69079c8 files/digest-skk-jisyo-cdb-200410 73
 MD5 06f3c6d295ff22d506e4846c56e3a992 files/digest-skk-jisyo-cdb-200501 73
-MD5 1bf9a829d919380ac9332e979224af8a files/digest-skk-jisyo-cdb-200507 73
+RMD160 7a96b5cc575c5b6c9a3d22801ae57637f5b3610e files/digest-skk-jisyo-cdb-200501 73
+SHA256 b46f338e8495c224d13fa6199b097e12a040d1fe857602af405b3fa6070f1499 files/digest-skk-jisyo-cdb-200501 73
 MD5 a42a899d69d5a0799b881009079e83b1 files/digest-skk-jisyo-cdb-200504 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC8SDTKf2g/qXtneoRAqgbAJ4+0wtJ3bwdUeyk9g9bCpdrLz3gngCfYsn2
-qRT2ntIpGIJXn6gbjEHII7g=
-=9h+H
------END PGP SIGNATURE-----
+RMD160 e033709c3dddb749c14807dc05996cf8e2cfa9de files/digest-skk-jisyo-cdb-200504 73
+SHA256 cec53c540191d484dc9d22d427d42281e64e2e02b0ab49645bc3b42c34f6b563 files/digest-skk-jisyo-cdb-200504 73
+MD5 1bf9a829d919380ac9332e979224af8a files/digest-skk-jisyo-cdb-200507 73
+RMD160 2a25dee9a4b64ab7069a4017316029852692d034 files/digest-skk-jisyo-cdb-200507 73
+SHA256 0b30a18bb5a2129c81bc5d5442b504eda8dcc42a90f011073f11326dbd003637 files/digest-skk-jisyo-cdb-200507 73
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad metadata.xml 156
+SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215 metadata.xml 156
+MD5 d0a12c414adc40108740becf4fcd7fa5 skk-jisyo-cdb-200410.ebuild 648
+RMD160 81770440e606a5425d801213881ffcbada5d8fb2 skk-jisyo-cdb-200410.ebuild 648
+SHA256 bdcac8e6217ad6510e3bc01811977da040b8b4ccab419f62f0d99b678d974e20 skk-jisyo-cdb-200410.ebuild 648
+MD5 de714678457dbeb068d6e0f1445e53ba skk-jisyo-cdb-200501.ebuild 655
+RMD160 4d59a4bc1ba3aa9ac89d60119cb742fd235f0944 skk-jisyo-cdb-200501.ebuild 655
+SHA256 7dc7707c60924db4c8358ef6045b40d55806615f97f6f2c51fa97448fd6e690a skk-jisyo-cdb-200501.ebuild 655
+MD5 74270965ef2cc75653a4d9f476538665 skk-jisyo-cdb-200504.ebuild 649
+RMD160 d664d4a402f581cc5a0684ef97e3238e6529d3bf skk-jisyo-cdb-200504.ebuild 649
+SHA256 d01e747f4289f94e3289ba4424d58cb3a262a95efc53115f2aa627fff5e57034 skk-jisyo-cdb-200504.ebuild 649
+MD5 53e306e7198620db00987e73690df965 skk-jisyo-cdb-200507.ebuild 654
+RMD160 92380037c9bcab9ed8b045fc31694c109b162e11 skk-jisyo-cdb-200507.ebuild 654
+SHA256 c216deea9e90baaad8f4be39e343fb2e6f4ee0fe86e29a34a735df800f109bf5 skk-jisyo-cdb-200507.ebuild 654
