@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.5 2006/02/06 06:24:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.6 2006/02/06 22:54:49 genstef Exp $
 
 inherit eutils autotools
 
@@ -82,7 +82,6 @@ src_compile() {
 	econf $(use_with X x) \
 		$(use_enable cups) \
 		$(use_enable threads) \
-		$(use_enable X dynamic) \
 		$(use_with xml omni) \
 		${myconf} || die "econf failed"
 	emake -j1 || die "make failed"
