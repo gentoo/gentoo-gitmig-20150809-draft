@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 531ba00645e5fb8dd3c236832b5ad7ea ChangeLog 5050
+MD5 5262e12ca2ecbd2c26af9a5f788cb469 ChangeLog 5145
 MD5 91804808fca23d8a14cc7a801e512b76 files/digest-libidn-0.5.15 66
 MD5 37f648a35c4c8afce81983e58a927bcd files/digest-libidn-0.5.20 66
 MD5 34af7cf0c0c059728bc3b2870298d456 files/digest-libidn-0.5.4 65
@@ -9,12 +6,5 @@ MD5 680592690b911d75fe6455fa7901b206 files/digest-libidn-0.6.1 65
 MD5 caa943e9c14f792202b88218bade2268 libidn-0.5.15.ebuild 1262
 MD5 d6dd7e4f119b65cf1b2fb95428da6c4d libidn-0.5.20.ebuild 1272
 MD5 c33918231e4239d278a3f701319462b7 libidn-0.5.4.ebuild 543
-MD5 e6f826f9015b36c90fa8a3cfca257e69 libidn-0.6.1.ebuild 1454
+MD5 f604f739a233704de1f34f1b0eb07d4d libidn-0.6.1.ebuild 1457
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD2c1VmdTrptrqvGERAk4lAJ9QGeo9sQRycCffkA0jegjEyBLT4wCfcdP2
-8sBcVe+eDBvY0UwCTYSF7XI=
-=jMPS
------END PGP SIGNATURE-----

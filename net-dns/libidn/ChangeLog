@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.40 2006/01/25 22:01:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.41 2006/02/06 09:31:22 corsair Exp $
+
+  06 Feb 2006; Markus Rothe <corsair@gentoo.org> libidn-0.6.1.ebuild:
+  Added ~ppc64; bug #119910
 
   27 Jan 2006; Daniel Black <dragonheart@gentoo.org> libidn-0.6.1.ebuild:
   added mono support and fixed sandbox fault - bug #119929. Thanks to Peter
