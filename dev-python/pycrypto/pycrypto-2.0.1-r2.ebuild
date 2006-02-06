@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.0.1-r2.ebuild,v 1.2 2006/02/02 01:24:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.0.1-r2.ebuild,v 1.3 2006/02/06 03:01:34 agriffis Exp $
 
 inherit eutils distutils toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.amk.ca/files/python/crypto/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~ppc ~ppc-macos ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~ppc ~ppc-macos ~s390 ~sh ~sparc ~x86"
 IUSE="bindist gmp test"
 
 RDEPEND="virtual/python
