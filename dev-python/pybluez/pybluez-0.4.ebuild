@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/pybluez-0.4.ebuild,v 1.1 2005/11/18 15:50:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/pybluez-0.4.ebuild,v 1.2 2006/02/06 19:35:44 liquidx Exp $
 
 inherit distutils python
 
@@ -10,7 +10,7 @@ SRC_URI="http://org.csail.mit.edu/pybluez/release/${PN}-src-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/python-2.3
