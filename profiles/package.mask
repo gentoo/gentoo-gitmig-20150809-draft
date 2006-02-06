@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4968 2006/02/06 14:31:44 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4969 2006/02/06 15:34:04 taviso Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Tavis Ormandy <taviso@gentoo.org> (06 Feb 2006)
+# deprecated in favour of app-shells/tcsh
+app-shells/csh
 
 # Stefan Schweizer <genstef@gentoo.org> (06 Feb 2006)
 # deprecated - please use net-print/hplip now
