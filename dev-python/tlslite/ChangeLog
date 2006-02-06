@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/tlslite
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.1 2006/02/06 19:47:37 sbriesen Exp $
+
+*tlslite-0.3.8 (06 Feb 2006)
+
+  06 Feb 2006; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +tlslite-0.3.8.ebuild:
+  initial commit.
+
