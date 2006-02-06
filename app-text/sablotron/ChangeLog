@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sablotron
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.44 2005/09/21 20:10:05 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.45 2006/02/06 19:36:19 blubb Exp $
+
+  06 Feb 2006; Simon Stelling <blubb@gentoo.org> sablotron-1.0.1.ebuild:
+  stable on amd64
 
   21 Sep 2005; Fabian Groffen <grobian@gentoo.org> sablotron-1.0.1.ebuild:
   Marking ~ppc-macos (bug #105887)
