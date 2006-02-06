@@ -3,7 +3,7 @@
 # Written by Roy Marples <uberlord@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
 # Alternatively, this file may be distributed under the terms of the BSD License
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/files/wpa_supplicant-0.5.1-wpa_cli.action,v 1.1 2006/01/30 22:37:36 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/files/wpa_supplicant-0.5.1-wpa_cli.sh,v 1.1 2006/02/06 13:45:56 brix Exp $
 
 if [ -z "$1" -o -z "$2" ]; then
 	echo "Insufficient parameters" > /dev/stderr
