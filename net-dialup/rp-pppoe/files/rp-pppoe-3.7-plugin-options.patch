@@ -1,0 +1,12 @@
+diff -Nur rp-pppoe-3.7.orig/scripts/pppoe-connect.in rp-pppoe-3.7/scripts/pppoe-connect.in
+--- rp-pppoe-3.7.orig/scripts/pppoe-connect.in	2005-11-17 04:14:32.000000000 +0200
++++ rp-pppoe-3.7/scripts/pppoe-connect.in	2006-02-06 23:31:53.608100500 +0200
+@@ -197,7 +197,7 @@
+ 
+ # If we're using kernel-mode PPPoE on Linux...
+ if test "$LINUX_PLUGIN" != "" ; then
+-    PLUGIN_OPTS="plugin $LINUX_PLUGIN nic-$ETH"
++    PLUGIN_OPTS="plugin $LINUX_PLUGIN"
+     if test -n "$SERVICENAME" ; then
+ 	PLUGIN_OPTS="$PLUGIN_OPTS rp_pppoe_service $SERVICENAME"
+     fi

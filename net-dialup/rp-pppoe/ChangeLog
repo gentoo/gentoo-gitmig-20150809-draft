@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.63 2006/01/06 09:56:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.64 2006/02/06 21:47:09 mrness Exp $
+
+*rp-pppoe-3.7 (06 Feb 2006)
+
+  06 Feb 2006; Alin Nastac <mrness@gentoo.org>
+  +files/rp-pppoe-3.7-gentoo-netscripts.patch,
+  +files/rp-pppoe-3.7-on-demand-with-plugin.patch,
+  +files/rp-pppoe-3.7-plugin-options.patch,
+  +files/rp-pppoe-3.7-username-charset.patch, +rp-pppoe-3.7.ebuild:
+  Version bump (#121836).
 
   06 Jan 2006; Alin Nastac <mrness@gentoo.org> rp-pppoe-3.5-r11.ebuild,
   rp-pppoe-3.6.ebuild:
