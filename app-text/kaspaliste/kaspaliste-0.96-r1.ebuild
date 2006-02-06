@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/kaspaliste-0.96-r1.ebuild,v 1.2 2006/01/25 22:31:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/kaspaliste-0.96-r1.ebuild,v 1.3 2006/02/06 12:34:25 genstef Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=dev-db/postgresql-7.3"
+DEPEND=">=dev-db/postgresql-7.3
+	kde-base/arts"
 need-kde 3
 
 src_unpack() {
