@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xorg-cf-files
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.13 2006/01/08 19:52:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.14 2006/02/06 19:24:15 spyderous Exp $
+
+*xorg-cf-files-1.0.1-r1 (06 Feb 2006)
+
+  06 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  -xorg-cf-files-1.0.1.ebuild, +xorg-cf-files-1.0.1-r1.ebuild:
+  Set ProjectRoot to /usr so things like Xaw3d don't install to /usr/X11R6,
+  reported by genstef.
 
   08 Jan 2006; <nixnut@gentoo.org> xorg-cf-files-1.0.1.ebuild:
   Add ~ppc keyword
