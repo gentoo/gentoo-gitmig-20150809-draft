@@ -1,4 +1,60 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.42 2006/02/05 09:00:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.43 2006/02/06 14:41:45 geoman Exp $
+
+# Stephen P. Becker <geoman@gentoo.org>
+# more modular X stuff
+video_cards_tdfx
+video_cards_ati
+video_cards_sunffb
+video_cards_mga
+video_cards_nv
+video_cards_savage
+video_cards_sis
+input_devices_acecad
+input_devices_aiptek
+input_devices_calcomp
+input_devices_citron
+input_devices_digitaledge
+input_devices_dmc
+input_devices_dynapro
+input_devices_elo2300
+input_devices_elographics
+input_devices_fpit
+input_devices_hyperpen
+input_devices_jamstudio
+input_devices_magellan
+input_devices_magictouch
+input_devices_microtouch
+input_devices_mutouch
+input_devices_palmax
+input_devices_penmount
+input_devices_spaceorb
+input_devices_summa
+input_devices_synaptics
+input_devices_tek4957
+input_devices_ur98
+input_devices_vmmouse
+input_devices_void
+input_devices_wacom
+video_cards_chips
+video_cards_cirrus
+video_cards_dummy
+video_cards_fglrx
+video_cards_glint
+video_cards_nvidia
+video_cards_s3
+video_cards_s3virge
+video_cards_savage
+video_cards_sisusb
+video_cards_sunbw2
+video_cards_suncg14
+video_cards_suncg3
+video_cards_suncg6
+video_cards_sunleo
+video_cards_suntcx
+video_cards_trident
+video_cards_v4l
+video_cards_vmware
+video_cards_voodoo
 
 # 2006/02/05 - Donnie Berkholz <spyderous@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
