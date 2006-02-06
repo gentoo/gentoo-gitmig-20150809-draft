@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2.ebuild,v 1.2 2006/02/03 19:22:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2.ebuild,v 1.3 2006/02/06 19:07:24 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -123,25 +123,31 @@ src_unpack() {
 		add_drivers unichrome
 	fi
 
+	# Defaults based on X.Org 6.9, with some changes
 	if [[ ! -n "${VIDEO_CARDS}" ]]; then
-		add_drivers \
-			i810 \
-			i830 \
-			i915 \
-			mach64 \
-			mga \
-			r128 \
-			r200 \
-			r300 \
-			radeon \
-			s3v \
-			savage \
-			sis \
-			tdfx \
-			trident \
-			unichrome
-		if use sparc; then
-			add_drivers ffb
+		if use alpha; then
+			add_drivers mga tdfx r128 r200 r300 radeon
+		elif use amd64; then
+			add_drivers i915 mga r128 r200 r300 radeon tdfx
+		elif use arm; then
+			add_drivers mga r128 r200 r300 radeon
+		elif use hppa; then
+			# no accelerated 3D on hppa
+			true
+		elif use ia64; then
+			add_drivers mach64 mga r128 r200 r300 radeon tdfx unichrome
+		elif use mips; then
+			# no accelerated 3D on mips
+			true
+		elif use ppc; then
+			add_drivers mga r128 r200 r300 radeon
+		elif use ppc64; then
+			add_drivers mga r128 r200 r300 radeon
+		elif use sparc; then
+			add_drivers ffb mach64
+		elif use x86; then
+			add_drivers i810 i915 mach64 mga r128 r200 r300 radeon s3v savage \
+				sis tdfx trident unichrome
 		fi
 	fi
 
