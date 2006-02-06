@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/libmodplug-0.7.ebuild,v 1.12 2006/01/22 23:59:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/libmodplug-0.7.ebuild,v 1.13 2006/02/06 20:52:08 flameeyes Exp $
 
 inherit eutils
 
@@ -21,6 +21,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"/src/libmodplug
 	epatch "${FILESDIR}"/${P}-amd64.patch
+	cd ${S}
+	epatch "${FILESDIR}/${P}-asneeded.patch"
 }
 
 src_install() {
