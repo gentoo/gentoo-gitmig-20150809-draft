@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.66 2006/02/06 19:07:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.67 2006/02/06 19:17:48 spyderous Exp $
+
+  06 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; mesa-6.4.2.ebuild:
+  Add mach64 and tdfx to ppc defaults. Some evidence that glide-v3 works on
+  ppc exists; needs testing, and is required for tdfx 3D to work.
 
   06 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; mesa-6.4.2.ebuild:
   Add arch-dependent defaults for building 3D drivers.

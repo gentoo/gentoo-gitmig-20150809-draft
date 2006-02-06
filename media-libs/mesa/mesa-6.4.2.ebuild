@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2.ebuild,v 1.3 2006/02/06 19:07:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2.ebuild,v 1.4 2006/02/06 19:17:48 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -140,7 +140,7 @@ src_unpack() {
 			# no accelerated 3D on mips
 			true
 		elif use ppc; then
-			add_drivers mga r128 r200 r300 radeon
+			add_drivers mach64 mga r128 r200 r300 radeon tdfx
 		elif use ppc64; then
 			add_drivers mga r128 r200 r300 radeon
 		elif use sparc; then
