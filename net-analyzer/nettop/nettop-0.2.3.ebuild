@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/nettop-0.2.3.ebuild,v 1.11 2005/05/10 16:04:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/nettop-0.2.3.ebuild,v 1.12 2006/02/06 22:36:44 chutzpah Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://srparish.net/software/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 sparc ppc ~amd64"
+KEYWORDS="amd64 ppc sparc x86"
 
 DEPEND="sys-libs/slang
 	    virtual/libpcap"
