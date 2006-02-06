@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclgpgme
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.18 2006/01/07 11:31:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.19 2006/02/06 03:07:15 agriffis Exp $
+
+  06 Feb 2006; Aron Griffis <agriffis@gentoo.org> tclgpgme-1.0-r2.ebuild:
+  Mark 1.0-r2 stable on alpha
 
   07 Jan 2006; Markus Rothe <corsair@gentoo.org> tclgpgme-1.0-r2.ebuild:
   Stable on ppc64
