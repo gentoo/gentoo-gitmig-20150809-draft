@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.39 2006/01/31 21:17:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.40 2006/02/06 21:53:43 zzam Exp $
+
+  06 Feb 2006; Matthias Schwarzott <zzam@gentoo.org>
+  gentoo-vdr-scripts-0.2_alpha3-r1.ebuild:
+  Added missing variable definition (See bug #121826).
 
   31 Jan 2006; Matthias Schwarzott <zzam@gentoo.org>
   +files/gentoo-vdr-scripts-0.2.3-chuid-option.patch,
