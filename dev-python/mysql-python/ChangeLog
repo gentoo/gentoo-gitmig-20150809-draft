@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mysql-python
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.30 2006/02/06 21:58:31 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.31 2006/02/06 22:03:02 liquidx Exp $
+
+  06 Feb 2006; Alastair Tse <liquidx@gentoo.org>
+  mysql-python-1.2.0-r1.ebuild:
+  the changes are backwards compatible. put mysql-3.22* dep back in
 
 *mysql-python-1.2.0-r1 (06 Feb 2006)
 
