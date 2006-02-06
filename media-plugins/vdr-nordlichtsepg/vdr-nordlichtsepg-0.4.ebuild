@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-nordlichtsepg/vdr-nordlichtsepg-0.4.ebuild,v 1.1 2005/11/15 22:46:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-nordlichtsepg/vdr-nordlichtsepg-0.4.ebuild,v 1.2 2006/02/06 23:05:52 zzam Exp $
 
 inherit vdr-plugin
 
@@ -12,6 +12,6 @@ HOMEPAGE="http://martins-kabuff.de/nordlichtsepg.html"
 SRC_URI="http://martins-kabuff.de/download/${P}.tgz"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=media-video/vdr-1.3.31"
