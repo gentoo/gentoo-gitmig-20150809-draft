@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4965 2006/02/06 08:24:10 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4966 2006/02/06 12:57:19 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (06 Feb 2006)
+# deprecated - please use net-print/hplip now
+net-print/hpoj
 
 # Joe McCann <joem@gentoo.org> (06 Feb 2006)
 #Mask version with optional gstreamer-0.10 support
