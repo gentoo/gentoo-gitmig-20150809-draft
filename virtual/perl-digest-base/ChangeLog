@@ -1,0 +1,16 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-digest-base/ChangeLog,v 1.1 2006/02/06 17:35:30 mcummings Exp $
+
+*perl-digest-base-1.14 (06 Feb 2006)
+*perl-digest-base-1.13 (06 Feb 2006)
+*perl-digest-base-1.10 (06 Feb 2006)
+*perl-digest-base-1.08 (06 Feb 2006)
+*perl-digest-base-1.05 (06 Feb 2006)
+
+  06 Feb 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +perl-digest-base-1.05.ebuild, +perl-digest-base-1.08.ebuild,
+  +perl-digest-base-1.10.ebuild, +perl-digest-base-1.13.ebuild,
+  +perl-digest-base-1.14.ebuild:
+  New virtual for perl-core/digest-base
+

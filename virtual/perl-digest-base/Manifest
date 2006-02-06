@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bf2394b0d335e43525d0b7b7690887b0 ChangeLog 676
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-digest-base-1.05 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-digest-base-1.08 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-digest-base-1.10 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-digest-base-1.13 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-digest-base-1.14 0
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 5d52cc3a4e2b38a9854e002e2cae4c89 perl-digest-base-1.05.ebuild 487
+MD5 33f353395b5a9ba81e353eeae6caee8b perl-digest-base-1.08.ebuild 498
+MD5 f9573e0d55b94629276139219607eea7 perl-digest-base-1.10.ebuild 487
+MD5 6835ddc41662f11d861a45d188fd2bce perl-digest-base-1.13.ebuild 492
+MD5 c1849a71b4d68924a6dc68a0adba0d7e perl-digest-base-1.14.ebuild 502
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFD54jntG5z4I8BtQoRAngwAJUWwyInxyJlBUzBCCizzRy7k9VKAJ0d8gEN
+/okQKk0FDtWZv57zj1cFeQ==
+=dheL
+-----END PGP SIGNATURE-----
