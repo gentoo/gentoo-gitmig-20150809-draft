@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6cfa73d986429d52ce98bd0027802304 ChangeLog 5324
+MD5 7b030c0aabca72ad37d97e029ef29476 ChangeLog 5431
+RMD160 f196242c968f79f9e8588909af6be7440404d9cc ChangeLog 5431
+SHA256 c73692cba083f105f10d4a864319963f5ddeee88f97d1e80bb41afefb143b6c9 ChangeLog 5431
 MD5 bdbcd3d1ac04770d48111cc96734d0c7 files/digest-pkgconfig-0.17.2-r1 69
+RMD160 a2a8254977f663d5d0484a6711c3e965b3df4402 files/digest-pkgconfig-0.17.2-r1 69
+SHA256 ae3d952d719b6a673b23b25a1c0d31e270387a4e9081c2ad57fdfd51d5d33905 files/digest-pkgconfig-0.17.2-r1 69
 MD5 c5219c9571cf5aafc3aef2dcd973a658 files/digest-pkgconfig-0.19 68
+RMD160 e64213063a0be3838803974f8ea23f30315a2641 files/digest-pkgconfig-0.19 68
+SHA256 458ca3599ba7d34dee9b47d4048507d9b59adf78d2dac097bd3b82f83f12d828 files/digest-pkgconfig-0.19 68
 MD5 2b9aca8dd4a0708075a95509669dd238 files/digest-pkgconfig-0.20 67
+RMD160 2d9551fc83ad9c8cc56a9914bfa440e45703dee6 files/digest-pkgconfig-0.20 67
+SHA256 b13d042737256f65bc6ca89b54fc414265bb36937e57c6fd86d666877b328c7c files/digest-pkgconfig-0.20 67
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 5ccc90cb05a7c03b3e4f28a4fc1c1064 pkgconfig-0.17.2-r1.ebuild 853
+RMD160 56cd8266b40fb7c3313839330b95b3ece1ab7720 pkgconfig-0.17.2-r1.ebuild 853
+SHA256 7377bfd8c9b1996af2a347bd6096a4dc8cbea646d8afaf2d77c6c444bb2870ea pkgconfig-0.17.2-r1.ebuild 853
 MD5 2f1cf813265bfc9d0ad424adfb42e68d pkgconfig-0.19.ebuild 877
-MD5 0412555d04aa607ca54f7e632f8e388b pkgconfig-0.20.ebuild 813
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD3F9X2+ySkm8kpY0RAvvLAKCoZw71feqpBl6+IfWsx2tc7zEj3ACfZ5bg
-W4ovp9Kp9Qx/SSAgAmwNuxY=
-=U06+
------END PGP SIGNATURE-----
+RMD160 f2684fb7fb3bb3d08ba90d6793a2829ea678a47c pkgconfig-0.19.ebuild 877
+SHA256 4d6a924b2a56a15447ad73e2bf1ab26f037f97c62b4a761fb940bde28c89756e pkgconfig-0.19.ebuild 877
+MD5 4695304bbbc58d55ba5a7b24d3215e2f pkgconfig-0.20.ebuild 814
+RMD160 bbb4b7620e8988946634d887f933de9456e06037 pkgconfig-0.20.ebuild 814
+SHA256 c672cb67f5473931cc0a7394f03cc0edfd705c2b7c972358da3de045e34217e3 pkgconfig-0.20.ebuild 814
