@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4972 2006/02/06 21:59:07 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4973 2006/02/06 22:10:48 marienz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -49,10 +49,6 @@ net-print/hpoj
 # Marcelo Goes <vanquirius@gentoo.org> (06 Feb 2006)
 # Mask tcpreplay beta branch. If you want it, unmask it.
 >=net-analyzer/tcpreplay-3.0_beta1
-
-# Marien Zwart <marienz@gentoo.org> (06 Feb 2006)
-# Mask this version as long as setuptools (which it depends on) is masked.
-=dev-python/pysqlite-2.0.7
 
 # Petteri Räty <betelgeuse@gentoo.org> (05 Feb 2006)
 # masked until I get to test more than that it compiles
@@ -548,10 +544,6 @@ dev-lisp/cmucl-source
 # Buggy and seemingly not maintained upstream
 # Using media-gfx/gqview is a much better choice.
 media-gfx/gtksee
-
-# Rob Cakebread <pythonhead@gentoo.org> (14 Oct 2005)
-# Masked for testing
-dev-python/setuptools
 
 # Sven Wegener <swegener@gentoo.org> (13 Oct 2005)
 # CVS Development Snapshot
