@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-0.7.ebuild,v 1.1 2006/02/06 23:32:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-0.7.ebuild,v 1.2 2006/02/06 23:43:08 spyderous Exp $
 
 DESCRIPTION="X keyboard configuration database"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~s390 ~sh ~sparc ~x86"
@@ -17,6 +17,7 @@ src_compile() {
 		--enable-compat-rules \
 		--disable-xkbcomp-symlink \
 		|| die "configure failed"
+
 	emake || die "make failed"
 }
 
