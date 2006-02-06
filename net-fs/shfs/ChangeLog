@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.25 2006/01/06 13:09:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.26 2006/02/06 23:11:39 agriffis Exp $
+
+  06 Feb 2006; Aron Griffis <agriffis@gentoo.org> shfs-0.35-r1.ebuild:
+  Mark 0.35-r1 stable on alpha
 
   06 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> shfs-0.35-r2.ebuild:
   Keyworded ~sparc wrt #117832
