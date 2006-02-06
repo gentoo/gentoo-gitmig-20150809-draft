@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre20060112.ebuild,v 1.1 2006/01/12 17:41:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre20060117.ebuild,v 1.1 2006/02/06 01:56:38 flameeyes Exp $
 
-inherit eutils autotools
+inherit eutils flag-o-matic
 
 CVS="${PV#*pre}"
 
@@ -22,11 +22,11 @@ HOMEPAGE="http://www.mt-daapd.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc-macos ~sh ~sparc ~x86"
-IUSE="howl vorbis avahi sqlite sqlite3 flac"
+IUSE="howl vorbis avahi sqlite3 flac"
 
 DEPEND="sys-libs/zlib
 	media-libs/libid3tag
-	sqlite? ( =dev-db/sqlite-2* )
+	!sqlite3? ( =dev-db/sqlite-2* )
 	sqlite3? ( =dev-db/sqlite-3* )
 	howl? ( !avahi? ( >=net-misc/howl-0.9.2 )
 		avahi? ( net-dns/avahi ) )
@@ -50,17 +50,11 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/${PN}-${CVS}-libs.patch"
-
-	eautoreconf
-}
-
 src_compile() {
 	local myconf=""
 	local howlincludes
+
+	append-flags -fno-strict-aliasing
 
 	# howl support?
 	if use howl; then
@@ -82,7 +76,7 @@ src_compile() {
 	econf \
 		$(use_enable vorbis oggvorbis) \
 		$(use_enable flac) \
-		$(use_enable sqlite) \
+		$(use_enable !sqlite3 sqlite) \
 		$(use_enable sqlite3) \
 		${myconf} || die "configure failed"
 	emake || die "make failed"
