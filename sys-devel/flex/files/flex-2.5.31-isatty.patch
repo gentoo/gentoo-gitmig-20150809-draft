@@ -1,0 +1,40 @@
+Declare the isatty prototype all the time
+
+http://bugs.gentoo.org/119598
+
+--- flex/scan.c
++++ flex/scan.c
+@@ -3935,9 +3935,13 @@
+ 	yyfree((void *) b  );
+ }
+ 
+-#ifndef __cplusplus
++#ifdef __cplusplus
++extern "C" {
++#endif
+ extern int isatty (int );
+-#endif /* __cplusplus */
++#ifdef __cplusplus
++}
++#endif
+     
+ /* Initializes or reinitializes a buffer.
+  * This function is sometimes called more than once on the same buffer,
+--- flex/skel.c
++++ flex/skel.c
+@@ -2183,9 +2183,13 @@
+   "[[",
+   "    m4_ifdef( [[M4_YY_NEVER_INTERACTIVE]],,",
+   "    [[",
+-  "#ifndef __cplusplus",
++  "#ifdef __cplusplus",
++  "extern \"C\" {",
++  "#endif",
+   "extern int isatty M4_YY_PARAMS( int );",
+-  "#endif /* __cplusplus */",
++  "#ifdef __cplusplus",
++  "}",
++  "#endif",
+   "    ]])",
+   "]])",
+   "%endif",
