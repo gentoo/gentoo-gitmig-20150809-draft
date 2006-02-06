@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.9 2006/02/05 17:52:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.10 2006/02/06 05:20:25 agriffis Exp $
+
+  06 Feb 2006; Aron Griffis <agriffis@gentoo.org>
+  ghostscript-esp-7.07.1-r10.ebuild:
+  Mark 7.07.1-r10 stable on ia64
 
   05 Feb 2006; Stefan Schweizer <genstef@gentoo.org>
   +files/ijs-dirinstall.diff, ghostscript-esp-8.15.1.ebuild:

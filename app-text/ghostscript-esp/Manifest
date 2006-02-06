@@ -1,6 +1,9 @@
-MD5 ae51c326dbafb61c3f5e2eb9393f212d ChangeLog 21916
-RMD160 bb3702747c1821092c33c3ef70a348ed11f36cf1 ChangeLog 21916
-SHA256 ce4334703679c978314740907b69c6f715ff2dfc5459fc5e7ae2e35c32633d9a ChangeLog 21916
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 80f20c1791228141e5e1fe596a1d7902 ChangeLog 22039
+RMD160 b8057d7572d4fc284fb20529c83296f1e78b8baf ChangeLog 22039
+SHA256 a4fecaab084f0400f907d5a5b8f7226863c686848cdc39d0b57159498ea7fc91 ChangeLog 22039
 MD5 db00eb9aaf23133f903513fea669954f files/digest-ghostscript-esp-7.07.1-r10 212
 RMD160 6b2190a80e931bbea33eeaaff21ebab231bfe391 files/digest-ghostscript-esp-7.07.1-r10 212
 SHA256 cd015ae840c870d1561360c4de363612d13f234d0d04ced7e9e25a0f72087bd2 files/digest-ghostscript-esp-7.07.1-r10 212
@@ -106,9 +109,9 @@ SHA256 552690dbf45dd141728ad2031597d5d32cc07e041623493776efda0e223a683f files/gs
 MD5 e58fe142d96f8a2d09f58aea873a4386 files/ijs-dirinstall.diff 1424
 RMD160 c6a1d77325b5489721b6177eed0a3a55bb42721d files/ijs-dirinstall.diff 1424
 SHA256 bc5eaeffcb770a361963a8e778db06c1879d0f5175f9cb17384e27d8942d7d1b files/ijs-dirinstall.diff 1424
-MD5 32d445682c030ec35813551b5ddb8814 ghostscript-esp-7.07.1-r10.ebuild 6170
-RMD160 e07a1ee25fe6462f0652cc6057f548372482afdf ghostscript-esp-7.07.1-r10.ebuild 6170
-SHA256 7d1aaff13dbd2c008b2db4f8983b8abe29ca8ebc4d55ac8da5943517fc609e17 ghostscript-esp-7.07.1-r10.ebuild 6170
+MD5 0b85a292a3106182ae2e7cc5f5d25900 ghostscript-esp-7.07.1-r10.ebuild 6169
+RMD160 2e5a8ce1fb655c68312f27b6c5499e73a9d6401e ghostscript-esp-7.07.1-r10.ebuild 6169
+SHA256 f11e2c086ebfd3a21b90e80210da354d1b4341ee3f25e4eeddc4584c8d8d89f8 ghostscript-esp-7.07.1-r10.ebuild 6169
 MD5 87d9695f4326a6755be96ea89362b2db ghostscript-esp-7.07.1-r7.ebuild 4605
 RMD160 233f555fe0145a7ade31d07fd8986a71756e84eb ghostscript-esp-7.07.1-r7.ebuild 4605
 SHA256 b1e86962359aaecc075e08efb1a217d7e2f4a5569519c14874f4f6de510d24a1 ghostscript-esp-7.07.1-r7.ebuild 4605
@@ -121,3 +124,10 @@ SHA256 e08d415fcf781acc6b7d8a3fe6ff8b4ffbde8a3a901c4d95962e1da837f349bd ghostscr
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 metadata.xml 161
 SHA256 7c85e6739a71f5bb23e8de36c88677d772946e61f7285892f7554e37bd2bca76 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD5tyiJrHF4yAQTrARApREAKCZZW/bjUUnQVJtAlDRwD2Pe3l/mQCeNGFS
+/vzVxDHJQnCBM2vHfkS3n5s=
+=wdjZ
+-----END PGP SIGNATURE-----
