@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.0_beta1.ebuild,v 1.3 2005/04/25 00:17:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.0_beta7.ebuild,v 1.1 2006/02/06 01:11:15 jokey Exp $
 
-MY_P=${PN}-${PV/_beta1/.beta1}
+MY_P=${PN}-${PV/_beta7/.beta7}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="replay saved tcpdump or snoop files at arbitrary speeds"
