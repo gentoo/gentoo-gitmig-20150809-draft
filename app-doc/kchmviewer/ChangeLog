@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/kchmviewer
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.9 2005/11/29 16:57:12 greg_g Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.10 2006/02/06 15:51:14 flameeyes Exp $
+
+*kchmviewer-2.0 (06 Feb 2006)
+
+  06 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> +kchmviewer-2.0.ebuild:
+  Bump to latest version from upstream. Bug #121829.
 
 *kchmviewer-1.3 (29 Nov 2005)
 
