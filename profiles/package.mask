@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4966 2006/02/06 12:57:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4967 2006/02/06 14:12:43 lisa Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -222,13 +222,6 @@ app-laptop/powerbook-tools
 # Luca Barbato <lu_zero@gentoo.org> (02 Jan 2006)
 # masked for testing
 =media-video/mplayer-1.0.20060102
-
-# Lisa Seelye <lisa@gentoo.org> (02 Jan 2006)
-# This really needs to be gotten rid of. It's buggy and the pecl version is
-# better. It'll be removed in early February unless people complain.
-# Comment to http://article.gmane.org/gmane.linux.gentoo.devel/34595/match= to
-# complain.
-sys-libs/memcached-api-php
 
 # Stefan Schweizer <genstef@gentoo.org> (01 Jan 2006)
 # misdn mqueue branch - experimental but with udev support
