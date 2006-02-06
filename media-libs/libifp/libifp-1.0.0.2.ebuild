@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/libifp-1.0.0.2.ebuild,v 1.1 2006/01/23 21:08:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/libifp-1.0.0.2.ebuild,v 1.2 2006/02/06 04:02:54 chutzpah Exp $
 
 DESCRIPTION="A general-purpose library-driver for iRiver's iFP portable audio players."
 HOMEPAGE="http://ifp-driver.sourceforge.net/libifp/"
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="doc examples module"
 
 DEPEND=">=dev-libs/libusb-0.1.0
-	doc? >=app-doc/doxygen-1.3.7"
+	doc? ( >=app-doc/doxygen-1.3.7 )"
 
 RDEPEND=">=dev-libs/libusb-0.1.0
 	module? (
