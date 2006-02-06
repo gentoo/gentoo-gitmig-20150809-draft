@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.17 2006/01/25 17:04:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.18 2006/02/06 07:53:49 phosphan Exp $
+
+  06 Feb 2006; Patrick Kursawe <phosphan@gentoo.org> pcb-20050315.ebuild:
+  Fixing deps, bug #121750
 
   25 Jan 2006; Patrick Kursawe <phosphan@gentoo.org> -pcb-20050127.ebuild,
   pcb-20050315.ebuild, pcb-20050609.ebuild:
