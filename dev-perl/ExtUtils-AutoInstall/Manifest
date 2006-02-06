@@ -1,18 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f33620ce341a984beea24a53e465fadc ChangeLog 3742
-RMD160 aeee720c1b3c84f7d0ad390bd23962fbca36283d ChangeLog 3742
-SHA256 ba5ed1cfa0624901373cd6499a3d67416d76e8a4757531251456f7242ccbf64c ChangeLog 3742
+MD5 42bb1a8b687b64de7b5baf32e76a56ad ChangeLog 3843
+RMD160 0c4adc82ae96fcc3775c164d4471feee946a4625 ChangeLog 3843
+SHA256 6975b2f991e4202ca74c2c0b5f302cec86129e6e18c2e25520c3c6dc055c75f8 ChangeLog 3843
 MD5 5df1998bee9dee5cf11a9216e65a85ef ExtUtils-AutoInstall-0.56.ebuild 640
 RMD160 ae1de5f6434c612cf73aa024a040b3587dfea7ec ExtUtils-AutoInstall-0.56.ebuild 640
 SHA256 e92142915f649ec3d904a9964ab354a74c4cc09cd5dddaa3e265c4e2a4bba16c ExtUtils-AutoInstall-0.56.ebuild 640
 MD5 75bf039f5a753d059bd09831fed81c87 ExtUtils-AutoInstall-0.61.ebuild 738
 RMD160 cff7a4562dc1bd3d2a7ec54bfc4df0ffccb76ae1 ExtUtils-AutoInstall-0.61.ebuild 738
 SHA256 98a88aeb75de7e3a5d3584c0bdff278e200aa9db77c5a44394a11ef48232f01a ExtUtils-AutoInstall-0.61.ebuild 738
-MD5 e9b1856c941d76b60cb30af682fa01b7 ExtUtils-AutoInstall-0.63.ebuild 744
-RMD160 bbc6c963424da9741a2a8f4a56cdb7735981c375 ExtUtils-AutoInstall-0.63.ebuild 744
-SHA256 fc70cdab8cb01579258bf2b0253abb3c18a06965ffcf579bd7870c05d5e59691 ExtUtils-AutoInstall-0.63.ebuild 744
+MD5 cc85fbb563dcc94db0e4af0d7fe297eb ExtUtils-AutoInstall-0.63.ebuild 740
+RMD160 c3bae9e60b464a237708060e89e3033d4df39141 ExtUtils-AutoInstall-0.63.ebuild 740
+SHA256 c3758c41dc072548224e0bd7826568e080d14d82b0207e128b01832e9e594ec9 ExtUtils-AutoInstall-0.63.ebuild 740
 MD5 ae17c3e8f0740f3e9aca7d19f8531375 files/digest-ExtUtils-AutoInstall-0.56 76
 RMD160 caff8fc9d759f5ee28655b4c8e1b05011e751165 files/digest-ExtUtils-AutoInstall-0.56 76
 SHA256 9892911d71f8cd63ef17572c5cbffd734f09b783e8321a139ed8b7ae19508184 files/digest-ExtUtils-AutoInstall-0.56 76
@@ -25,10 +22,3 @@ SHA256 69e8a96a469393f8c58c4d088cc3d17aac6aee9173e223679ab93423cc462558 files/di
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD4/acJrHF4yAQTrARArcoAJ90d69ttFof2pNY4fHSoi5QD0aynACfRRV5
-Fm6pv1n2VXSei6moqfDWLfA=
-=9l9D
------END PGP SIGNATURE-----

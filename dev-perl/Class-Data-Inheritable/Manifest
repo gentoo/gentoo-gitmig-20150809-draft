@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5be295d26f2953d0512067ede009f9c6 ChangeLog 1906
-RMD160 0c6d82bd8d391369fb7a1f833abe165c2b8412b3 ChangeLog 1906
-SHA256 2164a3b0bf4801f53da75f9386fd82c950be99447a764cd38b127e60b9fb9e1d ChangeLog 1906
+MD5 c24287dea41ae6a855f573ea84db3cae ChangeLog 2009
+RMD160 619b345be7ca0fbfae75f7e2c068f11895274409 ChangeLog 2009
+SHA256 b2567b245fb91964d9c22f81f19196da4530e3d27aaf423b511ebb9191407221 ChangeLog 2009
 MD5 eb0a85a7ab059a1907adedc5de5d5fbc Class-Data-Inheritable-0.02.ebuild 565
 RMD160 1b79091330fb7eabd88e456b91fed94e5da3acaa Class-Data-Inheritable-0.02.ebuild 565
 SHA256 cf44344c238b8275868c8e6432ce7914cf9d4ae824dce2a5a688a28fa97faee6 Class-Data-Inheritable-0.02.ebuild 565
-MD5 35cb71aee450d098c37285c652458c7f Class-Data-Inheritable-0.04.ebuild 549
-RMD160 b4fc99fa0817ea0b1ecaf736261109fa1e8acd24 Class-Data-Inheritable-0.04.ebuild 549
-SHA256 04a658863b9e3f41f8b8bec245d74669772508a84a222c4d984f0517e935a6ad Class-Data-Inheritable-0.04.ebuild 549
+MD5 a769ccbfef8503318a15090be82ab086 Class-Data-Inheritable-0.04.ebuild 545
+RMD160 610340002e325162b8c8e5199aaa811eef126dfb Class-Data-Inheritable-0.04.ebuild 545
+SHA256 d65cb939cf9f616798574b0d8f5b6708cbad8d2e6bc9110c7aa9ca2e36e0b92e Class-Data-Inheritable-0.04.ebuild 545
 MD5 5833bcb6b531f67b516cd9cf524d9410 files/digest-Class-Data-Inheritable-0.02 77
 RMD160 d470830d861a2bef7aae89ad302239326fda64f8 files/digest-Class-Data-Inheritable-0.02 77
 SHA256 5800add5341c8c4075c4350feca1c46dc13c7a89c0cffaa45c005a4e6228e27d files/digest-Class-Data-Inheritable-0.02 77
@@ -19,10 +16,3 @@ SHA256 c6192b7fcac1f3a1eed724635036b3440d174f73af9aabfc95b2a9fc581b34e7 files/di
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD4/PoJrHF4yAQTrARAqzzAJ9tHeJIj3kvD0FH+Omyd8nAWwUMaQCeLp1X
-txRa6qKKxZc8ibpaGt029tg=
-=WlL0
------END PGP SIGNATURE-----
