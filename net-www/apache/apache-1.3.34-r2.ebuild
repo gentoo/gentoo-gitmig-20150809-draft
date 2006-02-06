@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.34-r2.ebuild,v 1.7 2006/02/01 19:19:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.34-r2.ebuild,v 1.8 2006/02/06 00:16:13 blubb Exp $
 
 # Gentoo ARCH teams
 #
@@ -21,7 +21,7 @@ tarball_ver=1.3.34-20060131
 S=${WORKDIR}/${PN}_${PV}
 DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
-KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 sparc x86"
 SRC_URI="mirror://apache/httpd/apache_${PV}.tar.gz
 	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}.tar.gz
 	http://dev.gentoo.org/~vericgar/dist/apache/old/apache-patches-${tarball_ver}.tar.bz2"

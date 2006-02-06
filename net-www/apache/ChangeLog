@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.463 2006/02/01 19:19:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.464 2006/02/06 00:16:13 blubb Exp $
+
+  06 Feb 2006; Simon Stelling <blubb@gentoo.org> apache-1.3.34-r2.ebuild,
+  apache-1.3.34-r11.ebuild:
+  stable on amd64 wrt bug 118875
 
   01 Feb 2006; Bryan Østergaard <kloeri@gentoo.org apache-1.3.34-r2.ebuild,
   apache-1.3.34-r11.ebuild:
