@@ -1,23 +1,39 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 05a1d5c849b7a82f1e01b660c54dd1b4 pygresql-3.6.1.ebuild 652
-MD5 b02af59d8fe3bf5a86f5d4f399b6d5a1 pygresql-3.5.ebuild 650
-MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 05ae8c23ae3756eef38cdb40c9ea4ff6 ChangeLog 3422
-MD5 eb59b025eb4a1973e762dd39aa67dd9f pygresql-3.6.2.ebuild 655
-MD5 7d1f78a3f31d359fe5aa886bb706ef28 pygresql-3.6.2-r1.ebuild 651
-MD5 7379a932167b1ce99db37bf887a401b0 files/digest-pygresql-3.6.2 62
-MD5 b3cc0a635106665541248040917b9b1e files/pygresql-3.5-gentoo.patch 523
-MD5 7379a932167b1ce99db37bf887a401b0 files/digest-pygresql-3.6.2-r1 62
+MD5 5c70f509ec17293e96b9fc979b1e5129 ChangeLog 3510
+RMD160 444e2da60a00596af0745bb4c56e5bf3281ce196 ChangeLog 3510
+SHA256 7b7473541169a5b7f1c0a7f8e30aaf99066d99791aeb7057a507df74693965c0 ChangeLog 3510
 MD5 1d02a4c75fc2e50259aab033cf22e4b6 files/digest-pygresql-3.5 60
+RMD160 71ff23766dd13d9158678197d8c8092ed178af8e files/digest-pygresql-3.5 60
+SHA256 842bd48f1c7d8220cd8a4d4ea206fa5d38cdb8635d7d3727b222fd0233156911 files/digest-pygresql-3.5 60
 MD5 4197cad26a33686a31e08a2f86c585fb files/digest-pygresql-3.6.1 62
+RMD160 568b1ab62dfb7f27e86e576b44a7f8153e07d170 files/digest-pygresql-3.6.1 62
+SHA256 2c41ad3821560c1f58cf29da2b8d3c45678486efa9a4eb1e73f6be1282c2ff22 files/digest-pygresql-3.6.1 62
+MD5 7379a932167b1ce99db37bf887a401b0 files/digest-pygresql-3.6.2 62
+RMD160 608491cd1b6a69a21388195d93a3e222c6f464b8 files/digest-pygresql-3.6.2 62
+SHA256 562cce973fba530fac17ad62313eff711a397e90442e7882435e3589196c4554 files/digest-pygresql-3.6.2 62
+MD5 7379a932167b1ce99db37bf887a401b0 files/digest-pygresql-3.6.2-r1 62
+RMD160 608491cd1b6a69a21388195d93a3e222c6f464b8 files/digest-pygresql-3.6.2-r1 62
+SHA256 562cce973fba530fac17ad62313eff711a397e90442e7882435e3589196c4554 files/digest-pygresql-3.6.2-r1 62
+MD5 b3cc0a635106665541248040917b9b1e files/pygresql-3.5-gentoo.patch 523
+RMD160 ba87d872cc2025f54148bee2704232cb97646bc4 files/pygresql-3.5-gentoo.patch 523
+SHA256 ae2182d8ea27c1a029352f8ab2f6f7e4e6b5ccf32e02ad79de05a3f76b9c2205 files/pygresql-3.5-gentoo.patch 523
 MD5 18af1ef69d758794d3a95d48e00c38fa files/pygresql-3.6.1-gentoo.patch 531
+RMD160 5ff9593a2db02d5fe4abe5af6d8c3c3905e7f3b2 files/pygresql-3.6.1-gentoo.patch 531
+SHA256 885e727878b5562a0af41a5d6b6df24c4bf2d685a5bd8506a12dc04c4ebe4895 files/pygresql-3.6.1-gentoo.patch 531
 MD5 5325224fe3a370426933d64f51e82ebb files/pygresql-3.6.2-gentoo.patch 506
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDC0WVBXaUFmZvwyMRAs+XAJ4nrKoVorGHKe1JWi5LGOA5WFEhUQCgsctD
-22ULHAUIWQ9g1Y9Ji4/eLJk=
-=V0jJ
------END PGP SIGNATURE-----
+RMD160 2bce0c262aecc59bacc1d5b53c5e129f907e58bd files/pygresql-3.6.2-gentoo.patch 506
+SHA256 e7956baeb4989a9f1dad97d4c938d26f91417e3e27840e178db9e7def97e6c8f files/pygresql-3.6.2-gentoo.patch 506
+MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
+RMD160 70bbda1c1e8316a09d467334131898ae833a3205 metadata.xml 163
+SHA256 f0699a4c3ad24cc38836c2d4a1ba03e4e403a9a5364b51df405db02014005891 metadata.xml 163
+MD5 b02af59d8fe3bf5a86f5d4f399b6d5a1 pygresql-3.5.ebuild 650
+RMD160 602874a20cd0e7628d8a8e60353c00cc8528a8d2 pygresql-3.5.ebuild 650
+SHA256 8d111ab91d8316838386c01d7b062d78a4c79d96c8a14370cd5ea3f4d7339a6e pygresql-3.5.ebuild 650
+MD5 05a1d5c849b7a82f1e01b660c54dd1b4 pygresql-3.6.1.ebuild 652
+RMD160 5ccc67757e4eb98778298bcb8d13a06cef45b212 pygresql-3.6.1.ebuild 652
+SHA256 aa7c823db561a7f42288999c006c7c0f1d42b3d0544c994b976b4f41c4f84be9 pygresql-3.6.1.ebuild 652
+MD5 7d1f78a3f31d359fe5aa886bb706ef28 pygresql-3.6.2-r1.ebuild 651
+RMD160 4056f163111a953f2a713efa4adbc7341962a90a pygresql-3.6.2-r1.ebuild 651
+SHA256 150a398b38524d2a145939c95a0aa6a3892d08241dae2ef30c5df9ef2235829d pygresql-3.6.2-r1.ebuild 651
+MD5 fde3d38e9decad7e3ab722c3f93876a5 pygresql-3.6.2.ebuild 651
+RMD160 16835c8dcf90074345fe87e9675e1188ab1c68fe pygresql-3.6.2.ebuild 651
+SHA256 faa1255e38b7bb625c6463d5018a089248d9d4681e4b0f1b1914d7f4c10ee703 pygresql-3.6.2.ebuild 651
