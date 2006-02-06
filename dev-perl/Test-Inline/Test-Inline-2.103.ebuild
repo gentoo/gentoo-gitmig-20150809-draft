@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/Test-Inline-2.103.ebuild,v 1.8 2006/01/27 20:27:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/Test-Inline-2.103.ebuild,v 1.9 2006/02/06 21:36:45 agriffis Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/A/AD/ADAMK/${MY_P}.tar.gz"
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 hppa ia64 ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"
