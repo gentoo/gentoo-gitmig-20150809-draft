@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.4 2006/02/05 22:48:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.5 2006/02/06 06:24:38 genstef Exp $
 
 inherit eutils autotools
 
@@ -16,7 +16,7 @@ SRC_URI="http://ftp.easysw.com/pub/ghostscript/${PV}/espgs-${PV}-source.tar.bz2
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE="X cups cjk emacs gtk threads"
+IUSE="X cups cjk emacs gtk threads xml"
 
 DEP="virtual/libc
 	>=media-libs/jpeg-6b
@@ -26,6 +26,7 @@ DEP="virtual/libc
 	X? ( || ( x11-libs/libXt virtual/x11 ) )
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	cups? ( >=net-print/cups-1.1.20 )
+	xml? ( >=dev-libs/libxml2-2.6.8 )
 	!virtual/ghostscript"
 
 RDEPEND="${DEP}
@@ -73,7 +74,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	myconf="--enable-dynamic --with-ijs --with-omni --with-jbig2dec"
+	myconf="--with-ijs --with-jbig2dec"
 
 	# gs -DPARANOIDSAFER out.ps
 	myconf="${myconf} --with-fontconfig --with-fontpath=/usr/share/fonts:/usr/share/fonts/ttf/zh_TW:/usr/share/fonts/ttf/zh_CN:/usr/share/fonts/arphicfonts:/usr/share/fonts/ttf/korean/baekmuk:/usr/share/fonts/baekmuk-fonts:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/kochi-substitute"
@@ -81,6 +82,8 @@ src_compile() {
 	econf $(use_with X x) \
 		$(use_enable cups) \
 		$(use_enable threads) \
+		$(use_enable X dynamic) \
+		$(use_with xml omni) \
 		${myconf} || die "econf failed"
 	emake -j1 || die "make failed"
 	emake so -j1 || die "make failed"
@@ -113,7 +116,7 @@ src_install() {
 		unpack acro5-cmaps-2001.tar.gz
 	fi
 
-	# Install ijs
+	# install ijs
 	cd ${S}/ijs
 	make DESTDIR="${D}" install || die "ijs install failed"
 }
