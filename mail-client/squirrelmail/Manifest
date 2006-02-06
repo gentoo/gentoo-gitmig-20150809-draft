@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2da4f10450d01b8a393754cf0c1efc7 ChangeLog 13491
+MD5 b624bdb72ca1d96cc7c3f9d608dc234a ChangeLog 13609
+RMD160 cd21ef1ad96ee4560243e5ca854c107ab4ea4bed ChangeLog 13609
+SHA256 02a327d6efcca1d03c1dd14f60e70bea7a4fb06cf7e4bc8f00aa226caa3ec0bd ChangeLog 13609
 MD5 085691d2982e6d5f80f7ac0c44146042 files/digest-squirrelmail-1.4.5 634
+RMD160 c6885059b7a4ebe0b9000c6f596489da828e4940 files/digest-squirrelmail-1.4.5 634
+SHA256 f32a12b9c9fc579c7eb8818c9464fbc94512317ccbe1b7540478aa5a6cd5d7ae files/digest-squirrelmail-1.4.5 634
 MD5 6c85807fb1aaa0903e3c928e18df6c88 files/digest-squirrelmail-1.4.5-r1 634
+RMD160 358e4f39ea5970a9a07cd2b918b94a660bbdb2e1 files/digest-squirrelmail-1.4.5-r1 634
+SHA256 49adc0080e95f0d15bf5c47356e1383105699cec07890cb9fb1ff16150891102 files/digest-squirrelmail-1.4.5-r1 634
 MD5 1ebd5ce3ff0ce02fa62f3890b6a8f255 files/ldapuserdata-0.4-gentoo.patch 709
+RMD160 a7b5fe1aba60530c193919ecb6b213cdd57dddf8 files/ldapuserdata-0.4-gentoo.patch 709
+SHA256 bff9cf8e7518df983b03b3f4e7f10fcf31fb75f6d73afb21c8923f2a8312b4a3 files/ldapuserdata-0.4-gentoo.patch 709
 MD5 a34a9335bafb3173bb60b373caae8c4e files/postinstall-en.txt 698
+RMD160 7f3b2cfad0cb7c0eef53ecd7ecb49553217d55e7 files/postinstall-en.txt 698
+SHA256 4e3702651bb5cce4cc517a2b2bed3e71b137167645138bc72c0cedab4ba98da3 files/postinstall-en.txt 698
 MD5 3912efdebafbc71a7849cc1b34ef06be files/squirrelmail-1.4.5-array_shift.patch 1337
+RMD160 f0823cab30cca25fe671616a97532ec58d842876 files/squirrelmail-1.4.5-array_shift.patch 1337
+SHA256 4a6cd7840caab8c7223ef7e5920c10bf7adc31da80c0f5b66f389deb84bc24c6 files/squirrelmail-1.4.5-array_shift.patch 1337
 MD5 ebb6924dba63e16023a37f0f4f5563e8 files/squirrelmail-fortune.patch 603
+RMD160 4460fc314974b4c4691b69231ccfb51d8fbfe896 files/squirrelmail-fortune.patch 603
+SHA256 4346a850d4972a54d642c8a91e331110b063eb3eb363cd904a6573c2f6e9b16e files/squirrelmail-fortune.patch 603
 MD5 08cd5d6f4b8f101029a526ea0a1ea4b1 metadata.xml 258
-MD5 5082d868686fafdc81e1dfd1c37657f5 squirrelmail-1.4.5-r1.ebuild 5544
+RMD160 d2eb817fc980ecb7e48b90373e39e38538ddc060 metadata.xml 258
+SHA256 0c209e720f028e6e9b098d29eab884753668aea3f47b56e44f3271ae60750680 metadata.xml 258
+MD5 d6a44e04a271c132458ec77b8c15eadd squirrelmail-1.4.5-r1.ebuild 5546
+RMD160 f0f93dba268a72dee1f59c2f9e773649cf17eaea squirrelmail-1.4.5-r1.ebuild 5546
+SHA256 1d7aa314c9f891ea253149863e03ac5b9a6d6bd2ecb77bd15ce1dd9e74d196aa squirrelmail-1.4.5-r1.ebuild 5546
 MD5 59d0dc97d48b7bc60b05c3992ad54e3d squirrelmail-1.4.5.ebuild 5475
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD21usQlM6RnzZP+IRAtl7AJwIDH/VBY4WAmy2a/SQgmDTtaLbZACfcIFG
-4cAF8sQYQr2jyc4rLMs5Y0o=
-=NrJf
------END PGP SIGNATURE-----
+RMD160 2e49491aa64c9091c2e9a45fecd6908f254bd41d squirrelmail-1.4.5.ebuild 5475
+SHA256 b6eafc12305fe699306b40d876d7459881d3fed2d5b755b657245dc26570c7ec squirrelmail-1.4.5.ebuild 5475
