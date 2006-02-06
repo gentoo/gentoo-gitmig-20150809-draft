@@ -1,10 +1,40 @@
-MD5 aceaf7aeb23d51d1f8551d145c75122b ChangeLog 3179
-MD5 de8105d0125e758e846cdea584282e86 asciidoc-7.0.1-r1.ebuild 1428
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2338f9f022732a418b215b1fd99b9993 ChangeLog 3286
+RMD160 49b200ad13100265ce086b760fbe24c38feba72a ChangeLog 3286
+SHA256 b61dc4935a9e925a9b192939a5e399abfca337bd80a71b029b3e48f8ea620401 ChangeLog 3286
+MD5 e9f2febb619e7eeac798d7ca982d7c09 asciidoc-7.0.1-r1.ebuild 1427
+RMD160 33f5fd45ae667afae00c9c2276d870db1ae1f4ae asciidoc-7.0.1-r1.ebuild 1427
+SHA256 f607093784299fc5b2877e601b6a8628b2d9884518f3ce496a6eccafbc489378 asciidoc-7.0.1-r1.ebuild 1427
 MD5 af20cff2004eb7e8793168bae848586c asciidoc-7.0.1.ebuild 1091
+RMD160 f83261120151f6bd41ff0f31a5f8a40960c2525b asciidoc-7.0.1.ebuild 1091
+SHA256 7c67cd444dc64c65676050c70fa39719ced284b25e9b7b677f9fd0b33305eb69 asciidoc-7.0.1.ebuild 1091
 MD5 2fe09a4085aeb30b2b3fc155aa92627c asciidoc-7.0.2.ebuild 1425
+RMD160 157a67d7f0a7e51823a4f5f83c5a34636571f945 asciidoc-7.0.2.ebuild 1425
+SHA256 fe989e059cf78ff5b01d5a1c329398d35770f21b778520886394dec655a038bf asciidoc-7.0.2.ebuild 1425
 MD5 461df07496d048476aafbe5b4ccc0241 asciidoc-7.0.4.ebuild 1487
+RMD160 8ab4b2a2fdaf7fba075949f9c37e19d1f67e52d9 asciidoc-7.0.4.ebuild 1487
+SHA256 2b9a35ead25682704c701fb8460872ea99de2d74cc14a1778e2f8054291cded4 asciidoc-7.0.4.ebuild 1487
 MD5 c14add69414e6d58221327d5faec0b12 files/digest-asciidoc-7.0.1 66
+RMD160 3a8f68f19ac77a1075a6e444db6e5b984ade90e4 files/digest-asciidoc-7.0.1 66
+SHA256 ebf7943af79757c57fd37a3f17bd6deed43772427251fe7d90f77aabd7d6f7de files/digest-asciidoc-7.0.1 66
 MD5 c14add69414e6d58221327d5faec0b12 files/digest-asciidoc-7.0.1-r1 66
+RMD160 3a8f68f19ac77a1075a6e444db6e5b984ade90e4 files/digest-asciidoc-7.0.1-r1 66
+SHA256 ebf7943af79757c57fd37a3f17bd6deed43772427251fe7d90f77aabd7d6f7de files/digest-asciidoc-7.0.1-r1 66
 MD5 948aca1b1d1c33db9b5fdf3c469cb9fc files/digest-asciidoc-7.0.2 66
+RMD160 7fe811602b929905e9ee85d88d72314f57a09808 files/digest-asciidoc-7.0.2 66
+SHA256 cabcdba0d111d3357acf2899651b7121f3fb0774910985baa0b4c4df65e473ee files/digest-asciidoc-7.0.2 66
 MD5 85424d319a092c75afc524d1be718a02 files/digest-asciidoc-7.0.4 66
+RMD160 39c0c5e1aeb909c7b7c735c9687ada558cc756cf files/digest-asciidoc-7.0.4 66
+SHA256 d5c496d75978ff61e05184dddecc407cf2244b831ffd8daf74eaacd5c6d4fec6 files/digest-asciidoc-7.0.4 66
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
+SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD5tkaJrHF4yAQTrARAo7BAKCqmPg2eQ8cebGVADeY2DjDXh9FfQCgvkbP
+DKkGJzVCuTFmricdfHKn4Mk=
+=4GTU
+-----END PGP SIGNATURE-----
