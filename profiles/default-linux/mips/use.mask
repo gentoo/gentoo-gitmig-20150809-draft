@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.43 2006/02/06 14:41:45 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.44 2006/02/06 14:48:30 geoman Exp $
 
 # Stephen P. Becker <geoman@gentoo.org>
 # more modular X stuff
@@ -35,6 +35,7 @@ input_devices_ur98
 input_devices_vmmouse
 input_devices_void
 input_devices_wacom
+input_devices_joystick
 video_cards_chips
 video_cards_cirrus
 video_cards_dummy
