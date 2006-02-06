@@ -1,16 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1818a55c0a9ed988300212d49a70ab99 ChangeLog 2335
-MD5 5581455144e4c925a184778c26ba5b78 files/digest-gtk-engines-qt-0.6-r2 70
+MD5 af1f1a3d94cad803779d820ce9590a1f ChangeLog 2432
+RMD160 1ec7536665d5f7d3ff106b59c02acf042070871d ChangeLog 2432
+SHA256 267817fdfe36e1354df3f0a4a5f77e2cbfa12132659ba0ff977a0db74a464d4a ChangeLog 2432
+MD5 e7721dfa72ea5844880747469b30c988 files/digest-gtk-engines-qt-0.6-r2 256
+RMD160 cbc7296d50dc376b18624c2ef8cb9119d82a5491 files/digest-gtk-engines-qt-0.6-r2 256
+SHA256 3d0baba2e92d41deb70026339b67715e1b97c9f7b696fdaaae6856380b00c1b2 files/digest-gtk-engines-qt-0.6-r2 256
 MD5 8b8d9d95fe481699fe79e5d1617468ec files/gtk-2.8-fix.patch 374
+RMD160 e43292fb4814cb6c2bac7760705d9ec230556986 files/gtk-2.8-fix.patch 374
+SHA256 ac3e9180395cc6476b6f634406c372ede819990b9f0582c9cd0a320f17f969cb files/gtk-2.8-fix.patch 374
 MD5 8f580df2eb803899e2f8a45a5d133d08 files/gtk-qt-engine-0.6-kcm-fixinstallationdir.patch 657
-MD5 b07fb29f756eea0c456855a74b2dd657 gtk-engines-qt-0.6-r2.ebuild 1056
+RMD160 65b6a59ecf37a8003329b0ea29b4371e993600b3 files/gtk-qt-engine-0.6-kcm-fixinstallationdir.patch 657
+SHA256 aa84dc2e174075c60941a8510d550b7338ccf0b3efa0ec313002f52d38814d86 files/gtk-qt-engine-0.6-kcm-fixinstallationdir.patch 657
+MD5 5849e93aa483d5fa897496601cc6f51d gtk-engines-qt-0.6-r2.ebuild 1176
+RMD160 5447992be3ace010ba34145e67336cc3c04603b9 gtk-engines-qt-0.6-r2.ebuild 1176
+SHA256 543c9fd9f2470aa9b9f4a363814e1146fbbf0e7ec769a1524f03c2c0b45fc71f gtk-engines-qt-0.6-r2.ebuild 1176
 MD5 cf0e58a86f2a1a7f183cd0ad2f0e5b99 metadata.xml 212
+RMD160 f278ca2a473dd949f7d0f359c432cfe4ed026e71 metadata.xml 212
+SHA256 70bbfd181623c884c763902ca127ef24c917b2e55cda0869e6ffaa6c4ebc5757 metadata.xml 212
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD1LDYugEuf3OQ0akRAiMWAJ9yCADqlsuuKseR5RintV7fzxPrrgCgoUC2
-KyxkmWeD253lzLeMnwjjnVg=
-=0A57
+iD8DBQFD54Gv2G5bA0cA/ScRAiKEAKCZYBTC2TpS4xW/Ueyc9X54/cIyJQCgxS7K
+P0xJe9jEEUGtjK2J+N4VQJg=
+=EN+5
 -----END PGP SIGNATURE-----

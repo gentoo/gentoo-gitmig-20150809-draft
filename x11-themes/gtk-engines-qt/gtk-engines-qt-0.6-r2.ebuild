@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.6-r2.ebuild,v 1.2 2006/01/11 20:01:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.6-r2.ebuild,v 1.3 2006/02/06 17:04:29 herbs Exp $
 
-inherit eutils kde-functions
+inherit eutils kde-functions multilib
 
 MY_P="gtk-qt-engine-${PV}"
 DESCRIPTION="GTK+2 Qt Theme Engine"
@@ -34,6 +34,11 @@ src_compile() {
 	make -f ${S}/admin/Makefile.common
 
 	local myconf="$(use_with arts) $(use_enable debug)"
+
+	if [[ $(get_libdir) != "lib" ]] ; then
+		myconf="${myconf} --enable-libsuffix=$(get_libdir | sed s/lib//)"
+	fi
+
 	econf ${myconf} || die
 	emake || die
 }
