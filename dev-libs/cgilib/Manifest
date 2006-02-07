@@ -1,31 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8c586364d87a03d50decaed131dab698 ChangeLog 2586
-RMD160 268f52d5023dba0a864b95148fdb5c5d624d0753 ChangeLog 2586
-SHA256 5c239e57cfcfd52b393fdc59c5e9a158e554f8db77d81f994d6d320d273fbb17 ChangeLog 2586
-MD5 9d3ba6ea182abdea225b2cfcbd5a22d6 cgilib-0.5-r1.ebuild 994
-RMD160 0073f727daf6aa8d8413bb156b513c554a4a4138 cgilib-0.5-r1.ebuild 994
-SHA256 89bdb8e2c98f551a2b80977f0c12c4107a5e11ee66ca936e02ab834621eccf4b cgilib-0.5-r1.ebuild 994
+MD5 9d5e059fe421729cadb7d4f41b9847a3 ChangeLog 2722
 MD5 31ffa6544497dc48b0945fe1ce9657d7 cgilib-0.5.ebuild 765
-RMD160 d8a41f0a66a80e055a987239ad795489e56c2f98 cgilib-0.5.ebuild 765
-SHA256 4aff82c3b66dbd3b85180d8ff945cd6955bac2624a6ce8b8e76c7c7db53e5a2c cgilib-0.5.ebuild 765
 MD5 81af59a7b4da26191ad1d4ca2f68137c files/cgilib-0.5-cgitest.diff 792
-RMD160 59e9ce56bd2a85e201052ce71466a0cfc6140a68 files/cgilib-0.5-cgitest.diff 792
-SHA256 436cd53645f834219057cd6136078b92c2809203221ef0d7b19d6c761f0a7ff8 files/cgilib-0.5-cgitest.diff 792
 MD5 7b0e4e09c6696f543a80f54e6d9de1f8 files/digest-cgilib-0.5 61
-RMD160 80b64648b9719387faa63109ec3f44edfdf59f1a files/digest-cgilib-0.5 61
-SHA256 d3e90b4dc344b51660feb3447d8e8befcf1d7231798a92082c7a3a4fadc4294b files/digest-cgilib-0.5 61
-MD5 7b0e4e09c6696f543a80f54e6d9de1f8 files/digest-cgilib-0.5-r1 61
-RMD160 80b64648b9719387faa63109ec3f44edfdf59f1a files/digest-cgilib-0.5-r1 61
-SHA256 d3e90b4dc344b51660feb3447d8e8befcf1d7231798a92082c7a3a4fadc4294b files/digest-cgilib-0.5-r1 61
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
-RMD160 2738573ec519cbef4b293bc132f7dd9d02291137 metadata.xml 160
-SHA256 39e232fc7ec88ca0b077cb3950cb39d15cd990842b88d5bfe14f02f34d72f37b metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5PAaJrHF4yAQTrARAi78AJ9cLK2ZSN9PDao8PF+rkujW0OrMkgCgpi8B
-FJV1tnAaKPNT2sh2TiWiEOU=
-=rkkE
------END PGP SIGNATURE-----
