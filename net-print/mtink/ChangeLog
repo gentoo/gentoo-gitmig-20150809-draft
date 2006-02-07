@@ -1,6 +1,11 @@
 # ChangeLog for net-print/mtink
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.21 2006/01/25 22:30:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.22 2006/02/07 21:59:47 genstef Exp $
+
+  07 Feb 2006; Stefan Schweizer <genstef@gentoo.org> -mtink-1.0.5.ebuild,
+  mtink-1.0.9.ebuild, mtink-1.0.11.ebuild:
+  remove old ebuilds and readd motif dep, thanks to Harm Geerts
+  <harmgeerts@home.nl> in bug 121749
 
   25 Jan 2006; Stefan Schweizer <genstef@gentoo.org> mtink-1.0.11.ebuild:
   make ~x86 on halcy0ns request
