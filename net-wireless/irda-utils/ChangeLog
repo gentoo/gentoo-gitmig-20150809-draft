@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/irda-utils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.15 2005/10/22 00:13:10 brix Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.16 2006/02/07 20:53:51 blubb Exp $
+
+  07 Feb 2006; Simon Stelling <blubb@gentoo.org>
+  irda-utils-0.9.16-r1.ebuild:
+  stable on amd64
 
   22 Oct 2005; Henrik Brix Andersen <brix@gentoo.org> files/irda.rc:
   Init script should start after serial, bug #110054.
