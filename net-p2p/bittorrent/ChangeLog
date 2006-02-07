@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.77 2006/01/22 10:20:07 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.78 2006/02/07 02:47:06 agriffis Exp $
+
+  07 Feb 2006; Aron Griffis <agriffis@gentoo.org> bittorrent-4.2.2.ebuild:
+  Mark 4.2.2 stable on alpha
 
   22 Jan 2006; Marcin Kryczek <mkay@gentoo.org> bittorrent-4.2.2.ebuild:
   Fixed typo and added check if /etc/{init,conf}.d/bttrack exists (bug #119816)
