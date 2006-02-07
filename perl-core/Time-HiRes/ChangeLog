@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-HiRes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.9 2006/01/31 19:52:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.10 2006/02/07 20:55:41 blubb Exp $
+
+  07 Feb 2006; Simon Stelling <blubb@gentoo.org> Time-HiRes-1.82.ebuild:
+  stable on amd64
 
   31 Jan 2006; Aron Griffis <agriffis@gentoo.org> Time-HiRes-1.82.ebuild:
   Mark 1.82 stable on alpha
