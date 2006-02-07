@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.50 2006/02/07 01:44:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.51 2006/02/07 21:39:50 blubb Exp $
+
+  07 Feb 2006; Simon Stelling <blubb@gentoo.org> stunnel-4.09-r1.ebuild:
+  stable on amd64
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> stunnel-4.09-r1.ebuild:
   Mark 4.09-r1 stable on alpha
