@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r1.ebuild,v 1.1 2006/02/01 14:11:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r1.ebuild,v 1.2 2006/02/07 22:01:57 pva Exp $
 
 inherit eutils autotools
 
@@ -29,6 +29,25 @@ DEPEND="sys-apps/gawk
 #	>=dev-libs/glib-2"
 
 pkg_setup() {
+	if use snmp ; then
+		ewarn "snmp plugin is under development and upstream does not recommend"
+		ewarn "it for usage in production environment."
+		if ! use ipv6 ; then
+			echo
+			eerror "snmp plugin has compilation problems without ipv6 support."
+			eerror "For additional information see bug #121497."
+			die "snmp without ipv6 is broken"
+		else
+			if ! built_with_use net-analyzer/net-snmp ipv6 ; then
+				echo
+				eerror "You have both ipv6 and snmp enabled."
+				eerror "This require ipv6 support in net-analyzer/net-snmp."
+				eerror "However, net-analyzer/net-snmp was compiled with ipv6 flag disabled."
+				eerror "Please, reemrege net-analyzer/net-snmp with USE=\"ipv6\"."
+				die "net-analyzer/net-snmp was build without ipv6."
+			fi
+		fi
+	fi
 	enewgroup ntop
 	enewuser ntop -1 -1 /var/lib/ntop ntop
 }
