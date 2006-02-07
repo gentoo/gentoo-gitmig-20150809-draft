@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r8.ebuild,v 1.13 2006/02/07 01:37:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r8.ebuild,v 1.14 2006/02/07 01:37:55 vapier Exp $
 
 inherit flag-o-matic eutils
 
