@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b09317a5c235fb501c713cac7f2fb5dc ChangeLog 355
 MD5 22d45be0cf5e365559a44bf0d4f5d512 files/digest-numpy-0.9.4 63
 MD5 485ea1fb2083d4705baa1e4efb747e95 metadata.xml 600
-MD5 94c5b949541bcce1eb89e86a79a3ad3c numpy-0.9.4.ebuild 719
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5+aJ9ZFPrqoILX8RArVxAJ4ykmBT5t62Qf2uJCC3ltgIWbyp1ACfQTA7
-UB+zibt907k/tpcv3abeufQ=
-=mKKW
------END PGP SIGNATURE-----
+MD5 27f6cc96fb0bb0543f15da2f66aaac51 numpy-0.9.4.ebuild 719
