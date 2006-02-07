@@ -1,28 +1,58 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 75f2b2e96abff8edaa29fb0747f0b697 ChangeLog 4050
+MD5 69e1d33e282f9e01420b0ed38d1b77b3 ChangeLog 4203
+RMD160 d8755959f5f4b3489af86efa67b06a38d83098dd ChangeLog 4203
+SHA256 d5145c8ab0635a4c50f3b967ac1497615218853d2451051959c66a300733f146 ChangeLog 4203
 MD5 3154e9763ae2199cddf00a2fa89af3f9 baselayout-vserver-1.11.13-r1.ebuild 13273
-MD5 8280a20d31520c86c335181ecaa71157 baselayout-vserver-1.11.14-r1.ebuild 15843
-MD5 82ddd5fe1dd6afb9550e77c52e1c776d baselayout-vserver-1.11.14.ebuild 15715
+RMD160 0ddc092f0ef5baf7722364cc66c1dbd83fc612c8 baselayout-vserver-1.11.13-r1.ebuild 13273
+SHA256 dc57caa059c3f618b5af74452cfc0ca970f732c9178b1760bc038606de456470 baselayout-vserver-1.11.13-r1.ebuild 13273
+MD5 28ead1d66338b46a6ecab7953139b45b baselayout-vserver-1.11.14-r1.ebuild 15841
+RMD160 55e3401d76818284cfa11937de549598e7a0eaf4 baselayout-vserver-1.11.14-r1.ebuild 15841
+SHA256 c24501625dd556bf46f543db281880d1773c9317cc770e4af1a2a88ee760b13a baselayout-vserver-1.11.14-r1.ebuild 15841
 MD5 8bbf6c606bd60a3825fd79aaab624805 baselayout-vserver-1.12.0_pre8-r2.ebuild 12601
+RMD160 e7de602a8614ec2a406cfb1e8583392564bc86d6 baselayout-vserver-1.12.0_pre8-r2.ebuild 12601
+SHA256 8017e9a3a4e1cf6233dbfad9fda6c173a3f0b3c864e9c27c8b915e6920ca4dd9 baselayout-vserver-1.12.0_pre8-r2.ebuild 12601
 MD5 cf693ea87e77c1dc6f72cf58c32b7143 files/baselayout-vserver-1.11.13-cleanup.patch 18552
+RMD160 43c6a15f392dfb471a25cc6d5bb0a56c09548a92 files/baselayout-vserver-1.11.13-cleanup.patch 18552
+SHA256 aac649ad7db46034817d376bf396b3a13d306da0371cc9bcebeedc1a88364c9e files/baselayout-vserver-1.11.13-cleanup.patch 18552
 MD5 ec29ba4690f7c58a8d562195bc9eed42 files/baselayout-vserver-1.11.14-adsl.patch 501
+RMD160 81db918f622eba2eef3f76e0441023998b367d3f files/baselayout-vserver-1.11.14-adsl.patch 501
+SHA256 5634f36c4f27ddae7a4a22c6dc7b6adad5f83cdb5d9f4291ce061d62361a71c8 files/baselayout-vserver-1.11.14-adsl.patch 501
 MD5 ab0d5a169769126f5c9d679a86244ee2 files/baselayout-vserver-1.11.14-essidnet.patch 619
+RMD160 9cd29b7be10ef4c665be44a84c84df64fca8c64e files/baselayout-vserver-1.11.14-essidnet.patch 619
+SHA256 2fdce59727910e4ae4f30aedc0d1ae32b852bfc9f740e049676104052900407b files/baselayout-vserver-1.11.14-essidnet.patch 619
 MD5 cd1ba3815d5592a3c65f185cc7585107 files/baselayout-vserver-1.12.0_pre8-init-timeout-fix.patch 339
+RMD160 8972ac7a0318a57b35047d754235aacc9d3ca6f7 files/baselayout-vserver-1.12.0_pre8-init-timeout-fix.patch 339
+SHA256 c44f7c4de01c604d60e52968f9c393c7b50fc72a378b945ff7e1b1df775aa8c1 files/baselayout-vserver-1.12.0_pre8-init-timeout-fix.patch 339
 MD5 645ee27aa823d5fb836b8f160326201e files/baselayout-vserver-1.12.0_pre8-whitelist-fixes.patch 1236
+RMD160 0f7416cfb1eeff5bf159ee64cba7c3067defb837 files/baselayout-vserver-1.12.0_pre8-whitelist-fixes.patch 1236
+SHA256 daf0e8d5db3e82977e2f0e86530005f3386dbb751aae98c214ea52b1b5d10df3 files/baselayout-vserver-1.12.0_pre8-whitelist-fixes.patch 1236
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
-MD5 a551ddae4bfb1b2bd7cbc16c57f481d3 files/digest-baselayout-vserver-1.11.13-r1 78
-MD5 4fef87b907ebf15454f6d226b1562c02 files/digest-baselayout-vserver-1.11.14 78
-MD5 4fef87b907ebf15454f6d226b1562c02 files/digest-baselayout-vserver-1.11.14-r1 78
-MD5 d1b600f26f783320972a6692720df0d3 files/digest-baselayout-vserver-1.12.0_pre8-r2 83
+RMD160 43e295598125f39e375a1fcee6e642e37c8b8bd8 files/copyright 2099
+SHA256 38db4636f65ce40ea505a6337138b041ac6be5998982193d16b1fbdeebb2bacd files/copyright 2099
+MD5 f219b6eb745e1af5a07b0929df98abc0 files/digest-baselayout-vserver-1.11.13-r1 280
+RMD160 cfff56f51e40bc2104d2c1d182ef8f3f47423246 files/digest-baselayout-vserver-1.11.13-r1 280
+SHA256 40ad57218af373af66ae7be6a0848a3cb2088f34e99d1a70c1c12d4c924b23e0 files/digest-baselayout-vserver-1.11.13-r1 280
+MD5 a16bb04391567ba9ce418328ddc53104 files/digest-baselayout-vserver-1.11.14-r1 280
+RMD160 1b4837fb57d341c9a7062cd93e73a6febff3be20 files/digest-baselayout-vserver-1.11.14-r1 280
+SHA256 949e1593b90a62939e3a919166fc7789051f2a760574c3f21e89263dd5e68fe8 files/digest-baselayout-vserver-1.11.14-r1 280
+MD5 f6300fc5175902aa7e634664ac6d96bc files/digest-baselayout-vserver-1.12.0_pre8-r2 295
+RMD160 d1fa69c9a21dae4478179be846da9a1ead707d40 files/digest-baselayout-vserver-1.12.0_pre8-r2 295
+SHA256 0d9ccc11eb84db164243b6be1d1bf6fd6a52a9a626d2b17d7cc3c3db56cd260a files/digest-baselayout-vserver-1.12.0_pre8-r2 295
 MD5 51a97031d54d767b45fb247d60727e9d files/fakelog.initd 449
+RMD160 19a12dcc05e64709e9481587de6eaea9d74a3773 files/fakelog.initd 449
+SHA256 98b3a91b3f1fb4f5d85301d65d032b42c02d47e7794aa14adbfaa9e544e27748 files/fakelog.initd 449
 MD5 76a9437d29bd77c416f76fbcf0cf2af2 files/vserver-changes 1642
+RMD160 9567f0e7e3e113fbe3e948a64da7a6fd425b6f73 files/vserver-changes 1642
+SHA256 ab3a8f7af0ae873821da319ccca2a4c251f324df7f55a050128f5806dd2d3c2d files/vserver-changes 1642
 MD5 e5ba31c20aa49371e645a8950abd1054 metadata.xml 231
+RMD160 532e75c33676f402571b5033faf42b7d0dbb9d28 metadata.xml 231
+SHA256 018942ba3f2ac5b93ec2576f55ff8d85b7808b35b751bfabb1879957f4f6c442 metadata.xml 231
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD2h7BmPFBzbX68WERAtGlAJ9ayjpaNLz+xkpQYvzrssibY1V/RgCggNh8
-TFnVkZIMr/Hu6rA6/4/n3e8=
-=MeEM
+iD8DBQFD6EaPmPFBzbX68WERAs5IAJ9D+unkCVu2yOQeXFDZcdm67D0tBwCfcmXK
+SFBndjxlFA1N02q9JkViG7E=
+=8N8B
 -----END PGP SIGNATURE-----
