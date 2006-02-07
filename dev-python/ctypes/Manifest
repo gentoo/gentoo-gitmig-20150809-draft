@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ce6a6d3ed8e99b98774ec2ac9d5d9211 ChangeLog 766
 MD5 fadb2add50615873a851711d85193496 ctypes-0.9.2.ebuild 655
 MD5 690aaea9f197f497f6453eea8a32f4bb ctypes-0.9.6.ebuild 717
@@ -5,3 +8,10 @@ MD5 197165ec51d19517508ff731d0176faf files/ctypes-gcc4 341
 MD5 70d82ae089e593ea9b7ef3edf0888607 files/digest-ctypes-0.9.2 64
 MD5 a528c70556f9c8dcd802c86f66f2a599 files/digest-ctypes-0.9.6 64
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6NP69ZFPrqoILX8RAjU0AKCM/AJ4ItmY+DklwTAZgqIeAACH3QCgoT+e
+3Znq9Bvnb+3DaUkbONVsVLc=
+=5yn5
+-----END PGP SIGNATURE-----
