@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/bio2jack-0.4.ebuild,v 1.8 2006/01/07 03:27:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/bio2jack-0.4.ebuild,v 1.9 2006/02/07 20:09:38 agriffis Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/bio2jack/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=media-sound/jack-audio-connection-kit-0.80"
