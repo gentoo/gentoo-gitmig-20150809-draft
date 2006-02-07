@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.34 2006/01/06 18:56:20 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.35 2006/02/07 02:26:53 agriffis Exp $
+
+  07 Feb 2006; Aron Griffis <agriffis@gentoo.org> hwsetup-1.1.ebuild:
+  Mark 1.1 stable on ia64
 
   06 Jan 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   hwsetup-1.1.ebuild:
