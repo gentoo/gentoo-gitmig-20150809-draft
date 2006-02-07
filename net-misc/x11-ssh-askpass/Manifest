@@ -1,7 +1,31 @@
-MD5 e49c3743682163875a4901a2e7d09646 ChangeLog 2580
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0c8f8a88ef7d92fd0ebd168ab9f6545c ChangeLog 2692
+RMD160 cd85373f0209d448c34e1647f229f46b15803e19 ChangeLog 2692
+SHA256 d371fe39875b171c654f334bfea66e5554dd72686ea72b951b4d3055dd6a4e4f ChangeLog 2692
 MD5 a507a3e3da835a4e8d763cdea183d071 files/digest-x11-ssh-askpass-1.2.2-r1 72
+RMD160 77aeecb8ac7edb58bd0b8f9d9ec90fac9001cd2c files/digest-x11-ssh-askpass-1.2.2-r1 72
+SHA256 6058f3f83ba7d488880eb531d7d4e8efdc3686ac5583ba7e2adfc7640fca6da4 files/digest-x11-ssh-askpass-1.2.2-r1 72
 MD5 a5820e00831335cc416df383e206a5eb files/digest-x11-ssh-askpass-1.2.4.1-r1 74
+RMD160 a2233f02c1801eb4f3ef1d4055d7fb753804f588 files/digest-x11-ssh-askpass-1.2.4.1-r1 74
+SHA256 6bddd65e41dd092b16dffb71afb48b774132703dbf040d0f33f325ecc3f47adb files/digest-x11-ssh-askpass-1.2.4.1-r1 74
 MD5 1a90e521c0674c6fd9a34b9c6ebfcb62 files/stupid-imake.diff 548
+RMD160 1e6d94a57ff6d3496a3be427663d1fda5ac09544 files/stupid-imake.diff 548
+SHA256 3c781a18e2f953c2a5113d18231d57f852ad6c32564940f46d3080469318a409 files/stupid-imake.diff 548
 MD5 2c1edf73176f0cce9f6ee1753c6c08d9 metadata.xml 298
+RMD160 70ae6e2be8981f069111231335b82b49a7bd48c9 metadata.xml 298
+SHA256 cd0fb7583cca3cced768c3e1dbe9d00f7f9de07259469ee3e7259feed4fcefb0 metadata.xml 298
 MD5 d8d330386e303b9b36044d872224b3e8 x11-ssh-askpass-1.2.2-r1.ebuild 1035
-MD5 5b1d2e2708b7c34814f1913986db1513 x11-ssh-askpass-1.2.4.1-r1.ebuild 1109
+RMD160 34bce91098636a2c3503c4059318ea3bc326a505 x11-ssh-askpass-1.2.2-r1.ebuild 1035
+SHA256 a59e85a0cbea4b4e748c9463c80953ada8d5412058558ae066874bc97851bc07 x11-ssh-askpass-1.2.2-r1.ebuild 1035
+MD5 fbca83d8851b0e0ce3c5dfe4285407ef x11-ssh-askpass-1.2.4.1-r1.ebuild 1115
+RMD160 0f05da7839104d502063d3253c7df9abb18d446e x11-ssh-askpass-1.2.4.1-r1.ebuild 1115
+SHA256 ec3c88c1a50eb9f1836c34512ce3a0cdb60cf23abb815432b9e18d473461efe6 x11-ssh-askpass-1.2.4.1-r1.ebuild 1115
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD5+YXJrHF4yAQTrARAuTnAJ0c4p/XZSG5iHdQpXx3XOFuKS46VgCgoKCz
+YmUu9EJ8sTtZV+8nlG2ZCZM=
+=Dfxk
+-----END PGP SIGNATURE-----
