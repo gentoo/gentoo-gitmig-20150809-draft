@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-207.ebuild,v 1.11 2006/01/26 15:29:49 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-207.ebuild,v 1.12 2006/02/07 09:31:50 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
 
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE="truetype Xaw3d unicode toolbar doc"
 
 RDEPEND="|| ( (	x11-libs/libX11
