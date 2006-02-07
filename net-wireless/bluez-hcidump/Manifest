@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 182690253d61998a1483dc5bc73ef3e6 ChangeLog 2964
 MD5 716da5187c5dee230472328ccec29a7b bluez-hcidump-1.21.ebuild 633
 MD5 79df655d52731d3b93021d35515f8e9a bluez-hcidump-1.29.ebuild 672
 MD5 082298306787840fa0bcc28c4663034e files/digest-bluez-hcidump-1.21 70
 MD5 65293ac39669a38ee7987840fc2016da files/digest-bluez-hcidump-1.29 70
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6Koh9ZFPrqoILX8RAs9sAKCJBsWdTx4SQTV0Uuoj035S+wntowCgunzY
+vDH6sqsQlKcMQjtVnv6hIbA=
+=Vrvu
+-----END PGP SIGNATURE-----
