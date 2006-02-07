@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/meanwhile
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.23 2005/12/22 18:32:58 vanquirius Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.24 2006/02/07 01:12:20 agriffis Exp $
+
+  07 Feb 2006; Aron Griffis <agriffis@gentoo.org> meanwhile-0.4.2.ebuild:
+  Mark 0.4.2 stable on alpha
 
 *meanwhile-1.0.1 (22 Dec 2005)
 
