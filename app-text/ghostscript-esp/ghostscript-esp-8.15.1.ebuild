@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.7 2006/02/07 14:06:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.8 2006/02/07 17:49:27 genstef Exp $
 
-inherit eutils autotools
+inherit eutils autotools flag-o-matic
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GPL Ghostscript with better printer support"
 HOMEPAGE="http://www.cups.org/ghostscript.php"
@@ -81,7 +81,11 @@ src_compile() {
 
 	# *-dynmic breaks compiling without X, see bug 121749 but not having it
 	# breaks compiling on amd64, bug 121924
-	use X && myconf="${myconf} --enable-dynamic"
+	if use X; then
+		myconf="${myconf} --enable-dynamic"
+	elif use amd64; then
+		append-flags -fPIC
+	fi
 
 	econf $(use_with X x) \
 		$(use_enable cups) \
