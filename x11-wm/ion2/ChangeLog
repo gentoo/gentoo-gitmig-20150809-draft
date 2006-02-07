@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ion2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.28 2006/01/25 17:18:43 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.29 2006/02/07 09:11:22 twp Exp $
+
+  07 Feb 2006; Tom Payne <twp@gentoo.org> -ion2-20040729.ebuild,
+  ion2-20040729-r1.ebuild:
+  Fix typo in deps. Bug # 121753. Thanks Ciaran. Remove non-modular X ebuild.
 
   25 Jan 2006; Tom Payne <twp@gentoo.org> ion2-20040729-r1.ebuild:
   Further updates for Modular X.

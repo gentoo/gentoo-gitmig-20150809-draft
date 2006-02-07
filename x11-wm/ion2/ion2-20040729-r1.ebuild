@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040729-r1.ebuild,v 1.2 2006/01/25 17:18:43 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040729-r1.ebuild,v 1.3 2006/02/07 09:11:22 twp Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ RDEPEND="${DEPEND}
 			x11-apps/xmessage
 			x11-proto/xproto
 			x11-proto/xextproto
-			xinerama? ( x11-proto/xinermaproto )
+			xinerama? ( x11-proto/xineramaproto )
 		)
 		virtual/x11
 	)
