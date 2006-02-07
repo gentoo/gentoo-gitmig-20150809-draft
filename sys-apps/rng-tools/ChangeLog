@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rng-tools
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.10 2005/10/01 15:55:05 kloeri Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.11 2006/02/07 02:30:27 agriffis Exp $
+
+  07 Feb 2006; Aron Griffis <agriffis@gentoo.org> rng-tools-1.1.ebuild:
+  Mark 1.1 stable on ia64
 
   01 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> rng-tools-1.1.ebuild:
   Add ~alpha + ~ia64 keywords.
