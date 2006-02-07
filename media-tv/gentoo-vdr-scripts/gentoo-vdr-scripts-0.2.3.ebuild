@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2.3.ebuild,v 1.3 2006/01/31 21:17:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2.3.ebuild,v 1.4 2006/02/07 19:39:07 zzam Exp $
 
 inherit eutils
 
@@ -35,7 +35,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/${P}-chuid-option.patch
+	epatch ${FILESDIR}/${PN}-0.2.2-config-comment-irctrl.patch
 }
 
 src_install() {

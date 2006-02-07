@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2.2.ebuild,v 1.3 2006/01/21 16:33:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.2.2.ebuild,v 1.4 2006/02/07 19:39:07 zzam Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 RDEPEND="nvram? ( x86? ( sys-power/nvram-wakeup ) )
 		app-admin/sudo"
@@ -35,7 +35,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/${P}-config-comment.patch
+	epatch ${FILESDIR}/${P}-config-comment-irctrl.patch
 }
 
 src_install() {
