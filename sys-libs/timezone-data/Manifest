@@ -1,31 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 520c5228b764345352b960162d2ea27e ChangeLog 2080
-RMD160 176f71a8842bc4250209624017b9b301098f787a ChangeLog 2080
-SHA256 e61c660d2f097822c1a2b4387675f29387b3992e1b9c933333d3001d54ead82e ChangeLog 2080
+MD5 daac885bda1ad847620a9c8819c46aeb ChangeLog 2191
 MD5 32f6d2093707f5c880674d15dbde1ead files/digest-timezone-data-2005r 126
-RMD160 4195fa7294614567c8d20d278b09675ce3c3b658 files/digest-timezone-data-2005r 126
-SHA256 524982e52f771f5ceb6f37abf325156fc784d7f34c0b10e5402b27f5b1590b07 files/digest-timezone-data-2005r 126
-MD5 428810e04f6b07f0b837363875d2e70a files/digest-timezone-data-2006a 470
-RMD160 223a51e4d80adaf783e82b55479951de7daca3a2 files/digest-timezone-data-2006a 470
-SHA256 7bb6c62767e65772cb740f5c4af5ec5b1dd3fbd3177b2a8fd4a108c1384efa4e files/digest-timezone-data-2006a 470
+MD5 4c2f960c03eccba94f44dcbb468cfd59 files/digest-timezone-data-2006a 126
 MD5 648febdd6feeaeb8c85323151917d163 files/timezone-data-2005n-makefile.patch 3128
-RMD160 bf2bc8b1044376cf6171f80b75f20c037aa6a964 files/timezone-data-2005n-makefile.patch 3128
-SHA256 aee819f6c89af0c682014c8b6f25bf27057e81b2afa819397c7950119ecf834e files/timezone-data-2005n-makefile.patch 3128
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
-SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
 MD5 88bd0be521c69259911fb2fed50ac902 timezone-data-2005r.ebuild 851
-RMD160 8c44f05daece6bc8472af9ec3084418a9f8f5e5f timezone-data-2005r.ebuild 851
-SHA256 1c21b951abae710b0227d52d43321f06168d0a7dd198c941e8cd1812c70c6071 timezone-data-2005r.ebuild 851
-MD5 996336d21fc17ad213e2012d6ade9b2e timezone-data-2006a.ebuild 851
-RMD160 688734ae4535c63334dabac100df4faef08ee990 timezone-data-2006a.ebuild 851
-SHA256 4ff9d4cb799a3efda9fca0462fb3e0d7741387c5ef36eade843a4f8f16954157 timezone-data-2006a.ebuild 851
+MD5 62d1f0247176e35900499d7edb678d05 timezone-data-2006a.ebuild 852
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD3/4g2+ySkm8kpY0RAqHGAKCW5Q1JlffXSGhIMc/HVPFL0pCSWgCdEIBE
-6AR7N5U3unEfvgwJ/lnoWI8=
-=cXQm
+iD8DBQFD6Ah2JrHF4yAQTrARAlnpAJ0am+/hYmp11vKdqAU/Cw3nm8zKcACgjZve
+S8oir+Rw72Lhj7xXD+cfdrE=
+=mNs4
 -----END PGP SIGNATURE-----
