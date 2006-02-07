@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1c3f2481fd72fe6a7bab8c3974253db1 ChangeLog 3765
+MD5 38ff6055130ebdab02b8fa06dcf242c4 ChangeLog 3872
+RMD160 255fd35337d01f5d5de1808fc09e33ea7ed5633d ChangeLog 3872
+SHA256 bd87d03604a5c97e16348742b62f7eccd57036bc67c8194d5f0d729f815f1400 ChangeLog 3872
 MD5 73c66a3d221e8a181c22a2ee48e6b9a9 files/digest-libdvdnav-0.1.10 68
+RMD160 94685eee6bc972f59d39ada3175aa0d9cd245172 files/digest-libdvdnav-0.1.10 68
+SHA256 289d3dad2829014098d3e34b298601cef861f28e969903931fc4fe2de4e86511 files/digest-libdvdnav-0.1.10 68
 MD5 300cb5083129b821668609d693f86809 files/digest-libdvdnav-0.1.9 67
+RMD160 dfc4f4b3f5be6ecb9a7511b5ddad6bc2a0e6bac7 files/digest-libdvdnav-0.1.9 67
+SHA256 af4d0628b5336a7368c2620df077e0289d59d972e719a25436f0810cb358cc65 files/digest-libdvdnav-0.1.9 67
 MD5 2c6ca547e6f0d62197be359672f3a401 files/libdvdnav-0.1.9-darwin.diff 1204
-MD5 feea113124b3fa6554f59483373fe529 libdvdnav-0.1.10.ebuild 584
+RMD160 85cadd8836a51095c0b1c64e983fb5165bbd4945 files/libdvdnav-0.1.9-darwin.diff 1204
+SHA256 ebfd7873897e59a77b5e5f8c5e624a45f6c481f5e017e71ce5e459163352602a files/libdvdnav-0.1.9-darwin.diff 1204
+MD5 661c521215b8dc9ab42c7ba980c7f75c libdvdnav-0.1.10.ebuild 585
+RMD160 67dda70bf30009fccd0a87fb879ce9b9ed1ebecf libdvdnav-0.1.10.ebuild 585
+SHA256 688cc1bbf43c0d8c71e40174aab1413cb1db8888e778643f32ebe51d98e0bc14 libdvdnav-0.1.10.ebuild 585
 MD5 826522b85baf4525801cbd8899a6ddfc libdvdnav-0.1.9.ebuild 982
+RMD160 d63660355fc4717924693ae3d01f018c39046d4b libdvdnav-0.1.9.ebuild 982
+SHA256 c95aa0996d30dd4ac70205d8755c035219483388344e4f0b4a7f76f80e504849 libdvdnav-0.1.9.ebuild 982
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDgBVngIKl8Uu19MoRAs8RAJ9hcZGaMEjtVDWGi8nylbL5lV8F5QCfTRZh
-ZZZlPgFDQ5DYQN4C1SsOOM0=
-=v0c+
------END PGP SIGNATURE-----
+RMD160 6e3fccd1ae62f02a0cb28d319aa185af0020822d metadata.xml 225
+SHA256 1a7f3e805478b42bc379b2a36944579d34d7e66ba5bf418a651e1cd58ad0a7f5 metadata.xml 225
