@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-20060206.ebuild,v 1.1 2006/02/06 20:37:09 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-20060206.ebuild,v 1.2 2006/02/07 17:56:25 nixnut Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
