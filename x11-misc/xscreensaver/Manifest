@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d8ffd827d345c96b4b25988ce534147d ChangeLog 21339
-RMD160 9d3611f7c66a9d2f7376e71b06d374b10cb627a3 ChangeLog 21339
-SHA256 b9834ff547f8f3a657b7818056da1b1eae784d9ffd669bad4c14bec100e6eaef ChangeLog 21339
+MD5 37ec64caf486f0dabf725df5616cdf16 ChangeLog 21444
+RMD160 8ffda6964ac1f3df901042b0cb004f610cde3c80 ChangeLog 21444
+SHA256 a7194a2314e7138553676ae2be1b7087797e2d1b312a0cd6cda394927b6dafa4 ChangeLog 21444
 MD5 51377e1938cf119bd11972b3c30c0a25 files/desktop_entries/screensaver-properties.desktop 1000
 RMD160 9e331cdba7b943c9e5dc076c3a60e32bf0340111 files/desktop_entries/screensaver-properties.desktop 1000
 SHA256 b2a5d44a6a6463beab7cb1d3b9d9f5613c765b48ce319232517b6097afad1fbd files/desktop_entries/screensaver-properties.desktop 1000
@@ -61,13 +61,13 @@ SHA256 24d974644f8009ec797babc3f51499a96bd019404561a496998ffc7241300213 xscreens
 MD5 eca40273355199f6c11a72010194217e xscreensaver-4.22-r4.ebuild 5657
 RMD160 d801b04463312f2507679951e1bcb50dcc081842 xscreensaver-4.22-r4.ebuild 5657
 SHA256 6222a0962d238d8f7ad69b20ea47c5b28b30e7f4bf99b9c0922abc2b463ae2f4 xscreensaver-4.22-r4.ebuild 5657
-MD5 dc84d37f715251eb48bd60248a418c8a xscreensaver-4.23.ebuild 5856
-RMD160 e5cb7e11c99051624b1314157f1ede0bd16c6aa0 xscreensaver-4.23.ebuild 5856
-SHA256 0da7eb72c152cd356410cd285320172ea91594151133167a0db6d7cf9af74931 xscreensaver-4.23.ebuild 5856
+MD5 de9bd6d55be7e7e7f4602f4f9cbbe92d xscreensaver-4.23.ebuild 5855
+RMD160 02667f71e39d1b889b47bf9bfe9d57bee59e4769 xscreensaver-4.23.ebuild 5855
+SHA256 d88f64b7cec1985daff58a0ac7069c0f857bb15bee604f4bb8c82d6bc3e83237 xscreensaver-4.23.ebuild 5855
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD59T9JrHF4yAQTrARAiTnAJ97GMmHZtVcksWLqfgQqR6iUEYCxACgjYWh
-vNdHo2vjSJG30Xgy1cMIS4k=
-=ff1x
+iD8DBQFD6GapJrHF4yAQTrARAlJYAKCfsj2QHR9BZ8BHSlWtjS/q9gzIGwCfXvKK
+2g5OqcSNIQ0ifB8nrdaOPr8=
+=kqGb
 -----END PGP SIGNATURE-----
