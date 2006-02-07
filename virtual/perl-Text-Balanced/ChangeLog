@@ -1,0 +1,10 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-Balanced/ChangeLog,v 1.1 2006/02/07 11:58:14 mcummings Exp $
+
+*perl-Text-Balanced-1.95 (07 Feb 2006)
+
+  07 Feb 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +perl-Text-Balanced-1.95.ebuild:
+  New virtual for perl-core/Text-Balanced
+
