@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.3.ebuild,v 1.3 2006/01/11 14:29:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.3.ebuild,v 1.4 2006/02/07 19:09:40 dju Exp $
 
 inherit distutils webapp
 
@@ -20,7 +20,7 @@ WEBAPP_MANUAL_SLOT="yes"
 # we need to depend on virtual/httpd-fcgi to bring mod_fastcgi/lighttpd/whatever in when USE fastcgi
 # we need to depend on virtual/httpd-python to bring mod_python/whatever in when USE python (python
 #     is rather confusing here, as dev-lang/python is a required dependency, but httpd-python isn't)
-DEPEND="$DEPEND
+DEPEND="${DEPEND}
 	>=dev-lang/python-2.3
 	app-text/pytextile
 	>=dev-python/docutils-0.3.3
@@ -35,14 +35,21 @@ pkg_setup () {
 	if ! use postgres && ! use sqlite ; then
 		eerror "You must select at least one database backend,"
 		eerror "using sqlite or postgres USE flags."
-		die "no database backend selected!"
+		die "no database backend selected"
+	fi
+
+	if ! built_with_use dev-util/subversion python ; then
+		eerror "Your subversion has been built without python bindings,"
+		eerror "please enable the 'python' useflag and recompile"
+		eerror "dev-util/subversion."
+		die "pkg_setup failed"
 	fi
 
 	webapp_pkg_setup
 }
 
 src_install () {
-	# project databases might go in here
+	# project environments might go in here
 	keepdir /var/lib/trac
 
 	webapp_src_preinst
@@ -51,6 +58,9 @@ src_install () {
 	dodoc AUTHORS INSTALL RELEASE THANKS UPGRADE
 	rm ${D}/usr/share/doc/${P}/MANIFEST.in.gz
 	rm ${D}/usr/share/doc/${P}/PKG-INFO.gz
+
+	docinto contrib
+	dodoc contrib/*
 
 	# if needed, install cgi/fcgi scripts for webapp-config
 	local my_dir=${D}/usr/share/trac
