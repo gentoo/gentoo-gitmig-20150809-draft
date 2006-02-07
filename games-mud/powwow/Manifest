@@ -6,7 +6,7 @@ MD5 3145e5cf5500ecfc98d055016cd605f4 files/digest-powwow-1.2.5 64
 MD5 1bc86630838cb194a1866d3d3a052d52 files/digest-powwow-1.2.8 64
 MD5 15b43035bdcf83c7fff82c288dd9b475 files/digest-powwow-1.2.9 64
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 ade742774f82bec8aa9218c83766e8eb powwow-1.2.10.ebuild 717
+MD5 731b3411b821e12afce9ba3ef1538b47 powwow-1.2.10.ebuild 716
 MD5 742f5aa10c1e5f19327ebe9970f89524 powwow-1.2.5.ebuild 1114
 MD5 0519fbfa7f8f86c84ec853e679fff3a8 powwow-1.2.8.ebuild 822
 MD5 bef2c8dc27af08514a7bdb0020e19a92 powwow-1.2.9.ebuild 716
