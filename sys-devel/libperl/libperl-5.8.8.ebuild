@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8_rc1.ebuild,v 1.3 2006/01/24 17:13:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8.ebuild,v 1.1 2006/02/07 15:21:25 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -63,7 +63,7 @@ SHORT_PV="${PV%.*}"
 MY_P="perl-${PV/_rc/-RC}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
-SRC_URI="ftp://ftp.cpan.org/pub/CPAN/authors/id/N/NW/NWCLARK/${MY_P}.tar.bz2"
+SRC_URI="ftp://ftp.cpan.org/pub/CPAN/src/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.perl.org"
 SLOT="${PERLSLOT}"
 LIBPERL="libperl$(get_libname ${PERLSLOT}.${SHORT_PV})"
@@ -88,7 +88,7 @@ RDEPEND="
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
-PDEPEND=">=dev-lang/perl-${PV}"
+PDEPEND="~dev-lang/perl-${PV}"
 
 pkg_setup() {
 	# I think this should rather be displayed if you *have* 'ithreads'
@@ -134,6 +134,8 @@ src_unpack() {
 
 	# we need the same @INC-inversion magic here we do in perl
 	cd ${S}; epatch ${FILESDIR}/${P}-reorder-INC.patch
+
+	use amd64 && cd ${S} && epatch ${FILESDIR}/${P}-lib64.patch
 }
 
 src_compile() {
@@ -166,10 +168,10 @@ src_compile() {
 		einfo "using ithreads"
 		mythreading="-multi"
 		myconf="-Dusethreads ${myconf}"
-		myarch=$(get_abi_CHOST)
+		myarch=${CHOST}
 		myarch="${myarch%%-*}-${osname}-thread"
 	else
-		myarch=$(get_abi_CHOST)
+		myarch=${CHOST}
 		myarch="${myarch%%-*}-${osname}"
 	fi
 
@@ -205,6 +207,7 @@ src_compile() {
 	if use debug
 	then
 		CFLAGS="${CFLAGS} -g"
+		myconf="${myconf} -DDEBUGGING"
 	fi
 
 	if use sparc
@@ -222,7 +225,7 @@ src_compile() {
 
 	[ -n "${ABI}" ] && myconf="${myconf} -Dusrinc=$(get_ml_incdir)"
 
-	[[ ${ELIBC} == "FreeBSD" ]] && myconf="${myconf} -Dlibc=/usr/lib/libc.a"
+	[[ ${ELIBC} == "FreeBSD" ]] && myconf="${myconf} -Dlibc=/usr/$(get_libdir)/libc.a"
 
 	if [[ $(get_libdir) != "lib" ]] ; then
 		myconf="${myconf} -Dlibpth='/usr/local/$(get_libdir) /$(get_libdir) \
@@ -265,14 +268,14 @@ src_install() {
 	else
 		# Need to do this, else apps do not link to dynamic version of
 		# the library ...
-		local coredir="/usr/lib/perl5/${PV}/${myarch}${mythreading}/CORE"
+		local coredir="/usr/$(get_libdir)/perl5/${PV}/${myarch}${mythreading}/CORE"
 		dodir ${coredir}
 		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/${LIBPERL}
 		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname ${PERLSLOT})
 		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname)
 
 		# Fix for "stupid" modules and programs
-		dodir /usr/lib/perl5/site_perl/${PV}/${myarch}${mythreading}
+		dodir /usr/$(get_libdir)/perl5/site_perl/${PV}/${myarch}${mythreading}
 
 		make DESTDIR="${D}" \
 			INSTALLMAN1DIR="${D}/usr/share/man/man1" \
@@ -282,7 +285,7 @@ src_install() {
 		cp -f utils/h2ph utils/h2ph_patched
 
 		LD_LIBRARY_PATH=. ./perl -Ilib utils/h2ph_patched \
-			-a -d ${D}/usr/lib/perl5/${PV}/${myarch}${mythreading} <<EOF
+			-a -d ${D}/usr/$(get_libdir)/perl5/${PV}/${myarch}${mythreading} <<EOF
 asm/termios.h
 syscall.h
 syslimits.h
@@ -294,7 +297,7 @@ wait.h
 EOF
 
 		# This is to fix a missing c flag for backwards compat
-		for i in `find ${D}/usr/lib/perl5 -iname "Config.pm"`;do
+		for i in `find ${D}/usr/$(get_libdir)/perl5 -iname "Config.pm"`;do
 			sed -e "s:ccflags=':ccflags='-DPERL5 :" \
 			    -e "s:cppflags=':cppflags='-DPERL5 :" \
 				${i} > ${i}.new &&\
@@ -302,8 +305,8 @@ EOF
 		done
 
 		# A poor fix for the miniperl issues
-		dosed 's:./miniperl:/usr/bin/perl:' /usr/lib/perl5/${PV}/ExtUtils/xsubpp
-		fperms 0444 /usr/lib/perl5/${PV}/ExtUtils/xsubpp
+		dosed 's:./miniperl:/usr/bin/perl:' /usr/$(get_libdir)/perl5/${PV}/ExtUtils/xsubpp
+		fperms 0444 /usr/$(get_libdir)/perl5/${PV}/ExtUtils/xsubpp
 		dosed 's:./miniperl:/usr/bin/perl:' /usr/bin/xsubpp
 		fperms 0755 /usr/bin/xsubpp
 
