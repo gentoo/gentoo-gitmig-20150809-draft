@@ -1,19 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0634ebc8d268c8fa6cbe516573e12b3d tikiwiki-1.9.1.1.ebuild 2416
-MD5 5a784470ea77c05d6eaeae69d28eeffe tikiwiki-1.9.2.ebuild 2415
-MD5 a1719a8cde06741a7a437cafe9e090a8 tikiwiki-1.8.6.ebuild 2069
-MD5 b60adbf9d43c16b975be552a859e0a70 ChangeLog 5781
-MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 250716051f339a0b1315218e13485039 files/postinstall-en.txt 1396
-MD5 179db1005cef09973bc3ffda69a7bb11 files/digest-tikiwiki-1.8.6 68
-MD5 eaed663821be60f11ff2e161e56b7a45 files/digest-tikiwiki-1.9.2 68
+MD5 67ee76a3fd5a0b2c72b433bb8772a545 ChangeLog 5944
+RMD160 825290c08edecc5ccf185fd723933f8465f59335 ChangeLog 5944
+SHA256 18db001b3da63b3128b671b87656d784464f4e7cea734cb774cfc2a521620462 ChangeLog 5944
 MD5 7d874ec5f99ae67c3ae819a0d6aec572 files/digest-tikiwiki-1.9.1.1 70
+RMD160 dafaea9e819dbe75887fd717e3be8e587d70a6ff files/digest-tikiwiki-1.9.1.1 70
+SHA256 a09cff701c0b6a0f59aee1f75608823f4e088aebeeca10a08f5a463c10c4a528 files/digest-tikiwiki-1.9.1.1 70
+MD5 eaed663821be60f11ff2e161e56b7a45 files/digest-tikiwiki-1.9.2 68
+RMD160 d4c08e5365d2cdf2a1b6e3b441a8f6a35e78754a files/digest-tikiwiki-1.9.2 68
+SHA256 6d3fe878baf31f98e6e5729f223aeaf19a2a8056b8b5d415e9d58d5b379ff073 files/digest-tikiwiki-1.9.2 68
+MD5 250716051f339a0b1315218e13485039 files/postinstall-en.txt 1396
+RMD160 151da6a1f93f1df11d8d0ebac08bf22ec258612e files/postinstall-en.txt 1396
+SHA256 2b6d9b93ab840a7368810b76486050b54b260d40671b36b22a85c2cc6540f8ea files/postinstall-en.txt 1396
+MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+RMD160 c449ad35e8af3f158d8f8305f8a02ff98a420970 metadata.xml 280
+SHA256 fd37fa0f441b1b68ef8dc4bffbb0a51f0414aa7c370b48369453af5f4bff177a metadata.xml 280
+MD5 5e3717b01d0ff45124adb5b1d2f04afe tikiwiki-1.9.1.1.ebuild 2415
+RMD160 c7c3acfeb6f53c77854674887da0ff6816bfeda2 tikiwiki-1.9.1.1.ebuild 2415
+SHA256 836a703941ef5c0af13b0a34b2b55212da1889b67258c6818996c6730d262044 tikiwiki-1.9.1.1.ebuild 2415
+MD5 b7dc96ca0f642c01f7714040ef23c149 tikiwiki-1.9.2.ebuild 2414
+RMD160 a5c60cbe1cfb82085df48555b7633359a589be43 tikiwiki-1.9.2.ebuild 2414
+SHA256 63d8e247acb076e8b572f7a3f11c75d6d7f99e9c39d84504c3230ebb74bdb230 tikiwiki-1.9.2.ebuild 2414
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDb449EzitwsaoONoRAs+3AKDDsbCZBWiA6tM3+mTqthkvvyw+/wCgv0vs
-g3BfFT0NqOwrWo+7aa+9esk=
-=jaKk
+iD8DBQFD6KveEzitwsaoONoRAhzQAJsGNKLbFjr6nI2GqoiJ2Y2Ml5+JPwCeO7Za
+6ygZ0aND+MuGGhwcze9KrnE=
+=kYAU
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.2.ebuild,v 1.1 2005/11/07 17:26:00 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.2.ebuild,v 1.2 2006/02/07 14:16:48 rl03 Exp $
 
 inherit webapp
 
@@ -20,7 +20,7 @@ RDEPEND="virtual/php
 pkg_setup () {
 	webapp_pkg_setup
 	einfo "Make sure your PHP is compiled with mysql or postgres support"
-	einfo "If you need PDF generation, make sure your PHP is emerged with xml2"
+	einfo "If you need PDF generation, make sure your PHP is emerged with xml"
 }
 
 src_install() {
