@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4821e688a99fa0277c8393a29368b3d6 ChangeLog 396
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Sys-Syslog-0.13 0
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 9a5c3ce709baa68d61568dad188c33d2 perl-Sys-Syslog-0.13.ebuild 444
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD6IsLtG5z4I8BtQoRAnU5AKCEbE8USB9aF2uwC3EvgzY1iUzESwCghYG9
+isB0glAH+vH1sFAB2zpKDNA=
+=Ewj0
+-----END PGP SIGNATURE-----
