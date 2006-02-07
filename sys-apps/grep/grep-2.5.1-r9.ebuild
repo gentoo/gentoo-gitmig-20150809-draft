@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r9.ebuild,v 1.7 2006/01/29 08:34:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r9.ebuild,v 1.8 2006/02/07 01:37:15 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc-macos ~ppc64 s390 sh ~sparc ~x86"
 IUSE="build nls static"
 
 RDEPEND=""
@@ -25,11 +25,10 @@ src_unpack() {
 	# Fix a weird sparc32 compiler bug
 	echo "" >> src/dfa.h
 
-	epatch "${FILESDIR}"/${PV}-manpage.patch
-	epatch "${FILESDIR}"/${PV}-manpage-line-buffering.patch
+	epatch "${FILESDIR}"/${P}-manpage.patch
 	epatch "${FILESDIR}"/${P}-fgrep.patch
+	epatch "${FILESDIR}"/${P}-bracket.patch
 	epatch "${FILESDIR}"/${P}-i18n.patch
-	epatch "${FILESDIR}"/${P}-gofast.patch.bz2
 	epatch "${FILESDIR}"/${P}-oi.patch
 	epatch "${FILESDIR}"/${P}-restrict_arr.patch
 	epatch "${FILESDIR}"/${PV}-utf8-case.patch

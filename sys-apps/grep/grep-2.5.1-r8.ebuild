@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r8.ebuild,v 1.12 2006/01/29 08:34:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r8.ebuild,v 1.13 2006/02/07 01:37:15 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -25,11 +25,10 @@ src_unpack() {
 	# Fix a weird sparc32 compiler bug
 	echo "" >> src/dfa.h
 
-	epatch "${FILESDIR}"/${PV}-manpage.patch
-	epatch "${FILESDIR}"/${PV}-manpage-line-buffering.patch
+	epatch "${FILESDIR}"/${P}-manpage.patch
 	epatch "${FILESDIR}"/${P}-fgrep.patch
+	epatch "${FILESDIR}"/${P}-bracket.patch
 	epatch "${FILESDIR}"/${P}-i18n.patch
-	epatch "${FILESDIR}"/${P}-gofast.patch.bz2
 	epatch "${FILESDIR}"/${P}-oi.patch
 	epatch "${FILESDIR}"/${P}-restrict_arr.patch
 	epatch "${FILESDIR}"/${PV}-utf8-case.patch
