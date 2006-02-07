@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dcb4644bb4022bce8b5cbfa0a1d40ee8 ChangeLog 4908
-RMD160 89d07ae076879940a9bfb5ab04de72ceda54ab65 ChangeLog 4908
-SHA256 3fc1ddac395b498205f0a5536d78938062233625d10c3c249f3cd42ef2744f18 ChangeLog 4908
+MD5 f496ef2ee654a7dfd06c3ed8d37c1b49 ChangeLog 5071
+RMD160 bc31d68df2f113583a7c284509336c731aad2c3c ChangeLog 5071
+SHA256 9e861d9acdc59e6a8976dd01738a644e357d1928fca7e40ea3cfb18966542d60 ChangeLog 5071
 MD5 bf9914d8c2032ae9e2c6d375a2eb71a8 files/digest-gnome-backgrounds-2.10.0 78
 RMD160 6a38ec31a066e85c15c818d15fa7b91cb8432339 files/digest-gnome-backgrounds-2.10.0 78
 SHA256 56447ef2abfc16ff7ee124a7f0f39e2ce9b4543fe23ca3112f8735870b471ee3 files/digest-gnome-backgrounds-2.10.0 78
@@ -19,6 +16,9 @@ SHA256 0ec6fcc7fbb504d86fe516976461f8ae7bd6f28154c1951aa65f6390d9fca533 files/di
 MD5 ca21973597ffc5c364c15522a5e46972 files/digest-gnome-backgrounds-2.12.2 78
 RMD160 f98a263b0760e7d0d6534fde471070be9ec48389 files/digest-gnome-backgrounds-2.12.2 78
 SHA256 b652190ce5628a6ec6149c69467711d1548e5aed617d6dc2c5f69345569f302e files/digest-gnome-backgrounds-2.12.2 78
+MD5 01d0d55d628bb48cb635cf4ea7557980 files/digest-gnome-backgrounds-2.12.3 280
+RMD160 ba2cf7c309fbf600895b26301b75b04e33616800 files/digest-gnome-backgrounds-2.12.3 280
+SHA256 82b9871f2682610fd5fb582e238c24f648fbe007698f1cffbbd7d678c76c12f0 files/digest-gnome-backgrounds-2.12.3 280
 MD5 7c86767974461d3fab6c7a948b090fa1 gnome-backgrounds-2.10.0.ebuild 550
 RMD160 67114568bbcf87831e9762ddf181f5cc560b0e7e gnome-backgrounds-2.10.0.ebuild 550
 SHA256 9377a4726fa53b54f55e573fe5ac76192f4044ebd05beffa6b6cb6b1e1110d59 gnome-backgrounds-2.10.0.ebuild 550
@@ -34,13 +34,9 @@ SHA256 b33eb245a034586fa1953c74e968f70c7ee98031e77bbb8e84a427ba9f79f8c7 gnome-ba
 MD5 4e87a1c35d917a91c5c07872c783d765 gnome-backgrounds-2.12.2.ebuild 563
 RMD160 6fdba2eb59671b8fd7a5cbe8092e4960610a157f gnome-backgrounds-2.12.2.ebuild 563
 SHA256 7af12ee0bf083362beab0decd14609ac9e5e25d1500074cc337cbb6b9a01ddc6 gnome-backgrounds-2.12.2.ebuild 563
+MD5 5dc8964317f68ab8a1a6b532a7c2051d gnome-backgrounds-2.12.3.ebuild 570
+RMD160 02dc377ceec8fd9dbc510c1df0887964116a175e gnome-backgrounds-2.12.3.ebuild 570
+SHA256 9c9463d1095fa156cf867d22a3db0b22b225d8593153ed64de0101ce1b829ca0 gnome-backgrounds-2.12.3.ebuild 570
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD59Y3JrHF4yAQTrARAvYZAJ0XxTupp1Gn3luTrW1ZkD7IBYEUtACffLQz
-4/dW8yhAcf/uHIDWOyLkv5w=
-=w6sV
------END PGP SIGNATURE-----
