@@ -1,21 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 11105c6535eeca1fd5fde3b11c11b0ed ChangeLog 2556
-MD5 c2a4f8c235326082b353136c6393b4f0 files/digest-realtime-lsm-0.8.2_pre20041022 81
-MD5 2ed4d388f1dcb7e905726ac4203fd666 files/digest-realtime-lsm-0.8.3 69
-MD5 82204df30e7add750c918a1d2fd2246c files/digest-realtime-lsm-0.8.5 69
+MD5 2ff036d1aba00065abb9743cd26565e0 ChangeLog 2797
 MD5 82204df30e7add750c918a1d2fd2246c files/digest-realtime-lsm-0.8.5-r1 69
 MD5 bd10dcd7b669d837d013107c02b4d17d files/kmisc.patch-0.8.2_pre20041022 679
 MD5 7f45ae799453f2b207f1e393a90a26f9 metadata.xml 1084
-MD5 4b60714faf775ac4137488504ed3839d realtime-lsm-0.8.2_pre20041022.ebuild 2525
-MD5 5a42994eaa05d48743fd051377224c92 realtime-lsm-0.8.3.ebuild 2536
 MD5 42c5b36597dc53d5b857cc47d17182cf realtime-lsm-0.8.5-r1.ebuild 1748
-MD5 98a8e7dd0f688c5686b065232c8ae780 realtime-lsm-0.8.5.ebuild 2567
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwWiiV3J2n04EauwRAvWxAJ4h+3V5KXHfYf3QgXSf9w/7ECeCQQCfVWBE
-bqCbhA9Tn/vpJLALPBhO1wY=
-=vlnz
------END PGP SIGNATURE-----
