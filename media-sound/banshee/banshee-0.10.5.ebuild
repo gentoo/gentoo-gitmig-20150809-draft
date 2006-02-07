@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.5.ebuild,v 1.1 2006/02/07 01:22:57 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.5.ebuild,v 1.2 2006/02/07 01:36:23 metalgod Exp $
 
 inherit autotools eutils gnome2 mono
 
@@ -39,7 +39,7 @@ RDEPEND=">=dev-lang/mono-1.1.10
 	>=gnome-base/gnome-desktop-2.0
 	ipod? ( >=dev-dotnet/ipod-sharp-0.5.12 )
 	>=sys-apps/hal-0.5.2
-	>=sys-apps/dbus-0.5
+	sys-apps/dbus
 	>=dev-db/sqlite-3
 	>=gnome-extra/nautilus-cd-burner-2.12"
 
@@ -82,6 +82,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/${P}-utilsfix.patch
 
 	# Multilib issue: Use pkgconfig --variable=libdir over --variable=prefix
 	sed -i -e 's:prefix mono`/lib:libdir mono`:' \
