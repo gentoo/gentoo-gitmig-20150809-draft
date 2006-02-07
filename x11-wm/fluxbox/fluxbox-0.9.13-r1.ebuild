@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.13-r1.ebuild,v 1.11 2005/08/23 22:01:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.13-r1.ebuild,v 1.12 2006/02/07 20:14:34 ciaranm Exp $
 
 inherit eutils
 
@@ -100,9 +100,9 @@ src_install() {
 	# Styles menu framework
 	dodir /usr/share/fluxbox/menu.d/styles
 	insinto /usr/share/fluxbox/menu.d/styles
-	doins ${FILESDIR}/0.9.10/styles-menu-fluxbox || die
-	doins ${FILESDIR}/0.9.10/styles-menu-commonbox || die
-	doins ${FILESDIR}/0.9.10/styles-menu-user || die
+	doins ${FILESDIR}/styles-menu-fluxbox || die
+	doins ${FILESDIR}/styles-menu-commonbox || die
+	doins ${FILESDIR}/styles-menu-user || die
 }
 
 pkg_postinst() {
