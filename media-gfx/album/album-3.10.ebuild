@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/album-3.10.ebuild,v 1.4 2006/01/21 21:57:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/album-3.10.ebuild,v 1.5 2006/02/07 20:00:28 agriffis Exp $
 
 DESCRIPTION="HTML photo album generator"
 HOMEPAGE="http://MarginalHacks.com/Hacks/album/"
@@ -8,7 +8,7 @@ SRC_URI="http://marginalhacks.com/bin/album.versions/${P}.tar.gz"
 
 LICENSE="marginalhacks"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ppc64 x86"
+KEYWORDS="alpha ~amd64 ~ppc ppc64 x86"
 IUSE="ffmpeg"
 
 DEPEND="virtual/libc"
