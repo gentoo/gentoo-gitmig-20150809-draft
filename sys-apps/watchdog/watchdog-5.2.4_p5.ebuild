@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.2.4_p5.ebuild,v 1.4 2006/01/02 17:37:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.2.4_p5.ebuild,v 1.5 2006/02/07 21:01:04 blubb Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://debian/pool/main/w/watchdog/${MY_P}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm ~mips ppc sh x86"
+KEYWORDS="amd64 arm ~mips ppc sh x86"
 IUSE=""
 
 DEPEND=""
