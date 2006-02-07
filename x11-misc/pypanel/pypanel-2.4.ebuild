@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-2.4.ebuild,v 1.4 2006/01/02 16:56:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-2.4.ebuild,v 1.5 2006/02/07 08:57:36 agriffis Exp $
 
 inherit distutils eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc x86"
+KEYWORDS="alpha ~amd64 ppc x86"
 
 IUSE=""
 DEPEND="|| ( x11-libs/libXft virtual/x11 )
