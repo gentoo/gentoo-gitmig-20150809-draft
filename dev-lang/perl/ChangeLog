@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.189 2006/02/07 15:20:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.190 2006/02/07 18:55:18 mcummings Exp $
+
+  07 Feb 2006; <mcumming@gentoo.org> perl-5.8.8.ebuild:
+  Style fixes to 5.8.8, thanks az
 
 *perl-5.8.8 (07 Feb 2006)
 

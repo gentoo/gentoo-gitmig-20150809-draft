@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r7.ebuild,v 1.6 2005/12/05 16:01:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r7.ebuild,v 1.7 2006/02/07 18:55:18 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 

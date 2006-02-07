@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8.ebuild,v 1.1 2006/02/07 15:20:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8.ebuild,v 1.2 2006/02/07 18:55:18 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -229,37 +229,41 @@ src_configure() {
 		myconf="${myconf} -Ui_db -Ui_ndbm"
 	fi
 
-	[ -n "${ABI}" ] && myconf="${myconf} -Dusrinc=$(get_ml_incdir)"
+	[ -n "${ABI}" ] && myconf="${myconf} -Dusrinc=\"$(get_ml_incdir)\""
 
-	[[ ${ELIBC} == "FreeBSD" ]] && myconf="${myconf} -Dlibc=/usr/$(get_libdir)/libc.a"
+	[[ ${ELIBC} == "FreeBSD" ]] && myconf="${myconf} -Dlibc=\"/usr/$(get_libdir)/libc.a\""
 
 	if [[ $(get_libdir) != "lib" ]] ; then
-		myconf="${myconf} -Dlibpth='/usr/local/$(get_libdir) /$(get_libdir) /usr/$(get_libdir)'"
+		# We need to use " and not ', as the written config.sh use ' ...
+		myconf="${myconf} -Dlibpth=\"/usr/local/$(get_libdir) /$(get_libdir) /usr/$(get_libdir)\""
 	fi
 
+	# We have to eval below, else above -Dlibpth is not seen by perl as one
+	# argument ...
+	eval $(echo \
 	sh Configure -des \
-		-Darchname="${myarch}" \
-		-Dcccdlflags='-fPIC' \
-		-Dccdlflags='-rdynamic' \
-		-Dcc="$(tc-getCC)" \
-		-Dprefix='/usr' \
-		-Dvendorprefix='/usr' \
-		-Dsiteprefix='/usr' \
-		-Dlocincpth=' ' \
-		-Doptimize="${CFLAGS}" \
+		-Darchname=\"${myarch}\" \
+		-Dcccdlflags=\"-fPIC\" \
+		-Dccdlflags=\"-rdynamic\" \
+		-Dcc=\"$(tc-getCC)\" \
+		-Dprefix=\"/usr\" \
+		-Dvendorprefix=\"/usr\" \
+		-Dsiteprefix=\"/usr\" \
+		-Dlocincpth=\" \" \
+		-Doptimize=\"${CFLAGS}\" \
 		-Duselargefiles \
 		-Dd_semctl_semun \
-		-Dscriptdir=/usr/bin \
-		-Dman1dir=/usr/share/man/man1 \
-		-Dman3dir=/usr/share/man/man3 \
-		-Dinstallman1dir=/usr/share/man/man1 \
-		-Dinstallman3dir=/usr/share/man/man3 \
-		-Dman1ext='1' \
-		-Dman3ext='3pm' \
-		-Dinc_version_list="$inclist" \
-		-Dcf_by='Gentoo' \
+		-Dscriptdir=\"/usr/bin\" \
+		-Dman1dir=\"/usr/share/man/man1\" \
+		-Dman3dir=\"/usr/share/man/man3\" \
+		-Dinstallman1dir=\"/usr/share/man/man1\" \
+		-Dinstallman3dir=\"/usr/share/man/man3\" \
+		-Dman1ext=\"1\" \
+		-Dman3ext=\"3pm\" \
+		-Dinc_version_list=\"${inclist}\" \
+		-Dcf_by=\"Gentoo\" \
 		-Ud_csh \
-		${myconf} || die "Unable to configure"
+		${myconf}) || die "Unable to configure"
 }
 
 src_compile() {
