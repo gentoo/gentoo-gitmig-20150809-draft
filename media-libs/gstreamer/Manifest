@@ -1,16 +1,58 @@
-MD5 b64bc0e06b3a6a52dfad24cf365da895 ChangeLog 16782
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5ca66356e7b5baef091374b72100f718 ChangeLog 16890
+RMD160 3ad3973f8414bf9a902310f37e861161bee16a22 ChangeLog 16890
+SHA256 c6f7eef2928113a8ce0291666b820603b54bc547d9a952caf466218c74e4d166 ChangeLog 16890
 MD5 c1cec5e094b7ebbe11584a8669874e8c files/digest-gstreamer-0.10.0 70
+RMD160 11ae6ffb585f0d2bd854e5034eae1cbd031d8b40 files/digest-gstreamer-0.10.0 70
+SHA256 a26c8172abfbe36721fc236043bcda211ef995b1feb5eeb7e66cad694cd5ab1f files/digest-gstreamer-0.10.0 70
 MD5 0f14c7bd23dc03c71777a8dbbfa57e62 files/digest-gstreamer-0.10.1 70
+RMD160 1d96269113e77bde496252080a78ee2eae22a445 files/digest-gstreamer-0.10.1 70
+SHA256 6a15d936a8b6ba9f892b1b803bb9cab06d25d53fee26f185623b66248da30ae5 files/digest-gstreamer-0.10.1 70
 MD5 15ac00976ee3af8871a9e5a72d26c72b files/digest-gstreamer-0.10.2 70
+RMD160 38f1214c2b7c813259f647acd89f2825d480dbc0 files/digest-gstreamer-0.10.2 70
+SHA256 c8d947cec5a457f33ba7ab1e246fa4815a967c9fefda9abc384726c8ccc71b7e files/digest-gstreamer-0.10.2 70
 MD5 22f436d2188144ecb6918fc8960cb70e files/digest-gstreamer-0.8.10 70
+RMD160 95cceb15627c57a84f8bbfa948e134736adca9ff files/digest-gstreamer-0.8.10 70
+SHA256 f20822d5a64961062ce73e15d7e1f555ffec4e5825088d3fe5dfe35a5eb5c9cd files/digest-gstreamer-0.8.10 70
 MD5 dc2b5e6aa445825a850920f9e3d55392 files/digest-gstreamer-0.8.11 70
+RMD160 6a7c07917b91ee51fbf3a1bb2c7d272dc0efa7e5 files/digest-gstreamer-0.8.11 70
+SHA256 b577f107c27d586a2384e5f34930232ed3af3664eff3b69ca15c39e7cda41203 files/digest-gstreamer-0.8.11 70
 MD5 465e9b8e2f33205128b7a69eca2e2c02 files/gstreamer-0.8.3-jade_fix.patch 1713
+RMD160 e52cf7b4fb0e7d0a4043365dd1abaab5a121897f files/gstreamer-0.8.3-jade_fix.patch 1713
+SHA256 852eb5828e8c5e270e8b32323e37dcf266308b5b5e5aa1f26d08bbb1be4fc51d files/gstreamer-0.8.3-jade_fix.patch 1713
 MD5 eb396dce225d8cbcae77d8c7a60cae55 files/gstreamer-0.8.9-64_dataprotocol.patch 557
+RMD160 983a358588dadbe3ddf518e96fa4195a7d6c49bd files/gstreamer-0.8.9-64_dataprotocol.patch 557
+SHA256 f8bf832d1f994b96abd9cba022e1eb47105da1db89c62a86befb6586d53c5719 files/gstreamer-0.8.9-64_dataprotocol.patch 557
 MD5 5adc10998a8ad71887996272e5775022 files/gstreamer-0.8.9-fixpluginload.patch 3982
+RMD160 e44a0952ca25b6ed03aa6758392b683b70fe2614 files/gstreamer-0.8.9-fixpluginload.patch 3982
+SHA256 98623456924a8bfd14e18085d20e5349dab992a4081547ff4a5449c95fe18acc files/gstreamer-0.8.9-fixpluginload.patch 3982
 MD5 fd63f7bf7d7eacc104d81267e447fcab files/gstreamer-0.8.9-gstqueue_lock.patch 3975
+RMD160 bf41231c36b5cc7d49d1403f1bec8501a85770a6 files/gstreamer-0.8.9-gstqueue_lock.patch 3975
+SHA256 423e985be67788a333e834a3e41863953e8d52f8c0b72154cc2df69657dc3007 files/gstreamer-0.8.9-gstqueue_lock.patch 3975
 MD5 93a034785bd16157b7c361eb9f32c7ac gstreamer-0.10.0.ebuild 1922
+RMD160 c38a59bec7b4c7ea228e628f354805fc5feed33c gstreamer-0.10.0.ebuild 1922
+SHA256 a7cf7114b0a8d1ed9499ed328cd0f2069600644280ee22a533895a801089a11b gstreamer-0.10.0.ebuild 1922
 MD5 12c6e5f0df1bd4ab383346f1458dd773 gstreamer-0.10.1.ebuild 1923
+RMD160 a4dbe8fdde67bf6bed03e2ecd90227403843a255 gstreamer-0.10.1.ebuild 1923
+SHA256 82b05a71287ffbccca50fe209065eae4621730b99382e65ee74f4d2cf5583834 gstreamer-0.10.1.ebuild 1923
 MD5 36847d372c7f0a892cfa24a3da6423cd gstreamer-0.10.2.ebuild 1923
+RMD160 47f9794d3d31f866e78c068522ef8577bf5d1770 gstreamer-0.10.2.ebuild 1923
+SHA256 51dccc895e6d5bd9d171ea2376d72f3c10444c74338f58df7c848165300929a6 gstreamer-0.10.2.ebuild 1923
 MD5 301bbbe66729c54178c3244326b42651 gstreamer-0.8.10.ebuild 2810
-MD5 8e2259bc820511c8a6b1c889dc3986b6 gstreamer-0.8.11.ebuild 2835
+RMD160 8bf3d6052e2f43fcfae411ce1ad34c0b33050855 gstreamer-0.8.10.ebuild 2810
+SHA256 b7da5822edf38a674f98b814c924e05aa90b05e304beb86bd3ecd2041b523f83 gstreamer-0.8.10.ebuild 2810
+MD5 3a6d780527f44203e9cc9c7fd38af7d7 gstreamer-0.8.11.ebuild 2836
+RMD160 0ac9c1296d58f1cc24d199fffce13acc2d6f419a gstreamer-0.8.11.ebuild 2836
+SHA256 c71e98be1564d72121b8f8ead1bbbe74f98b1e09bc45a2ad9d8330a411182952 gstreamer-0.8.11.ebuild 2836
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6QLzJrHF4yAQTrARAvLpAJ4455suMKHkjKU3NA/qK/8Zy/taSQCfV5mM
+PM8a6SLGyCtpC+FcpZFkzmU=
+=+kQT
+-----END PGP SIGNATURE-----
