@@ -28,13 +28,13 @@ SHA256 b5def6fed3155ab623666e99c0e21c237f87abad6dd0833184c419ce2c8c7c77 portage-
 MD5 fa9f54771685d1088e08b06ca19dbc14 portage-utils-0.1.12.ebuild 669
 RMD160 543307927f926a2987de129c78f1a8d258ac5b9e portage-utils-0.1.12.ebuild 669
 SHA256 0a8a9830834413db93b46789876033e37e7c28db36d196b878aa35e4b332df11 portage-utils-0.1.12.ebuild 669
-MD5 bb7462bdf5353c5a113b10bf422d012a portage-utils-0.1.13.ebuild 666
-RMD160 07c89480908fac7bc356424382429316aebd39d3 portage-utils-0.1.13.ebuild 666
-SHA256 03eccd1a1fdd0c86479274c08038004e7dc160ed7a40171b13a614f29ab72958 portage-utils-0.1.13.ebuild 666
+MD5 f0fe655f5188c68387fd94c11ebfbb14 portage-utils-0.1.13.ebuild 660
+RMD160 27a37b822df78cecb501e3511912dfbeb73654c3 portage-utils-0.1.13.ebuild 660
+SHA256 bf77fcd13c025b8be305f64a33541ea7e30a6b8a4e52c6917ac3f87c74836adf portage-utils-0.1.13.ebuild 660
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD57llJrHF4yAQTrARAnZSAJ4nzXjZu3839Dp6Ao4EfsgWoPJUfQCgj6mi
-tDMgjmsCnDstZABm8jY5juM=
-=Xn/O
+iD8DBQFD5//w2+ySkm8kpY0RAt3UAJ9F578gNaEzHesmrPnHe5hdFqcCOgCfTj0K
+q21sCLtsqhwCY7SkXyjGIz0=
+=yJ1Q
 -----END PGP SIGNATURE-----
