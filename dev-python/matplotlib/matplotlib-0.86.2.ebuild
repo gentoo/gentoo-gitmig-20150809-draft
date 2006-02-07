@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.85.ebuild,v 1.4 2006/02/07 00:33:31 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.86.2.ebuild,v 1.1 2006/02/07 00:33:31 liquidx Exp $
 
 inherit distutils python
 
@@ -17,6 +17,7 @@ DEPEND="virtual/python
 		|| (
 		>=dev-python/numeric-22
 		dev-python/numarray
+		dev-python/numpy
 		)
 		>=media-libs/freetype-2.1.7
 		media-libs/libpng
@@ -37,7 +38,7 @@ src_unpack() {
 	cd "${S}"
 
 	# disable autodetection, rely on USE instead
-	epatch "${FILESDIR}/${P}-no-autodetect.patch"
+	epatch "${FILESDIR}/${PN}-0.86.2-no-autodetect.patch"
 	sed -i \
 		-e "/^BUILD_GTK/s/'auto'/$(use gtk && echo 1 || echo 0)/" \
 		-e "/^BUILD_WX/s/'auto'/0/" \
