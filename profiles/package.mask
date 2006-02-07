@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4974 2006/02/06 23:30:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4975 2006/02/07 02:00:53 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -54,10 +54,6 @@ net-print/hpoj
 # masked until I get to test more than that it compiles
 =net-wireless/ndiswrapper-1.9
 
-# Marcelo Goes <vanquirius@gentoo.org> (04 Feb 2006)
-# Masked for testing
-net-analyzer/nessus-bin
-
 # Michał Januszewski <spock@gentoo.org> (04 Feb 2006)
 # Masked pending removal from Portage.
 dev-util/bitkeeper
@@ -72,10 +68,6 @@ dev-util/bitkeeper
 >=net-www/apache-2.2.0
 >=dev-libs/apr-1.0.0
 >=dev-libs/apr-util-1.0.0
-
-# Marcelo Goes <vanquirius@gentoo.org> (03 Feb 2006)
-# Masked for testing
-net-analyzer/nessus-client
 
 # Michael Sterrett <mr_bones_@gentoo.org> (31 Jan 2006)
 # multiplayer is broken
