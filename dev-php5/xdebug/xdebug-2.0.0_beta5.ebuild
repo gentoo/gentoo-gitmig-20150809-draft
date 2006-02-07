@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/xdebug-2.0.0_beta5.ebuild,v 1.2 2006/01/20 13:56:13 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/xdebug-2.0.0_beta5.ebuild,v 1.3 2006/02/07 17:24:18 nixnut Exp $
 
 PHP_EXT_ZENDEXT="yes"
 PHP_EXT_NAME="xdebug"
@@ -15,7 +15,7 @@ MY_P="${P/_/}"
 SRC_URI="http://pecl.php.net/get/${MY_P}.tgz"
 S="${WORKDIR}/${MY_P}"
 LICENSE="Xdebug"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="${RDEPEND} !dev-php5/ZendOptimizer"
 
