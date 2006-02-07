@@ -1,0 +1,13 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Storable/ChangeLog,v 1.1 2006/02/07 11:56:18 mcummings Exp $
+
+*perl-Storable-2.15 (07 Feb 2006)
+*perl-Storable-2.13 (07 Feb 2006)
+*perl-Storable-2.07 (07 Feb 2006)
+
+  07 Feb 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +perl-Storable-2.07.ebuild, +perl-Storable-2.13.ebuild,
+  +perl-Storable-2.15.ebuild:
+  New virtual for perl-core/Storable
+

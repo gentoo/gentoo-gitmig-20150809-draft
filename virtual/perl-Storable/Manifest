@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ae21fa638ce65a0430ebeefd85ed47f6 ChangeLog 514
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Storable-2.07 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Storable-2.13 0
@@ -6,3 +9,10 @@ MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 3af71d367eb5b77c80976323b18d405d perl-Storable-2.07.ebuild 461
 MD5 84c27905d989464fb26440afcb34e677 perl-Storable-2.13.ebuild 478
 MD5 c71b49abd969d83640f28517a69c3484 perl-Storable-2.15.ebuild 480
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD6IrmtG5z4I8BtQoRAhRVAJ9DodxFoIGNXmge0EWcvuki5JJMAACeLk0+
+DFNbHTWAdh+ukyI7Lp4iX4s=
+=pIMq
+-----END PGP SIGNATURE-----
