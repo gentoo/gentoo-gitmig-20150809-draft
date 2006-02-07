@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.2-r1.ebuild,v 1.6 2006/02/07 09:08:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.2-r1.ebuild,v 1.7 2006/02/07 21:12:04 blubb Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://xosview.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2 BSD"
-KEYWORDS="alpha ~amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 
 RDEPEND="|| ( (
 		x11-libs/libX11

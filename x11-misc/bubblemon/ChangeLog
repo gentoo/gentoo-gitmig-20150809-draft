@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bubblemon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.19 2006/02/07 08:51:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.20 2006/02/07 21:11:56 blubb Exp $
+
+  07 Feb 2006; Simon Stelling <blubb@gentoo.org> bubblemon-1.46.ebuild:
+  stable on amd64
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> bubblemon-1.46.ebuild:
   Mark 1.46 stable on alpha
