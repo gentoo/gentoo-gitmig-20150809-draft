@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a02c4abd2a9f7a7e60c996adbb55370a ChangeLog 849
 RMD160 dca74a71448850cf0d53ffaae513d5eefe741ad9 ChangeLog 849
 SHA256 8911c61b0517d9ceff4976fce60105dd24bc413524dc390d7700b6766d16ff2f ChangeLog 849
-MD5 d55e9ef8b3522f2bae7d1b9d19eb2162 files/digest-setuptools-0.6_alpha9 241
-RMD160 ef41573ce3f7c012416bede0b4e145c8e57ec630 files/digest-setuptools-0.6_alpha9 241
-SHA256 e15c31e3f767b2a4bf3939ccb9dcd10078dbfd1fa367471e51dbbc2c3961a8cb files/digest-setuptools-0.6_alpha9 241
+MD5 fe4e5161687e28c732fbd51c07a04ec9 files/digest-setuptools-0.6_alpha9 241
+RMD160 44cb9dc465172286604a6cb29d990a4af22533b6 files/digest-setuptools-0.6_alpha9 241
+SHA256 1ec4bbc7ea605e272c71a1778b45f2630e85bc9c35535839bf56484b153c2b60 files/digest-setuptools-0.6_alpha9 241
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
 RMD160 e730f96ab97c5be577a6d6d05f04990374a0dffb metadata.xml 160
 SHA256 6cd954a9de2307c57d32b25fa3599dee2908a4ddc6a98594f593d53577307a3a metadata.xml 160
-MD5 a33c2fdbb611bef9c45e5beae21964b3 setuptools-0.6_alpha9.ebuild 1069
-RMD160 e03b5e79483d745d37c6a67641165a25815b2892 setuptools-0.6_alpha9.ebuild 1069
-SHA256 c95cdaec8173701e162346f448d15b6fa962e98b069e891ecdb17e9146896948 setuptools-0.6_alpha9.ebuild 1069
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5l7LW78445TWHXcRAsCEAJ9SBNieUWWVr1VTI5r1+boSWjCf9gCdE77j
-JTLA0hy6wEHROOd8kKVwY0s=
-=CoWP
------END PGP SIGNATURE-----
+MD5 1e0c6a8784ffbcfc91e963e2414f4ab2 setuptools-0.6_alpha9.ebuild 1076
+RMD160 93bc42942f983d19fbf7d863dc92651fd83dfb25 setuptools-0.6_alpha9.ebuild 1076
+SHA256 296559fea351f27432dee5897651255be050fd47d4efb3d1021fb8912e31e016 setuptools-0.6_alpha9.ebuild 1076

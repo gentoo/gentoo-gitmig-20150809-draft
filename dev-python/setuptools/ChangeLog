@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.2 2006/02/05 20:23:19 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.3 2006/02/07 01:58:48 weeve Exp $
+
+  07 Feb 2006; Jason Wever <weeve@gentoo.org> setuptools-0.6_alpha9.ebuild:
+  Added ~sparc keyword wrt bug #121880.
 
 *setuptools-0.6_alpha9 (05 Feb 2006)
 

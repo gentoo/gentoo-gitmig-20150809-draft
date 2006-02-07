@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f1c7e9994eacad190899549bc4ebad81 ChangeLog 5843
 RMD160 c572a97bb059d548c2ad43d20b20b97d1ba71a1e ChangeLog 5843
 SHA256 4e012d9abb6f37468df4215ada6cce1bd57b6830fec3f05fcb01d1b15c6ae392 ChangeLog 5843
@@ -13,9 +10,9 @@ SHA256 6a6dfc6c9db0589115afc888ebce25123580893c2fbc7364b028c9b307cc382c files/di
 MD5 e2d1637a2ffc3058b7837337be889bb8 files/digest-pysqlite-2.0.5 241
 RMD160 753ef4bb45cbcdada0b80a3eedbaca25d0398391 files/digest-pysqlite-2.0.5 241
 SHA256 a6fd9ee4d7bf8bac775d89bc040f821507b7d465b39fdcb0809b1ae5cd8c01c6 files/digest-pysqlite-2.0.5 241
-MD5 e925645fada24044815e72fe5b779f7d files/digest-pysqlite-2.0.7 244
-RMD160 27f21b3e2a73917d507d015f8981ec0ae0b3f26f files/digest-pysqlite-2.0.7 244
-SHA256 c188ddc09e5aa83dbd394d42e57649284a20c2731ad7c61b61abac6c532ad956 files/digest-pysqlite-2.0.7 244
+MD5 b4237e33ddd55adf1d5f65d3b0b45329 files/digest-pysqlite-2.0.7 244
+RMD160 67765798f98278f4995a477c2f44dfd62c6e70f9 files/digest-pysqlite-2.0.7 244
+SHA256 af6c45af77d2b10f335d37351439c613aaf69a5c8aeb0f690674e2a41388d0fc files/digest-pysqlite-2.0.7 244
 MD5 1317339e75f7cf1f8a4f2f1eacf6903b files/pysqlite-2.0.7-setup.py-doc-fixes.patch 623
 RMD160 f8aa303e93ccaaf3597faf5f84c35d3a7f21783f files/pysqlite-2.0.7-setup.py-doc-fixes.patch 623
 SHA256 aff2daf8e78bb49fa54b0ff98ad2f4e65c226ab407771a3c5bbcf333920a06e1 files/pysqlite-2.0.7-setup.py-doc-fixes.patch 623
@@ -31,13 +28,6 @@ SHA256 72ac403c9443bfc4e569b8ce85d8ece2a584c8b17daef0f81354bfc963bba347 pysqlite
 MD5 6cce3f61a9712de9997c225dda511143 pysqlite-2.0.5.ebuild 1026
 RMD160 3e3a9c88895c6e161eed6a18889efa1410fb7123 pysqlite-2.0.5.ebuild 1026
 SHA256 377e6a7c54095625234d7ce386b2f2a5006b74b0a6a22ea1f64c240b86d11207 pysqlite-2.0.5.ebuild 1026
-MD5 a0de910cc43b362b0072dddaea2ce647 pysqlite-2.0.7.ebuild 1833
-RMD160 a2c0f76c7dd4468b66f44880a449cf701fa0db76 pysqlite-2.0.7.ebuild 1833
-SHA256 6ea51e999cca139209ad7f073f35b8c4a6c46845a418057c285fcee5dbfdb0eb pysqlite-2.0.7.ebuild 1833
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD58c4W78445TWHXcRAv1WAJ4xvCOp5BrsfRZ4srQxFLE64tXragCcCJA3
-kOJcTOhdtZlK7BMjkWXjcJw=
-=/zqJ
------END PGP SIGNATURE-----
+MD5 38fe544a00df53b438ffd7ddea4c13c5 pysqlite-2.0.7.ebuild 1840
+RMD160 269483732fc684740804167693a80b69148b3b8e pysqlite-2.0.7.ebuild 1840
+SHA256 35ceb6d0cf49d37d82aadcb1a95c2b554bff142b450f429218d7e429651e2126 pysqlite-2.0.7.ebuild 1840
