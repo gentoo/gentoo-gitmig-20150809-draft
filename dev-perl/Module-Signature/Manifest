@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4b4d59c22cea2a3962ec592f28f91216 ChangeLog 1780
-MD5 fb825ed09228fdb6bf8d6f353e4742d7 Module-Signature-0.44.ebuild 991
-MD5 f17dd239e5ae232f6ebc50e483c65593 Module-Signature-0.51.ebuild 1012
+MD5 01f839fa5ca44e892363b6373a844788 ChangeLog 1915
+RMD160 00708a8123da7dc92a16e169a22becdaa9c0731a ChangeLog 1915
+SHA256 a32408949d516bc36ee0d6361ecc78fa695549c5e97079f4311605d1cf5df939 ChangeLog 1915
+MD5 22e08e24884ea1f04bdfd864d9412181 Module-Signature-0.44.ebuild 991
+RMD160 dce7b99ce4bbedba2b251ae5fea4e48728e03e6d Module-Signature-0.44.ebuild 991
+SHA256 eb7eb537c8f8dfd0a01ee19336ee12777f6e34f353551ff5f8fcff98a3650e60 Module-Signature-0.44.ebuild 991
+MD5 498ca936d62fb11d6808dcc3ef6edbfc Module-Signature-0.51.ebuild 1012
+RMD160 ff555a69bd6b2054ee54e772f8c98c3ed76da79e Module-Signature-0.51.ebuild 1012
+SHA256 19f928e9e4c45213ad801eae34fa008cc4cdb8fe17112868a1ce8320d82db16d Module-Signature-0.51.ebuild 1012
 MD5 2328811171112f6090c1ee376eebb70f files/digest-Module-Signature-0.44 72
+RMD160 0f36f9e208b4c3965f45edee8e3c80c08fed91e5 files/digest-Module-Signature-0.44 72
+SHA256 d2f5b1fa4f63d32443634175889764c65fb5ef8116f3d7669127689d81365cde files/digest-Module-Signature-0.44 72
 MD5 dca9a5ece24ebe279c40c5d21856c0f3 files/digest-Module-Signature-0.51 72
+RMD160 ac8c1436e14d35f9b281804243cc7bc2d30b9d65 files/digest-Module-Signature-0.51 72
+SHA256 008957634eef58d3bd7976ccb52f0894e53969a6de2167438ccc67eacfffd363 files/digest-Module-Signature-0.51 72
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDyCIetG5z4I8BtQoRAmvBAJ93afBZudBL1aw7XwJyjGL9DL0HKACeJEBB
-eqoUIlyFtmx7b15YNoZLdzo=
-=qOAq
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
