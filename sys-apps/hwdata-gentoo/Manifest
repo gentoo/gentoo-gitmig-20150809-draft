@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 632b43e71141f53349e197b02fc62838 ChangeLog 1093
-MD5 abcf3e9f1887a57adeeaedd286b7dcce files/digest-hwdata-gentoo-0.2 70
+MD5 49ac23378e66ac736cf5198798773811 ChangeLog 1199
+RMD160 a041ece10a895005d9edceebba4fd4daf911579a ChangeLog 1199
+SHA256 b72783bde8c252ac21893fb71acc243c770f685a2fabbebdc1c79d2d20e07803 ChangeLog 1199
+MD5 7bbb042d732e23c290708d6d43bd1ff5 files/digest-hwdata-gentoo-0.2 256
+RMD160 dceea096bb2a9f20ce1cfeb721b5ca47b9eb85cc files/digest-hwdata-gentoo-0.2 256
+SHA256 0e61c2f57a58ad1e8efbbaad786fa843b98ac02fcf59f03226ee86bdeaa0adeb files/digest-hwdata-gentoo-0.2 256
 MD5 57bbd10ff7c831988da5912e4c9e3e14 files/fglrx.patch 318
+RMD160 ea8bd2c7fb5813123d0ee13b6aa53680bbf4a71b files/fglrx.patch 318
+SHA256 07bae8fe7056e7b7d2c470147f0379b3b81d643bdfacd5bd0b57cb29d20326ca files/fglrx.patch 318
 MD5 018005f2d16cc9b6b989578fca68019f files/nvidia.patch 385
-MD5 888f85b0101e8e5f1f53acaf1b1e643d hwdata-gentoo-0.2.ebuild 1043
+RMD160 a17f31572224d38bce01ca75480c7cf843a45c97 files/nvidia.patch 385
+SHA256 e1d58ed24ca0962192456b8c5f7d25bef1beec05d403f8177ccf1d36c446ed1f files/nvidia.patch 385
+MD5 110872b23190c4be84039feb9fc57a8d hwdata-gentoo-0.2.ebuild 1045
+RMD160 dcdeb155c0ffbe071a373b070ac784c8174812de hwdata-gentoo-0.2.ebuild 1045
+SHA256 a1f5bfbfc3f2a92610cf9b3735aeb4df7750683a3a8645927c3bd1f4229f830f hwdata-gentoo-0.2.ebuild 1045
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFDvsfW/NoSW7FuNV8RAn71AKDT3LY8dc1saJqlYCt+6kJN2T/ljQCcCYKZ
-W1m3nAqvydmj2F8XWbakPLE=
-=gbPu
------END PGP SIGNATURE-----
+RMD160 8db5ed254a6b9baf8f53368da9e71c5532a46073 metadata.xml 159
+SHA256 b6e17484225400d76c65d178bf5a10dc0a8da7f345993c2acc63d1093a77c90d metadata.xml 159
