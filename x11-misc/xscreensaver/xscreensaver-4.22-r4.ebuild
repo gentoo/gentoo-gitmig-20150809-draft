@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r4.ebuild,v 1.13 2005/11/19 11:33:46 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r4.ebuild,v 1.14 2006/02/07 12:17:34 nelchael Exp $
 
 inherit eutils flag-o-matic pam fixheadtails
 
@@ -24,7 +24,11 @@ SLOT="0"
 # (4.22-r3) is going to force gtk support and disable motif support. Hopefully
 # the users won't complain too much...
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( (
+		x11-libs/libXxf86misc
+		x11-apps/xwininfo
+		xinerama? ( x11-libs/libXinerama ) )
+	virtual/x11 )
 	media-libs/netpbm
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/libxml2-2.5
@@ -39,8 +43,14 @@ RDEPEND="virtual/x11
 	!arm? ( new-login? ( gnome-base/gdm ) )"
 
 DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xf86vidmodeproto
+		x11-proto/xextproto
+		x11-proto/scrnsaverproto
+		x11-proto/recordproto
+		x11-proto/xf86miscproto
+		xinerama? ( x11-proto/xineramaproto ) )
+	virtual/x11 )
 	sys-devel/bc
-	dev-lang/perl
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 

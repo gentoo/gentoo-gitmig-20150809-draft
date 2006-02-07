@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.23.ebuild,v 1.13 2006/02/07 09:21:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.23-r1.ebuild,v 1.1 2006/02/07 12:17:34 nelchael Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -14,21 +14,11 @@ LICENSE="BSD"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86"
 SLOT="0"
 
-# NOTE: ignore app-games/fortune-mod as a dep. it is pluggable and won't
-#       really matter if it isn't there. Maybe we should have a 'games'
-#       USE flag...
-
-# smithj says (2005-07-26):
-# MOTIF WAS REMOVED FOR A REASON! The motif version has not been maintained for
-# some time, and has problems both at build-time and run-time. This ebuild
-# (4.22-r3) is going to force gtk support and disable motif support. Hopefully
-# the users won't complain too much...
-
-RDEPEND="|| ( ( x11-libs/libXxf86misc
-			xinerama? ( x11-libs/libXinerama )
-		)
-		virtual/x11
-	)
+RDEPEND="|| ( (
+		x11-libs/libXxf86misc
+		x11-apps/xwininfo
+		xinerama? ( x11-libs/libXinerama ) )
+	virtual/x11 )
 	media-libs/netpbm
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/libxml2-2.5
@@ -44,16 +34,13 @@ RDEPEND="|| ( ( x11-libs/libXxf86misc
 
 DEPEND="${RDEPEND}
 	|| ( ( x11-proto/xf86vidmodeproto
-			x11-proto/xextproto
-			x11-proto/scrnsaverproto
-			x11-proto/recordproto
-			x11-proto/xf86miscproto
-			xinerama? ( x11-proto/xineramaproto )
-		)
-		virtual/x11
-	)
+		x11-proto/xextproto
+		x11-proto/scrnsaverproto
+		x11-proto/recordproto
+		x11-proto/xf86miscproto
+		xinerama? ( x11-proto/xineramaproto ) )
+	virtual/x11 )
 	sys-devel/bc
-	dev-lang/perl
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
@@ -86,7 +73,7 @@ src_unpack() {
 	# disable rpm -q checking, otherwise it breaks sandbox if rpm is installed
 	# use gnome-terminal in tests rather than gnome-open (bug #94708)
 	# and bug 118028:
-	epatch "${FILESDIR}/${PN}-4.23-norpm.patch"
+	epatch "${FILESDIR}/${P}-norpm.patch"
 
 	# tweaks the default configuration (driver/XScreenSaver.ad.in)
 	epatch ${FILESDIR}/${PN}-4.22-settings.patch
@@ -95,10 +82,13 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-blank-screen.patch
 
 	# disable not-safe-for-work xscreensavers
-	use offensive || epatch ${FILESDIR}/${PN}-4.23-nsfw.patch
+	use offensive || epatch ${FILESDIR}/${P}-nsfw.patch
+
+	# If offensive is set patch webcollage to work:
+	use offensive && epatch ${FILESDIR}/${P}-words.patch
 
 	# Fix for modular X:
-	epatch "${FILESDIR}/${PN}-4.23-app-defaults.patch"
+	epatch "${FILESDIR}/${P}-app-defaults.patch"
 	eautoreconf
 
 	# change old head/tail to POSIX ones
