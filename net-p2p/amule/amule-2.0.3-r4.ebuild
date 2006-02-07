@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.3-r4.ebuild,v 1.8 2005/12/18 18:57:18 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.3-r4.ebuild,v 1.9 2006/02/07 02:45:17 agriffis Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 ~sparc x86"
 IUSE="amuled debug nls remote stats unicode gtk"
 
 
