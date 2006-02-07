@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b28754401813a356c59b1e0ed91bbf7b ChangeLog 1773
-RMD160 3d59f5ba20e232c9d561d965afab2f71f2b83acd ChangeLog 1773
-SHA256 ca619f4205f7981226e1c564b82e1a7a2bd37730766287ed7a86390d9f4226c2 ChangeLog 1773
+MD5 598a90089540bedab0a73463d0b315e4 ChangeLog 1884
+RMD160 ab777bce0cc3e99cf708871d69d070a09883b1f8 ChangeLog 1884
+SHA256 d5932dfa52f14e6de6e769d7469e23d2408fe904516f65b269097fe5173cc4bc ChangeLog 1884
 MD5 f272ae0b346de2f2e7081d1e314329e2 files/digest-zopeinterface-3.0.0 68
 RMD160 53c3ebeecf19fbecfc73f2ecff0ccf2985998223 files/digest-zopeinterface-3.0.0 68
 SHA256 cfa80a59df99be5d16a23948e2624efedb410c9977327b98a2657854a33caf49 files/digest-zopeinterface-3.0.0 68
@@ -19,13 +16,6 @@ SHA256 e69ac7205cbc2e42a297e20d8f08922003390a345bbf50ccf00d1158a1c97cc5 metadata
 MD5 ddbc3525d554fa4ac9d83a79802bbffb zopeinterface-3.0.0.ebuild 708
 RMD160 ad167c0c4f17d9abb7c48ff3fedcfd6657b57bc8 zopeinterface-3.0.0.ebuild 708
 SHA256 649977dd79ebddf6795951317c384db0d5ff75617cfdfc9ba50190210b83cf5c zopeinterface-3.0.0.ebuild 708
-MD5 45af489a8e43089828da93bcded54f47 zopeinterface-3.0.1.ebuild 822
-RMD160 fa8fdcc118e3c8e6a52f23a5ae2597fa89ef8fc5 zopeinterface-3.0.1.ebuild 822
-SHA256 5d67dbf69c2012de282faa1e1508d6e27f2efd11d886ab251dafe7c4a6ed1f60 zopeinterface-3.0.1.ebuild 822
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4l5fW78445TWHXcRAmQgAKCOvz455Km3MtHDyK9rK8+jM6INTwCghsQB
-GBJYL/q6qGwdmerig3qJLRM=
-=rDsO
------END PGP SIGNATURE-----
+MD5 4c7785897c9d6f3d915e75290a8802ba zopeinterface-3.0.1.ebuild 821
+RMD160 f59d9a749871b1251af4ead61ea654dabddaabd5 zopeinterface-3.0.1.ebuild 821
+SHA256 9f8992e3e969f57ce4294e9fc7c2e979f476a4947205d4bcfec09105223da2a6 zopeinterface-3.0.1.ebuild 821
