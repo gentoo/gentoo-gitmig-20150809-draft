@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r1.ebuild,v 1.5 2005/12/26 20:22:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r1.ebuild,v 1.6 2006/02/07 00:30:14 mr_bones_ Exp $
 
 # 3dfx support (glide) is disabled because it requires
 # glide-v2 while we only provide glide-v3 in portage
@@ -15,15 +15,24 @@ SRC_URI="http://www.lysator.liu.se/snes9x/${PV}/snes9x-${PV}-src.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="opengl X joystick zlib dga debug"
+IUSE="opengl joystick zlib dga debug"
 
-RDEPEND="zlib? ( sys-libs/zlib )
-	virtual/x11
+RDEPEND="|| ( ( x11-libs/libXext
+				dga? ( x11-libs/libXxf86dga
+					   x11-libs/libXxf86vm ) )
+			  virtual/x11 )
 	media-libs/libpng
 	amd64? ( emul-linux-x86-xlibs )
-	opengl? ( virtual/opengl virtual/glu )"
+	opengl? (
+		virtual/opengl
+		virtual/glu )"
 DEPEND="${RDEPEND}
-	x86? ( dev-lang/nasm )"
+	x86? ( dev-lang/nasm )
+	|| ( ( x11-proto/xextproto
+		   x11-proto/xproto
+		   dga? ( x11-proto/xf86dgaproto
+		   		  x11-proto/xf86vidmodeproto ) )
+		 virtual/x11 )"
 
 S=${WORKDIR}/${P}-src
 
@@ -43,12 +52,13 @@ src_unpack() {
 		"${FILESDIR}"/nojoy.patch \
 		"${FILESDIR}"/${P}-porting.patch \
 		"${FILESDIR}"/${P}-key-bindings-fix.patch \
-		"${FILESDIR}"/${P}-build.patch
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-config.patch
 
 	sed -i \
 		-e 's:png_jmpbuf:png_write_info:g' \
 		-e '/X_LDFLAGS=/d' \
-		configure || die "sed failed"
+		configure.in || die "sed failed"
 
 	autoconf || die
 }
@@ -58,8 +68,10 @@ src_compile() {
 	local target=
 	local vid=
 
+	append-ldflags -Wl,-z,noexecstack
+
 	mkdir mybins
-	for vid in opengl X fallback ; do
+	for vid in opengl fallback ; do
 		if [[ ${vid} != "fallback" ]] ; then
 			use ${vid} || continue
 		fi
@@ -71,7 +83,7 @@ src_compile() {
 			opengl)
 				vidconf="--with-opengl --without-glide --without-x"
 				target=osnes9x;;
-			fallback|X)
+			fallback)
 				vidconf="--with-x --without-glide --without-opengl"
 				target=snes9x;;
 		esac
