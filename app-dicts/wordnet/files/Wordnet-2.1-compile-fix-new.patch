@@ -4,7 +4,7 @@
  #include <tk.h>
  #include <wn.h>
  
--static Id = "$Id: Wordnet-2.1-compile-fix.patch,v 1.2 2006/02/06 16:46:11 arj Exp $";
+-static Id = "$Id: stubs.c,v 1.7 2005/04/29 19:01:57 wn Exp $";
 -
  static char resultbuf[SEARCHBUF];
  

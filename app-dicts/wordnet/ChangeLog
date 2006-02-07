@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/wordnet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/ChangeLog,v 1.8 2006/02/06 16:46:11 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/ChangeLog,v 1.9 2006/02/07 22:45:19 arj Exp $
+
+  07 Feb 2006; Anders Rune Jensen <arj@gentoo.org> wordnet-2.1.ebuild:
+  Second try at #121778. Bite my shiny metal ass cvs!
 
   06 Feb 2006; Anders Rune Jensen <arj@gentoo.org> wordnet-2.1.ebuild:
   Wrong patch. Fix #121778
