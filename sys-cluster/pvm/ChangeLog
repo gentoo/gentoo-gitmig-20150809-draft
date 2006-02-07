@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/pvm
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.27 2005/12/24 15:42:20 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.28 2006/02/07 02:32:55 agriffis Exp $
+
+  07 Feb 2006; Aron Griffis <agriffis@gentoo.org> pvm-3.4.5-r2.ebuild:
+  Mark 3.4.5-r2 stable on ia64
 
   24 Dec 2005; Michael Hanselmann <hansmi@gentoo.org> pvm-3.4.5-r2.ebuild:
   Stable on ppc.
