@@ -1,25 +1,45 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eff470b482357b9e8809063fa1935a17 ChangeLog 4912
+MD5 6f4647019f03f121aca2619c6abc19aa ChangeLog 4998
+RMD160 98ca74caf176c395c32c070cb65ed7062588d436 ChangeLog 4998
+SHA256 cb4e06d29d0cc3bdc65325d501358f4ff52efb3a5dd7eed970f99c4876719c32 ChangeLog 4998
 MD5 352d39fb5ee53bdb9ea901579c0d7b9d files/digest-tvtime-0.9.12 66
+RMD160 5d68165f6ccc4d96d2833c15c3d971b19f59c976 files/digest-tvtime-0.9.12 66
+SHA256 7deb6a15c96ac6432a9ff12f276a6e7a71feaf657bf8f1dbcaceb6b1c9879825 files/digest-tvtime-0.9.12 66
 MD5 da73995bcdbdc131e5bf2864d5e3b85f files/digest-tvtime-0.9.15 66
+RMD160 7af9ea10f8bc765f0f779ee9642aa0dff0f5066c files/digest-tvtime-0.9.15 66
+SHA256 e59f87e4c66cc64aec0eaf179729e13ce600aaa7a0d0a3f032b1eb28ee2b8a03 files/digest-tvtime-0.9.15 66
 MD5 3284a56b7388007a53ad0a907bda2b40 files/digest-tvtime-0.99 64
+RMD160 5f2374bf8559bb2b16fc4f43f72b30fe9a6b9789 files/digest-tvtime-0.99 64
+SHA256 f46c4d9026812a27d62f00da3495b0962cfb6663a34f451cfe20c1cf8a3fc1a9 files/digest-tvtime-0.99 64
 MD5 41a4847d5d361629e869a31052331e3c files/digest-tvtime-1.0.1 65
+RMD160 b8a4f78c6b9921331a8e04bd86fc36f677169dbf files/digest-tvtime-1.0.1 65
+SHA256 c416872c54bc7169cbc9dc1fc03ecb7ed11e572af50aa2854a4b06977a693000 files/digest-tvtime-1.0.1 65
 MD5 f009432a1e8b29f4833a4b638823590b files/digest-tvtime-1.0.2 65
+RMD160 44a9c91d85eadc4318de6e5ef52194758ca2729e files/digest-tvtime-1.0.2 65
+SHA256 14a9dc71194924bfc22554d8806832f38f13aa26c5c59061c1b43852f6c817a6 files/digest-tvtime-1.0.2 65
 MD5 f868d4bcfd4c67150a6b209d3cddf1b6 files/tvtime-0.9.10-make.patch 4489
+RMD160 b8def69a9dd903838df2243215103cdce8801ad5 files/tvtime-0.9.10-make.patch 4489
+SHA256 50a4162ab9e1587b8d61633c6c168664da538853e6ee688bdf9b8c7e3baeb443 files/tvtime-0.9.10-make.patch 4489
 MD5 c782789825dfa664e1f6fcc96ac7246c files/tvtime-1.0.2-gcc41.patch 2114
+RMD160 9d9068c95fe551cb4d886857b4c24fcebae790a9 files/tvtime-1.0.2-gcc41.patch 2114
+SHA256 5272246501f80135ba11fdbe15e345e430bade41c552cfdef696d10396a7cdfd files/tvtime-1.0.2-gcc41.patch 2114
 MD5 ee506c523f1880bb929e7e5f25d4fe6b files/tvtime-pic.patch 248
+RMD160 504ac7c6fc047cec86da6c826fd01841594bdc76 files/tvtime-pic.patch 248
+SHA256 1419f4823d62057f2ad05533ea80196f7f9475fcdab721638c7656da5560a34e files/tvtime-pic.patch 248
 MD5 d19bb57e494a860d7ed0aaa7961d8406 metadata.xml 247
+RMD160 227cc8b2f3b561961fec2443bda9112fda44eb4c metadata.xml 247
+SHA256 75a801512f14243e73a8c0d98ea2297c0382a898f0fbacf30d7ccb2baad31e3b metadata.xml 247
 MD5 013a7785e90003c22261a994e06146ca tvtime-0.9.12.ebuild 1284
-MD5 deb5eb0bc013371074ff4be5c6a2cd56 tvtime-0.9.15.ebuild 1449
+RMD160 963c965bbc11ded33dafdf54e0fe917ea742dfe9 tvtime-0.9.12.ebuild 1284
+SHA256 4bc646053327cd2e1790f40146f23d47eb299e4ef9d0f901074ccc6d85c93105 tvtime-0.9.12.ebuild 1284
+MD5 155b8dc561adc31d93a71c69e80b9767 tvtime-0.9.15.ebuild 1447
+RMD160 85854b152217238b3810f60af8b32c437f6e0659 tvtime-0.9.15.ebuild 1447
+SHA256 b40b524c12bbb835e7da38684b6a1f6a9e9372840cdc37caf583daf8c0f4fa7a tvtime-0.9.15.ebuild 1447
 MD5 1f96f671cfee328c5d95949ef1bea237 tvtime-0.99.ebuild 1393
+RMD160 585cabea71a8afd89adccdf9399229a0158b8ea2 tvtime-0.99.ebuild 1393
+SHA256 5b78ac14737109718dfe32d18a6184eda301c59796e373891ca3232fee416de5 tvtime-0.99.ebuild 1393
 MD5 8476949ca4ef9c07c35153ea05418869 tvtime-1.0.1.ebuild 1392
+RMD160 9791b3f03d29bcc1941d33e58ff8d684cae8e313 tvtime-1.0.1.ebuild 1392
+SHA256 43c45bd94718145fd0e2e84f0719c24a3f02efb21db2ad706773ed9f6008e2b2 tvtime-1.0.1.ebuild 1392
 MD5 61f0b883016265880a71112c1cb61697 tvtime-1.0.2.ebuild 1665
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDxp3BZ/iYVBmujdURAuxSAJ9mldhz6sYWNUON+fm2DxYleYT8vQCdEBio
-YvHjWJYawRny7c8eeJTnfzc=
-=8X1z
------END PGP SIGNATURE-----
+RMD160 c7fcdf74e342bfff686877a596d8f504bcee450c tvtime-1.0.2.ebuild 1665
+SHA256 4be809782b078162cb5b4a36835a0c7f9e6d57b7d3d3d6bed37d079e45cbed36 tvtime-1.0.2.ebuild 1665
