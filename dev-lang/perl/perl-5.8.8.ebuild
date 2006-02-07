@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8_rc1.ebuild,v 1.2 2006/01/24 17:15:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8.ebuild,v 1.1 2006/02/07 15:20:50 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -12,14 +12,14 @@ MY_P="perl-${PV/_rc/-RC}"
 MY_PV="${PV%_rc*}"
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 S="${WORKDIR}/${MY_P}"
-SRC_URI="ftp://ftp.cpan.org/pub/CPAN/authors/id/N/NW/NWCLARK/${MY_P}.tar.bz2"
+SRC_URI="ftp://ftp.cpan.org/pub/CPAN/src/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.perl.org/"
 LIBPERL="libperl$(get_libname ${PERLSLOT}.${SHORT_PV})"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="berkdb debug doc gdbm ithreads perlsuid build minimal"
+IUSE="berkdb debug doc gdbm ithreads perlsuid build"
 PERL_OLDVERSEN="5.8.0 5.8.2 5.8.4 5.8.5 5.8.6 5.8.7"
 
 DEPEND="berkdb? ( sys-libs/db )
@@ -33,11 +33,33 @@ RDEPEND="~sys-devel/libperl-${PV}
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.3 )"
 
-PDEPEND="app-admin/perl-cleaner
-		>=perl-core/PodParser-1.32
-		>=perl-core/Test-Harness-2.56
-		>=perl-core/Test-Simple-0.62
-		>=perl-core/ExtUtils-MakeMaker-6.30"
+PDEPEND="app-admin/perl-cleaner"
+
+PROVIDE="virtual/perl-CGI-3.15
+		virtual/perl-DB_File-1.814
+		virtual/perl-digest-base-1.00
+		virtual/perl-Digest-MD5-2.36
+		virtual/perl-ExtUtils-MakeMaker-6.30
+		virtual/perl-File-Spec-3.15
+		virtual/perl-File-Temp-0.16
+		virtual/perl-Getopt-Long-2.35
+		virtual/perl-MIME-Base64-3.07
+		virtual/perl-Math-BigInt-1.77
+		virtual/perl-Memoize-1.01
+		virtual/perl-PodParser-1.32
+		virtual/perl-Safe-2.12
+		virtual/perl-Scalar-List-Utils-1.18
+		virtual/perl-Storable-2.15
+		virtual/perl-Sys-Syslog-0.13
+		virtual/perl-Test-1.25
+		virtual/perl-Test-Harness-2.56
+		virtual/perl-Test-Simple-0.62
+		virtual/perl-Text-Balanced-1.95
+		virtual/perl-Time-HiRes-1.86
+		virtual/perl-Time-Local-1.11
+		virtual/perl-libnet-1.19
+		virtual/perl-locale-maketext-1.09
+		virtual/perl-net-ping-2.31"
 
 pkg_setup() {
 	# I think this should rather be displayed if you *have* 'ithreads'
@@ -50,14 +72,6 @@ pkg_setup() {
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
 		epause 5
-	fi
-
-	if use minimal
-	then
-		ewarn "You have the minimal USE flag set. The resulting"
-		ewarn "perl is stripped of most of its module functionality"
-		ewarn "and is intended for minmal use case where you need"
-		ewarn "just the perl interpreter, no extras."
 	fi
 
 	if [ ! -f "${ROOT}/usr/$(get_libdir)/${LIBPERL}" ]
@@ -104,23 +118,6 @@ src_unpack() {
 	# rac 2004.06.09
 	cd ${S}; epatch ${FILESDIR}/${PN}-noksh.patch
 
-	# this one only affects sparc64, as best weeve and rac can tell,
-	# but seems sane for all linux.  we don't have to worry about
-	# drifting into obscure SysV non-posix semantics, and the current
-	# code in IO.xs that checks for this sort of thing dies in LDAP on
-	# sparc64.
-
-	#epatch ${FILESDIR}/${PN}-nonblock.patch
-
-	# since we build in non-world-writeable portage directories, none
-	# of the .t sections of the original version of this patch matter
-	# much.  the PPPort section is apparently obsolete, because i see
-	# no /tmp in there now.  ditto on perlbug.SH, which has secure
-	# tempfile handling if resources are present.  originally from bug
-	# 66360.
-
-	#epatch ${FILESDIR}/${P}-tempfiles.patch
-
 	# We do not want the build root in the linked perl module's RUNPATH, so
 	# strip paths containing PORTAGE_TMPDIR if its set.  This is for the
 	# MakeMaker module, bug #105054.
@@ -132,10 +129,12 @@ src_unpack() {
 	# temporally disable ssp on two regexp files till upstream has a 
 	# chance to work it out. Bug #97452
 	[[ -n $(test-flags -fno-stack-protector) ]] && \
-		epatch "${FILESDIR}"/${PN}-regexp-nossp.patch
+		epatch ${FILESDIR}/${PN}-regexp-nossp.patch
 
-	# Bug 114113
-	#cd ${S}; epatch ${FILESDIR}/perl-exp_intwrap.patch
+	use amd64 && cd ${S} && epatch ${FILESDIR}/${P}-lib64.patch
+
+	cd ${S}; epatch ${FILESDIR}/${P}-USE_MM_LD_RUN_PATH.patch
+	cd ${S}; epatch ${FILESDIR}/${P}-links.patch
 
 }
 
@@ -169,10 +168,10 @@ src_configure() {
 		einfo "using ithreads"
 		mythreading="-multi"
 		myconf="-Dusethreads ${myconf}"
-		myarch=$(get_abi_CHOST)
+		myarch=${CHOST}
 		myarch="${myarch%%-*}-${osname}-thread"
 	else
-		myarch=$(get_abi_CHOST)
+		myarch=${CHOST}
 		myarch="${myarch%%-*}-${osname}"
 	fi
 
@@ -216,6 +215,7 @@ src_configure() {
 	if use debug
 	then
 		CFLAGS="${CFLAGS} -g"
+		myconf="${myconf} -DDEBUGGING"
 	fi
 
 	if use sparc
@@ -231,11 +231,10 @@ src_configure() {
 
 	[ -n "${ABI}" ] && myconf="${myconf} -Dusrinc=$(get_ml_incdir)"
 
-	[[ ${ELIBC} == "FreeBSD" ]] && myconf="${myconf} -Dlibc=/usr/lib/libc.a"
+	[[ ${ELIBC} == "FreeBSD" ]] && myconf="${myconf} -Dlibc=/usr/$(get_libdir)/libc.a"
 
 	if [[ $(get_libdir) != "lib" ]] ; then
-		myconf="${myconf} -Dlibpth='/usr/local/$(get_libdir) /$(get_libdir) \
-		/usr/$(get_libdir)'"
+		myconf="${myconf} -Dlibpth='/usr/local/$(get_libdir) /$(get_libdir) /usr/$(get_libdir)'"
 	fi
 
 	sh Configure -des \
@@ -284,17 +283,17 @@ src_install() {
 
 	# Need to do this, else apps do not link to dynamic version of
 	# the library ...
-	local coredir="/usr/lib/perl5/${MY_PV}/${myarch}${mythreading}/CORE"
+	local coredir="/usr/$(get_libdir)/perl5/${MY_PV}/${myarch}${mythreading}/CORE"
 	dodir ${coredir}
 	dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/${LIBPERL}
 	dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname ${PERLSLOT})
 	dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname)
 
 	# Fix for "stupid" modules and programs
-	dodir /usr/lib/perl5/site_perl/${MY_PV}/${myarch}${mythreading}
+	dodir /usr/$(get_libdir)/perl5/site_perl/${MY_PV}/${myarch}${mythreading}
 
 	local installtarget=install
-	if use minimal || use build ; then
+	if use build ; then
 		installtarget=install.perl
 	fi
 	make DESTDIR="${D}" ${installtarget} || die "Unable to make ${installtarget}"
@@ -307,7 +306,7 @@ src_install() {
 
 
 	LD_LIBRARY_PATH=. ./perl -Ilib utils/h2ph_patched \
-		-a -d ${D}/usr/lib/perl5/${MY_PV}/${myarch}${mythreading} <<EOF
+		-a -d ${D}/usr/$(get_libdir)/perl5/${MY_PV}/${myarch}${mythreading} <<EOF
 asm/termios.h
 syscall.h
 syslimits.h
@@ -319,7 +318,7 @@ wait.h
 EOF
 
 	# This is to fix a missing c flag for backwards compat
-	for i in `find ${D}/usr/lib/perl5 -iname "Config.pm"`;do
+	for i in `find ${D}/usr/$(get_libdir)/perl5 -iname "Config.pm"`;do
 		sed -e "s:ccflags=':ccflags='-DPERL5 :" \
 		    -e "s:cppflags=':cppflags='-DPERL5 :" \
 			${i} > ${i}.new &&\
@@ -327,8 +326,8 @@ EOF
 	done
 
 	# A poor fix for the miniperl issues
-	dosed 's:./miniperl:/usr/bin/perl:' /usr/lib/perl5/${MY_PV}/ExtUtils/xsubpp
-	fperms 0444 /usr/lib/perl5/${MY_PV}/ExtUtils/xsubpp
+	dosed 's:./miniperl:/usr/bin/perl:' /usr/$(get_libdir)/perl5/${MY_PV}/ExtUtils/xsubpp
+	fperms 0444 /usr/$(get_libdir)/perl5/${MY_PV}/ExtUtils/xsubpp
 	dosed 's:./miniperl:/usr/bin/perl:' /usr/bin/xsubpp
 	fperms 0755 /usr/bin/xsubpp
 
@@ -373,7 +372,7 @@ EOF
 	rm -f ${D}/usr/share/man/man1/podselect*
 	rm -f ${D}/usr/share/man/man1/prove*
 	rm -f ${D}/usr/share/man/man1/instmodsh*
-	if use minimal || use build ; then
+	if use build ; then
 		src_remove_extra_files
 	fi
 
@@ -553,14 +552,6 @@ src_remove_extra_files()
 	${prV}/warnings.pm
 	${prV}/warnings/register.pm"
 
-	# Catch the headers in CORE
-	if use minimal ; then
-		for header in `find ${D}${prVA} -name "*.h"|sed -e "s:${D}::g"`; do
-			#header=`echo $head|sed -e "s:${D}::g"`
-			MINIMAL_PERL_INSTALL="${MINIMAL_PERL_INSTALL}
-			$header"
-		done
-	fi
 
 	if use perlsuid ; then
 		MINIMAL_PERL_INSTALL="${MINIMAL_PERL_INSTALL}
