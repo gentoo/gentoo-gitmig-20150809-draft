@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.82 2006/02/02 22:45:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.83 2006/02/07 01:44:00 vapier Exp $
+
+*man-1.6c (07 Feb 2006)
+
+  07 Feb 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/man-1.6c-cut-duplicate-manpaths.patch,
+  +files/man-1.6c-makewhatis-typo.patch, +man-1.6c.ebuild:
+  Version bump and fix duplicate man issue #90186 by Stuart W. Finlayson.
 
   02 Feb 2006; Mike Frysinger <vapier@gentoo.org> man-1.5p.ebuild,
   man-1.6-r1.ebuild, man-1.6a.ebuild, man-1.6b-r2.ebuild:
