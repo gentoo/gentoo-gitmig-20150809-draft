@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.5.ebuild,v 1.8 2005/04/25 06:04:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.5.ebuild,v 1.9 2006/02/07 02:02:53 tester Exp $
 
 inherit gnome2
 
@@ -23,7 +23,8 @@ DEPEND=">=x11-libs/gtk+-2.2.0
 	>=dev-util/intltool-0.22
 	>=gnome-base/gconf-2.0
 	sys-devel/gettext
-	spell? ( >=app-text/gtkspell-2.0.4 )"
+	spell? ( >=app-text/gtkspell-2.0.4 )
+	|| ( x11-libs/libXScrnSaver virtual/x11 )"
 
 IUSE="spell"
 
@@ -33,7 +34,7 @@ src_unpack () {
 }
 
 src_configure() {
-	G2CONF=`use_enable spell`
+	G2CONF=$(use_enable spell)
 	gnome2_src_compile
 }
 
