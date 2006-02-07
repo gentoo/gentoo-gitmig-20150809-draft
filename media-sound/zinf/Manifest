@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1e9cac7d2e9f732224bcd969a4e781ae ChangeLog 5761
+MD5 b396ea58b856c0f1a731dfd4e3c6be3a ChangeLog 5851
+RMD160 7d0477c6a8050950ba0b28c513555d514a13ae0d ChangeLog 5851
+SHA256 b4c3ed8276bcd4cf72d7b806ad6148cf2d9f0dfe93c953840cb3440aed750405 ChangeLog 5851
 MD5 e4ec1ffc5f5099848c9d55df07d85d5a files/digest-zinf-2.2.5-r1 63
+RMD160 858776592f8e4bfacd2e59287cedfe11025d4b0c files/digest-zinf-2.2.5-r1 63
+SHA256 35aed2b16b700f595476724ecb09a5db1a03c92d87e6d79246a27479168b4747 files/digest-zinf-2.2.5-r1 63
 MD5 e4ec1ffc5f5099848c9d55df07d85d5a files/digest-zinf-2.2.5-r2 63
+RMD160 858776592f8e4bfacd2e59287cedfe11025d4b0c files/digest-zinf-2.2.5-r2 63
+SHA256 35aed2b16b700f595476724ecb09a5db1a03c92d87e6d79246a27479168b4747 files/digest-zinf-2.2.5-r2 63
 MD5 e4ec1ffc5f5099848c9d55df07d85d5a files/digest-zinf-2.2.5-r3 63
+RMD160 858776592f8e4bfacd2e59287cedfe11025d4b0c files/digest-zinf-2.2.5-r3 63
+SHA256 35aed2b16b700f595476724ecb09a5db1a03c92d87e6d79246a27479168b4747 files/digest-zinf-2.2.5-r3 63
 MD5 5f73b5d7a0fb9346d25c7f59e71509b8 files/zinf-2.2.5-cdplay.patch 1042
+RMD160 3ccfa72edee40f55b95bb8888e6098e45d5f9c13 files/zinf-2.2.5-cdplay.patch 1042
+SHA256 8165c645058e0891d4506d3e3c15cfd384d6bc1133b5a1355cd0a65699150941 files/zinf-2.2.5-cdplay.patch 1042
 MD5 ab18405737d54fde371a5e1ceb8dc3e7 files/zinf-2.2.5-configure.patch 3782
+RMD160 47cff32eea0e0c74e9bde26bc0488f4f69749cc9 files/zinf-2.2.5-configure.patch 3782
+SHA256 0b99ebdb8f4aef4f5c52eeda41a51ec0a8b006009d5c3603c0b7f84eeb48f096 files/zinf-2.2.5-configure.patch 3782
 MD5 f759a0b5765809ee26d70a83f6c6185b files/zinf-2.2.5-rtp.patch 582
+RMD160 1ea3beb4c513494b26f765a261088aa2d4e24b17 files/zinf-2.2.5-rtp.patch 582
+SHA256 bdc567feb0a78f241d7d69f5a547b2a8aa80c143298ef08f7f073c3ea50c5658 files/zinf-2.2.5-rtp.patch 582
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 MD5 15c4260b39deda579a3563c58aae5f36 zinf-2.2.5-r1.ebuild 2301
-MD5 f70ce7442417fa0d2b36c6f4a655b77e zinf-2.2.5-r2.ebuild 2098
+RMD160 d00e251e0d174ad555ef5072c169d1c944ce1947 zinf-2.2.5-r1.ebuild 2301
+SHA256 ec74bc228c8452c65131c681fba8cd0ac2a467582d787efa22e4ee7684ad4a27 zinf-2.2.5-r1.ebuild 2301
+MD5 c0ce26878fafb7d398bb1a3516f14bba zinf-2.2.5-r2.ebuild 2092
+RMD160 28ec2dfdafd7002c6bcdfaffbfc6165e8f504615 zinf-2.2.5-r2.ebuild 2092
+SHA256 94dbfd167b9e1398892afb5b5b83916fa5c9da9e3b5e0c474ff1ee36bc2b1084 zinf-2.2.5-r2.ebuild 2092
 MD5 aef6bc181743eb36e80d1bba81ce8769 zinf-2.2.5-r3.ebuild 2267
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD2rAHQlM6RnzZP+IRApRBAKCvrkVZWPFGLpRynlxmyxwIBtR2FACeNBM0
-DYOJfiDq6lbcmOy0vBbG7sE=
-=b4hX
------END PGP SIGNATURE-----
+RMD160 b983a2856921e10d8d92ca1f50ff2471c719556a zinf-2.2.5-r3.ebuild 2267
+SHA256 683a7e2a062aae6fe961b8d2f0718cfa1f7b327de6449fd8ad357e8a2f8eb522 zinf-2.2.5-r3.ebuild 2267
