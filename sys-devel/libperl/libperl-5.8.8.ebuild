@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8.ebuild,v 1.3 2006/02/07 21:45:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8.ebuild,v 1.4 2006/02/07 23:43:37 agriffis Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -138,7 +138,13 @@ src_unpack() {
 	use amd64 && cd ${S} && epatch ${FILESDIR}/${P}-lib64.patch
 }
 
+myconf() {
+	myconf=( "${myconf[@]}" "$@" )
+}
+
 src_compile() {
+	declare -a myconf
+
 	# Perl has problems compiling with -Os in your flags
 	# some arches and -O do not mix :)
 	use arm && replace-flags -O? -O1
@@ -152,7 +158,6 @@ src_compile() {
 	use ppc && filter-flags -mpowerpc-gpopt
 
 	export LC_ALL="C"
-	local myconf=""
 
 	case ${CHOST} in
 		*-freebsd*) osname="freebsd" ;;
@@ -167,7 +172,7 @@ src_compile() {
 	then
 		einfo "using ithreads"
 		mythreading="-multi"
-		myconf="-Dusethreads ${myconf}"
+		myconf -Dusethreads
 		myarch=${CHOST}
 		myarch="${myarch%%-*}-${osname}-thread"
 	else
@@ -194,65 +199,62 @@ src_compile() {
 		has_version '=sys-libs/db-1*' && myndbm='D'
 	fi
 
-	myconf="${myconf} -${myndbm}i_ndbm -${mygdbm}i_gdbm -${mydb}i_db"
+	myconf "-${myndbm}i_ndbm" "-${mygdbm}i_gdbm" "-${mydb}i_db"
 
 	if use mips
 	then
 		# this is needed because gcc 3.3-compiled kernels will hang
 		# the machine trying to run this test - check with `Kumba
 		# <rac@gentoo.org> 2003.06.26
-		myconf="${myconf} -Dd_u32align"
+		myconf -Dd_u32align
 	fi
 
 	if use debug
 	then
 		CFLAGS="${CFLAGS} -g"
-		myconf="${myconf} -DDEBUGGING"
+		myconf -DDEBUGGING
 	fi
 
 	if use sparc
 	then
-		myconf="${myconf} -Ud_longdbl"
+		myconf -Ud_longdbl
 	fi
 
 	if use alpha && "$(tc-getCC)" == "ccc"
 	then
 		ewarn "Perl will not be built with berkdb support, use gcc if you needed it..."
-		myconf="${myconf} -Ui_db -Ui_ndbm"
+		myconf -Ui_db -Ui_ndbm
 	fi
 
 	rm -f config.sh Policy.sh
 
-	[ -n "${ABI}" ] && myconf="${myconf} -Dusrinc=\"$(get_ml_incdir)\""
+	[[ -n "${ABI}" ]] && myconf "-Dusrinc=$(get_ml_incdir)"
 
-	[[ ${ELIBC} == "FreeBSD" ]] && myconf="${myconf} -Dlibc=\"/usr/$(get_libdir)/libc.a\""
+	[[ ${ELIBC} == "FreeBSD" ]] && myconf "-Dlibc=/usr/$(get_libdir)/libc.a"
 
 	if [[ $(get_libdir) != "lib" ]] ; then
-		myconf="${myconf} -Dlibpth=\"/usr/local/$(get_libdir) /$(get_libdir) /usr/$(get_libdir)\""
+		myconf "-Dlibpth=/usr/local/$(get_libdir) /$(get_libdir) /usr/$(get_libdir)"
 	fi
 
-	# We have to eval below, else above -Dlibpth is not seen by perl as one
-	# argument ...
-	eval $(echo \
 	sh Configure -des \
-		-Darchname=\"${myarch}\" \
-		-Dcccdlflags=\"-fPIC\" \
-		-Dccdlflags=\"-rdynamic\" \
-		-Dcc=\"$(tc-getCC)\" \
-		-Dprefix=\"/usr\" \
-		-Dvendorprefix=\"/usr\" \
-		-Dsiteprefix=\"/usr\" \
-		-Dlocincpth=\" \" \
-		-Doptimize=\"${CFLAGS}\" \
+		-Darchname="${myarch}" \
+		-Dcccdlflags="-fPIC" \
+		-Dccdlflags="-rdynamic" \
+		-Dcc="$(tc-getCC)" \
+		-Dprefix="/usr" \
+		-Dvendorprefix="/usr" \
+		-Dsiteprefix="/usr" \
+		-Dlocincpth=" " \
+		-Doptimize="${CFLAGS}" \
 		-Duselargefiles \
 		-Duseshrplib \
-		-Dman3ext=\"3pm\" \
-		-Dlibperl=\"${LIBPERL}\" \
+		-Dman3ext="3pm" \
+		-Dlibperl="${LIBPERL}" \
 		-Dd_dosuid \
 		-Dd_semctl_semun \
-		-Dcf_by=\"Gentoo\" \
+		-Dcf_by="Gentoo" \
 		-Ud_csh \
-		${myconf}) || die "Unable to configure"
+		"${myconf[@]}" || die "Unable to configure"
 
 	emake -j1 -f Makefile depend || die "Couldn't make libperl$(get_libname) depends"
 	emake -j1 -f Makefile LIBPERL=${LIBPERL} ${LIBPERL} || die "Unable to make libperl$(get_libname)"
