@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.67 2006/01/23 14:12:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.68 2006/02/07 14:04:40 liquidx Exp $
+
+*bluez-utils-2.25 (07 Feb 2006)
+
+  07 Feb 2006; Alastair Tse <liquidx@gentoo.org>
+  +files/bluez-utils-2.25-init.d, +bluez-utils-2.25.ebuild:
+  version bump. added comment about net-dialup/ppp needed for dund. made
+  bluetooth run after dbus has started to take advantage of dbus if available.
+  (#118786) (#120759)
 
   23 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   bluez-utils-2.22-r1.ebuild:
