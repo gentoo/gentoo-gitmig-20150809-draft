@@ -1,9 +1,12 @@
-MD5 cf176ff0b0c9dc2b2eb40c53b1a06d01 ChangeLog 26179
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7b118858cfa889ee1e5a0e0adbf1ad6a ChangeLog 26280
 MD5 b36369fdd08721cbc99d9fd94fc36f8b arts-1.3.2-r1.ebuild 2639
 MD5 2a34bacb418d79b24ba8824d8b5ead47 arts-1.3.2.ebuild 2764
 MD5 9780af748959ac2da43677dd72a313f0 arts-3.4.1-r2.ebuild 2854
 MD5 db0f7cdd6d695cdf6af189655f4758d5 arts-3.4.2.ebuild 2941
-MD5 07cea7ec7b7786f9bbb715938635727a arts-3.4.3.ebuild 2935
+MD5 067e5740da7dcab0ff59aea9337f6acb arts-3.4.3.ebuild 2936
 MD5 ab8a402f0092cf032f48467c9f048694 arts-3.5.0-r1.ebuild 3160
 MD5 41a8e0e4cf1ed3ace696ea20835eef69 arts-3.5.0.ebuild 3044
 MD5 6be33373c8a2bed167f9083fbccd807d arts-3.5.1.ebuild 3150
@@ -24,3 +27,10 @@ MD5 0a8674e9c6e95640520c60bbae2156b7 files/digest-arts-3.5.0 63
 MD5 0a8674e9c6e95640520c60bbae2156b7 files/digest-arts-3.5.0-r1 63
 MD5 116e431c51f0ba17614cf36e7cb1c579 files/digest-arts-3.5.1 63
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD6NgvJrHF4yAQTrARAo2XAJ9++KYFrFkuCelScn5UtTPIVyx0DACeIRRy
+ItaJ10ufp7084E4Nt4ZXTLA=
+=eKCf
+-----END PGP SIGNATURE-----
