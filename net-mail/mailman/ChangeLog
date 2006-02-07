@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.65 2006/01/03 23:02:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.66 2006/02/07 13:01:22 blubb Exp $
+
+  07 Feb 2006; Simon Stelling <blubb@gentoo.org> mailman-2.1.6.ebuild:
+  stable on amd64 wrt bug 119313
 
 *mailman-2.1.7 (03 Jan 2006)
 
