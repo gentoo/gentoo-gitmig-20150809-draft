@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcoincoin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/ChangeLog,v 1.14 2006/01/24 22:49:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/ChangeLog,v 1.15 2006/02/07 21:13:29 blubb Exp $
+
+  07 Feb 2006; Simon Stelling <blubb@gentoo.org> wmcoincoin-2.5.0g.ebuild:
+  stable on amd64
 
   24 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   wmcoincoin-2.5.0g.ebuild:
