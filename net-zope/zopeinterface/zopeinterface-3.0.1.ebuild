@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/zopeinterface-3.0.1.ebuild,v 1.12 2006/01/31 20:41:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/zopeinterface-3.0.1.ebuild,v 1.13 2006/02/07 03:36:56 agriffis Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.zope.org/Products/${MY_PN}/${PV}final/${MY_PN}-${PV}.tgz"
 
 LICENSE="ZPL"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sh ~sparc x86"
+KEYWORDS="alpha ~amd64 ~ia64 ~ppc ~sh ~sparc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/python-2.3"
