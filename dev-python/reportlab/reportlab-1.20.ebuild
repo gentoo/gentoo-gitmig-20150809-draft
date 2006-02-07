@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-1.20.ebuild,v 1.10 2006/02/01 00:37:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-1.20.ebuild,v 1.11 2006/02/07 20:40:38 blubb Exp $
 
 #goofy tarball versioning
 vmaj=${PV%%.*}
@@ -21,7 +21,7 @@ DEPEND=">=sys-libs/zlib-0.95
 IUSE=""
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="alpha ~amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 
 src_unpack() {
 	unpack ${A} || die
