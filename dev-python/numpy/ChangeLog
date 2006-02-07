@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/numpy
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.1 2006/02/07 00:14:44 liquidx Exp $
+
+*numpy-0.9.4 (07 Feb 2006)
+
+  07 Feb 2006; Alastair Tse <liquidx@gentoo.org> +numpy-0.9.4.ebuild:
+  initial ebuild thanks to Alok Singhal (#119305)
+
