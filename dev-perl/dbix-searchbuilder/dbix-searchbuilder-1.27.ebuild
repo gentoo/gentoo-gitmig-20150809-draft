@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-1.27.ebuild,v 1.2 2005/08/26 03:19:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-1.27.ebuild,v 1.3 2006/02/07 16:51:11 mcummings Exp $
 
 inherit perl-module
 
