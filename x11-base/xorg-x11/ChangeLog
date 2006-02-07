@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.518 2006/02/07 00:08:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.519 2006/02/07 03:42:12 joshuabaergen Exp $
+
+  07 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-x11-7.0-r1.ebuild:
+  Add dependency on font-adobe-100dpi per bug #121505 (Garrett Cooper).
 
   07 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-7.0-r1.ebuild:
