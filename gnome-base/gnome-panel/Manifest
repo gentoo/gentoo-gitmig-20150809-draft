@@ -1,6 +1,9 @@
-MD5 e1cdff371f21fa8479ed454678b6b1fd ChangeLog 21335
-RMD160 278961c67cb34d272da39bdf9a224c531c77b675 ChangeLog 21335
-SHA256 9bd63f7b4bca503535a9b6e1a52a5862e475e8001b14011f66c82bd8e534caad ChangeLog 21335
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e56daf2b5bd54001945cb9a1564425a5 ChangeLog 21443
+RMD160 cd1cab73a2ccdfcc9dd769368493a82e2468ee28 ChangeLog 21443
+SHA256 552899898cfc7886c3ee736ce982ab0db9a0376a2a3349653387b83e5880dac6 ChangeLog 21443
 MD5 fae3355b5d711fc7eb4d3e3428a6b2ae files/digest-gnome-panel-1.4.1 70
 RMD160 59c0e81b00d40c41a069cadd0f99bd7c3c0780e4 files/digest-gnome-panel-1.4.1 70
 SHA256 b16471320e1d63c900629fae0001dd82403bfec5afbc097d593dfb15bb21336b files/digest-gnome-panel-1.4.1 70
@@ -16,9 +19,9 @@ SHA256 05c99c9e8f9d6bff2f6e64945b295b80dc98391f74f667117cfe3dd0ea29f2af files/di
 MD5 b5a5789da6572a0201fa063c86f6fb25 files/digest-gnome-panel-2.12.1 72
 RMD160 50243a96ee187fac583bff87796f4b89834b5835 files/digest-gnome-panel-2.12.1 72
 SHA256 c7cbe5a104d935d1d3525365fcff1c03a0488db3831d2120fe968cbad603d5b0 files/digest-gnome-panel-2.12.1 72
-MD5 5dc1232e7f2c5ddcbd76085344cbdee2 files/digest-gnome-panel-2.12.2 72
-RMD160 59e3ab05c1b656dcf9bea6eed5d7542465070824 files/digest-gnome-panel-2.12.2 72
-SHA256 ba4ee06b564ceffb50e301321906d16d5120c09de916a069c97da28b4e75e48b files/digest-gnome-panel-2.12.2 72
+MD5 79d78d88f190e504f8b68fe7cf73e0f8 files/digest-gnome-panel-2.12.2 262
+RMD160 7c38cb50cba9da2cbc3a15199b89d5a884aa6c22 files/digest-gnome-panel-2.12.2 262
+SHA256 726c4b62d0d7d44d14b86d5b4c4be4483fcffa5482b0cad067598d846c4bc85b files/digest-gnome-panel-2.12.2 262
 MD5 d0f8910762b035f67665ecd143604d9a files/digest-gnome-panel-2.12.3 262
 RMD160 31e05fa0774fd02261f87b2326a5273d8679c5dd files/digest-gnome-panel-2.12.3 262
 SHA256 6b9af59537dd66d17fc49b08020fc4e874c0254900d248a9ef2f9506ec4f2a1b files/digest-gnome-panel-2.12.3 262
@@ -40,9 +43,9 @@ SHA256 ddbdfc4b314a4f8b106c09bd7918e3ffc8be4a394b3d91611daa8180bbcf74a8 gnome-pa
 MD5 eef80d8d68dd53f02ee262d49eae1455 gnome-panel-2.12.1.ebuild 1802
 RMD160 040f22d2371aa36c7ca4515daa2c5dcd4b5e06c5 gnome-panel-2.12.1.ebuild 1802
 SHA256 d2d437071c7fef08baa95571889e908369df7eb7c9ed6bfdf16431dedcf8bc85 gnome-panel-2.12.1.ebuild 1802
-MD5 85d9c8b03e71b425e2038dfe0c073e4c gnome-panel-2.12.2.ebuild 1982
-RMD160 34bd43e5fb268277aa5f4283b4ff2368a6055f19 gnome-panel-2.12.2.ebuild 1982
-SHA256 106dc43de8c0bf9f35ef904bb4a3c37efa8b8e29b1435c6c7630539418e42f04 gnome-panel-2.12.2.ebuild 1982
+MD5 6bfacd9b93785f17744587267617bacc gnome-panel-2.12.2.ebuild 1982
+RMD160 b534496f7038f8e3caf4ea86d50aa6169abedcf5 gnome-panel-2.12.2.ebuild 1982
+SHA256 ba335789178a09fbd1a3ecc4a36d7324dd1ea7eaf8913ca8c29cc191e0cce658 gnome-panel-2.12.2.ebuild 1982
 MD5 9fa4dc5d60e02592ac9cef0f3cd12a8c gnome-panel-2.12.3.ebuild 1989
 RMD160 4c3e50fa8f7c10625d67fc3c932e1bdda49f3ae1 gnome-panel-2.12.3.ebuild 1989
 SHA256 a6abbe2687448dbd8a4b6e44e269325cf97fe33a1bd70f68c5643c97bacfcb33 gnome-panel-2.12.3.ebuild 1989
@@ -52,3 +55,10 @@ SHA256 239ac6d09ee6c7cc9c23c0323b31efc710e712d9be64e94d48e8b9cdf90dedc5 gnome-pa
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6M7fJrHF4yAQTrARAidCAJ9BDyod1mWx5qH+iF1uA8kyBw8awACeJ2+q
+JzQ1kkZksXjl0iToAXgtJCE=
+=L8Tf
+-----END PGP SIGNATURE-----
