@@ -1,10 +1,40 @@
-MD5 90b4da0de98e8c934ddf10e72c779885 ChangeLog 4030
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fca9d69918db8bd84c3e17d8ca783927 ChangeLog 4145
+RMD160 b6b397532143ffc5b19a49e0869d82f71f21849c ChangeLog 4145
+SHA256 09cd9a44502e73b57c4928d9ec265b23e83d7217b45a6b034694be71f06f64df ChangeLog 4145
 MD5 520aa98920f74208cbcfb7c97e967060 files/digest-latex-beamer-3.00-r1 70
+RMD160 421698cf56664968caa627981ede2d52cd9f115d files/digest-latex-beamer-3.00-r1 70
+SHA256 c0c0d4626c791c290f8b5d9d54767bcbf84c082361d219b5192239aa3b810237 files/digest-latex-beamer-3.00-r1 70
 MD5 16db71a0634da368bf9c627c22fd8311 files/digest-latex-beamer-3.01-r1 70
+RMD160 de28f7a3525ac56be2a63b530d9d92b211172534 files/digest-latex-beamer-3.01-r1 70
+SHA256 ca04667e39eec353f6171fd5456dc340d684c75aafd0e8ae6ada2a3cd5fc9e46 files/digest-latex-beamer-3.01-r1 70
 MD5 77c06380c47b0dc623276585e789c629 files/digest-latex-beamer-3.06 70
+RMD160 ec5ccaf01d855ba207563cc75a88b857583c083c files/digest-latex-beamer-3.06 70
+SHA256 4785c76e5d2df94839c29a6fa0aa7fa89f70000d76abb95e0ff46d59148178c9 files/digest-latex-beamer-3.06 70
 MD5 77c06380c47b0dc623276585e789c629 files/digest-latex-beamer-3.06-r1 70
-MD5 2c8491375ace8dac85da47e939fcd026 latex-beamer-3.00-r1.ebuild 1149
+RMD160 ec5ccaf01d855ba207563cc75a88b857583c083c files/digest-latex-beamer-3.06-r1 70
+SHA256 4785c76e5d2df94839c29a6fa0aa7fa89f70000d76abb95e0ff46d59148178c9 files/digest-latex-beamer-3.06-r1 70
+MD5 3fe851acf5fd49f667aba3bcdf80a485 latex-beamer-3.00-r1.ebuild 1146
+RMD160 aa1e8460b98cd0a2fc2cb1da97b766208e28b33c latex-beamer-3.00-r1.ebuild 1146
+SHA256 83d0fca2965cb3e270ca1c5dbd9a3773f13bc48c890f99c01a68c47d7e10a0ac latex-beamer-3.00-r1.ebuild 1146
 MD5 841a2246cc5d95049cb72302f0f26caf latex-beamer-3.01-r1.ebuild 1161
+RMD160 dc85ae4ca7bb8eac1b2d12f4a06ade4b8d4849ce latex-beamer-3.01-r1.ebuild 1161
+SHA256 baab9bb7f004ea178c7641af376c820849ca774d6546b833e52bffe615083534 latex-beamer-3.01-r1.ebuild 1161
 MD5 9440a251068c157f3077a56effd0cdeb latex-beamer-3.06-r1.ebuild 1396
+RMD160 0db4fd7566dfbbc74762f7614a425186a096e135 latex-beamer-3.06-r1.ebuild 1396
+SHA256 0352772638e357a95eed2e399057a0ad89adf55ff755965c65315c8dd05efccb latex-beamer-3.06-r1.ebuild 1396
 MD5 feef14bac33f9e0c4b699fe0aed22b03 latex-beamer-3.06.ebuild 1244
+RMD160 451547a08f7f03595919415e896b848964b7c77b latex-beamer-3.06.ebuild 1244
+SHA256 9f120dec00368067698cb613875a657b0c77ed7c8bda858571aee63f44649711 latex-beamer-3.06.ebuild 1244
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
+SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6MwhJrHF4yAQTrARAvXBAJ9CuA2ylBsSzXUz1yD3fMY9tTsDewCeLZcp
+TU5LBO2InKeQhT7XO3dkV/o=
+=RTam
+-----END PGP SIGNATURE-----
