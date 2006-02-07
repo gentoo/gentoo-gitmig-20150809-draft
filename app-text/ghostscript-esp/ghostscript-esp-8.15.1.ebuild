@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.8 2006/02/07 17:49:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.9 2006/02/07 21:09:06 blubb Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -54,6 +54,7 @@ src_unpack() {
 	epatch ${FILESDIR}/ghostscript-noopt.patch
 	epatch ${FILESDIR}/ghostscript-use-external-freetype.patch
 	epatch ${FILESDIR}/ghostscript-split-font-configuration.patch
+	epatch ${FILESDIR}/${P}-fPIC.patch
 
 	# not submitted
 	epatch ${FILESDIR}/ijs-dirinstall.diff
@@ -79,20 +80,15 @@ src_compile() {
 	# gs -DPARANOIDSAFER out.ps
 	myconf="${myconf} --with-fontconfig --with-fontpath=/usr/share/fonts:/usr/share/fonts/ttf/zh_TW:/usr/share/fonts/ttf/zh_CN:/usr/share/fonts/arphicfonts:/usr/share/fonts/ttf/korean/baekmuk:/usr/share/fonts/baekmuk-fonts:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/kochi-substitute"
 
-	# *-dynmic breaks compiling without X, see bug 121749 but not having it
-	# breaks compiling on amd64, bug 121924
-	if use X; then
-		myconf="${myconf} --enable-dynamic"
-	elif use amd64; then
-		append-flags -fPIC
-	fi
+	# *-dynmic breaks compiling without X, see bug 121749
+	use X && myconf="${myconf} --enable-dynamic"
 
 	econf $(use_with X x) \
 		$(use_enable cups) \
 		$(use_enable threads) \
 		$(use_with xml omni) \
 		${myconf} || die "econf failed"
-	emake -j1 || die "make failed"
+	emake -j1 DYNAMIC_CFLAGS="-fPIC" || die "make failed"
 	emake so -j1 || die "make failed"
 
 	cd ijs
