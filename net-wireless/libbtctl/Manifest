@@ -1,12 +1,24 @@
-MD5 081c4714ae82530b4d88e9f2c672e10e libbtctl-0.4.1.ebuild 1250
-MD5 804f2e4b638b0a3048f7134c2a9cc39c libbtctl-0.4.1-r1.ebuild 1134
-MD5 b6d146ee15ee1b84bb14b9564b072000 libbtctl-0.3.ebuild 875
-MD5 8fc9d184f9eed9c9a91ba03b38488fd6 ChangeLog 2996
-MD5 7a66fef4deb08f29b7cf0de1c2e3a4de metadata.xml 254
-MD5 19137e709a7c9fcedac4cc00bfd02313 libbtctl-0.5.0.ebuild 1116
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4ad5e4e3cc20fd4d8486c1e173514711 ChangeLog 3170
 MD5 6fd25ef01add3d4f6b205a586233e783 files/digest-libbtctl-0.3 64
-MD5 2f18fdc85cff32fc3b1eb5dcf7376b3a files/libbtctl-0.4.1-enable_python.patch 1292
 MD5 89c026311c1c9a92f14e59fe40698804 files/digest-libbtctl-0.4.1 66
 MD5 89c026311c1c9a92f14e59fe40698804 files/digest-libbtctl-0.4.1-r1 66
-MD5 8b20bd211db6ab172f04eb2e0a682bf8 files/libbtctl-0.4.1-libdir.patch 467
 MD5 9e76d5367d574ddb57a5e088d64dbba9 files/digest-libbtctl-0.5.0 67
+MD5 dae467de8ac583c4512f0e2d90b20a73 files/digest-libbtctl-0.6.0 67
+MD5 2f18fdc85cff32fc3b1eb5dcf7376b3a files/libbtctl-0.4.1-enable_python.patch 1292
+MD5 8b20bd211db6ab172f04eb2e0a682bf8 files/libbtctl-0.4.1-libdir.patch 467
+MD5 b6d146ee15ee1b84bb14b9564b072000 libbtctl-0.3.ebuild 875
+MD5 804f2e4b638b0a3048f7134c2a9cc39c libbtctl-0.4.1-r1.ebuild 1134
+MD5 081c4714ae82530b4d88e9f2c672e10e libbtctl-0.4.1.ebuild 1250
+MD5 750a7dc88f725c04c6b9433ba306cec2 libbtctl-0.5.0.ebuild 1115
+MD5 88bcbe1362e5fc37294ec910c1c72616 libbtctl-0.6.0.ebuild 1116
+MD5 7a66fef4deb08f29b7cf0de1c2e3a4de metadata.xml 254
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6MKG9ZFPrqoILX8RAtGkAJ41brVrPHIsAsVp1yznEQdn2tyfigCfVvUf
+OSdYKpu3rgmwbaMIYMY+bL4=
+=gpWs
+-----END PGP SIGNATURE-----
