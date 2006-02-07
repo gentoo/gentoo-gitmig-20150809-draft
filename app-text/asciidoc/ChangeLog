@@ -1,6 +1,9 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.24 2006/02/06 05:05:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.25 2006/02/07 04:31:50 agriffis Exp $
+
+  07 Feb 2006; Aron Griffis <agriffis@gentoo.org> asciidoc-7.0.1-r1.ebuild:
+  Mark 7.0.1-r1 stable on alpha
 
   06 Feb 2006; Aron Griffis <agriffis@gentoo.org> asciidoc-7.0.1-r1.ebuild:
   Mark 7.0.1-r1 stable on ia64
