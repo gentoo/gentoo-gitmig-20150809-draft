@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.0.0_pre4.ebuild,v 1.9 2005/10/19 18:38:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.0.0_pre4.ebuild,v 1.10 2006/02/07 20:42:51 dsd Exp $
 
 inherit eutils
 
@@ -20,7 +20,8 @@ IUSE="X"
 
 DEPEND=">=sys-libs/libraw1394-0.9.0
 	sys-devel/libtool
-	X? ( virtual/x11 )"
+	X? ( || ( ( x11-libs/libSM x11-libs/libXv )
+			  virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.14 2006/01/29 08:10:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.15 2006/02/07 20:42:51 dsd Exp $
+
+*libdc1394-2.0.0_pre5-r1 (07 Feb 2006)
+
+  07 Feb 2006; Daniel Drake <dsd@gentoo.org>
+  +files/libdc1394-2.0.0_pre5-update-iso_channel.patch,
+  libdc1394-2.0.0_pre4.ebuild, +libdc1394-2.0.0_pre5-r1.ebuild:
+  Fix a bug where iso_channel attribute was not updated. Also fix pre4 for
+  modular X.
 
   29 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> libdc1394-1.0.0.ebuild:
   Fix 1.0.0 for modular-x as well.
