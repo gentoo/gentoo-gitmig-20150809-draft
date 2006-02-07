@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 30dfd1e627290a019ae8f5b9ef7d6e80 ChangeLog 2964
 RMD160 b8c4168327b0518d806f3f412ff7bd6a50b992b6 ChangeLog 2964
 SHA256 5764d2e95176ae09efba06c21f551424acf0f50dd8adcc2f209af415cb3eb2cf ChangeLog 2964
@@ -16,3 +19,10 @@ SHA256 f0d19b0c67ac7e3ba0e731fa26e81ec9c5eae9d770d7dce35c043017b24baac3 xtoolwai
 MD5 c15c847c74d1d739daa38a379abfdade xtoolwait-1.3.ebuild 1092
 RMD160 4deecd09f76a38af43105b21c114f7b7d9b19a0f xtoolwait-1.3.ebuild 1092
 SHA256 c6be807795ef0a195adffc2533a88bb9de0ece90ca15bb95923ea05e45cf651d xtoolwait-1.3.ebuild 1092
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6GbfJrHF4yAQTrARArsDAKDHBEmuj3q91sv/USUlbfc/o0yMfQCfUpZ1
+BD4/8sPyjtuK2f38AaNzIa4=
+=5Tty
+-----END PGP SIGNATURE-----
