@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8e7843dc95ba0a6c4544792f00ae1b6c ChangeLog 7661
-RMD160 e940eaccce18c05a959694e68fb027263edcf4a9 ChangeLog 7661
-SHA256 14bcb14ee917e31709b65a5009eb750640476d958f59a96dd5c5ad44f197e506 ChangeLog 7661
+MD5 2f69202390101c183a79dbc87d3750aa ChangeLog 7771
+RMD160 5513bbd1efadd4cbe06de9f4c37d657897056947 ChangeLog 7771
+SHA256 4643aa7171c7c2e2273d740dd72f68d4cb4e2bec30a4c454b9bb6635f7cefdd0 ChangeLog 7771
 MD5 786a6b1c325885af1776c3b23add917a files/digest-gtksourceview-1.2.0 72
 RMD160 b9c41a6bd2de9cbb332c277701c6ab3e4e76872f files/digest-gtksourceview-1.2.0 72
 SHA256 78b58b85e6172307abc96fea8440a34551f0271fde49b193ff8ba0d896b8f3be files/digest-gtksourceview-1.2.0 72
@@ -13,16 +10,9 @@ SHA256 49f6d88f93f3fc8704f69492db9d43ccbeb247f39d188d018056aaec93ec5adc files/di
 MD5 5311d54156d920761a174b622c42ef0b gtksourceview-1.2.0.ebuild 843
 RMD160 54651748e114619653db563f8db72e33f7b87462 gtksourceview-1.2.0.ebuild 843
 SHA256 8bfa2d3bf2c62a00acff3f14ec2edb7572bbcb115447ac4898c2bd688bedfaf1 gtksourceview-1.2.0.ebuild 843
-MD5 fa1d3040da9a7d858e5ba9af6a4f6b3b gtksourceview-1.4.2.ebuild 852
-RMD160 b97f7a9050c726bf9a253b7f8114ad91170c611d gtksourceview-1.4.2.ebuild 852
-SHA256 858ba479d9b6bac7b9e7f4e9949c2a3c7cdb320bb5b7b99ff4f2acfa097e6b86 gtksourceview-1.4.2.ebuild 852
+MD5 a103a2cfed088e55ffd21e83dba527c8 gtksourceview-1.4.2.ebuild 851
+RMD160 8b499a9eda96a8bded99338455251f0ea8d3ecbf gtksourceview-1.4.2.ebuild 851
+SHA256 3e962c1a0fb4cbfc56ffb82584218dbfa84618c16b118fa6de18c143d7c666a8 gtksourceview-1.4.2.ebuild 851
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD47iPJrHF4yAQTrARAtwlAJ9ZKPAzd9z03t/RGsE1X2Q88f8hjACfcGCV
-baHuAM3yf3+z/5QoH4Q+jws=
-=wP7i
------END PGP SIGNATURE-----
