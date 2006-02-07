@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9ce8b72faeb87a01e10a57ab8c914616 ChangeLog 12289
-RMD160 2f64dd32bc739a9aacd80ca13a669b24ab1e97e0 ChangeLog 12289
-SHA256 030e2b0bc5bd87f6bb81edc9743d8e6cefc629fa9f6746fdb3f271446b2d6fc1 ChangeLog 12289
+MD5 739ffbc3ac202d602cce3b7d6816b9bb ChangeLog 12546
+RMD160 337a889884c06e7675885dc926cc1bd41698ab77 ChangeLog 12546
+SHA256 b3300132ea8b52c47ce370c38c979808e967c5222c214923849435d943725117 ChangeLog 12546
 MD5 6d6e219c5e8357b2d60e92e0ac88d76b files/digest-man-1.5p 60
 RMD160 a6732a1f966784ddae97654302e7de5130483140 files/digest-man-1.5p 60
 SHA256 dd6953a379357e40e2f6b53d0bda994eeaaaab28741a7dcd8b789037af2e4f3c files/digest-man-1.5p 60
@@ -16,6 +13,9 @@ SHA256 29907fa0d9788c820355c88b9163076600992e3918e5628fd91cc0b46b2bd78c files/di
 MD5 bf0f39bbc9dbe51b036a060f0bcc5094 files/digest-man-1.6b-r2 60
 RMD160 a690bf4ceea5acff94c17ce814c5c529b2c0656d files/digest-man-1.6b-r2 60
 SHA256 e0d8e0ad256c9dadd164cfc6181954bdec4041c8e36fa6a22803581bbda35d2c files/digest-man-1.6b-r2 60
+MD5 c7293500850f88b8084e748907501a0b files/digest-man-1.6c 226
+RMD160 b5e4cd65b6f49a5b0c481e3b1bb7006fb92202a0 files/digest-man-1.6c 226
+SHA256 c21d226a38ea7063984990a078c1c06e93988befd4774246bb4b02be8bc0d327 files/digest-man-1.6c 226
 MD5 8b2016cc778ed4e2570b912c0f420266 files/makewhatis.cron 130
 RMD160 8d0140b6ffe643b3195665a192ffcbcbb4535233 files/makewhatis.cron 130
 SHA256 9eefb69edfd3bbc2fcea6af4d0f8a207b094b623b40d916b2eb45d2609ad2249 files/makewhatis.cron 130
@@ -37,9 +37,9 @@ SHA256 e4ce3db34ee19bd0127264e5717de2a2abde53405a1b90ea52279f936a3db649 files/ma
 MD5 148b7ee661e1e9384930fbd508dd5027 files/man-1.5p-parallel-make.patch 437
 RMD160 e2125d2433d034ff949b9662e1eadc420a040a3b files/man-1.5p-parallel-make.patch 437
 SHA256 40bc580a75861c6e4738bd3adfb61e0dccec68c865d611601649153e24cb009e files/man-1.5p-parallel-make.patch 437
-MD5 7b2b00aace5bcdb963286e235eaf22b2 files/man-1.5p-search-order.patch 519
-RMD160 991d54196c1c8c510f1ac62aeec7b0647fda7c71 files/man-1.5p-search-order.patch 519
-SHA256 08d37bdc16f09b7dc8f291a9075b050e8b0408cf4e1ba7f9abf0fd8c4c421561 files/man-1.5p-search-order.patch 519
+MD5 e54c147e66bc17599736c05c6e93dd62 files/man-1.5p-search-order.patch 375
+RMD160 919dbbc29e1b73d627545ad1d39c08221a45e5f9 files/man-1.5p-search-order.patch 375
+SHA256 f10ca4556b9ed5d7630ae7460e086602eb51c5e973cde24801a51704ccaf0a5d files/man-1.5p-search-order.patch 375
 MD5 331c925e304b56d63aa2c97dcc8e08fc files/man-1.6-cross-compile.patch 1744
 RMD160 873e07ed67255c29a195fe8de47745410c09e2ac files/man-1.6-cross-compile.patch 1744
 SHA256 ddc610cde46bd13e86802db0b86c21200c5695b88c9b660e386cd8c0a7d03540 files/man-1.6-cross-compile.patch 1744
@@ -61,6 +61,12 @@ SHA256 051ae68ba7da6a69208aa83214297e34c8a003f31ce7c66ba4a1e9dc03b5bede files/ma
 MD5 cc5bb9ed7778c068c9154f0f8c6a5e07 files/man-1.6b-more-sections.patch 291
 RMD160 38055a8cae18769589f379d2f8c5ab98cec1217d files/man-1.6b-more-sections.patch 291
 SHA256 33d876a93a84d0680bf737be9b06968d91ff376800e21ae8799e45357c35efef files/man-1.6b-more-sections.patch 291
+MD5 abb7fe555b253f97b165cb1f99f50924 files/man-1.6c-cut-duplicate-manpaths.patch 2148
+RMD160 4ea3e5cd240f8632ed7808fc23525780f86f5417 files/man-1.6c-cut-duplicate-manpaths.patch 2148
+SHA256 a9557114725da765265891a4c1cf846b6a8f0b38c0180628a7fec7dfb1b76a4d files/man-1.6c-cut-duplicate-manpaths.patch 2148
+MD5 76741ffabcab0009a9602bee8f9c47bf files/man-1.6c-makewhatis-typo.patch 461
+RMD160 631470dbbccc5d339513e2dea786624e594f091e files/man-1.6c-makewhatis-typo.patch 461
+SHA256 e4129d7c6d96ac65f1a1ba3e1400ffec3290cb39921fc855351c8c4b5c1e4e84 files/man-1.6c-makewhatis-typo.patch 461
 MD5 dab5214f30dcc5dadd8cf8bcd83ba9cb man-1.5p.ebuild 2626
 RMD160 9e0ab6fe0754cf889267860c56cbac297df5084d man-1.5p.ebuild 2626
 SHA256 53329e65b19a226acc2912bf7df7cceb8015b5529fc19046830bc42bb0b0d5a1 man-1.5p.ebuild 2626
@@ -73,13 +79,9 @@ SHA256 f90084374d1317bb6ae4eec7649e2098b3683cb2305b082a1ef4edd322dab34c man-1.6a
 MD5 4fd97a3c2cb1044366aa9633185337d7 man-1.6b-r2.ebuild 3060
 RMD160 e4c7183ee2d6dfd42151efa58b157af5152bfca4 man-1.6b-r2.ebuild 3060
 SHA256 772537277d21e05de608ae5e1917e772efba34509a4b1de8c49fc8fbd799310a man-1.6b-r2.ebuild 3060
+MD5 d3c3f79e2d4551bdff290c8e4b96eba7 man-1.6c.ebuild 3232
+RMD160 11c5751e227b468d0613f2294ce711ebdf1517b6 man-1.6c.ebuild 3232
+SHA256 d56c74ec8263e72660c7e269a28b2add280b488608b14a149a2e36d0a81c54db man-1.6c.ebuild 3232
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4oud2+ySkm8kpY0RAvGwAKDAJJ3cdglYe3V/y/6W8vDseFj0eACfdzj7
-8Z33worY2pLlfxiTga9rxyg=
-=72mP
------END PGP SIGNATURE-----
