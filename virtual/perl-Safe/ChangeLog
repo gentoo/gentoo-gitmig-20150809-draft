@@ -1,0 +1,10 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Safe/ChangeLog,v 1.1 2006/02/07 11:54:59 mcummings Exp $
+
+*perl-Safe-2.11 (07 Feb 2006)
+
+  07 Feb 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +perl-Safe-2.11.ebuild:
+  New virtual for perl-core/Safe
+
