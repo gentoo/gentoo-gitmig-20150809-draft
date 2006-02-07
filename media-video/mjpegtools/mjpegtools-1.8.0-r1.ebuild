@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.13 2006/02/05 23:47:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.14 2006/02/07 22:11:07 agriffis Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="1"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="gtk dv quicktime sdl X yv12 3dnow mmx sse v4l dga"
 
 RDEPEND="media-libs/jpeg
