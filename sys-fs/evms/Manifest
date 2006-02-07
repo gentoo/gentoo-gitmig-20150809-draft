@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8865e444e25cbae680d96f33bc33a450 ChangeLog 9207
+MD5 0ce25574b39eb47c43dbae707882e800 ChangeLog 9313
 MD5 a36fa36a0ee39f02fa7162fa72a488af evms-2.5.2-r1.ebuild 2297
-MD5 2fdcd12876fff8918211777d4400d72a evms-2.5.3-r1.ebuild 2426
+MD5 a65a8d5f94a287aac2e99eee6c70d7b3 evms-2.5.3-r1.ebuild 2427
 MD5 56506764cd7ab73aa3b1a06b9e55f08a evms-2.5.3.ebuild 2295
 MD5 fea531c10f3cb1d47c0f0af40bad0fa9 files/2.5.3/compaq_segments.patch 478
 MD5 fbf48e09c52473403af443f9ee5d8403 files/2.5.3/md_expand.patch 2152
@@ -13,9 +13,9 @@ MD5 2769ffa4ae1f09667ac42e94da8036ba files/digest-evms-2.5.3-r1 63
 MD5 5eb632aa94b0537e1983f935e3706d74 files/evms2-start.sh 382
 MD5 59d559390ca6a6d365a5d6c3012c0343 metadata.xml 387
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDkfuDgIKl8Uu19MoRAukqAKCDN0ZCHwmz+Od0FpcLzDabuB6IAwCeNosE
-XmLi/554TuFNY54T4iAAkfY=
-=kj8X
+iD8DBQFD6AgjJrHF4yAQTrARAp1fAJ9EOfNh28nU0JsFAFSPZFTewQXhTACfVE32
+YjJuaQUBexB6XxCrWb6l0vg=
+=hWR7
 -----END PGP SIGNATURE-----
