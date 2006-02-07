@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.12.ebuild,v 1.10 2006/02/07 03:23:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.12.ebuild,v 1.11 2006/02/07 21:43:41 blubb Exp $
 
 inherit eutils pam toolchain-funcs flag-o-matic
 
@@ -20,7 +20,7 @@ S=${WORKDIR}/${S_PP}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ~ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~ia64 mips ppc ppc64 sparc x86"
 IUSE="pam ldap ssl sasl snmp debug selinux underscores logrotate customlog zero-penalty-hit follow-xff"
 
 RDEPEND="pam? ( virtual/pam )
