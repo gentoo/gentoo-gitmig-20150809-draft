@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.6 2006/02/06 22:54:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.7 2006/02/07 14:06:33 genstef Exp $
 
 inherit eutils autotools
 
@@ -78,6 +78,10 @@ src_compile() {
 
 	# gs -DPARANOIDSAFER out.ps
 	myconf="${myconf} --with-fontconfig --with-fontpath=/usr/share/fonts:/usr/share/fonts/ttf/zh_TW:/usr/share/fonts/ttf/zh_CN:/usr/share/fonts/arphicfonts:/usr/share/fonts/ttf/korean/baekmuk:/usr/share/fonts/baekmuk-fonts:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/kochi-substitute"
+
+	# *-dynmic breaks compiling without X, see bug 121749 but not having it
+	# breaks compiling on amd64, bug 121924
+	use X && myconf="${myconf} --enable-dynamic"
 
 	econf $(use_with X x) \
 		$(use_enable cups) \
