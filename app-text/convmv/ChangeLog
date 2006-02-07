@@ -1,6 +1,9 @@
 # ChangeLog for app-text/convmv
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.16 2005/12/12 04:12:56 robbat2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.17 2006/02/07 04:32:46 agriffis Exp $
+
+  07 Feb 2006; Aron Griffis <agriffis@gentoo.org> convmv-1.09.ebuild:
+  Mark 1.09 stable on alpha
 
 *convmv-1.09 (12 Dec 2005)
 
