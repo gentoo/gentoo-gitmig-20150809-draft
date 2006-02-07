@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8c71016343915cebad4029bdbdbc4da4 ChangeLog 623
 MD5 f3eb6a0821ed8f31b731a14a4ff91c69 bluez-firmware-1.1.ebuild 632
 MD5 2c5f5d1dee59e459c098929b814f7802 files/digest-bluez-firmware-1.1 70
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6Kp59ZFPrqoILX8RAvyQAJ93lXgWYFPptF/cNsPhAiIpPVo+4wCfYqFq
+89836Ez2D6RRl9Anv58WKS8=
+=fxpB
+-----END PGP SIGNATURE-----
