@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.7.1.ebuild,v 1.7 2006/02/01 07:28:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.7.1.ebuild,v 1.8 2006/02/07 01:59:49 mr_bones_ Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Stellarium renders 3D photo-realistic skies in real time."
 HOMEPAGE="http://stellarium.free.fr/"
@@ -17,11 +17,20 @@ RDEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/libpng
 	media-libs/sdl-mixer
-	nls? ( sys-devel/gettext )"
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
 	|| ( x11-libs/libXt virtual/x11 )"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc41.patch #bug #121746
+}
+
 src_compile() {
+	append-flags -fno-strict-aliasing
 	econf \
 		--disable-dependency-tracking \
 		$(use_enable nls) \
