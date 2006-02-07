@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/gnome-backgrounds-2.12.3.ebuild,v 1.1 2006/02/07 00:43:52 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/gnome-backgrounds-2.12.3.1.ebuild,v 1.1 2006/02/07 23:03:26 compnerd Exp $
 
 inherit gnome2
 
