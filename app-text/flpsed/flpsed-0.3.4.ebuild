@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/flpsed-0.3.4.ebuild,v 1.1 2005/04/23 16:54:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/flpsed-0.3.4.ebuild,v 1.2 2006/02/07 17:36:44 nattfodd Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,13 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libX11
+			    x11-libs/libXext
+				x11-libs/libXft
+			  )
+			  virtual/x11
+			)"
+DEPEND="${RDEPEND}
 	>=x11-libs/fltk-1.1
 	virtual/ghostscript"
 

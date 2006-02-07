@@ -1,6 +1,10 @@
 # ChangeLog for app-text/flpsed
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.6 2005/12/05 18:49:38 dang Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.7 2006/02/07 17:36:44 nattfodd Exp $
+
+  07 Feb 2006; Alexandre Buisse <nattfodd@gentoo.org> flpsed-0.3.ebuild,
+  flpsed-0.3.2.ebuild, flpsed-0.3.4.ebuild, flpsed-0.3.5.ebuild:
+  Modular X migration.
 
   05 Dec 2005; <dang@gentoo.org> flpsed-0.3.5.ebuild:
   Marked ~amd64
