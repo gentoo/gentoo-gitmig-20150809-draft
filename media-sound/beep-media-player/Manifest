@@ -1,19 +1,67 @@
-MD5 71ace5d5c4f6364d569310e5dcd1ba71 ChangeLog 13476
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 72a66935f87ca2ed623635f85643bc0a ChangeLog 13597
+RMD160 3ffb1d5050008df0ea81a6e2f5b0c48420cee26c ChangeLog 13597
+SHA256 0bdc3bcf975ef6580aaa583c8ecb839c1e65cb827bd77e566d9382f31b4fdefb ChangeLog 13597
 MD5 8897a75e0660532c0dff002a12620a61 beep-media-player-0.9.7-r6.ebuild 2760
-MD5 f55b9f3dc5c4ffd2812d8b55dda745bf beep-media-player-0.9.7-r8.ebuild 2984
+RMD160 205e23807e98d911857d93ee65c0f2fb4372d2bd beep-media-player-0.9.7-r6.ebuild 2760
+SHA256 8f0d94a2b8b4a1e8b8199178dbf2c57e757d3d49f95f2207ec84f53566dbd293 beep-media-player-0.9.7-r6.ebuild 2760
+MD5 44b36bb4d99f3c412ff2a02d35c4b66e beep-media-player-0.9.7-r8.ebuild 2984
+RMD160 3128f0ad532863fb0e264bf2b381a656abb0c9d2 beep-media-player-0.9.7-r8.ebuild 2984
+SHA256 2f88c6fd46865f737d965ade541e28bf837363d898eed98dfa1ce85d47391210 beep-media-player-0.9.7-r8.ebuild 2984
 MD5 3f2f400d73900f5350c9617ce677977e beep-media-player-0.9.7.1.ebuild 2692
+RMD160 2cdc3e51ce3c9ae7103ca7b34193b1f497871c55 beep-media-player-0.9.7.1.ebuild 2692
+SHA256 c5e54e6028225680db7acab624b413db72809ceeff195dd461a51570dd05c1d0 beep-media-player-0.9.7.1.ebuild 2692
 MD5 4fe36295e02a77ccc81d9f710ebcc9fb files/0.9.7-bogus-songinfo.patch 517
+RMD160 d9ba8c8841458cb928bf318891321f28ffe93b56 files/0.9.7-bogus-songinfo.patch 517
+SHA256 9008cd8748a8798ea65fbcd7bc14f09a7bd40161502a9ffb1f0689b21b0581aa files/0.9.7-bogus-songinfo.patch 517
 MD5 d14dde91067c784f210c19e1e4024650 files/0.9.7-desktop-icon.patch 535
+RMD160 aaa6af0524dce2a8e647ec1864e2ae64de185928 files/0.9.7-desktop-icon.patch 535
+SHA256 a748e083dc74beddea8bcfd230981db0abd23e396556b9c409946d35a2bdd4c6 files/0.9.7-desktop-icon.patch 535
 MD5 32c2097467512370b951158b88abbeda files/0.9.7-hidden-window.patch 658
+RMD160 b5787b0f54b2b3280d5e41c5a3fd1d34ff9682e9 files/0.9.7-hidden-window.patch 658
+SHA256 2a5fd8615268e103c2a60537af79b337eb78e9d473c3ac42ef8adee36b34b0e6 files/0.9.7-hidden-window.patch 658
 MD5 3f601435320f38af453b506ced22e342 files/0.9.7-ipv6.patch 10063
+RMD160 bb78793c41d95fbf17785eec7c1de6cc4f3e0033 files/0.9.7-ipv6.patch 10063
+SHA256 560b2076550d70c8f8ad703e857d99e408ca3cf653830aa317d294405352a0e3 files/0.9.7-ipv6.patch 10063
 MD5 0e011dce894959d58bb98199a10b9a6a files/0.9.7-link-gconf.patch 1173
+RMD160 f963d91eeec5f1aaa018c213c53bc290721ba284 files/0.9.7-link-gconf.patch 1173
+SHA256 2d9c4634b9592d054598e16ddb5de8ef7817335056c865d04081293b29b89a8d files/0.9.7-link-gconf.patch 1173
 MD5 533bcd69c3357e3b6dd5b3a49afbb6bf files/0.9.7-noclick-resize.patch 974
+RMD160 8613c7feff5a4fa6e940e69de164b604a27337e3 files/0.9.7-noclick-resize.patch 974
+SHA256 0b11f62e3b23f3aeb7372f4bf41f5d888aba56c2cc75a8f95329e3e91d437877 files/0.9.7-noclick-resize.patch 974
 MD5 07dd84987f30f2cbb9ca16ec80cb6962 files/0.9.7-playlist-deadfile-delete.patch 540
+RMD160 06bb517271389fcdfa8652767fd921b09193eaa8 files/0.9.7-playlist-deadfile-delete.patch 540
+SHA256 64dcfc00d10b3893e6d00beba3b3dab855ab4a4c50a1f9f98dd14691aa6fb8ec files/0.9.7-playlist-deadfile-delete.patch 540
 MD5 e279329d65732e4ce62f2ea78badc901 files/0.9.7-volume-crash.patch 600
+RMD160 ff802191cbaaa94c79867bdf18f162c8deb39ff2 files/0.9.7-volume-crash.patch 600
+SHA256 f2952fe5ca1267f24d37b0d10f9592e2637408e4aebddf57a78cf65d078e1971 files/0.9.7-volume-crash.patch 600
 MD5 893b0d5bce79831b0f71aae51af7440d files/0.9.7-vorbis-date.patch 637
+RMD160 f2c095615c13ea4feb027ed2509574c7e9fe3f75 files/0.9.7-vorbis-date.patch 637
+SHA256 34abef2c42b797c679cfbd8f105b0e7a6540d4e3d357e43b6ca30d9dd3cf6b40 files/0.9.7-vorbis-date.patch 637
 MD5 539d031b4930b4ce080fbe0804edfc28 files/0.9.7-window-focus.patch 850
+RMD160 22bdef2203da62a7de76de905974c12880d774f0 files/0.9.7-window-focus.patch 850
+SHA256 ae2f6b30f79ed0de4da6541ae8bf30bcfea98d307e86206de56fd8ca3d550a31 files/0.9.7-window-focus.patch 850
 MD5 e0224d7dcc5a2cb1af6ea6b18a6daea8 files/beep-config 3347
+RMD160 469c991952cca6c2b0fa230fc30209508b0899fb files/beep-config 3347
+SHA256 3b0b5942464236457c2fbb89184ceda37732f1e49003beec6dc6aaa85bb0ca81 files/beep-config 3347
 MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r6 62
+RMD160 f262640910d3f99d62156eb65e07102b83594d9d files/digest-beep-media-player-0.9.7-r6 62
+SHA256 92cb86810b922158773b3e8db7811d4ba44d2e31b078e1f348a5eb1aff9d950f files/digest-beep-media-player-0.9.7-r6 62
 MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r8 62
+RMD160 f262640910d3f99d62156eb65e07102b83594d9d files/digest-beep-media-player-0.9.7-r8 62
+SHA256 92cb86810b922158773b3e8db7811d4ba44d2e31b078e1f348a5eb1aff9d950f files/digest-beep-media-player-0.9.7-r8 62
 MD5 18a0c44ab6e0927dc058a0f43f0795f4 files/digest-beep-media-player-0.9.7.1 135
+RMD160 ff929308950edf3db8da8c82bb692269337db161 files/digest-beep-media-player-0.9.7.1 135
+SHA256 7ff71da6bee951480364dc447f3b41e8d9531a9ef0710550de5b4826333570e7 files/digest-beep-media-player-0.9.7.1 135
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
+RMD160 f9de13e16a150195633b055ebe61bb4cea95160d metadata.xml 248
+SHA256 6a8ca116bded5cdd92cb700f92acd22b01ae159ef1b69c60a03fc9859bb9b3d6 metadata.xml 248
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6RANJrHF4yAQTrARAt6vAKCb7OVG4nogjmaZX72/lfxCq408BgCdFSf1
+Cuf0AqehkelOEAO11hqX06g=
+=/ciT
+-----END PGP SIGNATURE-----
