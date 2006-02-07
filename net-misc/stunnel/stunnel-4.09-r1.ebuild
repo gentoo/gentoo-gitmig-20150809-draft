@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.09-r1.ebuild,v 1.5 2005/12/24 15:37:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.09-r1.ebuild,v 1.6 2006/02/07 01:44:43 agriffis Exp $
 
 inherit ssl-cert eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.stunnel.org/download/stunnel/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ppc sparc x86"
+KEYWORDS="alpha ~amd64 arm ppc sparc x86"
 IUSE="ipv6 selinux tcpd"
 
 DEPEND="virtual/libc
