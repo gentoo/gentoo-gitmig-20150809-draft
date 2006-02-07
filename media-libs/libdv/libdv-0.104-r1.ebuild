@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.104-r1.ebuild,v 1.4 2006/01/14 05:58:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.104-r1.ebuild,v 1.5 2006/02/07 18:06:11 chutzpah Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,6 +34,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.104-no-exec-stack.patch
 	# big patch.. test here hard and fast then push upstream
 	epatch "${WORKDIR}"/libdv-0.104-pic-fix.patch
+
+	# tiny gcc4 fixes
+	epatch "${FILESDIR}"/${PN}-0.104-gcc4.patch
 
 	epunt_cxx #74497
 }

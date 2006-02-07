@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.46 2006/01/14 05:58:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.47 2006/02/07 18:06:11 chutzpah Exp $
+
+  07 Feb 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/libdv-0.104-gcc4.patch, libdv-0.104-r1.ebuild:
+  Trivial patch to fix compilation with gcc4.
 
   24 Dec 2005; Rene Nussbaumer <killerfox@gentoo.org> libdv-0.102.ebuild:
   Stable on hppa.
