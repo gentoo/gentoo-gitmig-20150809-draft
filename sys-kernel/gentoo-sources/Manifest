@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8d975b32ccab00bfdc1edbd8cbdda394 ChangeLog 58075
-RMD160 a8fa4f473ad3fbf76036b4ba4d5b3beaa9f5d089 ChangeLog 58075
-SHA256 69f6fbc475adac3a44f5f15938c0fc5ab773c51c83ea107285efb7325204d434 ChangeLog 58075
+MD5 4393661c5c144d5b9df99934b3f028b1 ChangeLog 58335
+RMD160 75485e5010ab70afa2058d0bfee30bb029a4bcfc ChangeLog 58335
+SHA256 ce5fff237df9133dad4c1abc307c1894e64f6fb24e0a90698a2f76d051dcc7a2 ChangeLog 58335
 MD5 0361b484cca5df06a9d3a66e1d18d733 files/digest-gentoo-sources-2.4.31-r1 144
 RMD160 3ca6fa1dec4e74e44dd9a11192e1c87404474bee files/digest-gentoo-sources-2.4.31-r1 144
 SHA256 c857c13a71e7b9337aa7882f0f1df971590343d862fc9c0aeb5c4f9483312aad files/digest-gentoo-sources-2.4.31-r1 144
@@ -28,6 +28,9 @@ SHA256 ab54e838c3c9d6b7a3f9fd3ebaf692e9c6f46fabefd35107d5fe7fc448466e9d files/di
 MD5 693cde1efa8c134f8067b8585d49cdfd files/digest-gentoo-sources-2.6.15-r3 804
 RMD160 a269efa871fbac3b5a3383de9ffbdcdc5894745f files/digest-gentoo-sources-2.6.15-r3 804
 SHA256 17646a88864a3a1b908aacf895eee625c8a2de06546407d1d4cd1e4db7c7ecc6 files/digest-gentoo-sources-2.6.15-r3 804
+MD5 4edfbef33977e2db7cecb8cb795365ef files/digest-gentoo-sources-2.6.15-r4 804
+RMD160 b4bf4144767984358033de06c97f1d755d03338a files/digest-gentoo-sources-2.6.15-r4 804
+SHA256 7f883a063ff14732d54fbd4b091e4bb1d98fec62c27b3e88b95fc6fb22e503b9 files/digest-gentoo-sources-2.6.15-r4 804
 MD5 0f93b46ae17cbd0fc9b4d1cf5d704296 files/gentoo-sources-2.4.81106.patch 2243
 RMD160 a067187096f37f5ba48b990c850b7ea2b57837bc files/gentoo-sources-2.4.81106.patch 2243
 SHA256 dc64767b343acb057ed1173c1a387b624ff508cb3fba894fdefa281d7df3b946 files/gentoo-sources-2.4.81106.patch 2243
@@ -55,6 +58,9 @@ SHA256 78a0583183cfdd5e4e9f087f2c18d64c07c29d2161a3d81c2f9c067d8d45ebad gentoo-s
 MD5 5ba8393b58512d96dbd63be81a4cde08 gentoo-sources-2.6.15-r3.ebuild 1238
 RMD160 3cc62a205978c183cdd3d4fc95361637814c7bdf gentoo-sources-2.6.15-r3.ebuild 1238
 SHA256 a26407477fcba73e61a79d598fcf22d73813a7951517fc68948396c1692cd184 gentoo-sources-2.6.15-r3.ebuild 1238
+MD5 d08cb7258034f44ae129d18534f64eb6 gentoo-sources-2.6.15-r4.ebuild 1238
+RMD160 30829b6240eeaefd41b838fc5942a17d32c5f4da gentoo-sources-2.6.15-r4.ebuild 1238
+SHA256 b39c4013e89e59713a57cb455af2a1f5812c3f0de509480219744704fe17b4fe gentoo-sources-2.6.15-r4.ebuild 1238
 MD5 975ed45ee3fbba6448ce7d74adb4e19a gentoo-sources-2.6.15.ebuild 1214
 RMD160 faebc1519377beb53fc1e8328315cf76aa40c9d0 gentoo-sources-2.6.15.ebuild 1214
 SHA256 8cf095e9be5bba55cdd00e445116adbcfb2853a0558e0adec0704df0c2da4f16 gentoo-sources-2.6.15.ebuild 1214
@@ -64,7 +70,7 @@ SHA256 16eda12305d2f4dba1a5650d79f49204d23c82de0d9883424dc74b3d372e45e2 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD53szTOXg++0VvJQRArbTAKCABOC18czY1R3bcRiWv90Omvu+uACdEKle
-+cvba1z73uk08cEFDdGPzO4=
-=JNur
+iD8DBQFD6N4gTOXg++0VvJQRAia/AKCHQwmTPlCGYTB5z0p/5mTHOo+cVACgrWTv
+Fxn3y/msgS0wIfC+0aBKeRE=
+=oaiK
 -----END PGP SIGNATURE-----

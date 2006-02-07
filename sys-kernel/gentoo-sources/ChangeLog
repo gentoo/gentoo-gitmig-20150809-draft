@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.247 2006/02/06 16:33:26 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.248 2006/02/07 17:47:53 dsd Exp $
+
+*gentoo-sources-2.6.15-r4 (07 Feb 2006)
+
+  07 Feb 2006; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.15-r4.ebuild:
+  Update to Linux 2.6.15.3, includes security fix. Also fix some memory leaks
+  in mousedev and selinux, and a PPP checksum fix as well.
 
   06 Feb 2006; Daniel Drake <dsd@gentoo.org>
   gentoo-sources-2.6.15-r3.ebuild:
