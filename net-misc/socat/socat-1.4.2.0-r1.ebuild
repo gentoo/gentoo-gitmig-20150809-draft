@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.4.2.0-r1.ebuild,v 1.7 2005/12/24 16:11:46 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.4.2.0-r1.ebuild,v 1.8 2006/02/07 20:52:01 blubb Exp $
 
 DESCRIPTION="Multipurpose relay (SOcket CAT)"
 HOMEPAGE="http://www.dest-unreach.org/socat/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.dest-unreach.org/${PN}/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc sparc x86"
 IUSE="ssl readline ipv6 tcpd"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6 )
