@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.6.0.ebuild,v 1.4 2006/02/07 15:59:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.7.0.ebuild,v 1.1 2006/02/07 15:59:15 liquidx Exp $
 
-inherit distutils gnome2 eutils
+inherit distutils gnome2 eutils multilib
 
 DESCRIPTION="Gnome2 Bluetooth integration suite."
 HOMEPAGE="http://usefulinc.com/software/gnome-bluetooth/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnomeui-2
@@ -24,10 +24,10 @@ RDEPEND=">=gnome-base/libgnomeui-2
 	>=gnome-base/orbit-2
 	>=dev-util/gob-2
 	>=dev-libs/openobex-1
-	>=net-wireless/bluez-libs-2.7
-	=net-wireless/libbtctl-0.5*
-	>=dev-python/pygtk-2.0
-	>=dev-python/gnome-python-2"
+	>=net-wireless/bluez-libs-2.25
+	>=net-wireless/libbtctl-0.6.0
+	>=dev-python/pygtk-2.6
+	>=dev-python/gnome-python-2.6"
 
 DEPEND="${RDEPEND}
 	dev-util/intltool
@@ -41,13 +41,17 @@ USE_DESTDIR=1
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.5.1-obex_xfer_rate.patch
-	epatch ${FILESDIR}/${P}-libdir.patch
+	sed -i -e 's:${libdir:/${platlibdir:' acinclude.m4
+	sed -i -e 's:blueradio-48.png:blueradio.png:' python/manager.py
 	export WANT_AUTOMAKE="1.5"
 	libtoolize --force --copy || die
 	aclocal || die
 	automake -a || die
-	autoconf || die
+	autoconf || die	
+}
+
+src_compile() {
+	platlibdir=$(get_libdir) gnome2_src_compile 
 }
 
 pkg_postinst() {
