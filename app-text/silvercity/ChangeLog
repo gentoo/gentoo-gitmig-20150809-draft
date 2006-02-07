@@ -1,6 +1,12 @@
 # ChangeLog for app-text/silvercity
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/ChangeLog,v 1.11 2006/02/05 14:08:48 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/ChangeLog,v 1.12 2006/02/07 00:13:04 dju Exp $
+
+*silvercity-0.9.6-r1 (07 Feb 2006)
+
+  07 Feb 2006; Julien Allanos <dju@gentoo.org> +files/0.9.6-api-fix.patch,
+  +silvercity-0.9.6-r1.ebuild:
+  Fix python bindings in 0.9.6, closes bug #121873.
 
 *silvercity-0.9.6 (05 Feb 2006)
 
