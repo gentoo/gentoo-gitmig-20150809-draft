@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.61 2006/01/17 05:00:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.62 2006/02/07 10:06:30 agriffis Exp $
+
+  07 Feb 2006; Aron Griffis <agriffis@gentoo.org>
+  sawfish-1.3.20050816.ebuild:
+  Mark 1.3.20050816 stable on alpha
 
   17 Jan 2006; Aron Griffis <agriffis@gentoo.org>
   sawfish-1.3.20050816.ebuild:

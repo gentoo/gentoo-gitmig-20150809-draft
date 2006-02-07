@@ -1,26 +1,58 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 53495eaee7ad26e7f1ccea51694f95d7 ChangeLog 9919
+MD5 c4aae33570307f2bfeae41ea283879d5 ChangeLog 10037
+RMD160 ea4fc38f3c82d37b388ee48a7be02f32922edf6b ChangeLog 10037
+SHA256 f6e3532949eb27276ad07bdd459d23d0d03ec7806ffc805c990f56bc69e923e7 ChangeLog 10037
 MD5 caeb1eaaf77305901f5c3bc19f3637d5 files/Sawfish.desktop 449
+RMD160 02c133c66b9816d252a8dabc5194483d586189c9 files/Sawfish.desktop 449
+SHA256 58e5a5337604b0732484698a3b1ccda847cd2d39725346210113db0ae460f99f files/Sawfish.desktop 449
 MD5 1ae747636b3422e00ef41cc07fc37ab4 files/capplet-crash.patch 556
+RMD160 6a8ed134b694d96c51ad46dabfcaf199db4aea70 files/capplet-crash.patch 556
+SHA256 e7c771b6bc3b417a53dd738612e53e5e873ab1163881460f7971f2d6831d5bd6 files/capplet-crash.patch 556
 MD5 a7d051180bc14a630027439f0d385dcd files/digest-sawfish-1.0.1-r6 66
+RMD160 b3bd1da2d9fcc8341fded04baf4ae7f859c6967c files/digest-sawfish-1.0.1-r6 66
+SHA256 e5a3d91f431854ee45538b448f5e11cdf60cc8d4bbcc12d737ea5a516bf2c228 files/digest-sawfish-1.0.1-r6 66
 MD5 8f4a1113e4c5925196748ccb9a9702fb files/digest-sawfish-1.3.20040120 74
+RMD160 01516881b84fa5effcd079c18a03a7382d2d7ed5 files/digest-sawfish-1.3.20040120 74
+SHA256 7df4d1db14bc8c60df8556e105919114285d5412875776ef7e275e902ccb90de files/digest-sawfish-1.3.20040120 74
 MD5 8f4a1113e4c5925196748ccb9a9702fb files/digest-sawfish-1.3.20040120-r1 74
+RMD160 01516881b84fa5effcd079c18a03a7382d2d7ed5 files/digest-sawfish-1.3.20040120-r1 74
+SHA256 7df4d1db14bc8c60df8556e105919114285d5412875776ef7e275e902ccb90de files/digest-sawfish-1.3.20040120-r1 74
 MD5 228430d4af4d182eca480e98af059875 files/digest-sawfish-1.3.20050816 74
+RMD160 a7b8561d81c224df25893a287201782ba2fae05e files/digest-sawfish-1.3.20050816 74
+SHA256 107b1f5d81a026c3500153fe041fe681a153d9c9589721d5bea1bddd3e77a395 files/digest-sawfish-1.3.20050816 74
 MD5 e1a647c4cdb92365506d533ac36c7f57 files/libtool.patch 798
+RMD160 ce31c467c17f0106abee438271f723c888eec641 files/libtool.patch 798
+SHA256 5d2a78d80ce22591c930353be21e359c542d6b241700efac5a38c1c41864c9c2 files/libtool.patch 798
 MD5 cd8e05ea2ee9e1ff63339dd0b0f021f6 files/sawfish-1.0.1-exec.patch 451
+RMD160 e78fe36dcacefae28ff603a451a703ac8890f974 files/sawfish-1.0.1-exec.patch 451
+SHA256 a270bebc38596556238141eac8fd6411663ee16bdbf0ecdcabd8c8d06a4bddca files/sawfish-1.0.1-exec.patch 451
 MD5 1e1b4b3609f8e62666856d07e393068f files/sawfish-1.3-shading.patch 1198
+RMD160 0edaccf2e826962cf47cbbf875a0b83a9d853fae files/sawfish-1.3-shading.patch 1198
+SHA256 a077e71282a4b5a2cddc7555396e8ba2d84fbe9165269009816a318709b7f94d files/sawfish-1.3-shading.patch 1198
 MD5 280d364bfd0878351ebbbcbc62ac19c4 files/sawfish-1.3-state-below.patch 403
+RMD160 2ce7541bd8abafd778f55231a9ca4c52dc112798 files/sawfish-1.3-state-below.patch 403
+SHA256 0aaca4e9095283ae21be489eb0b8a4af687f907c13db5bcc8c81d2e61cdc941d files/sawfish-1.3-state-below.patch 403
 MD5 683a44340139387ede0f0a8ec990f6af metadata.xml 252
+RMD160 e1e9d40a05f958564b97dce796d3575508fb3b2e metadata.xml 252
+SHA256 0db1ac5dbd8480024e1398a144440c9f0b77d5edf03789905ed31ae1d284aaf2 metadata.xml 252
 MD5 eb5d859670c6ea8a0904662860c180b0 sawfish-1.0.1-r6.ebuild 2017
+RMD160 11af34ff727e328deba88bcbd5a49d87c660f397 sawfish-1.0.1-r6.ebuild 2017
+SHA256 8298e1ff84808b71ccf70ea238b667d3fcd55b0a4dba20e76d6bfcc68c1b75ed sawfish-1.0.1-r6.ebuild 2017
 MD5 38a41c33b244c5704ca3dec0a903ba61 sawfish-1.3.20040120-r1.ebuild 2560
+RMD160 5c1017aa40ddd1549c52622283af2da645c30d9b sawfish-1.3.20040120-r1.ebuild 2560
+SHA256 6c92975fe0bdfe9f679e54db3581e8cbb8032a6434fe74d1e06fec8bb01e67ea sawfish-1.3.20040120-r1.ebuild 2560
 MD5 2dfef4a3fc9332df431ea0b2b06c5ee8 sawfish-1.3.20040120.ebuild 2700
-MD5 5c7d686215aefdfebe3d2b8c07498910 sawfish-1.3.20050816.ebuild 2808
+RMD160 6f6bec88aecf37db880df9a0b1761c65221f76b2 sawfish-1.3.20040120.ebuild 2700
+SHA256 c7e6f737417198ed515166c3f8086c91034c934778772e273a201bcae7373fc8 sawfish-1.3.20040120.ebuild 2700
+MD5 e03cb873481afd914cfc286f6a085be8 sawfish-1.3.20050816.ebuild 2807
+RMD160 1298317baa21f75476995fc3d107499f66de91a8 sawfish-1.3.20050816.ebuild 2807
+SHA256 a575e07c1b363eb9f27d000367102ab317bd01ca8a868e9fabfa3634945370f8 sawfish-1.3.20050816.ebuild 2807
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDzHnnJrHF4yAQTrARAtuaAJ9KpMOF7fJsdXkGyKu2HPUH0Qd1owCgvOS4
-vlLeBNrvR4w6mRzvSrLAJCk=
-=XQSy
+iD8DBQFD6HEwJrHF4yAQTrARAkCmAKDBQ7uTHLwJXEK6wO0nrS+UtxcdlgCfW6Hi
+FEWhTYKgxGrnA15NP1nYp7o=
+=geLL
 -----END PGP SIGNATURE-----
