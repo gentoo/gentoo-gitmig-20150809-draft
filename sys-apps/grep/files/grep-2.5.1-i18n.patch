@@ -1,48 +1,7 @@
---- grep-2.5.1/lib/regex.c
-+++ grep-2.5.1/lib/regex.c
-@@ -60,6 +60,10 @@
- #ifdef MBS_SUPPORT
- # define CHAR_TYPE wchar_t
- # define US_CHAR_TYPE wchar_t/* unsigned character type */
-+# define CHAR_T_SIGN (1 << (sizeof(CHAR_TYPE) * 8 - 1))
-+# if defined _AIX
-+#  define WCHAR_T_NEED_SIGNEXTEND 1
-+# endif /* _AIX */
- # define COMPILED_BUFFER_VAR wc_buffer
- # define OFFSET_ADDRESS_SIZE 1 /* the size which STORE_NUMBER macro use */
- # define CHAR_CLASS_SIZE ((__alignof__(wctype_t)+sizeof(wctype_t))/sizeof(CHAR_TYPE)+1)
-@@ -618,10 +622,13 @@
- /* ifdef MBS_SUPPORT, we store NUMBER in 1 element.  */
- 
- #ifdef MBS_SUPPORT
--# define EXTRACT_NUMBER(destination, source)				\
--  do {									\
--    (destination) = *(source);						\
--  } while (0)
-+# ifdef WCHAR_T_NEED_SIGNEXTEND
-+#  define EXTRACT_NUMBER(destination, source)				\
-+     (destination) = (*(source) ^ CHAR_T_SIGN) - CHAR_T_SIGN;
-+# else
-+#  define EXTRACT_NUMBER(destination, source)				\
-+     (destination) = *(source)
-+# endif /* WCHAR_T_NEED_SIGNEXTEND */
- #else
- # define EXTRACT_NUMBER(destination, source)				\
-   do {									\
-@@ -638,7 +645,11 @@
-     US_CHAR_TYPE *source;
- {
- #ifdef MBS_SUPPORT
-+# ifdef WCHAR_T_NEED_SIGNEXTEND
-+  *dest = (*source ^ CHAR_T_SIGN) - CHAR_T_SIGN;
-+# else
-   *dest = *source;
-+# endif /* WCHAR_T_NEED_SIGNEXTEND */
- #else
-   int temp = SIGN_EXTEND_CHAR (*(source + 1));
-   *dest = *source & 0377;
---- grep-2.5.1/src/dfa.c
-+++ grep-2.5.1/src/dfa.c
+Ripped from Fedora
+
+--- grep-2.5.1/src/dfa.c	2004-02-26 13:09:54.000000000 +0000
++++ grep-2.5.1/src/dfa.c	2004-05-18 16:43:31.189200479 +0100
 @@ -414,7 +414,7 @@
  
  /* This function fetch a wide character, and update cur_mb_len,
@@ -83,8 +42,8 @@
  		      work_mbc->coll_elems[work_mbc->ncoll_elems++] = elem;
  		    }
   		}
--	      wc = -1;
-+	      wc = WEOF;
+-	      wc1 = wc = -1;
++	      wc1 = wc = WEOF;
  	    }
  	  else
  	    /* We treat '[' as a normal character here.  */
@@ -119,8 +78,17 @@
  	}
      }
    while ((wc = wc1) != L']');
---- grep-2.5.1/src/grep.c
-+++ grep-2.5.1/src/grep.c
+@@ -2552,6 +2552,8 @@
+     }
+ 
+   /* match with a character?  */
++  if (case_fold)
++    wc = towlower (wc);
+   for (i = 0; i<work_mbc->nchars; i++)
+     {
+       if (wc == work_mbc->chars[i])
+--- grep-2.5.1/src/grep.c.i18n	2002-03-26 15:54:12.000000000 +0000
++++ grep-2.5.1/src/grep.c	2004-02-26 13:09:54.000000000 +0000
 @@ -30,6 +30,12 @@
  # include <sys/time.h>
  # include <sys/resource.h>
@@ -172,8 +140,8 @@
    (*compile)(keys, keycc);
  
    if ((argc - optind > 1 && !no_filenames) || with_filenames)
---- grep-2.5.1/src/search.c
-+++ grep-2.5.1/src/search.c
+--- grep-2.5.1/src/search.c.i18n	2004-02-26 13:09:54.000000000 +0000
++++ grep-2.5.1/src/search.c	2004-02-26 13:17:12.000000000 +0000
 @@ -149,15 +149,16 @@
  static char*
  check_multibyte_string(char const *buf, size_t size)

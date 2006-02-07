@@ -1,3 +1,5 @@
+Ripped from Fedora
+
 --- grep-2.5.1/lib/posix/regex.h.oi	2004-01-05 12:09:12.984391131 +0000
 +++ grep-2.5.1/lib/posix/regex.h	2004-01-05 12:09:24.717990622 +0000
 @@ -109,6 +109,10 @@
