@@ -1,27 +1,61 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 80a93ccd09a85e59d7d6b250203a5133 ChangeLog 28369
+MD5 e526eb7cb96580bd46231a3e9162c566 ChangeLog 28475
+RMD160 e87d39ad0a5a0e687b9a409f93642f7bc6072e6e ChangeLog 28475
+SHA256 e308a7409d86fdbb8f3073ebcef0081cd3975fe59ee99185d9bf21b67fde2d0a ChangeLog 28475
 MD5 6354e2efb6f0d1323ad8849be7303575 files/44_fix_alignment_endianess.dpatch 8676
+RMD160 f59929dade1b7c5803d888e40eaa71e298b96a03 files/44_fix_alignment_endianess.dpatch 8676
+SHA256 1480ac7905eb19b8a9b7fb1007cfce15bbcb80777329e71eb9b45cd5c80b34c1 files/44_fix_alignment_endianess.dpatch 8676
 MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11-r1 65
+RMD160 67841694a054ebb5052149f504b5e00bfa1863ea files/digest-xchat-1.8.11-r1 65
+SHA256 407ec248dbe6d99753dd0f3ada77a8ea9c10d95af06ace59e334fb2d9a28b9df files/digest-xchat-1.8.11-r1 65
 MD5 21bc6820aa6d0c8722509a74c7fccb3d files/digest-xchat-2.4.3 134
+RMD160 47befd6f7e5f5f6b90ce307a6a81464edd3311c6 files/digest-xchat-2.4.3 134
+SHA256 460aa389435ee86ab36ba815345d7a622078beb0042b84b4248b4243ac390cb1 files/digest-xchat-2.4.3 134
 MD5 c5d53c24b3ebfec1f168930213f55fea files/digest-xchat-2.4.5 65
-MD5 c5d53c24b3ebfec1f168930213f55fea files/digest-xchat-2.4.5-r1 65
+RMD160 82fd6fcf24ef69ae3503006fb45c2d293972a979 files/digest-xchat-2.4.5 65
+SHA256 058caf5ca7813caeced34185b37b9671ff0398f5a3fb74e10dab7ed4bf14f03e files/digest-xchat-2.4.5 65
+MD5 e4bedfc8913ccc7a4e3c390849d5b6ca files/digest-xchat-2.4.5-r1 241
+RMD160 5fd2de721fd59d00d75cc3a399c6ed1e4f90f015 files/digest-xchat-2.4.5-r1 241
+SHA256 33e988d4470b31d0f2ce1cc76798a1f282725b0c67b918b34aa722d1fad28228 files/digest-xchat-2.4.5-r1 241
 MD5 037d18f28c5ce37faeff29e7994246ca files/digest-xchat-2.6.1 64
+RMD160 42dda1c6baed17b1b0f36ccbb19ea77b5e69fcf7 files/digest-xchat-2.6.1 64
+SHA256 213d25f759ae9a31506f39e081e7bdb59fdd852f9d02495144592b781f003399 files/digest-xchat-2.6.1 64
 MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
+RMD160 6f3dfaf1f3e6ab3bd43f5b7f37a504efc7836c70 files/xc1811fixststint.diff 422
+SHA256 2e77f8d2751e65ab1ff69868457c51a1376502aa1a0b03ad45aa26a9478af3b8 files/xc1811fixststint.diff 422
 MD5 31de685eff3d16d9466416434c9fd6c3 files/xc208-fixsocks5.diff 688
+RMD160 3dddb307f426f267136581579f87e930374228d6 files/xc208-fixsocks5.diff 688
+SHA256 1437d7cfab3bb9ef5de653de26a392ca2ad2eaa902ee710455f90278671ab636 files/xc208-fixsocks5.diff 688
 MD5 17073299c8c2c65062ad2e77cd03b841 files/xc245-fix-te-notify.diff 403
+RMD160 df48a5b90b8c4b2f1a8899f4b981527221c809cb files/xc245-fix-te-notify.diff 403
+SHA256 1c4d1f4ec8006f6d0f15a9157c7a02730856225278d3fa1308593b557774d3aa files/xc245-fix-te-notify.diff 403
 MD5 ee98eba7f1061680d8d0582a10d72cb7 files/xchat-dccserver-0.5.patch 11776
+RMD160 21c97e84b11417c730663a1a22b7df4e0fee99ce files/xchat-dccserver-0.5.patch 11776
+SHA256 94b51262d90bc8e8a09829cf944e9370ea3d5c252f1472799651d45a96de1de2 files/xchat-dccserver-0.5.patch 11776
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+RMD160 279429d1df694561fc2b163cb81c09387b9d940c metadata.xml 160
+SHA256 5e058419199e306612929b80a996e3d16c6b20de674a56bb60558d3d36524fe2 metadata.xml 160
 MD5 4634f562e01b219d3bcfb0ae6acb8397 xchat-1.8.11-r1.ebuild 2264
+RMD160 d385b9f013ced7af59498fe59ad15f8a205bd8c0 xchat-1.8.11-r1.ebuild 2264
+SHA256 52ca3be93bf11db829bc99f1c01aa19b7c07fd0669c6df9d9be6a9e05949c712 xchat-1.8.11-r1.ebuild 2264
 MD5 f70fee92ab2e258ea7be208d0ddfa4b6 xchat-2.4.3.ebuild 2266
-MD5 1d96b6a159995e2ba2d2a95ca9b17df1 xchat-2.4.5-r1.ebuild 2362
+RMD160 7e288b6cc394b6cb5df9e451df6fcad069408957 xchat-2.4.3.ebuild 2266
+SHA256 954dfacc566e8a82f7ed1c3eac44e416cd3dbf1031dbf037d02d0e12ece77018 xchat-2.4.3.ebuild 2266
+MD5 fbf9592f9a1fee9d2857d7f994ad3af4 xchat-2.4.5-r1.ebuild 2363
+RMD160 0c2beaafcc5c05a489bce2edcbfff92de28f9622 xchat-2.4.5-r1.ebuild 2363
+SHA256 78694561f0a98d6e9a9c3b0d88cb95c79f37c26a7dbe09406cdec220b6a51beb xchat-2.4.5-r1.ebuild 2363
 MD5 b07304c2f6e1aa08bf112928e9558223 xchat-2.4.5.ebuild 2301
+RMD160 ed5863ce8802fd99452dd7496e4c219f6b049cf7 xchat-2.4.5.ebuild 2301
+SHA256 eaef0cc80010577ee97bc31847c3fe5e0006c8746221a15bf7f7a57ad6c06943 xchat-2.4.5.ebuild 2301
 MD5 30688911490e82a53aeb9375be43fd9e xchat-2.6.1.ebuild 2230
+RMD160 58b2e053336e0192ea8329317df1f97b5bdd000a xchat-2.6.1.ebuild 2230
+SHA256 1f4637e1a0491bd07ecdaef28e0fbf216231e9ebfb240a851f4027e1340e6483 xchat-2.6.1.ebuild 2230
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDv7BLI1lqEGTUzyQRAv5tAKCgAgxNuXdGZ89vkvvGzB4pEGWCYwCcCmPt
-2gjIwg4D4SBRTfKiq/yza7Q=
-=S6iS
+iD8DBQFD5/BHJrHF4yAQTrARAsRYAJ99rdAe3ABg+V3ubzcPJchJXh76oACfVTqF
+xjeAEU338OEeK8r9tO3Iqyw=
+=28da
 -----END PGP SIGNATURE-----
