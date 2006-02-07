@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5cfcdc0855ee62b7415091ce0cc89d3d ChangeLog 606
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Math-BigInt-1.69 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Math-BigInt-1.70 0
@@ -8,3 +11,10 @@ MD5 36d22f0f96080f7ef996a5a490e0450e perl-Math-BigInt-1.69.ebuild 475
 MD5 aa6f21702202abaab315e32fae919712 perl-Math-BigInt-1.70.ebuild 480
 MD5 199f6a6bb418d60f006d2fd3069bf21e perl-Math-BigInt-1.73.ebuild 468
 MD5 14a2626d28c0ebcc30ac99d9c4a21428 perl-Math-BigInt-1.77.ebuild 481
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD6IpJtG5z4I8BtQoRAhsaAKCPMAc0QCXUKCk3ObaRxWjeop2rqACfehpL
+fu2JWCaCD2Aerg2eUfJ4zjo=
+=cRJR
+-----END PGP SIGNATURE-----
