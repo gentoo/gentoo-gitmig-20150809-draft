@@ -1,24 +1,61 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 046cd32319d1a54845012f175d325695 ChangeLog 7686
+MD5 a7e382d51389ecabd0a418387982ac45 ChangeLog 7866
+RMD160 540233d2faa1179998308f75982e274b2b1b0fae ChangeLog 7866
+SHA256 87b1c968bc8369c80e24655ffd2d8d631f3c103e13316fd1050570228b6a6907 ChangeLog 7866
 MD5 a2c21c53079eb65c306a08d230d15b2b files/digest-texinfo-4.7-r1 65
+RMD160 32d1d3a5391391c4c9715e25c229630c41bb36b5 files/digest-texinfo-4.7-r1 65
+SHA256 b8f9be85c3092ff357b0695c21b0856bac63c39509f262d550ac43b401d38614 files/digest-texinfo-4.7-r1 65
 MD5 1c6181fd6a19db98315a1f737a5ae839 files/digest-texinfo-4.8 65
+RMD160 41a78bf1255a25c2e749c1efd6adcc6559e395fb files/digest-texinfo-4.8 65
+SHA256 fe6d8daa575819fcd888a1a74ab93d96a0c072d5b795a9cb9a8966b9eb2d9bb5 files/digest-texinfo-4.8 65
 MD5 1c6181fd6a19db98315a1f737a5ae839 files/digest-texinfo-4.8-r1 65
+RMD160 41a78bf1255a25c2e749c1efd6adcc6559e395fb files/digest-texinfo-4.8-r1 65
+SHA256 fe6d8daa575819fcd888a1a74ab93d96a0c072d5b795a9cb9a8966b9eb2d9bb5 files/digest-texinfo-4.8-r1 65
 MD5 1c6181fd6a19db98315a1f737a5ae839 files/digest-texinfo-4.8-r2 65
+RMD160 41a78bf1255a25c2e749c1efd6adcc6559e395fb files/digest-texinfo-4.8-r2 65
+SHA256 fe6d8daa575819fcd888a1a74ab93d96a0c072d5b795a9cb9a8966b9eb2d9bb5 files/digest-texinfo-4.8-r2 65
+MD5 1c6181fd6a19db98315a1f737a5ae839 files/digest-texinfo-4.8-r3 65
+RMD160 41a78bf1255a25c2e749c1efd6adcc6559e395fb files/digest-texinfo-4.8-r3 65
+SHA256 fe6d8daa575819fcd888a1a74ab93d96a0c072d5b795a9cb9a8966b9eb2d9bb5 files/digest-texinfo-4.8-r3 65
 MD5 a0df107ca9e3036e2ee2d501343cbf2b files/makeinfo.patch 790
+RMD160 7e55e2d176ce5b39a949df4927eb16208e3d6240 files/makeinfo.patch 790
+SHA256 638d84a5fe68c98801e2be0b70dd1b71241399da87139bc5826ead6c431f7ce2 files/makeinfo.patch 790
 MD5 690fb86d0c0215155b1d18671099115a files/mkinfodir 7318
+RMD160 57fb7f4524acf84be5e805b9df6f4c435aa2e5b9 files/mkinfodir 7318
+SHA256 2361ed35848aba949fa9af03e16f2c83ab28f1ae11d1dd97f2c58fe619406e69 files/mkinfodir 7318
 MD5 7246b5d34e673e1eb937186e4f18f56d files/texinfo-4.8-freebsd.patch 3787
+RMD160 94c14ad8d022d7feb5f635d1d5d42ac2571a3549 files/texinfo-4.8-freebsd.patch 3787
+SHA256 844c228352c1d05cfdba381569bbc06bc494b5c22d391730b2da2fd2e4f47661 files/texinfo-4.8-freebsd.patch 3787
+MD5 216cdeeac537b57cdb329003c3c46b3d files/texinfo-4.8-tempfile-owl.patch 2565
+RMD160 8b54cc3942b09c8fe0eb82523be57002bf04b2fe files/texinfo-4.8-tempfile-owl.patch 2565
+SHA256 f36057327c44b65e7349ccc6ffdd77588c62796047816062cc51dc4ef3791da4 files/texinfo-4.8-tempfile-owl.patch 2565
 MD5 a30131625cc3b1393c59b9603e982f24 files/texinfo-4.8-tempfile.patch 708
+RMD160 5214ae3b96e2714bba8e61c141dd32b6c0c31b66 files/texinfo-4.8-tempfile.patch 708
+SHA256 356935c23212eec139885d0217568c35e834a1abdd3b7fe062af0bb2da9fcd01 files/texinfo-4.8-tempfile.patch 708
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 75c60847c4f9b9d75375567cd1a3ba81 texinfo-4.7-r1.ebuild 1979
+RMD160 10a33d967dc47d57babd963b1b8cc1cc79eb6070 texinfo-4.7-r1.ebuild 1979
+SHA256 f436fde822d6642007129968620c58ad275d794c320b3cebaaedd60dec8324c8 texinfo-4.7-r1.ebuild 1979
 MD5 85306271dc0f544e3b5da1761895b881 texinfo-4.8-r1.ebuild 1963
+RMD160 8273b7024d3cf2f5feccaf03c6f9d1d961cd7568 texinfo-4.8-r1.ebuild 1963
+SHA256 93920007bcce367aae3be57738f764edcbcbba803119dd039a5cb833e5b720b3 texinfo-4.8-r1.ebuild 1963
 MD5 7b944058f6712de4dec1796d99f5ebfc texinfo-4.8-r2.ebuild 1962
+RMD160 eced7fcfd4c7181c2cde37b11394753b8f09b8c0 texinfo-4.8-r2.ebuild 1962
+SHA256 4a1a05a190fe721c56aa06aa5c7c963c6b1e5f03dc56bf221e0b28373cac1b66 texinfo-4.8-r2.ebuild 1962
+MD5 8f6b2eafe446770e3adca6ce8bcbd11d texinfo-4.8-r3.ebuild 1979
+RMD160 304a74dabc3757981e1d0ccd6364eeeb0b920ff8 texinfo-4.8-r3.ebuild 1979
+SHA256 207ebeff774edda5131e6bbb27c6cad7c909c8b91ac8eba9eb8f5fa929830946 texinfo-4.8-r3.ebuild 1979
 MD5 51d0756296f7f75f5a8cf3ec558fe1aa texinfo-4.8.ebuild 1909
+RMD160 0acc16723dafabcbbdf1606d56d058120d3cea53 texinfo-4.8.ebuild 1909
+SHA256 8d5f8b3dd2b3b540a50c5ce192c0f6099aca0c00c92571d91c9cac8fb9990ec9 texinfo-4.8.ebuild 1909
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD4DBQFDSAFOgIKl8Uu19MoRAiZkAJ41VcRv7W+wXHyGgKhWUOjHOytLhwCVG2r2
-ugcb4K8MxZHiCwTZKEtJZA==
-=CMt8
+iD8DBQFD6ZBW2+ySkm8kpY0RAkCYAKDFaF8bFoHnxZi02Q0+PTG7fSZgMgCfcrPG
+5mXTfQzfbuI6+0lcd2WozY8=
+=QFHW
 -----END PGP SIGNATURE-----
