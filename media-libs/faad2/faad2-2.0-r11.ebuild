@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r11.ebuild,v 1.1 2006/02/05 23:30:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r11.ebuild,v 1.2 2006/02/08 16:02:15 flameeyes Exp $
 
 inherit eutils libtool flag-o-matic autotools
 
@@ -19,6 +19,8 @@ IUSE="xmms"
 RDEPEND="xmms? ( >=media-sound/xmms-1.2.7
 		media-libs/id3lib )
 	media-libs/libmp4v2"
+
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}"
 
