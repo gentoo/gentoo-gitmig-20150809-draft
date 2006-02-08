@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-05272005.5.ebuild,v 1.1 2006/01/20 17:23:32 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-05272005.5.ebuild,v 1.2 2006/02/08 21:54:55 markusle Exp $
 
-inherit eutils toolchain-funcs fortran
+inherit eutils toolchain-funcs fortran flag-o-matic
 
 DESCRIPTION="A powerful quantum chemistry package"
 LICENSE="gamess"
@@ -46,7 +46,7 @@ pkg_setup() {
 	if use ifc; then
 		need_fortran ifc
 	else
-		need_fortran g77
+		need_fortran gfortran g77
 	fi
 
 	# blas and ifc don't go together
@@ -70,8 +70,28 @@ src_unpack() {
 	# for hardened-gcc let't turn off ssp, since it breakes
 	# a few routines
 	cd "${S}"
-	if use hardened && [[ $(tc-getF77) = f77 ]]; then
+	if use hardened && ([[ ${FORTRANC} = g77 ]] \
+		|| [[ ${FORTRANC} == gfortran ]]); then
 		FFLAGS="${FFLAGS} -fno-stack-protector-all"
+	fi
+
+	# some fixes for gfortan; 
+	# also append -w otherwise we get flooded with Hollerith 
+	# constant warnings
+	if [[ ${FORTRANC} == gfortran ]]; then
+		FFLAGS="${FFLAGS} -w"
+
+		sed -e "s|-fno-move-all-movables|-w|g" \
+			-e "s|*F2C|*F77|g" \
+			-e "s|-Wno-globals -fno-globals||g" \
+			-e "s|zheev) set OPT='-O1'|zheev) set OPT='-O0 -w'|g" \
+			-i comp || die "Failed removing compile flags"
+
+		# need to use _gfortran_ namespace
+		sed -e "s|iargc_|_gfortran_iargc|g" \
+			-e "s|getarg_|_gfortran_getarg_i4|g" \
+			-i ddi/src/ddi_fortran.c || \
+			die "Failed to fix gfortran namespace in ddi_fortran.c"
 	fi
 
 	# greate proper activate sourcefile 
@@ -91,11 +111,11 @@ src_unpack() {
 		sed -e "s/-malign-double -fautomatic /-cm -w \$MODULE.f/" \
 			-e "s/-Wno-globals -fno-globals \$MODULE.f//" \
 			-e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS} -quiet'/" \
-		    -e "s/gentoo-g77/$(tc-getF77)/" \
+		    -e "s/gentoo-g77/${FORTANC}/" \
 			-i comp || die "Failed setting up comp script"
 	else
 		sed -e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS}'/" \
-		   	-e "s/gentoo-g77/$(tc-getF77)/" \
+		   	-e "s/gentoo-g77/${FORTRANC}/" \
 			-i comp || die "Failed setting up comp script"
 	fi
 
@@ -107,11 +127,11 @@ src_unpack() {
 
 	# fix up GAMESS' linker script;
 	if use ifc; then
-		sed -e "s/gentoo-LDR='g77'/LDR='$(tc-getF77)'/" \
+		sed -e "s/gentoo-LDR='g77'/LDR='${FORTRANC}'/" \
 		   	-e "s/gentoo-LDOPTS=' '/LDOPTS='${LDFLAGS}'/" \
 			-i lked || die "Failed setting up lked script"
 	else
-		sed -e "s/gentoo-LDR='g77'/LDR='$(tc-getF77)'/" \
+		sed -e "s/gentoo-LDR='g77'/LDR='${FORTRANC}'/" \
 			-e "s/gentoo-LDOPTS=' '/LDOPTS='${LDFLAGS}'/" \
 			-i lked || die "Failed patching lked script"
 	fi
@@ -120,9 +140,9 @@ src_unpack() {
 	sed -e "s/gentoo-CC = 'gcc'/CC = '$(tc-getCC)'/" \
 		-i ddi/compddi || die "Failed setting up compddi script"
 
-	# for ifc we have to fix the number of underscores of fortran
-	# symbols, otherwise the linker will barf
-	if use ifc; then
+	# for ifc/gcc-4.x we have to fix the number of underscores of 
+	# fortran symbols, otherwise the linker will barf
+	if use ifc || [[ $(gcc-major-version) -ge 4 ]]; then
 		sed -e "s/gentoo-F77_OPTS = '-DINT_SIZE=int -D_UNDERSCORES=2/F77_OPTS = '-DINT_SIZE=int -D_UNDERSCORES=1/" \
 			-i ddi/compddi || die "Failed fixing underscores in compddi"
 	else
@@ -134,7 +154,8 @@ src_unpack() {
 src_compile() {
 	# build actvte
 	cd "${S}"/tools
-	$(tc-getF77) -o actvte.x actvte.f || die "Failed to compile actvte.x"
+	${FORTRANC} -o actvte.x actvte.f || \
+		die "Failed to compile actvte.x"
 
 	# for hardened (PAX) users and ifc we need to turn
 	# MPROTECT off
