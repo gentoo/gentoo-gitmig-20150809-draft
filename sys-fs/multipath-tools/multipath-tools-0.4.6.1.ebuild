@@ -1,40 +1,37 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.6.1.ebuild,v 1.1 2006/01/26 21:41:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.6.1.ebuild,v 1.2 2006/02/08 00:46:26 vapier Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="Device mapper target autoconfig."
+DESCRIPTION="Device mapper target autoconfig"
 HOMEPAGE="http://christophe.varoqui.free.fr/wiki/wakka.php?wiki=Home"
 SRC_URI="http://christophe.varoqui.free.fr/${PN}/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-
 IUSE=""
 
 RDEPEND=">=sys-fs/device-mapper-1.00.19
 	sys-fs/udev
 	sys-fs/sysfsutils"
-
 DEPEND="${RDEPEND}"
 
 src_unpack() {
-	unpack ${A}; cd ${S}
-	sed -i -e 's:^bindir.*:bindir = /usr/sbin:' \
-		${S}/multipathd/Makefile
-	sed -i -e 's:rules.d/.*:rules.d/40-multipath.rules:' \
-		${S}/multipath/Makefile
+	unpack ${A}
+	cd "${S}"
+	sed -i -e 's:^bindir.*:bindir = /usr/sbin:' multipathd/Makefile
+	sed -i -e 's:rules.d/.*:rules.d/40-multipath.rules:' multipath/Makefile
 }
 
 src_compile() {
-	emake -j1 \
-		CC=$(tc-getCC) || die "emake failed"
+	emake -j1 CC=$(tc-getCC) || die "emake failed"
 }
 
 src_install() {
 	dodir /sbin /usr/share/man/man8
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 
 	insinto /etc
 	newins ${S}/multipath.conf.annotated multipath.conf
