@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/kigb/kigb-1.68.ebuild,v 1.1 2004/08/31 11:15:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/kigb/kigb-1.68.ebuild,v 1.2 2006/02/08 16:53:09 mr_bones_ Exp $
 
 inherit games
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""
 
-RDEPEND="virtual/libc
-	virtual/x11
+RDEPEND="|| ( x11-libs/libXext
+			virtual/x11 )
 	sys-libs/zlib
 	dev-games/hawknl"
 
