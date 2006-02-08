@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.145 2006/02/08 16:31:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.146 2006/02/08 19:10:38 gustavoz Exp $
+
+  08 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org> openssl-0.9.7i.ebuild:
+  Stable on sparc wrt #122071
 
   08 Feb 2006; <nixnut@gentoo.org> openssl-0.9.7i.ebuild:
   Stable on ppc. bug 122071
