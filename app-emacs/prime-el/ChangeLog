@@ -1,11 +1,11 @@
 # ChangeLog for app-emacs/prime-el
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/prime-el/ChangeLog,v 1.29 2005/11/25 19:53:45 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/prime-el/ChangeLog,v 1.30 2006/02/08 21:38:02 tove Exp $
 
   25 Nov 2005; Tom Gall <tgall@gentoo.org>
   stable on ppc64,
 
-  03 Aug 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
   prime-el-1.5.1.3.ebuild:
   Stable on alpha.
 
