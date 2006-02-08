@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/bewan-adsl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.5 2005/02/25 06:40:35 mrness Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.6 2006/02/08 19:00:09 mrness Exp $
+
+*bewan-adsl-0.9.3 (08 Feb 2006)
+
+  08 Feb 2006; Alin Nastac <mrness@gentoo.org> +bewan-adsl-0.9.3.ebuild:
+  Version bump that fixes incompatibilities with kernels >= 2.6.14 (#122103).
 
 *bewan-adsl-0.9.0 (25 Feb 2005)
 
