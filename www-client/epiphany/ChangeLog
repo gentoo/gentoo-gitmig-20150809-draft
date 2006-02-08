@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.52 2006/02/03 23:13:22 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.53 2006/02/08 23:45:57 agriffis Exp $
+
+  08 Feb 2006; Aron Griffis <agriffis@gentoo.org> epiphany-1.8.3.ebuild:
+  Mark 1.8.3 stable on alpha
 
   03 Feb 2006; Guy Martin <gmsoft@gentoo.org> epiphany-1.8.3.ebuild:
   Stable on hppa.
