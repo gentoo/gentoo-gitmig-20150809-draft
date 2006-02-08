@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a0fb499f93c1ee17d1e8d0e8b3109821 ChangeLog 2751
 RMD160 9d4febd93d028d25b34c60101bcf2fdaf62a087e ChangeLog 2751
 SHA256 246ecc5ecff2775321b9acd91d1a7e02c9c429b6fd4b2c96fdf8748e4da97712 ChangeLog 2751
@@ -22,3 +25,10 @@ SHA256 68deb86ad03e50cf8b0411a21f9db9c9797d1a5d7482d4edeb35dc8a685c03e4 nanoblog
 MD5 f2598f9f29b0d956d398ba874de0cbbd nanoblogger-3.2.3.ebuild 2143
 RMD160 dbabe1639cca2c9cfb7ff7563086a92f31359fff nanoblogger-3.2.3.ebuild 2143
 SHA256 764b8b8b7d985a7c8d87048464af9373df84f32af34f116d476ef32ef371c76b nanoblogger-3.2.3.ebuild 2143
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6n/jJrHF4yAQTrARAmunAJ92OImDoYgbyHTE8tJGn5vpXBdqlQCfS1sv
+3YmkfwalVqyQg4Dugi7l7C8=
+=vNGF
+-----END PGP SIGNATURE-----
