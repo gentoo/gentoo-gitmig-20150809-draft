@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.192 2006/02/07 23:43:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.193 2006/02/08 22:49:06 tove Exp $
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> perl-5.8.8.ebuild:
   Prefer to avoid eval and use a bash array for myconf instead, it's less
@@ -123,13 +123,13 @@
   Backported some get_libdir functionality from 5.8.7 to 5.8.6-r6 to resolve
   bug #112243. This is mainly a multi-lib support fix it seems.
 
-  02 Oct 2005; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> perl-5.8.7-r1.ebuild:
+  02 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> perl-5.8.7-r1.ebuild:
   Stable on ia64, bug 106678.
 
   29 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> perl-5.8.6-r6.ebuild:
   Stable on mips for bug #106678.
 
-  23 Sep 2005; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> perl-5.8.7-r1.ebuild:
+  23 Sep 2005; Bryan Østergaard <kloeri@gentoo.org> perl-5.8.7-r1.ebuild:
   Stable on alpha, bug 106678.
 
   21 Sep 2005; Seemant Kulleen <seemant@gentoo.org> perl-5.8.6-r6.ebuild:
@@ -219,7 +219,7 @@
   03 Jul 2005; Michael Hanselmann <hansmi@gentoo.org> perl-5.8.6-r5.ebuild:
   Stable on ppc.
 
-  02 Jul 2005; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> perl-5.8.6-r5.ebuild:
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> perl-5.8.6-r5.ebuild:
   Stable on alpha.
 
   02 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> perl-5.8.6-r5.ebuild:
@@ -422,7 +422,7 @@
   06 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> perl-5.8.5-r2.ebuild:
   Stable on sparc wrt #66360
 
-  05 Dec 2004; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> perl-5.8.5-r2.ebuild:
+  05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> perl-5.8.5-r2.ebuild:
   Stable on alpha, bug 66360.
 
   05 Dec 2004; Markus Rothe <corsair@gentoo.org> perl-5.8.5-r2.ebuild:
@@ -517,7 +517,7 @@
   18 Aug 2004; Aron Griffis <agriffis@gentoo.org> perl-5.8.4-r1.ebuild:
   stable on alpha
 
-  13 Aug 2004; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> perl-5.8.4.ebuild:
+  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> perl-5.8.4.ebuild:
   Stable on alpha.
 
   07 Aug 2004; Robert Coie <rac@gentoo.org> perl-5.8.2-r1.ebuild,
