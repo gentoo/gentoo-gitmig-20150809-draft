@@ -1,0 +1,37 @@
+the source code has an '#ifdef HAVE_LOCALE_H' but forgets to
+actually check for locale.h in configure
+
+http://bugs.gentoo.org/121920
+
+--- flex-2.5.31/configure
++++ flex-2.5.31/configure
+@@ -6964,7 +6991,7 @@
+ 
+ 
+ 
+-for ac_header in unistd.h stdbool.h  netinet/in.h limits.h
++for ac_header in unistd.h stdbool.h  netinet/in.h limits.h locale.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
+--- flex-2.5.31/conf.in
++++ flex-2.5.31/conf.in
+@@ -4,6 +4,9 @@
+    language is requested. */
+ #undef ENABLE_NLS
+ 
++/* Define to 1 if you have the <locale.h> header file. */
++#undef HAVE_LOCALE_H
++
+ /* Define to 1 if you have the <cunistd> header file. */
+ #undef HAVE_CUNISTD
+ 
+configure.in changes
+ dnl checks for header files
+ 
+ AC_HEADER_STDC
+-AC_CHECK_HEADERS(unistd.h stdbool.h  netinet/in.h limits.h)
++AC_CHECK_HEADERS(unistd.h stdbool.h  netinet/in.h limits.h locale.h)
+ AC_CHECK_HEADERS( sys/wait.h sys/params.h)
+ AC_CHECK_HEADERS(cunistd)
+ 

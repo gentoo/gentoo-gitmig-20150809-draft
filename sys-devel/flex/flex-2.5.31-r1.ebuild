@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.31-r1.ebuild,v 1.10 2006/02/06 23:17:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.31-r1.ebuild,v 1.11 2006/02/08 00:55:08 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,7 +23,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${WORKDIR}"/${PN}_${PV}-${DEB_VER}.diff
 	epatch "${FILESDIR}"/${P}-include.patch
-	epatch "${FILESDIR}"/${P}-isatty.patch
+	epatch "${FILESDIR}"/${P}-isatty.patch #119598
+	epatch "${FILESDIR}"/${P}-check-for-locale-header.patch #121920
 }
 
 src_compile() {

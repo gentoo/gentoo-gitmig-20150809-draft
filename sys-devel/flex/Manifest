@@ -1,6 +1,9 @@
-MD5 ba881073feecc32d1c7fcaf5b971769c ChangeLog 3140
-RMD160 c30503af5ecb4a5d8c46c400e7b96252b7fb194f ChangeLog 3140
-SHA256 27e7bf3f19db2133f83f38f5432d29c94231bb901f8220433724d0a04c530161 ChangeLog 3140
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 89cffde616458736450c3a482119d8db ChangeLog 3316
+RMD160 421c5d8249b0e61b6675ba2c55886ddf23e444ac ChangeLog 3316
+SHA256 d6399ebe3c90f5321b8bb59e9d41e3e44028da9a98839fde896671c13554247c ChangeLog 3316
 MD5 8c9da1ab91353ab97d100e499ae722f7 files/digest-flex-2.5.31-r1 131
 RMD160 5a8f2d987764982a9a75548f08ffcdc084e7f0f9 files/digest-flex-2.5.31-r1 131
 SHA256 79b8290044e824b02fe32822d696b2f8e580d66147964cd6ac94de6af68857d6 files/digest-flex-2.5.31-r1 131
@@ -10,6 +13,9 @@ SHA256 20dd99d2ba78a7231f939e845feee2fa7f6522158889f77eb5d17765bf53ba04 files/di
 MD5 483b62e5eb13bbcf72e8ec7aaa34f554 files/digest-flex-2.5.4a-r6 137
 RMD160 d179ae0c153ede76083c9e51bf795c1f2003cf76 files/digest-flex-2.5.4a-r6 137
 SHA256 3e20e677f6a05467dfdef44c23ed1047c0c4d1d0ff854724bac359f5491a413e files/digest-flex-2.5.4a-r6 137
+MD5 2f1f506c1cba186162e0d8a21fbb93d1 files/flex-2.5.31-check-for-locale-header.patch 1011
+RMD160 5812d387e982f8a00ddb5a82c5d53a968fb3d682 files/flex-2.5.31-check-for-locale-header.patch 1011
+SHA256 67196ce234c5edabd0652f0888ab58503e6f8e10a023fa72f894ca19be7deab7 files/flex-2.5.31-check-for-locale-header.patch 1011
 MD5 2e16e2031744c71cd9cd1019ff0a1af3 files/flex-2.5.31-include.patch 387
 RMD160 450ae53279820d2d8c702be0f471be07892f96f0 files/flex-2.5.31-include.patch 387
 SHA256 deb8f99edc8b3eca11515e36db959d27503c5c1fc317a4ead39f40cc0ec61bce files/flex-2.5.31-include.patch 387
@@ -31,9 +37,9 @@ SHA256 950bf0133a892332d73678b2ca35978abe6184ba9a29e38e60f6e7be773409a8 files/fl
 MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/flex-configure-LANG.patch 1686
 RMD160 4ff8355af81705058fd411910dfae94887bcd884 files/flex-configure-LANG.patch 1686
 SHA256 dc9386b88eac48c282d63d0be7e7be81d4a0a08035a8b97138a61133e057bcea files/flex-configure-LANG.patch 1686
-MD5 371b258d6ecf7fd2753f9f10986a9fba flex-2.5.31-r1.ebuild 1167
-RMD160 5c852589885d990012fd71354cb46ee82836d602 flex-2.5.31-r1.ebuild 1167
-SHA256 fa496957b7cca06b80c3c611a0fe05f1aeb99aa2f256b2ac13da64921326faa3 flex-2.5.31-r1.ebuild 1167
+MD5 b3411d1d5849daf747c12fd089901df4 flex-2.5.31-r1.ebuild 1240
+RMD160 4f7660dbded59439be99ad8764398bbe64ed6564 flex-2.5.31-r1.ebuild 1240
+SHA256 2978d09f1e3fa8049ae4e6882e921bf0cbc34fb318171173f4aac15f07d2cf0a flex-2.5.31-r1.ebuild 1240
 MD5 3f4500ac9117f90f14a3a82e3a5dc488 flex-2.5.4a-r5.ebuild 1304
 RMD160 5362fd95822598aa3ed519f8d21e185ea22bb04c flex-2.5.4a-r5.ebuild 1304
 SHA256 de0ecc67f9ace3737258c8df6c658d270e885ad4d5627e363acf86aa60c7b72b flex-2.5.4a-r5.ebuild 1304
@@ -43,3 +49,10 @@ SHA256 e43f54161ecb2230a92e3bc05edb9f233dfc650aa635ca273b34d90cfaf66a53 flex-2.5
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6UGK2+ySkm8kpY0RAlqfAJ9O+aQMlXWOVd3rb2GDHiVv8QMKTwCfQn+F
+q2kqlgNlyIkwuQM0vaNYeps=
+=sUld
+-----END PGP SIGNATURE-----
