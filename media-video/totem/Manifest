@@ -1,16 +1,58 @@
-MD5 f514f8780df1ccbf4e81662037840659 ChangeLog 13907
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dd1c5fce6ba1944304e1f32bee2fd76a ChangeLog 14009
+RMD160 1f0600abd7b4bb2694986d28563fcb4f1dcda71f ChangeLog 14009
+SHA256 620134950696621ed4bd93e86a668ad53c013a03dfcd35f48f0c7fff6ded42aa ChangeLog 14009
 MD5 ac8a4cf594e065c2ddc00dc70c8d2170 files/digest-totem-1.0.4 65
+RMD160 72a2aa7c508ea0fcb3dfc081aa5a47f530b513a9 files/digest-totem-1.0.4 65
+SHA256 ff450d8ad046381026a7a97900493f1496f414eba4e83b8c301b38723f1b372e files/digest-totem-1.0.4 65
 MD5 e7c829d2432b645ddb68128a4bead344 files/digest-totem-1.2.0-r1 65
+RMD160 3c9958d56bed27abb6d616b25694762aaf9b9731 files/digest-totem-1.2.0-r1 65
+SHA256 20e738a7f69b60cd647bbe9d8bd3642e89a3d13e5a0f625741bf9f3c1f87e9f5 files/digest-totem-1.2.0-r1 65
 MD5 e7c829d2432b645ddb68128a4bead344 files/digest-totem-1.2.0-r2 65
+RMD160 3c9958d56bed27abb6d616b25694762aaf9b9731 files/digest-totem-1.2.0-r2 65
+SHA256 20e738a7f69b60cd647bbe9d8bd3642e89a3d13e5a0f625741bf9f3c1f87e9f5 files/digest-totem-1.2.0-r2 65
 MD5 9243ad12e8b83b84491d9ba44ddee684 files/digest-totem-1.2.1 65
+RMD160 eee696c91aa23bec4e40a1ffe1304b363fcdfdd6 files/digest-totem-1.2.1 65
+SHA256 e2382f7924853573cdc1ae4719f01d2a2899fef60b2983964171b66a60b98f57 files/digest-totem-1.2.1 65
 MD5 cccfa415897f1198d6cb702e258b85a9 files/totem-1.0.4-fbsd.patch 1190
+RMD160 0c98c0f612d77d410d7d89f64b7b2ed0e296e591 files/totem-1.0.4-fbsd.patch 1190
+SHA256 a09a96217187b25045152ac3739472e30de7fc3758e4c75284dfc21a14c7ac89 files/totem-1.0.4-fbsd.patch 1190
 MD5 d8432eb528995986645e6e70fdccba48 files/totem-1.2.0-gecko-sdk.patch 1178
+RMD160 25cf2c4be59719b06ab8f0c5fbcd3a871b3ad4cb files/totem-1.2.0-gecko-sdk.patch 1178
+SHA256 43044f54b9f6a28a941c9898b18b4f9d41d384ed9b9574fa53328ae7cd930dd3 files/totem-1.2.0-gecko-sdk.patch 1178
 MD5 faed9bfdf2ea1835a17c9e56e7738ac1 files/totem-1.2.0-gmoduledep.patch 1535
+RMD160 fd896fdef6770786e8f86fe0424b011fe037d34a files/totem-1.2.0-gmoduledep.patch 1535
+SHA256 ec0f2c9980c7d750ae1a3174c7d5336040cb51d5306feb6863882bcdc122ed80 files/totem-1.2.0-gmoduledep.patch 1535
 MD5 d64b50de60d0223b68b67b7788086b5b files/totem-1.2.0-lang_it_fix.patch 834
+RMD160 ad1f9f7e96939f34cb9d96280a0e2999a877881b files/totem-1.2.0-lang_it_fix.patch 834
+SHA256 bbb7f0b7436e23541e851e48b618178b1182afb96f04ad5ec4550ca6eeb3a082 files/totem-1.2.0-lang_it_fix.patch 834
 MD5 bb48541b00fafc98142cfbbea5490e8b files/totem-1.2.1-gecko-sdk.patch 1118
+RMD160 dcc4ed1e33ceda96dc73a30f60ebe6e226b716f4 files/totem-1.2.1-gecko-sdk.patch 1118
+SHA256 2d49081b23dfe3e3cdf1bf814924fd7b0002d221dc54461fe098bc1b43080a67 files/totem-1.2.1-gecko-sdk.patch 1118
 MD5 06e5959e07633fd5260c6935f547d0d4 files/totem-dbus-0.60.patch 562
+RMD160 c2ab4cf3b4ea61e9f775d2ebde8f5e0ad846959c files/totem-dbus-0.60.patch 562
+SHA256 004d0517439e954616ef119ebb2e55260cfad22a165cd490bdf0bea11cafd17f files/totem-dbus-0.60.patch 562
 MD5 74b9bd3cc5015b286abc33eb51408252 metadata.xml 521
+RMD160 d715631cdb935e3f1cfc70e88d8dfbd10ae3159c metadata.xml 521
+SHA256 67adda7ef1db1c932df3f4a03186d86119e9c26c96f2c17d554150dc133f6197 metadata.xml 521
 MD5 6645b9eed7d922972cb815cadddf7d89 totem-1.0.4.ebuild 2709
+RMD160 f11546e05a15ba1e06376164379327365db00e03 totem-1.0.4.ebuild 2709
+SHA256 df3968c67a61922b238bc28a9ce6bd0b702282342538e04d943ac3374d10a8e9 totem-1.0.4.ebuild 2709
 MD5 ea94c2bb018dbff36db14cd324c82ee3 totem-1.2.0-r1.ebuild 3200
+RMD160 c6d7f99b6d191a8bee8e829e4dc479f8d94cc4d5 totem-1.2.0-r1.ebuild 3200
+SHA256 16953186b200297dd3d758ed90148511ec952b74c6bac792b420d1a6a190ed0c totem-1.2.0-r1.ebuild 3200
 MD5 4a60d190238e97f686b820cb9ca3bc29 totem-1.2.0-r2.ebuild 3164
-MD5 d3d41592a3801fbccdebdfd46e11974b totem-1.2.1.ebuild 2931
+RMD160 6c2680f0fc5d92005dd9837edc97a507d8786655 totem-1.2.0-r2.ebuild 3164
+SHA256 995d1d801a1489d0a55365e1ed95074b0665f231455fc47f69ea4827d4597290 totem-1.2.0-r2.ebuild 3164
+MD5 557adcc9d7a643348cac8852b3a3b69f totem-1.2.1.ebuild 2932
+RMD160 5b3c5c3c7d5adaa4affe805b866a993957f78d76 totem-1.2.1.ebuild 2932
+SHA256 e61be88964c3137d8d2cfe99f681b8a0b0d329e5a6c1f4fe7424a5d4603f778f totem-1.2.1.ebuild 2932
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6k7wJrHF4yAQTrARAq39AJ9OUNFvmCrQPtW2RXRnR+sfc4pSmgCfZi8C
+truzbTgHHdgOapi4K6bOXLg=
+=Aql4
+-----END PGP SIGNATURE-----
