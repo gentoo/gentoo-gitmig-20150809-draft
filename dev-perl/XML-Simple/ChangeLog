@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/XML-Simple
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.37 2006/02/06 20:40:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.38 2006/02/08 23:49:07 tove Exp $
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> XML-Simple-2.14.ebuild:
   stable on amd64
@@ -46,7 +46,7 @@
   01 May 2005; Tom Martin <slarti@gentoo.org> XML-Simple-2.12.ebuild:
   Stable on amd64.
 
-  30 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> XML-Simple-2.12.ebuild:
+  30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> XML-Simple-2.12.ebuild:
   Stable on alpha.
 
 *XML-Simple-2.14 (27 Apr 2005)
@@ -75,7 +75,7 @@
   11 Jun 2004; Michael Cummings <mcummings@gentoo.org> XML-Simple-2.12.ebuild:
   new version on cpan
 
-  27 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> XML-Simple-2.09.ebuild:
+  27 May 2004; Bryan Østergaard <kloeri@gentoo.org> XML-Simple-2.09.ebuild:
   Stable on alpha.
 
   07 Jan 2004; <gustavoz@gentoo.org> XML-Simple-2.09.ebuild:

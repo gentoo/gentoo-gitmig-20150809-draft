@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Pod-Coverage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.22 2006/01/13 15:56:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.23 2006/02/08 23:44:59 tove Exp $
 
 *Pod-Coverage-0.17 (13 Jan 2006)
 
@@ -52,14 +52,14 @@
   +Pod-Coverage-0.16.ebuild:
   New version on cpan
 
-  19 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   Pod-Coverage-0.14.ebuild:
   Stable on alpha.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> Pod-Coverage-0.14.ebuild:
   KEYWORDS ~amd64.
 
-  10 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> Pod-Coverage-0.14.ebuild:
+  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> Pod-Coverage-0.14.ebuild:
   Add ~alpha keyword.
 
   03 Oct 2004; Michael Cummings <mcummings@gentoo.org>
