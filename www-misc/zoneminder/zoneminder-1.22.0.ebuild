@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.22.0.ebuild,v 1.1 2006/02/06 22:02:52 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.22.0.ebuild,v 1.2 2006/02/08 19:33:53 rl03 Exp $
 
 inherit eutils webapp
 
@@ -75,7 +75,7 @@ src_install() {
 
 	keepdir /var/log/${PN}
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall.txt
+	webapp_postinst_txt en ${FILESDIR}/postinstall-2.txt
 	webapp_postupgrade_txt en ${FILESDIR}/postupgrade.txt
 	webapp_src_install
 	fperms 0644 /etc/zm.conf
