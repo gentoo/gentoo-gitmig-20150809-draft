@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cd3fee111562f2de82e103d5cd9f79a3 ChangeLog 23199
-RMD160 b86967d9d7bd2b31d1a31aa26cdeac69857c1889 ChangeLog 23199
-SHA256 952035e90e7c9b723f2a1ff1b846653b45d8217754d4aed9d307c123ff5809da ChangeLog 23199
+MD5 bf6deeb26cf802af57edffb04601bb8e ChangeLog 23318
+RMD160 c5d2280fdd0c99443cb676cfe484c922a95790d8 ChangeLog 23318
+SHA256 b65126327bb5166f61d26d4dac1b1f8eafe85738ff638d894b6af0005963e66c ChangeLog 23318
 MD5 744b358cd3b68b2ca6561c214c541fc0 files/addppc64support.diff 1327
 RMD160 ddb8de67c7f9980354ae678cb724ef8d76169140 files/addppc64support.diff 1327
 SHA256 d1e3fbdb2d8799a421e7812d0d5104fdd9d4b9a9435882416358e24b2e299294 files/addppc64support.diff 1327
@@ -19,9 +16,9 @@ SHA256 3346dcf2952895fca3b18e08c432cd62ea31632145464347886baa7bd65e0d06 files/di
 MD5 0b87439b95b8ecda7b7cd59c336625cd files/digest-openssl-0.9.7h 67
 RMD160 b9ebf3b862605e25e573a06244839e7eb6dc4df9 files/digest-openssl-0.9.7h 67
 SHA256 33e9aca2670b15587b6af82f98f8d9fc0c67e64012ac08ae11a95647db28f3d6 files/digest-openssl-0.9.7h 67
-MD5 275256f0f0c2a035cbc2b9ede7a1e21a files/digest-openssl-0.9.7i 67
-RMD160 41454a322ac90411a57fc6775390dae68d6d8e23 files/digest-openssl-0.9.7i 67
-SHA256 c65a367dd64596b4641b9e6997625615c4db38ebb574614b5a508114e1a01519 files/digest-openssl-0.9.7i 67
+MD5 09e02928f182395d682821828d9dcd38 files/digest-openssl-0.9.7i 247
+RMD160 f25db4bc374e5bcf140db966960c46f9d94b6a49 files/digest-openssl-0.9.7i 247
+SHA256 3f7edeec3c2c8265919614bb929cde7e2d1cbf1adc13e698d136e092ad36919a files/digest-openssl-0.9.7i 247
 MD5 b8f72a6ed636d44f938a026b12abc7e2 files/digest-openssl-0.9.8a 67
 RMD160 61244f8117ec63acc9a485b8366e00ef85f804de files/digest-openssl-0.9.8a 67
 SHA256 65b07eb7ed4d563628f2a39c08dd99c83b8d518f34b77fcbcf9660bc27c12741 files/digest-openssl-0.9.8a 67
@@ -130,16 +127,9 @@ SHA256 3dc1c63a19355a60e6f6654097efc434429fb9f608c75f393e7ae2a9948281f6 openssl-
 MD5 faea64b7805a821af960768e36c472e1 openssl-0.9.7h.ebuild 5389
 RMD160 22299f6c0002e095d4c7b82ccfd108f1db8b4ded openssl-0.9.7h.ebuild 5389
 SHA256 1a9cdf8de8934a1e13b2ccfd77f74a3e7e2e6d26ea2b92d6ef081f12cc2fd4f1 openssl-0.9.7h.ebuild 5389
-MD5 9c9a8a36e4a649fce8bda2cae3bf196c openssl-0.9.7i.ebuild 5461
-RMD160 57a23f2a82b43ae6b7a67f1412a765797fade571 openssl-0.9.7i.ebuild 5461
-SHA256 74692fea523ba5eb1df475cf37ae933e4a72a0a7156ee2f55d680d2e32af5ed0 openssl-0.9.7i.ebuild 5461
+MD5 c90ba652f33ed5436da7543483476185 openssl-0.9.7i.ebuild 5462
+RMD160 a43a3a32fd3015913d6957986c35a21475352102 openssl-0.9.7i.ebuild 5462
+SHA256 369bc1f73538743dba3fa8295bd3a0c61098c4a9de7523a9c6f60d6005f33c4f openssl-0.9.7i.ebuild 5462
 MD5 c7a04f70dffc5396552d19215356ee92 openssl-0.9.8a.ebuild 4597
 RMD160 3a80e11d09b3ef162b2eb448c8fbfca8115f741c openssl-0.9.8a.ebuild 4597
 SHA256 1f4507e91863f2c30b1ecfa1e9a3a5731e6f78a83dee57d8a34491545206107f openssl-0.9.8a.ebuild 4597
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6Wiv2+ySkm8kpY0RAiY+AJ418rPk7R7TvvhBy2Z80JfJzacd+ACfUTkc
-LvyXiezQxZW4uLvvF+GVavI=
-=zl23
------END PGP SIGNATURE-----
