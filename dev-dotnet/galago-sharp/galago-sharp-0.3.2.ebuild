@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/galago-sharp-0.3.2.ebuild,v 1.2 2006/02/04 17:32:07 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/galago-sharp-0.3.2.ebuild,v 1.3 2006/02/08 23:47:05 spyderous Exp $
 
-inherit mono
+inherit eutils mono
 
 DESCRIPTION="Mono bindings to Galago"
 HOMEPAGE="http://galago-project.org"
