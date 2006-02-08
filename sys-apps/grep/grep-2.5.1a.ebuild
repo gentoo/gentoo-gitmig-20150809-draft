@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1a.ebuild,v 1.1 2006/02/07 01:37:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1a.ebuild,v 1.2 2006/02/08 01:36:50 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -74,6 +74,6 @@ src_install() {
 pkg_postinst() {
 	if has pcre ${USE} ; then
 		ewarn "This grep ebuild no longer supports pcre.  If you want this"
-		ewarn "functionality, please use 'pcregrep' from the pcre package."
+		ewarn "functionality, please use 'pcregrep' from the libpcre package."
 	fi
 }
