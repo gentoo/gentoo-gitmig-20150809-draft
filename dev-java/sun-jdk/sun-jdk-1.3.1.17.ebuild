@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.17.ebuild,v 1.2 2006/01/14 22:50:36 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.17.ebuild,v 1.3 2006/02/08 21:43:58 compnerd Exp $
 
 inherit java eutils
 
@@ -35,7 +35,7 @@ PROVIDE="virtual/jre
 	virtual/jdk"
 LICENSE="sun-bcla-java-vm"
 SLOT="1.3"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 RESTRICT="fetch stricter"
 
 IUSE="X doc browserplugin nsplugin mozilla"
