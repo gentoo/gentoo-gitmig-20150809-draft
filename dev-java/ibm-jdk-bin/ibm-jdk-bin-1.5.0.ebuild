@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.3 2006/01/21 16:18:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.4 2006/02/08 07:41:57 compnerd Exp $
 
 inherit java eutils
 
@@ -24,7 +24,23 @@ KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="fetch"
 
 DEPEND="virtual/libc
-	X? ( virtual/x11 )"
+		X? ( || (
+					(
+						x11-libs/libXt
+						x11-libs/libX11
+						x11-libs/libXtst
+						x11-libs/libXp
+						x11-libs/libXext
+						x11-libs/libSM
+						x11-libs/libICE
+						x11-libs/libXau
+						x11-libs/libXdmcp
+						x11-libs/libXi
+						x11-libs/libXmu
+					)
+					virtual/x11
+				)
+			)"
 RDEPEND="${DEPEND}"
 
 IUSE="X javacomm browserplugin mozilla"
