@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.27 2006/01/07 23:46:57 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.28 2006/02/08 01:07:57 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -107,8 +107,12 @@ horde_src_install() {
 	# Work-around when dealing with CVS sources
 	[[ ${EHORDE_CVS} = "true" ]] && cd ${HORDE_PN}
 
+	# Install docs and then delete them (except for CREDITS which
+	# many horde apps include in their help page #121003)
 	dodoc README docs/*
-	rm -rf COPYING LICENSE README docs
+	mv docs/CREDITS "${T}"/
+	rm -f COPYING LICENSE README docs/*
+	mv CREDITS "${T}"/docs/
 
 	dodir ${destdir}
 	cp -r . ${D}/${destdir}/ || die "install files"
