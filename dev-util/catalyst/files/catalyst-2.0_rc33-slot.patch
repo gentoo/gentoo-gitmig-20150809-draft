@@ -12,7 +12,7 @@ diff -urN catalyst-2.0_rc33.orig/catalyst catalyst-2.0_rc33/catalyst
  		"portdir":"/usr/portage","options":"",\
 -		"snapshot_cache":"/var/tmp/catalyst/snapshot_cache",\
 +		"snapshot_cache":"/var/tmp/catalyst2/snapshot_cache",\
- 		"hash_function":"crc33"}
+ 		"hash_function":"crc32"}
  		
  	# first, try the one passed (presumably from the cmdline)
 @@ -69,9 +69,9 @@
