@@ -1,27 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e67c3581719b0b274f340a3b6e0d1e2e ChangeLog 5055
-RMD160 6bbd51f8ee07796bb84d920442c933392567a6fa ChangeLog 5055
-SHA256 7413a6133900c7fde0401a17d2af7f056ba47da0017ad032bc705282c3723a94 ChangeLog 5055
-MD5 70141575b96009e82605b4f86fbe8758 files/digest-hwsetup-1.0-r3 64
-RMD160 b2ca2bd1d8cd86ad3fbf78a7a905f4ae82045e45 files/digest-hwsetup-1.0-r3 64
-SHA256 d2501b008ae106c1342712d44f1ab18a551dc858c2c0cfc9fe7e5a5ce5c57114 files/digest-hwsetup-1.0-r3 64
+MD5 62720154cb810de619b6cbee1491d684 ChangeLog 5311
+RMD160 3c8a7b040eb499967bbe55175fcc75a652e44b55 ChangeLog 5311
+SHA256 ba8b9c76e6a4dd7f5ed35cc5048a6a5a60928277d73433a5001571d4f74340aa ChangeLog 5311
 MD5 bc002ab4509c7c318c438f86d6005c71 files/digest-hwsetup-1.1 63
 RMD160 5acd6deb0b321f43a73af0931b25ad46e77e1826 files/digest-hwsetup-1.1 63
 SHA256 8968b4cce52fbfebc6f68ef9096671f7e5af03b806980679752982a2f24a55f5 files/digest-hwsetup-1.1 63
-MD5 eff6f85f9378f9f180386a7c34deb4c3 files/hwsetup-1.0-alsa.patch 3831
-RMD160 8d48faffcc15d96547cd8ff223ec1cf9056fcdb9 files/hwsetup-1.0-alsa.patch 3831
-SHA256 663b75fe83be688a2a1595ed984ac7f2d6631e6a7de0767a1bfd1c86fdfab2e1 files/hwsetup-1.0-alsa.patch 3831
-MD5 e7ecca0700ca86b29277e41635517e7b files/hwsetup-1.0-dyn_blacklist.patch 1895
-RMD160 c731fdfdc24132ef40ababc9e6238f5f685c3be6 files/hwsetup-1.0-dyn_blacklist.patch 1895
-SHA256 ef5747d031a79fe554af70488c223524afc28f686d2c23b3d638e5a23de61840 files/hwsetup-1.0-dyn_blacklist.patch 1895
-MD5 7f857bf4e30d36be2ac0f59e316dfa66 files/hwsetup-1.0-fastprobe.patch 3715
-RMD160 21a10adfaeaf6922d9a75b44253a28f49a3e22b2 files/hwsetup-1.0-fastprobe.patch 3715
-SHA256 f733148d403004741ab1b0340e74d48afc67d5cd83bf3153557eb011510347d2 files/hwsetup-1.0-fastprobe.patch 3715
-MD5 5899ca3d018df09b6e2851f3e8c2e294 files/hwsetup-1.0-gentoo.patch 3599
-RMD160 84d29f214223a1598c13ea22a973a8625fc8d86a files/hwsetup-1.0-gentoo.patch 3599
-SHA256 09a4430f91bd51d481d6138f0d646dcc4164e1da7ef51a9cf16f8cc503380e27 files/hwsetup-1.0-gentoo.patch 3599
 MD5 d374ea118a38b12a7372efa0eb41a3ad files/hwsetup-1.1-dyn_blacklist.patch 1978
 RMD160 523ca0c33b4877635a098ce0eb6139a3a3992007 files/hwsetup-1.1-dyn_blacklist.patch 1978
 SHA256 44f3ed169dfc4882d20ade009b747ce6bd04846b9b678979185e8d7c1ac07f6a files/hwsetup-1.1-dyn_blacklist.patch 1978
@@ -31,19 +13,9 @@ SHA256 156cbb40ea082a573d6913b6a12481ccb1ec7f0afe4638b6e29bdbf33b1a2dc1 files/hw
 MD5 ad0bc16bdb6e632f71a2768e270c9372 files/hwsetup-1.1-gentoo.patch 4249
 RMD160 d2579ab52220879030408bfbbd8bf304c5650cdd files/hwsetup-1.1-gentoo.patch 4249
 SHA256 3e5531d98e293c8c2c0d0107f6bfdcd9fe8f503da83882b2ec8defe2d93ec4cd files/hwsetup-1.1-gentoo.patch 4249
-MD5 b88b4fe4c5a2356db57388c9d4e1c5e0 hwsetup-1.0-r3.ebuild 984
-RMD160 88d08833297492221597cdca0a25fb55de39d718 hwsetup-1.0-r3.ebuild 984
-SHA256 4e2d6f17ff0ff4877122ad735f6160ce5859b01cc9bdb296beca20fcd6086a9f hwsetup-1.0-r3.ebuild 984
 MD5 af45045c8171379133dc4fc7820f4707 hwsetup-1.1.ebuild 1019
 RMD160 d9bab4541e100331c13f4cf7d32f6cf379874753 hwsetup-1.1.ebuild 1019
 SHA256 d7861c49c4773e50fea9cccbb8e4f6255693661b4b8b9b4a32a4244469934e61 hwsetup-1.1.ebuild 1019
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 RMD160 8db5ed254a6b9baf8f53368da9e71c5532a46073 metadata.xml 159
 SHA256 b6e17484225400d76c65d178bf5a10dc0a8da7f345993c2acc63d1093a77c90d metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6nmUJrHF4yAQTrARAgf5AKCiImsBuwIzQx6Akw8FGPWJZM12hgCfesWg
-lBg16QMPPJ4xz9Tau7osBAI=
-=tU5g
------END PGP SIGNATURE-----
