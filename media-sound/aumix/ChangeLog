@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.50 2006/01/22 04:58:03 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.51 2006/02/08 10:24:49 flameeyes Exp $
+
+*aumix-2.8-r4 (08 Feb 2006)
+
+  08 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/aumix-2.8-mute.patch, +aumix-2.8-r4.ebuild:
+  Added patch to fix mute script, bug #122087.
 
 *aumix-2.8-r3 (22 Jan 2006)
 
