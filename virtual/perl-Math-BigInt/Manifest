@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5cfcdc0855ee62b7415091ce0cc89d3d ChangeLog 606
+MD5 f5526233d338ec48ac3061172ff4ed10 ChangeLog 702
+RMD160 71353c0a60c4095d53e3ef4a1861fa271cd08778 ChangeLog 702
+SHA256 2afa5bded9b5b134431df479daf9f46dd3e210d2b536e1fdf8c265b90d76e6bd ChangeLog 702
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Math-BigInt-1.69 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Math-BigInt-1.69 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Math-BigInt-1.69 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Math-BigInt-1.70 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Math-BigInt-1.70 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Math-BigInt-1.70 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Math-BigInt-1.73 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Math-BigInt-1.73 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Math-BigInt-1.73 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Math-BigInt-1.77 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Math-BigInt-1.77 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Math-BigInt-1.77 0
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 MD5 36d22f0f96080f7ef996a5a490e0450e perl-Math-BigInt-1.69.ebuild 475
+RMD160 5bf15ea8a73cd9b5a1c235c7770faaa278714f3e perl-Math-BigInt-1.69.ebuild 475
+SHA256 f8b00baec0189952883b2d36afb49e6925dd364ef90761ad021b6f3553f8d40f perl-Math-BigInt-1.69.ebuild 475
 MD5 aa6f21702202abaab315e32fae919712 perl-Math-BigInt-1.70.ebuild 480
+RMD160 8fb475b45c2e16078e53ef6ceecd94584a93f750 perl-Math-BigInt-1.70.ebuild 480
+SHA256 234c79f60ce31be1891db920fe7adec35125af874292acea5a1251ee6093115f perl-Math-BigInt-1.70.ebuild 480
 MD5 199f6a6bb418d60f006d2fd3069bf21e perl-Math-BigInt-1.73.ebuild 468
-MD5 14a2626d28c0ebcc30ac99d9c4a21428 perl-Math-BigInt-1.77.ebuild 481
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD6IpJtG5z4I8BtQoRAhsaAKCPMAc0QCXUKCk3ObaRxWjeop2rqACfehpL
-fu2JWCaCD2Aerg2eUfJ4zjo=
-=cRJR
------END PGP SIGNATURE-----
+RMD160 b56ba8f945398ce5a7e738d4156cab7b2810d49b perl-Math-BigInt-1.73.ebuild 468
+SHA256 700be48f00b90ccf4bedb0a60180fb6086ad8c99b9707ea91f17894e54c46dbe perl-Math-BigInt-1.73.ebuild 468
+MD5 8aa8eaafbf1fea29fa4cab558f8d5fdf perl-Math-BigInt-1.77.ebuild 476
+RMD160 1b5e216b2a3fdd6863c17c9c645c0377dc40ae9e perl-Math-BigInt-1.77.ebuild 476
+SHA256 8cfb27a4f87c747be0f79214b0ce9376bc4562bf6d5e9c99cc6703353a6b2e75 perl-Math-BigInt-1.77.ebuild 476
