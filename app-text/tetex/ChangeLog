@@ -1,6 +1,13 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.110 2006/02/08 01:23:10 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.111 2006/02/08 21:15:41 ehmsen Exp $
+
+*tetex-3.0_p1-r2 (08 Feb 2006)
+
+  08 Feb 2006; Martin Ehmsen <ehmsen@gentoo.org> +tetex-3.0_p1-r2.ebuild:
+  Added tete-3.0_p1-r2 which removes now uses pkg_postinst from the eclasses.
+  It also pushes the changes made in the eclasses to fix bug #120515, #121811,
+  and possible many more.
 
   08 Feb 2006; Alexandre Buisse <nattfodd@gentoo.org>
   tetex-3.0_p1-r1.ebuild:
