@@ -1,6 +1,6 @@
 # ChangeLog for app-text/sary
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.20 2006/02/04 14:38:16 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.21 2006/02/08 20:41:50 tove Exp $
 
   04 Feb 2006; <solar@gentoo.org> :
   - redigest needed due to bad RMD160. bug #121124
@@ -17,7 +17,7 @@
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org> sary-1.2.0.ebuild:
   Mark 1.2.0 ~ia64
 
-  02 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org> sary-1.2.0.ebuild:
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> sary-1.2.0.ebuild:
   Stable on alpha.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> sary-1.2.0.ebuild:
