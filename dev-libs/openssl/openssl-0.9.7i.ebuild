@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7i.ebuild,v 1.10 2006/01/06 01:06:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7i.ebuild,v 1.11 2006/02/08 03:42:10 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz"
 LICENSE="openssl"
 SLOT="0"
 # make sure your arch is ABI compat before adding KEYWORD back in
-KEYWORDS="-* ~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="-* ~alpha ~amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86"
 IUSE="emacs test bindist zlib"
 
 RDEPEND=""
