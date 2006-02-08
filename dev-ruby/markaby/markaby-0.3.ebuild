@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/markaby-0.2.ebuild,v 1.1 2006/01/20 23:36:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/markaby-0.3.ebuild,v 1.1 2006/02/08 20:09:02 caleb Exp $
 
 inherit ruby gems
 
