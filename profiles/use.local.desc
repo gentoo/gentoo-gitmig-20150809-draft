@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1719 2006/02/07 01:21:10 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1720 2006/02/08 22:02:58 ticho Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -141,6 +141,7 @@ app-misc/workrave:noexperimental - Compile without experimental features
 app-mobilephone/gammu:irda - Enable infrared support
 app-mobilephone/gnokii:irda - Enable infrared support
 app-mobilephone/gnokii:sms - Enable SMS support
+app-mobilephone/obexftp:swig - Enable rebuild of swig bindings
 app-mobilephone/yaps:capi - Enable CAPI support
 app-mobilephone/yaps:slang - Enable SLang scripting support
 app-office/abiword-plugins:grammar - Enable grammar checking via grammar-link
