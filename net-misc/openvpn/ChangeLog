@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.72 2006/02/07 01:42:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.73 2006/02/08 11:18:52 uberlord Exp $
+
+  08 Feb 2006; Roy Marples <uberlord@gentoo.org> openvpn-2.0.5-r2.ebuild:
+  Marking stable on ppc-macos so I can punt older versions, #117111.
+  It's just an init script anyway, so shouldn't affect things.
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> openvpn-2.0.5-r2.ebuild:
   Mark 2.0.5-r2 stable on alpha
