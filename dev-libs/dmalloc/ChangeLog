@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.25 2005/11/29 03:55:06 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.26 2006/02/08 22:13:39 tove Exp $
 
   28 Nov 2005; Tom Gall <tgall@gentoo.org> dmalloc-5.4.2.ebuild:
   stable on ppc64
@@ -48,7 +48,7 @@
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
 
-  13 Sep 2004; Bryan Ãstergaard <kloeri@gentoo.org> dmalloc-5.3.0.ebuild:
+  13 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> dmalloc-5.3.0.ebuild:
   Add ~alpha keyword, bug 57485.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>

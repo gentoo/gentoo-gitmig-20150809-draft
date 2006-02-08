@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.26 2006/02/08 05:08:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.27 2006/02/08 22:18:43 tove Exp $
 
 *STLport-5.0.1 (08 Feb 2006)
 
@@ -13,7 +13,7 @@
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> +metadata.xml:
   Adding to cpp herd
 
-  23 Aug 2005; Diego PettenÃ² <flameeyes@gentoo.org> STLport-5.0_rc2.ebuild:
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> STLport-5.0_rc2.ebuild:
   Don't use cp -a.
 
   15 Jun 2005; Markus Rothe <corsair@gentoo.org> STLport-4.6.2-r2.ebuild:
