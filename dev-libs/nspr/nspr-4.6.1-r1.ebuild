@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.1-r1.ebuild,v 1.2 2006/01/30 17:40:58 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.1-r1.ebuild,v 1.3 2006/02/08 13:42:12 anarchy Exp $
 
 inherit eutils gnuconfig
 
@@ -24,6 +24,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gcc-visibility.patch
 	epatch "${DISTDIR}"/${P}-disable-gcc-ansi.patch.bz2
 	epatch "${FILESDIR}"/${P}-config.patch
+	epatch "${FILESDIR}"/${P}-lang.patch
 	gnuconfig_update
 }
 
