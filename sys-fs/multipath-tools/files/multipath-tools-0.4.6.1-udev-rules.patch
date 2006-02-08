@@ -1,0 +1,10 @@
+--- multipath-tools-0.4.6/multipath/multipath.rules.orig	2006-02-07 18:56:04.000000000 +0000
++++ multipath-tools-0.4.6/multipath/multipath.rules	2006-02-07 18:56:11.000000000 +0000
+@@ -16,7 +16,3 @@ ACTION=="add", SUBSYSTEM=="block", KERNE
+ ACTION=="add", SUBSYSTEM=="block", KERNEL=="dm-*", \
+ 	RUN+="/sbin/kpartx -a /dev/mapper/%c"
+ 
+-# insert new paths in multipath topology
+-ACTION=="add", SUBSYSTEM=="block", KERNEL!="dm-*", \
+-	RUN+="/sbin/multipath -v0 %r/%k"
+-

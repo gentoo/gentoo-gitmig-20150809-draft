@@ -1,21 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 648d28f7b9ba2ad52294df5c687d6205 ChangeLog 1568
-RMD160 83ad12c709ae69e6f7104ca127686c15491db623 ChangeLog 1568
-SHA256 172eec34cf9d1ee03724dda0cd5fa876abeeed69c1806c96f768c7aa76e8df32 ChangeLog 1568
+MD5 c90874f75fc1df709558384a879b8296 ChangeLog 1848
+RMD160 86ab851f00d89f739beffdab88a967b7b4c02cb4 ChangeLog 1848
+SHA256 ff08d47304a3bd43fda4c67f8c3af687cf4c7e8ec65cd66a73f86fb0d6cb088b ChangeLog 1848
 MD5 8e2673e3b0b4f9d3617e1138868a997d files/digest-multipath-tools-0.4.6 74
 RMD160 7890c7bb8955761ddbde072d6b0e65381a3cbf24 files/digest-multipath-tools-0.4.6 74
 SHA256 f8c43fec0cb475a0b64396b11fd1c71881a2546996aab31716a4839ad80164c8 files/digest-multipath-tools-0.4.6 74
 MD5 d2d722394bcb70bb5b8ea68d41b53d99 files/digest-multipath-tools-0.4.6.1 76
 RMD160 cb93ddf66f66df48dc3e0603410a8f3205489a63 files/digest-multipath-tools-0.4.6.1 76
 SHA256 10a0b202df6795f05faa2ef76c7d710992c22c89b36c75520f30cd0092a6a891 files/digest-multipath-tools-0.4.6.1 76
+MD5 3c87ecbe3c1d31b45aa83798b203a8f2 files/digest-multipath-tools-0.4.6.1-r1 274
+RMD160 f92fb520ee2743dc3cf8c5fb30976aa06984f230 files/digest-multipath-tools-0.4.6.1-r1 274
+SHA256 705d114d3a513522c085ca2fe5716bb91559d4e332538748f8011869a6f87c49 files/digest-multipath-tools-0.4.6.1-r1 274
+MD5 03c2a26ee058b1f021538b1b34fa3d91 files/multipath-tools-0.4.6.1-udev-rules.patch 469
+RMD160 486a10aa8e5f930bfc0ddabf6153d667de978d67 files/multipath-tools-0.4.6.1-udev-rules.patch 469
+SHA256 916a389699324f6bee303febfe105a2e73f6e3c6d9f15f2f0a44c7de06d1bfab files/multipath-tools-0.4.6.1-udev-rules.patch 469
 MD5 7cd2431a33f3bd590b824e48243b53dc files/rc-multipathd 503
 RMD160 dd089ece6f315da56b6f685f0b3c027ed80c09ad files/rc-multipathd 503
 SHA256 53739b9d2e8dc0887594275f6bd58dfbcf6e6df2605afc7a08dc14afe5bc7704 files/rc-multipathd 503
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 44def5072b3f477f3061f437b71424db multipath-tools-0.4.6.1-r1.ebuild 1775
+RMD160 872cfb7a7b45915b06ed04ed99bb282df645f088 multipath-tools-0.4.6.1-r1.ebuild 1775
+SHA256 ff76415d1cdbcb4cbf90cb7018c88421c1b9414974d30776a57508fb3cf50f7f multipath-tools-0.4.6.1-r1.ebuild 1775
 MD5 78f233ca871b17e2d5a08def242bcb09 multipath-tools-0.4.6.1.ebuild 1667
 RMD160 5c6cce2e919042054a25808e940e632ce285ab4b multipath-tools-0.4.6.1.ebuild 1667
 SHA256 cb376a62369032d168f0a29b8eb5b6501ae169be20686bff66bd6608aa643b81 multipath-tools-0.4.6.1.ebuild 1667
@@ -25,7 +34,7 @@ SHA256 b873e86e8705ce967506f2e3e4e64a91b7ec99cd8c0e0a944e51ca92d2d9311a multipat
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6T+A2+ySkm8kpY0RAmRoAKCCtz5xuULliGo99tsxI2OIGc6ZGQCgvkNk
-kbhLvZWv55yOaqndnTG0V6c=
-=7et+
+iD8DBQFD6gHgTOXg++0VvJQRAjcMAKCKTNQF4/TEYz2bQHbS61fH8x3YLgCfX745
+VrzD1QZn5Wc26TmQZzx5GdY=
+=dLQs
 -----END PGP SIGNATURE-----
