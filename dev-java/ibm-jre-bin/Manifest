@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 14b16e785d294e1e7eeaa85373d5f387 ChangeLog 3718
+MD5 c735acc971c95e66a1c4c2579c2dac0d ChangeLog 3824
+RMD160 b967937832eb69ff12aac41fbc0cf82fc5e79175 ChangeLog 3824
+SHA256 eef3fb342847cd8324223a64c9410255a35e8b828b7c7d5f1be496855cc43130 ChangeLog 3824
 MD5 2e39286179863d6cfd0686f84e4907f6 files/digest-ibm-jre-bin-1.4.2 211
-MD5 ff8386f4af589fbef49b02e720e1b8af files/digest-ibm-jre-bin-1.4.2.03 307
+RMD160 fa4e9aa4a2fca49896a14b9b58e350248ba982c2 files/digest-ibm-jre-bin-1.4.2 211
+SHA256 42ec24d0c42d41b382808683d88a767625bb197156600a2b8238db04a620bb6c files/digest-ibm-jre-bin-1.4.2 211
+MD5 0245416679d79331d7c033f5f9a0e8bf files/digest-ibm-jre-bin-1.4.2.03 1105
+RMD160 7321bb6d84092f86138a59259c1eefba00b0cd10 files/digest-ibm-jre-bin-1.4.2.03 1105
+SHA256 ca03d2127d72ba5f72151dea33836a82d8a2cab72ef71c7ee20b9d6925d136b8 files/digest-ibm-jre-bin-1.4.2.03 1105
 MD5 dbb65981559a5881a93e19de3dde0b7c files/ibm-jre-bin-1.4.2 681
+RMD160 72ca274266c37013cc8ce7b79d3cfda9322520e3 files/ibm-jre-bin-1.4.2 681
+SHA256 fefe0873cce6685684998299add6ccee8ec2dc8e04465115f804a15e62d106a0 files/ibm-jre-bin-1.4.2 681
 MD5 3936320d759d943aa19ad46d6e46b30c files/ibm-jre-bin-1.4.2.03 688
-MD5 3a088676edca8f31c87e1a0c645e7a6c ibm-jre-bin-1.4.2.03.ebuild 2869
+RMD160 9ee073f46381672c4f8800226d01a0cd4a0ab116 files/ibm-jre-bin-1.4.2.03 688
+SHA256 461205a91a985669cea68c9f70831efa7d4a374643b9eea6faf2c3280663167b files/ibm-jre-bin-1.4.2.03 688
+MD5 6f8a5150144c4306390ff4d4b1c59fca ibm-jre-bin-1.4.2.03.ebuild 3145
+RMD160 b36c2b05df4c828238af21aff566575c2b07f154 ibm-jre-bin-1.4.2.03.ebuild 3145
+SHA256 86947dc3c166ae89e27e8e5a2a82aacb5bcd06f9124f590e0ef57d6149d34ac6 ibm-jre-bin-1.4.2.03.ebuild 3145
 MD5 cb942fcb638c92d375eb91869a8454b9 ibm-jre-bin-1.4.2.ebuild 2177
+RMD160 f0b690a5383d6cf20f6041380f59cbc7db26edc7 ibm-jre-bin-1.4.2.ebuild 2177
+SHA256 30ab1217eb8ea9de8be4fca96b332231b85511431f07c6328d310a1f05523fd6 ibm-jre-bin-1.4.2.ebuild 2177
 MD5 fb2a9b7b6110f3fc99c228068cac96b8 metadata.xml 284
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1YB/ndWRXhKOboURAtOrAKCo60yLkEWFdY7Qzkb6FlZeTQ1nCwCgqZHK
-G9UgaxbIwOKgE3LMbi0rd6k=
-=ppAy
------END PGP SIGNATURE-----
+RMD160 0ab71be4482c89456bfd0d9f472272a0e80c33ca metadata.xml 284
+SHA256 c0538c7a4134f6bfc29f93ebf259d53d8123b5eccdacd8f09bef9e6b18ee4bcd metadata.xml 284

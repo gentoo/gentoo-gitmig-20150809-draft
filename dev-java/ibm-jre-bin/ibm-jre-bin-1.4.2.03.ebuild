@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.03.ebuild,v 1.3 2006/01/23 14:27:44 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.03.ebuild,v 1.4 2006/02/08 08:40:33 compnerd Exp $
 
 inherit java eutils
 
@@ -27,11 +27,27 @@ SRC_URI="x86? ( IBMJava2-JRE-142-SR3.tgz )
 
 LICENSE="IBM-J1.4"
 SLOT="1.4"
-KEYWORDS="-* ~amd64 ppc ~ppc64 ~x86"
+KEYWORDS="-* ~amd64 ppc ~ppc64 x86"
 IUSE="X nsplugin"
 
 DEPEND="virtual/libc
-		X? ( virtual/x11 )"
+		X? ( || (
+					(
+						x11-libs/libXt
+						x11-libs/libX11
+						x11-libs/libXtst
+						x11-libs/libXp
+						x11-libs/libXext
+						x11-libs/libSM
+						x11-libs/libICE
+						x11-libs/libXau
+						x11-libs/libXdmcp
+						x11-libs/libXi
+						x11-libs/libXmu
+					)
+					virtual/x11
+				)
+			)"
 RDEPEND="${DEPEND}
 		 !ppc64? ( !amd64? ( sys-libs/lib-compat ) )"
 
