@@ -1,18 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cd57cb2316516352704c6b6ae3035cc5 ChangeLog 949
+MD5 1c251bb8623d153e33a96321e91fa291 ChangeLog 1096
+RMD160 de733002f1539ea4fdace690cbacf384225d349f ChangeLog 1096
+SHA256 dd89ace041d8ec78e88d8015a6d72459deb747344bbd710285fb6e3b5c8b7c66 ChangeLog 1096
 MD5 8ab1c501fda1db4fbdaa3a452d1ad025 files/digest-simpletal-3.11 65
+RMD160 102a0e285b97f33442bb9251788ebb09cd806df3 files/digest-simpletal-3.11 65
+SHA256 f177a91bb1d7ed7b2c355008a56122f7df706acf799b6b63b633b0c5a2384238 files/digest-simpletal-3.11 65
 MD5 c9162c32bb56331e09f1a327128d088c files/digest-simpletal-3.13 65
+RMD160 5bfd74b2bf5e81d8857e66f1c68fb8c4d5a57afd files/digest-simpletal-3.13 65
+SHA256 100a778873241ecda8a6763fbf6aa11eed62c7d60f5155b16067d26add8557a5 files/digest-simpletal-3.13 65
 MD5 6087cc9e8740414f14c5d41646acc8ae files/digest-simpletal-3.9 64
+RMD160 05427c3708875a3fe5d706266647a98b89c1ab49 files/digest-simpletal-3.9 64
+SHA256 ffca54f7d3f6f35e64ecf32164fb134355d7757b3d9305c87b5fc0efa8ca1c63 files/digest-simpletal-3.9 64
+MD5 79a84f4c36dcf530d1bbbb61d730be0a files/digest-simpletal-4.0 238
+RMD160 8a38ccd75309884e92fe64f6e9fc69cd8a6496ca files/digest-simpletal-4.0 238
+SHA256 e1a42169cfde2fe4efc88d1e893eef94b170255d81ce21d7c8cf1103e0c7c60a files/digest-simpletal-4.0 238
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
+SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
 MD5 deaa3ac7205238ca4e22111006a8a143 simpletal-3.11.ebuild 1302
+RMD160 73fcf68408ef014e028dac5b9591a9e3867add76 simpletal-3.11.ebuild 1302
+SHA256 96bf5414d509b9e6d1551337f1f162b44f63476517a9e355d57cf0969e9009f3 simpletal-3.11.ebuild 1302
 MD5 4678515f2e9786192424fcf919eb96be simpletal-3.13.ebuild 1300
+RMD160 252987371f250a5eb450f4fd00d101c3bda98621 simpletal-3.13.ebuild 1300
+SHA256 925d7374138c1c9de82eccc0e102258bc8d3056888d81997e60eb860726ade37 simpletal-3.13.ebuild 1300
 MD5 905592d18249144fb292194dc265111e simpletal-3.9.ebuild 1262
+RMD160 6737eacb9c37a688f4f9d8916fb7df8a9212cabc simpletal-3.9.ebuild 1262
+SHA256 3149026ab85733b7e7195f53f47b7eadf06b05549a6c52251f152ce445f5ef45 simpletal-3.9.ebuild 1262
+MD5 32d7c0603747c186b12d29a3d6cf3aa4 simpletal-4.0.ebuild 1361
+RMD160 d599f7923c552206cb4763da53768e4023869d02 simpletal-4.0.ebuild 1361
+SHA256 5ccac5f9167f3eebca8b97e9328baf432ebd0cccaac6cdd73eca048b22cc8dce simpletal-4.0.ebuild 1361
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUs/mKf2g/qXtneoRAq1qAKC44EQJpkvncrAXvgE16BSZveHcdQCdF7RA
-67hsVKRusTcdb06RwfQu4G4=
-=G0YD
+iD8DBQFD6eYeW78445TWHXcRAjlAAJ0WtUDlj1PqOOb34WSv/q/nxFgedgCdFxpa
+FoYJnCcsETo89K1m+UBdKtc=
+=5Ge9
 -----END PGP SIGNATURE-----
