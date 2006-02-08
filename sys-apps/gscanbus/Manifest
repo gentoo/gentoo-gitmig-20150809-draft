@@ -1,5 +1,25 @@
-MD5 282676cd08215159a6db590f81d68689 gscanbus-0.7.1.ebuild 784
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7c4becfb40369dae7b1d0191dd101dfe ChangeLog 952
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 325a51d833e143f51cccb972b4114b3b files/gscanbus-0.71-gcc33.patch 1054
+RMD160 4a3c3fb410467c797e51b6ca2d60bcf67fdef3bf ChangeLog 952
+SHA256 07945e21aeee4dc76218ef735bcc0d6a291225e9053722ee408c7b37c2b8a2a9 ChangeLog 952
 MD5 07de4a00e351e05697644561222458a4 files/digest-gscanbus-0.7.1 63
+RMD160 cf0d40d8b73146d7cf0789b54bcbc59c6bef779c files/digest-gscanbus-0.7.1 63
+SHA256 6b8f37fa9d79b2d7e64480677c9450e613939af69aec0c36c8de7b0cfe399867 files/digest-gscanbus-0.7.1 63
+MD5 325a51d833e143f51cccb972b4114b3b files/gscanbus-0.71-gcc33.patch 1054
+RMD160 1ec000b2adda6e09decb062ef596feefeb40efcb files/gscanbus-0.71-gcc33.patch 1054
+SHA256 d54bc5e8283ff2cd01f1c920f1431aeebbe49565cd2c417b492d0158d52e2a13 files/gscanbus-0.71-gcc33.patch 1054
+MD5 ece3a6e25a999b7974ec58f9d6ac6388 gscanbus-0.7.1.ebuild 777
+RMD160 9b7c2cb769ad5b875449e6135ab91269a97b2656 gscanbus-0.7.1.ebuild 777
+SHA256 a549d11532663d181442c0ae46b6c7145b1f0c2c8d80d81fb5f7ddaf38848c1b gscanbus-0.7.1.ebuild 777
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6T/82+ySkm8kpY0RArOUAKC1ENn5aLmqIciOm55QVWX0o/EJeACeOQlT
+00CRE2+OEhBSb3m1fdLYkps=
+=2qCe
+-----END PGP SIGNATURE-----
