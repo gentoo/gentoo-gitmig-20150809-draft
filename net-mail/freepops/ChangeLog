@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/freepops
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.18 2005/12/02 23:54:10 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.19 2006/02/08 21:55:14 dragonheart Exp $
+
+*freepops-0.0.97 (08 Feb 2006)
+
+  08 Feb 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/freepops-0.0.97-system-lua.patch, +freepops-0.0.97.ebuild:
+  version bump
 
 *freepops-0.0.96 (02 Dec 2005)
 

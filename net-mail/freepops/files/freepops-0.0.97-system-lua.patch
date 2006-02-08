@@ -1,0 +1,199 @@
+Only in freepops-0.0.97.nosystemlua/: config
+diff -ru freepops-0.0.97/modules/modules freepops-0.0.97.nosystemlua/modules/modules
+--- freepops-0.0.97/modules/modules	2006-01-13 10:47:33.000000000 +1100
++++ freepops-0.0.97.nosystemlua/modules/modules	2006-02-09 00:56:24.000000000 +1100
+@@ -1,4 +1,4 @@
+-MODULES-Common= lua		\
++MODULES-Common= 		\
+ 		luacompat	\
+ 		luay		\
+ 		luabind 	\
+diff -ru freepops-0.0.97/modules/src/base64_lua/base64_lua.c freepops-0.0.97.nosystemlua/modules/src/base64_lua/base64_lua.c
+--- freepops-0.0.97/modules/src/base64_lua/base64_lua.c	2006-01-14 08:46:54.000000000 +1100
++++ freepops-0.0.97.nosystemlua/modules/src/base64_lua/base64_lua.c	2006-02-09 09:11:55.000000000 +1100
+@@ -15,7 +15,7 @@
+ #include <string.h>
+ #include <stdlib.h>
+ 
+-#include "lua.h"
++#include <lua.h>
+ #include "lauxlib.h"
+ #include "base64.h"
+ #include "compat-5.1.h"
+diff -ru freepops-0.0.97/modules/src/crypto_lua/crypto_lua.c freepops-0.0.97.nosystemlua/modules/src/crypto_lua/crypto_lua.c
+--- freepops-0.0.97/modules/src/crypto_lua/crypto_lua.c	2006-01-14 08:46:54.000000000 +1100
++++ freepops-0.0.97.nosystemlua/modules/src/crypto_lua/crypto_lua.c	2006-02-09 09:11:55.000000000 +1100
+@@ -13,7 +13,7 @@
+  * 	Name <gareuselesinge@users.sourceforge.net>
+  ******************************************************************************/
+ 
+-#include "lua.h"
++#include <lua.h>
+ #include "luabind.h"
+ #include "lauxlib.h"
+ #include "compat-5.1.h"
+diff -ru freepops-0.0.97/modules/src/luafull/Makefile freepops-0.0.97.nosystemlua/modules/src/luafull/Makefile
+--- freepops-0.0.97/modules/src/luafull/Makefile	2005-06-09 00:57:12.000000000 +1000
++++ freepops-0.0.97.nosystemlua/modules/src/luafull/Makefile	2006-02-09 00:56:24.000000000 +1100
+@@ -111,7 +111,6 @@
+ #		  $(RANLIB) ../../lib/liblualib-host.a )
+ 	$(H)($(RANLIB) ../../lib/liblua-host.a; \
+ 		$(RANLIB) ../../lib/liblualib-host.a; \
+-		$(RANLIB) ../../lib/liblua.a; \
+ 		$(RANLIB) ../../lib/libluaexpat.a; \
+ 		$(RANLIB) ../../lib/libgetdate.a; \
+ 	        $(RANLIB) ../../lib/libluafilesystem.a	)
+diff -ru freepops-0.0.97/modules/src/luafull/lua.c freepops-0.0.97.nosystemlua/modules/src/luafull/lua.c
+--- freepops-0.0.97/modules/src/luafull/lua.c	2004-11-17 02:25:38.000000000 +1100
++++ freepops-0.0.97.nosystemlua/modules/src/luafull/lua.c	2006-02-09 09:11:55.000000000 +1100
+@@ -12,7 +12,7 @@
+ 
+ #define lua_c
+ 
+-#include "lua.h"
++#include <lua.h>
+ 
+ #include "lauxlib.h"
+ #include "lualib.h"
+diff -ru freepops-0.0.97/modules/src/luay/luay.c freepops-0.0.97.nosystemlua/modules/src/luay/luay.c
+--- freepops-0.0.97/modules/src/luay/luay.c	2005-06-30 02:26:22.000000000 +1000
++++ freepops-0.0.97.nosystemlua/modules/src/luay/luay.c	2006-02-09 09:11:55.000000000 +1100
+@@ -16,7 +16,7 @@
+ #include <math.h>
+ #include <string.h>
+ 
+-#include "lua.h"
++#include <lua.h>
+ #include "luay.h"
+ 
+ #define LINE_PREFIX "LUAY: "
+diff -ru freepops-0.0.97/modules/src/mlex_lua/mlex_lua.c freepops-0.0.97.nosystemlua/modules/src/mlex_lua/mlex_lua.c
+--- freepops-0.0.97/modules/src/mlex_lua/mlex_lua.c	2006-01-13 22:52:38.000000000 +1100
++++ freepops-0.0.97.nosystemlua/modules/src/mlex_lua/mlex_lua.c	2006-02-09 09:11:55.000000000 +1100
+@@ -1,7 +1,7 @@
+ #include <string.h>
+ #include <stdlib.h>
+ 
+-#include "lua.h"
++#include <lua.h>
+ #include "lauxlib.h"
+ #include "mlex.h"
+ #include "list.h"
+diff -ru freepops-0.0.97/modules/src/portablesocket_lua/psock_lua.c freepops-0.0.97.nosystemlua/modules/src/portablesocket_lua/psock_lua.c
+--- freepops-0.0.97/modules/src/portablesocket_lua/psock_lua.c	2006-01-14 08:46:54.000000000 +1100
++++ freepops-0.0.97.nosystemlua/modules/src/portablesocket_lua/psock_lua.c	2006-02-09 09:11:55.000000000 +1100
+@@ -16,7 +16,7 @@
+ #include <string.h>
+ #include <stdlib.h>
+ 
+-#include "lua.h"
++#include <lua.h>
+ #include "lauxlib.h"
+ #include "socketcommon.h"
+ #include "luabind.h"
+diff -ru freepops-0.0.97/modules/src/regularexp_lua/regularexp_lua.c freepops-0.0.97.nosystemlua/modules/src/regularexp_lua/regularexp_lua.c
+--- freepops-0.0.97/modules/src/regularexp_lua/regularexp_lua.c	2006-01-14 08:46:55.000000000 +1100
++++ freepops-0.0.97.nosystemlua/modules/src/regularexp_lua/regularexp_lua.c	2006-02-09 09:11:55.000000000 +1100
+@@ -20,7 +20,7 @@
+ #endif
+ #include <regex.h>
+ 
+-#include "lua.h"
++#include <lua.h>
+ #include "lauxlib.h"
+ 
+ #include "luabind.h"
+diff -ru freepops-0.0.97/modules/src/stringhack_lua/stringhack_lua.c freepops-0.0.97.nosystemlua/modules/src/stringhack_lua/stringhack_lua.c
+--- freepops-0.0.97/modules/src/stringhack_lua/stringhack_lua.c	2006-01-14 08:46:55.000000000 +1100
++++ freepops-0.0.97.nosystemlua/modules/src/stringhack_lua/stringhack_lua.c	2006-02-09 09:11:55.000000000 +1100
+@@ -15,7 +15,7 @@
+ #include <string.h>
+ #include <stdlib.h>
+ 
+-#include "lua.h"
++#include <lua.h>
+ #include "lauxlib.h"
+ #include "lstringhack.h"
+ 
+diff -ru freepops-0.0.97/src/Makefile freepops-0.0.97.nosystemlua/src/Makefile
+--- freepops-0.0.97/src/Makefile	2006-01-13 10:36:39.000000000 +1100
++++ freepops-0.0.97.nosystemlua/src/Makefile	2006-02-09 09:19:14.000000000 +1100
+@@ -41,8 +41,8 @@
+ #	CFLAGS+= -DFREEPOPSLUA_PATH_UNOFFICIAL=\"$HOME/config/settings/freepops/lua_unofficial/\"
+ #
+ #else
+-	CFLAGS+= -DFREEPOPSLUA_PATH=\"$(PREFIX)share/freepops/lua/\"
+-	CFLAGS+= -DFREEPOPSLUA_PATH_UNOFFICIAL=\"$(PREFIX)share/freepops/lua_unofficial/\"
++	CFLAGS+= -DFREEPOPSLUA_PATH=\"/usr/share/freepops/lua/\"
++	CFLAGS+= -DFREEPOPSLUA_PATH_UNOFFICIAL=\"/usr/share/freepops/lua_unofficial/\"
+ #endif
+ endif
+ endif
+@@ -92,9 +92,7 @@
+ 		luaexpat	\
+ 		luafilesystem	\
+                 luay            \
+-		luacompat-5.1	\
+-                lua             \
+-                lualib          
++		luacompat-5.1
+ 		
+ EXCLUDELIBS=	serialize_lua \
+ 		browser_lua \
+@@ -102,7 +100,7 @@
+ 		
+ LIBSTOLINK=$(filter-out $(EXCLUDELIBS),$(LIBS))
+ 
+-LDFLAGS=$(FORCE_LINK)
++LDFLAGS=$(FORCE_LINK) -llua -llualib
+ 		
+ ifeq "$(OS)" "Windows"
+   ifeq "$(SSL)" "openssl"
+diff -ru freepops-0.0.97/src/engine.c freepops-0.0.97.nosystemlua/src/engine.c
+--- freepops-0.0.97/src/engine.c	2006-01-16 06:43:15.000000000 +1100
++++ freepops-0.0.97.nosystemlua/src/engine.c	2006-02-09 09:11:55.000000000 +1100
+@@ -24,7 +24,7 @@
+ #include "popserver.h"
+ #include "popstate.h"
+ 
+-#include "lua.h"
++#include <lua.h>
+ #include "lualib.h"
+ #include "lauxlib.h"
+ #include "luay.h"
+diff -ru freepops-0.0.97/src/engine.h freepops-0.0.97.nosystemlua/src/engine.h
+--- freepops-0.0.97/src/engine.h	2005-06-30 02:26:27.000000000 +1000
++++ freepops-0.0.97.nosystemlua/src/engine.h	2006-02-09 09:11:55.000000000 +1100
+@@ -19,7 +19,7 @@
+ 
+ #include "popserver.h"
+ #include "popstate.h"
+-#include "lua.h"
++#include <lua.h>
+ 
+ /**
+  * \brief this struct is the implementation of webmail access
+diff -ru freepops-0.0.97/src/freepops.c freepops-0.0.97.nosystemlua/src/freepops.c
+--- freepops-0.0.97/src/freepops.c	2006-01-16 06:43:15.000000000 +1100
++++ freepops-0.0.97.nosystemlua/src/freepops.c	2006-02-09 09:11:55.000000000 +1100
+@@ -61,7 +61,7 @@
+ #include "altsocklib.h"
+ #include "regularexp.h"
+ 
+-#include "lua.h"
++#include <lua.h>
+ #include "luay.h"
+ #include "luabox.h"
+ #include "lauxlib.h"
+diff -ru freepops-0.0.97/src/luabox.c freepops-0.0.97.nosystemlua/src/luabox.c
+--- freepops-0.0.97/src/luabox.c	2005-06-11 10:28:11.000000000 +1000
++++ freepops-0.0.97.nosystemlua/src/luabox.c	2006-02-09 09:11:55.000000000 +1100
+@@ -13,7 +13,7 @@
+  * 	Enrico Tassi <gareuselesinge@users.sourceforge.net>
+  ******************************************************************************/
+ 
+-#include "lua.h"
++#include <lua.h>
+ #include "lualib.h"
+ #include "lauxlib.h"
+ #include "luay.h"
