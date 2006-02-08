@@ -1,18 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0968c663f776c9e0bd1609b899526f8d ChangeLog 4463
-MD5 1d6220f156b7733fc0579d4a35719837 files/digest-phpldapadmin-0.9.7 70
-MD5 3a0747741c9ccb68abaf6c1a97389b48 files/digest-phpldapadmin-0.9.8 70
+MD5 4542939c3e908f89e9db93b0f87fe6f3 ChangeLog 4583
+RMD160 d76ba42d43be2d485cd6ea85f869173c9ea7bfc7 ChangeLog 4583
+SHA256 9ae43d7dc0233d8abdbf63fa8dc6e4e4fe42d0ec3913df3172bdc87bc0e8fd24 ChangeLog 4583
+MD5 40643f9becbb5569c5c9823f6a18fd41 files/digest-phpldapadmin-0.9.7 256
+RMD160 7d3536eb770ae3714633986481590454c14da7c1 files/digest-phpldapadmin-0.9.7 256
+SHA256 0f5417e3cf656d8cc468fe3418094fa26abd3fc4560f39023d724ec60fafe033 files/digest-phpldapadmin-0.9.7 256
+MD5 9037038708ade1a71a0ceba5ff7a1e4e files/digest-phpldapadmin-0.9.8 256
+RMD160 f51986603c1a94c8051e0503cdae6ac415fbef8b files/digest-phpldapadmin-0.9.8 256
+SHA256 bc7f6efce12f621959b92519ee3fe39996da1dd9d4353f02ac50cd4882c79afe files/digest-phpldapadmin-0.9.8 256
 MD5 306450e12d7022d610333cf736164286 files/postinstall-en.txt 124
+RMD160 e149752fac0e736d9615c6116bb659bce87b8d4e files/postinstall-en.txt 124
+SHA256 5af1e0d4611ee15d3996e4847555b2fbe22f4cf264f0a41982b4cbbcce31e9f6 files/postinstall-en.txt 124
 MD5 d1ff22c7d7576d337ecf17671a2e9672 files/postinstall2-en.txt 131
+RMD160 f1f681b3b5094f555e6adfca8d70d4ca1b14ae4b files/postinstall2-en.txt 131
+SHA256 e2dc7bea366789a303eb9a90d1bced655cea00469202859af40bf19c00505d38 files/postinstall2-en.txt 131
 MD5 2b9f3758019e1a5695a4e4d3e3152383 metadata.xml 275
-MD5 95d450e76e90b413b218432e0b7483ad phpldapadmin-0.9.7.ebuild 941
-MD5 d2d96db28d3c4d099e345eee5d298974 phpldapadmin-0.9.8.ebuild 881
+RMD160 9887101457ce2eaf3aff6b3db3b9d30e4315342d metadata.xml 275
+SHA256 608eb068385dacc92c20a04bee69d80e04dd3b6c9627a0ebf48e63674da81434 metadata.xml 275
+MD5 4df2c044b8f772a4dbcc3d9812a1582c phpldapadmin-0.9.7.ebuild 959
+RMD160 ffd33b05ff0f85dacbd1ffef66ea4177a08b3589 phpldapadmin-0.9.7.ebuild 959
+SHA256 fe4a357ae21e512acab4e559ba84e6f473228d1a7c361804dc758b003362b42d phpldapadmin-0.9.7.ebuild 959
+MD5 0c3274464ed718e06f2cdfcf5f9e0636 phpldapadmin-0.9.8.ebuild 899
+RMD160 b13dff0922947a70d9ae50ec7d64555bf58a7eb6 phpldapadmin-0.9.8.ebuild 899
+SHA256 8f97aaedc25179356609a5fca54e4e88a0dea6890aceea4e87caa3bbbc7ce30b phpldapadmin-0.9.8.ebuild 899
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD526VEzitwsaoONoRAjD5AJ9z4cOZCiK2qy8maZXxnU7lcIc46ACgjIhN
-i4cYFWmGq5YZahvqtx838Vc=
-=gRou
+iD8DBQFD6ix6EzitwsaoONoRAhWlAJ0Vl24VUNE1kISoKRn+ABdaf07rjgCggc46
+oYO2X3v6I+2LUTBhywhFOVg=
+=cuuS
 -----END PGP SIGNATURE-----

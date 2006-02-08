@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.7.ebuild,v 1.4 2006/02/06 15:42:37 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.7.ebuild,v 1.5 2006/02/08 17:37:52 rl03 Exp $
 
 inherit webapp versionator depend.php
 
@@ -16,6 +16,7 @@ IUSE=""
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
+	webapp_pkg_setup
 	require_php_with_use pcre
 }
 
