@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r5.ebuild,v 1.8 2005/07/12 04:33:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r5.ebuild,v 1.9 2006/02/08 15:23:28 kanaka Exp $
 
 inherit eutils toolchain-funcs
 
@@ -35,6 +35,13 @@ src_unpack() {
 		-e "s:install -s:install:" \
 		src/Makefile.in \
 		openvt/Makefile
+
+	if tc-is-cross-compiler; then
+		tc-export CC
+		# Cross-compiling: don't run test programs
+		sed -i -e "s:&& ./conftest::" configure || \
+			die "Could not do sed configure for cross-compile"
+	fi
 
 	# Other patches from RH
 	epatch "${FILESDIR}"/${PN}-1.08-terminal.patch
