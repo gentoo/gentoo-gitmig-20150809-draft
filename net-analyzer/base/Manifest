@@ -1,4 +1,6 @@
-MD5 a2dfb8eb019992d2ad6d075e7ecdc6b8 ChangeLog 443
+MD5 5340308182d4b141b7a4a40abc660688 ChangeLog 703
+MD5 b04a272b2442dec3197620a6109a39c2 base-1.2.2-r1.ebuild 6984
 MD5 0ba0e1bc6cfc8814547bbb8044f80959 base-1.2.2.ebuild 5380
 MD5 77fbc27f48861086583a887fc3fb47c4 files/digest-base-1.2.2 62
+MD5 77fbc27f48861086583a887fc3fb47c4 files/digest-base-1.2.2-r1 62
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
