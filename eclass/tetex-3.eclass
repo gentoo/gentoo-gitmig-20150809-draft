@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.11 2006/02/06 18:00:39 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.12 2006/02/08 21:18:56 ehmsen Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -168,6 +168,18 @@ tetex-3_pkg_preinst() {
 	ewarn "Removing ${ROOT}usr/share/texmf/web2c"
 	rm -rf "${ROOT}usr/share/texmf/web2c"
 
+	# take care of symlinks problems, see bug 120515
+	# this can be removed when that is not an issue anymore
+	# i.e., all users with problem has got them fixed
+	for conf in updmap.d/00updmap.cfg texmf.d/00texmf.cnf fmtutil.d/00fmtutil.cnf
+	do
+		if [ -L "${ROOT}etc/texmf/${conf}" ]
+		then
+			ewarn "Removing ${ROOT}etc/texmf/${conf}"
+			rm -f "${ROOT}etc/texmf/${conf}"
+		fi
+	done
+
 	# take care of config protection, upgrade from <=tetex-2.0.2-r4
 	for conf in updmap.cfg texmf.cnf fmtutil.cnf
 	do
@@ -180,12 +192,5 @@ tetex-3_pkg_preinst() {
 }
 
 tetex-3_pkg_postinst() {
-
-	if [ "$ROOT" = "/" ] ; then
-		/usr/sbin/texmf-update
-	fi
-	einfo
-	einfo "If you have configuration files in /etc/texmf to merge,"
-	einfo "please update them and run /usr/sbin/texmf-update."
-	einfo
+	tetex_pkg_postinst
 }
