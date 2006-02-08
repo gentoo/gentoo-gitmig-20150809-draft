@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.19.ebuild,v 1.8 2006/01/09 18:14:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.19.ebuild,v 1.9 2006/02/08 06:26:44 vapier Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils autotools
 
 DESCRIPTION="EXT2 and EXT3 filesystem resizing utilities"
 HOMEPAGE="http://ext2resize.sourceforge.net/"
@@ -23,7 +23,8 @@ src_unpack() {
 	make -k distclean >& /dev/null
 	sed -i '/^CFLAGS/d' src/Makefile.in
 
-	epatch ${FILESDIR}/${P}-linux26.patch
+	epatch "${FILESDIR}"/${P}-build.patch
+	eautoreconf || die
 }
 
 src_compile() {

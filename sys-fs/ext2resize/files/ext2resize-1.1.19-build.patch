@@ -1,0 +1,20 @@
+Fixup autotool stuff
+
+--- configure.in
++++ configure.in
+@@ -25,6 +25,7 @@
+ AC_CHECK_TYPE(__u16, u_int16_t)
+ AC_CHECK_TYPE(__s32, int32_t)
+ AC_CHECK_TYPE(__u32, u_int32_t)
++AC_CHECK_TYPE(__u64, u_int64_t)
+ AC_CHECK_TYPE(loff_t, unsigned)
+ 
+ dnl Checks for library functions.
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -27,4 +27,4 @@
+ 
+ LIBS = @LIBS@
+ 
+-CFLAGS += -Wall -g
++AM_CFLAGS = -Wall
