@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.15 2006/02/08 16:17:52 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.16 2006/02/08 21:25:53 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -493,7 +493,6 @@ mysql_src_install() {
 	mkdir -p "${D}/var/lib/eselect/mysql/"
 	local filelist="${D}/var/lib/eselect/mysql/mysql${MY_SUFFIX}.filelist"
 	pushd "${D}/" &>/dev/null
-		mkdir -p "${ROOT}/var/lib/eselect/mysql/"
 		env -i find usr/bin/ usr/sbin/ usr/share/man \
 			-type f -name "*${MY_SUFFIX}*" \
 			-and -not -name "mysql_config${MY_SUFFIX}" \
