@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liboil
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.26 2006/02/04 18:51:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.27 2006/02/08 13:31:14 zaheerm Exp $
+
+  08 Feb 2006; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/liboil-0.3.7-convfix.diff, liboil-0.3.7.ebuild:
+  fix compile on ppc, fixes bug
 
   04 Feb 2006; Aron Griffis <agriffis@gentoo.org> liboil-0.3.6.ebuild:
   Mark 0.3.6 stable on alpha

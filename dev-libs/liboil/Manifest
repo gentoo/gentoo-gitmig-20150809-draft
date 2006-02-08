@@ -1,64 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f37408e6dbb665a989e03590a10a7d3b ChangeLog 3186
-RMD160 5d0854223b9defc72aa5d17187a9aa5d02347edb ChangeLog 3186
-SHA256 9c8b317cf58f72c925153f7ade874123cdaccb88706690f1c14e1c80d3bed827 ChangeLog 3186
-MD5 9224d2f16c82093310f3ec19f52c3ef3 files/digest-liboil-0.2.0 64
-RMD160 a9c46a890cdcef2c1b55b59ba23a3749edaa7276 files/digest-liboil-0.2.0 64
-SHA256 8f3cfb43fb74ffdd0acfe5f64e56fd26412c7eb30b80a3ce1854e92d0af1c9dc files/digest-liboil-0.2.0 64
-MD5 d136c393a4dd1c5b99a077392d18a736 files/digest-liboil-0.2.2 64
-RMD160 c8ab68ca65cd3303797e4849ac91e36ec10b6236 files/digest-liboil-0.2.2 64
-SHA256 31a7c66b13291789191b8028d5a269500ffb1dbbbc6fcd71b86148862405cb6b files/digest-liboil-0.2.2 64
-MD5 c591a24be696fc694c3d4086d456e348 files/digest-liboil-0.3.1 64
-RMD160 c686eff6b19033c1ae897c67d6e94b37319fcf2e files/digest-liboil-0.3.1 64
-SHA256 3b163ac1dce5135c6b62f7b6b58838769823573605c37576a225c36a22e95d1a files/digest-liboil-0.3.1 64
-MD5 9f9ac8781bf99137b62d0b900841f690 files/digest-liboil-0.3.2 64
-RMD160 d917e23b23250b1927683dfd3e414950321241a2 files/digest-liboil-0.3.2 64
-SHA256 c4146bacb7cf8788273d9a160f9b625ece74a5c578f2b2661655baf0787f9f5b files/digest-liboil-0.3.2 64
-MD5 c46a0f288b4d7eb57da87d77decc42dc files/digest-liboil-0.3.3 64
-RMD160 d6d5140a6e237ffcb5cc7ede84c228f8fa8a7ccf files/digest-liboil-0.3.3 64
-SHA256 fb1b624faaa416439124e605bd846193aa6639a2a9d3a7fda43c6ff0d14b2c9d files/digest-liboil-0.3.3 64
-MD5 d7dc792380ae27343f60c9dbdb2d508c files/digest-liboil-0.3.6 64
-RMD160 8922040a8908f354fe1413fa04fa56acf3deb095 files/digest-liboil-0.3.6 64
-SHA256 29f23927592409380465f399e87f28e37a2b544e78dc67ccebf67a8029aca18c files/digest-liboil-0.3.6 64
-MD5 3a0372e255ab1a7f3b60689e371a244d files/digest-liboil-0.3.7 64
-RMD160 b7cc72685b72e8cd30c6d2a142c658f0ac19f840 files/digest-liboil-0.3.7 64
-SHA256 edafba4d8e9c0d0df37f73050b288b5bebce2ffb66d88d0e0d09a49e2bac09e6 files/digest-liboil-0.3.7 64
-MD5 5d5ac560f35118a370bed2a7a948341c files/liboil-0.2.0-altivec.patch 4732
-RMD160 8d01d22ab63c986e42604ec532dd47189c28672f files/liboil-0.2.0-altivec.patch 4732
-SHA256 b5f906acbaae31b39c37932df877486143179b27fdc918e6b85318591b0d9385 files/liboil-0.2.0-altivec.patch 4732
-MD5 a351705a87fb81151843b4e0fbc92862 files/liboil-0.2.2-clobber-list.patch 972
-RMD160 07a0ab5dcbff977db5174910a543ca9fe74dc537 files/liboil-0.2.2-clobber-list.patch 972
-SHA256 a6abc0f97ebcd677cb0c603491bf75c04718ebe36d0cfbfcaca535277b1d4557 files/liboil-0.2.2-clobber-list.patch 972
-MD5 f49ce9646920accff3ebb2316c36ded4 liboil-0.2.0.ebuild 800
-RMD160 70f7079c2bbdfaf7ff56b31b0db2c96af95e198c liboil-0.2.0.ebuild 800
-SHA256 3ff5fd6ed38cd20023d3790797b4c9f8b5bb0da395cdb88bd37c9732db11392b liboil-0.2.0.ebuild 800
-MD5 9dae13015b2660fb79e851e3e60aa619 liboil-0.2.2.ebuild 805
-RMD160 fc684ed75bac487ce47c5fcef1d45dd289347347 liboil-0.2.2.ebuild 805
-SHA256 366426e223473d169329e9ee6075f0a47f33423ceb0101c2b6d120c89c59e3ab liboil-0.2.2.ebuild 805
-MD5 036d4b45a59ce715202a2324327fd028 liboil-0.3.1.ebuild 712
-RMD160 e147012f17421490b2c78b6f6dd2340b6d47b40d liboil-0.3.1.ebuild 712
-SHA256 70301cad2bf305c563fb9a7bbe78efd1c36466f381c93077c5bcf0b0ff4fe7e3 liboil-0.3.1.ebuild 712
+MD5 606a50904ab175582a65aa0ce3a53deb liboil-0.3.7.ebuild 808
 MD5 098ea0d17b9254c19d47f62248af5ed8 liboil-0.3.2.ebuild 729
-RMD160 13ffc0124b097ee1e2ce9472415422cf7c45338b liboil-0.3.2.ebuild 729
-SHA256 d4b110f4f561618d8ea5f8bff60b093971a22026c92aa519105c54526beab79e liboil-0.3.2.ebuild 729
-MD5 e156b9dbcb5b5069ab64814c5e91f8e1 liboil-0.3.3.ebuild 731
-RMD160 9a273be8b1a9461f9db414df5f2dc21d48901d7f liboil-0.3.3.ebuild 731
-SHA256 bc84288fa3e6b9760332649b7284d4dec1f5c79d8dac4cc208d81623786cfd86 liboil-0.3.3.ebuild 731
 MD5 d30bb0acd7960b6c9b23bff0f1ebb925 liboil-0.3.6.ebuild 731
-RMD160 83be7c196b8caf9ccb914188b3d2906c865d889e liboil-0.3.6.ebuild 731
-SHA256 72d894d39f51d01c7f8989828f64cd2b46e066678d9d4047637f66692d0d752d liboil-0.3.6.ebuild 731
-MD5 ea3959b01863872b866cdbb5eb505510 liboil-0.3.7.ebuild 737
-RMD160 5278873799a34ad4c3357307be38e68a941bdeb2 liboil-0.3.7.ebuild 737
-SHA256 cb26f93a615d6d35f49fa6d0cee658857d65ad2adebee928c244c925352e0205 liboil-0.3.7.ebuild 737
+MD5 036d4b45a59ce715202a2324327fd028 liboil-0.3.1.ebuild 712
+MD5 f49ce9646920accff3ebb2316c36ded4 liboil-0.2.0.ebuild 800
+MD5 e156b9dbcb5b5069ab64814c5e91f8e1 liboil-0.3.3.ebuild 731
+MD5 a4a19b0ae729d59d9d49e61ea9a5903c ChangeLog 3331
 MD5 d3b860c5004ed0f5fbc21ec0687c9bf0 metadata.xml 223
-RMD160 105a3eb07b53066c23e1c5ba0c041d51e96ef4b3 metadata.xml 223
-SHA256 a008009cb31f71084109a62121840ff9c600fe2b7c85cbaf9a027627627787fe metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5PezJrHF4yAQTrARAkI7AKDG10BMlkGp3aPRfoPPBN2wLPum1wCfTi+9
-xisM81InOrz0hN9fdW7PjyM=
-=AEZs
------END PGP SIGNATURE-----
+MD5 9dae13015b2660fb79e851e3e60aa619 liboil-0.2.2.ebuild 805
+MD5 9224d2f16c82093310f3ec19f52c3ef3 files/digest-liboil-0.2.0 64
+MD5 d136c393a4dd1c5b99a077392d18a736 files/digest-liboil-0.2.2 64
+MD5 c591a24be696fc694c3d4086d456e348 files/digest-liboil-0.3.1 64
+MD5 9f9ac8781bf99137b62d0b900841f690 files/digest-liboil-0.3.2 64
+MD5 c46a0f288b4d7eb57da87d77decc42dc files/digest-liboil-0.3.3 64
+MD5 d7dc792380ae27343f60c9dbdb2d508c files/digest-liboil-0.3.6 64
+MD5 3a0372e255ab1a7f3b60689e371a244d files/digest-liboil-0.3.7 64
+MD5 ca07b49f490363c22f3cb390e6276769 files/liboil-0.3.7-convfix.diff 833
+MD5 a351705a87fb81151843b4e0fbc92862 files/liboil-0.2.2-clobber-list.patch 972
+MD5 5d5ac560f35118a370bed2a7a948341c files/liboil-0.2.0-altivec.patch 4732

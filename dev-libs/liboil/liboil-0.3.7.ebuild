@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.3.7.ebuild,v 1.1 2006/02/03 15:52:28 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.3.7.ebuild,v 1.2 2006/02/08 13:31:14 zaheerm Exp $
 
 inherit eutils
 DESCRIPTION="Liboil is a library of simple functions that are optimized for various CPUs."
@@ -17,6 +17,9 @@ DEPEND="=dev-libs/glib-2*"
 #S=${WORKDIR}/${P}
 
 src_compile() {
+	cd ${S}/liboil/powerpc
+	epatch ${FILESDIR}/${P}-convfix.diff
+	cd ${S}
 	econf || die "econf failed"
 	emake -j1 || die "emake failed"
 }
