@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8f73ec2effe7970e6f149e59d9d25c2a ChangeLog 5537
+MD5 49def69a383157c48d38fb207c0929b5 ChangeLog 5746
+RMD160 e333b43bc9b567c3f4e54c8f4ea1d904e4b3ff02 ChangeLog 5746
+SHA256 e7d811ea564305d8ef766d0b632963e5191f390e8f2f4d717ad7f3b57cb936c6 ChangeLog 5746
 MD5 3a3bbcc1d33c8f4e7b8831ee0027dae8 files/digest-smartmontools-5.33 70
+RMD160 24cb16ef9f11fcc784c8bbefaf1f75b187c3bf66 files/digest-smartmontools-5.33 70
+SHA256 c416f0beeb5bb296ffa14942e20d795964cccacb1cb8f2b0f6b3080a17a8216f files/digest-smartmontools-5.33 70
+MD5 b7f9a690b96947809b29767e8e889dc8 files/digest-smartmontools-5.33-r1 256
+RMD160 7fd93eadbf4fae0726e448bd043b01e9624bff9e files/digest-smartmontools-5.33-r1 256
+SHA256 1028d133d7de58622df3e2408259e6bd2ed7e6a5f3c12086a907a33616303f98 files/digest-smartmontools-5.33-r1 256
 MD5 371cdb7cc9dc924b6d12224d66b193c6 files/smartd.confd 107
-MD5 17aee6cd24fc0842f02c255e128dafaf files/smartd.rc 806
+RMD160 e43d345af53217e6c944a3ce5cd03a98895b7c32 files/smartd.confd 107
+SHA256 714cc1b253e1f59b884be89693757fec91ca878c62f37451a49ef6bb72263e85 files/smartd.confd 107
+MD5 30df6006f480460030dd002e115f7091 files/smartd.rc 911
+RMD160 9b37b36efb0a810275939693dc3543aa758e4d77 files/smartd.rc 911
+SHA256 88e14e797d765e6b082460c494d11dd6e362666448ddd2524f8ac4d4033ec635 files/smartd.rc 911
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 9a25ae27e011e33b98209ef140d87268 smartmontools-5.33-r1.ebuild 1041
+RMD160 c0672d94c3ff6066a6495b97219554cc7a600244 smartmontools-5.33-r1.ebuild 1041
+SHA256 b770a6eccd85e0621d7f41c631035047b13ccaadfbf04c498fd74d203a3283cf smartmontools-5.33-r1.ebuild 1041
 MD5 8dd9af44eabe5f971efd45b592627817 smartmontools-5.33.ebuild 1038
+RMD160 7c2a29f684c9c37bcce64a86eca8e7b39a6df8df smartmontools-5.33.ebuild 1038
+SHA256 8e7de958cbf3b5b752a037d0bdb97034a00aa5bdda6df10d3d8fc899337aa182 smartmontools-5.33.ebuild 1038
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDzGZr2+ySkm8kpY0RAk3xAJ0Z7gR43aBpONxuET4wJXU2A7iUhwCbBEzh
-wEXgrq0jPX7EYayVl2VbBf8=
-=nLTy
+iD8DBQFD6cY9EbVyYKaZ/NERAsH5AKCZ4p2ohTbkupaO9HJCz2u1XMWaVwCcDZJQ
+HII1KnA2n8vcDFTK2Oppixo=
+=b+0a
 -----END PGP SIGNATURE-----
