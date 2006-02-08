@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.18.ebuild,v 1.2 2006/02/04 18:20:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.18.ebuild,v 1.3 2006/02/08 06:19:24 ticho Exp $
 
 DESCRIPTION="File transfer over OBEX for mobile phones"
 SRC_URI="http://triq.net/obexftp/${P}.tar.gz"
@@ -38,4 +38,5 @@ src_install() {
 	dohtml doc/*.html
 	insinto /usr/share/doc/${PF}/examples
 	doins -r apps/*_example.*
+	use perl && fixlocalpod
 }
