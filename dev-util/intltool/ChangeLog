@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.76 2006/01/22 19:03:51 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.77 2006/02/08 22:44:44 compnerd Exp $
+
+*intltool-0.34.2 (08 Feb 2006)
+
+  08 Feb 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  +intltool-0.34.2.ebuild:
+  Version bump from upstream for 2.12.3
 
   22 Jan 2006; <dang@gentoo.org> intltool-0.34.1.ebuild:
   Marked stable on amd64 per bug #119634

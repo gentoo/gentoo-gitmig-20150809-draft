@@ -1,20 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dc3ba12971c480c8f5f1886e2e6798c2 ChangeLog 8153
+MD5 e4b3682a78831c0bfd805c5ef043f95e ChangeLog 8313
+RMD160 406e3a9930d4db1c2666b1d778185840840f4b5e ChangeLog 8313
+SHA256 94c4e8642aefeb777e3bd19d39bbfa6aa0d9d8206cc2cebe38d86e7be9e55ce9 ChangeLog 8313
 MD5 795eb1575afa6905cbf7452c64b99776 files/digest-intltool-0.31.2 68
+RMD160 59df7c8d8366db3e746196633214eb32032eaa33 files/digest-intltool-0.31.2 68
+SHA256 cfcc37819c20dd49b1c6142defcf133e0a74634ea7e00700f4bba23e2114e79d files/digest-intltool-0.31.2 68
 MD5 1928cb7c9113dac8b9c09d32e03d95f3 files/digest-intltool-0.32.1 68
+RMD160 16c27e1f21ca5555e43f5b6e568cbefff1111301 files/digest-intltool-0.32.1 68
+SHA256 5283520548f6d50322b9c01755048fa6182536dcbaabaf846d57f55c452077b3 files/digest-intltool-0.32.1 68
 MD5 a9e19fedcde4312553c60a810b75ef2c files/digest-intltool-0.33 66
+RMD160 198dab80245f973a202b72a1dea201893d8dde53 files/digest-intltool-0.33 66
+SHA256 982e8d90881132dc892df5790f9249017dbfbef331f5e0234e4cfcd365574904 files/digest-intltool-0.33 66
 MD5 931fbb30f2cb6bb014a0407ffecb13cb files/digest-intltool-0.34.1 68
+RMD160 b097e190dc8bd83c4c85ca2741b6cf78bf0757bd files/digest-intltool-0.34.1 68
+SHA256 7875211baa91fd14f7e3a286d2bd483a9c1a3261148d05ce31273fb8e3c1850b files/digest-intltool-0.34.1 68
+MD5 741c0ed9d07cef7e5844d0dd83030e6e files/digest-intltool-0.34.2 250
+RMD160 a99c8cd38ed4f1e20ca7c43ed93db8b016c5fa7e files/digest-intltool-0.34.2 250
+SHA256 f8390e0b715aad8f698f6226d299249eb172c3080e042eebf304af8bf535e6a6 files/digest-intltool-0.34.2 250
 MD5 3bb8bd2b8b3b9c57b9c91b201087e0b9 intltool-0.31.2.ebuild 658
+RMD160 07849e59c951ca8f231de8422e2c93816963baec intltool-0.31.2.ebuild 658
+SHA256 6b72d4c629c9ff6e09a9c2d620f4dd3580887302530b0e86c136192ab774fdb3 intltool-0.31.2.ebuild 658
 MD5 bc2a4b83dfe5e57f2b151c780be4a4c7 intltool-0.32.1.ebuild 661
+RMD160 0e111f3aab8fb59c0ba4226a5bd4a390d0859483 intltool-0.32.1.ebuild 661
+SHA256 6a370ad78dc49af5ae8fb688f30822fb55c9cfacc131a0b94bfac48ee4150b7d intltool-0.32.1.ebuild 661
 MD5 6c1d6751e088c9c064168fb6cf982b06 intltool-0.33.ebuild 645
+RMD160 37663fb42ac84b6b05d6ec800403eae6c202d74b intltool-0.33.ebuild 645
+SHA256 ff922e101cb6ff4d5a0c7ebcabd58ab301056966b04e6aeb63afa1a6ea24e9f8 intltool-0.33.ebuild 645
 MD5 9a47398a0a21108d830c90fee38ef51d intltool-0.34.1.ebuild 671
+RMD160 631b04f2c55d51dbf06a0876e29c842e9d9d3524 intltool-0.34.1.ebuild 671
+SHA256 96e74454d5fe2960583dc65cbbaf9e8695dfeefc60926669c49c47415b31952b intltool-0.34.1.ebuild 671
+MD5 734aba017390d7ff82752e604714d8dc intltool-0.34.2.ebuild 688
+RMD160 49b717a89540727101299109115d9c3e8f50de07 intltool-0.34.2.ebuild 688
+SHA256 e22119a3ae46c50e0ae1e202a8d46e88f418a53b77ade78f0f074d3dd5fdf021 intltool-0.34.2.ebuild 688
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD09dComPajV0RnrERAjFjAJ9U8J7/mjfN3U+KXiJcH8VAJ9FTjQCeOsvn
-ogtJr+xG93tWr0CvCYObXDo=
-=7Y+y
------END PGP SIGNATURE-----
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
