@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/secure-delete
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.16 2005/11/25 20:36:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.17 2006/02/08 21:02:12 tove Exp $
 
   25 Nov 2005; Tom Gall <tgall@gentoo.org> secure-delete-3.0.ebuild:
   stable on ppc64
@@ -30,7 +30,7 @@
   Thanks to reporter Daniel Webert <daniel_webert@web.de> and solution provider
   Peter Jensen <t3xjuqlt02@sneakemail.com>.
 
-  04 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> secure-delete-3.0.ebuild:
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> secure-delete-3.0.ebuild:
   Stable on alpha.
 
   30 Dec 2003; Seemant Kulleen <seemant@gentoo.org> secure-delete-3.0.ebuild:
