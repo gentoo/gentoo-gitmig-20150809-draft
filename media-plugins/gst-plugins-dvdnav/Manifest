@@ -1,4 +1,22 @@
-MD5 5544f35b9f41342f13fda149e878afaa ChangeLog 1420
-MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-dvdnav-0.8.11 72
-MD5 c42e965d5d1b447551d07a7e06347849 gst-plugins-dvdnav-0.8.11.ebuild 360
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 520cc0c030fdf75a2a9b0ad4572edeac ChangeLog 1539
+RMD160 72eb17dd8e53d523cd1259598a3b833cfec54459 ChangeLog 1539
+SHA256 a8c0f71288c290a5a5fed6f595f936da8dc9efc09967de20e4f3b84cd0269435 ChangeLog 1539
+MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-dvdnav-0.8.11 262
+RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-dvdnav-0.8.11 262
+SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-dvdnav-0.8.11 262
+MD5 0b8ca1386acef55ec5d5881617fa0d78 gst-plugins-dvdnav-0.8.11.ebuild 361
+RMD160 d91effcc92f40cff72e19a2f72ffa04919829aad gst-plugins-dvdnav-0.8.11.ebuild 361
+SHA256 495876551a1e3f6210f88a7f4293d955beff769ad03d8a02bf2fda693bc16494 gst-plugins-dvdnav-0.8.11.ebuild 361
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
+RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
+SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1 metadata.xml 162
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6ix0JrHF4yAQTrARAh2zAJ933j8tn7FfrYysx3XiOze8clkxHQCeICRG
+YC4ywH7s2gWU6yVD9mEEkmA=
+=Dhn4
+-----END PGP SIGNATURE-----
