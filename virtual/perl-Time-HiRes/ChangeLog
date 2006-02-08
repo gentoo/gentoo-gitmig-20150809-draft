@@ -1,6 +1,10 @@
 # ChangeLog for gentoo-x86/virtual
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.1 2006/02/07 11:58:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.2 2006/02/08 18:57:18 blubb Exp $
+
+  08 Feb 2006; Simon Stelling <blubb@gentoo.org>
+  perl-Time-HiRes-1.82.ebuild:
+  stable on amd64
 
 *perl-Time-HiRes-1.86 (07 Feb 2006)
 *perl-Time-HiRes-1.82 (07 Feb 2006)
