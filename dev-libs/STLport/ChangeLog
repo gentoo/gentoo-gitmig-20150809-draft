@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/STLport
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.25 2005/11/29 03:44:40 tgall Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.26 2006/02/08 05:08:28 vapier Exp $
+
+*STLport-5.0.1 (08 Feb 2006)
+
+  08 Feb 2006; Mike Frysinger <vapier@gentoo.org> +STLport-5.0.1.ebuild:
+  Version bump by Sebastien Fabbro #122000.
 
   28 Nov 2005; Tom Gall <tgall@gentoo.org> STLport-4.6.2-r2.ebuild:
   stable on ppc64
