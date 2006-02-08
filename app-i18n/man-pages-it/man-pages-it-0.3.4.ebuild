@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/man-pages-it-0.3.4.ebuild,v 1.1 2005/09/02 04:28:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/man-pages-it-0.3.4.ebuild,v 1.2 2006/02/08 04:07:46 vapier Exp $
 
 DESCRIPTION="A somewhat comprehensive collection of Italian Linux man pages"
 HOMEPAGE="http://it.tldp.org/man/"
@@ -21,6 +21,7 @@ src_unpack() {
 	sed -i \
 		-e '/^ZIP/s:=.*:=:' \
 		-e 's:X11R6/::' \
+		-e '/mandir=/s:/man:/share/man:' \
 		Makefile
 }
 
