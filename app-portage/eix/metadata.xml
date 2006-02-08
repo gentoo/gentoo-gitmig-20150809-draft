@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
+    <email>emilbeinroth@gmx.net</email>
+    <name>Emil Beinroth</name>
+  </maintainer>
+  <maintainer>
     <email>genstef@gentoo.org</email>
     <name>Stefan Schweizer</name>
   </maintainer>
