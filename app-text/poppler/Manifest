@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 653caed1209606541c75fc4f0d3a67a6 ChangeLog 8862
-RMD160 ed50fb3d288d7f2e226a5bad6d492cc5d69e136e ChangeLog 8862
-SHA256 d2c507fe84fc11978059542585302740b0a89de8bcc6b1b57fb9af0e484f8220 ChangeLog 8862
+MD5 f13971e1596f0ef7d5263392361c7385 ChangeLog 9110
+RMD160 f50f3e4ae426d4863423e7fe964bc10b580d0642 ChangeLog 9110
+SHA256 c0547ad1e86e868c3a0b0e656d3a9598a3ea622283495a6cc69aa2d73f726470 ChangeLog 9110
 MD5 91f251deb3a322d16a5ea68576f1c9a9 files/digest-poppler-0.4.3-r4 137
 RMD160 433f6cc961ec1aa027b262f4aed0a35cf801bc9b files/digest-poppler-0.4.3-r4 137
 SHA256 b61bc1efb297dc97a7615c8588eadc3a7bcbf1fe72d00af76053f4025b66e34d files/digest-poppler-0.4.3-r4 137
 MD5 e876193dfd11bf13602043abf0ecec21 files/digest-poppler-0.5.0-r4 241
 RMD160 4ac5024c341597422cfd4e2a1625b6ff9f1b4e6f files/digest-poppler-0.5.0-r4 241
 SHA256 51bb8ae71c9ac143ae67a7cecb81aa02fdf8798baf3bc90ebb499692ba5d3ea7 files/digest-poppler-0.5.0-r4 241
+MD5 e876193dfd11bf13602043abf0ecec21 files/digest-poppler-0.5.0-r5 241
+RMD160 4ac5024c341597422cfd4e2a1625b6ff9f1b4e6f files/digest-poppler-0.5.0-r5 241
+SHA256 51bb8ae71c9ac143ae67a7cecb81aa02fdf8798baf3bc90ebb499692ba5d3ea7 files/digest-poppler-0.5.0-r5 241
 MD5 3342aad1175b4b522f84e453999fbb05 files/poppler-0.4.1-cairo-ft.patch 470
 RMD160 f755975637edd27fa4d82c43d2789f489a45b8c8 files/poppler-0.4.1-cairo-ft.patch 470
 SHA256 e9ca00d0a991674199e5214556567e5ad895295bd63d72ce24bf0a6c3b9abb4e files/poppler-0.4.1-cairo-ft.patch 470
@@ -52,10 +52,6 @@ SHA256 e2db934f16109daf1e6a09fcf60f38451e8d56418ad9309e4fcf9a82feb29728 poppler-
 MD5 43b56695a38fc294f78cef0f9f38273d poppler-0.5.0-r4.ebuild 1681
 RMD160 12ce9e9da836105f30ee1f6a17e3a3e9bda268cb poppler-0.5.0-r4.ebuild 1681
 SHA256 eedc9ecf235eebce266bffc1b0a76d8e147ad9f3fe215d77c8df9dada57aaa77 poppler-0.5.0-r4.ebuild 1681
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD51WtCRZPokWLroQRAtsQAKDN6wfiAL28uSWfKIFHYci/ZQw5GgCeKuAL
-G63ZKypVszsFpircKozo7zw=
-=91D5
------END PGP SIGNATURE-----
+MD5 7e8405e2938ff2f9e8581adedebb63bc poppler-0.5.0-r5.ebuild 1724
+RMD160 9eb4cd58be2400e6e2c8d80aa8a34ccfe00dfdaf poppler-0.5.0-r5.ebuild 1724
+SHA256 e01a7f5bd8534d6fae178869f922523dd2340227e32a1bab8fa1ae6083a80c87 poppler-0.5.0-r5.ebuild 1724
