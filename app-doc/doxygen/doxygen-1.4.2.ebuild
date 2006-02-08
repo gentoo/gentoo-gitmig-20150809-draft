@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.2.ebuild,v 1.15 2006/01/29 15:41:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.2.ebuild,v 1.16 2006/02/08 08:47:35 nerdboy Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs kde-functions
 
 DESCRIPTION="Documentation and analysis tool for C++, C, Java, IDL, PHP and C#"
 HOMEPAGE="http://www.doxygen.org/"
@@ -19,6 +19,8 @@ DEPEND="media-gfx/graphviz
 	tetex? ( virtual/tetex )
 	virtual/ghostscript
 	>=sys-apps/sed-4"
+
+if use qt; then need-qt 3; fi
 
 src_unpack() {
 	unpack ${A}
@@ -47,13 +49,18 @@ src_compile() {
 	# set ./configure options (prefix, Qt based wizard, docdir)
 	local my_conf="--prefix ${D}usr"
 	if use qt; then
-	    export LD_LIBRARY_PATH=$QTDIR/$(get_libdir):$LD_LIBRARY_PATH \
-	    export LIBRARY_PATH=$QTDIR/$(get_libdir):$LIBRARY_PATH \
-	    my_conf="${my_conf} $(use_with qt doxywizard)"
+	    einfo "using QT version: '$QTVER'."
+	    einfo "using QTDIR: '$QTDIR'."
+	    export LD_LIBRARY_PATH=${QTDIR}/$(get_libdir):${LD_LIBRARY_PATH}
+	    export LIBRARY_PATH=${QTDIR}/$(get_libdir):${LIBRARY_PATH}
+	    einfo "using QT LIBRARY_PATH: '$LIBRARY_PATH'."
+	    einfo "using QT LD_LIBRARY_PATH: '$LD_LIBRARY_PATH'."
+	    ./configure ${my_conf} $(use_with qt doxywizard) || die 'configure failed'
+	else
+	    ./configure ${my_conf} || die 'configure failed'
 	fi
 
-	# ./configure and compile
-	./configure ${my_conf} || die '"./configure" failed.'
+	# and compile
 	make DESTDIR="${D}" all || die '"make all" failed.'
 
 	# generate html and pdf (if tetex in use) documents.
