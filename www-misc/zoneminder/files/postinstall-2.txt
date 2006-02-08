@@ -4,7 +4,7 @@
  cd /usr/share/${PN}
  mysql mysql < db/zm_create.sql
  mysql mysql
-  > grant select,insert,update,delete on <your database name>.* to '<username>'@localhost identified by '<password>';
+  > grant select,insert,update,delete on zoneminder.* to '<username>'@localhost identified by '<password>';
   > quit
  mysqladmin reload
 

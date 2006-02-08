@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a33743d091095dfdf8712f0974345efc ChangeLog 2759
-RMD160 7125f7ac718708ea66271421b08c0395d588dbc2 ChangeLog 2759
-SHA256 858e89572c4a366eb6825356625660f8a4bbae5deb73165d755d048df346fbae ChangeLog 2759
+MD5 5649e5177535ca9bc210bef54e5d731d ChangeLog 2863
+RMD160 0c634aea99b153fb654cf336bc30c301f2b611f2 ChangeLog 2863
+SHA256 4fb4d43e751554df111ef688e1a1d59c97156d9b784120a91d375c2edc6cbd99 ChangeLog 2863
 MD5 1aecf82bff0009b04884bd618cb742ab files/Makefile.am.patch 833
 RMD160 599a72ad1f14a8ee8950c8646e67d2cf40b17002 files/Makefile.am.patch 833
 SHA256 8a40bddee62cf52ad354e61258a98357c6b9246d9cd75cf8acd7132a02770aad files/Makefile.am.patch 833
@@ -19,9 +19,9 @@ SHA256 606b6ee31d2baf459001f886615f4a9f691c0e79e574b6decbd97cf75f1524ab files/di
 MD5 fc6cb561550067ae70f7596cd82e092a files/init.d 411
 RMD160 b33545e4be52e69728df0f0a4f2698c58a05ca36 files/init.d 411
 SHA256 5a9faa34fe3cc27a012e3c1f86d82de97a7b78db629b303e47908cf7318fc801 files/init.d 411
-MD5 cc506f3ccbbdd0b4043c0cdb78d2479d files/postinstall-2.txt 596
-RMD160 87f6ec83c912e672ca64e5036e52bd6368cecdd6 files/postinstall-2.txt 596
-SHA256 f5dbf61ef1c346f38534e96ffe0b57d16700d2edf1eba851d8c527b90db8a851 files/postinstall-2.txt 596
+MD5 03b34ced7e992c7c47be351321ffcfb2 files/postinstall-2.txt 586
+RMD160 44c82e87aff44fd1f3ac9e7177ab0feefaa263e8 files/postinstall-2.txt 586
+SHA256 83b844510f9159e65150fe102ffeb5a5dbe7ad0a890b0074f198b6011fbd78dd files/postinstall-2.txt 586
 MD5 f1bbdbaae143812aebe236c421c4fba9 files/postinstall.txt 627
 RMD160 4684b7099eeb05886fb434b6eaabea6ee405d670 files/postinstall.txt 627
 SHA256 e61ef4565aba1aee2c472aa38f7feeb7c8acb7db8ba23bd8ec48a4a08129ffba files/postinstall.txt 627
@@ -43,7 +43,7 @@ SHA256 cbe3046ae089796f6147efa1fccec5c5f7eeae3392dcaf49476a9703adf25b61 zonemind
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6kesEzitwsaoONoRAqe6AKCaCT0MWl4M0u8qukQhm62VSQCNeQCfWx+R
-lEVqDa6SWL94Pnywi4dpETk=
-=eJ7A
+iD8DBQFD6kgWEzitwsaoONoRAtdsAJ42ZuJ4Sf5s7kvYQDk1NGyHNOemKQCgqL8D
+H8OwJUfIYp3FjLstg0xs1aY=
+=09MI
 -----END PGP SIGNATURE-----
