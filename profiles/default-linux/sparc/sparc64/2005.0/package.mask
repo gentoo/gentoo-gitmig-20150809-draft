@@ -1,6 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/package.mask,v 1.19 2006/01/11 15:42:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/package.mask,v 1.20 2006/02/08 14:24:44 gustavoz Exp $
+
+# Gustavo Zacarias <gustavoz@gentoo.org>
+# We mask core 2.6 stuff to avoid bootstrap issues
+>=sys-kernel/gentoo-sources-2.6.0
+>=sys-kernel/vanilla-sources-2.6.0
+sys-fs/udev
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Something between 2.3.3.20040420 and 2.3.4.20040619 breaks blackdown-jdk
