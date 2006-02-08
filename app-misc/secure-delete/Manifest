@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bdc98cef20fb5f4023fdc6aa3aa190ab ChangeLog 2083
 RMD160 bb6e89ec706796c554f6d156495e62052308f4f1 ChangeLog 2083
 SHA256 681ff0a6a6aa35c1eb1c0ce081fcd5836ad2ab69ec1644ecd5c617f7cb7dbf21 ChangeLog 2083
@@ -10,3 +13,10 @@ SHA256 39e1273dd60bd3ceb460e9366a648c8fa21db1c292df4573e69f41cf6c84f6fc metadata
 MD5 368e13118c25d89512de00ab88a0f03a secure-delete-3.0.ebuild 1129
 RMD160 53ca5decaabb7190af3319d8b53d3b08c32d9eb9 secure-delete-3.0.ebuild 1129
 SHA256 91272ead16f8a8d2d3660ff27c6eb8d97ef08b987538d11c4f2f4e4851936e24 secure-delete-3.0.ebuild 1129
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6lxgV3J2n04EauwRAqp/AJ92AKTtOkkF12N+USiURmv2q4WHIQCgmbeS
+bJA4yX/v1VgBpNBjzUM847Q=
+=b+ae
+-----END PGP SIGNATURE-----
