@@ -1,6 +1,6 @@
-diff -urN catalyst-2.0_rc32.orig/catalyst catalyst-2.0_rc32/catalyst
---- catalyst-2.0_rc32.orig/catalyst	2005-12-20 07:07:45.000000000 -0500
-+++ catalyst-2.0_rc32/catalyst	2005-12-20 07:09:19.000000000 -0500
+diff -urN catalyst-2.0_rc33.orig/catalyst catalyst-2.0_rc33/catalyst
+--- catalyst-2.0_rc33.orig/catalyst	2005-12-20 07:07:45.000000000 -0500
++++ catalyst-2.0_rc33/catalyst	2005-12-20 07:09:19.000000000 -0500
 @@ -51,10 +51,10 @@
  	myconf={}
  	config_file=""
@@ -12,7 +12,7 @@ diff -urN catalyst-2.0_rc32.orig/catalyst catalyst-2.0_rc32/catalyst
  		"portdir":"/usr/portage","options":"",\
 -		"snapshot_cache":"/var/tmp/catalyst/snapshot_cache",\
 +		"snapshot_cache":"/var/tmp/catalyst2/snapshot_cache",\
- 		"hash_function":"crc32"}
+ 		"hash_function":"crc33"}
  		
  	# first, try the one passed (presumably from the cmdline)
 @@ -69,9 +69,9 @@
