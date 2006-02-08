@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/metalog
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.39 2005/10/03 14:27:25 matsuu Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.40 2006/02/08 01:04:02 vapier Exp $
+
+*metalog-0.8_rc1-r2 (08 Feb 2006)
+
+  08 Feb 2006; Mike Frysinger <vapier@gentoo.org> files/consolelog.sh,
+  files/metalog.conf, files/metalog.confd, +metalog-0.8_rc1-r2.ebuild:
+  Allow people to control consolelog.sh from the conf.d file as that is under
+  CONFIG_PROTECT and get rid of all the magic voodoo which just screws up
+  packages (see #96038 by Martin von Gagern and #113359 by Daniel).
 
   03 Oct 2005; MATSUU Takuto <matsuu@gentoo.org>
   metalog-0.8_pre20031130.ebuild:

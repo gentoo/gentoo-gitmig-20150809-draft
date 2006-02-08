@@ -1,5 +1,5 @@
 # /etc/conf.d/metalog
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.confd,v 1.6 2005/03/15 03:21:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.confd,v 1.7 2006/02/08 01:04:02 vapier Exp $
 
 # Some useful options:
 #  -a   Log with buffering
@@ -7,3 +7,13 @@
 # See `metalog --help` for more
 
 METALOG_OPTS=""
+
+
+# Options used by /usr/sbin/consolelog.sh
+
+# Space delimited list of devices to write "console" messages to
+#CONSOLE="/dev/console /dev/tty10"
+CONSOLE="/dev/tty10"
+
+# Format of logging (make sure you use single quotes)
+FORMAT='$1 [$2] $3'
