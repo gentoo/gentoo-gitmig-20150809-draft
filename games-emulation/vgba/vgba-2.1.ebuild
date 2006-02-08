@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vgba/vgba-2.1.ebuild,v 1.4 2004/06/24 22:36:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vgba/vgba-2.1.ebuild,v 1.5 2006/02/08 23:48:19 mr_bones_ Exp $
 
 inherit games
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""
 
-RDEPEND="virtual/x11"
+RDEPEND="sys-libs/zlib
+		 || ( x11-libs/libXext
+			  virtual/x11 )"
 
 S="${WORKDIR}"
 
