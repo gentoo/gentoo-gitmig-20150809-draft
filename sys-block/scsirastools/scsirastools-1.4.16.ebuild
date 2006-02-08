@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/scsirastools/scsirastools-1.4.16.ebuild,v 1.1 2006/02/08 02:06:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/scsirastools/scsirastools-1.4.16.ebuild,v 1.2 2006/02/08 02:08:31 robbat2 Exp $
 
 inherit autotools
 
@@ -38,4 +38,7 @@ src_install() {
 	# install modepage files
 	insinto /usr/share/${PN}
 	doins files/*.mdf
+	# new docs
+	dodoc ChangeLog AUTHORS TODO
+	prepalldocs
 }
