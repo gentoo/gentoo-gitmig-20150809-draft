@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r1.ebuild,v 1.2 2006/02/02 16:46:16 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r1.ebuild,v 1.3 2006/02/08 01:23:10 nattfodd Exp $
 
 inherit tetex-3 flag-o-matic versionator
 
@@ -66,9 +66,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "tetex-3.0_p1-r1 makes changes in /etc/texmf/fmtutil/00fmtutil.cnf"
-	einfo "After you update this file, please run as root"
-	einfo "  fmtutil-sys --missing && fmtutil-sys --byfmt etex"
-	einfo ""
+	ewarn ""
+	ewarn "If you encounter any problems with tetex-3.0_p1-r1 involving TeX"
+	ewarn "configuration files, please try"
+	ewarn "  emerge sync"
+	ewarn "  rm -rf /etc/texmf"
+	ewarn "  emerge -av tetex"
+	ewarn "  texmf-update"
+	ewarn "  fmtutil-sys --missing && fmtutil-sys --byfmt etex"
+	ewarn "Sorry for any inconvenience"
+	ewarn ""
 }
