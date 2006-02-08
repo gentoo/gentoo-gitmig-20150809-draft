@@ -1,11 +1,11 @@
 # ChangeLog for app-dicts/prime-dict
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/prime-dict/ChangeLog,v 1.32 2005/11/25 19:43:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/prime-dict/ChangeLog,v 1.33 2006/02/08 21:09:00 tove Exp $
 
   25 Nov 2005; Tom Gall <tgall@gentoo.org> prime-dict-1.0.0.ebuild:
   stable on ppc64
 
-  03 Aug 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
   prime-dict-1.0.0.ebuild:
   Stable on alpha.
 
@@ -28,7 +28,7 @@
   30 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> +prime-dict-1.0.0.ebuild:
   Version bumped.
 
-  26 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  26 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   prime-dict-0.8.6.ebuild:
   Stable on alpha.
 
