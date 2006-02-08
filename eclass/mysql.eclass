@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.14 2006/02/03 08:48:37 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.15 2006/02/08 16:17:52 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -33,7 +33,7 @@ mysql_version_is_at_least "5.00.18.00" \
 mysql_version_is_at_least "5.01.00.00" \
 && IUSE="${IUSE} innodb"
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_config pkg_postrm
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_config mysql_pkg_prerm pkg_postrm
 
 # void mysql_init_vars()
 #
@@ -486,14 +486,12 @@ mysql_src_install() {
 	&& cp -f \
 		"${WORKDIR}/mysql-extras/fill_help_tables.sql-5.0" \
 		"${D}/usr/share/mysql${MY_SUFFIX}/fill_help_tables.sql"
-}
 
-mysql_pkg_preinst() {
-
+	# MOVED HERE DUE TO BUG #121445
 	# create a list of files, to be used
 	# by external utilities
-	# will be used in pkg_postinst
-	local filelist="${TMPDIR}/FILELIST"
+	mkdir -p "${D}/var/lib/eselect/mysql/"
+	local filelist="${D}/var/lib/eselect/mysql/mysql${MY_SUFFIX}.filelist"
 	pushd "${D}/" &>/dev/null
 		mkdir -p "${ROOT}/var/lib/eselect/mysql/"
 		env -i find usr/bin/ usr/sbin/ usr/share/man \
@@ -504,6 +502,25 @@ mysql_pkg_preinst() {
 		echo "${MY_LIBDIR#"/"}" >> "${filelist}"
 		echo "${MY_SHAREDSTATEDIR#"/"}" >> "${filelist}"
 	popd &>/dev/null
+
+}
+
+mysql_pkg_preinst() {
+
+	## create a list of files, to be used
+	## by external utilities
+	## will be used in pkg_postinst
+	#local filelist="${TMPDIR}/FILELIST"
+	#pushd "${D}/" &>/dev/null
+	#	mkdir -p "${ROOT}/var/lib/eselect/mysql/"
+	#	env -i find usr/bin/ usr/sbin/ usr/share/man \
+	#		-type f -name "*${MY_SUFFIX}*" \
+	#		-and -not -name "mysql_config${MY_SUFFIX}" \
+	#		> "${filelist}"
+	#	echo "${MY_SYSCONFDIR#"/"}" >> "${filelist}"
+	#	echo "${MY_LIBDIR#"/"}" >> "${filelist}"
+	#	echo "${MY_SHAREDSTATEDIR#"/"}" >> "${filelist}"
+	#popd &>/dev/null
 
 	enewgroup mysql 60 || die "problem adding group mysql"
 	enewuser mysql 60 -1 /dev/null mysql \
@@ -524,27 +541,27 @@ mysql_pkg_postinst() {
 	chown mysql:mysql "${ROOT}${MY_LOGDIR}"/mysql*
 	chmod 0660 "${ROOT}${MY_LOGDIR}"/mysql*
 
-	# list of files, to be used
-	# by external utilities
-	mkdir -p "${ROOT}/var/lib/eselect/mysql/"
-	cp "${TMPDIR}/FILELIST" "${ROOT}/var/lib/eselect/mysql/mysql${MY_SUFFIX}.filelist"
+	## list of files, to be used
+	## by external utilities
+	#mkdir -p "${ROOT}/var/lib/eselect/mysql/"
+	#cp "${TMPDIR}/FILELIST" "${ROOT}/var/lib/eselect/mysql/mysql${MY_SUFFIX}.filelist"
 
 	if ! useq minimal; then
 		if [[ ${SLOT} -gt 0 ]] ; then
-			if [[ -f "${ROOT}/usr/sbin/mysqld" ]] ; then
+			#if [[ -f "${ROOT}/usr/sbin/mysqld" ]] ; then
 				einfo "you may want to read:"
 				einfo "http://www.gentoo.org/doc/en/mysql-upgrade-slotted.xml"
-			else
-				local tmpres="$( eselect mysql show )"
-				# "like grep -q unset"
-				if [[ "{$tmpres}" == "{$tmpres/unset/}" ]] ; then
-					eselect mysql set 1
-				else
-					einfo "The version of mysql emerged now stils is _NOT_ the default"
+			#else
+			#	local tmpres="$( eselect mysql show )"
+			#	# "like grep -q unset"
+			#	if [[ "{$tmpres}" == "{$tmpres/unset/}" ]] ; then
+			#		eselect mysql set 1
+			#	else
+			#		einfo "The version of mysql emerged now stils is _NOT_ the default"
 					einfo "you may want to run \"eselect myqsl list\" followed by a "
 					einfo "\"eselect myqsl set 1\" to chose the default mysql server"
-				fi
-			fi
+			#	fi
+			#fi
 		fi
 
 		# your friendly public service announcement...
@@ -663,6 +680,11 @@ mysql_pkg_config() {
 	einfo "stopping the server,"
 	wait %1
 	einfo "done"
+}
+
+mysql_pkg_prerm() {
+	# external program
+	eselect mysql slot_remove "${SLOT}"
 }
 
 mysql_pkg_postrm() {
