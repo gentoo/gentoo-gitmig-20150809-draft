@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f640b4f2dbd0c5bd5c1f837b1da4cc4f ChangeLog 12384
+MD5 e2856df0ccc64039442a2daa5f0e77e2 ChangeLog 12489
+RMD160 6d0b59b2d4fea8b7688c925dd9c487b25d6e7917 ChangeLog 12489
+SHA256 13cbcc89a4b985cf9689602ee8542bd5b748fb507f5ad64549fd6369a470feb4 ChangeLog 12489
 MD5 88069f3f6c274e4285bbbba7f5cb5a4f files/FfmpegToolkit.class.patch 576
+RMD160 588323c161a42ffb2cd2320d7380eac92a2b2a90 files/FfmpegToolkit.class.patch 576
+SHA256 240266e2d9c49faf59661d8bf122ec2c5ce97d268ca6693fc92efddc7642e2ec files/FfmpegToolkit.class.patch 576
 MD5 60a9f20d051880d3149e958602657880 files/digest-gallery-1.5.2 66
+RMD160 94e650735ff67e79bdce09c4976b5e3d8683b707 files/digest-gallery-1.5.2 66
+SHA256 e04dbadc8da0f457e53540c5b77417a586e80360a81dd97619df33ec93b55a5e files/digest-gallery-1.5.2 66
 MD5 eac164bae72ba63ac5e7f38682e390b7 files/digest-gallery-1.5.2_p2 70
+RMD160 4867a491f78d2e5ae0d4588be8551255e16b806f files/digest-gallery-1.5.2_p2 70
+SHA256 b38dca57e06bed5547ebe276181d4450d83efa8449c1a55b4bacb1f401e81dac files/digest-gallery-1.5.2_p2 70
 MD5 2766aeba32226962ae298487f56c37aa files/digest-gallery-2.0.2-r1 71
+RMD160 79522c528ec770842173ad841db6f34ab950fe0a files/digest-gallery-2.0.2-r1 71
+SHA256 3bca6cf123d091127413fc5fc7a425866fc735de539641b6a5784cdf77a219ba files/digest-gallery-2.0.2-r1 71
 MD5 d86a2cffa618ecf7fe9a2b001be69523 files/postinstall-en.txt 430
+RMD160 bfac0f557ce318745a713cf7a4b90c4473ee97a5 files/postinstall-en.txt 430
+SHA256 e2e63ec31b83e97fec9ecc7163f84beda4744150fa179ce39f0c26ed7ec54f3b files/postinstall-en.txt 430
 MD5 7fd340b3582fa5f65153a85c04f01160 files/postinstall-en2.txt 913
+RMD160 937a101b3ace40799c2a426378bc69d5b7127ccc files/postinstall-en2.txt 913
+SHA256 2a6a523d4c5658b6233b11e6fca78ad5d3a00d93d36d2f6e3010ce29717df233 files/postinstall-en2.txt 913
 MD5 bffb5afbdf08edfb89acd520b5af1d6c gallery-1.5.2.ebuild 961
-MD5 29eae18f33ddbe6f1c27c7412db2307a gallery-1.5.2_p2.ebuild 999
+RMD160 7bb8bdbe40d70eb8abf332cad156a0f2bc052899 gallery-1.5.2.ebuild 961
+SHA256 4bdf24385dd5e6fc40a41151ab2891fb0fda5224c91a5bbbd62a9950befbb8a1 gallery-1.5.2.ebuild 961
+MD5 6191bc9f5717f764a2fe8a4cfc5f78b4 gallery-1.5.2_p2.ebuild 995
+RMD160 9aca5a6768efd8c1f60edc7f3fb996a8218506fd gallery-1.5.2_p2.ebuild 995
+SHA256 272d51e10477fa6c6e9f9b3e53b58108ee40b1994d0642fcc6d7ebe14f03a991 gallery-1.5.2_p2.ebuild 995
 MD5 427f5f6b3b92cbf6f11ec1c33b8318eb gallery-2.0.2-r1.ebuild 1125
+RMD160 ef178e16dfba8a970f8441762fee4cbc72342884 gallery-2.0.2-r1.ebuild 1125
+SHA256 6f48bb88e9cb8bfc6bc5a0143568af613adb960b12623a11e78551e9a9d5c821 gallery-2.0.2-r1.ebuild 1125
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD6jTGKRy60XGEcJIRAumfAJ9Mq98oZcB3AW3Rk3+Y2btgIeKWWQCdEWnv
-761293vmpCD1DTbXVYkIOqo=
-=BcaR
------END PGP SIGNATURE-----
+RMD160 c449ad35e8af3f158d8f8305f8a02ff98a420970 metadata.xml 280
+SHA256 fd37fa0f441b1b68ef8dc4bffbb0a51f0414aa7c370b48369453af5f4bff177a metadata.xml 280
