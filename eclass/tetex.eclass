@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.43 2006/02/01 19:49:48 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.44 2006/02/08 21:20:29 ehmsen Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -39,9 +39,21 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~ia64 ~x86 ~ppc ~sparc ~alpha ~amd64"
 
-DEPEND="!app-text/tetex
-	!app-text/ptex
-	!app-text/cstetex
+# tetex, ptex, cstetex must not block itself, fix for bug 121727
+if [[ "${PN}" = "tetex" ]] ; then
+	DEPEND="!app-text/ptex
+		!app-text/cstetex"
+fi
+if [[ "${PN}" = "ptex" ]] ; then
+	DEPEND="!app-text/tetex
+		!app-text/cstetex"
+fi
+if [[ "${PN}" = "cstetex" ]] ; then
+	DEPEND="!app-text/ptex
+		!app-text/tetex"
+fi
+
+DEPEND="${DEPEND}
 	sys-apps/ed
 	sys-libs/zlib
 	X? ( || ( (
