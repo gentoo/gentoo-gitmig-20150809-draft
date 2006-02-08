@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.49 2006/02/08 19:08:03 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.50 2006/02/08 22:43:29 tove Exp $
 
   08 Feb 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   +files/ibm-jdk-bin-1.4.2.04:
@@ -86,7 +86,7 @@
   -ibm-jdk-bin-1.4.1-r2.ebuild, ibm-jdk-bin-1.4.2.ebuild:
   Restrict fetch
 
-  26 Aug 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   ibm-jdk-bin-1.4.2.ebuild:
   Fix cp -a usage for Gentoo/FreeBSD.
 
@@ -158,7 +158,7 @@
 
 *ibm-jdk-bin-1.4.2 (14 Jul 2004)
 
-  14 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  14 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   ibm-jdk-bin-1.4.2.ebuild:
   Fix CVS header.
 
