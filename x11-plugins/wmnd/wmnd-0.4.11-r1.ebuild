@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.11-r1.ebuild,v 1.6 2006/01/31 20:03:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.11-r1.ebuild,v 1.7 2006/02/08 18:58:14 blubb Exp $
 
 IUSE="snmp"
 DESCRIPTION="WindowMaker Network Devices (dockapp)"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.yuv.info/pub/wmnd/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 
 RDEPEND="|| ( (
 		x11-libs/libX11
