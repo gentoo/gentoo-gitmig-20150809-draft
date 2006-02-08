@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.3.11.ebuild,v 1.1 2006/02/08 04:04:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.3.11.ebuild,v 1.2 2006/02/08 15:48:04 wolf31o2 Exp $
 
 VERSION_DMAP='1.00.17'
 VERSION_DMRAID='1.0.0.rc9'
@@ -55,6 +55,8 @@ src_install() {
 	# This is because I switched to using the bzip2 for klibc
 	sed -i -e 's:KLIBC_VER}.tar.gz:KLIBC_VER}.tar.bz2:' \
 		${D}/etc/genkernel.conf || die "Could not adjust klibc tarball"
+	sed -i -e 's:tar zxpf "${KLIBC_SRCTAR}":tar jxpf "${KLIBC_SRCTAR}":' \
+		${S}/gen_compile.sh || die "sed gen_compile.sh"
 
 	dodir /usr/share/genkernel
 	use ibm && cp ${S}/ppc64/kernel-2.6-pSeries ${S}/ppc64/kernel-2.6 || cp ${S}/ppc64/kernel-2.6.g5 ${S}/ppc64/kernel-2.6
