@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/fvwm-themes-0.7.0.ebuild,v 1.11 2005/11/02 17:58:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/fvwm-themes-0.7.0.ebuild,v 1.12 2006/02/08 08:07:19 truedfx Exp $
 
 IUSE="gnome"
 
@@ -19,8 +19,9 @@ RDEPEND="x11-wm/fvwm"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-posix-sort.patch
 }
 
 src_compile() {
@@ -34,7 +35,7 @@ src_compile() {
 
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }
 
