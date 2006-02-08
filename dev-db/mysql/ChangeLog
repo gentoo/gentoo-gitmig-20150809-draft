@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.301 2006/02/08 16:39:23 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.302 2006/02/08 22:39:31 tove Exp $
 
 *mysql-4.1.18-r30 (08 Feb 2006)
 
@@ -875,7 +875,7 @@
   19 Jan 2005; Markus Rothe <corsair@gentoo.org> mysql-4.0.23-r1.ebuild:
   Stable on ppc64; bug #78620
 
-  19 Jan 2005; Olivier CrÃÂªte <tester@gentoo.org> mysql-4.0.23-r1.ebuild:
+  19 Jan 2005; Olivier Crête <tester@gentoo.org> mysql-4.0.23-r1.ebuild:
   Stable on x86 wrt security bug 77805
 
 *mysql-4.1.8-r1 (18 Jan 2005)
@@ -1098,7 +1098,7 @@
   14 Apr 2004; Jason Wever <weeve@gentoo.org> mysql-4.0.18-r1.ebuild:
   Stable on sparc wrt bug #46242.
 
-  14 Apr 2004; Bryan Østergaard,,, <kloeri@gentoo.org> mysql-4.0.18-r1.ebuild:
+  14 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> mysql-4.0.18-r1.ebuild:
   Stable on Alpha.
 
   14 Apr 2004; Michael McCabe <randy@gentoo.org> mysql-4.0.18-r1.ebuild:
