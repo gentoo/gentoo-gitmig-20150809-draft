@@ -1,20 +1,73 @@
-MD5 fd62954848b4fc7af40489ee328089c8 ChangeLog 8304
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b0796f276f377cfc5ccfba09b8de43f1 ChangeLog 8477
+RMD160 c72c0076474ed7f47ccee03be6dfbe2aca616b77 ChangeLog 8477
+SHA256 d4b382babef58bf2ff3867d6c442339a85a76cb5b17aa432f7cc60d19f064e42 ChangeLog 8477
 MD5 60b4e7758ce769df141b81b19c338f34 files/digest-tk-8.3.4-r1 60
+RMD160 f97e98bd4c32afe70376ae3a68c7e39485137d92 files/digest-tk-8.3.4-r1 60
+SHA256 c2a69653d2e7a8792204bc4d31d95be1f20e216f64ac76129a3a3fadfe0d7b3d files/digest-tk-8.3.4-r1 60
 MD5 f340f38756a0efb0539b53d64511f6a9 files/digest-tk-8.4.11 65
+RMD160 33d96c38a704c39617676cb2c41a511d4a2a81c4 files/digest-tk-8.4.11 65
+SHA256 618530bdca7b86eb8279fe892c889103e700552785f132f3d83cb1f2e898555d files/digest-tk-8.4.11 65
 MD5 f340f38756a0efb0539b53d64511f6a9 files/digest-tk-8.4.11-r1 65
+RMD160 33d96c38a704c39617676cb2c41a511d4a2a81c4 files/digest-tk-8.4.11-r1 65
+SHA256 618530bdca7b86eb8279fe892c889103e700552785f132f3d83cb1f2e898555d files/digest-tk-8.4.11-r1 65
 MD5 f64532dbe89c04cefe0e16a9743f5f57 files/digest-tk-8.4.6 64
+RMD160 17ab96589da0c4832a9f11857e999916220a0344 files/digest-tk-8.4.6 64
+SHA256 a90c50a0a15e1c1db4f1d12d55de3f3cf1653d160d83b08b0b160e3ad8188dfa files/digest-tk-8.4.6 64
 MD5 f64532dbe89c04cefe0e16a9743f5f57 files/digest-tk-8.4.6-r1 64
+RMD160 17ab96589da0c4832a9f11857e999916220a0344 files/digest-tk-8.4.6-r1 64
+SHA256 a90c50a0a15e1c1db4f1d12d55de3f3cf1653d160d83b08b0b160e3ad8188dfa files/digest-tk-8.4.6-r1 64
 MD5 76d0b4599f29136b31e902d15566e8c8 files/digest-tk-8.4.9 64
+RMD160 d012534789a995003b619fd68430900a9b454ff2 files/digest-tk-8.4.9 64
+SHA256 bf4dc1fe66f87bff6bb3367a14328ee35111d46d4ce3f44d88165a5f0ffabe14 files/digest-tk-8.4.9 64
 MD5 3003fb2cb4a185ec54b8c94ec0606313 files/remove-control-v-8.4.9.diff 522
+RMD160 393f14c68f75795bc10e94d00a2e4d470ab50e4d files/remove-control-v-8.4.9.diff 522
+SHA256 f82a147821e6eb4cda3674568450903de864c99d73cae6062b56c391e7290bba files/remove-control-v-8.4.9.diff 522
 MD5 e662e61449ea86b439ceb41463762cdc files/remove-control-v-8.4.diff 449
+RMD160 03c17d73b8f5736fb78403eafe26a2c599f22659 files/remove-control-v-8.4.diff 449
+SHA256 0945cee853d80ab4b5760daced77149da02de41b0ef379f66f5d17c59d66fff6 files/remove-control-v-8.4.diff 449
 MD5 3e8db8239fe4e68f5107a7a1d4f2f85b files/remove-control-v.diff 400
+RMD160 0ecd0ac7aed9aa516e763de4cf930a1d005a878f files/remove-control-v.diff 400
+SHA256 44890be11039fec5cf4a5f52cb4e3b9e131ee85b77a7fe15279076f1a251a99b files/remove-control-v.diff 400
 MD5 7442ab63dabe7e4d5bdde18a28c118e2 files/tk-8.4.11-multilib.patch 896
+RMD160 29152dde424c41555e132c1b279ccc7ab279e27f files/tk-8.4.11-multilib.patch 896
+SHA256 1f15653e3f68fdd6b32b985514d6b2bae7a3a6c717a326c85082394095376636 files/tk-8.4.11-multilib.patch 896
 MD5 f4d1359d10fdb4a572e9da8f9896c603 files/tk-8.4.9-man.patch 800
+RMD160 8d06c54ab7ae0edf584248a8f6f14f46e08eec97 files/tk-8.4.9-man.patch 800
+SHA256 5e356b8d34fc6687af03f1aa93e2a05619e0df0bbef65a8bc76e0a9a3da56dfa files/tk-8.4.9-man.patch 800
+MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/tk-configure-LANG.patch 1686
+RMD160 4ff8355af81705058fd411910dfae94887bcd884 files/tk-configure-LANG.patch 1686
+SHA256 dc9386b88eac48c282d63d0be7e7be81d4a0a08035a8b97138a61133e057bcea files/tk-configure-LANG.patch 1686
 MD5 c1c1e9dfac0e70f21ef1a73e6dc76b8f files/tk-wm-maxsize.patch 896
+RMD160 63e1379bc7196a7da1289f8eaec4ede60d9297c4 files/tk-wm-maxsize.patch 896
+SHA256 399fc01be660843441e235f02110cceb8815d46b25feea8991ca9add7831b0d7 files/tk-wm-maxsize.patch 896
 MD5 37d9be6d753633a1cb6704052776ab1f metadata.xml 159
+RMD160 117cc289391c0477579de68e7347628756673eac metadata.xml 159
+SHA256 2cf13398186ae4abcd9f41c51ffb3bcdcc7da32df2c2af5c2de2e2cc8ad194ce metadata.xml 159
 MD5 670ac1b343b68583bd99f4adc39765eb tk-8.3.4-r1.ebuild 2413
-MD5 f58279bb26ebf5341ddc04fe422a6afc tk-8.4.11-r1.ebuild 3008
-MD5 1a62fd1c184b67dc38bc87398d5c962d tk-8.4.11.ebuild 2923
+RMD160 83aa936cfeb54b65c7c6f5c86da7bba8cd8990ae tk-8.3.4-r1.ebuild 2413
+SHA256 d7cc8d8fb316920b8ecbb1690333d7948535cd0fbfbe72f4db1b2c31089d768f tk-8.3.4-r1.ebuild 2413
+MD5 a29dfc6044a952b0d976bdcd546fca8f tk-8.4.11-r1.ebuild 3182
+RMD160 bbf0f86059858be8ffec8fb914190e074cc426f4 tk-8.4.11-r1.ebuild 3182
+SHA256 8c23e6aec90f484002a8e9321eb3d589bcc103681a41f64bdc7cbec9fdbb65af tk-8.4.11-r1.ebuild 3182
+MD5 3a38b175fbbcd3a4325d66b5d8aeaf87 tk-8.4.11.ebuild 3085
+RMD160 49f0d7e72dc0752dd2e2e999d73bb3bd46a20aa1 tk-8.4.11.ebuild 3085
+SHA256 330b3a1d654cc6324e3ee071a21b059164be39faced8f428d0d0df6b5993f5c3 tk-8.4.11.ebuild 3085
 MD5 ba9899b0ace4194528167ac97b9e818d tk-8.4.6-r1.ebuild 2848
+RMD160 30330a09548119bf806ff73cefc329e54071e347 tk-8.4.6-r1.ebuild 2848
+SHA256 e4f8a2af4811c741a9204f33f1089a0e61dfdc117db925cd307c4406e8a1f07c tk-8.4.6-r1.ebuild 2848
 MD5 988041e4ca6e6ecfb534d8745cab9f0b tk-8.4.6.ebuild 2471
-MD5 ba0db66a9f955928fe7c2f229089d122 tk-8.4.9.ebuild 2938
+RMD160 b327e97fcdcece894369d4b77986382cfcb6ff69 tk-8.4.6.ebuild 2471
+SHA256 499ae7ef564b2641122a0e3ad05a58e529395de50371166f32f3ebf0e29af061 tk-8.4.6.ebuild 2471
+MD5 5a33e7b57ac9ddf1d231d87f5dd8efef tk-8.4.9.ebuild 3096
+RMD160 b1de20b2d113855b987d45c8045f911b7b2de35d tk-8.4.9.ebuild 3096
+SHA256 1a59e7a7ef570bf158ae99bed4b6825bbfdeb9db30a23ba2e44170b20df382e1 tk-8.4.9.ebuild 3096
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6W6M2+ySkm8kpY0RAo+bAJ9S/rJcy0DLJsMdcma/pNWtWZXRaACfZhAz
+fhGfiwU/xcmRQz2uvPSvfXY=
+=8EE2
+-----END PGP SIGNATURE-----

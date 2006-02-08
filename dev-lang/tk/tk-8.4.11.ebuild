@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.11.ebuild,v 1.4 2006/01/02 21:27:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.11.ebuild,v 1.5 2006/02/08 04:07:10 vapier Exp $
 
 inherit eutils
 
@@ -43,6 +43,13 @@ src_unpack() {
 	epatch ${FILESDIR}/remove-control-v-8.4.9.diff
 	epatch ${FILESDIR}/${PN}-8.4.9-man.patch
 	epatch ${FILESDIR}/${P}-multilib.patch
+
+	local d
+	for d in */configure ; do
+		cd "${S}"/${d%%/*}
+		EPATCH_SINGLE_MSG="Patching nls cruft in ${d}" \
+		epatch "${FILESDIR}"/tk-configure-LANG.patch
+	done
 }
 
 src_compile() {

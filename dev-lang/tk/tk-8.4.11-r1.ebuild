@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.11-r1.ebuild,v 1.1 2006/01/08 14:13:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.11-r1.ebuild,v 1.2 2006/02/08 04:07:10 vapier Exp $
 
 inherit eutils
 
@@ -39,17 +39,24 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/remove-control-v-8.4.9.diff
-	epatch ${FILESDIR}/${PN}-8.4.9-man.patch
-	epatch ${FILESDIR}/${P}-multilib.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/remove-control-v-8.4.9.diff
+	epatch "${FILESDIR}"/${PN}-8.4.9-man.patch
+	epatch "${FILESDIR}"/${P}-multilib.patch
 
 	# Bug 117982
 	sed -i -e "s/relid'/relid/" "${S}"/unix/{configure,tcl.m4} || die
+
+	local d
+	for d in */configure ; do
+		cd "${S}"/${d%%/*}
+		EPATCH_SINGLE_MSG="Patching nls cruft in ${d}" \
+		epatch "${FILESDIR}"/tk-configure-LANG.patch
+	done
 }
 
 src_compile() {
-	cd ${S}/unix
+	cd "${S}"/unix
 
 	local mylibdir=$(get_libdir) ; mylibdir=${mylibdir//\/}
 	local local_config_use=""
@@ -70,7 +77,7 @@ src_install() {
 	local v1
 	v1=${PV%.*}
 
-	cd ${S}/unix
+	cd "${S}"/unix
 	make DESTDIR=${D} install || die
 
 	# fix the tkConfig.sh to eliminate refs to the build directory

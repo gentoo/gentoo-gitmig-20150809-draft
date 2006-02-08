@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.9.ebuild,v 1.12 2006/01/30 07:15:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.9.ebuild,v 1.13 2006/02/08 04:07:10 vapier Exp $
 
 inherit eutils
 
@@ -42,6 +42,12 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/remove-control-v-${PV}.diff || die
 	epatch ${FILESDIR}/${P}-man.patch || die
+	local d
+	for d in */configure ; do
+		cd "${S}"/${d%%/*}
+		EPATCH_SINGLE_MSG="Patching nls cruft in ${d}" \
+		epatch "${FILESDIR}"/tk-configure-LANG.patch
+	done
 }
 
 src_compile() {
