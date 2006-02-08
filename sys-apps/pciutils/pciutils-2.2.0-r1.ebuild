@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.0-r1.ebuild,v 1.11 2005/12/24 15:41:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.0-r1.ebuild,v 1.12 2006/02/08 19:09:59 kanaka Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -26,9 +26,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.1.11-malloc.patch
 
 	# Set Gentoo paths
+	# and do not strip (breaks cross-compile), portage handles stripping
 	sed -i \
 		-e '/^PREFIX=/s:=.*:=/usr:' \
 		-e '/^IDSDIR=/s:=.*:=$(PREFIX)/share/misc:' \
+		-e '/INSTALL.* -s lspci /s: -s lspci : lspci :' \
 		Makefile || die
 
 	# Make sure we respect $AR / $RANLIB
