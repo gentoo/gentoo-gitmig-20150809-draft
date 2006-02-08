@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/man-pages-de-0.4.ebuild,v 1.2 2005/12/31 08:05:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/man-pages-de-0.4.ebuild,v 1.3 2006/02/08 01:04:44 vapier Exp $
 
 DESCRIPTION="A somewhat comprehensive collection of Linux german man page translations"
 HOMEPAGE="http://www.infodrom.org/projects/manpages-de/"
@@ -24,4 +24,6 @@ src_install() {
 	# Remove man pages provided by other packages
 	#  - shadow
 	rm "${D}"/usr/share/man/de/man1/{chsh,groups,passwd}.1*
+	#  - man
+	rm "${D}"/usr/share/man/de/man1/{apropos,man,whatis}.1*
 }
