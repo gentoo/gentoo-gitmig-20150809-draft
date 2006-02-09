@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.84 2006/01/03 12:04:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.85 2006/02/09 22:20:26 vanquirius Exp $
+
+*gnutls-1.2.10-r1 (09 Feb 2006)
+*gnutls-1.2.10 (09 Feb 2006)
+
+  09 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> +gnutls-1.2.10.ebuild,
+  +gnutls-1.2.10-r1.ebuild:
+  1.2.10 version bump for bug 122307.
 
 *gnutls-1.2.9-r1 (03 Jan 2006)
 
