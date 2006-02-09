@@ -1,6 +1,6 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.21 2006/02/04 22:56:09 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.22 2006/02/09 22:26:12 tove Exp $
 
   04 Feb 2006; Marien Zwart <marienz@gentoo.org> ati-drivers-8.21.7.ebuild:
   Do not doexe the same file twice (previous commit "fixed" something a second
@@ -396,7 +396,7 @@
   Multilib cleanups.
 
   19 Jan 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.8.25.ebuild:
-  typo in the multilib support section, fixed thanks Robert FÃ¼hricht
+  typo in the multilib support section, fixed thanks Robert Führicht
   <the_master_of_disaster@gmx.at>
 
   19 Jan 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.8.25.ebuild:
