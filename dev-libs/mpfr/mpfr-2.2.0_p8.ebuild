@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p8.ebuild,v 1.3 2006/02/08 23:25:06 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p8.ebuild,v 1.4 2006/02/09 17:27:59 agriffis Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.mpfr.org/mpfr-current/${MY_P}.tar.bz2
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/gmp-4.1.4-r2"
