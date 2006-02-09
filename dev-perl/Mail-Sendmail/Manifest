@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 21b0fd22b7d4dcfa0723798c3f61311e ChangeLog 1744
-RMD160 a22f31920cabc634c91d3f7585a3de45560c2f2c ChangeLog 1744
-SHA256 bd19268010cb5d3d5da35e9f88a6eed624e0a3f7025a7421ff5e8f032b876dff ChangeLog 1744
-MD5 03becc202dc315a263d321574e9b167e Mail-Sendmail-0.79.ebuild 507
-RMD160 22b5ab6da3bcc22175b28e443d67dfafec66c9b0 Mail-Sendmail-0.79.ebuild 507
-SHA256 0e59fabccd2b5770e72bac5b02538e6c3770d97571b73aa99dcd96a6139b837e Mail-Sendmail-0.79.ebuild 507
+MD5 693c5899c8226fbde070d87040fc0ff7 ChangeLog 1858
+MD5 374130a8b576028b190aceadb6342c19 Mail-Sendmail-0.79.ebuild 503
 MD5 2f159f5a3ada4d43001bccb7eff21f13 files/digest-Mail-Sendmail-0.79 69
-RMD160 77f7230c10a1b707f19b2688fbf4e4c98c06f6e7 files/digest-Mail-Sendmail-0.79 69
-SHA256 f50c6e9648309d5c6027bb07d33eaafe61c8552979b17e8dac5442b528e80b7b files/digest-Mail-Sendmail-0.79 69
 MD5 78c1b34edd1399c24d7d9e59212bc17a metadata.xml 221
-RMD160 53b8a5f1a719c020040bb39b48416c4358a3bcfd metadata.xml 221
-SHA256 adc57871d27ab4e3aec6331df8fcd29661f0e00f6edb26915adb8db95610ec77 metadata.xml 221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD4/szJrHF4yAQTrARAvOvAKCpVFVaJQZjxvjSpdBb4k9NEjOHGgCeNjvI
-EshPAuHxgsvH64wvdUOG93w=
-=rJUN
------END PGP SIGNATURE-----
