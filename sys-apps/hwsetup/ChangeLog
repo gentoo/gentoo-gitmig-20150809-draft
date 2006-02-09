@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.39 2006/02/09 14:43:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.40 2006/02/09 19:43:53 wolf31o2 Exp $
+
+  09 Feb 2006; Chris Gianelloni <wolf31o2@gentoo.org> hwsetup-1.1.ebuild:
+  Removing dependency on hwdata-knoppix and closing bug #122248.
 
   09 Feb 2006; Chris Gianelloni <wolf31o2@gentoo.org> hwsetup-1.1.ebuild:
   Changed DESCRIPTION in an attempt to keep users from installing this package
