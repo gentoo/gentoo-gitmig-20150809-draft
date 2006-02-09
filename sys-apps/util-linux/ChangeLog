@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.144 2006/01/29 12:47:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.145 2006/02/09 06:15:32 kumba Exp $
+
+  13 Feb 2006; Joshua Kinard <kumba@gentoo.org> util-linux-2.12r-r2.ebuild:
+  Marked stable on mips for Bug #120111.
 
   29 Jan 2006; Mike Frysinger <vapier@gentoo.org>
   util-linux-2.13_pre6.ebuild:
