@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/asm
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.22 2005/09/10 15:32:33 axxo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.23 2006/02/09 03:00:52 nichoj Exp $
+
+  09 Feb 2006; Joshua Nichols <nichoj@gentoo.org> asm-1.5.2-r1.ebuild:
+  Stable on amd64 and x86.
 
 *asm-1.5.2-r1 (10 Sep 2005)
 *asm-1.4.3-r2 (10 Sep 2005)
