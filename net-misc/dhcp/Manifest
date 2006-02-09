@@ -1,6 +1,9 @@
-MD5 914520f6b5c347dac29dbad5972316c5 ChangeLog 12576
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e9d312f80d7a29457bdb3b5d3df2426f ChangeLog 12685
 MD5 269137b4332a1524e1cf1b094d313166 dhcp-3.0.1-r1.ebuild 3958
-MD5 50668eef8805f8e8dfdb628f79fd9eb4 dhcp-3.0.3-r2.ebuild 3917
+MD5 30baf91d9c7f9eead44182e6a324d8ba dhcp-3.0.3-r2.ebuild 3919
 MD5 1c4c0f658fedde16e4db202ca69111ea dhcp-3.0.4_beta2-r1.ebuild 5133
 MD5 2421c68dfdeec65048f1a97cbee1f4ca files/dhclient-ntp.patch 168
 MD5 d909d81a4d4ea39ddfc9898d33488c73 files/dhcp-3.0-fix-perms.patch 485
@@ -19,3 +22,10 @@ MD5 323228061719fcac86be97a1a25d23b6 files/digest-dhcp-3.0.1-r1 128
 MD5 c6df78cb1777bebada64f9c629b9f8eb files/digest-dhcp-3.0.3-r2 62
 MD5 be9ba2d7afab9b446197c45fe60d02bc files/digest-dhcp-3.0.4_beta2-r1 64
 MD5 436163172942ee1a0bcfb47534a71cce metadata.xml 330
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD63znKRy60XGEcJIRAgwBAJ9UcCLlMtQfSxr63/PlZxKx3hTergCgo9hE
+mPWK/J4ozKLpabdp5NCXd5E=
+=Yse9
+-----END PGP SIGNATURE-----
