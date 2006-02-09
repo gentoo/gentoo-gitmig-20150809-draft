@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libherdstat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/ChangeLog,v 1.9 2006/01/19 11:23:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/ChangeLog,v 1.10 2006/02/09 01:05:07 halcy0n Exp $
+
+  09 Feb 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/libherdstat-0.2.0-gcc.patch, libherdstat-0.2.0.ebuild:
+  Added upstream patch for bug #119592
 
 *libherdstat-0.2.0 (19 Jan 2006)
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.2.0.ebuild,v 1.1 2006/01/19 11:23:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.2.0.ebuild,v 1.2 2006/02/09 01:05:07 halcy0n Exp $
+
+inherit eutils autotools
 
 TEST_DATA_PV="20060119"
 TEST_DATA_P="${PN/lib/}-test-data-${TEST_DATA_PV}"
@@ -28,6 +30,14 @@ pkg_setup() {
 	if has test $FEATURES && ! use test ; then
 		die "FEATURES=test is set but USE=test is not; tests will fail without USE=test"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc.patch
+	AT_M4DIR="${WORKDIR}"/${P}/m4 eautoreconf
 }
 
 src_compile() {
