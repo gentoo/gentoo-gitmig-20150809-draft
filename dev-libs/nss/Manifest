@@ -13,6 +13,9 @@ SHA256 f6c7f9eb5d161150cb3ae3cd06411c8bf2d539d9569b8dbed8474abb34089780 files/di
 MD5 5b40cac4fbb267e83bdf04c269a7c665 files/digest-nss-3.9.2-r3 62
 RMD160 e51cf2203f48656512cb80ad47985e2f00aafa50 files/digest-nss-3.9.2-r3 62
 SHA256 f6c7f9eb5d161150cb3ae3cd06411c8bf2d539d9569b8dbed8474abb34089780 files/digest-nss-3.9.2-r3 62
+MD5 12e4123fd9cc84264cc7ff25478b580f files/nss-3.11-config-1.patch 1440
+RMD160 052cc7d19eafaadec1cca6d9882f23265afdf8a7 files/nss-3.11-config-1.patch 1440
+SHA256 9a67bbbd9996535ac0aff115294c6537be5ba2efc99ae48c3bc92eb995e670bc files/nss-3.11-config-1.patch 1440
 MD5 23a5eb94e38f7dcf481a83bb81143788 files/nss-3.11-config.patch 3167
 RMD160 e4b57c89a518b54070b884f40ca11224ccc60349 files/nss-3.11-config.patch 3167
 SHA256 0947675d067f09dee55684e29dc7764834ad640b2adf52d9450fbb1b7f9b728c files/nss-3.11-config.patch 3167
