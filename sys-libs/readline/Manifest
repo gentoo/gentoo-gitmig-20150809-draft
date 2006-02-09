@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d22a2229d94398cf4b084cdb4fcb543f ChangeLog 9059
-RMD160 d11cd3472dc65473b38c6bb58d81587b73169d5e ChangeLog 9059
-SHA256 5c45e45e19133cd7f4f3a5a177fc351ebc70c03689b6151e254f0f876b83dd98 ChangeLog 9059
+MD5 cbaaa447a835e43c91ab6460efb241e7 ChangeLog 9281
+RMD160 9117b9c5247f6ab6b9de7ed02fb1806fd1624d1b ChangeLog 9281
+SHA256 f6bd87267844b712a77051cffed8e1278d94abbfd345b544891db968d534be0a ChangeLog 9281
 MD5 d687545889dacb43e121f4932d99a534 files/bash-3.0-etc-inputrc.patch 1443
 RMD160 8bf34837bef20bfc7062e32e4a23aa6af9ef2b49 files/bash-3.0-etc-inputrc.patch 1443
 SHA256 b43736c32ed9d9088ee1cbbff11b78d6f6993492f9da3e1eb5151a64a082d025 files/bash-3.0-etc-inputrc.patch 1443
@@ -52,9 +52,9 @@ SHA256 45f3ac7973b5d5af4a79575fe0b6c364bb444dbbe42f43b600b1dd1d99dcac55 files/re
 MD5 d5beb2bc88ccec6e3344a6094004e4bc files/readline-5.1-rlfe-libutil.patch 3056
 RMD160 3686693b76e73ba05c95a378abc20de61d442b5b files/readline-5.1-rlfe-libutil.patch 3056
 SHA256 8f990b4abe53f93774bcc08a67040fc39129e6b7862108869771124e56fab1e2 files/readline-5.1-rlfe-libutil.patch 3056
-MD5 acf485e32b4ff28ae6aec238c3a4581c files/readline-5.1-rlfe-uclibc.patch 308
-RMD160 faf47fc33fc8708e902becaf632543e2ee43a917 files/readline-5.1-rlfe-uclibc.patch 308
-SHA256 03e95b53d0c5b3c713d0ea6460d5cc77873c92688fb75ecb8837a18e0fe59296 files/readline-5.1-rlfe-uclibc.patch 308
+MD5 ae8aaec6f366e3f675d626b157c8cffd files/readline-5.1-rlfe-uclibc.patch 1694
+RMD160 715127465c03df7329f23b1a12aece8001aca96c files/readline-5.1-rlfe-uclibc.patch 1694
+SHA256 8045b4a37c1a3b19171fe4192161af46188223bdd61ab5e32561593f9c89270e files/readline-5.1-rlfe-uclibc.patch 1694
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
@@ -76,7 +76,7 @@ SHA256 ad1fa972a90beb3102f4f2c4c435c6a3d366fddb3e833202e24ea237f402dbb8 readline
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD5Qld2+ySkm8kpY0RAi8jAKCZvMq9gaYoc9+2yuCoMvbicwKp2ACfTBuE
-99FpEOtGgVQfABMu4zkO1pM=
-=Ah3U
+iD8DBQFD6rRF2+ySkm8kpY0RArGBAJ40RxN8SulhxuE7r2KJGVRGm93YxQCguluV
+2L9WFVflp04eR/pVNeDVyOQ=
+=dZJ9
 -----END PGP SIGNATURE-----
