@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/py2play
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py2play/ChangeLog,v 1.13 2005/08/07 13:18:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py2play/ChangeLog,v 1.14 2006/02/09 00:08:46 tove Exp $
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> py2play-0.1.7.ebuild:
   Stable on ppc.
@@ -33,17 +33,17 @@
 
 *py2play-0.1.6 (21 Dec 2003)
 
-  21 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> py2play-0.1.6.ebuild:
+  21 Dec 2003; Bryan Østergaard <kloeri@gentoo.org> py2play-0.1.6.ebuild:
   Version bump
 
 *py2play-0.1.5 (05 Dec 2003)
 
-  05 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> py2play-0.1.5.ebuild:
+  05 Dec 2003; Bryan Østergaard <kloeri@gentoo.org> py2play-0.1.5.ebuild:
   New version
 
 *py2play-0.1.2 (10 May 2003)
 
   10 May 2003; Alastair Tse <liquidx@gentoo.org> py2play-0.1.2.ebuild:
-  Initial ebuild. Thanks to FranÃ§ois Weykmans <nectroom@swing.be>. Part of
+  Initial ebuild. Thanks to François Weykmans <nectroom@swing.be>. Part of
   Slune and OOmadness suite.
 
