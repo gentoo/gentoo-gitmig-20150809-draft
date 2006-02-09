@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/freepops
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.19 2006/02/08 21:55:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.20 2006/02/09 11:04:40 dragonheart Exp $
+
+*freepops-0.0.97-r1 (09 Feb 2006)
+
+  09 Feb 2006; Daniel Black <dragonheart@gentoo.org>
+  -files/freepops-0.0.27-initd.patch, -freepops-0.0.27-r1.ebuild,
+  -freepops-0.0.95.ebuild, +freepops-0.0.97-r1.ebuild:
+  added hotmail.lua patch as per homepage. removed old versions
 
 *freepops-0.0.97 (08 Feb 2006)
 
