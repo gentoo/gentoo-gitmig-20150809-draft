@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.37 2006/01/27 13:18:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.38 2006/02/09 17:10:44 flameeyes Exp $
+
+  09 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdebluetooth-0.99_beta1-r1.ebuild, kdebluetooth-1.0_beta1.ebuild:
+  Fix openobex dependency as per bug #122262.
 
   27 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   kdebluetooth-1.0_beta1.ebuild:
