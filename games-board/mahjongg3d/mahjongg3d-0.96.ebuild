@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/mahjongg3d-0.96.ebuild,v 1.6 2005/07/25 15:44:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/mahjongg3d-0.96.ebuild,v 1.7 2006/02/09 13:55:10 caleb Exp $
 
 inherit kde games
 
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	qmake -o Makefile mahjongg3d.pro
+	qmake QMAKE=${QTDIR}/bin/qmake -o Makefile mahjongg3d.pro
 	kde_src_compile none
 	emake || die "emake failed"
 }
