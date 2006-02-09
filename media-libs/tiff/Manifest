@@ -1,24 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 085bf925a1dc6f9756f484ac688a92f9 metadata.xml 447
-MD5 ab3519ae0f7d0763b8869d9156cdc68c tiff-3.7.1-r1.ebuild 1029
-MD5 c544051c0ec2dc577291733cfb9b7f2a tiff-3.7.2.ebuild 970
-MD5 71f71e02636ffcb35096499705c8d91e tiff-3.7.3.ebuild 842
-MD5 746ffd34f976fde5307f422496a853c1 tiff-3.7.4.ebuild 1003
-MD5 d4bb55eb615472df88df21c16e275345 ChangeLog 9092
+MD5 7612cc0aca0ab560c639547bf16b8b64 ChangeLog 9088
+RMD160 20d344ecc8aad6c5d7981e28d59a42a2babb06ae ChangeLog 9088
+SHA256 9155acc387f132277dd489a98edf3329b53c1bf7029cd5bbf72d871d922ac261 ChangeLog 9088
 MD5 0d970257da4fc0fba7ae38016e4655d6 files/digest-tiff-3.7.1-r1 63
-MD5 4bffd94510b6a669790656394f2d0302 files/tiff-3.7.1-trans.patch 479
-MD5 94f0e7d5e8a574073ec05f7c24c81fc1 files/tiff-3.7.4-assign-dont-compare.patch 404
+RMD160 0718266684e304c039da663b6837c648cf652695 files/digest-tiff-3.7.1-r1 63
+SHA256 d02701b4aa14fcc87bbb11b11ca63f35e1158693dce82c6ebd378ce256525381 files/digest-tiff-3.7.1-r1 63
 MD5 9bd055973e8798d783f0e87f5d6c160d files/digest-tiff-3.7.2 63
+RMD160 682a125a103d732d2077d422f7331be8026cbc30 files/digest-tiff-3.7.2 63
+SHA256 0d44e94c7b838ca467ec826db2ecffb78f03cc5c4b7b45e2dcbd2aa8e1528de2 files/digest-tiff-3.7.2 63
 MD5 252bce379522d9df360262d3f341fe80 files/digest-tiff-3.7.3 63
-MD5 6a9a255a3b89908c05b1f8bbde260e26 files/tiff-3.7.1-tiffdump.patch 439
-MD5 f0b2abf65d2e777bb249d460fc54cd87 files/tiff-3.7.2-buffer_check.patch 2093
+RMD160 888b70e7c497e659c8f41c09f4d0cbc3b7b54bb5 files/digest-tiff-3.7.3 63
+SHA256 1d0ef2ae7a2e1d1e9929eb6dfa07d38248e0744a4f999851077712ff78acfde7 files/digest-tiff-3.7.3 63
 MD5 3b53108102459e2f91dd97698367ac4d files/digest-tiff-3.7.4 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDPKVlgIKl8Uu19MoRAi3fAJkBJxPlFqlGIqtDEIyFpSjQC5du/gCcCzrS
-6YDYIRNa0/T0kZu+V5OaTj0=
-=ddKJ
------END PGP SIGNATURE-----
+RMD160 c42463cf351d7f7dfe7f637ea604fa48977c3217 files/digest-tiff-3.7.4 63
+SHA256 8db69a213fe0886e3c941666b27b5079428a85c6aedf231aeb0f39c44894d70c files/digest-tiff-3.7.4 63
+MD5 6a9a255a3b89908c05b1f8bbde260e26 files/tiff-3.7.1-tiffdump.patch 439
+RMD160 ee54a06e04fad6106dec3514b7110ec2991c1fe1 files/tiff-3.7.1-tiffdump.patch 439
+SHA256 3697a051dd64fbfb2c05971bd04089c35ff202461287ed7c9663d12c0397aecb files/tiff-3.7.1-tiffdump.patch 439
+MD5 4bffd94510b6a669790656394f2d0302 files/tiff-3.7.1-trans.patch 479
+RMD160 d3b98c34dd57401fcf38b591103400390bc0051f files/tiff-3.7.1-trans.patch 479
+SHA256 4f9e8a546d4ebdd8da51068e46c2d83b41af35102751a6ef42916732d446724b files/tiff-3.7.1-trans.patch 479
+MD5 f0b2abf65d2e777bb249d460fc54cd87 files/tiff-3.7.2-buffer_check.patch 2093
+RMD160 ec5f7a077fefb619dab7729c81badfcc1a112738 files/tiff-3.7.2-buffer_check.patch 2093
+SHA256 f9f30a78c150e4b0f4ae04d58e94b0f65498fe7470b39eb355b734a92ca5cd7a files/tiff-3.7.2-buffer_check.patch 2093
+MD5 94f0e7d5e8a574073ec05f7c24c81fc1 files/tiff-3.7.4-assign-dont-compare.patch 404
+RMD160 beb5e0c36567189013b672a37bc51ceb7846f69b files/tiff-3.7.4-assign-dont-compare.patch 404
+SHA256 9944cf632ebc5ea0c2895bf05ff8bda4815b517bb42e54385c0d656c51e7396e files/tiff-3.7.4-assign-dont-compare.patch 404
+MD5 085bf925a1dc6f9756f484ac688a92f9 metadata.xml 447
+RMD160 8df7883ab02a353acd993037450e7bbc984c052d metadata.xml 447
+SHA256 ee7391b2521ef9676ead67466ad7249f05f8d3c9bd8d8984bc0ceac8dcb804b3 metadata.xml 447
+MD5 ab3519ae0f7d0763b8869d9156cdc68c tiff-3.7.1-r1.ebuild 1029
+RMD160 9f6e99d1465fc605c733afd0b139767814561e99 tiff-3.7.1-r1.ebuild 1029
+SHA256 41d482ec24f53512e52cb13c383741c482c9f21b0b13cc98e6e83cc4ce8e4af6 tiff-3.7.1-r1.ebuild 1029
+MD5 c544051c0ec2dc577291733cfb9b7f2a tiff-3.7.2.ebuild 970
+RMD160 86bbe4613de8e69fa4d07347de42136d0d9597e9 tiff-3.7.2.ebuild 970
+SHA256 8e1fbe2bdfadaadbf7ec1c5004871163be407e53dfa4eec7da299cf94ec4eb59 tiff-3.7.2.ebuild 970
+MD5 71f71e02636ffcb35096499705c8d91e tiff-3.7.3.ebuild 842
+RMD160 7a12a30126cf54c46c8f6744d708a9ebe2b2d127 tiff-3.7.3.ebuild 842
+SHA256 5f60066347736ebba6f25ba3463e812b64c6a4ba1a647ae51e4c2bbcb8c322f3 tiff-3.7.3.ebuild 842
+MD5 746ffd34f976fde5307f422496a853c1 tiff-3.7.4.ebuild 1003
+RMD160 664a35bd09066a5364d3853bd11899b2cd5a7490 tiff-3.7.4.ebuild 1003
+SHA256 b662ad0034d44632e4d832354e7ba25e0172f492535ee09068fd411bd759baa6 tiff-3.7.4.ebuild 1003
