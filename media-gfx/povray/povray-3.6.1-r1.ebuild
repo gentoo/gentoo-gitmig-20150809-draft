@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r1.ebuild,v 1.15 2005/12/13 05:55:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r1.ebuild,v 1.16 2006/02/09 01:29:40 halcy0n Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils autotools
 
 DESCRIPTION="The Persistence Of Vision Ray Tracer"
 SRC_URI="ftp://ftp.povray.org/pub/povray/Official/Unix/povray-3.6.tar.bz2"
@@ -20,6 +20,13 @@ DEPEND="media-libs/libpng
 	X? ( || ( x11-libs/libXaw virtual/x11 ) )
 	svga? ( media-libs/svgalib )"
 
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-configure.patch
+	eautoconf
+}
 
 src_compile() {
 	local myconf
