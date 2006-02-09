@@ -1,6 +1,28 @@
-MD5 111873056ede22b75503d5fa21753864 ChangeLog 1051
-MD5 63fea28609fdb49568d82e275e2d163a tkpasman-2.2a.ebuild 978
-MD5 69deb71461dd099d79333e15f8ae2263 tkpasman-2.2.ebuild 903
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 16f328b7ccea5592e50aa6058ccf8520 ChangeLog 1240
+RMD160 68602854ede75b8329a8e539b1914339f1194179 ChangeLog 1240
+SHA256 13ddb7441325ea981148a64208d762843cba8dfa62fb40bb381de6e3cadff3df ChangeLog 1240
 MD5 d76723adc51c452e8b35c96fb5c5eb3e files/digest-tkpasman-2.2 63
-MD5 5934aa8972992bbce5694a339c6280a5 files/tkpasman-2.2a-gentoo.patch 771
+RMD160 bd7b98361f477735270ce8c65ed90ee030f8b873 files/digest-tkpasman-2.2 63
+SHA256 c8fe178706b4e05b9afb2b4ec4237a5713a993be26a97061ccf1034f037b3098 files/digest-tkpasman-2.2 63
 MD5 ae240d49b3add0897d8625c6c9d4335c files/digest-tkpasman-2.2a 64
+RMD160 6b94a1d2419cd97d7bb2e019243e903b8983cd9a files/digest-tkpasman-2.2a 64
+SHA256 ee72bd055141a21a5cafb71d9cbbf8d7819553a2139c8c48248780ae40f18bf5 files/digest-tkpasman-2.2a 64
+MD5 5934aa8972992bbce5694a339c6280a5 files/tkpasman-2.2a-gentoo.patch 771
+RMD160 7a4f6270d172e86f98449bfe0579266f429e4b0e files/tkpasman-2.2a-gentoo.patch 771
+SHA256 de3c60784ad9e24c4b161eebd897dbbbbe1cd91ee8e1f9011d6a84711d4c5901 files/tkpasman-2.2a-gentoo.patch 771
+MD5 b1c2409354768780c0bc04280fbe31df tkpasman-2.2.ebuild 885
+RMD160 3353aacac4223bf984d227b201020e3c83f526b6 tkpasman-2.2.ebuild 885
+SHA256 8b1133a07ead58decd2026d369363f5960a895c741f75c6519f340a3977ff8d3 tkpasman-2.2.ebuild 885
+MD5 dff0c76faa11f237f6aa8254725afea0 tkpasman-2.2a.ebuild 964
+RMD160 706a7fb8d27670d3d8cdad5cdf74c3df7b7374bd tkpasman-2.2a.ebuild 964
+SHA256 c410d0224ac17cabf173c05588b28558dd6c3be0e2f9423e21e44cbb2307f09d tkpasman-2.2a.ebuild 964
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD67OOQlM6RnzZP+IRAtniAJ0YtC9tGIXy9Vu+EViboUaabRUKugCcCn81
+NlXv/v3qw4OBRFW2u3dzMDo=
+=gt9E
+-----END PGP SIGNATURE-----

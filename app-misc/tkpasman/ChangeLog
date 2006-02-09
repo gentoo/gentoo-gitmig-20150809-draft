@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tkpasman
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/ChangeLog,v 1.9 2005/06/05 11:56:57 hansmi Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/ChangeLog,v 1.10 2006/02/09 21:25:46 ticho Exp $
+
+  09 Feb 2006; Andrej Kacian <ticho@gentoo.org> tkpasman-2.2.ebuild,
+  tkpasman-2.2a.ebuild:
+  Removed virtual/x11 dependency, as it's not needed - tk will pull in
+  everything necessary.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> tkpasman-2.2a.ebuild:
   Stable on ppc.

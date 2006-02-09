@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2a.ebuild,v 1.12 2005/06/05 11:56:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2a.ebuild,v 1.13 2006/02/09 21:25:46 ticho Exp $
 
 inherit eutils
 
@@ -20,7 +20,6 @@ DEPEND=">=dev-lang/tcl-8.3
 	>=sys-apps/sed-4"
 
 RDEPEND="ssl? ( dev-libs/openssl )
-	virtual/x11
 	>=dev-lang/tk-8.3
 	>=dev-lang/tcl-8.3"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2.ebuild,v 1.8 2005/01/01 15:26:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2.ebuild,v 1.9 2006/02/09 21:25:46 ticho Exp $
 
 MY_P="TkPasMan-${PV}"
 
@@ -15,7 +15,6 @@ IUSE="ssl"
 
 DEPEND=">=dev-lang/tcl-8.3"
 RDEPEND="ssl? ( dev-libs/openssl )
-	virtual/x11
 	>=dev-lang/tk-8.3
 	>=dev-lang/tcl-8.3"
 
