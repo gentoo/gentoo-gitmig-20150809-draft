@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.40 2006/01/29 20:00:59 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.41 2006/02/09 22:51:43 pebenito Exp $
+
+  09 Feb 2006; Chris PeBenito <pebenito@gentoo.org> libselinux-1.28.ebuild:
+  Move python_version out of global scope.
 
   29 Jan 2006; Chris PeBenito <pebenito@gentoo.org> libselinux-1.28.ebuild:
   Add python version handling to fix #120829, and add -fPIC to LDFLAGS to
