@@ -1,4 +1,6 @@
-MD5 953e17825c1a0eb2f2fc0cdbe9fe5201 ChangeLog 2868
+MD5 a726d2413da8c80d2c7c9b0c76e99d14 ChangeLog 2992
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kchart-1.4.2 68
+MD5 ec887471013626485519bfca72ab7281 files/digest-kchart-1.5_beta1 69
 MD5 75a84843c368f44071f0bf45ad0634d4 kchart-1.4.2.ebuild 908
+MD5 f3501f3d0f995de3c31f18630009a07e kchart-1.5_beta1.ebuild 1075
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157

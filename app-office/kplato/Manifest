@@ -1,3 +1,4 @@
-MD5 5a3320cc99f0ae6ab0ae327f7a185d3f ChangeLog 333
+MD5 29a2fbcbc978750f747363df1f4e9c00 ChangeLog 460
 MD5 ec887471013626485519bfca72ab7281 files/digest-kplato-1.5_beta1 69
-MD5 879895ee99d0c5fc8f4dc6c5315e0615 kplato-1.5_beta1.ebuild 723
+MD5 14f54fc1d7d5a71c2e05cc81e0cbe1b3 kplato-1.5_beta1.ebuild 743
+MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
