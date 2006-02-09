@@ -1,9 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.0-r2.ebuild,v 1.5 2005/10/14 01:06:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.0-r2.ebuild,v 1.6 2006/02/09 23:45:35 vapier Exp $
 
 EHACKAUTOGEN=yes
-inherit enlightenment
+inherit enlightenment multilib
 
 MY_P=${P/_/-}
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
@@ -16,7 +16,7 @@ DEPEND="=media-libs/freetype-2*
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( media-libs/jpeg )
 	tiff? ( >=media-libs/tiff-3.5.5 )
-	X? ( virtual/x11 )"
+	X? ( || ( ( x11-libs/libXext x11-proto/xextproto ) virtual/x11 ) )"
 
 src_unpack() {
 	enlightenment_src_unpack
@@ -46,7 +46,7 @@ src_compile() {
 
 src_install() {
 	enlightenment_src_install
-	dosed "s:@requirements@::" /usr/lib/pkgconfig/imlib2.pc
+	dosed "s:@requirements@::" /usr/$(get_libdir)/pkgconfig/imlib2.pc
 	docinto samples
 	dodoc demo/*.c
 }
