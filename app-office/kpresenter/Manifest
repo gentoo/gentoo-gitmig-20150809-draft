@@ -1,22 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4bb300bd1c01bb923023a2d0f9707081 ChangeLog 2913
-RMD160 b15e57a9ab93c6250bcc87959337e0d9bf58ca43 ChangeLog 2913
-SHA256 f4400ab03c7bc3628609a1dcf60c0574d7db0a4000cf6cfdaf40d91f14145793 ChangeLog 2913
+MD5 f8331ab0ce7946a37030725d9128b3fd ChangeLog 3047
 MD5 902823ac54984271d00a3e72454440b1 files/digest-kpresenter-1.4.2 250
-RMD160 c2b4361538cd32dbfd79218c5fef8e4d6818ac3f files/digest-kpresenter-1.4.2 250
-SHA256 40d4d888fb4050306c03d0ea47b3c6c6448301faea176ef95e616071a57aba1e files/digest-kpresenter-1.4.2 250
+MD5 ec887471013626485519bfca72ab7281 files/digest-kpresenter-1.5_beta1 69
 MD5 51b7bbc480bdd8687058bfa6aa393ebb kpresenter-1.4.2.ebuild 1087
-RMD160 21d74a7f0ddcba536487364e93ec22b3abc39b4c kpresenter-1.4.2.ebuild 1087
-SHA256 753101ee013c1ff41c66e8cef3804f85e5441b15297419ec1557008076e1b8ec kpresenter-1.4.2.ebuild 1087
+MD5 b8dd5a791d24267a7263fc0a3e4fa299 kpresenter-1.5_beta1.ebuild 1156
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
-SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD5r4uJrHF4yAQTrARAheBAJ4gsZzcfLWRhPJPCtRo+ulhtql+vwCeNAGb
-xzFd/wB5eHuyLMoSWLn5oag=
-=sclF
------END PGP SIGNATURE-----
