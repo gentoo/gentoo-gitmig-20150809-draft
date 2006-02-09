@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4-r1.ebuild,v 1.1 2006/02/08 23:24:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4-r1.ebuild,v 1.2 2006/02/09 23:35:45 vapier Exp $
 
 inherit flag-o-matic
 
@@ -49,7 +49,7 @@ src_compile() {
 	src_bootstrap_sed
 
 	local myconf=""
-	if [[ ${CHOST} != *-gnu ]] ; then
+	if ! use userland_GNU ; then
 		myconf="--program-prefix=g"
 	fi
 	econf \
