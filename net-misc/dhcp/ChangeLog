@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.74 2006/02/09 17:33:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.75 2006/02/09 21:30:11 tove Exp $
 
   09 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org> dhcp-3.0.3-r2.ebuild:
   Stable on sparc wrt #89424
@@ -80,11 +80,11 @@
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> dhcp-3.0.1-r1.ebuild:
   Mark 3.0.1-r1 stable on alpha
 
-  04 Sep 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/dhcp-3.0.2-gmake.patch, dhcp-3.0.2.ebuild:
   Added patch to fix wrong 'make' calls on Gentoo/FreeBSD.
 
-  04 Sep 2005; Diego PettenÃ² <flameeyes@gentoo.org> dhcp-3.0.2.ebuild:
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> dhcp-3.0.2.ebuild:
   Remove -Werror cflag that is passed when building on FreeBSD to fix
   Gentoo/FreeBSD.
 
@@ -134,7 +134,7 @@
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> dhcp-3.0.1.ebuild:
   keywords ~amd64.
 
-  02 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> dhcp-3.0.1.ebuild:
+  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> dhcp-3.0.1.ebuild:
   Keyword ~alpha, bug 65840.
 
   07 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> dhcp-3.0.1.ebuild:
