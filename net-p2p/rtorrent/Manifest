@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d3fd9e20d06f2069f052900c88112a2b ChangeLog 5344
-RMD160 50e26b6ac591db666139b0a164ade7d2c0512419 ChangeLog 5344
-SHA256 273b3cfecdf3b24d0bfd35ff022ce5d850802edf67851adf380bdd7f08a6de70 ChangeLog 5344
+MD5 f520c5871c156ce6e2f6817a7c53e9da ChangeLog 5444
+RMD160 942ecb242c994a224c80ad28f13447aea2806786 ChangeLog 5444
+SHA256 b6b0c8b79980094f1cf9bd89e2076707690da80139c92650aa5265722ddf2e23 ChangeLog 5444
 MD5 bbb25789b80690a06bae3aeb2f18b16f files/digest-rtorrent-0.3.6 66
 RMD160 635066d722cdb40feda5a11024df1c4a2687c98e files/digest-rtorrent-0.3.6 66
 SHA256 cd5800ef151633667f815511e1ba5ed243fb3da2dfaf4f0bc0fc9b3d0ce5c04a files/digest-rtorrent-0.3.6 66
@@ -22,16 +22,16 @@ SHA256 acc036fafdbccd35e5f4099dacaa7f5d50bbce9b18402bd41ecf6447aeb2432e metadata
 MD5 74347323b69e29ee8f3ffaadc7758969 rtorrent-0.3.6.ebuild 1106
 RMD160 ac22f9e4ac05ee6720b8d9de40a51b4d00c1f083 rtorrent-0.3.6.ebuild 1106
 SHA256 dce2ab32d78b23397806a2ba7605cf644fd73f98d25e7e9dad1f0ae891a3f1f0 rtorrent-0.3.6.ebuild 1106
-MD5 b63fd8710cacd8d54372734d4f81d8d1 rtorrent-0.4.3.ebuild 1148
-RMD160 2b275a48f3aeb09677275ce7977dbe2cf9269c00 rtorrent-0.4.3.ebuild 1148
-SHA256 b19f875a02f3433b3988e181c688ed551c9d866780b5bd8a26f4bd48fabdb7d8 rtorrent-0.4.3.ebuild 1148
+MD5 4cb5ee8b92470936fc5a437b805b7744 rtorrent-0.4.3.ebuild 1144
+RMD160 ba1a18cae38a33567aee16a36ced705dc2a6093c rtorrent-0.4.3.ebuild 1144
+SHA256 bf9c38f001e421a5ba3fad7941b25fd6d446ce7c1bdcf068696f5302af98172e rtorrent-0.4.3.ebuild 1144
 MD5 5b2e017647b047fabf8fa00db6ba716f rtorrent-0.4.4.ebuild 1230
 RMD160 dbe40c38fdfbc6dfb82a877d28db1649c7db059c rtorrent-0.4.4.ebuild 1230
 SHA256 29636a1ee6c228ae6b26f28b021edf44e394dab0bdc3fde3e656b592fe2dd005 rtorrent-0.4.4.ebuild 1230
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD50UXAiZjviIA2XgRAgFUAKCQGhpDLe7L9ZXXb6lagzpskhke8gCeMJPo
-hkp2gjcRuiXQnA6WvWWNK6k=
-=EVma
+iD8DBQFD6tRTSENan+PfizARApR+AJ0T596X3zeGzGq28+nvczdfmbpJggCfXVsH
+Ralo+VPeunUUjUgx7/OstV0=
+=jtv1
 -----END PGP SIGNATURE-----
