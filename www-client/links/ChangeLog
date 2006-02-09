@@ -1,6 +1,6 @@
 # ChangeLog for www-client/links
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.54 2006/01/15 22:01:45 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.55 2006/02/09 22:06:04 tove Exp $
 
   15 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> links-2.1_pre18.ebuild,
   links-2.1_pre20.ebuild:
@@ -108,7 +108,7 @@
   links-2.1_pre17-r1.ebuild:
   Stable on hppa. bug 97071
 
-  02 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   links-2.1_pre17-r1.ebuild:
   Stable on alpha.
 
@@ -147,7 +147,7 @@
   14 May 2005; Guy Martin <gmsoft@gentoo.org> links-2.1_pre17.ebuild:
   Stable on hppa.
 
-  13 May 2005; Bryan Ãstergaard <kloeri@gentoo.org> links-2.1_pre17.ebuild:
+  13 May 2005; Bryan Østergaard <kloeri@gentoo.org> links-2.1_pre17.ebuild:
   Stable on ia64.
 
   13 May 2005; Marcelo Goes <vanquirius@gentoo.org> links-2.1_pre17-r1.ebuild:
@@ -181,7 +181,7 @@
   01 May 2005; Tom Martin <slarti@gentoo.org> links-2.1_pre17.ebuild:
   Stable on amd64.
 
-  27 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> links-2.1_pre17.ebuild:
+  27 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> links-2.1_pre17.ebuild:
   Stable on alpha.
 
   25 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
@@ -199,7 +199,7 @@
   The utf8 patch was adjusted to work with this version by the lovely Marcelo
   Goes <vanquirius@gentoo.org> in the same bug.  Additionally, the patch for
   pre15 was moved onto the mirrors.  And finally, FlameEyes and iFlame (Diego
-  PettenÃ² <dgp85@users.sourceforge.net>) submitted massive ebuild cleanups in
+  Pettenò <dgp85@users.sourceforge.net>) submitted massive ebuild cleanups in
   bug #86596.  Not only are use_{enable,with} liberally employed, bug gpm
   autodetection is disabled as well.  Oh, the final thing is links will now
   install a links binary (and for a while, a links2 symlink).  Thanks to
@@ -268,7 +268,7 @@
   23 Jun 2004; <malc@gentoo.org> links-2.1_pre11.ebuild:
   Mark stable on amd64
 
-  08 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> links-2.1_pre15.ebuild:
+  08 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> links-2.1_pre15.ebuild:
   Stable on alpha.
 
 *links-2.1_pre15 (06 May 2004)
@@ -326,7 +326,7 @@
   added gpm to dependency list with fbcon. Thanks to Brandy Westcott
   <brandy@gentoo.org> for the providing the fix in bug #23703 opened by 
   Paul Slinski <pauls@globaliqx.com>.  Also added DirectFB support thanks
-  to Florian LÃ¶ding <flonai@gmx.de> in bug #26464 opened by: Evan Langlois
+  to Florian Löding <flonai@gmx.de> in bug #26464 opened by: Evan Langlois
   <ekl@crc.homelinux.org>
 
 *links-2.1_pre11 (11 Jun 2003)

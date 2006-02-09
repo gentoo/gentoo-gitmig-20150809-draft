@@ -1,6 +1,6 @@
 # ChangeLog for www-client/lynx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.22 2005/11/30 06:21:22 hadfield Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.23 2006/02/09 22:02:11 tove Exp $
 
   30 Nov 2005; Scott Hadfield <hadfield@gentoo.org>
   files/lynx-2.8.5-tab_to.patch
@@ -99,7 +99,7 @@
   lynx-2.8.4.1d-r1.ebuild, lynx-2.8.4.1d.ebuild, lynx-2.8.5.ebuild:
   Fix SRC_URIs
 
-  11 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> lynx-2.8.5.ebuild:
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> lynx-2.8.5.ebuild:
   Stable on alpha.
 
   05 Jun 2004; <tuxus@gentoo.org> lynx-2.8.5.ebuild:
