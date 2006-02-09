@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/xli
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.36 2006/01/25 04:06:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.37 2006/02/09 20:42:53 tove Exp $
 
   25 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>; xli-1.17.0-r2.ebuild:
   (#118583) Add modular X deps.
@@ -70,7 +70,7 @@
   28 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> xli-1.17.0-r1.ebuild:
   Stable on sparc wrt #79762
 
-  28 Feb 2005; Olivier CrÃªte <tester@gentoo.org> xli-1.17.0-r1.ebuild:
+  28 Feb 2005; Olivier Crête <tester@gentoo.org> xli-1.17.0-r1.ebuild:
   Stable on x86 per security bug #79762
 
 *xli-1.17.0-r1 (28 Feb 2005)

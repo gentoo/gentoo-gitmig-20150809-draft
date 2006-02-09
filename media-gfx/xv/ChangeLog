@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.76 2006/01/28 21:05:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.77 2006/02/09 20:41:02 tove Exp $
 
   28 Jan 2006; Simon Stelling <blubb@gentoo.org>
   +files/xv-3.10a-bmpfix.patch, -files/xv-3.10a-bmpfix.patch.bz2,
@@ -69,10 +69,10 @@
   05 May 2005; Tavis Ormandy <taviso@gentoo.org> +xv-3.10a-r12.ebuild:
   new release of patchset.
 
-  19 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> xv-3.10a-r11.ebuild:
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> xv-3.10a-r11.ebuild:
   Stable on ia64, bug 88742.
 
-  18 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> xv-3.10a-r11.ebuild:
+  18 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> xv-3.10a-r11.ebuild:
   Stable on alpha, bug 88742.
 
   16 Apr 2005; Markus Rothe <corsair@gentoo.org> xv-3.10a-r11.ebuild:
@@ -97,7 +97,7 @@
   13 Mar 2005; Hardave Riar <hardave@gentoo.org> xv-3.10a-r10.ebuild:
   Stable on mips, bug #83686.
 
-  03 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> xv-3.10a-r10.ebuild:
+  03 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> xv-3.10a-r10.ebuild:
   Stable on alpha, bug 83686.
 
   02 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> xv-3.10a-r10.ebuild:
