@@ -1,6 +1,6 @@
 # ChangeLog for games-puzzle/ltris
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ChangeLog,v 1.15 2005/12/10 12:37:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ChangeLog,v 1.16 2006/02/09 00:47:44 tove Exp $
 
   10 Dec 2005; Simon Stelling <blubb@gentoo.org> ltris-1.0.11.ebuild:
   stable on amd64
@@ -67,7 +67,7 @@
   18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> ltris-1.0.1.ebuild :
   Updated to mirror://sourceforge in SRC_URI.
 
-  17 Jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> ltris-1.0.1.ebuild :
+  17 Jul 2002; José Alberto Suárez López <bass@gentoo.org> ltris-1.0.1.ebuild :
   Added LICENSE, KEYWORDS.
 
   19 Feb 2002; Aron Griffis <agriffis@gentoo.org> ltris-1.0.1.ebuild:
