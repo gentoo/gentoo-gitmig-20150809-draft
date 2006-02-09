@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e4de0f416029a0a6c81a8cd77b0099cc ChangeLog 4678
 RMD160 dd9ad819c21ac3491190ad24b381a28fa58b888e ChangeLog 4678
 SHA256 c31d53e52b3fbf5bd09be2ac811fb6da8353bd801d97e9fb1d195ff3b95a9bc7 ChangeLog 4678
@@ -10,3 +13,10 @@ SHA256 2ddd57267552f0bc13a0db709e6cf03d89c20d5320ab3cbdb5ffa7abb6c9d2be metadata
 MD5 988593f5e8e5d3dc3bcafbc23398d0f8 python-selinux-2.16.ebuild 953
 RMD160 bf659ef85bdb47577df695b4fe674450603a66ca python-selinux-2.16.ebuild 953
 SHA256 d99aa33bf2ea2e4d25c18f33b5fbff8652cac9e125a03eb05b0d0d9e52584e45 python-selinux-2.16.ebuild 953
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6oyHJ+ChZlpDtAoRArjIAJ95+cNKa4wI2vAljKFDdjmAGex/FACfXtpx
+hqyZF/DkqgraHfMdkC0clPQ=
+=zX3t
+-----END PGP SIGNATURE-----

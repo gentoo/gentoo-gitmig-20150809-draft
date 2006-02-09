@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.16.ebuild,v 1.4 2006/02/09 00:20:48 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.16.ebuild,v 1.5 2006/02/09 00:27:40 pebenito Exp $
 
 inherit python
 
@@ -8,7 +8,7 @@ DESCRIPTION="Python bindings for SELinux functions"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
 LICENSE="GPL-2"
 SLOT="0"
-SRC_URI="${P}.c.bz2"
+SRC_URI="mirror://gentoo/${P}.c.bz2"
 
 KEYWORDS="~alpha amd64 mips ppc sparc x86"
 #KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips"
