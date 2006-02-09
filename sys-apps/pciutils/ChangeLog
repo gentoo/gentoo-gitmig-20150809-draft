@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.70 2006/02/08 19:09:59 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.71 2006/02/09 21:45:40 tove Exp $
 
   08 Feb 2006; Joel Martin <kanaka@gentoo.org> pciutils-2.2.0-r1.ebuild:
   Do not strip in makefile, this break cross-compile.
@@ -19,7 +19,7 @@
   03 Dec 2005; Guy Martin <gmsoft@gentoo.org> pciutils-2.2.0-r1.ebuild:
   Stable on hppa.
 
-  30 Nov 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  30 Nov 2005; Bryan Østergaard <kloeri@gentoo.org>
   pciutils-2.2.0-r1.ebuild:
   Stable on alpha.
 
@@ -30,7 +30,7 @@
   26 Nov 2005; Mark Loeser <halcy0n@gentoo.org> pciutils-2.2.0-r1.ebuild:
   Stable on x86; bug #110769
 
-  11 Nov 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  11 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   files/pciutils-2.1.11-bsd.patch, +files/pciutils-2.1.11-malloc.patch,
   pciutils-2.1.11-r5.ebuild, pciutils-2.2.0-r1.ebuild:
   Split out malloc patch from the rest of bsd patch. Apply it on 2.2.0 that
@@ -64,7 +64,7 @@
 
   22 Aug 2005; Mike Frysinger <vapier@gentoo.org>
   +files/pciutils-2.1.11-bsd.patch, pciutils-2.1.11-r5.ebuild:
-  Add FreeBSD support to shut Diego PettenÃ² up #103241.
+  Add FreeBSD support to shut Diego Pettenò up #103241.
 
   22 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   pciutils-2.1.11-r5.ebuild:
@@ -73,7 +73,7 @@
   09 Aug 2005; Luis Medinas <metalgod@gentoo.org> pciutils-2.1.11-r4.ebuild:
   Marked Stable on AMD64.
 
-  02 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   pciutils-2.1.11-r4.ebuild:
   Stable on alpha.
 
@@ -102,7 +102,7 @@
   07 Apr 2005; Tom Gall <tgall@gentoo.org> pciutils-2.1.11-r4.ebulid:
   stable on ppc64
 
-  19 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   pciutils-2.1.11-r3.ebuild:
   Stable on alpha.
 
@@ -167,7 +167,7 @@
   22 Jun 2004; <malc@gentoo.org> pciutils-2.1.11-r1.ebuild:
   Mark stable on amd64
 
-  11 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> pciutils-2.1.11-r1.ebuild:
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> pciutils-2.1.11-r1.ebuild:
   Stable on alpha.
 
   09 May 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
