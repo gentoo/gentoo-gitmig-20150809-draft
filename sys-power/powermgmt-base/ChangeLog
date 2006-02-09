@@ -1,6 +1,6 @@
 # ChangeLog for sys-power/powermgmt-base
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.10 2006/02/07 02:40:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.11 2006/02/09 22:00:45 tove Exp $
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org>
   powermgmt-base-1.21.ebuild:
@@ -42,5 +42,5 @@
 
   29 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +powermgmt-base-1.21.ebuild:
-  New ebuild thanks to Dennis NienhÃ¼ser <fragfred@gmx.de> in bug 76516
+  New ebuild thanks to Dennis Nienhüser <fragfred@gmx.de> in bug 76516
 

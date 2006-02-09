@@ -1,16 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c0ec20aa04792971eda448c100d30bab ChangeLog 1509
+MD5 9ac883901229b96eb92ab5824e72e9d6 ChangeLog 1503
+RMD160 0174bd261b0efb47fc5ad908cea0ee2ed0499f78 ChangeLog 1503
+SHA256 739c82ef451563c896ef36c18f18bea47699e402935b6e60d74b9867b7ddc5fb ChangeLog 1503
 MD5 5bcbe2d3ffc7443a4d992e09732a7a70 files/digest-powermgmt-base-1.21 70
+RMD160 008b6bb7f95c73d589ba6f1ce8d8ff4610e4d070 files/digest-powermgmt-base-1.21 70
+SHA256 a0a4c416d75ec42364157b7d620ad6607cb797f374932ff9f3e35e8a1458337b files/digest-powermgmt-base-1.21 70
 MD5 55a409dbd54b45bfb4f983c8ea734229 files/digest-powermgmt-base-1.22 70
+RMD160 8bdd6f8ef8362c60c417ed00815c1e1e83787774 files/digest-powermgmt-base-1.22 70
+SHA256 3736902d6d20a6a77a8924c32fdc65a6062f7ce218cb950e427ffdc58ce89655 files/digest-powermgmt-base-1.22 70
 MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
+RMD160 54af1e9a61e5ed1b49b2bbbf3ef2278999c66b13 metadata.xml 159
+SHA256 ed3a0d440cfa5672284f4172ebde0ea6506c1a38e9a3ed9f14f3d2c093aac42f metadata.xml 159
 MD5 41b46a6346389355b4d5ab09b44a5a7a powermgmt-base-1.21.ebuild 740
+RMD160 b5077e7921c754c627e26eb6e85d7096db54524e powermgmt-base-1.21.ebuild 740
+SHA256 289adeec2c24943fc42d629fb9ba6ef9b4539d0c3c27acc18484085ad040e490 powermgmt-base-1.21.ebuild 740
 MD5 7f09dcc17156e53d2bb4360bea7ba14e powermgmt-base-1.22.ebuild 745
+RMD160 e7b2981998182e3cba6afb675b076798fe92f4d8 powermgmt-base-1.22.ebuild 745
+SHA256 3b5050f579e4a09a39e02b31dc896024c186294820e0a9fa16042a7b1ee7d8ae powermgmt-base-1.22.ebuild 745
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6AitJrHF4yAQTrARAjd/AKDG4noZAyM9zYYrxBxoo+yrfPnE3gCdEVkN
-yFI3NI8sGk3CF4HAuDQWZIY=
-=kIP5
+iD8DBQFD67uaV3J2n04EauwRAkQqAKCPACvoNnGA7rqeY/gwSR0iy3wWtwCcCaH2
+wE/2A4oB0LaxsGvC1HXP0p0=
+=vXDy
 -----END PGP SIGNATURE-----
