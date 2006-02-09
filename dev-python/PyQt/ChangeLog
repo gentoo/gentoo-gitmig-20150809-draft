@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.67 2006/01/24 18:36:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.68 2006/02/09 00:14:17 tove Exp $
 
   24 Jan 2006; Markus Rothe <corsair@gentoo.org> PyQt-3.14.1-r1.ebuild:
   Stable on ppc64
@@ -53,7 +53,7 @@
   21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> PyQt-3.13.ebuild:
   Stable on ppc.
 
-  29 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> PyQt-3.14.ebuild,
+  29 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> PyQt-3.14.ebuild,
   PyQt-3.14.1.ebuild:
   ~alpha keyword.
 
@@ -126,7 +126,7 @@
   PyQt-3.8.1.ebuild, files/PyQt-3.10-qt-3.3.patch:
   removed 3.10, marked 3.8.1 stable on alpha and ppc
 
-  04 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> PyQt-3.5.ebuild:
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> PyQt-3.5.ebuild:
   Add missing IUSE.
 
   21 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> PyQt-3.11.ebuild:

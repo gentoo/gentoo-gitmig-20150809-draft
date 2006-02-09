@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.38 2006/01/28 23:28:12 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.39 2006/02/09 00:22:56 tove Exp $
 
   28 Jan 2006; Olivier Crête <tester@gentoo.org> docutils-0.3.7.ebuild:
   Stable on amd64
@@ -21,7 +21,7 @@
   10 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> docutils-0.3.7.ebuild:
   Stable on sparc
 
-  09 Oct 2005; Bryan Ãstergaard <kloeri@gentoo.org> docutils-0.3.7.ebuild,
+  09 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> docutils-0.3.7.ebuild,
   docutils-0.3.9.ebuild:
   Fix tests + stable 0.3.7 now that python-2.4 is in stable.
 
@@ -103,7 +103,7 @@
 
 *docutils-0.3.3 (12 Jun 2004)
 
-  12 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   +files/docutils-0.3.3-extramodules.patch, +docutils-0.3.3.ebuild:
   Version bump, bug #51422.
 
