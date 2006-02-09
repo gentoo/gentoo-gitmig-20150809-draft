@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 24b88a7fcc18f64ef4f7e8a4aab24b4b ChangeLog 2932
-MD5 baecda85db8f2f90e495be668d7108a8 metadata.xml 250
-MD5 47f35dba39c1a04248df1c1791fa8ef1 xmlwrapp-0.5.0-r1.ebuild 1458
+MD5 b8690db2ff64ac00daa2f8fbffb9d98d ChangeLog 3035
+RMD160 3df2d808726288a13bb610d3516d511ce102a8a6 ChangeLog 3035
+SHA256 bddcca902b86eefb062e7408b77a63803e17a1eecabc8be56650911b44179cc9 ChangeLog 3035
 MD5 bbba6eba8abf58b5f9bed1fc32ae8214 files/digest-xmlwrapp-0.5.0-r1 130
+RMD160 857c63fd695661ebcac29f8c2b6fd6876d9843c6 files/digest-xmlwrapp-0.5.0-r1 130
+SHA256 7d932d14ead6f5aad79e6100c4675b2e7beb9927d2fd1e5796ee8f8ff5f5e1fb files/digest-xmlwrapp-0.5.0-r1 130
 MD5 55066e7026cd8b9a9f6820015d0a986c files/xmlwrapp-gentoo.diff 469
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLz1LCRZPokWLroQRAgA2AJ4smbKVGaj1sUgOP0Ch9Pgx5mN95QCbBeTP
-uom8TiFgNV55YS46ySI+j2s=
-=cETg
------END PGP SIGNATURE-----
+RMD160 30c11edc2ff76e752b236a404fc02a466db27e9e files/xmlwrapp-gentoo.diff 469
+SHA256 4f153d3ac057c918cebf27eaa79cddd3a49028641d315c1c4e295b3b530be332 files/xmlwrapp-gentoo.diff 469
+MD5 baecda85db8f2f90e495be668d7108a8 metadata.xml 250
+RMD160 f09dbc5c28b68506941290eb88604bb34263f9b3 metadata.xml 250
+SHA256 12297b46fbf69581b2b1994ae8f17d803614d0fd088e4b28a81788b1c73024e9 metadata.xml 250
+MD5 309e6e5b87ebea864117d8ccb248d71c xmlwrapp-0.5.0-r1.ebuild 1453
+RMD160 63cfbf38f99f155c0a2dcccb6ab4ae6193f46f70 xmlwrapp-0.5.0-r1.ebuild 1453
+SHA256 67e24646c32140cf004d1d1ac4b205d32c6ce8dcfad4a599734ef394f4176ffe xmlwrapp-0.5.0-r1.ebuild 1453
