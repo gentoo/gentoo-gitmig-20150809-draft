@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/make.defaults,v 1.5 2006/01/24 16:40:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/make.defaults,v 1.6 2006/02/09 17:14:19 gustavoz Exp $
 
 # USE settings
-USE="apache2 berkdb bitmap-fonts crypt cups dlloader fortran fbcon foomaticdb gdbm gif gstreamer gtk gtk2 imlib jpeg libwww motif ncurses nls oss pam perl png python readline spell ssl tcpd truetype truetype-fonts type1-fonts X xml zlib"
+USE="apache2 berkdb bitmap-fonts crypt cups dlloader fortran fbcon foomaticdb gdbm gif gstreamer gtk gtk2 imlib jpeg libwww motif ncurses nls oss pam perl png python readline spell ssl tcpd truetype truetype-fonts type1-fonts udev X xml zlib"
