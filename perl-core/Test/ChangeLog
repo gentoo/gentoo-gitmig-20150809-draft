@@ -1,6 +1,6 @@
 # ChangeLog for perl-core/Test
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test/ChangeLog,v 1.6 2005/12/03 17:29:23 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test/ChangeLog,v 1.7 2006/02/09 21:40:37 tove Exp $
 
   03 Dec 2005; Tom Gall <tgall@gentoo.org> Test-1.25.ebuild:
   stable on ppc64
@@ -20,7 +20,7 @@
   +Test-1.24.ebuild, +Test-1.25.ebuild:
   dev-perl => perl-core migration
 
-  25 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> Test-1.25.ebuild:
+  25 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> Test-1.25.ebuild:
   Stable on alpha.
 
   11 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> Test-1.25.ebuild:
