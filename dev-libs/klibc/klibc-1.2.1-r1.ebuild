@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.2.1-r1.ebuild,v 1.1 2006/02/07 08:33:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.2.1-r1.ebuild,v 1.2 2006/02/09 09:22:30 azarah Exp $
 
-inherit eutils linux-mod
+inherit eutils linux-info
 
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then
@@ -87,9 +87,6 @@ src_unpack() {
 	# Add our linux source tree symlink
 	ln -snf ${KV_DIR} linux
 
-	# set the build directory
-	echo "KRNLOBJ = ${KV_OUT_DIR}" >> MCONFIG
-
 	# We do not want all the nice prelink warnings
 	# NOTE: for amd64, we might change below to '/usr/$(get_libdir)/klibc',
 	#       but I do not do it right now, as the build system do not support
@@ -112,30 +109,40 @@ src_unpack() {
 }
 
 src_compile() {
+	local myargs
+
+	[[ ${KV_DIR} != "${KV_OUT_DIR}" ]] && \
+		myargs="KLIBCKERNELOBJ='${KV_OUT_DIR}/' KBUILD_SRC='1'"
+
 	if is_cross ; then
 		einfo "ARCH = \"$(guess_arch)\""
 		einfo "CROSS = \"${CTARGET}-\""
 		emake ARCH=$(guess_arch) \
-			CROSS="${CTARGET}-" || die "Compile failed!"
+			CROSS="${CTARGET}-" \
+			${myargs} || die "Compile failed!"
 	else
 		env -u ARCH \
-		emake || die "Compile failed!"
+		emake ${myargs} || die "Compile failed!"
 	fi
 }
 
 src_install() {
-	local klibc_prefix
+	local myargs klibc_prefix
+
+	[[ ${KV_DIR} != "${KV_OUT_DIR}" ]] && \
+		myargs="KLIBCKERNELOBJ='${KV_OUT_DIR}/' KBUILD_SRC='1'"
 
 	if is_cross ; then
 		make INSTALLROOT=${D} \
 			ARCH=$(guess_arch) \
 			CROSS="${CTARGET}-" \
+			${myargs} \
 			install || die "Install failed!"
 
 		klibc_prefix=$("${S}/klcc/${CTARGET}-klcc" -print-klibc-bindir)
 	else
 		env -u ARCH \
-		make INSTALLROOT=${D} install || die "Install failed!"
+		make INSTALLROOT=${D} ${myargs} install || die "Install failed!"
 
 		klibc_prefix=$("${S}/klcc/klcc" -print-klibc-bindir)
 	fi
