@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: mysql.eselect,v 1.8 2006/02/06 10:31:11 vivo Exp $
+# $Id: mysql.eselect,v 1.9 2006/02/09 12:50:37 vivo Exp $
 
 DESCRIPTION="Manage the /usr/lib/*mysql* links"
 MAINTAINER="vivo@gentoo.org"
-SVN_DATE='$Date: 2006/02/06 10:31:11 $'
+SVN_DATE='$Date: 2006/02/09 12:50:37 $'
 VERSION=$(svn_date_to_version "${SVN_DATE}" )
 MYSQL_SYMLINK_CHECKDIR="${ROOT}/usr/bin"
 ERR_NOT_FOUND="(not-found)"
@@ -56,7 +56,7 @@ check_symlink() {
 	[[ -z ${filename} ]] || [[ -z ${version} ]] && return 1
 
 	# check link source
-	[[ -f ${filename} ]] || [[ -d ${filename} ]] || ret=$(( ${ret} + 1 ))
+	[[ -f "${filename}" ]] || [[ -f "${filename}.gz" ]] || [[ -d ${filename} ]] || ret=$(( ${ret} + 1 ))
 
 	# check link targe
 	# not checking for directory (want to keep "/etc/mysql")
@@ -218,6 +218,8 @@ set_current_version() {
 			cd "${dir}"
 			lastdir="${dir}"
 		fi
+		[[ -f "${filename}" ]] || [[ -d "${filename}" ]] \
+			|| filename="${filename}.gz"
 		linkname="$(basename "${filename}")"
 		if [[ -a "${linkname}" ]] ; then
 			# rm needed for directory
@@ -241,6 +243,8 @@ remove_current_version() {
 
 	for filename in $list ; do
 		linkname="${ROOT}/${filename/"-${version}"/}"
+		[[ -L "${linkname}" ]] && rm -f "${linkname}"
+		linkname="${ROOT}/${filename/"-${version}"/}.gz"
 		[[ -L "${linkname}" ]] && rm -f "${linkname}"
 	done
 
