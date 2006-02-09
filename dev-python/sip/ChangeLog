@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.74 2006/02/02 19:47:44 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.75 2006/02/09 00:00:14 tove Exp $
 
   02 Feb 2006; Marien Zwart <marienz@gentoo.org> files/digest-sip-4.2.1,
   Manifest:
@@ -51,7 +51,7 @@
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> sip-4.2.1.ebuild:
   add ~ia64
 
-  26 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org> sip-4.1.1.ebuild:
+  26 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> sip-4.1.1.ebuild:
   Stable on alpha.
 
   21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> sip-4.1.1.ebuild:
@@ -108,7 +108,7 @@
   +sip-4.1.ebuild, -sip-4.1_rc1.ebuild:
   version bump
 
-  17 Sep 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org> sip-4.1_rc1.ebuild:
+  17 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> sip-4.1_rc1.ebuild:
   Fix src_uri.
 
 *sip-4.1_rc1 (16 Sep 2004)
@@ -118,7 +118,7 @@
 
 *sip-3.8-r1 (31 Aug 2004)
 
-  31 Aug 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org>
+  31 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
   +files/license-3.8.diff, +sip-3.8-r1.ebuild:
   Add back sip-3.8* as it's needed by PyQt-3.8.1.
 
@@ -135,7 +135,7 @@
   18 Jul 2004; Jason Wever <weeve@gentoo.org> sip-3.10.2.ebuild:
   Stable on sparc wrt bug #56712.
 
-  18 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> sip-3.10.2.ebuild:
+  18 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> sip-3.10.2.ebuild:
   Stable on alpha.
 
   11 Jul 2004; Carsten Lohrke <carlo@gentoo.org> sip-3.10.2.ebuild:
@@ -222,7 +222,7 @@
 
 *sip-3.5 (25 Dec 2003)
 
-  25 Dec 2003; Bryan Ãstergaard,,, <kloeri@gentoo.org> sip-3.5.ebuild:
+  25 Dec 2003; Bryan Østergaard <kloeri@gentoo.org> sip-3.5.ebuild:
   Re-add sip-3.5.ebuild to satisfy PyQt dependency
 
   17 Dec 2003; Caleb Tennis <caleb@gentoo.org> sip-3.5.ebuild, sip-3.6.ebuild,

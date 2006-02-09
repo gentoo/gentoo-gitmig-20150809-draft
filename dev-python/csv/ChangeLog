@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/csv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/csv/ChangeLog,v 1.14 2005/11/25 22:00:58 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/csv/ChangeLog,v 1.15 2006/02/08 23:58:50 tove Exp $
 
   25 Nov 2005; Tom Gall <tgall@gentoo.org> csv-1.0-r1.ebuild:
   stable on ppc64
@@ -20,10 +20,10 @@
   20 Oct 2004; Rob Cakebread <pythonhead@gentoo.org> csv-1.0-r1.ebuild:
   Marked stable x86
 
-  31 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> csv-1.0-r1.ebuild:
+  31 May 2004; Bryan Østergaard <kloeri@gentoo.org> csv-1.0-r1.ebuild:
   Stable on alpha.
 
-  04 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> csv-0.5.0.ebuild,
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> csv-0.5.0.ebuild,
   csv-1.0.ebuild:
   Add missing IUSE.
 
