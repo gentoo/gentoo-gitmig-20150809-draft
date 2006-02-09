@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.1.62-r1.ebuild,v 1.10 2005/11/18 15:36:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.1.62-r1.ebuild,v 1.11 2006/02/09 14:31:13 wolf31o2 Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ IUSE=""
 
 RDEPEND="dev-libs/popt
 	|| ( sys-apps/hwdata-gentoo
-		sys-apps/hwdata-knoppix
 		sys-apps/hwdata )"
 DEPEND="dev-libs/popt
 	sys-apps/pciutils"
