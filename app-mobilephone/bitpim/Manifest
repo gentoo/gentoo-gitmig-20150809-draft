@@ -4,8 +4,8 @@ Hash: SHA1
 MD5 e8f315652c3e6000edfce8a8efa908c2 ChangeLog 1567
 MD5 aa42f5905e2c657512ba5b3efd9f6987 bitpim-0.7.33.ebuild 747
 MD5 80b60cd4a456eca5830c762a7a64973c bitpim-0.7.34.ebuild 748
-MD5 e6837bedc9ca10a0c04b657b7f11f737 bitpim-0.8.04.ebuild 881
-MD5 02991a565b537ae1876dc7a7bf1934cc bitpim-0.8.07.ebuild 897
+MD5 b5eb3622162aeeec834d3b972c12522f bitpim-0.8.04.ebuild 849
+MD5 57328d5153f007f5fe9724b438d52e16 bitpim-0.8.07.ebuild 865
 MD5 b85ac1cda822a8d92521c1a4ef88f7b4 files/digest-bitpim-0.7.33 71
 MD5 b8b665f807f5a22fd495ace7b8080036 files/digest-bitpim-0.7.34 71
 MD5 86f1f1b35aa99d3a607f03d8053c4834 files/digest-bitpim-0.8.04 71
@@ -14,7 +14,7 @@ MD5 b05575cd16c40945a62bcfee6f1fce07 metadata.xml 493
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6tchjG8pv1lIUX4RAkY3AKCdw+8gAYjB1OY5pWxAIDDA0LscnwCeMtth
-Xoh5ke95rlz3AZyKmkHsuJU=
-=SHDG
+iD8DBQFD6trzjG8pv1lIUX4RAlFnAKCl+CSyxyhfY/TRWD74MEoAkZuxvACfftN3
+gdaV+mBsuslbN/f1XvwArnQ=
+=1m1r
 -----END PGP SIGNATURE-----
