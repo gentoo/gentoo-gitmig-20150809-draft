@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d803ffe6da0b4caa1e2459c2ae1acedd ChangeLog 1454
+MD5 f97881bcd56a6bbbbd03292d44939c26 ChangeLog 1443
+RMD160 30306221c3d12b65383b577f0cc31c60f03c53df ChangeLog 1443
+SHA256 4c51a99a4c7e3d21537632e13d61d9c4fde5a0d04c6d41439a15c4d8e3e5e2fe ChangeLog 1443
 MD5 bbd26a676e1c924c7b9121c887be9953 editobj-0.5.3.ebuild 844
+RMD160 931b558d969b3957439bb321e4646d7646621afc editobj-0.5.3.ebuild 844
+SHA256 d5dafeb4d6c91d6d4f7e61d6e091b8d6ede5fe19a143e9b8a752978cffb8f893 editobj-0.5.3.ebuild 844
 MD5 8e49109adcfd68ae372bc7436a42eb2b editobj-0.5.6.ebuild 721
+RMD160 f3584ece71a192cf6d7afb1d4f0c7f75d047f31f editobj-0.5.6.ebuild 721
+SHA256 62759c043c3b26fe13a7706d342b3670d62f20ac8f0a351e3896b597702f25ff editobj-0.5.6.ebuild 721
 MD5 edac8e6cc5f5f637002eadecb6a42da2 files/digest-editobj-0.5.3 64
+RMD160 2d32f10faea3576b5744ffda7d3e3959ecbff576 files/digest-editobj-0.5.3 64
+SHA256 85b2bfa08df0a9adf1d603bb375fb7384b5a2bcc2fa3e9cae1916d6fb5456a44 files/digest-editobj-0.5.3 64
 MD5 c33a49403ae47a38a607373e8ed34527 files/digest-editobj-0.5.6 64
+RMD160 521e16e9414c822724382a2cdf494fb12b79bdf4 files/digest-editobj-0.5.6 64
+SHA256 1f8be312a8fe10db4265bfc44bf25f3d5e5b3fb0572d726c2fe9c75154f11f8f files/digest-editobj-0.5.6 64
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD19PLW78445TWHXcRAn1iAJ9+SqmQUkpRvJJ/g0+YXaB94F88lQCeNfDB
-xI3ac4pxCUrYTWa/u/YaV80=
-=KfP2
------END PGP SIGNATURE-----
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
+SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
