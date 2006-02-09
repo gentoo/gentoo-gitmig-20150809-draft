@@ -1,0 +1,10 @@
+# ChangeLog for www-apache/mod_vhost_ldap
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/ChangeLog,v 1.1 2006/02/09 21:22:18 jokey Exp $
+
+*mod_vhost_ldap-1.0 (09 Feb 2006)
+
+  09 Feb 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/99_mod_vhost_ldap.conf, +metadata.xml, +mod_vhost_ldap-1.0.ebuild:
+  Initial commit
+
