@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/raptor2/raptor2-1.0.0-r1.ebuild,v 1.10 2005/08/25 18:57:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/raptor2/raptor2-1.0.0-r1.ebuild,v 1.11 2006/02/09 13:59:25 agriffis Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/raptorv2/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ppc x86"
+KEYWORDS="alpha ~amd64 ia64 ppc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/allegro-4.0.0
