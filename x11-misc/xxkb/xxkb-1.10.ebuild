@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.11 2006/01/21 19:24:00 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.12 2006/02/09 04:31:38 spyderous Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ RDEPEND="|| ( (
 	virtual/x11 )"
 DEPEND="${RDEPEND}
 	|| ( (
+		app-text/rman
 		x11-misc/imake
 		x11-proto/xproto )
 	virtual/x11 )"
