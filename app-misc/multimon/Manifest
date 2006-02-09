@@ -1,3 +1,19 @@
-MD5 bc4842269cf3675e4a6dcf40853f6afa ChangeLog 750
-MD5 fc9c86a0855b9b8d8db326a2f1316f87 multimon-1.0.ebuild 685
-MD5 fcc6822fd032308b964abefd957c84a7 files/digest-multimon-1.0 59
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eb5e9e726c14ccfc819f4f0ea261e60a ChangeLog 852
+RMD160 f0c2c0baf21083e899b6b39c7c4ea6e438c6e004 ChangeLog 852
+SHA256 462b2ce8ce0ce4a684f429aa0d711afbd1146ea24b9d6de5b2ab564b22473f99 ChangeLog 852
+MD5 ba78564f1f8822ad682acda8d9be3c26 files/digest-multimon-1.0 223
+RMD160 7c1ba429d8be342ffb6127983e0fb894f28a99a8 files/digest-multimon-1.0 223
+SHA256 3456823396b6fc4ee285c88acdbf2260fd7a69fa2b94a26d92e5c5378c62f840 files/digest-multimon-1.0 223
+MD5 bc5da8aa958cd374613b6630de9557e3 multimon-1.0.ebuild 781
+RMD160 d531f84df47a52b7b52080c0c487b46bd8f8f2ba multimon-1.0.ebuild 781
+SHA256 eb941b6768c40e388c084cc4d2a80106386fb8cd633253669ff0e042c5f5bb57 multimon-1.0.ebuild 781
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD67VbQlM6RnzZP+IRAmCfAJ98iiKjLU4rEpQSkyS9fC2q6ArjxACgqlII
+XlcvvzyjlfEhe9SP/zFtWlI=
+=MhRL
+-----END PGP SIGNATURE-----
