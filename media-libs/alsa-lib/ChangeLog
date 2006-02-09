@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.155 2006/02/09 14:48:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.156 2006/02/09 16:09:47 agriffis Exp $
+
+  09 Feb 2006; Aron Griffis <agriffis@gentoo.org>
+  alsa-lib-1.0.11_rc3.ebuild:
+  Regress 1.0.11_rc3 from alpha to ~alpha (misunderstood what should be
+  stabled here, need to keep alsa-driver and alsa-lib in sync)
 
   09 Feb 2006; Aron Griffis <agriffis@gentoo.org>
   alsa-lib-1.0.11_rc3.ebuild:
