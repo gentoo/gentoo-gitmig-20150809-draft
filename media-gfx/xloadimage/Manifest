@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f60dbdf2bd35b67048fc919417f73de ChangeLog 6141
+MD5 c04912d6bdf77401759a79860df63069 ChangeLog 6135
+RMD160 02ea57b2b653b1815c979779e547daabc56068af ChangeLog 6135
+SHA256 3618cd061376b3384315bcf02c122924ed4b633ee6eccba3a81cd1078e0d6ed0 ChangeLog 6135
 MD5 1e91f350f870e196e1f181a27f3fd1ab files/digest-xloadimage-4.1-r4 140
+RMD160 b6276528313c6e8c2547cc2124c2af1134fe0c89 files/digest-xloadimage-4.1-r4 140
+SHA256 28883c949283b8c3e8d194051e7fdba58c180f7546afe5d201faa6d999afe26b files/digest-xloadimage-4.1-r4 140
 MD5 fb91a22d37e6c6db534f1dc81add707e files/xloadimage-4.1-endif.patch 321
+RMD160 9d65994d8a2090bcf321bc48eaa4028263fe013f files/xloadimage-4.1-endif.patch 321
+SHA256 a621ead90d893fd5d07d3034adf674d39235484f205198d47092e8e51bd71204 files/xloadimage-4.1-endif.patch 321
 MD5 c411c977cc7ae79dd96aad933980dbb2 files/xloadimage-4.1-include-errno_h.patch 303
+RMD160 a6125c8e94db89d348a4e358610bd195db044720 files/xloadimage-4.1-include-errno_h.patch 303
+SHA256 705ea25d75585bd763b4330757266ac412ee30562e65b937722dad3e3141c56a files/xloadimage-4.1-include-errno_h.patch 303
 MD5 9208b10866e00f1e47bb12a7f8bec04a files/xloadimage-4.1-zio-shell-meta-char.diff 1372
+RMD160 bdff2a42743659179ff9faaf7d2451d3d2c94678 files/xloadimage-4.1-zio-shell-meta-char.diff 1372
+SHA256 253064f5eebcd6c1c318b9637f1010657927b5f65be59581ef37523a50f3601e files/xloadimage-4.1-zio-shell-meta-char.diff 1372
 MD5 49ea6a01c79f1540896bd264c3606cb3 files/xloadimage-gentoo.patch 8956
+RMD160 f60ed7543ae72a598d37d665d2fd1b3e000a69c2 files/xloadimage-gentoo.patch 8956
+SHA256 e03f0584b32a0be68f7baeb13df2ad29277ecdbb54baed0b5f878301122e0c30 files/xloadimage-gentoo.patch 8956
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 metadata.xml 166
+SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826 metadata.xml 166
 MD5 d455ac1cadb4d624592e07b696bf2c9c xloadimage-4.1-r4.ebuild 2330
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzslt2+ySkm8kpY0RAm4wAJ9WykcODmNC7l68K8jCnEYmSt+O7gCePfel
-DPUcVGUd9LC+nY7i6VgwCzg=
-=JLjE
------END PGP SIGNATURE-----
+RMD160 f3ce6db4c26a50e2381e943bde5919708a8a80c2 xloadimage-4.1-r4.ebuild 2330
+SHA256 0938d4584173ed9b82f9d2f883020377051399c62a456a618384297e576ec335 xloadimage-4.1-r4.ebuild 2330
