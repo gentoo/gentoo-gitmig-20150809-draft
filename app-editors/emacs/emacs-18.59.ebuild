@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59.ebuild,v 1.5 2005/01/01 13:24:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59.ebuild,v 1.6 2006/02/09 22:26:23 mkennedy Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86"
 IUSE="X"
 
 DEPEND="sys-libs/ncurses
-	X? ( virtual/x11 )"
+	X? ( || ( x11-libs/libX11 virtual/x11 ) )"
 PROVIDE="virtual/editor"
 
 MY_BASEDIR="/usr/share/emacs/${PV}"
