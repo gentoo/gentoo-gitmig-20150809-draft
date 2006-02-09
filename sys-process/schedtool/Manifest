@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c177ba066d95e0489fe5229a7adceb9a schedtool-1.2.4.ebuild 715
-MD5 c41932536fd14eafa11d0172da5f6b8c schedtool-1.2.3.ebuild 712
-MD5 06405e9bd4b0cb552824856c1871d5c0 ChangeLog 1242
-MD5 d2c936ae77f347e911c6a82ab55c1b68 metadata.xml 281
+MD5 fc3a8834cef15887564ff2e9126dd1dd ChangeLog 1380
+RMD160 fc074803e3904a155486b37e2a9dcbba7d839928 ChangeLog 1380
+SHA256 c7b7e9b99b08935590b307bb34eac37a80a696ed0019ee5ce474a7225ac262ca ChangeLog 1380
 MD5 26c1c6d6526cc7215ea4b6c810c974e4 files/digest-schedtool-1.2.3 67
+RMD160 805586b8e725f7d3d949f2dc7c1c70225f700b5a files/digest-schedtool-1.2.3 67
+SHA256 56c09b12c0b93bf70c64ff2dc29357cc24ba4cd20577168f89db87f4feb91cc6 files/digest-schedtool-1.2.3 67
 MD5 8db7677670cb9180c1651c61a209417a files/digest-schedtool-1.2.4 67
+RMD160 e1d3dac0246fcfe96687e62a4188b22e5ad297c7 files/digest-schedtool-1.2.4 67
+SHA256 5c3bdedc5cd5eff578fb43776c0ae3bb09a71d085c661673e48c3a3c6efa18ec files/digest-schedtool-1.2.4 67
+MD5 58772633d225c065feefa4565d48d68e files/digest-schedtool-1.2.6 247
+RMD160 00a7bc6b8880d105feefbdb8aca0e763caeacb3d files/digest-schedtool-1.2.6 247
+SHA256 e08f9483ac867e623e033d0b0214a237d62c5cb80dfcda78a925791f12300204 files/digest-schedtool-1.2.6 247
+MD5 d2c936ae77f347e911c6a82ab55c1b68 metadata.xml 281
+RMD160 9f89a1443ec46205cc802d8f164ff9105a2b83fc metadata.xml 281
+SHA256 63850de7ecb484fadb6d0d3f30e16c94abd6555c5cefb74f3301831249dd2693 metadata.xml 281
+MD5 c41932536fd14eafa11d0172da5f6b8c schedtool-1.2.3.ebuild 712
+RMD160 bda831f8b83f9fd06df3ec619d6ed7f5858d42a3 schedtool-1.2.3.ebuild 712
+SHA256 ff29c50a304d80500be49a55ddbc5494034e97917c0ec232a862dd411542865f schedtool-1.2.3.ebuild 712
+MD5 c177ba066d95e0489fe5229a7adceb9a schedtool-1.2.4.ebuild 715
+RMD160 be13e7956e9b5509d03fac7a60d89bdfc9b87cca schedtool-1.2.4.ebuild 715
+SHA256 37c1a24d3e7b28e41453e05ec89af883d972be5097758b0cdb548317b2ce868e schedtool-1.2.4.ebuild 715
+MD5 62660030b295b60a7025c9919ded21d1 schedtool-1.2.6.ebuild 712
+RMD160 f5f3a8ac5b7f0021fb4c504de9cf75347b00af52 schedtool-1.2.6.ebuild 712
+SHA256 74ec9dd46c7857be2def99abf4831af9a7ff976624ba05e276e81542909e1607 schedtool-1.2.6.ebuild 712
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCJ2oiI1lqEGTUzyQRAp1XAKCycvG+WXDLZxeWULsLGzE/PRHcUwCgo84/
-sCKSqu3n8DuyLJ11LMvN8iA=
-=x/ET
+iD8DBQFD66j8omPajV0RnrERArZFAJ0bLtOFx1XfycL7z+xRT/FynaULwACeI7NJ
+CsRf/DYKsB1sZwjFFxsVsu4=
+=HAFx
 -----END PGP SIGNATURE-----
