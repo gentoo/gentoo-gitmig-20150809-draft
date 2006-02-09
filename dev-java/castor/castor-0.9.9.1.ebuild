@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.9.1.ebuild,v 1.1 2006/01/08 03:13:29 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.9.1.ebuild,v 1.2 2006/02/09 02:42:25 nichoj Exp $
 
 inherit eutils java-pkg
 
@@ -8,7 +8,7 @@ DESCRIPTION="Data binding framework for Java"
 SRC_URI="http://dist.codehaus.org/${PN}/${PV}/${P}-src.tgz"
 HOMEPAGE="http://www.castor.org"
 LICENSE="Exolab"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0.9"
 IUSE="doc jikes postgres source"
 
