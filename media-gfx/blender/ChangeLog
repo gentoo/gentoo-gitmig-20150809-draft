@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.75 2006/01/27 19:23:51 reb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.76 2006/02/09 20:53:26 tove Exp $
 
   27 Jan 2006; Karol Pasternak <reb@gentoo.org> blender-2.41.ebuild:
   adding missing keywords
@@ -207,15 +207,15 @@
   files/blender-2.32.patch:
   New blender release
 
-  07 Dec 2003; Brandy Westcott brandy@gentoo.org blender-2.31a.ebuild:
+  07 Dec 2003; Brandy Westcott <brandy@gentoo.org> blender-2.31a.ebuild:
   Added blender.desktop file.
 
 *blender-2.31a (05 Dec 2003)
 
-  05 Dec 2003; Brandy Westcott brandy@gentoo.org blender-2.31a.ebuild:
+  05 Dec 2003; Brandy Westcott <brandy@gentoo.org> blender-2.31a.ebuild:
   Bumped to 2.31a; added patch so we can compile plugins.
 
-  04 Dec 2003; Brandy Westcott brandy@gentoo.org
+  04 Dec 2003; Brandy Westcott <brandy@gentoo.org>
   files/configure-fix-2.31.patch:
   Fixed configure-fix-2.31.patch header. Thanks to ferret
   <james.noble@worc.ox.ac.uk> to pointing this out.
@@ -225,7 +225,7 @@
   04 Dec 2003; Luca Barbato <lu_zero@gentoo.org> blender-2.28c.ebuild,
   blender-2.31.ebuild, files/configure-fix-2.31.patch:
   new version, thanks to Bjarke Freund-Hansen <gentoo-bugzilla@rocekiller.dk>
-  and Tarmo TÃÂÃÂ¤nav <sn4ip3r@estprog.ee>
+  and Tarmo Tänav <sn4ip3r@estprog.ee>
 
   08 Nov 2003; Brad House <brad_mssw@gentoo.org> blender-2.30.ebuild:
   add ~amd64 flag
@@ -266,7 +266,7 @@
 
   25 May 2003; Thomas Raschbacher <lordvan@gentoo.org> blender-2.27.ebuild:
   Version bump
-	
+
 *blender-2.26 (12 Feb 2003)
 
   27 May 2003; Hanno Boeck <hanno@gentoo.org> blender-2.26.ebuild,
@@ -284,8 +284,8 @@
   12 Jan 2003; Martin Holzer <mholzer@gentoo.org> :
   Changed Homepage. Closes #13707
 
-  10 Jan 2003; Kain <kain@kain.org> : blender-2.26_pre20030109.ebuild
-  files/digest-blender-2.26_pre20030109
+  10 Jan 2003; Kain <kain@kain.org>  blender-2.26_pre20030109.ebuild
+  files/digest-blender-2.26_pre20030109 :
   Blender CVS snapshot source build for 2.26.  I figured this would be decent
   to work with, since Blender CVS is in feature freeze at the moment.  This
   blender works with autoconf and has GCC-3 fixes, so it builds (and runs!)
@@ -301,7 +301,7 @@
 *blender-2.23 (15 Oct 2002)
 
   15 Oct 2002; Matt Keadle <mkeadle@gentoo.org> blender-2.23-r1.ebuild
-  files/digest-blender-2.23-r1
+  files/digest-blender-2.23-r1 :
 
   Added sys-libs/lib-compat to RDEPEND
 
