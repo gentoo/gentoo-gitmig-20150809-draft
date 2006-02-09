@@ -1,27 +1,57 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 acfd6f6fe1f216c197cafe36f81c10dd ChangeLog 5524
+MD5 76ac9baf1212142bc90717e3fae910bc ChangeLog 5667
+RMD160 2189c3bd670418f8c1e41e203ccd97d693c5811f ChangeLog 5667
+SHA256 9fb3f4df495166c13f272007d67d043628d4f7ba5c0bda9565b4a749065431b5 ChangeLog 5667
 MD5 29424204ff8bad1b89969061398f354e files/digest-mdadm-1.11.0 64
+RMD160 7e99378e29390d513d04a32e4ef7973aac58cec4 files/digest-mdadm-1.11.0 64
+SHA256 6e42ed1e6295f14ed953c71ad19778e9806c7d0d08f481a3cbd25b3cfa57c86d files/digest-mdadm-1.11.0 64
 MD5 2f8e7421a23b99428a0f7ed81360532b files/digest-mdadm-1.12.0 64
+RMD160 a0241af4f183584bdc51db822c5cec5155222238 files/digest-mdadm-1.12.0 64
+SHA256 73326816ed332451e6fa08d67a61fa3250d3bab053063e4fe176b3eec610d0b8 files/digest-mdadm-1.12.0 64
 MD5 94803322fcea6ec0f31f730af32df156 files/digest-mdadm-1.9.0-r1 59
+RMD160 d3a931f5905126ad136194ae479bfb0e0c8d6a86 files/digest-mdadm-1.9.0-r1 59
+SHA256 1d867208f7b98d450114112ccd790f80dcb847d805f2673e28d3419aa8632cbe files/digest-mdadm-1.9.0-r1 59
 MD5 10269af15b3bfdd348686bd88249fe2a files/digest-mdadm-2.1 62
+RMD160 6892d6f6f7e6846a6db184af78d8e2ddb733de5e files/digest-mdadm-2.1 62
+SHA256 71659fdee046d148bec7fe40a66052814b6cc7c0e717d6a82e8275d34ac8cf77 files/digest-mdadm-2.1 62
 MD5 6418d19a4b3cbc55500c1cb381aa8bed files/digest-mdadm-2.2-r1 62
+RMD160 9f620f048e56aa0b4bc74e13acc01d9d2c2cf604 files/digest-mdadm-2.2-r1 62
+SHA256 8e3ce1ca4863956da6df64a22fe51eb1c60d4aed2450294634bb75f0d43770de files/digest-mdadm-2.2-r1 62
+MD5 5f5cc056cccd487bd64da3d86204636e files/digest-mdadm-2.3.1 238
+RMD160 e9e9a05956fb42aae30d8d14ee5aee9ad44b04a8 files/digest-mdadm-2.3.1 238
+SHA256 7a2be443a7bc42a69d430b4e49091018e9559bb55f164ac532f4c71634ce7d58 files/digest-mdadm-2.3.1 238
 MD5 c0f39d9acef8dee3159359691bf76b94 files/mdadm-1.9.0-dont-make-man.patch 260
-MD5 e5ff1be8339b5b576278f1a167b164fa files/mdadm-2.2-update-segv.patch 534
+RMD160 439a95518c7890bf72ef463ec274c53437f4ac5e files/mdadm-1.9.0-dont-make-man.patch 260
+SHA256 71c81dbbfa1d466e9ee2d3ff0afa8b2d57e75be5dbccdbdd837786723943f7cd files/mdadm-1.9.0-dont-make-man.patch 260
+MD5 9134cad1b9f72237ea0f804e6b630542 files/mdadm-2.2-update-segv.patch 537
+RMD160 ac1c635475ec78449e995b44333e71ce600d9a68 files/mdadm-2.2-update-segv.patch 537
+SHA256 c69881402a27a174d670e9865d695ba2bef205ca20259099d15f07f854e92e2a files/mdadm-2.2-update-segv.patch 537
 MD5 77fed3360e9b6bdfd0721b77c495b750 files/mdadm.rc 849
+RMD160 1268201f01e402dacfc31ac55cc9a25a0a7ba0b2 files/mdadm.rc 849
+SHA256 7b8f0df039d2d5d5e892be8859fbbd6a254cbd0c0f936a594f6df39f3170c416 files/mdadm.rc 849
 MD5 b29646ea704acba09b98ff59f87ebff3 files/raid-start.sh 1518
+RMD160 6f02a726a16901ca81b4f5898a99df6c58fc2101 files/raid-start.sh 1518
+SHA256 5c72156fcd4b6f152e217eafd74fbacd5d17a441181569fe75f99e5aee711610 files/raid-start.sh 1518
 MD5 1e1df57960f4ac52fb4ca327048bbcaa files/raid-stop.sh 805
+RMD160 4dfa5cdd50435a1ac2ff85e0e0b81d717d95a299 files/raid-stop.sh 805
+SHA256 29e16f71c82d04b5799fd0fe34c3668fa789cfa55afb75b0cfbc4d7d7109a2e9 files/raid-stop.sh 805
 MD5 df12771ceeb641ef4fbbadbf745573b6 mdadm-1.11.0.ebuild 1188
+RMD160 9a445b57b416e9a8ec2e9d36412060a0f6b7ff18 mdadm-1.11.0.ebuild 1188
+SHA256 a16d6cc93d0041fc735253b3a8b0777907b0368b6ae7b9dde92c0edd398de5c6 mdadm-1.11.0.ebuild 1188
 MD5 4240e55745ee26c80f06c89a61329e92 mdadm-1.12.0.ebuild 1196
+RMD160 9e5b07c58bfa1c53e612fbc4194c26737bc227e3 mdadm-1.12.0.ebuild 1196
+SHA256 bdb6ea03cf9c452c1f8d7b4a0c17523a9956867379783cd8b5e235c20977382e mdadm-1.12.0.ebuild 1196
 MD5 087b416e7f17ebbe4f6eb4c96d2519a2 mdadm-1.9.0-r1.ebuild 1235
+RMD160 13e3c7917ed37b679e34b693ab28612185c04cd6 mdadm-1.9.0-r1.ebuild 1235
+SHA256 b5ab93ff6793ecdcc43b839359f93c568a1f7717990b56bcc94045f762ccab8a mdadm-1.9.0-r1.ebuild 1235
 MD5 cda31de501f452502de1ce7c7d8cd579 mdadm-2.1.ebuild 1165
+RMD160 62c4b72544ed7afdfbc30e72c458f4da1c34b1ea mdadm-2.1.ebuild 1165
+SHA256 d9506bcd28bfce5049fd90c83e62c88e98dae96b47ae5743feb0edcbde1b2824 mdadm-2.1.ebuild 1165
 MD5 e4fd9131d9bd9179507762825c14c1cb mdadm-2.2-r1.ebuild 1222
+RMD160 5a9a5b0bea67370a587494b0601a5b7b3403b3ae mdadm-2.2-r1.ebuild 1222
+SHA256 8ad13f1ccbd2c9ecba47318f356fac6cb96feb0f16f7289a54dbb83d119173dd mdadm-2.2-r1.ebuild 1222
+MD5 06a8516c69f3a7782fab18fd00dca5a3 mdadm-2.3.1.ebuild 1168
+RMD160 6ebb1a25a2972008cc8b7c522511b8dd37642897 mdadm-2.3.1.ebuild 1168
+SHA256 b8702fb9621bcbf5a2cffaa3ddaae606894886dc653f2d97120487c544146077 mdadm-2.3.1.ebuild 1168
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzGev2+ySkm8kpY0RAuFyAJ4wGE4Vv3qA2xbb6e1bzDjIAoqB6ACfT2A/
-0USggMxo4lRBImH9IQzNw3k=
-=gjFj
------END PGP SIGNATURE-----
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
