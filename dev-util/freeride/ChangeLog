@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/freeride
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/ChangeLog,v 1.8 2005/10/11 19:15:23 caleb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/ChangeLog,v 1.9 2006/02/09 14:00:08 caleb Exp $
+
+*freeride-0.9.5 (09 Feb 2006)
+
+  09 Feb 2006; Caleb Tennis <caleb@gentoo.org> +freeride-0.9.5.ebuild:
+  Version bump
 
 *freeride-0.9.4 (11 Oct 2005)
 
