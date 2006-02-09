@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/spicctrl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/spicctrl/ChangeLog,v 1.8 2005/04/21 07:21:03 wormo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/spicctrl/ChangeLog,v 1.9 2006/02/09 22:14:50 liquidx Exp $
+
+*spicctrl-1.9 (09 Feb 2006)
+
+  09 Feb 2006; Alastair Tse <liquidx@gentoo.org> +spicctrl-1.9.ebuild:
+  version bump. updated URL thanks to theboywho (#120823)
 
   21 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   spicctrl-1.6.ebuild:
