@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.156 2006/02/09 16:09:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.157 2006/02/09 16:22:03 killerfox Exp $
+
+  09 Feb 2006; Rene Nussbaumer <killerfox@gentoo.org>
+  alsa-lib-1.0.11_rc3.ebuild:
+  Added to ~hppa. Revert after talking with flameeyes.
 
   09 Feb 2006; Aron Griffis <agriffis@gentoo.org>
   alsa-lib-1.0.11_rc3.ebuild:
