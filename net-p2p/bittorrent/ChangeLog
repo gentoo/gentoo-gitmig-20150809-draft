@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.78 2006/02/07 02:47:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.79 2006/02/09 21:34:43 tove Exp $
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> bittorrent-4.2.2.ebuild:
   Mark 4.2.2 stable on alpha
@@ -172,7 +172,7 @@
   +bittorrent-4.0.1.ebuild:
   Version bump
 
-  24 Mar 2005; Bryan Ăstergaard <kloeri@gentoo.org>
+  24 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   bittorrent-4.0.0.ebuild:
   Add ~alpha keyword, bug 86127.
 
@@ -226,7 +226,7 @@
   +bittorrent-3.4.2-r1.ebuild, bittorrent-3.4.2.ebuild:
   new init script, stable x86 version bump, move to net-p2p herd (#55954)
 
-  03 Jul 2004; Bryan Ăstergaard <kloeri@gentoo.org> bittorrent-3.3.0.ebuild,
+  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> bittorrent-3.3.0.ebuild,
   bittorrent-3.4.1.ebuild, bittorrent-3.4.1a.ebuild, bittorrent-3.4.2.ebuild:
   Change wxPython to wxpython.
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.116 2006/01/28 13:25:58 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.117 2006/02/09 21:37:49 tove Exp $
 
   28 Jan 2006; Marcin Kryczek <mkay@gentoo.org>
   -files/mldonkey-2.7.0-endianess.patch.bz2, mldonkey-2.7.0.ebuild:
@@ -153,7 +153,7 @@
   23 Jul 2005; <sekretarz@gentoo.org> +mldonkey-2.6.0.ebuild:
   Version bump, bug #84100
 
-  06 May 2005; Bryan Ăstergaard <kloeri@gentoo.org>
+  06 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   mldonkey-2.5.16-r10.ebuild:
   Fix typo, bug 89322.
 
@@ -523,9 +523,9 @@
   Loitsch) for submission (bug #9677)
 
   26 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
-  
+
   move to net-p2p
 
-  16 jun 2002; J. Alberto SuĂĄrez L. <bass@gentoo.org> mldonkey-1.16.ebuild : 
-  
+  16 jun 2002; J. Alberto Suárez L. <bass@gentoo.org> mldonkey-1.16.ebuild : 
+
   First relase
