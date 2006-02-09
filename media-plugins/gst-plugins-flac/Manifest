@@ -1,14 +1,52 @@
-MD5 5f8f6ff1d1900432713da8834c6d6c60 ChangeLog 6418
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e19ecdc3827bc5dfbdbbbda34e0bf2e4 ChangeLog 6535
+RMD160 2d1ce542e12e673400a42f0afa910ac0605ad800 ChangeLog 6535
+SHA256 6d8c4ffff81666dda297a3311f09c0136d8b5a35b542759142ece4971f7e2503 ChangeLog 6535
 MD5 b8ef37a0c2afb0f5505932411db81db5 files/digest-gst-plugins-flac-0.10.0 76
+RMD160 c2c9a85e856fc974509b7fc93f99ffb4de03b311 files/digest-gst-plugins-flac-0.10.0 76
+SHA256 ebfe7a7cf0ee2f608f7037959107ec0ff92bbdf85c16ac3bf2562efb8ea4f3bf files/digest-gst-plugins-flac-0.10.0 76
 MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-flac-0.10.1 76
+RMD160 97d21777d5f71055e3c8195f020410e701de998a files/digest-gst-plugins-flac-0.10.1 76
+SHA256 ea5ad800ee837feabe74ff1d5fac6d75b364dbd5e8713b3fbe0ce741318ed99a files/digest-gst-plugins-flac-0.10.1 76
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-flac-0.8.10 72
-MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-flac-0.8.11 72
+RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-flac-0.8.10 72
+SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-flac-0.8.10 72
+MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-flac-0.8.11 262
+RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-flac-0.8.11 262
+SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-flac-0.8.11 262
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-flac-0.8.8 71
+RMD160 74fb762aa4b4c37e0cf13ceb60aec1e2c80a83dd files/digest-gst-plugins-flac-0.8.8 71
+SHA256 8c042a1f86509a2d902bbc3d63874d8347af12c132215e8c67582fa8835e6089 files/digest-gst-plugins-flac-0.8.8 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-flac-0.8.9 71
+RMD160 59910917ac9fe162d7686f1702fb5bdd98a25154 files/digest-gst-plugins-flac-0.8.9 71
+SHA256 06e49fc70cfec9d2553ced28a9c9246324fdd21c25f6bea9142de83f1f5a8153 files/digest-gst-plugins-flac-0.8.9 71
 MD5 aec3c15a084bf7c16dccdcc9f8cafb34 gst-plugins-flac-0.10.0.ebuild 336
+RMD160 16203b4202283a3e19d26c801158ec63a4873cb5 gst-plugins-flac-0.10.0.ebuild 336
+SHA256 68f81551d520a37a1590417642619db2d16d517e326313997c898e6d7743525c gst-plugins-flac-0.10.0.ebuild 336
 MD5 ceac08079ca541018b1c549456402a94 gst-plugins-flac-0.10.1.ebuild 337
+RMD160 855078101d3c74dcfecd8378719771c34aca2ddc gst-plugins-flac-0.10.1.ebuild 337
+SHA256 a7493e89c5fa2f3d32cdd43cdebad8e0a423fc4e455fe1c9aacb940126e86ef3 gst-plugins-flac-0.10.1.ebuild 337
 MD5 f7c9bb8f865389eec82fb50693062ffe gst-plugins-flac-0.8.10.ebuild 371
-MD5 d10e407170fb96ff6b6b6776f84eefe2 gst-plugins-flac-0.8.11.ebuild 373
+RMD160 801b21c65f85c5bb61bf54ae2df8643f5b47eb45 gst-plugins-flac-0.8.10.ebuild 371
+SHA256 dd8961929a86b34499b3e76d5e2dd1bb9c8dd316606552103db370169206f56c gst-plugins-flac-0.8.10.ebuild 371
+MD5 5118ebae7eaaf2452158189c2c2c2fbc gst-plugins-flac-0.8.11.ebuild 374
+RMD160 17844c06449fe56154962daf56cf11db213175ed gst-plugins-flac-0.8.11.ebuild 374
+SHA256 36f0353dc4c0b97393e1d95fcc238f3b993b3ef42c07378903a179bd902b8de2 gst-plugins-flac-0.8.11.ebuild 374
 MD5 5b885863069276abb80da1463a3503ee gst-plugins-flac-0.8.8.ebuild 369
+RMD160 fe5dcb6597d402e516b7d746dbc5671948035c46 gst-plugins-flac-0.8.8.ebuild 369
+SHA256 ee1e1d4d5b05da29e5bb899ee27d39118c8cbd67e9ff9a0a60ae090efddb67f1 gst-plugins-flac-0.8.8.ebuild 369
 MD5 decd926997ab22bc8b0b0066bb95c01e gst-plugins-flac-0.8.9.ebuild 379
+RMD160 082b0c1ddd4dda714c0e9fd1b0966d8006d99e98 gst-plugins-flac-0.8.9.ebuild 379
+SHA256 e9e519b69cd056af59a347a2f495a4543138ef9b320ffdced89729f2fb54e0a5 gst-plugins-flac-0.8.9.ebuild 379
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
+SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD62AtJrHF4yAQTrARAjphAJ931NAsN1GRJuF7CrVzwBBfAIo+dwCgzybo
+V0siMEpyG8HHvhgpj1K1SXo=
+=fKW4
+-----END PGP SIGNATURE-----
