@@ -1,6 +1,28 @@
-MD5 e0020e67e136791348e21650597937a0 ChangeLog 6538
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f6a3c632b8e39d6faaabc4b1f2b996db ChangeLog 6661
+RMD160 34e8d3348e1d2b9f27897f773112db8147f24f80 ChangeLog 6661
+SHA256 d8fa08c1ede8cef70613f72a7fadd33d8cbb0d98d028cbb9b5ba914e869666f3 ChangeLog 6661
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-cdparanoia-0.8.10 72
-MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-cdparanoia-0.8.11 72
+RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-cdparanoia-0.8.10 72
+SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-cdparanoia-0.8.10 72
+MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-cdparanoia-0.8.11 262
+RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-cdparanoia-0.8.11 262
+SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-cdparanoia-0.8.11 262
 MD5 5b85da762b6b0337af02d72deab134b4 gst-plugins-cdparanoia-0.8.10.ebuild 378
-MD5 4eeabfbc4fdc77082d1e5f06b3401764 gst-plugins-cdparanoia-0.8.11.ebuild 379
+RMD160 31086faa40bc7c8d11aaa7913530b261ba6958e0 gst-plugins-cdparanoia-0.8.10.ebuild 378
+SHA256 23bfaf1bd10cecb99399ab49d519ece9721bc6d4dafcd3e015e46082371b4c25 gst-plugins-cdparanoia-0.8.10.ebuild 378
+MD5 5ad59e2c27c1ae514ac9e42e5ba41f15 gst-plugins-cdparanoia-0.8.11.ebuild 380
+RMD160 c2bda9462710f8e7634522078f1809d8f7acfc29 gst-plugins-cdparanoia-0.8.11.ebuild 380
+SHA256 96536153833dacb659a7f0071bc721efc92bcd50bba45801727cdd089be2a093 gst-plugins-cdparanoia-0.8.11.ebuild 380
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
+SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD61tYJrHF4yAQTrARAixqAKCnu7RkN1DiB7LaZfvs1ed5izdwogCfYFpS
+97+l4IatyJnHiKSS93MTIKA=
+=lp2f
+-----END PGP SIGNATURE-----
