@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.146 2006/02/05 17:09:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.147 2006/02/09 20:12:03 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -195,6 +195,10 @@ kde_src_compile() {
 						--with-extra-libs=${KDEDIR}/$(get_libdir)"
 				fi
 
+				if grep "cope with newer libtools" "${S}/admin/ltconfig" &> /dev/null; then
+					einfo "Removing the dummy ltconfig file."
+					rm "${S}/admin/ltconfig"
+				fi
 				elibtoolize
 				econf \
 					${myconf} \
