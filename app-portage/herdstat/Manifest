@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 79f5dbdc894df1f299fa756c21f447b6 ChangeLog 9866
+MD5 1cdf54ca91dd5d4bb99472beb98264d3 ChangeLog 9969
+RMD160 e40910d1116ffb2214c5428330a3a023263c5890 ChangeLog 9969
+SHA256 135c403f5cfc6d746877f12680bfafa4886f318b96c106f34425fe1958419a66 ChangeLog 9969
 MD5 b586369ffb96b93ca9d425778647f0eb files/digest-herdstat-1.1.1_p7 70
+RMD160 1c8c4ddb12db309cb611f2d53f18702838ea25c6 files/digest-herdstat-1.1.1_p7 70
+SHA256 d3887d3b154f06421ff7ea1aea17a593bd3efab7e6ba0f0bc72e4f439615d6b1 files/digest-herdstat-1.1.1_p7 70
 MD5 79bfda7d1db4bb0ace466f186fdbc1f1 files/digest-herdstat-1.1.2 146
+RMD160 9a9cbe13fd0e34c52f1abf77220e12313b8de690 files/digest-herdstat-1.1.2 146
+SHA256 06290593dd831670d890d5e20c31ad28bf68641b8d3081e47a74c88b21fe9a4f files/digest-herdstat-1.1.2 146
 MD5 e73683928d8ca716d83bf5fa34ec5fb7 files/digest-herdstat-1.1.91 147
-MD5 35b409b486a69e3c8d6e7e81e9e5e4a7 herdstat-1.1.1_p7.ebuild 1907
+RMD160 8480112444cc6397bc90220e9b8a0b6a752a4509 files/digest-herdstat-1.1.91 147
+SHA256 108fb34d6a0de6ddb2bd93e852c6ffd3d2f46a8e53b708e8f42390bd977c2cbd files/digest-herdstat-1.1.91 147
+MD5 15eece2f39b867ce8097f1be2371c667 herdstat-1.1.1_p7.ebuild 1902
+RMD160 bc9c2c66760f57d80e825777dab2f4625996fabe herdstat-1.1.1_p7.ebuild 1902
+SHA256 8cf76b6c13c60506661afcca9e2483223716ac85a22fb1990b59a5441961829c herdstat-1.1.1_p7.ebuild 1902
 MD5 cd1d6b6dd82cfc4f0bc7e937e4880f70 herdstat-1.1.2.ebuild 2089
+RMD160 e86c162d225e558303420fd86a005389b3b04468 herdstat-1.1.2.ebuild 2089
+SHA256 9287d077924975db3ca5fa9fea3912dc8f0df82b0457fd213738f036ce5e5d47 herdstat-1.1.2.ebuild 2089
 MD5 e6c03d25c28901c7f74114b83b79140a herdstat-1.1.91.ebuild 2552
+RMD160 4fd4bf6cd4a5f09eba7d5ba3267ed9c087cca112 herdstat-1.1.91.ebuild 2552
+SHA256 cef196fad5edf43ebd06d5dcbadaecb97658498ce5107fd5c9f32f1a6dcaa8aa herdstat-1.1.91.ebuild 2552
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDz3ggEZCkKN40op4RAkNfAJ9urNoj2YnYPWP5t5ACGWcHSq5scwCcCvzs
-Q7T0mVsFHwjKQc2bPKGVa4M=
-=Nckf
------END PGP SIGNATURE-----
+RMD160 2a9e181efd140c3c1a2136376000c63f7459246d metadata.xml 254
+SHA256 ddd8e09da8727f957651a073ae2b61e4a381ee69ab83c93a3077a653743b887f metadata.xml 254
