@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a4df8e5cda7201e2ae25ac77bb1ed280 aspectwerkz-2.0_rc2.ebuild 1556
 MD5 54afe3e02ddcb51704821a683b12c16a ChangeLog 722
-MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+RMD160 bacb89f06a5a5542df8131434a2e620ff64e5e99 ChangeLog 722
+SHA256 860126aeaddf99f243ae023920ce80afa8b42dcf1dd46154709bdeba9f0bb54b ChangeLog 722
+MD5 8b4c1b526765459c0db327c0dd171d16 aspectwerkz-2.0_rc2.ebuild 1554
+RMD160 d0a3140df5e67cb98c8c36d65a8e624e9ef3e3cb aspectwerkz-2.0_rc2.ebuild 1554
+SHA256 7d532477e2ce139af5427361020dc8cf1894c587e123962b30b9f6851895dad6 aspectwerkz-2.0_rc2.ebuild 1554
 MD5 1bcde0233ea72230e5b78958ff1a30f9 files/aspectwerkz-2.0_rc2-gentoo.patch 4866
-MD5 b52e8ab0f4ac5139bc047f5f9a8844aa files/digest-aspectwerkz-2.0_rc2 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1/ri/rLF9B432nYRAjX4AJ9KSELHs9+kIp9H5oJpOBgOEKTEAACggCka
-X+JUocyY6SRPr2MmNWVp3CM=
-=9+xl
------END PGP SIGNATURE-----
+RMD160 5f103ae10c843b0ebcf5f3e92f9a733c4fde5dd8 files/aspectwerkz-2.0_rc2-gentoo.patch 4866
+SHA256 262f71feb10fc60b4fd2d6c160041c9ade5388c7d6b885ef9da18d4f8e4a3b29 files/aspectwerkz-2.0_rc2-gentoo.patch 4866
+MD5 a0ce019e97578ad1c6efb89e980f8bf6 files/digest-aspectwerkz-2.0_rc2 253
+RMD160 cf9e681a76af31bd2691713633bc1d2606199770 files/digest-aspectwerkz-2.0_rc2 253
+SHA256 cf8c53ee9de8974e4f1550e22df2c5292ec83b69adf089c099f350f3af684c0f files/digest-aspectwerkz-2.0_rc2 253
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+RMD160 493079b5fb71d66863beea1b023901c90ba81be5 metadata.xml 158
+SHA256 ea882ceccfd160b16cf7e79de423bdcc12b3fa000f124491a6df36f5783894fb metadata.xml 158

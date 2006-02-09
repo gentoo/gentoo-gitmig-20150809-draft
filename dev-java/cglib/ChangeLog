@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cglib
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.9 2005/07/31 15:28:05 st_lim Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.10 2006/02/09 03:06:23 nichoj Exp $
+
+  09 Feb 2006; Joshua Nichols <nichoj@gentoo.org> cglib-2.0.2-r1.ebuild:
+  Marked stable on amd64 and x86.
 
   31 Jul 2005; Lim Swee Tat <st_lim@gentoo.org> cglib-2.1.2.ebuild:
   Minor mistake in where I had installed asm-1.5 from eons ago, and the jar

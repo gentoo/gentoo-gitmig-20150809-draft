@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.0.2-r1.ebuild,v 1.3 2005/07/15 17:52:17 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.0.2-r1.ebuild,v 1.4 2006/02/09 03:06:23 nichoj Exp $
 
 inherit eutils java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV}.jar"
 HOMEPAGE="http://cglib.sourceforge.net"
 LICENSE="Apache-1.1"
 SLOT="2"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="amd64 ~ppc x86"
 RDEPEND=">=virtual/jre-1.4
 	jikes? ( >=dev-java/jikes-1.21 )
 	source? ( app-arch/zip )
