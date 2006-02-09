@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/kplato-1.5_beta1.ebuild,v 1.1 2006/02/09 03:23:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/kplato-1.5_beta1.ebuild,v 1.2 2006/02/09 19:44:59 carlo Exp $
 
 KMNAME=koffice
 MAXKOFFICEVER=${PV}
 inherit kde-meta eutils
 
-DESCRIPTION="KOffice word processor."
+DESCRIPTION="KPlato is a project management application."
 HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 
