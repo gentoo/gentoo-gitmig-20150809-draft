@@ -16,9 +16,9 @@ SHA256 30b69b17f7a6770c2c8d8d85f5f843a15d14c0d149c8c40f0a1ab4b3ba2432a8 files/di
 MD5 e3ee94eed45baf4ca76736da56d72bad files/digest-readline-5.0-r2 350
 RMD160 7983bb7f748cacf163122698f2e8c1b8a5d1d305 files/digest-readline-5.0-r2 350
 SHA256 8516d7f6f2a1143760cd7a73831978d2b13f9878069e0a2701b9779c597a2652 files/digest-readline-5.0-r2 350
-MD5 1d930552cdea6057066fcf79714f9253 files/digest-readline-5.1-r2 122
-RMD160 cf5d1366c455a15b3b74901a07a84c52b9add941 files/digest-readline-5.1-r2 122
-SHA256 34d5d18a0cf994a82c02acdebb5af3cc55cacdb7da87819d5289fbdfeaca5b70 files/digest-readline-5.1-r2 122
+MD5 c6787137b31f3b6943210ff723c0dbeb files/digest-readline-5.1-r2 282
+RMD160 04d357bafd076bf1dcf1a1ea3ee135efa34971be files/digest-readline-5.1-r2 282
+SHA256 b6fe9787237d2482f81d6e0d8da312ab1e354a7ef882e2ec26d73e310e66e37b files/digest-readline-5.1-r2 282
 MD5 899ae79419e83907ddf440269d4612c7 files/digest-readline-5.1_p2 675
 RMD160 79d095a461349da10278ec9218bceeeebef7b095 files/digest-readline-5.1_p2 675
 SHA256 edb7229211246792f9c599f577dccd1f420f8e856079cf0bda010a35ba5d79ed files/digest-readline-5.1_p2 675
@@ -49,9 +49,9 @@ SHA256 ee377cfa90050aad3bf47d9b9a62eaa6430c0fdf7f8780240f3ddc75730a434e files/re
 MD5 73869a19bab0f37a7ee46e377d2bac15 files/readline-5.1-rlfe-build.patch 252
 RMD160 7e9085f685b7732d0ef0ecdcc5538b7d84bb7d1f files/readline-5.1-rlfe-build.patch 252
 SHA256 45f3ac7973b5d5af4a79575fe0b6c364bb444dbbe42f43b600b1dd1d99dcac55 files/readline-5.1-rlfe-build.patch 252
-MD5 d5beb2bc88ccec6e3344a6094004e4bc files/readline-5.1-rlfe-libutil.patch 3056
-RMD160 3686693b76e73ba05c95a378abc20de61d442b5b files/readline-5.1-rlfe-libutil.patch 3056
-SHA256 8f990b4abe53f93774bcc08a67040fc39129e6b7862108869771124e56fab1e2 files/readline-5.1-rlfe-libutil.patch 3056
+MD5 c59aee767346ecfc235e155e20d9e16b files/readline-5.1-rlfe-libutil.patch 530
+RMD160 4f0d86709159d8299d51da21de99abd4ffa2ad1f files/readline-5.1-rlfe-libutil.patch 530
+SHA256 b99dee7796e16598e4bed51a84b4daaff7b7f43532f8738e5581bdfe1068c69e files/readline-5.1-rlfe-libutil.patch 530
 MD5 ae8aaec6f366e3f675d626b157c8cffd files/readline-5.1-rlfe-uclibc.patch 1694
 RMD160 715127465c03df7329f23b1a12aece8001aca96c files/readline-5.1-rlfe-uclibc.patch 1694
 SHA256 8045b4a37c1a3b19171fe4192161af46188223bdd61ab5e32561593f9c89270e files/readline-5.1-rlfe-uclibc.patch 1694
@@ -76,7 +76,7 @@ SHA256 ad1fa972a90beb3102f4f2c4c435c6a3d366fddb3e833202e24ea237f402dbb8 readline
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6rRF2+ySkm8kpY0RArGBAJ40RxN8SulhxuE7r2KJGVRGm93YxQCguluV
-2L9WFVflp04eR/pVNeDVyOQ=
-=dZJ9
+iD8DBQFD6228KolR564NvWYRArpMAJ0e7MAtxKrfmkeCW4B6Vd88biY+CQCgkfLH
+i6a+c9x569ZAavndG3dWmrM=
+=8H0e
 -----END PGP SIGNATURE-----
