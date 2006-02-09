@@ -1,7 +1,31 @@
-MD5 40550d86e93bb1c992d61233efe2bf8c ChangeLog 1242
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b26c8caab6f7efe373c5dcb02f851075 ChangeLog 1337
+RMD160 a1cfcfd6643fa94bc769eedb6abd3bd093e2d5f8 ChangeLog 1337
+SHA256 2064e7a7e36494639187291a7abe827c7d0030f6fb521d453dfadbb117b1fd10 ChangeLog 1337
 MD5 0f7a67be659555a2a84b5242337e2fc4 colt-1.1.0.ebuild 965
-MD5 a3826fe71d5a4ae793f306baff9fe4a7 colt-1.2.0.ebuild 1263
+RMD160 5b8fe767abb359ebd9997afaab03b4029611f926 colt-1.1.0.ebuild 965
+SHA256 326507f3e6ce396a4e342b13d752543587bf837fc57aa999d46601d4de43cfb1 colt-1.1.0.ebuild 965
+MD5 99cc36d4dc085ef763977678a292c3cc colt-1.2.0.ebuild 1259
+RMD160 a8cde86423022eb276e88b20abd728afebb5ee92 colt-1.2.0.ebuild 1259
+SHA256 e9a92ba2b59bd18ce622d9feea0d958568ab8e270277e9ac6f0b6f94df7c3077 colt-1.2.0.ebuild 1259
 MD5 ba3affe18fc44894284ce7fe751b2418 files/colt-1.2.0-benchmark-no-deprecation.patch 1180
+RMD160 0d616070911baecfa118e2b47d370f43c979f18e files/colt-1.2.0-benchmark-no-deprecation.patch 1180
+SHA256 822fafff87add40e1d8f29636505713994f23fb30ec20962c3f70ca87b487254 files/colt-1.2.0-benchmark-no-deprecation.patch 1180
 MD5 a6ff6e660f79708d23716172e2228031 files/digest-colt-1.1.0 60
+RMD160 6238feb0459340463b6cea72e3d7d0e90ed34517 files/digest-colt-1.1.0 60
+SHA256 5f729ba58fcdcabd65f95791020d71f84bb56eeba30e3c94a01a63dadf522890 files/digest-colt-1.1.0 60
 MD5 cedefa25fdfa3efc2c82b4e1afddde73 files/digest-colt-1.2.0 60
+RMD160 d9458432eb4151c37aa8a2628823c9735ab2c6cb files/digest-colt-1.2.0 60
+SHA256 f784f3a323a9860409bd0926bd6c5b332dbaacfa3d0d668e25961822b45948ab files/digest-colt-1.2.0 60
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6rbCndWRXhKOboURAts/AJ0d6tAWWGroslMtq+59pLeN0b+HCACeIkHq
+fTYzQyL4r0QrUcwjsFolzUg=
+=aL9x
+-----END PGP SIGNATURE-----
