@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.1.ebuild,v 1.10 2006/02/08 23:06:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.1.ebuild,v 1.11 2006/02/09 14:39:58 wolf31o2 Exp $
 
 inherit eutils
 
@@ -36,4 +36,11 @@ src_compile() {
 
 src_install() {
 	einstall DESTDIR=${D} PREFIX=/usr MANDIR=/usr/share/man || die "Install failed"
+}
+
+pkg_postinst() {
+	ewarn "This package is intended for usage on the Gentoo release media.  If"
+	ewarn "you are not building a CD, remove this package.  It will not work"
+	ewarn "properly on a running system, as Gentoo does not use any of the"
+	ewarn "Knoppix-style detection except for CD builds."
 }
