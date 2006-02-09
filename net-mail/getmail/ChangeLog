@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/getmail
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.115 2006/02/09 14:38:50 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.116 2006/02/09 21:26:30 tove Exp $
 
 *getmail-4.5.3 (09 Feb 2006)
 
@@ -405,7 +405,7 @@
 *getmail-4.0.6 (06 Aug 2004)
 
   04 Aug 2004; Tom Martin <slarti@gentoo.org> :
-  Version bump, thanks to Martin KlaffenBĂÂśck <martin.klaffenboeck@gmx.de> for
+  Version bump, thanks to Martin Klaffenböck <martin.klaffenboeck@gmx.de> for
   reporting. Resolves bug #59400.
 
 *getmail-4.0.2-r1 (02 Aug 2004)

@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.91 2006/02/07 21:38:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.92 2006/02/09 21:28:53 tove Exp $
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> uw-imap-2004g-r2.ebuild:
   stable on amd64
@@ -135,7 +135,7 @@
   +uw-imap-2004c-r2.ebuild:
   Don't install pam.d files. #79240. Depend on mailbase-0.00-r8 at least
 
-  01 Feb 2005; Olivier CrĂŞte <tester@gentoo.org> :
+  01 Feb 2005; Olivier Crête <tester@gentoo.org> :
   Stable on x86 per security bug #79874
 
   30 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> uw-imap-2004c.ebuild:

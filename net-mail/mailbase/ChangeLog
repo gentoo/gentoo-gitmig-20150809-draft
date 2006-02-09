@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.66 2005/08/25 00:09:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.67 2006/02/09 21:24:23 tove Exp $
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> mailbase-1.ebuild:
   stable on ia64
@@ -95,7 +95,7 @@
   18 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> mailbase-0.00-r8.ebuild:
   Stable on sparc wrt #82404
 
-  17 Feb 2005; Olivier CrÃªte <tester@gentoo.org> mailbase-0.00-r8.ebuild:
+  17 Feb 2005; Olivier Crête <tester@gentoo.org> mailbase-0.00-r8.ebuild:
   Marking stable on x86 for security bug #82404
 
   14 Feb 2005; Fernando J. Pereda <ferdy@gentoo.org>
