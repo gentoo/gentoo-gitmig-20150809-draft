@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.520 2006/02/07 08:32:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.521 2006/02/09 22:24:41 tove Exp $
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> xorg-x11-6.8.2-r6.ebuild:
   Mark 6.8.2-r6 stable on alpha
@@ -285,7 +285,7 @@
   xorg-x11-6.8.2-r5.ebuild:
   Added gcc4 compile fix for fbmmx.c .  Closes bug #106305.
 
-  20 Sep 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  20 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   xorg-x11-6.8.2-r4.ebuild, xorg-x11-6.8.2-r5.ebuild,
   xorg-x11-6.8.99.15-r2.ebuild:
   Make util-linux conditional to GNU userland, added note for FBSD.
@@ -314,7 +314,7 @@
   17 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -xorg-x11-6.8.2-r3.ebuild, +xorg-x11-6.8.2-r4.ebuild:
   Fixed previous security update as it did not match upstream's patch.  Much
-  thanks to Alexander BrÃ¼ning for providing and testing the new patch and
+  thanks to Alexander Brüning for providing and testing the new patch and
   Peter Hyman for spotting the source of the problem.  Closes bug #105859.
 
   13 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
@@ -848,7 +848,7 @@
   xorg-x11-6.8.2-r1.ebuild:
   stable on mips - bug 83598
 
-  08 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  08 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   xorg-x11-6.8.2-r1.ebuild:
   Stable on alpha, bug 83598.
 
@@ -904,7 +904,7 @@
   xorg-x11-6.8.2.ebuild:
   (#81851) Clarify local cursor settings info.
 
-  13 Feb 2005; Bryan Ãstergaard <kloeri@gentoo.org> xorg-x11-6.8.2.ebuild:
+  13 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> xorg-x11-6.8.2.ebuild:
   ~alpha keyword.
 
   11 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
@@ -1053,7 +1053,7 @@
   Change die() to ewarn() if a directory exists in both font locations in
   remove_font_dirs(). The migration should catch that problem, so there's no
   need to die. Also append cyrillic to G_FONTDIRS if USE=nls, so its fonts.*
-  files get cleaned. Reported by Andres JÃ¤rv <andresjarv@gmail.com>.
+  files get cleaned. Reported by Andres Järv <andresjarv@gmail.com>.
 
   02 Feb 2005; Markus Rothe <corsair@gentoo.org> xorg-x11-6.8.1.903.ebuild:
   Added ~ppc64 to KEYWORDS
@@ -2097,7 +2097,7 @@
   xorg-x11-6.8.0-r1.ebuild:
   Removed build of unneeded drivers. 6.7.0-r2 Stable on hppa.
 
-  18 Sep 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org>
+  18 Sep 2004; Bryan Østergaard <kloeri@gentoo.org>
   xorg-x11-6.8.0-r1.ebuild:
   Add ~alpha to keywords.
 
@@ -2112,7 +2112,7 @@
   17 Sep 2004; Travis Tilley <lv@gentoo.org> xorg-x11-6.7.0-r2.ebuild:
   stable on amd64
 
-  17 Sep 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org>
+  17 Sep 2004; Bryan Østergaard <kloeri@gentoo.org>
   xorg-x11-6.7.0-r2.ebuild:
   Stable on alpha, bug 64152.
 
@@ -2454,7 +2454,7 @@
   13 Jun 2004; Stephen P. Becker <geoman@gentoo.org> xorg-x11-6.7.0-r1.ebuild:
   Added ~mips keyword -- bug 53226
 
-  12 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> xorg-x11-6.7.0-r1.ebuild:
+  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xorg-x11-6.7.0-r1.ebuild:
   ~alpha keyword, bug #53226.
 
   11 Jun 2004; Ferris McCormick <fmccor@gentoo.org> xorg-x11-6.7.0-r1.ebuild:
