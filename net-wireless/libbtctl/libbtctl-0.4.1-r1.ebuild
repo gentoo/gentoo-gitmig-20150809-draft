@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.4.1-r1.ebuild,v 1.5 2005/10/05 12:01:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.4.1-r1.ebuild,v 1.6 2006/02/09 22:04:05 liquidx Exp $
 
 inherit gnome2 mono multilib eutils
 
@@ -16,7 +16,7 @@ IUSE="mono doc"
 RDEPEND=">=dev-libs/glib-2
 	>=net-wireless/bluez-utils-2.7
 	>=net-wireless/bluez-libs-2.7
-	>=dev-libs/openobex-1
+	=dev-libs/openobex-1.0*
 	>=dev-lang/python-2.3
 	>=dev-python/pygtk-2.0
 	!sparc? ( mono? ( >=dev-lang/mono-0.96 ) )"
