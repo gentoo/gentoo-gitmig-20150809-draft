@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kmp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/ChangeLog,v 1.8 2006/01/08 12:24:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/ChangeLog,v 1.9 2006/02/09 13:54:08 caleb Exp $
+
+  09 Feb 2006; Caleb Tennis <caleb@gentoo.org> kmp-0.5.ebuild:
+  Fix configure script to find qt3
 
   08 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Remove retiring dev from metadata.

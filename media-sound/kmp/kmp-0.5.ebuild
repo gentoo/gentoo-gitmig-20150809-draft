@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/kmp-0.5.ebuild,v 1.1 2005/05/04 16:04:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/kmp-0.5.ebuild,v 1.2 2006/02/09 13:54:08 caleb Exp $
 
 inherit eutils kde-functions
 
@@ -21,7 +21,7 @@ src_compile() {
 	echo QMAKE_CFLAGS_RELEASE=${CFLAGS} >> kmp.pro
 	echo QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS} >> kmp.pro
 
-	econf || die "configure failed"
+	ac_moc=${QTDIR}/bin/moc ac_uic=${QTDIR}/bin/uic ac_qmake=${QTDIR}/bin/qmake econf || die "configure failed"
 	emake || die "make failed"
 }
 
