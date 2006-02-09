@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.3.11.ebuild,v 1.2 2006/02/08 15:48:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.3.11.ebuild,v 1.3 2006/02/09 14:57:19 wolf31o2 Exp $
 
 VERSION_DMAP='1.00.17'
 VERSION_DMRAID='1.0.0.rc9'
@@ -87,5 +87,11 @@ pkg_postinst() {
 	einfo 'as well as the following URL:'
 	echo
 	einfo 'http://www.gentoo.org/doc/en/genkernel.xml'
+	echo
+	ewarn "This package is known to not work with reiser4.  If you are running"
+	ewarn "reiser4 and have a problem, do not file a bug.  We know it does not"
+	ewarn "work and we don't plan on fixing it since reiser4 is the one that is"
+	ewarn "broken in this regard.  Try using a sane filesystem like ext3 or"
+	ewarn "even resier3."
 	echo
 }
