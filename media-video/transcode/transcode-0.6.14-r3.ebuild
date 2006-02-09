@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r3.ebuild,v 1.9 2006/01/19 15:52:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r3.ebuild,v 1.10 2006/02/09 05:25:50 vapier Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -12,7 +12,6 @@ DESCRIPTION="video stream processing tool"
 HOMEPAGE="http://www.transcoding.org/cgi-bin/transcode"
 SRC_URI="mirror://transcode/${P}.tar.gz
 	http://rebels.plukwa.net/linux-video/${PN}/${P}.tar.gz
-
 	mirror://gentoo/${PN}-patches-${PATCH_VER}.tbz2"
 
 LICENSE="GPL-2"
