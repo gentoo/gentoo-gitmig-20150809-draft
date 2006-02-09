@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.147 2006/02/07 22:22:11 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.148 2006/02/09 21:57:18 tove Exp $
 
 *vanilla-sources-2.6.16_rc2 (07 Feb 2006)
 
@@ -214,7 +214,7 @@
   21 Sep 2005; <chainsaw@gentoo.org> +vanilla-sources-2.6.14_rc2.ebuild:
   Version bump.
 
-  15 Sep 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  15 Sep 2005; Bryan Østergaard <kloeri@gentoo.org>
   vanilla-sources-2.6.12.5.ebuild:
   Stable on alpha, bug 102582.
 
@@ -407,7 +407,7 @@
   vanilla-sources-2.6.11.9.ebuild:
   stable on ia64 #92264
 
-  13 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  13 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   vanilla-sources-2.4.30.ebuild, vanilla-sources-2.6.11.8.ebuild:
   Bump stable kernels on alpha.
 
@@ -548,13 +548,13 @@
 
 *vanilla-sources-2.6.11_rc4 (13 Feb 2005)
 
-  13 Feb 2005; MichaÃÂ Januszewski <spock@gentoo.org>
+  13 Feb 2005; Michał Januszewski <spock@gentoo.org>
   +vanilla-sources-2.6.11_rc4.ebuild:
   Version bump.
 
 *vanilla-sources-2.6.11_rc3 (04 Feb 2005)
 
-  04 Feb 2005; MichaÃÂ Januszewski <spock@gentoo.org>
+  04 Feb 2005; Michał Januszewski <spock@gentoo.org>
   +vanilla-sources-2.6.11_rc3.ebuild:
   Version bump.
 
