@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/mcdp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.13 2005/09/10 15:51:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.14 2006/02/09 21:08:18 tove Exp $
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> mcdp-0.3j.ebuild:
   Don't install INSTALL file.
@@ -38,5 +38,5 @@
   11 Jul 2003; jje <jje@gentoo.org> mcdp-0.3j.ebuild:
   Initial revision.
   
-  Submitted by: Freyr Gunnar Ãlafsson <gnarlin@utopia.is>
+  Submitted by: Freyr Gunnar Ólafsson <gnarlin@utopia.is>
 

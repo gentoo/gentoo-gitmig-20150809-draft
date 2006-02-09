@@ -1,15 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 665c40292df80db15daa43a21867e813 mcdp-0.3j.ebuild 727
-MD5 1e2c625943f1ad16dfd10ea24aa72aef ChangeLog 1422
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 1159831fecf7d200807f7dc82bfa5bb1 files/mcdp-0.3j-dietlibc-fix.patch 365
+MD5 4daf6372e14f6e466f45e078c5bb1521 ChangeLog 1415
+RMD160 77cc3de8f726f502334708482addd92ae0368277 ChangeLog 1415
+SHA256 aedd7d0b2b2cc204a82edc41ca1fe5c3b0b723c80cc092416ad7331ff905e77f ChangeLog 1415
 MD5 65c764f79941bf06a15e474906cc1458 files/digest-mcdp-0.3j 60
+RMD160 7dc999cef45489e1e48541a73595818c0273a79d files/digest-mcdp-0.3j 60
+SHA256 983ca199f91d6018d78dcf76fdf51291f81a83b8d0262e0d720b8f8075ad1e28 files/digest-mcdp-0.3j 60
+MD5 1159831fecf7d200807f7dc82bfa5bb1 files/mcdp-0.3j-dietlibc-fix.patch 365
+RMD160 930e7e9563aefbd79bfe2e874e745d76a49b7c0b files/mcdp-0.3j-dietlibc-fix.patch 365
+SHA256 82911558c9937ccbdf65518250207b5d2e9d1e767ef36a609a79c2dcf8bfc498 files/mcdp-0.3j-dietlibc-fix.patch 365
+MD5 665c40292df80db15daa43a21867e813 mcdp-0.3j.ebuild 727
+RMD160 8dd723534ba84630f07961adbedd8c0d28708ae4 mcdp-0.3j.ebuild 727
+SHA256 fdc3c110cda2ac1dc3034a83bdd737e10d2dc26159de8466db7222cf5b353a78 mcdp-0.3j.ebuild 727
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDIwEzj5H05b2HAEkRAsOeAJ0eMlYMAhBdGghELIiTdgtKJQFLAQCeMy4l
-jwcBL78Jezv/884Jx+uMat8=
-=zcGF
+iD8DBQFD669PV3J2n04EauwRAhMTAJ40rlnUeOMg3jBe9wCDPjz2nE3gmQCgkky4
+NRvd3F2ibxG72vjNfAsgwdU=
+=2SSO
 -----END PGP SIGNATURE-----
