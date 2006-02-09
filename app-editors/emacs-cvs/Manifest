@@ -1,13 +1,64 @@
-MD5 75cc2f3b5fccd98dc400b8cec3670529 ChangeLog 5933
-MD5 1b7923e164465f8c83dab9e9096cc2eb emacs-cvs-22.0.50.ebuild 4700
-MD5 7d49571d48e340d3a3cbe70ce38411ac emacs-cvs-23.0.0.ebuild 4727
-MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 39d7571bd2730945a1fcb33995f1a41f ChangeLog 6272
+RMD160 f81a67fd5cf63fba5dc9fab7a0f3d8668a807477 ChangeLog 6272
+SHA256 22e063e659a5bb11d14e5abd8fca3e98bf899044d48cac843545295e1e6eb9bb ChangeLog 6272
+MD5 4fdc4b38b90503d3accdb0d1a309431c emacs-cvs-22.0.50-r1.ebuild 5421
+RMD160 d4913573def6fdd504558a836a72311b64f7ebc3 emacs-cvs-22.0.50-r1.ebuild 5421
+SHA256 105d2068c588dac79b83c20b4f1e4a759bb8301af0cdbdd5c56951aca5d512b7 emacs-cvs-22.0.50-r1.ebuild 5421
+MD5 781fe2cad1e2bbee7dafa54bf124bebf emacs-cvs-22.0.50.ebuild 4874
+RMD160 e69f73e2d60c8f1be7fd191f278ed48b642ec500 emacs-cvs-22.0.50.ebuild 4874
+SHA256 aee9a75fedc40ca8a5a121234e999b4126565b61afabe7c0ad088eb95a09dfcc emacs-cvs-22.0.50.ebuild 4874
+MD5 63bb16a2df85d465c00eaecbf3d69ac7 emacs-cvs-23.0.0.ebuild 4899
+RMD160 19de1b2d86d2c634745a595f2f9adeffcc9e80d4 emacs-cvs-23.0.0.ebuild 4899
+SHA256 ec967b1c001725926ba2bad9823b0155c402e63c7f4f21aff1fbe98f8fae14b1 emacs-cvs-23.0.0.ebuild 4899
 MD5 04a64867694a98538309b433c80aaa62 files/40aspell-gentoo.el 80
+RMD160 f45303b3158136e3c5c4b6039fc893697900b9a4 files/40aspell-gentoo.el 80
+SHA256 b4d23344039e6d48efc893597295b3cacdad684c188a7fb2fada777e925f36b4 files/40aspell-gentoo.el 80
 MD5 0d61f19c0e6fcdb6657ae1d4d9e69801 files/50emacs-22.0.50.envd 39
+RMD160 6264f1faa5b99e98251be427fd8ef60b52ca1370 files/50emacs-22.0.50.envd 39
+SHA256 5501f5818b4b88a34e93440e5fc6e2a44d2a1c83080358849b811b1d17234f43 files/50emacs-22.0.50.envd 39
 MD5 0b379e4c82898cbd3b9929d752b7bfab files/50emacs-23.0.0.envd 38
+RMD160 78ada93c0a6e3019d225eaecac89a5554d5344b9 files/50emacs-23.0.0.envd 38
+SHA256 6179b1cbc85458d3cb49605ec095aa9ddfedcbd3b68dcbad01679717d5b86b1a files/50emacs-23.0.0.envd 38
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-22.0.50 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-emacs-cvs-22.0.50 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-emacs-cvs-22.0.50 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-22.0.50-r1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-emacs-cvs-22.0.50-r1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-emacs-cvs-22.0.50-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-23.0.0 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-emacs-cvs-23.0.0 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-emacs-cvs-23.0.0 0
 MD5 3a0ce8880fff1be2f5e8281633532546 files/emacs-22.0.50.desktop 242
+RMD160 dce325fa6cb9f5f97d1cfc644b0db7cc8172cabc files/emacs-22.0.50.desktop 242
+SHA256 13b1ed362039617b45a15feb3eda9ff6aef49c21be71ed3423e47e81f7497ce9 files/emacs-22.0.50.desktop 242
 MD5 5585d3da10b713e4f268c2ab75b4b2da files/emacs-23.0.0.desktop 240
+RMD160 ca1edb1c6dbb916658ee9b86130f400498f2e27e files/emacs-23.0.0.desktop 240
+SHA256 3931cd9401f587dae3bc898f39bffebe349b3597bbf7bd3199b7ec1ab01167d1 files/emacs-23.0.0.desktop 240
 MD5 277b238c9263aabcc2ef92de1d6d68bb files/emacs-cvs-21.3.50-nofink.diff 1520
+RMD160 31c8fc31a4715d26e1566d87f09b947d1664b136 files/emacs-cvs-21.3.50-nofink.diff 1520
+SHA256 09f387ecc0a53f02acbe445b3e9c82cd815700c7313329e0bc5d8baa39a925a7 files/emacs-cvs-21.3.50-nofink.diff 1520
 MD5 5f423550e3d32b7c0511eccd93a94750 files/emacs-subdirs-el-gentoo.diff 1369
+RMD160 142e80ab7dc4620275ec9623f646e0b2c4a1c6bf files/emacs-subdirs-el-gentoo.diff 1369
+SHA256 c407b31c785b275f12337e41e58ff8386219b1c94a1c98b69eee82a10eb54074 files/emacs-subdirs-el-gentoo.diff 1369
+MD5 91da809381cbee2642bee45da75c182b files/xft-bgalpha.patch 690
+RMD160 eb4bee1226982b1b470f0b267960fd177cbc5eb1 files/xft-bgalpha.patch 690
+SHA256 51e1ee64d1fbfebec95e1863b476692c7291f44fb32a7f85e025b57c447d5f6f files/xft-bgalpha.patch 690
+MD5 3a1b3ce71cc21223bd102617c38cd23e files/xft-invertcursor.patch 1033
+RMD160 5cc8d806b0fa132d4ce54b7dd93e6309c8521ef5 files/xft-invertcursor.patch 1033
+SHA256 cbf87d20127afe9245611292577dda6daebc74bf31e6d8f2cbff138933ac2c9a files/xft-invertcursor.patch 1033
+MD5 2e8d8757cc9ed43a0ffe56c8dbcb93df files/xft-xfaces-fixcrash.patch 631
+RMD160 1e7ab9c6e776fdcf8c995330f96c234359d8ad48 files/xft-xfaces-fixcrash.patch 631
+SHA256 03643e029572a5bcbe6404d584537228c690df472426371b0585414b5d283966 files/xft-xfaces-fixcrash.patch 631
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 metadata.xml 158
+SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD6p0cyiNZaEAZA+ARAtMOAJ9Xrf/U98xcH4amsI/cYtsMniVZHQCeMNgl
+9e+KwJKAUL5Iz2sUy79tEoQ=
+=gR5V
+-----END PGP SIGNATURE-----

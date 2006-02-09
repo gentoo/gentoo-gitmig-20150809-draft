@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50.ebuild,v 1.9 2005/12/17 15:42:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50.ebuild,v 1.10 2006/02/09 01:38:23 mkennedy Exp $
 
 ECVS_AUTH="pserver"
 export CVS_RSH="ssh"
@@ -25,10 +25,12 @@ HOMEPAGE="http://www.gnu.org/software/emacs"
 SANDBOX_DISABLED="1"
 RESTRICT="$RESTRICT nostrip"
 
+X_DEPEND="x11-libs/libXmu x11-libs/libXpm x11-libs/libXt x11-misc/xbitmaps || ( media-fonts/font-adobe-100dpi media-fonts/font-adobe-75dpi )"
+
 DEPEND=">=sys-libs/ncurses-5.3
 	spell? ( || ( app-text/ispell app-text/aspell ) )
-	X? ( virtual/x11
-		gif? ( >=media-libs/giflib-4.1.0.1b )
+	X? ( || ( ( $X_DEPEND ) virtual/x11 ) )
+	X? ( gif? ( >=media-libs/giflib-4.1.0.1b )
 		jpeg? ( >=media-libs/jpeg-6b )
 		tiff? ( >=media-libs/tiff-3.5.7 )
 		png? ( >=media-libs/libpng-1.2.5 )

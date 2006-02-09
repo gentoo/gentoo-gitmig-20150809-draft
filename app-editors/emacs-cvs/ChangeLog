@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/emacs-cvs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.37 2005/12/18 01:21:45 ranger Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.38 2006/02/09 01:38:23 mkennedy Exp $
+
+*emacs-cvs-22.0.50-r1 (09 Feb 2006)
+
+  09 Feb 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/xft-bgalpha.patch, +files/xft-invertcursor.patch,
+  +files/xft-xfaces-fixcrash.patch, emacs-cvs-22.0.50.ebuild,
+  +emacs-cvs-22.0.50-r1.ebuild, emacs-cvs-23.0.0.ebuild:
+  Some unfinished experimental XFT support; Modular X dependencies.
 
   18 Dec 2005; Brent Baude <ranger@gentoo.org> emacs-cvs-23.0.0.ebuild:
   Marked ~ppc64 per bug 115361
