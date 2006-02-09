@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/cogito
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.27 2006/02/05 03:20:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.28 2006/02/09 22:36:36 tove Exp $
 
   05 Feb 2006; Jason Wever <weeve@gentoo.org> cogito-0.16.4.ebuild:
   Added ~sparc keyword.
@@ -95,7 +95,7 @@
 
 *cogito-0.12.1 (13 Jul 2005)
 
-  13 Jul 2005; MichaÅ Januszewski <spock@gentoo.org> +cogito-0.12.1.ebuild:
+  13 Jul 2005; Michał Januszewski <spock@gentoo.org> +cogito-0.12.1.ebuild:
   Version bump.
 
   01 Jul 2005; Carlos Silva <r3pek@gentoo.org> +files/git-rev-list.patch,
