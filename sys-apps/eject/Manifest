@@ -1,7 +1,10 @@
-MD5 2038303b88767a815c36ea526e9c856a ChangeLog 6817
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 77d65b8739e1e1e7763ed3b58d2519b8 ChangeLog 6922
 MD5 35241bc9ea850572d8d7275f822b8162 eject-2.0.13-r1.ebuild 1109
 MD5 8326cfa02e968ee3060dc791691fd990 eject-2.0.13-r2.ebuild 1560
-MD5 fe28628ed6e9dda8b4440323173becd7 eject-2.1.0.ebuild 1408
+MD5 f72bfb43c22e90ff438747ffb2bc4e1f eject-2.1.0.ebuild 1407
 MD5 a8f6893c482c2b74b0e799b6cd81e867 files/digest-eject-2.0.13-r1 63
 MD5 a8f6893c482c2b74b0e799b6cd81e867 files/digest-eject-2.0.13-r2 63
 MD5 08dc58c70968f3a82874839bfb9b2431 files/digest-eject-2.1.0 232
@@ -22,3 +25,10 @@ MD5 6511dfbfe2029a7e582f958af0d41ca7 files/eject-2.0.13-xregcomp.patch 649
 MD5 dd1b8295e14d3b2ee85a9f06860a5a9f files/eject-2.1.0-regcomp-check.patch 503
 MD5 b60886258cade258841187669f401bb9 files/eject-2.1.0-scsi-io-update.patch 2949
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD61/gKRy60XGEcJIRAsYIAKCu4QcOH0COkscYNr2iNGt3TVheiQCfRSHg
+F+5rV7Kxz/DC0diXj4Ua9VM=
+=/fNX
+-----END PGP SIGNATURE-----
