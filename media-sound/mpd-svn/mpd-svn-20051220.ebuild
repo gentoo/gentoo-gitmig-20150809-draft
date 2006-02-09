@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20051220.ebuild,v 1.1 2005/12/20 19:11:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20051220.ebuild,v 1.2 2006/02/09 21:11:31 ticho Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ IUSE="aac alsa ao audiofile flac icecast ipv6 mad mikmod mp3 musepack vorbis oss
 DEPEND="dev-util/gperf
 	!media-sound/mpd
 	sys-libs/zlib
+	>=dev-libs/glib-2.0.0
 	aac? ( >=media-libs/faad2-2.0_rc2 )
 	alsa? ( media-libs/alsa-lib )
 	ao? ( >=media-libs/libao-0.8.4 )
