@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.86 2006/02/07 01:09:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.87 2006/02/09 21:16:11 tove Exp $
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> libsoup-2.2.7.ebuild:
   Mark 2.2.7 stable on alpha
@@ -63,7 +63,7 @@
   08 Aug 2005; Leonardo Boshell <leonardop@gentoo.org> libsoup-2.2.5.ebuild:
   New version.
 
-  06 Aug 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  06 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
   libsoup-2.2.3-r1.ebuild:
   Stable on alpha.
 
@@ -91,10 +91,10 @@
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> libsoup-2.2.3.ebuild:
   Stable on ppc.
 
-  12 Jun 2005; Olivier CrÃªte <tester@gentoo.org> libsoup-2.2.3.ebuild:
+  12 Jun 2005; Olivier Crête <tester@gentoo.org> libsoup-2.2.3.ebuild:
   Stable on amd64
 
-  12 Jun 2005; Bryan Ãstergaard <kloeri@gentoo.org> libsoup-2.2.3.ebuild:
+  12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> libsoup-2.2.3.ebuild:
   Stable on alpha.
 
   06 Jun 2005; Markus Rothe <corsair@gentoo.org> libsoup-2.2.3.ebuild:
@@ -132,10 +132,10 @@
   29 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> libsoup-2.2.2.ebuild:
   Stable on sparc
 
-  27 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> libsoup-2.2.2.ebuild:
+  27 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> libsoup-2.2.2.ebuild:
   Stable on ia64.
 
-  26 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> libsoup-2.2.2.ebuild:
+  26 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> libsoup-2.2.2.ebuild:
   Stable on alpha.
 
   25 Apr 2005; Mike Gardiner <obz@gentoo.org> libsoup-2.2.2.ebuild:
@@ -177,7 +177,7 @@
   17 Dec 2004; Markus Rothe <corsair@gentoo.org> libsoup-2.2.1.ebuild:
   Stable on ppc64
 
-  11 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> libsoup-2.2.1.ebuild:
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> libsoup-2.2.1.ebuild:
   Stable on alpha.
 
   26 Nov 2004; Tom Martin <slarti@gentoo.org> libsoup-2.2.1.ebuild:
@@ -215,7 +215,7 @@
   27 Jul 2004; <agriffis@gentoo.org> libsoup-1.99.28.ebuild:
   stable on ia64
 
-  04 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> libsoup-1.99.28.ebuild:
+  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> libsoup-1.99.28.ebuild:
   Stable on alpha.
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> libsoup-1.99.28.ebuild:
