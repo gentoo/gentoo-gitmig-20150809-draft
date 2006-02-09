@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muine
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.28 2006/01/30 06:44:43 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.29 2006/02/09 04:53:01 latexer Exp $
+
+  09 Feb 2006; Peter Johanson <latexer@gentoo.org> muine-0.8.4.ebuild:
+  Add monodoc and gnome-common missing deps.
 
 *muine-0.8.4 (30 Jan 2006)
 
