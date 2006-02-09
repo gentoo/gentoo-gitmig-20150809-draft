@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.16.ebuild,v 1.2 2006/01/31 13:11:36 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.16.ebuild,v 1.3 2006/02/09 17:18:15 chutzpah Exp $
 
-inherit nsplugins flag-o-matic fdo-mime eutils
+inherit nsplugins flag-o-matic fdo-mime eutils multilib
 
 MY_P="${PN}libre-${PV}"
 
@@ -72,5 +72,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} plugindir=/usr/lib/${PLUGINS_DIR} install
+	make DESTDIR=${D} plugindir=/usr/$(get_libdir)/${PLUGINS_DIR} install
 }
