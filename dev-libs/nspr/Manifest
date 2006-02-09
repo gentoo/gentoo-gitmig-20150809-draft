@@ -1,6 +1,6 @@
-MD5 9f8d0a73569b6a8e546bd16c01c1e6c4 ChangeLog 5045
-RMD160 e6b6de2b755158da2fc8c282024c33b95952788d ChangeLog 5045
-SHA256 25183b3a5d0d0982d1e66ffbf64af33e868825a3c4405b8dae287571829dbc4b ChangeLog 5045
+MD5 00e6aa6cda37c63e0788a09c4f33feb4 ChangeLog 5188
+RMD160 09c31872f07af9f97a44ecb89487c4bd1c7e342e ChangeLog 5188
+SHA256 4bde3a82a9ee6bedb303aeacc174dd9af918a0da7dac68e95317e84b54d9c0ca ChangeLog 5188
 MD5 10437559f8044e78299742d18180760e files/digest-nspr-4.1.2 63
 RMD160 65c4d3237415274ec1ce62e169cf56ff62399e4a files/digest-nspr-4.1.2 63
 SHA256 50cb6893f71edc7b685c3c4e65fb18a580913044916c83d6fd9c2aefe8707b50 files/digest-nspr-4.1.2 63
@@ -16,6 +16,9 @@ SHA256 7639d67da355e49a73e9da46a2e777855cf772783bc881e188c3ab2d178bbcad files/di
 MD5 fb58705dbbaf7c7f4b07bffeebd05eca files/digest-nspr-4.6.1-r1 521
 RMD160 af32f7cce9bc9f9f01298df4e58704cf199eb693 files/digest-nspr-4.6.1-r1 521
 SHA256 b805dd573493dd35dd96a8a19953a5e24ce9ef084e0b852ec971b660a7d26879 files/digest-nspr-4.6.1-r1 521
+MD5 fb58705dbbaf7c7f4b07bffeebd05eca files/digest-nspr-4.6.1-r2 521
+RMD160 af32f7cce9bc9f9f01298df4e58704cf199eb693 files/digest-nspr-4.6.1-r2 521
+SHA256 b805dd573493dd35dd96a8a19953a5e24ce9ef084e0b852ec971b660a7d26879 files/digest-nspr-4.6.1-r2 521
 MD5 b12990968c289b9e7f8fbb2174ec827c files/nspr-4.3-amd64.patch 7713
 RMD160 33bc221a8f59c5b7175784b777693aa19e027e4a files/nspr-4.3-amd64.patch 7713
 SHA256 da682b4d50a6093750f621afecf91f04380e0379207b82dfd6f283f714db8fde files/nspr-4.3-amd64.patch 7713
@@ -25,6 +28,9 @@ SHA256 a4444d9a9eaa70bfc22bb632e2aedac75b8e9ce658f7c67f62da2a2489625624 files/ns
 MD5 8febddba94492208369d1934210180f9 files/nspr-4.4.1-ppc64.patch 2077
 RMD160 08650a78b25a7cf6d3c10821969ccca4032ea0de files/nspr-4.4.1-ppc64.patch 2077
 SHA256 3c4e80ebb922fb4dc9a3b6f9acf728cdb230f32d58edafad2c7ac1d9084547f7 files/nspr-4.4.1-ppc64.patch 2077
+MD5 268f90a610fa729ec783fbdbed7adf1b files/nspr-4.6.1-config-1.patch 565
+RMD160 62fef94c85f636249c83cb6f4a7cc00a71adf3f6 files/nspr-4.6.1-config-1.patch 565
+SHA256 9ed8fd15102ef3de6d837d40ec5d73aef0ea45bf9059b4cf5ff1f47b6a519ed6 files/nspr-4.6.1-config-1.patch 565
 MD5 ea9d3d76a3bb62cb554c40ecd45f04ee files/nspr-4.6.1-config.patch 2722
 RMD160 75701d5dbdd25a05a3bb43539bfa5f5ea850aabd files/nspr-4.6.1-config.patch 2722
 SHA256 01bba00a314375cbb056c4e26e059515a6a0df92c62229799abca9f3fa9c7842 files/nspr-4.6.1-config.patch 2722
@@ -55,3 +61,6 @@ SHA256 e035ac48cae2fd39df495fa69dfbfb7372892371c3ba9ed48427d11b3fac72fd nspr-4.4
 MD5 67d4cf966cf1ab8d705cb7293fc1671c nspr-4.6.1-r1.ebuild 2501
 RMD160 d24d93cadf18bee21537ab90cf9ac03142fffddc nspr-4.6.1-r1.ebuild 2501
 SHA256 58d44cedd011ab8ad8b8ae358d3b06e28e2d4ce01bbdc232778b297587b94cb8 nspr-4.6.1-r1.ebuild 2501
+MD5 140e7d480d871ed3e9dfab448570b8ee nspr-4.6.1-r2.ebuild 2790
+RMD160 65c9b2006d0f3e5a6f9b69529be29f00325769cd nspr-4.6.1-r2.ebuild 2790
+SHA256 1229401bf9dede8d426fb7773a9ebd07e263da3c781851ecb64b42c1b0fd0451 nspr-4.6.1-r2.ebuild 2790

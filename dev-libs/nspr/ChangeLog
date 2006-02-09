@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.42 2006/02/08 13:42:12 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.43 2006/02/09 19:10:46 anarchy Exp $
+
+*nspr-4.6.1-r2 (09 Feb 2006)
+
+  09 Feb 2006; <anarchy@gentoo.org> +files/nspr-4.6.1-config-1.patch,
+  +nspr-4.6.1-r2.ebuild:
+  rpath fix/hack
 
   08 Feb 2006; <anarchy@gentoo.org> +files/nspr-4.6.1-lang.patch,
   nspr-4.6.1-r1.ebuild:

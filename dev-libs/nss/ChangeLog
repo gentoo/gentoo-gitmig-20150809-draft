@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.47 2006/01/30 17:36:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.48 2006/02/09 19:15:41 anarchy Exp $
+
+*nss-3.11-r1 (09 Feb 2006)
+
+  09 Feb 2006; <anarchy@gentoo.org> +nss-3.11-r1.ebuild:
+  rpath fix
 
 *nss-3.11 (30 Jan 2006)
 
