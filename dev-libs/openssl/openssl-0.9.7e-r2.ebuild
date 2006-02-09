@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e-r2.ebuild,v 1.2 2006/01/06 01:06:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e-r2.ebuild,v 1.3 2006/02/09 09:56:07 blubb Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs multilib
 
 OLD_096_P="${PN}-0.9.6m"
 
@@ -87,7 +87,7 @@ src_unpack() {
 	fi
 
 	# openssl-0.9.6
-	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
+	test -f ${ROOT}/usr/$(get_libdir)/libssl.so.0.9.6 && {
 		cd ${WORKDIR}/${OLD_096_P}
 
 		epatch "${FILESDIR}"/${OLD_096_P}-gentoo.diff
@@ -162,12 +162,15 @@ src_compile() {
 		./config ${conf_options} --prefix=/usr --openssldir=/etc/ssl shared threads \
 			|| die "config failed"
 	fi
-
+	
+	# Shitty build systems deserve shitty hacks
+	sed -i -e 's/-m64//' -e 's/-m32//' Makefile
+	
 	einfo "Compiling ${P}"
-	make CC="$(tc-getCC)" all || die "make all failed"
+	make CC="$(tc-getCC)" BN_ASM="bn_asm.o" all || die "make all failed"
 
 	# openssl-0.9.6
-	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
+	test -f ${ROOT}/usr/$(get_libdir)/libssl.so.0.9.6 && {
 		cd ${WORKDIR}/${OLD_096_P}
 
 		# force sparcv8 on sparc32 profile
@@ -212,7 +215,7 @@ src_test() {
 	make test || die "make test failed"
 
 	# openssl-0.9.6
-	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
+	test -f ${ROOT}/usr/$(get_libdir)/libssl.so.0.9.6 && {
 		cd ${WORKDIR}/${OLD_096_P}
 		make all || die
 	}
@@ -248,7 +251,7 @@ src_install() {
 	done
 
 	# openssl-0.9.6
-	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
+	test -f ${ROOT}/usr/$(get_libdir)/libssl.so.0.9.6 && {
 		cd ${WORKDIR}/${OLD_096_P}
 		make || die
 		dolib.so ${WORKDIR}/${OLD_096_P}/libcrypto.so.0.9.6||die "libcrypto.so.0.9.6 not found"
@@ -268,7 +271,7 @@ pkg_postinst() {
 		rm -f "${BN_H}"
 	fi
 
-	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
+	test -f ${ROOT}/usr/$(get_libdir)/libssl.so.0.9.6 && {
 		einfo "You can now re-compile all packages that are linked against"
 		einfo "OpenSSL 0.9.6 by using revdep-rebuild from gentoolkit:"
 		einfo "# revdep-rebuild --soname libssl.so.0.9.6"
