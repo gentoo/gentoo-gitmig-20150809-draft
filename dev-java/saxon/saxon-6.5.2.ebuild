@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-6.5.2.ebuild,v 1.4 2006/01/08 05:29:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-6.5.2.ebuild,v 1.5 2006/02/09 02:34:00 nichoj Exp $
 
 inherit java-pkg eutils versionator
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://saxon.sourceforge.net/"
 
 LICENSE="MPL-1.1"
 SLOT="6.5"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE="doc source"
 
