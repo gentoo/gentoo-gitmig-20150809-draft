@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.16 2006/02/08 21:25:53 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.17 2006/02/09 13:15:43 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -55,18 +55,22 @@ mysql_init_vars() {
 
 	if [ -z "${DATADIR}" ]; then
 		DATADIR=""
-		if [ -f "${SYSCONFDIR}/my.cnf" ] ; then
+		if [ -f "${MY_SYSCONFDIR}/my.cnf" ] ; then
 			DATADIR=`"my_print_defaults${MY_SUFFIX}" mysqld 2>/dev/null | sed -ne '/datadir/s|^--datadir=||p' | tail -n1`
 			if [ -z "${DATADIR}" ]; then
 				if useq "srvdir" ; then
-					DATADIR="/srv/localhost/mysql/datadir"
+					DATADIR="${ROOT}/srv/localhost/mysql${MY_SUFFIX}/datadir"
 				else
-					DATADIR=`grep ^datadir "${SYSCONFDIR}/my.cnf" | sed -e 's/.*=\s*//'`
+					DATADIR=`grep ^datadir "${MY_SYSCONFDIR}/my.cnf" | sed -e 's/.*=\s*//'`
 				fi
 			fi
 		fi
 		if [ -z "${DATADIR}" ]; then
-			DATADIR="${MY_LOCALSTATEDIR}"
+			if useq "srvdir" ; then
+				DATADIR="${ROOT}/srv/localhost/mysql${MY_SUFFIX}/datadir"
+			else
+				DATADIR="${MY_LOCALSTATEDIR}"
+			fi
 			einfo "Using default DATADIR"
 		fi
 		einfo "MySQL DATADIR is ${DATADIR}"
