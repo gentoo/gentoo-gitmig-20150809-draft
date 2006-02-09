@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.0.ebuild,v 1.9 2006/02/09 01:55:50 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.0.ebuild,v 1.10 2006/02/09 02:17:28 halcy0n Exp $
 
 inherit eutils kde-functions
 
@@ -31,10 +31,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/kvirc-3.0.1-kdedir-fix.patch
-	epatch ${WORKDIR}/${P}-linking-fix.patch
+	epatch "${FILESDIR}"/kvirc-3.0.1-kdedir-fix.patch
+	epatch "${WORKDIR}"/${P}-linking-fix.patch
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 }
 
@@ -65,7 +65,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
-	make docs DESTDIR=${D} || die "make docs failed"
+	make install DESTDIR="${D}" || die "make install failed"
+	make docs DESTDIR="${D}" || die "make docs failed"
 	dodoc ChangeLog INSTALL README TODO
 }
