@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libol
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.78 2006/02/06 19:45:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.79 2006/02/09 06:33:41 kumba Exp $
+
+  13 Feb 2006; Joshua Kinard <kumba@gentoo.org> libol-0.3.17.ebuild:
+  Marked stable on mips for Bug #121572.
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> libol-0.3.17.ebuild:
   stable on amd64
