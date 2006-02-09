@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.43 2005/11/26 02:44:29 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.44 2006/02/09 00:30:59 tove Exp $
 
   25 Nov 2005; Tom Gall <tgall@gentoo.org> diffstat-1.40.ebuild:
   stable on ppc64
@@ -43,7 +43,7 @@
   -diffstat-1.37.ebuild:
   Removed old ebuilds.
 
-  02 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org> diffstat-1.39.ebuild:
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> diffstat-1.39.ebuild:
   Stable on alpha.
 
   29 Jun 2005; Joshua Kinard <kumba@gentoo.org> diffstat-1.39.ebuild:
@@ -82,7 +82,7 @@
   10 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> diffstat-1.38.ebuild:
   Marked stable on x86.
 
-  07 Feb 2005; Bryan Ãstergaard <kloeri@gentoo.org> diffstat-1.37.ebuild:
+  07 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> diffstat-1.37.ebuild:
   Stable on alpha.
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> diffstat-1.37.ebuild:

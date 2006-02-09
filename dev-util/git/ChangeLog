@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.67 2006/01/30 16:08:42 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.68 2006/02/09 00:29:38 tove Exp $
 
 *git-1.1.6 (30 Jan 2006)
 
@@ -312,7 +312,7 @@
 
 *git-0.99.3 (09 Aug 2005)
 
-  09 Aug 2005; MichaÃÂ Januszewski <spock@gentoo.org> +git-0.99.3.ebuild:
+  09 Aug 2005; Michał Januszewski <spock@gentoo.org> +git-0.99.3.ebuild:
   Version bump.
 
   15 Jul 2005; Carlos Silva <r3pek@gentoo.org> git-0.7.ebuild:
