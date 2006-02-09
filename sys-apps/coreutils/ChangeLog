@@ -1,8 +1,8 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.152 2006/02/09 06:24:47 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.153 2006/02/09 13:29:14 kumba Exp $
 
-  13 Feb 2006; Joshua Kinard <kumba@gentoo.org> coreutils-5.2.1-r7.ebuild:
+  09 Feb 2006; Joshua Kinard <kumba@gentoo.org> coreutils-5.2.1-r7.ebuild:
   Marked stable on mips for Bug #120125.
 
   29 Jan 2006; Chris PeBenito <pebenito@gentoo.org> coreutils-5.93.ebuild:
