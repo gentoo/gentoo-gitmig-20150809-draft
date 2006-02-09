@@ -1,6 +1,6 @@
 # ChangeLog for dev-ruby/sary-ruby
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.22 2006/02/04 15:10:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.23 2006/02/09 00:28:31 tove Exp $
 
   04 Feb 2006; <solar@gentoo.org> :
   - redigest needed due to bad RMD160. bug #121124
@@ -14,7 +14,7 @@
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org> sary-ruby-1.2.0.ebuild:
   Mark 1.2.0 ~ia64
 
-  02 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org> sary-ruby-1.2.0.ebuild:
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> sary-ruby-1.2.0.ebuild:
   Stable on alpha.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
