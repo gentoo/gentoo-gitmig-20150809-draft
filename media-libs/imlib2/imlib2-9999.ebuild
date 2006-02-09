@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.14 2005/12/11 23:52:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.15 2006/02/09 23:45:10 vapier Exp $
 
 inherit enlightenment toolchain-funcs
 
@@ -17,12 +17,7 @@ DEPEND="=media-libs/freetype-2*
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( media-libs/jpeg )
 	tiff? ( >=media-libs/tiff-3.5.5 )
-	X? ( || ( ( x11-libs/libXext
-				x11-proto/xextproto
-			)
-			virtual/x11
-		)
-	)
+	X? ( || ( ( x11-libs/libXext x11-proto/xextproto ) virtual/x11 ) )
 	mp3? ( media-libs/libid3tag )"
 
 src_compile() {
