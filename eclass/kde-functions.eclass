@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.131 2006/01/10 13:12:44 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.132 2006/02/09 02:44:53 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -347,6 +347,7 @@ app-office/koffice app-office/koffice-data
 app-office/koffice app-office/koffice-libs
 app-office/koffice app-office/koffice-meta
 app-office/koffice app-office/koshell
+app-office/koffice app-office/kplato
 app-office/koffice app-office/kpresenter
 app-office/koffice app-office/krita
 app-office/koffice app-office/kspread
