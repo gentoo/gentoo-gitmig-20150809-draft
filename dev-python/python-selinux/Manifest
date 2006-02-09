@@ -1,25 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 13b7e771009033010e5a8a1797ebce87 ChangeLog 4488
-RMD160 21a2c6bf90a4656674b50cd468bdd15700f4f223 ChangeLog 4488
-SHA256 b784c60b0db6beb777fd49bdcb81d4b80194182da66cca0e2526dd45f3bf69d7 ChangeLog 4488
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-python-selinux-2.16 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-python-selinux-2.16 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-python-selinux-2.16 0
-MD5 d5dc9417a58fe239af4d9e126be2ceff files/python-selinux-2.16.c.bz2 8500
-RMD160 f98aac72c759c37a167ca8589c5544438c9ebcd5 files/python-selinux-2.16.c.bz2 8500
-SHA256 3bcf586902b74c124a8c953ba51bb193ba7732629760f465c41559011bbff1e1 files/python-selinux-2.16.c.bz2 8500
+MD5 e4de0f416029a0a6c81a8cd77b0099cc ChangeLog 4678
+RMD160 dd9ad819c21ac3491190ad24b381a28fa58b888e ChangeLog 4678
+SHA256 c31d53e52b3fbf5bd09be2ac811fb6da8353bd801d97e9fb1d195ff3b95a9bc7 ChangeLog 4678
+MD5 94a85ec9a14221fd6f57657473c9ecbe files/digest-python-selinux-2.16 250
+RMD160 bef61c6366a9014c7e5e3df3ca05f921668c1088 files/digest-python-selinux-2.16 250
+SHA256 874710db936f5090cc3cde3cd1879a30589d2ed29cc82dc19b17fa2c0cf25746 files/digest-python-selinux-2.16 250
 MD5 c998c579cfc08c6860f78304a67cfce9 metadata.xml 525
 RMD160 adb5c1cbbecac4a5076cfe1622344dbf29967aa5 metadata.xml 525
 SHA256 2ddd57267552f0bc13a0db709e6cf03d89c20d5320ab3cbdb5ffa7abb6c9d2be metadata.xml 525
-MD5 515ce0b804275917b1d3b0331a4d719e python-selinux-2.16.ebuild 901
-RMD160 367357958ce7a28bfc9a27af48991b083fd6f63a python-selinux-2.16.ebuild 901
-SHA256 18d728dc1ccb10cd9fea03ad36e1c3af0b525ef636568e04979fb6292915ebcc python-selinux-2.16.ebuild 901
+MD5 b0620de942ebb8b570ac22632c09b407 python-selinux-2.16.ebuild 937
+RMD160 b2111d4951b001b2f2caf1aec1fc554a2fcb7261 python-selinux-2.16.ebuild 937
+SHA256 623daf0a140883f4a8a4d50b717489191b4b1610739921f12d5db2fd56487e76 python-selinux-2.16.ebuild 937
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD5YA9J+ChZlpDtAoRAo87AJ9QxuZxM5HcDAhM5f4WzvQ7E+NwCwCgmpdN
-u0lpIod+hDjuUZpKBuXaXcE=
-=d6w+
+iD8DBQFD6orsJ+ChZlpDtAoRAsuqAJ9rg/xXhnfIs6t5ihxZg3a6SPfGYwCfXscr
++TxOlZkGEdFgaii7hkfF9do=
+=cWWB
 -----END PGP SIGNATURE-----

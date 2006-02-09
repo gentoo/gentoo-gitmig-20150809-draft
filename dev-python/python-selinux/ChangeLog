@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-selinux
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.28 2006/02/05 04:33:53 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.29 2006/02/09 00:20:48 pebenito Exp $
+
+  09 Feb 2006; Chris PeBenito <pebenito@gentoo.org>
+  -files/python-selinux-2.16.c.bz2, python-selinux-2.16.ebuild:
+  Move source to distfiles, and move python_version out of global scope.
 
   05 Feb 2006; Chris PeBenito <pebenito@gentoo.org>
   -files/python-selinux-2.15.c.bz2, -python-selinux-2.15.ebuild:
