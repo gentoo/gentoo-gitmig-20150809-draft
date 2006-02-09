@@ -1,6 +1,13 @@
 # ChangeLog for app-text/catdoc
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/ChangeLog,v 1.9 2005/07/16 19:17:35 josejx Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/ChangeLog,v 1.10 2006/02/09 21:51:43 nattfodd Exp $
+
+*catdoc-0.94.1 (09 Feb 2006)
+
+  09 Feb 2006; Alexandre Buisse <nattfodd@gentoo.org> catdoc-0.93.3.ebuild,
+  catdoc-0.93.4.ebuild, +catdoc-0.94.1.ebuild:
+  Bump to 0.94.1 (closing bug #122296). Also removed COPYING and INSTALL from
+  all existing ebuilds and updated homepage.
 
   16 Jul 2005; Joseph Jezak <josejx@gentoo.org> catdoc-0.93.3.ebuild:
   Accidently marked ppc instead of ~ppc.
