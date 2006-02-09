@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hexdump/hexdump-1.6.ebuild,v 1.10 2005/01/22 21:26:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hexdump/hexdump-1.6.ebuild,v 1.11 2006/02/09 11:37:46 malc Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.catb.org/~esr/hexdump/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="hppa ppc x86 ppc64 ~ppc-macos ~amd64"
+KEYWORDS="amd64 hppa ppc ~ppc-macos ppc64 x86"
 IUSE=""
 
 src_compile() {
