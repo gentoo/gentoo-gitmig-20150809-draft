@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.0.ebuild,v 1.1 2006/01/13 17:52:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.0.ebuild,v 1.2 2006/02/09 11:52:30 gmsoft Exp $
 
 inherit flag-o-matic
 
@@ -10,13 +10,13 @@ SRC_URI="ftp://ftp.afterstep.org/stable/AfterStep-${PV}.tar.bz2"
 
 LICENSE="AFTERSTEP"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug gif jpeg mmx nls png tiff xinerama"
 
 DEPEND="virtual/libc
 	virtual/x11
 	media-libs/freetype
-	debug? ( !ppc? ( dev-util/efence ) )
+	debug? ( !hppa? ( !ppc? ( dev-util/efence ) ) )
 	png? ( >=media-libs/libpng-1.2.5 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	gif?  ( >=media-libs/giflib-4.1.0 )
