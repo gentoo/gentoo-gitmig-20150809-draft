@@ -1,4 +1,14 @@
-MD5 8ad8c2a21ff657453ec07bd7d8684c90 ChangeLog 439
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9a8bfb55747e63d1f934e3c5902dfca6 ChangeLog 550
 MD5 5edae8add6463f2e44485f97594b240f files/digest-pam_pkcs11-0.5.3 68
 MD5 59af1ba132e999b7d1c7b6d42ed4b1e7 metadata.xml 248
-MD5 da319dde41ea072f2c1128dcdfad1f09 pam_pkcs11-0.5.3.ebuild 978
+MD5 13a48c11d5690e45060b78a50b057bce pam_pkcs11-0.5.3.ebuild 983
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD7M6bKRy60XGEcJIRAg/8AKCkozvIZkAY3Jyh9jFUuVHl7TPcDgCfRr53
+aE7/8tNVxXyXTWrcYqlybLI=
+=g19t
+-----END PGP SIGNATURE-----
