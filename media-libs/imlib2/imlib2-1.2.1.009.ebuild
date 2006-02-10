@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.1.009.ebuild,v 1.3 2006/02/09 23:45:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.1.009.ebuild,v 1.4 2006/02/10 05:07:43 vapier Exp $
 
+EKEY_STATE="release"
 inherit enlightenment toolchain-funcs
 
 MY_P=${P/_/-}
