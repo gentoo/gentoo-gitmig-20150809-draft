@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cabal
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.6 2005/10/21 11:23:45 dcoutts Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.7 2006/02/10 12:05:36 dcoutts Exp $
+
+  10 Feb 2006; <duncan@gentoo.org> cabal-1.1.3.ebuild:
+  Marked ~alpha.
 
   21 Oct 2005; <duncan@gentoo.org> cabal-1.1.3.ebuild:
   Added ~sparc to KEYWORDS.
