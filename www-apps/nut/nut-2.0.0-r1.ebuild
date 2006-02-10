@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/nut-2.0.0-r1.ebuild,v 1.4 2005/09/16 12:05:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/nut-2.0.0-r1.ebuild,v 1.5 2006/02/10 04:34:14 vapier Exp $
 
-inherit fixheadtails
+inherit eutils fixheadtails
 
 DESCRIPTION="Network-UPS Tools"
 HOMEPAGE="http://www.networkupstools.org/"
@@ -15,9 +15,14 @@ IUSE="cgi snmp usb"
 
 RDEPEND="cgi? ( media-libs/gd )
 	snmp? ( net-analyzer/net-snmp )"
-DEPEND="$RDEPEND
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	>=sys-devel/autoconf-2.58"
+
+pkg_setup() {
+	enewgroup nut 84
+	enewuser nut 84 -1 /var/state/nut nut
+}
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
