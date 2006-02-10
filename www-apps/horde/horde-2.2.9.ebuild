@@ -1,7 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-2.2.9.ebuild,v 1.6 2005/11/19 13:11:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-2.2.9.ebuild,v 1.7 2006/02/10 05:12:35 vapier Exp $
 
+HORDE_PHP_FEATURES="nls session"
 inherit horde
 
 DESCRIPTION="Horde Application Framework"
@@ -16,13 +17,6 @@ RDEPEND="virtual/php
 	>=dev-libs/libxml2-2.4.21
 	>=www-apps/horde-pear-1.3
 	mysql? ( dev-php/PEAR-DB )"
-
-pkg_setup() {
-	has_version '>=virtual/php-5' \
-		&& HORDE_PHP_FEATURES="nls session" \
-		|| HORDE_PHP_FEATURES="nls"
-	horde_pkg_setup
-}
 
 pkg_postinst() {
 	horde_pkg_postinst
