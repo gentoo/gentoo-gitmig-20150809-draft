@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha21.ebuild,v 1.1 2005/12/07 00:50:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha21.ebuild,v 1.2 2006/02/10 18:58:47 liquidx Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="X ipv6"
 
 DEPEND="virtual/libc
-	X? ( virtual/x11 )"
+	X? ( || ( ( x11-libs/libX11 x11-libs/libXmu x11-libs/libXt )
+	   	 	  virtual/x11 ) )"
 
 S="${WORKDIR}/${MY_P}"
 
