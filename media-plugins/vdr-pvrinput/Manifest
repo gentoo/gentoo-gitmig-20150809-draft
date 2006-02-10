@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9d143629f28d802bee4cf1d1f261cd9d ChangeLog 454
+RMD160 a15e41452934ab9b992a4b1de976815aa80966c2 ChangeLog 454
+SHA256 84e6649647a7ce4e6c3f1ee926042ef1d060a309753630cdbebf6247ec87f12f ChangeLog 454
+MD5 2b979d17d147920bebc8be1355328328 files/digest-vdr-pvrinput-0.1.1_pre1 259
+RMD160 88d2f95857911c828ea003632f7de01640181a6c files/digest-vdr-pvrinput-0.1.1_pre1 259
+SHA256 757eaf75afefdd498ba13c33e784ba777af73dcda0c009ad10b1d31349c985da files/digest-vdr-pvrinput-0.1.1_pre1 259
+MD5 01dc5701b18a5f18085fd6e135334f35 files/vdr-pvrinput-0.1.1_pre1-include-order.patch 455
+RMD160 e2d539cf5aabba34703478ae555870b650030516 files/vdr-pvrinput-0.1.1_pre1-include-order.patch 455
+SHA256 ca64654ccf62c9bca2f0507ab8e1763acff39456da48a30d6eb136cc3bcdfc98 files/vdr-pvrinput-0.1.1_pre1-include-order.patch 455
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 930ce316febb4d3377c3c754ac44aa90 vdr-pvrinput-0.1.1_pre1.ebuild 756
+RMD160 38b5bef8326fd2639b9209ca6b9a5845bca57dca vdr-pvrinput-0.1.1_pre1.ebuild 756
+SHA256 73afc3d59a7e0fa015465c7728db4c77b88dc6448edb63d60b04079fa7c42172 vdr-pvrinput-0.1.1_pre1.ebuild 756
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7OgnZfSl1Kp5KmoRApufAJ40tAi0Eh/ik2N/SSevIyvjopAFbgCg3kHx
+/4RFTadPwNWat1eqIyfKY+w=
+=CJCu
+-----END PGP SIGNATURE-----

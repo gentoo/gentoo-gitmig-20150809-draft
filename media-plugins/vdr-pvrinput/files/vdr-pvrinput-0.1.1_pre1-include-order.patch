@@ -1,0 +1,19 @@
+diff -ru pvrinput-0.1.0-orig/device.c pvrinput-0.1.0/device.c
+--- pvrinput-0.1.0-orig/device.c	2006-02-10 20:04:39.667936500 +0100
++++ pvrinput-0.1.0/device.c	2006-02-10 20:04:52.976768250 +0100
+@@ -6,13 +6,13 @@
+ #include <vdr/channels.h>
+ #include <vdr/sources.h>
+ 
+-#include <linux/videodev.h>
+-
+ extern "C" {
+ #include "videodev2.h"
+ #include "ivtv.h"
+ }
+ 
++#include <linux/videodev.h>
++
+ #include "common.h"
+ #include "device.h"
+ #include "global.h"
