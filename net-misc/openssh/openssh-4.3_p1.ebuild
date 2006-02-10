@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p1.ebuild,v 1.1 2006/02/08 05:24:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p1.ebuild,v 1.2 2006/02/10 01:33:21 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -49,7 +49,7 @@ src_unpack() {
 
 	if use ldap || use smartcard ; then
 		eerror "Sorry, but this version does not yet support"
-		eerror "X509/ldap/smartcard.  Please mask 4.3_p1 for"
+		eerror "ldap/smartcard.  Please mask 4.3_p1 for"
 		eerror "now and check back later:"
 		eerror " # echo '=net-misc/openssh-4.3_p1' >> /etc/portage/package.mask"
 		die "boooooooooooooo"
