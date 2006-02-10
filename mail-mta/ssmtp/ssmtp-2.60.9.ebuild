@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.9.ebuild,v 1.14 2005/01/24 21:32:35 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.9.ebuild,v 1.15 2006/02/10 04:50:11 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.debian.org/debian/pool/main/s/ssmtp/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="ssl ipv6 md5sum mailwrapper"
 
 DEPEND="virtual/libc
@@ -36,8 +36,8 @@ src_compile() {
 
 src_install() {
 	dodir /usr/bin /usr/sbin /usr/lib
-	dosbin ssmtp
-	chmod 755 ${D}/usr/sbin/ssmtp
+	dosbin ssmtp || die
+	fperms 755 /usr/sbin/ssmtp
 	dosym /usr/sbin/sendmail /usr/bin/mailq
 	dosym /usr/sbin/sendmail /usr/bin/newaliases
 	# Removed symlink due to conflict with mailx
@@ -50,7 +50,7 @@ src_install() {
 	doman ssmtp.8
 	#removing the sendmail.8 symlink to support multiple installed mtas.
 	#dosym /usr/share/man/man8/ssmtp.8 /usr/share/man/man8/sendmail.8
-	dodoc COPYING INSTALL README TLS CHANGELOG_OLD
+	dodoc INSTALL README TLS CHANGELOG_OLD
 	dodoc debian/{README.debian,changelog}
 	newdoc ssmtp.lsm DESC
 	insinto /etc/ssmtp

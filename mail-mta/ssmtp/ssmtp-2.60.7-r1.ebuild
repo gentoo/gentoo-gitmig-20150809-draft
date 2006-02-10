@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.7-r1.ebuild,v 1.9 2005/01/24 21:32:35 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.7-r1.ebuild,v 1.10 2006/02/10 04:50:11 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.debian.org/debian/pool/main/s/ssmtp/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="ssl ipv6 md5sum mailwrapper"
 
 DEPEND="virtual/libc
@@ -24,19 +24,19 @@ PROVIDE="virtual/mta"
 S=${WORKDIR}/ssmtp-2.60
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
-
-	epatch ${FILESDIR}/ssmtp-2.60.7-logfile.patch
-	use ssl && epatch ${FILESDIR}/starttls.diff
-	use md5sum && epatch ${FILESDIR}/ssmtp-2.60.4-md5.patch
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/ssmtp-2.60.7-logfile.patch
+	use ssl && epatch "${FILESDIR}"/starttls.diff
+	use md5sum && epatch "${FILESDIR}"/ssmtp-2.60.4-md5.patch
 }
 
 src_compile() {
 	econf \
 		--sysconfdir=/etc/ssmtp \
-		`use_enable ssl` \
-		`use_enable ipv6 inet6` \
-		`use_enable md5sum md5suth` \
+		$(use_enable ssl) \
+		$(use_enable ipv6 inet6) \
+		$(use_enable md5sum md5suth) \
 		|| die
 	make clean || die
 	make etcdir=/etc || die
@@ -44,8 +44,8 @@ src_compile() {
 
 src_install() {
 	dodir /usr/bin /usr/sbin /usr/lib
-	dosbin ssmtp
-	chmod 755 ${D}/usr/sbin/ssmtp
+	dosbin ssmtp || die
+	fperms 755 /usr/sbin/ssmtp
 	dosym /usr/sbin/sendmail /usr/bin/mailq
 	dosym /usr/sbin/sendmail /usr/bin/newaliases
 	# Removed symlink due to conflict with mailx
@@ -58,7 +58,7 @@ src_install() {
 	doman ssmtp.8
 	#removing the sendmail.8 symlink to support multiple installed mtas.
 	#dosym /usr/share/man/man8/ssmtp.8 /usr/share/man/man8/sendmail.8
-	dodoc COPYING INSTALL README TLS CHANGELOG_OLD
+	dodoc INSTALL README TLS CHANGELOG_OLD
 	dodoc debian/{README.debian,changelog}
 	newdoc ssmtp.lsm DESC
 	insinto /etc/ssmtp

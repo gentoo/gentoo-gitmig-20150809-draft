@@ -2,23 +2,51 @@
 Hash: SHA1
 
 MD5 58b1cb1a736c665f1783ecc5cc9d3cb1 ChangeLog 8680
+RMD160 8f0989375f2536c0c6589565699c76db07e0923f ChangeLog 8680
+SHA256 2a73f7a6f8ea8f69cf6d5fc35bb7d7d4cdc6cc0d937c8fd49fc1b41ef3269242 ChangeLog 8680
 MD5 c833680953ba9941d33fc14dda62532b files/digest-ssmtp-2.60.7-r1 63
+RMD160 4029257829a8eb3f816dbdf4c6698c0dddce0b11 files/digest-ssmtp-2.60.7-r1 63
+SHA256 51806e0cfd9aef83f2a1a75237305a321f56278ec01c65d3f9c4658a21f08607 files/digest-ssmtp-2.60.7-r1 63
 MD5 026bfafb0efdf0d7eb5e0b4164a35f7d files/digest-ssmtp-2.60.9 63
+RMD160 09e5496839f4a5c25230398f81d9c3f6af0790ae files/digest-ssmtp-2.60.9 63
+SHA256 0a444ad23bf5f8d804191b0e6e9786d6cc5c646f72307a4f6137fff0ad5b7a35 files/digest-ssmtp-2.60.9 63
 MD5 15fdd106696fc8ccfb1b170da88df2ce files/digest-ssmtp-2.61 66
+RMD160 49fcc590b6529ce2666fb587182b3aec27fd18eb files/digest-ssmtp-2.61 66
+SHA256 1456c9ec143a6dfd4000abce402cc16de105b8879bd8e919d97905521764a642 files/digest-ssmtp-2.61 66
 MD5 15fdd106696fc8ccfb1b170da88df2ce files/digest-ssmtp-2.61-r1 66
+RMD160 49fcc590b6529ce2666fb587182b3aec27fd18eb files/digest-ssmtp-2.61-r1 66
+SHA256 1456c9ec143a6dfd4000abce402cc16de105b8879bd8e919d97905521764a642 files/digest-ssmtp-2.61-r1 66
 MD5 bcf2e5652cff099f6a6fd410a127c900 files/mailer.conf 349
+RMD160 1cad356faa6ee30e7bed9d70754487cac8f088e5 files/mailer.conf 349
+SHA256 7b04fc27f8ca41b586ae68cbeffb509c2408afcc592462b617fba78b5d7aa88a files/mailer.conf 349
 MD5 f466deeaec0316507961656f37af7000 files/ssmtp-2.60.4-md5.patch 1509
+RMD160 caa14a0e51aa19eac8611d1b92f9dce1f75180ce files/ssmtp-2.60.4-md5.patch 1509
+SHA256 0d229305afae580867470dc189b5fa25dc9aa18d7f4573471ada38ea4f47503a files/ssmtp-2.60.4-md5.patch 1509
 MD5 5208fda9912caf3afd94108e6276167e files/ssmtp-2.60.7-logfile.patch 1256
+RMD160 8bc7ddeedd448dff20ba2df52b8cdb2157e25aaa files/ssmtp-2.60.7-logfile.patch 1256
+SHA256 244f021698493f1e87180a6200d39d0c963ad1392e489ab183e9f5264ca574b1 files/ssmtp-2.60.7-logfile.patch 1256
 MD5 93225fbc5fd7b8e5500c7b1c85b63fdf files/starttls.diff 4277
+RMD160 74bfb96aeeb9f27881e5313ab02ae0bbbb04353b files/starttls.diff 4277
+SHA256 6d118d2574bf8e5b348f1bcc511fb401027a02595131faf433d205f8594e9c92 files/starttls.diff 4277
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 9de583fa64169fdefb15dcfc3f6ad294 ssmtp-2.60.7-r1.ebuild 2851
-MD5 095a09f1d05ecea6c3b97959f6b7a316 ssmtp-2.60.9.ebuild 3124
-MD5 26e4c1e43402c530310323e7a323c6d7 ssmtp-2.61-r1.ebuild 1757
-MD5 ad8b5d027b36ec3d5961759162c1bc04 ssmtp-2.61.ebuild 3124
+RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
+SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
+MD5 47980365b817fa32316d65edf07768a1 ssmtp-2.60.7-r1.ebuild 2858
+RMD160 564b7058a2a85f0f59db6bd588671893cdc04b67 ssmtp-2.60.7-r1.ebuild 2858
+SHA256 15eadaaadacde17cd7e4ca2c0c113bf9e3e718ceaee5b3de5a340cf512a3ee68 ssmtp-2.60.7-r1.ebuild 2858
+MD5 b60c6edf527e9a09a60c15d88481b74c ssmtp-2.60.9.ebuild 3121
+RMD160 c9d9e1c2b63840b97a5ab9356b1f0676e480277e ssmtp-2.60.9.ebuild 3121
+SHA256 4900cc2eef9e91643c624bd6e14edc691674261ce3034e73f7ce3a333ef713fd ssmtp-2.60.9.ebuild 3121
+MD5 5781f2a281685e923757995e25fb440b ssmtp-2.61-r1.ebuild 1753
+RMD160 12905f63282915cc4cbbbb93a716449c47596e6d ssmtp-2.61-r1.ebuild 1753
+SHA256 d185ace9934adf503123316f53b4f97c60e7c3da2430cc454c56d52ca328a464 ssmtp-2.61-r1.ebuild 1753
+MD5 d7c6026b892741efcb2b15f5f0946093 ssmtp-2.61.ebuild 3120
+RMD160 06c46b7be875921bc6dd217569b7a492ff4dd080 ssmtp-2.61.ebuild 3120
+SHA256 901f39ba934f237ee6407358a8eaddb0604e46823885461f9e6d582785f34109 ssmtp-2.61.ebuild 3120
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSLucgIKl8Uu19MoRAuMBAJ0U3TLnLHpXU2sQ/SKRoNEPadJLVwCfVmOK
-LGr8KMyqz3rraaCO4ZhWua4=
-=eEwS
+iD8DBQFD7BuS2+ySkm8kpY0RAlOwAJ9gxjF7nehAeknS6Voh9LdW65lryQCeMgkh
+tC3IWwnXubeX/wSjmgM1hRo=
+=PmKv
 -----END PGP SIGNATURE-----

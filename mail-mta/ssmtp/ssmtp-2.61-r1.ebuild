@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61-r1.ebuild,v 1.5 2005/10/06 22:56:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61-r1.ebuild,v 1.6 2006/02/10 04:50:11 vapier Exp $
 
 inherit eutils mailer
 
@@ -29,11 +29,11 @@ src_compile() {
 
 src_install() {
 	dodir /usr/bin /usr/sbin /usr/lib
-	dosbin ssmtp
-	chmod 755 ${D}/usr/sbin/ssmtp
+	dosbin ssmtp || die
+	fperms 755 /usr/sbin/ssmtp
 
 	doman ssmtp.8
-	dodoc COPYING INSTALL README TLS CHANGELOG_OLD
+	dodoc INSTALL README TLS CHANGELOG_OLD
 	newdoc ssmtp.lsm DESC
 
 	insinto /etc/ssmtp
