@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.0.0.ebuild,v 1.2 2006/02/10 21:24:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.0.0.ebuild,v 1.3 2006/02/10 22:22:41 genone Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc"
 
@@ -48,29 +48,6 @@ PROVIDE="virtual/sylpheed"
 
 PLUGIN_NAMES="acpi-notifier att-remover cachesaver etpan-privacy fetchinfo maildir mailmbox perl rssyl vcalendar"
 
-src_unpack() {
-	unpack ${A}
-
-	# Only install local manual/FAQ if USE=doc, and honor $LINGUAS:
-	local docdir lang languages
-	for docdir in faq manual ; do
-		cd "${S}/doc/${docdir}"
-		languages=""
-		# filter languages that are in $LINGUAS
-		for lang in ${LINGUAS} ; do
-			if [[ -d "${lang}" ]] ; then
-				languages="${languages} ${lang}"
-			fi
-		done
-		# Fix SUBDIRS (will be empty if -doc)
-		if use doc && [ -n "${languages}" ]; then
-			sed -i -e "/^SUBDIRS =/s:= .*:= ${languages}:" Makefile.in
-		elif ! use doc; then
-			sed -i -e "/^SUBDIRS =/s:= .*:= :" Makefile.in
-		fi
-	done
-}
-
 src_compile() {
 	local myconf
 
@@ -83,6 +60,7 @@ src_compile() {
 	myconf="${myconf} `use_enable spell aspell`"
 	myconf="${myconf} `use_enable ssl openssl`"
 	myconf="${myconf} `use_enable xface compface`"
+	myconf="${myconf} `use_enable doc manual`"
 
 	# Optional plugins
 	myconf="${myconf} `use_enable clamav clamav-plugin`"
