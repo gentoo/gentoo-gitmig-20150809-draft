@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-207.ebuild,v 1.12 2006/02/07 09:31:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-207.ebuild,v 1.13 2006/02/10 14:44:54 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,16 +45,6 @@ src_compile() {
 
 	filter-flags "-fstack-protector"
 
-	local myconf
-
-	if [ ${NEWAPPDEFAULTS} = 1 ] ; then
-		myconf="--enable-narrowproto"
-	else
-		myconf="--disable-narrowproto"
-	fi
-
-	myconf="${myconf} --with-app-defaults=${DEFAULTS_DIR}"
-
 	econf \
 		--libdir=/etc \
 		--with-x \
@@ -75,6 +65,8 @@ src_compile() {
 		--enable-tcap-query \
 		--enable-logging \
 		--enable-dabbrev \
+		--disable-narrowproto \
+		--with-app-defaults=${DEFAULTS_DIR} \
 		`use_enable toolbar` \
 		`use_enable truetype freetype` \
 		`use_enable unicode luit` `use_enable unicode mini-luit` \
