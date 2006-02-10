@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/qpage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/ChangeLog,v 1.3 2006/02/06 05:47:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/ChangeLog,v 1.4 2006/02/10 17:46:34 chutzpah Exp $
+
+  10 Feb 2006; Patrick McLean <chutzpah@gentoo.org> files/qpage:
+  Minor grammar fix.
 
   06 Feb 2006; Aron Griffis <agriffis@gentoo.org> qpage-3.3.ebuild:
   Mark 3.3 stable on alpha

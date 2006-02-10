@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/files/qpage,v 1.1 2006/01/27 20:29:01 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/files/qpage,v 1.2 2006/02/10 17:46:34 chutzpah Exp $
 
 depend() {
 	need net
@@ -9,7 +9,7 @@ depend() {
 
 checkconfig() {
 	if [ ! -e /etc/qpage/qpage.cf ] ; then
-		eerror "You need an /etc/qpage/qpage.cf file first."
+		eerror "You need a /etc/qpage/qpage.cf file first."
 		eerror "There is a sample file in /etc/qpage/."
 		return 1
 	fi
