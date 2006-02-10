@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-2.3.1.ebuild,v 1.1 2006/02/09 02:47:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-2.3.1.ebuild,v 1.2 2006/02/10 04:09:01 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,6 +20,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-endian.patch #122269
 	epatch "${FILESDIR}"/${PN}-1.9.0-dont-make-man.patch
 	use static && append-ldflags -static
 }

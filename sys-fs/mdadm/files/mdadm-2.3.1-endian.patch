@@ -1,0 +1,24 @@
+Screw Redhat !
+
+http://bugs.gentoo.org/122269
+
+--- mdadm.h
++++ mdadm.h
+@@ -72,16 +72,7 @@
+ #include	"bitmap.h"
+ 
+ #include <endian.h>
+-/* #include "asm/byteorder.h" Redhat don't like this so... */
+-#if __BYTE_ORDER == __LITTLE_ENDIAN
+-#  include <linux/byteorder/little_endian.h>
+-#elif __BYTE_ORDER == __BIG_ENDIAN
+-#  include <linux/byteorder/big_endian.h>
+-#elif __BYTE_ORDER == __PDP_ENDIAN
+-#  include <linux/byteorder/pdp_endian.h>
+-#else
+-#  error "unknown endianness."
+-#endif
++#include <asm/byteorder.h>
+ 
+ 
+ 
