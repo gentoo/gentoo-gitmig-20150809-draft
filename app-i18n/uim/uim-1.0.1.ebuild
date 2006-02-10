@@ -1,24 +1,32 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.7.1-r2.ebuild,v 1.8 2005/09/23 03:41:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.0.1.ebuild,v 1.1 2006/02/10 20:31:22 liquidx Exp $
 
-inherit eutils kde-functions flag-o-matic
+inherit eutils kde-functions flag-o-matic multilib elisp-common
 
-MY_P="${P/_/}"
+MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="a simple, secure and flexible input method library"
+DESCRIPTION="Simple, secure and flexible input method library"
 HOMEPAGE="http://uim.freedesktop.org/"
-SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz
-	http://prime.sourceforge.jp/src/prime-1.0.0.1.tar.gz"
+SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
-IUSE="gtk qt immqt immqt-bc nls X m17n-lib canna"
-#IUSE="${IUSE} scim"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+IUSE="gtk qt immqt immqt-bc nls X m17n-lib canna emacs"
 
-RDEPEND="X? ( virtual/x11 )
+RDEPEND="
+	X? ( || ( (
+	   	 	    x11-libs/libX11
+				x11-libs/libXft
+				x11-libs/libXt
+				x11-libs/libICE
+				x11-libs/libSM
+				x11-libs/libXext
+				x11-libs/libXrender
+			  )
+		   	  virtual/x11 ) )
 	gtk? ( >=x11-libs/gtk+-2 )
 	m17n-lib? ( dev-libs/m17n-lib )
 	!app-i18n/uim-svn
@@ -27,10 +35,15 @@ RDEPEND="X? ( virtual/x11 )
 	immqt? ( $(qt_min_version 3.3.4) )
 	immqt-bc? ( $(qt_min_version 3.3.4) )
 	qt? ( $(qt_min_version 3.3.4) )
+	emacs? ( virtual/emacs )
 	!<app-i18n/prime-0.9.4
 	!app-i18n/uim-qt
-	!app-i18n/uim-kdehelper"
+	!app-i18n/uim-kdehelper
+	!app-emacs/uim-el"
+
 DEPEND="${RDEPEND}
+	X? ( || ( ( x11-proto/xextproto x11-proto/xproto )
+	   	 	  virtual/x11 ) )
 	dev-lang/perl
 	dev-perl/XML-Parser
 	>=sys-apps/sed-4
@@ -39,9 +52,11 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	nls? ( sys-devel/gettext )"
 
-# An arch specific config directory is used on multilib systems
-has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
+pkg_setup() {
+	# An arch specific config directory is used on multilib systems
+	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
+}
 
 src_unpack() {
 	unpack ${A}
@@ -68,33 +83,25 @@ src_compile() {
 		$(use_with gtk gtk2)
 		$(use_with m17n-lib m17nlib)
 		$(use_with canna)
-		$(use_with qt)"
+		$(use_with qt)
+		$(use_enable emacs)"
 
 	autoreconf
 	libtoolize --copy --force
 
 	# --with-scim is not stable enough
-	econf ${myconf} --without-scim || die "econf failed"
+	# --with-libedit should be fixed in SVN trunk, but not well tested
+	econf ${myconf} --without-scim --without-libedit || die "econf failed"
 	emake -j1 || die "emake failed"
-
-	if has_version '>=app-i18n/prime-1.0' ; then
-		cd ${WORKDIR}/prime-1.0.0.1
-		econf || die
-	fi
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	if has_version '>=app-i18n/prime-1.0' ; then
-		cd ${WORKDIR}/prime-1.0.0.1
-		make DESTDIR="${D}" install-uim || die "make install-uim failed"
-		cd -
-	fi
-
 	dodoc AUTHORS ChangeLog INSTALL* NEWS README*
 	dodoc doc/{HELPER-CANDWIN,KEY,UIM-SH}
 	use X && dodoc doc/XIM-SERVER
+	use emacs && elisp-site-file-install ${FILESDIR}/50uim-el-gentoo.el
 }
 
 pkg_postinst() {
@@ -120,8 +127,10 @@ pkg_postinst() {
 	ewarn
 
 	use gtk && gtk-query-immodules-2.0 > ${ROOT}/${GTK2_CONFDIR}/gtk.immodules
+	use emacs && elisp-site-regen
 }
 
 pkg_postrm() {
 	use gtk && gtk-query-immodules-2.0 > ${ROOT}/${GTK2_CONFDIR}/gtk.immodules
+	use emacs && elisp-site-regen
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.5.0.1.ebuild,v 1.8 2005/10/01 20:29:37 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.5.0.1.ebuild,v 1.9 2006/02/10 20:31:22 liquidx Exp $
 
 inherit eutils kde-functions flag-o-matic multilib
 
@@ -17,7 +17,17 @@ KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE="gtk qt immqt immqt-bc nls X m17n-lib canna"
 #IUSE="${IUSE} scim"
 
-RDEPEND="X? ( virtual/x11 )
+RDEPEND="
+	X? ( || ( (
+	   	 	    x11-libs/libX11
+				x11-libs/libXft
+				x11-libs/libXt
+				x11-libs/libICE
+				x11-libs/libSM
+				x11-libs/libXext
+				x11-libs/libXrender
+			  )
+		   	  virtual/x11 ) )
 	gtk? ( >=x11-libs/gtk+-2 )
 	m17n-lib? ( dev-libs/m17n-lib )
 	!app-i18n/uim-svn
@@ -29,6 +39,7 @@ RDEPEND="X? ( virtual/x11 )
 	!<app-i18n/prime-0.9.4
 	!app-i18n/uim-qt
 	!app-i18n/uim-kdehelper"
+
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-perl/XML-Parser

@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/uim
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.130 2005/12/23 10:09:20 usata Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.131 2006/02/10 20:31:22 liquidx Exp $
+
+*uim-1.0.1 (10 Feb 2006)
+
+  10 Feb 2006; Alastair Tse <liquidx@gentoo.org> -uim-0.3.4.2.ebuild,
+  -uim-0.4.7.1-r2.ebuild, -uim-0.4.8.ebuild, -uim-0.4.9.1.ebuild,
+  uim-0.5.0.1.ebuild, -uim-1.0.0_beta.ebuild, uim-1.0.0.ebuild,
+  +uim-1.0.1.ebuild:
+  modular-x-ified, version bump.
 
 *uim-1.0.0 (23 Dec 2005)
 
