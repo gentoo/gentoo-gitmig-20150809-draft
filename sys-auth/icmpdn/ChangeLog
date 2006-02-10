@@ -1,0 +1,11 @@
+# ChangeLog for sys-auth/icmpdn
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/icmpdn/ChangeLog,v 1.1 2006/02/10 02:05:51 robbat2 Exp $
+
+*icmpdn-0.4 (10 Feb 2006)
+
+  10 Feb 2006; Robin H. Johnson <robbat2@gentoo.org> +files/conf.d-icmpdnd,
+  +files/init.d-icmpdnd, +metadata.xml, +icmpdn-0.4.ebuild:
+  Initial commit. Original ebuild submitted by Fredrik Tolf
+  <fredrik@dolda2000.com>, bug #93870.
+
