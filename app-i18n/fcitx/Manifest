@@ -1,12 +1,28 @@
-MD5 ad04737e84be569c73536a1fa62bf509 ChangeLog 1508
-MD5 b02327c198b29f06b50d8eb6d8ef4055 fcitx-1.8.5.ebuild 745
-MD5 bdafce110f784ddd343d4fbeccc372b7 fcitx-2.0.1.ebuild 1114
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 c0fcea2682aeec8c89082e71e96f7f7e fcitx-2.1.0_rc.ebuild 963
-MD5 78f44b1163f39d6d3ea5bf1f98729429 fcitx-3.0.4.ebuild 1456
-MD5 9471719fd01abee659ad75be832d0e25 fcitx-3.1.1.ebuild 1515
-MD5 9ae1f3d5714643599037127042dfb979 files/digest-fcitx-1.8.5 64
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 43bb999b971763af66e1e5c7b3c9d033 ChangeLog 1674
+RMD160 5956f19bdc88f254b68603699db44d94cbe1ea5d ChangeLog 1674
+SHA256 1b201fd27b571bbd0d4864477de3c194cd7d838658c45b39bd2c891666dad700 ChangeLog 1674
+MD5 2f29982183a51e77c6fc8705d388ef89 fcitx-2.0.1.ebuild 1222
+RMD160 8d8efe2146d0d4a3c57c2798d45ead1f0d9c0edc fcitx-2.0.1.ebuild 1222
+SHA256 e8fc4d9d5319f7c0d5d9f13e6a6ed1b26a74c3d99acde698252335692b46530b fcitx-2.0.1.ebuild 1222
+MD5 bd7a036d7ff90a7bbf1a5efd1c544904 fcitx-3.1.1.ebuild 1627
+RMD160 58d5fd982839fe6f34c7484834fd163e5c66ba87 fcitx-3.1.1.ebuild 1627
+SHA256 d9812458d59d4d55b1a9153c4e2ae72d03628c2dcfe724777009f7ada32b7385 fcitx-3.1.1.ebuild 1627
 MD5 61e196222f31b91faeaf1fc68de9ea32 files/digest-fcitx-2.0.1 65
-MD5 16b5b0d9f527b7d6f04528eba7567870 files/digest-fcitx-2.1.0_rc 67
-MD5 7739025f20db165f8adfd6fad4cf85ca files/digest-fcitx-3.0.4 65
+RMD160 7283cf551ce44c47dfc4a85797239acd26a1bb14 files/digest-fcitx-2.0.1 65
+SHA256 2f0d36ea1b053946cfa116ab69316d79f27eddcbc54a4967376a5eb83bc4c738 files/digest-fcitx-2.0.1 65
 MD5 c8c66289fb09275d75e70e7e03673510 files/digest-fcitx-3.1.1 65
+RMD160 1630027c068b7531fb3fbb313cb8c4d679d3db99 files/digest-fcitx-3.1.1 65
+SHA256 744f2a2e2ac5f0db647367ea8cd18bfe9189b9e0f313d9cb938a0f925eed083f files/digest-fcitx-3.1.1 65
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad metadata.xml 156
+SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7N4R9ZFPrqoILX8RAu5dAJ9D71drbOXTJhV7B1e1Tp9HRZafggCglDsO
+Zq96Eh81pklXsmfg7S3BrzQ=
+=xOzN
+-----END PGP SIGNATURE-----

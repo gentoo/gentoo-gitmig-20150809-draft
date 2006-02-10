@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-2.0.1.ebuild,v 1.5 2005/01/01 14:27:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-2.0.1.ebuild,v 1.6 2006/02/10 18:40:02 liquidx Exp $
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
@@ -11,8 +11,11 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="truetype"
 
-DEPEND="virtual/x11
-	truetype? ( virtual/xft )"
+RDEPEND="|| ( ( x11-libs/libX11 x11-libs/libXrender x11-libs/libXt )
+		     virtual/x11 )
+	truetype? ( || ( x11-libs/Xft virtual/xft ) )"
+
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
