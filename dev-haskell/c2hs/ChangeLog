@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/c2hs
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.9 2005/12/12 12:37:49 dcoutts Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.10 2006/02/10 12:29:22 dcoutts Exp $
+
+  10 Feb 2006; <duncan@gentoo.org> -c2hs-0.13.1.ebuild, -c2hs-0.14.3.ebuild:
+  Remove older patch-level releases.
 
 *c2hs-0.14.5 (12 Dec 2005)
 

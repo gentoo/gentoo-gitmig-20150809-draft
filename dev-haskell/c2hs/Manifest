@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c6c1a816114dfb32226e8102457225f5 ChangeLog 1336
 MD5 bea983380fcd72dd87dac6c435a137fd c2hs-0.13.4.ebuild 1174
 MD5 23df38a2cca09035dbd8dcbd53be145e c2hs-0.14.5.ebuild 779
@@ -6,3 +9,10 @@ MD5 dc62b4df81f84c2afb705bb38bcf0888 files/digest-c2hs-0.13.4 63
 MD5 b8eb463833401369bfd5cf5628d18eac files/digest-c2hs-0.14.5 63
 MD5 2d24b3a7b5d3d27084880a6faa45b326 files/setupfix.patch 750
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7Ic0/B0cxt+cq+wRAqVeAJ9YV/FpLrpbRiC4utf3QrAd6dzwIACfeqx8
+PV+AvYu6o9g6x97Zt1AZw1o=
+=/1YE
+-----END PGP SIGNATURE-----
