@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cantus
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.16 2006/02/07 17:56:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.17 2006/02/10 16:58:50 gustavoz Exp $
+
+  10 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  cantus-20060206.ebuild:
+  Keyworded ~sparc wrt #121863
 
   07 Feb 2006; <nixnut@gentoo.org> cantus-20060206.ebuild:
   Added ~ppc keyword. bug 121863
