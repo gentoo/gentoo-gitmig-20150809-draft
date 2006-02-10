@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-m17n
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.19 2005/04/21 18:59:44 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.20 2006/02/10 22:54:12 liquidx Exp $
+
+*scim-m17n-0.2.0 (10 Feb 2006)
+
+  10 Feb 2006; Alastair Tse <liquidx@gentoo.org> +scim-m17n-0.2.0.ebuild:
+  version bump
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> scim-m17n-0.1.3.ebuild:
   stable on amd64
