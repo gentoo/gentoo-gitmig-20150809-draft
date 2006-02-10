@@ -1,11 +1,37 @@
-MD5 7415547af81b5d998e21bc41f48436c9 unicon-3.0.4.ebuild 1394
-MD5 11b2f648814c4e5788301c59aee4e82a ChangeLog 1128
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 2d74d25c6e619d61a051b82b740449e7 unicon-3.0.4-r1.ebuild 1677
-MD5 e69f90a124ed00f574cc5ae111df1bd7 files/digest-unicon-3.0.4 66
-MD5 cc6f3b807859a0d79f19b3f649de45b5 files/unicon-3.0.4-debian.patch 59606
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5dcfc9b4183cdf78b14008990bd44439 ChangeLog 1628
+RMD160 7ae93fe3a3354b9d6d6cd7f1c351ba9423fe4c1c ChangeLog 1628
+SHA256 b497233754e287bceacac1f76607800b3d772038347b78a36462dfc78d084272 ChangeLog 1628
+MD5 4f6b3f0194bd588541fd9c4ab6872f72 files/digest-unicon-3.0.4-r1 804
+RMD160 1501c6ad4fb7da6b1f4613086a1221bb828ecbc1 files/digest-unicon-3.0.4-r1 804
+SHA256 e8b0ed91fd7bbced609012eed5753fb59a6545ddb5f03c4d39efe905bd22e96c files/digest-unicon-3.0.4-r1 804
+MD5 9ee5e230b33fdb99aa9fe58c1bdcae95 files/digest-unicon-3.0.4-r2 506
+RMD160 4f48edc9ca009beecb3e57be3be4e39df9a020f3 files/digest-unicon-3.0.4-r2 506
+SHA256 0f845d2a22b6b659bb8607923d07376e042074693e31e49c512bbc28d84e1272 files/digest-unicon-3.0.4-r2 506
 MD5 31b30bcac54f35d0a41f969075a136de files/unicon-3.0.4-gentoo.patch 302
-MD5 4d14b878b4a1c5c51a7f4633ec437f41 files/digest-unicon-3.0.4-r1 154
-MD5 3dcd10616e44c62c7ccaea54e78c65cb files/unicon.initd 715
-MD5 14faa87c2f7fde47b55f8c9c8801ca78 files/unicon-3.0.4-gcc34.patch 1781
+RMD160 c9f10be08d9ed233668c629454f7b05965935cc7 files/unicon-3.0.4-gentoo.patch 302
+SHA256 1dedee902f48daceaf6646a992ab39f165e0052d35f2c605cdbbd62e30b9e035 files/unicon-3.0.4-gentoo.patch 302
 MD5 d2c43e8f1979874bd7ede5933c2b1fa7 files/unicon.confd 104
+RMD160 4423f5f5d42329a550774bfb4005f7cfeb807b9b files/unicon.confd 104
+SHA256 b774443b2c6410d904a6b47ebef12c60236d699df80d664b3513adb77336c755 files/unicon.confd 104
+MD5 3dcd10616e44c62c7ccaea54e78c65cb files/unicon.initd 715
+RMD160 5c75f8290dc58c9900342da39549d8e5bcdec8b3 files/unicon.initd 715
+SHA256 e0795c0ccd9a7b520bb33d739b4303994d2b9f79bc2a50fd82a173a5fe2e5ece files/unicon.initd 715
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad metadata.xml 156
+SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215 metadata.xml 156
+MD5 5721b836be79df39228b4ba368fc641a unicon-3.0.4-r1.ebuild 1765
+RMD160 30547934347fb9511ccf90171ef2612be4effca8 unicon-3.0.4-r1.ebuild 1765
+SHA256 59fd599897884fb8288fbaa25366156ee643fb702eed7fc46ce277b6c6a61bf5 unicon-3.0.4-r1.ebuild 1765
+MD5 b53b18064948d4d4248a1daeda59faff unicon-3.0.4-r2.ebuild 1700
+RMD160 8053035d43fa370350a24b31e3ed0b4d4c862a56 unicon-3.0.4-r2.ebuild 1700
+SHA256 4fb339ea6ff7b730e7c557c630b65a61d35d50956a764e4d73702731783fec0e unicon-3.0.4-r2.ebuild 1700
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7Qg19ZFPrqoILX8RAhrUAJ9z9/Ve5R6Lgx+yefGO767I3asLlACbBsOI
+rziGmCVJvuVl4Y+Q1qTuPQg=
+=ZsfI
+-----END PGP SIGNATURE-----

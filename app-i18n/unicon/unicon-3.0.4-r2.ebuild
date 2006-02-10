@@ -1,23 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/unicon-3.0.4-r1.ebuild,v 1.2 2006/02/10 21:39:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/unicon-3.0.4-r2.ebuild,v 1.1 2006/02/10 21:39:52 liquidx Exp $
 
 inherit eutils
 
 # TODO: Figure out how to build the kernel-modules.
 
-VD_P="${P}-20010924"
-VD_PATCH="vd_unicon-userland-20031122vd.patch"
+DEB_PV="9.2"
 
 DESCRIPTION="CJK (Chinese/Japanese/Korean) console input, display system and input modules."
-HOMEPAGE="http://www.gnu.org/directory/UNICON.html
-	http://vdr.jp/d/unicon.html"
-SRC_URI="http://vdlinux.sourceforge.jp/dists/${VD_P}.tar.gz
-	http://vdlinux.sourceforge.jp/dists/${VD_PATCH}"
+HOMEPAGE="http://www.gnu.org/directory/UNICON.html"
+SRC_URI="mirror://debian/pool/main/u/unicon/${PN}_${PV}.orig.tar.gz
+	mirror://debian/pool/main/u/unicon/${PN}_${PV}-${DEB_PV}.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="virtual/linux-sources
@@ -28,11 +26,12 @@ RDEPEND="virtual/linux-sources
 DEPEND="${RDEPEND}
 	|| ( x11-proto/xproto virtual/x11 )"
 
+S=${WORKDIR}/${P}.orig
+
 src_unpack() {
-	unpack ${VD_P}.tar.gz
+	unpack ${A}
 	cd ${S}
-	epatch ${DISTDIR}/${VD_PATCH}
-	epatch ${FILESDIR}/${P}-gcc34.patch
+	epatch ${DISTDIR}/${PN}_${PV}-${DEB_PV}.diff.gz
 }
 
 src_compile() {

@@ -1,6 +1,19 @@
 # ChangeLog for app-i18n/unicon
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/ChangeLog,v 1.7 2005/04/23 12:07:29 usata Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/ChangeLog,v 1.8 2006/02/10 21:39:52 liquidx Exp $
+
+*unicon-3.0.4-r2 (10 Feb 2006)
+
+  10 Feb 2006; Alastair Tse <liquidx@gentoo.org>
+  -files/unicon-3.0.4-debian.patch, -unicon-3.0.4.ebuild,
+  unicon-3.0.4-r1.ebuild, +unicon-3.0.4-r2.ebuild:
+  immediate stable bump because both the stable and unstable version are
+  horribly broken and this is the only way to get any working version for
+  users. (#115114)
+
+  10 Feb 2006; Alastair Tse <liquidx@gentoo.org> unicon-3.0.4.ebuild,
+  unicon-3.0.4-r1.ebuild:
+  modular-x-ified, but still won't compile.
 
 *unicon-3.0.4-r1 (23 Apr 2005)
 
