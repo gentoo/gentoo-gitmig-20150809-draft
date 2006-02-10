@@ -7,9 +7,6 @@ SHA256 def4014dd97a893bf222ca28376dad3122ab3f434e28d4216ab573e3626a3789 ChangeLo
 MD5 016773a9d3c70b74b98b7fcb8a602a1b dovecot-0.99.14-r1.ebuild 5165
 RMD160 9079b9fc7893ecb777d02ec2b72bc098f090683f dovecot-0.99.14-r1.ebuild 5165
 SHA256 76aedc9947c4efce90840e5046611f1747a6e6544f948aa2ae77f36376760449 dovecot-0.99.14-r1.ebuild 5165
-MD5 cee6414e053a23a17aae383929c47e93 dovecot-1.0_alpha5.ebuild 3720
-RMD160 13e760a3a9beec52f19834389990177be54b8ae8 dovecot-1.0_alpha5.ebuild 3720
-SHA256 ae15ea9e20b1e2d9107519d16df1ce908bb9b2756fdcd9bcb325a87e18e2a089 dovecot-1.0_alpha5.ebuild 3720
 MD5 3095ed47c7635193b8627dd4647c5bc9 dovecot-1.0_beta2.ebuild 3719
 RMD160 3f1b882989fa97ac6422dff3211ae5889276e2b0 dovecot-1.0_beta2.ebuild 3719
 SHA256 2aff469c39319fb4af286fc921b306a2aa917a4e175596f3fe0c53f9cb88b004 dovecot-1.0_beta2.ebuild 3719
@@ -19,9 +16,6 @@ SHA256 9cd912025a6d1b97a6a15fc3da6547ac174d3bce963db655447107afd142bb9f dovecot-
 MD5 2a50200054849ca5e0173cb709ef649d files/digest-dovecot-0.99.14-r1 67
 RMD160 bef49c59ecd06cab21f39c1d82d2c7699952dc7e files/digest-dovecot-0.99.14-r1 67
 SHA256 e5526bcfe07df3f84790bc082da36c32c5957e560df53ed63fd2a8cce940dbe6 files/digest-dovecot-0.99.14-r1 67
-MD5 649b89c2ee32019d3a25820fbe158f99 files/digest-dovecot-1.0_alpha5 71
-RMD160 126e72108ca5f1d65033cacc143f0da7fa253857 files/digest-dovecot-1.0_alpha5 71
-SHA256 19e5fe15303f514819e71bd6b7bfb0e1c082520920c3ecb7f570422e1b2998e1 files/digest-dovecot-1.0_alpha5 71
 MD5 a97ef7bb1cbec8304adb29ac531f5cea files/digest-dovecot-1.0_beta2 70
 RMD160 1bbcd3318d3cbebd25f80aca314ffa0965fcc862 files/digest-dovecot-1.0_beta2 70
 SHA256 211bea2990f98a7d9df0a14a8eddb150a74d9d390eda662c718274e235879db1 files/digest-dovecot-1.0_beta2 70
@@ -37,7 +31,7 @@ SHA256 b745d82a37a83bc996e64dc2579616898317e0192e05047ec68b93a59ffdaa95 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD7I+iEbVyYKaZ/NERAtapAJ9x0Hn6PBizXmuOlkQc0Hnd6YfLTwCfVlE5
-S3+IuTnD8+zqmt7RCvQa7O0=
-=Vgfh
+iD8DBQFD7JAMEbVyYKaZ/NERAhkDAJ9sQbkDduu3c0xjTpMbW9oQOs8j4QCfb5tx
+wYQUbJj9TYqsvFVWWHl/b90=
+=1Lm0
 -----END PGP SIGNATURE-----
