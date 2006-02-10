@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r2.ebuild,v 1.16 2006/02/10 17:51:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r2.ebuild,v 1.17 2006/02/10 18:03:53 liquidx Exp $
 
 inherit eutils
 
@@ -25,8 +25,7 @@ RDEPEND=">=sys-libs/slang-1.4.5
 	X? ( truetype? ( || ( x11-libs/libXft virtual/xft )
    	 				>=media-libs/freetype-2.0 ) )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
-	X? ( || ( x11-proto/xproto virtual/x11 ) )"
+	>=sys-apps/sed-4"
 
 PROVIDE="virtual/editor"
 
