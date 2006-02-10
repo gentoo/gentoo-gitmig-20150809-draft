@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.0.0.ebuild,v 1.1 2006/02/10 18:06:18 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.0.0.ebuild,v 1.2 2006/02/10 21:24:36 genone Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc"
 
@@ -45,6 +45,8 @@ RDEPEND="${COMMONDEPEND}
 	x11-misc/shared-mime-info"
 
 PROVIDE="virtual/sylpheed"
+
+PLUGIN_NAMES="acpi-notifier att-remover cachesaver etpan-privacy fetchinfo maildir mailmbox perl rssyl vcalendar"
 
 src_unpack() {
 	unpack ${A}
@@ -147,9 +149,19 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn
-	ewarn "You have to re-emerge or update all external plugins"
-	ewarn
-	epause 5
-	ebeep 3
+	UPDATE_PLUGINS=""
+	for x in ${PLUGIN_NAMES}; do
+		has_version mail-client/sylpheed-claws-$x && UPDATE_PLUGINS="${UPDATE_PLUGINS} $x"
+	done
+	if [ -n "${UPDATE_PLUGINS}" ]; then
+		ewarn
+		ewarn "You have to re-emerge or update the following plugins:"
+		ewarn
+		for x in ${UPDATE_PLUGINS}; do
+			ewarn "    mail-client/sylpheed-claws-$x"
+		done
+		ewarn
+		epause 5
+		ebeep 3
+	fi
 }
