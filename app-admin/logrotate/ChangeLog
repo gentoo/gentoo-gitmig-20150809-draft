@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.54 2006/02/09 13:33:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.55 2006/02/10 16:14:41 dang Exp $
+
+  10 Feb 2006; <dang@gentoo.org> -logrotate-3.7.1-r1.ebuild:
+  Remove -r1 now that -r2 is fully stable
 
   09 Feb 2006; Joshua Kinard <kumba@gentoo.org> logrotate-3.7.1-r2.ebuild:
   Marked stable on mips for Bug #119466.
