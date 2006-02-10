@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-207.ebuild,v 1.13 2006/02/10 14:44:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-207.ebuild,v 1.14 2006/02/10 14:50:35 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -71,7 +71,7 @@ src_compile() {
 		`use_enable truetype freetype` \
 		`use_enable unicode luit` `use_enable unicode mini-luit` \
 		`use_with Xaw3d` \
-		${myconf} || die
+		|| die
 
 	emake || die "failed to compile xterm"
 
