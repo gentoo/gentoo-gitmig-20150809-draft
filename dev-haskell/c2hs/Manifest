@@ -1,22 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 23df38a2cca09035dbd8dcbd53be145e c2hs-0.14.5.ebuild 779
+MD5 c6c1a816114dfb32226e8102457225f5 ChangeLog 1336
 MD5 bea983380fcd72dd87dac6c435a137fd c2hs-0.13.4.ebuild 1174
-MD5 8e59b2e9d91b7f046ac0e83c5f6e977b c2hs-0.13.1.ebuild 1248
-MD5 1521a7cb086b8ca59df5ecf85b5e082a ChangeLog 1220
-MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
-MD5 285e563794d1e1ebaaea6f0d29a5c67f c2hs-0.14.3.ebuild 816
-MD5 2d24b3a7b5d3d27084880a6faa45b326 files/setupfix.patch 750
+MD5 23df38a2cca09035dbd8dcbd53be145e c2hs-0.14.5.ebuild 779
 MD5 0df0f5912ce03cc5ed32d186ecb1e070 files/cabalfix.patch 471
-MD5 553c80abca37c62b17c9e593c4ffae4e files/digest-c2hs-0.13.1 63
 MD5 dc62b4df81f84c2afb705bb38bcf0888 files/digest-c2hs-0.13.4 63
-MD5 c43dd88a64b4d7717ef0fa3969851d23 files/digest-c2hs-0.14.3 63
 MD5 b8eb463833401369bfd5cf5628d18eac files/digest-c2hs-0.14.5 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDnW9f/B0cxt+cq+wRAhXHAJ9XPycsv58mRv7yXSEk6t3qJ0B3/wCglc+I
-o73RILVmpuYffFYu4Oe2yJI=
-=rond
------END PGP SIGNATURE-----
+MD5 2d24b3a7b5d3d27084880a6faa45b326 files/setupfix.patch 750
+MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224

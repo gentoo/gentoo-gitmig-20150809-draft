@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/alex
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.15 2005/10/04 15:11:06 dcoutts Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.16 2006/02/10 12:26:32 dcoutts Exp $
+
+  10 Feb 2006; <duncan@gentoo.org> -alex-2.0.ebuild:
+  Remove 2.0 since 2.0.1-r1 is available.
 
   04 Oct 2005; <duncan@gentoo.org> alex-2.0.1-r1.ebuild:
   Added ~sparc to KEYWORDS.
