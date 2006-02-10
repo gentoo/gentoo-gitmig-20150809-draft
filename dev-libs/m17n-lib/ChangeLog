@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/m17n-lib
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.22 2005/04/08 16:15:06 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.23 2006/02/10 22:43:01 liquidx Exp $
+
+  10 Feb 2006; Alastair Tse <liquidx@gentoo.org> -m17n-lib-1.0.2-r1.ebuild,
+  -m17n-lib-1.1.0.ebuild, m17n-lib-1.2.0.ebuild:
+  modular-x-ified. cleanup old ebuilds.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> m17n-lib-1.2.0.ebuild:
   Stable on ppc64
