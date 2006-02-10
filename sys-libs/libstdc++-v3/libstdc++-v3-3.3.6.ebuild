@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.6 2006/01/22 22:56:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.7 2006/02/10 02:00:02 herbs Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -292,5 +292,5 @@ src_install() {
 	fi
 
 	mkdir -p ${D}/etc/env.d/
-	echo "LDPATH=\"${LOC}/lib/libstdc++-v3/\"" >> ${D}/etc/env.d/99libstdc++
+	echo "LDPATH=\"${LOC}/$(get_libdir)/libstdc++-v3/\"" >> ${D}/etc/env.d/99libstdc++
 }
