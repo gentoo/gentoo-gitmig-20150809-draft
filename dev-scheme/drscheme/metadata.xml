@@ -4,11 +4,10 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>karltk@gentoo.org</email>
-  <description>Temporary maintainer -- replacements sought</description>
+  <email>chutzpah@gentoo.org</email>
+  <name>Patrick McLean</name>
 </maintainer>
-
-<longdescription>
+<longdescription lang="en">
 DrScheme is an interactive, integrated, graphical programming environment for 
 the Scheme, MzScheme, and MrEd programming languages.
 
@@ -17,5 +16,4 @@ for multiple language levels, an algebraic stepper, objects, modules, a GUI
 library, TCP/IP, and much more. It includes an extensive, hyper-linked help 
 system called Help Desk.
 </longdescription>
-
 </pkgmetadata>
