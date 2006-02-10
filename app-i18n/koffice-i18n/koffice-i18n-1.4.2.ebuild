@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.4.2.ebuild,v 1.7 2006/02/05 21:29:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.4.2.ebuild,v 1.8 2006/02/10 10:04:44 flameeyes Exp $
 
 inherit kde
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 
-RDEPEND="|| ( ~app-office/koffice-libs-${PV} ~app-office/koffice-${PV} )
+RDEPEND="|| ( >=app-office/koffice-libs-${PV} >=app-office/koffice-${PV} )
 	kde-base/kde-i18n"
 
 need-kde 3.3
