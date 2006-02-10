@@ -1,4 +1,4 @@
-MD5 87e443da2f266c5b70cb9fdb680d33dd ChangeLog 12652
+MD5 38502b70282c32a37d45ad36fbacd6c7 ChangeLog 12763
 MD5 3cd4c6f13633662c52c9302649773226 files/digest-gnutls-1.2.10 67
 MD5 3cd4c6f13633662c52c9302649773226 files/digest-gnutls-1.2.10-r1 67
 MD5 5deb0ddb33596df840a663273ddf9c2b files/digest-gnutls-1.2.3 66
@@ -6,7 +6,7 @@ MD5 0a6c7f63908a38a6e28d34a68accee2a files/digest-gnutls-1.2.4 66
 MD5 077c38845fca7036f125850ae6bb0ab3 files/digest-gnutls-1.2.9 66
 MD5 077c38845fca7036f125850ae6bb0ab3 files/digest-gnutls-1.2.9-r1 66
 MD5 3acc217919ce1c8fb1e969cd387ea2e4 gnutls-1.2.10-r1.ebuild 1966
-MD5 45e3e1eb714c4fa343d815817c12e8e4 gnutls-1.2.10.ebuild 1963
+MD5 330fe7512d532c0a63efa09f105fd550 gnutls-1.2.10.ebuild 1961
 MD5 9b1a9451a2be1364834e2b072517545e gnutls-1.2.3.ebuild 2309
 MD5 653b73035f0d2fdd30ea88c50bc9b73c gnutls-1.2.4.ebuild 2572
 MD5 7c95efe71c40bf0f5477c93f540639f8 gnutls-1.2.9-r1.ebuild 1966
