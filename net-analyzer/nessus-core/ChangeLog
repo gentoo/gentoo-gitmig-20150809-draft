@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.101 2006/02/07 21:31:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.102 2006/02/10 06:45:32 tove Exp $
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> nessus-core-2.2.6.ebuild:
   stable on amd64
@@ -98,7 +98,7 @@
   +nessus-core-2.2.5.ebuild:
   Version bump for bug 100024. Thanks to ChazeFroy <chazefroy@gmail.com>.
 
-  02 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   nessus-core-2.2.4-r1.ebuild:
   Stable on alpha.
 
@@ -118,7 +118,7 @@
   10 Jun 2005; Jason Wever <weeve@gentoo.org> nessus-core-2.2.4-r1.ebuild:
   Marked stable on SPARC wrt bug #94827.
 
-  09 Jun 2005; Olivier CrÃªte <tester@gentoo.org>
+  09 Jun 2005; Olivier Crête <tester@gentoo.org>
   nessus-core-2.2.4-r1.ebuild:
   Marking stable on amd64
 
@@ -136,7 +136,7 @@
   02 Jun 2005; Joseph Jezak <josejx@gentoo.org> nessus-core-2.2.4.ebuild:
   Marked ppc stable.
 
-  22 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  22 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   nessus-core-2.2.4.ebuild:
   Stable on alpha.
 
@@ -169,7 +169,7 @@
   Init script fix, bug 86664. Thanks to Eric Brown <bigwhitecow@hotmail.com> and
   Marco Morales <soulse@gmail.com>.
 
-  31 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  31 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   nessus-core-2.2.0.ebuild:
   Stable on alpha.
 
@@ -220,7 +220,7 @@
 
   12 Jan 2005; Daniel Black <dragonheart@gentoo.org>
   +nessus-core-2.3.0.ebuild:
-  Version bump as per bug #73780. Thanks to Holger HoffstÃ¤tte <holger@wizards.de>
+  Version bump as per bug #73780. Thanks to Holger Hoffstätte <holger@wizards.de>
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -245,7 +245,7 @@
   28 Aug 2004; Eldad Zack <eldad@gentoo.org> nessus-core-2.1.1.ebuild:
   x86 stable
 
-  13 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> nessus-core-2.0.12.ebuild:
+  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> nessus-core-2.0.12.ebuild:
   Stable on alpha, bug 58014.
 
   12 Aug 2004; Eldad Zack <eldad@gentoo.org> nessus-core-2.0.10a.ebuild:
@@ -298,7 +298,7 @@
   nessus-core-2.0.8a.ebuild, nessus-core-2.0.9.ebuild:
   Fix use invocation and don't run epatch in a subshell because then it can't die
 
-  05 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   nessus-core-2.0.10a.ebuild:
   Stable on alpha.
 

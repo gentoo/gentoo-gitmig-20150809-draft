@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.62 2006/02/06 21:19:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.63 2006/02/10 06:53:21 tove Exp $
 
   06 Feb 2006; Aron Griffis <agriffis@gentoo.org> tcpdump-3.9.3.ebuild:
   Mark 3.9.3 stable on alpha
@@ -85,7 +85,7 @@
   Added patch to make gcc-4 a happy camper; also updated to use
   toolchain-funcs.eclass rather than gcc.eclass.
 
-  07 May 2005; Bryan Ăstergaard <kloeri@gentoo.org>
+  07 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   tcpdump-3.8.3-r2.ebuild:
   Stable on alpha + ia64, bug 90541.
 
@@ -221,15 +221,16 @@
 
   9 May 2002; Spider <spider@gentoo.org> tcpdump-3.6.2-r1.ebuild :
   Yet another security fix. from connectiva this time
- 
+
 *tcpdump-3.6.2 (9 May 2002)
+
   9 May 2002; Spider <spider@gentoo.org> tcpdump-3.6.2.ebuild :
   Updated version on tcpdump.org, fixes security vulnerability.
-  
+
 *tcpdump-3.6.1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

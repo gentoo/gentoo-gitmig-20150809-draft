@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.89 2006/02/06 21:16:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.90 2006/02/10 06:50:51 tove Exp $
 
   06 Feb 2006; Aron Griffis <agriffis@gentoo.org> rrdtool-1.2.11-r2.ebuild:
   Mark 1.2.11-r2 stable on alpha
@@ -66,7 +66,7 @@
   26 Jul 2005; Benjamin Smee <strerror@gentoo.org> +rrdtool-1.2.11.ebuild:
   Version bump.
 
-  02 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   rrdtool-1.2.6-r1.ebuild:
   Stable on alpha.
 
@@ -96,7 +96,7 @@
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> rrdtool-1.2.6.ebuild:
   Stable on ppc.
 
-  12 Jun 2005; Bryan Ãstergaard <kloeri@gentoo.org> rrdtool-1.2.6.ebuild:
+  12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> rrdtool-1.2.6.ebuild:
   Stable on alpha.
 
   12 Jun 2005; Jason Wever <weeve@gentoo.org> rrdtool-1.2.6.ebuild:
@@ -177,7 +177,7 @@
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> rrdtool-1.0.49.ebuild:
   Stable on amd64.
 
-  01 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> rrdtool-1.0.49.ebuild:
+  01 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> rrdtool-1.0.49.ebuild:
   Stable on alpha.
 
   27 Oct 2004; Jason Wever <weeve@gentoo.org> rrdtool-1.0.49.ebuild:
@@ -197,7 +197,7 @@
   14 Sep 2004; Guy Martin <gmsoft@gentoo.org> rrdtool-1.0.47.ebuild:
   Stable on hppa.
 
-  22 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> rrdtool-1.0.47.ebuild:
+  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> rrdtool-1.0.47.ebuild:
   Stable on alpha.
 
   20 Aug 2004; Jason Wever <weeve@gentoo.org> rrdtool-1.0.47.ebuild:
@@ -371,10 +371,10 @@
   dep) which are done through the perl-module eclass now.
 
 *rrdtool-1.0.35-r2 (2 Jun 2002)
-	2 Jun 2002; Ben Lutgens <lamer@gentoo.org> rrdtool-1.0.35-r1
-	
-	Changed the install location from /opt/rrdtool to /usr/share/rrdtool
-	and installed the manpages in /usr/share/man/man1
+  2 Jun 2002; Ben Lutgens <lamer@gentoo.org> rrdtool-1.0.35-r1 :
+
+  Changed the install location from /opt/rrdtool to /usr/share/rrdtool
+  and installed the manpages in /usr/share/man/man1
 
 *rrdtool-1.0.35-r1 (15 Apr 2002)
 
@@ -390,11 +390,11 @@
 
   Added new version of rddtool 1.0.35 and removed the old once that had
   the zlib bug
-  
+
 *rrdtool-1.0.33 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.76 2006/02/07 20:46:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.77 2006/02/10 06:46:52 tove Exp $
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org>
   nessus-libraries-2.2.6.ebuild:
@@ -74,7 +74,7 @@
   -nessus-libraries-2.3.0.ebuild:
   Remove old ebuilds.
 
-  09 Jun 2005; Olivier CrÃªte <tester@gentoo.org>
+  09 Jun 2005; Olivier Crête <tester@gentoo.org>
   nessus-libraries-2.2.4.ebuild:
   Marking stable on amd64
 
@@ -82,7 +82,7 @@
   nessus-libraries-2.2.4.ebuild:
   Marked ppc stable.
 
-  22 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  22 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   nessus-libraries-2.2.4.ebuild:
   Stable on alpha.
 
@@ -113,7 +113,7 @@
   nessus-libraries-2.2.0.ebuild:
   Stable on ppc.
 
-  31 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  31 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   nessus-libraries-2.2.0.ebuild:
   Stable on alpha.
 
@@ -154,7 +154,7 @@
 
   12 Jan 2005; Daniel Black <dragonheart@gentoo.org>
   +nessus-libraries-2.3.0.ebuild:
-  Version bump as per bug #73780. Thanks to Holger HoffstÃ¤tte <holger@wizards.de>
+  Version bump as per bug #73780. Thanks to Holger Hoffstätte <holger@wizards.de>
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -176,7 +176,7 @@
   Changed optional ssl support to mandatory, since without it libnasl will not
   compile.
 
-  13 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
   nessus-libraries-2.0.12.ebuild:
   Stable on alpha, bug 58014.
 
@@ -233,7 +233,7 @@
   nessus-libraries-2.0.10a.ebuild:
   marked x86 stable
 
-  05 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   nessus-libraries-2.0.10a.ebuild:
   Stable on alpha.
 

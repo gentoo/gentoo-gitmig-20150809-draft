@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.73 2006/02/07 20:46:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.74 2006/02/10 06:42:47 tove Exp $
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> libnasl-2.2.6.ebuild:
   stable on amd64
@@ -56,13 +56,13 @@
   -libnasl-2.2.0.ebuild, -libnasl-2.3.0.ebuild:
   Remove old ebuilds.
 
-  09 Jun 2005; Olivier CrÃªte <tester@gentoo.org> libnasl-2.2.4.ebuild:
+  09 Jun 2005; Olivier Crête <tester@gentoo.org> libnasl-2.2.4.ebuild:
   Marking stable on amd64
 
   02 Jun 2005; Joseph Jezak <josejx@gentoo.org> libnasl-2.2.4.ebuild:
   Marked ppc stable.
 
-  22 May 2005; Bryan Ãstergaard <kloeri@gentoo.org> libnasl-2.2.4.ebuild:
+  22 May 2005; Bryan Østergaard <kloeri@gentoo.org> libnasl-2.2.4.ebuild:
   Stable on alpha.
 
 *libnasl-2.3.1 (15 May 2005)
@@ -87,7 +87,7 @@
   08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> libnasl-2.2.0.ebuild:
   Stable on ppc.
 
-  31 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> libnasl-2.2.0.ebuild:
+  31 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> libnasl-2.2.0.ebuild:
   Stable on alpha.
 
   27 Mar 2005; Jason Wever <weeve@gentoo.org> libnasl-2.2.0.ebuild:
@@ -134,7 +134,7 @@
 *libnasl-2.3.0 (12 Jan 2005)
 
   12 Jan 2005; Daniel Black <dragonheart@gentoo.org> +libnasl-2.3.0.ebuild:
-  Version bump as per bug #73780. Thanks to Holger HoffstÃ¤tte <holger@wizards.de>
+  Version bump as per bug #73780. Thanks to Holger Hoffstätte <holger@wizards.de>
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -151,7 +151,7 @@
   28 Aug 2004; Eldad Zack <eldad@gentoo.org> libnasl-2.1.1.ebuild:
   x86 stable
 
-  13 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> libnasl-2.0.12.ebuild:
+  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> libnasl-2.0.12.ebuild:
   Stable on alpha, bug 58014.
 
   12 Aug 2004; Eldad Zack <eldad@gentoo.org> libnasl-2.0.10a.ebuild:
@@ -207,7 +207,7 @@
   libnasl-2.0.9.ebuild:
   Added metadata, missing IUSEs
 
-  05 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> libnasl-2.0.10a.ebuild:
+  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> libnasl-2.0.10a.ebuild:
   Stable on alpha.
 
 *libnasl-2.0.10a (09 Feb 2004)

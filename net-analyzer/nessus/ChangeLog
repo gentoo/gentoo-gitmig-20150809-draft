@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.76 2006/02/07 21:31:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.77 2006/02/10 06:44:07 tove Exp $
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> nessus-2.2.6.ebuild:
   stable on amd64
@@ -54,13 +54,13 @@
   -nessus-2.2.0.ebuild, -nessus-2.3.0.ebuild:
   Remove old ebuilds.
 
-  09 Jun 2005; Olivier CrÃªte <tester@gentoo.org> ChangeLog:
+  09 Jun 2005; Olivier Crête <tester@gentoo.org> ChangeLog:
   Marking stable on amd64
 
   02 Jun 2005; Joseph Jezak <josejx@gentoo.org> nessus-2.2.4.ebuild:
   Marked ppc stable.
 
-  22 May 2005; Bryan Ãstergaard <kloeri@gentoo.org> nessus-2.2.4.ebuild:
+  22 May 2005; Bryan Østergaard <kloeri@gentoo.org> nessus-2.2.4.ebuild:
   Stable on alpha.
 
 *nessus-2.3.1 (18 May 2005)
@@ -78,7 +78,7 @@
   -nessus-2.2.3.ebuild, nessus-2.2.4.ebuild:
   Removing ebuild clutter, marking 2.2.4 x86 stable.
 
-  31 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> nessus-2.2.0.ebuild:
+  31 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> nessus-2.2.0.ebuild:
   Stable on alpha.
 
   27 Mar 2005; Jason Wever <weeve@gentoo.org> nessus-2.2.0.ebuild:
@@ -114,7 +114,7 @@
 *nessus-2.3.0 (12 Jan 2005)
 
   12 Jan 2005; Daniel Black <dragonheart@gentoo.org> +nessus-2.3.0.ebuild:
-  Version bump as per bug #73780. Thanks to Holger HoffstÃ¤tte <holger@wizards.de>
+  Version bump as per bug #73780. Thanks to Holger Hoffstätte <holger@wizards.de>
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -131,7 +131,7 @@
   28 Aug 2004; Eldad Zack <eldad@gentoo.org> nessus-2.1.1.ebuild:
   x86 stable
 
-  13 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> nessus-2.0.12.ebuild:
+  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> nessus-2.0.12.ebuild:
   Stable on alpha, bug 58014.
 
   12 Aug 2004; Eldad Zack <eldad@gentoo.org> -nessus-2.0.11.ebuild,
@@ -187,7 +187,7 @@
   nessus-2.0.8a.ebuild, nessus-2.0.9.ebuild:
   Added metadata, added missing IUSE
 
-  05 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> nessus-2.0.10a.ebuild:
+  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> nessus-2.0.10a.ebuild:
   Stable on alpha.
 
 *nessus-2.0.10a (09 Feb 2004)
