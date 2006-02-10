@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0330c3f22e8c7dd22f6f8d88e009fcec ampache-3.3.1.6.ebuild 778
-MD5 3a84570dae4665d062680c4ba21b58a6 ChangeLog 2225
+MD5 42b86039a3af0b4efee738f83f95e91e ampache-3.3.1.7.ebuild 778
+MD5 2a4587cd36994bd51c108e0282c5d0cd ChangeLog 2470
 MD5 46ab575d4d218ddb1fe7500850065f03 metadata.xml 257
-MD5 bca60999fc1787d45fa77e621731126c files/ampache-3.3.1.6-webinstall.txt 1376
-MD5 f61c1f4f21c5aaa87fc9508811927191 files/digest-ampache-3.3.1.6 68
+MD5 bca60999fc1787d45fa77e621731126c files/ampache-3.3.1.7-webinstall.txt 1376
+MD5 b9919cb180aaaf5a89e45d3e77d01b60 files/digest-ampache-3.3.1.7 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDjCDkiP+LossGzjARAidNAJ4juNbYHscMJ7iBH4Q7TCYPi7dAtACgvwkz
-GkfubEY9ecbGQPJiyI1su+c=
-=gnfw
+iD8DBQFD7AO7iP+LossGzjARAkMxAKDU6C9nC1/vwJkGzPSws62iO+SnMwCfVJIT
+9T01qlgkdAvocq5Qn00/Uuw=
+=LIEb
 -----END PGP SIGNATURE-----
