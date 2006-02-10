@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b0e3d65fdfdb8e500235f0145a0711e6 ChangeLog 769
 RMD160 760d32e8961af37187abd010f5bd84e0576ccda4 ChangeLog 769
 SHA256 3b984cf8e588de198a86eccf37ae08f0d9beaaf15c4230212eaa3846edb6a739 ChangeLog 769
@@ -13,3 +16,10 @@ SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata
 MD5 ca9166aec1413f7d140e384c864c0589 sylpheed-claws-acpi-notifier-0.8.ebuild 1468
 RMD160 37b622cf9dd131586e0517382d38ffc4c177bf63 sylpheed-claws-acpi-notifier-0.8.ebuild 1468
 SHA256 7e0e79f10a3ccfde2ad5d94b3d15853172aab53303b74d1f4d2dfcee6182bbde sylpheed-claws-acpi-notifier-0.8.ebuild 1468
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7Nca6J2i8a8J4okRAg0pAKCPRKlhws2UwuQ8aYUwd/ORgV3WYQCgpyhI
+Xz8YEUhmmfRkvH2M4pN2fZE=
+=oEGe
+-----END PGP SIGNATURE-----

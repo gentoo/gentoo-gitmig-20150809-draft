@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c33f7ac9fac794f31daa78aa6d9d4b9a ChangeLog 2002
 RMD160 f0da453a096bdef59d91a4ad3b2b81c0889a7b8b ChangeLog 2002
 SHA256 059dc43dd7c0f1aa278567e7896e497d7d3280bc1de425a55b7e8c6d99daa995 ChangeLog 2002
@@ -16,3 +19,10 @@ SHA256 ede2fbebdd50078dec740899987f917ca55494be7f8d1cdb75c3b598a617609f sylpheed
 MD5 db4a2da6acf2995b5a4318d1f55e8202 sylpheed-claws-mailmbox-1.10.ebuild 880
 RMD160 210c14344cdceca977a39c77b135315c00164ff7 sylpheed-claws-mailmbox-1.10.ebuild 880
 SHA256 584eebdd1c32650a2f6a53ac05c1fb72931f490a60cc1d4bd5f3080186a42391 sylpheed-claws-mailmbox-1.10.ebuild 880
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7Noo6J2i8a8J4okRAm/4AKCRpVyv72VV8SDhh34a9H4WT/uoSwCffZkd
+xcWF4mgaMWx7a+c3XzK0dqI=
+=A34W
+-----END PGP SIGNATURE-----
