@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20050505.ebuild,v 1.3 2005/12/17 16:16:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20050505.ebuild,v 1.4 2006/02/10 20:33:54 liquidx Exp $
 
 inherit flag-o-matic kde-functions multilib subversion
 
@@ -18,20 +18,33 @@ LICENSE="|| ( GPL-2 BSD )"
 KEYWORDS="~x86"
 SLOT="0"
 
-DEPEND="${RDEPEND}
-	dev-perl/XML-Parser
-	nls? ( sys-devel/gettext )"
 RDEPEND="!app-i18n/uim
 	!app-i18n/uim-fep
 	!app-i18n/uim-kdehelper
 	!app-i18n/uim-qt
-	X? ( virtual/x11 )
+	X? ( || ( (
+	   	 	    x11-libs/libX11
+				x11-libs/libXft
+				x11-libs/libXt
+				x11-libs/libICE
+				x11-libs/libSM
+				x11-libs/libXext
+				x11-libs/libXrender
+			  )
+		   	  virtual/x11 ) )
 	canna? ( app-i18n/canna )
 	eb? ( dev-libs/eb )
 	gtk? ( >=x11-libs/gtk+-2 )
 	immqt? ( $(qt_min_version 3.3.4) )
 	qt? ( $(qt_min_version 3.3.4) )
 	m17n-lib? ( dev-libs/m17n-lib )"
+
+DEPEND="${RDEPEND}
+	X? ( || ( ( x11-proto/xextproto x11-proto/xproto )
+	   	 	  virtual/x11 ) )
+	dev-perl/XML-Parser
+	nls? ( sys-devel/gettext )"
+
 
 pkg_setup() {
 
@@ -132,4 +145,4 @@ pkg_postrm() {
 
 }
 
-# $Id: uim-svn-20050505.ebuild,v 1.3 2005/12/17 16:16:42 usata Exp $
+# $Id: uim-svn-20050505.ebuild,v 1.4 2006/02/10 20:33:54 liquidx Exp $

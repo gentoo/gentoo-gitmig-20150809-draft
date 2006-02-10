@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim-svn
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.18 2005/12/17 16:16:42 usata Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.19 2006/02/10 20:33:54 liquidx Exp $
+
+  10 Feb 2006; Alastair Tse <liquidx@gentoo.org> uim-svn-20050505.ebuild:
+  modular-x-ified.
 
   17 Dec 2005; Mamoru KOMACHI <usata@gentoo.org> uim-svn-20050505.ebuild:
   Corrected qt-3* dependency; bug #100235.
