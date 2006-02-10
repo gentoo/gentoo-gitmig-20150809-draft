@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.16.ebuild,v 1.3 2006/02/09 17:18:15 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.16.ebuild,v 1.4 2006/02/10 10:27:47 ehmsen Exp $
 
-inherit nsplugins flag-o-matic fdo-mime eutils multilib
+inherit nsplugins flag-o-matic fdo-mime eutils multilib toolchain-funcs
 
 MY_P="${PN}libre-${PV}"
 
@@ -25,9 +25,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# gcc 4.1 compilation fixes
-	epatch ${FILESDIR}/${P}-gcc41-hash.patch || die
-	epatch ${FILESDIR}/${P}-gcc41.patch || die
+	# gcc 4 compilation fixes
+	if [ $(gcc-major-version) -ge 4 ]; then
+		epatch ${FILESDIR}/${P}-gcc41-hash.patch || die
+		epatch ${FILESDIR}/${P}-gcc41.patch || die
+	fi
 
 	# Replace autochecking acdesktop.m4 with a gentoo-specific one
 	cp ${FILESDIR}/gentoo-acdesktop.m4 ${S}/gui/desktop/acdesktop.m4
