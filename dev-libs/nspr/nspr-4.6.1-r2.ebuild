@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.1-r2.ebuild,v 1.2 2006/02/10 17:09:55 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.1-r2.ebuild,v 1.3 2006/02/10 23:27:27 anarchy Exp $
 
 inherit eutils gnuconfig
 
@@ -80,7 +80,7 @@ src_install () {
 	fi
 	#and while at it move them to files with versions-ending
 	#and link them back :)
-	cd ${D}/usr/${get_libdir}/nspr
+	cd ${D}/usr/$(get_libdir)/nspr
 	for file in *.so; do
 	    mv ${file} ${file}.${MINOR_VERSION}
 	    ln -s ${file}.${MINOR_VERSION} ${file}
