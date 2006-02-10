@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4983 2006/02/09 22:10:24 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4984 2006/02/10 10:29:16 kloeri Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Bryan Østergaard <kloeri@gentoo.org> (10 Feb 2006)
+# Last rites, requested by jakub in http://article.gmane.org/gmane.linux.gentoo.devel/35899
+dev-db/dybase
 
 # Carsten Lohrke <carlo@gentoo.org> (09 Feb 2006)
 # KOffice pre-releases
