@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.18 2006/01/02 15:31:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.19 2006/02/10 03:21:23 antarus Exp $
+
+*ngircd-0.9.2-r1 (10 Feb 2006)
+*ngircd-0.8.3-r1 (10 Feb 2006)
+
+  10 Feb 2006; <antarus@gentoo.org> +ngircd-0.8.3-r1.ebuild,
+  +ngircd-0.9.2-r1.ebuild:
+  Added USE=ident support, fixed DEPEND's, bug #119290
 
   02 Jan 2006; Sven Wegener <swegener@gentoo.org> files/ngircd.init.d:
   Add ircd provide to init script, bug #114510.
