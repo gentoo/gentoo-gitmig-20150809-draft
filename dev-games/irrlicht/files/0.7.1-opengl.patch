@@ -1,5 +1,0 @@
---- CVideoOpenGL.cpp.orig	2004-01-02 00:40:54.697754952 -0500
-+++ CVideoOpenGL.cpp	2004-01-02 00:40:16.800516208 -0500
-@@ -0,0 +1,2 @@
-+#define GL_GLEXT_LEGACY
-+#define GL_GLEXT_PROTOTYPES
