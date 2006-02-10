@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorcvs/colorcvs-1.4.ebuild,v 1.5 2005/11/07 19:27:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorcvs/colorcvs-1.4.ebuild,v 1.6 2006/02/10 19:20:59 slarti Exp $
 
 DESCRIPTION="A tool based on colorgcc to beautify cvs output"
 HOMEPAGE="http://www.hakubi.us/colorcvs/"
@@ -10,7 +10,8 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc-macos ~x86"
 IUSE=""
 DEPEND=""
-RDEPEND="dev-lang/perl"
+RDEPEND="dev-lang/perl
+	dev-util/cvs"
 
 src_install() {
 	exeinto /usr/bin

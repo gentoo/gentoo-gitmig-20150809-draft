@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/colorcvs
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorcvs/ChangeLog,v 1.5 2005/11/07 19:27:18 grobian Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorcvs/ChangeLog,v 1.6 2006/02/10 19:20:59 slarti Exp $
+
+  10 Feb 2006; Tom Martin <slarti@gentoo.org> colorcvs-1.4.ebuild:
+  Add missing cvs RDEPED. Duh.
 
   07 Nov 2005; Fabian Groffen <grobian@gentoo.org> colorcvs-1.4.ebuild:
   Marked ~ppc-macos (bug #111596)
