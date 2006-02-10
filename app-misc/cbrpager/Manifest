@@ -1,3 +1,25 @@
-MD5 cb068192afe5956e4c0b10c52e363cd3 ChangeLog 438
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 637143ffe6f293aae9f8297c86ad0139 ChangeLog 589
+RMD160 dcc793a2be64c30b984fa6075b097043e2b6da43 ChangeLog 589
+SHA256 89c4838c1a9a2290cf8bb64e9ab0b058de253bedd949eb89f2b394b48bf23066 ChangeLog 589
 MD5 c71188407f343a503280d33fccb7e349 cbrpager-0.9.11.ebuild 663
+RMD160 519005e082c3f009ec11c3a2d4a6a2ca4de9c24a cbrpager-0.9.11.ebuild 663
+SHA256 df4ea1f06bc204a7ddb03d209cd1bf5e2ae24a9f27218cf055f958a3247b9153 cbrpager-0.9.11.ebuild 663
+MD5 61bf7e57d0e99eb72a780ff9a4f23de6 cbrpager-0.9.14.ebuild 666
+RMD160 7816263724fb716bced2b91b2d44c986a6248cd9 cbrpager-0.9.14.ebuild 666
+SHA256 b96b3bd8ecf81d5e135e4670632bb59a82ead2b1cd51eb07645b9db8478e43af cbrpager-0.9.14.ebuild 666
 MD5 2c2c012888eaebdf07800a2d13762f11 files/digest-cbrpager-0.9.11 67
+RMD160 c78c7bb4f426e7cff1c0c33008c66b99b6292fce files/digest-cbrpager-0.9.11 67
+SHA256 607330c78e857371cee42168c18075c7fbc429fb3272239dc87335e91b71e82f files/digest-cbrpager-0.9.11 67
+MD5 e4a3e835b6c6818c96466f5ac47af40c files/digest-cbrpager-0.9.14 247
+RMD160 31d8ce9bb63fc51eeee0b6329afc35d079c2aca8 files/digest-cbrpager-0.9.14 247
+SHA256 0eb2d1beae754c0c7e9c03e14cac533b7d1dedcac1c26b3a20bb25b129b4c31c files/digest-cbrpager-0.9.14 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7B9G2+ySkm8kpY0RArBWAJ9vQ1lW3Q6qIzHMMgdisz5YM0OgEgCfaxx+
+iJip8m3a+SctgitRLO6k0UA=
+=uvSk
+-----END PGP SIGNATURE-----
