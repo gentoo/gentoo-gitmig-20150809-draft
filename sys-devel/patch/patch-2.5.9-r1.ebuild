@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9-r1.ebuild,v 1.8 2005/09/01 05:54:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9-r1.ebuild,v 1.9 2006/02/10 04:13:52 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -20,7 +20,9 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/patch-2.5.9-cr-stripping.patch
+	if type -p patch > /dev/null ; then
+		epatch "${FILESDIR}"/patch-2.5.9-cr-stripping.patch
+	fi
 }
 
 src_compile() {
