@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haddock
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.29 2005/12/12 22:29:10 araujo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.30 2006/02/10 12:04:41 dcoutts Exp $
+
+  10 Feb 2006; <duncan@gentoo.org> -haddock-0.6-r2.ebuild, haddock-0.7.ebuild:
+  Marked ~alpha. Removed old haddock-0.6-r2 revision.
 
   12 Dec 2005; Luis f. Araujo <araujo@gentoo.org> haddock-0.7.ebuild:
   Removing java use flag, bug #107019
