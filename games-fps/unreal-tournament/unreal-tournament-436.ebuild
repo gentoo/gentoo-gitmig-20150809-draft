@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-436.ebuild,v 1.10 2005/05/12 12:15:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-436.ebuild,v 1.11 2006/02/10 16:18:12 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -16,7 +16,13 @@ IUSE="3dfx"
 
 DEPEND="app-arch/unzip
 	!games-fps/unreal-tournament-goty"
-RDEPEND="virtual/x11"
+RDEPEND="|| (
+	(
+		x11-libs/libXext
+		x11-libx/libX11
+		x11-libs/libXau
+		x11-libs/libXdmcp )
+	virtual/x11 )"
 
 S=${WORKDIR}
 
