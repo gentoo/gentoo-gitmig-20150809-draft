@@ -1,4 +1,4 @@
-MD5 888cb39dd6e828978f66f8c63cb07277 ChangeLog 362
+MD5 c1f39957429d1b90c444ce5b6a47d629 ChangeLog 471
 MD5 0488e2e0c060cb9b70f76f831ae9fccd files/digest-netdiscover-0.3_beta5 73
 MD5 73c109f7a2717f5e5b02bf645b86f855 metadata.xml 253
-MD5 6f2a38de146a63f8a36a4faf628868ef netdiscover-0.3_beta5.ebuild 681
+MD5 99705292436acc77602b2714d5521319 netdiscover-0.3_beta5.ebuild 691

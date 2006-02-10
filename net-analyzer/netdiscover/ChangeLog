@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netdiscover
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdiscover/ChangeLog,v 1.2 2005/09/01 16:54:05 swegener Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdiscover/ChangeLog,v 1.3 2006/02/10 05:04:39 deltacow Exp $
+
+  10 Feb 2006; Scott Stoddard <deltacow@gentoo.org>
+  netdiscover-0.3_beta5.ebuild:
+  Added ~amd64 keyword.
 
 *netdiscover-0.3_beta5 (01 Sep 2005)
 
