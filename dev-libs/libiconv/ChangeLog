@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libiconv
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.17 2005/09/15 14:46:43 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.18 2006/02/10 11:32:34 flameeyes Exp $
+
+*libiconv-1.10-r1 (10 Feb 2006)
+
+  10 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +libiconv-1.10-r1.ebuild:
+  Make sure both static and shared variables are present so that linking to
+  libiconv in static binaries does not break.
 
   15 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Don't assign this to me directly, leave to bsd herd.
