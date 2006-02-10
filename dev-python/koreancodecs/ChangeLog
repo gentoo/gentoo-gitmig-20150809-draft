@@ -1,9 +1,0 @@
-# ChangeLog for dev-python/koreancodecs
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/koreancodecs/ChangeLog,v 1.4 2005/02/07 05:11:27 fserb Exp $
-
-*koreancodecs-2.0.5 (25 Jun 2003)
-
-  25 Jun 2003; Alastair Tse <liquidx@gentoo.org> koreancodecs-2.0.5.ebuild:
-  new package
-
