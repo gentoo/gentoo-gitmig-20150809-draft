@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4984 2006/02/10 10:29:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4985 2006/02/10 12:58:23 dcoutts Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Duncan Coutts <dcoutts@gentoo.org> (10 Feb 2006)
+# broken with older versions of hugs98 and superceeded by the HGL component
+# that comes with newer versions of hugs98.
+dev-haskell/hugs98-graphics
 
 # Bryan Østergaard <kloeri@gentoo.org> (10 Feb 2006)
 # Last rites, requested by jakub in http://article.gmane.org/gmane.linux.gentoo.devel/35899
