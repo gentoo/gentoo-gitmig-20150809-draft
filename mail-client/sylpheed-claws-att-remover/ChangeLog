@@ -1,0 +1,10 @@
+# ChangeLog for mail-client/sylpheed-claws-acpi-notifier
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-att-remover/ChangeLog,v 1.1 2006/02/10 18:48:24 genone Exp $
+
+*sylpheed-claws-att-remover-0.4 (10 Feb 2006)
+
+  10 Feb 2006; Marius Mauch <genone@gentoo.org> +metadata.xml,
+  +sylpheed-claws-att-remover-0.4.ebuild:
+  New package
+
