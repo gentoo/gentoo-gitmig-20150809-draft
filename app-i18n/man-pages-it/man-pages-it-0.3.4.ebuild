@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/man-pages-it-0.3.4.ebuild,v 1.2 2006/02/08 04:07:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/man-pages-it-0.3.4.ebuild,v 1.3 2006/02/10 05:03:55 vapier Exp $
 
 DESCRIPTION="A somewhat comprehensive collection of Italian Linux man pages"
 HOMEPAGE="http://it.tldp.org/man/"
@@ -23,6 +23,14 @@ src_unpack() {
 		-e 's:X11R6/::' \
 		-e '/mandir=/s:/man:/share/man:' \
 		Makefile
+	# remove manpages that other packages provide
+	#  - shadow #117738
+	cd "${S}"/man1
+	rm newgrp.1 chage.1 groups.1 login.1 chsh.1 gpasswd.1 passwd.1 su.1 chfn.1
+	cd "${S}"/man5
+	rm shadow.5
+	cd "${S}"/man8
+	rm groupadd.8 grpconv.8 usermod.8 groupdel.8 pwconv.8 vipw.8 lastlog.8 groupmod.8 pwck.8 newusers.8 useradd.8 pwunconv.8 grpck.8 userdel.8 vigr.8 grpunconv.8
 }
 
 src_compile() { :; }
