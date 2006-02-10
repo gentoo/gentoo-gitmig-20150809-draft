@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.29.ebuild,v 1.1 2006/02/09 19:31:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.29.ebuild,v 1.2 2006/02/10 15:36:05 wolf31o2 Exp $
 
 IUSE="opengl X"
 
@@ -26,6 +26,7 @@ RDEPEND="x86? ( opengl? ( virtual/opengl
 
 src_install() {
 	doinitd autoconfig
+	dosed 's/9124-720"/9124-720")/' /etc/init.d/autoconfig
 	newinitd spind.init spind
 	if use x86 || use amd64
 	then

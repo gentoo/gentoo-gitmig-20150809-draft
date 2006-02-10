@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.70 2006/02/09 19:31:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.71 2006/02/10 15:36:05 wolf31o2 Exp $
+
+  10 Feb 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  livecd-tools-1.0.29.ebuild:
+  Added sed to fix bug #122367.
 
 *livecd-tools-1.0.29 (09 Feb 2006)
 
