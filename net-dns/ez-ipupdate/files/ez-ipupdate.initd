@@ -1,12 +1,13 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/files/ez-ipupdate.initd,v 1.1 2005/10/09 22:48:08 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/files/ez-ipupdate.initd,v 1.2 2006/02/10 21:05:05 sbriesen Exp $
 
 opts="${opts} update"
 
 depend() {
 	need net
+	after rp-pppoe
 }
 
 getconfig() { # 0: no daemon / 1: daemon
