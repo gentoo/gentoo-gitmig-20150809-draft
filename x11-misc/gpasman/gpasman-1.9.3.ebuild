@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gpasman/gpasman-1.9.3.ebuild,v 1.1 2006/02/07 16:46:32 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gpasman/gpasman-1.9.3.ebuild,v 1.2 2006/02/10 22:23:53 nelchael Exp $
 
 inherit eutils autotools
 
@@ -18,16 +18,22 @@ DEPEND="=x11-libs/gtk+-2*"
 src_unpack() {
 
 	unpack "${A}"
-	epatch "${FILESDIR}/${P}-gtk.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 
 	cd "${S}"
 	intltoolize --copy --force
 	eautoreconf
+	intltoolize --copy --force # YES! Twice
+	eaclocal
 
 }
 
 src_install() {
 
+	# Broken Makefile, so fix it:
+	sed -i -e 's/@install_sh@/install/' po/Makefile
+
+	# Install:
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc ChangeLog AUTHORS README NEWS
 
