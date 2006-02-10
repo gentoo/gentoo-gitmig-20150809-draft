@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/mupen64-glide64
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glide64/ChangeLog,v 1.7 2005/09/20 15:22:53 mr_bones_ Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glide64/ChangeLog,v 1.8 2006/02/10 03:56:43 morfic Exp $
+
+  10 Feb 2006; Daniel Goller <morfic@gentoo.org> mupen64-glide64-0.7.ebuild:
+  Disallowing -ftracer to avoid bug#122192, thanks Markus Gothe for reporting
 
   20 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org>
   mupen64-glide64-0.7.ebuild:

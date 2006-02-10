@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glide64/mupen64-glide64-0.7.ebuild,v 1.7 2005/09/20 15:22:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glide64/mupen64-glide64-0.7.ebuild,v 1.8 2006/02/10 03:56:43 morfic Exp $
 
 inherit flag-o-matic eutils games
 
@@ -33,6 +33,8 @@ src_unpack() {
 
 	# gcc 3.4 at least has a problem with -O3 and inline asm
 	replace-flags -O3 -O2
+	# -ftracer is causing bug#122192 
+	filter-flags -ftracer
 	sed -i \
 		-e "s:CFLAGS.*=\(.*\):CFLAGS=\1 ${CFLAGS}:" \
 		Makefile \
