@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.5.5.ebuild,v 1.1 2005/10/31 03:45:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.5.5.ebuild,v 1.2 2006/02/10 16:25:53 wolf31o2 Exp $
 
 inherit eutils
 
@@ -13,12 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="media-libs/plib
-	=dev-libs/libsigc++-1.2*
-	media-libs/libpng
-	virtual/x11
+RDEPEND="media-libs/libpng
 	virtual/opengl
-	virtual/glu"
+	virtual/glu
+	virtual/glut
+	=dev-libs/libsigc++-1.2*"
+
+DEPEND="${RDEPEND}
+	media-libs/plib"
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install"
