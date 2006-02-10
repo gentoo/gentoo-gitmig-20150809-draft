@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/KXL-1.1.7.ebuild,v 1.7 2005/04/28 23:03:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/KXL-1.1.7.ebuild,v 1.8 2006/02/10 16:29:40 wolf31o2 Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+DEPEND="|| ( x11-libs/libX11
+			 virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
