@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hugo/hugo-2.12.ebuild,v 1.1 2005/11/29 17:25:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hugo/hugo-2.12.ebuild,v 1.2 2006/02/10 19:58:35 wolf31o2 Exp $
 
 inherit games
 
@@ -13,14 +13,15 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/x11
-	media-libs/libsdl"
+RDEPEND="x11-libs/gtk+
+		media-libs/libsdl
+		media-libs/libvorbis"
 
 src_install() {
 	dogamesbin hugo || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r pixmaps || die "doins gamedata failed"
-	dodoc AUTHORS Changlog NEWS README TODO || die "dodoc failed"
+	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
 	dohtml doc/*html
 	prepgamesdirs
 }
