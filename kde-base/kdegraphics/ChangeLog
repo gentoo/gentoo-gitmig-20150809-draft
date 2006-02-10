@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.238 2006/02/07 04:22:16 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.239 2006/02/10 17:26:49 config Exp $
+
+  10 Feb 2006; Benjamin Schindler <config@gentoo.org>
+  kdegraphics-3.4.3-r4.ebuild:
+  stable on amd64; security bug #121375
 
   07 Feb 2006; Joshua Jackson <tsunam@gentoo.org>
   kdegraphics-3.4.3-r4.ebuild:

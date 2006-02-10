@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 07c13b0f2a49d57362ad0463b4024317 ChangeLog 34033
-RMD160 86d7d13a5074f97756a7ca45c42e75b726fc70b3 ChangeLog 34033
-SHA256 7af6f145cb057813e4a64e3e16d74d1d58eaf521f2652df372c0606a882542c2 ChangeLog 34033
+MD5 1ac6462dc3bf89b4a4fa750bab62a385 ChangeLog 34159
+RMD160 ef1fbfa7e1ed9f34f0cb461d35e9c114e7ea53a0 ChangeLog 34159
+SHA256 3e04b1188b89b00bc6ea653a94520451c0b0bf0f54e805b382a73bd2e2bb061a ChangeLog 34159
 MD5 284f518172a2843428d308d2d48bbbee files/CAN-2005-0064.patch 793
 RMD160 29c644187334820eedcf6aca8ca2a2ecd0990e3d files/CAN-2005-0064.patch 793
 SHA256 1156b8cb6601b2024f46bb9f3034c8fc258ac15cac94e50c223bb8feea47ad19 files/CAN-2005-0064.patch 793
@@ -28,9 +25,9 @@ SHA256 855a1a4a8a0ad7e737acc281482598e137f230dfb23b434b6d773a00a165a2ad files/di
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kdegraphics-3.4.3-r3 71
 RMD160 ffd5641d032574a27bee5145d077046b4b16b929 files/digest-kdegraphics-3.4.3-r3 71
 SHA256 855a1a4a8a0ad7e737acc281482598e137f230dfb23b434b6d773a00a165a2ad files/digest-kdegraphics-3.4.3-r3 71
-MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kdegraphics-3.4.3-r4 71
-RMD160 ffd5641d032574a27bee5145d077046b4b16b929 files/digest-kdegraphics-3.4.3-r4 71
-SHA256 855a1a4a8a0ad7e737acc281482598e137f230dfb23b434b6d773a00a165a2ad files/digest-kdegraphics-3.4.3-r4 71
+MD5 0b480b54a66891d4c4586b2f85a929d6 files/digest-kdegraphics-3.4.3-r4 259
+RMD160 ccf17dd77898c2cfe182670e78545399ef8d2775 files/digest-kdegraphics-3.4.3-r4 259
+SHA256 f18bf29f96dfe957dd43e07c873d7a93cf045b87745ae307cc755a570a6ef291 files/digest-kdegraphics-3.4.3-r4 259
 MD5 0459ac16349d79da6246392e2454796b files/digest-kdegraphics-3.5.0 71
 RMD160 e1fce0a4770ec5c23d4bea00d20f51386a378782 files/digest-kdegraphics-3.5.0 71
 SHA256 556dde324334f05490e579205a17fcea38c0cc898dacb99bf0cb7cc8e0cc3041 files/digest-kdegraphics-3.5.0 71
@@ -118,9 +115,9 @@ SHA256 a21199c24b5e1e0ec7c5548738c3fd92e9b3f347ea3e7673e9fcd98a1e649f9c kdegraph
 MD5 1f5a1435bc649f5dadfd6a5524b955a2 kdegraphics-3.4.3-r3.ebuild 2200
 RMD160 bf0a8c73239121b9e35d7e2b070c6e3aba7f6984 kdegraphics-3.4.3-r3.ebuild 2200
 SHA256 935cc5a85e2167e3816dd99ba3353dd552e186014f1f56e7bc9cb362da3b3ea2 kdegraphics-3.4.3-r3.ebuild 2200
-MD5 ab7cdc069b4d443d362208b66d12a65a kdegraphics-3.4.3-r4.ebuild 2267
-RMD160 f60a31573027e63129c1dde94c205f11ec26c36c kdegraphics-3.4.3-r4.ebuild 2267
-SHA256 f65a3eb00ec13de5342903213b9b8fdb92792af9a07b6eae090b86ede428d854 kdegraphics-3.4.3-r4.ebuild 2267
+MD5 a9daa2d75c3b7f0ce6fa2d6c3234578e kdegraphics-3.4.3-r4.ebuild 2266
+RMD160 742112fbf5878258e36f63c6b68d55497e0d1297 kdegraphics-3.4.3-r4.ebuild 2266
+SHA256 276d6b35e863a3240407b7278280a5c0698da85759985b78e71eddc74b8404ca kdegraphics-3.4.3-r4.ebuild 2266
 MD5 5627d28e9933d004259103c8feec5609 kdegraphics-3.4.3.ebuild 1738
 RMD160 d865c2abd479410326f6ef6ae8c5e826c2562ca7 kdegraphics-3.4.3.ebuild 1738
 SHA256 60c031204f0dab923c2b6351a015ded1e608d8c863af3b6218a1b7fce0487277 kdegraphics-3.4.3.ebuild 1738
@@ -148,10 +145,3 @@ SHA256 fb6632af8dc8124c355b23d3a1d8acec29930404dcf86a73ccf6696c1ccf476d kdegraph
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6CFnSENan+PfizARAjnRAJ9MAo0zGbDUdxfwwDpsAyTyKzQD+ACfbbaI
-qfwBEk15l7ggPUvg5pQxu98=
-=TWd6
------END PGP SIGNATURE-----
