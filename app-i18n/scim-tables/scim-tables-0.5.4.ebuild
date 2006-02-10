@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.4.ebuild,v 1.1 2005/12/04 02:44:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.4.ebuild,v 1.2 2006/02/10 19:29:06 liquidx Exp $
 
 inherit kde-functions
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="arts"
 
-DEPEND="|| ( >=app-i18n/scim-1.1 >=app-i18n/scim-cvs-1.1 )"
+DEPEND="|| ( x11-libs/libXt virtual/x11 )
+	|| ( >=app-i18n/scim-1.1 >=app-i18n/scim-cvs-1.1 )"
 
 src_compile() {
 	econf $(use_with arts) || die "econf failed"
