@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5bd36c728fbdf5bb467a15c12a036f1 ChangeLog 25666
-RMD160 7a282c3a380017f9b0fc05f86359e939d419e90b ChangeLog 25666
-SHA256 cb94a9210272b3a1b775da47e7f05ad0aab868ff1788f1248589f855c1505bab ChangeLog 25666
+MD5 9dc256919c112cf9b9d80c208dfdaece ChangeLog 25810
+RMD160 3e9dcff8620d1d114acf0aa1edb2b666064c0825 ChangeLog 25810
+SHA256 1b55fe88e9c8de13340c118d266d42b0c10318cb1b19b820d597f9dac5eeaed1 ChangeLog 25810
 MD5 ad343861ae1ccea97bf3bbcdb61ba9e0 ati-drivers-8.14.13-r2.ebuild 7005
 RMD160 fdb66565c4601869a9770d995fee4c055090978f ati-drivers-8.14.13-r2.ebuild 7005
 SHA256 e12b64254b2459337c7e6a9e16ec31add663375d74cfdc78e3b5e489eed5e211 ati-drivers-8.14.13-r2.ebuild 7005
@@ -46,6 +43,9 @@ SHA256 549ad9580ce55f79ad1f14510a3beccf6719d0eace6f46f5510ea43ce6d14532 ati-driv
 MD5 86e249208f687933d2822fad29e0e81c ati-drivers-8.21.7.ebuild 8447
 RMD160 14e615b49a299111aa36a0590788f0eff7dbfc69 ati-drivers-8.21.7.ebuild 8447
 SHA256 248daea95d8efba35ce9f852ecd9b5af139fd44ee8a1fdad9e500a453b89ae6c ati-drivers-8.21.7.ebuild 8447
+MD5 c36f19449dc90e65ded1ff7d9d4e6b85 ati-drivers-8.22.5.ebuild 8342
+RMD160 2022a831a4db776380130dd617df6fa4d3134323 ati-drivers-8.22.5.ebuild 8342
+SHA256 846f6c8ab216618736f7137a6731cb3ddde2d8359d2ff872ecd1c68aaacbfb8b ati-drivers-8.22.5.ebuild 8342
 MD5 e61309d064f12cc623e4d6e78aa82b36 files/09ati 39
 RMD160 2eb917685ae226a6913f00d0247514faf998d92f files/09ati 39
 SHA256 44336cd56c2712a3260a1289c1085f08e4cb61e6a73175eac4a7b3ebabe5011e files/09ati 39
@@ -103,6 +103,9 @@ SHA256 842abb3720cb86c90681fd053da430e0a1841eef595ebea00f327d4aa162012e files/di
 MD5 e5296c265380cfc62e0bcafc5360807d files/digest-ati-drivers-8.21.7 380
 RMD160 d495f79088708ad02c366a318a710a4e676562cd files/digest-ati-drivers-8.21.7 380
 SHA256 208b78962cd284d7ed81af4eac174a269384a5e66bba64324e4466ed963f31f5 files/digest-ati-drivers-8.21.7 380
+MD5 c3eca00b2284649ba6d10e1d27ef260a files/digest-ati-drivers-8.22.5 596
+RMD160 a31343326c85aeb28e9f88542542ded42a256453 files/digest-ati-drivers-8.22.5 596
+SHA256 eb5ca9c22deac672f2e3afff6028f5bfb06840c674660b9a610ef2befc1095cd files/digest-ati-drivers-8.22.5 596
 MD5 9ae27a9d7736cb6ce30b41ff384004d8 files/fglrx-2.6.12-inter_module_get.patch 1265
 RMD160 1c349a894ed606b8f51b4caf0b63a0dc152626f8 files/fglrx-2.6.12-inter_module_get.patch 1265
 SHA256 f1aedd70278cb8a11fdc9139ab698056dcc7ad2922aaa902fa7a8816ec10c43b files/fglrx-2.6.12-inter_module_get.patch 1265
@@ -127,10 +130,3 @@ SHA256 7d6317988ae9a533a60baf70ac7fa86f46375a6f9083aef292e847b04c026410 files/p1
 MD5 c306bb93866a4dd8913899229dd20726 metadata.xml 227
 RMD160 e2ed1445a0405b39e40741d3d1f67746daab8fff metadata.xml 227
 SHA256 4fbed7030b32bcdc95b70000adbbcb6f1d73092c4a2f20e6cfb737a1b44d6e07 metadata.xml 227
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD68GRV3J2n04EauwRAuNLAJ0T2uO6SHvqU2QD+azrw1bO3INbhwCgm+xz
-fGIGIGWMH9UlIVI7U9Cb0Ys=
-=XPID
------END PGP SIGNATURE-----
