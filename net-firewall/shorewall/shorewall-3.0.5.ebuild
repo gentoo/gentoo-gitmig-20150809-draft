@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.0.2.ebuild,v 1.2 2005/12/17 21:41:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.0.5.ebuild,v 1.1 2006/02/10 20:00:07 vanquirius Exp $
 
 MY_P_DOCS="${P/${PN}/${PN}-docs-html}"
 
