@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.ebuild,v 1.1 2005/07/18 06:49:30 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.ebuild,v 1.2 2006/02/10 20:57:57 liquidx Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="nls gtk"
 
-DEPEND="virtual/x11
+DEPEND="|| ( ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE )
+		     virtual/x11 )
 	nls? ( sys-devel/gettext )
 	gtk? ( >=x11-libs/gtk+-2.2 )"
 
