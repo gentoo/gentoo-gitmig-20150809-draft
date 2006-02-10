@@ -1,11 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/chinput/chinput-3.0.2.ebuild,v 1.4 2005/01/01 14:26:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/chinput/chinput-3.0.2.ebuild,v 1.5 2006/02/10 21:52:38 liquidx Exp $
+
+inherit eutils
 
 MY_P=${P/chinput/Chinput}
 DESCRIPTION="Featureful Chinese Input Method XIM Server"
 HOMEPAGE="http://www.opencjk.org/~yumj/project-chinput-e.html"
-SRC_URI="http://www.opencjk.org/~yumj/download/${MY_P}.tar.gz"
+SRC_URI="http://www.opencjk.org/~yumj/download/${MY_P}.tar.gz
+	mirror://debian/pool/main/c/chinput/chinput_${PV}-17.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,11 +24,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	einfo "Applying chinput-3.0.2-config.patch"
-	patch -p1 < ${FILESDIR}/chinput-3.0.2-config.patch
-	# from debian unstable chinput_3.0.2-9
-	einfo "Applying chinput-3.0.2-debian.patch"
-	patch -p1 < ${FILESDIR}/chinput-3.0.2-debian.patch
+	epatch ${DISTDIR}/${PN}_${PV}-17.diff.gz
 }
 
 src_compile() {
