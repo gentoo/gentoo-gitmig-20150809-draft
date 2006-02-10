@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 fbeb68963d3f65758b12291396d30edd ChangeLog 599
-MD5 533df443910817abfe0a629eebc741f4 files/digest-sylpheed-claws-etpan-privacy-0.9 82
+RMD160 49db0ab7de67a167ab406135a2fda197ccf4c792 ChangeLog 599
+SHA256 3935235621af7276219283676c783874c49c248ee1cebcdb6bab5ef451077025 ChangeLog 599
+MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-etpan-privacy-0.13 310
+RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-etpan-privacy-0.13 310
+SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-etpan-privacy-0.13 310
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 80c1fab47c730052ffcf315c475a922c sylpheed-claws-etpan-privacy-0.9.ebuild 874
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDdyfD6J2i8a8J4okRApwGAKC/8Sillql1O/tPSvCcXMhM8cANiQCfWrO6
-y4LanTWIzokdjN3ZvWKxaPM=
-=Cjrh
------END PGP SIGNATURE-----
+RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
+SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
+MD5 9d25e737bb67ee319dc1cd36660aaee5 sylpheed-claws-etpan-privacy-0.13.ebuild 982
+RMD160 3bd12317d43ca67589c473b49bcf9cfd3c1d73f7 sylpheed-claws-etpan-privacy-0.13.ebuild 982
+SHA256 e3f5ebdb2a0728148d6412341e015b4e33e57ce1347a58ea691ea5f75c8d3175 sylpheed-claws-etpan-privacy-0.13.ebuild 982

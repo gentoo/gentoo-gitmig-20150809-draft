@@ -1,16 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3a316018771f2e54410d0f58d87f721d ChangeLog 746
-MD5 533df443910817abfe0a629eebc741f4 files/digest-sylpheed-claws-perl-0.3 82
-MD5 998a1880b8048a72bee5df58188a40b5 files/digest-sylpheed-claws-perl-0.4 72
+RMD160 5712740ed5a84b4d19286e7c226d3d12da947831 ChangeLog 746
+SHA256 b60731290a55ead08949ebe8545deaa83b03b45767fe7de201b525487a0c9087 ChangeLog 746
+MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-perl-0.6 310
+RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-perl-0.6 310
+SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-perl-0.6 310
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 5192a3066a85bac7b0b7af1c53b80088 sylpheed-claws-perl-0.3.ebuild 1098
-MD5 dec8f516c9b27686bc2c9e86727d45a6 sylpheed-claws-perl-0.4.ebuild 1269
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDdyem6J2i8a8J4okRAqMeAKCaHb7KpnHcantInrSTkgg86FLhMgCfdW0I
-nssgRhH+tFhumFnNdGjnxs8=
-=GeGo
------END PGP SIGNATURE-----
+RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
+SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
+MD5 cc1e9998419b178b80901f8e9f1939c4 sylpheed-claws-perl-0.6.ebuild 1321
+RMD160 e5ae4539cb0b529023b51187e4771fabd7260979 sylpheed-claws-perl-0.6.ebuild 1321
+SHA256 a1ef262f82d99d1b0106ed71d65040ebc5b1a1fa17872053be0b1f379821a4e8 sylpheed-claws-perl-0.6.ebuild 1321

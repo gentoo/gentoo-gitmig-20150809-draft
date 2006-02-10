@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4f2f3fead60686c226e9b630c13ebdc4 ChangeLog 584
-MD5 533df443910817abfe0a629eebc741f4 files/digest-sylpheed-claws-fetchinfo-0.4.6 82
+RMD160 f4835aaa39d87b59f2d44e043d0139a1f8b6c484 ChangeLog 584
+SHA256 23b923e1feefdfcf9693d3f1a90ed2fb521c43c4aa24991713fb080fd9777ddf ChangeLog 584
+MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-fetchinfo-0.4.10 310
+RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-fetchinfo-0.4.10 310
+SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-fetchinfo-0.4.10 310
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 16121f114345fb061c20ffa1a66526bc sylpheed-claws-fetchinfo-0.4.6.ebuild 842
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDdye/6J2i8a8J4okRAuhGAJ4l+4SF7riQcFcx4ouMYsl3esR1CwCfc2jD
-Xyv69rAtilQVmTLuHERBySI=
-=lOzu
------END PGP SIGNATURE-----
+RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
+SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
+MD5 ba4e52c84c292cbd596b3d802a491227 sylpheed-claws-fetchinfo-0.4.10.ebuild 895
+RMD160 da8b7f489c5df5eb242dd3521a1ef346349c0074 sylpheed-claws-fetchinfo-0.4.10.ebuild 895
+SHA256 5ed854d5ea19cda2e771e615ab88f0613ad280b683eb3c97235c634f23b1bfd1 sylpheed-claws-fetchinfo-0.4.10.ebuild 895

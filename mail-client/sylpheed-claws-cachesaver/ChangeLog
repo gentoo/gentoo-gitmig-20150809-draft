@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/sylpheed-claws-cachesaver
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-cachesaver/ChangeLog,v 1.3 2005/11/13 10:06:38 genone Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-cachesaver/ChangeLog,v 1.4 2006/02/10 18:13:47 genone Exp $
+
+*sylpheed-claws-cachesaver-0.7 (10 Feb 2006)
+
+  10 Feb 2006; Marius Mauch <genone@gentoo.org>
+  -sylpheed-claws-cachesaver-0.5.ebuild,
+  +sylpheed-claws-cachesaver-0.7.ebuild:
+  Version bump to sc-2.0.0, dropping previous versions
 
   13 Nov 2005; Marius Mauch <genone@gentoo.org>
   sylpheed-claws-cachesaver-0.5.ebuild:

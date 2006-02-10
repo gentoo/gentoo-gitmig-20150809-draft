@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 bb3a445cad65da61a273aef16234c363 ChangeLog 696
-MD5 533df443910817abfe0a629eebc741f4 files/digest-sylpheed-claws-cachesaver-0.5 82
+RMD160 2c1fefc2a3c4c61452befbd3da8e394811674502 ChangeLog 696
+SHA256 bb87f5dd800f5c148ff0cc2ade44aee6bf1f7c6cc2aa40bd95f71c9d90814fb0 ChangeLog 696
+MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-cachesaver-0.7 310
+RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-cachesaver-0.7 310
+SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-cachesaver-0.7 310
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 699d3404640c0a02d52c9de5698f3610 sylpheed-claws-cachesaver-0.5.ebuild 874
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDdyfL6J2i8a8J4okRAhDvAKDYrogRxiCWHDyS5zVG6HD6Zdf3zACdHPQI
-sWVBsMAog9Oukbn5ik51uI0=
-=6rQz
------END PGP SIGNATURE-----
+RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
+SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
+MD5 77a9345d317e9b7013e68d36d08694a6 sylpheed-claws-cachesaver-0.7.ebuild 927
+RMD160 a32f09133240cced7fc79a3ad3a2254b9e524d1f sylpheed-claws-cachesaver-0.7.ebuild 927
+SHA256 0a7f56a8ffb3b33ef14af7a662fc66a5c2806deca138a493b1a6907b48e85b29 sylpheed-claws-cachesaver-0.7.ebuild 927

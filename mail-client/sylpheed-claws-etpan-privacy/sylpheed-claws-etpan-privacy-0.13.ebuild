@@ -1,14 +1,15 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-etpan-privacy/sylpheed-claws-etpan-privacy-0.9.ebuild,v 1.3 2005/11/13 11:45:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-etpan-privacy/sylpheed-claws-etpan-privacy-0.13.ebuild,v 1.1 2006/02/10 18:16:14 genone Exp $
 
 MY_P="${P##sylpheed-claws-}"
 MY_P="${MY_P%%[-_]plugin}"
-SC_BASE="1.9.13"
+SC_BASE="2.0.0"
 
 DESCRIPTION="Plugin for sylpheed-claws to sign and verify mails with s/mime or pgp"
 HOMEPAGE="http://claws.sylpheed.org"
-SRC_URI="mirror://sourceforge/sylpheed-claws/sylpheed-claws-plugins-${SC_BASE}.tar.gz"
+SRC_URI="mirror://sourceforge/sylpheed-claws/sylpheed-claws-extra-plugins-${SC_BASE}.tar.bz2"
+#SRC_URI="http://claws.sylpheed.org/downloads/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
@@ -17,7 +18,7 @@ DEPEND=">=mail-client/sylpheed-claws-${SC_BASE}
 		net-libs/libetpan
 		dev-libs/openssl"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/sylpheed-claws-extra-plugins-${SC_BASE}/${MY_P}"
 
 src_install() {
 	make DESTDIR="${D}" install

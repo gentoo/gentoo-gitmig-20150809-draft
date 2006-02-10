@@ -1,21 +1,22 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-fetchinfo/sylpheed-claws-fetchinfo-0.4.6.ebuild,v 1.3 2005/11/13 11:45:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-fetchinfo/sylpheed-claws-fetchinfo-0.4.10.ebuild,v 1.1 2006/02/10 18:18:34 genone Exp $
 
 MY_P="${P##sylpheed-claws-}"
 MY_PN="${PN##sylpheed-claws-}"
-SC_BASE="1.9.13"
+SC_BASE="2.0.0"
+SC_BASE_NAME="sylpheed-claws-extra-plugins-${SC_BASE}"
 
 DESCRIPTION="Plugin for sylpheed-claws to add additional headers with download information"
 HOMEPAGE="http://claws.sylpheed.org"
-SRC_URI="mirror://sourceforge/sylpheed-claws/sylpheed-claws-plugins-${SC_BASE}.tar.gz"
+SRC_URI="mirror://sourceforge/sylpheed-claws/${SC_BASE_NAME}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND=">=mail-client/sylpheed-claws-${SC_BASE}"
 
-S="${WORKDIR}/${MY_PN}-plugin-${PV}"
+S="${WORKDIR}/${SC_BASE_NAME}/${MY_PN}-plugin-${PV}"
 
 src_install() {
 	make DESTDIR="${D}" install

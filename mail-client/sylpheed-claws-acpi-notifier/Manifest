@@ -1,15 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 016c1db546275137fca857007deb8987 ChangeLog 528
+RMD160 3a87d690a5c571a2b42962481238679521a5442f ChangeLog 528
+SHA256 ec74d1630aa73c24ac6d3b8eee0a9cb21fc04c8f9e5a43e2d0e76f579d9d60e9 ChangeLog 528
 MD5 178a873ac50643d22ef0bea2cbf11f15 files/acpi_notifier-0.3-ibm.patch 611
+RMD160 ef7581701ea3cb8db753e8219360ab9f9958b031 files/acpi_notifier-0.3-ibm.patch 611
+SHA256 53af663824c6f7d4ed1bd86bb88fd0d68286d14352750db267bd3ef5a5041c39 files/acpi_notifier-0.3-ibm.patch 611
 MD5 306d22889cf1447ec6182916ecd22260 files/digest-sylpheed-claws-acpi-notifier-0.3 92
+RMD160 f8c94857c0b57712cd6fa0b74ae4f1c1fce9e4c7 files/digest-sylpheed-claws-acpi-notifier-0.3 92
+SHA256 8da9c30828da76b2171c281a1118677983ce50729bfca828e44809a0d9a3bfc1 files/digest-sylpheed-claws-acpi-notifier-0.3 92
+MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-acpi-notifier-0.8 310
+RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-acpi-notifier-0.8 310
+SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-acpi-notifier-0.8 310
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 30fd4a7845b389eda78bf39f80a3a859 sylpheed-claws-acpi-notifier-0.3.ebuild 1545
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDdzAm6J2i8a8J4okRAhDQAJ4nJctrJxTr6jW1ikUvGiwUjvJAPQCcCavv
-KgjEO9/M2OK3blnxsmqqv00=
-=v7lp
------END PGP SIGNATURE-----
+RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
+SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
+MD5 cde5c447b3cf0713cd6c3b2f01a73e87 sylpheed-claws-acpi-notifier-0.8.ebuild 1468
+RMD160 ccc884f680d821d085ded888269732684fb52e3b sylpheed-claws-acpi-notifier-0.8.ebuild 1468
+SHA256 0f539c28a19a73b43322353efd03fe3f848382c38ac422336d62c18a2d30c824 sylpheed-claws-acpi-notifier-0.8.ebuild 1468
