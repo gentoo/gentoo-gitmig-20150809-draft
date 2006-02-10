@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.13.ebuild,v 1.13 2005/12/17 02:42:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.13.ebuild,v 1.14 2006/02/10 16:57:25 liquidx Exp $
 
 inherit multilib
 
@@ -15,7 +15,7 @@ SRC_URI="http://jan.kneschke.de/projects/modlogan/download/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
-IUSE="X mysql nls"
+IUSE="mysql nls"
 
 RDEPEND="dev-libs/libxml
 	dev-libs/libxml2
@@ -27,7 +27,6 @@ RDEPEND="dev-libs/libxml
 	sys-libs/zlib
 	app-arch/bzip2
 	dev-lang/perl
-	X? ( virtual/x11 )
 	mysql? ( >=dev-db/mysql-3.23.26 )"
 
 DEPEND="${RDEPEND}

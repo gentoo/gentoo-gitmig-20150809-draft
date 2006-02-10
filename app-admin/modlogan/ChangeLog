@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/modlogan
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.28 2005/09/03 19:51:07 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.29 2006/02/10 16:57:25 liquidx Exp $
+
+  10 Feb 2006; Alastair Tse <liquidx@gentoo.org> modlogan-0.8.13.ebuild:
+  remove X dep that was never needed
 
   03 Sep 2005; Simon Stelling <blubb@gentoo.org> modlogan-0.8.13.ebuild:
   made modlogan multilib-strict aware
