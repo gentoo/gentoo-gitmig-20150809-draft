@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/gnuboy-1.0.3.ebuild,v 1.10 2006/01/09 23:28:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/gnuboy-1.0.3.ebuild,v 1.11 2006/02/10 19:39:07 wolf31o2 Exp $
 
 inherit games
 
@@ -13,10 +13,20 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="X fbcon sdl svga"
 
-DEPEND="X? ( virtual/x11 )
-	sdl? ( media-libs/libsdl )
+RDEPEND="sdl? ( media-libs/libsdl )
+	     !X? ( !svga? ( !fbcon? ( media-libs/libsdl ) ) )
+		 X? (
+		 	|| (
+				x11-libs/libXext
+				virtual/x11 ) )"
+DEPEND="${RDEPEND}
 	svga? ( media-libs/svgalib )
-	!X? ( !svga? ( !fbcon? ( media-libs/libsdl ) ) )"
+	X? (
+		|| (
+			(
+				x11-proto/xextproto
+		      	x11-proto/xproto )
+			virtual/x11 ) )"
 
 src_compile() {
 	local myconf
