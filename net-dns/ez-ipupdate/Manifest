@@ -1,19 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 78039eca0a2d24b9ccc7dfd378ad2393 ChangeLog 2592
+MD5 2154b9e68c0d04a0292bf94e87baf352 ChangeLog 2857
+RMD160 7f1d6a2480374cf467b9c1745f73ca66e94ebc62 ChangeLog 2857
+SHA256 02d569180f94b26db6062ac350b9441ac703796e92c8371a48c373ed8680dc9d ChangeLog 2857
 MD5 f4ad9aeaf2a00fbbbe49f843df2ba3bd ez-ipupdate-3.0.11_beta8-r1.ebuild 908
+RMD160 624e6fcfb396fbda41e643b7e0fb6e9462eedbe3 ez-ipupdate-3.0.11_beta8-r1.ebuild 908
+SHA256 6abc7a9aac4d157e78e9e60854e592f7277d82b7a5e5049bf587f382bae4e23d ez-ipupdate-3.0.11_beta8-r1.ebuild 908
 MD5 87e5b9baac22dfd179019df836c232c5 ez-ipupdate-3.0.11_beta8-r2.ebuild 2710
+RMD160 4cf24397e8ffb1f4aa4d6911dd675fb45eef4291 ez-ipupdate-3.0.11_beta8-r2.ebuild 2710
+SHA256 4d4ed1e6e2d5de63ce72a3c1efe3cf942edbd366e8328b48b36fbd5be48bc059 ez-ipupdate-3.0.11_beta8-r2.ebuild 2710
+MD5 d4eb1119f83b937fd3be13137be91447 ez-ipupdate-3.0.11_beta8-r3.ebuild 2864
+RMD160 3f0289bacf733c071c52394ab13ea2324c4ec60e ez-ipupdate-3.0.11_beta8-r3.ebuild 2864
+SHA256 6e5dd325f625c512d57634f0c5631cce5f853dd89c02b6f3fc5288d3d3bb466b ez-ipupdate-3.0.11_beta8-r3.ebuild 2864
 MD5 fc53ff461d5187c04a36e96c42f0d7e2 files/digest-ez-ipupdate-3.0.11_beta8-r1 71
+RMD160 057048a4736327dd5d2aa05911784ec159479b81 files/digest-ez-ipupdate-3.0.11_beta8-r1 71
+SHA256 5d7fe7a4604270bad320881d8164107b58ab211411ed13e9bb79e996f08e7e8b files/digest-ez-ipupdate-3.0.11_beta8-r1 71
 MD5 73bb146a959cd541212ee2dc87127303 files/digest-ez-ipupdate-3.0.11_beta8-r2 152
+RMD160 18d1c70aa0ab392b2adce3ba2cebfa92c1584e8d files/digest-ez-ipupdate-3.0.11_beta8-r2 152
+SHA256 9dea5ea804517df20dfe86d062733299c17d90b7bfcad905b58c37fa35b0ca6a files/digest-ez-ipupdate-3.0.11_beta8-r2 152
+MD5 fae1facf9abf1fa08dd43aabc84b3cec files/digest-ez-ipupdate-3.0.11_beta8-r3 545
+RMD160 90911bfc6fa770ef77b169e24cbdeb5952312de9 files/digest-ez-ipupdate-3.0.11_beta8-r3 545
+SHA256 7a38d868816e2e83204fddc98bf4fbbac6f74a11cb0dbc09e25f2440f80439f5 files/digest-ez-ipupdate-3.0.11_beta8-r3 545
+MD5 9ac104c30ace69d00bdc35e65ae4d727 files/ez-ipupdate-3.0.11_beta8-dnsexit.diff 6721
+RMD160 e8b018e0fca9506c905a021cb1c101c9a5372156 files/ez-ipupdate-3.0.11_beta8-dnsexit.diff 6721
+SHA256 beb76bd1362bee077d90b67ec8c7251d13b5c08e2d565d8ffb3f000f48a41198 files/ez-ipupdate-3.0.11_beta8-dnsexit.diff 6721
 MD5 a4f8cd6940114080f701918bd00b1800 files/ez-ipupdate-3.0.11_beta8-syslog.patch 300
+RMD160 518a93e2e1add19895cc88a1e88b332db5d04394 files/ez-ipupdate-3.0.11_beta8-syslog.patch 300
+SHA256 d938f6366aa9fd71259f2ad909a0959ddb6160bcfe97d71d2cf0f3adbaece548 files/ez-ipupdate-3.0.11_beta8-syslog.patch 300
 MD5 a86f6c45f48dc904e4d9a9447226889e files/ez-ipupdate.initd 2658
+RMD160 ad64a1c9c0f8dc86488abc793c0cf329946472ef files/ez-ipupdate.initd 2658
+SHA256 dbbb4db796fb2f7972a843f5420d2bc25dc18d3a175aed048f3fbea69649f7a9 files/ez-ipupdate.initd 2658
 MD5 cce1451ebc90d2c8a8068f6fe7d7a875 files/ez-ipupdate.rc6 1226
+RMD160 c1620048a471f4b721acf44bb5b5899b336f27a1 files/ez-ipupdate.rc6 1226
+SHA256 cbf7934f767fddd4cb8a49e632f56fc05769a0c352cadee03552b7f64ce4aec4 files/ez-ipupdate.rc6 1226
 MD5 414df12ae436dd1300fe77e5549da485 metadata.xml 497
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDXbCVj5H05b2HAEkRAuM0AKCihYTE+aib6fn9NW1SU4bi1XJBcACfecp7
-o15EGWjyJiL3B2tcdKjno7E=
-=snYT
------END PGP SIGNATURE-----
+RMD160 92b0aae309f59fbe7ae0c6359355aa2abf0308a9 metadata.xml 497
+SHA256 9d9ae7d8782c5eedfef88238baa233c1c2ed7c6832ba7ed6a6328bddf41699ba metadata.xml 497
