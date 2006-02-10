@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.4.2.ebuild,v 1.9 2005/02/11 07:11:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.4.2.ebuild,v 1.10 2006/02/10 19:15:10 liquidx Exp $
 
 inherit gnome2
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 alpha ppc amd64 ppc64 ~sparc"
 
-DEPEND="virtual/x11
-	|| ( >=app-i18n/scim-0.9.8 >=app-i18n/scim-cvs-0.9.8 )"
+DEPEND="|| ( >=app-i18n/scim-0.9.8 >=app-i18n/scim-cvs-0.9.8 )"
 
 SCROLLKEEPER_UPDATE="0"
 G2CONF="--disable-static"
