@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/heap-buddy/heap-buddy-0.1.ebuild,v 1.1 2005/12/22 09:23:23 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/heap-buddy/heap-buddy-0.1.ebuild,v 1.2 2006/02/10 05:41:06 latexer Exp $
+
+inherit mono
 
 DESCRIPTION="Heap profile for use with the mono .NET runtime"
 HOMEPAGE="http://www.mono-project.com/"
