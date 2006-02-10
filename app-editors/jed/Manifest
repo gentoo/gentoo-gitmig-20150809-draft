@@ -1,10 +1,34 @@
-MD5 9f05624dd9bbcfd49e19c4dc433cedd1 ChangeLog 3445
-MD5 1451826d37dc5678b29430bb5ee8d0c6 jed-0.99.16-r1.ebuild 2021
-MD5 b04cb3b8dc30a74787b77690d780d7c4 jed-0.99.16-r2.ebuild 2313
-MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 6ecd48789e4a99f0f3725102b42f4297 files/digest-jed-0.99.16-r1 64
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7bfeeca274fc08a3206f382b49fc5609 ChangeLog 3563
+RMD160 bb8bc1b940646d36161401da86054c8366b2b0f2 ChangeLog 3563
+SHA256 b5c34483f14a698c45fa4671166292468be9db56df07a2b5ac4dce04c0f9d5c5 ChangeLog 3563
 MD5 6ecd48789e4a99f0f3725102b42f4297 files/digest-jed-0.99.16-r2 64
+RMD160 40b3418bc7c37d248dfa2e6f42055147334e63c9 files/digest-jed-0.99.16-r2 64
+SHA256 6789514c0a729be613476f30eadaf8211dfd634342a7fb72fdaf559f501b43ed files/digest-jed-0.99.16-r2 64
 MD5 6188b28b6d9082938ad8e148bb3c3d89 files/jed-0.99.16-darwin.patch 479
+RMD160 373249f9853dcd8c84d82c261f4b94f82746c324 files/jed-0.99.16-darwin.patch 479
+SHA256 c308d8a9911dc4625b60baad13873ef71eca5cad4be065a231a67f16778c9756 files/jed-0.99.16-darwin.patch 479
 MD5 9ddff99ca56880f5128ffcc4336460fe files/jed-0.99.16-gentoo-shmode.sl 2434
+RMD160 2bd5ebefa0088849ae68abf967629b5dcc7b8f1b files/jed-0.99.16-gentoo-shmode.sl 2434
+SHA256 a26473d613ace535b027d21afeb8986bd334224a898a6867fa7e16e6e66c3c67 files/jed-0.99.16-gentoo-shmode.sl 2434
 MD5 b972e25cececf15ffc9e56d76d9f86a1 files/jed-0.99.16-jed.info.patch 1508
+RMD160 83c29b57ce74d9478f98f43b51183a98a64a5d57 files/jed-0.99.16-jed.info.patch 1508
+SHA256 d5a9fb2577ae4c82075d6168fb20d467a8a88de741aae489aa1c1487f9cbb658 files/jed-0.99.16-jed.info.patch 1508
 MD5 57236ca58f912a25d88e6c9520df83a2 files/jed.info.diff 333
+RMD160 05eb299d22391f803ae87c0cf2e2440be7a81e02 files/jed.info.diff 333
+SHA256 1b8e89dc72a1cb47c9b76fed8fcd775be3ffd9c6052c75dd1433af8af1a7d56a files/jed.info.diff 333
+MD5 344cfcffd0b5a6e39195db93b0cd542c jed-0.99.16-r2.ebuild 2489
+RMD160 fbc134aabcd316b98843e3a51d2de7be4b1ace53 jed-0.99.16-r2.ebuild 2489
+SHA256 fde7b75c03df3a1f7ba1c0d71a34f944954c00f07a1b20f0dc72ff9f69e87457 jed-0.99.16-r2.ebuild 2489
+MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+RMD160 fd2bbaf1c19b4ad2d876f02846608907516e2403 metadata.xml 219
+SHA256 f39a99f0777bf9eac2d5a444a392d3b93da834a6de01613747bad25c84637138 metadata.xml 219
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7NMG9ZFPrqoILX8RAnJaAKCLIkiZ2KBLW+s3u2y9AGEHmjRQ5QCg4Q1n
+UOuUYb5jA6vH9ULnf7nFD3E=
+=H0vZ
+-----END PGP SIGNATURE-----

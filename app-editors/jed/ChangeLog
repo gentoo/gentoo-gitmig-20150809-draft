@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jed
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.28 2005/12/04 19:42:13 tgall Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.29 2006/02/10 17:51:48 liquidx Exp $
+
+  10 Feb 2006; Alastair Tse <liquidx@gentoo.org> -jed-0.99.16-r1.ebuild,
+  jed-0.99.16-r2.ebuild:
+  modular X deps
 
   04 Dec 2005; Tom Gall <tgall@gentoo.org> jed-0.99.16-r2.ebuild:
   stable on ppc64
