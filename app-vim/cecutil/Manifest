@@ -1,22 +1,52 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8ffc5c29ffe2b243e20174f70e1241cb ChangeLog 2126
+MD5 d63f6f4f6fac37d9c9b1bc4000f78d84 ChangeLog 2240
+RMD160 269f5bd443a9a9f30566038e5f685818c1e8c948 ChangeLog 2240
+SHA256 a08aeda71d579ba101ec0c7d9d45d298bf34022afe9e0440a34653cff9919725 ChangeLog 2240
+MD5 8584506a3478f040b6f65bb61b2979ba cecutil-14.ebuild 974
+RMD160 57a6ca85832897b37bf2066749e41f766a60afd7 cecutil-14.ebuild 974
+SHA256 9705fe92e3c6bd68aa4239efe5f3dd663673fc8871bd2609ba641742a7ebee06 cecutil-14.ebuild 974
 MD5 ec4d28b20d2c588cb0ecc24ef462bf74 cecutil-3.ebuild 565
+RMD160 20c47c5111452aafd1440f4baa8475c623adf54b cecutil-3.ebuild 565
+SHA256 7d278bbea4c1cdd9ea32e1b03c1f590131ff5985c35fefff97400df111634db2 cecutil-3.ebuild 565
 MD5 1383f904e0d26bd5e20c7524143769d0 cecutil-4.ebuild 974
+RMD160 9cbce72c4841b77a34c7659406b2d9547d594db8 cecutil-4.ebuild 974
+SHA256 9a4023dd7a2bb7efaae9244cebc5bb45c769b8b441c8c16b85cbfdeb4953cf8b cecutil-4.ebuild 974
 MD5 64e9cb8064cc106f8c15368653f4da20 cecutil-6.ebuild 965
+RMD160 7cb4a35c0a571f9fba4b2c3ee040ab9fe677eb00 cecutil-6.ebuild 965
+SHA256 e6dc2363e159e5fb36e0b384e14366078c33947ea095e0a4d5fbd9de841417c5 cecutil-6.ebuild 965
 MD5 c6d1a69d4f353d4d60a0fe0dc8e2e52e cecutil-7.ebuild 964
+RMD160 3bad4217b8f23e36edee704ed84a9c17a46dff43 cecutil-7.ebuild 964
+SHA256 eed8e654634b7cf29e84cb3df48af241facd0a2747e8600e5dd3587673b0c75c cecutil-7.ebuild 964
 MD5 06018fa5ae704df50db7099723f5b9fc cecutil-9.ebuild 973
+RMD160 c1b0cd599be5c5f341f2f0ded025fe9bdf83a6c0 cecutil-9.ebuild 973
+SHA256 55f085786c44f7ffaca61dd7a03308c5795170f0ab5b7926c1a462b64d1e9011 cecutil-9.ebuild 973
+MD5 346ab1107f64b3110756682e3e58b63b files/digest-cecutil-14 229
+RMD160 d3d96f3701dc8cfb069d7b032630fa7d2da7630f files/digest-cecutil-14 229
+SHA256 e0a873ea54d4620591afa5c77958dc5cdabb7d0f33b4562fa390f6b1a2b1e243 files/digest-cecutil-14 229
 MD5 8840159f3e78e32a0a4715e6546ca0b7 files/digest-cecutil-3 60
+RMD160 1751a0283020d40ff2a99043deb2bbb4bb43cf8e files/digest-cecutil-3 60
+SHA256 b6728f896c0dd84e895f7720d92a652a2138bbcbdbda3c53007ddc3b07b468b4 files/digest-cecutil-3 60
 MD5 4e2527502d264bfb0e8aa278c10c9687 files/digest-cecutil-4 60
+RMD160 293b6799fb4c72e30e98d6d0c98955684b8abc9d files/digest-cecutil-4 60
+SHA256 fc975352e35ed6158275a020593edc6d5f3737ab88daade221b83ae50a56b8c1 files/digest-cecutil-4 60
 MD5 e31de25dad603b6273c12659a50cae41 files/digest-cecutil-6 60
+RMD160 b1f7ee18e683313b726dec4a1e9081aa0504c45f files/digest-cecutil-6 60
+SHA256 d3ae233d49e6b67e64e9602489bb9a264440b68028fe471c1135e045ef0eecd7 files/digest-cecutil-6 60
 MD5 8bf09c7dfbc5444aa0d89fe6be4349c2 files/digest-cecutil-7 60
+RMD160 a121021596eaf50b417c11c3dea178f7a0f46d13 files/digest-cecutil-7 60
+SHA256 a66cff95ae681929a447d895e3073a77403ad4b28bba9e86200bc770318aa104 files/digest-cecutil-7 60
 MD5 878b7bebd7f748cc37d71c236fe1ab1f files/digest-cecutil-9 60
+RMD160 b538f6b903621382f36c7e09ccb969f00e9fd7bf files/digest-cecutil-9 60
+SHA256 f9e0f6cbbad6d48a50b03208d4188112536849861100173ea98e053fc07347ca files/digest-cecutil-9 60
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+RMD160 056902f9d0f28cabef8bb53f5a68cab0dd868a06 metadata.xml 250
+SHA256 8dc762ba76cca7056d116ea56f5f1b7ff1f9690d17c42806fc3bcd8421404836 metadata.xml 250
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDRw+wLLFUmVNQ7rkRAnQuAJ9BwQgg79GWOcCK6cvpg4ZRNMqgpACguRW1
-h9Y1PRE0d15RFV1IcdrFjEI=
-=dpR9
+iD8DBQFD7VPsLLFUmVNQ7rkRAqhGAJsGBkaiZXKNf7LBn60xZC1VBDy1iwCeJjTx
+0OomccEvCDU4gnmoEH+7Ku4=
+=UwJf
 -----END PGP SIGNATURE-----
