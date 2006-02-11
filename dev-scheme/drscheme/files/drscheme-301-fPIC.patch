@@ -1,0 +1,64 @@
+diff -uNr plt-orig/collects/make/setup-extension.ss plt/collects/make/setup-extension.ss
+--- plt-orig/collects/make/setup-extension.ss	2006-01-11 04:15:52.000000000 -0500
++++ plt/collects/make/setup-extension.ss	2006-02-10 13:02:05.000000000 -0500
+@@ -191,7 +191,7 @@
+            current-extension-linker-flags 
+            (if is-win?
+                null
+-               (list (format "-L~a/lib" (path->string sys-path))))
++               (list "-fPIC" (format "-L~a/lib" (path->string sys-path))))
+            
+            ;; Add libs for Windows:
+            (with-new-flags
+diff -uNr plt-orig/src/foreign/Makefile.in plt/src/foreign/Makefile.in
+--- plt-orig/src/foreign/Makefile.in	2006-01-11 04:15:20.000000000 -0500
++++ plt/src/foreign/Makefile.in	2006-02-10 13:03:07.000000000 -0500
+@@ -3,7 +3,7 @@
+ srcdir = @srcdir@
+ builddir = @builddir@
+ CC = @CC@
+-CFLAGS = @CFLAGS@ @COMPFLAGS@ @PREFLAGS@ @PROFFLAGS@ @OPTIONS@ @MZOPTIONS@ \
++CFLAGS = @CFLAGS@ @COMPFLAGS@ @PREFLAGS@ @PROFFLAGS@ @OPTIONS@ @MZOPTIONS@ -fPIC \
+          -I$(builddir)/../mzscheme \
+          -I$(srcdir)/../mzscheme/include -I$(srcdir)/../mzscheme/src \
+          -Igcc/libffi/include
+diff -uNr plt-orig/src/mzscheme/dynsrc/Makefile.in plt/src/mzscheme/dynsrc/Makefile.in
+--- plt-orig/src/mzscheme/dynsrc/Makefile.in	2006-01-11 04:15:36.000000000 -0500
++++ plt/src/mzscheme/dynsrc/Makefile.in	2006-02-10 13:03:07.000000000 -0500
+@@ -16,10 +16,10 @@
+ CFLAGS = @CFLAGS@ @COMPFLAGS@ @PREFLAGS@ -I$(builddir)/.. -I$(srcdir)/../include -I$(srcdir)/../src @MZOPTIONS@
+ 
+ dynlib:
+-	$(MAKE) ../mzdyn.o
++	$(MAKE) CFLAGS="$(CFLAGS) -fPIC" ../mzdyn.o
+ 
+ dynlib3m:
+-	$(MAKE) ../mzdyn3m.o
++	$(MAKE) CFLAGS="$(CFLAGS) -fPIC" ../mzdyn3m.o
+ 
+ dynexample:
+ 	$(MAKE) ../dynexmpl.so
+diff -uNr plt-orig/src/mzscheme/gc/Makefile.in plt/src/mzscheme/gc/Makefile.in
+--- plt-orig/src/mzscheme/gc/Makefile.in	2006-01-11 04:15:36.000000000 -0500
++++ plt/src/mzscheme/gc/Makefile.in	2006-02-10 13:03:07.000000000 -0500
+@@ -10,7 +10,7 @@
+ #      	 and runs some tests of collector and cords.  Does not add cords or
+ #	 c++ interface to gc.a
+ # cord/de - builds dumb editor based on cords.
+-ABI_FLAG= 
++ABI_FLAG= -fPIC
+ CC= @CC@ $(ABI_FLAG)
+ CXX= @CXX@ $(ABI_FLAG)
+ AS= @AS@ $(ABI_FLAG)
+diff -uNr plt-orig/src/mzscheme/gc2/Makefile.in plt/src/mzscheme/gc2/Makefile.in
+--- plt-orig/src/mzscheme/gc2/Makefile.in	2006-01-11 04:15:37.000000000 -0500
++++ plt/src/mzscheme/gc2/Makefile.in	2006-02-10 13:03:07.000000000 -0500
+@@ -13,7 +13,7 @@
+ ARFLAGS = @ARFLAGS@
+ RANLIB = @RANLIB@
+ 
+-CPPFLAGS = @PREFLAGS@ @OPTIONS@ @GC2OPTIONS@ @MZOPTIONS@ -I$(builddir)/.. -I$(srcdir)/../include
++CPPFLAGS = @PREFLAGS@ -fPIC @OPTIONS@ @GC2OPTIONS@ @MZOPTIONS@ -I$(builddir)/.. -I$(srcdir)/../include
+ CFLAGS = @CFLAGS@ $(CPPFLAGS) @COMPFLAGS@ @PROFFLAGS@
+ LIBS = @LIBS@
+ 

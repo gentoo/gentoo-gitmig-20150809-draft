@@ -1,6 +1,17 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.6 2006/02/10 21:56:31 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.7 2006/02/11 18:05:27 chutzpah Exp $
+
+*drscheme-301 (11 Feb 2006)
+
+  11 Feb 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/drscheme-301-fPIC.patch, +drscheme-301.ebuild:
+  New version, ebuild has been almost completely rewritten. Fixed up
+  dependencies for modular X. Made generated scripts point to the right
+  installation directory. Install into /usr/lib/drscheme rather than in
+  /usr/share/drscheme. Added USE flags for cairo, png, jpeg, opengl and perl.
+  Added fPIC patch to get it to build on amd64, though on my machine it just
+  segfaults, so not keywording for amd64 yet.
 
   10 Feb 2006; Patrick McLean <chutzpah@gentoo.org> metadata.xml:
   I'm taking over maintainership of this package. I will be posting an updated
