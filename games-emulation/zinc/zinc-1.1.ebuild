@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/zinc-1.1.ebuild,v 1.1 2005/01/28 19:31:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/zinc-1.1.ebuild,v 1.2 2006/02/11 04:02:26 joshuabaergen Exp $
 
 inherit games
 
@@ -14,7 +14,8 @@ KEYWORDS="-* x86"
 IUSE=""
 
 DEPEND="virtual/libc
-	virtual/x11
+	|| ( x11-libs/libXext
+		virtual/x11 )
 	virtual/opengl"
 
 S=${WORKDIR}/zinc
