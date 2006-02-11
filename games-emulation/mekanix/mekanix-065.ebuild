@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mekanix/mekanix-065.ebuild,v 1.5 2004/11/03 00:16:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mekanix/mekanix-065.ebuild,v 1.6 2006/02/11 04:46:30 joshuabaergen Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/x11"
+RDEPEND="|| ( x11-libs/libXpm virtual/x11 )"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
