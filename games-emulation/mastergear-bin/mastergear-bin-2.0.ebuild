@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mastergear-bin/mastergear-bin-2.0.ebuild,v 1.1 2005/05/27 17:00:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mastergear-bin/mastergear-bin-2.0.ebuild,v 1.2 2006/02/11 04:47:53 joshuabaergen Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 IUSE=""
 RESTRICT="nostrip"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( x11-libs/libXext virtual/x11 )
 	sys-libs/zlib"
 
 S=${WORKDIR}
