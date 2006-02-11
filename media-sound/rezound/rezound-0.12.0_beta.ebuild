@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.0_beta.ebuild,v 1.3 2005/09/09 13:19:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.0_beta.ebuild,v 1.4 2006/02/11 05:26:38 joshuabaergen Exp $
 
 inherit eutils
 
@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="16bittmp alsa flac jack nls oss portaudio soundtouch vorbis"
 
-RDEPEND="virtual/x11
-	=sci-libs/fftw-2*
+RDEPEND="=sci-libs/fftw-2*
 	>=x11-libs/fox-1.2.4
 	>=media-libs/audiofile-0.2.3
 	>=media-libs/ladspa-sdk-1.12

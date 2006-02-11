@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.26 2006/01/01 23:49:52 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.27 2006/02/11 05:26:38 joshuabaergen Exp $
+
+  11 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  rezound-0.12.0_beta.ebuild, rezound-0.12.2_beta.ebuild:
+  Fix dependencies for modular X (bug #121632, Vinícius Dias dos Santos).
 
 *rezound-0.12.2_beta (01 Jan 2006)
 
