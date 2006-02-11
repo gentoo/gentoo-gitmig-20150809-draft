@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/gnusim8085-1.2.89.ebuild,v 1.7 2005/10/09 09:58:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/gnusim8085-1.2.89.ebuild,v 1.8 2006/02/11 05:31:57 joshuabaergen Exp $
 inherit eutils
 
 DESCRIPTION="A GTK2 8085 Simulator"
@@ -15,8 +15,7 @@ IUSE="nls"
 DEPEND=">=x11-libs/gtk+-2.0
 	>=gnome-base/libgnomeui-2.0
 	nls? ( >=sys-devel/gettext-0.10.40 )"
-DEPEND="${DEPEND}
-	virtual/x11"
+DEPEND="${DEPEND}"
 
 S=${WORKDIR}/GNUSim8085-${PV}
 
