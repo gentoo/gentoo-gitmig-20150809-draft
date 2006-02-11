@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-gsx-console/vmware-gsx-console-3.2.0.14497.ebuild,v 1.1 2006/02/11 21:27:28 mattm Exp $
-MY_PN="VMware-gsx-server-linux-client"
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-gsx-console/vmware-gsx-console-3.2.0.14497.ebuild,v 1.2 2006/02/11 21:36:18 mattm Exp $
+MY_PN="VMware-console"
 MY_PV=${PV%.*}-${PV##*.}
 MY_P="${MY_PN}-${MY_PV}"
-FN="${MY_P}.zip"
+FN="${MY_P}.tar.gz"
 S="${WORKDIR}/vmware-console-distrib"
 
 DESCRIPTION="VMware GSX Console for Linux"
