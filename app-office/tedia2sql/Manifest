@@ -1,4 +1,14 @@
-MD5 1345e32672a436955f79fd16b6e6f066 ChangeLog 598
-MD5 5e5ea1b731cfe3b4ff2db4581eab0fdf tedia2sql-1.2.8.ebuild 818
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cc6e302a686753ce09d9d3aafc7f6afa ChangeLog 719
 MD5 b7216ba0bec6c1dedf761cd7e98d8bfb files/digest-tedia2sql-1.2.8 64
 MD5 b4240fe6e788b7ed6a160bc21f254664 files/tedia2sql-gentoo.patch 664
+MD5 e3c795cb27dc5ff9f677b3d425111bde tedia2sql-1.2.8.ebuild 825
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD7lZDtG5z4I8BtQoRAkkqAJ4x3cVhRV8Ao+0uctq8SH0HKKCQDQCeK3up
+RUgp3cejMiLQNrBUhasmCVs=
+=v9Ko
+-----END PGP SIGNATURE-----
