@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.21.ebuild,v 1.2 2006/01/22 17:20:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.23.ebuild,v 1.1 2006/02/11 14:56:15 tove Exp $
 
 inherit toolchain-funcs multilib
 
@@ -25,7 +25,7 @@ src_unpack() {
 	cd "${S}"
 	sed -i 's/^#define DEF_FONT.*/#define DEF_FONT "fixed"/' evilwm.h \
 		|| die "sed font failed"
-	sed -i '/^CFLAGS/s/ -Os / /' Makefile || die "sed opt failed"
+	sed -i '/^CFLAGS/s/ -Os/ /' Makefile || die "sed opt failed"
 }
 
 src_compile() {
@@ -40,4 +40,7 @@ src_install () {
 	echo -e "#!/bin/sh\n/usr/bin/${PN}" > "${T}/${PN}"
 	exeinto /etc/X11/Sessions
 	doexe "${T}/${PN}" || die "/etc/X11/Sessions failed"
+
+	insinto /usr/share/xsessions
+	doins "${FILESDIR}/${PN}.desktop" || die "${PN}.desktop failed."
 }
