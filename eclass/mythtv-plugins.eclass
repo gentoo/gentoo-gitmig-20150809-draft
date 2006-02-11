@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.9 2005/08/23 14:55:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.10 2006/02/11 16:31:53 caleb Exp $
 #
 # Author: Doug Goldstein <cardoe@gentoo.org
 #
@@ -65,7 +65,7 @@ mythtv-plugins_src_compile() {
 
 	econf ${myconf} ${MTVCONF}
 
-	${QTDIR}/bin/qmake -o "Makefile" mythplugins.pro || die "qmake failed to run"
+	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake -o "Makefile" mythplugins.pro || die "qmake failed to run"
 	emake || die "make failed to compile"
 }
 
