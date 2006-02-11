@@ -1,13 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 efe331565ae8522f12e048d0cbe86ffe ChangeLog 974
+MD5 ee3a9c2c70dba30c3937d828768edaa3 ChangeLog 1124
+RMD160 e9382a7c73acfb7c919ab7f28cbaf0689b88bb6f ChangeLog 1124
+SHA256 b777a36488c25694a0603168b645caf5a0d890efd61d5c6c492e92ea1e0c0bdf ChangeLog 1124
 MD5 73f2d6ece5276b5eed4f6dd791a61a11 files/digest-icon-slicer-0.3 67
-MD5 c4c87d586590e57777d0891c5bf06ba4 icon-slicer-0.3.ebuild 663
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDxUuOKRy60XGEcJIRAtZ8AKCekWlJ3+Akuic1fqhDD/ELWcgLWACghH7k
-grp0/+u282zkjyE7b1ZkSaY=
-=j1EH
------END PGP SIGNATURE-----
+RMD160 28a9934fb545a810ba7799454547fc057c3f875b files/digest-icon-slicer-0.3 67
+SHA256 060ca09cab40c53545cf09235e4ff4b06beb695005c90edf4bd0aab44f28ffc7 files/digest-icon-slicer-0.3 67
+MD5 41ab0bee2cbd5e18393f56cc29e8fa0c icon-slicer-0.3.ebuild 711
+RMD160 6c5fe6eafd6c8548255834dce1451920a518ab4d icon-slicer-0.3.ebuild 711
+SHA256 007419bfc914158aaa8dc6c22dacc05a66193ebeba0977d4604ef0381b050ad1 icon-slicer-0.3.ebuild 711
