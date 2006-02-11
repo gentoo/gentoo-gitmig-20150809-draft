@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.39 2006/02/11 00:14:50 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.40 2006/02/11 09:58:59 tove Exp $
 
   11 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   -xlockmore-5.17-r1.ebuild:
@@ -21,7 +21,7 @@
   21 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> xlockmore-5.19.ebuild:
   Stable on ppc.
 
-  25 Dec 2005; Diego PettenĂ˛ <flameeyes@gentoo.org> xlockmore-5.19.ebuild:
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> xlockmore-5.19.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
@@ -180,14 +180,14 @@
   New version available fixes a problem some users were having with xlock
   looking for an image in a redhat subdir and crashing back to X (making
   it a BIT less effective as a locker).
-  
+
   xglock appears to be integrated into xlock now, and xmlock does appear 
   to build successfully.
 
 *xlockmore-5.03-r5 (24 Apr 2002)
 
   3 Jun 2002; Brandon Low <lostlogic@gentoo.org> xlockmore-5.03-r5.ebuild :
-  
+
   Doesn't warrant a new revision just a fix for people with USE=-opengl
   ensures that it doesn't try to use any existing opengl libraries.  
 
