@@ -1,0 +1,14 @@
+# ChangeLog for app-emulation/vmware-gsx-console
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-gsx-console/ChangeLog,v 1.1 2006/02/11 21:27:28 mattm Exp $
+
+  11 Feb 2006; Matthew Marlowe <mattm@gentoo.org> +files/99vmware-console,
+  +metadata.xml, +vmware-gsx-console-3.2.0.14497.ebuild:
+  repoman fixes.
+
+*vmware-gsx-console-3.2.0.14497 (11 Feb 2006)
+
+  11 Feb 2006; Matthew Marlowe <mattm@gentoo.org> +files/99vmware-console,
+  +metadata.xml, +vmware-gsx-console-3.2.0.14497.ebuild:
+  initial commit of new gsx console release.
+
