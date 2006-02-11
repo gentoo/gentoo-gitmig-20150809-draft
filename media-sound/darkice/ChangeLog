@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/darkice
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.20 2005/12/26 15:19:19 lu_zero Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.21 2006/02/11 18:44:44 chutzpah Exp $
+
+*darkice-0.17 (11 Feb 2006)
+
+  11 Feb 2006; Patrick McLean <chutzpah@gentoo.org> +darkice-0.17.ebuild:
+  Version bump.
 
   26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> darkice-0.14.ebuild:
   oggvorbis Cleanup
