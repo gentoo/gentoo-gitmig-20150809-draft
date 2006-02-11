@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.78 2006/02/08 01:17:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.79 2006/02/11 16:45:30 flameeyes Exp $
+
+  11 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/e2fsprogs-1.38-libintl.patch, e2fsprogs-1.38-r1.ebuild:
+  Add patch to fix libintl linkage on non-glibc systems. Bug #122368.
 
   08 Feb 2006; Mike Frysinger <vapier@gentoo.org>
   +files/e2fsprogs-1.38-tests-locale.patch, e2fsprogs-1.38-r1.ebuild:

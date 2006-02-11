@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 20410584ba6fc1173e76935140e29a72 ChangeLog 13593
-RMD160 9a8e0488a5fd41f5ae63eb8f2f4db9797fc6a661 ChangeLog 13593
-SHA256 d9feb05f375c15cb2570d454cd6e0233f8f31f4f7f8993e67f7a051b511828cd ChangeLog 13593
-MD5 3d130ba3c8078e4124e5a27e419aa164 e2fsprogs-1.38-r1.ebuild 3948
-RMD160 06baf5a99abf05469a50e1e8138b16a8770d483a e2fsprogs-1.38-r1.ebuild 3948
-SHA256 c2bf59a1f4aacae0be66438025425480ef2a169915b442d80518b5a5423b298c e2fsprogs-1.38-r1.ebuild 3948
+MD5 0dcacb3de380b8ad3514316d3e398ccb ChangeLog 13785
+RMD160 2c65d1acf21729cb76e9232818c74ac82fa002b9 ChangeLog 13785
+SHA256 9b1428b0848afd8689ddd469338d216ef8f00d8f12ea870412ea99ac2349a3fb ChangeLog 13785
+MD5 e4a50606a991884aa40c416feb2fec6b e2fsprogs-1.38-r1.ebuild 4066
+RMD160 ffd261ba983a5f82aedfe04b0928a1de568d7940 e2fsprogs-1.38-r1.ebuild 4066
+SHA256 561f35c2680e310c2d4486aeaa53780270d61537270f7ff3d9a974ab49bb88df e2fsprogs-1.38-r1.ebuild 4066
 MD5 d73f86d05b5b726d16729639ccaa33b9 e2fsprogs-1.38.ebuild 3688
 RMD160 c50b9cdfee374cd63f4a14cbdb9ed0c02a1d3e72 e2fsprogs-1.38.ebuild 3688
 SHA256 f2c7420e9b0d1296312b0f27d9d945d68d33791e3aca594a5547b0bc8b687a6f e2fsprogs-1.38.ebuild 3688
@@ -31,6 +31,9 @@ SHA256 423509aa13c0a63438cff5e120dfe2cbcea25211e8a0776a65ff06c7f4fbd673 files/e2
 MD5 e85d057f99af6c980acf9a8697da9dd7 files/e2fsprogs-1.38-disconnected-inodes.patch 2881
 RMD160 67d0fba3c12e88d7f9dadff84d263593e857cc0e files/e2fsprogs-1.38-disconnected-inodes.patch 2881
 SHA256 50f810077d6422848df327535ceeae14d6d91299aca36604fda2b7fbb8d34c17 files/e2fsprogs-1.38-disconnected-inodes.patch 2881
+MD5 bafe5afeafcb558958527f12baf5c815 files/e2fsprogs-1.38-libintl.patch 470
+RMD160 9104175f1eb21209fe754c9cad0f088ec5161d3d files/e2fsprogs-1.38-libintl.patch 470
+SHA256 ca55f1be5d5dd3d46fcb9d316e63f28ac2cd13c79459644dadf4b6d8b35a3a91 files/e2fsprogs-1.38-libintl.patch 470
 MD5 f199f07604566fda4f2a4dabac83a535 files/e2fsprogs-1.38-tests-locale.patch 656
 RMD160 16c625c16144ed16942fa19988524b7b5727c583 files/e2fsprogs-1.38-tests-locale.patch 656
 SHA256 7d12df7c4f00f1c1c81dcbd74cc0f8c1cffaa3b5089fbaa40222a7a9f2fbe598 files/e2fsprogs-1.38-tests-locale.patch 656
@@ -43,7 +46,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6Uat2+ySkm8kpY0RAl2DAJ9GI0krx+ZESlyVQsxmv5TaVxdoaQCeN980
-iz28H5QPK9cwImBuVPZMLAI=
-=5rME
+iD8DBQFD7hTBAiZjviIA2XgRAmHLAJ0We0BwPnILY7qROq2KPJypBv1EFgCg8lit
+LYAcWy6HCvomp86GJdDYDMk=
+=qKuw
 -----END PGP SIGNATURE-----

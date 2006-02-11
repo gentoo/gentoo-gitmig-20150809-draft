@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38-r1.ebuild,v 1.3 2006/02/08 01:17:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38-r1.ebuild,v 1.4 2006/02/11 16:45:30 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,7 +14,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="nls static"
 
 RDEPEND="~sys-libs/com_err-${PV}
-	~sys-libs/ss-${PV}"
+	~sys-libs/ss-${PV}
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	sys-apps/texinfo"
@@ -36,6 +37,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-blkid-ext23.patch
 	epatch "${FILESDIR}"/${P}-blkid-swsuspend.patch
 	epatch "${FILESDIR}"/${P}-vfat-labels.patch
+
+	# Fixes libintl handling on non-glibc #122368
+	epatch "${FILESDIR}/${P}-libintl.patch"
 
 	# kernel headers use the same defines as e2fsprogs and can cause issues #48829
 	sed -i \
