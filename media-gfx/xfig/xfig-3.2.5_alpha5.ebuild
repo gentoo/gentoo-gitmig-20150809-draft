@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5_alpha5.ebuild,v 1.1 2005/09/24 21:31:55 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5_alpha5.ebuild,v 1.2 2006/02/11 16:36:56 joshuabaergen Exp $
 
 inherit eutils
 
@@ -16,13 +16,20 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libXaw
+				x11-libs/libXp )
+			virtual/x11 )
 	x11-libs/Xaw3d
 	media-libs/jpeg
-	media-libs/libpng"
-RDEPEND="${DEPEND}
+	media-libs/libpng
 	media-gfx/transfig
 	media-libs/netpbm"
+DEPEND="${RDEPEND}
+	|| ( ( x11-misc/imake
+			app-text/rman
+			x11-proto/xproto
+			x11-proto/inputproto )
+		virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}

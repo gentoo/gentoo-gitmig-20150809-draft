@@ -1,22 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8b153641544ec3f5eb5295db344859b2 ChangeLog 3408
+MD5 691247535fd61e7f04d97898b6b8915d ChangeLog 3517
+RMD160 64e4e8f971a82ae1257b2dc20593df8cea0b4184 ChangeLog 3517
+SHA256 eec1080caf68767ef8ca382c7f924c3ba17576e3769704c6fbf291e78ddf3d94 ChangeLog 3517
 MD5 410ddf8ebcca6c2714f820d737f136c0 files/digest-xfig-3.2.4-r1 137
+RMD160 7a86789f33641243af130d8c67d376303a3ac3da files/digest-xfig-3.2.4-r1 137
+SHA256 2fcc2152f88681d6ae9b245d692ca375c51e551ab8e69b36f738448abe7a39dc files/digest-xfig-3.2.4-r1 137
 MD5 4b1ad5e5e2087452ce25723ececb2708 files/digest-xfig-3.2.4-r2 215
+RMD160 19cec7bbac58b99c2c245c5246bc786ce1b7e59c files/digest-xfig-3.2.4-r2 215
+SHA256 0e8640685e53181e9e76e3439f0f2784e8ed380c3ab5b1833dabbf92536817ab files/digest-xfig-3.2.4-r2 215
 MD5 b30d1a2b0c6ce802248a2605e13356df files/digest-xfig-3.2.5_alpha5 75
+RMD160 8dd1a1b2aea97ba5c5f8c3a0b67f7aed7bab95ea files/digest-xfig-3.2.5_alpha5 75
+SHA256 a43799ae58415ae8e855c438679bffccf6408fd5f105239a9182c302a7140b01 files/digest-xfig-3.2.5_alpha5 75
 MD5 545bf10fe67a90dcb8736b281d6fdf3f files/xfig-3.2.4-gcc4.patch 930
+RMD160 3ebcb885236fa30fa03f48993afe87bf506bc597 files/xfig-3.2.4-gcc4.patch 930
+SHA256 7d2cb16c5e5d6cf446034b11c37de15ab0ec748a7ab8546cd28241679561265e files/xfig-3.2.4-gcc4.patch 930
 MD5 1d27cd35de86081aa824a8f837f14745 files/xfig-3.2.4-xaw3d.diff 465
+RMD160 6deba42780b5566e3b7ec54cab52dd5e9f2b1da9 files/xfig-3.2.4-xaw3d.diff 465
+SHA256 3480ef92e96101ce7e3b61a3054ec8db674755564ae1707385fed669b4975d31 files/xfig-3.2.4-xaw3d.diff 465
 MD5 beb83fd8cd3423aeffdc3858a633852d files/xfig-3.2.5_alpha5-gentoo.diff 2110
+RMD160 c6e6dc7963dcceb685c231a74c50091ab6ec3e63 files/xfig-3.2.5_alpha5-gentoo.diff 2110
+SHA256 fc085078d7f67fc829016ce00e9787e657f35254428c219f1d0f6763a830f19e files/xfig-3.2.5_alpha5-gentoo.diff 2110
 MD5 65da21fda4fd5353fa3d7f421982af99 files/xfig-3.2.5_alpha5-xaw3d.diff 456
+RMD160 1e3e8808e4d5b3b585b90af9759219f1ab8235e1 files/xfig-3.2.5_alpha5-xaw3d.diff 456
+SHA256 ed32ad21d6640871a4f4858facade73c83a1eb39a2c893124d54ba1ab0d941a6 files/xfig-3.2.5_alpha5-xaw3d.diff 456
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 05da0d580f50e46c60ddb6c915310a51 xfig-3.2.4-r1.ebuild 1063
-MD5 a1589a1471b7f7ccf79a818e35f6f6ee xfig-3.2.4-r2.ebuild 1415
-MD5 06dd79b318ab2b565d7844f664c4b9bd xfig-3.2.5_alpha5.ebuild 1202
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmJpantT9W3vfTuoRAhqOAKCKhKyqF7kbW7FPw14kA0+mROugjwCgkuzt
-q5rsYx566+8J6msG7kDvxuI=
-=S/uE
------END PGP SIGNATURE-----
+RMD160 5b59fc85d3bafae0872cf691e5f032bac39ba539 metadata.xml 310
+SHA256 39e1273dd60bd3ceb460e9366a648c8fa21db1c292df4573e69f41cf6c84f6fc metadata.xml 310
+MD5 3fab77205b21ef9b26caa586a7930686 xfig-3.2.4-r1.ebuild 1221
+RMD160 12b2c156cd87f9cc46577a387e7bfa9c6ec5cabc xfig-3.2.4-r1.ebuild 1221
+SHA256 710220aaf5db9c459f7ddefbf3e2da97afb6a649022588588fc14eeaf51590d3 xfig-3.2.4-r1.ebuild 1221
+MD5 3b79730f32575e9420f2ef28f1dbd9e4 xfig-3.2.4-r2.ebuild 1575
+RMD160 532ab8377d51b3375c6f04a265a7657157f7a803 xfig-3.2.4-r2.ebuild 1575
+SHA256 248f70619e5986b7690b85d77e0520090d81b3d541906d8d8a53e79a0169ce60 xfig-3.2.4-r2.ebuild 1575
+MD5 d11ea5bd0a4a96604ff0a620e51745ef xfig-3.2.5_alpha5.ebuild 1357
+RMD160 b6755d767888d77ccb0e6d438684cf96ac2419aa xfig-3.2.5_alpha5.ebuild 1357
+SHA256 1bea234c9ab2afef12ea1016f9bc5aa5c14bf9c7b3e98b2111d651794a010952 xfig-3.2.5_alpha5.ebuild 1357
