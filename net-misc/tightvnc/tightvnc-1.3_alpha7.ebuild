@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.6 2005/12/17 23:16:29 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.7 2006/02/11 22:01:23 morfic Exp $
 
 inherit eutils toolchain-funcs
 
@@ -56,6 +56,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-imake-tmpdir.patch
 	epatch ${FILESDIR}/x86.patch
 	epatch "${FILESDIR}/${P}"-darwin.patch
+	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
 }
 
 src_compile() {
