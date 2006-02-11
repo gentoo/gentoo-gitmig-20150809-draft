@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.12 2006/02/05 14:39:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.13 2006/02/11 04:44:27 joshuabaergen Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-RDEPEND="amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.2-r7 )"
-DEPEND="${RDEPEND}
-	virtual/x11"
+RDEPEND="amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.2-r7 )
+	|| ( x11-libs/libX11 virtual/x11 )"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}
 

@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 921b93a218121002e0722828445e9833 mastergear-bin-2.0.ebuild 686
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 4f9cfb39e0825acf679440e9fb256e2e ChangeLog 547
+MD5 7142d99aec4dd7e02ff3aa9d7471757d ChangeLog 700
+RMD160 3b1e844ca2ae0d59220bfddb313f3382bc7e93c6 ChangeLog 700
+SHA256 efc7663b39192f1e00de6545d6bdb74010322cfff2f2b63a4bf9a7d7f7cf303c ChangeLog 700
 MD5 0fdf539b2a89437331e088388194f1c4 files/digest-mastergear-bin-2.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK0LNLLFUmVNQ7rkRAoPFAJ9ry+JBDN6TILTiX6q7CrdDFsJ78QCfZ0kS
-6r4+I3jXgBWkRFpdujY97q4=
-=/AXf
------END PGP SIGNATURE-----
+RMD160 3dde2532ad17b5b6ff26034ab1f37ec3f7140578 files/digest-mastergear-bin-2.0 71
+SHA256 cde53b0f68bdf55e8eba58b375ad4f847ab19517136ffe4cc22e60aaec8d14b2 files/digest-mastergear-bin-2.0 71
+MD5 3097c40394e7c3d51e539c0f96550bf6 mastergear-bin-2.0.ebuild 714
+RMD160 627715c26665a785addd5a9ee485ac0f071c9560 mastergear-bin-2.0.ebuild 714
+SHA256 4c836b0e506bc387d1d9a123f5cac5d23fdcd7f4cf34b3b1d5e2e480f2e0508e mastergear-bin-2.0.ebuild 714
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
