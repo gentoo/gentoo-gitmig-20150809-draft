@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/peksystray
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.11 2005/08/07 13:39:51 hansmi Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.12 2006/02/11 11:22:28 nelchael Exp $
+
+  11 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/peksystray-gcc3-mlsl.diff, -peksystray-0.2.ebuild,
+  peksystray-0.2.1.ebuild:
+  Fixed DEPEND for modular X.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   peksystray-0.2.1.ebuild:
