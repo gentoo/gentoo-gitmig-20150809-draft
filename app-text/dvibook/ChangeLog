@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvibook
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvibook/ChangeLog,v 1.6 2006/02/11 04:26:00 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvibook/ChangeLog,v 1.7 2006/02/11 15:17:42 joshuabaergen Exp $
+
+  11 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  dvibook-20001129.ebuild:
+  rman is in app-text, not x11-misc! (Ulrich Mueller)
 
   11 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   dvibook-20001129.ebuild:
