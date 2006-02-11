@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/misterhouse/misterhouse-2.99.ebuild,v 1.2 2006/01/13 17:53:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/misterhouse/misterhouse-2.99.ebuild,v 1.3 2006/02/11 21:22:25 mcummings Exp $
 
 
 DESCRIPTION="Mister House, an open source home automation program with X10 support"
@@ -21,9 +21,9 @@ RDEPEND="dev-lang/perl
 	|| ( app-accessibility/festival
 		app-accessibility/flite )
 	dev-perl/GD
-	perl-core/DB_File
+	virtual/perl-DB_File
 	dev-perl/TermReadKey
-	perl-core/Time-HiRes
+	virtual/perl-Time-HiRes
 	dev-perl/Audio-Mixer
 	dev-perl/Text-LevenshteinXS"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.1.ebuild,v 1.4 2005/11/28 12:09:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.1.ebuild,v 1.5 2006/02/11 21:23:59 mcummings Exp $
 
 inherit perl-app
 
@@ -16,7 +16,7 @@ IUSE="crypt dbm general mysql text"
 # inherit perl-app cause depend on dev-lang/perl
 DEPEND="dev-perl/TermReadKey
 	dev-perl/Term-ReadLine-Perl
-	perl-core/Storable
+	virtual/perl-Storable
 	dev-perl/config-general
 	crypt? ( dev-perl/crypt-cbc dev-perl/Crypt-Blowfish dev-perl/Crypt-DES )
 	mysql? ( dev-db/mysql dev-perl/DBD-mysql )"
