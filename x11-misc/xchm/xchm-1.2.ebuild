@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.2.ebuild,v 1.1 2005/10/31 22:14:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.2.ebuild,v 1.2 2006/02/11 13:44:15 nelchael Exp $
 
 inherit eutils wxwidgets
 
@@ -16,6 +16,15 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc unicode"
 DEPEND=">=app-doc/chmlib-0.31
 	>=x11-libs/wxGTK-2.6.0"
+
+src_unpack() {
+
+	unpack "${A}"
+
+	# Fixes bug #117798:
+	epatch "${FILESDIR}/${PN}-gcc41.patch"
+
+}
 
 src_compile() {
 	local myconf
