@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/kugar-1.5_beta1.ebuild,v 1.2 2006/02/09 20:46:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/kugar-1.5_beta1.ebuild,v 1.3 2006/02/11 16:46:46 carlo Exp $
 
 KMNAME=koffice
 MAXKOFFICEVER=${PV}
@@ -24,6 +24,7 @@ KMCOPYLIB="
 	libkofficecore lib/kofficecore
 	libkofficeui lib/kofficeui
 	libkopainter lib/kopainter
+	libkoproperty lib/koproperty
 	libkotext lib/kotext
 	libkwmf lib/kwmf
 	libkowmf lib/kwmf
