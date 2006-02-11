@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 02b8d6c90ee1d15d2e5d5157cbb8574a ChangeLog 5370
+MD5 64f7f25a122c3c3a221ea55fa6575a6b ChangeLog 5519
 MD5 892b30d2bab4ab965453b5bef89cfecb files/digest-mrtg-2.11.1 64
-MD5 3504978d284268fb850a17a8e72ea037 files/digest-mrtg-2.12.1 64
 MD5 26ac2190042c1cb4fec97a5370c0803d files/digest-mrtg-2.12.2 64
+MD5 ea4297adc6573cff7dc97644a81f6934 files/digest-mrtg-2.13.2 64
 MD5 a8d246d324b90fd1e37cc912d4651372 files/mrtg.confd 512
 MD5 aff06f9e2832b17c9c558a58472a3091 files/mrtg.rc 1284
 MD5 9683bb7323c40d69b48d54ad0eb169ed metadata.xml 221
 MD5 68c9f31189efe33ed1abae27bad06d29 mrtg-2.11.1.ebuild 1188
-MD5 17c12067590b47925e3c86bf37a4f62b mrtg-2.12.1.ebuild 1194
 MD5 0627b007d5ef2734fd5ac813dcd6e346 mrtg-2.12.2.ebuild 1198
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFDi8lxgIKl8Uu19MoRAnfZAJjI7sxQAfkMRPkHp7F1uaN3cTz4AJ4nMMjC
-gUkx+I42VntMrTz2IQIu5g==
-=jFkM
------END PGP SIGNATURE-----
+MD5 e0d5a7fb2111e708d91dae2c142d262f mrtg-2.13.2.ebuild 1202
