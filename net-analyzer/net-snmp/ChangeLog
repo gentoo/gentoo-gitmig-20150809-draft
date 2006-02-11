@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.134 2006/02/05 01:38:42 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.135 2006/02/11 19:46:31 vanquirius Exp $
+
+*net-snmp-5.2.2-r3 (11 Feb 2006)
+
+  11 Feb 2006; Marcelo Goes <vanquirius@gentoo.org>
+  -net-snmp-5.2.2-r2.ebuild, +net-snmp-5.2.2-r3.ebuild,
+  net-snmp-5.3.0.1.ebuild:
+  Install example configuration file for bug 113788. Thanks to Allen Parker
+  <infowolfe at gmail dot com>.
 
 *net-snmp-5.2.2-r2 (05 Feb 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.2-r2.ebuild,v 1.1 2006/02/05 01:38:42 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.2-r3.ebuild,v 1.1 2006/02/11 19:46:31 vanquirius Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -169,4 +169,13 @@ src_install () {
 		find "${D}" -name '*.pl' -exec rm -f '{}' \;
 		use ipv6 || rm -rf "${D}"/usr/share/snmp/mibs/IPV6*
 	fi
+
+	# bug 113788, install example config
+	insinto /etc/snmp
+	newins "${S}"/EXAMPLE.conf snmpd.conf.example
+}
+
+pkg_postinst() {
+	einfo "An example configuration file has been installed in"
+	einfo "/etc/snmp/snmpd.conf.example."
 }
