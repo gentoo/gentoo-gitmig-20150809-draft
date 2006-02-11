@@ -1,0 +1,12 @@
+diff -Nru xvidcap-1.1.3.vanilla/src/colors.h xvidcap-1.1.3/src/colors.h
+--- xvidcap-1.1.3.vanilla/src/colors.h	2006-02-07 13:42:19.000000000 +0100
++++ xvidcap-1.1.3/src/colors.h	2006-02-07 14:00:35.000000000 +0100
+@@ -37,7 +37,7 @@
+ 	unsigned long blue_bit_depth;
+ 	unsigned long alpha_bit_depth;
+ 
+-	unsigned long alpha_mask;
++	u_int32_t alpha_mask;
+ } ColorInfo;
+ 
+ void GetColorInfo (XImage *image, ColorInfo *return_struct);

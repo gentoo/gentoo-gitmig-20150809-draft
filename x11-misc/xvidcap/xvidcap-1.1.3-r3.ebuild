@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.3-r2.ebuild,v 1.2 2006/01/21 17:36:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.3-r3.ebuild,v 1.1 2006/02/11 00:20:27 nelchael Exp $
 
 inherit eutils
 
@@ -48,6 +48,9 @@ src_unpack() {
 
 	# Fix bug #115675
 	epatch "${FILESDIR}/${P}-new-ffmpeg.patch"
+
+	# Fix bug #120551
+	epatch "${FILESDIR}/${P}-alpha_mask.patch"
 }
 
 src_compile() {
