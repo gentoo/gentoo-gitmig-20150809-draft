@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mekanix
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mekanix/ChangeLog,v 1.6 2006/02/11 04:46:30 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mekanix/ChangeLog,v 1.7 2006/02/11 19:47:35 wolf31o2 Exp $
+
+  11 Feb 2006; Chris Gianelloni <wolf31o2@gentoo.org> -mekanix-065.ebuild,
+  mekanix-070.ebuild:
+  Added media-libs/libpng to RDEPEND and closing bug #121693.
 
   11 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org> mekanix-065.ebuild,
   mekanix-070.ebuild:
