@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/mod_vhost_ldap-1.0.ebuild,v 1.1 2006/02/09 21:22:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/mod_vhost_ldap-1.0.0.ebuild,v 1.1 2006/02/11 14:39:54 jokey Exp $
 
 inherit eutils apache-module
 
 DESCRIPTION="An Apache2 DSO for storing and configuring virtual hosts from LDAP"
 HOMEPAGE="http://alioth.debian.org/projects/modvhostldap/"
-SRC_URI="http://alioth.debian.org/download.php/1192/${P}.tar.bz2"
+SRC_URI="http://alioth.debian.org/download.php/1422/${P}.tar.bz2"
+# Attention: 1422 captures 1.0 download content!!!!
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,12 +34,6 @@ pkg_setup () {
 	fi
 }
 
-src_unpack () {
-	unpack ${A}
-	#rename crappy dir versioning
-	mv ${S}/mod-vhost-ldap-0.2.9 ${SRCDIR}
-}
-
 src_compile () {
 	cd ${APXS2_S}
 	sed -i s/MOD_VHOST_LDAP_VERSION/\"`cat VERSION`\"/g mod_vhost_ldap.c
@@ -54,7 +49,7 @@ src_install () {
 pkg_postinst () {
 	einfo
 	einfo "To enable ${PN}, you need to edit your /etc/conf.d/apache2 file and"
-	einfo "add '-D ${APACHE2_MOD_DEFINE}' to APACHE2_OPTS."
+	einfo "add '-D ${APACHE2_MOD_DEFINE}' and -D LDAP to APACHE2_OPTS."
 	einfo
 	einfo "Configuration file installed as"
 	einfo "    ${APACHE2_MODULES_CONFDIR}/$(basename ${APACHE2_MOD_CONF}).conf"
