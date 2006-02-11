@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.19.ebuild,v 1.3 2006/01/21 14:18:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.19.ebuild,v 1.4 2006/02/11 00:14:50 nelchael Exp $
 
 inherit gnuconfig eutils pam flag-o-matic
 
@@ -14,7 +14,22 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 
-DEPEND="virtual/x11
+RDEPEND="|| ( (
+		media-libs/mesa
+		x11-libs/libX11
+		x11-libs/libXmu
+		x11-libs/libXext
+		x11-libs/libXdmcp
+		x11-libs/libXt
+		x11-libs/libXpm )
+	virtual/x11 )"
+
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xextproto
+		x11-proto/xproto
+		x11-proto/xineramaproto )
+	virtual/x11 )
 	media-libs/freetype
 	opengl? ( virtual/opengl )
 	pam? ( virtual/pam )
