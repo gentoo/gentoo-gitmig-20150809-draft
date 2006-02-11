@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9386ae13eb6a69e5309112ce6dc8dec3 ChangeLog 21730
-RMD160 70e1eeb21689830a89d802a945571bf71d7463a3 ChangeLog 21730
-SHA256 05f3d0e2c4d2643a1a020069ef61bd7c3b6ab20f5ba473141c4fcf5910da9b9d ChangeLog 21730
+MD5 a5796d47050e260c27a0a96d369b4dbd ChangeLog 22001
+RMD160 d85e4bbe5a3a342ead28fee7a8a4892c904d95a0 ChangeLog 22001
+SHA256 7a13196dece71771a366ceaf2863370663410ff943c7f8a98b8e069504500a6f ChangeLog 22001
 MD5 51377e1938cf119bd11972b3c30c0a25 files/desktop_entries/screensaver-properties.desktop 1000
 RMD160 9e331cdba7b943c9e5dc076c3a60e32bf0340111 files/desktop_entries/screensaver-properties.desktop 1000
 SHA256 b2a5d44a6a6463beab7cb1d3b9d9f5613c765b48ce319232517b6097afad1fbd files/desktop_entries/screensaver-properties.desktop 1000
@@ -13,6 +10,9 @@ SHA256 b6bef3cbc05ebbeedf4b2fdf7fd81440b6ed400aed2705da47504564403451fc files/di
 MD5 2dec78c3103e6a62dbcace7dc2d16bf1 files/digest-xscreensaver-4.23-r1 256
 RMD160 b205bfc06fbb52feebef73a04f8771a1d37e9f58 files/digest-xscreensaver-4.23-r1 256
 SHA256 23a3e679d7a3b3ba20e1f2d3ccd27b6a0a6930b1df53fe3b70ffc01e5cd7a1e9 files/digest-xscreensaver-4.23-r1 256
+MD5 2dec78c3103e6a62dbcace7dc2d16bf1 files/digest-xscreensaver-4.23-r2 256
+RMD160 b205bfc06fbb52feebef73a04f8771a1d37e9f58 files/digest-xscreensaver-4.23-r2 256
+SHA256 23a3e679d7a3b3ba20e1f2d3ccd27b6a0a6930b1df53fe3b70ffc01e5cd7a1e9 files/digest-xscreensaver-4.23-r2 256
 MD5 6eb40b28a36f889d0f1919cdbf160ef7 files/pam.d/xscreensaver 79
 RMD160 6d51280f7ad5626c93f43ce2ee2d80b691971990 files/pam.d/xscreensaver 79
 SHA256 53f0ebf0d9c8442c2f513a9a2b8faab71992df4b3475fd1a592f43a0a7dff0c3 files/pam.d/xscreensaver 79
@@ -40,6 +40,9 @@ SHA256 f4c3229eca0ab9b055f1970c66fcb4488ef8f5095d57f0ce11e193a88380dae4 files/xs
 MD5 bd61d24250fdc129cf9b86e154c8c27a files/xscreensaver-4.23-app-defaults.patch 1080
 RMD160 76ef9f99d5f8479621fc4c7a2ea62dad96173804 files/xscreensaver-4.23-app-defaults.patch 1080
 SHA256 02b36425c8c1adda652995ea168db054df7e7cdc78e9a520df47914f2213f95c files/xscreensaver-4.23-app-defaults.patch 1080
+MD5 c6c145b1dd09ca7acf17509a78c1293d files/xscreensaver-4.23-dpms.patch 1800
+RMD160 d9b15e9244b2c28290ff002d352e068a13636d4f files/xscreensaver-4.23-dpms.patch 1800
+SHA256 42ac4a8e2760a5a781e2a069440ada3e7477cbc737d8166034a5775e8ab1fd05 files/xscreensaver-4.23-dpms.patch 1800
 MD5 0ed894eebbc461f9523539a8d273535e files/xscreensaver-4.23-norpm.patch 1775
 RMD160 57cdbe407659219da8a66b59f22695d621f1e338 files/xscreensaver-4.23-norpm.patch 1775
 SHA256 bae37d855e92d48a69e472e450a7aae479e821c45ec05bc91a01a9efe3ef59e4 files/xscreensaver-4.23-norpm.patch 1775
@@ -61,10 +64,6 @@ SHA256 0f7e8846e649507ce432f7dd41537c97a525acbc1749ced6c8b837157f5848e0 xscreens
 MD5 53d146b9c08a5eedc8babd5814a7bc10 xscreensaver-4.23-r1.ebuild 5468
 RMD160 0978ea7d08be4363144746268089c2d4b0f83fba xscreensaver-4.23-r1.ebuild 5468
 SHA256 988ef558e18e69338dd9738665dc46bf49fed5da4d55a2c3fd6557d3a15f9f16 xscreensaver-4.23-r1.ebuild 5468
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD68K+V3J2n04EauwRAkONAJ46QwHS3gzIBXednlBn5LUTEibS2wCcCLrT
-nGKm9qSLkSFPLFE0aXHLFNI=
-=SQRa
------END PGP SIGNATURE-----
+MD5 8af4016eed5abe167b43660724a91daa xscreensaver-4.23-r2.ebuild 5508
+RMD160 47c72cd753b7bf7941eae8ad7ab14a556ffdbce2 xscreensaver-4.23-r2.ebuild 5508
+SHA256 064c7c6ac59f9e545a98aa1fb98e21b9dbafa2196e18f17d23573819e7e946b8 xscreensaver-4.23-r2.ebuild 5508

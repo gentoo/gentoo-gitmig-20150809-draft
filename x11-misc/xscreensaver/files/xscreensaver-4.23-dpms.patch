@@ -1,0 +1,42 @@
+diff -Nru xscreensaver-4.23.vanilla/driver/prefs.c xscreensaver-4.23/driver/prefs.c
+--- xscreensaver-4.23.vanilla/driver/prefs.c	2006-02-11 13:29:49.000000000 +0100
++++ xscreensaver-4.23/driver/prefs.c	2006-02-11 13:31:13.000000000 +0100
+@@ -1583,15 +1583,11 @@
+       p->dpms_off < 10 * 1000)
+     p->dpms_off      = 4 * 60 * 60 * 1000;			 /* 4 hours */
+ 
+-  /* suspend may not be greater than off, unless off is 0.
+-     standby may not be greater than suspend, unless suspend is 0.
++  /* standby may not be greater than suspend.
++     suspend may not be greater than off.
+    */
+-  if (p->dpms_off != 0 &&
+-      p->dpms_suspend > p->dpms_off)
+-    p->dpms_suspend = p->dpms_off;
+-  if (p->dpms_suspend != 0 &&
+-      p->dpms_standby > p->dpms_suspend)
+-    p->dpms_standby = p->dpms_suspend;
++  if (p->dpms_standby > p->dpms_suspend) p->dpms_standby = p->dpms_suspend;
++  if (p->dpms_suspend > p->dpms_off)     p->dpms_suspend = p->dpms_off;
+ 
+ 
+   if (p->dpms_standby == 0 &&	   /* if *all* are 0, then DPMS is disabled */
+diff -Nru xscreensaver-4.23.vanilla/driver/timers.c xscreensaver-4.23/driver/timers.c
+--- xscreensaver-4.23.vanilla/driver/timers.c	2006-02-11 13:29:49.000000000 +0100
++++ xscreensaver-4.23/driver/timers.c	2006-02-11 13:31:56.000000000 +0100
+@@ -332,15 +332,6 @@
+ 
+   si->last_activity_time = time ((time_t *) 0);
+ 
+-  /* This will (hopefully, supposedly) tell the server to re-set its
+-     DPMS timer.  Without this, the -deactivate clientmessage would
+-     prevent xscreensaver from blanking, but would not prevent the
+-     monitor from powering down. */
+-  XForceScreenSaver (si->dpy, ScreenSaverReset);
+-
+-  /* And if the monitor is already powered off, turn it on.
+-     You'd think the above would do that, but apparently not? */
+-  monitor_power_on (si);
+ }
+ 
+ 
