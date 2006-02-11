@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rufus/rufus-0.7.0.ebuild,v 1.1 2006/02/11 02:31:25 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rufus/rufus-0.7.0.ebuild,v 1.2 2006/02/11 03:09:43 halcy0n Exp $
 
 inherit distutils
 
@@ -33,17 +33,15 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
-
-
 src_install() {
 	distutils_src_install
 	dodir ${PIXMAPLOC}
 	insinto ${PIXMAPLOC}
 	doins rufus.py
-	
+
 	dodir ${PIXMAPLOC}/images
 	insinto ${PIXMAPLOC}/images
-	doins images/*.png images/*.bmp 
+	doins images/*.png images/*.bmp
 
 	insinto /usr/share/pixmaps
 	doins images/rufus.png
