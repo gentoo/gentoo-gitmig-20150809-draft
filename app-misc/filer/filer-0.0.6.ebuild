@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.6.ebuild,v 1.8 2005/05/25 13:48:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.6.ebuild,v 1.9 2006/02/11 21:14:11 mcummings Exp $
 
 DESCRIPTION="Small file-manager written in perl"
 HOMEPAGE="http://public.rz.fh-wolfenbuettel.de/~luedickj/"
@@ -15,7 +15,7 @@ DEPEND="dev-lang/perl
 	dev-perl/gtk2-perl
 	dev-perl/gtk2-gladexml
 	dev-perl/File-MimeInfo
-	perl-core/File-Temp
+	virtual/perl-File-Temp
 	dev-perl/TimeDate
 	dev-perl/Stat-lsMode"
 

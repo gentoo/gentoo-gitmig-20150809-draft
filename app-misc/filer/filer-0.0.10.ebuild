@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.10.ebuild,v 1.2 2005/07/19 16:56:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.10.ebuild,v 1.3 2006/02/11 21:14:11 mcummings Exp $
 
 DESCRIPTION="Small file-manager written in perl"
 HOMEPAGE="http://blog.perldude.de/projects/filer/"
@@ -15,7 +15,7 @@ RDEPEND="dev-lang/perl
 	dev-perl/gtk2-perl
 	dev-perl/gtk2-gladexml
 	dev-perl/File-MimeInfo
-	perl-core/File-Temp
+	virtual/perl-File-Temp
 	dev-perl/TimeDate
 	dev-perl/glib-perl
 	dev-perl/extutils-depends
