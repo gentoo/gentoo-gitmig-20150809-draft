@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.9-r1.ebuild,v 1.14 2005/04/27 15:07:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.9-r1.ebuild,v 1.15 2006/02/11 22:47:38 morfic Exp $
 
 inherit eutils
 
@@ -30,7 +30,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${P}-gentoo.security.patch
 	epatch ${FILESDIR}/${P}-imake-tmpdir.patch
+	epatch ${FILESDIR}/${P}-gcc34.patch
 	epatch ${FILESDIR}/x86.patch
+	epatch ${FILESDIR}/${P}-amd64.patch
 }
 
 src_compile() {
