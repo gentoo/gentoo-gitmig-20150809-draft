@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.10.ebuild,v 1.8 2006/02/06 06:25:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.10.ebuild,v 1.9 2006/02/11 10:13:58 mrness Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -77,8 +77,10 @@ src_install() {
 		einstall || die "smsd make install failed"
 	fi
 
-	insinto /usr/share/applications
-	doins ${FILESDIR}/${PN}.desktop
+	if use X; then
+		insinto /usr/share/applications
+		doins ${FILESDIR}/${PN}.desktop
+	fi
 }
 
 pkg_postinst() {
