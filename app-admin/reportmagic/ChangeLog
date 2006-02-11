@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/reportmagic
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/reportmagic/ChangeLog,v 1.10 2005/05/25 13:48:35 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/reportmagic/ChangeLog,v 1.11 2006/02/11 21:03:11 mcummings Exp $
+
+  11 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  reportmagic-2.21.ebuild:
+  Virtuals for some perl-core deps
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   reportmagic-2.21.ebuild:

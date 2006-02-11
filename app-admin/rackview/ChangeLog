@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rackview
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.9 2005/11/28 12:06:27 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.10 2006/02/11 21:01:56 mcummings Exp $
+
+  11 Feb 2006; Michael Cummings <mcummings@gentoo.org> rackview-0.09.ebuild:
+  Virtuals for some perl-core deps
 
   28 Nov 2005; <mcumming@gentoo.org> rackview-0.04-r1.ebuild,
   rackview-0.05.ebuild:
