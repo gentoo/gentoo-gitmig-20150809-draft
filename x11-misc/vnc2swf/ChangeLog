@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/vnc2swf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.13 2006/01/21 19:48:28 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.14 2006/02/11 12:16:32 nelchael Exp $
+
+*vnc2swf-0.5.0 (11 Feb 2006)
+
+  11 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org> +vnc2swf-0.5.0.ebuild:
+  Version bump, see bug #121918.
 
   21 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/vnc2swf-0.4.2-gcc4.patch, -vnc2swf-0.3.ebuild,
