@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1723 2006/02/11 18:03:59 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1724 2006/02/11 22:09:51 sekretarz Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -185,7 +185,7 @@ app-text/sword:icu - Enable icu support for sword
 app-text/xpdf:nodrm - Disable the drm feature decoder.
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 dev-cpp/sptk:fltk - Enable FLTK support
-dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
+dev-db/firebird:xinetd - If you want inetd version instead of a superserver (daemon)
 dev-db/mysql:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mysql:cluster - Add support for NDB clustering.
 dev-db/mysql:extraengine - Add support for alternative storage engines.
