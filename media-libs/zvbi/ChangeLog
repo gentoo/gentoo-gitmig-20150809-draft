@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/zvbi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.16 2006/01/15 23:34:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.17 2006/02/11 14:17:24 flameeyes Exp $
+
+*zvbi-0.2.18 (11 Feb 2006)
+
+  11 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> +zvbi-0.2.18.ebuild:
+  Bump to latest upstream version.
 
   15 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> -zvbi-0.2.1-r1.ebuild,
   zvbi-0.2.4.ebuild, -zvbi-0.2.8.ebuild, -zvbi-0.2.16.ebuild:
