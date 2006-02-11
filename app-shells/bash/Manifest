@@ -187,9 +187,9 @@ SHA256 3bcb4958dad662fc2cbe77177236679f7a09b8bdb0be738102df4457394f4022 files/do
 MD5 d76b9aa6b733175df21c2bb6afe8900d files/dot-bash_profile 193
 RMD160 7ee4f60be78b1b46c5142f081d978c09700f6322 files/dot-bash_profile 193
 SHA256 ae12206aaa35dc96273ed421f4e85ca26a1707455e3cc9f054c7f5e2e9c53df6 files/dot-bash_profile 193
-MD5 6dcc418c7812b5f8ebf2f6562eb2e57c files/dot-bashrc 983
-RMD160 e42b5242f1541cb07d9a7a9be2148b647d584794 files/dot-bashrc 983
-SHA256 324d8854d4903064c1dfd3761fbdefcbb971263cb7ab18cf55fd85cb6143b73f files/dot-bashrc 983
+MD5 31989efc0a6237652d344f7f6fce15cc files/dot-bashrc 976
+RMD160 95302a453d195022f3ddc8d2a2c3ecf55cb4f1f6 files/dot-bashrc 976
+SHA256 c8dfdc7cfba530d1530bd49141f13f615982c5620b0c4f8cfd2d0e359c775112 files/dot-bashrc 976
 MD5 67fff374a8f2eb3a4428d01a4d9d026d files/readline-5.1-terminal-autowrap.patch 1628
 RMD160 8ae2a20091475dc3ca12e8b02c6eacef677743a2 files/readline-5.1-terminal-autowrap.patch 1628
 SHA256 020bbdb1b49aede599c0574d53840677468c4bea6705e2ba35dd2247ea5b5712 files/readline-5.1-terminal-autowrap.patch 1628
@@ -199,7 +199,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD5Qg12+ySkm8kpY0RAnPCAJ44hRQrhmKosB4QwMisdMcGNvUSaACeM8rx
-8QvElceuq67IFKvfBBQ3Zkg=
-=TtnM
+iD8DBQFD7myG2+ySkm8kpY0RArr7AJ9R0r0k3cqej2BJVfHqEgA7R13GZwCfRr6g
+PrpSJ/jZ/f0wsZW5OmUy/JQ=
+=a7Ya
 -----END PGP SIGNATURE-----

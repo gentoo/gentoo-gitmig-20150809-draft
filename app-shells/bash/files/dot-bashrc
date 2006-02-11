@@ -20,11 +20,10 @@ if [[ -f ~/.dir_colors ]]; then
 else
 	eval `dircolors -b /etc/DIR_COLORS`
 fi
-alias ls="ls --color=auto"
 
 # Change the window title of X terminals 
-case $TERM in
-	xterm*|rxvt*|Eterm)
+case ${TERM} in
+	xterm*|rxvt*|Eterm|aterm|kterm|gnome)
 		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
 		;;
 	screen)
