@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/azureus-bin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.40 2005/11/30 22:09:33 betelgeuse Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.41 2006/02/11 17:45:09 betelgeuse Exp $
+
+  11 Feb 2006; Petteri Räty <betelgeuse@gentoo.org>
+  -files/azureus-bin-2.0.8.0a-gentoo.sh, -files/azureus-bin-Makefile.patch,
+  -azureus-bin-2.1.0.4.ebuild:
+  Removed old version and old files.
 
   30 Nov 2005; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Took maintainership until we can get this removed in favor of the from

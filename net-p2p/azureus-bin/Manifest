@@ -1,21 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e4b9db305a14d3b7f1888d7a2086a6ab ChangeLog 6314
-MD5 d2c866c163dd505217c5178c35e64d4b azureus-bin-2.1.0.4.ebuild 4144
+MD5 763858da5ed93f356b60c2580c3c2878 ChangeLog 6512
+RMD160 9907d9ea123f66eeb0d04bb88c4a3860da6eb56f ChangeLog 6512
+SHA256 737f7f50fb2b96533553be452583574cf60dc32b82e1f44c36c495d4d30a1556 ChangeLog 6512
 MD5 e6f5a8d21bd0da79aac766231f65d4f0 azureus-bin-2.3.0.4.ebuild 3848
-MD5 b950a875ce243bf3d6debd6ddfa89be6 files/azureus-bin-2.0.8.0a-gentoo.sh 1768
-MD5 17762081fd25f6928b7bd085fa61d9ee files/azureus-bin-Makefile.patch 402
+RMD160 1ec3f2f9130134c5633608c530f7dbe9fdbf8d33 azureus-bin-2.3.0.4.ebuild 3848
+SHA256 8b1d50f9287465573fce74be1b1f1429b749453bda8fec133894bca4019777e5 azureus-bin-2.3.0.4.ebuild 3848
 MD5 6cf2c1041726decd44a55736aadda4f7 files/azureus-bin-gentoo.sh 1056
+RMD160 31af9752b941226dc70e2565b66874c82a5c81dd files/azureus-bin-gentoo.sh 1056
+SHA256 358456d16abdfce525ce232ab2d9d42b4314baee59e110b6b3e5ef0fe974a62a files/azureus-bin-gentoo.sh 1056
 MD5 70c17db47c9a596929112714f82ac010 files/azureus.desktop 153
+RMD160 817c8e44b1068b5030b19d5f61a516f560fd4e92 files/azureus.desktop 153
+SHA256 6eb562481d31292ed0ab9cf16f88c9385318b4c3a3c015fd26238624e1fe9f7c files/azureus.desktop 153
 MD5 2d3136c60488dd51bef012cbcb59201b files/azureus.png 743
-MD5 f09618384e722cb7c46f2375d40af829 files/digest-azureus-bin-2.1.0.4 295
+RMD160 234517f80f6306ef4cf3704de59473a00efb50ab files/azureus.png 743
+SHA256 951bcf1bbd46d049740f50be4d1cd41bbac0892ca40b83891db6a2beff9f6a30 files/azureus.png 743
 MD5 237fc0642db8aae1caac9d5316ec4412 files/digest-azureus-bin-2.3.0.4 382
+RMD160 c36a569e0d75e0983a299fd8e1cb0e6c0713277f files/digest-azureus-bin-2.3.0.4 382
+SHA256 663b9bcc285b06fbce601fd1b0eac93d2e9d0169cb04fbb31b4bbfdb54eaca1a files/digest-azureus-bin-2.3.0.4 382
 MD5 0d0384a2c9c3495944bd250aac2fd8a0 metadata.xml 276
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDjiMxQiJ/wx066S4RArAhAKCfmFiq/fG0mX489pORCM9JduVDnQCgnF9f
-F3O4ABACWRhruaKaOg3w90I=
-=71LB
------END PGP SIGNATURE-----
+RMD160 30333f8e6bf59b86caedb107f84c17d6e4c0dd20 metadata.xml 276
+SHA256 ede99d07f35a45343fe0658cd64fa3b6fac103ca95b9285b94ebfa6883e7f3a0 metadata.xml 276
