@@ -1,19 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7bcb2a1f7029e4d5c06626a9d221b80c visualboyadvance-1.7.2.ebuild 1137
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 a95ce15d4f79c14e1981a90223337c5e visualboyadvance-1.7.2-r1.ebuild 1259
-MD5 8c86d67f340319c4e4e35a74e5588a58 ChangeLog 3513
-MD5 342ffeee3202543937ea62e7008dbdef files/digest-visualboyadvance-1.7.2 79
-MD5 342ffeee3202543937ea62e7008dbdef files/digest-visualboyadvance-1.7.2-r1 79
-MD5 a0c26da0983eebc48c3ca83825dde876 files/visualboyadvance 631
-MD5 ef02d9be59ab74afa9a8f12e17e359d4 files/1.7.2-homedir.patch 415
+MD5 5b23c655d70b5ec4d6cace04e3c9d9f2 ChangeLog 3708
+RMD160 3e8d48b1854aec5184e44307c2e336d6913e7f98 ChangeLog 3708
+SHA256 6059462a738a3fb1986f5e175dfa010a3a5e2c1f38c00c7c7abdda90b2190526 ChangeLog 3708
 MD5 04a0915b7a414f5065dfb2510cc5a677 files/1.7.2-gcc34.patch 1354
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK0MCLLFUmVNQ7rkRAhGsAJ9JZgyTBoAGpdGeV/sF51zVQmXp/QCg06kj
-YbzZjOsT/R/jgFBVQ8UQYoQ=
-=Vw87
------END PGP SIGNATURE-----
+RMD160 6a3764040df0e166ca7c9e984bd6553264685460 files/1.7.2-gcc34.patch 1354
+SHA256 82c4ec3170fc982eaf5665c44ce2b767868d81f522adf45325df4a7a680d9ac5 files/1.7.2-gcc34.patch 1354
+MD5 ef02d9be59ab74afa9a8f12e17e359d4 files/1.7.2-homedir.patch 415
+RMD160 c617252b5cf61a829bd25c4821c684791ac9c58e files/1.7.2-homedir.patch 415
+SHA256 c49ac18ac3a71355bc7fb790da176a45fe558d4e4f08366045d34f8c801cc05c files/1.7.2-homedir.patch 415
+MD5 342ffeee3202543937ea62e7008dbdef files/digest-visualboyadvance-1.7.2 79
+RMD160 0e4e5a9434cb29a5858a7bd04e9feea0ecbc43ca files/digest-visualboyadvance-1.7.2 79
+SHA256 e19441576906430da26c86205b17d408de8fc8f96e45949a1df42912d71a33ac files/digest-visualboyadvance-1.7.2 79
+MD5 342ffeee3202543937ea62e7008dbdef files/digest-visualboyadvance-1.7.2-r1 79
+RMD160 0e4e5a9434cb29a5858a7bd04e9feea0ecbc43ca files/digest-visualboyadvance-1.7.2-r1 79
+SHA256 e19441576906430da26c86205b17d408de8fc8f96e45949a1df42912d71a33ac files/digest-visualboyadvance-1.7.2-r1 79
+MD5 a0c26da0983eebc48c3ca83825dde876 files/visualboyadvance 631
+RMD160 c2cb3806fdfe83cb3e87de9a4c6ec6201b6bad5a files/visualboyadvance 631
+SHA256 1216d0ae8a05b2a22ca6ab57b6847b411bb60aa49c7527ebf3e893e3e7682c53 files/visualboyadvance 631
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 d4ed716281915c5586a5d555dfc58f00 visualboyadvance-1.7.2-r1.ebuild 1251
+RMD160 8f58eb79d692918c1affbf0fadab23596e086a4b visualboyadvance-1.7.2-r1.ebuild 1251
+SHA256 68a285ea256b746d768e12fd28394b27bf1415ef48ce23a2772ec39e91bc2df7 visualboyadvance-1.7.2-r1.ebuild 1251
+MD5 7fd8ef939a41f16cf57f57a12884baa1 visualboyadvance-1.7.2.ebuild 1129
+RMD160 db281622c3d9c4a83f3b8589740160c128367d42 visualboyadvance-1.7.2.ebuild 1129
+SHA256 3f452907f726a5722f957ae6ef1044d0d8b23001d47a73432a1b77954887e8d9 visualboyadvance-1.7.2.ebuild 1129

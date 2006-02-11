@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/xe
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/ChangeLog,v 1.2 2006/01/09 00:30:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/ChangeLog,v 1.3 2006/02/11 04:06:03 joshuabaergen Exp $
+
+  11 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org> xe-20050801.ebuild,
+  xe-20060101.ebuild:
+  Added modular X dependencies (bug #122293, Tupone Alfredo).
 
 *xe-20060101 (09 Jan 2006)
 
