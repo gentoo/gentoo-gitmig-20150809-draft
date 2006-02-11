@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.67 2006/02/05 21:36:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.68 2006/02/11 07:55:53 corsair Exp $
+
+  11 Feb 2006; Markus Rothe <corsair@gentoo.org> kile-1.8.1-r1.ebuild:
+  Stable on ppc64
 
   05 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> kile-1.9_beta2.ebuild:
   Add support for building only the selected translations.
