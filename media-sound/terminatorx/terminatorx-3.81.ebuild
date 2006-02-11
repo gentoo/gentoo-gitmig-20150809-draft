@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.15 2006/01/07 22:44:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.16 2006/02/11 17:09:33 joshuabaergen Exp $
 
 inherit gnome2
 
@@ -15,19 +15,25 @@ SLOT="0"
 KEYWORDS="x86 amd64 sparc"
 IUSE="3dnow alsa mpeg vorbis oss sox"
 
-DEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
+RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	mpeg? ( media-sound/madplay )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )
 	sox? ( media-sound/sox )
 	>=x11-libs/gtk+-2.2.0
 	>=dev-libs/glib-2.2.0
-	virtual/x11
+	|| ( ( x11-libs/libXi
+			x11-libs/libXxf86dga )
+		virtual/x11 )
 	dev-libs/libxml
 	media-libs/audiofile
 	media-libs/ladspa-sdk
 	media-libs/ladspa-cmt
 	app-text/scrollkeeper
 	media-libs/liblrdf"
+DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xproto
+			x11-proto/xf86dgaproto )
+		virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a5ca5b619f61aaf3239cfc57d5fe6e3 ChangeLog 2553
+MD5 3673ce9b0bd294c1ede5f33507e259f0 ChangeLog 2712
+RMD160 b77875c691e224e852572c0f559e64d59ad25b51 ChangeLog 2712
+SHA256 7caff79e57d5bfcafabbc92bd929421c00e63296548a1ad8b2e4c963016c86b0 ChangeLog 2712
 MD5 ed6038ad12972f0534133cb65dff99a0 files/digest-terminatorx-3.81 68
+RMD160 687cd58fa09b8bab0d03f0adc0921ea74465f6ba files/digest-terminatorx-3.81 68
+SHA256 1cae5408ccaceeaa88597e67cc289f4541a20678fc71b40be10467e7d6dc5b26 files/digest-terminatorx-3.81 68
 MD5 94137a13ec8a5f0c45a221fe3804a5f4 files/digest-terminatorx-3.82 68
+RMD160 699cd56b66b145bc4ebada225854f1f1bce9d470 files/digest-terminatorx-3.82 68
+SHA256 675805356aa6747d7e150c247f1e83fc7ed5b926616803bb765608be56ad02b7 files/digest-terminatorx-3.82 68
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 88bd01c793c52791d03a6bbf188072f0 terminatorx-3.81.ebuild 2194
-MD5 c626a68a331b72185fe25eca5d423174 terminatorx-3.82.ebuild 1379
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDwERcp5vW4rUFj5oRAht6AJ9aV7OUANopKyP4LJQMgHTmPPCS7QCfe+Pb
-y1ROp2W6a7i/uJZM+FE9Gv8=
-=0mzm
------END PGP SIGNATURE-----
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 054c3dc7842a76af410fb05ca085ed7a terminatorx-3.81.ebuild 2341
+RMD160 2500bdfba8ec9bbd8b3c4a5373f239daf5c05a51 terminatorx-3.81.ebuild 2341
+SHA256 e719bf7921793cd4e270b84aa5b76350294e1a57930113d5521955a746ce7d2e terminatorx-3.81.ebuild 2341
+MD5 9f520fa66e5a03ee79892d4920d6b0ca terminatorx-3.82.ebuild 1526
+RMD160 80759cebefde5c3938ddff2ec775e1bbdaf9fa75 terminatorx-3.82.ebuild 1526
+SHA256 9d4d07799eaaf75140a1de3d74998dc9fa5446482ca9487dd5960710000f1b18 terminatorx-3.82.ebuild 1526

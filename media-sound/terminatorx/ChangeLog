@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/terminatorx
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.17 2006/01/07 22:44:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.18 2006/02/11 17:09:33 joshuabaergen Exp $
+
+  11 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  terminatorx-3.81.ebuild, terminatorx-3.82.ebuild:
+  Add modular X dependencies (bug #120871).
 
   07 Jan 2006; <chainsaw@gentoo.org> terminatorx-3.81.ebuild,
   terminatorx-3.82.ebuild:
