@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.4.ebuild,v 1.3 2005/08/13 22:58:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.4.ebuild,v 1.4 2006/02/11 20:57:25 mcummings Exp $
 
 DESCRIPTION="diradm is a nearly complete nss/shadow suite for managing POSIX users/groups/data in LDAP."
 HOMEPAGE="http://research.iat.sfu.ca/custom-software/diradm/"
@@ -17,7 +17,7 @@ DEPEND="net-nds/openldap
 	dev-lang/perl
 	app-shells/bash
 	sys-apps/sed
-	perl-core/MIME-Base64
+	virtual/perl-MIME-Base64
 	samba? (
 		dev-perl/Crypt-SmbHash
 		>=net-fs/samba-3.0.6

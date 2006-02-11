@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dc057606c668da2b8633862257fcfde8 ChangeLog 1255
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 20d53d08f0b89547c46200c41ce8c38f petrovich-1.0.0.ebuild 770
+MD5 b2e5527d33b9fe8da6e90087ed1c0611 ChangeLog 1358
 MD5 4ad2bc1c3193d65ab0ce4fe5c4a7d498 files/digest-petrovich-1.0.0 66
 MD5 01fd0ea51051bba336541cd62abbdde7 files/petrovich-1.0.0-gentoo.diff 1156
 MD5 918c34c936df186b11a213476167df78 files/petrovich.conf 135
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD4DBQFCk0j6tG5z4I8BtQoRAmRFAJ9ddfINWpfr1waKw9WUvLpq2sWafgCYhtaF
-/MjeiS9WAJaQlZ+PORN7Cg==
-=qN+n
------END PGP SIGNATURE-----
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 48f449b4c0a1a70cca4872b0065be148 petrovich-1.0.0.ebuild 773
