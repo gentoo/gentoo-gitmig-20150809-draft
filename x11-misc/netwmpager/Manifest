@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 21ce1bc0eff0adc7a7f3b542ddcaacea ChangeLog 610
+MD5 97b4db0b3bcf1ab0ecc0a9e371bd0d23 ChangeLog 718
+RMD160 9365b02b75d081431726c6ef767d2a2efa540949 ChangeLog 718
+SHA256 1da6c9d2e8bb34437b305d30a16f95285ca14de2ecfbfc6dd9cec242fa1d265e ChangeLog 718
 MD5 6679599dba97ab6ecbe7483db8cac9c0 files/digest-netwmpager-1.6 66
+RMD160 68c25f8ad6607487dbcc7d996fbaad6ff6a27d8b files/digest-netwmpager-1.6 66
+SHA256 426aa21673a90dd320a543440837ffb5a9050224f78ee664edb236a35f9c7939 files/digest-netwmpager-1.6 66
 MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
-MD5 f4766f759091d72a6728118b9a576b23 netwmpager-1.6.ebuild 735
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkosMCRZPokWLroQRAmglAKDUUYn3FJthMwsClSvviy+vB/D3NACgle3V
-RxkZFzpkiryoDjtbFV7rBmw=
-=L8zM
------END PGP SIGNATURE-----
+RMD160 7c2ff9d5408196433d3c5d74537d222335183899 metadata.xml 163
+SHA256 e8dcd61085d237c64dc37b1d7dd932b2c5e75010f9b6d9fd19b103bfe3a47797 metadata.xml 163
+MD5 6feabb3b4dab4709cc1c22388587442d netwmpager-1.6.ebuild 903
+RMD160 4177ce191c77b8e2b9adb34199ec4ebfeb430585 netwmpager-1.6.ebuild 903
+SHA256 cfcb5e41f0630e234bdb4aa2eb596a9a574c77d09b94f44c7bfb5ce064caffa0 netwmpager-1.6.ebuild 903

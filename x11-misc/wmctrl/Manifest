@@ -1,18 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 16a504e5ffac9d58da4f08b9410a6be7 ChangeLog 1399
-MD5 bff61c09329e07af5de607983a29674f files/digest-wmctrl-1.04 62
-MD5 378bdbcbd23828d676cf6cd9e45d2fd9 files/digest-wmctrl-1.05 62
+MD5 63e0b8accde6541841b7950251a15c11 ChangeLog 1547
+RMD160 1fe1baec1e05b0edaee4c45a1d0b8e197c7f53bf ChangeLog 1547
+SHA256 0e4362ee229f3ef040a6c949361aeeaf0325b4a0a47ff6154f63bd0abb23362d ChangeLog 1547
 MD5 238434c9b15a050105117f3c5e96aaad files/digest-wmctrl-1.07 62
+RMD160 34c85c75b06d46facf5f757b9ed4732f17d7430b files/digest-wmctrl-1.07 62
+SHA256 f0f50d85cc0ff06cc4468c581fae85e8ecaac5198cbb4d59c4fb0a20629ba53c files/digest-wmctrl-1.07 62
 MD5 6e41bf6685ee66aee2245bc81df883be metadata.xml 737
-MD5 de21d4af36312b45de6fd76e20ade476 wmctrl-1.04.ebuild 606
-MD5 f2cb693e3bdc8b659c9e46f2b0b85e78 wmctrl-1.05.ebuild 605
-MD5 5c29c1139c2c58ecc7ec7c7226a61d24 wmctrl-1.07.ebuild 634
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDndPpwUpWvClEHQoRAlYLAJ9GDHixELk7Pg2uTu1vFVyJnYVP+wCbBOqn
-eQd0K65HN+WhgkCBo11c380=
-=coSy
------END PGP SIGNATURE-----
+RMD160 4a283d6bec929dd72b4a18d7eb5324f2cca5c67b metadata.xml 737
+SHA256 819ba0d8152532138068a6c3eb898f7117a20c7d72377f504bbcd408fcf264cf metadata.xml 737
+MD5 bf5113c28ca27d81770641c6fe1e8790 wmctrl-1.07.ebuild 757
+RMD160 ad503e9aedb68f9ce23a2f23aebb3aec56e7c320 wmctrl-1.07.ebuild 757
+SHA256 037e93761907ed2d0f1d5bd84c5cb214d5efd451129d6c9aa291b4fca3777387 wmctrl-1.07.ebuild 757
