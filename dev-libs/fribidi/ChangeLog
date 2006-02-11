@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/fribidi
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.19 2005/10/09 11:52:22 grobian Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.20 2006/02/11 17:14:52 matsuu Exp $
+
+*fribidi-0.10.7 (11 Feb 2006)
+
+  11 Feb 2006; MATSUU Takuto <matsuu@gentoo.org> +fribidi-0.10.7.ebuild:
+  Version bumped.
+  Removed darwin patch because it works on my ppc-macos without patch.
 
   09 Oct 2005; Fabian Groffen <grobian@gentoo.org>
   +files/fribidi-0.10.5-darwin.patch, fribidi-0.10.4.ebuild,
