@@ -1,0 +1,30 @@
+diff -Naur fftw-3.1/tests/Makefile.in fftw-3.1-new/tests/Makefile.in
+--- fftw-3.1/tests/Makefile.in	2006-01-28 00:19:55.000000000 +0000
++++ fftw-3.1-new/tests/Makefile.in	2006-02-11 05:39:29.000000000 +0000
+@@ -233,9 +233,9 @@
+ @COMBINED_THREADS_FALSE@@THREADS_TRUE@LIBFFTWTHREADS = $(top_builddir)/threads/libfftw3@PREC_SUFFIX@_threads.la
+ @THREADS_FALSE@LIBFFTWTHREADS = 
+ bench_SOURCES = bench.c hook.c
+-bench_LDADD = $(LIBFFTWTHREADS)				\
++bench_LDADD = $(top_builddir)/libbench2/libbench2.a $(LIBFFTWTHREADS) \
+ $(top_builddir)/libfftw3@PREC_SUFFIX@.la		\
+-$(top_builddir)/libbench2/libbench2.a $(THREADLIBS)
++$(THREADLIBS)
+ 
+ all: all-am
+ 
+diff -Naur fftw-3.1/tools/Makefile.in fftw-3.1-new/tools/Makefile.in
+--- fftw-3.1/tools/Makefile.in	2006-01-28 00:19:56.000000000 +0000
++++ fftw-3.1-new/tools/Makefile.in	2006-02-11 05:40:41.000000000 +0000
+@@ -246,9 +246,9 @@
+ @COMBINED_THREADS_FALSE@@THREADS_TRUE@LIBFFTWTHREADS = $(top_builddir)/threads/libfftw3@PREC_SUFFIX@_threads.la
+ @THREADS_FALSE@LIBFFTWTHREADS = 
+ fftw@PREC_SUFFIX@_wisdom_SOURCES = fftw-wisdom.c
+-fftw@PREC_SUFFIX@_wisdom_LDADD = $(top_builddir)/tests/bench.o	\
++fftw@PREC_SUFFIX@_wisdom_LDADD = $(top_builddir)/tests/bench.o $(top_builddir)/libbench2/libbench2.a \
+ $(LIBFFTWTHREADS) $(top_builddir)/libfftw3@PREC_SUFFIX@.la	\
+-$(top_builddir)/libbench2/libbench2.a $(THREADLIBS)
++$(THREADLIBS)
+ 
+ all: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) all-am

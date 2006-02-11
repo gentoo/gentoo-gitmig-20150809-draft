@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/fftw
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.25 2005/11/12 03:12:15 lu_zero Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.26 2006/02/11 20:19:56 markusle Exp $
+
+*fftw-3.1 (11 Feb 2006)
+
+  11 Feb 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/fftw-ppc-macos.1.patch, +fftw-3.1.ebuild:
+  Version bump. This fixes bug #120763.
 
   12 Nov 2005; Luca Barbato <lu_zero@gentoo.org>
   +files/fftw-3.0.1-altivec.patch, fftw-3.0.1-r2.ebuild:

@@ -1,23 +1,48 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d328e0995bfcc888fb0beb2f6ed7e685 ChangeLog 7067
+MD5 7353a36b0f68cd56982e1b3a5b5b4dc1 ChangeLog 7238
+RMD160 2aa626959cd65b84888fbc8af26f763b300c16f7 ChangeLog 7238
+SHA256 6bc9e5c2ab42e2a38ff3a4ce3696b9d6ee45a897517b7b203c630b78d9989639 ChangeLog 7238
 MD5 b0b309c7dfe2c8566424e91792350f95 fftw-2.1.5-r1.ebuild 4141
+RMD160 72b227d25d9871b5d1d09cfd062d67cd636ddccf fftw-2.1.5-r1.ebuild 4141
+SHA256 6d354780d0c0e6b341842fc1941266db9dd3c90d867b77813b9e1c63d7aa069e fftw-2.1.5-r1.ebuild 4141
 MD5 4a8f8342448809b69143f66d02e7f2d2 fftw-3.0.1-r1.ebuild 2759
+RMD160 508aea7c5b721ef415fc4d5121cfb057aba7aaef fftw-3.0.1-r1.ebuild 2759
+SHA256 d53c2fa4f8ecc2430588e6138a2c256eb6c9e4ffcd2314a73b9d8207ed0766b8 fftw-3.0.1-r1.ebuild 2759
 MD5 7ba717c52d52fb424509a7046a52350a fftw-3.0.1-r2.ebuild 2790
+RMD160 03f593bd2961ea1520e8cb267a43d72cd83252ac fftw-3.0.1-r2.ebuild 2790
+SHA256 cce35d30515b257d3a97c06ad84391af23101a9ab142b3022ca0b0d0a103e501 fftw-3.0.1-r2.ebuild 2790
 MD5 7b8ca418c402f3091eeb2cefd710e739 fftw-3.0.1.ebuild 2363
+RMD160 dfb874adc905a8d302ae21f08e25fa72303b12d6 fftw-3.0.1.ebuild 2363
+SHA256 2faf09c55c721d55f0755453bad2eb3cd07c593df97312cc2e89e6b1a7c958c4 fftw-3.0.1.ebuild 2363
+MD5 e6aa8e2db6ce74302b379c3812eab87c fftw-3.1.ebuild 2008
+RMD160 84ad8f55f57828d2a3ec8d391509d08a4f134d47 fftw-3.1.ebuild 2008
+SHA256 1139e65e974436110fd07f26cf42c267fa9b585969cf2369c3e8898324988665 fftw-3.1.ebuild 2008
 MD5 1395bb17e5d04e7050eab24d5b7b25d1 files/3-tmpfile.patch 538
+RMD160 e87f7b414a4cb9371c970bf140f87074f8024f25 files/3-tmpfile.patch 538
+SHA256 c51956fc0ce2bb25cf84e4929ab76de27dca47efeef659d57d7513e0099f99d1 files/3-tmpfile.patch 538
 MD5 236dda9695005c9f306fb2c55f020686 files/digest-fftw-2.1.5-r1 63
+RMD160 993eb088f674d8b9822cee53d21b8ac1f73c417a files/digest-fftw-2.1.5-r1 63
+SHA256 86f53a934b5d8a5d7b3730f7ef7c30767f82a6df25490bf200f4aeb921c7e869 files/digest-fftw-2.1.5-r1 63
 MD5 cd32698a34d886267d48a8ccb99747b1 files/digest-fftw-3.0.1 63
+RMD160 bfe28400278296372a6b3e9650882603d033a91c files/digest-fftw-3.0.1 63
+SHA256 1b01f67cdbb46602819d54d78dc247067f9e742deebf041ee10187761535caf2 files/digest-fftw-3.0.1 63
 MD5 cd32698a34d886267d48a8ccb99747b1 files/digest-fftw-3.0.1-r1 63
+RMD160 bfe28400278296372a6b3e9650882603d033a91c files/digest-fftw-3.0.1-r1 63
+SHA256 1b01f67cdbb46602819d54d78dc247067f9e742deebf041ee10187761535caf2 files/digest-fftw-3.0.1-r1 63
 MD5 cd32698a34d886267d48a8ccb99747b1 files/digest-fftw-3.0.1-r2 63
+RMD160 bfe28400278296372a6b3e9650882603d033a91c files/digest-fftw-3.0.1-r2 63
+SHA256 1b01f67cdbb46602819d54d78dc247067f9e742deebf041ee10187761535caf2 files/digest-fftw-3.0.1-r2 63
+MD5 b6f14bee47f3ad6a9914ddecd88cff86 files/digest-fftw-3.1 229
+RMD160 2015193cc44504a587fdcbeb70e949843666a4dc files/digest-fftw-3.1 229
+SHA256 2adbf2c5de2e51f7f10d93adba3fc399c82a0e68f5229c5fbcbbb42495b9ee14 files/digest-fftw-3.1 229
 MD5 49836a250acfcc913276a29736c68a3b files/fftw-3.0.1-altivec.patch 2585
+RMD160 ac3e6a4edd4183570c214e39ec900da432162cfb files/fftw-3.0.1-altivec.patch 2585
+SHA256 48bbd87433b208490f907fc340ab53cabcb8e4259776eadfdf15d963e4af0a27 files/fftw-3.0.1-altivec.patch 2585
+MD5 148e5318eca8afb3a4856c820727e69c files/fftw-ppc-macos.1.patch 1429
+RMD160 c61bedd5ba54e526f138525eb7d77bcbb3264a28 files/fftw-ppc-macos.1.patch 1429
+SHA256 d16d27be36800fa582402847e4b6fb0210bcc9718ac750c980b12e1de1419dfb files/fftw-ppc-macos.1.patch 1429
 MD5 7718e5a1330e574b38daecb472bffa17 files/fftw-ppc-macos.patch 1356
+RMD160 edd7e7fc6e6fb1dfed5cda10a35b1b95eceed47b files/fftw-ppc-macos.patch 1356
+SHA256 e66aa8b594bcc756404f28205d595b78fcb3209dd3c9cdc01ce8efe704426a70 files/fftw-ppc-macos.patch 1356
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvxtF2+ySkm8kpY0RAmEhAJ43zIaSkllx0zADJIMxk1ImkO1DDACeO3C+
-mC7pC3OprGNHbdEKgpVRVtc=
-=FGFm
------END PGP SIGNATURE-----
+RMD160 dc078172bfebcb25d69bdf8731714f9cce9d3e36 metadata.xml 156
+SHA256 5d22100902db7507a5b5493dd4a66cdb08025faf80a2c0b75e6392315c47f900 metadata.xml 156
