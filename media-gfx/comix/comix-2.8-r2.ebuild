@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-2.8-r1.ebuild,v 1.1 2006/02/11 18:22:29 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-2.8-r2.ebuild,v 1.1 2006/02/11 19:20:55 vanquirius Exp $
 
 inherit toolchain-funcs gnome2
 
@@ -25,8 +25,4 @@ src_install() {
 	insinto /usr/share/mime/packages/
 	doins "${S}"/mime/comix.xml
 	dodoc ChangeLog README
-}
-
-pkg_postinst() {
-	update-mime-database /usr/share/mime
 }
