@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/lwm-1.2.1.ebuild,v 1.4 2005/07/06 21:07:31 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/lwm-1.2.1.ebuild,v 1.5 2006/02/11 12:01:53 nelchael Exp $
 
 IUSE=""
 
@@ -12,7 +12,16 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ppc sparc x86"
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXext )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xproto
+		x11-proto/xextproto
+		x11-misc/imake )
+	virtual/x11 )"
 
 src_compile() {
 	xmkmf || die

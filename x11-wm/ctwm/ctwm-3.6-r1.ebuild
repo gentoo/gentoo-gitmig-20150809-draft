@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.6-r1.ebuild,v 1.5 2004/06/24 23:40:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.6-r1.ebuild,v 1.6 2006/02/11 11:39:54 nelchael Exp $
 
 inherit eutils
 
@@ -16,7 +16,20 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 LICENSE="MIT"
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXmu
+		x11-libs/libXt
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xproto
+		x11-proto/xextproto
+		app-text/rman
+		x11-misc/imake )
+	virtual/x11 )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
