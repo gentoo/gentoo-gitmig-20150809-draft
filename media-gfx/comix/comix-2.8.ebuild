@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-2.6.ebuild,v 1.1 2006/01/16 22:43:45 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-2.8.ebuild,v 1.1 2006/02/11 18:10:46 vanquirius Exp $
 
 inherit toolchain-funcs
 
@@ -17,6 +17,12 @@ RDEPEND=">=dev-python/pygtk-2.6
 
 src_install() {
 	dodir usr
-	python install.py install --installdir "${D}"usr 1>/dev/null
+	python install.py install --no-mime --installdir "${D}"usr 1>/dev/null
+	insinto /usr/share/mime/packages/
+	doins "${S}"/mime/comix.xml
 	dodoc ChangeLog README
+}
+
+pkg_postinst() {
+	update-mime-database /usr/share/mime
 }
