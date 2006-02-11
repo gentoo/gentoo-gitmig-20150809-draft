@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1-r1.ebuild,v 1.1 2006/02/09 19:28:04 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1-r1.ebuild,v 1.2 2006/02/11 01:44:21 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -245,14 +245,14 @@ pkg_postinst() {
 
 	echo  ""
 	ewarn "Please remember to rebuild any packages that you have built"
-	ewarn "against firefox. Some packages might be busted please search"
-	ewarn "http://bugs.gentoo.org if no bug is open, then please open a new"
-	ewarn "bug report so these can be fixed. Before filling bugs make sure you"
-	ewarn "have moved $HOME/.mozilla our of way and tested with clean profile."
+	ewarn "against firefox. Some packages might be busted. Please search"
+	ewarn "http://bugs.gentoo.org, if no bug is open, then please open a new"
+	ewarn "bug report so that these can be fixed. Before filling bugs make sure you"
+	ewarn "have moved ~/.mozilla out of the way and tested ${PN} with a clean profile."
 	ewarn "Thank you! anarchy@gentoo.org."
 
 	echo     ""
-	einfo "Any regchrome errors can be ignored right now, this is due to ."
+	einfo "Any regchrome errors can be ignored right now, this is due to"
 	einfo "mozilla-firefox-1.0.x. being unregistered with mozilla-launcher."
 
 	epause 15
