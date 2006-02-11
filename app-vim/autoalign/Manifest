@@ -1,18 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3576f558ec659b8d85a5e5155f7f2c15 ChangeLog 1684
+MD5 5cad23f050328e7060c80c6012756c1c ChangeLog 1800
+RMD160 0271dd383725926a1eff07e83f893b375750b88b ChangeLog 1800
+SHA256 93683835f349f34d8ed0e699fc3cb8d184e3b3538a8306bb685b3ae11bb4718e ChangeLog 1800
 MD5 3fa04266c676725a3094c74398b33aac autoalign-4.ebuild 921
+RMD160 b05d71292a4bd2ca7dab6c70fdd4f7906dd8ed73 autoalign-4.ebuild 921
+SHA256 0bd6bf67a8a237d3a3bec48b9b86bca3d86375cba55e962f86fc5dbc8ef20245 autoalign-4.ebuild 921
 MD5 61076fac8d5812d5ba694ebabb6197b1 autoalign-5.ebuild 899
+RMD160 4015c16f689cbe8c61263529d76e579f0824664a autoalign-5.ebuild 899
+SHA256 7023ed0285b0d2dd17c19f62b9736a48870536735c3cc8e31bb226f52c7bcbd1 autoalign-5.ebuild 899
 MD5 6d2c9c69c5169a5990cd841475abc87f autoalign-6.ebuild 740
+RMD160 8c930956b46f26e57263fcb1bb71ce361cfc1cb4 autoalign-6.ebuild 740
+SHA256 b326b5da7aabd173e67b6a60c91d2769303436783c5919f1f531939e29409a72 autoalign-6.ebuild 740
+MD5 fce5547266bc48be9c73c7d755108c3d autoalign-8.ebuild 898
+RMD160 591ace84b3b857098fed7ef3db38a032f3523676 autoalign-8.ebuild 898
+SHA256 4b25753584b10375069a2f09ef33363da5688ce4fcc7c18a3abe13190de2b444 autoalign-8.ebuild 898
 MD5 931c96309def683365ce69bb7cba0cf7 files/digest-autoalign-4 62
+RMD160 ffec5399982abd06416427746a7043ca628894a8 files/digest-autoalign-4 62
+SHA256 02ba3fadd0dc608cf24a7b1b26cd0d56a011221bea925071a213d1d529ad4576 files/digest-autoalign-4 62
 MD5 d41c0ff11e949099cc8200a23b68075e files/digest-autoalign-5 62
+RMD160 122edf646f233cd7120ca72315118e3b16237ba1 files/digest-autoalign-5 62
+SHA256 8c0800f9e4c9ba80ebe60ea2fdad16de61935806a8673d93e0205240ac455c83 files/digest-autoalign-5 62
 MD5 4f1b773c0c2ab59a20f6bfff02869705 files/digest-autoalign-6 62
+RMD160 f7aafc900242f2580e5cf2aeafe8c1d821ddea1f files/digest-autoalign-6 62
+SHA256 bc38ce769e90e920d8ad6017437144c53c8668ca8ac6d5ff8013c06160bf2f04 files/digest-autoalign-6 62
+MD5 ddb6b459a3667da57f48e896498b6097 files/digest-autoalign-8 232
+RMD160 56184697762dbdcebf84ce919b46073546b60b48 files/digest-autoalign-8 232
+SHA256 689a8fa0ac4c488613c603106c49b7d2885bc43a4db7211f2e8956f5e185316b files/digest-autoalign-8 232
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+RMD160 056902f9d0f28cabef8bb53f5a68cab0dd868a06 metadata.xml 250
+SHA256 8dc762ba76cca7056d116ea56f5f1b7ff1f9690d17c42806fc3bcd8421404836 metadata.xml 250
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDV8n4LLFUmVNQ7rkRAmHoAKCKRtc7WnabHJLPMfxPZRvdHczj4wCfcHcs
-lkcw8zcbAqxiRTsAV8LaF6Q=
-=xs23
+iD8DBQFD7VU0LLFUmVNQ7rkRAkSRAJ9Ki0+G4B0wbrK3+oAEPD7ThVNsagCghD38
+1gvjbuyFcxbK/sr8xnJ4/ys=
+=HnzL
 -----END PGP SIGNATURE-----
