@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-1.0.ebuild,v 1.24 2005/05/11 03:47:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-1.0.ebuild,v 1.25 2006/02/11 18:19:54 nelchael Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="Process viewer for GNOME"
-HOMEPAGE="http://www.personal.psu.edu/kfv101/procman"
+HOMEPAGE="http://directory.fsf.org/sysadmin/monitor/procman.html"
 SRC_URI="mirror://gnome/sources/procman/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"

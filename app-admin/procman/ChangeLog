@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/procman
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/ChangeLog,v 1.13 2005/05/11 03:47:03 halcy0n Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/ChangeLog,v 1.14 2006/02/11 18:19:54 nelchael Exp $
+
+  11 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org> procman-1.0.ebuild:
+  Updated HOMEPAGE, see bug #115146.
 
   11 May 2005; Mark Loeser <halcy0n@gentoo.org>
   +files/procman-1.0-gcc34.patch, procman-1.0.ebuild:
