@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r1.ebuild,v 1.8 2006/01/14 04:53:16 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r1.ebuild,v 1.9 2006/02/11 16:57:21 joshuabaergen Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,11 +22,9 @@ DEPEND="virtual/libc
 	X? (
 		|| (
 			( media-libs/mesa
-			x11-libs/libX11
 			x11-libs/libXt
 			x11-proto/inputproto
-			x11-proto/xf86vidmodeproto
-			x11-proto/xproto )
+			x11-proto/xf86vidmodeproto )
 			virtual/x11
 		)
 	)
@@ -35,7 +33,6 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	|| (
 		( media-libs/mesa
-		x11-libs/libX11
 		x11-libs/libXmu
 		x11-libs/libXxf86vm )
 		virtual/x11

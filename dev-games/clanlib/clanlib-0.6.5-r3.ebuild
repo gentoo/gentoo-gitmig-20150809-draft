@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r3.ebuild,v 1.5 2006/01/14 04:53:16 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r3.ebuild,v 1.6 2006/02/11 16:57:21 joshuabaergen Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,13 +14,28 @@ KEYWORDS="amd64 x86" #not big endian safe #82779
 IUSE="arts oss esd alsa png opengl truetype X vorbis mikmod jpeg directfb joystick"
 
 DEPEND=">=media-libs/hermes-1.3.2
-	X? ( virtual/x11 )
+	X? (
+		|| (
+			( media-libs/mesa
+			x11-libs/libXt
+			x11-proto/inputproto
+			x11-proto/xf86vidmodeproto )
+			virtual/x11
+		)
+	)
 	png? ( media-libs/libpng )
 	jpeg? ( >=media-libs/jpeg-6b )
 	mikmod? ( >=media-libs/libmikmod-3.1.9 )
 	truetype? ( >=media-libs/freetype-2.0 )
 	directfb? ( dev-libs/DirectFB )
 	vorbis? ( media-libs/libvorbis )"
+RDEPEND="${DEPEND}
+	|| (
+		( media-libs/mesa
+		x11-libs/libXmu
+		x11-libs/libXxf86vm )
+		virtual/x11
+	)"
 
 S=${WORKDIR}/ClanLib-${PV}
 
