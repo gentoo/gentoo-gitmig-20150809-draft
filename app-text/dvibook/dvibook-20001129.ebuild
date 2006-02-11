@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvibook/dvibook-20001129.ebuild,v 1.5 2005/12/22 01:20:25 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvibook/dvibook-20001129.ebuild,v 1.6 2006/02/11 04:26:00 joshuabaergen Exp $
 
 inherit eutils
 
@@ -14,7 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 
 IUSE=""
-DEPEND="virtual/x11"
+DEPEND="|| ( ( x11-misc/imake
+				x11-misc/gccmakedep
+				x11-misc/rman )
+			virtual/x11 )"
 RDEPEND=""
 
 S=${WORKDIR}/${PN}
