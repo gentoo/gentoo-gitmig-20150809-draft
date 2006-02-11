@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/tinyca-2.0.7.0.ebuild,v 1.1 2005/06/16 13:16:11 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/tinyca-2.0.7.0.ebuild,v 1.2 2006/02/11 21:09:01 mcummings Exp $
 
 MY_P=${PN}${PV/./-}
 DESCRIPTION="Simple Perl/Tk GUI to manage a small certification authority"
@@ -14,7 +14,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/openssl-0.9.7e
 	dev-perl/Locale-gettext
-	>=perl-core/MIME-Base64-2.12
+	>=virtual/perl-MIME-Base64-2.12
 	dev-perl/gtk2-perl"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
