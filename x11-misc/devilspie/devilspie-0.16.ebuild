@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.16.ebuild,v 1.1 2006/02/11 12:54:53 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.16.ebuild,v 1.2 2006/02/11 18:47:35 nelchael Exp $
 
 inherit eutils
 
@@ -47,9 +47,9 @@ src_install() {
 pkg_postinst() {
 
 	ewarn
-	ewarn "Devil's Pie has been completly rewrote since last version in"
-	ewarn "Portage (0.10), and the configuration method is NOT backward"
-	ewarn "compatible.  You will now have to write some s-expressions files"
+	ewarn "Devilspie has been completely rewritten for version 0.16 and is"
+	ewarn "not backward compatible with previous versions."
+	ewarn "You will now have to write some s-expressions files"
 	ewarn "(like in Emacs), and put them either in /etc/devilspie for"
 	ewarn "system-wide configuration, or in ~/.devilspie for per-user"
 	ewarn "configuration."
