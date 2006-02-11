@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/jpgraph-2.0_beta.ebuild,v 1.5 2006/02/03 20:08:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/jpgraph-2.0.ebuild,v 1.1 2006/02/11 12:15:00 sebastian Exp $
 
 inherit php-lib-r1
 
