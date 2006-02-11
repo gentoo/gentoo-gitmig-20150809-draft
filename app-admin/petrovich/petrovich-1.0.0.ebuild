@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/petrovich-1.0.0.ebuild,v 1.24 2005/05/24 15:31:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/petrovich-1.0.0.ebuild,v 1.25 2006/02/11 20:59:06 mcummings Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc"
 
-DEPEND="perl-core/Digest-MD5"
+DEPEND="virtual/perl-Digest-MD5"
 
 src_unpack () {
 	unpack ${A}
