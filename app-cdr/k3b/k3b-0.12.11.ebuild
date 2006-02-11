@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.6.ebuild,v 1.1 2005/10/30 16:38:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.11.ebuild,v 1.1 2006/02/11 17:04:34 carlo Exp $
 
 inherit kde eutils
 
@@ -10,8 +10,8 @@ SRC_URI="mirror://sourceforge/k3b/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="css dvdr encode ffmpeg flac hal kde mp3 musepack musicbrainz sndfile vcd vorbis"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="alsa css dvdr encode ffmpeg flac hal kde mp3 musepack musicbrainz sndfile vcd vorbis"
 
 DEPEND="kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
 	hal? ( sys-apps/dbus sys-apps/hal )
@@ -25,7 +25,8 @@ DEPEND="kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
 	musepack? ( media-libs/libmpcdec )
 	vorbis? ( media-libs/libvorbis )
 	musicbrainz? ( media-libs/musicbrainz )
-	encode? ( media-sound/lame )"
+	encode? ( media-sound/lame )
+	alsa? ( media-libs/alsa-lib )"
 
 RDEPEND="${DEPEND}
 	virtual/cdrtools
@@ -40,14 +41,13 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
-need-kde 3.3
+need-kde 3.4
 
 I18N="${PN}-i18n-${PV}"
 
-# Supported languages and translated documentation for 0.12.5
-LANGS="bg br bs ca cs cy da de el en_GB es et fr ga \
-	hi hu is it lt mk nb nl nn pa pl pt pt_BR ro \
-	ru sl sr sr@Latn sv ta tr uk zh_CN"
+# Supported languages and translated documentation
+LANGS="af bg br bs ca cs cy da de el en_GB es et fr ga he hi hu is it lt mk nb nl nn pa pl pt pt_BR ro ru se sl sr sr@Latn sv ta tr uk zh_CN"
+
 
 for X in ${LANGS}; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/k3b/${I18N}.tar.bz2 )"
@@ -90,7 +90,8 @@ src_compile() {
 			$(use_with sndfile)		\
 			$(use_with mp3 libmad)		\
 			$(use_with musepack)		\
-			$(use_with musicbrainz)"
+			$(use_with musicbrainz)		\
+			$(use_with alsa)"
 
 	# Build process of K3b
 	kde_src_compile
@@ -107,7 +108,6 @@ src_compile() {
 
 src_install() {
 	kde_src_install
-
 	dodoc FAQ KNOWNBUGS PERMISSIONS
 
 	local _S=${S}
