@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.19.10.ebuild,v 1.2 2006/01/28 14:51:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.19.10.ebuild,v 1.3 2006/02/11 14:27:56 lu_zero Exp $
 
 IUSE="qt"
 
-inherit eutils rpm linux-info linux-mod
+inherit eutils rpm
 
 DESCRIPTION="Ati precompiled drivers extra application"
 HOMEPAGE="http://www.ati.com"
@@ -19,7 +19,7 @@ DEPEND="=x11-drivers/ati-drivers-${PV}*
 	qt? ( >=x11-libs/qt-3.0 )"
 
 ATIBIN="${D}/opt/ati/bin"
-RESTRICT="nostrip"
+SLOT="0"
 
 src_unpack() {
 	local OLDBIN="/usr/X11R6/bin"

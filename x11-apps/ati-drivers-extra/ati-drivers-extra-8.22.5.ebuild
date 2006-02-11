@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.18.8.ebuild,v 1.4 2006/02/11 14:27:56 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.22.5.ebuild,v 1.1 2006/02/11 14:27:56 lu_zero Exp $
 
 IUSE="qt"
 
@@ -9,8 +9,8 @@ inherit eutils rpm
 DESCRIPTION="Ati precompiled drivers extra application"
 HOMEPAGE="http://www.ati.com"
 SRC_URI="x86? ( mirror://gentoo/ati-driver-installer-${PV}-i386.run )
-	mirror://gentoo/ati-drivers-extra-8.19.10-improvements.patch.bz2
-	 amd64? ( mirror://gentoo/ati-driver-installer-${PV}-x86_64.run )"
+	 amd64? ( mirror://gentoo/ati-driver-installer-${PV}-x86_64.run )
+	 mirror://gentoo/ati-drivers-extra-8.22.5-improvements.patch.bz2"
 
 LICENSE="ATI GPL-2 QPL-1.0"
 KEYWORDS="-amd64 ~x86"  # (~amd64 yet to be fixed)(see bug 95684)
@@ -25,9 +25,11 @@ src_unpack() {
 	local OLDBIN="/usr/X11R6/bin"
 
 	cd ${WORKDIR}
+	use x86 && MY_P="ati-driver-installer-${PV}-i386.run"
+	use amd64 && MY_P="ati-driver-installer-${PV}-x86_64.run"
 
 	ebegin "Unpacking Ati drivers"
-	sh ${DISTDIR}/${A} --extract ${WORKDIR} &> /dev/null
+	sh ${DISTDIR}/${MY_P} --extract ${WORKDIR} &> /dev/null
 	eend $? || die "unpack failed"
 
 	mkdir -p ${WORKDIR}/extra
@@ -45,10 +47,11 @@ src_unpack() {
 		${WORKDIR}/common/usr/src/ATI/fglrx_panel_sources.tgz \
 		|| die "Failed to unpack fglrx_panel_sources.tgz!"
 	cd ${WORKDIR}/extra/fglrx_panel
-	epatch ${DISTDIR}/ati-drivers-extra-8.14.13-improvements.patch.bz2
+	epatch "${DISTDIR}/ati-drivers-extra-8.22.5-improvements.patch.bz2"
 	sed -e "s:"${OLDBIN}":"${ATIBIN}":"\
 		-i ${WORKDIR}/extra/fglrx_panel/Makefile
-
+	#workaround
+	cp ${FILESDIR}/fglrx_pp_proto.h ${WORKDIR}/extra/fglrx_panel
 	}
 
 src_compile() {
@@ -76,12 +79,9 @@ src_install() {
 		doexe ${WORKDIR}/extra/fglrx_panel/fireglcontrol
 
 		insinto /usr/share/applications/
-		doins ${DISTDIR}/fireglcontrol.desktop
+		doins ${FILESDIR}/fireglcontrol.desktop
 
 		insinto /usr/share/pixmaps/
 		doins ${WORKDIR}/extra/fglrx_panel/ati.xpm
-	else
-		# Removing unused stuff
-		rm -rf ${WORKDIR}/usr/share/{applnk,gnome,icons,pixmaps}
 	fi
 }
