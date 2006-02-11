@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0_pre20060115.ebuild,v 1.2 2006/01/15 20:40:34 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0_pre20060115.ebuild,v 1.3 2006/02/11 14:41:36 mkay Exp $
 
 inherit flag-o-matic eutils
 
@@ -53,8 +53,7 @@ DEPEND="=x11-libs/qt-3*
 	ssl? ( dev-libs/openssl )
 	speech? ( app-accessibility/powiedz )
 	xmms? ( media-sound/xmms )
-	xosd? ( x11-libs/xosd )
-	X? ( virtual/x11 )"
+	xosd? ( x11-libs/xosd )"
 
 SRC_URI="http://kadu.net/download/snapshots/${PN}-${SNAPSHOT}.tar.bz2
 	amarok? ( http://scripts.one.pl/amarok/devel/${MY_PV}/amarok-${AMAROK}.tar.gz )

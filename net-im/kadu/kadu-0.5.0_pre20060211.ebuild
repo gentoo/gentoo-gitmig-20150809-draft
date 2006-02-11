@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0_pre20051230.ebuild,v 1.1 2005/12/30 15:24:04 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0_pre20060211.ebuild,v 1.1 2006/02/11 14:41:36 mkay Exp $
 
 inherit flag-o-matic eutils
 
@@ -8,18 +8,20 @@ MY_PV=${PV/_*}
 SNAPSHOT=${PV#*_pre}		#http://www.kadu.net/download/snapshots/
 
 TABS="rev46"				#http://gov.one.pl/svnsnap
-AMAROK="1.16"				#http://scripts.one.pl/amarok
+AMAROK="1.17"				#http://scripts.one.pl/amarok
 WEATHER="2.07"				#http://www.kadu.net/~blysk/
 EXT_INFO="2.0beta8"			#http://kadu-ext-info.berlios.de
 XMMS="1.30"					#http://scripts.one.pl/xmms
-XOSD_NOTIFY="051121"		#http://www.kadu.net/~joi/xosd_notify
+XOSD_NOTIFY="20060123"		#http://www.kadu.net/~joi/xosd_notify
 MAIL="0.2.0"				#http://michal.gov.one.pl/mail
 SPELLCHECKER="0.18"			#http://scripts.one.pl/spellchecker
 SPY="0.0.8-2"				#http://scripts.one.pl/~przemos/projekty/kaduspy/
-LED_NOTIFY="0.5" 			#http://http://www.kadu.net/~blysk/
+LED_NOTIFY="0.6" 			#http://http://www.kadu.net/~blysk/
 SCREEN_SHOT="0.4.0"			#http://scripts.one.pl/screenshot
 CONTACTS="1.0rc1"			#http://obeny.kicks-ass.net/obeny/kadu/modules/contacts
 OSD_NOTIFY="0.2.7.2"		#http://www.kadu.net/~pan_wojtas/osdhints_notify/
+POWERKADU="20060205"		#http://kadu.net/~patryk/powerkadu/
+FIREWALL="0.6.2"			#http://www.kadu.net/~pan_wojtas/firewall/download.html
 THEMES="kadu-theme-crystal-16
 	kadu-theme-crystal-22
 	kadu-theme-gg3d
@@ -52,8 +54,7 @@ DEPEND="=x11-libs/qt-3*
 	ssl? ( dev-libs/openssl )
 	speech? ( app-accessibility/powiedz )
 	xmms? ( media-sound/xmms )
-	xosd? ( x11-libs/xosd )
-	X? ( virtual/x11 )"
+	xosd? ( x11-libs/xosd )"
 
 SRC_URI="http://kadu.net/download/snapshots/${PN}-${SNAPSHOT}.tar.bz2
 	amarok? ( http://scripts.one.pl/amarok/devel/${MY_PV}/amarok-${AMAROK}.tar.gz )
@@ -77,7 +78,9 @@ SRC_URI="http://kadu.net/download/snapshots/${PN}-${SNAPSHOT}.tar.bz2
 		http://scripts.one.pl/screenshot/devel/${MY_PV}/screenshot-${SCREEN_SHOT}.tar.gz
 		http://obeny.kicks-ass.net/obeny/kadu/modules/contacts/contacts-${CONTACTS}.tar.bz2
 		http://www.kadu.net/~joi/kde_transparency.tar.bz2
-		http://www.kadu.net/~pan_wojtas/osdhints_notify/download/kadu-osdhints_notify-${OSD_NOTIFY}.tar.gz )
+		http://www.kadu.net/~pan_wojtas/osdhints_notify/download/kadu-osdhints_notify-${OSD_NOTIFY}.tar.gz
+		http://kadu.net/~patryk/powerkadu/powerkadu-${POWERKADU}.tar.gz
+		http://www.kadu.net/~pan_wojtas/firewall/download/kadu-firewall-${FIREWALL}.tar.gz )
 	xmms? ( http://scripts.one.pl/xmms/devel/${MY_PV}/xmms-${XMMS}.tar.gz )
 	xosd? ( http://www.kadu.net/~joi/xosd_notify/packages/xosd_notify-${XOSD_NOTIFY}.tar.bz2 )
 	mail? ( http://michal.kernel-panic.cjb.net/mail/tars/release/mail-${MAIL}.tar.bz2 )
@@ -90,7 +93,7 @@ S=${WORKDIR}/${PN}
 
 enable_module() {
 	if use ${1}; then
-	    mv ${WORKDIR}/${2} ${WORKDIR}/kadu/modules/
+	    mv ${WORKDIR}/${2} ${WORKDIR}/kadu/modules/ || die "Error moving module	${2}"
 	    module_config ${2} m
 	fi
 }
@@ -133,6 +136,8 @@ src_unpack() {
 	enable_module extramodules led_notify
 	enable_module extramodules tabs
 	enable_module extramodules screenshot
+	enable_module extramodules powerkadu
+	enable_module extramodules firewall
 
 	# put some patches
 #	epatch ${FILESDIR}/kadu-toolbar_toggle-gentoo.diff
@@ -188,12 +193,13 @@ src_compile() {
 	fi
 
 	local myconf
-	myconf="${myconf} --enable-modules --enable-dist-info=Gentoo"
+	myconf="${myconf} --enable-modules --enable-dist-info=Gentoo --enable-pheaders"
 
-	use voice && myconf="${myconf} --enable-dependency-tracing"
-	use debug && myconf="${myconf} --enable-debug"
-
-	econf ${myconf} || die
+	econf \
+		$(use_enable kdeenablefinal final) \
+		$(use_enable voice dependency-tracing) \
+		$(use_enable debug) \
+		${myconf} || die
 	emake || die
 }
 

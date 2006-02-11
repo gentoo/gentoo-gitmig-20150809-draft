@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0.ebuild,v 1.5 2005/07/07 04:58:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0.ebuild,v 1.6 2006/02/11 14:41:36 mkay Exp $
 
 inherit flag-o-matic eutils
 
@@ -53,8 +53,7 @@ DEPEND="=x11-libs/qt-3*
 	speech? ( app-accessibility/powiedz )
 	tcltk? ( >=dev-lang/tcl-8.4.0 >=dev-lang/tk-8.4.0 )
 	xmms? ( media-sound/xmms )
-	xosd? ( x11-libs/xosd )
-	X? ( virtual/x11 )"
+	xosd? ( x11-libs/xosd )"
 
 SRC_URI="http://kadu.net/download/stable/${P}.tar.bz2
 	http://biprowod.wroclaw.pl/kadu/smieci/tabs-${VTABS}.tar.bz2
