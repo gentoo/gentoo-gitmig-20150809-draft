@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e396c3f24bfbb4bab09b57e0f3109d6b ChangeLog 2486
 MD5 c1b296ca6c47a90395f9950e261dbd85 files/digest-mon-0.99.2-r1 63
 MD5 2d858db0e1c12cdc07f632ef6398530d files/digest-mon-0.99.2-r2 235
@@ -5,3 +8,10 @@ MD5 b7e59d208dfd4162a4d6c04f8410cafd files/mon.cf 795
 MD5 4b7ad9743d967eacd6d9b35754eb6f03 files/mon.rc6 731
 MD5 9d875206c9a4c862859bae2f1e1ee710 mon-0.99.2-r1.ebuild 1260
 MD5 cf8c91c570a6c0eba2d095f9f02038bd mon-0.99.2-r2.ebuild 1259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD7k/btG5z4I8BtQoRAhXrAJ9EqpZnF4A2WMUEdZDJzLYPGY2cXgCdHYz3
+K9N7VOF2Qj5gpsHOM2llXuY=
+=6c1m
+-----END PGP SIGNATURE-----
