@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-2.8-r2.ebuild,v 1.1 2006/02/11 19:20:55 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-2.8-r3.ebuild,v 1.1 2006/02/11 22:55:59 vanquirius Exp $
 
 inherit toolchain-funcs gnome2
 
@@ -24,5 +24,8 @@ src_install() {
 	python install.py install --no-mime --installdir "${D}"usr 1>/dev/null
 	insinto /usr/share/mime/packages/
 	doins "${S}"/mime/comix.xml
+	insinto /etc/gconf/schemas/
+	doins "${S}"/mime/comicbook.schemas
+	dobin "${S}"/mime/comicthumb
 	dodoc ChangeLog README
 }
