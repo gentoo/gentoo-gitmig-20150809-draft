@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.81 2006/01/01 01:14:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.82 2006/02/11 19:09:27 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -65,11 +65,16 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 # Build.PL's in place. The override is to allow for a fallback to the "classic"
 # Makfile.PL - example is Class::MethodMaker, which provides a Build.PL that is
 # severely broken.
+#
+# 2006.02.11 mcummings
+# Per a conversation with solar, adding a change to the dep/rdep lines for
+# minimal. Should fix bug 68367 and bug 83622, as well as other embedded builds
+# that use perl components without providing perl
 
 
-
+IUSE="minimal"
 DEPEND=">=dev-lang/perl-5.8.2 !<perl-core/ExtUtils-MakeMaker-6.17"
-RDEPEND="${DEPEND}"
+RDEPEND="!minimal? ( ${DEPEND} )"
 SRC_PREP="no"
 SRC_TEST="skip"
 USE_BUILDER="yes"
