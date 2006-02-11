@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00.ebuild,v 1.6 2005/12/31 14:18:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00.ebuild,v 1.7 2006/02/11 10:35:51 robbat2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -122,7 +122,7 @@ pkg_postinst() {
 	use mailwrapper && dosym /usr/sbin/sendmail /usr/bin/mailq
 
 	einfo "To create an initial setup, please do:"
-	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+	einfo "emerge --config =${PF}"
 	msg_svscan
 	msg_mailerconf
 }

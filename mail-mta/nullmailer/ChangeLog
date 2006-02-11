@@ -1,6 +1,17 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.21 2006/01/30 04:04:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.22 2006/02/11 10:35:51 robbat2 Exp $
+
+*nullmailer-1.02-r2 (11 Feb 2006)
+*nullmailer-1.02-r1 (11 Feb 2006)
+*nullmailer-1.00-r2 (11 Feb 2006)
+
+  11 Feb 2006; Robin H. Johnson <robbat2@gentoo.org> files/mailer.conf,
+  nullmailer-1.00.ebuild, +nullmailer-1.00-r2.ebuild,
+  nullmailer-1.02.ebuild, +nullmailer-1.02-r1.ebuild,
+  +nullmailer-1.02-r2.ebuild:
+  Fix bugs raised by #121587 - Numerous issues, fixed in >=1.02-r1. 1.00-r2
+  and 1.02-r2 implement the new mailer-config system, and are in package.mask.
 
   30 Jan 2006; Robin H. Johnson <robbat2@gentoo.org>
   -nullmailer-1.00_rc7.ebuild, -nullmailer-1.00_rc7-r1.ebuild,

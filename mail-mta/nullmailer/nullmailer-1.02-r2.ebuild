@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.02.ebuild,v 1.2 2006/02/11 10:35:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.02-r2.ebuild,v 1.1 2006/02/11 10:35:51 robbat2 Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic mailer
 
 MY_P="${P/_rc/RC}"
 S=${WORKDIR}/${MY_P}
@@ -16,13 +16,10 @@ HOMEPAGE="http://untroubled.org/nullmailer/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="mailwrapper"
 
 DEPEND="virtual/libc
 		sys-apps/groff"
-RDEPEND="!mailwrapper? ( !virtual/mta )
-		mailwrapper? ( >=net-mail/mailwrapper-0.2 )
-		virtual/libc
+RDEPEND="virtual/libc
 		>=sys-process/supervise-scripts-3.2
 		>=sys-process/daemontools-0.76-r1
 		sys-apps/shadow"
@@ -76,6 +73,7 @@ src_install () {
 		mv ${D}/usr/bin/mailq ${D}/usr/bin/mailq.nullmailer
 		insinto /etc/mail
 		doins ${FILESDIR}/mailer.conf
+		mailer_install_conf
 	fi
 	dodoc AUTHORS BUGS COPYING HOWTO INSTALL NEWS README YEAR2000 TODO ChangeLog
 	# A small bit of sample config
@@ -115,12 +113,13 @@ msg_svscan() {
 	einfo "To start nullmailer at boot you have to enable the /etc/init.d/svscan rc file"
 	einfo "and create the following link :"
 	einfo "ln -fs /var/nullmailer/service /service/nullmailer"
+	einfo "As an alternative, we also provide an init.d script."
 	einfo
 	einfo "If the nullmailer service is already running, please restart it now,"
 	einfo "using 'svc-restart nullmailer' or the init.d script."
 	einfo
-	einfo "As an alternative, we also provide an init.d script."
 }
+
 msg_mailerconf() {
 	use mailwrapper && \
 		ewarn "Please ensure you have selected nullmailer in your /etc/mail/mailer.conf"
@@ -133,8 +132,6 @@ pkg_postinst() {
 	chown nullmail:nullmail /var/log/nullmailer /var/nullmailer/{tmp,queue,trigger}
 	chmod 770 /var/log/nullmailer /var/nullmailer/{tmp,queue}
 	chmod 660 /var/nullmailer/trigger
-
-	use mailwrapper && dosym /usr/sbin/sendmail /usr/bin/mailq
 
 	einfo "To create an initial setup, please do:"
 	einfo "emerge --config =${PF}"
