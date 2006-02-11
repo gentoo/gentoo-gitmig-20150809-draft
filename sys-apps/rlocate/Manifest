@@ -1,24 +1,55 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 38ad11b0648c3e48c23d9e5cc7cef271 ChangeLog 1804
-MD5 f2481f47e9d60d7e52234ffecd679931 files/digest-rlocate-0.3.3 65
+MD5 c71c65b837b5e496004a0de9db37963d ChangeLog 1960
+RMD160 88677aa9e9856d9ca8d5574d14e8d7213905a680 ChangeLog 1960
+SHA256 65f69fc066d4f7e00ba997b96e21f4a14902b0ce67a4e5ed898e2ee3e78c3703 ChangeLog 1960
 MD5 c394abbcaaac16e12cbe56b3e639c634 files/digest-rlocate-0.4.0 65
+RMD160 779ef4e39e97564e47a33ee7b246259832b10423 files/digest-rlocate-0.4.0 65
+SHA256 6af91668306abaf45d0ed6c5bb7b38a31ce501b50ddd193c0e2145339b8fe299 files/digest-rlocate-0.4.0 65
 MD5 98769b4485db0ab994b61441d74cf6fd files/digest-rlocate-0.4.1 65
+RMD160 4694616dd305872f6d7c70c24b41f99a9249ae62 files/digest-rlocate-0.4.1 65
+SHA256 cc9c1d5a9fd98a5252b3cece8bcb55fea04524772bf90c773a59026c350da3ce files/digest-rlocate-0.4.1 65
 MD5 1561bda541670e6008a3dfc05510b446 files/digest-rlocate-0.4.2 65
+RMD160 0bdca53d3d04272aef22d7be1ba2938850668943 files/digest-rlocate-0.4.2 65
+SHA256 85b80e90dd7222ba5327a1109d7aa1049790e783163710e06ca3cd5d07f0d9ad files/digest-rlocate-0.4.2 65
+MD5 062913d72d8c29796164f03223b77685 files/digest-rlocate-0.4.3 241
+RMD160 27038f33ffa4efacb4b5b4eac216e7eda31a177e files/digest-rlocate-0.4.3 241
+SHA256 ff424af8869035f3d224720a1acaa177b3975ab826f734acb3b6c4d09a61efee files/digest-rlocate-0.4.3 241
 MD5 43fee28c090b20de0b2c57b15e97caba files/rlocate-0.3.3-build.patch 2655
+RMD160 796455ca5fcd5f14c47ffb65868a65c8ef1753ad files/rlocate-0.3.3-build.patch 2655
+SHA256 979cea75fae4b6c812f60cc73b31e83b68038b61bdf9e9c91dfa16df6b0caf83 files/rlocate-0.3.3-build.patch 2655
 MD5 eebb74dad61fa6a50e9d7976ba863cb6 files/rlocate-0.3.3-linux-2.6.15.patch 1705
+RMD160 cd9115c816f33f84e779786875b489104e4aaf5c files/rlocate-0.3.3-linux-2.6.15.patch 1705
+SHA256 037d4da4504855991c01458f783b709d30e2d9c99bb4842441f5698a388e90ac files/rlocate-0.3.3-linux-2.6.15.patch 1705
 MD5 3827ed33c10fdb0bb9bd587e5895e8f8 files/rlocate-0.4.1-build.patch 1050
+RMD160 a161a7d843dc87502ae230f19e5da1f62c0e8ab4 files/rlocate-0.4.1-build.patch 1050
+SHA256 3bac9de8bfda41e39b08f7a19457b4cad68b22c19bb7ab0555aabf3ceffe0281 files/rlocate-0.4.1-build.patch 1050
+MD5 f2a828c2c97cd9ac6d25213e0e7033f0 files/rlocate-0.4.3-build.patch 1057
+RMD160 d517a627f018ac0757c5b49bb1bfcb0ec4528593 files/rlocate-0.4.3-build.patch 1057
+SHA256 d0821dd88cdce1b77e7f34270535d8f4b7e29ed5de6c8a052fc56b7f8fbf4af5 files/rlocate-0.4.3-build.patch 1057
 MD5 56da5f78d234dc0928277d6d34b85de9 files/rlocated.rc 534
+RMD160 bb6c985f67b2c8e30005e12198e9ef1208b353dc files/rlocated.rc 534
+SHA256 f9437eb1eafba03b8c736bbb6bad329a2c10f2e086b95c28925f136f24c52a14 files/rlocated.rc 534
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 44d30c7cfe66aa9c0c6a9e2f29621477 rlocate-0.3.3.ebuild 1179
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
 MD5 b7db03c5b66b779cf341adf968bbdc6b rlocate-0.4.0.ebuild 1140
+RMD160 5b309a355c6d5f3e03abaebf29f880a911211292 rlocate-0.4.0.ebuild 1140
+SHA256 a8876f3e1fc9cff4a0671c97c375e482310402d743ffebbb82a963ed2981e2f4 rlocate-0.4.0.ebuild 1140
 MD5 fc1b9c9092f004bf925c9b6c05e32ac9 rlocate-0.4.1.ebuild 1161
+RMD160 b2f1a913dd011821d1f68111c468109dd97f3294 rlocate-0.4.1.ebuild 1161
+SHA256 a1d538c76b9b5b48753e0ca1e95ff21941de5dd46403b294a67f774e35430668 rlocate-0.4.1.ebuild 1161
 MD5 691a7dda3ce466a54f524ea116a9a45d rlocate-0.4.2.ebuild 1161
+RMD160 5b395ede7db3aadbd78b49ddab66ae9992372849 rlocate-0.4.2.ebuild 1161
+SHA256 bbebf3968e99c3c067dbbfaa0e878961c87edc45cedf6c88f7365bcd9411c617 rlocate-0.4.2.ebuild 1161
+MD5 4bfc313b502e4c967c5fa669de8d7cb2 rlocate-0.4.3.ebuild 1161
+RMD160 e9e972c7d08a8f900aee9641476210a3f48f9381 rlocate-0.4.3.ebuild 1161
+SHA256 8fb27e910d85cf481ded91f5b59a6dd47d22df661e3ba0616a1904172aa64b62 rlocate-0.4.3.ebuild 1161
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD0W2y2+ySkm8kpY0RAm/TAKCc4jjJd/YFeO+NKa2cNnSKuHyVUACbB/Cn
-VMoWyn42cEKPcOigoOyiQH8=
-=Yf4Y
+iD8DBQFD7msr2+ySkm8kpY0RAjrNAKCVED4ycYNrD4Ztsz03d6oiTfkQ+gCgp5Id
+B3pQx6b6PGI5hH/ApHwJ1/c=
+=ap/c
 -----END PGP SIGNATURE-----
