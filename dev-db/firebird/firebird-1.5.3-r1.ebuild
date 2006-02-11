@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.3-r1.ebuild,v 1.1 2006/02/11 22:10:46 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.3-r1.ebuild,v 1.2 2006/02/11 22:12:32 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/firebird/${MY_P}.tar.bz2
 
 LICENSE="Interbase-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 sparc x86"
+KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
 IUSE="xinetd doc"
 RESTRICT="nouserpriv"
 

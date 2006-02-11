@@ -46,9 +46,9 @@ SHA256 d727047ef531b518ef051ade960a4fb327784a34dc63ca1f1df7f382b56700b8 firebird
 MD5 7d7e6a5fd35055d627ec76588b6a1aed firebird-1.5.2.ebuild 6516
 RMD160 99a1a0fbfa60de67ec59e9f7e39f2a06dd6737da firebird-1.5.2.ebuild 6516
 SHA256 0b327abc644bf3fe862362be7b490e9b4bd89b8c251732523d95648bffff2a1c firebird-1.5.2.ebuild 6516
-MD5 ec33d73bdf45ded64a40218c00320b55 firebird-1.5.3-r1.ebuild 6946
-RMD160 bf9bf5c120866a60d3da9ac930ac096147b32489 firebird-1.5.3-r1.ebuild 6946
-SHA256 651fc5ce110accfb758aaa76d89444cc15a73d5c586ad73bd6eaf6172fb956b1 firebird-1.5.3-r1.ebuild 6946
+MD5 f940f36bda8e80085d9eceabc2139f48 firebird-1.5.3-r1.ebuild 6948
+RMD160 410ca4a3a14bd3af3028d6175dcd3707c00dba70 firebird-1.5.3-r1.ebuild 6948
+SHA256 64ca268a20be32c0718313d028a6a7bc99008840718ec81d3b57513a6408e5eb firebird-1.5.3-r1.ebuild 6948
 MD5 39f2fb9566c3e5bea7fd6b5e72230bbe firebird-1.5.3.ebuild 6513
 RMD160 2eff4be4e7543a7924365a8a27e88e0c12c99ff1 firebird-1.5.3.ebuild 6513
 SHA256 e97aa02afb860c69e8acb25ea5def6309883f63c1e3be0934c16cd1cf60d3ce3 firebird-1.5.3.ebuild 6513
@@ -58,7 +58,7 @@ SHA256 d16e8c5dfbf984681d500dad1063583ba0a21e0b73da359178bb87c09d951c9c metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD7m+Fub4+zaPCR/oRAoJNAJ9JSm7J8uIkGqwrIUJCvpHASbP2OwCfeRXj
-lCdJyu+SFuyrK001DtVdjyw=
-=6Wum
+iD8DBQFD7m/uub4+zaPCR/oRAlF/AKCYbvA5F+k+gb8v/RGxuQsFZHbbFACgjg2z
+r+MpLw4KZkOwW6GUxyc9ibQ=
+=P+7i
 -----END PGP SIGNATURE-----
