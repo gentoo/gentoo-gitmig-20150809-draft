@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 97d5595025ee0f0299e342f371550aac ChangeLog 842
 MD5 0f503b96f382c2d4a268ed9e25f3f9b0 files/digest-misterhouse-2.100 70
 MD5 9c95ecaf939bd98a500eae96af3b499c files/digest-misterhouse-2.99 69
@@ -6,3 +9,10 @@ MD5 28f0e03c56faa15229bbb16859454156 files/misterhouse.init 451
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 93997baf8363f33f58e91d8880846b93 misterhouse-2.100.ebuild 1344
 MD5 6c3736cecee1c30478e6c39ccc495a2a misterhouse-2.99.ebuild 1342
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD7lWKtG5z4I8BtQoRAlQ+AJ0fHGfzsu0Wmk7YuvSbHUCqxp8iYACfSCRz
+2UcO2onGARHevKtHqOl9nl8=
+=WzyM
+-----END PGP SIGNATURE-----
