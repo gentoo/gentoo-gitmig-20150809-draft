@@ -1,6 +1,10 @@
 # ChangeLog for games-action/descent3
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.16 2006/01/10 21:18:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.17 2006/02/11 00:54:13 wolf31o2 Exp $
+
+  11 Feb 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  descent3-1.4.0b-r1.ebuild:
+  Added sys-libs/glibc to RDEPEND.
 
   10 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   descent3-1.4.0b-r1.ebuild:

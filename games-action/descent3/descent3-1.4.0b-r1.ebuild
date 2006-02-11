@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.3 2006/01/10 21:18:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.4 2006/02/11 00:54:13 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 x86"
 RESTRICT="nostrip"
 
 DEPEND=""
-RDEPEND="virtual/opengl
+RDEPEND="sys-libs/glibc
+	virtual/opengl
 	x86? (
 		|| (
 			(
