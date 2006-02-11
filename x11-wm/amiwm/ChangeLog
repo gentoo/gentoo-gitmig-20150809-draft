@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/amiwm
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/ChangeLog,v 1.5 2005/12/25 04:41:37 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/ChangeLog,v 1.6 2006/02/11 11:28:16 nelchael Exp $
+
+  11 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org> amiwm-0.20_p48.ebuild:
+  Fixed DEPEND for modular X.
 
   25 Dec 2005; Mike Frysinger <vapier@gentoo.org>
   +files/amiwm-0.20_p48-flex.patch, amiwm-0.20_p48.ebuild:

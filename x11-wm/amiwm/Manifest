@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4f5da915c32e4a5fdc9c3db4076d8054 ChangeLog 791
-MD5 acaf4d94c9475f0e1a4db1233e043938 amiwm-0.20_p48.ebuild 928
+MD5 8fc2b4cb6a129a2e3804e959eee22eb5 ChangeLog 900
+RMD160 6ac71b014f1d405b7877065c712ca59cce0715d2 ChangeLog 900
+SHA256 921b1285ccb8230c7c8fdb48f16eb9794c20d4ca02461b0a57bd8ea720718e29 ChangeLog 900
+MD5 02b407c6e258c87118661249c5f0fb51 amiwm-0.20_p48.ebuild 1084
+RMD160 2b9f70536fc2190a8ecd1b6d9d5539aef996a5ab amiwm-0.20_p48.ebuild 1084
+SHA256 a9dab3302e320ae0311007898b34f5aeeb3ed1534f43fd58fd593113bdbb29ab amiwm-0.20_p48.ebuild 1084
 MD5 987bc0b78d8a94197698a912753d7451 files/amiwm-0.20_p48-flex.patch 250
+RMD160 0ebc4ddff2c2672c7d0acd8a1bdff60a2e7065e7 files/amiwm-0.20_p48-flex.patch 250
+SHA256 fe68aa7053ea125c7988d4c9a5678a3926152869bcf67409725eaf17e01b9dbe files/amiwm-0.20_p48-flex.patch 250
 MD5 3fb87d8b6cf877ea7926258b01f708dd files/digest-amiwm-0.20_p48 65
+RMD160 0b24c31a339d7d26badd21743c2d9e5697ade561 files/digest-amiwm-0.20_p48 65
+SHA256 f284510e87be9a678f71ec26b365ecc563d85d5a3ba1f9ec784b217461dc19cf files/digest-amiwm-0.20_p48 65
 MD5 db4c42351dc265cd9668e40667cfe9e9 metadata.xml 420
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDriML2+ySkm8kpY0RAkiPAKC6uQhFg/7QiBj7tOXSm2+wOsI23ACeL0Si
-77+jh4keaA5txIax8jO1Bj0=
-=l5ht
------END PGP SIGNATURE-----
+RMD160 29dd3d5d13127b2dddef6eac8c71ab2048dcf9ed metadata.xml 420
+SHA256 34e9a598a8736ffaa958d2aa32f7929b4e617728ddadea3e3adc0e762c31e40b metadata.xml 420
