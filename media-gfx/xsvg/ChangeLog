@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xsvg
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/ChangeLog,v 1.10 2005/09/10 22:17:45 compnerd Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/ChangeLog,v 1.11 2006/02/11 16:10:08 joshuabaergen Exp $
+
+  11 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org> xsvg-0.1.2.ebuild,
+  xsvg-0.2.0.ebuild, xsvg-0.2.1.ebuild:
+  Add modular X dependencies (bug #121021, Moshe Kaminsky).
 
   10 Sep 2005; Saleem Abdulrasool <compnerd@gentoo.org> +xsvg-0.2.1.ebuild:
   Version bump for xsvg for new version of cairo and libsvg-cairo.  Resolves bug
