@@ -13,12 +13,12 @@ SHA256 8bd7bd6458ae90b7bc04c862c2a828eecb39f58e25cc0748bbd96486a82cd375 enlighte
 MD5 aa422efda2e5a2af1eb66c9182d99bca enlightenment-0.16.7.2.ebuild 1565
 RMD160 a5dfd3e6f61b2009142f1538428a7bd1fe54ba5f enlightenment-0.16.7.2.ebuild 1565
 SHA256 18356497753fba717f291320e0f3c93832afd404b13e0647cce299cf0a7a83e5 enlightenment-0.16.7.2.ebuild 1565
-MD5 3dad5b1cf0352a8eb3df3488b94f07a3 enlightenment-0.16.8.ebuild 1506
-RMD160 8eec75716c9be2f91e99de42c381c1d7b4f467e9 enlightenment-0.16.8.ebuild 1506
-SHA256 9a3a86f623d9c7c681b2749936e6097debb3d49d9db65ffc2afd42d13200a31b enlightenment-0.16.8.ebuild 1506
-MD5 58289384c2d0457c981976c3685f631e enlightenment-0.16.9999.ebuild 1542
-RMD160 cb16f6528df15c0ab26be972fa74732b11d8fa98 enlightenment-0.16.9999.ebuild 1542
-SHA256 509677078d0f4e80c9deca98160af76fde90463cbdf7291633b6025c26424a52 enlightenment-0.16.9999.ebuild 1542
+MD5 edb199afa61d0687e3283be53b7f1596 enlightenment-0.16.8.ebuild 1528
+RMD160 a26d56f2ae96e909658befc7b42b992736dbe708 enlightenment-0.16.8.ebuild 1528
+SHA256 81f3856e8be75a1fba2d36feb479a808c0dfa1c2dc882e6fef43835ef0af3d5e enlightenment-0.16.8.ebuild 1528
+MD5 1441ce5bc9028eb448e5daa4d4c3268b enlightenment-0.16.9999.ebuild 1564
+RMD160 855219314c1e85237766832d013be179f5569db1 enlightenment-0.16.9999.ebuild 1564
+SHA256 7d792d4830335d57f2c508b254cd758ca53c21f964f70ebd7ac28c3e7bbd2506 enlightenment-0.16.9999.ebuild 1564
 MD5 fbe59612181a2fb8c213b815a2f45ebd files/0.16.6-edox.patch 2775
 RMD160 48d7e10dc80d4350286fb28e6eaa23cf05d50841 files/0.16.6-edox.patch 2775
 SHA256 9120b15a767e504d6e0808bd69504b49bf12c860f2920a07648a53cf70713b5c files/0.16.6-edox.patch 2775
@@ -58,7 +58,7 @@ SHA256 4158c36c21f31afedd523dde98f60a2393c208f142df806e837e21c871dd7fe4 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6rf62+ySkm8kpY0RAur5AKClj4tpRidp/TCSgOpIdbofM+jC2wCbBPqo
-ojmngJGVoDLb21GIRc8sp5w=
-=/K9+
+iD8DBQFD7XFE2+ySkm8kpY0RAoaeAJ9iNhQnPtrvndTCt5uIWK7YUG5/jQCeJJEw
+ozmwvOFh7N0IfHKFP02xGuM=
+=dcFv
 -----END PGP SIGNATURE-----
