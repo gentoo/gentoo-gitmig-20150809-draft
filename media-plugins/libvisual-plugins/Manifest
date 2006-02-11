@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ba168fab41ec8a9feeb96698e3e50892 ChangeLog 2110
+MD5 b7be204bec3ebd1d586d788402b75a81 ChangeLog 2211
 MD5 e341800a9ecd70a1be2bd3dca5e651e3 files/digest-libvisual-plugins-0.1.6 75
 MD5 ef7a43fa14e3c6e823115c74c891dc7c files/digest-libvisual-plugins-0.1.7 75
 MD5 ba5f0b6a4d085dd4ddc2667c3574fada files/digest-libvisual-plugins-0.2.0 76
@@ -10,12 +7,5 @@ MD5 5f2815a67afc789fec162d1ef0cbd1b6 files/libvisual-plugins-0.2.0-gcc4.patch 69
 MD5 4e8836d46ad26fa82d437ccab5590867 files/libvisual-plugins-0.2.0-mkdirhier.patch 1511
 MD5 754678c81877b8e077031dbe33931f59 libvisual-plugins-0.1.6.ebuild 833
 MD5 b979542328754f4832e48fcf1afdc627 libvisual-plugins-0.1.7.ebuild 846
-MD5 746cd130318dcdedfd221a0776c9f54b libvisual-plugins-0.2.0.ebuild 1489
+MD5 109ad991cae5aaaa44381cb0b7101e42 libvisual-plugins-0.2.0.ebuild 1487
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDwEYCp5vW4rUFj5oRAlYjAJ4+92uag/WiTVg1R9btFfbuSuAuTgCfZ2mE
-cXA2JmbKxg9zcbSeka2Ctqw=
-=c6Ja
------END PGP SIGNATURE-----
