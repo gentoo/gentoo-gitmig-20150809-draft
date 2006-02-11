@@ -2,27 +2,63 @@
 Hash: SHA1
 
 MD5 84dd751e89aec17670f2043f8a7dda2d ChangeLog 7342
+RMD160 fd45bb6b306d85826e442bc8f82ad64d14a88e94 ChangeLog 7342
+SHA256 6c08f504963feabae2b18791f991506190150e3ef55e073c23234cad04353792 ChangeLog 7342
 MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r3 118
+RMD160 a844cd58706f8008192def9da9f998b7d960f930 files/digest-kbd-1.12-r3 118
+SHA256 75f6cdbc7a856186290a04380b2d2931589d7dd69430c2d2c8a5826688385d96 files/digest-kbd-1.12-r3 118
 MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r4 118
+RMD160 a844cd58706f8008192def9da9f998b7d960f930 files/digest-kbd-1.12-r4 118
+SHA256 75f6cdbc7a856186290a04380b2d2931589d7dd69430c2d2c8a5826688385d96 files/digest-kbd-1.12-r4 118
 MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r5 118
+RMD160 a844cd58706f8008192def9da9f998b7d960f930 files/digest-kbd-1.12-r5 118
+SHA256 75f6cdbc7a856186290a04380b2d2931589d7dd69430c2d2c8a5826688385d96 files/digest-kbd-1.12-r5 118
 MD5 6e007f04a80358ea81b27c80498a4808 files/kbd-1.08-terminal.patch 925
+RMD160 0f622bcf874c01ee6533cfbdc6137e4f8949299b files/kbd-1.08-terminal.patch 925
+SHA256 466ac92951695017498c640547af9aeb6351b2da75b6b787c7d0f17f409e9134 files/kbd-1.08-terminal.patch 925
 MD5 fa826e223fa8177a8faff98b798cf601 files/kbd-1.12-Meta_utf8.patch 344
+RMD160 a1a1326716716305767f297817519d1cd6f5670d files/kbd-1.12-Meta_utf8.patch 344
+SHA256 9cb114acb7704fe14ae99d77ffc1f6fc586101fc541eadce5efbfd36f9d8b8c0 files/kbd-1.12-Meta_utf8.patch 344
 MD5 d03cdb6117cda1a23cb90b91ab133c3e files/kbd-1.12-alias.patch 1129
+RMD160 2dbff90ee13a3f7e738faed94301388ea8c4ce83 files/kbd-1.12-alias.patch 1129
+SHA256 354779bdc2a3a69485877089d6eac95939fc48acea8d7a7e6efd2cac42de951a files/kbd-1.12-alias.patch 1129
 MD5 2fff8da17e566c258df2888fbc599c23 files/kbd-1.12-cz-qwerty-map.patch 5821
+RMD160 aa7d3448f3bfc053ef27b1a65d9da73664b5b5c5 files/kbd-1.12-cz-qwerty-map.patch 5821
+SHA256 5218c2119d50be11e36b7cec7985b69b43336bf8d51d869b3c367762d8bb9064 files/kbd-1.12-cz-qwerty-map.patch 5821
 MD5 590a77d26b0b25a4217435ffa8bcd18a files/kbd-1.12-debian.patch 2628
+RMD160 8ef9803e8472a74c6e501cb3dde38a87ab13937b files/kbd-1.12-debian.patch 2628
+SHA256 54663b3dde3337cd21e64d96f1ffa5e88143b3a4a1dce93311cd8cf432200f57 files/kbd-1.12-debian.patch 2628
 MD5 3e2652f1b8451784488b743b6e0dd556 files/kbd-1.12-find-map-fix.patch 957
+RMD160 4e3a6fd81f533d08c19d6f443ad447c1d0617924 files/kbd-1.12-find-map-fix.patch 957
+SHA256 76bed8974c260fff1a44bcc3844471c6dd24d04d473f052de6199eb39a38a456 files/kbd-1.12-find-map-fix.patch 957
 MD5 58617e4171ee3357153c9793be062524 files/kbd-1.12-it-euro-map.patch 501
+RMD160 c1e7d02e0254f7800fbc432c8a4de9ea1f8aa1a5 files/kbd-1.12-it-euro-map.patch 501
+SHA256 9114756bb0a07262790947303b941da0d873a35edcc8cd23f6dc4e29b5a84e6e files/kbd-1.12-it-euro-map.patch 501
 MD5 4063587dde8a52da8b5e66209ee25ae8 files/kbd-1.12-jp-escape.patch 404
+RMD160 58773e9196a62ea46983d02c12f04de92ef31d1b files/kbd-1.12-jp-escape.patch 404
+SHA256 61f75f672a69018f25acd3a51de49ef971cac8eaa1e3c097e0b49dff470113ab files/kbd-1.12-jp-escape.patch 404
 MD5 5f28051ad309ee4e481ef3b2b9cc9714 files/kbd-1.12-kbd_repeat-v2.patch 809
+RMD160 48d058cd7cfcff6df450e21138f28ed8ead1cdca files/kbd-1.12-kbd_repeat-v2.patch 809
+SHA256 7b64a4d2a59f28e4f19405bbc81bedd7774f812f1831cb2c0afe217799d7c165 files/kbd-1.12-kbd_repeat-v2.patch 809
 MD5 ff84eec635b7a1578ef1284b994f779b files/kbd-1.12-setfont-man.patch 629
+RMD160 dba23dfb4a9d263da6bc094a56366371bfc1b9d2 files/kbd-1.12-setfont-man.patch 629
+SHA256 f81c6f07bddefe8bf1f8e1102f8a8c72e96f632aefa248e71a594ad19d767770 files/kbd-1.12-setfont-man.patch 629
 MD5 c29424ddee16d6f71aa4b5276d4718a4 kbd-1.12-r3.ebuild 2268
+RMD160 78478258d9421a1fcb886938d97741c32765cacf kbd-1.12-r3.ebuild 2268
+SHA256 49851bf346aa6a357f406c2c94d4dd729150b7db34923059590d0a5400134984 kbd-1.12-r3.ebuild 2268
 MD5 373ac401400870223a0f5c52ed31951b kbd-1.12-r4.ebuild 2412
-MD5 05abb5258b4094d05626b2e33ae90db6 kbd-1.12-r5.ebuild 2920
+RMD160 cd5930844423b47cadde005c53e8beb6c6776138 kbd-1.12-r4.ebuild 2412
+SHA256 3102bcd6d66164c17d52badfbe07b57618826f12d5cabcf81d08526bde0425c9 kbd-1.12-r4.ebuild 2412
+MD5 6604688276e7452fd5132a1900e65542 kbd-1.12-r5.ebuild 2920
+RMD160 4117c6aeaa0c53a59e71bfd047255ecf72bf806e kbd-1.12-r5.ebuild 2920
+SHA256 adabdcebace465fa6095b1ba986728e5e89e9a311dc4328e3dd1af9d82ec48f2 kbd-1.12-r5.ebuild 2920
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6gz3baW+3NC9cLgRAuS4AJwI7Aq+Aw2S7j9HKgZfK8+S0Y2VTQCghpHY
-1rpQySm/v2/Yd8DX7s1g2Fg=
-=943g
+iD8DBQFD7Xmk2+ySkm8kpY0RAhuKAJ96u72htRaETD2D/WM7/VImPfWiPgCfdCUl
+9WFeFkqyDSoc+jQUEwR6lpo=
+=DN09
 -----END PGP SIGNATURE-----
