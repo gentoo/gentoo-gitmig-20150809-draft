@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.5 2006/01/05 01:13:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.6 2006/02/11 19:28:27 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -21,27 +21,26 @@ RESTRICT="nostrip nomirror"
 
 IUSE="opengl dedicated"
 
-DEPEND="sys-libs/glibc
-	app-arch/unzip"
+DEPEND="app-arch/unzip"
 
 RDEPEND="sys-libs/glibc
 	opengl? (
-		virtual/opengl )
-	amd64? (
-		app-emulation/emul-linux-x86-xlibs
-		opengl? (
-			app-emulation/emul-linux-x86-compat
+		virtual/opengl
+		amd64? (
+			app-emulation/emul-linux-x86-xlibs
 			|| (
 				>=media-video/nvidia-glx-1.0.6629-r3
-				>=x11-drivers/ati-drivers-8.8.25-r1 ) ) )
+				>=x11-drivers/ati-drivers-8.8.25-r1 ) )
+		x86? (
+			|| (
+				(
+					x11-libs/libXext
+					x11-libs/libX11 )
+				virtual/x11 ) ) )
+	amd64? (
+			app-emulation/emul-linux-x86-compat )
 	dedicated? (
-		app-misc/screen )
-	x86? (
-		|| (
-			(
-				x11-libs/libXext
-				x11-libs/libX11 )
-			virtual/x11 ) )"
+		app-misc/screen )"
 
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
