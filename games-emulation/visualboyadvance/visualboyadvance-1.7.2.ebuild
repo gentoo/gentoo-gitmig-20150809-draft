@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2.ebuild,v 1.4 2005/06/15 18:37:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2.ebuild,v 1.5 2006/02/11 04:10:14 joshuabaergen Exp $
 
 inherit eutils games flag-o-matic
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE="mmx"
 
-RDEPEND="virtual/x11
-	media-libs/libpng
+RDEPEND="media-libs/libpng
 	sys-libs/zlib
 	media-libs/libsdl"
 DEPEND="${RDEPEND}
