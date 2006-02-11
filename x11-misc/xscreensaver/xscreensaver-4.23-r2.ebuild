@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.23-r2.ebuild,v 1.1 2006/02/11 12:38:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.23-r2.ebuild,v 1.2 2006/02/11 18:28:57 nelchael Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
 
 LICENSE="BSD"
-KEYWORDS="-*"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 
 RDEPEND="|| ( (
@@ -91,7 +91,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-app-defaults.patch"
 	eautoreconf
 
-	# Experimental patch that should fix bug #113951:
+	# Fix bug #113951:
 	epatch "${FILESDIR}/${P}-dpms.patch"
 
 	# change old head/tail to POSIX ones
