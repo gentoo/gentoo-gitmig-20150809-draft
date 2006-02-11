@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.2.ebuild,v 1.9 2006/01/31 23:34:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.2.ebuild,v 1.10 2006/02/11 22:10:46 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,11 +12,11 @@ SRC_URI="mirror://sourceforge/firebird/${P}.${extra_ver}.tar.bz2"
 LICENSE="Interbase-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
-IUSE="inetd"
+IUSE="xinetd"
 RESTRICT="nouserpriv"
 
 DEPEND="virtual/libc
-	inetd? ( virtual/inetd )"
+	xinetd? ( virtual/inetd )"
 
 S=${WORKDIR}/${P}.${extra_ver}
 
@@ -41,7 +41,7 @@ src_compile() {
 	filter-mfpmath sse
 
 	local myconf="--prefix=/opt/firebird --with-editline"
-	use inetd || myconf="${myconf} --enable-superserver"
+	use xinetd || myconf="${myconf} --enable-superserver"
 
 	NOCONFIGURE=1
 	./autogen.sh ${myconf} || die "couldn't run autogen.sh"
@@ -65,7 +65,7 @@ src_install() {
 	rm -r ${D}/opt/firebird/{README,WhatsNew,doc,misc}
 	rm -r ${D}/opt/firebird/examples
 
-	if use inetd ; then
+	if use xinetd ; then
 		insinto /etc/xinetd.d ; newins ${FILESDIR}/${PN}-1.5.0.xinetd firebird
 	else
 		exeinto /etc/init.d ; newexe ${FILESDIR}/${PN}.init.d firebird
@@ -91,7 +91,7 @@ src_install() {
 	chmod a=rx isql
 	chmod a=rx qli
 
-	use inetd && chmod ug=rxs,o= ${D}/opt/firebird/bin/{fb_lock_mgr,gds_drop,fb_inet_server}
+	use xinetd && chmod ug=rxs,o= ${D}/opt/firebird/bin/{fb_lock_mgr,gds_drop,fb_inet_server}
 	chmod u=rw,go=r ${D}/opt/firebird/{aliases.conf,firebird.conf}
 	chmod ug=rw,o= ${D}/opt/firebird/{security.fdb,help/help.fdb}
 
@@ -125,7 +125,7 @@ pkg_postinst() {
 	einfo "   already have (if any)."
 	einfo
 
-	if ! use inetd
+	if ! use xinetd
 	then
 		einfo "3. You've built the stand alone deamon version,"
 		einfo "   SuperServer. If you were using pre 1.5.0 ebuilds"

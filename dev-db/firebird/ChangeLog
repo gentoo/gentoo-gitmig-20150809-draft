@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.41 2006/01/31 23:34:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.42 2006/02/11 22:10:46 sekretarz Exp $
+
+*firebird-1.5.3-r1 (11 Feb 2006)
+
+  11 Feb 2006; Karol Wojtaszek <sekretarz@gentoo.org> firebird-1.5.1.ebuild,
+  firebird-1.5.2.ebuild, firebird-1.5.3.ebuild, +firebird-1.5.3-r1.ebuild:
+  Changed inetd USE flag to xinetd, bug #121886. Added doc USE flag handling
+  useful docs from firebird website
 
   31 Jan 2006; Carsten Lohrke <carlo@gentoo.org> firebird-1.5.1.ebuild,
   firebird-1.5.2.ebuild, firebird-1.5.3.ebuild:

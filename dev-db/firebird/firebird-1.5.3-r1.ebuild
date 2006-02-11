@@ -1,24 +1,27 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.3.ebuild,v 1.6 2006/02/11 22:10:46 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.3-r1.ebuild,v 1.1 2006/02/11 22:10:46 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
 extra_ver="4870"
+MY_P=${P}.${extra_ver}
 DESCRIPTION="A relational database offering many ANSI SQL-99 features"
 HOMEPAGE="http://firebird.sourceforge.net/"
-SRC_URI="mirror://sourceforge/firebird/${P}.${extra_ver}.tar.bz2"
+SRC_URI="mirror://sourceforge/firebird/${MY_P}.tar.bz2
+		doc? (	http://firebird.sourceforge.net/pdfmanual/Firebird-1.5-QuickStart.pdf
+				ftp://ftpc.inprise.com/pub/interbase/techpubs/ib_b60_doc.zip )"
 
 LICENSE="Interbase-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 sparc x86"
-IUSE="xinetd"
+IUSE="xinetd doc"
 RESTRICT="nouserpriv"
 
 DEPEND="virtual/libc
 	xinetd? ( virtual/inetd )"
 
-S=${WORKDIR}/${P}.${extra_ver}
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	enewgroup firebird 450
@@ -26,7 +29,15 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
+	if use doc; then
+	    # Unpack docs
+	    mkdir ${WORKDIR}/manuals
+	    cd ${WORKDIR}/manuals
+	    unpack ib_b60_doc.zip
+	    cd ${WORKDIR}
+	fi
+
+	unpack ${MY_P}.tar.bz2
 	cd ${S}
 
 	epatch ${FILESDIR}/${PN}-1.5-build.patch
@@ -110,6 +121,12 @@ src_install() {
 	dosym /etc/firebird/security.fdb /opt/firebird/security.fdb
 	dosym /etc/firebird/aliases.conf /opt/firebird/aliases.conf
 	dosym /etc/firebird/firebird.conf /opt/firebird/firebird.conf
+
+	# Install docs
+	if use doc; then
+	    dodoc ${DISTDIR}/Firebird-1.5-QuickStart.pdf
+	    dodoc ${WORKDIR}/manuals/*
+	fi
 }
 
 pkg_postinst() {
