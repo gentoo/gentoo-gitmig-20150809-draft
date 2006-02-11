@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/ps2emu-gssoft
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-gssoft/ChangeLog,v 1.9 2005/08/23 19:41:58 wolf31o2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-gssoft/ChangeLog,v 1.10 2006/02/11 04:42:20 joshuabaergen Exp $
+
+  11 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  ps2emu-gssoft-0.6.1.ebuild, ps2emu-gssoft-0.9.ebuild:
+  Fix dependencies for modular X.
 
   23 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   ps2emu-gssoft-0.9.ebuild:

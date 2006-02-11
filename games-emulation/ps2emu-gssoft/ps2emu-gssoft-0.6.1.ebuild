@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-gssoft/ps2emu-gssoft-0.6.1.ebuild,v 1.1 2005/08/07 04:53:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-gssoft/ps2emu-gssoft-0.6.1.ebuild,v 1.2 2006/02/11 04:42:20 joshuabaergen Exp $
 
 inherit games
 
@@ -15,7 +15,6 @@ KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/opengl
-	virtual/x11
 	=x11-libs/gtk+-1*"
 
 S=${WORKDIR}/GSsoft
