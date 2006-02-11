@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/html2latex
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/html2latex/ChangeLog,v 1.3 2005/11/28 12:00:11 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/html2latex/ChangeLog,v 1.4 2006/02/11 19:13:42 chutzpah Exp $
+
+  11 Feb 2006; Patrick McLean <chutzpah@gentoo.org> html2latex-1.1.ebuild:
+  Add ~amd64 (bug #122041).
 
   28 Nov 2005; <mcumming@gentoo.org> html2latex-1.1.ebuild:
   Switched from perl-module to perl-app eclass

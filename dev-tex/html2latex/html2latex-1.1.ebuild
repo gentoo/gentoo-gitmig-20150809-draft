@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/html2latex/html2latex-1.1.ebuild,v 1.3 2005/11/28 12:00:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/html2latex/html2latex-1.1.ebuild,v 1.4 2006/02/11 19:13:42 chutzpah Exp $
 
 inherit perl-app
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/html2latex/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="imagemagick libwww"
 

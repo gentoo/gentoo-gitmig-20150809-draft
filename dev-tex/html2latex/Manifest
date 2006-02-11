@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d502ff35671b8bb1d57d7f5c3213d9d3 ChangeLog 611
+MD5 8485db6019f4e3bd78f3ae9a76e04671 ChangeLog 714
+RMD160 b26dc1e9a19bbb8644cb8736f24c9216763497aa ChangeLog 714
+SHA256 ea3af54a998266b6ed7d6ac1673e73dff2af78e5ab8737553f137d0405aef601 ChangeLog 714
 MD5 4fdf3a3373e395a85f4c45f3a6290fe1 files/digest-html2latex-1.1 65
-MD5 12a05d230bcab37c98151448ce7f34ab html2latex-1.1.ebuild 828
+RMD160 234970d851f2f4c9dc20f60847065d4bfc5f3270 files/digest-html2latex-1.1 65
+SHA256 3a1fe2fe7fa08636dfc1c351087236bdfc6dc0414dbc8fcc57611364e3e054bf files/digest-html2latex-1.1 65
+MD5 8a3fae236a87d8c73086408d91c83102 html2latex-1.1.ebuild 834
+RMD160 c7ce6a7d7d08478c37ddc2e11fd2b7833d4af48a html2latex-1.1.ebuild 834
+SHA256 e5e5e0c49d35ef7faf9d8bc7e89e9eebc0ec543da55eaedbcf38ec651d3a0eaf html2latex-1.1.ebuild 834
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDivFVtG5z4I8BtQoRAq1kAJwIVmUzfazRbnnLNL5R+CgWTpRIIACdFoDg
-IjEXIPlISEZTebb+lgKzoBs=
-=+nCm
------END PGP SIGNATURE-----
+RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
+SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
