@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/gnupod-0.98.3.ebuild,v 1.1 2006/02/06 23:56:07 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/gnupod-0.98.3.ebuild,v 1.2 2006/02/11 21:27:45 mcummings Exp $
 
 inherit perl-module
 
@@ -19,8 +19,8 @@ DEPEND="dev-lang/perl
 	dev-perl/XML-Parser
 	dev-perl/Unicode-String
 	|| ( >=dev-lang/perl-5.8.0
-		( perl-core/Getopt-Long
-		perl-core/Digest-MD5
+		( virtual/perl-Getopt-Long
+		virtual/perl-Digest-MD5
 		)
 	)"
 
