@@ -1,37 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ae0b83325ec0d21581480308214b4b21 ChangeLog 1657
-RMD160 526e9021aee0d78c261d6903429f3c973ef39130 ChangeLog 1657
-SHA256 11d412a39166e915828b377162f3a73c49d15b01f7aa3a3c9124db3146e0fb7e ChangeLog 1657
+MD5 da4d1a1925598cc07dffbc6d8ff19269 ChangeLog 1757
 MD5 8fae1b62708d13e62a21995045fdeed6 Xorgautoconfig-0.2.1.ebuild 885
-RMD160 7fd5e19fea4e97b3a13a86aaa737fc73ec7226b5 Xorgautoconfig-0.2.1.ebuild 885
-SHA256 afb0460208a37b108964fcfa9ded8757a95595f9d7f2541cf3851717eb7b16dd Xorgautoconfig-0.2.1.ebuild 885
-MD5 d517de5d9954e516a6ef8f231a422d4a Xorgautoconfig-0.2.2.ebuild 850
-RMD160 c0f8857b830d5639cd9f1e05d04a4b085795df02 Xorgautoconfig-0.2.2.ebuild 850
-SHA256 726185cb05cb2b2a00bf061d91963173851383d5643f501e4b07b3d07d971464 Xorgautoconfig-0.2.2.ebuild 850
+MD5 624ad3d19a69ce8e32dfcc08843211a1 Xorgautoconfig-0.2.2.ebuild 850
 MD5 a43fc2913ff300ceb157639d9d6ee167 Xorgautoconfig-0.2.3.ebuild 851
-RMD160 216f289f98627dcadf4bb6470216b915a33ce0fd Xorgautoconfig-0.2.3.ebuild 851
-SHA256 714a6745d4313453edf4941d7ff2688ed122129dd786654fcaea09a9a87d39af Xorgautoconfig-0.2.3.ebuild 851
 MD5 70ed740b857fe2a2fad9c599bc6b3f56 files/digest-Xorgautoconfig-0.2.1 72
-RMD160 40e18a028c0cebb62b72f29d58ad9b15027dc676 files/digest-Xorgautoconfig-0.2.1 72
-SHA256 ee931248ed512305f5409ca115566a951ed2a6fda4c8d507281b3725399893da files/digest-Xorgautoconfig-0.2.1 72
 MD5 8bec8145e4639a5211178f05d84c53ed files/digest-Xorgautoconfig-0.2.2 72
-RMD160 807a2ef9d985672486344637716493495a83927b files/digest-Xorgautoconfig-0.2.2 72
-SHA256 63ffa0ec7d9cde45fe375253f23494edb908a41febb03c97953bb0017bf80ac9 files/digest-Xorgautoconfig-0.2.2 72
 MD5 72e71e517b209e6676c1663c3379e00f files/digest-Xorgautoconfig-0.2.3 72
-RMD160 0b997a62f31dd16cea5ee1237b86c8a5e9b27331 files/digest-Xorgautoconfig-0.2.3 72
-SHA256 517c12323f5447e6f676089bd4ea3c62b7a55364569f32501f0208ced62455c4 files/digest-Xorgautoconfig-0.2.3 72
 MD5 5e3b07e8a8033524f7df96c02d7d166b files/pciutils.patch 648
-RMD160 2925f607a14170c1304010ab565a4b915e4833e1 files/pciutils.patch 648
-SHA256 c180ae9aa723640b70115d9cc2307875b20e9a7fefb1476077ed845f5e247f69 files/pciutils.patch 648
 MD5 48169cd3f60d9ce3ade2ef3a03c92da6 metadata.xml 341
-RMD160 62fbb06f96c785dea5a8f3e330028b5382ea0174 metadata.xml 341
-SHA256 4396c201884141262ccdf23bf271da9bc0b5ebdc75f0d86a802b16e2500252cf metadata.xml 341
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6rzScsIHjyDViGQRApldAJwNT5UDbwylB1gMOH0h+ynLkVJEuQCeIuiy
-OvVfSolwzjpycy6q1kf6Vq4=
-=utGV
------END PGP SIGNATURE-----
