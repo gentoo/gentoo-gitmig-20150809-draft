@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/eject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.49 2006/02/09 17:04:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.50 2006/02/11 04:16:14 vapier Exp $
+
+*eject-2.1.0-r1 (11 Feb 2006)
+
+  11 Feb 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/eject-2.1.0-toggle.patch, -eject-2.1.0.ebuild,
+  +eject-2.1.0-r1.ebuild:
+  Fix by Stuart W. Finlayson for bug in toggle support #122256.
 
   09 Feb 2006; Jeroen Roovers <jer@gentoo.org> eject-2.1.0.ebuild:
   Stable on hppa (bug #122136).
