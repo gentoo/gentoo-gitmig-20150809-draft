@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e8befb40b1083e282fab293efca42afa ChangeLog 369
 RMD160 5c7884b7fed621594972c1465940c1bbe657975a ChangeLog 369
 SHA256 8eb47c7d9bf0596d306baa7d345c615c58cafb9e2cef09d02f691683cc20e3fb ChangeLog 369
@@ -10,3 +13,10 @@ SHA256 8b2065fecfbbdd0caa3c5eb86b98c22766db07f555edbf3127e9454b468ecff6 metadata
 MD5 34514adc947ffc3245b9bce73c3cb661 mythflix-0.19.ebuild 448
 RMD160 8dbd2e7d58edceff0c9301741ebd12a9b45a8ab3 mythflix-0.19.ebuild 448
 SHA256 afe7db372834c9d077aeddd0b245a734ca2069c9f4be85bf0658c7196b32293a mythflix-0.19.ebuild 448
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7xDvBtvusYtCZMsRAhSoAJ0RbhjZvLIlZCxqOnOBInCe3LS8JACfaXEN
+gktoj7R7TlukdFbbqOLE7Z4=
+=eg/1
+-----END PGP SIGNATURE-----
