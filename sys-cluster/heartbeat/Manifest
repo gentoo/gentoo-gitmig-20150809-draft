@@ -1,7 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 50744ec1a80e566d91d9364bf44e2300 ChangeLog 6542
+MD5 ceb77268a8b7bd54392522205548ee8a ChangeLog 6709
+MD5 a410735e833fba5caa873d958b333400 heartbeat-1.2.3-r1.ebuild 2095
+MD5 daf5a5bd47583df711e0f56ffca64c5b heartbeat-1.2.3-r2.ebuild 2149
+MD5 375b992cfbd7dc89be2dcf96453288fc heartbeat-1.2.3.ebuild 1874
+MD5 00fb1911e49458b3cc67f297ec0eec12 heartbeat-2.0.2.ebuild 2663
+MD5 469a4f6cad0c54b4faed31a2852af816 metadata.xml 339
+MD5 38773df123bfbef5f0da59b2299a21bb heartbeat-2.0.2-r1.ebuild 2595
 MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3 68
 MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3-r1 68
 MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3-r2 68
@@ -9,15 +15,11 @@ MD5 aaf8fa43df7ae5328ab7cce82d6a7547 files/digest-heartbeat-2.0.2 68
 MD5 4382b0b2d64b5483957114b7123e4a94 files/heartbeat-1.2.3-lvm.patch 1660
 MD5 30657e79d1e3630eed837297364fe17c files/heartbeat-1.2.3-misc_security_fixes.patch 7756
 MD5 343f80e3711eec80114c5ca01d38b8b0 files/heartbeat-init 821
-MD5 272a4b2de2cf7a52000727661c736a89 heartbeat-1.2.3-r1.ebuild 2097
-MD5 76dacaf8146a8305bf041ae9f67748f1 heartbeat-1.2.3-r2.ebuild 2151
-MD5 b6296f97d4407d37eeda9a668cb4d937 heartbeat-1.2.3.ebuild 1876
-MD5 830a5a2453b90ea68e25210e43bcad16 heartbeat-2.0.2.ebuild 2665
-MD5 469a4f6cad0c54b4faed31a2852af816 metadata.xml 339
+MD5 aaf8fa43df7ae5328ab7cce82d6a7547 files/digest-heartbeat-2.0.2-r1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDtSKntG5z4I8BtQoRAnd7AJ4gFyY4zbmXcLkNdjUSEGVMTtl1CwCfR2X3
-Rab04rVR3RNFBvvvgnSOWMs=
-=4V+c
+iD8DBQFD72tAgMUyd/cdjWsRAkvMAJ4rUXWhdSFlw6yVDJZXfhBjgLbLIgCffTjJ
+WLfHPpqzdkFRz40coMGZWuk=
+=gfyp
 -----END PGP SIGNATURE-----

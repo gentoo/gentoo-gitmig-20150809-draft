@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.3-r2.ebuild,v 1.4 2006/02/12 16:04:31 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.2-r1.ebuild,v 1.1 2006/02/12 16:04:31 xmerlin Exp $
 
 inherit flag-o-matic
 
@@ -10,28 +10,33 @@ SRC_URI="http://www.linux-ha.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 -mips ~ppc ~amd64"
-IUSE="ldirectord"
+KEYWORDS="~x86 -mips -ppc -amd64"
+IUSE="ldirectord doc snmp"
 
-DEPEND="dev-libs/popt
-	=dev-libs/glib-1.2*
+DEPEND="
+	=dev-libs/glib-2*
 	net-libs/libnet
+	dev-util/pkgconfig
+	dev-lang/perl
+	net-misc/iputils
+	net-misc/openssh
 	ldirectord? (	sys-cluster/ipvsadm
+			dev-perl/Net-DNS
 			dev-perl/libwww-perl
 			dev-perl/perl-ldap
-			perl-core/libnet )"
+			perl-core/libnet
+			dev-perl/Crypt-SSLeay
+			dev-perl/HTML-Parser
+			dev-perl/perl-ldap
+			dev-perl/Mail-IMAPClient
+	)
+	snmp? ( net-analyzer/net-snmp )
+	net-misc/telnet-bsd
+	"
 
-# need to add dev-perl/Mail-IMAPClient inside ldirectord above
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/heartbeat-1.2.3-misc_security_fixes.patch || die
-	epatch ${FILESDIR}/heartbeat-1.2.3-lvm.patch || die
-}
 
 src_compile() {
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
@@ -39,7 +44,11 @@ src_compile() {
 		--with-group-name=cluster \
 		--with-group-id=65 \
 		--with-ccmuser-name=cluster \
-		--with-ccmuser-id=65 || die
+		--with-ccmuser-id=65 \
+		--enable-checkpointd \
+		--enable-crm \
+		--enable-lrm \
+		|| die
 	emake -j 1 || die "compile problem"
 }
 
@@ -58,7 +67,12 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	# heartbeat modules need these dirs
-	keepdir /var/lib/heartbeat/ckpt /var/lib/heartbeat/ccm /var/lib/heartbeat
+	#keepdir /var/lib/heartbeat/ckpt /var/lib/heartbeat/ccm /var/lib/heartbeat
+
+	keepdir /var/lib/heartbeat/crm /var/lib/heartbeat/lrm /var/lib/heartbeat/fencing
+	keepdir /var/lib/heartbeat/cores/cluster /var/lib/heartbeat/cores/root /var/lib/heartbeat/cores/nobody
+
+	keepdir /var/run/heartbeat/ccm /var/run/heartbeat/crm
 
 	keepdir /etc/ha.d/conf
 
@@ -72,9 +86,13 @@ src_install() {
 		rm ${D}/usr/man/man8/ldirectord.8
 		rm ${D}/usr/sbin/ldirectord
 		rm ${D}/usr/sbin/supervise-ldirectord-config
-		rm ${D}/etc/ha.d/resource.d/ldirectord
 	fi
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/heartbeat-init heartbeat
+
+	dodoc ldirectord/ldirectord.cf doc/*.cf doc/haresources doc/authkeys || die
+	if use doc ; then
+		dodoc README doc/*.txt doc/AUTHORS doc/COPYING  || die
+	fi
 }
