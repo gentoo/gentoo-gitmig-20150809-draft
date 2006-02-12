@@ -1,0 +1,19 @@
+# ChangeLog for mail-mta/netqmail
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.1 2006/02/12 18:42:33 hansmi Exp $
+
+*netqmail-1.05 (12 Feb 2006)
+
+  12 Feb 2006; Michael Hanselmann <hansmi@gentoo.org> +files/99qmail,
+  +files/conf-common, +files/conf-pop3d, +files/conf-qmqpd,
+  +files/conf-qmtpd, +files/conf-send, +files/conf-smtpd, +files/dot-qmail,
+  +files/mkservercert, +files/qmail-config-system,
+  +files/qmail-genrsacert.sh, +files/run-qmail-pop3d,
+  +files/run-qmail-pop3d-log, +files/run-qmail-qmqpd,
+  +files/run-qmail-qmqpd-log, +files/run-qmail-qmtpd,
+  +files/run-qmail-qmtpd-log, +files/run-qmail-send,
+  +files/run-qmail-send-log, +files/run-qmail-smtpd,
+  +files/run-qmail-smtpd-log, +files/servercert.cnf, +files/tcp.pop3.sample,
+  +files/tcp.qmqp.sample, +files/tcp.qmtp.sample, +files/tcp.smtp.sample,
+  +metadata.xml, +netqmail-1.05.ebuild:
+  New ebuild, partially based on the qmail ebuild.
