@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.9 2006/02/04 16:50:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.10 2006/02/12 02:12:36 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
@@ -25,10 +25,10 @@ IUSE="a52 3dfx nls debug altivec httpd vlm gnutls live v4l cdda ogg matroska
 dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick stream
 mp3 xv bidi sdl png xml2 samba daap corba screen mod speex nsplugin shout real
-win32codecs skins hal avahi xinerama"
+win32codecs skins hal avahi xinerama cddb"
 
 RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
-			>=media-libs/libcddb-0.9.5 )
+			cddb? ( ~media-libs/libcddb-0.9.5 ) )
 		live? ( >=media-plugins/live-2005.01.29 )
 		dvd? (  media-libs/libdvdread
 				media-libs/libdvdcss
@@ -160,6 +160,7 @@ src_compile () {
 		$(use_enable gnutls) \
 		$(use_enable v4l) \
 		$(use_enable cdda) $(use_enable cdda cddax)\
+		$(use_enable cddb libcddb) \
 		$(use_enable vcd) $(use_enable vcd vcdx) \
 		$(use_enable dvb) $(use_enable dvb pvr) \
 		$(use_enable ogg) \

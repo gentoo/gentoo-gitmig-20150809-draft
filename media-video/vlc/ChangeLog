@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.140 2006/02/04 16:50:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.141 2006/02/12 02:12:36 flameeyes Exp $
+
+  12 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4a.ebuild:
+  Make cddb an useflag so that people can decide whether to use it or not,
+  allowing to stop the up/down cycle with libcdio 0.76 that requires newer
+  cddb.
 
   04 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4a.ebuild:
   Change dep on wxGTK 2.6.2-r1 as per bug #118631. Drop autotools dependencies.
