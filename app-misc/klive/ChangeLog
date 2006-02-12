@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/klive
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/ChangeLog,v 1.8 2006/01/10 17:09:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/ChangeLog,v 1.9 2006/02/12 12:30:30 slarti Exp $
+
+  12 Feb 2006; Tom Martin <slarti@gentoo.org> klive-0.16.ebuild:
+  Marked ~sparc.
 
   10 Jan 2006; <dang@gentoo.org> klive-0.16.ebuild:
   Marked ~amd64 per bug# 118460
@@ -10,6 +13,9 @@
   09 Jan 2006; Carlos Silva <r3pek@gentoo.org> -klive-0.7-r2.ebuild,
   +klive-0.16.ebuild:
   Version bump. Removed old version
+
+  30 Dec 2005; Tom Martin <slarti@gentoo.org> klive-0.7-r2.ebuild:
+  Marked ~amd64.
 
   15 Oct 2005; Joseph Jezak <josejx@gentoo.org> klive-0.7-r2.ebuild:
   Marked ~ppc for bug #107816.
