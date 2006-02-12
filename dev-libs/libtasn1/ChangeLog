@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.31 2006/02/12 11:47:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.32 2006/02/12 23:30:07 kloeri Exp $
+
+  12 Feb 2006; Bryan Østergaard <kloeri@gentoo.org libtasn1-0.2.18.ebuild:
+  Stable on alpha + ia64, bug 122307.
 
   12 Feb 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   libtasn1-0.2.18.ebuild:
