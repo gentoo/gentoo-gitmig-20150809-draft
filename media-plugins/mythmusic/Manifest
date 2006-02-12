@@ -1,5 +1,31 @@
-MD5 9e3cdabb39739149cae89a6e66417bca ChangeLog 6983
-MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
-MD5 d79cae1d9857f5b103b984dcb9430f09 mythmusic-0.18.1.ebuild 1219
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dc94ec35d5478b800a1e86dbe97c9063 ChangeLog 7100
+RMD160 33dbea3290174b8d37aff28f3b74d31beed7845f ChangeLog 7100
+SHA256 70a9c2e34fe88eec711796ee205a632c0e584e5c82e79c3a45f2c25376fce755 ChangeLog 7100
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythmusic-0.18.1 72
+RMD160 877157927135ea283ca6df6d2ec7a0d828484cdf files/digest-mythmusic-0.18.1 72
+SHA256 ef321086cf15a8bb7886b92739c998ed98f6272762604408b34c131a7bdfad81 files/digest-mythmusic-0.18.1 72
+MD5 02bb9708cbe2cdf3fba5ddd88dbce656 files/digest-mythmusic-0.19 256
+RMD160 e9516bf4b7b132f1258633b15dfb223d99b1a56c files/digest-mythmusic-0.19 256
+SHA256 d305873fee173a927a0701caaf2bd9d023f2c4668dd14c5774267c1fce166928 files/digest-mythmusic-0.19 256
 MD5 ef56a3b3f8186be653546698f22b66ce files/mythmusic-0.18.1-sample_rate_type.patch 533
+RMD160 90c316e71637b37fe6522a7137ded93ae5dd9c23 files/mythmusic-0.18.1-sample_rate_type.patch 533
+SHA256 16f042c305ba1a9c7b3913f09000976d37911b85762b79955e274fb332cf3a84 files/mythmusic-0.18.1-sample_rate_type.patch 533
+MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
+RMD160 effccac2541ac4d0954899784d7d64c60a9c020e metadata.xml 222
+SHA256 8b2065fecfbbdd0caa3c5eb86b98c22766db07f555edbf3127e9454b468ecff6 metadata.xml 222
+MD5 d79cae1d9857f5b103b984dcb9430f09 mythmusic-0.18.1.ebuild 1219
+RMD160 05210c2a280f530a9e4d3ce22d3138949e555321 mythmusic-0.18.1.ebuild 1219
+SHA256 53c43971903fb28a5f4393d68c92d6a3e9f441835c0c31675953f3d8b7f0e776 mythmusic-0.18.1.ebuild 1219
+MD5 0edb2310c425c2a26f4cf4b92bbf9e4e mythmusic-0.19.ebuild 1059
+RMD160 35f5a73c58953ddc81fbb3632eb573f76dedace7 mythmusic-0.19.ebuild 1059
+SHA256 21f00b5382cf6792a73cd9c1cccaa166f576a3ad805966a631b3459dbea13657 mythmusic-0.19.ebuild 1059
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7wcABtvusYtCZMsRAigLAJ0SQU4OYG2ekXzwtdoRq4wKgkMjnACfR/aJ
+0kyQjgg/VsiWX4d7R7lK3Rg=
+=MIdI
+-----END PGP SIGNATURE-----
