@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/euler
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/ChangeLog,v 1.7 2006/02/12 12:50:14 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/ChangeLog,v 1.8 2006/02/12 15:45:26 markusle Exp $
+
+  12 Feb 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/command-gcc4-gentoo.patch, +files/configure-gentoo.patch,
+  euler-1.61.0.ebuild:
+  Added patch to fix compilation under gcc-4.x and to force configure
+  to honor user provided CFLAGS.
 
   12 Feb 2006; Markus Dittrich <markusle@gentoo.org> euler-1.60.6-r1.ebuild:
   Removed dependency on virtual-x11 since this gets pulled in by gtk.
