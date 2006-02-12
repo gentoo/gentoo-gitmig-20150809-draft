@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.1.0.ebuild,v 1.1 2006/02/02 19:35:13 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.1.0.ebuild,v 1.2 2006/02/12 08:43:35 wrobel Exp $
 
 # Source: http://bugs.gentoo.org/show_bug.cgi?id=50035
 # Submitted-By: SteveB <tp22a@softhome.net>
 # Reviewed-By: wrobel 2005-12-14
-# $Id: postfixadmin-2.1.0.ebuild,v 1.1 2006/02/02 19:35:13 wrobel Exp $
+# $Id: postfixadmin-2.1.0.ebuild,v 1.2 2006/02/12 08:43:35 wrobel Exp $
 
 inherit eutils webapp
 
-IUSE="mysql postgres vhosts"
+IUSE="vhosts"
 DESCRIPTION="Postfix Admin is a Web Based Management tool for Postfix when you are dealing with Postfix Style Virtual Domains and Virtual Users that are stored in MySQL."
 HOMEPAGE="http://high5.net/postfixadmin/"
 SRC_URI="http://high5.net/${PN}/${PN}-${PV}.tgz"
@@ -19,11 +19,10 @@ KEYWORDS="~x86"
 DEPEND="virtual/httpd-php
 		>=mail-mta/postfix-2.0.0
 		>=net-www/apache-1.3.27
-		mysql? ( >=dev-db/mysql-3.23
-			>=dev-lang/perl-5.0
-			dev-perl/DBI
-			dev-perl/DBD-mysql )
-		postgres? ( >=dev-db/postgresql-7.4.3 )"
+		>=dev-db/mysql-3.23
+		>=dev-lang/perl-5.0
+		dev-perl/DBI
+		dev-perl/DBD-mysql"
 
 RDEPEND=">=sys-apps/sed-4.0.5
 		sys-apps/grep
@@ -33,10 +32,8 @@ LICENSE="MPL-1.1"
 
 pkg_setup() {
 	webapp_pkg_setup
-	if use mysql; then
-		id vacation 2>/dev/null || enewgroup vacation
-		id vacation 2>/dev/null || enewuser vacation -1 -1 /dev/null vacation
-	fi
+	id vacation 2>/dev/null || enewgroup vacation
+	id vacation 2>/dev/null || enewuser vacation -1 -1 /dev/null vacation
 }
 
 src_unpack() {
@@ -47,14 +44,9 @@ src_unpack() {
 	find ${S} -name .cvs\* -or \( -type d -name CVS -prune \) -exec rm -rf {} \;
 
 	# Database support (we don't care wich one is used. Allow both of them!)
-	if use mysql; then
-		cp ./DATABASE_MYSQL.TXT ${T}/mysql-setup.sql || die "Creating MySQL setup script failed!"
-		cp ./TABLE_CHANGES.TXT ${T}/mysql-update.sql || die "Creating MySQL update script failed!"
-		cp ./VIRTUAL_VACATION/INSTALL.TXT ${T}/VIRTUAL_VACATION_INSTALL.TXT
-	fi
-	if use postgres ; then
-		cp ./DATABASE_PGSQL.TXT ${T}/pgsql-setup.sql || die "Creating PostgreSQL setup script failed!"
-	fi
+	cp ./DATABASE_MYSQL.TXT ${T}/mysql-setup.sql || die "Creating MySQL setup script failed!"
+	cp ./TABLE_CHANGES.TXT ${T}/mysql-update.sql || die "Creating MySQL update script failed!"
+	cp ./VIRTUAL_VACATION/INSTALL.TXT ${T}/VIRTUAL_VACATION_INSTALL.TXT
 
 	# Rename config.inc.php
 	cp ./config.inc.php.sample ${T}/config.inc.php || die "Creating config file failed!"
@@ -66,39 +58,26 @@ src_install() {
 
 
 	# Virtual Vacation only works with MySQL
-	if use mysql; then
-		diropts -m0770 -o vacation -g vacation
-		dodir /var/spool/vacation
-		keepdir /var/spool/vacation
-		insinto /var/spool/vacation
-		insopts -m770 -o vacation -g vacation
-		doins ${S}/VIRTUAL_VACATION/vacation.pl
-	fi
+	diropts -m0770 -o vacation -g vacation
+	dodir /var/spool/vacation
+	keepdir /var/spool/vacation
+	insinto /var/spool/vacation
+	insopts -m770 -o vacation -g vacation
+	doins ${S}/VIRTUAL_VACATION/vacation.pl
 
 	# Documentation
 	#
 	local docs="BACKUP_MX.TXT CHANGELOG.TXT INSTALL.TXT LANGUAGE.TXT LICENSE.TXT TABLE_BACKUP_MX.TXT TABLE_CHANGES.TXT UPGRADE.TXT"
-	if use mysql; then
-		docs="${docs} DATABASE_MYSQL.TXT ${T}/VIRTUAL_VACATION_INSTALL.TXT"
-	fi
-	if use postgres ; then
-		docs="${docs} DATABASE_PGSQL.TXT"
-	fi
-
+	docs="${docs} DATABASE_MYSQL.TXT ${T}/VIRTUAL_VACATION_INSTALL.TXT"
 
 	# install the SQL scripts available to us
 	#
 	# unfortunately, we do not have scripts to upgrade from older versions
 	# these are things we need to add at a later date
 	#
-	if use mysql; then
-		webapp_sqlscript mysql ${T}/mysql-setup.sql
-		webapp_sqlscript mysql ${T}/mysql-update.sql 2.0.x
-		webapp_sqlscript mysql ${T}/mysql-update.sql 1.5x
-	fi
-	if use postgres ; then
-		webapp_sqlscript pgsql ${T}/pgsql-setup.sql
-	fi
+	webapp_sqlscript mysql ${T}/mysql-setup.sql
+	webapp_sqlscript mysql ${T}/mysql-update.sql 2.0.x
+	webapp_sqlscript mysql ${T}/mysql-update.sql 1.5x
 
 
 	# Copy the app's main files
