@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2f2cf2d1cc5e8ce32037818f9653c8b1 ChangeLog 11657
-RMD160 a574fe87c3f883ba713745467b7c20bc15f331cd ChangeLog 11657
-SHA256 f11ba7bb26f31314977a5ec54077a1aea4adbe62eed8eed4eddd7af54e33467d ChangeLog 11657
+MD5 00f5eb763d8a477168594fc07052738a ChangeLog 11805
+RMD160 2225e92e0d107a03215287284e6b698bc238c09e ChangeLog 11805
+SHA256 74009bd9b92d0646a354138dea9f0f16d50260ff2469a81888cf6bde5316b0b1 ChangeLog 11805
 MD5 7c5fef40667dc2dd4c54518fbafa831b files/digest-svgalib-1.9.21-r1 66
 RMD160 e2e501dd87f234f44c1188061b6b23ea244897c9 files/digest-svgalib-1.9.21-r1 66
 SHA256 0af66c49d844c14a76f3c5aaec2a9e14d7722fb033a1aa3af2438f086528a0d4 files/digest-svgalib-1.9.21-r1 66
@@ -28,9 +28,9 @@ SHA256 23f6ceb1cdf95ff22f49b120786e6ab1beb63b7c70c9dfa63efe4ba6c96b43ff files/sv
 MD5 690144017f69486a911d88c0932a7d45 files/svgalib-1.9.23-gentoo.patch 2994
 RMD160 01ec997cfb8f63656207d45f0a6d7bc97e64cbb6 files/svgalib-1.9.23-gentoo.patch 2994
 SHA256 9bce706a598aaf53588b39ea2fa399416ae8390cd2f4cae62dab12b4701fdda8 files/svgalib-1.9.23-gentoo.patch 2994
-MD5 8a3dd06022120199dd0cd15f0419bc27 files/svgalib-1.9.24-linux2.6.patch 3089
-RMD160 b5dbba0cb52a2caa515adf47090ed50d0d6821bb files/svgalib-1.9.24-linux2.6.patch 3089
-SHA256 9f5675324ac245899bc5d410ed27efa53bcb17272fed43732dd4c54536158c0a files/svgalib-1.9.24-linux2.6.patch 3089
+MD5 815d1aa06e761db0217455f75c2193b8 files/svgalib-1.9.24-linux2.6.patch 4107
+RMD160 aa7df6a5badf5a184b88e29f4a61f90077162b5a files/svgalib-1.9.24-linux2.6.patch 4107
+SHA256 4085278e0a97bc08361644ad9cf84d92634f771ec5c2c2d380c47aaf894f6ea1 files/svgalib-1.9.24-linux2.6.patch 4107
 MD5 d137b721449f3fe88d6ec08a3cf6c51a files/svgalib.devfs 219
 RMD160 921df16f9e771fcdb75ab9e6f44e4840ff72fd4b files/svgalib.devfs 219
 SHA256 3aa888f06d84d3ad49b9714986e43cad845082a1b2f6e06baa4637967920414a files/svgalib.devfs 219
@@ -55,7 +55,7 @@ SHA256 7b75efee74520484acf4657e389d32aeca8ccd6f6b94046317e4c7785983c694 svgalib-
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6UV52+ySkm8kpY0RAuVOAKCN6flhBwg77gXxmROr3VzPrL/xlgCeMKq7
-gT262k+5u9NC5CF6hwUEPiU=
-=fk6u
+iD8DBQFD77g+2+ySkm8kpY0RArPKAJ44wVopi6OpYsDmYruQMrGsceJfcwCfYflv
+FCrQ/7J6GYK+M7IqqHgVIGg=
+=bV3/
 -----END PGP SIGNATURE-----

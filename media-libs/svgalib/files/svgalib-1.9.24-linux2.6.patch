@@ -1,6 +1,19 @@
+ - get rid of warning when linux/device.h doesnt exist
  - touch up the Makefile to let the ebuild handle the module details
  - fix support with io remap stuff in newer kernels
+ - dont include headers that dont exist in 2.4.x kernels
 
+--- svgalib/kernel/svgalib_helper/Makefile
++++ svgalib/kernel/svgalib_helper/Makefile
+@@ -28,7 +28,7 @@
+ 
+ endif
+ 
+-CLASS_SIMPLE := $(shell grep class_simple_create $(KDIR)/include/linux/device.h)
++CLASS_SIMPLE := $(shell grep class_simple_create $(KDIR)/include/linux/device.h 2>/dev/null)
+ 
+ ifneq ($(CLASS_SIMPLE),)
+   CLASS_CFLAGS = -DCLASS_SIMPLE=1
 --- svgalib/kernel/svgalib_helper/Makefile.alt
 +++ svgalib/kernel/svgalib_helper/Makefile.alt
 @@ -37,7 +37,7 @@
@@ -87,3 +100,24 @@
  #if (defined MINOR)
  # define my_minor(x) MINOR(x)
  #else
+--- svgalib/kernel/svgalib_helper/main.c
++++ svgalib/kernel/svgalib_helper/main.c
+@@ -19,13 +19,18 @@
+ #include <linux/pci.h>
+ #include <linux/devfs_fs_kernel.h>
+ #include <linux/mm.h>
++#include <linux/version.h>
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,0)
+ #include <linux/thread_info.h>
++#endif
+ #include <linux/smp.h>
+ #include <linux/smp_lock.h>
+ 
+ #include <linux/sched.h>
+ #include <linux/wait.h>
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,0)
+ #include <linux/syscalls.h>
++#endif
+ 
+ #define __KERNEL_SYSCALLS__
+ #include <linux/unistd.h>
