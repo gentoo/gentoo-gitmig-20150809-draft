@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 13e490b38e526310616d89a879ec0930 ChangeLog 6060
-RMD160 283dddd4308a18ff958ccfa04d434180f583660a ChangeLog 6060
-SHA256 8c6c5c7c20ce1660b010818f18914394b557ad960e087a77e2d9d6f14fc20f52 ChangeLog 6060
+MD5 c8ad2285c6826f66cbe995071f64970a ChangeLog 6354
+RMD160 46464be7cf7225886fe83e6414ca655c6ae5b705 ChangeLog 6354
+SHA256 b444a4a232d6b5393d1b242aed5a6ec3a3526ada5decb50566f5e5d435e8e920 ChangeLog 6354
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-xvideo-0.10.0 77
 RMD160 002939134d98d4c0cf79c6fc11212d2cd95b6544 files/digest-gst-plugins-xvideo-0.10.0 77
 SHA256 e75a88cb347541c450eae77cffbf5c5f42168d2076b9186554b7765ad5bcbefa files/digest-gst-plugins-xvideo-0.10.0 77
@@ -13,9 +10,12 @@ SHA256 84598b441cbc895d520dfebbd3a4661e3fdf4af6ccf0cf3193408af54cf245af files/di
 MD5 4d9a06718bb82db62ea71d1b2fc00ae3 files/digest-gst-plugins-xvideo-0.10.2 77
 RMD160 10413c5f1ef58ef250faba0fd8f821757d33794c files/digest-gst-plugins-xvideo-0.10.2 77
 SHA256 fc970518dbc39d0002049936f4849d8a81dc68b07599d7f856bf540a651f6299 files/digest-gst-plugins-xvideo-0.10.2 77
-MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-xvideo-0.8.10 72
-RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-xvideo-0.8.10 72
-SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-xvideo-0.8.10 72
+MD5 73770b61668a182a437ba54871c72cc1 files/digest-gst-plugins-xvideo-0.10.3 277
+RMD160 53fee61c0c0f4f5f560c0dbc4f958aa33a0da570 files/digest-gst-plugins-xvideo-0.10.3 277
+SHA256 f61f03734f890c5a33f3c26ce29474417bcc5b343b65c30ca3be7eeaff9e4e2e files/digest-gst-plugins-xvideo-0.10.3 277
+MD5 eaba7cd988c45174c3c20aebd8c4a8bd files/digest-gst-plugins-xvideo-0.8.10 262
+RMD160 ee0674f71e5e46e925c101e8e5d76fb49260df19 files/digest-gst-plugins-xvideo-0.8.10 262
+SHA256 a93903467a58b51b55338d1dba64d4cea56cb0ab65884a9fd58798f44d4e9680 files/digest-gst-plugins-xvideo-0.8.10 262
 MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-xvideo-0.8.11 262
 RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-xvideo-0.8.11 262
 SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-xvideo-0.8.11 262
@@ -34,25 +34,21 @@ SHA256 835959a91a693150635be09dbf50b53d427d23f47b3daca69ab0c75d07112915 gst-plug
 MD5 df8212bfb887618f917459882d90ddc5 gst-plugins-xvideo-0.10.2.ebuild 460
 RMD160 be4444553114c995a42e569286d37520d5082a0f gst-plugins-xvideo-0.10.2.ebuild 460
 SHA256 c6b8e3e8f6facffcdde1363d893be21997b2d9deee6bc379bedc3e998f46805f gst-plugins-xvideo-0.10.2.ebuild 460
-MD5 c743defc44a4b34391d505ac3e6dcad5 gst-plugins-xvideo-0.8.10.ebuild 463
-RMD160 82d15d5db9fc1f7d3608e2210ba22af20dd3c13f gst-plugins-xvideo-0.8.10.ebuild 463
-SHA256 a0b1a3d173826eb64fb1e87a65ba8c05b5b691fd502f3fce21f6b81964968459 gst-plugins-xvideo-0.8.10.ebuild 463
+MD5 62746e09cb86386a9f13b15e9c23e734 gst-plugins-xvideo-0.10.3.ebuild 460
+RMD160 3e581be8d64ba352df7abd4e551c661272a6b9c4 gst-plugins-xvideo-0.10.3.ebuild 460
+SHA256 f849b568ed7189bcfaebf697038e49dd39d4ad28ae87fdd411d3c6530761a211 gst-plugins-xvideo-0.10.3.ebuild 460
+MD5 5ca57099c507708d80e176ae6ec2bdb6 gst-plugins-xvideo-0.8.10.ebuild 486
+RMD160 baabb50f924bc856b47db36c6310af8b970ad223 gst-plugins-xvideo-0.8.10.ebuild 486
+SHA256 3c1313e2d7866b63a45e43c58941f89fb968ffc94faf4e644a7930c9e894f23e gst-plugins-xvideo-0.8.10.ebuild 486
 MD5 6dae332efde42ee56d6d3df53fe49c52 gst-plugins-xvideo-0.8.11.ebuild 486
 RMD160 1ba8e854ef1f39a65170276c07c52d9e8c7c66d1 gst-plugins-xvideo-0.8.11.ebuild 486
 SHA256 7f609d2a1185b2fa0dcc960a5673e70f4411409d54b07995bf39281bb74027e9 gst-plugins-xvideo-0.8.11.ebuild 486
-MD5 416d118dcf8cbdc3c061a0c075649a20 gst-plugins-xvideo-0.8.8.ebuild 461
-RMD160 33ae452b67925a124c7566c4077d7957075f38b8 gst-plugins-xvideo-0.8.8.ebuild 461
-SHA256 c47608a8ff46be25e91faf5c7b5b8cdecab266bfb02816c910f722ff721c5e80 gst-plugins-xvideo-0.8.8.ebuild 461
-MD5 0f0dadc82dd0796ac1d14d005c65d09a gst-plugins-xvideo-0.8.9.ebuild 468
-RMD160 9344d019d6cc9269a391a022e9072a5d463b5ebc gst-plugins-xvideo-0.8.9.ebuild 468
-SHA256 e8176c068045bee8c5bfbb7d7cd32059940b97bda625a38bfa6cbfc617233159 gst-plugins-xvideo-0.8.9.ebuild 468
+MD5 e3bee56d058d3e5b9fd33370e9e6f059 gst-plugins-xvideo-0.8.8.ebuild 485
+RMD160 f29a23a60a0f1a321ef2c53fc69662f0d31396aa gst-plugins-xvideo-0.8.8.ebuild 485
+SHA256 676978676f09eb0cfac2e280575f94538e9c44e5e2991edc7fc884b7303a91bc gst-plugins-xvideo-0.8.8.ebuild 485
+MD5 4233796abca427c85b1559095c7f0cf2 gst-plugins-xvideo-0.8.9.ebuild 492
+RMD160 af91b2d85a9890195a41178cce156e2707d01292 gst-plugins-xvideo-0.8.9.ebuild 492
+SHA256 c89e1b91d2856a1b2cee7bf37037e6040296e00a5e3ab1474e33fa9a202f5ce6 gst-plugins-xvideo-0.8.9.ebuild 492
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD63ZsJrHF4yAQTrARAtkvAJ92O2N4i0nSDYY5woq4foSlLFINQwCfQV8Q
-HzvR+a+2RljVIkDGTGHKcjU=
-=xAC/
------END PGP SIGNATURE-----
