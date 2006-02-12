@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a37ed40d688f28bf50351bdd981eb793 ChangeLog 5106
+MD5 5b0e1b78d76d0af15aedc84846664e7c ChangeLog 5223
+RMD160 26cdd262659bcadfffb7aea47f0cf395e0364a17 ChangeLog 5223
+SHA256 f5a5634cbd5dc540dd101f607751c73fce1917e0940ddb2605dc84c05b64f0cb ChangeLog 5223
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythvideo-0.18.1 72
+RMD160 877157927135ea283ca6df6d2ec7a0d828484cdf files/digest-mythvideo-0.18.1 72
+SHA256 ef321086cf15a8bb7886b92739c998ed98f6272762604408b34c131a7bdfad81 files/digest-mythvideo-0.18.1 72
+MD5 02bb9708cbe2cdf3fba5ddd88dbce656 files/digest-mythvideo-0.19 256
+RMD160 e9516bf4b7b132f1258633b15dfb223d99b1a56c files/digest-mythvideo-0.19 256
+SHA256 d305873fee173a927a0701caaf2bd9d023f2c4668dd14c5774267c1fce166928 files/digest-mythvideo-0.19 256
 MD5 7c30adab29ed6174c066f414eaae61aa files/digest-mythvideo-0.19_pre8642 78
+RMD160 5faa759ab43449608a54167ec4eced68e292b1b5 files/digest-mythvideo-0.19_pre8642 78
+SHA256 04a7108b0bebbd80061308a4091788b84428a0ac47f7649f744284b3eccb70f2 files/digest-mythvideo-0.19_pre8642 78
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
+RMD160 effccac2541ac4d0954899784d7d64c60a9c020e metadata.xml 222
+SHA256 8b2065fecfbbdd0caa3c5eb86b98c22766db07f555edbf3127e9454b468ecff6 metadata.xml 222
 MD5 a6b1efa4ffe8db954df9c487f137c061 mythvideo-0.18.1.ebuild 622
+RMD160 a34cfb06cb8ce1aa91ae037d9081f6b850ab10d7 mythvideo-0.18.1.ebuild 622
+SHA256 f7dc9a0fdafb7fe6afbe56688c09f9459e20aa59a43fd7b7a36d50d413f945ed mythvideo-0.18.1.ebuild 622
+MD5 17d9b9f017b962241c2e7f076b58939a mythvideo-0.19.ebuild 587
+RMD160 1ad20772255e2cb64db699b5f223cb585ee90388 mythvideo-0.19.ebuild 587
+SHA256 39bbabadf856e6dc8fc61ac79fe781d1a849ad3fc485c9e81be231492055e530 mythvideo-0.19.ebuild 587
 MD5 073a269fe3c83ffb47dfe9ef88f07546 mythvideo-0.19_pre8642.ebuild 586
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0zmRBtvusYtCZMsRAiC+AJ4yD+gmEW4HO6GBJMetht8IcyYrPgCePUhu
-nz1MF+kC3CsJd0fzCrL2pbw=
-=MdTI
------END PGP SIGNATURE-----
+RMD160 c5a7d98e8eb62345dce1b3a38af00e73a218ca63 mythvideo-0.19_pre8642.ebuild 586
+SHA256 60cf99aaff29a6d505e6e684756a6c0079ae5af963c593d2e236d4d2c09f4454 mythvideo-0.19_pre8642.ebuild 586
