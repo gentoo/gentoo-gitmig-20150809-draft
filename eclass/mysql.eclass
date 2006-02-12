@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.17 2006/02/09 13:15:43 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.18 2006/02/12 14:37:46 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -561,8 +561,8 @@ mysql_pkg_postinst() {
 			#		eselect mysql set 1
 			#	else
 			#		einfo "The version of mysql emerged now stils is _NOT_ the default"
-					einfo "you may want to run \"eselect myqsl list\" followed by a "
-					einfo "\"eselect myqsl set 1\" to chose the default mysql server"
+					einfo "you may want to run \"eselect mysql  list\" followed by a "
+					einfo "\"eselect mysql set 1\" to choose the default mysql server"
 			#	fi
 			#fi
 		fi
@@ -693,7 +693,7 @@ mysql_pkg_prerm() {
 mysql_pkg_postrm() {
 	mysql_lib_symlinks
 	if [[ ${SLOT} -gt 0 ]] ; then
-		einfo "you may want to run \"eselect myqsl list\" followed by a "
-		einfo "\"eselect myqsl list\" to chose the default mysql server"
+		einfo "you may want to run \"eselect mysql list\" followed by a "
+		einfo "\"eselect mysql list\" to choose the default mysql server"
 	fi
 }
