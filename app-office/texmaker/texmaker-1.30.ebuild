@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.21.ebuild,v 1.5 2006/01/25 14:08:57 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.30.ebuild,v 1.1 2006/02/12 15:35:36 nattfodd Exp $
 
-inherit eutils versionator
+inherit eutils versionator qt4
 
 DESCRIPTION="a nice LaTeX-IDE"
 
@@ -11,7 +11,12 @@ DESCRIPTION="a nice LaTeX-IDE"
 MAJOR="$(get_major_version)"
 MINOR_1="$(($(get_version_component_range 2)/10))"
 MINOR_2="$(($(get_version_component_range 2)%10))"
-MY_P="${PN}-${MAJOR}.${MINOR_1}.${MINOR_2}"
+if [ ${MINOR_2} -eq "0" ] ; then
+	MY_P="${PN}-${MAJOR}.${MINOR_1}"
+else
+	MY_P="${PN}-${MAJOR}.${MINOR_1}.${MINOR_2}"
+fi
+
 S="${WORKDIR}/${MY_P}"
 HOMEPAGE="http://www.xm1math.net/texmaker/"
 SRC_URI="http://www.xm1math.net/texmaker/${MY_P}.tar.bz2"
@@ -29,12 +34,12 @@ RDEPEND="|| ( ( x11-libs/libX11
 			virtual/x11
 		)"
 
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	virtual/tetex
 	app-text/psutils
 	virtual/ghostscript
 	media-libs/netpbm
-	=x11-libs/qt-4.0*"
+	$(qt_min_version 4)"
 
 src_compile() {
 	cd ${S}
@@ -48,7 +53,7 @@ src_install() {
 	insinto /usr/share/pixmaps/texmaker
 	doins utilities/texmaker*.png || die "doins failed."
 
-	dodoc utilities/{AUTHORS,COPYING} || die "dodoc failed"
+	dodoc utilities/AUTHORS || die "dodoc failed"
 
 	dohtml utilities/*.{html,gif,css,txt} utilities/doc*.png || die "dohtml failed"
 
@@ -61,11 +66,4 @@ pkg_postinst() {
 	einfo "A user manual with many screenshots is available at:"
 	einfo "/usr/share/doc/${PF}/html/usermanual.html"
 	einfo ""
-	ewarn "texmaker-1.21 does not currently work with qt-4.1, only qt-4.0."
-	ewarn "Unfortunately, portage can not handle this correctly yet, so it is"
-	ewarn "possible that you obtain an infinite qt-4.0/qt-4.1 cycle in your emerge world."
-	ewarn ""
-	ewarn "If that happens, it is suggested to either mask qt-4.1"
-	ewarn "  (echo \">=x11-libs/qt-4.1\" >> /etc/portage/package.mask)"
-	ewarn "or downgrade texmaker."
 }
