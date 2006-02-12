@@ -1,29 +1,79 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 10f5251f1144accaf1077ec8796334e1 ChangeLog 5613
+MD5 326f110fd3a05171d813d964c4f92d56 ChangeLog 5912
+RMD160 e6d3ce2afb5b45c9cb4595d001b577c1d4348b0a ChangeLog 5912
+SHA256 fc5bf14d4c1d0babb4edc436265ad304d80a227f1592c363f91dde6954a75c49 ChangeLog 5912
 MD5 0165911115603b51b34b8ae19ab71e2a files/digest-libcdio-0.64 65
+RMD160 62054a8147645683f92d15003fc1311cc2a852ec files/digest-libcdio-0.64 65
+SHA256 0c3ae23e88a6fccd63913a0bc67bd3a64a2bf2e85eba6627ac6bc82146d54922 files/digest-libcdio-0.64 65
 MD5 8276d2edab3e451a5639073967339ebb files/digest-libcdio-0.69 65
+RMD160 3afc01a6995a0ad1e19c730f2e46003d4dc31787 files/digest-libcdio-0.69 65
+SHA256 35c934fe805bbcbad2f7a14197548516c8127201b369f48431e34bb385342ff8 files/digest-libcdio-0.69 65
 MD5 29744769327f1087e4de0f7c5d8e9fbb files/digest-libcdio-0.70 65
+RMD160 3312fdde11047bfade4539e606f2f6879c682c1a files/digest-libcdio-0.70 65
+SHA256 f5995b5af753703211bcd5b4efa519ea9305f66b167e7cf81909a233287f0f78 files/digest-libcdio-0.70 65
 MD5 c6110cfe0ed9c90901a77e77d3a308e5 files/digest-libcdio-0.73 65
+RMD160 4546b801e3b176258b50224641f09c6b3ef987e0 files/digest-libcdio-0.73 65
+SHA256 10b103bb8fee9bc7899c2256ca697289c2b7ee50d7e63d1de8f5f983d4a42027 files/digest-libcdio-0.73 65
 MD5 c4a757d92ae8d58de0538803b4650900 files/digest-libcdio-0.74 65
+RMD160 42325e43fac395bb5d484286b4339d75b3c3ef1e files/digest-libcdio-0.74 65
+SHA256 5451d1c4935ad0d4bba97e1ae9bde624e006157e80942ce2d1cb4dfdb7f13545 files/digest-libcdio-0.74 65
 MD5 bad51b787d2f4b600b5cd550fff8b986 files/digest-libcdio-0.75 65
+RMD160 643413642cf165366b7dfe2b1e9280267aec950f files/digest-libcdio-0.75 65
+SHA256 8c63d89fae4562cb3697ac43617627eb7ae382f1206792dda0bae9318f490a5a files/digest-libcdio-0.75 65
 MD5 bad51b787d2f4b600b5cd550fff8b986 files/digest-libcdio-0.75-r1 65
+RMD160 643413642cf165366b7dfe2b1e9280267aec950f files/digest-libcdio-0.75-r1 65
+SHA256 8c63d89fae4562cb3697ac43617627eb7ae382f1206792dda0bae9318f490a5a files/digest-libcdio-0.75-r1 65
 MD5 f2b45d6e206620dddfde7136a8939409 files/digest-libcdio-0.76 65
+RMD160 edc68384f1875f13efea705a6f2829ca0d25e927 files/digest-libcdio-0.76 65
+SHA256 ba91b2c54daa9ac56d0f3df95046fc6ddde4092f9e94b6a854ecd8d13747f949 files/digest-libcdio-0.76 65
+MD5 ae18e64aee5b96b5f1f67f36ee5442e3 files/digest-libcdio-0.76-r1 241
+RMD160 5c9370b8254a19f9ad5a68dc10cd76983dd61eee files/digest-libcdio-0.76-r1 241
+SHA256 b7ff230276729d67c66d1592293feea5b83b14df2f28e9d8ea6e4c6a3e5117f1 files/digest-libcdio-0.76-r1 241
 MD5 a6c330ba467869360ed8db78de15e9b7 files/libcdio-0.75-freebsd.patch 1227
+RMD160 40aa05effd3eb76888b4bef47aa6ebe59d365fd9 files/libcdio-0.75-freebsd.patch 1227
+SHA256 24e4fa7895473ae68fae7d7466da82c78b2145288920f183f63a9e7bc48d3357 files/libcdio-0.75-freebsd.patch 1227
+MD5 5144474b861b2c0c64387055b29e8b11 files/libcdio-0.76-dragonfly.patch 526
+RMD160 c849e615361f805d13100ed79828b654d9b79af1 files/libcdio-0.76-dragonfly.patch 526
+SHA256 2c9465eeec8c75aa2e5f6a601b0f15ff0d7ae1fb25798f1fe47370c0c96771c2 files/libcdio-0.76-dragonfly.patch 526
+MD5 6e3318ce4e73be555c875919d7866b52 files/libcdio-0.76-nrg-crash.patch 858
+RMD160 7c6a5c69eaefa7fa37de6603dadc7b360a8dc9d4 files/libcdio-0.76-nrg-crash.patch 858
+SHA256 896bc5e98be9125d580124b3da5b9309650b6cc2eb1bbd7fd64b4c0654834447 files/libcdio-0.76-nrg-crash.patch 858
 MD5 9db9dca79d0867f61570cdeb7c8d7862 libcdio-0.64.ebuild 600
+RMD160 fd93e0058a9ecbda3bcec8038148ec3a1d9143c1 libcdio-0.64.ebuild 600
+SHA256 9a5633f8e8d086b5d3223eee80ed0f3593a5a4906adec65931e90fe68c49640f libcdio-0.64.ebuild 600
 MD5 9276ebf133096b17b42459071ff9557a libcdio-0.69.ebuild 807
+RMD160 c55517c0c3302ec019222fae484d75a8600f87de libcdio-0.69.ebuild 807
+SHA256 4bbc618a2080222f803e55970c0bfaa1a85de864fca23ef722d593ff4cc6a754 libcdio-0.69.ebuild 807
 MD5 a4f6c3f80890696765a72ff20a86b20c libcdio-0.70.ebuild 1053
+RMD160 077bcb07081d5a26be93e779f1daa8ecfa60339a libcdio-0.70.ebuild 1053
+SHA256 c28b1222e0467df21fa30aac92d9c9ac1b804a1182025a4bd08c8c38a0403eec libcdio-0.70.ebuild 1053
 MD5 2306eef70d9db2154bb8b5d294818856 libcdio-0.73.ebuild 1550
+RMD160 65b9a393734eacf4496b6d562b2bf29bcadc2b4a libcdio-0.73.ebuild 1550
+SHA256 648722455842ce262c885728bcae8c8aac0da9d12ae6f6ff2c9851d6ed8ea12a libcdio-0.73.ebuild 1550
 MD5 e26723ead93a1b3ca44453d6dcd6bf99 libcdio-0.74.ebuild 1683
+RMD160 8c7e7378b4adae4dcde854fa994542c4e1d40729 libcdio-0.74.ebuild 1683
+SHA256 d363d8e881ce7d38e2ce6f8f052ab2cda61193f87ed57416b5cf9e264ad25669 libcdio-0.74.ebuild 1683
 MD5 53cb5c7928e1adc77af1f36f51ac12c0 libcdio-0.75-r1.ebuild 1369
+RMD160 be574a2d4db0b85d945b96d5b285884e424fbfe0 libcdio-0.75-r1.ebuild 1369
+SHA256 d8d96827b0e26267ba7af9245696f65a62d2f1d98faca836635b9d210398d695 libcdio-0.75-r1.ebuild 1369
 MD5 5e28084adc64a06f4c2dde45edc0b542 libcdio-0.75.ebuild 1326
+RMD160 06d260a89c232f27754714da68051742116da40f libcdio-0.75.ebuild 1326
+SHA256 7c35bbe6786f78d10cd780f7fee2c14d58691174507039ea413d80af5ed29969 libcdio-0.75.ebuild 1326
+MD5 268c21c13364fe0c1c1badef3c1a1cb3 libcdio-0.76-r1.ebuild 1471
+RMD160 0f1fd5959b961337b6de799f4155571e8c8e247e libcdio-0.76-r1.ebuild 1471
+SHA256 6367c6e02571ad0d52d1efddaac6083d859edc8db30f8afb13699a04a3c81920 libcdio-0.76-r1.ebuild 1471
 MD5 4be6f517760fa9937eed8d4f62e1a204 libcdio-0.76.ebuild 1329
+RMD160 1b72072bfdc5d3b058543f7e85cc4fcd0be05029 libcdio-0.76.ebuild 1329
+SHA256 d1d837a8e7d60ea0a319f9530f37f3ad728560d7a19e0dff5272fd8d74c88ecb libcdio-0.76.ebuild 1329
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
+SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDyDFF2+ySkm8kpY0RAqU/AJ9wd+qfrCAm+TEiHkIswTC/r2sQbwCfXLaA
-NjCIdYKOqNW449GEFzN3sGA=
-=6YV+
+iD8DBQFD7q8pAiZjviIA2XgRAtzSAKDhG9vezA976b1sZ33+NwibT6blCwCePB2p
+GvnL6Tr257ZSC+zraEoWIH8=
+=j09q
 -----END PGP SIGNATURE-----
