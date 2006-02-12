@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5b7f56fe6c112556280130746cb87d9 ChangeLog 4855
-RMD160 29a8244b09725692f91a6c0ac4b83ed8d5dd0f48 ChangeLog 4855
-SHA256 39666ca79f62d1fbd8a4aaa8ad211d338d66840840cd9bf8da35d097f760b586 ChangeLog 4855
+MD5 103fc4410262e3ddf82721279d46b85b ChangeLog 5018
+RMD160 45af3e6a8eb27286dd2ca7ac5dedda1c37731b65 ChangeLog 5018
+SHA256 b7e9c64205a4bd1964d4c2fe62736e55e32013c22c43217606cb1d6a4ceb37ae ChangeLog 5018
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-pango-0.10.0 77
 RMD160 002939134d98d4c0cf79c6fc11212d2cd95b6544 files/digest-gst-plugins-pango-0.10.0 77
 SHA256 e75a88cb347541c450eae77cffbf5c5f42168d2076b9186554b7765ad5bcbefa files/digest-gst-plugins-pango-0.10.0 77
@@ -13,6 +10,9 @@ SHA256 84598b441cbc895d520dfebbd3a4661e3fdf4af6ccf0cf3193408af54cf245af files/di
 MD5 4d9a06718bb82db62ea71d1b2fc00ae3 files/digest-gst-plugins-pango-0.10.2 77
 RMD160 10413c5f1ef58ef250faba0fd8f821757d33794c files/digest-gst-plugins-pango-0.10.2 77
 SHA256 fc970518dbc39d0002049936f4849d8a81dc68b07599d7f856bf540a651f6299 files/digest-gst-plugins-pango-0.10.2 77
+MD5 73770b61668a182a437ba54871c72cc1 files/digest-gst-plugins-pango-0.10.3 277
+RMD160 53fee61c0c0f4f5f560c0dbc4f958aa33a0da570 files/digest-gst-plugins-pango-0.10.3 277
+SHA256 f61f03734f890c5a33f3c26ce29474417bcc5b343b65c30ca3be7eeaff9e4e2e files/digest-gst-plugins-pango-0.10.3 277
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-pango-0.8.10 72
 RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-pango-0.8.10 72
 SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-pango-0.8.10 72
@@ -40,6 +40,9 @@ SHA256 226bf7c18d918d7b126ca05737264c83939c57e1139efabfefb4399a1ce88bbb gst-plug
 MD5 36c8bd5d22146d5ba201505f97f2e87c gst-plugins-pango-0.10.2.ebuild 331
 RMD160 881c6335923cb74151833fea194e5864d514e1e8 gst-plugins-pango-0.10.2.ebuild 331
 SHA256 dd4ccb34a1f5a39bea69b6f9bae3a87b9294e0395f08056e22444ccecbb33440 gst-plugins-pango-0.10.2.ebuild 331
+MD5 36c8bd5d22146d5ba201505f97f2e87c gst-plugins-pango-0.10.3.ebuild 331
+RMD160 881c6335923cb74151833fea194e5864d514e1e8 gst-plugins-pango-0.10.3.ebuild 331
+SHA256 dd4ccb34a1f5a39bea69b6f9bae3a87b9294e0395f08056e22444ccecbb33440 gst-plugins-pango-0.10.3.ebuild 331
 MD5 ca7332713a6a8e9863e4e74ba47d4bf0 gst-plugins-pango-0.8.10.ebuild 356
 RMD160 8b9b7ff26c26957d0044c0397ff269077eff7ba7 gst-plugins-pango-0.8.10.ebuild 356
 SHA256 ff41d43673097dbcba2de7409e34ca077ba39bbe21536ab28ee9c47ae7a937b8 gst-plugins-pango-0.8.10.ebuild 356
@@ -58,10 +61,3 @@ SHA256 25847f63db04cd1b84d7a28bce9dbc85cc2d20f9618e9d0f69b8784c4ac27b33 gst-plug
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
 RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
 SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1 metadata.xml 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD627zJrHF4yAQTrARAr2cAKCpuc11HO20oFwivIKCqwJFbHsetQCgncy9
-NOdj8ie2s13QItfo0O79Rx0=
-=nKyk
------END PGP SIGNATURE-----

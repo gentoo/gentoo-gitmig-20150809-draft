@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fce5737b96f324b46d8b14894aea9eb2 ChangeLog 5438
-RMD160 b2d60b756f78d0d54f9dfa5a13fc36ae5e2c04b1 ChangeLog 5438
-SHA256 1cd6768b516f80a734f55202d821cc463bd2ad13fbd06dd04d82aac8ff627f61 ChangeLog 5438
+MD5 61cb4df8f6be361cc38760cb8e22fa77 ChangeLog 5603
+RMD160 f9da9ff97f3a1d956d678bc95d34b092fae7ae30 ChangeLog 5603
+SHA256 833eb0da8df5b6e0d1933b3f3ce52078ad669d3efacffc7de154670eff144c40 ChangeLog 5603
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-theora-0.10.0 77
 RMD160 002939134d98d4c0cf79c6fc11212d2cd95b6544 files/digest-gst-plugins-theora-0.10.0 77
 SHA256 e75a88cb347541c450eae77cffbf5c5f42168d2076b9186554b7765ad5bcbefa files/digest-gst-plugins-theora-0.10.0 77
@@ -13,6 +10,9 @@ SHA256 84598b441cbc895d520dfebbd3a4661e3fdf4af6ccf0cf3193408af54cf245af files/di
 MD5 4d9a06718bb82db62ea71d1b2fc00ae3 files/digest-gst-plugins-theora-0.10.2 77
 RMD160 10413c5f1ef58ef250faba0fd8f821757d33794c files/digest-gst-plugins-theora-0.10.2 77
 SHA256 fc970518dbc39d0002049936f4849d8a81dc68b07599d7f856bf540a651f6299 files/digest-gst-plugins-theora-0.10.2 77
+MD5 73770b61668a182a437ba54871c72cc1 files/digest-gst-plugins-theora-0.10.3 277
+RMD160 53fee61c0c0f4f5f560c0dbc4f958aa33a0da570 files/digest-gst-plugins-theora-0.10.3 277
+SHA256 f61f03734f890c5a33f3c26ce29474417bcc5b343b65c30ca3be7eeaff9e4e2e files/digest-gst-plugins-theora-0.10.3 277
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-theora-0.8.10 72
 RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-theora-0.8.10 72
 SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-theora-0.8.10 72
@@ -34,6 +34,9 @@ SHA256 f59e8ada63cde95ac35a27aa23707be7c176c5158b330b78b70b4e5d8d3a1058 gst-plug
 MD5 e4d5977fb8aff1cd0332da77d87a5f08 gst-plugins-theora-0.10.2.ebuild 374
 RMD160 3914e768cdc3daed3e4c4d6ab173d647f703eaa1 gst-plugins-theora-0.10.2.ebuild 374
 SHA256 bad64e4b3ff522f5e2fa336715180ea2cdf7ab7be1f131e73c87fed5df45602b gst-plugins-theora-0.10.2.ebuild 374
+MD5 e4d5977fb8aff1cd0332da77d87a5f08 gst-plugins-theora-0.10.3.ebuild 374
+RMD160 3914e768cdc3daed3e4c4d6ab173d647f703eaa1 gst-plugins-theora-0.10.3.ebuild 374
+SHA256 bad64e4b3ff522f5e2fa336715180ea2cdf7ab7be1f131e73c87fed5df45602b gst-plugins-theora-0.10.3.ebuild 374
 MD5 ab83653d5b723de6ba167b42d768c0c9 gst-plugins-theora-0.8.10.ebuild 376
 RMD160 aadc488a26e80a98fa128e9d8d32fd992a249403 gst-plugins-theora-0.8.10.ebuild 376
 SHA256 6e6ac86721ab6519658f8c02fd3b11537597ebc077b72a6e9fee1735c00bad22 gst-plugins-theora-0.8.10.ebuild 376
@@ -49,10 +52,3 @@ SHA256 cb51d17cad4e4739d16830dcc3cd80231dddcb42e9b6d96c8ebac4fa4050ac3e gst-plug
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD63FsJrHF4yAQTrARAj5BAKCIRuKrjFWgmwrLh+UVjwuBlLjm+ACff/Le
-v8HPq5craF3Hjp8gryvcXrA=
-=rPpp
------END PGP SIGNATURE-----
