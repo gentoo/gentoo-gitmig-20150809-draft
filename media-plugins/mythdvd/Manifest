@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e6fb0e08685a07a257c0b33c4dc7aabc ChangeLog 3727
 RMD160 92a3938a8c931051be859f7d6af2ffb1c9c0454c ChangeLog 3727
 SHA256 5dfd9ef1642c99686ad1bf7386985b4e52b894f856534f7faa7dbda65d5bdbaa ChangeLog 3727
@@ -22,3 +25,10 @@ SHA256 2d720534decb1fb4307b497aed7670e4da2d417e38a151960f79d6aa6cefcbf9 mythdvd-
 MD5 6c3ae0b97a6645308c0fd674da44f543 mythdvd-0.19_pre8642.ebuild 726
 RMD160 d3262fbdcfa17d742e87c8a626f1fa3bdb821a3a mythdvd-0.19_pre8642.ebuild 726
 SHA256 c45bad6937cc05d850f0cf7800b2f8089b38c972a1494cb16be916067ff2ec7a mythdvd-0.19_pre8642.ebuild 726
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7w3IBtvusYtCZMsRAn5+AJoChZfYpEt8Rp1scxxSc3Sxfc1mpgCdEkjA
+fyrCkL7+/jWqQ0ACm8sAQ2w=
+=BGPV
+-----END PGP SIGNATURE-----
