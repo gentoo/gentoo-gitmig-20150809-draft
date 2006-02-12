@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.2 2006/02/05 12:07:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.3 2006/02/12 06:12:33 flameeyes Exp $
 
 inherit eutils font autotools flag-o-matic
 
@@ -101,7 +101,7 @@ src_compile() {
 
 	if use X; then
 		cd ${WORKDIR}/${MY_FONT}
-		emake DISPLAY= || die "tvfonts failed"
+		emake -j1 DISPLAY= || die "tvfonts failed"
 	fi
 }
 

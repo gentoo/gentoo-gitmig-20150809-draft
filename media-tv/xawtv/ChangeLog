@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.32 2006/02/05 12:07:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.33 2006/02/12 06:12:33 flameeyes Exp $
+
+  12 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> xawtv-3.95-r1.ebuild:
+  Force non-parallel make on fonts generation, bug #121821.
 
   05 Feb 2006; Michael Hanselmann <hansmi@gentoo.org> xawtv-3.95-r1.ebuild:
   Install xawtv-remote.1 manpage, too.
