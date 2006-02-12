@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 87b1dbaa8f60f00fad49cad3dcee6993 ChangeLog 8724
-RMD160 8ef2ff891c547fc1f1110b4cbf62428a693b950b ChangeLog 8724
-SHA256 541fe68f3fd5402e34be4c834133371ffe9adb3faa185c67a642ff7d680b94ad ChangeLog 8724
+MD5 632ad7aaba27b0dee38406331b3b3671 ChangeLog 8889
+RMD160 b7237f0ee48c8b153a41e06ebe0520e6adace430 ChangeLog 8889
+SHA256 6064991852ed31e121d29b9d7ac1328610e200eb7c84db890c1b37bfd9bb999f ChangeLog 8889
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-vorbis-0.10.0 77
 RMD160 002939134d98d4c0cf79c6fc11212d2cd95b6544 files/digest-gst-plugins-vorbis-0.10.0 77
 SHA256 e75a88cb347541c450eae77cffbf5c5f42168d2076b9186554b7765ad5bcbefa files/digest-gst-plugins-vorbis-0.10.0 77
@@ -13,6 +10,9 @@ SHA256 84598b441cbc895d520dfebbd3a4661e3fdf4af6ccf0cf3193408af54cf245af files/di
 MD5 4d9a06718bb82db62ea71d1b2fc00ae3 files/digest-gst-plugins-vorbis-0.10.2 77
 RMD160 10413c5f1ef58ef250faba0fd8f821757d33794c files/digest-gst-plugins-vorbis-0.10.2 77
 SHA256 fc970518dbc39d0002049936f4849d8a81dc68b07599d7f856bf540a651f6299 files/digest-gst-plugins-vorbis-0.10.2 77
+MD5 73770b61668a182a437ba54871c72cc1 files/digest-gst-plugins-vorbis-0.10.3 277
+RMD160 53fee61c0c0f4f5f560c0dbc4f958aa33a0da570 files/digest-gst-plugins-vorbis-0.10.3 277
+SHA256 f61f03734f890c5a33f3c26ce29474417bcc5b343b65c30ca3be7eeaff9e4e2e files/digest-gst-plugins-vorbis-0.10.3 277
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-vorbis-0.8.10 72
 RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-vorbis-0.8.10 72
 SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-vorbis-0.8.10 72
@@ -34,6 +34,9 @@ SHA256 6f318e69a3e3477faaf2cc3d0dacadafacb17e2ab0dc8530a990e48ded6c5f13 gst-plug
 MD5 1567026f0b07748e049506297bb6abac gst-plugins-vorbis-0.10.2.ebuild 418
 RMD160 54b584b13d5dc37c0c47bd60d581ad1cfff105bd gst-plugins-vorbis-0.10.2.ebuild 418
 SHA256 3841f3073f3672668fc210be6c8e6133b83fc5804155d1a5b68addb5199405f0 gst-plugins-vorbis-0.10.2.ebuild 418
+MD5 56be3e0e07a7daf82056ab44da033d5e gst-plugins-vorbis-0.10.3.ebuild 421
+RMD160 b3117b4dd9b5e36eacb9ffd2a46c9be477633b56 gst-plugins-vorbis-0.10.3.ebuild 421
+SHA256 68f53b9666428b331c16e4c03b40cd05fe13812d74f515b6774d7c82ea90c06a gst-plugins-vorbis-0.10.3.ebuild 421
 MD5 7ecb0480ce2538f76c75e3d07ac549ad gst-plugins-vorbis-0.8.10.ebuild 431
 RMD160 7c3f6165e3af463b3262136c8df1068013f58800 gst-plugins-vorbis-0.8.10.ebuild 431
 SHA256 a28ec47d5aad578b6377a15c345df183f48c38c3cedef43e8ee7210c5a0eed1c gst-plugins-vorbis-0.8.10.ebuild 431
@@ -49,10 +52,3 @@ SHA256 6e011b9677961bea50e8e6034fa0e2d6bf4f422ebdd697b23060aae5d73bb44b gst-plug
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD63P1JrHF4yAQTrARAoicAJ9r8FfVTpD1msuSVBGsylwvR5xpFQCfTrUo
-+3INiOcO9ipTXQ9NfYxXZpY=
-=gl4d
------END PGP SIGNATURE-----
