@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.1-r1.ebuild,v 1.1 2006/02/03 17:47:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.1-r1.ebuild,v 1.2 2006/02/12 18:38:08 spyderous Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -43,7 +43,7 @@ RDEPEND="${DEPEND}
 			x11-apps/xset
 			x11-apps/xrandr
 			x11-apps/mkfontdir
-			x11-misc/xkbdata
+			|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
 			x11-apps/setxkbmap
 		) virtual/x11 )
 	xcomposite? ( || ( (
