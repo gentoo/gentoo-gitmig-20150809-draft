@@ -49,13 +49,13 @@ SHA256 82201360db287eaebbba80aafcad5384e656d9a652f076a75eb2298b42093955 metadata
 MD5 36540d6497ac92e2bacc1512b1aeafaf mjpegtools-1.6.2-r4.ebuild 3198
 RMD160 fa7388f51894c2ee8074ecea31ca3b87406ef0af mjpegtools-1.6.2-r4.ebuild 3198
 SHA256 109a519ee3ff3dc7e71e89247f95564c177903591c266052520246f7f19324d6 mjpegtools-1.6.2-r4.ebuild 3198
-MD5 6459e74c78e0f4799f864e90bac4c293 mjpegtools-1.8.0-r1.ebuild 2734
-RMD160 5d88fd469683b5ded6b8f13ec53cf2a39e15a70b mjpegtools-1.8.0-r1.ebuild 2734
-SHA256 5f2060fba59ae058748c2d5f6f1c238ad4f36a6fac46e18afd731e9afbf45fef mjpegtools-1.8.0-r1.ebuild 2734
+MD5 854c6bd6919cb717efd807adb00abf9c mjpegtools-1.8.0-r1.ebuild 2776
+RMD160 146b0d23814292fce996ef7f1c154f9fe19a7e1a mjpegtools-1.8.0-r1.ebuild 2776
+SHA256 0561d936dbe8522ecbae61908d39e55d873ff6abc125b75cbd4baf7e58f999fc mjpegtools-1.8.0-r1.ebuild 2776
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6RsFJrHF4yAQTrARAv2NAKDC3yGjoDtv2Gg/U44rwRRIF/C9rACdEn2p
-vy9a8T/WNFDhjvBTNHlKRRc=
-=vwXS
+iD8DBQFD73V82+ySkm8kpY0RAuZjAJ9zkTm5ycq1Dl+VUJQ2ToTB/Iei6QCgj80w
+Rdc8kP7P67gRhsFD/0pzAws=
+=EJaV
 -----END PGP SIGNATURE-----

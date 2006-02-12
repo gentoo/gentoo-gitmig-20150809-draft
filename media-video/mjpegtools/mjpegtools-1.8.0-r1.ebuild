@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.14 2006/02/07 22:11:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.15 2006/02/12 17:50:23 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -37,10 +37,11 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
-
-	epatch "${FILESDIR}/${P}-gcc41.patch"
-	epatch "${FILESDIR}/${P}-parallelmake.patch"
+	unpack ${A}
+	cd "${S}"
+	sed -i -e '/ARCHFLAGS=/s:=.*:=:' configure
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+	epatch "${FILESDIR}"/${P}-parallelmake.patch
 	elibtoolize
 }
 
