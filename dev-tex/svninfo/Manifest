@@ -1,14 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 44f959dab5e04dc6340b38e79b20a3c1 svninfo-0.2.1.ebuild 513
-MD5 7b150a8219a5d3a66bea547fcfaa0035 ChangeLog 324
+MD5 df3c536c8e465a1f19c921e8501cb732 ChangeLog 562
+RMD160 68b029baf7d0fdb0e7fbcbe4a9674bf444666b03 ChangeLog 562
+SHA256 36328ebd5393f9359e4d7283f0e512325b02da65859282e7c984c6167c9bebce ChangeLog 562
+MD5 6821ce4ad1f73d433429d51e44add4e8 files/digest-svninfo-0.2.1 244
+RMD160 16b6dde7dfd6ddd26f555e918bb034f96eeb54cf files/digest-svninfo-0.2.1 244
+SHA256 294a7ce53e6fea0dc3cb3dcf06086823bbed8cf66778bb84a14446036417d956 files/digest-svninfo-0.2.1 244
+MD5 7f0fe0b238914bff2b530b1807870261 files/svninfo-0.2.1-latex-compile.patch 774
+RMD160 f08b0fdc788fd3b4a235eab2494b33fc2d676ab2 files/svninfo-0.2.1-latex-compile.patch 774
+SHA256 00927815d3c8dfcb722e5a812dcf996ab5f0520199e378ec386dad2e08092f7b files/svninfo-0.2.1-latex-compile.patch 774
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 2af4dbfa5059d0e1229a021bc2025b79 files/digest-svninfo-0.2.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDMHQTBDOEqLMd+jQRAsb5AKClDPbmG5vMGYoIG1Ka71FKDK2XHgCdGe0w
-Zeo2otoVKyTQcXPH4R2Zizc=
-=NCEk
------END PGP SIGNATURE-----
+RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
+SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
+MD5 bde5d646f75119dc2563659d5e41850e svninfo-0.2.1.ebuild 657
+RMD160 d2e31d6fb98ea3c1c674dcefc998ba6458f5a66a svninfo-0.2.1.ebuild 657
+SHA256 f7675da31fcb119fe574bda98cedfd5da95301ab5e50393f341ed15f1048028c svninfo-0.2.1.ebuild 657

@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/svninfo
-# Copyright 2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.1 2005/09/20 20:41:39 carpaski Exp $
+# Copyright 2005-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.2 2006/02/12 15:52:15 nattfodd Exp $
+
+  12 Feb 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  +files/svninfo-0.2.1-latex-compile.patch, svninfo-0.2.1.ebuild:
+  Allow clean compilation of the documentation and uses the provided Makefile
+  to do so (closing bug #122486).
 
 *rcsinfo-0.2.1 (01 Aug 2005)
 

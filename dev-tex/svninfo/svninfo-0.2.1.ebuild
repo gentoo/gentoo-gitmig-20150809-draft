@@ -1,6 +1,6 @@
-# Copyright 2005 Gentoo Foundation
+# Copyright 2005-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/svninfo-0.2.1.ebuild,v 1.1 2005/09/20 20:41:39 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/svninfo-0.2.1.ebuild,v 1.2 2006/02/12 15:52:15 nattfodd Exp $
 
 inherit latex-package
 
@@ -14,3 +14,13 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DOCS="README svninfo.pdf"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-latex-compile.patch
+}
+
+src_compile() {
+	emake || die "compilation failed"
+}
