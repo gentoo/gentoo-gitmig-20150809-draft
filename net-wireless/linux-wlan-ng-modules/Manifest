@@ -1,21 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ea5a9c919eb7d8c55f7517c35b07461a ChangeLog 1653
-MD5 9e66078bd27004847709f071774bd51d files/0.2.2-kernel-2.6.14.patch 6067
-MD5 f24842a9d1aeeaa901a2423011ef3b38 files/digest-linux-wlan-ng-modules-0.2.2 72
-MD5 f24842a9d1aeeaa901a2423011ef3b38 files/digest-linux-wlan-ng-modules-0.2.2-r1 72
+MD5 1bab0d27c04849ee16e453a653924817 ChangeLog 1896
+RMD160 314b94d03c1cd0064ad2241c0a11d30117cc4535 ChangeLog 1896
+SHA256 eb008c013501273192e37fdc54e3e5a8fc3f42940ac74654546dab54e779ff28 ChangeLog 1896
 MD5 3414fdda8cf331136d23c69378f70a97 files/digest-linux-wlan-ng-modules-0.2.3 72
-MD5 581c6aa56e352d9edfa2a935a23bcd0f files/linux-wlan-ng-0.2.2-module_param.patch 717
+RMD160 adffdad2052e56609c23427d899ec1e4fca57e7d files/digest-linux-wlan-ng-modules-0.2.3 72
+SHA256 8ddd342c5146c6a1e38db8c36707a7562dd114a6d246b935278cfeb97a405789 files/digest-linux-wlan-ng-modules-0.2.3 72
 MD5 a4b2153476d6759ee96ab8b4ac7df4aa files/linux-wlan-ng-0.2.3-module_param.patch 657
-MD5 1deb7f8d9d24a664b06079a9d3eafb2c linux-wlan-ng-modules-0.2.2-r1.ebuild 2462
-MD5 aeeed0b2305debc92233ae39f2229d79 linux-wlan-ng-modules-0.2.2.ebuild 2406
+RMD160 0e21471899880143a13c5bce33e13b0051b005e9 files/linux-wlan-ng-0.2.3-module_param.patch 657
+SHA256 4c0edbb9008680c1c1e2972ee4b0bd20245e3664ae48f6cd33d3589351398c81 files/linux-wlan-ng-0.2.3-module_param.patch 657
 MD5 e793d3f79fb1ebb577fe8b79d66e058f linux-wlan-ng-modules-0.2.3.ebuild 2998
+RMD160 07832a4ae8b676da5e0a0fcecbd4af22d152da61 linux-wlan-ng-modules-0.2.3.ebuild 2998
+SHA256 3b9869170e928006ed44bb1665439e0c55de543a0e22f89c970ca1be845d474c linux-wlan-ng-modules-0.2.3.ebuild 2998
 MD5 bd46277fb8c768aa34612bb9cb43fe75 metadata.xml 571
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtlYoQiJ/wx066S4RAp/FAJ9+WG5rEX3h0NAHem08HPonFCaB/QCfUQ57
-0xgaFf/oULo3epBN8ODwL3w=
-=2jyR
------END PGP SIGNATURE-----
+RMD160 a17abb45825b57ac44fc2c76bbddc05dfc70e6b1 metadata.xml 571
+SHA256 7c0a45fa8b25ff12fcc72f4a57755393f3c566706ad05cd839d583a541603a2c metadata.xml 571
