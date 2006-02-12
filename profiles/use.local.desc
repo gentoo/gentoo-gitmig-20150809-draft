@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1726 2006/02/12 18:37:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1727 2006/02/12 20:43:24 halcy0n Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -786,7 +786,6 @@ media-video/mplayer:mythtv - Enables mythtv support in mplayer
 media-video/mplayer:nvidia - Enables support for the nvidia xvmc video driver
 media-video/mplayer:real - Adds real video support
 media-video/mplayer:rtc - Enables usage of the linux real time clock.  The alternative is software emulation of rtc
-media-video/mplayer:sse2 - Enables sse2 support
 media-video/mplayer:tga - Enables tga output support
 media-video/mplayer:v4l2 - Enables video4linux2 support
 media-video/mplayer:xanim - Enables support for xanim based codecs
@@ -799,7 +798,6 @@ media-video/transcode:lzo - Enables LZO compression support
 media-video/transcode:mjpeg - Enables mjpegtools support
 media-video/transcode:network - Enables network streaming support
 media-video/transcode:pvm - Enables private virtual machine support
-media-video/transcode:sse2 - Enables sse2 support
 media-video/transcode:v4l2 - Enable video4linux2 support
 media-video/vdr:aio - use "all in one" patch with much additional features
 media-video/vdr:bigpatch - enable almost all additional features flying around on the net (including aio)
@@ -1158,8 +1156,6 @@ sci-geosciences/gmt:gmthigh - Adds high resolution bathymetry database
 sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT
 sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient
 sci-geosciences/grass:gdal - Enables gdal support (Grass 6 only)
-sci-libs/acml:sse2 - Enables sse2 support
-sci-libs/fftw:sse2 - Enables sse2 support
 sci-libs/gdal:fits - Enables support for NASA's cfitsio library
 sci-libs/gdal:geos - Adds support for geometry engine
 sci-libs/gdal:gml - Enables support for xerces-c API
@@ -1217,7 +1213,6 @@ sys-apps/qingy:crypto_libgcrypt - Encrypt communications between qingy and its G
 sys-apps/qingy:crypto_openssl - Encrypt communications between qingy and its GUI using OpenSSL
 sys-apps/shadow:nousuid - When nousuid is enabled only su from the shadow package will be installed with the setuid bit (mainly for single user systems)
 sys-apps/suspend2-userui:fbsplash - Add support for framebuffer splash
-sys-apps/sysvinit:ibm - adds support for hvc consoles
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
@@ -1237,8 +1232,6 @@ sys-boot/arcboot:ip30 - Disables support for SGI Octane (IP30)
 sys-boot/grub:custom-cflags - Enables custom cflags
 sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
-sys-boot/yaboot-static:ibm - Indicate the usage of ibm based ppc64 hardware
-sys-boot/yaboot:ibm - Indicate the usage of ibm based ppc64 hardware
 sys-cluster/charm:cmkopt - Enable CMK optimisation
 sys-cluster/charm:smp - Enable direct SMP support using shared memory
 sys-cluster/charm:tcp - Use TCP (instead of UPD) for socket communication
@@ -1292,7 +1285,6 @@ sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-kernel/ck-sources:ck-plus - Add some experimental ck patches
 sys-kernel/ck-sources:ck-server - Tune the kernel for servers
 sys-kernel/genkernel:bootsplash - Installs bootsplash support if you request it and it is not already available.
-sys-kernel/genkernel:ibm - Install IBM pSeries config as default instead of G5 config.
 sys-kernel/gentoo-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/hardened-sources:rsbac - Enables support for RSBAC (2.4 kernels)
 sys-kernel/mips-headers:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
@@ -1540,7 +1532,6 @@ x11-terms/rxvt-unicode:xgetdefault - Enable resources via X instead of rxvt smal
 x11-terms/rxvt:linuxkeys - Define LINUX_KEYS (changes Home/End key)
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/xterm:toolbar - Enable the xterm toolbar to be built.
-x11-themes/polymer:sse2 - Enables sse2 support.
 x11-wm/enlightenment:nothemes - Don't include the standard E themes
 x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
 x11-wm/fluxbox:bigger-fonts - Force the supplied themes to use at least 10pt fonts
