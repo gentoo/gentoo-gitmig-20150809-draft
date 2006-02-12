@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.15 2006/01/02 22:12:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.16 2006/02/12 11:36:01 betelgeuse Exp $
+
+  12 Feb 2006; Petteri Räty <betelgeuse@gentoo.org>
+  azureus-2.3.0.6-r1.ebuild:
+  Fixed bug #119400 so now azureus won't fail on x86 machines with small
+  amounts of memory.
 
   02 Jan 2006; Petteri Räty <betelgeuse@gentoo.org>
   -files/azureus-gentoo-2.3.0.4.sh, -files/azureus-gentoo.sh,

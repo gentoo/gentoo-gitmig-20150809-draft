@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.3.0.6-r1.ebuild,v 1.1 2006/01/02 21:24:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.3.0.6-r1.ebuild,v 1.2 2006/02/12 11:36:01 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -58,7 +58,13 @@ src_compile() {
 	fi
 
 	# Fails to build on amd64 without this
-	ANT_OPTS="${ANT_OPTS} -Xmx1g" \
+	# Globally enabling this makes x86 machines with
+	# little memory fail...
+	if use amd64; then
+		ANT_OPTS="${ANT_OPTS} -Xmx248m"
+	fi
+
+	ANT_OPTS="${ANT_OPTS}" \
 		ant -q -q ${ant_extra_opts} jar \
 		|| die "ant build failed"
 }
