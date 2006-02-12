@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1724 2006/02/11 22:09:51 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1725 2006/02/12 16:18:04 carlo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -315,7 +315,7 @@ dev-libs/cyrus-sasl:sample - Build sample client and server
 dev-libs/cyrus-sasl:srp - Enables SRP in cyrus-sasl
 dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/klibc:n32 - Force klibc to 32bit if on mips64 if not n32 userland.
-dev-libs/libcdio:cddb - use libcddb for CD database lookups
+dev-libs/libcdio:cddb - Access cddb servers to retrieve and submit information about compact disks.
 dev-libs/libmix:no-net2 - disable libpcap and libnet support
 dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
 dev-libs/libtomcrypt:libtommath - Use the portable math library
@@ -516,6 +516,7 @@ kde-base/kpdf:nodrm - Disable DRM support in kpdf
 kde-base/krdc:rdesktop - Enable remote desktop functionality
 kde-base/ksysguard:zeroconf - Enable support for DNS Service Discovery (DNS-SD)
 kde-base/kwin:xcomposite - Enable support for Xorg Composite extension
+kde-misc/tellico:cddb - Access cddb servers to retrieve and submit information about compact discs.
 mail-client/balsa:gtkspell - Use gtkspell for dictionary support
 mail-client/evolution:firefox - Use Firefox's NSS/NSPR libraries if SSL is enabled
 mail-client/evolution:nntp - Enable evolution nntp (news) functionality
@@ -595,7 +596,7 @@ media-gfx/graphicsmagick:jp2 - enable jpeg v2 support
 media-gfx/graphicsmagick:lzw - enable LZW support
 media-gfx/graphviz:cairo - enable cairo support
 media-gfx/graphviz:dynagraph - enable dynagraph support
-media-gfx/gwenview:kipi - add support for kipi plugins
+media-gfx/gwenview:kipi - Support for the KDE Image Plugin Interface.
 media-gfx/imagemagick:fpx - enable libfpx support
 media-gfx/imagemagick:graphviz - enable graphviz support
 media-gfx/imagemagick:gs - enable ghostscript support
@@ -614,6 +615,7 @@ media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled
 media-gfx/optipng:ext-zlib - Link with the system zlib, rather than the bundled version optimised specifically for use with png.
 media-gfx/pornview:mplayer - Enables mplayer support
 media-gfx/sane-frontends:gimp - Build a plugin for the GIMP
+media-gfx/showimg:kipi - Support for the KDE Image Plugin Interface.
 media-gfx/splashutils:kdgraphics - Use KD_GRAPHICS for silent mode. This will cover ALL messages (even when there's a kernel panic) with the silent splash image. If the splash daemon dies, this might leave the console dead.
 media-gfx/ufraw:gimp - Build a plugin for the GIMP
 media-gfx/xsane:gimp - Build a plugin for the GIMP
@@ -805,24 +807,24 @@ media-video/vdr:rcu - enable support for a special type of remote control unit
 media-video/vdr:setup-plugin - Enable support for the plugin vdr-setup
 media-video/vdr:sourcecaps - adds the ability to define capabilities of dvb-cards (e.g. card1 can receive Sat @28.2E)
 media-video/vdr:subtitles - Enable support for the subtitles-plugin
-media-video/vdr:vfat - allow vdr to store its recordings on vfat filesystems
-media-video/vdr:yaepg - Enables support for the plugin vdr-yaepg
-media-video/vlc:avahi - support for avahi mdns daemon
-media-video/vlc:cdda - Enables libcdda cd audio playback support
-media-video/vlc:cddb - Enables libcddb database support for indentifying cd's
-media-video/vlc:cdio - Enables libcdio support for cd interaction
-media-video/vlc:corba - Enables corba interface support
-media-video/vlc:daap - Enables DAAP shares services discovery support
-media-video/vlc:httpd - Enables a web based interface for vlc
-media-video/vlc:live - Enables LIVE.com support
-media-video/vlc:mod - Enables Mod demux support
-media-video/vlc:real - Enables real audio and RTSP modules
-media-video/vlc:screen - Enables screen capture support
-media-video/vlc:shout - Enables libshout output
-media-video/vlc:skins - Enables support for the skins2 interface
-media-video/vlc:stream - Enables vlc to stream video
+media-video/vdr:vfat - Allow vdr to store its recordings on vfat filesystems.
+media-video/vdr:yaepg - Enables support for the plugin vdr-yaepg.
+media-video/vlc:avahi - Support for avahi mdns daemon.
+media-video/vlc:cdda - Enables libcdda cd audio playback support.
+media-video/vlc:cddb - Access cddb servers to retrieve and submit information about compact disks.
+media-video/vlc:cdio - Enables libcdio support for cd interaction.
+media-video/vlc:corba - Enables corba interface support.
+media-video/vlc:daap - Enables DAAP shares services discovery support.
+media-video/vlc:httpd - Enables a web based interface for vlc.
+media-video/vlc:live - Enables LIVE.com support.
+media-video/vlc:mod - Enables Mod demux support.
+media-video/vlc:real - Enables real audio and RTSP modules.
+media-video/vlc:screen - Enables screen capture support.
+media-video/vlc:shout - Enables libshout output.
+media-video/vlc:skins - Enables support for the skins2 interface.
+media-video/vlc:stream - Enables vlc to stream video.
 media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.
-media-video/winki:css - Enables ripping of encrypted dvds
+media-video/winki:css - Enables ripping of encrypted DVDs
 net-analyzer/aimsniff:http - Install the WAS (Web AIM Sniff) frontend
 net-analyzer/barnyard:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/bmon:dbi - Enables libdbi support
