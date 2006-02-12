@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r2.ebuild,v 1.13 2005/10/30 05:50:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r2.ebuild,v 1.14 2006/02/12 15:15:19 hansmi Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs fixheadtails
 
 DESCRIPTION="Qmail Queue Repair Application with support for big-todo"
 HOMEPAGE="http://www.netmeridian.com/e-huss/"
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	epatch ${DISTDIR}/queue-fix-todo.patch
 	sed -i 's/^extern int errno;/#include <errno.h>/' ${S}/error.h
-	sed -i 's/head -1/head -n1/' ${S}/Makefile
+	ht_fix_file ${S}/Makefile*
 }
 
 src_compile() {
