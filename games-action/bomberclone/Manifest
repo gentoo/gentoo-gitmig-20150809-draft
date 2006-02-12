@@ -1,4 +1,31 @@
-MD5 8011ddd0a84d8313815553b5206a21b6 ChangeLog 2581
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 74e997c3889251ee5d7afca9a6cbf780 ChangeLog 2807
+RMD160 28c247f7ed711685de823db41a74fef3800a79c8 ChangeLog 2807
+SHA256 66e93085435968ff382ae19b29418a0ea06ca849e451805b95964ee11c3e8be8 ChangeLog 2807
+MD5 8648be9da694042dcc92bdacea6fa061 bomberclone-0.11.6.2-r1.ebuild 1296
+RMD160 9b1860cecbff6df20dbab7c167fa9ceb7ace28a8 bomberclone-0.11.6.2-r1.ebuild 1296
+SHA256 9fc0c9c3700dfec158ae93773e0ce4919e1b520081e266825ff097771bfb70bd bomberclone-0.11.6.2-r1.ebuild 1296
 MD5 d78e8491b5858e0c52032d7afcaadfe1 bomberclone-0.11.6.2.ebuild 1241
+RMD160 66df9db82667de8894b3cf06758b4981ca274729 bomberclone-0.11.6.2.ebuild 1241
+SHA256 3e2100d0c2001ae012f0001652d8e8cb3142db5349eb2e9dac68a7172db9bf00 bomberclone-0.11.6.2.ebuild 1241
+MD5 cf00be379440775b274915a122dfe2c1 files/bomberclone-0.11.6.2-fix-kaboom.patch 1333
+RMD160 ccf098c585a3b35083f78e313902a91aac20287e files/bomberclone-0.11.6.2-fix-kaboom.patch 1333
+SHA256 2036451da14f5dba93ae569223bfbf9d24326c483c9beb628231870ce048d4e6 files/bomberclone-0.11.6.2-fix-kaboom.patch 1333
 MD5 a2e7f79d1bc6b86d7c48e712d469eba9 files/digest-bomberclone-0.11.6.2 73
+RMD160 df9906fbfc0a3db4ab7d77d8b5b9d1605592f68b files/digest-bomberclone-0.11.6.2 73
+SHA256 4983de79346a5157156954bbe52eac33837c6525302d90172d1f519d4da99643 files/digest-bomberclone-0.11.6.2 73
+MD5 a2e7f79d1bc6b86d7c48e712d469eba9 files/digest-bomberclone-0.11.6.2-r1 73
+RMD160 df9906fbfc0a3db4ab7d77d8b5b9d1605592f68b files/digest-bomberclone-0.11.6.2-r1 73
+SHA256 4983de79346a5157156954bbe52eac33837c6525302d90172d1f519d4da99643 files/digest-bomberclone-0.11.6.2-r1 73
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD77Cp2+ySkm8kpY0RAra1AJwLAjQUgTwerUy+PCdLeRtLIWaoHQCfRZFK
+8BPWlyN78uuBtOdQ8GhXjTw=
+=r4BV
+-----END PGP SIGNATURE-----
