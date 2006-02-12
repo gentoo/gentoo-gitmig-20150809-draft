@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/euler-1.60.6-r1.ebuild,v 1.3 2005/04/20 21:40:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/euler-1.60.6-r1.ebuild,v 1.4 2006/02/12 12:50:14 markusle Exp $
 
 inherit eutils
 IUSE=""
@@ -18,7 +18,6 @@ SLOT="0"
 KEYWORDS="x86 ppc -sparc amd64"
 
 DEPEND="virtual/libc
-	virtual/x11
 	=x11-libs/gtk+-1.2*"
 
 src_unpack() {
