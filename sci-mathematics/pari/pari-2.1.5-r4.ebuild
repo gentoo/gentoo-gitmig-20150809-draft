@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.5-r4.ebuild,v 1.4 2006/01/17 10:11:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.5-r4.ebuild,v 1.5 2006/02/12 20:41:40 deltacow Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
 DESCRIPTION="pari (or pari-gp) : a software package for computer-aided number theory"
 HOMEPAGE="http://www.parigp-home.de/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.gn-50uma.de/ftp/pari-2.1/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha ~mips hppa amd64"
+KEYWORDS="alpha amd64 hppa ~mips ~ppc ~sparc x86"
 
 IUSE="doc emacs"
 
@@ -40,6 +40,7 @@ src_compile() {
 		--prefix=/usr \
 		--miscdir=/usr/share/doc/${P} \
 		--datadir=/usr/share/${P} \
+		--libdir=/usr/$(get_libdir) \
 		--mandir=/usr/share/man/man1 || die "./configure failed"
 	addwrite "/var/lib/texmf"
 	addwrite "/usr/share/texmf"
