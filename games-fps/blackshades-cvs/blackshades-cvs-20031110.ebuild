@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20031110.ebuild,v 1.9 2005/10/23 07:51:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20031110.ebuild,v 1.10 2006/02/12 22:25:24 tupone Exp $
 
 #ECVS_PASS="anonymous"
 #ECVS_SERVER="icculus.org:/cvs/cvsroot"
@@ -18,9 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	virtual/opengl
-	virtual/glut
+DEPEND="virtual/opengl
+	virtual/glu
 	media-libs/libvorbis
 	media-libs/openal
 	media-libs/libsdl"
@@ -44,6 +43,11 @@ src_unpack() {
 	find "${S}" -type d -name CVS -exec rm -rf \{\} \; 2> /dev/null
 	find "${S}/Data/Textures" -type f -name ".*" -exec rm -f \{\} \;
 	find "${S}/Data/" -type f -exec chmod a-x \{\} \;
+	# Glut is not really needed, but there is an include in the source
+	# We patch it
+	sed -i \
+		-e "/glut.h/d" Source/Decals.h \
+		|| die "removing glut include failed"
 }
 
 src_install() {
