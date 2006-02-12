@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.23-r2.ebuild,v 1.2 2006/02/11 18:28:57 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.24.ebuild,v 1.1 2006/02/12 11:23:16 nelchael Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -50,7 +50,9 @@ filter-flags -maltivec
 append-flags -U__VEC__
 
 pkg_setup() {
+
 	if use kerberos && ! use krb4 ; then
+		ewarn
 		ewarn "You have enabled kerberos without krb4 support. Kerberos will be"
 		ewarn "disabled unless kerberos 4 support has been compiled with your"
 		ewarn "kerberos libraries. To do that, you should abort now and do:"
@@ -59,46 +61,48 @@ pkg_setup() {
 		ewarn
 		epause
 	fi
+
 	if use arm && use new-login; then
 		ewarn "gnome-base/gdm is required for USE=\"new-login\", and is not"
 		ewarn "available for the arm platform. please disable this use flag"
 		die "new-login USE is not supported on arm"
 	fi
+
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+
+	unpack "${A}"
+	cd "${S}"
 
 	# disable rpm -q checking, otherwise it breaks sandbox if rpm is installed
-	# use gnome-terminal in tests rather than gnome-open (bug #94708)
-	# and bug 118028:
+	# bug #118028:
 	epatch "${FILESDIR}/${P}-norpm.patch"
 
 	# tweaks the default configuration (driver/XScreenSaver.ad.in)
-	epatch ${FILESDIR}/${PN}-4.22-settings.patch
+	epatch "${FILESDIR}/${P}-settings.patch"
 
 	# makes the blank screen REALLY blank
-	epatch ${FILESDIR}/${PN}-blank-screen.patch
+	epatch "${FILESDIR}/${P}-silent.patch"
 
 	# disable not-safe-for-work xscreensavers
-	use offensive || epatch ${FILESDIR}/${P}-nsfw.patch
+	use offensive || epatch "${FILESDIR}/${P}-nsfw.patch"
 
-	# If offensive is set patch webcollage to work:
-	use offensive && epatch ${FILESDIR}/${P}-words.patch
+	# Patch webcollage to work:
+	epatch "${FILESDIR}/${P}-words.patch"
 
 	# Fix for modular X:
 	epatch "${FILESDIR}/${P}-app-defaults.patch"
-	eautoreconf
 
-	# Fix bug #113951:
-	epatch "${FILESDIR}/${P}-dpms.patch"
+	eautoreconf
 
 	# change old head/tail to POSIX ones
 	ht_fix_all
+
 }
 
 src_compile() {
+
 	local myconf
 	use kerberos && use krb4 \
 		&& myconf="${myconf} --with-kerberos" \
@@ -131,10 +135,12 @@ src_compile() {
 		${myconf} || die "econf failed"
 
 	emake || die "emake failed"
+
 }
 
 src_install() {
-	[ -n "${KDEDIR}" ] && dodir ${KDEDIR}/bin
+
+	[[ -n "${KDEDIR}" ]] && dodir "${KDEDIR}/bin"
 
 	make install_prefix="${D}" install || die "make install failed"
 
@@ -142,28 +148,32 @@ src_install() {
 
 	# install correctly in gnome, including info about configuration preferences
 	if use gnome ; then
+
 		dodir /usr/share/gnome/capplets
 		insinto /usr/share/gnome/capplets
 		doins driver/screensaver-properties.desktop
 
 		dodir /usr/share/pixmaps
 		insinto /usr/share/pixmaps
-		newins ${S}/utils/images/logo-50.xpm
+		newins "${S}/utils/images/logo-50.xpm"
 		xscreensaver.xpm
 
 		dodir /usr/share/control-center-2.0/capplets
 		insinto /usr/share/control-center-2.0/capplets
-		newins ${FILESDIR}/desktop_entries/screensaver-properties.desktop
+		newins "${FILESDIR}/desktop_entries/screensaver-properties.desktop"
+
 	fi
 
 	# Remove "extra" capplet
-	rm -f ${D}/usr/share/applications/gnome-screensaver-properties.desktop
+	rm -f "${D}/usr/share/applications/gnome-screensaver-properties.desktop"
 
 	use pam && fperms 755 /usr/bin/xscreensaver
 	pamd_mimic_system xscreensaver auth
+
 }
 
 pkg_postinst() {
+
 	if ! use new-login; then
 		einfo
 		einfo "You have chosen to not use the new-login USE flag."
@@ -185,8 +195,4 @@ pkg_postinst() {
 		ewarn
 	fi
 
-	einfo
-	einfo "The gtk USE flag has been dropped. gtk is now required for Gentoo's"
-	einfo "xscreensaver. If this is a problem, bug upstream."
-	einfo
 }

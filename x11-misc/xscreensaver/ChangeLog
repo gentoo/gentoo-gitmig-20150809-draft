@@ -1,6 +1,19 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.132 2006/02/11 18:28:57 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.133 2006/02/12 11:23:16 nelchael Exp $
+
+*xscreensaver-4.24 (12 Feb 2006)
+
+  12 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/xscreensaver-4.14-fortune.patch,
+  -files/xscreensaver-4.20-norpm.patch, -files/xscreensaver-4.23-dpms.patch,
+  +files/xscreensaver-4.24-app-defaults.patch,
+  +files/xscreensaver-4.24-norpm.patch, +files/xscreensaver-4.24-nsfw.patch,
+  +files/xscreensaver-4.24-settings.patch,
+  +files/xscreensaver-4.24-silent.patch,
+  +files/xscreensaver-4.24-words.patch, -files/pam.d/xscreensaver,
+  -xscreensaver-4.23-r2.ebuild, +xscreensaver-4.24.ebuild:
+  Version bump, 4.24 contains the DPMS fix from 4.23-r2, so 4.23-r2 was removed.
 
   11 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   xscreensaver-4.23-r2.ebuild:
