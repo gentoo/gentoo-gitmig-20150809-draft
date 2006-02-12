@@ -1,21 +1,36 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a634e00fba43912b0b8bae45ff8b7f46 ChangeLog 2894
-RMD160 6f0973f92bea5ea690f9488363688f535fccd503 ChangeLog 2894
-SHA256 060733d7930183de37b99ea703a8757daeeee93e2092131124b44d6be3780c6a ChangeLog 2894
+MD5 a3481b283b55a6a8968dd83c7f996c68 ChangeLog 3144
+RMD160 fbad337e182c483c7f6ea3c61b262d38de363071 ChangeLog 3144
+SHA256 bde2af7a7ecc1cea2e0dd665e940397cd4cd3667f932f1eff94c15f3f5496808 ChangeLog 3144
 MD5 3f9580dac61b935958e6f8671c7d6ce0 files/digest-oprofile-0.9 64
 RMD160 f71dfbdc2fc12930d6d6f672b01800c263698a3c files/digest-oprofile-0.9 64
 SHA256 67fd998d2bbc37dc8fe2d08f4f733ac5e0e422b3c55693ea906091b641d0c92e files/digest-oprofile-0.9 64
+MD5 de275704d2800ea9752f6e4dcdbcf6ce files/digest-oprofile-0.9-r1 238
+RMD160 7a71f987e41f07aa9b7dafcb59248d115257e448 files/digest-oprofile-0.9-r1 238
+SHA256 31df4359640721690e0cb835e0f8e2c65a89207349d25e9111323e8096ab7a28 files/digest-oprofile-0.9-r1 238
 MD5 270affd330807662827e4183ae6f00a4 files/digest-oprofile-0.9.1 66
 RMD160 09f28c6912aa6fd082af105f8ae5101dfb03f646 files/digest-oprofile-0.9.1 66
 SHA256 93af78c1bd32492d3207af2cbd6bc49a752ef5904dd67ef65ab574e6fa994d6c files/digest-oprofile-0.9.1 66
+MD5 9d1844a323b70f3f2704395ff049b444 files/digest-oprofile-0.9.1-r1 244
+RMD160 d503955bc51b42f7fec27872130cf68e91c08832 files/digest-oprofile-0.9.1-r1 244
+SHA256 61d4779932ffe46cf3d1481400c91211d687028300e110a6b95d5a0483e65e5a files/digest-oprofile-0.9.1-r1 244
 MD5 37dee2be2710a99023888aa0be7f00cd files/oprofile-0.8.2.patch 669
 RMD160 bec543dd9fe365427b8b8c4439fb77f9c7c93b29 files/oprofile-0.8.2.patch 669
 SHA256 192dc8b084d531baf185afe2fa889e9891fc815360c7ac9f7bcbedc82b0c6590 files/oprofile-0.8.2.patch 669
+MD5 81b4b96f8a75dd6f9401a51977208564 files/oprofile-0.9.1-opcontrol_path.diff 576
+RMD160 9e30a4c3c9cc201d2d846c2649de629644b68e17 files/oprofile-0.9.1-opcontrol_path.diff 576
+SHA256 f51d661cb4969042fef98f8c4a95ac6878945a980c312d2d38be0d3eeb734896 files/oprofile-0.9.1-opcontrol_path.diff 576
 MD5 3d4a085e59f4ef22017d52452649205b metadata.xml 310
 RMD160 2f69c5a1146d8cdc1a293b375468a948a7f8d392 metadata.xml 310
 SHA256 8841385427fc5d6e14139c217050b34b99a044fded21bd4d8881c8831fed7838 metadata.xml 310
+MD5 d736604db5e553e455450dbce8323ba0 oprofile-0.9-r1.ebuild 2025
+RMD160 f127fc92dbdeadb02ee4273b381c30001ff8dfd8 oprofile-0.9-r1.ebuild 2025
+SHA256 d7e8b1b358cd1007e48607b13665398d618fbfaabea5a8f85c1dbda90b630c56 oprofile-0.9-r1.ebuild 2025
+MD5 891eae35194897e804ff65a88129bc49 oprofile-0.9.1-r1.ebuild 2027
+RMD160 26cbfabe7b02053328941e0940bd726485d3178a oprofile-0.9.1-r1.ebuild 2027
+SHA256 f5e1d375fa6768602a2cb4910632ed9195f26e836286c3334d38fdbce942e08b oprofile-0.9.1-r1.ebuild 2027
 MD5 135ff630712ab8618156e9c033e976e0 oprofile-0.9.1.ebuild 1969
 RMD160 a9126b6867361feeb94e82d5491e2a2e2891f27b oprofile-0.9.1.ebuild 1969
 SHA256 8ec7f7524668da44352a23df187b091c9025fad61dd429d2d8e21392f3db6307 oprofile-0.9.1.ebuild 1969
@@ -25,7 +40,7 @@ SHA256 d1205a91902e6fcc3a7cb0625045af1925daa3a31a6208427aa58864a68cfedb oprofile
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD70Ctchej4aZK9/cRAvroAJwPcdghPMWSsNVfZNLeUAE6vqroswCfcLRK
-qwt+TYqBv/X9luEi7WfvcaQ=
-=5EoA
+iD8DBQFD70lnchej4aZK9/cRAhc7AKCHkWbfki3jW991l814QZ+Lk5Rz9ACcCyOn
+9pzEGYf+rJ+0/zUvTgYZ1Bg=
+=+31n
 -----END PGP SIGNATURE-----

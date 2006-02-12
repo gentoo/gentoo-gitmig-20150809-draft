@@ -1,0 +1,18 @@
+diff -Naurp oprofile-0.9.1-orig/utils/opcontrol oprofile-0.9.1/utils/opcontrol
+--- oprofile-0.9.1-orig/utils/opcontrol	2006-02-12 15:26:15.000000000 +0100
++++ oprofile-0.9.1/utils/opcontrol	2006-02-12 15:26:45.000000000 +0100
+@@ -1409,12 +1409,12 @@ check_version()
+ 
+ # main
+ 
++PATH=/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin
++
+ # determine the location of opcontrol and related programs
+ OPCONTROL=`which $0`
+ OPDIR=`dirname $OPCONTROL`
+ 
+-PATH=/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin
+-
+ check_version_help $@
+ 
+ if test -z "$1"; then
