@@ -1,14 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c08f5e903f9114866d813bda5a46fbfd mythbrowser-0.18.1.ebuild 717
-MD5 fbaab078aba3f2dbf78d25c64b9f1c6f ChangeLog 2324
-MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
+MD5 1d2fd25044ddb9fb859990228d63f7d4 ChangeLog 2446
+RMD160 39e8ce96c92e56b239c22bdc19bf804680b03206 ChangeLog 2446
+SHA256 bb4031d2e3b0b6d5ff14053fe7c67870e313522d517d28923a44cc01f47e8e4c ChangeLog 2446
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythbrowser-0.18.1 72
+RMD160 877157927135ea283ca6df6d2ec7a0d828484cdf files/digest-mythbrowser-0.18.1 72
+SHA256 ef321086cf15a8bb7886b92739c998ed98f6272762604408b34c131a7bdfad81 files/digest-mythbrowser-0.18.1 72
+MD5 02bb9708cbe2cdf3fba5ddd88dbce656 files/digest-mythbrowser-0.19 256
+RMD160 e9516bf4b7b132f1258633b15dfb223d99b1a56c files/digest-mythbrowser-0.19 256
+SHA256 d305873fee173a927a0701caaf2bd9d023f2c4668dd14c5774267c1fce166928 files/digest-mythbrowser-0.19 256
+MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
+RMD160 effccac2541ac4d0954899784d7d64c60a9c020e metadata.xml 222
+SHA256 8b2065fecfbbdd0caa3c5eb86b98c22766db07f555edbf3127e9454b468ecff6 metadata.xml 222
+MD5 c08f5e903f9114866d813bda5a46fbfd mythbrowser-0.18.1.ebuild 717
+RMD160 bc11ebb25c734bbd633f8a21211ad50f762b858f mythbrowser-0.18.1.ebuild 717
+SHA256 1e4ed77238ddae73dc5ecbdc18e12d2636ae627d767bff2c2d483006db5cc410 mythbrowser-0.18.1.ebuild 717
+MD5 5a785ab9d2f2c438b2bae865d1ca8dca mythbrowser-0.19.ebuild 714
+RMD160 3e25b02406dfc6cb372cdc51c0784ab795f675aa mythbrowser-0.19.ebuild 714
+SHA256 f6141287f5d2cccbf251b68cea99290e7cf432ebce865dbb8bec57bf9678c81c mythbrowser-0.19.ebuild 714
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDICKT2G5bA0cA/ScRAjq/AJ4rYDVLG4IdEQ1UAmZccIjznoEN7ACfZxJM
-HDMcc3ppoxDFB2c4bi3uyJw=
-=3JKB
+iD8DBQFD7wy+BtvusYtCZMsRAhiDAJsFrh+MsAYFue72L0M2NVY4Lk1dvgCeKwbi
+0KfZ8ZtWQ1zGJSBtDKZA2iI=
+=HeBZ
 -----END PGP SIGNATURE-----

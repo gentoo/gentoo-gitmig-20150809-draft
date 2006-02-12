@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4c9eccc3b076f9633528aaae5f10675c ChangeLog 3596
+MD5 e6fb0e08685a07a257c0b33c4dc7aabc ChangeLog 3727
+RMD160 92a3938a8c931051be859f7d6af2ffb1c9c0454c ChangeLog 3727
+SHA256 5dfd9ef1642c99686ad1bf7386985b4e52b894f856534f7faa7dbda65d5bdbaa ChangeLog 3727
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythdvd-0.18.1 72
+RMD160 877157927135ea283ca6df6d2ec7a0d828484cdf files/digest-mythdvd-0.18.1 72
+SHA256 ef321086cf15a8bb7886b92739c998ed98f6272762604408b34c131a7bdfad81 files/digest-mythdvd-0.18.1 72
+MD5 02bb9708cbe2cdf3fba5ddd88dbce656 files/digest-mythdvd-0.19 256
+RMD160 e9516bf4b7b132f1258633b15dfb223d99b1a56c files/digest-mythdvd-0.19 256
+SHA256 d305873fee173a927a0701caaf2bd9d023f2c4668dd14c5774267c1fce166928 files/digest-mythdvd-0.19 256
 MD5 7c30adab29ed6174c066f414eaae61aa files/digest-mythdvd-0.19_pre8642 78
+RMD160 5faa759ab43449608a54167ec4eced68e292b1b5 files/digest-mythdvd-0.19_pre8642 78
+SHA256 04a7108b0bebbd80061308a4091788b84428a0ac47f7649f744284b3eccb70f2 files/digest-mythdvd-0.19_pre8642 78
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
+RMD160 effccac2541ac4d0954899784d7d64c60a9c020e metadata.xml 222
+SHA256 8b2065fecfbbdd0caa3c5eb86b98c22766db07f555edbf3127e9454b468ecff6 metadata.xml 222
 MD5 9affc61cb46c37590cb405643fd0aa2e mythdvd-0.18.1.ebuild 700
+RMD160 1f56d06c724b0cba2ad81d03ed474fbb279d1e3d mythdvd-0.18.1.ebuild 700
+SHA256 bc590b36f71c882778194fec4bfd24115ed798329402465634afe8f348c9ee40 mythdvd-0.18.1.ebuild 700
+MD5 303476ab2936000b38ba7f1a520e31fc mythdvd-0.19.ebuild 677
+RMD160 bb0ad52a2d3e129c347830563d9223de56f659fa mythdvd-0.19.ebuild 677
+SHA256 2d720534decb1fb4307b497aed7670e4da2d417e38a151960f79d6aa6cefcbf9 mythdvd-0.19.ebuild 677
 MD5 6c3ae0b97a6645308c0fd674da44f543 mythdvd-0.19_pre8642.ebuild 726
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0znRBtvusYtCZMsRAvjwAJ9EEC+ykisFw7oKPgxnBcqLsZpkgACfbo5P
-6NTwfK8jec9/vNsfOSn9iqE=
-=LYkU
------END PGP SIGNATURE-----
+RMD160 d3262fbdcfa17d742e87c8a626f1fa3bdb821a3a mythdvd-0.19_pre8642.ebuild 726
+SHA256 c45bad6937cc05d850f0cf7800b2f8089b38c972a1494cb16be916067ff2ec7a mythdvd-0.19_pre8642.ebuild 726
