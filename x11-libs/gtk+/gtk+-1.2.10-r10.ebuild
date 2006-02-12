@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.20 2005/12/19 06:06:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.21 2006/02/12 19:15:47 spyderous Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit gnome.org eutils libtool
@@ -15,8 +15,14 @@ SLOT="1"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
 IUSE="nls debug"
 
-DEPEND="virtual/x11
-	=dev-libs/glib-1.2*
+RDEPEND="|| ( x11-libs/libXi virtual/x11 )
+	=dev-libs/glib-1.2*"
+DEPEND="${RDEPEND}
+	|| ( ( x11-proto/inputproto
+			x11-proto/xextproto
+		)
+		virtual/x11
+	)
 	nls? ( sys-devel/gettext
 		dev-util/intltool )"
 

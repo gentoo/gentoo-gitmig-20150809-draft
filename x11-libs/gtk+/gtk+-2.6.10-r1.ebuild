@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.10-r1.ebuild,v 1.3 2005/11/20 06:27:34 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.10-r1.ebuild,v 1.4 2006/02/12 19:15:47 spyderous Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,7 +15,19 @@ SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="doc tiff jpeg"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( (
+			x11-libs/libXrender
+			x11-libs/libX11
+			x11-libs/libXi
+			x11-libs/libXt
+			x11-libs/libXext
+			x11-libs/libXinerama
+			x11-libs/libXcursor
+			x11-libs/libXrandr
+			x11-libs/libXfixes
+		)
+		virtual/x11
+	)
 	>=dev-libs/glib-2.6
 	>=dev-libs/atk-1.0.1
 	>=x11-libs/pango-1.8
@@ -28,6 +40,14 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	sys-devel/autoconf
 	>=sys-devel/automake-1.7.9
+	|| ( (
+			x11-proto/xextproto
+			x11-proto/xproto
+			x11-proto/inputproto
+			x11-proto/xineramaproto
+		)
+		virtual/x11
+	)
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 
