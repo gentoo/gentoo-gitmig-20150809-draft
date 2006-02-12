@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2b29aadbb0a3e29f8c549eccba13d135 ChangeLog 3000
-RMD160 c269f5cc3bad66ea7d1fed08004a06460b7d2e7d ChangeLog 3000
-SHA256 3e11c3f2d9432a0306332cc1ff463719aa293d1a380bbd0c21a159fb6c0a16a7 ChangeLog 3000
+MD5 74aa93fb9b11177128228505959616fb ChangeLog 3155
+RMD160 732e7c5312fe6b90d7038cc07cdac1d8eff75636 ChangeLog 3155
+SHA256 348c12048f31c8223b73b38c4c2989be1e8f8d30b109cf43964df16b51f76e4a ChangeLog 3155
 MD5 946729e7340edc6a1bae2e1a5e02a1d2 files/digest-system-tools-backends-1.2.0 80
 RMD160 62fa08badb8dbb4ca2b417cd9723c8a339485dab files/digest-system-tools-backends-1.2.0 80
 SHA256 cb290901bc7113c777bbc5a3feece9d1d4e60819f9659bec72c1b4963f39e771 files/digest-system-tools-backends-1.2.0 80
@@ -13,6 +10,9 @@ SHA256 5609a633034a94d8905fec92f5ca68b08d78218f96a82204c49d5cca4cd809d6 files/di
 MD5 db143143d44f996cd2407f556fc67c92 files/digest-system-tools-backends-1.4.1 80
 RMD160 3d3078c637fcb6b36de7641ff012a746c206eb19 files/digest-system-tools-backends-1.4.1 80
 SHA256 df475718509c04eb6d4b4e1cb0f01840310cd97868c68394e8e375aff4614444 files/digest-system-tools-backends-1.4.1 80
+MD5 19156101a8faac8b628e49c3d48b85d4 files/digest-system-tools-backends-1.4.2 286
+RMD160 941fa4cc1cfe8f10dd466f7f81492108f3dab68c files/digest-system-tools-backends-1.4.2 286
+SHA256 3228d1653f99e908254d3e11adcae217a1cce177deb157d21042caf35b7ffb7f files/digest-system-tools-backends-1.4.2 286
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
@@ -25,10 +25,6 @@ SHA256 67ab02bd8cbe8ebee57ab8b68b9eb8587e3ca258538d41dfaa0e5180d3e61b91 system-t
 MD5 c32f7f549734c1132ad9147bdb3c8353 system-tools-backends-1.4.1.ebuild 768
 RMD160 b8d59b514f329198366b671b800e9afc40d62581 system-tools-backends-1.4.1.ebuild 768
 SHA256 71038fffa5541905945a615e15b41a0980b91e3025c77ef070b9a7d56af20de2 system-tools-backends-1.4.1.ebuild 768
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4561JrHF4yAQTrARAjrFAJ9f9P18ZQ0LdYihu15LxHQm//coiwCeJK5R
-7cN6GosIa4TIYIlMPwFw+LA=
-=cE4c
------END PGP SIGNATURE-----
+MD5 5027f7f10a51ed6cff7978204e927220 system-tools-backends-1.4.2.ebuild 778
+RMD160 cd727721213a9b81369ba86be9df55c8a64f32c7 system-tools-backends-1.4.2.ebuild 778
+SHA256 bb180db4ba4d82e5c54b83575377fc917325b28543c11ab350b4ed8937faf19a system-tools-backends-1.4.2.ebuild 778
