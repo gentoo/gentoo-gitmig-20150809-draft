@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.7.ebuild,v 1.1 2006/02/12 22:25:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.7.ebuild,v 1.2 2006/02/12 22:32:25 kloeri Exp $
 
 inherit libtool flag-o-matic perl-app
 replace-flags k6-3 i586
@@ -44,7 +44,7 @@ src_unpack() {
 }
 
 src_compile() {
-	[[ $(tc-arch) = "x86" ]] && replace-flags -mcpu -mtune
+	# -mcpu blows up PIC building on x86 + amd64
 	case $(tc-arch) in
 		x86|amd64) replace-flags "-mcpu" "-mtune" ;;
 	esac
