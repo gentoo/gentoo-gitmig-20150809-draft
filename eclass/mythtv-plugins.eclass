@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.10 2006/02/11 16:31:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.11 2006/02/12 10:16:41 cardoe Exp $
 #
-# Author: Doug Goldstein <cardoe@gentoo.org
+# Author: Doug Goldstein <cardoe@gentoo.org>
 #
 
 inherit multilib
@@ -10,11 +10,13 @@ inherit multilib
 IUSE="debug mmx"
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install
-MYTHPLUGINS="mythbrowser mythdvd mythgallery mythgame mythmusic mythnews mythphone mythvideo mythweather mythweb"
+MYTHPLUGINS="mythbrowser mythcontrols mythdvd mythflix mythgallery mythgame mythmusic mythnews mythphone mythvideo mythweather mythweb"
 MTVCONF=""
 S="${WORKDIR}/mythplugins-${PV}"
 
-DEPEND=">=sys-apps/sed-4"
+RDEPEND="~media-tv/mythtv-${PV}"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 mythtv-plugins_src_unpack() {
 	unpack ${A}
@@ -65,7 +67,7 @@ mythtv-plugins_src_compile() {
 
 	econf ${myconf} ${MTVCONF}
 
-	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake -o "Makefile" mythplugins.pro || die "qmake failed to run"
+	${QTDIR}/bin/qmake QMAKE="${QTDIR}/bin/qmake" -o "Makefile" mythplugins.pro || die "qmake failed to run"
 	emake || die "make failed to compile"
 }
 
