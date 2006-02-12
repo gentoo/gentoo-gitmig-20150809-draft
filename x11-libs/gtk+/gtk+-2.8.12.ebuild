@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.12.ebuild,v 1.1 2006/02/12 19:19:56 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.12.ebuild,v 1.2 2006/02/12 21:09:54 allanonjl Exp $
 
 inherit gnome.org flag-o-matic eutils debug autotools
 
@@ -89,6 +89,8 @@ src_unpack() {
 
 	# remember, eautoreconf applies elibtoolize.
 	# if you remove this, you should manually run elibtoolize
+	cp aclocal.m4 old_macros.m4
+	AT_M4DIR="."
 	eautoreconf
 	#autoconf || die "autoconf failed"
 	#automake || die "automake failed"
