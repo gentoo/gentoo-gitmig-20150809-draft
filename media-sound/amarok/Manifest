@@ -10,9 +10,9 @@ SHA256 0f0d337d50f5e51832803ef3ef5b15b1b84ef13814d0e35094392bb73b1eeb80 amarok-1
 MD5 37dd559290e679463c0aa3c07427239c amarok-1.3.8.ebuild 3854
 RMD160 3b53d286a3e1aec0ec48f8c7dce5fe1d49d3b95b amarok-1.3.8.ebuild 3854
 SHA256 b573cb7036fcf1b8cd9d1678ff204a847f80f2db57fd23bc266d4befd9d23add amarok-1.3.8.ebuild 3854
-MD5 37938b04ed72475baec421707707066f amarok-1.4_beta1.ebuild 3852
-RMD160 1a0e7dd5d6161d405ead6a471f7c21fcf6a34c42 amarok-1.4_beta1.ebuild 3852
-SHA256 4f5c9e834b501c7c30ef68044aad1a673810f953df14e750a64493e590d0b576 amarok-1.4_beta1.ebuild 3852
+MD5 3fc4c4719d9e81c14cbbfc77e0aad82b amarok-1.4_beta1.ebuild 3880
+RMD160 86f7090c8d45cd5dda08be329d3b8e26f830f579 amarok-1.4_beta1.ebuild 3880
+SHA256 360047690c254bf8348a367db17786584005911062d34fdbdd5e1af008e7ac06 amarok-1.4_beta1.ebuild 3880
 MD5 112f3de18e318d1898d664063f638f18 files/amarok-1.4_beta1-parallelmake.patch 570
 RMD160 0d793e30035a13278cf60baedd3a49c1ef90237b files/amarok-1.4_beta1-parallelmake.patch 570
 SHA256 8d67d8d08c6ad39a163b3ae0a41699b5b15c4fc442c40d048947a1ff7cbbcbb2 files/amarok-1.4_beta1-parallelmake.patch 570
@@ -31,7 +31,7 @@ SHA256 bef114df47e8714056f8ba499d57edbba26f1a7e0dbaca7dbfbe4beae4272729 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD76EWAiZjviIA2XgRAuQfAKDU6VDaKCH7AA072bvoV7iMQ+BdPwCg9KCe
-k6w4u13mvhfdvFJiUQqeiJc=
-=xCp3
+iD8DBQFD76HiAiZjviIA2XgRAofiAKDy6BXjQeT4JRktLveht8c3L6veMQCgxrUv
+AaMQJrovsmiMX+t3dngERWs=
+=KgCe
 -----END PGP SIGNATURE-----
