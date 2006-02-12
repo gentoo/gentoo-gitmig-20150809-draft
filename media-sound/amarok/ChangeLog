@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.103 2006/02/12 20:45:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.104 2006/02/12 20:56:38 flameeyes Exp $
+
+  12 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/amarok-1.3.7-lyrc.patch, -amarok-1.3.7-r1.ebuild:
+  Drop old 1.3.7-r1 version, foreseeing 1.3.8 as future stable.
 
 *amarok-1.4_beta1 (12 Feb 2006)
 
