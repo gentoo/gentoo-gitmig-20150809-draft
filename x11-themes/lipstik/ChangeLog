@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/lipstik
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.8 2006/01/11 20:02:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.9 2006/02/12 15:44:24 voxus Exp $
+
+  12 Feb 2006; Konstantin Arkhipov <voxus@gentoo.org> +lipstik-2.2.ebuild,
+  +files/lipstik-2.2-lower_case.patch:
+  Version bump, closing bug #122157.
 
   11 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> lipstik-2.1.ebuild:
   Keyworded ~sparc
