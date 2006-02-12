@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4990 2006/02/12 04:15:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4991 2006/02/12 05:49:53 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,6 +24,9 @@
 # Doug Goldstein <cardoe@gentoo.org> (11 Feb 2006)
 # testing of new version
 =media-tv/mythtv-0.19
+=www-apps/mythweb-0.19
+=media-plugins/mythvideo-0.19
+=x11-themes/mythtv-themes-0.19
 
 # Markus Dittrich <markusle@gentoo.org> (11 Feb 2006)
 # new version for fftw, needs some additional testing
