@@ -1,18 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e10d6fc973fa3ca743836ad404cba2ed ChangeLog 4052
+MD5 5fa365c93357aa6f18ea6da27008b69c ChangeLog 4168
+RMD160 433cfe6d1947342bf867891f6b32df7d036ee1b2 ChangeLog 4168
+SHA256 03ede818b16dfe191129c9ada357ed53cf30a80e1dd64ff62fb50da1989bf6b4 ChangeLog 4168
 MD5 8cc9a65a57937cd962ff641cf94e40c3 files/digest-pwdb-0.62 61
+RMD160 f3a6ef473aa4233e0164005791ca6a76830f0062 files/digest-pwdb-0.62 61
+SHA256 9a4a42ea7f7deb2951893d7c01e7f3dcbd8416b83970eb707776ba0e901ebd21 files/digest-pwdb-0.62 61
 MD5 0d0c7a6216f5cf079472dfe36ea9d71c files/passwd 143
+RMD160 ca859f48fde633c29a22f226ba01b4921c1463a1 files/passwd 143
+SHA256 9cecaf4de9eaf61cf42c28bf1e63295a58e59e0ca0abb8fb7eaf6327201ce604 files/passwd 143
 MD5 3ad2336f28a4adf24f2f11c4a76c396f files/pwdb-0.62-build.patch 370
+RMD160 4781af3f4c9602ae7322943341290205d8cbb7a1 files/pwdb-0.62-build.patch 370
+SHA256 c820212837baa2fb9a78d45c160b6adf3f314f32d915448125634b01b0f78219 files/pwdb-0.62-build.patch 370
 MD5 abb34f8a3c5a8dc43aed5a7a4eb92488 files/pwdb-0.62-selinux.patch 10480
+RMD160 44e6948bdd29c5febc0ad34e488d62912c64e07d files/pwdb-0.62-selinux.patch 10480
+SHA256 ab12a8d6ee52c98281e3e7f2d2eab1c95f1e4fddf3a22e3b97ec054eda7a38e4 files/pwdb-0.62-selinux.patch 10480
 MD5 4f771531dffd4c3a0e43a96e8c265f1e files/pwdb-0.62-use-gcc-as-linker.patch 421
+RMD160 da874293e65b98e610400fb47eb69b326639ee3c files/pwdb-0.62-use-gcc-as-linker.patch 421
+SHA256 6b660e65a3d201ce3f22ac2fc439eb44488e27cbf331395de52ba0f49d56fe86 files/pwdb-0.62-use-gcc-as-linker.patch 421
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 8dfab0867f2e426eb600b1d69fcf6fd4 pwdb-0.62.ebuild 1660
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 293229f59de61f0bc36c4e39a6bab89d pwdb-0.62.ebuild 1684
+RMD160 9e7913dc143757b2f920a2b1868c28c79be561e3 pwdb-0.62.ebuild 1684
+SHA256 ea399bb1dd1ed35de0ddbf3e42944965fecc3862c7d74175c577263104fb2e58 pwdb-0.62.ebuild 1684
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDvLg7J+ChZlpDtAoRAi2FAKCf7NF3++ALl6qm4Wcs1tUz95QoUwCfUl+x
-0N69p/sgBx2kUALajBiWr9o=
-=hbcn
+iD8DBQFD766T2+ySkm8kpY0RAp+jAJ9xMfQuBrHYhJepgxXKgucYgQY+CACffgvh
+CLj5NgFfGySOPUdiFsyXjqM=
+=g4oJ
 -----END PGP SIGNATURE-----
