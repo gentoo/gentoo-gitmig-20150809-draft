@@ -1,19 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 37c21185781fa8399f26d930f7b2ef66 ChangeLog 1236
+MD5 2c23b998fd6abdf81f03d63e54bb524b ChangeLog 1431
+RMD160 5f4bb18cf7801f9bcd3d80b2ac8a128030f4b311 ChangeLog 1431
+SHA256 e7248989fa7efb77741b1739923f60ee003b7d23bb9a228a3444969716d88867 ChangeLog 1431
 MD5 7c1ba1a434a7c4fd986fce50482744bc emul-linux-x86-java-1.4.2.02.ebuild 3116
-MD5 e025dbf6ac9ba08a0b70776f5fc8130e emul-linux-x86-java-1.4.2.03-r1.ebuild 3125
+RMD160 98115cf033ab9f7ebdb9ab470edb8e326163f10d emul-linux-x86-java-1.4.2.02.ebuild 3116
+SHA256 aaaef664d6f39e8affadceeffb1abac2cf6ecf69a30de335e82c858ab150c4c8 emul-linux-x86-java-1.4.2.02.ebuild 3116
+MD5 1a6e506020bb76e71f4b914be4fde0c0 emul-linux-x86-java-1.4.2.03-r1.ebuild 3074
+RMD160 645d976817ef03250fe50fa2e01a607ebbddbc80 emul-linux-x86-java-1.4.2.03-r1.ebuild 3074
+SHA256 20d527d931b9f8f44feb6a5e03710ab8508fdd20b83855670a5fd7a09a00022a emul-linux-x86-java-1.4.2.03-r1.ebuild 3074
 MD5 041e4999abd978bc42c629f7e39df7af emul-linux-x86-java-1.4.2.03.ebuild 3116
+RMD160 03bae4e703e5faa266560cad8c6ac9ca986c1a44 emul-linux-x86-java-1.4.2.03.ebuild 3116
+SHA256 eec01c061226584da7a054482848372e3a674d10a4cde99cb6face7dfd85ff63 emul-linux-x86-java-1.4.2.03.ebuild 3116
 MD5 e2f091d8120733e38f13e98d7b2c9152 files/digest-emul-linux-x86-java-1.4.2.02 75
+RMD160 841421c41140f4ae3bc1faf508c951017ec54a29 files/digest-emul-linux-x86-java-1.4.2.02 75
+SHA256 96d658abe62403aad2eb71ba7ca52f3531e5efb44af9543170d80117837f3057 files/digest-emul-linux-x86-java-1.4.2.02 75
 MD5 2a55a901a16ac79c083cac89012ccca2 files/digest-emul-linux-x86-java-1.4.2.03 75
+RMD160 d07acf29af6a45ab2b3c72ed1ae9eaa79d366367 files/digest-emul-linux-x86-java-1.4.2.03 75
+SHA256 af1a006b30e562c51e47ba92bf56cee4c98944cdaecaa6c43c9f4c79df51ece7 files/digest-emul-linux-x86-java-1.4.2.03 75
 MD5 2a55a901a16ac79c083cac89012ccca2 files/digest-emul-linux-x86-java-1.4.2.03-r1 75
+RMD160 d07acf29af6a45ab2b3c72ed1ae9eaa79d366367 files/digest-emul-linux-x86-java-1.4.2.03-r1 75
+SHA256 af1a006b30e562c51e47ba92bf56cee4c98944cdaecaa6c43c9f4c79df51ece7 files/digest-emul-linux-x86-java-1.4.2.03-r1 75
 MD5 40fcbcc585ad443b5bf473228c8ef18d files/javasettings_Linux_x86.xml 1601
+RMD160 e87fe605d34fd6060f58f511deea5a935697be9f files/javasettings_Linux_x86.xml 1601
+SHA256 832b7aa00beb330c655e1503061785e2069fcc1a2ec36830948613f02c4d7585 files/javasettings_Linux_x86.xml 1601
 MD5 ef1a1d0bbdb241725417e87002ec4d16 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDz4PuntT9W3vfTuoRAtl8AKCbqnw73c/J0qYg6YhEDjf2yOHrHACgs1sB
-XOmCZc8mH4rnlWwiq8uSjI8=
-=yLPe
------END PGP SIGNATURE-----
+RMD160 5334a75802c04f73f2bbe2e5c133178728cc9bba metadata.xml 223
+SHA256 90a4ae3bb1a82ba35e2971274b7c2437d3f717075382f02ece1b1c79421c1282 metadata.xml 223

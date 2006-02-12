@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r1.ebuild,v 1.2 2006/01/19 12:19:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r1.ebuild,v 1.3 2006/02/12 15:01:20 blubb Exp $
 
 inherit multilib java versionator
 
@@ -29,7 +29,9 @@ S="${WORKDIR}/j2re${JV}"
 JAVAHOME="${D}/opt/java32"
 
 # 32bit binary package
-ABI="x86"
+pkg_setup() {
+	ABI="x86"
+}
 
 # Extract the 'skip' value (offset of tarball) we should pass to tail
 get_offset() {
@@ -70,16 +72,16 @@ unpack_jars() {
 		#packerror=""
 		sed -i 's#/tmp/unpack.log#/dev/null\x00\x00\x00\x00\x00\x00#g' $UNPACK_CMD
 		for i in $PACKED_JARS; do
-			if [ -f "$JAVAHOME/`dirname $i`/`basename $i .jar`.pack" ]; then
-				einfo "Creating ${JAVAHOME}/${i}\n"
-				"$UNPACK_CMD" "$JAVAHOME/`dirname $i`/`basename $i .jar`.pack" "$JAVAHOME/$i"
+			if [ -f "$JAVAHOME/${i%.jar}.pack" ]; then
+				einfo "Creating ${JAVAHOME}/${i}"
+				"$UNPACK_CMD" "$JAVAHOME/${i%.jar}.pack" "$JAVAHOME/$i"
 				if [ ! -f "$JAVAHOME/$i" ]; then
 					die "Failed to unpack jar files ${i}." # Please refer\n"
 					#ewarn "to the Troubleshooting section of the Installation\n"
 					#ewarn "Instructions on the download page for more information.n"
 					#packerror="1"
 				fi
-				rm -f "$JAVAHOME/`dirname $i`/`basename $i .jar`.pack"
+				rm -f "$JAVAHOME/${i%.jar}.pack"
 			fi
 		done
 	fi
