@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8a.ebuild,v 1.3 2006/01/06 01:06:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8a.ebuild,v 1.4 2006/02/12 22:12:03 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -86,7 +86,7 @@ src_compile() {
 		|| die "Configure failed"
 
 	# Clean out hardcoded flags that openssl uses
-	local CFLAG=$(grep ^CFLAG= Makefile | sed \
+	local CFLAG=$(grep ^CFLAG= Makefile | LC_ALL=C sed \
 		-e 's:^CFLAG=::' \
 		-e 's:-fomit-frame-pointer ::g' \
 		-e 's:-O[0-9] ::g' \
