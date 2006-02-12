@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r4.ebuild,v 1.17 2005/12/25 14:53:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r4.ebuild,v 1.18 2006/02/12 19:27:12 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pam
 
@@ -22,15 +22,20 @@ RDEPEND=">=sys-libs/ncurses-5.2
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
 
+pkg_setup() {
+	# Make sure utmp group exists, as it's used later on.
+	enewgroup utmp 406
+}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Bug 34599: integer overflow in 4.0.1  
+	# Bug 34599: integer overflow in 4.0.1
 	# (Nov 29 2003 -solar)
 	epatch "${FILESDIR}"/screen-4.0.1-int-overflow-fix.patch
 
-	# Bug 31070: configure problem which affects alpha  
+	# Bug 31070: configure problem which affects alpha
 	# (13 Jan 2004 agriffis)
 	epatch "${FILESDIR}"/screen-4.0.1-vsprintf.patch
 
