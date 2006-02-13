@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/gotmail-0.8.4.ebuild,v 1.7 2005/12/30 12:04:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/gotmail-0.8.4.ebuild,v 1.8 2006/02/13 14:56:47 mcummings Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="virtual/libc
 	net-misc/curl
 	dev-perl/URI
-	perl-core/libnet"
+	virtual/perl-libnet"
 
 S=${WORKDIR}/${PN}
 

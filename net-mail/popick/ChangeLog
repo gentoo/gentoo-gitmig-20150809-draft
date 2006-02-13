@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/popick
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popick/ChangeLog,v 1.3 2005/05/25 14:04:12 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popick/ChangeLog,v 1.4 2006/02/13 14:58:10 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org> popick-0.1.ebuild:
+  Virtuals for perl-core
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> popick-0.1.ebuild:
   dev-perl/Getopt-Long => perl-core/Getopt-Long migration
