@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.26 2005/03/23 16:17:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.27 2006/02/13 22:18:18 compnerd Exp $
 
 DESCRIPTION="nautilus"
 HOMEPAGE="http://www.gnome.org/projects/nautilus/"
@@ -20,7 +20,6 @@ RDEPEND="mozilla? ( >=www-client/mozilla-1.0_rc3 )
 	=gnome-base/gnome-vfs-1.0*
 	=gnome-base/librsvg-1*
 	=gnome-base/eel-1.0*
-	>=gnome-extra/medusa-0.5.1-r1
 	=gnome-base/gnome-panel-1.4*"
 
 DEPEND="${RDEPEND}
