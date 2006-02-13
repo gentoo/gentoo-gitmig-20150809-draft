@@ -1,55 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8d147ad30d13ce0ae5533067e12c31f3 ChangeLog 8785
-RMD160 4820c5afbbf55a0afee22b6c2edc3d4614b55305 ChangeLog 8785
-SHA256 77d5437405ab01b8b64f77a21a3c7ac97444f8bbd1cb0c4c8d3693d39700f462 ChangeLog 8785
+MD5 ec808e42aefd2398faa252c226594e16 ChangeLog 8989
 MD5 7a82279f793cdd8926569fcc1f2c51e6 files/digest-razor-2.67 68
-RMD160 26cc5487e9143b1290ac57932bf2700c4546c401 files/digest-razor-2.67 68
-SHA256 0abca8e8932af55ac7ac720f26339ffc0e2fd9bc8a67976feedb0ffd61aa21d7 files/digest-razor-2.67 68
 MD5 a903c073103cad6f1bccaa20ecdabf1e files/digest-razor-2.71 68
-RMD160 9f9d8708b0dc3ac56172f72e4ea710fe0a39fe35 files/digest-razor-2.71 68
-SHA256 8c3632070b66efb5818014cbae3028fbc4f0477da07db15bcb7d59479953d7f0 files/digest-razor-2.71 68
 MD5 26398bc0e13b9e5a931da6f14b3334a6 files/digest-razor-2.72 68
-RMD160 153e53582a0918ab5a8156439cbd752237e547a5 files/digest-razor-2.72 68
-SHA256 7d92a75ffe71dee4e5739ef8d5f99f16ee6c7e282e801b6b4c059abdd01f1587 files/digest-razor-2.72 68
 MD5 12cf44d53c23d3ba61aaf5b525f05f45 files/digest-razor-2.74 69
-RMD160 078fec055533bb42eca4dba78bc77dff559c5ae5 files/digest-razor-2.74 69
-SHA256 ce120be34880e5925c10715664e8ec3c0563aed1062f1dbfbe745a6ca927457b files/digest-razor-2.74 69
 MD5 d63c1d9a90360d9f739cae1b3ef25622 files/digest-razor-2.75 69
-RMD160 13a1a1a7545a9e1d94fda07f2cd7c1fc6713b061 files/digest-razor-2.75 69
-SHA256 6a0634fe5f7d23714765cd1ca8304524aef5f6f6fd21d28bd8e425d3766326ed files/digest-razor-2.75 69
 MD5 e10a413dc2a916a9bb6a2d31b98ce091 files/digest-razor-2.77 69
-RMD160 0c509fa2a79292bd8d2167fccacdc489ed03002b files/digest-razor-2.77 69
-SHA256 3858c9d38e6d70d4aee546f4eee02420b3d7e1ab423a1bbd9cc606d2bd908109 files/digest-razor-2.77 69
 MD5 eb86375c84c8a7db9512ca1943fd5a7a files/no-install-razor-agents.patch 292
-RMD160 8ea639c438deb1da6a72339d7585a96132593f50 files/no-install-razor-agents.patch 292
-SHA256 0a333ef827ffb4b6da05c17bf0cfc36a33447466be90d3ec65533f396bbb2a5b files/no-install-razor-agents.patch 292
 MD5 2be3e1984342f154b35258491bff1830 metadata.xml 417
-RMD160 a5abe18dc7b0720bef3aae926ffd5c2afdc10e4c metadata.xml 417
-SHA256 f0db9dbeb86e5682b3b47b805e6ae29686321ef05e6d1b99b3ddc1a309f17167 metadata.xml 417
-MD5 c9f66c79be99fa2eed7afb3b668811bf razor-2.67.ebuild 2737
-RMD160 36099e81567cd272e33dd7b817dfd3f7936c9b52 razor-2.67.ebuild 2737
-SHA256 2c047ecf0c23f6b20f38364cf31db21f28c3f3024f250a3497d1d41b1bf098e5 razor-2.67.ebuild 2737
-MD5 d9a1b41b4d9cec953a3684bd778c7e2a razor-2.71.ebuild 2860
-RMD160 518efaaf78cfe7f5e5d40545780fe8ee468902fe razor-2.71.ebuild 2860
-SHA256 b7c984c2a7880baa2a0354ff0635db65e590407f3838f859c71112eff4290ee1 razor-2.71.ebuild 2860
-MD5 4faa9e2ee14ef68bc449264fddc328a7 razor-2.72.ebuild 2592
-RMD160 2630e41be24f0edff8827145b7220d89e9fb81c5 razor-2.72.ebuild 2592
-SHA256 38a15d1106652b823ce21ceba263b00a2788e1d9db9b39708547f4bd00c96207 razor-2.72.ebuild 2592
-MD5 47cebe107d01e4bc0c9e765b7842ee55 razor-2.74.ebuild 2733
-RMD160 886500719f324069fba158c869c10e985d027149 razor-2.74.ebuild 2733
-SHA256 f17d4a11bddd4994585b2f05402bc0604b590147f931d8f36ca7fef912c1a0d6 razor-2.74.ebuild 2733
-MD5 a9a6fafec1799bb501d1ec6ef296d0fd razor-2.75.ebuild 2600
-RMD160 e30d7c6df263bbcd679affd7e71b827aa6eca5ba razor-2.75.ebuild 2600
-SHA256 6b0dd0d2a06f373c84f5c134b0512c5b2716250105dc98882b9e4c00ebec69da razor-2.75.ebuild 2600
-MD5 ecd93b6c9f14ce996bce1e07b4861447 razor-2.77.ebuild 2600
-RMD160 96dfb6184aa576df8f4780a81d590945d847e6a6 razor-2.77.ebuild 2600
-SHA256 76ede9ecebcdfe344382396c8472611b0f80e8b1c913bce6710f0baa6f5bb290 razor-2.77.ebuild 2600
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD66iKV3J2n04EauwRAktpAJsHXI6OeU+6yTRXu4pRHtKOXCelyACgsRtR
-SAFy9AEE1vsZY1Whn68IVMs=
-=qpAp
------END PGP SIGNATURE-----
+MD5 a60dc96665f7a9fe31e08ddc7c4bfb65 razor-2.67.ebuild 2743
+MD5 4ac5a3d558956427641f33e8c48d0dfd razor-2.71.ebuild 2866
+MD5 2c256841eeab5e67503a46a02ac71d5a razor-2.72.ebuild 2602
+MD5 492a0825f6b233bc7479ff2fe241404d razor-2.74.ebuild 2739
+MD5 a246f7a14c7c2f39457f87fde25e6557 razor-2.75.ebuild 2606
+MD5 1ee9c244facdd415310bd832b53122f8 razor-2.77.ebuild 2608
