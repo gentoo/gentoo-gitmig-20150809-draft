@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aaa5e76ed5e48d2cc40eeb9e93885506 ChangeLog 1547
 MD5 6abc2c2880cd19dee18c0d91bcc17de9 Tree-Simple-1.14.ebuild 592
 MD5 cb721a74373fc07b43f6afb838c2db32 Tree-Simple-1.15.ebuild 594
 MD5 b4f9ac595b4409f462c20ee905026276 files/digest-Tree-Simple-1.14 67
 MD5 e69404a8d2e1ee59d1cb607770f5c632 files/digest-Tree-Simple-1.15 67
 MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8JNMtG5z4I8BtQoRAtuOAJ40M5UweXuLhcl0pEOnWCbzJqb4RQCeKQIy
+K6+D7HB8EtD/lITlQSofm/w=
+=aNre
+-----END PGP SIGNATURE-----
