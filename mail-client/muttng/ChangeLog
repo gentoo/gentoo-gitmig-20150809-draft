@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/muttng
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/ChangeLog,v 1.12 2005/08/15 13:20:54 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/ChangeLog,v 1.13 2006/02/13 20:09:08 grobian Exp $
+
+*muttng-20060212 (13 Feb 2006)
+
+  13 Feb 2006; Fabian Groffen <grobian@gentoo.org> metadata.xml,
+  +muttng-20060212.ebuild:
+  Take over maintainership from agriffis and bump to a recent snapshot fixing
+  bugs #102945 and #105434
 
 *muttng-20050814 (15 Aug 2005)
 
