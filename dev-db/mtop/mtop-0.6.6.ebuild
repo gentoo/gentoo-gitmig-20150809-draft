@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mtop/mtop-0.6.6.ebuild,v 1.7 2005/12/30 11:50:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mtop/mtop-0.6.6.ebuild,v 1.8 2006/02/13 10:33:52 mcummings Exp $
 
 inherit perl-app
 
@@ -14,7 +14,7 @@ IUSE=""
 DEPEND="dev-perl/Curses
 		dev-perl/DBI
 		dev-perl/DBD-mysql
-		perl-core/libnet"
+		virtual/perl-libnet"
 
 src_compile() {
 	perl-app_src_prep || die "Perl module preparation failed."
