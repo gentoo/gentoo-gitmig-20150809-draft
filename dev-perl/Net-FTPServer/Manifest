@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bf6e4cff75f5acf3e4bed14db22cb253 ChangeLog 1708
 MD5 682adc2e4342d6bb446d4a1ae0dc1ed0 Net-FTPServer-1.120.ebuild 866
 MD5 6b2128a93b993d402d09c696cb73d00b Net-FTPServer-1.122.ebuild 872
 MD5 1770df88f5a35f562a4253b579a747d2 files/digest-Net-FTPServer-1.120 71
 MD5 718e2f501ae1b3cd932db786ba00b92d files/digest-Net-FTPServer-1.122 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8IuKtG5z4I8BtQoRAjhUAJ9vTcDSp4UiSlz5H3utyN1jqNkbjACfYJKa
+T1xFkbKbVyW5aMIfk0bfx6w=
+=MD9S
+-----END PGP SIGNATURE-----
