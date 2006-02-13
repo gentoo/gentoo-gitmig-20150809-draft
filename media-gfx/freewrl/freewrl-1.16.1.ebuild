@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.16.1.ebuild,v 1.3 2006/01/18 13:08:47 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.16.1.ebuild,v 1.4 2006/02/13 14:49:12 mcummings Exp $
 
 inherit nsplugins eutils perl-module toolchain-funcs
 
@@ -26,7 +26,6 @@ DEPEND="|| ( (
 	media-libs/jpeg
 	>=media-libs/freetype-2
 	>=dev-lang/perl-5.8.2
-	perl-core/ExtUtils-MakeMaker
 	dev-perl/XML-Parser"
 RDEPEND="media-gfx/imagemagick
 	media-sound/sox

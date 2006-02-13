@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.06.ebuild,v 1.9 2005/12/30 12:01:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.06.ebuild,v 1.10 2006/02/13 14:49:12 mcummings Exp $
 
 inherit nsplugins eutils
 
@@ -20,11 +20,11 @@ DEPEND="virtual/x11
 	virtual/jdk
 	>=dev-java/saxon-7.5
 	>=dev-lang/perl-5.8.2
-	>=perl-core/Digest-MD5-2.09
+	>=virtual/perl-Digest-MD5-2.09
 	>=dev-perl/HTML-Parser-2.25
-	>=perl-core/MIME-Base64-2.11
+	>=virtual/perl-MIME-Base64-2.11
 	>=dev-perl/URI-1.04
-	>=perl-core/libnet-1.0607
+	>=virtual/perl-libnet-1.0607
 	>=dev-perl/libwww-perl-5.47
 	opengl? ( virtual/opengl virtual/glut )"
 
