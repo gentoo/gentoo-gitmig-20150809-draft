@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/mplay-0.80.ebuild,v 1.3 2005/05/25 16:32:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/mplay-0.80.ebuild,v 1.4 2006/02/13 14:49:58 mcummings Exp $
 
 
 DESCRIPTION="A Curses front-end for mplayer"
@@ -17,7 +17,7 @@ DEPEND="dev-lang/perl
 	>=dev-perl/Class-MakeMethods-1.01
 	dev-perl/Audio-Mixer
 	dev-perl/Ogg-Vorbis-Header-PurePerl
-	>=perl-core/Time-HiRes-1.56
+	>=virtual/perl-Time-HiRes-1.56
 	>=dev-perl/TermReadKey-2.21
 	dev-perl/Video-Info
 	media-video/mplayer"

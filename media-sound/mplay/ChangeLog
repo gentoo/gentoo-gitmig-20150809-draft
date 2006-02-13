@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mplay
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/ChangeLog,v 1.8 2005/05/25 16:32:14 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/ChangeLog,v 1.9 2006/02/13 14:49:58 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org> mplay-0.68.ebuild,
+  mplay-0.80.ebuild:
+  Virtuals for some perl-core deps
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> mplay-0.68.ebuild,
   mplay-0.80.ebuild:
