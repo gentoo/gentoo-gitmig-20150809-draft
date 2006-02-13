@@ -1,4 +1,7 @@
-MD5 7c9a9e89fe0b52a36554680bff6d78d3 ChangeLog 3253
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 71bc675aa3c8d51a13ea7e2f6da32940 ChangeLog 3445
 MD5 b64e484116f5963bfeccf06dde781d96 files/digest-svk-1.00 60
 MD5 fe1920402a42152e3f3646acbfb00612 files/digest-svk-1.01 60
 MD5 a440bcfe7ba94be5b83b0eb0f46ad0c6 files/digest-svk-1.02 60
@@ -11,9 +14,16 @@ MD5 da105038149ea01d55b21ab228862624 files/svk-1.02-nognupgtest.patch 294
 MD5 870841711fbae0d6161b924f277e784e files/svk-1.04-nognupgtest.patch 294
 MD5 54e6235911ca6a7bf15ad739dddd441a files/svk-1.05-nognupgtest.patch 294
 MD5 abaeaac662a08acda33cbe2d531e7543 metadata.xml 223
-MD5 48ed3c4c1def64c233b0be77651e3eb3 svk-1.00.ebuild 1465
-MD5 c52b13d5dc73ba8a1f4a1c183e244f50 svk-1.01.ebuild 1511
-MD5 48a168237aacbfde99e14e194d42cf1d svk-1.02.ebuild 1503
-MD5 909e82a37205e4f70986d7cba0d87453 svk-1.04.ebuild 1516
-MD5 1876aa16b7287a569f339bfa8cef0a18 svk-1.05.ebuild 1514
-MD5 532831047571f13202778c45c295d751 svk-1.06.ebuild 1920
+MD5 241b27eb07177c732dc6dfd11b8d85bd svk-1.00.ebuild 1468
+MD5 c3c3f8b977e4dc539cbdaf7f2ba13e0d svk-1.01.ebuild 1515
+MD5 b120a7ca4e92c57bb83079240533c910 svk-1.02.ebuild 1510
+MD5 22fdc0621f9e77b1981ac55c56f49246 svk-1.04.ebuild 1522
+MD5 1e2bffb2ddbb9f96f715e8fadd794877 svk-1.05.ebuild 1522
+MD5 d86a9d87c25f9abfaed7755970a0e40a svk-1.06.ebuild 1931
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8JedtG5z4I8BtQoRAvHBAJ4zQ0KxGvacDKbPmTNRSniYcjQfWQCggJWm
+lweDkGB2xbhZbbmvB5GJqeY=
+=ZJXI
+-----END PGP SIGNATURE-----

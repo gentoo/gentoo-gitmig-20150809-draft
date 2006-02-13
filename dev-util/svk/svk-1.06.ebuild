@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-1.06.ebuild,v 1.1 2006/01/10 11:34:30 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-1.06.ebuild,v 1.2 2006/02/13 14:28:55 mcummings Exp $
 
 inherit eutils perl-module bash-completion
 
@@ -24,7 +24,7 @@ DEPEND="
 	>=dev-perl/yaml-0.38
 	dev-perl/Regexp-Shellish
 	>=dev-perl/Data-Hierarchy-0.21
-	>=perl-core/File-Temp-0.14
+	>=virtual/perl-File-Temp-0.14
 	dev-perl/Clone
 	dev-perl/Pod-Escapes
 	dev-perl/Pod-Simple
@@ -37,7 +37,7 @@ DEPEND="
 	dev-perl/URI
 	>=dev-perl/PerlIO-eol-0.13
 	>=dev-perl/Class-Autouse-1.15
-	>=perl-core/Getopt-Long-2.34
+	>=virtual/perl-Getopt-Long-2.34
 	nls? (
 		>=dev-perl/locale-maketext-lexicon-0.42
 		>=dev-perl/Locale-Maketext-Simple-0.12

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-1.00.ebuild,v 1.5 2005/05/25 13:53:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-1.00.ebuild,v 1.6 2006/02/13 14:28:55 mcummings Exp $
 
 inherit eutils perl-module
 
@@ -22,7 +22,7 @@ DEPEND="${DEPEND}
 	>=dev-perl/PerlIO-via-dynamic-0.11
 	>=dev-perl/PerlIO-via-symlink-0.02
 	>=dev-perl/Data-Hierarchy-0.21
-	>=perl-core/File-Temp-0.14
+	>=virtual/perl-File-Temp-0.14
 	dev-perl/Algorithm-Annotate
 	dev-perl/Algorithm-Diff
 	>=dev-perl/yaml-0.38
