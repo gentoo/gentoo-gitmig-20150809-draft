@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/vertex
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.1 2005/12/05 17:06:16 marienz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.2 2006/02/13 22:50:01 marienz Exp $
+
+  13 Feb 2006; Marien Zwart <marienz@gentoo.org>
+  +files/vertex-0.1-tests-2.2-compat.patch, vertex-0.1.ebuild:
+  Make the tests pass with twisted 2.2. No bump because this only affects the
+  tests.
 
 *vertex-0.1 (05 Dec 2005)
 
