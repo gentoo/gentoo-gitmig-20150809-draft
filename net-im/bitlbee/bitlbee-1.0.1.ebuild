@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.1.ebuild,v 1.1 2006/01/15 21:32:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.1.ebuild,v 1.2 2006/02/13 00:12:10 weeve Exp $
 
 inherit eutils toolchain-funcs
 
@@ -77,8 +77,11 @@ src_compile() {
 		myconf="${myconf} --ssl=bogus"
 	fi
 
-	econf --datadir=/usr/share/bitlbee --etcdir=/etc/bitlbee ${myconf} \
-		|| die "econf failed"
+	# NOTE: bitlbee's configure script is not an autotool creation, so that is
+	# why we don't use econf.
+
+	./configure --prefix=/usr --datadir=/usr/share/bitlbee \
+		--etcdir=/etc/bitlbee ${myconf} || die "econf failed"
 
 	emake || die "make failed"
 
@@ -94,11 +97,11 @@ src_install() {
 	make install-doc DESTDIR=${D} || die "install failed"
 	keepdir /var/lib/bitlbee
 
-	dodoc doc/{AUTHORS,CHANGES,CREDITS,FAQ,README,TODO,user-guide.txt}
-	dohtml -A sgml doc/*.sgml
-	dohtml -A xml doc/*.xml
-	dohtml -A xsl doc/*.xsl
-	dohtml doc/*.html
+	dodoc doc/{AUTHORS,CHANGES,CREDITS,FAQ,README}
+	dodoc doc/user-guide/user-guide.txt
+	dohtml -A xml doc/user-guide/*.xml
+	dohtml -A xsl doc/user-guide/*.xsl
+	dohtml doc/user-guide/*.html
 
 	doman doc/bitlbee.8 doc/bitlbee.conf.5
 
