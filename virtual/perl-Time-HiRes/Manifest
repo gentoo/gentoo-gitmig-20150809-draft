@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e184e1e259e25e373906456f20688b60 ChangeLog 761
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Time-HiRes-1.66 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Time-HiRes-1.82 0
@@ -6,3 +9,10 @@ MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 d9cfa728cb47a72ac169a49d3d18642b perl-Time-HiRes-1.66.ebuild 519
 MD5 0d1ac32d6acd617b00117a9e0a0741e0 perl-Time-HiRes-1.82.ebuild 488
 MD5 2a2a9c3d7f572f69f7f8a340a92eddee perl-Time-HiRes-1.86.ebuild 532
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8OUgtG5z4I8BtQoRAtObAJ4/UK8Db9Lm0Blch9QUXa6bc2N1PgCdFR/k
+k0MUT4uXt1Pjcs7vL5Fv1Mg=
+=UFCe
+-----END PGP SIGNATURE-----

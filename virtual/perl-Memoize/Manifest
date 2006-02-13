@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 420296828b8d510e18d70c4284e51f39 ChangeLog 484
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Memoize-1.01 0
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 dacd06c858ff30d12aeafbfd6757149b perl-Memoize-1.01.ebuild 480
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8OJitG5z4I8BtQoRAnImAJ0R/LUztyiNSCvNZQd6RMNIdk2UewCfcIJX
+8bwtoeCv7nhP+JWCXhh3HzQ=
+=2H/U
+-----END PGP SIGNATURE-----
