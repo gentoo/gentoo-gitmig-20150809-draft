@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6e5659a7fe506b35243d1c798af9d4c7 ChangeLog 2605
-RMD160 13beaed4235f5395d0cd5d9b06c918daa6164eba ChangeLog 2605
-SHA256 6fba2414411f03e122d47663f35890cd609fbe03b163206ca986516b9dbfd528 ChangeLog 2605
-MD5 486c10f3e7c7a35e2612dfa1ff6ac698 convert-pem-0.06.ebuild 694
-RMD160 77a475690d54e7a8319bca7af93487b3a47b10bb convert-pem-0.06.ebuild 694
-SHA256 ab6573d18cca11ec9047277fed29a4c187b18805150bfe2c44ff81019d7b9991 convert-pem-0.06.ebuild 694
-MD5 bb269d2bcf2e7cab09836a25196511d5 convert-pem-0.07.ebuild 783
-RMD160 508a7c8f566b49dc9d864e35ed0b517a9209db8a convert-pem-0.07.ebuild 783
-SHA256 31c4bf77dad9ca1caf58f13e501430dbd4d7a5ae70035ec26d3244d7ade5663d convert-pem-0.07.ebuild 783
+MD5 23a287cc853df86677ca003abb1df5c7 ChangeLog 2743
+MD5 9221da0a1cd94431b7dba2f742deb615 convert-pem-0.06.ebuild 704
+MD5 eb22133ecccaac23b62cbb4e5020b4f2 convert-pem-0.07.ebuild 790
 MD5 0999457f6730d99c056ac9bd6633c78b files/digest-convert-pem-0.06 66
-RMD160 8254b01f5f85f81decb383bfba84d134438653fa files/digest-convert-pem-0.06 66
-SHA256 57c7bc653ccd3f77edf8784e6b3435437ef49ff2dc5d20cdbcc4fa5a2e901f5f files/digest-convert-pem-0.06 66
 MD5 7897277c2840523cf7728bd6c6b4bf43 files/digest-convert-pem-0.07 67
-RMD160 7872c6eeca7370bf1a0c6a665b9efe3df1fbcafd files/digest-convert-pem-0.07 67
-SHA256 c0f282aa5af923e8357415dbc4c350db7fa8b2952ef0c7276f31148a2879f49c files/digest-convert-pem-0.07 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6oQ0V3J2n04EauwRApNhAKDOPPN/K+IcGXeSx7MOO1np55zPCACbBBeI
-i7e14i0RO3/O920Z2mN862o=
-=Pdpp
------END PGP SIGNATURE-----
