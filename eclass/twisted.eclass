@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/twisted.eclass,v 1.2 2006/01/01 01:14:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/twisted.eclass,v 1.3 2006/02/13 22:28:07 marienz Exp $
 #
 # Author: Marien Zwart <marienz@gentoo.org>
 #
@@ -34,13 +34,17 @@ twisted_src_test() {
 	mkdir -p "${T}/${spath}"
 	cp -R "${ROOT}${spath}/twisted" "${T}/${spath}" || die
 	if has_version ">=dev-lang/python-2.3"; then
-		${python} setup.py install --root="${T}" --no-compile || die
+		${python} setup.py install --root="${T}" --no-compile --force || die
 	else
-		${python} setup.py install --root="${T}" || die
+		${python} setup.py install --root="${T}" --force || die
 	fi
 	cd "${T}/${spath}" || die
+	local trialopts
+	if ! has_version ">=dev-python/twisted-2.2"; then
+		trialopts=-R
+	fi
 	PATH="${T}/usr/bin:${PATH}" PYTHONPATH="${T}/${spath}" \
-		trial -R ${PN/-/.} || die "trial failed"
+		trial ${trialopts} ${PN/-/.} || die "trial failed"
 	cd "${S}"
 	rm -rf "${T}/${spath}"
 }
