@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.3 2005/08/23 13:58:53 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.4 2006/02/13 11:55:39 satya Exp $
 
 inherit eutils
 
@@ -13,11 +13,11 @@ SRC_URI="mirror://sourceforge/skunkweb/${NEWP}.tar.gz"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="apache1 apache2 doc"
+IUSE="apache apache2 doc"
 DEPEND=">=dev-lang/python-2.2
 		>=dev-python/egenix-mx-base-2.0.4
 		apache2? ( >=net-www/apache-2.0.47 )
-		!apache2? ( apache1? ( <=net-www/apache-2 ) )"
+		!apache2? ( apache? ( <=net-www/apache-2 ) )"
 
 pkg_setup() {
 	enewgroup skunkweb
@@ -29,7 +29,7 @@ src_compile() {
 	if use apache2; then
 		myconf="${myconf} --with-apxs=/usr/sbin/apxs2"
 	else
-		if use apache1; then
+		if use apache; then
 			myconf="${myconf} --with-apxs=/usr/sbin/apxs"
 		else
 			myconf="${myconf} --without-mod_skunkweb"
@@ -61,7 +61,7 @@ src_install() {
 		insinto /etc/apache/conf/addon-modules
 		newins SkunkWeb/mod_skunkweb/http_conf.stub mod_skunkweb.conf
 	else
-		if use apache1; then
+		if use apache; then
 			exeinto /usr/lib/apache-extramodules
 			doexe SkunkWeb/mod_skunkweb/mod_skunkweb.so
 			insinto /etc/apache/conf/addon-modules
