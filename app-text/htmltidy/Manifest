@@ -1,19 +1,39 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a6d6edcf4da99914dbbd28d474651745 ChangeLog 4080
+MD5 919c29e09f1ab022e2f26666bbaf14d3 ChangeLog 4347
+RMD160 e9de4f1f81dfde8c88e37d22b9f6aed725234098 ChangeLog 4347
+SHA256 b9fcfbe2fcf6090875631ae3dec2331666574da70be98c1e392b0de080db4f0a ChangeLog 4347
 MD5 47ad3e22b233024cc46fa12e2e56656b files/03-html2db-null.patch 4249
+RMD160 6e798c5cd5a2c9eda0c4ed8b9ef3c39c74df8ed6 files/03-html2db-null.patch 4249
+SHA256 9a8544d4070d7794ae65a3b75cb398e37c447c3cd5ec5e89306fab765d85cbb5 files/03-html2db-null.patch 4249
 MD5 2fe7c73c1e39e2714ee35931b23b0b22 files/03-htmltidy-docbook.patch 2948
+RMD160 75e14983a769f2a2cf06f1c8a4152af4b3ccfe77 files/03-htmltidy-docbook.patch 2948
+SHA256 5279fcc00d26c35f7bbbac6e513cf4d3dcb71411da9dd76793b71c069eb3fde9 files/03-htmltidy-docbook.patch 2948
 MD5 3e05bf3979c6a34b1b4166a2caee4024 files/04-htmltidy-docbook.patch 2975
+RMD160 2f04472d478fc587546fab768c681ce93d4f0681 files/04-htmltidy-docbook.patch 2975
+SHA256 ed90c549513c04a62da53f8bb72de131b1d08ac4fc0a74709f12820d8264a430 files/04-htmltidy-docbook.patch 2975
+MD5 cdf143e35317ba6b793c553a3b59453d files/05-htmltidy-docbook.patch 3039
+RMD160 9afbf7e653db20d31bc0811c5e5c9ee3565356cb files/05-htmltidy-docbook.patch 3039
+SHA256 6b4f6562dc1e5e5425368e3bec533ae0e9866e2cf216b8c284d3f3fca706089f files/05-htmltidy-docbook.patch 3039
 MD5 501b4fb1a986d22c54e6e00429ebcf56 files/digest-htmltidy-3.10.29 186
+RMD160 f4c0989e758caead1fb64644c909ab9c506c0bee files/digest-htmltidy-3.10.29 186
+SHA256 fd5fc5f2ad7234f5480dcee70776f534cbc9347317f2a1f6b7b81ccd18739bda files/digest-htmltidy-3.10.29 186
 MD5 77631526ec9513a440167223556fb2f8 files/digest-htmltidy-4.8.6 186
+RMD160 7709303ec354c77f18940078dea649fde66536b1 files/digest-htmltidy-4.8.6 186
+SHA256 f910f5bb140931a6456e6dc47225f526a9936bc51d28a256f0d17525e2e9a66f files/digest-htmltidy-4.8.6 186
+MD5 9edfc2d50e2a2c14fe3cfd2a3b578746 files/digest-htmltidy-5.10.26 696
+RMD160 295401a377a4049de67c72e469deb4200085f2f9 files/digest-htmltidy-5.10.26 696
+SHA256 77b1635ade4f1686de35f358642122736becd8604707b5a0545e763145c034ca files/digest-htmltidy-5.10.26 696
+MD5 ebe044e39a2d860207dcd7538231a3df files/htmltidy-5.10.26-strip-O2-flag.patch 370
+RMD160 1e531a13a61c80053cfb886a29cf2b4bafe45400 files/htmltidy-5.10.26-strip-O2-flag.patch 370
+SHA256 6acd356327faa4043a0b4cf5f242a5249d32c136fc39594701aca67ad70f353b files/htmltidy-5.10.26-strip-O2-flag.patch 370
 MD5 7e13d83180df14aa9b50529973ded2ab htmltidy-3.10.29.ebuild 2521
+RMD160 cab06c55808dfdf56b34f2050085a3f4d46e47b9 htmltidy-3.10.29.ebuild 2521
+SHA256 de750133de2f083a35069c5f6fde04aa0e99b83560dfe9d7b46a29dbf8f77f04 htmltidy-3.10.29.ebuild 2521
 MD5 216e3bc36f28d37b90eac4d81399f337 htmltidy-4.8.6.ebuild 2527
+RMD160 912dd0267e7d843a19c72465b79e819cd895fa4a htmltidy-4.8.6.ebuild 2527
+SHA256 320f14c024655e36b007c6f7e14bc7c1ea59dd85a1f84414d441f20a685e3b1e htmltidy-4.8.6.ebuild 2527
+MD5 c75ecae59de5a2a378a312e4abba3fde htmltidy-5.10.26.ebuild 2616
+RMD160 1e34a649a4c70d4a842fc333c3306dc6314b0010 htmltidy-5.10.26.ebuild 2616
+SHA256 107198e0f8f891aee49a7b1cba9d2440a345873905953033e05137ddb17376fb htmltidy-5.10.26.ebuild 2616
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzjKg2+ySkm8kpY0RAjTFAJ41kNL6HrBdVashVN/pQFeWI83zowCgv9pO
-ZO+xEjxNKw090aTyvFp4kFU=
-=qNNY
------END PGP SIGNATURE-----
+RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
+SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
