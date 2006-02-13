@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/AppConfig-1.56-r2.ebuild,v 1.14 2005/10/02 12:00:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/AppConfig-1.56-r2.ebuild,v 1.15 2006/02/13 10:38:56 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="perl-core/Test-Simple"
+DEPEND="virtual/perl-Test-Simple"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/Class-Trigger-0.10.ebuild,v 1.3 2006/01/21 21:13:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/Class-Trigger-0.10.ebuild,v 1.4 2006/02/13 10:57:11 mcummings Exp $
 
 inherit perl-module
 
@@ -14,6 +14,6 @@ KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 SRC_TEST="do"
 
-DEPEND="perl-core/Test-Simple
+DEPEND="virtual/perl-Test-Simple
 		dev-perl/IO-stringy
 		dev-perl/Class-Data-Inheritable"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI-mysql/Class-DBI-mysql-1.00.ebuild,v 1.2 2006/01/13 18:17:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI-mysql/Class-DBI-mysql-1.00.ebuild,v 1.3 2006/02/13 10:54:06 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,5 @@ IUSE=""
 #Can't put tests here because they require interaction with the DB
 
 DEPEND="dev-perl/Class-DBI
-		perl-core/Test-Simple
+		virtual/perl-Test-Simple
 		dev-perl/DBD-mysql"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-AuthTicket
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthTicket/ChangeLog,v 1.1 2005/11/04 18:47:11 chriswhite Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthTicket/ChangeLog,v 1.2 2006/02/13 10:37:09 mcummings Exp $
+
+  13 Feb 2006; <mcumming@gentoo.org> Apache-AuthTicket-0.40.ebuild:
+  Virtual for perl-core dep
 
 *Apache-AuthTicket-0.40 (04 Nov 2005)
 

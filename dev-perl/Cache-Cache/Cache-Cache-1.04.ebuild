@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/Cache-Cache-1.04.ebuild,v 1.9 2006/02/06 19:59:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/Cache-Cache-1.04.ebuild,v 1.10 2006/02/13 10:45:18 mcummings Exp $
 
 inherit perl-module
 
@@ -18,7 +18,7 @@ SRC_TEST="do"
 DEPEND="${DEPEND}
 	>=dev-perl/Digest-SHA1-2.02
 	>=dev-perl/Error-0.15
-	>=perl-core/Storable-1.0.14
+	>=virtual/perl-Storable-1.0.14
 	>=dev-perl/IPC-ShareLite-0.09"
 
 export OPTIMIZE="$CFLAGS"

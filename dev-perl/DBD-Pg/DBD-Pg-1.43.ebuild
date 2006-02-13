@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.43.ebuild,v 1.7 2005/11/24 18:25:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.43.ebuild,v 1.8 2006/02/13 11:00:02 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-DEPEND="perl-core/Test-Simple
-	>=perl-core/Test-Harness-2.03
+DEPEND="virtual/perl-Test-Simple
+	>=virtual/perl-Test-Harness-2.03
 	>=dev-perl/DBI-1.35
 	>=dev-db/postgresql-7.3"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-DumpXML/Data-DumpXML-1.06.ebuild,v 1.10 2005/11/23 10:48:56 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-DumpXML/Data-DumpXML-1.06.ebuild,v 1.11 2006/02/13 11:01:53 mcummings Exp $
 inherit perl-module
 
 DESCRIPTION="Dump arbitrary data structures as XML"
@@ -14,6 +14,6 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND=">=perl-core/MIME-Base64-2
+DEPEND=">=virtual/perl-MIME-Base64-2
 		>=dev-perl/XML-Parser-2
 		>=dev-perl/Array-RefElem-0.01"

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/Class-Default-1.1.ebuild,v 1.5 2005/07/03 10:05:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/Class-Default-1.1.ebuild,v 1.6 2006/02/13 10:55:56 mcummings Exp $
 
 inherit perl-module
 
@@ -15,6 +15,6 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/Class-Inspector
-		perl-core/Test-Simple
+		virtual/perl-Test-Simple
 		dev-perl/ExtUtils-AutoInstall
 		dev-perl/module-build"

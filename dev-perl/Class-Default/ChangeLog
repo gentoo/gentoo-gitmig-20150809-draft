@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Default
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/ChangeLog,v 1.18 2006/01/13 18:18:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/ChangeLog,v 1.19 2006/02/13 10:55:56 mcummings Exp $
+
+  13 Feb 2006; <mcumming@gentoo.org> Class-Default-1.0.ebuild,
+  Class-Default-1.1.ebuild, Class-Default-1.3.ebuild:
+  Virtual for perl-core dep
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   Class-Default-1.3.ebuild:
