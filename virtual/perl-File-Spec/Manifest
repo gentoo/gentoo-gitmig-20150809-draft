@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 25be534d65038024b232131b59922524 ChangeLog 716
+MD5 fd61c1c6541a99df8779432bb35d268a ChangeLog 821
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-File-Spec-0.84 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-File-Spec-0.87 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-File-Spec-3.01 0
@@ -14,11 +11,4 @@ MD5 91ff62172e554b6900615d160ca1a131 perl-File-Spec-0.87.ebuild 479
 MD5 a1069c29d18b08056d0f3a385f9c09c2 perl-File-Spec-3.01.ebuild 490
 MD5 6f651724bc83c02a66e0439637347175 perl-File-Spec-3.06.ebuild 481
 MD5 54ed98ae7e3ade1beee39a9a7b4c47bd perl-File-Spec-3.12.ebuild 484
-MD5 8b627c84b532c702070733ff721c196b perl-File-Spec-3.15.ebuild 494
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD55FZtG5z4I8BtQoRAqtnAJ4i84p2zZlvbmFlOvggLXbbwTfF+ACfQKcO
-to3NccipEJiy7NAmGzCHGgU=
-=mjnt
------END PGP SIGNATURE-----
+MD5 c8c8774ac84713ed5f805da3b8cc691e perl-File-Spec-3.15.ebuild 522
