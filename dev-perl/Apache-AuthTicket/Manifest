@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 40c969321ec4486054bc1a76e6354c8e Apache-AuthTicket-0.40.ebuild 617
-MD5 b063924ee6e4cb8a17ba9c796cc98147 ChangeLog 424
+MD5 a24a5686076e707d4581c6fee12fbc39 Apache-AuthTicket-0.40.ebuild 619
+RMD160 4c4b6bef7b8da1c2331e419ba319c87919c23e16 Apache-AuthTicket-0.40.ebuild 619
+SHA256 36f441bca9864425fdafcd70946e87a18af3b5fd9ec2b8dabd4bda6e2a41b87f Apache-AuthTicket-0.40.ebuild 619
+MD5 acbb1063a5f5d513098af1d767ee4ff5 ChangeLog 520
+RMD160 6baf76d3b1fbe972189c8b623d26b54101f3b71b ChangeLog 520
+SHA256 bf78b674836210d806bdc62bf3a7fc00737fc6ec1e81d1f877db7bb63ad1b0d9 ChangeLog 520
 MD5 9bbccbc098efe9d0d7633481bec86b26 files/digest-Apache-AuthTicket-0.40 73
+RMD160 c1e8a3823ffa571a449f6a96b8eeec964ab75b03 files/digest-Apache-AuthTicket-0.40 73
+SHA256 07b4d781205c4fef9903f79b96aaa73c1393aa137f468b9bbb7c135bbd5bc920 files/digest-Apache-AuthTicket-0.40 73
 MD5 4c87a5ff945b67c3bebcfb25142fe1b1 metadata.xml 522
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDa6zEFdQwWVoAgN4RAiQPAKDksFLz7J+ljpugmW3ygt4blU8zGQCfVmSY
-PcD7eLbFwHPsZyyQqQGeuE4=
-=faZq
------END PGP SIGNATURE-----
+RMD160 885509477af778cd7b87e4e09b6e98465a0f01de metadata.xml 522
+SHA256 c16663d83370471f5ff7d68bf9431d44107c6534f5dc1e5beb1fdf6f1de01e76 metadata.xml 522
