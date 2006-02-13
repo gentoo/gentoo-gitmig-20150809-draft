@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e311c0ccc36ba311b1c5a58a1f3342be ChangeLog 479
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-libnet-1.19 0
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 99f1f0730637574a5a116333efd68412 perl-libnet-1.19.ebuild 499
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8ObbtG5z4I8BtQoRAmVYAJ42Ksr/PlmXhEzp7L/Stu6dGrwGMQCfUSKB
+VLlpUiNMyy8KzDp06OEZcMM=
+=NuwZ
+-----END PGP SIGNATURE-----
