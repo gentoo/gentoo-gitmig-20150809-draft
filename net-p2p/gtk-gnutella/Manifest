@@ -1,24 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 763f8f175719f34491cd13d7dd7c9c0d ChangeLog 9923
-RMD160 ad14ce7cd3a0251fd1e03c5cef2616d05e5c6f8e ChangeLog 9923
-SHA256 78ffc772b6b6158f98134c598834d87fcc5c037d31f0b6b2871c7420b1cef933 ChangeLog 9923
+MD5 a7cba7f5952cd0aad9bf2fac21f3141c ChangeLog 10110
+RMD160 4135a51cca1a89d00cc8cc7fe11971fce95ba08f ChangeLog 10110
+SHA256 9539aafb2f07bac9fddcad929a9616f2f3c951dc37c8ef8c4bb4c50c7c3bd4e0 ChangeLog 10110
 MD5 ae9bb9e16331554a4cb95a17526ae2e5 files/0.95-gtk2.6.patch 1475
 RMD160 81df932276619989662e10c025ddded8a0e5d938 files/0.95-gtk2.6.patch 1475
 SHA256 9a9633568656d391cc6a506c9f80e3959b57fbe0fa29c38ba0e9328582aadd75 files/0.95-gtk2.6.patch 1475
-MD5 4fe4d39aa46ee9377a21fd889a537111 files/digest-gtk-gnutella-0.95 71
-RMD160 ea100fac9784a533478ad1149faca1b50b3c1c69 files/digest-gtk-gnutella-0.95 71
-SHA256 5983aadbd7473893e0bd6e1dac1adb8e4708fba466fdf0533c27252d3c7ac5c5 files/digest-gtk-gnutella-0.95 71
-MD5 4fe4d39aa46ee9377a21fd889a537111 files/digest-gtk-gnutella-0.95-r1 71
-RMD160 ea100fac9784a533478ad1149faca1b50b3c1c69 files/digest-gtk-gnutella-0.95-r1 71
-SHA256 5983aadbd7473893e0bd6e1dac1adb8e4708fba466fdf0533c27252d3c7ac5c5 files/digest-gtk-gnutella-0.95-r1 71
 MD5 4fe4d39aa46ee9377a21fd889a537111 files/digest-gtk-gnutella-0.95-r2 71
 RMD160 ea100fac9784a533478ad1149faca1b50b3c1c69 files/digest-gtk-gnutella-0.95-r2 71
 SHA256 5983aadbd7473893e0bd6e1dac1adb8e4708fba466fdf0533c27252d3c7ac5c5 files/digest-gtk-gnutella-0.95-r2 71
-MD5 e689dedf277485b89ebda8f977041c72 files/digest-gtk-gnutella-0.95.4 73
-RMD160 d7cebe551a89c8ec71c13fa8d317196879d74842 files/digest-gtk-gnutella-0.95.4 73
-SHA256 621d889250a47866fa389e1f1cc45a6a15085319d69ba4533b90623afb28c8f5 files/digest-gtk-gnutella-0.95.4 73
 MD5 e689dedf277485b89ebda8f977041c72 files/digest-gtk-gnutella-0.95.4-r1 73
 RMD160 d7cebe551a89c8ec71c13fa8d317196879d74842 files/digest-gtk-gnutella-0.95.4-r1 73
 SHA256 621d889250a47866fa389e1f1cc45a6a15085319d69ba4533b90623afb28c8f5 files/digest-gtk-gnutella-0.95.4-r1 73
@@ -31,21 +19,12 @@ SHA256 0fe800a44d632fe727cadf87a487ba8df87e8fdc8aa1db14e3f80fa214ed9469 files/di
 MD5 1edaa8e1c79da47114bd08eeec6f50c3 files/gtk-gnutella.desktop 186
 RMD160 41df4a9c5031ae5aa45bc2cb635e1f71459f73ad files/gtk-gnutella.desktop 186
 SHA256 bcb41a10f49f1ed29bb220f51203fed1832adfd5615d96e3d05dd6127a70a177 files/gtk-gnutella.desktop 186
-MD5 cb48051df9336ec980daefd330832201 gtk-gnutella-0.95-r1.ebuild 2276
-RMD160 7aa4084cf53010b20c010c0f7ca3c752d29cb33a gtk-gnutella-0.95-r1.ebuild 2276
-SHA256 6e9bed3f683551eec77f438360e6adfdab856776d833dcc882ddb6a9c60aaf4a gtk-gnutella-0.95-r1.ebuild 2276
 MD5 24e2ea86d85eb6fbaeb4fd1cd1738e15 gtk-gnutella-0.95-r2.ebuild 1805
 RMD160 fe8be03ddd68d013930a1bfee63a082c5bba5ffe gtk-gnutella-0.95-r2.ebuild 1805
 SHA256 7e32cec8accfd82371c43a14f141e41aa32f79c433fabd048a1fbc5374fca66c gtk-gnutella-0.95-r2.ebuild 1805
 MD5 4793b6f85a8fad9572aec4d42b800138 gtk-gnutella-0.95.4-r1.ebuild 1258
 RMD160 48eb69772041274b32a9e34b06b25654d2b7d460 gtk-gnutella-0.95.4-r1.ebuild 1258
 SHA256 3f6e626f0c48eb641cb26fa7d149a300bfa3fbdfe12a8bf3a04d3a308ea86928 gtk-gnutella-0.95.4-r1.ebuild 1258
-MD5 c1bff3b2d62c830ca26aa580dcee277b gtk-gnutella-0.95.4.ebuild 1385
-RMD160 330e05defa1bb291a74a75526fcf97dfe88120c3 gtk-gnutella-0.95.4.ebuild 1385
-SHA256 5603ecec30c70ce122b998c3be81c618db7abaf1c1fc3c75e528031d18b4e16c gtk-gnutella-0.95.4.ebuild 1385
-MD5 7501dfee4eca51d7affba43b576a6156 gtk-gnutella-0.95.ebuild 2177
-RMD160 8b95439a3410129fa377733dc804e7489afb7792 gtk-gnutella-0.95.ebuild 2177
-SHA256 bf1a1eff80522006def8c4939ebe80fdb56b3f8d2ab2b2ef5925052a06613167 gtk-gnutella-0.95.ebuild 2177
 MD5 4ffdf2060ab5f0c73334d16806ee241a gtk-gnutella-0.96.ebuild 1302
 RMD160 3bb0948b7c02d7eec4f34329efb56e706cfbd0d5 gtk-gnutella-0.96.ebuild 1302
 SHA256 78064815b216ffa62cd10d700e9f46413e04ba4a5b00a52b26f63384b9541d27 gtk-gnutella-0.96.ebuild 1302
@@ -55,10 +34,3 @@ SHA256 f2295947220e86c0fe587b79c73b8543acdf7a4c16dcaab49e8bdb32ac9c8419 gtk-gnut
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 RMD160 828887200387b28c37fc97111fc6bc3a0a2fcccd metadata.xml 160
 SHA256 fe06593409e7f28665c032001005e94cb650299711a0af7f1a558bdb56c4004f metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6AyFJrHF4yAQTrARAjmIAKCfxRXT2PwiGI6SkvbXe4kkADCu4wCgxzML
-mgjaTqPxahNrnw5byZdgerU=
-=Y1x7
------END PGP SIGNATURE-----
