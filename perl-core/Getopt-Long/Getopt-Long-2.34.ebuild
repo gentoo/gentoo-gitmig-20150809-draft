@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Getopt-Long/Getopt-Long-2.34.ebuild,v 1.3 2005/12/30 10:47:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Getopt-Long/Getopt-Long-2.34.ebuild,v 1.4 2006/02/13 15:04:23 mcummings Exp $
 
 inherit perl-module
 
@@ -13,4 +13,4 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 alpha ppc sparc hppa mips ia64 ppc64"
 IUSE=""
 
-DEPEND="perl-core/PodParser"
+DEPEND="virtual/perl-PodParser"
