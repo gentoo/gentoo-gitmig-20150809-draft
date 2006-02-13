@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.47 2006/02/08 23:32:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.48 2006/02/13 15:13:13 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  bugzilla-2.18.4.ebuild, bugzilla-2.20.ebuild:
+  Virtuals for some perl-core deps
 
   08 Feb 2006; Aron Griffis <agriffis@gentoo.org> bugzilla-2.18.4.ebuild:
   Mark 2.18.4 stable on alpha

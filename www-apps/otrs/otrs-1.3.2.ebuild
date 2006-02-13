@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-1.3.2.ebuild,v 1.3 2005/12/30 12:06:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-1.3.2.ebuild,v 1.4 2006/02/13 15:20:06 mcummings Exp $
 
 inherit webapp eutils
 
@@ -18,15 +18,15 @@ DEPEND="
 	=dev-lang/perl-5*
 	dev-perl/Date-Pcalc
 	dev-perl/DBI
-	perl-core/CGI
-	perl-core/Digest-MD5
+	virtual/perl-CGI
+	virtual/perl-Digest-MD5
 	dev-perl/libwww-perl
 	dev-perl/IO-stringy
-	perl-core/MIME-Base64
+	virtual/perl-MIME-Base64
 	dev-perl/MIME-tools
 	dev-perl/MailTools
 	dev-perl/Net-DNS
-	perl-core/libnet
+	virtual/perl-libnet
 	dev-perl/Authen-SASL
 	dev-perl/XML-Parser
 "

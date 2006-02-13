@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.ebuild,v 1.3 2005/11/09 18:42:01 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.ebuild,v 1.4 2006/02/13 15:13:13 mcummings Exp $
 
 inherit webapp eutils
 
@@ -21,15 +21,15 @@ RDEPEND="
 	!apache2? ( =net-www/apache-1* )
 	graphviz? ( media-gfx/graphviz )
 	>=dev-perl/AppConfig-1.52
-	>=perl-core/CGI-2.93
+	>=virtual/perl-CGI-2.93
 	>=dev-perl/TimeDate-1.16
 	>=dev-perl/DBI-1.38
-	>=perl-core/File-Spec-0.84
-	perl-core/File-Temp
+	>=virtual/perl-File-Spec-0.84
+	virtual/perl-File-Temp
 	>=dev-perl/Template-Toolkit-2.08
 	>=dev-perl/Text-Tabs+Wrap-2001.0131
 	>=dev-perl/MailTools-1.67
-	perl-core/Storable
+	virtual/perl-Storable
 	>=dev-perl/GD-1.20
 	>=dev-perl/Chart-2.3
 	dev-perl/GDGraph
