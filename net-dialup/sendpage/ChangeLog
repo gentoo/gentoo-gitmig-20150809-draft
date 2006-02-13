@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/sendpage
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/ChangeLog,v 1.3 2005/12/30 12:03:04 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/ChangeLog,v 1.4 2006/02/13 14:54:09 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  sendpage-0.9.14.ebuild:
+  Virtuals for perl-core
 
   30 Dec 2005; <mcumming@gentoo.org> sendpage-0.9.14.ebuild:
   Migrating libnet to perl-core
