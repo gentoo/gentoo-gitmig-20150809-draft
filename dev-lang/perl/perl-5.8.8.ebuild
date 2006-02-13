@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8.ebuild,v 1.4 2006/02/07 23:43:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8.ebuild,v 1.5 2006/02/13 20:09:37 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -35,31 +35,31 @@ RDEPEND="~sys-devel/libperl-${PV}
 
 PDEPEND="app-admin/perl-cleaner"
 
-PROVIDE="virtual/perl-CGI-3.15
-		virtual/perl-DB_File-1.814
-		virtual/perl-digest-base-1.00
-		virtual/perl-Digest-MD5-2.36
-		virtual/perl-ExtUtils-MakeMaker-6.30
-		virtual/perl-File-Spec-3.15
-		virtual/perl-File-Temp-0.16
-		virtual/perl-Getopt-Long-2.35
-		virtual/perl-MIME-Base64-3.07
-		virtual/perl-Math-BigInt-1.77
-		virtual/perl-Memoize-1.01
-		virtual/perl-PodParser-1.32
-		virtual/perl-Safe-2.12
-		virtual/perl-Scalar-List-Utils-1.18
-		virtual/perl-Storable-2.15
-		virtual/perl-Sys-Syslog-0.13
-		virtual/perl-Test-1.25
-		virtual/perl-Test-Harness-2.56
-		virtual/perl-Test-Simple-0.62
-		virtual/perl-Text-Balanced-1.95
-		virtual/perl-Time-HiRes-1.86
-		virtual/perl-Time-Local-1.11
-		virtual/perl-libnet-1.19
-		virtual/perl-locale-maketext-1.09
-		virtual/perl-net-ping-2.31"
+PROVIDE="virtual/perl-CGI
+		virtual/perl-DB_File
+		virtual/perl-digest-base
+		virtual/perl-Digest-MD5
+		virtual/perl-ExtUtils-MakeMaker
+		virtual/perl-File-Spec
+		virtual/perl-File-Temp
+		virtual/perl-Getopt-Long
+		virtual/perl-MIME-Base64
+		virtual/perl-Math-BigInt
+		virtual/perl-Memoize
+		virtual/perl-PodParser
+		virtual/perl-Safe
+		virtual/perl-Scalar-List-Utils
+		virtual/perl-Storable
+		virtual/perl-Sys-Syslog
+		virtual/perl-Test
+		virtual/perl-Test-Harness
+		virtual/perl-Test-Simple
+		virtual/perl-Text-Balanced
+		virtual/perl-Time-HiRes
+		virtual/perl-Time-Local
+		virtual/perl-libnet
+		virtual/perl-locale-maketext
+		virtual/perl-net-ping"
 
 pkg_setup() {
 	# I think this should rather be displayed if you *have* 'ithreads'
