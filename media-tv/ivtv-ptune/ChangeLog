@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/ivtv-ptune
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-ptune/ChangeLog,v 1.8 2005/05/25 14:02:46 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-ptune/ChangeLog,v 1.9 2006/02/13 14:50:21 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  ivtv-ptune-0.2.0_rc3.ebuild:
+  Virtuals for perl-core
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   ivtv-ptune-0.2.0_rc3.ebuild:
