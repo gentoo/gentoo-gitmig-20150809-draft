@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f892fb6dd1190c4d6c2c1e0baf2b0e4 ChangeLog 1627
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 4142d9cbec4b06894346d91d5a951ae5 mplay-0.68.ebuild 1548
-MD5 07a3598b27e34e8dd1e44fbe28915d84 mplay-0.80.ebuild 1106
+MD5 7345bc4f931bfcdaee4e99cdec25b82e ChangeLog 1758
 MD5 838c391e7aec39ea78815167f2d55fc3 files/digest-mplay-0.68 62
 MD5 a8be53d15a20aee8bf09a3c17c7b9219 files/digest-mplay-0.80 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClKiktG5z4I8BtQoRAldFAJ9vTn72qnOaCB6Cy5o7EpfTDVQqiACfY6el
-zCliQ5CsiDJu9ik6kHj4qYQ=
-=vdUa
------END PGP SIGNATURE-----
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 32c9dee6c413eb9a6dc4937a5ec3dd1a mplay-0.68.ebuild 1551
+MD5 2ddb9d20b36e730f0e52f841a72d7527 mplay-0.80.ebuild 1109
