@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6d6d4ff0ffa4f7745b2a4d4ea174eca2 ChangeLog 1049
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-CGI-3.05 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-CGI-3.07 0
@@ -10,3 +13,10 @@ MD5 c7f233e0ecc91d6bdc27347ba541219e perl-CGI-3.07.ebuild 449
 MD5 dbd762cdaf768218b14507968ca2dde9 perl-CGI-3.09.ebuild 449
 MD5 ab7e1b50519fd1f58179b4a6309bd2ce perl-CGI-3.10.ebuild 470
 MD5 0610b3da3c704eb741a7c15f6e280297 perl-CGI-3.15.ebuild 477
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8Nr6tG5z4I8BtQoRAmK3AJ97HX4XCb5jHOTqnU1A0AyFxqhQXQCaA2CV
+Khp/QrH/zRVatCfIJOhaqF8=
+=GpVe
+-----END PGP SIGNATURE-----
