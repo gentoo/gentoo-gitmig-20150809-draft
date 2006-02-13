@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1-r2.ebuild,v 1.4 2006/02/06 23:36:57 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.1-r3.ebuild,v 1.1 2006/02/13 05:34:07 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -11,12 +11,13 @@ inherit flag-o-matic x-modular multilib
 OPENGL_DIR="xorg-x11"
 
 MESA_PN="Mesa"
-MESA_PV="6.4.1"
+MESA_PV="6.4.2"
 MESA_P="${MESA_PN}-${MESA_PV}"
 MESA_SRC_P="${MESA_PN}Lib-${MESA_PV}"
 
 PATCHES="${FILESDIR}/${P}-Sbus.patch
-	${FILESDIR}/${P}-backtrace.patch"
+	${FILESDIR}/${P}-backtrace.patch
+	${FILESDIR}/${P}-amd64-fix-for-glx.patch"
 
 SRC_URI="${SRC_URI}
 	mirror://sourceforge/mesa3d/${MESA_SRC_P}.tar.bz2"
