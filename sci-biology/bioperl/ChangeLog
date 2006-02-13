@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bioperl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.18 2005/11/28 12:03:14 mcummings Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.19 2006/02/13 15:08:40 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org> bioperl-1.4.ebuild:
+  Virtuals for perl-core
 
   28 Nov 2005; <mcumming@gentoo.org> bioperl-1.0.2.ebuild,
   bioperl-1.2.2.ebuild, bioperl-1.2.3.ebuild, bioperl-1.2.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.4.ebuild,v 1.7 2006/01/21 17:34:58 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.4.ebuild,v 1.8 2006/02/13 15:08:18 mcummings Exp $
 
 inherit perl-app eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="
 	dev-perl/Algorithm-Diff
-	perl-core/File-Temp
+	virtual/perl-File-Temp
 	dev-perl/IO-String
 	dev-perl/XML-Parser"
 

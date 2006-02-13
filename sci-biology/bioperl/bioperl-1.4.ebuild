@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.4.ebuild,v 1.11 2006/01/21 17:32:30 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.4.ebuild,v 1.12 2006/02/13 15:08:40 mcummings Exp $
 
 inherit perl-app eutils
 
@@ -13,12 +13,12 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 ~ppc ~sparc x86"
 IUSE="mysql gd"
 
-DEPEND="perl-core/File-Temp
+DEPEND="virtual/perl-File-Temp
 	dev-perl/HTML-Parser
 	dev-perl/IO-String
 	dev-perl/IO-stringy
 	dev-perl/SOAP-Lite
-	perl-core/Storable
+	virtual/perl-Storable
 	dev-perl/XML-DOM
 	dev-perl/XML-Parser
 	dev-perl/XML-Writer
