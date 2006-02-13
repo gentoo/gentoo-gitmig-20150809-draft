@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.2.0.ebuild,v 1.1 2006/02/13 23:08:28 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.2.0.ebuild,v 1.2 2006/02/13 23:49:21 marienz Exp $
 
 inherit eutils distutils versionator
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sh ~sparc ~x86"
 IUSE="gtk serial crypt"
 
-DEPEND=">=dev-lang/python-2.2
+DEPEND=">=dev-lang/python-2.3
 	>=net-zope/zopeinterface-3.0.1
 	serial? ( dev-python/pyserial )
 	crypt? ( >=dev-python/pyopenssl-0.5.1 )
