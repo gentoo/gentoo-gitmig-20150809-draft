@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.39 2006/02/09 00:22:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.40 2006/02/13 19:03:10 marienz Exp $
+
+*docutils-0.4 (13 Feb 2006)
+
+  13 Feb 2006; Marien Zwart <marienz@gentoo.org>
+  +files/50docutils-0.4-gentoo.el, +docutils-0.4.ebuild:
+  Version bump to 0.4 (closes bug #118470, thanks to Jeff Kowalczyk
+  <jtk@yahoo.com> for reporting), with some tweaks to work more like upstream
+  recommends and updates to the glep code.
 
   28 Jan 2006; Olivier Crête <tester@gentoo.org> docutils-0.3.7.ebuild:
   Stable on amd64
