@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060102.ebuild,v 1.5 2006/02/03 10:45:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060102.ebuild,v 1.6 2006/02/13 20:40:04 chutzpah Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,7 @@ RESTRICT="nostrip"
 IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl bindist
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
 dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
-lirc live livecd lzo mad matroska matrox mmx mmxext nas nls nvidia
+lirc live livecd lzo mad matroska matrox mmx mmxext musepack nas nls nvidia
 vorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype
 v4l v4l2 win32codecs X xanim xinerama xmms xv xvid xvmc"
 
@@ -64,6 +64,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	lirc? ( app-misc/lirc )
 	lzo? ( =dev-libs/lzo-1* )
 	mad? ( media-libs/libmad )
+	musepack? ( >=media-libs/libmpcdec-1.2.2 )
 	nas? ( media-libs/nas )
 	nls? ( sys-devel/gettext )
 	vorbis? ( media-libs/libvorbis )
@@ -298,6 +299,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable dts libdts)"
 	myconf="${myconf} $(use_enable lzo liblzo)"
 	myconf="${myconf} $(use_enable matroska internal-matroska)"
+	myconf="${myconf} $(use_enable musepack)"
 	myconf="${myconf} $(use_enable aac internal-faad)"
 	myconf="${myconf} $(use_enable vorbis)"
 	myconf="${myconf} $(use_enable theora)"
