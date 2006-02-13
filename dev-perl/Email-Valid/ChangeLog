@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-Valid
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.16 2006/02/08 23:31:29 tove Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.17 2006/02/13 12:15:44 redhatter Exp $
+
+  13 Feb 2006; Stuart Longland <redhatter@gentoo.org> ChangeLog:
+  Marking dev-perl/Email-Valid-0.15-r1 ~mips (dependancy of dev-util/git) as
+  per bug #108215
 
   28 Nov 2005; Tom Gall <tgall@gentoo.org> Email-Valid-0.15-r1.ebuild:
   stable on ppc64
