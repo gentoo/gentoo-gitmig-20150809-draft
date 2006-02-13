@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 10473b1e0d1b8fb0cc8934c900304054 ChangeLog 1867
+MD5 7fb007dc71d487e7f4f78d3592644475 ChangeLog 1971
 MD5 8ce5e2b6e0ab9fcc6a3a116347a24204 files/digest-lxr-0.3.1 60
 MD5 079cf235c7e3710d7cfe9c99c049da15 files/digest-lxr-0.9.4-r1 57
 MD5 dc4f45f2522e069916336f27c75a9509 files/initdb-mysql.patch 472
 MD5 867862e75df9d3d89b3235d846399411 files/postinstall-en.txt 1353
 MD5 e29006dab30804fb516da79548e917b3 files/reconfig 272
-MD5 dd932f0988c68a07db8e35fce86af72a lxr-0.3.1.ebuild 1741
+MD5 f6ba9a472aa1ec2550e9bb989bf73da4 lxr-0.3.1.ebuild 1744
 MD5 310764a001eb1262609fe23ec5cea7cc lxr-0.9.4-r1.ebuild 1997
 MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD2TUDEzitwsaoONoRAlvvAJ4zog1F9mTPGr2AMmmO17xwet0neACeKss/
-En/5ALAbFcKE/hlznQm20ms=
-=Zedh
------END PGP SIGNATURE-----
