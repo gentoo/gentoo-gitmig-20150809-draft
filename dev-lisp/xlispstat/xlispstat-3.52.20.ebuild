@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/xlispstat/xlispstat-3.52.20.ebuild,v 1.2 2004/06/25 00:01:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/xlispstat/xlispstat-3.52.20.ebuild,v 1.3 2006/02/13 21:08:58 mkennedy Exp $
 
 DESCRIPTION="XLISP-STAT is a statistical environment based on a dialect of the Lisp language called XLISP."
 HOMEPAGE="http://www.stat.uiowa.edu/~luke/xls/xlsinfo/xlsinfo.html"
@@ -9,7 +9,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="X"
-DEPEND="X? ( virtual/x11 )"
+DEPEND="X? ( || ( x11-libs/libX11 virtual/x11 ) )"
 
 S=${WORKDIR}/${P//./-}
 
