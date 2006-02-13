@@ -10,19 +10,22 @@ SHA256 ef321086cf15a8bb7886b92739c998ed98f6272762604408b34c131a7bdfad81 files/di
 MD5 02bb9708cbe2cdf3fba5ddd88dbce656 files/digest-mythbrowser-0.19 256
 RMD160 e9516bf4b7b132f1258633b15dfb223d99b1a56c files/digest-mythbrowser-0.19 256
 SHA256 d305873fee173a927a0701caaf2bd9d023f2c4668dd14c5774267c1fce166928 files/digest-mythbrowser-0.19 256
+MD5 b299bf89c16f47b7ece265d00f35d20d files/mythbrowser-kde-3.5.patch 556
+RMD160 4de886d8645e15db1265ffedd544576bcfa4901d files/mythbrowser-kde-3.5.patch 556
+SHA256 82e94a093eea1dd0b1725c626a721d06f2a78199c4988a1723c0b7e8281dadaa files/mythbrowser-kde-3.5.patch 556
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 RMD160 effccac2541ac4d0954899784d7d64c60a9c020e metadata.xml 222
 SHA256 8b2065fecfbbdd0caa3c5eb86b98c22766db07f555edbf3127e9454b468ecff6 metadata.xml 222
 MD5 c08f5e903f9114866d813bda5a46fbfd mythbrowser-0.18.1.ebuild 717
 RMD160 bc11ebb25c734bbd633f8a21211ad50f762b858f mythbrowser-0.18.1.ebuild 717
 SHA256 1e4ed77238ddae73dc5ecbdc18e12d2636ae627d767bff2c2d483006db5cc410 mythbrowser-0.18.1.ebuild 717
-MD5 5a785ab9d2f2c438b2bae865d1ca8dca mythbrowser-0.19.ebuild 714
-RMD160 3e25b02406dfc6cb372cdc51c0784ab795f675aa mythbrowser-0.19.ebuild 714
-SHA256 f6141287f5d2cccbf251b68cea99290e7cf432ebce865dbb8bec57bf9678c81c mythbrowser-0.19.ebuild 714
+MD5 929b8ca0c8d12ad4e77fabf94a081e78 mythbrowser-0.19.ebuild 762
+RMD160 a5db89a4d2a20a45e9bf2442fa54b0d565b600b4 mythbrowser-0.19.ebuild 762
+SHA256 3917e46fc7ff9dd08e6f5caa31c40d99575640e4a4f1890a581e58225d38762b mythbrowser-0.19.ebuild 762
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD7wy+BtvusYtCZMsRAhiDAJsFrh+MsAYFue72L0M2NVY4Lk1dvgCeKwbi
-0KfZ8ZtWQ1zGJSBtDKZA2iI=
-=HeBZ
+iD8DBQFD8MdFBtvusYtCZMsRAu08AJ4oIIeZoTyk6MXl9QZwhGYVMtsWMgCfQCfX
+Dt5zxP98/8HtdThF95S03NU=
+=TrTh
 -----END PGP SIGNATURE-----
