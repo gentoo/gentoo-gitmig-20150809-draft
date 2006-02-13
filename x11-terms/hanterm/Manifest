@@ -1,5 +1,25 @@
-MD5 1eb2a0cd1b5867a70c2e9d8cefac6234 ChangeLog 1700
-MD5 853ee7c0930eb01055f53c1cb30372fc hanterm-3.1.6-r2.ebuild 1390
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ba796575710439c97e4e573abb810f1f ChangeLog 1795
+RMD160 f72a4384496921f8d7a0ebc0b84da04ae697af23 ChangeLog 1795
+SHA256 6ec4c03600cc34a05ec5167917709cf5644aa36a7cf78adbb3ce4daaffa8e3ff ChangeLog 1795
 MD5 875999b9db77b35f3c81ecb8aa3c9711 files/Hanterm.gentoo 5693
+RMD160 489f7dfb8651f8d201d43b6df4fe3510b2d3dd10 files/Hanterm.gentoo 5693
+SHA256 afcd7a0bbc92a8dcedfc5f13ccbd3fe7abd3c78b05ab23359660fa1c2b0557d0 files/Hanterm.gentoo 5693
 MD5 f82b4f8ecb9c59922d758eeaaa314fe4 files/digest-hanterm-3.1.6-r2 65
+RMD160 d698da19621ec04cc9637c1ec863b9f2e9146cca files/digest-hanterm-3.1.6-r2 65
+SHA256 7926fac87b7f673f7b760410a339986bc32539ecc6219500048ae786c5df6520 files/digest-hanterm-3.1.6-r2 65
+MD5 4383862fe0b61a493c8cca82cdb8c1ea hanterm-3.1.6-r2.ebuild 1437
+RMD160 f3739e41620726dc5ab712967f09e97043070319 hanterm-3.1.6-r2.ebuild 1437
+SHA256 a508ac228fff0514dbb8ccbf039bede5ec2d34562ffe791c045179a159d74617 hanterm-3.1.6-r2.ebuild 1437
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad metadata.xml 156
+SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7/jm9ZFPrqoILX8RAmzeAKCFcS3Ip1p4/3kgCkOEN0D5JU4jFQCg4Xp9
+SafG7hX5/sKRu/cUgN8yn4Q=
+=1p6F
+-----END PGP SIGNATURE-----

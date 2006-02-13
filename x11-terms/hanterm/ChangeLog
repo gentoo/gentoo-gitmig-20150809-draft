@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/hanterm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.16 2004/11/14 09:21:56 usata Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.17 2006/02/13 03:11:17 liquidx Exp $
+
+  13 Feb 2006; Alastair Tse <liquidx@gentoo.org> hanterm-3.1.6-r2.ebuild:
+  modular-x-ified
 
   14 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> hanterm-3.1.6-r2.ebuild:
   Stable on ppc and ppc-macos.
