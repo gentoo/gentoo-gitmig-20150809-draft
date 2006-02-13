@@ -1,7 +1,7 @@
 #!/bin/bash
 # Remove old signatures and unimportant tokens from the DSPAM database
 
-for foo in awk head tail
+for foo in awk head tail cut sed
 do
 	DSPAM_Check_App="$(${foo} --version 2>&1)"
 	if [[ "${DSPAM_Check_App/ *}" == "bash:" ]]
@@ -13,12 +13,34 @@ done
 
 DSPAM_HOMEDIR="$(grep ^dspam /etc/passwd|awk -F : '{print $6}')"
 [[ ! -d "${DSPAM_HOMEDIR}" ]] && exit 2
+if [ ! -f ${DSPAM_HOMEDIR}/*.data ]
+then
+	if [ -f /etc/mail/dspam/*.data ]
+	then
+		DSPAM_HOMEDIR="/etc/mail/dspam"
+	fi
+fi
 
 if [[ -f "${DSPAM_HOMEDIR}/mysql.data" ]]
 then
+	[[ ! -f "/usr/bin/mysql_config" ]] && exit 4
 	DSPAM_MySQL_PURGE_SQL=""
-	[[ -f "${DSPAM_HOMEDIR}/config/mysql_purge.sql" ]] && DSPAM_MySQL_PURGE_SQL="${DSPAM_HOMEDIR}/config/mysql_purge.sql"
-	[[ -f "${DSPAM_HOMEDIR}/mysql_purge.sql" ]] && DSPAM_MySQL_PURGE_SQL="${DSPAM_HOMEDIR}/mysql_purge.sql"
+	DSPAM_MySQL_VER="$(mysql_config --version | sed "s:\([^0-9\.]*\)::g")"
+	DSPAM_MySQL_MAJOR="$(echo "${DSPAM_MySQL_VER}" | cut -d. -f1)"
+	DSPAM_MySQL_MINOR="$(echo "${DSPAM_MySQL_VER}" | cut -d. -f2)"
+	DSPAM_MySQL_MICRO="$(echo "${DSPAM_MySQL_VER}" | cut -d. -f3)"
+	DSPAM_MySQL_INT="$((DSPAM_MySQL_MAJOR * 65536 + DSPAM_MySQL_MINOR * 256 + DSPAM_MySQL_MICRO))"
+
+	# For MySQL >= 4.1 use the new purge script
+	if [[ "${DSPAM_MySQL_INT}" -ge "262400" ]]
+	then
+		[[ -f "${DSPAM_HOMEDIR}/config/mysql_purge-4.1.sql" ]] && DSPAM_MySQL_PURGE_SQL="${DSPAM_HOMEDIR}/config/mysql_purge-4.1.sql"
+		[[ -f "${DSPAM_HOMEDIR}/mysql_purge-4.1.sql" ]] && DSPAM_MySQL_PURGE_SQL="${DSPAM_HOMEDIR}/mysql_purge-4.1.sql"
+	else
+		[[ -f "${DSPAM_HOMEDIR}/config/mysql_purge.sql" ]] && DSPAM_MySQL_PURGE_SQL="${DSPAM_HOMEDIR}/config/mysql_purge.sql"
+		[[ -f "${DSPAM_HOMEDIR}/mysql_purge.sql" ]] && DSPAM_MySQL_PURGE_SQL="${DSPAM_HOMEDIR}/mysql_purge.sql"
+	fi
+
 	[[ "${DSPAM_MySQL_PURGE_SQL}" == "" ]] && exit 3
 	[[ ! -f "/usr/bin/mysql" ]] && exit 4
 	DSPAM_MySQL_HOST="$(cat ${DSPAM_HOMEDIR}/mysql.data|head -n 1|tail -n 1)"
