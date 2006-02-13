@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.3 2006/02/13 23:07:53 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.4 2006/02/13 23:17:30 marienz Exp $
+
+  13 Feb 2006; Marien Zwart <marienz@gentoo.org> axiom-0.4.0.ebuild:
+  Increase required twisted version to 2.2 to make "axiomatic start" without
+  arguments work.
 
   13 Feb 2006; Marien Zwart <marienz@gentoo.org> axiom-0.3.0.ebuild,
   axiom-0.4.0.ebuild:
