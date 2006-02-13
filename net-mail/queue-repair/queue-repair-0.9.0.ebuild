@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-repair/queue-repair-0.9.0.ebuild,v 1.1 2006/02/12 16:02:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-repair/queue-repair-0.9.0.ebuild,v 1.2 2006/02/13 15:47:38 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://pyropus.ca/software/queue-repair/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~ppc ~mips ~hppa"
+KEYWORDS="~hppa ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 src_compile() {
