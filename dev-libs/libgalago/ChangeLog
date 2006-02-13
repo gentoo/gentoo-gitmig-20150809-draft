@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgalago
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgalago/ChangeLog,v 1.1 2006/02/01 06:52:31 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgalago/ChangeLog,v 1.2 2006/02/13 20:07:36 metalgod Exp $
+
+  13 Feb 2006; Luis Medinas <metalgod@gentoo.org> libgalago-0.3.3.ebuild:
+  Added ~amd64 keyword.
 
 *libgalago-0.3.3 (01 Feb 2006)
 
