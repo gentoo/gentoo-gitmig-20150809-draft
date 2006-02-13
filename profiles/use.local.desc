@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1730 2006/02/13 13:29:03 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1731 2006/02/13 19:43:07 mkennedy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -342,6 +342,7 @@ dev-lisp/cl-ucw:araneida - use the Araneida web-server backend
 dev-lisp/cl-ucw:aserve - use the Portable Allegro Serve web-server backend
 dev-lisp/cl-ucw:mod_lisp - use the mod_lisp web-server backend
 dev-lisp/cmucl:nosource - don't include source code for CMUCL in installation
+dev-lisp/ecls:c++ - Build ECL with a C++ compiler
 dev-lisp/gcl-cvs:custreloc - build a GCL which uses custom GCL code for linking
 dev-lisp/gcl-cvs:dlopen - build a GCL which uses dlopen for linking
 dev-lisp/gcl-cvs:gprof - build a GCL with profiling support
