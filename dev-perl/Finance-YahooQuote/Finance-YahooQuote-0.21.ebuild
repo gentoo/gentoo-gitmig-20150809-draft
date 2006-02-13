@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/Finance-YahooQuote-0.21.ebuild,v 1.3 2006/01/13 20:51:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/Finance-YahooQuote-0.21.ebuild,v 1.4 2006/02/13 13:01:16 mcummings Exp $
 
 inherit perl-module
 
@@ -20,5 +20,5 @@ IUSE=""
 #SRC_TEST="do"
 
 DEPEND="dev-perl/libwww-perl
-		perl-core/MIME-Base64
+		virtual/perl-MIME-Base64
 		dev-perl/HTML-Parser"

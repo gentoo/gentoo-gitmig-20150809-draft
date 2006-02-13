@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-Sender
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/ChangeLog,v 1.2 2006/01/15 17:39:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/ChangeLog,v 1.3 2006/02/13 13:16:02 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  Mail-Sender-0.8.10.ebuild:
+  Virtuals for perl-core
 
   15 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   Mail-Sender-0.8.10.ebuild:

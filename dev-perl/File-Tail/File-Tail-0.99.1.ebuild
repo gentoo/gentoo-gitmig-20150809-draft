@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Tail/File-Tail-0.99.1.ebuild,v 1.9 2006/01/23 21:17:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Tail/File-Tail-0.99.1.ebuild,v 1.10 2006/02/13 13:00:37 mcummings Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 
-DEPEND="perl-core/Time-HiRes"
+DEPEND="virtual/perl-Time-HiRes"
 
 export OPTIMIZE="$CFLAGS"
 mydoc="ToDo"

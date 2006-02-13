@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-Expr/HTML-Template-Expr-0.05.ebuild,v 1.1 2006/01/13 14:41:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-Expr/HTML-Template-Expr-0.05.ebuild,v 1.2 2006/02/13 13:05:49 mcummings Exp $
 
 inherit perl-module
 
@@ -17,4 +17,4 @@ SRC_TEST="do"
 DEPEND="dev-perl/HTML-Template
 		dev-perl/Parse-RecDescent
 		perl-core/Text-Balanced
-		perl-core/Test-Simple"
+		virtual/perl-Test-Simple"

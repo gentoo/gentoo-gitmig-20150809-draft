@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/HTML-FromText-2.05.ebuild,v 1.12 2005/12/30 11:03:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/HTML-FromText-2.05.ebuild,v 1.13 2006/02/13 13:02:22 mcummings Exp $
 
 inherit perl-module
 
@@ -16,7 +16,7 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/HTML-Parser
-	perl-core/Test-Simple
+	virtual/perl-Test-Simple
 	dev-perl/Exporter-Lite
-	>=perl-core/Scalar-List-Utils-1.14
+	>=virtual/perl-Scalar-List-Utils-1.14
 	dev-perl/Email-Find"

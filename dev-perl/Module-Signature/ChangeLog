@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Signature
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.7 2006/02/07 16:56:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.8 2006/02/13 13:17:16 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  Module-Signature-0.44.ebuild, Module-Signature-0.51.ebuild:
+  Virtuals for perl-core
 
   07 Feb 2006; <mcumming@gentoo.org> Module-Signature-0.44.ebuild,
   Module-Signature-0.51.ebuild:

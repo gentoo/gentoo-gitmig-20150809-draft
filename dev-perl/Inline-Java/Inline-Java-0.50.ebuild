@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Java/Inline-Java-0.50.ebuild,v 1.1 2006/01/13 14:52:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Java/Inline-Java-0.50.ebuild,v 1.2 2006/02/13 13:08:21 mcummings Exp $
 
 inherit perl-module
 
@@ -17,7 +17,7 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND=">=dev-perl/Inline-0.44
-		>=perl-core/Test-1.13
+		>=virtual/perl-Test-1.13
 		>=virtual/jdk-1.4"
 
 myconf="J2SDK=$JAVA_HOME"

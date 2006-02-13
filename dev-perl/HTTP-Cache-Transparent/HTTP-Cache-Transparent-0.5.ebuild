@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Cache-Transparent/HTTP-Cache-Transparent-0.5.ebuild,v 1.8 2005/07/30 13:04:02 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Cache-Transparent/HTTP-Cache-Transparent-0.5.ebuild,v 1.9 2006/02/13 13:07:11 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,5 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/libwww-perl
-	perl-core/Digest-MD5
-	perl-core/Storable"
+	virtual/perl-Digest-MD5
+	virtual/perl-Storable"

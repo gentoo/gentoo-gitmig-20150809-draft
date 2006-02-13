@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003.ebuild,v 1.2 2006/01/09 22:31:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003.ebuild,v 1.3 2006/02/13 12:54:42 mcummings Exp $
 
 inherit perl-module webapp eutils
 
@@ -15,10 +15,10 @@ IUSE="mysql auth"
 DEPEND="dev-lang/perl
 		>=dev-perl/Config-Simple-4.1
 		>=dev-perl/DBI-1.03
-		>=perl-core/File-Temp-0.12
-		>=perl-core/Digest-MD5-2.09
-		>=perl-core/CGI-2.56
-		perl-core/File-Spec
+		>=virtual/perl-File-Temp-0.12
+		>=virtual/perl-Digest-MD5-2.09
+		>=virtual/perl-CGI-2.56
+		virtual/perl-File-Spec
 		>=dev-perl/Mail-Sender-0.8
 		>=dev-perl/Sort-Tree-1.07
 		>=dev-perl/Template-Toolkit-2.08

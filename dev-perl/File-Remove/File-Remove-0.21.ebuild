@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/File-Remove-0.21.ebuild,v 1.5 2005/11/28 15:56:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/File-Remove-0.21.ebuild,v 1.6 2006/02/13 13:00:11 mcummings Exp $
 
 inherit perl-module
 
@@ -15,4 +15,4 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND=">=perl-core/File-Spec-0.84"
+DEPEND=">=virtual/perl-File-Spec-0.84"
