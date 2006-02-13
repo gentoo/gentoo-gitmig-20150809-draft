@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20040404.1.ebuild,v 1.5 2005/06/23 23:11:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20040404.1.ebuild,v 1.6 2006/02/13 14:59:12 mcummings Exp $
 
 MY_P=${P/-/.}
 DESCRIPTION="Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH"
@@ -17,9 +17,9 @@ DEPEND=">=dev-lang/perl-5.8.3"
 RDEPEND="${DEPEND}
 		>=dev-perl/Net-DNS-0.40
 		ssl? ( >=dev-perl/Net-SSLeay-1.23 )
-		>=perl-core/MIME-Base64-3.00
-		>=perl-core/Digest-MD5-2.33
-		>=perl-core/Time-HiRes-1.54
+		>=virtual/perl-MIME-Base64-3.00
+		>=virtual/perl-Digest-MD5-2.33
+		>=virtual/perl-Time-HiRes-1.54
 		>=dev-perl/Authen-NTLM-1.02
 		>=dev-perl/Authen-DigestMD5-0.04"
 
