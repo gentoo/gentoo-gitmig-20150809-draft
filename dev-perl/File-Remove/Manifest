@@ -1,46 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0651fb31fa943f2d1bf774addef6dbdf ChangeLog 2460
-RMD160 6776e1cc85ba13299d6593bb31a25ea775583b56 ChangeLog 2460
-SHA256 066c26db8e3ae51ca268e3a3d6741f7bdd49093a913cba808b08c97d6ca70bf4 ChangeLog 2460
+MD5 8dbd0601b955b8787323d18bc8d33e40 ChangeLog 2650
 MD5 148d34221de46dcef9623fcbdac5791d File-Remove-0.20.ebuild 577
-RMD160 8ad72238d71663a4a27fcf10273c9017919436c6 File-Remove-0.20.ebuild 577
-SHA256 c3caed31ee697e76bc48c1684741515b39c78d35790196e314ee9d48763a2a20 File-Remove-0.20.ebuild 577
-MD5 425705ce96b1b96c67394b38cb74bc53 File-Remove-0.21.ebuild 555
-RMD160 06603d07edd3ca913eb4fe44f602b0dfba90b33a File-Remove-0.21.ebuild 555
-SHA256 a931e5677a1cbc205d1b835c1c8d161723503c69f50e90dbd2806ff85bc7433e File-Remove-0.21.ebuild 555
-MD5 94dffa16810317df74296f37b6116a1a File-Remove-0.29.ebuild 565
-RMD160 37bc43776925c6089f2e344dcfef7ee80db45821 File-Remove-0.29.ebuild 565
-SHA256 d76c35d8d9741438c59847fe393d886c8297f19c122b950fd2b3af443860aa39 File-Remove-0.29.ebuild 565
-MD5 5ff956fdbe7bb49ff9e093b001b0fce3 File-Remove-0.30.ebuild 558
-RMD160 9d6625d1ecf7f4f0f6924a69de9063ee15c7d20a File-Remove-0.30.ebuild 558
-SHA256 9602ec90f76a49caae9cbfc653eea9815c6822a3d612b2e728d8505b967e0af8 File-Remove-0.30.ebuild 558
-MD5 cec2ba326b0269d089101cdd5ae22309 File-Remove-0.31.ebuild 566
-RMD160 73cf9775e5f2a31b35b31afb23c3564bfed13c83 File-Remove-0.31.ebuild 566
-SHA256 1f8ae1f3654eadb222560fa97a62527b5b827f8011c12fe9b587cbdcc2bc0143 File-Remove-0.31.ebuild 566
+MD5 6c62ecf9ae253d9e2b2ad187e6a0069a File-Remove-0.21.ebuild 562
+MD5 3c40d9c028fbf3f64435813753dfdc4c File-Remove-0.29.ebuild 569
+MD5 2680f6787f1b3e090946c23ccb2aed0d File-Remove-0.30.ebuild 562
+MD5 86ad65781c28548fb1fda4cbcad0301d File-Remove-0.31.ebuild 569
 MD5 8c0ccdccb87f15924ea07db8c351ac26 files/digest-File-Remove-0.20 65
-RMD160 019b1a843c7c53edc7b30d09c95c54548a9520a8 files/digest-File-Remove-0.20 65
-SHA256 c4fb2034adca26bec4789803cb58b2f0289c1fb0cd8a3fae79537e2245f96d47 files/digest-File-Remove-0.20 65
 MD5 6b270e3cb4b8efd02e008f12ac5baa33 files/digest-File-Remove-0.21 66
-RMD160 76f8f0febf591514b9b1a2454e77ebb9ca4225e9 files/digest-File-Remove-0.21 66
-SHA256 ae1733df68a798340d3fd2938dc921b641c09a29f2fdae015618afb1fe7a9dc7 files/digest-File-Remove-0.21 66
 MD5 c3933831892b78883367423c819e7d42 files/digest-File-Remove-0.29 66
-RMD160 cf2daf5dab8b5ba23ffba2baa4bfab01f2871b45 files/digest-File-Remove-0.29 66
-SHA256 3cad95520cc49b5aa8244a396f839e23f19f4388b643d775eadcaac7b4af779e files/digest-File-Remove-0.29 66
 MD5 2781493537f9946b8be8a000cbbfdcac files/digest-File-Remove-0.30 66
-RMD160 57ef151674bcba7d15c020d68525e76aa741bf4f files/digest-File-Remove-0.30 66
-SHA256 830bfd6f3a61fcdd906726ee57eb1aadf5eb9aa1082e89e794f6dc3c8b511661 files/digest-File-Remove-0.30 66
 MD5 821d3be17ad62b52e6e7cbe3098a2751 files/digest-File-Remove-0.31 66
-RMD160 c83895031f283e248ecda42e550148f7d9c85202 files/digest-File-Remove-0.31 66
-SHA256 c554ae98388c1bd31256a480506b4ff9bcdee5881054373c2f5510a74035458e files/digest-File-Remove-0.31 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6oClV3J2n04EauwRAkO8AJ9NfJrTQ11W9ce3XlLGUx0xGocWpwCgsqhp
-u1TEtxDbcaz7PGSXk0wL+MY=
-=KG2h
------END PGP SIGNATURE-----

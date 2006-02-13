@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cdfd75680dcdf5ba9e7c1d58263380cc ChangeLog 3164
-RMD160 f046955849fe6033fa2acf070e3d2a58039586a7 ChangeLog 3164
-SHA256 bcf5937834a4e3544a12ee00df8aea65099e81cf57d885b7a8f7ac5493f33ef6 ChangeLog 3164
-MD5 b576f8fdb814a39b353335d927127cb3 Mail-Procmail-1.06.ebuild 631
-RMD160 d6ff81e1b2f4cf01151e74f3e937fea914b33fd4 Mail-Procmail-1.06.ebuild 631
-SHA256 6af1949dbc43550b888d96fdf2ed3bcc42de644df62d833c8d28992ed313b472 Mail-Procmail-1.06.ebuild 631
-MD5 7636fa2ecd20ea0a12dd1bb267d2c8fe Mail-Procmail-1.08.ebuild 626
-RMD160 e2be739cabd864bdb6966ce28cbbd4fb3d203fb8 Mail-Procmail-1.08.ebuild 626
-SHA256 8fc598b319d43ef8dac72fb37666cb6f0c8fa4e8038f4f169e7c3b82a55f5910 Mail-Procmail-1.08.ebuild 626
+MD5 11391c047aec8a5676c05a75c90e788e ChangeLog 3302
+MD5 6f2e641d2939e05502f6ec51867def28 Mail-Procmail-1.06.ebuild 634
+MD5 5c25e966df9291c5605746108152c6c2 Mail-Procmail-1.08.ebuild 630
 MD5 1884d7932f55066730119fdaf1f5e594 files/digest-Mail-Procmail-1.06 69
-RMD160 84abbb795ebf7a9499a57105daa68c54ca8774a2 files/digest-Mail-Procmail-1.06 69
-SHA256 a53183df72e6576c25c8cb61c844fc701a75fbcecacaf26088c501b87168c20a files/digest-Mail-Procmail-1.06 69
 MD5 d0fbc5066e9fb5a5c733bb56ebbc15b6 files/digest-Mail-Procmail-1.08 69
-RMD160 8d42ba738c268ad61657c8cdabf4c2601dd33bfa files/digest-Mail-Procmail-1.08 69
-SHA256 f56ef27dcae91981e350f522300288e377dc43abc3ddbdb9aeaf086adb429326 files/digest-Mail-Procmail-1.08 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD4/rtJrHF4yAQTrARAjURAJ0bpWbThZc6zc1KRVRZeaFXn0p/vwCfT63o
-R4bse+ImlMqlDBjyblYFN5w=
-=IeSe
------END PGP SIGNATURE-----
