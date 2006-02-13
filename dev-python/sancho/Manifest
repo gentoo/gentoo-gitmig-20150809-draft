@@ -1,6 +1,37 @@
-MD5 a8039be3b66431724b82a3ee9d74875b ChangeLog 938
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bb57fdef4381b55a6ae8567ee565b277 ChangeLog 1193
+RMD160 4fa0969ac6d426993123d084024d1b7ed474e84f ChangeLog 1193
+SHA256 81f739db5371ef401eb0f4551076dedb1a5545f1d095d56494a8761b75e9be11 ChangeLog 1193
 MD5 bca61ad6d9eb1aca0d32b522d1bd85c7 files/digest-sancho-0.11 232
+RMD160 850318e6d5165b8aa70ee9a6c2907f870218386e files/digest-sancho-0.11 232
+SHA256 580d4255591a58681a94cd7d5d87dd1a3b70cb7cf62294ddbcd81aa214ed1794 files/digest-sancho-0.11 232
+MD5 bca61ad6d9eb1aca0d32b522d1bd85c7 files/digest-sancho-0.11-r1 232
+RMD160 850318e6d5165b8aa70ee9a6c2907f870218386e files/digest-sancho-0.11-r1 232
+SHA256 580d4255591a58681a94cd7d5d87dd1a3b70cb7cf62294ddbcd81aa214ed1794 files/digest-sancho-0.11-r1 232
 MD5 2206393d3f046826d15332acd5af3a0a files/digest-sancho-2.1 226
+RMD160 a0466f4e55236c0291010d7bb1a17fcc4cd99512 files/digest-sancho-2.1 226
+SHA256 71bb9afe9be424498af64b16e976f071b73f573d1a1a53c373971ed8c9ead856 files/digest-sancho-2.1 226
+MD5 3228eaf8c0618baf8dce32f9fe76a937 files/sancho-0.11-rename-package.patch 1815
+RMD160 78528d75e2ba9f87250e14473d9840ddc866208d files/sancho-0.11-rename-package.patch 1815
+SHA256 cbe7b5fa77d9a79130a140ed25bf7ab99b911b3d64e1598ecc43ffc44d6d3e17 files/sancho-0.11-rename-package.patch 1815
 MD5 09f661a26e4a48f29e21e36b354b5285 metadata.xml 221
+RMD160 b87aa62e811f10d90f8ffc0e259c3dff0dca6b8f metadata.xml 221
+SHA256 2b6e0c5b8ee7907656acfcf1e8b19cd46195d7cd80659350bba96c8f1c9c28aa metadata.xml 221
+MD5 6b16a6f0f0cc69161e545f19852d55f6 sancho-0.11-r1.ebuild 1551
+RMD160 08648d8e31a98d93c0a06b274ee3c522e87b48bf sancho-0.11-r1.ebuild 1551
+SHA256 12976206b13fc4f0db63e59afa46f1ef866afc747d5f4786878ad4e42f421cd3 sancho-0.11-r1.ebuild 1551
 MD5 529d47d4f5fd9cd78152e6e54ede3aad sancho-0.11.ebuild 673
+RMD160 1cffccad9c59bd6d170e27bc8fe81a8663ecd267 sancho-0.11.ebuild 673
+SHA256 8e49bab4e1035e9485051c46db7c5110d5617d99cc3d18b7a2b0f4e8ad7c0a58 sancho-0.11.ebuild 673
 MD5 d51137f14b233b01d99e5bb759124609 sancho-2.1.ebuild 630
+RMD160 b11c1b5afbb5dc3ddc31efaaf4ab2d3b4f09341a sancho-2.1.ebuild 630
+SHA256 69f30365f8e4e8815d6c54335970e736380c23021d96940b0102636c486563fc sancho-2.1.ebuild 630
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD8PiIW78445TWHXcRAo+6AKCK6Usb1H17bV82NmZ6zZyetuchtwCfTZNq
+H5qLDpnyt03LUrMOTxk/AQ0=
+=GA+c
+-----END PGP SIGNATURE-----
