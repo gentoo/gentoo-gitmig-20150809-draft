@@ -1,39 +1,79 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c09c13fbc0679ce8e4644f9624e2dd73 ChangeLog 13477
-MD5 7ad76f09bb0036765b4ae4ef47fce874 aterm-0.4.2-r11.ebuild 2791
-MD5 ff849761e9dc1b7e6949320c46cae324 aterm-0.4.2-r12.ebuild 2874
-MD5 fec003f13ffaa05439b8c8e5edf9ab53 aterm-0.4.2-r13.ebuild 2910
-MD5 a98503a03ed6acd38a7c03a976595d71 aterm-0.4.2-r7.ebuild 1978
-MD5 3760d8000310b330b0311eeef98de5dc aterm-0.4.2-r9.ebuild 2297
+MD5 8198acba6c6f20d849a8dcd69ceae268 ChangeLog 13728
+RMD160 5a62e63182541d0c018190bacdd8e45713d739bc ChangeLog 13728
+SHA256 f7302b79beb22730a7e3892d4f3cd2872592a8aa20984680eaa4d000c4000689 ChangeLog 13728
+MD5 9f8016bfedc984b30eb0de697721fa56 aterm-0.4.2-r11.ebuild 2976
+RMD160 f0e0afc829be749557c321fbdfbc7348e49b8445 aterm-0.4.2-r11.ebuild 2976
+SHA256 2fbd560ed029fdf42ca0bbc98b0c3662abb5ad0a2e3fcfcfab40e037fb1c918b aterm-0.4.2-r11.ebuild 2976
+MD5 f62246c7d77fd91b74d6e8e01e867d08 aterm-0.4.2-r13.ebuild 3095
+RMD160 3eabe58cee2a42fdc82994a44c7511e4addc6d59 aterm-0.4.2-r13.ebuild 3095
+SHA256 91c04362a08a4769dc80cb17b83470a132429a67d147161985e5b311ef18287f aterm-0.4.2-r13.ebuild 3095
+MD5 ff31c00dbd7b56c6790473e97a7377a3 aterm-0.4.2-r9.ebuild 2482
+RMD160 afa855e1593c23ae63cb19ecb1bf7d41f2297969 aterm-0.4.2-r9.ebuild 2482
+SHA256 f334a41d16d514eff32079618c17645bb595fcad636e844be8f83f8991f10ec1 aterm-0.4.2-r9.ebuild 2482
 MD5 2ac64aa47332df1eaee7426ea6962c08 aterm-1.0.0.ebuild 1743
-MD5 77ac6b7f993997cda277ad5ee108cc1e aterm-1.00_beta2.ebuild 1733
+RMD160 b4ec1603940c41cb665c1d7bd9adf42d4890d30d aterm-1.0.0.ebuild 1743
+SHA256 cc84128f03612d022c09cd29d5bd138b6dd9dd834c1e6116cacdd8d57606a29d aterm-1.0.0.ebuild 1743
 MD5 56383dccdb085d09e33858081b774724 files/aterm-0.4.2-borderless.patch 4692
+RMD160 9415b9e2b3b42d8971f6254732a60a89cb125abb files/aterm-0.4.2-borderless.patch 4692
+SHA256 a9dc9438a51a5fb0e59f43326d864412347a0a1e3c336c449279618ef89bb5d5 files/aterm-0.4.2-borderless.patch 4692
 MD5 cc3291cba64add4b46d22268878043f7 files/aterm-0.4.2-copynpaste-r2.patch 5308
+RMD160 78c2efcfc48c145cce078bd04696ab4ddb2cb5e6 files/aterm-0.4.2-copynpaste-r2.patch 5308
+SHA256 4b099e87869bd5a16dcd55714602c4d1b7a44c4e1fc5cb0223f22297dd5fd1c4 files/aterm-0.4.2-copynpaste-r2.patch 5308
 MD5 80558db5a2d61eaaf6998877b616bbd0 files/aterm-0.4.2-copynpaste-r3.patch 6358
+RMD160 103fe2633a3d1ec7997fce00cedaa19ed84ac4a6 files/aterm-0.4.2-copynpaste-r3.patch 6358
+SHA256 4e81f090696ef315954f5d1e7dca50eb3a66f025ffc369d47f808f828760925c files/aterm-0.4.2-copynpaste-r3.patch 6358
 MD5 1c869d8199dea55badd3758c5967e182 files/aterm-0.4.2-copynpaste.patch 3668
+RMD160 ca21648f695d12f671c266e123ece486b6888535 files/aterm-0.4.2-copynpaste.patch 3668
+SHA256 086ba6e316e93e6c296c4561f6694a6302b91c3b990c98e51994602517b6c17e files/aterm-0.4.2-copynpaste.patch 3668
 MD5 18e59b417ce4b6394317ac17da46c122 files/aterm-0.4.2-internal-border.patch 3246
+RMD160 7cb2f835b9c853c1236dde8e01841e7ff17ae2ae files/aterm-0.4.2-internal-border.patch 3246
+SHA256 7ee4aa6d10aa9415e3c45664081c512bf43b7b65cda743db5948b804c776ce06 files/aterm-0.4.2-internal-border.patch 3246
 MD5 001fefd640df8a6318e8597f86c6e08c files/aterm-0.4.2-ja-savelines.patch 4459
+RMD160 1bb926c0966bd6ced68d8ca838473260294eabba files/aterm-0.4.2-ja-savelines.patch 4459
+SHA256 88beb0577b08f78828e52477389746094494306f98842efac084287084349268 files/aterm-0.4.2-ja-savelines.patch 4459
 MD5 c2aedeeb3e7cc1dcc9361a021a570973 files/aterm-0.4.2-paste.patch 2160
+RMD160 bb0cfbba7c39350977a542919e731f3a357d4bb6 files/aterm-0.4.2-paste.patch 2160
+SHA256 aced0c1b5a23864a366cfa2718babe0d850767a3d706308b656c8c43e963a5c5 files/aterm-0.4.2-paste.patch 2160
 MD5 e91e244a20f4bff5ed4238e4cdb4d87a files/aterm-0.4.2-paste_mouse_outside.patch 6267
+RMD160 d5a9b7ac4a0e44976e7eeecb3fcae7a7e8e2bf27 files/aterm-0.4.2-paste_mouse_outside.patch 6267
+SHA256 c7b0f07fdece2130b8f36ffeceb0fe821166da95467c57e6d4efea7c552ad834 files/aterm-0.4.2-paste_mouse_outside.patch 6267
 MD5 1ddbe9b625c32cb9e67d8ee23af57110 files/aterm-0.4.2-patch-pack000.patch 4124
+RMD160 504a216ae6eba1ef229abeb9cc4ef552094e117c files/aterm-0.4.2-patch-pack000.patch 4124
+SHA256 3c51499b7130d21922bf79d3d8a2b25a328a6592e921131473d12f48f067a273 files/aterm-0.4.2-patch-pack000.patch 4124
 MD5 df2652026f1f4f3e4444db9cddc145b6 files/aterm-0.4.2-qtpaste.patch 2510
+RMD160 66a32a4697c0805e6a92a7813f80ca5097dd4ae0 files/aterm-0.4.2-qtpaste.patch 2510
+SHA256 0eb058e6a45255d2e262333849566368d0e5e7d3a8dec919c6aaf00ca9b9c6ff files/aterm-0.4.2-qtpaste.patch 2510
 MD5 8faf173b6f8032958f1bc48d7877353c files/aterm-0.4.2-savelines.patch 4081
+RMD160 03e0c0275dec9e4a4ca343202906c000f3282c9a files/aterm-0.4.2-savelines.patch 4081
+SHA256 645a7c5324860b591efa52b90c181f59747a637be867885c9a3323e1a116a9f1 files/aterm-0.4.2-savelines.patch 4081
 MD5 64a8e39eb81e3b76ec3a28e0c36b2c30 files/aterm-0.4.2-scroll-double-free.patch 1826
+RMD160 a1d3467c589c4c7ac57bc461d6991e9c84120ba8 files/aterm-0.4.2-scroll-double-free.patch 1826
+SHA256 7a2e716726f58bf14cf946a24d1753ae90c6f4cdd62af4eba87c08e99149c05b files/aterm-0.4.2-scroll-double-free.patch 1826
 MD5 05908a3d59cb6a02004062beb5c003b3 files/aterm-1.00-beta2-bgfix.patch 627
+RMD160 16fb5961e2617da6aa57dfa778fbb72fb54bf7ad files/aterm-1.00-beta2-bgfix.patch 627
+SHA256 2b8914802682e8564d5b49a05b8288c6a6ba15d289c315f99f4327d9517a1672 files/aterm-1.00-beta2-bgfix.patch 627
 MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r11 128
-MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r12 128
+RMD160 b8217efa5707162b825f3b03853eea816eab0354 files/digest-aterm-0.4.2-r11 128
+SHA256 57bf65ed8b222ceebba17a432537fb91d56b429f6d3bc3c31b5a7346f1dd8c91 files/digest-aterm-0.4.2-r11 128
 MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r13 128
-MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r7 128
+RMD160 b8217efa5707162b825f3b03853eea816eab0354 files/digest-aterm-0.4.2-r13 128
+SHA256 57bf65ed8b222ceebba17a432537fb91d56b429f6d3bc3c31b5a7346f1dd8c91 files/digest-aterm-0.4.2-r13 128
 MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r9 128
+RMD160 b8217efa5707162b825f3b03853eea816eab0354 files/digest-aterm-0.4.2-r9 128
+SHA256 57bf65ed8b222ceebba17a432537fb91d56b429f6d3bc3c31b5a7346f1dd8c91 files/digest-aterm-0.4.2-r9 128
 MD5 3063615b031d8150f3d5070def999757 files/digest-aterm-1.0.0 64
-MD5 f35d671ae7390589e50cb67736e90fc3 files/digest-aterm-1.00_beta2 69
+RMD160 7f3b9bd40b8b367310905d2058c551ce57ed7205 files/digest-aterm-1.0.0 64
+SHA256 16adbea8746f65e30a58a2ea39be856f8a7e71511d581dc0aa7233827cf76f48 files/digest-aterm-1.0.0 64
 MD5 477586a3ede65c312df804aea35d1a30 metadata.xml 163
+RMD160 46208909b296ad228342e5181a46ef97a03129c7 metadata.xml 163
+SHA256 27db507976bc3b54b88de916fc7a04aed51f3cc08c72ba9a1d012ef904bbc57c metadata.xml 163
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDuvkaZ/iYVBmujdURAqldAKCevCPPLyNbI8KfwurIaSkO6lzj8QCgzrYK
-M+3VHuc16qxSyX1IGQgsZ60=
-=5Fj1
+iD8DBQFD8PyWchej4aZK9/cRAua2AJ497/Vf1guyGBvl+SMefOBY92idRgCdHLvv
+isPKooy/a6g0RP2gpvsCgnw=
+=2VPp
 -----END PGP SIGNATURE-----

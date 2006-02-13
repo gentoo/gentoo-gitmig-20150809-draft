@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r13.ebuild,v 1.3 2005/12/28 22:26:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r13.ebuild,v 1.4 2006/02/13 21:39:02 spock Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,9 +14,21 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
 IUSE="xgetdefault"
 
-DEPEND="media-libs/jpeg
+RDEPEND="media-libs/jpeg
 	media-libs/libpng
-	virtual/x11"
+	|| ( (
+			x11-libs/libXmu
+			x11-libs/libXt
+			x11-libs/libX11
+			x11-libs/libXpm
+			x11-libs/libICE
+			x11-libs/libSM
+		)
+		virtual/x11
+	)"
+
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xproto virtual/x11 )"
 
 pkg_setup() {
 	if use linguas_ja && use linguas_zh_TW ; then
