@@ -1,9 +1,37 @@
-MD5 914d866b3e12ad862cc19c5811cddc40 ChangeLog 4534
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6d4298e4eacd66c650da8eef5a366d48 ChangeLog 4660
+RMD160 3231457737328954c35b023d28ae875ede7558a4 ChangeLog 4660
+SHA256 3b9ec8c48cb595b0d0b36c67862b6609652fa208cc682082daa5b051088f2a91 ChangeLog 4660
 MD5 dbd6370fa28b91acc3b14b5534f87866 files/digest-snes9x-1.43-r1 68
+RMD160 58be05547b96d14e4a70143ffb4dccbeab8c2ce5 files/digest-snes9x-1.43-r1 68
+SHA256 68f59d22660a5f3cf07dd8dc24f4f7cd086e4f9a0affb2c272b2ef17f187abd8 files/digest-snes9x-1.43-r1 68
 MD5 12216340a66b7cfccf1891ca058d9335 files/nojoy.patch 507
+RMD160 cc341aa07cc1ea707e66c864dd8fd5ee0234cb0c files/nojoy.patch 507
+SHA256 20f9c04757643cf6db4a9fcd7041bf23c27dc46385913f20999f4d1687b54e61 files/nojoy.patch 507
 MD5 3c7f3eecac089063f960f627df4ac7e5 files/snes9x-1.43-build.patch 1104
+RMD160 9a5502223a1f052d6c30f61293f6bb5cd36a0dd3 files/snes9x-1.43-build.patch 1104
+SHA256 40912ece42780e53259f60aa53f6cf69e49c9d6b6d17839ef06608bcac32868a files/snes9x-1.43-build.patch 1104
 MD5 9e0d124e119883f507bdffd13d9b9ff4 files/snes9x-1.43-config.patch 371
+RMD160 9d16c5ca51901b6c5abbdf1b025dfced4a9e96a7 files/snes9x-1.43-config.patch 371
+SHA256 0a99f13b0c58a78feca200c301a24dd09ebfb3aee99e74229870bd8728f93952 files/snes9x-1.43-config.patch 371
 MD5 7785101201919ebc94bcd95e2cab6017 files/snes9x-1.43-key-bindings-fix.patch 2526
+RMD160 d1dd054cf8f7f637c759ed7cd82dfb7511a0629d files/snes9x-1.43-key-bindings-fix.patch 2526
+SHA256 22a6df46d15438aaaeddc5f86564474988f810037d2810da4773ff365f907b77 files/snes9x-1.43-key-bindings-fix.patch 2526
 MD5 48de604e869ca1513f6265f5739d97b1 files/snes9x-1.43-porting.patch 1903
+RMD160 b95939f656e669dcca1df0fb5bd584e40ba6eba2 files/snes9x-1.43-porting.patch 1903
+SHA256 a38fedbd355487ac0ff28a79a39e108bd0063446befc4d5081a707f944bed286 files/snes9x-1.43-porting.patch 1903
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 061c3fe969d90095f2370f53c38a8e4e snes9x-1.43-r1.ebuild 2856
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 fa645f3c64d10acad990828f78871e8a snes9x-1.43-r1.ebuild 2868
+RMD160 e6d4d4a39a7fed04dc68f6fc87c0696b7ad0665f snes9x-1.43-r1.ebuild 2868
+SHA256 2932b467ad0d46d34bcb73db99e1019fc732b1ba2b806920b475b62b75a1a78b snes9x-1.43-r1.ebuild 2868
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7/KzCRZPokWLroQRAnIkAKCAVkaSfg35Pnb6T/SBfX4UjzBMRACeNXg+
+PNvkHp39nhva2Q26ai1MnZY=
+=GLwE
+-----END PGP SIGNATURE-----

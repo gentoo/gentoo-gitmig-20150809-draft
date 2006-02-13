@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r1.ebuild,v 1.6 2006/02/07 00:30:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r1.ebuild,v 1.7 2006/02/13 02:44:58 halcy0n Exp $
 
 # 3dfx support (glide) is disabled because it requires
 # glide-v2 while we only provide glide-v3 in portage
@@ -22,7 +22,7 @@ RDEPEND="|| ( ( x11-libs/libXext
 					   x11-libs/libXxf86vm ) )
 			  virtual/x11 )
 	media-libs/libpng
-	amd64? ( emul-linux-x86-xlibs )
+	amd64? ( app-emulation/emul-linux-x86-xlibs )
 	opengl? (
 		virtual/opengl
 		virtual/glu )"
