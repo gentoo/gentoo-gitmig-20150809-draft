@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 44f21e31a0b79d494050540dc86a67e1 ChangeLog 800
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-ExtUtils-MakeMaker-6.20 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-ExtUtils-MakeMaker-6.21 0
@@ -8,3 +11,10 @@ MD5 8b0554ff5b0cb6ee8eb9274813292c38 perl-ExtUtils-MakeMaker-6.20.ebuild 503
 MD5 a0814c5695263f9e2b8865bbe6fd01b7 perl-ExtUtils-MakeMaker-6.21.ebuild 515
 MD5 c94c1dddd1d55f2f932bd8f0443c70ad perl-ExtUtils-MakeMaker-6.30.01.ebuild 529
 MD5 83d8fef238779447a11870dff068b89f perl-ExtUtils-MakeMaker-6.30.ebuild 554
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8N0ZtG5z4I8BtQoRAnwoAKCTCSVGyC+uTRakMRjp7cUb7jf+1QCcCxj3
+UcEZdjbQVsJmpEyRDemUhKg=
+=XP9v
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 02c07fe1203b3105a86d2c5e659690e6 ChangeLog 712
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Getopt-Long-2.34 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Getopt-Long-2.35 0
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 99c26e9ebff2a7204b189ec5dad808df perl-Getopt-Long-2.34.ebuild 506
 MD5 8cfe351b1e76910daf9e99cede2d1305 perl-Getopt-Long-2.35.ebuild 515
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8N7ptG5z4I8BtQoRApmGAJ9jCuSOL64H11N9SB9oRgoaQH0/dACgia1L
+xe6DLRQ9s+nxeB5jGTuGCS0=
+=K9DP
+-----END PGP SIGNATURE-----
