@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 30991f822802f456b3ae7d87b025cc05 ChangeLog 2129
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 9d536a14ffe19e38d4a72d36f0783a54 doomlegacy-1.42.ebuild 2780
+MD5 896f3300c1a15168839cac856ddb968c ChangeLog 2205
+RMD160 795cc71ab18cf63c00c69579fdcb53ea5bd90490 ChangeLog 2205
+SHA256 624c31fd904659b35ec3c755115f9ee976aec636f98151e1a34e6221473470df ChangeLog 2205
+MD5 abcea74bc3b9390521d49c2c34260380 doomlegacy-1.42.ebuild 2957
+RMD160 3a2e7ea549ddf711646f52cf9df539f30a710a1d doomlegacy-1.42.ebuild 2957
+SHA256 70a7ef0097ee94a3d56695fa29681b0556f1a86c0627610a72fda53c894528f5 doomlegacy-1.42.ebuild 2957
 MD5 0d6de7188dfe337db9cd0b99fc2dcf05 files/1.42-errno.patch 1327
-MD5 939a6e8bb2387591d70d271c6a5c55be files/1.42-sdl-gentoo-paths.patch 495
+RMD160 b15b901bb5cfb1e4d102b880e80cc2160c62a411 files/1.42-errno.patch 1327
+SHA256 cc412d5b3b731ee157d03b03f0435c08873072ffb0cf40d22a4a4676031ad2c1 files/1.42-errno.patch 1327
 MD5 e816487fa8ac743f0b6e9691e79bac01 files/1.42-makefile.patch 4465
-MD5 bb9b722c1950d5def8c8b9acdaf97e50 files/digest-doomlegacy-1.42 131
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDOxgfcsIHjyDViGQRAt8qAJ4pjZR6HAxlvZCJSN8f6yl9rXTvPgCg4Z8n
-YrnlTrdSGrh/cbd5YtneIDc=
-=GqBz
------END PGP SIGNATURE-----
+RMD160 e071d466f53c763194ac329197b714e85391c8fd files/1.42-makefile.patch 4465
+SHA256 4a76d5c1fa544d662df83c02043f0910b4b5668ae7617c82bb12961e4dfb43c9 files/1.42-makefile.patch 4465
+MD5 939a6e8bb2387591d70d271c6a5c55be files/1.42-sdl-gentoo-paths.patch 495
+RMD160 42908e59fc523679a23dc9e6e4018bc69e169035 files/1.42-sdl-gentoo-paths.patch 495
+SHA256 1cc2f13c64a6986e5447ac96ba90ba49dc8f90035b4f79c9f84e9074b7817710 files/1.42-sdl-gentoo-paths.patch 495
+MD5 81bd5eda4d58449a0d6dcdf195fccfba files/digest-doomlegacy-1.42 485
+RMD160 d56895a9254f78836a92e96e5fd311f5528c972a files/digest-doomlegacy-1.42 485
+SHA256 9fbe10efcf5602379996d298801f528816629887954ef6262de25ebe1c3bbcbb files/digest-doomlegacy-1.42 485
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
