@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.97.6.ebuild,v 1.1 2006/01/30 00:33:17 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.97.6.ebuild,v 1.2 2006/02/13 14:52:53 mcummings Exp $
 
 
 inherit perl-module eutils
@@ -32,7 +32,7 @@ DEPEND="gnome? ( gnome-extra/gtkhtml )
 	dev-perl/gtk2-perl
 	>=dev-perl/gtk2-ex-formfactory-0.59
 	>=dev-perl/Event-RPC-0.84
-	perl-core/Storable
+	virtual/perl-Storable
 	dev-perl/Event"
 RDEPEND="${DEPEND}
 	fping? ( >=net-analyzer/fping-2.3 )

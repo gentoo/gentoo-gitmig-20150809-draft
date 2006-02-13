@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.56 2006/01/30 00:33:17 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.57 2006/02/13 14:52:53 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org> dvdrip-0.52.0.ebuild,
+  dvdrip-0.52.3.ebuild, dvdrip-0.52.3-r1.ebuild, dvdrip-0.52.5.ebuild,
+  dvdrip-0.97.6.ebuild:
+  Virtuals for perl-core
 
 *dvdrip-0.97.6 (30 Jan 2006)
 
