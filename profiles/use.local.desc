@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1732 2006/02/13 19:48:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1733 2006/02/13 20:10:03 chutzpah Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -785,6 +785,7 @@ media-video/mplayer:i8x0 - Enables support for the i8x0 xvmc video driver
 media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:lzo - Enables support for lzo compression
 media-video/mplayer:mmxext - enables mmx2 support
+media-video/mplayer:musepack - Enables support for the musepack audio codec
 media-video/mplayer:mythtv - Enables mythtv support in mplayer
 media-video/mplayer:nvidia - Enables support for the nvidia xvmc video driver
 media-video/mplayer:real - Adds real video support
