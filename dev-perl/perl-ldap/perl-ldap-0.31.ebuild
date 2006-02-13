@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.31.ebuild,v 1.13 2005/05/24 15:52:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.31.ebuild,v 1.14 2006/02/13 14:26:31 mcummings Exp $
 
 inherit perl-module
 
@@ -15,6 +15,6 @@ IUSE="sasl xml ssl"
 
 DEPEND="dev-perl/Convert-ASN1
 	dev-perl/URI
-	sasl? ( perl-core/Digest-MD5 dev-perl/Authen-SASL )
+	sasl? ( virtual/perl-Digest-MD5 dev-perl/Authen-SASL )
 	xml? ( dev-perl/XML-Parser )
 	ssl? ( >=dev-perl/IO-Socket-SSL-0.81 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/crypt-dh-0.06.ebuild,v 1.5 2006/02/06 20:43:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/crypt-dh-0.06.ebuild,v 1.6 2006/02/13 14:19:51 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,5 @@ KEYWORDS="alpha amd64 hppa ~mips ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="dev-perl/math-pari
-	>=perl-core/Math-BigInt-1.60
+	>=virtual/perl-Math-BigInt-1.60
 	dev-perl/crypt-random"

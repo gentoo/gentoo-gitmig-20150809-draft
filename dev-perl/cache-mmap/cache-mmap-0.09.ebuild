@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cache-mmap/cache-mmap-0.09.ebuild,v 1.2 2006/01/13 18:11:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cache-mmap/cache-mmap-0.09.ebuild,v 1.3 2006/02/13 14:17:39 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,5 @@ KEYWORDS="~ppc sparc x86"
 IUSE=""
 SRC_TEST="do"
 
-DEPEND="perl-core/Test-Simple
-		perl-core/Storable"
+DEPEND="virtual/perl-Test-Simple
+		virtual/perl-Storable"

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Validate-Net/Validate-Net-0.4.ebuild,v 1.9 2005/05/25 15:16:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Validate-Net/Validate-Net-0.4.ebuild,v 1.10 2006/02/13 14:12:16 mcummings Exp $
 
 inherit perl-module
 
@@ -13,6 +13,6 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 alpha ~hppa ~mips ~ppc ~sparc"
 IUSE=""
 
-DEPEND="perl-core/Test-Simple
+DEPEND="virtual/perl-Test-Simple
 	dev-perl/Class-Default
 	dev-perl/Class-Inspector"
