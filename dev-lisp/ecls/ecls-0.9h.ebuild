@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9h.ebuild,v 1.1 2005/11/23 17:35:06 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9h.ebuild,v 1.2 2006/02/13 19:52:59 mkennedy Exp $
 
 inherit eutils
 
@@ -11,8 +11,7 @@ SLOT="0"
 LICENSE="BSD LGPL-2"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 
-DEPEND="X? ( virtual/x11 )
-	=dev-libs/gmp-4*
+DEPEND="=dev-libs/gmp-4*
 	app-text/texi2html"
 
 # ECL fails to build with a system-installed Boehm GC (which apparently is a

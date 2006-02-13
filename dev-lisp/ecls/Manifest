@@ -1,20 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ef7c068bcdc13db8c805ba33fc60969a ChangeLog 3688
-MD5 927b3a8bdfa395b76dd4432d68282544 ecls-0.9g.ebuild 1531
-MD5 f991112892734459cfe7d452f05d0768 ecls-0.9h.ebuild 1529
+MD5 4eee11e4a08d690351e4639cfa42633e ChangeLog 4032
+RMD160 eaac1a841479edb2c87b75ee2787d57329a54fd5 ChangeLog 4032
+SHA256 b1eb733e7952a61ee94e4a066c81bd904ca67a733826c8e866fa0894f93cbc61 ChangeLog 4032
+MD5 ee4edbec39802e991e74b027bcade2cd ecls-0.9g.ebuild 1511
+RMD160 94b1ebed646695f0b957fef461e063cc9e97b5a6 ecls-0.9g.ebuild 1511
+SHA256 48929073466dbb4b9eef24d97ff32a55b8627138f21e78ac377a13cfdbe43e3c ecls-0.9g.ebuild 1511
+MD5 0baa78b8881cbcfe0abf301b470187b6 ecls-0.9h-r1.ebuild 1579
+RMD160 dc2e79df0b5e4ba096bb364d4c141771c09a4efa ecls-0.9h-r1.ebuild 1579
+SHA256 f11b260d3bb12ca75a348138559e8196bf8bc4d54066188d5c5769716671ed9d ecls-0.9h-r1.ebuild 1579
+MD5 32f9e774d58b322424f76e0acffb281c ecls-0.9h.ebuild 1509
+RMD160 eff06fc2da39da349b984b3644b4ee2b197f0a33 ecls-0.9h.ebuild 1509
+SHA256 e9f9fbf14280eaef6d56c834682ad595dd6ab1a595cf9b3033835d954708b66f ecls-0.9h.ebuild 1509
 MD5 bed677570016aaa3cf266b1f3dfb3f1d files/0.9g-headers-gentoo.patch 953
+RMD160 5ca5f883f878b12b76f6ecb1d0095fcc7e83aec6 files/0.9g-headers-gentoo.patch 953
+SHA256 3e69c4e970f3a12cce9709da18ab8bf1ae147b38465a106e3c73f0beeb484a12 files/0.9g-headers-gentoo.patch 953
 MD5 75bc0682daa901b633e87d59aec109cf files/0.9h-headers-gentoo.patch 953
+RMD160 c288753b7e88ff03e7f36ab17e46439df922879b files/0.9h-headers-gentoo.patch 953
+SHA256 19921fea0f77a87a56259610fd0b7db2aa2e4146f83c24515565b18d3a5cdd57 files/0.9h-headers-gentoo.patch 953
 MD5 6bb1331295f4578b761ddd80c21cad65 files/README.Gentoo 1541
+RMD160 273d30836f5c9a4b397e171fa82e8e19b644aff0 files/README.Gentoo 1541
+SHA256 0340275514981eb14283e838a80448d9dd6742628b248100f58456ac3e209691 files/README.Gentoo 1541
 MD5 724bb27333efdd7d76a33649fb9cba42 files/clc-lite.lisp 3708
+RMD160 755106987d588b9b4291f5cc890ecfdbc76db02d files/clc-lite.lisp 3708
+SHA256 4ab1512be625a6216fa7730743e7227d6c468e700d5fcdb5255c11eea820eb89 files/clc-lite.lisp 3708
 MD5 6f8435672be37dfcc68686efa0a3cfef files/digest-ecls-0.9g 61
+RMD160 4937ea86316aa4dee2185bee4217ebbc1931b9e5 files/digest-ecls-0.9g 61
+SHA256 f89edd3420c53055fdbf2c483be6a769f0dc868f2f874e8b3281016c79a52326 files/digest-ecls-0.9g 61
 MD5 aac215d1238f7f6a84ec61ad684a05b0 files/digest-ecls-0.9h 58
+RMD160 85fccadee5dcec4b15820ec0212dfc0424c95021 files/digest-ecls-0.9h 58
+SHA256 532667ef66f260381514ae7dad78e82227067204a4999eccf36591cd0c6683f5 files/digest-ecls-0.9h 58
+MD5 68a5cf9bb9260814807445c39d75d33e files/digest-ecls-0.9h-r1 220
+RMD160 f2ad5d36b008a176d4a4fd796c957cd72fa27917 files/digest-ecls-0.9h-r1 220
+SHA256 fe8d5d65eca3c98a72e9271ac441146718b5b61adb3418e53e4c93872d284a9c files/digest-ecls-0.9h-r1 220
 MD5 c4fffb85c7522845dc9697f7a8f4cb49 metadata.xml 459
+RMD160 6e5f517c105a091c8d2b066ee0333aea6d783283 metadata.xml 459
+SHA256 7a385182f8ffcb8bf6a6a856cb54529dd768f83751f7b4fbdfdb28594d42ef82 metadata.xml 459
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDhKj/yiNZaEAZA+ARAubIAJ4lHKiX+VcI6WnvJs+wrQWYBZslngCfVJMi
-rS9B2LgIupBXY2AojbYlRPY=
-=CbSn
+iD8DBQFD8OOpyiNZaEAZA+ARAvxiAJ0STwDvz0CXGJTqa1OYLoI+mClijQCeMbaP
+t8TeTPiCVTtoJUpgtDw/myE=
+=+9SO
 -----END PGP SIGNATURE-----

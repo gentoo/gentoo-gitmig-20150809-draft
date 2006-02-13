@@ -1,15 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9g.ebuild,v 1.2 2006/02/13 19:52:59 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9h-r1.ebuild,v 1.1 2006/02/13 19:52:59 mkennedy Exp $
 
 inherit eutils
 
 DESCRIPTION="ECL is an embeddable Common Lisp implementation."
-SRC_URI="mirror://sourceforge/ecls/ecl-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/ecls/ecl-${PV}.tgz"
 HOMEPAGE="http://ecls.sourceforge.net/"
 SLOT="0"
 LICENSE="BSD LGPL-2"
-KEYWORDS="x86 ~ppc ~amd64 ~sparc"
+# KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="-*"					# Pending Bug #122236
 
 DEPEND="=dev-libs/gmp-4*
 	app-text/texi2html"
@@ -21,7 +22,7 @@ DEPEND="=dev-libs/gmp-4*
 
 #	dev-libs/boehm-gc
 
-IUSE="X"
+IUSE="X c++"
 
 PROVIDE="virtual/commonlisp"
 
@@ -40,6 +41,7 @@ src_compile() {
 		--with-clos-streams
 		--with-cmuformat
 		--with-asdf
+		`use_with c++ cxx`
 		`use_with X x`
 		`use_with X clx`"
 	einfo "Configuring with: $myconf"
