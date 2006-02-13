@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b9f5cf822a6b425847cbef9017b39e97 ChangeLog 1254
-MD5 09ae0053bc71818102c6b8fb95bf6416 ivtv-ptune-0.2.0_rc3.ebuild 821
-MD5 212f198236ed9fef7b10b46f8cb80c63 metadata.xml 446
+MD5 c48c084b4ac768c777eab53b173fc9db ChangeLog 1366
 MD5 39420103c712943482e260b73f32cf1f files/digest-ivtv-ptune-0.2.0_rc3 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClIWatG5z4I8BtQoRAkiiAJ91e2QFs6tyQBTfShaNqb0rTTNHLwCeOcbZ
-0HvBFoHk9aeecwVdaRNWrdE=
-=+U9v
------END PGP SIGNATURE-----
+MD5 bfade7da6200cbe940a78f5dc3bff3f3 ivtv-ptune-0.2.0_rc3.ebuild 824
+MD5 212f198236ed9fef7b10b46f8cb80c63 metadata.xml 446
