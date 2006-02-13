@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/Embperl/Embperl-2.0_rc4.ebuild,v 1.1 2005/08/08 12:51:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/Embperl/Embperl-2.0_rc4.ebuild,v 1.2 2006/02/13 15:10:52 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -24,7 +24,7 @@ DEPEND="${DEPEND}
 	session? ( >=dev-perl/Apache-Session-1.60
 		dev-perl/Apache-SessionX )
 	dev-perl/HTML-Parser
-	perl-core/CGI
+	virtual/perl-CGI
 	dev-libs/libxml2
 	>=dev-libs/libxslt-1.0.4"
 	# Leftout until xalan is keyworded
