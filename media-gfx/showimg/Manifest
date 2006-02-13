@@ -1,6 +1,28 @@
-MD5 9ef0d7e27e5311181168b9a55575c026 ChangeLog 3201
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 908c2e457a05946af50215301ec1c0c0 ChangeLog 3316
+RMD160 e0ac85f60e17a32e3f555b2cd3220549b4433380 ChangeLog 3316
+SHA256 23a67ac53bcd4b13b47c194d0829320d8db0c125a97de23cc7cc8aac99d9522d ChangeLog 3316
 MD5 fcb67a07b4a8e10c2e4a1825a500baf9 files/digest-showimg-0.9.4.1 69
+RMD160 c76dfc367281696dfd9e236b838488c4f6d3a680 files/digest-showimg-0.9.4.1 69
+SHA256 1e0286b8aeb2c7a655f61d57c914de5c916ccb38e120517bdeba69be09e4d14f files/digest-showimg-0.9.4.1 69
 MD5 5f26ceaf7165ae9745830125576fd563 files/digest-showimg-0.9.5 67
+RMD160 fa8efaf344b0a6633e1e2a4162ddd1d2edfedcae files/digest-showimg-0.9.5 67
+SHA256 1b1c234d90e12c5d8c7a686aa8e3a548abd8b05f1680a1ff0bac23ced0421933 files/digest-showimg-0.9.5 67
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 MD5 3bfc3fc507e7483ab9d839c95624f668 showimg-0.9.4.1.ebuild 754
-MD5 c18c11db36961e423cdb6d4f3eae2d31 showimg-0.9.5.ebuild 1157
+RMD160 9ede5719c91a0b355c0f4f65c5507fbe3a5ba64f showimg-0.9.4.1.ebuild 754
+SHA256 73f4d044f80d7bcb7ff36f2c3c9b500719e66d9dc5346af6ca2e29a39b327848 showimg-0.9.4.1.ebuild 754
+MD5 9e6812f83fa1854c4d715600cc0153f1 showimg-0.9.5.ebuild 1161
+RMD160 7520fd6ed4263eae4390b9680f726dd992c61b3c showimg-0.9.5.ebuild 1161
+SHA256 d6a8226937baaabdf5d4a0e3f608ed3b5ff545032a2b0e46a13bcff8acf937d6 showimg-0.9.5.ebuild 1161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD7/E4CRZPokWLroQRArumAJ4tnnFD2SKGD0F8IQutrlQQcnvoKwCfSKS8
+lPnXnhkjoYsIW/dXISn1WRY=
+=ureO
+-----END PGP SIGNATURE-----
