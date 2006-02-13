@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/led/led-1.79.4.ebuild,v 1.3 2005/10/18 18:30:37 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/led/led-1.79.4.ebuild,v 1.4 2006/02/13 15:00:47 mcummings Exp $
 
 inherit eutils
 DESCRIPTION="led is a general purpose LDAP editor"
@@ -14,7 +14,7 @@ IUSE=""
 DEPEND=">=dev-lang/perl-5.6.1
 	dev-perl/perl-ldap
 	dev-perl/URI
-	perl-core/Digest-MD5
+	virtual/perl-Digest-MD5
 	dev-perl/Authen-SASL"
 
 src_compile() {

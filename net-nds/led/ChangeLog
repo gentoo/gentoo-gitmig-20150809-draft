@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/led
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/led/ChangeLog,v 1.3 2005/10/18 18:30:37 sekretarz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/led/ChangeLog,v 1.4 2006/02/13 15:00:47 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org> led-1.79.4.ebuild:
+  Virtuals for some perl-core deps
 
   18 Oct 2005; Karol Wojtaszek <sekretarz@gentoo.org> led-1.79.4.ebuild:
   ~amd64 keyworded
