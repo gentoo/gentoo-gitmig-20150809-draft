@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.6.ebuild,v 1.2 2006/02/13 12:02:13 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.6.ebuild,v 1.3 2006/02/13 15:30:52 metalgod Exp $
 
 inherit eutils gnome2 mono
 
@@ -63,7 +63,7 @@ pkg_setup() {
 		eerror "avahi, and then emerge banshee."
 		die "net-dns/avahi is missing the .NET binding."
 	fi
-	
+
 	if use real; then
 		G2CONF="${G2CONF} --enable-helix --with-helix-libs=/opt/RealPlayer/"
 	fi
@@ -73,8 +73,8 @@ pkg_setup() {
 		else
 		G2CONF="${G2CONF} --disable-daap"
 	fi
-	
-	G2CONF="${G2CONF} --disable-xing 
+
+	G2CONF="${G2CONF} --disable-xing \
 			--disable-docs \
 			$( use_enable ipod) \
 			$( use_enable njb)"
