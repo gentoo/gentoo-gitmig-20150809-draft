@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e5fb0421c6011a50f48488c1cfa6f1c6 uulib-0.9.1.ebuild 1072
-MD5 3403a1f9848e6a9b6534be6a4c1f3662 ChangeLog 311
-MD5 5cf11c08544b065d0144e11273f0000d metadata.xml 223
+MD5 e2224b9aff8532c2f15c6e39f4e503c7 ChangeLog 394
 MD5 8f1c7ee8e8efe29f348b7e0c87122e4d files/digest-uulib-0.9.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDoCrA/B0cxt+cq+wRAnoeAJwJF/GwBzxkjS+tE5dvc42/3e00CQCgilFL
-2j7sLPKgeesAczsS9eeYGQ0=
-=acAx
------END PGP SIGNATURE-----
+MD5 5cf11c08544b065d0144e11273f0000d metadata.xml 223
+MD5 7a4dcc550c19b5c85b6067e78ea76241 uulib-0.9.1.ebuild 1069
