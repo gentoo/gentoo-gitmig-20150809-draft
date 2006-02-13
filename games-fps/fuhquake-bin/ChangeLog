@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/fuhquake-bin
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/ChangeLog,v 1.1 2004/12/28 05:25:34 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/ChangeLog,v 1.2 2006/02/13 22:16:11 tupone Exp $
+
+  13 Feb 2006; <Tupone@gentoo.org> fuhquake-bin-0.31.ebuild:
+  Respect use flags Bug 106706 (thanks to Adrian Fruehwirth)
+  Modular X dependency fix
 
 *fuhquake-bin-0.31 (28 Dec 2004)
 

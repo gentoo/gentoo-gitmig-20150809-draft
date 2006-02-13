@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 abd4ff108a47ce60557d07da7fa38981 ChangeLog 357
-MD5 073dc58c3b27fc65dbeafdf60586cb34 files/digest-fuhquake-bin-0.31 204
-MD5 08e2a5c52f2df8e38273c71c814edf69 fuhquake-bin-0.31.ebuild 1344
+MD5 540205b77734c3236200d0da60fd135f ChangeLog 507
+RMD160 70e90daa4607d1252daa6e9c54eec31abda974f4 ChangeLog 507
+SHA256 0848ec3d2c7dddf99d4a8bd1c744cf1244791932b1cbc161a8bf601c703962e7 ChangeLog 507
+MD5 f02cb9769f03cdec0c9cbd39ba477203 files/digest-fuhquake-bin-0.31 750
+RMD160 b43e25db3452bca70109b73da02eb8b597342a4c files/digest-fuhquake-bin-0.31 750
+SHA256 9af261339d7881e9c5a644bd97c6c76a311d723eede21df32081e90036ee8450 files/digest-fuhquake-bin-0.31 750
+MD5 c51d2e516e78a4f4b96c07a35e33b7c0 fuhquake-bin-0.31.ebuild 1633
+RMD160 56205634b4a1e839f1feae062c6d8dd342f23ef3 fuhquake-bin-0.31.ebuild 1633
+SHA256 e5cfda36815bdc4e95c599ff35604b480599cf3a62800c1863035db81cd74be6 fuhquake-bin-0.31.ebuild 1633
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDbTbLgIKl8Uu19MoRAkUrAJ9tSgd/J6pW2frF/sd9gVoCPvB9FgCeMtpg
-t0xbHq5uc5mKiRQJi8yxAYk=
-=lL68
------END PGP SIGNATURE-----
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
