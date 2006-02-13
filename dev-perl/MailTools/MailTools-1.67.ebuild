@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/MailTools-1.67.ebuild,v 1.10 2006/02/06 20:30:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/MailTools-1.67.ebuild,v 1.11 2006/02/13 11:49:46 redhatter Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~markov/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 SRC_TEST="do"
 
