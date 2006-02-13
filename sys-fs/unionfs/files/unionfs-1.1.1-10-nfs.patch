@@ -1,0 +1,20 @@
+--- inode.c.orig	2005-10-27 10:01:48.000000000 +0200
++++ inode.c	2005-10-27 10:02:50.000000000 +0200
+@@ -826,7 +826,7 @@
+ 
+ /* Basically copied from the kernel vfs permission(), but we've changed
+  * the following: (1) the IS_RDONLY check is skipped, and (2) if you define
+- * -DNFS_SECURITY_HOLE, we assume that -EACCESS means that the export is
++ * -DNFS_SECURITY_HOLE, we assume that -EACCES means that the export is
+  * read-only and we should check standard Unix permissions.  This means
+  * that NFS ACL checks (or other advanced permission features) are bypassed.
+  */
+@@ -856,7 +856,7 @@
+ 		retval = inode->i_op->permission(inode, submask, nd);
+ #ifdef NFS_SECURITY_HOLE
+ #define IS_NFS(inode) (strcmp("nfs", (inode)->i_sb->s_type->s_name))
+-		if ((retval == -EACCESS) && (submask & MAY_WRITE) &&
++		if ((retval == -EACCES) && (submask & MAY_WRITE) &&
+ 		    IS_NFS(inode)) {
+ 			retval = generic_permission(inode, submask, NULL);
+ 		}

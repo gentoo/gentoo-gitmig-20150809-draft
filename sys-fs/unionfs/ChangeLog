@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/unionfs
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.16 2005/10/15 13:43:49 genstef Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.17 2006/02/13 13:41:34 satya Exp $
+
+*unionfs-1.1.2 (13 Feb 2006)
+*unionfs-1.1.1 (13 Feb 2006)
+
+  13 Feb 2006; Christian Andreetta <satya@gentoo.org>
+  +files/unionfs-1.1.1-10-nfs.patch, metadata.xml, +unionfs-1.1.1.ebuild,
+  +unionfs-1.1.2.ebuild:
+  Maintainer change. Version bump and nfs support (bug #110317): thanks to all
+  testers
 
 *unionfs-1.0.14 (15 Oct 2005)
 
