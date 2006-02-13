@@ -1,58 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 71356e00d297aeb15ec4c5ce084ea17c ChangeLog 10232
-RMD160 fc61120812037c57501c9a3c5f723a06d3dbac2e ChangeLog 10232
-SHA256 7154472a576f3068d0a0bb2333adeda7d408df563ed69ee0849f9d44c80fa96c ChangeLog 10232
-MD5 ce620ca606a3676f16e0a8c6bc4e4276 bugzilla-2.18.4.ebuild 1829
-RMD160 39fbe76ce51c477c33cf6b321eecfb6b9d5c744d bugzilla-2.18.4.ebuild 1829
-SHA256 d1734cddf0c11520bd822c882fe6b8db49449511d747d5cfd66ba6ae1c55e134 bugzilla-2.18.4.ebuild 1829
-MD5 47aa0157107e020c3ad3537ae57d016d bugzilla-2.20.ebuild 1857
-RMD160 228ccfeed0516f9fddb05543503456e448ac1c4c bugzilla-2.20.ebuild 1857
-SHA256 2ba7809bedfe680c4c87b2cddb80970a90d8fe1723bc9f9552f21800ec9ca5e6 bugzilla-2.20.ebuild 1857
+MD5 2914efed05bf61c7a6183a8dbbff8dd8 ChangeLog 10372
+MD5 fb95cce876dc94a88a9476dc23e8264a bugzilla-2.18.4.ebuild 1836
+MD5 6d3a6c5d76711b4ca96e5ebda63660a8 bugzilla-2.20.ebuild 1874
 MD5 42151252d49e42c9839f80c80dff9138 files/2.18/apache.htaccess 94
-RMD160 7492341edfe6ff1396908ceb6fbeccfadc8822df files/2.18/apache.htaccess 94
-SHA256 c20815b7f9b92a6971d0372e34e4c24b700c5e7228e8903bc7715aa3e6e22709 files/2.18/apache.htaccess 94
 MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.18/bugzilla.cron.daily 115
-RMD160 248700f6e811dd958fc3774b63c07d5e85ae477e files/2.18/bugzilla.cron.daily 115
-SHA256 004cf631625c9a6f2b0aeccf2a2ead815008f59029326c13b28658586023b241 files/2.18/bugzilla.cron.daily 115
 MD5 b38d67b03726b84833bd8c5f632e4020 files/2.18/bugzilla.cron.tab 54
-RMD160 199919c125f0b214e17d6eadf909f7172b025137 files/2.18/bugzilla.cron.tab 54
-SHA256 ccbc9369bf52e6afd91e31ba2a89fa9a0bbbdae080e0fa7eb26d06fa21ef1eab files/2.18/bugzilla.cron.tab 54
 MD5 06e21bd2fe59b4517ed05fb46c1bff9e files/2.18/postinstall-en.txt 148
-RMD160 7abeff1ff94cd6045d26513437b947bab7c5c0f9 files/2.18/postinstall-en.txt 148
-SHA256 b1ad0355b37980b42737eaff8808593150134ff186cbc9624561fbbb9c4e07f2 files/2.18/postinstall-en.txt 148
 MD5 c1913bf27d5ee8cd7f4f88de0b88312a files/2.18/reconfig 348
-RMD160 bf9336937fe0189ef3e7e8a03bc33a752bc212f1 files/2.18/reconfig 348
-SHA256 3a4c0c9d2dfad7bb5eae75bc325de816d803b1aae380ff76f8c10a92f13e6532 files/2.18/reconfig 348
 MD5 42151252d49e42c9839f80c80dff9138 files/2.20/apache.htaccess 94
-RMD160 7492341edfe6ff1396908ceb6fbeccfadc8822df files/2.20/apache.htaccess 94
-SHA256 c20815b7f9b92a6971d0372e34e4c24b700c5e7228e8903bc7715aa3e6e22709 files/2.20/apache.htaccess 94
 MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.20/bugzilla.cron.daily 115
-RMD160 248700f6e811dd958fc3774b63c07d5e85ae477e files/2.20/bugzilla.cron.daily 115
-SHA256 004cf631625c9a6f2b0aeccf2a2ead815008f59029326c13b28658586023b241 files/2.20/bugzilla.cron.daily 115
 MD5 b38d67b03726b84833bd8c5f632e4020 files/2.20/bugzilla.cron.tab 54
-RMD160 199919c125f0b214e17d6eadf909f7172b025137 files/2.20/bugzilla.cron.tab 54
-SHA256 ccbc9369bf52e6afd91e31ba2a89fa9a0bbbdae080e0fa7eb26d06fa21ef1eab files/2.20/bugzilla.cron.tab 54
 MD5 7b5e1b8ee2d4e49224f15287c5070b57 files/2.20/postinstall-en.txt 278
-RMD160 e7eba2a3f377016db9849dfdab4c0b6586b91d05 files/2.20/postinstall-en.txt 278
-SHA256 b0c8e62363b6b3a08e1c91f73b7fb294e17dd96b02ec3885ff19c7499c9f47d8 files/2.20/postinstall-en.txt 278
 MD5 899c42853fbf73268c49d3602eae77d2 files/2.20/reconfig 349
-RMD160 e5658372e9a1b67a39a0090e1a638261e05cf10a files/2.20/reconfig 349
-SHA256 8301aeda585234ed30cc8ffa8fc6e72138ed8e9d50c695dd2455dcc7d175aa50 files/2.20/reconfig 349
 MD5 4a34a6ec468afb645b29aaddedeef49a files/digest-bugzilla-2.18.4 68
-RMD160 7c59430d7d23e5d2f1f0ee8b91a856d530b1df5e files/digest-bugzilla-2.18.4 68
-SHA256 f4d280c35c7ac660ff27be8a43322351cbd045ac2fdd287597f9b5c78d916d23 files/digest-bugzilla-2.18.4 68
 MD5 24f132ccd4b11bb49c26326fd0584f4c files/digest-bugzilla-2.20 66
-RMD160 be28d0a89f69bc9970d826a54fc2dc848bc6ef35 files/digest-bugzilla-2.20 66
-SHA256 96ae799852c51ae5f52db7f80a3fca5be811b28ac2e801c996c9d658e8c571c8 files/digest-bugzilla-2.20 66
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-RMD160 d47e924599b33a35a50f4c9f5564d325c271f83b metadata.xml 161
-SHA256 9cd891fcf0af580e98b62d2f4ded9e53671599f5a7aafd5dce692b996d2a83f4 metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6n+hJrHF4yAQTrARAjuhAKCxCTpjEn/F026OzwSk3OHJw7/5DACbBWBV
-qomdhdc8FXtq77uufkunSQw=
-=iAzy
------END PGP SIGNATURE-----
