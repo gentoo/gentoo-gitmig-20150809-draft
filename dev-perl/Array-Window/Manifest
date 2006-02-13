@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 92fc7712d67b3c82b6b606e9fa3a8a4a Array-Window-0.4.ebuild 610
 RMD160 5fa2bfa97a3c62117b0b3b33042586dc385cfbbd Array-Window-0.4.ebuild 610
 SHA256 64fd6e00714a714d75ff1878370838c8e152a520dba574804703ac88b4d5cd4b Array-Window-0.4.ebuild 610
@@ -10,3 +13,10 @@ SHA256 eb6b6f07f2d3f142ed7f1d1ef3eb1adccb4f89d856af663603ef091c4af6c39d files/di
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD8GIQtG5z4I8BtQoRAvCzAJ4lbCbntkxn8fYikcegxf9Cxqwr9gCgjhzK
+g5KVnJU7Mrq2gMRdFdMrnkk=
+=fUsH
+-----END PGP SIGNATURE-----
