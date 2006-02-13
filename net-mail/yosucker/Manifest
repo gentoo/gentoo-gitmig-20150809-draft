@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 eecfe3bccdc8c686d30de4e5e2790894 ChangeLog 5745
 MD5 c80a8bac90b2d1186412529e4c8d5c4b files/digest-yosucker-69 64
 MD5 2ebd58c77bf0031ce84e49bc738eda12 files/digest-yosucker-71 64
@@ -7,3 +10,10 @@ MD5 cdedd7a5f3fa8a715902052225e95fc1 metadata.xml 374
 MD5 818399c7f9338880068b75f1cebd419a yosucker-69.ebuild 1036
 MD5 17816378872f779c68bea6a6b86e0173 yosucker-71.ebuild 1035
 MD5 2c41433e7be9f767cc901c9f1af8ecee yosucker-73.ebuild 1105
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8J7ntG5z4I8BtQoRAgOEAKCMT/oNARLkitIkbB71urtji+WB4ACfYxlA
+RKLqp65X/YJRiHTA6bm2I1Q=
+=LDif
+-----END PGP SIGNATURE-----
