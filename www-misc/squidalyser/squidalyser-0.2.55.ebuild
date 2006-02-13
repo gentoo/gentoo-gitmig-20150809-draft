@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/squidalyser/squidalyser-0.2.55.ebuild,v 1.7 2005/05/25 15:33:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/squidalyser/squidalyser-0.2.55.ebuild,v 1.8 2006/02/13 15:24:01 mcummings Exp $
 
 inherit eutils
 
@@ -17,11 +17,11 @@ KEYWORDS="x86 ~sparc alpha ppc"
 
 DEPEND="net-proxy/squid
 	dev-lang/perl
-	perl-core/CGI
+	virtual/perl-CGI
 	dev-perl/DBI
 	dev-perl/DBD-mysql
 	dev-perl/Time-modules
-	perl-core/Time-HiRes
+	virtual/perl-Time-HiRes
 	dev-perl/GD
 	dev-perl/GDGraph
 	dev-perl/GDTextUtil
