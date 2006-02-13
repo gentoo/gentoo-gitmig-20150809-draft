@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/XML-Stream-1.22.ebuild,v 1.10 2005/09/17 00:48:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/XML-Stream-1.22.ebuild,v 1.11 2006/02/13 14:17:01 mcummings Exp $
 
 inherit perl-module
 
@@ -18,4 +18,4 @@ SRC_TEST="do"
 DEPEND="dev-perl/Authen-SASL
 	dev-perl/Net-DNS
 	ssl? ( dev-perl/IO-Socket-SSL )
-	perl-core/MIME-Base64"
+	virtual/perl-MIME-Base64"

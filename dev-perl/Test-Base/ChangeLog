@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Base
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.6 2006/01/23 20:45:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.7 2006/02/13 14:03:55 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  Test-Base-0.46.ebuild, Test-Base-0.47.ebuild:
+  Virtuals for perl-core
 
   23 Jan 2006; Markus Rothe <corsair@gentoo.org> Test-Base-0.47.ebuild:
   Added ~ppc64; bug #119199

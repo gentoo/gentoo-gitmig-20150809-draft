@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/convert-pem-0.06.ebuild,v 1.17 2005/11/25 23:07:19 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/convert-pem-0.06.ebuild,v 1.18 2006/02/13 14:19:06 mcummings Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ~ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="perl-core/MIME-Base64
+DEPEND="virtual/perl-MIME-Base64
 	dev-perl/Convert-ASN1
-	perl-core/Digest-MD5
+	virtual/perl-Digest-MD5
 	dev-perl/crypt-des-ede3"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/crypt-cbc-2.15.ebuild,v 1.7 2006/02/04 16:34:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/crypt-cbc-2.15.ebuild,v 1.8 2006/02/13 14:19:33 mcummings Exp $
 
 inherit perl-module
 
@@ -16,4 +16,4 @@ KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 SRC_TEST="do"
 
-DEPEND="perl-core/Digest-MD5"
+DEPEND="virtual/perl-Digest-MD5"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/Test-Exception-0.21.ebuild,v 1.1 2006/01/13 16:36:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/Test-Exception-0.21.ebuild,v 1.2 2006/02/13 14:06:07 mcummings Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 SRC_TEST="do"
 
-DEPEND="|| ( 	>=perl-core/Test-Simple-0.62
-		( <perl-core/Test-Simple-0.62 dev-perl/Test-Builder-Tester ) )
+DEPEND="|| ( 	>=virtual/perl-Test-Simple-0.62
+		( <virtual/perl-Test-Simple-0.62 dev-perl/Test-Builder-Tester ) )
 	dev-perl/module-build
 	dev-perl/Sub-Uplevel"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/adocman
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/adocman/ChangeLog,v 1.7 2005/05/24 15:49:11 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/adocman/ChangeLog,v 1.8 2006/02/13 14:15:50 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org> adocman-0.10.ebuild,
+  adocman-0.12.ebuild, adocman-0.13.ebuild:
+  Virtuals for perl-core
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org> adocman-0.10.ebuild,
   adocman-0.12.ebuild, adocman-0.13.ebuild:
