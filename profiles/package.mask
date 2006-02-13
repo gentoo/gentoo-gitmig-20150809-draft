@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4998 2006/02/12 23:57:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4999 2006/02/13 19:47:18 hanno Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -79,14 +79,6 @@ net-analyzer/nessus-bin
 # Renat Lumpau <rl03@gentoo.org> (06 Feb 2006)
 # needs testing
 =www-misc/zoneminder-1.22.0
-
-# Hanno Boeck <hanno@gentoo.org> (06 Feb 2006)
-# mask all openhbci-stuff, deprecated in favour of aqbanking
-net-libs/openhbci
-net-libs/openhbci-plugin-ddvcard
-app-office/lxbank
-app-misc/aqmoney
-<=app-office/gnucash-1.8.9
 
 # Tavis Ormandy <taviso@gentoo.org> (06 Feb 2006)
 # deprecated in favour of app-shells/tcsh
