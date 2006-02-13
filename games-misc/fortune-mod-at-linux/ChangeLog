@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-at-linux
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-at-linux/ChangeLog,v 1.9 2005/09/16 22:14:54 ciaranm Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-at-linux/ChangeLog,v 1.10 2006/02/13 13:21:38 metalgod Exp $
+
+  13 Feb 2006; Luis Medinas <metalgod@gentoo.org>
+  fortune-mod-at-linux-20030120.ebuild:
+  Added ~amd64 keyword.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
