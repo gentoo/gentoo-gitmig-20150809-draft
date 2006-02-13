@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libipoddevice
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.2 2005/12/07 12:16:39 herbs Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.3 2006/02/13 11:56:04 metalgod Exp $
+
+*libipoddevice-0.4.1 (13 Feb 2006)
+
+  13 Feb 2006; Luis Medinas <metalgod@gentoo.org>
+  +libipoddevice-0.4.1.ebuild:
+  Version Bump.
 
   07 Dec 2005; Herbie Hopkins <herbs@gentoo.org> libipoddevice-0.4.0.ebuild:
   Fix libdir in pkgconfig file on multilib systems.
