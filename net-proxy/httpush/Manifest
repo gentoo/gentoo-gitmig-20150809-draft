@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fe254895d94d54e14fd8490778e5e638 ChangeLog 613
-MD5 bbf7ce5e2c9cc125e3e7d6fc133f2612 httpush-0.9_beta11.ebuild 1411
-MD5 4465953c86462494dd13e67580e4fd8b metadata.xml 415
+MD5 f2a8fa6065f26d78b2dc68652a816373 ChangeLog 723
 MD5 c9beb4a47643787632f3a8010dba451f files/digest-httpush-0.9_beta11 65
+MD5 cfa3c24ec847923128dca5254b3eec89 httpush-0.9_beta11.ebuild 1414
+MD5 4465953c86462494dd13e67580e4fd8b metadata.xml 415
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFClIuMtG5z4I8BtQoRAvElAJ9R1YoZvyXBCNwNyGi8Hs9TB6HaxACfc0hv
-aBYGAhrkt9S87iMmUrrT4hg=
-=tS+3
+iD8DBQFD8J+GtG5z4I8BtQoRAr49AJ0U3EUczkHFfx1/AhupFh3sIkJw4wCfffmO
+ZvSJG5EIoaNSye5qsrqLrqU=
+=ArGC
 -----END PGP SIGNATURE-----
