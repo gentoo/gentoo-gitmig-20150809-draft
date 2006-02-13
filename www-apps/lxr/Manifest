@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7fb007dc71d487e7f4f78d3592644475 ChangeLog 1971
 MD5 8ce5e2b6e0ab9fcc6a3a116347a24204 files/digest-lxr-0.3.1 60
 MD5 079cf235c7e3710d7cfe9c99c049da15 files/digest-lxr-0.9.4-r1 57
@@ -7,3 +10,10 @@ MD5 e29006dab30804fb516da79548e917b3 files/reconfig 272
 MD5 f6ba9a472aa1ec2550e9bb989bf73da4 lxr-0.3.1.ebuild 1744
 MD5 310764a001eb1262609fe23ec5cea7cc lxr-0.9.4-r1.ebuild 1997
 MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8KKxtG5z4I8BtQoRAswZAJ0Ta3VwVW80/zJcHAhzUrAhpWs9NACeNIrC
+G2fBQap06n7oznn5YaFC/tg=
+=WgcE
+-----END PGP SIGNATURE-----
