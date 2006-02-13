@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.285 2006/01/22 20:15:11 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.286 2006/02/13 01:11:48 halcy0n Exp $
 
-# keep them sorted (excluding the special arch flags near the end).
+# Keep them sorted
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -31,12 +31,12 @@ berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
 bidi - Enables bidirectional language support
 bindist - Flag to enable or disable options for prebuilt (GRP)  packages (eg. due to licensing issues)
 birdstep - Adds support for the Birdstep Database Server
-blas - adds support for the virtual/blas numerical library
-bluetooth - Enable Bluetooth Support
+blas - Adds support for the virtual/blas numerical library
+bluetooth - Enables Bluetooth Support
 bmp - Adds beep media player support. Mainly used to support bmp plugins in xmms, though also used for generic BMP support.
 bonobo - Adds support for gnome-base/bonobo (Gnome CORBA interfaces)
 bootstrap - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during original system bootstrapping
-boundschecking - add bounds checking patch by Haj Ten Brugge, this will DISABLE the hardened PIE+SSP patches
+boundschecking - Adds the bounds checking patch by Haj Ten Brugge, this will DISABLE the hardened PIE+SSP patches
 build - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used for creating build images and the first half of bootstrapping.
 bzip2 - Use the bzlib compression library
 calendar - Adds support for calendars (not using mcal!)
@@ -75,7 +75,7 @@ dvb - Adds support for DVB (Digital Video Broadcasting)
 dvd - Adds support for DVDs
 dvdr - Adds support for DVD writer hardware (e.g. in xcdroast)
 dvdread - Enables usage of Ogle's libdvdread for DVD playback
-eds - Enables support for Evolution-Data-Server(eds)
+eds - Enables support for Evolution-Data-Server (EDS)
 emacs - Adds support for GNU Emacs
 emacs-w3 - Add support for Emacs/W3 where applicable
 emboss - Adds support for the European Molecular Biology Open Software Suite
@@ -155,7 +155,7 @@ ipv6 - Adds support for IP version 6
 jabber - Enable jabber IM protocol support
 jack - Adds support for the JACK Audio Connection Kit
 java - Adds support for Java
-javascript - enable javascript support
+javascript - Enables javascript support
 jikes - Compile Java source code with jikes (faster)
 joystick - Add support for joysticks in all packages
 jpeg - Adds JPEG image support
@@ -167,7 +167,7 @@ kdexdeltas - Makes kde ebuilds download binary diffs rather than entire new tarb
 kerberos - Adds kerberos support
 krb4 - Adds optional kerberos 4 compatibility support
 ladcca - Adds Linux Audio Developer's Configuration and Connection API support (LADCCA)
-lapack - adds support for the virtual/lapack numerical library
+lapack - Adds support for the virtual/lapack numerical library
 lcms - Adds lcms support (color management engine)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
 leim - Adds input methods support to Emacs
@@ -192,7 +192,7 @@ mcal - Adds support for MCAL calendar system
 mcve - Support for the MCVE credit card payment system
 memlimit - Adds memory usage limiting in supporting programs
 mhash - Adds support for the mhash library
-migemo - enable migemo support for Japanese
+migemo - Enables migemo support for Japanese
 mikmod - Adds libmikmod support to allow playing of SoundTracker-style music files
 milter - Adds sendmail mail filter (milter) support
 mime - Adds MIME support
@@ -263,11 +263,11 @@ prelude - Adds support/bindings for the Prelude Intrusion Detection System
 profile - Adds profile support to builds of packages (will likely vary from ebuild to ebuild in support)
 python - Adds support/bindings for the Python language
 qdbm - Adds support for the qdbm library
-qt - Adds support for the Qt library.
+qt - Adds support for the Qt library
 quicktime - Adds support for OpenQuickTime
 radius - Adds support for RADIUS
-readline - enables support for libreadline, a GNU line-editing library that most everyone wants.
-recode - enables support for the GNU recode library
+readline - Enables support for libreadline, a GNU line-editing library that almost everyone wants
+recode - Enables support for the GNU recode library
 ruby - Adds support/bindings for the Ruby language
 samba - Adds support for SAMBA
 sapdb - Adds support for SAP DB
@@ -310,7 +310,7 @@ sysvipc - Support for System V-compatible inter-process communication
 szip - Use the szip compression library
 tcltk - Support for Tcl and/or Tk
 tcpd - Adds support for TCP wrappers
-test - Work around to pull in packages needed to run with FEATURES=maketest / FEATURES=test
+test - Workaround to pull in packages needed to run with FEATURES=maketest / FEATURES=test
 tetex - Adds support for teTeX
 theora - Adds support for the Theora Video Compression Codec
 threads - Adds threads support for various packages. Usually pthreads
@@ -340,9 +340,9 @@ xinerama - Add support for the xinerama X11 extension, which allows you to stret
 xml - Check/Support flag for XML library (version 1)
 xml2 - Check/Support flag for XML library (version 2)
 xmlrpc - Support for xml-rpc library
-xmms - Check/Support for XMMS (X MultiMedia System) player.
+xmms - Check/Support for XMMS (X MultiMedia System) player
 xosd - Sends display using the X On Screen Display library
-xpm - Support for XPM graphics format.
+xpm - Adds support for XPM graphics format
 xprint - Support for xprint, http://www.mozilla.org/projects/xprint/
 xsl - Check/Support flag for XSL library (version 1)
 xv - Adds in optional support for the Xvideo extension (an X API for video playback)
