@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r3.ebuild,v 1.4 2005/12/25 15:43:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r3.ebuild,v 1.5 2006/02/13 03:26:06 liquidx Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,8 +16,10 @@ LICENSE="X11"
 SLOT="0"
 KEYWORDS="x86 ~sparc -alpha ppc"
 
-DEPEND="virtual/x11
+DEPEND="app-text/rman
 	sys-libs/ncurses
+	|| ( ( x11-libs/libXmu x11-libs/libXpm x11-libs/libxkbfile )
+	     virtual/x11 )
 	Xaw3d? ( x11-libs/Xaw3d )"
 
 src_unpack(){
