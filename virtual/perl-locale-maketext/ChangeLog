@@ -1,6 +1,10 @@
 # ChangeLog for gentoo-x86/virtual
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-locale-maketext/ChangeLog,v 1.1 2006/02/07 12:00:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-locale-maketext/ChangeLog,v 1.2 2006/02/13 20:07:58 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  perl-locale-maketext-1.09.ebuild:
+  Updated RDEPS
 
 *perl-locale-maketext-1.10 (07 Feb 2006)
 *perl-locale-maketext-1.09 (07 Feb 2006)
