@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/exscalibar-1.0.4.ebuild,v 1.1 2006/02/13 19:42:47 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/exscalibar-1.0.4.ebuild,v 1.2 2006/02/13 19:44:19 hanno Exp $
 
 DESCRIPTION="EXtendable, SCalable Architecture for Live, Interactive or Batch-orientated Audio-signal Refinement"
 HOMEPAGE="http://exscalibar.sourceforge.net/"
@@ -11,7 +11,6 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="sndfile mp3 vorbis fftw jack alsa doc"
 DEPEND="=x11-libs/qt-3*
-	<x11-libs/qt-4
 	sndfile? ( >=media-libs/libsndfile-1.0.0 )
 	mp3? ( >=media-libs/libmad-0.15 )
 	vorbis? ( >=media-libs/libvorbis-1.0.0 )
