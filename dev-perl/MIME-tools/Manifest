@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f8373d0e1c9eebcbceda7f0798bfdd0 ChangeLog 4734
 MD5 8cc61f953fee63457dbbb4aa96c04efa MIME-tools-5.415.ebuild 748
 MD5 ed65e5de43006199267d775278e1e3ed MIME-tools-5.416.ebuild 753
@@ -6,3 +9,10 @@ MD5 102e5bbb02994f63b2087054f46da6c8 files/digest-MIME-tools-5.415 68
 MD5 76d65045d01f5330cd063a67be7def08 files/digest-MIME-tools-5.416 68
 MD5 305cee6270d79087582794066b7129d3 files/digest-MIME-tools-5.417 68
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8IVNtG5z4I8BtQoRAow8AJ4k6D858Z4w1mm3iH3u2B0AJIfSogCfQEGa
+H0pK7DbsRQg9zZBSjvK7ruM=
+=kiQx
+-----END PGP SIGNATURE-----
