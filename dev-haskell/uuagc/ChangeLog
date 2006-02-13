@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/uuagc
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.1 2005/12/14 14:23:53 dcoutts Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.2 2006/02/13 23:40:12 dcoutts Exp $
+
+  13 Feb 2006; <duncan@gentoo.org> uuagc-0.9.1.ebuild:
+  dded ~amd64 to KEYWORDS
 
 *uuagc-0.9.1 (14 Dec 2005)
 

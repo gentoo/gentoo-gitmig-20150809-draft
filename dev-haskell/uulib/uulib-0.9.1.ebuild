@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/uulib-0.9.1.ebuild,v 1.1 2005/12/14 14:21:42 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/uulib-0.9.1.ebuild,v 1.2 2006/02/13 23:37:05 dcoutts Exp $
 
 CABAL_FEATURES="haddock cpphs"
 inherit base haskell-cabal
@@ -11,7 +11,7 @@ SRC_URI="http://abaris.zoo.cs.uu.nl:8080/wiki/pub/HUT/Download/${P}-src.tar.gz"
 LICENSE="LGPL-2.1-UUST"
 SLOT="0"
 
-KEYWORDS="~x86"	#if possible try testing with "~amd64", "~ppc" and "~sparc"
+KEYWORDS="~x86 ~amd64"	#if possible try testing with "~ppc" and "~sparc"
 IUSE=""
 
 DEPEND=">=virtual/ghc-6.2.2
