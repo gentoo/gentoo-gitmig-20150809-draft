@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4_p3.ebuild,v 1.3 2005/12/04 22:50:24 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4_p3.ebuild,v 1.4 2006/02/13 15:17:17 mcummings Exp $
 
 inherit webapp
 MY_P="${PN}${PV/_p/r}"
@@ -24,7 +24,6 @@ RDEPEND=">=dev-db/mysql-3.23
 	>=dev-perl/DBD-mysql-2.1027
 	dev-perl/Apache-DBI
 	>=dev-perl/AppConfig-1.55
-	>=perl-core/ExtUtils-MakeMaker-6.05
 	>=dev-perl/XML-RSS-1.02
 	dev-perl/perl-ldap
 	>=dev-perl/Log-Agent-0.304
@@ -38,10 +37,10 @@ RDEPEND=">=dev-db/mysql-3.23
 	>=dev-perl/Date-Calc-5.3
 	>=dev-perl/ImageSize-2.991
 	>=dev-perl/Template-Toolkit-2.09
-	>=perl-core/Time-HiRes-1.48
-	>=perl-core/Test-Harness-2.28
+	>=virtual/perl-Time-HiRes-1.48
+	>=virtual/perl-Test-Harness-2.28
 	>=dev-perl/Test-Manifest-0.91
-	>=perl-core/Test-Simple-0.47
+	>=virtual/perl-Test-Simple-0.47
 	>=dev-perl/Lingua-EN-NameParse-1.18
 	>=dev-perl/Number-Format-1.45
 	>=dev-perl/XML-Simple-2.08

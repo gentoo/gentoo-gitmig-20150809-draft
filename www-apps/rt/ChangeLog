@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.30 2006/01/27 00:25:27 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.31 2006/02/13 15:20:16 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org> rt-3.4.5.ebuild:
+  Virtuals for perl-core
 
   27 Jan 2006; Renat Lumpau <rl03@gentoo.org> rt-3.4.5.ebuild:
   Fixed broken PN

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.2 2006/01/18 23:09:53 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.3 2006/02/13 15:12:19 mcummings Exp $
 
 inherit depend.apache perl-module webapp
 
@@ -28,7 +28,7 @@ DEPEND="${DEPEND}
 	>=dev-perl/ImageInfo-1.04-r2
 	>=dev-perl/ImageSize-2.99-r1
 	dev-perl/text-template
-	>=perl-core/CGI-3.08
+	>=virtual/perl-CGI-3.08
 	dev-perl/Image-Imlib2
 "
 

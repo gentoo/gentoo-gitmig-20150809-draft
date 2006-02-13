@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/metadot
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/ChangeLog,v 1.15 2005/12/04 22:50:24 rl03 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/ChangeLog,v 1.16 2006/02/13 15:17:17 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org> metadot-6.1.6.ebuild,
+  metadot-6.4_p3.ebuild:
+  Virtuals for perl-core
 
   04 Dec 2005; Renat Lumpau <rl03@gentoo.org> files/reconfig-6.4_p3,
   files/postinstall-en-6.4_p3.txt, metadot-6.4_p3.ebuild:

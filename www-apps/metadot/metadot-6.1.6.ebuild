@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.1.6.ebuild,v 1.10 2005/09/02 11:20:54 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.1.6.ebuild,v 1.11 2006/02/13 15:17:17 mcummings Exp $
 
 inherit webapp
 MY_P=${P/-/}
@@ -23,7 +23,7 @@ RDEPEND="
 	dev-perl/DBD-mysql
 	dev-perl/Apache-DBI
 	dev-perl/XML-RSS
-	perl-core/Storable
+	virtual/perl-Storable
 	dev-perl/perl-ldap
 	dev-perl/Log-Agent
 	dev-perl/Mail-POP3Client
@@ -36,7 +36,7 @@ RDEPEND="
 	dev-perl/AppConfig
 	dev-perl/ImageSize
 	dev-perl/Template-Toolkit
-	perl-core/Time-HiRes
+	virtual/perl-Time-HiRes
 	dev-perl/Lingua-EN-NameParse
 	dev-perl/Number-Format
 	dev-perl/XML-Simple
