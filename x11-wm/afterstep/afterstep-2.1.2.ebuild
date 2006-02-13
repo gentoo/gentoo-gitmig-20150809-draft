@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.1.2.ebuild,v 1.6 2005/11/11 23:10:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.1.2.ebuild,v 1.7 2006/02/13 21:14:38 spock Exp $
 
 inherit flag-o-matic
 
@@ -13,14 +13,33 @@ SLOT="0"
 KEYWORDS="~amd64 ~mips ppc ~ppc64 sparc x86"
 IUSE="debug gif jpeg mmx nls png tiff xinerama"
 
-DEPEND="virtual/libc
-	virtual/x11
+RDEPEND="virtual/libc
 	media-libs/freetype
 	debug? ( !ppc? ( dev-util/efence ) )
 	png? ( >=media-libs/libpng-1.2.5 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	gif?  ( >=media-libs/giflib-4.1.0 )
-	tiff? ( >=media-libs/tiff-3.5.7 )"
+	tiff? ( >=media-libs/tiff-3.5.7 )
+	|| ( ( x11-libs/libICE
+			x11-libs/libXext
+			x11-libs/libSM
+			x11-libs/libXmu
+			x11-libs/libXt
+			x11-libs/libX11
+			x11-libs/libXpm
+			x11-libs/libXrender
+			xinerama? ( x11-libs/libXinerama )
+		)
+		virtual/x11
+	)"
+
+DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xextproto
+			x11-proto/xproto
+			xinerama? ( x11-proto/xineramaproto )
+		)
+		virtual/x11
+	)"
 
 S="${WORKDIR}/AfterStep-${PV}"
 
