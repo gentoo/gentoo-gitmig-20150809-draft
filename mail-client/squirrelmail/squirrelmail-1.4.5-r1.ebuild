@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.5-r1.ebuild,v 1.4 2006/02/06 20:52:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.5-r1.ebuild,v 1.5 2006/02/13 14:29:44 mcummings Exp $
 
 IUSE="crypt ldap spell ssl virus-scan mysql postgres"
 
@@ -40,7 +40,7 @@ KEYWORDS="alpha amd64 ~ppc sparc x86"
 DEPEND=""
 
 RDEPEND="virtual/php
-	perl-core/DB_File
+	virtual/perl-DB_File
 	crypt? ( app-crypt/gnupg )
 	ldap? ( net-nds/openldap )
 	spell? ( || ( app-text/aspell app-text/ispell ) )
