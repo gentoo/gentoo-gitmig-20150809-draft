@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.5-r1.ebuild,v 1.2 2006/02/05 18:34:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.5-r1.ebuild,v 1.3 2006/02/13 18:03:42 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -15,19 +15,19 @@ KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86"
 IUSE="debugger readline sdl wxwindows X ncurses vnc"
 
 RDEPEND="virtual/libc
-	X? || ( virtual/x11
+	X? ( || ( virtual/x11
 			( 	x11-libs/libICE
 				x11-libs/libSM
 				x11-libs/libX11
-				x11-libs/libXpm ) )
+				x11-libs/libXpm ) ) )
 	sdl? ( media-libs/libsdl )
 	wxwindows? ( >=x11-libs/wxGTK-2.6 )
 	readline? ( sys-libs/readline )
 	ncurses? ( sys-libs/ncurses )"
 
 DEPEND="${RDEPEND}
-	X? || ( virtual/x11
-			x11-proto/xproto )
+	X? ( || ( virtual/x11
+			x11-proto/xproto ) )
 	>=sys-apps/sed-4
 	>=app-text/opensp-1.5"
 
