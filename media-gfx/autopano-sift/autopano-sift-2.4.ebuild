@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.4.ebuild,v 1.1 2006/01/06 07:56:58 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.4.ebuild,v 1.2 2006/02/13 16:54:21 vanquirius Exp $
 
 inherit mono eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="dev-lang/mono
 	<dev-dotnet/glade-sharp-2
 	<dev-dotnet/gtk-sharp-2
-	dev-dotnet/libgdiplus"
+	>=dev-dotnet/libgdiplus-1.1.11"
 
 src_unpack() {
 	unpack ${A}

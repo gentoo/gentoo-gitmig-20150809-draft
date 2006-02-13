@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/autopano-sift
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/ChangeLog,v 1.7 2006/01/06 07:56:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/ChangeLog,v 1.8 2006/02/13 16:54:21 vanquirius Exp $
+
+  13 Feb 2006; Marcelo Goes <vanquirius@gentoo.org>
+  autopano-sift-2.4.ebuild:
+  Depend on >=libgdiplus-1.1.11. Thanks to Hans Oischinger <hans dot
+  oischinger at arcor dot de> in bug 75192.
 
 *autopano-sift-2.4 (06 Jan 2006)
 
