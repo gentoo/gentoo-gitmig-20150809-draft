@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.6.ebuild,v 1.1 2006/02/13 12:00:03 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.6.ebuild,v 1.2 2006/02/13 12:02:13 metalgod Exp $
 
-inherit autotools eutils gnome2 mono
+inherit eutils gnome2 mono
 
 DESCRIPTION="Banshee allows you to import CDs, sync your music collection, play
 music directly from an iPod, create playlists with songs from your library, and
