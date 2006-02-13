@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7a2fd3e1b1ff63246762add2e381ce77 ChangeLog 22522
 MD5 6eab480d5d7178685422567dcef9d9ef files/3.0.0-spamd.conf 1427
 MD5 13c538208e1f991a44a30a8bce130fa8 files/3.0.0-spamd.init 738
@@ -13,3 +16,10 @@ MD5 454b9e640791a53f159cf2cfd5f246bd spamassassin-3.0.4.ebuild 6567
 MD5 c1f321d4f716021279e1ba11ecc2b34e spamassassin-3.1.0-r1.ebuild 6715
 MD5 359f6c31e470b057fa3cff507577e60c spamassassin-3.1.0-r2.ebuild 6808
 MD5 94e6277bcc0acfb08734574618ad6d21 spamassassin-3.1.0.ebuild 6550
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8Ju0tG5z4I8BtQoRAmBJAKCR5v7tXWfxRZh6rzt33CUtoDhTyQCfWHU6
+PmAoZpsQkCm8QH82uxVjqmQ=
+=/8i4
+-----END PGP SIGNATURE-----
