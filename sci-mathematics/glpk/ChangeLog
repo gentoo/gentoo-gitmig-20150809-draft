@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/glpk
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.9 2006/02/12 21:03:22 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.10 2006/02/13 02:04:48 nichoj Exp $
+
+  13 Feb 2006; Joshua Nichols <nichoj@gentoo.org> glpk-4.8.ebuild:
+  Stable on x86 for bug #122434.
 
   12 Feb 2006; Scott Stoddard <deltacow@gentoo.org> glpk-4.8.ebuild:
   Stable on amd64
