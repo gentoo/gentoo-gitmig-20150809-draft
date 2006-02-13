@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.1-r1.ebuild,v 1.3 2005/08/25 09:12:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.1-r1.ebuild,v 1.4 2006/02/13 15:11:46 mcummings Exp $
 
 inherit apache-module perl-module eutils
 DESCRIPTION="An embedded Perl interpreter for Apache2"
@@ -17,7 +17,7 @@ need_apache2
 
 DEPEND="!dev-perl/Apache-Test
 	dev-lang/perl
-	>=perl-core/CGI-3.08
+	>=virtual/perl-CGI-3.08
 	>=dev-perl/Compress-Zlib-1.09
 	>=net-www/apache-2.0.47
 	app-admin/sudo"
