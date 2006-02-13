@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2d30e75dbd043ff2f037298a8c9b079d ChangeLog 451
-MD5 bc10fe0a1d513277b69babd7dd926ebb axiom-0.3.0.ebuild 783
-MD5 4716591f55b4c8b9d988cb5ff81bb309 axiom-0.4.0.ebuild 783
+MD5 2b6c6ece7e179d45572e27a0ae228f8b ChangeLog 606
+RMD160 39acfb8a68c983085bbc8c427afd7d36e30a866d ChangeLog 606
+SHA256 de8cbe9f0849d2da3e9e97b6b8a3fd00c1d81266ccc62f47dc00cef45850d89b ChangeLog 606
+MD5 4b82cecded4e73af70d3f22ac851077e axiom-0.3.0.ebuild 780
+RMD160 ab1008ae5ff18667d8ebf1289e72690804796fa0 axiom-0.3.0.ebuild 780
+SHA256 53bb8b96fcf2710a4b2c5d47ffb2715ff8cf426c674ce00d6ddda61dcfb1849b axiom-0.3.0.ebuild 780
+MD5 75f5020815a5f0812cd730942ed6c4f6 axiom-0.4.0.ebuild 780
+RMD160 979a600ca0597763bbe82563d5043bd3988f8c0a axiom-0.4.0.ebuild 780
+SHA256 9a590d180f8426796eeafac7645dc9b51b04d6f5ae528d2dd9348ac9c2a08b51 axiom-0.4.0.ebuild 780
 MD5 759dd4f04c272c847010b558ba8a7b4e files/digest-axiom-0.3.0 62
+RMD160 3b69f60abfa9fe00823038a7b012d23bff65b996 files/digest-axiom-0.3.0 62
+SHA256 8fe460d2dc8ad16aaf792f7e3a1aa51ac71f087b8bc20550200ecf70b4d03784 files/digest-axiom-0.3.0 62
 MD5 ceeedce6b099dca65be29cd67de099f4 files/digest-axiom-0.4.0 62
+RMD160 0af9c83633501f3a7f57c48e84b1b594b0501bf2 files/digest-axiom-0.4.0 62
+SHA256 790e877c18c79eaa6b7333907bfcce72603a5f9cc4bc2305a8e16cd54cf49c39 files/digest-axiom-0.4.0 62
 MD5 802ad1b55865e3db7bd222d60f78af6d metadata.xml 643
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDqVXJW78445TWHXcRAlT2AJ4vGszT0iCcxNXYVZ/DurnqF7tO5ACeNOhQ
-yPRTiY7wU5EU6zvPBzoIuQ0=
-=y4pK
------END PGP SIGNATURE-----
+RMD160 db810d4f65c9ce6e27f2adc69d50bd09fedaa7e0 metadata.xml 643
+SHA256 083eac150ece10d9e2b24312148702afc34c210aa4a8726135c920fa6353f8de metadata.xml 643
