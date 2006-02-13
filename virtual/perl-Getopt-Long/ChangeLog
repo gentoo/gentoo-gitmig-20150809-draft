@@ -1,0 +1,14 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Getopt-Long/ChangeLog,v 1.1 2006/02/13 13:15:20 mcummings Exp $
+
+*perl-Getopt-Long-2.35 (13 Feb 2006)
+*perl-Getopt-Long-2.34 (13 Feb 2006)
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +perl-Getopt-Long-2.34.ebuild, +perl-Getopt-Long-2.35.ebuild:
+  New virtual for perl-core/Getopt-Long
+
+  07 Feb 2006; Michael Cummings <mcummings@gentoo.org> ChangeLog:
+  New virtual for perl-core/Getopt-Long
+
