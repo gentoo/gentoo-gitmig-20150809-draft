@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.0-r2.ebuild,v 1.4 2006/01/15 14:56:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.0-r2.ebuild,v 1.5 2006/02/13 14:46:22 mcummings Exp $
 
 inherit perl-module
 
@@ -19,12 +19,13 @@ IUSE="berkdb qmail ssl doc ldap mysql postgres sqlite spf tools"
 # To consider (not all may be in tree at this time - mcummings):
 # dev-perl/Net-SMTP
 # dev-perl/IP-Country-Fast
+	#|| ( >=perl-core/PodParser-1.22 >=dev-lang/perl-5.8.6 )
 
 DEPEND=">=dev-lang/perl-5.8.2-r1
-	|| ( >=perl-core/PodParser-1.22 >=dev-lang/perl-5.8.6 )
-	perl-core/MIME-Base64
-	perl-core/Storable
-	perl-core/Time-HiRes
+	virtual/perl-MIME-Base64
+	>=virtual/perl-PodParser-1.32
+	virtual/perl-Storable
+	virtual/perl-Time-HiRes
 	>=dev-perl/HTML-Parser-3.31
 	>=dev-perl/Net-DNS-0.34
 	dev-perl/Digest-SHA1
@@ -36,7 +37,7 @@ DEPEND=">=dev-lang/perl-5.8.2-r1
 		dev-libs/openssl
 	)
 	berkdb? (
-		perl-core/DB_File
+		virtual/perl-DB_File
 	)
 	ldap? ( dev-perl/perl-ldap )
 	mysql? (

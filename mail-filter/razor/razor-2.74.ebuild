@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.74.ebuild,v 1.8 2005/11/28 13:04:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.74.ebuild,v 1.9 2006/02/13 14:44:30 mcummings Exp $
 
 inherit perl-app
 
@@ -15,8 +15,8 @@ IUSE=""
 DEPEND="dev-lang/perl"
 
 RDEPEND="dev-perl/Net-DNS
-	perl-core/net-ping
-	perl-core/Time-HiRes
+	virtual/perl-net-ping
+	virtual/perl-Time-HiRes
 	dev-perl/Digest-SHA1
 	dev-perl/URI
 	dev-perl/Digest-Nilsimsa"

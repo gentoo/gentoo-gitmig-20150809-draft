@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.4.ebuild,v 1.13 2006/01/09 16:45:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.4.ebuild,v 1.14 2006/02/13 14:46:22 mcummings Exp $
 
 inherit perl-module
 
@@ -24,9 +24,9 @@ IUSE="berkdb qmail ssl doc"
 # DB support? mysql, postgres, etc.
 
 DEPEND=">=dev-lang/perl-5.8.2-r1
-	>=perl-core/PodParser-1.22
-	perl-core/MIME-Base64
-	perl-core/Storable
+	>=virtual/perl-PodParser-1.22
+	virtual/perl-MIME-Base64
+	virtual/perl-Storable
 	>=dev-perl/HTML-Parser-3.31
 	>=dev-perl/Net-DNS-0.34
 	dev-perl/Digest-SHA1
@@ -35,7 +35,7 @@ DEPEND=">=dev-lang/perl-5.8.2-r1
 		dev-libs/openssl
 	)
 	berkdb? (
-		perl-core/DB_File
+		virtual/perl-DB_File
 	)"
 
 src_move_doc() {
