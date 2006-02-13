@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/Date-ISO-1.30.ebuild,v 1.14 2005/10/03 09:55:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/Date-ISO-1.30.ebuild,v 1.15 2006/02/13 11:09:20 mcummings Exp $
 
 inherit perl-module
 
@@ -18,6 +18,6 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/Date-Leapyear
-	perl-core/Test-Simple
+	virtual/perl-Test-Simple
 	dev-perl/Date-ICal
-	perl-core/Memoize"
+	virtual/perl-Memoize"

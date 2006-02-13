@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size-Report/Devel-Size-Report-0.10.ebuild,v 1.1 2006/01/11 10:39:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size-Report/Devel-Size-Report-0.10.ebuild,v 1.2 2006/02/13 11:13:18 mcummings Exp $
 
 inherit perl-module
 
@@ -16,7 +16,7 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND=">=dev-perl/Devel-Size-0.59
-	>=perl-core/Test-Simple-0.47
-	>=perl-core/Scalar-List-Utils-1.13
-	>=perl-core/Time-HiRes-1.52
+	>=virtual/perl-Test-Simple-0.47
+	>=virtual/perl-Scalar-List-Utils-1.13
+	>=virtual/perl-Time-HiRes-1.52
 	>=dev-perl/Array-RefElem-1.00"

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/Date-ICal-1.72.ebuild,v 1.20 2005/10/03 09:55:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/Date-ICal-1.72.ebuild,v 1.21 2006/02/13 11:08:51 mcummings Exp $
 
 inherit perl-module
 
@@ -18,8 +18,8 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/Date-Leapyear
-	perl-core/Test-Harness
-	perl-core/Test-Simple
-	perl-core/Time-Local
-	perl-core/Time-HiRes
-	perl-core/Storable"
+	virtual/perl-Test-Harness
+	virtual/perl-Test-Simple
+	virtual/perl-Time-Local
+	virtual/perl-Time-HiRes
+	virtual/perl-Storable"
