@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/profxp/profxp-3_pre2.ebuild,v 1.9 2005/11/28 13:01:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/profxp/profxp-3_pre2.ebuild,v 1.10 2006/02/13 14:54:33 mcummings Exp $
 
 inherit perl-app
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
-	perl-core/Time-HiRes
+	virtual/perl-Time-HiRes
 	dev-perl/TermReadKey
 	dev-perl/Term-ReadLine-Perl"
 
