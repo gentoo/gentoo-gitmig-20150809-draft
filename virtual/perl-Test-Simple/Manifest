@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fa316a3c654cd3a42d2c25d6070001f2 ChangeLog 676
+MD5 2f7f06ff80b9bb92ff7f4cbcab799f35 ChangeLog 810
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.47 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.53 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.54 0
@@ -10,13 +7,6 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.62 0
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 623a74c43c19cf47b2ed21f56ef319c3 perl-Test-Simple-0.47.ebuild 482
 MD5 7d2b944279b014232cbe45e2d4ff8602 perl-Test-Simple-0.53.ebuild 496
-MD5 0ba1c66f35c21bb4d60d207d7814dc5f perl-Test-Simple-0.54.ebuild 495
+MD5 007d03d88648ae17467319bfc6caae26 perl-Test-Simple-0.54.ebuild 523
 MD5 591418feeb7f55ff10ccfd1e49db1ac4 perl-Test-Simple-0.60.ebuild 508
-MD5 3acf9affd33a4640428bb4dbbc12e104 perl-Test-Simple-0.62.ebuild 496
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD54IktG5z4I8BtQoRAs1sAJ9J7w0eMA5XNQJZVIS3uIKNDT2aFgCdHjZP
-adQo+W65R0HcdOw+0pFrjoA=
-=/i0s
------END PGP SIGNATURE-----
+MD5 36dd33c7798f2553eaa605a46e4e1bf9 perl-Test-Simple-0.62.ebuild 524
