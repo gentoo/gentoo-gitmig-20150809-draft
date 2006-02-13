@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/lush
-# Copyright 2000-2005 Gentoo Foundation and Matthew Kennedy <mkennedy@gentoo.org>; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/ChangeLog,v 1.6 2005/05/18 08:23:03 mkennedy Exp $
+# Copyright 2000-2006 Gentoo Foundation and Matthew Kennedy <mkennedy@gentoo.org>; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/ChangeLog,v 1.7 2006/02/13 22:12:44 mkennedy Exp $
+
+  13 Feb 2006; Matthew Kennedy <mkennedy@gentoo.org> lush-1.0.ebuild,
+  lush-1.1.ebuild:
+  Modular X dependencies.
 
 *lush-1.1 (18 May 2005)
 
