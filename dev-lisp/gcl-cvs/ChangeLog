@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/gcl-cvs
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl-cvs/ChangeLog,v 1.3 2005/12/13 16:35:09 mkennedy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl-cvs/ChangeLog,v 1.4 2006/02/13 21:43:28 mkennedy Exp $
+
+  13 Feb 2006; Matthew Kennedy <mkennedy@gentoo.org> gcl-cvs-2.7.0.ebuild:
+  Modular X dependencies.
 
   13 Dec 2005; Matthew Kennedy <mkennedy@gentoo.org> gcl-cvs-2.7.0.ebuild:
   Savannah CVS changes; Resolves Bug #115327.
