@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs-pnptools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-pnptools/ChangeLog,v 1.1 2006/01/12 12:56:18 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-pnptools/ChangeLog,v 1.2 2006/02/13 15:37:55 brix Exp $
+
+  13 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
+  pcmcia-cs-pnptools-3.2.8.ebuild:
+  Stable on x86.
 
 *pcmcia-cs-pnptools-3.2.8 (12 Jan 2006)
 

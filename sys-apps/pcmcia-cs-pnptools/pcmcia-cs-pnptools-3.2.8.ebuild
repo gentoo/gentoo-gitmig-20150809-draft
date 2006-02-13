@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-pnptools/pcmcia-cs-pnptools-3.2.8.ebuild,v 1.1 2006/01/12 12:56:18 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-pnptools/pcmcia-cs-pnptools-3.2.8.ebuild,v 1.2 2006/02/13 15:37:55 brix Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/pcmcia-cs/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 RDEPEND="!sys-apps/pcmcia-cs"
