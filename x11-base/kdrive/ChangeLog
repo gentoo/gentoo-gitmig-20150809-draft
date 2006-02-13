@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/kdrive
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.36 2006/01/19 04:18:17 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.37 2006/02/13 02:53:58 spyderous Exp $
+
+  13 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  kdrive-4.3.0-r5.ebuild:
+  (#122523) Fix SRC_URI.
 
   19 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   kdrive-6.6.1_pre20050820.ebuild:
