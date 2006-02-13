@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm-xf/hanterm-xf-2.0.5.ebuild,v 1.3 2004/11/08 08:40:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm-xf/hanterm-xf-2.0.5.ebuild,v 1.4 2006/02/13 03:18:08 liquidx Exp $
 
 MY_P="${P}-173"
 
@@ -14,7 +14,9 @@ KEYWORDS="x86 ppc"
 
 IUSE="Xaw3d truetype"
 
-DEPEND="virtual/x11
+DEPEND="
+	|| ( ( x11-libs/libXmu x11-libs/libICE )
+	     virtual/x11 )
 	sys-apps/utempter
 	Xaw3d? ( x11-libs/Xaw3d )
 	media-fonts/baekmuk-fonts
