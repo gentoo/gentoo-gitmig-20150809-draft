@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 cbc7711604371f19871bdce9bf43b2bb ChangeLog 606
+RMD160 abcdf3a193900ac828f9bc23017cf26faedcb447 ChangeLog 606
+SHA256 7c1e013035e2740a19bcad2ddbf5319ff6366c68b324f2bed83d3f4e08c4acc3 ChangeLog 606
 MD5 ce62a51e2ecd31506f49bac4f9bb0f95 files/digest-mantissa-0.3.1 66
+RMD160 195c79ee6bf4ae812856d9548fecc00fa3743273 files/digest-mantissa-0.3.1 66
+SHA256 815ed81049bc27e67f0545905d868ecdc4ce7e026440f71768d2ef6b1c45d5b1 files/digest-mantissa-0.3.1 66
 MD5 fa8823721205b6768e8d260ea7f36e1b files/digest-mantissa-0.4.1 66
-MD5 9552dc02c36d80d8313fc4c1ddb65479 mantissa-0.3.1.ebuild 874
-MD5 3b0d4403021e6f6834e3f9beb4c2acdf mantissa-0.4.1.ebuild 874
+RMD160 76486b1af6c4a43fc55003ac6208e1c5ad1eb3c2 files/digest-mantissa-0.4.1 66
+SHA256 40fac9790704d0163670dc93189dd097e3b0ed3bb69631ada1b11fd1d17ae049 files/digest-mantissa-0.4.1 66
+MD5 415ff81e2c7d71e9864706a8b189adf3 mantissa-0.3.1.ebuild 871
+RMD160 94b54fbb69a06e39d71f0da3b6b0966547581382 mantissa-0.3.1.ebuild 871
+SHA256 c0bbd2f1139b0ec8f768769aefb41db764e5d2d92fcf97b998eb6a10cf73e258 mantissa-0.3.1.ebuild 871
+MD5 16c59fc6cd06a07ac6d52ce64c740d38 mantissa-0.4.1.ebuild 871
+RMD160 234ed1e092ca3cfbec743bd7a5f722e5c37c8b55 mantissa-0.4.1.ebuild 871
+SHA256 d46fabb084a8fb047a4e7732b92e022aeb189c85604c7dc5568fd3fcbecec2ab mantissa-0.4.1.ebuild 871
 MD5 286c9fff82df32f0f8b8d9960120cfc4 metadata.xml 433
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxZSvW78445TWHXcRArf3AJ9WH/y9Nu56PypwkBUnoFXFFckHwACfdCNj
-l1YFZNIWiE6v8P0VOWvNRU8=
-=5UNW
------END PGP SIGNATURE-----
+RMD160 5de233c9dca98454920b11b89937f77082a11986 metadata.xml 433
+SHA256 f3795f763acb3a1972337fe431b986bbb5074fa16b9e3a8dfef2b0f12df591ef metadata.xml 433

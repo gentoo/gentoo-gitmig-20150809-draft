@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/epsilon
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.2 2005/12/21 13:13:03 marienz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.3 2006/02/13 22:57:34 marienz Exp $
+
+  13 Feb 2006; Marien Zwart <marienz@gentoo.org> epsilon-0.3.2.ebuild,
+  epsilon-0.4.0.ebuild:
+  Stop passing the -R option to trial (deprecated in twisted 2.1, removed in
+  2.2).
 
 *epsilon-0.4.0 (21 Dec 2005)
 

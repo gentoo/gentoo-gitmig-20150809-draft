@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mantissa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/ChangeLog,v 1.3 2006/01/11 23:28:32 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/ChangeLog,v 1.4 2006/02/13 22:55:40 marienz Exp $
+
+  13 Feb 2006; Marien Zwart <marienz@gentoo.org> mantissa-0.3.1.ebuild,
+  mantissa-0.4.1.ebuild:
+  Stop passing the -R option to trial (deprecated in twisted 2.1, removed in
+  2.2).
 
   11 Jan 2006; Marien Zwart <marienz@gentoo.org> mantissa-0.3.1.ebuild,
   mantissa-0.4.1.ebuild:

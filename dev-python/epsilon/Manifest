@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4de3f3693cb6c8ce8bc34584dfdf2bcf ChangeLog 463
-MD5 65730aa1723cd16d04dfaca22fa92fe1 epsilon-0.3.2.ebuild 748
-MD5 7c0028a718de47da63bce79a8e2f161b epsilon-0.4.0.ebuild 748
+RMD160 3b9cf79e66d5011ef98b3aa9bf412a23abc5d51a ChangeLog 463
+SHA256 b1436cfa711193fdd58b1c4811a495c8ed32236c365132e57dcfd3eb7fc2cbaa ChangeLog 463
+MD5 863a6278113d1b0c088b05e394eeab28 epsilon-0.3.2.ebuild 745
+RMD160 6d23b9756c91e4be7c6cbcdad2a473d82f25f6d6 epsilon-0.3.2.ebuild 745
+SHA256 d05ce3e39284298fddf1d4e84b0b2255e8255566b76d0d6790bfef5d91eaa74e epsilon-0.3.2.ebuild 745
+MD5 1445de217e56cf9acfd05e9ced0a095a epsilon-0.4.0.ebuild 745
+RMD160 25d71184db48e02ccfd6ece1fe709f289ba0809b epsilon-0.4.0.ebuild 745
+SHA256 486afa2a5406de4f5a1bbf743fd207b9ffe357c6f2fa6cf3f32fcc7dfa2615a5 epsilon-0.4.0.ebuild 745
 MD5 f0a9075d63a5c039cab6c0f1b560d717 files/digest-epsilon-0.3.2 64
+RMD160 47b1ebc1e0d6f1f3a86164290ece4e9f351387f5 files/digest-epsilon-0.3.2 64
+SHA256 6d9ab634b7992810a1db88e8289b492abbde84c08e317f050fca7cc562dba098 files/digest-epsilon-0.3.2 64
 MD5 59fd8c02beb18b772723b95e72858326 files/digest-epsilon-0.4.0 64
+RMD160 3f2d9d6fab8f02ca8f4518d8f84ee6f9deec3df1 files/digest-epsilon-0.4.0 64
+SHA256 62fe5c675d58aa293df5870b97c864f47a407d28e771d2b039a63d4c8782e9d8 files/digest-epsilon-0.4.0 64
 MD5 88ad44c63189b4b8776e9a0a190e72c2 metadata.xml 502
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDqVTwW78445TWHXcRAr8kAJ9wvDuBYkS+CTNnOel3eWmNDFmskACfe54K
-GHxXHZ+sUFikdu9PS9BhgXs=
-=zzuM
------END PGP SIGNATURE-----
+RMD160 d0b934d7f02393273c2bd73a653bb37d9954fbb9 metadata.xml 502
+SHA256 2e37fc03c881ef0dd599585f32be5f6a929fe95683f5bb53397ec01c16cc8d43 metadata.xml 502
