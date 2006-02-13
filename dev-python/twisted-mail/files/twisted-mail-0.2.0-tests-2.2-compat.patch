@@ -1,0 +1,87 @@
+=== modified file 'twisted/mail/test/test_imap.py'
+--- twisted/mail/test/test_imap.py	
++++ twisted/mail/test/test_imap.py	
+@@ -2431,7 +2431,12 @@
+         self.failUnless(self.stillConnected)
+ 
+     def testIdleClientDoesDisconnect(self):
+-        from twisted.test.test_task import Clock
++        try:
++            # 2.2 core has the Clock we need here
++            from twisted.test.time_helpers import Clock
++        except ImportError:
++            # previous versions of core had it here
++            from twisted.test.test_task import Clock
+         c = Clock()
+         c.install()
+         try:
+
+=== modified file 'twisted/mail/test/test_mail.py'
+--- twisted/mail/test/test_mail.py	
++++ twisted/mail/test/test_mail.py	
+@@ -17,7 +17,7 @@
+ 
+ from zope.interface import providedBy
+ 
+-from twisted.trial import unittest, util as tutil
++from twisted.trial import unittest
+ from twisted.mail import smtp
+ from twisted.mail import pop3
+ from twisted.names import dns
+@@ -221,6 +221,18 @@
+     def tearDown(self):
+         shutil.rmtree(self.d)
+ 
++    def _append(self, ignored, mbox):
++        d = mbox.appendMessage('TEST')
++        return self.assertFailure(d, Exception)
++
++    def _setState(self, ignored, mbox, rename=None, write=None, open=None):
++        if rename is not None:
++            mbox.AppendFactory._renameState = rename
++        if write is not None:
++            mbox.AppendFactory._writeState = write
++        if open is not None:
++            mbox.AppendFactory._openstate = open
++
+     def testAppend(self):
+         mbox = mail.maildir.MaildirMailbox(self.d)
+         mbox.AppendFactory = FailingMaildirMailboxAppendMessageTask
+@@ -233,17 +245,13 @@
+         self.assertEquals(len(mbox.getMessage(5).read()), 6)
+         # test in the right order: last to first error location.
+         mbox.AppendFactory._renamestate = False
+-        self.failUnless(isinstance(unittest.deferredError(mbox.appendMessage("TEST")),
+-                                                        failure.Failure))
+-        mbox.AppendFactory._renamestate = True
+-        mbox.AppendFactory._writestate = False
+-        self.failUnless(isinstance(unittest.deferredError(mbox.appendMessage("TEST")),
+-                                                        failure.Failure))
+-        mbox.AppendFactory._writestate = True
+-        mbox.AppendFactory._openstate = False
+-        self.failUnless(isinstance(unittest.deferredError(mbox.appendMessage("TEST")),
+-                                                        failure.Failure))
+-        mbox.AppendFactory._openstate = True
++        d = self._append(None, mbox)
++        d.addCallback(self._setState, mbox, rename=True, write=False)
++        d.addCallback(self._append, mbox)
++        d.addCallback(self._setState, mbox, write=True, open=False)
++        d.addCallback(self._append, mbox)
++        d.addCallback(self._setState, mbox, open=True)
++        return d
+ 
+ 
+ class MaildirAppendFileTestCase(unittest.TestCase):
+@@ -1097,11 +1105,6 @@
+     def tearDownClass(self):
+         smtp.DNSNAME = self.DNSNAME
+ 
+-    def tearDown(self):
+-        reactor.iterate()
+-        reactor.iterate()
+-        reactor.iterate()
+-
+     def testProcessAlias(self):
+         path = util.sibpath(__file__, 'process.alias.sh')
+         a = mail.alias.ProcessAlias(path, None, None)
+
