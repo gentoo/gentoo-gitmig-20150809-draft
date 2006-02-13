@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.10.ebuild,v 1.1 2006/02/10 02:23:39 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.10.ebuild,v 1.2 2006/02/13 15:24:48 mcummings Exp $
 
 inherit eutils depend.php
 
@@ -37,7 +37,7 @@ RDEPEND=">=sys-libs/zlib-1.1
 DEPEND="${RDEPEND}
 	doc?  ( dev-python/docutils )
 	test? (
-		perl-core/Test-Harness
+		virtual/perl-Test-Harness
 		dev-libs/fcgi
 	)"
 
