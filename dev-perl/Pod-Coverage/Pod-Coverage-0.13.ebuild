@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/Pod-Coverage-0.13.ebuild,v 1.5 2005/12/30 10:41:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/Pod-Coverage-0.13.ebuild,v 1.6 2006/02/13 13:55:25 mcummings Exp $
 
 inherit perl-module
 
@@ -15,5 +15,5 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/module-build
-		perl-core/PodParser
+		virtual/perl-PodParser
 		dev-perl/Devel-Symdump"

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.30.09.ebuild,v 1.10 2005/12/29 18:19:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.30.09.ebuild,v 1.11 2006/02/13 13:52:06 mcummings Exp $
 
 IUSE="gtk ipv6 libwww ncurses tcltk"
 
@@ -19,14 +19,14 @@ KEYWORDS="x86 sparc"
 
 DEPEND="dev-perl/ExtUtils-AutoInstall
 	>=dev-perl/Event-1.00
-	>=perl-core/Time-HiRes-1.59
+	>=virtual/perl-Time-HiRes-1.59
 	>=dev-perl/Compress-Zlib-1.33
-	>=perl-core/Storable-2.12
+	>=virtual/perl-Storable-2.12
 	>=dev-perl/IO-Tty-1.02
 	perl-core/Filter
 	dev-perl/FreezeThaw
-	>=perl-core/File-Spec-0.87
-	>=perl-core/Test-Simple-0.54
+	>=virtual/perl-File-Spec-0.87
+	>=virtual/perl-Test-Simple-0.54
 	>=dev-perl/TermReadKey-2.21
 	ipv6? ( >=dev-perl/Socket6-0.14 )
 	tcltk? ( >=dev-perl/perl-tk-800.027 )

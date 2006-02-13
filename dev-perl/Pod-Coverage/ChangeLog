@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Pod-Coverage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.23 2006/02/08 23:44:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.24 2006/02/13 13:55:25 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  Pod-Coverage-0.13.ebuild, Pod-Coverage-0.14.ebuild,
+  Pod-Coverage-0.17.ebuild:
+  Virtuals for some perl-core deps
 
 *Pod-Coverage-0.17 (13 Jan 2006)
 
