@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p8.ebuild,v 1.4 2006/02/09 17:27:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p8.ebuild,v 1.5 2006/02/13 18:05:32 chutzpah Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_PV=${PV/_p*}
 MY_P=${PN}-${MY_PV}
@@ -14,7 +14,7 @@ SRC_URI="http://www.mpfr.org/mpfr-current/${MY_P}.tar.bz2
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/gmp-4.1.4-r2"
@@ -38,6 +38,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# tests fail on amd64 with -ffast-math, maybe other arches too
+	use amd64 && filter-flags -ffast-math
+
 	econf \
 		--enable-shared \
 		--enable-static \
