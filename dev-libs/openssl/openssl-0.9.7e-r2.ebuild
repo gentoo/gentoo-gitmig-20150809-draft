@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e-r2.ebuild,v 1.3 2006/02/09 09:56:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e-r2.ebuild,v 1.4 2006/02/13 02:57:00 halcy0n Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -162,10 +162,10 @@ src_compile() {
 		./config ${conf_options} --prefix=/usr --openssldir=/etc/ssl shared threads \
 			|| die "config failed"
 	fi
-	
+
 	# Shitty build systems deserve shitty hacks
 	sed -i -e 's/-m64//' -e 's/-m32//' Makefile
-	
+
 	einfo "Compiling ${P}"
 	make CC="$(tc-getCC)" BN_ASM="bn_asm.o" all || die "make all failed"
 
