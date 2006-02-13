@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/mylink
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mylink/ChangeLog,v 1.5 2005/05/24 15:52:57 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mylink/ChangeLog,v 1.6 2006/02/13 14:29:13 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org> mylink-0.93.ebuild:
+  Virtuals for perl-core
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org> mylink-0.93.ebuild:
   dev-perl/Digest-MD5 => perl-core/Digest-MD5
