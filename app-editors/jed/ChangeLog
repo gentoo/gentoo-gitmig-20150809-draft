@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.30 2006/02/10 18:03:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.31 2006/02/13 02:51:09 halcy0n Exp $
+
+  13 Feb 2006; Mark Loeser <halcy0n@gentoo.org> jed-0.99.16-r2.ebuild:
+  Fix leading and trailing spaces
 
   10 Feb 2006; Alastair Tse <liquidx@gentoo.org> jed-0.99.16-r2.ebuild:
   remove xproto as it is redundant
