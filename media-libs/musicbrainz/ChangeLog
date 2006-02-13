@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/musicbrainz
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.47 2005/07/02 00:13:46 hardave Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.48 2006/02/13 22:34:36 metalgod Exp $
+
+*musicbrainz-2.1.2 (13 Feb 2006)
+
+  13 Feb 2006; Luis Medinas <metalgod@gentoo.org> +musicbrainz-2.1.2.ebuild:
+  Version Bump. Closes bug #122702.
 
   02 Jul 2005; Hardave Riar <hardave@gentoo.org> musicbrainz-2.1.1.ebuild:
   Stable on mips
