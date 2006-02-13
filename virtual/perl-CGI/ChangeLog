@@ -1,6 +1,11 @@
 # ChangeLog for gentoo-x86/virtual
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.2 2006/02/07 20:59:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.3 2006/02/13 19:01:38 mcummings Exp $
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org> perl-CGI-3.05.ebuild,
+  perl-CGI-3.07.ebuild, perl-CGI-3.09.ebuild, perl-CGI-3.10.ebuild,
+  perl-CGI-3.15.ebuild:
+  Updated RDEPENDS
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> perl-CGI-3.10.ebuild:
   stable on amd64
