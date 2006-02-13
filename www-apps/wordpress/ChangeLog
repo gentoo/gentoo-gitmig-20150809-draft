@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.36 2006/02/13 03:11:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.37 2006/02/13 04:40:39 superlag Exp $
+
+  13 Feb 2006; Aaron Kulbe <superlag@gentoo.org> +wordpress-1.5.2.ebuild:
+  Re-adding 1.5.2 back into the tree.
 
   13 Feb 2006; Jason Wever <weeve@gentoo.org> wordpress-2.0.1.ebuild:
   Stable on SPARC wrt bug #121661.
