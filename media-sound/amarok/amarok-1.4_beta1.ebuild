@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4_beta1.ebuild,v 1.2 2006/02/12 21:00:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4_beta1.ebuild,v 1.3 2006/02/13 10:50:35 flameeyes Exp $
 
 LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ko lt nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz xx zh_CN zh_TW"
 LANGS_DOC="da de es et fr it nl pt pt_BR ru sv"
@@ -49,8 +49,6 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.9.0"
 
-PATCHES="${FILESDIR}/${P}-parallelmake.patch"
-
 need-kde 3.3
 
 pkg_setup() {
@@ -77,8 +75,10 @@ src_unpack() {
 	kde_src_unpack
 
 	# fix parallel make issues
-# 	sed -i -e 's:$(top_builddir)/amarok/src/libamarok.la:libamarok.la:' \
-# 		${S}/amarok/src/Makefile.am
+	sed -i -e 's:$(top_builddir)/amarok/src/libamarok.la:libamarok.la:' \
+		${S}/amarok/src/Makefile.am
+
+	rm -f ${S}/configure
 }
 
 src_compile() {
