@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e554df3f55ae79d4c11fe9de28337260 ChangeLog 9515
 MD5 7e68f2515597e3cd1b0a2b1d49fda10e files/digest-xmltv-0.5.34 65
 MD5 1b972dd0ced1a3531dcccd0e0c845310 files/digest-xmltv-0.5.37-r1 65
@@ -6,3 +9,10 @@ MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 5cc2447997694bab00d7cfe639c1dfb1 xmltv-0.5.34.ebuild 6728
 MD5 12bfc300abd5bbf04f1780400a86a893 xmltv-0.5.37-r1.ebuild 7520
 MD5 6d5f3ce2fc2d0ed83fa2f84680575126 xmltv-0.5.39.ebuild 7549
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8Jz6tG5z4I8BtQoRAspfAKCL8OAjJ9pJih8XEmPWxc0p5ldO4QCfcBsS
+wBbY3j99N2uD5X2TBaFqR/A=
+=++Tb
+-----END PGP SIGNATURE-----
