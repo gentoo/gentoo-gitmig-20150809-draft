@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.3.0-r1.ebuild,v 1.5 2005/05/25 14:03:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.3.0-r1.ebuild,v 1.6 2006/02/13 14:53:52 mcummings Exp $
 
 inherit eutils
 
@@ -19,8 +19,8 @@ IUSE="tcltk"
 S="${WORKDIR}/${MY_P%.?}"
 
 RDEPEND="dev-lang/perl
-	perl-core/Getopt-Long
-	perl-core/DB_File
+	virtual/perl-Getopt-Long
+	virtual/perl-DB_File
 	dev-perl/HTML-HTMLDoc
 	tcltk? ( dev-perl/perl-tk
 			 dev-perl/GDGraph )"
