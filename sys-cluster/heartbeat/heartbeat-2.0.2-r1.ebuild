@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.2-r1.ebuild,v 1.1 2006/02/12 16:04:31 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.2-r1.ebuild,v 1.2 2006/02/13 15:10:06 mcummings Exp $
 
 inherit flag-o-matic
 
@@ -24,7 +24,7 @@ DEPEND="
 			dev-perl/Net-DNS
 			dev-perl/libwww-perl
 			dev-perl/perl-ldap
-			perl-core/libnet
+			virtual/perl-libnet
 			dev-perl/Crypt-SSLeay
 			dev-perl/HTML-Parser
 			dev-perl/perl-ldap
