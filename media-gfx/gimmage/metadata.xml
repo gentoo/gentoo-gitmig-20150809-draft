@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>graphics</herd>
+  <maintainer>
+	<email>reb@gentoo.org</email>
+	<name>Karol Pasternak</name>
+  </maintainer>
+  <longdescription>gimmage: the gtkmm image viewer</longdescription>
+</pkgmetadata>
