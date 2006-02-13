@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ebayagent-0.9.11-r2.ebuild,v 1.2 2005/12/30 12:04:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ebayagent-0.9.11-r2.ebuild,v 1.3 2006/02/13 15:00:21 mcummings Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE="tcltk"
 KEYWORDS="x86"
 
 DEPEND="dev-lang/perl
-	>=perl-core/libnet-1.16
+	>=virtual/perl-libnet-1.16
 	>=dev-perl/URI-1.35
 	>=dev-perl/Crypt-SSLeay-0.49
 	>=dev-perl/libwww-perl-5.79
