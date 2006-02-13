@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.4 2006/01/27 00:25:27 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.5 2006/02/13 15:20:16 mcummings Exp $
 
 inherit webapp eutils
 
@@ -21,9 +21,9 @@ DEPEND="
 	>dev-perl/HTML-Mason-1.23
 	dev-perl/MLDBM
 	dev-perl/FreezeThaw
-	>=perl-core/Digest-MD5-2.27
-	>=perl-core/CGI-2.92
-	>=perl-core/Storable-2.08
+	>=virtual/perl-Digest-MD5-2.27
+	>=virtual/perl-CGI-2.92
+	>=virtual/perl-Storable-2.08
 	>=dev-perl/Apache-Session-1.53
 	>=dev-perl/XML-RSS-1.05
 	>=dev-perl/HTTP-Server-Simple-0.07
@@ -43,22 +43,22 @@ DEPEND="
 	mysql? ( >=dev-perl/DBD-mysql-2.1018 )
 	postgres? ( >=dev-perl/DBD-Pg-1.41 )
 
-	>=perl-core/Getopt-Long-2.24
+	>=virtual/perl-Getopt-Long-2.24
 
 	dev-perl/HTML-Tree
 	dev-perl/HTML-Format
 	dev-perl/libwww-perl
 
-	perl-core/digest-base
+	virtual/perl-digest-base
 	>=dev-perl/DBI-1.37
 	dev-perl/Test-Inline
 	>=dev-perl/class-returnvalue-0.40
 	>=dev-perl/dbix-searchbuilder-1.35
 	dev-perl/text-template
-	>=perl-core/File-Spec-0.8
+	>=virtual/perl-File-Spec-0.8
 	dev-perl/HTML-Parser
 	>=dev-perl/HTML-Scrubber-0.08
-	perl-core/libnet
+	virtual/perl-libnet
 	>=dev-perl/log-dispatch-2.0
 	>=dev-perl/locale-maketext-lexicon-0.32
 	dev-perl/locale-maketext-fuzzy
@@ -66,12 +66,12 @@ DEPEND="
 	>=dev-perl/MailTools-1.60
 	dev-perl/text-wrapper
 	dev-perl/Time-modules
-	perl-core/File-Temp
+	virtual/perl-File-Temp
 	dev-perl/TermReadKey
 	dev-perl/text-autoformat
 	>=dev-perl/Text-Quoted-1.3
 	>=dev-perl/Tree-Simple-1.04
-	perl-core/Scalar-List-Utils
+	virtual/perl-Scalar-List-Utils
 	dev-perl/Module-Versions-Report
 	dev-perl/Cache-Simple-TimedExpiry
 	dev-perl/XML-Simple
