@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/digest-base-1.13.ebuild,v 1.7 2006/02/07 20:56:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/digest-base-1.13.ebuild,v 1.8 2006/02/13 15:07:48 mcummings Exp $
 
 inherit perl-module
 
@@ -19,4 +19,4 @@ IUSE=""
 
 mydoc="rfc*.txt"
 
-DEPEND="perl-core/MIME-Base64"
+DEPEND="virtual/perl-MIME-Base64"
