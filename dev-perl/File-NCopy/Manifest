@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 baf1791d7ac16da6793fe8a37b6e7fd4 ChangeLog 1647
 MD5 86b6bf29bdf750272c24e3badc0fa87e File-NCopy-0.34.ebuild 591
 MD5 59766afab91c098133c1adf48ead5b9e files/digest-File-NCopy-0.34 65
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8IJgtG5z4I8BtQoRAgfDAJ0dPx/yWtXU1Sl7Vv5JD+FWI5l2ZwCfb5XA
+g5nkfqdzDA9+z+x8hA2wruc=
+=VRyO
+-----END PGP SIGNATURE-----

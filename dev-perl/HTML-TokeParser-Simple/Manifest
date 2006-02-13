@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ba7c0d440a92d4680f262231151b94f6 ChangeLog 2247
 MD5 983aed3533a91a56ce7c6246a5086d47 HTML-TokeParser-Simple-2.2.ebuild 600
 MD5 d750a4fda7d997a4d5d6e3e17191a3d4 HTML-TokeParser-Simple-3.13.ebuild 674
@@ -8,3 +11,10 @@ MD5 38a4e1797efe36039c5ebb5ed8a2f051 files/digest-HTML-TokeParser-Simple-3.13 78
 MD5 b6d21108253aa41f53cdd9632136044b files/digest-HTML-TokeParser-Simple-3.14 78
 MD5 b956d0eaa7e24e4afcfe0403066f5e70 files/digest-HTML-TokeParser-Simple-3.15 78
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8IRXtG5z4I8BtQoRAlRIAJ0cgejH0T5rRUw1aRvhVMKN+kHtRwCbBWou
+HUN6EXMjPjWEFxczIL+s+NM=
+=ZcwP
+-----END PGP SIGNATURE-----

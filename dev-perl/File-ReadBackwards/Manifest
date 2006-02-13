@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6a860774b3e7b70efef5ec9650b0f208 ChangeLog 2387
 MD5 1ae669642826972ce1295cf4ee44c006 File-ReadBackwards-1.02.ebuild 571
 MD5 f3e2c34873aee4721c0d2a7fa2dc13a3 File-ReadBackwards-1.03.ebuild 540
@@ -6,3 +9,10 @@ MD5 af2e40a716a796e3a4a5d82a2008dcc8 files/digest-File-ReadBackwards-1.02 73
 MD5 2f7f5a20b4ba0712b571f3209321295c files/digest-File-ReadBackwards-1.03 73
 MD5 53fe51496cb54a87aed923ad76766bad files/digest-File-ReadBackwards-1.04 73
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8IKetG5z4I8BtQoRAigZAJwLo6II4JlMrP7+tkgpj5fKNmX63gCfb4/2
+AKEf4NHOxvLUG5N/X9+Q+M8=
+=7LJE
+-----END PGP SIGNATURE-----

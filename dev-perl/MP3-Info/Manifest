@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 48a569e6f827aa37af5c6d8cf111832e ChangeLog 3678
 MD5 16d5fc8f9b48cb934e0ce372adf0d6a6 MP3-Info-1.02-r1.ebuild 580
 MD5 88c402b3572b331ce92967b7f1d9b032 MP3-Info-1.13.ebuild 536
@@ -6,3 +9,10 @@ MD5 487c11b36aa184c266dae1598af9288e files/digest-MP3-Info-1.02-r1 64
 MD5 6e207ab2c5a7ca580e5f5e5c95127633 files/digest-MP3-Info-1.13 64
 MD5 27bba063241248688fe9dcc73c5cd08b files/digest-MP3-Info-1.20 64
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8IWvtG5z4I8BtQoRArp6AJ9x8plSz/NCPtXJCpBaXxkcd5eB8gCfZ0sn
+/8vvqBDdoJbIqUr5f2Sk4HI=
+=SJWk
+-----END PGP SIGNATURE-----

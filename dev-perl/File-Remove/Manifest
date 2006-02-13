@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8dbd0601b955b8787323d18bc8d33e40 ChangeLog 2650
 MD5 148d34221de46dcef9623fcbdac5791d File-Remove-0.20.ebuild 577
 MD5 6c62ecf9ae253d9e2b2ad187e6a0069a File-Remove-0.21.ebuild 562
@@ -10,3 +13,10 @@ MD5 c3933831892b78883367423c819e7d42 files/digest-File-Remove-0.29 66
 MD5 2781493537f9946b8be8a000cbbfdcac files/digest-File-Remove-0.30 66
 MD5 821d3be17ad62b52e6e7cbe3098a2751 files/digest-File-Remove-0.31 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8ILStG5z4I8BtQoRApekAJ4nEhEeQw9zUpwq875UE0CFzqxJogCeLrDT
+IV8/t4hDwqLUpEAX1XII17U=
+=ncz3
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 33796ef9467aa3743f98a2a21b81072d ChangeLog 2672
 MD5 ed68821821be552f750d8d210053760c File-Tail-0.98-r3.ebuild 582
 MD5 26c8594ce04a4b94f7f33119e507e1e7 File-Tail-0.99.1.ebuild 619
 MD5 7ecb4d00051f4b86841a81d8a21d6e9e files/digest-File-Tail-0.98-r3 65
 MD5 fd4850d712d64ec943338a4d0afbad22 files/digest-File-Tail-0.99.1 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8ILrtG5z4I8BtQoRAsEQAJ95whp3Xo/XpYu6Q4pzOTocCuqoPgCeNjmC
+SsRtwNSXY/E+n4nKNLa120k=
+=Dvmr
+-----END PGP SIGNATURE-----

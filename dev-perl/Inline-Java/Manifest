@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b77ab10e572c016d4bd5b72503351a64 ChangeLog 690
 MD5 e1168174404ebcf123f9a31071b783c0 Inline-Java-0.49.ebuild 581
 MD5 dfad46f97167fe4f210d784546d57c6a Inline-Java-0.50.ebuild 633
 MD5 1ce3f80342ba4728acb1788e3c51c427 files/digest-Inline-Java-0.49 67
 MD5 6df033b0473bd317aff8981bb4ae2ed7 files/digest-Inline-Java-0.50 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8IS7tG5z4I8BtQoRAvlFAKCQ22yI/6V0EQ4tBSwF7p7bgtk7pgCeM7O6
+ppXh3f8PB3s+qHflDd2LREM=
+=JKxp
+-----END PGP SIGNATURE-----

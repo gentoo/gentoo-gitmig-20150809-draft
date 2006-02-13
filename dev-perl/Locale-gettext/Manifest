@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 de3cb5821b35a85179cb7de8ee07a27d ChangeLog 3337
 MD5 183a32f67a705c5c66ccf3b354d2bc19 Locale-gettext-1.01-r1.ebuild 636
 MD5 7eb8eedf3bb85bc993801026b49a63a3 Locale-gettext-1.03.ebuild 628
@@ -8,3 +11,10 @@ MD5 0b27b3100ea21c897a27c277ab38fc07 files/digest-Locale-gettext-1.03 62
 MD5 49e0c8cbda0ccebda98f60b2cc1c568d files/digest-Locale-gettext-1.04 62
 MD5 6e5316f7bedb83e1d2ed7ef49cd3e5f3 files/digest-Locale-gettext-1.05 62
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8IT8tG5z4I8BtQoRAobdAJ427wLVVkrRZioklYiHsNHBwL53gwCgkd7Z
+5hiNiCxCBL96q7ym57QHOJA=
+=cWue
+-----END PGP SIGNATURE-----
