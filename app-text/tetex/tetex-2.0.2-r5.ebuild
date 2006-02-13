@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r5.ebuild,v 1.14 2006/01/21 11:47:36 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r5.ebuild,v 1.15 2006/02/13 12:13:22 ehmsen Exp $
 
 inherit tetex-2 flag-o-matic
 
@@ -20,6 +20,9 @@ src_unpack() {
 	EPATCH_OPTS="-d ${S}/libs/xpdf/xpdf -p0" epatch ${FILESDIR}/xpdf-3.00pl2-CAN-2004-1125.patch
 	EPATCH_OPTS="-d ${S}/libs/xpdf/xpdf -p0" epatch ${FILESDIR}/xpdf-3.00pl3-CAN-2005-0064.patch
 	EPATCH_OPTS="-d ${S} -p1" epatch ${FILESDIR}/xdvizilla.patch
+
+	# bug 122365
+	EPATCH_OPTS="-d ${WORKDIR}" epatch ${FILESDIR}/tetex-2.0.2-flex-unput.patch || die
 
 	# bug 118264
 	EPATCH_OPTS="-d ${WORKDIR} -p0" epatch \
