@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b46f488cce789c0027c949ac183bb39c ChangeLog 4752
 MD5 267c1925d291df61d8b60d9de3be8800 bioperl-1.4.ebuild 1170
 MD5 d5d0bc711fb345c9b91086c5d47e1442 files/digest-bioperl-1.4 65
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8KDutG5z4I8BtQoRAhRiAKCTrfbEoWePbqIaoGym+5+fCM1EQwCcDfnZ
+PWUI9wQCF9PPxpd+WWJIELw=
+=+MsJ
+-----END PGP SIGNATURE-----
