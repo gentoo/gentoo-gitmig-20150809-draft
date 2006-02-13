@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.0.0.ebuild,v 1.4 2006/01/31 13:15:38 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.0.0-r1.ebuild,v 1.1 2006/02/13 03:08:46 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -25,3 +25,11 @@ DEPEND="${RDEPEND}
 CONFIGURE_OPTIONS="$(use_enable ipv6)"
 # xorg really doesn't like xlocale disabled.
 # $(use_enable nls xlocale)
+
+src_install() {
+	x-modular_src_install
+
+	local ENVD="10libx11"
+	echo "LDPATH=\"/usr/lib\"" > ${T}/${ENVD}
+	doenvd ${T}/${ENVD}
+}

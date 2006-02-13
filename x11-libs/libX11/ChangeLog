@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.24 2006/01/31 13:15:38 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.25 2006/02/13 03:08:46 spyderous Exp $
+
+*libX11-1.0.0-r1 (13 Feb 2006)
+
+  13 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; -libX11-1.0.0.ebuild,
+  +libX11-1.0.0-r1.ebuild:
+  (#113996) Fix conflict with NX (nomachine) by overriding its library path
+  with an env.d file.
 
   31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org> libX11-1.0.0.ebuild:
   Unstable on hppa.
