@@ -1,15 +1,25 @@
-MD5 fed2e6619cc5602abeb3d58df24adda7 ChangeLog 423
-RMD160 19b37584df18d46615a62170efd9752f83569ed1 ChangeLog 423
-SHA256 1e931d636bc60612d982f9184b6a40fc56eb5e0f6cad237c6e51c58c77ca9e5f ChangeLog 423
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 326480049023de33a40d0e97f07167b9 ChangeLog 528
+RMD160 e825ae9621184e5ed0fcc0ab3825af5223b82773 ChangeLog 528
+SHA256 b404674acf535bfcc7a7b6d71f6e0e3b764d37b2e590ac8eae440a625f250391 ChangeLog 528
 MD5 b2dbbce23202161739bd3c1b0b9e791b files/digest-galago-daemon-0.3.4 259
 RMD160 a553424332a28e9920ca46aef9ac4e6ca9ba2ba1 files/digest-galago-daemon-0.3.4 259
 SHA256 ff06898bc066b5a8d3ed9afc85442e5e0d179112290141c63879066acf09f95c files/digest-galago-daemon-0.3.4 259
 MD5 bdf1c5ae2ff12f57831c6dab3c901d9a files/galago-daemon-0.3.4-test-option.patch 747
 RMD160 4240589de1420963f69594a029c4da0a155aafe7 files/galago-daemon-0.3.4-test-option.patch 747
 SHA256 2452247741231e54cf85e19a29280db6345bf9257682a0e9206e8659b68cdd4c files/galago-daemon-0.3.4-test-option.patch 747
-MD5 f740303e5905faa72540999324051908 galago-daemon-0.3.4.ebuild 984
-RMD160 f46d075ce6b4486447315853fdd5cf05fdaa7eab galago-daemon-0.3.4.ebuild 984
-SHA256 dfbc5d0bcdacb362b87a6ade60b35015e021e3ce257aecad6faa7c7faab9ec02 galago-daemon-0.3.4.ebuild 984
+MD5 c7a9daffbde5535b6cc09c1adfcc9d32 galago-daemon-0.3.4.ebuild 991
+RMD160 13fe79ffb303d74fb2622e0c12a2225dbc4925b0 galago-daemon-0.3.4.ebuild 991
+SHA256 1b1852b29d73c640583e43e3466be366ed9bd7d05ce8044896d78c11c736d41d galago-daemon-0.3.4.ebuild 991
 MD5 987b824d47696574408ff794a1669990 metadata.xml 312
 RMD160 03fef86ca203ec541f1488fb88f7f653558da537 metadata.xml 312
 SHA256 247d6e467251565ff33d6c40f4cee2897eb2f0d803c49b4d5f62a767b5785995 metadata.xml 312
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD8OefwUpWvClEHQoRAokdAJ4gASC7SwCr1nGkbhCyl9a6rlODMwCfUrmF
+tVCNzRxTidEGy1gTBtcHWHA=
+=HiUb
+-----END PGP SIGNATURE-----
