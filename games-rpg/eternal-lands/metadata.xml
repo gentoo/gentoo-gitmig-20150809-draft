@@ -3,6 +3,9 @@
 <pkgmetadata>
 <herd>games</herd>
 <maintainer>
-<email>kanaka@gentoo.org</email>
+  <email>uberlord@gentoo.org</email>
+  <name>Roy Marples</name>
 </maintainer>
+<longdescription>Eternal Lands is a FREE MMORPG (massively multiplayer online
+	role playing game)</longdescription>
 </pkgmetadata>
