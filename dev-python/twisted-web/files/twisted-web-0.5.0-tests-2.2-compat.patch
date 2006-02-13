@@ -1,0 +1,100 @@
+=== modified file 'twisted/web/test/test_webclient.py'
+--- twisted/web/test/test_webclient.py	
++++ twisted/web/test/test_webclient.py	
+@@ -94,15 +94,12 @@
+         r.putChild("broken", BrokenDownloadResource())
+         site = server.Site(r, timeout=None)
+         self.port = self._listen(site)
+-        reactor.iterate(); reactor.iterate()
+         self.portno = self.port.getHost().port
+ 
+     def tearDown(self):
+         if serverCallID and serverCallID.active():
+             serverCallID.cancel()
+-        self.port.stopListening()
+-        reactor.iterate(); reactor.iterate();
+-        del self.port
++        return self.port.stopListening()
+ 
+     def getURL(self, path):
+         return "http://127.0.0.1:%d/%s" % (self.portno, path)
+@@ -115,9 +112,10 @@
+ 
+     def testBrokenDownload(self):
+         # test what happens when download gets disconnected in the middle
+-        exc = self.assertRaises(client.PartialDownloadError, unittest.wait,
+-                                client.getPage(self.getURL("broken")))
+-        self.assertEquals(exc.response, "abc")
++        d = client.getPage(self.getURL("broken"))
++        d = unittest.assertFailure(d, client.PartialDownloadError)
++        d.addCallback(lambda exc: self.assertEquals(exc.response, "abc"))
++        return d
+     
+     def testHostHeader(self):
+         # if we pass Host header explicitly, it should be used, otherwise
+@@ -132,7 +130,8 @@
+     def testTimeoutNotTriggering(self):
+         # Test that when the timeout doesn't trigger, things work as expected.
+         d = client.getPage(self.getURL("wait"), timeout=100)
+-        self.assertEquals(unittest.wait(d), "hello!!!")
++        d.addCallback(self.assertEquals, "hello!!!")
++        return d
+ 
+     def testTimeoutTriggering(self):
+         # Test that when the timeout does trigger, we get a defer.TimeoutError.
+@@ -195,10 +194,14 @@
+         return ignored
+ 
+     def _downloadTest(self, method):
++        dl = []
+         for (url, code) in [("nosuchfile", "404"), ("error", "401"),
+                             ("error?showlength=1", "401")]:
+-            exc = self.assertRaises(error.Error, unittest.wait, method(url))
+-            self.assertEquals(exc.args[0], code)
++            d = method(url)
++            d = unittest.assertFailure(d, error.Error)
++            d.addCallback(lambda exc, code=code: self.assertEquals(exc.args[0], code))
++            dl.append(d)
++        return defer.DeferredList(dl, fireOnOneErrback=True)
+ 
+     def testServerError(self):
+         return self._downloadTest(lambda url: client.getPage(self.getURL(url)))
+@@ -305,7 +308,6 @@
+                                          interface="127.0.0.1")
+         self.plainPort = reactor.listenTCP(0, plainSite, interface="127.0.0.1")
+ 
+-        reactor.iterate(); reactor.iterate()
+         self.plainPortno = self.plainPort.getHost().port
+         self.tlsPortno = self.tlsPort.getHost().port
+ 
+@@ -315,11 +317,9 @@
+         tlsRoot.putChild('four', static.Data('FOUND IT!', 'text/plain'))
+ 
+     def tearDown(self):
+-        self.plainPort.stopListening()
+-        self.tlsPort.stopListening()
+-        reactor.iterate(); reactor.iterate();
+-        del self.plainPort
+-        del self.tlsPort
++        ds = map(defer.maybeDeferred,
++                 [self.plainPort.stopListening, self.tlsPort.stopListening])
++        return defer.gatherResults(ds)
+ 
+     def testHoppingAround(self):
+         return client.getPage(self.getHTTP("one")
+@@ -343,13 +343,10 @@
+         root.putChild("rawcookiemirror", RawCookieMirrorResource())
+         site = server.Site(root, timeout=None)
+         self.port = self._listen(site)
+-        reactor.iterate(); reactor.iterate()
+         self.portno = self.port.getHost().port
+ 
+     def tearDown(self):
+-        self.port.stopListening()
+-        reactor.iterate(); reactor.iterate();
+-        del self.port
++        return self.port.stopListening()
+ 
+     def getHTTP(self, path):
+         return "http://127.0.0.1:%d/%s" % (self.portno, path)
+

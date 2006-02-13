@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.6 2006/02/01 13:42:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.7 2006/02/13 22:23:54 marienz Exp $
+
+  13 Feb 2006; Marien Zwart <marienz@gentoo.org>
+  +files/twisted-web-0.5.0-tests-2.2-compat.patch,
+  twisted-web-0.5.0-r1.ebuild:
+  Patch to make the tests succeed with twisted 2.0, 2.1 and 2.2. No revision
+  bump because this only affects the tests.
 
   01 Feb 2006; Aron Griffis <agriffis@gentoo.org>
   twisted-web-0.5.0-r1.ebuild:
