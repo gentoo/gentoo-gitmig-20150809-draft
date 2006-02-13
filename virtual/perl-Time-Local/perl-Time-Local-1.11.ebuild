@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/perl-Time-Local-1.11.ebuild,v 1.2 2006/02/08 18:57:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/perl-Time-Local-1.11.ebuild,v 1.3 2006/02/13 20:00:52 mcummings Exp $
 
 DESCRIPTION="Virtual for Time-Local"
 HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
@@ -12,5 +12,5 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 
 IUSE=""
 DEPEND=""
-RDEPEND="~perl-core/Time-Local-${PV}"
+RDEPEND="|| ( >=dev-lang/perl-5.8.7 ~perl-core/Time-Local-${PV} )"
 

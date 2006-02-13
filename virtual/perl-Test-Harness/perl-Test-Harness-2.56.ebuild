@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/perl-Test-Harness-2.56.ebuild,v 1.1 2006/02/06 17:05:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/perl-Test-Harness-2.56.ebuild,v 1.2 2006/02/13 19:56:04 mcummings Exp $
 
 DESCRIPTION="Virtual for Test-Harness"
 HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
@@ -12,5 +12,5 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 
 IUSE=""
 DEPEND=""
-RDEPEND="=perl-core/Test-Harness-2.56"
+RDEPEND="|| ( ~dev-lang/perl-5.8.8 ~perl-core/Test-Harness-2.56 )"
 
