@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bb63406037a54de4f0f1ad7f172e1fbb ChangeLog 3003
 MD5 fed75d396b333655a8a8e83e64e27062 files/apache1.patch 529
 MD5 f47d2140cdd984fb31b2f468719d94e9 files/apache2.patch 902
@@ -12,3 +15,10 @@ MD5 224c312cc23d02aa06c26a4da3cc1f90 metadata.xml 221
 MD5 7f6495e27a7ac362debc534176a5c1ed otrs-1.3.2.ebuild 2776
 MD5 32f856f830877fb2a00b8fffe3b379a6 otrs-2.0.3.ebuild 3324
 MD5 0f3d10206a185271b264f29dfb18ff8a otrs-2.0.4.ebuild 3147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD8KOctG5z4I8BtQoRAj8jAJsGdyoqozPVpzXXEQi/QNat1RK+3QCfVGYx
+oLCKUDqcX2WBqtLpwC8sTRk=
+=a+a8
+-----END PGP SIGNATURE-----
