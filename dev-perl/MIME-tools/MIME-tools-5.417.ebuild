@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/MIME-tools-5.417.ebuild,v 1.12 2006/01/21 21:33:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/MIME-tools-5.417.ebuild,v 1.13 2006/02/13 13:10:47 mcummings Exp $
 
 inherit perl-module
 
@@ -17,10 +17,10 @@ SRC_TEST="do"
 
 DEPEND="${DEPEND}
 	>=dev-perl/IO-stringy-2.108
-	>=perl-core/MIME-Base64-3.05
-	perl-core/libnet
+	>=virtual/perl-MIME-Base64-3.05
+	virtual/perl-libnet
 	dev-perl/URI
-	perl-core/Digest-MD5
+	virtual/perl-Digest-MD5
 	dev-perl/libwww-perl
 	dev-perl/HTML-Tagset
 	dev-perl/HTML-Parser
