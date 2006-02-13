@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.111 2006/02/03 21:00:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.112 2006/02/13 06:51:33 halcy0n Exp $
+
+  13 Feb 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/wxGTK-2.4.2-gcc4.patch, wxGTK-2.4.2-r4.ebuild:
+  Thanks to Chris Fairles <cafairle AT engmail DOT uwaterloo DOT ca> for the
+  gcc-4 patch; bug #117357
 
   03 Feb 2006; Aron Griffis <agriffis@gentoo.org> wxGTK-2.6.2-r1.ebuild:
   Mark 2.6.2-r1 stable on ia64
