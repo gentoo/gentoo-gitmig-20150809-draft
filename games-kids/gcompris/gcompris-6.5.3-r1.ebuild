@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.5.3-r1.ebuild,v 1.1 2005/11/21 17:51:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.5.3-r1.ebuild,v 1.2 2006/02/14 04:07:37 joshuabaergen Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ppc x86"
 #IUSE="python editor" #editor didn't compile for me.; doesn't like python-2.4
 IUSE=""
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( x11-libs/libXrandr virtual/x11 )
 	>=dev-libs/glib-2.0
 	=x11-libs/gtk+-2*
 	>=gnome-base/libgnomecanvas-2.0.2
