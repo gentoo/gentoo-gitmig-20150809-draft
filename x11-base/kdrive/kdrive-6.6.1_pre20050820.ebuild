@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-6.6.1_pre20050820.ebuild,v 1.5 2006/01/19 04:18:17 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-6.6.1_pre20050820.ebuild,v 1.6 2006/02/14 22:09:36 corsair Exp $
 
 SNAPSHOT="yes"
 
@@ -13,7 +13,7 @@ MY_P="${MY_PN}-${PV##*pre}"
 SRC_URI="http://dev.gentoo.org/~spyderous/overlay/distfiles/${MY_P}.tar.bz2"
 HOMEPAGE="http://xserver.freedesktop.org/wiki/Software/Xserver"
 DESCRIPTION="Experimental X11 implementations"
-KEYWORDS="~x86"
+KEYWORDS="~ppc64 ~x86"
 IUSE="ipv6 static minimal"
 RDEPEND="x11-libs/libXdmcp
 	x11-libs/libX11
