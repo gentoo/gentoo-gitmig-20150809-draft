@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.22 2006/01/31 13:43:21 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.23 2006/02/14 23:02:55 corsair Exp $
+
+  14 Feb 2006; Markus Rothe <corsair@gentoo.org> glproto-1.4.3.ebuild:
+  Added ~ppc64
 
   31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org> glproto-1.4.3.ebuild:
   Unstable on hppa.

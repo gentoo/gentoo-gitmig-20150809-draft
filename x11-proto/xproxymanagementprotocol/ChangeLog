@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xproxymanagementprotocol
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproxymanagementprotocol/ChangeLog,v 1.9 2006/01/31 12:57:40 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproxymanagementprotocol/ChangeLog,v 1.10 2006/02/14 23:19:50 corsair Exp $
+
+  14 Feb 2006; Markus Rothe <corsair@gentoo.org>
+  xproxymanagementprotocol-1.0.2.ebuild:
+  Added ~ppc64
 
   31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org>
   xproxymanagementprotocol-1.0.2.ebuild:
