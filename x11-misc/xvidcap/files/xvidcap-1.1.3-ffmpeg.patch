@@ -1,0 +1,263 @@
+--- xvidcap-1.1.3/src/xtoffmpeg.c	2004-02-15 20:00:54.000000000 +0100
++++ xtoffmpeg.c	2006-02-12 20:21:13.000000000 +0100
+@@ -164,14 +164,14 @@
+     if (!audio_buf || !audio_out)
+         return;               /* Should signal an error ! */
+     
+-    enc = &ost->st->codec;
++    enc = ost->st->codec;
+     
+     // resampling is only used for pipe input here
+     if (ost->audio_resample) {
+         buftmp = audio_buf;
+         size_out = audio_resample (ost->resample,
+         (short *)buftmp, (short *)buf,
+-        size / (ist->st->codec.channels * 2));
++        size / (ist->st->codec->channels * 2));
+         size_out = size_out * enc->channels * 2;
+     } else {
+         buftmp = buf;
+@@ -191,13 +191,18 @@
+             ret = avcodec_encode_audio (enc, audio_out, audio_out_size,
+             (short *)audio_buf);
+ 
+-//            audio_pts = (double)au_out_st->st->pts.val * output_file->pts_num / output_file->pts_den;
+-//            video_pts = (double)out_st->pts.val * output_file->pts_num / output_file->pts_den;
++            // audio_pts = (double)au_out->st->pts.val * au_out->st->pts.num / au_out->st->pts.den;
++	    //            video_pts = (double)out->st->pts.val * out->st->pts.num / out->st->pts.den;
+ 
+ //            if ( audio_pts < video_pts && pthread_mutex_trylock (&mp) == 0 ) {
+             if (  pthread_mutex_trylock (&mp) == 0 ) {
+-                /* write the compressed frame in the media file */
+-                if (av_write_frame (s, ost->st->index, audio_out, ret) != 0) {
++  	        /* write the compressed frame in the media file */
++	        AVPacket _pkt, *pkt = &_pkt;
++		av_init_packet (pkt);
++		pkt->stream_index = ost->st->index;
++		pkt->data = audio_out;
++		pkt->size = ret;
++                if (av_write_frame (output_file, pkt) != 0) {
+                     fprintf (stderr, "Error while writing audio frame\n");
+                     exit (1);
+                 }
+@@ -269,23 +274,22 @@
+         //FIXME: this needs to get more sophisticated for pausing efficiently ...
+         if (job->state == VC_REC ) {
+ 
+-            audio_pts = (double)au_out_st->st->pts.val * output_file->pts_num / output_file->pts_den;
+-            video_pts = (double)out_st->pts.val * output_file->pts_num / output_file->pts_den;
++	  //audio_pts = (double)au_out_st->st->pts.val * output_file->pts_num / output_file->pts_den;
++	  // video_pts = (double)out_st->pts.val * output_file->pts_num / output_file->pts_den;
++	  audio_pts = 0; video_pts = 1;
+ 
+             if ( audio_pts < video_pts ) {
+-
+-
+-            /* read a packet from it and output it in the fifo */
+-            if (av_read_packet (ic, &pkt) < 0) {
++	      /* read a packet from it and output it in the fifo */
++	      if (av_read_packet (ic, &pkt) < 0) {
+                 fprintf (stderr, "error reading audio packet\n");
+-            } else {
++	      } else {
+                 //                printf ("input stream #%d, size=%d:\n", pkt.stream_index, pkt.size);
+                 //                av_hex_dump(pkt.data, pkt.size);
+-            }
+-            
+-            len = pkt.size;
+-            ptr = pkt.data;
+-            while (len > 0) {
++	      }
++	      
++	      len = pkt.size;
++	      ptr = pkt.data;
++	      while (len > 0) {
+                 /* decode the packet if needed */
+                 data_buf = NULL; /* fail safe */
+                 data_size = 0;
+@@ -311,8 +315,8 @@
+                     
+                     /* XXX: could avoid copy if PCM 16 bits with same
+                      endianness as CPU */
+-                    retval = avcodec_decode_audio (&au_in_st->st->codec, samples, &data_size,
+-                    ptr, len);
++                    retval = avcodec_decode_audio (au_in_st->st->codec, samples, &data_size,
++						   ptr, len);
+                     if (retval < 0) {
+                         fprintf (stderr, "couldn't decode captured audio packet\n");
+                         break;
+@@ -342,11 +346,11 @@
+                 au_in_st->frame_decoded = 1;
+                 
+                 do_audio_out (output_file, au_out_st, au_in_st, data_buf, data_size);
+-
+-            }
+-            // discard packet
+-            av_free_packet (&pkt);
+-
++		
++	      }
++	      // discard packet
++	      av_free_packet (&pkt);
++	      
+ 	    } // end if pts ...
+         } // end if VC_REC
+         // get end time
+@@ -682,7 +686,7 @@
+             exit (1);
+         }
+         
+-        c = &out_st->codec;
++        c = out_st->codec;
+         c->codec_id = transCodec;
+         c->codec_type = CODEC_TYPE_VIDEO;
+         
+@@ -696,8 +700,10 @@
+         #endif  /* DEBUG */
+         
+         /* frames per second */
+-        c->frame_rate = job->fps;
+-        c->frame_rate_base = 1;
++        /*c->frame_rate = job->fps;
++        c->frame_rate_base = 1;*/
++		c->time_base.den = job->fps * 1000;
++		c->time_base.num = 1000;
+         c->gop_size = 250; /* emit one intra frame every 10 frames */
+         //        c->me_method = ME_EPZS;
+         //	    c->debug = 0x00000FFF;
+@@ -707,10 +713,13 @@
+          */
+         memset (p_fParams, 0, sizeof(*p_fParams));
+         p_fParams->image_format = image_format;
+-        p_fParams->frame_rate = out_st->codec.frame_rate;
++        /*p_fParams->frame_rate = out_st->codec.frame_rate;
+         p_fParams->frame_rate_base = out_st->codec.frame_rate_base;
+         p_fParams->width = out_st->codec.width;
+-        p_fParams->height = out_st->codec.height;
++        p_fParams->height = out_st->codec.height;*/
++		p_fParams->time_base = out_st->codec->time_base;
++		p_fParams->width = out_st->codec->width;
++		p_fParams->height = out_st->codec->height;
+         if (av_set_parameters (output_file, p_fParams) < 0) {
+             //        if (av_set_parameters(output_file, NULL) < 0) {
+             fprintf (stderr, "xtoffmpeg.XImageToFFMPEG(): Invalid encoding parameters ... aborting\n");
+@@ -720,7 +729,8 @@
+         /*
+          * open codec
+          */
+-        c = &out_st->codec;
++        c = out_st->codec;
++		c->pix_fmt = PIX_FMT_YUV420P;
+         
+         /* find the video encoder */
+         codec = avcodec_find_encoder (c->codec_id);
+@@ -822,7 +832,8 @@
+                 fprintf (stderr, "Could not alloc stream\n");
+                 exit (1);
+             }
+-            au_out_st->st->codec = *au_c;
++
++            au_out_st->st->codec = au_c;
+             
+             if (fifo_init (&au_out_st->fifo, 2 * MAX_AUDIO_PACKET_SIZE)) {
+                 fprintf (stderr, "Can't initialize fifo for audio recording\n");
+@@ -837,22 +848,22 @@
+             // Once we get support for dubbing from a pipe or a different
+             // file, we might have different sample rates or no of channels
+             // in the input file.....
+-            if (au_c->channels == au_in_st->st->codec.channels &&
+-            au_c->sample_rate == au_in_st->st->codec.sample_rate) {
++            if (au_c->channels == au_in_st->st->codec->channels &&
++            au_c->sample_rate == au_in_st->st->codec->sample_rate) {
+                 au_out_st->audio_resample = 0;
+             } else {
+-                if (au_c->channels != au_in_st->st->codec.channels &&
+-                au_in_st->st->codec.codec_id == CODEC_ID_AC3) {
++                if (au_c->channels != au_in_st->st->codec->channels &&
++                au_in_st->st->codec->codec_id == CODEC_ID_AC3) {
+                     /* Special case for 5:1 AC3 input */
+                     /* and mono or stereo output      */
+                     /* Request specific number of channels */
+-                    au_in_st->st->codec.channels = au_c->channels;
+-                    if (au_c->sample_rate == au_in_st->st->codec.sample_rate)
++                    au_in_st->st->codec->channels = au_c->channels;
++                    if (au_c->sample_rate == au_in_st->st->codec->sample_rate)
+                         au_out_st->audio_resample = 0;
+                     else {
+                         au_out_st->audio_resample = 1;
+-                        au_out_st->resample = audio_resample_init (au_c->channels, au_in_st->st->codec.channels,
+-                        au_c->sample_rate, au_in_st->st->codec.sample_rate);
++                        au_out_st->resample = audio_resample_init (au_c->channels, au_in_st->st->codec->channels,
++                        au_c->sample_rate, au_in_st->st->codec->sample_rate);
+                         if(!au_out_st->resample) {
+                             printf ("Can't resample.  Aborting.\n");
+                             exit (1);
+@@ -860,11 +871,11 @@
+                         }
+                     }
+                     /* Request specific number of channels */
+-                    au_in_st->st->codec.channels = au_c->channels;
++                    au_in_st->st->codec->channels = au_c->channels;
+                 } else {
+                     au_out_st->audio_resample = 1;
+-                    au_out_st->resample = audio_resample_init (au_c->channels, au_in_st->st->codec.channels,
+-                    au_c->sample_rate, au_in_st->st->codec.sample_rate);
++                    au_out_st->resample = audio_resample_init (au_c->channels, au_in_st->st->codec->channels,
++                    au_c->sample_rate, au_in_st->st->codec->sample_rate);
+                     if(!au_out_st->resample) {
+                         printf ("Can't resample.  Aborting.\n");
+                         exit (1);
+@@ -876,19 +887,19 @@
+             au_out_st->encoding_needed = 1;
+             
+             // open encoder
+-            au_codec = avcodec_find_encoder (au_out_st->st->codec.codec_id);
+-            if (avcodec_open (&au_out_st->st->codec, au_codec) < 0) {
++            au_codec = avcodec_find_encoder (au_out_st->st->codec->codec_id);
++            if (avcodec_open (au_out_st->st->codec, au_codec) < 0) {
+                 fprintf (stderr, "Error while opening codec for output stream\n");
+                 exit (1);
+             }
+             
+             // open decoder
+-            au_codec = avcodec_find_decoder (ic->streams[0]->codec.codec_id);
++            au_codec = avcodec_find_decoder (ic->streams[0]->codec->codec_id);
+             if (!au_codec) {
+                 fprintf (stderr, "Unsupported codec (id=%d) for input stream\n");
+                 exit (1);
+             }
+-            if (avcodec_open (&ic->streams[0]->codec, au_codec) < 0) {
++            if (avcodec_open (ic->streams[0]->codec, au_codec) < 0) {
+                 fprintf (stderr, "Error while opening codec for input stream\n");
+                 exit (1);
+             }
+@@ -1112,12 +1123,17 @@
+             exit (1);
+         }
+         // the following bit is for synching audio and video streams ...
+-        audio_pts = (double)au_out_st->st->pts.val * output_file->pts_num / output_file->pts_den;
+-        video_pts = (double)out_st->pts.val * output_file->pts_num / output_file->pts_den;
++	//  audio_pts = (double)au_out_st->st->pts.val * output_file->pts_num / output_file->pts_den;
++        // video_pts = (double)out_st->pts.val * output_file->pts_num / output_file->pts_den;
+     }
+ #endif // HAVE_FFMPEG_AUDIO
+     /* write frame to file */
+-    av_write_frame (output_file, out_st->index, outbuf, out_size);
++    AVPacket _pkt, *pkt = &_pkt;
++    av_init_packet (pkt);
++    pkt->stream_index = out_st->index;
++    pkt->data = outbuf;
++    pkt->size = out_size;
++    av_write_frame (output_file, pkt);
+ #ifdef HAVE_FFMPEG_AUDIO
+     /* release the mutex */
+     if (job->flags & FLG_AUDIO_WANTED) {
+@@ -1154,7 +1170,7 @@
+     #endif // HAVE_FFMPEG_AUDIO
+     
+     if (out_st) {
+-        avcodec_close (&out_st->codec);
++        avcodec_close (out_st->codec);
+         out_st = NULL;
+     }
+ 

@@ -1,0 +1,12 @@
+diff -Nru xvidcap-1.1.3.vanilla/configure.ac xvidcap-1.1.3/configure.ac
+--- xvidcap-1.1.3.vanilla/configure.ac	2004-02-14 15:29:20.000000000 +0100
++++ xvidcap-1.1.3/configure.ac	2006-02-14 11:47:05.000000000 +0100
+@@ -213,7 +213,7 @@
+ #check for audio suport in FFMPEG
+ if ( test x${ac_cv_lib_avformat_avienc_init} = xyes ) ; then
+ 	test x`(uname -s)` = xSunOS && ac_my_avformat_libs="-lnsl -lsocket"
+-	AC_CHECK_LIB_STATIC(avformat, audio_init,[ac_my_have_ffmpeg_audio="1"],[unset ac_cv_lib_avformat_audio_open ; AC_CHECK_LIB(avformat, audio_init,[ac_my_have_ffmpeg_audio="1"],[ac_my_have_ffmpeg_audio="0"],[$ac_my_avformat_libs])],[$ac_my_avformat_libs])
++	AC_CHECK_LIB_STATIC(avformat, audio_init,[ac_my_have_ffmpeg_audio="1"],[unset ac_cv_lib_avformat_audio_init ; AC_CHECK_LIB(avformat, audio_init,[ac_my_have_ffmpeg_audio="1"],[ac_my_have_ffmpeg_audio="0"],[$ac_my_avformat_libs])],[$ac_my_avformat_libs])
+ fi
+ 
+ 
