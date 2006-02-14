@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-adobe-utopia-type1
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-utopia-type1/ChangeLog,v 1.15 2006/01/31 12:51:26 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-utopia-type1/ChangeLog,v 1.16 2006/02/14 19:49:50 corsair Exp $
+
+  14 Feb 2006; Markus Rothe <corsair@gentoo.org>
+  font-adobe-utopia-type1-1.0.1.ebuild:
+  Added ~ppc64
 
   31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org>
   font-adobe-utopia-type1-1.0.1.ebuild:
