@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CGI-Session
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/ChangeLog,v 1.6 2006/02/13 10:44:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/ChangeLog,v 1.7 2006/02/14 19:10:44 anarchy Exp $
+
+  14 Feb 2006; <anarchy@gentoo.org> CGI-Session-4.03.ebuild:
+  marked ~amd64 wrt bug #121296
 
   13 Feb 2006; <mcumming@gentoo.org> CGI-Session-4.03.ebuild:
   Virtual for perl-core dep
