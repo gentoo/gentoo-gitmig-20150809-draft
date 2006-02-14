@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 27153495e137983de1691bca425b1519 ChangeLog 51879
-RMD160 2aa6f30906f9e4f84a90af45803c6280ee395607 ChangeLog 51879
-SHA256 8e93d82af2eefaba7fdba2de10bf7354b3b62aa400aebe0c8493555f467b02da ChangeLog 51879
+MD5 a06cdf4bb1c01090307f511abfb62afd ChangeLog 52142
+RMD160 f27dec0b451cb5f5460553f5568fa74fe4b40038 ChangeLog 52142
+SHA256 e9195d959974ae09fe7e8ec6204c7ee6bf0c22bb715629f8c5bfac0f7d71b37c ChangeLog 52142
 MD5 8ca6301197c0d45d7530d4117d087b15 files/CAN-2005-1409-doc.patch 1749
 RMD160 a01fb02931799230c9797dacba6f5d28b0b53ab9 files/CAN-2005-1409-doc.patch 1749
 SHA256 6f5e52a18b6fafd50c36659eb8c9980b7987ad262c88bb621640f352208f938b files/CAN-2005-1409-doc.patch 1749
@@ -52,6 +49,9 @@ SHA256 a410ff3c12dbd6854e28253225a672b6ad284586d25fd896f53fdaabb365cb19 files/di
 MD5 c1458813c4841ffdc0da30a9e2f76d01 files/digest-postgresql-8.1.2 223
 RMD160 bde4f26905985df4e6c0020b8b70669a210ab18b files/digest-postgresql-8.1.2 223
 SHA256 df967e9869b87217adaedeac7a16c254d82421473056439ae31db36f0bc6007c files/digest-postgresql-8.1.2 223
+MD5 4c03a8c23190af3a632a6ca9789ab6d5 files/digest-postgresql-8.1.3 223
+RMD160 66ffef4258ea870bc72b703684db31f183de0ab8 files/digest-postgresql-8.1.3 223
+SHA256 96c2ea0de8afd27b1ec1d2dc0bd0a69ff7994bfa6794539f8761b860c03b8528 files/digest-postgresql-8.1.3 223
 MD5 999379432735e7e6a71ec6ccd5a784e1 files/pg_autovacuum.conf-7.4.11 302
 RMD160 8bdeef1a914659e7c55ce8d802b57cbeca6020bc files/pg_autovacuum.conf-7.4.11 302
 SHA256 9a8b0813bc67318f2df9e662fc067fa85ecd9bca2d19709715a94d5ab32bf721 files/pg_autovacuum.conf-7.4.11 302
@@ -169,6 +169,12 @@ SHA256 796bc0f5aa1cccc71a60f184021995fb503778b06024c84c30502139292640db files/po
 MD5 fa95ac5bd802d7220fe9196de93fbe97 files/postgresql-8.1.2-sh.patch 618
 RMD160 a86d766d7465a3e92705ee5c27261028af07b8de files/postgresql-8.1.2-sh.patch 618
 SHA256 55fc732493195fb93838e3074bc552a9acad164298bc2c04b00b3cadf12bf144 files/postgresql-8.1.2-sh.patch 618
+MD5 a8a16e7f40fc40211b4e497b0036aa7f files/postgresql-8.1.3-gentoo.patch 1200
+RMD160 41c3e001f530f7b67d2b6a346ad1a15b234670e9 files/postgresql-8.1.3-gentoo.patch 1200
+SHA256 ec9b02466ee78dc29aabb571f8ee5f324e116b300e7d23a1d33ae92842383799 files/postgresql-8.1.3-gentoo.patch 1200
+MD5 fa95ac5bd802d7220fe9196de93fbe97 files/postgresql-8.1.3-sh.patch 618
+RMD160 a86d766d7465a3e92705ee5c27261028af07b8de files/postgresql-8.1.3-sh.patch 618
+SHA256 55fc732493195fb93838e3074bc552a9acad164298bc2c04b00b3cadf12bf144 files/postgresql-8.1.3-sh.patch 618
 MD5 2b0c84d2c26622573d4e2b7e0518fdad files/postgresql.conf 375
 RMD160 88f1c276939d3f44b587d9a9edcc68d182b4a8b1 files/postgresql.conf 375
 SHA256 472edb3a023f708bc1b1a05c6b1f60addd81f7be8aeae19a8727b7e8166e64b0 files/postgresql.conf 375
@@ -196,6 +202,9 @@ SHA256 f4a4a40be4b60869e55b8e5408d29c9d458e0b04a01498f0d6919f6afbcac13e files/po
 MD5 9787933dfca9cc3858468186231a9df1 files/postgresql.conf-8.1.2 390
 RMD160 f72be2badb3c8893825c6a9cef417a28cc58ac49 files/postgresql.conf-8.1.2 390
 SHA256 f4a4a40be4b60869e55b8e5408d29c9d458e0b04a01498f0d6919f6afbcac13e files/postgresql.conf-8.1.2 390
+MD5 9787933dfca9cc3858468186231a9df1 files/postgresql.conf-8.1.3 390
+RMD160 f72be2badb3c8893825c6a9cef417a28cc58ac49 files/postgresql.conf-8.1.3 390
+SHA256 f4a4a40be4b60869e55b8e5408d29c9d458e0b04a01498f0d6919f6afbcac13e files/postgresql.conf-8.1.3 390
 MD5 4165a3ef6d3e253340b56c719a866c87 files/postgresql.init-7.3.11 1280
 RMD160 4ea2dc3b3e1449f11433c10745e2c6d61da755fb files/postgresql.init-7.3.11 1280
 SHA256 1abc7773ab17920d1d3ea21f19746a2bcd7b6dce4f4af20d01cafb8e9ba138f7 files/postgresql.init-7.3.11 1280
@@ -232,6 +241,9 @@ SHA256 f9530c7fc50815da92cef9263f7078fb010de950de58b602617d515e2bc8f968 files/po
 MD5 ab1b8fa9b6fc1ef8c17962be36b5fbc3 files/postgresql.init-8.1.2 1279
 RMD160 36fd1212f25c8d3ae23fbf672b3f6c7ac83daded files/postgresql.init-8.1.2 1279
 SHA256 a4fb32d84c971e8b66c5ab7537ef5eb79f99057f097de4b740125f03e4eb43ca files/postgresql.init-8.1.2 1279
+MD5 131571cfc7e88de3b13725f6b6da91df files/postgresql.init-8.1.3 1279
+RMD160 94b7af3e6cad645eabe96e17a57ce482faa13263 files/postgresql.init-8.1.3 1279
+SHA256 af6e3161e7e2c7756f249910f33c35ad5860415f14a67dd2c1e59bfc7ec224ee files/postgresql.init-8.1.3 1279
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 RMD160 70bbda1c1e8316a09d467334131898ae833a3205 metadata.xml 163
 SHA256 f0699a4c3ad24cc38836c2d4a1ba03e4e403a9a5364b51df405db02014005891 metadata.xml 163
@@ -274,10 +286,6 @@ SHA256 10c025959b1cb777a1ac15f9749ad6976f1e0010579d4ad4385c8ce9a64d8316 postgres
 MD5 80a1a1d30549701a852fab63217c0c4f postgresql-8.1.2.ebuild 7570
 RMD160 ab17d698f35014c86b826f869ebb51a5054a220a postgresql-8.1.2.ebuild 7570
 SHA256 93e9655115ab5d87b9f3f99574bd8fba900510be7bdc6af15bd941c5654a53dc postgresql-8.1.2.ebuild 7570
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5OfKJrHF4yAQTrARArk4AJ4hR20uKujTkoljWcPgPeOI+zZeqgCgmBW3
-okJNNIhlGppJRgZD7kulLCU=
-=Si3i
------END PGP SIGNATURE-----
+MD5 8bcab7cf12b4db7a91a08f89eb2d1d7b postgresql-8.1.3.ebuild 7570
+RMD160 1f9e177722477a41690ed21a1a02498be167aeda postgresql-8.1.3.ebuild 7570
+SHA256 aa1621e05cfe96b4f9c96ca4e6d5df23c756a5c803d22bb7f8cf4f823da3cc68 postgresql-8.1.3.ebuild 7570
