@@ -1,6 +1,9 @@
-MD5 5cead1c89030d97fedd1724ab89712c1 ChangeLog 46879
-RMD160 fde8fb0aebd9e69cbfc0176ae92b345ccd4ce0da ChangeLog 46879
-SHA256 5de47f815182c3dd0d5c4aa56ab6e9106caae36ffa08d54bda62511fca151565 ChangeLog 46879
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 855cb8af908cd6d561ef4024fce25ba4 ChangeLog 47024
+RMD160 1b3d94d1d8253927ef333144816be9ef055252fc ChangeLog 47024
+SHA256 d93d5ba96edeefdd6748328d052481a5fe4530be3df4b97abaf1f84034603b72 ChangeLog 47024
 MD5 5bec6df0014bd48fcd27e3f9a0b7caf1 files/digest-mm-sources-2.6.16_rc1-r1 197
 RMD160 87c9ba38c3c045188e527e013d555b79723b9a80 files/digest-mm-sources-2.6.16_rc1-r1 197
 SHA256 dd21cdb9c5b257bd04247230436c3af0e4d026730bb4a648f56fc5da789d7a79 files/digest-mm-sources-2.6.16_rc1-r1 197
@@ -19,6 +22,9 @@ SHA256 5560e47f2eb33e375e42e5bf15397d65ce3bbd34482d166de13bf1e1667703fe files/di
 MD5 5c182f7a6c0ab81b4bec952fbeefc013 files/digest-mm-sources-2.6.16_rc2-r1 729
 RMD160 f92109a31baa8802e7edc7f77b42eae8f01e0826 files/digest-mm-sources-2.6.16_rc2-r1 729
 SHA256 98aa359063ee1df2e7124837d86c6d9ebb4ace72d49ae8b627b575752a5827eb files/digest-mm-sources-2.6.16_rc2-r1 729
+MD5 c017d55d15c8bcc786d03a33efabc6a7 files/digest-mm-sources-2.6.16_rc3-r1 729
+RMD160 001e480cf3f8cd50e50a164e08a8647f27b86b32 files/digest-mm-sources-2.6.16_rc3-r1 729
+SHA256 ec2a073329871161634c971d392fd1199adf7add49d0354e262e8f28be8b87cb files/digest-mm-sources-2.6.16_rc3-r1 729
 MD5 5e95fced23ea7c26d39274bc200dabd5 metadata.xml 351
 RMD160 d7e7d723e749496ac98b70798afa612ba58753c6 metadata.xml 351
 SHA256 80f85f63243b3467e6b9a42cf3375e05ba17936b488aaf7b9505c3eead7bd3b6 metadata.xml 351
@@ -40,3 +46,13 @@ SHA256 3302072737bf5c75d3f7993c53dc00da0e9ef652c8a53048e3f9af9110359ae7 mm-sourc
 MD5 e3e2f32fc73b3d1875cf33db2077c829 mm-sources-2.6.16_rc2-r1.ebuild 1010
 RMD160 5b9d0d929b4f2ea78217fc91cb8eebcd9221ff5d mm-sources-2.6.16_rc2-r1.ebuild 1010
 SHA256 a03e6c52b623430f5cf7962afdd3c22cc9b80a6cd87f999e225c8fac44998f1a mm-sources-2.6.16_rc2-r1.ebuild 1010
+MD5 a457084a5937a1a7538f9db4b267c6b0 mm-sources-2.6.16_rc3-r1.ebuild 1013
+RMD160 715c7eabe08e6bf06fbf6e63d111e341b7dccd96 mm-sources-2.6.16_rc3-r1.ebuild 1013
+SHA256 3fd06cefe898c2258f13251ea7ee922f33a9851558939e1f490f769a92d6306e mm-sources-2.6.16_rc3-r1.ebuild 1013
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD8lN0p5vW4rUFj5oRAmliAJ9ukvLJFPCXgtosJ8jthMdydn2LjwCfYP3X
+xpVrIw5O+dQxNLNXZpac7Hs=
+=hrjP
+-----END PGP SIGNATURE-----
