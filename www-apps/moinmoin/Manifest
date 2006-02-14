@@ -1,20 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3a2ca4a38eb785bf38a18a8da6cd1227 ChangeLog 3805
+MD5 0c4da59da42851cf1f537fe7cb034294 ChangeLog 3982
+RMD160 049ee1474ac803d4de70b0d923ca3de5be60abe2 ChangeLog 3982
+SHA256 6393444c6daa00c32640c6e135af39cb278116d21f94d4dcaa910e5c308517d3 ChangeLog 3982
 MD5 83ae27d75112afb66a2d5d1319ba9874 files/digest-moinmoin-1.2.3 63
+RMD160 9c3cd962c2c92a524eadb40ef53b9836f6cc9299 files/digest-moinmoin-1.2.3 63
+SHA256 d13974b744f57d849afaac21d478450ffda8508929e749bb1c0a22fa58a5bc72 files/digest-moinmoin-1.2.3 63
 MD5 4b756ef0b0c4eb10b5b2646ce792c0dc files/digest-moinmoin-1.3.5-r1 63
-MD5 2c05a12b877e632b32c4ebb3a2e01f82 files/digest-moinmoin-1.5.1 63
+RMD160 b04ee8356eb3dab88b5f03707091883afe2c7845 files/digest-moinmoin-1.3.5-r1 63
+SHA256 25d51c005f62beadae9a59de8e0349d9ea0cca9cdd2702a6b5b0081c03e958d2 files/digest-moinmoin-1.3.5-r1 63
+MD5 537972dfd16f26c11fb261d464034354 files/digest-moinmoin-1.5.2 235
+RMD160 160331b6852482d3eb54dac71c02ff3577af6ba8 files/digest-moinmoin-1.5.2 235
+SHA256 23c1c264f09bad87ac0f292b3146a428b7bd33a87fd7173eeae333a9edd58428 files/digest-moinmoin-1.5.2 235
 MD5 6fb347eae42824c20e1dac8cd73f0ce6 files/postinstall-en.txt 808
+RMD160 3588cba97e7bd235f140da8bd919f52af26d85e1 files/postinstall-en.txt 808
+SHA256 43e2ee06036c7582e5b0ad40ffd1b9afd96e6abb90a0e4208c6e53eae243571a files/postinstall-en.txt 808
 MD5 929e3e71ef7af009d9f289c33c382026 files/reconfig-2 421
+RMD160 5589dd4a8a87158bf88a99eda91695c7f938599c files/reconfig-2 421
+SHA256 e885eb6c78df793fe2954a35631f3b611429412e78761bde00587cc14df26657 files/reconfig-2 421
 MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
+RMD160 7081530104e84534030353cb15c4a541bb8d5e05 metadata.xml 225
+SHA256 0986f8971072c8d055fccbc67cc59ac43eecd1f5592cd9c0ae729b23e550cc96 metadata.xml 225
 MD5 1e73d40d888212699794efd23c42a5a5 moinmoin-1.2.3.ebuild 1323
+RMD160 73ef8b16c58499a693b092dcc762b159c97d4d7a moinmoin-1.2.3.ebuild 1323
+SHA256 72242d0eac60bbd6d109c77bb08cb5241ec0452b33cbba18f81591b3ea28b821 moinmoin-1.2.3.ebuild 1323
 MD5 433cde73049ddc005366d7dc79ebc4bc moinmoin-1.3.5-r1.ebuild 1773
-MD5 6149c7970858ca18d2db24085b868b22 moinmoin-1.5.1.ebuild 1824
+RMD160 7087777fcc11dc3e14728226f7299c41bebcc179 moinmoin-1.3.5-r1.ebuild 1773
+SHA256 ebc4b39cadcf1c55e64eff06ffe0d41ba320569a062f0e47e737b70451bacdd5 moinmoin-1.3.5-r1.ebuild 1773
+MD5 2e35a65b41299af63b69a12573c16fb2 moinmoin-1.5.2.ebuild 1809
+RMD160 261e05fc5de45c29d54d8f54813343fbdaa2d4c0 moinmoin-1.5.2.ebuild 1809
+SHA256 db3f938f0cf5b0c1fd6a73dbbbb5d3f7505cc236a803614f432e298f05f454b0 moinmoin-1.5.2.ebuild 1809
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD1NWmEzitwsaoONoRAhDCAJ9YuctexIAWfPhVBuYM0amxplvUXQCfTvfE
-AUtKW0rF8bpQ4c7trnwR3NA=
-=wzu1
+iD8DBQFD8grSEzitwsaoONoRAooUAJ95xiJbti0OW8ww7YgFQm4zbUYZyQCgm1cW
+TKktSCR2KSQ4JifLlfdSOPY=
+=sqHn
 -----END PGP SIGNATURE-----

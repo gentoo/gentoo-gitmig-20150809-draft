@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.5.1.ebuild,v 1.1 2006/01/23 13:09:46 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.5.2.ebuild,v 1.1 2006/02/14 16:52:24 rl03 Exp $
 
 inherit webapp
 
@@ -8,7 +8,7 @@ MY_PN="moin"
 S=${WORKDIR}/${MY_PN}-${PV}
 
 DESCRIPTION="Python WikiClone"
-SRC_URI="http://download.sourceforge.net/${MY_PN}/${MY_PN}-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 HOMEPAGE="http://moin.sourceforge.net"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 LICENSE="GPL-2"
@@ -19,8 +19,8 @@ WEBAPP_MANUAL_SLOT="yes"
 
 DEPEND=">=dev-lang/python-2.3"
 RDEPEND="${DEPEND}
-	rss? ( >=dev-python/pyxml-0.8.4 )
-	!<=www-apps/moinmoin-1.3.5-r1"
+	>=dev-python/docutils-0.4
+	rss? ( >=dev-python/pyxml-0.8.4 )"
 
 src_compile() {
 	python setup.py build || die "python build failed"
