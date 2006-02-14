@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9h-r1.ebuild,v 1.1 2006/02/13 19:52:59 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9h-r1.ebuild,v 1.2 2006/02/14 23:15:02 mkennedy Exp $
 
 inherit eutils
 
@@ -9,8 +9,7 @@ SRC_URI="mirror://sourceforge/ecls/ecl-${PV}.tgz"
 HOMEPAGE="http://ecls.sourceforge.net/"
 SLOT="0"
 LICENSE="BSD LGPL-2"
-# KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
-KEYWORDS="-*"					# Pending Bug #122236
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 
 DEPEND="=dev-libs/gmp-4*
 	app-text/texi2html"
@@ -30,7 +29,9 @@ S=${WORKDIR}/ecl-${PV:0:4}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/${PV}-headers-gentoo.patch || die
+	epatch ${FILESDIR}/${PV}-sockets-c++-gentoo.patch || die
 }
 
 src_compile() {

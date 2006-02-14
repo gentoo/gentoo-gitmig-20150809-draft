@@ -1,0 +1,88 @@
+diff -ur ecl-0.9h.orig/contrib/sockets/sockets.lisp ecl-0.9h/contrib/sockets/sockets.lisp
+--- ecl-0.9h.orig/contrib/sockets/sockets.lisp	2005-11-16 04:13:26.000000000 -0600
++++ ecl-0.9h/contrib/sockets/sockets.lisp	2006-02-14 12:06:10.000000000 -0600
+@@ -1,5 +1,5 @@
+ ;; -*- Mode: Lisp; Syntax: Common-Lisp -*-
+-;; $Id: 0.9h-sockets-c++-gentoo.patch,v 1.1 2006/02/14 23:15:02 mkennedy Exp $
++;; $Id: 0.9h-sockets-c++-gentoo.patch,v 1.1 2006/02/14 23:15:02 mkennedy Exp $
+ 
+ ;; This file is based on SBCL's SB-BSD-SOCKET module and has been
+ ;; heavily modified to work with ECL by Julian Stecklina.
+@@ -518,7 +518,7 @@
+ "{
+         struct sockaddr_in sockaddr;
+         int addr_len = sizeof(struct sockaddr_in);
+-        int new_fd = accept(#0, (struct sockaddr*)&sockaddr, &addr_len);
++        int new_fd = accept(#0, (struct sockaddr*)&sockaddr, (socklen_t *) &addr_len);
+ 
+ 	@(return 0) = new_fd;
+ 	@(return 1) = Cnil;
+@@ -651,10 +651,10 @@
+         sockaddr.sun_len = sizeof(struct sockaddr_un);
+ #endif
+         sockaddr.sun_family = #2;
+-        strncpy(&sockaddr.sun_path,#1,sizeof(sockaddr.sun_path));
++        strncpy((char *) &sockaddr.sun_path,#1,sizeof(sockaddr.sun_path));
+ 	sockaddr.sun_path[sizeof(sockaddr.sun_path)-1] = '\0';
+ 
+-        @(return) = bind(#0,&sockaddr, sizeof(struct sockaddr_un));
++        @(return) = bind(#0,(struct sockaddr *) &sockaddr, sizeof(struct sockaddr_un));
+ }"))
+ 	(socket-error "bind"))))
+ 
+@@ -664,9 +664,9 @@
+ "{
+         struct sockaddr_un sockaddr;
+         int addr_len = sizeof(struct sockaddr_un);
+-        int new_fd = accept(#0, &sockaddr, &addr_len);
++        int new_fd = accept(#0, (struct sockaddr *) &sockaddr, (socklen_t *) &addr_len);
+ 	@(return 0) = new_fd;
+-	@(return 1) = (new_fd == -1) ? Cnil : make_string_copy(&sockaddr.sun_path);
++	@(return 1) = (new_fd == -1) ? Cnil : make_string_copy((char *) &sockaddr.sun_path);
+ }")
+     (cond
+       ((= fd -1)
+@@ -694,10 +694,10 @@
+         sockaddr.sun_len = sizeof(struct sockaddr_un);
+ #endif
+         sockaddr.sun_family = #1;
+-        strncpy(&sockaddr.sun_path,#2,sizeof(sockaddr.sun_path));
++        strncpy((char *) &sockaddr.sun_path,#2,sizeof(sockaddr.sun_path));
+ 	sockaddr.sun_path[sizeof(sockaddr.sun_path)-1] = '\0';
+ 
+-        @(return) = connect(#0,&sockaddr, sizeof(struct sockaddr_un));
++        @(return) = connect(#0,(struct sockaddr *) &sockaddr, sizeof(struct sockaddr_un));
+ }"))
+ 	(socket-error "connect"))))
+ 
+@@ -708,10 +708,10 @@
+ {
+         struct sockaddr_un name;
+         socklen_t len = sizeof(struct sockaddr_un);
+-        int ret = getpeername(#0,&name,&len);
++        int ret = getpeername(#0,(struct sockaddr *) &name,&len);
+ 
+         if (ret == 0) {
+-                @(return) = make_string_copy(&name.sun_path);
++                @(return) = make_string_copy((char *) &name.sun_path);
+         } else {
+                 @(return) = Cnil;
+         }
+@@ -985,7 +985,7 @@
+ 		       ))
+ 	    (t :int :int)
+ 	    t
+-	    "ecl_make_stream_from_fd(#0,#1,#2)"
++	    "ecl_make_stream_from_fd(#0,#1,(enum ecl_smmode) #2)"
+ 	    :one-liner t))
+ 
+ (defgeneric socket-make-stream (socket  &rest args)
+@@ -1017,7 +1017,7 @@
+ 	cl_object in_strm, out_strm;
+ 	in_strm = ecl_make_stream_from_fd(make_simple_string(\"FD-STREAM\"), #0, smm_input);
+ 	out_strm = ecl_make_stream_from_fd(make_simple_string(\"FD-STREAM\"), #0, smm_output);
+-	@(return) = make_two_way_stream(in_strm, out_strm);
++	@(return) = cl_make_two_way_stream(in_strm, out_strm);
+ }"
+                                :one-liner nil)))
+       (setf (slot-value socket 'stream) stream)
