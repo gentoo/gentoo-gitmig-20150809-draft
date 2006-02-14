@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2a3b20208a4713efa4b5d2609e0d494d ChangeLog 5054
 RMD160 73dc777a155a3b90b486d2e236fa8c81f687b414 ChangeLog 5054
 SHA256 a1fde9854395882ee4e5d9d491509f8b9cba9f4efcd14c70b21e6b634b72a55a ChangeLog 5054
@@ -28,3 +31,10 @@ SHA256 10b713b8a604d996c0c73b8e73fdc240a7e5d39057a6bb4f21bb0c038cd85861 prelude-
 MD5 55a2da802f1431febca9d125c2d7c76b prelude-manager-0.9.3.ebuild 1418
 RMD160 b7c8e92aab8fc54637f147ddf3d20f6635f534ac prelude-manager-0.9.3.ebuild 1418
 SHA256 01677641df8e4c0480a0849af5e2d86207319fbe3c5130654b5d819d6d87bba7 prelude-manager-0.9.3.ebuild 1418
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD8TqtCRZPokWLroQRAmRWAJ91WtlQPB49wovf2zkkOUluQlymmwCeJkbv
+SQfjxhOACtXmcj9Ofd4dusU=
+=iwHb
+-----END PGP SIGNATURE-----
