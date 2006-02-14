@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.2.ebuild,v 1.2 2006/02/11 13:44:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.2.ebuild,v 1.3 2006/02/14 10:21:26 nelchael Exp $
 
 inherit eutils wxwidgets
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/xchm/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE="doc unicode"
 DEPEND=">=app-doc/chmlib-0.31
@@ -54,7 +54,7 @@ src_install() {
 
 	dodir /usr/share/icons/hicolor/16x16/apps/
 	install -m 644 ${S}/art/xchm-16.xpm \
-		{D}/usr/share/icons/hicolor/16x16/apps/xchm.xpm
+		${D}/usr/share/icons/hicolor/16x16/apps/xchm.xpm
 	dodir /usr/share/icons/hicolor/32x32/apps/
 	install -m 644 ${S}/art/xchm-32.xpm \
 		${D}/usr/share/icons/hicolor/32x32/apps/xchm.xpm
