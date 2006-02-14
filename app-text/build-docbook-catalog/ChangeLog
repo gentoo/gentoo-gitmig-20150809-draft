@@ -1,6 +1,10 @@
 # ChangeLog for app-text/build-docbook-catalog
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.10 2005/02/09 15:46:25 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.11 2006/02/14 19:14:56 grobian Exp $
+
+  14 Feb 2006; Fabian Groffen <grobian@gentoo.org>
+  build-docbook-catalog-1.2.ebuild:
+  Marked ~ppc-macos (bug #122760)
 
   09 Feb 2005; Aron Griffis <agriffis@gentoo.org>
   -build-docbook-catalog-1.1.ebuild:

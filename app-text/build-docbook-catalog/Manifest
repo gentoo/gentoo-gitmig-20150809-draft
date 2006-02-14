@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a27a87eae24e0b1ce4d619abb3e64e2a ChangeLog 1418
-MD5 3924f7338828e56951e6820a9b204ab0 build-docbook-catalog-1.2.ebuild 526
-MD5 d6a3d6d7130e2a0120f42144f7d2ab38 files/digest-build-docbook-catalog-1.2 72
+MD5 9deed7ef8abb4ae34d250adf3ff660bf ChangeLog 1539
+RMD160 7bd3561a86c31a12a7b43b2da898b38ae7cb8a47 ChangeLog 1539
+SHA256 5766e8189330752a55b719d14cbc3ffc7e19d22c45888ae2d14fd8438f8ebc6c ChangeLog 1539
+MD5 5a0ea038c92365c820f8d7de23e81ae9 build-docbook-catalog-1.2.ebuild 553
+RMD160 64cfcb771677898046621560504424fb7519e636 build-docbook-catalog-1.2.ebuild 553
+SHA256 c4d23064dd964fe8cbc0586ca047ccabb90ecb444928b176593ce25b6c0d3ac0 build-docbook-catalog-1.2.ebuild 553
+MD5 a1d5a80b631b660c083be2fec945b8ca files/digest-build-docbook-catalog-1.2 262
+RMD160 43ece10e56a900f263b3abe28c0d923af9f2f9f6 files/digest-build-docbook-catalog-1.2 262
+SHA256 77e5daef66b92d3e6a619ddcd7bc58b26db6bd27d411aa2fa4c79342dc7e6ffa files/digest-build-docbook-catalog-1.2 262
 MD5 b25d3f11b01122c2650ec4ef03b0275b metadata.xml 264
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuwWV2+ySkm8kpY0RAsqvAJ9n759wwW9fG3Qa+gigd0jDaN43YACfZbKJ
-ejLj06/7hVXAR6WC0T//sfk=
-=1DUI
------END PGP SIGNATURE-----
+RMD160 d986db97e4e3a4e80870fdd7b086462d6f1d4c33 metadata.xml 264
+SHA256 8cc4b3c5c8723ecbb8c98000ce176aaabb26a01eea7141db6e1673b859c9ab13 metadata.xml 264
