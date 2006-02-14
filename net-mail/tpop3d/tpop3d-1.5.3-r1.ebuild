@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3-r1.ebuild,v 1.1 2005/03/04 17:55:01 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3-r1.ebuild,v 1.2 2006/02/14 18:38:33 griffon26 Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="An extensible POP3 server with vmail-sql/MySQL support."
 HOMEPAGE="http://www.ex-parrot.com/~chris/tpop3d/"
@@ -70,6 +70,10 @@ src_compile() {
 		myconf="${myconf} --enable-electric-fence --enable-backtrace"
 	fi
 	econf ${myconf} || die "./configure failed"
+
+	# Causes crash with "stack smashing attack" on connect, because of bug in
+	# SSP (bug #115285)
+	filter-flags -fstack-protector
 
 	# Add in custom CFLAGS to the makefile...
 	sed -i "s/CFLAGS =/CFLAGS = ${CFLAGS} /" Makefile
