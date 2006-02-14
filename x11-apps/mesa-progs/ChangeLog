@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/mesa-progs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.9 2006/02/14 20:40:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.10 2006/02/14 23:53:43 spyderous Exp $
+
+*mesa-progs-6.4.2 (14 Feb 2006)
+
+  14 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  -mesa-progs-6.4.1.ebuild, +mesa-progs-6.4.2.ebuild:
+  (#122851) Die on errors, reported by Christophe <cjouny@gmail.com>. Also
+  update to 6.4.2 tarball to reduce downloads.
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org> mesa-progs-6.4.1.ebuild:
   Added ~ppc64

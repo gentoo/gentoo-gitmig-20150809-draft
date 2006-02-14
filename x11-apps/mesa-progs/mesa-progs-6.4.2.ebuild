@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-6.4.1.ebuild,v 1.10 2006/02/14 20:40:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-6.4.2.ebuild,v 1.1 2006/02/14 23:53:43 spyderous Exp $
 
 inherit toolchain-funcs
 
@@ -64,8 +64,8 @@ src_compile() {
 
 	cd ${S}/progs/xdemos
 
-	emake glxinfo
-	emake glxgears
+	emake glxinfo || die "glxinfo failed"
+	emake glxgears || die "glxgears failed"
 }
 
 src_install() {
