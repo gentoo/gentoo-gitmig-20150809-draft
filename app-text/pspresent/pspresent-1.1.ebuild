@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.1.ebuild,v 1.9 2005/01/01 16:31:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.1.ebuild,v 1.10 2006/02/14 02:51:14 joshuabaergen Exp $
 
 IUSE="xinerama"
 
@@ -9,9 +9,14 @@ SRC_URI="http://www.cse.unsw.edu.au/~matthewc/pspresent/${P}.tar.gz"
 HOMEPAGE="http://www.cse.unsw.edu.au/~matthewc/pspresent/"
 
 RDEPEND="virtual/libc
-	virtual/x11
+	|| ( ( x11-libs/libX11
+			xinerama? ( x11-libs/libXinerama ) )
+		virtual/x11 )
 	virtual/ghostscript"
 DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xproto
+			xinerama? ( x11-proto/xineramaproto ) )
+		virtual/x11 )
 	>=sys-apps/sed-4"
 
 PROVIDE="virtual/psviewer"

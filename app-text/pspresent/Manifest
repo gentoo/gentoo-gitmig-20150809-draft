@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fcb3e9475d4fc395547dd3bb037033a9 ChangeLog 1394
-MD5 1ea0923f2ec37bd72043c08b675f554b pspresent-1.1.ebuild 804
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 30247ff7ff23fd71747f14795958983b pspresent-1.2.ebuild 811
-MD5 1ddede6fd39817c8ff4af2ff97721eb8 files/digest-pspresent-1.2 64
+MD5 b283a54421dad56b564fa023b1d7cd58 ChangeLog 1569
+RMD160 301b44b9c42bd6cfe0edad8019bb6920007f70d2 ChangeLog 1569
+SHA256 6ece2057e4ab6fe0e6c41c1d0ba4e6d772c10887c0234aea170310f1102d19b6 ChangeLog 1569
 MD5 e8d36b988969f7d4ff8e3a45e05ca0f3 files/digest-pspresent-1.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2TKbcsIHjyDViGQRAsMzAJ413NJycxtLo9+w7V+1GlTFJDLp9gCgoE1q
-PXKPa0mbhboSvPRuD+lMhPs=
-=+DRv
------END PGP SIGNATURE-----
+RMD160 405a7be6cbb9ecf4dfeaecbbde368b07772a973f files/digest-pspresent-1.1 64
+SHA256 c66e9c16b50080f5de623faa81611f3d26eee5a9c3a59d7d8357c78921729f7b files/digest-pspresent-1.1 64
+MD5 1ddede6fd39817c8ff4af2ff97721eb8 files/digest-pspresent-1.2 64
+RMD160 1f0a0ddeade3b4bcfe633c06d3f1acf3819a9e78 files/digest-pspresent-1.2 64
+SHA256 3f754b075781b086bd9a686cb3e32a84d256616571f11d0121273b3e64b02653 files/digest-pspresent-1.2 64
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
+MD5 2d9b3605e9dec519ee0864c1fa0c0c01 pspresent-1.1.ebuild 959
+RMD160 b6ec3fff07b168a1ebdcefeac8f1c2ff2cdeabd9 pspresent-1.1.ebuild 959
+SHA256 2dc374b79cbfa1310973d81df3016675c68a32c166e57df9491e13ede754a2ee pspresent-1.1.ebuild 959
+MD5 15c28ef7723168735cfe6e8dea8663be pspresent-1.2.ebuild 969
+RMD160 63572e94c1023b0fbb7507e320d5d5274ce01d78 pspresent-1.2.ebuild 969
+SHA256 677a9eb82fb017d3c9afef023ba1f286ed1c1047894a3cf4e6bcdd0d0448fe65 pspresent-1.2.ebuild 969
