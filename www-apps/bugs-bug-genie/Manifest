@@ -1,15 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4b59992c673d16ace6162cbc624743b7 ChangeLog 1269
+MD5 9ab7e414e8b80da580da25856b1b139a ChangeLog 1378
+RMD160 72e41c2aba192ecc572a1f80f823a2d505164a12 ChangeLog 1378
+SHA256 acffb6f7ddea994ca484e8f2dd923f673fd6c30bbbe0e40ef69c2a2a6dae07e5 ChangeLog 1378
 MD5 ba6327da9b51298416aaeb0f04206cbf bugs-bug-genie-1.7.2.ebuild 1000
-MD5 bcb0bbebca8d77f167fd89ac68a25e5f files/digest-bugs-bug-genie-1.7.2 60
+RMD160 53f1fe202b1ac676601c3b598d4d82528ec07c34 bugs-bug-genie-1.7.2.ebuild 1000
+SHA256 6d9e9bbdd2bd14599bb3952a25982fe368db7860d914691d7c7b059fc999e16a bugs-bug-genie-1.7.2.ebuild 1000
+MD5 d9dda13396fb9831f68fdddd87e2858c files/digest-bugs-bug-genie-1.7.2 226
+RMD160 5e1a44e4db478ddbba4ee91ea6554c9621094b84 files/digest-bugs-bug-genie-1.7.2 226
+SHA256 5f3d42cd3d1fe1cd0cc5925f7421f9e6fb8d5e7560f29def0fdb9754aac1a251 files/digest-bugs-bug-genie-1.7.2 226
 MD5 b7f5cb0f5d933404fcec3322eb4da94c files/postinstall-en.txt 113
+RMD160 2af43dec694fe1f3a516d963775d7c66c84823a2 files/postinstall-en.txt 113
+SHA256 0108fc4055bda3ea64cd7a6c72c3ac7e5272ffb6e5f7be792b72fa0bb13fa449 files/postinstall-en.txt 113
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+RMD160 d47e924599b33a35a50f4c9f5564d325c271f83b metadata.xml 161
+SHA256 9cd891fcf0af580e98b62d2f4ded9e53671599f5a7aafd5dce692b996d2a83f4 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD52XdEzitwsaoONoRApo1AJ9VMSqW4wWI+N12fgS31vH+Y+MbowCdHX39
-twp4Dl+dBn8QiZ8UiOquvuU=
-=Q04Q
+iD8DBQFD8gL1EzitwsaoONoRAr25AKCUxOHbnm5Bau3elaaYtgf6D6DOVQCgo1Od
+6tPqgPeUF8mb7G8yY4c+1Qc=
+=nGMP
 -----END PGP SIGNATURE-----
