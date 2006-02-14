@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabindx/adabindx-0.7.2-r1.ebuild,v 1.2 2005/04/24 03:30:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabindx/adabindx-0.7.2-r1.ebuild,v 1.3 2006/02/14 03:24:56 joshuabaergen Exp $
 #
 
 inherit eutils gnat
@@ -10,10 +10,10 @@ SRC_URI="http://home.arcor.de/hfvogt/${P}.tar.bz2"
 HOMEPAGE="http://home.arcor.de/hfvogt/programming.html"
 
 LICENSE="GMGPL"
-DEPEND=">=dev-lang/gnat-3.14p
-	virtual/x11
+RDEPEND="|| ( x11-libs/libXpm virtual/x11 )"
+DEPEND="${RDEPEND}
+	>=dev-lang/gnat-3.14p
 	>=sys-apps/sed-4"
-RDEPEND=""
 KEYWORDS="~x86 ppc"
 SLOT="0"
 IUSE=""
