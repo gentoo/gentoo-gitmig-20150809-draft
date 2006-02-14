@@ -52,9 +52,9 @@ SHA256 8e040de867d0a3880f8f71be861e3baed9f2ae1bb58c57227eb911589cde4d0f files/di
 MD5 f73f2bd58b9d8ace7a6f431e8587c909 files/digest-dspam-3.6.3 129
 RMD160 10d6cbe604729a619fdea9fe27714d117d593342 files/digest-dspam-3.6.3 129
 SHA256 51b4104316124d35d8e81d99b681b13e2a15c41f650e50dec6bf8b6d461be3a2 files/digest-dspam-3.6.3 129
-MD5 05946cf8fedd62fdf054d5abc2374f75 files/digest-dspam-3.6.4 479
-RMD160 6de5fa0dcf705c1ac19dc8423adf9e011d8bd4dd files/digest-dspam-3.6.4 479
-SHA256 8ef5a56d692d54d6de1b379475c19471bce4b926003d9987b9e38be64b383b80 files/digest-dspam-3.6.4 479
+MD5 7581683a18b328f3fa07b2904787e0bd files/digest-dspam-3.6.4 479
+RMD160 9ef62154897f5cdcd28c2ab1f04ccad9f19b8967 files/digest-dspam-3.6.4 479
+SHA256 af3f77afae9380d52f6f7910135aad0fda7b9c080b6ce9f88919abee9247d421 files/digest-dspam-3.6.4 479
 MD5 c587b15b04392911dd203bb84b410fc1 files/dspam.cron 4365
 RMD160 480ee9f38e938e326d8027a3ea9278627104f4ac files/dspam.cron 4365
 SHA256 4c5e354832d89e8de6fdd1666c68cad66cd93f65ba53b7c3badf409a613c70f1 files/dspam.cron 4365
