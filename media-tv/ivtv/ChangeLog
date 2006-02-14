@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.40 2006/01/18 05:15:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.41 2006/02/14 04:36:17 cardoe Exp $
+
+  14 Feb 2006; Doug Goldstein <cardoe@gentoo.org> ivtv-0.4.2.ebuild:
+  Added hotplug to RDEPEND
 
 *ivtv-0.4.2 (18 Jan 2006)
 

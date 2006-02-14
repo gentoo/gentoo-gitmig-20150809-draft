@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.4.2.ebuild,v 1.1 2006/01/18 05:15:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.4.2.ebuild,v 1.2 2006/02/14 04:36:17 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -26,6 +26,7 @@ BUILD_TARGETS="all"
 BUILD_PARAMS="KDIR=${KERNEL_DIR}"
 CONFIG_CHECK="I2C_ALGOBIT VIDEO_DEV I2C_CHARDEV I2C"
 
+RDEPEND="sys-apps/hotplug"
 DEPEND="app-arch/unzip"
 
 pkg_setup() {
