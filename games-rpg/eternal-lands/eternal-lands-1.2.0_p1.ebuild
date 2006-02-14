@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.2.0_p1.ebuild,v 1.1 2006/02/13 21:32:03 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.2.0_p1.ebuild,v 1.2 2006/02/14 12:11:59 uberlord Exp $
 
 inherit games
 
@@ -9,8 +9,13 @@ MY_PV="${MY_PV//./}"
 S="${WORKDIR}/elc"
 DESCRIPTION="An online MMORPG written in C and SDL"
 HOMEPAGE="http://www.eternal-lands.com"
-SRC_URI="ftp://ftp.berlios.de/pub/elc/elc/elc_${MY_PV}.tgz
+SRC_URI="mirror://gentoo/elc_${MY_PV}.tgz
 	mirror://gentoo/eternal-lands.png"
+
+# NOTE: Sometimes you'll have to roll your own elc tarball from their CVS
+# tree as they don't always release one.
+# If they do then use this in SRC_URI instead
+# ftp://ftp.berlios.de/pub/elc/elc_${MY_PV}.tgz
 
 LICENSE="eternal_lands"
 SLOT="0"
