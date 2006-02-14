@@ -40,3 +40,9 @@ physfs
 
 # libfpx doesn't compile, see bug #103269
 fpx
+
+# gnutls has collisions
+gnutls
+
+# gpgme doesn't compile: nested functions are not supported on MacOSX
+gpgme

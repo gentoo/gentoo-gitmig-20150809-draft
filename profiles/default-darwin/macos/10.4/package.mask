@@ -23,6 +23,7 @@ dev-perl/XML-Parser
 dev-util/intltool
 dev-util/guile
 media-libs/a52dec
+net-libs/gnutls
 net-misc/curl
 net-misc/rsync
 sys-apps/diffutils
@@ -42,6 +43,7 @@ sys-libs/com_err
 sys-libs/ncurses
 sys-libs/readline
 x11-libs/gtk+
+>app-misc/abook-0.5.3
 ##
 # end collision-protect
 ##
@@ -49,3 +51,6 @@ x11-libs/gtk+
 # libidn needs java-config.  This one is not yet ported, so as long as
 # thre is no solution for that it is masked
 net-dns/libidn
+
+# wants sqlite2 which we can't install
+dev-python/pysqlite
