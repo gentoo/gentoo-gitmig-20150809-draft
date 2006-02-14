@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-0.6.1.ebuild,v 1.1 2006/02/12 10:45:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-0.6.1.ebuild,v 1.2 2006/02/14 19:43:49 dragonheart Exp $
 
 inherit eutils qt3
 
@@ -17,7 +17,8 @@ IUSE="arts"
 RDEPEND=">=net-libs/ccrtp-1.3.4
 	>=x11-libs/qt-3.3.4-r6
 	>=dev-cpp/commoncpp2-1.3.0
-	arts? ( kde-base/arts )"
+	arts? ( kde-base/arts )
+	media-libs/libsndfile"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
