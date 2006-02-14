@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.4-r1.ebuild,v 1.7 2005/05/30 19:44:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.4-r1.ebuild,v 1.8 2006/02/14 22:22:53 tupone Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -13,12 +13,11 @@ SLOT="0"
 KEYWORDS="x86 amd64 ~ppc sparc"
 IUSE="opengl"
 
-DEPEND="virtual/x11
-	>=media-libs/libsdl-1.1.3
-	media-libs/sdl-mixer
-	media-libs/sdl-net
-	media-libs/smpeg
-	opengl? ( virtual/opengl )"
+DEPEND=">=media-libs/libsdl-1.1.3
+		media-libs/sdl-mixer
+		media-libs/sdl-net
+		opengl? ( virtual/opengl virtual/glu )
+		media-libs/smpeg"
 
 src_unpack() {
 	unpack ${A}
@@ -32,11 +31,16 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
+	# configure.in should be fixed as
+	# --enable-gl and 
+	# --disable-gl are threated the same
+	use opengl && myconf="--enable-gl"
 	# leave --disable-cpu-opt in otherwise the configure script
 	# will append -march=i686 and crap ... let the user's CFLAGS
 	# handle this ...
 	egamesconf \
-		$(use_enable opengl gl) \
+		${myconf} \
 		$(use_enable x86 i386-asm) \
 		--disable-cpu-opt \
 		|| die
@@ -59,7 +63,7 @@ src_install() {
 	doins data/*.wad || die "doins failed"
 
 	doman doc/*.{5,6}
-	dodoc AUTHORS ChangeLog NEWS README TODO doc/README.* doc/*.txt
+	dodoc AUTHORS NEWS README TODO doc/README.* doc/*.txt
 
 	prepgamesdirs
 }
