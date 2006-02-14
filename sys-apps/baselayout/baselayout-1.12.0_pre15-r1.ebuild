@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre15-r1.ebuild,v 1.1 2006/01/24 22:16:37 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre15-r1.ebuild,v 1.2 2006/02/14 12:48:24 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -22,7 +22,7 @@ IUSE="bootstrap build static unicode"
 RDEPEND=">=sys-apps/sysvinit-2.86-r3
 	!build? ( !bootstrap? (
 		>=sys-libs/readline-5.0-r1
-		>=app-shells/bash-3.0-r10
+		>=app-shells/bash-3.1_p7
 		>=sys-apps/coreutils-5.2.1
 	) )"
 DEPEND="virtual/os-headers
