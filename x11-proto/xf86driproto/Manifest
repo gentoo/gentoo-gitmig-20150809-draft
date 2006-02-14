@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 00b93af4d700ed00457b28ccce978999 ChangeLog 1431
+MD5 aec5afd0b6cd559570b57bfc9ed30bbb ChangeLog 1517
 MD5 4ca65b4e6ccb104532b8acb85143dba9 files/digest-xf86driproto-2.0.3 70
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 a54e76d982b8eb64f2c6c4ad92749562 xf86driproto-2.0.3.ebuild 446
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtJgV2+ySkm8kpY0RAgycAJ99Drkozb3m5YjiogMulzxpWlygkACgnq8A
-mTjkOQJhQPcD67ys/VkOlPU=
-=0wgy
------END PGP SIGNATURE-----
+MD5 3ef472491e4c8ba177613f5434e4f0d7 xf86driproto-2.0.3.ebuild 454

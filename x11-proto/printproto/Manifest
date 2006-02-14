@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b8d34a3c31c6c8a5bb09e3616f884dc0 ChangeLog 1587
+MD5 818336e342bcbfdda48082b615215706 ChangeLog 1671
 MD5 e2da3bf748f85ca30624723050ef7cd5 files/digest-printproto-1.0.3 68
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 c8fe452b41f1d138bd4dcd0e434f6530 printproto-1.0.3.ebuild 459
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuaNs2+ySkm8kpY0RAil+AJ9Dm/7KxKobTZK8X/N198c9x7QsQACfTVTH
-P9ZnEOWUvft3xgTO/lMezRo=
-=5LTz
------END PGP SIGNATURE-----
+MD5 29c4f3dce6854a61a12b773406aa96bc printproto-1.0.3.ebuild 467
