@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.9.6.ebuild,v 1.1 2005/12/27 16:14:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.10.0_rc2.ebuild,v 1.1 2006/02/14 16:12:03 vanquirius Exp $
 
 MY_P="${P%_*}"
 S="${WORKDIR}/${MY_P}"
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i "s|\(CFLAGS=\).*$|\1\"${CFLAGS}\"|g" configure || die "sed failed"
 }
 
@@ -47,10 +47,10 @@ src_install() {
 		dodoc ${dirname}/* || die "dodoc ${dirname} failed"
 	done
 
-	newinitd ${FILESDIR}/pmacctd-init.d pmacctd || die "newinitd failed"
-	newconfd ${FILESDIR}/pmacctd-conf.d pmacctd || die "newconfd failed"
+	newinitd "${FILESDIR}"/pmacctd-init.d pmacctd || die "newinitd failed"
+	newconfd "${FILESDIR}"/pmacctd-conf.d pmacctd || die "newconfd failed"
 
 	insinto /etc
-	newins ${S}/examples/pmacctd-imt.conf.example pmacctd.conf.example || \
+	newins "${S}"/examples/pmacctd-imt.conf.example pmacctd.conf.example || \
 		die "newins failed"
 }
