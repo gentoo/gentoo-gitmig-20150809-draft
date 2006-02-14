@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twibber/twibber-0.2.0_pre2.ebuild,v 1.2 2005/08/26 14:22:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twibber/twibber-0.2.0_pre2.ebuild,v 1.3 2006/02/14 00:20:31 marienz Exp $
 
 inherit distutils
 
@@ -17,7 +17,10 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
 DEPEND=">=dev-python/pyxml-0.8.3
-	>=dev-python/twisted-1.3.0"
+	|| (
+		( >=dev-python/twisted-2 dev-python/twisted-xish )
+		=dev-python/twisted-1.3*
+	)"
 
 S=${WORKDIR}/${MY_P}
 

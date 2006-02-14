@@ -1,4 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f83ec99f962c4c374dfa63a6156397a1 ChangeLog 504
+RMD160 5a20077dca53a6dfe5c8c09bf41e5a05376df2e9 ChangeLog 504
+SHA256 605222222e7017d7ffcdef5c9db66624ad4d2d5bf2ce92fa5134671bddfbc983 ChangeLog 504
+MD5 86702552b1311e97beb381b53e41facf files/digest-twibber-0.2.0_pre2 253
+RMD160 9ac7594c10da1b0be1cbce80e8213d775f2b55dc files/digest-twibber-0.2.0_pre2 253
+SHA256 8aa62eb4e0c917acc8e224ebd44ee0a6548e0948ae426a0253de7dd0e4e4d3ef files/digest-twibber-0.2.0_pre2 253
 MD5 19df39ef54fc4a8677998f19bb6046ac metadata.xml 218
-MD5 d32aba109439ca296677f44beac37f86 ChangeLog 376
-MD5 6bfe78b35e41c713e67e65e65ff752b5 twibber-0.2.0_pre2.ebuild 1030
-MD5 5d062d520eeb07b73d25f7f664419a3e files/digest-twibber-0.2.0_pre2 69
+RMD160 3964ab644953d47933ddf25e2fad8037b7f8eb89 metadata.xml 218
+SHA256 edc3b5b8cb78a5f052118ec236322dc37fb922649530f77d00f0cb71473bde40 metadata.xml 218
+MD5 a5051123889f4b57e5c2ddd087949374 twibber-0.2.0_pre2.ebuild 1090
+RMD160 0219d40f5ce7e6a368848fa18ad290ec33285e6f twibber-0.2.0_pre2.ebuild 1090
+SHA256 ddea4c9c10f8d316695be3cd56807c5af5779fee51c6283f4b8f3dbb261cef17 twibber-0.2.0_pre2.ebuild 1090
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD8SJfW78445TWHXcRAmi9AJ4pa15itPK+rAvfVH8qFwljUHcYpwCgkFRP
+LvN0fAgkJAI14iPvwwHgfDs=
+=3GFH
+-----END PGP SIGNATURE-----
