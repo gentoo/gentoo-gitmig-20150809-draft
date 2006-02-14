@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ceb8d9102e6bae6aa573bac28bbadcbb ChangeLog 4416
-RMD160 75c565f51d5102a20d1ef68ee75d39a2f6c0fd0d ChangeLog 4416
-SHA256 cf80ad4a0b5eca4621d1425b14d5f7c31b2585791293b12868e7544120a7813c ChangeLog 4416
+MD5 69ed92f3be5322f2762e0900ead6a1ad ChangeLog 4505
+RMD160 6dc01e13786d64f4f950aff06e92a29afffb4a1e ChangeLog 4505
+SHA256 1757aaddafdf12fab1fa76d76a52affdfe90033ab3b0c1595bff0edaa894ea84 ChangeLog 4505
 MD5 31710ea4552684e8487d19f277b1da6a files/digest-twiki-4.0.1 229
 RMD160 e6489159d65198115eac8917cb1207a475b057c1 files/digest-twiki-4.0.1 229
 SHA256 89f5fd5db54e613cd62b9b6f86b4a231965ec98021cf4c0a559e8f6ed0e1d332 files/digest-twiki-4.0.1 229
@@ -19,13 +19,13 @@ SHA256 9bff3cbfb8ecbfe396e6e61ddf189c24f4500c469e9c0e0a5961a4b5b3fce851 files/re
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 RMD160 c449ad35e8af3f158d8f8305f8a02ff98a420970 metadata.xml 280
 SHA256 fd37fa0f441b1b68ef8dc4bffbb0a51f0414aa7c370b48369453af5f4bff177a metadata.xml 280
-MD5 fde0bb913a0cc14fa60f1ce2a52ca2ab twiki-4.0.1.ebuild 2067
-RMD160 35b762b4c8c242a179c012e88cce2c9198e6c6a2 twiki-4.0.1.ebuild 2067
-SHA256 874699c1df98c505c2adcf91e2fb46e5bb51a54177cecafe3c0906fe3e9f91f2 twiki-4.0.1.ebuild 2067
+MD5 39848b8ea29cd31246b525bec3753407 twiki-4.0.1.ebuild 2073
+RMD160 cd18efbb03e980edd35a6cb7a8d5ee3d6f3b9d89 twiki-4.0.1.ebuild 2073
+SHA256 828ddc30a4d7cde5d3b72bd6f1ecdda9c40b200f43f8a21bbe8ef40dbbcfb824 twiki-4.0.1.ebuild 2073
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD8jCgEzitwsaoONoRAndmAKCN8Hz5g6maWek3rxvYMOVHEnvWpQCgklY3
-8U/Xt6B3NghAHrm7kpIB2hA=
-=0OC1
+iD8DBQFD8jE0EzitwsaoONoRAsuJAJ0V4KAeoPKWyjVgQoQyzxU671MrsgCeL4LM
+AflNJxTOgueI+ieYDiFna+E=
+=JoDh
 -----END PGP SIGNATURE-----
