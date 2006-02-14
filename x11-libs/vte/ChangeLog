@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.108 2006/02/14 05:34:43 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.109 2006/02/14 13:58:23 leonardop Exp $
+
+  14 Feb 2006; Leonardo Boshell <leonardop@gentoo.org> vte-0.11.18.ebuild:
+  Run eautoreconf under gnome-pty-helper only to avoid problems with missing
+  gtk-doc macros (bug #122761). Added atk and proper modular X dependencies.
 
 *vte-0.11.18 (14 Feb 2006)
 

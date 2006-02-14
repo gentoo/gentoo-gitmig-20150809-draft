@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.18.ebuild,v 1.1 2006/02/14 05:34:43 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.18.ebuild,v 1.2 2006/02/14 13:58:23 leonardop Exp $
 
 inherit eutils autotools gnome2
 
@@ -14,6 +14,7 @@ IUSE="debug doc python"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2.2
+	dev-libs/atk
 	>=x11-libs/pango-1.1
 	>=media-libs/freetype-2.0.2
 	media-libs/fontconfig
@@ -21,6 +22,8 @@ RDEPEND=">=dev-libs/glib-2
 	python? (
 		>=dev-python/pygtk-2.4
 		>=dev-lang/python-2.2 )
+	|| ( ( x11-libs/libX11 )
+		virtual/x11 )
 	virtual/xft"
 
 DEPEND="${RDEPEND}
@@ -47,5 +50,6 @@ src_unpack() {
 	# #91617.
 	epatch ${FILESDIR}/${PN}-no_lazy_bindings.patch
 
+	cd "${S}/gnome-pty-helper"
 	eautoreconf || die "eautoreconf failed"
 }
