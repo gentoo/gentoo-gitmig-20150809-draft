@@ -1,19 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 89ef04a98ec8c9d583ab42fb3a711640 ChangeLog 4116
-MD5 4369d80c9ef3589ccebce4a23095082b files/digest-twiki-20041030-r1 138
-MD5 e2754c98027bd6468cfe636616377892 files/exec_command.patch 2445
-MD5 fab10473182738fadb4188bf90af8162 files/execwithsearch.patch 653
-MD5 ade44a9892b0925e73e2aae832a08e0f files/postinstall-en.txt 790
-MD5 ccb6e12008c8bb68dce61d0ab690a70d files/reconfig 639
-MD5 d6ef3da92ece6d68c83fa4be8f6f97be files/twiki.conf 508
+MD5 ceb8d9102e6bae6aa573bac28bbadcbb ChangeLog 4416
+RMD160 75c565f51d5102a20d1ef68ee75d39a2f6c0fd0d ChangeLog 4416
+SHA256 cf80ad4a0b5eca4621d1425b14d5f7c31b2585791293b12868e7544120a7813c ChangeLog 4416
+MD5 31710ea4552684e8487d19f277b1da6a files/digest-twiki-4.0.1 229
+RMD160 e6489159d65198115eac8917cb1207a475b057c1 files/digest-twiki-4.0.1 229
+SHA256 89f5fd5db54e613cd62b9b6f86b4a231965ec98021cf4c0a559e8f6ed0e1d332 files/digest-twiki-4.0.1 229
+MD5 0fb6bff6113baf316a822f611593a0a5 files/postinstall-en.txt 945
+RMD160 cb9968cf0d8f7b217790f2176898202b56ce1905 files/postinstall-en.txt 945
+SHA256 bf8d1eceda6d9383abd4bd3ab3c19cf101606fac89d1bd8e60155b29fb46030a files/postinstall-en.txt 945
+MD5 e9c9f48c4d156962a55730ea5ba5daed files/postupgrade-en.txt 106
+RMD160 39efa9b5cdb5ff0337c199a5f8a3a2bee59e3bc8 files/postupgrade-en.txt 106
+SHA256 f789b40a01c44b0bb80a47de0885a659d728ffcbb8a3c1e421b24bd560396aca files/postupgrade-en.txt 106
+MD5 b54ed2926e5754a14d265cfa477ebb8a files/reconfig 553
+RMD160 e80469e5b4b0e2538c597b96b0d905fce4aa6193 files/reconfig 553
+SHA256 9bff3cbfb8ecbfe396e6e61ddf189c24f4500c469e9c0e0a5961a4b5b3fce851 files/reconfig 553
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 7a0c193568974e81c309aa3f1004cf74 twiki-20041030-r1.ebuild 1601
+RMD160 c449ad35e8af3f158d8f8305f8a02ff98a420970 metadata.xml 280
+SHA256 fd37fa0f441b1b68ef8dc4bffbb0a51f0414aa7c370b48369453af5f4bff177a metadata.xml 280
+MD5 fde0bb913a0cc14fa60f1ce2a52ca2ab twiki-4.0.1.ebuild 2067
+RMD160 35b762b4c8c242a179c012e88cce2c9198e6c6a2 twiki-4.0.1.ebuild 2067
+SHA256 874699c1df98c505c2adcf91e2fb46e5bb51a54177cecafe3c0906fe3e9f91f2 twiki-4.0.1.ebuild 2067
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD8KPDtG5z4I8BtQoRAtKLAJ4g6NKFDfeYDRgS5KohFTPhH/CYOwCeN2rw
-3NW9lvawa/W8ViOI5JIGX/A=
-=WVnN
+iD8DBQFD8jCgEzitwsaoONoRAndmAKCN8Hz5g6maWek3rxvYMOVHEnvWpQCgklY3
+8U/Xt6B3NghAHrm7kpIB2hA=
+=0OC1
 -----END PGP SIGNATURE-----

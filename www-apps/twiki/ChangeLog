@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/twiki
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.21 2006/02/13 15:20:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.22 2006/02/14 19:33:42 rl03 Exp $
+
+*twiki-4.0.1 (14 Feb 2006)
+
+  14 Feb 2006; Renat Lumpau <rl03@gentoo.org> -files/exec_command.patch,
+  -files/execwithsearch.patch, files/postinstall-en.txt,
+  +files/postupgrade-en.txt, files/reconfig, -files/twiki.conf,
+  +twiki-4.0.1.ebuild, -twiki-20041030-r1.ebuild:
+  Version bump wrt bug #121725.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   twiki-20041030-r1.ebuild:

@@ -1,22 +1,27 @@
-
 You are almost done!
 
-1. Apache configs have been installed for you. You will need to edit them
-   to set the correct paths!
+0. You will need to manually adjust permissions for the installation script to
+   run:
 
-2. You may want to edit TWiki's config to suit your needs:
-   ${MY_INSTALLDIR}/lib/TWiki.cfg
+   $ chown -R apache:apache ${MY_INSTALLDIR}
 
-3. Run the testenv script from your browser:
-   http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/bin/testenv
-   It will show you the user name of the CGI scripts, a table listing all CGI
-   environment variables, and a test of your configuration file.
+   When you're done with the installation, don't forget to make sure that only
+   the data/ and pub/ directories are writeable by the webserver!!!
+
+1. Review ${MY_INSTALLDIR}/bin/LocalLib.cfg and make sure all paths are set correctly
+
+2. Take a look at twiki_httpd_conf.txt and modify your Apache configs as
+   needed. Make sure your webserver can execute ${MY_INSTALLDIR}/bin/configure
+
+3. Visit http://${VHOST_HOSTNAME}/twiki/bin/configure
+   Most values should have been automatically set for you.
 
 4. Read the install guide
-   http://twiki.org/cgi-bin/view/TWiki/TWikiInstallationGuide
-   particularly if you wish to set up email preferences or I18N.
+   http://twiki.org/cgi-bin/view/TWiki/TWikiDocumentation
 
-5. Read ${MY_INSTALLDIR}/README.robustness for important security info.
+=======================================================================
 
-6. Visit http://${VHOST_HOSTNAME}/twiki, or
-   http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/bin/view
+If you are upgrading:
+
+Follow the manual upgrade procedure as described on
+http://twiki.org/cgi-bin/view/TWiki/TWikiUpgradeGuide

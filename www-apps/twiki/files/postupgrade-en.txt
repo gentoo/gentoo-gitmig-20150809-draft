@@ -1,0 +1,2 @@
+Follow the manual upgrade procedure as described on
+http://twiki.org/cgi-bin/view/TWiki/TWikiUpgradeGuide
