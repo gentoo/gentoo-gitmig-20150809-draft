@@ -1,13 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0be64a8cf51617a68614273ce02f4914 ChangeLog 9047
+MD5 6a21f3e5fe52f114ec7e5d2275aa9539 ChangeLog 9370
 MD5 68903d8d341d5f9a8d576dee0716f4b8 files/README.JavaViewer 18585
-MD5 11be6d47e594297c9a92c56056df2f73 files/digest-tightvnc-1.2.8 76
 MD5 db5ea3a3551303c5cd4362c657ba3a08 files/digest-tightvnc-1.2.9-r1 76
 MD5 e972798c3780581c31b4c0a4b35dfbb6 files/digest-tightvnc-1.3_alpha7 78
-MD5 eb14fedcc3608a1384ef1cba6dbbf103 files/tightvnc-1.2.8-gentoo.diff 657
-MD5 57e1cd8ec91d0e8abbea5b267a6f1fb6 files/tightvnc-1.2.8-gentoo.security.patch 771
 MD5 7f0dcab7d01dfc820fabe9a79872085c files/tightvnc-1.2.9-amd64.patch 5874
 MD5 70b94ceb3134edc412d70768b55661aa files/tightvnc-1.2.9-gcc34.patch 1540
 MD5 31639d1ccaa2c2a4e9dd869fd32f4602 files/tightvnc-1.2.9-gentoo.diff 653
@@ -20,13 +17,12 @@ MD5 57e1cd8ec91d0e8abbea5b267a6f1fb6 files/tightvnc-1.3_alpha7-gentoo.security.p
 MD5 b801cfcb63f9c7c9299dd4919ba332b9 files/tightvnc-1.3_alpha7-imake-tmpdir.patch 956
 MD5 1ddf3e5ec0121aaca487686a7bb6dd55 files/x86.patch 1613
 MD5 59a8848188e5992cbe142be7d6285ee5 metadata.xml 309
-MD5 ad61c2374702756a5341de9f1a63efda tightvnc-1.2.8.ebuild 1595
-MD5 2c77a8c7ea08c44bd57e7258ad3b04fb tightvnc-1.2.9-r1.ebuild 1792
+MD5 7c9be845bcfed030ce02af5ec744edd7 tightvnc-1.2.9-r1.ebuild 1882
 MD5 ed9c7feb1ba516c6dced31eae3b2b0bc tightvnc-1.3_alpha7.ebuild 2576
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD7nmU/aM9DdBw91cRAmGrAJ4tiHM3FGtdMQ0XRSrzNOKXixvZ+gCeLYpu
-7d+lMBtDHQAB6/M9C5UWbcU=
-=kd12
+iD8DBQFD8SVT/aM9DdBw91cRAnsZAJ96ukKjKh8/dMm0CBupBCrWihyM4gCgtlvV
+EPrry79ruXMRMK8uIesNx9g=
+=1V+a
 -----END PGP SIGNATURE-----
