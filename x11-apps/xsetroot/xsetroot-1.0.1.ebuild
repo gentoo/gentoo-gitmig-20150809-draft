@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetroot/xsetroot-1.0.1.ebuild,v 1.2 2006/02/14 08:15:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetroot/xsetroot-1.0.1.ebuild,v 1.3 2006/02/14 20:17:17 nixnut Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="X.Org xsetroot application"
-KEYWORDS="~amd64 ~arm ~mips ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 RDEPEND="x11-libs/libXmu
 	x11-libs/libX11"
 DEPEND="${RDEPEND}"
