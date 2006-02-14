@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2e1fe04ba4f38c549536f7a4af21daad ChangeLog 1107
+MD5 da61e45647e3886387e44e63051bc494 ChangeLog 1190
 MD5 e23f60478eaccabb80b3f703f198c6f1 files/allow_manpages_only.patch 742
 MD5 e1462e7ac02ee014e23f4bb039e7b3d6 files/digest-xorg-docs-1.0.1 69
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 02dd01427acdd8ea5e79c4e7d62af4b8 xorg-docs-1.0.1.ebuild 542
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtlJY2+ySkm8kpY0RAqqgAKCxyDNqObqXXMK8sjdieFrWS4G3VQCeIQ6T
-Miz2hbg3UcobXAOGWqyF0CY=
-=ZxcT
------END PGP SIGNATURE-----
+MD5 98590896cf3093e47678bd91430fb217 xorg-docs-1.0.1.ebuild 550
