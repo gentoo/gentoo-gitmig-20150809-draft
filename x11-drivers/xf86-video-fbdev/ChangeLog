@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-fbdev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.13 2006/02/02 17:18:25 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.14 2006/02/14 23:23:57 corsair Exp $
+
+  14 Feb 2006; Markus Rothe <corsair@gentoo.org>
+  xf86-video-fbdev-0.1.0.5.ebuild:
+  Added ~ppc64
 
   02 Feb 2006; Luis Medinas <metalgod@gentoo.org>
   xf86-video-fbdev-0.1.0.5.ebuild:
