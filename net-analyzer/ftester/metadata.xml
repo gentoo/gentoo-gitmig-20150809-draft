@@ -2,5 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
+<maintainer>
+<email>lcars@gentoo.org</email>
+<name>Andrea Barisani</name>
+</maintainer>
 <longdescription>Ftester - Firewall and Intrusion Detection System testing tool</longdescription>
 </pkgmetadata>

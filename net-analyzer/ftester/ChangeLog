@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ftester
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ftester/ChangeLog,v 1.8 2005/12/30 15:44:31 lcars Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ftester/ChangeLog,v 1.9 2006/02/14 12:20:00 lcars Exp $
+
+*ftester-1.0 (14 Feb 2006)
+
+  14 Feb 2006; Andrea Barisani <lcars@gentoo.org> ftester-0.9.ebuild,
+  +ftester-1.0.ebuild:
+  New release, bumped 0.9 stable for ppc.
 
   30 Dec 2005; Andrea Barisani <lcars@gentoo.org> ftester-0.9.ebuild:
   Updated homepage and src_uri.
