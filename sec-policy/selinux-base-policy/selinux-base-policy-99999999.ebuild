@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-99999999.ebuild,v 1.1 2006/02/02 00:36:27 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-99999999.ebuild,v 1.2 2006/02/14 03:37:59 pebenito Exp $
 
 POLICY_TYPES="strict targeted"
-OPTS="MONOLITHIC=n DISTRO=gentoo QUIET=y PKGNAME=${P}"
+OPTS="MONOLITHIC=n DISTRO=gentoo QUIET=y"
 
-IUSE="doc"
+IUSE=""
 
 ECVS_SERVER="cvs.sf.net:/cvsroot/serefpolicy"
 ECVS_MODULE="refpolicy"
@@ -47,11 +47,6 @@ src_compile() {
 
 		make ${OPTS} TYPE=${i} NAME=${i} base \
 			|| die "${i} compile failed"
-
-		if useq doc && [[ ${i} == ${POLICY_TYPES/* /} ]]; then
-			einfo "Building reference policy interface reference webpages."
-			make ${OPTS} html || die "HTML docs compile failed"
-		fi
 	done
 }
 
@@ -63,18 +58,13 @@ src_install() {
 		make ${OPTS} TYPE=${i} NAME=${i} install \
 			|| die "${i} install failed."
 
+		make ${OPTS} TYPE=${i} NAME=${i} install-headers \
+			|| die "${i} headers install failed."
+
 		echo "run_init_t" > ${D}/etc/selinux/${i}/contexts/run_init_type
-
-		if [[ ${i} == ${POLICY_TYPES/* /} ]]; then
-			if useq doc; then
-				make ${OPTS} install-docs \
-					|| die "Docs install failed."
-			fi
-
-			make ${OPTS} install-headers \
-				|| die "Headers install failed."
-		fi
 	done
+
+	dodoc doc/Makefile.example doc/example.{te,fc,if}
 
 	insinto /etc/selinux
 	doins ${FILESDIR}/semanage.conf

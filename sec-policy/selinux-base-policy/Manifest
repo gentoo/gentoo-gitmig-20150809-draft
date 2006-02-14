@@ -28,13 +28,13 @@ SHA256 c45743d603ee47355e9d7b1b14d850678825e9c1252d96ec44ce21ac0b2a55b9 metadata
 MD5 6a260be192432081ffa67def3bf21d4b selinux-base-policy-20051022-r1.ebuild 2702
 RMD160 6a2d95b75e6a10bf9f868526274f3112c54bc846 selinux-base-policy-20051022-r1.ebuild 2702
 SHA256 2a422ccc9eb99504492cc9cde77dab7db66d3b9c9ecb17f55a112ce040d46b15 selinux-base-policy-20051022-r1.ebuild 2702
-MD5 d318a537130d6337d9745e417b7a7be9 selinux-base-policy-99999999.ebuild 2981
-RMD160 b0a8e1c0a779d54fbca3e96a6fb79a998120de21 selinux-base-policy-99999999.ebuild 2981
-SHA256 b5a2336257a06b3518b07ccd2749db237c20b34231f7cc2e43fc38c58540d90f selinux-base-policy-99999999.ebuild 2981
+MD5 7c653bab5a2ad60c39fda4a1a347dec0 selinux-base-policy-99999999.ebuild 2710
+RMD160 2cc7ef6df185928f75dc2e093d8c4dcdd0c93765 selinux-base-policy-99999999.ebuild 2710
+SHA256 4255729b6c4fe347a1b8da28308575db2a576a5e53fca408188548c3a4c93fb5 selinux-base-policy-99999999.ebuild 2710
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4VQXJ+ChZlpDtAoRAu8RAJ9e47oXl0YJAMWB1OlRYMhUCe+4SQCcC15Z
-M+Io78mNqA7clqDjeBhmGn8=
-=VzXW
+iD8DBQFD8VCjJ+ChZlpDtAoRArzYAJwOmi2zEF2CEbXZzRpFp8Th3caCMACfcNqI
+JwXIyi1dd5QWoREXNhhNKNk=
+=otwg
 -----END PGP SIGNATURE-----
