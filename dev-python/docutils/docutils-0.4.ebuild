@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.4.ebuild,v 1.1 2006/02/13 19:03:10 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.4.ebuild,v 1.2 2006/02/14 16:44:36 marienz Exp $
 
 inherit distutils eutils elisp-common
 
@@ -34,7 +34,7 @@ src_compile() {
 	# Generate html docs from reStructured text sources.
 
 	# make roman.py available for the doc building process
-	ln -s ../extras/roman.py ..
+	ln -s extras/roman.py
 
 	pushd tools
 
