@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.4.ebuild,v 1.2 2005/12/16 12:12:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.4.ebuild,v 1.3 2006/02/14 00:57:26 spyderous Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="static zlib ssl mpi hlapi szip"
 
 DEPEND="zlib? ( sys-libs/zlib )
 		szip? ( sci-libs/szip )
-		mpi? ( || ( sys-cluster/lam-mpi sys-cluster/mpich ) )"
+		mpi? ( virtual/mpi )"
 
 src_compile() {
 	local myconf
