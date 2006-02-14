@@ -1,4 +1,4 @@
-MD5 6d0aaaa58f714608e34dac58f6b64d02 ChangeLog 5603
+MD5 c6afc62dc8550d066ddbd535590e705d ChangeLog 5686
 MD5 a0ce0f1c8a5771a1194f5895211a3f66 files/Xsession 2187
 MD5 2b07bc84cc3afab6b4de90b9e9c597c3 files/chooser.sh 1566
 MD5 07738d053b5bd4dfe64b5043a71ae730 files/digest-xinit-1.0.1 63
@@ -9,4 +9,4 @@ MD5 2d8c9c76bd932f311ad86f490680d349 files/xdm.start 3418
 MD5 49f1bd860cfa5fc4adb6023d8a1bb4f8 files/xinitrc 900
 MD5 708a3daf8950bbfe3aa231efb7533cb0 files/xserver.pamd 125
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 a44b07208811f98d048fcdbc93d2581e xinit-1.0.1.ebuild 1203
+MD5 e251fa06d868ad0c855722096b220f39 xinit-1.0.1.ebuild 1208

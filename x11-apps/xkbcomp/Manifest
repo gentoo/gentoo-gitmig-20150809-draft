@@ -1,4 +1,4 @@
-MD5 58ff0b0b2c15bbe61e206103263d1892 ChangeLog 2518
+MD5 5b358b6efd7554fada86cf30fdb8c517 ChangeLog 2603
 MD5 be2b090cd41fe094b974d00e125ffb91 files/digest-xkbcomp-1.0.1 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 090555141569287e8d5c50a572aebb5a xkbcomp-1.0.1.ebuild 614
+MD5 c6a51df7377e9ef28a84ed6eab484b9f xkbcomp-1.0.1.ebuild 619

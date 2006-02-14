@@ -1,4 +1,4 @@
-MD5 201f54d81aea2a3c38c6866e20c5e8f4 ChangeLog 1324
+MD5 ee0bcfb28314bc981d7500fa128f1e8e ChangeLog 1405
 MD5 8f7f1d5290cfb9722b0fd88aa3a39723 files/digest-xcmsdb-1.0.1 64
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 71900903c7c442c12501ccd87805734d xcmsdb-1.0.1.ebuild 429
+MD5 17b26d82156bf73887fdde572e18a56c xcmsdb-1.0.1.ebuild 434

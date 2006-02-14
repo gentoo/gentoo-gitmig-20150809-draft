@@ -1,31 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7e670f51e9a4a6cef4fad71e5828cd3a ChangeLog 2176
-RMD160 e481adb2f41800daa60c5911b98e2bffc04faa84 ChangeLog 2176
-SHA256 14db51c6ab462262258a703d489ff5592a78cf20dceddd60fa3e078ebfe781ff ChangeLog 2176
+MD5 c801b0f00025f69d2a9872556cb1bf70 ChangeLog 2253
 MD5 ccabc3fb46d594ac3acec56f78369bb9 files/digest-xfs-1.0.1 62
-RMD160 c000010d1bd091ba438d1139f39b7e95f7d94edc files/digest-xfs-1.0.1 62
-SHA256 ae259234fbfa8ce11c6dfb1ee60f2d3fa367ac245fde9f27124467553f0972f7 files/digest-xfs-1.0.1 62
 MD5 dc1de0a27cd95fd08dd071c4c4d919a6 files/xfs.conf.d 777
-RMD160 5b7dea13c090bde03f481a45778d83b1c5b6420a files/xfs.conf.d 777
-SHA256 2e48cd863a1fe39a47020d23b6164dfb246d69c21259d907b79e71e1fc3aaa6d files/xfs.conf.d 777
 MD5 1534836c0fd6c5fecaa75a8648f3b8c2 files/xfs.config 1117
-RMD160 832f8de8aa2643bb39bff5384a870d3f7e30d5ac files/xfs.config 1117
-SHA256 3a1b8b5f7e40ee34f314acbf8fe612162c81974f8333f8ccae66ccb740c70092 files/xfs.config 1117
 MD5 461fb4cfc46e7c83a98af4e4557b0a95 files/xfs.start 7638
-RMD160 1bbf278a7e779b08c8b3fdfad4cb4f685d912bfe files/xfs.start 7638
-SHA256 d77bbda6b3306ca9afcddeb99c611d3d3061b5966e43bb517f153b4098f05009 files/xfs.start 7638
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
-SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 0128a516bd781d645d48cec2d812cba7 xfs-1.0.1.ebuild 967
-RMD160 8a7ff42880435531aa4101067e2c3bbcf75d7708 xfs-1.0.1.ebuild 967
-SHA256 a3c0dff7f7fe44bc1a63b4f9eb5909dc94e4971941bf7ea6fca171bd8a604912 xfs-1.0.1.ebuild 967
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4o3+2+ySkm8kpY0RAneRAJ9o+5QNIlTkq94Eq2cxSoBGFQ2cCACghhEj
-TgN+BzCKQFP1gZ8DAJD2Fho=
-=nOE9
------END PGP SIGNATURE-----
+MD5 58efc5eb0991a283b6ca93ab7d2659f3 xfs-1.0.1.ebuild 975
