@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alut/alut-20051024.ebuild,v 1.1 2005/10/25 18:19:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alut/alut-20051024.ebuild,v 1.2 2006/02/14 15:49:12 agriffis Exp $
 
 inherit eutils gnuconfig
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.openal.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="~media-libs/openal-${PV}"
 
