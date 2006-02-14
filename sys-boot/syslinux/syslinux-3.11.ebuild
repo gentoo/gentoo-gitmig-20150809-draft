@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.11.ebuild,v 1.1 2005/10/08 16:50:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.11.ebuild,v 1.2 2006/02/14 00:30:12 vapier Exp $
 
 inherit eutils
 
@@ -36,5 +36,5 @@ src_compile() {
 
 src_install() {
 	make INSTALLROOT="${D}" install || die
-	dodoc README NEWS TODO *.doc memdisk/memdisk.doc
+	dodoc README* NEWS TODO *.doc memdisk/memdisk.doc
 }
