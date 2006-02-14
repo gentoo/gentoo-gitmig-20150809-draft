@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.13.5.ebuild,v 1.1 2005/12/20 18:10:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.14.7.ebuild,v 1.1 2006/02/14 21:13:27 kumba Exp $
 
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 14 Sep 2005
+# 2) linux-mips.org GIT snapshot diff from 14 Sep 2005
 # 3) Generic Fixes
 # 4) Security fixes
 # 5) Patch for IP30 Octane Support		(http://www.linux-mips.org/~skylark/)
@@ -20,19 +20,19 @@
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20050914"			# Date of diff between kernel.org and lmo CVS
+GITDATE="20051030"			# Date of diff between kernel.org and lmo GIT
 SECPATCHVER="1.15"			# Tarball version for security patches
-GENPATCHVER="1.14"			# Tarball version for generic patches
-EXTRAVERSION="-mipscvs-${CVSDATE}"
+GENPATCHVER="1.18"			# Tarball version for generic patches
+EXTRAVERSION="-mipsgit-${GITDATE}"
 KV="${OKV}${EXTRAVERSION}"
-F_KV="${OKV}"				# Fetch KV, used to know what mipscvs diff to grab.
+F_KV="${OKV}"				# Fetch KV, used to know what mipsgit diff to grab.
 STABLEVER="${F_KV}"			# Stable Version (2.6.x)
 PATCHVER=""
 USERC="no"				# If set to "yes", then attempt to use an RC kernel
 USEPNT="yes"				# If set to "yes", then attempt to use a point-release (2.6.x.y)
 
 # Directories
-S="${WORKDIR}/linux-${OKV}-${CVSDATE}"
+S="${WORKDIR}/linux-${OKV}-${GITDATE}"
 MIPS_PATCHES="${WORKDIR}/mips-patches"
 MIPS_SECURITY="${WORKDIR}/security"
 
@@ -54,10 +54,10 @@ if [ "${USERC}" = "yes" ]; then
 	KVXY="$(get_version_component_range 1-2)"			# Kernel Major/Minor
 	KVZ="$(get_version_component_range 3)"				# Kernel Revision Pt. 1
 	KVRC="$(get_version_component_range 4)"				# Kernel RC
-	F_KV="$(get_version_component_range 1-3)"
+	F_KV="$(get_version_component_range 1-3)-${KVRC}"
 	STABLEVER="${KVXY}.$((${KVZ} - 1))"				# Last stable version (Rev - 1)
 	PATCHVER="mirror://kernel/linux/kernel/v2.6/testing/patch-${OKV}.bz2"
-	EXTRAVERSION="-${KVRC}-mipscvs-${CVSDATE}"
+	EXTRAVERSION="-${KVRC}-mipsgit-${GITDATE}"
 	KV="${OKV}-${EXTRAVERSION}"
 fi
 
@@ -67,14 +67,14 @@ if [ "${USEPNT}" = "yes" ]; then
 	F_KV="$(get_version_component_range 1-3)"			# Get Maj/Min/Rev (x.y.z)
 	STABLEVER="${F_KV}"						# Last Revision release
 	PATCHVER="mirror://kernel/linux/kernel/v2.6/patch-${OKV}.bz2"	# Patch for new point release
-	EXTRAVERSION=".$(get_version_component_range 4)-mipscvs-${CVSDATE}"
+	EXTRAVERSION=".$(get_version_component_range 4)-mipsgit-${GITDATE}"
 	KV="${OKV}${EXTRAVERSION}"
 fi
 
 
-DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
+DESCRIPTION="Linux-Mips GIT sources for MIPS-based machines, dated ${GITDATE}"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${STABLEVER}.tar.bz2
-		mirror://gentoo/mipscvs-${F_KV}-${CVSDATE}.diff.bz2
+		mirror://gentoo/mipsgit-${F_KV}-${GITDATE}.diff.bz2
 		mirror://gentoo/${PN}-security_patches-${SECPATCHVER}.tar.bz2
 		mirror://gentoo/${PN}-generic_patches-${GENPATCHVER}.tar.bz2
 		${PATCHVER}"
@@ -110,7 +110,7 @@ pkg_setup() {
 #		echo -e ""
 #		eerror "SGI Origin (IP27) Support has been disabled in this ebuild"
 #		eerror "revision.  If you wish to merge IP27 sources, then"
-#		eerror "run USE=\"ip27\" emerge =mips-sources-2.6.12.5"
+#		eerror "run USE=\"ip27\" emerge =mips-sources-2.x.y.z"
 #		die "IP27 Support disabled."
 		if [ "${arch_is_selected}" = "no" ]; then
 			echo -e ""
@@ -134,22 +134,28 @@ pkg_setup() {
 	if use ip28; then
 		if [ "${arch_is_selected}" = "no" ]; then
 			echo -e ""
-			einfo "Support for the Indigo2 Impact R10000 is probably even more experimental"
-			einfo "than Octane support.  If you seriously do not have a clue in the world about"
-			einfo "what you are doing, what an IP28 is, what a mips is, or even what gentoo is,"
-			einfo "then stop now, and return to regularly scheduled x86 programming.  Consider"
-			einfo "this the warning that you are about to venture into no-man's land with a"
-			einfo "machine that is barely supported, likely very unstable, and may very well"
-			einfo "eat your grandmother's pet cat Fluffy."
+			einfo "Support for the Indigo2 Impact R10000 is very experimental.  If you do not"
+			einfo "have a clue in the world about what an IP28 is, what the mips architecture"
+			einfo "is about, or are new to Gentoo, then it is highly advised that you steer"
+			einfo "clear of messing with this machine.  Due to the experimental nature of this"
+			einfo "particular class of system, we have to provide such warnings, as it is only"
+			einfo "for use by those who know what they are doing."
+			echo -e ""
+			einfo "Be advised that attempting to run Gentoo/Linux (or any Linux distro) on this"
+			einfo "system may cause the sudden, unexplained disappearence of any nearby furry"
+			einfo "creatures.  So please keep any and all small pets away from this system at"
+			einfo "all times."
 			echo -e ""
 			ewarn "That said, support for this system REQUIRES that you use the ip28 cascade"
 			ewarn "profile (default-linux/mips/mips64/ip28/XXXX.Y), because a very special"
 			ewarn "patch is used on the system gcc, kernel-gcc (gcc-mips64) and the kernel"
 			ewarn "itself in order to support this machine.  These patches will only be applied"
-			ewarn "if \"ip28\" is defined in USE, which the profile sets.  Other things to keep"
-			ewarn "in mind are that this system requires a full 64-bit kernel, serial-console"
-			einfo "only (Impact graphics not supported yet), and _nothing_ is guaranteed to"
-			einfo "work smoothly."
+			ewarn "if \"ip28\" is defined in USE, which the profile sets.  If you wish to"
+			ewarn "cross-compile a kernel, you _must_ make sure that the \"ip28\" USE is"
+			ewarn "defined in your host system's /etc/make.conf file before using crossdev"
+			ewarn "to build a mips64 kernel compiler for this system."
+			echo -e ""
+			ewarn "As a final warning, _nothing_ is guaranteed to work smoothly."
 			echo -e ""
 			arch_is_selected="yes"
 		else
@@ -162,13 +168,15 @@ pkg_setup() {
 	if use ip30; then
 		if [ "${arch_is_selected}" = "no" ]; then
 			echo -e ""
-			einfo "With this release, Octane now uses the qla1280 driver.  Please refrain"
-			einfo "from using the old qlogicisp driver.  It is marked BROKEN and will be"
-			einfo "removed from the kernel soon.  qla1280 is a much better driver, as you"
-			einfo "can now use multiple disks with it."
-			echo -e ""
-			einfo "This release also has a basic driver for VPro-based systems now.  Like"
-			einfo "MGRAS, it's console-only, no X support yet."
+			einfo "Things to keep in mind when building a kernel for an SGI Octane:"
+			einfo "\t- The scsi driver to use is qla1280; qlogicisp is gone."
+			einfo "\t- Impact (MGRAS) console and X driver work, please report any bugs."
+			einfo "\t- VPro (Odyssey) console works, but no X driver exists yet."
+			einfo "\t- PCI Card Cages should work for many devices, except certain types like"
+			einfo "\t  PCI-to-PCI bridges (USB hubs, USB flash card readers for example)."
+			einfo "\t- Other XIO-based devices like MENET and various Impact addons remain"
+			einfo "\t  untested and are not guaranteed to work.  This applies to various"
+			einfo "\t  digital video conversion boards as well."
 			echo -e ""
 			arch_is_selected="yes"
 		else
@@ -183,12 +191,27 @@ pkg_setup() {
 		einfo "Please keep in mind that the 2.6 kernel will NOT boot on Cobalt"
 		einfo "systems that are still using the old Cobalt bootloader.  In"
 		einfo "order to boot a 2.6 kernel on Cobalt systems, you must be using"
-		einfo "Peter Horton's new bootloader, which does not have the kernel"
+		einfo "the CoLo bootloader, which does not have the kernel"
 		einfo "size limitation that the older bootloader has.  If you want"
 		einfo "to use the newer bootloader, make sure you have sys-boot/colo"
 		einfo "installed and setup."
 		echo -e ""
 		arch_is_selected="yes"
+	fi
+
+
+	# All other systems
+	if [ "${arch_is_selected}" = "no" ]; then
+		echo -e ""
+		einfo "IP22 systems should work well with this release, however, R4600"
+		einfo "setups may still experience bugs.  Please report any encountered"
+		einfo "problems.  Additionally, only the Newport (XL) graphics card"
+		einfo "functions.  A driver for the Extreme (XZ) card is in the works,"
+		einfo "but has not been released by its author yet for public consumption."
+		echo -e ""
+		einfo "IP32 systems function well, however there exists no sound card"
+		einfo "support yet for these systems."
+		echo -e ""
 	fi
 }
 
@@ -212,21 +235,20 @@ do_generic_patches() {
 		epatch ${MIPS_PATCHES}/misc-2.6.12-ip32-stupid-gbefb-typo.patch
 
 		# Cobalt Patches (Safe for non-Cobalt use)
-		epatch ${MIPS_PATCHES}/misc-2.6.13-cobalt-bits.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.14-cobalt-bits.patch
 
 		# Generic
-		epatch ${MIPS_PATCHES}/misc-2.6.13-ths-mips-tweaks.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.14-ths-mips-tweaks.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.13-add-ramdisk-back.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.12-mips-iomap-functions.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.14-mips-iomap-functions.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.12-seccomp-no-default.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.11-add-byteorder-to-proc.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.13-mm1-fix-md-oops-on-shutdown.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.13-rev-i18n.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.13-n32-fix-sigsuspend.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.14-csum_tcpudp_nofold-sign-extend.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.14-fix-excessive-signal-lat.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.14-add-sock_dccp-def.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.14-r14k-cpu-prid.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.14-r14k-cpu-prid-r2.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.14-add-4k_cache_defines.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.14-r1xk_use_r4k_cache.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.14-rem-UL-constants.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.14-rev-i18n.patch
 
 		# Ugly Hacks
 		if ! use ip28 && ! use ip30; then
@@ -272,7 +294,7 @@ do_security_patches() {
 do_ip27_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Origin (IP27) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.13-ioc3-metadriver-r25.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.14-ioc3-metadriver-r26.patch
 	epatch ${MIPS_PATCHES}/misc-2.6.13-ip27-horrible-hacks_may-eat-kittens.patch
 	epatch ${MIPS_PATCHES}/misc-2.6.14-ip27-rev-pci-tweak.patch
 }
@@ -281,7 +303,7 @@ do_ip27_support() {
 do_ip28_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Indigo2 Impact R10000 (IP28) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.13-ip28-i2_impact-support.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.14-ip28-i2_impact-support-r2.patch
 }
 
 
@@ -289,8 +311,8 @@ do_ip28_support() {
 do_ip30_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Octane (IP30) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.13-ioc3-metadriver-r25.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.13-ip30-octane-support-r26.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.14-ioc3-metadriver-r26.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.14-ip30-octane-support-r27.patch
 }
 
 
@@ -317,7 +339,7 @@ rename_source_tree() {
 
 src_unpack() {
 	unpack ${A}
-	mv ${WORKDIR}/linux-${STABLEVER} ${WORKDIR}/linux-${OKV}-${CVSDATE}
+	mv ${WORKDIR}/linux-${STABLEVER} ${WORKDIR}/linux-${OKV}-${GITDATE}
 	cd ${S}
 
 
@@ -331,10 +353,10 @@ src_unpack() {
 	fi
 
 
-	# Update the vanilla sources with linux-mips CVS changes
+	# Update the vanilla sources with linux-mips GIT changes
 	echo -e ""
-	einfo ">>> linux-${OKV} --> linux-${OKV}-${CVSDATE} patch ..."
-	epatch ${WORKDIR}/mipscvs-${F_KV}-${CVSDATE}.diff
+	einfo ">>> linux-${OKV} --> linux-${OKV}-${GITDATE} patch ..."
+	epatch ${WORKDIR}/mipsgit-${F_KV}-${GITDATE}.diff
 
 	# Generic patches we always include
 	do_generic_patches
