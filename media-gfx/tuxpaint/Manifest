@@ -1,18 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 afdb39101e7b8ca94049c9ab703b97bf ChangeLog 3196
-MD5 6c694aa3e9399a07cdaa7f82a162b222 files/digest-tuxpaint-0.9.14 68
+MD5 a2699f3af312b878f84355b35cfc4bcb ChangeLog 3455
+RMD160 31f32cb7600c270714ecbe87865e9afb19d508da ChangeLog 3455
+SHA256 82135447357198c2b5580ff575e5693604af63d010ade4ac4082a10639fbc191 ChangeLog 3455
 MD5 9eb8991803ae628164f5991cec59e1a7 files/digest-tuxpaint-0.9.15b 69
-MD5 b12d971848124691a60da9265ecb86ba files/tuxpaint-0.9.14-gentoo.patch 4511
-MD5 69275845131d9a3f02af3ca631418360 files/tuxpaint-0.9.15b-gentoo.patch 2610
+RMD160 dbb624e734f640d26d563fb0683fdc2df88d2188 files/digest-tuxpaint-0.9.15b 69
+SHA256 8fcc64e43451ee060fd7e453c9d76b8b04ab80d6cf68231a5604f8e567755875 files/digest-tuxpaint-0.9.15b 69
+MD5 f71d13a385a4f0b46f33455cdb399840 files/digest-tuxpaint-0.9.15b-r1 253
+RMD160 96e4695051af131278392095d3f21ad859413ca1 files/digest-tuxpaint-0.9.15b-r1 253
+SHA256 d0751dcb8d4a9dc08347a8770649495c1a746ef546f324b3066f3adbf14f0b6b files/digest-tuxpaint-0.9.15b-r1 253
+MD5 6c755b41db6d9b766cf91bf2b6675019 files/tuxpaint-0.9.15b-gentoo.patch 2919
+RMD160 a24f84652ea84eda3261cec1232ba033efb76af8 files/tuxpaint-0.9.15b-gentoo.patch 2919
+SHA256 fffc7378fd5cabec383e0fa405da47483efa0c1056478c0be99a64771f99d70d files/tuxpaint-0.9.15b-gentoo.patch 2919
 MD5 60d69ee439da76dbf4d88951ef86236a metadata.xml 648
-MD5 a8ba0e922db9574f510b60932e1e56e3 tuxpaint-0.9.14.ebuild 1480
+RMD160 9637df32ab38d7c4e98c32194c34393eae4786fb metadata.xml 648
+SHA256 5f951324251b981f6dd24414b0b34a590a8ff051f29f2f24a6e1d08c71c82025 metadata.xml 648
+MD5 b5944ac2b0807e3dce5cac7244c38d44 tuxpaint-0.9.15b-r1.ebuild 1493
+RMD160 47a5659f36b1f7c53dcfacf4e6d0affbf4895e75 tuxpaint-0.9.15b-r1.ebuild 1493
+SHA256 8c939e7ce43eebf0e9a2fe262679e8d8fa03880353dc6a73144e56689d15363e tuxpaint-0.9.15b-r1.ebuild 1493
 MD5 1c87eb2f925c21504a3f5f4eb001157c tuxpaint-0.9.15b.ebuild 1483
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzp9uH6mNYUtVdIARAozXAJ0bKGFPK5qedvEvofWKLnPqPvUPFQCeJBj/
-Q6675741lqIcCtIu12/OTLI=
-=NSB7
------END PGP SIGNATURE-----
+RMD160 6eb8155f6358b8462f84c849e1585c70d3ba16ae tuxpaint-0.9.15b.ebuild 1483
+SHA256 869f80e4fadd6cf3aa526b5481f588dc6a9756222884528489f7691f4b21c1a2 tuxpaint-0.9.15b.ebuild 1483

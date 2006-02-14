@@ -1,6 +1,6 @@
-diff -NurdB tuxpaint-0.9.15b/Makefile tuxpaint-0.9.15b-patched/Makefile
---- tuxpaint-0.9.15b/Makefile	2005-11-27 01:44:15.000000000 -0500
-+++ tuxpaint-0.9.15b-patched/Makefile	2005-12-21 23:09:19.000000000 -0500
+diff -NurdB tuxpaint-0.9.15b-orig/Makefile tuxpaint-0.9.15b/Makefile
+--- tuxpaint-0.9.15b-orig/Makefile	2005-11-27 01:44:15.000000000 -0500
++++ tuxpaint-0.9.15b/Makefile	2006-02-14 08:00:18.000000000 -0500
 @@ -17,7 +17,7 @@
  
  # Where to install things:
@@ -77,3 +77,13 @@ diff -NurdB tuxpaint-0.9.15b/Makefile tuxpaint-0.9.15b-patched/Makefile
  	fi
  
  
+@@ -552,9 +559,6 @@
+ 	@install -d $(ICON_PREFIX)
+ 	@cp data/images/icon.png $(ICON_PREFIX)/tuxpaint.png
+ 	@chmod 644 $(ICON_PREFIX)/tuxpaint.png
+-	@install -d $(X11_ICON_PREFIX)
+-	@cp data/images/icon32x32.xpm $(X11_ICON_PREFIX)/tuxpaint.xpm
+-	@chmod 644 $(X11_ICON_PREFIX)/tuxpaint.xpm
+ 
+ 
+ # Install the program:
