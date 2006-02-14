@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.54 2006/02/13 15:30:34 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.55 2006/02/14 12:09:44 brix Exp $
+
+*hostapd-0.4.8 (14 Feb 2006)
+
+  14 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +files/hostapd-0.4.8-conf.d, +files/hostapd-0.4.8-init.d,
+  +hostapd-0.4.8.ebuild:
+  New stable release from upstream. Backported madwifi support from 0.5.x
+  ebuilds.
 
   13 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
   hostapd-0.4.7-r2.ebuild:
