@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.13-r2.ebuild,v 1.11 2005/10/10 20:52:50 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.13-r2.ebuild,v 1.12 2006/02/14 05:34:43 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2
 	sys-libs/ncurses
 	python? ( >=dev-python/pygtk-2.4
 		>=dev-lang/python-2.2 )
-	virtual/x11"
+	virtual/xft"
 
 DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.6 )

@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.107 2006/02/07 08:50:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.108 2006/02/14 05:34:43 leonardop Exp $
+
+*vte-0.11.18 (14 Feb 2006)
+
+  14 Feb 2006; Leonardo Boshell <leonardop@gentoo.org> +vte-0.11.18.ebuild,
+  files/vte-0.11.18-line-scroll.patch:
+  New version. Inherit from autotools and call eautoreconf(). Updated
+  -line-scroll patch because of slight internal API changes.
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> vte-0.11.16-r1.ebuild:
   Mark 0.11.16-r1 stable on alpha
