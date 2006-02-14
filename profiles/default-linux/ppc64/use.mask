@@ -74,3 +74,7 @@ dvb
 
 # until media-libs/portaudio is keyworded for ppc64
 portaudio
+
+# until we get mozilla/firefox stable on ppc64 (bug #108020 ond other)
+mozilla
+firefox
