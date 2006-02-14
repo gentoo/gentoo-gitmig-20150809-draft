@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/emotion-9999.ebuild,v 1.5 2006/01/24 00:47:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/emotion-9999.ebuild,v 1.6 2006/02/14 00:32:25 vapier Exp $
 
 inherit enlightenment
 
@@ -15,7 +15,7 @@ DEPEND=">=dev-libs/eet-0.9.9
 	>=dev-libs/embryo-0.9.1
 	xine? ( >=media-libs/xine-lib-1.1.1 )
 	!gstreamer? ( !xine? ( >=media-libs/xine-lib-1.1.1 ) )
-	gstreamer? ( =media-libs/gstreamer-0.8* )"
+	gstreamer? ( =media-libs/gstreamer-0.10* )"
 
 src_compile() {
 	if ! use xine && ! use gstreamer ; then
