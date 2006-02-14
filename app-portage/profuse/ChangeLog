@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/profuse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.43 2006/01/31 12:29:13 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.44 2006/02/14 22:18:32 dams Exp $
+
+*profuse-0.25.3 (14 Feb 2006)
+
+  14 Feb 2006; Damien Krotkine <dams@gentoo.org> +profuse-0.25.3.ebuild:
+  should correct #120973
 
 *profuse-0.25.2 (31 Jan 2006)
 
