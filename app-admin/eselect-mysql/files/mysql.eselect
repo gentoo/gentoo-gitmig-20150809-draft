@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: mysql.eselect,v 1.9 2006/02/09 12:50:37 vivo Exp $
+# $Id: mysql.eselect,v 1.10 2006/02/14 23:20:51 vivo Exp $
 
 DESCRIPTION="Manage the /usr/lib/*mysql* links"
 MAINTAINER="vivo@gentoo.org"
-SVN_DATE='$Date: 2006/02/09 12:50:37 $'
+SVN_DATE='$Date: 2006/02/14 23:20:51 $'
 VERSION=$(svn_date_to_version "${SVN_DATE}" )
 MYSQL_SYMLINK_CHECKDIR="${ROOT}/usr/bin"
 ERR_NOT_FOUND="(not-found)"
@@ -219,7 +219,7 @@ set_current_version() {
 			lastdir="${dir}"
 		fi
 		[[ -f "${filename}" ]] || [[ -d "${filename}" ]] \
-			|| filename="${filename}.gz"
+			|| filename="${filename}"
 		linkname="$(basename "${filename}")"
 		if [[ -a "${linkname}" ]] ; then
 			# rm needed for directory

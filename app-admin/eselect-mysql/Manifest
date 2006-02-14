@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0f402c0a3fb415176d3c72c1de584bb5 ChangeLog 1983
-RMD160 9d0147325074e57ede6b928d46c9069dd4b42f3a ChangeLog 1983
-SHA256 a30d0658b1b24a4159c66f799aec23c0cfddd8a4c4287ab85cad50a715295e72 ChangeLog 1983
-MD5 c68888d7b0e06b951527d68bbe77a54b eselect-mysql-1.0.0-r4.ebuild 626
-RMD160 8b116b3a31a5fa6b076d37177a4a2cb11d7fe02f eselect-mysql-1.0.0-r4.ebuild 626
-SHA256 7c82ce8a552dbe22f6c19f4f2b418ac6907b08dcf0329c23fd5b86ddbd6bc951 eselect-mysql-1.0.0-r4.ebuild 626
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-eselect-mysql-1.0.0-r4 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-eselect-mysql-1.0.0-r4 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-eselect-mysql-1.0.0-r4 0
-MD5 ba7a640dd9ea4f0e6622fa175e0469aa files/mysql.eselect 9198
-RMD160 493675d3f9af0b90120d6f0e2fc8f1f3d5a726c4 files/mysql.eselect 9198
-SHA256 766c39ec5391a43ff4068e5e8d64e1bc85ebe0b9c6c1a6703bb9626117b8d488 files/mysql.eselect 9198
+MD5 11276a5ada257e31f18b640c5eee2833 ChangeLog 2189
+RMD160 8b4cea0602f265ae3219e1f985aa1d86e3841009 ChangeLog 2189
+SHA256 42a4fb007a64f7d081976a16b0b259299a6358d53ce81315014f652dcf7ae3bd ChangeLog 2189
+MD5 e498234a84720eec521860068f2b22c5 eselect-mysql-1.0.0-r5.ebuild 626
+RMD160 7c381c1c996f1c0bc1c2b7de91d9761ecc5970b5 eselect-mysql-1.0.0-r5.ebuild 626
+SHA256 dd6eb2e19cc7ba38e25063fcd6c9705bcfa5cf04f52292372f9618d3d433562e eselect-mysql-1.0.0-r5.ebuild 626
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-eselect-mysql-1.0.0-r5 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-eselect-mysql-1.0.0-r5 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-eselect-mysql-1.0.0-r5 0
+MD5 470421e8817567ab58fb6d5c1debc094 files/mysql.eselect 9196
+RMD160 ce53cc392df2df98837bb9455b091c479659c50d files/mysql.eselect 9196
+SHA256 5a65c27b94dd2b8040d4c4352951aa88e3ce9f50fc9cf93e0744ba9425993a7c files/mysql.eselect 9196
 MD5 fa97fe3e6f213f79ccf7ffbd53838095 metadata.xml 338
 RMD160 73a2e747b9cb92a8a03ab792fcc0aa997b31c8d1 metadata.xml 338
 SHA256 6a290284a517ad042ee98313454b6615a0498d59f8dcf428aac3da3da7340065 metadata.xml 338
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6zqwKolR564NvWYRAunBAJ4r9IiyjjHaxHKdocldK975FnuPoQCgrldJ
-jTI58715VsTFCwQDvz1JUhk=
-=AGYy
+iD8DBQFD8mXkKolR564NvWYRAlxJAKCJYZOq8UqWVpXV2Gx/dV84l+23UgCgtgtI
+90fRBu8Sl3xoiCm4MgFVhF8=
+=Yxgr
 -----END PGP SIGNATURE-----
