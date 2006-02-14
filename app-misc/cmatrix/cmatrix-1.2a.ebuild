@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a.ebuild,v 1.18 2005/08/24 09:44:42 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a.ebuild,v 1.19 2006/02/14 04:13:58 joshuabaergen Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="X"
 
-DEPEND="X? ( virtual/x11 )
+DEPEND="X? ( || ( x11-apps/mkfontdir virtual/x11 ) )
 	sys-libs/ncurses"
 
 src_unpack() {

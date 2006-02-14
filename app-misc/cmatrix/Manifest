@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4a1f817867e359623973b237c5bb387d cmatrix-1.2a.ebuild 1306
-MD5 1ef452c6ad8efb736055ffccc168587b ChangeLog 1151
+MD5 537497e73cc398ab300723858e3fbc81 ChangeLog 1307
+RMD160 a4379816d0603a42d4d0fb074631c8a1cba23bb1 ChangeLog 1307
+SHA256 48b945a59aca9156c46ced9df2564d156508c13ef00760707a74b9705c9e7011 ChangeLog 1307
+MD5 1502647a5d229b114f5d1d8497a605de cmatrix-1.2a.ebuild 1340
+RMD160 de4647e5bd305f769c586072ca1efe0df4defc4c cmatrix-1.2a.ebuild 1340
+SHA256 d7f5eaa2becdba2d13efda17fad4877895697883aaf8711ef7f380e730fa655b cmatrix-1.2a.ebuild 1340
 MD5 9bfecf967586ff4ee812fbff868b34b1 files/cmatrix-1.2a-gentoo.patch 3034
+RMD160 59ba4db1eeb9f8242d070e29b3154212ed47cc2d files/cmatrix-1.2a-gentoo.patch 3034
+SHA256 a3c9646fe96da2a8509460c9afdb6ad85d1b704d01393d41825a1897fb49ff80 files/cmatrix-1.2a-gentoo.patch 3034
 MD5 fbdf087e388b121cf1bdd8fd7f519177 files/digest-cmatrix-1.2a 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDEGlViELBEf1JB0RAgMVAJ4p2s6Thdf8IM239BbLIEHFDhR/agCfZBPw
-RPgkOsUa/KizQ47cPU1NyG8=
-=qPmL
------END PGP SIGNATURE-----
+RMD160 8cecd485025721d1a0e74dad88b12e534b54845d files/digest-cmatrix-1.2a 63
+SHA256 fb81e415a9d2efd3fc9fafdb93364e4e121deeb0d8e09603fcceb5d1354dc4d3 files/digest-cmatrix-1.2a 63

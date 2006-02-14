@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cmatrix
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/ChangeLog,v 1.12 2005/08/24 09:44:42 ferdy Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/ChangeLog,v 1.13 2006/02/14 04:13:58 joshuabaergen Exp $
+
+  14 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  cmatrix-1.2a.ebuild:
+  Fix dependencies for modular X (bug #122615, fix by GerbilSoft).
 
   24 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> cmatrix-1.2a.ebuild:
   stable on alpha
