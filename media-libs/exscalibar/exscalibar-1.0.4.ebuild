@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/exscalibar-1.0.4.ebuild,v 1.2 2006/02/13 19:44:19 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/exscalibar-1.0.4.ebuild,v 1.3 2006/02/14 01:04:38 sbriesen Exp $
+
+inherit eutils qt3
 
 DESCRIPTION="EXtendable, SCalable Architecture for Live, Interactive or Batch-orientated Audio-signal Refinement"
 HOMEPAGE="http://exscalibar.sourceforge.net/"
@@ -10,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="sndfile mp3 vorbis fftw jack alsa doc"
-DEPEND="=x11-libs/qt-3*
+DEPEND="$(qt_min_version 3.2)
 	sndfile? ( >=media-libs/libsndfile-1.0.0 )
 	mp3? ( >=media-libs/libmad-0.15 )
 	vorbis? ( >=media-libs/libvorbis-1.0.0 )
@@ -18,22 +20,26 @@ DEPEND="=x11-libs/qt-3*
 	jack? (	>=media-sound/jack-audio-connection-kit-0.90.0 )
 	alsa? (	>=media-libs/alsa-lib-0.9 )"
 
+# FIXME: add GAT support
+
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/exscalibar-configure-disable-features.diff
+	epatch "${FILESDIR}/exscalibar-configure-disable-features.diff"
 }
 
 src_compile () {
-	export PATH="/usr/qt/3/bin:${PATH}"
+	export PATH="${QTDIR}/bin:${PATH}"
 
 	use sndfile || export DISABLE_SNDFILE=1
-	use mp3 || export DISABLE_MAD=1
-	use vorbis || export DISABLE_OGGFILE=1
-	use fftw || export DISABLE_FFTW3=1
-	use jack || export DISABLE_JACK=1
-	use alsa || export DISABLE_ALSA=1
+	use mp3     || export DISABLE_MAD=1
+	use vorbis  || export DISABLE_VORBISFILE=1
+	use fftw    || export DISABLE_FFTW3=1
+	use jack    || export DISABLE_JACK=1
+	use alsa    || export DISABLE_ALSA=1
 
-	econf || die "configure failed"
+	./configure || die "configure failed"
+	echo "QMAKE_CFLAGS_RELEASE = ${CFLAGS}" >> global.pro
+	echo "QMAKE_CXXFLAGS_RELEASE = ${CXXFLAGS}" >> global.pro
 	emake -j1 || die "emake failed"
 }
 
@@ -42,8 +48,8 @@ src_install() {
 
 	dodoc CHANGELOG INSTALL NOTES README
 
-	if use doc ; then
-		dodir /usr/share/doc/${PF}/tex/
-		cp -R doc/* ${D}/usr/share/doc/${PF}/tex/ || die
+	if use doc; then
+		dodir "/usr/share/doc/${PF}/tex"
+		cp -R doc/* "${D}/usr/share/doc/${PF}/tex/" || die
 	fi
 }
