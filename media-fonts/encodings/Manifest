@@ -1,5 +1,5 @@
-MD5 8a219a11e038a2e75a6214468a469e1f ChangeLog 1840
-MD5 f4a8a8d47b873416098bb8e20d1a0f60 encodings-1.0.0.ebuild 549
+MD5 63a73eb505f00bb8dfe46da4e8cf950c ChangeLog 1927
+MD5 0dd6e3e927181f8f36d9308d681517c8 encodings-1.0.0.ebuild 554
 MD5 0ccf647d8bf04eacac43c631b10b1c23 files/configurable-encodingsdir.patch 1624
 MD5 018987c8a3ec78e053c4aa696628a5ce files/digest-encodings-1.0.0 68
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
