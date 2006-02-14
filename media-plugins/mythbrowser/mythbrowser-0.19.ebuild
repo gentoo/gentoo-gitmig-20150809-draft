@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/mythbrowser-0.19.ebuild,v 1.2 2006/02/13 17:51:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/mythbrowser-0.19.ebuild,v 1.3 2006/02/14 00:28:14 cardoe Exp $
 
-inherit mythtv-plugins kde-functions multilib
+inherit mythtv-plugins kde-functions multilib eutils
 
 DESCRIPTION="Web browser module for MythTV."
 HOMEPAGE="http://www.mythtv.org/"
