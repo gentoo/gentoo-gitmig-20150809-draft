@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gentoo-xcursors
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-xcursors/ChangeLog,v 1.6 2006/02/14 08:09:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-xcursors/ChangeLog,v 1.7 2006/02/14 20:20:05 nixnut Exp $
+
+  14 Feb 2006; <nixnut@gentoo.org> gentoo-xcursors-0.3.1.ebuild:
+  Added ~ppc keyword. bug 122726
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org>
   gentoo-xcursors-0.3.1.ebuild:
