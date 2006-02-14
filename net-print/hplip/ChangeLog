@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.21 2006/02/11 19:03:17 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.22 2006/02/14 16:40:06 vanquirius Exp $
+
+  14 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> hplip-0.9.7-r3.ebuild,
+  hplip-0.9.8-r1.ebuild:
+  Do not install desktop entry if qt USE flag is not set for bug 122758.
+  Thanks to Darcy <darcydot parks at gmail dot com>.
 
 *hplip-0.9.8-r1 (11 Feb 2006)
 

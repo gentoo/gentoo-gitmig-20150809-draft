@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.7-r3.ebuild,v 1.4 2006/01/25 23:12:45 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.7-r3.ebuild,v 1.5 2006/02/14 16:40:06 vanquirius Exp $
 
 inherit eutils
 
@@ -90,6 +90,8 @@ src_install() {
 		rm -f "${D}"/usr/bin/hp-toolbox
 		rm -f "${D}"/usr/share/hplip/print
 		rm -f "${D}"/usr/share/hplip/toolbox
+		rm -f "${D}"/usr/share/hplip/data/hplip.desktop
+		rm -f "${D}"/usr/share/applications/hplip.desktop
 	fi
 
 	if use ppds; then
@@ -112,6 +114,10 @@ src_install() {
 		make DESTDIR="${D}" install || die
 	fi
 
-	dodir /usr/share/applications
-	mv "${D}"/usr/share/hplip/data/hplip.desktop "${D}"/usr/share/applications
+	# desktop entry, bug 122758
+	if use qt; then
+		dodir /usr/share/applications
+		mv "${D}"/usr/share/hplip/data/hplip.desktop \
+		"${D}"/usr/share/applications
+	fi
 }
