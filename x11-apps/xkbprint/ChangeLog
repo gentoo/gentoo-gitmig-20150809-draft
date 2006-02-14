@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xkbprint
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbprint/ChangeLog,v 1.10 2005/12/26 21:14:14 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbprint/ChangeLog,v 1.11 2006/02/14 21:27:36 corsair Exp $
+
+  14 Feb 2006; Markus Rothe <corsair@gentoo.org> xkbprint-1.0.1.ebuild:
+  Added ~ppc64
 
   26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -xkbprint-0.99.2.ebuild, -xkbprint-1.0.0.ebuild:

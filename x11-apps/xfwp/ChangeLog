@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xfwp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfwp/ChangeLog,v 1.9 2005/12/26 21:10:47 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfwp/ChangeLog,v 1.10 2006/02/14 21:21:23 corsair Exp $
+
+  14 Feb 2006; Markus Rothe <corsair@gentoo.org> xfwp-1.0.1.ebuild:
+  Added ~ppc64
 
   26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -xfwp-0.99.2.ebuild, -xfwp-1.0.0.ebuild:

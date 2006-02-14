@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmh/xmh-1.0.1.ebuild,v 1.1 2005/12/23 10:44:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmh/xmh-1.0.1.ebuild,v 1.2 2006/02/14 21:37:45 corsair Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="X.Org xmh application"
-KEYWORDS="~arm ~mips ~s390 ~sparc ~x86"
+KEYWORDS="~arm ~mips ~ppc64 ~s390 ~sparc ~x86"
 IUSE="xprint"
 RDEPEND="x11-libs/libXaw"
 DEPEND="${RDEPEND}"
