@@ -1,40 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f8da0f1414629854f7b0a77ba97bf232 ChangeLog 9564
-RMD160 dc2d0d19d2ee214813f91ad8bbb58f26ca229e7a ChangeLog 9564
-SHA256 51f7d1192b36d81590d0c2682a99218d06c45c8051f14268584f1ccc41e74e73 ChangeLog 9564
-MD5 791ee34705b8736a75e00bc314ad8192 files/digest-gnome-mag-0.12.1 69
-RMD160 b09127a076a29d7d2188c3521f6914ccafabaa0f files/digest-gnome-mag-0.12.1 69
-SHA256 97bc87655d3538b4ad4f9a5a394e4c3f735f4e5b353ae144eb02723767e1820a files/digest-gnome-mag-0.12.1 69
+MD5 a32433a15d2602c4be4171a78ee469a4 ChangeLog 9712
+RMD160 32b849bbee40f4915efcb41e907c986151602675 ChangeLog 9712
+SHA256 6247d1ba8454e02c21eab5468a761ef779e153764641a2d9c9c0eabe957944e5 ChangeLog 9712
 MD5 6d95101ffd2106830305441f9eb9ca1d files/digest-gnome-mag-0.12.2 69
 RMD160 bddb86e98055b0ebb932e15f43eb8d6d6bc79f2f files/digest-gnome-mag-0.12.2 69
 SHA256 5ee0331c1d4dc7cc8c07e9a39f6391e671e406bcdcd35270c5702764f5c13a08 files/digest-gnome-mag-0.12.2 69
-MD5 6d95101ffd2106830305441f9eb9ca1d files/digest-gnome-mag-0.12.2-r1 69
-RMD160 bddb86e98055b0ebb932e15f43eb8d6d6bc79f2f files/digest-gnome-mag-0.12.2-r1 69
-SHA256 5ee0331c1d4dc7cc8c07e9a39f6391e671e406bcdcd35270c5702764f5c13a08 files/digest-gnome-mag-0.12.2-r1 69
 MD5 0898302ea634735cef41dc14dea7546e files/digest-gnome-mag-0.12.3 69
 RMD160 ee4c4bd10a0813ac287749320950cfc64091cc60 files/digest-gnome-mag-0.12.3 69
 SHA256 353801b9432538585bce8768faccf45ea0db7cef80a6d1b564c0dcfbfb20bb7b files/digest-gnome-mag-0.12.3 69
-MD5 3b4a290c7e39234f9310eeba20754100 gnome-mag-0.12.1.ebuild 741
-RMD160 41928816ce47f558108632f8025dc3f3fc35fc6b gnome-mag-0.12.1.ebuild 741
-SHA256 98d6a2e7446aa391c36d77562574534e727786f783953c8484c22e9a2572c381 gnome-mag-0.12.1.ebuild 741
-MD5 311fa5a86b3f4dc2c0eae3954e587bcc gnome-mag-0.12.2-r1.ebuild 785
-RMD160 c07e762c751dacd1fd64cd902ac27b0d0e0e14ab gnome-mag-0.12.2-r1.ebuild 785
-SHA256 7d38f1a948294ab28c666e33b2c84bef22d523b18b5ccc65517d398cb01b2895 gnome-mag-0.12.2-r1.ebuild 785
-MD5 17dc0cdcf3c8ae2a14516cd4d1337963 gnome-mag-0.12.2.ebuild 706
-RMD160 222637b52473fef27e562bf5f972375904a46a15 gnome-mag-0.12.2.ebuild 706
-SHA256 c5820d9a38f41a953e3a1c1552cc720d54c6f14709b1778b1d496fef5f526a7f gnome-mag-0.12.2.ebuild 706
-MD5 eb0f257dbb51191c111a2ba8e48ca824 gnome-mag-0.12.3.ebuild 715
-RMD160 1e1a5a063ff070e7dfdb659479b38e3667d00ab6 gnome-mag-0.12.3.ebuild 715
-SHA256 6c28b3bbbaa6943bb35d2cec66e2dc56e27682c0a5a0bc7c219a0a983110159d gnome-mag-0.12.3.ebuild 715
+MD5 95285a25b388cccc6ff5bb185b3ea4e6 gnome-mag-0.12.2.ebuild 854
+RMD160 fd5bb395b38c4d917ad53938dc4f6f174216f5b8 gnome-mag-0.12.2.ebuild 854
+SHA256 f300fab4730d0ff83b180b83064512b5e4291b85ef6164a4721364ff8cf8bc3a gnome-mag-0.12.2.ebuild 854
+MD5 54300b4aff72713dbac8ddaf3844bc4c gnome-mag-0.12.3.ebuild 861
+RMD160 4bbfae099a3cf3fcb479f1f5af909ce3e2a67760 gnome-mag-0.12.3.ebuild 861
+SHA256 e36df4988a861c13c850a3bd9dd96d39156b9f4a328a0b91d0f6ec828ab44008 gnome-mag-0.12.3.ebuild 861
 MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
 RMD160 6901d426a49e26089e240a7a4f990204e08c15a1 metadata.xml 172
 SHA256 f14db6f3dc189eb3e4a3478d7c1bead86fe077d0c756b8426b64f7fc0d42d228 metadata.xml 172
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5tchJrHF4yAQTrARAp2YAJ4xhhlNC6+R6rS5lz2TnWeZlxnMgQCgqesP
-0WpbuIA0lGnKc2++s49Rcfs=
-=g7zh
------END PGP SIGNATURE-----
