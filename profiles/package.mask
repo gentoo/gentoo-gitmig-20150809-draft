@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5000 2006/02/13 20:13:24 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5001 2006/02/14 03:40:02 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -213,15 +213,6 @@ media-video/xmovie
 # Alexandre Buisse <nattfodd@gentoo.org> (12 Jan 2006)
 # Masked for testing purposes
 dev-tex/mpm
-
-# Marcelo Goes <vanquirius@gentoo.org> (11 Jan 2006)
-# Masked in preparation for prelude-suite stabilization
->dev-libs/libprelude-0.9.3
->dev-libs/libpreludedb-0.9.2
->app-admin/prelude-manager-0.9.1-r1
->net-analyzer/prewikka-0.9.3
->app-admin/prelude-lml-0.9.1
->net-analyzer/snort-2.4.3-r1
 
 # Doug Goldstein <cardoe@gentoo.org> (10 Jan 2006)
 # masked for testing of the snapshot
