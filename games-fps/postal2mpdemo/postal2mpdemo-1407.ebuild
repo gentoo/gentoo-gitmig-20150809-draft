@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.13 2005/09/21 20:37:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.14 2006/02/14 20:36:39 tupone Exp $
 
 inherit eutils games
 
@@ -14,8 +14,8 @@ KEYWORDS="x86 ~amd64"
 IUSE=""
 RESTRICT="nomirror"
 
-RDEPEND="virtual/x11
-	virtual/libc
+RDEPEND="|| ( x11-libs/libXext
+			  virtual/x11 )
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-xlibs
