@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c75b62bb7e6decb39e255a52494c65c ChangeLog 960
+MD5 0cd5437d7a8190eb160d16f47e5b2f12 ChangeLog 1068
 MD5 478b2487c26f4f003dc6bfc27135eabc files/digest-gentoo-xcursors-0.3.1 78
-MD5 010aa380d6b6762d26c3c2338e731576 gentoo-xcursors-0.3.1.ebuild 1524
+MD5 b148131fdd985b336a84cbf742531511 gentoo-xcursors-0.3.1.ebuild 1529
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoqksAiZjviIA2XgRAjR6AJoDcN75PzNu8AbGUp6W1QFKRICDhQCeMES3
-/hYT90ji/tg2vCZV9mhtC/M=
-=OBz3
------END PGP SIGNATURE-----

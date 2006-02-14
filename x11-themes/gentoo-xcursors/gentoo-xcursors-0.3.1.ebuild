@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-xcursors/gentoo-xcursors-0.3.1.ebuild,v 1.4 2005/12/16 11:46:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-xcursors/gentoo-xcursors-0.3.1.ebuild,v 1.5 2006/02/14 08:09:21 corsair Exp $
 
 DESCRIPTION="A high quality set of animated mouse cursors"
 HOMEPAGE="http://www.gentoo.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${PN/xcursors/cursors}-tad-${PV}.tar.bz2"
 
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~x86"
+KEYWORDS="~amd64 ~mips ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=""
