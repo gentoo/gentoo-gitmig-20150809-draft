@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d9d680591a3db8d5bba8433840cc5dac ChangeLog 1327
 MD5 a3df4629aa75f2a7127ab7d5a8377a90 amsn-skins-20040223.ebuild 750
 MD5 0465bedc73478b5c8ecb92fc24f9540a files/digest-amsn-skins-20040223 322
 MD5 777dd6192cc0e6ca0bc051ab9f92a54a metadata.xml 221
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD8hpfKRy60XGEcJIRAo7sAKCu30w1oSFwAJg1vqggTKbSVy1d1wCeISDA
+6p2g3spbZaKUW2CEkX36eSU=
+=LYgl
+-----END PGP SIGNATURE-----

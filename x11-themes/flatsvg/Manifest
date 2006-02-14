@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 821192dd196be787ea2ac6936abd026e ChangeLog 669
 MD5 fd8118733bf3660af8910e7d75c31c2d files/digest-flatsvg-1.0 63
 MD5 14304e7afd87f4e89be667a65d1c2792 flatsvg-1.0.ebuild 650
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD8hqhKRy60XGEcJIRArD2AJ45fwbc0a+4AxcaK0TD9oN9aRLipQCgtDXr
+1HjfH8Zo7gpyn82uK2miGtU=
+=1hdH
+-----END PGP SIGNATURE-----
