@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.14 2006/01/31 13:46:43 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.15 2006/02/14 22:30:44 corsair Exp $
+
+  14 Feb 2006; Markus Rothe <corsair@gentoo.org> libXi-1.0.0.ebuild:
+  Added ~ppc64
 
   31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org> libXi-1.0.0.ebuild:
   Unstable on hppa.

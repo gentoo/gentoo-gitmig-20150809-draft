@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXtst
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.16 2006/01/31 13:39:10 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.17 2006/02/14 22:45:12 corsair Exp $
+
+  14 Feb 2006; Markus Rothe <corsair@gentoo.org> libXtst-1.0.1.ebuild:
+  Added ~ppc64
 
   31 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org> libXtst-1.0.1.ebuild:
   Unstable on hppa.
