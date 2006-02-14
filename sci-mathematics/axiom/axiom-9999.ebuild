@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-9999.ebuild,v 1.5 2005/12/30 18:43:55 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-9999.ebuild,v 1.6 2006/02/14 18:30:54 plasmaroo Exp $
 
 ECVS_SERVER="cvs.savannah.nongnu.org:/sources/axiom"
 ECVS_MODULE="axiom"
@@ -18,8 +18,11 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	virtual/tetex"
+DEPEND="virtual/tetex
+	|| (
+		x11-libs/libXaw
+		virtual/x11
+	)"
 
 S=${WORKDIR}/${ECVS_MODULE}
 
