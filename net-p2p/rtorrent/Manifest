@@ -1,37 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f520c5871c156ce6e2f6817a7c53e9da ChangeLog 5444
-RMD160 942ecb242c994a224c80ad28f13447aea2806786 ChangeLog 5444
-SHA256 b6b0c8b79980094f1cf9bd89e2076707690da80139c92650aa5265722ddf2e23 ChangeLog 5444
+MD5 079dd70fc685ed6407562078d58c946d ChangeLog 5549
 MD5 bbb25789b80690a06bae3aeb2f18b16f files/digest-rtorrent-0.3.6 66
-RMD160 635066d722cdb40feda5a11024df1c4a2687c98e files/digest-rtorrent-0.3.6 66
-SHA256 cd5800ef151633667f815511e1ba5ed243fb3da2dfaf4f0bc0fc9b3d0ce5c04a files/digest-rtorrent-0.3.6 66
 MD5 fb1882ab6d24a3f8d5e55dabf48f7df7 files/digest-rtorrent-0.4.3 66
-RMD160 9885f8e9e1d18356b7ea8c8950cf93725f6a35b2 files/digest-rtorrent-0.4.3 66
-SHA256 309f207dcb43828eaf6622af656211034dec192df1469748752df97632c61c37 files/digest-rtorrent-0.4.3 66
 MD5 8bd389ecea186875b2d54cef9717068f files/digest-rtorrent-0.4.4 244
-RMD160 f3a8a25dce88bb3160935629f86f4b6c6a1fe482 files/digest-rtorrent-0.4.4 244
-SHA256 90b50a6e4073f00bc586d7cc76f16fac48639c9b8de8a5cef599c24ff9477321 files/digest-rtorrent-0.4.4 244
 MD5 7a397ed676cb702cf5dacc1619fba3be files/rtorrent-0.4.4-inttypes.patch 357
-RMD160 3520009a74560c8b6ee95b8bb683018865c7fadd files/rtorrent-0.4.4-inttypes.patch 357
-SHA256 b336485925d93bc73a9ffdd5a3d2b8598d5c9663ce2026f54898ec4135241a46 files/rtorrent-0.4.4-inttypes.patch 357
 MD5 dc4336d6e768b550ef6da8f6c965d234 metadata.xml 374
-RMD160 3b4c8bbb3bc57b9be1c3f4b4cf16c3a0bd63a081 metadata.xml 374
-SHA256 acc036fafdbccd35e5f4099dacaa7f5d50bbce9b18402bd41ecf6447aeb2432e metadata.xml 374
 MD5 74347323b69e29ee8f3ffaadc7758969 rtorrent-0.3.6.ebuild 1106
-RMD160 ac22f9e4ac05ee6720b8d9de40a51b4d00c1f083 rtorrent-0.3.6.ebuild 1106
-SHA256 dce2ab32d78b23397806a2ba7605cf644fd73f98d25e7e9dad1f0ae891a3f1f0 rtorrent-0.3.6.ebuild 1106
-MD5 4cb5ee8b92470936fc5a437b805b7744 rtorrent-0.4.3.ebuild 1144
-RMD160 ba1a18cae38a33567aee16a36ced705dc2a6093c rtorrent-0.4.3.ebuild 1144
-SHA256 bf9c38f001e421a5ba3fad7941b25fd6d446ce7c1bdcf068696f5302af98172e rtorrent-0.4.3.ebuild 1144
+MD5 69c570312dbf0c8573e473bb528e2384 rtorrent-0.4.3.ebuild 1144
 MD5 5b2e017647b047fabf8fa00db6ba716f rtorrent-0.4.4.ebuild 1230
-RMD160 dbe40c38fdfbc6dfb82a877d28db1649c7db059c rtorrent-0.4.4.ebuild 1230
-SHA256 29636a1ee6c228ae6b26f28b021edf44e394dab0bdc3fde3e656b592fe2dd005 rtorrent-0.4.4.ebuild 1230
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6tRTSENan+PfizARApR+AJ0T596X3zeGzGq28+nvczdfmbpJggCfXVsH
-Ralo+VPeunUUjUgx7/OstV0=
-=jtv1
------END PGP SIGNATURE-----
