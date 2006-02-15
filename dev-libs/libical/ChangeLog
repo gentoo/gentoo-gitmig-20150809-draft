@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libical
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.16 2006/02/08 22:15:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.17 2006/02/15 09:24:16 s4t4n Exp $
+
+*libical-0.26.6 (15 Feb 2006)
+
+  15 Feb 2006; Michele Noberasco <s4t4n@gentoo.org> libical-0.26.6.ebuild:
+  Version bump. Closes bug #122837.
 
   29 Nov 2005; Tom Gall <tgall@gentoo.org> libical-0.24_rc4-r1.ebuild:
   stable on ppc64
