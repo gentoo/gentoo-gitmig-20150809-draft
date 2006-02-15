@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.14-r1.ebuild,v 1.10 2006/02/12 11:53:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.14-r1.ebuild,v 1.11 2006/02/15 08:08:56 corsair Exp $
 
 inherit libtool autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.littlecms.com/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ~ppc ppc-macos ~ppc64 sh sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ~ppc ppc-macos ppc64 sh sparc x86"
 IUSE="tiff jpeg zlib python"
 
 DEPEND="tiff? ( media-libs/tiff )
