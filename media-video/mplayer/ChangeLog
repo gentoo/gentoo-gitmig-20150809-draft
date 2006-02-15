@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.340 2006/02/13 20:40:03 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.341 2006/02/15 15:54:10 flameeyes Exp $
+
+  15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
+  mplayer-1.0_pre7-r1.ebuild, mplayer-1.0.20060102.ebuild:
+  Put gettext as a build-time dependency, and use virtual/libintl as RDEPEND
+  instead.
 
   13 Feb 2006; Patrick McLean <chutzpah@gentoo.org>
   mplayer-1.0.20060102.ebuild:
