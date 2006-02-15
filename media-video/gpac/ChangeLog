@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.6 2005/12/15 21:48:48 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.7 2006/02/15 15:43:33 flameeyes Exp $
+
+  15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> gpac-0.4.0.ebuild:
+  Add missing mozilla useflag on IUSE.
 
   15 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> gpac-0.4.0.ebuild:
   Get rid of pic useflag that was pointless anyway. Close bug #115260.

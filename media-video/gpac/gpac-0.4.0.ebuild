@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.0.ebuild,v 1.2 2005/12/15 21:48:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.0.ebuild,v 1.3 2006/02/15 15:43:33 flameeyes Exp $
 
 inherit wxwidgets flag-o-matic eutils
 
@@ -17,7 +17,8 @@ ECVS_MODULE="gpac"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="amr debug jpeg mad ffmpeg javascript aac ogg vorbis oss png sdl theora truetype wxwindows xml2 xvid"
+IUSE="amr debug jpeg mad ffmpeg javascript aac ogg vorbis oss png sdl theora
+truetype wxwindows xml2 xvid mozilla"
 S=${WORKDIR}/${PN}
 
 RDEPEND="jpeg? ( media-libs/jpeg )
