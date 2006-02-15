@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.19.ebuild,v 1.9 2006/02/08 06:26:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.19.ebuild,v 1.10 2006/02/15 00:18:56 vapier Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -24,6 +24,7 @@ src_unpack() {
 	sed -i '/^CFLAGS/d' src/Makefile.in
 
 	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-blkgetsize64.patch #122787
 	eautoreconf || die
 }
 

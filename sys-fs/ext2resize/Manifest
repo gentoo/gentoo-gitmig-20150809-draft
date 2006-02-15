@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 70d71eccc032daf31e96bc48c8d298f7 ChangeLog 2824
-RMD160 c361b5b642eaeed06dcd12bdaa6d48baf1da9676 ChangeLog 2824
-SHA256 27e6c3399200c27a97d4cb5a6f4dd090900d1b19152c27fde138a81b4d5c6bf8 ChangeLog 2824
-MD5 273c990d05ddad71f2872ceae00d2761 ext2resize-1.1.19.ebuild 1102
-RMD160 e9cd83fe1b0c8e5da419b2f725e6ab8add413de5 ext2resize-1.1.19.ebuild 1102
-SHA256 1856ce58a967e0eceb8b2dd9c767f7be2882f8ab273c8983022f1522dfbe709f ext2resize-1.1.19.ebuild 1102
+MD5 febd7ee5709c9b393a57272a578acbd2 ChangeLog 3026
+RMD160 a56d965e0678bd024b43bf64e2ebfbaa0332b589 ChangeLog 3026
+SHA256 8bf8c3c9e3239772247f9fb0c607082027cb679e19dafb84f93e82cc4aecca91 ChangeLog 3026
+MD5 b1402f98dff17bc95d1738d843186578 ext2resize-1.1.19.ebuild 1157
+RMD160 37c754e200a2f80206d484cedbb7162c36c822a6 ext2resize-1.1.19.ebuild 1157
+SHA256 0b49cbe938fbc9fb1e29b3358ab44407ac63aae8814c3e38e5915fad8186ced6 ext2resize-1.1.19.ebuild 1157
 MD5 172e0ad58b9f4556aeee83fca37a6dcc files/digest-ext2resize-1.1.19 70
 RMD160 f048a07cc0b44cceacdd65259d31780b0c6a47f4 files/digest-ext2resize-1.1.19 70
 SHA256 6454afb1f0cab1b63b0a407625a339e8602d6526681f6749eb70799e5d9aa3e4 files/digest-ext2resize-1.1.19 70
+MD5 a8922c833716e2580cb971ee394fd35b files/ext2resize-1.1.19-blkgetsize64.patch 559
+RMD160 ce319bbc3e6b61ae0791c4bcc5909a7fc59d05fe files/ext2resize-1.1.19-blkgetsize64.patch 559
+SHA256 9f54ba68e1e5fedf830959780f246f51e50bc22ac31239b25409a9956bbadd25 files/ext2resize-1.1.19-blkgetsize64.patch 559
 MD5 cceee083f3ca55bcb4382314afbbbfc8 files/ext2resize-1.1.19-build.patch 390
 RMD160 ca15a8084b600813200db5eda6864e56b392a459 files/ext2resize-1.1.19-build.patch 390
 SHA256 bf4044b937e9640d7bbe00cbfec2960432eb7d5f97d0b6de4319c10c1f654350 files/ext2resize-1.1.19-build.patch 390
@@ -19,7 +22,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6Y9C2+ySkm8kpY0RAkMtAKDEhOKmmeCUwxPq2xrAVL/5qdD0ywCfWsUZ
-mmYlX7G10fN6SYEo0sQkQ4Y=
-=jCRY
+iD8DBQFD8nOY2+ySkm8kpY0RAtlYAJ4jAzWIRC0k4rRWzXHUUq26H36yjACfWsEI
+Ncy+MhRBrAKifpPdJB9SvzA=
+=3gza
 -----END PGP SIGNATURE-----

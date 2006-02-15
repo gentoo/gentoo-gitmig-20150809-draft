@@ -1,0 +1,18 @@
+http://bugs.gentoo.org/122787
+
+===================================================================
+RCS file: /cvsroot/ext2resize/ext2resize/src/ext2_unix_io.c,v
+retrieving revision 1.15
+retrieving revision 1.17
+diff -u -r1.15 -r1.17
+--- ext2resize/ext2resize/src/ext2_unix_io.c	2004/09/30 14:04:04	1.15
++++ ext2resize/ext2resize/src/ext2_unix_io.c	2005/12/18 10:39:45	1.17
+@@ -47,7 +47,7 @@
+ #endif
+ 
+ #ifndef BLKGETSIZE64
+-#define BLKGETSIZE64 _IOR(0x12,114,sizeof(unsigned long long))
++#define BLKGETSIZE64 _IOR(0x12,114,size_t)
+ #endif
+ 
+ struct my_cookie

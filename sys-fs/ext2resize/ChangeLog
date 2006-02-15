@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ext2resize
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ChangeLog,v 1.15 2006/02/08 06:26:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ChangeLog,v 1.16 2006/02/15 00:18:56 vapier Exp $
+
+  15 Feb 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/ext2resize-1.1.19-blkgetsize64.patch, ext2resize-1.1.19.ebuild:
+  Add patch from upstream to fix BLKGETSIZE64 error #122787 by Sean Davidson.
 
   08 Feb 2006; Mike Frysinger <vapier@gentoo.org>
   +files/ext2resize-1.1.19-build.patch, ext2resize-1.1.19.ebuild:
