@@ -1,9 +1,6 @@
 # ChangeLog for app-portage/profuse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.45 2006/02/15 08:50:38 corsair Exp $
-
-  15 Feb 2006; Markus Rothe <corsair@gentoo.org> profuse-0.25.3.ebuild:
-  Stable on ppc64; bug #122447
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.46 2006/02/15 08:52:08 corsair Exp $
 
 *profuse-0.25.3 (14 Feb 2006)
 
