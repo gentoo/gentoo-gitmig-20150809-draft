@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.65 2006/02/14 19:39:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.66 2006/02/15 08:43:57 corsair Exp $
+
+  15 Feb 2006; Markus Rothe <corsair@gentoo.org> gmp-4.1.4-r3.ebuild:
+  Stable on ppc64; bug #121968
 
   14 Feb 2006; Fabian Groffen <grobian@gentoo.org> gmp-4.1.4-r1.ebuild:
   Marked ~ppc-macos (bugs #89644, #122760)
