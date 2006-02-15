@@ -1,6 +1,24 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.258 2006/02/14 19:12:20 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.259 2006/02/15 12:55:04 nakano Exp $
+
+*postgresql-8.0.7 (15 Feb 2006)
+*postgresql-7.4.12 (15 Feb 2006)
+*postgresql-7.3.14 (15 Feb 2006)
+
+  15 Feb 2006; Masatomo Nakano <nakano@gentoo.org>
+  +files/postgresql.init-7.3.14, +files/postgresql-7.3.14-gentoo.patch,
+  +files/pg_autovacuum.conf-7.4.12, +files/pg_autovacuum.init-7.4.12,
+  +files/postgresql.conf-7.4.12, +files/postgresql.init-7.4.12,
+  +files/postgresql-7.4.12-gentoo.patch,
+  +files/postgresql-7.4.12-hppa-testandset.patch,
+  +files/postgresql-7.4.12-vacuum-delay.patch,
+  +files/pg_autovacuum.conf-8.0.7, +files/pg_autovacuum.init-8.0.7,
+  +files/postgresql.conf-8.0.7, +files/postgresql.init-8.0.7,
+  +files/postgresql-8.0.7-gentoo.patch, +files/postgresql-8.0.7-sh.patch,
+  +postgresql-7.3.14.ebuild, +postgresql-7.4.12.ebuild,
+  +postgresql-8.0.7.ebuild:
+  Version bump.
 
 *postgresql-8.1.3 (14 Feb 2006)
 
