@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.3.2.ebuild,v 1.1 2006/01/01 09:27:00 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.3.2.ebuild,v 1.2 2006/02/15 11:09:00 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,8 @@ SRC_URI="ftp://ftp.daper.net/pub/soft/${PN}/stable/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="-* ~x86"
-IUSE="flac mad oss vorbis debug alsa speex libsamplerate curl sndfile musepack"
+IUSE="flac mad oss vorbis debug alsa speex libsamplerate curl sndfile musepack
+jack"
 
 # libvorbis is pulled in so the USE flag is vorbis
 # since upstream apparently assumes ogg is an audio
@@ -22,7 +23,7 @@ DEPEND="media-libs/libao
 	sndfile? ( >=media-libs/libsndfile-1.0.0 )
 	flac? ( media-libs/flac )
 	mad? ( media-libs/libmad sys-libs/zlib media-libs/libid3tag )
-	muse? ( media-libs/libmpcdec >=media-libs/taglib-1.3 )
+	musepack? ( media-libs/libmpcdec >=media-libs/taglib-1.3 )
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.4 )
 	speex? ( >=media-libs/speex-1.0.0 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.3.3.ebuild,v 1.1 2006/01/18 06:00:46 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.3.3.ebuild,v 1.2 2006/02/15 11:09:00 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -22,7 +22,7 @@ DEPEND="media-libs/libao
 	sndfile? ( >=media-libs/libsndfile-1.0.0 )
 	flac? ( media-libs/flac )
 	mad? ( media-libs/libmad sys-libs/zlib media-libs/libid3tag )
-	muse? ( media-libs/libmpcdec >=media-libs/taglib-1.3 )
+	musepack? ( media-libs/libmpcdec >=media-libs/taglib-1.3 )
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	speex? ( >=media-libs/speex-1.0.0 )
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.0 )

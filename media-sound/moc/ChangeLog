@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.20 2006/01/18 06:00:46 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.21 2006/02/15 11:09:00 flameeyes Exp $
+
+  15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> moc-2.3.2.ebuild,
+  moc-2.3.3.ebuild:
+  Fix USE flags. Bug #122872.
 
 *moc-2.3.3 (18 Jan 2006)
 
