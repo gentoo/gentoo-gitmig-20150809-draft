@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 da7b3c36a814322b375b29a18a20ee39 ChangeLog 7619
-RMD160 0ae6b04368052c5a274d466cbd9c06a48afcd0e0 ChangeLog 7619
-SHA256 3d6f012af0db73821467eab6a36e1421620281d6f2490cb2a1ee667f3e394627 ChangeLog 7619
+MD5 3269a65bc8678c4e662dda8622639f0d ChangeLog 7726
 MD5 07f4fde34f29b1823ba3ece4ddfcb022 files/digest-libtorrent-0.7.6 68
-RMD160 b7b633dff85aab04152f2d5e6ddca99c34fc2bc2 files/digest-libtorrent-0.7.6 68
-SHA256 7bc33fcdf493598c9fd8288e2780840c0c2aee5f344f421be52dcc23b3e9127a files/digest-libtorrent-0.7.6 68
 MD5 e1d84ef8add415739cddd11e6da7569f files/digest-libtorrent-0.8.3 68
-RMD160 68c833af85d336cabe50300299760cddfa94ec7b files/digest-libtorrent-0.8.3 68
-SHA256 6a361cf96bc68db2bfbdfddf2c920932aec75c5d53c4f77bd628f096a39e9e08 files/digest-libtorrent-0.8.3 68
 MD5 7c75fdff7eaa1d8439716b370019c3ac files/digest-libtorrent-0.8.4 250
-RMD160 96709248b4233e60c792b30ac9ad7169b70e245c files/digest-libtorrent-0.8.4 250
-SHA256 8269ff045b1319dec45422cbef03d93e9bbc906f1e9968dbc3889ea2dad63a3e files/digest-libtorrent-0.8.4 250
 MD5 ae059f1aaf57ca3031303e2d9bff3446 libtorrent-0.7.6.ebuild 927
-RMD160 977b1f6a9c8b1f7c970e8df2570138a4c9286e56 libtorrent-0.7.6.ebuild 927
-SHA256 94e6016f1fbdd529285ce1c4a8fdd2d34bacbddba49e79410a2fb888c6e5a7d5 libtorrent-0.7.6.ebuild 927
-MD5 f307e692c5a3bcc673a5ed1d60ff4cc5 libtorrent-0.8.3.ebuild 978
-RMD160 cdec355a02b863cf1731b3f9f413f4a969d0126d libtorrent-0.8.3.ebuild 978
-SHA256 3760b65795aab61103fda382e9b9c61b5cc8d527284e9e4d0f1cf3e9be6c3e9a libtorrent-0.8.3.ebuild 978
+MD5 33d4d54e5fbca9113b3756e4460f9678 libtorrent-0.8.3.ebuild 978
 MD5 ff4bc90cebbdec8998d1e978455b2855 libtorrent-0.8.4.ebuild 982
-RMD160 45c6455a7167e79654f327b0d032151ff2b646d2 libtorrent-0.8.4.ebuild 982
-SHA256 62e42e940a0dd9e71c49408e6633124783d54d910930c24d85b56d82b32bf17d libtorrent-0.8.4.ebuild 982
 MD5 b59f615ff4e1c464f88d1667a66f6b5d metadata.xml 224
-RMD160 aedcea58a9a1d4c2217c92783ef458ebbcbba257 metadata.xml 224
-SHA256 03531f52debc5e006e7461e5e268c6509dd43582e0980dbe7645ea13c8d94355 metadata.xml 224
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6tP/SENan+PfizARAsIYAJwOImE7FAsfd3A8rUWT3LvdujaNkgCeKO1q
-LPPZ2bHxuRz/4Va6W756feg=
-=XBsn
------END PGP SIGNATURE-----

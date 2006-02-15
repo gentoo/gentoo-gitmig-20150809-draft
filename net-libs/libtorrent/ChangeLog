@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.45 2006/02/09 05:37:25 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.46 2006/02/15 08:26:25 corsair Exp $
+
+  15 Feb 2006; Markus Rothe <corsair@gentoo.org> libtorrent-0.8.3.ebuild:
+  Stable on ppc64; bug #121600
 
   09 Feb 2006; Joshua Jackson <tsunam@gentoo.org> libtorrent-0.8.3.ebuild:
   Stable on x86; bug #121600
