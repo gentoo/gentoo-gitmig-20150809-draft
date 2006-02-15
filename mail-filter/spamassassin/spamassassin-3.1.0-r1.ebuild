@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.0-r1.ebuild,v 1.8 2006/02/13 14:46:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.0-r1.ebuild,v 1.9 2006/02/15 19:10:40 mcummings Exp $
 
 inherit perl-module
 
@@ -217,6 +217,6 @@ pkg_postinst() {
 	einfo "you can enable them in /etc/mail/spamassassin/init.pre"
 	einfo
 	einfo "You may also consider installing the following for add on"
-	einfo "benefits: dev-perl/IO-Socket-INET6  dev-prel/Mail-DomainKeys"
+	einfo "benefits: dev-perl/IO-Socket-INET6  dev-perl/Mail-DomainKeys"
 	einfo "dev-perl/Net-Ident dev-perl/IP-Country"
 }
