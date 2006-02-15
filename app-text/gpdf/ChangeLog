@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.125 2006/02/15 08:24:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.126 2006/02/15 13:00:42 yoswink Exp $
+
+  15 Feb 2006; Jose Luis Rivero <yoswink@gentoo.org> gpdf-2.10.0-r4.ebuild:
+  Stable on alpha wrt security bug #121511
 
   15 Feb 2006; Markus Rothe <corsair@gentoo.org> gpdf-2.10.0-r4.ebuild:
   Stable on ppc64; bug #121511
