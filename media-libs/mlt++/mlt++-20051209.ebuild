@@ -1,9 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/mlt++-20051209.ebuild,v 1.2 2005/12/12 20:56:58 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/mlt++-20051209.ebuild,v 1.3 2006/02/15 00:45:27 flameeyes Exp $
 
 DESCRIPTION="Various bindings for mlt"
-HOMEPAGE="mlt.sourceforge.net"
+HOMEPAGE="http://mlt.sourceforge.net/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
@@ -40,7 +40,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install
 
-#	if [[ -n "$languages" ]] 
+#	if [[ -n "$languages" ]]
 #	then
 #		cd swig
 #		make DESTDIR=${D} install

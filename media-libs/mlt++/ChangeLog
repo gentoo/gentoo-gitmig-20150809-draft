@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mlt++
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/ChangeLog,v 1.2 2005/12/12 20:56:58 zypher Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/ChangeLog,v 1.3 2006/02/15 00:45:27 flameeyes Exp $
+
+  15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> mlt++-20051209.ebuild:
+  Fix HOMEPAGE. Bug #122860.
 
   12 Dec 2005; <zypher@gentoo.org> mlt++-20051209.ebuild:
   Added ~amd64 and ~x86 keywords
