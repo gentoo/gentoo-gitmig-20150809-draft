@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.286 2006/02/13 01:11:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.287 2006/02/15 03:33:11 redhatter Exp $
 
 # Keep them sorted
 
@@ -44,9 +44,9 @@ canna - Adds support for the Canna kana to kanji conversion engine
 caps - Use Linux capabilities library to control privileges.
 cdb - Adds support for the CDB database engine from the author of qmail
 cdinstall - Copies files from the CD rather than asking the user to copy them, mostly used with games
-cdparanoia - Enables cdparanoia support
+cdparanoia - Enables cdparanoia (audio CD ripper) support
 cdr - Adds support for CD writer hardware
-chasen - Enable chasen support
+chasen - Enable chasen (Japanese Morphological Analysis System) support
 cjk - Adds support for Multi-byte character languages (Chinese, Japanese, Korean)
 clamav - Adds support for Clam AntiVirus software (usually with a plugin)
 crypt - Add support for encryption -- using mcrypt or gpg where applicable
@@ -91,7 +91,7 @@ evo - Adds support for evolution in gnumeric and multisync
 examples - Install example source code
 exif - Adds support for reading EXIF headers from JPEG and TIFF images
 expat - Enable the use of dev-libs/expat
-fam - Enable FAM support
+fam - Enable FAM (File Alteration Monitor) support
 fastcgi - Add support for the FastCGI interface
 fbcon - Adds framebuffer support for the console, via the kernel
 fdftk - Add supports for Adobe's FDF toolkit.
@@ -107,7 +107,7 @@ fortran - Adds support for fortran (formally f77)
 freetds - Adds support for the TDS protocol to connect to MSSQL/Sybase databases
 freewnn - Adds support for FreeWnn kana to kanji conversion engine
 frontbase - Adds support for the frontbase sql server
-ftp - Adds FTP support
+ftp - Adds FTP (File Transfer Protocol) support
 gb - Adds support for Gnome Basic to gnumeric
 gcj - Enable building with gcj (The GNU Compiler for the Javatm Programming Language)
 gd - Adds support for media-libs/gd (to generate graphics on the fly)
@@ -143,7 +143,7 @@ idn - Enable support for Internationalized Domain Names
 ieee1394 - Enable FireWire/iLink IEEE1394 support (dv, camera, ...)
 ifc - use ifc instead of g77 to build
 imagemagick - Enables support for Imagemagick (image converter)
-imap - Adds support for IMAP
+imap - Adds support for IMAP (Internet Mail Application Protocol)
 imlib - Adds support for imlib, an image loading and rendering library
 informix - Adds support for Informix database
 ingres - Adds support for Ingres database
@@ -198,13 +198,13 @@ milter - Adds sendmail mail filter (milter) support
 mime - Adds MIME support
 ming - Adds support for ming library for creating flash format files
 minimal - Install a very minimal build (disables, for example, plugins, fonts, most drivers, non-critical features)
-mmap - Adds mmap support
+mmap - Adds mmap (memory map) support
 mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
 mng - Adds support for libmng (MNG images)
 mnogosearch - Adds support for the mnoGoSearch search engine
 mono - Build Mono bindings to support dotnet type stuff
 motif - Adds motif support (x11-libs/openmotif x11-libs/lesstif)
-mozilla - Adds mozilla support
+mozilla - Adds support for the Mozilla web-browser
 mp3 - Add support for reading mp3 files
 mpeg - Adds libmpeg3 support to various packages.
 mpi - Adds MPI (Message Passing Interface) layer to the apps that support it.
@@ -214,7 +214,7 @@ msql - Adds support for the MSQL database server
 mssql - Adds support for Microsoft SQL Server database
 mule - Adds multi-language support to XEmacs
 multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
-mysql - Adds mySQL support
+mysql - Adds mySQL Database support
 mysqli - Adds support for the improved mySQL libraries
 nas - Adds support for network audio sound
 ncurses - Adds ncurses support (console display library)
@@ -229,16 +229,16 @@ nocxx - Disable support for C++ (DON'T USE THIS UNLESS YOU KNOW WHAT YOU'RE DOIN
 nptl - Enable support for Native POSIX Threads Library, the new threading module (requires linux-2.6 or better usually)
 nsplugin - Builds plugins for Netscape compatible browsers
 ocaml - Adds support/bindings for the Ocaml language
-oci8 - Adds Oracle 8 Support
+oci8 - Adds Oracle 8 Database Support
 odbc - Adds ODBC Support (Open DataBase Connectivity)
 offensive - Enables potentially offensive items in packages
 ofx - Enable support for importing (and exporting) OFX (Open Financial eXchange) data files
 ogg - Adds support for the Ogg container format (commonly used by Vorbis, Theora and flac)
 oggvorbis - Adds support for the OggVorbis audio encoding - DEPRECATED useflag 
 openal - Adds support for the Open Audio Library
-opengl - Adds support for OpenGL
-oracle7 - Adds support for Oracle 7
-oracle - Enable oracle support
+opengl - Adds support for OpenGL (3D graphics)
+oracle7 - Adds support for the Oracle 7 Database
+oracle - Enable Oracle Database support
 osc - Enables support for Open Sound Control
 oscar - Enable Oscar (AIM/ICQ) IM protocol support
 oss - Adds support for OSS (Open Sound System)
@@ -262,14 +262,14 @@ ppds - Adds support for automatically generated ppd (printing driver) files
 prelude - Adds support/bindings for the Prelude Intrusion Detection System
 profile - Adds profile support to builds of packages (will likely vary from ebuild to ebuild in support)
 python - Adds support/bindings for the Python language
-qdbm - Adds support for the qdbm library
-qt - Adds support for the Qt library
+qdbm - Adds support for the qdbm (Quick Database Manager) library
+qt - Adds support for the Qt GUI/Application Toolkit
 quicktime - Adds support for OpenQuickTime
-radius - Adds support for RADIUS
+radius - Adds support for RADIUS authentication"
 readline - Enables support for libreadline, a GNU line-editing library that almost everyone wants
 recode - Enables support for the GNU recode library
 ruby - Adds support/bindings for the Ruby language
-samba - Adds support for SAMBA
+samba - Adds support for SAMBA (Windows File and Printer sharing)
 sapdb - Adds support for SAP DB
 sasl - Adds support for the Simple Authentication and Security Layer
 scanner - Adds support for scanner hardware (e.g. build the sane frontend in kdegraphics)
@@ -286,7 +286,7 @@ slp - Adds Service Locator Protocol support to CUPS
 smartcard - Enables smartcard support
 sndfile - Adds support for libsndfile
 snmp - Adds support for the Simple Network Management Protocol if available
-soap - Adds support for SOAP
+soap - Adds support for SOAP (Simple Object Access Protocol)
 sockets - Adds support for tcp/ip sockets
 socks5 - Adds support for the socks5 proxy
 solid - Adds support for the Solid database engine
@@ -308,10 +308,10 @@ sybase-ct - Adds support for Sybase-CT
 symlink - Force kernel ebuilds to automatically update the /usr/src/linux symlink.
 sysvipc - Support for System V-compatible inter-process communication
 szip - Use the szip compression library
-tcltk - Support for Tcl and/or Tk
+tcltk - Support for Tcl and/or Tk GUI toolkits
 tcpd - Adds support for TCP wrappers
 test - Workaround to pull in packages needed to run with FEATURES=maketest / FEATURES=test
-tetex - Adds support for teTeX
+tetex - Adds support for teTeX (typesetting package)
 theora - Adds support for the Theora Video Compression Codec
 threads - Adds threads support for various packages. Usually pthreads
 tidy - Adds support for HTML Tidy
@@ -329,11 +329,11 @@ vhosts - Adds support for installing web-based applications into a virtual-hosti
 videos - Tells portage to install optional video files (used in some games)
 voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo4/5 support if not in USE.
 vorbis - Adds support for the OggVorbis audio codec
-wddx - Adds support for WDDX
+wddx - Adds support for Web Distributed Data eXchange
 wifi - Enable wireless network functions
 win32codecs - use win32codecs package for dll avi decoding support (wmv and what not)
 wmf - Adds support for the wmf vector image format
-wxwindows - Adds support for wxWindows/wxGTK
+wxwindows - Adds support for wxWindows/wxGTK GUI toolkit
 xface - Adds xface support used to allow a small image of xface format to be included in an email via the header 'X-Face'.
 xine - Add support for the XINE movie libraries
 xinerama - Add support for the xinerama X11 extension, which allows you to stretch your display across multiple monitors
