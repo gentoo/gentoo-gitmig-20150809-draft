@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.5.4.ebuild,v 1.7 2005/11/20 13:37:16 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.5.4.ebuild,v 1.8 2006/02/15 22:32:54 rl03 Exp $
 
-inherit eutils webapp
+inherit eutils webapp depend.php
 
 IUSE=""
 
@@ -18,10 +18,12 @@ HOMEPAGE="http://phppgadmin.sourceforge.net/"
 LICENSE="GPL-2"
 KEYWORDS="amd64 hppa ppc sparc x86"
 
-DEPEND="virtual/httpd-php"
+need_php
 
-RDEPEND="${DEPEND}
-	!<=dev-db/phppgadmin-3.3.1"
+pkg_setup() {
+	webapp_pkg_setup
+	require_php_with_use pcre postgres session
+}
 
 src_install() {
 	webapp_src_preinst

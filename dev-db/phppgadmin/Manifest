@@ -1,21 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 09f0448705577e30e8272b5e8daf4b30 phppgadmin-3.5.4.ebuild 1081
-MD5 52eb5b1ab5f4299862f0d42ba2b781ba phppgadmin-4.0.1.ebuild 1066
-MD5 0edf1a6673a3f2bcd7a70a4df750ab0a phppgadmin-3.5.6.ebuild 1072
-MD5 d96912846fb0220e202dedbdfc51b944 phppgadmin-3.5.5.ebuild 1072
-MD5 2501d34f777d0d7fb385a69654519d53 ChangeLog 6494
-MD5 8c05332043586029d9d1417154cda2fc metadata.xml 185
+MD5 5f4e97b26d76e6518c1657c54d9da305 ChangeLog 6664
+RMD160 f92708d3937d39109ca29d47da2e3361677dcd2f ChangeLog 6664
+SHA256 0aec0f703ccac214d184be9bdb9e4b4598edafb15a37bc2178141e78cb778f65 ChangeLog 6664
+MD5 8c81138ba047391c8c45f44d03766f06 files/digest-phppgadmin-3.5.4 253
+RMD160 bc2f71185539b591da5f18697b9f6ed541e4872d files/digest-phppgadmin-3.5.4 253
+SHA256 02a3ee92c7464988a477ed27d7d1146f1afda2ca7216da0cb5d9b7127a7b9ae9 files/digest-phppgadmin-3.5.4 253
+MD5 404e0f6967131f8657357b4745d6238b files/digest-phppgadmin-4.0.1 253
+RMD160 5841692885cf27718dc63d3a4d2de5c19fb24638 files/digest-phppgadmin-4.0.1 253
+SHA256 bb73cf1609eaa9a2d707d3db5f4a5d22756765d75d1e50896b633c1296d041fa files/digest-phppgadmin-4.0.1 253
 MD5 502d9961e63f871ef1ddb5cd5da157d4 files/postinstall-en.txt 162
-MD5 2261f2781c16bb39eea8517c4edb1649 files/digest-phppgadmin-3.5.4 69
-MD5 0f2f49b835456b5715ad189abaf654a8 files/digest-phppgadmin-3.5.5 69
-MD5 39e8ebac0a944e684a8b721950db14a8 files/digest-phppgadmin-3.5.6 69
-MD5 dcbc5963df37f2ee6828628add8d6d47 files/digest-phppgadmin-4.0.1 69
+RMD160 feb3e5e74476c24efa7fc0c22a9b99f6e7c6547a files/postinstall-en.txt 162
+SHA256 4a9660e63271a754cc5ad9976c0021b57ef1e02cb3e919e54b7b6e87293e6573 files/postinstall-en.txt 162
+MD5 8c05332043586029d9d1417154cda2fc metadata.xml 185
+RMD160 15bec831ce9a0f6765a88dda4fe4acf259c14400 metadata.xml 185
+SHA256 a382745039a87fe301ef3076e4d937b0a58eef8de0d18d2d9d3ba18ce912e771 metadata.xml 185
+MD5 720c22c0f44860eb67962bcde5a0ff84 phppgadmin-3.5.4.ebuild 1101
+RMD160 a78d2cbb6feb8a1e978abba370367b68227f8e12 phppgadmin-3.5.4.ebuild 1101
+SHA256 e3a31cacf20777822b958e31be9ba3b7de1724c3e9d177379d56cc3f2b157e57 phppgadmin-3.5.4.ebuild 1101
+MD5 e5e58d2620f36b53dab1ed76061a5302 phppgadmin-4.0.1.ebuild 1089
+RMD160 507b4701092b9165f898637daea067919daa8557 phppgadmin-4.0.1.ebuild 1089
+SHA256 e872a53444b986e0813a527f93067d65b09881f205efc8acee24c6b7665b9c69 phppgadmin-4.0.1.ebuild 1089
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDi6kkEzitwsaoONoRAmQSAJ4kpvW0tNn980rr9VxISiFzEVbh/QCfdXac
-9vf9n3bFVaGq3Sy+WmI/SNg=
-=Ze9J
+iD8DBQFD86wiEzitwsaoONoRAg/5AJ0eIV+phXBLlaCRMC7zE6zqFkW09QCgh7/M
+zltyF0X0kBDPy/n0N/+AzhM=
+=Y6Dk
 -----END PGP SIGNATURE-----
