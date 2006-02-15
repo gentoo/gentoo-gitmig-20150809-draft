@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0-r2.ebuild,v 1.5 2004/07/08 16:31:40 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0-r2.ebuild,v 1.6 2006/02/15 12:28:32 reb Exp $
 
 inherit eutils
 
@@ -53,7 +53,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Please read /usr/share/doc/${P}/README.Gentoo.gz"
+	einfo "Please read /usr/share/doc/${PF}/README.Gentoo.gz"
 	einfo "And please notice that now muc-transport comes with a init.d script"
 	einfo "dont forget to add it to your runlevel."
 	einfo
