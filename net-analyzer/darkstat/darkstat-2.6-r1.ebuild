@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-2.6-r1.ebuild,v 1.7 2005/05/10 21:32:37 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-2.6-r1.ebuild,v 1.8 2006/02/15 21:56:46 jokey Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ IUSE="nls"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/libpcap
+DEPEND="net-libs/libpcap
 		nls? ( sys-devel/gettext ) "
 RDEPEND=""
 
