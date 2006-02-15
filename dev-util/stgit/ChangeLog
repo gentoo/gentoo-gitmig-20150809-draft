@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/stgit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.4 2006/01/22 12:14:01 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.5 2006/02/15 09:23:00 ferdy Exp $
+
+  15 Feb 2006; Fernando J. Pereda <ferdy@gentoo.org> -stgit-0.8.ebuild,
+  stgit-0.8.1.ebuild:
+  Marked stgit-0.8.1 stable on alpha, remove old version
 
 *stgit-0.8.1 (22 Jan 2006)
 
