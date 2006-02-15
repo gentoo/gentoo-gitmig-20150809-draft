@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/synaptics
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.6 2005/12/16 21:51:34 seemant Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.7 2006/02/15 22:30:02 corsair Exp $
+
+  15 Feb 2006; Markus Rothe <corsair@gentoo.org> synaptics-0.14.4-r2.ebuild:
+  Added ~ppc64
 
 *synaptics-0.14.4-r2 (16 Dec 2005)
 

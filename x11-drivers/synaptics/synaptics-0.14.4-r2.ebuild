@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.4-r2.ebuild,v 1.1 2005/12/16 21:51:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.4-r2.ebuild,v 1.2 2006/02/15 22:30:02 corsair Exp $
 
 inherit toolchain-funcs eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://w1.894.telia.com/~u89404340/touchpad/"
 SRC_URI="http://w1.894.telia.com/~u89404340/touchpad/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="dlloader"
 RDEPEND="|| ( x11-libs/libXext virtual/x11 )"
 DEPEND="${RDEPEND}
