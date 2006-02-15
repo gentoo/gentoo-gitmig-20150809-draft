@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/madplay
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.37 2005/08/03 20:17:01 kito Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.38 2006/02/15 13:27:42 flameeyes Exp $
+
+  15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> madplay-0.15.0b.ebuild,
+  madplay-0.15.0b-r1.ebuild, madplay-0.15.1b.ebuild:
+  Fix dependencies.
+
+  15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> madplay-0.15.0b.ebuild,
+  madplay-0.15.0b-r1.ebuild:
+  Fix dependencies.
 
   03 Aug 2005; Kito <kito@gentoo.org> +files/madplay-macos.patch,
   madplay-0.15.2b.ebuild:

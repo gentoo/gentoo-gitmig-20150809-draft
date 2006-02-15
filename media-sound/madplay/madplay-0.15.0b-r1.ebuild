@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.0b-r1.ebuild,v 1.14 2005/04/14 15:05:52 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.0b-r1.ebuild,v 1.15 2006/02/15 13:27:42 flameeyes Exp $
 
 DESCRIPTION="The MAD audio player"
 HOMEPAGE="http://mad.sourceforge.net"
@@ -11,9 +11,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 -mips ppc sparc x86"
 IUSE="debug nls"
 
-DEPEND="virtual/libc
-	~media-libs/libmad-${PV}
-	~media-libs/libid3tag-${PV}
+RDEPEND="~media-libs/libmad-${PV}
+	~media-libs/libid3tag-${PV}"
+
+DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.11.2 )"
 
 src_compile() {
@@ -22,7 +23,7 @@ src_compile() {
 	myconf="--with-gnu-ld"
 	# --enable-profiling      generate profiling code
 	# --enable-experimental   enable experimental code
-	# --with-esd              use Enlightened Sound Daemon (EsounD) 
+	# --with-esd              use Enlightened Sound Daemon (EsounD)
 	#                         as default
 
 	use debug && myconf="${myconf} --enable-debugging" \
