@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/pyflag
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/pyflag/ChangeLog,v 1.3 2006/02/08 21:57:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/pyflag/ChangeLog,v 1.4 2006/02/15 20:53:18 jokey Exp $
+
+  15 Feb 2006; Markus Ullmann <jokey@gentoo.org> pyflag-0.80.1.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
 *pyflag-0.80.1 (08 Feb 2006)
 
