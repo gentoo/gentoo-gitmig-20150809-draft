@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.91.1.ebuild,v 1.1 2004/11/21 20:53:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.91.1.ebuild,v 1.2 2006/02/15 13:21:01 flameeyes Exp $
 
 IUSE="nls gnome"
 
@@ -13,11 +13,13 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~ppc64"
 
-DEPEND=">=x11-libs/gtk+-2.4
+RDEPEND=">=x11-libs/gtk+-2.4
 	>=x11-libs/pango-1.2
 	>=media-sound/mpg123-0.59p
-	media-sound/vorbis-tools"
-RDEPEND="nls? ( sys-devel/gettext )"
+	media-sound/vorbis-tools
+	nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 	local myconf

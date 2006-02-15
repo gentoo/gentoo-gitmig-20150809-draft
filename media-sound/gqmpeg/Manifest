@@ -1,11 +1,43 @@
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 af9fee704f6caf70441789d4cab0a108 ChangeLog 2170
-MD5 e92f7a8a3f4ee4fc13e5c8603d86ea90 gqmpeg-0.20.0.ebuild 869
-MD5 cb66068e4da644c587189991148f35f7 gqmpeg-0.19.0.ebuild 840
-MD5 113c31bd970813123ab98a63008ab48e gqmpeg-0.17.0.ebuild 840
-MD5 a1f9152950ee75282f33a5f4c068b3d6 gqmpeg-0.91.1.ebuild 916
-MD5 d026bbc7331c7e0dad3113596eb7f586 files/digest-gqmpeg-0.20.0 65
-MD5 51b49ffafcd770b19ac5237f2796a17d files/gqmpeg.desktop 127
-MD5 be1b3faf99db9557e7027df5192256a8 files/digest-gqmpeg-0.19.0 65
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b3372d1854f4b3d9a69ad59088bad066 ChangeLog 2335
+RMD160 19e25f0b9b39a4c3b572969e0537c9a568b2a4b0 ChangeLog 2335
+SHA256 cc33e0e5127657594b95226a903fe2908cf86a21b453915ab5da25c21b00b275 ChangeLog 2335
 MD5 ff0bee6a22fe1bec9c30a5628821e89c files/digest-gqmpeg-0.17.0 65
+RMD160 a17b4829a4f492c2512cbd97f4e00f731e5b415a files/digest-gqmpeg-0.17.0 65
+SHA256 80ae76b0bf28059e778152e8ce3491fb7195fd4c837074dc375b77a2aa5e54f6 files/digest-gqmpeg-0.17.0 65
+MD5 be1b3faf99db9557e7027df5192256a8 files/digest-gqmpeg-0.19.0 65
+RMD160 b26e25756508d6b075ecb40d10585e9ff83e81df files/digest-gqmpeg-0.19.0 65
+SHA256 c539bee300e2c5a0d222524bb7cf420207bb6750f717b669a9539fe603ee9b03 files/digest-gqmpeg-0.19.0 65
+MD5 d026bbc7331c7e0dad3113596eb7f586 files/digest-gqmpeg-0.20.0 65
+RMD160 2934e7cc3eae91ceb3f90ec0737a06a9f6de43c7 files/digest-gqmpeg-0.20.0 65
+SHA256 343b4c1d72be3e362ab6a1fc0cf62222e1c0e93ef4217e31140e47957efc98ed files/digest-gqmpeg-0.20.0 65
 MD5 b094af61165ed9b9bfd70aa11e6535db files/digest-gqmpeg-0.91.1 66
+RMD160 0ce4be555e7ef60db3923f9faa3f70d149ad96f5 files/digest-gqmpeg-0.91.1 66
+SHA256 6ad57268c42315149c9d75f27b2e5b32960ec19c4efbf0b0ba483b99bbae7d00 files/digest-gqmpeg-0.91.1 66
+MD5 51b49ffafcd770b19ac5237f2796a17d files/gqmpeg.desktop 127
+RMD160 db1e62168a979bf7e3397bb84ea3a9d5c78bd53f files/gqmpeg.desktop 127
+SHA256 1a96574500a0491289db447cf2ff981148270e5d14aaa18a2b2e473d7734d420 files/gqmpeg.desktop 127
+MD5 b45ebb5cf198bb48771be3f376a0f170 gqmpeg-0.17.0.ebuild 853
+RMD160 fb37f4159d62523e5ed4994de37574b99a4826ef gqmpeg-0.17.0.ebuild 853
+SHA256 748c6c080084f9f8bdd1afe7cfddf2b3f45ad562e8803f6bdab13fe6eeedde58 gqmpeg-0.17.0.ebuild 853
+MD5 8f85894236bfee38c4f272d21f69dbfe gqmpeg-0.19.0.ebuild 853
+RMD160 f922529088305689be9b34ceec2952684ef801ee gqmpeg-0.19.0.ebuild 853
+SHA256 486847e42e8db127dc52dc8d0cd03e2c07247229896425e174cc653cc33ef336 gqmpeg-0.19.0.ebuild 853
+MD5 8a695f785c5a3f28dc4c6e06b3f00145 gqmpeg-0.20.0.ebuild 882
+RMD160 c54c50785d86962b00864f27f2f1e629e9b987a7 gqmpeg-0.20.0.ebuild 882
+SHA256 7452402142f7f15bf9e6a867cb39a3f1ac2ffb79a00d5d9e13cdba43f9c23e29 gqmpeg-0.20.0.ebuild 882
+MD5 5c56ae04c8f810c1d69a71139fd7303c gqmpeg-0.91.1.ebuild 955
+RMD160 ab96275e09e5485a1083c218c58cb49cd46f0603 gqmpeg-0.91.1.ebuild 955
+SHA256 17151a9f7e61c5ae4088968b7b275d0449f44b51519622f732f233e818ee6c04 gqmpeg-0.91.1.ebuild 955
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD4DBQFD8yrcAiZjviIA2XgRAtJYAKCo6JGanYXuWEpSmhaebIg8vsDmsACXTmEW
+KI7Sw/QCa6BoaeiTwsYPYg==
+=u1Vg
+-----END PGP SIGNATURE-----

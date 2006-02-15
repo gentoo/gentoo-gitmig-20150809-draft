@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.19.0.ebuild,v 1.6 2004/06/25 00:03:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.19.0.ebuild,v 1.7 2006/02/15 13:21:01 flameeyes Exp $
 
 IUSE="nls gnome"
 
@@ -13,10 +13,11 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND="=x11-libs/gtk+-1.2*
+RDEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/gdk-pixbuf-0.13.0"
 
-RDEPEND="nls? ( sys-devel/gettext )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 	local myconf
