@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/howl
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.36 2005/12/24 16:13:48 killerfox Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.37 2006/02/15 14:41:13 gustavoz Exp $
+
+  15 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org> howl-1.0.0.ebuild:
+  Stable on sparc
 
   24 Dec 2005; Rene Nussbaumer <killerfox@gentoo.org> howl-0.9.8.ebuild:
   Stable on hppa.
