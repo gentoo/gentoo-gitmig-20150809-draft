@@ -1,8 +1,34 @@
-MD5 f17ed73c235c7db1e8fff30c411fc753 ChangeLog 17799
-MD5 278f53291585ab1dda3b8d02d141b216 avidemux-2.0.24.ebuild 2452
-MD5 1b639c8a504a44cf03a129f79e89afe5 avidemux-2.0.42-r1.ebuild 3041
-MD5 1d26b87f2ac7e2f96aa7805b7ee904e4 avidemux-2.1_pre1.ebuild 3150
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ece2910731b1f96474654269561f354b ChangeLog 17981
+RMD160 8af6545fcda82aae36690a3d06067d498b7fb994 ChangeLog 17981
+SHA256 d78ffb13f553c2d5dfcdb0efa3e7c46286d3116442d6c3e21be0526241d6caf0 ChangeLog 17981
+MD5 3b3113b07006ae2d4ce602c1c897677a avidemux-2.0.24.ebuild 2480
+RMD160 1bca89e4a8879f1b813bbd45e06e03b71721133b avidemux-2.0.24.ebuild 2480
+SHA256 ce338c18cb2ee42cb59f001a7cb687aab3ac56e279ebf4ba7795249a16610830 avidemux-2.0.24.ebuild 2480
+MD5 f90a907020a264e39050789963c7217d avidemux-2.0.42-r1.ebuild 3067
+RMD160 30ec7785df361060ab7b090b843d63ba42304665 avidemux-2.0.42-r1.ebuild 3067
+SHA256 7fd639ff987510a921aa07b28dc4f66f982cfb96d2e9ae8f1638a87892a6e536 avidemux-2.0.42-r1.ebuild 3067
+MD5 d72930ea6010f0cce101d8aeacff9acc avidemux-2.1_pre1.ebuild 3176
+RMD160 54c922502dcba308b678b00c70552ecae71cf52b avidemux-2.1_pre1.ebuild 3176
+SHA256 b4a823ddae4345ad72a8acbe77dd0e13066030e39c6db8a44841b895d10a0b6d avidemux-2.1_pre1.ebuild 3176
 MD5 03b785183df3226642178240a15f5a25 files/digest-avidemux-2.0.24 68
+RMD160 ec3664b886292f1bf9289bff0f48b7e1b8ec6bda files/digest-avidemux-2.0.24 68
+SHA256 9e6fdf505b65fb5c561ab04ac156afeea0140d19b6ebcc97edf55589264ee30e files/digest-avidemux-2.0.24 68
 MD5 0d0a90c34a5456ea2cad99a4bab62b50 files/digest-avidemux-2.0.42-r1 139
+RMD160 09a6870b70ad5d22da98528bb16064f0a7f04ad0 files/digest-avidemux-2.0.42-r1 139
+SHA256 baf32300bdc707ff67992ad1889a98e5806eb1cd77275b77970f2bc69eb87b49 files/digest-avidemux-2.0.42-r1 139
 MD5 829b17a9790d79f257614bfcd384f049 files/digest-avidemux-2.1_pre1 142
+RMD160 e87b4f621c40286c27a567bf459508a9eb18b61e files/digest-avidemux-2.1_pre1 142
+SHA256 cb89bb944b95fc0feb72dad1790fb63a845ad00d80999279208dfed32aaa2807 files/digest-avidemux-2.1_pre1 142
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
+RMD160 11462994b78856883a805c72334300d07101713d metadata.xml 251
+SHA256 0e151c0a2781f2632c75a2f2c3b1a8d187aed329467472236c65627a7e0ba42f metadata.xml 251
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD80snAiZjviIA2XgRAru2AKCJxaWhQ+f5Q0XeqnGcaqyc4/Yp5ACffYoK
+8Fu855iMO8xefspJzM65/kc=
+=zDC1
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.95 2005/12/26 12:10:47 lu_zero Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.96 2006/02/15 15:38:53 flameeyes Exp $
+
+  15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> avidemux-2.0.24.ebuild,
+  avidemux-2.0.42-r1.ebuild, avidemux-2.1_pre1.ebuild:
+  Fix dependencies: gettext is not an RDEPEND.
 
   26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> avidemux-2.0.24.ebuild:
   Cleanup
