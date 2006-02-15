@@ -1,4 +1,7 @@
-MD5 04b81a5eee6ceafc6d1ec29ddc36e379 ChangeLog 18124
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c0fbbdd3a1bbd439466457d8612a5fd2 ChangeLog 18221
 MD5 f2c353a99f6cbaaa4af971adf5c95c0d files/digest-links-2.1_pre17-r1 139
 MD5 4ecf3369d346051658758f76dbd89eb5 files/digest-links-2.1_pre18 139
 MD5 6fd45df1f15b1f0ba4d72ec4d6011611 files/digest-links-2.1_pre19 139
@@ -7,5 +10,12 @@ MD5 5b8b5b21da5582f7c332b2a2d6afafcd files/links-2.1pre18-no-javascript-fix.patc
 MD5 3d928fe8443461d83773ee90297c9e71 links-2.1_pre17-r1.ebuild 3515
 MD5 988ab34c1b35e8344122e4e6be681316 links-2.1_pre18.ebuild 3655
 MD5 79efbec57887b3165cf2eb4c4e221331 links-2.1_pre19.ebuild 3623
-MD5 ab3e4491b6a7af274d2eb3ba8c72e781 links-2.1_pre20.ebuild 3805
+MD5 d5170c46df09d574f5fd3f9f9a56194f links-2.1_pre20.ebuild 3802
 MD5 82cf55f144e0f9e258fd08a572852147 metadata.xml 498
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD8y6MKRy60XGEcJIRApPiAKCJmF+ed6f4/T55LkN+LQSlTbwJ+ACfUG8W
+R1iIEO1syCDoXgC0ulVqMy8=
+=Nhnh
+-----END PGP SIGNATURE-----
