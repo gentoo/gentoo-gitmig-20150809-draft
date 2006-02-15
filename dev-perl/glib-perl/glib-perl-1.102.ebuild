@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.102.ebuild,v 1.1 2006/01/13 14:21:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.102.ebuild,v 1.2 2006/02/15 23:34:07 mcummings Exp $
 
-inherit perl-module
+inherit perl-module eutils
 
 MY_P=Glib-${PV}
 S=${WORKDIR}/${MY_P}
@@ -25,3 +25,15 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-perl/extutils-depends-0.205
 	>=dev-perl/extutils-pkgconfig-1.07"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# The assert macro has changed in perl 5.8.8 from:
+	# if (...) { ... }
+	# to:
+	# (...) ? ((void) 0) : (...)
+	# The missing semicolon after calling assert caused compilation problems with perl 5.8.8
+	epatch ${FILESDIR}/gtypes.patch
+}

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.43 2006/02/06 20:46:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.44 2006/02/15 23:34:07 mcummings Exp $
+
+  15 Feb 2006; Michael Cummings <mcummings@gentoo.org> +files/gtypes.patch,
+  glib-perl-1.102.ebuild:
+  Bug 122312, thanks yuval. Submitted upstream for next release
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> glib-perl-1.101.ebuild:
   stable on amd64

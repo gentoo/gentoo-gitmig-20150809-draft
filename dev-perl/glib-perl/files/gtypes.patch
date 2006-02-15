@@ -1,0 +1,11 @@
+--- GType.xs.old	2006-02-14 19:37:23.410495296 +0200
++++ GType.xs	2006-02-14 19:37:31.381283552 +0200
+@@ -1361,7 +1361,7 @@
+ 		croak ("Param spec type %s is not registered with GPerl",
+ 		       g_type_name (G_PARAM_SPEC_TYPE (pspec)));
+ 	stash = gv_stashpv (package, FALSE);
+-	assert (stash)
++	assert (stash);
+ 	method = gv_fetchmethod (stash, "get_default_value");
+ 
+ 	if (method) {
