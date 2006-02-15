@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95.ebuild,v 1.2 2006/02/04 17:23:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95.ebuild,v 1.3 2006/02/15 11:14:23 flameeyes Exp $
 
 inherit eutils font autotools flag-o-matic
 
@@ -60,7 +60,7 @@ DEPEND="${RDEPEND}
 				x11-proto/xproto
 				x11-proto/xextproto
 			) virtual/x11 )
-			xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
+			xext? ( || ( x11-proto/xineramaproto virtual/x11 ) )
 		)"
 
 pkg_setup() {
