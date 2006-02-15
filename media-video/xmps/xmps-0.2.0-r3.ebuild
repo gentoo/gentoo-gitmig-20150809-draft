@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r3.ebuild,v 1.6 2005/09/03 23:25:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r3.ebuild,v 1.7 2006/02/15 16:17:07 flameeyes Exp $
+
+inherit eutils
 
 IUSE="nls gnome"
 
@@ -8,13 +10,14 @@ DESCRIPTION="X Movie Player System"
 SRC_URI="http://xmps.sourceforge.net/sources/${P}.tar.gz"
 HOMEPAGE="http://xmps.sourceforge.net"
 
-DEPEND="=x11-libs/gtk+-1.2*
-	>=sys-apps/sed-4
+RDEPEND="=x11-libs/gtk+-1.2*
 	x86? ( >=dev-lang/nasm-0.98 )
 	>=dev-libs/popt-1.5
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
+	>=media-libs/smpeg-0.4.4-r1
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
+	nls? ( virtual/libintl )"
 
-RDEPEND=">=media-libs/smpeg-0.4.4-r1
+DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 SLOT="0"
@@ -27,7 +30,7 @@ src_unpack() {
 
 	# Fixes compile issues on motion_comp.c (Bug #2822)
 	cd ${S}
-	patch -p1 < ${FILESDIR}/xmps-0.2.0_motion_comp.c.gentoo.diff || die
+	epatch ${FILESDIR}/xmps-0.2.0_motion_comp.c.gentoo.diff
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xmps
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/ChangeLog,v 1.10 2005/09/03 23:25:04 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/ChangeLog,v 1.11 2006/02/15 16:17:07 flameeyes Exp $
+
+  15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> -xmps-0.2.0-r1.ebuild,
+  -xmps-0.2.0-r2.ebuild, xmps-0.2.0-r3.ebuild:
+  Drop old versions, fix dependencies and use epatch in last version.
 
   03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> xmps-0.2.0-r1.ebuild,
   xmps-0.2.0-r2.ebuild, xmps-0.2.0-r3.ebuild:
