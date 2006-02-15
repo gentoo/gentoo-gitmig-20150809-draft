@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.464 2006/02/06 00:16:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.465 2006/02/15 06:18:26 vericgar Exp $
+
+*apache-2.2.0 (15 Feb 2006)
+
+  15 Feb 2006; Michael Stewart <vericgar@gentoo.org> +apache-2.2.0.ebuild:
+  Add a testing build for apache-2.2. See bug 114232.
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> apache-1.3.34-r2.ebuild,
   apache-1.3.34-r11.ebuild:
