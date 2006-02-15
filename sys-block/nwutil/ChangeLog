@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/nwutil
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nwutil/ChangeLog,v 1.3 2005/08/03 05:32:01 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nwutil/ChangeLog,v 1.4 2006/02/15 04:38:44 vapier Exp $
+
+*nwutil-1.8 (15 Feb 2006)
+
+  15 Feb 2006; Mike Frysinger <vapier@gentoo.org> +nwutil-1.8.ebuild:
+  Version bump.
 
   03 Aug 2005; Mike Frysinger <vapier@gentoo.org>
   +files/nwutil-1.4-temp.patch, nwutil-1.4.ebuild:
