@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-0.9.2-r1.ebuild,v 1.1 2006/02/10 03:21:23 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-0.9.2-r1.ebuild,v 1.2 2006/02/15 16:17:04 antarus Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="zlib tcpd debug"
+IUSE="zlib tcpd debug ident"
 
 DEPEND="virtual/libc
 	zlib? ( sys-libs/zlib )
