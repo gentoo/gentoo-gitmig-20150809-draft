@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/acx100
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/ChangeLog,v 1.20 2006/02/04 23:21:18 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/ChangeLog,v 1.21 2006/02/15 21:30:41 genstef Exp $
+
+*acx100-0.3.31 (15 Feb 2006)
+
+  15 Feb 2006; Stefan Schweizer <genstef@gentoo.org> +acx100-0.3.31.ebuild:
+  Version bump, md5sum for fw.tar.bz2 was changed by upstream again
 
   04 Feb 2006; Stefan Schweizer <genstef@gentoo.org>
   files/digest-acx100-0.3.20, files/digest-acx100-0.3.23, Manifest:
