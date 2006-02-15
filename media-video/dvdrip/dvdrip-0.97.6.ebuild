@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.97.6.ebuild,v 1.3 2006/02/15 05:22:58 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.97.6.ebuild,v 1.4 2006/02/15 05:58:34 morfic Exp $
 
 
-inherit perl-module eutils
+inherit perl-module eutils flag-o-matic
 
 MY_P=${P/dvdr/Video-DVDR}
 MY_URL="dist/pre"
@@ -46,7 +46,7 @@ pkg_setup() {
 	built_with_use media-video/transcode dvdread \
 		|| die	"transcode needs dvdread support builtin." \
 				"Please re-emerge transcode with the dvdread USE flag."
-	built_with_use >=media-video/transcode-1.0.2-r1 extrafilters \
+	built_with_use media-video/transcode extrafilters \
 		&& die  "Please remerge transcode with -extrafilters in USE=, " \
 				"you have filters installed not compatible with dvdrip."
 }
@@ -54,6 +54,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	filter-flags "-ftracer"
 	epatch ${FILESDIR}/${P}-fix_nptl_workaround.patch
 	sed -i -e 's:cc :$(CC) :' src/Makefile || die "sed failed"
 }
