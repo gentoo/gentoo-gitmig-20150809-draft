@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: mysql.eselect,v 1.11 2006/02/15 01:42:13 vivo Exp $
+# $Id: mysql.eselect,v 1.12 2006/02/15 02:34:44 vivo Exp $
 
 DESCRIPTION="Manage the /usr/lib/*mysql* links"
 MAINTAINER="vivo@gentoo.org"
-SVN_DATE='$Date: 2006/02/15 01:42:13 $'
+SVN_DATE='$Date: 2006/02/15 02:34:44 $'
 VERSION=$(svn_date_to_version "${SVN_DATE}" )
 MYSQL_SYMLINK_CHECKDIR="${ROOT}/usr/bin"
 ERR_NOT_FOUND="(not-found)"
@@ -219,7 +219,8 @@ set_current_version() {
 			lastdir="${dir}"
 		fi
 		linkname="$(basename "${filename}")"
-		if ! [[ -f "${linkname}" ]] && ! [[ -d "${linkname}" ]] && [[ -f "${linkname}.gz" ]]
+		if ! [[ -f "${linkname}" ]] && ! [[ -d "${linkname}" ]] \
+		&& [[ -f "${linkname}.gz" ]]
 		then
 			linkname="${linkname}.gz"
 		fi
@@ -356,6 +357,26 @@ do_slot_remove() {
 
 	remove_current_version "$( version4bash "${version}" )"
 	mysql_lib_symlinks
+}
+
+describe_distclean() {
+	echo "Remove ANY non slotted mysql and slotted symlinks, DANGEROUS"
+}
+
+do_distclean() {
+	local bckfile="${HOME}/eselect-mysql-distclean-backup.tar.bz2"
+	local list=$( cat $ROOT/var/lib/eselect/mysql/mysql-*.filelist \
+		| sed -e 's/-[0123456789][0123456789][0123456789]//' \
+		| sort | uniq )
+	touch "${bckfile}" || die -q "cannot create \"${bckfile}\""
+	rm -f "${bckfile}"
+	pushd ${ROOT}/ &> /dev/null
+		tar -jcpf "${bckfile}" ${list} 2> /dev/null
+		for f in ${list} ; do
+			[[ "${f:0:3}" == "usr" ]] && rm -rf "${f}"
+		done
+	popd &> /dev/null
+	echo "backup created in \"${bckfile}\""
 }
 
 # vim: set ft=eselect :
