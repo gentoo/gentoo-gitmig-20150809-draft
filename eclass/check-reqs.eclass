@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.4 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.5 2006/02/15 12:51:25 ciaranm Exp $
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
 #
@@ -38,6 +38,10 @@
 #     # go!
 #     check_reqs
 # }
+#
+# Alternatively, the check_reqs_conditional function can be used to carry out
+# alternate actions (e.g. using a much slower but far less memory intensive
+# build option that gives the same end result).
 #
 # You should *not* override the user's CHECKREQS_ACTION setting, nor should you
 # attempt to provide a value if it is unset. Note that the environment variables
@@ -82,6 +86,23 @@ check_reqs() {
 		eerror "Bailing out as specified by CHECKREQS_ACTION"
 		die "Build requirements not met"
 	fi
+}
+
+check_reqs_conditional() {
+	[ -n "$1" ] && die "Usage: check_reqs"
+
+	export CHECKREQS_NEED_SLEEP="" CHECKREQS_NEED_DIE=""
+	if [ "$CHECKREQS_ACTION" != "ignore" ] ; then
+		[ -n "$CHECKREQS_MEMORY" ] && check_build_memory
+		[ -n "$CHECKREQS_DISK_BUILD" ] && check_build_disk \
+			"${PORTAGE_TMPDIR}" "\${PORTAGE_TMPDIR}" "${CHECKREQS_DISK_BUILD}"
+		[ -n "$CHECKREQS_DISK_USR" ] && check_build_disk \
+			"${ROOT}/usr"  "\${ROOT}/usr" "${CHECKREQS_DISK_USR}"
+		[ -n "$CHECKREQS_DISK_VAR" ] && check_build_disk \
+			"${ROOT}/var"  "\${ROOT}/var" "${CHECKREQS_DISK_VAR}"
+	fi
+
+	[ -z "${CHECKREQS_NEED_SLEEP}" ] && [ -z "${CHECKREQS_NEED_DIE}" ]
 }
 
 # internal use only!
