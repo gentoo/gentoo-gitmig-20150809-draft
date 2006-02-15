@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.6.ebuild,v 1.2 2006/02/14 15:34:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.6.ebuild,v 1.3 2006/02/15 08:53:57 corsair Exp $
 
 inherit eutils libtool
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 sparc ~x86"
 IUSE="ssl ipv6 doc dlz postgres berkdb bind-mysql mysql odbc ldap selinux idn threads"
 
 DEPEND="sys-apps/groff
