@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4d0e47ad35a6d431f9db48636bbc33a6 ChangeLog 1421
+MD5 4086dc7d271b30f8fadd6af6f94eb558 ChangeLog 1535
+RMD160 d6d0fdfa7e432e2996de93b8737c71073af206d0 ChangeLog 1535
+SHA256 0944a8fb763e133984a54f5b8aadfd748d295c783cfba3d070d2e28ac1d3f647 ChangeLog 1535
 MD5 36fafeafa71dc2dfd15c10be5f698314 files/digest-fragroute-1.2 64
-MD5 3f0b7ec812345a339bc3560178ce7f5b fragroute-1.2.ebuild 804
+RMD160 90f58029a2d2f6beba417c11fb6d04997042b48e files/digest-fragroute-1.2 64
+SHA256 e35c8c75afc037a3251cf6a55af3a9bef74908b91362670c1c98bf28172ab391 files/digest-fragroute-1.2 64
+MD5 ee0d966a3a90e048da9f7b220438209e fragroute-1.2.ebuild 804
+RMD160 829f411e695d4899cb1360c8340e0b3cecec1329 fragroute-1.2.ebuild 804
+SHA256 1b85aa0bdb50e6dcb1a0e74b33ed66d880a09630cbdfcbd4a9144319d1d5fd9b fragroute-1.2.ebuild 804
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwpePugEuf3OQ0akRApu8AJ9nRrd4YvtCW2ebcY662p7k8dntpACfRc6q
-5z585VX2QvYgFTJyGluBfos=
-=C66n
------END PGP SIGNATURE-----
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
