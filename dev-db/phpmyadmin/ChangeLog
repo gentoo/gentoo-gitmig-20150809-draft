@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/phpmyadmin
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.159 2005/12/29 15:14:00 rl03 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.160 2006/02/15 22:26:19 rl03 Exp $
+
+*phpmyadmin-2.8.0_beta1 (15 Feb 2006)
+
+  15 Feb 2006; Renat Lumpau <rl03@gentoo.org> +files/reconfig-2.8,
+  +files/config.default.php-2.8.0.patch, +files/postinstall-en-2.8.0.txt,
+  phpmyadmin-2.7.0_p1.ebuild, phpmyadmin-2.7.0_p2.ebuild,
+  +phpmyadmin-2.8.0_beta1.ebuild:
+  Fixed bug #121815. Dropped ~mips, please see bug #122963.
 
 *phpmyadmin-2.7.0_p2 (29 Dec 2005)
 

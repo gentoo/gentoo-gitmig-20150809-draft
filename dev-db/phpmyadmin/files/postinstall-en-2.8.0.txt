@@ -1,0 +1,16 @@
+0. Update MySQL's grant tables and the pmadb database:
+     mysql -u root -p < /usr/share/webapps/phpmyadmin/${PVR}/sqlscripts/mysql/${PVR}_create.sql
+
+1. Create the file config.inc.php. You can use the web-based installer:
+   http://${VHOST_HOSTNAME}${VHOST_APPDIR}/scripts/setup.php
+   Alternatively, use the default config file in libraries/config.default.php
+
+2. Be sure that the libraries/ directory is not visible. You can use the
+provided .htaccess file.
+
+===============
+
+If you are upgrading from an earlier version and are using phpMyAdmin's
+features for master/foreign tables be sure to read
+  http://${VHOST_HOSTNAME}${VHOST_APPDIR}/Documentation.html#col_com
+You will need to perform the ALTER TABLE step yourself.

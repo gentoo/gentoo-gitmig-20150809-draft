@@ -1,20 +1,55 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2d66feff5e4e7e15a6b2cd41f25ce941 ChangeLog 22145
+MD5 d30a306cfdff05205344ff07df688c6e ChangeLog 22478
+RMD160 f59f88970d0e33892f7008aaa5c8d2eeec750392 ChangeLog 22478
+SHA256 7038247648b6e4698309ccb041c68bf29580a3f520f878cb87737c584c150cfe ChangeLog 22478
 MD5 ab6e8b5ecc163d415aebb7d2c42238a3 files/config.default.php-2.7.0.patch 5533
-MD5 df2cdcb5a7b42d061bc4603ee5b7d1d3 files/digest-phpmyadmin-2.7.0_p1 74
-MD5 f14c984a7a7ef42ca61491639f07f40a files/digest-phpmyadmin-2.7.0_p2 74
+RMD160 4b043b198dc517846e5282d0574c9a05eb6906a3 files/config.default.php-2.7.0.patch 5533
+SHA256 5956d96dd9ba02107a46302703df458cf45a495ff175d5e64b0154d9e815b7a3 files/config.default.php-2.7.0.patch 5533
+MD5 9dc203a856638d41f9992d0e54f8c8f8 files/config.default.php-2.8.0.patch 5553
+RMD160 60869c33523751098a98a067fee3482c2c26795a files/config.default.php-2.8.0.patch 5553
+SHA256 78ab8d8910101accd03f8820210feb49a997571e66156d86255dc8fafebf16ce files/config.default.php-2.8.0.patch 5553
+MD5 1d85eb9be97d60027aaf8510dfa9f6d5 files/digest-phpmyadmin-2.7.0_p1 268
+RMD160 46a38163b7c59314e872794f64aa6e2f9aff061c files/digest-phpmyadmin-2.7.0_p1 268
+SHA256 fcb7855b1d5625530e11d71b2594ef631850ab163312d19fc98f55da39d1ba68 files/digest-phpmyadmin-2.7.0_p1 268
+MD5 3b6a4be3903f9737aaeed4cb2d1cd441 files/digest-phpmyadmin-2.7.0_p2 268
+RMD160 1240eee2470b5146d93d24ddd116c31b6ea87f04 files/digest-phpmyadmin-2.7.0_p2 268
+SHA256 f6ac671a9db61a92e56b5f543d1f59958f4beb8fb911137e8a1d0b6c9e774e28 files/digest-phpmyadmin-2.7.0_p2 268
+MD5 2e98de730709b9d0ba0bd41aae5b08a2 files/digest-phpmyadmin-2.8.0_beta1 274
+RMD160 b39227d755ca66a3bb74b329f1153949f809d26f files/digest-phpmyadmin-2.8.0_beta1 274
+SHA256 4e71b12a2d3c04c13ac654b00f16cf243e380862b908ee3b31c33b4edac7e754 files/digest-phpmyadmin-2.8.0_beta1 274
 MD5 1a6c1907f5c2327b00453d7675c13178 files/mysql-setup.sql.in-2.5.6 3231
+RMD160 7b462640601d77d01c8f11322cb2cb84ce8e79a6 files/mysql-setup.sql.in-2.5.6 3231
+SHA256 482ada180bcaf41fa4dc103edae4a78a55f3ced1fb2becc12124b914db1dcbfe files/mysql-setup.sql.in-2.5.6 3231
+MD5 7cb4e3d6a35ebf8041ea3d2abaac8c28 files/postinstall-en-2.8.0.txt 728
+RMD160 3b8143e570d157259b6b84d0edc968b1f6431880 files/postinstall-en-2.8.0.txt 728
+SHA256 153fa7b02cc6f8d33c4568484e2e6814dd82202de4037b67a85648fcc9dc8755 files/postinstall-en-2.8.0.txt 728
 MD5 465c40880998c64b5cbe5fd686b62240 files/postinstall-en.txt 591
+RMD160 77ef47191d81687c67ca05b142a217643bd27964 files/postinstall-en.txt 591
+SHA256 8f17a152a9d8d0472edc3238c7e27c472cb261c367eb86619869a8e9a2a175e7 files/postinstall-en.txt 591
 MD5 03e1c16e02d105f6fcfb56c1bf734f6e files/reconfig-2.7 319
+RMD160 c865d236bf1af7846ae4a572df35385d09985f50 files/reconfig-2.7 319
+SHA256 4f1d68f5107184bd3c3947fe4f27d25f11d0da816c143d313ec20e80b75bc2b1 files/reconfig-2.7 319
+MD5 cf0af0543cb29eb88163220df6f14669 files/reconfig-2.8 329
+RMD160 993162aa564ab7d37c7f32db439518c5cab9ace5 files/reconfig-2.8 329
+SHA256 526f7efb31adde131ffaff0271ea12693315c2d4e8a1f96ae4af6947815d6612 files/reconfig-2.8 329
 MD5 7b6e6cf3eaafa0480ab619fadfb37e2e metadata.xml 162
-MD5 0d9048898d33b93e3bba78e7384fd385 phpmyadmin-2.7.0_p1.ebuild 2057
-MD5 3abb011b1886ca0f5de0fffc602611f5 phpmyadmin-2.7.0_p2.ebuild 2059
+RMD160 0b015f5ff17c4d8e7aee826d48b326cc19b1fed4 metadata.xml 162
+SHA256 84ff2fc6c9a4af1b9dbe32aa81ab84c2958bc1bd65a9977686df2dcab6e420d0 metadata.xml 162
+MD5 ed2bb53f46dfc48ddbc758d5dc07fdc6 phpmyadmin-2.7.0_p1.ebuild 2097
+RMD160 8e2e90f93ffcafadc9967b21926e0485f824b320 phpmyadmin-2.7.0_p1.ebuild 2097
+SHA256 41ba3ada95fcc36ca59ced583668d2189bd7c4b7ef0b8a52e3626a24687657de phpmyadmin-2.7.0_p1.ebuild 2097
+MD5 a24be197d7a2a4d85249218fda511daf phpmyadmin-2.7.0_p2.ebuild 2103
+RMD160 bfb3d4fb85fdd3733f5f32504bf2b36d8f713f2b phpmyadmin-2.7.0_p2.ebuild 2103
+SHA256 a5229fde41f51b5c0c820fc603b5123f8bd2e049d403e0f2f2d71822426d0a01 phpmyadmin-2.7.0_p2.ebuild 2103
+MD5 1f5563707a05ffa698185f53035d1f33 phpmyadmin-2.8.0_beta1.ebuild 2139
+RMD160 d0ce21e42cd8ecd51f3af38bc88652d3d2326a4d phpmyadmin-2.8.0_beta1.ebuild 2139
+SHA256 df403b86b725b708274857f33f7d4beb05b8aff86bc436e68a8fd6cae8891e8e phpmyadmin-2.8.0_beta1.ebuild 2139
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDs/1EEzitwsaoONoRAnwPAJ0bvlA+GsQVtAfqQX1UJ1nuBd0dyACcCR21
-XCdEWHvKk6MineEoGetZ638=
-=JTl0
+iD8DBQFD86qaEzitwsaoONoRAgnpAJsGG9D//mOd0cRd7X3YIuSQSY6SngCeJ8ij
+97yHbUtKwYfcMtrE8pVP7bY=
+=O75z
 -----END PGP SIGNATURE-----
