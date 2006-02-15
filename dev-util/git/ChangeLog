@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.70 2006/02/13 15:00:48 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.71 2006/02/15 09:15:48 ferdy Exp $
+
+  15 Feb 2006; Fernando J. Pereda <ferdy@gentoo.org> -git-0.99.8a.ebuild,
+  -git-0.99.9n.ebuild, -git-1.0.6.ebuild, git-1.1.6.ebuild:
+  git-1.1.6 stable on alpha. Remove ancienct ~arch versions
 
   13 Feb 2006; Stuart Longland <redhatter@gentoo.org> git-1.1.6.ebuild:
   Added ~mips to git-1.1.6 as per bug #108215.
