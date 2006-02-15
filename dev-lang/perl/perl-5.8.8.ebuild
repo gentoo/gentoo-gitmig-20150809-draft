@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8.ebuild,v 1.5 2006/02/13 20:09:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8.ebuild,v 1.6 2006/02/15 21:56:48 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -34,32 +34,6 @@ RDEPEND="~sys-devel/libperl-${PV}
 	gdbm? ( >=sys-libs/gdbm-1.8.3 )"
 
 PDEPEND="app-admin/perl-cleaner"
-
-PROVIDE="virtual/perl-CGI
-		virtual/perl-DB_File
-		virtual/perl-digest-base
-		virtual/perl-Digest-MD5
-		virtual/perl-ExtUtils-MakeMaker
-		virtual/perl-File-Spec
-		virtual/perl-File-Temp
-		virtual/perl-Getopt-Long
-		virtual/perl-MIME-Base64
-		virtual/perl-Math-BigInt
-		virtual/perl-Memoize
-		virtual/perl-PodParser
-		virtual/perl-Safe
-		virtual/perl-Scalar-List-Utils
-		virtual/perl-Storable
-		virtual/perl-Sys-Syslog
-		virtual/perl-Test
-		virtual/perl-Test-Harness
-		virtual/perl-Test-Simple
-		virtual/perl-Text-Balanced
-		virtual/perl-Time-HiRes
-		virtual/perl-Time-Local
-		virtual/perl-libnet
-		virtual/perl-locale-maketext
-		virtual/perl-net-ping"
 
 pkg_setup() {
 	# I think this should rather be displayed if you *have* 'ithreads'
