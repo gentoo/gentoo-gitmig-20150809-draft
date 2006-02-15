@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.23 2006/02/02 07:09:40 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.24 2006/02/15 12:12:05 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -74,7 +74,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	curl? ( >=net-misc/curl-7.9.8 )
-	zlib? ( sys-libs/zlib )
+	sys-libs/zlib
 	sys-libs/pam
 	!dev-util/dmake
 	>=dev-lang/python-2.3.4
