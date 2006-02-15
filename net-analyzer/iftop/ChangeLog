@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.25 2006/01/06 17:48:32 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.26 2006/02/15 23:03:37 jokey Exp $
+
+  15 Feb 2006; Markus Ullmann <jokey@gentoo.org> iftop-0.16.ebuild,
+  iftop-0.16-r1.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
 *iftop-0.16-r1 (06 Jan 2006)
 

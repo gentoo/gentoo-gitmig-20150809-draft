@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.6.6.ebuild,v 1.4 2005/10/09 11:43:33 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.6.6.ebuild,v 1.5 2006/02/15 23:06:54 jokey Exp $
 
 DESCRIPTION="IP Cisco Accounting Daemon"
 HOMEPAGE="http://ipcad.sourceforge.net/"
@@ -10,10 +10,9 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-DEPEND=">=sys-apps/sed-4
-	virtual/libpcap"
+DEPEND=">=sys-apps/sed-4"
 
-RDEPEND="virtual/libpcap
+RDEPEND="net-libs/libpcap
 	net-firewall/iptables"
 
 src_compile() {

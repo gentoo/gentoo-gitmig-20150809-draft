@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/honeyd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.21 2005/12/26 01:00:58 weeve Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.22 2006/02/15 22:59:06 jokey Exp $
+
+  15 Feb 2006; Markus Ullmann <jokey@gentoo.org> honeyd-0.8.ebuild,
+  honeyd-1.0.ebuild, honeyd-1.0-r1.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   26 Dec 2005; Jason Wever <weeve@gentoo.org> honeyd-1.0-r1.ebuild:
   Stable on SPARC.

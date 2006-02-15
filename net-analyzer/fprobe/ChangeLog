@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fprobe
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fprobe/ChangeLog,v 1.9 2005/08/29 20:50:42 dang Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fprobe/ChangeLog,v 1.10 2006/02/15 22:54:53 jokey Exp $
+
+  15 Feb 2006; Markus Ullmann <jokey@gentoo.org> fprobe-1.1.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   29 Aug 2005; <dang@gentoo.org> fprobe-1.1.ebuild:
   Marked ~amd64

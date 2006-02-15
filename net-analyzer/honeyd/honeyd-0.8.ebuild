@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-0.8.ebuild,v 1.9 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-0.8.ebuild,v 1.10 2006/02/15 22:59:06 jokey Exp $
 
 DESCRIPTION="Honeyd is a small daemon that creates virtual hosts on a network"
 HOMEPAGE="http://www.citi.umich.edu/u/provos/honeyd/"
@@ -14,7 +14,7 @@ IUSE="doc"
 
 DEPEND=">=dev-libs/libdnet-1.7
 	>=dev-libs/libevent-0.6
-	virtual/libpcap"
+	net-libs/libpcap"
 
 src_unpack() {
 	unpack ${A}

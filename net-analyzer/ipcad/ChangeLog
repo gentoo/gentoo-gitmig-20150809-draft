@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ipcad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.17 2006/01/15 18:34:36 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.18 2006/02/15 23:06:54 jokey Exp $
+
+  15 Feb 2006; Markus Ullmann <jokey@gentoo.org> ipcad-3.6.6.ebuild,
+  ipcad-3.7.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   15 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> files/ipcad.conf.d:
   Same for conf.d.
