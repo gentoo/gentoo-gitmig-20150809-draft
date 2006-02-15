@@ -1,52 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3e29942d7d7585ed9d9964658f01a44e ChangeLog 3314
-RMD160 ac3005ca80d352c3c7657a95aa6e64b2eaaf8187 ChangeLog 3314
-SHA256 c9030ad7b758fb67138f8b8e61d5187c817c2786944828ebdcad4bc0eba47a41 ChangeLog 3314
+MD5 d7b247350da2a78e6ca42c2ff1e4e5e1 ChangeLog 3424
 MD5 e99dbe919e2a9ca39164133ba74ede78 cryptsetup-0.1-r1.ebuild 1738
-RMD160 def712fe515b4415cb7166e90ffb49a5c4d8e865 cryptsetup-0.1-r1.ebuild 1738
-SHA256 7c89c07d82b3f2d83248268a0d4c966340a1ba12cfeb8941667a523c5ff90936 cryptsetup-0.1-r1.ebuild 1738
-MD5 fa5dcfd8267d1973fc1475be0795a377 cryptsetup-0.1-r2.ebuild 1761
-RMD160 d6fc3a454b5c18ea539c48367da9d93f4fc108fa cryptsetup-0.1-r2.ebuild 1761
-SHA256 151ad0219866bfb372e3379f47063fff9d1b485ee06917bcdcc88252f193807b cryptsetup-0.1-r2.ebuild 1761
+MD5 6edf93485f050ffda322ffc27f2b890d cryptsetup-0.1-r2.ebuild 1759
 MD5 138babe3279a69f5632b56217dd7094b cryptsetup-0.1-r3.ebuild 1856
-RMD160 abe43f5fd25d6cfcb437ecd05a5082f7dc3b142f cryptsetup-0.1-r3.ebuild 1856
-SHA256 2f1127b3e44f2f1afd7a0ce983e4d5c130bfd8895c8cbbc57ce50141e76c26bf cryptsetup-0.1-r3.ebuild 1856
 MD5 c98ef83e41e7833603d5fd0d3c073fdc cryptsetup-0.1.ebuild 1119
-RMD160 c518b48127dfb48dd22a865df68438aec186e344 cryptsetup-0.1.ebuild 1119
-SHA256 879aa89def5f3074145e5db5234c7008d0ae436d391e4b8d3b6e71e7dd5bd745 cryptsetup-0.1.ebuild 1119
 MD5 327d83538ed5305bdc3568cd353410bb files/cryptfs.confd 1337
-RMD160 f98acce860d95d69e8e95d9bab32ba5bb5bef421 files/cryptfs.confd 1337
-SHA256 8c8e815297eb20140ae7d4d555d3bfdd373ad368adf179841516430da370505c files/cryptfs.confd 1337
 MD5 344f5d9cc2f186abc2eef8f396a8fcd5 files/cryptsetup-libmapper.patch 297
-RMD160 1f5a19f125147797db69f4fb75d6abe36743d52b files/cryptsetup-libmapper.patch 297
-SHA256 c66c178fe949ceccd82d64f5acc8288e0486014dcfbc4fc6f4a0bf6c62bf4cc8 files/cryptsetup-libmapper.patch 297
 MD5 959c303c3bfeab6c12e28ae4e16400b3 files/digest-cryptsetup-0.1 67
-RMD160 3b10f1b9ce6847e0cae5fa2b7d214c7ccea1b759 files/digest-cryptsetup-0.1 67
-SHA256 64076b67ddf9588bb8d57065f074eaa0928aa93a2a8b059d2bf3169f6d1638c0 files/digest-cryptsetup-0.1 67
 MD5 959c303c3bfeab6c12e28ae4e16400b3 files/digest-cryptsetup-0.1-r1 67
-RMD160 3b10f1b9ce6847e0cae5fa2b7d214c7ccea1b759 files/digest-cryptsetup-0.1-r1 67
-SHA256 64076b67ddf9588bb8d57065f074eaa0928aa93a2a8b059d2bf3169f6d1638c0 files/digest-cryptsetup-0.1-r1 67
 MD5 1a1214cefd0e0d7b0e5b3552e68f4874 files/digest-cryptsetup-0.1-r2 247
-RMD160 f97d4fb11ce03423ad4a69e6f5e566248e344f23 files/digest-cryptsetup-0.1-r2 247
-SHA256 e446eacb5c054e5a84f6f97b575988ea04488bc563b079eb7f2c216e562ee038 files/digest-cryptsetup-0.1-r2 247
 MD5 1a1214cefd0e0d7b0e5b3552e68f4874 files/digest-cryptsetup-0.1-r3 247
-RMD160 f97d4fb11ce03423ad4a69e6f5e566248e344f23 files/digest-cryptsetup-0.1-r3 247
-SHA256 e446eacb5c054e5a84f6f97b575988ea04488bc563b079eb7f2c216e562ee038 files/digest-cryptsetup-0.1-r3 247
 MD5 3232a190894a35b7d2f3610f2eb652dc files/dm-crypt-start.sh 3937
-RMD160 61add125c740ce83710142a77ee10ba3f88c92f8 files/dm-crypt-start.sh 3937
-SHA256 a47397bdfdfe20804fd684b42d806e349b2e86cfcbc3d69093d17294e9cc32c4 files/dm-crypt-start.sh 3937
 MD5 8619b3f74d4d362bab9f430b63243a74 files/dm-crypt-stop.sh 1290
-RMD160 ccd5c5f25b01a6c80228609c97d4e25136098ff6 files/dm-crypt-stop.sh 1290
-SHA256 944e2227b1125902acfa322373dda67d13998ac2d0af075810986471fcbca5a9 files/dm-crypt-stop.sh 1290
 MD5 cd57823a7232b359b6a8674cde9fadde metadata.xml 290
-RMD160 ae946fba0cede1d9ed84ab44513289d771848779 metadata.xml 290
-SHA256 f91bc6f8ed02a4423cd94cf59ab800e44b6bbdd05407e1ef54601b6dd46f6476 metadata.xml 290
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD67nyV3J2n04EauwRAsXnAJ99w35q3BwZW+WByrKAs7RKoxePvgCgpsmK
-Z/exN3D9ORa7DTo2awENlHc=
-=jjZO
------END PGP SIGNATURE-----
