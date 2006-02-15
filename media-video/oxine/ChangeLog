@@ -1,6 +1,10 @@
 # ChangeLog for media-video/oxine
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.10 2005/09/10 14:07:23 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.11 2006/02/15 16:05:42 flameeyes Exp $
+
+  15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> oxine-0.1.ebuild,
+  oxine-0.2.ebuild:
+  Fix dependencies.
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> oxine-0.1.ebuild,
   oxine-0.2.ebuild:

@@ -1,15 +1,18 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.1.ebuild,v 1.7 2005/09/10 14:07:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.1.ebuild,v 1.8 2006/02/15 16:05:42 flameeyes Exp $
 
 DESCRIPTION="OSD frontend for xine"
 HOMEPAGE="http://oxine.sourceforge.net/"
 LICENSE="GPL-2"
 
-DEPEND=">=media-libs/xine-lib-1_beta8
+RDEPEND=">=media-libs/xine-lib-1_beta8
 	lirc? ( app-misc/lirc )
-	nls? ( sys-devel/gettext )
+	nls? ( virtual/libintl )
 	virtual/x11"
+
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 IUSE="nls lirc"
 

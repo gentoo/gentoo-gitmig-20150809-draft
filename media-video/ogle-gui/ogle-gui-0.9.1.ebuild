@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.1.ebuild,v 1.12 2005/11/07 10:10:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.1.ebuild,v 1.13 2006/02/15 16:01:13 flameeyes Exp $
 
 IUSE="nls"
 
@@ -15,13 +15,14 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~sparc ~alpha ~hppa amd64 ~ia64"
 
-DEPEND=">=media-video/ogle-${PV}
+RDEPEND=">=media-video/ogle-${PV}
 	=x11-libs/gtk+-1.2*
 	dev-libs/libxml2
-	sys-devel/bison
 	=gnome-base/libglade-0*"
 
-RDEPEND="nls? ( sys-devel/gettext )"
+DEPEND="${RDEPEND}
+	sys-devel/bison
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 
