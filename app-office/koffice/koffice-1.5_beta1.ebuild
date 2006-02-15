@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5_beta1.ebuild,v 1.1 2006/02/09 03:12:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5_beta1.ebuild,v 1.2 2006/02/15 12:00:42 flameeyes Exp $
 
 inherit kde
 
@@ -30,7 +30,7 @@ RDEPEND=">=media-gfx/imagemagick-5.5.2
 	postgres? ( dev-libs/libpqxx )
 	virtual/python
 	dev-lang/ruby
-	>=media-libs/lcms-1.12
+	>=media-libs/lcms-1.14-r1
 	>=app-text/libwpd-0.8.2
 	opengl? ( virtual/opengl virtual/glu )"
 
