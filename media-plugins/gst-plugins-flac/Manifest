@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e19ecdc3827bc5dfbdbbbda34e0bf2e4 ChangeLog 6535
 RMD160 2d1ce542e12e673400a42f0afa910ac0605ad800 ChangeLog 6535
 SHA256 6d8c4ffff81666dda297a3311f09c0136d8b5a35b542759142ece4971f7e2503 ChangeLog 6535
@@ -10,6 +7,9 @@ SHA256 ebfe7a7cf0ee2f608f7037959107ec0ff92bbdf85c16ac3bf2562efb8ea4f3bf files/di
 MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-flac-0.10.1 76
 RMD160 97d21777d5f71055e3c8195f020410e701de998a files/digest-gst-plugins-flac-0.10.1 76
 SHA256 ea5ad800ee837feabe74ff1d5fac6d75b364dbd5e8713b3fbe0ce741318ed99a files/digest-gst-plugins-flac-0.10.1 76
+MD5 fe9a62d6f739f7cfd223099d201d8834 files/digest-gst-plugins-flac-0.10.2 274
+RMD160 22c35dad51ee8ae394e206b6a6a92eb0342f54ee files/digest-gst-plugins-flac-0.10.2 274
+SHA256 9b259ce24ad9f7b760050d3916bb8f2e376b3118bbc5b6b55c61eda4a7c54fac files/digest-gst-plugins-flac-0.10.2 274
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-flac-0.8.10 72
 RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-flac-0.8.10 72
 SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-flac-0.8.10 72
@@ -28,6 +28,9 @@ SHA256 68f81551d520a37a1590417642619db2d16d517e326313997c898e6d7743525c gst-plug
 MD5 ceac08079ca541018b1c549456402a94 gst-plugins-flac-0.10.1.ebuild 337
 RMD160 855078101d3c74dcfecd8378719771c34aca2ddc gst-plugins-flac-0.10.1.ebuild 337
 SHA256 a7493e89c5fa2f3d32cdd43cdebad8e0a423fc4e455fe1c9aacb940126e86ef3 gst-plugins-flac-0.10.1.ebuild 337
+MD5 ceac08079ca541018b1c549456402a94 gst-plugins-flac-0.10.2.ebuild 337
+RMD160 855078101d3c74dcfecd8378719771c34aca2ddc gst-plugins-flac-0.10.2.ebuild 337
+SHA256 a7493e89c5fa2f3d32cdd43cdebad8e0a423fc4e455fe1c9aacb940126e86ef3 gst-plugins-flac-0.10.2.ebuild 337
 MD5 f7c9bb8f865389eec82fb50693062ffe gst-plugins-flac-0.8.10.ebuild 371
 RMD160 801b21c65f85c5bb61bf54ae2df8643f5b47eb45 gst-plugins-flac-0.8.10.ebuild 371
 SHA256 dd8961929a86b34499b3e76d5e2dd1bb9c8dd316606552103db370169206f56c gst-plugins-flac-0.8.10.ebuild 371
@@ -43,10 +46,3 @@ SHA256 e9e519b69cd056af59a347a2f495a4543138ef9b320ffdced89729f2fb54e0a5 gst-plug
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD62AtJrHF4yAQTrARAjphAJ931NAsN1GRJuF7CrVzwBBfAIo+dwCgzybo
-V0siMEpyG8HHvhgpj1K1SXo=
-=fKW4
------END PGP SIGNATURE-----
