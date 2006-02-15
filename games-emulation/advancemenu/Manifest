@@ -1,5 +1,25 @@
-MD5 f331c0278b6211b8f45e71e77862b9ef ChangeLog 3311
-MD5 de21b1b449e127b3c8b856b8120d241d advancemenu-2.4.12.ebuild 2515
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 10e807652388acca6307802b7114210c ChangeLog 3412
+RMD160 6afedd445771fd609cba676232cc0ce8a4891358 ChangeLog 3412
+SHA256 8af8f93437ef20994cd8efb13597a996ee2261040a32b363132e52d60590fffa ChangeLog 3412
+MD5 be792fb19e86354d380cfbcad9b383c9 advancemenu-2.4.12.ebuild 2521
+RMD160 8092944ba4d4c24fb73c922b2a3e46fe1b9ba5e7 advancemenu-2.4.12.ebuild 2521
+SHA256 ea58839cf78b30d4d2c04b2c8997c7c85863bd2eed043073e3514c4ba407cbf4 advancemenu-2.4.12.ebuild 2521
 MD5 fceeb76637a021f26b3d0ddefd9f12d3 files/advancemenu-2.4.12-alsa-pkg-config.patch 1041
+RMD160 75a4e82e2fb720c4192c260f61d134a86c8f8d35 files/advancemenu-2.4.12-alsa-pkg-config.patch 1041
+SHA256 e68f94e5d94337bb01168e043778c862cefa99fd0361ee5b36c81af9dc8a2e33 files/advancemenu-2.4.12-alsa-pkg-config.patch 1041
 MD5 aa8ee1a6c28266f5a7dc179470734abc files/digest-advancemenu-2.4.12 71
+RMD160 b25b982e7f4073db9162588415676d98bb86bc2e files/digest-advancemenu-2.4.12 71
+SHA256 58c855e25d89a2a9f51a840596be46f5d61f6f133c82e6a22c30ed11ad8598f0 files/digest-advancemenu-2.4.12 71
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD8nLQwUpWvClEHQoRAt5pAJ4wzKeA+yKQbzUAOsw/wtQC1UB6qQCghi8m
+6gD4kfhO9XXHCi+76CXI5SQ=
+=eIcy
+-----END PGP SIGNATURE-----
