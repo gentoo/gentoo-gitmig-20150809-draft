@@ -34,9 +34,9 @@ SHA256 22fe216d58d850934d647270dec89fe999bf2d75a47f69845c0773595b3a534e files/di
 MD5 f73f2bd58b9d8ace7a6f431e8587c909 files/digest-dspam-web-3.6.3 129
 RMD160 10d6cbe604729a619fdea9fe27714d117d593342 files/digest-dspam-web-3.6.3 129
 SHA256 51b4104316124d35d8e81d99b681b13e2a15c41f650e50dec6bf8b6d461be3a2 files/digest-dspam-web-3.6.3 129
-MD5 05946cf8fedd62fdf054d5abc2374f75 files/digest-dspam-web-3.6.4 479
-RMD160 6de5fa0dcf705c1ac19dc8423adf9e011d8bd4dd files/digest-dspam-web-3.6.4 479
-SHA256 8ef5a56d692d54d6de1b379475c19471bce4b926003d9987b9e38be64b383b80 files/digest-dspam-web-3.6.4 479
+MD5 7581683a18b328f3fa07b2904787e0bd files/digest-dspam-web-3.6.4 479
+RMD160 9ef62154897f5cdcd28c2ab1f04ccad9f19b8967 files/digest-dspam-web-3.6.4 479
+SHA256 af3f77afae9380d52f6f7910135aad0fda7b9c080b6ce9f88919abee9247d421 files/digest-dspam-web-3.6.4 479
 MD5 ffdfc8d816078f4c58b75b9bed07503f files/htaccess 135
 RMD160 4f79db8e1bdf56ef86b922d2a87a7c2a1ba78d71 files/htaccess 135
 SHA256 e0c0da58eea5ef6af65cc03c22eaa47ad4f6584cec0f6430817f836d60457c3b files/htaccess 135
