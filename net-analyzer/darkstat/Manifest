@@ -1,19 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5f39bc546d0fdd6325184b7a381b48e2 ChangeLog 1771
-MD5 d3c0749eaaaa6f061a602863a6275870 darkstat-2.6-r1.ebuild 1077
-MD5 098a7a9831abba744b14b28f72e6e010 darkstat-2.6.ebuild 1011
+MD5 d23988d30db4a9e2344cca2251645306 ChangeLog 1910
+RMD160 e4ad913888413aa7a4a0de9d2a01f3b5f3a4ba60 ChangeLog 1910
+SHA256 b2cd99cfc0848e1e038673e7ffa5fbd10f193b864ae3d1c8ae5c24da23c4f70c ChangeLog 1910
+MD5 5cf3f469f8c873e73d42e03b5e8afcf8 darkstat-2.6-r1.ebuild 1078
+RMD160 ebb5066704d8e791559083f4b8b8072173e22eb7 darkstat-2.6-r1.ebuild 1078
+SHA256 5f06333a36295d878a4ca2b4013338a47d4f9c36def37aa1b290244771418886 darkstat-2.6-r1.ebuild 1078
+MD5 1f1709a80d30952358039ada1cdbf3e1 darkstat-2.6.ebuild 1006
+RMD160 588c7815daae557505c8870a74dcf09e46c452cb darkstat-2.6.ebuild 1006
+SHA256 bb0cb27dfaf12e9a6d2ff2732eda9e1569bd7fbebb4dcef1f4b9823e1dbc7110 darkstat-2.6.ebuild 1006
 MD5 44483f0b13561a54b68949145198339f files/darkstat-confd 214
+RMD160 7543c6565c89f17972efbcef311463192666ad2f files/darkstat-confd 214
+SHA256 b01ec832d444fcebce95f907661527064846563c3fd268a1366652b6e3c2ecf1 files/darkstat-confd 214
 MD5 4f9e9fe82455fe072de4dda411802936 files/darkstat-init 568
+RMD160 0a5359094e5ab52a10339bed98e21d2030299f79 files/darkstat-init 568
+SHA256 d363726dfe220904fb5fdca1b99e4546b2ef9be1691f4f125a8254b99c502e8b files/darkstat-init 568
 MD5 65647b954a76c7c35eef2f47dfdb5355 files/digest-darkstat-2.6 64
+RMD160 98734ff617ee0774a5c635cb98e5386af459de1c files/digest-darkstat-2.6 64
+SHA256 2d096fb76a51d0944540155fd51ffc8d8cd68cc194fda319022a8220bef5a90c files/digest-darkstat-2.6 64
 MD5 65647b954a76c7c35eef2f47dfdb5355 files/digest-darkstat-2.6-r1 64
+RMD160 98734ff617ee0774a5c635cb98e5386af459de1c files/digest-darkstat-2.6-r1 64
+SHA256 2d096fb76a51d0944540155fd51ffc8d8cd68cc194fda319022a8220bef5a90c files/digest-darkstat-2.6-r1 64
 MD5 178efb20612f2c23ec93b9f9a3ddb69c files/ipcheck.patch 3003
+RMD160 93595ad98ce2b7851ae81fd445436bc62533c06c files/ipcheck.patch 3003
+SHA256 74a4075cfda0598100947ffcfe27305b9ee2f52eb46070576f9152fe41e207b4 files/ipcheck.patch 3003
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFDwpdAugEuf3OQ0akRAvIfAJdpdYDIwmlMp+gzDdS2mGZ+Xj59AKCkhbOo
-utKm8sa6On0r0dI2aqeXKQ==
-=ZGPA
------END PGP SIGNATURE-----
+RMD160 28e799fe0fd02aaab9d4bbe5595f133101606f5b metadata.xml 159
+SHA256 b75c711bd971e46f0ec957e833c60879b0c5023e0bb94409a6255781b69f6dc6 metadata.xml 159
