@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/files/lm_sensors-2.10.0-fancontrol-init.d,v 1.1 2006/02/15 18:40:21 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/files/lm_sensors-2.10.0-fancontrol-init.d,v 1.2 2006/02/15 20:30:52 brix Exp $
 
 CONFIG=/etc/fancontrol
 PID=/var/run/fancontrol.pid
@@ -21,7 +21,7 @@ start() {
 	checkconfig || return 1
 
 	ebegin "Starting fancontrol"
-	start-stop-daemon --start --quiet --background --pid-file ${PID} \
+	start-stop-daemon --start --quiet --background --pidfile ${PID} \
 		--exec /usr/sbin/fancontrol -- ${CONFIG}
 	eend ${?}
 }
