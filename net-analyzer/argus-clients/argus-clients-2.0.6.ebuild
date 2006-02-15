@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-2.0.6.ebuild,v 1.3 2006/01/30 19:57:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-2.0.6.ebuild,v 1.4 2006/02/15 21:44:59 jokey Exp $
 
 DESCRIPTION="Clients for net-analyzer/argus"
 HOMEPAGE="http://www.qosient.com/argus/"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="virtual/libc
-	virtual/libpcap
+	net-libs/libpcap
 	>=net-analyzer/argus-2.0.6"
 
 DEPEND="${RDEPEND}
