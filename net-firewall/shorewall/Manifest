@@ -1,37 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 564605eedb788e69efb08bfb45ceac47 ChangeLog 13851
-RMD160 33034f188512e51ce7259331e10e4a7001cb33d2 ChangeLog 13851
-SHA256 a15d4b41c5fdaf64aee9b73f01b580c0e4384162b888d957971a1655e73fe83e ChangeLog 13851
+MD5 fb0e958d045b607a7be5910094e36939 ChangeLog 13953
 MD5 e119bb212e45f53e1948e7a1ed93ef36 files/digest-shorewall-2.4.2 139
-RMD160 d7f7a1842e290411df83618289cc4820a208fa69 files/digest-shorewall-2.4.2 139
-SHA256 ec6e339f553caea768deec83c397921ecacf7ed9b9c1bb9381a1cdc575f43452 files/digest-shorewall-2.4.2 139
 MD5 7271403f189568f22d949752fc7773b3 files/digest-shorewall-3.0.4 139
-RMD160 0fe2b75c1ba198235d50e0f1076cbd8860d1c2dd files/digest-shorewall-3.0.4 139
-SHA256 b9abcd2a2c43c48ac2df8f25a4ea65fba75edf7f421985f6b27a038de0faccdd files/digest-shorewall-3.0.4 139
 MD5 06092daa018082fd77b0b38d62276869 files/digest-shorewall-3.0.5 139
-RMD160 64f37fe5db8bec2dde1f27e94a6e0bbee39c235e files/digest-shorewall-3.0.5 139
-SHA256 ee182718a259615e29f8b6034f7585cb7e57dae80a4781ed125567cd72b8a062 files/digest-shorewall-3.0.5 139
 MD5 874d62a846eefd6330b3bba8b8721cef files/shorewall 1057
-RMD160 53daaed6d46b975645a6bc894d670fa69dac9ad4 files/shorewall 1057
-SHA256 5ddf6f5156472bd31d5ad583b3bbca97451d4a31e37d3d853d6d3a0f7764541d files/shorewall 1057
 MD5 9683bb7323c40d69b48d54ad0eb169ed metadata.xml 221
-RMD160 6a612dbdb85b7cbc15a4f4924fc62b435900bee4 metadata.xml 221
-SHA256 80bafe9d61de4580c061d796ca9c244633349b7a6da85aeae6e11bbaad597110 metadata.xml 221
 MD5 561cf6684de229fe37921356b62bb6c1 shorewall-2.4.2.ebuild 1488
-RMD160 5b7725a19f06c135db4994be1ac89270dc3f85a0 shorewall-2.4.2.ebuild 1488
-SHA256 5a3e06939cdf1b97c97be51bf9e7a70ab2f31247584c48b9d40df3f9f857653e shorewall-2.4.2.ebuild 1488
-MD5 1ca393612916e12a79b5cf0a6e15127c shorewall-3.0.4.ebuild 1983
-RMD160 d12f37db2c7d0d45ed53f147c86cf408830e0882 shorewall-3.0.4.ebuild 1983
-SHA256 5f4c95d0c1ef4eecefae77e07639eed11a9a33e91af2f62cf80aac232603a3e9 shorewall-3.0.4.ebuild 1983
+MD5 f3060695c439aa13877562f83443a7de shorewall-3.0.4.ebuild 1985
 MD5 da4f21da4d8bc47dec1c1ca0dfcb45c9 shorewall-3.0.5.ebuild 1989
-RMD160 4b5d447f2270b68a3168a85d672adfc8b92e9c72 shorewall-3.0.5.ebuild 1989
-SHA256 786924ce9da09b0f945a1f3bb18eafafb59d03a74159e59e166f28c01f463e02 shorewall-3.0.5.ebuild 1989
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFD8bVhQlM6RnzZP+IRAoeRAKCg5R+ovXCN1i3z1MBqjfXKx1OoggCeJLFj
-Si2Oq5fKaEiGef3ehAAos6M=
-=sIHf
+iD8DBQFD80ovKRy60XGEcJIRApb7AJ9DDp6lpqhFhSb5rJybcr/zdFyTegCeL/XA
+JKs+SBAqoVkihATrSrCIL9M=
+=7/o2
 -----END PGP SIGNATURE-----
