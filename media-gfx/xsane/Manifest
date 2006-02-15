@@ -1,7 +1,17 @@
-MD5 dc5d6a572f0cf93ea2281c332984220f ChangeLog 5998
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cc99a3048e8f539a9a9543806c6d6b58 ChangeLog 6104
 MD5 5922362071da7ad02ab5957b25c40a73 files/0.98b.patch 707
 MD5 918ef3f00d812af7c8417080ff4b8f75 files/digest-xsane-0.97 63
 MD5 f55083a70b8a55d3d9f2e35d5105630c files/digest-xsane-0.991 64
 MD5 1f00d52c238ab654e46144b458cb8090 metadata.xml 347
 MD5 0d9837fd281c0a06adf23414c6dc2e47 xsane-0.97.ebuild 1681
-MD5 dceaecdf33e07befff60890c95f144fd xsane-0.991.ebuild 1646
+MD5 32ac467c0c3a6a45cda4714085129d7b xsane-0.991.ebuild 1646
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD8zpGKRy60XGEcJIRAvdeAKCuJbwiBXXu6dCens8Ku0mPBvNutQCfSwBW
+KSFNfZXLtSko4YduLDJz4ng=
+=ScmQ
+-----END PGP SIGNATURE-----
