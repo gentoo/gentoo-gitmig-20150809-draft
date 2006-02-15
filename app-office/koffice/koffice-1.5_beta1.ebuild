@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5_beta1.ebuild,v 1.2 2006/02/15 12:00:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5_beta1.ebuild,v 1.3 2006/02/15 16:07:08 corsair Exp $
 
 inherit kde
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://kde/unstable/koffice-${PV/_/-}/src/${MY_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc64 ~x86"
 IUSE="doc mysql opengl postgres"
 
 RDEPEND=">=media-gfx/imagemagick-5.5.2
