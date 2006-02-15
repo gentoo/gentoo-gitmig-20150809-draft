@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.152 2006/02/13 02:57:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.153 2006/02/15 08:47:09 corsair Exp $
+
+  15 Feb 2006; Markus Rothe <corsair@gentoo.org> openssl-0.9.7i.ebuild:
+  Stable on ppc64; bug #122071
 
   13 Feb 2006; Mark Loeser <halcy0n@gentoo.org> openssl-0.9.7e-r2.ebuild:
   Fix leading spaces
