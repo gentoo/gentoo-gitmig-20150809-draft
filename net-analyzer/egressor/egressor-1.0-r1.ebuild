@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/egressor-1.0-r1.ebuild,v 1.8 2005/04/24 03:24:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/egressor-1.0-r1.ebuild,v 1.9 2006/02/15 22:06:45 jokey Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc"
 
 DEPEND="<net-libs/libnet-1.1
 	>=net-libs/libnet-1.0.2a-r3"
-RDEPEND="virtual/libpcap
+RDEPEND="net-libs/libpcap
 	dev-perl/Net-RawIP
 	dev-lang/perl"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r7.ebuild,v 1.5 2006/01/29 21:15:12 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r7.ebuild,v 1.6 2006/02/15 22:04:19 jokey Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="alpha ppc x86"
 IUSE=""
 
-RDEPEND="virtual/libpcap
+RDEPEND="net-libs/libpcap
 	<net-libs/libnet-1.1
 	>=net-libs/libnet-1.0.2a-r3
 	=net-libs/libnids-1.18

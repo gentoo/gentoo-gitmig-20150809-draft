@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3.ebuild,v 1.8 2005/11/05 00:02:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3.ebuild,v 1.9 2006/02/15 22:15:42 jokey Exp $
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
 # happy with it (as for the 0.6.b version), so let's set it to "0.7.0".
@@ -26,7 +26,7 @@ RDEPEND="virtual/libc
 		 sys-libs/zlib
 		 >=sys-devel/libtool-1.4.3
 		 >=net-libs/libnet-1.1.2.1-r1
-		 virtual/libpcap
+		 net-libs/libpcap
 		 ncurses? ( sys-libs/ncurses )
 		 ssl? ( dev-libs/openssl )
 		 gtk? ( >=x11-libs/gtk+-2.2.2 )"

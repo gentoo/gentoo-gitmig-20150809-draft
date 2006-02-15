@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.3.ebuild,v 1.4 2005/10/02 16:55:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.3.ebuild,v 1.5 2006/02/15 22:08:35 jokey Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=">=gnome-base/libglade-2.0
 	>=gnome-base/libgnomeui-2.0
-	virtual/libpcap
+	net-libs/libpcap
 	sys-devel/gettext"
 
 src_unpack() {
