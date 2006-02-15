@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 323d15010cd777c529c15d9657e918ad ChangeLog 2893
-RMD160 e7e860dae59f2ac7ad5ec662935e7e6934958816 ChangeLog 2893
-SHA256 f42644fcb592d33309e1fb5093a9eeb28724d647e10f660482cb76105ecb01d0 ChangeLog 2893
+MD5 059060ed2354dba72b3fecaa47ddc072 ChangeLog 2994
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-karbon-1.4.2 68
-RMD160 4fbdb279d7cdc49eeb424654474ff4b15dce2c5b files/digest-karbon-1.4.2 68
-SHA256 7791e992f4d48e943f3d513459c63a8e5280d4052a33f729f6ef1a8be3b9cc81 files/digest-karbon-1.4.2 68
 MD5 ec887471013626485519bfca72ab7281 files/digest-karbon-1.5_beta1 69
-RMD160 61d4df0cc992d112c36930adc4e7dc5b97b4a3e0 files/digest-karbon-1.5_beta1 69
-SHA256 ba2f4b0b9eb0da757c22c9fb4852a969cd16574e8e9ace31712c72cc68295621 files/digest-karbon-1.5_beta1 69
 MD5 52c9ca8253093fefcc350a7c3d677ec4 karbon-1.4.2.ebuild 1180
-RMD160 aa32f70fea56e5a91bc7456761aeb0680dfe195e karbon-1.4.2.ebuild 1180
-SHA256 71aaa009f4a78b61d378a92abafbfa8bb7596a14331bc685bb2050a6a03e2447 karbon-1.4.2.ebuild 1180
-MD5 5755c70ad1614186d62f9e2cf516fc08 karbon-1.5_beta1.ebuild 1162
-RMD160 88e78cf1a1242f9b9f7069e9813b6f922a0bac6d karbon-1.5_beta1.ebuild 1162
-SHA256 d9dc57949c705b40612094d372acc33b89f67a78adf4a04ac7eee04e6deba2d9 karbon-1.5_beta1.ebuild 1162
+MD5 c7ca21a7b18450d4a7d18d581da02872 karbon-1.5_beta1.ebuild 1167
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
-SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD66bjAiZjviIA2XgRAuovAJ9OOUD0FbIQOk0Od0pjpdEtLStQ/gCfQQ8V
-Aq0HpaLUAy7sHYlP7WCJgIE=
-=wgtB
------END PGP SIGNATURE-----

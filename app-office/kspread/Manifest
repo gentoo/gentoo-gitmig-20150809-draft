@@ -1,37 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 595c1910769fa6af6d2868c2ca35d297 ChangeLog 3425
-RMD160 b065d57dbd0d9319f462a78a0caad4c4d6b96c4d ChangeLog 3425
-SHA256 8b99f025ebcd28c0c6031979962f847647caf32b5fe1f61e1e59203474f041de ChangeLog 3425
+MD5 946447b7632f4d9b8febbd200e73615b ChangeLog 3527
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kspread-1.4.2 68
-RMD160 4fbdb279d7cdc49eeb424654474ff4b15dce2c5b files/digest-kspread-1.4.2 68
-SHA256 7791e992f4d48e943f3d513459c63a8e5280d4052a33f729f6ef1a8be3b9cc81 files/digest-kspread-1.4.2 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kspread-1.4.2-r1 68
-RMD160 4fbdb279d7cdc49eeb424654474ff4b15dce2c5b files/digest-kspread-1.4.2-r1 68
-SHA256 7791e992f4d48e943f3d513459c63a8e5280d4052a33f729f6ef1a8be3b9cc81 files/digest-kspread-1.4.2-r1 68
 MD5 ec887471013626485519bfca72ab7281 files/digest-kspread-1.5_beta1 69
-RMD160 61d4df0cc992d112c36930adc4e7dc5b97b4a3e0 files/digest-kspread-1.5_beta1 69
-SHA256 ba2f4b0b9eb0da757c22c9fb4852a969cd16574e8e9ace31712c72cc68295621 files/digest-kspread-1.5_beta1 69
 MD5 f1f58cce115f40fcba31a4976b61d260 files/kspread-1.4.2-gcc41.patch 451
-RMD160 c0d17048a7b1dcb14cd00910a400287652c2b2f1 files/kspread-1.4.2-gcc41.patch 451
-SHA256 67d8e5722ad1aadab5811397c68aacd1d8a1d9d5363f95488231f00bb1fd047a files/kspread-1.4.2-gcc41.patch 451
 MD5 3d2a2ae8f85c854c5d0968e926d78f89 kspread-1.4.2-r1.ebuild 1220
-RMD160 ab0594f5b1ed73c43458ad706991bdb49825f44d kspread-1.4.2-r1.ebuild 1220
-SHA256 b6e1c30323c7c0976c3ed7820d23ce839f23c3ed8ffb6dee31c307944a8c5019 kspread-1.4.2-r1.ebuild 1220
 MD5 c7006c9fcd56e89b59540111e16fd124 kspread-1.4.2.ebuild 1164
-RMD160 6af421bd1f760dfc808c7bb860c593f067dea4b3 kspread-1.4.2.ebuild 1164
-SHA256 db028c6bd37a471f124cd2cf7d9decc18e41a7602722950848b602e463e49139 kspread-1.4.2.ebuild 1164
-MD5 5be066cf0ac5e713a11bf5a530251e83 kspread-1.5_beta1.ebuild 1118
-RMD160 5d28306756792199b089480eca4cc9712c3a9eeb kspread-1.5_beta1.ebuild 1118
-SHA256 28bd3c6906d0e72c7d25fe8141774adc3ff223235162b4a889a5c6f5d25df688 kspread-1.5_beta1.ebuild 1118
+MD5 7ba1d65f3a014818264f1e2bfe3261d4 kspread-1.5_beta1.ebuild 1123
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
-SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD66n2AiZjviIA2XgRAqwzAJwNBVVZYOINIQpap083eNHLDv456QCfX0V2
-eAPQXXhEIRpywrpk5hdXsL4=
-=DVfP
------END PGP SIGNATURE-----

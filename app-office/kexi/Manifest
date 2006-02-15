@@ -1,37 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bc5b91a77be5e7deee08ec174ac8c65b ChangeLog 2755
-RMD160 3c2298df74ff10d9202dcfb52fd905a227083d47 ChangeLog 2755
-SHA256 01209e3f13b41d9ea9114ec8ee74a7e3a37d00d97b888afbfae8d153686e9668 ChangeLog 2755
+MD5 a3639d5b7ed519a53c2000844b5ef2a4 ChangeLog 2854
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kexi-1.4.2 68
-RMD160 4fbdb279d7cdc49eeb424654474ff4b15dce2c5b files/digest-kexi-1.4.2 68
-SHA256 7791e992f4d48e943f3d513459c63a8e5280d4052a33f729f6ef1a8be3b9cc81 files/digest-kexi-1.4.2 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kexi-1.4.2-r1 68
-RMD160 4fbdb279d7cdc49eeb424654474ff4b15dce2c5b files/digest-kexi-1.4.2-r1 68
-SHA256 7791e992f4d48e943f3d513459c63a8e5280d4052a33f729f6ef1a8be3b9cc81 files/digest-kexi-1.4.2-r1 68
 MD5 ec887471013626485519bfca72ab7281 files/digest-kexi-1.5_beta1 69
-RMD160 61d4df0cc992d112c36930adc4e7dc5b97b4a3e0 files/digest-kexi-1.5_beta1 69
-SHA256 ba2f4b0b9eb0da757c22c9fb4852a969cd16574e8e9ace31712c72cc68295621 files/digest-kexi-1.5_beta1 69
 MD5 5f3683b6817935e4f6269bd64398c479 files/kexi-1.4.2-gcc41.patch 1094
-RMD160 ffc028b187ec7437aab156f3e575b945b390845c files/kexi-1.4.2-gcc41.patch 1094
-SHA256 7c0790dacdc090b8cb176a8289facc471d6ef4ea2c93bb6ac985e6497fac1eef files/kexi-1.4.2-gcc41.patch 1094
 MD5 01b797c688b5f719c1aa8172e7fefd1e kexi-1.4.2-r1.ebuild 1130
-RMD160 59b3cd63ff12a77348c83606ad8d0d360c604181 kexi-1.4.2-r1.ebuild 1130
-SHA256 8994cc85459f6ff12e5367cd0620cfed7332993edd74919fd9557720bfd0377e kexi-1.4.2-r1.ebuild 1130
 MD5 3b9baebfc7db92be937ad6a4e37f4613 kexi-1.4.2.ebuild 1077
-RMD160 665a9b3d748c806a325f8d8e94ca3da45af05e6e kexi-1.4.2.ebuild 1077
-SHA256 b9547a659bc957800933755b1ed42b7eb1d5d4750c893ba4b547f96b29adfb3a kexi-1.4.2.ebuild 1077
-MD5 ec0a810834def4f4b68f1acd21da52ea kexi-1.5_beta1.ebuild 1127
-RMD160 9d35753e458c1ae0bee02fc2a21630061c317061 kexi-1.5_beta1.ebuild 1127
-SHA256 4b076b3f75a5ac63c6e15ac104fe6912ffabab69d77e134b84477396f4ba297c kexi-1.5_beta1.ebuild 1127
+MD5 c387923715bdd45e66c25752866e23bf kexi-1.5_beta1.ebuild 1132
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
-SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD66d9AiZjviIA2XgRAggKAJ99bcL2lFP/ootqAdbxW4ja4j/xkACg9OMH
-WCgvG81a5RXLnAxLnWXsYsA=
-=mm+E
------END PGP SIGNATURE-----

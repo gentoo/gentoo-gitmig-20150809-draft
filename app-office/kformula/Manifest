@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6c3ac37948668c4e86cfed1827c85ab5 ChangeLog 2980
-RMD160 10af4ff91f2f506061fd527c63ace0b1493a5c36 ChangeLog 2980
-SHA256 e6aa28881937836565b100b8ab7c78b7986bc148b75d384c6f9e75e123b01a0d ChangeLog 2980
+MD5 5df7a2dba0c9f8071789a375d36a8782 ChangeLog 3083
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kformula-1.4.2 68
-RMD160 4fbdb279d7cdc49eeb424654474ff4b15dce2c5b files/digest-kformula-1.4.2 68
-SHA256 7791e992f4d48e943f3d513459c63a8e5280d4052a33f729f6ef1a8be3b9cc81 files/digest-kformula-1.4.2 68
 MD5 ec887471013626485519bfca72ab7281 files/digest-kformula-1.5_beta1 69
-RMD160 61d4df0cc992d112c36930adc4e7dc5b97b4a3e0 files/digest-kformula-1.5_beta1 69
-SHA256 ba2f4b0b9eb0da757c22c9fb4852a969cd16574e8e9ace31712c72cc68295621 files/digest-kformula-1.5_beta1 69
 MD5 2d2f438b97a81b30aca78c6a3f9ece8c kformula-1.4.2.ebuild 855
-RMD160 53d702fdd08c3d638dfa2d3f8ca64f98524c2eb6 kformula-1.4.2.ebuild 855
-SHA256 18e5d137c91845d1bfad3a7bafc20b1374340cd221ff1110df320e5e50ce0e65 kformula-1.4.2.ebuild 855
-MD5 b372e069c3bb3c99855eca351efea10f kformula-1.5_beta1.ebuild 809
-RMD160 3831b5e813aa389e8fa25784e379af2cb9f9c9e9 kformula-1.5_beta1.ebuild 809
-SHA256 6f89f76323ec281a2f14df49f5cf9053cb841410cdcde751b6a3abe3b3417188 kformula-1.5_beta1.ebuild 809
+MD5 2f58651c000ded9a5f952be68e8a997b kformula-1.5_beta1.ebuild 814
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
-SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD66fEAiZjviIA2XgRAiR6AJ4yiy5zArQgboA75BvDcf9d33ByvQCffnwe
-nGZL6bxsRTt0CXWm+m4pXh8=
-=B5w+
------END PGP SIGNATURE-----
