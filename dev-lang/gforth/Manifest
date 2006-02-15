@@ -1,5 +1,37 @@
-MD5 b1b4b6a2dc1e8dab38ab5096b2f9b45e gforth-0.6.2.ebuild 1384
-MD5 43d87b381f4a89af68765d200e853089 ChangeLog 2538
-MD5 eaf0babab3dec9a6b74e876829e1a68a files/gforth.el-gentoo.patch 1518
-MD5 288a9f927bbcb355499af2795baa6248 files/digest-gforth-0.6.2 65
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3eae43e4eeddb6e2a356a289c56e422f ChangeLog 2871
+RMD160 3ea2c7b78eb1ea23773cf4c0fe963a76b8734992 ChangeLog 2871
+SHA256 95c7c655bae749bdce85ebfeaf888fdae80cdac67c5bf1f8b95c35b670cf8b11 ChangeLog 2871
+MD5 8646d2e25fc993074ce9a5859f168e4e files/0.6.2-c-to-forth-to-c.patch 702
+RMD160 585cd5b1e215c0644df28b55de47133b88c75bcd files/0.6.2-c-to-forth-to-c.patch 702
+SHA256 f50fae8f741b72d4d07155b96d11e59ba663b330910faf49774ffe14e85f5c5e files/0.6.2-c-to-forth-to-c.patch 702
 MD5 74edc6d12c9a8d2858070dc09e2c264c files/50gforth-gentoo.el 200
+RMD160 79bceb8512f929d2fc9916a9622ef9e466159acf files/50gforth-gentoo.el 200
+SHA256 235051d92cd39a0d327246d60555bd8a8386b5b20276aa35fe8bd34565b691f6 files/50gforth-gentoo.el 200
+MD5 288a9f927bbcb355499af2795baa6248 files/digest-gforth-0.6.2 65
+RMD160 94aa8a6afb79be9f80acb5f376638ff074788aab files/digest-gforth-0.6.2 65
+SHA256 8989714db209a89679594f54c708ef3673e6d44df14d7964db36214b476a24d1 files/digest-gforth-0.6.2 65
+MD5 a6f1a7a82c3fe99d39283ef7f0200df6 files/digest-gforth-0.6.2-r1 464
+RMD160 65fbb567dbd9b097d2ebb5639b5367229079d099 files/digest-gforth-0.6.2-r1 464
+SHA256 e1d570cb5433dbdcd97ab750f7372f3e276cb1c775e6fdd4d72fb75a66d96d54 files/digest-gforth-0.6.2-r1 464
+MD5 eaf0babab3dec9a6b74e876829e1a68a files/gforth.el-gentoo.patch 1518
+RMD160 6a6f7e210fa3fb13c7d41a731f482356d4b82f8e files/gforth.el-gentoo.patch 1518
+SHA256 67339e3d7387d957121795c36574e96572b57ee7c2a7f41670412d6e09e414ce files/gforth.el-gentoo.patch 1518
+MD5 b17452d3deaa7d33f7460ce9f67028c9 gforth-0.6.2-r1.ebuild 1640
+RMD160 2e190ecf480fdce63c4c525954eac257e0240901 gforth-0.6.2-r1.ebuild 1640
+SHA256 ee899357d739293ce21fe1abca02f42814f6474a4cf9850b651a6a032bb0288b gforth-0.6.2-r1.ebuild 1640
+MD5 b1b4b6a2dc1e8dab38ab5096b2f9b45e gforth-0.6.2.ebuild 1384
+RMD160 e53a23bbd1bee661147a441dcfae56d8b214ed2f gforth-0.6.2.ebuild 1384
+SHA256 05a32cfc9dde5a5ac3173fd54907fcedbc7f033ce34a0e7327b8c59ffeb0769c gforth-0.6.2.ebuild 1384
+MD5 1ba841da13783efc9e8e1670e8937801 metadata.xml 232
+RMD160 9101b9978f3aaddf25ec85183590110e41bc3d0d metadata.xml 232
+SHA256 7cbe2b6f70075aca4c0147ec74989df1f3ea7ac11ce88fad80d812131cd21a9c metadata.xml 232
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD8nIIyiNZaEAZA+ARAiZJAJ9GH5ZtYdWuuYWOCWtv3pUS/Jr4ewCfZ5li
+ndjAZslWsJnEkGEKoirL3Qw=
+=AYDQ
+-----END PGP SIGNATURE-----

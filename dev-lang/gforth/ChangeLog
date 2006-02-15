@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/gforth
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.16 2005/10/30 15:53:35 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.17 2006/02/15 00:12:42 mkennedy Exp $
+
+*gforth-0.6.2-r1 (15 Feb 2006)
+
+  15 Feb 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.6.2-c-to-forth-to-c.patch, +metadata.xml,
+  +gforth-0.6.2-r1.ebuild:
+  Added metadata.xml; Added self to it as new maintainer; Applied patch
+  described in Bug #113296; Added dependency on dev-libs/ffcall which resolves
+  Bug #113211.
 
   30 Oct 2005; Fabian Groffen <grobian@gentoo.org> gforth-0.6.2.ebuild:
   Marked ~ppc-macos (bug #110818)
