@@ -1,6 +1,15 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.57 2006/02/13 14:52:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.58 2006/02/15 05:22:58 morfic Exp $
+
+  15 Feb 2006; Daniel Goller <morfic@gentoo.org> +dvdrip-0.52.6.ebuild,
+  dvdrip-0.97.6.ebuild:
+  Adding lsdvd >=0.15 as RDEPEND for 0.97.6
+
+*dvdrip-0.52.6 (15 Feb 2006)
+
+  15 Feb 2006; Daniel Goller <morfic@gentoo.org> +dvdrip-0.52.6.ebuild:
+  Bump to 0.52.6
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org> dvdrip-0.52.0.ebuild,
   dvdrip-0.52.3.ebuild, dvdrip-0.52.3-r1.ebuild, dvdrip-0.52.5.ebuild,

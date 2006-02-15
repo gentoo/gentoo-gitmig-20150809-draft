@@ -1,12 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.97.6.ebuild,v 1.3 2006/02/15 05:22:58 morfic Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.6.ebuild,v 1.1 2006/02/15 05:22:58 morfic Exp $
 
 inherit perl-module eutils
 
 MY_P=${P/dvdr/Video-DVDR}
-MY_URL="dist/pre"
+# Next three lines are to handle PRE versions
+MY_P=${MY_P/_pre/_}
+MY_URL="dist"
+[ "${P/pre}" != "${P}" ] && MY_URL="dist/pre"
 
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Dvd::rip is a graphical frontend for transcode"
@@ -27,34 +29,25 @@ DEPEND="gnome? ( gnome-extra/gtkhtml )
 	xvid? ( media-video/xvid4conf )
 	rar? ( app-arch/rar )
 	mplayer? ( media-video/mplayer )
-	>=media-video/transcode-0.6.14
+	=media-video/transcode-0.6.14*
 	>=media-gfx/imagemagick-5.5.3
-	dev-perl/gtk2-perl
-	>=dev-perl/gtk2-ex-formfactory-0.59
-	>=dev-perl/Event-RPC-0.84
-	virtual/perl-Storable
+	dev-perl/gtk-perl
+	perl-core/Storable
 	dev-perl/Event"
 RDEPEND="${DEPEND}
 	fping? ( >=net-analyzer/fping-2.3 )
 	ogg? ( >=media-sound/ogmtools-1.000 )
 	subtitles? ( media-video/subtitleripper )
-	>=media-video/lsdvd-0.15
 	virtual/eject
 	dev-perl/libintl-perl"
 
 pkg_setup() {
-	built_with_use media-video/transcode dvdread \
-		|| die	"transcode needs dvdread support builtin." \
-				"Please re-emerge transcode with the dvdread USE flag."
-	built_with_use >=media-video/transcode-1.0.2-r1 extrafilters \
-		&& die  "Please remerge transcode with -extrafilters in USE=, " \
-				"you have filters installed not compatible with dvdrip."
+	built_with_use media-video/transcode dvdread || die "transcode needs dvdread support builtin.  Please re-emerge transcode with the dvdread USE flag."
 }
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-fix_nptl_workaround.patch
 	sed -i -e 's:cc :$(CC) :' src/Makefile || die "sed failed"
 }
 
@@ -73,4 +66,9 @@ pkg_postinst() {
 	einfo "for bash: export PERLIO=stdio"
 	einfo "for csh:  setenv PERLIO stdio"
 	einfo "into your /.${shell}rc"
+	if ( use amd64 );
+	then
+		einfo "If you get messages about not finding the tools, go t preferences"
+		einfo "And deactivate the NPTL workaround"
+	fi
 }
