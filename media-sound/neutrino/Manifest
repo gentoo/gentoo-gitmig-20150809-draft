@@ -1,14 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
-MD5 598c4564f791cc02718bf16ad418d2c2 ChangeLog 373
-MD5 b95a7b67fbfde4414d530bc2bb776af7 neutrino-0.8.3.ebuild 858
+MD5 f4dc160669f18b0aa8b5afe2367323bd ChangeLog 508
+RMD160 cd2bc8a66211d711964d7751fa3e88ad51394ecf ChangeLog 508
+SHA256 6f87ddc36cd5233308a4e3bb3a392458fc4b9d10738acd50c581da5844ea5767 ChangeLog 508
 MD5 a640d6a1e8c22c49f019eaae79c51ea0 files/digest-neutrino-0.8.3 66
+RMD160 cfa130aec6a8aaa181ceca9da6928cc5afaaa959 files/digest-neutrino-0.8.3 66
+SHA256 d4cbb7274c5e193ea498dd62daa1c3449f7896efa04b3ade4729064f21d35ea7 files/digest-neutrino-0.8.3 66
+MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
+RMD160 f9de13e16a150195633b055ebe61bb4cea95160d metadata.xml 248
+SHA256 6a8ca116bded5cdd92cb700f92acd22b01ae159ef1b69c60a03fc9859bb9b3d6 metadata.xml 248
+MD5 ae3b80ddfe5da2f77f94b2aef46d564e neutrino-0.8.3.ebuild 860
+RMD160 01898d2a0508243947074988fdc9284d678a091e neutrino-0.8.3.ebuild 860
+SHA256 500a3ebd79fe57e2860b99e7a750c2cb9554a8fdb51123ccbb1822074b0d3ea2 neutrino-0.8.3.ebuild 860
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFC65kVp5vW4rUFj5oRAscmAJ434CsIVKr/DWKv6EvagrIi25fhpQCfQWPE
-PaYP12ali3CuQ3vOhcL58d4=
-=ke1w
+iD8DBQFD87n0AiZjviIA2XgRAj5GAKC3zX10n9tn8cZqxSJfd0+2OFIVdgCfTW06
+rOBtxDEVnoYIXxWoQ/hrjow=
+=kY6P
 -----END PGP SIGNATURE-----
