@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/linuxwacom
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.34 2005/12/27 20:43:37 battousai Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.35 2006/02/15 22:31:22 corsair Exp $
+
+  15 Feb 2006; Markus Rothe <corsair@gentoo.org> linuxwacom-0.7.2.ebuild:
+  Added ~ppc64
 
   27 Dec 2005; Bryan Stine <battousai@gentoo.org> linuxwacom-0.6.7.ebuild,
   linuxwacom-0.6.8.ebuild, linuxwacom-0.6.9.ebuild, linuxwacom-0.7.2.ebuild:
