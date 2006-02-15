@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gtans/gtans-1.2.ebuild,v 1.7 2005/05/15 21:17:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gtans/gtans-1.2.ebuild,v 1.8 2006/02/15 22:57:21 tupone Exp $
 
 inherit toolchain-funcs games
 
@@ -13,10 +13,9 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="nls"
 
-DEPEND="virtual/x11
-	>=x11-libs/gtk+-1.2.1
-	dev-libs/glib
-	nls? ( sys-devel/gettext )"
+RDEPEND=">=x11-libs/gtk+-1.2.1"
+DEPEND="${RDEPEND}
+		nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}

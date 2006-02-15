@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/gtans
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gtans/ChangeLog,v 1.4 2005/05/15 21:17:06 mr_bones_ Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gtans/ChangeLog,v 1.5 2006/02/15 22:57:21 tupone Exp $
+
+  15 Feb 2006; <Tupone@gentoo.org> gtans-1.2.ebuild:
+  modular X deps
 
   15 May 2005; Michael Sterrett <mr_bones_@gentoo.org> gtans-1.2.ebuild:
   use toolchain-funcs; tidy
