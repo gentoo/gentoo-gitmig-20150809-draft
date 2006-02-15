@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b43d5dce42e7669a9e296eafd3f8ca8c ChangeLog 4701
+MD5 b83591ed737575cbfde2e9e8494ac603 ChangeLog 4787
 MD5 d13cf5e2e705b821a491c6b87b8350f9 cogito-0.16.2.ebuild 1376
-MD5 bb1151c51225a21ed3ad78d8437774e2 cogito-0.16.4.ebuild 1377
+MD5 8e0c002016ee3aa9a0876a19ef9c11c2 cogito-0.16.4.ebuild 1383
 MD5 c82decb331106478b2376c484e35456d files/digest-cogito-0.16.2 65
 MD5 1f23887eed821c21d22e41b3581299ac files/digest-cogito-0.16.4 65
 MD5 263b796501be2aea2d5fb2ebc7609cb5 metadata.xml 313
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD8yzVKRy60XGEcJIRAtEVAJ4vqNqaZm4QbFpK33JRLz0EcKUXQACeMLZc
-ogzVvcCvKo6ORc4HPWtEGGQ=
-=HErF
------END PGP SIGNATURE-----
