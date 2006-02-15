@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 40ce1d2bdcb86f8342195c5e2e8154dd ChangeLog 3843
+MD5 d38a91b56b3356c3840ee74fd7a33dda ChangeLog 4007
+RMD160 ef072c535c6df7bd4454ad796070b234dea58b85 ChangeLog 4007
+SHA256 1b0885b0ef8cace15717a6457ed811bbfdbefcfe78f9085f03e1d2cac39263d7 ChangeLog 4007
 MD5 71989b1101d6cf41e9f61a1b62d2cc85 files/1.0.1-branch-update.patch 6717
+RMD160 b6e422fdf91baf3fbe9313e83d3a37e6d771a131 files/1.0.1-branch-update.patch 6717
+SHA256 fa270bbc65eb6a16cd628ece425b15b68ed6e752d4763a60286f13c1bd6efc5e files/1.0.1-branch-update.patch 6717
 MD5 1acb3335a10232ac14f179305e20477f files/1.0.1-gcc34.patch 471
+RMD160 549d08e8ffa80a2ac2bb945b0a81a6b7d4cdb0ad files/1.0.1-gcc34.patch 471
+SHA256 6111df03ff5cb884bdce3566e3add9719c17894443644d40daee7967eaa3abe2 files/1.0.1-gcc34.patch 471
 MD5 ce1069db2e4cfc5c0b0d4b988c6c053c files/digest-silc-plugin-1.0.1-r4 202
+RMD160 b90b57cd424eb7c10a05d98d91209573efa54a21 files/digest-silc-plugin-1.0.1-r4 202
+SHA256 6e49f3e3f8a9fe0ad368a0bbcd3c58319146b6adb9acc50a4d4247375fcd2d8b files/digest-silc-plugin-1.0.1-r4 202
+MD5 c2e9f3744d81f9a3cb38bb3c3ef16846 files/digest-silc-plugin-1.0.1-r5 744
+RMD160 04b946b3e3c5828238c77df1cf52d665265e6961 files/digest-silc-plugin-1.0.1-r5 744
+SHA256 3669b3f44283bdbe79892374c636430efe3176f8a1893e7a95814346289c487e files/digest-silc-plugin-1.0.1-r5 744
 MD5 3d21d1bc81cfd81bfd0b0b3b2123b71c metadata.xml 271
+RMD160 5216a9aae0f65dab3a1be84a9e6091b201a76f3a metadata.xml 271
+SHA256 f5a363461f7e4e9d8d8a9ea60872d6ee71ab8914d303c62d3f529e0e972c24ca metadata.xml 271
 MD5 ea462b09ce22f10f19ffbd2ebb547333 silc-plugin-1.0.1-r4.ebuild 3460
+RMD160 cd178e365d2484d4f7d97692387f012654da78d8 silc-plugin-1.0.1-r4.ebuild 3460
+SHA256 1c72e94d729e7236928d28934c5cc9e5b1aa4447da945db2ba7e7352c37f1b16 silc-plugin-1.0.1-r4.ebuild 3460
+MD5 4f5fca3403aa83ceb3caec8d9cca0a64 silc-plugin-1.0.1-r5.ebuild 3663
+RMD160 061a5a3d303c8253ec8132f2331babe03a4db68c silc-plugin-1.0.1-r5.ebuild 3663
+SHA256 f684fa57f4b6bf21ee382d1e676c4312e409b3bb12d166208ed7f1be5e73ee5c silc-plugin-1.0.1-r5.ebuild 3663
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDwTKFQlM6RnzZP+IRAvOjAKCCPg1jCaRCXD6B5yeEvrN1ofbVUgCfV1a9
-oh7hycDFXV3GEvP/by1/Seg=
-=qaUK
+iD8DBQFD8nwNwUpWvClEHQoRAtIrAJ0f4h4sKulbKa21Kgi2OyWyYLn8hwCeMuvR
+CHBZ6WZqQa0lp03YIWdAHZY=
+=yGyp
 -----END PGP SIGNATURE-----
