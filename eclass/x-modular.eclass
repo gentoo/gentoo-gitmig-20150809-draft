@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.43 2006/02/05 22:52:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.44 2006/02/15 21:07:00 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -40,12 +40,46 @@ fi
 
 IUSE=""
 HOMEPAGE="http://xorg.freedesktop.org/"
-SRC_URI="http://xorg.freedesktop.org/releases/X11R7.0/src/everything/${P}.tar.bz2
+
+# Set up SRC_URI for individual modular releases
+BASE_INDIVIDUAL_URI="http://xorg.freedesktop.org/releases/individual"
+if [[ ${CATEGORY} = x11-apps ]]; then
+	SRC_URI="${SRC_URI}
+		${BASE_INDIVIDUAL_URI}/app/${P}.tar.bz2"
+elif [[ ${CATEGORY} = app-doc ]]; then
+	SRC_URI="${SRC_URI}
+		${BASE_INDIVIDUAL_URI}/doc/${P}.tar.bz2"
+# x11-misc contains data and util, x11-themes contains data
+elif [[ ${CATEGORY} = x11-misc ]] || [[ ${CATEGORY} = x11-themes ]]; then
+	SRC_URI="${SRC_URI}
+		${BASE_INDIVIDUAL_URI}/data/${P}.tar.bz2
+		${BASE_INDIVIDUAL_URI}/util/${P}.tar.bz2"
+elif [[ ${CATEGORY} = x11-drivers ]]; then
+	SRC_URI="${SRC_URI}
+		${BASE_INDIVIDUAL_URI}/driver/${P}.tar.bz2"
+elif [[ ${CATEGORY} = media-fonts ]]; then
+	SRC_URI="${SRC_URI}
+		${BASE_INDIVIDUAL_URI}/font/${P}.tar.bz2"
+elif [[ ${CATEGORY} = x11-libs ]]; then
+	SRC_URI="${SRC_URI}
+		${BASE_INDIVIDUAL_URI}/lib/${P}.tar.bz2"
+elif [[ ${CATEGORY} = x11-proto ]]; then
+	SRC_URI="${SRC_URI}
+		${BASE_INDIVIDUAL_URI}/proto/${P}.tar.bz2"
+elif [[ ${CATEGORY} = x11-base ]]; then
+	SRC_URI="${SRC_URI}
+		${BASE_INDIVIDUAL_URI}/xserver/${P}.tar.bz2"
+fi
+
+# SRC_URI for full releases
+SRC_URI="${SRC_URI}
+	http://xorg.freedesktop.org/releases/X11R7.0/src/everything/${P}.tar.bz2
 	http://xorg.freedesktop.org/releases/X11R7.0-RC4/everything/${P}.tar.bz2
 	http://xorg.freedesktop.org/releases/X11R7.0-RC3/everything/${P}.tar.bz2
 	http://xorg.freedesktop.org/releases/X11R7.0-RC2/everything/${P}.tar.bz2
 	http://xorg.freedesktop.org/releases/X11R7.0-RC1/everything/${P}.tar.bz2
 	http://xorg.freedesktop.org/releases/X11R7.0-RC0/everything/${P}.tar.bz2"
+
 SLOT="0"
 
 # Set the license for the package. This can be overridden by setting
