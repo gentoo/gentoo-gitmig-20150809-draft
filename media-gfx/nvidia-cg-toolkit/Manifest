@@ -1,9 +1,37 @@
-MD5 8ecc2a0625f42bf513ab37f7bba899d0 ChangeLog 2411
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b2c52211b0307f5e18500758e9ece1ea ChangeLog 2528
+RMD160 667035bc35be777b76b439abd0e4e80d879e8c61 ChangeLog 2528
+SHA256 1bac46d7963443a6deb7918c14dcf95ff3d7c11ba90d75caba0503f9efedf939 ChangeLog 2528
 MD5 eb578c83d5ce406419a4676f87293109 files/80cgc 251
+RMD160 74903553216b4eea75a5003aa381ad0a77abb34f files/80cgc 251
+SHA256 89f976c536d4bb658821cabb402f7cfa15def6410599928ad737cf4b741d3a06 files/80cgc 251
 MD5 59ca53210babe162facca60aeaa30692 files/digest-nvidia-cg-toolkit-1.2.0402.1900 69
+RMD160 4c383c01c240ff808397ac613829c33ed39a559d files/digest-nvidia-cg-toolkit-1.2.0402.1900 69
+SHA256 5a6bc3646ef21c65ae1581fcda3e7c081d0566f045e53eae6783aa893cbdfb3a files/digest-nvidia-cg-toolkit-1.2.0402.1900 69
 MD5 2272e06e17522faa78fa2e1ba6e11fdd files/digest-nvidia-cg-toolkit-1.3.0501.0700 150
+RMD160 aaa18b6bd68173ff607fb1cee760bfba37379d32 files/digest-nvidia-cg-toolkit-1.3.0501.0700 150
+SHA256 65ef95d6653f9dd8ce242fec2a8cd4b8082554936e1e3ca21e96be723f208bb3 files/digest-nvidia-cg-toolkit-1.3.0501.0700 150
 MD5 b6c33d52cb6e18f6e8e097fde471b962 files/digest-nvidia-cg-toolkit-1.4.0.4 137
+RMD160 3ec4337ad067d00056d967ee3d54bb262b15db6f files/digest-nvidia-cg-toolkit-1.4.0.4 137
+SHA256 6bc2837c22205bd1ad9c4647f51c9d8eceb72285cb9b60b93af3934cdc9e24e3 files/digest-nvidia-cg-toolkit-1.4.0.4 137
 MD5 1e1b9379428e902cde87b721e7e9a233 metadata.xml 546
+RMD160 f545e34ceff40a02ea81ba1dc15e512853db169e metadata.xml 546
+SHA256 8010e4f496d3b4e668c74f876e840fbc93ef3b5da6776556847eccf1c2a0ba07 metadata.xml 546
 MD5 6825f14552c3fca6c8ce0a8c395becd1 nvidia-cg-toolkit-1.2.0402.1900.ebuild 1592
+RMD160 6854b04e6453bd83792b42df962a944ac33adc04 nvidia-cg-toolkit-1.2.0402.1900.ebuild 1592
+SHA256 6ff3f37a4e9a73d5ab485e13716f9ec62b1d96c13738cabfad28e9776785fa10 nvidia-cg-toolkit-1.2.0402.1900.ebuild 1592
 MD5 8cf1c280c1ca44c19ea6671b775c2bf4 nvidia-cg-toolkit-1.3.0501.0700.ebuild 1771
-MD5 edb18717e09853f8d0b0e9039ca0ef53 nvidia-cg-toolkit-1.4.0.4.ebuild 2347
+RMD160 cce2efd02cb133edafc9d47f739d93a54a84dc44 nvidia-cg-toolkit-1.3.0501.0700.ebuild 1771
+SHA256 40198873ee0b3388de6ebbbac340996f19f3d016dc1edf78ce8bf556db829b06 nvidia-cg-toolkit-1.3.0501.0700.ebuild 1771
+MD5 e241034582243bd5b30674344d178d48 nvidia-cg-toolkit-1.4.0.4.ebuild 2344
+RMD160 0d04ea573ed170268df1cb249b7b23d52080d467 nvidia-cg-toolkit-1.4.0.4.ebuild 2344
+SHA256 a23a23b371b3594ce475e517b24505711948e58abbd7b88dc7eb50d973fcfb53 nvidia-cg-toolkit-1.4.0.4.ebuild 2344
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD8nDKwUpWvClEHQoRAkBQAKCC/Y1kpgQeJ9PbWdSAiLxijnQdsACdHGYI
+aTz7LuMEhbnlypJnqlPig/Q=
+=ZCRj
+-----END PGP SIGNATURE-----
