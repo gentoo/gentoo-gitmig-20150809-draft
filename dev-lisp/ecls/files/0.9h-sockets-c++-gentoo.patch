@@ -1,13 +1,6 @@
 diff -ur ecl-0.9h.orig/contrib/sockets/sockets.lisp ecl-0.9h/contrib/sockets/sockets.lisp
 --- ecl-0.9h.orig/contrib/sockets/sockets.lisp	2005-11-16 04:13:26.000000000 -0600
 +++ ecl-0.9h/contrib/sockets/sockets.lisp	2006-02-14 12:06:10.000000000 -0600
-@@ -1,5 +1,5 @@
- ;; -*- Mode: Lisp; Syntax: Common-Lisp -*-
--;; $Id: 0.9h-sockets-c++-gentoo.patch,v 1.1 2006/02/14 23:15:02 mkennedy Exp $
-+;; $Id: 0.9h-sockets-c++-gentoo.patch,v 1.1 2006/02/14 23:15:02 mkennedy Exp $
- 
- ;; This file is based on SBCL's SB-BSD-SOCKET module and has been
- ;; heavily modified to work with ECL by Julian Stecklina.
 @@ -518,7 +518,7 @@
  "{
          struct sockaddr_in sockaddr;
