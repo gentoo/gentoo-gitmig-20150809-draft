@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.8.1.ebuild,v 1.1 2006/02/01 09:22:26 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.7.4-r2.ebuild,v 1.1 2006/02/15 15:39:09 carlo Exp $
 
 inherit kde
 
-P_DOC="${PN}-doc-0.8.0"
-MY_P=${P/_/-}
-S=${WORKDIR}/${MY_P}
+P_DOC="${PN}-doc-${PV}"
+MY_P="${P/_/-}"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A digital photo management application for KDE."
 HOMEPAGE="http://www.digikam.org/"
@@ -20,13 +20,13 @@ IUSE=""
 
 DEPEND=">=media-libs/libgphoto2-2
 	>=media-libs/libkexif-0.2.1
-	>=dev-db/sqlite-3
-	>=media-libs/libkipi-0.1.1
+	media-libs/libkipi
 	media-libs/imlib2
 	media-libs/tiff
 	sys-libs/gdbm
 	!media-plugins/digikamplugins"
-
+RDEPEND="${DEPEND}
+	|| ( kde-base/kgamma kde-base/kdegraphics )"
 need-kde 3.2
 
 pkg_setup(){
@@ -34,13 +34,21 @@ pkg_setup(){
 }
 
 src_compile(){
+	myconf="$(use_enable nfs nfs-hack)"
 	kde_src_compile
-	cd ${WORKDIR}/${P_POC}
+	myconf=""
+	_S=${S}
+	S=${WORKDIR}/${P_DOC}
+	cd ${S}
 	kde_src_compile
+	S=${_S}
 }
 
 src_install(){
 	kde_src_install
-	cd ${WORKDIR}/${P_DOC}
+	_S=${S}
+	S=${WORKDIR}/${P_DOC}
+	cd ${S}
 	kde_src_install
+	S=${_S}
 }
