@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/jnettop-0.11.0.ebuild,v 1.2 2005/09/27 20:33:12 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/jnettop-0.11.0.ebuild,v 1.3 2006/02/15 23:15:50 jokey Exp $
 
 DESCRIPTION="A top like console network traffic visualiser"
 HOMEPAGE="http://jnettop.kubs.info/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
-DEPEND="virtual/libpcap
+DEPEND="net-libs/libpcap
 	>=dev-libs/glib-2.0.1"
 
 src_install() {
