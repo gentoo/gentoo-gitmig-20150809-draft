@@ -1,8 +1,40 @@
-MD5 10480e86752d1a0bfc611bf1ded27a17 ChangeLog 3016
-MD5 62a50c250b28b0ac09ec04c83ae4ee6e gaim-meanwhile-1.2.5.ebuild 644
-MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
-MD5 9ecc19cd7e2069dddf882277f33175e5 gaim-meanwhile-1.2.3.ebuild 650
-MD5 e3192c471aa6609913eb9c276aa14302 gaim-meanwhile-1.2.4.ebuild 644
-MD5 e68483f7c5f1ab6d83fd5b968f665cab files/digest-gaim-meanwhile-1.2.5 72
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e7be6480d3949ffb584cf17c6c3d0960 ChangeLog 3160
+RMD160 706c1f1d4917b52c927119db484a67429f612663 ChangeLog 3160
+SHA256 9f49ef2523d5f4b677a83c614b74642c4cf31f21c7059a33310e23bfa2208d9f ChangeLog 3160
 MD5 d1e4a29aa0ec5b6f4f82e119bba6f45c files/digest-gaim-meanwhile-1.2.3 72
+RMD160 b2eeaca9df4cfee1b7005265a4db1628cbc5de46 files/digest-gaim-meanwhile-1.2.3 72
+SHA256 eda7884b841f2b5a906e98d1b30601efedbf35f9545c08913ed8922b8e2ed087 files/digest-gaim-meanwhile-1.2.3 72
 MD5 f44984ac2e4ce4c2a71535f62ea2cf28 files/digest-gaim-meanwhile-1.2.4 72
+RMD160 ef72666fb4ac757cb0007c9266f909895a19f5b8 files/digest-gaim-meanwhile-1.2.4 72
+SHA256 814d81885efc7e2c2761b922f64fb927d44ee9913f4a0e1ce3606b0e96df8c89 files/digest-gaim-meanwhile-1.2.4 72
+MD5 e68483f7c5f1ab6d83fd5b968f665cab files/digest-gaim-meanwhile-1.2.5 72
+RMD160 f6a13e8e2592ce0b11aa9ccd6811dbcd6f8c6895 files/digest-gaim-meanwhile-1.2.5 72
+SHA256 dc0646bf07b875adf43fd290e5c20f1a6527f86f1e190ce6ca581d73eded6b91 files/digest-gaim-meanwhile-1.2.5 72
+MD5 d132352aae8171bf7650b054bebc4527 files/digest-gaim-meanwhile-1.2.8 262
+RMD160 8a4175f4c3846746716660ec023ed1ca8b28575b files/digest-gaim-meanwhile-1.2.8 262
+SHA256 9de380fe09413fabdfd0082c13f979d5d040ca162846f871fd930b39c138e1e3 files/digest-gaim-meanwhile-1.2.8 262
+MD5 9ecc19cd7e2069dddf882277f33175e5 gaim-meanwhile-1.2.3.ebuild 650
+RMD160 7392b52a00e625d3eab8fdb479a426dfa74aeb7e gaim-meanwhile-1.2.3.ebuild 650
+SHA256 df7a2fad4e01f98b818d1e499e99a112a62f13f964bf315de4552e0e54d86032 gaim-meanwhile-1.2.3.ebuild 650
+MD5 e3192c471aa6609913eb9c276aa14302 gaim-meanwhile-1.2.4.ebuild 644
+RMD160 529301135f1cc9f2eaafcfd3238e756a54bf176b gaim-meanwhile-1.2.4.ebuild 644
+SHA256 914623850cf33ae777244b1269ef0cd5669ba314c030b3578a825bd2768c3bff gaim-meanwhile-1.2.4.ebuild 644
+MD5 62a50c250b28b0ac09ec04c83ae4ee6e gaim-meanwhile-1.2.5.ebuild 644
+RMD160 ccf8701eea3c216d6fea8710c5fae7a42a1c93c9 gaim-meanwhile-1.2.5.ebuild 644
+SHA256 29231ce6f6096bf473e9e564857dd3369a24f56ef30d017e45112397e562ca81 gaim-meanwhile-1.2.5.ebuild 644
+MD5 bdd5bedca9e1172f165f58f8e17faa81 gaim-meanwhile-1.2.8.ebuild 642
+RMD160 75a38ef673af81be43a6ae8f75f434193ba18a8e gaim-meanwhile-1.2.8.ebuild 642
+SHA256 944aefbff597fab49cb54e826cc9bb49d366d791ab485cb1f0f7631b35b8b0dc gaim-meanwhile-1.2.8.ebuild 642
+MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
+RMD160 3e0df024f9705f0cd1798f45cd4b0698e183ee87 metadata.xml 159
+SHA256 bb3130d2515d5b2e4ff19aff2199bb00ac7c350bf78b34bbec55268bf1013908 metadata.xml 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD8y043mryvu3JUUURAkjhAJ9ELRRyr8vieo47ZRnFoprvcS15rQCfbDHZ
+49n4uanEEOPnZVPvyyjWzfo=
+=KUbt
+-----END PGP SIGNATURE-----
