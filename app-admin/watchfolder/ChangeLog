@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/watchfolder
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/ChangeLog,v 1.5 2005/04/24 05:25:45 wormo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/ChangeLog,v 1.6 2006/02/15 19:44:39 deltacow Exp $
+
+  15 Feb 2006; Scott Stoddard <deltacow@gentoo.org>
+  watchfolder-0.3.1.1.ebuild:
+  ~amd64 added.  Added link to a project page.
 
   23 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   watchfolder-0.3.1.1.ebuild:
