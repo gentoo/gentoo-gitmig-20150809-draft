@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f06305cbcc139861d094fa3e4fc3196a ChangeLog 7457
 RMD160 45f544abc690a44795294c220c82eba287383788 ChangeLog 7457
 SHA256 522df5276bbd355a514429c1348800ed2c0d5efbf04debd139acca221cdf9181 ChangeLog 7457
@@ -10,6 +7,9 @@ SHA256 ebfe7a7cf0ee2f608f7037959107ec0ff92bbdf85c16ac3bf2562efb8ea4f3bf files/di
 MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-libpng-0.10.1 76
 RMD160 97d21777d5f71055e3c8195f020410e701de998a files/digest-gst-plugins-libpng-0.10.1 76
 SHA256 ea5ad800ee837feabe74ff1d5fac6d75b364dbd5e8713b3fbe0ce741318ed99a files/digest-gst-plugins-libpng-0.10.1 76
+MD5 fe9a62d6f739f7cfd223099d201d8834 files/digest-gst-plugins-libpng-0.10.2 274
+RMD160 22c35dad51ee8ae394e206b6a6a92eb0342f54ee files/digest-gst-plugins-libpng-0.10.2 274
+SHA256 9b259ce24ad9f7b760050d3916bb8f2e376b3118bbc5b6b55c61eda4a7c54fac files/digest-gst-plugins-libpng-0.10.2 274
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-libpng-0.8.10 72
 RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-libpng-0.8.10 72
 SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-libpng-0.8.10 72
@@ -34,6 +34,9 @@ SHA256 67f83c2fc70451157775612455a8a03b4dfbebd975b198b401c7922d8d72472a gst-plug
 MD5 b1b99569e416d8bcf7a8d373abccb8bb gst-plugins-libpng-0.10.1.ebuild 385
 RMD160 ed0c6b8f34e5b2d3a7307099972fb5887fcd9968 gst-plugins-libpng-0.10.1.ebuild 385
 SHA256 96ffc2a282538ce337cd84a9b1196c73dd33cd5aa9b51fd460027eadc3e3dad1 gst-plugins-libpng-0.10.1.ebuild 385
+MD5 b1b99569e416d8bcf7a8d373abccb8bb gst-plugins-libpng-0.10.2.ebuild 385
+RMD160 ed0c6b8f34e5b2d3a7307099972fb5887fcd9968 gst-plugins-libpng-0.10.2.ebuild 385
+SHA256 96ffc2a282538ce337cd84a9b1196c73dd33cd5aa9b51fd460027eadc3e3dad1 gst-plugins-libpng-0.10.2.ebuild 385
 MD5 8dbb4e35a8355f6c0d11512c3c55a0ff gst-plugins-libpng-0.8.10.ebuild 410
 RMD160 b7642cffbcd2aec6216a768587c6a32cdccd6887 gst-plugins-libpng-0.8.10.ebuild 410
 SHA256 3164874b3f10b162c36634948e6ae14f481710c3ae4173444ce432609122d101 gst-plugins-libpng-0.8.10.ebuild 410
@@ -52,10 +55,3 @@ SHA256 20afe5fc304cc31bb7b59cd4ba5c6d7aa05a80678451da3f2f363169322b181a gst-plug
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD62UNJrHF4yAQTrARAjZiAJ9xcJs1k6l49Yjy0RkdV7xA/jqFiwCgoECa
-7w01d2fPZlCm+EWf51OFjzY=
-=DaGo
------END PGP SIGNATURE-----
