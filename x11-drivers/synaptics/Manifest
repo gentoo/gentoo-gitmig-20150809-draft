@@ -1,4 +1,4 @@
-MD5 4f56b6e4338169fb6ed2ee204c65f855 ChangeLog 11258
+MD5 5176c886c4963b16332cd5a50481a922 ChangeLog 11351
 MD5 b18951d106b4ce580ac6177b199cf712 files/digest-synaptics-0.14.2 69
 MD5 f2c16c935f2447340a41eb72bb137f57 files/digest-synaptics-0.14.3 69
 MD5 7a7d3c5180f7a18b8b19bc2221017874 files/digest-synaptics-0.14.4-r2 69
@@ -10,4 +10,4 @@ MD5 f2c484f02a746852ee1295ca1f092e8d files/synaptics-0.14.x-gcc4-the-sentinels-h
 MD5 1cb923bfa5e7e99ae6804f147a1c730c metadata.xml 164
 MD5 2a4687edaec022b5305d3ec2b019acc0 synaptics-0.14.2.ebuild 2028
 MD5 cbce8427827b5b3fc38fe018192422af synaptics-0.14.3.ebuild 2029
-MD5 c1ebf89e88cc436ff6cc89368d164110 synaptics-0.14.4-r2.ebuild 1999
+MD5 00358929c37dd4f527ce8d06f2ef5736 synaptics-0.14.4-r2.ebuild 2006
