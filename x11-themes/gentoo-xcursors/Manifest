@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 541b29b43bef794b187d212946fc394d ChangeLog 1166
-RMD160 87908bccd592675ba245a2cb46466511fb50a426 ChangeLog 1166
-SHA256 77d637d3f5b235faab8ab1bca771af9c37d299529a75581638c4524a076082f3 ChangeLog 1166
+MD5 6be45c063b7f24783944825853f51914 ChangeLog 1285
+RMD160 b973bffe107459e217a9d261467b7ea2eb198982 ChangeLog 1285
+SHA256 6acb02963033e6d5961ce70952d19d6c27228fea77c36689073b1920cea63d36 ChangeLog 1285
 MD5 478b2487c26f4f003dc6bfc27135eabc files/digest-gentoo-xcursors-0.3.1 78
 RMD160 9e3e1aa9ea128ef6cc79bf571b9306ef5d19168d files/digest-gentoo-xcursors-0.3.1 78
 SHA256 ec07bd9df81b60f9765372843e553fef5f147ae698135c2d544f552a9aa291cd files/digest-gentoo-xcursors-0.3.1 78
-MD5 6c180a442ab8f76376eb1aaf5d483bcf gentoo-xcursors-0.3.1.ebuild 1533
-RMD160 24adbe67a7fb7705cc8e25ff4f84f3425776c844 gentoo-xcursors-0.3.1.ebuild 1533
-SHA256 22c6291f2e81348fa06fd6b4ecf386e66abf17fad803d6da7a679dadc1d1d203 gentoo-xcursors-0.3.1.ebuild 1533
+MD5 9181c35bec9e2a358f4ff90139aa2dae gentoo-xcursors-0.3.1.ebuild 1543
+RMD160 87cff379cd7439f83853abe057ed581bb855c55f gentoo-xcursors-0.3.1.ebuild 1543
+SHA256 9908e28ba0470dec9a6bbe7cf11e68a5fb5dde09f26f80cbcfcc37c7d95ad194 gentoo-xcursors-0.3.1.ebuild 1543
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8jtKoFw4q70f3SsRAvqRAKCflwY5Sklwn8qHl5VPwX8q1lEwNQCfTNee
-Aa/lSIGjUqM8RhxZ92Z3Dxg=
-=lz9H
------END PGP SIGNATURE-----
