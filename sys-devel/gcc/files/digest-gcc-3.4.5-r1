@@ -1,0 +1,6 @@
+MD5 d5da59b788f30b6e31488cdae51ca822 bounds-checking-gcc-3.4.4-1.00.patch.bz2 815608
+MD5 4d832eb1bb9fb67cf784d98acab356f8 gcc-3.4.5-patches-1.2.tar.bz2 48176
+MD5 c9403328cea26d2582310d7c821eb95a gcc-3.4.5-piepatches-v8.7.9.tar.bz2 8140
+MD5 cb9fda1432fb18b239935c9e23c0b637 gcc-3.4.5-ssp-1.0.tar.bz2 31589
+MD5 b4f1d2ab4001a2d186b8d5830fcdccfc gcc-3.4.5-uclibc-patches-1.0.tar.bz2 26048
+MD5 7c3c3c3e764dcee5eb771432062d69e1 gcc-3.4.5.tar.bz2 28254232
