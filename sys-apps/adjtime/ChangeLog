@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/adjtime
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/adjtime/ChangeLog,v 1.3 2006/01/25 08:48:41 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/adjtime/ChangeLog,v 1.4 2006/02/15 03:31:48 nerdboy Exp $
+
+*adjtime-0.4-r2 (15 Feb 2006)
+
+  15 Feb 2006; Steve Arnold <nerdboy@gentoo.org> -files/adjtime.conf,
+  -files/adjtime.init, -adjtime-0.4-r1.ebuild, +adjtime-0.4-r2.ebuild:
+  updated RDEPEND atom (sanitized for cirianm's protection) and removed 
+  init script and conf files (shell environment dorks up perl script
+  execution and I have no way of watching the boot process).
 
   25 Jan 2006; Steve Arnold <nerdboy@gentoo.org> files/adjtime.pl:
   updated to original script with only path change; not sure why a "which"
