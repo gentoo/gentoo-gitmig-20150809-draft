@@ -1,4 +1,4 @@
-MD5 6c813738736c2f605c5ce1109c69359b ChangeLog 4580
+MD5 5159ce9eb82ab7173451fbb3edeb81c8 ChangeLog 4689
 MD5 9212f9bc81514ddee76f6c4251ca71c3 files/20_mod_ruby.conf 1286
 MD5 d87224e9645bea207d6db5f6a2079e97 files/21_mod_ruby.conf 1281
 MD5 fa5123111f5278201525d49f658b4a3b files/digest-mod_ruby-1.0.7 65
@@ -11,5 +11,5 @@ MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 0a3b2010518d678dcb74dacf8511fe28 mod_ruby-1.0.7.ebuild 927
 MD5 3bee9f0cde08505727d25806cb7ccf36 mod_ruby-1.2.2.ebuild 1924
 MD5 2b4d5ae65d1dc92adf5c70292819be42 mod_ruby-1.2.4-r1.ebuild 1136
-MD5 2bcac85b8868d56f3470ff761100be50 mod_ruby-1.2.4-r2.ebuild 1169
+MD5 d8da450581c5a4aec41727b2e748a900 mod_ruby-1.2.4-r2.ebuild 1167
 MD5 5d348c12096664c37eaba44a777ae090 mod_ruby-1.2.4.ebuild 1922
