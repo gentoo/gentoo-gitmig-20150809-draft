@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/njb-sharp/njb-sharp-0.2.2.ebuild,v 1.4 2006/01/21 19:31:40 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/njb-sharp/njb-sharp-0.2.2.ebuild,v 1.5 2006/02/15 15:29:26 metalgod Exp $
 
 inherit mono
 
@@ -11,7 +11,7 @@ SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 
 RDEPEND=">=dev-lang/mono-1.1.10
 	doc? ( >=dev-util/monodoc-1.1.8 )
