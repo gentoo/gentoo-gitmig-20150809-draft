@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sidplay
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/ChangeLog,v 1.10 2004/10/04 20:01:45 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/ChangeLog,v 1.11 2006/02/15 13:32:35 flameeyes Exp $
+
+  15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> sidplay-2.0.9.ebuild:
+  pkgconfig is not an RDEPEND.
 
   04 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   sidplay-2.0.9.ebuild:

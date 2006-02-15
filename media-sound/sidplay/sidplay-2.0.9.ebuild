@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/sidplay-2.0.9.ebuild,v 1.3 2004/10/04 20:01:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/sidplay-2.0.9.ebuild,v 1.4 2006/02/15 13:32:35 flameeyes Exp $
 
 IUSE=""
 
@@ -14,7 +14,9 @@ LICENSE="GPL-2"
 
 KEYWORDS="x86 ~ppc sparc amd64"
 
-DEPEND=">=media-libs/libsidplay-2.1.0
+RDEPEND=">=media-libs/libsidplay-2.1.0"
+
+DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
 src_install () {
