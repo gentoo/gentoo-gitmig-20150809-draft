@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r2.ebuild,v 1.1 2006/02/08 21:15:41 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r2.ebuild,v 1.2 2006/02/15 16:16:26 ehmsen Exp $
 
-inherit tetex-3 flag-o-matic versionator
+inherit tetex-3 flag-o-matic versionator virtualx
 
 SMALL_PV=$(get_version_component_range 1-2 ${PV})
 TETEX_TEXMF_PV=${SMALL_PV}
@@ -54,7 +54,8 @@ src_compile() {
 
 src_test() {
 	fmtutil --fmtdir "${S}/texk/web2c" --all
-	make check
+	# The check target tries to access X display, bug #69439.
+	Xmake check || die "Xmake check failed."
 }
 
 src_install() {
