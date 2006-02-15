@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ece87fd4ff6571bee2659834e75197e0 ChangeLog 17104
+MD5 8d96fbfa2f3c6c9570c21c5eb9ef7185 ChangeLog 17224
 MD5 2c50194cee9e7484dc5ac78935fdf0d5 bind-9.2.5-r4.ebuild 8347
 MD5 109211a7fac00f530ce0d255763f24b2 bind-9.2.5-r6.ebuild 8376
-MD5 019bba509dc4afc330abe5aaaa88672e bind-9.2.6.ebuild 8997
-MD5 73b70a5f6fb5ffda9206972fa19dade3 bind-9.3.2.ebuild 8617
+MD5 e8484660d7cff32a98dcfb92b488d074 bind-9.2.6.ebuild 8995
+MD5 540b72c2469a6b392ecf268d084ed957 bind-9.3.2.ebuild 8615
 MD5 42b5ed5adcee33cf40531d7955412b21 files/10bind.env 27
 MD5 51197afe8da37b1b453456de90ca4f25 files/127.zone 227
 MD5 4346332cc9681502a3aedfd0a7a1ac41 files/bind-9.2.5-berkdb_fix.patch 537
@@ -31,10 +28,3 @@ MD5 412d666c947769b6015a65a42bb8ea00 files/named.rc6 1434
 MD5 a8ffc671392ffacafb5c49ffc1c6a4c6 files/named.rc6-pid_fix 488
 MD5 0eab8a4d5b98b79f76b136ab0dffabcf files/named.rc6-smart_pid_fix 1204
 MD5 bf7284c3e31bd3292a01fa046b3220bb metadata.xml 352
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD8fjHKRy60XGEcJIRArOGAJ45I4hw/Aqv2z9YXl88qNkf3X8U0wCgpQFZ
-Ho5bVjG2aVQS+24Ig0VvWjA=
-=/tvP
------END PGP SIGNATURE-----
