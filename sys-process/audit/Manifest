@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 66880c4f2d7b9dcf67670a8443aebbf8 ChangeLog 1783
 RMD160 6b83ed7ad612be20c1ba3f790e94fda198a8c60c ChangeLog 1783
 SHA256 31e944dca95a3b244c3d91d147caa65fd48d4bba04bf7d0cc3524be1c8dec240 ChangeLog 1783
@@ -19,9 +22,9 @@ SHA256 e61f879a74d4ad8597c836768a009029fd73eca50cc361248aabc2a00cdc0eb9 audit-0.
 MD5 ccaf6e8614e3b817335570e1085e2a9a audit-0.9.1.ebuild 1564
 RMD160 02e47ad08ae4f58d9f82b2773cf854d9a3aced53 audit-0.9.1.ebuild 1564
 SHA256 a01bf8e0f27c70b7d40183f587bf59c1734ea60bb11733353900632fe9131389 audit-0.9.1.ebuild 1564
-MD5 6b5359d49fcdc9dba09da8104ea2178f audit-1.1.3.ebuild 1688
-RMD160 e88244a5ffe1deebb6e4b5a1401a0ddd251fccff audit-1.1.3.ebuild 1688
-SHA256 c0ac7e5206f376a41d379c17a80e79541c7a3e28560fd1ba86d76e78d22282eb audit-1.1.3.ebuild 1688
+MD5 a4491bbbba20f3ba8dcb7b74354dffcb audit-1.1.3.ebuild 1688
+RMD160 a7b5758f6f5225a522a70d376edeafc61586b5d1 audit-1.1.3.ebuild 1688
+SHA256 7168a4b0bd5fb61465700d55ce768ed20bfcd61057b70f2dc2e1c98dfc415f5b audit-1.1.3.ebuild 1688
 MD5 fe4a6c96f2df7f9126c1f043610399f2 files/audit-1.1.3-compilefix.patch 3742
 RMD160 dd0a5338aaac12850e771d6baa9d0bfb5d3a4925 files/audit-1.1.3-compilefix.patch 3742
 SHA256 8ffe02eb9ee988996c9cb4ccdcc3ee39903131173260b13b72b94298fb3afff4 files/audit-1.1.3-compilefix.patch 3742
@@ -61,3 +64,10 @@ SHA256 767ae51f40e78e9455aec4012e2dd1b28b42323e473b811d8d29586c057cd622 files/di
 MD5 5b827f7378df0f835535406269d5d301 metadata.xml 296
 RMD160 6ab135a8e466e887a5a6d02338979f93da0a2acc metadata.xml 296
 SHA256 87bd81cdf18bd09d861194a0a7afd33e8f8f7fc7c91b381a411d6fadc03073ce metadata.xml 296
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD9PFsI1lqEGTUzyQRAtsgAJ9Cmrdz/xY+UhYuJt0jj/dHTdYTYgCgrGM/
+mSXcEojKnTlVCjol99uSCxk=
+=u9Fo
+-----END PGP SIGNATURE-----

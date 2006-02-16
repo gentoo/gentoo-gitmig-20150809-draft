@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.1.3.ebuild,v 1.2 2006/02/01 03:03:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.1.3.ebuild,v 1.3 2006/02/16 21:40:51 swegener Exp $
 
 DESCRIPTION="Userspace utilities for storing and processing auditing records."
 HOMEPAGE="http://people.redhat.com/sgrubb/audit/"
@@ -15,7 +15,7 @@ DEPEND="sys-devel/libtool
 	virtual/os-headers
 	>=sys-devel/automake-1.9
 	>=sys-devel/autoconf-2.59
-	>=sys-kernel/linux-headers-2.6.15_rc6*"
+	>=sys-kernel/linux-headers-2.6.15_rc6"
 RDEPEND=""
 
 src_unpack() {
