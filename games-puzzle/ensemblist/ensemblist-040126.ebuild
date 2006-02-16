@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ensemblist-040126.ebuild,v 1.3 2005/08/07 12:57:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ensemblist-040126.ebuild,v 1.4 2006/02/16 20:33:36 tupone Exp $
 
 inherit games
 
@@ -13,12 +13,11 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11
+DEPEND="|| ( x11-libs/libXmu virtual/x11 )
 	virtual/opengl
 	virtual/glut
 	virtual/glu
 	media-libs/libpng
-	net-misc/curl
 	media-libs/libmikmod"
 
 src_unpack() {
