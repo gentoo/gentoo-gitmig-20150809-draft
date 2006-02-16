@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.3-r1.ebuild,v 1.11 2006/02/12 18:38:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.3-r1.ebuild,v 1.12 2006/02/16 20:34:06 agriffis Exp $
 
 inherit kde-dist eutils
 
@@ -27,7 +27,8 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )
 	ieee1394? ( sys-libs/libraw1394 )
 	hal? ( sys-apps/dbus
-	       sys-apps/hal )"
+	       sys-apps/hal )
+	ia64? ( >=sys-kernel/linux-headers-2.6.11-r4 )"
 
 RDEPEND="${DEPEND}
 	|| ( (
