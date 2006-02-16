@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/demolition/demolition-0.9.ebuild,v 1.5 2004/10/30 11:14:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/demolition/demolition-0.9.ebuild,v 1.6 2006/02/16 09:22:02 flameeyes Exp $
 
 IUSE=""
 
 S="${WORKDIR}/demolition"
 
-DESCRIPTION="A destruction/stress testing tool for LADSPA plugins. It's intended mostly for sanity checking your own code before you release it to the world."
+DESCRIPTION="Destruction/stress testing tool for LADSPA plugins"
 HOMEPAGE="http://www.ecs.soton.ac.uk/~njl98r/code/ladspa/demolition.html"
 SRC_URI="http://www.ecs.soton.ac.uk/~njl98r/code/ladspa/${P}.tar.gz"
 
