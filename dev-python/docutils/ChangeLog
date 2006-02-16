@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.41 2006/02/14 16:44:36 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.42 2006/02/16 23:05:51 marienz Exp $
+
+  16 Feb 2006; Marien Zwart <marienz@gentoo.org> -files/glep-0.3-r1/glep.py,
+  -files/glep-0.3-r1/glep_htmlwrite.py,
+  -files/docutils-0.3.3-extramodules.patch,
+  -files/glep-0.3.3/glep_htmlwrite.py,
+  -files/docutils-0.3-extramodules.patch, -files/glep-0.3-r1/glepread.py,
+  -files/glep-0.3.3/glepread.py, -files/glep-0.3-r1/glepstrans.py,
+  -files/glep-0.3.3/glep.py, -files/glep-0.3.3/glepstrans.py,
+  -files/glep.py, -files/glep_htmlwrite.py, -files/glepread.py,
+  -files/glepstrans.py, -docutils-0.3_pre20030530-r3.ebuild,
+  -docutils-0.3-r1.ebuild, -docutils-0.3.3-r1.ebuild:
+  Remove old versions.
 
   14 Feb 2006; Marien Zwart <marienz@gentoo.org> docutils-0.4.ebuild:
   Fix bug breaking src_compile if docutils is not installed already. Thanks to
