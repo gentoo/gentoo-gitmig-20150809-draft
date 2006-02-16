@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b39d5fc6231d9eba061c48e64f23cb8e ChangeLog 3616
-RMD160 619dda4103a14a8d639235d3f774204ad039c9b7 ChangeLog 3616
-SHA256 344d3ea64b06b4005da651ebe08ace4018e8caca7274f333318bc8509e6d1da5 ChangeLog 3616
+MD5 796f141bc389b13bd4aea64abb5c5543 ChangeLog 3706
+RMD160 60d085dcb90a6c61ee815c6482ebe957739670dc ChangeLog 3706
+SHA256 302d17e80580c1474cf5a7b2c99235dabfced6e98ee68ff33f2613f5c46bcb60 ChangeLog 3706
 MD5 72bb637b3c8e10303a6e27a000441f48 files/digest-prelude-lml-0.8.6 69
 RMD160 27129ece16101c58dbc85411d8fb7604cc7e16e9 files/digest-prelude-lml-0.8.6 69
 SHA256 96a93a323bbca97d1fe9a5dde56b41c9f7905b68a6333d8130e9842edfc00b45 files/digest-prelude-lml-0.8.6 69
@@ -25,16 +22,9 @@ SHA256 739f53b075256323ad5b45f17e8167bc8cc39bde90a2e4189a25474ae93536c4 metadata
 MD5 f8f42bb1cf4728ad52311a2650f3dd9e prelude-lml-0.8.6.ebuild 1449
 RMD160 05930dda2f70e6f529ce5ebbf14bb6d4b940f27b prelude-lml-0.8.6.ebuild 1449
 SHA256 79024cb895ebe03389b4e6f960aded8718d53249ee0637565582a3a450c68fa2 prelude-lml-0.8.6.ebuild 1449
-MD5 faf7c6dde891a7183faa9dcfec2a63ae prelude-lml-0.9.1.ebuild 1282
-RMD160 a0ae334b2da3c58091256c205fdf17c73ee0dff8 prelude-lml-0.9.1.ebuild 1282
-SHA256 eb84da1ad1138a42d940dfb08889d19e71af4e3b2e8970837a62f6d311a18dd2 prelude-lml-0.9.1.ebuild 1282
+MD5 a9ca89ab5aa9c66359b353f3f47472a6 prelude-lml-0.9.1.ebuild 1279
+RMD160 a6b2aefcb06d576dc7cff6a4127391d1c2f81dc0 prelude-lml-0.9.1.ebuild 1279
+SHA256 231642f905b57e9aa60da31dd0e330468c5b21c1b03cfa4cded8948b72b9c116 prelude-lml-0.9.1.ebuild 1279
 MD5 047b1369580b09eeca53bbe0500936b1 prelude-lml-0.9.2.ebuild 1286
 RMD160 78d66becebc2b04b63585c4efcfaf71a9433f5e7 prelude-lml-0.9.2.ebuild 1286
 SHA256 acd87c22fa7288a61980159d7f7ebeaa0ed9ae97b12d6a93829c296a5964db18 prelude-lml-0.9.2.ebuild 1286
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8TrgCRZPokWLroQRAgA1AJ9pFfNmFxCbfa+PaLCY5+G9flX80gCdE8in
-WqOQtfoGmUqxUuH9H2uTlBU=
-=NmXE
------END PGP SIGNATURE-----

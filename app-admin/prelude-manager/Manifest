@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2a3b20208a4713efa4b5d2609e0d494d ChangeLog 5054
-RMD160 73dc777a155a3b90b486d2e236fa8c81f687b414 ChangeLog 5054
-SHA256 a1fde9854395882ee4e5d9d491509f8b9cba9f4efcd14c70b21e6b634b72a55a ChangeLog 5054
+MD5 1078fc41e6cb45e1d9c1b081cfe0b696 ChangeLog 5153
+RMD160 f80fdd1c79b9af6e33e7f932e7fc14d3ef5094f2 ChangeLog 5153
+SHA256 38b76a0be078d6c9cbd052fb0b9e68bb2cf90283b4840e03d32d00002878378e ChangeLog 5153
 MD5 0f09014053460960e939fb9331994e5c files/digest-prelude-manager-0.8.10 74
 RMD160 8f751ba7d637a14d4fcddc0182b68ca1489bcd26 files/digest-prelude-manager-0.8.10 74
 SHA256 a30ed512c0b125bb87d971ea465ddd3f3d156b7fe608446d0ae006c046a802d6 files/digest-prelude-manager-0.8.10 74
@@ -25,16 +22,9 @@ SHA256 2c8fe9b415f9d9c8d763ce10ffd5f2bbba22ba5ba655af77eb3e1a1edbc79265 metadata
 MD5 64d111fe57e9af9f05950a86ac0c6531 prelude-manager-0.8.10.ebuild 1792
 RMD160 585c45fec52b941e30f22fd80e9a7c9fb6a59b2e prelude-manager-0.8.10.ebuild 1792
 SHA256 7cc29d7849b88891b3e470654706b98e168ebe460a9cf28e7c4d3ec4133cbd8d prelude-manager-0.8.10.ebuild 1792
-MD5 55b79d42c6b77812ad4f94d4179b9c11 prelude-manager-0.9.1-r1.ebuild 1417
-RMD160 278c41bf927ae7b07787d8fdaad431e7063bd7e0 prelude-manager-0.9.1-r1.ebuild 1417
-SHA256 10b713b8a604d996c0c73b8e73fdc240a7e5d39057a6bb4f21bb0c038cd85861 prelude-manager-0.9.1-r1.ebuild 1417
+MD5 9d9935b9f3681e3fc090ab9231f5760d prelude-manager-0.9.1-r1.ebuild 1414
+RMD160 482c44743be8c0bedeb0143706683ad45625ee4b prelude-manager-0.9.1-r1.ebuild 1414
+SHA256 e7733436ef1d4bd5b0d6606a6a9992a1f2007731f483d0d31a9e86e804b66a37 prelude-manager-0.9.1-r1.ebuild 1414
 MD5 55a2da802f1431febca9d125c2d7c76b prelude-manager-0.9.3.ebuild 1418
 RMD160 b7c8e92aab8fc54637f147ddf3d20f6635f534ac prelude-manager-0.9.3.ebuild 1418
 SHA256 01677641df8e4c0480a0849af5e2d86207319fbe3c5130654b5d819d6d87bba7 prelude-manager-0.9.3.ebuild 1418
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8TqtCRZPokWLroQRAmRWAJ91WtlQPB49wovf2zkkOUluQlymmwCeJkbv
-SQfjxhOACtXmcj9Ofd4dusU=
-=iwHb
------END PGP SIGNATURE-----
