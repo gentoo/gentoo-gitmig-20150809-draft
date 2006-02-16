@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.6.2.ebuild,v 1.1 2006/02/16 08:49:51 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.6.2.ebuild,v 1.2 2006/02/16 17:07:06 pfeifer Exp $
 
 inherit eutils
 
@@ -97,23 +97,21 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
 
-	cd programs/pluto
-
 	if use curl ; then
 		ebegin "Curl support requested. Enabling curl support"
-		sed -i -e 's:#LIBCURL=1:LIBCURL=1:g' Makefile || die
+		sed -i -e 's:USE_LIBCURL?=false:USE_LIBCURL?=true:g' Makefile.inc || die
 		eend $?
 	fi
 
 	if use ldap ; then
 		ebegin "LDAP support requested. Enabling LDAPv3 support"
-		sed -i -e 's:#LDAP_VERSION=3:LDAP_VERSION=3:g' Makefile || die
+		sed -i -e 's:USE_LDAP?=false:USE_LDAP?=true:g' Makefile.inc || die
 		eend $?
 	fi
 
 	if  use smartcard ; then
 		ebegin "Smartcard support requested. Enabling opensc support"
-		sed -i -e 's:#SMARTCARD=1:SMARTCARD=1:g' Makefile || die
+		sed -i -e 's:USE_SMARTCARD?=false:USE_SMARTCARD?=true:g' Makefile.inc || die
 		eend $?
 	fi
 }
