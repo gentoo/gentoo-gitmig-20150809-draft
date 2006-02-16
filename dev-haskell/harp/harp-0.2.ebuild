@@ -1,17 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/harp/harp-0.2.ebuild,v 1.2 2006/02/16 13:25:24 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/harp/harp-0.2.ebuild,v 1.3 2006/02/16 14:44:32 dcoutts Exp $
 
 CABAL_FEATURES="haddock lib"
 inherit haskell-cabal
 
-DESCRIPTION="Functions that simulate the behavior of regular patterns using a Match monad for parsing lists"
-HOMEPAGE="http://www.cs.chalmers.se/~d00nibro/haskell-src-exts/"
+DESCRIPTION="HaRP, or Haskell Regular Patterns is a Haskell regular expressions extension"
+HOMEPAGE="http://www.cs.chalmers.se/~d00nibro/harp/"
 SRC_URI="http://www.cs.chalmers.se/~d00nibro/haskell-src-exts/haskell-src-exts-${PV}.tar.gz"
 
-LICENSE="public-domain"
+LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="virtual/ghc"
