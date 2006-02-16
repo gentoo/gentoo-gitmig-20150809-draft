@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.3-r3.ebuild,v 1.1 2006/02/11 00:20:27 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.3-r3.ebuild,v 1.2 2006/02/16 19:54:03 nelchael Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2.0.0 )
 	)"
 
 DEPEND="${RDEPEND}
-	!gtk2? (
+	!gtk? (
 		|| ( (
 			x11-proto/xextproto
 			x11-proto/xf86dgaproto
