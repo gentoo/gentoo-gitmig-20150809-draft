@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.14.5.ebuild,v 1.2 2006/02/14 12:49:35 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.14.5.ebuild,v 1.3 2006/02/16 13:14:26 dcoutts Exp $
 
+CABAL_FEATURES="bin"
 inherit base eutils haskell-cabal
 
 DESCRIPTION="An interface generator for Haskell"
