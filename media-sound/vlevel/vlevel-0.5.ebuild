@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/vlevel-0.5.ebuild,v 1.9 2005/09/04 10:39:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/vlevel-0.5.ebuild,v 1.10 2006/02/16 09:04:52 flameeyes Exp $
 
 IUSE=""
 
 inherit eutils
 
-DESCRIPTION="VLevel is a dynamic compressor which amplifies the quiet parts of music. It's currently a LADSPA plugin and a command-line filter."
+DESCRIPTION="Dynamic compressor to amplify quiet parts of music"
 HOMEPAGE="http://vlevel.sourceforge.net/"
 SRC_URI="mirror://sourceforge/vlevel/${P}.tar.gz"
 
