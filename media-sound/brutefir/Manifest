@@ -1,18 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3884dd6c510ff66ae3aaa3a4081329cd ChangeLog 1219
-MD5 c43ff38601053da1c3c6b7ee55c36be3 brutefir-1.0a.ebuild 1375
-MD5 6436e194d5f16699d8e192a981c3664f brutefir-1.0c.ebuild 1440
-MD5 5fb30fa19c4e9cab5fb9106ddae5f903 brutefir-1.0f.ebuild 1440
+MD5 7ab7e44719aaa48697ca5db55ed5f89b ChangeLog 1387
+RMD160 afdc099dbe7072968274248e0213002e3daf0456 ChangeLog 1387
+SHA256 c5bb5573fb82916c6def0d83a9e12e2f3aef4cad6c4b5c310a61246043b5111a ChangeLog 1387
+MD5 d1d05c794e66f08a722b35d7f0e38bfb brutefir-1.0a.ebuild 1287
+RMD160 c8252570288034395a1ca6286b495fb68af6d48d brutefir-1.0a.ebuild 1287
+SHA256 b1b20d86f713809ab2ffaa39b4daa13262caf97725cb2d27d79dd86d903dde76 brutefir-1.0a.ebuild 1287
+MD5 632f0c22b22da4dc3b3d043b360b5016 brutefir-1.0f.ebuild 1353
+RMD160 c3c887dba753f2c47a582c3cdc450bb0c9e3845a brutefir-1.0f.ebuild 1353
+SHA256 c4275c9049a8becc9a2610adaa15184da349834b7cb5a368d81b230c87fa777c brutefir-1.0f.ebuild 1353
 MD5 e53cb835af1469d768807b0fd8ba01b5 files/digest-brutefir-1.0a 65
-MD5 f3fe2cc506000749fab46ac8f60f5a77 files/digest-brutefir-1.0c 65
+RMD160 9282c1340d3cb9698e93a2396c3e80827e4318e4 files/digest-brutefir-1.0a 65
+SHA256 65b377c1ea8f5efbcf5d8ad2178ec11ec72f2c3512a64683bb5cb1d55a45c7ea files/digest-brutefir-1.0a 65
 MD5 61cb56ec32c0be03de77091426320138 files/digest-brutefir-1.0f 65
+RMD160 856248d526c4c949d6e750de41c1b2c53fe7a93a files/digest-brutefir-1.0f 65
+SHA256 1bdf7a474c2eef32ddcaca62711e608363b10b8981256eefeada91290efd6c77 files/digest-brutefir-1.0f 65
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDVXtep5vW4rUFj5oRAkUkAJ9yubyR9rfAWsCPPk8cCQdRvokiFgCfczzg
-snmXZ9Ju+tX85eENnAyKNiY=
-=ER23
------END PGP SIGNATURE-----
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158

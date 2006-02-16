@@ -1,19 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5032c5589fd74016f087289e686dd2d5 ChangeLog 1735
-MD5 6d753d7bf9b8af316d1534631fd07b36 audiocompress-1.3.ebuild 927
-MD5 c508a63715c2471f1f45054952945967 audiocompress-1.5.1.ebuild 1278
-MD5 064cdc8ef114ff5836dc63656519e505 audiocompress-1.5.ebuild 946
+MD5 a805eba54b3fee4ef01f4f3eb9da4a16 ChangeLog 1920
+RMD160 ff2d4eae6fec2c125f2f5a54023b6d401bf40586 ChangeLog 1920
+SHA256 77b5eddef0ddcbd5877e1b9628757f597c81d4acc61cecc561154f19084b77eb ChangeLog 1920
+MD5 09f071e00ea2998b841fafd968bb4859 audiocompress-1.5.1.ebuild 1148
+RMD160 1a3f8ac74d932681ae4ced23dce7e54e9f2a90d1 audiocompress-1.5.1.ebuild 1148
+SHA256 cbbecd59e4c8493b8fccddf38b90d1402713f80d3cc2c7ab92fb3bdc7299992f audiocompress-1.5.1.ebuild 1148
 MD5 f49cd4e9e5f178e7206b47bb03a4a841 files/audiocompress-1.5.1-gentoo.patch 983
-MD5 45241faef0fdd3134f481dd0e30f8079 files/digest-audiocompress-1.3 68
-MD5 14e76a619191ebae564b85c528b32d2e files/digest-audiocompress-1.5 68
+RMD160 ad46e7b3560d1a1412f895749f4c71d4392e611d files/audiocompress-1.5.1-gentoo.patch 983
+SHA256 c70a81351fd2465d6e8e63fd3ccd7425cc38f221f91ebef6732a6ffe48b9d444 files/audiocompress-1.5.1-gentoo.patch 983
 MD5 f47385522df4cea0523c5179f10cad25 files/digest-audiocompress-1.5.1 70
+RMD160 4c45517e317210150c0ed4266e785fb4a59bfe0c files/digest-audiocompress-1.5.1 70
+SHA256 35c4786cc21c77234aa97b7b18aafe73352dcfcf21c1b841c4a791b3de5f5dee files/digest-audiocompress-1.5.1 70
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDpdkuAiZjviIA2XgRAqHeAJ99QDEXOhOtRFrL/7b2i+6V62Id/wCfdJXh
-ljJCvmQBgqGTnmuiojRMW6k=
-=4Ejq
+iD8DBQFD9EM2AiZjviIA2XgRAm+IAKCBnXlM6ObQ5gACMToag5Dd7cMeSwCeLbNe
+HJcTiD8Hl65ypOuYzdUemLc=
+=nJXu
 -----END PGP SIGNATURE-----
