@@ -25,9 +25,9 @@ SHA256 853c205a48f73715adf8d1d219168aba9ba14d03254eb3815cb33ac44338f3cf binutils
 MD5 c27da3d52487e15e60046d50588227ff binutils-2.15.94.0.2.2.ebuild 348
 RMD160 daef735b74edf78e6202754960ef30e1aaaa843e binutils-2.15.94.0.2.2.ebuild 348
 SHA256 7872ee3a89f23a565fc74b74a4016809c67ae270f25e474f001c8eb57d3af6e1 binutils-2.15.94.0.2.2.ebuild 348
-MD5 fbe3895680c62eb59e6a48df558da9f4 binutils-2.15.ebuild 495
-RMD160 c47e09ac1df52b0a7f910e082f5a7a19ba820f41 binutils-2.15.ebuild 495
-SHA256 9887513ad5fea905562beb4ad6dbcfa5ae5f2ddce2cbe9ee6c889f8e3a63dfc6 binutils-2.15.ebuild 495
+MD5 6239f168017d13547e4dce9fc52e3898 binutils-2.15.ebuild 552
+RMD160 317b74088075474b15f4c3339602374133c43d1b binutils-2.15.ebuild 552
+SHA256 67c30960968d4756cc21c3a063d28d02ce5038bc3501748f8ca1acca84e56cf9 binutils-2.15.ebuild 552
 MD5 8ef2d393ea3e3a62f9c855119981406a binutils-2.16-r1.ebuild 584
 RMD160 3deb30c7f2d300fe3982778288d885fdc84abda5 binutils-2.16-r1.ebuild 584
 SHA256 8ec55824d71d8d92275e1f67b9bd7c9f31014a27f22be9284a8fde9fae297f71 binutils-2.16-r1.ebuild 584
@@ -64,9 +64,9 @@ SHA256 44b8e5007259b722b13647d533cf94522ced26762f5a7bf6853d1573c9e82ce9 files/di
 MD5 101096a94aae0d7e4d49e98df7925b4d files/digest-binutils-2.14.90.0.8-r3 249
 RMD160 ece4df820a161e7ad7d092fe1fa8f5f5195ed1e9 files/digest-binutils-2.14.90.0.8-r3 249
 SHA256 5da38713a4847f5aaef8b1f64600e15d28bb63ff16a8191b1b14df10a8df8180 files/digest-binutils-2.14.90.0.8-r3 249
-MD5 515d916dfb5a16f1bb50160553d7802a files/digest-binutils-2.15 146
-RMD160 7ed5181dc5de24240d4bd75e404554fa967e47fd files/digest-binutils-2.15 146
-SHA256 e9b0fdde0b8f5d2914f9ce708d6cd2a9e5d9d7c0a44b973f91212fd0214fe3ab files/digest-binutils-2.15 146
+MD5 8a0009238b1a84ae23657320c567898e files/digest-binutils-2.15 530
+RMD160 18eeb7b5ebe5f06faacd5a02e4d03212c87fdece files/digest-binutils-2.15 530
+SHA256 d8512c3add6298bd4ecb75af0099c7b3ea29fca15431cd143b8043fe340ab1c6 files/digest-binutils-2.15 530
 MD5 6b02d30c2c46486ab1d31a6617aad1e2 files/digest-binutils-2.15.90.0.1.1-r5 255
 RMD160 9f9eadcd6330a5d6b6494ef2d5248fb69567753f files/digest-binutils-2.15.90.0.1.1-r5 255
 SHA256 19cb812366e9d63576bef65b8cadaa1250e994ccebc84003e07d5853c5a8ec96 files/digest-binutils-2.15.90.0.1.1-r5 255
@@ -118,7 +118,7 @@ SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD8rg42+ySkm8kpY0RAhpvAJ9qDqh7VpdNq7EZBMszJNOOJ2KUJwCgnYqg
-IZneibN/ecg2bFmZy5dnW0I=
-=E4yC
+iD8DBQFD8/x92+ySkm8kpY0RAjHIAJ9dfBv8K6zZSfRnEEwe1iu+vYJdXgCfZFIm
+RchS31gj2PWePepYTUgNWD8=
+=W1bW
 -----END PGP SIGNATURE-----
