@@ -1,22 +1,52 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dc94b354cde38f2700a41ea78d5e5c32 ChangeLog 1257
+MD5 7f1659492288bd0199034296f2aaa9b4 ChangeLog 1416
+RMD160 f4c2d213752164337da070dddcb9718de14edd36 ChangeLog 1416
+SHA256 47571330e63a5a981d8c86cbf3eda16b35dc376d73c1222e6c6c402e60ed2631 ChangeLog 1416
 MD5 bef17e15dd04e689b0ab7990676d06bd acpitool-0.2.5.ebuild 672
+RMD160 f4645b5650a22ebab2b26de9ceb061874d4ecdfb acpitool-0.2.5.ebuild 672
+SHA256 76f5c01f4c85c2418e0fa3ac85e2308865600d7ad05c77744779c847bada2d7b acpitool-0.2.5.ebuild 672
 MD5 56555fe1c9c2c5daf611d33cd54882f7 acpitool-0.2.6.ebuild 821
+RMD160 1beb92c87236d6e8e1d652d5ed25a80d99016c05 acpitool-0.2.6.ebuild 821
+SHA256 3f1ab71f3613c0540eba864ec8f5204764327c82c5852fd078501d66159a60d4 acpitool-0.2.6.ebuild 821
 MD5 be3913d1e7295dd15d9cba7da59428d7 acpitool-0.2.7.ebuild 811
+RMD160 a5ae25bffe763a3d116f8ac8fb1443db7a906d45 acpitool-0.2.7.ebuild 811
+SHA256 19192dd0431519b784243aa6da9d6c98b5b507203d4d2b08d3214d1b54550b1f acpitool-0.2.7.ebuild 811
 MD5 74d1376a3ea8f9e3d7ad82012936a1a7 acpitool-0.4.2.ebuild 691
+RMD160 be51bb43bf24db7e44ab6c0ba9d37fe674894971 acpitool-0.4.2.ebuild 691
+SHA256 c1d00f5761f9a38d1a688bc82a5b7af85bfad2a0b170793f36a0e8680ae47e62 acpitool-0.4.2.ebuild 691
+MD5 f84584a13e88b158bcc276ec20f9c5b6 acpitool-0.4.4.ebuild 691
+RMD160 5133cba600b30a03e94d8f432ac90dee91a58d4c acpitool-0.4.4.ebuild 691
+SHA256 cf2ecf7ea8fc36185c25124f762e988280aaf82ac1095c87edf1f9484ace4aa0 acpitool-0.4.4.ebuild 691
 MD5 5b1fe7a8b6adfcf261f4131004973a83 files/acpitool-0.2.6-gentoo.patch 823
+RMD160 408e05f9e2693783593eda37f77abbb12c5e0961 files/acpitool-0.2.6-gentoo.patch 823
+SHA256 5a84f0e378c14518ed61f262fe88da2e8d75e5e08ed8c24fc38af82c5dc8abe6 files/acpitool-0.2.6-gentoo.patch 823
 MD5 3447a67e1cb95e7aac594a530eb4646e files/acpitool-0.2.7-gentoo.patch 898
+RMD160 e6d5164b44c9e9aa8af24be26d4b95a5e61e5fda files/acpitool-0.2.7-gentoo.patch 898
+SHA256 92b152c72ba9b8e041404b493eedf04ae7707f548afba6a6e081ae946ed57a66 files/acpitool-0.2.7-gentoo.patch 898
 MD5 138ad9564f4baf72faa419739abf111c files/digest-acpitool-0.2.5 66
+RMD160 14b37a05561fdc71748709b1b2513a5aa4fdfdd9 files/digest-acpitool-0.2.5 66
+SHA256 a62ba62c358f061b538d2d7632fbd4d36159111bd5621bb29be0a54098de3a36 files/digest-acpitool-0.2.5 66
 MD5 451f8882f44f7b7dc0967841a64dcac0 files/digest-acpitool-0.2.6 66
+RMD160 328189148490a7c22b1785ee90b05a31c724bb10 files/digest-acpitool-0.2.6 66
+SHA256 37b8ff0cb0bb4431dd27e97574a2ca798e50882e1103b2cb26e20b27fd7940a0 files/digest-acpitool-0.2.6 66
 MD5 8b9f311205786b4bc4413caca0101be7 files/digest-acpitool-0.2.7 66
+RMD160 978907a8803b455bbf6fa509c9cb85254edb1c67 files/digest-acpitool-0.2.7 66
+SHA256 42a9f5813458ddda71a5cbb17f865d3eb1275a0c33e32152372599468e0cd606 files/digest-acpitool-0.2.7 66
 MD5 795d53d63c3cff48ad82627008fcacf8 files/digest-acpitool-0.4.2 66
+RMD160 a0b3365d8c02d202585ea75b460020a5f7de4c09 files/digest-acpitool-0.4.2 66
+SHA256 9d6a6325768192afca8250bb1a0f7da33edbb1f10d4ee86b01e5b681fcd18535 files/digest-acpitool-0.4.2 66
+MD5 f7da4ac5a8a1bd4c3529c08c0419461e files/digest-acpitool-0.4.4 244
+RMD160 2aceb57e9935e6de45c095c3d1b7e23a6dd7a5d8 files/digest-acpitool-0.4.4 244
+SHA256 71e785b3ece54cc10b5e18882c75897aa237ba5e37e23a33437c8fcc8e1c90a4 files/digest-acpitool-0.4.4 244
 MD5 8629d3ef30ef3be4b273182406eef4f2 metadata.xml 224
+RMD160 e73100c3b7b6e761987fafac8783a4607a96ff5b metadata.xml 224
+SHA256 4649248bc71af10e619a06fa064d31e7df18cde3e446c9d67f387bffb0062e37 metadata.xml 224
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD13uzub4+zaPCR/oRAkxQAJ4rifM0Zr+esIwMaQQqocUSnsGWGQCfXV6q
-DpmJwnvyw/+M9ULYS2sGprY=
-=e4er
+iD8DBQFD9KOdub4+zaPCR/oRAooBAJkBs8cYHhM622tYsjvxHNOKZDSS3QCgnTmQ
+ob00KoICL0/GmGqpCiD08FI=
+=yUuc
 -----END PGP SIGNATURE-----

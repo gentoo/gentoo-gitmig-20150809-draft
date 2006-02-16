@@ -1,6 +1,12 @@
 # ChangeLog for app-laptop/acpitool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpitool/ChangeLog,v 1.8 2006/01/25 12:20:52 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpitool/ChangeLog,v 1.9 2006/02/16 15:06:00 sekretarz Exp $
+
+*acpitool-0.4.4 (16 Feb 2006)
+
+  16 Feb 2006; Karol Wojtaszek <sekretarz@gentoo.org>
+  +acpitool-0.4.4.ebuild:
+  Version bump, bug #122094 by Wolfram Schlich
 
 *acpitool-0.4.2 (25 Jan 2006)
 
