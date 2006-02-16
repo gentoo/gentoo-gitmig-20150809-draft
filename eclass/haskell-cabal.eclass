@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.2 2005/12/05 12:24:53 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.3 2006/02/16 12:32:53 dcoutts Exp $
 #
 # Original authors: Andres Loeh <kosmikus@gentoo.org>
 #                   Duncan Coutts <dcoutts@gentoo.org>
@@ -24,6 +24,8 @@
 #   cpphs      --  C preprocessor clone written in Haskell
 #   profile    --  if package supports to build profiling-enabled libraries
 #   bootstrap  --  only used for the cabal package itself
+#   bin        --  the package installs binaries
+#   lib        --  the package installs libraries
 #
 # Dependencies on other cabal packages have to be specified
 # correctly.
@@ -47,7 +49,9 @@ for feature in ${CABAL_FEATURES}; do
 		cpphs)     CABAL_USE_CPPHS=yes;;
 		profile)   CABAL_USE_PROFILE=yes;;
 		bootstrap) CABAL_BOOTSTRAP=yes;;
-		*) ewarn "Unknown entry in CABAL_FEATURES: ${feature}";;
+		bin)       CABAL_HAS_BINARIES=yes;;
+		lib)       CABAL_HAS_LIBRARIES=yes;;
+		*) CABAL_UNKNOWN="${CABAL_UNKNOWN} ${feature}";;
 	esac
 done
 
@@ -87,6 +91,10 @@ if [[ -z "${CABAL_BOOTSTRAP}" ]]; then
 	DEPEND="${DEPEND} >=dev-haskell/cabal-1.1.3"
 fi
 
+# Libraries require GHC to be installed.
+if [[ -n "${CABAL_HAS_LIBRARIES}" ]]; then
+	RDEPEND="${RDEPEND} virtual/ghc"
+fi
 
 cabal-bootstrap() {
 	local setupmodule
@@ -176,6 +184,9 @@ haskell-cabal_pkg_setup() {
 		eerror "the currently active version of ghc ($(ghc-version)). Please"
 		eerror "run ghc-updater or re-emerge dev-haskell/cabal."
 		die "cabal is not correctly installed"
+	fi
+	if [[ -n "${CABAL_UNKNOWN}" ]]; then
+		ewarn "Unknown entry in CABAL_FEATURES: ${CABAL_UNKNONW}"
 	fi
 }
 
