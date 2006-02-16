@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tap-reverbed
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/ChangeLog,v 1.3 2005/09/04 10:33:44 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/ChangeLog,v 1.4 2006/02/16 09:01:06 flameeyes Exp $
+
+  16 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> tap-reverbed-0.ebuild:
+  Fix dependencies, shorten description, drop redundant src_compile().
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> tap-reverbed-0.ebuild:
   Don't install COPYING and INSTALL files.

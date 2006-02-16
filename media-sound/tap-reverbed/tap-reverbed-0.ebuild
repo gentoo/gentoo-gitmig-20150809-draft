@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/tap-reverbed-0.ebuild,v 1.3 2005/09/04 10:33:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/tap-reverbed-0.ebuild,v 1.4 2006/02/16 09:01:06 flameeyes Exp $
 
 IUSE=""
 
 MY_P="${PN}-r0"
-DESCRIPTION="TAP Reverb Editor is the standalone JACK counterpart of the LADSPA plugin TAP Reverberator, which is part of the TAP-plugins LADSPA plugin set."
+DESCRIPTION="Standalone JACK counterpart of LADSPA plugin TAP Reverberator."
 HOMEPAGE="http://tap-plugins.sourceforge.net/reverbed.html"
 SRC_URI="mirror://sourceforge/tap-plugins/${MY_P}.tar.gz"
 S=${WORKDIR}/${MY_P}
@@ -14,17 +14,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-DEPEND="media-libs/ladspa-sdk
+RDEPEND="media-libs/ladspa-sdk
 	media-plugins/tap-plugins
 	>=x11-libs/gtk+-2
 	media-sound/jack-audio-connection-kit"
-RDEPEND="$DEPEND
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-src_compile() {
-	econf || die
-	emake || die
-}
 
 src_install() {
 	einfo ${D}
