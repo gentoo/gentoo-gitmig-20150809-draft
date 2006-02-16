@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1737 2006/02/15 15:31:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1738 2006/02/16 14:55:10 satya Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1108,6 +1108,7 @@ net-p2p/mldonkey:batch - enable internaly ocaml build
 net-p2p/mldonkey:guionly - enable client build only
 net-p2p/mldonkey:oldgtk - enable old gtk user interface
 net-print/omni:epson - include the epson drivers
+net-print/pkpgcounter:psyco - psyco python accelerator
 net-proxy/dansguardian:kaspersky - Adds support for Kaspersky AntiVirus software
 net-proxy/dansguardian:ntlm - Enable support for the NTLM auth plugin
 net-proxy/squid:customlog - Adds support for custom log file formats
