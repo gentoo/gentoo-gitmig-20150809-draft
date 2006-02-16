@@ -1,6 +1,6 @@
-# ChangeLog for dev-php/phing
+# ChangeLog for dev-php5/phing
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phing/ChangeLog,v 1.2 2006/01/04 11:28:45 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phing/ChangeLog,v 1.3 2006/02/16 19:08:43 swegener Exp $
 
 *phing-2.1.1 (04 Jan 2006)
 
