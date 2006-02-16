@@ -1,15 +1,55 @@
-MD5 5574c34c0d157ee03856a9d2c0cc2618 sudo-1.6.8_p9.ebuild 6039
-MD5 e8bded4926bd49891b467c4f47a543bd sudo-1.6.8_p11.ebuild 6630
-MD5 da0b502d6d0dd846ea363582e124b13d sudo-1.6.8_p9-r2.ebuild 6744
-MD5 7788940ba4d8fa88225616a96d43017d ChangeLog 11900
-MD5 4e3ab49065539b5aa4d3153261b5d687 metadata.xml 561
-MD5 c0bf8334e4588363fe3218373b4ff333 sudo-1.6.8_p12.ebuild 6306
-MD5 6c08a6d5527a45278ebc165df7f0031d files/sudo 223
-MD5 375b1725c7c89570ce74eba2a96b767d files/digest-sudo-1.6.8_p9-r2 64
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7035408458a350931144af1adb62e7a2 ChangeLog 11996
+RMD160 7b3b1d68fefdef2db86bcbbf5bee968639cce1b1 ChangeLog 11996
+SHA256 1bb24adfd147463fa33319c60882cb28828e4fb25afd4f01ebdc52c0db984d6a ChangeLog 11996
 MD5 c80edde705c9d67a189a45eaa2e42e15 files/digest-sudo-1.6.8_p11 65
+RMD160 bda24d0d091796b4b37748ad7523e970dc169b30 files/digest-sudo-1.6.8_p11 65
+SHA256 9efa04e5736bce763df36908e4b8faeb11c8ad552a65d83f809b7a142e4187ad files/digest-sudo-1.6.8_p11 65
 MD5 373ed8a9aaca90a6c339c4749156a62c files/digest-sudo-1.6.8_p12 65
-MD5 2a601951e4e5d6bdafc31b223737ddf5 files/sudo-ldap_timelimit.diff 2550
-MD5 0b50aabedf9bb326893b5f1c333e46b2 files/sudo-skeychallengeargs.diff 567
-MD5 59acf8b0292a8e60b5277b5dc952cfc4 files/sudoers 1645
-MD5 4a46750ff53c19dbfed39d894dd6ff4d files/sudo-1.6.8_p8-ldap-tls_cacert.diff 542
+RMD160 f7d8427644084b2ac8c94a52ee7a7d7286a35fd1 files/digest-sudo-1.6.8_p12 65
+SHA256 afa335edc285bda339bb8e689e312b14ed2b552b3c33a122fbb5fba997ea6f0f files/digest-sudo-1.6.8_p12 65
 MD5 375b1725c7c89570ce74eba2a96b767d files/digest-sudo-1.6.8_p9 64
+RMD160 4b959b431961ed5bc043a5186d67d937d7d09af8 files/digest-sudo-1.6.8_p9 64
+SHA256 b24cb964dcd375957a45366f7cc63ad5ec2d5e5c5d3b8781e97de4c5b328fb17 files/digest-sudo-1.6.8_p9 64
+MD5 375b1725c7c89570ce74eba2a96b767d files/digest-sudo-1.6.8_p9-r2 64
+RMD160 4b959b431961ed5bc043a5186d67d937d7d09af8 files/digest-sudo-1.6.8_p9-r2 64
+SHA256 b24cb964dcd375957a45366f7cc63ad5ec2d5e5c5d3b8781e97de4c5b328fb17 files/digest-sudo-1.6.8_p9-r2 64
+MD5 6c08a6d5527a45278ebc165df7f0031d files/sudo 223
+RMD160 4bc9a3e5d2dfd73bb1f14e5bad3b644ba80758d3 files/sudo 223
+SHA256 3f8dae2c663ed62bbe19e9b3e24f0e206fd1a4929bbafdff2e577e1aed9f2b58 files/sudo 223
+MD5 4a46750ff53c19dbfed39d894dd6ff4d files/sudo-1.6.8_p8-ldap-tls_cacert.diff 542
+RMD160 cff54e31749796f732ce176b568797999325715e files/sudo-1.6.8_p8-ldap-tls_cacert.diff 542
+SHA256 2bc04b2b3ccd20f0ca545b74ca7ac68b708a1852af2fe2c620e78a92a45c2b23 files/sudo-1.6.8_p8-ldap-tls_cacert.diff 542
+MD5 2a601951e4e5d6bdafc31b223737ddf5 files/sudo-ldap_timelimit.diff 2550
+RMD160 b34a41e3fc4016ff182ed1800e0f1b0f82d3bfdf files/sudo-ldap_timelimit.diff 2550
+SHA256 fc6eedb3435edbf5ccfcd5f62d8f31a78bf01afbb519c6b40bbe1329d82d6cea files/sudo-ldap_timelimit.diff 2550
+MD5 0b50aabedf9bb326893b5f1c333e46b2 files/sudo-skeychallengeargs.diff 567
+RMD160 906ee43a7c2f21d1cf5130eac5c98ef0833154fd files/sudo-skeychallengeargs.diff 567
+SHA256 11dfabe054532496998366f0a748c786fee0bd107d57fa42ace33ce2ac0d6b22 files/sudo-skeychallengeargs.diff 567
+MD5 59acf8b0292a8e60b5277b5dc952cfc4 files/sudoers 1645
+RMD160 f8bf0fe8bd5d1f02cf62438871a1662ad40c9f6f files/sudoers 1645
+SHA256 dfee348e1c5fc745656a24cb6f5e813a08e69e30a8ebf9b9a74a59cc36e5b7ea files/sudoers 1645
+MD5 4e3ab49065539b5aa4d3153261b5d687 metadata.xml 561
+RMD160 04a154038f02ff778d7f668490c262b240187904 metadata.xml 561
+SHA256 d28efd1ec2116064d019539bebd0d6f8efbe7ed04c2ae5ddc99cbc8b6bef2495 metadata.xml 561
+MD5 e8bded4926bd49891b467c4f47a543bd sudo-1.6.8_p11.ebuild 6630
+RMD160 23d824e5739dbd7c99bd567bdfe0b5c2c796d27e sudo-1.6.8_p11.ebuild 6630
+SHA256 97f6f74ef5d6d3a1a186ecea2906ac74617b2b7ab1a988eeaadda07877748502 sudo-1.6.8_p11.ebuild 6630
+MD5 f07cea654461596465083fbd468e51ee sudo-1.6.8_p12.ebuild 6305
+RMD160 9d2ddf920d3690188ffc118eaaad2c3636f82d54 sudo-1.6.8_p12.ebuild 6305
+SHA256 1605718d404ddbb38696d8802989d7a6a87f9673446e1fa2a2c985fe73586213 sudo-1.6.8_p12.ebuild 6305
+MD5 da0b502d6d0dd846ea363582e124b13d sudo-1.6.8_p9-r2.ebuild 6744
+RMD160 622adfbb3f5a1a0db629b340f86ba6534f9a2019 sudo-1.6.8_p9-r2.ebuild 6744
+SHA256 864ee0e4ace78180be7f28888f967c497b93a84c9b691f3229806b562d92db53 sudo-1.6.8_p9-r2.ebuild 6744
+MD5 5574c34c0d157ee03856a9d2c0cc2618 sudo-1.6.8_p9.ebuild 6039
+RMD160 392ed3c7a54af888a573141b56399b148e760738 sudo-1.6.8_p9.ebuild 6039
+SHA256 ea3fe473a8945516030cf6f6f5fa548265fa8398d6ebe7015f77410f94e63c82 sudo-1.6.8_p9.ebuild 6039
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD9MS8CRZPokWLroQRArVlAJ4mFTSiUcLxk8wgyBRxG0WJZCR37gCeIxtO
+MJ++y6C1aiG8HK7//GhoZRU=
+=aG4Z
+-----END PGP SIGNATURE-----
