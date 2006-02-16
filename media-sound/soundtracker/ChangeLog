@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/soundtracker
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.17 2006/02/15 13:39:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.18 2006/02/16 08:58:40 flameeyes Exp $
+
+  16 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -soundtracker-0.6.6.ebuild, soundtracker-0.6.7.ebuild:
+  Fix dependency over gettext, and drop old version.
 
   15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
   soundtracker-0.6.6.ebuild, soundtracker-0.6.7.ebuild:
