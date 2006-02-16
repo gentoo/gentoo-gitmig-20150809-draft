@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0a.ebuild,v 1.7 2005/01/22 11:53:26 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0a.ebuild,v 1.8 2006/02/16 09:20:12 flameeyes Exp $
 
 IUSE=""
 
 inherit eutils
 
-DESCRIPTION="BruteFIR is a software convolution engine, a program for applying long FIR filters to multi-channel digital audio, either offline or in realtime."
+DESCRIPTION="Software convolution engine for applying long FIR filters"
 HOMEPAGE="http://www.ludd.luth.se/~torger/brutefir.html"
 SRC_URI="http://www.ludd.luth.se/~torger/files/${P}.tar.gz"
 
