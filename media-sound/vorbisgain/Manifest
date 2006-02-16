@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ade6babf25b7a0cd7252701fe24f31c0 ChangeLog 2661
 RMD160 e35c7c4263ece0144bbdb61e7da2944e9e26ac8d ChangeLog 2661
 SHA256 a752ff01550d8d8358287cccf89594ddef92a07170e4faf57cc6288500cef6ef ChangeLog 2661
@@ -16,3 +19,10 @@ SHA256 8b61d527ab13ee0c9becef6dd4ba6deee90543cd3069d0f47156acfe8a656d4c vorbisga
 MD5 1ed64f0c2292d571143926f68fbc7729 vorbisgain-0.36.ebuild 758
 RMD160 a94f9a4f484a99909fff62f3bfc8ede20ef3b99c vorbisgain-0.36.ebuild 758
 SHA256 e7570d79c13699405c22bb2cb3e8fa9219cd39e7ab2b1f447fed187f1e758a8e vorbisgain-0.36.ebuild 758
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD9ECbAiZjviIA2XgRAl5cAKDyY+7oh0UMswgs00lYq4pGhVmERACeNvCj
+Nte1rJBNzr5WOE8+wYeD1Lg=
+=P3zf
+-----END PGP SIGNATURE-----
