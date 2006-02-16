@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-xlib
-# Copyright 2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xlib/ChangeLog,v 1.1 2005/05/17 19:46:15 agriffis Exp $
+# Copyright 2005-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xlib/ChangeLog,v 1.2 2006/02/16 19:00:54 twp Exp $
+
+*ruby-xlib-0.6.15-r1 (16 Feb 2006)
+
+  16 Feb 2006; Tom Payne <twp@gentoo.org> -ruby-xlib-0.6.15.ebuild,
+  +ruby-xlib-0.6.15-r1.ebuild:
+  Update for modular X. Fix permissions on examples files.
 
 *ruby-xlib-0.6.15 (17 May 2005)
 
