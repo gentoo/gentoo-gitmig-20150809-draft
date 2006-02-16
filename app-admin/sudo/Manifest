@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5e37a4454e2a52fcd347893baf9828fa ChangeLog 11792
+MD5 5574c34c0d157ee03856a9d2c0cc2618 sudo-1.6.8_p9.ebuild 6039
+MD5 e8bded4926bd49891b467c4f47a543bd sudo-1.6.8_p11.ebuild 6630
+MD5 da0b502d6d0dd846ea363582e124b13d sudo-1.6.8_p9-r2.ebuild 6744
+MD5 7788940ba4d8fa88225616a96d43017d ChangeLog 11900
+MD5 4e3ab49065539b5aa4d3153261b5d687 metadata.xml 561
+MD5 c0bf8334e4588363fe3218373b4ff333 sudo-1.6.8_p12.ebuild 6306
+MD5 6c08a6d5527a45278ebc165df7f0031d files/sudo 223
+MD5 375b1725c7c89570ce74eba2a96b767d files/digest-sudo-1.6.8_p9-r2 64
 MD5 c80edde705c9d67a189a45eaa2e42e15 files/digest-sudo-1.6.8_p11 65
 MD5 373ed8a9aaca90a6c339c4749156a62c files/digest-sudo-1.6.8_p12 65
-MD5 375b1725c7c89570ce74eba2a96b767d files/digest-sudo-1.6.8_p9 64
-MD5 375b1725c7c89570ce74eba2a96b767d files/digest-sudo-1.6.8_p9-r2 64
-MD5 6c08a6d5527a45278ebc165df7f0031d files/sudo 223
-MD5 4a46750ff53c19dbfed39d894dd6ff4d files/sudo-1.6.8_p8-ldap-tls_cacert.diff 542
 MD5 2a601951e4e5d6bdafc31b223737ddf5 files/sudo-ldap_timelimit.diff 2550
 MD5 0b50aabedf9bb326893b5f1c333e46b2 files/sudo-skeychallengeargs.diff 567
 MD5 59acf8b0292a8e60b5277b5dc952cfc4 files/sudoers 1645
-MD5 4e3ab49065539b5aa4d3153261b5d687 metadata.xml 561
-MD5 e878709f5fddd9f8b579d463bb19d369 sudo-1.6.8_p11.ebuild 6630
-MD5 1ee8086f08737be90ea2623d275a4dfe sudo-1.6.8_p12.ebuild 6288
-MD5 6fe59f5d809775d9c3345702d9eac260 sudo-1.6.8_p9-r2.ebuild 6745
-MD5 f7258273dc788f3949cfab7e9b8d1cd6 sudo-1.6.8_p9.ebuild 6039
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrqo/AiZjviIA2XgRAth+AJ92fVjd7Br0RPwKFtgmO+qyOrwTJwCgkuZH
-7VWY+S9A84HqFqZvPIiBp18=
-=FSYb
------END PGP SIGNATURE-----
+MD5 4a46750ff53c19dbfed39d894dd6ff4d files/sudo-1.6.8_p8-ldap-tls_cacert.diff 542
+MD5 375b1725c7c89570ce74eba2a96b767d files/digest-sudo-1.6.8_p9 64
