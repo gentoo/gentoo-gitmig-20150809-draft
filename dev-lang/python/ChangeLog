@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.188 2006/02/08 12:11:29 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.189 2006/02/16 18:15:04 marienz Exp $
+
+  16 Feb 2006; Marien Zwart <marienz@gentoo.org> -files/python-config-2.2.1,
+  -files/python-2.2.1-r5-gentoo.diff, -files/python-config-2.2.2,
+  -files/python-2.2.2-tk-8.4.x.patch, -files/python-2.3-xmlrpc.patch,
+  -files/python-2.4-db4.2.patch, -files/python-2.4-lib64.patch,
+  -files/python-2.4.1-readline.patch, -files/python-2.4-libdir.patch,
+  -files/python-2.4-readline.patch, -files/python-2.4-xmlrpc.patch,
+  -python-2.3.4-r1.ebuild, -python-2.3.5.ebuild, -python-2.3.5-r1.ebuild,
+  -python-2.4-r3.ebuild, -python-2.4.1.ebuild, -python-2.4.1-r1.ebuild:
+  Remove old versions.
 
   08 Feb 2006; Marien Zwart <marienz@gentoo.org> python-2.3.5-r2.ebuild,
   python-2.4.2.ebuild, python-2.4.2-r1.ebuild:
