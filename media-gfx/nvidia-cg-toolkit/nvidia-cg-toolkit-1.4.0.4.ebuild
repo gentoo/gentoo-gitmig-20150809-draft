@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-1.4.0.4.ebuild,v 1.2 2006/02/15 00:07:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-1.4.0.4.ebuild,v 1.3 2006/02/16 05:14:54 tsunam Exp $
 
 inherit versionator
 
@@ -12,7 +12,7 @@ SRC_URI="x86? ( http://download.nvidia.com/developer/cg/Cg_$(get_version_compone
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="virtual/glut"
