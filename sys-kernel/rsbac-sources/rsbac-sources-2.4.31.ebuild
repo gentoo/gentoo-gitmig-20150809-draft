@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.31.ebuild,v 1.3 2005/11/17 22:25:32 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.31.ebuild,v 1.4 2006/02/16 10:18:38 kang Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -33,5 +33,5 @@ this kernel
 Please see http://www.gentoo.org/proj/en/hardened/rsbac/quickstart.xml
 And the RSBAC hardened project http://www.gentoo.org/proj/en/hardened/rsbac/
 For help setting up and using RSBAC."
-K_EXTRAEWARN="Read http://rsbac.org/documentation/upgrading.php to
-upgrade from 1.2.4 to 1.2.5!"
+K_EXTRAEWARN="Please now use hardened-sources with the local USE flag rsbac.
+See http://hardened.gentoo.org/transition for more information."
