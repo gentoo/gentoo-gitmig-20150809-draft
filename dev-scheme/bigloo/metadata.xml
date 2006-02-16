@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>dev-scheme</herd>
+<herd>scheme</herd>
 <longdescription>
 Bigloo is a Scheme implementation devoted to one goal: enabling Scheme
 based programming style where C(++) is usually required. Bigloo attempts

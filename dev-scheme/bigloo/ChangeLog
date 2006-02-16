@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/bigloo
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.4 2005/01/22 21:27:36 karltk Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.5 2006/02/16 07:10:09 mkennedy Exp $
+
+  16 Feb 2006; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml:
+  Rename listed herd from dev-scheme to scheme; See Bug #94878.
 
   22 Jan 2005; Karl Trygve Kalleberg <karltk@gentoo.org> bigloo-2.6a.ebuild:
   Marking as stable, since 2.5c sure isn't. Fixes #68896.
