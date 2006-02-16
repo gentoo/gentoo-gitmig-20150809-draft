@@ -1,14 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f256668e5a4cec2a27f44cd447ead786 ChangeLog 486
+MD5 409e4849b2b5f7f2be7644209748e7ed ChangeLog 691
+RMD160 041190907cc700399288ac78ec4ecfabced271b5 ChangeLog 691
+SHA256 85f92c1c1e485da62403607ff790253edc7121fd7193e4705c24b6f5bdc2cb0a ChangeLog 691
 MD5 4b3350797519d01a6b372bb5a87ccfcf files/digest-pkpgcounter-1.72 68
+RMD160 d7ca24973533d8804b387f292cdb6695107557a7 files/digest-pkpgcounter-1.72 68
+SHA256 69a359d6515c75ba4cfbfb6167fdcc7c7691d59f5fd0d921e8ebe92037b677c6 files/digest-pkpgcounter-1.72 68
+MD5 3041211e9b4b98097cd8bf07560819aa files/digest-pkpgcounter-1.80 250
+RMD160 b4d606b99a5a3051e84627f58dd0c2e6325935d5 files/digest-pkpgcounter-1.80 250
+SHA256 dffc3bc15de7744a610151f66541c54e0739638a3d1be825cc06e22b6b5c61ba files/digest-pkpgcounter-1.80 250
 MD5 c85acb443a7c6618093c4201bc67d465 metadata.xml 433
+RMD160 50fa71d695e1311ff213ee1ca31b6ec1be46432e metadata.xml 433
+SHA256 9c39b2ad0b45784eee5910b96b81e3554c1266a8fc7ddcd0113a84a47eaef58d metadata.xml 433
 MD5 266a06fb74a63ef814cd5b0f0aab032b pkpgcounter-1.72.ebuild 659
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDekeJomPajV0RnrERAtJGAJ9ZnSdTpNLf3g0dd/CDCHOgs12UaACdH6XM
-aZi0niX4gShJhRfjq7SOa6Y=
-=wbwK
------END PGP SIGNATURE-----
+RMD160 ba0cdee78e6874babdcaa15c8b391008abf970e4 pkpgcounter-1.72.ebuild 659
+SHA256 bc0cea817d78540be30f488b99380feff7eb567e513091dc9591b7283d45c6da pkpgcounter-1.72.ebuild 659
+MD5 55cd2af28f0d580996a1607a6bd124d9 pkpgcounter-1.80.ebuild 709
+RMD160 333adfdd0fe691a6c0cfca074a47fa8a67ddee92 pkpgcounter-1.80.ebuild 709
+SHA256 555b677e673c70c02e7e8e72b650b1ee9ab2a28f5a06deed5d95d788bbe3ad2c pkpgcounter-1.80.ebuild 709
