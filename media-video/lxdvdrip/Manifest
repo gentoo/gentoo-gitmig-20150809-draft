@@ -1,19 +1,22 @@
-MD5 a46d4b97ffc4ec7fa1ae8ce35e505664 ChangeLog 2477
-MD5 98ffb17e0e60ca73e26b84cc01000a08 lxdvdrip-1.10_pre2.ebuild 824
-MD5 faa88f4f50b963458131d92d9902be49 lxdvdrip-1.10_pre5.ebuild 824
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 34f1ee9687b0ac4675557ddc5b229a44 lxdvdrip-1.20_pre1.ebuild 836
-MD5 1f2085867aca8430be678e0ba64a8f53 lxdvdrip-1.20_pre1-r1.ebuild 908
-MD5 758018800ab6d96a6f1bcebd1ac475f0 lxdvdrip-1.30_pre4.ebuild 826
-MD5 e45c8af23f99443baa37eccf1301dad7 lxdvdrip-1.41_p3.ebuild 839
-MD5 ba363ccde4c8eae9ee357e83e3d19d62 lxdvdrip-1.42_pre3.ebuild 840
-MD5 7d7e560be0a6848a90cf43e206bf6bc6 lxdvdrip-1.42.ebuild 832
-MD5 877c7bda100ae6f083ce5137aae3e5b1 files/digest-lxdvdrip-1.10_pre2 67
-MD5 cd76c64399dac2e89416dd89ccf32dda files/digest-lxdvdrip-1.10_pre5 67
-MD5 57482d8cce4aacca938b4e43c345e578 files/digest-lxdvdrip-1.20_pre1 67
-MD5 57482d8cce4aacca938b4e43c345e578 files/digest-lxdvdrip-1.20_pre1-r1 67
-MD5 9b28c10d15e06eb087911a837ec3a97c files/lxdvdrip-1.20_pre1-overflow.patch 752
-MD5 10cbb6fe087db5e0ce75173d95d03df0 files/digest-lxdvdrip-1.30_pre4 67
-MD5 c79bf474d5d152eba84500037e5b4085 files/digest-lxdvdrip-1.41_p3 64
-MD5 7acdd334a9016bfaddcad1b1ede3963d files/digest-lxdvdrip-1.42_pre3 67
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3d4df96e298bf85a551ee819c2f617a0 ChangeLog 2805
+RMD160 34c3f4dbcd8a9a449a3c09d7808218e0bb9ede0e ChangeLog 2805
+SHA256 41c5b6e6541c1a30b6463c82dcdb7162cd4a5b7b396ecf6b48c385f0d780b500 ChangeLog 2805
 MD5 0e271bb785f8bc65ef7d1be75c332f6a files/digest-lxdvdrip-1.42 62
+RMD160 6238d0e86e3979f9d3d9c11a8ea4eeafc6a582e5 files/digest-lxdvdrip-1.42 62
+SHA256 cb4f1f5a1f3e61eb2c749e86f31c09bdcccaf517c05ac236f279bf3127b64f78 files/digest-lxdvdrip-1.42 62
+MD5 7d7e560be0a6848a90cf43e206bf6bc6 lxdvdrip-1.42.ebuild 832
+RMD160 b520d48fdbf0638245fc54c8f124590af18ca0ba lxdvdrip-1.42.ebuild 832
+SHA256 ca3b14b2103f99a30cc458ce5b9badd5c9308e543cb8787182ca9ab5b691c3fb lxdvdrip-1.42.ebuild 832
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
+SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD9ANPAiZjviIA2XgRAsiBAJ9LNYBkv67kTRW0ZHqRIaSrgv68lACg0IFc
+OBpXltFkunBdNoGePbRCeZs=
+=O7ne
+-----END PGP SIGNATURE-----
