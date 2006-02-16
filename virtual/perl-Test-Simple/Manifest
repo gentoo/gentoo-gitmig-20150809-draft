@@ -1,22 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2f7f06ff80b9bb92ff7f4cbcab799f35 ChangeLog 810
+MD5 e6bf88b78705a09833a74fbd636a1af0 ChangeLog 815
+RMD160 0a757c9bea09b29fb660ac0ad3eb34b64862b06c ChangeLog 815
+SHA256 9453a51569863bc0b88c4a0be5d9296dd3684b2d2416e53ca9e8e2e908ce2897 ChangeLog 815
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.47 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Test-Simple-0.47 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Test-Simple-0.47 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.53 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Test-Simple-0.53 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Test-Simple-0.53 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.54 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Test-Simple-0.54 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Test-Simple-0.54 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.60 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Test-Simple-0.60 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Test-Simple-0.60 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.62 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Test-Simple-0.62 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Test-Simple-0.62 0
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 MD5 623a74c43c19cf47b2ed21f56ef319c3 perl-Test-Simple-0.47.ebuild 482
+RMD160 b600f4bad3f2d15b09db0f84efe288e836490885 perl-Test-Simple-0.47.ebuild 482
+SHA256 3681651b35dad276eda0a8dd855be2b8755506be96497b8d38a05cd7851c47ae perl-Test-Simple-0.47.ebuild 482
 MD5 7d2b944279b014232cbe45e2d4ff8602 perl-Test-Simple-0.53.ebuild 496
+RMD160 7d09f3ba665fd6aac8d9e9e11495039b24c6911b perl-Test-Simple-0.53.ebuild 496
+SHA256 53e7d853823119b95e5a83d686b2aba203904d2240bcc3221b15983c80a56e8e perl-Test-Simple-0.53.ebuild 496
 MD5 007d03d88648ae17467319bfc6caae26 perl-Test-Simple-0.54.ebuild 523
+RMD160 77a9c31bba68c410ca4bbb97346065dbf135aaac perl-Test-Simple-0.54.ebuild 523
+SHA256 2535b80395722ab422565f66276f8f44acb62db2a072feb9d32fc1ada02d567f perl-Test-Simple-0.54.ebuild 523
 MD5 591418feeb7f55ff10ccfd1e49db1ac4 perl-Test-Simple-0.60.ebuild 508
+RMD160 6188794b5f6cf6a66e56830fd534d0aa5035fc07 perl-Test-Simple-0.60.ebuild 508
+SHA256 fa1f29b4d6ea43a971aa350b11a4bd475ba8c6869a63a3935f41f2013bdc4e77 perl-Test-Simple-0.60.ebuild 508
 MD5 36dd33c7798f2553eaa605a46e4e1bf9 perl-Test-Simple-0.62.ebuild 524
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8OSvtG5z4I8BtQoRAhBeAJ9xQSQnq676JGvixPLxdoi4lMbfPACghEnx
-6iZaya3dmQCy3ZK3jnhYz/8=
-=0ayP
------END PGP SIGNATURE-----
+RMD160 bbfaa9acc2dd2833d37e4cc4692f064ffb9715c8 perl-Test-Simple-0.62.ebuild 524
+SHA256 6bbb70ae9e0bd6d2afd69166316f9abd09e7af7507851759658b6a109149ea16 perl-Test-Simple-0.62.ebuild 524

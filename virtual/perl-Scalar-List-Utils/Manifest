@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f144e29618d8939890f90a41f64b52ef ChangeLog 650
+MD5 ca49bdbba124b10522e04d1b41ae7ae8 ChangeLog 661
+RMD160 ea58369b11d197353d5c59717b2675ed2622712c ChangeLog 661
+SHA256 c50838b6c5191f8b47cd052792600bdcb37610e05b83667caaee543dc189435d ChangeLog 661
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Scalar-List-Utils-1.14 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Scalar-List-Utils-1.14 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Scalar-List-Utils-1.14 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Scalar-List-Utils-1.18 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Scalar-List-Utils-1.18 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Scalar-List-Utils-1.18 0
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 MD5 1734864e042366f9b8f40deef23327c8 perl-Scalar-List-Utils-1.14.ebuild 537
+RMD160 8b96240347297af3996d17cdb98304d8a54bc5bb perl-Scalar-List-Utils-1.14.ebuild 537
+SHA256 8897fd0b5f549de2618226e6d18c9388bac7bdd67b097a30866c6c96ec7c105b perl-Scalar-List-Utils-1.14.ebuild 537
 MD5 39dda3686c470d43ceaefa95bc8dbb70 perl-Scalar-List-Utils-1.18.ebuild 548
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8OOHtG5z4I8BtQoRAreuAJ9v+9nCYEXz1CDYwqE9+q9XiSl1rQCfSSd6
-ybJyNWqIy2/KcB5buytEiM0=
-=4Gog
------END PGP SIGNATURE-----
+RMD160 daf76cc2126ff4ad385a21ec04197077a2386a6d perl-Scalar-List-Utils-1.18.ebuild 548
+SHA256 ca640ca5e6589da6135e43cda7862e491def55d4eb5ec66ed12c7d9c3e169a3e perl-Scalar-List-Utils-1.18.ebuild 548

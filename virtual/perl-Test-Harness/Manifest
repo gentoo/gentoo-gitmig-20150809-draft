@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dda665edc6a61089be0464bc040da394 ChangeLog 721
+MD5 40d9adaa0ce10bf577fe9633480bd121 ChangeLog 727
+RMD160 bb0d514d6a462dcc48d195fa08336d1206982ba6 ChangeLog 727
+SHA256 2cd0ba94fcbf0ea0cd16e8c0394c2bb296e449145bbde7ed7c11298962fda766 ChangeLog 727
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Harness-2.30 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Test-Harness-2.30 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Test-Harness-2.30 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Harness-2.42 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Test-Harness-2.42 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Test-Harness-2.42 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Harness-2.52 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Test-Harness-2.52 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Test-Harness-2.52 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Harness-2.56 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Test-Harness-2.56 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Test-Harness-2.56 0
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 MD5 8bb81aafab44bc6848ea40f594b22bfb perl-Test-Harness-2.30.ebuild 470
+RMD160 c29211265b2dd2936d06f1113b144ef4a9938fc3 perl-Test-Harness-2.30.ebuild 470
+SHA256 33229867ba84301a47876e817a443d7f561406f2247e176f4cad47f8f8392c73 perl-Test-Harness-2.30.ebuild 470
 MD5 cfcb490b56f28cb1ae7128f72bcb86ce perl-Test-Harness-2.42.ebuild 493
+RMD160 b949b860a4a23ff657f952c0f3a38fdabc6c6247 perl-Test-Harness-2.42.ebuild 493
+SHA256 20a2d4c0709a4434359c564deeba7f054c5b63e327c39a366bb88e025c3a11d2 perl-Test-Harness-2.42.ebuild 493
 MD5 75c3f8b1532d49f8f4f0272c3619ac0f perl-Test-Harness-2.52.ebuild 505
+RMD160 e8757246c702eff9924e934e01bbf5261ef59877 perl-Test-Harness-2.52.ebuild 505
+SHA256 3835596d6555065d63d2b372e005c23f0bc4ded5c625eddd395652dcd18977cb perl-Test-Harness-2.52.ebuild 505
 MD5 3032ece0057486f3800fa4d181a21039 perl-Test-Harness-2.56.ebuild 533
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8ORJtG5z4I8BtQoRAhgKAJwItCbaF582+yY1WEwrXf5sHomBUQCbBqOU
-2ylCdGikpjLJD2IVyJMoSe4=
-=g1xO
------END PGP SIGNATURE-----
+RMD160 080581f642edd19654e26f32866a8e38573cf5f9 perl-Test-Harness-2.56.ebuild 533
+SHA256 4f7446263dde9ce8069eaa91b128956257d027b27eae113ead72b8561dac6f8c perl-Test-Harness-2.56.ebuild 533
