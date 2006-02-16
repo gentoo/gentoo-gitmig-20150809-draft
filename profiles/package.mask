@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5004 2006/02/16 10:22:30 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5005 2006/02/16 19:10:03 gothgirl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1508,10 +1508,6 @@ games-fps/aaut
 # <robbat2@gentoo.org> (20 Oct 2003)
 # needs gcc3.3/tcl8.4 fixing
 dev-embedded/picptk
-
-# <tseng@gentoo.org> (11 Oct 2003)
-# Mask pending a solution to bsetroot
-=x11-misc/commonbox-utils-0.5
 
 # <lu_zero@gentoo.org> (16 Mar 2003)
 # to be tested, seems unstable
