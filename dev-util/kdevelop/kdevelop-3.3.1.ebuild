@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.1.ebuild,v 1.3 2006/02/02 00:12:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.1.ebuild,v 1.4 2006/02/16 09:49:24 flameeyes Exp $
 
 inherit kde eutils
 
@@ -13,14 +13,16 @@ SLOT="3"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ada clearcase fortran haskell java pascal perforce perl php python ruby sql subversion"
 
-DEPEND="dev-lang/perl
-	sys-devel/flex
-	sys-devel/gdb
+DEPEND="sys-devel/gdb
 	=sys-libs/db-4.1*
 	|| ( kde-base/cervisia kde-base/kdesdk )"
 
 RDEPEND="${DEPEND}
 	subversion? ( || ( kde-base/kdesdk-kioslaves kde-base/kdesdk ) )"
+
+DEPEND="${RDEPEND}
+	dev-lang/perl
+	sys-devel/flex"
 
 need-kde 3.3
 
