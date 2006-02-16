@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.99.ebuild,v 1.3 2005/11/29 19:48:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.99.ebuild,v 1.4 2006/02/16 10:24:00 kang Exp $
 
 inherit eutils
 inherit subversion
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.rsbac.org/ http://hardened.gentoo.org/rsbac"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-*"
+KEYWORDS="~x86 ~amd64"
 NSS="1.2.5"
 
 DEPEND="dev-util/dialog

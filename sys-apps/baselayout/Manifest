@@ -1,15 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7250df8a9b72be4eaa98a9b967ec75c7 ChangeLog 69959
 RMD160 c9994f09e23eef3c73d9cdab47b7aafe721dc9d9 ChangeLog 69959
 SHA256 1546867216595c0059289f9af808bf11c53ab281da6bc825c9b1edae9bd330e6 ChangeLog 69959
 MD5 22a10db577b1b646d12ba31ed7b77a6c baselayout-1.11.13-r2.ebuild 19014
 RMD160 3d1348291157e3f973f4ad16e4f222fd32645593 baselayout-1.11.13-r2.ebuild 19014
 SHA256 236d09bf8aed1a3f73c26bdb287957a21212646ecb6eec21abaafa9ef6e3b2ef baselayout-1.11.13-r2.ebuild 19014
-MD5 13e3e96a36fdc076a3d531cdeaf49064 baselayout-1.11.14-r4.ebuild 19213
-RMD160 1bf2d87757e82f0c9f87d207f21752522e98bd1b baselayout-1.11.14-r4.ebuild 19213
-SHA256 00cdd0ace2680d9719677fb086833d4d1d60853e62597e51e8d830a9813b8142 baselayout-1.11.14-r4.ebuild 19213
 MD5 df00a32c6cfd96048ed3137f14fbe963 baselayout-1.11.14-r5.ebuild 19253
 RMD160 8e1874b303bc2a380df987dc4e96ab25830a5443 baselayout-1.11.14-r5.ebuild 19253
 SHA256 8519b85ba780be44bfe62e049a7f12421dd976005a1a675eeb8f7ed0509fbefc baselayout-1.11.14-r5.ebuild 19253
@@ -46,9 +40,6 @@ SHA256 38db4636f65ce40ea505a6337138b041ac6be5998982193d16b1fbdeebb2bacd files/co
 MD5 8dae78310577f3fb14c58704d529feb3 files/digest-baselayout-1.11.13-r2 70
 RMD160 48200b2167134f7ffe7373f392ae916adbaff088 files/digest-baselayout-1.11.13-r2 70
 SHA256 8be386254cdb00a3903244c63173c6f59df705f561d5e8c9e3865614baa84919 files/digest-baselayout-1.11.13-r2 70
-MD5 00d79deae663edaa627c8bbc572c6967 files/digest-baselayout-1.11.14-r4 256
-RMD160 61e4bfb394dabe52a62e8b2b56102ad0e6f60d66 files/digest-baselayout-1.11.14-r4 256
-SHA256 939da19d06f033b18784c7ab4a9d168d9b68caaf4cdbafde33ae754a10af754d files/digest-baselayout-1.11.14-r4 256
 MD5 00d79deae663edaa627c8bbc572c6967 files/digest-baselayout-1.11.14-r5 256
 RMD160 61e4bfb394dabe52a62e8b2b56102ad0e6f60d66 files/digest-baselayout-1.11.14-r5 256
 SHA256 939da19d06f033b18784c7ab4a9d168d9b68caaf4cdbafde33ae754a10af754d files/digest-baselayout-1.11.14-r5 256
@@ -61,10 +52,3 @@ SHA256 4800938394cdc3186eb178b7e9a0dc7d2f24954b860f697d00dfdb02fce94e74 files/di
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 RMD160 99e2546d3cc014ca5af909b5adb2f43693664bad metadata.xml 385
 SHA256 fbd7e4a5615d68c8d6f9438136dd18e41c43b393a9c00b0bea12661d790441e1 metadata.xml 385
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9FKcEbVyYKaZ/NERAgaFAJ9m86G+muwbCHfj08GOciXzx7h0dgCeMTXZ
-yZLmQe7aRaGMkGj+UtUTq8E=
-=8Kfg
------END PGP SIGNATURE-----
