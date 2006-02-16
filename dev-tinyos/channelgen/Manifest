@@ -1,6 +1,28 @@
-MD5 3d99e1c119df1e56487dea31cb98cc29 ChangeLog 946
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 adb7104657d66021318c6cf3829fe03c ChangeLog 945
+RMD160 1e90ec2c22eb27b141de16a23319dceb27415625 ChangeLog 945
+SHA256 a87ba0bd510776f5ed9da3053796c81a9b01e775b7c6d133960d66e3bcbfebfe ChangeLog 945
 MD5 2bb3d696743e3fe0f38ea4424103ada0 channelgen-1.1.14.ebuild 849
+RMD160 73a8dc6442d11d91925330fbd02e4eb7b96063be channelgen-1.1.14.ebuild 849
+SHA256 2a9e1f156a9b2812ad42336c78e8c424fbce04b9a277078612623bb0ebea7b7c channelgen-1.1.14.ebuild 849
 MD5 f61b953b8b979c61baa4bec4b1e9d205 channelgen-1.1.15.ebuild 849
+RMD160 30114b3b70898ce3fe1484269b0215378a8055a4 channelgen-1.1.15.ebuild 849
+SHA256 9d1cd3104dd2492b818e625f05599c6ad9506067d43bcd0452a5c36e9d7e30f0 channelgen-1.1.15.ebuild 849
 MD5 10a9388c3fc9c5c0c7134c4aab1590ce files/digest-channelgen-1.1.14 77
+RMD160 25de6252e0d11a75c857790f2d058f7414fcee98 files/digest-channelgen-1.1.14 77
+SHA256 71ac18c69867f5f29aab14a3945655c9a21559e521cf5426ce02c4a982c241c3 files/digest-channelgen-1.1.14 77
 MD5 4dc70773e9fed2b077c03fbbfbfab313 files/digest-channelgen-1.1.15 77
+RMD160 8ffc8f6d93943682e731328c2aaa845137c326ad files/digest-channelgen-1.1.15 77
+SHA256 b16029d9965ac3b333bce7588873be3e07d07e4b5fcbcc75aada726dfbcd65c2 files/digest-channelgen-1.1.15 77
 MD5 ea8bc3ad4a86ec2119e3dbdc66b52cca metadata.xml 778
+RMD160 a05d78566db100c874bd6f53f33b6133697f0ac8 metadata.xml 778
+SHA256 c40e5b42186643868969f1c69367ce4a09af1c963163fe5b7d454e99c911bf36 metadata.xml 778
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD9M4iI1lqEGTUzyQRAnSOAJ9IUKS5xFGp6+gyp/YWXSzKHhQUaACgkWQb
+cQSXi/bGTa/EncxPWq2M0zE=
+=j/uG
+-----END PGP SIGNATURE-----
