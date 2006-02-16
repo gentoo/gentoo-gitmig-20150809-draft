@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.68 2006/02/14 20:29:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.69 2006/02/16 04:30:02 spyderous Exp $
+
+*mesa-6.4.2-r1 (16 Feb 2006)
+
+  16 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/64bit-fix-have-dix-config.patch,
+  +files/64bit-fix-indirect-vertex-array.patch,
+  -files/6.4.1-amd64-include-assyntax.patch, -mesa-6.4.1-r1.ebuild,
+  -mesa-6.4.2.ebuild, +mesa-6.4.2-r1.ebuild:
+  Really fix direct rendering on amd64. Also remove old versions.
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org> mesa-6.4.1-r1.ebuild,
   mesa-6.4.2.ebuild:

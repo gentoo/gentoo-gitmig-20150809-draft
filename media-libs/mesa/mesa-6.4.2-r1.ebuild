@@ -1,13 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.1-r1.ebuild,v 1.8 2006/02/14 20:29:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2-r1.ebuild,v 1.1 2006/02/16 04:30:02 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
-
-# Arches that need to define their own sets of DRI drivers, please do so in
-# a variable up here, and use that variable below. This helps us to separate the
-# data from the code.
-DRI_DRIVERS_SPARC="ffb mach64 mga radeon savage"
 
 OPENGL_DIR="xorg-x11"
 
@@ -20,7 +15,21 @@ SRC_URI="mirror://sourceforge/mesa3d/${MY_SRC_P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="debug motif"
+IUSE_VIDEO_CARDS="
+	video_cards_ati
+	video_cards_sunffb
+	video_cards_i810
+	video_cards_mga
+	video_cards_none
+	video_cards_s3virge
+	video_cards_savage
+	video_cards_sis
+	video_cards_tdfx
+	video_cards_trident
+	video_cards_via"
+IUSE="${IUSE_VIDEO_CARDS}
+	debug
+	motif"
 
 RDEPEND="dev-libs/expat
 	x11-libs/libX11
@@ -52,7 +61,7 @@ fi
 pkg_setup() {
 	if use debug; then
 		strip-flags
-		append-flags -ggdb
+		append-flags -g
 	fi
 
 	if [[ ${KERNEL} == "FreeBSD" ]]; then
@@ -78,16 +87,77 @@ src_unpack() {
 	epatch ${FILESDIR}/6.4-dont-install-gles-headers.patch
 	epatch ${FILESDIR}/change-default-dri-driver-dir.patch
 	epatch ${FILESDIR}/6.4-multilib-fix.patch
-	epatch ${FILESDIR}/${PV}-amd64-include-assyntax.patch
+	epatch ${FILESDIR}/64bit-fix-have-dix-config.patch
+	epatch ${FILESDIR}/64bit-fix-indirect-vertex-array.patch
 
 	# Set default dri drivers directory
 	echo "DEFINES += -DDEFAULT_DRIVER_DIR='\"/usr/$(get_libdir)/xorg/modules/dri\"'" >> ${HOSTCONF}
 
-	# Set up linux-dri configs
+	# Configurable DRI drivers
+	if use video_cards_ati; then
+		add_drivers mach64 r128 radeon r200 r300
+	fi
+	if use video_cards_sunffb; then
+		add_drivers ffb
+	fi
+	if use video_cards_i810; then
+		add_drivers i810 i830 i915
+	fi
+	if use video_cards_mga; then
+		add_drivers mga
+	fi
+	if use video_cards_s3virge; then
+		add_drivers s3v
+	fi
+	if use video_cards_savage; then
+		add_drivers savage
+	fi
+	if use video_cards_sis; then
+		add_drivers sis
+	fi
+	if use video_cards_tdfx; then
+		add_drivers tdfx
+	fi
+	if use video_cards_trident; then
+		add_drivers trident
+	fi
+	if use video_cards_via; then
+		add_drivers unichrome
+	fi
+
+	# Defaults based on X.Org 6.9, with some changes
+	if [[ ! -n "${VIDEO_CARDS}" ]]; then
+		if use alpha; then
+			add_drivers mga tdfx r128 r200 r300 radeon
+		elif use amd64; then
+			add_drivers i915 mga r128 r200 r300 radeon tdfx
+		elif use arm; then
+			add_drivers mga r128 r200 r300 radeon
+		elif use hppa; then
+			# no accelerated 3D on hppa
+			true
+		elif use ia64; then
+			add_drivers mach64 mga r128 r200 r300 radeon tdfx unichrome
+		elif use mips; then
+			# no accelerated 3D on mips
+			true
+		elif use ppc; then
+			add_drivers mach64 mga r128 r200 r300 radeon tdfx
+		elif use ppc64; then
+			add_drivers mga r128 r200 r300 radeon
+		elif use sparc; then
+			add_drivers ffb mach64
+		elif use x86; then
+			add_drivers i810 i915 mach64 mga r128 r200 r300 radeon s3v savage \
+				sis tdfx trident unichrome
+		fi
+	fi
+
+	# Set drivers to everything on which we ran add_drivers()
+	echo "DRI_DIRS = ${DRI_DRIVERS}" >> ${HOSTCONF}
+
 	if use sparc; then
-		einfo "Define the sparc DRI drivers."
-		echo "DRI_DIRS = ${DRI_DRIVERS_SPARC}" >> ${HOSTCONF}
-		einfo "Explicitly note that sparc assembly code is not working."
+		einfo "Sparc assembly code is not working; deactivating"
 		echo "ASM_FLAGS =" >> ${HOSTCONF}
 		echo "ASM_SOURCES =" >> ${HOSTCONF}
 	fi
@@ -142,14 +212,16 @@ src_install() {
 	# anywhere.
 	dodir /usr/$(get_libdir)/xorg/modules/dri
 	exeinto /usr/$(get_libdir)/xorg/modules/dri
-	einfo "Installing drivers to ${EXEDESTTREE}."
+	ebegin "Installing drivers to ${EXEDESTTREE}"
 	find ${S}/lib* -name '*_dri.so' | xargs doexe
+	eend
 
-	insinto /usr/include/GL
-	doins ${S}/src/glw/GLwDrawA.h
-	if use motif; then
-		doins ${S}/src/glw/GLwMDrawA.h
+	if ! use motif; then
+		rm ${D}/usr/include/GL/GLwMDrawA.h
 	fi
+
+	# Don't install private headers
+	rm ${D}/usr/include/GL/GLw*P.h
 
 	fix_opengl_symlinks
 	dynamic_libgl_install
@@ -217,4 +289,8 @@ switch_opengl_implem() {
 		# OpenGL interface ...
 		echo
 		eselect opengl set --use-old ${OPENGL_DIR}
+}
+
+add_drivers() {
+	DRI_DRIVERS="${DRI_DRIVERS} $@"
 }
