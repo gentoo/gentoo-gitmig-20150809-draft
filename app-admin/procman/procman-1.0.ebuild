@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-1.0.ebuild,v 1.25 2006/02/11 18:19:54 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-1.0.ebuild,v 1.26 2006/02/16 23:48:11 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,9 +13,12 @@ SLOT="0"
 KEYWORDS="ppc sparc x86"
 IUSE="nls"
 
-DEPEND="<gnome-extra/gal-1.99
-	=gnome-base/libgtop-1.0*"
-RDEPEND="nls? ( sys-devel/gettext )"
+RDEPEND="<gnome-extra/gal-1.99
+	=gnome-base/libgtop-1.0*
+	nls? ( virtual/libintl )"
+
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
