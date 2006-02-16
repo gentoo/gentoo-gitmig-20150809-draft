@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 53fc15e837d657ce1703bf6e8bc5b98d ChangeLog 561
 RMD160 6ac70f3485641af26b14dd9162cd8b1307e9decf ChangeLog 561
 SHA256 50a694d5a41b1fee5e1b13ff2e2b9a331c4b4b60b0e1731fd3ecf8ddb888be74 ChangeLog 561
-MD5 ec887471013626485519bfca72ab7281 files/digest-kplato-1.5_beta1 69
-RMD160 61d4df0cc992d112c36930adc4e7dc5b97b4a3e0 files/digest-kplato-1.5_beta1 69
-SHA256 ba2f4b0b9eb0da757c22c9fb4852a969cd16574e8e9ace31712c72cc68295621 files/digest-kplato-1.5_beta1 69
-MD5 06162adbf1b2037b5b77053f003bd6cc kplato-1.5_beta1.ebuild 754
-RMD160 ff6b9c783a2476b3928777e8a5e175b8032080cf kplato-1.5_beta1.ebuild 754
-SHA256 fdb82ce78556f185cefbfec9225579b5c63e7b2a55a23040dd2ce11f9117986e kplato-1.5_beta1.ebuild 754
+MD5 82af01b67d83c02945f1e26ae9529232 files/digest-kplato-1.5_beta1 253
+RMD160 0e78237b9b17a1c13e8f3a1031875bddec8bafdb files/digest-kplato-1.5_beta1 253
+SHA256 43ee5c0ab325495515723afb3fc2e4bc79eba3f6987fbc2dad504492e5a6e076 files/digest-kplato-1.5_beta1 253
+MD5 3873b1f8d9559fa7a77ea7c7dfc65bd5 kplato-1.5_beta1.ebuild 761
+RMD160 bc877160c8b9d152b9abb05e364d263643956bd7 kplato-1.5_beta1.ebuild 761
+SHA256 4e2224064b4dbd26a1ee6e069fa83870dd5a3118feac7b2c09d46b29a09ae02b kplato-1.5_beta1.ebuild 761
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
 SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD66tUAiZjviIA2XgRAqjDAKCUPjupt8WjHKhClELhe/wKZWAvggCgpjGo
-6S9Ci9iS3uzJZv8EIC6U9JI=
-=YO+0
------END PGP SIGNATURE-----

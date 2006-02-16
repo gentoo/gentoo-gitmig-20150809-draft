@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kspread
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.30 2006/02/15 16:18:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.31 2006/02/16 02:14:57 weeve Exp $
+
+  16 Feb 2006; Jason Wever <weeve@gentoo.org> kspread-1.5_beta1.ebuild:
+  Added ~sparc keyword wrt bug #122204.
 
   15 Feb 2006; Markus Rothe <corsair@gentoo.org> kspread-1.5_beta1.ebuild:
   Added ~ppc64; bug #122204
