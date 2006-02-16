@@ -1,19 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 39b982463e877eb3253d82fbe53c5a6f ChangeLog 3866
-MD5 676123827c1f9954a5d26962aaf2a17d metadata.xml 501
-MD5 0d4e9791c342f0b86bfd7cc6a4f9bccb ngrep-1.44.ebuild 757
-MD5 e5c7ecfccc9b582a58336106bc08a669 ngrep-1.42.ebuild 866
-MD5 15e54d1970930271a7c4a7c27e7be82c ngrep-1.43.ebuild 622
-MD5 39d0cea1c55cbf48d2e5268ce04c3720 files/digest-ngrep-1.44 63
+MD5 6ba4d2b0964411cb93cb8af9b4b1aee0 ChangeLog 4012
+RMD160 d162f113d36e60960748e0ef9503dbf1a06d3838 ChangeLog 4012
+SHA256 c9df1e329f611fe37579424ae016160c76a1d3e75413367b394ecd491b8b8a1f ChangeLog 4012
 MD5 85a227510da15e6a2af304931c2ec1e7 files/digest-ngrep-1.42 63
-MD5 a7fdfbde749237f8813aefb8a2a93d7e files/ngrep-1.42-libpcap-include.patch 6398
+RMD160 878b39f4152787862c76a833f6f77d32a05baaed files/digest-ngrep-1.42 63
+SHA256 69c49c58ed8eb6d54f44184e8be1213a9a302c4e80fdc8f8a46476cbe0493589 files/digest-ngrep-1.42 63
 MD5 cd845e373218beedc9eb6856e28d29b1 files/digest-ngrep-1.43 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCyox9mdTrptrqvGERAjaPAJ0S2gWweUL+LE2Zuod7B/Nua86X1gCgktqG
-/TJjl6jlAKHvGzwqYOwrWC0=
-=0xiJ
------END PGP SIGNATURE-----
+RMD160 2b211b1b9b278658e0531811128955d5a10a70b5 files/digest-ngrep-1.43 63
+SHA256 5885fb15043ab33d8006f555baae3c9e05edcf74a015aa79fad2c45f81a730ef files/digest-ngrep-1.43 63
+MD5 39d0cea1c55cbf48d2e5268ce04c3720 files/digest-ngrep-1.44 63
+RMD160 61b08b18ab6d89f72851789e4a45f1a1524a12f5 files/digest-ngrep-1.44 63
+SHA256 16b77c6e11733e2b5db83f63f3fc9891a0de8f26a9f533254a269aee08e2a400 files/digest-ngrep-1.44 63
+MD5 a7fdfbde749237f8813aefb8a2a93d7e files/ngrep-1.42-libpcap-include.patch 6398
+RMD160 1c0544ae34fdfac92cb6c5b0cef200c2a949ba41 files/ngrep-1.42-libpcap-include.patch 6398
+SHA256 9039bb16c7be38eccb8fb1cb7982378ea1eaef55256368a9494e520e021a2391 files/ngrep-1.42-libpcap-include.patch 6398
+MD5 676123827c1f9954a5d26962aaf2a17d metadata.xml 501
+RMD160 26af8f66fce54937141d226342ed7bb3101a423c metadata.xml 501
+SHA256 19f8270fac394a4ad440ceaef68850f7b3add04bbaee3e77170de26def82ac0d metadata.xml 501
+MD5 f0e57420afa54d737dde98c0b4f92413 ngrep-1.42.ebuild 865
+RMD160 5789a2710736e4e781df73bc5a10a1da8da3cc7c ngrep-1.42.ebuild 865
+SHA256 8040ab3e059a25043fb562866c99515e637de5ddd78aabea81ba25a1dc1b0ed6 ngrep-1.42.ebuild 865
+MD5 2791ae8fec392d19f3eb83718dca8fb6 ngrep-1.43.ebuild 617
+RMD160 0dd56824b45e6a952bf0e89963bbcf0340209b43 ngrep-1.43.ebuild 617
+SHA256 0d70418cc147673980df8a197bbc088193999ed6080c70531e2e747ea7cd4582 ngrep-1.43.ebuild 617
+MD5 f475222636a877ec9b8d5de3c273a3ea ngrep-1.44.ebuild 752
+RMD160 0e923f2e031fed60f94966559668efc00ad1b67e ngrep-1.44.ebuild 752
+SHA256 32d5c8c54cee5ba7b12eed3271e4feb88f2a15245f7027a4ee87434c724752d0 ngrep-1.44.ebuild 752

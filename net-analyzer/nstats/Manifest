@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a84fe6c8d702ae864c2bd947d667ed6 nstats-0.4.ebuild 758
-MD5 db276098478371ceca59d191e518ed51 ChangeLog 1372
-MD5 471824686805ceb0bc7fbffbfe341a4b metadata.xml 266
-MD5 9f496f20339069acfc493469277a05bb files/nstats-0.4-makefile.patch 478
+MD5 965d878c2ceb354ac05f2430baf30373 ChangeLog 1485
+RMD160 20885836146a368f3bbbc85358edea8abeb0e2d6 ChangeLog 1485
+SHA256 65acb5109b06b6e6592a1445a2c047bc3b047ab706cb89ec92e9820d1cf52975 ChangeLog 1485
 MD5 436fb40a1859860df36dbcf6ba534dcc files/digest-nstats-0.4 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC+kifomPajV0RnrERAj0rAJ4z/T1oJi3tQw+q6ybpLJGeJIHqgwCcDZRD
-NTMnWXkG1Q7R8HVU3yjdaVk=
-=kasE
------END PGP SIGNATURE-----
+RMD160 30b645ccb89cd6d59cfd5dc23d11f432f3898d0d files/digest-nstats-0.4 61
+SHA256 977bb8010361c1afd5d29690ea37d8364f8955e2f0febf266f9b8c8e1260bb08 files/digest-nstats-0.4 61
+MD5 9f496f20339069acfc493469277a05bb files/nstats-0.4-makefile.patch 478
+RMD160 1dfe60fd1d279c41e739f9cc75109b6681780d6f files/nstats-0.4-makefile.patch 478
+SHA256 9aa20d2b54bb9e5027c20d7c33003bb2ada0cdd9b029890f73608feb2b8599f7 files/nstats-0.4-makefile.patch 478
+MD5 471824686805ceb0bc7fbffbfe341a4b metadata.xml 266
+RMD160 969673ed0966bf0d1e582411b1cb0785e816cc59 metadata.xml 266
+SHA256 730f6ab624d9d75e5188f993ab63c993c78f5afe268d50da67c525e4162bbe48 metadata.xml 266
+MD5 17e4f3fd5a69b3d5c3c4f0c4202e33ab nstats-0.4.ebuild 760
+RMD160 fcab34856e0962ef490cf77bb146c05c3409374c nstats-0.4.ebuild 760
+SHA256 d122aa16bb2d0a9b4be9fe6a2ec08d26b0d6b75a4e4bf342a3db6f129053fdc4 nstats-0.4.ebuild 760
