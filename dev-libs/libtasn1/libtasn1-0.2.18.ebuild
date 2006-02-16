@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-0.2.18.ebuild,v 1.9 2006/02/12 23:30:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-0.2.18.ebuild,v 1.10 2006/02/16 15:22:40 vanquirius Exp $
 
 DESCRIPTION="provides ASN.1 structures parsing capabilities for use with GNUTLS"
 HOMEPAGE="http://www.gnutls.org/"
@@ -13,6 +13,8 @@ IUSE="doc"
 
 DEPEND=">=dev-lang/perl-5.6
 	sys-devel/bison"
+
+RDEPEND=""
 
 src_install() {
 	make DESTDIR="${D}" install || die "installed failed"
