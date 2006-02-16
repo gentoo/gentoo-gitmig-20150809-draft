@@ -1,15 +1,55 @@
-MD5 22db6ffe9b839fe4fb5c9dc95f4b534d ChangeLog 14460
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 def4048ea4965cd6d77202c4665be553 ChangeLog 14687
+RMD160 c344d6d1fbef9e9936d97f8810c2c97d2c301206 ChangeLog 14687
+SHA256 12d03b09a7c97af69a26d1de27f89ead632407bc4f354900b0ccac2688b1bea4 ChangeLog 14687
 MD5 05b78a43919e346c710b79326bac8ad5 files/digest-kdesdk-3.3.2 66
+RMD160 dc529cbe00051a1c8b1e5b36cea41adfad892482 files/digest-kdesdk-3.3.2 66
+SHA256 08c1ec822d3774ba3f3824baadb4a8e6d6a0b19da4e719ad2216daee6d6fd29f files/digest-kdesdk-3.3.2 66
 MD5 e9178add9702e87b7fe025e8f7a2f8db files/digest-kdesdk-3.4.1 66
+RMD160 8199a2edc54ac3ff968f79f9983533c415ffc78f files/digest-kdesdk-3.4.1 66
+SHA256 9e05bca52651636c432f13cfa64ef430edb0e03361855caa919f561a74c23e5f files/digest-kdesdk-3.4.1 66
 MD5 086313a32c0a92f42f8050236d4494ab files/digest-kdesdk-3.4.2 66
+RMD160 f64c774d9a8e584cddfc8458fed7ffad941f2aa4 files/digest-kdesdk-3.4.2 66
+SHA256 7513ad88973a1794da64335d70b02ab648eb48c2aeb33bd6be81b8b96fad1414 files/digest-kdesdk-3.4.2 66
 MD5 c697e8b36b03bdccd95cf2d3980a0634 files/digest-kdesdk-3.4.3 66
+RMD160 f98c638a74524f4ba73ec5e5b6937e006f0eac58 files/digest-kdesdk-3.4.3 66
+SHA256 afdef23e83c0fedba0db5fbd5dc71a68a84f831545b9e4aa504279d91b2e4780 files/digest-kdesdk-3.4.3 66
 MD5 1e423fe06c976614875c91024253a35c files/digest-kdesdk-3.5.0 66
+RMD160 0f688457c3ce31725bc9e7dacd02fc00b522d5ba files/digest-kdesdk-3.5.0 66
+SHA256 68c3f0a231df037d9f160ef681108bd3667c570c618c70c218c18be641c7e3de files/digest-kdesdk-3.5.0 66
 MD5 37b63842d3bb2d884b13ebf46628a792 files/digest-kdesdk-3.5.1 66
+RMD160 4a4f776257134dc5753f59936f47f0a5c89ead63 files/digest-kdesdk-3.5.1 66
+SHA256 c55dc0a628300f22699d6bed9ebcd180dec8d93221eadc66b964184b1e09ca50 files/digest-kdesdk-3.5.1 66
 MD5 72d5f7e9416a5e70c188be7159797367 files/kdesdk-3.4-configure.patch 2511
-MD5 b4802bd82fc3d12e6f743beb36b8acda kdesdk-3.3.2.ebuild 503
-MD5 27813b6ec7aceda1c7af98816ddefc95 kdesdk-3.4.1.ebuild 513
-MD5 5e0cc8faaf27dcdcc64b297cc2fc1c71 kdesdk-3.4.2.ebuild 1259
-MD5 a409fd7a118ef40c13978e11f771026a kdesdk-3.4.3.ebuild 1261
-MD5 f8ccbf394d61ebb7a7027b496d7a08c6 kdesdk-3.5.0.ebuild 1071
-MD5 1438bcaafd3cda57a6f185c35dbc20ce kdesdk-3.5.1.ebuild 1073
+RMD160 f9fccb3eda429cd087aed6390b6c84cd1335edbe files/kdesdk-3.4-configure.patch 2511
+SHA256 be791d46aeb539451ddcba3c400f6c35aa7432ff47f7664d6b16652b3d5ecb10 files/kdesdk-3.4-configure.patch 2511
+MD5 e1e0ca400275b14e34f96547c6e2edd1 kdesdk-3.3.2.ebuild 527
+RMD160 7deb25ffe401736838c0d748dee7afaeb3b3c235 kdesdk-3.3.2.ebuild 527
+SHA256 caa18de15f5622640c88f01bed0827d94f261f7b00de0c19db66000d572ef186 kdesdk-3.3.2.ebuild 527
+MD5 4afd435a93070e548c3e8d4586fe588c kdesdk-3.4.1.ebuild 537
+RMD160 3d34e60e538e03448a18c3806d21ea933bf1dc81 kdesdk-3.4.1.ebuild 537
+SHA256 009b752b283229d9e4365a930df38497b585bfdeea899756bc2e156655acc1fc kdesdk-3.4.1.ebuild 537
+MD5 523a791071f96e8fbb475402213ed5d6 kdesdk-3.4.2.ebuild 1283
+RMD160 0a59458fe55d0aec8b28dfaa0dd204e052bce9bb kdesdk-3.4.2.ebuild 1283
+SHA256 e554f853b01336cb91ed98893c45890f6827034af17ea3320a8105fb797af22c kdesdk-3.4.2.ebuild 1283
+MD5 95517709776adda367c02b8d630fd84c kdesdk-3.4.3.ebuild 1285
+RMD160 7acb9ca4790ea025171dd6a8d267c38770c5d133 kdesdk-3.4.3.ebuild 1285
+SHA256 33e2ae438bcb328c9c9943efe781730588085d78412274d6b7efc53e8cbe8746 kdesdk-3.4.3.ebuild 1285
+MD5 c2d9dccd8686d511fc997c52bb385f5e kdesdk-3.5.0.ebuild 1095
+RMD160 ed4a972b48eaa7922c126faf1c1fac3492debd0d kdesdk-3.5.0.ebuild 1095
+SHA256 9bcfa471ff0b06f2275d1037c61fad0a1acdd61504fc1b743a21d91b5869312b kdesdk-3.5.0.ebuild 1095
+MD5 ab7fba74bef0f16723ba99ae063984a0 kdesdk-3.5.1.ebuild 1095
+RMD160 dba293938585695fb7b7c0e86d7a14a7ee5a23b0 kdesdk-3.5.1.ebuild 1095
+SHA256 6f80739e9d08d028df6d585fe4c3fa4585767438c21213a0a563a3dca76a4e3f kdesdk-3.5.1.ebuild 1095
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD9EagAiZjviIA2XgRAuiMAKDLRpUPLdW65DSHBgPcEmhsYJ8FzgCfUd+Q
+0/PgZNo3kNaLqbgLDhDFAGI=
+=uN5d
+-----END PGP SIGNATURE-----

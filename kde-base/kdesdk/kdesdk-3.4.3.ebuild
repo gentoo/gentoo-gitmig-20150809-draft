@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.4.3.ebuild,v 1.6 2005/12/17 15:29:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.4.3.ebuild,v 1.7 2006/02/16 09:32:23 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -10,7 +10,6 @@ KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="berkdb subversion"
 
 DEPEND="x86? ( dev-util/callgrind )
-	sys-devel/flex
 	subversion? ( dev-util/subversion )
 	berkdb? ( || ( =sys-libs/db-4.3*
 	               =sys-libs/db-4.2* ) )"
@@ -28,6 +27,9 @@ src_unpack() {
 	# For the configure patch.
 	make -f admin/Makefile.common || die
 }
+
+DEPEND="${RDEPEND}
+	sys-devel/flex"
 
 src_compile() {
 	local myconf="$(use_with subversion)"

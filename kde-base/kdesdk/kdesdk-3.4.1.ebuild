@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.4.1.ebuild,v 1.6 2005/08/13 23:20:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.4.1.ebuild,v 1.7 2006/02/16 09:32:23 flameeyes Exp $
 
 inherit kde-dist
 
@@ -11,8 +11,10 @@ IUSE="subversion"
 
 DEPEND="x86? ( dev-util/callgrind )
 	media-gfx/graphviz
-	sys-devel/flex
 	subversion? ( dev-util/subversion )"
 
 RDEPEND="${DEPEND}
 	dev-util/cvs"
+
+DEPEND="${RDEPEND}
+	sys-devel/flex"
