@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.2.ebuild,v 1.16 2006/02/08 12:11:29 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.2.ebuild,v 1.17 2006/02/16 21:34:33 marienz Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -14,11 +14,14 @@ PYVER_MAJOR=$(get_major_version)
 PYVER_MINOR=$(get_version_component_range 2)
 PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 
+PATCHTAR="${PN}-${PYVER}-patches-1"
+
 MY_P="Python-${PV}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Python is an interpreted, interactive, object-orientated programming language."
 HOMEPAGE="http://www.python.org/"
-SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2"
+SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
+	mirror://gentoo/${PATCHTAR}.tar.bz2"
 
 LICENSE="PSF-2.2"
 SLOT="2.4"
@@ -59,23 +62,23 @@ src_unpack() {
 	cd ${S}
 
 	# unnecessary termcap dep in readline (#79013)
-	epatch ${FILESDIR}/${PN}-2.4.2-readline.patch
+	epatch ${WORKDIR}/${PATCHTAR}/${PN}-2.4.2-readline.patch
 	# db4.2 support
-	epatch ${FILESDIR}/${PN}-2.4.1-db4.patch
+	epatch ${WORKDIR}/${PATCHTAR}/${PN}-2.4.1-db4.patch
 
 	# Upstream fix when building w/out thread support
-	epatch ${FILESDIR}/${P}-no-threads.patch
+	epatch ${WORKDIR}/${PATCHTAR}/${P}-no-threads.patch
 
 	# adds support for PYTHON_DONTCOMPILE shell environment to
 	# supress automatic generation of .pyc and .pyo files - liquidx (08 Oct 03)
-	epatch ${FILESDIR}/${PN}-${PYVER}-gentoo_py_dontcompile.patch
-	epatch ${FILESDIR}/${PN}-${PYVER}-disable_modules_and_ssl.patch
-	epatch ${FILESDIR}/${PN}-${PYVER}-mimetypes_apache.patch
+	epatch ${WORKDIR}/${PATCHTAR}/${PN}-${PYVER}-gentoo_py_dontcompile.patch
+	epatch ${WORKDIR}/${PATCHTAR}/${PN}-${PYVER}-disable_modules_and_ssl.patch
+	epatch ${WORKDIR}/${PATCHTAR}/${PN}-${PYVER}-mimetypes_apache.patch
 
 	# prepends /usr/lib/portage/pym to sys.path
-	epatch ${FILESDIR}/${PN}-${PYVER}-add_portage_search_path.patch
+	epatch ${WORKDIR}/${PATCHTAR}/${PN}-${PYVER}-add_portage_search_path.patch
 
-	epatch ${FILESDIR}/${PN}-2.4.1-libdir.patch
+	epatch ${WORKDIR}/${PATCHTAR}/${PN}-2.4.1-libdir.patch
 	sed -i -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):g" \
 		Lib/distutils/command/install.py \
 		Lib/distutils/sysconfig.py \
@@ -86,7 +89,7 @@ src_unpack() {
 		setup.py || die
 
 	# add support for struct stat st_flags attribute (bug 94637)
-	epatch ${FILESDIR}/python-2.4.1-st_flags.patch
+	epatch ${WORKDIR}/${PATCHTAR}/python-2.4.1-st_flags.patch
 
 	# fix os.utime() on hppa. utimes it not supported but unfortunately reported as working - gmsoft (22 May 04)
 	# PLEASE LEAVE THIS FIX FOR NEXT VERSIONS AS IT'S A CRITICAL FIX !!!
@@ -94,8 +97,8 @@ src_unpack() {
 
 
 	if tc-is-cross-compiler ; then
-		epatch "${FILESDIR}"/python-2.4.1-bindir-libdir.patch
-		epatch "${FILESDIR}"/python-2.4.1-crosscompile.patch
+		epatch "${WORKDIR}/${PATCHTAR}"/python-2.4.1-bindir-libdir.patch
+		epatch "${WORKDIR}/${PATCHTAR}"/python-2.4.1-crosscompile.patch
 	fi
 }
 

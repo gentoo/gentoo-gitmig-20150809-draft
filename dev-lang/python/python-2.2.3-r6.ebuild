@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r6.ebuild,v 1.4 2005/05/28 00:55:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r6.ebuild,v 1.5 2006/02/16 21:34:33 marienz Exp $
 
 inherit flag-o-matic eutils python versionator
 
@@ -8,10 +8,13 @@ PYVER_MAJOR=$(get_major_version)
 PYVER_MINOR=$(get_version_component_range 2)
 PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 
+PATCHTAR="${PN}-${PYVER}-patches-1"
+
 S="${WORKDIR}/Python-${PV}"
 DESCRIPTION="A really great language"
 HOMEPAGE="http://www.python.org"
-SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${PV}.tgz"
+SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${PV}.tgz
+	mirror://gentoo/${PATCHTAR}.tar.bz2"
 
 LICENSE="PSF-2.2"
 SLOT="2.2"
@@ -39,12 +42,12 @@ src_unpack() {
 	unpack ${A}
 	#Fixes security vulnerability in XML-RPC server - pythonhead (06 Feb 05)
 	#http://www.python.org/security/PSF-2005-001/
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.2.3-xmlrpc.patch
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-db4.patch
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-disable_modules_and_ssl.patch
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.3-add_portage_search_path.patch
-	epatch ${FILESDIR}/${PN}-2.2.3-gentoo_py_dontcompile.patch
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-fPIC.patch
+	EPATCH_OPTS="-d ${S}" epatch ${PATCHTAR}/${PN}-2.2.3-xmlrpc.patch
+	EPATCH_OPTS="-d ${S}" epatch ${PATCHTAR}/${P}-db4.patch
+	EPATCH_OPTS="-d ${S}" epatch ${PATCHTAR}/${P}-disable_modules_and_ssl.patch
+	EPATCH_OPTS="-d ${S}" epatch ${PATCHTAR}/${PN}-2.3-add_portage_search_path.patch
+	epatch ${PATCHTAR}/${PN}-2.2.3-gentoo_py_dontcompile.patch
+	EPATCH_OPTS="-d ${S}" epatch ${PATCHTAR}/${P}-fPIC.patch
 }
 
 src_configure() {
