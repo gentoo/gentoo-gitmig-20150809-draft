@@ -1,21 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 15eeaeccf0bd6f8465b34aeed7228c9c ChangeLog 4155
-MD5 1b8e1b375f69babf1fd8b370c33aa4bf files/digest-rsbac-admin-1.2.4 71
+MD5 8574aaaa3aa82faadde9d0f6212f1ea0 ChangeLog 4344
+RMD160 7cc356813cf281c2f2d521038cac6782a2d6036b ChangeLog 4344
+SHA256 0ef40de37251460c034acfdd58df88d64509095d621a2233577d4af1ebb44cfb ChangeLog 4344
 MD5 5b133f0238ddfd21834460d1b7ea1b99 files/digest-rsbac-admin-1.2.5 70
+RMD160 e08ea5f5458e09f9e8365157f1db950d5548438d files/digest-rsbac-admin-1.2.5 70
+SHA256 1530cbccec1f1de098970e3d1107346550134da2c6b049d95cff407afa2dba82 files/digest-rsbac-admin-1.2.5 70
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-rsbac-admin-1.2.99 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-rsbac-admin-1.2.99 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-rsbac-admin-1.2.99 0
 MD5 3bb29214fbb05d3caca8e842adee3fd0 files/nsswitch.conf 487
+RMD160 b45ed6660f60c6b3fbee2218d250e27f7746a2d1 files/nsswitch.conf 487
+SHA256 a92f145853fab10e1110b2ff3607a411a6fb4b4b97927d391e788e0bff019954 files/nsswitch.conf 487
 MD5 5bba238d756a6695447f1bb0264a01a3 files/rklogd.init 1014
+RMD160 f469f6cfe6e8015b9a0325a26dcfa2c55d6cb453 files/rklogd.init 1014
+SHA256 6c9bb160e637207dbac04019577fe442a97c26acdf77becbc9a557ce42a396b1 files/rklogd.init 1014
 MD5 3b63c2f46e9c0531be23e630133fe6a7 files/rsbac.conf 209
+RMD160 fb3ae78191f308ef488832eb844c6f3c7c3ccedf files/rsbac.conf 209
+SHA256 7ce39c310463001cffb2f8db01c8ff5154abdbede48a7e5c7b7a0252c8a80c19 files/rsbac.conf 209
 MD5 035ff78da2388cc0585f93ef2247332d metadata.xml 161
-MD5 2af626ad2bd32bd1a95f45b88c18f545 rsbac-admin-1.2.4.ebuild 2771
-MD5 dfa12750f04fd3adac7d6bc8aadb4e29 rsbac-admin-1.2.5.ebuild 2100
-MD5 660066c9ca7ce196987f4a9a05344775 rsbac-admin-1.2.99.ebuild 2168
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDjLCDAiZjviIA2XgRAkkgAJ4+c4PVfUS0ylIFZgr5paYAjX3+ZwCfQRLm
-Y54P6gXJEPMW93T2BLif3do=
-=jd/8
------END PGP SIGNATURE-----
+RMD160 600015e5b2643ae38ea2f9e5aaff6d31d42470a8 metadata.xml 161
+SHA256 f9146563cc3df2b0d02d2f554c5293d439b56a4d36bc5aed0c66aa83dfb06c2f metadata.xml 161
+MD5 0460c1444d0e8206dc69b4135f648741 rsbac-admin-1.2.5.ebuild 2094
+RMD160 b379d937f2cb0d882bcaa59185068a94b2d2b49a rsbac-admin-1.2.5.ebuild 2094
+SHA256 8c39332d2abd35dc68265717f19b34a7ec0108cd92f9bb5b74f766d1475e34d6 rsbac-admin-1.2.5.ebuild 2094
+MD5 7ef3b3af429c57e96c5b2ac62f11511c rsbac-admin-1.2.99.ebuild 2172
+RMD160 633ba94489f0824ed7d64b5bf25fce2eb4661370 rsbac-admin-1.2.99.ebuild 2172
+SHA256 6c15d13ebdda8a3a4005d31fe6e9dae4f913d74d959e88995049380b3eb571cb rsbac-admin-1.2.99.ebuild 2172
