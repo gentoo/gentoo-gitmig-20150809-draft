@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre20.ebuild,v 1.6 2006/02/15 13:37:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre20.ebuild,v 1.7 2006/02/16 15:17:36 vanquirius Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,7 +25,6 @@ IUSE="directfb fbcon gpm javascript jpeg livecd png sdl ssl svga tiff unicode X"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	gpm? ( sys-libs/gpm )
-	javascript? ( >=sys-devel/flex-2.5.4a )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.7 )
@@ -42,7 +41,8 @@ DEPEND="${RDEPEND}
 	sys-devel/automake
 	sys-devel/autoconf
 	sys-devel/gcc
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	javascript? ( >=sys-devel/flex-2.5.4a )"
 
 PROVIDE="virtual/textbrowser"
 
