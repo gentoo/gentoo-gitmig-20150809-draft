@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.118 2006/02/16 16:01:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.119 2006/02/16 19:49:58 grobian Exp $
+
+  16 Feb 2006; Fabian Groffen <grobian@gentoo.org>
+  openmotif-2.1.30-r13.ebuild, openmotif-2.2.3-r8.ebuild:
+  Marked ppc-macos stable (bug #114234)
 
 *openmotif-2.2.3-r9 (16 Feb 2006)
 
