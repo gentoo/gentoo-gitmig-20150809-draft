@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5ea1ef68d4bc88db064bb29400189eae ChangeLog 1219
-MD5 658a7374ea3d67d3a39c4d6eaf8b872d opmixer-0.75.ebuild 1068
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 5c5aff3a5d8372e6a48046af97b6343c files/digest-opmixer-0.75 64
+MD5 e7039ebf333258eb6ff019551dfcf9dd ChangeLog 1352
+RMD160 31eddc06ce408db415e23395edf8d28ed08db3b0 ChangeLog 1352
+SHA256 23cc1aaa8e24f4c28a55c69f116e65bed3c1700fd7cbda61bbc8d87b0a9a7a4e ChangeLog 1352
 MD5 c84f0516671e975810adc32baf3ad8f3 files/0.75-gcc34.patch 1354
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGtSij5H05b2HAEkRAuCmAKCBoV3k8iE6G0Ur7whdb1k/xYVIMwCfUeQn
-dD9f4Hj06sGlJQKfTUcrcFs=
-=GhOx
------END PGP SIGNATURE-----
+RMD160 73dbf205ef855a298d3e89cf602e0d1d32fe5434 files/0.75-gcc34.patch 1354
+SHA256 ac482022eb8981155f024364abf9151a3c242a911bcfb564722e2146c348f935 files/0.75-gcc34.patch 1354
+MD5 5c5aff3a5d8372e6a48046af97b6343c files/digest-opmixer-0.75 64
+RMD160 1fd492773337cf358b40801833853dae653d08c6 files/digest-opmixer-0.75 64
+SHA256 492e182d0c119df0359cc202b0fcaf95e53f401fda76819e6d0bf1ac165e041b files/digest-opmixer-0.75 64
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 70a5ee38f9cccd4eb19af951122af7be opmixer-0.75.ebuild 918
+RMD160 d0e6f5dc7da33fda7b80e195e5670b6354a1acc8 opmixer-0.75.ebuild 918
+SHA256 6201c14c1248ce3c48a13f3a2db769cc3f1d6e4cbfca82d9fc4e02caab0fa2e9 opmixer-0.75.ebuild 918

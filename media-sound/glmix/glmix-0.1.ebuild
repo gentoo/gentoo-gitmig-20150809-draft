@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glmix/glmix-0.1.ebuild,v 1.5 2004/11/12 08:29:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glmix/glmix-0.1.ebuild,v 1.6 2006/02/16 08:49:43 flameeyes Exp $
 
 IUSE=""
 
@@ -14,9 +14,11 @@ KEYWORDS="amd64 x86 ~ppc sparc"
 
 S="${WORKDIR}/glmix"
 
-DEPEND="media-sound/jack-audio-connection-kit
+RDEPEND="media-sound/jack-audio-connection-kit
 	 >=x11-libs/gtkglext-1.0.0
-	 >=x11-libs/gtk+-2.0.0
+	 >=x11-libs/gtk+-2.0.0"
+
+DEPEND="${RDEPEND}
 	 >=dev-util/pkgconfig-0.12.0"
 
 src_compile() {
