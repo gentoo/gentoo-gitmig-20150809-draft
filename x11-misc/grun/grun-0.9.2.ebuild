@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.26 2006/02/01 10:10:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.27 2006/02/16 11:28:26 nelchael Exp $
 
 inherit eutils
 
@@ -8,17 +8,13 @@ IUSE="nls"
 
 DESCRIPTION="A GTK/X11 application launcher with nice features such as a history"
 
-# Unfortunately the original homepage is not available anymore. The
-# tarball and the patch (identiacal with grun_0.9.2-9.diff just
-# renamed to grun-0.9.2-gentoo.diff) have been taken from
-# http://packages.debian.org/unstable/x11/grun.html.
-
+PATCH_LEVEL="14"
 RESTRICT="nomirror"
-SRC_URI="mirror://debian/pool/main/g/grun/grun_0.9.2.orig.tar.gz
-		mirror://gentoo/${PF}-gentoo.diff.bz2"
-# Not valid anymore, see
-# http://packages.debian.org/unstable/x11/grun.html instead
-HOMEPAGE="http://www.geocities.com/ResearchTriangle/Facility/1468/sg/grun.html"
+SRC_URI="mirror://debian/pool/main/g/grun/${PN}_${PV}.orig.tar.gz
+		mirror://debian/pool/main/g/grun/${PN}_${PV}-${PATCH_LEVEL}.diff.gz"
+HOMEPAGE="http://packages.debian.org/unstable/x11/grun.html"
+# Removed:
+# HOMEPAGE="http://www.geocities.com/ResearchTriangle/Facility/1468/sg/grun.html"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc ppc amd64"
@@ -32,7 +28,7 @@ DEPEND="=dev-libs/glib-1.2*
 
 src_unpack() {
 	unpack ${A}
-	epatch ${WORKDIR}/${PF}-gentoo.diff
+	epatch ${WORKDIR}/${PN}_${PV}-${PATCH_LEVEL}.diff
 }
 
 src_compile() {
