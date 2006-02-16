@@ -1,18 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 94a3b57037bef592ac7def9aa9f05ab3 wxhaskell-0.8-r1.ebuild 1809
-MD5 41c62e72cbc618dbf6dd6231a6f7897e wxhaskell-0.9.ebuild 1810
-MD5 6adbe0a956eaa6499ceb55c55dc0bf2d wxhaskell-0.9.4.ebuild 2059
-MD5 3aed2cebeb8bf43d8b9867f6fc6cd9e8 ChangeLog 2248
-MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
-MD5 3a0410506498ebc06bcb1ce2c504fe75 files/digest-wxhaskell-0.9.4 68
-MD5 252f6e6df89834ca7cc1f0b68cecbd3c files/digest-wxhaskell-0.9 66
+MD5 f09ae412a45ed2414887b3486fa31b4b ChangeLog 2652
+RMD160 b461635e5ab1eb710e520ae68764847f5773a9c7 ChangeLog 2652
+SHA256 1391b4e0767cdc78088d22f950bb91db5a89e5ece7fc68021605734f5c40abf6 ChangeLog 2652
 MD5 08efb7ecd02832c5599b968bdc329dc9 files/digest-wxhaskell-0.8-r1 66
+RMD160 e965d869ae1e7002e54a4daa1aa804b727ddf54f files/digest-wxhaskell-0.8-r1 66
+SHA256 9b171172f9fd8956b6c931065ff615fcb578aa81e2ea85794789e1ea7797aeae files/digest-wxhaskell-0.8-r1 66
+MD5 252f6e6df89834ca7cc1f0b68cecbd3c files/digest-wxhaskell-0.9 66
+RMD160 32aef4fcf5a09906a33feb665bf9c3fd8a94f4f9 files/digest-wxhaskell-0.9 66
+SHA256 0a9085cb68f9626940939dc6a297436aa9733c866419168022414b2283e09bca files/digest-wxhaskell-0.9 66
+MD5 d65df2d0e35a232f916aa03605183014 files/digest-wxhaskell-0.9.4 250
+RMD160 44e2bab5fe15dc3bc1c736c008068884ad674953 files/digest-wxhaskell-0.9.4 250
+SHA256 38ad5e3401720ff06d5eead8cd11d7646b4f6ee7c896d1b191d9d5b68077f7d0 files/digest-wxhaskell-0.9.4 250
+MD5 c694674dcbef799cd4fdb6914683ebff metadata.xml 223
+RMD160 7783e6057effb8b8f0b79cffe8b557b32c633839 metadata.xml 223
+SHA256 1d00c8be162a6cb87b3de440b3e63e10b39c12d56e8fbfe592e75aed872b2508 metadata.xml 223
+MD5 425a21f8b298709e5cb2a533e4420b3b wxhaskell-0.8-r1.ebuild 1887
+RMD160 8039e1a5c99c5830f7857952c490c0cdbd9ed237 wxhaskell-0.8-r1.ebuild 1887
+SHA256 222632aba332451e2b8a52c173e614f023432235d9db883f6ea55dbbaafc7595 wxhaskell-0.8-r1.ebuild 1887
+MD5 1a27807114c1545a0ff5e386d74204b6 wxhaskell-0.9.4.ebuild 2101
+RMD160 e837721b30b8ab630f8a6bb2ecd30e389fde11c6 wxhaskell-0.9.4.ebuild 2101
+SHA256 7b86c422fbbeb36fbd357a0473ca1944ff3c8e5465d007b26311d25e79b47ed7 wxhaskell-0.9.4.ebuild 2101
+MD5 8c6dcffe03a18fe44edf0a3cdba6a8e7 wxhaskell-0.9.ebuild 1886
+RMD160 db0c8cd3977a594a096ba400769d935af63e03ae wxhaskell-0.9.ebuild 1886
+SHA256 f65b6af8c0abc431dbcfb321401a1da9217b4b9493bcaa4ae1165e5f1d0882aa wxhaskell-0.9.ebuild 1886
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFCgnkIOKSBj1ObwosRAkDKAJ42LI3zCo21uOPSBUV5cxrH/d5+RACcCdE7
-oDQPFBdu6JKuIgtdoR9W+L8=
-=bkXH
+iD8DBQFD9O+d/B0cxt+cq+wRAoi+AKCI9A5oNL1eCaKKjkj9cQHpxxA2MwCcCChO
+YflJT7lXo6IlhKH3FcGjn4A=
+=hJqM
 -----END PGP SIGNATURE-----

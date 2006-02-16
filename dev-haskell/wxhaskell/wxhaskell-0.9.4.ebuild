@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.1 2005/05/11 21:26:56 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.2 2006/02/16 21:33:07 dcoutts Exp $
 
 inherit flag-o-matic wxwidgets ghc-package
 
@@ -10,7 +10,8 @@ SRC_URI="mirror://sourceforge/wxhaskell/${PN}-src-${PV}.zip"
 LICENSE="wxWinLL-3"
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc -amd64"
+# seriously broken on amd64! Do not touch!
 
 IUSE="doc gtk2"
 
