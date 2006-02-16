@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.37 2006/02/16 19:26:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.38 2006/02/16 20:22:34 metalgod Exp $
+
+  16 Feb 2006; Luis Medinas <metalgod@gentoo.org> rtorrent-0.4.3.ebuild:
+  Stable on amd64. See bug #121600.
 
 *rtorrent-0.4.5 (16 Feb 2006)
 
