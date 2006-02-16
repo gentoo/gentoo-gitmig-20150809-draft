@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/uuagc-0.9.1.ebuild,v 1.2 2006/02/13 23:40:12 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/uuagc-0.9.1.ebuild,v 1.3 2006/02/16 13:30:48 dcoutts Exp $
 
+CABAL_FEATURES="bin"
 inherit haskell-cabal
 
 DESCRIPTION="The Utrecht University Attribute Grammar system"
