@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e7039ebf333258eb6ff019551dfcf9dd ChangeLog 1352
 RMD160 31eddc06ce408db415e23395edf8d28ed08db3b0 ChangeLog 1352
 SHA256 23cc1aaa8e24f4c28a55c69f116e65bed3c1700fd7cbda61bbc8d87b0a9a7a4e ChangeLog 1352
@@ -13,3 +16,10 @@ SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata
 MD5 70a5ee38f9cccd4eb19af951122af7be opmixer-0.75.ebuild 918
 RMD160 d0e6f5dc7da33fda7b80e195e5670b6354a1acc8 opmixer-0.75.ebuild 918
 SHA256 6201c14c1248ce3c48a13f3a2db769cc3f1d6e4cbfca82d9fc4e02caab0fa2e9 opmixer-0.75.ebuild 918
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD9D1tAiZjviIA2XgRAlNfAJ46X5t1oGuN9Jxq3ky+vgQr74OTpQCgu6tc
+UYnX719m90W2RToIHujKJhw=
+=tsCj
+-----END PGP SIGNATURE-----

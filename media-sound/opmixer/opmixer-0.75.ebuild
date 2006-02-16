@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/opmixer-0.75.ebuild,v 1.17 2005/09/04 11:03:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/opmixer-0.75.ebuild,v 1.18 2006/02/16 08:53:10 flameeyes Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ IUSE=""
 
 MY_P=${P/opm/opM}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="An oss mixer written in c++ using the gtkmm gui-toolkit. Supports saving, loading and muting of volumes for channels and autoloading via a consoleapp"
+DESCRIPTION="OSS mixer written in C++ with GTKmm GUI."
 HOMEPAGE="http://optronic.sourceforge.net/"
 SRC_URI="http://optronic.sourceforge.net/files/${MY_P}.tar.bz2"
 
@@ -31,9 +31,8 @@ src_compile() {
 
 	#gcc3.2 fix for #8760
 	cd ${S}/src
-	cp volset.cc volset.cc.old
-	sed -e 's/ endl/ std::endl/' \
-		volset.cc.old > volset.cc
+	sed -i -e 's/ endl/ std::endl/' \
+		volset.cc
 
 	emake || die "make failed"
 }
