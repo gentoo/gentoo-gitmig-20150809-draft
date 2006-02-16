@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.2_rc1.ebuild,v 1.1 2006/02/16 21:45:57 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.2_rc1.ebuild,v 1.2 2006/02/16 23:07:04 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -83,7 +83,7 @@ HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="!app-office/openoffice
 	|| ( x11-libs/libXaw virtual/x11 )
