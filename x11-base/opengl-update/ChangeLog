@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.109 2006/02/16 16:19:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.110 2006/02/16 20:13:08 metalgod Exp $
+
+  16 Feb 2006; Luis Medinas <metalgod@gentoo.org>
+  opengl-update-2.2.4.ebuild:
+  Stable on amd64. Bug #123039.
 
   16 Feb 2006; Markus Rothe <corsair@gentoo.org> opengl-update-2.2.4.ebuild:
   Stable on ppc64; bug #123039
