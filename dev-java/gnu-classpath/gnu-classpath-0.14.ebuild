@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.14.ebuild,v 1.6 2006/02/04 18:13:29 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.14.ebuild,v 1.7 2006/02/16 05:17:38 karltk Exp $
 
 DESCRIPTION="Free core class libraries for use with virtual machines and compilers for the java programming language"
 SRC_URI="ftp://ftp.gnu.org/gnu/classpath/classpath-${PV}.tar.gz"
@@ -20,16 +20,14 @@ RDEPEND=">=virtual/jre-1.4
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	app-arch/zip
-	jikes? ( dev-java/jikes )"
+	dev-java/jikes"
 
 S=${WORKDIR}/classpath-${PV}
 
 src_compile() {
-	local myjavac="--with-java=$(java-config -c)"
-	use jikes && myjavac="--with-jikes=/usr/bin/jikes"
-
 	econf \
 		--enable-jni \
+		--with-jikes=/usr/bin/jikes \
 		$(use_enable gtk gtk-peer) \
 		$(use_enable xml2 xmlj) \
 		--prefix=/usr/share/${PN}\
