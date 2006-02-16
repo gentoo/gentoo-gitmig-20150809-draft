@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.7.ebuild,v 1.3 2006/02/05 13:45:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.7.ebuild,v 1.4 2006/02/16 02:25:10 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -132,7 +132,7 @@ src_install() {
 		dlldir="${D}"/usr/$(get_libdir)/wine \
 		install || die
 
-	dodoc ANNOUNCE AUTHORS BUGS ChangeLog DEVELOPERS-HINTS README
+	dodoc ANNOUNCE AUTHORS ChangeLog DEVELOPERS-HINTS README
 }
 
 pkg_postinst() {
