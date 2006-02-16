@@ -13,9 +13,6 @@ SHA256 86d72aad2253b976d98a4bdefc5e317a1339e2a82718b492c7383c44ccf075e1 bittorre
 MD5 863e5e7637b562b77f53b92bd49ce360 bittorrent-4.4.0.ebuild 1959
 RMD160 8f53aa52b518dbbffcd8d47185bc53f6584191dc bittorrent-4.4.0.ebuild 1959
 SHA256 a12e1e48a3ea34186db17952dc6bd3d75b567f113324f303158771ce9c91a570 bittorrent-4.4.0.ebuild 1959
-MD5 21ec89d06de83ddcc4cf6d6616355190 files/bittorrent-4.1.0-fix-all.patch 2483
-RMD160 721f3f6aec7549f215914612a6479d9e55072b92 files/bittorrent-4.1.0-fix-all.patch 2483
-SHA256 ceb35643595848c56f678d9d0c346b83b536775c784007410cad80ba1cd5eff2 files/bittorrent-4.1.0-fix-all.patch 2483
 MD5 c200bdbccb6ccbf18bef6338363c1a4a files/bittorrent-tracker.confd 565
 RMD160 d9ff91c65fee606eb536eb672d6a28f7d0cf4ba3 files/bittorrent-tracker.confd 565
 SHA256 b6094703dfc486b6e8d10885284479ee4f03308d7bed25d1411c28a8428d227d files/bittorrent-tracker.confd 565
@@ -49,7 +46,7 @@ SHA256 fe06593409e7f28665c032001005e94cb650299711a0af7f1a558bdb56c4004f metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD9MZXub4+zaPCR/oRAqAgAJ9tj5mOv8u0O1TSQTrkGtTJnIT0wgCgnM6A
-aocplyn55TrIn1/uzE3SU9g=
-=5ent
+iD8DBQFD9MjZub4+zaPCR/oRArJ5AJ0YQMyUqUmnhTANGIiJwhmCLtQ4ywCfVkNB
+AGmCiM5ASocUHAEUVmVGACM=
+=UtgX
 -----END PGP SIGNATURE-----
