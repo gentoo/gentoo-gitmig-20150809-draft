@@ -1,6 +1,6 @@
-# ChangeLog for sci-misc/gwyddion
+# ChangeLog for sci-visualization/gwyddion
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.1 2006/01/29 20:26:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.2 2006/02/16 19:27:11 swegener Exp $
 
   29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> +metadata.xml,
   +gwyddion-1.15.ebuild:

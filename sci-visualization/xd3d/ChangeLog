@@ -1,6 +1,6 @@
-# ChangeLog for media-gfx/xd3d
+# ChangeLog for sci-visualization/xd3d
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.1 2006/01/29 20:29:29 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.2 2006/02/16 19:32:27 swegener Exp $
 
   29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org>
   +files/gentoo-xd3d-8.2.1.diff, +metadata.xml, +xd3d-8.2.1.ebuild:
