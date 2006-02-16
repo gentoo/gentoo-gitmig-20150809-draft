@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.8 2006/01/15 00:23:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.9 2006/02/16 20:40:01 marienz Exp $
+
+  16 Feb 2006; Marien Zwart <marienz@gentoo.org> paramiko-0.9h.ebuild,
+  paramiko-1.3.ebuild, paramiko-1.5.ebuild, paramiko-1.5.2.ebuild:
+  unzip is not an RDEPEND (bug #123072, thanks to Diego Pettenò
+  <flameeyes@gentoo.org> for reporting). Whitespace cleanup.
 
   15 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> paramiko-1.5.2.ebuild:
   Add to ~amd64.
