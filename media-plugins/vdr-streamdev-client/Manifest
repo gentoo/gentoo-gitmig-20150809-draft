@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c0a8d562a71d425e2cbd34f701156bd9 ChangeLog 714
 RMD160 4b65da7c8e5e52e9334d6e36f9dea5f905b439f5 ChangeLog 714
 SHA256 bb5c47e3de0986762203e96fd6d0488fc397357ebc4b513ee1dd701a7adfbc9d ChangeLog 714
@@ -10,3 +13,10 @@ SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata
 MD5 4d309cb9f9bd68c08e799f9ef216c911 vdr-streamdev-client-0.3.3_pre20051219.ebuild 892
 RMD160 e015f5fadc5698ffcd99639c4345a354abb8600f vdr-streamdev-client-0.3.3_pre20051219.ebuild 892
 SHA256 78429a1f50721cbedc84ac472b4ccce69cce17ab9cbba5f3b5dcd0430aaefe1c vdr-streamdev-client-0.3.3_pre20051219.ebuild 892
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD9M6NI1lqEGTUzyQRAtyhAJ4xx2Mv8iNIQSTFJhopNoVwzKmP5gCgpvr2
+NDnPL8Q2uTMHMZuqs1TVqPQ=
+=SIgT
+-----END PGP SIGNATURE-----
