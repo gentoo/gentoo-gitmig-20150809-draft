@@ -1,6 +1,6 @@
-# ChangeLog for app-text/ghostscript
+# ChangeLog for app-text/ghostscript-esp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.16 2006/02/07 21:09:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.17 2006/02/16 19:05:48 swegener Exp $
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org>
   +files/ghostscript-esp-8.15.1-fPIC.patch, ghostscript-esp-8.15.1.ebuild:
