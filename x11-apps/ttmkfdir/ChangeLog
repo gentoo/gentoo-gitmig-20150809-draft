@@ -1,6 +1,6 @@
-# ChangeLog for x11-misc/ttmkfdir
+# ChangeLog for x11-apps/ttmkfdir
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ttmkfdir/ChangeLog,v 1.1 2005/12/14 17:41:47 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ttmkfdir/ChangeLog,v 1.2 2006/02/16 19:33:13 swegener Exp $
 
   14 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   +files/ttmkfdir-1.0-gentoo.diff, +files/ttmkfdir-2.0-gentoo.patch,
