@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 052e64c4b8c140df694e7339e8cb2495 ChangeLog 859
-RMD160 7f6e92708b31c9b1dc5abca7575849376f0abd33 ChangeLog 859
-SHA256 669dcecd552a1dc7001022f682aefdd3993911eee99fcaf58a385f92274efb94 ChangeLog 859
+MD5 623354ca46a9c18c2d79da9c1b14ac92 ChangeLog 870
+RMD160 69f8317aaf3b8f3cdca2141fb67affad2687354b ChangeLog 870
+SHA256 3b791c7df20bcc770c659eca46f5f6aa64f8de2b43ac26638f0a9be71289bab8 ChangeLog 870
 MD5 45e31f563c64a121085f584c959082b9 files/digest-vdr-streamdev-server-0.3.3_pre20051219 271
 RMD160 acc1f12fb83dd99f5bed2d635b09c1f3bfb72e08 files/digest-vdr-streamdev-server-0.3.3_pre20051219 271
 SHA256 781b69c2fd02d192a72eb9c7b26af73e046a43282e2c8f2cc7ebb7daa7701623 files/digest-vdr-streamdev-server-0.3.3_pre20051219 271
@@ -13,10 +10,3 @@ SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata
 MD5 a1299138f7388f519eb7365ce81d7e7a vdr-streamdev-server-0.3.3_pre20051219.ebuild 1058
 RMD160 1ee41e54ccb283b27201221f4852f09bc95f69a6 vdr-streamdev-server-0.3.3_pre20051219.ebuild 1058
 SHA256 4b7a2ade6f42f9c0a4103aac4a51c1f5b516d96583345aaefb846f99ed94eba7 vdr-streamdev-server-0.3.3_pre20051219.ebuild 1058
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD3TniZfSl1Kp5KmoRAqaAAKDVFfkkfovW7JUloqppMPQ0tCaXkACgmp/0
-3nHPdu+TJCDjoMIaEUgo/5o=
-=xEJ6
------END PGP SIGNATURE-----
