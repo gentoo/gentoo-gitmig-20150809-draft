@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.0.ebuild,v 1.6 2006/02/01 17:20:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.0.ebuild,v 1.7 2006/02/16 03:52:17 morfic Exp $
 
 inherit eutils flag-o-matic gnome2 kde-functions
 
@@ -66,7 +66,7 @@ src_compile() {
 	# replaced with dohtml in src_install
 	sed -i -e "s:manual::g" Makefile.in
 
-	if [ "${mygui}" = "kde" ]; then
+	if [ "${mygui}" == "kde" ]; then
 		set-kdedir 3
 		set-qtdir 3
 		export kde_widgetdir="$KDEDIR/lib/kde3/plugins/designer"
@@ -82,7 +82,7 @@ src_compile() {
 		|| die "econf failed"
 
 	#fix Makefiles to avoid Access Violations while fixing bug #119339
-	if ! use gnome ; then
+	if [ "${mygui}" != "gnome" ] ; then
 	for d in . src data extras textures textures/lores textures/medres textures/hires models shaders fonts  po ; do
 	sed -i -e "s#pkgdatadir = /usr/share/celestia#pkgdatadir = ${D}/usr/share/celestia#" $d/Makefile; done
 	fi
@@ -91,7 +91,7 @@ src_compile() {
 }
 
 src_install() {
-	if [ "${mygui}" = "gnome" ]; then
+	if [ "${mygui}" == "gnome" ]; then
 		gnome2_src_install
 	else
 		einstall	|| die "einstall failed"

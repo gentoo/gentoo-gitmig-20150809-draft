@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9886826072761ddbf73c17d4a2783c83 ChangeLog 6829
+MD5 39e8bab62af36e8581df47631e20de33 ChangeLog 6952
 MD5 6be90f964bc6ca0195b0623338dfd1f0 celestia-1.3.2.ebuild 3063
-MD5 96c28260f9cd07ee56b3675e8dd88865 celestia-1.4.0.ebuild 2929
+MD5 511913cb6dac5097274e61a8257fa1a5 celestia-1.4.0.ebuild 2943
 MD5 f659f2616eeaaa4d3b6422e586d2bfa2 files/celestia-1.3.2-noarts.patch 3566
 MD5 d4ff8e51fb3a546279e7442cf24e07d7 files/digest-celestia-1.3.2 68
 MD5 8e1dfea9c274b2242b921a467ec1d54b files/digest-celestia-1.4.0 68
 MD5 f96a6eb019a59bf1a643b96c43657af8 files/resmanager.h.patch 893
 MD5 1b55bd73a1313e288a88762af6cd0fb7 metadata.xml 330
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD4O4AKRy60XGEcJIRAq5zAJ4g+hnWwgJbkyO6csBAW4OWP8AuQgCeITVc
-qIBvtu/SXdfPmO1fq1pq6SU=
-=nZUY
+iD8DBQFD9ABg/aM9DdBw91cRAlVIAKDM+QCWdpITHDLLeWonbXd6u95MOgCghDzS
+x51HRR0YAjF73fOrj7pOyxw=
+=S8sw
 -----END PGP SIGNATURE-----
