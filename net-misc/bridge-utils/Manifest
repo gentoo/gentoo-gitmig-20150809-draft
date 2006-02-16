@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6dcf4a412e00b9cee43a9f6ef5b25562 ChangeLog 4972
+MD5 c11fc1c38a0f25021cdd0487dffa4548 ChangeLog 5080
 MD5 b9d5cf5a4a11a82972f20d974423c918 bridge-utils-0.9.6-r2.ebuild 1104
 MD5 0d6d3f3c84b9fd514a08af08ba76ad0f bridge-utils-1.0.4.ebuild 1169
 MD5 cc3eb091df9ed82c98ec18b221b951a9 bridge-utils-1.0.6-r2.ebuild 1395
-MD5 aa64842d143e9c672476762de75f64a5 bridge-utils-1.0.6-r3.ebuild 1632
+MD5 9c3342d6519785ce49fcbc38eb5b0110 bridge-utils-1.0.6-r3.ebuild 1641
 MD5 2c6ca210a0063810c357673b36d2eac0 bridge-utils-1.0.6.ebuild 1268
 MD5 b66b10664a696ad5234f798c99fac2fa files/bridge-utils-1.0.6-allow-without-sysfs.patch 1013
 MD5 dad9b29868d4bf5b8fe41be9fef393be files/bridge-utils-1.0.6-dont-error-on-no-ports.patch 330
@@ -17,10 +14,3 @@ MD5 69312e372ac3b1c445dd53c8abf3cd57 files/digest-bridge-utils-1.0.6 69
 MD5 69312e372ac3b1c445dd53c8abf3cd57 files/digest-bridge-utils-1.0.6-r2 69
 MD5 69312e372ac3b1c445dd53c8abf3cd57 files/digest-bridge-utils-1.0.6-r3 69
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDz4CmntT9W3vfTuoRAu8XAKCFuVj3N7o3snvvigKhC0ngxoFYsQCfXvby
-kinkxX+P751rLpKOQcFPDXk=
-=fA9Q
------END PGP SIGNATURE-----
