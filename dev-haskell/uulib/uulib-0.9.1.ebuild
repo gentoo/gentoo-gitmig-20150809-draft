@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/uulib-0.9.1.ebuild,v 1.2 2006/02/13 23:37:05 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/uulib-0.9.1.ebuild,v 1.3 2006/02/16 13:29:16 dcoutts Exp $
 
-CABAL_FEATURES="haddock cpphs"
+CABAL_FEATURES="haddock cpphs lib"
 inherit base haskell-cabal
 
 DESCRIPTION="The Utrecht University parsing, printing and DData libraries"

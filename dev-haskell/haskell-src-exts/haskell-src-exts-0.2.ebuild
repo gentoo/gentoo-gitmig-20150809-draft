@@ -1,7 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/haskell-src-exts-0.2.ebuild,v 1.2 2005/12/10 14:55:42 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/haskell-src-exts-0.2.ebuild,v 1.3 2006/02/16 13:27:26 dcoutts Exp $
 
+CABAL_FEATURES="lib"
 inherit base haskell-cabal
 
 DESCRIPTION="An extension to haskell-src that handles most common syntactic extensions to Haskell"
