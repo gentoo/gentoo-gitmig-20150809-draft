@@ -1,7 +1,7 @@
-diff -Naupr strongswan-2.5.0/Makefile.inc strongswan-2.5.0-gentoo/Makefile.inc
---- strongswan-2.5.0/Makefile.inc	2004-09-17 12:15:20.000000000 -0500
-+++ strongswan-2.5.0-gentoo/Makefile.inc	2005-07-23 13:20:20.000000000 -0500
-@@ -62,7 +62,7 @@ POLICYLIB=${FREESWANSRCDIR}/lib/libipsec
+diff -Naupr strongswan-2.6.2/Makefile.inc strongswan-2.6.2-gentoo/Makefile.inc
+--- strongswan-2.6.2/Makefile.inc	2006-01-25 11:23:15.000000000 -0600
++++ strongswan-2.6.2-gentoo/Makefile.inc	2006-02-16 01:30:48.000000000 -0600
+@@ -60,7 +60,7 @@ POLICYLIB=${FREESWANSRCDIR}/lib/libipsec
  DESTDIR?=
  
  # "local" part of tree, used in building other pathnames
@@ -10,7 +10,7 @@ diff -Naupr strongswan-2.5.0/Makefile.inc strongswan-2.5.0-gentoo/Makefile.inc
  
  # PUBDIR is where the "ipsec" command goes; beware, many things define PATH
  # settings which are assumed to include it (or at least, to include *some*
-@@ -96,7 +96,7 @@ MANTREE=$(DESTDIR)$(INC_USRLOCAL)/$(INC_
+@@ -94,7 +94,7 @@ MANTREE=$(DESTDIR)$(INC_USRLOCAL)/$(INC_
  MANPLACES=man3 man5 man8
  
  # where configuration files go
@@ -19,20 +19,20 @@ diff -Naupr strongswan-2.5.0/Makefile.inc strongswan-2.5.0-gentoo/Makefile.inc
  CONFFILE=$(DESTDIR)$(FINALCONFFILE)
  
  FINALCONFDIR?=/etc
-@@ -107,10 +107,10 @@ CONFDDIR=$(DESTDIR)$(FINALCONFDDIR)
+@@ -105,10 +105,10 @@ CONFDDIR=$(DESTDIR)$(FINALCONFDDIR)
  
  # sample configuration files go into
  INC_DOCDIR?=share/doc
 -FINALEXAMPLECONFDIR=${INC_USRLOCAL}/${INC_DOCDIR}/strongswan
-+FINALEXAMPLECONFDIR=${INC_USRLOCAL}/${INC_DOCDIR}/strongswan-2.5.0
++FINALEXAMPLECONFDIR=${INC_USRLOCAL}/${INC_DOCDIR}/strongswan-2.6.2
  EXAMPLECONFDIR=${DESTDIR}${FINALEXAMPLECONFDIR}
  
 -FINALDOCDIR?=${INC_USRLOCAL}/${INC_DOCDIR}/strongswan
-+FINALDOCDIR?=${INC_USRLOCAL}/${INC_DOCDIR}/strongswan-2.5.0
++FINALDOCDIR?=${INC_USRLOCAL}/${INC_DOCDIR}/strongswan-2.6.2
  DOCDIR=${DESTDIR}${FINALDOCDIR}
  
  # where per-conn pluto logs go
-@@ -239,7 +239,7 @@ RH_KERNELSRC?=/usr/src/linux-2.4
+@@ -229,7 +229,7 @@ RH_KERNELSRC?=/usr/src/linux-2.4
  # installed one in RH 7.2, won't work - you wind up depending upon
  # openssl.
  
@@ -41,9 +41,9 @@ diff -Naupr strongswan-2.5.0/Makefile.inc strongswan-2.5.0-gentoo/Makefile.inc
  
  # FreeSWAN 3.x will require bind9. 
  USE_LWRES?=false
-diff -Naupr strongswan-2.5.0/programs/_include/_include.in strongswan-2.5.0-gentoo/programs/_include/_include.in
---- strongswan-2.5.0/programs/_include/_include.in	2004-03-15 15:03:06.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/_include/_include.in	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/_include/_include.in strongswan-2.6.2-gentoo/programs/_include/_include.in
+--- strongswan-2.6.2/programs/_include/_include.in	2004-03-15 15:03:06.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/_include/_include.in	2006-02-16 01:30:48.000000000 -0600
 @@ -49,10 +49,10 @@ for f
  do
  	if test ! -r "$f"
@@ -57,9 +57,9 @@ diff -Naupr strongswan-2.5.0/programs/_include/_include.in strongswan-2.5.0-gent
  			then
  				echo "#:Your secrets file will be created when you start $IPSEC_NAME for the first time."
  			fi
-diff -Naupr strongswan-2.5.0/programs/barf/barf.in strongswan-2.5.0-gentoo/programs/barf/barf.in
---- strongswan-2.5.0/programs/barf/barf.in	2004-09-23 16:08:23.000000000 -0500
-+++ strongswan-2.5.0-gentoo/programs/barf/barf.in	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/barf/barf.in strongswan-2.6.2-gentoo/programs/barf/barf.in
+--- strongswan-2.6.2/programs/barf/barf.in	2004-09-23 16:08:23.000000000 -0500
++++ strongswan-2.6.2-gentoo/programs/barf/barf.in	2006-02-16 01:30:48.000000000 -0600
 @@ -19,7 +19,7 @@ IPSEC_NAME="strongSwan"
  KERNSRC=${KERNSRC-/usr/src/linux}
  LOGS=${LOGS-/var/log}
@@ -87,9 +87,9 @@ diff -Naupr strongswan-2.5.0/programs/barf/barf.in strongswan-2.5.0-gentoo/progr
  done
  _________________________ proc/net/dev
  cat /proc/net/dev
-diff -Naupr strongswan-2.5.0/programs/eroute/eroute.5 strongswan-2.5.0-gentoo/programs/eroute/eroute.5
---- strongswan-2.5.0/programs/eroute/eroute.5	2004-03-15 14:35:27.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/eroute/eroute.5	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/eroute/eroute.5 strongswan-2.6.2-gentoo/programs/eroute/eroute.5
+--- strongswan-2.6.2/programs/eroute/eroute.5	2004-03-15 14:35:27.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/eroute/eroute.5	2006-02-16 01:30:48.000000000 -0600
 @@ -223,7 +223,7 @@ Parameters Index of
  in hexadecimal using Authentication Header protocol (51,
  IPPROTO_AH) with no identies defined for either end.
@@ -99,9 +99,9 @@ diff -Naupr strongswan-2.5.0/programs/eroute/eroute.5 strongswan-2.5.0-gentoo/pr
  .SH "SEE ALSO"
  ipsec(8), ipsec_manual(8), ipsec_tncfg(5), ipsec_spi(5),
  ipsec_spigrp(5), ipsec_klipsdebug(5), ipsec_eroute(8), ipsec_version(5),
-diff -Naupr strongswan-2.5.0/programs/eroute/eroute.8 strongswan-2.5.0-gentoo/programs/eroute/eroute.8
---- strongswan-2.5.0/programs/eroute/eroute.8	2004-03-15 14:35:27.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/eroute/eroute.8	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/eroute/eroute.8 strongswan-2.6.2-gentoo/programs/eroute/eroute.8
+--- strongswan-2.6.2/programs/eroute/eroute.8	2004-03-15 14:35:27.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/eroute/eroute.8	2006-02-16 01:30:48.000000000 -0600
 @@ -308,7 +308,7 @@ will be in clear text.
  .br
  .LP
@@ -111,10 +111,10 @@ diff -Naupr strongswan-2.5.0/programs/eroute/eroute.8 strongswan-2.5.0-gentoo/pr
  .SH "SEE ALSO"
  ipsec(8), ipsec_manual(8), ipsec_tncfg(8), ipsec_spi(8),
  ipsec_spigrp(8), ipsec_klipsdebug(8), ipsec_eroute(5)
-diff -Naupr strongswan-2.5.0/programs/ipsec/ipsec.8 strongswan-2.5.0-gentoo/programs/ipsec/ipsec.8
---- strongswan-2.5.0/programs/ipsec/ipsec.8	2004-03-15 14:35:27.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/ipsec/ipsec.8	2005-07-23 13:20:20.000000000 -0500
-@@ -81,7 +81,7 @@ reports where
+diff -Naupr strongswan-2.6.2/programs/ipsec/ipsec.8 strongswan-2.6.2-gentoo/programs/ipsec/ipsec.8
+--- strongswan-2.6.2/programs/ipsec/ipsec.8	2006-02-09 13:47:38.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/ipsec/ipsec.8	2006-02-16 01:30:48.000000000 -0600
+@@ -303,7 +303,7 @@ reports where
  .I ipsec
  thinks the IPsec configuration files are stored.
  .SH FILES
@@ -122,10 +122,10 @@ diff -Naupr strongswan-2.5.0/programs/ipsec/ipsec.8 strongswan-2.5.0-gentoo/prog
 +/usr/lib/ipsec	usual utilities directory
  .SH ENVIRONMENT
  .PP
- The following environment variables control where FreeS/WAN finds its
-diff -Naupr strongswan-2.5.0/programs/klipsdebug/klipsdebug.5 strongswan-2.5.0-gentoo/programs/klipsdebug/klipsdebug.5
---- strongswan-2.5.0/programs/klipsdebug/klipsdebug.5	2004-03-15 14:35:28.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/klipsdebug/klipsdebug.5	2005-07-23 13:20:20.000000000 -0500
+ The following environment variables control where strongSwan finds its
+diff -Naupr strongswan-2.6.2/programs/klipsdebug/klipsdebug.5 strongswan-2.6.2-gentoo/programs/klipsdebug/klipsdebug.5
+--- strongswan-2.6.2/programs/klipsdebug/klipsdebug.5	2004-03-15 14:35:28.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/klipsdebug/klipsdebug.5	2006-02-16 01:30:48.000000000 -0600
 @@ -103,7 +103,7 @@ full
  sockets debugging has been set and everything else is not set.
  .LP
@@ -135,9 +135,9 @@ diff -Naupr strongswan-2.5.0/programs/klipsdebug/klipsdebug.5 strongswan-2.5.0-g
  .SH "SEE ALSO"
  ipsec(8), ipsec_manual(8), ipsec_tncfg(8), ipsec_eroute(8),
  ipsec_spi(8), ipsec_spigrp(8), ipsec_klipsdebug(5), ipsec_version(5),
-diff -Naupr strongswan-2.5.0/programs/klipsdebug/klipsdebug.8 strongswan-2.5.0-gentoo/programs/klipsdebug/klipsdebug.8
---- strongswan-2.5.0/programs/klipsdebug/klipsdebug.8	2004-03-15 14:35:28.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/klipsdebug/klipsdebug.8	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/klipsdebug/klipsdebug.8 strongswan-2.6.2-gentoo/programs/klipsdebug/klipsdebug.8
+--- strongswan-2.6.2/programs/klipsdebug/klipsdebug.8	2004-03-15 14:35:28.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/klipsdebug/klipsdebug.8	2006-02-16 01:30:48.000000000 -0600
 @@ -117,7 +117,7 @@ turns off only the
  debugging messages.
  .LP
@@ -147,9 +147,9 @@ diff -Naupr strongswan-2.5.0/programs/klipsdebug/klipsdebug.8 strongswan-2.5.0-g
  .SH "SEE ALSO"
  ipsec(8), ipsec_manual(8), ipsec_tncfg(8), ipsec_eroute(8),
  ipsec_spi(8), ipsec_spigrp(8), ipsec_klipsdebug(5)
-diff -Naupr strongswan-2.5.0/programs/lwdnsq/lwdnsq.xml.in strongswan-2.5.0-gentoo/programs/lwdnsq/lwdnsq.xml.in
---- strongswan-2.5.0/programs/lwdnsq/lwdnsq.xml.in	2004-03-15 14:35:28.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/lwdnsq/lwdnsq.xml.in	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/lwdnsq/lwdnsq.xml.in strongswan-2.6.2-gentoo/programs/lwdnsq/lwdnsq.xml.in
+--- strongswan-2.6.2/programs/lwdnsq/lwdnsq.xml.in	2004-03-15 14:35:28.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/lwdnsq/lwdnsq.xml.in	2006-02-16 01:30:48.000000000 -0600
 @@ -430,7 +430,7 @@ information.
  <refsect1><title>Special IPSECKEY processing</title>
  
@@ -159,9 +159,9 @@ diff -Naupr strongswan-2.5.0/programs/lwdnsq/lwdnsq.xml.in strongswan-2.5.0-gent
  </programlisting>
  
  </refsect1>
-diff -Naupr strongswan-2.5.0/programs/mailkey/mailkey.in strongswan-2.5.0-gentoo/programs/mailkey/mailkey.in
---- strongswan-2.5.0/programs/mailkey/mailkey.in	2004-03-15 14:35:28.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/mailkey/mailkey.in	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/mailkey/mailkey.in strongswan-2.6.2-gentoo/programs/mailkey/mailkey.in
+--- strongswan-2.6.2/programs/mailkey/mailkey.in	2004-03-15 14:35:28.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/mailkey/mailkey.in	2006-02-16 01:30:48.000000000 -0600
 @@ -60,7 +60,7 @@ with the following error:
  
  "$test1st"
@@ -171,9 +171,9 @@ diff -Naupr strongswan-2.5.0/programs/mailkey/mailkey.in strongswan-2.5.0-gentoo
  If you haven't generated your key yet, please run 'ipsec newhostkey'." 
  exit 0
  }
-diff -Naupr strongswan-2.5.0/programs/showhostkey/showhostkey.in strongswan-2.5.0-gentoo/programs/showhostkey/showhostkey.in
---- strongswan-2.5.0/programs/showhostkey/showhostkey.in	2004-03-15 14:35:31.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/showhostkey/showhostkey.in	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/showhostkey/showhostkey.in strongswan-2.6.2-gentoo/programs/showhostkey/showhostkey.in
+--- strongswan-2.6.2/programs/showhostkey/showhostkey.in	2004-03-15 14:35:31.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/showhostkey/showhostkey.in	2006-02-16 01:30:48.000000000 -0600
 @@ -18,7 +18,7 @@ me="ipsec showhostkey"
  usage="Usage: $me [--file secrets] [--left] [--right] [--txt gateway] [--id id]
                    [--dhclient]"
@@ -183,9 +183,9 @@ diff -Naupr strongswan-2.5.0/programs/showhostkey/showhostkey.in strongswan-2.5.
  fmt=""
  gw=
  id=
-diff -Naupr strongswan-2.5.0/programs/spi/spi.5 strongswan-2.5.0-gentoo/programs/spi/spi.5
---- strongswan-2.5.0/programs/spi/spi.5	2004-03-15 14:35:31.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/spi/spi.5	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/spi/spi.5 strongswan-2.6.2-gentoo/programs/spi/spi.5
+--- strongswan-2.6.2/programs/spi/spi.5	2004-03-15 14:35:31.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/spi/spi.5	2006-02-16 01:30:48.000000000 -0600
 @@ -162,7 +162,7 @@ since 1 of 8 bits is a parity bit), has 
  3858 seconds ago and has been idle for 23 seconds.
  .LP
@@ -195,9 +195,9 @@ diff -Naupr strongswan-2.5.0/programs/spi/spi.5 strongswan-2.5.0-gentoo/programs
  .SH "SEE ALSO"
  ipsec(8), ipsec_manual(8), ipsec_tncfg(5), ipsec_eroute(5),
  ipsec_spigrp(5), ipsec_klipsdebug(5), ipsec_spi(8), ipsec_version(5),
-diff -Naupr strongswan-2.5.0/programs/spi/spi.8 strongswan-2.5.0-gentoo/programs/spi/spi.8
---- strongswan-2.5.0/programs/spi/spi.8	2004-03-15 14:35:31.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/spi/spi.8	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/spi/spi.8 strongswan-2.6.2-gentoo/programs/spi/spi.8
+--- strongswan-2.6.2/programs/spi/spi.8	2004-03-15 14:35:31.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/spi/spi.8	2006-02-16 01:30:48.000000000 -0600
 @@ -461,7 +461,7 @@ and protocol
  (4).
  .LP
@@ -207,9 +207,9 @@ diff -Naupr strongswan-2.5.0/programs/spi/spi.8 strongswan-2.5.0-gentoo/programs
  .SH "SEE ALSO"
  ipsec(8), ipsec_manual(8), ipsec_tncfg(8), ipsec_eroute(8),
  ipsec_spigrp(8), ipsec_klipsdebug(8), ipsec_spi(5)
-diff -Naupr strongswan-2.5.0/programs/spigrp/spigrp.5 strongswan-2.5.0-gentoo/programs/spigrp/spigrp.5
---- strongswan-2.5.0/programs/spigrp/spigrp.5	2004-03-15 14:35:31.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/spigrp/spigrp.5	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/spigrp/spigrp.5 strongswan-2.6.2-gentoo/programs/spigrp/spigrp.5
+--- strongswan-2.6.2/programs/spigrp/spigrp.5	2004-03-15 14:35:31.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/spigrp/spigrp.5	2006-02-16 01:30:48.000000000 -0600
 @@ -77,7 +77,7 @@ be an incoming or outgoing group, depend
  machine.
  .LP
@@ -219,9 +219,9 @@ diff -Naupr strongswan-2.5.0/programs/spigrp/spigrp.5 strongswan-2.5.0-gentoo/pr
  .SH "SEE ALSO"
  ipsec(8), ipsec_manual(8), ipsec_tncfg(5), ipsec_eroute(5),
  ipsec_spi(5), ipsec_klipsdebug(5), ipsec_spigrp(8), ipsec_version(5),
-diff -Naupr strongswan-2.5.0/programs/spigrp/spigrp.8 strongswan-2.5.0-gentoo/programs/spigrp/spigrp.8
---- strongswan-2.5.0/programs/spigrp/spigrp.8	2004-03-15 14:35:31.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/spigrp/spigrp.8	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/spigrp/spigrp.8 strongswan-2.6.2-gentoo/programs/spigrp/spigrp.8
+--- strongswan-2.6.2/programs/spigrp/spigrp.8	2004-03-15 14:35:31.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/spigrp/spigrp.8	2006-02-16 01:30:48.000000000 -0600
 @@ -128,7 +128,7 @@ and finally an AH header to authenticate
  .BR 0x236 .
  .LP
@@ -231,9 +231,9 @@ diff -Naupr strongswan-2.5.0/programs/spigrp/spigrp.8 strongswan-2.5.0-gentoo/pr
  .SH "SEE ALSO"
  ipsec(8), ipsec_manual(8), ipsec_tncfg(8), ipsec_eroute(8),
  ipsec_spi(8), ipsec_klipsdebug(8), ipsec_spigrp(5)
-diff -Naupr strongswan-2.5.0/programs/tncfg/tncfg.5 strongswan-2.5.0-gentoo/programs/tncfg/tncfg.5
---- strongswan-2.5.0/programs/tncfg/tncfg.5	2004-03-15 14:35:31.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/tncfg/tncfg.5	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/tncfg/tncfg.5 strongswan-2.6.2-gentoo/programs/tncfg/tncfg.5
+--- strongswan-2.6.2/programs/tncfg/tncfg.5	2004-03-15 14:35:31.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/tncfg/tncfg.5	2006-02-16 01:30:48.000000000 -0600
 @@ -75,7 +75,7 @@ shows that virtual device
  is not connected to any physical device.
  .LP
@@ -243,9 +243,9 @@ diff -Naupr strongswan-2.5.0/programs/tncfg/tncfg.5 strongswan-2.5.0-gentoo/prog
  .SH "SEE ALSO"
  ipsec(8), ipsec_manual(8), ipsec_eroute(5), ipsec_spi(5),
  ipsec_spigrp(5), ipsec_klipsdebug(5), ipsec_tncfg(8), ipsec_version(5),
-diff -Naupr strongswan-2.5.0/programs/tncfg/tncfg.8 strongswan-2.5.0-gentoo/programs/tncfg/tncfg.8
---- strongswan-2.5.0/programs/tncfg/tncfg.8	2004-03-15 14:35:31.000000000 -0600
-+++ strongswan-2.5.0-gentoo/programs/tncfg/tncfg.8	2005-07-23 13:20:20.000000000 -0500
+diff -Naupr strongswan-2.6.2/programs/tncfg/tncfg.8 strongswan-2.6.2-gentoo/programs/tncfg/tncfg.8
+--- strongswan-2.6.2/programs/tncfg/tncfg.8	2004-03-15 14:35:31.000000000 -0600
++++ strongswan-2.6.2-gentoo/programs/tncfg/tncfg.8	2006-02-16 01:30:48.000000000 -0600
 @@ -76,7 +76,7 @@ virtual device to the
  physical device.
  .LP

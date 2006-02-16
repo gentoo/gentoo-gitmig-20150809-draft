@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.5.0.ebuild,v 1.3 2005/09/03 15:25:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.6.2.ebuild,v 1.1 2006/02/16 08:49:51 pfeifer Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ppc x86"
+KEYWORDS="-* ~amd64 ~ppc ~sparc ~x86"
 IUSE="curl ldap smartcard"
 
 DEPEND="!net-misc/openswan
@@ -30,7 +30,7 @@ check_version_h() {
 	then
 		eerror "Please verify that your /usr/src/linux symlink is pointing"
 		eerror "to your current kernel sources, and that you have a running kernel"
-		die "/usr/src/linux symlink not setup!"
+		die "/usr/src/linux symlink not setup or kernel tree has not been configured!"
 	fi
 }
 
