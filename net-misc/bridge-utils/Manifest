@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c11fc1c38a0f25021cdd0487dffa4548 ChangeLog 5080
 MD5 b9d5cf5a4a11a82972f20d974423c918 bridge-utils-0.9.6-r2.ebuild 1104
 MD5 0d6d3f3c84b9fd514a08af08ba76ad0f bridge-utils-1.0.4.ebuild 1169
@@ -14,3 +17,10 @@ MD5 69312e372ac3b1c445dd53c8abf3cd57 files/digest-bridge-utils-1.0.6 69
 MD5 69312e372ac3b1c445dd53c8abf3cd57 files/digest-bridge-utils-1.0.6-r2 69
 MD5 69312e372ac3b1c445dd53c8abf3cd57 files/digest-bridge-utils-1.0.6-r3 69
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD9PHOJrHF4yAQTrARAkh2AJ0aXZKQqi97wNVHyT7gezT5SMi3/ACgqsbb
+RAKA8JimqLb0z/V/vFSyLGU=
+=oEZ5
+-----END PGP SIGNATURE-----
