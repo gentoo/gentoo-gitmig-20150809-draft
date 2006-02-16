@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.3.1.ebuild,v 1.4 2005/07/07 05:18:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.3.1.ebuild,v 1.5 2006/02/16 16:39:32 nelchael Exp $
+
+inherit qt3
 
 DESCRIPTION="An interactive generative art application"
 HOMEPAGE="http://www.bottlenose.demon.co.uk/share/evolvotron/index.htm"
@@ -11,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 
-DEPEND="=x11-libs/qt-3*"
+DEPEND="$(qt_min_version 3)"
 
 S="${WORKDIR}/${PN}"
 
@@ -25,6 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
+	export PATH=${QTDIR}/bin:${PATH}
 	econf fs || die
 	emake -j1 || die "emake failed"
 }
