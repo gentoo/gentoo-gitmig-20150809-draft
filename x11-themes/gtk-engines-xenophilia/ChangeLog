@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-xenophilia
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xenophilia/ChangeLog,v 1.12 2005/10/02 19:47:30 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xenophilia/ChangeLog,v 1.13 2006/02/16 12:18:32 leonardop Exp $
+
+  16 Feb 2006; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-xenophilia-0.8-r1.ebuild:
+  Fix dependencies; virtual/x11 not necessary after all, and added glib-1.2.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   gtk-engines-xenophilia-0.8-r1.ebuild:
