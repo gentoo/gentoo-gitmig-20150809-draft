@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sniffit
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.10 2005/06/13 23:25:02 ticho Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.11 2006/02/15 23:54:33 jokey Exp $
+
+  15 Feb 2006; Markus Ullmann <jokey@gentoo.org> sniffit-0.3.7.ebuild,
+  sniffit-0.3.7-r1.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   13 Jun 2005; Andrej Kacian <ticho@gentoo.org> sniffit-0.3.7-r1.ebuild:
   Added ~amd64 keyword.

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-2.5.ebuild,v 1.1 2005/09/03 07:35:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-2.5.ebuild,v 1.2 2006/02/15 23:24:09 jokey Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
 IUSE=""
 
-DEPEND="virtual/libpcap"
+DEPEND="net-libs/libpcap"
 
 src_unpack() {
 	unpack ${A}

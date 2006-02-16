@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpick/tcpick-0.1.19.ebuild,v 1.6 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpick/tcpick-0.1.19.ebuild,v 1.7 2006/02/16 00:02:25 jokey Exp $
 
 DESCRIPTION="TCP Stream Sniffer and Connection Tracker"
 HOMEPAGE="http://tcpick.sourceforge.net/"
@@ -12,7 +12,7 @@ KEYWORDS="x86 ~amd64"
 
 IUSE=""
 DEPEND="virtual/libc
-	virtual/libpcap"
+	net-libs/libpcap"
 
 src_install() {
 	make install DESTDIR=${D} || die "install failed"

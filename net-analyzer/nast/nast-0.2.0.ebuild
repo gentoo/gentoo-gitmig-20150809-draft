@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/nast-0.2.0.ebuild,v 1.6 2005/09/07 03:29:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/nast-0.2.0.ebuild,v 1.7 2006/02/15 23:25:23 jokey Exp $
 
 DESCRIPTION="NAST - Network Analyzer Sniffer Tool"
 HOMEPAGE="http://nast.berlios.de/"
@@ -11,7 +11,7 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE="ncurses"
 
 DEPEND=">=net-libs/libnet-1.1.1
-	virtual/libpcap
+	net-libs/libpcap
 	ncurses? ( >=sys-libs/ncurses-5.4 )"
 
 src_compile() {

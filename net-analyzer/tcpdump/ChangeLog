@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.63 2006/02/10 06:53:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.64 2006/02/15 23:59:25 jokey Exp $
+
+  15 Feb 2006; Markus Ullmann <jokey@gentoo.org> tcpdump-3.8.3-r4.ebuild,
+  tcpdump-3.9.3.ebuild, tcpdump-3.9.4.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   06 Feb 2006; Aron Griffis <agriffis@gentoo.org> tcpdump-3.9.3.ebuild:
   Mark 3.9.3 stable on alpha

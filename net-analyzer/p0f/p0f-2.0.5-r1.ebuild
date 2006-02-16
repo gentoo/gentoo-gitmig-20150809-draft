@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.5-r1.ebuild,v 1.2 2005/06/19 12:13:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.5-r1.ebuild,v 1.3 2006/02/15 23:43:40 jokey Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86"
 IUSE="static"
 
-DEPEND="virtual/libpcap"
+DEPEND="net-libs/libpcap"
 
 S="${WORKDIR}/${PN}"
 

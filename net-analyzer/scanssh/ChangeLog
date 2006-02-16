@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/scanssh
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/ChangeLog,v 1.16 2005/08/04 09:20:06 dragonheart Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/ChangeLog,v 1.17 2006/02/15 23:51:48 jokey Exp $
+
+  15 Feb 2006; Markus Ullmann <jokey@gentoo.org> scanssh-2.1.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   04 Aug 2005; Daniel Black <dragonheart@gentoo.org> -scanssh-1.6b.ebuild,
   -scanssh-2.0.ebuild, scanssh-2.1.ebuild:

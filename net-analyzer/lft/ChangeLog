@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/lft
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.14 2005/12/25 15:02:36 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.15 2006/02/15 23:24:09 jokey Exp $
+
+  15 Feb 2006; Markus Ullmann <jokey@gentoo.org> lft-2.5.ebuild,
+  lft-2.31.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> lft-2.31.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/packit-1.0.ebuild,v 1.11 2006/01/10 19:00:55 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/packit-1.0.ebuild,v 1.12 2006/02/15 23:45:21 jokey Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~ppc ~ppc-macos"
 IUSE=""
 
 DEPEND=">=net-libs/libnet-1.1.2
-	virtual/libpcap"
+	net-libs/libpcap"
 
 src_unpack(){
 	unpack ${A}

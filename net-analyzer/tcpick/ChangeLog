@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpick
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpick/ChangeLog,v 1.9 2005/09/27 20:26:49 vanquirius Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpick/ChangeLog,v 1.10 2006/02/16 00:02:25 jokey Exp $
+
+  16 Feb 2006; Markus Ullmann <jokey@gentoo.org> tcpick-0.1.19.ebuild,
+  tcpick-0.2.1.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   27 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> tcpick-0.2.1.ebuild:
   0.2.1 x86 stable for bug 107426. Thanks to Daniel Webert <rockoo at gmail

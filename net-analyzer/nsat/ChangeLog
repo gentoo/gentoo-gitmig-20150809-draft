@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nsat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.10 2006/01/22 13:24:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.11 2006/02/15 23:37:24 jokey Exp $
+
+  15 Feb 2006; Markus Ullmann <jokey@gentoo.org> nsat-1.5.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   22 Jan 2006; Peter Volkov <pva@gentoo.org> nsat-1.5.ebuild:
   Modular X dependencies are fixed.

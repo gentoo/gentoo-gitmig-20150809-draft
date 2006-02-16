@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/sancp-1.6.1.ebuild,v 1.1 2005/10/08 13:52:29 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/sancp-1.6.1.ebuild,v 1.2 2006/02/15 23:50:15 jokey Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86"
 
 IUSE="sguil"
 
-RDEPEND="virtual/libpcap"
+RDEPEND="net-libs/libpcap"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {

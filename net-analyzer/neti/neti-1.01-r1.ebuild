@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/neti-1.01-r1.ebuild,v 1.1 2005/04/29 22:47:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/neti-1.01-r1.ebuild,v 1.2 2006/02/15 23:28:39 jokey Exp $
 
 DESCRIPTION="NETI@Home research project from GATech"
 HOMEPAGE="http://www.neti.gatech.edu"
@@ -12,12 +12,11 @@ SLOT="0"
 IUSE="zlib java"
 
 RDEPEND="java? ( || ( >=virtual/jdk-1.2 >=virtual/jre-1.2 ) )
-	virtual/libpcap
 	net-analyzer/ethereal
 	virtual/libc"
 
 DEPEND="java? ( >=virtual/jdk-1.2 )
-	virtual/libpcap
+	net-libs/libpcap
 	virtual/libc
 	sys-devel/autoconf
 	sys-devel/automake

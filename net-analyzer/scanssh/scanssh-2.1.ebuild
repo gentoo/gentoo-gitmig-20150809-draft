@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/scanssh-2.1.ebuild,v 1.5 2005/08/04 09:20:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/scanssh-2.1.ebuild,v 1.6 2006/02/15 23:51:48 jokey Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/libpcap
+DEPEND="net-libs/libpcap
 	dev-libs/libdnet
 	>=dev-libs/libevent-0.8a"
 

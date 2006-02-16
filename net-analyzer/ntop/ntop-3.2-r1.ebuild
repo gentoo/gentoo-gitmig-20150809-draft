@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r1.ebuild,v 1.2 2006/02/07 22:01:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r1.ebuild,v 1.3 2006/02/15 23:41:37 jokey Exp $
 
 inherit eutils autotools
 
@@ -16,7 +16,7 @@ IUSE="ipv6 nls snmp ssl tcpd zlib"
 DEPEND="sys-apps/gawk
 	>=sys-devel/libtool-1.4
 	>=sys-libs/gdbm-1.8.0
-	virtual/libpcap
+	net-libs/libpcap
 	>=media-libs/gd-2.0.22
 	>=media-libs/libpng-1.2.5
 	snmp? ( net-analyzer/net-snmp )

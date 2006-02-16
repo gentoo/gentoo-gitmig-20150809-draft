@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.44.ebuild,v 1.1 2005/07/05 13:34:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.44.ebuild,v 1.2 2006/02/15 23:35:45 jokey Exp $
 
 DESCRIPTION="A grep for network layers"
 HOMEPAGE="http://ngrep.sourceforge.net/"
@@ -12,7 +12,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x8
 IUSE="ipv6 pcre"
 
 DEPEND="virtual/libc
-	virtual/libpcap
+	net-libs/libpcap
 	pcre? ( dev-libs/libpcre )"
 
 src_compile() {

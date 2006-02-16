@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/nethogs-0.6.0.ebuild,v 1.5 2005/09/17 21:51:14 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/nethogs-0.6.0.ebuild,v 1.6 2006/02/15 23:26:42 jokey Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ LICENSE="GPL-1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
-DEPEND="virtual/libpcap"
+DEPEND="net-libs/libpcap"
 
 S="${WORKDIR}/${PN}"
 

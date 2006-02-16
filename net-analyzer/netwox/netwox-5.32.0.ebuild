@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.32.0.ebuild,v 1.1 2005/12/11 20:02:01 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.32.0.ebuild,v 1.2 2006/02/15 23:33:06 jokey Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -18,10 +18,10 @@ SLOT="0"
 KEYWORDS="~ppc ~sparc ~x86"
 IUSE="doc"
 
-RDEPEND="virtual/libpcap
-	>=net-libs/libnet-1.1.1"
+RDEPEND=">=net-libs/libnet-1.1.1"
 
-DEPEND="~net-libs/netwib-${PV}
+DEPEND="net-libs/libpcap
+	~net-libs/netwib-${PV}
 	${RDEPEND}"
 
 S="${WORKDIR}/${P}-src"

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3-r1.ebuild,v 1.11 2005/12/03 19:40:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3-r1.ebuild,v 1.12 2006/02/15 23:56:33 jokey Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -18,7 +18,7 @@ IUSE="ssl postgres mysql flexresp selinux snortsam odbc prelude inline sguil"
 
 DEPEND="virtual/libc
 	>=dev-libs/libpcre-4.2-r1
-	virtual/libpcap
+	net-libs/libpcap
 	flexresp? ( ~net-libs/libnet-1.0.2a )
 	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
