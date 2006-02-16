@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=BitTorrent
-Exec=/usr/bin/btdownloadgui.py
+Exec=/usr/bin/bittorrent
 Icon=/usr/share/pixmaps/bittorrent.ico
 Terminal=false
 Type=Application

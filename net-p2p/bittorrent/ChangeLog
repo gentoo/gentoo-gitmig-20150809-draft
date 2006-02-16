@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.79 2006/02/09 21:34:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.80 2006/02/16 17:34:14 sekretarz Exp $
+
+*bittorrent-4.4.0 (16 Feb 2006)
+
+  16 Feb 2006; Karol Wojtaszek <sekretarz@gentoo.org>
+  files/btdownloadgui.desktop, files/bttrack.conf, files/bttrack.rc,
+  files/favicon.ico, -bittorrent-4.0.2.ebuild, -bittorrent-4.0.4.ebuild,
+  -bittorrent-4.1.8.ebuild, -bittorrent-4.2.0.ebuild,
+  +bittorrent-4.4.0.ebuild:
+  Version bump by Robert Lundmark, bug #114864. Ebuild clean up
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> bittorrent-4.2.2.ebuild:
   Mark 4.2.2 stable on alpha
