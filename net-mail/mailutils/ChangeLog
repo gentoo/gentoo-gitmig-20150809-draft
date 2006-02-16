@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mailutils
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.22 2005/09/16 02:48:24 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.23 2006/02/16 22:44:14 langthang Exp $
+
+*mailutils-0.6-r3 (16 Feb 2006)
+
+  16 Feb 2006; Tuấn Văn <langthang@gentoo.org>
+  +files/mailutils-0.6-imap4d-gcc4.0-ftbfs.patch, +mailutils-0.6-r3.ebuild:
+  gcc4.0 patch. Thanks to Thomas Chik <tshchik@gmail.com>. Bug #122985.
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> mailutils-0.6-r2.ebuild:
   Mark 0.6-r2 stable on alpha
