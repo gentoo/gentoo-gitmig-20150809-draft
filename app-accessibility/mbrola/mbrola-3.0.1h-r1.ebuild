@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.16 2005/06/09 09:33:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.17 2006/02/16 22:27:58 flameeyes Exp $
 
 IUSE=""
 
@@ -15,8 +15,12 @@ SRC_URI="${SRC_URI_BASE}/bin/pclinux/mbr301h.zip
 	 ${SRC_URI_BASE}/dba/us2/us2-980812.zip
 	 ${SRC_URI_BASE}/dba/us3/us3-990208.zip"
 
-DEPEND=">=app-accessibility/festival-1.4.2
-	app-arch/unzip
+RDEPEND=">=app-accessibility/festival-1.4.2"
+
+DEPEND="${RDEPEND}
+	app-arch/unzip"
+
+RDEPEND="${RDEPEND}
 	amd64? ( app-emulation/emul-linux-x86-glibc )"
 
 SLOT="0"
