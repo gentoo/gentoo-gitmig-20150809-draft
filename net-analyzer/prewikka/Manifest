@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6c39c89801e8bab9a12d447dbc5e66f1 ChangeLog 2439
-RMD160 82f585fe2d05cfe42c289452afeaea92eb25fd05 ChangeLog 2439
-SHA256 42158eede23c3b57f67aa4a873c47f971b6fb70f9a3be7138d4cc4fc17b1b0de ChangeLog 2439
+MD5 61b57d9368399e259f78718182e20013 ChangeLog 2526
+RMD160 edd1bd8c6652cf75d03672df923d57de13fc6a7c ChangeLog 2526
+SHA256 68edd175f046d9fbfd1665cd23a039a6c5d59cdb3452bc576230b2f73daa529d ChangeLog 2526
 MD5 42725fb8e4aa7926ba6a9cee314fd8b8 files/digest-prewikka-0.9.2 66
 RMD160 655dc3db933939d7c2206b47c7846eb049d2a12b files/digest-prewikka-0.9.2 66
 SHA256 daedd71acb2c882a7532b42f6a4c9e8fbfb4416fa07f62602bcc008b38d98f8c files/digest-prewikka-0.9.2 66
@@ -16,13 +13,6 @@ SHA256 80c7ac1760311ae5c271e7e53bdd563e96b957c223d3a8a1455efdbe89b86970 metadata
 MD5 2b5c6e8c3ff4fdfe326c73bfbd556f4b prewikka-0.9.2.ebuild 954
 RMD160 9d5a8ed7c4be4a4f15b42f5d73e7ad89fa6fb72a prewikka-0.9.2.ebuild 954
 SHA256 4c4041fabeb7d6c0e4f6eb673c863d17c48d1ee2cb1a27fa5ac7758482faddc4 prewikka-0.9.2.ebuild 954
-MD5 69da51271777f21fff44fdd2156f8314 prewikka-0.9.3.ebuild 950
-RMD160 9000de69e60aaea3cb8c46d8f1dc19ec4d9b8e60 prewikka-0.9.3.ebuild 950
-SHA256 5d2c8a86014e440b6e94b47e196b27118b86a32c7ab94434572d8f025e30a55a prewikka-0.9.3.ebuild 950
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8TsVCRZPokWLroQRAoMlAKDFk1wG0Y4VqdeuBLrzHGM8IhpwjACeL+wa
-Jft4nc5tegyOmJXSu10aRJw=
-=NMk3
------END PGP SIGNATURE-----
+MD5 39b223081f81db3047025e701628f454 prewikka-0.9.3.ebuild 947
+RMD160 5a3fb7cbdc35fb2c1e71be21b53896da82855507 prewikka-0.9.3.ebuild 947
+SHA256 1b377f22a11b0c4d815d3a9a3cfec980ab4158c7f67d906af8fa71d8fc04ccaa prewikka-0.9.3.ebuild 947
