@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.3 2006/02/16 12:32:53 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.4 2006/02/16 14:10:51 dcoutts Exp $
 #
 # Original authors: Andres Loeh <kosmikus@gentoo.org>
 #                   Duncan Coutts <dcoutts@gentoo.org>
@@ -164,15 +164,15 @@ cabal-pkg() {
 	local result
 	local err
 
-	sed -i 's:ghc-pkg:/usr/bin/true:' .setup-config
-	result="$(./setup register 2>&1)"
-	err="$?"
-	if ! echo ${result} | grep -q "no library to register"; then
-		$(exit "${err}") || die "setup register failed"
-	fi
-	if [[ -f .installed-pkg-config ]]; then
-		ghc-setup-pkg .installed-pkg-config
-		ghc-install-pkg
+	if [[ -n ${CABAL_HAS_LIBRARIES} ]]; then
+		sed -i 's:ghc-pkg:/usr/bin/true:' .setup-config
+		./setup register || die "setup register failed"
+		if [[ -f .installed-pkg-config ]]; then
+			ghc-setup-pkg .installed-pkg-config
+			ghc-install-pkg
+		else
+			die "setup register has not generated a package configuration file"
+		fi
 	fi
 }
 
@@ -184,6 +184,9 @@ haskell-cabal_pkg_setup() {
 		eerror "the currently active version of ghc ($(ghc-version)). Please"
 		eerror "run ghc-updater or re-emerge dev-haskell/cabal."
 		die "cabal is not correctly installed"
+	fi
+	if [[ -z "${CABAL_HAS_BINARIES}" ]] && [[ -z "${CABAL_HAS_LIBRARIES}" ]]; then
+		eerror "QA: Neither bin nor lib are in CABAL_FEATURES."
 	fi
 	if [[ -n "${CABAL_UNKNOWN}" ]]; then
 		ewarn "Unknown entry in CABAL_FEATURES: ${CABAL_UNKNONW}"
