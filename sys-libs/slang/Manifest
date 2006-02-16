@@ -1,23 +1,49 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0e3377e5ce60380f611f078707979da0 slang-1.4.9-r2.ebuild 1846
-MD5 91a55ea69d65d2d3171b938b80ce3925 ChangeLog 5493
-MD5 bc00f0356947154d3250243bd5ec08f5 metadata.xml 219
-MD5 aa05b5e6a399e3db621b204b914913ea slang-1.4.9-r1.ebuild 1792
+MD5 e67e87bbc2336a819942c664f2c46a7f ChangeLog 5620
+RMD160 a187e4c2d84384955924b70e475366b46a0dfde7 ChangeLog 5620
+SHA256 110ef56297548fc27c88b0f8a359eaa1f85756177d036b40fcd0ad082f3ccf19 ChangeLog 5620
 MD5 074ddbf39cb8b9708ca9de2b1fb24366 files/digest-slang-1.4.9-r1 64
+RMD160 0fcc5d38f8f819ad388cfdf2279a7ef55ecc2869 files/digest-slang-1.4.9-r1 64
+SHA256 d016ff62758a9ae6f93793f3cc0e614949412d29095e1073c2d7a11fce3401cf files/digest-slang-1.4.9-r1 64
 MD5 074ddbf39cb8b9708ca9de2b1fb24366 files/digest-slang-1.4.9-r2 64
-MD5 7ba45dd45645107adc167e543634b8eb files/slang-1.4.9-fsuid.patch 1661
-MD5 7f9b0cb76e754575d54b6ea8f5de59f4 files/slang-1.4.9.patch 1367
-MD5 e2ddc20bfbb1ac10becb53e1707b067c files/slang-debian-utf8.patch 21377
-MD5 3531d8ba2b07b43cf6d758815200bfa9 files/slang-utf8-acs.patch 14366
-MD5 4be647282e8c01060db9d1707098bd1d files/slang-utf8-fix.patch 855
-MD5 1d7e5eab24fec79cc60d8dbdede252e7 files/slang-utf8-fix2.patch 487
+RMD160 0fcc5d38f8f819ad388cfdf2279a7ef55ecc2869 files/digest-slang-1.4.9-r2 64
+SHA256 d016ff62758a9ae6f93793f3cc0e614949412d29095e1073c2d7a11fce3401cf files/digest-slang-1.4.9-r2 64
 MD5 11daf6d137e1d6ec0e3475e55522cd06 files/slang-1.4.9-autoconf.patch 4143
+RMD160 37962611ffc5c4ed3d3931ca0fdcabe350375c15 files/slang-1.4.9-autoconf.patch 4143
+SHA256 43af573129d7d08a0c5b184b667f871f656d9126f296088bfa0fbfab5cf6623f files/slang-1.4.9-autoconf.patch 4143
+MD5 7ba45dd45645107adc167e543634b8eb files/slang-1.4.9-fsuid.patch 1661
+RMD160 9a7cf62d43185bfcf20a671c9e1ca9b0fc6dbd21 files/slang-1.4.9-fsuid.patch 1661
+SHA256 9f82345946423708864373e3a8593980dedad33f66e0d427f450e1c39268c98e files/slang-1.4.9-fsuid.patch 1661
+MD5 7f9b0cb76e754575d54b6ea8f5de59f4 files/slang-1.4.9.patch 1367
+RMD160 19faebcad11394b283bd212ebd6b5e1e5bab5ef5 files/slang-1.4.9.patch 1367
+SHA256 1881233d22dfa9c69671215835fb559972f5e80a144bfdd326a067848631c273 files/slang-1.4.9.patch 1367
+MD5 e2ddc20bfbb1ac10becb53e1707b067c files/slang-debian-utf8.patch 21377
+RMD160 9f8783333a1620a62c06de7f18f8507658964bca files/slang-debian-utf8.patch 21377
+SHA256 0863328c26953ac4e1e3185f46b16a424b9cb2418ce9984fd917925c2f3c8450 files/slang-debian-utf8.patch 21377
+MD5 3531d8ba2b07b43cf6d758815200bfa9 files/slang-utf8-acs.patch 14366
+RMD160 4b62fde12ed1f50280017d90f1a6acc2d481694f files/slang-utf8-acs.patch 14366
+SHA256 6babaec9f428513b17a8d2c0548340d08488fd546460bd3faef3ceb7f2546c9f files/slang-utf8-acs.patch 14366
+MD5 4be647282e8c01060db9d1707098bd1d files/slang-utf8-fix.patch 855
+RMD160 3316facb8f51b33827bad955c2645dfeaf0e6b23 files/slang-utf8-fix.patch 855
+SHA256 43aa9ddc5f510396b178d15a527e4d367130f4da24c4a18622826a93f254f2f0 files/slang-utf8-fix.patch 855
+MD5 1d7e5eab24fec79cc60d8dbdede252e7 files/slang-utf8-fix2.patch 487
+RMD160 a0626aa237298a356533b593320625bde7fe1989 files/slang-utf8-fix2.patch 487
+SHA256 9fa01b76d41790f0821da6430ea6758195d86eb9726ca43a8fc7ce2b585326ca files/slang-utf8-fix2.patch 487
+MD5 bc00f0356947154d3250243bd5ec08f5 metadata.xml 219
+RMD160 355a59738ac2c3bb2de2c5cdf45b5a15a91fe4aa metadata.xml 219
+SHA256 2dd88647b8f46df7519fe3a112dba84d9af4c7933908984766cf3a25d2e30e3d metadata.xml 219
+MD5 aa05b5e6a399e3db621b204b914913ea slang-1.4.9-r1.ebuild 1792
+RMD160 4267db54799e11954b5a7877820f988ab77ae2c9 slang-1.4.9-r1.ebuild 1792
+SHA256 919843c31875cac5711fdbf2be8af11412fae7a1a50b59f919490ef0a2d9b310 slang-1.4.9-r1.ebuild 1792
+MD5 fa097ee8ef4995aeee6585a0336646da slang-1.4.9-r2.ebuild 1879
+RMD160 8f96ae3e9e9d269c9e2f72556ee90427b0ae3e11 slang-1.4.9-r2.ebuild 1879
+SHA256 3d82f4e41a0570104c9519ed566718faa0f5f1f91970dd2d5151a1f151f238ce slang-1.4.9-r2.ebuild 1879
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCiLQ1evY57Fted3ERAtjjAJ9N+i4G3NTfJSUHabsJdPSZ81ECpgCfc1y8
-+JABUgtbKrdMxYhaRqQVhNg=
-=KESU
+iD8DBQFD9Nc69ZFPrqoILX8RAp8sAJ0R2XPmBXFAMrsC7GxOsnWugM5LygCgx/WX
+oiTdtFUq/QyctUB5DtYdlsc=
+=Ymgp
 -----END PGP SIGNATURE-----

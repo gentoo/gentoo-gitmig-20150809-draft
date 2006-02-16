@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r2.ebuild,v 1.1 2005/05/16 14:51:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r2.ebuild,v 1.2 2006/02/16 19:48:57 liquidx Exp $
 
 inherit eutils
 
@@ -39,6 +39,8 @@ src_unpack() {
 }
 
 src_compile() {
+	export LANG=C
+	export LC_ALL=C
 	econf || die "econf failed"
 	emake -j1 all elf || die "make failed"
 }
