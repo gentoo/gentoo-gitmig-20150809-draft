@@ -1,6 +1,34 @@
-MD5 1e4be113b2f21e76b8b1e7ae0ed2251d metadata.xml 430
-MD5 503cc4fe367313ff3f219b82b2e7fddf oniguruma-2.3.3.ebuild 678
-MD5 6e2e937ff678584f86db84b3546ea0bc ChangeLog 2377
-MD5 de795ab0fa0ce55a24ac7a35c8d252a3 oniguruma-2.3.2.ebuild 674
-MD5 db9304e704dd9a188cfc604b1c236354 files/digest-oniguruma-2.3.3 62
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4b942958718d3dfaae029f2423ef476e ChangeLog 2538
+RMD160 a1b887dac448febd316939f2e01698eca4681d97 ChangeLog 2538
+SHA256 8da0673d1cd4843e9f35850f766da839973f2cb639fe2f1f57ca3881c1e71ec3 ChangeLog 2538
 MD5 3515a575b035ca71918baffd89d8ae36 files/digest-oniguruma-2.3.2 62
+RMD160 2c4cd85bbbc3727e1dc8f4638c643de379094576 files/digest-oniguruma-2.3.2 62
+SHA256 ff6afabd8af2c2575c772176d4ef90e6f94483c4cf018ebd11c943f26161548f files/digest-oniguruma-2.3.2 62
+MD5 db9304e704dd9a188cfc604b1c236354 files/digest-oniguruma-2.3.3 62
+RMD160 131f515cbecd57643fd8d51a18dbbdabb93d0d79 files/digest-oniguruma-2.3.3 62
+SHA256 b17e9e195f6b12cd76e8dae5b9af9f522776d5c8427208e3035d189c5eabdbbb files/digest-oniguruma-2.3.3 62
+MD5 8360a3ce54cbd90c6b0bc63d46d88c84 files/digest-oniguruma-4.0.1 232
+RMD160 3492fb2c4217da79ab7207061b20f676722e6073 files/digest-oniguruma-4.0.1 232
+SHA256 31e6f5e18ec29b9af7185a01efffdadab7ceaf481aaa9d1d83a464f897b9c0b0 files/digest-oniguruma-4.0.1 232
+MD5 1e4be113b2f21e76b8b1e7ae0ed2251d metadata.xml 430
+RMD160 9654357a5d6939a92ea7c972c02b2d87bd9b1b79 metadata.xml 430
+SHA256 3e75dbb9889ef3f831d30a8b07a5598905dad66729ff175ac60c62878b040e13 metadata.xml 430
+MD5 de795ab0fa0ce55a24ac7a35c8d252a3 oniguruma-2.3.2.ebuild 674
+RMD160 6af8181b24f5cb099097dfdfd84d102c7f91af10 oniguruma-2.3.2.ebuild 674
+SHA256 eb7a6b888dcb278e6714a0b8570c419965eabda4bbffe55497d2ae5113a60b65 oniguruma-2.3.2.ebuild 674
+MD5 503cc4fe367313ff3f219b82b2e7fddf oniguruma-2.3.3.ebuild 678
+RMD160 b2539d0268fd12e122525641dac2b9ae57c9157b oniguruma-2.3.3.ebuild 678
+SHA256 23ae9a1825a2837b73e6a4a1a7419e21239d6f41cee578acb9cc976aa08e5ce0 oniguruma-2.3.3.ebuild 678
+MD5 80ad2c94ffac82eac5e0860a41eb1dd8 oniguruma-4.0.1.ebuild 660
+RMD160 81298c6d47817dd7c9f2bc39467f97a023775887 oniguruma-4.0.1.ebuild 660
+SHA256 c350c39b746fcebcad184a8cee070ff55e24230f187538f1d38ed104316ed286 oniguruma-4.0.1.ebuild 660
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD9MfE9ZFPrqoILX8RAin3AKDH7JTh4+8lavW348TI0mCALS34WACfVASN
+FIEScc5NnvUlOi+gNwlGbCs=
+=dltu
+-----END PGP SIGNATURE-----
