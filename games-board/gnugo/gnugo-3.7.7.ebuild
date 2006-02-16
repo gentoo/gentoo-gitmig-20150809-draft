@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.7.7.ebuild,v 1.1 2005/10/22 01:37:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.7.7.ebuild,v 1.2 2006/02/16 02:30:05 vapier Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://sporadic.stanford.edu/pub/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="readline"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	readline? ( sys-libs/readline )"
