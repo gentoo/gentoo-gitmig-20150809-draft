@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2194f1ed259519b09abe5a5cefa29311 ChangeLog 730
+MD5 b9f924dae2205a51c5ee0a955e39d381 ChangeLog 853
+RMD160 62378b7e6817d3faf5b4e43cc4a417459a3be25e ChangeLog 853
+SHA256 2ad8e976e6d268afc0ab9b8e644ea159892ba8f48f94194c68d3bc02bad32a84 ChangeLog 853
 MD5 fac71a46004abf5f42c8410c35507dd4 files/digest-video-entropyd-0.7 65
+RMD160 b6742858abd9b8e8019b5570e6c60c47b37810fe files/digest-video-entropyd-0.7 65
+SHA256 8079d15abf06c3c03f78df49bc32d9c6b1997a39dcabf73ff6e6f09c3bb73240 files/digest-video-entropyd-0.7 65
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
-MD5 757f1d22b57dc503a42734588ddcf4b6 video-entropyd-0.7.ebuild 865
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuwoPwUpWvClEHQoRAm5CAJ4xBud+gOXnMpCcAQ2erd390G9R4ACeM6uu
-pS+NXcL+9fc1Ihan50eKjeQ=
-=ASiM
------END PGP SIGNATURE-----
+RMD160 ffa99612cf27469c417944deed0e0c9155e64331 metadata.xml 223
+SHA256 d6bb9ba68629616062b4433ab3b8fb01dfcafae5bb47804d9e06cdd6c66daa44 metadata.xml 223
+MD5 6a8ebe7bbdbea9aebcfde7b6c0a089da video-entropyd-0.7.ebuild 959
+RMD160 e21e48b6c697c7194b0b01ff32ca99a3f5b74ea4 video-entropyd-0.7.ebuild 959
+SHA256 548dff3c8376d93276a72c4f7320408aaa43d5f479e733b66686ec0895421208 video-entropyd-0.7.ebuild 959

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/video-entropyd/video-entropyd-0.7.ebuild,v 1.4 2006/01/03 23:35:11 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/video-entropyd/video-entropyd-0.7.ebuild,v 1.5 2006/02/16 08:05:14 robbat2 Exp $
 
 MY_PN="${PN/-/_}"
 MY_P="${MY_PN}-${PV}"
@@ -11,7 +11,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
-DEPEND="virtual/libc"
+RDEPEND="virtual/libc 
+		media-libs/netpbm"
+DEPEND="${RDEPEND}
+		sys-kernel/linux-headers" # v4l headers from kernel
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
