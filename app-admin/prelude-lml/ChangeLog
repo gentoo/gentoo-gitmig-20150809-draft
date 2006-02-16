@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/prelude-lml
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.24 2006/02/14 02:05:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.25 2006/02/16 03:13:30 weeve Exp $
+
+  16 Feb 2006; Jason Wever <weeve@gentoo.org> prelude-lml-0.9.1.ebuild:
+  Stable on SPARC.
 
   14 Feb 2006; Mark Loeser <halcy0n@gentoo.org> prelude-lml-0.9.1.ebuild:
   Stable on x86; bug #118708
