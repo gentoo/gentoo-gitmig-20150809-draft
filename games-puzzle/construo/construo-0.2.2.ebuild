@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/construo-0.2.2.ebuild,v 1.9 2005/11/14 07:45:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/construo-0.2.2.ebuild,v 1.10 2006/02/16 20:21:11 tupone Exp $
 
 inherit games
 
@@ -13,9 +13,22 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	sys-libs/zlib
-	virtual/glut"
+RDEPEND="|| (
+				(
+					x11-libs/libSM
+					x11-libs/libXxf86vm
+				)
+				virtual/x11
+			)
+		sys-libs/zlib"
+DEPEND="${RDEPEND}
+		||  (
+				(
+					x11-proto/xf86vidmodeproto
+					x11-libs/libXt
+				)
+				virtual/x11
+			)"
 
 src_unpack() {
 	unpack ${A}
