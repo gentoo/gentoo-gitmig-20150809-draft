@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/fpm-0.60.ebuild,v 1.9 2005/01/01 10:59:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/fpm-0.60.ebuild,v 1.10 2006/02/16 23:31:05 flameeyes Exp $
 
 DESCRIPTION="A password manager for gnome"
 HOMEPAGE="http://fpm.sourceforge.net"
@@ -11,14 +11,17 @@ SLOT="0"
 KEYWORDS="x86 amd64 ppc"
 IUSE="nls"
 
-DEPEND="virtual/libc
-	gnome-base/gnome-libs
+DEPEND="gnome-base/gnome-libs
 	>=dev-libs/libxml2-2.5.7-r2
 	x11-libs/gtk+
 	dev-libs/glib
-	nls? ( sys-devel/gettext )"
+	nls? ( virtual/libintl )"
+
 RDEPEND="${DEPEND}
 	dev-util/cvs"
+
+DEPEND="${DEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 	./configure --prefix=/usr
