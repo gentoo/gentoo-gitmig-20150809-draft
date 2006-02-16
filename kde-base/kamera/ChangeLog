@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kamera
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kamera/ChangeLog,v 1.31 2006/01/22 22:52:51 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kamera/ChangeLog,v 1.32 2006/02/16 18:39:47 kloeri Exp $
+
+  16 Feb 2006; Bryan Østergaard <kloeri@gentoo.org kamera-3.5.1.ebuild:
+  ~alpha, ~ia64 keywords.
 
 *kamera-3.5.1 (23 Jan 2006)
 
