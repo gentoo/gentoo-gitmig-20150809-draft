@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.39 2006/02/08 12:57:52 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.40 2006/02/16 21:46:50 exg Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -54,7 +54,7 @@ inherit toolchain-funcs versionator
 
 EXPORT_FUNCTIONS pkg_setup
 
-DEPEND="virtual/linux-sources"
+DEPEND="kernel_linux? ( virtual/linux-sources )"
 RDEPEND=""
 
 # Overwritable environment Var's
