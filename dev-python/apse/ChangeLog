@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/apse
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.3 2005/11/19 10:11:48 chriswhite Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.4 2006/02/16 22:34:49 marienz Exp $
+
+  16 Feb 2006; Marien Zwart <marienz@gentoo.org> apse-0.2.ebuild:
+  Make DESCRIPTION a bit shorter.
 
   19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
   Added japanese metadata.xml translation thanks to Yoshino-san.
