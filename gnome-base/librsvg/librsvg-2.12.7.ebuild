@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.12.7.ebuild,v 1.9 2006/02/03 15:46:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.12.7.ebuild,v 1.10 2006/02/16 04:22:14 leonardop Exp $
 
 inherit eutils multilib gnome2
 
@@ -48,9 +48,12 @@ pkg_setup() {
 		$(use_with zlib svgz)"
 
 	if use nsplugin && ( \
-		built_with_use net-libs/gecko-sdk mozsvg || \
-		built_with_use www-client/mozilla-firefox mozsvg || \
-		built_with_use www-client/mozilla mozsvg ); then
+		( has_version net-libs/gecko-sdk && \
+		  built_with_use net-libs/gecko-sdk mozsvg ) || \
+		( has_version www-client/mozilla-firefox && \
+		  built_with_use www-client/mozilla-firefox mozsvg ) || \
+		( has_version www-client/mozilla && \
+		  built_with_use www-client/mozilla mozsvg ) ); then
 
 		ewarn "A SVG plugin for mozilla-compatible browsers is already present"
 		ewarn "in your system. To avoid replacing the old plug-in, librsvg"
