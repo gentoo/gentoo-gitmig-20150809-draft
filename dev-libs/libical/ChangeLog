@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libical
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.17 2006/02/15 09:24:16 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.18 2006/02/16 10:06:34 s4t4n Exp $
+
+  16 Feb 2006; Michele Noberasco <s4t4n@gentoo.org> libical-0.26.6.ebuild,
+  libical-0.24_rc4-r1.ebuild:
+  Fixed DEPEND and RDEPEND. Closes bug #122995.
 
 *libical-0.26.6 (15 Feb 2006)
 

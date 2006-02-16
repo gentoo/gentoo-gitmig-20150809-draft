@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.26.6.ebuild,v 1.1 2006/02/15 09:24:16 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.26.6.ebuild,v 1.2 2006/02/16 10:06:34 s4t4n Exp $
 
 IUSE=""
 
@@ -8,11 +8,13 @@ DESCRIPTION="libical is an implementation of basic iCAL protocols"
 HOMEPAGE="http://www.aurore.net/projects/libical/"
 SRC_URI="http://www.aurore.net/projects/libical/${PN}-0.26-6.aurore.tar.bz2"
 
-DEPEND="virtual/libc
-			>=sys-devel/bison-1.875d
-			>=sys-devel/flex-2.5.4a-r6
-			>=sys-apps/gawk-3.1.4-r4
-			>=dev-lang/perl-5.8.7-r3"
+RDEPEND="virtual/libc"
+
+DEPEND="${RDEPEND}
+	>=sys-devel/bison-1.875d
+	>=sys-devel/flex-2.5.4a-r6
+	>=sys-apps/gawk-3.1.4-r4
+	>=dev-lang/perl-5.8.7-r3"
 
 SLOT="0"
 LICENSE="MPL-1.1 LGPL-2"
