@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.2.ebuild,v 1.3 2006/02/14 10:21:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.2.ebuild,v 1.4 2006/02/16 11:18:45 nelchael Exp $
 
 inherit eutils wxwidgets
 
@@ -19,7 +19,7 @@ DEPEND=">=app-doc/chmlib-0.31
 
 src_unpack() {
 
-	unpack "${A}"
+	unpack ${A}
 
 	# Fixes bug #117798:
 	epatch "${FILESDIR}/${PN}-gcc41.patch"
