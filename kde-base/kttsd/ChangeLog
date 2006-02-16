@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kttsd
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.37 2006/01/22 22:53:07 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.38 2006/02/16 09:25:05 flameeyes Exp $
+
+  16 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> kttsd-3.4.1.ebuild,
+  kttsd-3.4.2.ebuild, kttsd-3.4.3.ebuild:
+  Make pkgconfig a build-type dependency.
 
 *kttsd-3.5.1 (23 Jan 2006)
 
