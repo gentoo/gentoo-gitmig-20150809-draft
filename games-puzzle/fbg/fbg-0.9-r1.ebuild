@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/fbg-0.9-r1.ebuild,v 1.6 2004/06/24 23:04:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/fbg-0.9-r1.ebuild,v 1.7 2006/02/16 20:40:45 tupone Exp $
 
 inherit games
 
@@ -13,12 +13,14 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE=""
 
-DEPEND="virtual/x11
+RDEPEND="
 	virtual/opengl
 	virtual/glu
 	>=dev-games/physfs-0.1.7
 	>=media-libs/libsdl-1.2.0
 	>=media-libs/libmikmod-3.1.10"
+DEPEND="${RDEPEND}
+	|| ( x11-libs/libXt virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
