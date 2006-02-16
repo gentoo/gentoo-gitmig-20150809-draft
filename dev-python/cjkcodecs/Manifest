@@ -1,10 +1,22 @@
-MD5 ffa1c95563247745f132bce911573500 cjkcodecs-1.0.2.ebuild 640
-MD5 6ac60b0f4345fe461dcf1c86ca459f68 metadata.xml 176
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bfa4461799a60a9a9efe3d05e8e8f0af ChangeLog 2226
-MD5 e6ec95440488dff7c374761498f15de8 cjkcodecs-1.0.ebuild 635
+RMD160 3291211d26044d7c9ad888969544cf380c8fb5e4 ChangeLog 2226
+SHA256 c96e8a949ec463360807443d3e07e35b3a699c9fa3a74438e2022c08ff48ee1a ChangeLog 2226
 MD5 cb2c1b8c8e3c420b7dbb8f96ab8d83cd cjkcodecs-1.1.1.ebuild 668
-MD5 c0b82d627a84ba3b75cde4bf3fae41ff cjkcodecs-1.0.3.ebuild 658
+RMD160 4d1d0e20ab3de725e2f3f09fe5773d2661b2fb9f cjkcodecs-1.1.1.ebuild 668
+SHA256 173560cc3dc01746456671195866db67b66bc7f4b1bae60ec44082a7f4a024d1 cjkcodecs-1.1.1.ebuild 668
 MD5 28da2fd8f2ffb71386fc6dba8978277f files/digest-cjkcodecs-1.1.1 68
-MD5 ed462808d32026657155f1dff6cdd1e2 files/digest-cjkcodecs-1.0.2 68
-MD5 fe55aaf14f85bb1bca60f19f40e02e60 files/digest-cjkcodecs-1.0 65
-MD5 45fc7efdd09f88205d5a0a1bb4d20daa files/digest-cjkcodecs-1.0.3 68
+RMD160 06156a929e3fe34b02563cc9eeb0a733d28f81ef files/digest-cjkcodecs-1.1.1 68
+SHA256 ea261df0300ec1e17233f0edf50d8fd68d3272250428af663c4eb353d3114172 files/digest-cjkcodecs-1.1.1 68
+MD5 6ac60b0f4345fe461dcf1c86ca459f68 metadata.xml 176
+RMD160 b21c34339a6916b09e967c081e31ebdc51ade414 metadata.xml 176
+SHA256 88bb50931c7cc8aba60c7adcc833c92d1bc09aec1ad7d557d220ae2d885b2c42 metadata.xml 176
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD9Nn59ZFPrqoILX8RApW4AJ9emgIH0RaJ7VwCF0z+RqtfFMMwhgCfY3UT
+S4KTX2/mh9MtG4hUr7Vi6v0=
+=rbMF
+-----END PGP SIGNATURE-----
