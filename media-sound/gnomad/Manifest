@@ -1,20 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 63047858f054f847286781b3cf4d0ebc ChangeLog 2897
+MD5 101f188510c958e46a3d79857f89466e ChangeLog 2993
+RMD160 10dfdb0ec60e42fc8be09aca9b1b805dd3e8b067 ChangeLog 2993
+SHA256 7503176b5ce39b00fa2e3fa0f2f6473f30a433e9f7f7b2615a36f20459708266 ChangeLog 2993
 MD5 cc066dd71ec9b6e6d8ff876563b3e439 files/digest-gnomad-2.5.0 65
+RMD160 ba8a22a56f86dedf245788d46b37db248f1825e4 files/digest-gnomad-2.5.0 65
+SHA256 65531bd7ac3ed5c7c8d02e0f98d1e378aad5024a5428d4c52d7625622b6df8a7 files/digest-gnomad-2.5.0 65
 MD5 a8c5c20a3bc558a4b463423ffb3468ed files/digest-gnomad-2.8.0 65
+RMD160 7c3a52f028d9a686d0915471446ffb60272d5519 files/digest-gnomad-2.8.0 65
+SHA256 8ebdddf90f7f1d9606a071565219e5c5d8bab795e2ae3ad9a0de46698bac8951 files/digest-gnomad-2.8.0 65
 MD5 cf580ca69bd597754a1517db48b214af files/digest-gnomad-2.8.1 65
+RMD160 b19d019f3abc782e84455159db24fa61ec63519b files/digest-gnomad-2.8.1 65
+SHA256 6506a4cf186c830478dcde3430d01bb8b04efd9190d102513328f4f5a02af2e6 files/digest-gnomad-2.8.1 65
 MD5 ac76d37b624ce889aac4eda6fb651b3d files/digest-gnomad-2.8.2 65
-MD5 8eafe6959e135e08fcceaa2db4fa34e5 gnomad-2.5.0.ebuild 932
+RMD160 f38027fd6f3f70492fcda66fe0e9cc353591f3ed files/digest-gnomad-2.8.2 65
+SHA256 d77fe0e465d38da9711ba9f86746a1771040c6e598262d1713d986b2be012c8a files/digest-gnomad-2.8.2 65
+MD5 79b236d69a3b3304ae67a3eb436debd0 gnomad-2.5.0.ebuild 938
+RMD160 7459249ef93cbf8f9030dd7d3a2524d6cd525a0c gnomad-2.5.0.ebuild 938
+SHA256 9af3798cdd3885f40d9afad16e6d41278314d2d0749307baa8e485786b4a1e1f gnomad-2.5.0.ebuild 938
 MD5 66de909fc3d85474c3201a422a89ce2e gnomad-2.8.0.ebuild 1019
+RMD160 bbe5866397ff8d7c0b33ffe919126b9bee8325c8 gnomad-2.8.0.ebuild 1019
+SHA256 7873917d0731d0142facee1d67ffaa16cc209e186a1a79a42a76a9546b77ec0f gnomad-2.8.0.ebuild 1019
 MD5 0dc0696566578303ba29f874f4caeb18 gnomad-2.8.1.ebuild 1022
+RMD160 434cfd8bf8fc0c71c1667f7f15adc84ce0b40051 gnomad-2.8.1.ebuild 1022
+SHA256 5a9565c4ae9fa0ce5b405666cd6ce67aaca3fa35b03643123450253dd0c6da37 gnomad-2.8.1.ebuild 1022
 MD5 2c554d19b224af8d5ada3d7bda869a86 gnomad-2.8.2.ebuild 1028
+RMD160 f982fcf4dcd8b460bff7135bec9fd87588e923fd gnomad-2.8.2.ebuild 1028
+SHA256 083adc4f19631e1b2ebb0e6c54dd041472c0622efce940942eade927e74f20e9 gnomad-2.8.2.ebuild 1028
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDmN6GwUpWvClEHQoRAr1oAJ9Y3fueiSvH1qZ44+OWhVd8JVQ/zgCeI/5t
-nPXTsQa7hZWEB//rY9HVkec=
-=Jbat
+iD8DBQFD9DxEAiZjviIA2XgRAvVIAKDk0QGqVWNO6ndhjRJP3brLMiEgUgCZAfyN
++gPorwwU7pADMLJE8WGjufQ=
+=cTd3
 -----END PGP SIGNATURE-----
