@@ -4,27 +4,12 @@ Hash: SHA1
 MD5 29b68d8e3a500b6fdf9c52d22a2de5c5 ChangeLog 69538
 RMD160 7130a87547117753e76fd7d159ed535c5e762e9a ChangeLog 69538
 SHA256 722d5f1c21ce854bb70b01ff22b35493f67a71ca7e9cd4a8394b8a0e4a94223a ChangeLog 69538
-MD5 8bd6dd1987c5333b1c1cf227a296bd76 baselayout-1.11.13-r1.ebuild 18944
-RMD160 2cfb5f3f9fac3611fc1cd5df78fe1a22b3ffa7ab baselayout-1.11.13-r1.ebuild 18944
-SHA256 2dff28182cbc93e4b1b2207087bf1c3e020715e45b7d41fb23f1a8744a672f57 baselayout-1.11.13-r1.ebuild 18944
 MD5 22a10db577b1b646d12ba31ed7b77a6c baselayout-1.11.13-r2.ebuild 19014
 RMD160 3d1348291157e3f973f4ad16e4f222fd32645593 baselayout-1.11.13-r2.ebuild 19014
 SHA256 236d09bf8aed1a3f73c26bdb287957a21212646ecb6eec21abaafa9ef6e3b2ef baselayout-1.11.13-r2.ebuild 19014
-MD5 f766cf82a790fd41852625508323d341 baselayout-1.11.14-r1.ebuild 19085
-RMD160 0158e593067ecea1dc8e989082d0dc6c3de0c2bb baselayout-1.11.14-r1.ebuild 19085
-SHA256 86fc0c637b9c47cfe5362de110b0e56f0a5419bafad6ce4ec856bf76079ab0c6 baselayout-1.11.14-r1.ebuild 19085
-MD5 f948b3c2c635db77512589bb3062238b baselayout-1.11.14-r2.ebuild 19133
-RMD160 9fbb30e8c47bead968478263689bcdb70aa29c0b baselayout-1.11.14-r2.ebuild 19133
-SHA256 c0e993ca67f68ea923ee361bd7b1205e870974413d4976a8566e172d1bc060e4 baselayout-1.11.14-r2.ebuild 19133
-MD5 0a68869598188f35025aada57e54bcdd baselayout-1.11.14-r3.ebuild 19171
-RMD160 830428af7654afc7e3c504569149910d38a30850 baselayout-1.11.14-r3.ebuild 19171
-SHA256 d654f531b014cf03d0075547b933ecfc1e8d0971abd31cf8b94e1491ab62d170 baselayout-1.11.14-r3.ebuild 19171
 MD5 13e3e96a36fdc076a3d531cdeaf49064 baselayout-1.11.14-r4.ebuild 19213
 RMD160 1bf2d87757e82f0c9f87d207f21752522e98bd1b baselayout-1.11.14-r4.ebuild 19213
 SHA256 00cdd0ace2680d9719677fb086833d4d1d60853e62597e51e8d830a9813b8142 baselayout-1.11.14-r4.ebuild 19213
-MD5 83b799404d491c3b9e95a2665921f53f baselayout-1.11.14.ebuild 19039
-RMD160 113bc3c6f4484926ed4efbd3dc2821a34f84ddea baselayout-1.11.14.ebuild 19039
-SHA256 a619c8f48fd78a158a16b5e34dbc994a27773d4ad6f6f48d00cfd580745c6316 baselayout-1.11.14.ebuild 19039
 MD5 fb8201b6a7cab159eca5eabda983f0dc baselayout-1.12.0_pre13-r1.ebuild 19334
 RMD160 6d4368265b739ad56957d0806036ff06aff9caf3 baselayout-1.12.0_pre13-r1.ebuild 19334
 SHA256 3a6d2ae02c37c0f09ce8e184b1b1c1684e9da46dc89ef0b597c66cee2b9ba74b baselayout-1.12.0_pre13-r1.ebuild 19334
@@ -55,24 +40,9 @@ SHA256 0f03ec0c1b5bf8b46b990c30054f2903bca6cb58ddbd8449735399404d7a71fa files/ba
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 RMD160 43e295598125f39e375a1fcee6e642e37c8b8bd8 files/copyright 2099
 SHA256 38db4636f65ce40ea505a6337138b041ac6be5998982193d16b1fbdeebb2bacd files/copyright 2099
-MD5 8dae78310577f3fb14c58704d529feb3 files/digest-baselayout-1.11.13-r1 70
-RMD160 48200b2167134f7ffe7373f392ae916adbaff088 files/digest-baselayout-1.11.13-r1 70
-SHA256 8be386254cdb00a3903244c63173c6f59df705f561d5e8c9e3865614baa84919 files/digest-baselayout-1.11.13-r1 70
 MD5 8dae78310577f3fb14c58704d529feb3 files/digest-baselayout-1.11.13-r2 70
 RMD160 48200b2167134f7ffe7373f392ae916adbaff088 files/digest-baselayout-1.11.13-r2 70
 SHA256 8be386254cdb00a3903244c63173c6f59df705f561d5e8c9e3865614baa84919 files/digest-baselayout-1.11.13-r2 70
-MD5 6d158e9a0e9b32c05e6633a68b39b4cc files/digest-baselayout-1.11.14 70
-RMD160 46c07fa01d82a73a31fb29a3c15584a93d7917e3 files/digest-baselayout-1.11.14 70
-SHA256 ec698c106288e0a5dbc32b961ff0fb6fdc0c0647bb529eee47e1c3230cb2d94f files/digest-baselayout-1.11.14 70
-MD5 6d158e9a0e9b32c05e6633a68b39b4cc files/digest-baselayout-1.11.14-r1 70
-RMD160 46c07fa01d82a73a31fb29a3c15584a93d7917e3 files/digest-baselayout-1.11.14-r1 70
-SHA256 ec698c106288e0a5dbc32b961ff0fb6fdc0c0647bb529eee47e1c3230cb2d94f files/digest-baselayout-1.11.14-r1 70
-MD5 6d158e9a0e9b32c05e6633a68b39b4cc files/digest-baselayout-1.11.14-r2 70
-RMD160 46c07fa01d82a73a31fb29a3c15584a93d7917e3 files/digest-baselayout-1.11.14-r2 70
-SHA256 ec698c106288e0a5dbc32b961ff0fb6fdc0c0647bb529eee47e1c3230cb2d94f files/digest-baselayout-1.11.14-r2 70
-MD5 6d158e9a0e9b32c05e6633a68b39b4cc files/digest-baselayout-1.11.14-r3 70
-RMD160 46c07fa01d82a73a31fb29a3c15584a93d7917e3 files/digest-baselayout-1.11.14-r3 70
-SHA256 ec698c106288e0a5dbc32b961ff0fb6fdc0c0647bb529eee47e1c3230cb2d94f files/digest-baselayout-1.11.14-r3 70
 MD5 00d79deae663edaa627c8bbc572c6967 files/digest-baselayout-1.11.14-r4 256
 RMD160 61e4bfb394dabe52a62e8b2b56102ad0e6f60d66 files/digest-baselayout-1.11.14-r4 256
 SHA256 939da19d06f033b18784c7ab4a9d168d9b68caaf4cdbafde33ae754a10af754d files/digest-baselayout-1.11.14-r4 256
@@ -88,7 +58,7 @@ SHA256 fbd7e4a5615d68c8d6f9438136dd18e41c43b393a9c00b0bea12661d790441e1 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD9AHrEbVyYKaZ/NERAky3AJ9jPnIC/m6GgIUOKDjt45wcdS+LkACfRid2
-IMOdcqWii15aGUjt9BmYVJM=
-=SV6K
+iD8DBQFD9AKHEbVyYKaZ/NERAk+hAJwKLQpvmtdkrHf1UCYx6GuDL5+4nwCfYXTy
+L9oxv0nYgNNBRA1aZuuxRvc=
+=Re9j
 -----END PGP SIGNATURE-----
