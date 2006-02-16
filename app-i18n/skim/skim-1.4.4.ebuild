@@ -1,6 +1,6 @@
 # Copyright 2000-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.3.ebuild,v 1.2 2006/02/16 19:02:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.4.ebuild,v 1.1 2006/02/16 19:02:33 liquidx Exp $
 
 inherit kde multilib
 
