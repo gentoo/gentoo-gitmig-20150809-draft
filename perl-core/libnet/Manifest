@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f13a0ce14164fd568bf54a631cb0cf5 ChangeLog 4594
+MD5 fcef4e6ba560155174bb00f5d4907b6a ChangeLog 4594
+RMD160 25b1c4e17de1439322b57dc6714881a61a3c55a9 ChangeLog 4594
+SHA256 a8f9700198914f862dd0a7fcb8cc8b526cea93a0e979fb0d403f19d4f658036f ChangeLog 4594
 MD5 ebfa5958fea15492b23d41aceae03fe4 files/digest-libnet-1.19 62
+RMD160 0167c4fe17081bd3e00a888d145a4893ecceb38c files/digest-libnet-1.19 62
+SHA256 f52f3da80e730242a7cd2cc06717e445183ee90636274b8f36ec1d227fdc765c files/digest-libnet-1.19 62
 MD5 655ae6886075bd2902bd1b1bcbbffa4d files/libnet.cfg 268
+RMD160 6c5fd8a093897165d5cb6b7db955fc8c55827799 files/libnet.cfg 268
+SHA256 e07de290e7651f580bd587231655b8bf9c2b4ae7d77e650ccfa28c25ad705912 files/libnet.cfg 268
 MD5 89f259d39aa30f27e28b95cbc6817abf libnet-1.19.ebuild 600
+RMD160 49aa41905f88a5150ece591f7ebc365ee59c8ffb libnet-1.19.ebuild 600
+SHA256 2d7cb783f5bbe4c6b882e847ce84f9a3248495d34a3f9c9079e500e9607c2a6c libnet-1.19.ebuild 600
 MD5 5754ff268b56f63cc6b8cca33848cfaf metadata.xml 485
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyag92+ySkm8kpY0RAgidAJ9yzSSfc/C2LttUPkISEgTe5HkdCgCgnylz
-r9EeVJhKmiHkSVZ6nI3u5mc=
-=5XT9
------END PGP SIGNATURE-----
+RMD160 dc9ff8eef00c1c6914a4497e51751e9a81a2307d metadata.xml 485
+SHA256 ea552fea0b170b64896d3bf87cdc3a7e3a494501d2d9cb9c5e46635f8eaea2be metadata.xml 485
