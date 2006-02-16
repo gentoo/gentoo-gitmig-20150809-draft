@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.0.3.ebuild,v 1.2 2005/07/25 19:11:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.0.3.ebuild,v 1.3 2006/02/16 08:55:45 flameeyes Exp $
 
-DESCRIPTION="SooperLooper is a live looping sampler capable of immediate loop recording, overdubbing, multiplying, reversing and more."
+DESCRIPTION="Live looping sampler with immediate loop recording"
 HOMEPAGE="http://essej.net/sooperlooper/index.html"
 SRC_URI="http://essej.net/sooperlooper/${P}.tar.gz"
 RESTRICT=""
