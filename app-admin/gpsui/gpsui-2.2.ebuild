@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gpsui/gpsui-2.2.ebuild,v 1.16 2005/09/07 03:44:39 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gpsui/gpsui-2.2.ebuild,v 1.17 2006/02/16 23:44:09 flameeyes Exp $
 
 DESCRIPTION="GUI program for managing running processes"
 HOMEPAGE="http://gpsui.sourceforge.net/"
@@ -11,8 +11,11 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ppc64 x86"
 IUSE="nls"
 
-DEPEND="=x11-libs/gtk+-1.2*
+RDEPEND="=x11-libs/gtk+-1.2*
 	=gnome-base/gnome-libs-1.4*
+	nls? ( virtual/libintl )"
+
+DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}/${PN}"
