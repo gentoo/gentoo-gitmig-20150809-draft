@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.8 2006/02/05 13:45:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.9 2006/02/16 02:25:17 vapier Exp $
 
 ECVS_SERVER="cvs.winehq.org:/home/wine"
 ECVS_MODULE="wine"
@@ -127,18 +127,8 @@ src_compile() {
 }
 
 src_install() {
-	make \
-		prefix="${D}"/usr \
-		bindir="${D}"/usr/bin \
-		datadir="${D}"/usr/share \
-		includedir="${D}"/usr/include/wine \
-		sysconfdir="${D}"/etc/wine \
-		mandir="${D}"/usr/share/man \
-		libdir="${D}"/usr/$(get_libdir) \
-		dlldir="${D}"/usr/$(get_libdir)/wine \
-		install || die
-
-	dodoc ANNOUNCE AUTHORS BUGS ChangeLog DEVELOPERS-HINTS README
+	make DESTDIR="${D}" install || die
+	dodoc ANNOUNCE AUTHORS ChangeLog DEVELOPERS-HINTS README
 }
 
 pkg_postinst() {
