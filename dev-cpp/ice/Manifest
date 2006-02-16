@@ -1,8 +1,34 @@
-MD5 1abfafaf7102c93db3dbf7b06e6074d5 ChangeLog 1185
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ab94035bc445737800161d1eadf8f146 ChangeLog 1187
+RMD160 d5b3f6724ccdad4103860cf0396df9911771fade ChangeLog 1187
+SHA256 f7a1291b19c72dfb7cb1afbe599f17df1a64c0c32662ad504ea7ec88ce3ea34f ChangeLog 1187
 MD5 5643b69002aaa0bd00051022b1b087aa files/digest-ice-3.0.0-r1 62
+RMD160 a12649cf8dd3ad62075ff90312cac6c8331b26b1 files/digest-ice-3.0.0-r1 62
+SHA256 3b282fe7b7c7eacbe7e08f6c34f4f967e780cbb058274b89377ce93217669aa2 files/digest-ice-3.0.0-r1 62
 MD5 76a7d7075d2cc7073fbf13ff1d80f334 files/digest-ice-3.0.1 62
+RMD160 7b9317cacb0c539621dd25bcfe8b4aeb60b55f19 files/digest-ice-3.0.1 62
+SHA256 0941402cf1886bb1955f0f2671c856a428f5a2186fbbd1aa6ab62d4f00b95cef files/digest-ice-3.0.1 62
 MD5 a0be36f640bd61300ef8d1a538ed0145 files/ice-3.0.0-makefile.patch 1666
+RMD160 a6dcb913cd285eba5277db6e5b35e66074d3d0b9 files/ice-3.0.0-makefile.patch 1666
+SHA256 18282bdda0b3dee659bc478b34f11dc23642b4b811a7b826789a599b71b8357f files/ice-3.0.0-makefile.patch 1666
 MD5 175aea2fc46c6c8180771013e363b11e files/ice-3.0.1-makefile.patch 1436
+RMD160 6957ee3d88b7208b8d23da2c2d00e6643c9ab233 files/ice-3.0.1-makefile.patch 1436
+SHA256 bc1a2251ddefd09ac4b4d5f543a613b76ae1ece79d046811a3da122310d8017a files/ice-3.0.1-makefile.patch 1436
 MD5 2e582f2fff0e920a43fcc2365b9225fd ice-3.0.0-r1.ebuild 1467
+RMD160 ba6d45d50535a3415e73a2de051d4f4d9a1932b0 ice-3.0.0-r1.ebuild 1467
+SHA256 41fd0eb2213948f37c2c54bd7b1805b74e0d3b8eaaff3ad84938e806a7a2b448 ice-3.0.0-r1.ebuild 1467
 MD5 cbcf121666c4ae3daae50badbb68a64c ice-3.0.1.ebuild 1461
+RMD160 9ee5143c9e5f1e7d3c74f0582ddc5fdd1803ddff ice-3.0.1.ebuild 1461
+SHA256 df9a022b49ce732c0284c4bf9c56f8306925659492365b022d9b217ecc7b22c3 ice-3.0.1.ebuild 1461
 MD5 89c7fbb98eae7d62ddd1c72e6d4e2ca5 metadata.xml 360
+RMD160 122e8d1af9707fb49d0595c4bd652ca2c6de530e metadata.xml 360
+SHA256 4aa05d254f36e39ac383f9d2ef18b88092f713e582243210fe795abf7e374b84 metadata.xml 360
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD9M1DI1lqEGTUzyQRAtf1AKCbVsfRe67FuLr7kcYiAjYUX0T3GgCgoBh7
+Tq/1sRUoNh2bjJuL7aha9H4=
+=c+7W
+-----END PGP SIGNATURE-----
