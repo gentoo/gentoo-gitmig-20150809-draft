@@ -2,14 +2,15 @@
 Hash: SHA1
 
 MD5 324187c987bfcc2684174e091334f67f ChangeLog 741
+MD5 45f7a45317376b71bea73a1cddfccda4 files/digest-syck-0.53 61
 MD5 eb4793a7d48077b2644c9a5c67e7c61a files/digest-syck-0.55 61
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 13a590e0d7b99d11b2b04393cbcbe7f3 syck-0.53.ebuild 565
 MD5 ae4c4f95918c96941cdf33270a2ca962 syck-0.55.ebuild 627
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD8RnxtG5z4I8BtQoRAtkFAJ9SmEThG16qx+rkjLwYhZPlLCpzjQCeOpyP
-q5ESJ4FAapcRD0GZf80QOy8=
-=POOn
+iD8DBQFD9MllI1lqEGTUzyQRApAmAJ94tkHYVaJjZA/KLxLKC2/A9kv7nwCgvRAl
+8B9R10Ip+rgtWoURrcQhEqc=
+=b0DY
 -----END PGP SIGNATURE-----
