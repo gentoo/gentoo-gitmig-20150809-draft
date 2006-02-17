@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.7.ebuild,v 1.9 2005/12/04 21:11:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.7.ebuild,v 1.10 2006/02/17 01:06:33 flameeyes Exp $
 
 DESCRIPTION="Hypertext info and man viewer based on (n)curses"
 HOMEPAGE="http://dione.ids.pl/~pborys/software/linux/"
@@ -11,7 +11,10 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc sparc"
 IUSE="nls readline"
 
-DEPEND="sys-libs/ncurses
+RDEPEND="sys-libs/ncurses
+	nls? ( virtual/libintl )"
+
+DEPEND="${RDEPEND}
 	sys-devel/bison
 	nls? ( sys-devel/gettext )"
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pinfo
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.22 2005/12/04 21:11:43 jer Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.23 2006/02/17 01:06:33 flameeyes Exp $
+
+  17 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  pinfo-0.6.5_p2-r1.ebuild, pinfo-0.6.7.ebuild, pinfo-0.6.8.ebuild:
+  Make gettext and bison only build-time dependencies. Add metadata for
+  maintainer-needed.
 
   04 Dec 2005; Jeroen Roovers <jer@gentoo.org> pinfo-0.6.7.ebuild,
   pinfo-0.6.8.ebuild:
