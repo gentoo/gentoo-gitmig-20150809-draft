@@ -30,5 +30,9 @@
 		A categoria net-zope contém todos os programas relacionados a
 		Zope (zope.org), incluindo produtos e ferramentas de terceiros.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria net-zope zawiera wszystkie pakiety związane bezpośrednio z
+		Zope (zope.org) jak i nieoficjalne narzędzia i produkty.
+	</longdescription>
 </catmetadata>
 
