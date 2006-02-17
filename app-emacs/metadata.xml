@@ -30,5 +30,8 @@
 		A categoria app-emacs contém pacotes de extensão para o editor de
 		texto Emacs.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria app-emacs zawiera pakiety związane z edytorem tekstu Emacs.
+	</longdescription>
 </catmetadata>
 
