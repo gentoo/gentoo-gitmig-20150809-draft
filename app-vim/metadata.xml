@@ -29,5 +29,9 @@
 		A categoria app-vim contém plugins e pacotes de sintaxe e grafia
 		para o editor de texto Vim.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria app-vim zawiera rozszerzenia, schematy podświetlania składni
+		oraz dodatki służące do sprawdzania pisowni dla edytora tekstu Vim.
+	</longdescription>
 </catmetadata>
 
