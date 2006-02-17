@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.35 2006/02/10 12:45:50 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.36 2006/02/17 00:30:36 dcoutts Exp $
+
+  17 Feb 2006; <duncan@gentoo.org> ghc-bin-6.4.1.ebuild:
+  Added ~amd64.
 
   10 Feb 2006; <duncan@gentoo.org> -ghc-bin-5.04.3.ebuild:
   Remove the last of the versions in the ancient ghc-5.x series.

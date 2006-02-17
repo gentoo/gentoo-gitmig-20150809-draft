@@ -1,19 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8a06dd6e39d77630e19e5fc6002bcd0d ChangeLog 5807
+MD5 d000242b6ea6f3fca20f3616e12650fc ChangeLog 5881
+RMD160 aef939b2745cffcb104f909fb19c5191b0fad2f8 ChangeLog 5881
+SHA256 f41608fa1dd76d88758669871caea09dfe4c193ef917a00b0316f406ad42f19a ChangeLog 5881
 MD5 a82ba08a8abb4ae38bcc8d467c665e7b files/10ghc 40
+RMD160 1c9e367fa4ea2fa2d3a046986b066b157964390a files/10ghc 40
+SHA256 86c80e876343456b1a1407365bfc2a441bf4c6ca23d3549d67bd800abd617e2f files/10ghc 40
 MD5 aeec673d67613d60a91b5d8d3a11b184 files/digest-ghc-bin-6.2.2-r1 218
+RMD160 ec9088c935c58ffdadeb3310819ede63712793e2 files/digest-ghc-bin-6.2.2-r1 218
+SHA256 27da3cb3e1e5829050642fa2570133da844326acaece3d7d4b01f6aea339adb0 files/digest-ghc-bin-6.2.2-r1 218
 MD5 3919aa4d517b8bc37bc59b8e7dc4a334 files/digest-ghc-bin-6.4 356
-MD5 5f3215e252576da58214ce81b1fa5d7f files/digest-ghc-bin-6.4.1 211
+RMD160 13ea1e427826db4d10d4d9e96b88bfe2506e0884 files/digest-ghc-bin-6.4 356
+SHA256 5e83dc0703f66384d8b2a45993ef6b4ffc2bbd2bd01c8d4ffd8234a25e984bd8 files/digest-ghc-bin-6.4 356
+MD5 ad1fd378b15653bc5de506269eab651a files/digest-ghc-bin-6.4.1 470
+RMD160 e70c777e58d9954deea00a3111256bd02fbb8dbf files/digest-ghc-bin-6.4.1 470
+SHA256 d051db20ee09275c8b8ec21a62e9f14f2fe6c10c0bb53723188e5fc015617391 files/digest-ghc-bin-6.4.1 470
 MD5 d4c41357e843c4af8ce3e6a4c1596627 ghc-bin-6.2.2-r1.ebuild 1032
-MD5 b0a31ddf8d263743df07356583007803 ghc-bin-6.4.1.ebuild 1238
+RMD160 461f55af3bb3f3476e728c13dd74218b92e7f3f5 ghc-bin-6.2.2-r1.ebuild 1032
+SHA256 c9ab4aff68caa9f4aba1dd53d170d462546fce28edd78435595666ad60e9332b ghc-bin-6.2.2-r1.ebuild 1032
+MD5 1c40ccbd2039e4240e8b49be6133d1a2 ghc-bin-6.4.1.ebuild 1237
+RMD160 e9fb8f15334da1b05b9048dfdb97f356f3339a2a ghc-bin-6.4.1.ebuild 1237
+SHA256 586dde122159dd489fc2b781799250773eafaba1fb5f068715d9719fca4126ee ghc-bin-6.4.1.ebuild 1237
 MD5 9e5e3b68f1863c338a231811b31c00f1 ghc-bin-6.4.ebuild 1137
+RMD160 4b91634424e684abe68dbfbc5556cf62614329a3 ghc-bin-6.4.ebuild 1137
+SHA256 a6bcd36a94ce3232d6351e08415ebf591ff011f3604e6183d24da7f6728b4847 ghc-bin-6.4.ebuild 1137
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
+RMD160 57bc74b2471cd3dba6dcdcce531df8eb82893cee metadata.xml 224
+SHA256 2b30834e4d9f141a1e1b63457d4af1f6a8cb6d4a47f8dd3b14e726277079769b metadata.xml 224
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD7IsO/B0cxt+cq+wRAhuhAJ4nVHxnHNSS8Ev9lu51unJhDiNxiwCfaBw4
-T2GJSfRKgZEsIsFIq9/SFLM=
-=LwHx
+iD8DBQFD9Rk2/B0cxt+cq+wRAsbFAJ9/nKifg4by48iE2eOVaiYS8dNPYACfZole
+wVVZf3Am9ZBraVX2s/lFGAo=
+=PGdr
 -----END PGP SIGNATURE-----
