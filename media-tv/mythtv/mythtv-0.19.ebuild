@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19.ebuild,v 1.3 2006/02/17 03:34:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19.ebuild,v 1.4 2006/02/17 03:38:25 cardoe Exp $
 
 inherit flag-o-matic eutils debug qt3
 
@@ -56,6 +56,12 @@ pkg_setup() {
 		eerror "Qt is missing MySQL support. Please add"
 		eerror "'mysql' to your USE flags, and re-emerge Qt."
 		die "Qt needs MySQL support"
+	fi
+
+	if ! built_with_use x11-libs/qt opengl ; then
+		eerror "Qt requires OpenGL support. Please add"
+		eerror "'opengl' to your USE flags, and re-emerge Qt."
+		die "Qt needs OpenGL support."
 	fi
 
 	if ! has_version x11-libs/libXv && ! built_with_use x11-base/xorg-x11 xv; then
