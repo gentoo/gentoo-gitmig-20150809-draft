@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/monopod
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/monopod/ChangeLog,v 1.1 2006/02/17 19:27:34 johnm Exp $
+
+*monopod-0.3 (17 Feb 2006)
+
+  17 Feb 2006; John Mylchreest <johnm@gentoo.org> +metadata.xml,
+  +monopod-0.3.ebuild:
+  initial import. Also closes bug #98335.
+
