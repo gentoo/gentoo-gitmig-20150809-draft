@@ -26,5 +26,9 @@
 	<longdescription lang="it">
 		La categoria sys-devel contiene gli strumenti e le librerie essenziali per lo sviluppo del software e la compilazione del sistema.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria sys-devel contém várias ferramentas e bibliotecas
+		de desenvolvimento essenciais para o sistema.
+	</longdescription>
 </catmetadata>
 
