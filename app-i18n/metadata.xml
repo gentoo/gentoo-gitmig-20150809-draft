@@ -26,5 +26,9 @@
 	<longdescription lang="pt">
 		A categoria app-i18n contém pacotes para internacionalização.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria app-i18n zawiera pakiety zawierające tłumaczenia różnych
+		składników systemu na różne języki.
+	</longdescription>
 </catmetadata>
 
