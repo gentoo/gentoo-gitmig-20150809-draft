@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.7.5.ebuild,v 1.5 2005/12/20 12:10:23 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.7.5.ebuild,v 1.6 2006/02/17 11:01:24 s4t4n Exp $
 
 inherit eutils
 
@@ -14,7 +14,6 @@ KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
 DEPEND="dev-libs/DirectFB
-	virtual/x11
 	dev-util/pkgconfig
 	>=sys-apps/sed-4"
 

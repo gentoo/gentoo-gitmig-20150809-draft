@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/directvnc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.15 2005/12/20 12:10:23 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.16 2006/02/17 11:01:24 s4t4n Exp $
+
+  17 Feb 2006; Michele Noberasco <s4t4n@gentoo.org> directvnc-0.7.5.ebuild:
+  Removed unneded virtual/x11 dependancy.
 
   20 Dec 2005; Michele Noberasco <s4t4n@gentoo.org> directvnc-0.7.5.ebuild:
   Added some magic sed to fix bug #116148. Also, creaded missing metadata.xml
