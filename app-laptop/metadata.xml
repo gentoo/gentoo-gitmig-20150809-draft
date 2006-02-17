@@ -32,5 +32,9 @@
 		A categoria app-laptop contém pacotes que são desenhados para
 		trabalhar com certos tipos de laptops e notebooks.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria app-laptop zawiera pakiety ściśle związane z pracą na
+		laptopach i notebookach.
+	</longdescription>
 </catmetadata>
 
