@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 960c5bfdac75af1ba8299fbef76d9ce3 ChangeLog 777
+MD5 16a10b2192a124aa4c4f3a8fde65b291 ChangeLog 887
+RMD160 4977d579b462a12ff196154b9b9587e57bf8ca62 ChangeLog 887
+SHA256 7544c75befc5692e3e22222f1a7f6c17d030755ce76285f193968cb7baabec4a ChangeLog 887
 MD5 f0725e93946cb31a43249cf1d099e9b0 files/digest-xml-commons-external-1.3.02 81
+RMD160 73ab66ac243d3a74f31002d8337d39d4bb3531ce files/digest-xml-commons-external-1.3.02 81
+SHA256 4fca216c1ac31f3c4d275540fa439b5ca749f6187ce7b730d48b5e94028b9de5 files/digest-xml-commons-external-1.3.02 81
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 6444e661e2a32e752b52b2749da05067 xml-commons-external-1.3.02.ebuild 1062
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1i0lndWRXhKOboURAtXkAJ9VKO92MvfKixuyB1TltUbQNuCJWQCcCbgA
-VPY4TPgRgXOnggezO7wcZ6c=
-=Twun
------END PGP SIGNATURE-----
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
+MD5 ca23b5820cf6d89b85bcb6993bb9b9b4 xml-commons-external-1.3.02.ebuild 1061
+RMD160 29f80f95349ef7961037cdada3bd1a94d9f500d4 xml-commons-external-1.3.02.ebuild 1061
+SHA256 ee9c29e7c6d30a3840749bfe6f2f662e8fd98e252b84c0167736ca25e9869aa3 xml-commons-external-1.3.02.ebuild 1061

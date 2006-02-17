@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 12427a8994f8f62e9d4174b9bafe1893 sun-jimi-1.0-r1.ebuild 1299
-MD5 86c970445aec5b2edfc9d16f327a42ec ChangeLog 1398
-MD5 ce998fa498e14fde4a45703511d537fe metadata.xml 532
+MD5 95aeb7e8cc7f81dd7773b0399e5deebf ChangeLog 1492
+RMD160 b4dce614ea2ad9bc71c6aa25ad6cf1ec6c32e5e5 ChangeLog 1492
+SHA256 14e94250fa41e849ca7dabc6fd4d5ff5d884b22d100a9a5969d1486c547435f1 ChangeLog 1492
 MD5 8ec838971f780c36dfcd2850a7276f7d files/digest-sun-jimi-1.0-r1 57
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDK+x5QiJ/wx066S4RAmELAKCQni8EWpxfjr1ouSWIdGiw59w9MgCeMfSJ
-gSzGjflQ3SfOBcJ1RAbU/ag=
-=inN3
------END PGP SIGNATURE-----
+RMD160 c74a51495ccc9d14b3c308afb48e6d13d2317f40 files/digest-sun-jimi-1.0-r1 57
+SHA256 8ae4cdefb8abb29a22e2d209f89b33205c37e92c68ec0398ee0a275d293a835f files/digest-sun-jimi-1.0-r1 57
+MD5 ce998fa498e14fde4a45703511d537fe metadata.xml 532
+RMD160 22380e576c3a29dc6bd65635714ef73d879bbfb0 metadata.xml 532
+SHA256 7f51ae0c4a5f6121597cbfc09be34108d11412ac59eacbe57486bcd2761f9bb7 metadata.xml 532
+MD5 82e5e023b8f8a5f723c0528469651282 sun-jimi-1.0-r1.ebuild 1294
+RMD160 568764bdbc46b024e226735519768838b7f72e0f sun-jimi-1.0-r1.ebuild 1294
+SHA256 94e295fd4dfb9d443ffdb0f02891947c8411e9d3f187d489d558eebff3f37a62 sun-jimi-1.0-r1.ebuild 1294

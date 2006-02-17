@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3afe6142c64eaa9966de7d9019258421 nanoxml-2.2.1.ebuild 883
-MD5 5edca74d99280d9e52cd8a082a4e6d30 nanoxml-2.2.3.ebuild 893
-MD5 07715304a805ff924a1fbffc10336ee6 ChangeLog 867
-MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 c02a6d92a4bf1aaf3568a813190aed45 ChangeLog 963
+RMD160 9e74600e9bbd9d6b22f25354841803dff8b10c5d ChangeLog 963
+SHA256 d5958a3377efb6f8b4e02eb7e9e5db95ab247dfb6a72ee69766705556d1fb20e ChangeLog 963
 MD5 a152ec7295e1be0f8c663f2ad4beb1d8 files/digest-nanoxml-2.2.1 65
+RMD160 d855c04e31191cbc1e475558fc4aec0501196ffa files/digest-nanoxml-2.2.1 65
+SHA256 0be84e599054158e89bd3dc7c200771ae83a8ad7110c88d442665c5ed54e0892 files/digest-nanoxml-2.2.1 65
 MD5 167540df9ed5ffa35a0e47f6d5521e9b files/digest-nanoxml-2.2.3 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDI3Sb/rLF9B432nYRAgnYAJ40Nd2NvqQybDidMOQ1lQkJXJSN8wCfZ0qR
-3x7ntkTLDZ31PzpyDSuHpog=
-=PJfO
------END PGP SIGNATURE-----
+RMD160 89687e01fe6dcdb5633425128fcc24528adb90a6 files/digest-nanoxml-2.2.3 65
+SHA256 bb6056d6d7e22c9fa5808388fe25ee12c03786f84619c21ef9758d7d07851c3b files/digest-nanoxml-2.2.3 65
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+RMD160 493079b5fb71d66863beea1b023901c90ba81be5 metadata.xml 158
+SHA256 ea882ceccfd160b16cf7e79de423bdcc12b3fa000f124491a6df36f5783894fb metadata.xml 158
+MD5 3afe6142c64eaa9966de7d9019258421 nanoxml-2.2.1.ebuild 883
+RMD160 2bff7c55de61c7fe1e8d00235405cb3dda1311be nanoxml-2.2.1.ebuild 883
+SHA256 0284f9c669e722e6a20bbc63e98f4cdecc3d1b9cf534464c96d145ee4a84ba3d nanoxml-2.2.1.ebuild 883
+MD5 d16c6bc025e02ec667f0954dc0ec21c1 nanoxml-2.2.3.ebuild 894
+RMD160 d67db4d24ed49c4872d2489a4405d72d35614f1b nanoxml-2.2.3.ebuild 894
+SHA256 4e1bfc568e9a734c09d629b123652624f0e5b6095ae4c0998aa05cb7d3643a0b nanoxml-2.2.3.ebuild 894
