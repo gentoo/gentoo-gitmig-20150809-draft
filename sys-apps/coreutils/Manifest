@@ -46,16 +46,16 @@ SHA256 2b7ad3f7cfe2029e4ab6b8b9a4b504524a4713b5cf4f887aad0f590f31938b8b files/di
 MD5 5dbad8ed5bc150822a71db9e062e3520 files/digest-coreutils-5.93 146
 RMD160 116f44f1b6bee3aa9bbfd9d7b38c41ed4f7deecc files/digest-coreutils-5.93 146
 SHA256 2fabdce9260531cdeda96f85c4bcf83fdfe4978eb63c29c2e12ea9cde961c17a files/digest-coreutils-5.93 146
-MD5 077234836088f6ab916a05d65b86dbd6 files/digest-coreutils-5.94 530
-RMD160 d88f7578165bd7e4958398472cf8012ecf7ddeff files/digest-coreutils-5.94 530
-SHA256 2d1dc6e24603ba2702b492f349da348c7b5e1480302476730ac5e430309e25e9 files/digest-coreutils-5.94 530
+MD5 82e51a1d32706c4817602c841abf98c1 files/digest-coreutils-5.94 530
+RMD160 426eeabfdd0660fe100300663835a894f74f0cd5 files/digest-coreutils-5.94 530
+SHA256 f81036bfd6137f8bc1e6b8ca5931af74d967e3759783a321af06e290fb4ad47b files/digest-coreutils-5.94 530
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD9TZQJ+ChZlpDtAoRAs7EAJ48id8Yxyvr8DTSwyuwpBopRUR6JgCdFrkD
-IauQ0n3MxSE/ohup7p9gluU=
-=dmzL
+iD8DBQFD9UwnJ+ChZlpDtAoRAnx7AJ9+2gDGDtsxmbD9dI4n5OXimRNRAwCfcVDd
+iFJbG7biojW32mu89xOFoKs=
+=hdLh
 -----END PGP SIGNATURE-----
