@@ -24,5 +24,9 @@
 		A categoria app-misc contém vários pacotes de aplicações mistas
 		que não pertencem a outros lugares.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria app-misc zawiera wiele rozmaitych programów, które nie
+		pasowały do żadnej innej kategorii.
+	</longdescription>
 </catmetadata>
 
