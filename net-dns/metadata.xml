@@ -28,5 +28,8 @@
 		A categoria net-dns contém programas relacionados a DNS (Domain
 		Name Service).
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria net-dns zawiera pakiety związane z DNS (Domain Name Service).
+	</longdescription>
 </catmetadata>
 
