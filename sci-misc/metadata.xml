@@ -34,5 +34,9 @@
 		A categoria sci-misc contém várias aplicações científicas mistas
 		que não se encaixam nas outras categorias sci-*.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria sci-misc zawiera różne dodatkowe pakiety, które nie pasowały
+		do innych kategorii sci-*.
+	</longdescription>
 </catmetadata>
 
