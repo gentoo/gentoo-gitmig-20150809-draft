@@ -26,5 +26,9 @@
 		La categoria net-zope contiene tutto il software relativo a Zope (zope.org)
 		compreso il software sviluppato da terze parti.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria net-zope contém todos os programas relacionados a
+		Zope (zope.org), incluindo produtos e ferramentas de terceiros.
+	</longdescription>
 </catmetadata>
 
