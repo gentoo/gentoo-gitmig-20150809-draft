@@ -17,4 +17,8 @@
 		A categoria dev-php5 contém bibliotecas, utilitários e pacotes
 		PECL só para a versão 5 da linguagem de programação PHP.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria dev-php4 zawiera biblioteki, narzędzia i pakiety PECL dla
+		wersji 5 języka programowania PHP.
+	</longdescription>
 </catmetadata>
