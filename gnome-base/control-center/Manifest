@@ -1,12 +1,15 @@
-MD5 5e9d5d96ece697d92125dea78be1bb3c ChangeLog 21879
-RMD160 5f3383f5226fe53ad65769a0f988aa680f9b554a ChangeLog 21879
-SHA256 c849ef439f8cca6705abb46feb8960066392ccceb7b7e7e9e7b3179dbd199503 ChangeLog 21879
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1fc37a1e7a4f0f92cbfbfd50120ae140 ChangeLog 22014
+RMD160 c944d15f97051ed1c91f057c84930206e9df23f5 ChangeLog 22014
+SHA256 82da43aa1fb265bb6dc519b6d5221702c451535d6863027276b153dfcc8173c8 ChangeLog 22014
 MD5 d4f0febb27460c43fb258412acde17b8 control-center-1.4.0.5-r1.ebuild 1333
 RMD160 d72f2c12e8813c14ffb5760ccf59cea91399b70a control-center-1.4.0.5-r1.ebuild 1333
 SHA256 f192795833985c4b8e34bb343dadddb8574fc353037f5814a69a1f7107f3950e control-center-1.4.0.5-r1.ebuild 1333
-MD5 7160be1e5e6bca7c0839455c738bbb57 control-center-1.4.0.5-r2.ebuild 1407
-RMD160 6685fb84823ad4c5f7d94e49a48f9ea59c87a972 control-center-1.4.0.5-r2.ebuild 1407
-SHA256 81629d6136bb3f8d43cb7c6ef96d5adfce0991520817f92290836f1dcebf23e0 control-center-1.4.0.5-r2.ebuild 1407
+MD5 00790da2b9b4e2b02193dd24f57f8e9d control-center-1.4.0.5-r2.ebuild 1403
+RMD160 9d9aec8844a561cfa5b85a65df04a2331d86a7ab control-center-1.4.0.5-r2.ebuild 1403
+SHA256 81e6326b79da67c0745fc4c2068b0e94172366fe32eb85900b50d41cbc35e120 control-center-1.4.0.5-r2.ebuild 1403
 MD5 0061acdf30db726f129a10947d4373bc control-center-1.4.0.5-r3.ebuild 987
 RMD160 32c65a9651ab9590178834798fe3d45910c0ecdd control-center-1.4.0.5-r3.ebuild 987
 SHA256 07288790607e18d200a5b2da94fd35eac64fe86fabdf7b5e1b9714031fc844b0 control-center-1.4.0.5-r3.ebuild 987
@@ -76,3 +79,10 @@ SHA256 364fe045ac062bb65a0efa57ceaf2a28a1aa7791f94ab023deb01417fce4a351 files/di
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD9k6+JrHF4yAQTrARAoICAKDELwckzUlRotLU2rPlYyjztWtQWQCdHHje
+/epH4FhIeROGV/fkVzCvmfM=
+=JkWh
+-----END PGP SIGNATURE-----
