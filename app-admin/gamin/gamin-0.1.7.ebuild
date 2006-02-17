@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.7.ebuild,v 1.11 2006/01/30 17:25:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.7.ebuild,v 1.12 2006/02/17 21:42:57 corsair Exp $
 
 inherit autotools eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnome.org/~veillard/gamin/sources/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="debug doc"
 
 RDEPEND="virtual/libc
