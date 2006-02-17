@@ -30,5 +30,9 @@
 		A categoria sys-devel contém várias ferramentas e bibliotecas
 		de desenvolvimento essenciais para o sistema.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria sys-devel zawiera programy i biblioteki służące do rozwijania
+		systemu.
+	</longdescription>
 </catmetadata>
 
