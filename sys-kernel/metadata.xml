@@ -28,5 +28,9 @@
 		La categoria sys-kernel contiene i sorgenti del kernel e alcuni programmi
 		per la sua gestione come genkernel.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria sys-kernel contém ebuilds de fonte de kernel e
+		ferramentas relacionadas a kernel.
+	</longdescription>
 </catmetadata>
 
