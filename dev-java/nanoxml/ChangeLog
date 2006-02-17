@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/nanoxml
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nanoxml/ChangeLog,v 1.5 2005/07/11 21:28:28 axxo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nanoxml/ChangeLog,v 1.6 2006/02/17 20:09:22 hansmi Exp $
+
+  17 Feb 2006; Michael Hanselmann <hansmi@gentoo.org> nanoxml-2.2.3.ebuild:
+  Stable on ppc.
 
 *nanoxml-2.2.3 (11 Jul 2005)
 

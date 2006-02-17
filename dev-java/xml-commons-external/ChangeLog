@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-commons-external
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/ChangeLog,v 1.4 2006/01/24 13:34:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/ChangeLog,v 1.5 2006/02/17 20:13:19 hansmi Exp $
+
+  17 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
+  xml-commons-external-1.3.02.ebuild:
+  Stable on ppc.
 
   24 Jan 2006; Joshua Nichols <nichoj@gentoo.org>
   xml-commons-external-1.3.02.ebuild:

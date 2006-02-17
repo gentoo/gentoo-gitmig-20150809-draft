@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/c3p0
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.13 2005/06/29 17:18:21 axxo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.14 2006/02/17 20:11:41 hansmi Exp $
+
+  17 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
+  c3p0-0.8.5_pre9-r1.ebuild:
+  Stable on ppc.
 
 *c3p0-0.9.0_pre6 (29 Jun 2005)
 *c3p0-0.8.5.2 (29 Jun 2005)
