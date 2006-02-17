@@ -24,5 +24,9 @@
 	<longdescription lang="it">
 		La categoria net-dns contiene programmi per DNS (Domain Name Service).
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria net-dns contém programas relacionados a DNS (Domain
+		Name Service).
+	</longdescription>
 </catmetadata>
 
