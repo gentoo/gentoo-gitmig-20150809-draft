@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Validate
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.16 2006/02/04 10:42:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.17 2006/02/17 22:09:57 agriffis Exp $
+
+  17 Feb 2006; Aron Griffis <agriffis@gentoo.org>
+  PEAR-Validate-0.6.2.ebuild:
+  Mark 0.6.2 stable on alpha/ia64. #119722
 
   04 Feb 2006; <nixnut@gentoo.org> PEAR-Validate-0.6.2.ebuild:
   Stable on ppc. bug 119722
