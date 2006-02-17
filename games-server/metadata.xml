@@ -22,5 +22,8 @@
 	<longdescription lang="it">
 		La categoria games-server contiene server per i giochi multigiocatore.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria games-server contém servidores de jogos.
+	</longdescription>
 </catmetadata>
 
