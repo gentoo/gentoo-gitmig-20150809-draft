@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/jhead-2.5.ebuild,v 1.5 2006/02/15 14:13:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/jhead-2.5.ebuild,v 1.6 2006/02/17 20:02:40 hansmi Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.sentex.net/~mwandel/jhead/"
 SRC_URI="http://www.sentex.net/~mwandel/jhead/${P}.tar.gz"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc-macos ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
