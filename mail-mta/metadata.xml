@@ -32,4 +32,7 @@
 		A categoria mail-mta contém pacotes de servidor dos agentes de
 		transporte de correio eletrônico (Mail Transport Agent).
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria mail-mta zawiera serwery przekazywania poczty.
+	</longdescription>
 </catmetadata>
