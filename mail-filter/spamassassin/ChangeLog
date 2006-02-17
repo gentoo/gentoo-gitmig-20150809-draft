@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.85 2006/02/15 19:10:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.86 2006/02/17 09:05:10 jer Exp $
+
+  17 Feb 2006; Jeroen Roovers <jer@gentoo.org> spamassassin-3.1.0-r2.ebuild:
+  Fixing IUSE if no one else will (bug #112220, comment #7).
 
   15 Feb 2006; <mcumming@gentoo.org> spamassassin-3.1.0-r1.ebuild,
   spamassassin-3.1.0-r2.ebuild:
