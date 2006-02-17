@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zopeinterface
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/ChangeLog,v 1.14 2006/02/07 03:36:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/ChangeLog,v 1.15 2006/02/17 14:28:24 gustavoz Exp $
+
+  17 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  zopeinterface-3.0.1.ebuild:
+  Stable on sparc
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org>
   zopeinterface-3.0.1.ebuild:
