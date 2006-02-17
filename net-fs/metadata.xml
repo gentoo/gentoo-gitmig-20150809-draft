@@ -26,5 +26,9 @@
 		A categoria net-fs contém pacotes para sistemas de arquivos de
 		rede.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria net-fs zawiera pakiety związane z NFS, sieciowym systemem
+		plików.
+	</longdescription>
 </catmetadata>
 
