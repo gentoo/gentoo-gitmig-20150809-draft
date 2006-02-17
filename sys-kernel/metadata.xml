@@ -32,5 +32,8 @@
 		A categoria sys-kernel contém ebuilds de fonte de kernel e
 		ferramentas relacionadas a kernel.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria sys-kernel zawiera źródła jądra oraz związane z nimi narzędzia.
+	</longdescription>
 </catmetadata>
 
