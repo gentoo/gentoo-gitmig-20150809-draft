@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.23 2006/02/17 13:41:48 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.24 2006/02/17 13:49:14 gustavoz Exp $
+
+  17 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org> opensc-0.10.1.ebuild:
+  Stable on sparc
 
   17 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> opensc-0.10.1.ebuild:
   Add revdep-rebuild note in pkg_postinst. Thanks to gustavoz.

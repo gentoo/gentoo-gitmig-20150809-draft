@@ -1,8 +1,18 @@
-MD5 0ad61e1f2c4ea76c867ec9988b0cd078 ChangeLog 3743
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2b18ad21620136c481f25311fbb71881 ChangeLog 3836
 MD5 074aae91efbecf981a1e8ed73d5d1681 files/0.8.1-64bit.patch 577
 MD5 b8af432c32a9be02d6da7830e452d342 files/digest-opensc-0.10.1 66
 MD5 4fcfcb66c332083c66d4758cd414fc48 files/digest-opensc-0.9.4 65
 MD5 c16f3cf2a3cb31195b173e54f4d2212d files/opensc-0.9.4-gcc4.patch 446
 MD5 286a92520aa59a11916aacd680088270 metadata.xml 663
-MD5 7653ad1d4d1648354a5fb049769a982c opensc-0.10.1.ebuild 1509
+MD5 ca1bc78b5d0eb34915aa46abefb46423 opensc-0.10.1.ebuild 1506
 MD5 ec3f36ae5756bf9ec8704d4c3f0cbf53 opensc-0.9.4.ebuild 1537
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD9dRoKRy60XGEcJIRAiq+AJ9wx0lF2Cb+VD96MoMxqq+JYfDHhACggd7N
+Fe7/H6EcIj0TpYqLcVLmgeQ=
+=LFXm
+-----END PGP SIGNATURE-----
