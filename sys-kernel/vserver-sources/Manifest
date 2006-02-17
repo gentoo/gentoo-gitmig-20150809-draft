@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6eb3ae3d00ed164de2c12de500721a4b ChangeLog 11887
-RMD160 d1e6b12d65aa41d70b2cb087e955646f26bd953c ChangeLog 11887
-SHA256 7b8b7e276060a5849fe063298a12eea5381141cbb29d6040b6cbbec42ad0509f ChangeLog 11887
+MD5 a4e0ff057b610e6e0d64731a86080268 ChangeLog 12040
+RMD160 6c4e87e16c68c95f4fb16897338ceb100827c940 ChangeLog 12040
+SHA256 40998085ac21a388fd9519eb7cee9045c6dd72de1c8dd8231211247eda3ce5f9 ChangeLog 12040
 MD5 1ce0ff2e9f12bd662e2f38bfddd90c08 files/digest-vserver-sources-2.0.1 303
 RMD160 2e0b01934b41225d2d6f2330e940fe5251cc1071 files/digest-vserver-sources-2.0.1 303
 SHA256 4fbe95b20d39f1c8934b8d1e17f5554d933956d173550a67ebec960fef56b7fa files/digest-vserver-sources-2.0.1 303
@@ -16,12 +16,6 @@ SHA256 06f2a2eac895692b633be912af1c00b36352166ba3c1e6fd960efcd71e946b27 files/di
 MD5 6203e2af9a973cb6220376cd4f914907 files/digest-vserver-sources-2.1.0-r1 305
 RMD160 546ef72f89be2a85b4ff7123338a3a9cdc2e15a8 files/digest-vserver-sources-2.1.0-r1 305
 SHA256 07b23b5b2546fa278711ba2013165cdf56bcd34f9b0ae9376689ae9a4d618d21 files/digest-vserver-sources-2.1.0-r1 305
-MD5 67fae9e3dac67ec01f06e67923f7f2c2 files/digest-vserver-sources-2.1.0.3 304
-RMD160 3c4b28414d61c8ec092db090a2a534608a913ac9 files/digest-vserver-sources-2.1.0.3 304
-SHA256 c650ca5baecfda15e19d99b75756cc7d957bbcce7e6fce79449dd3703387712e files/digest-vserver-sources-2.1.0.3 304
-MD5 f75c33515e42d62f9d43bbcba852058d files/digest-vserver-sources-2.1.0.4 304
-RMD160 bc2abfb8ec04e924fda701089be16f78302dca96 files/digest-vserver-sources-2.1.0.4 304
-SHA256 c0a16c4d5738231d4078d0939d0aa4b3c3e021f6bc92c2a583a75da50d505596 files/digest-vserver-sources-2.1.0.4 304
 MD5 c88e3d31e05900a2535e93978747a6b4 files/digest-vserver-sources-2.1.1_rc6 1105
 RMD160 67738f6b081ab44805252bb110710f384a145432 files/digest-vserver-sources-2.1.1_rc6 1105
 SHA256 0a41ecd7526be05c9b561247691f00468cad3738d933bf71cf46833815fba326 files/digest-vserver-sources-2.1.1_rc6 1105
@@ -40,19 +34,13 @@ SHA256 6b63af49f9a48c18b64f700a5249a3caabbbf2cfebb775eff26a9ef1b1292e76 vserver-
 MD5 a6bd6220fe89c7a6816aed723b96e2bc vserver-sources-2.1.0-r1.ebuild 908
 RMD160 2ebb3030ad381c4a79cdb4214abc13b971b3ae43 vserver-sources-2.1.0-r1.ebuild 908
 SHA256 2ee9717a3bfc69b2536c4682f5f6e671be6af1d52ebf66ea206d926a5d57d876 vserver-sources-2.1.0-r1.ebuild 908
-MD5 c2c2a19ec539547fdfca115d86893336 vserver-sources-2.1.0.3.ebuild 907
-RMD160 05f2a427bc5985b25fd1465ecfcc39267e86fea4 vserver-sources-2.1.0.3.ebuild 907
-SHA256 ad63622a484e5bb9d1eabf53a0d8695da2d2cf355c390374f5cd54982225034b vserver-sources-2.1.0.3.ebuild 907
-MD5 e0b8aa83d8000fc16f9bf9994fddf905 vserver-sources-2.1.0.4.ebuild 907
-RMD160 5a038eefb34b41472c4a979ca707b570004fce12 vserver-sources-2.1.0.4.ebuild 907
-SHA256 0eba26271037ee438436dd4f35c96fb06e3a84342c0ad17f7e8bc47f1e5942d3 vserver-sources-2.1.0.4.ebuild 907
 MD5 640535f111e0f8523736a654c0524edb vserver-sources-2.1.1_rc6.ebuild 909
 RMD160 7bd68aed8e32c51c72596a82dc294da32470ed35 vserver-sources-2.1.1_rc6.ebuild 909
 SHA256 485099f69704220d30c70311af893fec43564364a9969ef3b9022162b189bdc7 vserver-sources-2.1.1_rc6.ebuild 909
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD9dWxflZ8QqxhrsMRAhH0AJ4iVlJmrk9QE0dF3mbQ3oKXRYDQHgCfYfdO
-SvR2PsBH/z7gmd+OZRghoEE=
-=8AlL
+iD8DBQFD9derflZ8QqxhrsMRAgnqAJ9M0zykF7UjzNavn8GgnPX0IQuycACdFg79
+LqM4xM3Av8D+MG4KghP0lK0=
+=i8Yn
 -----END PGP SIGNATURE-----
