@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.701.0.ebuild,v 1.20 2006/01/07 08:23:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.701.0.ebuild,v 1.21 2006/02/17 07:48:01 phosphan Exp $
 
 DESCRIPTION="software-based implementation of the codec specified in the emerging JPEG-2000 Part-1 standard"
 HOMEPAGE="http://www.ece.uvic.ca/~mdadams/jasper/"
@@ -11,10 +11,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="opengl jpeg"
 
-DEPEND="app-arch/unzip"
-RDEPEND="${DEPEND}
-	jpeg? ( media-libs/jpeg )
-	opengl? ( virtual/opengl )"
+RDEPEND="jpeg? ( media-libs/jpeg )
+		opengl? ( virtual/opengl )"
+DEPEND="${RDEPEND}
+		app-arch/unzip"
 
 src_compile() {
 	econf \

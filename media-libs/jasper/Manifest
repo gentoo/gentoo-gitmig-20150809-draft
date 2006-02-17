@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2af488356498cded4641716e8440d3c ChangeLog 2300
+MD5 407d5ac3b61bf37aeb9af74974095f61 ChangeLog 2412
 MD5 eb6f2a9a926450dd4edac79c0a3251f3 files/digest-jasper-1.701.0 64
-MD5 ba5c13e0047bc4629ff8e305e880df0f jasper-1.701.0.ebuild 877
+MD5 d35bd8459c773f82dffd86737c19702b jasper-1.701.0.ebuild 882
 MD5 7886cad6b0db799f4a0524df0d66bb85 metadata.xml 301
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDv3rD2+ySkm8kpY0RAnnVAJ0Yr7jpNshIgz2teATOUEwFHRAY3ACgudyz
-yhwsIgoo38mSVz7lUQwaqmQ=
-=xeGV
------END PGP SIGNATURE-----
