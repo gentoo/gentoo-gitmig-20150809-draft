@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-0.9.2.ebuild,v 1.2 2005/09/19 20:53:04 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-0.9.2.ebuild,v 1.3 2006/02/17 00:52:18 vanquirius Exp $
 
 DESCRIPTION="DirMngr is a daemon to handle CRL and certificate requests for GnuPG"
 HOMEPAGE="http://www.gnupg.org/(en)/download/index.html#dirmngr"
@@ -11,13 +11,16 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="nls"
 
-DEPEND=">=net-nds/openldap-2.1.26
+RDEPEND=">=net-nds/openldap-2.1.26
 	>=dev-libs/libgpg-error-0.7
 	>=dev-libs/libgcrypt-1.1.94
 	>=dev-libs/libassuan-0.6.8
 	>=dev-libs/libksba-0.9.11
-	nls? ( >=sys-devel/gettext-0.12.1 )
-	>=dev-libs/pth-1.3.7"
+	>=dev-libs/pth-1.3.7
+	nls? ( virtual/libintl )"
+
+DEPEND="${RDEPEND}
+	nls? ( >=sys-devel/gettext-0.12.1 )"
 
 src_compile() {
 	econf $(use_enable nls) || die "conf failed"
