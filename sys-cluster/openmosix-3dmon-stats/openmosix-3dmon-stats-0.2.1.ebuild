@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-3dmon-stats/openmosix-3dmon-stats-0.2.1.ebuild,v 1.5 2004/07/15 03:04:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-3dmon-stats/openmosix-3dmon-stats-0.2.1.ebuild,v 1.6 2006/02/17 16:48:49 blubb Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-makefile+init-script.patch.bz2 \
+	epatch ${FILESDIR}/${P}-makefile+init-script.patch \
 		|| die "Failed to patch the source."
 }
 

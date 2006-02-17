@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/openmosix-3dmon-stats
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-3dmon-stats/ChangeLog,v 1.4 2004/07/01 21:48:30 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-3dmon-stats/ChangeLog,v 1.5 2006/02/17 16:48:49 blubb Exp $
+
+  17 Feb 2006; Simon Stelling <blubb@gentoo.org>
+  +files/openmosix-3dmon-stats-0.2.1-makefile+init-script.patch,
+  -files/openmosix-3dmon-stats-0.2.1-makefile+init-script.patch.bz2,
+  openmosix-3dmon-stats-0.2.1.ebuild:
+  no need to bzip smallish patches
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   openmosix-3dmon-stats-0.2.1.ebuild:

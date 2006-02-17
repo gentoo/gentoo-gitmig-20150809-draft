@@ -1,0 +1,53 @@
+diff -Nru mosstatd-0.2.1/Makefile mosstatd-0.2.1-fix/Makefile
+--- mosstatd-0.2.1/Makefile	2002-11-16 12:49:11.000000000 +0300
++++ mosstatd-0.2.1-fix/Makefile	2004-03-21 23:09:33.000000000 +0300
+@@ -4,13 +4,15 @@
+ OWNER=root
+ GROUP=root
+ CTAGS= ctags -x >tags
+-CFLAGS= -O
++INCLUDE=/usr/src/linux/include
++CFLAGS= -O -I$(INCLUDE)
+ LDFLAGS= -s -lmos
+ CC=gcc
+ INSTALL=install
+ SRCS=mosstatd.c
+ OBJS=mosstatd.o
+ BINDIR=/usr/bin
++INITDIR=/etc/init.d
+ 
+ 
+ 
+@@ -22,6 +24,7 @@
+ 
+ # To install it in the right place
+ install: mosstatd
++	$(INSTALL) -c -o $(OWNER) -g $(GROUP) -m 750 omstat $(INITDIR)
+ 	$(INSTALL) -c -o $(OWNER) -g $(GROUP) -m 755 mosstatd $(BINDIR)
+ 
+ # To uninstall it
+diff -Nru mosstatd-0.2.1/mosstat mosstatd-0.2.1-fix/mosstat
+--- mosstatd-0.2.1/mosstat	1970-01-01 03:00:00.000000000 +0300
++++ mosstatd-0.2.1-fix/mosstat	2004-03-21 23:07:09.000000000 +0300
+@@ -0,0 +1,21 @@
++#!/sbin/runscript
++# Copyright 1999-2003 Gentoo Technologies, Inc.
++# Distributed under the terms of the GNU General Public License, v2 or later
++
++depend() {
++	need net
++}
++
++start() {
++	ebegin "Starting statistics daemon for 3d openmosix monitor"
++	einfon
++	start-stop-daemon --start --quiet --exec /usr/sbin/mosstatd
++	eend $?
++}
++
++stop() {
++	ebegin "Stopping statistics daemon for 3d openmosix monitor"
++	start-stop-daemon --stop --quiet --exec /usr/sbin/mosstatd && \
++		rm /var/run/mosstatd.pid
++	eend $?
++}

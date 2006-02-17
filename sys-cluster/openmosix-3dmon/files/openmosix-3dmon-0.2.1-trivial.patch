@@ -1,0 +1,165 @@
+diff -Nru 3dmon-0.2.1/3dmosmon/3dmosmon.cpp 3dmon-0.2.1-fix/3dmosmon/3dmosmon.cpp
+--- 3dmon-0.2.1/3dmosmon/3dmosmon.cpp	2002-11-15 20:03:23.000000000 +0300
++++ 3dmon-0.2.1-fix/3dmosmon/3dmosmon.cpp	2004-03-21 21:42:22.805031659 +0300
+@@ -457,7 +457,8 @@
+ 	switch (key)
+ 	{ 
+ 	case 'q': kill(kpid, SIGKILL); Barmanager.quit(); break;
+-    
++        case 27 : kill(kpid, SIGKILL); Barmanager.quit(); break;
++	
+ 	case 'r': Barmanager.ToggleSpin(); break;
+ 	
+ 	case 'w':
+@@ -655,7 +656,7 @@
+ }
+ 
+ 	
+-void main(int argc, char** argv)
++int main(int argc, char** argv)
+ {
+ 
+ 	ParseArguments(argc, argv);
+diff -Nru 3dmon-0.2.1/3dmosmon/barmanager.h 3dmon-0.2.1-fix/3dmosmon/barmanager.h
+--- 3dmon-0.2.1/3dmosmon/barmanager.h	2002-11-09 17:30:32.000000000 +0300
++++ 3dmon-0.2.1-fix/3dmosmon/barmanager.h	2004-03-21 21:36:40.892913624 +0300
+@@ -27,7 +27,7 @@
+ 
+ #include "rand.h"
+ #include "spin.h"
+-#include "map.h"
++#include <map>
+ 
+ #define LOAD 1 //values for display mode
+ #define MEM 2
+@@ -68,11 +68,11 @@
+ private:
+ 	//TwoDMosixMap map;
+ //        map MosixMap;
+-	list <CObject *> ObjectList;
+-	list<CObject *> ::iterator ObjectIter;
++	std::list <CObject *> ObjectList;
++	std::list <CObject *> ::iterator ObjectIter;
+ 	
+-	list <bar_record> BarList;
+-	list <bar_record> ::iterator BarIter;
++	std::list <bar_record> BarList;
++	std::list <bar_record> ::iterator BarIter;
+ 
+ 	int Spin;
+ 
+diff -Nru 3dmon-0.2.1/3dmosmon/materials.h 3dmon-0.2.1-fix/3dmosmon/materials.h
+--- 3dmon-0.2.1/3dmosmon/materials.h	2002-10-11 15:57:04.000000000 +0400
++++ 3dmon-0.2.1-fix/3dmosmon/materials.h	2004-03-21 21:36:40.892913624 +0300
+@@ -29,20 +29,20 @@
+ 	{1.0, 1.0, 1.0, 1.0},
+ 	{0.0, 0.0, 0.0, 1.0},   
+ 	{1.0, 1.0, 1.0, 1.0},
+-	{20.0}
++	20.0
+ };
+  
+ static material_struct lensMaterials = {
+ 	{0.1, 0.1, 0.1, 1.0},
+ 	{0.1, 0.1, 0.1, 1.0},   
+ 	{1.0, 1.0, 1.0, 1.0},
+-	{20.0}
++	20.0
+ };
+ static material_struct redMaterials = {
+ 	{1.0, 0.0, 0.0, 0.4},
+ 	{0.0, 0.0, 0.0, 0.4},
+ 	{0.0, 0.0, 0.0, 0.4},
+-	{20.0}
++	20.0
+ };
+ 
+ 
+@@ -50,14 +50,14 @@
+ 	{0.0, 0.6, 0.2, 0.4},
+ 	{0.0, 0.0, 0.0, 0.4},
+ 	{0.3, 0.3, 0.3, 0.4},
+-	{20.0}
++	20.0
+ };
+ 
+ static material_struct blueMaterials = {
+ 	{0.0, 0.0, 1.0, 0.4},
+ 	{0.0, 0.0, 0.0, 0.4},
+ 	{0.6, 0.6, 0.8, 0.4},
+-	{20.0}
++	20.0
+ };
+ 
+ 
+@@ -65,7 +65,7 @@
+ 	{1.0, 1.0, 0.0, 1.0},
+ 	{0.0, 0.0, 0.0, 1.0},
+ 	{0.8, 0.8, 0.6, 1.0},
+-	{25.0}
++	25.0
+ 
+ };
+ 
+@@ -74,7 +74,7 @@
+ 	{1.0, 0.75, 0.5, 1.0},
+ 	{0.0, 0.0, 0.0, 1.0},
+ 	{0.8, 0.8, 0.6, 1.0},
+-	{25.0}
++	25.0
+ 
+ };
+ 
+@@ -83,35 +83,35 @@
+ 	{0.0, 0.3, 0.0, 0.3},
+ 	{1.0, 1.0, 1.0, 0.3},
+ 	{0.2, 0.2, 0.2, 0.3},
+-	{30.0}
++	30.0
+ };
+ 
+ static material_struct groundMaterials = {
+ 	{0.0, 0.3, 0.0, 1.0},
+ 	{0.0, 0.0, 0.0, 1.0},
+ 	{0.6, 0.8, 0.6, 1.0},
+-	{0.0}
++	0.0
+ };
+ 
+ static material_struct brownMaterials = {
+ 	{0.4, 0.24, 0.11, 1.0},
+ 	{0.0, 0.0, 0.0, 1.0},
+ 	{0.3, 0.3, 0.3, 1.0},
+-	{35.0}
++	35.0
+ };
+ 
+ static material_struct moonMaterials = {
+ 	{0.5, 0.5, 0.6, 1.0},
+ 	{0.0, 0.0, 0.0, 1.0},
+ 	{0.6, 0.6, 0.8, 1.0},
+-	{20.0}
++	20.0
+ };
+ 
+ static material_struct sunMaterials = {
+ 	{0.75, 0.5, 0.0,1.0},
+ 	{0.0, 0.0, 0.0, 1.0},
+ 	{0.6, 0.6, 0.8, 1.0},
+-	{20.0}
++	20.0
+ };
+ 
+ 
+diff -Nru 3dmon-0.2.1/3dmosmon/objects.cpp 3dmon-0.2.1-fix/3dmosmon/objects.cpp
+--- 3dmon-0.2.1/3dmosmon/objects.cpp	2002-11-04 22:13:04.000000000 +0300
++++ 3dmon-0.2.1-fix/3dmosmon/objects.cpp	2004-03-21 21:46:31.954585523 +0300
+@@ -314,7 +314,7 @@
+ 	glutSolidCone(cone_data.base, cone_data.height, (int)cone_data.stacks, (int)cone_data.slices);
+     
+     glFlush();
+-//    glEnd();
++    glEnd();
+     glLoadIdentity();
+ 	glPopMatrix();
+ }
