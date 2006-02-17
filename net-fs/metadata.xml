@@ -22,5 +22,9 @@
 	<longdescription lang="it">
 		La categoria net-fs contiene pacchetti per i filesystem di rete.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria net-fs contém pacotes para sistemas de arquivos de
+		rede.
+	</longdescription>
 </catmetadata>
 
