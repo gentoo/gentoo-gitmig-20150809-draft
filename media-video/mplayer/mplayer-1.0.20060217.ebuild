@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060217.ebuild,v 1.2 2006/02/17 14:55:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060217.ebuild,v 1.3 2006/02/17 22:48:25 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,9 +9,9 @@ IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl bindist
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
 dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
 lirc live livecd lzo mad matroska matrox mmx mmxext musepack nas nls nvidia
-vorbis opengl openal oss png real rtc samba sdl sse sse2 svga tga theora truetype
+vorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype
 v4l v4l2 win32codecs X xanim xinerama xmms xv xvid xvmc"
-
+# openal 
 BLUV=1.4
 SVGV=1.9.17
 
@@ -28,11 +28,11 @@ DESCRIPTION="Media Player for Linux (snapshot)"
 HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
+# openal? ( media-libs/openal )
 RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	win32codecs? ( >=media-libs/win32codecs-20040916 )
 	x86? ( real? ( >=media-video/realplayer-10.0.3 ) )
 	aalib? ( media-libs/aalib )
-	openal? ( media-libs/openal )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	bidi? ( dev-libs/fribidi )
@@ -388,7 +388,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable esd)"
 	myconf="${myconf} $(use_enable mad)"
 	myconf="${myconf} $(use_enable nas)"
-	myconf="${myconf} $(use_enable openal)"
+	myconf="${myconf} --disable-openal" #$(use_enable openal)"
 	myconf="${myconf} $(use_enable oss ossaudio)"
 
 	#################

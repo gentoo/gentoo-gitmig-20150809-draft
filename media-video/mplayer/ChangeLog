@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.342 2006/02/17 14:51:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.343 2006/02/17 22:48:25 lu_zero Exp $
+
+  17 Feb 2006; Luca Barbato <lu_zero@gentoo.org>
+  mplayer-1.0.20060217.ebuild:
+  openal disabled, pending update
 
 *mplayer-1.0.20060217 (17 Feb 2006)
 
