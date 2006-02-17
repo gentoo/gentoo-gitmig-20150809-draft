@@ -34,5 +34,10 @@
 		gerenciamento de energia, incluindo ferramentas de variação de
 		freqüência de microprocessadores.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria sys-power zawiera oprogramowanie związane z zarządzaniem
+		energią, włączając w to programy służące do skalowania częstotliwości
+		procesora.
+	</longdescription>
 </catmetadata>
 
