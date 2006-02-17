@@ -25,5 +25,9 @@
 	<longdescription lang="pt">
 		A categoria app-benchmarks contém programas para benchmarking.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria app-benchmarks zawiera oprogramowanie służące do testowania
+		wydajności.
+	</longdescription>
 </catmetadata>
 
