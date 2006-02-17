@@ -33,5 +33,9 @@
 		A categoria app-office contém pacotes de software para
 		escritório (processadores de textos, planilhas, apresentações).
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria app-office zawiera programy biurowe takie jak edytory tekstu,
+		arkuszy kalkulacyjnych i prezentacji.
+	</longdescription>
 </catmetadata>
 
