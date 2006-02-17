@@ -1,32 +1,66 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 137919fa691c13cf9474dd3d8744071c ChangeLog 4365
+MD5 aacd6a6204cadc775ac5cea79817d0cf ChangeLog 4468
+RMD160 2b86476def9d9f4f331a8897d1eea88db1c2cc74 ChangeLog 4468
+SHA256 6e3420e2d0d2f7590e8682e471803ea40b3b7a05706e53a4b3ff603f88aeffc0 ChangeLog 4468
 MD5 54d3d1f463b503f1ad2fe16ab183fe4b files/0.6.0-segv.patch 458
+RMD160 601a86e3a80d4a6c5f0a2cbdbb85c103f4cb07e7 files/0.6.0-segv.patch 458
+SHA256 f4ff281c9edffe1fb57552f11353adf3ee07f6616c01bd664a8f28927ba6ecf5 files/0.6.0-segv.patch 458
 MD5 ff63b2b07eb50db8962f544a45028bee files/digest-gnome-bluetooth-0.4.1 73
+RMD160 dfa9b1abc33648626eb2b2942fb244f8243bd416 files/digest-gnome-bluetooth-0.4.1 73
+SHA256 d89fcec72e90dfbba894026788789abe5a16155ac49687a5198ce8a3cfa3a35a files/digest-gnome-bluetooth-0.4.1 73
 MD5 6da6c9018b79e0077f1a3bb071a01cef files/digest-gnome-bluetooth-0.5.1 73
+RMD160 67ca19d93ac157bad99cd5e5b84604a416f20ed1 files/digest-gnome-bluetooth-0.5.1 73
+SHA256 12ef5fc37090312b70009e5b2b46a508b55427d2797ee5dbd8482fc2f379f3ac files/digest-gnome-bluetooth-0.5.1 73
 MD5 6da6c9018b79e0077f1a3bb071a01cef files/digest-gnome-bluetooth-0.5.1-r1 73
+RMD160 67ca19d93ac157bad99cd5e5b84604a416f20ed1 files/digest-gnome-bluetooth-0.5.1-r1 73
+SHA256 12ef5fc37090312b70009e5b2b46a508b55427d2797ee5dbd8482fc2f379f3ac files/digest-gnome-bluetooth-0.5.1-r1 73
 MD5 6da6c9018b79e0077f1a3bb071a01cef files/digest-gnome-bluetooth-0.5.1-r2 73
+RMD160 67ca19d93ac157bad99cd5e5b84604a416f20ed1 files/digest-gnome-bluetooth-0.5.1-r2 73
+SHA256 12ef5fc37090312b70009e5b2b46a508b55427d2797ee5dbd8482fc2f379f3ac files/digest-gnome-bluetooth-0.5.1-r2 73
 MD5 b81e2da1f32ba9db780ac8fbf3cf848a files/digest-gnome-bluetooth-0.6.0 74
+RMD160 709dae24dc3769c6d8011a3579ccd850de0a3531 files/digest-gnome-bluetooth-0.6.0 74
+SHA256 2b40012cbb295ff0718e36f7be4db729f4437d3979f899e3e47cab6452d11e52 files/digest-gnome-bluetooth-0.6.0 74
 MD5 b81e2da1f32ba9db780ac8fbf3cf848a files/digest-gnome-bluetooth-0.6.0-r1 74
+RMD160 709dae24dc3769c6d8011a3579ccd850de0a3531 files/digest-gnome-bluetooth-0.6.0-r1 74
+SHA256 2b40012cbb295ff0718e36f7be4db729f4437d3979f899e3e47cab6452d11e52 files/digest-gnome-bluetooth-0.6.0-r1 74
 MD5 a2f731c566d5d79f128c327be6c1b5fc files/digest-gnome-bluetooth-0.7.0 74
+RMD160 f17daac9b94dbef0f35110d0a18d8aae7bef4c26 files/digest-gnome-bluetooth-0.7.0 74
+SHA256 422ff663413f8f45364000e34f653b870fe2410ea67c7e34774b10da18675032 files/digest-gnome-bluetooth-0.7.0 74
 MD5 9c859b033ee9e338893bc5bc3ea21d5a files/gnome-bluetooth-0.4.1-gtk24.patch 2340
+RMD160 59471ec69c77ce211f442df726597df58d48a8a6 files/gnome-bluetooth-0.4.1-gtk24.patch 2340
+SHA256 278dc6857281b3f94e2d99e7c54e5443811a1ba9d824b85f9092c005ada7b7ff files/gnome-bluetooth-0.4.1-gtk24.patch 2340
 MD5 c9cdf6988fe751bbd26baf8b6eba1a34 files/gnome-bluetooth-0.5.1-gnome.patch 602
+RMD160 0b31b612abb5ee4dcac5d7c1e4368b4b2e6749e6 files/gnome-bluetooth-0.5.1-gnome.patch 602
+SHA256 0ccd064487ba8a903e63c4172dbff31d9393da89b68427c3210306f849b2dc99 files/gnome-bluetooth-0.5.1-gnome.patch 602
 MD5 1b075164be0f7aab81714a3efd302a65 files/gnome-bluetooth-0.5.1-gobcrash.patch 1099
+RMD160 8c399cb2be8c85634370cd15ff76477a3095dbc2 files/gnome-bluetooth-0.5.1-gobcrash.patch 1099
+SHA256 a8d9669b3f14bcae9549e575e6f2cdd2aa46367b49a2cefae2abb6d72aba4fac files/gnome-bluetooth-0.5.1-gobcrash.patch 1099
 MD5 a254aa9cdd6ad1e9e5f2e7a78c636b25 files/gnome-bluetooth-0.5.1-obex_xfer_rate.patch 2108
+RMD160 dcf65207e3c2b0af4a5232b6d6039390f42f2c4b files/gnome-bluetooth-0.5.1-obex_xfer_rate.patch 2108
+SHA256 ad76c931c2cb869f06e696abd7efd20ebc01b5b2ff5a8917b9d5c2b2c9228bd0 files/gnome-bluetooth-0.5.1-obex_xfer_rate.patch 2108
 MD5 7a336fcfbc8755f917c623b810172ef5 files/gnome-bluetooth-0.6.0-libdir.patch 3089
+RMD160 d2ee05b37df426790185f0c582672c843ad43327 files/gnome-bluetooth-0.6.0-libdir.patch 3089
+SHA256 3a7660d4e24f2303e06660d9fa64bacd47a3286e880893f7f3ebcf04cc11f010 files/gnome-bluetooth-0.6.0-libdir.patch 3089
 MD5 37d60d0c9b935e84bf52f93e2438dfc9 gnome-bluetooth-0.4.1.ebuild 1261
+RMD160 c9733f724661d0b87d56312a3e476db2ed9776f2 gnome-bluetooth-0.4.1.ebuild 1261
+SHA256 057b23207ad6db4a7f5c626d11f75f5a84b3d1a09fff17db9765ac6ac5aac5e8 gnome-bluetooth-0.4.1.ebuild 1261
 MD5 471bab257c095d36741706ce573a08d3 gnome-bluetooth-0.5.1-r1.ebuild 1347
+RMD160 c5160054b42c57427a249599ba8ad053d98b0214 gnome-bluetooth-0.5.1-r1.ebuild 1347
+SHA256 4a319bf72cc55c6ec8b4904ab0dc79662425ad028b9cbd3f21fe8732e65742b0 gnome-bluetooth-0.5.1-r1.ebuild 1347
 MD5 8be3b2e5c4ab65eb0947646d0cf4f88a gnome-bluetooth-0.5.1-r2.ebuild 1382
+RMD160 a3cb6edc5251a4349a207849ded6697d23889265 gnome-bluetooth-0.5.1-r2.ebuild 1382
+SHA256 22fa313da39553e782062c0eb3b6ce33d253ca53c9dd53748897441c0763f324 gnome-bluetooth-0.5.1-r2.ebuild 1382
 MD5 ca451d450412e5dad4d0ca6c058b6891 gnome-bluetooth-0.5.1.ebuild 1289
+RMD160 56e445e0ab17e10aacab34ff19fc43d24e0721b2 gnome-bluetooth-0.5.1.ebuild 1289
+SHA256 58f53b914df8a0430be51c663ca5167e1ebbca1aabfc98e6ff4758ed34c73f77 gnome-bluetooth-0.5.1.ebuild 1289
 MD5 79a7f6c060b36fef60a48e584567c7f6 gnome-bluetooth-0.6.0-r1.ebuild 1433
-MD5 105769b10dde0b5410adbf9036e57789 gnome-bluetooth-0.6.0.ebuild 1406
+RMD160 919ea5f94c64a6ec6295ee7d9b2c858b4d465ccb gnome-bluetooth-0.6.0-r1.ebuild 1433
+SHA256 d1829204533e162e105a7a98f30525da9b9900d03c1ba6a6d13fc8967a8f99ab gnome-bluetooth-0.6.0-r1.ebuild 1433
+MD5 05d959e26d478b4c14acf590e58bdbfa gnome-bluetooth-0.6.0.ebuild 1404
+RMD160 9fa0c377c0bc0624741f9fe4e402aee56fa67ac9 gnome-bluetooth-0.6.0.ebuild 1404
+SHA256 148d0d4a2f8a2457fa04c336a7ba1c4d69e48812fd3231dbf56ba9c8ffbf7c13 gnome-bluetooth-0.6.0.ebuild 1404
 MD5 7b69b6ce2c9525ab14dee0e15bd971ff gnome-bluetooth-0.7.0.ebuild 1511
+RMD160 a64a80f3e67da8e2a9b3a85587242446fd5c3d1d gnome-bluetooth-0.7.0.ebuild 1511
+SHA256 de5bacfe5f7140bb07463ec4a8cff5026d110bcb3c4f470a9f8334c83d75015f gnome-bluetooth-0.7.0.ebuild 1511
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD68C79ZFPrqoILX8RAgQRAJ4nSshuDnTOxudzLq2npRQfC3gKzACcDPVO
-kKc3R0VTZ41TjGz14TUb5QE=
-=T3sb
------END PGP SIGNATURE-----
+RMD160 fb83fc852c808450a2cc256fa9b9c7c784b884e2 metadata.xml 235
+SHA256 492cfc1c578fed368c8ae0ed98fbf455f9a5fa097235004b6cf3a3981d6fa983 metadata.xml 235

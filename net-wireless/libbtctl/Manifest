@@ -1,24 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 34be6d3f54f7931523f95a4167dd637a ChangeLog 3361
+MD5 843a023bffa4656400b3aad96c302f0d ChangeLog 3455
+RMD160 f7f6415246ecb8f1c8b1801f7c8306c334d624ca ChangeLog 3455
+SHA256 f57c176af045fc3a4e19bfadace0cf6f5e99bd4d503261d8117970887d151f6f ChangeLog 3455
 MD5 6fd25ef01add3d4f6b205a586233e783 files/digest-libbtctl-0.3 64
+RMD160 37d650bde141ad53c10d81888bc1766031635f4f files/digest-libbtctl-0.3 64
+SHA256 8b830abcf8b9ad682f506b607993945de5a7264a7bda507847f69a8ae0614b4f files/digest-libbtctl-0.3 64
 MD5 89c026311c1c9a92f14e59fe40698804 files/digest-libbtctl-0.4.1 66
+RMD160 c28d997ba20b6fa95841286fd958fd60482485e4 files/digest-libbtctl-0.4.1 66
+SHA256 f57fd748dd7c31ad3af3304807b4d088940275294e1f50b3ecf2572c5c110667 files/digest-libbtctl-0.4.1 66
 MD5 89c026311c1c9a92f14e59fe40698804 files/digest-libbtctl-0.4.1-r1 66
+RMD160 c28d997ba20b6fa95841286fd958fd60482485e4 files/digest-libbtctl-0.4.1-r1 66
+SHA256 f57fd748dd7c31ad3af3304807b4d088940275294e1f50b3ecf2572c5c110667 files/digest-libbtctl-0.4.1-r1 66
 MD5 9e76d5367d574ddb57a5e088d64dbba9 files/digest-libbtctl-0.5.0 67
+RMD160 7e30c8fdb29d03217a703109d0869e0ab50ec086 files/digest-libbtctl-0.5.0 67
+SHA256 f099e127ac1ee613aeda2ec6d2de7c26bee4b6d91dc59f67981f6adac0b9ca9d files/digest-libbtctl-0.5.0 67
 MD5 dae467de8ac583c4512f0e2d90b20a73 files/digest-libbtctl-0.6.0 67
+RMD160 1125f788b1cef0d19bfbc7dc4b79d65c5e63e924 files/digest-libbtctl-0.6.0 67
+SHA256 fd121a988d7bf71014187dc34fcc01cbea89e6b3daa7ca3cc5d1b4972f3e22e4 files/digest-libbtctl-0.6.0 67
 MD5 2f18fdc85cff32fc3b1eb5dcf7376b3a files/libbtctl-0.4.1-enable_python.patch 1292
+RMD160 c5c602b2b4f2b1e432cbf65d6c94bd9b47c16c35 files/libbtctl-0.4.1-enable_python.patch 1292
+SHA256 e1945bc62f6e95a64bdc1c685651352a4559011c3724c4ec66581875c58a2077 files/libbtctl-0.4.1-enable_python.patch 1292
 MD5 8b20bd211db6ab172f04eb2e0a682bf8 files/libbtctl-0.4.1-libdir.patch 467
+RMD160 580a5736240e2adf3fc63796f63300fa08fb7928 files/libbtctl-0.4.1-libdir.patch 467
+SHA256 62bc887cf83e58b6b5fd4fec8ab241f9eb19a26999a68b39ca11790d1e94378a files/libbtctl-0.4.1-libdir.patch 467
 MD5 b6d146ee15ee1b84bb14b9564b072000 libbtctl-0.3.ebuild 875
+RMD160 cf15122a1b0a73b4c668f43f6bb6e282433a78d0 libbtctl-0.3.ebuild 875
+SHA256 2526b07fa307f9e0307e2d536b0efceb61ba225198f68db19599c70394b2e2e0 libbtctl-0.3.ebuild 875
 MD5 335a33b28ec9cfe8087fd383477ee4d8 libbtctl-0.4.1-r1.ebuild 1138
+RMD160 4f76b38104a4c398cc497c8a2872bda20ea3c34e libbtctl-0.4.1-r1.ebuild 1138
+SHA256 3f2c3f1a757179245abdd5aef4843e1e9a26da365599d300edeb8b87168b571e libbtctl-0.4.1-r1.ebuild 1138
 MD5 9b0385b4591ffdb2ac70a14bdbc0d2e8 libbtctl-0.4.1.ebuild 1249
-MD5 9433eff2f1b98ce5c8d7868b26e5fd95 libbtctl-0.5.0.ebuild 1117
+RMD160 84c32b0191b1a52af0d20052db2e6276462af98b libbtctl-0.4.1.ebuild 1249
+SHA256 2108cfacdc47ca4442a518be0f435bba218f1fde99bb65a19cba1370deb241a6 libbtctl-0.4.1.ebuild 1249
+MD5 55254f4675a641caac5f81b35f227f66 libbtctl-0.5.0.ebuild 1115
+RMD160 01d647876651673d4022576f9b7195e5ca7185c7 libbtctl-0.5.0.ebuild 1115
+SHA256 46d891a5329f845071209f5ad5f9de7b283621cb88c852a5d2b7ed135f9bc653 libbtctl-0.5.0.ebuild 1115
 MD5 63e663db1b2d215f43454436f3365d55 libbtctl-0.6.0.ebuild 1118
+RMD160 71f2f0f0cdafbe5fb37fd5c8b85a63e7603584bb libbtctl-0.6.0.ebuild 1118
+SHA256 80805655b2eb5d7b369d9071e034d96df65d9489424f843f49869e664982fd0b libbtctl-0.6.0.ebuild 1118
 MD5 7a66fef4deb08f29b7cf0de1c2e3a4de metadata.xml 254
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD67xx9ZFPrqoILX8RAvohAJ4o7e/esBUOJfwHmXgaNHQ6ruxf/QCgkl+F
-P9sPSesclz1oC4aDFr0frJY=
-=npk2
------END PGP SIGNATURE-----
+RMD160 c42ccca4af4411270b321cd3cc5266b765e182ee metadata.xml 254
+SHA256 4c4f1c26f05f433f3231f8fe529a049da897b80aaca3ee4c1bfa30d99a527f1d metadata.xml 254
