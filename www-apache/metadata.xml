@@ -32,5 +32,8 @@
 		A categoria www-apache contém certos módulos para o servidor de
 		web Apache.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria www-apache zawiera moduły serwera Apache.
+	</longdescription>
 </catmetadata>
 
