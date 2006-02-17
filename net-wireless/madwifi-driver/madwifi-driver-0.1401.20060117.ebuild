@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1401.20060117.ebuild,v 1.2 2006/01/17 20:04:36 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1401.20060117.ebuild,v 1.3 2006/02/17 13:52:03 brix Exp $
 
 inherit linux-mod
 
@@ -111,4 +111,9 @@ pkg_postinst() {
 	fi
 
 	linux-mod_pkg_postinst
+
+	einfo
+	einfo "If you use net-wireless/wpa_supplicant or net-wireless/hostapd with madwifi"
+	einfo "you should remerge them now."
+	einfo
 }

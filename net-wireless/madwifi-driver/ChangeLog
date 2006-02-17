@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/madwifi-driver
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.37 2006/02/07 10:27:05 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.38 2006/02/17 13:52:03 brix Exp $
+
+  17 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
+  madwifi-driver-0.1_pre20050420-r1.ebuild,
+  madwifi-driver-0.1401.20060117.ebuild,
+  madwifi-driver-0.1420.20060201.ebuild,
+  madwifi-driver-0.1440.20060206.ebuild,
+  madwifi-driver-0.1443.20060207.ebuild:
+  Added note about remerging wpa_supplicant/hostapd after upgrading
+  madwifi-driver. Thanks to Chris Bainbridge in bug #122553.
 
 *madwifi-driver-0.1443.20060207 (07 Feb 2006)
 

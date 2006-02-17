@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1443.20060207.ebuild,v 1.1 2006/02/07 10:27:05 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1443.20060207.ebuild,v 1.2 2006/02/17 13:52:03 brix Exp $
 
 inherit linux-mod
 
@@ -117,5 +117,8 @@ pkg_postinst() {
 	einfo
 	einfo "The type of the created interface can be controlled through the 'autocreate'"
 	einfo "module parameter."
+	einfo
+	einfo "If you use net-wireless/wpa_supplicant or net-wireless/hostapd with madwifi"
+	einfo "you should remerge them now."
 	einfo
 }
