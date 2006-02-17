@@ -31,5 +31,9 @@
 		A categoria app-accessibility contém pacotes que ajudam com
 		acessibilidade (por exemplo, leitores de tela).
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria app-accessibility zawiera pakiety ułatwiające dostęp do
+		komputera osobom niepełnosprawnym.
+	</longdescription>
 </catmetadata>
 
