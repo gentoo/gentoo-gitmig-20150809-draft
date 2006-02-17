@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/Finance-YahooQuote-0.21.ebuild,v 1.4 2006/02/13 13:01:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/Finance-YahooQuote-0.21.ebuild,v 1.5 2006/02/17 20:24:27 hansmi Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI=mirror://gentoo/${MY_P}.tar.gz
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 
 # Disabling tests since they rely on a rather fickle expected outcome from a

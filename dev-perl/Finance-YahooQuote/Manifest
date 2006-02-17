@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0795b247e69205f14fe261e23b4121d7 ChangeLog 1346
+MD5 f8ec9e6cec936ac37c673874b84df227 ChangeLog 1449
+RMD160 c138fb1622338cc58c1c52e856e0eec041927cc7 ChangeLog 1449
+SHA256 45ade3757ae12ba4e05e7c1f5f405f0720f9a5c134c9c38ceded923990e1e631 ChangeLog 1449
 MD5 145699b1e873cf45b3056642072bb4c0 Finance-YahooQuote-0.20.ebuild 702
-MD5 b01a736b153d4a118b3c25717d47d391 Finance-YahooQuote-0.21.ebuild 688
+RMD160 1ab72c1770499bff73814b8e95c36203b6e253bf Finance-YahooQuote-0.20.ebuild 702
+SHA256 43c9cc3472d0dfad3141d3cfbda587914472a340dfcb326b4240b03a34e5aeee Finance-YahooQuote-0.20.ebuild 702
+MD5 326c81044740f63304bd3b599b6e5f00 Finance-YahooQuote-0.21.ebuild 684
+RMD160 7e8e1bdb7ad414182b4aab1e31a55251aad796d1 Finance-YahooQuote-0.21.ebuild 684
+SHA256 e234d7bf1adad460b7ddc1f9ccf04ace468742bbac1e4bf4c852c106a6b65b44 Finance-YahooQuote-0.21.ebuild 684
 MD5 ec0d13bd6e8b8147e5972f8729ed7484 files/digest-Finance-YahooQuote-0.20 74
+RMD160 a128beda78c5d7f6242e59365d4adcb0d558c8c4 files/digest-Finance-YahooQuote-0.20 74
+SHA256 3ed43c947a857b653db782906671dfb84ba273f88f416f968cd4c66ec893115b files/digest-Finance-YahooQuote-0.20 74
 MD5 833b9909433777a355e0b0ccf50f303b files/digest-Finance-YahooQuote-0.21 74
+RMD160 5bbf1d250d8d008354696ca5a9e230b0919a7e61 files/digest-Finance-YahooQuote-0.21 74
+SHA256 d45f97a3b747418dcd20fc0a88e19f0b3c71b7cb3503c1be1b9a1f55cd6e76a5 files/digest-Finance-YahooQuote-0.21 74
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8IMStG5z4I8BtQoRAox9AJ98URJE4QuqelfIutFiQaL6xQxhTACfe+VM
-YTBSYl3kVlzZW76bJYzuepg=
-=4Zm6
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305

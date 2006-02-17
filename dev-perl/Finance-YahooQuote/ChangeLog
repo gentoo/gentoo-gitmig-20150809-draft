@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Finance-YahooQuote
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/ChangeLog,v 1.8 2006/02/13 13:01:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/ChangeLog,v 1.9 2006/02/17 20:24:27 hansmi Exp $
+
+  17 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
+  Finance-YahooQuote-0.21.ebuild:
+  Stable on ppc.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   Finance-YahooQuote-0.20.ebuild, Finance-YahooQuote-0.21.ebuild:
