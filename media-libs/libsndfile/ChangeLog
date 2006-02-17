@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsndfile
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.45 2005/12/02 13:10:56 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.46 2006/02/17 21:06:51 grobian Exp $
+
+  17 Feb 2006; Fabian Groffen <grobian@gentoo.org>
+  libsndfile-1.0.12-r1.ebuild:
+  Drop ~ppc-macos keyword as we don't have the sqlite dependency.
 
 *libsndfile-1.0.12-r1 (02 Dec 2005)
 

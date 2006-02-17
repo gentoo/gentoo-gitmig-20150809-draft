@@ -1,23 +1,39 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e9cd56e684ac10a441e20ee00cfc3d10 ChangeLog 6162
+MD5 ff8c8148e531b9418fbe5c5b9e9e0a22 ChangeLog 6309
+RMD160 43238323b2c93d2be8158b815d0b3ac5f05b2a43 ChangeLog 6309
+SHA256 d29ab49dda15e2b02c2882f0a25646116c4cb71e2ccfe07482654efbe46270fc ChangeLog 6309
 MD5 a2f27725a7da73281e185f3fed80c16c files/digest-libsndfile-1.0.10 69
+RMD160 81d53cb19062fd02be4845e87b8c17492b27044e files/digest-libsndfile-1.0.10 69
+SHA256 903184505dd735141eeb064549bd1b274b2dd7d8c3153bd26557ea3f1d6a9b82 files/digest-libsndfile-1.0.10 69
 MD5 03568645ed600c683b4289c8a28a3beb files/digest-libsndfile-1.0.11 69
+RMD160 7c063919433e5c27c4c430e0902744cf0cd92a42 files/digest-libsndfile-1.0.11 69
+SHA256 5b00f4d405b448157b19f0f207783938af917852a324384348cfa3367e6b995a files/digest-libsndfile-1.0.11 69
 MD5 9e77b0bf2411d3be746027a39b01c99f files/digest-libsndfile-1.0.12-r1 69
+RMD160 6d5d7f25d7f78ce0b8381826ce926fd4079824f9 files/digest-libsndfile-1.0.12-r1 69
+SHA256 d6e2050d621e720ab80565b5a3b83f99763e28b6e0094b2a507ab41530bd5c33 files/digest-libsndfile-1.0.12-r1 69
 MD5 69310df3755bad8a23a2dd9de6425318 files/digest-libsndfile-1.0.5 68
+RMD160 584f28508538f7f25f9ade43132bd083ea811a7c files/digest-libsndfile-1.0.5 68
+SHA256 de049fccaa0c29ed0da5dea144ad1f5a3cd53ff78bd89de2bb1a560dbbeaf915 files/digest-libsndfile-1.0.5 68
 MD5 741beed3c7e02485d6a453ebefaa6f69 files/digest-libsndfile-1.0.9 68
+RMD160 62297f263363fdb575081ecce0c3eb9b4e869525 files/digest-libsndfile-1.0.9 68
+SHA256 bfb6013e4aa640f9e26bb4a2df7ca39d6c4a57c3bf2607873ff6cefddc53e2fb files/digest-libsndfile-1.0.9 68
 MD5 a0be4d04e2184eeab1d268871505fe80 files/libsndfile-1.0.12-flac.patch 1188
+RMD160 15594ad59acc1b7be8ef0b1aa90f1d9b38f6f613 files/libsndfile-1.0.12-flac.patch 1188
+SHA256 ec8242128e27f5a3921c8361d4579250888ff06fd13342d384a2e7897ec9de51 files/libsndfile-1.0.12-flac.patch 1188
 MD5 8b60e2e17a0b68294f919d3d25a26550 libsndfile-1.0.10.ebuild 1107
+RMD160 b2d9738a2482daf1c78cf4eb7d7e691ea9b858ec libsndfile-1.0.10.ebuild 1107
+SHA256 9e43e599e82da6c8e8c6c7b36f2d75b26b586649adc26238f064c8fb24d5a220 libsndfile-1.0.10.ebuild 1107
 MD5 a29018f99a7ac6c26d0a6a750ae1bc38 libsndfile-1.0.11.ebuild 1072
-MD5 c1ef32f41916211f8a8cc050c8ba6dbb libsndfile-1.0.12-r1.ebuild 1285
+RMD160 a02629149c6101442f3a5798ba6b92b5e00752e8 libsndfile-1.0.11.ebuild 1072
+SHA256 ab61e8d927cb4a29df085a3007d094ba2c35e44aab6b3bd959e48ea7e5c6f31e libsndfile-1.0.11.ebuild 1072
+MD5 ba12b35493cae1c858c6352f0c97752e libsndfile-1.0.12-r1.ebuild 1275
+RMD160 31ab65b069f9271f3d01afb3dc028b3b0443bc92 libsndfile-1.0.12-r1.ebuild 1275
+SHA256 6ec8901b9e0570d8a41f219c43fa9e4c89628e798c5eb290b2b7caed89c4ca74 libsndfile-1.0.12-r1.ebuild 1275
 MD5 bfcdcbdea917b696ff7e03c25cf84323 libsndfile-1.0.5.ebuild 731
+RMD160 d3e9cca1ea739032967c476bce94021155c07677 libsndfile-1.0.5.ebuild 731
+SHA256 441a1d8c087a1a6a70df8aacd0c0bbe72708f7539c81a6f8e75bc368b2381088 libsndfile-1.0.5.ebuild 731
 MD5 90f661dd7cf7029a4c8f00b74da652e5 libsndfile-1.0.9.ebuild 758
+RMD160 623d5fe9f982b7774aab8580c230abad32f6134b libsndfile-1.0.9.ebuild 758
+SHA256 3bb41ad8f7d8972d0d0f5e77d208f6f02f8f7206a34576cee1cfcef95810cf2d libsndfile-1.0.9.ebuild 758
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxj1M2+ySkm8kpY0RApJ0AJsGAYMy79+EOzJEN9boSffhbOp4wACfXyNN
-oAAml+a9AWTlDFxXkZHa+GU=
-=j1t4
------END PGP SIGNATURE-----
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
