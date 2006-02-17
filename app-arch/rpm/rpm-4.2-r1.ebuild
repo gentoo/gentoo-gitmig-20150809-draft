@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2-r1.ebuild,v 1.3 2006/01/29 01:50:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2-r1.ebuild,v 1.4 2006/02/17 00:07:54 flameeyes Exp $
 
 inherit python flag-o-matic libtool eutils
 
@@ -20,8 +20,11 @@ RDEPEND="=sys-libs/db-3.2*
 	>=app-crypt/gnupg-1.2
 	dev-libs/elfutils
 	!dev-libs/beecrypt
-	nls? ( sys-devel/gettext )
 	python? ( >=dev-lang/python-2.2 )
+	nls? ( virtual/libintl )"
+
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
