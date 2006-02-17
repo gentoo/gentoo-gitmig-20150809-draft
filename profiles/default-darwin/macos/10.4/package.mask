@@ -54,3 +54,6 @@ net-dns/libidn
 
 # wants sqlite2 which we can't install
 dev-python/pysqlite
+
+# wants readline (and I don't want to !ppc-macos? it)
+net-p2p/mutella
