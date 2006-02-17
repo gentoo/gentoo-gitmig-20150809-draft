@@ -10,5 +10,9 @@
 	<longdescription lang="de">
 		Die Kategorie x11-drivers enthält zusätzliche Treiber für den X-Server.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria x11-drivers contém drivers que fazem interface com
+		o servidor de X11 principal.
+	</longdescription>
 </catmetadata>
 
