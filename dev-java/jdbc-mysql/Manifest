@@ -1,23 +1,39 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0ccdc53e864293e61c58ae9e61640998 ChangeLog 6422
+MD5 a058c4525b62e50104ddf7b1d5cebcc5 ChangeLog 6522
+RMD160 6f3f0f4475bc09a8ae6ea4805ce998efeee8a27e ChangeLog 6522
+SHA256 f20ad094fef9d942d72a56c3816b14cd51195b0fee8b1ce244a1504160fc5fd2 ChangeLog 6522
 MD5 9275519a591f40e7ab6b3746d884f67f files/compile-without-log4j.patch 682
+RMD160 e2ec9338259d23d17a6a68235cf90f84d9acb0cc files/compile-without-log4j.patch 682
+SHA256 389c1b2c3467f39f52a7fb294ee88800431dd23e73a8ce165a04d0ee2d00a3db files/compile-without-log4j.patch 682
 MD5 96778981695f92599ce9eac1c669a9b0 files/digest-jdbc-mysql-3.0.11 86
+RMD160 4db60a6ddfb23f537d7e90df59eebc357007c90e files/digest-jdbc-mysql-3.0.11 86
+SHA256 8623a9f677aa82326cf7fc5ec645341a2d4eb4dfd3637bf1571c008197e527b7 files/digest-jdbc-mysql-3.0.11 86
 MD5 702d2b80aba3c4eb8db59e08716c954a files/digest-jdbc-mysql-3.0.16 83
+RMD160 11d87b704285e2a2eab5c26ac70dbe78b29c93d4 files/digest-jdbc-mysql-3.0.16 83
+SHA256 e9ef54ffeb129978b1e910be6efc52334bf374323a703008db421fd69b6840b8 files/digest-jdbc-mysql-3.0.16 83
 MD5 d3e310eef0498efe3d56ad6ddcd306d9 files/digest-jdbc-mysql-3.0.17 83
+RMD160 eb7f9508ef34be4af72c66d54fbc67137723ab47 files/digest-jdbc-mysql-3.0.17 83
+SHA256 ebf6b3bc9cb96ed651b1acc5e92d5f5ba68e4c4e817bfafcd2969802d3438a46 files/digest-jdbc-mysql-3.0.17 83
 MD5 28a1e7fdcedd48ae04a5f1631ac8b3b3 files/digest-jdbc-mysql-3.1.10 80
+RMD160 db00fb3fff3437788e76578c7ad5219d9e7fdc3d files/digest-jdbc-mysql-3.1.10 80
+SHA256 7f3072f3f1a8dbbcd7e856152588b6a39cb389301b898ac6087037d9f0dda807 files/digest-jdbc-mysql-3.1.10 80
 MD5 972907f3edeae4c8be52372e59ca2933 files/digest-jdbc-mysql-3.1.12 80
+RMD160 4722a15aeabab018136ec621d27b0394a462f3b6 files/digest-jdbc-mysql-3.1.12 80
+SHA256 14796bcc093c58a5ef26fa77d2da21fa129a0600a8c3f3b65488ee75c7caf985 files/digest-jdbc-mysql-3.1.12 80
 MD5 195d60230c6e608837d0f52a9b1a7307 jdbc-mysql-3.0.11.ebuild 620
+RMD160 c91476d97e55c0ec583da636a435fbe827c16f74 jdbc-mysql-3.0.11.ebuild 620
+SHA256 e4aed4e5c5c30b01a72941a3c5ec5a8f83e0c547f9254da0f8cb95d0e8095c46 jdbc-mysql-3.0.11.ebuild 620
 MD5 18ff702419d20ada88479df002fe38a3 jdbc-mysql-3.0.16.ebuild 856
+RMD160 ab3b2f17d4fd406e38eca78b1a99787f5e1e6367 jdbc-mysql-3.0.16.ebuild 856
+SHA256 5bfd663d77194dd0caebd69ea582e245c384a3d31fc94e9a83e0e015e3328035 jdbc-mysql-3.0.16.ebuild 856
 MD5 50e2a09a23465da017d967d0dccac6bd jdbc-mysql-3.0.17.ebuild 967
-MD5 cacf118add74d627b79227db50ce1aba jdbc-mysql-3.1.10.ebuild 1205
+RMD160 ce8a4d917d280c1b6226e835b3b04a37ab6c56eb jdbc-mysql-3.0.17.ebuild 967
+SHA256 009323079bb97175dbfc458e8168800f3d04f91d899bd99977c0f0646e67bd4e jdbc-mysql-3.0.17.ebuild 967
+MD5 a1bc6cbe089f427040766dab795be97d jdbc-mysql-3.1.10.ebuild 1204
+RMD160 3fe42e2351a18dde4c63c4af02170e23c1641dfe jdbc-mysql-3.1.10.ebuild 1204
+SHA256 60985428ab466880534542eff30f535ed027040b07c3c8d0fcd26795d90d29dc jdbc-mysql-3.1.10.ebuild 1204
 MD5 9e4af1d419c38e21e2bd90b9c4e78e49 jdbc-mysql-3.1.12.ebuild 1155
+RMD160 fd0ecff726dee72efecf5221ec8f4a7053e976c3 jdbc-mysql-3.1.12.ebuild 1155
+SHA256 9df44e0cf66410f7d7ffbcb14d4d841928a52154c864b98e409e8ceaff76ee60 jdbc-mysql-3.1.12.ebuild 1155
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDq2kandWRXhKOboURAijjAJ4jSnOAzqW7S/9Ec44KPObL2nDfWgCfYBv7
-9XpDBK2kr7jRLE55NYCtrJY=
-=9env
------END PGP SIGNATURE-----
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
