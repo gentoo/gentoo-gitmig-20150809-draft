@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/ibam
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ChangeLog,v 1.1 2006/01/15 14:29:41 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ChangeLog,v 1.2 2006/02/17 13:16:08 brix Exp $
+
+  17 Feb 2006; Henrik Brix Andersen <brix@gentoo.org> ibam-0.4.ebuild:
+  Stable on x86.
 
 *ibam-0.4 (15 Jan 2006)
 
