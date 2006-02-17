@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/workrave
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.34 2005/11/11 22:49:30 hansmi Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.35 2006/02/17 07:54:06 leonardop Exp $
+
+*workrave-1.8.2 (17 Feb 2006)
+
+  17 Feb 2006; Leonardo Boshell <leonardop@gentoo.org>
+  +workrave-1.8.2.ebuild:
+  New bug-fix release (bug #112931). Added X11 dependencies.
 
   11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
   workrave-1.8.1-r1.ebuild:
