@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.3.1.ebuild,v 1.2 2006/02/06 08:23:56 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.3.1.ebuild,v 1.3 2006/02/17 17:30:55 josejx Exp $
 
 inherit gnome2 eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE="vorbis flac aac mad ipod avahi howl daap dbus musicbrainz tagwriting"
 #I want tagwriting to be on by default in the future. It is just a local flag
 #now because it is still considered experimental by upstream and doesn't work
