@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.10 2005/05/22 13:35:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.11 2006/02/17 22:28:23 tupone Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -13,10 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="svga"
 
-DEPEND="virtual/x11
+RDEPEND="|| ( x11-libs/libXpm virtual/x11 )
 	>=media-libs/libpng-1.2.1
-	sys-libs/zlib
 	svga? ( media-libs/svgalib )"
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xextproto virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
@@ -34,7 +35,15 @@ src_unpack() {
 }
 
 src_compile() {
-	egamesconf $(use_with svga svgalib) || die
+	# configure script is coded only to accept --without-svgalib
+	# --with-svgalib is bugged
+	# raised bug #1433828 @ quadra - Sourceforge
+	# http://sourceforge.net/tracker/index.php?func=detail&aid=1433828&group_id=7275&atid=107275
+	if use svga; then
+		egamesconf || die
+	else
+		egamesconf --without-svgalib || die
+	fi
 	emake || die "emake failed"
 }
 
