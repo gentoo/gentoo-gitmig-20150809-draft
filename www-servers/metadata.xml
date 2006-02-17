@@ -22,5 +22,8 @@
 	<longdescription lang="it">
 		La categoria www-servers contiene una selezione di software web server.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria www-servers contém pacotes de servidores de web.
+	</longdescription>
 </catmetadata>
 
