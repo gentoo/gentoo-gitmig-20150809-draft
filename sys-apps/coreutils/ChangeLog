@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.155 2006/02/17 02:34:44 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.156 2006/02/17 12:29:43 vapier Exp $
+
+  17 Feb 2006; Mike Frysinger <vapier@gentoo.org> coreutils-5.2.1-r6.ebuild,
+  coreutils-5.2.1-r7.ebuild, coreutils-5.3.0-r1.ebuild,
+  coreutils-5.3.0-r2.ebuild, coreutils-5.93.ebuild, coreutils-5.94.ebuild:
+  Make sure $WORKDIR is go-w before giving everyone read access #122951 by
+  Joshua Pettett.
 
   17 Feb 2006; Chris PeBenito <pebenito@gentoo.org> coreutils-5.94.ebuild:
   Fix up SELinux patch.

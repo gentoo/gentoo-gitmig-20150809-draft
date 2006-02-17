@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r7.ebuild,v 1.11 2006/02/09 06:24:47 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r7.ebuild,v 1.12 2006/02/17 12:29:44 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -103,6 +103,7 @@ src_compile() {
 src_test() {
 	# Non-root tests will fail if the full path isnt
 	# accessible to non-root users
+	chmod -R go-w "${WORKDIR}"
 	chmod a+rx "${WORKDIR}"
 	addwrite /dev/full
 	export RUN_EXPENSIVE_TESTS="yes"
