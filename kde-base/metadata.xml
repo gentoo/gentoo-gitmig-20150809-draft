@@ -25,5 +25,8 @@
 	<longdescription lang="pt">
 		A categoria kde-base contém os pacotes centrais do KDE.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria kde-base zawiera podstawowe pakiety środowiska KDE.
+	</longdescription>
 </catmetadata>
 
