@@ -24,5 +24,9 @@
 	<longdescription lang="it">
 		La categoria x11-libs contiene varie librerie per X11.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria x11-libs contém várias bibliotecas relacionadas a
+		X11.
+	</longdescription>
 </catmetadata>
 
