@@ -28,5 +28,8 @@
 	<longdescription lang="pt">
 		A categoria x11-wm contém gerenciadores de janelas para X11.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria x11-wm zawiera menedżery okien dla środowisk X11.
+	</longdescription>
 </catmetadata>
 
