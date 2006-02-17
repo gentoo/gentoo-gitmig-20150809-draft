@@ -26,5 +26,9 @@
 	<longdescription lang="pt">
 		A categoria net-p2p contém aplicações de rede peer-to-peer.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria net-p2p zawiera programy służące do wymiany plików w sieciach
+		peer-to-peer.
+	</longdescription>
 </catmetadata>
 
