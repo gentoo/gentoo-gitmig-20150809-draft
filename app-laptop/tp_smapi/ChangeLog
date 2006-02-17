@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/tp_smapi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.5 2006/01/15 13:43:35 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.6 2006/02/17 13:26:44 brix Exp $
+
+*tp_smapi-0.17 (17 Feb 2006)
+
+  17 Feb 2006; Henrik Brix Andersen <brix@gentoo.org> +tp_smapi-0.17.ebuild:
+  Version bump, bug #122459.
 
 *tp_smapi-0.16 (15 Jan 2006)
 
