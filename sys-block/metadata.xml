@@ -29,5 +29,8 @@
 		A categoria sys-block contém pacotes que funcionam com
 		dispositivos de bloco.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria sys-block zawiera programy do pracy na urządzeniach blokowych.
+	</longdescription>
 </catmetadata>
 
