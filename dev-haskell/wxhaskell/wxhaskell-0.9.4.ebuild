@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.2 2006/02/16 21:33:07 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.3 2006/02/17 10:59:58 dcoutts Exp $
 
 inherit flag-o-matic wxwidgets ghc-package
 
@@ -19,6 +19,20 @@ DEPEND="${DEPEND}
 	>=virtual/ghc-6.2
 	>=x11-libs/wxGTK-2.4.2
 	doc? ( >=dev-haskell/haddock-0.6-r2 )"
+
+pkg_setup() {
+	if ! built_with_use x11-libs/wxGTK X; then
+		einfo "wxhaskell needs wxGTK that has been built with X11 support."
+		einfo "Please re-emerge wxGTK with USE=\"X -odbc -unicode\""
+		die "wxhaskell requires wxGTK to be built with USE=\"X -odbc -unicode\""
+	fi
+	if built_with_use x11-libs/wxGTK odbc || built_with_use x11-libs/wxGTK unicode; then
+		einfo "Sadly wxhaskell does not work with wxGTK that has been built"
+		einfo "with USE=\"odbc\" or USE=\"unicode\"."
+		einfo "Please re-emerge wxGTK with USE=\"-odbc -unicode\""
+		die "wxhaskell requires wxGTK to be built with USE=\"-odbc -unicode\""
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
