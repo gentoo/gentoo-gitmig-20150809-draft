@@ -1,4 +1,4 @@
-MD5 cad135331098c8662a58d57ee6ed4825 ChangeLog 18497
+MD5 d5e9c5b665ee00914d1e546fcbd4d548 ChangeLog 18591
 MD5 f2c353a99f6cbaaa4af971adf5c95c0d files/digest-links-2.1_pre17-r1 139
 MD5 931f4ef9020491726707c7bbe071789b files/digest-links-2.1_pre18 139
 MD5 6fd45df1f15b1f0ba4d72ec4d6011611 files/digest-links-2.1_pre19 139
@@ -7,5 +7,5 @@ MD5 5b8b5b21da5582f7c332b2a2d6afafcd files/links-2.1pre18-no-javascript-fix.patc
 MD5 d5afe5a36fa089d1020d9f7f1d04b230 links-2.1_pre17-r1.ebuild 3515
 MD5 e8ff65721f5c1b5f52d714a7700efde0 links-2.1_pre18.ebuild 3655
 MD5 8efab0eb449cf677a20370b5cb0e2f9e links-2.1_pre19.ebuild 3627
-MD5 e282012b061cfbf93ef395c1c9e0eefe links-2.1_pre20.ebuild 3804
+MD5 fe7a4477e7550f693368f70509fdd9fb links-2.1_pre20.ebuild 3799
 MD5 82cf55f144e0f9e258fd08a572852147 metadata.xml 498
