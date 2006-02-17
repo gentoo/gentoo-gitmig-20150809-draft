@@ -14,5 +14,8 @@
 		A categoria x11-drivers contém drivers que fazem interface com
 		o servidor de X11 principal.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria x11-drivers zawiera sterowniki dla serwera X11.
+	</longdescription>
 </catmetadata>
 
