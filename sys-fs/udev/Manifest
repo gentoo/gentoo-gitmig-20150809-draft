@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 943c055a4680328fcf18dddcf63e9c17 ChangeLog 32182
-RMD160 bd0d24d13a2bbf9c21298965acbd396d339f854f ChangeLog 32182
-SHA256 3c3e5d40f2572d0921978d007bc4b17cfef0c8adfefe7ada3592a84c00c94f73 ChangeLog 32182
+MD5 1c0eb388e3b2b0bd52aa4113b8a39389 ChangeLog 32335
+RMD160 467c9eef37c42f0219757cdf80f1a8d1d04db14f ChangeLog 32335
+SHA256 028779d3c6811dbead5541b1e580975161f1ca1c33b403ce583869704342d941 ChangeLog 32335
 MD5 17c291f5c6e624792d02dd304fb8177e files/05-udev-early.rules-078 288
 RMD160 e4d07ee5080618ba60c9cfb544d438f2eb11cab6 files/05-udev-early.rules-078 288
 SHA256 63602afdbefafa4eb0b3301685e47dec5cc206b66765e733f9bcc6afe2a5d31b files/05-udev-early.rules-078 288
@@ -85,18 +82,18 @@ SHA256 2ffc94d324ce63e6a98ed6466fd8f01e0413e9a95c0ad46e4aa72018014b07b0 files/ud
 MD5 1e0a70ed330f1c72a042ad41ce79fcf1 files/udev-start-077.sh 2570
 RMD160 c13c77bd79fed38e4dfd12fc0a61a47b876f2e49 files/udev-start-077.sh 2570
 SHA256 1f83a3594b63ed2a298c6d45a8c0201fe54a48d3cb4f988fc129bb8e304998e9 files/udev-start-077.sh 2570
-MD5 28122c5a1b51a97cc2182721e6ced4e1 files/udev-start-079.sh 4352
-RMD160 c7c0ba41e15299a80f7dfe8df78b15df759e1a7e files/udev-start-079.sh 4352
-SHA256 dd7668f8607823ea42d3608e82cdc65184fcdeb431a0a2f29f7af9a739b1a310 files/udev-start-079.sh 4352
+MD5 79bd3a2b65c644e12f51ce6f9c841a6f files/udev-start-079.sh 4440
+RMD160 bda6188039687b0e4b3b803bca9008f76c4fedd3 files/udev-start-079.sh 4440
+SHA256 3756e15cde3f5d88adee3753687634c9d691b66242c6740074712c4024118d24 files/udev-start-079.sh 4440
 MD5 622f085dff7fb6138f3e2c992d569593 files/udev-start.sh 2460
 RMD160 97afa40bab5aed0106e3a3b065ae480ce329e11c files/udev-start.sh 2460
 SHA256 0527b03ac666dd9e4c94811b10d499f04b3f6f8ae2f03e6460727c1b570d985d files/udev-start.sh 2460
 MD5 787f5b398376f9e3dbec228681150173 files/udev-stop.sh 2012
 RMD160 4fb4bd474b6dd6b1d219ed4d42ca10d78d783c37 files/udev-stop.sh 2012
 SHA256 d61ff3b63eb1a19be1c06088c5b1d3476b48c42ccdaa567d0c1709b25b6ce88f files/udev-stop.sh 2012
-MD5 233bf645719657d9b8265f34a66d20e2 files/udev.conf 1183
-RMD160 8f0e032c42ba31dff2044248f717299bc078e489 files/udev.conf 1183
-SHA256 c68a4a6cfa7242d4643862c7fb7cfa0e9fe3d8f61858f7a7380efbe4a37e4df4 files/udev.conf 1183
+MD5 ab89de7957a7c7e6435203022d1db98a files/udev.conf 1184
+RMD160 5f0d9c93bccb028c8789fca9e2dfdd1cdf1723da files/udev.conf 1184
+SHA256 883c1063fe1deddab2fe7ba96d945bcc0901bee2d486a17b05bf152ff7fe8249 files/udev.conf 1184
 MD5 bbacca394d27aae427e503317b4bebfe files/udev.conf.post_024 1188
 RMD160 6b1c3552120d7a54fec120a6d39561658392f03f files/udev.conf.post_024 1188
 SHA256 bd514f3a3b67aa5d39f42f6f96af266e5731e390a1369767fafc7ad46d2c5d13 files/udev.conf.post_024 1188
@@ -115,15 +112,15 @@ SHA256 db8f66c5c0f87f5ab3566872c6ec5cd5752cb29ff9d7458607ef9a5c4bf7443a files/ud
 MD5 77692161d3e1d624773ff10aec89b318 files/udev.hotplug.empty 106
 RMD160 0d6fedd5f2fad1a127ee45247f94c1a8c57b9304 files/udev.hotplug.empty 106
 SHA256 b527a9f2a5100a4e64de6154f06ee8793bff84a1318e6b9ed427ccae031dd7f0 files/udev.hotplug.empty 106
-MD5 f558b841afc8ac6381903fc371331507 files/udev.permissions 3549
-RMD160 91f65387b99ad74701f83038bb9c7739b0b37ed5 files/udev.permissions 3549
-SHA256 e04c61c6b24bd2d1bfd609f093e82e13d5d2a45a0cb137acbf32420120e5690a files/udev.permissions 3549
-MD5 d8da5df6f7d3c8a80bde23618ae8a797 files/udev.rules 3553
-RMD160 a33c0b339b6f324b39b449deda75949c4254d499 files/udev.rules 3553
-SHA256 b622ab18af523bd2aa35f1f6788440bebc0822b73ebc06e35b4b65f78b03bfb7 files/udev.rules 3553
-MD5 6df9e08cd088f74720689640de2ffcd6 files/udev.rules-018 4365
-RMD160 6db2826f30c4fcf524ea30c1bf59deee897cb857 files/udev.rules-018 4365
-SHA256 47c41952ef56999049cc29179979e82c274607bc1ca6c95f2fb7d283d9630f24 files/udev.rules-018 4365
+MD5 aba24cfb26a8f0b604a44a0d9ca7f830 files/udev.permissions 3550
+RMD160 f783b17216c8ea72d3a3eee3d3ce61a7035d8578 files/udev.permissions 3550
+SHA256 ed1e971b03bc583a98b50b830bcb859056c5f9c1faae1ea9972c541b09f2ef70 files/udev.permissions 3550
+MD5 4c26691abc7f47b0329203056cbcbebc files/udev.rules 3554
+RMD160 345c5d345ccc04b3b3069abeba3785899225eefd files/udev.rules 3554
+SHA256 b6f9f6413371bf0124bb2b6d48ff3cbf59af79a51fd7dfd4eb3f207ab2e0b479 files/udev.rules 3554
+MD5 ba39120cb35ab65a5b77b9036cc83beb files/udev.rules-018 4366
+RMD160 b1c7c93adf6b446869613a6e4152fc9efabbd6ad files/udev.rules-018 4366
+SHA256 d4e95d8cb02ee8b769fbe0543b7f7f4b402777d431a1d3e7af5d5c36b6f632b2 files/udev.rules-018 4366
 MD5 3aad55bdfbf9067a104a325e23dda0f4 files/udev.rules-064-r1 9146
 RMD160 6fdc13c44090af7ef000fa031c660e9b05cb2a0c files/udev.rules-064-r1 9146
 SHA256 0e28be67522526df8615da36f0ddc76e7678818de62a2f0723880baf87337071 files/udev.rules-064-r1 9146
@@ -142,9 +139,9 @@ SHA256 51a8b196f90b24c0ac55ce7986314032bceb83e694a16c61df7a9b82d67f9c08 files/ud
 MD5 590d3e6346938e3b608237973f4f1805 files/udev.rules-084 11686
 RMD160 abde6ff6997c2110759d21d96909cd86ca5c80f6 files/udev.rules-084 11686
 SHA256 c6af48d8ba79b1a796da80c4364808044f624a4502b35b840f4f0e58ba23e4e6 files/udev.rules-084 11686
-MD5 7f23fbfcba51c7c4b8c29a8c08429996 files/udev.rules.post_012 4184
-RMD160 0fa81b4bafa732497b8e65cf658adf2cf32f3a0a files/udev.rules.post_012 4184
-SHA256 3fc8785c40acb43d92a2f7b3c4e21cfa7b947fb5d2e87d1c109297ff34994100 files/udev.rules.post_012 4184
+MD5 5a1604faa5c8a1b5cf7a6a66f13fe226 files/udev.rules.post_012 4185
+RMD160 d4bcb34736b17035a6443ecb883c2b25819c4ad9 files/udev.rules.post_012 4185
+SHA256 4a28862c1ed8ed6ed05d5bafcabbe9da1ab3eeef0094158983413d2f80e352fa files/udev.rules.post_012 4185
 MD5 075d5a933d6175160a02ddf15bd4f454 metadata.xml 260
 RMD160 f1b0916156eade656b558b7507109b69ed78d394 metadata.xml 260
 SHA256 31722725c8bf774ad90600f7a3f50f2ca76c1396aad6888ce1cc08ce981b1552 metadata.xml 260
@@ -202,10 +199,3 @@ SHA256 7e7f81e496ba6a8bd1844a070978f5c105fdef32aa4e7b01d62683f67e0860fa udev-081
 MD5 81b268c2665fadbd2fc86fb70025f64b udev-084.ebuild 7566
 RMD160 f0607db91126e3483cf98faf1785453290acd130 udev-084.ebuild 7566
 SHA256 2e148644a2a87a23c1fe942d16c020b1dd2cc71f08ff645d50f594a4d9f0bdd8 udev-084.ebuild 7566
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6n1NJrHF4yAQTrARAuAZAKCrx3uuz232MEt6FiMrkn0BOQWRqACfY/QC
-xF4K7PLxJSi9NKTm/YZDpv4=
-=6cdY
------END PGP SIGNATURE-----

@@ -164,7 +164,9 @@ main() {
 	[[ -x /sbin/dmsetup ]] && /sbin/dmsetup mknodes &>/dev/null
 	[[ -x /sbin/lvm ]] && \
 		/sbin/lvm vgscan -P --mknodes --ignorelockingfailure &>/dev/null
-	[[ -x /sbin/evms_activate ]] && /sbin/evms_activate -q &>/dev/null
+	# Running evms_activate on a LiveCD causes lots of headaches
+	[[ -z ${CDBOOT} ]] && [[ -x /sbin/evms_activate ]] && \
+		/sbin/evms_activate -q &>/dev/null
 	eend 0
 
 	# Same thing as /dev/.devfsd
