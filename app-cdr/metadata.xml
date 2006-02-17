@@ -32,5 +32,9 @@
 		A categoria app-cdr contém software para gravar CDs e DVDs, e para
 		trabalhar com arquivos .iso.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria app-cdr zawiera programy służące do zapisywania danych na
+		płyty CD i DVD oraz służące do manipulowania plikami .iso.
+	</longdescription>
 </catmetadata>
 
