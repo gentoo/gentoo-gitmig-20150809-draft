@@ -23,5 +23,8 @@
 	<longdescription lang="it">
 		La categoria gnustep-base contiene i pacchetti base di GNUstep.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria gnustep-base contém os pacotes de base de GNUstep.
+	</longdescription>
 </catmetadata>
 
