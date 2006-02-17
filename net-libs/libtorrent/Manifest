@@ -1,40 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d0e41d22cfc968cf186923c008452b36 ChangeLog 7978
-RMD160 30da53c801cecfcbe907ff76ae698c777b62aafc ChangeLog 7978
-SHA256 1c4c6cdd16f1ace8aec7945943002427a4ab03a06f1374a904075a7abfdff776 ChangeLog 7978
+MD5 ea0a534281274555f7a8d1be45a86b12 ChangeLog 8087
 MD5 07f4fde34f29b1823ba3ece4ddfcb022 files/digest-libtorrent-0.7.6 68
-RMD160 b7b633dff85aab04152f2d5e6ddca99c34fc2bc2 files/digest-libtorrent-0.7.6 68
-SHA256 7bc33fcdf493598c9fd8288e2780840c0c2aee5f344f421be52dcc23b3e9127a files/digest-libtorrent-0.7.6 68
 MD5 e1d84ef8add415739cddd11e6da7569f files/digest-libtorrent-0.8.3 68
-RMD160 68c833af85d336cabe50300299760cddfa94ec7b files/digest-libtorrent-0.8.3 68
-SHA256 6a361cf96bc68db2bfbdfddf2c920932aec75c5d53c4f77bd628f096a39e9e08 files/digest-libtorrent-0.8.3 68
 MD5 7c75fdff7eaa1d8439716b370019c3ac files/digest-libtorrent-0.8.4 250
-RMD160 96709248b4233e60c792b30ac9ad7169b70e245c files/digest-libtorrent-0.8.4 250
-SHA256 8269ff045b1319dec45422cbef03d93e9bbc906f1e9968dbc3889ea2dad63a3e files/digest-libtorrent-0.8.4 250
 MD5 02920dd42e5478a6e45557201146d5f9 files/digest-libtorrent-0.8.5 250
-RMD160 a8b092470d6b49fefdbda41b8fd2a172b6d6668e files/digest-libtorrent-0.8.5 250
-SHA256 6d7438c1a944ebbeec9cbf9aa5881da20eff37dd2fafafcaa748729ee35f5053 files/digest-libtorrent-0.8.5 250
 MD5 ae059f1aaf57ca3031303e2d9bff3446 libtorrent-0.7.6.ebuild 927
-RMD160 977b1f6a9c8b1f7c970e8df2570138a4c9286e56 libtorrent-0.7.6.ebuild 927
-SHA256 94e6016f1fbdd529285ce1c4a8fdd2d34bacbddba49e79410a2fb888c6e5a7d5 libtorrent-0.7.6.ebuild 927
-MD5 15b8d166366f540b8bc9be9888dc1ca3 libtorrent-0.8.3.ebuild 978
-RMD160 cb79342899bb0d8da63fcdc2b29f7237ad9b88f9 libtorrent-0.8.3.ebuild 978
-SHA256 4937ab31d7c4ed80c0e2e57e630361e8069aed5ab23ef0959fdd15c7e11c6ceb libtorrent-0.8.3.ebuild 978
+MD5 4c1a7e9a6bc02a45762d4515c2ad39c4 libtorrent-0.8.3.ebuild 975
 MD5 ff4bc90cebbdec8998d1e978455b2855 libtorrent-0.8.4.ebuild 982
-RMD160 45c6455a7167e79654f327b0d032151ff2b646d2 libtorrent-0.8.4.ebuild 982
-SHA256 62e42e940a0dd9e71c49408e6633124783d54d910930c24d85b56d82b32bf17d libtorrent-0.8.4.ebuild 982
 MD5 543db7f272615f42f1732859385ebcd7 libtorrent-0.8.5.ebuild 982
-RMD160 ce4f4166bfc7a0ab8740d02052596f7cbfeda4b5 libtorrent-0.8.5.ebuild 982
-SHA256 d6923222b8bc3c053e9eeab0632a165ff25268dce74d15fea6180de506a0cde9 libtorrent-0.8.5.ebuild 982
 MD5 b59f615ff4e1c464f88d1667a66f6b5d metadata.xml 224
-RMD160 aedcea58a9a1d4c2217c92783ef458ebbcbba257 metadata.xml 224
-SHA256 03531f52debc5e006e7461e5e268c6509dd43582e0980dbe7645ea13c8d94355 metadata.xml 224
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD9N66wUpWvClEHQoRAlk+AJ4w4qzEJn0lH9p6VpHuCdI36PQ7dwCdEBWR
-mPPkKi7x21/sl1fTYlCS8SM=
-=mjuX
------END PGP SIGNATURE-----
