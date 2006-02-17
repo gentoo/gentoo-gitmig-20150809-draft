@@ -1,26 +1,54 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fdcbf871fd3c0eff337d85adbd40215b ChangeLog 6183
+MD5 8b668e8aa17bd200174e1e9d35ae381b ChangeLog 6298
+RMD160 5b70b4880a07e67d7cf0ae6507d2bf8e4f146c19 ChangeLog 6298
+SHA256 e98c29ca108ffedbab027f8b1c766512799c3ffaa007d618c3ee25c86e76a844 ChangeLog 6298
 MD5 ad233d63810d8501e80affb6e4b8f40f files/digest-fuse-2.4.1-r1 62
+RMD160 4bb769b8f4aacb6ca62a85a6df6fbe06d5428f20 files/digest-fuse-2.4.1-r1 62
+SHA256 6522e9fdef1c5e72f6fc209a6fd3a3d39bb0b09c7ca50519c93f9beda3ad0f1f files/digest-fuse-2.4.1-r1 62
 MD5 939e1bcac7a96bb8eaef27299f400422 files/digest-fuse-2.4.2 62
+RMD160 3dd3269c9706e45d26efd7e2a99ecd24ff1d7809 files/digest-fuse-2.4.2 62
+SHA256 8319d243c198caae8e8647419679a7395b5914e64d131d175f6f831bfc97d5ef files/digest-fuse-2.4.2 62
 MD5 27f3a473a3318158e742b8c4d53b63f0 files/digest-fuse-2.5.0 62
+RMD160 c347efc500f9e673f7ef9860e01dcdaf64ad1d88 files/digest-fuse-2.5.0 62
+SHA256 c68c034ccbcf1e7f04508442d9909ecc345c366229641e27b5a463cc3fe8a348 files/digest-fuse-2.5.0 62
 MD5 27f3a473a3318158e742b8c4d53b63f0 files/digest-fuse-2.5.0-r1 62
+RMD160 c347efc500f9e673f7ef9860e01dcdaf64ad1d88 files/digest-fuse-2.5.0-r1 62
+SHA256 c68c034ccbcf1e7f04508442d9909ecc345c366229641e27b5a463cc3fe8a348 files/digest-fuse-2.5.0-r1 62
 MD5 c3135bced407a697a5220453362a772e files/digest-fuse-2.5.1 62
+RMD160 892b7330230c322c98a5afa36a84d70062b84681 files/digest-fuse-2.5.1 62
+SHA256 7b8031b1a0eb240075332355453f7a5abfc4aab39beaf0565f87d27b3ed1ce6c files/digest-fuse-2.5.1 62
+MD5 a78482757391a27ede18b0d374dcad07 files/digest-fuse-2.5.2 232
+RMD160 ecb7f33cd8280e904b1f31e1e7bc55802c81482b files/digest-fuse-2.5.2 232
+SHA256 e7a05150af6e51df5a0205eab5879c8564742ea67c42283eb0b63e2ba528e4da files/digest-fuse-2.5.2 232
 MD5 cd6d8213487f9be260e992e612bd23c4 files/fuse-2.6.16.patch 1328
+RMD160 f6d77c1adcbe01701ea54d5b1f35f75b83cfed69 files/fuse-2.6.16.patch 1328
+SHA256 91f43c7b13509837ba6a79f7850aeb4f0d2ba59b741f826cc15bd4cbde0b9d8d files/fuse-2.6.16.patch 1328
 MD5 c1ef6366ba5892111ddef08887328663 files/fuse-fix-lazy-binding.patch 398
+RMD160 e8663cdbf720378839bf3ac786a49a9927b81afe files/fuse-fix-lazy-binding.patch 398
+SHA256 d9733aaece65a0c864edbfebae205cdec096174165e943a569adb216ec73f9e1 files/fuse-fix-lazy-binding.patch 398
 MD5 da9f962a4e5f50406efd2cbda5ce3381 files/fuse-fix-memleak.patch 587
+RMD160 85f2538a35baaf526b232485836c95658f6f299e files/fuse-fix-memleak.patch 587
+SHA256 f74b9f99af15d0aefb7a4f76b76976acc45c60ce5e1f9841766556bddfc48f66 files/fuse-fix-memleak.patch 587
 MD5 341eb75e58827ef58b4c5b445c721362 files/fusermount.patch 1300
+RMD160 a4018b3ddf5958f065501f1eaa7042d8fbbb249b files/fusermount.patch 1300
+SHA256 fdb3ef8db6c5d9fc694d4a23fc6f0780be5f798bac5fac4d6f736ca7ecc2e46b files/fusermount.patch 1300
 MD5 f552be18e87f9c498393e7c02013b5ea fuse-2.4.1-r1.ebuild 1355
+RMD160 dac9d09c1fe59792d344589e2868e92c579fb194 fuse-2.4.1-r1.ebuild 1355
+SHA256 692788a790955376d8a22c2a4a5427f887780514920ee0b8b94c588a521b61a9 fuse-2.4.1-r1.ebuild 1355
 MD5 646e658bda057dcc2d187c30b1022c8c fuse-2.4.2.ebuild 1494
+RMD160 4a094b2e5151ad9b956baae262b62c405e790263 fuse-2.4.2.ebuild 1494
+SHA256 afa581c8e96901d867d6fabc66dbf4888e5443be9f9207e540c768716fc1f23d fuse-2.4.2.ebuild 1494
 MD5 d66a379eba73ba62a97c8fcb42b2cd95 fuse-2.5.0-r1.ebuild 1492
+RMD160 c85a1d7425b98b56590245cf0539d7a18cf7a3c9 fuse-2.5.0-r1.ebuild 1492
+SHA256 00837fe11dfde575111a22659cc7afc564f0318f9cf24c6c023bcc18cf39b1e3 fuse-2.5.0-r1.ebuild 1492
 MD5 e2d07e2f65d33d734598f83f57645897 fuse-2.5.0.ebuild 1447
+RMD160 0ffe537d1c259836aded3b530f6863663e86e453 fuse-2.5.0.ebuild 1447
+SHA256 67c6de05fcbb6e6b7a2d8c3adcf5ed0a48312019fadcc60fc5971a8433ae53d7 fuse-2.5.0.ebuild 1447
 MD5 7672a1474cae69e5fb86055e9b5d1403 fuse-2.5.1.ebuild 1451
+RMD160 87f18b163a2420ad19ed5802764989ff20c58093 fuse-2.5.1.ebuild 1451
+SHA256 4f3441f7509acf7d9749875f0d83843b45572730dcdb56ba26fecf8d2b233d86 fuse-2.5.1.ebuild 1451
+MD5 6f2365d38e8453b37f26c35a80dcc865 fuse-2.5.2.ebuild 1451
+RMD160 62e7d59a88eeb957b02eaab412788bd2e505d0e0 fuse-2.5.2.ebuild 1451
+SHA256 0d6f272cd793fbca8d9c57a622e4943e30d6aa9e80830a17aaa7fd0e96477458 fuse-2.5.2.ebuild 1451
 MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD9IwgKRy60XGEcJIRAkjmAJ0ThmxHJBJc8sPTHeBbUYtOOyzpGQCfSAXt
-PoMkVE9jH1tkgxF0qRejZB4=
-=pTpu
------END PGP SIGNATURE-----
+RMD160 ff3b07b3794623e4733a4dd289cffc9606d6e432 metadata.xml 264
+SHA256 62bbe388ec16f0c4a20cfbb752b05fdefd1349254c494cdea67c096bb553c06b metadata.xml 264
