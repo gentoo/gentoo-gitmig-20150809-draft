@@ -24,5 +24,9 @@
 	<longdescription lang="pt">
 		A categoria app-shells contém shells e suas extensões.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria app-shells zawiera interpretery poleceń (powłoki) oraz ich
+		rozszerzenia.
+	</longdescription>
 </catmetadata>
 
