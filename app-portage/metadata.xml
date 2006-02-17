@@ -31,5 +31,9 @@
 		A categoria app-portage contém programas que funcionam com o portage
 		ou ebuilds.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria app-portage zawiera dodatkowe programy do pracy z systemem
+		Portage oraz ebuildami.
+	</longdescription>
 </catmetadata>
 
