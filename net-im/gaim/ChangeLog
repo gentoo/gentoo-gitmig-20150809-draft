@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.382 2006/02/14 23:02:35 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.383 2006/02/17 12:16:08 gothgirl Exp $
+
+  17 Feb 2006; kathryn <gothgirl@gentoo.org> -gaim-2.0.0_beta1.ebuild,
+  -gaim-2.0.0_beta2.ebuild, gaim-2.0.0_beta2-r1.ebuild:
+  removed beta1 ebuilds and fixed IUSE for beta2
 
 *gaim-2.0.0_beta2-r1 (14 Feb 2006)
 
