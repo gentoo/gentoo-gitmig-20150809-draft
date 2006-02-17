@@ -31,5 +31,9 @@
 		A categoria games-misc contém jogos que não se encaixam em
 		nenhuma das outras categorias games-.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria games-misc zawiera gry, które nie pasowały do pozostałych
+		kategorii.
+	</longdescription>
 </catmetadata>
 
