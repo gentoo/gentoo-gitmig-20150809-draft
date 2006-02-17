@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r4.ebuild,v 1.3 2006/01/05 02:30:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r4.ebuild,v 1.4 2006/02/17 14:32:44 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -31,17 +31,26 @@ RDEPEND="sys-libs/glibc
 		app-emulation/emul-linux-x86-baselibs
 		opengl? (
 			app-emulation/emul-linux-x86-xlibs
-			|| ( >=media-video/nvidia-glx-1.0.6629-r3
-			>=x11-drivers/ati-drivers-8.8.25-r1 ) ) )
+			|| (
+				>=media-video/nvidia-glx-1.0.6629-r3
+				>=x11-drivers/ati-drivers-8.8.25-r1 ) ) )
 	games-fps/quake3-data"
 
 S=${WORKDIR}
+
+GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/quake3
 Ddir=${D}/${dir}
 
 pkg_setup() {
-	check_license Q3AEULA
 	games_pkg_setup
+	if use cdinstall
+	then
+		if [ ! built_with_use games-fps/quake3-data cdinstall ]
+		then
+			die "You must install quake3-data with USE=cdinstall to get the required data."
+		fi
+	fi
 }
 
 src_unpack() {
@@ -82,9 +91,10 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	ewarn "There are two possible security bugs in this package, both causing a	denial"
-	ewarn "of service.  One affects the game when running a server, the other when running"
-	ewarn "as a client.  For more information, see bug #82149."
+	ewarn "There are two possible security bugs in this package, both causing a"
+	ewarn "denial of service. One affects the game when running a server, the"
+	ewarn "other when running as a client. For more information, please see bug"
+	ewarn "#82149."
 	if ! use cdinstall ; then
 		echo
 		einfo "You need to copy pak0.pk3 from your Quake3 CD into ${dir}/baseq3."
