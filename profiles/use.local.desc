@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1739 2006/02/17 02:44:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1740 2006/02/17 03:46:45 labmonkey Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -29,7 +29,9 @@ app-arch/pdv:nomotif - Disable motif frontend.
 app-backup/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
 app-backup/bacula:bacula-clientonly - Disable DB support, and just build a client
 app-backup/bacula:bacula-console - Build console only bits, no gui
-app-backup/bacula:bacula-split - NFC what this does
+app-backup/bacula:bacula-nodir - Disable building of director in 1.38.x and later.
+app-backup/bacula:bacula-nosd - Disable building of storage daemon in 1.38.x and later.
+app-backup/bacula:bacula-split-init - Use separate init scripts for fd/sd/dir
 app-backup/bacula:client-only - Disable DB support, and just build a client
 app-backup/bacula:logrotate - Install support files for logrotate
 app-backup/bacula:logwatch - Install support files for logwatch
