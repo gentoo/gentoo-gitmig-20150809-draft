@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.12 2005/10/31 08:54:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.13 2006/02/17 22:08:27 tupone Exp $
 
 inherit eutils gnuconfig games
 
@@ -13,9 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="nls"
 
-DEPEND="virtual/x11
-	=x11-libs/gtk+-2*
-	=dev-libs/glib-2*"
+DEPEND="=x11-libs/gtk+-2*"
 
 src_unpack() {
 	unpack ${A}
@@ -31,6 +29,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc README NEWS AUTHORS TODO Changelog
+	dodoc README NEWS AUTHORS TODO
 	prepgamesdirs
 }

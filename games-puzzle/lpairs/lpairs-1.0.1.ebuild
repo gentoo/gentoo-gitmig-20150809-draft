@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/lpairs-1.0.1.ebuild,v 1.8 2004/11/22 12:47:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/lpairs-1.0.1.ebuild,v 1.9 2006/02/17 22:13:46 tupone Exp $
 
 inherit games
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE=""
 
-DEPEND="virtual/x11
-	media-libs/libsdl"
+DEPEND="media-libs/libsdl"
 
 src_compile() {
 	egamesconf \

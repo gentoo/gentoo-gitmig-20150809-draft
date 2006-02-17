@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/lpairs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/ChangeLog,v 1.6 2004/11/22 12:47:42 josejx Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/ChangeLog,v 1.7 2006/02/17 22:13:46 tupone Exp $
+
+  17 Feb 2006; <Tupone@gentoo.org> lpairs-1.0.1.ebuild:
+  Modular X dependency fix
 
   22 Nov 2004; Joseph Jezak <josejx@gentoo.org> lpairs-1.0.1.ebuild:
   Marked ppc stable.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/glickomania/glickomania-1.0.ebuild,v 1.7 2004/12/28 15:50:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/glickomania/glickomania-1.0.ebuild,v 1.8 2006/02/17 22:05:37 tupone Exp $
 
 inherit games
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86 amd64 ppc"
 IUSE=""
 
-DEPEND="=x11-libs/gtk+-1.2*
-	virtual/x11"
+DEPEND="=x11-libs/gtk+-1.2*"
 
 src_install() {
 	dogamesbin src/glickomania || die "dogamesbin failed"

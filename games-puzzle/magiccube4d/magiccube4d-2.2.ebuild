@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/magiccube4d/magiccube4d-2.2.ebuild,v 1.6 2004/12/28 16:05:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/magiccube4d/magiccube4d-2.2.ebuild,v 1.7 2006/02/17 22:16:08 tupone Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-DEPEND="virtual/x11"
+DEPEND="|| ( x11-libs/libXaw virtual/x11 )"
 
 S="${WORKDIR}/${PN}-src-${MY_PV}"
 

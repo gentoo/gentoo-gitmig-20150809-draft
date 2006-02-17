@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/hoh-bin-1.01.ebuild,v 1.7 2005/10/31 08:44:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/hoh-bin-1.01.ebuild,v 1.8 2006/02/17 22:11:04 tupone Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="virtual/x11
+DEPEND="|| ( x11-libs/libX11 virtual/x11 )
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 
 S=${WORKDIR}/hoh-install-${PV}
