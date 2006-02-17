@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/diction-1.02.ebuild,v 1.12 2005/01/01 16:08:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/diction-1.02.ebuild,v 1.13 2006/02/17 00:57:06 flameeyes Exp $
 
 DESCRIPTION="Diction and style checkers for english and german texts"
 HOMEPAGE="http://www.fsf.org/software/diction/diction.html"
@@ -12,6 +12,7 @@ KEYWORDS="x86 ~sparc ~mips"
 IUSE=""
 
 DEPEND="sys-devel/gettext"
+RDEPEND="virtual/libintl"
 
 src_compile() {
 	./configure --prefix=/usr ||die
