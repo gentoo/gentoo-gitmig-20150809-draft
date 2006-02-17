@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smooth-themes/smooth-themes-0.5.8-r1.ebuild,v 1.3 2006/02/14 17:56:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smooth-themes/smooth-themes-0.5.8-r1.ebuild,v 1.4 2006/02/17 19:24:38 josejx Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="A clean set of GTK+ themes based on the Smooth engine"
 HOMEPAGE="http://sourceforge.net/projects/smooth-engine/"
 SRC_URI="mirror://sourceforge/smooth-engine/${P}.tar.gz"
 
-KEYWORDS="~ppc sparc ~x86"
+KEYWORDS="ppc sparc ~x86"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
