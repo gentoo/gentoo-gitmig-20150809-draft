@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-OLE
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-OLE/ChangeLog,v 1.23 2006/01/28 16:01:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-OLE/ChangeLog,v 1.24 2006/02/17 22:04:08 agriffis Exp $
+
+  17 Feb 2006; Aron Griffis <agriffis@gentoo.org> PEAR-OLE-0.5-r1.ebuild:
+  Mark 0.5-r1 stable on alpha. #119722
 
   28 Jan 2006; Jeroen Roovers <jer@gentoo.org> PEAR-OLE-0.5-r1.ebuild:
   Marked ~hppa (bug #119722).
