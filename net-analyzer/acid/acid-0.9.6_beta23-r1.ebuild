@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23-r1.ebuild,v 1.1 2006/01/04 20:09:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23-r1.ebuild,v 1.2 2006/02/17 16:34:20 josejx Exp $
 
 inherit webapp versionator eutils depend.php depend.apache
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://acidlab.sourceforge.net"
 SRC_URI="http://acidlab.sourceforge.net/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="apache2"
 
 # Note: jpgraph is an unstable package
