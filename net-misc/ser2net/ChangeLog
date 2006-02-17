@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ser2net
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.10 2006/02/10 17:41:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.11 2006/02/17 19:38:26 hansmi Exp $
+
+  17 Feb 2006; Michael Hanselmann <hansmi@gentoo.org> ser2net-2.2-r1.ebuild:
+  Stable on ppc.
 
   10 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org> ser2net-2.2-r1.ebuild:
   Stable on sparc wrt #122324

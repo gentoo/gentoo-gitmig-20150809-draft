@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 335a06bd6c2c7f57316a351c55ae58dd ChangeLog 1610
+MD5 29b3937990202db2c1ccb6a1b2e8d915 ChangeLog 1703
+RMD160 a794377e2a0e3a70a262b7d624ebff23ed093ab3 ChangeLog 1703
+SHA256 dc59a93e2a110a9b187ab9cafd8f3ba753caed2c8b09c499a706fe49aadfe0cb ChangeLog 1703
 MD5 cfc5b849d5aa10d856011fdf00295c96 files/digest-ser2net-2.1 63
+RMD160 229d9bfe0882bf18da67ce975e0b95ab6fda6ded files/digest-ser2net-2.1 63
+SHA256 c1980ea76a8787480f7dcce11dae5057f284512514a75c078ce2727ea34d2e80 files/digest-ser2net-2.1 63
 MD5 7295e582c629d0c67c477124d53f26fc files/digest-ser2net-2.2 63
+RMD160 21e8d8d9d893bf723e31d51484c42ca9f65744db files/digest-ser2net-2.2 63
+SHA256 3dba730daa0c586e1a32b401e8b25eb1a0a5d77386e9700245d3ce86430118b3 files/digest-ser2net-2.2 63
 MD5 7295e582c629d0c67c477124d53f26fc files/digest-ser2net-2.2-r1 63
+RMD160 21e8d8d9d893bf723e31d51484c42ca9f65744db files/digest-ser2net-2.2-r1 63
+SHA256 3dba730daa0c586e1a32b401e8b25eb1a0a5d77386e9700245d3ce86430118b3 files/digest-ser2net-2.2-r1 63
 MD5 68f7d18bf56b8cff4fcb646e64335671 files/digest-ser2net-2.3 63
+RMD160 015fe2187d2e3b5e98303dee0b73ed06f9a50cb6 files/digest-ser2net-2.3 63
+SHA256 9e49a4b047ccceb2b44b7d89a08a6a09fe80d0283de54266da03c0317294787c files/digest-ser2net-2.3 63
 MD5 f2e8dd3909065a4135fbb65f7b1f2727 files/ser2net-2.2-tcpwrappers-configure.in.patch 571
+RMD160 de694bcacd64ff374ddf66867179f34b7f0a4a5f files/ser2net-2.2-tcpwrappers-configure.in.patch 571
+SHA256 2364467a83e72f335ffa56c512a5064403920da19890d57507acd900b60073b7 files/ser2net-2.2-tcpwrappers-configure.in.patch 571
 MD5 c546ddef0d0bcf060c017bc93b2dc621 metadata.xml 257
+RMD160 7716423decf8296528ca21eaa830fac2816fa991 metadata.xml 257
+SHA256 9b843be0ba934a7342d5c3a52eb98e022e171baab73193f3dc8f3d86fe23b1ef metadata.xml 257
 MD5 d490569555fb3cf62df92011f3f5ea36 ser2net-2.1.ebuild 567
-MD5 9b479ada8c8bd80fe532dde4086c5039 ser2net-2.2-r1.ebuild 1042
+RMD160 01ff4121c78ce9f8f2167525f91cf3b9fb628ced ser2net-2.1.ebuild 567
+SHA256 c9749919f1118e28c7f22b3e87f11b74fba2ffbb92f593b946fca676eb5843e7 ser2net-2.1.ebuild 567
+MD5 b1d2e6fdbaafcf8730d58f0d0b10527b ser2net-2.2-r1.ebuild 1039
+RMD160 724fc240fdf292e9ddf1a6ab47e79c228bb9dfe2 ser2net-2.2-r1.ebuild 1039
+SHA256 b436f8f943b776d85b2e47643dfc791b018ae437ae8fcb14de95b65bd6f92805 ser2net-2.2-r1.ebuild 1039
 MD5 87b612e6d44748bf00a35c1a0c389f73 ser2net-2.2.ebuild 592
+RMD160 1d7f7e022fef2930f39327ca9b73f70ef0890ddc ser2net-2.2.ebuild 592
+SHA256 039825638754b113595661edf31c3a203897ec529dfd89a796d2c015d4406fa8 ser2net-2.2.ebuild 592
 MD5 29ba00c3d4d304a473f84d617ea9e7c0 ser2net-2.3.ebuild 912
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD7NBSKRy60XGEcJIRAis8AJ42Z2ezjTDmpe+8F66LEkRaOLolfgCfcSdo
-iTR2oWzrYMulW6CHyv4RURY=
-=AWcr
------END PGP SIGNATURE-----
+RMD160 1bebca5320d1565db0e6efc1296da5be7afb1888 ser2net-2.3.ebuild 912
+SHA256 dbfcb94017e0abb475218735f01c8ce5f498c62f60fe86a8db82b4ba4ebb7a8d ser2net-2.3.ebuild 912
