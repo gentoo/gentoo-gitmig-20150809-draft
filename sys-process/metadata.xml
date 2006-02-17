@@ -35,5 +35,9 @@
 		informações dos processos. Os daemons de 'cron' estão incluídos
 		aqui.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria sys-process zawiera programy do przeszukiwania listy procesów
+		oraz do manipulowania nimi. Znajdują się tu również demony cron.
+	</longdescription>
 </catmetadata>
 
