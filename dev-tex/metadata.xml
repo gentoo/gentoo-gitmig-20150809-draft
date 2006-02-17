@@ -33,5 +33,9 @@
 		A categoria dev-tex contém bibliotecas e ferramentas úteis para
 		trabalhar com TeX e ambientes baseados em TeX como LaTeX.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria dev-tex zawiera biblioteki i narzędzia przydatne w pracy z
+		TeX-em i środowiskami na nim opartymi, takimi jak np. LaTeX.
+	</longdescription>
 </catmetadata>
 
