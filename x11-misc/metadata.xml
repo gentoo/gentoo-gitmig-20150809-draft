@@ -35,5 +35,9 @@
 		A categoria x11-misc contém aplicações mistas de X11 que não
 		pertencem a outras categorias.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria x11-misc zawiera aplikacje dla X11, które nie pasują do żadnej
+		z pozostałych kategorii.
+	</longdescription>
 </catmetadata>
 
