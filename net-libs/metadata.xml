@@ -2,7 +2,7 @@
 <!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <catmetadata>
 	<longdescription lang="en">
-		The net-libs category contains libraries which are network-related.
+		The net-libs category contains libraries that are network-related.
 	</longdescription>
 	<longdescription lang="de">
 		Die Kategorie net-libs enthält Bibliotheken zur Netzwerkprogrammierung.
@@ -21,6 +21,9 @@
 	</longdescription>
 	<longdescription lang="it">
 		La categoria net-libs contiene librerie per le reti.
+	</longdescription>
+	<longdescription lang="pt">
+		A categoria net-libs contém bibliotecas relacionadas a redes.
 	</longdescription>
 </catmetadata>
 
