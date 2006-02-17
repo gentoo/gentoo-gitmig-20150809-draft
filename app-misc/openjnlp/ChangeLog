@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/openjnlp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/ChangeLog,v 1.9 2006/01/27 21:32:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/ChangeLog,v 1.10 2006/02/17 20:09:34 hansmi Exp $
+
+  17 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
+  openjnlp-0.7.1-r1.ebuild:
+  Stable on ppc.
 
   27 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
   openjnlp-0.7.1-r1.ebuild:
