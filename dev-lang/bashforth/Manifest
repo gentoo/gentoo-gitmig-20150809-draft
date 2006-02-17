@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 089a3de150765b3dd3d472c8a66faa01 ChangeLog 417
+RMD160 f40c659708ffe51ced10cd9165d220da6bdb7dc1 ChangeLog 417
+SHA256 69ccb57203abbc114a5a286b6808b196c3e3049836fa6f2c91ac2af8b7d85c2e ChangeLog 417
+MD5 ad8069ae2ee0108ee7e72c0960e85fb4 bashforth-0.54a.ebuild 550
+RMD160 57d57af89c41ae3109ca6d9ec10da47845d25de8 bashforth-0.54a.ebuild 550
+SHA256 90723f359fe538df1f60694faa69e313c83e6b5800dbf2c5d198f8d542710f3c bashforth-0.54a.ebuild 550
+MD5 32020f525c6fa65f203d59ed698e3342 files/digest-bashforth-0.54a 235
+RMD160 f8a84e53008b8b300065875b73dccfdef9baf7a3 files/digest-bashforth-0.54a 235
+SHA256 6bde02491bb785dd27b9a70b0c3cbea609870d650e3ebc66d422e0edc786d863 files/digest-bashforth-0.54a 235
+MD5 1ba841da13783efc9e8e1670e8937801 metadata.xml 232
+RMD160 9101b9978f3aaddf25ec85183590110e41bc3d0d metadata.xml 232
+SHA256 7cbe2b6f70075aca4c0147ec74989df1f3ea7ac11ce88fad80d812131cd21a9c metadata.xml 232
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD9j4CyiNZaEAZA+ARAspMAJwJmEl4+vt4hi7DmbNOYyFrVXhe0ACeMyrq
+T5hWY0daziWo0YpgTHCWLA0=
+=lmYK
+-----END PGP SIGNATURE-----
