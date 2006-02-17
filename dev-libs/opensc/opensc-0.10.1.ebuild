@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.10.1.ebuild,v 1.3 2006/02/16 16:23:54 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.10.1.ebuild,v 1.4 2006/02/17 13:41:48 vanquirius Exp $
 
 inherit eutils libtool
 
@@ -53,4 +53,9 @@ src_install() {
 
 	dodoc NEWS README
 	dohtml docs/opensc.{html,css}
+}
+
+pkg_postinst() {
+	ewarn "If you are upgrading, please remember to run"
+	ewarn "revdep-rebuild due to ABI breakage."
 }
