@@ -18,3 +18,8 @@ mpi
 mysql
 perl
 sasl
+
+# OSX doesn't have much of a console, so a driver for it won't be that
+# useful, same for framebuffered version
+gpm
+fbcon
