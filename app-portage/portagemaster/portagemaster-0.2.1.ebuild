@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/portagemaster-0.2.1.ebuild,v 1.16 2005/07/20 16:25:57 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/portagemaster-0.2.1.ebuild,v 1.17 2006/02/17 17:08:22 fuzzyray Exp $
 
 inherit java-pkg
 
@@ -17,7 +17,19 @@ DEPEND=">=virtual/jdk-1.4.1
 	dev-java/ant-core
 	jikes? ( >=dev-java/jikes-1.16 )"
 RDEPEND=">=virtual/jre-1.4.1
-		 virtual/x11"
+	( || ( (
+				x11-libs/libICE
+				x11-libs/libSM
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXi
+				x11-libs/libXp
+				x11-libs/libXt
+				x11-libs/libXtst
+			)
+			virtual/x11
+		)
+	)"
 
 S=${WORKDIR}/${PN}
 
