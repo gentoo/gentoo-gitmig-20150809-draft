@@ -1,0 +1,10 @@
+--- configure.in	2006/01/15 00:17:25	1.1
++++ configure.in	2006/01/15 00:17:38
+@@ -53,7 +53,6 @@ AC_SUBST(APP_LIBS)
+ dnl Checks for libraries
+ 
+ AM_PATH_GLIB_2_0(2.0.0)
+-AM_PATH_GTK_2_0(2.0.0)
+ 
+ GTK_MODULES="gtk+-2.0 libxml-2.0 gdk-pixbuf-2.0"
+ PKG_CHECK_MODULES(PANGOVERSION, pango >= 1.1.5, , 

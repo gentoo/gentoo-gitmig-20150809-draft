@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r4.ebuild,v 1.1 2005/11/02 14:07:25 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r4.ebuild,v 1.2 2006/02/17 00:14:27 agriffis Exp $
 
 inherit eutils gnome2 libtool
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/dia/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gnome png python static zlib"
 
 RDEPEND=">=x11-libs/gtk+-2
@@ -39,6 +39,9 @@ DOCS="AUTHORS ChangeLog KNOWN_BUGS NEWS README RELEASE-PROCESS THANKS TODO"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# Patch to fix configure.in issues with gnome support, bug 118591
+	epatch ${FILESDIR}/dia-0.94-pkgconfig.patch
 
 	# Disable python -c 'import gtk' during compile to prevent using
 	# X being involved (#31589)
