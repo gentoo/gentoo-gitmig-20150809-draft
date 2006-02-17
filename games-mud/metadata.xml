@@ -29,5 +29,8 @@
 		A categoria games-mud contém jogos do tipo MUD (Multi User
 		Dungeon).
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria games-mud zawiera gry wieloosobowe typu MUD.
+	</longdescription>
 </catmetadata>
 
