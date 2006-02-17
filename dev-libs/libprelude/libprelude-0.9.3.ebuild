@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.3.ebuild,v 1.3 2006/02/16 03:10:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.3.ebuild,v 1.4 2006/02/17 20:03:13 hansmi Exp $
 
 inherit perl-module flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.prelude-ids.org/download/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~ppc-macos sparc x86"
 IUSE="perl python"
 
 DEPEND=">=net-libs/gnutls-1.0.17
