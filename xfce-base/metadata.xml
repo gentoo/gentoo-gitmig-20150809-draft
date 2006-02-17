@@ -22,5 +22,8 @@
 	<longdescription lang="it">
 		La categoria xfce-base contiene i pacchetti essenziali di XFCE.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria xfce-base contém pacotes de base de XFCE.
+	</longdescription>
 </catmetadata>
 
