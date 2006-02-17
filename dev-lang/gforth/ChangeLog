@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gforth
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.17 2006/02/15 00:12:42 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.18 2006/02/17 17:43:35 mkennedy Exp $
+
+  17 Feb 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  files/gforth.el-gentoo.patch:
+  Fixed Emacs Lisp patch so that gforth is provided instead of forth-mode.
 
 *gforth-0.6.2-r1 (15 Feb 2006)
 

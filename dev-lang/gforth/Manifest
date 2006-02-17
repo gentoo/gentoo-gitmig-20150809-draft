@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3eae43e4eeddb6e2a356a289c56e422f ChangeLog 2871
-RMD160 3ea2c7b78eb1ea23773cf4c0fe963a76b8734992 ChangeLog 2871
-SHA256 95c7c655bae749bdce85ebfeaf888fdae80cdac67c5bf1f8b95c35b670cf8b11 ChangeLog 2871
+MD5 34193c5e05a1c4c8a625cd51ed60f264 ChangeLog 3032
+RMD160 5b3b358660f560f050f4f3970bc43e961490817b ChangeLog 3032
+SHA256 2ffef2beddecea39072e5bbe5278059813e903adcbd14f5270586647009c4a70 ChangeLog 3032
 MD5 8646d2e25fc993074ce9a5859f168e4e files/0.6.2-c-to-forth-to-c.patch 702
 RMD160 585cd5b1e215c0644df28b55de47133b88c75bcd files/0.6.2-c-to-forth-to-c.patch 702
 SHA256 f50fae8f741b72d4d07155b96d11e59ba663b330910faf49774ffe14e85f5c5e files/0.6.2-c-to-forth-to-c.patch 702
@@ -16,9 +16,9 @@ SHA256 8989714db209a89679594f54c708ef3673e6d44df14d7964db36214b476a24d1 files/di
 MD5 a6f1a7a82c3fe99d39283ef7f0200df6 files/digest-gforth-0.6.2-r1 464
 RMD160 65fbb567dbd9b097d2ebb5639b5367229079d099 files/digest-gforth-0.6.2-r1 464
 SHA256 e1d570cb5433dbdcd97ab750f7372f3e276cb1c775e6fdd4d72fb75a66d96d54 files/digest-gforth-0.6.2-r1 464
-MD5 eaf0babab3dec9a6b74e876829e1a68a files/gforth.el-gentoo.patch 1518
-RMD160 6a6f7e210fa3fb13c7d41a731f482356d4b82f8e files/gforth.el-gentoo.patch 1518
-SHA256 67339e3d7387d957121795c36574e96572b57ee7c2a7f41670412d6e09e414ce files/gforth.el-gentoo.patch 1518
+MD5 ab0fa8588ce5dbe0eeb8b39b984f910e files/gforth.el-gentoo.patch 390
+RMD160 4957e9a817bb6bb9e58523285a00b2b3445f65ed files/gforth.el-gentoo.patch 390
+SHA256 920d8b8e07ab8e81f0fe7883ec8ea34507a33a9db337d5e7725e96f804bbb5aa files/gforth.el-gentoo.patch 390
 MD5 b17452d3deaa7d33f7460ce9f67028c9 gforth-0.6.2-r1.ebuild 1640
 RMD160 2e190ecf480fdce63c4c525954eac257e0240901 gforth-0.6.2-r1.ebuild 1640
 SHA256 ee899357d739293ce21fe1abca02f42814f6474a4cf9850b651a6a032bb0288b gforth-0.6.2-r1.ebuild 1640
@@ -31,7 +31,7 @@ SHA256 7cbe2b6f70075aca4c0147ec74989df1f3ea7ac11ce88fad80d812131cd21a9c metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD8nIIyiNZaEAZA+ARAiZJAJ9GH5ZtYdWuuYWOCWtv3pUS/Jr4ewCfZ5li
-ndjAZslWsJnEkGEKoirL3Qw=
-=AYDQ
+iD8DBQFD9gtTyiNZaEAZA+ARAu91AJ9uB3HIqDOHz3WAEMPGIYQ9VIb0DQCcD8Cs
+al91wr5SGon1AR7CrIqsuMI=
+=3GbT
 -----END PGP SIGNATURE-----
