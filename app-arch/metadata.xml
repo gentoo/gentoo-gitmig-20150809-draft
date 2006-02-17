@@ -32,5 +32,9 @@
 		A categoria app-arch contém ferramentas para arquivar, comprimir
 		e descomprimir arquivos ou grupos de arquivos.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria app-arch zawiera narzędzia służące do archiwizowania,
+		kompresji i dekompresji zarówno pojedynczych plików jak i ich grup.
+	</longdescription>
 </catmetadata>
 
