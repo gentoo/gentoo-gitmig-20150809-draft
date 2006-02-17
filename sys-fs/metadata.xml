@@ -20,5 +20,9 @@
 	<longdescription lang="it">
 		La categoria sys-fs contiene gli strumenti e le utilità di supporto per i vari file systems.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria sys-fs contém certos utilitários e ferramentas para
+		sistemas de arquivos.
+	</longdescription>
 </catmetadata>
 
