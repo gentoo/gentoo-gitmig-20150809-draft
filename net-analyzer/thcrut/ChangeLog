@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/thcrut
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/ChangeLog,v 1.9 2005/10/26 04:24:15 soulse Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/ChangeLog,v 1.10 2006/02/17 16:22:38 jokey Exp $
+
+  17 Feb 2006; Markus Ullmann <jokey@gentoo.org> thcrut-1.2.5.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   25 Oct 2005; <soulse@gentoo.org> thcrut-1.2.5.ebuild:
   Bad header fixed

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/tcptraceroute
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.29 2005/12/25 15:05:06 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.30 2006/02/17 16:19:40 jokey Exp $
+
+  17 Feb 2006; Markus Ullmann <jokey@gentoo.org>
+  tcptraceroute-1.4-r3.ebuild, tcptraceroute-1.5_beta5.ebuild,
+  tcptraceroute-1.5_beta6.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   tcptraceroute-1.5_beta6.ebuild:

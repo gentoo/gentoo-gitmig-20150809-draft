@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1.ebuild,v 1.9 2005/01/29 05:12:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1.ebuild,v 1.10 2006/02/17 16:26:25 jokey Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="x86"
 IUSE=""
 
 # -lbpft -lpcap -lcurses -ltermcap -lfl
-DEPEND="virtual/libpcap
+DEPEND="net-libs/libpcap
 	sys-libs/ncurses
 	sys-devel/flex"
 

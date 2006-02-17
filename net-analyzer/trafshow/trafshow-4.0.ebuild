@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-4.0.ebuild,v 1.8 2005/04/09 09:54:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-4.0.ebuild,v 1.9 2006/02/17 16:31:02 jokey Exp $
 
 inherit eutils gnuconfig
 
@@ -15,7 +15,7 @@ SLOT="3"
 LICENSE="as-is"
 KEYWORDS="x86 sparc ~ppc ppc64 ~amd64"
 
-DEPEND="virtual/libpcap
+DEPEND="net-libs/libpcap
 	sys-libs/ncurses
 	slang? ( >=sys-libs/slang-1.4.2 )"
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcptrack
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/ChangeLog,v 1.11 2006/01/09 22:56:37 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/ChangeLog,v 1.12 2006/02/17 16:20:59 jokey Exp $
+
+  17 Feb 2006; Markus Ullmann <jokey@gentoo.org> tcptrack-1.1.5.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   09 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -tcptrack-1.1.2.ebuild:
   Remove old ebuild.

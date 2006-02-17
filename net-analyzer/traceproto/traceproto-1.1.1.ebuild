@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceproto/traceproto-1.1.1.ebuild,v 1.3 2005/08/16 19:29:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceproto/traceproto-1.1.1.ebuild,v 1.4 2006/02/17 16:23:58 jokey Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug ncurses"
 
 RDEPEND=">=net-libs/libnet-1.1.0
-	virtual/libpcap
+	net-libs/libpcap
 	ncurses? ( sys-libs/ncurses )
 	debug? ( dev-libs/dmalloc )"
 

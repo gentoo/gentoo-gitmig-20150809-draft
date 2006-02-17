@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.5_beta5.ebuild,v 1.11 2005/04/14 03:49:33 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.5_beta5.ebuild,v 1.12 2006/02/17 16:19:40 jokey Exp $
 
 inherit flag-o-matic
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64 ppc64"
 IUSE=""
 
-DEPEND="virtual/libpcap
+DEPEND="net-libs/libpcap
 	net-libs/libnet"
 
 src_unpack() {

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 07e36a2162d6d572f71d211fbdf9b6ae ChangeLog 448
-MD5 9d555154ebe09a44f5f3d651380e5640 acid-0.9.6_beta23-r1.ebuild 1391
+MD5 dacf4ab3fe895ef699461f9890fb68d7 ChangeLog 552
+MD5 8a112c755cd804f650f327f76bc3166e acid-0.9.6_beta23-r1.ebuild 1391
 MD5 f92f06c8714b1e8ed33d7d94abbd882f acid-0.9.6_beta23.ebuild 1441
 MD5 26f34d01017d5c8acb2d58fd139cef67 files/digest-acid-0.9.6_beta23 65
 MD5 26f34d01017d5c8acb2d58fd139cef67 files/digest-acid-0.9.6_beta23-r1 65
 MD5 d5e9bd932b7a02f7fbaa05865d864854 metadata.xml 248
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDvC/FmdTrptrqvGERAmM9AKCeoSMc26vj7+DIRj+3zwoQoFVhFwCglBgZ
-yB05RdAyiKbfNhjTQuuhNKw=
-=cWQT
------END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcptrace
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/ChangeLog,v 1.14 2005/04/09 09:50:51 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/ChangeLog,v 1.15 2006/02/17 16:17:22 jokey Exp $
+
+  17 Feb 2006; Markus Ullmann <jokey@gentoo.org> tcptrace-6.6.1.ebuild,
+  tcptrace-6.6.1-r1.ebuild, tcptrace-6.6.7.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> tcptrace-6.6.1-r1.ebuild:
   Stable on ppc64
