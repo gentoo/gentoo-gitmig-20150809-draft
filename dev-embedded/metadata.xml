@@ -32,5 +32,9 @@
 		A categoria dev-embedded contém bibliotecas e utilitários
 		referentes a programação de dispositivos embedded.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria dev-embedded zawiera biblioteki i narzędzia związane z
+		programowaniem dla urządzeń osadzonych.
+	</longdescription>
 </catmetadata>
 
