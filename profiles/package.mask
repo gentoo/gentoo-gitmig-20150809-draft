@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5007 2006/02/17 01:19:51 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5008 2006/02/17 05:23:56 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Doug Goldstein <cardoe@gentoo.org> (16 Feb 2006)
+# Working on the next cairo/glitz release
+>=media-libs/glitz-0.5.3
 
 # Marcelo Goes <vanquirius@gentoo.org> (16 Feb 2006)
 # Lacks needed functionality - someone volunteered to fix it
