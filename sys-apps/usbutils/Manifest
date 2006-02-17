@@ -1,52 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b76c9758b16827bde7a57c719e1e7c2a ChangeLog 5366
-RMD160 cd81935e7a64f35c022be8e7c40568ce276bebae ChangeLog 5366
-SHA256 bee7a2f6cbc1e22b8aa496120845299a4a3674e2627255672a1266dfc7388909 ChangeLog 5366
+MD5 a5d1aade0f036212db037d71f7e3864a ChangeLog 5475
 MD5 02a749d768d2c60df972e04643b4a071 files/0.11/lsusb-endian.patch 1834
-RMD160 77e46e8986e78636af16412b5776e4fad02b749b files/0.11/lsusb-endian.patch 1834
-SHA256 e474ead0a67d74a7a28da62771224df0aef3941ac01ab19052002ae51f816ea3 files/0.11/lsusb-endian.patch 1834
 MD5 79f1705c48b215f002d9f6541cdca376 files/0.11/ppc64-usbutils-kheaderfix.patch 621
-RMD160 1a4d6474d7dc5865084a3759971bf56d1e93b81e files/0.11/ppc64-usbutils-kheaderfix.patch 621
-SHA256 c0217e45806fafbf2855d0126f8fd6607c8ffd528f7ef63355a63dd91db6fe1a files/0.11/ppc64-usbutils-kheaderfix.patch 621
 MD5 f703ade59119743d4225df9fb4623aa8 files/digest-usbutils-0.11-r5 128
-RMD160 5b51752863fa33c9f22a97b37c2d4dc4c3ddad16 files/digest-usbutils-0.11-r5 128
-SHA256 2c684aaf0e374e919905cebe9d9342370b2e501642cf5026000a864cfb143e61 files/digest-usbutils-0.11-r5 128
 MD5 ab0f2b4ad3bb0eaf089d8538ec6586de files/digest-usbutils-0.11-r6 128
-RMD160 9fddce36e3bb5dd365ecfdbde3193acd55598bea files/digest-usbutils-0.11-r6 128
-SHA256 53f3e5ccf707bcce02db861b69472d524cb0d00fe0cde0f473f434a7656b48ed files/digest-usbutils-0.11-r6 128
 MD5 85ab89963a7fd11f8611547fb202cd72 files/digest-usbutils-0.71 65
-RMD160 378211009ccd3e9e6805df5b035117377222c051 files/digest-usbutils-0.71 65
-SHA256 f64b04a3b9c2b7558b97441647b2b9c1af7c02933b657a4ed57c6aa7f35db99d files/digest-usbutils-0.71 65
 MD5 85ab89963a7fd11f8611547fb202cd72 files/digest-usbutils-0.71-r1 65
-RMD160 378211009ccd3e9e6805df5b035117377222c051 files/digest-usbutils-0.71-r1 65
-SHA256 f64b04a3b9c2b7558b97441647b2b9c1af7c02933b657a4ed57c6aa7f35db99d files/digest-usbutils-0.71-r1 65
 MD5 d20a32b2ea8220b81490216ee51cba82 files/usbutils-0.11-fix-usb-ids-man-page-ref.patch 384
-RMD160 e208db9a9aa11494500c31c388ab6e515a76c5af files/usbutils-0.11-fix-usb-ids-man-page-ref.patch 384
-SHA256 c9dc723dca7b924485958988f1a9d81077ac91f55f6aa3fdbc558d45aa947df9 files/usbutils-0.11-fix-usb-ids-man-page-ref.patch 384
 MD5 e092e74597092401bebd1db3c9ce6122 files/usbutils-0.71-new-video-format.patch 2391
-RMD160 683496cfc8a8021406083a73e011ee3e206c718a files/usbutils-0.71-new-video-format.patch 2391
-SHA256 14b39cb2981ec852dc2a0bb17a5b96d4c9854db088e3b077e3f709219b6cf0e8 files/usbutils-0.71-new-video-format.patch 2391
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
-SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 b71d482eb7915edd69fe53b2b92e4959 usbutils-0.11-r5.ebuild 1444
-RMD160 831b9631c67bc1f5e1c839e14cfddadad9421c5c usbutils-0.11-r5.ebuild 1444
-SHA256 8cf000107a80d01ca04dfcfbbd7dbcf50e44c0df78afaf51157b5a9ac2c3d376 usbutils-0.11-r5.ebuild 1444
 MD5 3bf5ce706718e4c6b91aa5399624c849 usbutils-0.11-r6.ebuild 1486
-RMD160 062357b362ae2ba1eecd3b2ca1f22749803d7ec3 usbutils-0.11-r6.ebuild 1486
-SHA256 1a542b52f8cbf139832ba69435f0d3e8f829c4b93f214728b6ae4d2d7366cc8a usbutils-0.11-r6.ebuild 1486
-MD5 f5351bebd71aed9e1e9652bef1585a21 usbutils-0.71-r1.ebuild 1279
-RMD160 c9f17958780150a2998452823e6edb62c4db84ab usbutils-0.71-r1.ebuild 1279
-SHA256 d1c6f0e7c7eceac233cd9c18c4728c928d9c0fdc1f0834979047fc1a4c063d34 usbutils-0.71-r1.ebuild 1279
+MD5 31b22e4b05464976e562589ed2eb1eeb usbutils-0.71-r1.ebuild 1276
 MD5 2f96f4804743b4736dc41cd054df0d12 usbutils-0.71.ebuild 1215
-RMD160 aae74cd893cf314fdec94ccb9a1dcdffc82daf9a usbutils-0.71.ebuild 1215
-SHA256 a25873f4e43dea938d96e74b810d96d21a6c6ac861a2b17f521a14b70918b623 usbutils-0.71.ebuild 1215
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD9N0vwUpWvClEHQoRAssMAJ9pzPuYf9y0A8aaa5Pz272WEB+nZACfUFMy
-usvvtgYh0RlALlExc1YW2ks=
-=ATBZ
------END PGP SIGNATURE-----
