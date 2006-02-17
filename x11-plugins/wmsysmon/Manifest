@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 495c06bf3985effe467b34e630e72443 ChangeLog 4191
-RMD160 a0b5402e38a04b416f7d3a2751fd0557437bc9c0 ChangeLog 4191
-SHA256 a4f3dcc0493ccb79ca7fa65b79e0bc814e2f9804655ff291b7ba529eecbd1cd9 ChangeLog 4191
+MD5 6db449aea565684b811d4f050b8c987e ChangeLog 4284
+RMD160 5c233c040489518baa65c53a7ea232dc6812217f ChangeLog 4284
+SHA256 8c5b4beb3333f7ac7e267b965f4ece080fc0eefba72da396dd92bac525e840ea ChangeLog 4284
 MD5 9ba5653a25ebfe02dfd7baab0b11feef files/digest-wmsysmon-0.7.6-r3 138
 RMD160 83222f9c8021aab1f4e908f444a9481b02a17c0b files/digest-wmsysmon-0.7.6-r3 138
 SHA256 45eb05e6ff2ca2bea82140503feb8ba47d4a3fa791f1cf274725e943d0d60279 files/digest-wmsysmon-0.7.6-r3 138
@@ -19,13 +16,6 @@ SHA256 c2f8a0b30c83dba56f0c36a4ba1cb002621ae58dfc13fae94b9db6eb67fb9f1b metadata
 MD5 548b21eaba46b35292d545a664ca5c09 wmsysmon-0.7.6-r3.ebuild 1152
 RMD160 0d5e2f0023dc17eed198789faa48336a27c88dc3 wmsysmon-0.7.6-r3.ebuild 1152
 SHA256 ffa6126207fbb00b8eba4d2736d78517a5c16398517aad069ad9d88f37f452c4 wmsysmon-0.7.6-r3.ebuild 1152
-MD5 d213c704df016fbfb060205d17bf105d wmsysmon-0.7.7.ebuild 1146
-RMD160 198adffd91adcd97bcd2048fc8b8a8c3fdd6fe4a wmsysmon-0.7.7.ebuild 1146
-SHA256 daced783050fdf960a8b7172bb4c6f35cac04994dd3e40ad8dbf3897b3f978b7 wmsysmon-0.7.7.ebuild 1146
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6oVbJrHF4yAQTrARApXIAKCSNvX8Xqc5hA1548Ohwda4l6RgPgCgkDnN
-Z5Pzu39QKEO1a/PIRM4WK/I=
-=Gy5L
------END PGP SIGNATURE-----
+MD5 97765cd54ba98ccdeab4c6ad1558337d wmsysmon-0.7.7.ebuild 1143
+RMD160 3971b404ff93b8025cb0f7333b4b87525f1a1b46 wmsysmon-0.7.7.ebuild 1143
+SHA256 c5ca989ec623ae6b2591189eb1c5d32e12b08374f40f93321a59c5afb0ba86ff wmsysmon-0.7.7.ebuild 1143
