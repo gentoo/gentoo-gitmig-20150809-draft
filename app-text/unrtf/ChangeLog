@@ -1,6 +1,12 @@
 # ChangeLog for app-text/unrtf
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.20 2005/12/12 08:50:58 robbat2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.21 2006/02/17 01:35:00 robbat2 Exp $
+
+*unrtf-0.19.9 (17 Feb 2006)
+
+  17 Feb 2006; Robin H. Johnson <robbat2@gentoo.org> +unrtf-0.19.9.ebuild:
+  Version bump, bug #123093. Note that security fix in upstream 0.19.5 is
+  contained in 0.19.3-r1 already.
 
   12 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml:
   Add metadata.xml.
