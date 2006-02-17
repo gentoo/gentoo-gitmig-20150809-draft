@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/nget
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/ChangeLog,v 1.7 2006/01/27 15:47:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/ChangeLog,v 1.8 2006/02/17 19:39:22 josejx Exp $
+
+  17 Feb 2006; Joseph Jezak <josejx@gentoo.org> nget-0.27.1.ebuild:
+  Marked ppc stable for bug #119492.
 
   27 Jan 2006; Simon Stelling <blubb@gentoo.org> nget-0.27.1.ebuild:
   stable on amd64
