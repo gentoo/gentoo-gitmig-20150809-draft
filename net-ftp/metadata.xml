@@ -31,5 +31,8 @@
 	<longdescription lang="it">
 		La categoria net-ftp contiene programmi per l'FTP (File Transfer Protocol).
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria net-ftp zawiera pakiety związane z FTP (File Transfer Protocol).
+	</longdescription>
 </catmetadata>
 
