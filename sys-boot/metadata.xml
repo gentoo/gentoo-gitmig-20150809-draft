@@ -28,5 +28,9 @@
 		A categoria sys-boot contém gerenciadores de inicialização e
 		ferramentas relacionadas.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria sys-boot zawiera programy ładujące (bootloadery) i związane z
+		nimi pakiety.
+	</longdescription>
 </catmetadata>
 
