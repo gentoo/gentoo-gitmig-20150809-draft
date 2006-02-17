@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4fdbaa4c90c4debc816f08f6d55b6781 ChangeLog 3498
+MD5 20874a5e56f25cd236c7a63236431583 ChangeLog 3684
+RMD160 92436d7ad9413e24f54be486c42d76bfbf545323 ChangeLog 3684
+SHA256 0db4bb9ae63dddbc87de4dcd17619de50ac15bd60735e9c0c9b256efd3e7f766 ChangeLog 3684
 MD5 e2e5f7d3c6b35572d8e83f49c56e950e files/1.4-libnet-1.0.patch 730
+RMD160 de84607f654b9d9372151091f897fb5732b13ae5 files/1.4-libnet-1.0.patch 730
+SHA256 e4f4c5370f62bce64e8c00abc9ad9fe0f8c9d583bfb618fd1ac9437fd01e2b08 files/1.4-libnet-1.0.patch 730
 MD5 c269183b39d0a5ece16f5f4b41cd8f62 files/digest-tcptraceroute-1.4-r3 68
+RMD160 e74c78e30357fcedcf82d18723b6f554ceac706a files/digest-tcptraceroute-1.4-r3 68
+SHA256 85ff422556bfee9f5aae9f7d75ed98bc553ce148c81bc306494d140db6bb4633 files/digest-tcptraceroute-1.4-r3 68
 MD5 08795adf41e7d24d33a369f072f3c0c3 files/digest-tcptraceroute-1.5_beta5 74
+RMD160 dcee475d9e26544d95a3f3b4f334a3d2eed82abe files/digest-tcptraceroute-1.5_beta5 74
+SHA256 5a74ee473fed0d8ba679bb07c849be6540beb25d971a4a6c66d8ce4a93fcd86d files/digest-tcptraceroute-1.5_beta5 74
 MD5 291e5266f1fd92f4a0de340bb25d85bb files/digest-tcptraceroute-1.5_beta6 74
+RMD160 05de5dba9dd33673019e155aecfaa3a860c338c7 files/digest-tcptraceroute-1.5_beta6 74
+SHA256 4d86d4c326539bd211ed3e2af4190b5c481fc37531682f39ff048e43a14f1e69 files/digest-tcptraceroute-1.5_beta6 74
 MD5 8446426408ca6cc65c8fec8fca05e178 files/ppc64-1.5.patch 1956
+RMD160 c95651068bbe843c514094d43a2cd74a3a7a1072 files/ppc64-1.5.patch 1956
+SHA256 f43aa774ff3b110bad0f1834110d0d2dc385052e58ed3e5546c3437c2f352c86 files/ppc64-1.5.patch 1956
 MD5 2868a09f7c4911e6274c13519349cd51 files/tcptraceroute-1.4-gentoo.patch 1116
+RMD160 64d2ffb3678838a21c0eda635fb34817df3835f1 files/tcptraceroute-1.4-gentoo.patch 1116
+SHA256 3ec266a6cc6e626fb63d2b794f37f111c7a871d2ccc36faf8d8f121a06064433 files/tcptraceroute-1.4-gentoo.patch 1116
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
-MD5 b34e582c48c20f697720f0a18ff00feb tcptraceroute-1.4-r3.ebuild 1010
-MD5 58b046e7e2f751e3030e4e9af64aa034 tcptraceroute-1.5_beta5.ebuild 1012
-MD5 ea8807bacb6901889d56ef6c27766bb9 tcptraceroute-1.5_beta6.ebuild 932
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrrUvAiZjviIA2XgRAil7AKCwgdJHdA/71Tuf2GuLDjg2U15+aACeMczh
-b6J2mditgQEm40lsRJ5ND8Y=
-=rAU+
------END PGP SIGNATURE-----
+RMD160 2738573ec519cbef4b293bc132f7dd9d02291137 metadata.xml 160
+SHA256 39e232fc7ec88ca0b077cb3950cb39d15cd990842b88d5bfe14f02f34d72f37b metadata.xml 160
+MD5 ffbbcc52388233cd1c5980311f41d6de tcptraceroute-1.4-r3.ebuild 1005
+RMD160 e8706b9da6ebcb06f84ae7027a2eba0dda5d7903 tcptraceroute-1.4-r3.ebuild 1005
+SHA256 0b973a3c8b4b9777d39e22cc5a2303b50a1c18783953d05b669ceda9e978a545 tcptraceroute-1.4-r3.ebuild 1005
+MD5 7cdaa22fd64a22a2658c0df49592a9be tcptraceroute-1.5_beta5.ebuild 1013
+RMD160 3f909603cee37d1de146e4f62db2d9012bfb4d25 tcptraceroute-1.5_beta5.ebuild 1013
+SHA256 3ba225192278ea10fb263ea91664163f87110ab0d01bd4583099ecd433b924a0 tcptraceroute-1.5_beta5.ebuild 1013
+MD5 1e4efa69b4e088dca82e745cd28dea8d tcptraceroute-1.5_beta6.ebuild 929
+RMD160 95ad974b6944f6cab985af24159e939fc046b223 tcptraceroute-1.5_beta6.ebuild 929
+SHA256 89695c56cd6bd5280f46baa9bf38c357b190dcbf5d73cad3320eb5c06a5b28ed tcptraceroute-1.5_beta6.ebuild 929

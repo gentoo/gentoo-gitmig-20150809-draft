@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e3d9692987ca45c06a6499b9d9e0e639 ChangeLog 1863
+MD5 0d01d2fa919dc2c1b616ec403ff27946 ChangeLog 2028
+RMD160 9adb3651ea84c2239834a15bf2ac0a12ed0a0dbd ChangeLog 2028
+SHA256 bee8581b9c83d01a360ad31942926c28154736d8b9b645ea94136445d5696262 ChangeLog 2028
 MD5 53131797321a63c406299ae4bf29455c files/digest-tcptrace-6.6.1 67
+RMD160 5e47605f23733850dad9f9f317a86978fce00622 files/digest-tcptrace-6.6.1 67
+SHA256 b8ce9b030cb9add81becf4afeead0cfb5d0419adfbc701ca03d510fad6a38dea files/digest-tcptrace-6.6.1 67
 MD5 53131797321a63c406299ae4bf29455c files/digest-tcptrace-6.6.1-r1 67
+RMD160 5e47605f23733850dad9f9f317a86978fce00622 files/digest-tcptrace-6.6.1-r1 67
+SHA256 b8ce9b030cb9add81becf4afeead0cfb5d0419adfbc701ca03d510fad6a38dea files/digest-tcptrace-6.6.1-r1 67
 MD5 07f92c57d824515e2d27a58b98991db1 files/digest-tcptrace-6.6.7 67
+RMD160 71d4f95097139bd9b58922f27cad7fb5ffeadf27 files/digest-tcptrace-6.6.7 67
+SHA256 f8749dd9f4b64eb4ebde17d5a785c49f97e7fba050b9a3490db6234afb25b161 files/digest-tcptrace-6.6.7 67
 MD5 1ca5a522a1c690bd58b9667fb3f3ebac metadata.xml 236
-MD5 beeca9676db9473d0178387c770a945e tcptrace-6.6.1-r1.ebuild 996
-MD5 8bd2252b42bcbfde68bac2d6d9ec1ff8 tcptrace-6.6.1.ebuild 733
-MD5 433c6d99601aa3f00cd93d17a1e37daa tcptrace-6.6.7.ebuild 988
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0BoUI1lqEGTUzyQRAhGpAJ4z9IZyddzzJJB5XTeFpy5gUSKgBwCg2C7F
-nTBhSKj67DxQsgTMEaz8FIg=
-=vAXp
------END PGP SIGNATURE-----
+RMD160 e0843414bf3459b68f1759d345c0aa531ba52644 metadata.xml 236
+SHA256 2919c75956af5b2e1e074eed85aed2281c9ac34a4e6ec8f6a826a14cbaa53021 metadata.xml 236
+MD5 8bb612a413c642ca8004f8e0e7e02c28 tcptrace-6.6.1-r1.ebuild 994
+RMD160 a80e8d820248b6f36dcf08eaafb29c8d12c30f79 tcptrace-6.6.1-r1.ebuild 994
+SHA256 c1f1295d8a0bee837026193b7dd7c56d5891139a86b1d5b3e0d7d64e52360da6 tcptrace-6.6.1-r1.ebuild 994
+MD5 1ce78ac018e9a709e7d87b19a02baa3e tcptrace-6.6.1.ebuild 729
+RMD160 99df6757f461ae6ef346798fdab0202c3bc69f35 tcptrace-6.6.1.ebuild 729
+SHA256 3a6c4ed39ee748e047148f339e8ad380648faefef7ac6b3dbd40f77a4fc8885d tcptrace-6.6.1.ebuild 729
+MD5 c437742a5c85594b779b983eff274c1a tcptrace-6.6.7.ebuild 986
+RMD160 a0367415b23d92126ee8e13aa4f4725657a60767 tcptrace-6.6.7.ebuild 986
+SHA256 a25ce63aa36a7e7ade97893874c7f145a52289780395e5f68a7ae9642a9bb0d5 tcptrace-6.6.7.ebuild 986
