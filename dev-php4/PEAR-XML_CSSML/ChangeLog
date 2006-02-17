@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/PEAR-XML_CSSML
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/PEAR-XML_CSSML/ChangeLog,v 1.9 2006/02/16 19:07:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/PEAR-XML_CSSML/ChangeLog,v 1.10 2006/02/17 22:11:04 agriffis Exp $
+
+  17 Feb 2006; Aron Griffis <agriffis@gentoo.org>
+  PEAR-XML_CSSML-1.1.1.ebuild:
+  Mark 1.1.1 stable on alpha/ia64. #119722
 
   27 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
   PEAR-XML_CSSML-1.1.1.ebuild:
