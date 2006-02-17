@@ -25,5 +25,9 @@
 	<longdescription lang="it">
 		La categoria sys-block contiene pacchetti per la gestione dei dispositivi a blocchi.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria sys-block contém pacotes que funcionam com
+		dispositivos de bloco.
+	</longdescription>
 </catmetadata>
 
