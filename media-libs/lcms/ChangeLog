@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.56 2006/02/15 08:08:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.57 2006/02/17 13:24:35 lu_zero Exp $
+
+  17 Feb 2006; Luca Barbato <lu_zero@gentoo.org> lcms-1.14-r1.ebuild:
+  Stable on ppc, bug #118349
 
   15 Feb 2006; Markus Rothe <corsair@gentoo.org> lcms-1.14-r1.ebuild:
   Stable on ppc64; bug #118349
