@@ -1,0 +1,6 @@
+# this is a list of USE flagsv that should not be used
+# on PPC64 with 64-bit userland
+
+# mask mozilla/firefox (bug #108020) - corsair
+mozilla
+firefox
