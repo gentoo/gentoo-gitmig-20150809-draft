@@ -24,5 +24,9 @@
 	<longdescription lang="it">
 		La categoria sys-boot contiene bootloaders e strumenti correlati al boot del sistema.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria sys-boot contém gerenciadores de inicialização e
+		ferramentas relacionadas.
+	</longdescription>
 </catmetadata>
 
