@@ -20,7 +20,10 @@
 		Nhóm gnome-base chứa các gói GNOME cốt lõi.
 	</longdescription>
 	<longdescription lang="it">
-		La catagoria gnome-base contiene i pacchetti base di GNOME.
+		La categoria gnome-base contiene i pacchetti base di GNOME.
+	</longdescription>
+	<longdescription lang="pt">
+		A categoria gnome-base contém os pacotes principais de GNOME.
 	</longdescription>
 </catmetadata>
 
