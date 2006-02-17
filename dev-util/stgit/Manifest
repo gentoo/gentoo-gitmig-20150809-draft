@@ -1,4 +1,4 @@
-MD5 dc4aa69465a9c8e207fe963894998c7c ChangeLog 1100
+MD5 4b1ff729c9f6c55ac423bc71213c796f ChangeLog 1199
 MD5 a79b729c774072069f339bb8adb7e111 files/digest-stgit-0.8.1 62
 MD5 b32bfee3c12fac430c39b4247b8ff31f metadata.xml 259
-MD5 6732a481b754ffc8332fc15be740e9ab stgit-0.8.1.ebuild 719
+MD5 6121886fb789f0ce689e3fb893ea0512 stgit-0.8.1.ebuild 723
