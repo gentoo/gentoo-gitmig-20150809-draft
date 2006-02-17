@@ -13,5 +13,9 @@
 		A categoria dev-tinyos contém bibliotecas e utilitários do
 		sistema operacional TinyOS para redes de sensor wireless embedded.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria dev-tinyos zawiera biblioteki i narzędzia systemu operacyjnego
+		TinyOS dla osadzonych bezprzewodowych sieci czujników.
+	</longdescription>
 </catmetadata>
 
