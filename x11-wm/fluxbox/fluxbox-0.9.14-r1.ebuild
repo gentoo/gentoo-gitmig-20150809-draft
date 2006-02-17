@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.14-r1.ebuild,v 1.13 2006/02/07 20:14:34 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.14-r1.ebuild,v 1.14 2006/02/17 02:46:47 ciaranm Exp $
 
 inherit eutils
 
-IUSE="nls xinerama truetype kde gnome imlib"
+IUSE="nls xinerama truetype kde gnome imlib disableslit"
 
 DESCRIPTION="Fluxbox is an X11 window manager featuring tabs and an iconbar"
 SRC_URI="mirror://sourceforge/fluxbox/${P}.tar.bz2"
@@ -83,6 +83,7 @@ src_compile() {
 		$(use_enable kde) \
 		$(use_enable gnome) \
 		$(use_enable imlib imlib2) \
+		$(use_enable !disableslit slit ) \
 		--sysconfdir=/etc/X11/${PN} \
 		--with-style=/usr/share/fluxbox/styles/Emerge \
 		${myconf} || die "configure failed"
