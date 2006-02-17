@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2713e1c61688e7f94015dc2a3046103 ChangeLog 3007
+MD5 16fdb9e3588a6c1d0a298d57c60a363f ChangeLog 3271
+RMD160 1a965d7b4e5ad8a4eabcb3d7bc12cbcbd85b4070 ChangeLog 3271
+SHA256 c9616ac3525dedb5920cc4c91b86e907838773aea34f56af5f28222726c63c71 ChangeLog 3271
 MD5 8b1e682b8a6b40153f85b5ead488439c PEAR-PhpDocumentor-1.2.3.ebuild 425
-MD5 9f4cc81920079773efacb962d42a7f59 PEAR-PhpDocumentor-1.3.0_rc3-r1.ebuild 451
-MD5 437838d87c820af7b8599e0c1405bc5c PEAR-PhpDocumentor-1.3.0_rc3.ebuild 434
-MD5 b742f1ca91ed95723ef192912bf91832 PEAR-PhpDocumentor-1.3.0_rc5.ebuild 449
+RMD160 79b3413491093cdcbca33796d1e190c8f355d6ab PEAR-PhpDocumentor-1.2.3.ebuild 425
+SHA256 d76c30ef1d874a3c2cf696222da0dc2749812d6a0d1edb3cb692b5d5468dbaf0 PEAR-PhpDocumentor-1.2.3.ebuild 425
+MD5 e1ad59bbf65ca3b1fcfc494339aec418 PEAR-PhpDocumentor-1.3.0_rc3-r1.ebuild 465
+RMD160 1c521346592837946adeb84d3e250c6de14385c0 PEAR-PhpDocumentor-1.3.0_rc3-r1.ebuild 465
+SHA256 4ac5e250512cc055e9258f98bb07268cd23660726e9819d4d76b3d5d053a374a PEAR-PhpDocumentor-1.3.0_rc3-r1.ebuild 465
+MD5 ebac9abc2afc8eb81024aeff507aaf6e PEAR-PhpDocumentor-1.3.0_rc3.ebuild 450
+RMD160 6a316f73b781ca2f3ec9b998be845d777efa21a9 PEAR-PhpDocumentor-1.3.0_rc3.ebuild 450
+SHA256 961dd1f0c4dc8a738b2959e7f40755dc1956383057c4af7df76d782b89b4ad68 PEAR-PhpDocumentor-1.3.0_rc3.ebuild 450
+MD5 ea48bde56998dbe5dfc6bb02ca349a44 PEAR-PhpDocumentor-1.3.0_rc5.ebuild 456
+RMD160 5fd8da11e7f3bfbedd10e986ff94a1bb2c183bda PEAR-PhpDocumentor-1.3.0_rc5.ebuild 456
+SHA256 e5158bf97cdcd9ee2a3a8b17bd8b9e3b8295ba549cd25322e3e9183bea3ae434 PEAR-PhpDocumentor-1.3.0_rc5.ebuild 456
 MD5 7536fefe11615d250f572cc8e9ba2834 files/digest-PEAR-PhpDocumentor-1.2.3 69
+RMD160 cbb90cc48a6e09c628d524aa185e53dec4b0f1ee files/digest-PEAR-PhpDocumentor-1.2.3 69
+SHA256 0a25bca8f3e529dc359284efe3b6b30936fef556b071e1d1cea4cfda967649b3 files/digest-PEAR-PhpDocumentor-1.2.3 69
 MD5 9bb1bf8f50fd8264985669f08a332d5b files/digest-PEAR-PhpDocumentor-1.3.0_rc3 72
+RMD160 cb6973e70949d4b8598fa883b1ecfef5295cca25 files/digest-PEAR-PhpDocumentor-1.3.0_rc3 72
+SHA256 c2027e2d69503f69b932c8a4276e419d7bc36c15326e0d7ed65a44b31724a1b8 files/digest-PEAR-PhpDocumentor-1.3.0_rc3 72
 MD5 9bb1bf8f50fd8264985669f08a332d5b files/digest-PEAR-PhpDocumentor-1.3.0_rc3-r1 72
+RMD160 cb6973e70949d4b8598fa883b1ecfef5295cca25 files/digest-PEAR-PhpDocumentor-1.3.0_rc3-r1 72
+SHA256 c2027e2d69503f69b932c8a4276e419d7bc36c15326e0d7ed65a44b31724a1b8 files/digest-PEAR-PhpDocumentor-1.3.0_rc3-r1 72
 MD5 d50b9cc13a5670eb094ffbdce3aee5ea files/digest-PEAR-PhpDocumentor-1.3.0_rc5 72
+RMD160 f75eddff33926b53e14c581287c34e6a858e8701 files/digest-PEAR-PhpDocumentor-1.3.0_rc5 72
+SHA256 51a2493441a859127229e01812d16b2fb10f62321f32bdf0197a4c23e1623b21 files/digest-PEAR-PhpDocumentor-1.3.0_rc5 72
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1QkRugEuf3OQ0akRAvmyAJ9u+xa31HdXucar/CYdlZB9o3tCLwCeMV50
-rDgIVK+KCNxTe5HZ8RiamF8=
-=WBP3
------END PGP SIGNATURE-----
+RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
+SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156
