@@ -1,22 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 76085c15ef2b951c3b565d8ac58fd41c ChangeLog 14318
+MD5 49f51a5e40480e5fc14d1d14b619055e ChangeLog 14465
+RMD160 13d111a1ce33137ab50fa6bec0e085dcf15931c8 ChangeLog 14465
+SHA256 ea8103f25e0e093de8827c2218fd7cdad5a520862ec02dd1e9cd1f21f5658ffe ChangeLog 14465
 MD5 8e29dd236e9977e83aee442106844d7e files/digest-lftp-3.0.13 65
+RMD160 58cade0900629ad34adc33241357d5c06f0792c9 files/digest-lftp-3.0.13 65
+SHA256 d5d7a8fc0a79362e81734129e2dde51f843b6001d80b0d85c5080854e36d9adf files/digest-lftp-3.0.13 65
 MD5 16ab74adb63da682a17a18f1d7885b91 files/digest-lftp-3.3.4-r1 63
+RMD160 1ada8b870ef1d4bb08eb996371d38f43722fb0f7 files/digest-lftp-3.3.4-r1 63
+SHA256 845a6e6cfe501e968907709795ce6554589590b503690ee98ee1145768091d13 files/digest-lftp-3.3.4-r1 63
 MD5 0875626252a85b8c7d94dd225754542b files/digest-lftp-3.4.0 63
+RMD160 0f058547accecafdf73b6c5387efab7a779a5797 files/digest-lftp-3.4.0 63
+SHA256 a55b85cfd5b0d3f5858aa6145edc4403d929b592ecce28e264e0245753a1e928 files/digest-lftp-3.4.0 63
 MD5 0875626252a85b8c7d94dd225754542b files/digest-lftp-3.4.0-r1 63
+RMD160 0f058547accecafdf73b6c5387efab7a779a5797 files/digest-lftp-3.4.0-r1 63
+SHA256 a55b85cfd5b0d3f5858aa6145edc4403d929b592ecce28e264e0245753a1e928 files/digest-lftp-3.4.0-r1 63
 MD5 298e04149e627c6721f2723c16306fa9 files/lftp-3.3.4-blocking-ssl-transfer.patch 683
+RMD160 044bedbbe76f1b667c3f9b79528a9ff0bc6c3dfd files/lftp-3.3.4-blocking-ssl-transfer.patch 683
+SHA256 c96a852d73faae44d8af309b560f5ff5e90e57425c3509360a2faeffdd871b3b files/lftp-3.3.4-blocking-ssl-transfer.patch 683
 MD5 23f0721bdfd44bdbb7afb954d2cc7895 files/lftp-3.4.0-remote-completion-false.patch 860
+RMD160 a4113e99abe0049ed1261e6565f102799c5b3297 files/lftp-3.4.0-remote-completion-false.patch 860
+SHA256 a5c4e9296ef59452e77db5bf8d80e8981ccca61fe4abaffcd60e0a8f274fafd3 files/lftp-3.4.0-remote-completion-false.patch 860
 MD5 661d46ff6f06fe8b4ea40b6705377221 lftp-3.0.13.ebuild 1820
-MD5 80fe5afdc5fdb8eb57e8f32106421fc3 lftp-3.3.4-r1.ebuild 1892
+RMD160 80e88f29eef7e7483d51122e92f03680874cc49a lftp-3.0.13.ebuild 1820
+SHA256 f945cd813b55b1afa477b0a9ad1259173f95b1573b0758f3860e61a8c8327d40 lftp-3.0.13.ebuild 1820
+MD5 4fae22e667e24e4ce6ca8fe0f507083e lftp-3.3.4-r1.ebuild 1904
+RMD160 2c4132538101e6814e46636c1e61a6fdbff2827c lftp-3.3.4-r1.ebuild 1904
+SHA256 a43b4f33e7a1ec33922b7bbb30951fe8bc9bfaa365494cf852e93cc798189726 lftp-3.3.4-r1.ebuild 1904
 MD5 2aa520597b9605d58e0e358faf2b5b06 lftp-3.4.0-r1.ebuild 1907
+RMD160 fedb4dcf6b39fa657c709091d95101790089e733 lftp-3.4.0-r1.ebuild 1907
+SHA256 2d020a0a736798119f490f9b7b0e825fca1d73fcf57d293cb16c17177f6db428 lftp-3.4.0-r1.ebuild 1907
 MD5 3062c15b4187f69cf79fa780bcaf7b0a lftp-3.4.0.ebuild 1826
+RMD160 c1dd743e07c2578b5bdf2b99a0ccbd4b3a99b152 lftp-3.4.0.ebuild 1826
+SHA256 2e34ad253287542ae184c55d8ad964e189a1e56c95c84d3b9df5003733832390 lftp-3.4.0.ebuild 1826
 MD5 bd30469259dd912781df916084edcacd metadata.xml 430
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDxXiwmdTrptrqvGERAqADAJ9hk+Hnw+E848p2f6Wcxk3u+OnJ+wCbBe00
-MRbGvlIlsPyUekm8S9auJT4=
-=eRpg
------END PGP SIGNATURE-----
+RMD160 e522bf2928ed5c97a1e41a3443c6c26ba64847cd metadata.xml 430
+SHA256 bd840a8fc0f6882e2fc2fc80aa4b3ba5a7a1b22a296d998c368ed5628baf3b82 metadata.xml 430
