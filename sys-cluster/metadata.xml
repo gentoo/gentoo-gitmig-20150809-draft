@@ -22,5 +22,8 @@
 	<longdescription lang="pt">
 		A categoria sys-cluster contém programas relacionados a cluster.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria sys-cluster zawiera oprogramowanie dla klastrów.
+	</longdescription>
 </catmetadata>
 
