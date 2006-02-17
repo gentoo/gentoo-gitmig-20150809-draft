@@ -28,5 +28,8 @@
 		A categoria net-firewall contém programas de firewall para
 		redes.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria net-firewall zawiera ściany ogniowe (firewalle).
+	</longdescription>
 </catmetadata>
 
