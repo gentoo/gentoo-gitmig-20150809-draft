@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.522 2006/02/17 04:51:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.523 2006/02/17 20:37:24 corsair Exp $
+
+  17 Feb 2006; Markus Rothe <corsair@gentoo.org> xorg-x11-7.0-r1.ebuild:
+  Added ~ppc64
 
   17 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; -xorg-x11-7.0.ebuild:
   Everyone on modular should use the newer ebuild.

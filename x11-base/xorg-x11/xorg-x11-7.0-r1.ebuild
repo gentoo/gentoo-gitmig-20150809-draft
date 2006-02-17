@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.11 2006/02/07 03:42:12 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.12 2006/02/17 20:37:24 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://xorg.freedesktop.org"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sh ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE_INPUT_DEVICES="
 	input_devices_acecad
 	input_devices_aiptek
@@ -220,6 +220,9 @@ RDEPEND="${RDEPEND}
 					x11-misc/linuxwacom
 				)
 				ppc? ( x11-drivers/synaptics
+					x11-misc/linuxwacom
+				)
+				ppc64? ( x11-drivers/synaptics
 					x11-misc/linuxwacom
 				)
 			)
