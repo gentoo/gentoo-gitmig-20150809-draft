@@ -29,5 +29,9 @@
 		La categoria sec-policy contiene le politiche di sicurezza per i sistemi di controllo
 		di accesso come SELinux.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria sec-policy contém políticas de segurança para
+		sistemas de controle de acesso como SELinux.
+	</longdescription>
 </catmetadata>
 
