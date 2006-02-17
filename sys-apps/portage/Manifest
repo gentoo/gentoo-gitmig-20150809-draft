@@ -2,26 +2,60 @@
 Hash: SHA1
 
 MD5 87be237affd512847a406ef71c6c7347 ChangeLog 4800
+RMD160 00a0a5e9e9804a6b7c31ba04a584cbeaccb66910 ChangeLog 4800
+SHA256 04d3fa7f11d011345500557b30a6f7dc1d0629fd385a39d66c8d2b98d76d634f ChangeLog 4800
 MD5 d5d5b818347fd87b290ecb0b17516b34 files/05portage.envd 34
+RMD160 014194a1786a0983a8ba91c3924b798f353c330d files/05portage.envd 34
+SHA256 dbe8db19d03b39ad2b7f9f6dfcd24c615a14886b3fe6d5ce4dd88bac27c0e225 files/05portage.envd 34
 MD5 bb9cb80f927bcc2b9e0f512d8a200e18 files/2.0.51.22-fixes.patch 10579
+RMD160 aecbf663449b7b6c5fc8f4f343c30c1de7515fb3 files/2.0.51.22-fixes.patch 10579
+SHA256 a6ae22f6513e9c5160204d9ba2ca8bab00091a88089139ff64bee68aaf63a95c files/2.0.51.22-fixes.patch 10579
 MD5 e3d8f54d06dce6fa8c4b9a9ff660f96e files/2.1_pre4-r1.patch 1581
+RMD160 6bb0f83e5c562b71ce63b2ab51af89144f28cce4 files/2.1_pre4-r1.patch 1581
+SHA256 057f3599ccda5f07091b3e9da51575fe56f3e9307e51224c68b9e63887ff99da files/2.1_pre4-r1.patch 1581
 MD5 a754ca9e2eea9f8484bf5f93d339043a files/README.RESCUE 1911
+RMD160 7a4eb3a3dd71444d5e67f55d6d81b5fb4e8803f7 files/README.RESCUE 1911
+SHA256 80c6f2910eec073805f5f421b200a34842ddd3333502e645d9f2a0a66282d399 files/README.RESCUE 1911
 MD5 159e3519c10187285ab4b0a536b2a1d3 files/digest-portage-2.0.51.22-r3 70
+RMD160 83622ce2dacdcd61f98cf30e2074f887dd704bf5 files/digest-portage-2.0.51.22-r3 70
+SHA256 b5dc4e877796440a39d3db5cd425e3ba3255184aff90fa69b3f484df433cd5ec files/digest-portage-2.0.51.22-r3 70
 MD5 ca24230fc57489944e69c7dd6aaa88b3 files/digest-portage-2.0.53 67
+RMD160 31981560e6fc52427f65c13e80068f2ac1b7a97a files/digest-portage-2.0.53 67
+SHA256 e5661b26e9c043f3794557ad15362848435ed610d187500185274c5a744c601d files/digest-portage-2.0.53 67
 MD5 9e5bd07f71a62b11c8d1f5c128a5c220 files/digest-portage-2.0.54 247
+RMD160 a2154fa14f7806c5aeee80b2533632aa6e985cb9 files/digest-portage-2.0.54 247
+SHA256 d12b5844039163fd2cb532560d0e82ef7c4b860ea3ef02e0616b34264be13299 files/digest-portage-2.0.54 247
 MD5 2e597ebca5c4c3f101022a5a35d091c7 files/digest-portage-2.1_pre3-r1 253
+RMD160 c0cf87ab1669aea8b35951f9ded0a477377f0265 files/digest-portage-2.1_pre3-r1 253
+SHA256 31fbf92704c8c3836a781144c1fe6c1a5d7a81e14fa79973821df688baf3f63d files/digest-portage-2.1_pre3-r1 253
 MD5 ab666914bfcfa91049d1df6dee3980b1 files/digest-portage-2.1_pre4-r1 253
+RMD160 441595004e217e45c80c5bb793709b2414bcf875 files/digest-portage-2.1_pre4-r1 253
+SHA256 c5fe2a7d208a3e73056160d113ebe433bd4f039b1d0edf0261afe657a47bdb57 files/digest-portage-2.1_pre4-r1 253
 MD5 9e669b11a86a57aa8d2a452531085bb6 files/xterm-titles.patch 1115
+RMD160 60cea5a3cfd37b6a3a15ced00a778defaca09212 files/xterm-titles.patch 1115
+SHA256 0e23efd78cff2d7702a4e3ddcf6b53cd7de417f03234397321281066ea8c026c files/xterm-titles.patch 1115
 MD5 e57748276505fab96a2ab4e64de45366 metadata.xml 220
+RMD160 ec986e8b7f4016018c27b127114f671a8a9304a8 metadata.xml 220
+SHA256 52eb00c9449f0740fbdd83232f30c5384ccda4ad35862fbb53deb91becd9b4ce metadata.xml 220
 MD5 4df85686b65f5591383e16bf3d6845ba portage-2.0.51.22-r3.ebuild 5796
+RMD160 3bdf43216d1d70e8547bac9637a394dbcd9a7bd2 portage-2.0.51.22-r3.ebuild 5796
+SHA256 f634d807fcc92500d9acc3dd5d79aadd2f565dbf1ee64a0f75a3543e2a372e25 portage-2.0.51.22-r3.ebuild 5796
 MD5 74f65b9f31d3d8baef97314065d2d720 portage-2.0.53.ebuild 3696
+RMD160 4eeb5fabedcb6ab4f51c076218fbab279e31ec65 portage-2.0.53.ebuild 3696
+SHA256 f167640e6dfcaaf626a9dfd6614c1b712f895410eaa77ea23f524956167aa4eb portage-2.0.53.ebuild 3696
 MD5 6dc32e5736b32e9d194914dac7c23fc9 portage-2.0.54.ebuild 3701
+RMD160 19284b2f5b11a59449b90119f05aac81d5fcd701 portage-2.0.54.ebuild 3701
+SHA256 f2534f08cd241a26f8e4918440c6c64c077c03bc553d852ce1e1e6f18c7476c4 portage-2.0.54.ebuild 3701
 MD5 908c5af92ff8ea543ed011aefd0832ea portage-2.1_pre3-r1.ebuild 4715
-MD5 0b5150218654ded744a13aecf7982692 portage-2.1_pre4-r1.ebuild 4734
+RMD160 e73644193a07d9957562ea6442b4e7759d8c35a8 portage-2.1_pre3-r1.ebuild 4715
+SHA256 6f7f1500f7a6ab4a7d651a7dbe44695995fdd2a37e4c6826d5eb9de5749b458a portage-2.1_pre3-r1.ebuild 4715
+MD5 156418acea4b688132aa58236b85b065 portage-2.1_pre4-r1.ebuild 4734
+RMD160 4af37c32e2eff9d15a7ec3c4db28b55f4fd4ddc1 portage-2.1_pre4-r1.ebuild 4734
+SHA256 eec24ea13ee7ad39ad41e2a98488c4a7ff0c71a146112fbf806e9d24ee77ae23 portage-2.1_pre4-r1.ebuild 4734
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6AYKJrHF4yAQTrARAgpBAJ9lwoe0ftG0ZyweeDfg1zT3+gmJygCgzMZn
-vJo05zbKyeaHuhyF8hn6ysc=
-=8VQP
+iD8DBQFD9YyxvdBxRoA3VU0RAixSAJ4l2LYFa6NS71tguenynbHBdiggpwCeMAZD
+JrxmyrUmjaw4i8absx/Szgw=
+=LApr
 -----END PGP SIGNATURE-----
