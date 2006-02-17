@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2.1.ebuild,v 1.7 2006/02/16 06:21:23 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2.1.ebuild,v 1.8 2006/02/17 01:08:01 vanquirius Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -22,7 +22,6 @@ COMMON_DEPEND="
 	ldap? ( net-nds/openldap )
 	bzip2? ( app-arch/bzip2 )
 	zlib? ( sys-libs/zlib )
-	nls? ( sys-devel/gettext )
 	curl? ( net-misc/curl )
 	virtual/libc
 	virtual/mta
@@ -34,10 +33,12 @@ RDEPEND="!static? (
 		${COMMON_DEPEND}
 		X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
 	)
-	selinux? ( sec-policy/selinux-gnupg )"
+	selinux? ( sec-policy/selinux-gnupg )
+	nls? ( virtual/libintl )"
 
 DEPEND="${COMMON_DEPEND}
-	dev-lang/perl"
+	dev-lang/perl
+	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
 	# fix bug #113474 - no compiled kernel needed now

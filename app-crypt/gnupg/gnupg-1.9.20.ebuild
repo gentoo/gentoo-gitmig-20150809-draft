@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.20.ebuild,v 1.2 2006/01/18 23:04:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.20.ebuild,v 1.3 2006/02/17 01:08:01 vanquirius Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,8 +13,7 @@ SLOT="1.9"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="X caps ldap nls smartcard selinux"
 
-DEPEND="
-	nls? ( sys-devel/gettext )
+COMMON_DEPEND="
 	dev-lang/perl
 	sys-libs/zlib
 	virtual/libc
@@ -27,10 +26,14 @@ DEPEND="
 	ldap? ( net-nds/openldap )
 	caps? ( sys-libs/libcap )"
 
-RDEPEND="${DEPEND}
+DEPEND="${COMMON_DEPEND}
+	nls? ( sys-devel/gettext )"
+
+RDEPEND="${COMMON_DEPEND}
 	X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
 	virtual/mta
-	selinux? ( sec-policy/selinux-gnupg )"
+	selinux? ( sec-policy/selinux-gnupg )
+	nls? ( virtual/libintl )"
 
 RESTRICT="test"
 # self tests can't work since it depends on gpg-agent
