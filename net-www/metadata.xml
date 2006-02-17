@@ -32,5 +32,9 @@
 		A categoria net-www contém vários clientes de WWW que ainda não
 		foram movidos para categorias www-.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria net-www zawiera przeglądarki WWW, których jeszcze nie
+		przeniesiono do kategorii www-.
+	</longdescription>
 </catmetadata>
 
