@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.16-r1.ebuild,v 1.1 2006/02/12 01:58:57 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.16-r1.ebuild,v 1.2 2006/02/17 03:08:11 pebenito Exp $
 
 inherit python
 
@@ -10,8 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-#KEYWORDS="alpha amd64 mips ppc sparc x86"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~mips ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/python
