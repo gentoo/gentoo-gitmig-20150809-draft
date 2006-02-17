@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Text_Wiki
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.32 2006/01/28 16:17:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.33 2006/02/17 22:09:16 agriffis Exp $
+
+  17 Feb 2006; Aron Griffis <agriffis@gentoo.org>
+  PEAR-Text_Wiki-1.0.3.ebuild:
+  Mark 1.0.3 stable on alpha/ia64. #119722
 
   28 Jan 2006; Jeroen Roovers <jer@gentoo.org> PEAR-Text_Wiki-1.0.3.ebuild:
   Marked ~hppa (bug #119722).
