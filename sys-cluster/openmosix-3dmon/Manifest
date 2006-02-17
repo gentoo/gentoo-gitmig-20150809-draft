@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d8d909b028e8408b2d88f6cd212c000a openmosix-3dmon-0.2.1.ebuild 1095
-MD5 9d89153737ed7ed560ecc4bf4c31296a ChangeLog 663
-MD5 c43fa6073244d71313f9aeb54f341ca8 metadata.xml 316
-MD5 e7e474db70b36a023069787bfbd82999 files/openmosix-3dmon-0.2.1-trivial.patch.bz2 1162
+MD5 783246d2d65f52891de10833d3f640f6 ChangeLog 871
+RMD160 95a66d49483f3abdbe9fd51fe5e1391af3de5341 ChangeLog 871
+SHA256 e834392febdb092ecd2584b20c93ecb1cc32a9fe90e2ae419601f07e27bea72a ChangeLog 871
 MD5 12b76f693a04290ceb320175b28a90f5 files/digest-openmosix-3dmon-0.2.1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBw2uAI1lqEGTUzyQRAv9gAJ41XgDbbOCuZEEMiMTEGCWJ1qMXZgCfVbC9
-t+EJ6m0Rw7uowLiiIhmOSfs=
-=CTHJ
------END PGP SIGNATURE-----
+RMD160 fc0e485fd9361fe5b15dce990c14967fce7292fd files/digest-openmosix-3dmon-0.2.1 62
+SHA256 751da59717d1e4d994e03a3d8178198e9de0cb1d5113af7b5c00b390ee9fa4c8 files/digest-openmosix-3dmon-0.2.1 62
+MD5 e53dc2098a2c9d660fde185769222163 files/openmosix-3dmon-0.2.1-trivial.patch 3588
+RMD160 ed412052e3d78d304fd8d212cd2b10aff6501908 files/openmosix-3dmon-0.2.1-trivial.patch 3588
+SHA256 72254bfd9aa34fe7832f401f4223d48b209ee172242fa25b65d24565fab9e634 files/openmosix-3dmon-0.2.1-trivial.patch 3588
+MD5 c43fa6073244d71313f9aeb54f341ca8 metadata.xml 316
+RMD160 d78bbae4f2927ca974cbf7dae6b8e0de18b71afa metadata.xml 316
+SHA256 c770ba083c1594688984a2bc8e2b91ee1bde20e5bf17ed87d9c3ec326a110564 metadata.xml 316
+MD5 a8b91c7f831b1006de126f0e8e3344a8 openmosix-3dmon-0.2.1.ebuild 1078
+RMD160 1d0989f4a462c42916d2f2d5cc5b1bcc9e82c9ba openmosix-3dmon-0.2.1.ebuild 1078
+SHA256 025884740ff50e629307c4dd9466ca75dd72c700ff68d8b2926322075cb39802 openmosix-3dmon-0.2.1.ebuild 1078

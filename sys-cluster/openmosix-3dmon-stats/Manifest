@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3c093a141398dd7bc7d3c1d4bd08aa1 openmosix-3dmon-stats-0.2.1.ebuild 1404
-MD5 8cecd11111ee733b7f3dab439bba8003 ChangeLog 698
-MD5 c43fa6073244d71313f9aeb54f341ca8 metadata.xml 316
-MD5 7b1cd03ebcccecbea9ca432e8f2d72f0 files/openmosix-3dmon-stats-0.2.1-makefile+init-script.patch.bz2 760
+MD5 747414c6296789b0119a0a532bf3f216 ChangeLog 950
+RMD160 1e4b3a166beeec7c9afb8e97a295ee8a6e288b95 ChangeLog 950
+SHA256 df6d4b024527530a51839defb6a3464795a7bd69b2a8284a9fc847029941c4bd ChangeLog 950
 MD5 06b0ebf9ade54beb837ed9bad0595a32 files/digest-openmosix-3dmon-stats-0.2.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBw2sfI1lqEGTUzyQRAvsRAJ9XMFcgvll2zjS/u6Y8c5WiYvFzVACePUbK
-gavMhtrn6Gt0gOFrkDO67Hk=
-=2RRx
------END PGP SIGNATURE-----
+RMD160 06a5ee2cd3b31f90138c67ba51df3d13097961ce files/digest-openmosix-3dmon-stats-0.2.1 64
+SHA256 37f70be2c540e2217dff6ca1a6d8c33787bb6cad2e6d6616fe8c4a0f8d6862ba files/digest-openmosix-3dmon-stats-0.2.1 64
+MD5 7b654e830bef778c59df531108659387 files/openmosix-3dmon-stats-0.2.1-makefile+init-script.patch 1400
+RMD160 39040ab659f2bad6b00fade456bcde43ebbea01b files/openmosix-3dmon-stats-0.2.1-makefile+init-script.patch 1400
+SHA256 ee4833669f71c1bdfa7966d79ce223253656704f65752b01ad67d4e3fae3bcbf files/openmosix-3dmon-stats-0.2.1-makefile+init-script.patch 1400
+MD5 c43fa6073244d71313f9aeb54f341ca8 metadata.xml 316
+RMD160 d78bbae4f2927ca974cbf7dae6b8e0de18b71afa metadata.xml 316
+SHA256 c770ba083c1594688984a2bc8e2b91ee1bde20e5bf17ed87d9c3ec326a110564 metadata.xml 316
+MD5 efa752ee09ab355ff617fa770550abac openmosix-3dmon-stats-0.2.1.ebuild 1397
+RMD160 17f956665d33a3f2972dc978fc76702f6f6f20ed openmosix-3dmon-stats-0.2.1.ebuild 1397
+SHA256 1276e58f724fea9380193055e39eaeec8d2822d24e207c6b86fd3158a1b2abcd openmosix-3dmon-stats-0.2.1.ebuild 1397
