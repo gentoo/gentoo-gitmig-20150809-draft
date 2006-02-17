@@ -11,5 +11,8 @@
 		Die Kategorie x11-proto enthält die Headerdateien für das
 		X11-Protokoll.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria x11-proto contém os cabeçalhos de protocolo de X11.
+	</longdescription>
 </catmetadata>
 
