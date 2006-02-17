@@ -57,3 +57,5 @@ dev-python/pysqlite
 
 # wants readline (and I don't want to !ppc-macos? it)
 net-p2p/mutella
+sci-calculators/wcalc
+sci-mathematics/calc
