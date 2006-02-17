@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.110 2006/02/16 20:13:08 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.111 2006/02/17 14:17:28 gustavoz Exp $
+
+  17 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  opengl-update-2.2.4.ebuild:
+  Stable on sparc wrt #123039
 
   16 Feb 2006; Luis Medinas <metalgod@gentoo.org>
   opengl-update-2.2.4.ebuild:
