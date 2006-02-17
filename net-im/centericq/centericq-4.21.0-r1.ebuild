@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.21.0-r1.ebuild,v 1.5 2005/11/27 19:59:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.21.0-r1.ebuild,v 1.6 2006/02/17 16:38:52 blubb Exp $
 
 inherit eutils
 
@@ -30,8 +30,8 @@ src_unpack() {
 	use amd64 && epatch ${FILESDIR}/${PN}-amd64.patch
 
 	# fix bug #100519
-	epatch ${FILESDIR}/${P}-icq-short-read.diff.bz2
-	epatch ${FILESDIR}/${P}-memory-handling.diff.bz2
+	epatch ${FILESDIR}/${P}-icq-short-read.diff
+	epatch ${FILESDIR}/${P}-memory-handling.diff
 }
 
 src_compile() {

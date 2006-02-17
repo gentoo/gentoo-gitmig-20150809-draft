@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.20.0-r3.ebuild,v 1.7 2005/09/09 17:42:16 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.20.0-r3.ebuild,v 1.8 2006/02/17 16:38:52 blubb Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	# security fix, see CAN-2005-1914 -- from CenterICQ CVS, 20050718
-	epatch ${FILESDIR}/${P}.CAN-2005-1914.patch.bz2
+	epatch ${FILESDIR}/${P}.CAN-2005-1914.patch
 
 	use amd64 && epatch ${FILESDIR}/${PN}-amd64.patch
 }

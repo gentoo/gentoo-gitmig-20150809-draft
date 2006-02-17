@@ -1,28 +1,54 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f212891551f1b9e06b9fd2f4071e2b1 ChangeLog 12462
-MD5 f87bde9c0093587ef76f595a99652913 centericq-4.20.0-r2.ebuild 2492
-MD5 665a58f3929149c9064cd31a3c554601 centericq-4.20.0-r3.ebuild 2433
-MD5 a04fbc1b1bb9c97db86c35826da4c92b centericq-4.21.0-r1.ebuild 2750
-MD5 4380762e504905bad5e0888b23f1cdc2 centericq-4.21.0-r2.ebuild 2795
+MD5 0c03bad7071cd7ed3b223567c553cda2 ChangeLog 13038
+RMD160 e843e1cc58d3b2425e9de72a95ce687022597870 ChangeLog 13038
+SHA256 a0aa8d65cba533565b653a112e7868399b11ef1b3d7278ed10ecb36ce87be037 ChangeLog 13038
+MD5 0e15b7a5f790dbb8c6610e7754dc8218 centericq-4.20.0-r2.ebuild 2485
+RMD160 e5c60eb47efc266397bf012d4f08d23a8bb5d677 centericq-4.20.0-r2.ebuild 2485
+SHA256 36a66805a1da402c862cc4c8c481b141bf952f98ed648688c9956d61b4a5a57b centericq-4.20.0-r2.ebuild 2485
+MD5 c3c2d6c4a788c60876d69f6ccde28909 centericq-4.20.0-r3.ebuild 2426
+RMD160 5aaaea6d7fc7c8d7a2ad005b7befff6cdb0fa332 centericq-4.20.0-r3.ebuild 2426
+SHA256 8863cce47ca410883cd4c56814cb22faf9869d925d8269fb062cdb39adf3ea5d centericq-4.20.0-r3.ebuild 2426
+MD5 bd0522d8fc72cde395dba91c408e47ea centericq-4.21.0-r1.ebuild 2741
+RMD160 6733899594d1857fd12843130d7d646d99d43e5b centericq-4.21.0-r1.ebuild 2741
+SHA256 77b4bde7ef9a1f30debf0c99161a44840ee308685ce3655c8790a146c37c293a centericq-4.21.0-r1.ebuild 2741
+MD5 fc520ba7a80cf01133241f5a84fb7c73 centericq-4.21.0-r2.ebuild 2783
+RMD160 cea51d0ad96bbf868bdeb0b2131192f74350c571 centericq-4.21.0-r2.ebuild 2783
+SHA256 162e31ac3b9a10a7539a95d8f4e2001e52723f788a1d08faf640307186f2dcc6 centericq-4.21.0-r2.ebuild 2783
 MD5 eb76c53cadcfd847315cba2c1e880442 centericq-4.21.0.ebuild 2627
+RMD160 178732f92588c1acfa3c042e81cc55f95e776acc centericq-4.21.0.ebuild 2627
+SHA256 3f6a7780865cbc3126a49f5cdd2361209c25dda77064e6e380eda03f66d09980 centericq-4.21.0.ebuild 2627
 MD5 27714944a72058a8f8c3e46444311651 files/centericq-4.20.0-libgadu.patch 4145
-MD5 73abf7a5deb27baf431c12003caeb02d files/centericq-4.20.0.CAN-2005-1914.patch.bz2 576
-MD5 6c7b9cadd9a8db003e584e04cedbffb2 files/centericq-4.21.0-icq-short-read.diff.bz2 333
-MD5 af2c808b485a0d11dc1ec39479d03f9b files/centericq-4.21.0-ktools.diff.bz2 300
-MD5 0047b1881feff16b6c86bf59782e8826 files/centericq-4.21.0-memory-handling.diff.bz2 399
+RMD160 8de36ab64aa15c06e064ff8af640727f4ee40292 files/centericq-4.20.0-libgadu.patch 4145
+SHA256 f22224177f2f7613b3a6e74690900041ab77dfc7110c5cb99afb8afdffb0170a files/centericq-4.20.0-libgadu.patch 4145
+MD5 342343679a0188c49bdbbde10791cda0 files/centericq-4.20.0.CAN-2005-1914.patch 971
+RMD160 97ba96b1c9f3570cd61a092c15f90bb52be2cc82 files/centericq-4.20.0.CAN-2005-1914.patch 971
+SHA256 6d952f3a92addce8eabdc33d38ef8bad9e643e65394571a5c10d84f4550a9823 files/centericq-4.20.0.CAN-2005-1914.patch 971
+MD5 30d1cc077b8d5330e45cb1051c0df8a3 files/centericq-4.21.0-icq-short-read.diff 459
+RMD160 a45875406445eb6cfa797ba484b1fae99118264d files/centericq-4.21.0-icq-short-read.diff 459
+SHA256 e47d5cbffebb5575136d223ec30e3237449c9805ccfdf1a52bde7a7e54ad1f41 files/centericq-4.21.0-icq-short-read.diff 459
+MD5 acab6602a58439dd5688812e6fcf6cec files/centericq-4.21.0-ktools.diff 522
+RMD160 c745d3f630195c4ca03c6878bf864deee9e2030a files/centericq-4.21.0-ktools.diff 522
+SHA256 75bd0133bf7c2ac00211a16b0707d64f3f208ddd4d4e6c631ad3f29b78fe251b files/centericq-4.21.0-ktools.diff 522
+MD5 d1bd933bc9df19a29bc4c12db36fedbc files/centericq-4.21.0-memory-handling.diff 730
+RMD160 8fd3702d398a3615de0a46b7ecfd366170e4880d files/centericq-4.21.0-memory-handling.diff 730
+SHA256 6fcd30911fee7cc346ec8944e5e8846291a204ba7cf1a836d82805e7d7be0443 files/centericq-4.21.0-memory-handling.diff 730
 MD5 0f60514eff0a237cf8fbdd13fd88293e files/centericq-amd64.patch 6291
+RMD160 fe948ba7c308945bf58c59209a3679fe7c402385 files/centericq-amd64.patch 6291
+SHA256 69443a8b6840e9ac44730ffb1feaff31659355e4116ea6574015138f528e99e4 files/centericq-amd64.patch 6291
 MD5 cb21aa5d990cbba3ea7fde0c48731fe2 files/digest-centericq-4.20.0-r2 70
+RMD160 ecf95813b4a3ca90ffd9e1c32ce14db1f69c4891 files/digest-centericq-4.20.0-r2 70
+SHA256 62545487949b3e479980d8ea7a2d8642e4d516aaa973042e61a0b8d8bed275bb files/digest-centericq-4.20.0-r2 70
 MD5 cb21aa5d990cbba3ea7fde0c48731fe2 files/digest-centericq-4.20.0-r3 70
+RMD160 ecf95813b4a3ca90ffd9e1c32ce14db1f69c4891 files/digest-centericq-4.20.0-r3 70
+SHA256 62545487949b3e479980d8ea7a2d8642e4d516aaa973042e61a0b8d8bed275bb files/digest-centericq-4.20.0-r3 70
 MD5 da3f03f51a55055f887cd8f39f4a3126 files/digest-centericq-4.21.0 70
+RMD160 22906d10f81b0392d34740290b7fd572957ac5ef files/digest-centericq-4.21.0 70
+SHA256 c0f3ebd6f0d0d54a7134b26179358239f6d6cd201035abf4b80d4514412c620b files/digest-centericq-4.21.0 70
 MD5 da3f03f51a55055f887cd8f39f4a3126 files/digest-centericq-4.21.0-r1 70
+RMD160 22906d10f81b0392d34740290b7fd572957ac5ef files/digest-centericq-4.21.0-r1 70
+SHA256 c0f3ebd6f0d0d54a7134b26179358239f6d6cd201035abf4b80d4514412c620b files/digest-centericq-4.21.0-r1 70
 MD5 da3f03f51a55055f887cd8f39f4a3126 files/digest-centericq-4.21.0-r2 70
+RMD160 22906d10f81b0392d34740290b7fd572957ac5ef files/digest-centericq-4.21.0-r2 70
+SHA256 c0f3ebd6f0d0d54a7134b26179358239f6d6cd201035abf4b80d4514412c620b files/digest-centericq-4.21.0-r2 70
 MD5 4588dc7b14345d6b88f07edc9d82c682 metadata.xml 555
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwG4w8zY1VwezZiERAjYuAJ9f7NYg+qztrqTWrVmehJxZLlmo5QCfYjvz
-A+xhJHvF0FsIaLADbB989mw=
-=nGxL
------END PGP SIGNATURE-----
+RMD160 43c240af3c370991986fe4feb2650bdd5ca7430d metadata.xml 555
+SHA256 114162fa46c42af9e3d27545cabc8ea93f7bb40cd6f5dca8de5369f8d2a08548 metadata.xml 555
