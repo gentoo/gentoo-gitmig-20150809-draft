@@ -29,5 +29,10 @@
 		La categoria sys-power contiene programmi per la gestione del risparmio energetico,
 		incluso il software per la variazione della frequenza della CPU.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria sys-power contém programas que lidam com
+		gerenciamento de energia, incluindo ferramentas de variação de
+		freqüência de microprocessadores.
+	</longdescription>
 </catmetadata>
 
