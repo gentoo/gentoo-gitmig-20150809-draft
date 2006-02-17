@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/infobus-bin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus-bin/ChangeLog,v 1.5 2005/04/22 08:31:52 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus-bin/ChangeLog,v 1.6 2006/02/17 02:55:21 nichoj Exp $
+
+  17 Feb 2006; Joshua Nichols <nichoj@gentoo.org> infobus-bin-1.2.ebuild:
+  Fixed build errors, but making src_compile empty. This is a binary package, so
+  it doesn't need to be compiling from source.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> infobus-bin-1.2.ebuild:
   stable on amd64
