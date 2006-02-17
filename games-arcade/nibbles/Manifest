@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 efe5b4e425b9855b07a03f12ac2f16c3 ChangeLog 993
+MD5 9a0b42b34b5bfcc558e5212969461883 ChangeLog 1088
 MD5 66d148469f2356021a1a1a7cf32b4c64 files/digest-nibbles-0.0.4 65
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 d2aedc15512b4b22c2c0658e53cc3930 nibbles-0.0.4.ebuild 1245
+MD5 e73d26c4ebcefda08ed48689c7f9855d nibbles-0.0.4.ebuild 1244
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDx+jXKRy60XGEcJIRArARAJ4p8vPvefcVTMIKI5c2cCzOEhKpWQCaAyKO
-M4kWylMRPPPLr1MNSipoEkI=
-=/Q/e
+iD8DBQFD9dwrKRy60XGEcJIRAoSkAJ40YJnRSR9nrRsLEgARfzsn8R0hAACeO9nU
+nqPOsBfL6PcXpKT+tKCpujA=
+=mu1q
 -----END PGP SIGNATURE-----
