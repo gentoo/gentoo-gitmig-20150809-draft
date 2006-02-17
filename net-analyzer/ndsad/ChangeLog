@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ndsad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ChangeLog,v 1.2 2006/01/15 18:31:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ChangeLog,v 1.3 2006/02/17 18:14:31 pva Exp $
+
+  17 Feb 2006; Peter Volkov <pva@gentoo.org> metadata.xml,
+  ndsad-1.33.ebuild:
+  Changed DESCRIPTION as upstream suggested. Added russian translation for
+  longdescription in metadata.xml.
 
   15 Jan 2006; Peter Volkov <pva@gentoo.org> files/ndsad.conf.d,
   files/ndsad.init:
