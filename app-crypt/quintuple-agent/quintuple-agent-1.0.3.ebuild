@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.11 2005/01/03 22:54:49 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.12 2006/02/17 01:37:52 vanquirius Exp $
 
 DESCRIPTION="Quintuple Agent stores your (GnuPG) secrets in a secure manner."
 HOMEPAGE="http://www.vibe.at/tools/q-agent"
@@ -11,9 +11,14 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE="nls"
 
-DEPEND="app-crypt/gnupg
+COMMON_DEPEND="app-crypt/gnupg
 	>=dev-libs/glib-1.2.0
-	>=x11-libs/gtk+-1.2.0
+	>=x11-libs/gtk+-1.2.0"
+
+RDEPEND="${COMMON_DEPEND}
+	nls? ( virtual/libintl )"
+
+DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
