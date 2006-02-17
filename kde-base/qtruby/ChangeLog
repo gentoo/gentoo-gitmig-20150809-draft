@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.29 2006/01/23 18:46:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.30 2006/02/17 16:09:55 josejx Exp $
+
+  17 Feb 2006; Joseph Jezak <josejx@gentoo.org> qtruby-3.5.1.ebuild:
+  Marked ~ppc.
 
   23 Jan 2006; Dan Armak <danarmak@gentoo.org> qtruby-3.5.1.ebuild:
   Removed patch applied upstream in 3.5.1.
