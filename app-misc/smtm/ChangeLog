@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/smtm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/ChangeLog,v 1.12 2006/01/27 21:33:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/ChangeLog,v 1.13 2006/02/17 20:25:51 hansmi Exp $
+
+  17 Feb 2006; Michael Hanselmann <hansmi@gentoo.org> smtm-1.6.6.ebuild:
+  Stable on ppc.
 
   27 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> smtm-1.6.6.ebuild:
   Added to ~ppc.
