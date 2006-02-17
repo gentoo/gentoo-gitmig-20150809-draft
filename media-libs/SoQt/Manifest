@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a750822dfd61f38b87d1778b76b0c1d5 ChangeLog 2047
 MD5 6fa9b8fa87b9ea2dfe6ab4c6237e4b9b SoQt-1.0.2.ebuild 620
 MD5 aff8771717833f32490d3ee043ded6ab SoQt-1.3.0.ebuild 849
 MD5 ec5bfbd339d40e28eb98f18c25e09b6e files/digest-SoQt-1.0.2 62
 MD5 30df4ab93872f0ed8a9ddce96d9fd5b2 files/digest-SoQt-1.3.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD9dL2KRy60XGEcJIRAr5yAKCfYoSnu9WgrLWBSFCtRZy+wQfO+QCeMWpC
+C8cMnIQ7cpSH1Mr149L5nC4=
+=I0aj
+-----END PGP SIGNATURE-----

@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b46a5aa6e719737479a81165c5cd49a1 ChangeLog 1623
 MD5 893e518833bc115820298b3eb5acfc16 SoGtk-20010601-r1.ebuild 1166
 MD5 2db8d6178358c1714bb870ae8cc65dc6 files/SoGtk-20010601-string.patch 1607
 MD5 1a04198c0ca288dd8f7829503ebf5b67 files/digest-SoGtk-20010601-r1 66
 MD5 035a2156b3aec707f70a2c518efdce93 metadata.xml 211
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD9dK7KRy60XGEcJIRAhcxAJ9WviUrN4NboFX6vnq4lvMi+4tsqgCfeM0+
+nsimAxmpEY21vj6gDhu4IZU=
+=uf0c
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6ab027a2157ae267bc40576c30000b61 ChangeLog 2126
 MD5 de161e5bb608d7ea08efedf4b0c809b1 coin-2.1.0.ebuild 977
 MD5 53d81b88f774633ef611d9c8d3f38ad6 coin-2.4.3.ebuild 991
@@ -6,3 +9,10 @@ MD5 5e7f01ecc700fa1aa866fdff2814f063 files/digest-coin-2.1.0 63
 MD5 d1ec3af72017439cd5c57b1882731127 files/digest-coin-2.4.3 63
 MD5 a19b5cfed4142479adae26c54c00c85b files/digest-coin-2.4.4 63
 MD5 4eda2fda81ea6a89d8f1f4a2dcd12a85 metadata.xml 233
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD9dNIKRy60XGEcJIRAgDNAJ9/nACyCZJvQ4W5ppnt+wrr7FvGgQCgoUpB
+ZRlcG2/88pWUJqVwQWpYYi0=
+=PLmf
+-----END PGP SIGNATURE-----
