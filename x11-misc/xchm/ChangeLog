@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xchm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.34 2006/02/16 11:18:45 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.35 2006/02/17 19:45:27 hansmi Exp $
+
+  17 Feb 2006; Michael Hanselmann <hansmi@gentoo.org> xchm-1.2.ebuild:
+  Stable on ppc.
 
   16 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org> xchm-1.2.ebuild:
   Fixed bug #122834, unpack error.
