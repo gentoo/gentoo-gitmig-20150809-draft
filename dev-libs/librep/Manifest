@@ -1,18 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9cc34ed6080554fb719446a825740c4c ChangeLog 5312
+MD5 e76a56bfe76cdaea60c03e6f61716e26 ChangeLog 5423
+RMD160 839c38b55016e9a0f1a5c80f8d045e8a9e0ca24b ChangeLog 5423
+SHA256 bbd8d4271f22af581e85a19dfa8c3a0c6624ec1b23771c1a929db8ec8367f52d ChangeLog 5423
 MD5 07a234e62724c3d45a1b69f1c04cd0a9 files/digest-librep-0.17-r1 64
+RMD160 f459d53dfb2743e1760d74e2e7ca3b83ea762f48 files/digest-librep-0.17-r1 64
+SHA256 e7e5dbfe969315d912c25c5f7c6be0bd3f78faa55c41ee7cc872bcfc5034fa62 files/digest-librep-0.17-r1 64
 MD5 07a234e62724c3d45a1b69f1c04cd0a9 files/digest-librep-0.17-r2 64
+RMD160 f459d53dfb2743e1760d74e2e7ca3b83ea762f48 files/digest-librep-0.17-r2 64
+SHA256 e7e5dbfe969315d912c25c5f7c6be0bd3f78faa55c41ee7cc872bcfc5034fa62 files/digest-librep-0.17-r2 64
 MD5 4d33f5e870cd659d295eaa8c1a8948da files/libtool.patch 3037
+RMD160 a22b51f2db852493cfada58b020d6d34f7ee08eb files/libtool.patch 3037
+SHA256 101eb68c95e79c32640fb9889056c1f6de072f7f0a23360ec2b1f2bb6561c3d7 files/libtool.patch 3037
 MD5 ad28e56472f07a05a704ecfc7cf58434 files/rep_file_fdopen.patch 219
+RMD160 250cfc73ac11ee9e112f01f98535bdafbee2993c files/rep_file_fdopen.patch 219
+SHA256 f35170a6571ab68e089c0408207fbe35141a5ca02376bad009374e24c974872c files/rep_file_fdopen.patch 219
 MD5 ac5dfa439cd36f285d75eacb12125fb5 librep-0.17-r1.ebuild 1377
-MD5 6f48e4aa32fa4cab714190eda8192a64 librep-0.17-r2.ebuild 1278
+RMD160 877c3d70b30cb60887d6a4fb8bee1d45391a0e70 librep-0.17-r1.ebuild 1377
+SHA256 e0adfb8950406eda7e76a10dfc1e91ffa2134c5af49116f0bfbf7b386f847031 librep-0.17-r1.ebuild 1377
+MD5 981b10dbec3e75ae47a4177cd8cac373 librep-0.17-r2.ebuild 1458
+RMD160 361ae3e9531816bf6400f6acd3820b72c664ed7f librep-0.17-r2.ebuild 1458
+SHA256 1af62ad645a0f4ecaaa2eb40c66c98e3db81b81cd0a47ee702e6645789a8b372 librep-0.17-r2.ebuild 1458
 MD5 aabaa608acb879f04a961ad9e6d8e19c metadata.xml 233
+RMD160 0ec601d918a3c2450e7701bc3f7cced0758331ae metadata.xml 233
+SHA256 f55841d13d31ad555b4c998da5bd14ee65f21e98b797f0922191d3c9f75539c4 metadata.xml 233
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDzD6iJrHF4yAQTrARAmIKAJ4kQx/2FUp4jI7+oevl+oQ/7RuLvACgoUAW
-sNlqCfAD75hAntghsJvVR/4=
-=GdCC
+iD8DBQFD9knaJrHF4yAQTrARAkunAJ9lDIEBsx+8GTG7vSI8TtIz0kOBVACdHJGM
+z3Th0M7GMWeoV10CJbERQps=
+=d7bb
 -----END PGP SIGNATURE-----

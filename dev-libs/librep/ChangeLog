@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/librep
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.37 2006/01/17 00:47:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.38 2006/02/17 22:10:25 agriffis Exp $
+
+  17 Feb 2006; Aron Griffis <agriffis@gentoo.org> librep-0.17-r2.ebuild:
+  Add gcc-4 fix, mark stable on ia64
 
   17 Jan 2006; Aron Griffis <agriffis@gentoo.org>
   -files/librep-0.15.2-exec.patch:
