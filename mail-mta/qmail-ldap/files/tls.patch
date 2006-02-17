@@ -1,0 +1,20 @@
+--- Makefile.orig	2003-07-19 19:40:10.000000000 -0700
++++ Makefile	2003-07-19 19:41:12.000000000 -0700
+@@ -27,13 +27,13 @@
+ # TLS (SMTP encryption) in qmail-smtpd and qmail-remote, see TLS.readme
+ # You need OpenSSL for this
+ # TLS enable
+-#TLSON=-DTLS
++TLSON=-DTLS
+ # Path to OpenSSL includes
+-#TLSINCLUDES=-I/usr/local/include
++TLSINCLUDES=-I/usr/include
+ # Path to OpenSSL libraries
+-#TLSLIBS=-L/usr/local/lib -lssl -lcrypto
++TLSLIBS=-L/usr/lib -lssl -lcrypto
+ # Path to OpenSSL binary
+-#OPENSSLBIN=/usr/local/bin/openssl
++OPENSSLBIN=/usr/bin/openssl
+ #OPENSSLBIN=openssl
+ 
+ # to make the Netscape download progress bar work with qmail-pop3d

@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/qmail-ldap
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.10 2005/10/24 11:45:35 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.11 2006/02/17 16:34:46 blubb Exp $
+
+  17 Feb 2006; Simon Stelling <blubb@gentoo.org> +files/errno.patch,
+  -files/errno.patch.bz2, +files/homedir.patch, -files/homedir.patch.bz2,
+  +files/qmail-linksync.patch, -files/qmail-linksync.patch.bz2,
+  +files/qmail-queue.patch, -files/qmail-queue.patch.bz2, +files/tls.patch,
+  -files/tls.patch.bz2, qmail-ldap-1.03-r1.ebuild:
+  no need to compress smallish patches
 
   24 Oct 2005; Michael Hanselmann <hansmi@gentoo.org>
   qmail-ldap-1.03-r1.ebuild, qmail-ldap-1.03-r2.ebuild,

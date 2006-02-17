@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r1.ebuild,v 1.9 2005/10/24 11:45:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r1.ebuild,v 1.10 2006/02/17 16:34:46 blubb Exp $
 
 IUSE="ssl"
 
@@ -57,10 +57,10 @@ src_unpack() {
 	epatch ${DISTDIR}/big-todo.103.patch || die "big-todo patch failed"
 
 	#Suppprt for XFS and reiserfs
-	epatch ${FILESDIR}/qmail-linksync.patch.bz2 || die "linksync patch failed"
+	epatch ${FILESDIR}/qmail-linksync.patch || die "linksync patch failed"
 
 	#used for plugging in qmail-scanner with SpamAssasin
-	epatch ${FILESDIR}/qmail-queue.patch.bz2 || die "qmail queue patch failed"
+	epatch ${FILESDIR}/qmail-queue.patch || die "qmail queue patch failed"
 
 	#main ldap patch
 	epatch ${WORKDIR}/qmail-ldap-1.03-20020901.patch || die "ldap patch failed"
@@ -69,16 +69,16 @@ src_unpack() {
 	epatch ${DISTDIR}/qmail-0.0.0.0.patch || die "0.0.0.0 patch did not apply"
 
 	# Let the system decide how to define errno
-	epatch ${FILESDIR}/errno.patch.bz2
+	epatch ${FILESDIR}/errno.patch
 
 	# AUTOHOME DIR MAKE PATCH
-	epatch ${FILESDIR}/homedir.patch.bz2 || die "Homedir patch did not apply"
+	epatch ${FILESDIR}/homedir.patch || die "Homedir patch did not apply"
 
 	#SMTP_AUTH PATCH
 	epatch ${DISTDIR}/smtp-auth-20030301.patch || die "SMTP_AUTH patch did not apply"
 
 	if use ssl; then
-		use ssl && { epatch ${FILESDIR}/tls.patch.bz2 || die "tls+auth patch failed"; }
+		use ssl && { epatch ${FILESDIR}/tls.patch || die "tls+auth patch failed"; }
 	fi
 
 	echo "gcc ${CFLAGS}" > conf-cc
