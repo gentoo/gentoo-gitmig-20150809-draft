@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/smoothgnome
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smoothgnome/ChangeLog,v 1.6 2006/02/14 17:55:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smoothgnome/ChangeLog,v 1.7 2006/02/17 22:17:58 fuzzyray Exp $
+
+  17 Feb 2006; Paul Varner <fuzzyray@gentoo.org>
+  smoothgnome-2.0.4-r1.ebuild:
+  Stable on x86 Bug #122747
 
   14 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   smoothgnome-2.0.4-r1.ebuild:
