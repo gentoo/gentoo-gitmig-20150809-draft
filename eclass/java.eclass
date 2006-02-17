@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.28 2006/01/20 00:08:39 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.29 2006/02/17 22:18:20 swegener Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -116,7 +116,7 @@ java_remove-libjsoundalsa() {
 	fi
 }
 
-# Symlinks i386 to i?86. Updates env file to then use i?86 
+# Symlinks i386 to i?86. Updates env file to then use i?86
 # for LD_LIBRARY_PATH. See bug #23579.
 #
 # Takes an argument, which is a directory living in ${D}
@@ -128,12 +128,12 @@ fix-i386-dir() {
 	if use x86; then
 		local host=${CTARGET:-${CHOST}}
 		host=${host%%-*}
-		
+
 		if [[ ${host} != i386 ]]; then
 			local orig_dir="${libdir}/i386"
 			local new_dir="${libdir}/${host}"
 			dosym i386 ${new_dir} || die "Failed to dosym"
-			
+
 
 			sed -i -e "s/i386/${host}/g" \
 				${D}/etc/env.d/java/20${VMHANDLE} || die "Failed to sed"

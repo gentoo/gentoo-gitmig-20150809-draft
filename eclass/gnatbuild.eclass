@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.4 2006/01/23 23:03:08 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.5 2006/02/17 22:18:20 swegener Exp $
 
 # ATTN!
 # set HOMEPAGE and LICENSE in appropriate ebuild, as we have
@@ -82,7 +82,7 @@ is_crosscompile() {
 PREFIX=${GNATBUILD_PREFIX:-/usr} # not sure we need this hook, but may be..
 LIBPATH=${PREFIX}/lib/${PN}/${CTARGET}/${SLOT}
 LIBEXECPATH=${PREFIX}/libexec/${PN}/${CTARGET}/${SLOT}
-INCLUDEPATH=${LIBPATH}/include   
+INCLUDEPATH=${LIBPATH}/include
 BINPATH=${PREFIX}/${CTARGET}/${PN}-bin/${SLOT}
 DATAPATH=${PREFIX}/share/${PN}-data/${CTARGET}/${SLOT}
 
@@ -253,12 +253,12 @@ gnatbuild_pkg_prerm() {
 	# files for eselect module are left behind, so we need to cleanup.
 	if [ ! -f /usr/share/eselect/modules/gnat.eselect ] ; then
 		eerror "eselect-gnat was prematurely unmerged!"
-		eerror "You will have to manually remove unnecessary files" 
+		eerror "You will have to manually remove unnecessary files"
 		eerror "under /etc/eselect/gnat and /etc/env.d/55gnat-xxx"
 		exit # should *not* die, as this will stop unmerge!
 	fi
 
-	# this copying/modifying and then sourcing of a gnat.eselect is a hack, 
+	# this copying/modifying and then sourcing of a gnat.eselect is a hack,
 	# but having a duplicate functionality is really bad - gnat.eselect module
 	# might change..
 	cat /usr/share/eselect/modules/gnat.eselect | \
@@ -319,7 +319,7 @@ gnatbuild_src_unpack() {
 # it would be nice to split configure and make steps
 # but both need to operate inside specially tuned evironment
 # so just do sections for now (as in eclass section of handbook)
-# sections are: configure, make-tools, bootstrap, 
+# sections are: configure, make-tools, bootstrap,
 #  gnatlib_and_tools, gnatlib-shared
 gnatbuild_src_compile() {
 	debug-print-function ${FUNCNAME} $@
@@ -327,7 +327,7 @@ gnatbuild_src_compile() {
 		gnatbuild_src_compile all
 		return $?
 	fi
-	
+
 	if [ "all" == "$1" ]
 	then # specialcasing "all" to avoid scanning sources unnecessarily
 		gnatbuild_src_compile configure make-tools \
@@ -341,9 +341,9 @@ gnatbuild_src_compile() {
 		else
 			GNATLIB="${GNATBOOT}/lib/gnatgcc/${CTARGET}/${SLOT}"
 		fi
-	
+
 		export CC="${GNATBOOT}/bin/gnatgcc"
-		
+
 		export ADA_OBJECTS_PATH="${GNATLIB}/adalib"
 		export ADA_INCLUDE_PATH="${GNATLIB}/adainclude"
 		export LDFLAGS="-L${GNATLIB}"
@@ -360,28 +360,28 @@ gnatbuild_src_compile() {
 				debug-print-section configure
 				# Configure gcc
 				local confgcc
-				
+
 				# some cross-compile logic from toolchain
 				confgcc="${confgcc} --host=${CHOST}"
 				if is_crosscompile || tc-is-cross-compiler ; then
 					confgcc="${confgcc} --target=${CTARGET}"
 				fi
 				[[ -n ${CBUILD} ]] && confgcc="${confgcc} --build=${CBUILD}"
-				
+
 				# Native Language Support
 				if use nls ; then
 					confgcc="${confgcc} --enable-nls --without-included-gettext"
 				else
 					confgcc="${confgcc} --disable-nls"
 				fi
-				
+
 				# reasonably sane globals (from toolchain)
 				confgcc="${confgcc} \
 					--with-system-zlib \
 					--disable-checking \
 					--disable-werror \
 					--disable-libunwind-exceptions"
-			
+
 				cd "${GNATBUILD}"
 				CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" "${S}"/configure \
 					--prefix=${PREFIX} \
@@ -402,7 +402,7 @@ gnatbuild_src_compile() {
 					--disable-nls \
 					${confgcc} || die "configure failed"
 			;;
-			
+
 			make-tools)
 				debug-print-section make-tools
 				# Compile helper tools
@@ -416,29 +416,29 @@ gnatbuild_src_compile() {
 					gnatmake xeinfo && \
 					gnatmake xnmake || die "building helper tools"
 			;;
-	
+
 			bootstrap)
 				debug-print-section bootstrap
 				# and, finally, the build itself
 				cd "${GNATBUILD}"
 				emake bootstrap || die "bootstrap failed"
 			;;
-	
+
 			gnatlib_and_tools)
 				debug-print-section gnatlib_and_tools
 				einfo "building gnatlib_and_tools"
 				cd "${GNATBUILD}"
-				emake -j1 -C gcc gnatlib_and_tools || 
+				emake -j1 -C gcc gnatlib_and_tools || \
 					die "gnatlib_and_tools failed"
 			;;
-	
+
 			gnatlib-shared)
 				debug-print-section gnatlib-shared
 				einfo "building shared lib"
 				cd "${GNATBUILD}"
 				rm -f gcc/ada/rts/*.{o,ali} || die
 				#otherwise make tries to reuse already compiled (without -fPIC) objs..
-				emake -j1 -C gcc gnatlib-shared LIBRARY_VERSION="${GCCBRANCH}" || 
+				emake -j1 -C gcc gnatlib-shared LIBRARY_VERSION="${GCCBRANCH}" || \
 					die "gnatlib-shared failed"
 			;;
 		esac
@@ -450,7 +450,7 @@ gnatbuild_src_compile() {
 
 gnatbuild_src_install() {
 	debug-print-function ${FUNCNAME} $@
-	
+
 	if [[ -z "$1" ]] ; then
 		gnatbuild_src_install all
 		return $?
@@ -474,7 +474,7 @@ gnatbuild_src_install() {
 				&& rm -f "${x}"
 		done
 
-		
+
 		# Install gnatgcc, tools and native threads library
 		cd "${GNATBUILD}"
 		if [ "${PN_GnatGpl}-3.4.5.1" != "${P}" ]; then # this one is strange
@@ -494,7 +494,7 @@ gnatbuild_src_install() {
 			mv "${D}${LIBPATH}"/../lib/libgcc_s* "${D}${LIBPATH}"/32/
 		fi
 		mv "${D}${LIBEXECPATH}/gcc/${CTARGET}/${GCCRELEASE}"/* "${D}${LIBEXECPATH}"
-		
+
 		# set the rts libs
 		cd "${D}${LIBPATH}"
 		mkdir rts-native
@@ -528,7 +528,7 @@ EOF
 		rm -rf "${D}${LIBEXECPATH}/gcc"
 		rm -f "${D}${LIBPATH}"/libiberty.a # this one comes with binutils
 		rmdir "${D}${LIBPATH}"/include/    # should be empty
-		
+
 		rm -rf "${D}${LIBEXECPATH}"/install-tools/
 
 		# this one is installed by gcc and is a duplicate even here anyway

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.132 2006/02/09 02:44:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.133 2006/02/17 22:18:20 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -696,7 +696,7 @@ need-kde() {
 			RDEPEND="${x_DEPEND} $(deprange ${KM_DEPRANGE} kde-base/kdelibs)"
 		else
 			DEPEND="${DEPEND} ~kde-base/kdelibs-$PV"
-			RDEPEND="${x_DEPEND} ~kde-base/kdelibs-${PV}"			
+			RDEPEND="${x_DEPEND} ~kde-base/kdelibs-${PV}"
 		fi
 	else
 		# Things outside kde-base only need a minimum version

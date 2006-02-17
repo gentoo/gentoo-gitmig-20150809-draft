@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.11 2006/01/16 18:14:47 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.12 2006/02/17 22:18:20 swegener Exp $
 #
 # Authors:	Joe Sapp <nixphoeni@gentoo.org>
 #		Mike Gardiner <obz@gentoo.org>
@@ -140,9 +140,9 @@ gdesklets_src_install() {
 	fi
 
 	debug-print-section control_install
-	
+
 	CONTROL_INSDIR=""
-	
+
 	# Make sure that it only finds Controls and not Sensors
 	# If it uses a Sensor, it shouldn't use a Control (since
 	# Sensors are deprecated).

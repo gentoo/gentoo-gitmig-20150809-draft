@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.158 2006/01/29 16:54:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.159 2006/02/17 22:18:20 swegener Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -472,7 +472,7 @@ install_headers() {
 				dodir ${ddir}/asm-ppc
 				cp -ax "${S}"/include/asm-ppc/* ${D}/${ddir}/asm-ppc
 			fi
-			;;	
+			;;
 		*)
 			dodir ${ddir}/asm
 			cp -ax "${S}"/include/asm/* ${D}/${ddir}/asm

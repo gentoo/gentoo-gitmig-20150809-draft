@@ -1,10 +1,10 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font-ebdftopcf.eclass,v 1.2 2006/01/12 03:44:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font-ebdftopcf.eclass,v 1.3 2006/02/17 22:18:20 swegener Exp $
 
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
-# font-ebdftopcf.eclass 
+# font-ebdftopcf.eclass
 # Eclass to make PCF font generator from BDF uniform and optimal
 # The manpage for this eclass is in media-gfx/ebdftopcf.
 
