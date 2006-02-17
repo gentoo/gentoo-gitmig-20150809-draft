@@ -32,5 +32,9 @@
 		A categoria dev-dotnet contém bibliotecas e utilitários para o
 		ambiente .NET.
 	</longdescription>
+	<longdescription lang="pl">
+		Kategoria dev-dotnet zawiera biblioteki i narzędzia związane ze
+		środowiskiem programowania .NET.
+	</longdescription>
 </catmetadata>
 
