@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/gnewspost
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/gnewspost/ChangeLog,v 1.6 2005/09/13 20:14:46 metalgod Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/gnewspost/ChangeLog,v 1.7 2006/02/17 16:43:19 blubb Exp $
+
+  17 Feb 2006; Simon Stelling <blubb@gentoo.org>
+  +files/session.c-fix_errno.patch, -files/session.c-fix_errno.patch.gz,
+  gnewspost-0.6.ebuild:
+  no need to gzip smallish patches
 
   13 Sep 2005; Luis Medinas <metalgod@gentoo.org> gnewspost-0.6.ebuild:
   Added ~amd64 keywords. Closes bug #104954.
