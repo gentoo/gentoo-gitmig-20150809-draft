@@ -1,31 +1,23 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b4137cf5d98a0dc381479c22e6f56bb8 flow-tools-0.67.ebuild 2102
-MD5 8f9c6d7e1e7e86ef04599a7774c85b16 flow-tools-0.66.ebuild 1001
-MD5 a5eba5008729fa7c037c6b4d59277eb6 flow-tools-0.68-r1.ebuild 2466
-MD5 fecd6516b359b067be27796d980a2152 flow-tools-0.68.ebuild 2166
-MD5 7228ba768fbbffe8357362e19a395b2c ChangeLog 3200
-MD5 657939d746987d289ffa06516ae69d46 metadata.xml 261
+MD5 a2791557c738b5265202943188c90638 ChangeLog 3461
 MD5 4274d0fb58b88876a5767ab9d1c6204c files/digest-flow-tools-0.66 67
 MD5 1101576a17a0a70941408d279474aa97 files/digest-flow-tools-0.67 67
 MD5 4550f09b9ca0a0f2e3e83beadfa3f964 files/digest-flow-tools-0.68 67
-MD5 cfccfe9cd55f47b95bf235bf7fa7d304 files/flow-tools-0.67-gcc34.diff 1403
-MD5 98dc78d5d311ce19b972580774781796 files/flow-tools-0.68-fix-a-zillion-warnings.diff 19710
+MD5 4550f09b9ca0a0f2e3e83beadfa3f964 files/digest-flow-tools-0.68-r1 67
+MD5 4550f09b9ca0a0f2e3e83beadfa3f964 files/digest-flow-tools-0.68-r2 67
 MD5 c6c737d5afc1661a098632c246dec51e files/flow-tools-0.67-debug.patch 313
+MD5 a4c028b5f1d22a56d9020a2ef90ca253 files/flow-tools-0.67-fix-a-zillion-warnings.diff 18222
 MD5 3164389b3ab0f7170727e6ea6b419256 files/flow-tools-0.67-fix-configure.diff 3510
+MD5 cfccfe9cd55f47b95bf235bf7fa7d304 files/flow-tools-0.67-gcc34.diff 1403
+MD5 eddbfc9694d3f0b00a46f84a0e58a651 files/flow-tools-0.67-memleak.patch 465
+MD5 f16f4ba51648f2b7f0e3830bc7670f6e files/flow-tools-0.67-nodebug.patch 933
+MD5 98dc78d5d311ce19b972580774781796 files/flow-tools-0.68-fix-a-zillion-warnings.diff 19710
+MD5 09baff60cf1fc75fdf326c0d70f0b250 files/flow-tools-0.68-fix-configure.diff 4311
 MD5 a3079e6e4ce9d077caa0939f51e806f2 files/flowcapture.confd 1590
 MD5 e093ab64e5496e26be23026c3436ddde files/flowcapture.initd 430
-MD5 09baff60cf1fc75fdf326c0d70f0b250 files/flow-tools-0.68-fix-configure.diff 4311
-MD5 a4c028b5f1d22a56d9020a2ef90ca253 files/flow-tools-0.67-fix-a-zillion-warnings.diff 18222
 MD5 94581c1ca18b1891395fe1f3daeb04ca files/linkme 283
-MD5 f16f4ba51648f2b7f0e3830bc7670f6e files/flow-tools-0.67-nodebug.patch 933
-MD5 4550f09b9ca0a0f2e3e83beadfa3f964 files/digest-flow-tools-0.68-r1 67
-MD5 eddbfc9694d3f0b00a46f84a0e58a651 files/flow-tools-0.67-memleak.patch 465
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDKqi6EZCkKN40op4RAitWAJ0Xn0USdKErtFMlR2p0CbdkZIEXnwCbBxJK
-UxDAZY1BuMdZaJW5po6BUWQ=
-=zB5A
------END PGP SIGNATURE-----
+MD5 8f9c6d7e1e7e86ef04599a7774c85b16 flow-tools-0.66.ebuild 1001
+MD5 b4137cf5d98a0dc381479c22e6f56bb8 flow-tools-0.67.ebuild 2102
+MD5 a5eba5008729fa7c037c6b4d59277eb6 flow-tools-0.68-r1.ebuild 2466
+MD5 15106d3fa507c2c145b34aa6a4f871c2 flow-tools-0.68-r2.ebuild 2651
+MD5 fecd6516b359b067be27796d980a2152 flow-tools-0.68.ebuild 2166
+MD5 657939d746987d289ffa06516ae69d46 metadata.xml 261
