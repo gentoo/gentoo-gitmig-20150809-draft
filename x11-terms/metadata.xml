@@ -28,5 +28,9 @@
 	<longdescription lang="it">
 		La categoria x11-terms contiene emulatori di terminale per gli ambienti X11.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria x11-terms contém emuladores de terminal para
+		ambientes X11.
+	</longdescription>
 </catmetadata>
 
