@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.03.ebuild,v 1.5 2004/11/22 21:39:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.03.ebuild,v 1.6 2006/02/17 22:33:37 tupone Exp $
 
 inherit eutils games
 
@@ -15,12 +15,8 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-RDEPEND="virtual/x11
-	media-libs/libsdl
-	media-libs/sdl-mixer
+DEPEND="media-libs/sdl-mixer
 	media-libs/sdl-image"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
