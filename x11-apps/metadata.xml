@@ -11,5 +11,9 @@
 		Die Kategorie x11-apps enthält Applikationen welche mit X.Org 
 		X11 ausgeliefert werden.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria x11-apps contém aplicações distribuídas como parte
+		do X.Org X11.
+	</longdescription>
 </catmetadata>
 
