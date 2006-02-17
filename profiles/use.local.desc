@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1742 2006/02/17 07:51:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1743 2006/02/17 11:57:43 gothgirl Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -952,6 +952,7 @@ net-im/ejabberd:web - Web support in ejabberd
 net-im/ekg2:gsm - Enable gsm plugin
 net-im/ekg2:nogg - Disable Gadu-Gadu plugin
 net-im/gaim:bonjour - Enable bonjour support
+net-im/gaim:startup-notification - Enable startup-notification support.
 net-im/gaim:silc - Enable SILC protocol support
 net-im/gaim:xscreensaver - Enable X idle time support instead of gaim idle time.
 net-im/gajim:srv -  SRV capabilities
