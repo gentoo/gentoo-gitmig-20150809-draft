@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ttt-1.8.1-r1.ebuild,v 1.1 2006/01/19 02:07:40 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ttt-1.8.1-r1.ebuild,v 1.2 2006/02/17 16:50:14 jokey Exp $
 
 inherit eutils
 
@@ -17,9 +17,8 @@ DEPEND="virtual/libc
 	dev-lang/tcl
 	dev-lang/tk
 	>=dev-tcltk/blt-2.4
-	virtual/libpcap
-	|| ( ( >=x11-libs/libXt-1.0.0 )
-	virtual/x11 )"
+	net-libs/libpcap
+	|| ( ( x11-libs/libXt x11-proto/xproto ) virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
