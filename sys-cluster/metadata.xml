@@ -19,5 +19,8 @@
 	<longdescription lang="it">
 		La categoria sys-cluster contiene pacchetti per l'utilizzo e la gestione dei clusters.
 	</longdescription>
+	<longdescription lang="pt">
+		A categoria sys-cluster contém programas relacionados a cluster.
+	</longdescription>
 </catmetadata>
 
