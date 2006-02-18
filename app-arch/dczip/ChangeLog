@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dczip
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dczip/ChangeLog,v 1.7 2005/12/12 19:53:32 metalgod Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dczip/ChangeLog,v 1.8 2006/02/18 23:58:24 betelgeuse Exp $
+
+  18 Feb 2006; Petteri Räty <betelgeuse@gentoo.org> dczip-2.05.ebuild:
+  Removed virtual/x11 and virtual/jdk from DEPEND.
 
   12 Dec 2005; Luis Medinas <metalgod@gentoo.org> dczip-2.05.ebuild:
   Added ~amd64 keyword.
