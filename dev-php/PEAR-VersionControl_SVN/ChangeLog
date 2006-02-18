@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-VersionControl_SVN
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.13 2006/01/28 16:20:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.14 2006/02/18 20:17:22 agriffis Exp $
+
+  17 Feb 2006; Aron Griffis <agriffis@gentoo.org>
+  PEAR-VersionControl_SVN-0.3.0_alpha1-r1.ebuild:
+  Mark 0.3.0_alpha1-r1 stable on alpha/ia64. #119722
 
   28 Jan 2006; Jeroen Roovers <jer@gentoo.org>
   PEAR-VersionControl_SVN-0.3.0_alpha1-r1.ebuild:
