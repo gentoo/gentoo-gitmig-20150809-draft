@@ -1,6 +1,14 @@
 # ChangeLog for app-text/cstetex
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/ChangeLog,v 1.10 2005/04/21 20:16:53 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/ChangeLog,v 1.11 2006/02/18 16:50:16 nattfodd Exp $
+
+*cstetex-2.0.2-r2 (18 Feb 2006)
+
+  18 Feb 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  +files/cstetex-2.0.2-dvi-draw-conflicting-types.patch,
+  +files/cstetex-2.0.2-flex-unput.patch,
+  +files/xpdf-2.02pl1-CAN-2005-3191-3.patch, +cstetex-2.0.2-r2.ebuild:
+  Backport recent tetex-2 patches (from bugs #115775, #122365 and #118264).
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> cstetex-2.0.2-r1.ebuild:
   stable on amd64
