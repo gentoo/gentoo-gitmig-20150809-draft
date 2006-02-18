@@ -1,11 +1,43 @@
-MD5 752f648d0569cb5eede4653f4d85c751 ChangeLog 7703
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e58104defb06c3c615b082cedca6b08b ChangeLog 7818
+RMD160 93f40cbc8c8f36f9f8bcf23b56c4162e0e4c078e ChangeLog 7818
+SHA256 c5690695586c8ec54be7c7cb4163dc3e2e0ea1c9878e38f121b1427bcf88251e ChangeLog 7818
 MD5 abf06ed2bfc6e4b130b44e3818ec0c99 files/digest-libquicktime-0.9.2 70
+RMD160 588f5704ec3dc9628e64d52deebef707dc32f558 files/digest-libquicktime-0.9.2 70
+SHA256 3dcc189b4d8f405fb3dccdb9dcadd1cabcbdda837958590fa9957a6c0f87fc79 files/digest-libquicktime-0.9.2 70
 MD5 6bfb85c4c74898adf195a803d4715b03 files/digest-libquicktime-0.9.4 70
+RMD160 3026b256c9b6e6942a73860ab436bf62b4aa833c files/digest-libquicktime-0.9.4 70
+SHA256 fe45f2421deca6e1faafb352aa4cc0acda97b0c718b22406e549b7bfc855b5a0 files/digest-libquicktime-0.9.4 70
 MD5 665eeaef01d9cd6ccc580202630897be files/digest-libquicktime-0.9.7-r1 70
+RMD160 ea0663e6d5da168a0afccfeea29d39dcc7893cf1 files/digest-libquicktime-0.9.7-r1 70
+SHA256 4b31a9cc70da8186102f9956c2d5ef99b5d4092202b0b35ab60b874b99fe459d files/digest-libquicktime-0.9.7-r1 70
 MD5 7431f4892f67adb233bef504876078db files/libquicktime-0.9.2-amd64.patch 2861
+RMD160 9fe85f233a8d6dd8306a7142ce460f516f860850 files/libquicktime-0.9.2-amd64.patch 2861
+SHA256 6a24f07b90e94013f2cd701741419fa4db9369cc0aef9e1f04332557e6b7b193 files/libquicktime-0.9.2-amd64.patch 2861
 MD5 a1721b9ba48b6453245fce4f3fe04e0b files/libquicktime-0.9.4-cflags.patch 1455
+RMD160 a8161693222a44409af6349b89b88e6bc51b604f files/libquicktime-0.9.4-cflags.patch 1455
+SHA256 ac2af2189fb04aa03a4b0d4a805f82081c72c5ea639aec249716ccd4ed973594 files/libquicktime-0.9.4-cflags.patch 1455
 MD5 71fde588b024e1d8c472afa0081010b9 files/libquicktime-0.9.7-dv.patch 651
+RMD160 a9f2166e5d8605c3200c7ab9883c6dbb9097d2cd files/libquicktime-0.9.7-dv.patch 651
+SHA256 36b84242e05fa977de5b6a34d890fd86f3fb6c3ca551682139b7f53804dcc926 files/libquicktime-0.9.7-dv.patch 651
 MD5 9a1d33daffe2ec7e701e22c08d8f0820 libquicktime-0.9.2.ebuild 1566
+RMD160 1bce5fe7dfcec05aa53f213c7c4caf42daf06275 libquicktime-0.9.2.ebuild 1566
+SHA256 89d34c1ccfe6f9aeed1ff7206b3fca953dc50e877adacac056f59ac0148e54ee libquicktime-0.9.2.ebuild 1566
 MD5 f35316f6e378b27978b55e1908918b31 libquicktime-0.9.4.ebuild 1463
-MD5 01e9616db76871782f19c4e4d8dba251 libquicktime-0.9.7-r1.ebuild 2198
+RMD160 1cd7db708d7ba17cce96b626601faef95483cdc0 libquicktime-0.9.4.ebuild 1463
+SHA256 6824592d65f49fe44adc070d27f940bc97d0666e532379a1771862ac2f3442da libquicktime-0.9.4.ebuild 1463
+MD5 5e1d89cc25d96c03a4368636954212f7 libquicktime-0.9.7-r1.ebuild 2203
+RMD160 72e102c5cfbeca12ce5e1cbe91f8f732d9b5fd0b libquicktime-0.9.7-r1.ebuild 2203
+SHA256 3f523513da7311ac457c58f001aad67a3ed41d61201b4039c869cb3a0543be87 libquicktime-0.9.7-r1.ebuild 2203
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
+RMD160 11462994b78856883a805c72334300d07101713d metadata.xml 251
+SHA256 0e151c0a2781f2632c75a2f2c3b1a8d187aed329467472236c65627a7e0ba42f metadata.xml 251
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD96U+JrHF4yAQTrARApVzAKCHyvLJVJyKsnoeu9KF/Y7f+OFGlACbBvre
+dlZJ7GCIzifUIpVJP2VEkFs=
+=f8B2
+-----END PGP SIGNATURE-----
