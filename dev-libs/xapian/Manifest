@@ -1,17 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 891b18a65dcada77b8d9b8c49bcec361 ChangeLog 2429
+MD5 7c43feeb3cd7d6b9cdeb5ed70fe44bda ChangeLog 2585
+RMD160 0f43e805aa27d19b4f0dd45460b034fd697c3d07 ChangeLog 2585
+SHA256 2bc0ced3aa5f24ef357410906ac5bdc966d73b6acf7328c657b458d9d03248a5 ChangeLog 2585
 MD5 331c7c366023b054a158e1a234b856f2 files/digest-xapian-0.9.2 70
+RMD160 10d02e8b3cf820ce5dced58ded5f23e9dd217631 files/digest-xapian-0.9.2 70
+SHA256 90fff2497d654a9bb335358a70f1bd5e4f0bdf5a6beb4e67868222dc7e44f10a files/digest-xapian-0.9.2 70
 MD5 331c7c366023b054a158e1a234b856f2 files/digest-xapian-0.9.2-r1 70
+RMD160 10d02e8b3cf820ce5dced58ded5f23e9dd217631 files/digest-xapian-0.9.2-r1 70
+SHA256 90fff2497d654a9bb335358a70f1bd5e4f0bdf5a6beb4e67868222dc7e44f10a files/digest-xapian-0.9.2-r1 70
+MD5 01f4585a0bd2d7b8c168738725f27342 files/digest-xapian-0.9.3 256
+RMD160 8deb5a5da11ea72402d6f1ec57d94c57b7c43f92 files/digest-xapian-0.9.3 256
+SHA256 b5c8b6f869baed182125c21163a105b8e766906989e15ac377791cefd085e93e files/digest-xapian-0.9.3 256
 MD5 58c419978523bfcce71719ad805f3d6f files/xapian-0.9.2-config.patch 853
+RMD160 32a10e0430ecaf394188e672a6aacff15befc37a files/xapian-0.9.2-config.patch 853
+SHA256 0dd437d3c3fe4eb28bbc8fe8376b380861bdba9c687103e285aa071ea3c5addd files/xapian-0.9.2-config.patch 853
+MD5 3c73cf371a0fb7c00d522297c71aa79f files/xapian-0.9.3-config.patch 537
+RMD160 59728ab992dc31a6fce5b63c9d573a2e14b17c36 files/xapian-0.9.3-config.patch 537
+SHA256 a02228e9a590f0ad8532446100c7bfb5d09a1fa134fd6ca1956d89f3b9ffd177 files/xapian-0.9.3-config.patch 537
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+RMD160 48afb924f8ddebfd4ea31a43eca3b277a30b62b6 metadata.xml 403
+SHA256 148b8bb5514a7787fab372ad8a71c93c67db9ce84ed2aa5953691c2104ca788a metadata.xml 403
 MD5 f116d3130402c9ddbf147b34aac60bb4 xapian-0.9.2-r1.ebuild 1162
+RMD160 6a0a80ff3ee11d47f20bde6a8c58b1d181beebf7 xapian-0.9.2-r1.ebuild 1162
+SHA256 c573a4d9bfa8b4e748c58951e3689c0efa4578a6957135b197220d9324028833 xapian-0.9.2-r1.ebuild 1162
 MD5 aad8230cbbfec0062d9f2e3b69de9038 xapian-0.9.2.ebuild 1056
+RMD160 624e734832489e6b7e1afec12ceb553d360c7871 xapian-0.9.2.ebuild 1056
+SHA256 599f1284c7e346c989cb16c50b69519c2bd4bab14ce7fb27fe700563710cd75e xapian-0.9.2.ebuild 1056
+MD5 b398abc439c8b535a864960d4f37f471 xapian-0.9.3.ebuild 1148
+RMD160 c04849285d336b2affb46ab3e860093540cf9a70 xapian-0.9.3.ebuild 1148
+SHA256 dac3a6a4aaad5e1a51041397cb68c443514b335ee04666c0147e03c512c4d477 xapian-0.9.3.ebuild 1148
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDyP6cmdTrptrqvGERApstAJ49/JrnF/4Hi5GT1js/4AQTZ1MnCwCfanak
-LKw8x5ws0ameSPTMae+uDZU=
-=FYAe
+iD8DBQFD9q2xmdTrptrqvGERArSgAJ9CfcoHMAf7oX3VQK7BnI3B6+4FpACghc4w
+FwUdWNtlvrhtd4cbKSyV5LI=
+=eYUG
 -----END PGP SIGNATURE-----
