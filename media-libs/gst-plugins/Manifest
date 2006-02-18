@@ -1,67 +1,29 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f9da60bfcd875dc9220874cdab430322 ChangeLog 18921
-RMD160 2c3bcdacd4f15109a3abbdb3545880274fd8d194 ChangeLog 18921
-SHA256 687794c1cd098e749f85c5bac4070a10c4feda2fbae7c20026da18a5c7b14bf9 ChangeLog 18921
+MD5 cd02a4068c096810a48299c69d2e0b48 ChangeLog 19028
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-0.8.10 72
-RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-0.8.10 72
-SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-0.8.10 72
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-0.8.11 72
-RMD160 07cd6ccf43ed8faecb5ed4337eea60fbc6e3e3bb files/digest-gst-plugins-0.8.11 72
-SHA256 a76335f344c7fb9dc3151468f9e4fab17f2112d74ba799a05906df748b74f5fd files/digest-gst-plugins-0.8.11 72
 MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-0.8.2 71
-RMD160 362432529c08687318541e969eb60f6dfb84449d files/digest-gst-plugins-0.8.2 71
-SHA256 07e6f6f1a0108253473079d85f29a885ad002c21e655140ed94552cc5a2b5d8e files/digest-gst-plugins-0.8.2 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-0.8.8 71
-RMD160 74fb762aa4b4c37e0cf13ceb60aec1e2c80a83dd files/digest-gst-plugins-0.8.8 71
-SHA256 8c042a1f86509a2d902bbc3d63874d8347af12c132215e8c67582fa8835e6089 files/digest-gst-plugins-0.8.8 71
 MD5 3c5a91d5c22624038b5e3f3e80cef626 files/digest-gst-plugins-0.8.8-r2 533
-RMD160 f49f176d412373472d028924f02d183ee47b5775 files/digest-gst-plugins-0.8.8-r2 533
-SHA256 54aff3731cda09cf2cbec26dffb49f6e59dc42d64159ae29a6a2767786a5afdb files/digest-gst-plugins-0.8.8-r2 533
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-0.8.9-r2 71
-RMD160 59910917ac9fe162d7686f1702fb5bdd98a25154 files/digest-gst-plugins-0.8.9-r2 71
-SHA256 06e49fc70cfec9d2553ced28a9c9246324fdd21c25f6bea9142de83f1f5a8153 files/digest-gst-plugins-0.8.9-r2 71
 MD5 a619f8fe6364e211b5c12d36fa4c60dc files/gst-plugins-0.8.11-conffix.patch 845
-RMD160 617ccaab015478f6ac6b79f0ef04fb96aefd053b files/gst-plugins-0.8.11-conffix.patch 845
-SHA256 a5276aa1fc567987cdd67b2024e8ee27f3a83d99834a6b9e09647f7aa4f9c870 files/gst-plugins-0.8.11-conffix.patch 845
 MD5 047909fa0e548bb37041ef3b534f7a30 files/gst-plugins-0.8.8-gstplaybin_subfont.patch 3927
-RMD160 be9be7eca293f1c87e9ba3e4d906cf9677b16a19 files/gst-plugins-0.8.8-gstplaybin_subfont.patch 3927
-SHA256 a0ebd5f5aa930db31c5ef07db1c1934d0cd605dea0479e80d23b94fa2d1f6d3c files/gst-plugins-0.8.8-gstplaybin_subfont.patch 3927
 MD5 62a6ceb0d791f58680a8260b121f06ba files/gst-plugins-0.8.9-qtdemux-fixrawpcm.patch 698
-RMD160 9bed5ccefc5c07cd9f427770fc8a510d6976388e files/gst-plugins-0.8.9-qtdemux-fixrawpcm.patch 698
-SHA256 fa0368120cfc8b08989a6c52be86e434be547925252a2c852305e118e582c5ff files/gst-plugins-0.8.9-qtdemux-fixrawpcm.patch 698
 MD5 5f3b15884236441972571887125d0a48 files/gst-plugins-0.8.9-riffmedia-isompeg4.patch 1178
-RMD160 e6f0380abfb1a7e2b8eeb33477b70bdd8f2187ed files/gst-plugins-0.8.9-riffmedia-isompeg4.patch 1178
-SHA256 57ab2e51bb569206d7fef567a65c48fb559d810d9f43bb73b1c1ad3f21e03df8 files/gst-plugins-0.8.9-riffmedia-isompeg4.patch 1178
 MD5 08ef8415d9778f702053aa3e0090404b files/gst-plugins-0.8.9-ximagefix.patch 2525
-RMD160 a2f3fb7887d802fc0070d8e1b141936f1f49144c files/gst-plugins-0.8.9-ximagefix.patch 2525
-SHA256 4e2510561fd7672f803f33b230fcc3fded7da472c49742570ea9a55ea19358d5 files/gst-plugins-0.8.9-ximagefix.patch 2525
 MD5 72130cbac13e9edb34b298efea9f26e6 gst-plugins-0.8.10.ebuild 1933
-RMD160 33423187b18fbb0da1c7773b254c951ce6d1f9d9 gst-plugins-0.8.10.ebuild 1933
-SHA256 c8c4ef6c8cc70c294303a471d8e4a53c82518b1973a556f29b9365337ea0ffd5 gst-plugins-0.8.10.ebuild 1933
-MD5 c20128f2633df0cb06412b02ea846a84 gst-plugins-0.8.11.ebuild 2020
-RMD160 f9adc08cec85d8c6c17bfaabfd4e58a929612212 gst-plugins-0.8.11.ebuild 2020
-SHA256 fc892c6af4a21461186ff9b5b056ec2ddca76e24675ad8536768c3c30f7dc69c gst-plugins-0.8.11.ebuild 2020
+MD5 5b4af2c4ebc493bb540eeef769748aaf gst-plugins-0.8.11.ebuild 2019
 MD5 1b1f6a35ef00183ae4d1fad94cfcb208 gst-plugins-0.8.2.ebuild 1868
-RMD160 79385adb18e569dfedb32eb68da5e8a248a29a00 gst-plugins-0.8.2.ebuild 1868
-SHA256 87131c027955590de2c03144d233177f4a189d2d337a7bc1b4698ce77f094620 gst-plugins-0.8.2.ebuild 1868
 MD5 d43ed6bb435d73d97fa66e9182e65e25 gst-plugins-0.8.8-r2.ebuild 2192
-RMD160 61fe3a130f37f864fcf863c1f39ad79c958ff3b5 gst-plugins-0.8.8-r2.ebuild 2192
-SHA256 8af0d31666a3a6fc6e580d22e5edc7081b308e6fbc7045aa7548d8da407b3449 gst-plugins-0.8.8-r2.ebuild 2192
 MD5 648907592c915d4c6b7ca8c68eda195c gst-plugins-0.8.8.ebuild 1933
-RMD160 019e50ef7a277212be9bd7ed2d549dabffe47d15 gst-plugins-0.8.8.ebuild 1933
-SHA256 d73e5d674f2b578c8f48bdc57714ddae1e920a6a4228bc6d964addedfb0b84fb gst-plugins-0.8.8.ebuild 1933
 MD5 5ed4b775f69994641eaea8e9bc60ba53 gst-plugins-0.8.9-r2.ebuild 2274
-RMD160 eebb4e2ff0f2adccaccc411ac413d11059ee6aeb gst-plugins-0.8.9-r2.ebuild 2274
-SHA256 5a4c23e93bbd152b3de25d083f77fd0392ebeda69dd6dae851921e8a40e4a58a gst-plugins-0.8.9-r2.ebuild 2274
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
-SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD6inqJrHF4yAQTrARAg4KAKClpohg1QSdh0+mZbuY0TXiXniK8gCgz40b
-t0CRdTFMzVoVvnS2MOoKbRk=
-=Jlpa
+iD8DBQFD94bnJrHF4yAQTrARAtToAJ9Ayvxv+7U3T6ePDFJsGau79FavlACfa0dX
+duYG8fHV4BtpRLvL5ULM2Ho=
+=ehxF
 -----END PGP SIGNATURE-----
