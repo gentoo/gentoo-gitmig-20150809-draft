@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_SMTP
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.23 2006/01/27 20:15:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.24 2006/02/18 20:15:52 agriffis Exp $
+
+  17 Feb 2006; Aron Griffis <agriffis@gentoo.org>
+  PEAR-Net_SMTP-1.2.7.ebuild:
+  Mark 1.2.7 stable on alpha. #119722
 
   27 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
   PEAR-Net_SMTP-1.2.7.ebuild:
