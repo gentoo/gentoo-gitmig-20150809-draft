@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.17.ebuild,v 1.3 2006/02/14 01:51:29 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.17.ebuild,v 1.4 2006/02/18 12:10:33 blubb Exp $
 
 IUSE="X nls v4l dvb doc"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://zapping.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
 
 RDEPEND="X? ( || ( x11-libs/libX11 virtual/x11 ) )
 	media-libs/libpng
