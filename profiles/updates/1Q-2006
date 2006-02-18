@@ -26,3 +26,4 @@ move sci-misc/gwyddion sci-visualization/gwyddion
 move sci-mathematics/veusz sci-visualization/veusz
 move media-gfx/xd3d sci-visualization/xd3d
 move sci-mathematics/ktechlab sci-electronics/ktechlab
+move net-wireless/acx100 net-wireless/acx
