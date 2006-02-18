@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p4.ebuild,v 1.9 2005/12/04 06:33:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p4.ebuild,v 1.10 2006/02/18 09:27:42 dertobi123 Exp $
 
 inherit gnome2
 
@@ -29,7 +29,8 @@ RDEPEND="${DEPEND}
 	media-libs/libmng
 	dvdr? ( >=app-cdr/dvd+rw-tools-5.20 )
 	vorbis? ( >=media-sound/sox-12.17.0 )
-	mp3? ( >=media-sound/sox-12.17.0 )"
+	mp3? ( >=media-sound/sox-12.17.0 )
+	nls? ( virtual/libintl )"
 
 G2CONF="${G2CONF} \
 	$(use_enable flac) \
