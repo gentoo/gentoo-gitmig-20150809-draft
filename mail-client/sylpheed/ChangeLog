@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.165 2006/02/07 09:47:51 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.166 2006/02/18 14:41:25 hattya Exp $
+
+*sylpheed-2.2.0 (18 Feb 2006)
+
+  18 Feb 2006; Akinori Hattori <hattya@gentoo.org>
+  +files/sylpheed-2.2-replace-aspell-with-enchant.diff,
+  -sylpheed-2.2.0_beta8.ebuild, +sylpheed-2.2.0.ebuild:
+  new upstream release. fixes bug #122779 and bug #123145.
 
 *sylpheed-2.2.0_beta8 (07 Feb 2006)
 
