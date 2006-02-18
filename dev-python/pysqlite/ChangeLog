@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.46 2006/02/07 01:59:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.47 2006/02/18 06:13:27 cardoe Exp $
+
+  18 Feb 2006; Doug Goldstein <cardoe@gentoo.org> pysqlite-2.0.7.ebuild:
+  adding ~ppc
 
   07 Feb 2006; Jason Wever <weeve@gentoo.org> pysqlite-2.0.7.ebuild:
   Added ~sparc keyword wrt bug #121880.
