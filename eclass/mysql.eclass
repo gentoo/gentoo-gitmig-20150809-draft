@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.18 2006/02/12 14:37:46 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.19 2006/02/18 10:54:23 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -291,6 +291,8 @@ mysql_src_compile() {
 		fi
 
 		mysql_version_is_at_least "4.01.11.00" &&  myconf="${myconf} `use_with big-tables`"
+
+		mysql_version_is_at_least "5.01.06.00" &&  myconf="${myconf} --with-ndb-binlog"
 	else
 		for i in ${minimal_exclude_list}; do
 			myconf="${myconf} --without-${i}"
