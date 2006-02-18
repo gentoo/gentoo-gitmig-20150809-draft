@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-2.7.0.24.ebuild,v 1.4 2006/01/12 14:30:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-2.7.0.24.ebuild,v 1.5 2006/02/18 09:18:22 phreak Exp $
 
 inherit eutils toolchain-funcs versionator linux-info
 
@@ -11,7 +11,9 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="OpenVZ VPS control utility"
 HOMEPAGE="http://openvz.org/"
-SRC_URI="http://download.openvz.org/utils/${PN}/${MY_PV}/src/${MY_P}.tar.bz2"
+SRC_URI="http://download.openvz.org/utils/${PN}/${MY_PV}/src/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~phreak/distfiles/${P}-patches-${PR}.tar.bz2
+	http://dev.gentoo.org/~hollow/distfiles/${P}-patches-${PR}.tar.bz2"
 
 LICENSE="QPL-1.0"
 SLOT="0"
@@ -42,17 +44,17 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A} || die
-	cd "${S}" || die
+	unpack ${A}
+	cd "${S}"
 
-	epatch "${FILESDIR}"/vzctl-2.7.0-gentoo_conf_d.patch
-	epatch "${FILESDIR}"/vzctl-2.7.0.23-gentoo_etc_vz.patch
+	epatch "${WORKDIR}"/patches/vzctl-2.7.0-gentoo_conf_d.patch
+	epatch "${WORKDIR}"/patches/vzctl-2.7.0.23-gentoo_etc_vz.patch
 
 	# fix hardcoded lib paths
-	use amd64 && epatch "${FILESDIR}"/vzctl-2.7.0-amd64.patch
+	use amd64 && epatch "${WORKDIR}"/patches/vzctl-2.7.0-amd64.patch
 
-	# PIC
-	epatch "${FILESDIR}"/vzctl-2.7.0.24-pic.patch
+	# fix PIC
+	epatch "${WORKDIR}"/patches/vzctl-2.7.0.24-pic.patch
 }
 
 src_compile() {

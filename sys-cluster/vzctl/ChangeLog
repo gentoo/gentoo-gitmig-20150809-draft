@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.10 2006/01/12 14:30:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.11 2006/02/18 09:18:22 phreak Exp $
+
+  18 Feb 2006; Christian Heim <phreak@gentoo.org>
+  -files/vzctl-2.7.0.23-gentoo_etc_vz.patch, -files/vzctl-2.7.0-amd64.patch,
+  -files/vzctl-2.7.0.24-pic.patch, -files/vzctl-2.7.0-gentoo_conf_d.patch,
+  vzctl-2.7.0.24.ebuild, vzctl-2.7.0.25.ebuild:
+  Moving patches to a seperate patch tarball
 
   12 Jan 2006; Benedikt Boehm <hollow@gentoo.org>
   +files/vzctl-2.7.0-amd64.patch, +files/vzctl-2.7.0.24-pic.patch,

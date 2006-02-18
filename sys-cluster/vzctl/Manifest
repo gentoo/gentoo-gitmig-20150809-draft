@@ -1,21 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eb5887541f4d341a74096db81a932359 ChangeLog 1836
-MD5 8aea757fe2bda9943ef7cfd6d6c51fe6 files/digest-vzctl-2.7.0.24 66
-MD5 fdc2f878f8d875de1d34854ef14675c9 files/digest-vzctl-2.7.0.25 66
+MD5 3d6fe5df8fb2372eb2ca554595b29280 ChangeLog 2132
+RMD160 b7cad5312a3f83672334c080af781c117cac6232 ChangeLog 2132
+SHA256 f63614e3dee9c70d6647a56758d58e4529f68dc6525f66fc96ac71222a62c68e ChangeLog 2132
+MD5 3236a2f9ce3ca6d1b4bd679a1a9f7d23 files/digest-vzctl-2.7.0.24 518
+RMD160 7583c7394f5774b22756ca351b7e1905cab5a918 files/digest-vzctl-2.7.0.24 518
+SHA256 163bc729b5ce1ee15d1f284baf29c2b780304a89f36cfcf0f3b5ac4f448e8441 files/digest-vzctl-2.7.0.24 518
+MD5 c6ced3cddbb3dda9a60336e82e68e52f files/digest-vzctl-2.7.0.25 518
+RMD160 96b6b1293ccff487df49dcab044152842f480216 files/digest-vzctl-2.7.0.25 518
+SHA256 9324d6f79c8c7052d3c6fc5f37675ec8ca360c14b7357840f36f37a68f4c7c9d files/digest-vzctl-2.7.0.25 518
 MD5 a2de79b189da1c2d3fd01fa2116bcea9 files/vz.initd 5465
-MD5 aa370ed43c03e3e93a36812d3eaf903a files/vzctl-2.7.0-amd64.patch 4434
-MD5 687eaa4427600a7a5edfc0b8b7f69480 files/vzctl-2.7.0-gentoo_conf_d.patch 3899
-MD5 48002ae17f4c768412ac70a33023d09d files/vzctl-2.7.0.23-gentoo_etc_vz.patch 7115
-MD5 d2877804e8c71fc4a8b5a9c97d2e79a7 files/vzctl-2.7.0.24-pic.patch 2419
+RMD160 303e4877e95db9f90d512b37d67cdaa94e823d52 files/vz.initd 5465
+SHA256 63c17d2783cfd01fcfb66aa8b0c572ea6bf366d59a72c10f1728091c7eaa5fc0 files/vz.initd 5465
 MD5 e5ba31c20aa49371e645a8950abd1054 metadata.xml 231
-MD5 e8ffa79f8864cae469d1c57dadede85c vzctl-2.7.0.24.ebuild 1731
-MD5 d2fb08f050dde7aa7780bf5693545a0d vzctl-2.7.0.25.ebuild 1678
+RMD160 532e75c33676f402571b5033faf42b7d0dbb9d28 metadata.xml 231
+SHA256 018942ba3f2ac5b93ec2576f55ff8d85b7808b35b751bfabb1879957f4f6c442 metadata.xml 231
+MD5 d4d7a8e7cb9d9f35dbcdd4a4b03b5a17 vzctl-2.7.0.24.ebuild 1885
+RMD160 21e6c867203bfffecbd01355991e0267d1ce2a3f vzctl-2.7.0.24.ebuild 1885
+SHA256 b26a6c6adaff7530dcd5c9cd15ab03451cf94c38ff68cd775a4955554e1657e7 vzctl-2.7.0.24.ebuild 1885
+MD5 c8da668a1a0d9703651ff9b2b7b8de0f vzctl-2.7.0.25.ebuild 1821
+RMD160 c486f836679bc2eb8c319c1aaef7fb82fe28d197 vzctl-2.7.0.25.ebuild 1821
+SHA256 9a47021cb788e622d78f0e0e59f0ad9504ad0c2493eddaf97472dd147a56d171 vzctl-2.7.0.25.ebuild 1821
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDxmgjmPFBzbX68WERAr99AJ447OBgyGB+K+BeQdO0tFNuXtH6vgCfX15E
-WvdCiDI/oekuzIfkVSdzUgg=
-=DKx3
+iD8DBQFD9uZuflZ8QqxhrsMRAgOrAJ9uHfYppwUjhxPAsqON2unVTyWfxQCgvg3y
+BezddybshKBYJwMACfqZdVc=
+=txFJ
 -----END PGP SIGNATURE-----
