@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.224 2006/02/17 22:18:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.225 2006/02/18 10:50:10 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -387,14 +387,13 @@ emktemp() {
 	else
 		if [[ ${exe} == "touch" ]] ; then
 			[[ ${USERLAND} == "GNU" ]] \
-				&& exe="-p" \
-				|| exe="-t"
+				&& mktemp -p "${topdir}" \
+				|| TMPDIR="${topdir}" mktemp -t tmp
 		else
 			[[ ${USERLAND} == "GNU" ]] \
-				&& exe="-d" \
-				|| exe="-dt"
+				&& mktemp -d "${topdir}" \
+				|| TMPDIR="${topdir}" mktemp -dt tmp
 		fi
-		TMPDIR="${topdir}" mktemp ${exe} tmp
 	fi
 }
 
