@@ -1,4 +1,14 @@
-MD5 7d6547489c7b568207cc2f8884333f30 ChangeLog 2295
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e68375b67ca3a1b67df6f485b9c36e56 ChangeLog 2407
 MD5 4b9470b4bdbe3c5d3c1a599bebce2822 files/digest-gnome-keyring-manager-2.12.0 81
-MD5 c8c3d4434942de141453c56add485631 gnome-keyring-manager-2.12.0.ebuild 867
+MD5 4b297eb9461c352f2778f7201811609d gnome-keyring-manager-2.12.0.ebuild 875
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD949XJrHF4yAQTrARAt5JAJ9QuWi1GIa/o7hn7Br9k3+ORGkotACgvKqF
+B954EabSwbYS1DVagLjp8oE=
+=iGnX
+-----END PGP SIGNATURE-----
