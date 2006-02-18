@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4_beta1.ebuild,v 1.3 2006/02/13 10:50:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4_beta1.ebuild,v 1.4 2006/02/18 01:25:51 hanno Exp $
 
 LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ko lt nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz xx zh_CN zh_TW"
 LANGS_DOC="da de es et fr it nl pt pt_BR ru sv"
@@ -20,7 +20,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="aac arts flac gstreamer kde mysql noamazon opengl postgres xine xmms
+IUSE="aac arts exscalibar flac gstreamer kde mysql noamazon opengl postgres xine xmms
 visualization musicbrainz ipod akode"
 # kde: enables compilation of the konqueror sidebar plugin
 
@@ -41,7 +41,8 @@ DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase )
 	                 >=media-plugins/libvisual-plugins-0.2 )
 	ipod? ( media-libs/libgpod )
 	akode? ( media-libs/akode )
-	aac? ( media-libs/libmp4v2 )"
+	aac? ( media-libs/libmp4v2 )
+	exscalibar? ( media-libs/exscalibar )"
 
 RDEPEND="${DEPEND}
 	dev-lang/ruby"
@@ -94,13 +95,13 @@ src_compile() {
 	              $(use_with visualization libvisual)
 	              $(use_enable !noamazon amazon)
 	              $(use_with musicbrainz)
+	              $(use_with exscalibar)
 				  $(use_with ipod libgpod)
 				  $(use_with akode)
 				  $(use_with aac mp4v2)
 	              --without-helix
 	              --without-mas
 	              --without-nmm
-				  --without-exscalibar
 				  --without-ifp
 				  --without-gstreamer10"
 
