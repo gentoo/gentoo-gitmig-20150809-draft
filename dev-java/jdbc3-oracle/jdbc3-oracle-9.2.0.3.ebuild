@@ -1,11 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.3.ebuild,v 1.15 2005/07/18 15:46:46 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.3.ebuild,v 1.16 2006/02/18 03:07:37 karltk Exp $
 
 inherit java-pkg
 
 IUSE="debug doc"
 
+# karltk: when updating these, also update the fetch description, in pkg_nofetch
 file_main_orig=ojdbc14.jar
 file_main_debug_orig=ojdbc14_g.jar
 file_rowset_orig=ocrs12.zip
@@ -35,9 +36,9 @@ pkg_nofetch() {
 	einfo
 	einfo " 1. Visit ${HOMEPAGE}"
 	einfo "    (you may need to create an account on Oracle's site)"
-	einfo " 2. Download the appropriate files:"
-	einfo "    - ${file_main_orig}"
-	einfo "    - ${file_rowset_orig}"
+	einfo " 2. Download the appropriate files. Make sure to select the correct version!"
+	einfo "    - ${file_main_orig} (http://download.oracle.com/otn/utilities_drivers/jdbc/9203/ojdbc14.jar)"
+	einfo "    - ${file_rowset_orig} (http://download.oracle.com/otn/utilities_drivers/jdbc/9203/ocrs12.zip)"
 	use doc > /dev/null && einfo "    - ${file_doc_orig}"
 	use debug > /dev/null && einfo "    - ${file_main_debug_orig}"
 	einfo " 3. Rename the files:"
