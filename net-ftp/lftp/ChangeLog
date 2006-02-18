@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.95 2006/02/17 21:12:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.96 2006/02/18 01:50:05 dragonheart Exp $
+
+  18 Feb 2006; Daniel Black <dragonheart@gentoo.org> lftp-3.0.13.ebuild,
+  -lftp-3.3.4-r1.ebuild, -lftp-3.4.0.ebuild, lftp-3.4.0-r1.ebuild:
+  gettext not an rdepend - thanks exg. Removed old versions
 
   17 Feb 2006; Fabian Groffen <grobian@gentoo.org> lftp-3.3.4-r1.ebuild:
   disable readline dependency for ppc-macos as it uses the internal readline
