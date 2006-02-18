@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0014955be2b2b18aab931bb842ddb93b ChangeLog 1214
 RMD160 cfa3b4010fb705484e0d5a2b9a572e5f7ec8a434 ChangeLog 1214
 SHA256 8864feed53b2fb418be00b8118699d210cd3d2acaecb2d2c235f22ea8c287bb8 ChangeLog 1214
@@ -10,3 +13,10 @@ SHA256 106c8618581360c66c2b535fcb7a6cb9ff318f1bd8e6c8f40f2f2f2d54e6787a metadata
 MD5 b5dd67eadb6fc4ee7949ea4a111b343d searchcomplete-1.1.ebuild 508
 RMD160 2941a5dfbee33e61894c7ed6be54dc9ce290642c searchcomplete-1.1.ebuild 508
 SHA256 45c9f294386327b1e60690c8db27a49c63a78bd86fddca7e233195ed823d61d0 searchcomplete-1.1.ebuild 508
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD9rniLLFUmVNQ7rkRAoluAJ4iTSBie0K9R6VPo8XFyu29kb+qtQCbBgMp
+FPIATEo4+sFO00ulB/PgEzs=
+=pyYh
+-----END PGP SIGNATURE-----
