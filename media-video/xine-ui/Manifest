@@ -2,21 +2,14 @@
 Hash: SHA1
 
 MD5 eebea0a71e9497aaed1790c5e6c5ce38 ChangeLog 17622
-RMD160 83727d8626013ac3d0e2a0084dfc2c836da3e98f ChangeLog 17622
-SHA256 a40a62c34ae2e2c0af3a35e4346945c427f3e9496219028ede3f838fb2721661 ChangeLog 17622
 MD5 39002a0b13bd6e79fb6b863e93a3bcc6 files/digest-xine-ui-0.99.4-r3 136
-RMD160 10783ad2a4f9ac3cbff02aae2be832a221a18a70 files/digest-xine-ui-0.99.4-r3 136
-SHA256 5b0983a5e56fd04d2d169f6bc13494724ca8ea20336f9f53d655b8eacc1df5fc files/digest-xine-ui-0.99.4-r3 136
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
-SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
-MD5 67c95f5516afa64b151ab4fcf95099cd xine-ui-0.99.4-r3.ebuild 2136
-RMD160 68cb13a0b440b88fdd2902a8d542b0f8d2d333f3 xine-ui-0.99.4-r3.ebuild 2136
-SHA256 d2a201b63e40e4b6e013f821d00b0ab499a20ba90488e839268fcedd736a0a37 xine-ui-0.99.4-r3.ebuild 2136
+MD5 9300836210001c52446cce022be5d2f0 xine-ui-0.99.4-r3.ebuild 2172
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+Comment: no further Information
 
-iD8DBQFD6lelJrHF4yAQTrARAlHGAKCSVuYkFjXPTfQtqtEV9mlDC2aM1QCff23c
-iEC9EZlH/HBdX9ksLQbjYYk=
-=ivn5
+iD8DBQFD954kdn07HTTCgIoRAq6hAKC08Rkq4+lhq871z3OtDiJVJk0TpACfR29L
+Fq5inySc/tv89GF6b8FyEkA=
+=aYV/
 -----END PGP SIGNATURE-----
