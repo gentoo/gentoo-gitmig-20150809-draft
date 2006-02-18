@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.77 2006/02/17 20:52:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.78 2006/02/18 11:59:19 blubb Exp $
+
+  18 Feb 2006; Simon Stelling <blubb@gentoo.org> ChangeLog:
+  stable on amd64
 
   17 Feb 2006; Markus Rothe <corsair@gentoo.org> dhcp-3.0.3-r2.ebuild:
   Stable on ppc64; bug #89424
