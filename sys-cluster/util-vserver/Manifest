@@ -1,18 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 975f942305a5670da58dc8e48b4186b2 ChangeLog 8136
+MD5 28819dba6a87d8673b53b2006e017e5c ChangeLog 8311
+RMD160 b151452b80e88163d7ad0df22f6ca6e24ac1813a ChangeLog 8311
+SHA256 f7b8b736760e187a80b9a13b12b60d4e3e06a85544035b8158452043a892fd72 ChangeLog 8311
 MD5 d12341fed81bbbfc770dbdb5cf953bd2 files/digest-util-vserver-0.30.209-r1 157
+RMD160 0c2fe0fefa955dc1e90dcfac883af1db9d9e0f77 files/digest-util-vserver-0.30.209-r1 157
+SHA256 84e1e11689e5d511536401071025a7b55993ff33bb1d74f9e4ff1414b36c9bf8 files/digest-util-vserver-0.30.209-r1 157
 MD5 299fd5895a5c291ffbaf1e12c6e56104 files/digest-util-vserver-0.30.210 158
+RMD160 ed4a1289aaac325d1b526687f68da5d52f5bee0b files/digest-util-vserver-0.30.210 158
+SHA256 6b89b796dd5582595b1ca6b63581d77b5c8242bf7357e00aa1b76fbdee236d2a files/digest-util-vserver-0.30.210 158
 MD5 9d2727ce35dd68d80e55f4cf7c5540a4 files/digest-util-vserver-0.30.210-r1 158
+RMD160 d807eabb683427ab871eea9bdc236068574d6c8f files/digest-util-vserver-0.30.210-r1 158
+SHA256 b3366ec0e404b5bee6fa0aed3ad9b807e18ce34a079ec02957e3e9d86cf90f5b files/digest-util-vserver-0.30.210-r1 158
+MD5 58a32f5aef8c1e90527c4dddd1176a93 files/digest-util-vserver-0.30.210-r2 566
+RMD160 afcbc369282f8065f983b91862de4aae1140169d files/digest-util-vserver-0.30.210-r2 566
+SHA256 b936b93130da5019225a7b6ca4940e0381dcdfe22e9833bfd1d829b79ace6105 files/digest-util-vserver-0.30.210-r2 566
 MD5 493021fa14e20216e8ce772e9dc10a62 metadata.xml 588
+RMD160 43bd819942f6f0c03bec0bcf67601a7099b59a2b metadata.xml 588
+SHA256 798e87b6d5fb379322178e9f8b7432371f630caaf3fd6ff369e35056483cc31d metadata.xml 588
 MD5 c4bb5ed3896a704217ab46bca900e796 util-vserver-0.30.209-r1.ebuild 2907
+RMD160 e55b853ad8febfa383fa94898d0afcd44169e424 util-vserver-0.30.209-r1.ebuild 2907
+SHA256 6679506da923d54bf212fededb8a739af243f5376e790dc9c427f8ebe581f930 util-vserver-0.30.209-r1.ebuild 2907
 MD5 ccc9afa0183ee6e64aaed66b71b369fe util-vserver-0.30.210-r1.ebuild 2911
+RMD160 8a91fc7f1e78f3ba5b59d69c055ee58c82b6c6fa util-vserver-0.30.210-r1.ebuild 2911
+SHA256 a5a1666505a0dd31503f948a75a656fa7a3375132dfde069523e823157e2f542 util-vserver-0.30.210-r1.ebuild 2911
+MD5 3f49419a9156fde27cc2052163f640b2 util-vserver-0.30.210-r2.ebuild 2911
+RMD160 e1260a7251272896a362146a3636340381ace2d0 util-vserver-0.30.210-r2.ebuild 2911
+SHA256 934ba913980f1af8e421741931d3f5e5dcaac02f58efbab995d61ffde1e4ab45 util-vserver-0.30.210-r2.ebuild 2911
 MD5 0515a37f955105cb2a42f6281911a6a4 util-vserver-0.30.210.ebuild 2908
+RMD160 42c3ab42664b67a8eb65f173fd7c6f642d453e32 util-vserver-0.30.210.ebuild 2908
+SHA256 e16b9798cdc2b47b5e6fa2368ebd41b71b2cd7db01d9244fcbe97b97d708f3d0 util-vserver-0.30.210.ebuild 2908
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD1O02flZ8QqxhrsMRAn8aAKCXp1a0Es+y/W/jm6WgRFcw0RCHzwCgt4vs
-Q7v1XPg/0zpRb1sMXW7Zx7A=
-=wcOP
+iD8DBQFD92S/flZ8QqxhrsMRAorGAKCaRGX0DU7a1YEZg/BQ7U1zB3/NTwCgq1gR
+KOXfWnwy1mayLC4zcZEdB74=
+=Q8bM
 -----END PGP SIGNATURE-----
