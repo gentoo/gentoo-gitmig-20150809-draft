@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 946dc088c6183abe15bdf96725f9b4e6 ChangeLog 7248
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-ogg-0.10.0 77
 MD5 0558db8f3c6a0a66bc61b6a02f9aeb8d files/digest-gst-plugins-ogg-0.10.1 77
@@ -16,3 +19,10 @@ MD5 110890804b61d3cccf73f4b6048d32b0 gst-plugins-ogg-0.8.11.ebuild 417
 MD5 c64b45647c6760fadc098389ca325dea gst-plugins-ogg-0.8.8.ebuild 413
 MD5 92fe7711b44092b73cc2b2bf44f47d3b gst-plugins-ogg-0.8.9.ebuild 423
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD95XeJrHF4yAQTrARAodyAJ0QuNDZyIRkna4T8iOdrdbyzHZGiwCfYJ5y
+jo2wMUDo148eTUuBPghTyvA=
+=XwcJ
+-----END PGP SIGNATURE-----
