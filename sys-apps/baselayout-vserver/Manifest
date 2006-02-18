@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 69e1d33e282f9e01420b0ed38d1b77b3 ChangeLog 4203
-RMD160 d8755959f5f4b3489af86efa67b06a38d83098dd ChangeLog 4203
-SHA256 d5145c8ab0635a4c50f3b967ac1497615218853d2451051959c66a300733f146 ChangeLog 4203
+MD5 b923ceec460ae603f127215c1cd180f3 ChangeLog 4350
+RMD160 dbdb26b99db66f3f7fec726f476cf5b03d216f90 ChangeLog 4350
+SHA256 ae0a52ebdd72e64f4ff82cd68ad12b8ebfe4fde01b358f8e7aed24bb6201889c ChangeLog 4350
 MD5 3154e9763ae2199cddf00a2fa89af3f9 baselayout-vserver-1.11.13-r1.ebuild 13273
 RMD160 0ddc092f0ef5baf7722364cc66c1dbd83fc612c8 baselayout-vserver-1.11.13-r1.ebuild 13273
 SHA256 dc57caa059c3f618b5af74452cfc0ca970f732c9178b1760bc038606de456470 baselayout-vserver-1.11.13-r1.ebuild 13273
 MD5 28ead1d66338b46a6ecab7953139b45b baselayout-vserver-1.11.14-r1.ebuild 15841
 RMD160 55e3401d76818284cfa11937de549598e7a0eaf4 baselayout-vserver-1.11.14-r1.ebuild 15841
 SHA256 c24501625dd556bf46f543db281880d1773c9317cc770e4af1a2a88ee760b13a baselayout-vserver-1.11.14-r1.ebuild 15841
+MD5 e8fd52610ce2e2767ec9b14bdc7be21f baselayout-vserver-1.11.15.ebuild 15690
+RMD160 39e9fb60c184654ad8198a29ece90c1d511179fb baselayout-vserver-1.11.15.ebuild 15690
+SHA256 c08a2093cb67909a74d8f2bb8bf99da3ed4929fa0886b5eb7690ca49ac75e930 baselayout-vserver-1.11.15.ebuild 15690
 MD5 8bbf6c606bd60a3825fd79aaab624805 baselayout-vserver-1.12.0_pre8-r2.ebuild 12601
 RMD160 e7de602a8614ec2a406cfb1e8583392564bc86d6 baselayout-vserver-1.12.0_pre8-r2.ebuild 12601
 SHA256 8017e9a3a4e1cf6233dbfad9fda6c173a3f0b3c864e9c27c8b915e6920ca4dd9 baselayout-vserver-1.12.0_pre8-r2.ebuild 12601
@@ -37,6 +40,9 @@ SHA256 40ad57218af373af66ae7be6a0848a3cb2088f34e99d1a70c1c12d4c924b23e0 files/di
 MD5 a16bb04391567ba9ce418328ddc53104 files/digest-baselayout-vserver-1.11.14-r1 280
 RMD160 1b4837fb57d341c9a7062cd93e73a6febff3be20 files/digest-baselayout-vserver-1.11.14-r1 280
 SHA256 949e1593b90a62939e3a919166fc7789051f2a760574c3f21e89263dd5e68fe8 files/digest-baselayout-vserver-1.11.14-r1 280
+MD5 0ee580482489f7f463d51d0372779135 files/digest-baselayout-vserver-1.11.15 280
+RMD160 9e73c74ee5bbcb8ae65f0490bfef05cb761c9865 files/digest-baselayout-vserver-1.11.15 280
+SHA256 052e60412d5e92240c2002c3a80bd089059b93b32e817369f5f77af570f3f5bd files/digest-baselayout-vserver-1.11.15 280
 MD5 f6300fc5175902aa7e634664ac6d96bc files/digest-baselayout-vserver-1.12.0_pre8-r2 295
 RMD160 d1fa69c9a21dae4478179be846da9a1ead707d40 files/digest-baselayout-vserver-1.12.0_pre8-r2 295
 SHA256 0d9ccc11eb84db164243b6be1d1bf6fd6a52a9a626d2b17d7cc3c3db56cd260a files/digest-baselayout-vserver-1.12.0_pre8-r2 295
@@ -50,9 +56,9 @@ MD5 e5ba31c20aa49371e645a8950abd1054 metadata.xml 231
 RMD160 532e75c33676f402571b5033faf42b7d0dbb9d28 metadata.xml 231
 SHA256 018942ba3f2ac5b93ec2576f55ff8d85b7808b35b751bfabb1879957f4f6c442 metadata.xml 231
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD6EaPmPFBzbX68WERAs5IAJ9D+unkCVu2yOQeXFDZcdm67D0tBwCfcmXK
-SFBndjxlFA1N02q9JkViG7E=
-=8N8B
+iD8DBQFD918cflZ8QqxhrsMRAhtcAJ9ZHBUlQNOhaDbLgviDYYMi0ZcltwCfce0N
+0EKhHtRfgmyVcZpaTLJXvws=
+=ynjC
 -----END PGP SIGNATURE-----
