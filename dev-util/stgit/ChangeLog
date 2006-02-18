@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/stgit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.8 2006/02/17 16:24:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.9 2006/02/18 12:19:25 blubb Exp $
+
+  18 Feb 2006; Simon Stelling <blubb@gentoo.org> stgit-0.8.1.ebuild:
+  added ~amd64 keyword
 
   17 Feb 2006; Joseph Jezak <josejx@gentoo.org> stgit-0.8.1.ebuild:
   Marked ~ppc for bug #122887.
