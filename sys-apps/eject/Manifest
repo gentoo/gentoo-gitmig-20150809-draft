@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a363c2153e88de73bca43c3cbadb551d ChangeLog 7248
-RMD160 6a417b02f5233f221f6875c423d9c4fbde9842db ChangeLog 7248
-SHA256 d27353228b6c9b1bce3a83b8f350821884dc0ea0470c7f92d05ca8a87745dde0 ChangeLog 7248
+MD5 3220a45360a4cc0334e0e82acef9b029 ChangeLog 7424
+RMD160 21230abb44d35f4dd070589518a9f5429d674b7a ChangeLog 7424
+SHA256 7be57b5273f383b57a28071b7352cb449b62c5cc62a4f94e5927cc1573fdf8b8 ChangeLog 7424
 MD5 35241bc9ea850572d8d7275f822b8162 eject-2.0.13-r1.ebuild 1109
 RMD160 d5d49ca8547dea20988d4aeaaffb838e4b1bd89e eject-2.0.13-r1.ebuild 1109
 SHA256 ff702d1d7ade7260363104af5e8ee117ba9d45ba80cbfcccfaf4883895ba0f19 eject-2.0.13-r1.ebuild 1109
@@ -13,6 +13,9 @@ SHA256 47b34c954a7bdae352bd799dab783abc0d72601411ec7eed001964a0dc9759a5 eject-2.
 MD5 08a5656db344bf81f746f925ad7b5a0e eject-2.1.0-r1.ebuild 1443
 RMD160 c7cfc40ad12026febe9d031e8635a57ab625fc02 eject-2.1.0-r1.ebuild 1443
 SHA256 37c15e119080cc4f5ee4ec7b6347ab5e9ded0cb92ac4038e64decfea114d4e12 eject-2.1.0-r1.ebuild 1443
+MD5 f827f80b26493cd3f392f9bbb05383eb eject-2.1.4.ebuild 923
+RMD160 1c9cba12d42f69a44d04d30e7f4fe7c2753f1ae7 eject-2.1.4.ebuild 923
+SHA256 76a540de34d952dcc18d34de42ddaa718a5582b99bbc63f29dcb903c54532a09 eject-2.1.4.ebuild 923
 MD5 a8f6893c482c2b74b0e799b6cd81e867 files/digest-eject-2.0.13-r1 63
 RMD160 82cf967dd51d6347bb57a2f9d71dde3eaf2f0315 files/digest-eject-2.0.13-r1 63
 SHA256 2d59e1b005a0a210236a71a1bbc63f36bf7a008231d2d4b19a7f43a0af21e903 files/digest-eject-2.0.13-r1 63
@@ -22,6 +25,9 @@ SHA256 2d59e1b005a0a210236a71a1bbc63f36bf7a008231d2d4b19a7f43a0af21e903 files/di
 MD5 08dc58c70968f3a82874839bfb9b2431 files/digest-eject-2.1.0-r1 232
 RMD160 e6bbc79202f33c6387ebc6f78698d6677ad7aa67 files/digest-eject-2.1.0-r1 232
 SHA256 77e6feb93ed779bef4576a2a942957e5cdda176ad7823784343f048efe2fb7ca files/digest-eject-2.1.0-r1 232
+MD5 960f79b2305f4fe7be7d8d4124046351 files/digest-eject-2.1.4 235
+RMD160 615cc03e3051b60d0220cf488d8a594a2a155e72 files/digest-eject-2.1.4 235
+SHA256 f9a1f99fc8dbc439c240de02364f083e5aaed8f850c0cb22a34491e33a704784 files/digest-eject-2.1.4 235
 MD5 79ae9b9c17b25df97606a29a7bb47150 files/eject-2.0.13-autoclose.patch 726
 RMD160 9581fa635a7fcb4b06721c92e536140ee10330b7 files/eject-2.0.13-autoclose.patch 726
 SHA256 abb0fb0e97c075049ab099257975ba71c0a8f0260b9234274543bc7603555485 files/eject-2.0.13-autoclose.patch 726
@@ -73,13 +79,16 @@ SHA256 1badc4f2dbd216e54c40e03b3533d7aaf8611ac87b66aa9186ca8e350267b77a files/ej
 MD5 4fe19fa0834f76961cd0885f63875e57 files/eject-2.1.0-toggle.patch 777
 RMD160 1f70a8a9da26d4172fb40fec2e0727bf9370336b files/eject-2.1.0-toggle.patch 777
 SHA256 eb2bf8f7720fe491013299004b215023d4909e3d785e510a48837927e14a4078 files/eject-2.1.0-toggle.patch 777
+MD5 c60f35b2fe8b086c47004b5e43f5bfa4 files/eject-2.1.4-toggle.patch 761
+RMD160 8fafacb5798d9bd12b1a5e03d27328e65164a79c files/eject-2.1.4-toggle.patch 761
+SHA256 805ee903b97a76b8cb456fdeb2f6d7ae45316ef0cdba68b76d14625ad1d84cb4 files/eject-2.1.4-toggle.patch 761
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD7yH62+ySkm8kpY0RAv7TAJ4gB2adlEff6Ohw44IoGbqXhbwV4wCcC2Lm
-nPwYHSdQzd75FyxIZ3DP38w=
-=leW6
+iD8DBQFD9rLN2+ySkm8kpY0RAokpAJ9aCGeDur7PaeaPwXIY4sYj/jsa/wCfVRPW
++8d1ONN4S/6Xn+vMcPR5jaQ=
+=2sbe
 -----END PGP SIGNATURE-----
