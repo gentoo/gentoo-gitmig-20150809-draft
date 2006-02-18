@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.3.4-r1.ebuild,v 1.2 2005/11/28 07:03:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.0.ebuild,v 1.1 2006/02/18 22:50:36 dragonheart Exp $
 
 inherit eutils
 
@@ -10,30 +10,50 @@ SRC_URI="mirror://sourceforge/conky/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="truetype X ipv6"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="truetype X ipv6 bmpx bmp xmms infopipe audacious"
 
 DEPEND_COMMON="
 	virtual/libc
 	X? (
-		virtual/x11
+		|| ( ( x11-libs/libICE
+				x11-libs/libXext
+				x11-libs/libX11
+				x11-libs/libSM
+				x11-libs/libXrender
+				x11-libs/libXft
+				)
+				virtual/x11
+		)
 		truetype? ( >=media-libs/freetype-2 )
+		bmpx? ( media-sound/bmpx
+				>=sys-apps/dbus-0.35
+		)
+		audacious? ( media-sound/audacious )
+		infopipe? ( || ( media-plugins/bmp-infopipe media-plugins/xmms-infopipe ) )
+		xmms? ( media-sound/xmms )
 	)"
 
+		#bmp? ( media-sound/beep-media-player )
 RDEPEND="${DEPEND_COMMON}"
-#	seti? ( sci-astronomy/setiathome )"
 
 DEPEND="
 	${DEPEND_COMMON}
-	sys-devel/libtool
+	X? (
+		|| ( ( x11-libs/libXt
+				x11-proto/xextproto
+				x11-proto/xproto
+				)
+				virtual/x11
+		)
+	)
 	sys-apps/grep
-	sys-apps/sed
-	sys-devel/gcc"
+	sys-apps/sed"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-miscbug.patch
+	epatch ${FILESDIR}/portmon-mpd.patch || die "epatch failed"
 }
 
 src_compile() {
@@ -44,19 +64,23 @@ src_compile() {
 		ewarn "using the ipv6 USE flag with Conky disables the port"
 		ewarn "monitor."
 		ewarn
-		sleep 5
+		epause
 	else
 		mymake="MPD_NO_IPV6=noipv6"
 	fi
 	local myconf
-	myconf="--enable-double-buffer --enable-own-window --enable-proc-uptime
-	--enable-mpd --enable-mldonkey"
+	myconf="--enable-double-buffer --enable-own-window --enable-proc-uptime \
+		--enable-mpd --enable-mldonkey"
 	econf \
 		${myconf} \
 		$(use_enable truetype xft) \
 		$(use_enable X x11) \
+		$(use_enable bmpx) \
+		$(use_enable bmp) \
+		$(use_enable xmms) \
+		$(use_enable audacious) \
+		$(use_enable infopipe) \
 		$(use_enable !ipv6 portmon) || die "econf failed"
-#		$(use_enable seti)
 	emake ${mymake} || die "compile failed"
 }
 
@@ -78,13 +102,7 @@ pkg_postinst() {
 	einfo "There are also pretty html docs available"
 	einfo "on Conky's site or in /usr/share/doc/${PF}"
 	einfo
-	einfo "Comment out temperature info lines if you have no kernel"
-	einfo "support for it."
-	einfo
 	einfo "Check out app-vim/conky-syntax for conkyrc"
 	einfo "syntax highlighting in Vim"
 	einfo
-	ewarn "Conky doesn't work with window managers that"
-	ewarn "take control over root window such as Gnome's nautilus."
-	ewarn
 }
