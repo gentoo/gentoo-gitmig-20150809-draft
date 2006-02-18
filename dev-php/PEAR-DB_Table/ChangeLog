@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-DB_Table
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/ChangeLog,v 1.19 2006/01/27 18:50:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/ChangeLog,v 1.20 2006/02/18 20:13:10 agriffis Exp $
+
+  17 Feb 2006; Aron Griffis <agriffis@gentoo.org>
+  PEAR-DB_Table-0.21.2-r1.ebuild:
+  Mark 0.21.2-r1 stable on alpha/ia64. #119722
 
   27 Jan 2006; Jeroen Roovers <jer@gentoo.org>
   PEAR-DB_Table-0.21.2-r1.ebuild:
