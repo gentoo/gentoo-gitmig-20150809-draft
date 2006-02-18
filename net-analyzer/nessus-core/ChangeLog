@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.103 2006/02/12 22:47:39 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.104 2006/02/18 19:50:53 grobian Exp $
+
+  18 Feb 2006; Fabian Groffen <grobian@gentoo.org> nessus-core-2.3.1.ebuild:
+  Marked ~ppc-macos (bug #123308)
 
   12 Feb 2006; Marcelo Goes <vanquirius@gentoo.org>
   -nessus-core-2.2.4-r1.ebuild, -nessus-core-2.2.5.ebuild:
