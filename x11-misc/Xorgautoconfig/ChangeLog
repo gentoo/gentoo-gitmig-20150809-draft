@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/Xorgautoconfig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/ChangeLog,v 1.11 2006/02/11 07:46:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/ChangeLog,v 1.12 2006/02/18 21:01:55 josejx Exp $
+
+  18 Feb 2006; Joseph Jezak <josejx@gentoo.org> -files/pciutils.patch,
+  -Xorgautoconfig-0.2.1.ebuild, Xorgautoconfig-0.2.3.ebuild:
+  Marked ppc stable and removed old versions.
 
   11 Feb 2006; Markus Rothe <corsair@gentoo.org>
   Xorgautoconfig-0.2.2.ebuild:
