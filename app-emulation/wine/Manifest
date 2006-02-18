@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0ae00b029fbe01a0983d477e2b716c68 ChangeLog 24113
-RMD160 19e2bddaf7da3fcb6add9c325cdb40b633803e87 ChangeLog 24113
-SHA256 c5c3dde94077aaaf5be5c1e822da5d225d6bed95e91be950df74a70fb6948319 ChangeLog 24113
+MD5 825a23140ad0dba79dbef8c09c42b41b ChangeLog 24265
+RMD160 2e8cb070baa00292ae85a5bd91b0aa3baf35ab24 ChangeLog 24265
+SHA256 0457f9237916ee0bceb6884c783503ace38a2c6377f2696eb42b476e2da719d4 ChangeLog 24265
 MD5 fb8724a36ec3bef0ad3a3c36376b786a files/digest-wine-0.9 63
 RMD160 e2e2e9e410345effc5472930c8dff010b8cb1116 files/digest-wine-0.9 63
 SHA256 05a0841e1f0afa0af868b58819bc9a64e00cab9e6817034a5c93dc4c273b161d files/digest-wine-0.9 63
@@ -28,9 +28,9 @@ SHA256 413259251d678d4dec9f99bee93de87e9b63a55bc260e8b512f8d5f054e7f357 files/di
 MD5 f225f2fb4b4bd38c3ba3adbfb8b3722a files/digest-wine-0.9.7 241
 RMD160 aa22a386845edd2abc017df9cbdaf883befe085c files/digest-wine-0.9.7 241
 SHA256 c1626c8942754681b410c25448ce360d88367f32df21026ed3b70c77a353204b files/digest-wine-0.9.7 241
-MD5 247af1df538f8160d6dc0fd4eb7750fe files/digest-wine-0.9.8 241
-RMD160 26966042cc74b1f9d1d3d9a3becfa47694c6e9fb files/digest-wine-0.9.8 241
-SHA256 af1bfaee4da7103871e27f5507ece027aba6f27d1db4a1fbb36255e00c1664ef files/digest-wine-0.9.8 241
+MD5 247af1df538f8160d6dc0fd4eb7750fe files/digest-wine-0.9.8-r1 241
+RMD160 26966042cc74b1f9d1d3d9a3becfa47694c6e9fb files/digest-wine-0.9.8-r1 241
+SHA256 af1bfaee4da7103871e27f5507ece027aba6f27d1db4a1fbb36255e00c1664ef files/digest-wine-0.9.8-r1 241
 MD5 23ff2a3980929ae4a6f02161bd875b55 files/digest-wine-20041019-r3 67
 RMD160 4261a416bb000c27f06b919180a35b0710cd7565 files/digest-wine-20041019-r3 67
 SHA256 9c38f9888c6857456ab61e321a958b7bd6884864e2b8bfb67a7a74478473b5ea files/digest-wine-20041019-r3 67
@@ -70,9 +70,6 @@ SHA256 1de54bb6eb8cc3c3f15ea42f916605fa151a5c33ef8c0cdb3412c0d81bbf9dab files/wi
 MD5 125d70d60f356673616cf1effa73d5d1 files/wine-0.9.6-force-ddraw-gamma.patch 862
 RMD160 b3b31b54251bbd45a910ab0ab135ce3b013cdeda files/wine-0.9.6-force-ddraw-gamma.patch 862
 SHA256 02455f96d853283e0b69799e246c17afd396ffa9d4b91fb3a96abaf6ae7d59e7 files/wine-0.9.6-force-ddraw-gamma.patch 862
-MD5 44b917b42a95043e40c6ed24d33af192 files/wine-0.9.8-destdir.patch 548
-RMD160 3d4e5846f187c426a00d0caa0435bae141e4fe7a files/wine-0.9.8-destdir.patch 548
-SHA256 ca713fbdf22ceead77d8f124e6087a9f5ab71601dc919f029a7eb45d0a154209 files/wine-0.9.8-destdir.patch 548
 MD5 138d22e6669e8997cdf4dc6292db748d files/wine-20041019-alsa-headers.patch 448
 RMD160 9a8c6fee2f6b25f3e1181af52fc4282275f08b46 files/wine-20041019-alsa-headers.patch 448
 SHA256 5e13950d88746b9b73eaba1b631be97311ecb3982d10fa4fede00f85791bd468 files/wine-20041019-alsa-headers.patch 448
@@ -142,9 +139,9 @@ SHA256 cd7effa7c27f44bb94e16d79dc8f5f9025d5ff438212b3f5e270885d1546a6e3 wine-0.9
 MD5 7e39349c2b06e475cc7e019c3fd9a701 wine-0.9.7.ebuild 3760
 RMD160 05d77e2472e697e0cc6f70f62bdca37a55d3327f wine-0.9.7.ebuild 3760
 SHA256 5b3cf85c81018f0b8a007ccee564dd3c882d40196f7501d0047375c768a25df8 wine-0.9.7.ebuild 3760
-MD5 5723547f74e9d61c3e197b7c96d21aa4 wine-0.9.8.ebuild 3570
-RMD160 8579f7d76f67a53a0748f12baf36154c2979a8b3 wine-0.9.8.ebuild 3570
-SHA256 5df38ad2f10b3dc560c25b744511d9badd877cd549fe7f1b386247f3399a3ecd wine-0.9.8.ebuild 3570
+MD5 19556867fd85cd1da36dd48e6afd4f92 wine-0.9.8-r1.ebuild 3536
+RMD160 f0e844a4d2269fa0b93a0b7fba8e090f57656300 wine-0.9.8-r1.ebuild 3536
+SHA256 1224754b20383f3a7c64c92107c4f3dee7f861568d0c6f19c1871cec25a85ca6 wine-0.9.8-r1.ebuild 3536
 MD5 1cf19e432ad168a882560c21744498a8 wine-0.9.ebuild 4141
 RMD160 c0bd4dd3dba1b333240682479982deab4ce4d743 wine-0.9.ebuild 4141
 SHA256 00c8d90cc43ecb7be21562f9b0628f31b84dcadae4235ba882866102d1e79733 wine-0.9.ebuild 4141
@@ -182,9 +179,9 @@ MD5 3497f88f2945e1696bcc78d45607a6e4 wine-9999.ebuild 3505
 RMD160 4fd4f8a49a5f430468f7d22271574028118b19b4 wine-9999.ebuild 3505
 SHA256 3c59733857447827122179ce0cbad4471e0141d9b62ffa53d5fadd2165b7b666 wine-9999.ebuild 3505
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD8+Lp2+ySkm8kpY0RAvAdAKDEy2lDDhDAMREnHb8EBqfYPwRw9wCghJzN
-NSmJQmBW8mW61tjGNp6yY20=
-=Fa39
+iD8DBQFD9q+/2+ySkm8kpY0RAihNAJ9HfL0IjHjXnK4CLp/r4ffUpThhZgCgof2Q
+pHBIKdBevvBAhJAmqeRPpb8=
+=E322
 -----END PGP SIGNATURE-----
