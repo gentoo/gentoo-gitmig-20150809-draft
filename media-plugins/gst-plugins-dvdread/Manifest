@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3dc5442c526f149106d15aee44a29230 ChangeLog 4303
-RMD160 9872dddfb4ebffa0a88a23f0b12d4e536b81a35d ChangeLog 4303
-SHA256 00b083a75b5ec4150bc6a88f9f16e69e49e3e61cac00ac88e2eb239d92ce6fe2 ChangeLog 4303
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-dvdread-0.8.10 72
-RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-dvdread-0.8.10 72
-SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-dvdread-0.8.10 72
-MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-dvdread-0.8.11 262
-RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-dvdread-0.8.11 262
-SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-dvdread-0.8.11 262
+MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-dvdread-0.8.11 72
 MD5 9dda5b5f81b3ba9591b6adf0c428513e gst-plugins-dvdread-0.8.10.ebuild 366
-RMD160 efb427367bb47698f2f01ad86ec1bdc088188ffd gst-plugins-dvdread-0.8.10.ebuild 366
-SHA256 399d2089a38898e6d1ed2389eae172fea081c183bce3f036e7b33cc6a9d8c4b7 gst-plugins-dvdread-0.8.10.ebuild 366
-MD5 2f65b32b0d1888feab75a3e1255b1822 gst-plugins-dvdread-0.8.11.ebuild 367
-RMD160 38a5c3b067f2f6e98a44d2f14d7cc12f0ff5153b gst-plugins-dvdread-0.8.11.ebuild 367
-SHA256 3ba30538b11b3701029015a053af432f368b7240b9c29e8ad3dcc7232b9bbd3f gst-plugins-dvdread-0.8.11.ebuild 367
+MD5 2412473b5f19332fea830a589267fbd7 gst-plugins-dvdread-0.8.11.ebuild 366
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
-RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
-SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1 metadata.xml 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6129JrHF4yAQTrARAvnBAKCt/Eab+u9vn3dXIrJ5ZqLW1nO3KwCgu/4Y
-vppMPnSiDyHjHaC9Ar3GraA=
-=nh4S
------END PGP SIGNATURE-----
