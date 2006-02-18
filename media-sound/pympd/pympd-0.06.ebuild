@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.06.ebuild,v 1.1 2006/02/18 21:55:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.06.ebuild,v 1.2 2006/02/18 23:33:23 ticho Exp $
 
 inherit eutils python
 
@@ -18,16 +18,12 @@ RDEPEND=">=virtual/python-2.4
 
 DOCS="README"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	sed -i -e "s:^PREFIX=.*:PREFIX=/usr:" \
-		-e "s:^DESTDIR=.*:DESTDIR=${D}:" \
-		Makefile
+src_compile() {
+	make PREFIX="/usr" DESTDIR="${D}"
 }
 
 src_install() {
-	make install
+	make PREFIX="/usr" DESTDIR="${D}" install
 
 	use gnome || cd ${D} && find -iname trayicon.* | xargs rm
 
@@ -42,6 +38,12 @@ src_install() {
 pkg_postinst() {
 	python_version
 	python_mod_optimize /usr/lib/python${PYVER}/site-packages/pympd
+
+	echo
+	ewarn
+	ewarn "You need to remove the .pympd directory from your home directory, as new version uses different settings format"
+	ewarn
+	echo
 }
 
 pkg_postrm() {
