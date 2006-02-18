@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.36 2006/02/17 00:30:36 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.37 2006/02/18 13:57:37 lu_zero Exp $
+
+  18 Feb 2006; Luca Barbato <lu_zero@gentoo.org> ghc-bin-6.4.1.ebuild:
+  Added ppc binary
 
   17 Feb 2006; <duncan@gentoo.org> ghc-bin-6.4.1.ebuild:
   Added ~amd64.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.3 2006/02/17 00:30:36 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.4 2006/02/18 13:57:37 lu_zero Exp $
 
 IUSE="" # use the non-binary version if you want to have more choice
 
@@ -9,15 +9,14 @@ DESCRIPTION="Glasgow Haskell Compiler"
 SRC_URI="x86?  ( mirror://gentoo/${P}-x86.tbz2 )
 		 amd64? ( mirror://gentoo/${P}-amd64.tbz2 )
 		 alpha? ( mirror://gentoo/${P}-alpha.tbz2 )
-		 sparc? ( mirror://gentoo/${P}-sparc.tbz2 )"
-# add these when they are ready:
-#		 ppc? ( mirror://gentoo/${P}-ppc.tbz2 )
+		 sparc? ( mirror://gentoo/${P}-sparc.tbz2 )
+		 ppc? ( mirror://gentoo/${P}-ppc.tbz2 )"
 #		 ppc64? ( mirror://gentoo/${P}-ppc64.tbz2 )
 HOMEPAGE="http://www.haskell.org"
 
 LICENSE="as-is"
-KEYWORDS="~alpha ~sparc ~x86 ~amd64"
-# add these when they are ready: ~ppc ~ppc64
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+# add these when they are ready: ~ppc64
 SLOT="0"
 
 RESTRICT="nostrip" # already stripped
