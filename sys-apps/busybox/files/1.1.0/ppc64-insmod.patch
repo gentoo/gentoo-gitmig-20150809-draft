@@ -1,0 +1,16 @@
+http://bugs.gentoo.org/122992
+
+Index: modutils/insmod.c
+===================================================================
+--- modutils/insmod.c	(revision 14108)
++++ modutils/insmod.c	(revision 14109)
+@@ -1297,6 +1297,9 @@
+ 			}
+ 			break;
+ 
++#elif defined(__powerpc64__)
++		/* do this someday ... */
++
+ #elif defined(__powerpc__)
+ 
+ 		case R_PPC_ADDR16_HA:
