@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/vilearn-1.0.ebuild,v 1.8 2005/06/05 11:30:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/vilearn-1.0.ebuild,v 1.9 2006/02/18 14:45:20 hattya Exp $
 
 IUSE=""
 
@@ -12,10 +12,7 @@ LICENSE="BSD"
 KEYWORDS="amd64 ppc x86"
 SLOT="0"
 
-RDEPEND="|| (
-		app-editors/vim
-		app-editors/vi
-	)"
+RDEPEND="app-editors/vim"
 
 src_compile() {
 
