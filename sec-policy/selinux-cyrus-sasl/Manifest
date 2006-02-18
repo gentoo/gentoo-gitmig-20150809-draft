@@ -1,14 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5ea267edab49b705a9bf78df520325cb ChangeLog 604
-MD5 fe0e5490a8062491c5c9e96cb16becda metadata.xml 512
-MD5 c0f3fbf9a061fb7957307da5d87cbb32 selinux-cyrus-sasl-20050918.ebuild 414
+MD5 b0f7e4d0b51e940dceceff8e9be46c00 ChangeLog 758
+RMD160 319ce4d604017a16c7b1e8d476818fa7612784c5 ChangeLog 758
+SHA256 1bba6cd0e9f3a5881b2667a0f9eac53ab28480516c2e2925b18acf1cb3ef84c6 ChangeLog 758
 MD5 637924f46dd19d5b9e07e754465e9f28 files/digest-selinux-cyrus-sasl-20050918 77
+RMD160 eab4eb47d899e40d0a64e3110e5693d232ed5dcf files/digest-selinux-cyrus-sasl-20050918 77
+SHA256 74e09d3aaf86d1dab9f96710b9dbcfd96766ae9fcf748496bc0b7cc6b98490d3 files/digest-selinux-cyrus-sasl-20050918 77
+MD5 3c18a4b7b10981f197500ba8e326507f files/digest-selinux-cyrus-sasl-20060218 277
+RMD160 b870fd58807e1b72829353086fae83315fb4007b files/digest-selinux-cyrus-sasl-20060218 277
+SHA256 a0b1b9f3063dca9c6bd94bc97a89bae9187b3606dfd756a0ef302e4813e69057 files/digest-selinux-cyrus-sasl-20060218 277
+MD5 fe0e5490a8062491c5c9e96cb16becda metadata.xml 512
+RMD160 90727febe6283eea80be6ed5493e416a5ba9a30f metadata.xml 512
+SHA256 141c31e1fca75f519a9f9337fe1bc83e2fa331682c49cac751c2f45dd134fff9 metadata.xml 512
+MD5 c0f3fbf9a061fb7957307da5d87cbb32 selinux-cyrus-sasl-20050918.ebuild 414
+RMD160 a897d20f4e40786ac140e2abc20979ff1fdde1cc selinux-cyrus-sasl-20050918.ebuild 414
+SHA256 7957267dd193fe7e577148054f02b4cf23f910a84c67673691ac7761abc5d32f selinux-cyrus-sasl-20050918.ebuild 414
+MD5 e7c7f62a88c2bf1512b4379a26f43b33 selinux-cyrus-sasl-20060218.ebuild 414
+RMD160 162f584ce8ec8f8a75d61f6d2f4c0ceddbfc0630 selinux-cyrus-sasl-20060218.ebuild 414
+SHA256 35e2f1544479d680b4c7d2166761b804d5d1e74019a5848d8f1e764ba9c14dd1 selinux-cyrus-sasl-20060218.ebuild 414
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFDLS5+GSBEIeh4AEYRAsFBAJ9l98whDKs6Ol1CqX2WAEZuGjrOuwCgglYS
-kJdUpWTVehgiBqaNP9QHL+M=
-=Xu4p
+iD8DBQFD90zcGSBEIeh4AEYRAgyLAJ96dwWPinC7IIVamo0Th/gJ2DveOACfd+2W
+KTvUSocAvRYOO1z0YHdHnzs=
+=5E4I
 -----END PGP SIGNATURE-----
