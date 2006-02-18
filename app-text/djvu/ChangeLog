@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.29 2006/02/10 10:27:47 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.30 2006/02/18 22:05:38 agriffis Exp $
+
+  18 Feb 2006; Aron Griffis <agriffis@gentoo.org> djvu-3.5.16.ebuild:
+  Mark 3.5.16 ~ia64
 
   10 Feb 2006; Martin Ehmsen <ehmsen@gentoo.org> djvu-3.5.16.ebuild:
   Only include gcc-4 compilation fix if gcc-4 is being used, bug #122329.
