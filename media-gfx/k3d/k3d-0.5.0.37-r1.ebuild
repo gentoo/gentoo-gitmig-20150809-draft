@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.5.0.37-r1.ebuild,v 1.1 2006/02/09 00:27:12 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.5.0.37-r1.ebuild,v 1.2 2006/02/18 20:23:26 vanquirius Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ DEPEND="virtual/opengl
 	python? ( >=dev-lang/python-2.3 )
 	tiff? ( media-libs/tiff )
 	=dev-libs/libsigc++-2.0*
-	svg? ( gnome-base/librsvg )"
+	gnome-base/librsvg"
 
 RDEPEND="${DEPEND}
 	( || (
