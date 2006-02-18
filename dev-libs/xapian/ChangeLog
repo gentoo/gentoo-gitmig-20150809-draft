@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.16 2006/02/18 05:16:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.17 2006/02/18 11:51:41 dragonheart Exp $
+
+*xapian-0.9.3-r1 (18 Feb 2006)
+
+  18 Feb 2006; Daniel Black <dragonheart@gentoo.org>
+  files/xapian-0.9.3-config.patch, -xapian-0.9.3.ebuild,
+  +xapian-0.9.3-r1.ebuild:
+  missed quote in patch - bug #123239 thanks Gary Young
 
 *xapian-0.9.3 (18 Feb 2006)
 

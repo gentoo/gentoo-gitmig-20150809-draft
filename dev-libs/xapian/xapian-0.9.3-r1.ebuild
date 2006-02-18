@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-0.9.3.ebuild,v 1.1 2006/02/18 05:16:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-0.9.3-r1.ebuild,v 1.1 2006/02/18 11:51:41 dragonheart Exp $
 
 inherit eutils
 
