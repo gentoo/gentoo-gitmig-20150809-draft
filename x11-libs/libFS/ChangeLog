@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libFS
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.16 2006/02/15 00:41:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.17 2006/02/18 10:30:16 stefaan Exp $
+
+  18 Feb 2006; Stefaan De Roeck <stefaan@gentoo.org> libFS-1.0.0.ebuild:
+  Marked ~alpha (bug #122726)
 
   15 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; libFS-1.0.0.ebuild:
   (#122726) Keyword ~ppc.
