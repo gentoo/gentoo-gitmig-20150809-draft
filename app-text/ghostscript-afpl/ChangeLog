@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.37 2006/02/03 20:22:12 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.38 2006/02/18 18:28:36 genstef Exp $
+
+*ghostscript-afpl-8.53-r3 (18 Feb 2006)
+
+  18 Feb 2006; Stefan Schweizer <genstef@gentoo.org>
+  ghostscript-afpl-8.15.ebuild, +ghostscript-afpl-8.53-r3.ebuild:
+  Add gtk-2 patch and fix hl1250, bug 120029, thanks to Alexander Jenisch
+  <nt-@gmx.de>
 
 *ghostscript-afpl-8.53-r2 (03 Feb 2006)
 
