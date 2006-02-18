@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetdude/libnetdude-0.8.ebuild,v 1.1 2006/02/18 21:38:30 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetdude/libnetdude-0.8.ebuild,v 1.2 2006/02/18 22:14:30 vanquirius Exp $
 
 DESCRIPTION="Library for manipulating libpcap/tcpdump trace files"
 HOMEPAGE="http://netdude.sourceforge.net/index.html"
@@ -24,7 +24,5 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README TODO
 
-	if use ! doc; then
-		rm -rf "${D}"/usr/share/gtk-doc
-	fi
+	use doc || rm -rf "${D}"/usr/share/gtk-doc
 }
