@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5009 2006/02/18 12:36:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5010 2006/02/18 13:11:46 dcoutts Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -66,11 +66,6 @@ mail-mta/netqmail
 # Old unmaintained package, dropping in favor of newer utilities like beagle.
 # Will be dropped 18/2/2006
 gnome-extra/medusa
-
-# Duncan Coutts <dcoutts@gentoo.org> (10 Feb 2006)
-# broken with older versions of hugs98 and superceeded by the HGL component
-# that comes with newer versions of hugs98.
-dev-haskell/hugs98-graphics
 
 # Bryan Østergaard <kloeri@gentoo.org> (10 Feb 2006)
 # Last rites, requested by jakub in http://article.gmane.org/gmane.linux.gentoo.devel/35899
@@ -1314,11 +1309,6 @@ dev-lisp/cl-imho
 # nagios-*2 is still beta
 >=net-analyzer/nagios-core-2.0b_p1
 >=net-analyzer/nagios-2.0b_p1
-
-# <kosmikus@gentoo.org> (19 Jan 2005)
-# several compilation problems using current gcc's,
-# for example #73367
-dev-lang/nhc98
 
 # <plasmaroo@gentoo.org> (16 Jan 2005)
 # Live CVS build, masking to keep the bunny rabbits happy.
