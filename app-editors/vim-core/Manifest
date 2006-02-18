@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 15a08df6a0d0749ab919a8f947e45795 ChangeLog 27508
 RMD160 492798d78b80be483c9cde21a715678d859990a2 ChangeLog 27508
 SHA256 9cb41ee047bc9f9ec6316a8cee19cf1fe3880f831b6297c4e7f3cb0ede87efa0 ChangeLog 27508
@@ -13,6 +10,9 @@ SHA256 ca419b5c8ab49649ca63da54b4adede69d9dbf397c7ed7130f8e3555825420b8 files/di
 MD5 15e184892d8ca9f6ab6b3ded8e2ee802 files/digest-vim-core-7.0_alpha20060205 578
 RMD160 17051863629bcfe00339b90369f068d420809e75 files/digest-vim-core-7.0_alpha20060205 578
 SHA256 32b12ff93e9fb97327b675e183a602773bc202c43f64d2b4b32305f29e7736c8 files/digest-vim-core-7.0_alpha20060205 578
+MD5 b93f589cbba5cd8cffdd8396385cd077 files/digest-vim-core-7.0_alpha20060218 578
+RMD160 bbc8b739560bbee090ca11468c63dd701a24425b files/digest-vim-core-7.0_alpha20060218 578
+SHA256 0dbd75bd868264dd09183ecf04c5dc0d568e7609123c4f69975f90e5de4fb971 files/digest-vim-core-7.0_alpha20060218 578
 MD5 c2d0302eae7fc80b2a1cb38ddab9d3d3 files/rphillips-invalcolorpatch.diff 722
 RMD160 3051c7877483b00ff6bb43c9136bbb4b784c5f3d files/rphillips-invalcolorpatch.diff 722
 SHA256 6678f6dd8b84d9b2c2454b346eb1febb17548f3e17b9f33ca6fc877a250660a1 files/rphillips-invalcolorpatch.diff 722
@@ -40,10 +40,6 @@ SHA256 d3acc2b95eb8df21183ce434849db2ab691af0fa7f2b522c358ece4dc5832653 vim-core
 MD5 010e82e99a8ba51111d16cca78260ad4 vim-core-7.0_alpha20060205.ebuild 766
 RMD160 e6c05a7ec8c094c2c394b7b1e96a2d3d854dc85e vim-core-7.0_alpha20060205.ebuild 766
 SHA256 ad94104b3074931799cef4606a1af7adb34f476c01200ee56fd3ad993a4f2034 vim-core-7.0_alpha20060205.ebuild 766
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5mPpLLFUmVNQ7rkRAuNnAKCBoji9pWjnGtPnpVHeNOWm0p3RHwCeNdBU
-AP4HVvD09MU4RzyG9+sMZvc=
-=5pC3
------END PGP SIGNATURE-----
+MD5 010e82e99a8ba51111d16cca78260ad4 vim-core-7.0_alpha20060218.ebuild 766
+RMD160 e6c05a7ec8c094c2c394b7b1e96a2d3d854dc85e vim-core-7.0_alpha20060218.ebuild 766
+SHA256 ad94104b3074931799cef4606a1af7adb34f476c01200ee56fd3ad993a4f2034 vim-core-7.0_alpha20060218.ebuild 766
