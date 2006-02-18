@@ -46,3 +46,6 @@ gnutls
 
 # gpgme doesn't compile: nested functions are not supported on MacOSX
 gpgme
+
+# libprelude depends on gnutls which is h0rkened for now
+prelude
