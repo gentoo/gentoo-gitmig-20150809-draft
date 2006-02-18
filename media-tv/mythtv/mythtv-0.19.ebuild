@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19.ebuild,v 1.4 2006/02/17 03:38:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19.ebuild,v 1.5 2006/02/18 11:01:05 cardoe Exp $
 
 inherit flag-o-matic eutils debug qt3
 
@@ -48,7 +48,7 @@ DEPEND="${RDEPEND}
 
 PDEPEND="~x11-themes/mythtv-themes-${PV}"
 
-MYTHTV_GROUPS="video audio"
+MYTHTV_GROUPS="video,audio"
 
 pkg_setup() {
 
