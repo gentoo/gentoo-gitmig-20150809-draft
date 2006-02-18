@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-2.7.ebuild,v 1.1 2006/01/29 21:34:27 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-2.7.ebuild,v 1.2 2006/02/18 18:54:53 vanquirius Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://comix.sourceforge.net"
 SRC_URI="mirror://sourceforge/comix/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="rar"
 RDEPEND=">=dev-python/pygtk-2.6
 	rar? ( app-arch/unrar )
