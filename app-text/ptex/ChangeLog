@@ -1,6 +1,14 @@
 # ChangeLog for app-text/ptex
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.47 2005/09/17 15:25:26 kloeri Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.48 2006/02/18 17:26:32 nattfodd Exp $
+
+*ptex-3.1.5-r1 (18 Feb 2006)
+
+  18 Feb 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  +files/xpdf-2.02pl1-CAN-2005-3191-3.patch,
+  +files/ptex-3.1.5-dvi-draw-conflicting-types.patch,
+  +files/ptex-3.1.5-flex-unput.patch, +ptex-3.1.5-r1.ebuild:
+  Backport recent tetex-2 patches (from bugs #115775, #122365 and #118264).
 
 *ptex-3.1.8.1_p20050418 (19 Apr 2005)
 
