@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/vim-spell-pl
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-pl/ChangeLog,v 1.1 2006/02/18 12:57:24 nelchael Exp $
+
+*vim-spell-pl-20060218 (18 Feb 2006)
+
+  18 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
+  +vim-spell-pl-20060218.ebuild:
+  Added vim-spell-pl - Polish language for Vim7.
+
