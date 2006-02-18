@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-2.15-r1.ebuild,v 1.2 2005/08/04 21:51:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-2.15-r1.ebuild,v 1.3 2006/02/18 23:18:47 dragonheart Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -41,5 +41,5 @@ src_install() {
 	doman man/*
 	dodir /etc/udev/rules.d
 	echo 'KERNEL=="cowctl"        NAME="cow/ctl"' > ${D}/etc/udev/rules.d/70-cow.rules
-	echo 'KERNEL=="cowloop[0-9]"  NAME="cow/%n"' >> ${D}/etc/udev/rules.d/70-cow.rules
+	echo 'KERNEL=="cowloop[0-9]*"  NAME="cow/%n"' >> ${D}/etc/udev/rules.d/70-cow.rules
 }

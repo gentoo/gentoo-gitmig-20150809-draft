@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/cowloop
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/ChangeLog,v 1.10 2005/09/17 00:37:02 ciaranm Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/ChangeLog,v 1.11 2006/02/18 23:18:47 dragonheart Exp $
+
+  18 Feb 2006; Daniel Black <dragonheart@gentoo.org> cowloop-2.15-r1.ebuild:
+  added option for more that 10 cowloop devices - bug #122901 thanks to Magnus
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
