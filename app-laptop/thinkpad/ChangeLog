@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/thinkpad
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.12 2006/01/11 15:34:27 config Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.13 2006/02/18 13:20:14 steev Exp $
+
+*thinkpad-5.9 (18 Feb 2006)
+
+  18 Feb 2006; Steev Klimaszewski <steev@gentoo.org> +thinkpad-5.9.ebuild:
+  New upstream revision, works with kernel 2.6.15-r3 through -r5 here.  Removes
+  the thinkpadpm module (upstream). Closes Bug #123163 as well as, Bug #93658.
+  Thank you to Mr. Karlsson, and Mr. Romano for reporting.
 
   11 Jan 2006; Benjamin Schindler <config@gentoo.org> thinkpad-3.2.ebuild,
   thinkpad-4.1.ebuild, thinkpad-4.3.ebuild, thinkpad-4.3-r1.ebuild,
