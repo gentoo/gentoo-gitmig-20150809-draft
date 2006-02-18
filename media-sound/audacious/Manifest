@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cdd5cca97baa42a2e8c35b7082a7ebd9 ChangeLog 2812
-RMD160 d0d229a8f4cccbdbb0f76f9feff6decbb71c84ec ChangeLog 2812
-SHA256 bd5544a1a98f167e31d72a73b0e8d2e3668dbf1cc7b6f0a2bfe18d8b0fb5c834 ChangeLog 2812
+MD5 a2b6357651132bb85360f8cf4dd82b41 ChangeLog 3092
+RMD160 7cb0cc5eb74c519b6d874935545faf622cb93571 ChangeLog 3092
+SHA256 e9b920a3cc4f5d9b83f70714db6963a10dd8aa50afac2fbdaeb31e4e6de33add ChangeLog 3092
 MD5 b5ac0de9588722b6dc7f188a1feaf051 audacious-0.1-r1.ebuild 2498
 RMD160 5d6f4412b6c9b097d5c1b740d6165c0253139cc0 audacious-0.1-r1.ebuild 2498
 SHA256 5deea884786614fb29ac196b048994360b35f10c86f6aa976fb5b1500e8b2674 audacious-0.1-r1.ebuild 2498
@@ -16,9 +13,9 @@ SHA256 e08f645ee6ffdcc04f7e1bb9afdd3236fa89b524645c2fbe2ced8f8f73c6cb86 audaciou
 MD5 343fbbbf4c755e36e509b34c296929b2 audacious-0.1.ebuild 2402
 RMD160 1ce98e38ba735c524f4b3cfe1e0524b1a6ceb03a audacious-0.1.ebuild 2402
 SHA256 a59cc7ebcff9d2ae59820592216d41d8623f463bef540df4998ad638f141652d audacious-0.1.ebuild 2402
-MD5 ae19d976ff06a873ac23fe880d16b820 audacious-0.2-r1.ebuild 2862
-RMD160 a3469d377a30488024ac7760e21f82b85fae1b44 audacious-0.2-r1.ebuild 2862
-SHA256 19dc334381ede18f7fd32eb9b7feac4b95fcd6547e7d6b104a00763f1da6b934 audacious-0.2-r1.ebuild 2862
+MD5 d480eaee62267500c72167a371972d99 audacious-0.2-r1.ebuild 2943
+RMD160 4c943de5831724b69d0736101522b109c5df1997 audacious-0.2-r1.ebuild 2943
+SHA256 22c76efaac478912af3d34631591f6bd24c3aa5dc7ecb92b88be4de7b127f6c4 audacious-0.2-r1.ebuild 2943
 MD5 889f58a8b65f5beae79be9fa50809f4b audacious-0.2.ebuild 2764
 RMD160 dcb73d190f6c63f59cab54f01c3e5c486d398360 audacious-0.2.ebuild 2764
 SHA256 15d3ee0b920ec2b2cecba9a4de2ac36a9767a75a9c13fbf80201a86c9c05aa8a audacious-0.2.ebuild 2764
@@ -28,6 +25,12 @@ SHA256 93c0f6ceeac65d055ec058fe0af789f006e631247d6f1e7c5d5beb36df710bcd files/0.
 MD5 f136cb1abd33101806a7879f4f5ae7d8 files/0.2-no-sigabrt-on-null-path.diff 442
 RMD160 d937400e5fcacf6992efddd2f2490eff04443853 files/0.2-no-sigabrt-on-null-path.diff 442
 SHA256 d34083f23c74d3e75ffbe55b21c23120089bddf7be523de4725ba85b630c3449 files/0.2-no-sigabrt-on-null-path.diff 442
+MD5 7f7eac7f2f68ec45eefb0cfb4c01d4db files/0.2-segfault.diff 468
+RMD160 510c6336b713a9f513c3e487612c2f7e6450a0f5 files/0.2-segfault.diff 468
+SHA256 40aea64363c0a25d04099eb73f07d567170268d1297907055e261008683cbce9 files/0.2-segfault.diff 468
+MD5 8a917c27ee8ada32b8a4f0b690733602 files/0.2-thumbnail.diff 871
+RMD160 ae7063d943511f83c8f547843908f4e6563f3b44 files/0.2-thumbnail.diff 871
+SHA256 e80bb6d38e9c4e0891868e6e870404eba6d3a80067768128e0cd162187755848 files/0.2-thumbnail.diff 871
 MD5 556a78b44b63b6950de07d76f6261e8f files/digest-audacious-0.1 134
 RMD160 204be8a13a1997dc4e07ed6effe5c9e35f885cc6 files/digest-audacious-0.1 134
 SHA256 aa7d4cbac5b1f3dd6c80472a513b840ee9d2ad7d550e52d416fe0ff64cf7e3a6 files/digest-audacious-0.1 134
@@ -49,10 +52,3 @@ SHA256 1093c6c03241b7a885005a425d583eda4e985faabb2a170bf7d96f9dd8b078dd files/di
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
 RMD160 f9de13e16a150195633b055ebe61bb4cea95160d metadata.xml 248
 SHA256 6a8ca116bded5cdd92cb700f92acd22b01ae159ef1b69c60a03fc9859bb9b3d6 metadata.xml 248
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD95JRp5vW4rUFj5oRArPxAJ9NHXHevxeiRqRr2MlKg4+vXfSGHQCgu4dY
-V/E5lDyN7Tegr6Exw5joKlE=
-=LmtU
------END PGP SIGNATURE-----
