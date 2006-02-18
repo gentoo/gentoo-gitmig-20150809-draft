@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2.1.ebuild,v 1.8 2006/02/17 01:08:01 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2.1.ebuild,v 1.9 2006/02/18 02:22:16 exg Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -19,6 +19,7 @@ KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc-macos ppc64 ~s390 ~sh spar
 IUSE="bzip2 caps curl ecc idea ldap nls readline selinux smartcard static usb zlib X"
 
 COMMON_DEPEND="
+	caps? ( sys-libs/libcap )
 	ldap? ( net-nds/openldap )
 	bzip2? ( app-arch/bzip2 )
 	zlib? ( sys-libs/zlib )
@@ -42,8 +43,9 @@ DEPEND="${COMMON_DEPEND}
 
 pkg_setup() {
 	# fix bug #113474 - no compiled kernel needed now
-	get_running_version
-
+	if use kernel_linux; then
+	    get_running_version
+	fi
 }
 
 src_unpack() {
@@ -139,13 +141,6 @@ src_install() {
 	gnupg_fixcheckperms
 	make DESTDIR=${D} install || die
 
-	# caps support makes life easier
-	if ! use caps && kernel_is lt 2 6 9
-	then
-		ewarn "installing gpg suid for memory space protection"
-		fperms u+s,go-r /usr/bin/gpg
-	fi
-
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
 
@@ -193,8 +188,7 @@ src_test() {
 }
 
 pkg_postinst() {
-	if ! use caps && kernel_is lt 2 6 9
-	then
+	if ! use kernel_linux || (! use caps && kernel_is lt 2 6 9); then
 		chmod u+s,go-r ${ROOT}/usr/bin/gpg
 		einfo "gpg is installed suid root to make use of protected memory space"
 		einfo "This is needed in order to have a secure place to store your"
