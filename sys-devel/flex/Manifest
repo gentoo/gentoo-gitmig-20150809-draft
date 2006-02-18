@@ -19,9 +19,9 @@ SHA256 67196ce234c5edabd0652f0888ab58503e6f8e10a023fa72f894ca19be7deab7 files/fl
 MD5 2e16e2031744c71cd9cd1019ff0a1af3 files/flex-2.5.31-include.patch 387
 RMD160 450ae53279820d2d8c702be0f471be07892f96f0 files/flex-2.5.31-include.patch 387
 SHA256 deb8f99edc8b3eca11515e36db959d27503c5c1fc317a4ead39f40cc0ec61bce files/flex-2.5.31-include.patch 387
-MD5 e2e82f1744e1b4e3721bd9a0fd602c66 files/flex-2.5.31-isatty.patch 1034
-RMD160 f5dbefa35cda90145c4b1e78871e44007106197a files/flex-2.5.31-isatty.patch 1034
-SHA256 11eddf940bccf42ac43bb17b315f618d3d388467a7021524fe826a3d37b7bbb6 files/flex-2.5.31-isatty.patch 1034
+MD5 2ddb288cb26eb82cf3af19f2ec17ae0e files/flex-2.5.31-isatty.patch 1221
+RMD160 fe2b900bbcf826cef51f231ec61b690e26e210cc files/flex-2.5.31-isatty.patch 1221
+SHA256 482acd3f9f3d2537c307ce6d7523e739f5b74830aab2d9c38bd7a4d85963bed9 files/flex-2.5.31-isatty.patch 1221
 MD5 06f3fd21134a6d82073ce64e2ad60274 files/flex-2.5.4-glibc22.patch 2241
 RMD160 124f5d395b4be1926420ad9dace170ef1eba24da files/flex-2.5.4-glibc22.patch 2241
 SHA256 787c733eb4e4d4272930a43fbf13b045c6ed2b363a3066e42eed38bc3c5b0941 files/flex-2.5.4-glibc22.patch 2241
@@ -50,9 +50,9 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD6tS52+ySkm8kpY0RAscsAJ47hZoSvFve2R4gL6VDGSLUuWLwmACbBwHj
-6ZOTE4SKLWL2NdYio+q8N1k=
-=tOui
+iD8DBQFD95ey2+ySkm8kpY0RAswOAJ9dNkbd1BgcwMvJHfLAwTGfgXFE+wCZAdtd
+PUwpNHdsSLg+ZSjI9+Z57rw=
+=8mVq
 -----END PGP SIGNATURE-----

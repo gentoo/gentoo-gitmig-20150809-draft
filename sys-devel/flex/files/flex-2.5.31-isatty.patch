@@ -1,10 +1,11 @@
-Declare the isatty prototype all the time
+Declare the isatty prototype all the time ... otherwise packages like
+doxygen and ttmkfdir fail to build.
 
 http://bugs.gentoo.org/119598
 
 --- flex/scan.c
 +++ flex/scan.c
-@@ -3935,9 +3935,15 @@
+@@ -3935,9 +3935,19 @@
  	yyfree((void *) b  );
  }
  
@@ -13,8 +14,11 @@ http://bugs.gentoo.org/119598
 +#ifdef __cplusplus
 +extern "C" {
 +#endif
--extern int isatty (int );
++#ifdef __THROW /* this is a gnuism */
 +extern int isatty (int ) __THROW;
++#else
+ extern int isatty (int );
++#endif
 -#endif /* __cplusplus */
 +#ifdef __cplusplus
 +}
@@ -25,7 +29,7 @@ http://bugs.gentoo.org/119598
   * This function is sometimes called more than once on the same buffer,
 --- flex/skel.c
 +++ flex/skel.c
-@@ -2183,9 +2183,15 @@
+@@ -2183,9 +2183,19 @@
    "[[",
    "    m4_ifdef( [[M4_YY_NEVER_INTERACTIVE]],,",
    "    [[",
@@ -34,8 +38,11 @@ http://bugs.gentoo.org/119598
 +  "#ifdef __cplusplus",
 +  "extern \"C\" {",
 +  "#endif",
--  "extern int isatty M4_YY_PARAMS( int );",
++  "#ifdef __THROW /* this is a gnuism */",
 +  "extern int isatty M4_YY_PARAMS( int ) __THROW;",
++  "#else",
+   "extern int isatty M4_YY_PARAMS( int );",
++  "#endif",
 -  "#endif /* __cplusplus */",
 +  "#ifdef __cplusplus",
 +  "}",
