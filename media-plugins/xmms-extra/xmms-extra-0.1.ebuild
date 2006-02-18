@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-extra/xmms-extra-0.1.ebuild,v 1.11 2005/08/07 13:35:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-extra/xmms-extra-0.1.ebuild,v 1.12 2006/02/18 15:28:05 metalgod Exp $
 
 inherit eutils gnuconfig
 
 IUSE=""
 
 DESCRIPTION="extra collection of commandline tools to control xmms"
-HOMEPAGE="http://www.xmms.org/files/plugins/xmms-extra/"
+HOMEPAGE="http://www.xmms.org/plugins.php?details=5"
 SRC_URI="http://www.xmms.org/files/plugins/xmms-extra/${P}.tar.gz"
 
 LICENSE="GPL-2"
