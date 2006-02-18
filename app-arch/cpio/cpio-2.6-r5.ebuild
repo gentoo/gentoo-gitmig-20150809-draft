@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.6-r5.ebuild,v 1.10 2005/12/25 01:05:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.6-r5.ebuild,v 1.11 2006/02/18 21:42:46 vapier Exp $
 
 inherit eutils
 
@@ -28,6 +28,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-checksum.patch
 	epatch "${FILESDIR}"/${P}-warnings.patch
 	epatch "${FILESDIR}"/${P}-writeOutHeaderBufferOverflow.patch #112140
+	epatch "${FILESDIR}"/${P}-stpcpy-hack.patch #123237
 }
 
 src_compile() {
