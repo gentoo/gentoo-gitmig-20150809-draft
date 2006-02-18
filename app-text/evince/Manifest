@@ -1,37 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b2fe5e0c534cab67fad7ee4c87f1bda3 ChangeLog 4474
-RMD160 7440a68cc60856840595a76c9bf556e75a406899 ChangeLog 4474
-SHA256 c19d837f5142285d7a296a29801fe0cd8316a58448345e4efebaa9ea0aa14168 ChangeLog 4474
+MD5 7a0f6b8aa698660d7a3b2dfdca2a2890 ChangeLog 4565
 MD5 d746d7e78fc9f3213b497d323f57b62f evince-0.4.0-r3.ebuild 2032
-RMD160 18e66046fe3e9df0daa3a2c7175d7ad3630bc779 evince-0.4.0-r3.ebuild 2032
-SHA256 feb183d0ba714c4ea3cddcc08515e9e85aa1d7f0f530056188f335c90df99b2d evince-0.4.0-r3.ebuild 2032
-MD5 9253fb2644e6c17f3d3989c696131a43 evince-0.5.0.ebuild 1938
-RMD160 99571cbac43c1dcc8e6276751f70b5263610c78a evince-0.5.0.ebuild 1938
-SHA256 08c583c6013b581420d9b6e036540bafd87fba3c295e290ddbe781224d52c801 evince-0.5.0.ebuild 1938
+MD5 751f380b094e5eca2d58f4ba807daaf6 evince-0.5.0.ebuild 1948
 MD5 a8bcc7dab66f7a60936b49f43bc4e9a9 files/digest-evince-0.4.0-r3 65
-RMD160 71f26b9bdde50195646f70a2e26c43c7da1c0118 files/digest-evince-0.4.0-r3 65
-SHA256 b32cff757b686b72912a627916e31d84c8b693300cef80ee3592ea452d274bc1 files/digest-evince-0.4.0-r3 65
 MD5 7f50c30053f0d6366013fcafccbd34ee files/digest-evince-0.5.0 66
-RMD160 8ce06f59b9680dce5ceb237729311433a3b5ec72 files/digest-evince-0.5.0 66
-SHA256 5537e21b3173e7e9bb310ecebf16424ec194bb70e1feca9e1915179f7c4c931d files/digest-evince-0.5.0 66
 MD5 185784a35b672ed49ea8afb3aba25e30 files/evince-0.4.0-display-menu.patch 471
-RMD160 e11baeaed7560e2dc524bcd09b6d4fb2118a6bfe files/evince-0.4.0-display-menu.patch 471
-SHA256 1d759ff798e817ca7652a9f43d8b58bcb97520a04b16a9999c546a4d29624819 files/evince-0.4.0-display-menu.patch 471
 MD5 94070710202e7c8024edc662eb420658 files/evince-0.4.0-no-tiff.patch 985
-RMD160 cbeaaabd0fd1892fab06602812aaefc5d3658697 files/evince-0.4.0-no-tiff.patch 985
-SHA256 5708273e4b626e770a82a8a3f329b90a4b9fef5bcf876745f4e6247108ab8e26 files/evince-0.4.0-no-tiff.patch 985
 MD5 755b327b4928ab9492b7c2aab72ef52d files/evince-0.4.0-t1lib_is_t1.patch 976
-RMD160 566d6a27bb76511354bf0e5917247bcd3bf086c7 files/evince-0.4.0-t1lib_is_t1.patch 976
-SHA256 392bf6996406f0942ebbb67023b6e1baa071d17d6e86d4e55f8ad092c182b072 files/evince-0.4.0-t1lib_is_t1.patch 976
 MD5 6725733a03ee56bb113dedaca6063b0f metadata.xml 218
-RMD160 356edd8735bce3bdded1992ed1e01831af9f1f60 metadata.xml 218
-SHA256 b53b06e28caff7a3a8fdd06a56946440e889e56ba1e3627dee44e02707cd1a52 metadata.xml 218
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD6Cc2JrHF4yAQTrARAuEPAKCifF0cLWHuBOYybFaW41meuKto2QCePxMc
-y3+OWzLKOI2hi6D3epAvNAI=
-=+QdW
+iD8DBQFD952BJrHF4yAQTrARAoa/AJ9bnRTnpVOYsAaFjJ4qh3fluh2CvgCcDf+F
+oP3c+6dvDcVAYiHtBh7FY/Q=
+=eRN3
 -----END PGP SIGNATURE-----
