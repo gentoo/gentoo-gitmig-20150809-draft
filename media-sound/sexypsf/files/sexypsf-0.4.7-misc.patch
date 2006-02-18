@@ -6,6 +6,16 @@
  
 -void sexyd_update(char*,long);
 +void sexyd_update(unsigned char*,long);
+--- sexypsf/Linux/LnxMain.c
++++ sexypsf/Linux/LnxMain.c
+@@ -26,6 +26,7 @@
+ #include <time.h>
+ 
+ #include "driver.h"
++#include "oss.h"
+ #include "Linux.h"
+ 
+ int main(int argc, char *argv[]) {
 --- sexypsf/Linux/Makefile
 +++ sexypsf/Linux/Makefile
 @@ -4,12 +4,10 @@
@@ -27,7 +37,7 @@
  OBJS+= LnxMain.o
  
 -CFLAGS = -Wall -Winline ${OPTIMIZE} -I. -I.. ${FLAGS}
-+CFLAGS += -Wall -Winline -I. -I.. ${FLAGS}
++CFLAGS += -Wall -Winline -Wno-nonnull -I. -I.. ${FLAGS}
  #CFLAGS+= $(shell pkg-config gtk+-2.0 --cflags)
  
  sexypsf:	${OBJS}
@@ -36,9 +46,39 @@
  
  .PHONY: clean sexypsf
  
+--- sexypsf/Linux/oss.c
++++ sexypsf/Linux/oss.c
+@@ -54,6 +54,9 @@
+ 
+ #define OSS_MEM_DEF
+ #include "oss.h"
++
++#include "driver.h"
++
+ static int oss_audio_fd = -1;
+ extern int errno;
+ 
+@@ -66,8 +69,6 @@
+  int pspeed=44100;
+  int pstereo;
+  int format;
+- int fragsize = 0;
+- int myfrag;
+  int oss_speed, oss_stereo;
+ 
+  pstereo=OSS_MODE_STEREO;
+--- sexypsf/Linux/oss.h
++++ sexypsf/Linux/oss.h
+@@ -32,4 +32,6 @@
+ 
+ #define OSS_SPEED_44100	44100
+ 
++void SetupSound(void);
++
+ #endif // _OSS_SOUND_H
 --- sexypsf/Makefile
 +++ sexypsf/Makefile
-@@ -12,18 +12,14 @@
+@@ -12,18 +12,13 @@
  RM = rm -f
  
  LIBS = -shared -lz
@@ -49,10 +89,9 @@
  OBJS =	PsxBios.o PsxCounters.o PsxDma.o Spu.o PsxHw.o PsxMem.o Misc.o	\
  	R3000A.o PsxInterpreter.o PsxHLE.o spu/spu.o
  
-+XMMSCONF = xmms-config
  OBJS+=	xmms/xmms.o
 -FLAGS+=	`gtk-config --cflags`
-+FLAGS+=	`${XMMSCONF} --cflags`
++FLAGS+=	`xmms-config --cflags`
 -
 -ifeq (${CPU}, ix86)
 -	OPTIMIZE += -fomit-frame-pointer -mcpu=i686 -fno-exceptions
@@ -60,12 +99,12 @@
  
  ifeq (${CPU}, ppc)
  	FLAGS+=-DMSB_FIRST
-@@ -33,16 +30,16 @@
+@@ -33,10 +28,10 @@
  	FLAGS+=-DMSB_FIRST
  endif
  
 -CFLAGS = -Wall ${OPTIMIZE} -I. ${FLAGS}
-+CFLAGS += -Wall -I. ${FLAGS}
++CFLAGS += -Wall -Wno-nonnull -I. ${FLAGS}
  
  sexypsf: ${OBJS}
 -	${CC} ${CFLAGS} ${OBJS} -o libsexypsf.so ${LIBS}
@@ -73,13 +112,17 @@
  
  install: sexypsf
  	mv libsexypsf.so ${HOME}/.xmms/Plugins
- 
- installglobal: sexypsf
--	mv libsexypsf.so `xmms-config --input-plugin-dir`
-+	mv libsexypsf.so `${XMMSCONF} --input-plugin-dir`
- 
- .PHONY: clean sexypsf
- 
+--- sexypsf/Misc.c
++++ sexypsf/Misc.c
+@@ -226,7 +226,7 @@
+ {
+         FILE *fp;
+         EXE_HEADER tmpHead;
+-        char *in,*out=0;
++        unsigned char *in,*out=0;
+ 	u8 head[4];
+         u32 reserved;
+         u32 complen;
 --- sexypsf/PsxInterpreter.c
 +++ sexypsf/PsxInterpreter.c
 @@ -417,7 +417,7 @@
@@ -138,6 +181,15 @@
  	/*
 --- sexypsf/PsxMem.c
 +++ sexypsf/PsxMem.c
+@@ -21,7 +21,7 @@
+ 
+ #include "PsxCommon.h"
+ 
+-void LoadPSXMem(u32 address, s32 length, char *data)
++void LoadPSXMem(u32 address, s32 length, unsigned char *data)
+ {
+  //printf("%08x %08x\n",address,length);
+  while(length>0)
 @@ -56,8 +56,8 @@
  
  	writeok=1;
@@ -197,7 +249,25 @@
  						break;
 --- sexypsf/PsxMem.h
 +++ sexypsf/PsxMem.h
-@@ -55,7 +55,7 @@
+@@ -41,21 +41,21 @@
+ }
+ #endif
+ 
+-s8 *psxM;
++char *psxM;
+ #define psxMu32(mem)	(*(u32*)&psxM[(mem) & 0x1fffff])
+ 
+-s8 *psxP;
++char *psxP;
+-s8 *psxR;
++char *psxR;
+ #define psxRu32(mem)	(*(u32*)&psxR[(mem) & 0x7ffff])
+ 
+-s8 *psxH;
++char *psxH;
+ 
+ #define psxHu8(mem)	(*(u8*) &psxH[(mem) & 0xffff])
+ 
  #define psxHu16(mem)   	(*(u16*)&psxH[(mem) & 0xffff])
  #define psxHu32(mem)   	(*(u32*)&psxH[(mem) & 0xffff])
  
@@ -206,6 +276,14 @@
  
  #define PSXM(mem)		(psxMemLUT[(mem) >> 16] == 0 ? NULL : (void*)(psxMemLUT[(mem) >> 16] + ((mem) & 0xffff)))
  
+@@ -76,6 +76,6 @@
+ void psxMemWrite16(u32 mem, u16 value);
+ void psxMemWrite32(u32 mem, u32 value);
+ 
+-void LoadPSXMem(u32 address, s32 length, char *data);
++void LoadPSXMem(u32 address, s32 length, unsigned char *data);
+ 
+ #endif /* __PSXMEMORY_H__ */
 --- sexypsf/xmms/xmms.c
 +++ sexypsf/xmms/xmms.c
 @@ -101,7 +101,7 @@

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/sexypsf-0.4.7.ebuild,v 1.4 2006/01/26 06:32:23 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/sexypsf-0.4.7.ebuild,v 1.5 2006/02/18 23:42:52 truedfx Exp $
 
 inherit eutils
 
@@ -13,10 +13,9 @@ SLOT="0"
 
 #-sparc: 0.4.5: Couldn't load minispf
 KEYWORDS="~amd64 ~ppc -sparc ~x86"
-IUSE="bmp xmms"
+IUSE="xmms"
 
 DEPEND="sys-libs/zlib
-	bmp? ( media-sound/beep-media-player )
 	xmms? ( media-sound/xmms )"
 
 S=${WORKDIR}/${PN}
@@ -36,28 +35,17 @@ src_compile() {
 
 	emake CPU="${CPU}" || die "emake failed"
 
-	if use bmp || use xmms; then
-		if ! use xmms; then
-			local XMMSCONF=beep-config
-		else
-			local XMMSCONF=xmms-config
-		fi
-
+	if use xmms; then
 		cd "${S}"
 		# do make clean to force rebuild with -fPIC
 		make clean || die "make clean failed"
 		# don't generate separate xmms and bmp plugins; they're compatible
-		emake CPU="${CPU}" XMMSCONF="${XMMSCONF}" sexypsf || die "building plugin failed"
+		emake CPU="${CPU}" sexypsf || die "building plugin failed"
 	fi
 }
 
 src_install() {
 	dobin Linux/sexypsf
-
-	if use bmp; then
-		exeinto "$(beep-config --input-plugin-dir)"
-		doexe libsexypsf.so
-	fi
 
 	if use xmms; then
 		exeinto "$(xmms-config --input-plugin-dir)"

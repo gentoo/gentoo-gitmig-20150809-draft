@@ -1,22 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a0f8d2a73a95942536f0e2d1886200e2 ChangeLog 1945
+MD5 d498326bdc3e0e7027a4e94459a52dd8 ChangeLog 2143
+RMD160 0ac5d177163dc0393a1fa3b3869d256ee55913e2 ChangeLog 2143
+SHA256 f33e568ebe12a1da9c54001fb500529b024f0ac21a864e2e141bb4803066bbec ChangeLog 2143
 MD5 41f230a0e2debf8b51025a2d796c6e31 files/digest-sexypsf-0.4.5 61
+RMD160 175951bc36575c4db73219fa82a78e70597b209c files/digest-sexypsf-0.4.5 61
+SHA256 4742409658020600f3cb406f45903094ba37d7c52a33710f9045d44340324ff4 files/digest-sexypsf-0.4.5 61
 MD5 0ed9b80602e1c597dff882701ce72f64 files/digest-sexypsf-0.4.6 61
+RMD160 f8ad36190e5ddb2c0f36a840cd6cb44aeffd45ff files/digest-sexypsf-0.4.6 61
+SHA256 8b949725e018cc10782f180f4837f61913ae3d4531d59cfe71a3577c19055097 files/digest-sexypsf-0.4.6 61
 MD5 606adf6de0a88f73cd8dd5c087a2d727 files/digest-sexypsf-0.4.7 65
+RMD160 8ad686ad0d9a019f5c87209db81d35ecc8bbb1a3 files/digest-sexypsf-0.4.7 65
+SHA256 dddc47f9430666567c3528de21302cdac235f9eea99c5a139824a2abe6a6a6ee files/digest-sexypsf-0.4.7 65
 MD5 ec1912f27a7e4330699ef6addc03a8b0 files/sexypsf-0.4.5-gentoo.patch 1608
+RMD160 bbc52c3fea63564460d5eb27b838d26bc668f478 files/sexypsf-0.4.5-gentoo.patch 1608
+SHA256 4e4542d938c70aec6f6a34064fc31390a6d65022cc8ad25a502dac59397e8df9 files/sexypsf-0.4.5-gentoo.patch 1608
 MD5 ff39a6a980f10f48a571b23c330a8951 files/sexypsf-0.4.6-gentoo.patch 1519
+RMD160 a41325957479f5f5173e0d33d27ecb887501b7f2 files/sexypsf-0.4.6-gentoo.patch 1519
+SHA256 f2616f48c9c7c405dfdca58594b78a5d81cbb5efe89d37591689ff2b3f5d4b9f files/sexypsf-0.4.6-gentoo.patch 1519
 MD5 5e7f5501e9177b1f1c3d2cdc084ad6d1 files/sexypsf-0.4.6-xmms.patch 435
-MD5 54b96fe1f070f435fc279a00a9d00939 files/sexypsf-0.4.7-misc.patch 6241
+RMD160 cd963a7f6d8405facadabda14cb070b2e4126542 files/sexypsf-0.4.6-xmms.patch 435
+SHA256 c461f3299ce57938b223cdaf090728ef55d00fe0bfc3393b73c352b9ed2c397e files/sexypsf-0.4.6-xmms.patch 435
+MD5 a454e4e7081e4953378e79dd3ccce7da files/sexypsf-0.4.7-misc.patch 7760
+RMD160 7e60fe81ede82918e13a609860eddb20d0f1cd9e files/sexypsf-0.4.7-misc.patch 7760
+SHA256 f5dde2f542fac56e00f7620a3e9e8c57df3cb34ba77a1b1edf6d8f5b26e4aa2b files/sexypsf-0.4.7-misc.patch 7760
 MD5 ffaa113215ddcecac79374633543e52d metadata.xml 248
+RMD160 f27a15c19a096ebdcd22c7ade7688d6f512dad95 metadata.xml 248
+SHA256 47dbbf8800d68171538e9b3404e78f985572cfaabd12410ea03608fa783fca28 metadata.xml 248
 MD5 16e48240eb45b3d014770cf1a4977226 sexypsf-0.4.5.ebuild 1365
+RMD160 b77f6b648ab7f0f891224dbf87189b3cd18be422 sexypsf-0.4.5.ebuild 1365
+SHA256 b3242b6fa27d3d6834d9b05ae3446fda6e4ae24a3a54f35dfd737f4baf1a0d87 sexypsf-0.4.5.ebuild 1365
 MD5 718f9cbb34b957c7f1045b94c9225c7a sexypsf-0.4.6.ebuild 1402
-MD5 b8232480090d2f8e3b90f3561d1d267e sexypsf-0.4.7.ebuild 1599
+RMD160 b1d5ab4a0a6a86d43067cc8b65c465bf568b3b76 sexypsf-0.4.6.ebuild 1402
+SHA256 223bc0445a85845577682f04a5b59abadfa4f23d4bb64c4d3e2d48867d0962e0 sexypsf-0.4.6.ebuild 1402
+MD5 087aa55f722ee7508eb0f41f8aea2257 sexypsf-0.4.7.ebuild 1335
+RMD160 9d045cd576ee2fc3b3656d77b2a62992c867e80b sexypsf-0.4.7.ebuild 1335
+SHA256 ae575e59d597483108fcc358c6cb0e91dd018b1de7d84f0ca41cc3945db8a5b0 sexypsf-0.4.7.ebuild 1335
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD2G16wnQyISwouHwRAmHhAJ0VIv9PlEiSM4sOK7nkm0qnD7AB2wCfbjb+
-qN1cxis56Utzn+hwGzXLExo=
-=KgA1
+iD8DBQFD97EcwnQyISwouHwRAm3kAJ42TUPWzebAWbCFHapFoqtXYf7R1ACfTP7X
+rHEC3iEOI9S52k8lUMV5gsI=
+=LDfd
 -----END PGP SIGNATURE-----
