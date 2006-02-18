@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.2-r1.ebuild,v 1.1 2006/02/18 21:30:24 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.2-r1.ebuild,v 1.2 2006/02/18 21:59:22 chainsaw Exp $
 
 IUSE="aac alsa esd flac gnome jack libvisual lirc mmx modplug mp3 musepack nls oss sdl sid sndfile vorbis wma"
 
@@ -47,6 +47,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-no-sigabrt-on-null-path.diff
+	epatch ${FILESDIR}/${PV}-thumbnail.diff
+	epatch ${FILESDIR}/${PV}-segfault.diff
 }
 
 src_compile() {
