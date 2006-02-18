@@ -1,9 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/vserver/virtuals,v 1.4 2005/09/26 10:34:24 hollow Exp $
-
-# Use this virtuals file to either overload the base profile's defined
-# virtuals, or add virtuals that are specific to this family of profiles
-
-virtual/os-headers			sys-kernel/linux-headers
-virtual/baselayout			sys-apps/baselayout-vserver
