@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d15730494c33c41ccfc629c1d63227c9 ChangeLog 2163
+RMD160 6ec5cafe1a3c985230b6ec4bfa642a3df8618385 ChangeLog 2163
+SHA256 b34662c8ced31bebbaecf3da5991250805a66f2fce3df86f8eaf4dfde10cc25f ChangeLog 2163
 MD5 0dc1da8270e79992ef31a37a8fe27e97 files/digest-locateopen-0.8.0 67
+RMD160 59089a4e4ba58e3829f87758f7f673af13933f57 files/digest-locateopen-0.8.0 67
+SHA256 d109436bfb9ecaea5aa7d9c0bf3537d220e155b33c27615ddd70e0f63704da73 files/digest-locateopen-0.8.0 67
 MD5 556202cdd756a664a6944bdeeff67695 files/digest-locateopen-1.1 65
+RMD160 737c860b0206c4344d78dc9f750e26cbc3347d18 files/digest-locateopen-1.1 65
+SHA256 043d241db9e342d9f1ab788d050fa4cc8b0399d392ac758c9f69494be0efc165 files/digest-locateopen-1.1 65
 MD5 4cf66057882962c37bdbcda686aa507b files/digest-locateopen-1.3 65
+RMD160 24da21b3dce497cedfa7bde2ca44490826a40f20 files/digest-locateopen-1.3 65
+SHA256 78cb9085a71467d5bde127f0da54ec474acbf9cc822dc238940e7579f7e66c2b files/digest-locateopen-1.3 65
 MD5 15a9c6b73d64428d5a27c6bd5ad2fc68 locateopen-0.8.0.ebuild 869
+RMD160 b983346c935272136ed7fe549260e462c50d3d26 locateopen-0.8.0.ebuild 869
+SHA256 e436fcff694b33b0116fc370e61e21d0018c688eadef8b120c1258c459efb864 locateopen-0.8.0.ebuild 869
 MD5 1d5b5f32fefad84a5b7dfbb4dcfb9530 locateopen-1.1.ebuild 891
+RMD160 fdbe6dfe7dd2451bff82b53a35f6f844c3c12b2c locateopen-1.1.ebuild 891
+SHA256 f597f67f96e9cfedb1e61654daab867acbbfb094adf18ada433f3fb69063aab7 locateopen-1.1.ebuild 891
 MD5 3cdedc32b880f8a9d110307f772dfd38 locateopen-1.3.ebuild 922
-MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzC5mLLFUmVNQ7rkRAsIsAJ9T1YFP2x5cRtKYHM7u0SWcEb0rMgCfSRZE
-MKMNy5bNHvRn6AuKT//GOHs=
-=nCYP
------END PGP SIGNATURE-----
+RMD160 f708ed2f735849ad9ef1127d79c08f247359fe74 locateopen-1.3.ebuild 922
+SHA256 87867ec9c208a1a0be318b598ec99203ecb5478bb6fe5847276a913cf1bf1d59 locateopen-1.3.ebuild 922
+MD5 c12b313eed9efb8f61723cb9ebf22c36 metadata.xml 253
+RMD160 aec1a411ed3592aa10fe3b2b80952362c7bd1b6d metadata.xml 253
+SHA256 e12ae1196e99a89e610778695e0712ce305387072752329dfc7c31c07d4105c3 metadata.xml 253

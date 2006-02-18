@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 831fb181b2bd1dc184b35fb6dd7c7c27 ChangeLog 1397
-MD5 465cf24b44f23188e787fc72aefc66ae ebnf-syntax-1.1.ebuild 558
-MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+RMD160 fcf5f1323219141027d188742709fa6c3aa7f0e5 ChangeLog 1397
+SHA256 b32ea4f12f85da87561b400a860f582acf5f87a45cf9be6706d71c53606f2320 ChangeLog 1397
 MD5 bf87872396be5a68aa1c1ffb7a162742 ebnf-syntax-1.1-r1.ebuild 713
+RMD160 96943d944e14035fd27a4e746130cf278bcd1cd6 ebnf-syntax-1.1-r1.ebuild 713
+SHA256 a7d7920f3ba3ab900c22559f60bac8ea6fbc87202cf87899c6f9945752c0d63d ebnf-syntax-1.1-r1.ebuild 713
+MD5 465cf24b44f23188e787fc72aefc66ae ebnf-syntax-1.1.ebuild 558
+RMD160 5be1fa3d27b3c02194978d87718e9b7fed65bb9f ebnf-syntax-1.1.ebuild 558
+SHA256 df1c775347f5521ff78bced56ae9006ca3fe3466e81eff53598bbc321fd5a268 ebnf-syntax-1.1.ebuild 558
 MD5 6744c70a96df23c4c2832555a2a60d27 files/digest-ebnf-syntax-1.1 65
+RMD160 844414c6ea772f8ad9b6aea4c2143a86229c2963 files/digest-ebnf-syntax-1.1 65
+SHA256 dc467260831f802ef27f130a1627d7db2e697bc0c2d6f036e55d31b060a0e119 files/digest-ebnf-syntax-1.1 65
 MD5 6744c70a96df23c4c2832555a2a60d27 files/digest-ebnf-syntax-1.1-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDPGXEwUpWvClEHQoRAp5/AJ91d7WfzHU84Osr0EYS2hN7tAFjnwCfRH6S
-IgXtSfdFeNLAI/yrGqjL278=
-=Amll
------END PGP SIGNATURE-----
+RMD160 844414c6ea772f8ad9b6aea4c2143a86229c2963 files/digest-ebnf-syntax-1.1-r1 65
+SHA256 dc467260831f802ef27f130a1627d7db2e697bc0c2d6f036e55d31b060a0e119 files/digest-ebnf-syntax-1.1-r1 65
+MD5 c12b313eed9efb8f61723cb9ebf22c36 metadata.xml 253
+RMD160 aec1a411ed3592aa10fe3b2b80952362c7bd1b6d metadata.xml 253
+SHA256 e12ae1196e99a89e610778695e0712ce305387072752329dfc7c31c07d4105c3 metadata.xml 253

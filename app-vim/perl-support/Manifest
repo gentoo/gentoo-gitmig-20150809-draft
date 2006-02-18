@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1b761208bf22f0b572ffa2d3d6cae491 ChangeLog 1142
+RMD160 932153ad100a4da7ef0f0eaf9f7551b7d1980158 ChangeLog 1142
+SHA256 2b9e7ccceddf656b389352f3c35cd1a49c218ce80253a70c6641ccd85198fd6b ChangeLog 1142
 MD5 f15ebd69c09087f435ceab5f330963a9 files/digest-perl-support-2.5 68
+RMD160 7fbac91e041a2f4853b7d7bea0d288af30eee860 files/digest-perl-support-2.5 68
+SHA256 b0e1c40fb360128b39327d182e8163ae2203e653e037feb4d923449a7a77b56e files/digest-perl-support-2.5 68
 MD5 0e3e5e3977fc923f3d421286eda9d034 files/digest-perl-support-2.6 68
+RMD160 32a7778d00e76966b9f9c756893586ded224511e files/digest-perl-support-2.6 68
+SHA256 b902630dc9479965b8289ba577febc204d3831429dc950f928aef69efffbbace files/digest-perl-support-2.6 68
 MD5 0390239635b715febf9a2ed53b11b442 files/digest-perl-support-2.8 68
-MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
+RMD160 590543d67fa3a9da12ae4aac263b06469023a707 files/digest-perl-support-2.8 68
+SHA256 f911de89e63b9d238f3cedabe799caf9c6daade96236bab8c2d3a06cc818d858 files/digest-perl-support-2.8 68
+MD5 03408b23ff38d83b09d299387892f54d metadata.xml 157
+RMD160 adcd6494e1e562ab5e0bd090e114622782ac753a metadata.xml 157
+SHA256 106c8618581360c66c2b535fcb7a6cb9ff318f1bd8e6c8f40f2f2f2d54e6787a metadata.xml 157
 MD5 be4fdee34e61040e215e508e86adb531 perl-support-2.5.ebuild 517
+RMD160 f30c231ec227e418a89dd4ed230442f1981461b4 perl-support-2.5.ebuild 517
+SHA256 0ec8414e09bc7244cfb148ab7ed6db16dd7cb3a38de9c29b66d2ac444992a98b perl-support-2.5.ebuild 517
 MD5 a5d301bea038def69e9147fd4def0cb0 perl-support-2.6.ebuild 522
+RMD160 95eeb88ca55134abaa01b1aee10b05e9fb23e1ea perl-support-2.6.ebuild 522
+SHA256 7a132e7451a345bc93d34c16afe2467e2ef25c6a89d85830a328c87b1702b07e perl-support-2.6.ebuild 522
 MD5 3c3bea295c0af6b78219ea18934d25f1 perl-support-2.8.ebuild 524
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDeykotG5z4I8BtQoRAqmBAJ4wlHjUfapJzu/bvPdI2MHHtHm3HgCdGbH3
-swghLsjNFjIaJprlwdSg6BE=
-=3fsG
------END PGP SIGNATURE-----
+RMD160 42eb7e7b2980a4417967dffe01e51412248313c2 perl-support-2.8.ebuild 524
+SHA256 f457a319d02056d1d664a0dc88c536916ee4bdc84035511c206619f159859501 perl-support-2.8.ebuild 524

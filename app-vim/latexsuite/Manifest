@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 802c8c06d3152a92ff6473c91102c44e ChangeLog 1830
+RMD160 8b03cf8e6b0047ea6c4a90083cccc97821e04d1b ChangeLog 1830
+SHA256 651e75136e368f8f0828d9b0098b330c38189182df8dc4591516248210180203 ChangeLog 1830
 MD5 23326cf6fa27ac23ff9dbe045fbca8a4 files/digest-latexsuite-1.5 66
+RMD160 22a894bcdd00b2ea85d6c8b68ae7206f14ed24d3 files/digest-latexsuite-1.5 66
+SHA256 f9dd9d66781bd7c351d2f31ee5fe9b2f15ca33d551642098de837c49884e0d78 files/digest-latexsuite-1.5 66
 MD5 c8849f310e180a58ea74d06c7180870d files/digest-latexsuite-1.5_rc1 70
+RMD160 47878f36b6a98814ca870ba294db64b404677db1 files/digest-latexsuite-1.5_rc1 70
+SHA256 bb87b8f3a711f5ff9b72407bb732ba1753b90b9454eeb8e293bff5ca9dad76b1 files/digest-latexsuite-1.5_rc1 70
 MD5 5d3bb431e4b8c34c6de66637c85bef0b latexsuite-1.5.ebuild 1163
+RMD160 f0708da186bba11ef3231369392646c50509d7c0 latexsuite-1.5.ebuild 1163
+SHA256 e769d630b5fe7a0398d7a1b4c4032f81838af4022939b1524c7167598b431270 latexsuite-1.5.ebuild 1163
 MD5 4fe5a801ec3b3984e62ff0c6c25f9eca latexsuite-1.5_rc1.ebuild 1187
-MD5 b2178f34672cc286a31f5325fe8732cb metadata.xml 437
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0BxUI1lqEGTUzyQRAu8+AKDT9oLYiL9Hyi3cVUhiymlRyBtkdACdFbHN
-kEzkGTwcRLvHhbBldYV9ZhU=
-=klvy
------END PGP SIGNATURE-----
+RMD160 89765abb810c0b4e1c828b1daccc9ffe499dffda latexsuite-1.5_rc1.ebuild 1187
+SHA256 97297f891c0c31fe55a01bf0f937ec81e5d806d728db15ff4e48d9401fcba9e1 latexsuite-1.5_rc1.ebuild 1187
+MD5 9702054cb203cec48c4a64de799f4287 metadata.xml 398
+RMD160 d8fd6d829199989a575d34508ac5e3ac1acd8790 metadata.xml 398
+SHA256 9fe362639fddb132ef829f83c73f52d01c59adadc616a658e241cab1004e3f98 metadata.xml 398

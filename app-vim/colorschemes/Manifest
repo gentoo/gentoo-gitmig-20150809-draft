@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 fe09bb9c7fab8a8a73577ada72e13f6c ChangeLog 3094
+RMD160 13ce47425c51b1fa7ce0a166c021422a721f7986 ChangeLog 3094
+SHA256 9fd2045e106a41917dfcabb7b78ee2a5659bfd71124e8465ae9aea7c856c4515 ChangeLog 3094
 MD5 91b34c19511e47a2e193e34ca30b611d colorschemes-20050321.ebuild 818
+RMD160 4637526a6d8a0e73cdaea729efde9f59d294ea52 colorschemes-20050321.ebuild 818
+SHA256 eb8220cef8746c62adece10deb7bc5c7a365240f2ee6db4483b713c6bb044be9 colorschemes-20050321.ebuild 818
 MD5 e83ad862979c73f589deeab836b6a702 colorschemes-20051207.ebuild 716
+RMD160 dcde9690498f440cc0f0c63d8c60ff5d1856fd98 colorschemes-20051207.ebuild 716
+SHA256 09ad3823332aa7fa8bd81ed25f1028392694ef9c1ceba8de0802ad493c9cf396 colorschemes-20051207.ebuild 716
 MD5 f590a0f7174e8ad70a0a7f4e962169dd files/digest-colorschemes-20050321 73
+RMD160 c89eae94b121b25d6c22857c5b68d1c85cf08f32 files/digest-colorschemes-20050321 73
+SHA256 d006f31b81983c143fd85ac7a6cf9007dad3c6ec7743d7965d489261c6362320 files/digest-colorschemes-20050321 73
 MD5 8a7bdaeb902d68327a8dd3f0d89cdbf6 files/digest-colorschemes-20051207 73
-MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDl0ZLLLFUmVNQ7rkRAt0eAJ9z0rmNmCmq8t1lQ8usN9etg0cVNACePqOp
-wgAdYnPq5HMk6R1JicO3ITc=
-=jfIJ
------END PGP SIGNATURE-----
+RMD160 f8008982659dfe4f16495f63e3ef9e6ab77117f2 files/digest-colorschemes-20051207 73
+SHA256 4fdd6da7b31b9670c1598075fab62762f0bc4c4a437f7ee4d4600fb87b2cb9e3 files/digest-colorschemes-20051207 73
+MD5 c12b313eed9efb8f61723cb9ebf22c36 metadata.xml 253
+RMD160 aec1a411ed3592aa10fe3b2b80952362c7bd1b6d metadata.xml 253
+SHA256 e12ae1196e99a89e610778695e0712ce305387072752329dfc7c31c07d4105c3 metadata.xml 253

@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d76842ec23f299ecfa58736a57ed5cf0 ChangeLog 887
+RMD160 eb2f7405ab5c7a13af5b3fa3655d32ffdb6713d0 ChangeLog 887
+SHA256 79243dab18a4d6ed3aaa3d3bfb2f93e028d3dde9a3136e5bbf800b88b84a53c5 ChangeLog 887
 MD5 c381e8ad1aa04d929c7b3282ac4b5c49 files/digest-toggle-1.3 61
-MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+RMD160 7ca5a5d5aaad1704e7f03c49e4cf9aa49eacf4e9 files/digest-toggle-1.3 61
+SHA256 3d1973d3577e291a3d301d7cc09e60c433d9493643b8366c512b668c5cfd57a4 files/digest-toggle-1.3 61
+MD5 c12b313eed9efb8f61723cb9ebf22c36 metadata.xml 253
+RMD160 aec1a411ed3592aa10fe3b2b80952362c7bd1b6d metadata.xml 253
+SHA256 e12ae1196e99a89e610778695e0712ce305387072752329dfc7c31c07d4105c3 metadata.xml 253
 MD5 280d7dbf2c0056d664b8c9004941a2a8 toggle-1.3.ebuild 542
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDl1imntT9W3vfTuoRAgpBAJ4uvaFpJ/vkRsQVQn4qUzHLSKR2UwCfbFAl
-ejbAap6RglyvsE30rS3CzDI=
-=FIhp
------END PGP SIGNATURE-----
+RMD160 ad495431773ed4b2c94948fa3fcd6a26a31aefc6 toggle-1.3.ebuild 542
+SHA256 6304948c786597db3c61607745f6b1a8571a17d6da6ff787ebac1aa752da9a4f toggle-1.3.ebuild 542

@@ -1,24 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 83a4fed8f5bbc67193ecb747ef8219a1 ChangeLog 5022
+RMD160 08052cae5acd5835b0a7b26bfa55d1c95aba6343 ChangeLog 5022
+SHA256 ce5186f483ee21a1a0ecaf9e4b10ecec6e5d55c3ecbd4c6951a026f8cfd9feef ChangeLog 5022
 MD5 6c7387e0d96db70dfc803f7cfd973a1e files/digest-taglist-3.4 63
+RMD160 64fb7413bf89b1f9c3e8b4fb78a0a156cb5e59c8 files/digest-taglist-3.4 63
+SHA256 18ef9d8552d03a4300e655a33b9cf231f18f0ecda19cc9743bce192607a0f992 files/digest-taglist-3.4 63
 MD5 6c7387e0d96db70dfc803f7cfd973a1e files/digest-taglist-3.4-r1 63
+RMD160 64fb7413bf89b1f9c3e8b4fb78a0a156cb5e59c8 files/digest-taglist-3.4-r1 63
+SHA256 18ef9d8552d03a4300e655a33b9cf231f18f0ecda19cc9743bce192607a0f992 files/digest-taglist-3.4-r1 63
 MD5 618b6a1f4723bd8f4f8420e3f41ed1a1 files/digest-taglist-4.0_beta1 69
+RMD160 fc0e2f38f749883e6d4695cbcbaa1059f027e23e files/digest-taglist-4.0_beta1 69
+SHA256 090b17d08d21e5de7a15772cf7cc1ebe3ae24de74f9db27589c2f17b1b7e8a95 files/digest-taglist-4.0_beta1 69
 MD5 983c8d15b7d1712106122f3c4282207a files/digest-taglist-4.0_beta2 69
+RMD160 78ce8f983060986c0ad81ceae4a02eafff6e5923 files/digest-taglist-4.0_beta2 69
+SHA256 eb3019da44bdb964d324a235af1a2efafea396353a1df6fd67a7a54b4fc80b07 files/digest-taglist-4.0_beta2 69
 MD5 94069c9ea9f609c0e8ecfda43ed31498 files/digest-taglist-4.0_beta3 69
+RMD160 c1a8de2b241b79c497ff3f5835eb86478c46ddb4 files/digest-taglist-4.0_beta3 69
+SHA256 3d3e994d39be38ffc2e5da9479d0ac5ecdd6e9ddfbf3dc9a4d0a1bc93c6dcf00 files/digest-taglist-4.0_beta3 69
 MD5 c7f319a44a948c29f40f341c69126fd9 files/taglist-2.6-exuberant.patch 349
+RMD160 a202a390ba491e3a5274b3860758d41565a1b4ed files/taglist-2.6-exuberant.patch 349
+SHA256 83e8846a5d356e0ccc3199e57304dbad3b722502d931ac24dd32a88e5e2d380b files/taglist-2.6-exuberant.patch 349
 MD5 d2c2a2110dd2457af6711f93504ca53c files/taglist-3.4-ebuilds.patch 451
-MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
+RMD160 bfd280a540499af994938c9f66eab277bf08704a files/taglist-3.4-ebuilds.patch 451
+SHA256 7a3319878dd0ef069c7689f47832e37919a969a97df516bc2c35cc76beef1704 files/taglist-3.4-ebuilds.patch 451
+MD5 03408b23ff38d83b09d299387892f54d metadata.xml 157
+RMD160 adcd6494e1e562ab5e0bd090e114622782ac753a metadata.xml 157
+SHA256 106c8618581360c66c2b535fcb7a6cb9ff318f1bd8e6c8f40f2f2f2d54e6787a metadata.xml 157
 MD5 7fb05928e874087802860270d9469758 taglist-3.4-r1.ebuild 592
+RMD160 efd3b41d5fa9d4973d60e503454916f8bbea95a0 taglist-3.4-r1.ebuild 592
+SHA256 d07da92fa2db3f398fdb50d1e4adf855c955e145ef9c3b8e7a75a380f4f6e698 taglist-3.4-r1.ebuild 592
 MD5 5cc5a9d33b96a8aa2d45b34429ea5158 taglist-3.4.ebuild 504
+RMD160 574de0f19c550becc2a5b0c36fadab138feb824e taglist-3.4.ebuild 504
+SHA256 7c50b1c1b9faec4ea419e41c1ba7d69cf683db7462d0320b41ceaf79b4a5c23c taglist-3.4.ebuild 504
 MD5 874e01af49bff00528af211abecc5553 taglist-4.0_beta1.ebuild 658
+RMD160 9b1821a6a98b9784a7a06cb3836feb8fd1c579ad taglist-4.0_beta1.ebuild 658
+SHA256 5785250a1a2d4a3cd394031bfcc8aeaa9a4dc3b16b819b334f97f28961bcbfec taglist-4.0_beta1.ebuild 658
 MD5 5f0c712995e5be782434bc642b04f2c6 taglist-4.0_beta2.ebuild 668
+RMD160 e3a1a15fc1e06249f483b9d43d4b61ae4eaa1fea taglist-4.0_beta2.ebuild 668
+SHA256 c51ffa6442bc21ada54e8931faff5d95d0f974448ced3c7c1ac954a3801196ff taglist-4.0_beta2.ebuild 668
 MD5 66e2a9e4ff52480dfbf09854581bafca taglist-4.0_beta3.ebuild 669
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDs541LLFUmVNQ7rkRAvwJAJ9f8G/48dJqAxHqpsRUam8fXNhmzQCfbQjp
-sgm9xnuq+aFUCZdw2NcN5gI=
-=siz/
------END PGP SIGNATURE-----
+RMD160 d13b439b883f09e5de01c691b01c7e98a842c8ba taglist-4.0_beta3.ebuild 669
+SHA256 e2f565dac0bab6eef26ed44a984f7d24433a3b068cbc4774d0598b1ec4def925 taglist-4.0_beta3.ebuild 669

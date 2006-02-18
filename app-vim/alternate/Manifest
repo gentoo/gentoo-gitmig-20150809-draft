@@ -1,19 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 621801c887402617f152673d74ef779d ChangeLog 4039
+RMD160 dcfff69624f7ea5c8293054ae9dca64d377f3cd0 ChangeLog 4039
+SHA256 5764b06c161216f81967b188fd6702de85f0de6ed6c0782049a8fc1c4c898a58 ChangeLog 4039
 MD5 32b26b08f6f3c26b01ec945ed260310a alternate-2.11a.ebuild 641
+RMD160 36c7f3a6e91f0049c015cad87abbb95a0ebfe204 alternate-2.11a.ebuild 641
+SHA256 d778a79d35bf5f8c6e0cbcb2cd9fd33e3faa1ecd066ab574c0daff361c61fd6d alternate-2.11a.ebuild 641
 MD5 cb2f99df471cb29d00f4710776a655c4 alternate-2.12-r1.ebuild 801
+RMD160 418e98bd59e41ce3ec5815bdab8ac74a852a7d35 alternate-2.12-r1.ebuild 801
+SHA256 c956a7901cc09d25fcb721542fda86a28b75048b489dd3c5b81167ed101a623e alternate-2.12-r1.ebuild 801
 MD5 f821c3423eec4126b3043cca6e13f4cf alternate-2.8.ebuild 644
+RMD160 5cd9012169b88de160bad730e82f4c03d106e3f8 alternate-2.8.ebuild 644
+SHA256 db79dd9a20959e890382cf1cf1a916227062cf6bdf107a165d2a8057d95c6fd5 alternate-2.8.ebuild 644
 MD5 a2aa124c296728c1816b432d6d374264 files/alternate-2.12-hh-cc-alternation.patch 938
+RMD160 bf1b3e7ca787a52c6f16cb074a0dff4fdebbf011 files/alternate-2.12-hh-cc-alternation.patch 938
+SHA256 ce5ce3f426c592592dbfcb1ec3a4488632c084c9880bdea9a5c88c839a6900bc files/alternate-2.12-hh-cc-alternation.patch 938
 MD5 50483e6b076d990c989289eabd2b6420 files/digest-alternate-2.11a 66
+RMD160 916e4a1d5aaba3ebbb81f2dfb7e72b5fc571b086 files/digest-alternate-2.11a 66
+SHA256 06421045c3140bff239e3c88c30ff483d739d94a75202ab32705eb2d620d66b7 files/digest-alternate-2.11a 66
 MD5 a9a74dbe884f01ee74de6fd24334eb06 files/digest-alternate-2.12-r1 65
+RMD160 75c5ecc479c9d3113f10f3d334c596ddba73817c files/digest-alternate-2.12-r1 65
+SHA256 48e74df4ca6f8fa2cb99869bb72e4527cb0084e66d444d1fab4c3bd7897c72d1 files/digest-alternate-2.12-r1 65
 MD5 4e7361e887c76c32db726568dab6b2e3 files/digest-alternate-2.8 64
-MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyE/uLLFUmVNQ7rkRAqoJAKDUI4SFltAovPeocBau2KwS7VTRlgCbBMeV
-wsASJzEDB+w7Nh/fuqOgg9w=
-=5aWV
------END PGP SIGNATURE-----
+RMD160 c50f16cb97053820734248204ed4f1ae6502fd9d files/digest-alternate-2.8 64
+SHA256 8adf7fa0c3d6141f70741e61841f3354fd2c5d2ffd8125ac096ccc46a65bd7f1 files/digest-alternate-2.8 64
+MD5 c12b313eed9efb8f61723cb9ebf22c36 metadata.xml 253
+RMD160 aec1a411ed3592aa10fe3b2b80952362c7bd1b6d metadata.xml 253
+SHA256 e12ae1196e99a89e610778695e0712ce305387072752329dfc7c31c07d4105c3 metadata.xml 253
