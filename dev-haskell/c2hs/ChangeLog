@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.12 2006/02/16 13:14:26 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.13 2006/02/18 18:28:13 dcoutts Exp $
+
+  18 Feb 2006; <duncan@gentoo.org> -files/cabalfix.patch,
+  +files/ghc622inc.patch, c2hs-0.14.5.ebuild:
+  Fix for building with ghc-6.2.2. Remove old unused patch.
 
   16 Feb 2006; <duncan@gentoo.org> c2hs-0.14.5.ebuild:
   Add "bin" to CABAL_FEATURES in preparation for pending eclass updates.
