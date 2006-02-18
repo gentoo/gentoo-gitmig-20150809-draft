@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.0.ebuild,v 1.1 2006/02/18 22:50:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.0.ebuild,v 1.2 2006/02/18 23:07:32 dragonheart Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/conky/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="truetype X ipv6 bmpx bmp xmms infopipe audacious"
+IUSE="truetype X ipv6 bmpx xmms infopipe audacious"
 
 DEPEND_COMMON="
 	virtual/libc
@@ -34,7 +34,6 @@ DEPEND_COMMON="
 		xmms? ( media-sound/xmms )
 	)"
 
-		#bmp? ( media-sound/beep-media-player )
 RDEPEND="${DEPEND_COMMON}"
 
 DEPEND="
@@ -76,7 +75,6 @@ src_compile() {
 		$(use_enable truetype xft) \
 		$(use_enable X x11) \
 		$(use_enable bmpx) \
-		$(use_enable bmp) \
 		$(use_enable xmms) \
 		$(use_enable audacious) \
 		$(use_enable infopipe) \
