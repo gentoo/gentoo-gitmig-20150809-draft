@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.7 2006/01/29 16:22:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.8 2006/02/18 20:48:37 kugelfang Exp $
+
+  18 Feb 2006; Danny van Dyk <kugelfang@gentoo.org>
+  -blas-reference-19940131-r1.ebuild:
+  Removed obsolete and masked version.
 
   29 Jan 2006; Simon Stelling <blubb@gentoo.org> +files/Makefile,
   -files/Makefile.gz, blas-reference-19940131.ebuild,
