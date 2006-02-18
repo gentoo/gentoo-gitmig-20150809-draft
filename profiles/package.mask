@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5010 2006/02/18 13:11:46 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5011 2006/02/18 13:29:55 chainsaw Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Tony Vroon <chainsaw@gentoo.org> (18 Feb 2006)
+# Masked pending removal - upstream has discontinued this project
+# Your upgrade path is media-sound/audacious; removal of this package is planned on 04/03/2006
+media-sound/beep-media-player
 
 # Doug Goldstein <cardoe@gentoo.org> (16 Feb 2006)
 # Working on the next cairo/glitz release
