@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.16.ebuild,v 1.7 2006/01/31 23:56:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.16.ebuild,v 1.8 2006/02/18 11:35:44 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -35,7 +35,7 @@ IUSE="big-tables berkdb debug minimal perl selinux ssl static"
 RESTRICT="primaryuri"
 
 DEPEND=">=sys-libs/readline-4.1
-	bdb? ( sys-apps/ed )
+	berkdb? ( sys-apps/ed )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	userland_GNU? ( sys-process/procps )
 	>=sys-libs/zlib-1.2.3
@@ -391,13 +391,13 @@ src_compile() {
 		# lots of chars
 		myconf="${myconf} --with-extra-charsets=all"
 
-		#The following fix is due to a bug with bdb on sparc's. See:
+		#The following fix is due to a bug with berkdb on sparc's. See:
 		#http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
 		# it comes down to non-64-bit safety problems
 		if useq sparc || useq alpha || useq hppa || useq mips || useq amd64 \
 		|| mysql_check_version_range "5.01.00.00 to 5.01.06.99"
 		then
-			ewarn "bdb berkeley-db disabled due to arch or version"
+			ewarn "berkdb berkeley-db disabled due to arch or version"
 			myconf="${myconf} --without-berkeley-db"
 		else
 			useq berkdb \

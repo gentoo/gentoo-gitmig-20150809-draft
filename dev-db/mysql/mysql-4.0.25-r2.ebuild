@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.25-r2.ebuild,v 1.25 2005/12/28 21:54:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.25-r2.ebuild,v 1.26 2006/02/18 11:35:44 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -24,7 +24,7 @@ IUSE="berkdb debug doc minimal perl readline selinux ssl static tcpd big-tables"
 RESTRICT="primaryuri"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
-		bdb? ( sys-apps/ed )
+		berkdb? ( sys-apps/ed )
 		tcpd? ( >=sys-apps/tcp-wrappers-7.6-r6 )
 		ssl? ( >=dev-libs/openssl-0.9.6d )
 		perl? ( dev-lang/perl )
@@ -151,7 +151,7 @@ src_unpack() {
 	sed -i \
 		-e "s/\<set_bit\>/my__set_bit/g" \
 		-e "s/\<clear_bit\>/my__clear_bit/g" \
-	    || die "Failed to fix bitops"
+		|| die "Failed to fix bitops"
 }
 
 src_compile() {
@@ -195,7 +195,7 @@ src_compile() {
 		# lots of chars
 		myconf="${myconf} --with-extra-charsets=all"
 
-		#The following fix is due to a bug with bdb on sparc's. See:
+		#The following fix is due to a bug with berkdb on sparc's. See:
 		#http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
 		# it boils down to non-64 bit safety.
 		if useq sparc || useq alpha || useq hppa || useq mips || useq amd64
@@ -329,9 +329,9 @@ src_install() {
 		#empty dirs...
 		diropts "-m0750"
 		if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
-	        dodir "${DATADIR}"
-	        keepdir "${DATADIR}"
-	        chown -R mysql:mysql "${D}/${DATADIR}"
+			dodir "${DATADIR}"
+			keepdir "${DATADIR}"
+			chown -R mysql:mysql "${D}/${DATADIR}"
 		fi
 
 		#diropts "-m0755"
@@ -345,8 +345,7 @@ src_install() {
 		dodir "/var/run/mysqld"
 
 		keepdir "/var/run/mysqld"
-		chown -R mysql:mysql \
-	        "${D}/var/run/mysqld"
+		chown -R mysql:mysql "${D}/var/run/mysqld"
 	fi
 
 	# docs

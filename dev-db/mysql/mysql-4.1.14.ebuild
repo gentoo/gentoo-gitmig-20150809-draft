@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.31 2005/12/30 16:54:46 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.32 2006/02/18 11:35:44 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -25,7 +25,7 @@ IUSE="big-tables berkdb debug doc minimal perl readline selinux ssl static tcpd"
 RESTRICT="primaryuri"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
-	bdb? ( sys-apps/ed )
+	berkdb? ( sys-apps/ed )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r6 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( dev-lang/perl )
@@ -448,9 +448,9 @@ src_install() {
 		#empty dirs...
 		diropts "-m0750"
 		if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
-	        dodir "${DATADIR}"
-	        keepdir "${DATADIR}"
-	        chown -R mysql:mysql "${D}/${DATADIR}"
+			dodir "${DATADIR}"
+			keepdir "${DATADIR}"
+			chown -R mysql:mysql "${D}/${DATADIR}"
 		fi
 
 		diropts "-m0755"
@@ -464,8 +464,7 @@ src_install() {
 		dodir "/var/run/mysqld"
 
 		keepdir "/var/run/mysqld"
-		chown -R mysql:mysql \
-	        "${D}/var/run/mysqld"
+		chown -R mysql:mysql "${D}/var/run/mysqld"
 	fi
 
 	# docs
