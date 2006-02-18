@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.10 2006/02/17 23:38:59 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.11 2006/02/18 00:12:25 chutzpah Exp $
+
+  18 Feb 2006; Patrick McLean <chutzpah@gentoo.org> -drscheme-301.ebuild:
+  Remove version 301 as it was half-broken anyway.
 
 *drscheme-301-r1 (17 Feb 2006)
 
