@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/acx-firmware
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx-firmware/ChangeLog,v 1.1 2006/02/18 14:33:21 genstef Exp $
+
+*acx-firmware-20060207 (18 Feb 2006)
+
+  18 Feb 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +acx-firmware-20060207.ebuild:
+  Split out firmware thanks to Joerg Nientiedt for providing the mirror and
+  Mki in irc for testing
+
