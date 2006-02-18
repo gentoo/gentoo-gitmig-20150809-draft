@@ -1,9 +1,6 @@
 MD5 99954be08ad178d87625ba93528f019e ChangeLog 1263
 RMD160 8995caf1cfdec63da76dff0c7f102601dfeb3cd9 ChangeLog 1263
 SHA256 8f86acf8c456a96ec10a6b3f6f6b02d18ed4324fd06d73eefa3b9b285ba41bb8 ChangeLog 1263
-MD5 49c17e757d5c60cc925dda14c37b5314 files/digest-smooth-themes-0.5.8 71
-RMD160 63332e956c5d2c609b131708c3f5fe9dc92e133c files/digest-smooth-themes-0.5.8 71
-SHA256 b8361736975e4920af3feb4359e8510c2e7cdb515396a9371db16f378f5dd014 files/digest-smooth-themes-0.5.8 71
 MD5 49c17e757d5c60cc925dda14c37b5314 files/digest-smooth-themes-0.5.8-r1 71
 RMD160 63332e956c5d2c609b131708c3f5fe9dc92e133c files/digest-smooth-themes-0.5.8-r1 71
 SHA256 b8361736975e4920af3feb4359e8510c2e7cdb515396a9371db16f378f5dd014 files/digest-smooth-themes-0.5.8-r1 71
@@ -16,6 +13,3 @@ SHA256 b9a5fceda8fcd11e73378be494015adbe1389dc4ad5b973a90caf98159b51b47 metadata
 MD5 84a69bcb92fd3c28a206f0b59b5be58d smooth-themes-0.5.8-r1.ebuild 937
 RMD160 f565c9ca46dab6dbf95f5c1f3441e7c7eade561d smooth-themes-0.5.8-r1.ebuild 937
 SHA256 3b12c907c7f426e643a370d547b1a7f14fd9d4bd24538f958194fd2aecc86a33 smooth-themes-0.5.8-r1.ebuild 937
-MD5 f847597cfc56bd3f20a68d37c0613368 smooth-themes-0.5.8.ebuild 1256
-RMD160 dffb75149981815f0f0caf6d095815fe16cc3e23 smooth-themes-0.5.8.ebuild 1256
-SHA256 6fea949b89e5ead9f5da4aa7a70698b5e15280ca189963923bc65d53bc3e87c9 smooth-themes-0.5.8.ebuild 1256
