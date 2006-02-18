@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 da3eacac779d5345e996db9d5c5ad7c2 ChangeLog 3251
+MD5 11c31f8818f33f94aa985f46ebb9e0d0 ChangeLog 3389
+RMD160 762628442d68c2079074f4641d5e6a3ac6e8ee1d ChangeLog 3389
+SHA256 41cf21ab6a819e661fc25df8a65e9bea2398c45a74bc3aec38b2ce9fc42f6b1e ChangeLog 3389
 MD5 bff482c9d64275b69da3f8dbd294e822 PEAR-Services_Weather-1.3.1.ebuild 595
-MD5 77186df09534649ce34503e90c4165eb PEAR-Services_Weather-1.3.2-r1.ebuild 623
+RMD160 a6520ada5a29029b6b34d6b98c8dd9103e6ee056 PEAR-Services_Weather-1.3.1.ebuild 595
+SHA256 2532531beb919a077a2bdcc4ad3961346976ae55dc0843913a4843b7d85a98ac PEAR-Services_Weather-1.3.1.ebuild 595
+MD5 4725edca1eab74e5bc6eca42b0806b96 PEAR-Services_Weather-1.3.2-r1.ebuild 624
+RMD160 754b8ae980ebeed567a034fac9ceb69fc92db4f2 PEAR-Services_Weather-1.3.2-r1.ebuild 624
+SHA256 9a6d02e09289901b58e6a4293c4acd923c8cad7673413b2810778a7739c648ad PEAR-Services_Weather-1.3.2-r1.ebuild 624
 MD5 408fb6cdf7534979b79a2e50a7a0d8b6 PEAR-Services_Weather-1.3.2.ebuild 606
+RMD160 c851bc42dfb1be2e5e056812d146aa26dd2d647f PEAR-Services_Weather-1.3.2.ebuild 606
+SHA256 17c315988e2bb91f5da4fcb9816824f35d177147e54e8117e19e96aec8bd792c PEAR-Services_Weather-1.3.2.ebuild 606
 MD5 3780be3af60c363031658c9ca8f99864 files/digest-PEAR-Services_Weather-1.3.1 70
+RMD160 3caf614b9e4f1ae0121f2540ee3d12744fc992fb files/digest-PEAR-Services_Weather-1.3.1 70
+SHA256 fed77cd78f15bdf4f121501d5fb20e5b74642fcd841e4d673a1a3581b1a88626 files/digest-PEAR-Services_Weather-1.3.1 70
 MD5 883bfd8528f96c078a2bd368303e4968 files/digest-PEAR-Services_Weather-1.3.2 70
+RMD160 f9c2d117b131bbf646b652d6979bfa0ba5b09221 files/digest-PEAR-Services_Weather-1.3.2 70
+SHA256 620998369874e148cf377eb7d176306e01f0e4e58344bf234a5a880251378d74 files/digest-PEAR-Services_Weather-1.3.2 70
 MD5 883bfd8528f96c078a2bd368303e4968 files/digest-PEAR-Services_Weather-1.3.2-r1 70
+RMD160 f9c2d117b131bbf646b652d6979bfa0ba5b09221 files/digest-PEAR-Services_Weather-1.3.2-r1 70
+SHA256 620998369874e148cf377eb7d176306e01f0e4e58344bf234a5a880251378d74 files/digest-PEAR-Services_Weather-1.3.2-r1 70
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD3Gg/2+ySkm8kpY0RAtzjAJkBHi3iKt8p4uOHS5y+HZw85ZDJkwCfSfsX
-S/7dCgkfViafgQ0kVD0NriE=
-=Ybne
------END PGP SIGNATURE-----
+RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
+SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156
