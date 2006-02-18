@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94.ebuild,v 1.3 2006/02/17 12:29:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94.ebuild,v 1.4 2006/02/18 19:25:10 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -82,6 +82,7 @@ src_compile() {
 
 	econf \
 		--enable-largefile \
+		--without-included-regex \
 		$(use_enable nls) \
 		$(use_enable selinux) \
 		${myconf} \
