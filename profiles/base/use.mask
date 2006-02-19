@@ -30,3 +30,6 @@ video_cards_vmware
 # not needed on non-x86, non-amd64, non-ppc systems
 input_devices_synaptics
 input_devices_wacom
+
+# beep-media-player is in package.mask
+bmp
