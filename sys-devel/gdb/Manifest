@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a5cac68f1a4fea019c72500ce6ecb6be ChangeLog 12437
+MD5 68059bf2cf12a64fe7303fdc7df08120 ChangeLog 12526
 MD5 d3ab2683d88b3cbecb8a9faa439703a1 files/bfd-malloc-wrap.patch 782
 MD5 460629563df21e6a68b8941c07d4f30b files/digest-gdb-6.1 131
 MD5 b3790be989db97b22c599572afbce109 files/digest-gdb-6.2.1 133
@@ -36,12 +33,5 @@ MD5 fb4ab4aaccb90b523c650a5f30d02281 gdb-6.2.1.ebuild 1784
 MD5 20334b11833489b3bcc13c0fea645a1d gdb-6.3-r4.ebuild 2983
 MD5 abe5b46c3552ca8670ffb68c048d4ffd gdb-6.4-r1.ebuild 3009
 MD5 65d8f7193ad67820fe247c98322db72a gdb-6.4-r2.ebuild 3076
-MD5 f5428a658b66b60aeaa511d39cc450b3 gdb-6.4.ebuild 2996
+MD5 64854d9e61c5f0c03dae7184dafa4f08 gdb-6.4.ebuild 2995
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1Wd+2+ySkm8kpY0RAhkrAJ0fmIIHmPtJmFiwILiwYLNIO2QskwCgkNpL
-fBLEWA/TSMoaRRJeq7Bi3DE=
-=KEsn
------END PGP SIGNATURE-----
