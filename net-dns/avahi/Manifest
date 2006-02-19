@@ -1,19 +1,43 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 016574796efa4419078707c41d792eb4 ChangeLog 4435
+MD5 716a104a2ea6711d626301016068f1dd ChangeLog 4553
+RMD160 72c6daa1709478b19957dde09aaba151c7833608 ChangeLog 4553
+SHA256 e26ac9bf513928442d872c58b4b984d6a82bcfda4baff156b5c028bbf8f6cd11 ChangeLog 4553
 MD5 5da4a9160b981e4d0f2e64e12a39de37 avahi-0.5.2-r1.ebuild 2085
+RMD160 da7bdca953467f64c234aa0711113611a6c1b62b avahi-0.5.2-r1.ebuild 2085
+SHA256 e1b48e64c68b8a0f58af9e32a243004544de83363dacfc10781084bc23d6b988 avahi-0.5.2-r1.ebuild 2085
 MD5 9f77e49e7168653de5c733743cba4abb avahi-0.6.4.ebuild 2715
+RMD160 cbc0b01d688338341f43965bc2df43b3049c767c avahi-0.6.4.ebuild 2715
+SHA256 a851a2426a233f6f4697e7a32191055081bf07e7525a2e835b840abb8b45d1b4 avahi-0.6.4.ebuild 2715
+MD5 2b512509881b44307f65402bc954fbe3 avahi-0.6.7.ebuild 2666
+RMD160 6f8e69f93ecce56a63bae2615ee26bc07e95968d avahi-0.6.7.ebuild 2666
+SHA256 9e946d76ff99795565e55ef398f1c4350ead814becfbc941d0937e96940bc40b avahi-0.6.7.ebuild 2666
 MD5 2189d236532868b9ae0d0ae87195acda files/0.6.1-need-dbus-initscript.patch 322
+RMD160 3c3e64099db0d02074f10c3897dd7aef26519b7a files/0.6.1-need-dbus-initscript.patch 322
+SHA256 e7805430e4af303222c7e4e25341eae90354b017569b3b90dfcd9ce6b534821e files/0.6.1-need-dbus-initscript.patch 322
 MD5 317c28eba6516a18140aa8e2cb26d618 files/avahi-0.6.1-no-ipv6.patch 362
+RMD160 7c90e7b3fadbd880d18db23dbe54ab6824be53d1 files/avahi-0.6.1-no-ipv6.patch 362
+SHA256 e00bd75a9770acf68c0f92cb8594b62acb0d60577e7dbeb1b7680e250b4d39b4 files/avahi-0.6.1-no-ipv6.patch 362
 MD5 2770e5c252b0067d578052ad75557319 files/avahi-0.6.3-mono-docs.patch 485
-MD5 b06b1183ea48e210c1943f0913f63714 files/digest-avahi-0.5.2-r1 63
-MD5 c879461c049e6095a9ff73e81777e95a files/digest-avahi-0.6.4 63
+RMD160 19cb1de9d0c9af0792e237b4cecac34a2d79900f files/avahi-0.6.3-mono-docs.patch 485
+SHA256 59c05f7ae8ec64965d353c6c9db76668a4fc0df36aea07af4cc3bbe3eb48e96f files/avahi-0.6.3-mono-docs.patch 485
+MD5 12abd332331db0c19c59020162bae87e files/digest-avahi-0.5.2-r1 235
+RMD160 e317452d87cee54eb87806b056b718a2f0924299 files/digest-avahi-0.5.2-r1 235
+SHA256 6499b0579b6d0c7bc9b77a465199ac6fe9dcba59078a6757c9a96d5bbed8bc6e files/digest-avahi-0.5.2-r1 235
+MD5 a92f16877c1828c26df4b3aa5e466f52 files/digest-avahi-0.6.4 235
+RMD160 d44866784f55d99165ddf36a3e1627c026971878 files/digest-avahi-0.6.4 235
+SHA256 30786ebaf7c24f1cc6c5126c2438462d16377e2e244351c08b2d5d3c5f92138f files/digest-avahi-0.6.4 235
+MD5 5693c6f28de98e300af617bca245a230 files/digest-avahi-0.6.7 235
+RMD160 c9744863d5bffd3329e706a33075ce2e900aed61 files/digest-avahi-0.6.7 235
+SHA256 04826909d54427aae6ee3b56e8de6ec2582b1b24ba580817eac6fda1a1546813 files/digest-avahi-0.6.7 235
 MD5 b8a99a5b7fa586fe9cabbacc87d88bfe metadata.xml 223
+RMD160 93a79d3a583130d803a2a8da0052f43d102ecfc2 metadata.xml 223
+SHA256 87de3da2e3f5d81839d9e3658af1703267195984bdee92aa032f1d429acc096d metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDz+HnBtvusYtCZMsRAoJ9AJ9XdryqeakUjDG2nQPyFrn5UMQN2QCfbkxd
-QAK7v2a9grbuI/UZj1cQtIs=
-=qJq4
+iD8DBQFD+PVTI1lqEGTUzyQRAvnfAKCjLZOWJBrUNU6NLvy1g8WK9oWd+QCeJ2qu
+gR12qckwyzTCBYWYJU8PX8w=
+=LXXE
 -----END PGP SIGNATURE-----
