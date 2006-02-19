@@ -1,4 +1,4 @@
-MD5 651b7a063f4edcebecf2e936e4a8fe0a ChangeLog 9405
+MD5 fa13d371e016f21cac06317e8aafa47b ChangeLog 9406
 MD5 60d79fbf53038186b939f83841d5f318 files/2.1.11-scan.patch 277
 MD5 a6be9cf60dc5043160d757c9772b1e57 files/digest-pciutils-2.1.11-r5 131
 MD5 ae29f04095b43ceb06e6b0cc94653c36 files/digest-pciutils-2.2.0-r1 130
@@ -11,4 +11,4 @@ MD5 f4d220c568a00c1ceafe6dc129ae6e95 files/pciutils-2.1.11-sysfs.patch 10374
 MD5 cf455fe33057e081ba7aaec93e481642 files/pciutils-2.2.0-shared-lib.patch 496
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 61778080ed55196416ece68570ba885a pciutils-2.1.11-r5.ebuild 2298
-MD5 fa2c304918e4bc2a7783d30c4c9bda1b pciutils-2.2.0-r1.ebuild 1778
+MD5 d0a630c666545d41d0bd82df2a910d31 pciutils-2.2.0-r1.ebuild 1777

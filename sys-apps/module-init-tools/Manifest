@@ -1,4 +1,4 @@
-MD5 5a853777c74bae13308b5ad5d314c17b ChangeLog 18697
+MD5 63aca745f4e1f03bb8a1287112ac2706 ChangeLog 18695
 MD5 469d7fc1f915c60585afc8d895b1668a files/digest-module-init-tools-3.0-r2 142
 MD5 813f2779e10e8f29d9e1d58dda93a5e3 files/digest-module-init-tools-3.1-r1 142
 MD5 5dbb0c3c30e8dd445395ad3d7e9c35fa files/digest-module-init-tools-3.2.1 144
@@ -16,7 +16,7 @@ MD5 4f6eb067ab56884adab12c53346dc793 files/modutils-2.4.27-no-nested-function.pa
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 3e2546d3dcec80540a104faf7767b449 module-init-tools-3.0-r2.ebuild 5628
 MD5 47229c8c9b55ff325e42a6d1fa6cb4aa module-init-tools-3.1-r1.ebuild 5550
-MD5 32a8af713708732a57df15cb34a76be1 module-init-tools-3.2.1.ebuild 5759
+MD5 43d8d0acc1e023fb876a18cee67fef6d module-init-tools-3.2.1.ebuild 5756
 MD5 602d273f05cace7e63b3989bda4a10d0 module-init-tools-3.2.2.ebuild 5769
 MD5 0e9cc79d40e71ac19d2c30beb83ee0a3 module-init-tools-3.2_pre7-r1.ebuild 5833
 MD5 ef19ad39c0567e3720cd650a2a07f6b2 module-init-tools-3.2_pre7.ebuild 5434
