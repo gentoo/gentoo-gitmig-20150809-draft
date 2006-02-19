@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-301-r1.ebuild,v 1.1 2006/02/17 23:38:59 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-301-r1.ebuild,v 1.2 2006/02/19 02:20:47 chutzpah Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -65,7 +65,6 @@ src_install() {
 
 	# create symlinks for all the executables
 	dodir /usr/bin
-	MY_D="${D#/var}"
 	MY_D="${MY_D%/}"
 
 	cd ${D}/usr/$(get_libdir)/${PN}/bin
