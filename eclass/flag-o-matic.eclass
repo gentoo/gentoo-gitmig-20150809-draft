@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.105 2006/01/22 17:51:27 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.106 2006/02/19 23:18:30 vapier Exp $
 
 
 # need access to emktemp()
@@ -114,7 +114,7 @@ setup-allowed-flags() {
 
 	# C[XX]FLAGS that we are think is ok, but needs testing
 	# NOTE:  currently -Os have issues with gcc3 and K6* arch's
-	export UNSTABLE_FLAGS="-Os -O3 -freorder-blocks -fprefetch-loop-arrays"
+	export UNSTABLE_FLAGS="-Os -O3 -freorder-blocks"
 	return 0
 }
 
