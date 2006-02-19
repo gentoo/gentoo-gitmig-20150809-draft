@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/netcat6
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.4 2005/10/18 02:02:41 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.5 2006/02/19 10:15:25 vapier Exp $
+
+*netcat6-1.0 (19 Feb 2006)
+
+  19 Feb 2006; Mike Frysinger <vapier@gentoo.org> +netcat6-1.0.ebuild:
+  Version bump #123112 by Sascha Geschwandtner.
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org> netcat6-0.5.ebuild:
   Mark 0.5 stable on alpha
