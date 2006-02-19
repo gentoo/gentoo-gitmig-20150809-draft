@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ee5b4cc60e26a9c1e0c3a6e5ab592cf1 ChangeLog 1529
-MD5 b98c4b0087dbe3e118e4fd51731a6700 cowsay-3.03.ebuild 1218
+MD5 ef81748f347eb0e0da486e674aea4b50 ChangeLog 1614
+MD5 0d1d8621cc6e417c89850e2dce1b3d13 cowsay-3.03.ebuild 1217
 MD5 2744086053e49bfd0592c2341dbb8e41 files/cowsay.bashcomp 1095
 MD5 2e5e04a0c30b4e7e3dab7781049e7d99 files/digest-cowsay-3.03 62
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDrB0I60LfUIagIAkRAhW3AKD3sK1P3ihGhtDMQnkfA5UipjgBQACgjtOl
-jrBSIQYbSp2BnpPfT/lITpo=
-=FaSN
------END PGP SIGNATURE-----
