@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 26d077bdc07498324f4e30c289e93582 ChangeLog 7124
+MD5 524a9c32c80cc6ad413ed0ae068464b0 ChangeLog 7220
+RMD160 d66ecb42e8040f24f064a82701907ef9b5f9116e ChangeLog 7220
+SHA256 2c6ce7aa97cc959b84ea144342d23f30ddbdb68091ed862058fe4a096b3e198d ChangeLog 7220
 MD5 d1c8289d32d8c1c5eced0cc472dec0d8 files/60gtk-doc-gentoo.el 101
+RMD160 4f6d96f748a26c20ec88ac98874141b14a61d679 files/60gtk-doc-gentoo.el 101
+SHA256 e5a9c6783fe09d369367cf40c1568a27a933181f8fbe5b7511b309c87602870a files/60gtk-doc-gentoo.el 101
 MD5 c036d436f5c42ec78ef0bb5507eb5437 files/digest-gtk-doc-1.1 64
+RMD160 eefd05dc9534a8e135b91d97a9bd55778c203229 files/digest-gtk-doc-1.1 64
+SHA256 69c634be5b9e40862c3a64558899aab8230f561af180ad82ed4f8a0054bca32e files/digest-gtk-doc-1.1 64
 MD5 7cc023d59d3e76467752a9eddc070059 files/digest-gtk-doc-1.3-r1 64
+RMD160 41ed0d925d6d5c4cdd89d665bfd7f5e4e3537bac files/digest-gtk-doc-1.3-r1 64
+SHA256 57485d78816407644fd4160524c6221b789c12cb530496ac185a83b65db61ff5 files/digest-gtk-doc-1.3-r1 64
 MD5 256ebf03501d496ca4a831688dc7283a files/digest-gtk-doc-1.4-r1 64
+RMD160 ab674f601631dcdddc6f5fa19894ebd8bc323433 files/digest-gtk-doc-1.4-r1 64
+SHA256 0fe3a2336fe17fde40859d167ea4c66f1108e697772fa283a4554341b92f420d files/digest-gtk-doc-1.4-r1 64
 MD5 01e1d20270319035161fbafc0d87132c files/gtk-doc-1.3-declaration.patch 372
+RMD160 c565c19aff1211b8f02b9d2063e08a1dccdf3fec files/gtk-doc-1.3-declaration.patch 372
+SHA256 4427122c6056e062b9dcb32e43b9dc95d8f7b46b137528354446bacfd7729381 files/gtk-doc-1.3-declaration.patch 372
 MD5 f002a5762e9733c1c4302834540a4bb0 gtk-doc-1.1.ebuild 933
+RMD160 5c585ee6f076961caac09f964821b1c6496a3ac5 gtk-doc-1.1.ebuild 933
+SHA256 c41aae70e9401f006b7bb851a88f365937c27e3c02d19cdb69834789e620cf7b gtk-doc-1.1.ebuild 933
 MD5 8708f42381ae890150e0511af84d959d gtk-doc-1.3-r1.ebuild 1165
-MD5 4695e62e1dbdf77e8fbbe0a9a96974e0 gtk-doc-1.4-r1.ebuild 1264
+RMD160 6103fb8968625519b5f1400c8c59ae8267097e8c gtk-doc-1.3-r1.ebuild 1165
+SHA256 686bce17f029ee349c454671aa9ee28187a908ade924483a308622c016097043 gtk-doc-1.3-r1.ebuild 1165
+MD5 46dd24a026cf9bb255c9c908ee4b4a72 gtk-doc-1.4-r1.ebuild 1266
+RMD160 705e0cd6f92733ef5aa4b3bdbbb4159d1cdc8491 gtk-doc-1.4-r1.ebuild 1266
+SHA256 022b29fe441638760e1b715d9eb4d2aa6cba7a06f1e9d162e21479678fbc1e9e gtk-doc-1.4-r1.ebuild 1266
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDXkwComPajV0RnrERAqV7AJ9W55fpUU/31Qm3CUicI5ksgMZIQQCeLidL
-n5eybCpE+tDmQWmUd4nPNhQ=
-=diGr
------END PGP SIGNATURE-----
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
