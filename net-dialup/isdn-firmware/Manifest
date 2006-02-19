@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4719226539e84401479afa27dde572d5 isdn-firmware-2005.8.15.2.ebuild 796
-MD5 f7be5b30673ad90aa48758807af0fc39 isdn-firmware-2005.3.21.3.ebuild 726
-MD5 dd05105220e110dd4d521bba3a51aa06 isdn-firmware-2004.4.5-r1.ebuild 632
-MD5 fd4e9eaf488bdc089ee55c726486ed38 ChangeLog 2259
-MD5 a3bae3baae7adefcefbc498adb616816 metadata.xml 369
-MD5 9e7122feba675b14122e4c2264c9839e files/digest-isdn-firmware-2005.3.21.3 74
-MD5 b23123a1cb40ed4706b3541170f3ffa8 files/digest-isdn-firmware-2005.8.15.2 74
+MD5 ee2048ab43a2723b7b0d998e3d21c442 ChangeLog 2419
+RMD160 cd44a05657ba7a7e43854dc34ffe4c61b53d7736 ChangeLog 2419
+SHA256 77e381d0d6ce0f0f6939bf61b9cc0aaa77e1ee7af222188623a07bb9ee231a2c ChangeLog 2419
 MD5 89ba560b85c0e4aaaec2e36831fa2470 files/digest-isdn-firmware-2004.4.5-r1 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDc5utKRy60XGEcJIRAhJSAJ95xMuWFsO4084hyEDS+QN5Htx05wCgoqIL
-yi6R+2/3XS20Xmr1DmKDk3c=
-=nA4/
------END PGP SIGNATURE-----
+RMD160 0c1db43d39eac9173043e472f63e83e29bb9b95b files/digest-isdn-firmware-2004.4.5-r1 73
+SHA256 4818d0f4844c7068cf91bbef6331afc04ef4538046beb411e4393b87a2ec8fdf files/digest-isdn-firmware-2004.4.5-r1 73
+MD5 9e7122feba675b14122e4c2264c9839e files/digest-isdn-firmware-2005.3.21.3 74
+RMD160 033e4a830199dd07eddc1e37b0d2a069c66f5e28 files/digest-isdn-firmware-2005.3.21.3 74
+SHA256 e499ec348e0090295e938f1c7c69f49ef187a41c1d0f900c434b9de1d1986f83 files/digest-isdn-firmware-2005.3.21.3 74
+MD5 b23123a1cb40ed4706b3541170f3ffa8 files/digest-isdn-firmware-2005.8.15.2 74
+RMD160 032a5ca08bc924a902e19f739d2fe3535a80116e files/digest-isdn-firmware-2005.8.15.2 74
+SHA256 74abe25a42df3857ea9379b790780cf43994b54cb6d859b846dcf5363a704ff3 files/digest-isdn-firmware-2005.8.15.2 74
+MD5 dd05105220e110dd4d521bba3a51aa06 isdn-firmware-2004.4.5-r1.ebuild 632
+RMD160 4d73859bb7d1d3b667cd0cb21bfcf6e1101df9df isdn-firmware-2004.4.5-r1.ebuild 632
+SHA256 26727d3b03e50e5f2dd5fdeb7e6d74387f0a56159b883b3e4511f17bdd45a9a4 isdn-firmware-2004.4.5-r1.ebuild 632
+MD5 59f5838ed0d324f43a8dfa0752008eab isdn-firmware-2005.3.21.3.ebuild 723
+RMD160 6e5c674f3587d13f78c7abe03595589f60437f38 isdn-firmware-2005.3.21.3.ebuild 723
+SHA256 e61b719b4f5c0a58d622570a78f12d11c96ca0be271fb3b2e83352493bdcdef6 isdn-firmware-2005.3.21.3.ebuild 723
+MD5 4719226539e84401479afa27dde572d5 isdn-firmware-2005.8.15.2.ebuild 796
+RMD160 9a1ecfc42e509c5001613d181ceb8cd739e09f95 isdn-firmware-2005.8.15.2.ebuild 796
+SHA256 5ff2389b5fc32977fb67f156076302ed2f0076f92b946647903d86a58920ffcd isdn-firmware-2005.8.15.2.ebuild 796
+MD5 a3bae3baae7adefcefbc498adb616816 metadata.xml 369
+RMD160 35939c57b83ff2c0fe72389dbd0827526388af73 metadata.xml 369
+SHA256 a28af98ea3f2c15dd8531bb7508d9085f8d8685d745b739fc73c962e557b1ba7 metadata.xml 369
