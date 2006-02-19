@@ -1,24 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3fff32fa2d870dc11a5383daeac1c021 ChangeLog 4402
+MD5 999756cd1af3e78dc14c0d3010cbce28 ChangeLog 4497
+RMD160 c338df8c0c493fcfa92d75c612cb8e6a9105ce2d ChangeLog 4497
+SHA256 cb65828dfaafc4272154b692ff9d4d30428c9b39883b7823c1857f2eb7e742f7 ChangeLog 4497
 MD5 0a5ef83b30538dd468f24d14be07769f files/00_dont-fetch-swing-ex.patch 604
+RMD160 e5ec738ee172e717ca874249fb6083663f69b8e0 files/00_dont-fetch-swing-ex.patch 604
+SHA256 c3be56ceb25582e46ba1ec605b8c9fbf35ed3c0ae104cb63fe7d619633daa1dc files/00_dont-fetch-swing-ex.patch 604
 MD5 5ab916fbf55d8587da8547b2d264a383 files/1.5.5_jdk15.patch 1217
+RMD160 49cd8abaa45dbb2901fd0835d13cbc7c50096e2a files/1.5.5_jdk15.patch 1217
+SHA256 6c89bf649d91626f82b9cc103a34a9afd19f747aba4d6fc0c29edf51542a2b6b files/1.5.5_jdk15.patch 1217
 MD5 6d48e39fc85ff462180102a36f8fc589 files/digest-rhino-1.5.5-r1 126
+RMD160 c7402cfeb451fa52c0f3e6be1ba9d909ac609161 files/digest-rhino-1.5.5-r1 126
+SHA256 c82f41a1d32ec9f564550369c1a55bd52c2575a2ad82318b5846a317cc743ea1 files/digest-rhino-1.5.5-r1 126
 MD5 6d48e39fc85ff462180102a36f8fc589 files/digest-rhino-1.5.5-r2 126
+RMD160 c7402cfeb451fa52c0f3e6be1ba9d909ac609161 files/digest-rhino-1.5.5-r2 126
+SHA256 c82f41a1d32ec9f564550369c1a55bd52c2575a2ad82318b5846a317cc743ea1 files/digest-rhino-1.5.5-r2 126
 MD5 bba5a68c73328abd7ba67bcf3e828452 files/digest-rhino-1.6.1-r1 126
+RMD160 751f923811abece3e130cc3532ec81aec677e9c6 files/digest-rhino-1.6.1-r1 126
+SHA256 1f4cdb5553d2b406e497bf1d07ee7847eb531e4cff9171a96a5af2f4ec178fbd files/digest-rhino-1.6.1-r1 126
 MD5 f3a738648094cfa4a28969b09671c3e2 files/digest-rhino-1.6.1-r2 126
+RMD160 dfceead5837910d7f7879b46cb5f43ae08304c79 files/digest-rhino-1.6.1-r2 126
+SHA256 69910885bcc79ba32fde8d1b34692bbf4084cdcbd4d3b372e465d51b9a2cf43d files/digest-rhino-1.6.1-r2 126
 MD5 b62e19aa798647a3e963b0b3be774776 files/jsscript 131
+RMD160 cc052b0742907d626c3dadc2b2502d6f66394ad0 files/jsscript 131
+SHA256 407b8b2683deb948198b569bec9513201648b95657df75657f198c892145fa45 files/jsscript 131
 MD5 1efa33d52544cf9e08d6538fd15936c2 files/rhino-1.6-gentoo.patch 4761
+RMD160 fdc3e62b096dbe1192521e8b050839ddebf49df9 files/rhino-1.6-gentoo.patch 4761
+SHA256 a1a4ee1cd2e2e4b0761c559b0b68c34a49aa351978ec1221dbac19b13f2a153e files/rhino-1.6-gentoo.patch 4761
 MD5 4622606981d4aa0930c917b65cf2f202 metadata.xml 350
+RMD160 a9d78137a7a27bfe6e5972bad36be52b4f5bbbbd metadata.xml 350
+SHA256 99be7320ab28fea03c64ed9eed1d068e09a3b9cdbd61e2014cacf9450417a01a metadata.xml 350
 MD5 ffada4f238f8cbf3ee67e1bd469e9f7b rhino-1.5.5-r1.ebuild 1411
+RMD160 c6f430bdcf67d8b14d1abbe4be8673d714ce5f4c rhino-1.5.5-r1.ebuild 1411
+SHA256 aebacb51b2601237a0d689ab1195baeb4247a34ed88f91db5e4959a364e038df rhino-1.5.5-r1.ebuild 1411
 MD5 2d5c54a2cb2632a1702fc0344dd949ca rhino-1.5.5-r2.ebuild 1500
+RMD160 fbda2565095153359b296ea5b3e96aa63c6c87e7 rhino-1.5.5-r2.ebuild 1500
+SHA256 965d658c3ad192496358cf71228040541569c0ae34e8a87fe680429b398da283 rhino-1.5.5-r2.ebuild 1500
 MD5 269e1cdae8100cb542bf58898ac4e044 rhino-1.6.1-r1.ebuild 1502
-MD5 68582229b2a32bfaf7d2ce72713c64f9 rhino-1.6.1-r2.ebuild 1520
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDypmgndWRXhKOboURAkvVAJ4lw1VgZbKUpGhLlzth99s05Uy1jgCghQ7A
-8IfKD8QtTlfT3lXGy+WFvzw=
-=kExo
------END PGP SIGNATURE-----
+RMD160 67f806fafe1bd4893317bfcdeb4025fb5601995c rhino-1.6.1-r1.ebuild 1502
+SHA256 dd90a2974d9048d674e5b17eb9652a2c8fd7635900a80fe6ecaa2b6e4e2dab67 rhino-1.6.1-r1.ebuild 1502
+MD5 b73a554bfb55cfca6224c25c0352017e rhino-1.6.1-r2.ebuild 1525
+RMD160 f9538569ce423086fcb102b0bb72b86f74e084d5 rhino-1.6.1-r2.ebuild 1525
+SHA256 8efc1cbd8f46bc25a682a5365c29d4837bd417fef2e46884bce9f3761eac48e3 rhino-1.6.1-r2.ebuild 1525

@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f5f4a3b66dbfbd3b43e6fe999b77e647 ChangeLog 3002
+MD5 f466051d976bbe25d8f50619a327696f ChangeLog 3096
+RMD160 49306cf79b85c6464e273bf351ca72eaf391c316 ChangeLog 3096
+SHA256 10d53657345708ba54ef4a34085ddbe2a8974567758c11d9382755315ca3eed8 ChangeLog 3096
 MD5 8edc146649c8fbc403b70d2bce7702f5 files/digest-jdepend-2.6-r1 60
+RMD160 87f4c0c40fad7f92cc42857b054df50f5abddc50 files/digest-jdepend-2.6-r1 60
+SHA256 3ddfba9557807e0a5901d9daeec848552f4220723acdd374cc6c705726b78d0d files/digest-jdepend-2.6-r1 60
 MD5 bff97b12035abbf9e1411b1b40b87cfa files/digest-jdepend-2.8-r1 60
+RMD160 ebe2c49af3a445cda703a5af86151db7d6bb1f06 files/digest-jdepend-2.8-r1 60
+SHA256 91b7f424e82ec6df887645d415134780a2fc9a03457bd9e2be7add03c7752289 files/digest-jdepend-2.8-r1 60
 MD5 8cd6656b239dc4bda362ab10efe868b4 files/digest-jdepend-2.8.1 62
+RMD160 a2dc83dfe9b76d0817b60b3b6d72cd4cb68e046c files/digest-jdepend-2.8.1 62
+SHA256 ee6298382e80c248928943eabc6dd32f13364b87d4a9bf6a97e12ac6a5724faf files/digest-jdepend-2.8.1 62
 MD5 8124a3af6793601aad12acdc10fbb59e files/digest-jdepend-2.9 60
+RMD160 d4703d66fe15f651cd29e1c43a1f25936b3313e6 files/digest-jdepend-2.9 60
+SHA256 cf24f889f6ae456c88aabe6b7f5f667c56dcdd3cfdffdf7ff05b03c6fc9579dc files/digest-jdepend-2.9 60
 MD5 e72c71df0f44c56bdcfafb28322270d3 jdepend-2.6-r1.ebuild 1363
+RMD160 bd5e08b5200c84a3506ca9c3ca4f074d8182e206 jdepend-2.6-r1.ebuild 1363
+SHA256 ba5fc1a48c4e1fe40a1deec4c0022df247201da7e0773c51fb0deb1f9e5244c2 jdepend-2.6-r1.ebuild 1363
 MD5 35aace974870451a1613ed226756f9ee jdepend-2.8-r1.ebuild 1355
+RMD160 a66bf342c4e90d750c7880289811fad8320b5b25 jdepend-2.8-r1.ebuild 1355
+SHA256 49bd945750915979b4543706a8e1b3bf4a9fbb5bb8a07452a4513740a5fa07ca jdepend-2.8-r1.ebuild 1355
 MD5 1e2f85eae82c6bd2d702aaa60a251c98 jdepend-2.8.1.ebuild 1364
-MD5 c5f0935a7551b76bbd7a38310505d534 jdepend-2.9.ebuild 1428
+RMD160 efabb6175a7a3dddf5b1783b2a8fbb7162b0473f jdepend-2.8.1.ebuild 1364
+SHA256 0d0bde3436acd8a431f19b20e0eb8d65ba121b8eda1391323424748d9fa67410 jdepend-2.8.1.ebuild 1364
+MD5 a3afbf715dbbdb3081c3f7807b67a81b jdepend-2.9.ebuild 1435
+RMD160 817bf6a14bd39097a47f1bdf8524813f2721f44a jdepend-2.9.ebuild 1435
+SHA256 5f149d9e9153872ff2072e5acd4f0198bf95f1de79e8647b752510030dd37982 jdepend-2.9.ebuild 1435
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDRCM+/rLF9B432nYRAgQ9AJ48PT473HQweElAFv8nCJuKKhgn0ACgg3I9
-MmN4Wh3Y4S4pdGE8m7J+yHE=
-=+trZ
------END PGP SIGNATURE-----
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
