@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4dd6bb6b989d6faf86de16f4170d0f2b ChangeLog 416
+RMD160 57d8818f76e7711f0869eae7c349fb90985cdf9d ChangeLog 416
+SHA256 d0f5b8b7d3ee7387c278762097c05c2a3a08a23953d4b17806ebd4fdf100e612 ChangeLog 416
+MD5 91890dbb73703ab1de1a9f2cd32e02fe files/digest-notification-daemon-0.3.4 277
+RMD160 7d616ad1cd13e1f5af4f2bf7511cd22f32fffba5 files/digest-notification-daemon-0.3.4 277
+SHA256 77c3dca6ca448fccc9712a020412c441ab8f44e3d9ae11aa2a4a43b306d9ee86 files/digest-notification-daemon-0.3.4 277
+MD5 f5775272cd7e22ae38566107c416c1e4 metadata.xml 275
+RMD160 7aca4724ede81b0eaad9b4536f00a6a805727cef metadata.xml 275
+SHA256 1e9c7343efc06a4d4143421f4bf3740c30f71ed6ce5011231505e7e911f31548 metadata.xml 275
+MD5 b32a8797a14b35dabb820a940e59266b notification-daemon-0.3.4.ebuild 823
+RMD160 103d9f53f7432017f9c1796b4eea980f6c36f08c notification-daemon-0.3.4.ebuild 823
+SHA256 4b520bbd777f5cd5d8f432b00816cba22a3516664bb36b1889d7386d8dd9348a notification-daemon-0.3.4.ebuild 823
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD+MDlI1lqEGTUzyQRAuHFAKCL2Fc9NK9zZLDNI0dyldJHH2XXbACfc/1y
+x4TiNJRJU8JmAipvDCh8bH0=
+=0Fik
+-----END PGP SIGNATURE-----
