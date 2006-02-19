@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mail-notification
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.25 2005/12/17 11:58:57 slarti Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.26 2006/02/19 21:59:18 hansmi Exp $
+
+  19 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
+  mail-notification-2.0.ebuild:
+  Added to ~ppc.
 
   16 Dec 2005; Tom Martin <slarti@gentoo.org> mail-notification-2.0.ebuild:
   Fix silly little error in evolution installation destination. Thanks to
