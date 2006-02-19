@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/pkpgcounter-1.80.ebuild,v 1.1 2006/02/16 15:02:01 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/pkpgcounter-1.80.ebuild,v 1.2 2006/02/19 08:26:42 satya Exp $
 
 inherit distutils
 
@@ -16,6 +16,7 @@ IUSE="psyco"
 
 DEPEND="
 	virtual/python
+	dev-python/imaging
 	x86? ( psyco?  ( dev-python/psyco ) )
 	"
 

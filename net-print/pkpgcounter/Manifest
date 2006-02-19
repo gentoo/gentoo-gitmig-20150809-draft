@@ -13,6 +13,6 @@ SHA256 9c39b2ad0b45784eee5910b96b81e3554c1266a8fc7ddcd0113a84a47eaef58d metadata
 MD5 266a06fb74a63ef814cd5b0f0aab032b pkpgcounter-1.72.ebuild 659
 RMD160 ba0cdee78e6874babdcaa15c8b391008abf970e4 pkpgcounter-1.72.ebuild 659
 SHA256 bc0cea817d78540be30f488b99380feff7eb567e513091dc9591b7283d45c6da pkpgcounter-1.72.ebuild 659
-MD5 55cd2af28f0d580996a1607a6bd124d9 pkpgcounter-1.80.ebuild 709
-RMD160 333adfdd0fe691a6c0cfca074a47fa8a67ddee92 pkpgcounter-1.80.ebuild 709
-SHA256 555b677e673c70c02e7e8e72b650b1ee9ab2a28f5a06deed5d95d788bbe3ad2c pkpgcounter-1.80.ebuild 709
+MD5 32ee4eca556addf5e420293a849d7b29 pkpgcounter-1.80.ebuild 729
+RMD160 22d523c87866e41a2957e78378b1fddea50b5251 pkpgcounter-1.80.ebuild 729
+SHA256 aef6d4e106a40857d1ec71a83c9df18e867754ad2e3f966a48739e90ad73a42d pkpgcounter-1.80.ebuild 729
