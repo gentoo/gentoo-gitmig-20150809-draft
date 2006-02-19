@@ -4,11 +4,11 @@ Hash: SHA1
 MD5 8994c99562fc9b34280f7152fc4fef7f ChangeLog 1233
 MD5 2a9cc06fc8d62e325745ffebade06d98 files/digest-rppppoek-0.40 66
 MD5 0629a518bafe9606efcdf3cb58e61245 metadata.xml 283
-MD5 9a282ec9bd5db8cc353a46a30eb2b54a rppppoek-0.40.ebuild 541
+MD5 cac9c70fd391075e97ba9cbd0b25b2d4 rppppoek-0.40.ebuild 547
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD+CzgjG8pv1lIUX4RApFKAJ4gCjy+2BdJe6mZBE4fDI6FlOfyjACeLA8U
-tSApCbDfro9a1PHGgQUxP1w=
-=ksyD
+iD8DBQFD+Mf2jG8pv1lIUX4RAgmfAJwNQ7dFjwXY+RULwhhr2TmG+ielGACglH0l
+V/GYU/KoqMXWat5/CdaBiJw=
+=TpDY
 -----END PGP SIGNATURE-----
