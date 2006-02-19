@@ -1,6 +1,13 @@
 # ChangeLog for www-client/httrack
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.3 2005/04/05 20:47:41 pvdabeel Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.4 2006/02/19 03:01:12 vanquirius Exp $
+
+*httrack-3.40 (19 Feb 2006)
+
+  19 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> +metadata.xml,
+  -httrack-3.30.ebuild, -httrack-3.33.ebuild, +httrack-3.40.ebuild:
+  3.40 version bump for bug 123183. Request by gdub <gdub at ece dot utexas
+  dot edu>. Also, making myself maintainer of this package.
 
 *httrack-3.33 (05 Apr 2005) 
   05 Apr 2005; Pieter Van den Abeele <pvdabeel@gentoo.org> +httrack-3.33.ebuild:
