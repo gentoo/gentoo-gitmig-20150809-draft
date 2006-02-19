@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.2.3.ebuild,v 1.1 2006/02/05 15:57:23 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.2.3.ebuild,v 1.2 2006/02/19 23:06:29 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -50,20 +50,24 @@ src_install() {
 	dodoc MANUAL.DE Examples/*.xml
 }
 
+pkg_preinst() {
+
+	if [[ ! -L ${ROOT}/etc/vdr/channels.conf ]]; then
+	cp ${ROOT}/etc/vdr/channels.conf ${IMAGE}/etc/vdr/channels.d/channels.conf.bak
+	cp ${ROOT}/etc/vdr/channels.conf ${IMAGE}/etc/vdr/channels.d/channels.conf
+	fowners vdr:vdr /etc/vdr/channels.d/{channels.conf,channels.conf.bak}
+	fi
+}
+
 pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
 	echo
 	einfo "Edit /etc/vdr/plugins/setup/*"
-
-	if [[ ! -L /etc/vdr/channels.conf ]]; then
-	cp ${ROOT}/etc/vdr/channels.conf ${ROOT}/etc/vdr/channels.d/channels.conf.bak
-	cp ${ROOT}/etc/vdr/channels.conf ${ROOT}/etc/vdr/channels.d/channels.conf
 	echo
 	ewarn "Setup-Plugin will change the path of your channels.conf"
 	einfo "You will find a backup copy on /etc/vdr/channels/channels.conf.bak"
 	echo
-	fi
 }
 
 

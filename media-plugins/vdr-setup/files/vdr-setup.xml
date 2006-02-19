@@ -119,7 +119,9 @@
       </menu>
       <menu name="Sonstiges">
           <menu name="Edit VDR-Menü" system="VDRMenu" help1="VDR Menü bearbeiten"   help2="setup_editmenu.hlp"/>
-          <entry name="Kanalliste" sysconfig="CHANNELLIST" type="selection" setup="channellist" value="DVB-s_MiniVDR" />
+<!--  - Warning! On use the Entry Channellist; by switch between diffrent Channellist, seted Timer will be distroyed 
+	  - to use the entry, remove the comment signs on beginning and end of line -->
+<!--           <entry name="Kanalliste" sysconfig="CHANNELLIST" type="selection" setup="channellist" value="DVB-s_MiniVDR" />   -->
       </menu>
       <menu name="Kindersicherung">
           <entry name="Geheimcode (0000=AUS)" sysconfig="CHILDLOCK" type="numtext" setup="childlock" value="0000" />

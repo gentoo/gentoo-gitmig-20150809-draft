@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-setup
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.1 2006/02/05 15:57:23 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.2 2006/02/19 23:06:29 hd_brummy Exp $
+
+  19 Feb 2006; Joerg Bornkessel <hd_brummy@gentoo.org> files/vdr-setup.xml,
+  vdr-setup-0.2.3.ebuild:
+  changed to use pgk_preinst, comment and warnig by use channellist in
+  vdr-setup.xml
 
 *vdr-setup-0.2.3 (05 Feb 2006)
 
