@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.46 2006/02/07 16:41:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.47 2006/02/19 18:15:08 kumba Exp $
+
+  19 Feb 2006; Joshua Kinard <kumba@gentoo.org> ncftp-3.1.9.ebuild:
+  Marked stable on mips.
 
   07 Feb 2006; Fabian Groffen <grobian@gentoo.org> ncftp-3.1.9.ebuild:
   Marked ppc-macos stable (bug #121379)
