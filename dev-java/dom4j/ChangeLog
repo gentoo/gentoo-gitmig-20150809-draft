@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dom4j
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.26 2006/01/23 04:39:59 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.27 2006/02/19 21:42:06 hansmi Exp $
+
+  19 Feb 2006; Michael Hanselmann <hansmi@gentoo.org> dom4j-1.6.1.ebuild:
+  Added to ~ppc.
 
   23 Jan 2006; Joshua Nichols <nichoj@gentoo.org> dom4j-1.5.ebuild,
   dom4j-1.6.1.ebuild:
