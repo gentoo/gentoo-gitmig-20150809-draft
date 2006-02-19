@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1747 2006/02/18 22:53:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1748 2006/02/19 19:12:48 vivo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -192,6 +192,7 @@ dev-cpp/sptk:fltk - Enable FLTK support
 dev-db/firebird:xinetd - If you want inetd version instead of a superserver (daemon)
 dev-db/mysql:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mysql:cluster - Add support for NDB clustering.
+dev-db/mysql:embedded - Build embedded server (libmysqld)
 dev-db/mysql:extraengine - Add support for alternative storage engines.
 dev-db/mysql:geometry - Add support for geometry data.
 dev-db/mysql:max-idx-128 - Raise the max index per table limit from 64 to 128
