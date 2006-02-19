@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.19.ebuild,v 1.3 2005/08/24 23:49:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.19.ebuild,v 1.4 2006/02/19 17:32:47 swegener Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -13,10 +13,7 @@ KEYWORDS="~amd64 ia64 ~ppc x86"
 IUSE="iconv"
 
 RDEPEND=">=x11-libs/xosd-2.2.5
-	|| (
-		>=net-irc/xchat-2.0.9
-		>=net-irc/xchat-gnome-0.4
-	)"
+	>=net-irc/xchat-2.0.9"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 

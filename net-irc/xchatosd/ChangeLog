@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchatosd
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/ChangeLog,v 1.18 2005/08/24 23:49:25 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/ChangeLog,v 1.19 2006/02/19 17:32:47 swegener Exp $
+
+  19 Feb 2006; Sven Wegener <swegener@gentoo.org> xchatosd-5.19.ebuild:
+  xchat-gnome and xchat are currently no longer compatible.
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org> xchatosd-5.19.ebuild:
   stable on ia64
