@@ -1,14 +1,5 @@
 --- src/libtcp-portmon.c.old	2005-12-05 22:27:16.000000000 -0500
 +++ src/libtcp-portmon.c	2006-02-13 00:22:25.000000000 -0500
-@@ -3,7 +3,7 @@
-  *
-  * Copyright (C) 2005  Philip Kovacs kovacsp3@comcast.net
-  * 
-- * $Id: portmon-mpd.patch,v 1.1 2006/02/18 22:50:36 dragonheart Exp $
-+ * $Id: portmon-mpd.patch,v 1.1 2006/02/18 22:50:36 dragonheart Exp $
-  *
-  * This library is free software; you can redistribute it and/or
-  * modify it under the terms of the GNU Lesser General Public
 @@ -231,8 +231,8 @@
     p_monitor1 = (tcp_port_monitor_t *)p_data1;
     p_monitor2 = (tcp_port_monitor_t *)p_data2;

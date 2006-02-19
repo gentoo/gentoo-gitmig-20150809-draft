@@ -28,16 +28,16 @@ SHA256 4b2c1d690aafb4a33771921f6425cdb31ca0fd8bb57a839b7ce6bda1d2aeb7c3 files/di
 MD5 dd1c99f09b0ec583eadca05832f8c5ea files/digest-conky-1.4.0 238
 RMD160 4743c690e8a6d5923fd3a83d25c1f021549978cb files/digest-conky-1.4.0 238
 SHA256 61e0266fd2231aa366ed5009e12d8667da17bc789f026bf0dd082af02853261f files/digest-conky-1.4.0 238
-MD5 1cd1953c8b8460f5c7c95a3cb0645bea files/portmon-mpd.patch 7502
-RMD160 4132670fe5ef2c7e605500a8257d42684808266e files/portmon-mpd.patch 7502
-SHA256 aa4b039c40222e6640e9a809e661c1867521eca14cafbfe28985901c33591313 files/portmon-mpd.patch 7502
+MD5 5d84594f42f7e10ad9b8a6bf8617b5bd files/portmon-mpd.patch 7143
+RMD160 fe1ccafec1903de6c9b1db99e8278c06c86be2c9 files/portmon-mpd.patch 7143
+SHA256 6952b4756e2d59d34d00896b6e1a53d6514993dd0b53312c9b464ac9ba91b4b8 files/portmon-mpd.patch 7143
 MD5 32bd4230c3ee12a8d5502d4bd57a9a3d metadata.xml 588
 RMD160 b40ff9a4903b330dcef016836e32f78709f10d0a metadata.xml 588
 SHA256 6cf91473c528b64d87041a3088f4930e270349ebdebd3c6dca06dc4943370b5a metadata.xml 588
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFD96nQmdTrptrqvGERAhgrAJ99gXcwpAxadGIju29oinTVh4RF1ACggFRB
-mzLu0XoKfSykS0vhYxS7miA=
-=M1z2
+iD8DBQFD9+SbmdTrptrqvGERAqZSAJ43tCFnNfCT3l0rXxqYxhmg7ke3fQCdHNK3
+L9OcH7YweoEq6NQMqN2I6Jc=
+=CdQZ
 -----END PGP SIGNATURE-----
