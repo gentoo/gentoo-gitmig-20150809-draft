@@ -1,11 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94.ebuild,v 1.4 2006/02/18 19:25:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94.ebuild,v 1.5 2006/02/19 08:09:36 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-PATCH_VER=1.1
-
+PATCH_VER=1.2
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
@@ -80,6 +79,7 @@ src_compile() {
 		&& myconf="${myconf} --bindir=/bin" \
 		|| myconf="${myconf} --program-prefix=g"
 
+	use static && append-ldflags -static
 	econf \
 		--enable-largefile \
 		--without-included-regex \
@@ -87,9 +87,7 @@ src_compile() {
 		$(use_enable selinux) \
 		${myconf} \
 		|| die "econf"
-
-	use static && append-ldflags -static
-	emake LDFLAGS="${LDFLAGS}" || die "emake"
+	emake || die "emake"
 }
 
 src_test() {
