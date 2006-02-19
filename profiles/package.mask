@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5012 2006/02/18 13:41:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5013 2006/02/19 17:28:43 nichoj Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1516,7 +1516,6 @@ games-fps/aaut
 # http://www.gentoo.org/proj/en/java/tiger-faq.xml
 >=dev-java/sun-jdk-1.4.99
 =dev-java/jrockit-jdk-bin-1.5*
->=dev-java/java-sdk-docs-1.4.99
 >=dev-java/ibm-jdk-bin-1.5
 
 # <taviso@gentoo.org> (06 Jan 2004)
