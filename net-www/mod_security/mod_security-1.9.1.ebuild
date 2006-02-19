@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_security/mod_security-1.9.1.ebuild,v 1.1 2006/01/05 19:41:02 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_security/mod_security-1.9.1.ebuild,v 1.2 2006/02/19 21:44:08 kumba Exp $
 
 inherit eutils apache-module
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.modsecurity.org/"
 SRC_URI="http://www.modsecurity.org/download/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
 IUSE="doc"
 
 APXS1_ARGS="-S LIBEXECDIR=${S} -c ${S}/apache1/mod_security.c"
