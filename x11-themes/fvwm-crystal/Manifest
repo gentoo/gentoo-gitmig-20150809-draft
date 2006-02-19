@@ -1,23 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 343f589bb8549ad6d5b4e0763e557240 ChangeLog 6100
+MD5 4429cda723c09b83b45a9e9d09e64f30 ChangeLog 6403
+RMD160 99384e2a2020f102745210fc5b94a55e62ce8cc0 ChangeLog 6403
+SHA256 c2844f238123c87bdc7fcfe9e2ff1a734fd3454b89cc8a5ee0a14d8b44ff5373 ChangeLog 6403
 MD5 33c0533262c8862823091a907f3099cf files/digest-fvwm-crystal-2.20050306 73
+RMD160 024d7c76ac72ad39c0476b48834e144632dfbe60 files/digest-fvwm-crystal-2.20050306 73
+SHA256 d893889c685fe1def7a1e87f5036dee4eb22b886beea148381e778e6ba194dc0 files/digest-fvwm-crystal-2.20050306 73
 MD5 0b86e07f73ac83508de363ae78383482 files/digest-fvwm-crystal-3.0 69
-MD5 aaf4f336df952f8b947853826cd7c392 files/digest-fvwm-crystal-3.0_rc1 73
-MD5 8cce344766f4c73acf209d4664226a0b files/digest-fvwm-crystal-3.0_rc2 73
-MD5 bf25b6c7c1ced0b34b0a324436b8c65c files/digest-fvwm-crystal-3.0_rc3 73
+RMD160 784d7bf69509bd5dca926c9d9f04431a2808a7d9 files/digest-fvwm-crystal-3.0 69
+SHA256 7b233bff5a924ebf06928d03876c2c434f97bff212b02fd64e4f4b7dc494ec2c files/digest-fvwm-crystal-3.0 69
 MD5 282c809ddaa59071830b6c8dd9b0a3a1 files/fvwm-crystal 25
-MD5 a506b11cca4bf050c4833823a0c8698b fvwm-crystal-2.20050306.ebuild 1666
-MD5 5e842a51bfb187d2161cee5dc514fe18 fvwm-crystal-3.0.ebuild 1295
-MD5 2808acb9d22f18452a9ed591241ddd26 fvwm-crystal-3.0_rc1.ebuild 1662
-MD5 745786d776627116450ed25cf48ed57f fvwm-crystal-3.0_rc2.ebuild 1689
-MD5 15ee3a900723727cfa6b6f7849363bb6 fvwm-crystal-3.0_rc3.ebuild 1334
+RMD160 d0c78fa2b6c0f80bd452bc381fbdc91cb5986ec8 files/fvwm-crystal 25
+SHA256 27345a70a0f0a1aadefcb8fe23ca1761fbe44a088f66d0c5e9db154db3c36962 files/fvwm-crystal 25
+MD5 b502fa4c7f0cf7b75ec5d7d4b356a82a fvwm-crystal-2.20050306.ebuild 1649
+RMD160 1ec7b78968d82145bb1529818e53d23d715c5223 fvwm-crystal-2.20050306.ebuild 1649
+SHA256 49f82d8e3a0315228a20cd4229bb5f3cf27ad24e28e54b79b0fef711491926e5 fvwm-crystal-2.20050306.ebuild 1649
+MD5 2342348d914ede13870f9c7a5ebd97d0 fvwm-crystal-3.0.ebuild 1291
+RMD160 890aa23e6b49ba4fb3e375faaabae4606c5ea096 fvwm-crystal-3.0.ebuild 1291
+SHA256 fb93945de3a086b3e3414b65633ada000f1532ae3419ae40a5714f0edb7500e9 fvwm-crystal-3.0.ebuild 1291
 MD5 0a94e35606cc2371a8aad69f2bdddcb5 metadata.xml 916
+RMD160 db8f088cced8f15033b3aa666dfde93d22c89389 metadata.xml 916
+SHA256 6e606ed86022bc0dbee600dedf881b5c2c76060f6ead05563a14b6d9c28cd737 metadata.xml 916
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD2SFl2jLqHNfbg2URAqhkAKDSmgBgUT/ANKUp/f4WJp2c66VFBACbBksH
-eHqzun5uD2Q8lbuDX55zBt8=
-=37aC
+iD8DBQFD+HrQ2jLqHNfbg2URAksCAKChAIRJ5aoJLKDKPNcNitoTjA0n6ACff0NJ
+mLQAhHtAAt5wiDsuKyRO5V8=
+=VtRU
 -----END PGP SIGNATURE-----
