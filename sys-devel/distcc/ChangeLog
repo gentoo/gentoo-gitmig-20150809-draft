@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.151 2005/09/05 15:41:09 lisa Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.152 2006/02/19 22:51:50 kumba Exp $
+
+  19 Feb 2006; Joshua Kinard <kumba@gentoo.org> distcc-2.18.3-r7.ebuild:
+  Marked stable on mips.
 
   05 Sep 2005; Lisa Seelye <lisa@gentoo.org> distcc-2.16-r3.ebuild,
   distcc-2.18.3-r8.ebuild:

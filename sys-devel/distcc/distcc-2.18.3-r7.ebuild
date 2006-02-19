@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r7.ebuild,v 1.9 2006/01/26 23:57:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r7.ebuild,v 1.10 2006/02/19 22:51:50 kumba Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -15,7 +15,7 @@ SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="gnome gtk selinux ipv6"
 
 DEPEND=">=sys-apps/portage-2.0.49-r6

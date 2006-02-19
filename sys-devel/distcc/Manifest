@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7bc1aee90e14979b35651d553168cf09 ChangeLog 27467
+MD5 eb3096d50f5ef790cf3e0bb97f3ea215 ChangeLog 27566
 MD5 02847d17d77f9fa6b67c232400108e44 distcc-2.16-r2.ebuild 4856
 MD5 4dcddb685b2174d4bb5f037de2a34d1a distcc-2.16-r3.ebuild 5174
 MD5 64e0afe30accc560225a5c48fc49119d distcc-2.18.3-r6.ebuild 4593
-MD5 25fa8f75bd370e6e3c4ac0cfcfa95575 distcc-2.18.3-r7.ebuild 4908
+MD5 d02831694f0f0fee5defe668eb3909bd distcc-2.18.3-r7.ebuild 4907
 MD5 94b1faf946a456fcab1ccf9b57d3494e distcc-2.18.3-r8.ebuild 5016
 MD5 5affcf06208bcb7b093812c299a7d9d5 files/2.17/conf 1200
 MD5 1161999a5d25185f95a8c284bd7307d1 files/2.17/init 733
@@ -21,10 +18,3 @@ MD5 fec77b3be8d8bd8f2d6e5a708cb35717 files/distcc-config 4874
 MD5 ec06b50c03c5002d4df60e49b9798445 files/distcc-gentoo-multilib-r1.patch 4245
 MD5 687a622f11f457581b267ce5fb3c2721 files/distcc-gentoo-multilib.patch 3784
 MD5 c04441917ccb5e5f9790642545c1f469 metadata.xml 375
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD2WIQ2+ySkm8kpY0RArPwAKC5MjP76O3czSfJa8lUx0/x/LUvSgCcDplW
-TeMY0cE+GfWpBDCMeIL0NzA=
-=EXZ2
------END PGP SIGNATURE-----
