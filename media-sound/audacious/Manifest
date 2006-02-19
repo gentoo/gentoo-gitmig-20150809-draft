@@ -1,30 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a2b6357651132bb85360f8cf4dd82b41 ChangeLog 3092
-RMD160 7cb0cc5eb74c519b6d874935545faf622cb93571 ChangeLog 3092
-SHA256 e9b920a3cc4f5d9b83f70714db6963a10dd8aa50afac2fbdaeb31e4e6de33add ChangeLog 3092
-MD5 b5ac0de9588722b6dc7f188a1feaf051 audacious-0.1-r1.ebuild 2498
-RMD160 5d6f4412b6c9b097d5c1b740d6165c0253139cc0 audacious-0.1-r1.ebuild 2498
-SHA256 5deea884786614fb29ac196b048994360b35f10c86f6aa976fb5b1500e8b2674 audacious-0.1-r1.ebuild 2498
-MD5 d6bbf4e291a918a0aa1c1942585863cd audacious-0.1.1.ebuild 2388
-RMD160 241965e5c2641ed25e22d141eea4e232e11d43ce audacious-0.1.1.ebuild 2388
-SHA256 419b368b622d4fa0562ccf04eec4b6e81701f86155f87328ac7da31633902e51 audacious-0.1.1.ebuild 2388
+MD5 5b844e809de0e3dd26888a949361529b ChangeLog 3425
+RMD160 ba86293269b47021bb23fcffa002615e668765f3 ChangeLog 3425
+SHA256 0e3fcf6b60fed28240cb98d88680c1b484ba35b6f1855833126d5a238cf1e527 ChangeLog 3425
 MD5 c6125c4339339a14a4b4248e153a21ba audacious-0.1.2.ebuild 2470
 RMD160 0ce19e11e3f64815f0fe2caac9e72807983473c6 audacious-0.1.2.ebuild 2470
 SHA256 e08f645ee6ffdcc04f7e1bb9afdd3236fa89b524645c2fbe2ced8f8f73c6cb86 audacious-0.1.2.ebuild 2470
-MD5 343fbbbf4c755e36e509b34c296929b2 audacious-0.1.ebuild 2402
-RMD160 1ce98e38ba735c524f4b3cfe1e0524b1a6ceb03a audacious-0.1.ebuild 2402
-SHA256 a59cc7ebcff9d2ae59820592216d41d8623f463bef540df4998ad638f141652d audacious-0.1.ebuild 2402
-MD5 d480eaee62267500c72167a371972d99 audacious-0.2-r1.ebuild 2943
-RMD160 4c943de5831724b69d0736101522b109c5df1997 audacious-0.2-r1.ebuild 2943
-SHA256 22c76efaac478912af3d34631591f6bd24c3aa5dc7ecb92b88be4de7b127f6c4 audacious-0.2-r1.ebuild 2943
-MD5 889f58a8b65f5beae79be9fa50809f4b audacious-0.2.ebuild 2764
-RMD160 dcb73d190f6c63f59cab54f01c3e5c486d398360 audacious-0.2.ebuild 2764
-SHA256 15d3ee0b920ec2b2cecba9a4de2ac36a9767a75a9c13fbf80201a86c9c05aa8a audacious-0.2.ebuild 2764
-MD5 91d8a8b27023cfe143010b46f5d97ffb files/0.1-aac-makefile.am 52
-RMD160 3f688d16d3232df2acb0548163182604bf81ae0f files/0.1-aac-makefile.am 52
-SHA256 93c0f6ceeac65d055ec058fe0af789f006e631247d6f1e7c5d5beb36df710bcd files/0.1-aac-makefile.am 52
+MD5 eeba5eb83c1c849a84f35e39c4e4ed07 audacious-0.2-r1.ebuild 2967
+RMD160 d82a9584bd9c431826fbfd0b296c64b041dbbda5 audacious-0.2-r1.ebuild 2967
+SHA256 21fb680ea1a6fa8b5c4d88028aeaae9e6705db4901b04b272d3d394c53e113ee audacious-0.2-r1.ebuild 2967
 MD5 f136cb1abd33101806a7879f4f5ae7d8 files/0.2-no-sigabrt-on-null-path.diff 442
 RMD160 d937400e5fcacf6992efddd2f2490eff04443853 files/0.2-no-sigabrt-on-null-path.diff 442
 SHA256 d34083f23c74d3e75ffbe55b21c23120089bddf7be523de4725ba85b630c3449 files/0.2-no-sigabrt-on-null-path.diff 442
@@ -34,21 +19,9 @@ SHA256 40aea64363c0a25d04099eb73f07d567170268d1297907055e261008683cbce9 files/0.
 MD5 8a917c27ee8ada32b8a4f0b690733602 files/0.2-thumbnail.diff 871
 RMD160 ae7063d943511f83c8f547843908f4e6563f3b44 files/0.2-thumbnail.diff 871
 SHA256 e80bb6d38e9c4e0891868e6e870404eba6d3a80067768128e0cd162187755848 files/0.2-thumbnail.diff 871
-MD5 556a78b44b63b6950de07d76f6261e8f files/digest-audacious-0.1 134
-RMD160 204be8a13a1997dc4e07ed6effe5c9e35f885cc6 files/digest-audacious-0.1 134
-SHA256 aa7d4cbac5b1f3dd6c80472a513b840ee9d2ad7d550e52d416fe0ff64cf7e3a6 files/digest-audacious-0.1 134
-MD5 8a62ab9f0b016d1b6a876704775313b1 files/digest-audacious-0.1-r1 187
-RMD160 8fd5706fc14f326f929637b0cf20baecdc879c39 files/digest-audacious-0.1-r1 187
-SHA256 67c16476a814cf1cdaf133e732fcad7698f44aa541e5643b317a956ea6a87757 files/digest-audacious-0.1-r1 187
-MD5 507beef06e637d463bb045c409bab2e7 files/digest-audacious-0.1.1 136
-RMD160 eeff0b88c937f83766b7fa1041113e00f17a6700 files/digest-audacious-0.1.1 136
-SHA256 79b81134068ba8ab3d78e193103921fce1ae31246480e93ea2e0cd7a0f09f014 files/digest-audacious-0.1.1 136
 MD5 341fd05802a609f2c76b98c5ef3cc172 files/digest-audacious-0.1.2 136
 RMD160 13a922d95fa5c08b53c0f86021a307bb7a6d8264 files/digest-audacious-0.1.2 136
 SHA256 fd363e94648e14fbe9aceaa633176533e7f4cb472860f464b54b87dc8bc4526d files/digest-audacious-0.1.2 136
-MD5 9faec72aab5c98a345c75ace5ea1ebb5 files/digest-audacious-0.2 494
-RMD160 b2e80322b1063267b9de70496d39adc8d0731fad files/digest-audacious-0.2 494
-SHA256 1093c6c03241b7a885005a425d583eda4e985faabb2a170bf7d96f9dd8b078dd files/digest-audacious-0.2 494
 MD5 9faec72aab5c98a345c75ace5ea1ebb5 files/digest-audacious-0.2-r1 494
 RMD160 b2e80322b1063267b9de70496d39adc8d0731fad files/digest-audacious-0.2-r1 494
 SHA256 1093c6c03241b7a885005a425d583eda4e985faabb2a170bf7d96f9dd8b078dd files/digest-audacious-0.2-r1 494
@@ -58,7 +31,7 @@ SHA256 6a8ca116bded5cdd92cb700f92acd22b01ae159ef1b69c60a03fc9859bb9b3d6 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD95kYp5vW4rUFj5oRAlFJAJ92yPVXsINpTFkkKrzib92ZEThaggCfYiTV
-Ao0Fi9wxFOXhxG3wDvL68lo=
-=H8Un
+iD8DBQFD+Jebp5vW4rUFj5oRAutzAJwNoGfpMe3MMJpdLuD6A+XoNqed1wCeKI5A
+47e1tnm6cdWdr7n5NCqLRjs=
+=EbPu
 -----END PGP SIGNATURE-----

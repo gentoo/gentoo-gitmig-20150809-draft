@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.2-r1.ebuild,v 1.2 2006/02/18 21:59:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.2-r1.ebuild,v 1.3 2006/02/19 16:05:13 chainsaw Exp $
 
 IUSE="aac alsa esd flac gnome jack libvisual lirc mmx modplug mp3 musepack nls oss sdl sid sndfile vorbis wma"
 
@@ -32,7 +32,8 @@ RDEPEND="app-arch/unzip
 		     >=media-libs/libsdl-1.2.5 )
 	lirc? ( app-misc/lirc )
 	modplug? ( media-libs/libmodplug )
-	musepack? ( media-libs/libmpcdec )
+	musepack? ( media-libs/libmpcdec
+		    media-libs/taglib )
 	mp3? ( media-libs/id3lib )
 	sid? ( media-libs/libsidplay )
 	sndfile? ( media-libs/libsndfile )
