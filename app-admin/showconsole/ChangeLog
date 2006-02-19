@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/showconsole
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/ChangeLog,v 1.10 2006/01/29 05:21:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/ChangeLog,v 1.11 2006/02/19 19:50:35 kumba Exp $
+
+  19 Feb 2006; Joshua Kinard <kumba@gentoo.org> showconsole-1.08.ebuild:
+  Added ~mips to KEYWORDS.
 
   29 Jan 2006; Mike Frysinger <vapier@gentoo.org>
   +files/showconsole-1.08-quiet.patch, files/bootlogger.sh,
