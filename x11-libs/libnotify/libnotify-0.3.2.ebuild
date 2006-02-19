@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.3.2.ebuild,v 1.1 2006/02/19 19:03:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.3.2.ebuild,v 1.2 2006/02/19 19:15:58 swegener Exp $
 
 DESCRIPTION="Notifications library"
 HOMEPAGE="http://www.galago-project.org/"
@@ -15,7 +15,8 @@ DEPEND=">=x11-libs/gtk+-2.2.2
 	>=dev-libs/glib-2.2.2
 	>=sys-apps/dbus-0.36
 	dev-libs/popt"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	x11-misc/notification-daemon"
 
 src_install() {
 	make install DESTDIR="${D}" || die "make install failed"
