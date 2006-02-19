@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/hddtemp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.31 2005/12/23 20:25:02 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.32 2006/02/19 15:46:59 spock Exp $
+
+*hddtemp-0.3_beta14-r1 (19 Feb 2006)
+
+  19 Feb 2006; Michał Januszewski <spock@gentoo.org> metadata.xml,
+  +hddtemp-0.3_beta14-r1.ebuild:
+  Moved hddtemp db update code to pkg_config (bug #116348).
 
   23 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   hddtemp-0.3_beta14.ebuild:
