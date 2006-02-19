@@ -1,27 +1,51 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 324b72d060527f51d32a4d9c20c8f5d8 ChangeLog 8221
+MD5 9eada5894c0a6b88ee16c2cec13aa719 ChangeLog 8315
+RMD160 fd1c1c516d5d62a1c5be8a1d5331c4c34d46ebdb ChangeLog 8315
+SHA256 17bddc871f45ca3255b314afc404170bf657410d15aab45c154f3e486d59fab1 ChangeLog 8315
 MD5 3a4cce771cdc4714c6931467622c9ddc cairo-0.1.23-r1.ebuild 757
+RMD160 5656279342e95328260a02dd5ee8f2b98d420773 cairo-0.1.23-r1.ebuild 757
+SHA256 d863944d636d04506f5f9ddc6c8cba5009bfa8959c1e41fed95e1b5a4dad8099 cairo-0.1.23-r1.ebuild 757
 MD5 4db2c222787dd6470523acdfe996891e cairo-0.2.0-r1.ebuild 900
+RMD160 92a488816846213405894af72d09f1c58cd68e3d cairo-0.2.0-r1.ebuild 900
+SHA256 238a71b381176efaa061ccde4cd904d1742865a8d6f58244a4e1cc8a42b55a24 cairo-0.2.0-r1.ebuild 900
 MD5 61d14abb26a608160a87e8596bbb601a cairo-0.3.0-r2.ebuild 996
+RMD160 77c03a7253ae53070039b74ebbc059675df1dd52 cairo-0.3.0-r2.ebuild 996
+SHA256 a926b4a4d38e5a7acefc3e8285838d554f4fd0afece4f5c3cbbce88c7c3e27d5 cairo-0.3.0-r2.ebuild 996
 MD5 627da87d1d67830749f3dafde81804ca cairo-0.3.0.ebuild 843
+RMD160 0250efecdf6bf968ccb7b89550607627b16b5665 cairo-0.3.0.ebuild 843
+SHA256 4c37e30011fded220591fbb212db3bd6151f9f9d4af3283dc01edb98af170e49 cairo-0.3.0.ebuild 843
 MD5 1d2ad415e2e6db1a58640bb93b15a34f cairo-0.4.0.ebuild 994
-MD5 44e1b7f5649ba25f3a9f7d31900f2b73 cairo-1.0.2.ebuild 1531
+RMD160 12caa6145c0e27d5a74ec3f0deecbfe94cff453f cairo-0.4.0.ebuild 994
+SHA256 f7da3d04673cd685c49fb72cb76f39d1f546f30339307425eef0f431311e527b cairo-0.4.0.ebuild 994
+MD5 e8e5d3bbc39d2d39c75c139e14d10d1a cairo-1.0.2.ebuild 1530
+RMD160 12790aa490cd8d5441abec121899226c8657757a cairo-1.0.2.ebuild 1530
+SHA256 41cc3865da19f668e4083345aae63845ff1a35111edee302ce2a8779af99dff4 cairo-1.0.2.ebuild 1530
 MD5 4df3bcd9171f83ca24b03ab0f8eefb24 files/cairo-0.3.0-header-fix.diff 697
+RMD160 40132eb862ef44da0c00cbe1b5c4d814936b2235 files/cairo-0.3.0-header-fix.diff 697
+SHA256 516723c36e9f4a2405b6880c4c1d2af2d4de348cdae99b069939ebb38fbbfc38 files/cairo-0.3.0-header-fix.diff 697
 MD5 1ecec7f667ad4b91d876db0efdf4a261 files/cairo-0.4.0-makefile.patch 1553
+RMD160 a951b588cb9d4be7f828067f650c18a2d2eee16a files/cairo-0.4.0-makefile.patch 1553
+SHA256 21055712239c1d37bf895f38d0c9ccc152ded864e8569488a1ffaedc2f211f22 files/cairo-0.4.0-makefile.patch 1553
 MD5 6600a332745a27c0333f2c8193a805fa files/cairo-1.0.2-pkg_macro.patch 542
+RMD160 2e5e8c260f59f6bb63d7e5e46d38b0ee25f025ad files/cairo-1.0.2-pkg_macro.patch 542
+SHA256 4ab7469075776de4fadcc733c9ceb9754b075e5a99b05fcdc247fc597b971149 files/cairo-1.0.2-pkg_macro.patch 542
 MD5 8045b9ac7481eb952f3c2fdfda944c65 files/digest-cairo-0.1.23-r1 64
+RMD160 56a503457cf8459bbbc26c73534d7de38e6b4c80 files/digest-cairo-0.1.23-r1 64
+SHA256 79592ad22c6fa8aad4820bc67da3842eb7921899a520b19bc0e1dfcd596d94dd files/digest-cairo-0.1.23-r1 64
 MD5 ee0e0ddbf61c280106ae3683503054a8 files/digest-cairo-0.2.0-r1 63
+RMD160 faae64d7bf7105001740ef263b1ed808556b2ad9 files/digest-cairo-0.2.0-r1 63
+SHA256 e06e90ee6c050100e4286aa1aa20f7cf8d810f16a29eb88c2e55cc8a9da1628c files/digest-cairo-0.2.0-r1 63
 MD5 2a0e4de10c4b8aacdb9b5991825b30d5 files/digest-cairo-0.3.0 63
+RMD160 8453dcdda22387803c037f42de55831cc9c51ef7 files/digest-cairo-0.3.0 63
+SHA256 c6797def2d3b96e9fce4aa35bbc3d585c3f1bc1241d24839b5480174f9aef763 files/digest-cairo-0.3.0 63
 MD5 2a0e4de10c4b8aacdb9b5991825b30d5 files/digest-cairo-0.3.0-r2 63
+RMD160 8453dcdda22387803c037f42de55831cc9c51ef7 files/digest-cairo-0.3.0-r2 63
+SHA256 c6797def2d3b96e9fce4aa35bbc3d585c3f1bc1241d24839b5480174f9aef763 files/digest-cairo-0.3.0-r2 63
 MD5 f84da26023eb9d5a29079fbccc555523 files/digest-cairo-0.4.0 63
+RMD160 9b916591e79386066a5fa966800675bde0a75660 files/digest-cairo-0.4.0 63
+SHA256 ee894b100fc68303961af717253fd03dc01e8f4dff17af3ad7b5b83c134e232e files/digest-cairo-0.4.0 63
 MD5 ce0ff23d9d7dc27eafe29f87bd52524e files/digest-cairo-1.0.2 64
+RMD160 c29ad1bd1888889892321cbb769f784aaa79d0f6 files/digest-cairo-1.0.2 64
+SHA256 d887ebd4ef17cdd9031cd30af0a39491c017f5a6c6d8b9687e6201d03c1d2961 files/digest-cairo-1.0.2 64
 MD5 d7538d01f3572ea308f9ca04df380e1b metadata.xml 427
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyaYR2+ySkm8kpY0RAsq4AJsGMatdb4mVEtno+U9oZQhwpSYzPwCgsb3W
-xQOplrxw5qQU1sTOllPA1Qw=
-=m2iZ
------END PGP SIGNATURE-----
+RMD160 a4cdf1c4381648447949759388047e3d85da304c metadata.xml 427
+SHA256 4e43d81dcbffb186ceb9e85d2d461d48bbf6977ff50bd4af73b6a6e7d612efcc metadata.xml 427
