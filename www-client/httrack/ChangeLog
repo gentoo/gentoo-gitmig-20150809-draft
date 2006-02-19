@@ -1,6 +1,9 @@
 # ChangeLog for www-client/httrack
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.4 2006/02/19 03:01:12 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.5 2006/02/19 03:19:40 vanquirius Exp $
+
+  19 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> httrack-3.40.ebuild:
+  It still will not compile in parallel, re-adding -j1 dirty, dirty hack.
 
 *httrack-3.40 (19 Feb 2006)
 
