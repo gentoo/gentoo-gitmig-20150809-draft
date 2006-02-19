@@ -1,20 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 285e94990d44c5edfe923e25ad0bbbcb ChangeLog 6331
+MD5 f57a330cc242dcc34203c216d84a30bd ChangeLog 6449
+RMD160 24220d5e064acb363e9ce79fa922516f4976f41c ChangeLog 6449
+SHA256 093db024823dee6ddb38fe7807122c9315e9dd5eb1372c4c847a91da41da3b53 ChangeLog 6449
 MD5 387355913ede91692759147273543555 bluefish-1.0.2.ebuild 897
+RMD160 07f084ccea60abf869e13dcc9e0631cc187862f4 bluefish-1.0.2.ebuild 897
+SHA256 2fb414432f7fc1f5c8cd0f83c9fb20941a77dfe04efd29da0681382ddeae36a2 bluefish-1.0.2.ebuild 897
 MD5 10ceb3c1ebbf34eadf7dee32362c01ef bluefish-1.0.4-r1.ebuild 966
+RMD160 d250c02830afe9f2e819cc0ada0542a961c419dd bluefish-1.0.4-r1.ebuild 966
+SHA256 b3d10fac2b1e2d2d09eb78061dafd6e73bdfbe3e652c35eb2238dccadf4a572e bluefish-1.0.4-r1.ebuild 966
 MD5 3b33bd2a0b115ccaff09247d69d72991 bluefish-1.0.4.ebuild 897
+RMD160 ad9231b782847955cca0e99963205f193f52f4dd bluefish-1.0.4.ebuild 897
+SHA256 b9a77c5c9c5c967979e7c913df9273b6cf7c32a5b4ad1bbfed7ff66d81c03dba bluefish-1.0.4.ebuild 897
+MD5 a7b531b8f21ee074ebec05dddcb99b47 bluefish-1.0.5.ebuild 963
+RMD160 736793a372277c423909196f3d52fe20614da679 bluefish-1.0.5.ebuild 963
+SHA256 851726d09656ee33d96327584310481b454ebc0edf7541238c57cc72934b74e3 bluefish-1.0.5.ebuild 963
 MD5 1b7fcc5c167d3fd3b689b7784866d6a0 bluefish-1.0.ebuild 888
+RMD160 63534e5c4789efd4aedf84d00b04a381a99dca95 bluefish-1.0.ebuild 888
+SHA256 1ca285b72b9e0b12280557bfb1f4568e4ceec0a895c8210a63b0372556b36077 bluefish-1.0.ebuild 888
 MD5 4f4082139d50854cf37bf254207ad1b1 files/digest-bluefish-1.0 66
+RMD160 c6a68ebeaf60ec00acc10e674770998214a9459f files/digest-bluefish-1.0 66
+SHA256 57bcc8594f85aa41732e38278fd7a913305a1607f6450b5da616d0e8d99e5273 files/digest-bluefish-1.0 66
 MD5 52bca1b5248301ce7359f135e824a98f files/digest-bluefish-1.0.2 68
+RMD160 b399d53b3d5ea3abaeb37af0163d6e7c877584f2 files/digest-bluefish-1.0.2 68
+SHA256 24a6dff0f492b228346ed4187f211b883d872c49badaa041de67135584a6a867 files/digest-bluefish-1.0.2 68
 MD5 c150fdac29f2c1bcf452e3102c045dd5 files/digest-bluefish-1.0.4 68
+RMD160 9ef483718d575ac024ef05e61f02d3c21d9a48ff files/digest-bluefish-1.0.4 68
+SHA256 7d9dbb904a7e314068e69a569fcf4b28e8e1af0d7b99c0493d658b48571f85c5 files/digest-bluefish-1.0.4 68
 MD5 c150fdac29f2c1bcf452e3102c045dd5 files/digest-bluefish-1.0.4-r1 68
+RMD160 9ef483718d575ac024ef05e61f02d3c21d9a48ff files/digest-bluefish-1.0.4-r1 68
+SHA256 7d9dbb904a7e314068e69a569fcf4b28e8e1af0d7b99c0493d658b48571f85c5 files/digest-bluefish-1.0.4-r1 68
+MD5 c2f1bc390d195e27fb07d6b9136f6a6a files/digest-bluefish-1.0.5 250
+RMD160 d89dae4b1453cc232805fcd0de5818729c111e8b files/digest-bluefish-1.0.5 250
+SHA256 299f86e04733ed3c353892217b8a7a51fb1b622e2eea0e9bfce38c1ea8899619 files/digest-bluefish-1.0.5 250
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
+RMD160 3b01d5dab901ee93217f72b711954d3cccbb1717 metadata.xml 217
+SHA256 2f5dfc1eb79d2d9ee02663da6e1449f499c3a37b7f4cc2391e18d7789a314669 metadata.xml 217
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDqIeJr2QksT29OyARAsxDAJ9F9kkE5mZFcRG8JHNATXJJAGay0ACfRdZ9
-y5+CBmwE8sP7fWR1cO2ZTxk=
-=4cMm
+iD8DBQFD+Pr+r2QksT29OyARAp4GAJ0Xnt57Tmw1BLO5/b879LhZXZLBYQCgpGpV
+dK8bwP7k0eQ4bENpx39ShQw=
+=FB/u
 -----END PGP SIGNATURE-----
