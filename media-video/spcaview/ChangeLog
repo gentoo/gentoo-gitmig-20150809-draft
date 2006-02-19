@@ -1,6 +1,9 @@
 # ChangeLog for media-video/spcaview
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spcaview/ChangeLog,v 1.4 2005/12/12 20:48:59 kingtaco Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/spcaview/ChangeLog,v 1.5 2006/02/19 22:57:15 kingtaco Exp $
+
+  19 Feb 2006; Mike Doty <kingtaco@gentoo.org> spcaview-20051212.ebuild:
+  accidently droped x86
 
 *spcaview-20051212 (12 Dec 2005)
 
