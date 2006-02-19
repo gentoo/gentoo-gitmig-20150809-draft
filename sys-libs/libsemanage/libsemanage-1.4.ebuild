@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-1.4.ebuild,v 1.5 2006/02/09 23:14:53 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-1.4.ebuild,v 1.6 2006/02/19 22:02:23 kumba Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.nsa.gov/selinux"
 SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~mips ppc sparc x86"
+KEYWORDS="~alpha amd64 mips ppc sparc x86"
 
 DEPEND="=sys-libs/libsepol-${SEPOL_VER}*
 	=sys-libs/libselinux-${SELNX_VER}*"

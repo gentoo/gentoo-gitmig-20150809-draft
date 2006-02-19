@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ac669bb59e2494010a706674e37af449 ChangeLog 5943
-RMD160 e7e9fcad61e0bb1e67465af00fb629dc2183ee72 ChangeLog 5943
-SHA256 8ad26030336e57bb17ebb00777998bf8a6d6d116c8e73092cfa5589bb507ca2b ChangeLog 5943
+MD5 83f2ed52983e11894d8791630f9a9ac0 ChangeLog 6041
 MD5 7f7600bda169c50d374156b98d0fa86a files/digest-libselinux-1.24 63
-RMD160 31c0004225219d93b979d3377bb9fda311c1607d files/digest-libselinux-1.24 63
-SHA256 2100e45d94c1c924bd0f3d78aab9518beee03042cae80f210c834117a8112d7b files/digest-libselinux-1.24 63
 MD5 5c9f2de785e321be6926afae539f05b9 files/digest-libselinux-1.28 64
-RMD160 b4d452d84a499eb57393ab039b39f18f58eae544 files/digest-libselinux-1.28 64
-SHA256 d62c87d4fa403f7f490373767803bc0625669f20b415d78d2e708ac80bce2b6e files/digest-libselinux-1.28 64
 MD5 40825b53dc0b57fadf0823982bdac34b libselinux-1.24.ebuild 1131
-RMD160 db35bec0f296a30cbfa5b66f8c1ed5f5951b0614 libselinux-1.24.ebuild 1131
-SHA256 c1d1d535b29bc7ef933e176fbfec760ead886be551c8b4f2fffdec19057caca6 libselinux-1.24.ebuild 1131
-MD5 47097ea7baa8d618acabccf631375953 libselinux-1.28.ebuild 1031
-RMD160 1f424fccdce4887d67e57eaca029291ab940e8ba libselinux-1.28.ebuild 1031
-SHA256 e43e130f849e653e4d7cf2fa81d133a5f2586e7b71647770152258a878b22cb5 libselinux-1.28.ebuild 1031
+MD5 84b6ada84b12d0073d101b66d1fb91ad libselinux-1.28.ebuild 1030
 MD5 652c5e8a0a081bf4317359f04f65a603 metadata.xml 537
-RMD160 6adcd5fc653db8ad7780299214875297beb9c931 metadata.xml 537
-SHA256 e691ecff0c45ccbd6cf813fbd7f23e489dabad664e89e6b21b8c7c1785550f9e metadata.xml 537
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD68eQJ+ChZlpDtAoRAhUNAJ47kbfDkysffnLyj+Hivzrq59IcNwCcCQav
-V4vMnADYTDfkeApnllfaEhY=
-=YiAA
------END PGP SIGNATURE-----

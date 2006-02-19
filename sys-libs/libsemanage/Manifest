@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 76598d6fc81113e37a66e5c4870c29d8 ChangeLog 855
-RMD160 fda521fec36080622b9db271228a810528e461d3 ChangeLog 855
-SHA256 4d41a6ec69c8cd9b7e7551e4daf17b25bd680c58385a9c719e122316a11c2e29 ChangeLog 855
+MD5 6c2f2669825b3210e7c91e35368276fa ChangeLog 953
 MD5 20301b8fcf12252f5e0de0cbe2b4b135 files/digest-libsemanage-1.4 63
-RMD160 a33bed51b13d16ffe4391a986e21a15454fa9d13 files/digest-libsemanage-1.4 63
-SHA256 7d261b5129f5864c57d11c91aa24defa874b5b66b6a6b941fbfc7aa35991db59 files/digest-libsemanage-1.4 63
-MD5 1ebf16784cf8b9bd6d07a11c0f4f5e76 libsemanage-1.4.ebuild 1278
-RMD160 74bcbd7668631aeafbb79aa3d327c8b0b386191a libsemanage-1.4.ebuild 1278
-SHA256 b41c71d4bb4abb236070d9eadee871ba9fa8eaab703387fc9bef73c0845a846d libsemanage-1.4.ebuild 1278
+MD5 3c5e7eba86ffb3ea9d80c848eb4c1c1e libsemanage-1.4.ebuild 1277
 MD5 77bbd07b4b596ae67c79079d2b13f3af metadata.xml 300
-RMD160 36b5466d0f61dbc147eb3e2ffd94d1a6afed35ac metadata.xml 300
-SHA256 7fe4b477cb4f8b93c9e5bb63336688933259ff619f743fb2647479a59227dc2b metadata.xml 300
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD68z5J+ChZlpDtAoRAg5yAJ95fwssXiuaatiiOYvfI1ft14+czQCfUi3G
-ZZs+aAyfVM25dRFCjVbp3DI=
-=BH0X
------END PGP SIGNATURE-----

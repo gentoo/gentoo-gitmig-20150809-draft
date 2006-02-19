@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.41 2006/02/09 22:51:43 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.42 2006/02/19 22:00:24 kumba Exp $
+
+  19 Feb 2006; Joshua Kinard <kumba@gentoo.org> libselinux-1.28.ebuild:
+  Marked stable on mips.
 
   09 Feb 2006; Chris PeBenito <pebenito@gentoo.org> libselinux-1.28.ebuild:
   Move python_version out of global scope.
