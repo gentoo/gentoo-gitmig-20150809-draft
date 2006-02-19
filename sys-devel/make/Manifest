@@ -1,52 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 45932a9e6bb2b8b85d3f57fd8d1f1abb ChangeLog 4317
-RMD160 2d05290b808844bf4cbb9fc0abd3d9d217cb9bdd ChangeLog 4317
-SHA256 935bf4549089d93e487fcbb539e546dd6472c61f93276be81f79749e964b685a ChangeLog 4317
+MD5 af9a57f0b4266631a0af1cf00575dc20 ChangeLog 4424
 MD5 3adc1d9cc832e98b435305f9f466279b files/3.80-memory.patch 2248
-RMD160 3c8d5c017c61061eb4d6f666799d377f1ba272ca files/3.80-memory.patch 2248
-SHA256 0fa6d8b039fd56313626a3865cde7ef09622525a751ec55bf3741a6fc172091f files/3.80-memory.patch 2248
 MD5 6c9afd5ac674f6a9703fdab9e49846c4 files/digest-make-3.80-r1 62
-RMD160 cff61309b79eb0db2c94849d0b0c2a17210a083b files/digest-make-3.80-r1 62
-SHA256 442395259dfc7b8ed19313ea2a83f2b5ba6fb4872c45e5f398dbeda22c571972 files/digest-make-3.80-r1 62
 MD5 6c9afd5ac674f6a9703fdab9e49846c4 files/digest-make-3.80-r2 62
-RMD160 cff61309b79eb0db2c94849d0b0c2a17210a083b files/digest-make-3.80-r2 62
-SHA256 442395259dfc7b8ed19313ea2a83f2b5ba6fb4872c45e5f398dbeda22c571972 files/digest-make-3.80-r2 62
 MD5 6c9afd5ac674f6a9703fdab9e49846c4 files/digest-make-3.80-r3 62
-RMD160 cff61309b79eb0db2c94849d0b0c2a17210a083b files/digest-make-3.80-r3 62
-SHA256 442395259dfc7b8ed19313ea2a83f2b5ba6fb4872c45e5f398dbeda22c571972 files/digest-make-3.80-r3 62
 MD5 6c9afd5ac674f6a9703fdab9e49846c4 files/digest-make-3.80-r4 62
-RMD160 cff61309b79eb0db2c94849d0b0c2a17210a083b files/digest-make-3.80-r4 62
-SHA256 442395259dfc7b8ed19313ea2a83f2b5ba6fb4872c45e5f398dbeda22c571972 files/digest-make-3.80-r4 62
 MD5 5f0f25e055829e46b995d873911eea2f files/make-3.80-conditional-eval.patch 4144
-RMD160 f8755c6ea82cfc4cdc6675b2e462fb6438b9e569 files/make-3.80-conditional-eval.patch 4144
-SHA256 68f182f5435296b60acc710006bddf745bee6c37e68ae2942c778add93a40155 files/make-3.80-conditional-eval.patch 4144
 MD5 85ce0c4d36cd02b0c1abae84c022dba3 files/make-3.80-parallel-build-failure.patch 2210
-RMD160 5c7fe016fc854b017315bf22c6ddc1c600d4b99a files/make-3.80-parallel-build-failure.patch 2210
-SHA256 71f80dee56a04f30f2fe8bb9012d32ed830d2e0e9f68c183819c5ccf025c9b62 files/make-3.80-parallel-build-failure.patch 2210
 MD5 ea2daf4e61545882b6ba566f2b9132a2 files/make-3.80-ppc64-hardened-clock_gettime.patch 514
-RMD160 d97ddeeabb9cdb71f7c5cab4dfa4790113128e27 files/make-3.80-ppc64-hardened-clock_gettime.patch 514
-SHA256 5ae45d5306337bfec631418d31d81fdc2d58ac807f8012a833e6be8886d7d5e2 files/make-3.80-ppc64-hardened-clock_gettime.patch 514
 MD5 039d9a79c20899233ae7f42867feee7c make-3.80-r1.ebuild 1105
-RMD160 22efc5fcd91fa85bac9a9ca422770ca126e3b4c7 make-3.80-r1.ebuild 1105
-SHA256 30a0a4d5d2bd7ff83d6598dd858dcfaad86acf600aa52cf6c70c7f2c3b5206a0 make-3.80-r1.ebuild 1105
 MD5 f86f99b2ab003e6f5483f365a3db7ebc make-3.80-r2.ebuild 1301
-RMD160 e2e8f7bfdcf9aecb921459bb28608780bc270de4 make-3.80-r2.ebuild 1301
-SHA256 565f1b74dd38782050fb5182982e498150d85d6620957505cb6563edc36edd11 make-3.80-r2.ebuild 1301
-MD5 3eba181fce92986511ff142e628d20d5 make-3.80-r3.ebuild 1244
-RMD160 2ff0cd8e374d0dd56cd0fc50a1bcab3ef3676499 make-3.80-r3.ebuild 1244
-SHA256 59da6a5da9c48d0000e4bf5369f6925f88cd03dc98bd4e200f5cb51ef84f3627 make-3.80-r3.ebuild 1244
+MD5 685d5e3741aab2be2156dc7ebc36ae3a make-3.80-r3.ebuild 1243
 MD5 c0ce1299b317ceb3d32b7d02f414bf65 make-3.80-r4.ebuild 1308
-RMD160 6a9ec781ae99e52d77ae9080aefd18cf21368378 make-3.80-r4.ebuild 1308
-SHA256 f0b4945bc100c265e85c6ef136808b223d49f25feab4f0e6c79a30b13b1e917b make-3.80-r4.ebuild 1308
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
-SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD+CJ92+ySkm8kpY0RAnPNAKCDvoCGhQbYyUcTAKVQocCWIOZsMQCgvrp1
-L0ofmgEJvNAbpFFHUw2i1/Y=
-=5wo8
------END PGP SIGNATURE-----
