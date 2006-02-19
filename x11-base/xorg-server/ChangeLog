@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.87 2006/02/14 22:10:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.88 2006/02/19 03:54:56 spyderous Exp $
+
+*xorg-server-1.0.1-r4 (19 Feb 2006)
+
+  19 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/xorg-server-1.0.1-64bit-fix-have-dix-config.patch,
+  +files/xorg-server-1.0.1-64bit-fix-indirect-vertex-array.patch,
+  -xorg-server-1.0.1-r3.ebuild, +xorg-server-1.0.1-r4.ebuild:
+  Really fix GLX on 64-bit systems.
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org>
   xorg-server-1.0.1-r3.ebuild:
