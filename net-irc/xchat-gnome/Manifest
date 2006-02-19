@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 872b82d7673dd4dcd353f1a6961c6cda ChangeLog 1908
-MD5 6b74f53c26e12ea2bc55b54b33ada601 files/digest-xchat-gnome-0.4 69
-MD5 ba4f8ea248bc0fbcb776188ff3378f5f files/digest-xchat-gnome-0.5 69
-MD5 96c43ae259f40b55469226fdc18f26c9 files/digest-xchat-gnome-0.6 69
-MD5 6829fbc411f27e2883b18dcf6f3e784f files/digest-xchat-gnome-0.7-r1 69
-MD5 9f7efe4a5cf94ad623c6e1c0dc39dc7d files/digest-xchat-gnome-0.8 69
-MD5 cf21778a2cac6a5ad0a81032f48583fd files/xchat-gnome-0.7-dbus.patch 1620
+MD5 00795c82989be516e47c34cf3efc054e ChangeLog 2290
+RMD160 b80f8d598c686316e2e507f5ee832068e5ccc5cb ChangeLog 2290
+SHA256 16669d9f5f39be47cbb80f6ab46954067b5ade987accbe874e80f9eb8889cb74 ChangeLog 2290
+MD5 c5e82da1d480886fc63fc2011b5389b3 files/digest-xchat-gnome-0.9 253
+RMD160 0a62933ffda8f7f80790f05a7f5f5e2f7db18021 files/digest-xchat-gnome-0.9 253
+SHA256 0601c3dc3e8b9cb2819a6921d8bcca4fbfec2a1775ed3e310131959a29cca3d0 files/digest-xchat-gnome-0.9 253
 MD5 c7599a8531a6130925ead14ec1489bc5 files/xchat-gnome-0.7-scrollkeeper.patch 386
-MD5 6cc0d3248f5cb2d9309392b9fa413d18 files/xchat-gnome-0.7-segfault.patch 414
+RMD160 60b7b4ece62cc519f0d42d2c1a18f4a6ead70158 files/xchat-gnome-0.7-scrollkeeper.patch 386
+SHA256 b9c1b513c03819aa3ab65df551ed69d06214b4088a2cb70e7d4bd2490d4e0226 files/xchat-gnome-0.7-scrollkeeper.patch 386
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 ea5d21ed4c3fafc70d7aa442f7a64730 xchat-gnome-0.4.ebuild 1667
-MD5 56cd43f4d2579e3c7e7b26beb3c9b5fe xchat-gnome-0.5.ebuild 1667
-MD5 09539bbeae697f7de7b0352190ca4d02 xchat-gnome-0.6.ebuild 1739
-MD5 a7c39027ae8b98c23ac1f28316c86625 xchat-gnome-0.7-r1.ebuild 1902
-MD5 9df7885cb0444e197d5c5c1ea8ff4a79 xchat-gnome-0.8.ebuild 1829
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDs9yXI1lqEGTUzyQRAhblAKC0jqDxgDQ9/IftWliB2B/MISQWEgCcCW9s
-Jl3vxlzu8Odg9Qv91kQXWPw=
-=2GNo
------END PGP SIGNATURE-----
+RMD160 279429d1df694561fc2b163cb81c09387b9d940c metadata.xml 160
+SHA256 5e058419199e306612929b80a996e3d16c6b20de674a56bb60558d3d36524fe2 metadata.xml 160
+MD5 e930ac7749a74c7c40307afe4fc37ce3 xchat-gnome-0.9.ebuild 1643
+RMD160 69db7aa2d561e43a78f9cd897a43de4d1a2e9fa4 xchat-gnome-0.9.ebuild 1643
+SHA256 da81244989e2e6c9fbae07389032733e3b84b7f273c47f5908984f156ee49bdf xchat-gnome-0.9.ebuild 1643
