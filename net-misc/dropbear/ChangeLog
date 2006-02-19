@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.37 2006/02/03 18:22:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.38 2006/02/19 19:12:52 kumba Exp $
+
+  19 Feb 2006; Joshua Kinard <kumba@gentoo.org> dropbear-0.47-r1.ebuild:
+  Marked stable on mips.
 
   03 Feb 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   dropbear-0.47-r1.ebuild:
