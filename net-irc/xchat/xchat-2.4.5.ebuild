@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.5.ebuild,v 1.11 2005/12/18 18:01:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.5.ebuild,v 1.12 2006/02/19 16:43:41 swegener Exp $
 
 inherit flag-o-matic eutils versionator
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.0.3
 	perl? ( >=dev-lang/perl-5.6.1 )
 	python? ( >=dev-lang/python-2.2 )
 	tcltk? ( dev-lang/tcl )
-	!net-irc/xchat-gnome"
+	!<net-irc/xchat-gnome-0.9"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.7
