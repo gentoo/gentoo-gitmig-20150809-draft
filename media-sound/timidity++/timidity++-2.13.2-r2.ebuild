@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r2.ebuild,v 1.7 2006/01/08 04:18:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r2.ebuild,v 1.8 2006/02/19 02:10:33 chainsaw Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A handy MIDI to WAV converter with OSS and ALSA output support"
 HOMEPAGE="http://timidity.sourceforge.net/"
-SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2 mirror://gentoo/${P}-exiterror.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,10 +41,10 @@ RDEPEND="${RDEPEND}
 	emacs? ( virtual/emacs )"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${MY_P}.tar.bz2
 	cd ${S}
+	epatch ${DISTDIR}/${P}-exiterror.patch
 	epatch ${FILESDIR}/${P}-gtk26.patch
-	epatch ${FILESDIR}/${P}-exiterror.patch
 	epatch ${FILESDIR}/${P}-gcc4.patch
 
 	# fix header location of speex

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity++
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.53 2005/09/10 15:45:37 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.54 2006/02/19 02:10:33 chainsaw Exp $
+
+  19 Feb 2006; Tony Vroon <chainsaw@gentoo.org>
+  -files/timidity++-2.13.2-exiterror.patch, timidity++-2.13.2-r2.ebuild:
+  QA fix: Move 21KB patch to mirrors.
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   timidity++-2.13.2.ebuild, timidity++-2.13.2-r2.ebuild:

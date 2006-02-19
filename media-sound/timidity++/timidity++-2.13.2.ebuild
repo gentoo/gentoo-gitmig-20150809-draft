@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.12 2006/01/08 04:18:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.13 2006/02/19 02:10:33 chainsaw Exp $
 
 inherit eutils
 
@@ -18,7 +18,6 @@ KEYWORDS="amd64 arm hppa ppc sparc x86"
 IUSE="oss nas esd motif X gtk vorbis tcltk slang alsa arts jack portaudio emacs"
 
 RDEPEND=">=sys-libs/ncurses-5.0
-	X? ( virtual/x11 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	nas? ( >=media-libs/nas-1.4 )
