@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.72 2005/12/11 12:44:22 swegener Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.73 2006/02/19 20:22:05 swegener Exp $
+
+  19 Feb 2006; Sven Wegener <swegener@gentoo.org> metadata.xml,
+  irssi-0.8.10.ebuild:
+  Marked stable on x86.
 
 *irssi-0.8.10 (11 Dec 2005)
 
