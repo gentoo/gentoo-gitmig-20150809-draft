@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r2.ebuild,v 1.15 2006/02/14 03:40:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r2.ebuild,v 1.16 2006/02/19 23:51:14 vapier Exp $
 
 inherit eutils toolchain-funcs fixheadtails
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.netmeridian.com/e-huss/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k mips ppc ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc s390 sh sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
@@ -25,9 +25,9 @@ PDEPEND="
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	epatch ${DISTDIR}/queue-fix-todo.patch
+	epatch "${DISTDIR}"/queue-fix-todo.patch
 	sed -i 's/^extern int errno;/#include <errno.h>/' ${S}/error.h
-	ht_fix_file ${S}/Makefile*
+	ht_fix_file "${S}"/Makefile*
 }
 
 src_compile() {
