@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 427f020b4e609f9520257de6a03ca7f2 ChangeLog 1466
-RMD160 cba6eff69f5e448ef9a20beb6050a1406d72ec23 ChangeLog 1466
-SHA256 221518961179216278ecba8850785300ded5b83cc0631dc54b8017601ce74e06 ChangeLog 1466
+MD5 82d5aea2b314e7678ed8d457bb8d417b ChangeLog 1608
+RMD160 0b728ed4d0fcdbf1a1ae38a6e71b6e0214201a1f ChangeLog 1608
+SHA256 3efd19cf7a4a391561f09f3be1d27e1ff825a01901cda02e9685a8e311aaedbf ChangeLog 1608
 MD5 bd5440b327cecc2b5eeaaba50cd9a066 files/digest-icon-naming-utils-0.6.2 74
 RMD160 073c874f976921f63802707814a65d6b8ea0ed3c files/digest-icon-naming-utils-0.6.2 74
 SHA256 5e59a9c98eabd146a8ac09e3401e5043f6b0534c57295a7b3c38957f571ca190 files/digest-icon-naming-utils-0.6.2 74
@@ -25,6 +25,9 @@ SHA256 f5ebdbebfa344e627e67d211630804a13ecfc999a14ca711e7588c8a92adc8f3 files/di
 MD5 9189e450f113f622c8253fedce7730f3 files/digest-icon-naming-utils-0.6.8 268
 RMD160 0930ba2bc6703d81a7c44e42c8c8a5aea96ff763 files/digest-icon-naming-utils-0.6.8 268
 SHA256 7c52d25c526600522e6da125f639af8cbea4b5182266ceeac90461422ce63a8f files/digest-icon-naming-utils-0.6.8 268
+MD5 c4d189f845d2510d659dbb24a09b4772 files/digest-icon-naming-utils-0.7.0 268
+RMD160 212c74032ed75c5a5ac6aeef9e8f8dc4c4540be4 files/digest-icon-naming-utils-0.7.0 268
+SHA256 7c47e8f452c52a1ce016e44df85b560ab295270c4e963dd654a9b41d4407053f files/digest-icon-naming-utils-0.7.0 268
 MD5 e6f1d27aa90310465df6cc493828de98 icon-naming-utils-0.6.2.ebuild 732
 RMD160 9c94f4dfa0ad854dce9caa0bc83ee94b8ab7308f icon-naming-utils-0.6.2.ebuild 732
 SHA256 d2b4fb75316473a723a955686c37116a1a8952cf6429084779be2e79827f6bbe icon-naming-utils-0.6.2.ebuild 732
@@ -46,13 +49,16 @@ SHA256 e727e8e0435106e0ffd753b031053f55bd695d602a2b7cde6b24252742f21080 icon-nam
 MD5 eb25638e253b38a999c1d555fef7530e icon-naming-utils-0.6.8.ebuild 739
 RMD160 c62e134c0d9311ec8b989f9b47dd8ae0f56587a8 icon-naming-utils-0.6.8.ebuild 739
 SHA256 5961d2d60472bcb9775c0f096caa9fc63e77ca6b76484477803ec7610109e085 icon-naming-utils-0.6.8.ebuild 739
+MD5 c1cd8291106b52b036f26d3bfe2c3cfd icon-naming-utils-0.7.0.ebuild 739
+RMD160 68aafb849ea8ad1dd7d8a9afbcd3e730173f7eb9 icon-naming-utils-0.7.0.ebuild 739
+SHA256 96ac16eeb8f1c92d61e101695b863ba888e25c86a4f23d9734955ab5882c3b51 icon-naming-utils-0.7.0.ebuild 739
 MD5 870a91577a60ccb6ea581e99f879e9b8 metadata.xml 248
 RMD160 507fd60616d5d14e274ac0628255acdddc90e4d4 metadata.xml 248
 SHA256 0d544700457efe5f7c24489f30572dd20c81a6d8879bf833f7d050408a79f36a metadata.xml 248
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD6eR/wUpWvClEHQoRAiXeAKCIrqCjWLFCkheLUOAko4LR0YVA6gCfZo8f
-gyZp3L5fJ05UHO+xLgwA/yQ=
-=BFCC
+iD8DBQFD+KNRwUpWvClEHQoRAtJuAJ0RSjZXqEoJsC1FcfejKYgERtVsLQCbBU+u
+z8k+5zO6nAwfMWtnv6AHgC0=
+=igJI
 -----END PGP SIGNATURE-----
