@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80-r3.ebuild,v 1.3 2006/02/19 16:53:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80-r3.ebuild,v 1.4 2006/02/19 17:05:03 corsair Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/make/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh ~sparc ~x86"
 IUSE="nls static build"
 
 DEPEND="nls? ( sys-devel/gettext )"
