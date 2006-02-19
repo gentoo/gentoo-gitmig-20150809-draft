@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1748 2006/02/19 19:12:48 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1749 2006/02/19 19:55:38 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -977,6 +977,8 @@ net-irc/bitchx:cdrom - Enables CD-ROM support
 net-irc/ngircd:ident - Enables support for libident
 net-irc/srvx:bahamut - Choose bahamut protocol over p10 protocol
 net-irc/unrealircd:hub - Enable hub support
+net-irc/xchat-gnome:libnotify - Enable libnotify support
+net-irc/xchat-gnome:libsexy - Enable libsexy support
 net-irc/xchat-xsys:audacious - Enables Audacious (media player) integration
 net-irc/xchat-xsys:buttons - Enables the buttons near the nickname list
 net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a patch
