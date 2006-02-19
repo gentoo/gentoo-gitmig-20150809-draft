@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/spidermonkey
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.16 2005/12/06 11:21:35 jer Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.17 2006/02/19 03:46:57 vanquirius Exp $
+
+*spidermonkey-1.5 (19 Feb 2006)
+
+  19 Feb 2006; Marcelo Goes <vanquirius@gentoo.org>
+  -spidermonkey-1.5_rc6.ebuild, +spidermonkey-1.5.ebuild:
+  1.5 version bump for bug 121076. Request by Sascha Geschwandtner <s dot
+  geschwandtner at gmx dot de>.
 
   06 Dec 2005; Jeroen Roovers <jer@gentoo.org>
   spidermonkey-1.5_rc6-r1.ebuild:
