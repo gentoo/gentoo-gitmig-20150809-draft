@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r11.ebuild,v 1.9 2005/06/30 03:40:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r11.ebuild,v 1.10 2006/02/19 23:55:52 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -13,20 +13,20 @@ SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
-IUSE="nls build static"
+IUSE="nls static"
 
 RDEPEND=""
 DEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${WORKDIR}/patch
-	cp ${WORKDIR}/extra/config.{h,make} .
-	cp ${WORKDIR}/extra/ether-wake.c .
-	cp ${WORKDIR}/extra/ether-wake.8 man/en_US/
+	cd "${S}"
+	epatch "${WORKDIR}"/patch
+	cp "${WORKDIR}"/extra/config.{h,make} .
+	cp "${WORKDIR}"/extra/ether-wake.c .
+	cp "${WORKDIR}"/extra/ether-wake.8 man/en_US/
 	mkdir include/linux
-	cp ${WORKDIR}/extra/if_infiniband.h include/linux/
+	cp "${WORKDIR}"/extra/if_infiniband.h include/linux/
 
 	if use static ; then
 		append-flags -static
@@ -68,11 +68,5 @@ src_install() {
 	dodir /usr/bin
 	dosym /bin/hostname /usr/bin/hostname
 
-	if ! use build ; then
-		dodoc README README.ipv6 TODO
-	else
-		# only install /bin/hostname
-		rm -rf "${D}"/usr "${D}"/sbin
-		rm -f "${D}"/bin/{domainname,netstat,dnsdomainname,ypdomainname,nisdomainname}
-	fi
+	dodoc README README.ipv6 TODO
 }

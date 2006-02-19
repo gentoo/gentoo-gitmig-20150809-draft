@@ -1,31 +1,63 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5d439633e96c5f5a7837cd407a693490 ChangeLog 6015
+RMD160 fc0eb43ea6601e7572126919232910994c99ae2d ChangeLog 6015
+SHA256 f25884b372195882937aeb86c31228b0e281c3312293a9733462d10ed08c617d ChangeLog 6015
 MD5 fb41d7c55db5124d7488a923e4223576 files/0.88-bigendian.patch 478
+RMD160 65025a0a97e83bf920353c874ae0c484660c7d4b files/0.88-bigendian.patch 478
+SHA256 843738c0888c3072605dea0c536f5dc0f3ed2779a1cd7e0e959ccd2e4e705b6c files/0.88-bigendian.patch 478
 MD5 0479a09fdd4ce855d35e36563cab4743 files/0.88-errno.patch 239
+RMD160 885fc53d5898d37ac1df95ef05a4a465356e2534 files/0.88-errno.patch 239
+SHA256 731c50fe35f129bc81c7740336fbe17b8e58c733d466d600830f5017bc5abdaa files/0.88-errno.patch 239
 MD5 b36e99b422384451ac68b3a9b31b7ed6 files/0.88-head-1.patch 1403
+RMD160 911fa03d3400184da738e48adce8767e0a9c0591 files/0.88-head-1.patch 1403
+SHA256 c39e042333df402e5a9416858991135ae1ea7c04c374cf7ff6dd6cee177c7a78 files/0.88-head-1.patch 1403
 MD5 a52d1d668b5486fde8f138eaab047e70 files/0.88-limits.patch 12356
+RMD160 c36d12082ace708372a56c4074f46e3a3e516ede files/0.88-limits.patch 12356
+SHA256 36220e0b33de09bc8320a1755b1f63844ac668d2351948c01d4650e67f6c1e74 files/0.88-limits.patch 12356
 MD5 72b6cd8b1b829a6a6939255fdc0b76a3 files/0.88-rblsmtpd-ignore-on-RELAYCLIENT.patch 462
+RMD160 97cb8f2761928b585cae44ef88dbb9e190d176b9 files/0.88-rblsmtpd-ignore-on-RELAYCLIENT.patch 462
+SHA256 6179c0d030f80ddb72423f2c7c88ffaca7b9b05c68708ecbb28500672a1670bd files/0.88-rblsmtpd-ignore-on-RELAYCLIENT.patch 462
 MD5 b260fe81e9593e965ccb539b0dcfc4bd files/0.88-tcprules.patch 463
+RMD160 3b8c9378973c46ebbe2d1a915d0bc4e07b709c47 files/0.88-tcprules.patch 463
+SHA256 d4f52ade46e53126c0faccfaacd985e14f36dead5c0f1b40070d89941fcf0a32 files/0.88-tcprules.patch 463
 MD5 07405ee0d3385bc58a5cc3f2034de90a files/digest-ucspi-tcp-0.88-r10 350
+RMD160 363e1caa5d403c46b39a22a2a8bf80e4274a41bf files/digest-ucspi-tcp-0.88-r10 350
+SHA256 519a19bb9966ad88a1b1aa83bc51a168079c64da18231c29db8827d96db95f0b files/digest-ucspi-tcp-0.88-r10 350
 MD5 07405ee0d3385bc58a5cc3f2034de90a files/digest-ucspi-tcp-0.88-r11 350
+RMD160 363e1caa5d403c46b39a22a2a8bf80e4274a41bf files/digest-ucspi-tcp-0.88-r11 350
+SHA256 519a19bb9966ad88a1b1aa83bc51a168079c64da18231c29db8827d96db95f0b files/digest-ucspi-tcp-0.88-r11 350
 MD5 57161a76734c44c65d46f0f93826aaf3 files/digest-ucspi-tcp-0.88-r12 350
+RMD160 870f5ccae51787704f123b0d0410faf3fa5bf246 files/digest-ucspi-tcp-0.88-r12 350
+SHA256 2acceaa26fe4ed1fade86120341916c34a789bf7291063d634d5a21fd730eadf files/digest-ucspi-tcp-0.88-r12 350
 MD5 280de8eb44681996de47516ea0413be0 files/digest-ucspi-tcp-0.88-r13 350
+RMD160 ab467950b2cc71ee5c7a41a6e155edc48c23b61e files/digest-ucspi-tcp-0.88-r13 350
+SHA256 0336b20958d17ad4c8e8af85c11eb990e25faa31e6f09d4f40ae01e3288daf14 files/digest-ucspi-tcp-0.88-r13 350
 MD5 9eab9910e2978160e33f6c4e9b227efa files/digest-ucspi-tcp-0.88-r8 350
+RMD160 21260cd7e7f522f076277dceaa74097f1d06212c files/digest-ucspi-tcp-0.88-r8 350
+SHA256 cd3654696ae70cc964599da097241f1be56409556f5820786176895fef45ff78 files/digest-ucspi-tcp-0.88-r8 350
 MD5 9eab9910e2978160e33f6c4e9b227efa files/digest-ucspi-tcp-0.88-r9 350
+RMD160 21260cd7e7f522f076277dceaa74097f1d06212c files/digest-ucspi-tcp-0.88-r9 350
+SHA256 cd3654696ae70cc964599da097241f1be56409556f5820786176895fef45ff78 files/digest-ucspi-tcp-0.88-r9 350
 MD5 64eb2b26c9c0e5d6b4042fd36b74dbb8 files/tcprules-Makefile 168
+RMD160 1feb7a1979490270bdacd56fd17801687207ad42 files/tcprules-Makefile 168
+SHA256 931cfb9797dc514d1fce3c43b71f59c22e929c3b12682089bf30ebdac057a1db files/tcprules-Makefile 168
 MD5 66ed278686866a3187b68d81fe47fa24 metadata.xml 592
-MD5 38badb1189a3476d5066e21ab764aef1 ucspi-tcp-0.88-r10.ebuild 2341
-MD5 e01f5cc6f4c8c36cde32a1f14dfe8ba0 ucspi-tcp-0.88-r11.ebuild 2427
-MD5 9b7edefc3244d63241311cb3b66b1a44 ucspi-tcp-0.88-r12.ebuild 2574
-MD5 372c88767590e7ba12d21e64908afccc ucspi-tcp-0.88-r13.ebuild 2623
-MD5 f28315c57485584788c9824481bc7603 ucspi-tcp-0.88-r8.ebuild 2148
-MD5 76034b124658a585b29a772acbf2b798 ucspi-tcp-0.88-r9.ebuild 2246
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDWf/WgIKl8Uu19MoRAhnYAJ9ZZAPWHVQeipEeXIld0SGfEQu6GACfeC4q
-VsYXCmreHpjwG/kn4DRZjoQ=
-=Zc5X
------END PGP SIGNATURE-----
+RMD160 55f62935ff7dc2faf84951259954a3bc51154a51 metadata.xml 592
+SHA256 1043f71f51803b39959194265e8dc63e009634eaafe5bee91892f359ba4950f4 metadata.xml 592
+MD5 c04da931c032d90625d0d2a812f5edb5 ucspi-tcp-0.88-r10.ebuild 2345
+RMD160 ab1532d83d5f6adabe8bb4168ef684db2cf83723 ucspi-tcp-0.88-r10.ebuild 2345
+SHA256 cae288449e320ed62ce268f2ff5afc00876f11811d5ff85efe24990908f30511 ucspi-tcp-0.88-r10.ebuild 2345
+MD5 ce3c7a5d753f2502583d27ade15bf046 ucspi-tcp-0.88-r11.ebuild 2433
+RMD160 b871f3782d45f9a19f20c405c165aad182360cd8 ucspi-tcp-0.88-r11.ebuild 2433
+SHA256 65b3884c7d9e64907768730363ee7d3685e86c90814237643c75cead07c20a23 ucspi-tcp-0.88-r11.ebuild 2433
+MD5 a1f7e1bd21c9448e8d508b6fb522b957 ucspi-tcp-0.88-r12.ebuild 2577
+RMD160 f29f7b85059c5c311ae94395245b6c9d0d2937ed ucspi-tcp-0.88-r12.ebuild 2577
+SHA256 015df5e9ebf0a013f334c94aa5a2ac33ff9b4483157330c36b213751a063e473 ucspi-tcp-0.88-r12.ebuild 2577
+MD5 31a2a67e361969a49292fa865de144cf ucspi-tcp-0.88-r13.ebuild 2623
+RMD160 f6bd35916a4cab50ef254451830760a0b023a6d4 ucspi-tcp-0.88-r13.ebuild 2623
+SHA256 4d68b7605d884ff1def0ccfd55548ab29429064a3ebf459159672440d40a35d3 ucspi-tcp-0.88-r13.ebuild 2623
+MD5 4577b5e76cf2b76f1d92c23d4145bb84 ucspi-tcp-0.88-r8.ebuild 2152
+RMD160 95542a80c99d543d70f0957a47167c1191f98acc ucspi-tcp-0.88-r8.ebuild 2152
+SHA256 d2a268f75bd9d6fbbc0acc2f4f774e4c589464921d8567749171100c6912e35b ucspi-tcp-0.88-r8.ebuild 2152
+MD5 71758446b34f5c045953bb2b8c9e848d ucspi-tcp-0.88-r9.ebuild 2251
+RMD160 1f4809c7aff647cd8c121872148f3493cccc2088 ucspi-tcp-0.88-r9.ebuild 2251
+SHA256 f6eb331c3162c01145fc1a2c6dd1bf2df9b4599c213238d58c25ca9912d6e16d ucspi-tcp-0.88-r9.ebuild 2251
