@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 720e9968a3cf3982555d97fad2a2e682 ChangeLog 3006
-RMD160 449385a41c1e1c9ca108161451456cdc309a1431 ChangeLog 3006
-SHA256 de398e17e3198595b622b938a99eac8c192a41b0ef08738ba14e0a074ff9afc4 ChangeLog 3006
+MD5 99176916945cc6162166fd665acc87a6 ChangeLog 3260
 MD5 ef122c0b93cef23d281a4079cd92c78b files/digest-quantlib-0.3.0 70
-RMD160 91efd0814b3e1f57dab4ac36998f6edf125a2f81 files/digest-quantlib-0.3.0 70
-SHA256 5a898647f561f361ace1218c2b7ad0105b718b4db1864fd660829c6908f39f7b files/digest-quantlib-0.3.0 70
 MD5 2e54223e6218c52c5b9922a45df16f89 files/digest-quantlib-0.3.10 250
-RMD160 d9f559c69295d5309d434bdda6c42bc9e01368a1 files/digest-quantlib-0.3.10 250
-SHA256 cfc78d767ebdbfa90d0625c0880de3538f0bf9c854019bd5611ba0984c196742 files/digest-quantlib-0.3.10 250
 MD5 ce1cbc3e859276b05bea2a21fe1d7da2 files/digest-quantlib-0.3.11 68
-RMD160 26447a5b7c0578e26c2eae06c1b0b437f4f03921 files/digest-quantlib-0.3.11 68
-SHA256 fbcd2d350d2c9816a693f847650c119967b6a10ae232582c880fca0ce16030ec files/digest-quantlib-0.3.11 68
 MD5 a3fb19083b6aca15b423c3b6b648c7dc metadata.xml 392
-RMD160 23344d29ac6deda6b4cb997aa0b933b711d2af16 metadata.xml 392
-SHA256 26d6c626977f68c1c29c975852229e6e5f884f19912894d349cf86034c181f0a metadata.xml 392
-MD5 e2dffa311c568ce9188cb40af32c9062 quantlib-0.3.0.ebuild 614
-RMD160 a755acc3d752fcb77758b71f12dccbf7a376da98 quantlib-0.3.0.ebuild 614
-SHA256 d716af4b0c130d4b7828ceb4e10cbdfc4b7e9248616bc73f5de9d55123be8a47 quantlib-0.3.0.ebuild 614
+MD5 77b2a274c23b60710c599df05062e144 quantlib-0.3.0.ebuild 607
 MD5 fe3c33d907ef69b0e535a6bc12f82db9 quantlib-0.3.10.ebuild 623
-RMD160 4fcb4fd7ffa3a1d8718f6882dc2fe0f87aa918fe quantlib-0.3.10.ebuild 623
-SHA256 51589fe2af41d044bada0e451dd35ee43ef7223a6e7c7fbf08657514ab77f667 quantlib-0.3.10.ebuild 623
 MD5 e5e70144dc996eb4ba8a63567bb77fe5 quantlib-0.3.11.ebuild 628
-RMD160 80348fecc45af40fe746c62c46235f1fe8252471 quantlib-0.3.11.ebuild 628
-SHA256 d48dca58fee81b0426a357b8b859fe69375042147d45148802cd9a565fa35d11 quantlib-0.3.11.ebuild 628
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5klBJrHF4yAQTrARAtWiAJ4+C2MZqTdcF1DX+pUDTSWidtuZgQCgrxTs
-AkhULpbOdd0yL2uEjso9oc4=
-=pa3t
------END PGP SIGNATURE-----
