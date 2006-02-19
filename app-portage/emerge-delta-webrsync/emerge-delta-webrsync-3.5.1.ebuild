@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.5.ebuild,v 1.1 2006/02/02 12:07:15 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.5.1.ebuild,v 1.1 2006/02/19 12:56:24 ferringb Exp $
 
 DESCRIPTION="emerge-webrsync using patches to minimize bandwidth"
 HOMEPAGE="http://dev.gentoo.org/~ferringb/"
