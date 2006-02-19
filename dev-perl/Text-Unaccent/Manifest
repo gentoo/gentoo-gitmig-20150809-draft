@@ -1,4 +1,14 @@
-MD5 76a70b2e5ee4657a8ab77fe12bec35b8 ChangeLog 946
-MD5 73149570e734bceed3a3b5850a67e952 Text-Unaccent-1.08.ebuild 529
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0668d1c840fa475e2383e1f8ec28b116 ChangeLog 1058
+MD5 013554d40e259d5fb9c855cc238cac2d Text-Unaccent-1.08.ebuild 536
 MD5 2b8e34ea6f33d943306d6ff4b0049e8e files/digest-Text-Unaccent-1.08 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD+O0VugEuf3OQ0akRAv8kAJ9PunotpkRh1hLTN3ewkAZ3YZ4P5gCfaQbv
+gdnui1ZeYPRGJGUsW8w8pCQ=
+=vA3J
+-----END PGP SIGNATURE-----
