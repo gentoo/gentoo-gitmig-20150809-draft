@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r5.ebuild,v 1.1 2006/02/15 00:54:53 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r5.ebuild,v 1.2 2006/02/19 13:41:48 ticho Exp $
 
 inherit eutils perl-module
 
@@ -52,8 +52,6 @@ src_compile() {
 	fi
 
 	if use amd64; then
-		myconf="${myconf} --with-pic"
-	else
 		myconf="${myconf} --with-pic"
 	fi
 

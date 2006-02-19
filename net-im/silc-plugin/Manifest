@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d38a91b56b3356c3840ee74fd7a33dda ChangeLog 4007
-RMD160 ef072c535c6df7bd4454ad796070b234dea58b85 ChangeLog 4007
-SHA256 1b0885b0ef8cace15717a6457ed811bbfdbefcfe78f9085f03e1d2cac39263d7 ChangeLog 4007
+MD5 f2f47fb8b47f1cb84399cfafd63aebb7 ChangeLog 4137
+RMD160 bde4654b4521a2a7ea077063036d2dd31545076e ChangeLog 4137
+SHA256 3fbe10e7356dbf01f991ef6542d7302d9e77d27a2b9b66c047dc2317af82b63d ChangeLog 4137
 MD5 71989b1101d6cf41e9f61a1b62d2cc85 files/1.0.1-branch-update.patch 6717
 RMD160 b6e422fdf91baf3fbe9313e83d3a37e6d771a131 files/1.0.1-branch-update.patch 6717
 SHA256 fa270bbc65eb6a16cd628ece425b15b68ed6e752d4763a60286f13c1bd6efc5e files/1.0.1-branch-update.patch 6717
@@ -22,13 +22,13 @@ SHA256 f5a363461f7e4e9d8d8a9ea60872d6ee71ab8914d303c62d3f529e0e972c24ca metadata
 MD5 ea462b09ce22f10f19ffbd2ebb547333 silc-plugin-1.0.1-r4.ebuild 3460
 RMD160 cd178e365d2484d4f7d97692387f012654da78d8 silc-plugin-1.0.1-r4.ebuild 3460
 SHA256 1c72e94d729e7236928d28934c5cc9e5b1aa4447da945db2ba7e7352c37f1b16 silc-plugin-1.0.1-r4.ebuild 3460
-MD5 4f5fca3403aa83ceb3caec8d9cca0a64 silc-plugin-1.0.1-r5.ebuild 3663
-RMD160 061a5a3d303c8253ec8132f2331babe03a4db68c silc-plugin-1.0.1-r5.ebuild 3663
-SHA256 f684fa57f4b6bf21ee382d1e676c4312e409b3bb12d166208ed7f1be5e73ee5c silc-plugin-1.0.1-r5.ebuild 3663
+MD5 e8e2bfe74cbafd96b5ee4becb22bc02b silc-plugin-1.0.1-r5.ebuild 3622
+RMD160 751aac518a92b4d572fc004dbe73bf963d6306e2 silc-plugin-1.0.1-r5.ebuild 3622
+SHA256 93f18a6a09bfe8991a9989d669117a52521be7d48f2475c0c858f8d8995a347c silc-plugin-1.0.1-r5.ebuild 3622
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD8nwNwUpWvClEHQoRAtIrAJ0f4h4sKulbKa21Kgi2OyWyYLn8hwCeMuvR
-CHBZ6WZqQa0lp03YIWdAHZY=
-=yGyp
+iD8DBQFD+HWxQlM6RnzZP+IRAuE5AJ9P11pCUoK1G+gp8KyJAZ96RI1yBQCfeNcf
+t1H3mmWJ3hZcWMx3fBFLCv8=
+=HY7d
 -----END PGP SIGNATURE-----
