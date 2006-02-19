@@ -1,34 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1e1737da8cdaf895e424492707277509 ChangeLog 2875
-RMD160 2c91fcbdebc52ec9e6fe446f4a25e4c969838f45 ChangeLog 2875
-SHA256 9f7652a153137d39f66b7ffa460e8d8c2a89c9aa56d5f13c8ea6d0f8f87f4bc9 ChangeLog 2875
-MD5 08efb7ecd02832c5599b968bdc329dc9 files/digest-wxhaskell-0.8-r1 66
-RMD160 e965d869ae1e7002e54a4daa1aa804b727ddf54f files/digest-wxhaskell-0.8-r1 66
-SHA256 9b171172f9fd8956b6c931065ff615fcb578aa81e2ea85794789e1ea7797aeae files/digest-wxhaskell-0.8-r1 66
-MD5 252f6e6df89834ca7cc1f0b68cecbd3c files/digest-wxhaskell-0.9 66
-RMD160 32aef4fcf5a09906a33feb665bf9c3fd8a94f4f9 files/digest-wxhaskell-0.9 66
-SHA256 0a9085cb68f9626940939dc6a297436aa9733c866419168022414b2283e09bca files/digest-wxhaskell-0.9 66
+MD5 9ac9dfcb73672985bf8dd03e469b5a81 ChangeLog 3249
+RMD160 f6b038bb3402b85bb607284f2d1310c7eb868f07 ChangeLog 3249
+SHA256 add7d579cedbf8e806ba24cee44cb274fa0ca9e94c111837168c0edbfc36788f ChangeLog 3249
+MD5 045506c36a937e84a6203f2205c9dfd4 files/digest-wxhaskell-0.8-r1 244
+RMD160 396f688c25e1c117f0f3c5a2a8ca372d230db9de files/digest-wxhaskell-0.8-r1 244
+SHA256 4ad92a7532e732e05f38cc736707005c632d6f326ae32a140c705cd9db63e824 files/digest-wxhaskell-0.8-r1 244
+MD5 0353b85e538ad092f04792a6c0ab31f2 files/digest-wxhaskell-0.9 244
+RMD160 ad01c1ee971663b76f91e3689d1fbe326293eed5 files/digest-wxhaskell-0.9 244
+SHA256 0fa6e1bcccc39b28f68aed38d9f800f7f52668df7b588afa3b8c4f932e6a4346 files/digest-wxhaskell-0.9 244
 MD5 d65df2d0e35a232f916aa03605183014 files/digest-wxhaskell-0.9.4 250
 RMD160 44e2bab5fe15dc3bc1c736c008068884ad674953 files/digest-wxhaskell-0.9.4 250
 SHA256 38ad5e3401720ff06d5eead8cd11d7646b4f6ee7c896d1b191d9d5b68077f7d0 files/digest-wxhaskell-0.9.4 250
 MD5 c694674dcbef799cd4fdb6914683ebff metadata.xml 223
 RMD160 7783e6057effb8b8f0b79cffe8b557b32c633839 metadata.xml 223
 SHA256 1d00c8be162a6cb87b3de440b3e63e10b39c12d56e8fbfe592e75aed872b2508 metadata.xml 223
-MD5 483ac7de5da8558141720d44ee5989a7 wxhaskell-0.8-r1.ebuild 2503
-RMD160 e2e2b9c5fbc7f42e8cadb290d5b2a16d16eb9da7 wxhaskell-0.8-r1.ebuild 2503
-SHA256 6e2f5b03d4d07e7f62b9edad0ab9dfeda7be9f39f4f4c53aada01d05e192458f wxhaskell-0.8-r1.ebuild 2503
-MD5 e8742d96b05da8eab21d8568042c2be6 wxhaskell-0.9.4.ebuild 2717
-RMD160 9c7fb293bb3794e5ee0723335d8fe96c5bc2a29c wxhaskell-0.9.4.ebuild 2717
-SHA256 ca54cc045b44242c6539f16ff9d06ad714633af466e8a0599b277544e3252905 wxhaskell-0.9.4.ebuild 2717
-MD5 de2ece49471302b30cd04d85fdae4441 wxhaskell-0.9.ebuild 2502
-RMD160 14505b07b3a428894752d2b62dca5e233e3b04f6 wxhaskell-0.9.ebuild 2502
-SHA256 a71e5add4b3f181f4d84bd6ff219f226f95fbcee8d50ee6cbb23b446e3d16314 wxhaskell-0.9.ebuild 2502
+MD5 67196ffe4b985a8118e89a0ac673e114 wxhaskell-0.8-r1.ebuild 2859
+RMD160 c7b76e5ce6ce99dbf3a4c0aa9928845d2363bdef wxhaskell-0.8-r1.ebuild 2859
+SHA256 c4cd43db6ff6b65cbf2fac0dbcd78c8f9da8fcc9ce0d6f26efc425405ee93950 wxhaskell-0.8-r1.ebuild 2859
+MD5 b64f100228db701180e2761fb0baf435 wxhaskell-0.9.4.ebuild 2840
+RMD160 60f8d78ae0a4a16ab797a660b22523e772659ebb wxhaskell-0.9.4.ebuild 2840
+SHA256 a26e453fca882f837bf305fa4a109f94c0f5fdb21ca128fc7eb29df7e10d04b7 wxhaskell-0.9.4.ebuild 2840
+MD5 40618bf3fcadeef0837c0b8a6c281b64 wxhaskell-0.9.ebuild 2856
+RMD160 bee28d1368b27bedd59168c2d313cc057859628a wxhaskell-0.9.ebuild 2856
+SHA256 4e902a85da1903f6b7678796e2809339947bbb99f0d077e1068ba9c1567f96f1 wxhaskell-0.9.ebuild 2856
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD9ay4/B0cxt+cq+wRAtrFAJ9lUIFNBHr2PDvk3Cn8xtoxCNveIQCfUeoj
-Wb+P9n22G8anLl1Iucsn/nI=
-=AcSX
+iD8DBQFD+L3p/B0cxt+cq+wRApxUAJ4sXpl8RlO1lbOqk3LKMjg3+GQCJgCfe62l
+gSaAgicOqj5lAmhXv07Q3Wk=
+=IvCH
 -----END PGP SIGNATURE-----

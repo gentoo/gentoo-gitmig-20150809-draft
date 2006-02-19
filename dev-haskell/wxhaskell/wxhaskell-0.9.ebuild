@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.ebuild,v 1.4 2006/02/17 10:59:58 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.ebuild,v 1.5 2006/02/19 18:50:26 dcoutts Exp $
 
 inherit flag-o-matic wxwidgets ghc-package
 
@@ -11,14 +11,15 @@ LICENSE="wxWinLL-3"
 SLOT="0"
 
 KEYWORDS="~x86 ~ppc -amd64"
-# potentially seriously broken on amd64, check carefully before re-enabling.
 
-IUSE="doc gtk2"
+IUSE="doc"
 
-DEPEND="${DEPEND}
-	>=virtual/ghc-6.2
+RDEPEND=">=virtual/ghc-6.2
 	!>=virtual/ghc-6.4
-	>=x11-libs/wxGTK-2.4.2-r2
+	=x11-libs/wxGTK-2.4*"
+
+DEPEND="${RDEPEND}
+	app-arch/unzip
 	doc? ( >=dev-haskell/haddock-0.6-r2 )"
 
 pkg_setup() {
@@ -27,11 +28,11 @@ pkg_setup() {
 		einfo "Please re-emerge wxGTK with USE=\"X -odbc -unicode\""
 		die "wxhaskell requires wxGTK to be built with USE=\"X -odbc -unicode\""
 	fi
-	if built_with_use x11-libs/wxGTK odbc || built_with_use x11-libs/wxGTK unicode; then
+	if built_with_use x11-libs/wxGTK odbc; then
 		einfo "Sadly wxhaskell does not work with wxGTK that has been built"
-		einfo "with USE=\"odbc\" or USE=\"unicode\"."
-		einfo "Please re-emerge wxGTK with USE=\"-odbc -unicode\""
-		die "wxhaskell requires wxGTK to be built with USE=\"-odbc -unicode\""
+		einfo "with USE=\"odbc\"."
+		einfo "Please re-emerge wxGTK with USE=\"-odbc\""
+		die "wxhaskell requires wxGTK to be built with USE=\"-odbc\""
 	fi
 }
 
@@ -39,31 +40,31 @@ src_unpack() {
 	unpack ${A}
 	# adapt to Gentoo path convention
 	sed -i 's:/doc/html:/share/doc/html:' ${S}/configure
+	# fix superfluous dependencies on hslibs packages
+	sed -i -e 's:,lang::' -e 's:,"lang"::' \
+		-e 's:,concurrent::' -e 's:,"concurrent"::' ${S}/configure
 	# fix Makefile to respect CXXFLAGS
 	sed -i 's:^\(WXC-CXXFLAGS.*=\):\1\$(CXXFLAGS) :' ${S}/makefile
 }
 
 src_compile() {
-	local wxconfig
 	ghc-setup-pkg
 
-	#wxhaskell supports gtk or gtk2, but not unicode yet:
-	if ! use gtk2; then
-		need-wxwidgets gtk
-	else
-		need-wxwidgets gtk2
-	fi
+	#wxhaskell supports gtk or gtk2, but not unicode yet. However since the gtk2
+	#USE flag is deprecated we now only build with gtk2:
+	WX_GTK_VER=2.4
+	need-wxwidgets gtk2
 
-	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
+	# every C compiler result ends up in a shared lib
+	append-flags -fPIC
 
 	# non-standard configure, so econf is not an option
-	wxconfig="${WX_CONFIG}"
 	# --wx-config must appear first according to configure file comments 
 	./configure \
-		--wx-config=${wxconfig} \
-		--prefix=${D}/usr \
+		--wx-config="${WX_CONFIG}" \
+		--prefix=/usr \
 		--with-opengl \
-		--libdir=${D}/$(ghc-libdir) \
+		--libdir=/usr/lib/${P} \
 		--package-conf=${S}/$(ghc-localpkgconf) \
 		|| die "./configure failed"
 
@@ -77,9 +78,14 @@ src_compile() {
 
 src_install() {
 	local f
-	emake -j1 install || die "make install failed"
-	for f in ${D}/$(ghc-libdir)/libwxc-*.so; do
-		mv ${f} ${D}/usr/lib
+
+	# don't register the packages, just install the files
+	emake -j1 install-files DESTDIR="${D}" || die "make install failed"
+
+	# the .so needs to be on the lib path
+	mkdir -p ${D}/usr/lib
+	for f in ${D}/usr/lib/${P}/libwxc-*.so; do
+		mv ${f} ${D}/usr/lib/
 	done
 
 	if use doc; then
@@ -87,5 +93,8 @@ src_install() {
 		cp -r samples ${D}/usr/share/doc/${PF}
 	fi
 
+	# substitute for the ${wxhlibdir} in package files and register them
+	sed -i -e "s:\${wxhlibdir}:${D}/usr/lib/${P}:" ${D}/usr/lib/${P}/*.pkg
+	ghc-setup-pkg ${D}/usr/lib/${P}/*.pkg
 	ghc-install-pkg
 }

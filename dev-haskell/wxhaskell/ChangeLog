@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/wxhaskell
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.18 2006/02/17 10:59:58 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.19 2006/02/19 18:50:26 dcoutts Exp $
+
+  19 Feb 2006; <duncan@gentoo.org> wxhaskell-0.8-r1.ebuild,
+  wxhaskell-0.9.ebuild, wxhaskell-0.9.4.ebuild:
+  Masking 0.8-r1 and 0.9 since wxGTK-2.4.x doesn't work due to bug #123323
+  Updating all ebuild versions to remove gtk2 USE flag (bug #106560).
+  Also add app-arch/unzip to DEPEND (bug #69831)
+  Other changes to install location and how the package is registered.
 
   17 Feb 2006; <duncan@gentoo.org> wxhaskell-0.8-r1.ebuild,
   wxhaskell-0.9.ebuild, wxhaskell-0.9.4.ebuild:
