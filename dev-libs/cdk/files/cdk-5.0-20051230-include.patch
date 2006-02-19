@@ -1,0 +1,120 @@
+diff --exclude='*~' -Naur cdk-5.0-20051230.orig/include/alphalist.h cdk-5.0-20051230/include/alphalist.h
+--- cdk-5.0-20051230.orig/include/alphalist.h	2006-02-19 14:19:39.000000000 -0300
++++ cdk-5.0-20051230/include/alphalist.h	2006-02-19 14:38:48.000000000 -0300
+@@ -54,8 +54,8 @@
+  * SUCH DAMAGE.
+  */
+ 
+-#include <entry.h>
+-#include <scroll.h>
++#include "entry.h"
++#include "scroll.h"
+ 
+ /*
+  * Define the CDK alphalist widget structure.
+diff --exclude='*~' -Naur cdk-5.0-20051230.orig/include/cdk.h cdk-5.0-20051230/include/cdk.h
+--- cdk-5.0-20051230.orig/include/cdk.h	2006-02-19 14:19:39.000000000 -0300
++++ cdk-5.0-20051230/include/cdk.h	2006-02-19 14:39:22.000000000 -0300
+@@ -44,8 +44,8 @@
+  * SUCH DAMAGE.
+  */
+ 
+-#include <cdk_config.h>
+-#include <cdk_version.h>
++#include "cdk_config.h"
++#include "cdk_version.h"
+ 
+ #ifdef	CDK_PERL_EXT
+ #undef	instr
+@@ -272,55 +272,55 @@
+ /*
+  * These header files define miscellaneous values and prototypes.
+  */
+-#include <cdkscreen.h>
+-#include <curdefs.h>
+-#include <binding.h>
+-#include <cdk_util.h>
+-#include <cdk_objs.h>
+-#include <cdk_params.h>
++#include "cdkscreen.h"
++#include "curdefs.h"
++#include "binding.h"
++#include "cdk_util.h"
++#include "cdk_objs.h"
++#include "cdk_params.h"
+ 
+ /*
+  * Include the CDK widget header files.
+  */
+-#include <alphalist.h>
+-#include <buttonbox.h>
+-#include <calendar.h>
+-#include <dialog.h>
+-#include <entry.h>
+-#include <fselect.h>
+-#include <graph.h>
+-#include <histogram.h>
+-#include <itemlist.h>
+-#include <label.h>
+-#include <marquee.h>
+-#include <matrix.h>
+-#include <mentry.h>
++#include "alphalist.h"
++#include "buttonbox.h"
++#include "calendar.h"
++#include "dialog.h"
++#include "entry.h"
++#include "fselect.h"
++#include "graph.h"
++#include "histogram.h"
++#include "itemlist.h"
++#include "label.h"
++#include "marquee.h"
++#include "matrix.h"
++#include "mentry.h"
+ #include <menu.h>
+-#include <radio.h>
+-#include <scroll.h>
+-#include <selection.h>
+-#include <swindow.h>
+-#include <template.h>
+-#include <viewer.h>
+-#include <traverse.h>
+-#include <button.h>
++#include "radio.h"
++#include "scroll.h"
++#include "selection.h"
++#include "swindow.h"
++#include "template.h"
++#include "viewer.h"
++#include "traverse.h"
++#include "button.h"
+ 
+ /*
+  * Generated headers:
+  */
+-#include <dscale.h>
+-#include <fscale.h>
+-#include <scale.h>
+-#include <uscale.h>
+-
+-#include <fslider.h>
+-#include <slider.h>
+-#include <uslider.h>
++#include "dscale.h"
++#include "fscale.h"
++#include "scale.h"
++#include "uscale.h"
++
++#include "fslider.h"
++#include "slider.h"
++#include "uslider.h"
+ 
+ /*
+  * Low-level object drawing
+  */
+-#include <draw.h>
++#include "draw.h"
+ 
+ #ifdef __cplusplus
+ }

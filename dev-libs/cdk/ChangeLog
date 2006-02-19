@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.25 2006/02/04 18:17:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.26 2006/02/19 18:01:35 vanquirius Exp $
+
+*cdk-5.0.20051230 (19 Feb 2006)
+
+  19 Feb 2006; Marcelo Goes <vanquirius@gentoo.org>
+  +files/cdk-5.0-20051230-include.patch, +cdk-5.0.20051230.ebuild:
+  5.0.20051230 version bump. Include patch should fix app-misc/pms compilation
+  issue of bug 123374, reported by Marti Raudsepp <marti at juffo dot org>.
 
   04 Feb 2006; Aron Griffis <agriffis@gentoo.org> cdk-5.0.20050424.ebuild:
   Mark 5.0.20050424 stable on alpha
