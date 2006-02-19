@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.79 2006/02/18 19:43:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.80 2006/02/19 01:46:10 vanquirius Exp $
+
+  19 Feb 2006; Marcelo Goes <vanquirius@gentoo.org>
+  -nessus-libraries-2.2.4.ebuild:
+  Remove 2.2.4 ebuild.
 
   18 Feb 2006; Fabian Groffen <grobian@gentoo.org>
   nessus-libraries-2.3.1.ebuild:
