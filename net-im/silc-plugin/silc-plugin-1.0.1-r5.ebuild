@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r5.ebuild,v 1.2 2006/02/19 13:41:48 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r5.ebuild,v 1.3 2006/02/19 17:51:43 ticho Exp $
 
 inherit eutils perl-module
 
@@ -42,7 +42,7 @@ src_compile() {
 
 	local myconf
 
-	myconf="--without-libtoolfir --enable-static \
+	myconf="--without-libtoolfix --enable-static \
 		--with-helpdir=${D}/usr/share/irssi/help/silc/"
 
 	if use debug ; then
