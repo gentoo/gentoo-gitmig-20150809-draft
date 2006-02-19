@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>net-im</herd>
 <maintainer>
-  <email>spock@gentoo.org</email>
-  <name>Michal Januszewski</name>
+	<email>spock@gentoo.org</email>
+	<name>Michal Januszewski</name>
 </maintainer>
 </pkgmetadata>

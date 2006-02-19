@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.6.ebuild,v 1.1 2005/12/10 16:01:51 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.6.ebuild,v 1.2 2006/02/19 14:55:59 spock Exp $
 
 inherit eutils
 
@@ -28,6 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.6_rc3-libgadu.patch
+	epatch ${FILESDIR}/${PN}-1.6-dragonfly.patch
 	autoreconf
 }
 

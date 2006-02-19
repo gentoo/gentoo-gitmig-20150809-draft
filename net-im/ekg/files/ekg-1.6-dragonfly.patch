@@ -1,0 +1,42 @@
+diff -ur ./ekg-1.6.orig/contrib/ioctld-client.c ekg-1.6/contrib/ioctld-client.c
+--- ./ekg-1.6.orig/contrib/ioctld-client.c	2005-02-27 20:35:58 +0000
++++ ekg-1.6/contrib/ioctld-client.c	2006-02-18 09:02:56 +0000
+@@ -26,7 +26,7 @@
+ #include <arpa/inet.h>
+ #include <sys/socket.h>
+ #include <netdb.h>
+-#ifdef __FreeBSD__
++#if defined (__FreeBSD__) || defined (__DragonFly__)
+ #  include <sys/kbio.h>			
+ #endif
+ #ifdef sun /* Solaris */
+@@ -147,7 +147,7 @@
+ 		if (tone[s])
+ 			fprintf(stderr, " %d/%d", tone[s], delay[s]);
+ 
+-#ifdef __FreeBSD__
++#if defined (__FreeBSD__) || defined (__DragonFly__)
+ 		ioctl(fd, KIOCSOUND, 0);
+ #endif
+ 
+diff -ur ./ekg-1.6.orig/src/ioctld.c ekg-1.6/src/ioctld.c
+--- ./ekg-1.6.orig/src/ioctld.c	2005-02-27 20:36:02 +0000
++++ ekg-1.6/src/ioctld.c	2006-02-18 09:03:46 +0000
+@@ -26,7 +26,7 @@
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include <sys/socket.h>
+-#ifdef __FreeBSD__
++#if defined (__FreeBSD__) || defined (__DragonFly__)
+ #  include <sys/kbio.h>
+ #endif
+ #ifdef sun /* Solaris */
+@@ -124,7 +124,7 @@
+ 		
+ 	for (s = 0; tone[s] >= 0 && s < IOCTLD_MAX_ITEMS; s++) {
+ 
+-#ifdef __FreeBSD__
++#if defined (__FreeBSD__) || defined (__DragonFly__)
+ 		ioctl(fd, KIOCSOUND, 0);
+ #endif
+ 
