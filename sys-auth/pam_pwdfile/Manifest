@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 369319004c0543835ddae8e8b059f2d3 ChangeLog 876
+RMD160 a80b3d22a82459921af1de6203028f8337cd3dc9 ChangeLog 876
+SHA256 7e51456e7156a2fcc66c59627fc21217bfbfa5114794567e6d6099f1ab2a4191 ChangeLog 876
 MD5 32a6a1684d866f5beb1ee8ff56a836db files/digest-pam_pwdfile-0.99 67
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 9b0fec9a1b512c24f56568313f6f5806151b8ac0 files/digest-pam_pwdfile-0.99 67
+SHA256 9a6deec1d7381d57144d9fe4afaa31f936dbdada3fe1d9ef429644d4c2613ea0 files/digest-pam_pwdfile-0.99 67
+MD5 1d05f0436f1c273d7862099f309afe4d metadata.xml 156
+RMD160 2c189dc76268bd055cf073cecc00befee4f87384 metadata.xml 156
+SHA256 21ca0f798be096fadf091a72155c33fa62c7be911d4c900ff518e59dd4f60173 metadata.xml 156
 MD5 241b781beb6cd37a869eef0937ed2a56 pam_pwdfile-0.99.ebuild 868
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0oqUcsIHjyDViGQRAp54AJ0aRvXYq7SKY3/PnmozSTxaDMDw7wCZAQJx
-e8+41DKuyxSUlZypZNwohAU=
-=Kiza
------END PGP SIGNATURE-----
+RMD160 47c462081fe30a98dd5368abd8086d8e4585a66f pam_pwdfile-0.99.ebuild 868
+SHA256 68e7d28a4bc298a290c4ac674ad77e31afbdc6b87812ce289b47aa39687fcebb pam_pwdfile-0.99.ebuild 868
