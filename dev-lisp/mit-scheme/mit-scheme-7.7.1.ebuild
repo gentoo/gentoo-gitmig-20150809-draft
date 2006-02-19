@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mit-scheme/mit-scheme-7.7.1.ebuild,v 1.4 2005/02/21 20:55:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mit-scheme/mit-scheme-7.7.1.ebuild,v 1.5 2006/02/19 18:26:08 vanquirius Exp $
 
 MY_P="scheme-${PV}"
 MY_SUF="-ix86-gnu-linux"
@@ -13,7 +13,14 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-RDEPEND="virtual/x11"
+RDEPEND="|| ( ( x11-libs/libXau
+			x11-libs/libSM
+			x11-libs/libXdmcp
+			x11-libs/libX11
+			x11-libs/libICE
+		)
+		virtual/x11
+	)"
 
 src_unpack() {
 	unpack ${A}
