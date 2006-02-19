@@ -1,7 +1,40 @@
-MD5 e2a3bbbfa82f422e3e7ed5c603af24e2 ChangeLog 1506
-MD5 e1585a881b4cd8fbb699b469f41b2b27 ysm-2.8.1-r1.ebuild 633
-MD5 c0ea8750c93dd5534fc43726d85357a6 ysm-2.9.0.ebuild 617
-MD5 c2f4a20b6ff0c9dba3acd89a434763b8 ysm-2.9.6.ebuild 631
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5ea6d89a29e24634dddc6c0dfeea6705 ChangeLog 1654
+RMD160 05bde27f1185949f6e36b99e35569bca97de2907 ChangeLog 1654
+SHA256 2ec0ee6d809b4eeecd62e6bd7deb017cab7bcea6813a3c3fcbbd54c19dc1e1cf ChangeLog 1654
 MD5 a74a224d5b3af023250cb504ff29a7d6 files/digest-ysm-2.8.1-r1 64
+RMD160 363093d934df24b6da51b6eecb3ac14fd496e052 files/digest-ysm-2.8.1-r1 64
+SHA256 a6cae6f9d392892416b5aa108d06848ac091c2c5c5853943121b82385e56b552 files/digest-ysm-2.8.1-r1 64
 MD5 ece3633ce866e45ad37a16e4e18708c5 files/digest-ysm-2.9.0 64
+RMD160 a108f047214ba469a02c3a01d8451a7f3bcf0548 files/digest-ysm-2.9.0 64
+SHA256 85342619842fc1579240ff4b8a5b0acb30bca85d0af928e8a83587869d11d967 files/digest-ysm-2.9.0 64
 MD5 8a3be9685ebdcb9da0f8ac33dfa969a1 files/digest-ysm-2.9.6 64
+RMD160 9413f38c1f0632e63fee544da0bf0a83882ce5bb files/digest-ysm-2.9.6 64
+SHA256 fe3be5aa8d39d1183c258692e48e8080b6834b79ea50afcfb443f031dbabc270 files/digest-ysm-2.9.6 64
+MD5 c08821b7a17be803fa4c018099fd1d19 files/digest-ysm-2.9.8 238
+RMD160 2c729266aa66b57e85852fa9cfc3030f6cb25a1e files/digest-ysm-2.9.8 238
+SHA256 0cc475679590154b329b264ca6d4e22ba9f27f32547111a84a4a06683a4ce6f0 files/digest-ysm-2.9.8 238
+MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
+RMD160 3e0df024f9705f0cd1798f45cd4b0698e183ee87 metadata.xml 159
+SHA256 bb3130d2515d5b2e4ff19aff2199bb00ac7c350bf78b34bbec55268bf1013908 metadata.xml 159
+MD5 e1585a881b4cd8fbb699b469f41b2b27 ysm-2.8.1-r1.ebuild 633
+RMD160 e5f4762b26ad7a9852e8ab20036081f649f19c0d ysm-2.8.1-r1.ebuild 633
+SHA256 014fab0de1d7522453d2fa3407be296dffa69ae107e536aa99a2dc9193032caa ysm-2.8.1-r1.ebuild 633
+MD5 c0ea8750c93dd5534fc43726d85357a6 ysm-2.9.0.ebuild 617
+RMD160 c644133adea5e790d8be09fd3b7cc1f02cd6e76a ysm-2.9.0.ebuild 617
+SHA256 b2c8bbf43417c815d0b450e4ef5f9f1b2dba6efbf4ef687684a34893d6a32aff ysm-2.9.0.ebuild 617
+MD5 c2f4a20b6ff0c9dba3acd89a434763b8 ysm-2.9.6.ebuild 631
+RMD160 7970f84423358860aa63c4220ad13a98ccbe6ada ysm-2.9.6.ebuild 631
+SHA256 a5034e850a86dcd33f98e65a35a9801fba6a1e44128ef5f94e084e46d5ef218e ysm-2.9.6.ebuild 631
+MD5 5b6c7e95b5326f02355ecedbb5bd96a3 ysm-2.9.8.ebuild 629
+RMD160 97e30fcbd3ec7e1fc19bd81280d51e0e4d9db0ca ysm-2.9.8.ebuild 629
+SHA256 9fedc8c70d2ef62a4f21c5bb06acd0b121c9f906ddfe0a11f4a1cf3e8e58ce72 ysm-2.9.8.ebuild 629
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD+LOV3mryvu3JUUURAhPBAJ9/qJBG1Slt9AMxMZkapcbjvuAPjwCePeeL
+7XEHaYoT2pBSxVFSzEyEt40=
+=6+4c
+-----END PGP SIGNATURE-----
