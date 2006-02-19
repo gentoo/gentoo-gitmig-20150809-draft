@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.4.6.ebuild,v 1.2 2005/12/25 02:44:16 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.4.6.ebuild,v 1.3 2006/02/19 00:02:15 betelgeuse Exp $
 
 inherit eutils java-pkg versionator
 
@@ -14,8 +14,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
 	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jre-1.4
-	virtual/x11"
+RDEPEND=">=virtual/jre-1.4"
 IUSE="doc source"
 
 S=${WORKDIR}/${MY_P}
