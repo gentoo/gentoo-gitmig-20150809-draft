@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.0.9.ebuild,v 1.3 2005/11/14 17:08:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.0.9.ebuild,v 1.4 2006/02/19 18:40:09 chainsaw Exp $
 
 inherit toolchain-funcs eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://dev.gentoo.org/~chainsaw/xsys/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="audacious bmp buttons xmms"
+IUSE="audacious buttons xmms"
 
 DEPEND="|| (
 		>=net-irc/xchat-2.4.0
@@ -21,7 +21,6 @@ DEPEND="|| (
 	)
 	sys-apps/pciutils
 	audacious? ( media-sound/audacious )
-	bmp? ( media-sound/beep-media-player )
 	xmms? ( media-sound/xmms )"
 
 src_unpack() {
@@ -32,8 +31,6 @@ src_unpack() {
 	fi
 	if use audacious; then
 		sed -i -e "s:# FOR AUDACIOUS # ::g" ${S}/Makefile
-	elif use bmp; then
-		sed -i -e "s:# FOR BMP # ::g" ${S}/Makefile
 	elif use xmms; then
 		sed -i -e "s:# FOR XMMS # ::g" ${S}/Makefile
 	fi
