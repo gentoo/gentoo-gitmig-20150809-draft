@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1750 2006/02/19 21:18:23 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1751 2006/02/19 22:15:53 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -692,6 +692,7 @@ media-sound/amarok:exscalibar - Enable moodbar/exscalibar support
 media-sound/amarok:ipod - Enable support for iPod devices access through libgpod
 media-sound/amarok:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
 media-sound/amarok:noamazon - Disable support for downloading covers from amazon.com
+media-sound/amarok:real - Build with real/helix player support
 media-sound/amarok:visualization - Support visualization plugins through media-libs/libvisual
 media-sound/audacious:libvisual - Support visualization plugins through media-libs/libvisual
 media-sound/audacious:modplug - Build with modplug support
