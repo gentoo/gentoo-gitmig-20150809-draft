@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mpg123/xmms-mpg123-1.2.10-r1.ebuild,v 1.13 2005/07/12 04:59:44 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mpg123/xmms-mpg123-1.2.10-r1.ebuild,v 1.14 2006/02/19 07:45:00 nigoro Exp $
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
@@ -25,6 +25,9 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-simd"
 	fi
+
+	# Please see Bug 58092 for details
+	use ppc64 && replace-flags "-O[2-9]" "-O1"
 
 	xmms-plugin_src_compile
 }
