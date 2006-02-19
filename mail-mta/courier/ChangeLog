@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/courier
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.66 2005/12/25 16:48:47 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.67 2006/02/19 09:35:05 iggy Exp $
+
+  19 Feb 2006; Brian Jackson <iggy@gentoo.org> +courier-0.52.2.ebuild:
+  version bump
+
+*courier-0.52.2 (19 Feb 2006)
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   courier-0.50.1-r1.ebuild:
