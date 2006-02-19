@@ -1,4 +1,4 @@
-MD5 2e1341ac575078588528429689de332f ChangeLog 53029
+MD5 1c53936a8142457fa92953a75c3ca19e ChangeLog 53169
 MD5 8ca6301197c0d45d7530d4117d087b15 files/CAN-2005-1409-doc.patch 1749
 MD5 90acacf5efb7b8a73ec5d34128358c32 files/CAN-2005-1409.patch 1698
 MD5 3c53278e59e16caa55429700c0da42f9 files/CAN-2005-1410.patch 2843
@@ -99,7 +99,7 @@ MD5 9f38ed98d246598441d7bd62d27bbcbb files/postgresql.init-8.0.7 1279
 MD5 ab1b8fa9b6fc1ef8c17962be36b5fbc3 files/postgresql.init-8.1.2 1279
 MD5 131571cfc7e88de3b13725f6b6da91df files/postgresql.init-8.1.3 1279
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 a3db434dc313b7d93c34e83a354a6a85 postgresql-7.3.11.ebuild 8315
+MD5 a30665b1b88f09c613692413e3245610 postgresql-7.3.11.ebuild 8314
 MD5 7aa62e5bde9cd1b8fef5cfd18bb6f013 postgresql-7.3.13.ebuild 8413
 MD5 466342a69d30e0cbc090ef1c5705fb28 postgresql-7.3.14.ebuild 8413
 MD5 c25c9a7ffe3a89d13b05d6030f4d9889 postgresql-7.3.6-r2.ebuild 7837
@@ -109,7 +109,7 @@ MD5 b7ad13734a4fb7f41d109b818d6a6e06 postgresql-7.4.12.ebuild 10687
 MD5 993f8413e91946fb334582c36b39afcb postgresql-7.4.7-r1.ebuild 10701
 MD5 481cefe9ed2cc621fe58174c1a7514f9 postgresql-7.4.7-r2.ebuild 10855
 MD5 0fb1a242fabdc15f2e68fa013c5c1292 postgresql-7.4.8.ebuild 10572
-MD5 90be6b9784005969409e6f55bcb0af76 postgresql-7.4.9.ebuild 10738
+MD5 43b0a35534f69c6cd0148b09ee16cc66 postgresql-7.4.9.ebuild 10737
 MD5 0ab1b6f2bce8c619c7824a648f44667b postgresql-8.0.3.ebuild 7510
 MD5 d358a0783c2e02f6cbb3ca0095500feb postgresql-8.0.4.ebuild 7681
 MD5 1d94143a495b0a564206f995b4c58030 postgresql-8.0.6.ebuild 7633
