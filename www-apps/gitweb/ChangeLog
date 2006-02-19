@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/gitweb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/ChangeLog,v 1.8 2006/01/15 00:47:46 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/ChangeLog,v 1.9 2006/02/19 00:59:55 ferdy Exp $
+
+*gitweb-264 (19 Feb 2006)
+
+  19 Feb 2006; Fernando J. Pereda <ferdy@gentoo.org> +gitweb-264.ebuild:
+  Version bump, reported by Donnie Berkholz <spyderous@gentoo.org> on bug #123081
 
 *gitweb-263 (15 Jan 2006)
 
