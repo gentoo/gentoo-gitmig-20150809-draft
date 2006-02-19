@@ -1,4 +1,4 @@
-MD5 01f760f3337a86b8d2d937f752d715b4 ChangeLog 10098
+MD5 dfeafd0a48b1996526eb155adf75cd3b ChangeLog 10098
 MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r1 68
 MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r2 68
 MD5 2b5e0b42a11ea009340805d461a6ecc5 files/digest-findutils-4.2.24 69
@@ -12,7 +12,7 @@ MD5 0b8c5e1bc2e54e46c292ad6a90729f75 files/findutils-4.2.24-selinux.diff 14356
 MD5 564a526b2ac65b70eebdb60a97f7e1ed files/findutils-4.3.0-selinux.diff 15741
 MD5 0315b5033cf65d15f24b1c252070db45 files/findutils-env-size.patch 672
 MD5 054571cd32e981304231461745b82e07 findutils-4.1.20-r1.ebuild 2070
-MD5 5d65967350400fc59b189cb76af2f6d5 findutils-4.1.20-r2.ebuild 1897
+MD5 ea2b64e27130e93167d56b7d908f281b findutils-4.1.20-r2.ebuild 1898
 MD5 7ad72dd1133e9c5896ee04cdb7a85d38 findutils-4.2.24.ebuild 1706
 MD5 03ce983ed4a749d09b6264da58d82b05 findutils-4.2.25.ebuild 1705
 MD5 b8fa5580ba6c39175ee7bc1f2078435b findutils-4.2.27.ebuild 1693
