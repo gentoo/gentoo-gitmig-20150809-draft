@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.79 2006/02/18 19:46:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.80 2006/02/19 01:49:31 vanquirius Exp $
+
+  19 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> nessus-2.3.1.ebuild:
+  Update description. Now that it runs on ppc-macos, it is no longer a scanner
+  for Linux :-).
 
   18 Feb 2006; Fabian Groffen <grobian@gentoo.org> nessus-2.3.1.ebuild:
   Marked ~ppc-macos (bug #123308)

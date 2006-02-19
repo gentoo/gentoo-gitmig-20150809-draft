@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-2.3.1.ebuild,v 1.4 2006/02/18 19:46:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-2.3.1.ebuild,v 1.5 2006/02/19 01:49:31 vanquirius Exp $
 
-DESCRIPTION="A remote security scanner for Linux"
+DESCRIPTION="A remote security scanner"
 HOMEPAGE="http://www.nessus.org/"
 DEPEND="~net-analyzer/nessus-libraries-${PV}
 	~net-analyzer/libnasl-${PV}
