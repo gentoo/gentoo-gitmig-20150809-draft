@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Spiffy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spiffy/ChangeLog,v 1.6 2006/01/23 20:44:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spiffy/ChangeLog,v 1.7 2006/02/20 00:00:52 mcummings Exp $
+
+*Spiffy-0.30 (20 Feb 2006)
+
+  20 Feb 2006; Michael Cummings <mcummings@gentoo.org> +Spiffy-0.30.ebuild:
+  Version bump upstream
 
   23 Jan 2006; Markus Rothe <corsair@gentoo.org> Spiffy-0.29.ebuild:
   Added ~ppc64; bug #119199
