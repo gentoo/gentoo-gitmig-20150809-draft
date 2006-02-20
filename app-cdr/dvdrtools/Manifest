@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 97d5b19d4da901a67b90158e0ef5a7a8 ChangeLog 1758
-RMD160 5527041314aa895eaee3acfae35bc0185a6bfe44 ChangeLog 1758
-SHA256 d95399114133be9702c5ecc2e17115279de895d77c476e603f33fd50eec63a43 ChangeLog 1758
+MD5 9c37640bd07e711f33d833d09f1eff7b ChangeLog 1858
+RMD160 c83038e24f5a46d13b9b1c742adb58aa9ea50ee6 ChangeLog 1858
+SHA256 1bce3f474f824e57701f0bd61928b64d869199ac02487a2f8f016f61ef071085 ChangeLog 1858
 MD5 1c855e32f5e36b90e7e3ca8d79cc22f3 dvdrtools-0.1.6.ebuild 1512
 RMD160 ef2382d96bbfb86f0de46eedb7040a19e6872c08 dvdrtools-0.1.6.ebuild 1512
 SHA256 910152e646789c20ec512efaa1d84ddc34668d7bf3a742128868ac19cf80055e dvdrtools-0.1.6.ebuild 1512
@@ -13,18 +13,12 @@ SHA256 291ba36422ab9d28eb23759460f7cbbd94faf3a4a503efa1d91fbe5c15d0df42 dvdrtool
 MD5 59d11f9249d18a8632fa175b53be8563 dvdrtools-0.3.0-r1.ebuild 1449
 RMD160 57de98a82cb304d9e7b2eb02851cea4075341376 dvdrtools-0.3.0-r1.ebuild 1449
 SHA256 96bab4f855755aaf235779bfebe2ec1645b838d4f65b5caca4f7726aaab4b945 dvdrtools-0.3.0-r1.ebuild 1449
-MD5 9b32e0b0f13808c722d4c56833a0c4d5 dvdrtools-0.3.0.ebuild 1453
-RMD160 2a83fa75d1b0fa792e1cf92808fceaf188201c80 dvdrtools-0.3.0.ebuild 1453
-SHA256 ff54348eddb0b97de48d0a505824103aa438f26dfbbba34fe5574ae30a25f0ca dvdrtools-0.3.0.ebuild 1453
 MD5 4c913f0c9b6cd0338f452a1974d4c67e files/digest-dvdrtools-0.1.6 68
 RMD160 92138db4a391ebd7d94395eda1e28fc7051335b9 files/digest-dvdrtools-0.1.6 68
 SHA256 0824a555e2442a2b24c8e4fa3afbf9cd5517e3cf290e77955e2586d517b6b281 files/digest-dvdrtools-0.1.6 68
 MD5 a7bfaf1e329b226bf9809b5ddbe08a0d files/digest-dvdrtools-0.2.1 68
 RMD160 034276cf6b41d33aa4edbc95477097cbf912ed58 files/digest-dvdrtools-0.2.1 68
 SHA256 9b1e214b3d79e48cd7a220876a5c2ee504c955fb1a6ea77541a1308d9387129c files/digest-dvdrtools-0.2.1 68
-MD5 e83d00a73e00012e55bea28fe497273d files/digest-dvdrtools-0.3.0 250
-RMD160 5e1d5c27f5559bca45f9c2af7401619707bf876f files/digest-dvdrtools-0.3.0 250
-SHA256 4bb122f858cc003c975f56e2243d41fa9cc5a22749dc4caccf49c15315b36f5c files/digest-dvdrtools-0.3.0 250
 MD5 e83d00a73e00012e55bea28fe497273d files/digest-dvdrtools-0.3.0-r1 250
 RMD160 5e1d5c27f5559bca45f9c2af7401619707bf876f files/digest-dvdrtools-0.3.0-r1 250
 SHA256 4bb122f858cc003c975f56e2243d41fa9cc5a22749dc4caccf49c15315b36f5c files/digest-dvdrtools-0.3.0-r1 250
@@ -34,7 +28,7 @@ SHA256 8da1b51a028d57f7c29c87487be50cd7e16b499387fe74989a8fae5b590a11ed metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD4DBQFD+k27wUpWvClEHQoRAgkwAJYoGgz5ww0YySWvB8tYRcUBmWyLAKCF6V02
-ENpMnY5z1BTraRpVaCsrUg==
-=MVXn
+iD8DBQFD+k5GwUpWvClEHQoRApnYAJ0fUFawUoZ+M711EKJypxE5ntT8XQCeMlI3
+T8IG8EiJ9o1Qwry3nSBABAU=
+=feIX
 -----END PGP SIGNATURE-----
