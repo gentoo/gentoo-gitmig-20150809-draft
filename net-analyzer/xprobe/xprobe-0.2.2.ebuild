@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.2.2.ebuild,v 1.7 2005/09/04 14:44:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.2.2.ebuild,v 1.8 2006/02/20 19:49:24 jokey Exp $
 
 # This is new xprobe, so called xprobe2, due to xprobe1 being obsoleted.
 # xprobe 2 has different approach to operating system fingerprinting.
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND="virtual/libpcap"
+DEPEND="net-libs/libpcap"
 
 S="${WORKDIR}/${PN}2-${PV}"
 

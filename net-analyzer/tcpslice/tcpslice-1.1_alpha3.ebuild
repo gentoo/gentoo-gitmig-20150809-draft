@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/tcpslice-1.1_alpha3.ebuild,v 1.10 2005/07/19 16:35:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/tcpslice-1.1_alpha3.ebuild,v 1.11 2006/02/20 19:45:02 jokey Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ KEYWORDS="~ppc x86"
 IUSE=""
 
 RDEPEND="virtual/libc
-	virtual/libpcap"
+	net-libs/libpcap"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"

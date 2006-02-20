@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zodiac/zodiac-0.4.9.ebuild,v 1.5 2005/01/29 05:12:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zodiac/zodiac-0.4.9.ebuild,v 1.6 2006/02/20 19:52:00 jokey Exp $
 
 DESCRIPTION="DNS protocol analyzer"
 HOMEPAGE="http://www.packetfactory.net/projects/zodiac/"
@@ -12,7 +12,7 @@ KEYWORDS="x86"
 
 DEPEND="sys-libs/ncurses
 	=net-libs/libnet-1.0*
-	virtual/libpcap"
+	net-libs/libpcap"
 
 S=${WORKDIR}/${PN}
 IUSE=""

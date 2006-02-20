@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.3.ebuild,v 1.3 2005/09/04 14:44:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.3.ebuild,v 1.4 2006/02/20 19:49:24 jokey Exp $
 
 MY_P="${PN}2-${PV}"
 DESCRIPTION="Active OS fingerprinting tool - this is Xprobe2"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libpcap"
+DEPEND="net-libs/libpcap"
 
 S="${WORKDIR}/${MY_P}"
 
