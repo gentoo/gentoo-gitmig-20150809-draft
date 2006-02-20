@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.2.1-r2.ebuild,v 1.12 2006/02/13 14:32:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.2.1-r2.ebuild,v 1.13 2006/02/20 22:43:17 hansmi Exp $
 
 inherit eutils
 
@@ -60,7 +60,7 @@ src_unpack() {
 		epatch "amavisd-new-courier.patch" || die "patch failed"
 	fi
 
-	if $(has_version mail-mta/qmail) || $(has_version mail-mta/qmail-ldap) ; then
+	if $(has_version virtual/qmail) ; then
 		einfo "Patching with qmail qmqp support."
 		epatch "amavisd-new-qmqpqq.patch" || die "patch failed"
 
