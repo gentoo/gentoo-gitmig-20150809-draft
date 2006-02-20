@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-301-r1.ebuild,v 1.2 2006/02/19 02:20:47 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-301-r1.ebuild,v 1.3 2006/02/20 18:32:20 chutzpah Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -65,21 +65,21 @@ src_install() {
 
 	# create symlinks for all the executables
 	dodir /usr/bin
-	MY_D="${MY_D%/}"
+	MY_D="${D%/}"
+	MY_D="${MY_D//\//\/}"
 
 	cd ${D}/usr/$(get_libdir)/${PN}/bin
 	for EXE in *; do
 
 		# fix paths in generated shell scripts
 		file -b "${EXE}" | grep -q "Bourne shell" && \
-			sed -i "s/${MY_D//\//\/}//g" "${EXE}"
-			#sed -i 's/PLTHOME=".*"/PLTHOME="\/usr\/'$(get_libdir)'\/'${PN}'"/' "${EXE}"
+			sed -i "s/${MY_D}//g" "${EXE}"
 
 		dosym "/usr/$(get_libdir)/${PN}/bin/${EXE}" "/usr/bin/${EXE}"
 	done
 
 	for FILE in ${SED_FILES}; do
-		sed -i "s/${MY_D//\//\/}//g" "${D}/usr/$(get_libdir)/${PN}/${FILE}"
+		sed -i "s/${MY_D}//g" "${D}/usr/$(get_libdir)/${PN}/${FILE}"
 	done
 
 }
