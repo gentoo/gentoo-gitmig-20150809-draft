@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gpgme
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.82 2005/10/26 14:06:05 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.83 2006/02/20 20:30:09 grobian Exp $
+
+  20 Feb 2006; Fabian Groffen <grobian@gentoo.org>
+  +files/gpgme-1.1.0-pth-test.patch, gpgme-1.1.0.ebuild:
+  Added patch to allow compilation on ppc-macos.  Patch by exg at gentoo dot org
 
 *gpgme-1.1.0 (26 Oct 2005)
 

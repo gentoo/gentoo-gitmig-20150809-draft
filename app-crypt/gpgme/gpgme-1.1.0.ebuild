@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.0.ebuild,v 1.1 2005/10/26 14:06:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.0.ebuild,v 1.2 2006/02/20 20:30:09 grobian Exp $
 
-inherit eutils libtool
+inherit eutils libtool autotools
 
 DESCRIPTION="GnuPG Made Easy is a library for making GnuPG easier to use"
 HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpgme/index.html"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnupg/gpgme/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ppc-macos ~ppc64 ~sparc ~x86"
 IUSE=""
 #IUSE="smime"
 
@@ -30,6 +30,15 @@ RDEPEND="virtual/libc
 	dev-libs/libgcrypt
 	>=app-crypt/gnupg-1.2.2
 	dev-libs/pth"
+
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}/${P}-pth-test.patch"
+
+	cd ${S}
+	export WANT_AUTOCONF="2.5"
+	eautoconf
+}
 
 src_compile() {
 	if [ -x /usr/bin/gpg2 ]; then
