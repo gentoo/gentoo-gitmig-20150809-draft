@@ -1,73 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1352498bdc715f9db5db9efe0606b9fc ChangeLog 34740
-RMD160 905c05b213768571b87732fe584fe522882f7479 ChangeLog 34740
-SHA256 a820b95b2cc5251c1447654916b36fbd764eb767e7d2f7857020cf12a7df59e0 ChangeLog 34740
+MD5 e93deaffc2c5deefb98645d5df849772 ChangeLog 34835
 MD5 4fd39b311d09602c93a9ff0aceaf8596 files/70svn-gentoo.el 136
-RMD160 d130792953a0b14b78b9a54a982f0812428f0d5e files/70svn-gentoo.el 136
-SHA256 85dc5461709d3cd28be3fbdaf0f02778f98bc9c970b50bcb00ca7658e88f3274 files/70svn-gentoo.el 136
 MD5 1c207179f5bf0b148528312cbc37632d files/digest-subversion-1.1.3 70
-RMD160 78ae90a444223e89a88d95e82c8532890700fef5 files/digest-subversion-1.1.3 70
-SHA256 a828f8333aac5b49e21f147a776eaac8e964e3a83f09e704769de0c4897590c8 files/digest-subversion-1.1.3 70
 MD5 4cdbf1f8636cd0a207ae87228b6f412b files/digest-subversion-1.2.3 70
-RMD160 2af27ed6b16d227ffb2dfa02bf2280544e7b94b5 files/digest-subversion-1.2.3 70
-SHA256 7b9006d414d1420569409c2dae30528d84aa4e3a4d0e1b9681d62d4010d1621d files/digest-subversion-1.2.3 70
 MD5 4cdbf1f8636cd0a207ae87228b6f412b files/digest-subversion-1.2.3-r2 70
-RMD160 2af27ed6b16d227ffb2dfa02bf2280544e7b94b5 files/digest-subversion-1.2.3-r2 70
-SHA256 7b9006d414d1420569409c2dae30528d84aa4e3a4d0e1b9681d62d4010d1621d files/digest-subversion-1.2.3-r2 70
 MD5 3ee952f56a925d56d70c72e85c27fb29 files/digest-subversion-1.2.3-r3 256
-RMD160 8df566027bfecc11a638aaed481cc8bfa07b8073 files/digest-subversion-1.2.3-r3 256
-SHA256 1bc32a0a7716e4158624d978e12872aeff5a87e77df8b552c8886178117dc709 files/digest-subversion-1.2.3-r3 256
 MD5 514408e99a6684e13cdf397226835cec files/digest-subversion-1.3.0 70
-RMD160 299f4ab64d796053a35dcf1c84e2d0356041bd29 files/digest-subversion-1.3.0 70
-SHA256 2acee9e565d228ebd8ffd2df2ad491f36c533479b0394bf77460f51ae433ef3a files/digest-subversion-1.3.0 70
 MD5 b8146e2661f55257aef6d41e79897b63 files/subversion-1.1.1-perl-vendor.patch 713
-RMD160 fdc54d38c44c3e1273b654b3d1a2f4a76f91aec3 files/subversion-1.1.1-perl-vendor.patch 713
-SHA256 d7c5994fa66d77ec956b2e1ca1020fadcf1200bdd2acce974033e9839bb8f7c3 files/subversion-1.1.1-perl-vendor.patch 713
 MD5 ce6f3698724b55cf49e647727207cca5 files/subversion-db4.patch 563
-RMD160 36a0ae5ed2bdf2d9511865e3b4d1aeb228c55d6d files/subversion-db4.patch 563
-SHA256 7d84d8ec5beb7b30e6ee6e27afdbaa2bed9e4b9e5df45c572c543547b4317f5b files/subversion-db4.patch 563
 MD5 82c218472a786250947746b8bc8294dd files/subversion-hotbackup-config.patch 629
-RMD160 6a53b1b676bc3ce3ef2644666c2ebd21574c18fe files/subversion-hotbackup-config.patch 629
-SHA256 7a80e05ed26508abee1bd2aa358747a681ce55e18711ff28c745012f60d989f3 files/subversion-hotbackup-config.patch 629
 MD5 10d20fe76ce2f39d1eb45089ce3471a5 files/subversion-swig.m4-ruby.patch 698
-RMD160 ca706a96ee1278c9a42074b7bc0d9af55933bc5c files/subversion-swig.m4-ruby.patch 698
-SHA256 c08a87c86dd90a9a7d4ad2a26aab17058585f16fecc53334d6a597aeb8e02b89 files/subversion-swig.m4-ruby.patch 698
 MD5 8de1f6e76dcb072171a09aaba2fd3b2b files/svnserve.confd 323
-RMD160 cbf4d810d9f41bac1611004741170d1047cbeef0 files/svnserve.confd 323
-SHA256 90d3e2532715a6230ebf65023566a6591eed4b3fc12abbca0d2fb7949e146006 files/svnserve.confd 323
 MD5 7d95a67c28ea2a5c204628d5104c1427 files/svnserve.initd 817
-RMD160 59f4e8e983d4595b7c27615889a9c0809d015a18 files/svnserve.initd 817
-SHA256 6b483e211b5c311079605e246fca9228c7e5762d27a023fa4c4529fdaa766b08 files/svnserve.initd 817
 MD5 196636ccd0b2c9a8903c7d6a0a356153 files/svnserve.xinetd 329
-RMD160 8412fd476208d3588c268e33b7ef128efa0e4afb files/svnserve.xinetd 329
-SHA256 d6fbe323b5aa41ae288161d67067ac0be9210fe19457ab6f0bdb170070895dc0 files/svnserve.xinetd 329
 MD5 dc8ba46b50a61d868eb76f524c212381 files/vc-svn.el 16847
-RMD160 8665b9a34c8fd9acae40e18aac33026aff3a39d7 files/vc-svn.el 16847
-SHA256 b4979d5df9fba02dbc8ad71d813229222e95ee1e8e89dec3060611d2d6be87aa files/vc-svn.el 16847
 MD5 8fbcd267012fd1eef74d5161888cc7b8 metadata.xml 222
-RMD160 b21e9d4420a67a847d490dc86a587e1d5f21fff0 metadata.xml 222
-SHA256 4710a38e11b23d4355a7a0cba621d9680e2148aa173528491e88903487e93152 metadata.xml 222
 MD5 e964c5be114e3ce31787ed5875882a3b subversion-1.1.3.ebuild 11463
-RMD160 92501921cae93f6c101dadb6758b5739ca43f3c7 subversion-1.1.3.ebuild 11463
-SHA256 6ce29389d40bbd50e5b5b9e8ca3f5530c202b8ed9b079f3e06ceb272f7e839ce subversion-1.1.3.ebuild 11463
 MD5 24ef3f11531db7a317a8abe6c369d811 subversion-1.2.3-r2.ebuild 10936
-RMD160 0ef04b21f16dae839a07438ee636682202040d26 subversion-1.2.3-r2.ebuild 10936
-SHA256 9904509a469c3386c0034bad278dee2d493373f04c6a76b95a01cf563f3d1a56 subversion-1.2.3-r2.ebuild 10936
-MD5 16f6611ee24b14a4ecc793fe378b4da6 subversion-1.2.3-r3.ebuild 11793
-RMD160 5e48cba1689e07548fe9b336cad98d6eaa0010b5 subversion-1.2.3-r3.ebuild 11793
-SHA256 6c9d21642ec906d022e91578f47d8275d86bbb64685b153cb548f9a2e8b025c2 subversion-1.2.3-r3.ebuild 11793
+MD5 cf55b54ae27de108913bbbc5fddc6821 subversion-1.2.3-r3.ebuild 11791
 MD5 9bfeb86b4225b59b4846914db2217eac subversion-1.2.3.ebuild 11826
-RMD160 a047814f4ec8a43dd664b4d2d0461092e02d8082 subversion-1.2.3.ebuild 11826
-SHA256 622086fbde1a9bd5cb16d1036044c6c44c2a68702b5918091616be26d0bb423a subversion-1.2.3.ebuild 11826
 MD5 6351154525454f76cc7b193b84c49dd9 subversion-1.3.0.ebuild 11397
-RMD160 28bde95064d6946433a09f3825f9191d4356a955 subversion-1.3.0.ebuild 11397
-SHA256 afe2ef94e5d30ea1fb37705bd2a8d5cbe08f6bac876cf0365c13d3eae3e875b9 subversion-1.3.0.ebuild 11397
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5tRaJrHF4yAQTrARAum2AJ47FkmGaKo8wS8r43uBLfXCt9V45wCfZrrn
-ACNnRS2stDdK/ef062xJ/TY=
-=kIgh
------END PGP SIGNATURE-----
