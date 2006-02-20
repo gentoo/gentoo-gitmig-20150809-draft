@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/raccess
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/ChangeLog,v 1.10 2005/01/29 21:23:50 dragonheart Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/ChangeLog,v 1.11 2006/02/20 22:13:12 jokey Exp $
+
+  20 Feb 2006; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  raccess-0.7.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   30 Jan 2005; Daniel Black <dragonheart@gentoo.org> raccess-0.7.ebuild:
   Transition dependancy from net-libs/libpcap to virtual/libpcap
