@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.20 2006/02/19 18:30:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.21 2006/02/20 23:28:32 chainsaw Exp $
+
+  20 Feb 2006; Tony Vroon <chainsaw@gentoo.org> audacious-0.1.2.ebuild,
+  audacious-0.2-r1.ebuild:
+  XMMS skin symlinking creates broken symlinks if the source dir is empty.
+  Stop doing it now that an audacious-themes package is available. Closes bug
+  #123458 by Georgi Georgiev <chutz@gg3.net>.
 
   19 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
   audacious-0.2-r1.ebuild:

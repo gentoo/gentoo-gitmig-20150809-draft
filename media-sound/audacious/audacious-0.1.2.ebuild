@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.1.2.ebuild,v 1.6 2006/01/23 22:04:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.1.2.ebuild,v 1.7 2006/02/20 23:28:32 chainsaw Exp $
 
 IUSE="aac alsa esd flac gnome lirc mmx modplug mp3 nls oss sdl sid sndfile vorbis wma"
 
@@ -80,11 +80,6 @@ src_install() {
 	doins ${WORKDIR}/gentoo_ice/*
 	docinto gentoo_ice
 	dodoc ${WORKDIR}/README
-
-	# XMMS skin symlinking; bug 70697
-	for SKIN in /usr/share/xmms/Skins/* ; do
-		dosym "$SKIN" /usr/share/audacious/Skins/
-	done
 }
 
 pkg_postinst() {
