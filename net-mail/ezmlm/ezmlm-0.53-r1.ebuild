@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53-r1.ebuild,v 1.7 2005/05/16 10:05:44 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53-r1.ebuild,v 1.8 2006/02/20 00:17:08 hansmi Exp $
 
 inherit eutils fixheadtails toolchain-funcs
 
@@ -15,10 +15,7 @@ KEYWORDS="x86 sparc ppc alpha"
 IUSE=""
 
 DEPEND="sys-apps/groff"
-RDEPEND="|| (
-	mail-mta/qmail
-	mail-mta/qmail-mysql
-	mail-mta/qmail-ldap )"
+RDEPEND="virtual/qmail"
 
 src_unpack() {
 	unpack ${A}

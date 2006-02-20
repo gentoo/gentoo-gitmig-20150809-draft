@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ezmlm
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ChangeLog,v 1.15 2005/05/16 10:05:44 ticho Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ChangeLog,v 1.16 2006/02/20 00:17:08 hansmi Exp $
+
+  20 Feb 2006; Michael Hanselmann <hansmi@gentoo.org> ezmlm-0.53-r1.ebuild:
+  Changed to virtual/qmail.
 
   16 May 2005; Andrej Kacian <ticho@gentoo.org> ezmlm-0.53-r1.ebuild:
   Inherit toolchain-funcs.eclass instead of gcc.eclass. Bug #92745.
