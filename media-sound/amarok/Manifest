@@ -1,34 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a83d5a15d60c2023f8cca530cb4e3b2d ChangeLog 17547
-RMD160 0048d0b952472e359b2d987d1b3ed6e880ce4fe9 ChangeLog 17547
-SHA256 fd0b16ed439a9160dbcdb7e6b359b5272ae704b9777319f155b81990626f9779 ChangeLog 17547
+MD5 f6fd44978fe1c51e2f5c33c2fd1b1837 ChangeLog 17652
 MD5 1e105a96a7b5945e07d2e2febbf464a6 amarok-1.3.6.ebuild 3206
-RMD160 5a191332318d240ec23ed6532e96542ced169856 amarok-1.3.6.ebuild 3206
-SHA256 0f0d337d50f5e51832803ef3ef5b15b1b84ef13814d0e35094392bb73b1eeb80 amarok-1.3.6.ebuild 3206
-MD5 eb4fed35f2594c172a9b70a3b7f3351f amarok-1.3.8.ebuild 3852
-RMD160 2577d1390ab199b71e949c3932cb0d946a20a90c amarok-1.3.8.ebuild 3852
-SHA256 6ed41a76260210f0015764059ddd8853d0bb19415157896cad70dbe3857ec2e5 amarok-1.3.8.ebuild 3852
+MD5 a3f0175170ae7d5ced31ae12818ceb56 amarok-1.3.8.ebuild 3849
 MD5 ec8784b68dbb3d0cf59ca04a04421a5e amarok-1.4_beta1.ebuild 3950
-RMD160 718fc6857de892c3bea46fc25ce6961331d13129 amarok-1.4_beta1.ebuild 3950
-SHA256 af2c0646b5a38660dbfefdb575682c6d030ec6e0e6d725b97d4b4356cd4da4fe amarok-1.4_beta1.ebuild 3950
 MD5 d8cfb3a78866379e2ac9b439de887551 files/digest-amarok-1.3.6 66
-RMD160 79e1a1bc29d9522e664a3f0988ef0424a89cd5fb files/digest-amarok-1.3.6 66
-SHA256 1724cb7613dce986faa95f8afd7bd13aab23c086a3a5c37b6352a706501239f0 files/digest-amarok-1.3.6 66
 MD5 4cdce240143e17652ea80b4b7c58ddaa files/digest-amarok-1.3.8 66
-RMD160 59131edb3541ab3085e58faa98980e75ceda5e25 files/digest-amarok-1.3.8 66
-SHA256 9077a159e1b9d0b8da962a219de739c0ae90f5de27dad4c50b84a91b59ec6de0 files/digest-amarok-1.3.8 66
 MD5 ca79120f48ea50a68f8d5b09a2c4c253 files/digest-amarok-1.4_beta1 259
-RMD160 9059a92a67cf80bbcea4005661a904080a4f08cb files/digest-amarok-1.4_beta1 259
-SHA256 cc63242b43636bbfef283b54f8f96d5ea6598722c6c75b867b05b40f434badfb files/digest-amarok-1.4_beta1 259
 MD5 b23600108f12c98a4fd574d3487ee598 metadata.xml 175
-RMD160 b83c98cecf42dee70ceb6176e04d25bd0ca3bb47 metadata.xml 175
-SHA256 bef114df47e8714056f8ba499d57edbba26f1a7e0dbaca7dbfbe4beae4272729 metadata.xml 175
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFD+OtVAiZjviIA2XgRAqj6AKDXBccmLeYelxt1AKA3qfEx/EHmQwCfXtgA
-x3eGL2Sn6dZR2OrHb4NsI9I=
-=RtW2
+iD8DBQFD+kWDKRy60XGEcJIRAtyQAKCU4eRAT8w5qd53GxNeo0PZlmt4xQCgh1FY
+3dFX8TZwyHA2K84jKw/LTqY=
+=wvPr
 -----END PGP SIGNATURE-----
