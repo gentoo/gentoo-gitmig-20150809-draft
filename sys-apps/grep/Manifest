@@ -1,70 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 305f90b6bb247d86210d5cdbce345c53 ChangeLog 8990
-RMD160 ef38cdff1b262b3f4fe918916161ebcac9be1e4d ChangeLog 8990
-SHA256 6c800147838e893976a393b8b1d288d09c5eedbb2645612a641a9349c1c7e456 ChangeLog 8990
+MD5 3e28138d2cd75463122062b0c3b8dbfe ChangeLog 9077
 MD5 16d6cd54c93041d4f4bef59a9e327d04 files/2.5.1-tests.patch 1786
-RMD160 a95b24ce9b2d8c395e7396bc3ed15ec73b09088c files/2.5.1-tests.patch 1786
-SHA256 c2392469fba6a6c434295b277099d19fa2b7500f69e2383bfb68e06816835f18 files/2.5.1-tests.patch 1786
 MD5 e39e9fd198a2c0a5984f2c7d188b3c49 files/2.5.1-utf8-case.patch 933
-RMD160 1619e4b6710047049e5776a45732b2709b117cfa files/2.5.1-utf8-case.patch 933
-SHA256 4f48ab49da2ec948f329dea2a133cc6f0e602e265958cf09efd554510640ae1e files/2.5.1-utf8-case.patch 933
 MD5 5dcaa51f88b364134a43d60b661870ee files/digest-grep-2.5.1-r8 62
-RMD160 80f785359ea28daa64fd6fc9d893b4b6e0b19094 files/digest-grep-2.5.1-r8 62
-SHA256 dd6940081a5bee55798bd6c6c5180801e80ba5f36085a82d3056699fbafd3876 files/digest-grep-2.5.1-r8 62
 MD5 5dcaa51f88b364134a43d60b661870ee files/digest-grep-2.5.1-r9 62
-RMD160 80f785359ea28daa64fd6fc9d893b4b6e0b19094 files/digest-grep-2.5.1-r9 62
-SHA256 dd6940081a5bee55798bd6c6c5180801e80ba5f36085a82d3056699fbafd3876 files/digest-grep-2.5.1-r9 62
 MD5 aa75d543de9cdb9d9a86269a7f2216c8 files/digest-grep-2.5.1a 238
-RMD160 ed247f3fb6af7fd98d06b4cb2228706e4640a22b files/digest-grep-2.5.1a 238
-SHA256 855e142dd76e809d8ae1f95394f7adb8ccb2d8b4c9bb79336d1966ae225f8e84 files/digest-grep-2.5.1a 238
 MD5 f8a3294b57d8e444692a04436b346517 files/grep-2.5.1-bracket.patch 339
-RMD160 0333e5113b7285ce92b4a68d89d25ff7b81211f0 files/grep-2.5.1-bracket.patch 339
-SHA256 1a0a64ce2cfaaeef687f5d2131d12358d4c8ae3dfeceb81cf6abf6ccf17d085c files/grep-2.5.1-bracket.patch 339
 MD5 ea125637c880aa0e2e6ae96e5a9a01d6 files/grep-2.5.1-color.patch 313
-RMD160 b4c787993fc05065bb8ec4f7b3007778650c8958 files/grep-2.5.1-color.patch 313
-SHA256 f628a2a1800c9374eeece94c39b561dffd80b7f8ec587f25d00bd6301b32321d files/grep-2.5.1-color.patch 313
 MD5 829ef0ec8616173674ded06d27e12632 files/grep-2.5.1-fgrep.patch 4994
-RMD160 f10371083fe3350e4cc0f79dbf1c83362f444b94 files/grep-2.5.1-fgrep.patch 4994
-SHA256 cab6300f7c8263fdaa3b5a1d00e46b8237bec42d4c4b6b49a3dbacab80ab9071 files/grep-2.5.1-fgrep.patch 4994
 MD5 26b2ee006a2293540cadc27d9d41267a files/grep-2.5.1-fix-devices-skip.patch 1842
-RMD160 c6000aa04f11dc00d37819f2f3f1a9c76bf0aa1e files/grep-2.5.1-fix-devices-skip.patch 1842
-SHA256 9b6809efb0ff05256a77a9a30f295dfb2f212c0eb023638ee72fde31d1d43457 files/grep-2.5.1-fix-devices-skip.patch 1842
 MD5 d93f52bd287bb18a64178ac3e6077677 files/grep-2.5.1-i18n.patch 8101
-RMD160 a73a25a4c089260b26ef73024adc67754ef8a1ba files/grep-2.5.1-i18n.patch 8101
-SHA256 cfad5a4e033888a35442fe234f995ebd6e101155e5fdb80be5c4d02afae12ee5 files/grep-2.5.1-i18n.patch 8101
 MD5 af3a45582aa7c857f0500c63c823bd52 files/grep-2.5.1-libintl.patch 2662
-RMD160 03431703a1d375b0c0bb8a78b3b00951252d0111 files/grep-2.5.1-libintl.patch 2662
-SHA256 919e4f3bbbb07990ecf0f73a9f3eded397b67a14f40e5ec41159ecebef8f0161 files/grep-2.5.1-libintl.patch 2662
 MD5 66d2f58ded24ee5351a8a79a2d709cf8 files/grep-2.5.1-manpage.patch 612
-RMD160 1ba80343c963b6830a8bb258b3317b8e7c3ccfcc files/grep-2.5.1-manpage.patch 612
-SHA256 3af50dc156cceba0605c6862ff5cf9b329fa46592247323e99e06356f696e2de files/grep-2.5.1-manpage.patch 612
 MD5 626d4c9efc866039f6893735b6f4940e files/grep-2.5.1-oi.patch 1715
-RMD160 af03849546ee0122883fb7efe2e45960f1636673 files/grep-2.5.1-oi.patch 1715
-SHA256 c6c35e6b6b6ebe8f198240b85ec2acd6154e95fdc3a314dec10614fca2e3399d files/grep-2.5.1-oi.patch 1715
 MD5 b6da5288895ddd97074deb10f48b4364 files/grep-2.5.1-perl-segv.patch 410
-RMD160 e5310adbd2befa5d30001f634f7142366cc20d00 files/grep-2.5.1-perl-segv.patch 410
-SHA256 bc7d84e7c6ce9ecfbe3ff9a1d91a6d12183ca7553fe3eebfaa4a7f15157662e4 files/grep-2.5.1-perl-segv.patch 410
 MD5 1eee743f3bf8a7926c07f9a0307a6b64 files/grep-2.5.1-restrict_arr.patch 410
-RMD160 cfb62007664e37e4a3b193af0452808d0c2eb798 files/grep-2.5.1-restrict_arr.patch 410
-SHA256 458a43f9e069df1ef12e47ca879d0b9db5707b22080ccc7cd31bb8e6bcdc05aa files/grep-2.5.1-restrict_arr.patch 410
 MD5 2fc0723f9c553e186987ccbec2add9f5 grep-2.5.1-r8.ebuild 1815
-RMD160 98eae68506fa4b35db93c25718d92f5fbcd579d3 grep-2.5.1-r8.ebuild 1815
-SHA256 d4a8d719abf53a03bb78698ed2bcb38c26c4556293fe346fb3223379d10d22ff grep-2.5.1-r8.ebuild 1815
 MD5 83cd76d85229d963e2333eb0d78f362c grep-2.5.1-r9.ebuild 2134
-RMD160 8a01c2abe9a3d61deefdbb13dbfdfe05b3a00953 grep-2.5.1-r9.ebuild 2134
-SHA256 26b43227d8b1d6369ca9c2598a408bf57f36f78576167d466f0b643cd7607902 grep-2.5.1-r9.ebuild 2134
-MD5 0176fa44fb7346d19d3741232d1d1fe9 grep-2.5.1a.ebuild 2136
-RMD160 c5e98f95463e04c48128ff94e9b4dbfde05389eb grep-2.5.1a.ebuild 2136
-SHA256 e95d654585a858cd5f5cf8cf35c9329322d0254b3cc034eef99a505cffe65db9 grep-2.5.1a.ebuild 2136
+MD5 3c90ca9d0bc133fc27ee0b42e8922a90 grep-2.5.1a.ebuild 2134
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
-SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6nkAJrHF4yAQTrARAlgHAJ9Qg2OOGhkhQ9E29BXEe6kZbYW85wCguY/W
-5/a3ZPn0uWkyMGi4UHQgauI=
-=GMvW
------END PGP SIGNATURE-----
