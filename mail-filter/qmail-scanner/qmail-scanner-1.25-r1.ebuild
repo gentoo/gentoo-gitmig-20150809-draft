@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.25-r1.ebuild,v 1.9 2006/02/13 14:42:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.25-r1.ebuild,v 1.10 2006/02/20 22:36:18 hansmi Exp $
 
 inherit fixheadtails toolchain-funcs eutils
 
@@ -14,7 +14,7 @@ IUSE="spamassassin"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 RESTRICT="userpriv usersandbox"
 
 DEPEND=">=dev-lang/perl-5.6.1-r1
@@ -22,11 +22,7 @@ DEPEND=">=dev-lang/perl-5.6.1-r1
 	>=net-mail/tnef-1.1.1
 	>=virtual/perl-DB_File-1.803-r2
 	>=net-mail/ripmime-1.3.0.4
-	|| (
-	>=mail-mta/qmail-1.03-r8
-	>=mail-mta/qmail-ldap-1.03-r1
-	  mail-mta/qmail-mysql
-	)
+	virtual/qmail
 	>=app-arch/unzip-5.42-r1
 	virtual/antivirus
 	spamassassin? ( >=mail-filter/spamassassin-2.64 )"
@@ -76,7 +72,7 @@ src_compile () {
 
 	# build for qmail-scanner-queue wrapper, so we don't need suidperl
 	cd contrib
-	`tc-getCC` ${CFLAGS} -o qmail-scanner-queue qmail-scanner-queue.c || die
+	$(tc-getCC) ${CFLAGS} -o qmail-scanner-queue qmail-scanner-queue.c || die
 }
 
 src_install () {

@@ -1,27 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2a20065776f6f2ce81aa455ca34c4b27 ChangeLog 7569
-MD5 21cbccfc2015bf74d509a5b329ef4b30 files/digest-qmail-scanner-1.16-r2 67
-MD5 c6351759d589862bf81247f857fb2038 files/digest-qmail-scanner-1.23-r2 139
-MD5 109da745344755ce96b85ccb255ff736 files/digest-qmail-scanner-1.23-r3 139
-MD5 b626340aa9646bcd929b6f8ce0e4a0e2 files/digest-qmail-scanner-1.24 139
-MD5 ccef1593fec0a4c9435fe1d5dd881309 files/digest-qmail-scanner-1.25 140
+MD5 9fb027dbcabe45c29a2e1f3f4e9221d8 ChangeLog 7975
+RMD160 2226eddde33d56f4cd53e82e61ee94bcbd0b7fae ChangeLog 7975
+SHA256 1535884778d668f52328d414f4ff3003e0e09266eaeaff151db63eaf15bdcea4 ChangeLog 7975
 MD5 ff83ea44513fae0bbfc5bcacbc34e394 files/digest-qmail-scanner-1.25-r1 140
+RMD160 3bfb51c90c7818cf1028eca2ddc5edc139e44d17 files/digest-qmail-scanner-1.25-r1 140
+SHA256 f0907b490ece1ff059a72422c692d2e299718d6410238d483b595ecc7d715a65 files/digest-qmail-scanner-1.25-r1 140
 MD5 1d80eca1d4792a4073f51eb59f02960b files/qmail-scanner-queue.pl.patch 240
+RMD160 6d644003bb6386ad2e21e775352fe01bf8cc81c1 files/qmail-scanner-queue.pl.patch 240
+SHA256 77f09de11c2d448c17dd0b377cae3cedd756e404b1e611e2bf69e74d7e05be8e files/qmail-scanner-queue.pl.patch 240
 MD5 6f6fc9e3db3985ba4ae5a6203d2d6abf files/qmailscanner.cronjob 50
+RMD160 afec02a08f7824fbea506b14372af9ea62270b8a files/qmailscanner.cronjob 50
+SHA256 09354f2ef42b6423a5947d004a4d3bf76355aafaf11a0db12052bf088115dee1 files/qmailscanner.cronjob 50
 MD5 055c5ac64c689a669b8ccd6bc5f6553d files/qmailscanner.logrotate 147
+RMD160 d4eccf7f1169a448c0ce8115f426214927935385 files/qmailscanner.logrotate 147
+SHA256 eae732e0be2ace1ddcd4cc17a9c6a54012684c76dd30faa5349d394f3befc62f files/qmailscanner.logrotate 147
 MD5 7df733d43f5875dfc63bae636203b8cb metadata.xml 158
-MD5 b7ee7395916c95ab14a8c22059c7d9dc qmail-scanner-1.16-r2.ebuild 2325
-MD5 7fd6c3769965d83bf5eac2d3e107832d qmail-scanner-1.23-r2.ebuild 4938
-MD5 b14e26185e8b22226ed9399b9bb9a818 qmail-scanner-1.23-r3.ebuild 4936
-MD5 d6c709d008c33140655c674102039331 qmail-scanner-1.24.ebuild 4933
-MD5 772f99a473693df1f7ecd02c7222ea69 qmail-scanner-1.25-r1.ebuild 5039
-MD5 2c0440e6cef7594d28270dae85c38e8c qmail-scanner-1.25.ebuild 4978
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8JrmtG5z4I8BtQoRAm5yAJ447jw3Cp86EAAryJT55DpwHNspUgCfSd4N
-Krg8eJgtuB2YXxUrljKB07E=
-=w6F4
------END PGP SIGNATURE-----
+RMD160 1bd73d3a80f2670284225f39ce0a4a1c01954966 metadata.xml 158
+SHA256 940554be041a57d02888d9f414efb7768e9f72565c642327ecb4f9f64ca6d8d4 metadata.xml 158
+MD5 d39aed1157cdaec9b46c650812fc5560 qmail-scanner-1.25-r1.ebuild 4962
+RMD160 fe6bf0ce794d0c0014f4a267a4eefd0bde147281 qmail-scanner-1.25-r1.ebuild 4962
+SHA256 c9c8b90ff35c47b9d76c6ff367a59775abb9d8ac63236022be940ef7736bd843 qmail-scanner-1.25-r1.ebuild 4962
