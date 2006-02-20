@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/dhcp-agent-0.37.ebuild,v 1.11 2005/03/31 14:21:21 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/dhcp-agent-0.37.ebuild,v 1.12 2006/02/20 20:43:49 jokey Exp $
 
 DESCRIPTION="dhcp-agent is a portable UNIX Dynamic Host Configuration suite"
 HOMEPAGE="http://dhcp-agent.sourceforge.net/"
@@ -12,7 +12,7 @@ KEYWORDS="x86 ~sparc"
 IUSE=""
 
 DEPEND=">=dev-libs/libdnet-1.4
-		virtual/libpcap"
+		net-libs/libpcap"
 
 src_unpack() {
 	unpack ${A}

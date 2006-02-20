@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/dhcp-agent-0.41.ebuild,v 1.4 2005/05/10 11:16:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/dhcp-agent-0.41.ebuild,v 1.5 2006/02/20 20:43:49 jokey Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~sparc ~ppc"
 IUSE="doc"
 
 DEPEND=">=dev-libs/libdnet-1.7
-	virtual/libpcap
+	net-libs/libpcap
 	>=dev-util/guile-1.6.4
 	doc? ( app-text/texi2html )"
 

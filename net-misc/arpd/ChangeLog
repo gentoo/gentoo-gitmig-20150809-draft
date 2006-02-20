@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/arpd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.10 2005/12/25 18:40:54 weeve Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.11 2006/02/20 20:43:20 jokey Exp $
+
+  20 Feb 2006; Markus Ullmann <jokey@gentoo.org> arpd-0.2.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   25 Dec 2005; Jason Wever <weeve@gentoo.org> arpd-0.2.ebuild:
   Stable on SPARC.

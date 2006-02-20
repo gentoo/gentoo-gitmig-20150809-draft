@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/arpd-0.2.ebuild,v 1.13 2005/12/25 18:40:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/arpd-0.2.ebuild,v 1.14 2006/02/20 20:43:20 jokey Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=">=dev-libs/libdnet-1.4
 	>=dev-libs/libevent-0.6
-	virtual/libpcap"
+	net-libs/libpcap"
 
 S=${WORKDIR}/${PN}
 
