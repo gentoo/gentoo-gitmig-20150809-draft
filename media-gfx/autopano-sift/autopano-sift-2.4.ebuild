@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.4.ebuild,v 1.2 2006/02/13 16:54:21 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.4.ebuild,v 1.3 2006/02/20 08:07:39 halcy0n Exp $
 
 inherit mono eutils
 
@@ -21,13 +21,13 @@ DEPEND="dev-lang/mono
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}/src
+	cd "${S}"/src
 	sed -i 's%^AUTOPANO_PATH=.*%AUTOPANO_PATH=/usr/lib/autopano-sift%' \
-	  bin/autopano-complete.sh
+		bin/autopano-complete.sh
 }
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}"/src
 
 	emake -j1 || die "Compile failed"
 }
@@ -38,16 +38,16 @@ src_install() {
 
 	exeinto /usr/bin
 
-	doexe ${FILESDIR}/autopano
+	doexe "${FILESDIR}"/autopano
 
 	for file in autopanog generatekeys; do
-	        dosym autopano /usr/bin/"$file"
+		dosym autopano /usr/bin/"$file"
 	done
 
 	doexe src/bin/autopano-complete.sh
 
 	dodoc README CHANGES LICENSE
-	cd ${S}/doc
+	cd "${S}"/doc
 	rm -f template.1 autopano-complete.old.*
 	dodoc *.pdf *.txt
 	doman *.1 *.7
