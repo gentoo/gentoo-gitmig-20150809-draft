@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/qvamps-0.21.ebuild,v 1.1 2006/01/21 18:15:09 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/qvamps-0.21.ebuild,v 1.2 2006/02/20 23:07:04 sbriesen Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="Qt frontend for vamps"
 HOMEPAGE="http://vamps.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/vamps/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-lang/swig
@@ -26,11 +26,21 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# set correct libdir
+	sed -i -e "s:/lib/qvamps/:/$(get_libdir)/qvamps/:g" Makefile qvamps
+
+	# replace predefined CFLAGS with ours
 	sed -i -e "s:-pipe -O2 -fomit-frame-pointer:\$(MYCFLAGS):g" Makefile
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" MYCFLAGS="${CFLAGS}" || die "emake failed"
+	# Need to fake out Qt or we'll get sandbox problems
+	export REALHOME="${HOME}" HOME="${T}/fakehome"
+	addwrite "${QTDIR}/etc/settings"
+	mkdir -p "${HOME}/".{kde,qt}
+
+	emake PREFIX="/usr" CC="$(tc-getCC)" MYCFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
