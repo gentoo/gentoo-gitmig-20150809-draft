@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.37 2006/02/15 14:41:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.38 2006/02/20 17:09:50 corsair Exp $
+
+  20 Feb 2006; Markus Rothe <corsair@gentoo.org> howl-1.0.0.ebuild:
+  Stable on ppc64
 
   15 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org> howl-1.0.0.ebuild:
   Stable on sparc
