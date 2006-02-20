@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/asyncresolv
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/asyncresolv/ChangeLog,v 1.4 2005/10/29 04:18:00 halcy0n Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/asyncresolv/ChangeLog,v 1.5 2006/02/20 08:10:28 halcy0n Exp $
+
+  20 Feb 2006; Mark Loeser <halcy0n@gentoo.org> asyncresolv-0.0.3.ebuild:
+  Removing DEPEND on virtual/libc
 
   29 Oct 2005; Mark Loeser <halcy0n@gentoo.org> asyncresolv-0.0.3.ebuild:
   Stable on x86
