@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.15 2005/12/04 05:41:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.16 2006/02/20 08:59:48 lanius Exp $
 
 inherit eutils linux-mod flag-o-matic
 
@@ -54,7 +54,9 @@ IUSE="debug doc streamzap X"
 KEYWORDS="x86 ppc alpha ia64 amd64 ppc64"
 
 RDEPEND="virtual/libc
-	X? ( virtual/x11 )"
+	X? ( || ( (	x11-libs/libX11
+			x11-libs/libSM )
+	virtual/x11 ) )"
 
 DEPEND="virtual/linux-sources
 	sys-devel/autoconf

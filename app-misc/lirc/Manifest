@@ -1,33 +1,75 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f908fc98f339a3970b460b8a11ca1705 ChangeLog 11029
+RMD160 8d9afaa3d3082787f7c4f62d202df94b423e227d ChangeLog 11029
+SHA256 6228b42e8496d534bad16be151d0e563810fb766dff5d884563ff7dd1c3f9b4b ChangeLog 11029
 MD5 8b5ccb169d823795a11450a1c052da55 files/digest-lirc-0.7.0-r1 63
+RMD160 72b0034e02f96024bf8761739dcdf5872b7bfb5c files/digest-lirc-0.7.0-r1 63
+SHA256 e0be7f54aff0835f61b2cc9ce5f042191b891c83a2f4b8f094fe96af0ca3c346 files/digest-lirc-0.7.0-r1 63
 MD5 07a6b9497abcb0ebf09b83699dd56b2c files/digest-lirc-0.7.1 63
+RMD160 33eeba1be5826c808f2324f0540ee0c340baf132 files/digest-lirc-0.7.1 63
+SHA256 14cc69c691f009367a7575f8de408b37966cafab54f3a5c01b1629c86076fd59 files/digest-lirc-0.7.1 63
 MD5 be588343f18b4d80100ecee0efd3870c files/digest-lirc-0.7.2 63
+RMD160 ed2af9721a40d96185a0f5f954bdd059c588d65d files/digest-lirc-0.7.2 63
+SHA256 bc04ebb1395cd70b270133a8f5c62e11413fd8667a8781079c78e42f6da37024 files/digest-lirc-0.7.2 63
+MD5 94bc795abecc969f96f36dd97979f9dd files/digest-lirc-0.8.0 235
+RMD160 fef12500696e0e087091c82adf258c881215ec6f files/digest-lirc-0.8.0 235
+SHA256 dd0683242d117496806662aac0e2d51b9f6e61b6ae6d82f5408ce9deb2b4cd87 files/digest-lirc-0.8.0 235
 MD5 ea9578d9140ce98418744cd8fbb4c613 files/digest-lirc-0.8.0_pre1 68
+RMD160 4422e44b27c0739761ca1e20511613edfd84e9bd files/digest-lirc-0.8.0_pre1 68
+SHA256 a4542099829be72129cd874d4409436ba6747d47b82bc13926b62ecb1f8d0e59 files/digest-lirc-0.8.0_pre1 68
 MD5 621c040cbdf0df1bc424befe21eeeb35 files/digest-lirc-0.8.0_pre3 67
+RMD160 f031c374eeac9583d89f11cac5e10ab7bd69b63a files/digest-lirc-0.8.0_pre3 67
+SHA256 e47aadd0292a6c660ed9ef17c27bda7debe3aa7fbee4ece535d6321face51065 files/digest-lirc-0.8.0_pre3 67
 MD5 6031968a1ddb51ff5265d1f22bd2d237 files/lirc-0.6.6-gentoo.diff.bz2 2215
+RMD160 e795097555095db3efdc5a69ab94ca4a155d84d7 files/lirc-0.6.6-gentoo.diff.bz2 2215
+SHA256 792eb1f1416d42fcae00452e654d28b9ffb3d2872354e0a0a47e8eca3f774aac files/lirc-0.6.6-gentoo.diff.bz2 2215
 MD5 d874cf5e0b5c21cd211acea456f171d7 files/lirc-0.7.0-configure.in.patch 747
+RMD160 4bc34426d3ab3b08aea325aea4f98ed974c4a7cd files/lirc-0.7.0-configure.in.patch 747
+SHA256 02a7f4f052bf89e2f87359070aa47777cf3ff436e985980005e37151fa4b5e81 files/lirc-0.7.0-configure.in.patch 747
 MD5 8fd71f6a7c4842bfbad1e2bfb67f187f files/lirc-0.7.0-streamzap.patch.bz2 16868
+RMD160 2a05ec128f0ef5364c335d1ab21f679c49bd7e4a files/lirc-0.7.0-streamzap.patch.bz2 16868
+SHA256 6fff5f929018b78cb7e48244abbc2bcc914a78068d3f8ab008df7f8b9c251d90 files/lirc-0.7.0-streamzap.patch.bz2 16868
 MD5 1106aad81c744af1a4c82b0cb66b3513 files/lirc-0.7.0-xbox.patch.bz2 10512
+RMD160 15ef2e36e781342903bdf6a2bee12e9175ed4a04 files/lirc-0.7.0-xbox.patch.bz2 10512
+SHA256 67ad1730a7c9c988835e39a2f85ee84c7ffa9ddc5bb174c182287a29521f01c6 files/lirc-0.7.0-xbox.patch.bz2 10512
 MD5 d0d865cbe48f328fb4cfb41e22d4407b files/lirc-0.7.0_pre2-i2c.patch.gz 705
+RMD160 280ad9c4331cc6067435b9b30e10e79cab66dccd files/lirc-0.7.0_pre2-i2c.patch.gz 705
+SHA256 53fc297f6d5d37c0af7fa4a73bad529be2a93915674a5398686284f9ca67af99 files/lirc-0.7.0_pre2-i2c.patch.gz 705
 MD5 deb700405f78459561856d13837fdd7c files/lirc-0.7.0_pre7-configure.patch 924
+RMD160 5d61652e7c7ebfd102d1c0fa8480e685eb7d1fa2 files/lirc-0.7.0_pre7-configure.patch 924
+SHA256 b2f853d9ae95125f024762097e7fa19a7d3397108d4f8b574a4bf9bdbcf79134 files/lirc-0.7.0_pre7-configure.patch 924
 MD5 ab567186b553096440ee53918e52b867 files/lirc-0.7.0_pre7-streamzap.patch.bz2 10724
+RMD160 f494d09d8301b839839f4f27b1184bf9b80db244 files/lirc-0.7.0_pre7-streamzap.patch.bz2 10724
+SHA256 2e42c436dd215da9b4d593093692c57276a72642b56c233d0644310b97a93ff1 files/lirc-0.7.0_pre7-streamzap.patch.bz2 10724
 MD5 ab341c2bcfd5c4f94560dc256e32a70c files/lircd 450
+RMD160 73cf3057f420632e90e80eeb30e79cdbb3390b5d files/lircd 450
+SHA256 a9d6d2cc0abd0efe3267c1477fac012378e63e26aa021cfce7a0e25b27f196df files/lircd 450
 MD5 96f711e08f4de00f8005fb7160be8452 files/lircd.conf 66
+RMD160 cf2c2707e614ba708546bdcd088e95e7e8fcabb5 files/lircd.conf 66
+SHA256 5424b30f434757db92a137aca47cf1a317aea3f0a96e0de22818fbedbe87942f files/lircd.conf 66
 MD5 54581835f791fe37a1285926c6d21b12 files/lircmd 466
+RMD160 32f2b2411afc60522944f5c3dff9f53aac242a9c files/lircmd 466
+SHA256 d47f22a33a83c14a4a0c333d6a445c40e550c491899fb0c6d323e23fe1eac7b7 files/lircmd 466
 MD5 ee2b49c33fb3b2a65122cfc698d9e100 files/xbox-lircd.conf 784
+RMD160 844b08d504f5afb996f900d3d225cc855fbf4884 files/xbox-lircd.conf 784
+SHA256 03979bd658ed4a5705c358a1278b1565dd10463ab6eb14fa8d25b3d98e645008 files/xbox-lircd.conf 784
 MD5 e97f779f2875d98323b939c401321a8c lirc-0.7.0-r1.ebuild 4492
+RMD160 f6ce731d332137ebb94c52d5923562891767f7ad lirc-0.7.0-r1.ebuild 4492
+SHA256 12615711a65e9637a9755e0263210b42c70f4713452f2bb2032a3e31cd17744c lirc-0.7.0-r1.ebuild 4492
 MD5 eb7c38a7e1620656ffd7c9e2eb9ae951 lirc-0.7.1.ebuild 4422
+RMD160 8894b1be987647ededab4c1d312ea1910a60a012 lirc-0.7.1.ebuild 4422
+SHA256 59f254c11903eac2394d83ee98cac47024f91451b5dae30a8e6edef5d71b5cb8 lirc-0.7.1.ebuild 4422
 MD5 cb4d1fc7278b7357a6ca6aee2b1adc1c lirc-0.7.2.ebuild 4472
+RMD160 c9fef11718083b8cb2358a224b506e027ae34dc2 lirc-0.7.2.ebuild 4472
+SHA256 a4edfe95537b344e988525e50ef64c918299618ab8b150b7690c537f28482bd1 lirc-0.7.2.ebuild 4472
+MD5 f1221665429533ba9edb95fc62a03feb lirc-0.8.0.ebuild 4660
+RMD160 a91cf030dfef985296f82b72079ff4fd1bb26396 lirc-0.8.0.ebuild 4660
+SHA256 f7a0b5b26abc3037a01130928cc046657bca3d27b0dda3f7810d6db6912e81fc lirc-0.8.0.ebuild 4660
 MD5 5dab846a93e56a426ff636e18d608352 lirc-0.8.0_pre1.ebuild 4471
+RMD160 4636338ab84ac9f51ea043a14a7fd2bb9d0a4531 lirc-0.8.0_pre1.ebuild 4471
+SHA256 786e06a72bc9eb12089ac8639b70a7164f6b52b0f2fc11f7c6a8e20db885e9bf lirc-0.8.0_pre1.ebuild 4471
 MD5 f7a4bed2779c77d12f520497e87cdab8 lirc-0.8.0_pre3.ebuild 4660
+RMD160 9d9b1675f3fffaaa9a1912bed9771bcbb634c343 lirc-0.8.0_pre3.ebuild 4660
+SHA256 ebbd82b3bd699ed14118d5bb3a619101367d1cc82847078957cf8476fb0a2861 lirc-0.8.0_pre3.ebuild 4660
 MD5 40a6e0a06901a627d29f4c528e40c9ad metadata.xml 265
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxCOeBtvusYtCZMsRAhEXAJ9O3t8PS9Q1EfPZS06KZWmOM2bblACeIYyy
-ESu/c9YEK0kR4ohpIiDFnaY=
-=c4W6
------END PGP SIGNATURE-----
+RMD160 953d1d8dddeba9ef9ec16f510f96a92966b9e4ed metadata.xml 265
+SHA256 81800638a5f0a6bddeabd38f77fe3c557821df5bc7a2e9c07e770960f1acb64f metadata.xml 265

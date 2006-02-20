@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0_pre3.ebuild,v 1.1 2006/01/10 21:05:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0.ebuild,v 1.1 2006/02/20 08:59:48 lanius Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -28,8 +28,8 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	sys-devel/libtool"
 
-#SRC_URI="mirror://sourceforge/lirc/${P/_pre/pre}.tar.bz2"
-SRC_URI="http://lirc.sourceforge.net/software/snapshots/lirc-0.8.0pre3.tar.bz2"
+SRC_URI="mirror://sourceforge/lirc/${P/_pre/pre}.tar.bz2"
+#SRC_URI="http://lirc.sourceforge.net/software/snapshots/lirc-0.8.0pre3.tar.bz2"
 
 S=${WORKDIR}/${P/_pre/pre}
 
@@ -51,7 +51,7 @@ pkg_setup() {
 # --with-driver=X
 
 # where X is one of:
-# none, any, act200l, animax, atilibusb, atiusb, audio, avermedia, avermedia_vdomate,
+# none, all, act200l, animax, atilibusb, atiusb, audio, avermedia, avermedia_vdomate,
 # avermedia98, bestbuy, bestbuy2, breakoutbox, bte, caraca, chronos, comX,
 # creative_infracd, dsp, cph03x, cph06x, creative, devinput, exaudio, flyvideo,
 # gvbctv5pci, hauppauge, hauppauge_dvb, hercules_smarttv_stereo, igorplugusb, irdeo,
@@ -113,8 +113,8 @@ src_compile() {
 		--localstatedir=/var \
 		--with-syslog=LOG_DAEMON \
 		--enable-sandboxed \
-		--with-kerneldir=${ROOT}/usr/src/${KV_FULL} \
-		--with-moduledir=${ROOT}/lib/modules/${KV_FULL}/misc \
+		--with-kerneldir=${KV_DIR} \
+		--with-moduledir=/lib/modules/${KV_FULL}/misc \
 		`use_enable debug` \
 		`use_with X` \
 		${LIRC_OPTS} || die "./configure failed"

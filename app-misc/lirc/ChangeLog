@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.76 2006/01/10 21:05:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.77 2006/02/20 08:59:48 lanius Exp $
+
+*lirc-0.8.0 (20 Feb 2006)
+
+  20 Feb 2006; Heinrich Wendel <lanius@gentoo.org>
+  -files/lirc-0.6.6-gentoo.diff.bz2, -files/lirc-0.7.0-configure.in.patch,
+  -files/lirc-0.7.0_pre2-i2c.patch.gz,
+  -files/lirc-0.7.0_pre7-configure.patch,
+  -files/lirc-0.7.0_pre7-streamzap.patch.bz2, files/lircd.conf,
+  -lirc-0.8.0_pre1.ebuild, -lirc-0.8.0_pre3.ebuild, +lirc-0.8.0.ebuild:
+  version bump; cleanups; modular X port
 
 *lirc-0.8.0_pre3 (10 Jan 2006)
 
