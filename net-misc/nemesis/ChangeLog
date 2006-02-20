@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nemesis
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.13 2005/01/29 21:23:11 dragonheart Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.14 2006/02/20 20:48:51 jokey Exp $
+
+  20 Feb 2006; Markus Ullmann <jokey@gentoo.org> nemesis-1.4_beta3.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   30 Jan 2005; Daniel Black <dragonheart@gentoo.org> nemesis-1.4_beta3.ebuild:
   Transition dependancy from net-libs/libpcap to virtual/libpcap
