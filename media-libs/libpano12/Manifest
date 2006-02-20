@@ -1,18 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b1078c009790f80d1f0b787cf04d885d ChangeLog 2051
+MD5 3bb262952c777dac34f1466330c08de1 ChangeLog 2137
+RMD160 ebef43faead107b717ce6fded61ace5c4ef2ece4 ChangeLog 2137
+SHA256 4a749fd4fa28be59f60118d6ce44fc9508bce138aba40f2cfc6cba77d378c2ad ChangeLog 2137
 MD5 296f115ade2ee1542b55d922414b591b files/digest-libpano12-2.7.0.10 71
+RMD160 1413b2b23eb4d17e1eec6785eb23aa97a723311d files/digest-libpano12-2.7.0.10 71
+SHA256 864d2f8f506a76ee6514252fbdc9dff30fb558918a9252df48bd04ad3e53ebaa files/digest-libpano12-2.7.0.10 71
 MD5 9fac047656b9d6c1f35dc14a211ed703 files/digest-libpano12-2.7.0.14 71
+RMD160 d0e44c4465c520c1327ae117c63067c4981a25dc files/digest-libpano12-2.7.0.14 71
+SHA256 ea51b8126d6586ce1666034d36739ff0b3860a6f4e8dd07bdb46740a3076677c files/digest-libpano12-2.7.0.14 71
 MD5 896b7fb7c5462f3b2b76e652ab8c6058 files/libpano12-2.7.0.8-dejava.patch 2164
+RMD160 44a68b0659e1e1dd8593c93cb624e67a43bc4780 files/libpano12-2.7.0.8-dejava.patch 2164
+SHA256 873ac7628b6b92a32a77f2b23fb49887f4f6e19d9f3f97b791ece530ac166d6d files/libpano12-2.7.0.8-dejava.patch 2164
 MD5 17789ccb47f8831dd2716c6bb3d18ee4 files/libpano12-2.7.0.9-dejava.patch 2164
+RMD160 5f9a4b8ae223ef62707434e58bce0b4ae2d3f24d files/libpano12-2.7.0.9-dejava.patch 2164
+SHA256 f088f226642e36de11d93f91278b65d7dab61f85b6a124800b8e92d3e1fdf1aa files/libpano12-2.7.0.9-dejava.patch 2164
 MD5 fc011498d4c6fc3867f96fb87e266ae8 libpano12-2.7.0.10.ebuild 1008
+RMD160 f53e896ef4609037bca74cdaa3f857ffccafd538 libpano12-2.7.0.10.ebuild 1008
+SHA256 f2cb224829dc3a460df455e73e67ed2c187d9439fe1347cc07424770ff0218f6 libpano12-2.7.0.10.ebuild 1008
 MD5 08740b257ac1701e7e4a68be84bb1bc4 libpano12-2.7.0.14.ebuild 1017
-MD5 3a477b460f42a5c49aadc5971992e834 metadata.xml 251
+RMD160 66b21e167ffec791a444a88b3fc97c9fb1ad6468 libpano12-2.7.0.14.ebuild 1017
+SHA256 7d20c8362401833511606f7e229b64d384dea1958e11a8ef7142287258d17868 libpano12-2.7.0.14.ebuild 1017
+MD5 ab09b5a061b6df1918d1fc2f28ede35f metadata.xml 254
+RMD160 07f27c4535f9f37ba61b2dff17d6bdab331fbf80 metadata.xml 254
+SHA256 f10be72de77f708fc7ccdba9f1f17a9bcf0ba71e27fbd1eeea593e9356a88430 metadata.xml 254
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDpbvNCRZPokWLroQRAoxUAKCRY1cv7dJxdYGIfL8AeoO/dMHaIgCggbjG
-EfidX9U41+0wRs0dUnJ5uks=
-=rvzM
+iD8DBQFD+XlUCRZPokWLroQRApNUAJ9U4am3ua/5F0uF8a4nJxC9UPcBkgCgqaJ+
+QK3TMqrWmEiiUkWQLxYS3BI=
+=43O1
 -----END PGP SIGNATURE-----
