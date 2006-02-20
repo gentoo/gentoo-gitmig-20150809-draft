@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 050dc9917783892c2eb3d5d7d7e3470c ChangeLog 2400
-RMD160 5c8906aaeade6c9b0aa6e3f62f2b29b8ec772789 ChangeLog 2400
-SHA256 f80252f6d3969b5602137c0179909645755b01662d6b873916efd56dbd0e89ef ChangeLog 2400
+MD5 dec348d63e270ebcdbb5d156f3cf4125 ChangeLog 2500
 MD5 62b116cba4726ccaafa617391576b91e files/digest-xfce4-battery-0.2.0-r1 78
-RMD160 1b128d2afbf089af59dc43f10ee8075182e827e5 files/digest-xfce4-battery-0.2.0-r1 78
-SHA256 e31cb7f0ffb28ad9b137f1bcc189b9ce5263c9ef4329b22d53b03baf6fc1c31f files/digest-xfce4-battery-0.2.0-r1 78
 MD5 04f73a252cf92df0af61a44a4fc2054f files/digest-xfce4-battery-0.3.0 78
-RMD160 2cc244437a8a27190d53ecd4727c162fae7a2fe8 files/digest-xfce4-battery-0.3.0 78
-SHA256 1bffdbda19c43efc0cb0d6d4ef894fb211a30d46e9296ff3d7bda8f4448e24bc files/digest-xfce4-battery-0.3.0 78
 MD5 04f73a252cf92df0af61a44a4fc2054f files/digest-xfce4-battery-0.3.0-r1 78
-RMD160 2cc244437a8a27190d53ecd4727c162fae7a2fe8 files/digest-xfce4-battery-0.3.0-r1 78
-SHA256 1bffdbda19c43efc0cb0d6d4ef894fb211a30d46e9296ff3d7bda8f4448e24bc files/digest-xfce4-battery-0.3.0-r1 78
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
-SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 a92454bf80f23e99ba33c674436d0cec xfce4-battery-0.2.0-r1.ebuild 395
-RMD160 890438bbfea4c592dd8e122df9ed5eac758cec9f xfce4-battery-0.2.0-r1.ebuild 395
-SHA256 1821b0aafe7d2268c99ec96e7e7f1c6c91b42d9ec5ceb4efa604d7b42c2175f6 xfce4-battery-0.2.0-r1.ebuild 395
-MD5 cdea4ce19a0c6f5c4e61378712b8150f xfce4-battery-0.3.0-r1.ebuild 384
-RMD160 5dd069f41380d35fef3a9d09e43af18d0379b372 xfce4-battery-0.3.0-r1.ebuild 384
-SHA256 af17f2b893b549de3ad7c49de4a9b241c95aad604efed760e153b68879b81fcb xfce4-battery-0.3.0-r1.ebuild 384
+MD5 023237f1b99b2cea798cf8b23553cea9 xfce4-battery-0.3.0-r1.ebuild 382
 MD5 75f39ce9a71022ec8c9e4898f934c605 xfce4-battery-0.3.0.ebuild 400
-RMD160 de7c1212012643841674eca08cef8010fe81a141 xfce4-battery-0.3.0.ebuild 400
-SHA256 d30c9169e2bca32c3bc1721a0ee9b7849d63ceb0e09b3cb140820f4ee7564c4f xfce4-battery-0.3.0.ebuild 400
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6rd1JrHF4yAQTrARAkgZAJ9a/ltWdpdaiv1NO4rkin67upZFHgCfZvCj
-pHjOHoonSLXeRasJAcjl9xY=
-=wK67
------END PGP SIGNATURE-----
