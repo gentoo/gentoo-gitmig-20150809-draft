@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.12.ebuild,v 1.1 2006/01/02 03:01:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.12.ebuild,v 1.2 2006/02/20 20:23:32 tupone Exp $
 
 inherit eutils games
 
@@ -13,7 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="virtual/x11
+DEPEND="|| (
+		(
+			x11-libs/libXmu
+			x11-libs/libXi
+		)
+		virtual/x11
+	)
+	sys-libs/zlib
 	virtual/glu
 	virtual/opengl
 	>=media-libs/freetype-2
