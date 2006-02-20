@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.61 2006/02/07 12:37:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.62 2006/02/20 16:58:24 corsair Exp $
+
+  20 Feb 2006; Markus Rothe <corsair@gentoo.org> exim-4.60.ebuild:
+  Stable on ppc64
 
   26 Jan 2006; Aron Griffis <agriffis@gentoo.org> exim-4.60.ebuild:
   Mark 4.60 stable on ia64 #120465
