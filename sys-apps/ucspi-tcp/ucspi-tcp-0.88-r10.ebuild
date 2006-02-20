@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r10.ebuild,v 1.3 2006/02/19 23:59:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r10.ebuild,v 1.4 2006/02/20 00:00:16 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI="http://cr.yp.to/${PN}/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ~ppc-macos ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
 IUSE="ssl ipv6 selinux doc"
 
 DEPEND="virtual/libc
