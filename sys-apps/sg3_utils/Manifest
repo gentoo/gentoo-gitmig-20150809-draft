@@ -1,21 +1,39 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1ff94c6305ed760d789ce3133460fd30 ChangeLog 2096
+MD5 2e5f821c4ba05a01579db5e31b25ed78 ChangeLog 2271
+RMD160 61cb5d132020d5729bb3cb03cca7587e9d618238 ChangeLog 2271
+SHA256 4662cdd9bced014a0b60d2eb4f6da10dec13f1dfe4d4d58cf4fa5cac8733ba60 ChangeLog 2271
 MD5 e309d737cc7ca64e5d5beb764d1ba316 files/digest-sg3_utils-1.08 124
+RMD160 ce9188bc534b7ee5718b20793adf60e5fb254303 files/digest-sg3_utils-1.08 124
+SHA256 24cbfa0c5ba8a7bfa65e0768c78d52e3466828e011d3c11d03bbc20fb8780502 files/digest-sg3_utils-1.08 124
 MD5 3fcc23751b641786325f54e9df3fca05 files/digest-sg3_utils-1.11 124
+RMD160 5692e094ec10c3880fbb44f9ff4e13e4e9de01ac files/digest-sg3_utils-1.11 124
+SHA256 109b1f3278df65ea241a6c1e52835e2394eeba4a8719b7fda145a294eaf2d923 files/digest-sg3_utils-1.11 124
 MD5 8dcedd2980cb1b56ed8e0a60b13f8c48 files/digest-sg3_utils-1.15 124
+RMD160 c53a60dc94f5e55306b39156b3559d7919bccaa2 files/digest-sg3_utils-1.15 124
+SHA256 78f60e927212851411a757827a5ab8dc1e88d048879a03f2f6f28ada2580cce9 files/digest-sg3_utils-1.15 124
 MD5 e61a2356faa4d56813189ce165239197 files/digest-sg3_utils-1.18 124
+RMD160 687ea666527286f1abcc1801ef6c0e9a627755bc files/digest-sg3_utils-1.18 124
+SHA256 cdcf8db5df49fa6227a33372ff15296d184ee7c53bff5bf770a33cfacce56fb4 files/digest-sg3_utils-1.18 124
+MD5 b214fc50e9a64355c98c46ea2ba4bd88 files/digest-sg3_utils-1.19 464
+RMD160 3971468af90f01ff35f7af3bfa08301762dfb018 files/digest-sg3_utils-1.19 464
+SHA256 3de2f92422557cab5060cabda3ecb1c9daa936bbaf57528b0295a39bb332b22b files/digest-sg3_utils-1.19 464
 MD5 415ccd09bf2a67e4ccc39d50059b8c14 files/sg3_utils-llseek.patch 1948
+RMD160 66f3516204a991376c19f57a322731c8d05eb23d files/sg3_utils-llseek.patch 1948
+SHA256 626c06bd57765e1a6772b0d05736f4542f1fa0f8a476bced614a11065758a057 files/sg3_utils-llseek.patch 1948
 MD5 37443e54165d5bcdaa8550d52edafa98 metadata.xml 228
+RMD160 5fd2e8688b03168f4534b6d2e50fa7bb8a16abe2 metadata.xml 228
+SHA256 a9149d44e45790d278c94b4d7c79bdbb20f91fca57bc33ad67232a3bc0fe635e metadata.xml 228
 MD5 d5959d5cb2439b78b3c1d20fc555f047 sg3_utils-1.08.ebuild 938
+RMD160 a2ed6c3151e2fb36d30bd1bc5f85e95b33cc45e3 sg3_utils-1.08.ebuild 938
+SHA256 5249576a7c49095a852493944bff6c26adc08f7c5579e470eb3d682dec04cef4 sg3_utils-1.08.ebuild 938
 MD5 c961881764f66b8f51ee5049c2d246fc sg3_utils-1.11.ebuild 871
+RMD160 a389d29b53b61c2a04ff0b3322acc51703bda2ca sg3_utils-1.11.ebuild 871
+SHA256 43f66ad7a4ecefaf5c5e7a76d06a33d3727b6e4dee7b762de1601c6d8b251ef6 sg3_utils-1.11.ebuild 871
 MD5 eae70fd0e48273e4a0443cfa34919c44 sg3_utils-1.15.ebuild 954
+RMD160 5d0a3c234a808eccab4a16a13dc4e4324e40212f sg3_utils-1.15.ebuild 954
+SHA256 e92bd57d78f6dde862afe28d6da7ed835060ff76da67907a71055d665132f0dc sg3_utils-1.15.ebuild 954
 MD5 107afb7232b799cbb4f5f38facdcf432 sg3_utils-1.18.ebuild 996
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvpv6CHk4+ZoBpvsRAsGuAJ4sEbk08Xu48n1Sh29i84lYCev9ggCgvl79
-51TwgOBD7v/Zt2Hz6gfk7xc=
-=+2LW
------END PGP SIGNATURE-----
+RMD160 2ef56a9dabd39521099afa78d3ba0fe0de17ff4d sg3_utils-1.18.ebuild 996
+SHA256 9e707324fc15cbedfe6b318d811aa0e0eca13092b442c22d9b34a9f18b016f23 sg3_utils-1.18.ebuild 996
+MD5 5430951c73e3ffb149c8cfaeae22ca09 sg3_utils-1.19.ebuild 1270
+RMD160 3f93712a7a0e8c34bb08e6c2ba750349a8b218db sg3_utils-1.19.ebuild 1270
+SHA256 d7c46fe8c01f000594a29ac6538f745e3e64efcb2b8f32efd01d75e4d33b909d sg3_utils-1.19.ebuild 1270
