@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f0826658e85869a13760c56e242030a9 ChangeLog 3131
 MD5 15f85691d9786b8330a2d12a794f01a8 files/digest-yaml-0.35 60
 MD5 762e5b7a55af9cdaa283ead3d49504ef files/digest-yaml-0.36 60
 MD5 e81d6f91ee6cd06aeb46872bd1d0c911 files/digest-yaml-0.39 60
 MD5 cef408f0f817f938e45953118f801918 files/digest-yaml-0.51 60
 MD5 00c7d023875891ced0c69d0143b3335a files/digest-yaml-0.53 60
+MD5 0e5e47875fabdcd2b1b504f7e86b5906 files/digest-yaml-0.57 60
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 415d20775b4d37de9438f72c476519a4 yaml-0.35.ebuild 637
 MD5 9cb91cdfc0fd2faa17ce87d329b6c0a7 yaml-0.36.ebuild 655
 MD5 1b4cc234917f36b3ebb71bc742123ded yaml-0.39.ebuild 698
 MD5 78afca2223b74b780b75734fd5fbd69f yaml-0.51.ebuild 821
 MD5 0162466c6d2a8ee2543645a5aa51b675 yaml-0.53.ebuild 834
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8JdRtG5z4I8BtQoRAmSIAJ9erDRVkCm1ImJRyL70CkVKYHLIjgCfSZE7
-fNeSQca6VAeVxNh9svpeXXg=
-=rJqf
------END PGP SIGNATURE-----
+MD5 1e3525e3894a6c7de2d462a1aa603306 yaml-0.57.ebuild 674
