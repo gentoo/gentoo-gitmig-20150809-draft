@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx-pgsql/ezmlm-idx-pgsql-0.40-r2.ebuild,v 1.9 2004/07/15 01:46:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx-pgsql/ezmlm-idx-pgsql-0.40-r2.ebuild,v 1.10 2006/02/20 00:34:35 hansmi Exp $
 
 # NOTE: ezmlm-idx, ezmlm-idx-mysql and ezmlm-idx-pgsql all supported by this single ebuild
 # (Please keep them in sync)
@@ -13,14 +13,17 @@ EZMLM_P=ezmlm-0.53
 S2=${WORKDIR}/${PB}-${PV}
 S=${WORKDIR}/${EZMLM_P}
 DESCRIPTION="Simple yet powerful mailing list manager for qmail."
-SRC_URI="http://gd.tuwien.ac.at/infosys/mail/qmail/ezmlm-patches/${PB}-${PV}.tar.gz http://cr.yp.to/software/${EZMLM_P}.tar.gz"
+SRC_URI="
+	http://gd.tuwien.ac.at/infosys/mail/qmail/ezmlm-patches/${PB}-${PV}.tar.gz
+	http://cr.yp.to/software/${EZMLM_P}.tar.gz
+"
 HOMEPAGE="http://www.ezmlm.org"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~alpha ~hppa ~amd64 ~ppc ~mips ~sparc"
+KEYWORDS="alpha amd64 hppa mips ppc sparc x86"
 IUSE=""
 DEPEND="sys-apps/grep sys-apps/groff"
-RDEPEND="mail-mta/qmail"
+RDEPEND="virtual/qmail"
 
 if [ "$PN" = "${PB}-pgsql" ]
 then
