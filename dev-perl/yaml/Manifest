@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9ef0bd1d7a232d09771e22df4c37124f ChangeLog 3256
 MD5 15f85691d9786b8330a2d12a794f01a8 files/digest-yaml-0.35 60
 MD5 762e5b7a55af9cdaa283ead3d49504ef files/digest-yaml-0.36 60
@@ -12,3 +15,10 @@ MD5 1b4cc234917f36b3ebb71bc742123ded yaml-0.39.ebuild 698
 MD5 78afca2223b74b780b75734fd5fbd69f yaml-0.51.ebuild 821
 MD5 0162466c6d2a8ee2543645a5aa51b675 yaml-0.53.ebuild 834
 MD5 c05f761073f859d5f816cef00b811250 yaml-0.57.ebuild 769
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD+TpmtG5z4I8BtQoRAk0cAJ0eAkB5wW/paVqksbKkycOdtgCBMgCdEcI6
+Nsl1TnNw6jPihyaFC/xHpbo=
+=/Yg5
+-----END PGP SIGNATURE-----
