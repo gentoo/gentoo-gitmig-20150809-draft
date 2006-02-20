@@ -1,73 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 51243411e1da13dd01ba1a96ca5a28c5 ChangeLog 15834
-RMD160 165b1a811b01a701da90237d2987f860117698c1 ChangeLog 15834
-SHA256 7742a015173c94d4a39b69c5e71bf43a5e4a747721f15e639c5af2be38740fdd ChangeLog 15834
+MD5 c8d7d777ca441f72347459dbcb378d8f ChangeLog 15939
 MD5 026dc517ef9d45268cd506ec83519a0e files/canoscan-focus.patch 472
-RMD160 02a2734222e4725133150ca6c4b33491c5c47167 files/canoscan-focus.patch 472
-SHA256 7abe4ab754f48c079c5ebffce4f15b84d5784ad0d4e1235e6f96fa308d71dea4 files/canoscan-focus.patch 472
 MD5 01607471a4380f74f7b9da650e5ca5ad files/digest-sane-backends-1.0.13-r3 160
-RMD160 6a6d81dc1b6f4bb7feeb7962bff1a9043ab1695c files/digest-sane-backends-1.0.13-r3 160
-SHA256 4966898ae53e5a506c17a9b5f689ee6bcf5c920e94efcb554de3ae5189e6fe09 files/digest-sane-backends-1.0.13-r3 160
 MD5 83640d1e7caa2aa50c676d40b64866c7 files/digest-sane-backends-1.0.15 157
-RMD160 f213c2a1d9ff004f4f3990c2269f0daa0b9768c2 files/digest-sane-backends-1.0.15 157
-SHA256 da04ea773590f61503d04a1b4f1800be1c80c532522f1bd25b466733ce7347d7 files/digest-sane-backends-1.0.15 157
 MD5 d16f7594dad0db0c268e143c3676041e files/digest-sane-backends-1.0.15-r3 220
-RMD160 ec711e02ad56488123aa45467829890d39ded897 files/digest-sane-backends-1.0.15-r3 220
-SHA256 581e5b30d598a7153f6cc1c8c665ea2718f8021e2ea601e2ace190f2e5909dc0 files/digest-sane-backends-1.0.15-r3 220
 MD5 d5d1e4a4c8d3839c16329c105f2580d3 files/digest-sane-backends-1.0.16-r4 151
-RMD160 f90e1da9e2fccde6382a4e685ffe2a35445718da files/digest-sane-backends-1.0.16-r4 151
-SHA256 175838401fcb2a09b3fe8c909f9a1d3d8c2a48298364421b1face6441f77f528 files/digest-sane-backends-1.0.16-r4 151
 MD5 4ef63f9aac04a28e55b2c11333ec4df5 files/digest-sane-backends-1.0.17 151
-RMD160 d1c7bda7f9ad2da55ebdd9fc9778c0cd668aea60 files/digest-sane-backends-1.0.17 151
-SHA256 623357f86eb744b1eb3551de7d570b512cd1cc22c5aaf7a5f303fcc5af846fac files/digest-sane-backends-1.0.17 151
 MD5 3c9eec3f3f2e73bd6228f946f41c08b8 files/kernel2.6.13usb-problem.patch 1125
-RMD160 dfb698fc7236bda35259911f999b9debb8cc507f files/kernel2.6.13usb-problem.patch 1125
-SHA256 670428160dcefa4d0dc0cb9e6f2a605e4ee2e8e07941daf6c17a7d8f2bdb1158 files/kernel2.6.13usb-problem.patch 1125
 MD5 cb4dcb744752238bdfed71fdcce81c79 files/libusbscanner-device-r1.patch 681
-RMD160 ab1932275a1970a9163d5972f851430220efeb8f files/libusbscanner-device-r1.patch 681
-SHA256 8a0d477fce2c683692a89df996cf72d379be7e0672a1f7552511d20cc167baa6 files/libusbscanner-device-r1.patch 681
 MD5 820e842ff4247de984a89752ac129ceb files/libusbscanner-device.patch 582
-RMD160 ca00fbf16ccaea368daa478d448b22388811cc2b files/libusbscanner-device.patch 582
-SHA256 31caa1b205aa573d1f39f12567af9d769dd27d8c46a3d373944c0b4cc3e79b15 files/libusbscanner-device.patch 582
 MD5 bd0e1ecf807f1e676c4466f12cac215a files/lide25-r1.patch 7949
-RMD160 6b45034603d9ec9caaf60df0d0e0bd94133515ea files/lide25-r1.patch 7949
-SHA256 86081e1488e63182b138e4b01530c15a468e78b4b8b84e7e0bd1546d623334ed files/lide25-r1.patch 7949
 MD5 0bc1f6b8682b5585c8e87a325f983ade files/lide25.patch 5565
-RMD160 be65dcd4578865b15b2603f3c21f1086895f9119 files/lide25.patch 5565
-SHA256 34ab305ad66390e7d124ee853cc7f727c4d01ca34cdc3870ca42bcf293b52634 files/lide25.patch 5565
 MD5 365f695ec2c079ac06dd5bbf495f87ce files/linux_sg3_err.h 4894
-RMD160 8fe500bdd03127876a13e16772f6570cef310197 files/linux_sg3_err.h 4894
-SHA256 a90f0d768c735d918a7b90bbf80b55a3d12fa03d0ef6d2a6320934132f9c483a files/linux_sg3_err.h 4894
 MD5 f49c8e2b591496e87e91ae243d9864d0 files/sane-backend-1.0.15-gt68xx-update67.patch 5682
-RMD160 dc790785e9a4893c73ef2028fd0414009ee9dd37 files/sane-backend-1.0.15-gt68xx-update67.patch 5682
-SHA256 9d7a19e48493516ca0e288ee19dd4321d2dbfd8906b677eff5d1fd7b66c94851 files/sane-backend-1.0.15-gt68xx-update67.patch 5682
 MD5 76ecccefb14f182ef419873f26693129 files/sm3600usb.patch 7815
-RMD160 b842ace60fe94cd3fa848ad707f54481aa857f4e files/sm3600usb.patch 7815
-SHA256 3be6146efb7dd133b4f77dd7fbbef1843aa37e529bbaab81a2470b36c2a13396 files/sm3600usb.patch 7815
 MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
-RMD160 d646bef174a902fd1910871e794292c44f292052 metadata.xml 224
-SHA256 c2d7984543cf5a2770459f930dc78cbe0a220cb3297123dc108b225edc33a822 metadata.xml 224
 MD5 4c8053c87e31c8209998ba49c07d60a5 sane-backends-1.0.13-r3.ebuild 1717
-RMD160 a561437bfadb6302a9002ea0f389b0bd1f7df666 sane-backends-1.0.13-r3.ebuild 1717
-SHA256 0d181ab8d2cbb5858681538be7da6bf8bae4ec94a442c2073c9ed7834c445e0c sane-backends-1.0.13-r3.ebuild 1717
-MD5 d04dce955a1bf3c5436bc517f2e2070c sane-backends-1.0.15-r3.ebuild 3973
-RMD160 b8eba0418618abbbc6bf4cf138d1befb4c07cf10 sane-backends-1.0.15-r3.ebuild 3973
-SHA256 023a3055be74aa487f47e2f99bbc260d856882b94d8e474e5593102d58c675d7 sane-backends-1.0.15-r3.ebuild 3973
+MD5 faf6bd7e05c7d17b57793f8f3ebf5b2e sane-backends-1.0.15-r3.ebuild 3971
 MD5 e898804ea6825104b162de2ad41593ef sane-backends-1.0.15.ebuild 2598
-RMD160 cc9a6e1e354edf5fffd1b16c63e414ab7883f67d sane-backends-1.0.15.ebuild 2598
-SHA256 9b4c2a259d8789f24f0836b0c468c0408615fc371a89817af9b394119acafdb7 sane-backends-1.0.15.ebuild 2598
 MD5 8c23aab107d4c5424e32e24123d4811f sane-backends-1.0.16-r4.ebuild 4386
-RMD160 26dbb1bbdf41ef0abda862ca1682eb53dbcb9b41 sane-backends-1.0.16-r4.ebuild 4386
-SHA256 829f4b217fa2f428dc4d0e9de2828ed20709701a35b133e146065b2f459307dd sane-backends-1.0.16-r4.ebuild 4386
 MD5 82feb3a55242cfe6ac9b45ef1732827a sane-backends-1.0.17.ebuild 3880
-RMD160 32c0d98a00202cd6f6f967a287aa5e7694d37522 sane-backends-1.0.17.ebuild 3880
-SHA256 38c91554a2646a5f61ad73ec0d43943aa22d5738b296bb489a3412cb9cddf907 sane-backends-1.0.17.ebuild 3880
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD66xnV3J2n04EauwRAusMAKCAFIh8oa0+3UEig9HQaTwHIo4l9gCdHEuf
-I4GQbCptOVN4d0mL8od9Cqk=
-=cPNr
------END PGP SIGNATURE-----
