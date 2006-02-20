@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbinio/libbinio-1.2.ebuild,v 1.7 2005/01/01 17:27:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbinio/libbinio-1.2.ebuild,v 1.8 2006/02/20 07:26:12 halcy0n Exp $
 
 DESCRIPTION="Binary I/O stream class library"
 HOMEPAGE="http://libbinio.sourceforge.net/"
@@ -9,7 +9,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ~ppc amd64 sparc"
 IUSE=""
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_compile() {
 	econf || die
