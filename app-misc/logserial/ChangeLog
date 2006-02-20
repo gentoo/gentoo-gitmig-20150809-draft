@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/logserial
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/logserial/ChangeLog,v 1.2 2005/01/01 15:12:56 eradicator Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logserial/ChangeLog,v 1.3 2006/02/20 18:08:56 malverian Exp $
+
+  20 Feb 2006; <malverian@gentoo.org> logserial-0.4.2.ebuild:
+  Fixed bug #71906, added AMD64 keyword
 
 *logserial-0.4.2 (26 Oct 2004)
 
