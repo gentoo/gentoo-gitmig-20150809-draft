@@ -1,19 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 de7e6a8d97d335214c0d0a4cf3fb66c8 relay-ctrl-3.1.1-r2.ebuild 2175
-MD5 44c9f1beebb08584d64b2bcc7e641003 relay-ctrl-3.1.1.ebuild 928
-MD5 daf993e1659d623970233bac81e1c5dd relay-ctrl-3.1.1-r1.ebuild 2062
-MD5 910b873c0060e57c239c74771ce0efae ChangeLog 2543
-MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
-MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1-r1 67
-MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1-r2 67
-MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1 67
+MD5 bb1efd19dff7345afbc5f03a87edbbdb ChangeLog 2729
+RMD160 5ca7d375c7ed819f68b088be45be9094ea4f64b6 ChangeLog 2729
+SHA256 3240f7f313d8a3a1a29011de480e440b148f9615df1c8f71d74cac5ea9115fc1 ChangeLog 2729
 MD5 8e4e552c2f7216d5303b739cc99e51e9 files/authenticated.c-relayfixup.diff 702
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCm2RhI1lqEGTUzyQRAkoPAJ9CTWTl4JshZ1ChU/9YMCBvQDAkiwCfaiCH
-5JMlMbuQgVCC2yagg+rq0z0=
-=oQy+
------END PGP SIGNATURE-----
+RMD160 1cb16c3b70b712e7fd45699ee28753bddc8ae12c files/authenticated.c-relayfixup.diff 702
+SHA256 7300ee978661b421ffe9f6339296a077ef9617d488cf480995f459e82c0ab38a files/authenticated.c-relayfixup.diff 702
+MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1-r2 67
+RMD160 bd80092c1a4397db26e4c35991304b29b134f064 files/digest-relay-ctrl-3.1.1-r2 67
+SHA256 832f156d9f00ac084f6092911d5463a91f31afe7d37b3573ae289a0fcb9e7e8e files/digest-relay-ctrl-3.1.1-r2 67
+MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
+RMD160 9f5cd4ae71c9c7e45161110dd38d67f6604cd7b8 metadata.xml 280
+SHA256 1e7cf6dbb378d12f4d6569350ba23c49aa55a855240b78b5487532028b0ff540 metadata.xml 280
+MD5 392264b61b5e63807b634388315c83d8 relay-ctrl-3.1.1-r2.ebuild 2171
+RMD160 8efe6eb4ef2c73beec7da86917246c516296c1fc relay-ctrl-3.1.1-r2.ebuild 2171
+SHA256 857dc235d9e45644e5671caf1c304e4ce4b7ba4424c83efb6ebb12d9e03027ef relay-ctrl-3.1.1-r2.ebuild 2171
