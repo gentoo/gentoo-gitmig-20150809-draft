@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-2.0.1.ebuild,v 1.4 2006/02/15 18:49:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-2.0.1.ebuild,v 1.5 2006/02/20 00:58:05 superlag Exp $
 
 inherit webapp eutils
 
@@ -32,10 +32,6 @@ src_install() {
 	local docs="license.txt readme.html"
 
 	webapp_src_preinst
-
-	# remove wp-admin/templates.php (XSS exploit).  See bug #88926.
-	rm -f wp-admin/templates.php
-	cp ${FILESDIR}/dummy-templates.php wp-admin/templates.php
 
 	einfo "Installing main files"
 	cp -r * ${D}${MY_HTDOCSDIR}

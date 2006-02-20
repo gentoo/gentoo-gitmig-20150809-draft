@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.38 2006/02/15 18:49:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.39 2006/02/20 00:58:05 superlag Exp $
+
+  20 Feb 2006; Aaron Kulbe <superlag@gentoo.org> wordpress-1.5.2.ebuild,
+  wordpress-2.0.1.ebuild:
+  Adding templates.php back in, since vulnerability wrt bug #88926 has been
+  addressed and GLSA issued.
 
   15 Feb 2006; Tobias Scherbaum <dertobi123@gentoo.org> ChangeLog:
   ppc stable, bug #121661
