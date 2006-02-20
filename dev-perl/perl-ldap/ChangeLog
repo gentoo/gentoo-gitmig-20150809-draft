@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perl-ldap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.35 2006/02/13 14:26:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.36 2006/02/20 21:05:20 mcummings Exp $
+
+  20 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  perl-ldap-0.33-r1.ebuild:
+  Updated dep - XML-SAX provides Base now
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   perl-ldap-0.31.ebuild, perl-ldap-0.33.ebuild, perl-ldap-0.33-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/XML-SAX-Writer-0.44-r1.ebuild,v 1.9 2006/01/12 21:06:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/XML-SAX-Writer-0.44-r1.ebuild,v 1.10 2006/02/20 21:06:04 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND="${DEPEND}
 	dev-perl/Text-Iconv
 	dev-perl/XML-Filter-BufferText
-	dev-perl/XML-SAX-Base
+	dev-perl/XML-SAX
 	>=dev-perl/XML-NamespaceSupport-1.04
 	>=dev-libs/libxml2-2.4.1"
 
