@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6890c3cfb34ec44cf3ae00c95d764527 ChangeLog 2230
+MD5 ce88726ba5af820bcefbd0cd4952ddb3 ChangeLog 2322
+RMD160 e189c698d5e93c4e2dc38e0632f5874165a2c02c ChangeLog 2322
+SHA256 ecc7ec73176269817612e16c8a5b32ff8b5af76efbdf9bbef16a111ab27afda4 ChangeLog 2322
 MD5 6d72ccda9c473db15ba7428d4055dc17 files/digest-tnef-1.2.1 63
+RMD160 e93470c7cfe3673e7cd3a498413b4acb78ed7bf6 files/digest-tnef-1.2.1 63
+SHA256 2cf647efd08a07ffcd6ed62a41577fca92a2378cc16495b6854ae2c049a3a7f5 files/digest-tnef-1.2.1 63
 MD5 e35c50eaad08ac295871f3112bbd0183 files/digest-tnef-1.2.3.1 65
+RMD160 774f9101424492c35d81fb0bf1eeb0eb4f0c394a files/digest-tnef-1.2.3.1 65
+SHA256 e17919fa678118102af1fe13ef330601d1d357269f47d39abb4b65e9b3e8f6d6 files/digest-tnef-1.2.3.1 65
 MD5 b6cc937df573e672e77dfcdc1db97acd files/digest-tnef-1.3.2 63
+RMD160 a75f186f828e58bf9e6dd58dd1044050dc581f4c files/digest-tnef-1.3.2 63
+SHA256 1250ba981e5d778b6c77560baf4cdc5584b7dbd35a3445c77e1c62bae0402183 files/digest-tnef-1.3.2 63
 MD5 54f9a7b9f7d8e876d9d7ad5a544eba7c files/digest-tnef-1.3.3 63
+RMD160 4d1bca27fd3657c936f6346b991e38d079594151 files/digest-tnef-1.3.3 63
+SHA256 5e417b544f29e264582f2878a8a466e2eb0aeac42f42e6bfcdd3a878d4eca12c files/digest-tnef-1.3.3 63
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
+SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
 MD5 312b17851410dfca402fd4acf8a9d760 tnef-1.2.1.ebuild 646
+RMD160 d02388c5ab70743d2db3a6f61a8a2dce156f9c01 tnef-1.2.1.ebuild 646
+SHA256 2a4cc240e33a9b06bab7b7a488769b83f2bc07f5fb254b0999fdbaaf58c460b3 tnef-1.2.1.ebuild 646
 MD5 d1ae58c22c1e86ba259972e7ed69ca8e tnef-1.2.3.1.ebuild 651
+RMD160 88563f994da6b3a4bf2f86e8fb4b7290afbf0213 tnef-1.2.3.1.ebuild 651
+SHA256 085680813e7c8fca0691d4c85d54232ac4d376af3d7725a99262e758ea6f3c49 tnef-1.2.3.1.ebuild 651
 MD5 acd235fd6c5f012c97f0bacecd1264cf tnef-1.3.2.ebuild 648
-MD5 d71295b64da79b09b7ee5495873dce5c tnef-1.3.3.ebuild 645
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDqWtvntT9W3vfTuoRAi7CAJ9m1Ib4DerbR5uSk7BtEY76rkx6SQCeMOGD
-9rTHxKQxxeAGOWWchMnv70g=
-=9gyr
------END PGP SIGNATURE-----
+RMD160 7cc21a4ebd808bc0dd73253501dbb8e048d90242 tnef-1.3.2.ebuild 648
+SHA256 b41d69b47cb39b5bfce98cb0830600efd2f08523337ee08f3ddc267b747889a9 tnef-1.3.2.ebuild 648
+MD5 6b8c2163c189c7ae604d7bb72e3b542a tnef-1.3.3.ebuild 645
+RMD160 aa9ad3ceb6b49083f9f3aa15a28a5686d0db6e9c tnef-1.3.3.ebuild 645
+SHA256 e8f57c2f72a68a39bfcd709ab47967b63cb4c613024cc62790a240dd52749efe tnef-1.3.3.ebuild 645

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/tnef-1.3.3.ebuild,v 1.4 2005/12/21 14:48:23 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/tnef-1.3.3.ebuild,v 1.5 2006/02/20 22:22:48 hansmi Exp $
 
 DESCRIPTION="Decodes MS-TNEF MIME attachments"
 SRC_URI="mirror://sourceforge/tnef/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://world.std.com/~damned/software.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
