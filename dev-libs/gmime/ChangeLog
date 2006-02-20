@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gmime
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.38 2005/11/27 00:43:35 herbs Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.39 2006/02/20 14:33:08 ticho Exp $
+
+*gmime-2.1.18 (20 Feb 2006)
+
+  20 Feb 2006; Andrej Kacian <ticho@gentoo.org> +gmime-2.1.18.ebuild:
+  Version bump, as requested by Luis Medinas <metalgod at gentoo.org>.
 
   27 Nov 2005; Herbie Hopkins <herbs@gentoo.org> gmime-2.1.16.ebuild:
   Update multilib fix.
