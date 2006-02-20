@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0006a5b26424dce7285040092ecc33e3 ChangeLog 2710
-MD5 b3e3e6e4f94dae37fe5d8bd33d7c9de0 xprobe-0.3.ebuild 644
-MD5 38db7df6633dc3f15d81ba139207693b metadata.xml 478
-MD5 512e3af97af14a1e252b106356a22612 xprobe-0.2.2.ebuild 922
-MD5 333d965a82d82d7505e765d8a4418ee9 files/digest-xprobe-0.3 63
+RMD160 d359d4c76756e12595810891d9edc9898eaf354c ChangeLog 2710
+SHA256 e504aeb94678e06a537593ece27fd1668a1fc6ecc864499f3755cb14e8f00a94 ChangeLog 2710
 MD5 deeacb60b94a028e0f05b2c33f504488 files/digest-xprobe-0.2.2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGwhXmdTrptrqvGERAmkFAKCRfMEXCHNT94y7JUxBdJqAIOarcQCfebTg
-Cg6xciFpYo7zYlm6q4BTSss=
-=s75e
------END PGP SIGNATURE-----
+RMD160 d3746c84abe61c791986982b563e64aa615f42ae files/digest-xprobe-0.2.2 65
+SHA256 4bf6c8b88b5dbda846a7500561bf3fb6f23b660c8c6525bbd778cc9557b37c74 files/digest-xprobe-0.2.2 65
+MD5 333d965a82d82d7505e765d8a4418ee9 files/digest-xprobe-0.3 63
+RMD160 50678276c022fa78e49a55614f8ff089f276cca0 files/digest-xprobe-0.3 63
+SHA256 69e3fcdcdd34a8fe4d3cd0c2d0ca4c4ff8579f934f58fcf5e475ef137889c31e files/digest-xprobe-0.3 63
+MD5 38db7df6633dc3f15d81ba139207693b metadata.xml 478
+RMD160 ff529d78190caa8c4714703174b4975cf69728ff metadata.xml 478
+SHA256 d799ffda332044a2f4d19776ea04d34c3d79e4f03df63f77a78bffa52766a836 metadata.xml 478
+MD5 304b72e3162969e76daa1dcb48f44773 xprobe-0.2.2.ebuild 917
+RMD160 d7dadc9d55ad93d641487749a86f23e2ebb28029 xprobe-0.2.2.ebuild 917
+SHA256 1dbd38eb3d2baade66d3095cba3dff24ba0c4d6cae37944be7529a8ba7a675e7 xprobe-0.2.2.ebuild 917
+MD5 ef179d15310e40c0251a3731bfb9b304 xprobe-0.3.ebuild 639
+RMD160 5e75e45e23d18815f4840cfb7d32baf292ec6cfd xprobe-0.3.ebuild 639
+SHA256 a81866da54191221ee2bb6c5cd10d2c5a116ef7d7d4537aa483cdead2576ec3b xprobe-0.3.ebuild 639

@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 00ad67f6b0e013c9f9ff51ab327058f5 ChangeLog 910
-MD5 9d50dc1be3426aae869374880067a371 zodiac-0.4.9-r1.ebuild 937
-MD5 456fe4e64c0fd3de60cdcab00c471083 zodiac-0.4.9.ebuild 789
-MD5 f91d9123c97f69351203d3930bd4c2a8 metadata.xml 216
+MD5 06574c583cef515afb759655ff4ca893 ChangeLog 1044
+RMD160 c9ef61f63e431eabb37ed056d1623204d2a1411e ChangeLog 1044
+SHA256 4b2e212a4772e777439f9ecb954b71f2edc357b40b521412c0667c7e14a67f4c ChangeLog 1044
 MD5 5975e291b98f9130cb34be64d7e8aeac files/0.4.9-libnet-1.0.patch 1921
+RMD160 0375430a4b09a5ed6b5a707201ab3644d0230531 files/0.4.9-libnet-1.0.patch 1921
+SHA256 685b8102fc25bec543e3052a8876bd06c356ba521f34e3c88c8497cd75eb1677 files/0.4.9-libnet-1.0.patch 1921
 MD5 512754e3be6eb5e2866a9bd5817ee7b0 files/digest-zodiac-0.4.9 63
+RMD160 e704c220be66c9fe65b545803817a88c273f45b4 files/digest-zodiac-0.4.9 63
+SHA256 9343a62d3d74f6910863673b0b74654a8acf96c6c4bed1393fab8d1bdef0ddd2 files/digest-zodiac-0.4.9 63
 MD5 512754e3be6eb5e2866a9bd5817ee7b0 files/digest-zodiac-0.4.9-r1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+xtcmdTrptrqvGERAnIbAJ9rjl7PXwKcinQr+pPj0elcsRNeeACeJ86V
-pboTc6Cw41uJEvIVonmvA7g=
-=px/r
------END PGP SIGNATURE-----
+RMD160 e704c220be66c9fe65b545803817a88c273f45b4 files/digest-zodiac-0.4.9-r1 63
+SHA256 9343a62d3d74f6910863673b0b74654a8acf96c6c4bed1393fab8d1bdef0ddd2 files/digest-zodiac-0.4.9-r1 63
+MD5 f91d9123c97f69351203d3930bd4c2a8 metadata.xml 216
+RMD160 b08707215b2f745a0eeb4672f6aeef953597c04f metadata.xml 216
+SHA256 83d874f4c9f7bd5ebd0b58a2c8e7a9473026c5de1b21d9a363fbfe6bc1714081 metadata.xml 216
+MD5 08e52e82cf753a48d17f1e00d6ac9fcd zodiac-0.4.9-r1.ebuild 932
+RMD160 3b140e1563409f5ff3df83fb2cad15dce4c87af7 zodiac-0.4.9-r1.ebuild 932
+SHA256 b2d7158bc583bd9e6381d7824ae7eaf419ed0f2583510b81cfcd99ef4b680ff8 zodiac-0.4.9-r1.ebuild 932
+MD5 6ab1732ba15c4d475b997436113ec832 zodiac-0.4.9.ebuild 784
+RMD160 974f26bc32d4db28ef202d88efeac3e3fad683d6 zodiac-0.4.9.ebuild 784
+SHA256 f52b7b8ed3d26fb22fe09fa04a2f9156dcc0821051ef6967a4a438620394292d zodiac-0.4.9.ebuild 784
