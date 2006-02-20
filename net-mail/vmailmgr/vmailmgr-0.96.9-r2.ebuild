@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r2.ebuild,v 1.3 2005/05/16 10:01:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r2.ebuild,v 1.4 2006/02/20 22:06:33 hansmi Exp $
 
 inherit toolchain-funcs eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="virtual/libc"
 RDEPEND=">=sys-apps/ucspi-unix-0.34
-	>=mail-mta/qmail-1.03-r7
+	virtual/qmail
 	>=net-mail/qmail-autoresponder-0.95
 	!>=net-mail/courier-imap-4"
 
