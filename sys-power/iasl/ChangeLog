@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/iasl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.6 2005/12/27 19:08:55 robbat2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.7 2006/02/20 04:04:46 robbat2 Exp $
+
+*iasl-20060127 (20 Feb 2006)
+
+  20 Feb 2006; Robin H. Johnson <robbat2@gentoo.org> +iasl-20060127.ebuild:
+  Version bump for ACPI 3.0a support. Real fix for bug #122953 that caused
+  compiles to fail on flex-2.5.31 - none of the Debian weirdness of
+  downgrading flex.
 
 *iasl-20051216 (27 Dec 2005)
 
