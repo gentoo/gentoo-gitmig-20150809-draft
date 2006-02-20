@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail-qsanity
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qsanity/ChangeLog,v 1.3 2004/06/24 23:28:06 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qsanity/ChangeLog,v 1.4 2006/02/20 21:08:27 hansmi Exp $
+
+  20 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
+  qmail-qsanity-0.52.ebuild:
+  Changed to virtual/qmail, stable on x86, added to ~hppa and ~ppc.
 
   04 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   fix metadata.xml
