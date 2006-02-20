@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.10 2006/02/20 05:50:33 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.11 2006/02/20 06:00:39 nerdboy Exp $
+
+  20 Feb 2006; Steve Arnold <nerdboy@gentoo.org> gpsd-2.30-r1.ebuild,
+  gpsd-2.31.ebuild:
+  updated SRC_URI until berlios fixes their dorked up downloads
 
 *gpsd-2.31 (20 Feb 2006)
 *gpsd-2.30-r1 (20 Feb 2006)
