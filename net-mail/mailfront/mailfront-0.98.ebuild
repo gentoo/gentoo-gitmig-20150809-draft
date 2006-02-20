@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.93.ebuild,v 1.1 2005/04/28 21:02:25 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.98.ebuild,v 1.1 2006/02/20 21:46:30 hansmi Exp $
 
 inherit toolchain-funcs
 
@@ -13,14 +13,20 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=dev-libs/bglibs-1.017"
-RDEPEND="mail-mta/qmail
-	 net-libs/cvm"
+DEPEND="
+	virtual/libc
+	>=dev-libs/bglibs-1.022
+	>=net-libs/cvm-0.71
+"
+RDEPEND="
+	${DEPEND}
+	virtual/qmail
+	net-libs/cvm
+"
 
 src_compile() {
-	echo "/usr/lib/bglibs/include" > conf-bgincs
-	echo "/usr/lib/bglibs/lib" > conf-bglibs
+	echo "/usr/include/bglibs/" > conf-bgincs
+	echo "/usr/lib/bglibs/" > conf-bglibs
 	echo "/var/qmail/bin" > conf-bin
 	echo "/var/qmail" > conf-qmail
 	echo "${D}/var/qmail/bin" > conf-bin
@@ -31,7 +37,7 @@ src_compile() {
 
 src_install() {
 	dodir /var/qmail/bin
-	./installer || die
+	emake install || die
 
 	exeinto /var/qmail/supervise/qmail-smtpd
 	newexe ${FILESDIR}/run-smtpfront run.mailfront
@@ -52,7 +58,7 @@ pkg_config() {
 pkg_postinst() {
 	echo
 	einfo "Run "
-	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+	einfo "emerge --config =${PF}"
 	einfo "to update your run files (backups are created) in"
 	einfo "		/var/qmail/supervise/qmail-pop3d and"
 	einfo "		/var/qmail/supervise/qmail-smtpd"
