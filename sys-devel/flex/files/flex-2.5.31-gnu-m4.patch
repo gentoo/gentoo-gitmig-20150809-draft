@@ -1,0 +1,42 @@
+This is a simple hack to get flex to use GNU m4 on non-GNU systems.
+The issue has been fixed properly upstream already, we use this
+because it's much smaller.
+
+Patch by Diego Pettenò
+
+http://bugs.gentoo.org/123471
+
+
+--- flex-2.5.31/main.c
++++ flex-2.5.31/main.c
+@@ -344,7 +344,7 @@ void check_options ()
+ 
+     /* Setup the filter chain. */
+     output_chain = filter_create_int(NULL, filter_tee_header, headerfilename);
+-    filter_create_ext(output_chain,"m4","-P",0);
++    filter_create_ext(output_chain,GM4_PROGRAM,"-P",0);
+     filter_create_int(output_chain, filter_fix_linedirs, NULL);
+ 
+     /* For debugging, only run the requested number of filters. */
+--- flex-2.5.31/Makefile.am
++++ flex-2.5.31/Makefile.am
+@@ -141,7 +141,7 @@ SUBDIRS = \
+ 	tests
+ 
+ localedir = $(datadir)/locale
+-AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -I@includedir@ -I$(top_srcdir)/intl
++AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -I@includedir@ -I$(top_srcdir)/intl -DGM4_PROGRAM=\"@M4@\"
+ LIBS = @LIBINTL@ @LIBS@
+ 
+ skel.c: flex.skl mkskel.sh flexint.h tables_shared.h
+--- flex-2.5.31/Makefile.in
++++ flex-2.5.31/Makefile.in
+@@ -290,7 +290,7 @@ SUBDIRS = \
+ 
+ 
+ localedir = $(datadir)/locale
+-AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -I@includedir@ -I$(top_srcdir)/intl
++AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -I@includedir@ -I$(top_srcdir)/intl -DGM4_PROGRAM=\"@M4@\"
+ 
+ # Run GNU indent on sources. Don't run this unless all the sources compile cleanly.
+ #

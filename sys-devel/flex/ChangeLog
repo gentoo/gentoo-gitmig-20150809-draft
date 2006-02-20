@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.39 2006/02/09 05:35:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.40 2006/02/20 20:07:01 vapier Exp $
+
+  20 Feb 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/flex-2.5.31-gnu-m4.patch, flex-2.5.31-r2.ebuild:
+  Fix by Diego Pettenò to make sure we use GNU m4 #123471.
 
 *flex-2.5.31-r2 (09 Feb 2006)
 
