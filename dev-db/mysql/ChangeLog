@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.303 2006/02/18 11:35:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.304 2006/02/20 05:51:04 kumba Exp $
+
+  20 Feb 2006; Joshua Kinard <kumba@gentoo.org> mysql-4.1.18-r30.ebuild:
+  Added ~mips to KEYWORDS.
 
 *mysql-5.1.6_alpha-r30 (18 Feb 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.18-r30.ebuild,v 1.2 2006/02/18 11:35:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.18-r30.ebuild,v 1.3 2006/02/20 05:51:04 kumba Exp $
 
 # MYSQL_VERSION_ID will be
 # major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo magic number, all [0..99]
@@ -22,7 +22,7 @@ MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
 NDB_VERSION_ID=$(( ${MYSQL_VERSION_ID} / 100 ))
 
 inherit mysql
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 DEPEND="${DEPEND}
 	>=sys-libs/readline-4.1
