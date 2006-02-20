@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tux_aqfh/tux_aqfh-1.0.14.ebuild,v 1.6 2006/02/07 16:43:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tux_aqfh/tux_aqfh-1.0.14.ebuild,v 1.7 2006/02/20 22:37:08 tupone Exp $
 
 inherit eutils games
 
@@ -13,9 +13,18 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/plib-1.8.0
-	virtual/x11
+RDEPEND="virtual/glut
+	|| (
+		(
+			x11-libs/libXmu
+			x11-libs/libXi
+		)
+		virtual/x11
+	)
+	virtual/glu
 	virtual/opengl"
+DEPEND="${RDEPEND}
+	>=media-libs/plib-1.8.0"
 
 src_unpack() {
 	unpack ${A}
