@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.10.1.ebuild,v 1.6 2006/02/18 19:16:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.10.1.ebuild,v 1.7 2006/02/20 16:40:32 corsair Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.opensc-project.org/files/opensc/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~ppc ppc64 s390 sh sparc x86"
 IUSE="ldap pcsc-lite X"
 #pam
 
