@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sancho
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.8 2006/02/14 19:49:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.9 2006/02/20 04:21:54 kumba Exp $
+
+  20 Feb 2006; Joshua Kinard <kumba@gentoo.org> sancho-0.11-r1.ebuild,
+  sancho-2.1-r1.ebuild:
+  Added ~mips to keywords.
 
   14 Feb 2006; Fabian Groffen <grobian@gentoo.org> sancho-0.11-r1.ebuild:
   Marked ~ppc-macos (bug #122760), dependency of pycrypto...

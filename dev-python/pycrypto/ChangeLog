@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.32 2006/02/13 21:26:38 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.33 2006/02/20 04:23:43 kumba Exp $
+
+  20 Feb 2006; Joshua Kinard <kumba@gentoo.org> pycrypto-2.0.1-r4.ebuild:
+  Added ~mips to keywords.
 
 *pycrypto-2.0.1-r4 (13 Feb 2006)
 
