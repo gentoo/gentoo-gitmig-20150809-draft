@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.4-r3.ebuild,v 1.2 2006/02/13 15:45:56 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.4-r3.ebuild,v 1.3 2006/02/20 21:06:48 deltacow Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/acpid/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 -ppc x86"
+KEYWORDS="~alpha amd64 ~ia64 -ppc x86"
 IUSE="doc logrotate"
 
 DEPEND="sys-apps/sed"

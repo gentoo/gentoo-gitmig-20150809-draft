@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/acpid
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.20 2006/02/13 15:45:56 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.21 2006/02/20 21:06:48 deltacow Exp $
+
+  20 Feb 2006; Scott Stoddard <deltacow@gentoo.org> acpid-1.0.4-r3.ebuild:
+  Stable on amd64.
 
   13 Feb 2006; Henrik Brix Andersen <brix@gentoo.org> acpid-1.0.4-r3.ebuild:
   Stable on x86.
