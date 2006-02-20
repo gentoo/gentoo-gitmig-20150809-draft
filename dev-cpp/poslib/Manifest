@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f12b38a251004a8ade9942684efe15b8 ChangeLog 1476
-MD5 7ba209f3b177d48d608bb14e6f5bd0cf metadata.xml 562
-MD5 662b8f3cf6087584520a213f787a554e poslib-1.0.5.ebuild 750
-MD5 73c6b7b853a93e981dc94144f89b265b poslib-1.0.6.ebuild 753
+MD5 b762a45c88606bf5fd3cc74f8159e13b ChangeLog 1601
+RMD160 9c8dedeaba3020e33f46f540141da1e178ab8f07 ChangeLog 1601
+SHA256 c46ada609d872ce01c13cd423d09cad5fe1b9ef75116c74f2e94ebd72e32b8c2 ChangeLog 1601
 MD5 493d2924243ec303551d83a251ba508b files/digest-poslib-1.0.5 64
+RMD160 62008f57601dbb465bd635d58cf35b4d6b91d8cc files/digest-poslib-1.0.5 64
+SHA256 7f3a8d2ee01aa099c77599e2da5d71935e2031001162befe99322fbd6ce9c77a files/digest-poslib-1.0.5 64
 MD5 8b3b8697695a69ad7041944215efa104 files/digest-poslib-1.0.6 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLy+kCRZPokWLroQRAvmIAJ9frpaQYa8EAtDhi2zhQt0hedUesQCfXXot
-r8xCRwomuO7leNmGFMZxi6I=
-=NUZp
------END PGP SIGNATURE-----
+RMD160 b5201fe86049838986a0e4fc9b279e968d49439f files/digest-poslib-1.0.6 64
+SHA256 687bffadc6ef7c51a0e588ccedc8efa1bef876cdd5ecc99ce33fc6a8df265477 files/digest-poslib-1.0.6 64
+MD5 7ba209f3b177d48d608bb14e6f5bd0cf metadata.xml 562
+RMD160 c8e788a51c695e432baa09d0843cf81405089ef4 metadata.xml 562
+SHA256 04189be66e19a6d2e4ec1d291ebe9b611e426a2d27685aec9275056c1aa9467a metadata.xml 562
+MD5 036851755d4135e4ad04e1fc08207a80 poslib-1.0.5.ebuild 735
+RMD160 e8e37f5f822e06f41e34c9eeb5bbe3fb063fe313 poslib-1.0.5.ebuild 735
+SHA256 1096d46e8c68b4e9b41c4b0ef8b100591a79ceefdec3a3721e1b744c7be80007 poslib-1.0.5.ebuild 735
+MD5 8d066458e9f719ba7363acd87c87bac2 poslib-1.0.6.ebuild 738
+RMD160 13a88e195cdcbca59839de2fdec067c069fb56de poslib-1.0.6.ebuild 738
+SHA256 e4933c6ff778df16bc595824ac7e8329bef931b6c640241ac386ed6e0de73dde poslib-1.0.6.ebuild 738
