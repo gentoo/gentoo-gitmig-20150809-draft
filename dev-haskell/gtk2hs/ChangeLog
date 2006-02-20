@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/gtk2hs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.22 2006/02/14 12:34:00 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.23 2006/02/20 18:25:32 dcoutts Exp $
+
+  20 Feb 2006; <duncan@gentoo.org> +files/gtk2hs-0.9.10-ghc622.patch,
+  gtk2hs-0.9.10.ebuild:
+  Fix building with ghc-6.2.2. Fixes bug #115657.
 
   14 Feb 2006; <duncan@gentoo.org> +files/gtk2hs-0.9.10-cflags.patch,
   gtk2hs-0.9.10.ebuild:
