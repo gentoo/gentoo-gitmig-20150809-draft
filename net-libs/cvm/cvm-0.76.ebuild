@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.76.ebuild,v 1.2 2005/12/12 15:20:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.76.ebuild,v 1.3 2006/02/20 08:53:41 robbat2 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -18,6 +18,13 @@ DEPEND="${RDEPEND}
 		>=dev-libs/bglibs-1.027
 		mysql? ( dev-db/mysql )
 		postgres? ( dev-db/postgresql )"
+
+src_unpack() {
+	unpack ${A}
+	# disable this test, as it breaks under Portage
+	# and there is no easy fix
+	sed -i.orig -e '/qmail-lookup-nodomain/,/^END_OF_TEST_RESULTS/d' ${S}/tests.sh || die "sed failed"
+}
 
 src_compile() {
 	echo "/usr/include/bglibs" > conf-bgincs
@@ -44,4 +51,8 @@ src_install() {
 	dodoc ANNOUNCEMENT COPYING NEWS NEWS.sql NEWS.vmailmgr README README.vchkpw
 	dodoc README.vmailmgr TODO VERSION
 	dohtml *.html
+}
+
+src_test() {
+	sh tests.sh || die "Testing Failed"
 }
