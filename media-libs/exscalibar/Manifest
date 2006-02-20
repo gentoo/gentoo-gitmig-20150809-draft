@@ -1,15 +1,28 @@
-MD5 d17aff905a26aa350155acfc574631ad ChangeLog 595
-RMD160 3e756f10287a7ba5c2d657a7a874122cbfbd2249 ChangeLog 595
-SHA256 3f9e3c1d6cc37e8f992f97abbee3d2cf2a335398e2f82d2a98778544f99751a5 ChangeLog 595
-MD5 a7fb11dd1283bad46081ead5daece319 exscalibar-1.0.4.ebuild 1662
-RMD160 26628468e565585b28bbbdd7c880167b63296f4f exscalibar-1.0.4.ebuild 1662
-SHA256 a0d652c2a80ac0660cc631268c26063645d11d0862aefea303b074058137a47a exscalibar-1.0.4.ebuild 1662
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 14f166d9412cc49415d15f0bf2b19b90 ChangeLog 773
+RMD160 4bccad6910ab505cc8972d29fb5849673ea92ecb ChangeLog 773
+SHA256 95f56fd683229870a3753bb8494ee4b20c54bbd488697f3acf85cde475f6cc4c ChangeLog 773
+MD5 760f67cd7a0da9bc1dd24c135d4dcd19 exscalibar-1.0.4.ebuild 1717
+RMD160 5d5cee1bc54a7f8268eb9f7935b9f51c5ef41bd8 exscalibar-1.0.4.ebuild 1717
+SHA256 64d8a5c2130e84355ee164ee21bfa559a5c529a65afecefc82a076303db686f2 exscalibar-1.0.4.ebuild 1717
 MD5 101fa04dd319f3cf78f79dbe528ee52c files/digest-exscalibar-1.0.4 253
 RMD160 4d5ff8c620369fffe46b5a6456449d291d2ba06c files/digest-exscalibar-1.0.4 253
 SHA256 43c3bdf8cc0737373dd2fd2d7581f0601bd52209c621f248385a742080604259 files/digest-exscalibar-1.0.4 253
+MD5 9c62e7295131f1e5b2a4caf4f1b4d10f files/exscalibar-1.0.4-gcc4-amd64.diff 2410
+RMD160 ccedcd06f4f214d473bf79f1296794e19210d1b2 files/exscalibar-1.0.4-gcc4-amd64.diff 2410
+SHA256 4ef9ba45473890e23d596ea0207c28f9a8a91da74576ff7609bd91fce5b876c9 files/exscalibar-1.0.4-gcc4-amd64.diff 2410
 MD5 25502ff1fad3f11b96935ae9abaaf0d8 files/exscalibar-configure-disable-features.diff 2003
 RMD160 385279c665a3081c8c7cd4d1fd727bdec915609e files/exscalibar-configure-disable-features.diff 2003
 SHA256 c970304c250a2cfa92496b5c1ea604e6f8252d98d5b69baad734c83d5460a1b6 files/exscalibar-configure-disable-features.diff 2003
 MD5 2b0e9087ef8939ab0578160c97b115e0 metadata.xml 215
 RMD160 3c90f64bec54294d08fbffbc172ebc321c5245f1 metadata.xml 215
 SHA256 258b7218817d5b106d0de87dff165d12f747ce78b9333ca5ab0b07129823849c metadata.xml 215
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD+QpUr2QksT29OyARAtX8AJ9wtCrcGjDCce8y8FiiBO4PB2yMZQCfVBNj
+/Q+6js1EVLgUOaXeajaz66A=
+=+kzf
+-----END PGP SIGNATURE-----

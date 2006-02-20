@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/exscalibar-1.0.4.ebuild,v 1.3 2006/02/14 01:04:38 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/exscalibar-1.0.4.ebuild,v 1.4 2006/02/20 00:15:18 hanno Exp $
 
 inherit eutils qt3
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="sndfile mp3 vorbis fftw jack alsa doc"
 DEPEND="$(qt_min_version 3.2)
 	sndfile? ( >=media-libs/libsndfile-1.0.0 )
@@ -24,7 +24,8 @@ DEPEND="$(qt_min_version 3.2)
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}/exscalibar-configure-disable-features.diff"
+	epatch ${FILESDIR}/exscalibar-configure-disable-features.diff
+	epatch ${FILESDIR}/exscalibar-1.0.4-gcc4-amd64.diff
 }
 
 src_compile () {
