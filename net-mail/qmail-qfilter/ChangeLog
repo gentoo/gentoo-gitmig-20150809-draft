@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/qmail-qfilter
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/ChangeLog,v 1.10 2006/02/20 21:02:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/ChangeLog,v 1.11 2006/02/20 21:06:45 hansmi Exp $
 
 *qmail-qfilter-2.1 (20 Feb 2006)
 
@@ -8,6 +8,7 @@
   -qmail-qfilter-1.5.ebuild, qmail-qfilter-2.0.ebuild,
   +qmail-qfilter-2.1.ebuild:
   Bump to 2.1, 2.0 stable on amd64, ppc, sparc, x86. Removed old version.
+  Changed to virtual/qmail.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   qmail-qfilter-1.5.ebuild:
