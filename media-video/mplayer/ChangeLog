@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.343 2006/02/17 22:48:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.344 2006/02/20 21:29:12 lu_zero Exp $
+
+  20 Feb 2006; Luca Barbato <lu_zero@gentoo.org>
+  -files/mmst_fix_20050415.diff, -files/rtsp_fix_20050415.diff,
+  mplayer-1.0.20060217.ebuild:
+  fixed faad autodetection
 
   17 Feb 2006; Luca Barbato <lu_zero@gentoo.org>
   mplayer-1.0.20060217.ebuild:

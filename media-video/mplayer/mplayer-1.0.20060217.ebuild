@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060217.ebuild,v 1.3 2006/02/17 22:48:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060217.ebuild,v 1.4 2006/02/20 21:29:12 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
 lirc live livecd lzo mad matroska matrox mmx mmxext musepack nas nls nvidia
 vorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype
 v4l v4l2 win32codecs X xanim xinerama xmms xv xvid xvmc"
-# openal 
+# openal
 BLUV=1.4
 SVGV=1.9.17
 
@@ -233,8 +233,8 @@ src_compile() {
 
 
 
-	#FIXME make it work in the snapshot
-	local myconf="--disable-x264"
+	#FIXME make x264 work in the snapshot
+	local myconf="--disable-x264 --disable-external-faad"
 	################
 	#Optional features#
 	###############
@@ -487,12 +487,12 @@ src_install() {
 
 	einfo "Make install"
 	make prefix=${D}/usr \
-	     BINDIR=${D}/usr/bin \
+		 BINDIR=${D}/usr/bin \
 		 LIBDIR=${D}/usr/$(get_libdir) \
-	     CONFDIR=${D}/usr/share/mplayer \
-	     DATADIR=${D}/usr/share/mplayer \
-	     MANDIR=${D}/usr/share/man \
-	     install || die "Failed to install MPlayer!"
+		 CONFDIR=${D}/usr/share/mplayer \
+		 DATADIR=${D}/usr/share/mplayer \
+		 MANDIR=${D}/usr/share/man \
+		 install || die "Failed to install MPlayer!"
 	einfo "Make install completed"
 
 	dodoc AUTHORS ChangeLog README
