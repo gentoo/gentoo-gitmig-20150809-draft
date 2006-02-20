@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.1.ebuild,v 1.7 2005/02/19 17:58:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.1.ebuild,v 1.8 2006/02/20 20:53:16 hansmi Exp $
 
 MY_PV="${PV/_rc/-rc}"
 MY_P="${PN}-${MY_PV}"
@@ -10,10 +10,10 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~ppc ~sparc x86"
+KEYWORDS="amd64 arm hppa ppc sparc x86"
 IUSE=""
 
-DEPEND="mail-mta/qmail
+DEPEND="virtual/qmail
 	>=net-mail/vpopmail-5.3
 	net-mail/autorespond"
 RDEPEND="${DEPEND}

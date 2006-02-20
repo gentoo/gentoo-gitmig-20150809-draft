@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/qmailadmin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.6 2004/12/13 03:08:55 weeve Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.7 2006/02/20 20:53:16 hansmi Exp $
+
+  20 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
+  -qmailadmin-1.2.0_rc1.ebuild, -qmailadmin-1.2.0_rc2.ebuild,
+  -qmailadmin-1.2.0_rc2-r1.ebuild, qmailadmin-1.2.1.ebuild:
+  Changed to virtual/qmail. Stable on ppc, sparc. Removed old ebuilds.
 
   12 Dec 2004; Jason Wever <weeve@gentoo.org> qmailadmin-1.2.1.ebuild:
   Added ~sparc keyword.
