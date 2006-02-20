@@ -1,27 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 86d017fca2637356c5d3243290a573f7 ChangeLog 18551
-MD5 05a269373a205b54700e2265119951a0 files/digest-opera-7.54-r3 372
-MD5 5fde404310e76e32c90caff003dbbbb8 files/digest-opera-8.00 368
-MD5 8cbbc6d9dbd635e9b74831ac4209f292 files/digest-opera-8.01 372
-MD5 db1b0b78bf60d8137b84e200dacf2de7 files/digest-opera-8.02 372
-MD5 2f86a42f50ba144aae2761dc9f922906 files/digest-opera-8.50 372
+MD5 dd56559359833314d07cd06258812761 ChangeLog 18955
+RMD160 9cab283bd7ae7efbb0163fbef6b151c3804b1525 ChangeLog 18955
+SHA256 f31a566a9830a1b591f2fa7b3fd29a1e9b9a14bd9ea720631cc8e988b47191ad ChangeLog 18955
 MD5 c800460b72166b0b4f1b9ceeae585ff7 files/digest-opera-8.51 372
+RMD160 8fa10f03df29dfeb5383c44601b8eaa3b77c7e45 files/digest-opera-8.51 372
+SHA256 bd26ddb435dbefe9a0e814afa2469d2e684a7668c7409f4846babb80ebf1e399 files/digest-opera-8.51 372
+MD5 d101ca4019c29dd4a392f2086cd8842a files/digest-opera-8.52 1300
+RMD160 55209f3ab6733fdb7b61b93784f8d677e4e942ef files/digest-opera-8.52 1300
+SHA256 62d9267728b2f90cba936ce69a5058778c47b0357e14b125a586e3cdb93ce31d files/digest-opera-8.52 1300
 MD5 fa357d1def9207d9e5e81038265b52cb files/opera-qt.2.patch 416
+RMD160 854a3785d852e5bc1f55b01d9c0e1a81d232d5f6 files/opera-qt.2.patch 416
+SHA256 b5cd33f7c861c0c0a6ac44fddb25be282e43b1661f9f379e037ee5808608d1a0 files/opera-qt.2.patch 416
 MD5 3fbc8c365c121ec93a041532f07942f7 files/opera-qt.patch 328
+RMD160 7f1eb091ff203e206d986be6bf4cfa84394e30d7 files/opera-qt.patch 328
+SHA256 d5cc337bef87f005e276faaecde049bc15313aef5ea6d2ad763d1d33deaf6f69 files/opera-qt.patch 328
 MD5 bafbdb86632b055a10fe826d16ea5b7f files/opera.desktop 147
+RMD160 4413b32af8f46f0dc0fe7271e528f81dd295832f files/opera.desktop 147
+SHA256 39bcc8d03bf27d048f98ebb92b5490a27538dcba22492907e45930573d4fa9b9 files/opera.desktop 147
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 c466a4f4004881b5d1f51c8e68a0d507 opera-7.54-r3.ebuild 4987
-MD5 654eabba23cdab9ffe12a45fe6338fcd opera-8.00.ebuild 4060
-MD5 5cf989c7a198572b29f4d57d00934eb0 opera-8.01.ebuild 4063
-MD5 e1adc02142d88ba1be45f5e4332630da opera-8.02.ebuild 4059
-MD5 56e1b3f606c1222b19901e26a5a6a364 opera-8.50.ebuild 4061
+RMD160 bfa92d311ac4e8cc9a2190f578925f333ae096a8 metadata.xml 253
+SHA256 8e0389110e0cd8cc331b484cde34c22dd93f9f49df16c2263eea4d8e84093976 metadata.xml 253
 MD5 db5e3f94df7716a6dd20d0a70442e4bf opera-8.51.ebuild 4247
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDuwZXZ/iYVBmujdURApmYAJ0Wm/vgek0uX48wosLX62m5e8lQEwCg4viB
-SAqGvvk4oAS6YQ6CfcrJTdc=
-=Hd1L
------END PGP SIGNATURE-----
+RMD160 5fd55f41a37c9894e0b24e7e39e7b3f18d16a7b1 opera-8.51.ebuild 4247
+SHA256 f5ec80210c741c901db89218154bfe2cb9337e9e86f0d3800af1686bc6613437 opera-8.51.ebuild 4247
+MD5 644c7ded5a83a6fb5b647091857fb006 opera-8.52.ebuild 4458
+RMD160 2ff8c2c7e5db546acf64d07b7e3b1d8a02141818 opera-8.52.ebuild 4458
+SHA256 47792e8d424ccc7faaa7486bc68ce2284c4fa89e006c1a4bd921084f21aa21d7 opera-8.52.ebuild 4458

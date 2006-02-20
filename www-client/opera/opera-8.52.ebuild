@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.02.ebuild,v 1.4 2005/08/11 00:00:53 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.52.ebuild,v 1.1 2006/02/20 08:36:22 lanius Exp $
 
 inherit eutils
 
-IUSE="static spell qt kde"
+IUSE="qt-static spell qt kde"
 
-OPERAVER="8.02-20050727"
-OPERAFTPDIR="802/final/en"
+OPERAVER="8.52-20060201"
+OPERAFTPDIR="852/final/en"
 
 S=${WORKDIR}/${A/.tar.bz2/}
 
@@ -17,33 +17,44 @@ HOMEPAGE="http://www.opera.com/linux/"
 # that's an ugly workaround for the broken src_uri syntax
 OPERA_URI="mirror://opera/linux/${OPERAFTPDIR}/"
 SRC_URI="
-	x86? ( static? ( ${OPERA_URI}/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
-	x86? ( !static? ( ${OPERA_URI}/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
-	amd64? ( static? ( ${OPERA_URI}/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
-	amd64? ( !static? ( ${OPERA_URI}/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
-	sparc? ( ${OPERA_URI}/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )
-	ppc? ( ${OPERA_URI}/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )"
+	x86? ( qt-static? ( ${OPERA_URI}i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+	x86? ( !qt-static? ( ${OPERA_URI}i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+	amd64? ( qt-static? ( ${OPERA_URI}i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+	amd64? ( !qt-static? ( ${OPERA_URI}i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+	sparc? ( ${OPERA_URI}sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )
+	ppc? ( ${OPERA_URI}ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )"
 
-#	sparc? ( !static? ( ${OPERA_URI}/sparc/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )
-#	ppc? ( !static? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.3-shared-qt.ppc-en.tar.bz2 ) )
+#	sparc? ( !qt-static? ( ${OPERA_URI}/sparc/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )
+#	ppc? ( !qt-static? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.3-shared-qt.ppc-en.tar.bz2 ) )
 
 # Dependencies may be augmented later (see below).
 DEPEND=">=sys-apps/sed-4
 	amd64? ( sys-apps/linux32 )"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libXrandr
+				x11-libs/libXp
+				x11-libs/libXmu
+				x11-libs/libXi
+				x11-libs/libXft
+				x11-libs/libXext
+				x11-libs/libXcursor
+				x11-libs/libX11
+				x11-libs/libSM
+				x11-libs/libICE
+			  )
+			  virtual/x11
+			)
 	>=media-libs/fontconfig-2.1.94-r1
-	amd64? ( static? ( app-emulation/emul-linux-x86-xlibs )
-	         !static? ( app-emulation/emul-linux-x86-qtlibs ) )
-	!amd64? ( media-libs/libexif
-	          x11-libs/openmotif
+	amd64? ( qt-static? ( app-emulation/emul-linux-x86-xlibs )
+	         !qt-static? ( app-emulation/emul-linux-x86-qtlibs ) )
+	!amd64? ( virtual/motif
 	          spell? ( app-text/aspell )
-	          x86? ( !static? ( =x11-libs/qt-3* ) )
+	          x86? ( !qt-static? ( =x11-libs/qt-3* ) )
 	          media-libs/jpeg )"
 
 SLOT="0"
-LICENSE="OPERA"
-KEYWORDS="amd64 ~ppc sparc x86"
+LICENSE="OPERA-8.50"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 
 src_unpack() {
 	unpack ${A}
@@ -55,6 +66,7 @@ src_unpack() {
 	       -e "s:/etc/X11:${D}/etc/X11:g" \
 	       -e "s:/usr/share/gnome:${D}/usr/share/gnome:g" \
 	       -e "s:/opt/gnome/share:${D}/opt/gnome/share:g" \
+		   -e "s:/usr/share/applications:${D}/usr/share/applications:g" \
 	       -e 's:#\(OPERA_FORCE_JAVA_ENABLED=\):\1:' \
 	       -e 's:#\(export LD_PRELOAD OPERA_FORCE_JAVA_ENABLED\):\1:' \
 		   -e 's:read str_answer:return 0:' \
@@ -101,7 +113,7 @@ src_install() {
 
 	# enable spellcheck
 	if use spell; then
-		if use static; then
+		if use qt-static; then
 			DIR=$OPERAVER.1
 		else
 			use sparc && DIR=$OPERAVER.2 || DIR=$OPERAVER.5
@@ -109,10 +121,13 @@ src_install() {
 		echo "Spell Check Engine=/opt/opera/lib/opera/${DIR}/spellcheck.so" >> ${D}/opt/opera/share/opera/ini/spellcheck.ini
 	fi
 
-	if use qt || use kde; then
-		cd ${D}/opt/opera/bin
-		epatch ${FILESDIR}/opera-qt.2.patch
-	fi
+	#if use qt || use kde; then
+	#	cd ${D}/opt/opera/bin
+	#	epatch ${FILESDIR}/opera-qt.2.patch
+	#fi
+
+	dodir /etc/env.d
+	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > ${D}/etc/env.d/90opera
 }
 
 pkg_postinst() {

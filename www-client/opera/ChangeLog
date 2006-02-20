@@ -1,6 +1,19 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.32 2006/01/03 22:18:04 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.33 2006/02/20 08:36:22 lanius Exp $
+
+  20 Feb 2006; Heinrich Wendel <lanius@gentoo.org> -opera-7.54-r3.ebuild,
+  -opera-8.00.ebuild, -opera-8.01.ebuild, -opera-8.02.ebuild,
+  -opera-8.50.ebuild, +opera-8.52.ebuild:
+  remove old ebuilds
+
+*opera-8.52 (20 Feb 2006)
+
+  20 Feb 2006; Heinrich Wendel <lanius@gentoo.org> +opera-8.52.ebuild:
+  security bump; cleanups
+
+  20 Feb 2006; Heinrich Wendel <lanius@gentoo.org> ChangeLog:
+  security bump
 
   03 Jan 2006; Karol Wojtaszek <sekretarz@gentoo.org> opera-8.51.ebuild:
   Add modular X dependencies, bug #115957
