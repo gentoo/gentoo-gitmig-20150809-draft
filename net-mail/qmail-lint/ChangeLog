@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail-lint
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-lint/ChangeLog,v 1.2 2004/06/24 23:27:34 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-lint/ChangeLog,v 1.3 2006/02/20 20:49:38 hansmi Exp $
+
+  20 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
+  qmail-lint-0.55.ebuild:
+  Added to ~hppa, ~ppc, ~sparc. Changed to virtual/qmail.
 
 *qmail-lint-0.55 (04 Aug 2003)
 
