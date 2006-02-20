@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/spandsp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.5 2005/09/06 21:33:35 stkn Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.6 2006/02/20 18:15:09 gustavoz Exp $
+
+*spandsp-0.0.2_pre25 (20 Feb 2006)
+
+  20 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  -spandsp-0.0.2_pre10.ebuild, spandsp-0.0.2_pre18.ebuild,
+  spandsp-0.0.2_pre20.ebuild, +spandsp-0.0.2_pre25.ebuild:
+  Retired pre10 gone upstream, fixed SRC_URI, revbump to pre25 thanks to Jesse
+  Guardiani #123450
 
 *spandsp-0.0.2_pre20 (06 Sep 2005)
 
