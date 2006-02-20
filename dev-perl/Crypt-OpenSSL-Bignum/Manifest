@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 37971f77bf62d8c29e420e2cca905d17 ChangeLog 421
+MD5 49409aea59bb8fd52a5293c824f8be60 Crypt-OpenSSL-Bignum-0.03.ebuild 516
+MD5 8fa82635ab8808c76025bc33aa666290 files/digest-Crypt-OpenSSL-Bignum-0.03 75
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD+cl7tG5z4I8BtQoRAkvAAJ9fgL4xjvqkWU6G7i3mG8KbRAagpwCfXa68
+EW4h2oZluN/FMJdo+Rtjoko=
+=Tm8i
+-----END PGP SIGNATURE-----
