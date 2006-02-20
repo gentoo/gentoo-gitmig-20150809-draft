@@ -1,6 +1,9 @@
 # ChangeLog for gentoo-x86/virtual
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/ChangeLog,v 1.1 2006/02/19 23:48:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/ChangeLog,v 1.2 2006/02/20 00:14:12 hansmi Exp $
+
+  20 Feb 2006; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03.ebuild:
+  Stable on m68k, s390, sh.
 
 *qmail-1.03 (19 Feb 2006)
 
