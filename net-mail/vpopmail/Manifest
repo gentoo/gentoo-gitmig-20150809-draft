@@ -1,30 +1,48 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 59093641b7a48c96cb005ef9ba492256 ChangeLog 10897
+MD5 10a14bb5ef47419f26931c2e7d9489f8 ChangeLog 11155
+RMD160 bc9a96f8fbe730559a0515a2e2f40c62111070f7 ChangeLog 11155
+SHA256 061477cecb233b92501dcb942b5a8ec3bd45d4c7a6ed438278bbc51267360b73 ChangeLog 11155
 MD5 3041a3223960dc956b67ac1230f00db7 files/99vpopmail 86
-MD5 175cc82c17dfbb2ab785271ff71e8f5c files/digest-vpopmail-5.4.10 67
+RMD160 2ede3f28e75f950c46fda8b43242b3d9c9d1c55b files/99vpopmail 86
+SHA256 15c0f4c42f654492e7d41772974d91e140626fcf8670d7540fc10d608209e9a1 files/99vpopmail 86
 MD5 932b241ee21fdbe7601622592f4ef78e files/digest-vpopmail-5.4.13 67
+RMD160 14d71cc443859c32f3da2075f1ac07dff8923d18 files/digest-vpopmail-5.4.13 67
+SHA256 46028a7ff539e79893ab1380fedc70230511ce7b4aa047f5ce11d7165e4a2c84 files/digest-vpopmail-5.4.13 67
 MD5 1c75d4c70c599202edf1d9599bf40ef2 files/digest-vpopmail-5.4.6-r1 66
-MD5 aea08e2e6df4cf89a2a32a8817cc7135 files/digest-vpopmail-5.4.9-r2 66
+RMD160 b62d4d25e6e17e35c2ba8c9f195f0a3c13887639 files/digest-vpopmail-5.4.6-r1 66
+SHA256 cd24dd0a5a7f00b6271dc153b9afd47e00b1c2c86b682bd43bb76e77f1393a86 files/digest-vpopmail-5.4.6-r1 66
 MD5 7bdd629eebc8f1ea4ba47e8cd4f3f3eb files/vpopmail-5.2.1-showall.patch 754
+RMD160 0ea48a7243b3536692cd8432f00430d7de8904e9 files/vpopmail-5.2.1-showall.patch 754
+SHA256 fe0e2b78b721415b5c95b944902dbaf5f214bf01c9237fb6359429fe3a4276f9 files/vpopmail-5.2.1-showall.patch 754
 MD5 eb33b7205c4d4d75c4fc3710d7774e07 files/vpopmail-5.4.6-access.violation.patch 918
+RMD160 5516adfc50adf66754d41ad4de67c3d8b7f78042 files/vpopmail-5.4.6-access.violation.patch 918
+SHA256 cf6840d7dc6131969ef5a69b1d520a5d01d7414e1638a0eeebd12c5689f380ac files/vpopmail-5.4.6-access.violation.patch 918
 MD5 eb33b7205c4d4d75c4fc3710d7774e07 files/vpopmail-5.4.9-access.violation.patch 918
+RMD160 5516adfc50adf66754d41ad4de67c3d8b7f78042 files/vpopmail-5.4.9-access.violation.patch 918
+SHA256 cf6840d7dc6131969ef5a69b1d520a5d01d7414e1638a0eeebd12c5689f380ac files/vpopmail-5.4.9-access.violation.patch 918
 MD5 8c6ca78a4c32c9a267dd9c3f7e9db5f1 files/vpopmail-Maildir-dotmaildir-fix.sh 1480
+RMD160 691f03e6a7eee4597ef7615720618bccd2c8439f files/vpopmail-Maildir-dotmaildir-fix.sh 1480
+SHA256 de2100c8f56116591870b55f953ae3358c0f65d1920d5acda3c1c00bc5c10085 files/vpopmail-Maildir-dotmaildir-fix.sh 1480
 MD5 4b9ecca5815031b05bd173888da4d228 files/vpopmail-cdb-Makefile.patch 363
+RMD160 9e85433d347f5561495c13189d5a86b4dc569d48 files/vpopmail-cdb-Makefile.patch 363
+SHA256 7b405a185e9c844faf33b3f0154c52023e8f191556cb085a3651b53dbad43a84 files/vpopmail-cdb-Makefile.patch 363
 MD5 aa40d1572827d929f64cdcdabb71f437 files/vpopmail-fPIC.patch 7397
+RMD160 111839636b0c46bc5989037e488e40460a458f8e files/vpopmail-fPIC.patch 7397
+SHA256 d63d8f172cc213eabb03704cf55795864291e9bddbee27a845b26db48e36e774 files/vpopmail-fPIC.patch 7397
 MD5 64f166cd6f9ffc206ab5842a1286b546 files/vpopmail-lazy.patch 324
+RMD160 9c65dfd19ed52cbb8e2e828973dfed9ab1d1cb57 files/vpopmail-lazy.patch 324
+SHA256 aa1f8123433b82cdae554c943c8731359e226c598cea22496fdd63a11ab58fc4 files/vpopmail-lazy.patch 324
 MD5 851f9c731b7d03472a08ee21c046823d files/vpopmail.clearopensmtp 235
+RMD160 9cb47b507e22f25ed27b56e00593d93724f00625 files/vpopmail.clearopensmtp 235
+SHA256 c98c52414e5fbc6f02b0e146546f464613ac483a2c81e5ee11ee154cdceb8883 files/vpopmail.clearopensmtp 235
 MD5 63284ad7aa0644157e4b754b969a8421 files/vpopmail.conf 466
+RMD160 80bc94ab202558ad4ec044810a7ceeb9032eaad3 files/vpopmail.conf 466
+SHA256 66d50ec6ba176cab96934ebc696d880d2d60d5767e19464cab54f85e54ac421e files/vpopmail.conf 466
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 dddfe003571e18a6ec4bf6a066a529a0 vpopmail-5.4.10.ebuild 7821
-MD5 a64bd43b106cfb4516836e5aab66f7d3 vpopmail-5.4.13.ebuild 7703
-MD5 8908c9b0ecaf8f8f23be07251f981cd0 vpopmail-5.4.6-r1.ebuild 7627
-MD5 2b1d36bf9b4e5b467609704541ee1402 vpopmail-5.4.9-r2.ebuild 7816
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyaoF2+ySkm8kpY0RAutUAKCcjMrNMBsCWR3TjM2D+AAPefZONwCfayqg
-cC4Dez5oWRejkq+TPNEGddw=
-=33DZ
------END PGP SIGNATURE-----
+RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
+SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
+MD5 5f743b714cd7e3127bbe6664be5d5072 vpopmail-5.4.13.ebuild 7707
+RMD160 cb5cb000affbd0364451d8ce202ed20d0f191b13 vpopmail-5.4.13.ebuild 7707
+SHA256 9aaff4ddee657f6b0468a8e93fffe6d53e328e3cdb39ee98058a781593de62e9 vpopmail-5.4.13.ebuild 7707
+MD5 38131d11a3d3b2311e1d6e02a0d36a7b vpopmail-5.4.6-r1.ebuild 7625
+RMD160 8e6212d2a060565dd1fe052bb81f44e02399f92a vpopmail-5.4.6-r1.ebuild 7625
+SHA256 688baff6b8989ee3fa673cd64793215377d24a882238f886fd02f4724ab3cb40 vpopmail-5.4.6-r1.ebuild 7625
