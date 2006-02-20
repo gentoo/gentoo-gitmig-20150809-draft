@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1-r1.ebuild,v 1.12 2006/02/20 21:22:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.2.ebuild,v 1.1 2006/02/20 21:22:05 hansmi Exp $
 
 inherit fixheadtails eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://untroubled.org/qmail-autoresponder/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 hppa mips ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE="mysql"
 
 DEPEND="virtual/libc
@@ -24,11 +24,6 @@ RDEPEND="
 
 src_unpack() {
 	unpack ${A}
-
-	# This patch fixes a multi-line string issue with gcc-3.3
-	# Closes Bug #30137
-	epatch ${FILESDIR}/${P}-gcc33-multiline-string-fix.patch
-
 	cd ${S}
 	ht_fix_file Makefile
 }
