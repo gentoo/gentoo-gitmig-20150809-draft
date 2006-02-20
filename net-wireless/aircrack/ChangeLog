@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/aircrack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/ChangeLog,v 1.18 2006/01/22 22:51:40 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/ChangeLog,v 1.19 2006/02/20 22:21:23 jokey Exp $
+
+  20 Feb 2006; Markus Ullmann <jokey@gentoo.org> aircrack-2.41-r1.ebuild:
+  Removing virtual/libpcap wrt bug #117898
 
   22 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> aircrack-2.41-r1.ebuild:
   Update HOMEPAGE and use our mirrors for bug 119981. Thanks to FieldySnuts

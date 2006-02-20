@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/aircrack-2.41-r1.ebuild,v 1.2 2006/01/22 22:51:40 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/aircrack-2.41-r1.ebuild,v 1.3 2006/02/20 22:21:23 jokey Exp $
 
 inherit toolchain-funcs eutils
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
-	virtual/libpcap"
+	net-libs/libpcap"
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
