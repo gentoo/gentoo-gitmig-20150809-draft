@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/vqadmin-2.3.6.ebuild,v 1.6 2004/12/13 03:10:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/vqadmin-2.3.6.ebuild,v 1.7 2006/02/20 22:13:32 hansmi Exp $
 
 inherit gnuconfig
 
@@ -12,7 +12,7 @@ IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 DEPEND=">=net-mail/vpopmail-5.3
-		mail-mta/qmail"
+		virtual/qmail"
 RDEPEND="${DEPEND}
 	net-mail/qmailadmin
 	net-www/apache"

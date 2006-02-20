@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vqadmin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/ChangeLog,v 1.3 2004/12/13 03:10:19 weeve Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/ChangeLog,v 1.4 2006/02/20 22:13:32 hansmi Exp $
+
+  20 Feb 2006; Michael Hanselmann <hansmi@gentoo.org> vqadmin-2.3.6.ebuild:
+  Changed to virtual/qmail.
 
   12 Dec 2004; Jason Wever <weeve@gentoo.org> vqadmin-2.3.6.ebuild:
   Added ~sparc keyword, resolves bug #73946.
