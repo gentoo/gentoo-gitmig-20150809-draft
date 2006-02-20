@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.93 2006/02/09 20:55:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.94 2006/02/20 17:01:14 corsair Exp $
+
+  20 Feb 2006; Markus Rothe <corsair@gentoo.org>
+  sane-backends-1.0.15-r3.ebuild:
+  Stable on ppc64
 
   18 Jan 2006; Jeroen Roovers <jer@gentoo.org> sane-backends-1.0.17.ebuild:
   Marked for testing on hppa.
