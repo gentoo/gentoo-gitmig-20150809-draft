@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.262 2006/02/20 06:23:13 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.263 2006/02/20 06:36:48 kumba Exp $
+
+  20 Feb 2006; Joshua Kinard <kumba@gentoo.org> postgresql-8.1.3.ebuild:
+  Kick 8.1.3 back down to mips unstable -- no need to jump ahead of the other
+  archs.
 
   20 Feb 2006; Joshua Kinard <kumba@gentoo.org> postgresql-7.3.14.ebuild,
   postgresql-7.4.12.ebuild, postgresql-8.0.7.ebuild,
