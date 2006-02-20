@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a86cb3f6fb9a8d9df4cb34131f9ef1e ChangeLog 1036
-MD5 8e119a24844842e421d7b400ff138974 files/digest-shapelib-1.2.10 67
+MD5 2f1cb19fc747da591075e494b7a21bff ChangeLog 1253
+RMD160 58a2ec2d48f7c96942d12bd7568228146455dde1 ChangeLog 1253
+SHA256 3cbd0fa46ce36a9aa3c2c789a3a7b773e669c10ceba70582886dfaa246348b7e ChangeLog 1253
+MD5 6a667a0d0bd28f9e9a1477990a73a867 files/digest-shapelib-1.2.10-r1 247
+RMD160 a365ea534da770039ba042da146cfbbe813b1edc files/digest-shapelib-1.2.10-r1 247
+SHA256 5f2c2a44177d3b04c34f1218f3226c710685d6e855efec1519effcd92f68821c files/digest-shapelib-1.2.10-r1 247
 MD5 8cfef0e9a4540e9d7cc628e70e95c49a metadata.xml 429
-MD5 f1779c3e07dbb995e19cf1f14e8ae6d0 shapelib-1.2.10.ebuild 699
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDeB1rgIKl8Uu19MoRAuazAJ0X1qDrehORQxH/Lm1bqL2ytoxsmACfdgOB
-IfuDG5VlXUkdzK2Cc2aJ1ac=
-=4lMo
------END PGP SIGNATURE-----
+RMD160 e52181c8b5001f79e53ac3651df87691696fdc30 metadata.xml 429
+SHA256 f62b7f3057d77bda9827de92e739bb341b654b3f02cfcf74df941ea3f13e215f metadata.xml 429
+MD5 07c8a0a3f11c8e29f781d6b35d8148c7 shapelib-1.2.10-r1.ebuild 978
+RMD160 af909dd2151e6bb05a2aa1e946c943b9a6333c2d shapelib-1.2.10-r1.ebuild 978
+SHA256 c489481b9869324709baac0136019f225648330d508ec5cdca0865ed747977af shapelib-1.2.10-r1.ebuild 978

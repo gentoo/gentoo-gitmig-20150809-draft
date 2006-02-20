@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/shapelib
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.5 2005/10/07 10:19:18 carlo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.6 2006/02/20 00:41:08 nerdboy Exp $
+
+*shapelib-1.2.10-r1 (20 Feb 2006)
+
+  20 Feb 2006; Steve Arnold <nerdboy@gentoo.org> -shapelib-1.2.10.ebuild,
+  +shapelib-1.2.10-r1.ebuild:
+  revision bump with fix for bug #123330, along with rework of src_install
 
   07 Oct 2005; Carsten Lohrke <carlo@gentoo.org> shapelib-1.2.10.ebuild:
   fixed typo
