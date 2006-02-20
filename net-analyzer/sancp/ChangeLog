@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/sancp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/ChangeLog,v 1.5 2006/02/15 23:50:15 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/ChangeLog,v 1.6 2006/02/20 20:28:47 vanquirius Exp $
+
+*sancp-1.6.1-r1 (20 Feb 2006)
+
+  20 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> +sancp-1.6.1-r1.ebuild:
+  Add a couple of patches from upstream for bug 123521. Thanks to Clemente
+  Aguiar <caguiar at madeiratecnopolo dot pt>.
 
   15 Feb 2006; Markus Ullmann <jokey@gentoo.org> sancp-1.6.1.ebuild:
   Removing virtual/libpcap wrt bug #117898
