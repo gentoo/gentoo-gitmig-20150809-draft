@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93-r1.ebuild,v 1.7 2004/10/26 20:02:14 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93-r1.ebuild,v 1.8 2006/02/20 20:56:14 hansmi Exp $
 
 inherit toolchain-funcs
 
@@ -10,13 +10,15 @@ HOMEPAGE="http://untroubled.org/qmail-notify/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="amd64 ~hppa ~ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
-
-RDEPEND="virtual/cron
-	mail-mta/qmail"
+RDEPEND="
+	${DEPEND}
+	virtual/cron
+	virtual/qmail
+"
 
 src_compile() {
 	cd ${S}

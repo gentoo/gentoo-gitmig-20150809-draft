@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail-notify
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/ChangeLog,v 1.11 2004/10/26 20:02:14 slarti Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/ChangeLog,v 1.12 2006/02/20 20:56:14 hansmi Exp $
+
+  20 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
+  -qmail-notify-0.93.ebuild, qmail-notify-0.93-r1.ebuild:
+  Stable on amd64, sparc, x86. Added to ~hppa, ~ppc. Removed old ebuilds.
 
   26 Oct 2004; Tom Martin <slarti@gentoo.org> qmail-notify-0.93-r1.ebuild,
   qmail-notify-0.93-r1.ebuild:
