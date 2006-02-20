@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8.ebuild,v 1.6 2006/02/15 21:56:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8.ebuild,v 1.7 2006/02/20 13:38:03 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -33,7 +33,7 @@ RDEPEND="~sys-devel/libperl-${PV}
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.3 )"
 
-PDEPEND="app-admin/perl-cleaner"
+PDEPEND=">=app-admin/perl-cleaner-1.03"
 
 pkg_setup() {
 	# I think this should rather be displayed if you *have* 'ithreads'
