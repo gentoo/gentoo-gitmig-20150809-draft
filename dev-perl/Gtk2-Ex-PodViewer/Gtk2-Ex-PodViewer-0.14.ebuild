@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PodViewer/Gtk2-Ex-PodViewer-0.14.ebuild,v 1.5 2006/02/13 13:01:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PodViewer/Gtk2-Ex-PodViewer-0.14.ebuild,v 1.6 2006/02/20 19:55:24 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -20,6 +20,7 @@ DEPEND=">=x11-libs/gtk+-2
 	dev-perl/IO-stringy
 	virtual/perl-PodParser
 	dev-perl/Pod-Simple
+	dev-perl/Gtk2-Ex-Simple-List
 	dev-perl/Locale-gettext"
 
 src_unpack() {
