@@ -33,7 +33,6 @@ dev-libs/libedit-20020225
 dev-libs/libiconv-1.9
 dev-libs/libxml2-2.6.7
 dev-libs/openssl-0.9.7b
-dev-libs/cyrus-sasl-2.1.18
 dev-php/mod_php-4.2
 dev-php/php-4.3.2
 dev-tcltk/expect-5.32

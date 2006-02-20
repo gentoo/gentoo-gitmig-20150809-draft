@@ -35,7 +35,6 @@ dev-libs/libiconv-1.9
 dev-libs/libxml2-2.6.16
 dev-libs/libxslt-1.1.11
 dev-libs/openssl-0.9.7b
-dev-libs/cyrus-sasl-2.1.18
 dev-perl/mod_perl-1.3
 dev-perl/wxperl-0.22
 dev-php/mod_php-4.3.11
