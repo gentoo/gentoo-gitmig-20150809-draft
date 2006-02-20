@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.8.ebuild,v 1.7 2006/02/20 02:28:47 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.13.2.ebuild,v 1.1 2006/02/20 02:28:47 latexer Exp $
 
-inherit libtool eutils
+inherit libtool eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Library for using System.Drawing with Mono"
 
@@ -12,27 +12,31 @@ SRC_URI="http://www.go-mono.com/sources/${PN}-${PV:0:3}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="tiff gif jpeg png"
 
-DEPEND="sys-devel/libtool
-	sys-devel/automake
-	sys-devel/autoconf
-	|| ( (	x11-libs/libXrender
+RDEPEND="|| ( (	x11-libs/libXrender
 		x11-libs/libX11
 		x11-libs/libXt )
-		virtual/x11 )
+	virtual/x11 )
+	dev-libs/glib
+	media-libs/freetype
+	media-libs/fontconfig
 	tiff? ( media-libs/tiff )
 	gif? ( >=media-libs/giflib-4.1.3 )
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )"
 
+DEPEND="${RDEPEND}
+	sys-devel/libtool
+	sys-devel/automake
+	sys-devel/autoconf"
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.1.4-included-cairo-fix.diff || die
-	epatch ${FILESDIR}/${PN}-1.1.8-giflib.diff || die
+	epatch ${FILESDIR}/${PN}-1.1.13-libungif-configure-fix.diff
 	libtoolize --copy --force || die "libtoolize failed"
 	autoheader || die "autoheader failed"
 	aclocal || die "aclocal failed"
@@ -41,6 +45,13 @@ src_unpack() {
 }
 
 src_compile() {
+	if [ "$(gcc-major-version)" -gt "3" ] || \
+		( [ "$(gcc-major-version)" == "3" ] && \
+			[ "$(gcc-minor-version)" -gt "3" ] )
+	then
+		append-flags -fno-inline-functions
+	fi
+
 	local myconf="--with-cairo=included --disable-glitz"
 	use tiff ||  myconf="--without-libtiff ${myconf}"
 	use gif ||  myconf="--without-libgif ${myconf}"
@@ -55,7 +66,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	#einstall || die
-
 	dodoc AUTHORS ChangeLog NEWS README
 }
