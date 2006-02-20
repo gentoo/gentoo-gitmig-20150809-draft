@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8.ebuild,v 1.8 2006/02/20 22:05:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8.ebuild,v 1.9 2006/02/20 22:30:01 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -108,6 +108,7 @@ src_unpack() {
 	use amd64 && cd ${S} && epatch ${FILESDIR}/${P}-lib64.patch
 
 	[[ ${CHOST} == *-dragonfly* ]] && cd ${S} && epatch ${FILESDIR}/${P}-dragonfly-clean.patch
+	[[ ${CHOST} == *-freebsd* ]] && cd ${S} && epatch ${FILESDIR}/${P}-fbsdhints.patch
 	cd ${S}; epatch ${FILESDIR}/${P}-USE_MM_LD_RUN_PATH.patch
 	cd ${S}; epatch ${FILESDIR}/${P}-links.patch
 
