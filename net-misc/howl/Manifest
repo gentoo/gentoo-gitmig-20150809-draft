@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 05913b6f998cfbaafc987e9d276a9dc6 ChangeLog 5968
+MD5 b20e96ac15b23e73b05417231635d856 ChangeLog 6054
 MD5 907cfa8e12495034fd9279c63f14ddf2 files/0.9.2-ppc.patch 329
 MD5 ab360feeba18b277ee131077bf3c47b5 files/digest-howl-0.9.6-r2 62
 MD5 60c7ad1df5b54521c910001c7a0094be files/digest-howl-0.9.8 62
@@ -13,12 +10,5 @@ MD5 61175700477c9d36a01c9d61e1c73e7e files/nifd.conf.d 578
 MD5 556b0de09b5f9106dc398344978b971f files/nifd.init.d 623
 MD5 e6cb78649592717aab8a16499eb29b5c howl-0.9.6-r2.ebuild 1736
 MD5 ef698eb52dc8cb4917a597ad0649bad8 howl-0.9.8.ebuild 2255
-MD5 df42ff4fcec09366a78211674a622570 howl-1.0.0.ebuild 2411
+MD5 95aa6f5573c7abcadbcdf2b8bbc1272f howl-1.0.0.ebuild 2409
 MD5 f1745b912ee998369590df5db2bdad97 metadata.xml 514
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD8z2dKRy60XGEcJIRAh34AKCG7vqHnVyKhoGfvHt8/5fj9YxTggCfW9LK
-KavWF6EeoHPuHfQy01rURVQ=
-=ARQ8
------END PGP SIGNATURE-----
