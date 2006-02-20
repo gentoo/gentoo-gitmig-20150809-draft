@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4-r1.ebuild,v 1.2 2006/02/14 15:58:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4-r1.ebuild,v 1.3 2006/02/20 19:42:32 malverian Exp $
 
 inherit eutils gnome2 multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="A versatile IDE for GNOME"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://anjuta.sourceforge.net/"
 
-IUSE="doc"
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
@@ -33,8 +33,6 @@ RDEPEND=">=dev-libs/glib-2.0.6
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS COPYING ChangeLog FUTURE NEWS README THANKS TODO "
-
 MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
@@ -53,14 +51,19 @@ src_unpack() {
 	gnome2_omf_fix
 }
 
+src_install() {
+	# Fix docs installation (per bug #61344)
+	sed -i "s:share/doc/${PN}:share/doc/${PF}:g" Makefile
+	sed -i "s:share/doc/${PN}:share/doc/${PF}/html:g" doc/Makefile
+
+	gnome2_src_install
+
+	prepalldocs
+}
+
 pkg_postinst() {
 
 	gnome2_pkg_postinst
-
-	if use doc; then
-		dodoc ${S}/manuals
-		dodoc ${S}/doc
-	fi
 
 	einfo
 	einfo "Some project templates may require additional development"
