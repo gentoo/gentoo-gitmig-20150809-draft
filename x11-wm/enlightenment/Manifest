@@ -1,64 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d1da20a2634354a7b7fd646eacb5a31d ChangeLog 6025
-RMD160 86b0f5a31786c2f4a1aa66fb504128f93af1de08 ChangeLog 6025
-SHA256 d544cad4e4213e468072a92d9735b9d19295c76d6bb034aa86a6430e6e4ad9ef ChangeLog 6025
+MD5 cb515e95a9f2897973ef63088e5c5556 ChangeLog 6124
 MD5 e58a523f218b83377e26940d3b59d4c7 enlightenment-0.16.5-r4.ebuild 1602
-RMD160 021194107588f6e710c860becd912487ef8ea720 enlightenment-0.16.5-r4.ebuild 1602
-SHA256 5e461f361fd2f46a4b798b984b0a388beece98aa4cd726bfd889d09ac987707e enlightenment-0.16.5-r4.ebuild 1602
 MD5 58272e98cbbb3629a3a94780fe2671bd enlightenment-0.16.6.ebuild 1854
-RMD160 f69d68629bbe3ed4cd3bf7e903224452165401b8 enlightenment-0.16.6.ebuild 1854
-SHA256 8bd7bd6458ae90b7bc04c862c2a828eecb39f58e25cc0748bbd96486a82cd375 enlightenment-0.16.6.ebuild 1854
 MD5 aa422efda2e5a2af1eb66c9182d99bca enlightenment-0.16.7.2.ebuild 1565
-RMD160 a5dfd3e6f61b2009142f1538428a7bd1fe54ba5f enlightenment-0.16.7.2.ebuild 1565
-SHA256 18356497753fba717f291320e0f3c93832afd404b13e0647cce299cf0a7a83e5 enlightenment-0.16.7.2.ebuild 1565
-MD5 edb199afa61d0687e3283be53b7f1596 enlightenment-0.16.8.ebuild 1528
-RMD160 a26d56f2ae96e909658befc7b42b992736dbe708 enlightenment-0.16.8.ebuild 1528
-SHA256 81f3856e8be75a1fba2d36feb479a808c0dfa1c2dc882e6fef43835ef0af3d5e enlightenment-0.16.8.ebuild 1528
+MD5 5a6f21d242b6552c78a1173c13c47659 enlightenment-0.16.8.ebuild 1537
 MD5 1441ce5bc9028eb448e5daa4d4c3268b enlightenment-0.16.9999.ebuild 1564
-RMD160 855219314c1e85237766832d013be179f5569db1 enlightenment-0.16.9999.ebuild 1564
-SHA256 7d792d4830335d57f2c508b254cd758ca53c21f964f70ebd7ac28c3e7bbd2506 enlightenment-0.16.9999.ebuild 1564
 MD5 fbe59612181a2fb8c213b815a2f45ebd files/0.16.6-edox.patch 2775
-RMD160 48d7e10dc80d4350286fb28e6eaa23cf05d50841 files/0.16.6-edox.patch 2775
-SHA256 9120b15a767e504d6e0808bd69504b49bf12c860f2920a07648a53cf70713b5c files/0.16.6-edox.patch 2775
 MD5 c0e73afcafa0fbb90610eef266a75c82 files/0.16.6-kde-menu.patch 454
-RMD160 bb83b5cbaa32c09284ec8138180870b089704632 files/0.16.6-kde-menu.patch 454
-SHA256 a9b01cd103939c3fb2071c476c208b0f75eb1d8f9acd20591817da1c42352e91 files/0.16.6-kde-menu.patch 454
 MD5 de50be73f3493d4787a6533b08077d06 files/cursors.cfg 686
-RMD160 2990515cdba3d1041a2893ab372d69923d098708 files/cursors.cfg 686
-SHA256 b9d9b3d8725156e0c15e2b2e1e493ed26ce8c579ce248958dcefa80025bf57f6 files/cursors.cfg 686
 MD5 d819ee46c7b2aa186f90e4bd21ae9ec9 files/digest-enlightenment-0.16.5-r4 74
-RMD160 ccbe6cb578d7961019be18b2a6e78752cc26047e files/digest-enlightenment-0.16.5-r4 74
-SHA256 cfa271c27e6e253abb131dac4d6e2c032f2fd65d3aa1af17f2e67d6d5d34db95 files/digest-enlightenment-0.16.5-r4 74
 MD5 24c537c993ea9c463f993b24a872183c files/digest-enlightenment-0.16.6 74
-RMD160 ece368970389b2d9deb9ecc1fb1d1b05b67d07a6 files/digest-enlightenment-0.16.6 74
-SHA256 b4abea993a73e9aba4dba48edc893c9827d49e2bf2439c0794020a6ba5a2ddd8 files/digest-enlightenment-0.16.6 74
 MD5 01290d54c8d28735c2fe344796bfa7ba files/digest-enlightenment-0.16.7.2 75
-RMD160 6902655cb138137b9201cc91cf5df5113c662282 files/digest-enlightenment-0.16.7.2 75
-SHA256 2387f53c1dcd51db6571a15bbc68b7415d661c4c529a331bcec51495575abca7 files/digest-enlightenment-0.16.7.2 75
 MD5 ce86a310c8b64b1ce73fbd9c7c33bdca files/digest-enlightenment-0.16.8 235
-RMD160 1644ada3c9832b6df075b34bdfa34447b702ed12 files/digest-enlightenment-0.16.8 235
-SHA256 adb79cff13b14a45b3420dd56a47d336a7b8848c08bc29d4976308cf802ef682 files/digest-enlightenment-0.16.8 235
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-enlightenment-0.16.9999 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-enlightenment-0.16.9999 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-enlightenment-0.16.9999 0
 MD5 928bc2e57ec01e756fec93a3ed1cb8a2 files/e16 28
-RMD160 4b9aaa7fb1a582089433d9a5321924419fcce2a3 files/e16 28
-SHA256 794c333b669cf416c05b7cfad8e56a2d917c39817322253812256e86ebaeb70e files/e16 28
 MD5 943d1947d4bd7b7ee6387ba5827166a4 files/enlightenment 33
-RMD160 eff0ce60358e25f267706705a09d1a78a3f5bf31 files/enlightenment 33
-SHA256 6dc01a6df37a4ed9adf0fbd913c403a23cbeae68b8ab4efb2b88b99c6e8c2ccb files/enlightenment 33
 MD5 3ad2dae193789dec0097cd6675a150ab files/enlightenment-0.16.7.2-no-nls.patch 469
-RMD160 0d818a4112e3adbd966d298b06cb5c10307f8489 files/enlightenment-0.16.7.2-no-nls.patch 469
-SHA256 bca7475be3f0c1b98e34547b618e748fb15c9f43b95eee9319d51b3d85b9d8a9 files/enlightenment-0.16.7.2-no-nls.patch 469
 MD5 7ed1cbab645402fbf7666ed95588542d metadata.xml 1572
-RMD160 35fd78981375768a1b3f98903748b81a13feb30a metadata.xml 1572
-SHA256 4158c36c21f31afedd523dde98f60a2393c208f142df806e837e21c871dd7fe4 metadata.xml 1572
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD7XFE2+ySkm8kpY0RAoaeAJ9iNhQnPtrvndTCt5uIWK7YUG5/jQCeJJEw
-ozmwvOFh7N0IfHKFP02xGuM=
-=dcFv
------END PGP SIGNATURE-----

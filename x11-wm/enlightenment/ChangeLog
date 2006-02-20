@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.41 2006/02/09 03:32:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.42 2006/02/20 23:10:39 mholzer Exp $
+
+  20 Feb 2006; Martin Holzer <mholzer@gentoo.org>
+  enlightenment-0.16.8.ebuild:
+  fixing depend
 
 *enlightenment-0.16.8 (09 Feb 2006)
 
