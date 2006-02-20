@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2.ebuild,v 1.1 2005/07/10 01:14:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2.ebuild,v 1.2 2006/02/20 20:17:40 tupone Exp $
 
 inherit games
 
@@ -13,12 +13,18 @@ LICENSE="Moria"
 SLOT="0"
 IUSE="cjk X"
 
-DEPEND=">=sys-libs/ncurses-5
-	X? ( virtual/x11 )"
+RDEPEND=">=sys-libs/ncurses-5
+	X? ( || ( x11-libs/libX11 virtual/x11 ) )"
+DEPEND="${RDEPEND}
+	X? ( || ( x11-libs/libXt virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	# Removing Xaw dependency as is not used
+	sed -i \
+		-e '/Xaw/d' src/main-xaw.c \
+			|| die "sed main-xaw failed"
 	sed -i \
 		-e 's|root\.|root:|' lib/*/Makefile.in \
 			|| die "sed Makefile.in failed"

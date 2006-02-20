@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/hengband
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/ChangeLog,v 1.5 2005/07/10 01:14:57 mr_bones_ Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/ChangeLog,v 1.6 2006/02/20 20:17:40 tupone Exp $
+
+  20 Feb 2006; <Tupone@gentoo.org> hengband-1.6.2.ebuild:
+  Modular X dependency fix
 
 *hengband-1.6.2 (10 Jul 2005)
 
