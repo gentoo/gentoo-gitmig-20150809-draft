@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.30.ebuild,v 1.3 2006/01/15 13:14:13 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.31.ebuild,v 1.1 2006/02/20 05:50:33 nerdboy Exp $
 
 inherit eutils libtool distutils
 
@@ -10,19 +10,41 @@ SRC_URI="http://download.berlios.de/gpsd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~ppc64 ~sparc ~arm"
+KEYWORDS=" ~arm ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="X usb dbus"
 
-DEPEND="X? ( virtual/motif
-		virtual/x11
+RDEPEND="X? ( || (
+		( x11-libs/libXmu
+		x11-libs/libXext
+		x11-libs/libXp
+		x11-libs/libX11
+		x11-libs/libXt
+		x11-libs/libSM
+		x11-libs/libICE
+		x11-libs/libXpm
+		x11-libs/libXaw )
+		|| (
+		    x11-libs/openmotif
+		    x11-libs/lesstif
+		)
+		( virtual/motif
+			virtual/x11 )
+		)
 	)
 	usb? ( sys-apps/hotplug )
-	dbus? ( ~sys-apps/dbus-0.23.4 )
+	dbus? ( >=sys-apps/dbus-0.6* )
 	dev-lang/python
 	app-text/xmlto
 	virtual/libc
 	sys-devel/gcc"
+
+DEPEND="${RDEPEND}
+	X? ( || (
+	    ( x11-proto/xproto x11-proto/xextproto )
+		virtual/x11
+	    )
+	)"
 
 src_unpack() {
 	unpack ${A}
@@ -54,7 +76,7 @@ src_install() {
 	    newinitd ${FILESDIR}/gpsd.init gpsd
 	fi
 	if use X ; then
-	    insinto /usr/$(get_libdir)/X11/app-defaults
+	    insinto /etc/X11/app-defaults
 	    newins xgps.ad Xgps
 	    newins xgpsspeed.ad Xgpsspeed
 	fi
@@ -72,7 +94,7 @@ pkg_postinst() {
 	einfo
 	einfo "Different GPS devices require the corresponding kernel options"
 	einfo "to be enabled, such as USB_SERIAL_GARMIN, or a USB serial driver"
-	einfo "for an adapter, such as those that come with Deluo GPS units (eg,"
+	einfo "for an adapter such as those that come with Deluo GPS units (eg,"
 	einfo "USB_SERIAL_PL2303). Straight serial devices should always work,"
 	einfo "even without hotplug support."
 	ewarn
