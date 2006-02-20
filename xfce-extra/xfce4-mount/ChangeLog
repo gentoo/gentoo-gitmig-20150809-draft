@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-mount
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/ChangeLog,v 1.8 2006/02/09 03:33:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/ChangeLog,v 1.9 2006/02/20 18:21:38 corsair Exp $
+
+  20 Feb 2006; Markus Rothe <corsair@gentoo.org> xfce4-mount-0.3.2.ebuild:
+  Stable on ppc64
 
   09 Feb 2006; Aron Griffis <agriffis@gentoo.org> xfce4-mount-0.3.2.ebuild:
   Mark 0.3.2 stable on alpha
