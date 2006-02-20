@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.225 2006/02/18 10:50:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.226 2006/02/20 11:56:33 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1438,7 +1438,7 @@ strip-linguas() {
 	local ls newls
 	if [[ $1 == "-i" ]] || [[ $1 == "-u" ]] ; then
 		local op=$1; shift
-		ls=" $(find "$1" -name '*.po' -printf '%f ') "; shift
+		ls=" $(find "$1" -name '*.po' -exec basename {} \;) "; shift
 		local d f
 		for d in "$@" ; do
 			if [[ ${op} == "-u" ]] ; then
@@ -1446,7 +1446,7 @@ strip-linguas() {
 			else
 				newls=""
 			fi
-			for f in $(find "$d" -name '*.po' -printf '%f ') ; do
+			for f in $(find "$d" -name '*.po' -exec basename {} \;) ; do
 				if [[ ${op} == "-i" ]] ; then
 					[[ ${ls/ ${f} /} != ${ls} ]] && newls="${newls} ${f}"
 				else
