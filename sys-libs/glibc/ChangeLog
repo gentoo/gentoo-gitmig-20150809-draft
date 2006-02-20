@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.430 2006/02/20 04:42:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.431 2006/02/20 06:21:53 vapier Exp $
+
+  20 Feb 2006; Mike Frysinger <vapier@gentoo.org> glibc-2.3.5-r3.ebuild,
+  glibc-2.3.6-r3.ebuild:
+  Add some sparc fixes from upstream #123433 by Jason Weever.
 
   20 Feb 2006; Joshua Kinard <kumba@gentoo.org> glibc-2.3.5-r3.ebuild:
   Marked stable on mips.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.1 2006/02/18 11:23:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.2 2006/02/20 06:21:53 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -36,7 +36,7 @@ GLIBC_MANPAGE_VERSION="2.3.6-1"
 GLIBC_INFOPAGE_VERSION="2.3.6"
 
 # Gentoo patchset
-PATCH_VER="1.7"
+PATCH_VER="1.8"
 
 # C Stubbs addon (contained in fedora, so ignoring)
 #CSTUBS_VER="2.1.2"
@@ -592,12 +592,9 @@ toolchain-glibc_pkg_postinst() {
 		/sbin/init U &> /dev/null
 	fi
 
-	# warn the few multicast-dns-by-default users we've had about the change
-	# in behavior...
 	echo
-	einfo "Gentoo's glibc now disables multicast dns by default in our"
-	einfo "example host.conf. To re-enable this functionality, simply"
-	einfo "remove the line that disables it (mdns off)."
+	einfo "Gentoo's glibc no longer includes mdns."
+	einfo "If you want mdns, emerge the sys-auth/nss-mdns package."
 	echo
 
 	if want_nptl && want_linuxthreads ; then
