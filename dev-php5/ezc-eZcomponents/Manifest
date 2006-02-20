@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0334737dc8d83be1add09468ab5d2f45 ChangeLog 571
 RMD160 db7fa26d80acf69af3839b67afa0b0fd77fe1dd5 ChangeLog 571
 SHA256 be869715693f02fc1af9503900474112e2d05ceb92d343c33594b1c096e24781 ChangeLog 571
-MD5 ced1adfca891eb935d9fc6f4b0a4f714 ezc-eZcomponents-1.0.ebuild 868
-RMD160 edfd70c811a572ed0ceb0b96244eb11bda6b7586 ezc-eZcomponents-1.0.ebuild 868
-SHA256 a041788baaffd2a4c63c2f39686d5fc5298db9acfc8981b0a9c609c41c96d82a ezc-eZcomponents-1.0.ebuild 868
+MD5 3adb4e954fb5eb35d770e5356098abcc ezc-eZcomponents-1.0.1.ebuild 970
+RMD160 ba903aa768f11f2812cf1676d29beff70d79b17b ezc-eZcomponents-1.0.1.ebuild 970
+SHA256 66a228f1d8f4f97d5ea54e8e2ad3856ffef1e766268ce9367f67dbc686a6084e ezc-eZcomponents-1.0.1.ebuild 970
+MD5 3adb4e954fb5eb35d770e5356098abcc ezc-eZcomponents-1.0.ebuild 970
+RMD160 ba903aa768f11f2812cf1676d29beff70d79b17b ezc-eZcomponents-1.0.ebuild 970
+SHA256 66a228f1d8f4f97d5ea54e8e2ad3856ffef1e766268ce9367f67dbc686a6084e ezc-eZcomponents-1.0.ebuild 970
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ezc-eZcomponents-1.0 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-ezc-eZcomponents-1.0 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-ezc-eZcomponents-1.0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ezc-eZcomponents-1.0.1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-ezc-eZcomponents-1.0.1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-ezc-eZcomponents-1.0.1 0
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
 SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD3jFiaGfFFLhbXWkRAvgHAJ4sz3vXszusC0BXiXuoV1BVMPLxOgCeLCAv
-aw56fCxW0pDuDEnuVrB4T8I=
-=dixE
------END PGP SIGNATURE-----

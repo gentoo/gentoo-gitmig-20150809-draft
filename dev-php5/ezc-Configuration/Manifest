@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2385af34f3ef9a018179a81d5eb529ec ChangeLog 578
 RMD160 a16c9ace42501bb692fad15b8e966d59984e4157 ChangeLog 578
 SHA256 5b22ed019b583c6f2417002e15bab5c50645285e4dfc54d859960c8ee00e8cc3 ChangeLog 578
+MD5 529cbe1edde5c8f95f36d95b331ed854 ezc-Configuration-1.0.1.ebuild 383
+RMD160 0bc1d381ea6e221a1a535ab95c0e3f21227a88d7 ezc-Configuration-1.0.1.ebuild 383
+SHA256 e979f46cb6be896e599afed81997d3dda5d18b4d7cf908620098901782451e0f ezc-Configuration-1.0.1.ebuild 383
 MD5 529cbe1edde5c8f95f36d95b331ed854 ezc-Configuration-1.0.ebuild 383
 RMD160 0bc1d381ea6e221a1a535ab95c0e3f21227a88d7 ezc-Configuration-1.0.ebuild 383
 SHA256 e979f46cb6be896e599afed81997d3dda5d18b4d7cf908620098901782451e0f ezc-Configuration-1.0.ebuild 383
 MD5 64b54811ffbec7875705e7ee4227a434 files/digest-ezc-Configuration-1.0 241
 RMD160 101b1cca7cb5e17da0989f93e98e6eadead03c52 files/digest-ezc-Configuration-1.0 241
 SHA256 2fe2a0f815ffcfa748f7eaf209c603defb60a804cafa457cf3835481d5d89730 files/digest-ezc-Configuration-1.0 241
+MD5 bbd7506301c32fc013e61c52f4767025 files/digest-ezc-Configuration-1.0.1 247
+RMD160 bab157907dc7ef48061c54e1e75e5787c760bfb5 files/digest-ezc-Configuration-1.0.1 247
+SHA256 21df442d9083d379ee1a33d42f956a3f662fc15fa13f8c386cda2efe9c69d331 files/digest-ezc-Configuration-1.0.1 247
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
 SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD3i+eaGfFFLhbXWkRAqoDAJ0b5nPuBRmyGFGeE0pSBFUSfyvvXgCfYMFd
-bHbkd7j8m5JlhcA6HeH8baI=
-=PHTn
------END PGP SIGNATURE-----
