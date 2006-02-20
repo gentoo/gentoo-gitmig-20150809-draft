@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r7.ebuild,v 1.9 2005/10/15 12:40:19 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r7.ebuild,v 1.10 2006/02/20 01:40:14 kumba Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.procmail.org/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="mbox selinux"
 PROVIDE="virtual/mda"
 
