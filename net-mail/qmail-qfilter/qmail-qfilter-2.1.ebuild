@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-1.5.ebuild,v 1.10 2005/05/01 18:12:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-2.1.ebuild,v 1.1 2006/02/20 21:02:48 hansmi Exp $
 
 inherit toolchain-funcs
 
@@ -10,10 +10,11 @@ HOMEPAGE="http://untroubled.org/qmail-qfilter/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ppc ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND="virtual/libc
+	>=dev-libs/bglibs-1.0.19"
 RDEPEND=">=mail-mta/qmail-1.03-r8"
 
 QMAIL_BINDIR="/var/qmail/bin/"
@@ -24,15 +25,17 @@ src_compile() {
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "${D}${QMAIL_BINDIR}" > conf-bin
 	echo "${D}/usr/share/man/" > conf-man
-	emake || die
+	echo "/usr/lib/bglibs/include" > conf-bgincs
+	echo "/usr/lib/bglibs/lib" > conf-bglibs
+	make || die
 }
 
 src_install () {
 	dodir ${QMAIL_BINDIR} /usr/share/man/
 	./installer || die "Installer failed"
-	dodoc ANNOUNCEMENT FILES NEWS README TARGETS TODO VERSION
-	docinto sample
-	dodoc sample/*
+	dodoc ANNOUNCEMENT NEWS README TODO VERSION
+	docinto samples
+	dodoc samples/*
 }
 
 pkg_postinst() {
