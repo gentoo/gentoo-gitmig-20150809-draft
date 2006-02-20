@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsysmon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/ChangeLog,v 1.27 2006/02/17 20:05:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/ChangeLog,v 1.28 2006/02/20 18:18:34 corsair Exp $
+
+  20 Feb 2006; Markus Rothe <corsair@gentoo.org> wmsysmon-0.7.7.ebuild:
+  Stable on ppc64
 
   17 Feb 2006; Michael Hanselmann <hansmi@gentoo.org> wmsysmon-0.7.7.ebuild:
   Stable on ppc.
