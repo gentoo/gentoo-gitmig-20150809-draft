@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.18.ebuild,v 1.11 2006/01/31 08:32:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.18.ebuild,v 1.12 2006/02/20 20:27:34 jokey Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="1.1"
 KEYWORDS="alpha ~amd64 ppc ~sparc x86"
 IUSE=""
 
-DEPEND="virtual/libpcap
+DEPEND="net-libs/libpcap
 	>=net-libs/libnet-1.1.0-r3"
 
 src_unpack() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.32.0.ebuild,v 1.1 2005/12/11 20:02:00 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.32.0.ebuild,v 1.2 2006/02/20 20:30:59 jokey Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~ppc ~sparc ~x86"
 IUSE="doc"
 
-DEPEND="virtual/libpcap
+DEPEND="net-libs/libpcap
 	>=net-libs/libnet-1.1.1"
 
 S="${WORKDIR}/${P}-src"
