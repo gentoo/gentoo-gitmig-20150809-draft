@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/iscsitarget
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.1 2005/12/05 03:32:30 robbat2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.2 2006/02/20 08:33:40 robbat2 Exp $
+
+*iscsitarget-0.4.13 (20 Feb 2006)
+
+  20 Feb 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/iscsitarget-0.4.13-usrbuildfix.patch, +files/ietd-conf.d,
+  +files/ietd-init.d, +iscsitarget-0.4.13.ebuild:
+  Bug #122632 - amd64 keyword. Bug #115529, version bump. Now includes much
+  better init scripts.
 
 *iscsitarget-0.4.12 (05 Dec 2005)
 

@@ -1,0 +1,10 @@
+--- usr/Makefile.backup	2006-02-19 22:00:51.061332070 -0800
++++ usr/Makefile	2006-02-19 22:01:54.896278374 -0800
+@@ -1,4 +1,6 @@
+-CFLAGS += -O2 -fno-inline -Wall -Wstrict-prototypes -g -I../include
++OPTFLAGS = -O2 -fno-inline -g
++WARNFLAGS = -Wall -Wstrict-prototypes
++CFLAGS += $(OPTFLAGS) $(WARNFLAGS) -I../include
+ PROGRAMS = ietd ietadm
+ LIBS = -lcrypto
+ 
