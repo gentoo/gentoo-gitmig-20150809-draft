@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 b722a9afef0d91ef56c024b53d30ac0c ChangeLog 1210
+MD5 ee512497841a80132b5ba5862270c41c files/digest-perl-cleaner-1.01 67
+MD5 6796c928751329734463bfd8b55d99c7 files/digest-perl-cleaner-1.03 67
 MD5 668ee1a87f48cb2cc46f709e97c7386a metadata.xml 224
 MD5 748a3e48610be387f3968132521cc96b perl-cleaner-1.01.ebuild 704
-MD5 bb5394f96c6bce92ac811f2d20165500 ChangeLog 1033
-MD5 ee512497841a80132b5ba5862270c41c files/digest-perl-cleaner-1.01 67
+MD5 56ea8196dc7b3232183dc57eb14af89b perl-cleaner-1.03.ebuild 720
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDNNJsgIKl8Uu19MoRAmQ/AJ9XSiV/F13JUpAz//puWR1Cek2ImwCdHxHd
-t9avIRbNBjpjvYoTwRk16yY=
-=Jd8M
+iD8DBQFD+cYEtG5z4I8BtQoRApsrAJ9J+VAHe5l3N1Sv0YSoACslkIY2YQCffPZm
+iOknF9aew0ZVqJdF3MNOoe0=
+=Ulc4
 -----END PGP SIGNATURE-----
