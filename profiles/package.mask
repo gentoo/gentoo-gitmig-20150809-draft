@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5016 2006/02/20 01:34:20 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5017 2006/02/20 01:39:45 halcy0n Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,7 +24,7 @@
 # Mark Loeser <halcy0n@gentoo.org> (19 Feb 2006)
 # Severely breaks systems; http://bugs.gentoo.org/show_bug.cgi?id=123342
 # The manual fix can be found at:
-# http://bugs.gentoo.org/show_bug.cgi?id=123368#c8
+# http://bugs.gentoo.org/show_bug.cgi?id=123368#c7
 =sys-apps/coreutils-5.94
 
 # Duncan Coutts <dcoutts@gentoo.org> (19 Feb 2006)
