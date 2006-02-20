@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepattack/wepattack-0.1.3-r2.ebuild,v 1.3 2006/01/08 22:53:28 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepattack/wepattack-0.1.3-r2.ebuild,v 1.4 2006/02/20 22:48:50 jokey Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="john"
 
 DEPEND="sys-libs/zlib
-	virtual/libpcap
+	net-libs/libpcap
 	dev-libs/openssl"
 
 RDEPEND="${DEPEND}
