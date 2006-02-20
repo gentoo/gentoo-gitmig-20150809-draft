@@ -1,4 +1,4 @@
-MD5 d701bde3b57c7b7ac66a4abe473ee951 ChangeLog 8476
+MD5 ff6d180a7a14f1378cd7ab02920cf6ec ChangeLog 8632
 MD5 f34efbb3e6de0d5c486266027f3d22bb files/digest-libpq-7.3.11 76
 MD5 7e9bfb3a7d7ca540050134a70b13ee4a files/digest-libpq-7.3.13 76
 MD5 d0e348c2abbc9ada7a37536aa7d111a4 files/digest-libpq-7.3.14 76
@@ -41,5 +41,5 @@ MD5 72770a2d3fb967d1a9110a7edd5c91a9 libpq-8.0.4.ebuild 3059
 MD5 2b485325a2ca7179caa9b165f9ea1b06 libpq-8.0.6.ebuild 3067
 MD5 cb79ff09e39ac10893d26da6290c6e80 libpq-8.0.7.ebuild 3065
 MD5 97555bf51d575cab95abe5fcd91a58a1 libpq-8.1.2.ebuild 3071
-MD5 c6d1541a03fc7a13254ea4c40d8a3b3b libpq-8.1.3.ebuild 3069
+MD5 f52c93b241611137b53f7351b5ca827d libpq-8.1.3.ebuild 3070
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
