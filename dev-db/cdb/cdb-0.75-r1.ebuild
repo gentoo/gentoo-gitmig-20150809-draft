@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75-r1.ebuild,v 1.6 2006/02/04 17:16:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75-r1.ebuild,v 1.7 2006/02/20 16:33:59 corsair Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://cr.yp.to/cdb/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~ppc ~ppc-macos ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=sys-apps/portage-2.0.47-r10

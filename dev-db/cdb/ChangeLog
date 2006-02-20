@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/cdb
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.25 2006/02/04 17:16:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.26 2006/02/20 16:33:59 corsair Exp $
+
+  20 Feb 2006; Markus Rothe <corsair@gentoo.org> cdb-0.75-r1.ebuild:
+  Stable on ppc64
 
   04 Feb 2006; Aron Griffis <agriffis@gentoo.org> cdb-0.75-r1.ebuild:
   Mark 0.75-r1 stable on alpha
