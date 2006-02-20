@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/convert-pem-0.07.ebuild,v 1.9 2006/02/13 14:19:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/convert-pem-0.07.ebuild,v 1.10 2006/02/20 16:49:51 corsair Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://cpan/authors/id/B/BT/BTROTT/${MY_P}.tar.gz"
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="alpha hppa ~ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha hppa ~ia64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/perl-MIME-Base64
