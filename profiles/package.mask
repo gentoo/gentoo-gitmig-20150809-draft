@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5019 2006/02/20 19:56:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5020 2006/02/20 19:58:34 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1245,10 +1245,6 @@ net-mail/mailer-config
 =mail-mta/postfix-2.2.8-r1
 =mail-mta/sendmail-8.13.4-r1
 =mail-mta/exim-4.50-r999
-
-# Martin Schlemmer <azarah@gentoo.org> (23 Apr 2005)
-# Testing release for gcc-4.0.0.
-=sys-libs/glibc-2.3.5.20050421
 
 # Rob Cakebread <pythonhead@gentoo.org> (22 Apr 2005)
 # Versions in portage no longer supported. Abeni 1.0 will be in portage soon after wxGTK-2.6.0
