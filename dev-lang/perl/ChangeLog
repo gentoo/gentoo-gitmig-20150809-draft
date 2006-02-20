@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.196 2006/02/20 13:38:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.197 2006/02/20 22:05:22 mcummings Exp $
+
+  20 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  +files/perl-5.8.8-dragonfly-clean.patch, perl-5.8.8.ebuild:
+  Bug 122706, dragonfly patches
 
   20 Feb 2006; Michael Cummings <mcummings@gentoo.org> perl-5.8.8.ebuild:
   Updated perl-cleaner dep
