@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.77 2006/02/20 08:59:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.78 2006/02/20 14:08:34 gustavoz Exp $
+
+  20 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org> ChangeLog:
+  Fix lirc-0.8.0 digests
 
 *lirc-0.8.0 (20 Feb 2006)
 
