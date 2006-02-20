@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9deb354b49b7d7604f2e1a98f8ab7b96 ChangeLog 15470
-RMD160 91fd7cf3290e6cb8be6fd2797bc6e2a0af881f18 ChangeLog 15470
-SHA256 c2ae6baeb81e81b12e0616e0ef759625a4cf7f6a035b7d5331ac3d8ad2d760ab ChangeLog 15470
+MD5 276acaefe995f0e34a414b09dfe19fe2 ChangeLog 15620
+RMD160 a278b452cca999e3fd4ad7f97c62497cecf7c96a ChangeLog 15620
+SHA256 a1951f53c67e0479de1236634c5c1af4adb9d5a49d934cb152c0018de9235020 ChangeLog 15620
 MD5 e184737af1fd4ea55c02161a848f5272 cyrus-imapd-2.2.12-r4.ebuild 9313
 RMD160 b230e248da358867bfe73c9603a0888b67c517e1 cyrus-imapd-2.2.12-r4.ebuild 9313
 SHA256 34335429c6088ebb02a7d1b2efe0fec439b9d8e2e5ec7cca6660eabde42c46c4 cyrus-imapd-2.2.12-r4.ebuild 9313
 MD5 4c0f69e2d9c9b56f51069f98544000e2 cyrus-imapd-2.2.12.ebuild 9132
 RMD160 d71e869328d98aadc3c763242119cb72568e8f15 cyrus-imapd-2.2.12.ebuild 9132
 SHA256 b795231c668b2f8155be9f367b232aece305f3ebacc14f7d87bf3494049d1ef5 cyrus-imapd-2.2.12.ebuild 9132
-MD5 78a820e64339e6861538bc5ba97274d5 cyrus-imapd-2.3.1.ebuild 8255
-RMD160 8c42b90cda5459c96add6c20fc6b05e8da875f84 cyrus-imapd-2.3.1.ebuild 8255
-SHA256 ce2f25c19f1fd235d0cc847e0d7e8ab48065c2f3b68b004fb3da2fc65a3301ef cyrus-imapd-2.3.1.ebuild 8255
+MD5 a2b9c7e44cdd30b195ab89fef00a0e5f cyrus-imapd-2.3.1.ebuild 8187
+RMD160 8699b848ccf26c7583fa033fb653ba6afcce37fe cyrus-imapd-2.3.1.ebuild 8187
+SHA256 116f8cfbf7df200d96befbcb9eb5ae3bbb37a00a199df6b7d28c660feb99d96d cyrus-imapd-2.3.1.ebuild 8187
 MD5 945aad1ac6ce2e72b6dede038c37c934 files/cyrus-imapd-2.2.10-drac.patch 926
 RMD160 7a587e2f756e6058262348d19c80fd27ad169a52 files/cyrus-imapd-2.2.10-drac.patch 926
 SHA256 9c9b297767ef787bc76fa134b178848695199b662860515f0157f59f726b5b84 files/cyrus-imapd-2.2.10-drac.patch 926
@@ -65,9 +65,9 @@ MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
 SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD3l9E5FrxP71izLARAit+AJ9YrEIgPAnD7TADki1gGlD9TuN/NACfRaAs
-cGj1iwbrxxEUOYUmNWyvuUs=
-=Faxk
+iD8DBQFD+V6m5FrxP71izLARAoSCAJwMeB3aZF9Ofyv50xpM1eWbKVhn6gCgpexI
+jZuf1loujdGhZwhtlNqvEJg=
+=XhnW
 -----END PGP SIGNATURE-----

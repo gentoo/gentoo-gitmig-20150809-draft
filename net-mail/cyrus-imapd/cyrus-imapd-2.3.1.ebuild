@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.1.ebuild,v 1.1 2006/01/10 20:32:55 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.1.ebuild,v 1.2 2006/02/20 06:13:37 langthang Exp $
 
 inherit eutils ssl-cert gnuconfig fixheadtails
 
@@ -162,12 +162,7 @@ src_compile() {
 	myconf="${myconf} $(use_with snmp ucdsnmp)"
 	myconf="${myconf} $(use_with tcpd libwrap)"
 	myconf="${myconf} $(use_enable kerberos gssapi)"
-
-	if use idled; then
-		myconf="${myconf} --with-idle=idled"
-	else
-		myconf="${myconf} --with-idle=poll"
-	fi
+	myconf="${myconf} $(use_enable idled)"
 
 	econf \
 		--enable-murder \
