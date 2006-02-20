@@ -1,64 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 efc7301da3e14c26a25ac0a469e7b7d6 ChangeLog 12521
-RMD160 d1816c1d323d1ffaf8c5a71fe34394113a787117 ChangeLog 12521
-SHA256 076a1e1c32012f37a72d788939f3e05d6aa991ac7570be1c66ba057142007d52 ChangeLog 12521
+MD5 2abeb61764722a0bb60575bf37897b43 ChangeLog 12612
 MD5 9cc2cdecdebcf233788fbb7201b49c3b djbdns-1.05-r14.ebuild 4675
-RMD160 3169fa951ffa7872da7e76fe0925d68a119233fd djbdns-1.05-r14.ebuild 4675
-SHA256 96c8902382f3b482ae4c52166fd2920c1d40e3e263e5c4696b1a0958002be4c0 djbdns-1.05-r14.ebuild 4675
 MD5 f04b8acc339d82cdf4352c556707395d djbdns-1.05-r15.ebuild 4708
-RMD160 050172c86797859104ee8381ab3e8127e9990a17 djbdns-1.05-r15.ebuild 4708
-SHA256 cde90ba128fca3c505d945691a21ffbc13c82832df96203179e17c98a0150d7e djbdns-1.05-r15.ebuild 4708
-MD5 1d7e04e4cf3ea0632b93cb4371a85528 djbdns-1.05-r16.ebuild 4702
-RMD160 89433f35b7a3f071461e21282504f3321addcef0 djbdns-1.05-r16.ebuild 4702
-SHA256 786cd7ba25c997e25cd2b4a452bbbbc204ce6b50636bda10d5f10695c5d11945 djbdns-1.05-r16.ebuild 4702
+MD5 e6dcec52e14860d7f6910956f922bbf9 djbdns-1.05-r16.ebuild 4700
 MD5 8a1cf8c2d178ba9d2bc15152c95bacac djbdns-1.05-r17.ebuild 5174
-RMD160 d0229842bfd70dea0a7c8d6540290a1361b78bfe djbdns-1.05-r17.ebuild 5174
-SHA256 0a99428050e83c4e399a59505a370ef58a47aa79faf542ebe64359c35f21eecf djbdns-1.05-r17.ebuild 5174
 MD5 188096855028696985f1b9d839d1643f files/1.05-errno.patch 238
-RMD160 b479d8c16dd8fe7206cba19125dd8866c2584301 files/1.05-errno.patch 238
-SHA256 40e01efac08e95bf87b46e2d86378b0a60c234c64080b7f42039178ac6de61af files/1.05-errno.patch 238
 MD5 9127cff20924bbf9dfd84d3896a2510e files/digest-djbdns-1.05-r14 624
-RMD160 742fe84781d828876773b58b9cb7a47cfcbd1fad files/digest-djbdns-1.05-r14 624
-SHA256 3beee69d98a74a94decbe6012229124b95319dac96906dc983e0ec71ddf2ab7d files/digest-djbdns-1.05-r14 624
 MD5 865a37de3e223a3ca61e8c4eedc8e8e6 files/digest-djbdns-1.05-r15 624
-RMD160 4aa9f124d42a37ca659341c4bcde76dc173551ca files/digest-djbdns-1.05-r15 624
-SHA256 91d81cbea32f829690176ceca1c40e5c7b64dd721341a712ced03d85e94318d4 files/digest-djbdns-1.05-r15 624
 MD5 ad3a99605afe2fbd3274704040b661cc files/digest-djbdns-1.05-r16 624
-RMD160 06a62f31fc33aa00d9242a5ffe682d235399537f files/digest-djbdns-1.05-r16 624
-SHA256 91d1c3a2b01a977e2ec3c4f7193a7d7ff449ad5de914d54c03c5c67583a2e612 files/digest-djbdns-1.05-r16 624
 MD5 428829b42df134dd5e5c7c71e77ef6aa files/digest-djbdns-1.05-r17 772
-RMD160 849dc5a66e064f2b4a35b59a52463aa27b02c83c files/digest-djbdns-1.05-r17 772
-SHA256 641d8ad375f608da3bf94c6d10c220a34eef4a5b84ccd9843ba849889b79e4b7 files/digest-djbdns-1.05-r17 772
 MD5 e978c483e32ec53b3eb8a2b703c89d6d files/djbdns-setup 11152
-RMD160 6de107a57748468996c2d7b5ed00641abf51d67e files/djbdns-setup 11152
-SHA256 f9cac2b3050ce0869afdb1f27af9690fd5fb4817acad1144d8b879233d979713 files/djbdns-setup 11152
 MD5 357468f880552fcc6ead17d99cefb3ea files/djbdns-setup-r17 10881
-RMD160 eabdbfd226d6ee4172e55a62beed77bb68aa222c files/djbdns-setup-r17 10881
-SHA256 33c64d8341ea868e124e7fe0da6a8f9ba6fc799a79584e002a82c572921ed5e4 files/djbdns-setup-r17 10881
 MD5 2804eedf8bf07dacf67d094c5122c723 files/dnscache-setup 6007
-RMD160 d5a29943ac29d84a8c83308a497721010ab017bc files/dnscache-setup 6007
-SHA256 7337a0e99ed3cf4ed125081d3635b48f6fd3d8becfcf4e1495f12f300b3a8db9 files/dnscache-setup 6007
 MD5 dfd675b2775efcbb604413a84db8bf1a files/dnsroots.patch 349
-RMD160 c3be22070645e27a8c16e9f1dd268963b749c5f7 files/dnsroots.patch 349
-SHA256 99e8ef90a20f66fedf903aa13e3f5360010cf11c27c59dc53b967f02ffe06114 files/dnsroots.patch 349
 MD5 46e046747b9dd8a0a1300a52c142f423 files/fwdzone-fix.patch 438
-RMD160 c7a6e0072f565b2dda7aa57aae02930b621bea71 files/fwdzone-fix.patch 438
-SHA256 e9da00cbce418fe2afabebca6b28a220b4fd034deaeb98bd66fa31b4d24189d4 files/fwdzone-fix.patch 438
 MD5 625d040d68fa3f87d67688c0e15eb2f4 files/headtail.patch 1781
-RMD160 0e6e1458839ae324a5c36f816529eb2eaf1df78b files/headtail.patch 1781
-SHA256 ae61cc6759d4cf26eeae02a75b67cb2cb410effb18cd96b9ba20375919116526 files/headtail.patch 1781
 MD5 d1844f9853a9bb56738a6a0eb6e04de4 files/tinydns-setup 3206
-RMD160 16679596e3902c8eda4c9605b0fef6e778cdee63 files/tinydns-setup 3206
-SHA256 73c0610f15e9bbec1998d10eafe4222277eb8cbaf0c58e802f998e9f7b25bbea files/tinydns-setup 3206
 MD5 126c0768ab916bb5855092f1b55413ab metadata.xml 254
-RMD160 e81ca3ce54d13af0e64f9667b84832764b9d6cb7 metadata.xml 254
-SHA256 9fed9bb1854d7d47ee1f1d7719bd888fefc543ab0549b05a81f7b9edd28840b5 metadata.xml 254
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD58FzJrHF4yAQTrARAr9qAJ9L00p6dOOVWpbcNy88MovB1/OCWACcDknG
-8Wn7KW7gWiX48O2VTLcJMuY=
-=xxai
------END PGP SIGNATURE-----
