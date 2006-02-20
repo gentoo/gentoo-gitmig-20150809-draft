@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail-vmailmgr
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-vmailmgr/ChangeLog,v 1.9 2004/08/08 00:18:37 slarti Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-vmailmgr/ChangeLog,v 1.10 2006/02/20 21:50:13 hansmi Exp $
+
+  20 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
+  qmail-vmailmgr-0.0.1-r1.ebuild:
+  Changed to virtual/qmail.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> qmail-vmailmgr-0.0.1-r1.ebuild:
   Typo in DESCRIPTION: enviroment -> environment, fullyfletched ->
