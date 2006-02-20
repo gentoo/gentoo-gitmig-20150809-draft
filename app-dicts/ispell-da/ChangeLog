@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-da
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.54 2006/01/27 02:03:01 arj Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.55 2006/02/20 05:30:45 kumba Exp $
+
+  20 Feb 2006; Joshua Kinard <kumba@gentoo.org> ispell-da-1.4.48.ebuild:
+  Marked stable on mips.
 
 *ispell-da-1.4.52 (26 Jan 2006)
 
