@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.9-r1.ebuild,v 1.2 2006/02/20 00:22:37 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.9-r1.ebuild,v 1.3 2006/02/20 15:25:30 antarus Exp $
 
 inherit gnome2 eutils autotools
 
@@ -20,7 +20,6 @@ RDEPEND=">=dev-libs/glib-2.0.3
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-vfs-2
 	>=x11-libs/gtk+-2.8
-	>=x11-libs/libsexy-0.1.4
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( >=dev-lang/perl-5.6.1 )
 	python? ( dev-lang/python )
