@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/habak
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.18 2005/10/30 19:32:12 metalgod Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.19 2006/02/20 19:04:36 lucass Exp $
+
+  20 Feb 2006; Lukasz Strzygowski <lucass@gentoo.org> -habak-0.2.1.ebuild,
+  -habak-0.2.3.ebuild, -habak-0.2.4.ebuild, habak-0.2.4.1.ebuild,
+  habak-0.2.5.ebuild:
+  Removed redundant dependencies (bug #123498) and older releases.
 
   30 Oct 2005; Luis Medinas <metalgod@gentoo.org> habak-0.2.5.ebuild:
   Added ~amd64 keyword. Bug #110444.
