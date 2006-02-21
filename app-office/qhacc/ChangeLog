@@ -1,6 +1,11 @@
 # ChangeLog for app-office/qhacc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.27 2005/07/18 20:52:15 carlo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.28 2006/02/21 18:42:23 carlo Exp $
+
+  21 Feb 2006; Carsten Lohrke <carlo@gentoo.org>
+  -files/qhacc-3.2.2-sandbox.patch, -qhacc-3.2.2.ebuild,
+  -qhacc-3.2.3.ebuild:
+  Clean up.
 
   18 Jul 2005; Carsten Lohrke <carlo@gentoo.org> qhacc-3.4.ebuild:
   minor clean up on unmerge fix
