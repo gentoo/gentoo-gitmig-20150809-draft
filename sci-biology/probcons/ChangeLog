@@ -1,0 +1,12 @@
+# ChangeLog for sci-biology/probcons
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/ChangeLog,v 1.1 2006/02/21 20:27:27 spyderous Exp $
+
+*probcons-1.10 (21 Feb 2006)
+
+  21 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/1.10-fix-cxxflags.patch, +metadata.xml, +probcons-1.10.ebuild:
+  New multiple sequence alignment package. Probably the best global aligner,
+  although it runs slower. Takes 5-10 times longer than clustalw, but about
+  half as long as t-coffee.
+
