@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/comix
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.8 2006/02/18 18:54:53 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.9 2006/02/21 23:02:06 vanquirius Exp $
+
+*comix-2.9 (21 Feb 2006)
+
+  21 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> +comix-2.9.ebuild:
+  2.9 version bump.
 
   18 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> comix-2.7.ebuild:
   Mark 2.7 x86 stable.
