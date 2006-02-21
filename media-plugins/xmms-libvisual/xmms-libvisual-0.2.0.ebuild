@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-libvisual/xmms-libvisual-0.2.0.ebuild,v 1.1 2005/03/02 16:42:22 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-libvisual/xmms-libvisual-0.2.0.ebuild,v 1.2 2006/02/21 00:10:42 metalgod Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ MY_P="${MY_PN}-${PV}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="an abstraction library for applications to create audio visualisation plugins"
-HOMEPAGE="http://libvisual.sourceforge.net/"
+HOMEPAGE="http://localhost.nl/~synap/libvisual/"
 SRC_URI="mirror://sourceforge/libvisual/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
