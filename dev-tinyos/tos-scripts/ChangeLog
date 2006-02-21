@@ -1,6 +1,10 @@
 # ChangeLog for dev-tinyos/tos-scripts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-scripts/ChangeLog,v 1.1 2006/02/12 17:52:21 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-scripts/ChangeLog,v 1.2 2006/02/21 21:06:23 sanchan Exp $
+
+  21 Feb 2006; Sandro Bonazzola <sanchan@gentoo.org> metadata.xml,
+  tos-scripts-1.1.15.ebuild:
+  Removing bad restriction on stricter.
 
 *tos-scripts-1.1.15 (12 Feb 2006)
 
