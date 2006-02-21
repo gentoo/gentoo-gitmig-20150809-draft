@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.18 2006/02/12 09:39:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.19 2006/02/21 15:27:01 cardoe Exp $
+
+  21 Feb 2006; Doug Goldstein <cardoe@gentoo.org> mythweb-0.18.1.ebuild,
+  mythweb-0.19_pre8642.ebuild, mythweb-0.19.ebuild:
+  ciaranm and his nagging program
 
   12 Feb 2006; Doug Goldstein <cardoe@gentoo.org> mythweb-0.19.ebuild:
   incorrectly removed S

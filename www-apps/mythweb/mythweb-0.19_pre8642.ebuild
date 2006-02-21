@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.19_pre8642.ebuild,v 1.1 2006/01/18 19:26:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.19_pre8642.ebuild,v 1.2 2006/02/21 15:27:01 cardoe Exp $
 
 inherit webapp depend.php
 
 DESCRIPTION="PHP scripts intended to manage MythTV from a web browser."
 HOMEPAGE="http://www.mythtv.org/"
-SRC_URI="mirrors:/gentoo/mythplugins-${PV}.tar.bz2"
+SRC_URI="mirror://gentoo/mythplugins-${PV}.tar.bz2"
 IUSE=""
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -19,7 +19,7 @@ pkg_setup() {
 	webapp_pkg_setup
 
 	if has_version 'dev-lang/php' ; then
-	    require_php_with_use session
+		require_php_with_use session
 	fi
 }
 
