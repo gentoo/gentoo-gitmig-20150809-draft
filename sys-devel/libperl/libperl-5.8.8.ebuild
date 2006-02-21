@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8.ebuild,v 1.4 2006/02/07 23:43:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8.ebuild,v 1.5 2006/02/21 00:16:53 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -136,6 +136,8 @@ src_unpack() {
 	cd ${S}; epatch ${FILESDIR}/${P}-reorder-INC.patch
 
 	use amd64 && cd ${S} && epatch ${FILESDIR}/${P}-lib64.patch
+	[[ ${CHOST} == *-dragonfly* ]] && cd ${S} && epatch ${FILESDIR}/${P}-dragonfly-clean.patch
+	[[ ${CHOST} == *-freebsd* ]] && cd ${S} && epatch ${FILESDIR}/${P}-fbsdhints.patch
 }
 
 myconf() {
@@ -161,6 +163,7 @@ src_compile() {
 
 	case ${CHOST} in
 		*-freebsd*) osname="freebsd" ;;
+		*-dragonfly*) osname="dragonfly" ;;
 		*-netbsd*) osname="netbsd" ;;
 		*-openbsd*) osname="openbsd" ;;
 		*-darwin*) osname="darwin" ;;

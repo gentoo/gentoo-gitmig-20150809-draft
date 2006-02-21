@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.101 2006/02/07 23:43:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.102 2006/02/21 00:16:53 mcummings Exp $
+
+  21 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  +files/libperl-5.8.8-dragonfly-clean.patch,
+  +files/libperl-5.8.8-fbsdhints.patch, libperl-5.8.8.ebuild:
+  Patches for freebsd and dragonfly per the perl ebuild - just to be safe
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> libperl-5.8.8.ebuild:
   Prefer to avoid eval and use a bash array for myconf instead, it's less
