@@ -6,7 +6,6 @@ Patch by Diego Pettenò
 
 http://bugs.gentoo.org/123471
 
-
 --- flex-2.5.31/main.c
 +++ flex-2.5.31/main.c
 @@ -344,7 +344,7 @@ void check_options ()
@@ -18,25 +17,14 @@ http://bugs.gentoo.org/123471
      filter_create_int(output_chain, filter_fix_linedirs, NULL);
  
      /* For debugging, only run the requested number of filters. */
---- flex-2.5.31/Makefile.am
-+++ flex-2.5.31/Makefile.am
-@@ -141,7 +141,7 @@ SUBDIRS = \
- 	tests
- 
- localedir = $(datadir)/locale
--AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -I@includedir@ -I$(top_srcdir)/intl
-+AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -I@includedir@ -I$(top_srcdir)/intl -DGM4_PROGRAM=\"@M4@\"
- LIBS = @LIBINTL@ @LIBS@
- 
- skel.c: flex.skl mkskel.sh flexint.h tables_shared.h
 --- flex-2.5.31/Makefile.in
 +++ flex-2.5.31/Makefile.in
 @@ -290,7 +290,7 @@ SUBDIRS = \
  
  
  localedir = $(datadir)/locale
--AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -I@includedir@ -I$(top_srcdir)/intl
-+AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -I@includedir@ -I$(top_srcdir)/intl -DGM4_PROGRAM=\"@M4@\"
+-AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -I$(top_srcdir)/intl
++AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -I$(top_srcdir)/intl -DGM4_PROGRAM=\"@M4@\"
  
  # Run GNU indent on sources. Don't run this unless all the sources compile cleanly.
  #

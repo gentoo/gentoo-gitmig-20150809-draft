@@ -16,9 +16,9 @@ SHA256 3e20e677f6a05467dfdef44c23ed1047c0c4d1d0ff854724bac359f5491a413e files/di
 MD5 2f1f506c1cba186162e0d8a21fbb93d1 files/flex-2.5.31-check-for-locale-header.patch 1011
 RMD160 5812d387e982f8a00ddb5a82c5d53a968fb3d682 files/flex-2.5.31-check-for-locale-header.patch 1011
 SHA256 67196ce234c5edabd0652f0888ab58503e6f8e10a023fa72f894ca19be7deab7 files/flex-2.5.31-check-for-locale-header.patch 1011
-MD5 711413eb4823d3395c0791966a5e95f2 files/flex-2.5.31-gnu-m4.patch 1452
-RMD160 17ce6cc3f814c3da39c67861891b80ceac610ec5 files/flex-2.5.31-gnu-m4.patch 1452
-SHA256 8729214c6c869bc6f8b80ef80fda372b36f72d18b943c5d94d872354a832cc85 files/flex-2.5.31-gnu-m4.patch 1452
+MD5 d39c09a9ddc8b8a0e62d4ff3e002f783 files/flex-2.5.31-gnu-m4.patch 1028
+RMD160 346124df8e0ce5d17c6743a24c69bd1d306ca2d2 files/flex-2.5.31-gnu-m4.patch 1028
+SHA256 d82107aed35cccb455c27335682facc26992d234b2d60ec7778829b238c742f9 files/flex-2.5.31-gnu-m4.patch 1028
 MD5 2e16e2031744c71cd9cd1019ff0a1af3 files/flex-2.5.31-include.patch 387
 RMD160 450ae53279820d2d8c702be0f471be07892f96f0 files/flex-2.5.31-include.patch 387
 SHA256 deb8f99edc8b3eca11515e36db959d27503c5c1fc317a4ead39f40cc0ec61bce files/flex-2.5.31-include.patch 387
@@ -55,7 +55,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD+iF+2+ySkm8kpY0RAoS3AJ0c2AT9eVLnyXKj964cpRO1FzlHxACfW0xd
-9Msuo0rUABfOk0SHtjINq5U=
-=RE5R
+iD8DBQFD+oh52+ySkm8kpY0RAnjWAJ97mBnpDvLsmC+ojiluRbq/9ubboACfah3M
+cOluRLcaetK/cAu0iFYgGqE=
+=WyUG
 -----END PGP SIGNATURE-----
