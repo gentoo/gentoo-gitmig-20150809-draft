@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/neon
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.53 2005/12/23 15:55:23 pauldv Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.54 2006/02/21 20:03:58 pauldv Exp $
+
+*neon-0.25.5 (21 Feb 2006)
+
+  21 Feb 2006; Paul de Vrieze <pauldv@gentoo.org> +neon-0.25.5.ebuild:
+  New upstream version (bug #123361)
 
   23 Dec 2005; Paul de Vrieze <pauldv@gentoo.org> neon-0.25.3.ebuild:
   Explicitly disable linking with gssapi. Autodetecting gives a broken
