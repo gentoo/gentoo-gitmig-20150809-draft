@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/netkit-rwho
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.10 2005/12/07 20:47:26 strerror Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.11 2006/02/21 21:28:11 vanquirius Exp $
+
+  21 Feb 2006; Marcelo Goes <vanquirius@gentoo.org>
+  -files/netkit-rwho-0.17-debian.patch, -files/netkit-rwho-0.17-gentoo.diff,
+  -files/netkit-rwho-0.17-tiny-packet-dos.patch, netkit-rwho-0.17-r1.ebuild,
+  netkit-rwho-0.17-r2.ebuild:
+  Move patches to mirrors, fixes large files bug 123634 reported by Mark
+  Loeser <halcy0n at gentoo dot org>.
 
 *netkit-rwho-0.17-r2 (07 Dec 2005)
 

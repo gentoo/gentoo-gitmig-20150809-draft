@@ -1,12 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r1.ebuild,v 1.1 2005/02/05 06:45:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r1.ebuild,v 1.2 2006/02/21 21:28:11 vanquirius Exp $
 
 inherit eutils
 
 DESCRIPTION="Netkit - ruptime/rwho/rwhod"
 HOMEPAGE="http://www.hcs.harvard.edu/~dholland/computers/netkit.html"
-SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
+SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz
+	mirror://gentoo/${PN}-0.17-patches.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -20,9 +21,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-tiny-packet-dos.patch
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	cd "${S}"
+	epatch "${WORKDIR}"/${P}-tiny-packet-dos.patch
+	epatch "${WORKDIR}"/${P}-gentoo.diff
 }
 
 src_compile() {

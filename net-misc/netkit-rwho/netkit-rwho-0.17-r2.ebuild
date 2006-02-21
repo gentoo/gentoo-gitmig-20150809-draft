@@ -1,12 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r2.ebuild,v 1.1 2005/12/07 20:47:26 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r2.ebuild,v 1.2 2006/02/21 21:28:11 vanquirius Exp $
 
 inherit eutils
 
 DESCRIPTION="Netkit - ruptime/rwho/rwhod"
 HOMEPAGE="http://www.hcs.harvard.edu/~dholland/computers/netkit.html"
-SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
+SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz
+	mirror://gentoo/${PN}-0.17-patches.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -20,10 +21,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-tiny-packet-dos.patch
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/${P}-debian.patch
+	cd "${S}"
+	epatch "${WORKDIR}"/${P}-tiny-packet-dos.patch
+	epatch "${WORKDIR}"/${P}-gentoo.diff
+	epatch "${WORKDIR}"/${P}-debian.patch
 }
 
 src_compile() {
@@ -44,9 +45,9 @@ src_install() {
 	doman ruptime/ruptime.1 rwho/rwho.1 rwhod/rwhod.8
 	dodoc README ChangeLog
 
-	newinitd ${FILESDIR}/${P}-rc rwhod
-	newconfd ${FILESDIR}/${P}-confd rwhod
+	newinitd "${FILESDIR}"/${P}-rc rwhod
+	newconfd "${FILESDIR}"/${P}-confd rwhod
 
 	exeinto /etc/cron.monthly
-	doexe ${FILESDIR}/${P}-cron
+	doexe "${FILESDIR}"/${P}-cron
 }
