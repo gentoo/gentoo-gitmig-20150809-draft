@@ -1,18 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0d4f4583cf62ffb13ff56db9a125c6c3 xmms-ladspa-0.7.ebuild 710
-MD5 18ba78ab80a2f743f1141694edeed4d6 ChangeLog 1547
-MD5 8dd5abe27c05184ba158c4202990a0a9 xmms-ladspa-1.0.ebuild 714
-MD5 667300fa44467c78e4d5f13bd34326c2 xmms-ladspa-0.6.ebuild 694
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 82b2eb64c80f9ed312d129d8be1a0c4c files/digest-xmms-ladspa-0.6 66
-MD5 152b1464e18cea58b31943baf54b11ad files/digest-xmms-ladspa-0.7 66
+MD5 bb87865fd8ae694862c0e553e11caab5 ChangeLog 1731
+RMD160 4f24d0a1de5215a9b6733074e7bb001a29a626b0 ChangeLog 1731
+SHA256 bbb23e3780daaa5255e232a0b97f66b9df39bd2373d09f5ad01eb769298c43c0 ChangeLog 1731
 MD5 72c51ab214e80d0d687091c00244d6ca files/digest-xmms-ladspa-1.0 66
+RMD160 d247c0287d4dcd14a9824470fa59423487c27d69 files/digest-xmms-ladspa-1.0 66
+SHA256 0438c8f9756c48d564568a44a5fa57230c367434d4b8e2bc1b5772acc6f965b5 files/digest-xmms-ladspa-1.0 66
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 90940d1f6998e68c15b879bee4ea033f xmms-ladspa-1.0.ebuild 712
+RMD160 d175aa6e119544de082bf447c3dabce58fddef50 xmms-ladspa-1.0.ebuild 712
+SHA256 2a9ba148a90a77b73024784fb31c071c35bd1a1e9ce7936c11a1989fc33f7be8 xmms-ladspa-1.0.ebuild 712
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDGjeTj5H05b2HAEkRAtrNAJwPUGu5fXy9wjHk/teTfKIOVkaZsACeK0VO
-OSe5XnFB+BbJYpESTwxDOaI=
-=79g3
+iD8DBQFD+lmXwUpWvClEHQoRAgwEAJ4i9zCtmf6plqqPzJVpBgiWazdsKQCfZV02
+s6FsdgH44X/1bvcU1kimFDw=
+=9R7h
 -----END PGP SIGNATURE-----

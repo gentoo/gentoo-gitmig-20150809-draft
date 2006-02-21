@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-ladspa
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/ChangeLog,v 1.13 2005/09/03 23:53:39 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/ChangeLog,v 1.14 2006/02/21 00:07:18 metalgod Exp $
+
+  21 Feb 2006; Luis Medinas <metalgod@gentoo.org> -xmms-ladspa-0.6.ebuild,
+  -xmms-ladspa-0.7.ebuild, xmms-ladspa-1.0.ebuild:
+  Fix Homepage closes bug #123523. Remove older versions.
 
   03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> xmms-ladspa-0.6.ebuild,
   xmms-ladspa-0.7.ebuild, xmms-ladspa-1.0.ebuild:

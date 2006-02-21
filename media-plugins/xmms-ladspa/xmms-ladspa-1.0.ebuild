@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/xmms-ladspa-1.0.ebuild,v 1.3 2005/09/03 23:53:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/xmms-ladspa-1.0.ebuild,v 1.4 2006/02/21 00:07:18 metalgod Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="XMMS LADSPA Plugin"
-HOMEPAGE="http://www.ecs.soton.ac.uk/~njl98r/code/ladspa/"
+HOMEPAGE="http://www.ecs.soton.ac.uk/~njl98r/code/audio/"
 SRC_URI="http://www.ecs.soton.ac.uk/~njl98r/code/ladspa/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
