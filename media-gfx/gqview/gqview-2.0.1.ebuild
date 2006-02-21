@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.0.1.ebuild,v 1.7 2005/07/06 22:52:26 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.0.1.ebuild,v 1.8 2006/02/21 21:31:07 mr_bones_ Exp $
 
 DESCRIPTION="A GTK-based image browser"
 HOMEPAGE="http://gqview.sourceforge.net/"
@@ -11,8 +11,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2.4.0
-	nls? ( sys-devel/gettext )"
+RDEPEND=">=x11-libs/gtk+-2.4.0
+	virtual/libintl"
+
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
