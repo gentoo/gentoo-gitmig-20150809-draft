@@ -1,20 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.2_rc1.ebuild,v 1.2 2006/02/16 23:07:04 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.2_rc2.ebuild,v 1.1 2006/02/21 10:35:51 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
 IUSE="gnome java"
 
 MY_PV="${PV/_/}"
-MY_PV2="${MY_PV}_060213"
-MY_PV3="${PV/_rc1/}-1"
-S="${WORKDIR}/OOB680_m1_native_packed-1_en-US.9006/RPMS"
+MY_PV2="${MY_PV}_060220"
+MY_PV3="${PV/_rc2/}-2"
+BUILDID="9007"
+S="${WORKDIR}/OOB680_m2_native_packed-2_en-US.${BUILDID}/RPMS"
 DESCRIPTION="OpenOffice productivity suite"
 
 LANGPACK="OOo_${MY_PV2}_LinuxIntel_langpack"
 LANGPACKPATH="http://62.156.160.56/pub/OpenOffice.org/${MY_PV}/${LANGPACK}"
-LANGLOC="http://ftp.linux.cz/pub/localization/OpenOffice.org/devel/680/OOB680_m1/Build-1/OOo_OOB680_m1_native_LinuxIntel_langpacks_rpm/"
+LANGLOC="http://ftp.linux.cz/pub/localization/OpenOffice.org/devel/680/OOB680_m2/Build-1/OOo_OOB680_m2_native_LinuxIntel_langpacks_rpm"
 LANGSUFFIX="${MY_PV3}.i586.tar.gz"
 
 SRC_URI="mirror://openoffice/contrib/rc/${MY_PV}/OOo_${MY_PV2}_LinuxIntel_install.tar.gz
@@ -55,7 +56,6 @@ SRC_URI="mirror://openoffice/contrib/rc/${MY_PV}/OOo_${MY_PV2}_LinuxIntel_instal
 	linguas_ne? ( ${LANGLOC}/openoffice.org-ne-${LANGSUFFIX} )
 	linguas_nl? ( ${LANGPACKPATH}_nl.tar.gz )
 	linguas_nn? ( ${LANGPACKPATH}_nn.tar.gz )
-	linguas_nr? ( ${LANGLOC}/openoffice.org-nr-${LANGSUFFIX} )
 	linguas_ns? ( ${LANGPACKPATH}_ns.tar.gz )
 	linguas_pa_IN? ( ${LANGPACKPATH}_pa-IN.tar.gz )
 	linguas_pl? ( ${LANGPACKPATH}_pl.tar.gz )
@@ -70,11 +70,8 @@ SRC_URI="mirror://openoffice/contrib/rc/${MY_PV}/OOo_${MY_PV2}_LinuxIntel_instal
 	linguas_sv? ( ${LANGPACKPATH}_sv.tar.gz )
 	linguas_sw_TZ? ( ${LANGPACKPATH}_sw-TZ.tar.gz )
 	linguas_th? ( ${LANGPACKPATH}_th.tar.gz )
-	linguas_tn? ( ${LANGLOC}/openoffice.org-tn-${LANGSUFFIX} )
 	linguas_tr? ( ${LANGPACKPATH}_tr.tar.gz )
-	linguas_ts? ( ${LANGLOC}/openoffice.org-ts-${LANGSUFFIX} )
 	linguas_vi? ( ${LANGPACKPATH}_vi.tar.gz )
-	linguas_xh? ( ${LANGLOC}/openoffice.org-xh-${LANGSUFFIX} )
 	linguas_zh_CN? ( ${LANGPACKPATH}_zh-CN.tar.gz )
 	linguas_zh_TW? ( ${LANGPACKPATH}_zh-TW.tar.gz )
 	linguas_zu? ( ${LANGPACKPATH}_zu.tar.gz )"
@@ -111,19 +108,19 @@ src_unpack() {
 		rpm_unpack ${S}/openoffice.org-${i}-${MY_PV3}.i586.rpm
 	done
 
-	rpm_unpack ${S}/desktop-integration/openoffice.org-freedesktop-menus-2.0.2-0.noarch.rpm
+	rpm_unpack ${S}/desktop-integration/openoffice.org-freedesktop-menus-2.0.2-2.noarch.rpm
 
 	use gnome && rpm_unpack ${S}/openoffice.org-gnome-integration-${MY_PV3}.i586.rpm
 	use java && rpm_unpack ${S}/openoffice.org-javafilter-${MY_PV3}.i586.rpm
 
-	strip-linguas en af ar be_BY bg bn br bs ca cs cy da de el en_GB en_ZA es et fa fi fr ga gu_IN hi_IN hr hu it ja km ko lo lt lv mk nb ne nl nn nr ns pa_IN pl pt_BR ru rw sh_YU sk sl sr_CS st sv sw_TZ th tn tr ts vi xh zh_CN zh_TW zu
+	strip-linguas en af ar be_BY bg bn br bs ca cs cy da de el en_GB en_ZA es et fa fi fr ga gu_IN hi_IN hr hu it ja km ko lo lt lv mk nb ne nl nn ns pa_IN pl pt_BR ru rw sh_YU sk sl sr_CS st sv sw_TZ th tr vi zh_CN zh_TW zu
 
 	for i in ${LINGUAS}; do
 		i="${i/_/-}"
 
 		#workaround for upstream packaging mismatch
-		if [ -d ${WORKDIR}/OOB680_m1_native_packed-1_${i}.9006 ] ; then
-			 tar -xzf ${WORKDIR}/OOB680_m1_native_packed-1_${i}.9006/RPMS/openoffice.org-${i}-${LANGSUFFIX} || die
+		if [ -d ${WORKDIR}/OOB680_m2_native_packed-2_${i}.${BUILDID} ] ; then
+			 tar -xzf ${WORKDIR}/OOB680_m2_native_packed-2_${i}.${BUILDID}/RPMS/openoffice.org-${i}-${LANGSUFFIX} || die
 		fi
 
 		if [ ${i} != "en" ] ; then
