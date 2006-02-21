@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.3.ebuild,v 1.11 2005/10/01 12:35:13 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.3.ebuild,v 1.12 2006/02/21 11:03:20 s4t4n Exp $
 
 inherit flag-o-matic
 
@@ -13,12 +13,30 @@ SLOT="0"
 KEYWORDS="amd64 ~hppa ppc ppc64 sparc x86"
 IUSE="xgetdefault tabs"
 
-RDEPEND="virtual/x11
+# see bug #115992 for modular x deps
+RDEPEND="
+	|| (
+		(
+			x11-libs/libX11
+			x11-libs/libXft
+			x11-libs/libXpm
+			x11-libs/libXrender
+		)
+		virtual/x11
+	)
 	dev-lang/perl
 	tabs? ( dev-perl/gtk2-perl )"
+
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	sys-devel/libtool"
+	sys-devel/libtool
+	|| (
+		(
+			x11-proto/xproto
+			x11-libs/libXt
+		)
+		virtual/x11
+	)"
 
 pkg_setup() {
 	filter-flags -mno-accumulate-outgoing-args
