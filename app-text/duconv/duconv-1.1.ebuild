@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/duconv/duconv-1.1.ebuild,v 1.17 2005/10/22 16:40:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/duconv/duconv-1.1.ebuild,v 1.18 2006/02/21 04:51:23 chutzpah Exp $
 
 DESCRIPTION="A small util that converts from dos<->unix"
 SRC_URI="http://people.freenet.de/tfaehr/${PN}.tgz"
 HOMEPAGE="http://people.freenet.de/tfaehr/linux.htm"
 LICENSE="as-is"
-KEYWORDS="~mips ppc ~ppc-macos sparc x86"
+KEYWORDS="~amd64 ~mips ppc ~ppc-macos sparc x86"
 SLOT="0"
 
 IUSE=""
