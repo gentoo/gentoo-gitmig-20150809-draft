@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/cutg
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.36 2006/02/21 01:12:27 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.37 2006/02/21 10:43:57 corsair Exp $
+
+  21 Feb 2006; Markus Rothe <corsair@gentoo.org> cutg-150.ebuild:
+  Stable on ppc64; bug #123333
 
   20 Feb 2006; Joshua Jackson <tsunam@gentoo.org> cutg-150.ebuild:
   Stable on x86; bug #123333
