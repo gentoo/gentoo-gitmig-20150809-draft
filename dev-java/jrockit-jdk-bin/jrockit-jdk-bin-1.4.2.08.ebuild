@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.08.ebuild,v 1.1 2006/01/24 08:31:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.08.ebuild,v 1.2 2006/02/21 15:27:29 agriffis Exp $
 
 IUSE=""
 
@@ -26,7 +26,7 @@ DESCRIPTION="BEA WebLogic's J2SE Development Kit, R${UPSTREAM_RELEASE}"
 HOMEPAGE="http://commerce.bea.com/products/weblogicjrockit/${PV_MAJOR}/${HOMEPAGE_PV}.jsp"
 LICENSE="jrockit"
 SLOT="1.4"
-KEYWORDS="~x86 ~ia64 ~amd64"
+KEYWORDS="~amd64 ia64 ~x86"
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
 	>=app-arch/unzip-5.50-r1"
