@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53-r1.ebuild,v 1.2 2006/01/15 00:23:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53-r1.ebuild,v 1.3 2006/02/21 21:29:48 vanquirius Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ CUPS_PV=1.1.23
 SRC_URI="mirror://sourceforge/ghostscript/${MY_P}.tar.gz
 	cjk? ( http://www.matsusaka-u.ac.jp/mirror/gs-cjk/adobe-cmaps-200204.tar.gz
 		http://www.matsusaka-u.ac.jp/mirror/gs-cjk/acro5-cmaps-2001.tar.gz )
-	cups? ( mirror://gentoo/cups-${CUPS_PV}-source.tar.bz2 )"
+	cups? ( mirror://gentoo/cups-${CUPS_PV}-source.tar.bz2 )
+	mirror://gentoo/gdevhl12.c.gz"
 
 LICENSE="Aladdin"
 SLOT="0"
@@ -46,6 +47,7 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ghostscript-${PV}.tar.gz
+	unpack gdevhl12.c.gz
 
 	# cups support
 	if use cups; then
@@ -70,7 +72,7 @@ src_unpack() {
 	sed -i -e 's:DEVICE_DEVS7=$(DD)faxg3.dev $(DD)faxg32d.dev $(DD)faxg4.dev:DEVICE_DEVS7=$(DD)faxg3.dev $(DD)faxg32d.dev $(DD)faxg4.dev $(DD)cfax.dev:' ${S}/Makefile.in
 
 	# Brother HL-12XX support
-	cp ${FILESDIR}/gdevhl12.c ${S}/src/gdevhl12.c || die
+	cp ${WORKDIR}/gdevhl12.c ${S}/src/gdevhl12.c || die
 	cat ${FILESDIR}/gdevhl12-hl1250.mak >> ${S}/src/devs.mak || die
 	sed 's#^\(DEVICE_DEVS6=.*\)$#\1 $(DD)hl1240.dev $(DD)hl1250.dev#' \
 		-i ${S}/src/Makefile.in || die

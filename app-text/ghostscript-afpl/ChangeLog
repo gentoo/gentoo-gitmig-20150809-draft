@@ -1,6 +1,12 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.38 2006/02/18 18:28:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.39 2006/02/21 21:29:48 vanquirius Exp $
+
+  21 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> -files/gdevhl12.c,
+  ghostscript-afpl-8.53-r1.ebuild, ghostscript-afpl-8.53-r2.ebuild,
+  ghostscript-afpl-8.53-r3.ebuild:
+  Move gdevhl12.c to mirrors for large files bug 123634, reported by Mark
+  Loeser <halcy0nat gentoo dot org>.
 
 *ghostscript-afpl-8.53-r3 (18 Feb 2006)
 
