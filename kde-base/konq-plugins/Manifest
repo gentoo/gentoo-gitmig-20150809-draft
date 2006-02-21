@@ -1,4 +1,4 @@
-MD5 594d706cda535e8c1d84a5a392c76481 ChangeLog 5014
+MD5 e5d3c0cfd99565abb6dce72cd610d346 ChangeLog 5163
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-konq-plugins-3.4.1 215
 MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-konq-plugins-3.4.2 291
 MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-konq-plugins-3.4.3 69
@@ -7,6 +7,6 @@ MD5 2d970f21c7a6a6abbc56363e2e55d22e files/digest-konq-plugins-3.5.1 69
 MD5 c92307aa366e79b8743fd96262ae8f01 konq-plugins-3.4.1.ebuild 657
 MD5 0216edfe2fd1617b1dac5b8bd42668ff konq-plugins-3.4.2.ebuild 672
 MD5 f1a98673c779dd2916759e0c4243382f konq-plugins-3.4.3.ebuild 666
-MD5 58e32963d3253901efee98dc4ac4ff12 konq-plugins-3.5.0.ebuild 671
-MD5 6aaf28f1575557386297ab08cadc2b14 konq-plugins-3.5.1.ebuild 674
+MD5 84f0a00e654ccd9a50b37bf6d1247c28 konq-plugins-3.5.0.ebuild 688
+MD5 2e1bd975c6e0ffeeb797ea19700d181a konq-plugins-3.5.1.ebuild 690
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
