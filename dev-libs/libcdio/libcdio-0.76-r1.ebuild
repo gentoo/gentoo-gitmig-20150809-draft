@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.76-r1.ebuild,v 1.1 2006/02/12 03:44:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.76-r1.ebuild,v 1.2 2006/02/21 15:58:14 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -15,7 +15,7 @@ IUSE="cddb minimal"
 
 RDEPEND="!minimal? ( dev-libs/popt )
 	cddb? ( >=media-libs/libcddb-1.0.1 )
-	nls? ( virtual/libintl )"
+	virtual/libintl"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig"
