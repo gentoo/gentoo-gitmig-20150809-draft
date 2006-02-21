@@ -13,6 +13,9 @@ SHA256 f5b26a1ddf0b29a7364ee6db51e2ada256143fe70990fca163d2562c3dad52a8 files/di
 MD5 7c2708cff7c403d23ea5d5dcf47967e1 files/setarch-1.8-better-error.patch 276
 RMD160 c92a492bcad7d696e5c24573bda764566e693ceb files/setarch-1.8-better-error.patch 276
 SHA256 4dcff863026a24a9a42dffeacac33d10c7439871f73a15eaf23c31715a43aa1c files/setarch-1.8-better-error.patch 276
+MD5 20382cf4428eb69d7614cd35798c4050 files/setarch-1.8-help.patch 1066
+RMD160 bd9459688e2c4e4b4672b5fd431933d2dc0abfa8 files/setarch-1.8-help.patch 1066
+SHA256 ab9638227d143907fd1a5e1ddde2d148a0958249dadc8fb4f4d0343785c0e128 files/setarch-1.8-help.patch 1066
 MD5 dea9a8fcecb3af342b035ce1ca888a31 files/setarch-1.8-links.patch 1129
 RMD160 5f2353c3a89aac8d46e0a5b1f2886439cd96532c files/setarch-1.8-links.patch 1129
 SHA256 d525f85fd1e3d06d91253f6d6b78e3a36b69b2f3cc9ce14f42a65bbb41e6fe3b files/setarch-1.8-links.patch 1129
@@ -28,13 +31,13 @@ SHA256 86202c1fbc8650d2c2d10ec564f48e4a8b3a136cd8511a70b55df8cb8a0a2a71 files/se
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
-MD5 b3a45b4441be51445dd3216d62c86216 setarch-1.8.ebuild 927
-RMD160 07f60c465587ac46166a81960a83956f17e7c96d setarch-1.8.ebuild 927
-SHA256 405adb0676d7b60a0d57e816edc90f5c9bd7fc18f5f6a06e3556622a9bae4904 setarch-1.8.ebuild 927
+MD5 6b9f2681f5f92060cdf6ac9668bf79cb setarch-1.8.ebuild 965
+RMD160 19df04629244746ca0fc2f2bf43dc6afbfaab5ab setarch-1.8.ebuild 965
+SHA256 caaf1d9552a105c40b1a51b37a1d6d5018c5b0e74187376c4afc21d2df72e9b6 setarch-1.8.ebuild 965
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD+orn2+ySkm8kpY0RAp8iAKClQJjvv84tRJyhYHvy79bU0ZSRBACeK1vt
-aYNgaynLzAF8ektiMoxBUWo=
-=YKu1
+iD8DBQFD+qXD2+ySkm8kpY0RAjCGAJ4vFXcOlDbGoRWmkdOOIdo53oROugCgu8lO
+0r2p2+lRFfh28QduzontvYw=
+=7Rkz
 -----END PGP SIGNATURE-----

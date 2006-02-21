@@ -1,0 +1,44 @@
+--- setarch.c
++++ setarch.c
+@@ -120,17 +121,27 @@
+   return 0;
+ }
+ 
++void show_usage(const char *progname)
++{
++  int f;
++  printf("Usage: %s%s [options] <program> [program arguments]\n\n", progname,
++         (!strcmp(progname,"setarch")?" <arch>":""));
++  printf("Options:\n");
++  for (f=0; f<sizeof(flags)/sizeof(flags[0]); f++)
++    printf("\t-%c\tEnable %s\n", flags[f].c, flags[f].name);
++}
++
+ int main(int argc, char *argv[])
+ {
++  char *real_argv0;
+   char *p = strrchr(argv[0], '/');
+   unsigned long options = 0;
+   int got_arch = 0, verbose = 0;
+ 
+-  p = p ? p + 1 : argv[0];
++  real_argv0 = p = p ? p + 1 : argv[0];
+ 
+   if(argc <= 1) {
+-    fprintf(stderr, "Usage: %s %s program arguments\n",
+-	    p, !strcmp(p, "setarch")?"arch":"");
++    show_usage(real_argv0);
+     return 1;
+   }
+   
+@@ -155,6 +166,10 @@
+         verbose = 1;
+         continue;
+       }
++      if (arg[n] == 'h') {
++        show_usage(real_argv0);
++        return 0;
++      }
+     
+       for (f = 0; f < sizeof(flags)/sizeof(flags[0]); f++) {
+         if (arg[n] == flags[f].c) {
