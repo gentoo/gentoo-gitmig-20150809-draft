@@ -1,9 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/vzquota-3.0.0.2-r1.ebuild,v 1.1 2006/02/20 12:09:08 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/vzquota-3.0.0.2-r1.ebuild,v 1.2 2006/02/21 11:22:49 phreak Exp $
 
-#inherit eutils toolchain-funcs versionator linux-info
-inherit eutils toolchain-funcs versionator
+inherit eutils toolchain-funcs versionator linux-info
 
 VVER="$(get_version_component_range 1-3 ${PV})"
 VREL="$(get_version_component_range 4 ${PV})"
@@ -22,10 +21,10 @@ S="${WORKDIR}/${MY_P}"
 
 CONFIG_CHECK="VE VE_CALLS VZ_QUOTA"
 
-#pkg_setup() {
-#	linux-info_pkg_setup
-#	check_kernel_built
-#}
+pkg_setup() {
+	linux-info_pkg_setup
+	check_kernel_built
+}
 
 src_unpack() {
 	unpack ${A}
