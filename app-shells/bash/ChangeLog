@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.87 2006/02/17 12:20:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.88 2006/02/21 08:56:42 vapier Exp $
+
+*bash-3.1_p10 (21 Feb 2006)
+
+  21 Feb 2006; Mike Frysinger <vapier@gentoo.org> +bash-3.1_p10.ebuild:
+  Version bump.
 
 *bash-3.1_p8 (17 Feb 2006)
 
