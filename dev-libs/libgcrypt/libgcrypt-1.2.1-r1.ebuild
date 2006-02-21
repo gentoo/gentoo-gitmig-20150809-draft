@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.1-r1.ebuild,v 1.3 2005/11/10 15:18:47 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.1-r1.ebuild,v 1.4 2006/02/21 21:21:02 vanquirius Exp $
 
 inherit eutils
 
 DESCRIPTION="general purpose crypto library based on the code used in GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
-SRC_URI="mirror://gnupg/libgcrypt/${P}.tar.gz"
-
+SRC_URI="mirror://gnupg/libgcrypt/${P}.tar.gz
+	mirror://gentoo/${PN}-1.2.1-patches.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
@@ -20,11 +20,11 @@ RDEPEND="nls? ( sys-devel/gettext )
 src_unpack() {
 	unpack ${A}
 	epunt_cxx
-	epatch ${FILESDIR}/${P}-GNU-stack-fix.patch
+	epatch ${WORKDIR}/${P}-GNU-stack-fix.patch
 
 	# Fix info file to make subsequent index entry work
 	cd ${S}/doc
-	epatch ${FILESDIR}/${P}-info-entry-fix.patch
+	epatch ${WORKDIR}/${P}-info-entry-fix.patch
 }
 
 src_compile() {

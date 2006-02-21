@@ -1,12 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.1.ebuild,v 1.19 2005/11/26 04:16:10 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.1.ebuild,v 1.20 2006/02/21 21:21:02 vanquirius Exp $
 
 inherit eutils
 
 DESCRIPTION="general purpose crypto library based on the code used in GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
-SRC_URI="mirror://gnupg/libgcrypt/${P}.tar.gz"
+SRC_URI="mirror://gnupg/libgcrypt/${P}.tar.gz
+	mirror://gentoo/${PN}-1.2.1-patches.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -23,11 +24,11 @@ src_unpack() {
 
 	# fix for miss detection of 32 bit ppc
 	cd ${S}
-	epatch ${FILESDIR}/${P}-ppc64-fix.patch
+	epatch ${WORKDIR}/${P}-ppc64-fix.patch
 
 	# Fix info file to make subsequent index entry work
 	cd ${S}/doc
-	epatch ${FILESDIR}/${P}-info-entry-fix.patch
+	epatch ${WORKDIR}/${P}-info-entry-fix.patch
 }
 
 src_compile() {
