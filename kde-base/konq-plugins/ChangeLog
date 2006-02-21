@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konq-plugins
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.35 2006/01/22 22:53:03 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.36 2006/02/21 18:27:25 carlo Exp $
+
+  21 Feb 2006; Carsten Lohrke <carlo@gentoo.org> konq-plugins-3.5.0.ebuild,
+  konq-plugins-3.5.1.ebuild:
+  Add blocking deps according to bug #123638.
 
 *konq-plugins-3.5.1 (23 Jan 2006)
 

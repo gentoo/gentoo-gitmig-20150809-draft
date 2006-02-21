@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.1.ebuild,v 1.1 2006/01/28 14:30:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.1.ebuild,v 1.2 2006/02/21 18:31:15 carlo Exp $
 
 inherit kde-dist
 
@@ -16,7 +16,8 @@ DEPEND="~kde-base/kdepim-${PV}
 	sdl? ( >=media-libs/libsdl-1.2 )
 	xmms? ( media-sound/xmms )
 	berkdb? ( || ( =sys-libs/db-4.3*
-	               =sys-libs/db-4.2* ) )"
+	               =sys-libs/db-4.2* ) )
+	!kde-misc/metabar"
 
 src_compile() {
 	local myconf="$(use_with sdl) $(use_with xmms)"

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.157 2006/01/28 14:30:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.158 2006/02/21 18:31:15 carlo Exp $
+
+  21 Feb 2006; Carsten Lohrke <carlo@gentoo.org> kdeaddons-3.5.0.ebuild,
+  kdeaddons-3.5.1.ebuild:
+  Add blocking deps according to bug #123638.
 
   28 Jan 2006; Dan Armak <danarmak@gentoo.org> +kdeaddons-3.5.1.ebuild:
   Version 3.5.1. Not yet released upstream, so package.masked for now.
