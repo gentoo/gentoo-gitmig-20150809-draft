@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.86 2006/01/31 16:16:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.87 2006/02/21 15:23:19 agriffis Exp $
+
+  18 Feb 2006; Aron Griffis <agriffis@gentoo.org> libgda-1.2.3.ebuild:
+  Mark 1.2.3 ~ia64. #118333
 
   31 Jan 2006; Simon Stelling <blubb@gentoo.org> libgda-1.0.4.ebuild:
   stable on amd64
