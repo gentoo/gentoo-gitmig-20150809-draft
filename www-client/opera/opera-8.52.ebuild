@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.52.ebuild,v 1.2 2006/02/20 22:34:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.52.ebuild,v 1.3 2006/02/21 08:28:18 lanius Exp $
 
 inherit eutils
 
@@ -67,6 +67,7 @@ src_unpack() {
 	       -e "s:/usr/share/gnome:${D}/usr/share/gnome:g" \
 	       -e "s:/opt/gnome/share:${D}/opt/gnome/share:g" \
 		   -e "s:/usr/share/applications:${D}/usr/share/applications:g" \
+		   -e "s:/usr/local/share/applications:${D}/usr/share/applications:g" \
 	       -e 's:#\(OPERA_FORCE_JAVA_ENABLED=\):\1:' \
 	       -e 's:#\(export LD_PRELOAD OPERA_FORCE_JAVA_ENABLED\):\1:' \
 		   -e 's:read str_answer:return 0:' \
