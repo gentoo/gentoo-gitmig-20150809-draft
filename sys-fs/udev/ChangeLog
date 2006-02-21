@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.180 2006/02/21 17:30:51 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.181 2006/02/21 20:14:21 gregkh Exp $
+
+*udev-085 (21 Feb 2006)
+
+  21 Feb 2006; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-085.ebuild:
+  085 added
 
   21 Feb 2006; Joel Martin <kanaka@gentoo.org> udev-070-r1.ebuild:
   Fix invalid size value for udev.permissions in Manifest
