@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.1.2.3.ebuild,v 1.1 2006/02/21 18:15:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.1.2.3.ebuild,v 1.2 2006/02/21 21:10:32 carlo Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -41,7 +41,7 @@ src_compile() {
 	use lirc || myconf="${myconf} nolirc=1"
 
 	scons configure ${myconf} || die "configure failed"
-	scons ${MAKEOPTS} languages="${LANGS// /:}" || die "scons failed"
+	scons ${MAKEOPTS} || die "scons failed"
 }
 
 src_install() {
