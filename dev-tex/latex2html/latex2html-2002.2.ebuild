@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.ebuild,v 1.10 2005/06/04 08:58:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.ebuild,v 1.11 2006/02/21 18:49:41 nattfodd Exp $
+
+inherit eutils
 
 MY_P=${P/./-}
 S=${WORKDIR}/${MY_P}
@@ -19,6 +21,12 @@ DEPEND="virtual/ghostscript
 	dev-lang/perl
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-convert-length.patch
+}
 
 src_compile() {
 	local myconf

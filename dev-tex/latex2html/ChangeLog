@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/latex2html
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.24 2005/10/02 14:27:29 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.25 2006/02/21 18:49:41 nattfodd Exp $
+
+  21 Feb 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  +files/latex2html-convert-length.patch, latex2html-2002.2.ebuild,
+  latex2html-2002.2.1_pre20041025.ebuild:
+  Corrects a warning (possibly an error with some perl versions) in make check
+  (bug #122927).
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   latex2html-2002.2.1_pre20041025.ebuild:
