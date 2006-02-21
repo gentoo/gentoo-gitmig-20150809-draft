@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.5.ebuild,v 1.9 2005/10/29 10:14:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.5.ebuild,v 1.10 2006/02/21 23:23:30 tupone Exp $
 
 inherit games
 
@@ -13,16 +13,11 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc-macos sparc x86"
 IUSE="X gtk"
 
-RDEPEND="virtual/libc
-	>=sys-libs/ncurses-5
+DEPEND=">=sys-libs/ncurses-5
 	gtk? (
 		=x11-libs/gtk+-1.2*
-		dev-libs/glib
-		virtual/x11
 	)
-	X? ( virtual/x11 )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	X? ( || ( x11-libs/libXaw virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}
