@@ -1,0 +1,11 @@
+--- Ft/Lib/DistExt/Install.py.old	2006-02-21 21:09:33.754184850 +0000
++++ Ft/Lib/DistExt/Install.py	2006-02-21 21:10:48.473801734 +0000
+@@ -24,6 +24,8 @@
+          "force installation (overwrite any existing files)"),
+         ('skip-build', None,
+          "skip rebuilding everything (for testing/debugging)"),
++        ('root=', None,
++         "Install into alternative root"),        
+         ] + Util.GetDocOptions()
+ 
+     boolean_options = ['compile', 'force', 'skip-build', 'with-docs']

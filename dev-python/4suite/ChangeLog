@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/4suite
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.18 2005/10/02 14:05:11 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.19 2006/02/21 21:18:21 liquidx Exp $
+
+*4suite-1.0_beta3 (21 Feb 2006)
+
+  21 Feb 2006; Alastair Tse <liquidx@gentoo.org>
+  +files/1.0_b3-add_root_opt.diff, +4suite-1.0_beta3.ebuild:
+  version bump. plus stable bump for 1.0b1 because 1.0a3 does not compile any
+  more on stable (#123394)
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> 4suite-1.0_beta1.ebuild:
   Mark 1.0_beta1 stable on ia64
