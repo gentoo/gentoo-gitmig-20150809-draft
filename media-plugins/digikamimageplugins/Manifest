@@ -1,28 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8f012a5d66dee94518e89f976be50141 ChangeLog 3868
-RMD160 135c1f17fc3e68b8eea33aec44b57e12ae393475 ChangeLog 3868
-SHA256 e130835a2b22b9f7f4d08aa266214fbd8d45698016160d13aaeb9976bdc1f3a6 ChangeLog 3868
+MD5 181bc0683174779001117dd92015fcd6 ChangeLog 4175
 MD5 e3723807c0039ef7ca594ec0e2cc73bd digikamimageplugins-0.7.4-r1.ebuild 894
-RMD160 d5abcefa64b3b16f4e5f00e9828a8408c669bf78 digikamimageplugins-0.7.4-r1.ebuild 894
-SHA256 400e7279fe0c8aa4a646c6de06fd82c36325b55e441014a695353e15a2a63e90 digikamimageplugins-0.7.4-r1.ebuild 894
-MD5 f2945a4bfd256fe7b32d54e08a1532ee digikamimageplugins-0.8.0-r1.ebuild 923
-RMD160 a0e1239b5dd1e0a88f99ac89f6a8d62ad16fda97 digikamimageplugins-0.8.0-r1.ebuild 923
-SHA256 f5657369753137a3f0080c1ed59b4cfab67ccb2855ec57e60bfecd0e33934887 digikamimageplugins-0.8.0-r1.ebuild 923
+MD5 e18bac0fa20304ffd2770cd0341207f0 digikamimageplugins-0.7.4-r2.ebuild 943
+MD5 5acdae25ccb630d88b809f34d000bc7d digikamimageplugins-0.8.1.ebuild 1742
 MD5 a427102c5d972d65ba8fbc2a9b03bf39 files/digest-digikamimageplugins-0.7.4-r1 163
-RMD160 912d137fc311ea6e7b3478321d27830aa256361c files/digest-digikamimageplugins-0.7.4-r1 163
-SHA256 b9e4d781483832e94997f04a16392bc4e687abcd4ed3cc0489b9e43fa3cdc163 files/digest-digikamimageplugins-0.7.4-r1 163
-MD5 101015c9e55c28ef97c7b4c6d2427117 files/digest-digikamimageplugins-0.8.0-r1 163
-RMD160 018540613acf9aff676222e91cb975973fde9b17 files/digest-digikamimageplugins-0.8.0-r1 163
-SHA256 9c5174a83ee84e880bce7c500e71fbcf696f54b018aa941731fe13d8e7cc60d1 files/digest-digikamimageplugins-0.8.0-r1 163
+MD5 a427102c5d972d65ba8fbc2a9b03bf39 files/digest-digikamimageplugins-0.7.4-r2 163
+MD5 adc71644abb888c1a1b142ab1528de26 files/digest-digikamimageplugins-0.8.1 163
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD85mdAiZjviIA2XgRAhQLAJ9xzR4T35U/27O//LzdK81pPzdQPwCgjKcI
-p/JYq+FXKVQDtV/cA7yLklY=
-=1J1i
------END PGP SIGNATURE-----

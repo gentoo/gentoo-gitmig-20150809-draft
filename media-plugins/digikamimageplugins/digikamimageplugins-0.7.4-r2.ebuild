@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.8.0-r1.ebuild,v 1.2 2006/02/01 11:55:25 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.7.4-r2.ebuild,v 1.1 2006/02/21 18:03:31 carlo Exp $
 
 inherit kde
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
-DEPEND="|| ( ~media-gfx/digikam-0.8.0 ~media-gfx/digikam-0.8.1 )
+DEPEND="~media-gfx/digikam-${PV}
 	>=media-gfx/imagemagick-5.5.4
 	>=media-video/mjpegtools-1.6.0
 	virtual/opengl"
@@ -27,12 +27,18 @@ need-kde 3.2
 
 src_compile(){
 	kde_src_compile
-	cd ${WORKDIR}/${P_DOC}
+	_S=${S}
+	S=${WORKDIR}/${P_DOC}
+	cd ${S}
 	kde_src_compile
+	S=${_S}
 }
 
 src_install(){
 	kde_src_install
-	cd ${WORKDIR}/${P_DOC}
+	_S=${S}
+	S=${WORKDIR}/${P_DOC}
+	cd ${S}
 	kde_src_install
+	S=${_S}
 }
