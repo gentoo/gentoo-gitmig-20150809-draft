@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/tnftp
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.18 2005/11/28 18:11:43 grobian Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.19 2006/02/21 21:20:15 exg Exp $
+
+  21 Feb 2006; Emanuele Giaquinta <exg@gentoo.org> tnftp-20050625.ebuild:
+  Stable on ppc.
 
   28 Nov 2005; Fabian Groffen <grobian@gentoo.org> tnftp-20050625-r1.ebuild:
   macos patch requires autoconf 2.59, make that clear (bug #113777)
