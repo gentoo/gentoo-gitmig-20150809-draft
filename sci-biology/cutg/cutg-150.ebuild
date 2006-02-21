@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-150.ebuild,v 1.1 2005/12/13 20:00:17 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-150.ebuild,v 1.2 2006/02/21 01:12:27 tsunam Exp $
 
 DESCRIPTION="Codon usage tables calculated from GenBank"
 LICENSE="public-domain"
@@ -11,7 +11,7 @@ SLOT="0"
 # Minimal build keeps only the indexed files (if applicable) and the
 # documentation. The non-indexed database is not installed.
 IUSE="emboss minimal"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~ppc64 x86"
 
 DEPEND="emboss? ( sci-biology/emboss )"
 
