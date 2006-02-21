@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.101 2006/02/20 04:29:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.102 2006/02/21 04:39:15 jer Exp $
+
+  21 Feb 2006; Jeroen Roovers <jer@gentoo.org> dbus-0.60-r4.ebuild:
+  Stable on hppa.
 
   19 Feb 2006; Joshua Kinard <kumba@gentoo.org> dbus-0.60-r4.ebuild:
   Revert mips stabilization for 0.60-r4. According to geoman, there are still
