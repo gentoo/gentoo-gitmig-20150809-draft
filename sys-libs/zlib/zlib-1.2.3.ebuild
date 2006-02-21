@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.3.ebuild,v 1.7 2005/11/26 01:03:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.3.ebuild,v 1.8 2006/02/21 23:55:33 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,6 +30,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.2.1-configure.patch
 	# fix shared library test on -fPIC dependant archs
 	epatch "${FILESDIR}"/${PN}-1.2.1-fPIC.patch
+	# generate DT_SONAME on BSD hosts #123571
+	epatch "${FILESDIR}"/${PN}-1.2.3-bsd-soname.patch
 }
 
 src_compile() {

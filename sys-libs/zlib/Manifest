@@ -1,19 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 81c626acfa8f6fa08a8b22152697014d ChangeLog 7716
+MD5 5febe3ef48bc55a7ad3af76f46294b93 ChangeLog 7902
+RMD160 461bae46a907d9472801ed18d8c89f215eb43f62 ChangeLog 7902
+SHA256 9b011f2a6b084ce34253b403788d293f20c66aa37109aaedd6307c95b9dab248 ChangeLog 7902
 MD5 8040cf924143b9328aa2d584222e0f51 files/digest-zlib-1.2.3 63
+RMD160 515fb7d5eee65e627fdb6d7b691e64dacdac3d19 files/digest-zlib-1.2.3 63
+SHA256 54adede70a500f2de5da32dbca0821b4c236e44b14a509f732243ce3e9d4a073 files/digest-zlib-1.2.3 63
 MD5 d821453623869d6d8f7de1eca8b12e2f files/zlib-1.2.1-build-fPIC.patch 2211
+RMD160 c0283f640411a8a2c64073ea1833642cafff6fc9 files/zlib-1.2.1-build-fPIC.patch 2211
+SHA256 c02fce932ea57fc417a51f5f0676abdcecc890e67a3c3cda510c0c151e2be88b files/zlib-1.2.1-build-fPIC.patch 2211
 MD5 9d3fdd73e1997aa5c823fc210f29919d files/zlib-1.2.1-configure.patch 3149
+RMD160 45a6e8fd83be0488bdf59f8965d394fc3be84246 files/zlib-1.2.1-configure.patch 3149
+SHA256 ca0d5f7e50a90e6cafa554c85a9b19a8e2cbbb8c8f1de47fdd257ebfac4595aa files/zlib-1.2.1-configure.patch 3149
 MD5 a337d1727a4f6f9ed8d29e43cde40e89 files/zlib-1.2.1-fPIC.patch 662
+RMD160 7f0323c87b8387ba1f4c6d67ae513a48ad4e4e33 files/zlib-1.2.1-fPIC.patch 662
+SHA256 1d994d45de60202f062244e0861f5c57d983626636aeb7361944cd2017a48c35 files/zlib-1.2.1-fPIC.patch 662
 MD5 f84d68bd9a614ad5495a369cb258cf8d files/zlib-1.2.1-glibc.patch 395
+RMD160 805b2a9f5f23445465cacc9c2c4af9b67ed7ed3e files/zlib-1.2.1-glibc.patch 395
+SHA256 32711cf3faf25ff537c8a56be3ddcf1e4721de522c7966a3c5789e00d8fba0c7 files/zlib-1.2.1-glibc.patch 395
 MD5 40634a4cbdcd9c795cfc34473c76038c files/zlib-1.2.2-mapfile.patch 2139
+RMD160 26baa2b43dbd78e8bac24c486c1e35d84f437c73 files/zlib-1.2.2-mapfile.patch 2139
+SHA256 c1892dcb6e13e21dbde64774efa1f0df24096cc446d119fb239f3c0b34a2c713 files/zlib-1.2.2-mapfile.patch 2139
+MD5 452712d79f04504a2b60e3e7e8e672f6 files/zlib-1.2.3-bsd-soname.patch 477
+RMD160 535dde5e81a74927ae4bc454f84f774e1fc433d6 files/zlib-1.2.3-bsd-soname.patch 477
+SHA256 79cc401b51c80f3a084cc4ffba8c8b1cbe4d9b101f6f02350e677af49785089c files/zlib-1.2.3-bsd-soname.patch 477
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 7315c439ca931068664b0509d07d55a7 zlib-1.2.3.ebuild 1779
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 e0f54db7fda30a38c81ed51aaa0abc88 zlib-1.2.3.ebuild 1873
+RMD160 2b7f68c165827554c81c6de8007bad6a8a13da64 zlib-1.2.3.ebuild 1873
+SHA256 8d977d340c3aeb16b637f874400bfb3d9790d1d25790a2f5c19fc033904be084 zlib-1.2.3.ebuild 1873
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDyIln2+ySkm8kpY0RAvBTAKCQRW49zPDvRrDKi286fXCxB/snaQCgwqms
-3dTIhWH0RnAgSl3qY4DHP6o=
-=/hTd
+iD8DBQFD+6iU2+ySkm8kpY0RAkMBAJ0Wk6WsrQBMNR7mN81UZGhKDltykACgrZir
+6yOFnsE656Wfnvlx7RkYe0c=
+=zwc1
 -----END PGP SIGNATURE-----

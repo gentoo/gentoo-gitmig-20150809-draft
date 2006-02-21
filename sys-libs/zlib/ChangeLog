@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/zlib
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.55 2005/07/22 06:22:47 hardave Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.56 2006/02/21 23:55:33 vapier Exp $
+
+  21 Feb 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/zlib-1.2.3-bsd-soname.patch, zlib-1.2.3.ebuild:
+  Generate DT_SONAME in the shared lib on BSD hosts #123571 by Diego Pettenò.
 
   22 Jul 2005; Hardave Riar <hardave@gentoo.org> zlib-1.2.3.ebuild:
   Stable on mips, bug #99751.
