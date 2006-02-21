@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.16_rc3.ebuild,v 1.1 2006/02/19 16:02:31 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.16_rc3-r1.ebuild,v 1.1 2006/02/21 09:48:59 chrb Exp $
 
 ETYPE="sources"
 inherit kernel-2 eutils
@@ -33,8 +33,6 @@ src_unpack() {
 		linux-2.6.16-rc3-xen/include/linux/autoconf.h || die
 	t=linux-2.6.16-rc3-xen
 	cp XEN-VERSION ${t}
-	echo ARCH=xen | cat - ${t}/Makefile >${t}/Makefile.0
-	mv ${t}/Makefile.0 ${t}/Makefile
 	mv ${t} ${WORKDIR}/linux-${KV}
 	rm -rf ${WORKDIR}/${MY_P}
 }
