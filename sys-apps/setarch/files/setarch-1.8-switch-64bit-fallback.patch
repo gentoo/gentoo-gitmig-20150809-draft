@@ -1,0 +1,26 @@
+--- setarch.c
++++ setarch.c
+@@ -98,6 +98,7 @@
+     }
+ 
+   pers_value = transitions[i].perval | options;
++retry_set_pers:
+   res = set_pers(pers_value);
+   if(res == -EINVAL)
+     return 1;
+@@ -112,6 +113,15 @@
+ 	     && strcmp(un.machine, "i686")
+ 	     && strcmp(un.machine, "athlon")))
+ 	{
++	  /* if we are switching to 64bit mode and it failed,
++	   * see if it was because we need to enforce the 32bit
++	   * memory limit (-B) ... */
++	  if(pers_value == PER_LINUX)
++	    {
++	      fprintf(stderr, "Unable to set arch to %s, retrying with 32bit memory limit (-B) ...\n", pers);
++	      pers_value = PER_LINUX_32BIT;
++	      goto retry_set_pers;
++	    }
+ 	  fprintf(stderr, "Unable to set arch to %s\n", pers);
+ 	  exit(1);
+ 	}

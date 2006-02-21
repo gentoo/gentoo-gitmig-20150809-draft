@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setarch/setarch-1.8.ebuild,v 1.2 2006/02/21 05:31:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setarch/setarch-1.8.ebuild,v 1.3 2006/02/21 05:42:02 vapier Exp $
 
 inherit eutils
 
@@ -28,6 +28,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-better-error.patch
 	epatch "${FILESDIR}"/${P}-links.patch
 	epatch "${FILESDIR}"/${P}-help.patch
+	epatch "${FILESDIR}"/${P}-switch-64bit-fallback.patch
 }
 
 src_install() {

@@ -28,16 +28,19 @@ SHA256 510006f888af6f8685cf7cd2bf7336ff9a7f4654877c314082058df9ee26527c files/se
 MD5 ad727dd335bebc091d9cee8026b05bf0 files/setarch-1.8-sparc.patch 250
 RMD160 859857e20d5694e67901126680ccad28a09f8b1e files/setarch-1.8-sparc.patch 250
 SHA256 86202c1fbc8650d2c2d10ec564f48e4a8b3a136cd8511a70b55df8cb8a0a2a71 files/setarch-1.8-sparc.patch 250
+MD5 a746d5c1c9c9726cead6daecf79de912 files/setarch-1.8-switch-64bit-fallback.patch 731
+RMD160 1ed9f96c571f0aa8652b53265701a27850c6d6f0 files/setarch-1.8-switch-64bit-fallback.patch 731
+SHA256 e6dfba3ef404aa74550fabcda0668d23b4c74acb74f84676cb1e9d3cbe33be7d files/setarch-1.8-switch-64bit-fallback.patch 731
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
-MD5 6b9f2681f5f92060cdf6ac9668bf79cb setarch-1.8.ebuild 965
-RMD160 19df04629244746ca0fc2f2bf43dc6afbfaab5ab setarch-1.8.ebuild 965
-SHA256 caaf1d9552a105c40b1a51b37a1d6d5018c5b0e74187376c4afc21d2df72e9b6 setarch-1.8.ebuild 965
+MD5 87fea3229b85538222d3aefb718fb0e4 setarch-1.8.ebuild 1020
+RMD160 101fbf859ac7b16805304f667b2d037f613e2ff0 setarch-1.8.ebuild 1020
+SHA256 bc4f3010548f83a5a5cc0227fe5bfafeae0eac3daedefc7b9a36668971957b80 setarch-1.8.ebuild 1020
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD+qXD2+ySkm8kpY0RAjCGAJ4vFXcOlDbGoRWmkdOOIdo53oROugCgu8lO
-0r2p2+lRFfh28QduzontvYw=
-=7Rkz
+iD8DBQFD+qhE2+ySkm8kpY0RAo/IAKCUf98oBt0hAKZi9hK2Zs77gWqLsACgo0kI
+raUSK1/HomWW+pLEtU+10Wk=
+=I6+g
 -----END PGP SIGNATURE-----
