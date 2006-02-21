@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtorrent/qtorrent-0.9.6.1-r1.ebuild,v 1.1 2005/02/22 21:03:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtorrent/qtorrent-0.9.6.1-r1.ebuild,v 1.2 2006/02/21 18:53:46 carlo Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND="dev-python/PyQt"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-sizetype.patch
+	epatch ${DISTDIR}/${P}-sizetype.patch
 }
 
 src_install() {

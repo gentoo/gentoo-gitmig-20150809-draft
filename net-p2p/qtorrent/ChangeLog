@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/qtorrent
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtorrent/ChangeLog,v 1.9 2005/02/22 21:03:13 carlo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtorrent/ChangeLog,v 1.10 2006/02/21 18:53:46 carlo Exp $
+
+  21 Feb 2006; Carsten Lohrke <carlo@gentoo.org> metadata.xml,
+  qtorrent-0.9.6.1-r1.ebuild:
+  Move 26kB patch out of cvs. Update metadata.xml.
 
 *qtorrent-0.9.6.1-r1 (22 Feb 2005)
 
