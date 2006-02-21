@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.7.4-r2.ebuild,v 1.1 2006/02/15 15:39:09 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.7.4-r2.ebuild,v 1.2 2006/02/21 18:00:12 carlo Exp $
 
 inherit kde
 
@@ -34,7 +34,6 @@ pkg_setup(){
 }
 
 src_compile(){
-	myconf="$(use_enable nfs nfs-hack)"
 	kde_src_compile
 	myconf=""
 	_S=${S}
