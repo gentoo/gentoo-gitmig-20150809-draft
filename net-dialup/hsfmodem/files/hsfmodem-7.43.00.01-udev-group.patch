@@ -1,0 +1,12 @@
+diff -Nru hsfmodem-7.43.00.01full.orig/scripts/cnxtconfig.in hsfmodem-7.43.00.01full/scripts/cnxtconfig.in
+--- hsfmodem-7.43.00.01full.orig/scripts/cnxtconfig.in	2006-02-08 00:48:22.000000000 +0200
++++ hsfmodem-7.43.00.01full/scripts/cnxtconfig.in	2006-02-22 01:24:48.676530250 +0200
+@@ -1783,7 +1783,7 @@
+ 
+ 	if [ -d /etc/udev/rules.d ]; then
+ 		rm -f /etc/udev/rules.d/@CNXTTARGET@.rules
+-		echo 'KERNEL="ttyS@CNXTSERDEV@0", SYMLINK="modem"' > /etc/udev/rules.d/@CNXTTARGET@.rules
++		echo 'KERNEL="ttyS@CNXTSERDEV@0", SYMLINK="modem", GROUP="dialout"' > /etc/udev/rules.d/@CNXTTARGET@.rules
+ 	fi
+ }
+ 
