@@ -1,0 +1,36 @@
+diff -r -u foo/rosegarden-4-1.0/base/Colour.C rosegarden-4-1.0/base/Colour.C
+--- foo/rosegarden-4-1.0/base/Colour.C	2005-02-08 14:55:22.000000000 +0000
++++ rosegarden-4-1.0/base/Colour.C	2005-10-08 15:06:06.000000000 +0100
+@@ -163,7 +163,7 @@
+ // Generic Colour routines:
+ 
+ Colour
+-Rosegarden::getCombinationColour(const Colour &input1, const Colour &input2)
++getCombinationColour(const Colour &input1, const Colour &input2)
+ {
+     Colour ret((input1.getRed()+input2.getRed())/2,
+                 (input1.getGreen()+input2.getGreen())/2,
+diff -r -u foo/rosegarden-4-1.0/gui/qcanvasgroupableitem.h rosegarden-4-1.0/gui/qcanvasgroupableitem.h
+--- foo/rosegarden-4-1.0/gui/qcanvasgroupableitem.h	2005-02-08 14:56:08.000000000 +0000
++++ rosegarden-4-1.0/gui/qcanvasgroupableitem.h	2005-10-08 15:16:10.000000000 +0100
+@@ -24,6 +24,8 @@
+ 
+ #include <qcanvas.h>
+ 
++class QCanvasItemGroup;
++
+ /**
+  * This class is meant to be inherited by QCanvasItem children to make
+  * them groupable.
+diff -r -u foo/rosegarden-4-1.0/gui/segmenttool.h rosegarden-4-1.0/gui/segmenttool.h
+--- foo/rosegarden-4-1.0/gui/segmenttool.h	2005-02-08 14:56:27.000000000 +0000
++++ rosegarden-4-1.0/gui/segmenttool.h	2005-10-08 15:43:59.000000000 +0100
+@@ -41,6 +41,8 @@
+ 
+ namespace Rosegarden { class RulerScale; }
+ 
++class SegmentToolBox;
++
+ //////////////////////////////////////////////////////////////////////
+ //                 Segment Tools
+ //////////////////////////////////////////////////////////////////////

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.1.0-r1.ebuild,v 1.6 2005/07/13 13:52:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.1.0-r1.ebuild,v 1.7 2006/02/21 18:15:35 carlo Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -26,6 +26,8 @@ DEPEND="arts? ( || ( kde-base/kdemultimedia-arts kde-base/kdemultimedia ) )
 		>=media-libs/ladspa-cmt-1.14 )"
 need-kde 3
 
+PATCHES="${FILESDIR}/4.1.0-dssi.patch
+	${FILESDIR}/4.1.0-gcc4.diff"
 pkg_setup() {
 	echo
 	if use arts ; then
@@ -38,11 +40,6 @@ pkg_setup() {
 		use jack && einfo "Jack support enabled" || ewarn "Jack support disabled"
 	fi
 	echo
-}
-
-src_unpack() {
-	kde_src_unpack
-	epatch ${FILESDIR}/${PV}-dssi.patch
 }
 
 src_compile() {
