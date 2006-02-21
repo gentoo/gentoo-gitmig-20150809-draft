@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060217.ebuild,v 1.5 2006/02/20 22:50:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060217.ebuild,v 1.6 2006/02/21 19:22:19 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,8 +9,8 @@ IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl bindist
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
 dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
 lirc live livecd lzo mad matroska matrox mmx mmxext musepack nas nls nvidia
-vorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype
-v4l v4l2 win32codecs X xanim xinerama xmms xv xvid xvmc"
+vorbis opengl openal oss png real rtc samba sdl sse sse2 svga tga theora
+truetype v4l v4l2 win32codecs X xanim xinerama xmms xv xvid xvmc"
 # openal
 BLUV=1.4
 SVGV=1.9.17
@@ -28,13 +28,13 @@ DESCRIPTION="Media Player for Linux (snapshot)"
 HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
-# openal? ( media-libs/openal )
 RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	win32codecs? ( >=media-libs/win32codecs-20040916 )
 	x86? ( real? ( >=media-video/realplayer-10.0.3 ) )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
+	openal? ( media-libs/openal )
 	bidi? ( dev-libs/fribidi )
 	cdparanoia? ( media-sound/cdparanoia )
 	dga? ( || ( x11-libs/libXxf86dga virtual/x11 ) )
@@ -383,13 +383,13 @@ src_compile() {
 	#############
 	# Audio Output #
 	#############
-	myconf="${myconf} $(use_enable alsa)"
-	myconf="${myconf} $(use_enable arts)"
-	myconf="${myconf} $(use_enable esd)"
-	myconf="${myconf} $(use_enable mad)"
-	myconf="${myconf} $(use_enable nas)"
-	myconf="${myconf} --disable-openal" #$(use_enable openal)"
-	myconf="${myconf} $(use_enable oss ossaudio)"
+	use alsa || myconf="${myconf} --disable-alsa"
+	use arts || myconf="${myconf} --disable-arts"
+	use esd || myconf="${myconf} --disable-esd"
+	use mad || myconf="${myconf} --disable-mad"
+	use nas || myconf="${myconf} --disable-nas"
+	use openal || myconf="${myconf} --disable-openal"
+	use oss || myconf="${myconf} --disable-ossaudio"
 
 	#################
 	# Advanced Options #
