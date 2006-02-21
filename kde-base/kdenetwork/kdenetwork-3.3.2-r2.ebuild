@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.2-r2.ebuild,v 1.9 2005/07/22 21:58:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.2-r2.ebuild,v 1.10 2006/02/21 18:51:03 carlo Exp $
 
 inherit kde-dist eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-kopete-msn.patch"
 
 	# Fix bug #75907. Applied upstream.
-	epatch "${FILESDIR}/${P}-kwifimanager-configlocation.patch"
+	epatch "${DISTDIR}/${P}-kwifimanager-configlocation.patch"
 
 	# Fix vulnerabilities in libgadu. See bug 99754.
 	epatch "${DISTDIR}/post-3.3.2-kdenetwork-libgadu.patch"
