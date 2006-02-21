@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.13 2006/02/16 18:55:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.14 2006/02/21 20:25:05 liquidx Exp $
+
+  21 Feb 2006; Alastair Tse <liquidx@gentoo.org> -fcitx-2.0.1.ebuild:
+  cleaned up last v2 ebuild for fcitx
 
   16 Feb 2006; Alastair Tse <liquidx@gentoo.org> fcitx-3.1.1.ebuild:
   stable bump for x86 (#103046)
