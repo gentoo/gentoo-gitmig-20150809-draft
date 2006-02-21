@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmbutton
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.8 2006/01/24 22:29:38 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.9 2006/02/21 21:43:30 nelchael Exp $
+
+  21 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/wmbutton-buttons.xpm, wmbutton-0.5.ebuild:
+  Moved files/wmbutton-buttons.xpm to distfiles, see bug #123634.
 
   24 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmbutton-0.5.ebuild:
   Fixed DEPEND for modular X.

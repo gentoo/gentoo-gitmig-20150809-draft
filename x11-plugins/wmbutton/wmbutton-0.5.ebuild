@@ -1,13 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.5.ebuild,v 1.8 2006/01/24 22:29:38 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.5.ebuild,v 1.9 2006/02/21 21:43:30 nelchael Exp $
 
 inherit eutils
 
 IUSE=""
 
 DESCRIPTION="wmbutton is a dockapp application that displays nine configurable buttons"
-SRC_URI="http://www.dockapps.org/download.php/id/454/${P}.tar.gz"
+SRC_URI="http://www.dockapps.org/download.php/id/454/${P}.tar.gz
+	mirror://gentoo/${PN}-buttons.xpm"
 HOMEPAGE="http://www.dockapps.org/file.php/id/241"
 
 RDEPEND="|| ( (
@@ -31,7 +32,7 @@ src_unpack()
 
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-cflags.patch
-	cp ${FILESDIR}/${PN}-buttons.xpm buttons.xpm
+	cp ${DISTDIR}/${PN}-buttons.xpm buttons.xpm
 }
 
 src_compile()
