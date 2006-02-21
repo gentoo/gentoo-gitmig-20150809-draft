@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.8 2006/02/16 13:12:03 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.9 2006/02/21 13:32:34 dcoutts Exp $
+
+*cabal-1.1.3-r1 (21 Feb 2006)
+
+  21 Feb 2006; <duncan@gentoo.org> +files/cabal-1.1.3-ghc622.patch,
+  +cabal-1.1.3-r1.ebuild:
+  Add a patch to make registered packages be exposed by default with ghc-6.2
 
   16 Feb 2006; <duncan@gentoo.org> cabal-1.1.3.ebuild:
   Add "lib" to CABAL_FEATURES in preparation for pending eclass updates.
