@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.51 2006/02/17 16:13:26 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.52 2006/02/21 22:11:35 rl03 Exp $
+
+*bugzilla-2.20.1 (21 Feb 2006)
+*bugzilla-2.18.5 (21 Feb 2006)
+
+  21 Feb 2006; Renat Lumpau <rl03@gentoo.org> +bugzilla-2.18.5.ebuild,
+  -bugzilla-2.20.ebuild, +bugzilla-2.20.1.ebuild:
+  Vbump wrt security bug #123646.
 
   17 Feb 2006; Renat Lumpau <rl03@gentoo.org> files/2.20/postinstall-en.txt:
   Clarified postinstall instructions

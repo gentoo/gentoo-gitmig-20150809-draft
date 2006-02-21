@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.ebuild,v 1.6 2006/02/16 20:06:30 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.1.ebuild,v 1.1 2006/02/21 22:11:35 rl03 Exp $
 
 inherit webapp eutils
 
