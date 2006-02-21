@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 83a4fed8f5bbc67193ecb747ef8219a1 ChangeLog 5022
-RMD160 08052cae5acd5835b0a7b26bfa55d1c95aba6343 ChangeLog 5022
-SHA256 ce5186f483ee21a1a0ecaf9e4b10ecec6e5d55c3ecbd4c6951a026f8cfd9feef ChangeLog 5022
+MD5 2aa0d6d48444a33a44b9bf9280aae55b ChangeLog 5108
+RMD160 63a0fa4482a6374701ec8000565d155a4b1a4bac ChangeLog 5108
+SHA256 034fa864603bb5534997d883880ac54f56352c6f44721339bb4591c01f6d87bf ChangeLog 5108
 MD5 6c7387e0d96db70dfc803f7cfd973a1e files/digest-taglist-3.4 63
 RMD160 64fb7413bf89b1f9c3e8b4fb78a0a156cb5e59c8 files/digest-taglist-3.4 63
 SHA256 18ef9d8552d03a4300e655a33b9cf231f18f0ecda19cc9743bce192607a0f992 files/digest-taglist-3.4 63
@@ -40,13 +37,6 @@ SHA256 5785250a1a2d4a3cd394031bfcc8aeaa9a4dc3b16b819b334f97f28961bcbfec taglist-
 MD5 5f0c712995e5be782434bc642b04f2c6 taglist-4.0_beta2.ebuild 668
 RMD160 e3a1a15fc1e06249f483b9d43d4b61ae4eaa1fea taglist-4.0_beta2.ebuild 668
 SHA256 c51ffa6442bc21ada54e8931faff5d95d0f974448ced3c7c1ac954a3801196ff taglist-4.0_beta2.ebuild 668
-MD5 66e2a9e4ff52480dfbf09854581bafca taglist-4.0_beta3.ebuild 669
-RMD160 d13b439b883f09e5de01c691b01c7e98a842c8ba taglist-4.0_beta3.ebuild 669
-SHA256 e2f565dac0bab6eef26ed44a984f7d24433a3b068cbc4774d0598b1ec4def925 taglist-4.0_beta3.ebuild 669
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9rnRLLFUmVNQ7rkRAsR2AKCzksUnwxwsbtt1re+hmGW0DUoN1gCdEDSs
-OfTseS1HHEuYQVHulN79SKc=
-=5bCM
------END PGP SIGNATURE-----
+MD5 d012472b56d66c4abae937b2b793d78d taglist-4.0_beta3.ebuild 671
+RMD160 67c79e50c8f4dc700ff36783d6ffd072fbd82073 taglist-4.0_beta3.ebuild 671
+SHA256 a79a2d2842f1871b8cb9cf7a8ccff5b88cb4dcfb387b542fd372885dbc1f8e65 taglist-4.0_beta3.ebuild 671

@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/taglist
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.42 2005/12/29 08:28:26 ciaranm Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.43 2006/02/21 04:32:13 jer Exp $
+
+  21 Feb 2006; Jeroen Roovers <jer@gentoo.org> taglist-4.0_beta3.ebuild:
+  Marked ~hppa.
 
 *taglist-4.0_beta3 (29 Dec 2005)
 
