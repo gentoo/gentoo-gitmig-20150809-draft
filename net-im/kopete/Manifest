@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6641e76c4272fea1e282e0d922ab53bf ChangeLog 466
+RMD160 932ee552a1726e8837f62e8067ca4ebe3d4c3f0d ChangeLog 466
+SHA256 990075a6918e78567844a883066321571cdb6299d5df631ea5cf520038b3f496 ChangeLog 466
+MD5 2bb6391984e53ddbe3c8c9de934bfd0d files/digest-kopete-0.12_alpha1 262
+RMD160 1c5fb4556e6ae2ed77df50e392b985a1861f4bb7 files/digest-kopete-0.12_alpha1 262
+SHA256 5358f4ff86350539ce50fceb27dbafdda7513fe3cef9b588b8b25877f24c08b6 files/digest-kopete-0.12_alpha1 262
+MD5 96da63e66c003864f409b8543ef63d43 kopete-0.12_alpha1.ebuild 1028
+RMD160 b3c9e1ad917a42c5c9694073cf58fab117ca79dc kopete-0.12_alpha1.ebuild 1028
+SHA256 ffef7eebbba0bc8c36b6f3f2e8eb8e6769ff265f0cbb7ea91ca7693ab538e748 kopete-0.12_alpha1.ebuild 1028
+MD5 64e213d0db015eb97e16b31ec6e748c3 metadata.xml 254
+RMD160 ddca3e329213be86e7b2d62c52078a77ea308f4a metadata.xml 254
+SHA256 addaf999f171c0e580a0399105382e9b213e14f3bd85b74671742b41f41c2261 metadata.xml 254
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD+ypeAiZjviIA2XgRAjx+AJ0Wk4efDTaaw+WyjZNPL4C5aNrSAgCgwGmy
+MTsM6fb2yD227c8WRuf6jGc=
+=w5pm
+-----END PGP SIGNATURE-----
