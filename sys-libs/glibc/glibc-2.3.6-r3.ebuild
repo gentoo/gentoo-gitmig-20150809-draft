@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.2 2006/02/20 06:21:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.3 2006/02/21 23:35:21 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -511,7 +511,7 @@ toolchain-glibc_src_install() {
 	# This is our new config file for building locales
 	doins ${FILESDIR}/locales.build
 	# example host.conf with multicast dns disabled by default
-	doins ${FILESDIR}/2.3.4/host.conf
+	doins ${FILESDIR}/2.3.6/host.conf
 
 	# simple test to make sure our new glibc isnt completely broken.
 	# for now, skip the multilib scenario.  also make sure we don't
