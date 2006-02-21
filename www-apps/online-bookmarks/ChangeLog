@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/online-bookmarks
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/online-bookmarks/ChangeLog,v 1.5 2006/01/18 11:14:04 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/online-bookmarks/ChangeLog,v 1.6 2006/02/21 22:28:51 rl03 Exp $
+
+*online-bookmarks-0.6.4b (21 Feb 2006)
+
+  21 Feb 2006; Renat Lumpau <rl03@gentoo.org>
+  -online-bookmarks-0.6.1c.ebuild, -online-bookmarks-0.6.3.ebuild,
+  +online-bookmarks-0.6.4b.ebuild:
+  Version bump
 
 *online-bookmarks-0.6.3 (18 Jan 2006)
 
