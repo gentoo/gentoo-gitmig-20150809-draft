@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sfftobmp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/ChangeLog,v 1.5 2005/09/15 20:00:53 halcy0n Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/ChangeLog,v 1.6 2006/02/21 05:02:43 jer Exp $
+
+  21 Feb 2006; Jeroen Roovers <jer@gentoo.org> sfftobmp-3.0.ebuild:
+  Marked ~hppa.
 
   15 Sep 2005; Mark Loeser <halcy0n@gentoo.org> sfftobmp-3.0.ebuild:
   Add app-arch/unzip to DEPEND; bug #69831
