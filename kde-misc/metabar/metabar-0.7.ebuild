@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/metabar/metabar-0.7.ebuild,v 1.5 2005/05/12 22:20:50 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/metabar/metabar-0.7.ebuild,v 1.6 2006/02/21 18:25:05 carlo Exp $
 
 inherit kde
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~sparc"
 IUSE=""
 
-DEPEND="|| ( kde-base/konqueror >=kde-base/kdebase-3.4 )"
+DEPEND="|| ( kde-base/konqueror >=kde-base/kdebase-3.4 )
+	!>=kde-base/konq-plugins-3.5.0"
 
 need-kde 3.4
 
