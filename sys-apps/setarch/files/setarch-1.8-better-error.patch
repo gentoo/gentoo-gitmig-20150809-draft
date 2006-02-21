@@ -1,0 +1,11 @@
+--- setarch.c
++++ setarch.c
+@@ -112,7 +112,7 @@
+ 	     && strcmp(un.machine, "i686")
+ 	     && strcmp(un.machine, "athlon")))
+ 	{
+-	  fprintf(stderr, "Don't know how to set arch to %s\n", pers);
++	  fprintf(stderr, "Unable to set arch to %s\n", pers);
+ 	  exit(1);
+ 	}
+     }

@@ -1,0 +1,15 @@
+--- setarch.c
++++ setarch.c
+@@ -47,6 +47,12 @@
+     char *target_arch, *result_arch;
+   } transitions[] = {
+     {PER_LINUX32, "linux32", NULL},
++    {PER_LINUX, "linux64", NULL},
++#if defined(__mips__)
++    {PER_LINUX32, "mips32", "mips"},
++    {PER_LINUX32, "mips", "mips"},
++    {PER_LINUX, "mips64", "mips64"},
++#endif
+ #if defined(__powerpc__) || defined(__powerpc64__)
+     {PER_LINUX32, "ppc32", "ppc"},
+     {PER_LINUX32, "ppc", "ppc"},

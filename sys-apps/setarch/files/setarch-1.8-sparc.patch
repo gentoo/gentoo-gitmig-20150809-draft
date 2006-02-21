@@ -1,0 +1,10 @@
+--- setarch.c
++++ setarch.c
+@@ -79,6 +79,7 @@
+ #endif
+ #if defined(__sparc64__) || defined(__sparc__)
+     {PER_LINUX32, "sparc", "sparc"},
++    {PER_LINUX32, "sparc32", "sparc"},
+     {PER_LINUX, "sparc64", "sparc64"},
+ #endif
+     {-1, NULL, NULL}

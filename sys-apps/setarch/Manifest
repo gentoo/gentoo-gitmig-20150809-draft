@@ -1,0 +1,40 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ccf5e36f895d89d3f1dfe9a02a0dfed3 ChangeLog 336
+RMD160 bd41f44a15e202570f7c3ede99025ffa2bd32c86 ChangeLog 336
+SHA256 e071bf3397569abd43cb4397e5d15659e5d4a7882d1175eb7b575fe2074bdc3a ChangeLog 336
+MD5 242b1e2d1de5af51852989459d44ff56 files/Makefile 598
+RMD160 086b00127542a6fe2314df108b7086875f8c1845 files/Makefile 598
+SHA256 1f7651169160c79044bb1e4617a637a34a5aa490fc1678329e4218ff33a4ee51 files/Makefile 598
+MD5 1c6befb6674e6ac7b3771995ab0db5ab files/digest-setarch-1.8 229
+RMD160 c3967542255864b979b31b975c713eeb547d9631 files/digest-setarch-1.8 229
+SHA256 f5b26a1ddf0b29a7364ee6db51e2ada256143fe70990fca163d2562c3dad52a8 files/digest-setarch-1.8 229
+MD5 7c2708cff7c403d23ea5d5dcf47967e1 files/setarch-1.8-better-error.patch 276
+RMD160 c92a492bcad7d696e5c24573bda764566e693ceb files/setarch-1.8-better-error.patch 276
+SHA256 4dcff863026a24a9a42dffeacac33d10c7439871f73a15eaf23c31715a43aa1c files/setarch-1.8-better-error.patch 276
+MD5 dea9a8fcecb3af342b035ce1ca888a31 files/setarch-1.8-links.patch 1129
+RMD160 5f2353c3a89aac8d46e0a5b1f2886439cd96532c files/setarch-1.8-links.patch 1129
+SHA256 d525f85fd1e3d06d91253f6d6b78e3a36b69b2f3cc9ce14f42a65bbb41e6fe3b files/setarch-1.8-links.patch 1129
+MD5 5fc2859ed9123d925f08f51ac414f1bb files/setarch-1.8-linux-headers.patch 199
+RMD160 e5c6f77cc8680767686aa8450515a7fd7e3ffe18 files/setarch-1.8-linux-headers.patch 199
+SHA256 81deee13fae9c80fb4baa983dc62df2f91afdb7fd87de62237ce03e98b099b26 files/setarch-1.8-linux-headers.patch 199
+MD5 9de66b76d40d1793f73d76bb8bcce87b files/setarch-1.8-mips.patch 445
+RMD160 e333c02924a7c8f3a0e51e6d218be732c8d03d77 files/setarch-1.8-mips.patch 445
+SHA256 510006f888af6f8685cf7cd2bf7336ff9a7f4654877c314082058df9ee26527c files/setarch-1.8-mips.patch 445
+MD5 ad727dd335bebc091d9cee8026b05bf0 files/setarch-1.8-sparc.patch 250
+RMD160 859857e20d5694e67901126680ccad28a09f8b1e files/setarch-1.8-sparc.patch 250
+SHA256 86202c1fbc8650d2c2d10ec564f48e4a8b3a136cd8511a70b55df8cb8a0a2a71 files/setarch-1.8-sparc.patch 250
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 b3a45b4441be51445dd3216d62c86216 setarch-1.8.ebuild 927
+RMD160 07f60c465587ac46166a81960a83956f17e7c96d setarch-1.8.ebuild 927
+SHA256 405adb0676d7b60a0d57e816edc90f5c9bd7fc18f5f6a06e3556622a9bae4904 setarch-1.8.ebuild 927
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD+orn2+ySkm8kpY0RAp8iAKClQJjvv84tRJyhYHvy79bU0ZSRBACeK1vt
+aYNgaynLzAF8ektiMoxBUWo=
+=YKu1
+-----END PGP SIGNATURE-----

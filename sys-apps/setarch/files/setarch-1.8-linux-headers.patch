@@ -1,0 +1,11 @@
+--- setarch.c
++++ setarch.c
+@@ -8,7 +8,7 @@
+ /* */
+ 
+ #include <syscall.h>
+-#include <linux/personality.h>
++#include <sys/personality.h>
+ #include <unistd.h>
+ #include <stdio.h>
+ #include <string.h>
