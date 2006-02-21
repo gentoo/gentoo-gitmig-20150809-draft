@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dekorator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dekorator/ChangeLog,v 1.1 2006/01/31 19:59:08 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dekorator/ChangeLog,v 1.2 2006/02/21 14:20:11 vanquirius Exp $
+
+  21 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> dekorator-0.2.ebuild:
+  Mark 0.2 x86 stable.
 
 *dekorator-0.2 (31 Jan 2006)
 

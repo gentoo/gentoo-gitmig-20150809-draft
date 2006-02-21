@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dekorator/dekorator-0.2.ebuild,v 1.1 2006/01/31 19:59:08 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dekorator/dekorator-0.2.ebuild,v 1.2 2006/02/21 14:20:11 vanquirius Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kde-look.org/content/show.php?content=31447"
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 S="${WORKDIR}/${MY_P}"
 
 need-kde 3.3
