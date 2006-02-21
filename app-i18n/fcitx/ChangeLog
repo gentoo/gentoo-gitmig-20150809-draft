@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.14 2006/02/21 20:25:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.15 2006/02/21 20:27:41 liquidx Exp $
+
+  21 Feb 2006; Alastair Tse <liquidx@gentoo.org> fcitx-3.1.1.ebuild:
+  fix bad libXft dep (#123630)
 
   21 Feb 2006; Alastair Tse <liquidx@gentoo.org> -fcitx-2.0.1.ebuild:
   cleaned up last v2 ebuild for fcitx
