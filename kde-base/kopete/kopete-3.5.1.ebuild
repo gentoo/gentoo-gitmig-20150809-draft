@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.1.ebuild,v 1.1 2006/01/22 22:53:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.1.ebuild,v 1.2 2006/02/21 14:15:39 flameeyes Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -19,7 +19,8 @@ DEPEND="dev-libs/libxslt
 	sametime? ( =net-libs/meanwhile-0.4* )
 	xmms? ( media-sound/xmms )"
 RDEPEND="$DEPEND
-	ssl? ( app-crypt/qca-tls )"
+	ssl? ( app-crypt/qca-tls )
+	!net-im/kopete"
 
 src_compile() {
 	# External libgadu support - doesn't work, kopete requires a specific development snapshot of libgadu.

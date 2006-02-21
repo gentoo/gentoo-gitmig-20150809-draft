@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kopete
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.48 2006/01/22 22:53:04 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.49 2006/02/21 14:15:39 flameeyes Exp $
+
+  21 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> kopete-3.4.1.ebuild,
+  kopete-3.4.1-r1.ebuild, kopete-3.4.2.ebuild, kopete-3.4.3.ebuild,
+  kopete-3.5.0.ebuild, kopete-3.5.1.ebuild:
+  Add blocking on net-im/kopete for the releases outside of KDE release cycle.
 
 *kopete-3.5.1 (23 Jan 2006)
 
