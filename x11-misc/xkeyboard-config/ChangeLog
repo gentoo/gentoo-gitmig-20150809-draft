@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.5 2006/02/13 02:51:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.6 2006/02/21 22:29:38 spyderous Exp $
+
+  21 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xkeyboard-config-0.7-r1.ebuild:
+  Let xkbcomp take care of creating /var/lib/xkb, as suggested in fd.o bug #5906.
 
 *xkeyboard-config-0.7-r1 (13 Feb 2006)
 
