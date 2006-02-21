@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wepdecrypt
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.5 2005/09/25 10:12:33 dragonheart Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.6 2006/02/21 15:04:43 vanquirius Exp $
+
+  21 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> wepdecrypt-0.6.ebuild,
+  wepdecrypt-0.7.ebuild:
+  virtual/libpcap->net-libs/libpcap, please see bug 117898 regarding virtual
+  deprecation.
 
   25 Sep 2005; Daniel Black <dragonheart@gentoo.org> wepdecrypt-0.7.ebuild:
   accidently dropped keyword ~ppc re-added
