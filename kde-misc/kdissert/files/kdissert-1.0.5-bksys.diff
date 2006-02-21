@@ -1,0 +1,22 @@
+--- bksys/kde.py.orig	2005-10-15 17:13:39.000000000 +0200
++++ bksys/kde.py	2005-10-15 17:14:01.000000000 +0200
+@@ -816,7 +816,7 @@
+ 		lenv.KDEinstall( 'KDEDOC', lenv.join(lang,destination), cache )
+ 		
+ 		if env['_INSTALL']:
+-			dir=lenv.join(lenv.getInstDirForResType('KDEDOC'), lang, destination)
++			dir=lenv.join(env['DESTDIR'], lenv.getInstDirForResType('KDEDOC'), lang, destination)
+ 			comp='mkdir -p %s && cd %s && rm -f common && ln -s ../common common' % (dir, dir)
+ 			lenv.Execute(comp)
+ 			
+--- bksys/generic.py.copy	2006-02-20 23:55:30.000000000 +0100
++++ bksys/generic.py	2006-02-20 23:55:52.000000000 +0100
+@@ -605,7 +605,7 @@
+ 			lenv.Append(LINKFLAGS=[f.path])
+ 
+ 	def set_build_dir(lenv, dirs, buildto):
+-		lenv.SetOption('duplicate', 'soft-copy')
++		lenv.SetOption('duplicate', 'copy')
+ 		lenv['_BUILDDIR_']=buildto
+ 		ldirs=lenv.make_list(dirs)
+ 		for dir in ldirs:

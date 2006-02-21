@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/kdissert
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.21 2005/11/24 02:03:45 chriswhite Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.22 2006/02/21 18:06:39 carlo Exp $
+
+*kdissert-1.0.5-r1 (21 Feb 2006)
+
+  21 Feb 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/kdissert-1.0.5-bksys.diff, +kdissert-1.0.5-r1.ebuild:
+  Fix broken doc install as Alan Mimms pointed out in bug #119504, make
+  LINGUAS aware.
 
   24 Nov 2005; Chris White <chriswhite@gentoo.org> kdissert-1.0.5.ebuild:
   x86 stable for bug #112837.
