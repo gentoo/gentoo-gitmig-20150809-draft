@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gbib
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gbib/ChangeLog,v 1.6 2005/03/07 19:30:51 gustavoz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gbib/ChangeLog,v 1.7 2006/02/21 18:53:59 ehmsen Exp $
+
+*gbib-0.1.3_rc1 (21 Feb 2006)
+
+  21 Feb 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  +files/gbib-0.1.3_rc1-Makefile.patch, +gbib-0.1.3_rc1.ebuild:
+  Version bump thanks to Alex Linke <incubation.11@freenet.de> which fixes 
+  compilation errors on gcc > 3.3, bug #72000.
 
   07 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> gbib-0.1.2.ebuild:
   Stable on sparc
