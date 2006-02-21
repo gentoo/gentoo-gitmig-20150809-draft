@@ -1,3 +1,6 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/vserver/virtuals,v 1.1 2005/11/12 13:32:24 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/vserver/virtuals,v 1.2 2006/02/21 19:10:54 hollow Exp $
 
 virtual/baselayout	sys-apps/baselayout-vserver
+
+# see bug #105616 why this is in here
+virtual/dev-manager	sys-apps/baselayout-vserver
