@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/sitecopy
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.33 2006/02/22 04:58:33 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.34 2006/02/22 05:03:02 chriswhite Exp $
+
+  22 Feb 2006; Chris White <chriswhite@gentoo.org> sitecopy-0.15.1.ebuild,
+  sitecopy-0.16.0.ebuild:
+  Removed uneeded virtual/libc's. Rid of missed sftp reference in 0.16.0 since
+  it's broken right now.
 
   22 Feb 2006; Chris White <chriswhite@gentoo.org>
   -sitecopy-0.13.4-r2.ebuild:

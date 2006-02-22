@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0b0db6e0dff54ab17373289e070ba7fd ChangeLog 5291
+MD5 26544d6e7fc98dd57316d1e1dd2ee32a ChangeLog 5497
 MD5 fdd1c7334ee674439936fa8eed17cfcc files/digest-sitecopy-0.15.1 67
 MD5 a9f8ec12aecca50ec49648f0a8c2829f files/digest-sitecopy-0.16.0 67
 MD5 9d2f1b627c2e64ada7b81ea3fa5ee51d files/sitecopy-0.14.1-nls.patch 598
 MD5 1dfe28809075352e0eed13c4a713b728 files/sitecopy-gcc3.4.patch 493
 MD5 ebe90825466ecdac16089ecd43abdcab metadata.xml 251
-MD5 a5aaa1005bcb0bec44f71e07c5e26006 sitecopy-0.15.1.ebuild 2793
-MD5 f07d3b647d02ac65e5bd2fb7499fde61 sitecopy-0.16.0.ebuild 2542
+MD5 8963b618b6b1cef09be6963ad68035e1 sitecopy-0.15.1.ebuild 2781
+MD5 4d3fdc52f45cc2f73fa3b34d9a7c3345 sitecopy-0.16.0.ebuild 2500
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD+++OFdQwWVoAgN4RAvbNAKDm2o0SrJ1MDtB1VdcZwr83G5x/8ACgks5g
-nYd2En/6oA1VaDItJwxodvw=
-=Q8Jf
+iD8DBQFD+/CaFdQwWVoAgN4RAup9AKC3a7JH9RXGmZbfsnyBkNP8QA9bRgCdEzwS
+P0rRxaw/Qa1tLRF8ep6rRYQ=
+=htzq
 -----END PGP SIGNATURE-----

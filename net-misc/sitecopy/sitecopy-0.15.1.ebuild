@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.15.1.ebuild,v 1.3 2005/07/13 14:14:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.15.1.ebuild,v 1.4 2006/02/22 05:03:02 chriswhite Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,8 +18,7 @@ SLOT="0"
 #		gnome? (
 #			gnome-base/gnome-libs
 #			=x11-libs/gtk+-1* )
-DEPEND="virtual/libc
-	rsh? ( net-misc/netkit-rsh )
+DEPEND="rsh? ( net-misc/netkit-rsh )
 	sftp? ( net-misc/openssh )
 	>=net-misc/neon-0.24.6"
 
