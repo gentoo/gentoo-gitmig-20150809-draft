@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20051022-r1.ebuild,v 1.2 2006/01/14 01:23:10 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20051022-r1.ebuild,v 1.3 2006/02/22 17:09:29 spb Exp $
 
 IUSE="build"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips"
-KEYWORDS="~alpha amd64 mips ppc sparc x86"
+KEYWORDS="alpha amd64 mips ppc sparc x86"
 DEPEND="build? ( sys-devel/make
 		 sys-devel/m4 )"
 RDEPEND="sys-devel/m4
