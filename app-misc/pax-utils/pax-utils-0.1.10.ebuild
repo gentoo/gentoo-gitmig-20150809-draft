@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.10.ebuild,v 1.1 2006/02/18 19:01:50 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.10.ebuild,v 1.2 2006/02/22 15:13:35 solar Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -16,6 +16,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s39
 IUSE="caps"
 
 DEPEND="caps? ( sys-libs/libcap )"
+
+src_unpack() {
+	unpack ${A}
+	cd  ${S} || die
+	epatch "${FILESDIR}"/${P}.patch
+}
 
 src_compile() {
 	use caps && append-flags -DWANT_SYSCAP
