@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.3 2006/01/19 21:09:47 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.4 2006/02/22 16:30:38 rl03 Exp $
 
 # uses webapp.eclass to create directories with right permissions
-# probably slight overkil but works well
+# probably slight overkill but works well
 inherit eutils webapp
 
 SLOT="0"
