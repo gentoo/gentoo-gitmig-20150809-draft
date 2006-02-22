@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4727f9e8dc65b28a1364ed835b13c003 ChangeLog 3397
-RMD160 4e046fa9dc91621e2656c92080f7d3111a5b110d ChangeLog 3397
-SHA256 6f28cdc24fdcb9cf13d85891cd1ed5cb1b4abe425b153589542437f016b0da21 ChangeLog 3397
+MD5 460d52221ef517260188f99f3ecae4e1 ChangeLog 3538
+RMD160 9bfa1bf3935917a77d95c2d8729c58105d46c44b ChangeLog 3538
+SHA256 92f973f8fcce49bdbffbd24114312950ea9cd7c210896f1cc597dce3c19fe340 ChangeLog 3538
 MD5 787d8c0e312170927dde02eadb05f199 files/digest-freepops-0.0.31 68
 RMD160 c9dfb79b7d5ffddc2249713168b508ff28b6457c files/digest-freepops-0.0.31 68
 SHA256 599d0d34b98210ef208d66468404f082d4cb66218acb5b110fe9db9e076b2f30 files/digest-freepops-0.0.31 68
@@ -13,9 +13,9 @@ SHA256 bb338deed6e6da09817c9c9cb88edb121685df4d12ac1eb5f70f844edbb4f49c files/di
 MD5 8711bb3f89904131b5a9acef59e4c3ee files/digest-freepops-0.0.97 250
 RMD160 e3fe7f1a33cf13d5a0baea9a1e1d68f7829e0fd7 files/digest-freepops-0.0.97 250
 SHA256 ba49a95060d00388af06fc91b2a3b07ec1e8bd6491ab2702f62bcf97902b3c61 files/digest-freepops-0.0.97 250
-MD5 0a4dea94fd78c15092d925a722baf65c files/digest-freepops-0.0.97-r1 461
-RMD160 cd106e5cb745e1272d9ce5f80e136c1214b4b05a files/digest-freepops-0.0.97-r1 461
-SHA256 9c0d84f4f7a53c125a232a00c5fbc3f3df06f7a396331ec4a97fc40cf87d28c5 files/digest-freepops-0.0.97-r1 461
+MD5 c420ef563110bc5ba389105616e175a2 files/digest-freepops-0.0.97-r1 461
+RMD160 3136e3df0784275ab398cfeddb7c4176909b4d89 files/digest-freepops-0.0.97-r1 461
+SHA256 937ef07745760b613c1bb3267dd37282392f5be5373b303a70724216068ea569 files/digest-freepops-0.0.97-r1 461
 MD5 21057de46bc1ad28a002f98771043d47 files/freepops-0.0.31-srcmake.patch 466
 RMD160 a4816afa18a1bc79ac8a9e92da7939e99b9f35b2 files/freepops-0.0.31-srcmake.patch 466
 SHA256 3060aa25d84ac2618acf2317bfc4a2ac0077fca9e0bbbe67e64d16beb9a3b250 files/freepops-0.0.31-srcmake.patch 466
@@ -43,7 +43,7 @@ SHA256 313310f7c1c73fdab56202d7087ea4275c706996f4f9049cc1bdd7ddbabba9db metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFD6y3amdTrptrqvGERAi2cAJ9bGUFiaSvB5PgqQjE5atxSWhaEAQCff2Wn
-TRMADfpo8KtY0oBFUByfxtM=
-=Kn5h
+iD8DBQFD/FTTmdTrptrqvGERAq8AAJwOqBcJcu3+7lsk0JuxzRrY8Y3y/gCcDq7D
+YtPXFCEIbotDx7eNJozaAZY=
+=7eEk
 -----END PGP SIGNATURE-----
