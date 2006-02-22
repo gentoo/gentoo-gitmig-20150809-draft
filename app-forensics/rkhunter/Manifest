@@ -1,8 +1,40 @@
-MD5 7ca27bef9c7b4bf7bc02f820252656ba ChangeLog 10030
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b0ffa306d3dc0f30fae69933b65a45b5 ChangeLog 10166
+RMD160 67195f284ba46b609d8bdddf4716868ef6c5b2d9 ChangeLog 10166
+SHA256 a1c8cbe747e4b3a4fed0fabee547431ef732f2eb28c90acbcebb84b7104ccbce ChangeLog 10166
 MD5 ecbc10aed5cbe2c9d0dfcb0df424556e files/digest-rkhunter-1.2.7-r1 66
+RMD160 79edc3644b05e3ab6797fd17c08340efa8eb0fb9 files/digest-rkhunter-1.2.7-r1 66
+SHA256 8ed5b6ba0e8734ebda159940fef58c73a8c209a0d1ff3ca18deac1bb28aabf1d files/digest-rkhunter-1.2.7-r1 66
+MD5 fef8bae7e92d866972bf2d497791b1a0 files/digest-rkhunter-1.2.8 244
+RMD160 21c676c6d33dcb8f54dec3ea2d1a7e62d10ae2a7 files/digest-rkhunter-1.2.8 244
+SHA256 f208f58ba40c4c2965f63f06914cf05df564c00863f192812f5c7464271d0cf0 files/digest-rkhunter-1.2.8 244
 MD5 d07a47cbe2364dc010d37ead80ff8f4b files/rkhunter-1.2.1-create-tmpdir.diff 551
+RMD160 dbcb928cba8fc847c118970ef613ebc49e4bd972 files/rkhunter-1.2.1-create-tmpdir.diff 551
+SHA256 900acac0077f0aaf61773c49c256ba0cc506e51e9a1c0dfdd9be00b35fa8a882 files/rkhunter-1.2.1-create-tmpdir.diff 551
 MD5 f620bf00896d60c4a4a47ace8956f8ac files/rkhunter-1.2.3-specify-logfile.patch 2481
+RMD160 0a3450cd8f7799c63c4d78d8189d93ddf2eda02a files/rkhunter-1.2.3-specify-logfile.patch 2481
+SHA256 111be216f8b15876ef134e66905f665af722967f218bc401ac595cf89b4f2468 files/rkhunter-1.2.3-specify-logfile.patch 2481
 MD5 2473ff095ea8aa159a379872571b5d43 files/rkhunter.bash-completion 2628
+RMD160 f408877f6b8d38bfb17af6074e5a1fbecc134cd6 files/rkhunter.bash-completion 2628
+SHA256 d99776d6b300697cb6571e409e6c93bc96e68980922ee22b76eda56f26d0d970 files/rkhunter.bash-completion 2628
 MD5 3f3b34e98201ab14484cb0bb478babc2 files/rkhunter.cron 3881
+RMD160 6e4948187457f8000817583226ac9184a5911e1d files/rkhunter.cron 3881
+SHA256 9482f706b930e11f27b11444005ff48efe830417f86303e9d1f68feb8cae2d49 files/rkhunter.cron 3881
 MD5 f1608c19ea0727ee36b2a692b1f3470b metadata.xml 264
+RMD160 f16feb79400d7acc114807482639b808f47aacf4 metadata.xml 264
+SHA256 fbb5fee192fc9278b8c8f4fcbece2a34ea41dbd6168baf239cc2b09a67d149d7 metadata.xml 264
 MD5 7f439fd4149dc1f2d2cbe8ee8bf8623d rkhunter-1.2.7-r1.ebuild 1761
+RMD160 f4251fa0e5edf96dd1f3ab38e32329bba7886d3f rkhunter-1.2.7-r1.ebuild 1761
+SHA256 cc9be8990e60f9a4de321c66db8d4f3e961eb4575a06c63b0b8f0753e3e7d365 rkhunter-1.2.7-r1.ebuild 1761
+MD5 7967a458f5181d422ef03bc77a55672f rkhunter-1.2.8.ebuild 1763
+RMD160 7a01472b980e2a297d896ae2aa14f97c29efa772 rkhunter-1.2.8.ebuild 1763
+SHA256 7b795fc71d9874ab1ffc1c4688b6cd8ab6f2bbba440a34fe38f779ac174adafb rkhunter-1.2.8.ebuild 1763
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD+83lEZCkKN40op4RAsnYAJ4sYfEZXLmypGpi8mCCgv4H2xwATACgkQ2L
+teSqqtHjL998aSJrwezIddI=
+=/7F1
+-----END PGP SIGNATURE-----
