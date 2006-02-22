@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.14.1-r1.ebuild,v 1.8 2006/01/24 18:36:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.14.1-r1.ebuild,v 1.9 2006/02/22 14:10:35 carlo Exp $
 
 inherit distutils eutils
 
@@ -18,7 +18,7 @@ IUSE="debug doc examples"
 
 RDEPEND="x11-libs/qt
 	~dev-python/sip-4.2.1
-	<dev-python/qscintilla-1.6"
+	dev-python/qscintilla"
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
