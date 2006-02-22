@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/qtorrent
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtorrent/ChangeLog,v 1.10 2006/02/21 18:53:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtorrent/ChangeLog,v 1.11 2006/02/22 11:22:13 lucass Exp $
+
+  22 Feb 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  -files/qtorrent-0.9.6.1-sizetype.patch, qtorrent-0.9.6.1-r1.ebuild:
+  Actually removed that patch and added it to SRC_URI.
 
   21 Feb 2006; Carsten Lohrke <carlo@gentoo.org> metadata.xml,
   qtorrent-0.9.6.1-r1.ebuild:

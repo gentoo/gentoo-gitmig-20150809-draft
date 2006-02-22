@@ -1,9 +1,34 @@
-MD5 baf26c68fc0727c2bbcbefc6554a8f33 ChangeLog 1302
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fb83faf44598d8a0ecb5f5d65e581eb1 ChangeLog 1483
+RMD160 03b4b085c3fc165aa444d62804625ca02f31f416 ChangeLog 1483
+SHA256 476fa27a639dd2c309fd1746b0556939624de9c717e7b64dd3581f6a61020b6c ChangeLog 1483
 MD5 998185a0741756afc893e0074882eacb files/digest-qtorrent-0.9.5 66
+RMD160 511eb0ffd589a91441eb63ea66b99ff92020d2c1 files/digest-qtorrent-0.9.5 66
+SHA256 9bd003f3de8e5b311f6b2adae55e295e6ae383b25d8c0a8c202d7da6d02814db files/digest-qtorrent-0.9.5 66
 MD5 18ad596962b6be7d9041f6f896a9ab36 files/digest-qtorrent-0.9.6.1 68
-MD5 18ad596962b6be7d9041f6f896a9ab36 files/digest-qtorrent-0.9.6.1-r1 68
-MD5 808a62510ce65e64f15862c51bca8da8 files/qtorrent-0.9.6.1-sizetype.patch 26521
+RMD160 cc9ea55bf9536cd4b43e4c69b3d78be0a265bd1c files/digest-qtorrent-0.9.6.1 68
+SHA256 545c56162ebae19e8d124b0a3a26be7ee4b3f32ec6ac3b86b0acd9d965a514a6 files/digest-qtorrent-0.9.6.1 68
+MD5 5c7f5366183c5929c736394ef1da79db files/digest-qtorrent-0.9.6.1-r1 521
+RMD160 8967dc961bd62da5ac0208de586368e2222955a8 files/digest-qtorrent-0.9.6.1-r1 521
+SHA256 21ade9240c7d518598832e87755d8cf7a9dac3372358416b34265c927b2f8fb4 files/digest-qtorrent-0.9.6.1-r1 521
 MD5 ed8349e980407e49b724e04ee5a9a2ed metadata.xml 231
+RMD160 c13056229989c3d4f448a7c7abcff3f4ee7ce13c metadata.xml 231
+SHA256 4595c2615fd7c9095517949b1a920d4457f92801eb9d46307b18aafe58ec2a8a metadata.xml 231
 MD5 0ef2bab141e785a96d4a6f8b125d9891 qtorrent-0.9.5.ebuild 529
-MD5 eca9e3b7a316de66a9dd3162cc8feb4e qtorrent-0.9.6.1-r1.ebuild 627
+RMD160 2b5ffab497729fccd458e2672f4acfbbc83f7cd8 qtorrent-0.9.5.ebuild 529
+SHA256 de80de1881a1031b0c517755fc0c2f182108ebae91e2c70b3ea20e579222192f qtorrent-0.9.5.ebuild 529
+MD5 27036959823aa35e89eaf768ddeac138 qtorrent-0.9.6.1-r1.ebuild 665
+RMD160 9c37183b659e29ddfab8927c536e1d4a37a7f5ef qtorrent-0.9.6.1-r1.ebuild 665
+SHA256 e15de76e367c4853c7e36536f3d55fd8cd645ab6bdf5c9bfc592d3a91c0f3413 qtorrent-0.9.6.1-r1.ebuild 665
 MD5 b0e82693635b250856bb2f87f36326b8 qtorrent-0.9.6.1.ebuild 538
+RMD160 9b590a1e3e7061ce7b04d08e42f9008418929406 qtorrent-0.9.6.1.ebuild 538
+SHA256 5b6be0b27a4ba23ea2962848b698f50b94c79393c7d4f5115441a8efc69af18b qtorrent-0.9.6.1.ebuild 538
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD/El32jLqHNfbg2URAoPoAKDNv2BshMaeVz/ZQPaAvL/AiMN6GACdFjWu
+KCSjlCZfmvfm8zt/eTxeWGM=
+=2yPv
+-----END PGP SIGNATURE-----
