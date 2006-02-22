@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/spamass-milter-0.3.0.ebuild,v 1.4 2005/10/13 13:38:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/spamass-milter-0.3.0.ebuild,v 1.5 2006/02/22 21:46:55 gustavoz Exp $
 
 IUSE=""
 
@@ -16,11 +16,6 @@ DEPEND=">=sys-devel/autoconf-2.57
 	>=sys-devel/automake-1.7.2"
 RDEPEND=">=mail-mta/sendmail-8.12.9
 	>=mail-filter/spamassassin-2.53"
-
-src_compile() {
-	econf || die
-	emake || die
-}
 
 src_install() {
 	make DESTDIR=${D} install || die
