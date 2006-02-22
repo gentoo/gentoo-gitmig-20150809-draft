@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vls/vls-0.5.6-r2.ebuild,v 1.7 2005/11/03 12:15:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vls/vls-0.5.6-r2.ebuild,v 1.8 2006/02/22 08:42:01 tsunam Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.videolan.org/pub/videolan/vls/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~ppc ~sparc x86"
 
 DEPEND="dvd? ( >=media-libs/libdvdread-0.9.4
 	>=media-libs/libdvdcss-1.2.8 )

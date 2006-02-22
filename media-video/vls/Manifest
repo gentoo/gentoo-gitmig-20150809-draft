@@ -1,21 +1,43 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a345078cbfdf62f4d81db89dae17052 ChangeLog 2171
+MD5 91e5bc31194fd0ae626bc84185643ea2 ChangeLog 2269
+RMD160 0430958d24450be78e3e4367076107dcc0bbe7df ChangeLog 2269
+SHA256 d697d9a384e5b14d09b7bd8baa5d7a7ac983e3ae4edf22015956575817cb4752 ChangeLog 2269
 MD5 c02a9033fcb3db177a39b972ffb0cc6d files/digest-vls-0.5.5 61
+RMD160 575d034dda77eb56f6bdfda846bcf0f66c050d15 files/digest-vls-0.5.5 61
+SHA256 e1d0d7ce214237cd217eec2ed58d0424fe17ef77444096269b2a0e759f7b2c16 files/digest-vls-0.5.5 61
 MD5 c02a9033fcb3db177a39b972ffb0cc6d files/digest-vls-0.5.5-r1 61
+RMD160 575d034dda77eb56f6bdfda846bcf0f66c050d15 files/digest-vls-0.5.5-r1 61
+SHA256 e1d0d7ce214237cd217eec2ed58d0424fe17ef77444096269b2a0e759f7b2c16 files/digest-vls-0.5.5-r1 61
 MD5 17bf9416e2bf4aca59217e79371eb8ac files/digest-vls-0.5.6-r1 61
+RMD160 3571104f075378e82ab8cc6f01475dcc2f479588 files/digest-vls-0.5.6-r1 61
+SHA256 3b6585ede638930175ddfcfd2fbcc7ba4f760b7f67a74ff4bf7838d7ed71bf9b files/digest-vls-0.5.6-r1 61
 MD5 17bf9416e2bf4aca59217e79371eb8ac files/digest-vls-0.5.6-r2 61
+RMD160 3571104f075378e82ab8cc6f01475dcc2f479588 files/digest-vls-0.5.6-r2 61
+SHA256 3b6585ede638930175ddfcfd2fbcc7ba4f760b7f67a74ff4bf7838d7ed71bf9b files/digest-vls-0.5.6-r2 61
 MD5 8f73d513b104c15745ca3a2b60cdd64d files/vls-0.5.6-gcc34.patch 2553
+RMD160 378c717c37a54f58d4730f1ecde158101c6e8f4b files/vls-0.5.6-gcc34.patch 2553
+SHA256 3446c02b63d8e5155f5326be1ee8671921c697ae7b1d37abf78d8fc7108ec197 files/vls-0.5.6-gcc34.patch 2553
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+RMD160 6e3fccd1ae62f02a0cb28d319aa185af0020822d metadata.xml 225
+SHA256 1a7f3e805478b42bc379b2a36944579d34d7e66ba5bf418a651e1cd58ad0a7f5 metadata.xml 225
 MD5 52744eb89fffd04d8138ae5c00d6cc0c vls-0.5.5-r1.ebuild 881
+RMD160 43df5ad6c178e92fa1d878f0b5bc973ceb5c1aba vls-0.5.5-r1.ebuild 881
+SHA256 96f73cccb3f6bd3da53214e6ead1b49c23b463dc231642cabb1bc78dbcf5b95f vls-0.5.5-r1.ebuild 881
 MD5 48e1a9390b117c0525b135c88ccfd0f4 vls-0.5.5.ebuild 760
+RMD160 964ec0fee46d8ea7f58633a308921e32bec575ce vls-0.5.5.ebuild 760
+SHA256 35aa91177767ebe8ba5a8da8497fe834e296877ac62d0197f410d53d6209ac5e vls-0.5.5.ebuild 760
 MD5 60fa4a8e9faf3a00dc2a8df953e3c5c3 vls-0.5.6-r1.ebuild 1039
-MD5 00d30ef01924a34bccc75f10c2a65b6d vls-0.5.6-r2.ebuild 1109
+RMD160 ec215e03e515901c5145bfd808977d477ecdb439 vls-0.5.6-r1.ebuild 1039
+SHA256 47dc240938b47f74dc97c3d426f6a68df83a1479bdd407da744761294f36341c vls-0.5.6-r1.ebuild 1039
+MD5 485955f23425cf7e5b80cdb10bb8122a vls-0.5.6-r2.ebuild 1105
+RMD160 d4de83e38b372cf867da6094e32a211bb184206c vls-0.5.6-r2.ebuild 1105
+SHA256 258bba90414ec413936cfb555667d8cd917df85e60ff563dea066e8dab664c76 vls-0.5.6-r2.ebuild 1105
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDaf9wj5H05b2HAEkRArS7AJ9s5NC9IrW4lJPVRdZtnju24sXEVACfUlxi
-D0Y/NcWTqdpYsxPKjk0a3lY=
-=97lh
+iD8DBQFD/CPmSENan+PfizARAsatAJ9uhli/c/dbSQ6ALSPuVkLgmWoobgCdGhXW
+JDIQL6bBa47xt1n9csnuskM=
+=B6Py
 -----END PGP SIGNATURE-----
