@@ -1,1 +1,6 @@
 MD5 9e0cc346a4bfa3904380ed119d8bac90 BitTorrent-3.2.1b.tar.gz 144420
+RMD160 ca17ef25ae96d44867c4e6edccca661826299ae5 BitTorrent-3.2.1b.tar.gz 144420
+SHA256 25aa9f35743ce8895fc66c762bac21a56b0ccb7efe1934e0a698096346c6f870 BitTorrent-3.2.1b.tar.gz 144420
+MD5 dfb7c0c50cc6abc6efd5cf380f4615a0 bittorrent-stats-3.2.1b.patch 26140
+RMD160 94bef53377cb9da9e2a642f5db57d601374f8f15 bittorrent-stats-3.2.1b.patch 26140
+SHA256 b865ecfbf755b8db581e9defc5a7eb178f64a932b98dab2b17ac7b0f1492a6f8 bittorrent-stats-3.2.1b.patch 26140

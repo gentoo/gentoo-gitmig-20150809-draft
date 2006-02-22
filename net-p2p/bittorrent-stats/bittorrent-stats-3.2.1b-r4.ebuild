@@ -1,13 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-stats/bittorrent-stats-3.2.1b-r4.ebuild,v 1.7 2005/08/24 14:46:52 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-stats/bittorrent-stats-3.2.1b-r4.ebuild,v 1.8 2006/02/22 10:58:09 lucass Exp $
 
 inherit distutils eutils
 
 MY_P="${P/bittorrent-stats/BitTorrent}"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="BitTorrent is a tool for distributing files via a distributed network of nodes"
-SRC_URI="http://bitconjurer.org/BitTorrent/${MY_P}.tar.gz"
+SRC_URI="http://bitconjurer.org/BitTorrent/${MY_P}.tar.gz
+	mirror://gentoo/${P}.patch"
 HOMEPAGE="http://bitconjurer.org/BitTorrent"
 SLOT="0"
 LICENSE="MIT"
@@ -29,7 +30,7 @@ mydoc="FAQ.txt README.txt LICENSE.txt"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/bittorrent-stats-${PV}.patch || die "patch failed"
+	epatch ${DISTDIR}/${P}.patch || die "patch failed"
 }
 
 src_install() {

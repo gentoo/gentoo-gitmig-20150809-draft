@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bittorrent-stats
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-stats/ChangeLog,v 1.8 2005/08/24 14:46:52 sekretarz Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-stats/ChangeLog,v 1.9 2006/02/22 10:58:09 lucass Exp $
+
+  22 Feb 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  -files/bittorrent-stats-3.2.1b.patch, bittorrent-stats-3.2.1b-r4.ebuild:
+  Moved patch to distfiles (bug #123634).
 
   24 Aug 2005; <sekretarz@gentoo.org> bittorrent-stats-3.2.1b-r4.ebuild:
   Using -pPR instead -a option in cp, bug #103487
