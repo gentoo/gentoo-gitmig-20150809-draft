@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/uptimed
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.30 2005/12/23 20:47:00 ka0ttic Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.31 2006/02/22 02:31:14 ka0ttic Exp $
+
+*uptimed-0.3.7 (22 Feb 2006)
+
+  22 Feb 2006; Aaron Walker <ka0ttic@gentoo.org> +uptimed-0.3.7.ebuild:
+  Version bump for bug #120560.
 
 *uptimed-0.3.4 (23 Dec 2005)
 
