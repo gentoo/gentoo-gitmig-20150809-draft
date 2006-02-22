@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20.ebuild,v 1.2 2006/02/01 19:15:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20.ebuild,v 1.3 2006/02/22 20:51:59 pauldv Exp $
 
-inherit eutils gnuconfig db
+inherit eutils gnuconfig db flag-o-matic
 
 #Number of official patches
 #PATCHNO=`echo ${PV}|sed -e "s,\(.*_p\)\([0-9]*\),\2,"`
@@ -80,6 +80,12 @@ src_compile() {
 		myconf="${myconf} --enable-test"
 	else
 		myconf="${myconf} --disable-test"
+	fi
+
+	# Add linker versions to the symbols. Easier to do, and safer than header file
+	# mumbo jumbo.
+	if use userland_GNU; then
+		append-ldflags -Wl,--default-symver
 	fi
 
 	../dist/configure \
