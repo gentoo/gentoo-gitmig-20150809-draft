@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/libiec61883-1.0.0-r1.ebuild,v 1.1 2005/09/03 07:37:15 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/libiec61883-1.0.0-r1.ebuild,v 1.2 2006/02/22 04:54:06 chriswhite Exp $
 
 inherit autotools eutils
 
@@ -28,11 +28,6 @@ src_unpack() {
 		examples/Makefile.am || die "noinst patching failed"
 		eautoreconf
 	fi
-}
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install () {
