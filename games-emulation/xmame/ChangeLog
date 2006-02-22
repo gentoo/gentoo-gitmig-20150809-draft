@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.60 2006/01/29 06:25:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.61 2006/02/22 22:16:38 mr_bones_ Exp $
+
+*xmame-0.104 (22 Feb 2006)
+
+  22 Feb 2006; Michael Sterrett <mr_bones_@gentoo.org> +xmame-0.104.ebuild:
+  version bump
 
   29 Jan 2006; Michael Sterrett <mr_bones_@gentoo.org>
   -files/xmame-0.99-mcr3.patch, -files/xmame-0.101-keyboard.patch,
