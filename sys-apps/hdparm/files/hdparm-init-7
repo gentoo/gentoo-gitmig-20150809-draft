@@ -37,7 +37,7 @@ do_hdparm() {
 
 start() {
 
-	if [ -d /dev/ide ]
+	if [ -e /dev/.devfs ] && [ -d /dev/ide ]
 	then
 
 		# devfs compatible systems
