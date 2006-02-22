@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.0.4-r1.ebuild,v 1.6 2005/09/21 17:01:33 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.0.4-r1.ebuild,v 1.7 2006/02/22 00:04:20 agriffis Exp $
 
 IUSE="tcltk"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ocaml-programming.de/packages/${P}.tar.gz"
 LICENSE="MIT X11"
 
 SLOT="0"
-KEYWORDS="x86 ppc ppc-macos sparc amd64"
+KEYWORDS="amd64 ia64 ppc ppc-macos sparc x86"
 
 DEPEND=">=dev-lang/ocaml-3.07"
 

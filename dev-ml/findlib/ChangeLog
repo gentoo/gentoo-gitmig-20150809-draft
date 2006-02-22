@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/findlib
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/ChangeLog,v 1.14 2005/09/21 17:01:33 mattam Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/ChangeLog,v 1.15 2006/02/22 00:04:19 agriffis Exp $
+
+  22 Feb 2006; Aron Griffis <agriffis@gentoo.org> findlib-1.0.4-r1.ebuild:
+  Mark 1.0.4-r1 stable on ia64
 
   21 Sep 2005; Matthieu Sozeau <mattam@gentoo.org> findlib-1.0.4-r1.ebuild:
   Stable on ppc-macos.
