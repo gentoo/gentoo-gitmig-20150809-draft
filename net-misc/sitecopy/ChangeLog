@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/sitecopy
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.32 2005/12/23 19:33:09 dertobi123 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.33 2006/02/22 04:58:33 chriswhite Exp $
+
+  22 Feb 2006; Chris White <chriswhite@gentoo.org>
+  -sitecopy-0.13.4-r2.ebuild:
+  Removed older versions.
 
   23 Dec 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   sitecopy-0.16.0.ebuild:
