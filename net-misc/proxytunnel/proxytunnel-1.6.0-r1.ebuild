@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/proxytunnel-1.6.0-r1.ebuild,v 1.1 2006/02/22 10:49:25 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/proxytunnel-1.6.0-r1.ebuild,v 1.2 2006/02/22 16:37:52 sbriesen Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -13,13 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="static"
 
-DEPEND=""
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-build.patch"
-}
+DEPEND="dev-libs/openssl"
 
 src_compile() {
 	use static && append-ldflags -static
@@ -27,6 +21,7 @@ src_compile() {
 }
 
 src_install() {
-	make install PREFIX="/usr" MANDIR="\$(DATADIR)/man/man1" DESTDIR="${D}" || die
+	dobin proxytunnel
+	doman debian/proxytunnel.1
 	dodoc CHANGES CREDITS KNOWN_ISSUES README
 }
