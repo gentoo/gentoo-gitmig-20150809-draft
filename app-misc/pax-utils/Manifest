@@ -7,9 +7,9 @@ SHA256 b7dfe0f488fa34a13c0bb7ebc34076ddbff90184f187436cdaad8db0644893a9 files/di
 MD5 496d43931c308efd71d497e2a0145a26 files/digest-pax-utils-0.1.9 247
 RMD160 fd5739cef65eecb8957ab4ead4bf920b493e5482 files/digest-pax-utils-0.1.9 247
 SHA256 8b550e9f6744a2e4bd23d0a26f87d7e18a99e86d0c73f49a0b191735d7c6512b files/digest-pax-utils-0.1.9 247
-MD5 cb9d1e405b28311f4c0db86fb70a7c1f files/pax-utils-0.1.10.patch 1496
-RMD160 ec3565564a93bb3b34df07ee6155bca4057b4d4c files/pax-utils-0.1.10.patch 1496
-SHA256 404e9a6504104d2f75612d7e287db8d374c310da02f7bdaa3e60fbb89f1ed8df files/pax-utils-0.1.10.patch 1496
+MD5 b98c7b9dfd7e41ac1b8eb030e65e5c9c files/pax-utils-0.1.10.patch 1187
+RMD160 721102c1ea7b7a657a7a5592d06bbddd01167cf6 files/pax-utils-0.1.10.patch 1187
+SHA256 0cc46058e30c3c590fa3da9270f2e7172669f6ea7baaaaf8c8daaefb4bf19b6d files/pax-utils-0.1.10.patch 1187
 MD5 90f775b6c4fdbeb494f7d8e1d94ad30d metadata.xml 604
 RMD160 7f581ee400ba8449455baf903183c12136a53838 metadata.xml 604
 SHA256 f3aaada3dde296c02797c2f68e88bf7f3cf650449aaf956126bc54ebd36e686e metadata.xml 604
