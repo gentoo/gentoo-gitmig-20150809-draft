@@ -1,28 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e1e87adae41ef3a8913912c1d94d7464 ChangeLog 1121
-RMD160 486f63b0e6e168da7292d4d9fe58f5171ac1fddd ChangeLog 1121
-SHA256 4d2c1f948e06dfb59172448d05dadab4884935c5392319bd9037fa0905f7da87 ChangeLog 1121
-MD5 a6c1805165b3c6ef87f1f077b258a906 confcache-0.3.3.ebuild 625
-RMD160 0e4cddfa7b7b7f2c45d8457ed688d945f6bce440 confcache-0.3.3.ebuild 625
-SHA256 71b5f6857645faba5babfd9789e4d42e068307c5abfc4b7191672bfdf38729ee confcache-0.3.3.ebuild 625
-MD5 d041e83bbf8060caef346a084f174b55 confcache-0.4.1.ebuild 625
-RMD160 edfdc9fb09f0ebee108b3b53134465000dd21c30 confcache-0.4.1.ebuild 625
-SHA256 5d30dd3bb75e7f0f860f2091fc726790d42e1f3ca3a92bac6060b2619a6dab6a confcache-0.4.1.ebuild 625
-MD5 51b4b79fda6cf7a25cbb19a25eec9e0e files/digest-confcache-0.3.3 67
-RMD160 0fd9e2dd76aaeb8380e5cbc4f29d282adeb2198e files/digest-confcache-0.3.3 67
-SHA256 f156c078516c5faa2e8e799e7559265856777547099bf72246276b67a9c3e30d files/digest-confcache-0.3.3 67
-MD5 260500d3ec4573003a403bcfd923f56b files/digest-confcache-0.4.1 247
-RMD160 a7017406c9f5b20fec13654db26b5408e54c9991 files/digest-confcache-0.4.1 247
-SHA256 366954912d19ffc9e563126531e2363d28e04cfde81388f8bf861f6cbb2cdca0 files/digest-confcache-0.4.1 247
+MD5 285f9078684617dbdd779146136b4ac3 ChangeLog 1442
+RMD160 688d37f8cef9814afbc90632cef3e7d927d47161 ChangeLog 1442
+SHA256 d729c207fd0972c8068abce5aaf23770ec85b95579f976a62bfbd54a560f2f17 ChangeLog 1442
+MD5 54a56242816ddce1ac68c3eff3b3ed6f confcache-0.4.2.ebuild 625
+RMD160 2949abd6e9aa7986382963bb49edfdd466830540 confcache-0.4.2.ebuild 625
+SHA256 20bcff4a173de84dc53f4af159068a5206b22c49a80fba3c5b37432776226c1d confcache-0.4.2.ebuild 625
+MD5 8098534207e3d1933b8eb94f4f11a1c5 files/digest-confcache-0.4.2 247
+RMD160 e06a1a84925ed69cf89e7b30caf5e378764d0335 files/digest-confcache-0.4.2 247
+SHA256 5a2d4773ebe02f4107c6c8d17e1af4795cf77d1ed65da89e4edd1f5bb105d4a4 files/digest-confcache-0.4.2 247
 MD5 126182d41e8ea220308cac82369d1778 metadata.xml 225
 RMD160 d973b4a3a0e8ed0a3bc126ecb9dea3ce3371371f metadata.xml 225
 SHA256 0bc12d2711e9d0335e5a6b4561909de251122ba63cb2039e1f60e5cdcb52ad5b metadata.xml 225
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6xprvdBxRoA3VU0RAgqTAJ4okW4FFJuQJ+BqBslsj+BtOIVFJQCfXbb+
-El+Lzt2HOSyQACbvodtmWsE=
-=um5Z
+iD8DBQFD/Cr+vdBxRoA3VU0RAkStAKCNeehgaHhl4fcvRV2SVfMhdxcS2QCeIXBx
+/is5AubTxsACNr0A0EIxWIo=
+=LIYp
 -----END PGP SIGNATURE-----

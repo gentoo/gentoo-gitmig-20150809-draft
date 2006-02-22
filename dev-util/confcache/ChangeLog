@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/confcache
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confcache/ChangeLog,v 1.6 2006/02/07 18:56:48 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confcache/ChangeLog,v 1.7 2006/02/22 09:12:13 ferringb Exp $
+
+*confcache-0.4.2 (22 Feb 2006)
+
+  22 Feb 2006; Brian Harring <ferringb@gentoo.org> -confcache-0.3.3.ebuild,
+  -confcache-0.4.1.ebuild, +confcache-0.4.2.ebuild:
+  version 0.4.2; removing old versions in the process (all of the same
+  stabling level). Yes, moving forward a bit, but 0.4.1 -> 0.4.2 is minor (bug
+  fixes).
 
 *confcache-0.4.1 (07 Feb 2006)
 
