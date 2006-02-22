@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphicsmagick
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.26 2006/02/22 08:18:30 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.27 2006/02/22 19:42:52 dertobi123 Exp $
+
+  22 Feb 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  graphicsmagick-1.1.7.ebuild:
+  ppc stable, bug #119476
 
   22 Feb 2006; Joshua Jackson <tsunam@gentoo.org>
   graphicsmagick-1.1.7.ebuild:

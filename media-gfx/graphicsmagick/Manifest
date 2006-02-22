@@ -1,52 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0570a14b6d1d4a2a261ebb4ae3722a10 ChangeLog 4120
-RMD160 8315e14b6e601b9dece3cf564b79678cee831561 ChangeLog 4120
-SHA256 c5d3861b95f97220e48ffe651b4fec42eea9cd2299aeab85600634a09840b589 ChangeLog 4120
+MD5 8f68a13648f07fc8cc7a80e81a62105f ChangeLog 4238
 MD5 c07ee30f29005c8130ae5639813149b7 files/digest-graphicsmagick-1.1.5 74
-RMD160 4816db9fb150ab51da87a9afa1f7dd43ef8576f0 files/digest-graphicsmagick-1.1.5 74
-SHA256 cc9bf75fc120fa2d6e6195836c57263e19161878b0978f0bb1e92ee663af42c0 files/digest-graphicsmagick-1.1.5 74
 MD5 c07ee30f29005c8130ae5639813149b7 files/digest-graphicsmagick-1.1.5-r1 74
-RMD160 4816db9fb150ab51da87a9afa1f7dd43ef8576f0 files/digest-graphicsmagick-1.1.5-r1 74
-SHA256 cc9bf75fc120fa2d6e6195836c57263e19161878b0978f0bb1e92ee663af42c0 files/digest-graphicsmagick-1.1.5-r1 74
 MD5 0ae4b45e8525b3c84deeae402fd11c79 files/digest-graphicsmagick-1.1.6 74
-RMD160 a7a2141264c2ba39b78f93e443f7b5062e7ed612 files/digest-graphicsmagick-1.1.6 74
-SHA256 ce35dd4228ebef9a534f8f4277cbc0c4ee911740f334fa440393c4ea8725d0ba files/digest-graphicsmagick-1.1.6 74
 MD5 0ae4b45e8525b3c84deeae402fd11c79 files/digest-graphicsmagick-1.1.6-r1 74
-RMD160 a7a2141264c2ba39b78f93e443f7b5062e7ed612 files/digest-graphicsmagick-1.1.6-r1 74
-SHA256 ce35dd4228ebef9a534f8f4277cbc0c4ee911740f334fa440393c4ea8725d0ba files/digest-graphicsmagick-1.1.6-r1 74
 MD5 1bd4583aea1b79ce9c97f3129c31757c files/digest-graphicsmagick-1.1.7 74
-RMD160 c690f012d74512206def4b7fde28e6e7bbee475e files/digest-graphicsmagick-1.1.7 74
-SHA256 5d1dec65463f1af133eb4cec622aa66d65d66b0f75a9dd7d7c356b79e4dc9456 files/digest-graphicsmagick-1.1.7 74
 MD5 e839cb87efd01d7afa56143043c26be4 files/graphicsmagick-1.1.7-overflow.patch 466
-RMD160 63483059931735cc185217f2a232ebd4b6476d7a files/graphicsmagick-1.1.7-overflow.patch 466
-SHA256 1cfc01739d4911dc31978b35b5b7df46fab5468ec1a5fb3874fba0e202f92a12 files/graphicsmagick-1.1.7-overflow.patch 466
 MD5 0d86c7176f6338aed5b5f86af8f76d63 files/xwd-dos.patch 1103
-RMD160 991cc1701e753ba6848dff77b3cae95398f41732 files/xwd-dos.patch 1103
-SHA256 fa3a08ad0ffab2a1ff721e040c8eb78d2326ff25c6ed7d13bafc971a64fe52f9 files/xwd-dos.patch 1103
 MD5 965343c92e42a8c90c4cb6bd7e8402f1 graphicsmagick-1.1.5-r1.ebuild 2431
-RMD160 74c79688693a178d84ce9997af65617035ca1a96 graphicsmagick-1.1.5-r1.ebuild 2431
-SHA256 c7789f9254a35c68ef5bd6276e19839a913b7d2980de77882409f98776f40f59 graphicsmagick-1.1.5-r1.ebuild 2431
 MD5 8a71e26cc7fe52a2ab396809f2eb59d5 graphicsmagick-1.1.5.ebuild 2359
-RMD160 96f77efeb32aae2f805315813d27caead3e9385a graphicsmagick-1.1.5.ebuild 2359
-SHA256 53a9d7554f1308ab7ad12366b0a8f4647e3aa17242deade9fb373b2d974ab870 graphicsmagick-1.1.5.ebuild 2359
 MD5 9e2febc14e2e085cffb834b7442360fe graphicsmagick-1.1.6-r1.ebuild 2602
-RMD160 100980ee60227d2a91dd20d434d08d463f985c91 graphicsmagick-1.1.6-r1.ebuild 2602
-SHA256 296b84570ed9db525c06dd4df9e56c00ac39021d2f62ee75cbd135d26a162052 graphicsmagick-1.1.6-r1.ebuild 2602
 MD5 bfd824780fb9e271b794cb184116f9cd graphicsmagick-1.1.6.ebuild 2428
-RMD160 21fd9fc7e69d6f5ae47b2cde2ceb1b8d8efa0134 graphicsmagick-1.1.6.ebuild 2428
-SHA256 19fd9cd9a0ce0909c0478ff1de8819bccd81425f87c39c15b15393ea25e0dcdd graphicsmagick-1.1.6.ebuild 2428
-MD5 1aecd05e9cba41bc68441a051f4d3b37 graphicsmagick-1.1.7.ebuild 2724
-RMD160 fc06e0cfd919f42babeecb2fd6107d1e15a63de3 graphicsmagick-1.1.7.ebuild 2724
-SHA256 453dc70f0097facb7f97360f2f4433c4fb086ca4a4c1bfab0d4d78dcbad9441f graphicsmagick-1.1.7.ebuild 2724
+MD5 e651aa1290c81b7ba9ffc8cda7e9f679 graphicsmagick-1.1.7.ebuild 2727
 MD5 eae2172901a7cc6b7a6e37fc9267a2b9 metadata.xml 197
-RMD160 45fece5f76f3776dd119fe5b124d815caced375f metadata.xml 197
-SHA256 a42685246e78553ec390823695d12279e70c7d4ebdd9d9af36cc5932374c95e9 metadata.xml 197
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/B5iSENan+PfizARAuJqAJ92xldPTVW3Kc2TxOP4ky9t1JPwZgCfc3lH
-Y7i4ZQQTM1q3/ib1rm4/aMs=
-=jCji
------END PGP SIGNATURE-----
