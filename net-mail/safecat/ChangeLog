@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/safecat
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/ChangeLog,v 1.13 2005/12/12 08:22:21 robbat2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/ChangeLog,v 1.14 2006/02/22 17:39:48 agriffis Exp $
+
+  22 Feb 2006; Aron Griffis <agriffis@gentoo.org> safecat-1.12.ebuild:
+  Move compilation settings to src_compile where they belong. Refrain from
+  building with gcc-4.0 -Os which causes safecat to segfault on x86
 
 *safecat-1.12 (12 Dec 2005)
 

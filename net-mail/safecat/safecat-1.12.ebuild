@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.12.ebuild,v 1.1 2005/12/12 08:22:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.12.ebuild,v 1.2 2006/02/22 17:39:48 agriffis Exp $
 
-inherit fixheadtails eutils toolchain-funcs
+inherit fixheadtails eutils toolchain-funcs flag-o-matic
 
 IUSE=""
 
@@ -19,22 +19,26 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-
-	# applying errno-patch and maildir-patch
-	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/safecat-1.11-gentoo.patch
-
 	cd ${S}
+
+	# applying maildir-patch
+	epatch ${FILESDIR}/safecat-1.11-gentoo.patch
+
+	ht_fix_file Makefile make-compile.sh
+
+	sed -ni '/man\|doc/!p' hier.c
+}
+
+src_compile() {
+	# safecat segfaults on gcc-4.0 x86 with -Os, seems to be okay with -O2
+	if [[ $(gcc-major-version).$(gcc-minor-version) == 4.0 ]]; then
+		replace-flags -Os -O2
+	fi
+
 	echo "/usr" > conf-root
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 
-	ht_fix_file Makefile make-compile.sh
-
-	egrep -v 'man|doc' hier.c > hier.c.new
-	mv hier.c.new hier.c
-}
-
-src_compile() {
 	make it man || die
 }
 
