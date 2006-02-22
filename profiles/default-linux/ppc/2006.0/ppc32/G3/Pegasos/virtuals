@@ -1,5 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2006.0/ppc32/G3/Pegasos/virtuals,v 1.1 2006/01/22 19:18:51 pylon Exp $
-
-virtual/bootloader			sys-boot/bootcreator

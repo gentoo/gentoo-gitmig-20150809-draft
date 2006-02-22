@@ -1,9 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2006.0/ppc32/G3/make.defaults,v 1.3 2006/01/27 05:26:49 dostrow Exp $
-
-CFLAGS="-O2 -mtune=G3 -mcpu=G3 -pipe"
-CXXFLAGS="${CFLAGS}"
-
-STAGE1_USE="pam unicode"
-USE="${STAGE1_USE} alsa apache2 apm arts avi berkdb bitmap-fonts crypt cups eds emboss encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib ipv6 jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ncurses nls ogg opengl pam perl pdflib png python qt quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts udev vorbis X xml xmms xv zlib"

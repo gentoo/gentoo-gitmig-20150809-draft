@@ -1,9 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2006.0/ppc64/virtuals,v 1.1 2006/01/22 19:55:15 pylon Exp $
-
-virtual/bootloader     sys-boot/yaboot-static
-virtual/jdk            dev-java/ibm-jdk-bin
-virtual/jre            dev-java/ibm-jre-bin
-virtual/php            dev-lang/php
-virtual/httpd-php      dev-lang/php
