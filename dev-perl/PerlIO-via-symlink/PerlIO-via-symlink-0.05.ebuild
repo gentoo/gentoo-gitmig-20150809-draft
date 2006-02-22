@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-symlink/PerlIO-via-symlink-0.05.ebuild,v 1.5 2005/06/15 17:38:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-symlink/PerlIO-via-symlink-0.05.ebuild,v 1.6 2006/02/22 22:34:06 agriffis Exp $
 
 inherit perl-module
 
@@ -11,5 +11,5 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/PerlIO/${P}.readme"
 SLOT="0"
 LICENSE="Artistic"
 SRC_TEST="do"
-KEYWORDS="x86 ~amd64 ~ppc sparc"
+KEYWORDS="~amd64 ~ia64 ~ppc sparc x86"
 IUSE=""
