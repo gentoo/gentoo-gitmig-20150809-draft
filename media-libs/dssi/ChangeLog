@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/dssi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.2 2006/01/04 17:38:07 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.3 2006/02/22 01:20:50 carlo Exp $
+
+*dssi-0.9.1 (22 Feb 2006)
+
+  22 Feb 2006; Carsten Lohrke <carlo@gentoo.org> +dssi-0.9.1.ebuild:
+  Version bump.
 
   04 Jan 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> dssi-0.9.ebuild:
   mark ~ppc (bug #112207)

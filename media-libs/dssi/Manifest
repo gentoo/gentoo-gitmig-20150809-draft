@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a027fb9884c1964811d97573d691eb68 ChangeLog 460
+MD5 dda495d66d471491bc234045d6d4ba34 ChangeLog 573
+MD5 1b2007c27ee3ae4abc402a23cbb8acec dssi-0.9.1.ebuild 1144
 MD5 927eb45ff6275dd158103f134a272e99 dssi-0.9.ebuild 1369
 MD5 60334803a138fa9d85603be2da373328 files/digest-dssi-0.9 59
+MD5 1cd0f6045ccb1dfaa6451f777423f4d5 files/digest-dssi-0.9.1 62
 MD5 f6070fc58d0162fcb89471091611bc5d files/dssi-0.9-gentoo.patch 3158
 MD5 46a390b7ebca59519b2906976eb4c712 metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFDvAhv/NoSW7FuNV8RAhjwAJ9Z7YJSaShOUcgbEJ71L8gszkeG3wCfV2i6
-VG0VVf5mre3KVvXVx5PLm5Q=
-=ns+1
------END PGP SIGNATURE-----
