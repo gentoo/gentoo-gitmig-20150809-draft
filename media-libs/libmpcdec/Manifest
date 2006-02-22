@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9aa34dd282083583d14c35da12c729f2 ChangeLog 1507
-RMD160 40cac35f9b17a03e83c927528fdc18483bf22cd6 ChangeLog 1507
-SHA256 0b30225a0ee7a2e46969ac16042c1d6baa3d4f8f1a7369163aa460d2c214346d ChangeLog 1507
+MD5 8c29892ab379cfba868c05941b0a03a4 ChangeLog 1614
 MD5 053548eec867c5a6ec1b992a41425cb0 files/digest-libmpcdec-1.2 66
-RMD160 4abfd1b32615305eefd53bafd72ff6082d54c933 files/digest-libmpcdec-1.2 66
-SHA256 b0a941f93786b6852341d16c909cf11e719b7f52bbcef61b73b8a144a9ca7f63 files/digest-libmpcdec-1.2 66
 MD5 a3377f3281e2a255d75af23622c01c8a files/digest-libmpcdec-1.2.2 250
-RMD160 d74e622a3eba33b5fb9e9ff26c1eb265614b39a0 files/digest-libmpcdec-1.2.2 250
-SHA256 5f2baabcc124ade1c66d0ef4006aec8617ef7e1bdfcca1dce3c9cbd8fbaacd43 files/digest-libmpcdec-1.2.2 250
-MD5 e05a27069d392b395e1d755a8ee7c00c libmpcdec-1.2.2.ebuild 712
-RMD160 e6c1803c8b2dfd768cb5794ff32cede33dea1325 libmpcdec-1.2.2.ebuild 712
-SHA256 24c3314b327d1e9f3e1ae109518ee8b8e9a4ce70cd55809b0c3f7fd3e8628fd6 libmpcdec-1.2.2.ebuild 712
+MD5 0e71a40f4aeb9e0e59ed5d3be0a94bb0 libmpcdec-1.2.2.ebuild 713
 MD5 9b66285079e6473d1212af7c52958c87 libmpcdec-1.2.ebuild 710
-RMD160 6b712baeb6b2b8cf6e168efefb0ef020d70a990c libmpcdec-1.2.ebuild 710
-SHA256 b993f4e4b743b02a7cf02fb119ff9150b29d07b820fc926415f1ccc2c074cb18 libmpcdec-1.2.ebuild 710
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/FWe2G5bA0cA/ScRAkxzAKCQFUecfcB7VMVMngRFmYkKwLO9qACdEGh9
-JD3cW1T2BNARV+czP8G4B/0=
-=fPdP
------END PGP SIGNATURE-----
