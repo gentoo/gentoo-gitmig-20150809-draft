@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.19.10.ebuild,v 1.9 2005/12/06 09:35:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.19.10.ebuild,v 1.10 2006/02/22 09:57:27 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -303,5 +303,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+	linux-mod_pkg_postrm
 	/usr/bin/eselect opengl set --use-old xorg-x11
 }
