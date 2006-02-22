@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-0.8.11-r3.ebuild,v 1.1 2006/01/02 23:46:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-0.8.11-r3.ebuild,v 1.2 2006/02/22 18:17:17 caleb Exp $
 
 inherit ruby
 
@@ -29,16 +29,4 @@ src_install() {
 	ver=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["MAJOR"] + "." + Config::CONFIG["MINOR"]')
 	GEM_HOME=${D}/usr/lib/ruby/gems/$ver ruby_src_install
 	keepdir /usr/lib/ruby/gems/$ver/doc
-
-	echo "RUBYOPT=\"-rubygems\" /usr/bin/ruby${ver/\./} \"\$@\"" > ${D}/usr/bin/ruby${ver/\./}_with_gems
-	chmod 755 ${D}/usr/bin/ruby${ver/\./}_with_gems
-}
-
-pkg_postinst() {
-	einfo
-	einfo
-	einfo "In order to take advantage of automatic gem require for Ruby, please change your"
-	einfo "Ruby version to the _with_gems version listed via /usr/sbin/ruby-config -l"
-	einfo
-	einfo
 }
