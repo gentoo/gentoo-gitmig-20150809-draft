@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_setupdb/loki_setupdb-20050109.ebuild,v 1.3 2005/10/27 03:09:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_setupdb/loki_setupdb-20050109.ebuild,v 1.4 2006/02/22 07:24:17 mr_bones_ Exp $
 
 inherit eutils
 
@@ -11,7 +11,6 @@ SRC_URI="http://dev.gentoo.org/~wolf31o2/sources/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-RESTRICT=""
 IUSE=""
 
 DEPEND="dev-libs/libxml"
