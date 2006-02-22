@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/emboss
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.30 2006/02/22 19:41:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.31 2006/02/22 21:19:14 grobian Exp $
+
+  22 Feb 2006; Fabian Groffen <grobian@gentoo.org> ChangeLog:
+  Marked ppc-macos stable (bug #123332)
 
   22 Feb 2006; <nixnut@gentoo.org> emboss-3.0.0-r1.ebuild:
   Stable on ppc. bug 123332
