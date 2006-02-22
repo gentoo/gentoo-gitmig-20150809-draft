@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/searchandrescue
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/ChangeLog,v 1.8 2005/10/13 20:35:37 mr_bones_ Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/ChangeLog,v 1.9 2006/02/22 22:02:12 tupone Exp $
+
+  22 Feb 2006; <Tupone@gentoo.org> searchandrescue-0.8.2.ebuild:
+  Modular X dependency fix
 
   13 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org>
   -searchandrescue-0.8.1.ebuild:

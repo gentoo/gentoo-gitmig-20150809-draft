@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/corewars/corewars-0.9.13-r1.ebuild,v 1.6 2005/10/13 20:32:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/corewars/corewars-0.9.13-r1.ebuild,v 1.7 2006/02/22 21:53:28 tupone Exp $
 
 inherit games
 
@@ -13,9 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/x11
-	>=dev-libs/glib-1.2.10-r1
-	=x11-libs/gtk+-1.2*"
+DEPEND="=x11-libs/gtk+-1.2*"
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"

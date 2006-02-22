@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/searchandrescue-0.8.2.ebuild,v 1.2 2005/09/26 18:22:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/searchandrescue-0.8.2.ebuild,v 1.3 2006/02/22 22:02:12 tupone Exp $
 
 inherit eutils games
 
@@ -15,10 +15,27 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE="joystick"
 
-DEPEND="virtual/x11
+RDEPEND="|| (
+		(
+			x11-libs/libXxf86vm
+			x11-libs/libXmu
+			x11-libs/libXi
+			x11-libs/libXpm
+		)
+		virtual/x11
+	)
 	virtual/opengl
+	virtual/glu
 	media-libs/yiff
 	joystick? ( media-libs/libjsw )"
+DEPEND="${RDEPEND}
+	|| (
+		(
+			x11-proto/xextproto
+			x11-proto/xf86vidmodeproto
+		)
+		virtual/x11
+	)"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 

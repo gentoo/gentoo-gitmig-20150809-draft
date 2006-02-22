@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/senken-0.3.0.ebuild,v 1.5 2005/05/09 14:02:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/senken-0.3.0.ebuild,v 1.6 2006/02/22 22:04:37 tupone Exp $
 
 inherit games
 
@@ -13,12 +13,9 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="nls"
 
-RDEPEND="virtual/x11
-	>=x11-libs/gtk+-2
+DEPEND=">=x11-libs/gtk+-2
 	>=media-libs/libsdl-1.2.4
 	media-libs/sdl-image"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
