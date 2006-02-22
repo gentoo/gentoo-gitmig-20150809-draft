@@ -1,0 +1,33 @@
+.TH CHANGE_CONSOLE 8 "23 September 2003" "" "Linux User's Manual"
+
+.SH NAME
+change_console -- change console used by init
+
+.SH SYNOPSIS
+.B change_console
+.RB [ \-f ]
+.RB [ \-r ]
+.RB [device]
+
+.SH DESCRIPTION
+.B change_console
+changes the console used by 
+.IR init (8)
+to spawn commands.
+.SH OPTIONS
+.IP \fB\-f\fn
+Remain in the foreground after sending the command to init
+.PP
+.IP \fB\-r\fn
+Reset the console file used by init to its compiled-in default
+(usually /dev/console).
+
+.IP \fBdevice\fn
+The device file to use as the console. If none is specified,
+the result of running ttyname on stdin is used.
+
+.SH SEE ALSO
+.IR init (8)
+
+.SH AUTHOR
+Red Hat, Inc.

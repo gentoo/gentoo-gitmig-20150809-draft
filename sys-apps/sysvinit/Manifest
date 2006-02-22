@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 70a03ecdb674bce2a0365dd779b9b00e ChangeLog 3916
-RMD160 2b01c942bfe57322eb48ee1b190a4ac6957d6cbc ChangeLog 3916
-SHA256 699230af9688b4e12d9293fa4d67b7dcb28a5af0bf1d14ebe9d559906023f35a ChangeLog 3916
+MD5 3bf27edd7148c188a5bf1fd4272806db ChangeLog 4143
+RMD160 028c6b337460c2ad89c18c3ae183381a2b589e95 ChangeLog 4143
+SHA256 73d948ab16eae08fcfac99265119321baf676b14610ec75fbbe13a1611a94964 ChangeLog 4143
 MD5 5f94105e0b503a39fda5fb65d885e16c files/2.86-gentoo.patch 641
 RMD160 9e3f9ace9e58c3352f536649491a8a5b3f89e512 files/2.86-gentoo.patch 641
 SHA256 6edd083b1b09b75f76b75fc299e2ddab7344a0df8f212e3cd86f27c44caa8c01 files/2.86-gentoo.patch 641
@@ -13,24 +13,24 @@ SHA256 a70ba499bdc3598fc18d0911ff32757356db353ebdd5d9f6a69aaf1ed277254f files/2.
 MD5 3ba9251f1f4f0ae0dd30d682b28183dd files/2.86-selinux.patch 6525
 RMD160 b50310333e3c7da300daadddee6135471b0a07ee files/2.86-selinux.patch 6525
 SHA256 ccf4aecf38732569bc41feaa0dcb4abc21009f8d7a21a3bc402132f5ef7f88f8 files/2.86-selinux.patch 6525
-MD5 38c0059ecfaa1b09e59a75cc2780aa94 files/digest-sysvinit-2.85-r1 64
-RMD160 4a57221231754244cc8ab854cf38b4dd32212e4e files/digest-sysvinit-2.85-r1 64
-SHA256 acb6b44005e1619e5bf85a42295dc84fb793b3e98391b6506a2de8c4dcc7e560 files/digest-sysvinit-2.85-r1 64
-MD5 89c112138ee2f33829ad80c3dcc18328 files/digest-sysvinit-2.86 132
-RMD160 888fd7ca88a494029f2c15bbeb65ca131745fe4f files/digest-sysvinit-2.86 132
-SHA256 a7d09ad60fd5d3c48ac127e442510130ee7a5e506fcc831e976464d54d5fb3ef files/digest-sysvinit-2.86 132
+MD5 6d412ed450e27fd4ecaa9541161dae06 files/change_console.8 657
+RMD160 03a46941d92dd280d92252f83f58273353c0b7bb files/change_console.8 657
+SHA256 918dba79243a84a3c6dfd967e44c0d7375d49cfbe0452806a981c534b6022990 files/change_console.8 657
+MD5 f08b24c8aab5871b30b553f72a3bcfc3 files/change_console.c 929
+RMD160 168c97e47c6dae4f378b4ae13040156fad2a75db files/change_console.c 929
+SHA256 1e61b16274dee6f27ae69db13aff9230195feb6719f650dad027520503ea69b4 files/change_console.c 929
 MD5 89c112138ee2f33829ad80c3dcc18328 files/digest-sysvinit-2.86-r3 132
 RMD160 888fd7ca88a494029f2c15bbeb65ca131745fe4f files/digest-sysvinit-2.86-r3 132
 SHA256 a7d09ad60fd5d3c48ac127e442510130ee7a5e506fcc831e976464d54d5fb3ef files/digest-sysvinit-2.86-r3 132
 MD5 89c112138ee2f33829ad80c3dcc18328 files/digest-sysvinit-2.86-r4 132
 RMD160 888fd7ca88a494029f2c15bbeb65ca131745fe4f files/digest-sysvinit-2.86-r4 132
 SHA256 a7d09ad60fd5d3c48ac127e442510130ee7a5e506fcc831e976464d54d5fb3ef files/digest-sysvinit-2.86-r4 132
+MD5 89c112138ee2f33829ad80c3dcc18328 files/digest-sysvinit-2.86-r5 132
+RMD160 888fd7ca88a494029f2c15bbeb65ca131745fe4f files/digest-sysvinit-2.86-r5 132
+SHA256 a7d09ad60fd5d3c48ac127e442510130ee7a5e506fcc831e976464d54d5fb3ef files/digest-sysvinit-2.86-r5 132
 MD5 1a4d6956c283308cfefa26c0f7c44c4c files/inittab 1645
 RMD160 d0e2122734b8a9574519012a9a970aefd8cb2de1 files/inittab 1645
 SHA256 5471f187bbfc56ad2d5b4d9a49edb5c77e627f3290a591d49f783a10cdd48e66 files/inittab 1645
-MD5 3c171d9c843284ce606663e4e6da26e9 files/sysvinit-2.85-selinux.patch 6448
-RMD160 5a923a20d6b395044b25b311789449238974dead files/sysvinit-2.85-selinux.patch 6448
-SHA256 aee9ed36ee15aab82d8a63c5c5dc868ffe0cee0131e217b3de1aa3e61b947b9f files/sysvinit-2.85-selinux.patch 6448
 MD5 a20a459c789828c7b994e6ec93ed223a files/sysvinit-2.86-POSIX-1003.1e.patch 1358
 RMD160 a4e22a9c6c13373c0196aeb7c274e05bc0ea552f files/sysvinit-2.86-POSIX-1003.1e.patch 1358
 SHA256 73729ddfae95826bf6f3e7f1bf0da53c8647d24126fb7a307020f5a5fa8bff04 files/sysvinit-2.86-POSIX-1003.1e.patch 1358
@@ -52,22 +52,19 @@ SHA256 2126f4c0e1512b133da8d629691b5dc52c730e188b5790cb4e3c681e3912e03e files/sy
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
-MD5 4bb35af95759582d45324cdf3bc237b7 sysvinit-2.85-r1.ebuild 2545
-RMD160 0cfa38ddb52fe96a4a3f82ca8e8fed2fe5446a45 sysvinit-2.85-r1.ebuild 2545
-SHA256 a06a50995f1a917aa9abb9cc49ba927b93f4b0cd474a72f24dae1514e196febd sysvinit-2.85-r1.ebuild 2545
 MD5 f6a11b79bc4c15813b73475f28fd4fff sysvinit-2.86-r3.ebuild 3059
 RMD160 d6cdc920a013ee00d2e1c6421be3c41a5dd62b0f sysvinit-2.86-r3.ebuild 3059
 SHA256 f280b6c24d7b707ee5bbb98edda38624062a24041fe8eae82bc554d3d69cf418 sysvinit-2.86-r3.ebuild 3059
 MD5 817bb2297c121340e21d45faee8a7c2e sysvinit-2.86-r4.ebuild 3058
 RMD160 65b16cf294047851d2020ea4482fda0a090b76eb sysvinit-2.86-r4.ebuild 3058
 SHA256 72fa061978aca2c82ecb39fe2313509d992a2a3f940fad425b58b660e45e0925 sysvinit-2.86-r4.ebuild 3058
-MD5 6eec1ad98ec6dd5dad32785f73f469c0 sysvinit-2.86.ebuild 2503
-RMD160 47249b9cc9fbf9477cad74039bbc63e8481f4956 sysvinit-2.86.ebuild 2503
-SHA256 0544a71306beb657063408528c4b972bbfd5be50162e780c11e4c4fd6401dd3b sysvinit-2.86.ebuild 2503
+MD5 1666a546b5d8f2326f55440f8789cfc0 sysvinit-2.86-r5.ebuild 3193
+RMD160 6ea9722b11753c89ba40fcf41b7946a6c02202b5 sysvinit-2.86-r5.ebuild 3193
+SHA256 cbbacc0a105a887d2b2a12a631a5296278c248db9c49667873085d16b6c79d8d sysvinit-2.86-r5.ebuild 3193
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD5/aAJ+ChZlpDtAoRAg9LAJ9oXmRQS9dNsfN50L7sLaUQIDdiJwCeJO+o
-CA+NCPQO2/knYlCx8gBppNk=
-=3wDQ
+iD8DBQFD+6rr2+ySkm8kpY0RAvLYAKCePGdHu0/aCevYkKUaYhd8Iw0U6QCfTz1Q
+Ul5UlUxLns4R/6l3cxkK3YQ=
+=PHbc
 -----END PGP SIGNATURE-----
