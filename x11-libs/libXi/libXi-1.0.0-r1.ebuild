@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86misc/libXxf86misc-1.0.0.ebuild,v 1.4 2006/02/14 22:47:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/libXi-1.0.0-r1.ebuild,v 1.1 2006/02/22 04:31:01 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
-#SNAPSHOT="yes"
+SNAPSHOT="yes"
 
 inherit x-modular
 
-DESCRIPTION="X.Org Xxf86misc library"
+DESCRIPTION="X.Org Xi library"
 #HOMEPAGE="http://foo.bar.com/"
 #SRC_URI="ftp://foo.bar.com/${P}.tar.bz2"
 #LICENSE=""
@@ -19,4 +19,6 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xextproto
-	x11-proto/xf86miscproto"
+	x11-proto/inputproto"
+
+PATCHES="${FILESDIR}/fix_shadow_manpages.patch"

@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libXxf86dga
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.14 2006/02/14 22:46:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.15 2006/02/22 04:32:04 joshuabaergen Exp $
+
+*libXxf86dga-1.0.0-r1 (22 Feb 2006)
+
+  22 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/fix_shadow_manpages.patch, -libXxf86dga-1.0.0.ebuild,
+  +libXxf86dga-1.0.0-r1.ebuild:
+  Fix shadow manpages.
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org> libXxf86dga-1.0.0.ebuild:
   Added ~ppc64
