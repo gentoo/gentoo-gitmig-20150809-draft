@@ -1,6 +1,6 @@
-MD5 d5220a0cb3e17132e4f2f124e5681b8c ChangeLog 11005
+MD5 76d9d9b1fa0cfaa27a6fd108012bb9d1 ChangeLog 11117
 MD5 fb95cce876dc94a88a9476dc23e8264a bugzilla-2.18.4.ebuild 1836
-MD5 ce8bcd14388d60cafcd642c579f1dea3 bugzilla-2.18.5.ebuild 1818
+MD5 28914cbb31daf42e4006414830cf0608 bugzilla-2.18.5.ebuild 1820
 MD5 530d10028669b4a4fdaeb206af1ee153 bugzilla-2.20.1.ebuild 1874
 MD5 42151252d49e42c9839f80c80dff9138 files/2.18/apache.htaccess 94
 MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.18/bugzilla.cron.daily 115
@@ -13,6 +13,6 @@ MD5 b38d67b03726b84833bd8c5f632e4020 files/2.20/bugzilla.cron.tab 54
 MD5 b8f2895b1376b9fc0659a38c4558426a files/2.20/postinstall-en.txt 574
 MD5 899c42853fbf73268c49d3602eae77d2 files/2.20/reconfig 349
 MD5 7cb896fecc1e8aaa9f331f11254b3cd3 files/digest-bugzilla-2.18.4 250
-MD5 ee234ffcdd53e0478deb59a6e6c80d55 files/digest-bugzilla-2.18.5 250
+MD5 99b7f39c189d19989bd943bab5785548 files/digest-bugzilla-2.18.5 68
 MD5 090b35d5d561737251207af1383a8412 files/digest-bugzilla-2.20.1 250
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
