@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0af884ba033a7a2d6798bb1a6d0ed5c0 ChangeLog 2159
+MD5 3b7e72f5668bf95a54f611652a840c1b ChangeLog 2280
 MD5 0fabd12486f274cbf365e338e91daaf6 files/digest-numarray-1.3.1 67
 MD5 2064c7cbbc220ae050b733594f5bb1bc files/digest-numarray-1.4.1 67
 MD5 13fd47392d4565e57007870e7bdb1d15 files/digest-numarray-1.5.0 67
+MD5 3b253945667c1a85499157ac13dd220c files/digest-numarray-1.5.1 67
 MD5 1ffa32cfa3e5c763b32594feb8047497 metadata.xml 923
 MD5 437444372cf616a10fe3914bf64a165c numarray-1.3.1.ebuild 737
 MD5 e8b9767ae016e8a6dc624f57a9da79ee numarray-1.4.1.ebuild 740
 MD5 2e951b83574b8803794e999a2949fb27 numarray-1.5.0.ebuild 742
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDltAl9ZFPrqoILX8RAh6lAJ9yuqOGDdZmGW39C3+Fr5EESKH4dQCfX9V4
-SaqfUxCx4g0dfgFRPlG0euE=
-=2F7N
------END PGP SIGNATURE-----
+MD5 7267f741f329d44b232a84b95df83f12 numarray-1.5.1.ebuild 742

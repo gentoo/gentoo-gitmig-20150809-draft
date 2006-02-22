@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/numarray
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.16 2005/12/07 12:05:41 liquidx Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.17 2006/02/22 13:44:38 carlo Exp $
+
+*numarray-1.5.1 (22 Feb 2006)
+
+  22 Feb 2006; Carsten Lohrke <carlo@gentoo.org> +numarray-1.5.1.ebuild:
+  Version bump.
 
 *numarray-1.5.0 (07 Dec 2005)
 
