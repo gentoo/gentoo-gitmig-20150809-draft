@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.12 2005/11/17 13:39:01 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.13 2006/02/22 15:48:15 dang Exp $
 
 inherit eutils
 
@@ -11,11 +11,12 @@ SRC_URI="mirror://sourceforge/aquariumapplet/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~amd64 x86 ppc sparc"
 IUSE="sdl"
 
-DEPEND="virtual/x11
+DEPEND=">=x11-libs/gtk+-2
 		>=gnome-base/libgnome-2
+		>=gnome-base/libgnomeui-2
 		>=gnome-base/gnome-applets-2
 		sdl?   ( >=media-libs/libsdl-1.2
 				   x11-misc/xscreensaver )"
