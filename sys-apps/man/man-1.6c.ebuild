@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6c.ebuild,v 1.1 2006/02/07 01:44:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6c.ebuild,v 1.2 2006/02/22 00:14:53 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -13,9 +13,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls"
 
-DEPEND=""
-RDEPEND=">=sys-apps/groff-1.18
-	nls? ( sys-devel/gettext )"
+DEPEND="nls? ( sys-devel/gettext )"
+DEPEND=">=sys-apps/groff-1.18
+	!sys-apps/man-db"
+PROVIDE="virtual/man"
 
 pkg_setup() {
 	enewgroup man 15
