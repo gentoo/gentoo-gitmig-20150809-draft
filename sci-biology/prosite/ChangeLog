@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/prosite
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.74 2006/02/22 19:46:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.75 2006/02/22 21:04:48 grobian Exp $
+
+  22 Feb 2006; Fabian Groffen <grobian@gentoo.org> prosite-19.18.ebuild:
+  Marked ppc-macos stable (bug #123334)
 
   22 Feb 2006; <nixnut@gentoo.org> prosite-19.18.ebuild:
   Stable on ppc. bug 123334
