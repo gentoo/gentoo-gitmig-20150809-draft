@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libsemanage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.6 2006/02/19 22:02:23 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.7 2006/02/22 16:58:28 spb Exp $
+
+  22 Feb 2006; Stephen Bennett <spb@gentoo.org> libsemanage-1.4.ebuild:
+  Alpha stable
 
   19 Feb 2006; Joshua Kinard <kumba@gentoo.org> libsemanage-1.4.ebuild:
   Marked stable on mips.

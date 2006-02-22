@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-1.10.ebuild,v 1.4 2006/02/19 22:01:48 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-1.10.ebuild,v 1.5 2006/02/22 16:57:27 spb Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~alpha amd64 mips ppc sparc x86"
+KEYWORDS="alpha amd64 mips ppc sparc x86"
 
 DEPEND="virtual/libc"
 
