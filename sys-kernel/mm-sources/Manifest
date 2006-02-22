@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 855cb8af908cd6d561ef4024fce25ba4 ChangeLog 47024
-RMD160 1b3d94d1d8253927ef333144816be9ef055252fc ChangeLog 47024
-SHA256 d93d5ba96edeefdd6748328d052481a5fe4530be3df4b97abaf1f84034603b72 ChangeLog 47024
+MD5 8b01c16976c5a2d97bba6391e3b0fe3d ChangeLog 47161
+RMD160 17ae8d50d3a3464a9775f2ab4a76575edbd56634 ChangeLog 47161
+SHA256 d574add1e6e0a183737096f491dc61f9dce371ebe840af37f95c8b846641acfd ChangeLog 47161
 MD5 5bec6df0014bd48fcd27e3f9a0b7caf1 files/digest-mm-sources-2.6.16_rc1-r1 197
 RMD160 87c9ba38c3c045188e527e013d555b79723b9a80 files/digest-mm-sources-2.6.16_rc1-r1 197
 SHA256 dd21cdb9c5b257bd04247230436c3af0e4d026730bb4a648f56fc5da789d7a79 files/digest-mm-sources-2.6.16_rc1-r1 197
@@ -25,6 +22,9 @@ SHA256 98aa359063ee1df2e7124837d86c6d9ebb4ace72d49ae8b627b575752a5827eb files/di
 MD5 c017d55d15c8bcc786d03a33efabc6a7 files/digest-mm-sources-2.6.16_rc3-r1 729
 RMD160 001e480cf3f8cd50e50a164e08a8647f27b86b32 files/digest-mm-sources-2.6.16_rc3-r1 729
 SHA256 ec2a073329871161634c971d392fd1199adf7add49d0354e262e8f28be8b87cb files/digest-mm-sources-2.6.16_rc3-r1 729
+MD5 31a087df3494f8cf448af0e5a82e1329 files/digest-mm-sources-2.6.16_rc4-r1 729
+RMD160 1011d5f137dfd01d6a2528822ce81240daafa313 files/digest-mm-sources-2.6.16_rc4-r1 729
+SHA256 75c43be17d3e3e86fb51878aa1f2889a502f87e63601c3589a5faea40ab43a03 files/digest-mm-sources-2.6.16_rc4-r1 729
 MD5 5e95fced23ea7c26d39274bc200dabd5 metadata.xml 351
 RMD160 d7e7d723e749496ac98b70798afa612ba58753c6 metadata.xml 351
 SHA256 80f85f63243b3467e6b9a42cf3375e05ba17936b488aaf7b9505c3eead7bd3b6 metadata.xml 351
@@ -49,10 +49,6 @@ SHA256 a03e6c52b623430f5cf7962afdd3c22cc9b80a6cd87f999e225c8fac44998f1a mm-sourc
 MD5 a457084a5937a1a7538f9db4b267c6b0 mm-sources-2.6.16_rc3-r1.ebuild 1013
 RMD160 715c7eabe08e6bf06fbf6e63d111e341b7dccd96 mm-sources-2.6.16_rc3-r1.ebuild 1013
 SHA256 3fd06cefe898c2258f13251ea7ee922f33a9851558939e1f490f769a92d6306e mm-sources-2.6.16_rc3-r1.ebuild 1013
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8lN0p5vW4rUFj5oRAmliAJ9ukvLJFPCXgtosJ8jthMdydn2LjwCfYP3X
-xpVrIw5O+dQxNLNXZpac7Hs=
-=hrjP
------END PGP SIGNATURE-----
+MD5 428a412cc78ffe35c6e568b06d36fce3 mm-sources-2.6.16_rc4-r1.ebuild 1010
+RMD160 9b1dd5e0859a242c666f7d3ffc726efe8df0181c mm-sources-2.6.16_rc4-r1.ebuild 1010
+SHA256 8b3e48dc56c25368f992c0059ca688a8a2c6ac0a3a0b3368787083853e138ed4 mm-sources-2.6.16_rc4-r1.ebuild 1010
