@@ -2,10 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>commonbox</herd>
-	<longdescription>
-	Fluxbox is yet another windowmanager for X.
-	It's based on the Blackbox 0.61.1 code. Fluxbox looks like blackbox and 
-	handles styles, colors, window placement and similar thing exactly like 
-	blackbox (100% theme/style compability).
-	</longdescription>
+	<longdescription><![CDATA[
+		Fluxbox is yet another windowmanager for X. Originally based upon the
+		Blackbox 0.61.1 code, Fluxbox has been extended to include a new tabbed
+		window handling mechanism, an improved configurable window title bar,
+		better KDE and GNOME integration, an integrated keygrabber and countless
+		additonal features.
+		]]></longdescription>
 </pkgmetadata>
