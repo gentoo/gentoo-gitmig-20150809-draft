@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4.ebuild,v 1.2 2006/01/02 21:26:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4.ebuild,v 1.3 2006/02/22 18:57:56 caleb Exp $
 
 ONIGURUMA="onigd2_5_0"
 
@@ -16,6 +16,8 @@ SLOT="1.8"
 # please keep sorted
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="socks5 tcltk cjk doc threads"
+RESTRICT="confcache"
+
 
 RDEPEND="virtual/libc
 	>=sys-libs/gdbm-1.8.0
