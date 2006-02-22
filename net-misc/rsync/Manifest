@@ -2,31 +2,78 @@
 Hash: SHA1
 
 MD5 d81753d87bf6c0fbe7259fb52cf327fe ChangeLog 11322
+RMD160 25e42ee2d6d30c66ec1d1381965c2c55acad4c08 ChangeLog 11322
+SHA256 cb7dead4b67fdc25d6a59ed9f08d4adf5907ec00cbabd2fee5b337d3153837eb ChangeLog 11322
 MD5 e04533ca371c57d742250cc0622c005e files/digest-rsync-2.6.0-r6 204
+RMD160 c3672dacee914c8b9f7deef11e37de7f305dd178 files/digest-rsync-2.6.0-r6 204
+SHA256 4344ae75ffa8722f9722ee08a55455798897a4dfd63307e1a1cbbc81cdf7787b files/digest-rsync-2.6.0-r6 204
 MD5 62972fab38bf033135efad0bd025f65b files/digest-rsync-2.6.3-r1 63
+RMD160 2089f597f2c60b4c6b5527444dd34b1f914819a0 files/digest-rsync-2.6.3-r1 63
+SHA256 a51ea756684b9c2aeedee7e426d003f4a5fa41783fbf2139f73e65a6538d243e files/digest-rsync-2.6.3-r1 63
 MD5 837ec8510f315fe348f0a0e13c755c15 files/digest-rsync-2.6.4 63
+RMD160 6ba84206a1cea9c310072b0f6aa99da303bc6f7c files/digest-rsync-2.6.4 63
+SHA256 508d6f51b75bd9b68b3155a5ac898ee0d073f392c4368c6efe840d7624982e55 files/digest-rsync-2.6.4 63
 MD5 23137ad8bc9a42849cc3b8e1e9efe076 files/digest-rsync-2.6.5 63
+RMD160 bab1d55ec7f97075302681ba36ecab9ac68129a4 files/digest-rsync-2.6.5 63
+SHA256 fcc916e77d2842a6d2aef0d84274df8387bcb2eec412f3bdcff642d4e6152791 files/digest-rsync-2.6.5 63
 MD5 3ee26e2b37af76a4770448ec745e6f42 files/digest-rsync-2.6.6 63
+RMD160 89bed645349f2d1add9a13a5012f51fa9f80a481 files/digest-rsync-2.6.6 63
+SHA256 22faf25f3b49525033c64085c7bed7f24bee05ad870f5b72160bfa9cd18d1e3f files/digest-rsync-2.6.6 63
 MD5 3ee26e2b37af76a4770448ec745e6f42 files/digest-rsync-2.6.6-r1 63
+RMD160 89bed645349f2d1add9a13a5012f51fa9f80a481 files/digest-rsync-2.6.6-r1 63
+SHA256 22faf25f3b49525033c64085c7bed7f24bee05ad870f5b72160bfa9cd18d1e3f files/digest-rsync-2.6.6-r1 63
 MD5 d4a2634dfd2e7e9f6e5537c2b6c8af8d files/rsync-2.6.0-cvsignore.patch 797
+RMD160 7094b320063516d732eb64cf072c8e3ab6449548 files/rsync-2.6.0-cvsignore.patch 797
+SHA256 cfad3288bfbd523df324680b9ccec56c5bd512e0e110551db8b6cbdcbc4ef0b8 files/rsync-2.6.0-cvsignore.patch 797
 MD5 574dc3e5a445650c56e445bd2a5ecc02 files/rsync-2.6.0-livecd-sigmask.patch 1807
+RMD160 4ff73e0c9057d0e04a0bff579486fcfa96273f82 files/rsync-2.6.0-livecd-sigmask.patch 1807
+SHA256 c9ae24f8169f06b756ba39660e96135913aedb3e0ba828397c692fa683df7bbc files/rsync-2.6.0-livecd-sigmask.patch 1807
 MD5 b447910de9fdd6425c64002fa7d1ab83 files/rsync-2.6.0-sanitize.patch 5671
+RMD160 14cf7c9363627a2bf828878f67c7388508acc2aa files/rsync-2.6.0-sanitize.patch 5671
+SHA256 83597277fe46868463e198968a1b3932169696104a181a58f5a71db99c6779a0 files/rsync-2.6.0-sanitize.patch 5671
 MD5 c4757d802d9ddaa65bfeb99fa55fcf1a files/rsync-2.6.6-acls.patch 1627
+RMD160 db0ec2160b6594bbc0900341e039a3ece62de272 files/rsync-2.6.6-acls.patch 1627
+SHA256 b43e28479a2a6a4ddc4ff523bc0c725f8b1ed9c53da35b4781c75e0199a2016a files/rsync-2.6.6-acls.patch 1627
 MD5 b8cb6d507de74f71738f0f50774c35d0 files/rsync-pathsanitize.patch 235
+RMD160 e46d645399841334f46de9ff81f9c0a13d392820 files/rsync-pathsanitize.patch 235
+SHA256 216b5d18c9eed9c5c18e445a3dd64a6b22e6d0c0fdb33f7a06d1d62d08fbdd61 files/rsync-pathsanitize.patch 235
 MD5 f92735d68f21c6516c8916b484ecd848 files/rsyncd.conf 518
+RMD160 7b291d3034d558c036682c8f1d616ab613d0a011 files/rsyncd.conf 518
+SHA256 d59b2abe8c954c48769967c9b51a42ee2a2f1d7d1835bd76a18f513f2ac1b396 files/rsyncd.conf 518
 MD5 d3ab23dab6a9dcad0b966d96bd2a743f files/rsyncd.conf.d 149
+RMD160 419a5a9d2cf1557c6cfa2a88d9e33ae27d725014 files/rsyncd.conf.d 149
+SHA256 262f94a5e99844af0fc14d201f8c7d43f73bba7e9744cf4e61262bafbe6f884c files/rsyncd.conf.d 149
 MD5 85d62854c15e2e275184c9af7e5d6d18 files/rsyncd.init.d 438
+RMD160 e107a899fb3000ebec3529392a4d5553864ba385 files/rsyncd.init.d 438
+SHA256 66219d742395539eb51cf1d0f0c50432ff1e2c9bdb3948f6410923f31cf3751d files/rsyncd.init.d 438
 MD5 9fe188afd112764c6fcf1d07b80ca8d1 files/rsyncd.xinetd 170
+RMD160 2ce2addea3cfff08f86a168b0d2d83446514a60f files/rsyncd.xinetd 170
+SHA256 e19e99dc3daa12d5729dd972b637ed064a2b004a1c7fe75c9f2ebb5ab5997aa8 files/rsyncd.xinetd 170
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 5cf3be57ba56071e6ada83f06fa578ea rsync-2.6.0-r6.ebuild 2649
+RMD160 34db881a09ed7b457f1b299ec39d8e7f711a0dcb rsync-2.6.0-r6.ebuild 2649
+SHA256 eb7e50e998ca09862ceb2ab6fd199ab800ab1233f1bb6e095e1d6b8ebcaff2ac rsync-2.6.0-r6.ebuild 2649
 MD5 3685ae9a09bfe55c04044538bf81fe59 rsync-2.6.3-r1.ebuild 2009
+RMD160 766fdf038a1fe02d1c7bd833969f25ff7eb6bc33 rsync-2.6.3-r1.ebuild 2009
+SHA256 a251dd6e78c020d60fd3dea88ff138e030f492948b81506468305160ad90cf93 rsync-2.6.3-r1.ebuild 2009
 MD5 aa87fe072475d63b9476540033b38d01 rsync-2.6.4.ebuild 2001
+RMD160 3c747bea01df857dcb54aca779576ae3bad88a9f rsync-2.6.4.ebuild 2001
+SHA256 1a580cb6fd100a2253edf324da3a9d1c3d88262f5513f0f3c2114115f577a224 rsync-2.6.4.ebuild 2001
 MD5 e498c1a53adae08aa9947326d1cde06b rsync-2.6.5.ebuild 2002
+RMD160 6844988a0259eff3e07315acf6a6a069395615f4 rsync-2.6.5.ebuild 2002
+SHA256 d42d24617f1dca45d0ca3ae3de174e9ff2bf6ac1727aeb5216f473f9bd2e40cf rsync-2.6.5.ebuild 2002
 MD5 51e3e1bd8ea781df225e47862b7ac98a rsync-2.6.6-r1.ebuild 2185
+RMD160 eaacff3bb7b0ad93f253a4d123345416733dd78a rsync-2.6.6-r1.ebuild 2185
+SHA256 85a69cd709adf029a63ae78d86b617b2805b202e0d9e98bdd768395652496177 rsync-2.6.6-r1.ebuild 2185
 MD5 cb139d23b5710072b79baf8546b9d7c4 rsync-2.6.6.ebuild 2011
+RMD160 ca27c4711691088b93d5a907d1bf4d29893ee375 rsync-2.6.6.ebuild 2011
+SHA256 421787fb461faba65b355377230165f761b59470d77db1ed726ca86037acf3c9 rsync-2.6.6.ebuild 2011
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDzGWA2+ySkm8kpY0RAsI5AJ4uwbHgpXI7sNg3rN2344zFxYHXoQCfT5Yl
-W+7szB3eL+0YeJ8N/kHBtVU=
-=cWuP
+iD8DBQFD/O0S2+ySkm8kpY0RAiqMAJwLR9qCxxhDGI0ej2fL6ewE+YC4xACeKX71
+PT18UgxJr0bDU13AOMDcmD0=
+=36Wl
 -----END PGP SIGNATURE-----
