@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.35 2006/01/24 19:37:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.36 2006/02/22 13:57:25 carlo Exp $
+
+  22 Feb 2006; Carsten Lohrke <carlo@gentoo.org> -eric-3.5.1.ebuild,
+  -eric-3.6.1.ebuild, -eric-3.6.2.ebuild, -eric-3.7.0.ebuild,
+  -eric-3.7.2.ebuild:
+  Clean up.
 
   24 Jan 2006; Markus Rothe <corsair@gentoo.org> eric-3.7.2-r1.ebuild:
   Stable on ppc64
