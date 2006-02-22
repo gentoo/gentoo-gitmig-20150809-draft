@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.0.0-r1.ebuild,v 1.2 2006/02/14 22:19:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.0.0-r2.ebuild,v 1.1 2006/02/22 04:27:54 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
-#SNAPSHOT="yes"
+SNAPSHOT="yes"
 inherit x-modular
 
 DESCRIPTION="X.Org X11 library"
@@ -25,6 +25,10 @@ DEPEND="${RDEPEND}
 CONFIGURE_OPTIONS="$(use_enable ipv6)"
 # xorg really doesn't like xlocale disabled.
 # $(use_enable nls xlocale)
+
+SRC_URI="${SRC_URI}
+	http://dev.gentoo.org/~joshuabaergen/distfiles/libX11-1.0.0-fix_shadow_manpages.tar.bz2"
+PATCHES="${DISTDIR}/libX11-1.0.0-fix_shadow_manpages.tar.bz2"
 
 src_install() {
 	x-modular_src_install
