@@ -1,4 +1,4 @@
-MD5 dd22b58efcf91b57b91fa02ef34dfb43 ChangeLog 4715
+MD5 162c13bf642edfeccaadc8ea58742111 ChangeLog 4813
 MD5 cc0dea5fff30f8ea5fe5e62a749115d3 files/digest-ieee80211-1.0.1 63
 MD5 affd67ec6900c1e7f9c123969f709181 files/digest-ieee80211-1.0.2 63
 MD5 777627671d6848e14270d9f65d9d0be6 files/digest-ieee80211-1.0.3 63
@@ -31,5 +31,5 @@ MD5 7dd7db03af9e51f1c373e6bc8ef9d37d ieee80211-1.1.5.ebuild 2914
 MD5 edf83168cccae504ea65f0ae2da7d4a7 ieee80211-1.1.6.ebuild 2865
 MD5 612c2bdc4961ed57b5db4857f94ac5f4 ieee80211-1.1.7.ebuild 2873
 MD5 33e0a477d70e7489b7af2ba40f0b39e0 ieee80211-1.1.8.ebuild 2930
-MD5 8ddf269b9fe8d8e566bc1b61603318c2 ieee80211-1.1.9.ebuild 2873
+MD5 2b189a6ef0669452f3318d1ec68a4acd ieee80211-1.1.9.ebuild 2872
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
