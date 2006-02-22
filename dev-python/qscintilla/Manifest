@@ -1,70 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 808a615c39da56a292dc92e252a9b16c ChangeLog 7937
-RMD160 a4a42fab5645dcf84773f5f923410892df526df6 ChangeLog 7937
-SHA256 723b32b4db16ca51cf2cb6d111fe56e41b57ec259c1634b55915fadae422b842 ChangeLog 7937
+MD5 e733394d56ca83a688da5019254152ca ChangeLog 8138
 MD5 b3387e20eba70b27a4290523e89753e4 files/digest-qscintilla-1.5.1 77
-RMD160 7b3119e01f80c06fea844fd2e8edd1e4f34a6673 files/digest-qscintilla-1.5.1 77
-SHA256 49140dbd561558d2ec41eec885acf9b2e83cb2577ffddb9acd33b43bdf9eabfe files/digest-qscintilla-1.5.1 77
-MD5 367f1bef2c17aa8fbc890fa134776db0 files/digest-qscintilla-1.54 79
-RMD160 2cc0fd8a91da4b4030b97da089c70f2b0d010d72 files/digest-qscintilla-1.54 79
-SHA256 0254ab8e7539b3a776bad12852fa8aaeb008ff7cffd17008c858952ef238eeca files/digest-qscintilla-1.54 79
 MD5 4f3a81db5affa3915e5d35de77364e97 files/digest-qscintilla-1.6 75
-RMD160 fa43cd759305bc5386a4fb2723f5a15d298c473f files/digest-qscintilla-1.6 75
-SHA256 03a14aa371a4ab4a53421225b597d734f55fc8d0ec58a298972ce5caaf8fde41 files/digest-qscintilla-1.6 75
-MD5 a9d71d6103367fa01a62735815dbe6ca files/digest-qscintilla-1.60 75
-RMD160 7fa116502383f9efbb6dcc873479b199b3b01578 files/digest-qscintilla-1.60 75
-SHA256 2317c8dc42360d9adcf5e36b1d5087e416811e379b987cf34647b6cede0c2393 files/digest-qscintilla-1.60 75
-MD5 3e38fc9aaa4fc7b9ab49400211086e08 files/digest-qscintilla-1.61 75
-RMD160 ec1420f3d67e710319444523a0e04b447353904a files/digest-qscintilla-1.61 75
-SHA256 7fc673ac5b31ff23a4bad3ce1e7da6d72391ff6a10ea82e284c1f2a2e496f2b3 files/digest-qscintilla-1.61 75
-MD5 4f3a81db5affa3915e5d35de77364e97 files/digest-qscintilla-1.65 75
-RMD160 fa43cd759305bc5386a4fb2723f5a15d298c473f files/digest-qscintilla-1.65 75
-SHA256 03a14aa371a4ab4a53421225b597d734f55fc8d0ec58a298972ce5caaf8fde41 files/digest-qscintilla-1.65 75
 MD5 bacbcf22f2420b5d982a6d04f171b44a files/qscintilla-1.5-sandbox.patch 1041
-RMD160 baf1c1ce082fdcead195941e4b3d3b2cfa48ce72 files/qscintilla-1.5-sandbox.patch 1041
-SHA256 e1086b472285474fa3591a3bd9eb6b064a448e48d105f84b2fdd2c6977bcec8b files/qscintilla-1.5-sandbox.patch 1041
-MD5 680820a26d1487ebc8330eaa923f3599 files/qscintilla-1.54-sandbox.patch 783
-RMD160 45326f8cc5a668353ae63c17721f554e62d2859c files/qscintilla-1.54-sandbox.patch 783
-SHA256 46436e2a1820fc43fcaa7af69ff01647d5a6114ca70defc7ca7836976ff5c167 files/qscintilla-1.54-sandbox.patch 783
 MD5 5ed55fc7967f5baa8facac5fdb95f767 files/qscintilla-1.6-sandbox.patch 1220
-RMD160 2ccab18cb3c0d19970e8bc9b2d80c38ef331cccd files/qscintilla-1.6-sandbox.patch 1220
-SHA256 5568bae2a9ae3a865b1b7bcbf973a24b6599a5c4f1a09cc03d8242fe120b26c5 files/qscintilla-1.6-sandbox.patch 1220
 MD5 dc22cd37e5a193d127ad169db2cf6753 files/qscintilla-1.60-sandbox.patch 710
-RMD160 bfd6522349207903b72248684e139b323c175d7a files/qscintilla-1.60-sandbox.patch 710
-SHA256 c12f8007a3b2a84e7b078e514f2a0892075e91bf5a9926f8d00b6bad72e301ec files/qscintilla-1.60-sandbox.patch 710
 MD5 e2ef183d503f0d553f92c182d655be67 files/qscintilla-1.61-sandbox.patch 710
-RMD160 e5837ebb036fc11d3255a4c11bc1fd553a7e6c4b files/qscintilla-1.61-sandbox.patch 710
-SHA256 d9bbb5eac50cc1860e48ac6349645dca434c62e564fee59e449a89fe757dbc4d files/qscintilla-1.61-sandbox.patch 710
 MD5 f5f01b5ca1b6758b69a04a4897c0a370 files/qscintilla-1.65-sandbox.patch 710
-RMD160 6541661ddfbd80a597bbfb25732beb21788c1231 files/qscintilla-1.65-sandbox.patch 710
-SHA256 b12078801afb29cbe8747424383da47e0fd43fc9346adedb728d3c73886bdcc1 files/qscintilla-1.65-sandbox.patch 710
 MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
-RMD160 74ecde8b999da503a2733b49ed618d5d50d26476 metadata.xml 175
-SHA256 26b18db06b1665422af8905fb70f8f48920a048578172d62b9689e273ee39a2d metadata.xml 175
 MD5 e70bf3827275bc2c00f845ef1a9667fc qscintilla-1.5.1.ebuild 2071
-RMD160 e80526e39c7c437a7b5fb4d1ff25116984ad39fa qscintilla-1.5.1.ebuild 2071
-SHA256 6142153db233108b0b3e391daec437cdfbcb2de21c5bbf978929ff506d577ef2 qscintilla-1.5.1.ebuild 2071
-MD5 49c5708642908c7e154f0dc4acff1fe8 qscintilla-1.54.ebuild 1071
-RMD160 590fd876ae9a393a9650e2f64e8e759ee96a548c qscintilla-1.54.ebuild 1071
-SHA256 f767199022bfce44484b1c722ed1a662b7d932ad359aac14ba029aa0eb786392 qscintilla-1.54.ebuild 1071
 MD5 ea80d9d7ff265ffd86d01a48a7c64ade qscintilla-1.6.ebuild 2380
-RMD160 8dae6efa51ad6413ebf999a8e5061908711a03fc qscintilla-1.6.ebuild 2380
-SHA256 d5f11c7bd2bca1121dc36a53074ba52f1dd1930f3b503b2f8dc97cb5eafdb75a qscintilla-1.6.ebuild 2380
-MD5 d85bf2c94af9df1295e060e398f23d8a qscintilla-1.60.ebuild 1265
-RMD160 11c00e917a2e14c1b9cd1c58c72fba8aed981425 qscintilla-1.60.ebuild 1265
-SHA256 0bab9c0838d6c1599f3abf94ec25560f6a1afa276f01f2d4d215f80ceb459af8 qscintilla-1.60.ebuild 1265
-MD5 e5f3ee8ba48f5a71dbd6238556692fc4 qscintilla-1.61.ebuild 1339
-RMD160 5896f2f6d3e0b375b3c85e999efbbd18db25868d qscintilla-1.61.ebuild 1339
-SHA256 999fdbc04968bd9286e8b0da87cb4d151f7dc7952b2d4424c5f02277d13aa7c9 qscintilla-1.61.ebuild 1339
-MD5 ed0e36f74c7764aa446ee14ffb1d87db qscintilla-1.65.ebuild 1377
-RMD160 5f6cccde50bedc0bee67bea0bfae123e98ffd89c qscintilla-1.65.ebuild 1377
-SHA256 06fd742b8a2b1f3205af7f028c71a5995ae7d59b9b3a1e339a1852446981f124 qscintilla-1.65.ebuild 1377
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9e2gJrHF4yAQTrARAmOCAJ9nGtwT7IEZYo/xFV+W6cuTIqiFSwCfZcR6
-arMCeHLLU7LFUXWdJECVaDg=
-=+Fma
------END PGP SIGNATURE-----
