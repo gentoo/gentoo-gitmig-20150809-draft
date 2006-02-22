@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a8da3085ab9f5130c9ed089e31ad8a7a ChangeLog 15801
-RMD160 ecb8b974c0e88aaddaffcca3b6bccd4c21bb2196 ChangeLog 15801
-SHA256 c33e79d59543b7445666134a42701184f5d3c454bd4a6bc20f49c43edcd5bf94 ChangeLog 15801
+MD5 50104e0c79799e751372920f79d8f73e ChangeLog 16103
+RMD160 d04d5b02ed180006139776fa28c4d04875f5b03b ChangeLog 16103
+SHA256 0e3ccb6e7aa17582a7ce7305efb6dece1a6171d31143c059bd07c0d91bc92b37 ChangeLog 16103
 MD5 4985a61b90909b7f1c926f79a3ba34bf files/0.18-mythbackend.conf 931
 RMD160 626d1a051ad5d9d724e1450e0bd0da21c57fe2d2 files/0.18-mythbackend.conf 931
 SHA256 ecb82a5de903a63df0c5821ace68a845cf49faa90d754fead240542980e95b2f files/0.18-mythbackend.conf 931
@@ -19,6 +19,9 @@ SHA256 c16789e34d2e5c3d5b0162a87a9bf758145aa3bfaaeb55e05438e4a30a235bb9 files/di
 MD5 469774c8a2aebf913ddd8388e7945f7d files/digest-mythtv-0.19 244
 RMD160 df9a35cde9765eb16364c65f7ec6d316d107f380 files/digest-mythtv-0.19 244
 SHA256 0dfe196cf023e37679f736fec817dad08e4bd7b235e88c7ad573b05e849a5d0d files/digest-mythtv-0.19 244
+MD5 303b4a5328ff542c6549fb38c0079773 files/digest-mythtv-0.19-r1 515
+RMD160 a4ebb7c455ca79633b657211309500374150f607 files/digest-mythtv-0.19-r1 515
+SHA256 0a59555e59531490be10397769f5e116eaba0921c17b92574827a55d05c7d86f files/digest-mythtv-0.19-r1 515
 MD5 95c29c3a4ebd800a939425c30ba9f362 files/digest-mythtv-0.19_pre8642 74
 RMD160 386fa70567278ba2611d323ad44f03e49f513285 files/digest-mythtv-0.19_pre8642 74
 SHA256 87953c4b915d313efbdc6fc21d5c2f5ce9d9ce9d9d6fd08d986d3754a7d99112 files/digest-mythtv-0.19_pre8642 74
@@ -43,15 +46,6 @@ SHA256 ef3d468144e216135ffd1973a7f78544b62a6201f8b4fc885fd30d16c84fb872 files/my
 MD5 fde2b2886b037b199cc815dbcb12617e files/mythtv-0.18.1-x86_64-configure.patch 631
 RMD160 295c6fadffb8fad17703556d09959b58972a6b22 files/mythtv-0.18.1-x86_64-configure.patch 631
 SHA256 d3d4283d7d7d53cfea564cd83165f8f75c8d0d536d987c5fe02480da3d013d51 files/mythtv-0.18.1-x86_64-configure.patch 631
-MD5 6aa61436d9eed3e1792a745a6d1f3dcc files/mythtv-0.19_pre8554-chanutil-schar.patch 1208
-RMD160 bbd90f9e3e055312d889e4a31a5d20b03ed6b447 files/mythtv-0.19_pre8554-chanutil-schar.patch 1208
-SHA256 46413d1537e03d9127297a6b232b9e5c3c2b58920d987598f3e6843e2ac864f2 files/mythtv-0.19_pre8554-chanutil-schar.patch 1208
-MD5 c89433c53aa0030c59598b7403ffbe94 files/mythtv-0.19_pre8554-freetype.patch 1209
-RMD160 e9a7ff171315621197654b77abcc629714f1cd90 files/mythtv-0.19_pre8554-freetype.patch 1209
-SHA256 4e6b1ac1513d9aff1fe89646d2bff44eafd64ea3e85df528e13d8d503950ebda files/mythtv-0.19_pre8554-freetype.patch 1209
-MD5 96e1efbc2a12349e4c5ada14422868af files/mythtv-0.19_pre8554-xrandr.patch 744
-RMD160 7177c3ddd3c264ee85bfe8f54ccd4f02e1f91842 files/mythtv-0.19_pre8554-xrandr.patch 744
-SHA256 1bee47aabecb13711ae045733e898cc7ccf15eb12a626f57e50c47426f6e25d1 files/mythtv-0.19_pre8554-xrandr.patch 744
 MD5 0d20a49cff965a0f3ab35cb0600b65b4 files/runmythfe 104
 RMD160 61d825641aae0b77ea0995f5b9b59855e33b9027 files/runmythfe 104
 SHA256 7d3c316ec3af8f8cac23a1645c537f90feb09f7cb6d510dc2185d799080dd675 files/runmythfe 104
@@ -64,6 +58,9 @@ SHA256 8bbf3b1c856ceeb623dc3ff016044a20afba27e7092e30666832f73c8512f766 mythtv-0
 MD5 cac72423d3f6c98d2ef628c3e83c4ff2 mythtv-0.18.1-r2.ebuild 5488
 RMD160 7cc27e0730e0a4b16aa64a1943b14487ffb0bfac mythtv-0.18.1-r2.ebuild 5488
 SHA256 7986004e945ce90abfb6bce7a87299932b1eb80a75e4423dbc5bc296ac1d3443 mythtv-0.18.1-r2.ebuild 5488
+MD5 6e5e12b7326db7aed174210a19df3fc3 mythtv-0.19-r1.ebuild 6384
+RMD160 eba77b65a33a359a82921f0e6a872a616915279f mythtv-0.19-r1.ebuild 6384
+SHA256 09bdff021e9d09bc78b7c6d399f182493d423220477fc6273f3ebe640b574faf mythtv-0.19-r1.ebuild 6384
 MD5 d3e3b07e51556dc0bcec9b8b6109c5aa mythtv-0.19.ebuild 6667
 RMD160 a0e4b46367ba6696ebffa42b46059adb7f0443fb mythtv-0.19.ebuild 6667
 SHA256 8de1da4d472c7aa999d1c06efcebdca70e0b3639159ec632f6aadc7b02f70970 mythtv-0.19.ebuild 6667
@@ -73,7 +70,7 @@ SHA256 6f932b53a35be6e110d05f24021d56c2cf323bd17c278dd79673ae6c25fe83f0 mythtv-0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD9wB7BtvusYtCZMsRAjc7AJ4p2oUZaU+4SYuZLFkn4vDefpmbHgCeNvTz
-lND+2WUUpp3QJ5gElhGJH18=
-=jp2m
+iD8DBQFD/MPNBtvusYtCZMsRAnnmAJ4mIfOjxYmPR8+/iFiv2EuwWlfMbgCfdfJw
+yO/hY5jND/UBONPkk+qJfEU=
+=gcpF
 -----END PGP SIGNATURE-----
