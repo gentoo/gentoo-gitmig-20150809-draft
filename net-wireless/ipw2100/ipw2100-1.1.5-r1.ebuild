@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.1.5-r1.ebuild,v 1.2 2006/02/22 12:27:26 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.1.5-r1.ebuild,v 1.3 2006/02/22 12:30:04 brix Exp $
 
 inherit eutils linux-mod
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="debug"
 DEPEND=">=net-wireless/ieee80211-${IEEE80211_VERSION}"
