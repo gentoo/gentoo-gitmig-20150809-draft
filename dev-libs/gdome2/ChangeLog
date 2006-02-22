@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdome2
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.19 2006/02/08 22:22:15 tove Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.20 2006/02/22 00:01:14 agriffis Exp $
+
+  22 Feb 2006; Aron Griffis <agriffis@gentoo.org> gdome2-0.8.1-r1.ebuild:
+  Mark 0.8.1-r1 ~ia64
 
   28 Nov 2005; Tom Gall <tgall@gentoo.org> gdome2-0.8.1-r1.ebuild:
   stable on ppc64
