@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.52 2006/02/21 22:11:35 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.53 2006/02/22 15:06:55 corsair Exp $
+
+  22 Feb 2006; Markus Rothe <corsair@gentoo.org> bugzilla-2.18.5.ebuild:
+  Stable on ppc64; bug #123646
 
 *bugzilla-2.20.1 (21 Feb 2006)
 *bugzilla-2.18.5 (21 Feb 2006)
