@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libiec61883
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.4 2005/09/03 07:37:15 chriswhite Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.5 2006/02/22 04:49:46 chriswhite Exp $
+
+  22 Feb 2006; Chris White <chriswhite@gentoo.org>
+  -libiec61883-1.0.0.ebuild:
+  Removed older versions.
 
 *libiec61883-1.0.0-r1 (03 Sep 2005)
 
