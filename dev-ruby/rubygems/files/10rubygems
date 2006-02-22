@@ -1,1 +1,1 @@
-RUBYOPT="-rubygems"
+RUBYOPT="-rauto_gem"
