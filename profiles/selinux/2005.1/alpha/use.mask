@@ -1,0 +1,134 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/alpha/use.mask,v 1.1 2006/02/22 18:12:33 spb Exp $
+
+# This file masks out USE flags that are simply NOT allowed in the default
+# profile for any architecture.  This works, for example, if a non-default
+# profile (such as the selinux profiles) have a USE flag associated with
+# them.
+
+# These will probably never be supported, for obvious reasons (wrong arch)
+icc
+icc-pgo
+svga
+
+# These are debatable, since technically an alpha could support this hardware
+pcmcia
+3dfx
+
+# avifile is broken atm
+avi
+
+# No hardware to test
+pda
+
+# Can't get USB working to test
+gphoto2
+
+# No apm support on alpha
+apm
+
+# alpha doesn't have java support other than compaq-j*, which isn't a
+# current version.  must mask this to keep things sane
+java
+java-internal
+java-external
+
+# firebird appears to be x86-only (the db, not the browser)
+firebird
+
+# tcc is x86-only
+tcc
+
+# I don't think that openafs really works on other architectures,
+# despite some internal Gentoo efforts (mine) to port it
+afs
+uclibc
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+adabas
+birdstep
+cpdflib
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+oracle7
+oci8
+pfpro
+solid
+sybase
+sybase-ct
+
+hal
+howl
+jack
+freetts
+djbfft
+lm_sensors
+
+gnustep
+
+# Mask intel fortran compiler
+ifc
+
+emboss
+
+# Mask vpopmail until net-mail/vpopmail goes out of package.mask
+vpopmail
+
+# Mask pyste until gccxml / elementtree work on alpha
+pyste
+
+# Mask mono for further testing
+mono
+
+# can't test wireless currently
+wifi
+
+# dbus is not currently supported by alpha
+dbus
+
+# apache segfaults when using mpm-peruser (bug 105778)
+mpm-peruser
+
+pike
+
+fdftk
+
+timidity
+
+# We don't have any virtual/mpi (bug 111807)
+mpi
+
+# masks required for asterisk
+bri
+pri
+zaptel
+
+# Modular X: mask non-alpha cards
+video_cards_apm
+video_cards_ark
+video_cards_chips
+video_cards_cyrix
+video_cards_i128
+video_cards_i740
+video_cards_i810
+video_cards_imstt
+video_cards_neomagic
+video_cards_newport
+video_cards_nsc
+video_cards_sis
+video_cards_trident
+video_cards_tseng
+video_cards_vesa
+video_cards_via

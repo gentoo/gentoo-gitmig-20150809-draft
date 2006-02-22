@@ -1,0 +1,8 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/alpha/virtuals,v 1.1 2006/02/22 18:12:33 spb Exp $
+
+virtual/alsa				sys-kernel/vanilla-sources
+virtual/bootloader			sys-boot/aboot
+virtual/jre				dev-java/compaq-jre
+virtual/jdk				dev-java/compaq-jdk

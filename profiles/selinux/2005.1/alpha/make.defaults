@@ -1,0 +1,12 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/alpha/make.defaults,v 1.1 2006/02/22 18:12:33 spb Exp $
+
+ARCH="alpha"
+ACCEPT_KEYWORDS="alpha"
+
+CHOST="alpha-unknown-linux-gnu"
+CFLAGS="-O2 -pipe"
+CXXFLAGS="${CFLAGS}"
+
+FEATURES="sandbox sfperms"
