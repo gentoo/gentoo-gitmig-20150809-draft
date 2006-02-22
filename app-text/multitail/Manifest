@@ -1,18 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c98fd01aa8ef14c2ec0262626bba01f3 ChangeLog 4853
+MD5 88e53245ae85076e4f635343362cd809 ChangeLog 4976
+RMD160 f93a868f4f74acbc0ff15fd4e64d365187634fee ChangeLog 4976
+SHA256 296bba5f8c7b90eb3e79e84c3c631bd1dc53d5fafa4be5f753a66ce9deb68080 ChangeLog 4976
 MD5 fe45a3a1567df9e06b0265479e02d163 files/digest-multitail-3.4.5 63
+RMD160 22b2fec8fc09cfdcba229d501a25cc182f86377c files/digest-multitail-3.4.5 63
+SHA256 fd32f0ecfe885847de01180bdaa8c26d47b6244ec27d602f3811e169e91aabab files/digest-multitail-3.4.5 63
 MD5 63f24c0564928cd5d344cd6fec66852d files/digest-multitail-3.4.8 63
+RMD160 1e5699e36a29229ca16e57a29816c18fcaa6cba4 files/digest-multitail-3.4.8 63
+SHA256 19ee9d69be26adbaf777fb66d5e11f84fab3227863bf8f717cf3a0e2d31aaf00 files/digest-multitail-3.4.8 63
 MD5 17e4dc52bd9210abc3004d6ac16dfa6b files/digest-multitail-3.8.4 63
+RMD160 91b5da207ad766f09947d543fe2d4b2f81c48c29 files/digest-multitail-3.8.4 63
+SHA256 3f7a35556a2bec48bb92709de1eae5a3f7d658ceec14a934db72f3593fd73037 files/digest-multitail-3.8.4 63
+MD5 db44f77a689af1a019d890ef2a894236 files/digest-multitail-3.8.6 235
+RMD160 b5ae555bdc51ee756cfa662d6fa10aaad8684330 files/digest-multitail-3.8.6 235
+SHA256 85231cefb1254a1178adede5b83b206e7f26082e11c42669966d7efda79eae50 files/digest-multitail-3.8.6 235
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
+RMD160 8c21a530a9ad0fc654830b937b2b51ee52c6683a metadata.xml 258
+SHA256 33b38b5f3e7de89c901697979d81e02dde68d316622da831ca2f2780b50bb7a4 metadata.xml 258
 MD5 053e782d0bf5a711cfa8707445f11041 multitail-3.4.5.ebuild 1028
+RMD160 f49574fc6a4e6410fdfec3008826a4ecf12754d4 multitail-3.4.5.ebuild 1028
+SHA256 440f8ad0eada336320ee050ed220f1244d29e8e3226e3928f9e884df482aeacf multitail-3.4.5.ebuild 1028
 MD5 ad50e3b7620c6c5511d571e1c6f17adc multitail-3.4.8.ebuild 1030
+RMD160 0afae9622a269798f224b2086f982694f50e37eb multitail-3.4.8.ebuild 1030
+SHA256 51def8d808bd4f8d5a41d453cc972a5bc45d6f747904aa74d85a022764d63a90 multitail-3.4.8.ebuild 1030
 MD5 a4e2d3cd477a7de6c79014cfd99cedb3 multitail-3.8.4.ebuild 1034
+RMD160 d90d041daac0a91d66daa0f11e17c1e8bbdc382d multitail-3.8.4.ebuild 1034
+SHA256 2221df29c22ba7c964807b6bed8a5cc4400d0b2892a142fc90c709aee27f75e8 multitail-3.8.4.ebuild 1034
+MD5 9af04c3b8d7160b7887bc29649259705 multitail-3.8.6.ebuild 1034
+RMD160 2623ce1cb0ae9b12fdc3f8e9f96f4dd3a41ac3aa multitail-3.8.6.ebuild 1034
+SHA256 a9ac5b24e281e7041418755598058050f7d29c815b104ad526f020cd5744b2cf multitail-3.8.6.ebuild 1034
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDxuy+EZCkKN40op4RAtOuAKCoPzyZGAZP2E/94xN48lEb2TfM1gCgrduk
-k8y3WcvG0qOs7uXRWBgpLcI=
-=qdtl
+iD8DBQFD/NYcEZCkKN40op4RAsmSAKCUfdh9VPvC84FhosRgZsD/ShdGGQCeLjRo
+8H22O7OzyYvzduJZ2np2Bb4=
+=ktK9
 -----END PGP SIGNATURE-----
