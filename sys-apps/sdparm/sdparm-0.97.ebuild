@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/sdparm-0.97.ebuild,v 1.1 2005/12/15 16:06:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/sdparm-0.97.ebuild,v 1.2 2006/02/22 02:24:06 vapier Exp $
 
 DESCRIPTION="Utility to output and modify parameters on a SCSI device, like hdparm"
 HOMEPAGE="http://sg.torque.net/sg/sdparm.html"
@@ -11,15 +11,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc"
-
-src_compile() {
-	econf || die "configure error"
-	emake || die "compile error"
-}
+DEPEND=""
 
 src_install() {
-	einstall
+	make install DESTDIR="${D}" || die
 
 	# These don't exist yet.  Someone wanna copy hdparm's and make them work? :)
 #	newinitd ${FILESDIR}/sdparm-init-7 sdparm
@@ -28,5 +23,5 @@ src_install() {
 	doman sdparm.8
 
 	# NEWS is 0-bytes.  Skip until `dodoc' handles those.
-	dodoc AUTHORS ChangeLog COPYING CREDITS README notes.txt
+	dodoc NEWS AUTHORS ChangeLog CREDITS README notes.txt
 }
