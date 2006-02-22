@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.2.0.ebuild,v 1.1 2006/02/18 23:22:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.2.0.ebuild,v 1.2 2006/02/22 12:27:26 brix Exp $
 
 inherit linux-mod
 
@@ -61,7 +61,7 @@ src_unpack() {
 	unpack ${A}
 
 	use debug && debug="y"
-	sed -i -e "s:^\(CONFIG_IPW_DEBUG\)=.*:\1=$debug:" ${S}/Makefile
+	sed -i -e "s:^\(CONFIG_IPW2100_DEBUG\)=.*:\1=$debug:" ${S}/Makefile
 }
 
 src_compile() {
