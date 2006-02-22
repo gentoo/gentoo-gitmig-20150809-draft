@@ -1,27 +1,51 @@
+# These use-flags won't work neither on ppc32 nor on ppc64
+
+3dfx
+acpi
+afs
+avi
+fdftk
+icc
+icc-pgo
+ifc
+lm_sensors
+rar
+svga
+
+#keep and eye on firebird and interbase as pair
+firebird
+interbase
+
+# Unmask our instruction sets
+-altivec
+
+# Unmask pbbuttonsd
+-pbbuttonsd
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+adabas
+birdstep
+cpdflib
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+oracle7
+pfpro
+solid
+sybase
+sybase-ct
+
 # Luca Longinotti <chtekk@gentoo.org>
 # mask Oracle
 oci8
 
-# 2006/01/28 - Donnie Berkholz <spyderous@gentoo.org>
-# Modular X: unmask for architectures on which they are available
--input_devices_synaptics
--input_devices_wacom
-
-# 2006/02/05 - Donnie Berkholz <spyderous@gentoo.org>
-# Modular X: mask for architectures on which they aren't available
-video_cards_apm
-video_cards_ark
-video_cards_cirrus
-video_cards_cyrix
-video_cards_i128
-video_cards_i740
-video_cards_i810
-video_cards_neomagic
-video_cards_newport
-video_cards_nsc
-video_cards_rendition
-video_cards_siliconmotion
-video_cards_tga
-video_cards_tseng
-video_cards_vesa
-video_cards_via

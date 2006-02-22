@@ -1,0 +1,6 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/2006.0/32bit-userland/power3/make.defaults,v 1.1 2006/02/22 10:44:12 pylon Exp $
+
+CFLAGS="-O2 -pipe -mtune=power3 -mcpu=power3"
+CXXFLAGS=${CFLAGS}
