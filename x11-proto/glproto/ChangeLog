@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.24 2006/02/15 21:08:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.25 2006/02/22 06:17:10 spyderous Exp $
+
+*glproto-1.4.5 (22 Feb 2006)
+
+  22 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  -glproto-1.4.4.ebuild, +glproto-1.4.5.ebuild:
+  Bump to add GLX_FRONT_LEFT_EXT.
 
 *glproto-1.4.4 (15 Feb 2006)
 
