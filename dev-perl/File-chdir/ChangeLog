@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-chdir
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/ChangeLog,v 1.2 2006/01/18 19:23:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/ChangeLog,v 1.3 2006/02/22 22:38:14 agriffis Exp $
+
+  22 Feb 2006; Aron Griffis <agriffis@gentoo.org> File-chdir-0.06.ebuild:
+  Mark 0.06 ~ia64
 
   18 Jan 2006; <mcumming@gentoo.org> +metadata.xml:
   Missing metadata
