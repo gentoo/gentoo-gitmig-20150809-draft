@@ -1,21 +1,43 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0ce25574b39eb47c43dbae707882e800 ChangeLog 9313
-MD5 a36fa36a0ee39f02fa7162fa72a488af evms-2.5.2-r1.ebuild 2297
+MD5 7fdf1a6519a8583991df9c019ea7b9bf ChangeLog 9553
+RMD160 4bad73c089e2c39b9f5fc8360c84757cafbed5c0 ChangeLog 9553
+SHA256 8d8811e9f805ab64bd1f2cd6ce6b2b937102d354942681441d546d6ea63275c9 ChangeLog 9553
 MD5 a65a8d5f94a287aac2e99eee6c70d7b3 evms-2.5.3-r1.ebuild 2427
-MD5 56506764cd7ab73aa3b1a06b9e55f08a evms-2.5.3.ebuild 2295
+RMD160 dde95093f500195860d3982835de1e3c5bceb6d2 evms-2.5.3-r1.ebuild 2427
+SHA256 77b81af199f49601526139c22baa2e075311bc021fdcedc789aaafa1f4f1015d evms-2.5.3-r1.ebuild 2427
+MD5 696c5ecd11f65425c88ee07d44819cd6 evms-2.5.4.ebuild 2435
+RMD160 15480f9aba76e23bccde20c65e2b4c5373887f6b evms-2.5.4.ebuild 2435
+SHA256 139c5858b106df01455776b4a827843bd4e18c5d5f7d5927c6ce865509887b4e evms-2.5.4.ebuild 2435
 MD5 fea531c10f3cb1d47c0f0af40bad0fa9 files/2.5.3/compaq_segments.patch 478
+RMD160 a31b6197ded598606389d590d6c36d5a5853203c files/2.5.3/compaq_segments.patch 478
+SHA256 943748998e15b603fdd66a137903a4486b0b98c935a589c297d9c446ef93557e files/2.5.3/compaq_segments.patch 478
 MD5 fbf48e09c52473403af443f9ee5d8403 files/2.5.3/md_expand.patch 2152
-MD5 996ea6d43e86cc65954540da80e56061 files/digest-evms-2.5.2-r1 63
-MD5 2769ffa4ae1f09667ac42e94da8036ba files/digest-evms-2.5.3 63
+RMD160 e795ba20bc9d525705b5b22f7c5b68e56ce6ae2c files/2.5.3/md_expand.patch 2152
+SHA256 56f5996874159ce456fcdc72b93aa9ac9011c4be93b2a2954fef8c75046fe85b files/2.5.3/md_expand.patch 2152
+MD5 598840887ca27d780eb4388bd45b6b60 files/2.5.4/corrolator_race.patch 1489
+RMD160 e5f8b7f9d73030ff4f804dcdebf9e0cc0eff1d3f files/2.5.4/corrolator_race.patch 1489
+SHA256 c759eedcfcf0694661f17fdc1d7a5062e3ac55338e70a29d7c056647d15af68b files/2.5.4/corrolator_race.patch 1489
+MD5 1879c686d1d98452cb679c201e045d17 files/2.5.4/degraded_raid.patch 48168
+RMD160 070ca8843f13dea77350b9042632cd8db4f1fe20 files/2.5.4/degraded_raid.patch 48168
+SHA256 ab718bf4cee77fafa4b57c54a3fcebc85e6dd6f59266b885eaf5fb9160c686c6 files/2.5.4/degraded_raid.patch 48168
 MD5 2769ffa4ae1f09667ac42e94da8036ba files/digest-evms-2.5.3-r1 63
+RMD160 f3bcc4f4915f04c44327a58436ba4d9c9d614c02 files/digest-evms-2.5.3-r1 63
+SHA256 34b821017208669e49f9550fd6d718622704964a45fc2fab7daff6a39aca839e files/digest-evms-2.5.3-r1 63
+MD5 b1b28090523dc3bea2165bd458bc0c4b files/digest-evms-2.5.4 235
+RMD160 67139c1be502af23663fff3dca4a136262fa8054 files/digest-evms-2.5.4 235
+SHA256 e2d83ef14ba9f7b40162d7a6963cefec2f634c99e4c831480821898924f1d16f files/digest-evms-2.5.4 235
 MD5 5eb632aa94b0537e1983f935e3706d74 files/evms2-start.sh 382
+RMD160 a9dbd94b537ddcc9b0798cb904769b075e7d529a files/evms2-start.sh 382
+SHA256 ea36fbde78590067029405ab18b09106b083913688ea4863c2e63eece8e74021 files/evms2-start.sh 382
 MD5 59d559390ca6a6d365a5d6c3012c0343 metadata.xml 387
+RMD160 17a7b8226f7c5ef9dd45acd6fa6c9cfe7ba6dcc2 metadata.xml 387
+SHA256 b63984a06d4d8c776e0a1bffb39f36e1835e730d2636ff2a15550b17bb52eb03 metadata.xml 387
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD6AgjJrHF4yAQTrARAp1fAJ9EOfNh28nU0JsFAFSPZFTewQXhTACfVE32
-YjJuaQUBexB6XxCrWb6l0vg=
-=hWR7
+iD8DBQFD/BWlOpjtAl+gMRURAj6PAKChK9/m7dBuOHwkvV5v+JkHzu34FgCguoRJ
+MFr+EE+jXnHHOQpg6+bQK/Y=
+=4ogG
 -----END PGP SIGNATURE-----

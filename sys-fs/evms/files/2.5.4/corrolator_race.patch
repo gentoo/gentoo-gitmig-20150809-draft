@@ -1,0 +1,51 @@
+Set the corrolator in the message before sending it to frag_send_msg_wait() to
+eliminate the race condition where a reply can come back before
+frag_send_msg_wait() completes.  If the reply comes back before the send
+completes, the caller will not be able to match up the corrolator in the
+message received with the corrolator in the message that was sent.
+
+--- evms-2.5.4/plugins/ha/ece.c	2005-11-11 17:31:05.000000000 -0600
++++ evms-2.5.4-fix/plugins/ha/ece.c	2005-12-14 14:29:55.872855176 -0600
+@@ -1912,7 +1912,7 @@
+ 	char  *node = NULL;
+ 	gboolean multicast=FALSE;
+ 	ece_nodeid_t allnode  = ECE_ALL_NODES;
+-	u_int32_t corr, crc, ackval;
++	u_int32_t orig_corr, crc, ackval;
+ 	int ret;
+ 
+ 
+@@ -1951,8 +1951,8 @@
+    	pthread_mutex_lock(&gl_ece_mutex);
+ 	crc = get_curr_crc();
+ 	ackval = ++gl_ece_ackval;
+-	if((corr = ecemsg->corrolator)==0) {
+-		corr = gl_ece_cor++;
++	if((orig_corr = ecemsg->corrolator)==0) {
++		ecemsg->corrolator = gl_ece_cor++;
+ 	}
+    	pthread_mutex_unlock(&gl_ece_mutex);
+ 
+@@ -1964,12 +1964,11 @@
+ 	ret = frag_send_msg_wait(ecemsg,
+ 			multicast,
+ 			node,
+-			corr,
++			ecemsg->corrolator,
+ 			crc,
+ 			ackval);
+ 
+ 	if(!ret) {
+-		ecemsg->corrolator = corr;
+ 		if(!multicast &&
+ 		(gl_ece_mode == SLAVE || strcmp(node, llm_getmynodeid())!=0)){
+ 			/* wait till an acknowledgement from the receiver is
+@@ -1977,6 +1976,8 @@
+ 			 */
+ 			ret = condition_wait(node, ackval);
+ 		}
++	} else {
++                ecemsg->corrolator = orig_corr;
+ 	}
+ 
+ 	LOG_EXIT_INT(ret);

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.3.ebuild,v 1.1 2005/06/24 07:09:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.4.ebuild,v 1.1 2006/02/22 07:41:10 eradicator Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="ncurses gtk"
 
 #EVMS uses libuuid from e2fsprogs
@@ -21,6 +21,13 @@ DEPEND="virtual/libc
 	gtk? ( =x11-libs/gtk+-1* )
 	ncurses? ( sys-libs/ncurses
 	           =dev-libs/glib-1* )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}/corrolator_race.patch
+	epatch ${FILESDIR}/${PV}/degraded_raid.patch
+}
 
 src_compile() {
 	# Bug #54856

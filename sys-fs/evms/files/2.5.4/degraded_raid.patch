@@ -1,0 +1,1144 @@
+Allow creating degraded RAID-1 and RAID-5 regions. For evmsn and evmsgui, the
+user will be prompted to confirm.
+
+Apply with:
+cd /usr/src/evms-2.5.4/
+patch -p1 < degraded_raid.patch
+make
+make install
+
+
+--- evms-2.5.4a/plugins/md/raid5_mgr.c	28 Nov 2005 14:29:46 -0000
++++ evms-2.5.4b/plugins/md/raid5_mgr.c	2 Dec 2005 18:46:57 -0000
+@@ -1707,7 +1707,10 @@
+ 				     char          ** spare_disk,
+ 				     unsigned int   * chunk_size,
+ 				     unsigned int   * raid_level,
+-				     unsigned int   * parity_algorithm ) {
++				     unsigned int   * parity_algorithm,
++				     boolean        * degrade,
++				     int            * missing_index)
++{
+ 	int i;
+ 	int rc = 0;
+ 	boolean ver1_superblock = FALSE;
+@@ -1722,6 +1725,14 @@
+ 			case RAID5_CREATE_OPT_SB1_INDEX:
+ 				ver1_superblock = options->option[i].value.b;
+ 				break;
++
++			case RAID5_CREATE_OPT_DEGRADE_INDEX:
++				*degrade = options->option[i].value.b;
++				break;
++
++			case RAID5_CREATE_OPT_MISSING_INDEX:
++				*missing_index = options->option[i].value.ui32;
++				break;
+ 			
+ 			case RAID5_CREATE_OPT_SPARE_DISK_INDEX:
+ 				/*
+@@ -1759,22 +1770,23 @@
+ 				break;
+ 
+ 			}
+-
+ 		} else {
+ 			if (strcmp(options->option[i].name, RAID5_CREATE_OPT_SB1_NAME) == 0) {
+ 				ver1_superblock = options->option[i].value.b;
++			} else if (strcmp(options->option[i].name, RAID5_CREATE_OPT_DEGRADE_NAME) == 0) {
++				*degrade = options->option[i].value.b;
++			}  else if (strcmp(options->option[i].name, RAID5_CREATE_OPT_MISSING_NAME) == 0) {
++				*missing_index = options->option[i].value.ui32;
+ 			} else if (strcmp(options->option[i].name, RAID5_CREATE_OPT_SPARE_DISK_NAME) == 0) {
+ 				*spare_disk = options->option[i].value.s;
+ 			} else if (strcmp(options->option[i].name, RAID5_CREATE_OPT_CHUNK_SIZE_NAME) == 0) {
+ 				*chunk_size = options->option[i].value.ui32 * 2;
+-
+ 			} else if (strcmp(options->option[i].name, RAID5_CREATE_OPT_RAID_LEVEL_NAME) == 0) {
+ 				if (strcmp(options->option[i].value.s, RAID4_LEVEL_NAME) == 0) {
+ 					*raid_level = 4;
+ 				} else if (strcmp(options->option[i].value.s, RAID5_LEVEL_NAME) == 0) {
+ 					*raid_level = 5;
+ 				}
+-
+ 			} else if (strcmp(options->option[i].name, RAID5_CREATE_OPT_PARITY_ALGORITHM_NAME) == 0) {
+ 				if (strcmp(options->option[i].value.s, ALGORITHM_LEFT_ASYMMETRIC_NAME) == 0) {
+ 					*parity_algorithm = ALGORITHM_LEFT_ASYMMETRIC;
+@@ -1872,6 +1884,10 @@
+ 	list_element_t iter1, iter2;
+ 	md_sb_ver_t sb_ver = {MD_SB_VER_0, 90, 0};
+ 	md_member_t *member;
++	boolean degrade = FALSE;
++	int missing_index;
++	boolean missing_added = FALSE;
++	int min_disks;
+ 	int rc = 0;
+ 
+ 	my_plugin = raid5_plugin;
+@@ -1882,10 +1898,15 @@
+ 		LOG_EXIT_INT(EFAULT);
+ 		return EFAULT;
+ 	}
++
++	raid5_get_create_options(options, &sb_ver, &spare_disk, &chunksize, &raid_level, &parity_algorithm, &degrade, &missing_index);
+ 	
+-	// Must have at least RAID5_MIN_RAID_DISKS
+-	if (EngFncs->list_count(objects) < RAID5_MIN_RAID_DISKS) {
+-		LOG_CRITICAL("Must have at least %d objects.\n", RAID5_MIN_RAID_DISKS);
++	// Must have at least RAID5_MIN_RAID_DISKS for a functional array
++	// and RAID5_MIN_RAID_DISKS - 1 for a degraded array
++	min_disks = degrade ? RAID5_MIN_RAID_DISKS - 1 : RAID5_MIN_RAID_DISKS;
++	if (EngFncs->list_count(objects) < min_disks) {
++		MESSAGE(_("A %s MD region requires a minimum of %d objects.\n"),
++		        degrade ? "degraded" : "functional", min_disks);
+ 		LOG_EXIT_INT(EINVAL);
+ 		return EINVAL;
+ 	}
+@@ -1900,8 +1921,6 @@
+ 		goto error_free;
+ 	}
+ 
+-	raid5_get_create_options(options, &sb_ver, &spare_disk, &chunksize, &raid_level, &parity_algorithm);
+-
+ 	LIST_FOR_EACH(objects, iter1, object) {
+ 		size = min(size, md_object_usable_size(object, &sb_ver, chunksize));
+ 	}
+@@ -1920,6 +1939,10 @@
+ 
+ 	// Add raid members
+ 	LIST_FOR_EACH_SAFE(objects, iter1, iter2, object) {
++		if (degrade && !missing_added && (missing_index == volume->nr_disks)) {
++			rc = md_volume_add_new_missing(volume);
++			missing_added = TRUE;
++		}
+ 		member = md_allocate_member(object);
+ 		if (member) {
+ 			// This will add the member and update the MD superblock.
+@@ -1933,29 +1956,40 @@
+ 		} else {
+ 			rc = ENOMEM;
+ 		}
++
+ 		if (rc) {
+ 			goto error_free;
+ 		}
+ 		EngFncs->delete_element(iter1);
+ 	}
+ 
+-	// Add spare member
+-	if (spare) {
+-		member = md_allocate_member(spare);
+-		if (member) {
+-			// This will add the member and update the MD superblock.
+-			member->flags |= (MD_MEMBER_NEW | MD_MEMBER_DISK_SPARE);
+-			member->data_size = size;
+-			rc = md_volume_add_new_member(volume, member);
++	if (degrade) {
++		if (!missing_added) {
++			rc = md_volume_add_new_missing(volume);
++			missing_added = TRUE;
+ 			if (rc) {
+-				md_free_member(member);
+ 				goto error_free;
+-			}
+-		} else {
+-			rc = ENOMEM;
++			}		
+ 		}
+-		if (rc) {
+-			goto error_free;
++	} else {
++		// Add spare member
++		if (spare) {
++			member = md_allocate_member(spare);
++			if (member) {
++				// This will add the member and update the MD superblock.
++				member->flags |= (MD_MEMBER_NEW | MD_MEMBER_DISK_SPARE);
++				member->data_size = size;
++				rc = md_volume_add_new_member(volume, member);
++				if (rc) {
++					md_free_member(member);
++					goto error_free;
++				}
++			} else {
++				rc = ENOMEM;
++			}
++			if (rc) {
++				goto error_free;
++			}
+ 		}
+ 	}
+ 
+@@ -3542,11 +3576,11 @@
+ 		// Version 1 Superblock Option
+ 		if (md_can_create_sb_1() == TRUE) {
+ 			context->option_descriptors->option[RAID5_CREATE_OPT_SB1_INDEX].flags = 0;
+-			context->min_selected_objects = RAID5_MIN_RAID_DISKS;
++			context->min_selected_objects = RAID5_MIN_RAID_DISKS - 1;
+ 			context->max_selected_objects = MD_SB_1_DISKS;
+ 		} else {
+ 			context->option_descriptors->option[RAID5_CREATE_OPT_SB1_INDEX].flags = EVMS_OPTION_FLAGS_INACTIVE;
+-			context->min_selected_objects = RAID5_MIN_RAID_DISKS;
++			context->min_selected_objects = RAID5_MIN_RAID_DISKS - 1;
+ 			context->max_selected_objects = MD_SB_DISKS;
+ 		}
+ 		context->option_descriptors->option[RAID5_CREATE_OPT_SB1_INDEX].constraint.list = NULL;
+@@ -3561,6 +3595,40 @@
+ 		context->option_descriptors->option[RAID5_CREATE_OPT_SB1_INDEX].unit = EVMS_Unit_None;
+ 		context->option_descriptors->option[RAID5_CREATE_OPT_SB1_INDEX].value.b = FALSE;
+ 
++		/* Degrade option */
++		context->option_descriptors->option[RAID5_CREATE_OPT_DEGRADE_INDEX].flags = EVMS_OPTION_FLAGS_NOT_REQUIRED;
++		context->option_descriptors->option[RAID5_CREATE_OPT_DEGRADE_INDEX].constraint.list = NULL;
++		context->option_descriptors->option[RAID5_CREATE_OPT_DEGRADE_INDEX].constraint_type = EVMS_Collection_None;
++		context->option_descriptors->option[RAID5_CREATE_OPT_DEGRADE_INDEX].help = NULL;
++		context->option_descriptors->option[RAID5_CREATE_OPT_DEGRADE_INDEX].name =
++			EngFncs->engine_strdup( RAID5_CREATE_OPT_DEGRADE_NAME );
++		context->option_descriptors->option[RAID5_CREATE_OPT_DEGRADE_INDEX].tip =
++			EngFncs->engine_strdup( _("Choose Yes if you want to create a degraded array.") );
++		context->option_descriptors->option[RAID5_CREATE_OPT_DEGRADE_INDEX].title =
++			EngFncs->engine_strdup( _("Degraded array") );
++		context->option_descriptors->option[RAID5_CREATE_OPT_DEGRADE_INDEX].type = EVMS_Type_Boolean;
++		context->option_descriptors->option[RAID5_CREATE_OPT_DEGRADE_INDEX].unit = EVMS_Unit_None;
++		context->option_descriptors->option[RAID5_CREATE_OPT_DEGRADE_INDEX].value.b = FALSE;
++
++		/* Missing index option */
++		context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].flags = EVMS_OPTION_FLAGS_NOT_REQUIRED | EVMS_OPTION_FLAGS_INACTIVE;
++		context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].constraint.range = 
++			EngFncs->engine_alloc(sizeof(value_range_t));
++		context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].constraint.range->min.ui32 = 0;
++		context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].constraint.range->max.ui32 = 1;
++		context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].constraint.range->increment.ui32 = 1;
++		context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].constraint_type = EVMS_Collection_Range;
++		context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].help = NULL;
++		context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].name = 
++			EngFncs->engine_strdup(RAID5_CREATE_OPT_MISSING_NAME );
++		context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].tip = 
++			EngFncs->engine_strdup(_("Disk index for missing member."));
++		context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].title = 
++			EngFncs->engine_strdup(_("Missing disk index"));
++		context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].type = EVMS_Type_Unsigned_Int32;
++		context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].unit = EVMS_Unit_None;
++		context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].value.ui32 = 0;
++		
+ 		/* Spare disk option */
+ 		context->option_descriptors->option[RAID5_CREATE_OPT_SPARE_DISK_INDEX].flags = EVMS_OPTION_FLAGS_NOT_REQUIRED;
+ 		/* Get the list of disks that can be spares. */
+@@ -3623,7 +3691,7 @@
+ 			LOG_EXIT_INT(ENOMEM);
+ 			return ENOMEM;
+ 		}
+-
++		
+ 		/* Get a list of all valid input disks, segments, and regions. */
+ 		EngFncs->get_object_list(DISK | SEGMENT | REGION,
+ 					 DATA_TYPE,
+@@ -3911,11 +3979,16 @@
+  *  appropriate. Reset the value if necessary and possible. Adjust other
+  *  options as appropriate.
+  */
+-static int raid5_set_option( task_context_t * context,
+-			     u_int32_t        index,
+-			     value_t        * value,
+-			     task_effect_t  * effect ) {
++static int raid5_set_option(
++	task_context_t * context,
++	u_int32_t index,
++	value_t * value,
++	task_effect_t  * effect )
++{
+ 	int rc = 0;
++	boolean degrade;
++	int answer;
++	char * choice_text[3] = { _("Yes"), _("No"), NULL };
+ 
+ 	my_plugin = raid5_plugin;
+ 	LOG_ENTRY();
+@@ -3938,7 +4011,41 @@
+ 				context->max_selected_objects = MD_SB_DISKS;
+ 			}
+ 			break;
+-		
++
++		case RAID5_CREATE_OPT_DEGRADE_INDEX:
++			if (value->b != context->option_descriptors->option[index].value.b) {
++				degrade = FALSE;
++				if (value->b == TRUE) {
++					answer = 1; /* index 1 is "No" */
++					QUESTION(&answer, choice_text, _("Do you really want to create a degraded array?"));
++					if (answer == 0) {
++						/* index 0 is "Yes" */
++						degrade = TRUE;
++					}
++				}
++				context->option_descriptors->option[index].value.b = degrade;
++				if (degrade) {
++					context->option_descriptors->option[RAID5_CREATE_OPT_SPARE_DISK_INDEX].flags |= (EVMS_OPTION_FLAGS_INACTIVE);
++					strcpy(context->option_descriptors->option[RAID5_CREATE_OPT_SPARE_DISK_INDEX].value.s, "");
++					context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].flags &= ~(EVMS_OPTION_FLAGS_INACTIVE);
++					context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].constraint.range->max.ui32 = EngFncs->list_count(context->selected_objects);
++				} else {
++					context->option_descriptors->option[RAID5_CREATE_OPT_SPARE_DISK_INDEX].flags &= ~(EVMS_OPTION_FLAGS_INACTIVE);
++					context->option_descriptors->option[RAID5_CREATE_OPT_MISSING_INDEX].flags |= (EVMS_OPTION_FLAGS_INACTIVE);
++				}
++				*effect |= EVMS_Effect_Reload_Options;
++			}
++			break;
++
++		case RAID5_CREATE_OPT_MISSING_INDEX:
++			/* Verify that the index is within range? */
++			if (value->ui32 > EngFncs->list_count(context->selected_objects)) {
++				rc = EINVAL;
++			} else {
++				context->option_descriptors->option[index].value.ui32 = value->ui32;
++			}
++			break;
++
+ 		case RAID5_CREATE_OPT_SPARE_DISK_INDEX:
+ 			/*
+ 			 * Not worth validation, will catch when we try to find
+@@ -4005,7 +4112,6 @@
+ 			} else {
+ 				rc = EINVAL;
+ 			}
+-
+ 			break;
+ 
+ 		default:
+
+--- evms-2.5.4a/plugins/md/raid5_mgr.h	20 Jan 2005 15:09:53 -0000
++++ evms-2.5.4b/plugins/md/raid5_mgr.h	2 Dec 2005 18:46:57 -0000
+@@ -100,17 +100,21 @@
+ 
+ #define RAID5_CREATE_OPT_SB1_INDEX              0
+ #define RAID5_CREATE_OPT_SB1_NAME               "ver1_superblock"
+-#define RAID5_CREATE_OPT_SPARE_DISK_INDEX       1
++#define RAID5_CREATE_OPT_DEGRADE_INDEX          1
++#define RAID5_CREATE_OPT_DEGRADE_NAME           "degraded"
++#define RAID5_CREATE_OPT_MISSING_INDEX          2
++#define RAID5_CREATE_OPT_MISSING_NAME           "missing_index"
++#define RAID5_CREATE_OPT_SPARE_DISK_INDEX       3
+ #define RAID5_CREATE_OPT_SPARE_DISK_NAME        "sparedisk"
+-#define RAID5_CREATE_OPT_CHUNK_SIZE_INDEX       2
++#define RAID5_CREATE_OPT_CHUNK_SIZE_INDEX       4
+ #define RAID5_CREATE_OPT_CHUNK_SIZE_NAME        "chunksize"
+-#define RAID5_CREATE_OPT_RAID_LEVEL_INDEX       3
++#define RAID5_CREATE_OPT_RAID_LEVEL_INDEX       5
+ #define RAID5_CREATE_OPT_RAID_LEVEL_NAME        "level"
+-#define RAID5_CREATE_OPT_PARITY_ALGORITHM_INDEX 4
++#define RAID5_CREATE_OPT_PARITY_ALGORITHM_INDEX 6
+ #define RAID5_CREATE_OPT_PARITY_ALGORITHM_NAME  "algorithm"
+ #define RAID5_CREATE_NO_SELECTION               _("None")
+ 
+-#define MD_CREATE_OPTIONS_COUNT			5
++#define MD_CREATE_OPTIONS_COUNT			7
+ 
+ 
+ /*
+
+--- evms-2.5.4a/plugins/md/md_info.h	11 Feb 2005 04:13:16 -0000
++++ evms-2.5.4b/plugins/md/md_info.h	2 Dec 2005 18:46:57 -0000
+@@ -27,8 +27,7 @@
+ #define NUM_SUPER_INFO_ENTRIES 24
+ 
+ #define MD_SUPER_INFO_CLEAN (1<<0)
+-#define MD_SUPER_INFO_DIRTY (1<<1)
+-#define MD_SUPER_INFO_ERRORS (1<<2)
++#define MD_SUPER_INFO_ERRORS (1<<1)
+ 
+ typedef struct md_super_info {
+ 	u_int32_t md_magic;
+
+--- evms-2.5.4a/plugins/md/md_super.c	28 Nov 2005 14:29:46 -0000
++++ evms-2.5.4b/plugins/md/md_super.c	2 Dec 2005 18:46:57 -0000
+@@ -334,8 +334,6 @@
+ 		info->state_flags = MD_SUPER_INFO_ERRORS;
+ 	} else if ((sb->state & (1<<MD_SB_CLEAN))) {
+ 		info->state_flags = MD_SUPER_INFO_CLEAN;
+-	} else {
+-		info->state_flags = MD_SUPER_INFO_DIRTY;
+ 	}
+ 	info->sb_csum = sb->sb_csum;
+ 	info->layout = sb->layout;
+@@ -363,6 +361,14 @@
+ 	sb->working_disks = info->working_disks;
+ 	sb->failed_disks = info->failed_disks;
+ 	sb->spare_disks = info->spare_disks;
++	if (info->state_flags & MD_SUPER_INFO_CLEAN) {
++		sb->state |= (1<<MD_SB_CLEAN);
++	} else {
++		sb->state &= ~(1<<MD_SB_CLEAN);
++	}
++	if (info->state_flags & MD_SUPER_INFO_ERRORS) {
++		sb->state |= (1<<MD_SB_ERRORS);
++	}
+ 	LOG_WARNING("Superblock disk counts have been changed,"
+ 		    " nr_disks(%03d) raid_disks(%03d) active_disks(%03d)"
+ 		    " working_disks(%03d) failed_disks(%03d) spare_disks(%03d).\n",
+@@ -1063,9 +1069,9 @@
+ 
+ 	if (!rc) {
+ 		disk = &master_sb->disks[member->dev_number];
+-		disk->state = MD_DISK_FAULTY;
++		disk->state = 1<<MD_DISK_FAULTY;
+ 		if (mark_removed == TRUE) {
+-			disk->state |= MD_DISK_REMOVED;
++			disk->state |= (1<<MD_DISK_REMOVED);
+ 		}
+ 		if (master_sb->this_disk.number == disk->number) {
+ 			master_sb->this_disk.state = disk->state;
+@@ -1076,6 +1082,32 @@
+ 	return rc;
+ }
+ 
++static int sb0_mark_disk_missing(md_volume_t *vol, int dev_number)
++{
++	mdp_super_t *master_sb;
++	mdp_disk_t *disk;
++	int rc = 0;
++
++	LOG_ENTRY();
++	
++	if (!vol || !vol->sb) {
++		LOG_MD_BUG();
++		rc = EINVAL;
++		goto out;
++	}
++	
++	master_sb = (mdp_super_t *)vol->sb;
++	disk = &master_sb->disks[dev_number];
++	disk->state = (1<<MD_DISK_FAULTY) | (1<<MD_DISK_REMOVED);
++	if (master_sb->this_disk.number == dev_number) {
++		master_sb->this_disk.state = disk->state;
++	}
++
++out:
++	LOG_EXIT_INT(rc);
++	return rc;
++}
++
+ static void sb0_increment_events(void *super)
+ {
+ 	mdp_super_t *sb = (mdp_super_t *)super;
+@@ -1343,6 +1375,7 @@
+ 	init_sb : sb0_init_sb,
+ 	load_this_device_info : sb0_load_this_device_info,
+ 	mark_disk_faulty : sb0_mark_disk_faulty,
++	mark_disk_missing : sb0_mark_disk_missing,
+ 	max_disks : sb0_max_disks,
+ 	read_saved_info : sb0_read_saved_info,
+ 	remove_disk : sb0_remove_disk,
+@@ -2114,6 +2147,25 @@
+ 	return rc;
+ }
+ 
++static int sb1_mark_disk_missing(md_volume_t *vol, int dev_number)
++{
++	mdp_sb_1_t *master_sb;
++	int rc = 0;
++
++	LOG_ENTRY();
++	
++	if (!vol || !vol->sb) {
++		LOG_MD_BUG();
++		rc = EINVAL;
++		goto out;
++	}
++	master_sb = (mdp_sb_1_t *)vol->sb;
++	master_sb->dev_roles[dev_number] = 0xFFFE;
++out:
++	LOG_EXIT_INT(rc);
++	return rc;
++}
++
+ static void sb1_set_utime(void *super)
+ {
+ 	mdp_sb_1_t *sb = (mdp_sb_1_t *)super;
+@@ -2606,6 +2658,7 @@
+ 	init_sb : sb1_init_sb,
+ 	load_this_device_info : sb1_load_this_device_info,
+ 	mark_disk_faulty : sb1_mark_disk_faulty,
++	mark_disk_missing : sb1_mark_disk_missing,
+ 	max_disks : sb1_max_disks,
+ 	read_saved_info : sb1_read_saved_info,
+ 	remove_disk : sb1_remove_disk,
+@@ -2749,6 +2802,74 @@
+ }
+ 
+ /*
++ * md_volume_add_new_missing
++ * - This function appends a missing disk entry at the current position (nr_disks)
++ * - To create a degraded array with a missing entry at any position, the caller
++ * must coordinate.  For example, to create a [disk1, missing, disk2] raid5 array,
++ * the raid5 plugin should do:
++ *    md_volume_add_new_member(vol, disk1)
++ *    md_volume_add_new_missing(vol)
++ *    md_volume_add_new_member(vol, disk2)
++ */
++int md_volume_add_new_missing(md_volume_t *vol)
++{
++	int rc = 0;
++	int rc2;
++	md_member_t *my_member;
++	list_element_t iter;
++	md_super_info_t info;
++
++	LOG_ENTRY();
++
++	if (!vol || !vol->sb_func) {
++		LOG_MD_BUG();
++		rc = EINVAL;
++		goto out;
++	}
++
++	/* Get current superblock */
++	md_volume_get_super_info(vol, &info);
++	info.nr_disks++;
++	info.raid_disks++;
++	info.failed_disks++;
++	info.state_flags = MD_SUPER_INFO_CLEAN;
++	vol->sb_func->set_sb_info(vol->sb, &info);
++	vol->sb_func->mark_disk_missing(vol, info.nr_disks-1);
++	
++	/* Free all existing superblocks, then re-create from the master */
++	LIST_FOR_EACH(vol->members, iter, my_member) {
++		if (my_member->sb) {
++			EngFncs->engine_free(my_member->sb);
++			my_member->sb = NULL;
++		}
++		rc2 = vol->sb_func->duplicate_sb(&my_member->sb, vol->sb);
++		if (!rc2) {
++			vol->sb_func->set_this_device_info(my_member);
++		} else if (!rc) {
++			rc = rc2; //Save and return the first error (if any)
++		}
++	}
++
++	md_volume_get_super_info(vol, &info);
++	vol->nr_disks = info.nr_disks;
++	vol->raid_disks = info.raid_disks;
++	vol->active_disks = info.active_disks;
++	vol->spare_disks = info.spare_disks;
++	vol->working_disks = info.working_disks;
++	vol->failed_disks = info.failed_disks;
++	vol->flags |= MD_DEGRADED;
++	
++	LOG_DEBUG("MD region %s: nr_disks(%d) raid_disks(%d) active_disks(%d)"
++		  " spare_disks(%d) working_disks(%d) failed_disks(%d).\n",
++		  vol->name, vol->nr_disks, vol->raid_disks, vol->active_disks,
++		  vol->spare_disks, vol->working_disks, vol->failed_disks);
++
++out:
++	LOG_EXIT_INT(rc);
++	return rc;
++}
++
++/*
+  * md_write_sbs_to_disk
+  *
+  * Write superblocks for all members of the array.
+
+--- evms-2.5.4a/plugins/md/raid1_mgr.h	17 Jan 2005 05:50:23 -0000
++++ evms-2.5.4b/plugins/md/raid1_mgr.h	2 Dec 2005 18:46:57 -0000
+@@ -24,12 +24,16 @@
+ 
+ 
+ // create options:
+-#define RAID1_CREATE_OPTION_COUNT	2
++#define RAID1_CREATE_OPT_COUNT	4
+ 
+-#define RAID1_CREATE_OPTION_SB1_INDEX	0
+-#define RAID1_CREATE_OPTION_SB1_NAME	"ver1_superblock"
+-#define RAID1_OPTION_SPARE_DISK_INDEX  	1
+-#define RAID1_OPTION_SPARE_DISK_NAME	"sparedisk"
++#define RAID1_CREATE_OPT_SB1_INDEX	0
++#define RAID1_CREATE_OPT_SB1_NAME	"ver1_superblock"
++#define RAID1_CREATE_OPT_DEGRADE_INDEX 1
++#define RAID1_CREATE_OPT_DEGRADE_NAME "degraded"
++#define RAID1_CREATE_OPT_MISSING_INDEX 2
++#define RAID1_CREATE_OPT_MISSING_NAME "missing_index"
++#define RAID1_OPT_SPARE_DISK_INDEX  	3
++#define RAID1_OPT_SPARE_DISK_NAME	"sparedisk"
+ #define RAID1_NO_SELECTION		_("None")
+ 
+ 
+@@ -38,20 +42,20 @@
+ //
+ // Expand Option Info
+ //
+-#define RAID1_EXPAND_OPTION_COUNT                     1
++#define RAID1_EXPAND_OPT_COUNT                     1
+ 
+-#define RAID1_EXPAND_OPTION_SIZE_INDEX                0
+-#define RAID1_EXPAND_OPTION_SIZE_NAME                 "Size"
++#define RAID1_EXPAND_OPT_SIZE_INDEX                0
++#define RAID1_EXPAND_OPT_SIZE_NAME                 "Size"
+ #define RAID1_MINIMUM_EXPAND_SIZE			(2 * 1024)
+ 
+ 
+ //
+ // Shrink Option Info
+ //
+-#define RAID1_SHRINK_OPTION_COUNT                     1
++#define RAID1_SHRINK_OPT_COUNT                     1
+ 
+-#define RAID1_SHRINK_OPTION_SIZE_INDEX                0
+-#define RAID1_SHRINK_OPTION_SIZE_NAME                 "Size"
++#define RAID1_SHRINK_OPT_SIZE_INDEX                0
++#define RAID1_SHRINK_OPT_SIZE_NAME                 "Size"
+ #define RAID1_MINIMUM_SHRINK_SIZE			(2 * 1024)
+ #define RAID1_PERCENT_SHRINK_THRESHOLD		90
+ 
+
+--- evms-2.5.4a/plugins/md/raid1_mgr.c	28 Nov 2005 14:29:46 -0000
++++ evms-2.5.4b/plugins/md/raid1_mgr.c	2 Dec 2005 18:46:57 -0000
+@@ -290,28 +290,28 @@
+ 				rc = raid1_can_children_expand(region, -1, &max_expand_size);
+ 				if (!rc) {
+ 
+-					context->option_descriptors->count = RAID1_EXPAND_OPTION_COUNT;
++					context->option_descriptors->count = RAID1_EXPAND_OPT_COUNT;
+ 
+ 					// Expanded RAID1 region size delta
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].constraint.list = NULL;
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].constraint.range = EngFncs->engine_alloc( sizeof(value_range_t) );
+-					if (context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].constraint.range==NULL) {
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].constraint.list = NULL;
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].constraint.range = EngFncs->engine_alloc( sizeof(value_range_t) );
++					if (context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].constraint.range==NULL) {
+ 						LOG_EXIT_INT(ENOMEM);
+ 						return ENOMEM;
+ 					}
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].constraint_type = EVMS_Collection_Range;
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].flags = 0;
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].help = NULL;
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].name = EngFncs->engine_strdup( RAID1_EXPAND_OPTION_SIZE_NAME );
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].tip =
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].constraint_type = EVMS_Collection_Range;
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].flags = 0;
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].help = NULL;
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].name = EngFncs->engine_strdup( RAID1_EXPAND_OPT_SIZE_NAME );
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].tip =
+ 						EngFncs->engine_strdup( _("Use this option to specify how much space to add to the region.") );
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].title = EngFncs->engine_strdup( _("Additional Size") );
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].type = EVMS_Type_Unsigned_Int64;
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].unit = EVMS_Unit_Sectors;
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].constraint.range->min.ui64 = RAID1_MINIMUM_EXPAND_SIZE;
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].constraint.range->max.ui64 = max_expand_size;
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].constraint.range->increment.ui64 = 1;
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].value.ui64 = max_expand_size;
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].title = EngFncs->engine_strdup( _("Additional Size") );
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].type = EVMS_Type_Unsigned_Int64;
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].unit = EVMS_Unit_Sectors;
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].constraint.range->min.ui64 = RAID1_MINIMUM_EXPAND_SIZE;
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].constraint.range->max.ui64 = max_expand_size;
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].constraint.range->increment.ui64 = 1;
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].value.ui64 = max_expand_size;
+ 
+ 				}
+ 			}
+@@ -347,28 +347,28 @@
+ 				rc = raid1_can_children_shrink(region, -1, &max_shrink_size);
+ 				if (!rc) {
+ 
+-					context->option_descriptors->count = RAID1_SHRINK_OPTION_COUNT;
++					context->option_descriptors->count = RAID1_SHRINK_OPT_COUNT;
+ 
+ 					// Expanded RAID1 region size delta
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].constraint.list = NULL;
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].constraint.range = EngFncs->engine_alloc( sizeof(value_range_t) );
+-					if (context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].constraint.range==NULL) {
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].constraint.list = NULL;
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].constraint.range = EngFncs->engine_alloc( sizeof(value_range_t) );
++					if (context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].constraint.range==NULL) {
+ 						LOG_EXIT_INT(ENOMEM);
+ 						return ENOMEM;
+ 					}
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].constraint_type = EVMS_Collection_Range;
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].flags = 0;
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].help = NULL;
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].name = EngFncs->engine_strdup( RAID1_SHRINK_OPTION_SIZE_NAME );
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].tip =
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].constraint_type = EVMS_Collection_Range;
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].flags = 0;
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].help = NULL;
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].name = EngFncs->engine_strdup( RAID1_SHRINK_OPT_SIZE_NAME );
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].tip =
+ 						EngFncs->engine_strdup( _("Use this option to specify how much space to reduce from the region.") );
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].title = EngFncs->engine_strdup( _("Shrink by Size") );
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].type = EVMS_Type_Unsigned_Int64;
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].unit = EVMS_Unit_Sectors;
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].constraint.range->min.ui64 = RAID1_MINIMUM_SHRINK_SIZE;
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].constraint.range->max.ui64 = max_shrink_size;
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].constraint.range->increment.ui64 = 1;
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].value.ui64 = max_shrink_size;
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].title = EngFncs->engine_strdup( _("Shrink by Size") );
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].type = EVMS_Type_Unsigned_Int64;
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].unit = EVMS_Unit_Sectors;
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].constraint.range->min.ui64 = RAID1_MINIMUM_SHRINK_SIZE;
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].constraint.range->max.ui64 = max_shrink_size;
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].constraint.range->increment.ui64 = 1;
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].value.ui64 = max_shrink_size;
+ 
+ 				}
+ 			}
+@@ -414,9 +414,9 @@
+ 						expand_sectors = RAID1_MINIMUM_EXPAND_SIZE;
+ 						*effect |= EVMS_Effect_Inexact;
+ 					}
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].constraint.range->min.ui64 = RAID1_MINIMUM_EXPAND_SIZE;
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].constraint.range->max.ui64 = max_expand_size;
+-					context->option_descriptors->option[RAID1_EXPAND_OPTION_SIZE_INDEX].value.ui64 = expand_sectors;
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].constraint.range->min.ui64 = RAID1_MINIMUM_EXPAND_SIZE;
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].constraint.range->max.ui64 = max_expand_size;
++					context->option_descriptors->option[RAID1_EXPAND_OPT_SIZE_INDEX].value.ui64 = expand_sectors;
+ 				}
+ 			}
+ 		}
+@@ -461,9 +461,9 @@
+ 						shrink_sectors = RAID1_MINIMUM_SHRINK_SIZE;
+ 						*effect |= EVMS_Effect_Inexact;
+ 					}
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].constraint.range->min.ui64 = RAID1_MINIMUM_SHRINK_SIZE;
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].constraint.range->max.ui64 = max_shrink_size;
+-					context->option_descriptors->option[RAID1_SHRINK_OPTION_SIZE_INDEX].value.ui64 = shrink_sectors;
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].constraint.range->min.ui64 = RAID1_MINIMUM_SHRINK_SIZE;
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].constraint.range->max.ui64 = max_shrink_size;
++					context->option_descriptors->option[RAID1_SHRINK_OPT_SIZE_INDEX].value.ui64 = shrink_sectors;
+ 				}
+ 			}
+ 		}
+@@ -483,14 +483,14 @@
+ 
+         if (options->option[i].is_number_based) {
+ 
+-            if (options->option[i].number == RAID1_EXPAND_OPTION_SIZE_INDEX) {
++            if (options->option[i].number == RAID1_EXPAND_OPT_SIZE_INDEX) {
+                 *size = options->option[i].value.ui64;
+             }
+ 
+         }
+         else {
+ 
+-            if (strcmp(options->option[i].name, RAID1_EXPAND_OPTION_SIZE_NAME) == 0) {
++            if (strcmp(options->option[i].name, RAID1_EXPAND_OPT_SIZE_NAME) == 0) {
+                 *size = options->option[i].value.ui64;
+             }
+ 
+@@ -511,14 +511,14 @@
+ 
+         if (options->option[i].is_number_based) {
+ 
+-            if (options->option[i].number == RAID1_SHRINK_OPTION_SIZE_INDEX) {
++            if (options->option[i].number == RAID1_SHRINK_OPT_SIZE_INDEX) {
+                 *size = options->option[i].value.ui64;
+             }
+ 
+         }
+         else {
+ 
+-            if (strcmp(options->option[i].name, RAID1_SHRINK_OPTION_SIZE_NAME) == 0) {
++            if (strcmp(options->option[i].name, RAID1_SHRINK_OPT_SIZE_NAME) == 0) {
+                 *size = options->option[i].value.ui64;
+             }
+ 
+@@ -1008,7 +1008,10 @@
+ static int raid1_get_create_options(
+ 	option_array_t * options,
+ 	char ** spare_disk,
+-	md_sb_ver_t *sb_ver)
++	md_sb_ver_t *sb_ver,
++	boolean * degrade,
++	int * missing_index)
++	
+ {
+ 	int i;
+ 	int rc = 0;
+@@ -1022,11 +1025,18 @@
+ 
+ 			switch (options->option[i].number) {
+ 			
+-			case RAID1_CREATE_OPTION_SB1_INDEX:
++			case RAID1_CREATE_OPT_SB1_INDEX:
+ 				ver1_superblock = options->option[i].value.b;
+ 				break;
++			case RAID1_CREATE_OPT_DEGRADE_INDEX:
++				*degrade = options->option[i].value.b;
++				break;
++
++			case RAID1_CREATE_OPT_MISSING_INDEX:
++				*missing_index = options->option[i].value.ui32;
++				break;
+ 			
+-			case RAID1_OPTION_SPARE_DISK_INDEX:
++			case RAID1_OPT_SPARE_DISK_INDEX:
+ 				// Not worth validation, will catch when we try to find the original
+ 				*spare_disk = options->option[i].value.s;
+ 				break;
+@@ -1037,9 +1047,13 @@
+ 
+ 		} else {
+ 
+-			if (strcmp(options->option[i].name, RAID1_OPTION_SPARE_DISK_NAME) == 0) {
++			if (strcmp(options->option[i].name, RAID1_OPT_SPARE_DISK_NAME) == 0) {
+ 				*spare_disk = options->option[i].value.s;
+-			} else if ((strcmp(options->option[i].name, RAID1_CREATE_OPTION_SB1_NAME) == 0) ) {
++			} else if (strcmp(options->option[i].name, RAID1_CREATE_OPT_DEGRADE_NAME) == 0) {
++				*degrade = options->option[i].value.b;
++			}  else if (strcmp(options->option[i].name, RAID1_CREATE_OPT_MISSING_NAME) == 0) {
++				*missing_index = options->option[i].value.ui32;
++			} else if ((strcmp(options->option[i].name, RAID1_CREATE_OPT_SB1_NAME) == 0) ) {
+ 				ver1_superblock = options->option[i].value.b;
+ 			}
+ 		}
+@@ -1114,6 +1128,9 @@
+ 	list_element_t iter1, iter2;
+ 	md_sb_ver_t sb_ver = {MD_SB_VER_0, 90, 0};
+ 	md_member_t *member;
++	boolean degrade = FALSE;
++	int missing_index;
++	boolean missing_added = FALSE;	
+ 	int rc = 0;
+ 
+ 	my_plugin = raid1_plugin;
+@@ -1142,7 +1159,7 @@
+ 		goto error_free;
+ 	}
+ 
+-	raid1_get_create_options(options, &spare_disk, &sb_ver);
++	raid1_get_create_options(options, &spare_disk, &sb_ver, &degrade, &missing_index);
+ 
+ 	LIST_FOR_EACH(objects, iter1, object) {
+ 		size = min(size, md_object_usable_size(object, &sb_ver, 0));
+@@ -1162,6 +1179,10 @@
+ 
+ 	// Add raid members
+ 	LIST_FOR_EACH_SAFE(objects, iter1, iter2, object) {
++		if (degrade && !missing_added && (missing_index == volume->nr_disks)) {
++			rc = md_volume_add_new_missing(volume);
++			missing_added = TRUE;
++		}		
+ 		member = md_allocate_member(object);
+ 		if (member) {
+ 			// This will add the member and update the MD superblock.
+@@ -1181,26 +1202,35 @@
+ 		EngFncs->delete_element(iter1);
+ 	}
+ 
+-	// Add spare member
+-	if (spare) {
+-		member = md_allocate_member(spare);
+-		if (member) {
+-			// This will add the member and update the MD superblock.
+-			member->flags |= (MD_MEMBER_NEW | MD_MEMBER_DISK_SPARE);
+-			member->data_size = size;
+-			rc = md_volume_add_new_member(volume, member);
++	if (degrade) {
++		if (!missing_added) {
++			rc = md_volume_add_new_missing(volume);
++			missing_added = TRUE;
+ 			if (rc) {
+-				md_free_member(member);
+ 				goto error_free;
+-			}
+-		} else {
+-			rc = ENOMEM;
++			}		
+ 		}
+-		if (rc) {
+-			goto error_free;
++	} else {
++		// Add spare member
++		if (spare) {
++			member = md_allocate_member(spare);
++			if (member) {
++				// This will add the member and update the MD superblock.
++				member->flags |= (MD_MEMBER_NEW | MD_MEMBER_DISK_SPARE);
++				member->data_size = size;
++				rc = md_volume_add_new_member(volume, member);
++				if (rc) {
++					md_free_member(member);
++					goto error_free;
++				}
++			} else {
++				rc = ENOMEM;
++			}
++			if (rc) {
++				goto error_free;
++			}
+ 		}
+ 	}
+-
+ 	rc = raid1_create_new_region(volume, new_region_list);
+ 	if (rc) {
+ 		goto error_free;
+@@ -1303,7 +1333,7 @@
+ 
+ 	option_array.count = 1;
+ 	option_array.option[0].is_number_based = FALSE;
+-	option_array.option[0].name = RAID1_EXPAND_OPTION_SIZE_NAME;
++	option_array.option[0].name = RAID1_EXPAND_OPT_SIZE_NAME;
+ 	option_array.option[0].value.ui64 = sectors;
+ 
+ 	LOG_DEBUG(" %s region %s. current size = %"PRIu64" sectors\n",
+@@ -1683,13 +1713,13 @@
+ 
+ 	switch (task->action) {
+ 	case EVMS_Task_Create:
+-		count = RAID1_CREATE_OPTION_COUNT;
++		count = RAID1_CREATE_OPT_COUNT;
+ 		break;
+ 	case EVMS_Task_Expand:
+-		count = RAID1_EXPAND_OPTION_COUNT;
++		count = RAID1_EXPAND_OPT_COUNT;
+ 		break;
+ 	case EVMS_Task_Shrink:
+-		count = RAID1_SHRINK_OPTION_COUNT;
++		count = RAID1_SHRINK_OPT_COUNT;
+ 		break;
+ 	
+ 	case MD_RAID1_FUNCTION_ADD_SPARE:
+@@ -1936,51 +1966,85 @@
+ 	
+ 	case EVMS_Task_Create:
+ 
+-		context->option_descriptors->count = RAID1_CREATE_OPTION_COUNT;
++		context->option_descriptors->count = RAID1_CREATE_OPT_COUNT;
+ 
+ 		// Version 1 Superblock Option
+ 		if (md_can_create_sb_1() == TRUE) {
+-			context->option_descriptors->option[RAID1_CREATE_OPTION_SB1_INDEX].flags = 0;
++			context->option_descriptors->option[RAID1_CREATE_OPT_SB1_INDEX].flags = 0;
+ 			context->min_selected_objects = 1;
+ 			context->max_selected_objects = MD_SB_1_DISKS;
+ 		} else {
+-			context->option_descriptors->option[RAID1_CREATE_OPTION_SB1_INDEX].flags = EVMS_OPTION_FLAGS_INACTIVE;
++			context->option_descriptors->option[RAID1_CREATE_OPT_SB1_INDEX].flags = EVMS_OPTION_FLAGS_INACTIVE;
+ 			context->min_selected_objects = 1;
+ 			context->max_selected_objects = MD_SB_DISKS;
+ 		}
+-		context->option_descriptors->option[RAID1_CREATE_OPTION_SB1_INDEX].constraint.list = NULL;
+-		context->option_descriptors->option[RAID1_CREATE_OPTION_SB1_INDEX].constraint_type = EVMS_Collection_None;
+-		context->option_descriptors->option[RAID1_CREATE_OPTION_SB1_INDEX].help = NULL;
+-		context->option_descriptors->option[RAID1_CREATE_OPTION_SB1_INDEX].name =
+-			EngFncs->engine_strdup( RAID1_CREATE_OPTION_SB1_NAME );
+-		context->option_descriptors->option[RAID1_CREATE_OPTION_SB1_INDEX].tip =
++		context->option_descriptors->option[RAID1_CREATE_OPT_SB1_INDEX].constraint.list = NULL;
++		context->option_descriptors->option[RAID1_CREATE_OPT_SB1_INDEX].constraint_type = EVMS_Collection_None;
++		context->option_descriptors->option[RAID1_CREATE_OPT_SB1_INDEX].help = NULL;
++		context->option_descriptors->option[RAID1_CREATE_OPT_SB1_INDEX].name =
++			EngFncs->engine_strdup( RAID1_CREATE_OPT_SB1_NAME );
++		context->option_descriptors->option[RAID1_CREATE_OPT_SB1_INDEX].tip =
+ 			EngFncs->engine_strdup( _("Choose Yes if you want to create MD version 1 super block.") );
+-		context->option_descriptors->option[RAID1_CREATE_OPTION_SB1_INDEX].title = EngFncs->engine_strdup( _("Version 1 Super Block") );
+-		context->option_descriptors->option[RAID1_CREATE_OPTION_SB1_INDEX].type = EVMS_Type_Boolean;
+-		context->option_descriptors->option[RAID1_CREATE_OPTION_SB1_INDEX].unit = EVMS_Unit_None;
+-		context->option_descriptors->option[RAID1_CREATE_OPTION_SB1_INDEX].value.b = FALSE;
++		context->option_descriptors->option[RAID1_CREATE_OPT_SB1_INDEX].title = EngFncs->engine_strdup( _("Version 1 Super Block") );
++		context->option_descriptors->option[RAID1_CREATE_OPT_SB1_INDEX].type = EVMS_Type_Boolean;
++		context->option_descriptors->option[RAID1_CREATE_OPT_SB1_INDEX].unit = EVMS_Unit_None;
++		context->option_descriptors->option[RAID1_CREATE_OPT_SB1_INDEX].value.b = FALSE;
++
++		/* Degrade option */
++		context->option_descriptors->option[RAID1_CREATE_OPT_DEGRADE_INDEX].flags = EVMS_OPTION_FLAGS_NOT_REQUIRED;
++		context->option_descriptors->option[RAID1_CREATE_OPT_DEGRADE_INDEX].constraint.list = NULL;
++		context->option_descriptors->option[RAID1_CREATE_OPT_DEGRADE_INDEX].constraint_type = EVMS_Collection_None;
++		context->option_descriptors->option[RAID1_CREATE_OPT_DEGRADE_INDEX].help = NULL;
++		context->option_descriptors->option[RAID1_CREATE_OPT_DEGRADE_INDEX].name =
++			EngFncs->engine_strdup( RAID1_CREATE_OPT_DEGRADE_NAME );
++		context->option_descriptors->option[RAID1_CREATE_OPT_DEGRADE_INDEX].tip =
++			EngFncs->engine_strdup( _("Choose Yes if you want to create a degraded array.") );
++		context->option_descriptors->option[RAID1_CREATE_OPT_DEGRADE_INDEX].title =
++			EngFncs->engine_strdup( _("Degraded array") );
++		context->option_descriptors->option[RAID1_CREATE_OPT_DEGRADE_INDEX].type = EVMS_Type_Boolean;
++		context->option_descriptors->option[RAID1_CREATE_OPT_DEGRADE_INDEX].unit = EVMS_Unit_None;
++		context->option_descriptors->option[RAID1_CREATE_OPT_DEGRADE_INDEX].value.b = FALSE;
++
++		/* Missing index option */
++		context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].flags = EVMS_OPTION_FLAGS_NOT_REQUIRED | EVMS_OPTION_FLAGS_INACTIVE;
++		context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].constraint.range = 
++			EngFncs->engine_alloc(sizeof(value_range_t));
++		context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].constraint.range->min.ui32 = 0;
++		context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].constraint.range->max.ui32 = 1;
++		context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].constraint.range->increment.ui32 = 1;
++		context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].constraint_type = EVMS_Collection_Range;
++		context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].help = NULL;
++		context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].name = 
++			EngFncs->engine_strdup(RAID1_CREATE_OPT_MISSING_NAME );
++		context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].tip = 
++			EngFncs->engine_strdup(_("Disk index for missing member."));
++		context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].title = 
++			EngFncs->engine_strdup(_("Missing disk index"));
++		context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].type = EVMS_Type_Unsigned_Int32;
++		context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].unit = EVMS_Unit_None;
++		context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].value.ui32 = 0;
+ 
+ 		// Spare Disk Option
+-		context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].flags = EVMS_OPTION_FLAGS_NOT_REQUIRED;
++		context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].flags = EVMS_OPTION_FLAGS_NOT_REQUIRED;
+ 		// get the list of disks that can be spares.
+ 		raid1_create_selectable_spare_list(
+-			(value_list_t **)&context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].constraint.list,
++			(value_list_t **)&context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].constraint.list,
+ 			context->selected_objects,0);
+-		context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].constraint_type = EVMS_Collection_List;
+-		context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].help = NULL;
+-		context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].name =
+-			EngFncs->engine_strdup(RAID1_OPTION_SPARE_DISK_NAME );
+-		context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].min_len = 1;
+-		context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].max_len = EVMS_VOLUME_NAME_SIZE;
+-		context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].tip =
++		context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].constraint_type = EVMS_Collection_List;
++		context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].help = NULL;
++		context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].name =
++			EngFncs->engine_strdup(RAID1_OPT_SPARE_DISK_NAME );
++		context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].min_len = 1;
++		context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].max_len = EVMS_VOLUME_NAME_SIZE;
++		context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].tip =
+ 			EngFncs->engine_strdup(_("Object to use as a spare disk in the array") );
+-		context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].title =
++		context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].title =
+ 			EngFncs->engine_strdup(_("Spare Disk") );
+-		context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].type = EVMS_Type_String;
+-		context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].unit = EVMS_Unit_None;
+-		context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].value.s =
++		context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].type = EVMS_Type_String;
++		context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].unit = EVMS_Unit_None;
++		context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].value.s =
+ 			EngFncs->engine_alloc(EVMS_VOLUME_NAME_SIZE+1);
+-		strcpy(context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].value.s, RAID1_NO_SELECTION);
++		strcpy(context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].value.s, RAID1_NO_SELECTION);
+ 
+ 		// get a list of all valid input  disks, segments, and regions.
+ 		EngFncs->get_object_list(DISK | SEGMENT | REGION,
+@@ -1994,9 +2058,6 @@
+ 		md_transfer_list(tmp_list, context->acceptable_objects);
+ 		EngFncs->destroy_list(tmp_list);
+ 
+-		//Option 1 is a boolean value for version 1 super block
+-
+-
+ 		break;
+ 
+ 	case EVMS_Task_Expand:
+@@ -2156,9 +2217,9 @@
+ 	 * is specified and see if it is the smallest.
+ 	 */
+ 	if (smallest_size != -1) {
+-		if (context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].value.s != NULL) {
++		if (context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].value.s != NULL) {
+ 			spare = md_find_valid_input_object(
+-				context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].value.s);
++				context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].value.s);
+ 
+ 			if (spare != NULL) {
+ 				if (vol) {
+@@ -2244,12 +2305,16 @@
+  *  appropriate. Reset the value if necessary and possible. Adjust other
+  *  options as appropriate.
+  */
+-static int raid1_set_option( task_context_t * context,
+-			     u_int32_t        index,
+-			     value_t        * value,
+-			     task_effect_t  * effect )
++static int raid1_set_option(
++	task_context_t * context,
++	u_int32_t index,
++	value_t * value,
++	task_effect_t * effect )
+ {
+ 	int rc = 0;
++	boolean degrade;
++	int answer;
++	char * choice_text[3] = { _("Yes"), _("No"), NULL };
+ 
+ 	my_plugin = raid1_plugin;
+ 	LOG_ENTRY();
+@@ -2260,14 +2325,12 @@
+ 		return EFAULT;
+ 	}
+ 
+-	
+-
+ 	switch (context->action) {
+ 	
+ 	case EVMS_Task_Create:
+ 		switch (index) {
+ 		
+-		case RAID1_CREATE_OPTION_SB1_INDEX:
++		case RAID1_CREATE_OPT_SB1_INDEX:
+ 			context->option_descriptors->option[index].value.b = value->b;
+ 			if (value->b == TRUE) {
+ 				context->max_selected_objects = MD_SB_1_DISKS;
+@@ -2275,8 +2338,42 @@
+ 				context->max_selected_objects = MD_SB_DISKS;
+ 			}
+ 			break;
++
++		case RAID1_CREATE_OPT_DEGRADE_INDEX:
++			if (value->b != context->option_descriptors->option[index].value.b) {
++				degrade = FALSE;
++				if (value->b == TRUE) {
++					answer = 1; /* index 1 is "No" */
++					QUESTION(&answer, choice_text, _("Do you really want to create a degraded array?"));
++					if (answer == 0) {
++						/* index 0 is "Yes" */
++						degrade = TRUE;
++					}
++				}
++				context->option_descriptors->option[index].value.b = degrade;
++				if (degrade) {
++					context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].flags |= (EVMS_OPTION_FLAGS_INACTIVE);
++					strcpy(context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].value.s, "");
++					context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].flags &= ~(EVMS_OPTION_FLAGS_INACTIVE);
++					context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].constraint.range->max.ui32 = EngFncs->list_count(context->selected_objects);
++				} else {
++					context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].flags &= ~(EVMS_OPTION_FLAGS_INACTIVE);
++					context->option_descriptors->option[RAID1_CREATE_OPT_MISSING_INDEX].flags |= (EVMS_OPTION_FLAGS_INACTIVE);
++				}
++				*effect |= EVMS_Effect_Reload_Options;
++			}
++			break;
++
++		case RAID1_CREATE_OPT_MISSING_INDEX:
++			/* Verify that the index is within range? */
++			if (value->ui32 > EngFncs->list_count(context->selected_objects)) {
++				rc = EINVAL;
++			} else {
++				context->option_descriptors->option[index].value.ui32 = value->ui32;
++			}
++			break;
+ 		
+-		case RAID1_OPTION_SPARE_DISK_INDEX:
++		case RAID1_OPT_SPARE_DISK_INDEX:
+ 			// Not worth validation, will catch when we try to find the original
+ 			strcpy(context->option_descriptors->option[index].value.s, value->s);
+ 			warn_if_big_objects(context);
+@@ -2333,7 +2430,7 @@
+ 	
+ 	case EVMS_Task_Create:
+ 		raid1_create_selectable_spare_list(
+-			(value_list_t **)&context->option_descriptors->option[RAID1_OPTION_SPARE_DISK_INDEX].constraint.list,
++			(value_list_t **)&context->option_descriptors->option[RAID1_OPT_SPARE_DISK_INDEX].constraint.list,
+ 			context->selected_objects, 0);
+ 		warn_if_big_objects(context);
+ 		*effect |= EVMS_Effect_Reload_Options;
+
+--- evms-2.5.4a/plugins/md/md_super.h	17 Jan 2005 05:50:21 -0000
++++ evms-2.5.4b/plugins/md/md_super.h	2 Dec 2005 18:46:57 -0000
+@@ -352,6 +352,7 @@
+ 		       u_int64_t size, u_int32_t chunk_size);
+ 	void (*load_this_device_info)(md_member_t *member);
+ 	int (*mark_disk_faulty)(md_member_t *member, boolean mark_removed);
++	int (*mark_disk_missing)(md_volume_t *vol, int dev_number);
+ 	int (*max_disks) (void);
+ 	int (*read_saved_info)(md_member_t *member);
+ 	int (*remove_disk)(md_member_t *member, boolean resize);
+@@ -381,6 +382,7 @@
+ 	       u_int64_t size,
+ 	       u_int32_t chunksize );
+ int md_volume_add_new_member(md_volume_t *vol, md_member_t *member);
++int md_volume_add_new_missing(md_volume_t *vol);
+ 
+ //void md_print_sb(char *buf, u_int32_t buf_size, md_volume_t *vol);
+ 
