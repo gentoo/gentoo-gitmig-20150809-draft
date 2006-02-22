@@ -1,7 +1,31 @@
-MD5 05461b7252c56ea8dc083d9d795c9189 ChangeLog 2290
-MD5 32f6d2093707f5c880674d15dbde1ead files/digest-timezone-data-2005r 126
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 77862cabf1ae7320e1253d7b78be71b7 ChangeLog 2451
+RMD160 be56e04f41d8057df6a70db1911e3f14c7e06a2e ChangeLog 2451
+SHA256 dbcd4c4289b0ab50a162dc81190e97f8cde64e745538f11239860ccfb5c73a9d ChangeLog 2451
 MD5 4c2f960c03eccba94f44dcbb468cfd59 files/digest-timezone-data-2006a 126
+RMD160 6efcf4d8a760cf22996c22fc68cca20c788d4a76 files/digest-timezone-data-2006a 126
+SHA256 39c9ea429aae2d3153e84dd4f520d2917c04c0c5012f7161bcdb4cfb538dc889 files/digest-timezone-data-2006a 126
+MD5 4ea3ff149003fd3e011d1f17e9a73723 files/digest-timezone-data-2006b 476
+RMD160 4b8d4f338133a0eef11260fda0e606f7253f50e3 files/digest-timezone-data-2006b 476
+SHA256 c0b3f0197d170438ce5f806b29d6fa251370127e54e963101425f4d3f7cf72de files/digest-timezone-data-2006b 476
 MD5 648febdd6feeaeb8c85323151917d163 files/timezone-data-2005n-makefile.patch 3128
+RMD160 bf2bc8b1044376cf6171f80b75f20c037aa6a964 files/timezone-data-2005n-makefile.patch 3128
+SHA256 aee819f6c89af0c682014c8b6f25bf27057e81b2afa819397c7950119ecf834e files/timezone-data-2005n-makefile.patch 3128
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 88bd0be521c69259911fb2fed50ac902 timezone-data-2005r.ebuild 851
+RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
+SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
 MD5 158d3380b6344d8490b4cc82bf5c0a84 timezone-data-2006a.ebuild 848
+RMD160 171efe0c4798e70d3c3d26259ba2db41a7b4f758 timezone-data-2006a.ebuild 848
+SHA256 7b70ea59c7aeef6ea62ec86f906da7cfbebe31d069d19bda9fcfe603df5e59bb timezone-data-2006a.ebuild 848
+MD5 0d7ea9b5782be247644e967ba11b7874 timezone-data-2006b.ebuild 851
+RMD160 be16564d7f1bced77527d28ce73a43caa434737b timezone-data-2006b.ebuild 851
+SHA256 a1726e383e53991acd707ee743e40653997dc7f94786745830db61f786815e31 timezone-data-2006b.ebuild 851
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD/PBy2+ySkm8kpY0RAmxtAJ45Hxm8G16fZsBQ3HuD9aT1BG5fFwCgvAqz
+wNJPeue+STLOaj7/K7LIa6o=
+=WoPJ
+-----END PGP SIGNATURE-----
