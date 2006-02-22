@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.30 2006/02/07 19:09:40 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.31 2006/02/22 22:11:43 dju Exp $
+
+*trac-0.9.4 (22 Feb 2006)
+
+  22 Feb 2006; Julien Allanos <dju@gentoo.org> +files/0.9.4-postinst-en.txt,
+  +files/tracd.confd, +files/tracd.initd, +trac-0.9.4.ebuild:
+  Version bump. Added an init script for tracd, closing bug #121566.
 
   07 Feb 2006; Julien Allanos <dju@gentoo.org> trac-0.9.3.ebuild:
   Check if subversion was built with USE python. Added contrib/ dir
