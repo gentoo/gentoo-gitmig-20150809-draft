@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/hardware-monitor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.14 2006/02/10 17:27:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.15 2006/02/22 15:10:20 agriffis Exp $
+
+  22 Feb 2006; Aron Griffis <agriffis@gentoo.org>
+  hardware-monitor-1.3.ebuild:
+  Add dep on >=dev-cpp/libgnomecanvasmm-2.6.0, sync dependencies with
+  configure output
 
 *hardware-monitor-1.3 (10 Feb 2006)
 *hardware-monitor-1.2.1 (10 Feb 2006)

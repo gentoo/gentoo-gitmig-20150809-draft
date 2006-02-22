@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f70dfbff6e0ec5d13bdee98ad65a58a1 ChangeLog 2219
-RMD160 cb2d1cd12029d30b5b52a9e7373e0f0066b5f800 ChangeLog 2219
-SHA256 6bd72b9f9d5bc9f981aa559aed50a5a625b42f42728f7012869fcd6256c6286b ChangeLog 2219
+MD5 b9f1a09733675a6fe7b31e2b5198cc44 ChangeLog 2390
+RMD160 0286a213ccec8f8712b7f6c748da9336b17fb3ad ChangeLog 2390
+SHA256 2dd766371935488f81d7dfe0df46c52385a017a2d295fc43149c4e7aa6491f41 ChangeLog 2390
 MD5 03811bc4c3b3cb53501f99ce14bbcad7 files/digest-hardware-monitor-0.7 72
 RMD160 7e2fa2a6c0e56c556c9f79a62f20b15b97bd78fb files/digest-hardware-monitor-0.7 72
 SHA256 fb02367b93a2ac1e68a2408711c9df33a4f5f7bd85e4277bfe4893f64a6e1bd2 files/digest-hardware-monitor-0.7 72
@@ -28,16 +28,16 @@ SHA256 2b3f9a1e01b2f8137feda2125e425aa53e291efdfcf1e7a941646f348549d266 hardware
 MD5 59222103e6c4b3035978cfefeff2c6e7 hardware-monitor-1.2.ebuild 806
 RMD160 d9a485492d6b1b38364db4263720dda348bb0490 hardware-monitor-1.2.ebuild 806
 SHA256 72f93ae40d32b237a710abd9a5334bddb4e363683aa0c8a1aa9b5f9482762e78 hardware-monitor-1.2.ebuild 806
-MD5 af9ccda42172849a03d3782408eba66c hardware-monitor-1.3.ebuild 740
-RMD160 5674f8315487bb8cb5fa2d6b4aeab73da0ef824c hardware-monitor-1.3.ebuild 740
-SHA256 d5bca322ecd790c6f6323a911e40d215ac31c87f7a010fa57f618a6b6a28b0c2 hardware-monitor-1.3.ebuild 740
+MD5 09aa6612c7b6943b557065a2304083ba hardware-monitor-1.3.ebuild 775
+RMD160 68c344cd07678d297984fb2cb3cbab60d3e5ddc0 hardware-monitor-1.3.ebuild 775
+SHA256 7a95b883c8d4b954e1b1668ee9fb9accaf2970a1c63026274a720d93631d6070 hardware-monitor-1.3.ebuild 775
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD7M1wJrHF4yAQTrARAoOwAKCEeciaXB1JQjwtBEZN22+OXJOprwCgmGeM
-p09eq5dYtQxZ84dyX/V0ewA=
-=PKvE
+iD8DBQFD/H7mJrHF4yAQTrARAj8sAJ95NkckKOYzzFcrfU2lqb/fuULtpQCgtAmr
+hC67N26jhT2DjlkBb6VBC/g=
+=LQyR
 -----END PGP SIGNATURE-----

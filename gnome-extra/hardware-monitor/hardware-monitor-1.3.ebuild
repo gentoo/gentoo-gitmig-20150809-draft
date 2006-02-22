@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/hardware-monitor-1.3.ebuild,v 1.1 2006/02/10 17:27:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/hardware-monitor-1.3.ebuild,v 1.2 2006/02/22 15:10:20 agriffis Exp $
 
 inherit gnome2
 
@@ -16,6 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-cpp/gconfmm-2.6.0
 		>=dev-cpp/gtkmm-2.6.0
+		>=dev-cpp/libgnomecanvasmm-2.6.0
 		>=dev-cpp/libglademm-2.6.0
 		>=gnome-base/gnome-panel-2
 		>=gnome-base/libgtop-2.6.0"
