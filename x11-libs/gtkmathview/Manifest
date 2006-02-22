@@ -1,36 +1,22 @@
-MD5 8b2f26714ff8665444b19b7209a05045 ChangeLog 1664
-RMD160 5c5b697aac6ac44c591db36b0f67bb5cd208312e ChangeLog 1664
-SHA256 e5376624a750f235d58a9c93e579d4e2448a3544431c2c0751ba19138e46b657 ChangeLog 1664
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9e3e94aee48ae439a4db9c445af82f4f ChangeLog 1760
 MD5 3a0ed27c8e0851676f171a5fd00affba files/digest-gtkmathview-0.5.1 69
-RMD160 7bcd56f6afebdeec19fef9a1b4571336e8fa6031 files/digest-gtkmathview-0.5.1 69
-SHA256 cd187424d206ffa38c5275a7b91e71ff9a1f2e72dfbc635eaa5c80fcd0db6eee files/digest-gtkmathview-0.5.1 69
 MD5 00b7d8f65dfcc01cf66295ddfc50f117 files/digest-gtkmathview-0.5.2 69
-RMD160 fb3630229e0babb213816dc4e286a5e686f409a0 files/digest-gtkmathview-0.5.2 69
-SHA256 21f36da700939077239c61793dcd83896210277e9c2afa4e0f12f12cb4af02ba files/digest-gtkmathview-0.5.2 69
 MD5 d8f7283d3e1c5da9f86469416106595e files/digest-gtkmathview-0.6.3 69
-RMD160 547bcf82d8744f9b7a5607405236f9158241a30e files/digest-gtkmathview-0.6.3 69
-SHA256 d2ab0f85869448a775cd9558bf8125fa2dc1250725e23297ce9867a4af417a7e files/digest-gtkmathview-0.6.3 69
 MD5 d7c5f25c3240487c19bd100f83b2d857 files/digest-gtkmathview-0.7.5 69
-RMD160 4b1f470e4532f198f3d4557b97244ef7531a8c91 files/digest-gtkmathview-0.7.5 69
-SHA256 36f4afbed48f4b81bf1db829cf9799b706df51749b4f657bc861d5cc0d1ccebe files/digest-gtkmathview-0.7.5 69
 MD5 95bf29d0268c0ff30bc18a5d63a1d429 files/digest-gtkmathview-0.7.6 253
-RMD160 3638cdf313861e6a0bd3a1fa0fc7e22c686d682f files/digest-gtkmathview-0.7.6 253
-SHA256 a85d64a8355c416803952e4a1ffe1ca807dc1edaf5e46f471921befcfc1e006f files/digest-gtkmathview-0.7.6 253
 MD5 17e9052a6cc5c0a2a56235e7246382c6 gtkmathview-0.5.1.ebuild 724
-RMD160 64f8ca90e75d080d0f60225eedacd7de95d1abce gtkmathview-0.5.1.ebuild 724
-SHA256 a6d922a36b59994d9d199a00813a5afffa3ec9d80d28abeae4d27d27e97b0833 gtkmathview-0.5.1.ebuild 724
 MD5 4b72d70c235f6d878a0ba686421a7ecf gtkmathview-0.5.2.ebuild 724
-RMD160 fce5de8b9474d449f6b8527d42cf0d74d30da725 gtkmathview-0.5.2.ebuild 724
-SHA256 43b46620edd533509e0a619ae1fa0ac1ef8e7604dcb4c607e8c720f0dcb15efc gtkmathview-0.5.2.ebuild 724
 MD5 c5833ca0cf6a78cb8fc27b711a504590 gtkmathview-0.6.3.ebuild 754
-RMD160 783ab088faea0059af0463d3fef2f3b4d0542c06 gtkmathview-0.6.3.ebuild 754
-SHA256 addf659eda4520653b72955cbdf6347a5a86da35dd01135ba42935d65f3da1f7 gtkmathview-0.6.3.ebuild 754
 MD5 90cfd34133e07fd9cd96ccebae7ace15 gtkmathview-0.7.5.ebuild 904
-RMD160 04567b562749d4049a865549c0715d93db4a9252 gtkmathview-0.7.5.ebuild 904
-SHA256 74517d4f98bce5ff2e0546eebeca2943e8d8dc94eca0a5507172ade8e6be114a gtkmathview-0.7.5.ebuild 904
-MD5 7f581a84c2ac011dbb055ba0f8b5316d gtkmathview-0.7.6.ebuild 1427
-RMD160 244e1cbeddaf1800ae1e13ac5fdab5e5fb726166 gtkmathview-0.7.6.ebuild 1427
-SHA256 4bf3d855b894a938a1b9e76705fe317719662129f46754c713bf556f3f8254fd gtkmathview-0.7.6.ebuild 1427
+MD5 5029d2211121631e1bed420ff063f988 gtkmathview-0.7.6.ebuild 1433
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFD+6tEJrHF4yAQTrARAgMEAKCB/36q0DC27pOVTdWTlkI0PM5YKwCdHcNA
+dM5khzgsV+XFV6NO3Y1Bb8s=
+=uILL
+-----END PGP SIGNATURE-----
