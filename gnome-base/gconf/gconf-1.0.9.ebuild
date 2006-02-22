@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.18 2005/07/09 15:58:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.19 2006/02/22 13:52:51 agriffis Exp $
 
 inherit libtool gnome.org eutils gnuconfig
 
@@ -33,6 +33,8 @@ src_unpack() {
 	unpack ${A}
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/gconfd-2-fix.patch
 	epatch ${FILESDIR}/${P}-locallock_mdk.patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch ${FILESDIR}/${P}-linguas.patch
 
 	mkdir ${S}/intl
 	touch ${S}/intl/libgettext.h
