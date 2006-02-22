@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/harvard
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/harvard/ChangeLog,v 1.4 2004/12/28 20:33:09 absinthe Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/harvard/ChangeLog,v 1.5 2006/02/22 02:00:31 deltacow Exp $
+
+  22 Feb 2006; Scott Stoddard <deltacow@gentoo.org> harvard-2.0.5.ebuild:
+  amd64 stable.
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> harvard-2.0.5.ebuild:
   Keywords ~amd64.
