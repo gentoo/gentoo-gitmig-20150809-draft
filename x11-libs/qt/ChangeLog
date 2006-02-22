@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.286 2006/02/08 10:38:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.287 2006/02/22 18:00:12 caleb Exp $
+
+*qt-4.1.1 (22 Feb 2006)
+
+  22 Feb 2006; Caleb Tennis <caleb@gentoo.org> +qt-4.1.1.ebuild:
+  Version bump
 
   08 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> qt-3.3.5.ebuild:
   Append -fno-strict-aliasing as it dereferences type punned pointers (better
