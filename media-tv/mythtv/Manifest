@@ -19,9 +19,9 @@ SHA256 c16789e34d2e5c3d5b0162a87a9bf758145aa3bfaaeb55e05438e4a30a235bb9 files/di
 MD5 469774c8a2aebf913ddd8388e7945f7d files/digest-mythtv-0.19 244
 RMD160 df9a35cde9765eb16364c65f7ec6d316d107f380 files/digest-mythtv-0.19 244
 SHA256 0dfe196cf023e37679f736fec817dad08e4bd7b235e88c7ad573b05e849a5d0d files/digest-mythtv-0.19 244
-MD5 303b4a5328ff542c6549fb38c0079773 files/digest-mythtv-0.19-r1 515
-RMD160 a4ebb7c455ca79633b657211309500374150f607 files/digest-mythtv-0.19-r1 515
-SHA256 0a59555e59531490be10397769f5e116eaba0921c17b92574827a55d05c7d86f files/digest-mythtv-0.19-r1 515
+MD5 a9833b004b7894b0c0c1f57f439d74d7 files/digest-mythtv-0.19-r1 515
+RMD160 9bf8f764f9566413f558c15b6bb17c3b18de2b73 files/digest-mythtv-0.19-r1 515
+SHA256 d145d8d8c020e5b74dc0bfdf6c4b6c35c5bca333d17485c2775f362e36a79202 files/digest-mythtv-0.19-r1 515
 MD5 95c29c3a4ebd800a939425c30ba9f362 files/digest-mythtv-0.19_pre8642 74
 RMD160 386fa70567278ba2611d323ad44f03e49f513285 files/digest-mythtv-0.19_pre8642 74
 SHA256 87953c4b915d313efbdc6fc21d5c2f5ce9d9ce9d9d6fd08d986d3754a7d99112 files/digest-mythtv-0.19_pre8642 74
@@ -70,7 +70,7 @@ SHA256 6f932b53a35be6e110d05f24021d56c2cf323bd17c278dd79673ae6c25fe83f0 mythtv-0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD/MPNBtvusYtCZMsRAnnmAJ4mIfOjxYmPR8+/iFiv2EuwWlfMbgCfdfJw
-yO/hY5jND/UBONPkk+qJfEU=
-=gcpF
+iD8DBQFD/UvmBtvusYtCZMsRAtyyAJ9lsS/6xxG+ofaXVbOmHcWNpULkiwCdFAAZ
+z3p44K2Ii7rtYD5qsrOqBwQ=
+=ELAs
 -----END PGP SIGNATURE-----
