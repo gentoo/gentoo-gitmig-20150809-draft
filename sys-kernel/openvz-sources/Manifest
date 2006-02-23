@@ -1,21 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1fc1cfb68475b629da35777394fd4d72 ChangeLog 3151
-RMD160 73304c56750f837baac7ac33234d15097cd4b022 ChangeLog 3151
-SHA256 8f050f7e46b8abb089353a5f273c3facb47f3327d55dab6a23137cb9501b50da ChangeLog 3151
-MD5 c5edfb32a543be5549ef2bb23a2116b1 files/digest-openvz-sources-022.044 533
-RMD160 4d15c8a9a3a7977d0ec98524ee1f2596b2fc8363 files/digest-openvz-sources-022.044 533
-SHA256 961de4ef12e924726b42a76768cca3767cdafa365bfc70d19034f1790dcbe51c files/digest-openvz-sources-022.044 533
+MD5 40d1c06bd02f412b7a8399f2c235601c ChangeLog 3376
+RMD160 214b2fd1076c6564f6824be2e08929b10b49d79e ChangeLog 3376
+SHA256 b64c278efcc48ffebcdc119eccf147ebd1be4de8a264466e87a5d26c709f3e29 ChangeLog 3376
 MD5 bceb3186343c99afb624d2dcafac229c files/digest-openvz-sources-022.050 536
 RMD160 1e3fc83548a4cb0ec8a47c038b7c6247db94c85f files/digest-openvz-sources-022.050 536
 SHA256 e27b8a950e0b1854bfee4f0f3dced04f8639d167e2149af592407f79e2230a2c files/digest-openvz-sources-022.050 536
-MD5 b0d3de8d2366b92d7326fb51ce3f80f4 files/digest-openvz-sources-022.056 536
-RMD160 32da231d8bd53bf64adc1d7f16ed1de013eca1df files/digest-openvz-sources-022.056 536
-SHA256 e67ee4b0443bc91faea1c410b5ac65852d0224fb11367ee50d8bfb04f0a676f4 files/digest-openvz-sources-022.056 536
-MD5 54f034fb13feb0cc5a14d52d02f25338 files/digest-openvz-sources-022.061 536
-RMD160 2400c8c7e3bd89a1c18cf8a24d7e0bbb9ed3be31 files/digest-openvz-sources-022.061 536
-SHA256 c8b724c071170bf5526f33fc5efc9efa0d565646856d846077e927e3b5275ece files/digest-openvz-sources-022.061 536
 MD5 2d6bd6bdf22a4b560cb9d00a21361d72 files/digest-openvz-sources-022.064 536
 RMD160 659b9cca5e97d67c7fea38a716f0305f62bc67c8 files/digest-openvz-sources-022.064 536
 SHA256 6f8ce765ceac880917e0f4c530e0c3062940cc815b6e5077f46bdc23d9ebc096 files/digest-openvz-sources-022.064 536
@@ -25,28 +16,19 @@ SHA256 2c7a63a10a4834847790cca275539f1e043765db442f8ce7b444ecdb82b40168 files/di
 MD5 647244b44cdc8ef50e6dd53b4b8e88af metadata.xml 564
 RMD160 4b1ba6048ab66a1876252d9d39293eafa4358f2f metadata.xml 564
 SHA256 f43a5afc1c9b9d5f094614ee618070a32bca48c5a230f18c2ec3e070e3484933 metadata.xml 564
-MD5 8d1c4549728d3c0f896e5a4f95bc764c openvz-sources-022.044.ebuild 806
-RMD160 8c84ab894d8b03d588ae7e151349f6c0c3cb272b openvz-sources-022.044.ebuild 806
-SHA256 cef0d73d9070471e522af8cbc2ba3015d9c0e1b6e36aa7a924f3ded302cf9dcd openvz-sources-022.044.ebuild 806
 MD5 bba82eb2216f91e460facf257e5a9033 openvz-sources-022.050.ebuild 800
 RMD160 3f1a7a52e61d414645aea4030232c3c19e6be0ba openvz-sources-022.050.ebuild 800
 SHA256 3194a39cede73be0213abf4adce02bd7a4f3e7687f161aab9df4562f28480bbe openvz-sources-022.050.ebuild 800
-MD5 a6819aa8f0df1dbf7a02dfea1159d298 openvz-sources-022.056.ebuild 802
-RMD160 945bf9cd7574ac7259da01e40eca1831917b7cae openvz-sources-022.056.ebuild 802
-SHA256 7f64d24e202df94f1fd47b70048beb35b7a3165d9f81598c3474c9416786c886 openvz-sources-022.056.ebuild 802
-MD5 ceae5581350241ddd663144c72d7fe3a openvz-sources-022.061.ebuild 802
-RMD160 ca13478d572579aa416a10539d73bc9d3927311e openvz-sources-022.061.ebuild 802
-SHA256 fac4038b5653d8ec0293dd1ed710fe0e832506f250db88165391a270d4fb0601 openvz-sources-022.061.ebuild 802
-MD5 e45f3ff3b773cfefe5b580201d7aee68 openvz-sources-022.064.ebuild 802
-RMD160 7013828b5034eaa68bdfd503ff2052a8abdf80ba openvz-sources-022.064.ebuild 802
-SHA256 caa91ff6b3796c08c95ed58eab669b7e125d373eb7ec5d9b84f47652bb1e47cb openvz-sources-022.064.ebuild 802
+MD5 c8341c1449f328823aa5cb82ec6521a9 openvz-sources-022.064.ebuild 800
+RMD160 e533b00c9f26f2ce694413da961f52f74e5533c9 openvz-sources-022.064.ebuild 800
+SHA256 b6e4587e6bd0607cf0ce58b77cf9280b0748386f335b7a8601509ea8fd54b471 openvz-sources-022.064.ebuild 800
 MD5 a264a6f69fe6838b096dcffb437329cd openvz-sources-025.014.ebuild 803
 RMD160 5919b644234343094961a5faaf79c528e8e60775 openvz-sources-025.014.ebuild 803
 SHA256 0e6cadf6a773aca3948a5f784bcbad8a999ec03c0bf78a96ba9e523f78f93aff openvz-sources-025.014.ebuild 803
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD38jUflZ8QqxhrsMRAtnPAKCCakCVPsZRbHIDcUUdEqb9jV+HAACfXi75
-5HVggPkpwIQEcMtZn5zcfyg=
-=2hoC
+iD8DBQFD/cpCmPFBzbX68WERAo//AJ0bh2wzJ3dCt/dPY/gRgNDGxMOOSwCfQ9mn
+nGNCA67Y9/paiD1QatzGfS0=
+=Lp0U
 -----END PGP SIGNATURE-----
