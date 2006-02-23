@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5024 2006/02/23 10:19:16 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5025 2006/02/23 17:29:13 chutzpah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Patrick McLean <chutzpah@gentoo.org> (23 Feb 2006)
+# gnumeric-1.6.1 breaks with goffice-0.2.0 and gnumeric-1.6.2
+# needs goffice-0.2.0, so masking both for now
+>=app-office/gnumeric-1.6.2
+>=x11-libs/goffice-0.2.0
 
 # Duncan Coutts <dcoutts@gentoo.org) (23 Feb 2006)
 # needs testing
