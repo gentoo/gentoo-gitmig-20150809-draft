@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.4-r3.ebuild,v 1.2 2005/10/03 16:38:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.4-r3.ebuild,v 1.3 2006/02/23 01:15:38 agriffis Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,10 +21,11 @@ PROVIDE="virtual/bootloader"
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/elilo-3.4-makefile.patch
-	epatch "${FILESDIR}"/elilo-3.4-proc-sigsetjmp.patch
-	epatch "${FILESDIR}"/elilo-3.3a-devscheme.patch
+	cd ${S}
+	epatch ${FILESDIR}/elilo-3.4-makefile.patch
+	epatch ${FILESDIR}/elilo-3.4-proc-sigsetjmp.patch
+	epatch ${FILESDIR}/elilo-3.3a-devscheme.patch
+	gzip -dc ${DISTDIR}/elilo-3.4.gz > $T/elilo
 }
 
 src_compile() {
@@ -42,16 +43,16 @@ src_compile() {
 }
 
 src_install() {
-	newsbin "${FILESDIR}"/elilo-${PV} elilo || die "elilo failed"
+	dosbin ${T}/elilo || die "elilo failed"
 	dosbin tools/eliloalt || die "eliloalt failed"
 
 	exeinto /usr/lib/elilo
 	doexe elilo.efi || die "elilo.efi failed"
 
 	insinto /etc
-	newins "${FILESDIR}"/elilo.conf.sample elilo.conf
+	newins ${FILESDIR}/elilo.conf.sample elilo.conf
 
-	dodoc docs/* "${FILESDIR}"/elilo.conf.sample
-	newman "${FILESDIR}"/elilo.8-${PV} elilo.8
-	newman "${FILESDIR}"/eliloalt.8-${PV} eliloalt.8
+	dodoc docs/* ${FILESDIR}/elilo.conf.sample
+	newman ${FILESDIR}/elilo.8-${PV} elilo.8
+	newman ${FILESDIR}/eliloalt.8-${PV} eliloalt.8
 }

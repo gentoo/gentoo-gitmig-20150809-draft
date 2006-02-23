@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/elilo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.14 2006/02/14 21:50:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.15 2006/02/23 01:15:38 agriffis Exp $
+
+  23 Feb 2006; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  elilo-3.4-r3.ebuild, elilo-3.6.ebuild:
+  Move elilo script to mirrors
 
   14 Feb 2006; Aron Griffis <agriffis@gentoo.org> elilo-3.6.ebuild:
   Mark stable immediately since older versions can't boot with initramfs
