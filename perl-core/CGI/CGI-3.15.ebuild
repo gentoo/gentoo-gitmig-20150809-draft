@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/CGI-3.15.ebuild,v 1.1 2006/01/22 17:06:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/CGI-3.15.ebuild,v 1.2 2006/02/23 22:00:15 mcummings Exp $
 
 inherit perl-module
 
@@ -14,5 +14,5 @@ IUSE=""
 SLOT="0"
 SRC_TEST="do"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 DEPEND=">=dev-lang/perl-5.8.0-r12"

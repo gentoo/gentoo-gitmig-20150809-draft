@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/CGI
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.11 2006/02/07 20:59:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.12 2006/02/23 22:00:15 mcummings Exp $
+
+  23 Feb 2006; Michael Cummings <mcummings@gentoo.org> CGI-3.15.ebuild:
+  Unmasking for sparc and x86
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> CGI-3.10.ebuild:
   stable on amd64
