@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r3.ebuild,v 1.1 2006/02/23 07:20:45 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r3.ebuild,v 1.2 2006/02/23 13:04:07 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -24,19 +24,21 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 
-	# Enable chroot
+	# Gentoo patches - these will probably never be accepted upstream
+	# Enable chroot support
 	epatch "${FILESDIR}/${PN}-3.0-paranoia.patch"
 	# Fix some permission issues
 	epatch "${FILESDIR}/${PN}-3.0-fix-perms.patch"
+	# Enable dhclient to equery NTP servers, fixed #63868
+	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-ntp.patch"
+
+	# General fixes which will probably be accepted upstream eventually
 	# Fix token ring compiling, #102473 
 	epatch "${FILESDIR}/${P}-tr.patch"
 	# Install libdst, #75544
 	epatch "${FILESDIR}/${P}-libdst.patch"
 	# Fix building on Gentoo/FreeBSD
 	epatch "${FILESDIR}/${PN}-3.0.2-gmake.patch"
-
-	# Enable dhclient to equery NTP servers, fixed #63868
-	epatch "${FILESDIR}/dhclient-ntp.patch"
 
 	# FreeBSD doesn't like -Werror that is forced on
 	sed -i -e 's:-Werror::' Makefile.conf

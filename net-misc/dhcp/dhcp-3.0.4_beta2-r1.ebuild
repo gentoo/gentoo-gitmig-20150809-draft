@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta2-r1.ebuild,v 1.3 2005/12/22 12:54:18 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta2-r1.ebuild,v 1.4 2006/02/23 13:04:07 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -28,19 +28,21 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 
-	# Enable chroot
+	# Gentoo patches - these will probably never be accepted upstream
+	# Enable chroot support
 	epatch "${FILESDIR}/${PN}-3.0-paranoia.patch"
 	# Fix some permission issues
 	epatch "${FILESDIR}/${PN}-3.0-fix-perms.patch"
-	# Install libdst, #75544
+	# Enable dhclient to equery NTP servers, fixed #63868
+	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-ntp.patch"
+	# Quiet the isc blurb
+	epatch "${FILESDIR}/${PN}-3.0.3-no_isc_blurb.patch"
+
+	# General fixes which will probably be accepted upstream eventually
+	# Fix token ring compiling, #102473 
 	epatch "${FILESDIR}/${PN}-3.0.3-libdst.patch"
 	# Fix building on Gentoo/FreeBSD
 	epatch "${FILESDIR}/${PN}-3.0.2-gmake.patch"
-
-	# Enable dhclient to equery NTP servers, fixed #63868
-	epatch "${FILESDIR}/dhclient-ntp.patch"
-	# Quiet the isc blurb
-	epatch "${FILESDIR}/dhcp-3.0.3-no_isc_blurb.patch"
 
 	# Brand the version with Gentoo
 	# include revision if >0
