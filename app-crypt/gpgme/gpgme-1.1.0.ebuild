@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.0.ebuild,v 1.2 2006/02/20 20:30:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.0.ebuild,v 1.3 2006/02/23 01:40:43 agriffis Exp $
 
 inherit eutils libtool autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnupg/gpgme/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ia64 ~mips ~ppc ppc-macos ~ppc64 ~sparc ~x86"
 IUSE=""
 #IUSE="smime"
 
