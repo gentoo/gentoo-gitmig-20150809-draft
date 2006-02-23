@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.5.1.ebuild,v 1.1 2005/07/02 19:35:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.5.1.ebuild,v 1.2 2006/02/23 22:49:58 tupone Exp $
 
 inherit eutils games
 
@@ -13,15 +13,10 @@ SLOT="0"
 KEYWORDS="x86 ~amd64"
 IUSE="nls debug"
 
-RDEPEND="virtual/opengl
-	virtual/x11
-	>=dev-games/clanlib-0.7
-	=dev-cpp/libxmlpp-1*
-	sys-devel/gettext
-	>=media-libs/libsdl-1.2.4
-	media-libs/sdl-gfx
-	media-libs/libvorbis"
+RDEPEND=">=dev-games/clanlib-0.7
+	=dev-cpp/libxmlpp-1*"
 DEPEND="${RDEPEND}
+	|| ( x11-libs/libXt virtual/x11 )
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
