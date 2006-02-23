@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.8 2005/10/26 14:46:18 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.9 2006/02/23 17:02:07 iggy Exp $
 
 IUSE="build bootstrap"
 
@@ -19,7 +19,7 @@ PROVIDE="virtual/baselayout"
 
 src_install() {
 	keepdir /bin /etc /etc/init.d /home /lib /sbin /usr /var /root /mnt
-	keepdir /var/log /proc
+	keepdir /var/log /proc /dev/pts
 
 	# if ROOT=/ and we make /proc, we will get errors when portage tries 
 	# to create /proc/.keep, so we remove it if we need to
@@ -34,6 +34,9 @@ src_install() {
 
 	insinto /etc
 	doins ${S}/{fstab,group,nsswitch.conf,passwd,profile.env,protocols,shells}
+
+	# Fixup fstab for devpts support
+	dosed "7i devpts	/dev/pts	devpts	defaults	0 0"
 
 	# Fixup the inittab file first
 	sed -i -e 's:/usr/bin/tail:/bin/tail:' ${S}/init/inittab
@@ -51,6 +54,7 @@ src_install() {
 
 	MAKEDEV std
 	mknod -m 0600 console c 5 1
+	mknod ptmx c 5 2
 
 	for i in 0 1 2 3 4; do
 		mknod -m 0660 hda${i/0} b 3 ${i}
