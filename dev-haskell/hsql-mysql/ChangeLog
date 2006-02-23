@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/hsql-mysql
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-mysql/ChangeLog,v 1.1 2006/02/23 00:51:19 dcoutts Exp $
+
+*hsql-mysql-1.7 (23 Feb 2006)
+
+  23 Feb 2006; <duncan@gentoo.org> +metadata.xml, +hsql-mysql-1.7.ebuild:
+  Initial import.
+
