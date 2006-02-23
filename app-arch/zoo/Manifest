@@ -1,15 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 77e4bc2dfd48083336f4d0ab74e60964 ChangeLog 1092
-MD5 5a83375f305f43e7455cf85cfe1975e4 files/digest-zoo-2.10 63
+MD5 c1226ffbd358f652bbfdf9473ea30050 ChangeLog 1278
+RMD160 15fac9a73734cae1cd9a63a3bdce5bb3a1a1aa9f ChangeLog 1278
+SHA256 667e607270fe2d09a6927688d9327dfeb97c71b0cab63c2925c5664f5be83317 ChangeLog 1278
+MD5 400d9539fd581b0fd40cbc4af373d973 files/digest-zoo-2.10 235
+RMD160 82604bdbc20d780cfd94ae73a48be2fce61e1017 files/digest-zoo-2.10 235
+SHA256 b4b78bee2420f59ac82de7a0177351e904fef9206b5f855009eed4b8dd54ce3b files/digest-zoo-2.10 235
+MD5 400d9539fd581b0fd40cbc4af373d973 files/digest-zoo-2.10-r1 235
+RMD160 82604bdbc20d780cfd94ae73a48be2fce61e1017 files/digest-zoo-2.10-r1 235
+SHA256 b4b78bee2420f59ac82de7a0177351e904fef9206b5f855009eed4b8dd54ce3b files/digest-zoo-2.10-r1 235
 MD5 77f04d131ad1df9d9f165be3df7bd48c files/zoo-2.10-gcc33-issues-fix.patch 22111
+RMD160 253767d992daaf5ec59fe8beb7994eb8d0241932 files/zoo-2.10-gcc33-issues-fix.patch 22111
+SHA256 bc22d536ecfe473256bb2fc71fba6cf2c3b3d2f205ae08cd11603272685960c4 files/zoo-2.10-gcc33-issues-fix.patch 22111
+MD5 678a28bb007c2daea8ae2f733f36ec06 files/zoo-security-fix.patch 557
+RMD160 e3e30d07bcf7aa86ec15ede24d04dfd35d92c894 files/zoo-security-fix.patch 557
+SHA256 b645e7f4e3d29cb65abcaeb87959ad3da83196a6c8c398dc3c8360c37238f674 files/zoo-security-fix.patch 557
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 03281ad0f12d83b2cb0ad1637646b387 zoo-2.10.ebuild 631
+RMD160 5b59fc85d3bafae0872cf691e5f032bac39ba539 metadata.xml 310
+SHA256 39e1273dd60bd3ceb460e9366a648c8fa21db1c292df4573e69f41cf6c84f6fc metadata.xml 310
+MD5 ac50b66170842099b6c57ccc9ba714fb zoo-2.10-r1.ebuild 733
+RMD160 80b679078e5ee5e57c774b42764f3f76b749d213 zoo-2.10-r1.ebuild 733
+SHA256 9c2f6c128e874ec638588a549dcc68678c3622a8d52e1e7a7a72997482063639 zoo-2.10-r1.ebuild 733
+MD5 7ede23b1b7f6d86887589ace0891c9ae zoo-2.10.ebuild 681
+RMD160 442b5025d3ea97b5bc09d25d9c518ae0b45f6672 zoo-2.10.ebuild 681
+SHA256 bcf3e145e722bd5a81839c1157cbdcea50e9983bb7ba5197452f1c6a2fe68198 zoo-2.10.ebuild 681
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDi8U2gIKl8Uu19MoRAhLqAJ0XCZ60ZfS6X6G3m1y1AH7cdixg/wCfQq8u
-hC4Fy7BPB3OIJ3c1hUPQDJU=
-=XGLO
+iD8DBQFD/hsEl5AvwDPiUowRAnkuAJ0SYZPuxokIVmiFBTl3hC4vzfm9UACePjQ+
+SoNliyB+uiOPldOtcFCJBPs=
+=SW1N
 -----END PGP SIGNATURE-----
