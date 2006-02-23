@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.4 2006/02/22 16:30:38 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.5 2006/02/23 15:39:49 rl03 Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -16,7 +16,10 @@ DESCRIPTION="Webserver log file analyzer"
 HOMEPAGE="http://www.mrunix.net/webalizer/"
 SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${MY_P}-src.tar.bz2
 	geoip? ( http://sysd.org/proj/geolizer_${MY_PV}-patch.20050520.tar.bz2 )
-	xtended? ( http://www.irc.unizh.ch/users/pfrei/webalizer/rb07/${PN}-${MY_PV}-RB07-patch.tar.gz )"
+	xtended? ( http://www.irc.unizh.ch/users/pfrei/webalizer/rb07/${PN}-${MY_PV}-RB07-patch.tar.gz )
+	mirror://gentoo/${PN}-search.patch.gz
+	mirror://gentoo/${PN}.conf.gz
+"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ppc64"
@@ -56,7 +59,7 @@ src_unpack() {
 	if use geoip; then
 		epatch ${WORKDIR}/geolizer_${MY_PV}-patch/geolizer.patch || die
 		if use search; then
-			epatch ${FILESDIR}/${PN}-search.patch || die
+			epatch ${WORKDIR}/${PN}-search.patch || die
 		fi
 		use xtended && einfo "Xtended doesn't work with geolizer, skipping"
 	else
@@ -103,7 +106,7 @@ src_install() {
 	doman webalizer.1
 
 	insinto /etc
-	doins ${FILESDIR}/${PV}/webalizer.conf
+	doins ${WORKDIR}/${PN}.conf
 	use apache2 && sed -i -e "s/apache/apache2/g" ${D}/etc/webalizer.conf
 
 	dodoc README* CHANGES Copyright sample.conf ${FILESDIR}/${PV}/apache.webalizer

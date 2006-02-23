@@ -1,12 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r4.ebuild,v 1.17 2005/01/01 11:35:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r4.ebuild,v 1.18 2006/02/23 15:39:49 rl03 Exp $
 
 MY_P=${P/.10/-10}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Webserver log file analyzer"
 HOMEPAGE="http://www.mrunix.net/webalizer/"
-SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${MY_P}-src.tar.bz2"
+SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${MY_P}-src.tar.bz2
+	mirror://gentoo/${PN}.conf.gz
+"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -39,7 +41,7 @@ src_install() {
 	doman webalizer.1
 
 	insinto /etc
-	newins ${FILESDIR}/${PV}/webalizer.conf webalizer.conf
+	doins ${WORKDIR}/${PN}.conf
 
 	if use apache2; then
 		# patch for apache2
@@ -49,7 +51,7 @@ src_install() {
 		insinto /etc/apache/conf
 	fi
 
-	doins ${FILESDIR}/${PV}/webalizer.conf
+	doins ${WORKDIR}/${PN}.conf
 
 	use apache2 || insinto /etc/apache/conf/addon-modules
 	use apache2 || newins ${FILESDIR}/${PV}/apache.webalizer webalizer.conf

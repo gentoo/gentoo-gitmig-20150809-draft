@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.46 2006/02/22 16:30:38 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.47 2006/02/23 15:39:49 rl03 Exp $
+
+  23 Feb 2006; Renat Lumpau <rl03@gentoo.org> -files/2.01.10/webalizer.conf,
+  -files/webalizer-search.patch, webalizer-2.01.10-r4.ebuild,
+  webalizer-2.01.10-r5.ebuild, webalizer-2.01.10-r12.ebuild:
+  Moved a few large files to mirrors wrt bug #123634.
 
   22 Feb 2006; Renat Lumpau <rl03@gentoo.org>
   -files/webalizer-db4-with-geoip.patch, -files/webalizer-db4.patch,

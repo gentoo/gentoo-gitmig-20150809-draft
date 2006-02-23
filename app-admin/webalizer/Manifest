@@ -1,27 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 57cf047567f9495c8f6d23bdceca8a60 ChangeLog 6863
-RMD160 7957f465ea2e09d2bb9d19cc2a19c2dcd4efc557 ChangeLog 6863
-SHA256 d93fa6441f628c238b5d2140cbc3aeccccd479c5416c81ae19d7fe95fed65f22 ChangeLog 6863
+MD5 4f765ca4c8b7360c52be9afee6168d1c ChangeLog 7118
+RMD160 38719b5a5c6f47b8a39a6291b4e529e163bd7c9a ChangeLog 7118
+SHA256 d7971082802f99c0e38681218d786a4569b7f4bad88bc79608c1a34c305bb3ff ChangeLog 7118
 MD5 f04ad397866d35f9ede71fc6da2392ed files/2.01.10/apache.webalizer 306
 RMD160 cc7e820da4aef6fa5f4078558407b7fe00e6146c files/2.01.10/apache.webalizer 306
 SHA256 3b6107aaa3898b875bc0af0f9addf9b3e077570a210908179e0257562bf52353 files/2.01.10/apache.webalizer 306
 MD5 45d6e8c8bd9f76c0e22d80acc0603aff files/2.01.10/reconfig 394
 RMD160 b7a23197c01db50f3dde83fc137944adaa642c28 files/2.01.10/reconfig 394
 SHA256 768fe5472a89d1338785948416fd4e1d9f3de60bfd5c09a27a3816f093c99d9f files/2.01.10/reconfig 394
-MD5 7a71200318400e9c4a33e23bfc65904d files/2.01.10/webalizer.conf 23927
-RMD160 d056e384b3388da7703a037e8d626e3e9ebb381c files/2.01.10/webalizer.conf 23927
-SHA256 e87f7ab29007834fc21f79bbc4a5cc06b335122775a5a88a45a59f975dd1f706 files/2.01.10/webalizer.conf 23927
-MD5 ff891ce8686805d073f411c1446ee410 files/digest-webalizer-2.01.10-r12 843
-RMD160 15e0a87ed579b6cbaaeb26dbb023bcf0f496ac06 files/digest-webalizer-2.01.10-r12 843
-SHA256 7c3ac6546a3f41c993a0571d7eb677b24352b690bdd2dcfffa7a8bf1b4d17bb0 files/digest-webalizer-2.01.10-r12 843
-MD5 bc64ced59f4249b87c566b5d34a6fe1f files/digest-webalizer-2.01.10-r4 268
-RMD160 98c61492ea4aa3d860f6e6b8b9fb01d81a962feb files/digest-webalizer-2.01.10-r4 268
-SHA256 6533c2b211395e8f9c19aa415a0356a205dff73c79f20db1e623daf05ba8c4c1 files/digest-webalizer-2.01.10-r4 268
-MD5 c283fc0fd5687666b15e6da9f4b3cc2c files/digest-webalizer-2.01.10-r5 563
-RMD160 0b1a55408c8e73592239d8430efdf500da2140c5 files/digest-webalizer-2.01.10-r5 563
-SHA256 09892b71209d881a2b79658dabcc586d794aeef8b879f8f2e225c815dabd4ea5 files/digest-webalizer-2.01.10-r5 563
+MD5 4b57ddf404077972cb8500151be066bd files/digest-webalizer-2.01.10-r12 1319
+RMD160 7ca1db406fcdee6d97f2c2301b726beaf854fe9a files/digest-webalizer-2.01.10-r12 1319
+SHA256 8d25ea7f8a46b22fc68875e96be12c2b738f7f758245aa63d1ab032af972cc19 files/digest-webalizer-2.01.10-r12 1319
+MD5 556575fd11faab14758f71662b90b6b1 files/digest-webalizer-2.01.10-r4 494
+RMD160 2b32b82dd4ec281f9b232fde987d923fbf9a140b files/digest-webalizer-2.01.10-r4 494
+SHA256 4fb4bcfa97512dd4d7ed1e63e8445ace85ff968b02752ae4ece374dbc885f1ec files/digest-webalizer-2.01.10-r4 494
+MD5 c54a5157d05d808505a6fe4f899578a3 files/digest-webalizer-2.01.10-r5 789
+RMD160 50decb154d3b5ab2b42250ad5d48756ccf371a60 files/digest-webalizer-2.01.10-r5 789
+SHA256 5c117144e88175861bf2f8d99bf28f51cd282c80aedf357de866b0781e3c8414 files/digest-webalizer-2.01.10-r5 789
 MD5 05805530b2e87a3d55e0056a45e330f5 files/output.c.patch 8088
 RMD160 afcfdc0eb34269f693267e19dde2ed6119789b7a files/output.c.patch 8088
 SHA256 002285d333af4d04fa1591a72d320ed3104b95ca3856389f53d9992cb1cd9da7 files/output.c.patch 8088
@@ -34,25 +31,22 @@ SHA256 9b946e766fdecccbbd480f520bd610afad78316aba4e7e0cea237da43039efd4 files/we
 MD5 766a26ff1600e3ea5359278a9dcd1025 files/webalizer-readability.patch 8345
 RMD160 45a75b03752370f9ddb818768ff0730ad829fe64 files/webalizer-readability.patch 8345
 SHA256 7b89611bccaf9f9b8abf824e270e6ffa4d5447080f1685cfce0ab3a23f2f3314 files/webalizer-readability.patch 8345
-MD5 e02bdabb67987423cb53ecadc6f70cf3 files/webalizer-search.patch 30559
-RMD160 0d2149290265df652b131c29bb496f442d9af6b0 files/webalizer-search.patch 30559
-SHA256 c608e8992de56e85c0136279abc54319bab9597d5285f468a0cb50460a2c1973 files/webalizer-search.patch 30559
 MD5 f4ab9f9db4e50708404d47337257cd4e metadata.xml 223
 RMD160 5b4cf8ac1f9426b4b01d94c759aad5768f35fe74 metadata.xml 223
 SHA256 9406913dbd824f7e31267676defffda846fda6a02ac643a45740cb88219b7a79 metadata.xml 223
-MD5 5f28c01a9aa19c26a42f8697ccf90741 webalizer-2.01.10-r12.ebuild 4289
-RMD160 7940a3493f0504abdf6440c8399f76022bc920f7 webalizer-2.01.10-r12.ebuild 4289
-SHA256 0fe771b8c7f9e569de12a1d6c64adffbd43de43a2046cb2c1671180be1f39f5a webalizer-2.01.10-r12.ebuild 4289
-MD5 5833410c77eec8d9cff653e67949b5a6 webalizer-2.01.10-r4.ebuild 2056
-RMD160 93a8c75cba85a1a5a8a0944a11d4a2580529ee59 webalizer-2.01.10-r4.ebuild 2056
-SHA256 d93dd2fed0c7f1eb1b34fe86d7f9a6e5990a2dcc420d6210bdd011cc107c1517 webalizer-2.01.10-r4.ebuild 2056
-MD5 e7883822bb2a1bcd2b8409ba709a964e webalizer-2.01.10-r5.ebuild 2550
-RMD160 d43659606a2a07f14b7a8cf7e68f40f2ede441c7 webalizer-2.01.10-r5.ebuild 2550
-SHA256 681815ed96b90494361145ecee5dfa8cfc2c5316a6f5e5886a2bbaed93992ed2 webalizer-2.01.10-r5.ebuild 2550
+MD5 b39b3c38f9b0967dfda860ac4aff5eb9 webalizer-2.01.10-r12.ebuild 4348
+RMD160 66bc80f2fbfb6cab54a48b1bc7bd7ea7fce31166 webalizer-2.01.10-r12.ebuild 4348
+SHA256 9f6a5bfcb77d669131e31d6418fd6863912869330df8a9ea48b07ccb57b72e80 webalizer-2.01.10-r12.ebuild 4348
+MD5 4b6414b221213a91af1cbe2553f6f458 webalizer-2.01.10-r4.ebuild 2044
+RMD160 e9373d85bea2783e8e240d575bdc751988cc6a11 webalizer-2.01.10-r4.ebuild 2044
+SHA256 af23eb6246902ced256d3c05c2c397e9e1587e717e37a6432dc8e986d6d0a08e webalizer-2.01.10-r4.ebuild 2044
+MD5 4b576ff9d757d7b0ed639fb340f39e5f webalizer-2.01.10-r5.ebuild 2540
+RMD160 4e09763f45acf5f490cc99d06aa34ce0456ab2b8 webalizer-2.01.10-r5.ebuild 2540
+SHA256 6bacab1421a42f16f0441e26c6b65d45dba70c1543a3f166e0cc6f0a3987e796 webalizer-2.01.10-r5.ebuild 2540
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD/JG5EzitwsaoONoRAiPRAKCzDaDgm+em6QHEPkq2klnTks8lggCfQw4W
-fhjEKqa3ExdiHSIDSm8gbK0=
-=JpS1
+iD8DBQFD/ddWEzitwsaoONoRAoVTAJ4qJVuadZ8LWF5lYJsfTDt+8VKtDwCgxzt7
+x4ySvL89SLhFNAlgwP1DCiw=
+=xgWq
 -----END PGP SIGNATURE-----
