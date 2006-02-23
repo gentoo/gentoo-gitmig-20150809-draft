@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1753 2006/02/21 14:58:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1754 2006/02/23 20:20:14 metalgod Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -125,6 +125,7 @@ app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-laptop/tp_smapi:hdaps - Install a compatible HDAPS module
 app-misc/bbgallery:gimp - Engables support for the gimp via extra libraries
 app-misc/beagle:chm - Enable indexing of MS HTML Help files (.chm)
+app-misc/beagle:ole - Enable ole support
 app-misc/beagle:spreadsheet - Enable indexing of spreadsheet files via gnumeric
 app-misc/beagle:webservices - Enable the Beagle WebServices interface
 app-misc/beagle:wv - Enable indexing of MS Word documents (.doc)
