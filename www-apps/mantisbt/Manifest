@@ -1,19 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7c244f0a55754a81dd64a6145567157e ChangeLog 3993
+MD5 e31b49c94e02801f4f11bed9ffdb5c6c ChangeLog 4153
+RMD160 ea1b3dff75ef7542d210e9d36a217735b4c3b6eb ChangeLog 4153
+SHA256 11992de65ce245a47f2c82a2c5ec99f04e7ec33e33135b6cfbd8d1e6d04735e8 ChangeLog 4153
 MD5 7ab426f7d5548fd47c15c66320bd7ff2 files/0.19.4-debian.patch 593
+RMD160 a39e3acd336f85130886fbc972e6e3412ecfd253 files/0.19.4-debian.patch 593
+SHA256 4a3269f09610eb3cbc3634931d7d1c685c4aaa345a808b368424f32dacbbe43f files/0.19.4-debian.patch 593
 MD5 28728af7e2eb7b32266ef26d87b398c1 files/digest-mantisbt-0.19.4 66
-MD5 e927850bd621a968a4d0b4382221d460 files/digest-mantisbt-1.0.0 65
+RMD160 34f9363600cfd93531d728bd160dd97579a46ff3 files/digest-mantisbt-0.19.4 66
+SHA256 1f612c2187dcde9dff2d5e0598a28fc0721bf4ea6009c1d0963c6487c13e4c3e files/digest-mantisbt-0.19.4 66
+MD5 21169f1eba57e4c2fa0b5e056d1f5632 files/digest-mantisbt-1.0.1 241
+RMD160 84345d716953fc7b4072a889756c07901eac4f93 files/digest-mantisbt-1.0.1 241
+SHA256 8d7ea248eec1f656dfb7cf4fa3dd4cd0f7bcc6875232934af8de4c2b3c79d467 files/digest-mantisbt-1.0.1 241
 MD5 97c947f30d07a6405194bed5981ceceb files/postinstall-en-1.0.0.txt 488
+RMD160 cbfd8696f29c0064c98503ba6342947525771f17 files/postinstall-en-1.0.0.txt 488
+SHA256 f4f06fdb8e6b7724e072a3a3bf77b4ee1fddd270cb2f6e5e8f46de795bc9a6f0 files/postinstall-en-1.0.0.txt 488
 MD5 35d6b6f4cf6611c8b6232b0c83c67f52 files/postinstall-en.txt 680
+RMD160 ed2e625a2bb3e2c431c5f69c4c82990131abacc9 files/postinstall-en.txt 680
+SHA256 fc027e273bae36eee8027962a8a71c276ed4c3e561b1b4c20dec1204b73c7c8e files/postinstall-en.txt 680
 MD5 1551fddbc27f5b36c773007689d93c32 mantisbt-0.19.4.ebuild 1072
-MD5 f0cfb9825701ea3cc958ac5a284cfa9d mantisbt-1.0.0.ebuild 930
+RMD160 683b8803d6dbd4b8ce0929c62b67e59b10d634b2 mantisbt-0.19.4.ebuild 1072
+SHA256 d8f38a76fa4267eea10f2310e4ae364665d0f554b7fa7634f524821ec5156c81 mantisbt-0.19.4.ebuild 1072
+MD5 d4c72b3b28d703328d10699977c3d721 mantisbt-1.0.1.ebuild 930
+RMD160 59467456873b6816f1b2a310c5bc46506793c881 mantisbt-1.0.1.ebuild 930
+SHA256 dc7b712b8114275f7894d513c18f9931e29797dd534f059c3b829d8e0ece7300 mantisbt-1.0.1.ebuild 930
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+RMD160 d47e924599b33a35a50f4c9f5564d325c271f83b metadata.xml 161
+SHA256 9cd891fcf0af580e98b62d2f4ded9e53671599f5a7aafd5dce692b996d2a83f4 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD5OXOEzitwsaoONoRAkL6AJ9CXAXaxjZOH64DrCUB/x3YWZDSNACfShAX
-ff2HvF5r8lgJP2CsBMlbqSQ=
-=uNQY
+iD8DBQFD/h+aEzitwsaoONoRAhnQAKC2znMXnlyBmA5LoxvSfGoZuCuvmACfce/v
+ZihF7ZsSJYoZx1Yaq/NnvlE=
+=ZT6V
 -----END PGP SIGNATURE-----
