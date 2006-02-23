@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.18.ebuild,v 1.1 2006/01/29 19:55:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.18.ebuild,v 1.2 2006/02/23 23:20:03 spyderous Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="debug png jpeg pdf fftw netcdf"
 
-DEPEND="virtual/x11
-	x11-libs/openmotif
+DEPEND="x11-libs/openmotif
 	>=sys-libs/zlib-1.0.3
 	>=media-libs/t1lib-1.3.1
 	>=media-libs/tiff-3.5

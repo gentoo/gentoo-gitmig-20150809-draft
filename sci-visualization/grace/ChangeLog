@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/grace
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.1 2006/01/29 19:55:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.2 2006/02/23 23:20:03 spyderous Exp $
+
+  23 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; grace-5.1.18.ebuild,
+  grace-5.1.19.ebuild:
+  Remove redundant src_unpack(), reported by ciaranm. Also fix for modular X.
 
   29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org>
   +files/grace-helpviewer-gentoo.diff, +metadata.xml, +grace-5.1.18.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.19.ebuild,v 1.1 2006/01/29 19:55:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.19.ebuild,v 1.2 2006/02/23 23:20:03 spyderous Exp $
 
 inherit eutils
 
@@ -24,10 +24,6 @@ DEPEND="x11-libs/openmotif
 	pdf? ( >=media-libs/pdflib-4.0.3 )
 	>=sys-apps/sed-4"
 #	x11-libs/xmhtml
-
-src_unpack() {
-	unpack ${A}
-}
 
 src_compile() {
 
