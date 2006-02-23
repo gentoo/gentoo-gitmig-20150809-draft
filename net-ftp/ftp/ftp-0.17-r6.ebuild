@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r6.ebuild,v 1.2 2005/11/02 04:45:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r6.ebuild,v 1.3 2006/02/23 02:18:55 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86"
 IUSE="ssl ipv6"
 
 RDEPEND=">=sys-libs/ncurses-5.2
