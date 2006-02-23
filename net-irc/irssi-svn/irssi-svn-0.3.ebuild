@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.14 2005/11/28 13:02:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.15 2006/02/23 23:21:35 swegener Exp $
 
 inherit subversion perl-app flag-o-matic
 
@@ -25,6 +25,12 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	www-client/lynx
 	>=sys-devel/autoconf-2.58"
+
+src_unpack() {
+	subversion_src_unpack
+	# We need to create the ChangeLog here
+	TZ=UTC svn log -v "${ESVN_REPO_URI}" >ChangeLog
+}
 
 src_compile() {
 	# Irssi uses extern inlines and that needs at least -O
