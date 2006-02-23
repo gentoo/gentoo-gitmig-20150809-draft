@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.3.2-r1.ebuild,v 1.1 2006/02/12 16:32:43 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.3.2-r2.ebuild,v 1.1 2006/02/23 17:57:57 voxus Exp $
 
 inherit flag-o-matic
 
@@ -17,6 +17,18 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="idn ipv6"
 
 DEPEND=""
+
+src_unpack() {
+	unpack ${A} || die
+	cd ${S} || die
+
+	use idn && {
+		epatch ${S}/contrib/idn/idnkit-1.0-src/patch/bind9/bind-${PV}-patch
+
+		cd ${S}/contrib/idn/idnkit-1.0-src
+		epatch ${FILESDIR}/${PN}-configure.patch
+	}
+}
 
 src_compile() {
 	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --enable-ipv6=no"
