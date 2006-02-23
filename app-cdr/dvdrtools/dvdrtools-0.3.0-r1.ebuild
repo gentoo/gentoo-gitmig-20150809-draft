@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/dvdrtools-0.3.0-r1.ebuild,v 1.1 2006/02/20 23:16:10 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/dvdrtools-0.3.0-r1.ebuild,v 1.2 2006/02/23 21:28:59 corsair Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.arklinux.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="encode"
 
 DEPEND="virtual/libc
