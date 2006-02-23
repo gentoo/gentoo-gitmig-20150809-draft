@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.10.ebuild,v 1.6 2006/02/20 18:25:32 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.10.ebuild,v 1.7 2006/02/23 23:47:24 araujo Exp $
 
 inherit base eutils ghc-package multilib autotools
 
@@ -88,7 +88,7 @@ src_install() {
 		$(use gnome && echo \
 			"${D}/usr/$(get_libdir)/gtk2hs/gconf.${pkgext}" \
 			"${D}/usr/$(get_libdir)/gtk2hs/sourceview.${pkgext}") \
-		$(use mozilla && echo \
+		$(use mozilla || use firefox && echo \
 			"${D}/usr/$(get_libdir)/gtk2hs/mozembed.${pkgext}")
 	ghc-install-pkg
 
@@ -106,7 +106,7 @@ src_install() {
 		ghc-makeghcilib "${D}/usr/$(get_libdir)/gtk2hs/libHSgconf.a"
 		ghc-makeghcilib "${D}/usr/$(get_libdir)/gtk2hs/libHSsourceview.a"
 	fi
-	if use mozilla; then
+	if use mozilla || use firefox; then
 		ghc-makeghcilib "${D}/usr/$(get_libdir)/gtk2hs/libHSmozembed.a"
 	fi
 }
