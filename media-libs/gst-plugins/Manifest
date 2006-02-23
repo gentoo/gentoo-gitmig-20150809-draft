@@ -1,9 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 cd02a4068c096810a48299c69d2e0b48 ChangeLog 19028
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-0.8.10 72
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-0.8.11 72
+MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-0.8.12 72
 MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-0.8.2 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-0.8.8 71
 MD5 3c5a91d5c22624038b5e3f3e80cef626 files/digest-gst-plugins-0.8.8-r2 533
@@ -15,15 +13,9 @@ MD5 5f3b15884236441972571887125d0a48 files/gst-plugins-0.8.9-riffmedia-isompeg4.
 MD5 08ef8415d9778f702053aa3e0090404b files/gst-plugins-0.8.9-ximagefix.patch 2525
 MD5 72130cbac13e9edb34b298efea9f26e6 gst-plugins-0.8.10.ebuild 1933
 MD5 5b4af2c4ebc493bb540eeef769748aaf gst-plugins-0.8.11.ebuild 2019
+MD5 6a368f806e718c658bc2a1897bf24d45 gst-plugins-0.8.12.ebuild 2024
 MD5 1b1f6a35ef00183ae4d1fad94cfcb208 gst-plugins-0.8.2.ebuild 1868
 MD5 d43ed6bb435d73d97fa66e9182e65e25 gst-plugins-0.8.8-r2.ebuild 2192
 MD5 648907592c915d4c6b7ca8c68eda195c gst-plugins-0.8.8.ebuild 1933
 MD5 5ed4b775f69994641eaea8e9bc60ba53 gst-plugins-0.8.9-r2.ebuild 2274
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD94bnJrHF4yAQTrARAtToAJ9Ayvxv+7U3T6ePDFJsGau79FavlACfa0dX
-duYG8fHV4BtpRLvL5ULM2Ho=
-=ehxF
------END PGP SIGNATURE-----
