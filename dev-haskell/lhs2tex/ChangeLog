@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/lhs2tex
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.6 2005/01/01 18:05:45 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.7 2006/02/23 20:45:47 dcoutts Exp $
+
+  23 Feb 2006; Duncan Coutts <dcoutts@gentoo.org> lhs2tex-1.10_pre.ebuild:
+  Add ~amd64 to KEYWORDS
 
   21 Oct 2004; Andres Loeh <kosmikus@gentoo.org> lhs2tex-1.10_pre.ebuild:
   Stable on x86.
