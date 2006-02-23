@@ -1,9 +1,31 @@
-MD5 9fe4cf644303121da4899766e38b59ce ChangeLog 6527
-MD5 df82644c18f756a618ceb4e3e378a64c files/digest-xerces-c-2.6.0-r1 71
-MD5 c9823d79de49cd66dc39de2525163280 files/digest-xerces-c-2.7.0-r1 72
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2b09affaa3632b21a894aa14b985e366 ChangeLog 6702
+RMD160 085d8819999b04e246cb0289c82ad6f0989b09cf ChangeLog 6702
+SHA256 5a3ce79529799a2af9d271943711d4ea64d416e9e0f1f7ed403d7e826e455414 ChangeLog 6702
+MD5 e23057657c4260149bf108c0f9547eb4 files/digest-xerces-c-2.7.0-r1 262
+RMD160 a1a1f5f8af81f8c2ebec1c16999c340eae4be4e9 files/digest-xerces-c-2.7.0-r1 262
+SHA256 fae21766bf97df44da549625ffa34a39997d0479c8ab2bdf0c80ba84decb433e files/digest-xerces-c-2.7.0-r1 262
 MD5 1c36cac94e6f0dcfd2addbb34ac332e2 files/xerces-c-2.6.0-multilib.patch 3023
+RMD160 10a1b4993442ddde4e0c2cfb4370595276fa2b1d files/xerces-c-2.6.0-multilib.patch 3023
+SHA256 8fe3c6f70e110eccbf3773356ad652ee52ecdfbdc0516813d02c166cacfe00d6 files/xerces-c-2.6.0-multilib.patch 3023
 MD5 982c9efab0d8818be37ee027e379e2d8 files/xerces-c-2.7.0-libpath.patch 1586
+RMD160 44df40b77aefb2d446e84940f06420bb5dce8e21 files/xerces-c-2.7.0-libpath.patch 1586
+SHA256 c981098908bb4acdb4f3d893983bed113e0d8fc2be717bcff4458261017b26cd files/xerces-c-2.7.0-libpath.patch 1586
 MD5 dd35713fae90dbd73f534c31b98591e7 files/xerces-c-2.7.0-multilib.patch 3267
-MD5 751dbed21e1e078fa8f07ef9bf0991b2 metadata.xml 376
-MD5 1733ed8f5b1ad4592d93366c40016a92 xerces-c-2.6.0-r1.ebuild 1212
-MD5 e92efe676e9d2eb0c4dd98ac840eb5d7 xerces-c-2.7.0-r1.ebuild 1265
+RMD160 2fbd2a9400ff4bf962c04667b825945eca2e6c8d files/xerces-c-2.7.0-multilib.patch 3267
+SHA256 5b070554239570f31c1fe6736a69b45305e03bf34166ba3ca813c8e92aee47ca files/xerces-c-2.7.0-multilib.patch 3267
+MD5 147d9bd12703b05efe90e464915058f1 metadata.xml 380
+RMD160 c9e8bb44bb6c20dfc79e4eaf788531029a1cd388 metadata.xml 380
+SHA256 903a99465a6cdbe74ece2414ceabf6e6e040f4aaf9021e854b547379ba7d88ec metadata.xml 380
+MD5 ce7e4a90eb2ab17b2c5b818431ccb728 xerces-c-2.7.0-r1.ebuild 1326
+RMD160 4405bc9d1d43fcfe34b0ade01f6cc16ade6869cf xerces-c-2.7.0-r1.ebuild 1326
+SHA256 5366146fc55f491aef1dbe99bd7337b3e15d1e85736a021e80d3f0ab7bbc7a74 xerces-c-2.7.0-r1.ebuild 1326
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD/P0dCRZPokWLroQRAvSfAJwJHHhiVXu46NS3Kar7jsC7yMUPuACeOvaY
+8s6kYZMqHcin5zqyxiHT54c=
+=WYVW
+-----END PGP SIGNATURE-----

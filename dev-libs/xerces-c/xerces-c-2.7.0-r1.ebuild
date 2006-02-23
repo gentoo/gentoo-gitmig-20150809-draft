@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.3 2006/01/14 10:54:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.4 2006/02/23 00:08:44 halcy0n Exp $
 
 inherit eutils multilib
 
@@ -18,6 +18,11 @@ IUSE="doc"
 DEPEND="doc? ( app-doc/doxygen )"
 
 S="${WORKDIR}"/xerces-c-src
+
+pkg_setup() {
+	eval unset ${!LC_*} LANG
+	eval echo ${LC_ALL}
+}
 
 src_unpack() {
 	unpack ${A}
