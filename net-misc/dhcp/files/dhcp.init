@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.init,v 1.4 2006/02/23 07:20:45 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.init,v 1.5 2006/02/23 11:13:03 uberlord Exp $
 
 depend() {
 	need net
@@ -31,7 +31,7 @@ start() {
 	# Ensure that LD_PRELOAD is really exported
 	[[ -n ${LD_PRELOAD} ]] && export LD_PRELOAD="${LD_PRELOAD}"
 
-	local pidfile=$(get_var pid-file-name)
+	local pidfile="$(get_var pid-file-name)"
 	pidfile="${pidfile:-/var/run/dhcp/dhcp.pid}"
 
 	ebegin "Starting ${CHROOT:+chrooted }dhcpd"
