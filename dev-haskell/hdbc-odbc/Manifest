@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 57e6a6b02bf08e420b738df1c240d0b8 ChangeLog 350
-RMD160 764f129f9cde056e2212563003f7f401ed594d3a ChangeLog 350
-SHA256 76cf240b1ef2f4a313cab33ef775678a8839ddfe5de443bf3425a2d13a1c2b93 ChangeLog 350
+MD5 2989c3415b0ddb397c346792f67bf2ef ChangeLog 496
+RMD160 8a9dee7bd79907f79f5099ac9938408d89adcb18 ChangeLog 496
+SHA256 73103ad7d772fdd4c53676b4b5e437a5c6c224472f4b45c6f34d5c3290b6bacf ChangeLog 496
 MD5 63b34ae2b38cd0edd12d00e6bc94769e files/digest-hdbc-odbc-0.99.0.0 253
 RMD160 40700ff055bad3785a879cf5ca5af0697b141c38 files/digest-hdbc-odbc-0.99.0.0 253
 SHA256 6e0cdbc508ee1fc9be05dc921c203809f48b26ab337da023efbf9f3cab629b2a files/digest-hdbc-odbc-0.99.0.0 253
-MD5 513a0a8a40a6985c83209b214f8f94f6 hdbc-odbc-0.99.0.0.ebuild 693
-RMD160 4314087e7ccd8c8b9313491dc940fa9b1254ed51 hdbc-odbc-0.99.0.0.ebuild 693
-SHA256 e6bbbc4b8d4b266c655c7ee91676d118e47385891d92732fec230c8bbfd7954a hdbc-odbc-0.99.0.0.ebuild 693
+MD5 e1b538c8c72027e00e4befdb7b459caf hdbc-odbc-0.99.0.0.ebuild 693
+RMD160 5e0ae8883ba31e5c2367dad44c96a8aa78fdc84e hdbc-odbc-0.99.0.0.ebuild 693
+SHA256 cdf7b404390b93d3efc1ebeb797cc923842ce040c8ebcfc2c172bfad709703c8 hdbc-odbc-0.99.0.0.ebuild 693
 MD5 c694674dcbef799cd4fdb6914683ebff metadata.xml 223
 RMD160 7783e6057effb8b8f0b79cffe8b557b32c633839 metadata.xml 223
 SHA256 1d00c8be162a6cb87b3de440b3e63e10b39c12d56e8fbfe592e75aed872b2508 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/ZKn/B0cxt+cq+wRAtXEAJ9fio6dcory39jtaUTJ2gsJk7ioCgCghQ1n
-YxFEf54O7deXgZ7aydShkEU=
-=6oeE
------END PGP SIGNATURE-----
