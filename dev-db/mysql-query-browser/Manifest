@@ -1,9 +1,46 @@
-MD5 6e57e5cb1735b484f872ac1b9fdc4ddd ChangeLog 4597
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 228fe6f5e30332d935ce54400a5b621c ChangeLog 4809
+RMD160 78d1d3937fddf657983a52d834526c0ecc827d83 ChangeLog 4809
+SHA256 8bab0385c515c782afeaea745d8a45aae5b79aebcfa19f967516db913da749f1 ChangeLog 4809
 MD5 60eb595eccb61a19e02a1861cc279ef3 files/1.1.12-optional-4.1-support.patch 901
-MD5 e0966e51958acdc3c52b44c721ea38ea files/digest-mysql-query-browser-1.1.12 79
-MD5 80663e572a70ca0c1744b60b33a63290 files/digest-mysql-query-browser-1.1.14 80
-MD5 5a9466771fd5b83e609c10bd35523c68 files/digest-mysql-query-browser-1.1.17 80
+RMD160 37add9c469f6d27ecf62d119e7a90dda894dec15 files/1.1.12-optional-4.1-support.patch 901
+SHA256 177f1a1e3ce45c21001dd6602b6a1c7be5eb44dc1456b77ef9a65769fb8304ab files/1.1.12-optional-4.1-support.patch 901
+MD5 e41933612a7e6249a9e57e8a2e92cc65 files/1.1.18-gtk-fix.patch 542
+RMD160 da84c7e2b315632b01247f4554e5badbd1910dee files/1.1.18-gtk-fix.patch 542
+SHA256 0a0bf0036ffa4b8ac709dddf44c51caa5545b465d931453bfdd0b12c1cd33040 files/1.1.18-gtk-fix.patch 542
+MD5 fb1e2b9595d2f118a73bad1b0de8ff4e files/digest-mysql-query-browser-1.1.12 283
+RMD160 2252c92b44cc9fd2d9ae93c4d14aa9abfb81bf05 files/digest-mysql-query-browser-1.1.12 283
+SHA256 7ad3165ecd7370dfd82084b8f1fb35b916ef2e24839781a96a99a8d89b793945 files/digest-mysql-query-browser-1.1.12 283
+MD5 30045fcad0b38ffa2ea9cda0d06efd5b files/digest-mysql-query-browser-1.1.14 286
+RMD160 c64d1336a9e77ce41d6c8df74f160abd2315b10a files/digest-mysql-query-browser-1.1.14 286
+SHA256 2ecd4d48faf3a2bdec0a413eeee92553b1a7640b5de7166ecc5bc442289b5d79 files/digest-mysql-query-browser-1.1.14 286
+MD5 e48adba2fd42c3eb3e71e632502a575d files/digest-mysql-query-browser-1.1.17 286
+RMD160 0a9380f7bf01f916e88492f4ce10a99789b270e1 files/digest-mysql-query-browser-1.1.17 286
+SHA256 6022e9972ca4d0bfae08ed09ebc660c92a3c420938955bb589006d76ee28d4b3 files/digest-mysql-query-browser-1.1.17 286
+MD5 b37d25cf26e93d3ec96dcf28c8d29069 files/digest-mysql-query-browser-1.1.18 286
+RMD160 3c6dc9e912141e7d1c51f2b790d2652882f07b6d files/digest-mysql-query-browser-1.1.18 286
+SHA256 6f44b9e52036f46f034ab206d8076ecd22a604eeb8c1dd495d179912e97db110 files/digest-mysql-query-browser-1.1.18 286
 MD5 28ed354a0713d1b36793acecb2193738 metadata.xml 687
+RMD160 a3fae3c41bcdf7e04f141ca64ef94a292c1ef016 metadata.xml 687
+SHA256 7185e1dc2aa1395e2473be19323764b985e90976df4c98b29d226cf3fe257a10 metadata.xml 687
 MD5 f0694d31cd405dfbfa22aa1c3e40600b mysql-query-browser-1.1.12.ebuild 1387
+RMD160 82f71cef868ac022490e6b518098e06463d9404c mysql-query-browser-1.1.12.ebuild 1387
+SHA256 15b3a10539f02c732e82381f3ae105936cdbad87d31ddfef5a02d6bafa4cbb72 mysql-query-browser-1.1.12.ebuild 1387
 MD5 e3d1d4851b59073ddcd138863cfdd5b6 mysql-query-browser-1.1.14.ebuild 1321
+RMD160 9ea7da5d522dfda9732be17d4d9bf99b594d100c mysql-query-browser-1.1.14.ebuild 1321
+SHA256 20646d73623baaa8f452c602a3086b4ba7a62f2ed39626fd9498001957c87e65 mysql-query-browser-1.1.14.ebuild 1321
 MD5 c8dfe0fec9a69ab59cde469865fe531b mysql-query-browser-1.1.17.ebuild 1222
+RMD160 cbe209418b2c3d25bbdaa9bdd82a88982e03539a mysql-query-browser-1.1.17.ebuild 1222
+SHA256 56d5df6eab0a11874755920922833684a7c49d69a5a119d081a4958db5997f62 mysql-query-browser-1.1.17.ebuild 1222
+MD5 2fb9e57c9f6165d55e8e0c3d6214cf87 mysql-query-browser-1.1.18.ebuild 1308
+RMD160 85aff58db102f4095842cf02aab200ae09ac7e16 mysql-query-browser-1.1.18.ebuild 1308
+SHA256 36cb116a54a910d1014a717a619b31ed37dcf486fbacf208380f426112888b55 mysql-query-browser-1.1.18.ebuild 1308
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD/hsbI1lqEGTUzyQRAnlhAKCCdFJUr6mOjF4b+dF340ZwROql6gCfR3ZF
+dtTGK5XgvPJr3/CgIrsEu0U=
+=0c9q
+-----END PGP SIGNATURE-----

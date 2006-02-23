@@ -1,0 +1,12 @@
+--- mysql-query-browser-1.1.18/mysql-query-browser/source/linux/MQBookmarkBrowser.cc.orig	2005-10-13 08:22:40.000000000 +0000
++++ mysql-query-browser-1.1.18/mysql-query-browser/source/linux/MQBookmarkBrowser.cc	2006-01-20 15:30:13.000000000 +0000
+@@ -257,7 +257,8 @@
+   {
+     for (unsigned int i=0; i < _menu.items().size(); i++)
+       _menu.items()[i].set_sensitive(false);
+-    _menu.items()[3].set_sensitive(true); // New Folder
++    if (_menu.items().size() > 3)
++	_menu.items()[3].set_sensitive(true); // New Folder
+   }
+ }
+ 

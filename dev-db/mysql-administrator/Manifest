@@ -1,22 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 86cb7d4f80d30be4be5f45d0f7a3247c ChangeLog 4639
+MD5 d5ab0e390e7860847351f6aabfbe1ec7 ChangeLog 4798
+RMD160 825e8c6fc7ac03f504f257359b0a8d5c30670dcf ChangeLog 4798
+SHA256 447c212dad6a3c1f945fd862cf3f4b655fb5dd5e73804b524c5f419210deae3d ChangeLog 4798
 MD5 a86763ed63c1e913c62e1d3bf05758d7 files/1.0.22a-optional-4.1-support.patch 913
+RMD160 430df09db603861bf55b30a036dd8da37db3907c files/1.0.22a-optional-4.1-support.patch 913
+SHA256 9c9d25bf03ea2f66b20852cda81d577e85e90a4c4f11dde3eae1b4d5612fe2f7 files/1.0.22a-optional-4.1-support.patch 913
 MD5 60eb595eccb61a19e02a1861cc279ef3 files/1.1.2-optional-4.1-support.patch 901
-MD5 33ebdb0f3afc107d71706f4cfb9aaea6 files/digest-mysql-administrator-1.0.22a 80
-MD5 ec4abd81ff46189511e438f181d3a648 files/digest-mysql-administrator-1.1.2 79
-MD5 5e05a2bb40896075881fcb00588b2012 files/digest-mysql-administrator-1.1.4 79
-MD5 0ad992f7577ab0f8fedb389534d97602 files/digest-mysql-administrator-1.1.5 79
+RMD160 37add9c469f6d27ecf62d119e7a90dda894dec15 files/1.1.2-optional-4.1-support.patch 901
+SHA256 177f1a1e3ce45c21001dd6602b6a1c7be5eb44dc1456b77ef9a65769fb8304ab files/1.1.2-optional-4.1-support.patch 901
+MD5 daf5daef69ae4d8c5244fcef0cef647c files/digest-mysql-administrator-1.0.22a 286
+RMD160 a8e4e53458c2b02ed1924eab76a61e5edb98c281 files/digest-mysql-administrator-1.0.22a 286
+SHA256 0b2bb6298deb65e6aa0e2d3a1279a7c8bc18817b9d8d5c1dc4b769c83218500d files/digest-mysql-administrator-1.0.22a 286
+MD5 cad8310bea2e323ce6aa717466aef2d7 files/digest-mysql-administrator-1.1.2 283
+RMD160 44cfc27ac883d65899dfea2792d2d706d404125c files/digest-mysql-administrator-1.1.2 283
+SHA256 2883fe57fb6d9a6be27915aef22852778001895358566904466f0de9564d1800 files/digest-mysql-administrator-1.1.2 283
+MD5 ec1bc4638def69ae3463f99ed08530e2 files/digest-mysql-administrator-1.1.4 283
+RMD160 e37efce5333a567f82ee4c1bbe6c4f9b6c3b1103 files/digest-mysql-administrator-1.1.4 283
+SHA256 bcd61c8720b15cfa80733db9a997fe65855fa0694c77b2c49fc4895eb5e38d7d files/digest-mysql-administrator-1.1.4 283
+MD5 7df100879a0c9099bf345c3a8b0df578 files/digest-mysql-administrator-1.1.5 283
+RMD160 8c02170755eff631c8a347d6937ea16e21c873ab files/digest-mysql-administrator-1.1.5 283
+SHA256 d9af80dccc9286d5690fc060540fef31dad771029afcaa1304dc146f59bea5b6 files/digest-mysql-administrator-1.1.5 283
+MD5 03e862b3b0ced7eca997f4a7eacb19f9 files/digest-mysql-administrator-1.1.6 283
+RMD160 126a1924a485f33a73903a2057323728b36c21f4 files/digest-mysql-administrator-1.1.6 283
+SHA256 8da6c35c7e9051e1522d66f5882a043a7f8c3b84b02699bc66ab2c33e87646c6 files/digest-mysql-administrator-1.1.6 283
 MD5 970601ab1b0fc8165fea73976d248ead metadata.xml 739
+RMD160 4277e900ca0a286e8d728f86b389ef8ca60f7919 metadata.xml 739
+SHA256 e0b9f5ff698d0d9b9de823c05edda4b48f884feb56bbc2a34dd8b6c97e5ed47c metadata.xml 739
 MD5 036f53411259d7d8c93c04cbdac66d62 mysql-administrator-1.0.22a.ebuild 1370
+RMD160 3c3d41550d601db84d0a50d543498bbfcc127709 mysql-administrator-1.0.22a.ebuild 1370
+SHA256 663c636fcfcdb6ba895b8f96154b071270d41617fd79cb38cde8ae6ac9ed73ec mysql-administrator-1.0.22a.ebuild 1370
 MD5 c12b85b58da32f7a1a7a41f28a826a1f mysql-administrator-1.1.2.ebuild 1301
+RMD160 d45f7f76f05137b6ca5b2462c540a44d181aeebc mysql-administrator-1.1.2.ebuild 1301
+SHA256 dcfa399fb6d789f416de424aab55096bb12011cbfb23ae7e896360cdd9a356b2 mysql-administrator-1.1.2.ebuild 1301
 MD5 aa370840ac2cacf924ff109adafa04eb mysql-administrator-1.1.4.ebuild 1326
+RMD160 98813bc60dc889f5c8bba66c08cd08d2060b8cd5 mysql-administrator-1.1.4.ebuild 1326
+SHA256 fb1578f90d7a0aa80c44efa03f37a640b4e44e8799669091c79e363d305c2399 mysql-administrator-1.1.4.ebuild 1326
 MD5 b2224b44c802b04c91d09e51d42b8cb1 mysql-administrator-1.1.5.ebuild 1326
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDswFBI1lqEGTUzyQRAtquAKCu0453C4mWYGXmuRjX3xickLCXQgCeMTKr
-hDxXx7jdrYsMMMZzajQxJpU=
-=GgQM
------END PGP SIGNATURE-----
+RMD160 bea54b0bcd8d5e1a732b9d7e9eade778919d0887 mysql-administrator-1.1.5.ebuild 1326
+SHA256 e473fe2e33d14ac2919cf7861ead163368fae02a56908580e7c8b7b37cf587e1 mysql-administrator-1.1.5.ebuild 1326
+MD5 c19271a432e390170985782ee80df8cb mysql-administrator-1.1.6.ebuild 1326
+RMD160 0d4ec239a1151aea71af70899ccc8e50ffdc810e mysql-administrator-1.1.6.ebuild 1326
+SHA256 62775117c20f14bbf6bfeca5fe2785700b08f1bdb2270d5b7ad313f6df5e9d93 mysql-administrator-1.1.6.ebuild 1326
