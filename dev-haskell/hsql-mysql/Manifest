@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 83dd8fe44e0805295820c347dec01131 ChangeLog 342
-RMD160 895c9ab5bd87cbfcee13509226b61951f143298e ChangeLog 342
-SHA256 92a775b470addd36e4e27452ca3c8456e20fd9f497b85b7c947de7ecd0e1caaf ChangeLog 342
+MD5 97b2b615c46c02fa31580a97ffa75cf5 ChangeLog 484
+RMD160 67ba131e4fb0bbb15aeeeb90465db5be9a3488fb ChangeLog 484
+SHA256 cc71abd00e668c724831acbd3e734e574510b3bdc918e3b4c9ee324e0f8be56d ChangeLog 484
 MD5 8b88f3b8f094ddbdd05b6694b7543fc7 files/digest-hsql-mysql-1.7 223
 RMD160 7d319609e94b9fd8a725bbb036d5f6ae37e818f6 files/digest-hsql-mysql-1.7 223
 SHA256 68b6c539208dcf5c7056e412864a29dda67a3bea95995b53b80c981b76e3cedd files/digest-hsql-mysql-1.7 223
-MD5 2bba1b65803009672b889d3075ec5b87 hsql-mysql-1.7.ebuild 941
-RMD160 d85ca4bd5bed5dedebb22ba3faab767efc1e89c9 hsql-mysql-1.7.ebuild 941
-SHA256 9adfc4d3e465c0a32e6e4360317446c8960bfdcbf2e300a6036d3229635f13d2 hsql-mysql-1.7.ebuild 941
+MD5 867a45e584dce5300030b401701a8a72 hsql-mysql-1.7.ebuild 941
+RMD160 b86f4eebfd5784813ffb2b440d43b661418135d0 hsql-mysql-1.7.ebuild 941
+SHA256 8044ae5c19f2f8b2074992e38df7f630943aa4481b37b450b66d7d1cbebd6702 hsql-mysql-1.7.ebuild 941
 MD5 c694674dcbef799cd4fdb6914683ebff metadata.xml 223
 RMD160 7783e6057effb8b8f0b79cffe8b557b32c633839 metadata.xml 223
 SHA256 1d00c8be162a6cb87b3de440b3e63e10b39c12d56e8fbfe592e75aed872b2508 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/QcB/B0cxt+cq+wRAnLAAJkBxMEZvZLdM8KOquE0B1RHZxwWlwCgko6i
-+KV33fJoQ0ho0swragfnEcc=
-=Wm7q
------END PGP SIGNATURE-----

@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4cd5d5df17d325487e34da23b8cb25b6 ChangeLog 364
-RMD160 a694fa278302daf9d81dd646f9665b80c2f15ecc ChangeLog 364
-SHA256 87ff9632e2ec606b8bc7d25d0f955efb5e3d58fed9a3c1cfa89e86b9393acb02 ChangeLog 364
+MD5 186b98accf7b8dc7a5141087f65641be ChangeLog 515
+RMD160 3386d7ad53b9ccadd80e9b44c27b077a5d49b842 ChangeLog 515
+SHA256 596fa143c1680c9074c9a68a7d7427c497c2029ec90f9d5e6af5dfc5d686d4d6 ChangeLog 515
 MD5 8b88f3b8f094ddbdd05b6694b7543fc7 files/digest-hsql-postgresql-1.7 223
 RMD160 7d319609e94b9fd8a725bbb036d5f6ae37e818f6 files/digest-hsql-postgresql-1.7 223
 SHA256 68b6c539208dcf5c7056e412864a29dda67a3bea95995b53b80c981b76e3cedd files/digest-hsql-postgresql-1.7 223
-MD5 53f69b84ca83097bfc0de1524b2e4553 hsql-postgresql-1.7.ebuild 820
-RMD160 202e847334fe955e60e487c1a46f074c831a081f hsql-postgresql-1.7.ebuild 820
-SHA256 29eb648a243186621165df46dab32c9d36b62679b27428ed0bc0d157e3c1e891 hsql-postgresql-1.7.ebuild 820
+MD5 ffdd102b77fbddf2ad5a8b47d746b6d8 hsql-postgresql-1.7.ebuild 820
+RMD160 38f9037a811713672e43c59e3a4648fda886cb04 hsql-postgresql-1.7.ebuild 820
+SHA256 a65bfc0114311eb3388373d010b955080cbf8c880c1e77dd350fb679a7418212 hsql-postgresql-1.7.ebuild 820
 MD5 c694674dcbef799cd4fdb6914683ebff metadata.xml 223
 RMD160 7783e6057effb8b8f0b79cffe8b557b32c633839 metadata.xml 223
 SHA256 1d00c8be162a6cb87b3de440b3e63e10b39c12d56e8fbfe592e75aed872b2508 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/QbW/B0cxt+cq+wRAsdMAJ4ls3y+pznHrxOYXtNZMF+6zmGWgACfcSOT
-n3rsD86NSKB0HC4jjHwnR9g=
-=DP2E
------END PGP SIGNATURE-----
