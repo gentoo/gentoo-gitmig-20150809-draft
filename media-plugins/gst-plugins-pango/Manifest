@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3133af97ca51af8419febb19c2063056 ChangeLog 5133
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-pango-0.10.0 77
 MD5 0558db8f3c6a0a66bc61b6a02f9aeb8d files/digest-gst-plugins-pango-0.10.1 77
@@ -8,6 +5,7 @@ MD5 4d9a06718bb82db62ea71d1b2fc00ae3 files/digest-gst-plugins-pango-0.10.2 77
 MD5 73770b61668a182a437ba54871c72cc1 files/digest-gst-plugins-pango-0.10.3 277
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-pango-0.8.10 72
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-pango-0.8.11 72
+MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-pango-0.8.12 72
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-pango-0.8.8 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-pango-0.8.8-r1 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-pango-0.8.9 71
@@ -18,14 +16,8 @@ MD5 36c8bd5d22146d5ba201505f97f2e87c gst-plugins-pango-0.10.2.ebuild 331
 MD5 e5ac2d57ebdb81edbcf85a915cf2ee3c gst-plugins-pango-0.10.3.ebuild 331
 MD5 ca7332713a6a8e9863e4e74ba47d4bf0 gst-plugins-pango-0.8.10.ebuild 356
 MD5 0b8767a53079c3794fabc3448143544b gst-plugins-pango-0.8.11.ebuild 356
+MD5 9897cdfecf4abd7a73b697adf0a32cc0 gst-plugins-pango-0.8.12.ebuild 364
 MD5 5b58b711dd4a2a3e76aa212d0f83fe20 gst-plugins-pango-0.8.8-r1.ebuild 495
 MD5 6f59ae92dbb0b81b182584e892ba7501 gst-plugins-pango-0.8.8.ebuild 336
 MD5 501ae3ac26a06994fe11d3c2b86b1370 gst-plugins-pango-0.8.9.ebuild 361
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD95cFJrHF4yAQTrARAhpXAKCymmHQq0CLiNDyyqJQ4nK/3K8zQQCgtyBl
-2PGd+UaFpCI7C5iuSZwwXqE=
-=uZmU
------END PGP SIGNATURE-----

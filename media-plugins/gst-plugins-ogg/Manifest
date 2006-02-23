@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 946dc088c6183abe15bdf96725f9b4e6 ChangeLog 7248
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-ogg-0.10.0 77
 MD5 0558db8f3c6a0a66bc61b6a02f9aeb8d files/digest-gst-plugins-ogg-0.10.1 77
@@ -8,6 +5,7 @@ MD5 4d9a06718bb82db62ea71d1b2fc00ae3 files/digest-gst-plugins-ogg-0.10.2 77
 MD5 73770b61668a182a437ba54871c72cc1 files/digest-gst-plugins-ogg-0.10.3 277
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-ogg-0.8.10 72
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-ogg-0.8.11 72
+MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-ogg-0.8.12 72
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-ogg-0.8.8 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-ogg-0.8.9 71
 MD5 9806f09c7c9308f1fca7238c411136d9 gst-plugins-ogg-0.10.0.ebuild 379
@@ -16,13 +14,7 @@ MD5 4cf1ab3b9fc148a7000055f1b81d2dd7 gst-plugins-ogg-0.10.2.ebuild 381
 MD5 d98a30588819d6d70c5c69fe11c83187 gst-plugins-ogg-0.10.3.ebuild 381
 MD5 b1eef783b22ab39b549d2c32d9337e76 gst-plugins-ogg-0.8.10.ebuild 415
 MD5 110890804b61d3cccf73f4b6048d32b0 gst-plugins-ogg-0.8.11.ebuild 417
+MD5 3d6b5f9b8a23bf6b8c59cb53918ddab0 gst-plugins-ogg-0.8.12.ebuild 425
 MD5 c64b45647c6760fadc098389ca325dea gst-plugins-ogg-0.8.8.ebuild 413
 MD5 92fe7711b44092b73cc2b2bf44f47d3b gst-plugins-ogg-0.8.9.ebuild 423
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD95XeJrHF4yAQTrARAodyAJ0QuNDZyIRkna4T8iOdrdbyzHZGiwCfYJ5y
-jo2wMUDo148eTUuBPghTyvA=
-=XwcJ
------END PGP SIGNATURE-----
