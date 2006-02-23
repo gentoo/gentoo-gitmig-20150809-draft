@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/videogen-0.32.ebuild,v 1.7 2005/07/26 15:02:09 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/videogen-0.32.ebuild,v 1.8 2006/02/23 23:20:41 spyderous Exp $
 
 inherit toolchain-funcs
 
@@ -17,10 +17,6 @@ src_unpack() {
 	unpack ${A}
 	sed -i 's:CFLAGS = :# CFLAGS = :' ${S}/Makefile
 	sed -i "s:CC = gcc:CC = $(tc-getCC):" ${S}/Makefile
-}
-
-src_compile() {
-	emake || die "error while compiling videogen"
 }
 
 src_install() {
