@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/baselayout-lite
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/ChangeLog,v 1.11 2006/02/23 17:02:07 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/ChangeLog,v 1.12 2006/02/23 19:36:12 iggy Exp $
+
+  23 Feb 2006; Brian Jackson <iggy@gentoo.org>
+  baselayout-lite-1.0_pre1.ebuild:
+  added uclibc to IUSE, bug 104102, thanks to Carlo Marcelo Arenas Belon
+  <carenas@sajinet.com.pe>
 
   23 Feb 2006; Brian Jackson <iggy@gentoo.org>
   baselayout-lite-1.0_pre1.ebuild:

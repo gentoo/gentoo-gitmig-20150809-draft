@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.9 2006/02/23 17:02:07 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.10 2006/02/23 19:36:12 iggy Exp $
 
-IUSE="build bootstrap"
+IUSE="build bootstrap uclibc"
 
 DESCRIPTION="Baselayout for embedded systems"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/embedded/"
