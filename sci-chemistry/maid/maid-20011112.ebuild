@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maid/maid-20011112.ebuild,v 1.4 2006/02/23 18:56:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maid/maid-20011112.ebuild,v 1.5 2006/02/23 23:15:53 spyderous Exp $
 
 inherit eutils toolchain-funcs
 
@@ -47,10 +47,6 @@ src_unpack() {
 		-e "s:^Cgeneric = .*:Cgeneric = $(tc-getCXX):g" \
 		-e "s:\(Copt.*\)-O:\1${CFLAGS}:g" \
 		makefile
-}
-
-src_compile() {
-	emake || die "emake failed"
 }
 
 src_install() {

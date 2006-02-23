@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-6.0.003.ebuild,v 1.2 2005/12/04 08:42:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-6.0.003.ebuild,v 1.3 2006/02/23 23:17:34 spyderous Exp $
 
 inherit eutils webapp
 
@@ -55,11 +55,6 @@ src_unpack() {
 
 	# Make setup.conf
 	create_setup_conf
-}
-
-src_compile() {
-	# Doesn't compile, it's perl+html
-	true
 }
 
 src_install() {

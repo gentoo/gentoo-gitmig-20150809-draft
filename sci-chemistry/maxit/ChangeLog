@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/maxit
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maxit/ChangeLog,v 1.1 2005/12/20 04:19:43 spyderous Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maxit/ChangeLog,v 1.2 2006/02/23 23:16:35 spyderous Exp $
+
+  23 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; maxit-8.2.ebuild:
+  Remove redundant src_compile(), reported by ciaranm.
 
 *maxit-8.2 (20 Dec 2005)
 
