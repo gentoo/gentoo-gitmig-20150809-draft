@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/camfr/camfr-1.2.ebuild,v 1.3 2005/11/02 20:24:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/camfr/camfr-1.2.ebuild,v 1.4 2006/02/23 15:28:06 pbienst Exp $
 
 inherit eutils distutils fortran
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/camfr/${P}.tgz"
 HOMEPAGE="http://camfr.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86"
 DEPEND="dev-lang/python
 	>=dev-util/scons-0.94
 	>=dev-python/numeric-23.1

@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/camfr
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/camfr/ChangeLog,v 1.3 2005/11/02 20:24:21 genstef Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/camfr/ChangeLog,v 1.4 2006/02/23 15:28:06 pbienst Exp $
+
+  23 Feb 2006; Peter Bienstman <pbienst@gentoo.org> -files/camfr_wrap.cpp,
+  files/machine_cfg.py, +files/throw_patch.diff:
+  Remove big file.
 
   02 Nov 2005; Stefan Schweizer <genstef@gentoo.org> camfr-1.2.ebuild:
   app-text/ghostscript -> virtual/ghostscript
