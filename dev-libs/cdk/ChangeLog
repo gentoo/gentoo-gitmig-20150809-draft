@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.29 2006/02/21 14:51:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.30 2006/02/23 14:57:43 vanquirius Exp $
+
+*cdk-5.0.20060220 (23 Feb 2006)
+
+  23 Feb 2006; Marcelo Goes <vanquirius@gentoo.org>
+  -files/cdk-5.0-20051230-include.patch, -cdk-5.0.20051230.ebuild,
+  +cdk-5.0.20060220.ebuild:
+  5.0.20060220 version bump. This version has an upstream fix for the include
+  problem.
 
   21 Feb 2006; Markus Rothe <corsair@gentoo.org> cdk-5.0.20050424.ebuild:
   Back to ~ppc64; bug #123374
