@@ -1,9 +1,7 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2005.1/ppc64/virtuals,v 1.5 2006/01/22 13:31:32 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2005.1/ppc64/virtuals,v 1.6 2006/02/23 21:24:08 chtekk Exp $
 
 virtual/bootloader     sys-boot/yaboot-static
 virtual/jdk            dev-java/ibm-jdk-bin
 virtual/jre            dev-java/ibm-jre-bin
-virtual/php            dev-lang/php
-virtual/httpd-php      dev-lang/php

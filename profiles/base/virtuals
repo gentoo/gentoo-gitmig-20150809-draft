@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.84 2006/01/19 17:41:44 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.85 2006/02/23 21:24:08 chtekk Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -32,7 +32,7 @@ virtual/glu					x11-base/xorg-x11
 virtual/glut				media-libs/glut
 virtual/gnustep-back		gnustep-base/gnustep-back-art
 virtual/gzip				app-arch/gzip
-virtual/httpd-php			dev-php/mod_php
+virtual/httpd-php			dev-lang/php
 virtual/imap-c-client		net-libs/c-client
 virtual/imapd				net-mail/courier-imap
 virtual/inetd				sys-apps/xinetd
@@ -63,7 +63,7 @@ virtual/pager				sys-apps/less
 virtual/pam					>=sys-libs/pam-0.78
 virtual/pbs					sys-cluster/torque
 virtual/pdfviewer			app-text/xpdf
-virtual/php					dev-php/mod_php
+virtual/php					dev-lang/php
 virtual/portage				sys-apps/portage
 virtual/psviewer			app-text/gv
 virtual/python				dev-lang/python
