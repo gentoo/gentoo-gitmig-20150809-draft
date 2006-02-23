@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/beagle
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.9 2005/12/14 06:46:18 cardoe Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.10 2006/02/23 20:30:07 metalgod Exp $
+
+*beagle-0.2.1 (23 Feb 2006)
+
+  23 Feb 2006; Luis Medinas <metalgod@gentoo.org>
+  +files/beagle-0.2.1-multilib.patch, metadata.xml, +beagle-0.2.1.ebuild:
+  Version Bump. Closes bug #116654 and #119740. Added myself as temporary
+  maintainer.
 
   14 Dec 2005; Doug Goldstein <cardoe@gentoo.org> beagle-0.1.2.ebuild:
   Fix my typo on the modular X depends. Simplify the depends as well.

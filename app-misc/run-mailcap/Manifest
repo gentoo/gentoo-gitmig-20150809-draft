@@ -1,43 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 26fe1aa7f054f2ac26c71b00c287ae82 ChangeLog 4363
-RMD160 c14341b3e8b0774004e33f5d9a1bef635ce2acd4 ChangeLog 4363
-SHA256 92a1d6880e6fcc9867ab9e052abaae6b87dd3259846b762aa34813ff26f9b0e2 ChangeLog 4363
+MD5 48865d8be25b23ff1f0d6cb02841d96f ChangeLog 4501
 MD5 0c15db34fcdaa0b84d2df607d75542fa files/digest-run-mailcap-3.26_p1 70
-RMD160 3f663ed88a24d51ffcb3ae11859f932609e423bd files/digest-run-mailcap-3.26_p1 70
-SHA256 15b2a1f8be8bceda0200e2031be8b74c54c957dbfe8add09966051f2cffbd800 files/digest-run-mailcap-3.26_p1 70
 MD5 319537083b6740e7f97520fa740a4154 files/digest-run-mailcap-3.28_p1 70
-RMD160 26498559f0c242bb2e653a93a276cbd09371b577 files/digest-run-mailcap-3.28_p1 70
-SHA256 9dff2d4cf1a6772df5cdd600353529fb9c589ea368210f593d3eb1cd5bf91a30 files/digest-run-mailcap-3.28_p1 70
 MD5 319537083b6740e7f97520fa740a4154 files/digest-run-mailcap-3.28_p1-r1 70
-RMD160 26498559f0c242bb2e653a93a276cbd09371b577 files/digest-run-mailcap-3.28_p1-r1 70
-SHA256 9dff2d4cf1a6772df5cdd600353529fb9c589ea368210f593d3eb1cd5bf91a30 files/digest-run-mailcap-3.28_p1-r1 70
 MD5 68bdc7fe3ebfb096e4e5a102636cc400 files/digest-run-mailcap-3.34_p1 70
-RMD160 4ce6ba4df2f38c10011170db7429f4b7b320a3cc files/digest-run-mailcap-3.34_p1 70
-SHA256 20452c3e223d31037f691af92713c170dec3a803912dfcf3c6c0aa4952097ea3 files/digest-run-mailcap-3.34_p1 70
 MD5 d0088d928007afcc0011634c7df6693c files/run-mailcap-breakrecursion.patch 419
-RMD160 9e59f825e1c779ac2ddd9a30bddeecc8e1089da5 files/run-mailcap-breakrecursion.patch 419
-SHA256 7e2bbe74d9fbb45d7150346fbb0fd7864f7203a03d52e253a396cb7e736be018 files/run-mailcap-breakrecursion.patch 419
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
-RMD160 10fcb6c60f0d88174ff99fd391d0da3a75bdf89d metadata.xml 244
-SHA256 c7b6d3457d4746a2b281c4ac598bcf78b8e1553d8d63f2523b4cd0f4eaa422b1 metadata.xml 244
 MD5 d1daa7badb28af30e026129166852add run-mailcap-3.26_p1.ebuild 1040
-RMD160 63dd4cc9d622d24ba45ed1f46f38b25fbad210d8 run-mailcap-3.26_p1.ebuild 1040
-SHA256 debcfb0b3ad2024d5ca051d994e001f627fa825fb4ff2614c5d9b1295f8fb35e run-mailcap-3.26_p1.ebuild 1040
-MD5 cd942fe7eab592993da30a710e566ed1 run-mailcap-3.28_p1-r1.ebuild 1023
-RMD160 743c1fe658b2283e0f56d06e519ba3659333970b run-mailcap-3.28_p1-r1.ebuild 1023
-SHA256 df4feb3662d550d86cd803f5be5e0d07f97498da949e97fb28fe9215a45383d4 run-mailcap-3.28_p1-r1.ebuild 1023
+MD5 84e1a1024e051fb83422f43c01eb052c run-mailcap-3.28_p1-r1.ebuild 1029
 MD5 e2f7179d6bfc67f238e81ab035677b7b run-mailcap-3.28_p1.ebuild 1041
-RMD160 24cd5013ac48452ee9bb0b3d2bcb2fe46ba43700 run-mailcap-3.28_p1.ebuild 1041
-SHA256 739a116dcf385c179ef075e764ff0a9cfb8985f91486e11fdd344cd1c677ec25 run-mailcap-3.28_p1.ebuild 1041
-MD5 86c42fbcb5bf89eb0d6c558808b40891 run-mailcap-3.34_p1.ebuild 1087
-RMD160 9fb956ab202a0a4da2e0f5c936c06d2d40d4ea45 run-mailcap-3.34_p1.ebuild 1087
-SHA256 0681919601871487666c8675e992239400c7b6b68fa9528661f43756542bcdff run-mailcap-3.34_p1.ebuild 1087
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD+lSTJrHF4yAQTrARAr6IAKDD/2GTtIU2mutb0RbyN0YCyJQyjwCeLoaT
-isyUS3c1DdpFJ0snatuMv9E=
-=5dy7
------END PGP SIGNATURE-----
+MD5 78f7a1fdf530544e38c587dbff3b172c run-mailcap-3.34_p1.ebuild 1093

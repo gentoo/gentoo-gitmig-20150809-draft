@@ -1,8 +1,43 @@
-MD5 c383ccb3e93e359e5d7fe02574b77101 ChangeLog 1628
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f9bcea38fdf68a53f5928f9c997549ad ChangeLog 1873
+RMD160 490516ba673a264a51fc4249b83470c1cb90c8c5 ChangeLog 1873
+SHA256 57ff9ce79314f20b4f90a3e75fe023e9800682a2cc04d9d29dcd246e55b617d4 ChangeLog 1873
 MD5 76fc6dcf5b9e19be1671056ac3189cff beagle-0.1.1.ebuild 3099
+RMD160 e20c0140e36bf8b375778dcbabc1a396ef1fbd20 beagle-0.1.1.ebuild 3099
+SHA256 59f5f3fae250a173f6967340a0786b989ddacc7656d9ba89ca8a7a831cec3a97 beagle-0.1.1.ebuild 3099
 MD5 6c9eeb1d3f0468b7745e166a4b7ff023 beagle-0.1.2.ebuild 2942
+RMD160 9ec746a024f1e6dbe275155fa392e5864a6e26f2 beagle-0.1.2.ebuild 2942
+SHA256 51145a07054d57c991005ede13a048034ee186d7801239ad0010903f897d06aa beagle-0.1.2.ebuild 2942
+MD5 e69b94e62d3ab6acce22fa4f76f33dba beagle-0.2.1.ebuild 3154
+RMD160 090dc20f494e0ae7a635312e745bc844a461dfaa beagle-0.2.1.ebuild 3154
+SHA256 64d98a9f96b44c469d2145acd2c12571354c53f5d1ba3fb2d26c8547f1fb260f beagle-0.2.1.ebuild 3154
 MD5 3375984ea7d16737cd465bae6ed3d928 files/beagle-0.1.1-null-task-source.patch 1347
+RMD160 d2e0b12ee591f6220f1da99836b5929f96b5c66f files/beagle-0.1.1-null-task-source.patch 1347
+SHA256 e8d6d80877056598c3e784a9ee998f0efc932b73bd0ae83342bcde83d60281be files/beagle-0.1.1-null-task-source.patch 1347
 MD5 9c5c2f0ad3f959022b402ddba4dc671d files/beagle-0.1.1-uri-serialization.patch 2704
+RMD160 75e0b66e10a82c1c5b8b74f21605cc4ed4986d8d files/beagle-0.1.1-uri-serialization.patch 2704
+SHA256 c905cc6a925ff3271e786c2b4b51b2a18113b90e9731687ee0623081719aaa24 files/beagle-0.1.1-uri-serialization.patch 2704
+MD5 a8b3c0c4bcd3f1cd8572a271b142f3b5 files/beagle-0.2.1-multilib.patch 637
+RMD160 af87aa1d85dd0bdbf44f02a23914274d0420d2db files/beagle-0.2.1-multilib.patch 637
+SHA256 86867f480d7a0155aa5d6cc317c3d3483f45bb0751726c6c6ca5c839721f9062 files/beagle-0.2.1-multilib.patch 637
 MD5 4840546d3689482f55c682ef01d4807b files/digest-beagle-0.1.1 66
+RMD160 08fc4de13642536bf39cdb1dec0f647f163b3380 files/digest-beagle-0.1.1 66
+SHA256 8072f66cac068de8b722ae082ffd206cd94cd87d53c33648fdc3c5e6a4f4bb6c files/digest-beagle-0.1.1 66
 MD5 804bc08b17b5cd22cad5ceb7d6d45e9b files/digest-beagle-0.1.2 66
-MD5 43c872252a620e391c449e150e344a3a metadata.xml 224
+RMD160 8d5e040c56cdddaf0c8073b88f3026ee2345b868 files/digest-beagle-0.1.2 66
+SHA256 5c20d41c1f7301603bca65331db204e0a6debb098399c56c399d3ec7befbd01f files/digest-beagle-0.1.2 66
+MD5 28eeb69b044b7177e490c82774c03fc7 files/digest-beagle-0.2.1 244
+RMD160 569650c37d16ea9f25d9cec3297005722b055318 files/digest-beagle-0.2.1 244
+SHA256 a66364cc99de8c05fd17c45aea84804950879b5d680d6a09e38241dc61b4183c files/digest-beagle-0.2.1 244
+MD5 8c88e9a257d221daea17b7175a7f7947 metadata.xml 314
+RMD160 e3e5e79de0549124c4693d22e1a5c35a13510e87 metadata.xml 314
+SHA256 1a2e1ce6af1bd26a8f0a16c348c39be963f09c5c4986b66c3622f32c4e4f367e metadata.xml 314
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD/htWwUpWvClEHQoRAr1PAJ9cUIGqz9/BuEuDpS6I3iX+6dkIowCfYz6Z
+ivE430DKKE7juIzmma5tuH8=
+=ZTVu
+-----END PGP SIGNATURE-----

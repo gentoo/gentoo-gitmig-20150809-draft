@@ -5,4 +5,8 @@
 	<email>dsd@gentoo.org</email>
 	<name>Daniel Drake</name>
 </maintainer>
+<maintainer>
+	<email>metalgod@gentoo.org</email>
+	<name>Luis Medinas</name>
+</maintainer>
 </pkgmetadata>
