@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6c.ebuild,v 1.2 2006/02/22 00:14:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6c.ebuild,v 1.3 2006/02/23 03:32:07 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -29,7 +29,6 @@ src_unpack() {
 
 	# We love to cross-compile
 	epatch "${FILESDIR}"/man-1.6-cross-compile.patch
-	epatch "${FILESDIR}"/man-1.6b-build.patch
 
 	# Fix search order in man.conf so that system installed manpages
 	# will be found first ...
@@ -60,7 +59,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/man-1.5p-mandirlist.patch
 
 	# use non-lazy binds for man
-	append-ldflags $(bindnow-flags)
+	epatch "${FILESDIR}"/man-1.6b-build.patch
 
 	strip-linguas $(eval $(grep ^LANGUAGES= configure) ; echo ${LANGUAGES//,/ })
 }
@@ -84,6 +83,7 @@ src_compile() {
 		+lang ${mylang} \
 		|| die "configure failed"
 
+	export BINDNOW_FLAGS=$(bindnow-flags)
 	emake || die "emake failed"
 }
 

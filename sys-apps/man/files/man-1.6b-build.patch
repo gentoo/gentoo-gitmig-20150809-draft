@@ -5,7 +5,7 @@
  
  # LDFLAGS = -g
 -LDFLAGS = -s
-+LDFLAGS ?= -s
++LDFLAGS += $(BINDNOW_FLAGS)
  
  LIBOBJS = @LIBOBJS@
  

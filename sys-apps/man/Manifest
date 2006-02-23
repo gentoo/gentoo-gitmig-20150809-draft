@@ -58,9 +58,9 @@ SHA256 93be77cccc7dff1d26244144da4d6490d518d695304f621a67f719f0fd4c2217 files/ma
 MD5 7b94b85c02df3b66046e3d01827cd173 files/man-1.6a-parallel-make.patch 657
 RMD160 6336f4ff1ef2be335c8d0c9305a0d9f15fc67aca files/man-1.6a-parallel-make.patch 657
 SHA256 b63f619cc36678853d0e15f83281084ba825d2c51cb84e84591eaa683d58b8ab files/man-1.6a-parallel-make.patch 657
-MD5 90f936cbc365fa88a17525afc2cc0d95 files/man-1.6b-build.patch 175
-RMD160 45cd80dc0a693edb235d52e3a78d0929ed8269b0 files/man-1.6b-build.patch 175
-SHA256 051ae68ba7da6a69208aa83214297e34c8a003f31ce7c66ba4a1e9dc03b5bede files/man-1.6b-build.patch 175
+MD5 bcba5439024c0d7c4e23c6b2a30372f0 files/man-1.6b-build.patch 189
+RMD160 b617c3fcced9191a40dd1ae7845c97d5db83aa1a files/man-1.6b-build.patch 189
+SHA256 fdb02582898f8c6a810c66ffb86171c07c4d6f67aea50da9e18eaa9b8870d84c files/man-1.6b-build.patch 189
 MD5 cc5bb9ed7778c068c9154f0f8c6a5e07 files/man-1.6b-more-sections.patch 291
 RMD160 38055a8cae18769589f379d2f8c5ab98cec1217d files/man-1.6b-more-sections.patch 291
 SHA256 33d876a93a84d0680bf737be9b06968d91ff376800e21ae8799e45357c35efef files/man-1.6b-more-sections.patch 291
@@ -82,16 +82,16 @@ SHA256 f90084374d1317bb6ae4eec7649e2098b3683cb2305b082a1ef4edd322dab34c man-1.6a
 MD5 4fd97a3c2cb1044366aa9633185337d7 man-1.6b-r2.ebuild 3060
 RMD160 e4c7183ee2d6dfd42151efa58b157af5152bfca4 man-1.6b-r2.ebuild 3060
 SHA256 772537277d21e05de608ae5e1917e772efba34509a4b1de8c49fc8fbd799310a man-1.6b-r2.ebuild 3060
-MD5 7f0a994124e27af6fab4237766c5eacb man-1.6c.ebuild 3269
-RMD160 5052ac25ca07308fa4944d9191991cbcae2494bb man-1.6c.ebuild 3269
-SHA256 e385617f8e967dec4a37b81282d3218398cb5210220c2fd8524f8087557311db man-1.6c.ebuild 3269
+MD5 209c9710f50dd47f748ccc86f3885c56 man-1.6c.ebuild 3275
+RMD160 cdea33b9c80e8c311eb86be8b3da4bb9c1a10947 man-1.6c.ebuild 3275
+SHA256 fe7330e4750e112be660e26ced865d2849592b8e69f431c38f963b61dad75edf man-1.6c.ebuild 3275
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD+60d2+ySkm8kpY0RAk/IAJ4rjle4IcCFm4v2t8wxcPb0fdFxAgCgxa3P
-jp8W9Ifs/9CeIFRg+31vHzI=
-=hZFK
+iD8DBQFD/Sze2+ySkm8kpY0RAu98AKC8jmVGnYKsg0gETShhi8lKMw/acgCfb1ni
+XEuR7gBnyjyLLKfEMXb82GE=
+=Nkrq
 -----END PGP SIGNATURE-----
