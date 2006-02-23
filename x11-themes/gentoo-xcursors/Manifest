@@ -4,9 +4,9 @@ SHA256 76dfa6f2687763afe7db851112ea7899c9e155d24deafc5cb6f30f7ad954649e ChangeLo
 MD5 478b2487c26f4f003dc6bfc27135eabc files/digest-gentoo-xcursors-0.3.1 78
 RMD160 9e3e1aa9ea128ef6cc79bf571b9306ef5d19168d files/digest-gentoo-xcursors-0.3.1 78
 SHA256 ec07bd9df81b60f9765372843e553fef5f147ae698135c2d544f552a9aa291cd files/digest-gentoo-xcursors-0.3.1 78
-MD5 044be5d8c5a3f449ce0dda2ee99ac5d9 gentoo-xcursors-0.3.1.ebuild 1548
-RMD160 3d6e0eb8c72c997206cd91f2ec74e81f47c6a81a gentoo-xcursors-0.3.1.ebuild 1548
-SHA256 6fd9b79c714f1903226038df9dd3cb24f393be1fc77e2e2d0771f45c5884930b gentoo-xcursors-0.3.1.ebuild 1548
+MD5 3a359fe0da9bb1291c3274140383cc69 gentoo-xcursors-0.3.1.ebuild 1568
+RMD160 a3fc4432a72fe83ea9afe31c5cf980e4899c7104 gentoo-xcursors-0.3.1.ebuild 1568
+SHA256 8abaa551c92600cd8549ebd509b0f79cdd181e2d0be9f1b474614cc5811f17dc gentoo-xcursors-0.3.1.ebuild 1568
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
