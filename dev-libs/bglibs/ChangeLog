@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/bglibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.31 2006/02/20 21:21:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.32 2006/02/23 07:24:39 tsunam Exp $
+
+  23 Feb 2006; Joshua Jackson <tsunam@gentoo.org> bglibs-1.031.ebuild:
+  Stable on x86; bug #123460
 
   20 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
   bglibs-1.019-r1.ebuild:
