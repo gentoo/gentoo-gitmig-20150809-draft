@@ -7,9 +7,9 @@ SHA256 af50a913d63248bb2f3ada95b79aa45ff09d0a761d042b3004dc064fb0b0d4dd files/di
 MD5 8793a6b95aa23754e0dca0c67b86e9d8 files/fix_shadow_manpages.patch 569
 RMD160 72ba679fafd03304876c356893a3e34bbbcd402d files/fix_shadow_manpages.patch 569
 SHA256 90423c19273a28b6fc01c323c5c91ca9e110e89211257f24b8f5a20d79dda38e files/fix_shadow_manpages.patch 569
-MD5 e8491629139e5a97df0206df55dfea74 libXevie-1.0.0-r1.ebuild 671
-RMD160 efcbc04b48c8a4d97c4f45679e5a822afcc3b8bc libXevie-1.0.0-r1.ebuild 671
-SHA256 1b50f6a078df65aff00f7f72a1ae0c20a0820730bda976450316a26cb316c414 libXevie-1.0.0-r1.ebuild 671
+MD5 7b01be6bd74ab13ea0f5624a381a959c libXevie-1.0.0-r1.ebuild 687
+RMD160 84f3e196d543ad729b1f5c27e62056c4c1e7dd0d libXevie-1.0.0-r1.ebuild 687
+SHA256 23f58499d2d2353548a772db79b80a32a3b9c4a06f161070d569db2c1e57a2ac libXevie-1.0.0-r1.ebuild 687
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
