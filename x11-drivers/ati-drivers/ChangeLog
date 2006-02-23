@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.24 2006/02/22 09:57:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.25 2006/02/23 21:08:51 anarchy Exp $
+
+  23 Feb 2006; <anarchy@gentoo.org>
+  +files/ati-drivers-8.22.5-intermodule.patch, ati-drivers-8.22.5.ebuild:
+  intermodule fix for kernel 2.6.16 wrt bug#123643
 
   22 Feb 2006; Luca Barbato <lu_zero@gentoo.org>
   ati-drivers-8.14.13-r3.ebuild, ati-drivers-8.14.13-r5.ebuild,
