@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.1 2006/02/23 22:43:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.2 2006/02/23 22:57:17 swegener Exp $
 
 inherit flag-o-matic qt3 multilib eutils autotools
 
@@ -57,21 +57,14 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO || die "dodoc failed"
-
-	if ! use caps; then
-		# gtk versions of pinentry refuse to start when suid root
-		for x in curses qt
-		do
-			[ -f "${D}"/usr/bin/pinentry-${x} ] && fperms u+s /usr/bin/pinentry-${x}
-		done
-	fi
 }
 
 pkg_postinst() {
-	if ! use caps; then
-		einfo "pinentry-curses and pinentry-qt are installed SUID root to make use of"
-		einfo "protected memory space. This is needed in order to have a secure place"
-		einfo "to store your passphrases, etc. at runtime but may make some sysadmins"
-		einfo "nervous."
-	fi
+	einfo "We no longer install pinentry-curses and pinentry-qt SUID root by default."
+	einfo "Linux kernels >=2.6.9 support memory locking for unprivileged processes."
+	einfo "The soft resource limit for memory locking specifies the limit an"
+	einfo "unprivileged process may lock into memory. You can also use POSIX"
+	einfo "capabilities to allow pinentry to lock memory. To do so activate the caps"
+	einfo "USE flag and add the CAP_IPC_LOCK capability to the permitted set of"
+	einfo "your users."
 }
