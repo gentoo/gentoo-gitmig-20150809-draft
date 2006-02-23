@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/harvard
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/harvard/ChangeLog,v 1.5 2006/02/22 02:00:31 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/harvard/ChangeLog,v 1.6 2006/02/23 06:53:00 tsunam Exp $
+
+  23 Feb 2006; Joshua Jackson <tsunam@gentoo.org> harvard-2.0.5.ebuild:
+  Stable on x86; bug #123046
 
   22 Feb 2006; Scott Stoddard <deltacow@gentoo.org> harvard-2.0.5.ebuild:
   amd64 stable.
