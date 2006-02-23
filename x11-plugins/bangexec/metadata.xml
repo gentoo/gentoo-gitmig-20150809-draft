@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>net-im</herd>
 <maintainer>
-    <email>anarchy@gentoo.org</email>
+    <email>gothgirl@gentoo.org</email>
 </maintainer>
 <longdescription>
 Bangexec is a simple way of executing shell commands through gaim.

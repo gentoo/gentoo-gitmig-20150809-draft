@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bangexec/bangexec-1.3.0.2.ebuild,v 1.4 2005/10/17 03:45:38 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bangexec/bangexec-1.3.0.2.ebuild,v 1.5 2006/02/23 21:47:38 anarchy Exp $
 
 inherit eutils
 
 DESCRIPTION="GAIM Shell OutPut Plugin"
 HOMEPAGE="http://ignorance.sourceforge.net/bangexec"
-SRC_URI="mirror:sourceforge/ignorance/bangexec/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/ignorance/bangexec/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
