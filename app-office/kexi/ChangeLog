@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.26 2006/02/16 02:05:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.27 2006/02/23 03:06:58 agriffis Exp $
+
+  23 Feb 2006; Aron Griffis <agriffis@gentoo.org> kexi-1.4.2.ebuild:
+  Mark 1.4.2 stable on ia64
 
   16 Feb 2006; Jason Wever <weeve@gentoo.org> kexi-1.5_beta1.ebuild:
   Added ~sparc keyword wrt bug #122204.
