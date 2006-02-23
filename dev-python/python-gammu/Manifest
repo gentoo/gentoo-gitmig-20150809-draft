@@ -1,18 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c2ff9a78eeb1478392d24b0150cf06fa ChangeLog 1378
+MD5 25751eb182ba4356bce5e110bb5cd017 ChangeLog 1512
+RMD160 89840b5e14355346e4e1fcbbb2e9f3fe7a89cb46 ChangeLog 1512
+SHA256 ace0afd9d705b66bce044ec4da40892ea7f270f6d683136ed5a658a22f03f6a2 ChangeLog 1512
+MD5 3a245a687d72a9942ae1ee270eedd959 files/digest-python-gammu-0.10 253
+RMD160 7c38ddec8085ecc18c0e9999d0c0c6d5a8492847 files/digest-python-gammu-0.10 253
+SHA256 d26fd150d0dc75d4c8e3a42d52de1ccebda43fad8f0a63c905406be06c3b73b2 files/digest-python-gammu-0.10 253
 MD5 3715ff8f9fe4cb1cf036e989fc870aea files/digest-python-gammu-0.7 68
+RMD160 67aa738ac7124950868841724163513934f10e99 files/digest-python-gammu-0.7 68
+SHA256 7c957527e75253c4381ab496f50757f66bd8cae9be92f44a68435d62da28dcbf files/digest-python-gammu-0.7 68
 MD5 595803fd24aa71caf59cffe598196a38 files/digest-python-gammu-0.8 68
+RMD160 586f6c908f97744f1022f9ffed33f329f50cd393 files/digest-python-gammu-0.8 68
+SHA256 63d0441dc27d02ed1e738f42007d798183ed185c14160049290ac6a70f85624d files/digest-python-gammu-0.8 68
 MD5 9babe7a56257221b9cb7c9bd86ab8a2e files/digest-python-gammu-0.9 68
+RMD160 53701a4eb5d7802fb844584850e9220e35b13a39 files/digest-python-gammu-0.9 68
+SHA256 dae154a18d8461d8d0fe44eb147efe65ca1be7796c676b4ed8d43c5f9c004048 files/digest-python-gammu-0.9 68
 MD5 cb8ce85b7338a03282bd2567e0228136 metadata.xml 185
+RMD160 f8569df2c75d963ed5db5b07b788f6d12c07413a metadata.xml 185
+SHA256 0703a4a8f659ec2dbeaf60fc5e110b2af9817e261ca73a510e7416d08d8c92d5 metadata.xml 185
+MD5 28772e72cf9f04548f2baf6ba2a8020c python-gammu-0.10.ebuild 685
+RMD160 e10ac094492fc543b35d42bdcc9409843b94a5ea python-gammu-0.10.ebuild 685
+SHA256 d2b77f354ec179271b3e18a4cb95c8db724c2b71d432a4f02df50fc8251310e7 python-gammu-0.10.ebuild 685
 MD5 ff2e00efc5b936fde9c4a3badc901211 python-gammu-0.7.ebuild 692
+RMD160 0624f6b1d4f2a6c5a569c98b3cf4ee461e98543c python-gammu-0.7.ebuild 692
+SHA256 dff7495f464c06e54f0b070f9556055185b4692b6eb5af8604e14cb8836f4ce9 python-gammu-0.7.ebuild 692
 MD5 4ddc08a7db0490daa83810a24c94939f python-gammu-0.8.ebuild 686
+RMD160 2d8570ef93a2b512ba22f37dced3a757be40a702 python-gammu-0.8.ebuild 686
+SHA256 bf64eeb382ac53c15e36a6c75d9f2004f664ba2ec315eb89cd5e44f503099e4a python-gammu-0.8.ebuild 686
 MD5 7c01745086ab2b9c20f8dac097aed497 python-gammu-0.9.ebuild 684
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuSbajG8pv1lIUX4RAk4NAJ4+cFayjdthqisii0bBYihqTJIr4wCgywtT
-PcEHLuXuYkpMqe8OUrpG04I=
-=Boab
------END PGP SIGNATURE-----
+RMD160 64066f9cb6d71e85ac57b60f3a82401ecb074f24 python-gammu-0.9.ebuild 684
+SHA256 23b0830947f9fe430c39fb3003e68636177273bea468f1cc538f8e27d8bbce6e python-gammu-0.9.ebuild 684
