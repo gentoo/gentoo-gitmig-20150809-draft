@@ -1,6 +1,28 @@
-MD5 0fec113145a8e22dd3182bf970942e19 ChangeLog 1412
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ecb0845c4dd1e5b64ddb4e77b93301c0 ChangeLog 1511
+RMD160 c18a4d9f4976094a1ac7481aff3e812ce2f762e2 ChangeLog 1511
+SHA256 5867dbdff414050044f5bb4c6bce673c8577a39a824987de80b302576a23b133 ChangeLog 1511
 MD5 d79c2354a6387a3c996a34326d1eb157 files/digest-pngcrush-1.5.10 67
+RMD160 be9459cccfafdbb931b5976132d1b3c928ba6bda files/digest-pngcrush-1.5.10 67
+SHA256 275efcd234286b4517782d7db2194ace315387082cfb0b4c46c69a3e9f3fdf15 files/digest-pngcrush-1.5.10 67
 MD5 f9f0b42f546c255ca59c741e73f15274 files/digest-pngcrush-1.6.2 66
+RMD160 1092fca52451521bdb6ca8c5e3cda06694f62a14 files/digest-pngcrush-1.6.2 66
+SHA256 c44ed1dcb2671f26c971c050bdf5cd4a1604e1a94be4b092138962d60155c198 files/digest-pngcrush-1.6.2 66
 MD5 035a2156b3aec707f70a2c518efdce93 metadata.xml 211
+RMD160 c04a912c9dab0304edadf910ee3be1b8b2397d0a metadata.xml 211
+SHA256 894b06b022a4565defb3a919606139ac0ece1c9159b721173771bfecbae07dc9 metadata.xml 211
 MD5 9645194da9503eaf8a6a1ea6f5f97cbd pngcrush-1.5.10.ebuild 606
-MD5 edf8d723cb50263fbb2b9cdebb5b2757 pngcrush-1.6.2.ebuild 583
+RMD160 1cbfae62c5315e4fecba33176de3653e844ec31f pngcrush-1.5.10.ebuild 606
+SHA256 436827fbd466f0dac79aea27fe49eb2cbda08794d75c93eee39002c4bcc26de3 pngcrush-1.5.10.ebuild 606
+MD5 4c736d31f9cf5fc3284d84bdf7da5188 pngcrush-1.6.2.ebuild 578
+RMD160 4fc8c3024658ffbf8f2ecd8adbb133a76e230946 pngcrush-1.6.2.ebuild 578
+SHA256 36e343d0d98a8f5e2df4642ff5b377361955a0cf5085b6e18faa765b786a3429 pngcrush-1.6.2.ebuild 578
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD/VbJSENan+PfizARAp9YAJ9V+aGtRoCyr0GEgNSXUYkXVfuJ3gCgkP0A
+cBog3ZDTw4mW61LIQNWMEsE=
+=9mn6
+-----END PGP SIGNATURE-----
