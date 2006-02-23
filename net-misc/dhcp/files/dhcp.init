@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.init,v 1.3 2005/12/14 20:30:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.init,v 1.4 2006/02/23 07:20:45 uberlord Exp $
 
 depend() {
 	need net
@@ -9,7 +9,7 @@ depend() {
 }
 
 get_var() {
-	sed -n 's/^[[:blank:]]\?'"$1"' "*\([^#"]\+\)"*/\1/p' \
+	sed -n 's/^[[:blank:]]\?'"$1"' "*\([^#";]\+\).*/\1/p' \
 		"${CHROOT}/etc/dhcp/dhcpd.conf"
 }
 
@@ -19,8 +19,8 @@ start() {
 		return 1
 	fi
 
-	local leasefile=$(get_var lease-file-name)
-	leasefile="${leasefile:-${CHROOT}/var/lib/dhcp/dhcpd.leases}"
+	local leasefile="$(get_var lease-file-name)"
+	leasefile="${CHROOT}/${leasefile:-/var/lib/dhcp/dhcpd.leases}"
 	if [[ ! -f ${leasefile} ]] ; then
 		ebegin "Creating ${leasefile}"
 		touch "${leasefile}"
@@ -35,17 +35,19 @@ start() {
 	pidfile="${pidfile:-/var/run/dhcp/dhcp.pid}"
 
 	ebegin "Starting ${CHROOT:+chrooted }dhcpd"
-	eval start-stop-daemon --start --exec /usr/sbin/dhcpd \
-		--pidfile "${CHROOT}${pidfile}" \
+	start-stop-daemon --start --exec /usr/sbin/dhcpd \
+		--pidfile "${CHROOT}/${pidfile}" \
 		-- -q -pf "${pidfile}" \
-		-user dhcp -group dhcp "${DHCPD_OPTS}" \
-		${CHROOT:+-chroot "${CHROOT}"} "${IFACE}"
-	eend $? && save_options pidfile "${CHROOT}${pidfile}"
+		-user dhcp -group dhcp ${DHCPD_OPTS} \
+		${CHROOT:+-chroot} "${CHROOT}" ${IFACE}
+	eend $? && save_options pidfile "${CHROOT}/${pidfile}"
 }
 
 stop() {
-	ebegin "Stopping dhcpd"
+	local pidfile="$(get_options pidfile)" chrooted=""
+	[[ ${pidfile} != /var/run/dhcp/dhcp.pid ]] && chrooted="chrooted "
+	ebegin "Stopping ${chrooted}dhcpd"
 	start-stop-daemon --stop --exec /usr/sbin/dhcpd \
-	    --pidfile "$(get_options pidfile)"
+	    --pidfile "${pidfile}"
 	eend $?
 }
