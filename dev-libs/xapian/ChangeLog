@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.17 2006/02/18 11:51:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.18 2006/02/23 09:47:10 dragonheart Exp $
+
+*xapian-0.9.4 (23 Feb 2006)
+
+  23 Feb 2006; Daniel Black <dragonheart@gentoo.org> +xapian-0.9.4.ebuild:
+  version bump
 
 *xapian-0.9.3-r1 (18 Feb 2006)
 
