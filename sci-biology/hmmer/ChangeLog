@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/hmmer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.12 2006/01/24 16:12:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.13 2006/02/23 00:00:48 agriffis Exp $
+
+  23 Feb 2006; Aron Griffis <agriffis@gentoo.org> hmmer-2.3.2-r1.ebuild:
+  Mark 2.3.2-r1 ~ia64
 
   24 Jan 2006; Markus Rothe <corsair@gentoo.org> hmmer-2.3.2-r2.ebuild:
   Added ~ppc64; bug #119723
