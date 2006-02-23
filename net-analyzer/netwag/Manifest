@@ -1,8 +1,40 @@
-MD5 fdb7938fb07490403f80b5ec1a86639f ChangeLog 1740
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 883362a47c700ca68aeb1741105a413c ChangeLog 1863
+RMD160 de2e6b00d876e4458913d9d6d5e956c000d96474 ChangeLog 1863
+SHA256 4a1fe4a76c8a4b344c96400989a60119254c0499be758927aaa6af52d9dcdfde ChangeLog 1863
 MD5 fdee7b0ef5b8e0680cad1e4cf8422931 files/digest-netwag-5.28.0 65
+RMD160 d41eb2e03c2d0c8e783863a3e723bf77ad8ac5ca files/digest-netwag-5.28.0 65
+SHA256 e82312eb30b62903907d0ec2e6e2633e69f9a8e65d6a4cb0980fdc4ee193b805 files/digest-netwag-5.28.0 65
 MD5 b204ff9facfd28dee8e9ece0ef751dc2 files/digest-netwag-5.31.0 135
+RMD160 59454bc912d030b49964af675b91b24cfd0e5223 files/digest-netwag-5.31.0 135
+SHA256 d60bbb84d782165c64d2de4afdb8741db332479c25f5c29569bf7b66b65079e5 files/digest-netwag-5.31.0 135
 MD5 53479e196fe4e17313fa8fa674970b30 files/digest-netwag-5.32.0 135
+RMD160 4aef6819a2ff2e06be396265121583cf89081ea4 files/digest-netwag-5.32.0 135
+SHA256 fc0b3c527c943d7eb6940f821cc8bbc329f64d69d37440a8a9ed04e40c6cda80 files/digest-netwag-5.32.0 135
+MD5 df85c78f6b17ce63eac9cba3c3235ac7 files/digest-netwag-5.33.0 497
+RMD160 a887a0343f7344b9d7849e7f77af4ae835d987f6 files/digest-netwag-5.33.0 497
+SHA256 c061237ac1acc2bb60ec7a70a5e3e1fad09a06615b931f2715bfc3a260aae93a files/digest-netwag-5.33.0 497
 MD5 595b8dd3c2b25d617085a633221eecf1 metadata.xml 257
+RMD160 33e6ca64903072e4ba5fc1c162b2b269f7bc52d9 metadata.xml 257
+SHA256 508181b9ebfa60711ff9caaae0e7ea556d1ed2a77b93c80cab2cc8555254c906 metadata.xml 257
 MD5 efd614677cf66096944b965670ecf278 netwag-5.28.0.ebuild 940
+RMD160 1766a2e563434a668bc192d06473b3e14ce35cd8 netwag-5.28.0.ebuild 940
+SHA256 0df4888ab51c9735a231e77c70dbd942a53ca0dceb946d09e0f517b04a7359e1 netwag-5.28.0.ebuild 940
 MD5 5fcd6d4c69de865817be8ae1078ee594 netwag-5.31.0.ebuild 1286
+RMD160 1bac362bdc6b01e9eaffb6ed23ffe7770bb1fb88 netwag-5.31.0.ebuild 1286
+SHA256 4aaac198de10c3e2f6b990f1223ebb9d55c64afd6cb9edca3dc5eb4be9cc1744 netwag-5.31.0.ebuild 1286
 MD5 3de2bc239c148557be36af75a925e507 netwag-5.32.0.ebuild 1293
+RMD160 ee2c8cdc1f5359ac6f516c35839f52c3f702fe1a netwag-5.32.0.ebuild 1293
+SHA256 a80abc92b1992e4bb843c941f1e0089d8eb13bebf33416ee8a990222db6d8864 netwag-5.32.0.ebuild 1293
+MD5 71fe4ea4d8ca5c2c92de39e17dec524d netwag-5.33.0.ebuild 1294
+RMD160 833bc8ae939850ca3e6582c2e137fc91d4bfa077 netwag-5.33.0.ebuild 1294
+SHA256 d46c9e2044c12aa898914a03fc8131a69983d3693062f5bd80d38d093f6cfa70 netwag-5.33.0.ebuild 1294
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD/Y92mdTrptrqvGERAvhAAKCJwydHssDdjmv9OjOcSTFFkfIRVwCfcC4y
+pn6NZEgOaE5DtyfzcZLuhko=
+=oHTi
+-----END PGP SIGNATURE-----
