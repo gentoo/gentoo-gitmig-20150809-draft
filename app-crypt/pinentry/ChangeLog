@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.39 2006/02/06 10:19:22 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.40 2006/02/23 22:43:26 swegener Exp $
+
+*pinentry-0.7.2-r3 (23 Feb 2006)
+
+  23 Feb 2006; Sven Wegener <swegener@gentoo.org> +files/0.7.2-libcap.patch,
+  +pinentry-0.7.2-r3.ebuild:
+  Revision bump to include optional capabilities support. Thanks to Diego in
+  bug #108845.
 
   06 Feb 2006; Herbie Hopkins <herbs@gentoo.org> pinentry-0.7.2-r2.ebuild:
   Fix problem detecting qt on amd64's no-symlink profile.
