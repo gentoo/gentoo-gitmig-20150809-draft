@@ -1,4 +1,4 @@
-MD5 1213cd7787710edc604ede6c337abab9 ChangeLog 3068
+MD5 25f1164d3020ed3f6894759cd489c34c ChangeLog 3228
 MD5 b8ef37a0c2afb0f5505932411db81db5 files/digest-gst-plugins-jpeg-0.10.0 76
 MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-jpeg-0.10.1 76
 MD5 fe9a62d6f739f7cfd223099d201d8834 files/digest-gst-plugins-jpeg-0.10.2 274
@@ -10,5 +10,5 @@ MD5 9587153b674a8a4417e633479231a3ad gst-plugins-jpeg-0.10.1.ebuild 433
 MD5 189e33b42f2053f889c34a751a9a42fe gst-plugins-jpeg-0.10.2.ebuild 433
 MD5 97ca6946c1b99e8d83af35e6773f39d7 gst-plugins-jpeg-0.8.10.ebuild 434
 MD5 75f60019e2229ba43640ebe6da6f233e gst-plugins-jpeg-0.8.11.ebuild 436
-MD5 ceebbcb994c2f20a5c17e1d4ae3fdc26 gst-plugins-jpeg-0.8.12.ebuild 440
+MD5 cee0c674298a06dcd00247e4cd4e2697 gst-plugins-jpeg-0.8.12.ebuild 439
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
