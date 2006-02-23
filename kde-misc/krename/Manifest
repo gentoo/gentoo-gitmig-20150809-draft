@@ -1,34 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ed1b74e93cceb2dc826d6e6c1c2e6dff ChangeLog 7227
-RMD160 3f722e26883390a3983de2abf0f963eedcb5f1c8 ChangeLog 7227
-SHA256 48a8d6653312bf6c8c3b135273d462f6170bb19d79870abc8c31ffb82106890a ChangeLog 7227
+MD5 381a32e6bbabd1fe3f20acf2253b9022 ChangeLog 7347
 MD5 33db6eb6a321a4988d524bc73f7f87ac files/digest-krename-3.0.10 479
-RMD160 f68634cd25b1e8da7dbf2374db38f37c00341aad files/digest-krename-3.0.10 479
-SHA256 0d0af7e49bc440dafa19846eb3a1410216ded8b9bb6a2f3c427b025b2267e548 files/digest-krename-3.0.10 479
+MD5 e7e975a230e1a486f46211aada427acc files/digest-krename-3.0.11 129
 MD5 2260b6c81392df88078a24516b808867 files/digest-krename-3.0.6 476
-RMD160 f7547d92b53dce07fbee13e64d74a26e3eb7ab97 files/digest-krename-3.0.6 476
-SHA256 4b86df75161f960581d953c4f8385d198a5e23abca929f35d72c189019a68fcc files/digest-krename-3.0.6 476
 MD5 cf0132a517e537d5d0bec606891234fb files/digest-krename-3.0.9 128
-RMD160 20684efb602fadd313b16cf779f4a69ac7851862 files/digest-krename-3.0.9 128
-SHA256 937f4f479cdbce64ab735610c11e1c9a52507c5c256a0f8e6bb88adb55060032 files/digest-krename-3.0.9 128
 MD5 06b4689121bb39d074f1679273fed3fb krename-3.0.10.ebuild 698
-RMD160 b1a5a15f378a6dec9ef52f7ffc6f7e9b5c600a55 krename-3.0.10.ebuild 698
-SHA256 7e90f65f55ca377c18c477647fdf10c02bbcc0ef4aabf5ff7c04025faab3907f krename-3.0.10.ebuild 698
+MD5 6997fc82fca6de61bfcf8618a13197ba krename-3.0.11.ebuild 697
 MD5 a622e20283d5c22b75ec7678a7aa77fc krename-3.0.6.ebuild 755
-RMD160 303bb79295b2e864d9fd17b955ec0efd3b00fcdb krename-3.0.6.ebuild 755
-SHA256 358741ef99cb22f946f15636d2d4d3c50021823bdc7b79177fc3bae8d14b082b krename-3.0.6.ebuild 755
 MD5 69674371a7bbb9daff33f8e4ceb64433 krename-3.0.9.ebuild 693
-RMD160 ac6c820918402f7ebecbc8da2329e947d47e0951 krename-3.0.9.ebuild 693
-SHA256 0976518fdf4160fa637832d348b06c5394d96cdec8b84d1b0739112bc0121445 krename-3.0.9.ebuild 693
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5ITD7IRIh26aCTkRAniNAJ9FwnO/qAJ9eEQTPvl01kmKxuLAeACZAeBI
-0G4RB4JY3B3odZT3GTWeLc8=
-=YHH1
------END PGP SIGNATURE-----
