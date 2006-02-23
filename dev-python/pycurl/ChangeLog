@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycurl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.26 2005/11/19 10:58:24 chriswhite Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.27 2006/02/23 09:01:19 lucass Exp $
+
+*pycurl-7.15.1 (23 Feb 2006)
+
+  23 Feb 2006; Lukasz Strzygowski <lucass@gentoo.org> +pycurl-7.15.1.ebuild:
+  Version bump.
 
   19 Nov 2005; Chris White <chriswhite@gentoo.org> metadata.xml:
   Added japanese metadata.xml translation thanks to Yoshino-san.
