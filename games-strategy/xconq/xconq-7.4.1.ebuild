@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/xconq-7.4.1.ebuild,v 1.7 2005/05/01 17:02:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/xconq-7.4.1.ebuild,v 1.8 2006/02/23 22:38:52 tupone Exp $
 
 inherit eutils games
 
@@ -13,9 +13,11 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-DEPEND="virtual/x11
+RDEPEND="|| ( x11-libs/libXmu virtual/x11 )
 	dev-lang/tk
 	dev-lang/tcl"
+DEPEND="${RDEPEND}
+	|| ( x11-libs/libXaw virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}

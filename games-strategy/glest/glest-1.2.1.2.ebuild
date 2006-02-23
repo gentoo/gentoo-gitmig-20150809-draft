@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-1.2.1.2.ebuild,v 1.1 2005/11/09 02:51:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-1.2.1.2.ebuild,v 1.2 2006/02/23 22:36:20 tupone Exp $
 
 inherit eutils games
 
@@ -26,9 +26,11 @@ RDEPEND=">=media-libs/libsdl-1.2.5
 	>=media-libs/openal-20040303
 	dev-libs/xerces-c
 	virtual/opengl
-	virtual/x11"
+	virtual/glu
+	|| ( x11-libs/libX11 virtual/x11 )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
+	|| ( x11-libs/libXt virtual/x11 )
 	>=sys-devel/gcc-3.2
 	>=dev-util/jam-2.5"
 
