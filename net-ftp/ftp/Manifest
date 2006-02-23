@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9a37fd7398912e1067d9e66a2d9d296d ChangeLog 3956
+MD5 6590010c9a1087f6ee102445deab5f08 ChangeLog 4056
 MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r3 66
 MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r5 66
 MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r6 66
@@ -18,12 +15,5 @@ MD5 d632888a47c713e0ee59c4677338ca57 files/netkit-ftp-0.17-segv.patch 2009
 MD5 c6d25ab53501677130cabad19092b0a5 files/netkit-ftp-0.17-ssl-0.2.patch 29528
 MD5 80ca646c7ebf7d86e937294242836ea6 ftp-0.17-r3.ebuild 1034
 MD5 45fd632e8f4c81f73a7ab97dac005132 ftp-0.17-r5.ebuild 1413
-MD5 b57147a6d8d49fa7a209e23184008ba7 ftp-0.17-r6.ebuild 1545
+MD5 7d6781de2d2aeb59053e4a455f81da60 ftp-0.17-r6.ebuild 1543
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD/c0qKRy60XGEcJIRAmoqAKCsEaXLoSAUphWl5Ts1MVke69lGTQCfVBIo
-4lDBedFgVWB4eE2oNKHMhps=
-=h7uk
------END PGP SIGNATURE-----
