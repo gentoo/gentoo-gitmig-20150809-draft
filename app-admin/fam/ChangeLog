@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.40 2006/02/23 15:42:51 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.41 2006/02/23 18:22:16 gustavoz Exp $
+
+  23 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org> fam-2.7.0-r4.ebuild:
+  Stable on sparc wrt #123829
 
   23 Feb 2006; Marinus Schraal <foser@gentoo.org> fam-2.7.0-r4.ebuild :
   Move dnotify patch to mirrors (#123634)
