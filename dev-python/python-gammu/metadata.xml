@@ -3,4 +3,9 @@
 <pkgmetadata>
 <herd>python</herd>
 <herd>mobile-phone</herd>
+<longdescription>
+python-gammu is a set of Python bindings for Gammu, the GSM mobile
+manager for various cellular phones. It can work with any phone that
+Gammu supports, including many models by Nokia, Siemens, and Alcatel.
+</longdescription>
 </pkgmetadata>

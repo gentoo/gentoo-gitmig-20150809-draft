@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-gammu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.9 2006/02/23 09:26:41 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.10 2006/02/23 09:30:39 lucass Exp $
+
+  23 Feb 2006; Lukasz Strzygowski <lucass@gentoo.org> metadata.xml:
+  Added description to metadata.
 
 *python-gammu-0.10 (23 Feb 2006)
 
