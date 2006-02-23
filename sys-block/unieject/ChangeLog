@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/unieject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.20 2006/02/06 12:54:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.21 2006/02/23 21:41:17 flameeyes Exp $
+
+  23 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> unieject-5.1.ebuild:
+  Change to use sourceforge mirrors instead of berlios. Add missing dependency
+  over gettext for nls.
 
   06 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> unieject-5.1.ebuild:
   Add missing (but not required) elibtoolize. The package is already built
