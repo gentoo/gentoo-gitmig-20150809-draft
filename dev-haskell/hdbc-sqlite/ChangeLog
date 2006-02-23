@@ -1,10 +1,14 @@
 # ChangeLog for dev-haskell/hdbc-sqlite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/ChangeLog,v 1.1 2006/02/23 10:46:34 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/ChangeLog,v 1.2 2006/02/23 20:14:33 dcoutts Exp $
+
+  23 Feb 2006; Duncan Coutts <dcoutts@gentoo.org>
+  hdbc-sqlite-0.99.0.0.ebuild:
+  Changed the dep on hdbc to use a ~ dep (as suggested by ciaranm)
 
 *hdbc-sqlite-0.99.0.0 (23 Feb 2006)
 
-  23 Feb 2006; <duncan@gentoo.org> +metadata.xml,
+  23 Feb 2006; <dcoutts@gentoo.org> +metadata.xml,
   +hdbc-sqlite-0.99.0.0.ebuild:
   Initial import.
 
