@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.6.1.ebuild,v 1.2 2006/02/21 22:52:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.6.1.ebuild,v 1.3 2006/02/23 17:31:55 chutzpah Exp $
 
 inherit eutils flag-o-matic gnome2
 
@@ -18,7 +18,7 @@ RDEPEND="sys-libs/zlib
 	app-arch/bzip2
 	>=dev-libs/glib-2.6
 	>=gnome-extra/libgsf-1.13.2
-	>=x11-libs/goffice-0.1.2
+	~x11-libs/goffice-0.1.2
 	>=dev-libs/libxml2-2.4.12
 	>=x11-libs/pango-1.8.1
 

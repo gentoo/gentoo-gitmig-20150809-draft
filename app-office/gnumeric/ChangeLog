@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.123 2006/02/21 22:52:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.124 2006/02/23 17:31:55 chutzpah Exp $
+
+*gnumeric-1.6.2 (23 Feb 2006)
+
+  23 Feb 2006; Patrick McLean <chutzpah@gentoo.org> gnumeric-1.6.0.ebuild,
+  gnumeric-1.6.1.ebuild, +gnumeric-1.6.2.ebuild:
+  Version bump. New version depends on >=x11-libs/goffice-0.2.0. Make
+  gnumeric-1.6.{1,2} depend on old goffice versions.
 
   21 Feb 2006; Aron Griffis <agriffis@gentoo.org> gnumeric-1.6.1.ebuild:
   Mark 1.6.1 ~ia64. #110767
