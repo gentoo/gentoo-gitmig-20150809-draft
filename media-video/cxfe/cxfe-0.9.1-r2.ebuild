@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/cxfe-0.9.1-r2.ebuild,v 1.2 2005/11/07 10:18:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/cxfe-0.9.1-r2.ebuild,v 1.3 2006/02/23 21:41:39 arj Exp $
 
 inherit eutils
 
@@ -14,10 +14,17 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="lirc"
 
-DEPEND=">=media-libs/xine-lib-1_rc1
-	   virtual/x11
+RDEPEND=">=media-libs/xine-lib-1_rc1
+	   || ( ( x11-libs/libX11
+	      x11-libs/libXext )
+	   virtual/x11 )
 	   lirc? ( app-misc/lirc )
 	   sys-libs/ncurses"
+
+DEPEND="${RDEPEND}
+	   || ( ( x11-libs/libX11
+	      x11-libs/libXext )
+	   virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
