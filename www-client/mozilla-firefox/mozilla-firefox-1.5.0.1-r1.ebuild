@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1-r1.ebuild,v 1.2 2006/02/11 01:44:21 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1-r1.ebuild,v 1.3 2006/02/23 22:28:07 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -245,10 +245,10 @@ pkg_postinst() {
 
 	echo  ""
 	ewarn "Please remember to rebuild any packages that you have built"
-	ewarn "against firefox. Some packages might be busted. Please search"
-	ewarn "http://bugs.gentoo.org, if no bug is open, then please open a new"
-	ewarn "bug report so that these can be fixed. Before filling bugs make sure you"
-	ewarn "have moved ~/.mozilla out of the way and tested ${PN} with a clean profile."
+	ewarn "against firefox. Some packages might be broken by the upgrade; if this"
+	ewarn "is the case, please search at http://bugs.gentoo.org and open a new bug"
+	ewarn "if one does not exist. Before filing any bugs, please move or remove ~/.mozilla"
+	ewarn "and test with a clean profile directory."
 	ewarn "Thank you! anarchy@gentoo.org."
 
 	echo     ""
