@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.48 2006/02/23 18:54:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.49 2006/02/23 20:45:42 smithj Exp $
+
+  23 Feb 2006; <smithj@gentoo.org> ChangeLog:
+  bugzy #106621: x86 stable
 
   23 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   webalizer-2.01.10-r12.ebuild:
