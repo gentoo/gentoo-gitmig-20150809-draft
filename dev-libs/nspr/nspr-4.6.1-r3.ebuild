@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.1-r1.ebuild,v 1.3 2006/02/08 13:42:12 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.1-r3.ebuild,v 1.1 2006/02/23 18:23:13 anarchy Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v${PV}/src/${P}.tar
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ipv6"
 
 DEPEND=""
@@ -24,7 +24,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gcc-visibility.patch
 	epatch "${DISTDIR}"/${P}-disable-gcc-ansi.patch.bz2
 	epatch "${FILESDIR}"/${P}-config.patch
+	epatch "${FILESDIR}"/${P}-config-1.patch
 	epatch "${FILESDIR}"/${P}-lang.patch
+	epatch "${FILESDIR}"/${P}-prtime.patch
 	gnuconfig_update
 }
 
@@ -54,6 +56,7 @@ src_compile() {
 
 src_install () {
 	# Their build system is royally fucked, as usual
+	MINOR_VERSION=6
 	cd ${S}/build
 	make install
 	insinto /usr
@@ -76,7 +79,13 @@ src_install () {
 	if [ "lib" != "$(get_libdir)" ] ; then
 		mv ${D}/usr/lib ${D}/usr/$(get_libdir)
 	fi
-
+	#and while at it move them to files with versions-ending
+	#and link them back :)
+	cd ${D}/usr/$(get_libdir)/nspr
+	for file in *.so; do
+	    mv ${file} ${file}.${MINOR_VERSION}
+	    ln -s ${file}.${MINOR_VERSION} ${file}
+	done
 	# cope with libraries being in /usr/lib/nspr
 	dodir /etc/env.d
 	echo "LDPATH=/usr/$(get_libdir)/nspr" > ${D}/etc/env.d/08nspr
