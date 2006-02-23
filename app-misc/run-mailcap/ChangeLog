@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/run-mailcap
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.35 2006/02/20 23:43:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.36 2006/02/23 20:34:00 corsair Exp $
+
+  23 Feb 2006; Markus Rothe <corsair@gentoo.org>
+  run-mailcap-3.28_p1-r1.ebuild, run-mailcap-3.34_p1.ebuild:
+  Added ~ppc64; bug #123845
 
   20 Feb 2006; Aron Griffis <agriffis@gentoo.org>
   run-mailcap-3.34_p1.ebuild:
