@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r8.ebuild,v 1.15 2006/01/19 13:54:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r8.ebuild,v 1.16 2006/02/23 16:29:53 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -300,8 +300,16 @@ EOF
 	cat <<EOF > ${T}/50qtdir3
 QTDIR=${QTBASE}
 EOF
+
+	cat <<EOF > ${T}/50-qt3-revdep
+SEARCH_DIRS="${QTBASE}"
+EOF
+
 	insinto /etc/env.d
 	doins ${T}/45qt3 ${T}/50qtdir3
+
+	insinto /etc/revdep-rebuild
+	doins ${T}/50-qt3-revdep
 
 	if [ "${SYMLINK_LIB}" = "yes" ]; then
 		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) ${QTBASE}/lib
