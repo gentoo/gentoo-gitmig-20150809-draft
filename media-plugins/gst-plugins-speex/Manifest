@@ -1,4 +1,4 @@
-MD5 d182662457bd517ae33f16ccd1e4a114 ChangeLog 3023
+MD5 464859b20b26c7af10a5078471b38a42 ChangeLog 3185
 MD5 b8ef37a0c2afb0f5505932411db81db5 files/digest-gst-plugins-speex-0.10.0 76
 MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-speex-0.10.1 76
 MD5 fe9a62d6f739f7cfd223099d201d8834 files/digest-gst-plugins-speex-0.10.2 274
@@ -12,7 +12,7 @@ MD5 c208b97314ff8ea6edf9ded23430f28b gst-plugins-speex-0.10.1.ebuild 460
 MD5 399e69d9f09999d3dfae008eb9aada32 gst-plugins-speex-0.10.2.ebuild 460
 MD5 5bb37b64b9f2b974277b15ccfc726b72 gst-plugins-speex-0.8.10.ebuild 461
 MD5 cc717c86c4ac8f487014d7d888b086db gst-plugins-speex-0.8.11.ebuild 463
-MD5 16a77034b071f8b48aedcb9df993792f gst-plugins-speex-0.8.12.ebuild 467
+MD5 9a432573b244fd34c6ec151a5c2c9e95 gst-plugins-speex-0.8.12.ebuild 466
 MD5 8e0d47602ac2c79cbfe00673d898c34f gst-plugins-speex-0.8.8.ebuild 462
 MD5 5952012114468dd78c4396391c2520e3 gst-plugins-speex-0.8.9.ebuild 466
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162

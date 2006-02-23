@@ -1,4 +1,4 @@
-MD5 4c4c82e3092f4b72376c5a9a8c5acffb ChangeLog 2990
+MD5 f6c511ebd99b9b77fcb54d6d4e0e1d6f ChangeLog 3158
 MD5 f311b8f14f7e9987944f51a08a1cdcc1 files/digest-gst-plugins-musepack-0.10.0 75
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-musepack-0.8.10 72
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-musepack-0.8.11 72
@@ -8,7 +8,7 @@ MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-musepack-0.8.9 71
 MD5 da4e1b0288be23fb78fea23f931f7537 gst-plugins-musepack-0.10.0.ebuild 351
 MD5 3ab936e200f7032c0a5af616007cd296 gst-plugins-musepack-0.8.10.ebuild 352
 MD5 c963e5fd9823f81a22c029f37895ff2f gst-plugins-musepack-0.8.11.ebuild 351
-MD5 0ca32c5f7f85179d55a8cf6cac73149d gst-plugins-musepack-0.8.12.ebuild 355
+MD5 834a3ab4be610179cf76a5023caaacf0 gst-plugins-musepack-0.8.12.ebuild 354
 MD5 ff987a5067b3afed9d05e6d8751a6a6a gst-plugins-musepack-0.8.8.ebuild 349
 MD5 cc1f670ee25ff7921281e0b16b6a722a gst-plugins-musepack-0.8.9.ebuild 354
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162

@@ -1,4 +1,4 @@
-MD5 946dc088c6183abe15bdf96725f9b4e6 ChangeLog 7248
+MD5 57340cb557cd5642dc81f2ddc8284da0 ChangeLog 7406
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-ogg-0.10.0 77
 MD5 0558db8f3c6a0a66bc61b6a02f9aeb8d files/digest-gst-plugins-ogg-0.10.1 77
 MD5 4d9a06718bb82db62ea71d1b2fc00ae3 files/digest-gst-plugins-ogg-0.10.2 77
@@ -14,7 +14,7 @@ MD5 4cf1ab3b9fc148a7000055f1b81d2dd7 gst-plugins-ogg-0.10.2.ebuild 381
 MD5 d98a30588819d6d70c5c69fe11c83187 gst-plugins-ogg-0.10.3.ebuild 381
 MD5 b1eef783b22ab39b549d2c32d9337e76 gst-plugins-ogg-0.8.10.ebuild 415
 MD5 110890804b61d3cccf73f4b6048d32b0 gst-plugins-ogg-0.8.11.ebuild 417
-MD5 3d6b5f9b8a23bf6b8c59cb53918ddab0 gst-plugins-ogg-0.8.12.ebuild 425
+MD5 756424ae8ed90aafeed71eb4750ad6c5 gst-plugins-ogg-0.8.12.ebuild 424
 MD5 c64b45647c6760fadc098389ca325dea gst-plugins-ogg-0.8.8.ebuild 413
 MD5 92fe7711b44092b73cc2b2bf44f47d3b gst-plugins-ogg-0.8.9.ebuild 423
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
