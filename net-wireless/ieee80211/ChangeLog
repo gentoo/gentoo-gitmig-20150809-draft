@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/ieee80211
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.29 2006/02/23 14:03:28 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.30 2006/02/23 14:07:04 brix Exp $
+
+  23 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
+  ieee80211-1.1.6.ebuild, ieee80211-1.1.7.ebuild, ieee80211-1.1.8.ebuild,
+  ieee80211-1.1.9.ebuild, ieee80211-1.1.11.ebuild, ieee80211-1.1.12.ebuild:
+  Remove obsolete DEPEND blocks.
 
   23 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
   -files/ieee80211-1.0.3-broadcast.patch,
