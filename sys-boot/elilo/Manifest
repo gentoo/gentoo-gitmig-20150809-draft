@@ -7,7 +7,6 @@ MD5 e23073f70ebd042c239f9b30543627bc elilo-3.6.ebuild 1595
 MD5 85650d47a2950be23774d73205b19e97 files/digest-elilo-3.4-r3 61
 MD5 151eac50c18a0db6412abfdce0444845 files/digest-elilo-3.6 232
 MD5 2640f713f5f00cf0a17e31d220c8242c files/elilo-3.3a-devscheme.patch 3571
-MD5 919dcc4add9f16df42257f177e102a77 files/elilo-3.4 22806
 MD5 2b2d58955c4ad612fee3bcf9b977bc41 files/elilo-3.4-makefile.patch 338
 MD5 d8b9c6b6a99161eaad38eae80039af69 files/elilo-3.4-proc-sigsetjmp.patch 374
 MD5 5e611594843275c52c4b4921b89a23e4 files/elilo.8-3.4 3286
@@ -17,7 +16,7 @@ MD5 78fc29bf052a5244c63204ddcdd7a1ac metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD/QzEJrHF4yAQTrARAiGKAKDMVJ6MZwGinvbr2mT8qoU7KK58IwCcCkUO
-v4FLMIA2N3YDVZRDr4TZZwc=
-=sXT5
+iD8DBQFD/Q1GJrHF4yAQTrARAiItAKDAqZ00v1ne8mKLLHPGHGeTBpQqPQCfQrEJ
+zR6YhjoEt7vNZPDTPXTT6XE=
+=AsEZ
 -----END PGP SIGNATURE-----
