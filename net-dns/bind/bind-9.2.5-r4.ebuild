@@ -1,12 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r4.ebuild,v 1.11 2005/10/30 01:36:11 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r4.ebuild,v 1.12 2006/02/23 18:24:15 voxus Exp $
 
 inherit eutils libtool
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
+	mirror://gentoo/dyndns-samples.tbz2
 	dlz? ( http://dev.gentoo.org/~voxus/dlz/dlz-${PV}.patch.bz2 )"
 
 LICENSE="as-is"
@@ -154,7 +155,7 @@ src_install() {
 
 	# some handy-dandy dynamic dns examples
 	cd ${D}/usr/share/doc/${PF}
-	tar pjxf ${FILESDIR}/dyndns-samples.tbz2
+	tar pjxf ${DISTFILES}/dyndns-samples.tbz2
 
 	dodir /etc/bind /var/bind/{pri,sec}
 	keepdir /var/bind/sec
