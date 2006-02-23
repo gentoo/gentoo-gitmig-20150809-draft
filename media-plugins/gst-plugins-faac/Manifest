@@ -2,7 +2,9 @@ MD5 35da1f9008496bef75149b594fdeee19 ChangeLog 604
 MD5 f311b8f14f7e9987944f51a08a1cdcc1 files/digest-gst-plugins-faac-0.10.0 75
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-faac-0.8.10 72
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-faac-0.8.11 72
+MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-faac-0.8.12 72
 MD5 9b6bc3e6036cddcb7d4027d87ce1e971 gst-plugins-faac-0.10.0.ebuild 325
 MD5 ab1314e4395ea5ccd24547bd12036d61 gst-plugins-faac-0.8.10.ebuild 323
 MD5 38ba2ad280b32b4d9287375f7882456b gst-plugins-faac-0.8.11.ebuild 325
+MD5 69ec4c340ff2b740225e88df0f59cda8 gst-plugins-faac-0.8.12.ebuild 328
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
