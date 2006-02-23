@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6c023756e7e2432c1a7a155ba211848c ChangeLog 1400
+MD5 5a3e68f68a597deb234bce7ebd3b6168 ChangeLog 1577
+RMD160 c9791410115b709cfb57242ff0346b2f183d273c ChangeLog 1577
+SHA256 fe51d3022d91f0eee6e5fc320275cd6c8e1db74868aee9ac368a7ef87b8d49d6 ChangeLog 1577
 MD5 0d5535797dbf42513d9f390cdb6d31f0 files/digest-goffice-0.1.0 67
+RMD160 0f853804950555462d83126c484530b6383f4df7 files/digest-goffice-0.1.0 67
+SHA256 0fcccc00ff97b2a608f1d88574f6217fe2aa4690cbcd439a546744578bf24042 files/digest-goffice-0.1.0 67
 MD5 c332ae77d8f80613f7580d1c359fb778 files/digest-goffice-0.1.2 67
+RMD160 6a069be0f9e29d46c324a7bc4e2b28a0e6bef1c3 files/digest-goffice-0.1.2 67
+SHA256 c741dd3e6b7896234d9640a2ed17e90b684af69c894cae7475c2307bc8bd2266 files/digest-goffice-0.1.2 67
+MD5 2f08f29c2d5ef05b29736b9ef75fad3c files/digest-goffice-0.2.0 247
+RMD160 d432c8b2ddd45eccf61573edeba769e0d276e0ce files/digest-goffice-0.2.0 247
+SHA256 398e8ad9c9b3b1f4bbac52e93b4b9aceb1a44729d51b654aac862bb1dbca15fc files/digest-goffice-0.2.0 247
 MD5 c64dfddbf2ed47739b05cdbd4ca4e939 goffice-0.1.0.ebuild 1269
+RMD160 d9f338072f1fd9c46c7ceb08124846acfad699eb goffice-0.1.0.ebuild 1269
+SHA256 56d6fbf77e144c5cc991fec082961818ceeb124a8bd634aae4776c31c9e4fcc2 goffice-0.1.0.ebuild 1269
 MD5 6a60ab08082a191e64adac5dea683fc9 goffice-0.1.2.ebuild 1276
+RMD160 6c00b495d7305354f7212917f8da77a77c052ccb goffice-0.1.2.ebuild 1276
+SHA256 55b1d2a94b4cfb7b635890d18b44bcc04e58b1a3b1dfa5eeadc9f791ca5ee75b goffice-0.1.2.ebuild 1276
+MD5 4463b034e178a78cd6ecb892b5dd8310 goffice-0.2.0.ebuild 1353
+RMD160 9284a0b5e6353dae07f872ac33e7a19c0840244f goffice-0.2.0.ebuild 1353
+SHA256 1c493286f8949450ef6686546803eb1821488dd4b8f3470d03ad4c1bd66d93e8 goffice-0.2.0.ebuild 1353
 MD5 7ab60162fa2a8efcd8dfa8c42366b1dc metadata.xml 355
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD+5FmJrHF4yAQTrARApzeAKCJtzayZxVSvmf9Xu7tg0AQNOonjACgkaUw
-PsBRqZys1f62CrewwE1gM+s=
-=4nmn
------END PGP SIGNATURE-----
+RMD160 c615373a952d378745eededbb389702d3d40d65a metadata.xml 355
+SHA256 5eedbf049eb7d297420c9dc4f58b392f9a05405a9d755e75661157a45fb51962 metadata.xml 355
