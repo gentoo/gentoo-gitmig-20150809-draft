@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.54 2006/02/22 20:06:10 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.55 2006/02/23 14:59:40 gustavoz Exp $
+
+  23 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  bugzilla-2.18.5.ebuild:
+  Stable on sparc wrt security #123646
 
   22 Feb 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   bugzilla-2.18.5.ebuild:
