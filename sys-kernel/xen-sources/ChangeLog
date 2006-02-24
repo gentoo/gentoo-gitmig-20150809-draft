@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.21 2006/02/21 09:48:59 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.22 2006/02/24 13:18:11 chrb Exp $
+
+  24 Feb 2006; <chrb@gentoo.org> xen-sources-2.6.12.6-r2.ebuild:
+  fix depend, bug #123854
 
 *xen-sources-2.6.16_rc3-r1 (21 Feb 2006)
 
