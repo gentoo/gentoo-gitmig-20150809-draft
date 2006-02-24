@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.35 2006/02/17 07:54:06 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.36 2006/02/24 00:43:57 allanonjl Exp $
+
+  24 Feb 2006; John N. Laliberte <allanonjl@gentoo.org>
+  workrave-1.4.0-r1.ebuild, workrave-1.8.1-r1.ebuild, workrave-1.8.2.ebuild:
+  qa: move sys-devel/gettext to DEPEND
 
 *workrave-1.8.2 (17 Feb 2006)
 
