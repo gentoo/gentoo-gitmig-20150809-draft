@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.10 2006/02/23 19:36:12 iggy Exp $
-
-IUSE="build bootstrap uclibc"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.11 2006/02/24 00:44:58 vapier Exp $
 
 DESCRIPTION="Baselayout for embedded systems"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/embedded/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-*"
+IUSE="build bootstrap"
 
 #PROVIDE="virtual/baselayout"
 #DEPEND="!virtual/baselayout"
@@ -33,7 +33,7 @@ src_install() {
 	#keepdir /proc
 
 	insinto /etc
-	doins ${S}/{fstab,group,nsswitch.conf,passwd,profile.env,protocols,shells}
+	doins ${S}/{fstab,group,passwd,profile.env,protocols,shells}
 
 	# Fixup fstab for devpts support
 	dosed "7i devpts	/dev/pts	devpts	defaults	0 0"
@@ -41,8 +41,6 @@ src_install() {
 	# Fixup the inittab file first
 	sed -i -e 's:/usr/bin/tail:/bin/tail:' ${S}/init/inittab
 	doins ${S}/init/inittab
-
-	use elibc_uclibc && rm -f ${D}/etc/nsswitch.conf
 
 	exeinto /etc/init.d
 	doexe ${S}/init/rc[SK]
