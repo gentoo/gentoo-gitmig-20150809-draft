@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.128 2006/02/09 19:28:04 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.129 2006/02/24 14:21:23 anarchy Exp $
+
+*mozilla-firefox-1.5.0.1-r2 (24 Feb 2006)
+
+  24 Feb 2006; <anarchy@gentoo.org> -mozilla-firefox-1.5.0.1.ebuild,
+  -mozilla-firefox-1.5.0.1-r1.ebuild, +mozilla-firefox-1.5.0.1-r2.ebuild:
+  configure fix and linguas fix
 
 *mozilla-firefox-1.5.0.1-r1 (09 Feb 2006)
 
