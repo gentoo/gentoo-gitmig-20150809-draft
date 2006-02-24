@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-99999999.ebuild,v 1.2 2006/02/14 03:37:59 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-99999999.ebuild,v 1.3 2006/02/24 03:12:31 pebenito Exp $
 
 POLICY_TYPES="strict targeted"
 OPTS="MONOLITHIC=n DISTRO=gentoo QUIET=y"
@@ -31,21 +31,24 @@ S=${WORKDIR}/
 src_unpack() {
 	cvs_src_unpack
 
-	cd ${S}
 	for i in ${POLICY_TYPES}; do
-		einfo "Unpacking sources for ${i} policy"
-		cp -a refpolicy ${i}
-		cp ${FILESDIR}/modules.conf.${i} ${i}/policy/modules.conf
+		mkdir -p ${S}/${i}/policy
+		cp ${FILESDIR}/modules.conf.${i} ${S}/${i}/policy/modules.conf
 	done
 }
 
 src_compile() {
+	cd ${S}/refpolicy
+
+	make ${OPTS} generate || die "Failed to create generated module files"
+
+	make ${OPTS} xml || "XML generation failed."
+
 	for i in ${POLICY_TYPES}; do
-		cd ${S}/${i}
-#		make ${OPTS} TYPE=${i} NAME=${i} conf \
+#		make ${OPTS} TYPE=${i} NAME=${i} LOCAL_ROOT=${S}/${i} conf \
 #			|| die "${i} modules.conf update failed"
 
-		make ${OPTS} TYPE=${i} NAME=${i} base \
+		make ${OPTS} TYPE=${i} NAME=${i} LOCAL_ROOT=${S}/${i} base \
 			|| die "${i} compile failed"
 	done
 }
@@ -53,15 +56,19 @@ src_compile() {
 src_install() {
 	OPTS="${OPTS} DESTDIR=${D}"
 
+	cd ${S}/refpolicy
+
 	for i in ${POLICY_TYPES}; do
-		cd ${S}/${i}
-		make ${OPTS} TYPE=${i} NAME=${i} install \
+		make ${OPTS} TYPE=${i} NAME=${i} LOCAL_ROOT=${S}/${i} install \
 			|| die "${i} install failed."
 
 		make ${OPTS} TYPE=${i} NAME=${i} install-headers \
 			|| die "${i} headers install failed."
 
 		echo "run_init_t" > ${D}/etc/selinux/${i}/contexts/run_init_type
+
+		# libsemanage won't make this on its own
+		keepdir /etc/selinux/${i}/policy
 	done
 
 	dodoc doc/Makefile.example doc/example.{te,fc,if}
@@ -72,20 +79,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	# workaround bugs in libsemanage
-	for i in ${POLICY_TYPES}; do
-		# libsemanage won't make this on its own
-		mkdir -p /etc/selinux/${i}/policy
-
-		# currently seusers cannot be inferred.  for now
-		# inject one into the module store
-		if [ ! -f /etc/selinux/${i}/modules/active/seusers ]; then
-			mkdir -p /etc/selinux/${i}/modules/active
-			echo "root:root:" > /etc/selinux/${i}/modules/active/seusers
-			echo "__default__:user_u:" >> /etc/selinux/${i}/modules/active/seusers
-		fi
-	done
-
 	if has "loadpolicy" $FEATURES ; then
 		for i in ${POLICY_TYPES}; do
 			einfo "Inserting base module into ${i} module store."

@@ -22,6 +22,7 @@ locallogin = base
 logging = base
 lvm = base
 miscfiles = base
+mcs = base
 mls = base
 modutils = base
 mount = base
