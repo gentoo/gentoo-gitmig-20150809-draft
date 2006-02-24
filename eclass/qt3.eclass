@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt3.eclass,v 1.12 2005/09/19 15:28:17 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt3.eclass,v 1.13 2006/02/24 10:08:43 flameeyes Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -28,9 +28,12 @@ addwrite "${QTDIR}/etc/settings"
 addpredict "${QTDIR}/etc/settings"
 
 qt_min_version() {
-	echo "|| ("
-	qt_min_version_list "$@"
-	echo ")"
+	local list=$(qt_min_version_list "$@")
+	if [[ ${list%% *} == "${list}" ]]; then
+		echo "${list}"
+	else
+		echo "|| ( ${list} )"
+	fi
 }
 
 qt_min_version_list() {
