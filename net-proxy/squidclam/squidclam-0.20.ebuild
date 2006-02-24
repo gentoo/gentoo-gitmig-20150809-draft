@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclam/squidclam-0.17.ebuild,v 1.1 2005/10/12 21:27:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclam/squidclam-0.20.ebuild,v 1.1 2006/02/24 22:19:24 mrness Exp $
 
 DESCRIPTION="A redirector for Squid which scans accessed URLs for viruses, using Clam Anti-Virus"
 HOMEPAGE="http://squidclam.sourceforge.net/"
@@ -15,19 +15,13 @@ DEPEND="net-misc/curl
 RDEPEND="${DEPEND}
 	net-proxy/squid"
 
-src_unpack() {
-	unpack ${A}
-
-	sed -i -e "s:/tmpdata/:/tmp/:" ${S}/sample.conf
-}
-
 src_compile() {
 	./configure || die "configure failed"
-	emake || die "make failed"
+	cd src && emake || die "make failed"
 }
 
 src_install() {
-	dobin squidclam
+	dobin src/squidclam
 	insinto /etc
 	newins sample.conf squidclam.conf
 	dodoc antivir.php README Changelog TODO sample.conf

@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f6ed8aa035ae6886724db19558ee989c squidclam-0.18.ebuild 1625
-MD5 4c5a3744e5fb6b957f1343de90d8da87 ChangeLog 927
-MD5 0fcd3e06211b4df6185d71e97e6ff23f metadata.xml 296
-MD5 afa1c5c02baa3f0403152013469b625c squidclam-0.17.ebuild 1625
-MD5 7a831ed6b3ebd9b5c46d3b61a4f64d1c files/digest-squidclam-0.17 65
+MD5 c35219a845560008ebac6831f0ecf0ac ChangeLog 1102
 MD5 d7ece3b9a1e907efa78faa1a3d8f999c files/digest-squidclam-0.18 65
+MD5 1414639cc28842758780e256d8c72d3f files/digest-squidclam-0.20 65
+MD5 0fcd3e06211b4df6185d71e97e6ff23f metadata.xml 296
+MD5 f6ed8aa035ae6886724db19558ee989c squidclam-0.18.ebuild 1625
+MD5 b9264b63388e294dbc4e293725b96e91 squidclam-0.20.ebuild 1558
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDZulVNSP4Vda7IdsRAvytAJwKnWXuFSxArGfu1kxR0bIkof5pdgCfeNux
-j6RBxwAfGZxRy2wqruldp+4=
-=Rw9t
+iD8DBQFD/4afjG8pv1lIUX4RAlvpAJ9VXqdb2ryoClWr9nmN/NefkOfPRwCfbYb5
+F7steVJI3cvbYf0YRo5nRKQ=
+=dqtm
 -----END PGP SIGNATURE-----
