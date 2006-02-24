@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aeb1a409529707513dd5954c650a5e67 otpcalc-0.96.ebuild 729
+MD5 ded776c9915279e88af019594ffda994 otpcalc-0.97.ebuild 795
+MD5 2da57917cc18ce178900650519046289 otpcalc-0.96.ebuild 729
+MD5 d3ec7526d8d92e99b2eb585b35382d1c ChangeLog 1392
 MD5 78714bd1cdeb6709df0a6dcc4c5347ce metadata.xml 410
-MD5 67c2d3becc0cc5fafbf36bc188896d25 otpcalc-0.97.ebuild 811
-MD5 79c96f717d4f2f9f47d8a2a2745e5194 ChangeLog 1292
 MD5 1ce297d1a90353ea4e3ee49a9d21be6d files/digest-otpcalc-0.96 64
-MD5 79ac858c43e67fdc670c1092b51a03ad files/otpcalc-man-table-format.diff 507
 MD5 fb4ade24812b14dd5fc4c2d89dc6a9a5 files/digest-otpcalc-0.97 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC3mH2KRy60XGEcJIRArh8AJwMsed690e+Izb13rW/WA1YqM909gCfc9To
-kbIUXTpR1u8wK6Mhuu+LvWw=
-=VfrP
------END PGP SIGNATURE-----
+MD5 79ac858c43e67fdc670c1092b51a03ad files/otpcalc-man-table-format.diff 507

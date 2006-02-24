@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/otpcalc-0.97.ebuild,v 1.5 2005/07/20 14:38:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/otpcalc-0.97.ebuild,v 1.6 2006/02/24 17:54:15 taviso Exp $
 
 inherit eutils
 
@@ -13,9 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ppc sparc x86"
 IUSE=""
 
-DEPEND="=x11-libs/gtk+-1.2*
-	virtual/x11
-	virtual/libc"
+DEPEND="=x11-libs/gtk+-1.2* virtual/libc"
 
 S=${WORKDIR}/${P/c/C}
 
