@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-pdo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/ChangeLog,v 1.14 2006/01/25 23:40:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/ChangeLog,v 1.15 2006/02/24 14:16:32 jer Exp $
+
+  24 Feb 2006; Jeroen Roovers <jer@gentoo.org> pecl-pdo-1.0.2.ebuild:
+  Stable on hppa (preparation for bug #119461).
 
   25 Jan 2006; Bryan Østergaard <kloeri@gentoo.org pecl-pdo-1.0.2.ebuild:
   Stable on alpha.
