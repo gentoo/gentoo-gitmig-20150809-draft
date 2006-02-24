@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.31.ebuild,v 1.5 2006/02/24 15:19:02 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.34.ebuild,v 1.1 2006/02/24 15:19:02 ciaranm Exp $
 
-inherit vim-plugin eutils
+inherit vim-plugin eutils fdo-mime
 
-DESCRIPTION="Cream is an easy-to-use configuration of the GVim text editor"
+DESCRIPTION="An easy-to-use configuration of the GVim text editor"
 HOMEPAGE="http://cream.sourceforge.net"
 
 DICT_EN="eng_2.0.2"
@@ -21,10 +21,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc mips ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~mips ~amd64 ~alpha ~ia64"
 
-DEPEND="app-arch/unzip"
-RDEPEND=">=app-editors/gvim-6.2
+DEPEND="
+	>=app-editors/gvim-6.4
+	app-arch/unzip"
+RDEPEND="
+	>=app-editors/gvim-6.4
 	dev-util/ctags"
 
 VIM_PLUGIN_HELPTEXT=\
@@ -43,6 +46,20 @@ file://${ROOT}usr/share/doc/${PF}/html/keyboardshortcuts.html
 
 \ - the Cream FAQ:
 file://${ROOT}usr/share/doc/${PF}/html/faq.html"
+
+# Utility function to rename a Vim help file and its links/anchors:
+#   prefix_help_file prefix file [pattern ...]
+prefix_help_file() {
+	local prefix="${1}" ; shift
+	local helpfile="${1}" ; shift
+	while [[ -n "${1}" ]] ; do
+		sed -i "s:\([*|]\)\(${1}[*|]\):\1${prefix}-\2:g" "${helpfile}" \
+			|| die "Failed to sed \"${1}\" on \"${helpfile}\""
+		shift
+	done
+	mv "${helpfile}" "${helpfile%/*}/${prefix}-${helpfile##*/}" \
+		|| die "Failed to rename \"${helpfile}\""
+}
 
 src_unpack() {
 	mkdir -p ${S}/spelldicts
@@ -69,29 +86,36 @@ EOF
 
 	# make taglist ebuild aware, bug #66052
 	epatch ${FILESDIR}/${PN}-0.30-ebuilds.patch
+
+	# rename vim help files to avoid conflicts with other vim packages
+	prefix_help_file cream help/EnhancedCommentify.txt \
+		'EnhancedCommentify' 'EnhComm-[a-zA-Z]\+'
+	prefix_help_file cream help/opsplorer.txt \
+		'opsplorer\.txt' 'opsplorer_[a-z_]\+'
 }
 
 src_install() {
 	# install launcher and menu entry
 	dobin cream
-	insinto /usr/share/applications
-	doins cream.desktop
-	insinto /usr/share/icons
-	doins cream.svg cream.png
+	domenu cream.desktop
+	doicon cream.svg cream.png
 
 	# install shared vim files
 	insinto /usr/share/vim/cream
 	doins *.vim creamrc
 	local dir
-	for dir in addons bitmaps spelldicts filetypes ; do
-		cp -R ${dir} ${D}/usr/share/vim/cream
+	for dir in addons bitmaps filetypes lang spelldicts ; do
+		insinto /usr/share/vim/cream/${dir}
+		doins ${dir}/*
 	done
-	dodir /usr/share/vim/vimfiles
-	cp -R help ${D}/usr/share/vim/vimfiles/doc
+	insinto /usr/share/vim/vimfiles/doc
+	doins help/*.txt
 
 	# install docs
-	dodoc docs/*
+	dodoc docs/{CHANGELOG,DEVELOPER,KEYBOARD,PressRelease,README,RELEASE}.txt
 	dohtml docs-html/*
+	# html doc may be opened from Cream GUI
+	dosym ../../doc/${PF}/html /usr/share/vim/cream/docs-html
 }
 
 pkg_setup() {
@@ -115,3 +139,12 @@ pkg_setup() {
 	epause
 }
 
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	vim-plugin_pkg_postinst
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	vim-plugin_pkg_postrm
+}
