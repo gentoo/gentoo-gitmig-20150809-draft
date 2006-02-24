@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.1.ebuild,v 1.1 2006/02/23 20:30:07 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.1.ebuild,v 1.2 2006/02/24 13:37:44 metalgod Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.beagle-project.org/"
 
 LICENSE="MIT Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 IUSE="debug evo gtk ole pdf python"
 
 RDEPEND="
@@ -21,6 +21,7 @@ RDEPEND="
 	>=dev-libs/atk-1.2.4
 	>=dev-libs/gmime-2.1.19
 	>=dev-dotnet/gtk-sharp-2.8
+	>=gnome-base/librsvg-2.0
 	>=media-libs/libexif-0.6.0
 	>=dev-libs/libxml2-2.6.19
 
