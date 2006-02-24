@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.4.0.ebuild,v 1.1 2006/02/24 05:31:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.4.0.ebuild,v 1.2 2006/02/24 05:38:34 chutzpah Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.daper.net/pub/soft/${PN}/stable/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="flac ffmpeg mad oss vorbis debug alsa speex libsamplerate curl sndfile musepack"
 
 # libvorbis is pulled in so the USE flag is vorbis
