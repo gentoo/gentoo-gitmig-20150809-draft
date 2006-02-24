@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.1.ebuild,v 1.2 2006/02/24 13:37:44 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.1.ebuild,v 1.3 2006/02/24 13:39:32 metalgod Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -110,7 +110,7 @@ src_install() {
 	insinto /usr/share/beagle
 	doins mozilla-extension/beagle.xpi
 
-	dodoc AUTHORS ChangeLog INSTALL NEWS README
+	dodoc AUTHORS INSTALL NEWS README
 }
 
 pkg_postinst() {
