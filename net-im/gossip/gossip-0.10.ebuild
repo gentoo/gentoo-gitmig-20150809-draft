@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.10.ebuild,v 1.1 2006/02/23 14:36:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.10.ebuild,v 1.2 2006/02/24 14:02:26 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -38,3 +38,10 @@ G2CONF="${G2CONF} \
 DOCS="AUTHORS README COPYING ChangeLog INSTALL NEWS README CONTRIBUTORS TODO"
 
 USE_DESTDIR="1"
+
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+
+	gnome2_omf_fix help/*/Makefile.in
+}
