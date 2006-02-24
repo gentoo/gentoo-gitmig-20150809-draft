@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xcopilot/xcopilot-0.6.6.ebuild,v 1.6 2005/07/29 23:15:05 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xcopilot/xcopilot-0.6.6.ebuild,v 1.7 2006/02/24 22:45:54 vanquirius Exp $
 
 MY_P="xcopilot-0.6.6-uc0"
 
@@ -13,10 +13,19 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/libc
-	virtual/x11
-	app-arch/dpkg"
-RDEPEND=""
+RDEPEND="|| ( (	x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libXt
+		x11-libs/libXpm
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXdmcp )
+		virtual/x11 )"
+
+DEPEND="app-arch/dpkg
+	|| ( ( x11-proto/xextproto
+		x11-proto/xproto )
+		virtual/x11 )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -26,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS README NEWS README.uClinux
 }
 
