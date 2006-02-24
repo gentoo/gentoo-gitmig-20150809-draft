@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/pftpfxp-0.11.4.6.ebuild,v 1.2 2004/11/26 14:27:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/pftpfxp-0.11.4.6.ebuild,v 1.3 2006/02/24 21:48:03 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://tanesha.net/bigmess/pftpfxp-v0.11.4mew6.tgz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="crypt"
+IUSE="ssl"
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )"
 S=${WORKDIR}/pftpfxp-mew
 
