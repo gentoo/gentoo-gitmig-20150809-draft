@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a156bad601384ede10cefcc6628b38c0 ChangeLog 1618
+MD5 578f055d47270ea589646f6bb7c9e6f9 ChangeLog 1738
+RMD160 dcb78552a687a732c8dc588f217c704b48781e6c ChangeLog 1738
+SHA256 8c4a712b6997969a0f53e808a3fb6e4b3e03393204b2847cb1debc4897923b91 ChangeLog 1738
 MD5 47067e80e69167a5983a02e56b46dcff files/digest-pecl-pdo-dblib-1.0 60
+RMD160 416c988e591d31cc52256ce4daed73170ecca093 files/digest-pecl-pdo-dblib-1.0 60
+SHA256 8178491eeb06de34368d9088d0397a18a1ec30f6644c31e8f51b9df19706ec25 files/digest-pecl-pdo-dblib-1.0 60
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 b2efdc80a1f4939ef7b2a14e6acfd34b pecl-pdo-dblib-1.0.ebuild 1080
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD2AunugEuf3OQ0akRAl5hAJ0ZSC3SDy6uxBFYpaor9nV6l+NtzACfXGwf
-HtXn7gAMeH/omHGtMdYO8aY=
-=bH6T
------END PGP SIGNATURE-----
+RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a metadata.xml 157
+SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 metadata.xml 157
+MD5 f67f1ee0e7b2302ec04b80384da17f5c pecl-pdo-dblib-1.0.ebuild 1077
+RMD160 06beb0d9a015cf229bf502a9bb2e97045e3b0207 pecl-pdo-dblib-1.0.ebuild 1077
+SHA256 66446422ba3a294d4d926051ced89250c9ecdf49a6e7be9824e3d3c0358102c8 pecl-pdo-dblib-1.0.ebuild 1077
