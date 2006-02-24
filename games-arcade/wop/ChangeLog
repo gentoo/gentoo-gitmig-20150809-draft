@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/wop
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/wop/ChangeLog,v 1.1 2006/02/24 09:53:24 mr_bones_ Exp $
+
+*wop-0.4.1 (24 Feb 2006)
+
+  24 Feb 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +wop-0.4.1.ebuild:
+  initial commit - ebuild submitted by Horst Schirmeier via bug #93695
+
