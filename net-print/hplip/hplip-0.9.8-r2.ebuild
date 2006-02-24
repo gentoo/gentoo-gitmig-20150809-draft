@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.8-r1.ebuild,v 1.2 2006/02/14 16:40:06 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.8-r2.ebuild,v 1.1 2006/02/24 20:37:24 vanquirius Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="HP Linux Imaging and Printing System. Includes net-print/hpijs, sca
 HOMEPAGE="http://hpinkjet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/hpinkjet/${P}.tar.gz
 	foomaticdb? ( mirror://gentoo/foomatic-db-hpijs-${DB_V}.tar.gz )
-	mirror://sourceforge/hpinkjet/${P}-3.patch"
+	mirror://sourceforge/hpinkjet/${P}-4.patch"
 	#http://www.linuxprinting.org/download/foomatic/foomatic-db-hpijs-${DB_V}.tar.gz
 
 LICENSE="GPL-2"
@@ -42,7 +42,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${DISTDIR}"/${P}-3.patch
+	epatch "${DISTDIR}"/${P}-4.patch
 
 	sed -i -e "s:(uint32_t)0xff000000) >> 24))):(uint32_t)0xff000000) >> 24):" \
 		"${S}"/scan/sane/mfpdtf.h
