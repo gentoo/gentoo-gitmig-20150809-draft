@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13_pre6.ebuild,v 1.2 2006/01/29 12:47:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13_pre6.ebuild,v 1.3 2006/02/24 01:49:40 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -55,6 +55,9 @@ src_unpack() {
 
 	# Use update_mtab() to avoid dups in mtab for 'mount -f'
 	epatch "${FILESDIR}"/${PN}-2.12q-use-update_mtab-for-fake.patch
+
+	# Fix building with USE=-nls #123826
+	epatch "${FILESDIR}"/${PN}-2.13-no-nls.patch
 
 	# Fix unreadable df output when using devfs ... this check is kind of 
 	# a hack, but whatever, the output isnt critical at all :P

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.146 2006/02/09 13:32:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.147 2006/02/24 01:49:40 vapier Exp $
+
+  24 Feb 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.13-no-nls.patch, util-linux-2.13_pre6.ebuild:
+  Fix building with USE=-nls #123826 by Chris Fairles.
 
   09 Feb 2006; Joshua Kinard <kumba@gentoo.org> util-linux-2.12r-r2.ebuild:
   Marked stable on mips for Bug #120111.

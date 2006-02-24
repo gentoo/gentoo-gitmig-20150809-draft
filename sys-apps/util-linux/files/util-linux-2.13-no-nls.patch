@@ -1,0 +1,11 @@
+--- include/nls.h
++++ include/nls.h
+@@ -17,6 +17,8 @@
+ # define bindtextdomain(Domain, Directory) /* empty */
+ # undef textdomain
+ # define textdomain(Domain) /* empty */
++# undef setlocale
++# define setlocale(category, locale) /* empty */
+ # define _(Text) (Text)
+ # define N_(Text) (Text)
+ #endif
