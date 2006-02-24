@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.60 2006/02/24 03:21:43 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.61 2006/02/24 17:46:33 allanonjl Exp $
+
+  24 Feb 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +gnome-python-1.4.2.ebuild:
+  re-add 1.4.2 for glimmer.
 
   24 Feb 2006; John N. Laliberte <allanonjl@gentoo.org>
   -gnome-python-1.4.2.ebuild, -gnome-python-1.4.4.ebuild,
