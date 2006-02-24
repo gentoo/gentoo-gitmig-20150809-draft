@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.42 2006/02/24 16:13:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.43 2006/02/24 16:40:43 spb Exp $
+
+  24 Feb 2006; Stephen Bennett <spb@gentoo.org> flex-2.5.33.ebuild:
+  Alpha stable
 
   24 Feb 2006; Markus Rothe <corsair@gentoo.org> flex-2.5.33.ebuild:
   Stable on ppc64
