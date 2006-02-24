@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.80 2006/02/23 16:21:23 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.81 2006/02/24 12:36:44 uberlord Exp $
+
+*dhcp-3.0.4_beta2-r2 (24 Feb 2006)
+*dhcp-3.0.3-r5 (24 Feb 2006)
+
+  24 Feb 2006; Roy Marples <uberlord@gentoo.org>
+  +files/dhcp-3.0.3-dhclient-stdin-conf.patch,
+  +files/dhcp-3.0.4_beta2-dhclient-stdin-conf.patch, +dhcp-3.0.3-r5.ebuild,
+  +dhcp-3.0.4_beta2-r2.ebuild:
+  Added a patch to dhclient so it can read extra config from stdin.
+  Users won't use this, but baselayout-1.12.0_pre17 will.
 
 *dhcp-3.0.3-r4 (23 Feb 2006)
 
