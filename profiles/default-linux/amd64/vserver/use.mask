@@ -1,0 +1,5 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/vserver/use.mask,v 1.1 2006/02/24 14:34:53 hollow Exp $
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# multilib is forced on when we have ${MULTILIB_ABIS} defined
+multilib
