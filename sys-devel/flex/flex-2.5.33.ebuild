@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.33.ebuild,v 1.1 2006/02/24 02:03:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.33.ebuild,v 1.2 2006/02/24 04:35:15 vapier Exp $
 
 inherit eutils flag-o-matic
 
 #DEB_VER=36
 DESCRIPTION="GNU lexical analyser generator"
-HOMEPAGE="http://lex.sourceforge.net/"
-SRC_URI="mirror://sourceforge/lex/${P}.tar.bz2"
+HOMEPAGE="http://flex.sourceforge.net/"
+SRC_URI="mirror://sourceforge/flex/${P}.tar.bz2"
 #	mirror://debian/pool/main/f/flex/${PN}_${PV}-${DEB_VER}.diff.gz"
 
 LICENSE="FLEX"
