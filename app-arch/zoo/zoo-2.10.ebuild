@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/zoo-2.10.ebuild,v 1.24 2006/02/24 04:33:23 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/zoo-2.10.ebuild,v 1.25 2006/02/24 06:51:13 halcy0n Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${P}pl1.tar.gz
-	epatch ${WORKDIR}/${P}-gcc33-issues-fix.patch
+	epatch "${DISTDIR}"/${P}-gcc33-issues-fix.patch
 }
 
 src_compile() {
