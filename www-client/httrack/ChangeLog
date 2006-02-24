@@ -1,6 +1,13 @@
 # ChangeLog for www-client/httrack
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.5 2006/02/19 03:19:40 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.6 2006/02/24 18:57:09 vanquirius Exp $
+
+*httrack-3.40.2 (24 Feb 2006)
+
+  24 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> -httrack-3.40.ebuild,
+  +httrack-3.40.2.ebuild:
+  3.40.2 version bump, hopefully fixes bug 123868, reported by Mehmet Kemal
+  EROL <mehmetkemal at gmx dot net>.
 
   19 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> httrack-3.40.ebuild:
   It still will not compile in parallel, re-adding -j1 dirty, dirty hack.
