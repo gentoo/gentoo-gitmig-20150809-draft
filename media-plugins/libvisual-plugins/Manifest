@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8a3f284186705c1e59b7e1757900d0fe ChangeLog 2319
+RMD160 265cfcde2537791fef8f6641c0d235e54ec20929 ChangeLog 2319
+SHA256 00f4c4c59b80e73cdcab8eb32e4a74d1deaa130aa3db416c0dc05d7ccccea892 ChangeLog 2319
 MD5 e341800a9ecd70a1be2bd3dca5e651e3 files/digest-libvisual-plugins-0.1.6 75
+RMD160 62a8fdd29d75269f4c7fd831d530f09591c5b4ad files/digest-libvisual-plugins-0.1.6 75
+SHA256 d3490ff799e69fee73bdd4adb1f8d8c061992289e715c78c41b97d4a0b3a30ca files/digest-libvisual-plugins-0.1.6 75
 MD5 ef7a43fa14e3c6e823115c74c891dc7c files/digest-libvisual-plugins-0.1.7 75
+RMD160 1bca36523620810b28e45393122a8144d2781fd5 files/digest-libvisual-plugins-0.1.7 75
+SHA256 4749247c5b16ecce4a1395a5934a59879fccc0c15ff2f7ead2ee52d48a5c4be8 files/digest-libvisual-plugins-0.1.7 75
 MD5 ba5f0b6a4d085dd4ddc2667c3574fada files/digest-libvisual-plugins-0.2.0 76
+RMD160 c6f74d468cf378d7079793262f53bce82e71aad7 files/digest-libvisual-plugins-0.2.0 76
+SHA256 69ad2bfd90bffa4aec35327c97fced5ab14376e3ecc34921000b4b04fd927eb8 files/digest-libvisual-plugins-0.2.0 76
 MD5 cd32e1ad4bd26ebca70a0f65350195ba files/libvisual-plugins-0.2.0-configure.patch 414
+RMD160 6d069fcfc5e32f0fd1c7614a6fca87e72e5761b3 files/libvisual-plugins-0.2.0-configure.patch 414
+SHA256 e24fb9ef71bdc3261bb55353b2a48f29085482234974dcd0cd0f389e0d6d7d99 files/libvisual-plugins-0.2.0-configure.patch 414
 MD5 5f2815a67afc789fec162d1ef0cbd1b6 files/libvisual-plugins-0.2.0-gcc4.patch 6921
+RMD160 816299f4f9b82e93c6660e53a671095f24d13a83 files/libvisual-plugins-0.2.0-gcc4.patch 6921
+SHA256 8ba5234b3967aa03193804309a5bb3caadc88f0ec0f85de56dd54ce549faee08 files/libvisual-plugins-0.2.0-gcc4.patch 6921
 MD5 4e8836d46ad26fa82d437ccab5590867 files/libvisual-plugins-0.2.0-mkdirhier.patch 1511
+RMD160 a5cb60867ce92fca6e59de7a198121f146392bb0 files/libvisual-plugins-0.2.0-mkdirhier.patch 1511
+SHA256 828c45f73ddb990bfdbe3a2fb74dca7d123eeb4c445a35794914ff09ef98c5fe files/libvisual-plugins-0.2.0-mkdirhier.patch 1511
 MD5 754678c81877b8e077031dbe33931f59 libvisual-plugins-0.1.6.ebuild 833
+RMD160 7170cbffd66456e7608ebca9cf9e782b72e59579 libvisual-plugins-0.1.6.ebuild 833
+SHA256 68218e5640f12e086bd895623a46476e0aeb4393fcb34b250ad58bda6bf91730 libvisual-plugins-0.1.6.ebuild 833
 MD5 b979542328754f4832e48fcf1afdc627 libvisual-plugins-0.1.7.ebuild 846
-MD5 686284051427ab2391db3eb32708486c libvisual-plugins-0.2.0.ebuild 1487
+RMD160 ae33d14913abf537220b9fda07477bb705c09d1f libvisual-plugins-0.1.7.ebuild 846
+SHA256 839e0921d01ce83a96f135cf3552b7b28738cb6feec583e105092608286175d0 libvisual-plugins-0.1.7.ebuild 846
+MD5 616dcc374061c10f70188882d410c16f libvisual-plugins-0.2.0.ebuild 1492
+RMD160 3fa3070e2997a45b9ce766cb10c5036779a29739 libvisual-plugins-0.2.0.ebuild 1492
+SHA256 7bd5981156e2226122c254eb71a70df78453f2c27369874cb960324fb7fcd2b8 libvisual-plugins-0.2.0.ebuild 1492
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD+kVLKRy60XGEcJIRArcmAKCZ1wx2ax5aVr+TZbZpuwbUh7LcsQCdFCNN
-o0UqnRhH5UlADIaaUsCKmHk=
-=Edg6
------END PGP SIGNATURE-----
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
