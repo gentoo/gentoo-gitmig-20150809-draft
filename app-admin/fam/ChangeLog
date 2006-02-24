@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.41 2006/02/23 18:22:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.42 2006/02/24 21:51:06 nixnut Exp $
+
+  24 Feb 2006; <nixnut@gentoo.org> fam-2.7.0-r4.ebuild:
+  Stable on ppc. bug 123829
 
   23 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org> fam-2.7.0-r4.ebuild:
   Stable on sparc wrt #123829
