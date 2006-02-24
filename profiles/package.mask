@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5030 2006/02/24 17:47:47 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5031 2006/02/24 21:37:25 halcy0n Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1589,9 +1589,4 @@ dev-db/mergeant
 # the new layout (/usr/lib/nsbrowser/plugins)
 # and should work in both mozilla and phoenix.
 =net-www/netscape-plugger-4.0-r2
-
-# <raker@gentoo.org> (16 Jul 2002)
-# libwmfun completes compiling but doesn't appear to support PLDrawString
-# functions correctly.  Masking while incompatible pointers are figured out
-=x11-libs/libwmfun-0.0.4
 
