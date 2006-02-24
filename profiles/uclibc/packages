@@ -6,6 +6,7 @@ app-misc/pax-utils
 -*sys-apps/groff
 # man pages disabled (noman)
 -*sys-apps/man
+-*virtual/man
 -*sys-apps/man-pages
 # this will be added by nls
 -*sys-devel/gettext
