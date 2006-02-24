@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mp3blaster
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.21 2005/12/26 15:09:42 lu_zero Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.22 2006/02/24 04:45:24 chutzpah Exp $
+
+*mp3blaster-3.2.2 (24 Feb 2006)
+
+  24 Feb 2006; Patrick McLean <chutzpah@gentoo.org>
+  +mp3blaster-3.2.2.ebuild:
+  Version bump, thanks to Thomas Cort for updating the ebuild for the new
+  version (bug #121888). Added ~amd64.
 
   26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> mp3blaster-3.1.3.ebuild,
   mp3blaster-3.2.0.ebuild:
