@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1754 2006/02/23 20:20:14 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1755 2006/02/24 10:18:29 s4t4n Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1536,6 +1536,7 @@ x11-libs/qt:immqt - Enable binary incompatible version of immodule for Qt
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
 x11-libs/wxGTK:no_wxgtk1 - Disable gtk support. Must be used in combination with gtk2
 x11-libs/wxGTK:wxgtk1 - Add gtk1 support in addition to optional gtk2ansi and gtk2unicode
+x11-misc/adesklets:ctrlmenu - force CTRL to be pressed to fire context menu
 x11-misc/linuxwacom:dlloader - Installs dynamically linked linuxwacom Xorg driver
 x11-misc/linuxwacom:sdk - Builds wacom X11 driver against installed X11 SDK
 x11-misc/openclipart:gzip - Compresses clip art using gzip
