@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-pdo-sqlite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-sqlite/ChangeLog,v 1.13 2006/01/25 23:33:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-sqlite/ChangeLog,v 1.14 2006/02/24 13:55:45 jer Exp $
+
+  24 Feb 2006; Jeroen Roovers <jer@gentoo.org> pecl-pdo-sqlite-1.0.ebuild:
+  Stable on hppa (preparation for bug #119461).
 
   25 Jan 2006; Bryan Østergaard <kloeri@gentoo.org
   pecl-pdo-sqlite-1.0.ebuild:
