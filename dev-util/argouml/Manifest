@@ -1,6 +1,28 @@
-MD5 4e847be90387a8baab8759eba21dd67a argouml-0.18.1-r1.ebuild 1396
-MD5 a8db6207a43ad42cd68e052c75e1b5a3 argouml-0.19.6.ebuild 1387
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 27c86e76dee6dc4133012b32697e3fb9 ChangeLog 2202
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+RMD160 32e6cfce8daffc2ead0e94d203441bee7e402cd9 ChangeLog 2202
+SHA256 dafdf2c14ce59445bad54c5721236ec58f92c9ca187de5062bd78ec3a92de0b9 ChangeLog 2202
+MD5 4e847be90387a8baab8759eba21dd67a argouml-0.18.1-r1.ebuild 1396
+RMD160 0ba19140e3cb43ca477832c6913901d6e8ba4fec argouml-0.18.1-r1.ebuild 1396
+SHA256 f4365fa9d270b5aadd8d839867fe29d5494800e8db79d95901fa285357f4e0fc argouml-0.18.1-r1.ebuild 1396
+MD5 4ba6a481254f62f3836e0dca8025377c argouml-0.19.6.ebuild 1378
+RMD160 41cb8f4c7cb30948047a8ef1ed27996f9448d700 argouml-0.19.6.ebuild 1378
+SHA256 e5e530f5e87378c77da2cf2bec70b0bb2e5f493bf3315c5ba75abb5ecc10a446 argouml-0.19.6.ebuild 1378
 MD5 d787d7cc7dfb1990dbe39b0c6667efe4 files/digest-argouml-0.18.1-r1 336
+RMD160 b50afc0773e4a8238c2b113514968fd2afaf5607 files/digest-argouml-0.18.1-r1 336
+SHA256 a7756d41ac87ac268b71da30ccea79b9cf86a9999ee6fa130508e767c23bc8fd files/digest-argouml-0.18.1-r1 336
 MD5 b91470e34414adb1a1b46ba53836aa77 files/digest-argouml-0.19.6 337
+RMD160 72139b7a5efa0afb8a4cebddab27689d5e8db02a files/digest-argouml-0.19.6 337
+SHA256 086db2adfe4d0e1c1a2f31f5133e8207b824579614fad30c4b7d3d6384821d02 files/digest-argouml-0.19.6 337
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD/pWs2+ySkm8kpY0RAoGHAJ9+do5m1wKOEbNwMYMyen6xGjZERgCeIOu9
+1SH68FzntGOJR7hMhhU9m5M=
+=3mLc
+-----END PGP SIGNATURE-----

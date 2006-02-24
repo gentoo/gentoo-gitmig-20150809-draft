@@ -1,29 +1,32 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.19.6.ebuild,v 1.2 2005/11/05 20:39:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.19.6.ebuild,v 1.3 2006/02/24 05:11:47 vapier Exp $
 
 inherit java-pkg
 
-DESCRIPTION="ArgoUML is a modelling tool that helps you do your design using UML."
+DESCRIPTION="modelling tool that helps you do your design using UML"
 HOMEPAGE="http://argouml.tigris.org"
 SRC_URI="http://argouml-downloads.tigris.org/nonav/${P}/ArgoUML-${PV}.tar.gz
-		http://argouml-downloads.tigris.org/nonav/${P}/ArgoUML-${PV}-modules.tar.gz
-		doc? ( http://argouml-downloads.tigris.org/nonav/${P}/argomanual-${PV}.pdf
-		http://argouml-downloads.tigris.org/nonav/${P}/quickguide-${PV}.pdf
-		http://argouml-downloads.tigris.org/nonav/${P}/cookbook-${PV}.pdf )"
+	http://argouml-downloads.tigris.org/nonav/${P}/ArgoUML-${PV}-modules.tar.gz
+	doc? ( http://argouml-downloads.tigris.org/nonav/${P}/argomanual-${PV}.pdf
+	http://argouml-downloads.tigris.org/nonav/${P}/quickguide-${PV}.pdf
+	http://argouml-downloads.tigris.org/nonav/${P}/cookbook-${PV}.pdf )"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
-RESTRICT="nomirror"
 IUSE="doc"
+RESTRICT="nomirror"
+
 RDEPEND=">=virtual/jre-1.3"
+
 S=${WORKDIR}
 
 src_compile() { :; }
 
 src_install() {
 	dodir /opt/${PN}/lib/
-	cp -pPR . ${D}/opt/${PN}/lib/
+	cp -pPR . ${D}/opt/${PN}/lib/ || die
 	chmod -R 755 ${D}/opt/${PN}
 	touch ${D}/opt/${PN}/lib/argouml.log
 	chmod a+w ${D}/opt/${PN}/lib/argouml.log
