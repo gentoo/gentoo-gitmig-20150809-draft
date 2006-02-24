@@ -1,12 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.6.2.ebuild,v 1.1 2006/01/16 07:25:56 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.6.2.ebuild,v 1.2 2006/02/24 00:29:28 allanonjl Exp $
 
 IUSE="ssl zlib"
 
-DESCRIPTION="SCREEM (Site CReating and Editing EnvironmenMent) is an
-integrated environment of the creation and maintenance of websites and
-pages"
+DESCRIPTION="SCREEM is an integrated environment of the creation and maintainence of websites and pages"
 SRC_URI="http://ftp1.sourceforge.net/screem/${P}.tar.gz"
 HOMEPAGE="http://www.screem.org"
 KEYWORDS="x86 ~sparc ppc"

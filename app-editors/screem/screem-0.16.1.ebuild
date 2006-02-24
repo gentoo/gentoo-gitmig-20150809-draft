@@ -1,12 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.1.ebuild,v 1.1 2006/01/16 07:25:56 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.1.ebuild,v 1.2 2006/02/24 00:29:28 allanonjl Exp $
 
 inherit gnome2
 
-DESCRIPTION="SCREEM (Site CReating and Editing EnvironmenMent) is an
-integrated environment of the creation and maintenance of websites and
-pages"
+DESCRIPTION="SCREEM is an integrated environment of the creation and maintenance of websites and pages"
 HOMEPAGE="http://www.screem.org/"
 SRC_URI="mirror://sourceforge/screem/${P}.tar.gz"
 
