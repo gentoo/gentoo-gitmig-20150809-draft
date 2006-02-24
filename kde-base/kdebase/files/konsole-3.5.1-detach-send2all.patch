@@ -1,0 +1,26 @@
+Index: kdebase-3.5.1/konsole/konsole/konsole.cpp
+===================================================================
+--- kdebase-3.5.1.orig/konsole/konsole/konsole.cpp
++++ kdebase-3.5.1/konsole/konsole/konsole.cpp
+@@ -3619,6 +3619,21 @@ void Konsole::detachSession(TESession* _
+   sessions.remove(_se);
+   delete ra;
+ 
++  if ( _se->isMasterMode() ) {
++    // Disable master mode when detaching master
++    setMasterMode(false);
++  } else {
++    QPtrListIterator<TESession> from_it(sessions);
++    for(; from_it.current(); ++from_it) {
++      TESession *from = from_it.current();
++      if(from->isMasterMode())
++        disconnect(from->widget(), SIGNAL(keyPressedSignal(QKeyEvent*)),
++	           _se->getEmulation(), SLOT(onKeyPress(QKeyEvent*)));
++    }
++  }
++
++  disconnect(0, 0, _se->getEmulation(), SLOT(onKeyPress(QKeyEvent*)));
++
+   QColor se_tabtextcolor = tabwidget->tabColor( _se->widget() );
+ 
+   disconnect( _se,SIGNAL(done(TESession*)),
