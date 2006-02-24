@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0-r1.ebuild,v 1.8 2006/02/17 20:02:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0-r1.ebuild,v 1.9 2006/02/24 04:07:14 markusle Exp $
 
 inherit eutils toolchain-funcs
 
@@ -104,7 +104,7 @@ src_compile() {
 		(echo | make config CC="$(tc-getCC) -DUSE_LIBTOOL") || atlas_fail
 	fi
 
-	#reconfigure
+	reconfigure
 
 	TMPSTR=$(ls Make.Linux*)
 	ATLAS_ARCH=${TMPSTR#'Make.'}
