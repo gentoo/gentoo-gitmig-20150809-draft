@@ -1,17 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d33e603533afc6da4cd165e705949ccc ChangeLog 2585
+MD5 44902a9344ca748257e6ab35ea10446e ChangeLog 2753
+RMD160 a1d22aba5ff585d81bb71294541dfb391db0f22d ChangeLog 2753
+SHA256 b8a4ab2cb18dadf64385ba28531bcfea12e71bd8908d101977f827cfe7c81d3c ChangeLog 2753
 MD5 4c2f960c03eccba94f44dcbb468cfd59 files/digest-timezone-data-2006a 126
+RMD160 6efcf4d8a760cf22996c22fc68cca20c788d4a76 files/digest-timezone-data-2006a 126
+SHA256 39c9ea429aae2d3153e84dd4f520d2917c04c0c5012f7161bcdb4cfb538dc889 files/digest-timezone-data-2006a 126
 MD5 4ea3ff149003fd3e011d1f17e9a73723 files/digest-timezone-data-2006b 476
-MD5 648febdd6feeaeb8c85323151917d163 files/timezone-data-2005n-makefile.patch 3128
+RMD160 4b8d4f338133a0eef11260fda0e606f7253f50e3 files/digest-timezone-data-2006b 476
+SHA256 c0b3f0197d170438ce5f806b29d6fa251370127e54e963101425f4d3f7cf72de files/digest-timezone-data-2006b 476
+MD5 e9e827c595ba2803b1090afe0cbf4cfa files/timezone-data-2005n-makefile.patch 3138
+RMD160 da24e48311546da1f9afbb0bcb09e0170ec06b01 files/timezone-data-2005n-makefile.patch 3138
+SHA256 8cc60da044c6bc744000dd899019513306f379959b62a48402d5a305dee9f65f files/timezone-data-2005n-makefile.patch 3138
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
+RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
+SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
 MD5 158d3380b6344d8490b4cc82bf5c0a84 timezone-data-2006a.ebuild 848
+RMD160 171efe0c4798e70d3c3d26259ba2db41a7b4f758 timezone-data-2006a.ebuild 848
+SHA256 7b70ea59c7aeef6ea62ec86f906da7cfbebe31d069d19bda9fcfe603df5e59bb timezone-data-2006a.ebuild 848
 MD5 037f5d58b9e78a9f2411a40f68d8a259 timezone-data-2006b.ebuild 854
+RMD160 ec63a12e4d4ccc66933ef2d0471c6a0311b25300 timezone-data-2006b.ebuild 854
+SHA256 c1ad7938e3687a7c28e8048363b50cab1fedc9e535fdb5b06cc77179385595cc timezone-data-2006b.ebuild 854
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD/ckdKRy60XGEcJIRAtzWAJ9vEK0WmhV3a0HXDqa+t/EVna60QwCePn7t
-s+k24mOi/U9R4CAYPZaC/MU=
-=gxGN
+iD8DBQFD/lQC2+ySkm8kpY0RAh9rAJ4qnV//pBr0oZgccmicUjnad8yl5QCeN5je
+nNZ1+0HIOp7GLtgTkk9U/48=
+=f46x
 -----END PGP SIGNATURE-----
