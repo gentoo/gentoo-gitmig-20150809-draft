@@ -1,31 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 23ff8fdfd6c9cb06698c0a399f747481 ChangeLog 1569
-RMD160 779f72f60fe8ce369a6a67942bb35167a96f7901 ChangeLog 1569
-SHA256 6abccad469027ad5078aa37ff657e827e1c0a32f5b45a092cfb59146df22a430 ChangeLog 1569
+MD5 763260860bffd93a7659fce0b8bda50c ChangeLog 1670
 MD5 71d3c9fdec09cd2559f44f313f10f40b files/digest-zoo-2.10 506
-RMD160 914cdf6c342f29e229fdfd2da27db654c267bd31 files/digest-zoo-2.10 506
-SHA256 0fba2fdc31d833a380d331161723b8228333490cb5bffb13c1bce06792aa8382 files/digest-zoo-2.10 506
 MD5 f8be91a6e7183453ae787142ced1709d files/digest-zoo-2.10-r1 506
-RMD160 dbf8d4ce501dd1fa890a1f836c20d136ea50704c files/digest-zoo-2.10-r1 506
-SHA256 8f1bffb58e80e2fbbaf299b20cac484cb95b11a9c783470ea1522f5815d253a2 files/digest-zoo-2.10-r1 506
 MD5 678a28bb007c2daea8ae2f733f36ec06 files/zoo-security-fix.patch 557
-RMD160 e3e30d07bcf7aa86ec15ede24d04dfd35d92c894 files/zoo-security-fix.patch 557
-SHA256 b645e7f4e3d29cb65abcaeb87959ad3da83196a6c8c398dc3c8360c37238f674 files/zoo-security-fix.patch 557
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-RMD160 5b59fc85d3bafae0872cf691e5f032bac39ba539 metadata.xml 310
-SHA256 39e1273dd60bd3ceb460e9366a648c8fa21db1c292df4573e69f41cf6c84f6fc metadata.xml 310
-MD5 a8692bda430cba19f019af7736f644d9 zoo-2.10-r1.ebuild 782
-RMD160 602f39c17539e1efad325f84b0ce67a0aa78244a zoo-2.10-r1.ebuild 782
-SHA256 3353d1a2b1d7cb5b1874681c23c98772f61807f3dc1cf6d88f3d5b0fdc4a41a6 zoo-2.10-r1.ebuild 782
+MD5 a0a0782d2c1b88bc7e9ee6fa4a291d6a zoo-2.10-r1.ebuild 781
 MD5 c14edf1e6eb8585f9a07f634a560aab6 zoo-2.10.ebuild 728
-RMD160 1cd382b3d70d6421361d9968526102329a1bfbab zoo-2.10.ebuild 728
-SHA256 15ac1a9e664644ec48b1781005a55b33c0fb0d2a6979533b3995e1d682d4050b zoo-2.10.ebuild 728
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD/q1ACRZPokWLroQRAu0PAJ9FlqjxFYSw5pES9HUuofgEMTpNNQCgiF7T
-3PCkrqKwRCJaw47bCZtO9ks=
-=ng+d
------END PGP SIGNATURE-----
