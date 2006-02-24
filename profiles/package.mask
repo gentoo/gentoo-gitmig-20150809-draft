@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5028 2006/02/24 10:59:17 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5029 2006/02/24 17:07:07 dcoutts Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -38,9 +38,6 @@ dev-haskell/hsql-mysql
 dev-haskell/hsql-postgresql
 dev-haskell/hsql-sqlite
 dev-haskell/hsql-odbc
-dev-haskell/hdbc
-dev-haskell/hdbc-postgresql
-dev-haskell/hdbc-sqlite
 dev-haskell/hdbc-odbc
 
 # Diego Pettenò <flameeyes@gentoo.org> (21 Feb 2006)
