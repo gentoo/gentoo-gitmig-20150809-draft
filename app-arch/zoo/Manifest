@@ -1,7 +1,17 @@
-MD5 763260860bffd93a7659fce0b8bda50c ChangeLog 1670
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 496855cc0b1450590dce277f1601b05d ChangeLog 1785
 MD5 71d3c9fdec09cd2559f44f313f10f40b files/digest-zoo-2.10 506
 MD5 f8be91a6e7183453ae787142ced1709d files/digest-zoo-2.10-r1 506
 MD5 678a28bb007c2daea8ae2f733f36ec06 files/zoo-security-fix.patch 557
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 a0a0782d2c1b88bc7e9ee6fa4a291d6a zoo-2.10-r1.ebuild 781
+MD5 c066cbbdf104f057775bc9d76fe59899 zoo-2.10-r1.ebuild 781
 MD5 c14edf1e6eb8585f9a07f634a560aab6 zoo-2.10.ebuild 728
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFD/xWWKRy60XGEcJIRAmqqAJ46uV35TubwH0uw/4of2lxxIurCdwCdGrLJ
+swjvbui8AAsH3LIatULxfkk=
+=cgRe
+-----END PGP SIGNATURE-----
