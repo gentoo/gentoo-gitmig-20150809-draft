@@ -1,31 +1,79 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4d995748208a585a0b70a0b99713181d ChangeLog 2177
+MD5 1d26cc245ca496977f07c6032a6d1ebe ChangeLog 2311
+RMD160 0871c0643debc3a473630d249660a9b1264c7fe9 ChangeLog 2311
+SHA256 66c2a66d7caa178b72462666a0cbb53f8ccf2d6e75be937ff4233956f8f74752 ChangeLog 2311
 MD5 2f259f814a98c467de95996fb25ca882 files/confd 483
+RMD160 d1e2eb411d90ed0b54834bc0ee90970c1fe4bd20 files/confd 483
+SHA256 a56d6fb764338435d7d11e0a506c39d30a9d42ae5bce404d1a96e16c80e8c634 files/confd 483
 MD5 ee61af624456e7fc0ea870d40435fd70 files/digest-mwcollect-2.1.1 66
+RMD160 855cc778fb7eff93c3f792fb41bf842a446ea18c files/digest-mwcollect-2.1.1 66
+SHA256 6739588ab036130f51f116cb37a9206fc54fa713a2f11e2824a0dbb3ade036cf files/digest-mwcollect-2.1.1 66
 MD5 e25a6bca07df41cad22a6901a200651a files/digest-mwcollect-2.1.2 66
+RMD160 bcfeb38d400b51589300a4a97cb3f3e2044fa161 files/digest-mwcollect-2.1.2 66
+SHA256 eacfe9379c6c84473e459da1eb7ee8351f6142e0c89c6b7169d73820bad6c4f1 files/digest-mwcollect-2.1.2 66
 MD5 e5858653fce66aec74497f826c24257b files/digest-mwcollect-3.0.0 67
+RMD160 2d10971b7cc535bcdb0299d367ef54fb4ff48105 files/digest-mwcollect-3.0.0 67
+SHA256 c7035f75781abab05b4f96b51dd7852c68ef481da4f760bee6605e243a55c706 files/digest-mwcollect-3.0.0 67
 MD5 f2249b3f742943a9e4f421794c2e4a23 files/digest-mwcollect-3.0.1 67
+RMD160 5a2ce764762a9ad7f9bc69ce2e797a1f4debb983 files/digest-mwcollect-3.0.1 67
+SHA256 f3bbdd9f89c577be4bd41e67c53bc2441dc03567678e9417b519d8848cee48e8 files/digest-mwcollect-3.0.1 67
 MD5 d3125ebdedcfc77ff8da25db2d4bf2a9 files/digest-mwcollect-3.0.2 67
+RMD160 c184cb3015e66fbeff807210b506307c93b598bc files/digest-mwcollect-3.0.2 67
+SHA256 c123b00e9f1929f1ffaf070c565b3f64a0feffdf370323433ae72d5d7a9ef73a files/digest-mwcollect-3.0.2 67
 MD5 55e03f1cb4649f133a2e0d93f7fdfd58 files/digest-mwcollect-3.0.3 67
+RMD160 a0f7970f5b2d40f243a30626dcc831185b242f5f files/digest-mwcollect-3.0.3 67
+SHA256 4b2a774f86cbf306d1ce4094c9f6ac713b9c137bfa6813fd202539f342a5f6f4 files/digest-mwcollect-3.0.3 67
+MD5 375fa648f1da9717d17b690797471d2e files/digest-mwcollect-3.0.4 67
+RMD160 68ae89205714000a1bc2c09402cfbb36580911ac files/digest-mwcollect-3.0.4 67
+SHA256 589ceece3c2f1b21c8da55177daba21df5ca8ba9cd636912ed9cf702c17d2533 files/digest-mwcollect-3.0.4 67
 MD5 e3153602840749cdacb2144ea9d35007 files/initd 753
+RMD160 bd66ea3619f22e214e8f7a6a2edffa52e1a5d58d files/initd 753
+SHA256 27288cf424e4381694040a304179b8be80ce5f1b1be09076700346093b00bce3 files/initd 753
 MD5 5d6b56a56d282b0e9919fd25dd1bc421 files/mwcollect-3.0.0-capacity.patch 676
+RMD160 48055e05f0881652cec90ed29c08982b7620b740 files/mwcollect-3.0.0-capacity.patch 676
+SHA256 a41fcbf6d32ef6d95cc4b59825da5ade6aa9c03153c9a66e75032a1368f8b3e0 files/mwcollect-3.0.0-capacity.patch 676
 MD5 5d6b56a56d282b0e9919fd25dd1bc421 files/mwcollect-3.0.1-capacity.patch 676
+RMD160 48055e05f0881652cec90ed29c08982b7620b740 files/mwcollect-3.0.1-capacity.patch 676
+SHA256 a41fcbf6d32ef6d95cc4b59825da5ade6aa9c03153c9a66e75032a1368f8b3e0 files/mwcollect-3.0.1-capacity.patch 676
 MD5 ee437e038ad5c1da95f9c9924a9e1b01 files/mwcollect-3.0.1-modules.patch 1384
+RMD160 dd629b6faed919b24cc482d399952e5308530c13 files/mwcollect-3.0.1-modules.patch 1384
+SHA256 88a2648074899650829111925976fd0f624ebf6e06095ae0f0bbfa0aefb35565 files/mwcollect-3.0.1-modules.patch 1384
 MD5 8bb6090bb13375663448daa4eadcc207 files/mwcollect-3.0.1-pic.patch 382
+RMD160 bb99a5af94890b26b9f095b8878f4ebe9391aa6c files/mwcollect-3.0.1-pic.patch 382
+SHA256 ffbbc860330b53d2cefc75924ae98bf3dccbaa61730ceba80265d3fd24107a0e files/mwcollect-3.0.1-pic.patch 382
 MD5 1df5b4b4ccdc36270e3441c72fe627d6 files/mwcollect-3.0.1-pid.patch 1132
+RMD160 d20559989edd4b08305856f4c7436cba9a7bb0ff files/mwcollect-3.0.1-pid.patch 1132
+SHA256 d6f2bad6cc81d38648b1248ec4dbf89fadcc127b768cda51793837167ccdf3a7 files/mwcollect-3.0.1-pid.patch 1132
 MD5 d6686b70beeb04333a23a1bcf7cedffd metadata.xml 434
+RMD160 8d4489f599701f3c12e6fedf86738da32b0d8825 metadata.xml 434
+SHA256 cc93736a2db43ce1e9fb5be5769d25e603122b65e3e2c1c682c3e8c5e1971c86 metadata.xml 434
 MD5 ff8c0112b4a425afa749446d3af74091 mwcollect-2.1.1.ebuild 1254
+RMD160 cd1d0e6e68dc9e026ecfbceec3448ac1c383ff0d mwcollect-2.1.1.ebuild 1254
+SHA256 7af6f8c7ee9d9d929f325ab299a57a1c9d9a9bf87d3754cb8e56be72f6ac2b8c mwcollect-2.1.1.ebuild 1254
 MD5 4057526152e96a533f54cdd4b2d8fc11 mwcollect-2.1.2.ebuild 1254
+RMD160 5741867f24ac459e638ffbb10a1a612d17abdb18 mwcollect-2.1.2.ebuild 1254
+SHA256 334a14c3ee8732b015531fef8aa79113559fdf8ab891e1f958029bd377605a33 mwcollect-2.1.2.ebuild 1254
 MD5 2ce40151fe7d2baaf67a5a8172553ae4 mwcollect-3.0.0.ebuild 1570
+RMD160 93355f8fa584ebf06911dcda1fe0fc3ea9437ecf mwcollect-3.0.0.ebuild 1570
+SHA256 edc67c6fea34473bd79f927ab3f6f530e0fddf139bc8675f12df971bb5cf88f7 mwcollect-3.0.0.ebuild 1570
 MD5 2135f7c8c0a30ab0842db84b3a9b8a43 mwcollect-3.0.1.ebuild 1878
+RMD160 94277154c6cedc02f2eb2ab6281f7a1b4a84d9e6 mwcollect-3.0.1.ebuild 1878
+SHA256 6c4a6c0b1a69aa996543684eb893e390e157305fc9ed93161d962aceb61df9f0 mwcollect-3.0.1.ebuild 1878
 MD5 9df36b82b1e575a3b1dde8c98a5f8707 mwcollect-3.0.2.ebuild 1604
+RMD160 fec15f178f4aa83d8da318e8dcb98e93c8669dc6 mwcollect-3.0.2.ebuild 1604
+SHA256 6e1e5ef781f789fbb7a190f0c10ec490c93bfa0d31335c71d0a800222d57bba2 mwcollect-3.0.2.ebuild 1604
 MD5 867246cfc0e682523b2d2a735d52a156 mwcollect-3.0.3.ebuild 1475
+RMD160 bd33f2899d7d6bc63a645712efe1d6cb966626a5 mwcollect-3.0.3.ebuild 1475
+SHA256 97f03dd7ef8269999053f3725dd1eb3136b2328c66e66746332cc7d232df675c mwcollect-3.0.3.ebuild 1475
+MD5 5f561ac0cdea38739b281aa56d1ce972 mwcollect-3.0.4.ebuild 1475
+RMD160 c65867b3178bd544757c0c9392e65b09a75081a8 mwcollect-3.0.4.ebuild 1475
+SHA256 1845338b72d7f92c321f4d37ff6445d037afd9faee373272c90cec755c164a09 mwcollect-3.0.4.ebuild 1475
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD43abFdQwWVoAgN4RArG7AJ9Geb7EvYjKVhYgh2UHawFuNqV2rACeOv9d
-vp+uGVwzCwaJCpgf3iLCTr4=
-=D94v
+iD8DBQFD/xFKFdQwWVoAgN4RAonmAKC58lgGJNV+62xQxzH/WKK7hFdPkACeIK5P
+fu+eAsRcOJzcHlJfP+T1g8A=
+=nHu4
 -----END PGP SIGNATURE-----
