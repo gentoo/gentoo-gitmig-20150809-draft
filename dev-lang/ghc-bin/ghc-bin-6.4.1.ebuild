@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.4 2006/02/18 13:57:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.5 2006/02/24 10:10:13 dcoutts Exp $
+
+inherit multilib
 
 IUSE="" # use the non-binary version if you want to have more choice
 
@@ -34,13 +36,13 @@ PROVIDE="virtual/ghc"
 S="${WORKDIR}"
 
 src_compile() {
-	sed -i "s|/usr|${LOC}|g" usr/bin/* usr/lib/ghc-${PV}/package.conf
+	sed -i "s|/usr|${LOC}|g" usr/bin/* "usr/$(get_libdir)/ghc-${PV}/package.conf"
 	mkdir -p ./${LOC}
 	mv usr/* ./${LOC}
 }
 
 src_install () {
-	cp -pr * ${D}
+	cp -pr * "${D}"
 	insinto /etc/env.d
-	doins ${FILESDIR}/10ghc
+	doins "${FILESDIR}/10ghc"
 }
