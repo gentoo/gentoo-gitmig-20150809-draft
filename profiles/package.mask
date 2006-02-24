@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5026 2006/02/23 20:19:33 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5027 2006/02/24 00:03:48 spyderous Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -246,10 +246,6 @@ dev-lang/gnat-gpl
 # Marius Mauch <genone@gentoo.org> (17 Jan 2006)
 # Development version
 >=dev-util/gambas-1.9
-
-# Bryan Stine <battousai@gentoo.org> (15 Jan 2006)
-# New modular vmware mouse driver. Untested driver and untested PIC patch.
-x11-drivers/xf86-input-vmmouse
 
 # Tom Payne <twp@gentoo.org> (15 Jan 2006)
 # sys-fs/convertfs is broken. Masked pending likely removal. Bug # 107635.
@@ -948,6 +944,7 @@ x11-drivers/xf86-input-spaceorb
 x11-drivers/xf86-input-summa
 x11-drivers/xf86-input-tek4957
 x11-drivers/xf86-input-ur98
+x11-drivers/xf86-input-vmmouse
 x11-drivers/xf86-input-void
 x11-drivers/xf86-video-apm
 x11-drivers/xf86-video-ark
