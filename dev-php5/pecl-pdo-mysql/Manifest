@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 32fa798ee5317fd81c549c00b2969bce ChangeLog 1859
+MD5 1f587a210b9d58385d164e93e0450caf ChangeLog 1981
+RMD160 9e34eecb1fa121e367f87975ed9173269d901e63 ChangeLog 1981
+SHA256 7a197db2aee1ba3ed56c0610261358dd5be31f4f3c1cfcefd5091bcbc157bfaf ChangeLog 1981
 MD5 3056c682a94fb76a1c8adeb30bf69c6b files/config-sed.patch 490
+RMD160 6672ed8210d1b19301cb1bf7b653dbfbcfc6c17b files/config-sed.patch 490
+SHA256 796f61b3156a17269f3dc3ec3044a8b547c57b8bfc1c470171764c0bcfc40200 files/config-sed.patch 490
 MD5 4ee92172ccf8ef55a8ec4ab538ddcaa0 files/digest-pecl-pdo-mysql-1.0.1 63
+RMD160 033b42f656b77e8640533e2b676dba3f2a4f8bb6 files/digest-pecl-pdo-mysql-1.0.1 63
+SHA256 6c862de363da3b6e79796ae02c249f5641a38c266a28dcf86680a06d78deb606 files/digest-pecl-pdo-mysql-1.0.1 63
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 f2aafd3c01c6e257cbc4c07f0a1d23ef pecl-pdo-mysql-1.0.1.ebuild 1188
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD2AqnugEuf3OQ0akRAneUAJ9HPBUtEL7gvmMIQPAO0k1TrZXBGgCgnfeS
-yojrcolu7OJIv21iGniTR/s=
-=gBxK
------END PGP SIGNATURE-----
+RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a metadata.xml 157
+SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 metadata.xml 157
+MD5 e35930a5c66066991d78e8a129cdd177 pecl-pdo-mysql-1.0.1.ebuild 1184
+RMD160 a89f441c28a55a9824d94a36ebad3a4b1851558b pecl-pdo-mysql-1.0.1.ebuild 1184
+SHA256 2ff43c8b3b4cbf80e5ebe9a02acd26634be49f8712810abfd63a92b401ddbeba pecl-pdo-mysql-1.0.1.ebuild 1184
