@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.77 2006/02/16 00:11:15 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.78 2006/02/24 11:13:04 dcoutts Exp $
+
+  24 Feb 2006; Duncan Coutts <dcoutts@gentoo.org>
+  -files/ghc-6.0.1.haddock.patch:
+  Remove old unused patch.
 
 *ghc-6.4.1-r2 (16 Feb 2006)
 
@@ -8,10 +12,10 @@
   Added support for modular X. New flags support to enable/disable X, hgl and
   openal
 
-  10 Feb 2006; <duncan@gentoo.org> -ghc-6.0.1.ebuild:
+  10 Feb 2006; <dcoutts@gentoo.org> -ghc-6.0.1.ebuild:
   Remove the last ghc-6.0.x version. (There's no way to bootstrap it anyway)
 
-  10 Feb 2006; <duncan@gentoo.org> ghc-6.4.1-r1.ebuild:
+  10 Feb 2006; <dcoutts@gentoo.org> ghc-6.4.1-r1.ebuild:
   Marked ~alpha with permission of ferdy.
 
   16 Nov 2005; Andres Loeh <kosmikus@gentoo.org> ghc-6.4.1-r1.ebuild:
@@ -20,13 +24,13 @@
 
 *ghc-6.4.1-r1 (21 Oct 2005)
 
-  21 Oct 2005; <duncan@gentoo.org> +ghc-6.4.1-r1.ebuild:
+  21 Oct 2005; <dcoutts@gentoo.org> +ghc-6.4.1-r1.ebuild:
   Add new revision ghc-6.4.1-r1 which now PDEPENDs on cabal.
 
-  06 Oct 2005; <duncan@gentoo.org> ghc-6.4.1.ebuild:
+  06 Oct 2005; <dcoutts@gentoo.org> ghc-6.4.1.ebuild:
   Revert to using virtual/ghc in DEPEND since the other method had no advantages.
 
-  06 Oct 2005; <duncan@gentoo.org> +files/depsort.py, files/ghc-updater:
+  06 Oct 2005; <dcoutts@gentoo.org> +files/depsort.py, files/ghc-updater:
   Make the ghc-updater script work better.
 
   04 Oct 2005; Luis F. Araujo <araujo@gentoo.org> ghc-6.2.2.ebuild:
@@ -35,15 +39,15 @@
   04 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> ghc-6.4.1.ebuild:
   Back to the ~ppc
 
-  04 Oct 2005; <duncan@gentoo.org> ghc-6.4.1.ebuild:
+  04 Oct 2005; <dcoutts@gentoo.org> ghc-6.4.1.ebuild:
   Add ~sparc to KEYWORDS and enable GHCi on sparc.
 
-  23 Sep 2005; <duncan@gentoo.org> ghc-6.4.1.ebuild:
+  23 Sep 2005; <dcoutts@gentoo.org> ghc-6.4.1.ebuild:
   Disabled java USE flag due to bug #106992
 
 *ghc-6.4.1 (22 Sep 2005)
 
-  22 Sep 2005; <duncan@gentoo.org> +ghc-6.4.1.ebuild:
+  22 Sep 2005; <dcoutts@gentoo.org> +ghc-6.4.1.ebuild:
   Version bump.
 
   01 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> ghc-6.2.2.ebuild:
@@ -52,7 +56,7 @@
   31 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> ghc-6.4.ebuild:
   Fixed to build on ppc for real
 
-  17 Aug 2005; <duncan@gentoo.org> ghc-6.4.ebuild:
+  17 Aug 2005; <dcoutts@gentoo.org> ghc-6.4.ebuild:
   Add ~sparc to KEYWORDS since it was missing and we've already got ghc-bin-6.4
 
   17 Aug 2005; Andres Loeh <loeh@gentoo.org> -files/ghc-5.04.3-r1.patch,
@@ -62,7 +66,7 @@
   Removed ~amd64 keyword for ghc-6.2.2, because ghc-6.2.2 is broken on this
   arch. Cleaned up old versions.
 
-  20 May 2005; <duncan@gentoo.org> ghc-6.2.2.ebuild:
+  20 May 2005; <dcoutts@gentoo.org> ghc-6.2.2.ebuild:
   Add ~sparc to KEYWORDS and disable GHCi support on sparc since it does not
   work reliably.
 
