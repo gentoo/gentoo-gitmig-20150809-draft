@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/monetdb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/ChangeLog,v 1.4 2006/01/25 19:27:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/ChangeLog,v 1.5 2006/02/24 21:33:50 grobian Exp $
+
+*monetdb-4.10.2 (24 Feb 2006)
+
+  24 Feb 2006; Fabian Groffen <grobian@gentoo.org>
+  +files/monetdb-4.10.2-gentoo-MapiClient.patch,
+  +files/monetdb-4.10.2-gentoo-conf.patch, +monetdb-4.10.2.ebuild:
+  New version upstream: bugfix release
 
 *monetdb-4.10.0 (25 Jan 2006)
 

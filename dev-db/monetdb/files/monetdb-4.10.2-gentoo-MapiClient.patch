@@ -1,0 +1,11 @@
+--- MonetDB-4.10.2/src/mapi/clients/C/MapiClient.c
++++ MonetDB-4.10.2/src/mapi/clients/C/MapiClient.c
+@@ -1175,7 +1175,7 @@
+ {
+ 	opt *set = NULL;
+ 	int setlen;
+-	char *language = "mil";
++	char *language = "sql";
+ 	int port = 0;
+ 	char *user = NULL;
+ 	char *passwd = NULL;

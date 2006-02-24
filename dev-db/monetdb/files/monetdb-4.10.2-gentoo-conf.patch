@@ -1,0 +1,51 @@
+--- MonetDB-4.10.2/conf/MonetDB.conf.in
++++ MonetDB-4.10.2/conf/MonetDB.conf.in
+@@ -20,7 +20,7 @@
+ # the name of the database to use below.  Note that you can use
+ # multiple databases, but that you have to edit the database name
+ # and restart MonetDB.
+-gdk_dbname=demo
++gdk_dbname=default
+ 
+ # The options below deal with various aspects of memory usage behaviour.
+ # If you don't know what these values mean, you should leave them alone.
+@@ -72,11 +72,6 @@
+ #
+ #gdk_version <ver>		create BATs in old formats[out of date?]
+ 
+-
+-# General client Section
+-#=======================
+-#host=localhost				#the host the server runs on
+-
+ # MonetDB Section
+ #================
+ # Administrator user name 
+@@ -89,7 +84,7 @@
+ # Where do the MonetDB modules reside? The second path is for windows dlls.
+ monet_mod_path=@Xlibdir@@DIRSEP@@PACKAGE@@PATHSEP@@Xlibdir@@DIRSEP@bin
+ # Start Mserver in daemon mode, or start with MIL interactive interface?
+-monet_daemon=no
++monet_daemon=yes
+ 
+ # Monet Application Interface Section
+ #====================================
+@@ -101,7 +96,7 @@
+ mapi_debug=0
+ # The number of concurrent clients can be set using mapi_clients
+ # (smaller than 1 is not very useful)
+-#mapi_clients=2
++mapi_clients=10
+ 
+ # SQL Interface Section
+ #======================
+@@ -118,9 +113,6 @@
+ # default port to address an Mserver for an XQuery session
+ xquery_port=45789
+ 
+-# default port to address the HTTP server for pathfinder
+-pf_httpd_port=8080
+-
+ #output mode "dm" = pretty printed, 
+ #            "xml" = enforce XML with enclosing <XQueryResult> tags
+ xquery_output=dm                          
