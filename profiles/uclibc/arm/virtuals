@@ -1,5 +1,1 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/arm/virtuals,v 1.4 2005/08/01 14:13:50 vapier Exp $
-
 virtual/bootloader			sys-boot/nettrom

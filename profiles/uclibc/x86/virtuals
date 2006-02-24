@@ -1,5 +1,1 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/x86/virtuals,v 1.3 2006/02/23 21:24:08 chtekk Exp $
-
 virtual/bootloader			sys-boot/grub
