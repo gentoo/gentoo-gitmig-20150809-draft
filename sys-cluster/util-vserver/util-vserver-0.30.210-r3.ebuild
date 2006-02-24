@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.210-r1.ebuild,v 1.1 2006/01/23 14:50:11 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.210-r3.ebuild,v 1.1 2006/02/24 06:37:49 hollow Exp $
 
 inherit autotools eutils toolchain-funcs
 
