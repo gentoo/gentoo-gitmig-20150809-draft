@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/libXfont-1.0.0.ebuild,v 1.4 2006/02/14 22:27:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/libXfont-1.0.0.ebuild,v 1.5 2006/02/24 18:33:51 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # SNAPSHOT="yes"
@@ -14,7 +14,7 @@ RDEPEND="x11-libs/xtrans
 	x11-libs/libfontenc
 	x11-proto/xproto
 	x11-proto/fontsproto
-	truetype? ( >=media-libs/freetype-2 )"
+	>=media-libs/freetype-2"
 DEPEND="${RDEPEND}
 	x11-proto/fontcacheproto"
 
