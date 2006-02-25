@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 77f4ba5a09cc78414c6ccaa1c9009ae5 metadata.xml 307
-MD5 4a88047eabb1308d7653193927ab8154 gnome-jabber-0.4.ebuild 894
-MD5 097aa4c58d5e9372e146ceb0f986d45d ChangeLog 1762
+MD5 f444d1b7d577d175d00945df03830e2f ChangeLog 1947
 MD5 543866fd9af3f574893bfe190c1d65bb files/digest-gnome-jabber-0.4 69
+MD5 b0d5f330577aa4f7fe2ac2ca54dbb49a gnome-jabber-0.4.ebuild 916
+MD5 77f4ba5a09cc78414c6ccaa1c9009ae5 metadata.xml 307
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDb1qHmOfEJZHYOKcRAhf9AJ4yG0BkpjrVMotbzYgi8Tt6+0kAaACgjSiS
-6936BpsIOqgNDtz4hfKm2yM=
-=95VO
+iD8DBQFD/6AxoGcCqvCmTSIRAs/FAJ4w0Pg7fc9E6/lAMM1qAPm0gXSptgCdHu2S
+ErWE1CK/q4pfROEFhuBSNl4=
+=myuI
 -----END PGP SIGNATURE-----
