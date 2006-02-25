@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 887d1544eba4a259973f8bb1f122b195 ChangeLog 463
+RMD160 e764d5ef119b4e823e51090f4792e9a6f8f64986 ChangeLog 463
+SHA256 2d20b4cec9ff21754728c8a7488b96888c6d9d5364adad8a49b6c083e7a1c38e ChangeLog 463
+MD5 b6e04d613ac815dd638b2ac6b011ece5 audacious-docklet-0.1.1.ebuild 755
+RMD160 97301f10a080e784d9b91feaaa87b706261c0b59 audacious-docklet-0.1.1.ebuild 755
+SHA256 b247f2787460404714b672181b228c062ea9904019d2ab716a5663b9b7767879 audacious-docklet-0.1.1.ebuild 755
+MD5 21e78b2eb3aa9926f4126799b429a97b files/digest-audacious-docklet-0.1.1 274
+RMD160 55a42f41c67fd6fe0a6e0399b9bb5b8c42148605 files/digest-audacious-docklet-0.1.1 274
+SHA256 00184e6a9984a425f1410ec6e0d1bb62413594043f37a644fd90b3681ffcbd34 files/digest-audacious-docklet-0.1.1 274
+MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
+RMD160 f9de13e16a150195633b055ebe61bb4cea95160d metadata.xml 248
+SHA256 6a8ca116bded5cdd92cb700f92acd22b01ae159ef1b69c60a03fc9859bb9b3d6 metadata.xml 248
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEAN8qp5vW4rUFj5oRAlpvAJ9X9qzVtIDfKvAdd3HImmjjHxUbiACgmGwE
+Zmoafg1CgpolHppiJNc7rsE=
+=ett6
+-----END PGP SIGNATURE-----
