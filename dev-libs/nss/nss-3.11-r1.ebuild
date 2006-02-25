@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11-r1.ebuild,v 1.1 2006/02/09 19:15:41 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11-r1.ebuild,v 1.2 2006/02/25 18:25:08 geoman Exp $
 
 inherit eutils
 
@@ -38,6 +38,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-${PV}-zdefs.patch
 	epatch ${FILESDIR}/${PN}-${PV}-config.patch
 	epatch ${FILESDIR}/${PN}-${PV}-config-1.patch
+	epatch ${FILESDIR}/${PN}-mips64.patch
 }
 
 src_compile() {

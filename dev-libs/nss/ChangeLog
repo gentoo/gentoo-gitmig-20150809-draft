@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.48 2006/02/09 19:15:41 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.49 2006/02/25 18:25:08 geoman Exp $
+
+  25 Feb 2006; Stephen P. Becker <spbecker@gentoo.org>
+  +files/nss-mips64.patch, nss-3.11-r1.ebuild:
+  readding mips64 patch, please do not remove this again
 
 *nss-3.11-r1 (09 Feb 2006)
 
