@@ -1,9 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picptk/picptk-0.5a.ebuild,v 1.7 2006/02/25 11:46:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picptk/picptk-0.5a-r1.ebuild,v 1.1 2006/02/25 11:46:50 robbat2 Exp $
 
-#this is for autoconf
-inherit kde-functions eutils
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="Picptk is a programmer supporting the whole PIC family including all memory types (EEPROM, EPROM, and OTP)"
 HOMEPAGE="http://huizen.dds.nl/~gnupic/programmers_mike_butler.html"
@@ -15,7 +14,9 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND="dev-tcltk/itcl"
+RDEPEND="=dev-tcltk/itk-3.3*
+		 dev-tcltk/iwidgets
+		dev-tcltk/itcl"
 DEPEND="${RDEPEND}
 	sys-devel/gcc
 	sys-devel/automake
@@ -23,11 +24,16 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-headerfix.patch
+	epatch ${FILESDIR}/${PF}-headerfix.patch
+	epatch ${FILESDIR}/${PF}-gccfixes.patch
 	cd ${S}
-	need-autoconf 2.1
-	automake
-	autoconf
+	export WANT_AUTOMAKE=1.4
+	export WANT_AUTOCONF=2.1
+	sed -i.orig -e '49,53d' \
+		-e 's/AM_PROG_INSTALL/AC_PROG_INSTALL/g' \
+		${S}/aclocal.m4 || die "sed failed"
+	eautoconf || die "autoconf failed"
+	eautomake || die "automake failed"
 }
 
 src_install() {

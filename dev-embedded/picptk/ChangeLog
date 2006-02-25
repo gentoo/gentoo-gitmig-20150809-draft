@@ -1,6 +1,14 @@
 # ChangeLog for dev-embedded/picptk
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picptk/ChangeLog,v 1.5 2005/01/01 17:55:31 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picptk/ChangeLog,v 1.6 2006/02/25 11:46:50 robbat2 Exp $
+
+*picptk-0.5a-r1 (25 Feb 2006)
+
+  25 Feb 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/picptk-0.5a-r1-gccfixes.patch,
+  +files/picptk-0.5a-r1-headerfix.patch, picptk-0.5a.ebuild,
+  +picptk-0.5a-r1.ebuild:
+  Revamp package so it mostly works on GCC3.4 again.
 
   18 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> picptk-0.5a.ebuild:
   stable on x86.
