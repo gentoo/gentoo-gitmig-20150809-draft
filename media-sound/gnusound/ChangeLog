@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gnusound
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.8 2005/04/27 16:55:56 luckyduck Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.9 2006/02/25 14:43:31 flameeyes Exp $
+
+  25 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> gnusound-0.7.ebuild:
+  Move to using GNU mirrors instead of ftp.gnu.org directly. Thanks to Thomas
+  Cort <tcort@cs.ubishops.ca> in bug #124057.
 
 *gnusound-0.7 (27 Apr 2005)
 
