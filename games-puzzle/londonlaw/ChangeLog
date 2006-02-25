@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/londonlaw
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/ChangeLog,v 1.4 2005/08/23 20:04:37 wolf31o2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/ChangeLog,v 1.5 2006/02/25 03:29:32 mr_bones_ Exp $
+
+*londonlaw-0.2.1 (25 Feb 2006)
+
+  25 Feb 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/londonlaw-0.2.1-setup.py.patch, +londonlaw-0.2.1.ebuild:
+  version bump
 
   24 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   londonlaw-0.2.0.ebuild:
