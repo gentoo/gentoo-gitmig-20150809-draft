@@ -1,24 +1,52 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 935c043370f087324ecf26cae0aa25e6 ChangeLog 10044
+MD5 da5ff9887003b25ef665a1e0bd4496fc ChangeLog 10131
+RMD160 cd585031cd8e81f2093e580025bbc73cddd1e7db ChangeLog 10131
+SHA256 769793372fa7b3d55da6b96027c716d3b796492238df52b49aad6da65e928cdc ChangeLog 10131
 MD5 efbf917bdb0a7f2e082a62d58f758a30 f-prot-4.6.0-r2.ebuild 2018
+RMD160 8026339104baec5a6f2f33e69783a72ef0c4ec45 f-prot-4.6.0-r2.ebuild 2018
+SHA256 9f4f27396e6372a8f6ba5446c581edff9ebcd8a9a98a338b99753a90ea571fe2 f-prot-4.6.0-r2.ebuild 2018
 MD5 f413b43db5249d7e6cdbacd211c1a619 f-prot-4.6.1.ebuild 2016
+RMD160 19fd85875728dbf711b881d586118df79cbec68e f-prot-4.6.1.ebuild 2016
+SHA256 898b96a8473a25ae555ed932a458cba2bb9f83206fc1e36ab860f1895b396e38 f-prot-4.6.1.ebuild 2016
 MD5 c3e1cdd655b8c207754e793418375265 f-prot-4.6.3.ebuild 1909
+RMD160 05cee450b907cfbd622ed6549dedb467333194ba f-prot-4.6.3.ebuild 1909
+SHA256 4b4569b3976d714f1c3e57dd5a1f9d49304ca28796f4caf3328cb1927ed37ce3 f-prot-4.6.3.ebuild 1909
 MD5 a7a893a22e95c57b04bab20ed4fb1d99 f-prot-4.6.4.ebuild 1734
-MD5 0dbf76e877a3d43422ef42e62a46933d f-prot-4.6.5.ebuild 1734
+RMD160 1c6b5f6a2ba285dcbf29b34b3699d73c57362281 f-prot-4.6.4.ebuild 1734
+SHA256 a84cc9d2e69e769fc753f0f2359c3b919c225442bff9b4fd2aa48163d00c028f f-prot-4.6.4.ebuild 1734
+MD5 110ac86266c34bf34d56b8b8ae7b172b f-prot-4.6.5.ebuild 1733
+RMD160 0198b632c972a44b1eb2bfc9f08f12464b4a0c4f f-prot-4.6.5.ebuild 1733
+SHA256 80ccd5b6656b2096713df54ca7c4e22dbf1b2d6ba0e46ec7a8d88a149925f82b f-prot-4.6.5.ebuild 1733
 MD5 98949d262752c6e02ac3e64f8c13aa59 files/check-updates.pl.diff 568
+RMD160 b37a6bd887fee1adfe730d2d9a92613490757573 files/check-updates.pl.diff 568
+SHA256 b250bdc864fa380450a23d88726c7db60bf516d64bbaf283270df7bc2e3ac0bc files/check-updates.pl.diff 568
 MD5 c0075e0b3eeeaf1ebb478a49c4b9d7f9 files/digest-f-prot-4.6.0-r2 70
+RMD160 283eed16b4ba1c65113d6fb6726051194bd92491 files/digest-f-prot-4.6.0-r2 70
+SHA256 eac522703f69bb6b292e8a61e9803ea0e7e99c8a710dcda56f893eb2added396 files/digest-f-prot-4.6.0-r2 70
 MD5 eec871175f91e8ee9ed6bf9f541a2934 files/digest-f-prot-4.6.1 70
+RMD160 36d74633bf033fa0d6100378ad08ca2c059d2c6f files/digest-f-prot-4.6.1 70
+SHA256 6084bb0863305097112c7faadfe9a00e0493f80e7451c8bafe263221911858f1 files/digest-f-prot-4.6.1 70
 MD5 4fcaf9e1542209b58f861cdf412a0ca4 files/digest-f-prot-4.6.3 70
+RMD160 60c3a8fca6d3dd61dbb52fdd1361de39df73016d files/digest-f-prot-4.6.3 70
+SHA256 49443512e10dbb578604aa4307e23896b1660c88f82f84c30611c48f98bc2136 files/digest-f-prot-4.6.3 70
 MD5 aea734b5172d983b3b5888e16b08943d files/digest-f-prot-4.6.4 70
+RMD160 d5899762df68588da6fc9fea9d72c56b27ff11b4 files/digest-f-prot-4.6.4 70
+SHA256 932d85df3189fe51585a1fb238e7038470e0b5a3dd3f12a737eb92ff4ebea79b files/digest-f-prot-4.6.4 70
 MD5 86e6b86c9deb639b9dd5ca22de28f4c3 files/digest-f-prot-4.6.5 70
+RMD160 886e3c90b9995612e34b5d0928ddc5810b023b77 files/digest-f-prot-4.6.5 70
+SHA256 e6fcd53cd66663436616e6039a8a4e49947bc5b7aa09e608057394733893cc85 files/digest-f-prot-4.6.5 70
 MD5 c07e3b0148a64826500324924b3d71f8 files/f-prot.sh 122
+RMD160 7946de4da0894d3b856fb964c2428e6aa75118c8 files/f-prot.sh 122
+SHA256 fc4552d4521cb04d95391d3a99508ac6f516b611d628918f129ebf2b9b2ec126 files/f-prot.sh 122
 MD5 d7b2830c3a0f616e8598aafd9c6092db metadata.xml 262
+RMD160 5b9729611ec7c0e7f34401e7b92d733231cb88f5 metadata.xml 262
+SHA256 7c6b3ad908fce7e6bb88cb7cfa698cbcc15cd115e6e1008bfdbec1e1db83628d metadata.xml 262
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDvWM4QlM6RnzZP+IRAm3gAJ46fXw6yNAn3g6DsQOyUrKkg/vOXQCgu0Nr
-G/NmLmHbFiTvugG2JYBXewY=
-=rk8A
+iD8DBQFEAFOHQlM6RnzZP+IRAm/SAKCiX2vbzS4oMIgh7qPxzi4Ida5RWACgtKAt
+hkjsZoMyk7r5AQkEbeUcngw=
+=eLqD
 -----END PGP SIGNATURE-----
