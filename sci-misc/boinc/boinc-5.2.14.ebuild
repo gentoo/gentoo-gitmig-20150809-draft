@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.3 2005/12/18 13:29:00 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.4 2006/02/25 19:44:22 cryos Exp $
 
 inherit eutils
 
@@ -85,5 +85,10 @@ pkg_postinst() {
 		einfo "the necessary packages to be a server. You will need to have a"
 		einfo "project. Contact BOINC directly for further information."
 	fi
+	echo
+	# Add warning about the new password for the client, bug 121896.
+	einfo "If you need to use the graphical client the password is in "
+	einfo "/var/lib/boinc/gui_rpc_auth.cfg which is randomly generated "
+	einfo "by BOINC. You can change this to something more memorable."
 	echo
 }
