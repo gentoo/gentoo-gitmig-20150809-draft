@@ -1,37 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 64f638c9729bb5d71b3acf240b508a6d ChangeLog 5042
-RMD160 b01ad9decbf46bae915bf359f05683d10aef9849 ChangeLog 5042
-SHA256 90c25a7035080caea3388059a3dd141877506514fe7ed1761d1cf38df228e66c ChangeLog 5042
+MD5 29a739e02b3c8582f29fb24a5bac49ab ChangeLog 5129
 MD5 c133b8829ba299b03a0e6ab757ab5f22 files/digest-obexftp-0.10.7-r1 66
-RMD160 a488796afb19d7d536eb006e215d5969c4edcd1f files/digest-obexftp-0.10.7-r1 66
-SHA256 16b18ec2b782b80e14f36bee1f821ae3c2b43f74dc31b465cfc4638a342ed3df files/digest-obexftp-0.10.7-r1 66
 MD5 580f449983ce97b01d8306c9056e93b6 files/digest-obexftp-0.18 64
-RMD160 ca2448452de885bae29f854348cdfd3e74f4ddab files/digest-obexftp-0.18 64
-SHA256 710f2b44ac87c8e4f5d283da712b1f61282e4940e8bda60a0df9af6bdc2c12e8 files/digest-obexftp-0.18 64
 MD5 877bce89edb701ed9fb5021de3812e98 files/digest-obexftp-0.19 238
-RMD160 ed8afc3a26bb7bab4c3d5ca5c62976573136d62c files/digest-obexftp-0.19 238
-SHA256 3e3a9e97b91b45e544b89fc3e57d6f0f0551371472d60b869d0f689c0589125b files/digest-obexftp-0.19 238
 MD5 520b09e250d549cadd0b0a39118225ec files/obexftp-0.10.7-t610-jpg.patch 307
-RMD160 146465dca2c2584e5b4379842e22fff15c447b9b files/obexftp-0.10.7-t610-jpg.patch 307
-SHA256 4ee4af7966c5f3ee2619d0eb6f07e91cb9fce534aba573a71232939cdc92987a files/obexftp-0.10.7-t610-jpg.patch 307
 MD5 9860ed702775ec6730786768ec7c1abb metadata.xml 337
-RMD160 5cf9a3d72f755d2e1ba842cd9470d20f65cfb1e9 metadata.xml 337
-SHA256 efb004139cb40ac310a298f9bd06bab4458fa1ac3e3faf6122bb2395e93620e3 metadata.xml 337
 MD5 0a9048c4cb20de34d8f94857ba8f92b4 obexftp-0.10.7-r1.ebuild 981
-RMD160 623ee12a2d974eca9f385145278ec19d9831a1fd obexftp-0.10.7-r1.ebuild 981
-SHA256 44c1e55260a84ef7931322f217a1650eee6c1b6a50b35f7e5108ddd7f39d97e4 obexftp-0.10.7-r1.ebuild 981
-MD5 f8d3acafea9785a34fb8cafb3bf52f2e obexftp-0.18.ebuild 1154
-RMD160 d99f6560ed38e800352d0fe69df27ab205fc2ad4 obexftp-0.18.ebuild 1154
-SHA256 9ae8c4327878951b4b15177cd2ac0ca4074b0d888b15d2c2df0074f417df1dfc obexftp-0.18.ebuild 1154
+MD5 ba6ae1ea4a229d347ca05bbadb3dd920 obexftp-0.18.ebuild 1154
 MD5 52e830575ddaa550d4bf3c8d305cc28a obexftp-0.19.ebuild 1192
-RMD160 a730453e2221752dddff2bf46f0961ed65e8e765 obexftp-0.19.ebuild 1192
-SHA256 2980af98b743c5a9b55381586382093266c42664d72ec4316583929be027499b obexftp-0.19.ebuild 1192
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD621hQlM6RnzZP+IRAv5tAJ9mVES3OoBmr31i0DtGpYsp5wDT6ACdH7fD
-4rRJtrF9vdvJfTX4jswIAPM=
-=i2SF
------END PGP SIGNATURE-----
