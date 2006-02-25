@@ -1,0 +1,26 @@
+--- admin/kde.py.orig	2006-02-24 18:32:04.000000000 +0100
++++ admin/kde.py	2006-02-24 18:41:18.000000000 +0100
+@@ -830,8 +830,10 @@
+ 		lenv.KDEinstall( 'KDEDOC', lenv.join(lang,destination), cache )
+ 
+ 		if env['_INSTALL']:
+-			dir=lenv.join(lenv.getInstDirForResType('KDEDOC'), lang, destination)
+-			comp='mkdir -p %s && cd %s && rm -f common && ln -s ../common common' % (dir, dir)
++			dir=lenv.join(env['DESTDIR'], lenv.getInstDirForResType('KDEDOC'), lang, destination)
++			kde_config=os.popen('which kde-config 2>/dev/null').read().strip()
++			kde_html=os.popen(kde_config+' --expandvars --install html').read().strip()
++			comp='mkdir -p %s && cd %s && rm -f common && ln -s ' % (dir, dir) + kde_html+'/'+lang+'/common common'
+ 			lenv.Execute(comp)
+ 
+ 			#self.env.AddPostAction(lenv.join(dir, 'common'), self.env.Chmod(ins, self.perms))
+--- admin/generic.py.orig	2006-02-24 18:32:16.000000000 +0100
++++ admin/generic.py	2006-02-24 18:32:44.000000000 +0100
+@@ -606,7 +606,7 @@
+ 			lenv.Append(LINKFLAGS=[f.path])
+ 
+ 	def set_build_dir(lenv, dirs, buildto):
+-		lenv.SetOption('duplicate', 'soft-copy')
++		lenv.SetOption('duplicate', 'copy')
+ 		lenv['_BUILDDIR_']=buildto
+ 		ldirs=lenv.make_list(dirs)
+ 		for dir in ldirs:

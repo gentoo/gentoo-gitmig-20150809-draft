@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kio-locate
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.18 2005/10/24 15:36:07 carlo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.19 2006/02/25 15:50:14 carlo Exp $
+
+*kio-locate-0.4.4-r1 (25 Feb 2006)
+
+  25 Feb 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/kio-locate-0.4.4-bksys.diff, +kio-locate-0.4.4-r1.ebuild:
+  Fix broken doc install, make LINGUAS aware.
 
 *kio-locate-0.4.4 (24 Oct 2005)
 
