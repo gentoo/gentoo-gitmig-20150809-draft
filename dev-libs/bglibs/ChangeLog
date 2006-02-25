@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/bglibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.34 2006/02/24 19:17:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.35 2006/02/25 20:31:11 kumba Exp $
+
+  25 Feb 2006; Joshua Kinard <kumba@gentoo.org> bglibs-1.031.ebuild:
+  Marked stable on mips.
 
   24 Feb 2006; <nixnut@gentoo.org> bglibs-1.031.ebuild:
   Stable on ppc. bug 123460
