@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r2.ebuild,v 1.2 2006/02/16 19:48:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r2.ebuild,v 1.3 2006/02/25 19:13:29 liquidx Exp $
 
 inherit eutils
 
@@ -9,27 +9,28 @@ inherit eutils
 
 DESCRIPTION="Console display library used by most text viewer"
 HOMEPAGE="http://www.s-lang.org/"
-SRC_URI="ftp://space.mit.edu/pub/davis/slang/v1.4/${P}.tar.bz2"
+SRC_URI="ftp://space.mit.edu/pub/davis/slang/v1.4/${P}.tar.bz2
+	mirror://gentoo/${P}-patches.tar.gz"
 
 LICENSE="|| ( GPL-2 Artistic )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="cjk unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
 
 src_unpack() {
-	unpack ${P}.tar.bz2
+	unpack ${A}		 
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}.patch
+	epatch ${WORKDIR}/${P}.patch
 	use ppc-macos || epatch ${FILESDIR}/${P}-fsuid.patch
-	epatch ${FILESDIR}/${P}-autoconf.patch
+	epatch ${WORKDIR}/${P}-autoconf.patch
 	if use unicode ; then
-		epatch ${FILESDIR}/slang-debian-utf8.patch
-		epatch ${FILESDIR}/slang-utf8-acs.patch
-		epatch ${FILESDIR}/slang-utf8-fix.patch
-		epatch ${FILESDIR}/slang-utf8-fix2.patch
+		epatch ${WORKDIR}/slang-debian-utf8.patch
+		epatch ${WORKDIR}/slang-utf8-acs.patch
+		epatch ${WORKDIR}/slang-utf8-fix.patch
+		epatch ${WORKDIR}/slang-utf8-fix2.patch
 	fi
 	if use cjk ; then
 		sed -i \
