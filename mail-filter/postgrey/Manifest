@@ -1,25 +1,58 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2d1327911975fb1aeb9e95412bf144ee ChangeLog 2782
+MD5 78144b816fa95d3e3a3a5dec768adeb8 ChangeLog 3278
+RMD160 b5e29faf95ed70db1dd95a2f12e4ecd306b24bba ChangeLog 3278
+SHA256 4ae281de0d7f8cdd919b2bc7ab41bff5714092f82f08d15ae7cf8aa4d7c67746 ChangeLog 3278
 MD5 2197c50ab163af184389dbf781d6bc21 files/digest-postgrey-1.21 64
+RMD160 d9baf9542b280e0d77343752630e8f6bb5d4276e files/digest-postgrey-1.21 64
+SHA256 e623f0e4588add93eaa860b2109ddeac8a824534b5becf04bdb64e753e24499a files/digest-postgrey-1.21 64
 MD5 2197c50ab163af184389dbf781d6bc21 files/digest-postgrey-1.21-r1 64
+RMD160 d9baf9542b280e0d77343752630e8f6bb5d4276e files/digest-postgrey-1.21-r1 64
+SHA256 e623f0e4588add93eaa860b2109ddeac8a824534b5becf04bdb64e753e24499a files/digest-postgrey-1.21-r1 64
 MD5 2197c50ab163af184389dbf781d6bc21 files/digest-postgrey-1.21-r2 64
+RMD160 d9baf9542b280e0d77343752630e8f6bb5d4276e files/digest-postgrey-1.21-r2 64
+SHA256 e623f0e4588add93eaa860b2109ddeac8a824534b5becf04bdb64e753e24499a files/digest-postgrey-1.21-r2 64
 MD5 92cedf9f37a6b6fdcdce5824229a2d3a files/digest-postgrey-1.23 64
-MD5 be9aa0c5ab50b82e7eb5c465e78abfb6 files/postgrey.conf 2057
-MD5 6dfb29bdf769bd95b3da9611e89e9e67 files/postgrey.conf.new 1882
-MD5 92755b7ca1258447038718aa283825d9 files/postgrey.rc 1906
-MD5 574606b16ba42a5ed86921c12fdac7f5 files/postgrey.rc.new 1910
-MD5 658e1b1fbd690aa27418992e73b5360f files/postgrey.rc.new-r2 1984
+RMD160 4eef5352743cbc1c6b45b79a817f6f00e65774ed files/digest-postgrey-1.23 64
+SHA256 c7f510e0d29893f4098b0f74f1ca6100b02af5713ee933a9a81019d9a8c3eb6a files/digest-postgrey-1.23 64
+MD5 22030ac8baf8f96ddb9e61411b9d2173 files/digest-postgrey-1.24 238
+RMD160 be8ee1750832743c4c57e8afc59d9b23f917d0cf files/digest-postgrey-1.24 238
+SHA256 7ec77baad4af9c88a7eb41da924a0b715cc77ee7b71cd57a93d8a57f3e481585 files/digest-postgrey-1.24 238
+MD5 6dfb29bdf769bd95b3da9611e89e9e67 files/postgrey.conf 1882
+RMD160 d3e01459a4a50815a9a08fda10544d9d9c88eafc files/postgrey.conf 1882
+SHA256 193b077aaf3fcbeb275cebed91122cdc1e781a617127135731049517d4375d8c files/postgrey.conf 1882
+MD5 caaad5770ab07fb5af3bbd522a05b84f files/postgrey.conf.new 1915
+RMD160 15b64509c13c5fbb50e620da7339763a88969357 files/postgrey.conf.new 1915
+SHA256 2c84116caad8ba675ad73c4f2a10c766bd048572677c74720ad3ae2448ea9519 files/postgrey.conf.new 1915
+MD5 377f0dc22f04f12576a9db890555f5fc files/postgrey.rc 1977
+RMD160 6893c0c5387ecc2fc442824f42a691a2745d160d files/postgrey.rc 1977
+SHA256 d9a92132cb6e9b7daa2a9039430b595dc2d8b96cb04dc2d95d5f7c674a839d1d files/postgrey.rc 1977
+MD5 ff48bc537c90b2d4b178fba3f55de6b5 files/postgrey.rc.new 2282
+RMD160 7e84fa9f88aad7b7140cb8b285bd8d4cfbb1239a files/postgrey.rc.new 2282
+SHA256 b041e79632ed79d95537540dc6bfc6236124586e1aebd9dc155298eb497fe43f files/postgrey.rc.new 2282
 MD5 97640b63104544cebd37ca40384a056b metadata.xml 304
-MD5 b07b3135ffa215dd7a71f139eef10d21 postgrey-1.21-r1.ebuild 2104
-MD5 ac16d9e76c2e7acdd2e5c639f0cabf59 postgrey-1.21-r2.ebuild 2107
+RMD160 5ea326ad63c413b939071e1db865ccf570de61b8 metadata.xml 304
+SHA256 66d816b6bbbb5bcc1ded82027b2d2fd6b6f439faf149ac70f305003d7ace1e2b metadata.xml 304
+MD5 a213786b868034976e21705c94e129b1 postgrey-1.21-r1.ebuild 2096
+RMD160 0890fcee4cf46c8e519d0ded0d22b8a6d6df0f07 postgrey-1.21-r1.ebuild 2096
+SHA256 4062942352088189318e93a8cc1f748211d66ad78d35c48d6cd6862e73735d94 postgrey-1.21-r1.ebuild 2096
+MD5 dcde87e933574fa02f052ad242c18220 postgrey-1.21-r2.ebuild 2096
+RMD160 97760cc1c7903c6eb49e5348aa2d5e0ac561552d postgrey-1.21-r2.ebuild 2096
+SHA256 ed69ad60951a7ac21295c408953e322c371c2ba849c42647fc5725c0301999a5 postgrey-1.21-r2.ebuild 2096
 MD5 b1e7b37dc0abff9d55d28d59dc7f0f7e postgrey-1.21.ebuild 1919
-MD5 1d0dcf46def285a5ab8e2b518021ecbc postgrey-1.23.ebuild 2106
+RMD160 0f58158292b1a5cbaaa273bd9d13097070bca046 postgrey-1.21.ebuild 1919
+SHA256 c48af444b2009ad039b5f40dd66c7124c399fd13c553074c7b3d2f0029f13cf0 postgrey-1.21.ebuild 1919
+MD5 8452df9cfa211a217d34d874542289dd postgrey-1.23.ebuild 2093
+RMD160 d2b7bf40d2dfced27ceeb775f4d1abbe06a6c21d postgrey-1.23.ebuild 2093
+SHA256 f219864856b8f3d710c0239b35c6b0b1580cb0acc591c7a881564630d9377223 postgrey-1.23.ebuild 2093
+MD5 1c5dc04df30f2a7396e6e356b16b6699 postgrey-1.24.ebuild 2103
+RMD160 5c5cf10a507b6d78a1128d82d4da77660ae0a751 postgrey-1.24.ebuild 2103
+SHA256 b6e71cfd7ad63f602be8fccaf5242dba061aa05861679420a47ed2b19a5d6c3b postgrey-1.24.ebuild 2103
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDuHNrQlM6RnzZP+IRAkMaAJ4zUBxe8SO6F+hMCtIYN17dZDOlWQCfVUK0
-kcMjd1Xmi3eWBMM8U1tk2oU=
-=0yid
+iD8DBQFEAJtiQlM6RnzZP+IRAsjwAJ9pYQHQbcQFBXXPblHBszd/tFf5GwCgn3Ca
+2AXLLLGU5IberfUByYwq1qU=
+=wQDY
 -----END PGP SIGNATURE-----

@@ -27,18 +27,22 @@ POSTGREY_SOCKET="/var/spool/postfix/private/postgrey"
 #  Do not change, if you don't know what this is!
 POSTGREY_PID="/var/run/postgrey.pid"
 
+# DELAY
+#  How long to delay mail that is greylisted in seconds.
+POSTGREY_DELAY=300
+
+# TEXT
+#  The response we'll send back with delayed mail.
+POSTGREY_TEXT="Greylisted for %s seconds"
 
 # Additional Postgrey options
 #
 # -v, --verbose			increase verbosity level
-# --delay=N			greylist for N seconds (default: 300)
 # --max-age=N			delete entries older than N days since the last time
 #				that they have been seen (default: 30)
 # --retry-window=N		allow only N days for the first retrial (default: 2)
 #				append 'h' if you want to specify it in hours
 # --greylist-action=A		if greylisted, return A to Postfix (default: DEFER_IF_PERMIT)
-# --greylist-text=TXT		response when a mail is greylisted
-#				(default: Greylisted for %s seconds)
 # --lookup-by-subnet		strip the last 8 bits from IP addresses (default)
 # --lookup-by-host		do not strip the last 8 bits from IP addresses
 # --whitelist-clients=FILE	default: /etc/postfix/postgrey_whitelist_clients

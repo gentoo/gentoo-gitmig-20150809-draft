@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/files/postgrey.rc,v 1.6 2005/09/07 21:24:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/files/postgrey.rc,v 1.7 2006/02/25 17:59:13 ticho Exp $
 
 conf="/etc/conf.d/postgrey"
 
@@ -57,7 +57,9 @@ start() {
 	
 	# HACK -- start a subshell and corrects perms on the socket...
 	( if [ "x${POSTGREY_TYPE}" = "xunix" ]; then
-	sleep 2 && chmod a+rw,a-x ${POSTGREY_SOCKET}; fi ) &
+	rm -f ${POSTGREY_SOCKET};
+	while ! test -S ${POSTGREY_SOCKET}; do sleep 1; done;
+	chmod a+rw,a-x ${POSTGREY_SOCKET}; fi ) &
 
 	start-stop-daemon --start --quiet --background \
 		--exec /usr/sbin/postgrey -- \

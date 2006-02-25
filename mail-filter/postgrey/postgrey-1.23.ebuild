@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.23.ebuild,v 1.1 2006/01/02 00:27:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.23.ebuild,v 1.2 2006/02/25 17:59:13 ticho Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-lang/perl-5.6.0
 	>=sys-libs/db-4.1
 	>=mail-mta/postfix-2.1.0"
 
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha amd64 x86"
 
 pkg_setup() {
 	enewgroup ${PN}
@@ -50,8 +50,8 @@ src_install () {
 	dodoc Changes README
 
 	# init.d + conf.d files
-	newinitd ${FILESDIR}/${PN}.rc.new-r2 ${PN}
-	newconfd ${FILESDIR}/${PN}.conf.new ${PN}
+	newinitd ${FILESDIR}/${PN}.rc ${PN}
+	newconfd ${FILESDIR}/${PN}.conf ${PN}
 }
 
 pkg_postinst() {
