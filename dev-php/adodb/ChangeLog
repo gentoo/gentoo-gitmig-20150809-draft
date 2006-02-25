@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/adodb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.54 2006/02/23 20:47:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.55 2006/02/25 04:22:09 halcy0n Exp $
+
+  25 Feb 2006; Mark Loeser <halcy0n@gentoo.org> adodb-4.72.ebuild:
+  Stable on x86; bug #123442
 
   23 Feb 2006; Markus Rothe <corsair@gentoo.org> adodb-4.72.ebuild:
   Stable on ppc64; bug #123442
