@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.34 2006/02/17 18:53:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.35 2006/02/25 07:10:11 mrness Exp $
+
+*wvdial-1.56 (25 Feb 2006)
+
+  25 Feb 2006; Alin Nastac <mrness@gentoo.org>
+  -files/wvdial-1.55-destdir.patch, +files/wvdial-1.56-destdir.patch,
+  -wvdial-1.55.ebuild, +wvdial-1.56.ebuild:
+  Version bump that fixes inability of wvdialconf to create or modify the
+  configuration file (#122441).
 
   17 Feb 2006; Alin Nastac <mrness@gentoo.org>
   -files/wvdial-1.54.0-makefile.patch, -wvdial-1.54.0.ebuild:

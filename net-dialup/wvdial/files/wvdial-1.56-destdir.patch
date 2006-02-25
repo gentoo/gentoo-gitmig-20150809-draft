@@ -1,6 +1,6 @@
-diff -Nur wvdial-1.55.orig/Makefile wvdial-1.55/Makefile
---- wvdial-1.55.orig/Makefile	2005-12-03 00:54:13.000000000 +0200
-+++ wvdial-1.55/Makefile	2006-02-03 22:21:11.402271250 +0200
+diff -Nur wvdial-1.56.orig/Makefile wvdial-1.56/Makefile
+--- wvdial-1.56.orig/Makefile	2005-12-03 00:54:13.000000000 +0200
++++ wvdial-1.56/Makefile	2006-02-03 22:21:11.402271250 +0200
 @@ -1,7 +1,7 @@
  ifeq ($(TOPDIR),)
   TOPDIR=.
