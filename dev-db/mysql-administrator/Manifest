@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d5ab0e390e7860847351f6aabfbe1ec7 ChangeLog 4798
 RMD160 825e8c6fc7ac03f504f257359b0a8d5c30670dcf ChangeLog 4798
 SHA256 447c212dad6a3c1f945fd862cf3f4b655fb5dd5e73804b524c5f419210deae3d ChangeLog 4798
@@ -40,13 +37,6 @@ SHA256 fb1578f90d7a0aa80c44efa03f37a640b4e44e8799669091c79e363d305c2399 mysql-ad
 MD5 b2224b44c802b04c91d09e51d42b8cb1 mysql-administrator-1.1.5.ebuild 1326
 RMD160 bea54b0bcd8d5e1a732b9d7e9eade778919d0887 mysql-administrator-1.1.5.ebuild 1326
 SHA256 e473fe2e33d14ac2919cf7861ead163368fae02a56908580e7c8b7b37cf587e1 mysql-administrator-1.1.5.ebuild 1326
-MD5 c19271a432e390170985782ee80df8cb mysql-administrator-1.1.6.ebuild 1326
-RMD160 0d4ec239a1151aea71af70899ccc8e50ffdc810e mysql-administrator-1.1.6.ebuild 1326
-SHA256 62775117c20f14bbf6bfeca5fe2785700b08f1bdb2270d5b7ad313f6df5e9d93 mysql-administrator-1.1.6.ebuild 1326
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/hsmI1lqEGTUzyQRAowtAJ4h1gmbW36g9pqfScvvCLYzHSL0iACgkEYv
-F49MWqb9KaHgI+rFMNAspb4=
-=a33D
------END PGP SIGNATURE-----
+MD5 594bec73bdab13f9fcda4df4bdaa89cb mysql-administrator-1.1.6.ebuild 1461
+RMD160 2dec7d31c3123a333e5bbe86eccefc6fda5530d5 mysql-administrator-1.1.6.ebuild 1461
+SHA256 407533bc71703e7df23d29be8e183f67bae05557209bf76ebf6c70194cd4ddab mysql-administrator-1.1.6.ebuild 1461

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.18.ebuild,v 1.1 2006/02/23 20:28:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.18.ebuild,v 1.2 2006/02/25 16:27:48 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/1.1.18-gtk-fix.patch
+	echo "Categories=Application;Development;" >>"${S}"/mysql-query-browser/MySQLQueryBrowser.desktop.in
 }
 
 src_compile() {

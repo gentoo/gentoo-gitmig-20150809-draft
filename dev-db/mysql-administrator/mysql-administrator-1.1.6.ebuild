@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.1.6.ebuild,v 1.1 2006/02/23 20:29:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.1.6.ebuild,v 1.2 2006/02/25 16:27:21 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -22,6 +22,12 @@ RDEPEND="dev-db/mysql
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=app-text/scrollkeeper-0.3.11"
+
+src_unpack() {
+	unpack ${A}
+
+	echo "Categories=Application;Development;" >>"${S}"/mysql-administrator/MySQLAdministrator.desktop.in
+}
 
 src_compile() {
 	cd "${S}"/mysql-gui-common

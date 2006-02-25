@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 228fe6f5e30332d935ce54400a5b621c ChangeLog 4809
 RMD160 78d1d3937fddf657983a52d834526c0ecc827d83 ChangeLog 4809
 SHA256 8bab0385c515c782afeaea745d8a45aae5b79aebcfa19f967516db913da749f1 ChangeLog 4809
@@ -34,13 +31,6 @@ SHA256 20646d73623baaa8f452c602a3086b4ba7a62f2ed39626fd9498001957c87e65 mysql-qu
 MD5 c8dfe0fec9a69ab59cde469865fe531b mysql-query-browser-1.1.17.ebuild 1222
 RMD160 cbe209418b2c3d25bbdaa9bdd82a88982e03539a mysql-query-browser-1.1.17.ebuild 1222
 SHA256 56d5df6eab0a11874755920922833684a7c49d69a5a119d081a4958db5997f62 mysql-query-browser-1.1.17.ebuild 1222
-MD5 2fb9e57c9f6165d55e8e0c3d6214cf87 mysql-query-browser-1.1.18.ebuild 1308
-RMD160 85aff58db102f4095842cf02aab200ae09ac7e16 mysql-query-browser-1.1.18.ebuild 1308
-SHA256 36cb116a54a910d1014a717a619b31ed37dcf486fbacf208380f426112888b55 mysql-query-browser-1.1.18.ebuild 1308
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/hsbI1lqEGTUzyQRAnlhAKCCdFJUr6mOjF4b+dF340ZwROql6gCfR3ZF
-dtTGK5XgvPJr3/CgIrsEu0U=
-=0c9q
------END PGP SIGNATURE-----
+MD5 56d45b0a136afb176033f7c8ebc59904 mysql-query-browser-1.1.18.ebuild 1410
+RMD160 093d44972645fa1ca9a941f126f28e300e48afec mysql-query-browser-1.1.18.ebuild 1410
+SHA256 582b3562e851e5844e96810be47e1729bc85ef5c399408621f85054d362913d6 mysql-query-browser-1.1.18.ebuild 1410
