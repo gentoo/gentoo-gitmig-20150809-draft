@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.8.3.ebuild,v 1.1 2006/01/12 23:45:44 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.8.3.ebuild,v 1.2 2006/02/25 23:56:51 vanquirius Exp $
 
 inherit versionator
 
@@ -12,7 +12,7 @@ SRC_URI="http://projects.icapsid.net/${PN}/src/${MY_P}.src.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl
