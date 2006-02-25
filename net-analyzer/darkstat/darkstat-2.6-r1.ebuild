@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-2.6-r1.ebuild,v 1.8 2006/02/15 21:56:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-2.6-r1.ebuild,v 1.9 2006/02/25 23:46:38 vanquirius Exp $
 
 inherit eutils
 
@@ -14,12 +14,16 @@ LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND="net-libs/libpcap
-		nls? ( sys-devel/gettext ) "
-RDEPEND=""
+	nls? ( sys-devel/gettext )"
+RDEPEND="nls? ( virtual/libintl )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/ipcheck.patch
+}
 
 src_compile() {
-	epatch ${FILESDIR}/ipcheck.patch
-
 	use nls && myconf="`use_with nls`"
 	./configure \
 		--host=${CHOST} \
@@ -31,13 +35,13 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodir /var/spool/darkstat
 
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL ISSUES NEWS README TODO
+	dodoc ABOUT-NLS AUTHORS ChangeLog ISSUES NEWS README TODO
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/darkstat-init darkstat
-	insinto /etc/conf.d ; newins ${FILESDIR}/darkstat-confd darkstat
+	newinitd "${FILESDIR}"/darkstat-init darkstat
+	newconfd "${FILESDIR}"/darkstat-confd darkstat
 }
 
