@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-5.2.0.ebuild,v 1.4 2005/05/27 19:03:15 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-5.2.0.ebuild,v 1.5 2006/02/25 23:50:20 vanquirius Exp $
 
 inherit eutils
 
@@ -20,12 +20,12 @@ DEPEND="gnutls? ( >=net-libs/gnutls-1.0.17 )
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if ! use http ; then
 		# This patch defines maxtoread eventhough http is not 
 		# enabled. This avoids an error in readline.c:56.
-		epatch ${FILESDIR}/maxtoread-${PV}.patch
+		epatch "${FILESDIR}"/maxtoread-${PV}.patch
 	fi
 }
 
@@ -45,8 +45,8 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 
-	# They are not installed by emake install
-	dodoc README AUTHORS ChangeLog COPYING DETAILS NEWS TODO
+	# They are not installed by make install
+	dodoc README AUTHORS ChangeLog DETAILS NEWS TODO
 }
