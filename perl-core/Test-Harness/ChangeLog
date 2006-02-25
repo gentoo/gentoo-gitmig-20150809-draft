@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Test-Harness
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.5 2006/02/25 23:40:20 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.6 2006/02/25 23:58:15 kumba Exp $
+
+  25 Feb 2006; Joshua Kinard <kumba@gentoo.org> Test-Harness-2.56.ebuild:
+  Added ~mips to KEYWORDS.
 
   25 Feb 2006; Joshua Kinard <kumba@gentoo.org> Test-Harness-2.42.ebuild:
   Marked stable on mips.
