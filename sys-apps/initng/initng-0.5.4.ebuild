@@ -1,26 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-9999.ebuild,v 1.7 2006/02/25 05:12:31 vapier Exp $
-
-ESVN_REPO_URI="http://svn.initng.thinktux.net/initng/trunk"
-ESVN_PROJECT="initng"
-inherit subversion
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.5.4.ebuild,v 1.1 2006/02/25 05:12:31 vapier Exp $
 
 DESCRIPTION="A next generation init replacement"
 HOMEPAGE="http://initng.thinktux.net/"
-SRC_URI=""
+SRC_URI="http://initng.thinktux.net/download/v${PV:0:3}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="debug"
-
-S=${WORKDIR}/${PN}
-
-src_unpack() {
-	subversion_src_unpack
-	./autogen.sh || die "autogen failed"
-}
 
 src_compile() {
 	econf \
