@@ -2,4 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>mobile-phone</herd>
+	<longdescription>SMS Client is a UNIX command line based utility which allows you to send SMS messages to mobile phones and pagers.</longdescription>
 </pkgmetadata>

@@ -1,8 +1,21 @@
-MD5 729c177d704c9f427a9face698513828 smsclient-2.0.8y.ebuild 1132
-MD5 a2db72465e8b1659bb4d843d4670414a ChangeLog 575
-MD5 f9d2ab50c2e5d16e9b019cdc1151bfb3 metadata.xml 166
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7b5389ff9416e47b31c9a07219864379 ChangeLog 821
 MD5 8642b22274e250f955534849dcb01467 files/digest-smsclient-2.0.8y 69
-MD5 36498c4750ff2d94c40a8f2e11b2216b files/smsclient-2.0.8y_docs-makefile.patch 631
+MD5 e0fe7ea267d821fa69933bf04091060d files/digest-smsclient-2.0.9a 68
 MD5 30fba6e816fa0ae50eadb7a89ae6b1df files/smsclient-2.0.8y_client-makefile.patch 779
+MD5 36498c4750ff2d94c40a8f2e11b2216b files/smsclient-2.0.8y_docs-makefile.patch 631
 MD5 10261f164a1487188c7765d2f1dc88a1 files/smsclient-2.0.8y_logfile-makefile.patch 329
 MD5 07ba7eb2d630256ca93685c18fdc59d5 files/smsclient-2.0.8y_sms-makefile.patch 3121
+MD5 1c1fa7f512b4580efe22747fd0948bbe files/smsclient-2.0.9a-gentoo.patch 5771
+MD5 58dc7e77c89c2dd53361a6a1d59b9f43 metadata.xml 317
+MD5 729c177d704c9f427a9face698513828 smsclient-2.0.8y.ebuild 1132
+MD5 2a84a4867b48751e3bd22a9ebad058bf smsclient-2.0.9a.ebuild 1241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEADTJjG8pv1lIUX4RAiXxAJ0WljdxR9+Go9ld+IDfg/T8FiaXhwCgy0lV
+3mEpKMoOUou4qiiuWrI5aOU=
+=d3C+
+-----END PGP SIGNATURE-----
