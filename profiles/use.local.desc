@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1755 2006/02/24 10:18:29 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1756 2006/02/25 06:54:46 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -839,7 +839,7 @@ media-video/vlc:skins - Enables support for the skins2 interface.
 media-video/vlc:stream - Enables vlc to stream video.
 media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.
 media-video/winki:css - Enables ripping of encrypted DVDs
-media-video/xine-ui:vdr - Enables vdr support
+media-video/xine-ui:vdr - Enables Video Disk Recorder support
 net-analyzer/aimsniff:http - Install the WAS (Web AIM Sniff) frontend
 net-analyzer/barnyard:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/bmon:dbi - Enables libdbi support
