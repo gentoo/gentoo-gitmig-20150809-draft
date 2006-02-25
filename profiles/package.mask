@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5035 2006/02/25 11:48:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5036 2006/02/25 17:41:22 chtekk Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -135,10 +135,6 @@ mail-mta/netqmail
 # Old unmaintained package, dropping in favor of newer utilities like beagle.
 # Will be dropped 18/2/2006
 gnome-extra/medusa
-
-# Bryan Østergaard <kloeri@gentoo.org> (10 Feb 2006)
-# Last rites, requested by jakub in http://article.gmane.org/gmane.linux.gentoo.devel/35899
-dev-db/dybase
 
 # Carsten Lohrke <carlo@gentoo.org> (09 Feb 2006)
 # KOffice pre-releases
