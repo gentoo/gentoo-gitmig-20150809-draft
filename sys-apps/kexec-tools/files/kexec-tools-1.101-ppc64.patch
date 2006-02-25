@@ -1,0 +1,15 @@
+configure script never translates "powerpc64" to "ppc64" ... it
+just assumes it will get back "ppc64" ...
+
+--- configure
++++ configure
+@@ -1384,6 +1384,9 @@
+ 	powerpc )
+ 		host_cpu="ppc"
+ 		;;
++	powerpc64 )
++		host_cpu="ppc64"
++		;;
+ 	* )
+ 		host_cpu="$host_cpu"
+ 		;;
