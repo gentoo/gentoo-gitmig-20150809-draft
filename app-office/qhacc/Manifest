@@ -1,4 +1,4 @@
-MD5 acba20f69e17567f9876db0dd7a2808a ChangeLog 3711
+MD5 1d719fb26892d2f75fb5acf2563cbe01 ChangeLog 3846
 MD5 8ad038ef57072d0bd84121a74aa30c59 files/digest-qhacc-3.2.1 63
 MD5 912dd361b66263aabb1ee365ba285bf9 files/digest-qhacc-3.4 61
 MD5 5d4fad5c5dece54cf6376b1cbf836667 files/qhacc-3.2.1-mysql_plugin_libs.patch 834
@@ -6,4 +6,4 @@ MD5 2f6b026212a58b32e415bede86478bba files/qhacc-3.2.1-psql_plugin_libs.patch 82
 MD5 a17438e255e4c609d23b7db1e10761c9 files/qhacc-3.2.1-sandbox.patch 14903
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
 MD5 56971cbde6c4abf8668a914ee3392f80 qhacc-3.2.1.ebuild 1907
-MD5 e374ba6e85769d18d5517e631e46e0a4 qhacc-3.4.ebuild 2051
+MD5 bec6905b1839cc34e6d254634aab3f34 qhacc-3.4.ebuild 1952

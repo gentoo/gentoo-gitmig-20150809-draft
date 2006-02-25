@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.4.ebuild,v 1.3 2005/07/18 20:52:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.4.ebuild,v 1.4 2006/02/25 15:40:59 carlo Exp $
 
 inherit libtool kde-functions eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/qhacc/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~hppa ~ppc ~sparc ~x86"
-IUSE="doc mysql ofx postgres sqlite"
+IUSE="crypt doc mysql ofx postgres sqlite"
 
 DEPEND="ofx? ( ~dev-libs/libofx-0.7.0 )
 	crypt? ( >=app-crypt/gpgme-0.9.0-r1 )
@@ -62,9 +62,4 @@ pkg_postinst() {
 	echo ""
 	ewarn "To update from a previous version, please read /usr/share/doc/${PF}/UPGRADE.gz"
 	echo ""
-}
-
-pkg_postrm() {
-	# Portage doesn't eat stale symlinks...
-	[ -n "${PF}" ] && rm -rf /usr/share/doc/${PF}
 }

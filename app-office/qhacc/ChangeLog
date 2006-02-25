@@ -1,6 +1,9 @@
 # ChangeLog for app-office/qhacc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.28 2006/02/21 18:42:23 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.29 2006/02/25 15:40:59 carlo Exp $
+
+  25 Feb 2006; Carsten Lohrke <carlo@gentoo.org> qhacc-3.4.ebuild:
+  Missing crypt in ISUE, removing post_rm, since Portage is fixed.
 
   21 Feb 2006; Carsten Lohrke <carlo@gentoo.org>
   -files/qhacc-3.2.2-sandbox.patch, -qhacc-3.2.2.ebuild,
