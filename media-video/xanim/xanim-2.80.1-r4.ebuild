@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.30 2005/12/12 04:58:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.31 2006/02/25 07:15:31 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -98,7 +98,8 @@ src_compile() {
 		${_XA_EXT:+ \
 			XA_IV32_LIB="mods/${_XA_CVID}" \
 			XA_CYUV_LIB="mods/${_XA_CYUV}" \
-			XA_CVID_LIB="mods/${_XA_IV32}" }
+			XA_CVID_LIB="mods/${_XA_IV32}" } \
+	|| die
 }
 
 src_install() {
