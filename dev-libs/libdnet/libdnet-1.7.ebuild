@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.7.ebuild,v 1.13 2005/04/22 09:32:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.7.ebuild,v 1.14 2006/02/25 15:11:43 jokey Exp $
 
 DESCRIPTION="simplified, portable interface to several low-level networking routines"
 HOMEPAGE="http://libdnet.sourceforge.net/"
@@ -19,5 +19,5 @@ src_unpack() {
 
 src_install () {
 	einstall || die
-	dodoc COPYING.LIB ChangeLog VERSION README
+	dodoc ChangeLog VERSION README
 }

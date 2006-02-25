@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdnet
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.24 2006/02/06 19:45:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.25 2006/02/25 15:11:43 jokey Exp $
+
+  25 Feb 2006; Markus Ullmann <jokey@gentoo.org> libdnet-1.7.ebuild:
+  Removed non-existing doc from libdnet
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> libdnet-1.10.ebuild:
   stable on amd64
