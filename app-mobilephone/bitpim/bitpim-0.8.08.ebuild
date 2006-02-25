@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.8.07.ebuild,v 1.5 2006/02/25 12:37:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.8.08.ebuild,v 1.1 2006/02/25 12:37:11 mrness Exp $
 
 inherit eutils rpm
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-0.i386.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RESTRICT="nostrip"
