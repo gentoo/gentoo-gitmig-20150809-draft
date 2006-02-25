@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.87 2006/01/24 22:02:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.88 2006/02/25 18:42:34 ticho Exp $
+
+  25 Feb 2006; Andrej Kacian <ticho@gentoo.org> fetchmail-6.3.2.ebuild:
+  Stable on x86.
 
   24 Jan 2006; Torsten Veller <tove@gentoo.org> ChangeLog:
   Removed fetchmail-6.3.0 and fetchmail-6.3.1 (bug #120218).
