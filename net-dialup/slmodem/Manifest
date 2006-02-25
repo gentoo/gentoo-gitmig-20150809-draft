@@ -1,23 +1,79 @@
-MD5 23c24b1f294ad4a937886c00d629dc8b ChangeLog 12869
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 869e338efdc34bd749b77ccbb02b4128 ChangeLog 13060
+RMD160 3a5eb4515119051dab7cda753a7c84c50b5b7a19 ChangeLog 13060
+SHA256 65f51828c8efe1d893dc5733db33c588d7eec6ca853e58eef60c971b8a10d0e4 ChangeLog 13060
 MD5 8338cfc9815a953d85195bdccd9fbc97 files/digest-slmodem-2.9.11_pre20050816 140
+RMD160 fda4abd089a35d0cef0ca1b84d23475fcf216395 files/digest-slmodem-2.9.11_pre20050816 140
+SHA256 b22f2a6d0feeed30a732e5f0d6a92a7db4ba114e351a46f2eab2c9f06ece2f70 files/digest-slmodem-2.9.11_pre20050816 140
 MD5 cae2ec761f3db78791ab4ec7f0e83d5b files/digest-slmodem-2.9.11_pre20051009 140
+RMD160 6ce094c1f144c0f81c64420bc9678de269c70bfd files/digest-slmodem-2.9.11_pre20051009 140
+SHA256 d781b0ee276bafbf0181618ed65ff67ef96ef0036e08f932f2836a4fae2ab5d9 files/digest-slmodem-2.9.11_pre20051009 140
 MD5 cae2ec761f3db78791ab4ec7f0e83d5b files/digest-slmodem-2.9.11_pre20051009-r1 140
+RMD160 6ce094c1f144c0f81c64420bc9678de269c70bfd files/digest-slmodem-2.9.11_pre20051009-r1 140
+SHA256 d781b0ee276bafbf0181618ed65ff67ef96ef0036e08f932f2836a4fae2ab5d9 files/digest-slmodem-2.9.11_pre20051009-r1 140
 MD5 66a7f4e6682670216c1497606c9c600b files/digest-slmodem-2.9.11_pre20051101 140
+RMD160 3f3230049844aaf3a09ca309e5c02dfeb2afe0f1 files/digest-slmodem-2.9.11_pre20051101 140
+SHA256 ea8bd2be57d7528880a238d18be6ab8c7413b2b0c16d9236a44d59e9d2bce949 files/digest-slmodem-2.9.11_pre20051101 140
 MD5 fd55ef399408a109742263cd5b4a5219 files/digest-slmodem-2.9.9d 66
+RMD160 e61cb7e83af1ad0d0b3b6ef7d4b5e76a7dc3b186 files/digest-slmodem-2.9.9d 66
+SHA256 2a2961aa4bfa8f92a1123663cdbca98e5c91ccb22be16779701c3ca912b08799 files/digest-slmodem-2.9.9d 66
 MD5 67168d0e7a1be3e5041ec3cb8dabb50d files/slmodem-2.9.11.init 2182
+RMD160 bbacb69c48be43feff80eb0e6936ab293d9f66d9 files/slmodem-2.9.11.init 2182
+SHA256 af9974afbcede01304f2367e9163a59db2ecca0e0fca7406e72f402968829e51 files/slmodem-2.9.11.init 2182
 MD5 e91d1df68be76c531a8514dba77c1886 files/slmodem-2.9.11.modules 106
+RMD160 41b949de0d6a2c47d0227c97b065336cc54ed50e files/slmodem-2.9.11.modules 106
+SHA256 0ae1432fbae6e517190a841a6ae09806f24c16614e845d2e814a568285d96a7f files/slmodem-2.9.11.modules 106
 MD5 fd0f0a405fb7f059cc2f5078d54fd884 files/slmodem-2.9.9b-gcc4.patch 463
+RMD160 8a140c171766869e685e5b9fb37b02706c58ebd6 files/slmodem-2.9.9b-gcc4.patch 463
+SHA256 235597209142527063109b9d155684004663fa36c8e15f85ee07c269410d3263 files/slmodem-2.9.9b-gcc4.patch 463
 MD5 1a0b854bbe34e01e918b855b7c81ffba files/slmodem-2.9.conf 649
+RMD160 7d3f89e8ad1831e0730924e421ab643368406c7c files/slmodem-2.9.conf 649
+SHA256 0f6cf3b88900d0b2717c7df33debd5247c46849fc3d92bc54cf84d4eb0b46bff files/slmodem-2.9.conf 649
 MD5 c80ecf5c3d5605220e4b0055850260a5 files/slmodem-2.9.devfs 786
+RMD160 bc7d4385206864b16cd315d14ea60ef99533618d files/slmodem-2.9.devfs 786
+SHA256 4349b9ffa2c5b9adf43722c7b71dbf33f3ffce767a4ddbc630397ee23599ffa6 files/slmodem-2.9.devfs 786
 MD5 3d00e935ef9592cf6538298cacd92a02 files/slmodem-2.9.init 2702
+RMD160 c14a229721ae9cd6374882c846bb4e35b4d6f63f files/slmodem-2.9.init 2702
+SHA256 f3a37113a476b39b117fd2811729cea01bced4db339505802d5c13d6061e250a files/slmodem-2.9.init 2702
 MD5 8834a62c67909059cef10887bfbcc853 files/slmodem-2.9.modules 494
+RMD160 164182ff4296e4bfe6d282f538cc472f0e378242 files/slmodem-2.9.modules 494
+SHA256 ae335121dc9aea137c031fe7306599d64f1ac76701f5f2025911a75c381d3283 files/slmodem-2.9.modules 494
 MD5 1561aebe43beb20809e47ea1dd62115f files/slmodem-amd64-Makefile.diff 762
+RMD160 61ac0eedcfd61095609b523804c381ff0dabf936 files/slmodem-amd64-Makefile.diff 762
+SHA256 ae4082b38991e1dedbf52126c8d3536d782308794e76db530a0f93059859c9f1 files/slmodem-amd64-Makefile.diff 762
 MD5 618a9ebd35ccb49bf34e6ea522afcb8b files/slmodem-class-simple-to-class.diff 6847
+RMD160 1b484b10f7308a77b155812273626dacffe678dd files/slmodem-class-simple-to-class.diff 6847
+SHA256 731e7771b1dfe1e79fe8b2a9f21f5f2d773fbdacf4d5d65e1d5007a4f123ce05 files/slmodem-class-simple-to-class.diff 6847
 MD5 9c47e598fd639d46a03493fe7a52595e files/slmodem-remove-URB_ASYNC_UNLINK.patch 436
+RMD160 910fb64f4fb689e2311cf44700ac8e58d794174d files/slmodem-remove-URB_ASYNC_UNLINK.patch 436
+SHA256 7b23a4d08a8667bd61b6db22eb5547f0ad631ec8543ac1e106f0eddf79d54f5b files/slmodem-remove-URB_ASYNC_UNLINK.patch 436
 MD5 a5c2c40e3a6c4665033c97bb9088f03d files/slusb.hotplug 262
-MD5 e487a8ab7ec754f06a85f64f4aaa7540 metadata.xml 409
+RMD160 6ccb14b19191da17b0352525399ec8560eb89c04 files/slusb.hotplug 262
+SHA256 1806e732086915be8ca3c43d0abaf73bdde945eb1e11bd24a12c7309be4cdfed files/slusb.hotplug 262
+MD5 eeb22f4e1b5d94396c26c416cd9d6aed metadata.xml 258
+RMD160 b47a6e63612f9a63019ed0564245cafb4c086a28 metadata.xml 258
+SHA256 64186ffb8c55be0e733edbec2cc5176a4079104e3f0ee8dbcce9f1bd49ad0037 metadata.xml 258
 MD5 efbbb8c40614e5c3d370b0c55eb6b67e slmodem-2.9.11_pre20050816.ebuild 4345
+RMD160 6a4ec87c670e1bd2861702cafa1c6d593347b637 slmodem-2.9.11_pre20050816.ebuild 4345
+SHA256 8765737dc13f2858b65d9836471f10b2bb418f44baec9f4f14c51a702ebcf042 slmodem-2.9.11_pre20050816.ebuild 4345
 MD5 d674ea9e8c47078b3bc481b565f1998f slmodem-2.9.11_pre20051009-r1.ebuild 4556
+RMD160 a4111d4b080147972f498fbf9d1f67fac82d8e82 slmodem-2.9.11_pre20051009-r1.ebuild 4556
+SHA256 f466268e6a8f8df89528faf87a169a383ea88bd6e4994725fcfdb98d64e42a00 slmodem-2.9.11_pre20051009-r1.ebuild 4556
 MD5 54c73f3777213c30e2a93b7ff18bd711 slmodem-2.9.11_pre20051009.ebuild 4549
+RMD160 dcb6b54548ed024c0238addaaed929408bfd28ed slmodem-2.9.11_pre20051009.ebuild 4549
+SHA256 6a14efebf8915a825cde02aafa6cfbd50dae6a3e7d77cb68a911ab66eccb79bc slmodem-2.9.11_pre20051009.ebuild 4549
 MD5 76dc106e077e47aeb5d9dc6e79bca51a slmodem-2.9.11_pre20051101.ebuild 4491
+RMD160 f6f9ee3056dc06d91766ab35ee35b32917d7bef6 slmodem-2.9.11_pre20051101.ebuild 4491
+SHA256 a4e46e3bbc892779f8a0fed00ebd13c7ac901b982f1dddb6c547d1d795df8587 slmodem-2.9.11_pre20051101.ebuild 4491
 MD5 da3f5db025a3799ee1bdf5b9eef53601 slmodem-2.9.9d.ebuild 3553
+RMD160 f1ca0a06fc2228fb0ef83dc9ce45c235fe3de9bb slmodem-2.9.9d.ebuild 3553
+SHA256 ca8ea2ac5d1eaa896b6c43576ffedd66561c5c900b4db301e53721c1a1db9c58 slmodem-2.9.9d.ebuild 3553
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEAM0EmdTrptrqvGERAnVgAJ9aPs4Z7Lu7KN5b3oWkcNswpvkSIACfcTnc
+xmiVOy5KDai6hrVcav8jLZM=
+=FazC
+-----END PGP SIGNATURE-----

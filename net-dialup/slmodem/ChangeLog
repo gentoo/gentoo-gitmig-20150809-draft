@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/slmodem
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.55 2005/11/06 13:58:42 genstef Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.56 2006/02/25 21:31:51 dragonheart Exp $
+
+  25 Feb 2006; Daniel Black <dragonheart@gentoo.org> metadata.xml:
+  I've not maintained this for a while. removing self from metadata. Thanks
+  net-dialup herd for taking care of this.
 
 *slmodem-2.9.11_pre20051101 (06 Nov 2005)
 

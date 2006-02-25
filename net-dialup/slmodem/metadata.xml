@@ -6,9 +6,4 @@
 	<email>net-dialup@gentoo.org</email>
 	<name>Net-dialup herd</name>
 </maintainer>
-<maintainer>
-	<email>dragonheart@gentoo.org</email>
-	<name>Daniel Black</name>
-	<description>Will fix ebuild/script errors</description>
-</maintainer>
 </pkgmetadata>
