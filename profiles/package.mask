@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5031 2006/02/24 21:37:25 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5032 2006/02/25 01:32:07 lu_zero Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1376,10 +1376,6 @@ dev-lisp/cl-imho
 # <plasmaroo@gentoo.org> (16 Jan 2005)
 # Live CVS build, masking to keep the bunny rabbits happy.
 >=sci-mathematics/axiom-9999
-
-# <lu_zero@gentoo.org> (14 Jan 2005)
-# Cinelerra is too broken to be fixed
-media-video/cinelerra
 
 # <mkennedy@gentoo.org> (Jan 12 2005)
 # no longer needed for the time being; use app-emacs/slime instead
