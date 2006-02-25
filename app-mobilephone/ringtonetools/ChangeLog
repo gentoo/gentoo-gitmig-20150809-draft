@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/ringtonetools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ringtonetools/ChangeLog,v 1.6 2006/01/15 11:07:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ringtonetools/ChangeLog,v 1.7 2006/02/25 15:26:50 mrness Exp $
+
+  25 Feb 2006; Alin Nastac <mrness@gentoo.org> -ringtonetools-2.24.ebuild,
+  ringtonetools-2.26.ebuild:
+  Remove old version. Stable on x86.
 
   15 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
   ringtonetools-2.25.ebuild:
