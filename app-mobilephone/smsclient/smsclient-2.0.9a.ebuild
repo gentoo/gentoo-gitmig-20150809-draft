@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smsclient/smsclient-2.0.9a.ebuild,v 1.1 2006/02/25 10:42:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smsclient/smsclient-2.0.9a.ebuild,v 1.2 2006/02/25 11:03:12 mrness Exp $
 
 inherit eutils
 
@@ -26,8 +26,8 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "Install failed"
-	dosym /usr/bin/sms_client /usr/bin/smsclient
-	dosym /usr/bin/sms_address /usr/bin/smsaddress
+	dosym sms_client /usr/bin/smsclient
+	dosym sms_address /usr/bin/smsaddress
 
 	diropts -g dialout -m 0770
 	keepdir /var/lock/sms
