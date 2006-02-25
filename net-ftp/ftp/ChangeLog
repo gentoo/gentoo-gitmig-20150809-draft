@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.26 2006/02/24 18:59:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.27 2006/02/25 20:09:50 kumba Exp $
+
+  25 Feb 2006; Joshua Kinard <kumba@gentoo.org> ftp-0.17-r6.ebuild:
+  Marked stable on mips.
 
   24 Feb 2006; <nixnut@gentoo.org> ftp-0.17-r6.ebuild:
   Stable on ppc. bug 123774
