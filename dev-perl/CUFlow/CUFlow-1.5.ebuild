@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CUFlow/CUFlow-1.5.ebuild,v 1.2 2005/06/22 16:31:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CUFlow/CUFlow-1.5.ebuild,v 1.3 2006/02/25 23:23:17 jokey Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_install() {
 	ewarn "CUGrapher.pl has been placed in /var/www/localhost/cgi-bin"
 	ewarn "If this is not where your cgi-bin directory is then you must"
 	ewarn "move it manually"
-	dodoc COPYING README.txt
+	dodoc README.txt
 
 }
 
