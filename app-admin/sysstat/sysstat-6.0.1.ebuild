@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-6.0.1.ebuild,v 1.4 2005/08/25 05:50:30 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-6.0.1.ebuild,v 1.5 2006/02/25 01:31:44 ka0ttic Exp $
 
 inherit eutils
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls"
 
-DEPEND="nls? ( sys-devel/gettext )"
+RDEPEND="nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,12 +1,46 @@
-MD5 4a2ee3a22f507ccbeb9afaa3cd52e176 sysstat-5.0.5-r2.ebuild 1179
-MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 bc8b3b08597ce5c46814839f745cb74d sysstat-6.0.1.ebuild 1176
-MD5 798d9067c6c32ca2d1920fc269053701 ChangeLog 5566
-MD5 675ff477bc1593491723b612471e4e54 sysstat-5.0.2.ebuild 961
-MD5 ddf73fe10757e3b706c377f8fad79245 files/sysstat-6.0.0-gcc4.diff 6647
-MD5 81554c40694987a45295653252dda469 files/sysstat-5.0.5-gcc4.diff 481
-MD5 fb5bff216a55ef8704f4946af00ed172 files/digest-sysstat-5.0.2 65
-MD5 4eac2aae2f83cb52393c58896d9a5151 files/sysstat-6.0.1-gcc4.diff 5918
-MD5 d63e5ccba8489c1875bb404a477ed9f0 files/digest-sysstat-5.0.5-r2 65
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7caff1fa2cc68611c2687d12ce66920b ChangeLog 5724
+RMD160 9a6060659f782a806a266c6866e0e20f11e99b3b ChangeLog 5724
+SHA256 d3d22f0f10887c9dfdf4689d684b650e0d3e3faa0f0858e07604d69828670aeb ChangeLog 5724
 MD5 a899283ed4a4cc5a67bc138e2590144a files/crontab 519
+RMD160 85073554c506abac5af8e18ab4434126782265cb files/crontab 519
+SHA256 2c9714647358f79112966c9f64ec3501992a2416bb8415011c060a9c4dcd72b6 files/crontab 519
+MD5 fb5bff216a55ef8704f4946af00ed172 files/digest-sysstat-5.0.2 65
+RMD160 11313541029ac1d1654ff5153c23ebe581ffe3a5 files/digest-sysstat-5.0.2 65
+SHA256 851d56c9d1afbbb3914928edf1e1e468acd0bda5a2513ae0555b15a46b9d376d files/digest-sysstat-5.0.2 65
+MD5 d63e5ccba8489c1875bb404a477ed9f0 files/digest-sysstat-5.0.5-r2 65
+RMD160 2e3fa9b72cbfc957579155a9135230233b0a64d8 files/digest-sysstat-5.0.5-r2 65
+SHA256 88756f30c64a84999d3946a1600be8ffb8dcf5064eeb854b678fbd128470a721 files/digest-sysstat-5.0.5-r2 65
 MD5 73ba0e07b9338cd0d56ee3ebabd1ec79 files/digest-sysstat-6.0.1 65
+RMD160 aa6db4414c368c81d594f6a7eb8dbb15590b5683 files/digest-sysstat-6.0.1 65
+SHA256 27292031738d3dec187093d48b54c2811ee50c10166e5bccb3b0cd94b5576e97 files/digest-sysstat-6.0.1 65
+MD5 81554c40694987a45295653252dda469 files/sysstat-5.0.5-gcc4.diff 481
+RMD160 16a80a6bc69fe1e8578c6402114612976bae2f2d files/sysstat-5.0.5-gcc4.diff 481
+SHA256 d2b687ae37305cfb1017681d537397264eb0019a6aa7e1e53ca690f7a04a61dc files/sysstat-5.0.5-gcc4.diff 481
+MD5 ddf73fe10757e3b706c377f8fad79245 files/sysstat-6.0.0-gcc4.diff 6647
+RMD160 9884874ea30cae0a20ea79cdbd6cc20e7ed23dd8 files/sysstat-6.0.0-gcc4.diff 6647
+SHA256 018f5078896a1b5bb7a853e68600142a3299db94437ad94598f31311a4f68b22 files/sysstat-6.0.0-gcc4.diff 6647
+MD5 4eac2aae2f83cb52393c58896d9a5151 files/sysstat-6.0.1-gcc4.diff 5918
+RMD160 da1603515b46165574d2ddb7f800cf5c196302cb files/sysstat-6.0.1-gcc4.diff 5918
+SHA256 c6c155b2f758354fedab8e16ff0c7f69302171daa581769225213027078264f0 files/sysstat-6.0.1-gcc4.diff 5918
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+RMD160 2a9e181efd140c3c1a2136376000c63f7459246d metadata.xml 254
+SHA256 ddd8e09da8727f957651a073ae2b61e4a381ee69ab83c93a3077a653743b887f metadata.xml 254
+MD5 b4cdb4859d5c8b54e32b63a2b2eaa6aa sysstat-5.0.2.ebuild 983
+RMD160 b18e477ab7aafee1ed786778c0bb8c84407bab15 sysstat-5.0.2.ebuild 983
+SHA256 198072ce34e1b14abd76b77f0fc6e93710816a1704e7a3881493e427c2003a20 sysstat-5.0.2.ebuild 983
+MD5 ab74060a41d92f41cc627695ed0d8c30 sysstat-5.0.5-r2.ebuild 1224
+RMD160 597e5e62de2b428ee91c394badeda7c6b59f3264 sysstat-5.0.5-r2.ebuild 1224
+SHA256 839c32f0274f5c6e705e3b67d6ddbb41ae5c11c899dc269bd3d91b551c1a523c sysstat-5.0.5-r2.ebuild 1224
+MD5 8493035d80706398001cc7c31b244c6c sysstat-6.0.1.ebuild 1223
+RMD160 6e9f182c7e0e4a1068acdcf7b0ac3ebe3df5c3ad sysstat-6.0.1.ebuild 1223
+SHA256 b47849eb56b022f1e51c3aa95140803822302505c9e4a1b368e93f21355c4cd6 sysstat-6.0.1.ebuild 1223
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD/7OrEZCkKN40op4RAqqdAKCenk2VKng+g/Gdg2mn49ExuTmikwCgm5we
+3KFxDz98Id/hH/PzEQ9lffQ=
+=Jlnc
+-----END PGP SIGNATURE-----
