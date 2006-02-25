@@ -1,18 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c2c3f972bc01da627f12314a7744d1f1 ChangeLog 763
+MD5 25620c441438637ea55f4d6c4fda9d4a ChangeLog 852
+RMD160 53a864d508c83d1c8685af76d1e70ed10008d5d3 ChangeLog 852
+SHA256 454bcc3d37b16454d1fc1b5b48ab214d4f610b2d6c3fe334e346d79a4575884e ChangeLog 852
 MD5 ce865a54d5f65ecfdb12f24d3270ca1b etpan-ng-0.6.1.ebuild 817
-MD5 26590c8f36131c00f13b37c599d8bd69 etpan-ng-0.7.1.ebuild 818
+RMD160 40dbb2f8d54e08b87ac4a48d39e3dbc21c854b8d etpan-ng-0.6.1.ebuild 817
+SHA256 5d7c44bb1ff275a92757fbba1a4f5381039c5b4b5d031f61a385da1f5b7da7ad etpan-ng-0.6.1.ebuild 817
+MD5 74232b7243854abc9a7fc85c0c651d9d etpan-ng-0.7.1.ebuild 817
+RMD160 1664ed7df8b9dee5712584e16c9723a79bead0df etpan-ng-0.7.1.ebuild 817
+SHA256 e755fd13ff4042680a721ebc51d08be66e8835dcc5a097dcd1fed88a36ec1715 etpan-ng-0.7.1.ebuild 817
 MD5 bccc826a295e3056d1b26a840bfeb7b7 etpan-ng-0.7.ebuild 822
+RMD160 2af8182aa64f46a3c109d3267996f38f76e725fa etpan-ng-0.7.ebuild 822
+SHA256 826cf14b0fef11987df735044b91b25f70e9543c1196d18f54e4c6bb2ae00f3a etpan-ng-0.7.ebuild 822
 MD5 9434b4b4de90f5012f93db2e03e304ee files/digest-etpan-ng-0.6.1 66
+RMD160 7dd5d5a810384e013fcf0c95dd763c7d165c365a files/digest-etpan-ng-0.6.1 66
+SHA256 92b3239893301585e56f30f805dfd0060886dad1792bd85ec907f070f7401502 files/digest-etpan-ng-0.6.1 66
 MD5 fe51a32187705d3ce52cf5338e9671a3 files/digest-etpan-ng-0.7 64
+RMD160 f2754d0c8df169ff7240f3a867cc0c2cb96111b6 files/digest-etpan-ng-0.7 64
+SHA256 490ce67dfd8ac035c43ea844f2075e453c2dfc900cc2dadb5d37b6401c051cb0 files/digest-etpan-ng-0.7 64
 MD5 d396678049783c1a101e3a3a45279262 files/digest-etpan-ng-0.7.1 66
+RMD160 2d74df7cc749e497236e55785be380c0f1e590d5 files/digest-etpan-ng-0.7.1 66
+SHA256 e8c21e1c88c950ae7f5836d50dd697515880aa22b04bba62575dbb100f7167c2 files/digest-etpan-ng-0.7.1 66
 MD5 0a9d3ca5456904229c60e35e4452132a metadata.xml 254
+RMD160 1ce4e2f4ba2276f20d9a7c5b5b02d8a621a9f0ac metadata.xml 254
+SHA256 0704eb717b3bd19f8318ec03dcf44bf713fed5d28ccf7f5d92bdc45286d81900 metadata.xml 254
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDxMTsQlM6RnzZP+IRAucuAJ91MNN+kCMVHa+bOxh2Q43vG3RliQCffre1
-mL57D9CZBlcBzS1rTtdoVXQ=
-=DVf7
+iD8DBQFEAKafQlM6RnzZP+IRApQUAJwOKu6/gWopxwYsfESJNOuoluYX4wCghe2g
+1zH8hBeI2oS05Mo5fOFop2E=
+=y6nw
 -----END PGP SIGNATURE-----
