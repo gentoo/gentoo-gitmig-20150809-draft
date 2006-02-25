@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ucblogo-5.5.ebuild,v 1.2 2005/11/20 06:42:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ucblogo-5.5.ebuild,v 1.3 2006/02/25 05:41:58 vapier Exp $
 
 inherit eutils
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="emacs X"
 
-DEPEND="X? ( virtual/x11 )
-	emacs? ( virtual/emacs )"
+DEPEND="emacs? ( virtual/emacs )
+	X? ( || ( ( x11-libs/libICE x11-libs/libSM x11-libs/libX11 ) virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}

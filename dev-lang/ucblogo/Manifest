@@ -2,15 +2,27 @@
 Hash: SHA1
 
 MD5 9c166d2cc6eb2a46459f069af2ccb7a6 ChangeLog 506
+RMD160 2fdf3eca07500df31ee7f3dc494f5941cc04f1cf ChangeLog 506
+SHA256 03e4c7d62f89645e2dea0b64b18d66dccea1ba0769ec2ec0d88f1c9a34ed2c1c ChangeLog 506
 MD5 bf4574962bbaffaa1d55eeab946e5fce files/digest-ucblogo-5.5 64
+RMD160 5844600d34d0323c9beb58dba90712789a3338a3 files/digest-ucblogo-5.5 64
+SHA256 67da9ee8499b715106ec5c421afdab5bf85049f9cc763f6c1a43895bf0bbdcec files/digest-ucblogo-5.5 64
 MD5 4206f64a6e59008d3d15352039ef05db files/ucblogo-5.5-destdir.patch 1976
+RMD160 89a24422bf1868d38e4d4c3e590c457c0be0ed1a files/ucblogo-5.5-destdir.patch 1976
+SHA256 15e1692c57c9f63546f2c3d9ec8f12554b5e41f7c399138d2955df25e26989be files/ucblogo-5.5-destdir.patch 1976
 MD5 f0a697d2a89114bf5fe60ce1cec7ac39 files/ucblogo-5.5-dont-require-tetex.patch 1228
+RMD160 5f95281f7f6ba432c356e8377380db5362a41f97 files/ucblogo-5.5-dont-require-tetex.patch 1228
+SHA256 2785a7971ac4f2498bd0eecb31cb943520d89dff74873475037f08962db690c7 files/ucblogo-5.5-dont-require-tetex.patch 1228
 MD5 3da75893534e1513564394c430d3773e files/ucblogo-5.5-fhs.patch 661
-MD5 a9468383c7b6ac280a8862888e290553 ucblogo-5.5.ebuild 858
+RMD160 00771124ed5956173d847afbcbf75280635d1d06 files/ucblogo-5.5-fhs.patch 661
+SHA256 edce527c09f5a9117348935612f6b680b927a18b35e4b7a7c687b1ca5c968fc2 files/ucblogo-5.5-fhs.patch 661
+MD5 3fa7c8596ad9ec28be4e7c1b174fb249 ucblogo-5.5.ebuild 916
+RMD160 88ba153003778a880870ca3b0435b570c486ccd4 ucblogo-5.5.ebuild 916
+SHA256 2c9908a1a7e2b4db96956af1a7fbce84415bac11459a712f2a5c2ffceafae818 ucblogo-5.5.ebuild 916
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDgBtHgIKl8Uu19MoRAtj2AJ9/weyLkU1T1mMHK/jj3w8hpVACfwCdEAcZ
-SMoOehPeONtfhF5cuj22Bxs=
-=/iAb
+iD8DBQFD/+5X2+ySkm8kpY0RAt6wAJ9SmYPsVqzKcXFU7ZiR4Ogjqh0qLwCdGEaK
+e+U2b7sxjLgBW3xGXC1gP94=
+=OTu1
 -----END PGP SIGNATURE-----
