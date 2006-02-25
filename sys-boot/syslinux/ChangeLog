@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.21 2006/02/17 21:34:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.22 2006/02/25 21:14:37 halcy0n Exp $
+
+  25 Feb 2006; Mark Loeser <halcy0n@gentoo.org> syslinux-3.11.ebuild:
+  Stable on x86; bug #122743
 
   17 Feb 2006; Simon Stelling <blubb@gentoo.org> syslinux-3.11.ebuild:
   stable on amd64
