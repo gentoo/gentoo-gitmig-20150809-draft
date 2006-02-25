@@ -1,17 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5be7269746dbeccd184f0a9395b6cbb2 ChangeLog 11040
-MD5 6bb9f556ff62935bc596599f9a9b6802 cracklib-2.8.3-r1.ebuild 1538
+RMD160 a5b568725d3ba506465ace2c7ca0d6400a9f88bd ChangeLog 11040
+SHA256 da45cd3c2280ed26cfab0cbb765a7891157490098a6e3d57d723ec98e8fa618c ChangeLog 11040
 MD5 852460433be408f4b0b4474141d28638 cracklib-2.8.5.ebuild 1442
-MD5 8a109d0d79bed1fb528d2f7c2e0bdbc0 files/cracklib-2.7-buffer-packer.patch 602
-MD5 efb1b540d35f2929768dcb3dcf723fee files/cracklib-2.7-cross-compile.patch 492
-MD5 85783b83e5bfa51190033895cfaf803e files/cracklib-2.7-dec-alpha-compiler.diff 333
-MD5 57ed4f94412bd475a0774c8e0db99712 files/cracklib-2.7-gentoo-new.diff 4235
-MD5 336ab4f8ce8e3a3955ec8722d32076b4 files/cracklib-2.7-gzip.patch 521
-MD5 ee8b4f377188b6bb5001fc6e8b81e614 files/cracklib-2.7-libdir.patch 1211
-MD5 e9edfa4c3852810514a42e43e4f66b4e files/cracklib-2.7-parallel-make.patch 1066
-MD5 954e8e0d53c6f878366e472a90917356 files/cracklib-2.7-redhat.patch 1224
-MD5 69aa6844bbf39d86cde364729ca9f9dd files/cracklib-2.7-static-lib.patch 1328
+RMD160 1c37eb72cd7bedfe81f26c696d623e33dd4fad5c cracklib-2.8.5.ebuild 1442
+SHA256 3aacca9d03a500983722dbaee227a3cd0b5b27a4562da28ea0f3a92d1a04cb07 cracklib-2.8.5.ebuild 1442
 MD5 f078a8fa2074250986d685cac2b0b271 files/cracklib-2.8.3-dictname.patch 528
-MD5 6b7b4e9536a1420eed242b648d5a7aa7 files/cracklib-2.8.3-packer-defines.patch 891
-MD5 e00f36f63e3879e2da10580921e484b6 files/digest-cracklib-2.8.3-r1 66
+RMD160 7759bf9439b1c1dcba21246148fd160a7936215f files/cracklib-2.8.3-dictname.patch 528
+SHA256 94bd7f042f999f9454d4eb7123b5ce44c707b8d2c23d0706c3fcd53a7c22ccf9 files/cracklib-2.8.3-dictname.patch 528
 MD5 44e1c89acbadcbd16e795bb6b7cce486 files/digest-cracklib-2.8.5 66
+RMD160 2c8efe928bbf2f600fa0f8e5954638dbf8401a4b files/digest-cracklib-2.8.5 66
+SHA256 0137d500ef0ba5f64badf0f4356ecada0903afdfc07bc56b1e147e40c2244879 files/digest-cracklib-2.8.5 66
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFD/+oe2+ySkm8kpY0RAoPrAJsHXBnv4NVg+yNpccQ4DVhWzfsmiACeLbEH
+cM5RwkD+mfwyANESPCDDet0=
+=noxI
+-----END PGP SIGNATURE-----
