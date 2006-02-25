@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.17 2006/02/17 23:34:11 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.18 2006/02/25 23:59:39 vanquirius Exp $
+
+  25 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> flow-tools-0.66.ebuild,
+  flow-tools-0.67.ebuild, flow-tools-0.68.ebuild, flow-tools-0.68-r1.ebuild,
+  flow-tools-0.68-r2.ebuild:
+  Do not install COPYING/INSTALL.
 
 *flow-tools-0.68-r2 (17 Feb 2006)
 

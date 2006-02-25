@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68-r1.ebuild,v 1.4 2005/08/23 13:43:25 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68-r1.ebuild,v 1.5 2006/02/25 23:59:39 vanquirius Exp $
 
 inherit eutils flag-o-matic
 
@@ -68,7 +68,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc COPYING ChangeLog README INSTALL SECURITY TODO
+	dodoc ChangeLog README SECURITY TODO
 
 	keepdir /var/lib/flows
 	keepdir /var/lib/flows/bin
