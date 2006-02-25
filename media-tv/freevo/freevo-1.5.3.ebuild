@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.5.3.ebuild,v 1.3 2005/07/10 01:22:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.5.3.ebuild,v 1.4 2006/02/25 18:08:57 vanquirius Exp $
 
 inherit distutils
 
@@ -26,8 +26,7 @@ DEPEND=">=dev-python/pygame-1.5.6
 	dvd? ( >=media-video/xine-ui-0.9.22 >=media-video/lsdvd-0.10 )
 	encode? ( >=media-sound/cdparanoia-3.9.8 >=media-sound/lame-3.93.1 )
 	matrox? ( >=media-video/matroxset-0.3 )
-	lirc? ( app-misc/lirc >=dev-python/pylirc-0.0.3 )
-	X? ( virtual/x11 )"
+	lirc? ( app-misc/lirc >=dev-python/pylirc-0.0.3 )"
 
 src_install() {
 	distutils_src_install
