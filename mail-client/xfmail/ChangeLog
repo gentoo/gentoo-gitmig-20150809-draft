@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/xfmail
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/xfmail/ChangeLog,v 1.5 2006/01/27 17:09:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/xfmail/ChangeLog,v 1.6 2006/02/25 12:11:56 ticho Exp $
+
+  25 Feb 2006; Andrej Kacian <ticho@gentoo.org> -xfmail-1.5.3.ebuild,
+  -xfmail-1.5.4.ebuild, xfmail-1.5.4-r1.ebuild, xfmail-1.5.5.ebuild:
+  Version bump. Pruned old ebuilds. Migrated 1.5.4-r1 to modular X
+  dependencies, so repoman doesn't complain (although it is utterly useless).
 
   27 Jan 2006; Andrej Kacian <ticho@gentoo.org> xfmail-1.5.5.ebuild:
   Fix modular X deps.

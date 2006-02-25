@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/xfmail/xfmail-1.5.5.ebuild,v 1.3 2006/01/27 21:56:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/xfmail/xfmail-1.5.5.ebuild,v 1.4 2006/02/25 12:11:56 ticho Exp $
 
 IUSE="ldap"
 DESCRIPTION="A full-featured mail program using XForms"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.welcomes-you.com/pub/${PN}/release/${PV}/source/${P}.tar.bz2"
 HOMEPAGE="http://www.xfmail.org"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~ppc ~sparc x86"
 RDEPEND="|| ( ( x11-libs/libXpm
 				x11-libs/libSM )
 			virtual/x11 )

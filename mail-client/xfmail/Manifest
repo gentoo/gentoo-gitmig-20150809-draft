@@ -1,20 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5fe5f7031b6b9507aad66fa7cd8421de ChangeLog 1303
-MD5 af2f8bd250fae641a5934c15173048d9 files/digest-xfmail-1.5.3 65
-MD5 5cd490c9d4971d8f547a1496509b926a files/digest-xfmail-1.5.4 65
+MD5 dbf2b5b124cfc40e877ee1b8815d2688 ChangeLog 1588
+RMD160 34c4a87d4f10b4dac7bf558c92a64bf8f1bf643d ChangeLog 1588
+SHA256 684d66beb98d250af056d98041f354c164ff16a2c53ea4603d13e85635347576 ChangeLog 1588
 MD5 69be169d9f01ce23d16f9cf5b398b526 files/digest-xfmail-1.5.4-r1 67
+RMD160 2d0d1755092d505d2755a27107400fa9eb9f5f1e files/digest-xfmail-1.5.4-r1 67
+SHA256 b2134ee777e35ebc6ec76ae8d9cab07f69f7a3549c1e4420a1c04fb147f66c9a files/digest-xfmail-1.5.4-r1 67
 MD5 6b554cf8ffdbac2f71d0e8f52db82e81 files/digest-xfmail-1.5.5 66
+RMD160 e74e2c53c253df3b5f2e9daf9dea85524f33c4da files/digest-xfmail-1.5.5 66
+SHA256 2dfe4ab948bd3d77d2f1733add54f0b262949df1a6bfdead4639ce577077fe98 files/digest-xfmail-1.5.5 66
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 7adfa85335f11f5a2ac2048c883ffc1e xfmail-1.5.3.ebuild 955
-MD5 f855af2491f866530d39e4fa697f0d21 xfmail-1.5.4-r1.ebuild 1082
-MD5 9ee1c987b8df30d35d876cb4197792dc xfmail-1.5.4.ebuild 1072
-MD5 e4a53b3274dfa31d7275456422320301 xfmail-1.5.5.ebuild 1195
+RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
+SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
+MD5 2462f7a240336773366ce0adca0a5374 xfmail-1.5.4-r1.ebuild 1186
+RMD160 cb7648e3183a5fd6e7b1e92cf4d9e9ce030f08ff xfmail-1.5.4-r1.ebuild 1186
+SHA256 37ada92fb9dd50104bbcde20f77aa021a4612c07b750118f361be9816f28866c xfmail-1.5.4-r1.ebuild 1186
+MD5 fb8943bbb3ab2791ded30d9514d1ddbd xfmail-1.5.5.ebuild 1194
+RMD160 7111a3deb51e9de0f16b28a85ebaacd9c6a73497 xfmail-1.5.5.ebuild 1194
+SHA256 44ef0d7c3dce5678330b95bea57b7f793950571ff259ee696f482665d0d66e8f xfmail-1.5.5.ebuild 1194
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD2pcmQlM6RnzZP+IRAhwPAKC+96AFDpdcBqfM201KUk2WDC2lvwCeKzRl
-huTpHwooq4ppAnUyV+ZFgxI=
-=4I/L
+iD8DBQFEAEnAQlM6RnzZP+IRAsrjAJ94vpYcVi5RitxlvFbEJ2368GU0TQCfYPFm
+hZ7HBSdDoW3UGMNKgthCGo8=
+=lI9D
 -----END PGP SIGNATURE-----
