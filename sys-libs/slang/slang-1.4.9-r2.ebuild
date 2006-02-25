@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r2.ebuild,v 1.3 2006/02/25 19:13:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r2.ebuild,v 1.4 2006/02/25 19:17:05 liquidx Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${WORKDIR}/${P}.patch
-	use ppc-macos || epatch ${FILESDIR}/${P}-fsuid.patch
+	use ppc-macos || epatch ${WORKDIR}/${P}-fsuid.patch
 	epatch ${WORKDIR}/${P}-autoconf.patch
 	if use unicode ; then
 		epatch ${WORKDIR}/slang-debian-utf8.patch
