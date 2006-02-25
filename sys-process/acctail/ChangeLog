@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/acctail
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acctail/ChangeLog,v 1.5 2005/08/30 00:25:29 dang Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acctail/ChangeLog,v 1.6 2006/02/25 10:30:55 robbat2 Exp $
+
+*acctail-2.0 (25 Feb 2006)
+
+  25 Feb 2006; Robin H. Johnson <robbat2@gentoo.org> +acctail-2.0.ebuild:
+  Bug #123715, version bump. Patch thanks to TGL <degrenier@easyconnect.fr>.
 
   30 Aug 2005; <dang@gentoo.org> acctail-1.3.ebuild:
   Marked ~amd64
