@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.34.ebuild,v 1.2 2006/01/20 15:40:52 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.34.ebuild,v 1.3 2006/02/25 20:27:37 vanquirius Exp $
 
 inherit eutils
 
@@ -15,13 +15,31 @@ IUSE="gnome gtk mozilla nls ssl"
 
 DEPEND=">=sys-apps/sed-4
 	sys-devel/gettext
-	sys-libs/zlib
 	ssl? ( dev-libs/openssl )
 	gnome? ( gnome-base/gnome-libs )
 	mozilla? ( www-client/mozilla )
 	=dev-libs/glib-1.2*
-	gtk? ( >=x11-libs/gtk+-2.8.8
-	virtual/x11 )"
+	gtk? (	>=x11-libs/gtk+-2.8.8
+		( || (	x11-proto/xproto
+			virtual/x11 )
+		) )"
+
+RDEPEND="gtk? ( >=x11-libs/gtk+-2.8.8
+	|| ( (	x11-libs/libXt
+		x11-libs/libXmu
+		x11-libs/libX11 )
+		virtual/x11 )
+	)
+	virtual/libintl
+	ssl? ( dev-libs/openssl )
+	gnome? ( gnome-base/gnome-libs )
+	mozilla? ( www-client/mozilla )"
+
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}"/${PN}-0.9.34-nls.patch
+}
+
 
 src_compile() {
 	econf \

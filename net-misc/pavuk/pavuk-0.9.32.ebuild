@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.32.ebuild,v 1.6 2005/04/09 19:10:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.32.ebuild,v 1.7 2006/02/25 20:27:37 vanquirius Exp $
 
 inherit eutils
 
@@ -17,7 +17,6 @@ DEPEND=">=sys-apps/sed-4
 	sys-devel/gettext
 	sys-libs/zlib
 	ssl? ( dev-libs/openssl )
-	X? ( virtual/x11 )
 	gnome? ( gnome-base/gnome-libs )
 	mozilla? ( www-client/mozilla )"
 
@@ -27,7 +26,6 @@ src_compile() {
 		--with-regex=auto \
 		--disable-gtk \
 		--disable-socks \
-		$(use_with X x) \
 		$(use_enable ssl) \
 		$(use_enable gnome) \
 		$(use_enable mozilla js) \
