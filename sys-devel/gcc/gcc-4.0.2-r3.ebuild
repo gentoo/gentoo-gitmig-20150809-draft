@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r3.ebuild,v 1.8 2006/02/17 14:27:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r3.ebuild,v 1.9 2006/02/25 05:51:51 vapier Exp $
 
 PATCH_VER="1.5"
 PATCH_GCC_VER="4.0.2"
@@ -43,6 +43,7 @@ RDEPEND="!sys-devel/hardened-gcc
 			gtk? (
 				|| ( ( x11-libs/libXt x11-libs/libX11 x11-libs/libXtst x11-proto/xproto x11-proto/xextproto ) virtual/x11 )
 				>=x11-libs/gtk+-2.2
+				x11-libs/pango
 			)
 			>=media-libs/libart_lgpl-2.1
 		)
