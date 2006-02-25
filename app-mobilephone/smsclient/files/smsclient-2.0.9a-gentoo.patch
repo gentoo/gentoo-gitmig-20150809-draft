@@ -1,6 +1,6 @@
 diff -Nur smsclient-2.0.9a.orig/config/Makefile.config.linux smsclient-2.0.9a/config/Makefile.config.linux
---- smsclient-2.0.9a.orig/config/Makefile.config.linux	2006-02-25 12:17:25.865409250 +0200
-+++ smsclient-2.0.9a/config/Makefile.config.linux	2006-02-25 12:17:55.347251750 +0200
+--- smsclient-2.0.9a.orig/config/Makefile.config.linux	2006-02-25 12:52:12.203797250 +0200
++++ smsclient-2.0.9a/config/Makefile.config.linux	2006-02-25 12:52:38.837461750 +0200
 @@ -39,7 +39,7 @@
  PLATFORM = -DLINUX
  CC       = gcc
@@ -10,6 +10,15 @@ diff -Nur smsclient-2.0.9a.orig/config/Makefile.config.linux smsclient-2.0.9a/co
  XTRALIBS = 
  
  # --------------------------------------------------------------------
+@@ -59,7 +59,7 @@
+ MLOCALSMSRC   = .sms_addressbook
+ MGLOBALSMSRC  = $(ETCPREFIX)/etc/smsclient/sms_addressbook
+ MSERVICEDIR   = $(ETCPREFIX)/etc/smsclient
+-MLIBDIR	      = $(PREFIX)/usr/lib/smsclient
++MLIBDIR	      = $(PREFIX)/usr/share/smsclient
+ MLOGFILE      = $(LOGDIR)/smsclient.log
+ MSNPPDLOGFILE = $(LOGDIR)/smsclient.snppdlog
+ MSMSDLOGFILE  = $(LOGDIR)/smsclient.smsdlog
 @@ -80,10 +80,10 @@
  
  # --------------------------------------------------------------------
@@ -26,8 +35,8 @@ diff -Nur smsclient-2.0.9a.orig/config/Makefile.config.linux smsclient-2.0.9a/co
  INSTALL = /usr/bin/install
  RM      = /bin/rm -f
 diff -Nur smsclient-2.0.9a.orig/sms/Makefile smsclient-2.0.9a/sms/Makefile
---- smsclient-2.0.9a.orig/sms/Makefile	2006-02-25 12:17:25.869409500 +0200
-+++ smsclient-2.0.9a/sms/Makefile	2006-02-25 12:17:04.612081000 +0200
+--- smsclient-2.0.9a.orig/sms/Makefile	2006-02-25 12:52:12.203797250 +0200
++++ smsclient-2.0.9a/sms/Makefile	2006-02-25 12:49:49.166858000 +0200
 @@ -34,28 +34,26 @@
  all:
  
@@ -72,8 +81,8 @@ diff -Nur smsclient-2.0.9a.orig/sms/Makefile smsclient-2.0.9a/sms/Makefile
  uninstall:
  	$(RM) $(DESTDIR)$(MLIBDIR)/services/*
 diff -Nur smsclient-2.0.9a.orig/sms/sms_config smsclient-2.0.9a/sms/sms_config
---- smsclient-2.0.9a.orig/sms/sms_config	2006-02-25 12:17:25.869409500 +0200
-+++ smsclient-2.0.9a/sms/sms_config	2006-02-25 12:17:04.612081000 +0200
+--- smsclient-2.0.9a.orig/sms/sms_config	2006-02-25 12:52:12.203797250 +0200
++++ smsclient-2.0.9a/sms/sms_config	2006-02-25 12:49:49.166858000 +0200
 @@ -9,7 +9,7 @@
  
  	SMS_lock_action	     = "BLOCK"
@@ -84,8 +93,8 @@ diff -Nur smsclient-2.0.9a.orig/sms/sms_config smsclient-2.0.9a/sms/sms_config
  	# SMS_lockfile        = "/var/opt/sms/smslock"	# UNIXWARE
  }
 diff -Nur smsclient-2.0.9a.orig/src/client/Makefile smsclient-2.0.9a/src/client/Makefile
---- smsclient-2.0.9a.orig/src/client/Makefile	2006-02-25 12:17:25.869409500 +0200
-+++ smsclient-2.0.9a/src/client/Makefile	2006-02-25 12:17:04.612081000 +0200
+--- smsclient-2.0.9a.orig/src/client/Makefile	2006-02-25 12:52:12.203797250 +0200
++++ smsclient-2.0.9a/src/client/Makefile	2006-02-25 12:49:49.166858000 +0200
 @@ -35,9 +35,9 @@
  all: ../../bin/sms_client ../../bin/sms_address 
  
@@ -100,8 +109,8 @@ diff -Nur smsclient-2.0.9a.orig/src/client/Makefile smsclient-2.0.9a/src/client/
  uninstall:
  	$(RM) $(BINDIR)/sms_client
 diff -Nur smsclient-2.0.9a.orig/src/logfile/Makefile smsclient-2.0.9a/src/logfile/Makefile
---- smsclient-2.0.9a.orig/src/logfile/Makefile	2006-02-25 12:17:25.869409500 +0200
-+++ smsclient-2.0.9a/src/logfile/Makefile	2006-02-25 12:17:04.612081000 +0200
+--- smsclient-2.0.9a.orig/src/logfile/Makefile	2006-02-25 12:52:12.203797250 +0200
++++ smsclient-2.0.9a/src/logfile/Makefile	2006-02-25 12:49:49.166858000 +0200
 @@ -34,7 +34,7 @@
  all: logfile.o
  
