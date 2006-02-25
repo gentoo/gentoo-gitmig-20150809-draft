@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.19 2006/02/22 13:52:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.20 2006/02/25 01:45:41 allanonjl Exp $
 
 inherit libtool gnome.org eutils gnuconfig
 
@@ -25,8 +25,7 @@ DEPEND="dev-util/indent
 	dev-libs/libxml
 	dev-libs/popt
 	gnome-base/oaf
-	=gnome-base/orbit-0*"
-RDEPEND="${DEPEND}
+	=gnome-base/orbit-0*
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {

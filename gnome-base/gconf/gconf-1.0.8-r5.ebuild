@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r5.ebuild,v 1.15 2005/01/08 23:26:55 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r5.ebuild,v 1.16 2006/02/25 01:45:41 allanonjl Exp $
 
 inherit libtool eutils
 
 S=${WORKDIR}/GConf-${PV}
-DESCRIPTION="Gconf"
+DESCRIPTION="Gnome Configuration System and Daemon"
 HOMEPAGE="http://www.gnome.org/"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/GConf/1.0/GConf-${PV}.tar.gz"
 
@@ -20,9 +20,7 @@ DEPEND="dev-util/indent
 	dev-libs/libxml
 	dev-libs/popt
 	gnome-base/oaf
-	=gnome-base/orbit-0*"
-
-RDEPEND="${DEPEND}
+	=gnome-base/orbit-0*
 	nls? ( sys-devel/gettext )"
 
 src_unpack () {
