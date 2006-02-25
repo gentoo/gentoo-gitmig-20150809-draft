@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.40 2006/02/22 06:39:55 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.41 2006/02/25 16:21:42 superlag Exp $
+
+  25 Feb 2006; Aaron Kulbe <superlag@gentoo.org> -wordpress-1.5.2.ebuild:
+  Removing version 1.5.2 from the tree.  Bug #121661
 
   22 Feb 2006; Rene Nussbaumer <killerfox@gentoo.org>
   wordpress-2.0.1.ebuild:
