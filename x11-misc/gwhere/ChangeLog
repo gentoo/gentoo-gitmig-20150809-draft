@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gwhere
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gwhere/ChangeLog,v 1.14 2005/10/01 15:25:09 nelchael Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gwhere/ChangeLog,v 1.15 2006/02/25 18:19:02 smithj Exp $
+
+  25 Feb 2006; <smithj@gentoo.org> gwhere-0.2.1-r1.ebuild:
+  x86 stable
 
 *gwhere-0.1.6-r1 (01 Oct 2005)
 
