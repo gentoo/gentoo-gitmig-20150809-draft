@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 86a6b060e4be72b66f1e93b28ec9a0dd ChangeLog 5188
+MD5 3256de6cdd3d4133c4644dcfe1d1b661 ChangeLog 5288
 MD5 a46b9720b0af6d279574e20ee7075325 Test-Harness-2.30.ebuild 650
-MD5 0077c6a764ad462f7e6b0aa1f09652d8 Test-Harness-2.42.ebuild 561
+MD5 057c2d789c7098236b99373bddb3a632 Test-Harness-2.42.ebuild 566
 MD5 a7b789089d6eb1d2dc6476c5c00e7b75 Test-Harness-2.52.ebuild 573
 MD5 40f42c9f7d989032d9b40a0604acbcc8 Test-Harness-2.56.ebuild 587
 MD5 0a02516f5c2671f44dfbadefb6d3f1a1 files/digest-Test-Harness-2.30 68
@@ -11,10 +8,3 @@ MD5 7fcf6195e61ac31b053354603b6dcd65 files/digest-Test-Harness-2.42 68
 MD5 d10275c423471454d7ec6f2bb9f864f4 files/digest-Test-Harness-2.52 68
 MD5 8af0441b138a525dca564aab7a5b5984 files/digest-Test-Harness-2.56 68
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDc//dtG5z4I8BtQoRAsQWAJ9ubISZ1djciR76iZ3TfZk7yHMuNwCbB23h
-+Jr8Ios7x2ijcAdDgptFiEM=
-=oSdz
------END PGP SIGNATURE-----

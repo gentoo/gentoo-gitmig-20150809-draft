@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-Local
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.9 2006/02/07 20:55:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.10 2006/02/25 23:43:00 kumba Exp $
+
+  25 Feb 2006; Joshua Kinard <kumba@gentoo.org> Time-Local-1.11.ebuild:
+  Marked stable on mips.
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> Time-Local-1.11.ebuild:
   stable on amd64
