@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/axiom
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.7 2006/02/14 18:30:54 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.8 2006/02/25 05:17:06 plasmaroo Exp $
+
+*axiom-3.9-r1 (25 Feb 2006)
+
+  25 Feb 2006; <plasmaroo@gentoo.org> +axiom-3.9-r1.ebuild,
+  +files/noweb-2.9-insecure-tmp-file.Makefile.patch,
+  +files/noweb-2.9-insecure-tmp-file.patch.input:
+  Security bump; bug #122705.
 
   14 Feb 2006; <plasmaroo@gentoo.org> axiom-3.9.ebuild, axiom-9999.ebuild:
   Port over to modular X.
