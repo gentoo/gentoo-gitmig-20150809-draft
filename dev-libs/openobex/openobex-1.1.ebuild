@@ -1,14 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.1.ebuild,v 1.2 2006/02/04 15:05:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.1.ebuild,v 1.3 2006/02/25 11:09:08 ticho Exp $
 
 inherit gnuconfig
 
-IUSE="bluetooth debug irda syslog"
-
-RESTRICT="nostrip"	# .a and .la can't be stripped, stripping
-			# the .so results in library w/o symbols :-/
-			# Danny van Dyk <kugelfang@gentoo.org> 2004/07/03
+IUSE="bluetooth debug irda syslog usb"
 
 DESCRIPTION="An implementation of the OBEX protocol used for transferring data to mobile devices"
 SRC_URI="mirror://sourceforge/openobex/${P}.tar.gz"
