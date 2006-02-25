@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/files/zoneserver.rc6,v 1.1 2006/02/25 17:49:54 matsuu Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting zoneserver"
+	start-stop-daemon --start --quiet -b -m \
+		--pidfile /var/run/zoneserver.pid \
+		--exec /usr/sbin/zoneserver
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping zoneserver"
+	start-stop-daemon --stop --quiet --pidfile /var/run/zoneserver.pid
+	eend $?
+}
