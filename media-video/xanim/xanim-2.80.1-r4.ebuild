@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.31 2006/02/25 07:15:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.32 2006/02/25 07:33:30 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://xanim.polter.net/"
 
 LICENSE="XAnim"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ia64 ppc64"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="|| ( ( x11-libs/libXext
@@ -25,65 +25,67 @@ DEPEND="${RDEPEND}
 MY_P=${PN}${PV//.}
 S=${WORKDIR}/${MY_P}
 
-_XA_CYUV_ALPHA=xa1.0_cyuv_linuxAlpha.o
-_XA_CVID_ALPHA=xa2.0_cvid_linuxAlpha.o
-_XA_IV32_ALPHA=xa2.0_iv32_linuxAlpha.o
-_XA_ALPHA_EXT=.gz
+_XA_CYUV_alpha=xa1.0_cyuv_linuxAlpha.o
+_XA_CVID_alpha=xa2.0_cvid_linuxAlpha.o
+_XA_IV32_alpha=xa2.0_iv32_linuxAlpha.o
+_XA_EXT_alpha=.gz
 
-_XA_CYUV_PPC=xa1.0_cyuv_linuxPPC.o
-_XA_CVID_PPC=xa2.0_cvid_linuxPPC.o
-_XA_IV32_PPC=xa2.0_iv32_linuxPPC.o
-_XA_PPC_EXT=.Z
+_XA_CYUV_ppc=xa1.0_cyuv_linuxPPC.o
+_XA_CVID_ppc=xa2.0_cvid_linuxPPC.o
+_XA_IV32_ppc=xa2.0_iv32_linuxPPC.o
+_XA_EXT_ppc=.Z
 
-_XA_CYUV_SPARC=xa1.0_cyuv_sparcELF.o
-_XA_CVID_SPARC=xa2.0_cvid_sparcELF.o
-_XA_IV32_SPARC=xa2.0_iv32_sparcELF.o
-_XA_SPARC_EXT=.Z
+_XA_CYUV_sparc=xa1.0_cyuv_sparcELF.o
+_XA_CVID_sparc=xa2.0_cvid_sparcELF.o
+_XA_IV32_sparc=xa2.0_iv32_sparcELF.o
+_XA_EXT_sparc=.Z
 
-_XA_CYUV_X86=xa1.0_cyuv_linuxELFg21.o
-_XA_CVID_X86=xa2.0_cvid_linuxELFg21.o
-_XA_IV32_X86=xa2.1_iv32_linuxELFg21.o
-_XA_X86_EXT=.gz
+_XA_CYUV_x86=xa1.0_cyuv_linuxELFg21.o
+_XA_CVID_x86=xa2.0_cvid_linuxELFg21.o
+_XA_IV32_x86=xa2.1_iv32_linuxELFg21.o
+_XA_EXT_x86=.gz
 
 # This might leave _XA_EXT empty and that's fine, just indicates no
 # particular support for a given arch
-eval _XA_EXT=\$_XA_`echo $ARCH | tr a-z A-Z`_EXT
-eval _XA_CVID=\$_XA_CVID_`echo $ARCH | tr a-z A-Z`
-eval _XA_CYUV=\$_XA_CYUV_`echo $ARCH | tr a-z A-Z`
-eval _XA_IV32=\$_XA_IV32_`echo $ARCH | tr a-z A-Z`
+eval _XA_EXT=\${_XA_${ARCH}}
+eval _XA_CVID=\${_XA_CVID_${ARCH}}
+eval _XA_CYUV=\${_XA_CYUV_${ARCH}}
+eval _XA_IV32=\${_XA_IV32_${ARCH}}
 
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz
 	sparc? (
-		mirror://gentoo/${_XA_CVID_SPARC}${_XA_SPARC_EXT}
-		mirror://gentoo/${_XA_CYUV_SPARC}${_XA_SPARC_EXT}
-		mirror://gentoo/${_XA_IV32_SPARC}${_XA_SPARC_EXT}
+		mirror://gentoo/${_XA_CVID_sparc}${_XA_EXT_sparc}
+		mirror://gentoo/${_XA_CYUV_sparc}${_XA_EXT_sparc}
+		mirror://gentoo/${_XA_IV32_sparc}${_XA_EXT_sparc}
 	)
 	alpha? (
-		mirror://gentoo/${_XA_CVID_ALPHA}${_XA_ALPHA_EXT}
-		mirror://gentoo/${_XA_CYUV_ALPHA}${_XA_ALPHA_EXT}
-		mirror://gentoo/${_XA_IV32_ALPHA}${_XA_ALPHA_EXT}
+		mirror://gentoo/${_XA_CVID_alpha}${_XA_EXT_alpha}
+		mirror://gentoo/${_XA_CYUV_alpha}${_XA_EXT_alpha}
+		mirror://gentoo/${_XA_IV32_alpha}${_XA_EXT_alpha}
 	)
 	ppc? (
-		mirror://gentoo/${_XA_CVID_PPC}${_XA_PPC_EXT}
-		mirror://gentoo/${_XA_CYUV_PPC}${_XA_PPC_EXT}
-		mirror://gentoo/${_XA_IV32_PPC}${_XA_PPC_EXT}
+		mirror://gentoo/${_XA_CVID_ppc}${_XA_EXT_ppc}
+		mirror://gentoo/${_XA_CYUV_ppc}${_XA_EXT_ppc}
+		mirror://gentoo/${_XA_IV32_ppc}${_XA_EXT_ppc}
 	)
 	x86? (
-		mirror://gentoo/${_XA_CVID_X86}${_XA_X86_EXT}
-		mirror://gentoo/${_XA_CYUV_X86}${_XA_X86_EXT}
-		mirror://gentoo/${_XA_IV32_X86}${_XA_X86_EXT}
+		mirror://gentoo/${_XA_CVID_x86}${_XA_EXT_x86}
+		mirror://gentoo/${_XA_CYUV_x86}${_XA_EXT_x86}
+		mirror://gentoo/${_XA_IV32_x86}${_XA_EXT_x86}
 	)"
 
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	if [[ -n ${_XA_EXT} ]]; then
-		mkdir ${S}/mods || die
-		cd ${S}/mods || die
+		mkdir "${S}"/mods || die
+		cd "${S}"/mods || die
 		unpack ${_XA_CVID}${_XA_EXT}
 		unpack ${_XA_CYUV}${_XA_EXT}
 		unpack ${_XA_IV32}${_XA_EXT}
 	fi
+	cd "${S}"
+	sed -i 's:/usr/X11R6:/usr:g' Makefile*
 }
 
 src_compile() {
@@ -99,7 +101,7 @@ src_compile() {
 			XA_IV32_LIB="mods/${_XA_CVID}" \
 			XA_CYUV_LIB="mods/${_XA_CYUV}" \
 			XA_CVID_LIB="mods/${_XA_IV32}" } \
-	|| die
+		|| die
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xanim
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/ChangeLog,v 1.24 2005/12/12 04:58:19 spyderous Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/ChangeLog,v 1.25 2006/02/25 07:33:30 vapier Exp $
+
+  25 Feb 2006; Mike Frysinger <vapier@gentoo.org> xanim-2.80.1-r4.ebuild:
+  Simplify code to get rid of global calls to tr and fix building with modular X.
 
   12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xanim-2.80.1-r4.ebuild:
