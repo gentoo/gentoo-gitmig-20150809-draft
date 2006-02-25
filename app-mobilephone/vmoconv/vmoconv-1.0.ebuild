@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/vmoconv/vmoconv-1.0.ebuild,v 1.2 2005/10/10 19:26:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/vmoconv/vmoconv-1.0.ebuild,v 1.3 2006/02/25 15:36:40 mrness Exp $
 
 DESCRIPTION="A tool that converts Siemens phones VMO and VMI audio files to gsm and wav."
 HOMEPAGE="http://triq.net/obex/"
@@ -11,10 +11,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/libc"
-
 src_compile() {
-	econf || die
+	econf || die "configure failed"
 	# ugly workaround, otherwise make tries to build binaries before
 	# necessary .la file is built
 	cd src && make libgsm.la || die "make libgsm failed"
