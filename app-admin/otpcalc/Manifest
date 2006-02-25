@@ -1,10 +1,40 @@
-MD5 ded776c9915279e88af019594ffda994 otpcalc-0.97.ebuild 795
-MD5 5937d67d0cf2d0526f60d8f53781c6c3 otpcalc-0.97-r1.ebuild 909
-MD5 2da57917cc18ce178900650519046289 otpcalc-0.96.ebuild 729
-MD5 d0ba220b1a333e9622154bbf864a1f9c ChangeLog 1605
-MD5 78714bd1cdeb6709df0a6dcc4c5347ce metadata.xml 410
-MD5 fb4ade24812b14dd5fc4c2d89dc6a9a5 files/digest-otpcalc-0.97-r1 64
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 adfa9a2f1ddea4d7d5bfd256441162d8 ChangeLog 1708
+RMD160 d13023d1920db00d5bff7bace1865f13205d0186 ChangeLog 1708
+SHA256 dead89b3637b0d6d130aa373eef92277311c2e34f221fd3932a4bc9f47caa3d8 ChangeLog 1708
 MD5 1ce297d1a90353ea4e3ee49a9d21be6d files/digest-otpcalc-0.96 64
+RMD160 bd00ef0902dad5f1e8b105acbf1fd03865ce4530 files/digest-otpcalc-0.96 64
+SHA256 a5cdcb4501e449b9f42906af9f032f5e3f1d4fbd9f827bb0d043b352f53d4e6d files/digest-otpcalc-0.96 64
 MD5 fb4ade24812b14dd5fc4c2d89dc6a9a5 files/digest-otpcalc-0.97 64
-MD5 79ac858c43e67fdc670c1092b51a03ad files/otpcalc-man-table-format.diff 507
+RMD160 4563b3458cdd494746ad82dfd4824351f7326cf7 files/digest-otpcalc-0.97 64
+SHA256 fbf795d3ca10a9ca531d1ca24cbc5b3a603eb981b0ae5d72d11c77f503d31230 files/digest-otpcalc-0.97 64
+MD5 fb4ade24812b14dd5fc4c2d89dc6a9a5 files/digest-otpcalc-0.97-r1 64
+RMD160 4563b3458cdd494746ad82dfd4824351f7326cf7 files/digest-otpcalc-0.97-r1 64
+SHA256 fbf795d3ca10a9ca531d1ca24cbc5b3a603eb981b0ae5d72d11c77f503d31230 files/digest-otpcalc-0.97-r1 64
 MD5 9f150d63ce347efb91f683233ff9b53d files/otpcalc-0.97-badindex.diff 300
+RMD160 7a4eb69a009df9d3666ce135a3fc9061284c6db6 files/otpcalc-0.97-badindex.diff 300
+SHA256 e61ee91721e6accb7b54697619422f38bb961136462ef1a2342ba7ad11623703 files/otpcalc-0.97-badindex.diff 300
+MD5 79ac858c43e67fdc670c1092b51a03ad files/otpcalc-man-table-format.diff 507
+RMD160 2eaf50bdd0f50f70ff1ddac7d56bcfaadc8be9d1 files/otpcalc-man-table-format.diff 507
+SHA256 cec72cec708bf6edf75c6236d8811544a9258c2b2710c520ee2c6acb65a599dd files/otpcalc-man-table-format.diff 507
+MD5 78714bd1cdeb6709df0a6dcc4c5347ce metadata.xml 410
+RMD160 c9b0ec6773ca618b16f7290c81f7e5b0fa0c645b metadata.xml 410
+SHA256 99beef1c02d2105e41f4be67c8383446f556cd26886ef97851561cc3fb4132a8 metadata.xml 410
+MD5 2da57917cc18ce178900650519046289 otpcalc-0.96.ebuild 729
+RMD160 a3023aec4a9b615d6e77a7fc05f7fac802aeb371 otpcalc-0.96.ebuild 729
+SHA256 117d4f4bad3c22527cd30592a9c71efe9a982ca80d8703fb8351d483580c58d9 otpcalc-0.96.ebuild 729
+MD5 5f82c7d33818e27ee286e4522e757784 otpcalc-0.97-r1.ebuild 909
+RMD160 5c201096240b54eff58f5010971e3cfac8f1c7d1 otpcalc-0.97-r1.ebuild 909
+SHA256 34e5742145997cdcc73aa4174127c0c15a742ebf4d5034a22171e333284bc676 otpcalc-0.97-r1.ebuild 909
+MD5 ded776c9915279e88af019594ffda994 otpcalc-0.97.ebuild 795
+RMD160 aabee05c1696ef363ce9bb36c22165c7aa0ab651 otpcalc-0.97.ebuild 795
+SHA256 02f9eb331973a93311ea99261a6d2957309e0c47b6af19e6e90e2944c4b94ac7 otpcalc-0.97.ebuild 795
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEAOc7CRZPokWLroQRAhqHAJ9wB1VXwckgYVafhXfl9wmwjwWQrwCdGYwv
+ZFmjDyaiPOFT65ChlgHxsQw=
+=PXVm
+-----END PGP SIGNATURE-----
