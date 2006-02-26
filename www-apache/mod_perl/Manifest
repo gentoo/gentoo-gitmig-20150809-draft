@@ -1,9 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d154f4922008512cfce2f66aebc990e5 ChangeLog 11387
+MD5 69c875b495ad39b70b13342cf7381ca4 files/1.29/75_mod_perl.conf 114
 MD5 4dcf07748f65bc0682e4d739ec14535d files/2.0.1/75_mod_perl.conf 1527
 MD5 39bbf08146125b9be7559d5c2d16b400 files/2.0.1/apache2-mod_perl-startup.pl 478
+MD5 4dcf07748f65bc0682e4d739ec14535d files/2.0.2/75_mod_perl.conf 1527
+MD5 39bbf08146125b9be7559d5c2d16b400 files/2.0.2/apache2-mod_perl-startup.pl 478
 MD5 2415e6be73ba155382b34b5e2fad4951 files/75_mod_perl.conf 247
 MD5 6dbf85f6df302959fc9decf11eb6e5f5 files/apache2-mod_perl-startup.pl 485
 MD5 05455750ba5b64e18dbcfd113193e7cd files/digest-mod_perl-1.27-r1 65
@@ -14,6 +14,7 @@ MD5 278c6266498d8bef49b54f30774aa305 files/digest-mod_perl-1.99.11 69
 MD5 13d314750ba5772dc7de4d9023d137ad files/digest-mod_perl-1.99.16 69
 MD5 8971805d7e08351fee8312e9f621398b files/digest-mod_perl-2.0.1-r1 67
 MD5 8971805d7e08351fee8312e9f621398b files/digest-mod_perl-2.0.1-r2 67
+MD5 019a1b1281a558ff624a28140ba9a527 files/digest-mod_perl-2.0.2 67
 MD5 8c8ec63f03d3ffb51fa26b6df03a5710 files/mod_perl-1.99.16-sneak-tmpdir.patch 395
 MD5 300bce7b1dad6fda0b18cfdbf592a828 files/mod_perl-1.99.17-Apache2.pm 1149
 MD5 0729531d2489b4ef91e247076f46ed1e files/mod_perl-2.0.1-sneak-tmpdir.patch 337
@@ -21,15 +22,9 @@ MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 ac6aeaec7d125dc21dde650f46535017 mod_perl-1.27-r1.ebuild 1387
 MD5 7ac6d91054592e43920b8eae6134648e mod_perl-1.27-r2.ebuild 1406
 MD5 65045ffc7af1203b1168775407c25680 mod_perl-1.27-r4.ebuild 1781
-MD5 9b399f01876b16face507372264119fc mod_perl-1.29.ebuild 2078
+MD5 0af3ffdaaa03237d972bb31add9bbe51 mod_perl-1.29.ebuild 1865
 MD5 649bc1ee2ad5420453053010dcc141cb mod_perl-1.99.11.ebuild 3796
 MD5 9923645f9ba0b7d7efcefa76f182d405 mod_perl-1.99.16.ebuild 3811
 MD5 a960dceefeacaaef755e148535304195 mod_perl-2.0.1-r1.ebuild 4833
-MD5 1b119c7b901b1d98ddd5f337ad948919 mod_perl-2.0.1-r2.ebuild 5298
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8KGotG5z4I8BtQoRAt2eAKCUYmMOQSB6fHXlbsVyUmvbc9JJvwCfdt2/
-rRG3tbKMIMS1yz0b64Bo+To=
-=94qB
------END PGP SIGNATURE-----
+MD5 9521a238c5012ad73b983e6c8045f428 mod_perl-2.0.1-r2.ebuild 5297
+MD5 cd4524eff6d1a20d03e3a763ee9088b5 mod_perl-2.0.2.ebuild 5203

@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-1.29.ebuild,v 1.3 2005/11/12 16:25:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-1.29.ebuild,v 1.4 2006/02/26 14:53:31 mcummings Exp $
 
-inherit eutils
+inherit eutils apache-module
 
 DESCRIPTION="A Perl Module for Apache"
 SRC_URI="http://perl.apache.org/dist/${P}.tar.gz"
@@ -10,11 +10,17 @@ HOMEPAGE="http://perl.apache.org"
 
 SLOT="0"
 LICENSE="Apache-1.1 as-is"
-KEYWORDS="alpha ~amd64 ia64 ~ppc ppc64 sparc ~x86"
+KEYWORDS="alpha ~amd64 ia64 ~ppc ppc64 sparc x86"
 
 DEPEND="dev-lang/perl dev-perl/libwww-perl =net-www/apache-1*"
 
+APACHE1_MOD_DEFINE="PERL"
+APACHE1_MOD_CONF="${PV}/75_mod_perl"
+APACHE1_MOD_FILE="${S}/apaci/libperl.so"
+
 IUSE=""
+
+need_apache1
 
 src_unpack() {
 	unpack ${A}
@@ -30,11 +36,11 @@ src_unpack() {
 src_compile() {
 	perl Makefile.PL USE_APXS=1 \
 		INSTALLDIRS=vendor \
-		WITH_APXS=/usr/sbin/apxs EVERYTHING=1 PERL_DEBUG=1
+		WITH_APXS=${APXS1} EVERYTHING=1 PERL_DEBUG=1
 
 	cp Makefile Makefile.orig
 	sed -e "s:apxs_install doc_install:doc_install:" Makefile.orig > Makefile
-	emake || die
+	emake -j1 || die
 }
 
 src_install () {
@@ -58,24 +64,7 @@ src_install () {
 		sed -i -e "s:${D}:/:g" ${FILE}
 	done
 
+	apache-module_src_install
 
-	cd apaci
-	exeinto /usr/lib/apache-extramodules
-	doexe libperl.so
-}
-
-pkg_postinst() {
-	einfo
-	einfo "Execute emerge --config =${PF}"
-	einfo "to have your apache.conf auto-updated for use with this module."
-	einfo "You should then edit your /etc/conf.d/apache file to suit."
-	einfo
-}
-
-pkg_config() {
-	${ROOT}/usr/sbin/apacheaddmod \
-		${ROOT}/etc/apache/conf/apache.conf \
-		extramodules/libperl.so mod_perl.c perl_module \
-		define=PERL
-	:;
+	fperms 600 ${APACHE1_MODULES_CONFDIR}/$(basename ${APACHE1_MOD_CONF})
 }
