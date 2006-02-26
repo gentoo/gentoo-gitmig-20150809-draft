@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knock
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.24 2006/02/20 21:17:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.25 2006/02/26 14:01:36 dams Exp $
+
+  26 Feb 2006; <dams@gentoo.org> knock-0.5.ebuild:
+  keyworded as ~ppc
 
   20 Feb 2006; Markus Ullmann <jokey@gentoo.org> knock-0.3.ebuild,
   knock-0.3.1.ebuild, knock-0.4.ebuild, knock-0.5.ebuild:
