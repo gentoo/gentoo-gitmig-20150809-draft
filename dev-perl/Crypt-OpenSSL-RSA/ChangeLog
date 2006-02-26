@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-RSA
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.31 2006/02/22 20:04:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.32 2006/02/26 19:51:47 kumba Exp $
+
+  26 Feb 2006; Joshua Kinard <kumba@gentoo.org>
+  Crypt-OpenSSL-RSA-0.21.ebuild, Crypt-OpenSSL-RSA-0.22-r1.ebuild:
+  Marked 0.21 stable on mips; Added ~mips to 0.22-r1 for Bug #123488.
 
   22 Feb 2006; <nixnut@gentoo.org> Crypt-OpenSSL-RSA-0.22-r1.ebuild:
   Added ~ppc keyword. Bug 123488
