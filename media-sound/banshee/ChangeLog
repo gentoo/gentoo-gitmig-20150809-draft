@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.15 2006/02/26 19:00:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.16 2006/02/26 19:08:17 metalgod Exp $
+
+  26 Feb 2006; Luis Medinas <metalgod@gentoo.org>
+  -files/banshee-0.10.5-utilsfix.patch,
+  -files/banshee-0.10-AudioCdCore.cs.diff, -banshee-0.10-r1.ebuild,
+  -banshee-0.10.2.ebuild, -banshee-0.10.4.ebuild, -banshee-0.10.5.ebuild:
+  Removed older versions.
 
   26 Feb 2006; Luis Medinas <metalgod@gentoo.org> banshee-0.10.6.ebuild:
   Update gstreamer and dbus versions for dependencies.

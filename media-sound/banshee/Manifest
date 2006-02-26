@@ -1,48 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3a3824b54719271795971da8cd07c725 ChangeLog 2555
-RMD160 0e3dfb8048855fe2eb7f21b622afcf80dc212aeb ChangeLog 2555
-SHA256 a202ede56ff9a7343b1d5f7b81f54c68d25b05caaa5723b1c54034eb8fd1ec57 ChangeLog 2555
-MD5 b937e024b7bc2cff8924389c1d966689 banshee-0.10-r1.ebuild 2647
-RMD160 ee9cfc267372529d28ded79859ce98ab221c891b banshee-0.10-r1.ebuild 2647
-SHA256 db2ce04a2d1452a2585780c4793b4695bf3d0d5573f3c633d8c4c22f634f5af7 banshee-0.10-r1.ebuild 2647
-MD5 14653520a3ad0af3407971ee4eaa6c45 banshee-0.10.2.ebuild 2760
-RMD160 015bf1ea2dfedf6bfd8bf8f090937f129fa1e150 banshee-0.10.2.ebuild 2760
-SHA256 2bed54b11f81a11f5201f83e4f93273ba53d373944e887e5a8a8d816f38ca6bd banshee-0.10.2.ebuild 2760
-MD5 c2a8b63ad4e54431faa2958bd6d13368 banshee-0.10.4.ebuild 2790
-RMD160 1794ff7553a23555cf73db0394e2989b02a162dc banshee-0.10.4.ebuild 2790
-SHA256 69b3851acf489db28f0402ca2da8d2614cc2184c3fa4086cd56d7f5daafd1001 banshee-0.10.4.ebuild 2790
+MD5 c3374d8ff3e4d11528b187d697f844b1 ChangeLog 2814
+RMD160 3a49900791fe4df43ed3da3aa95ff032f70ca10b ChangeLog 2814
+SHA256 6366a52e43d59e513ba4257a978461e8bd05121bce46ba912953c4b08260526b ChangeLog 2814
 MD5 447c23445bda51f4e4ec5cd575be1233 banshee-0.10.5-r1.ebuild 3436
 RMD160 97397a86f40ad824e103547c9f97e725cea77928 banshee-0.10.5-r1.ebuild 3436
 SHA256 45ab98fee544385ff1a5e6b61a216c8be978b5f38bfb4ce319313e1bd7548a08 banshee-0.10.5-r1.ebuild 3436
-MD5 10c86da468808dc0f1c1d6df7785ba50 banshee-0.10.5.ebuild 3283
-RMD160 e85c62cac142cfa47480189d1cc2b0332bcc1ece banshee-0.10.5.ebuild 3283
-SHA256 3b150865ea071c974bb9223b63e7e8a972f30e744f6ee110571b233762922ece banshee-0.10.5.ebuild 3283
 MD5 c6838419bcb7bf5fa2493c85437e0fd9 banshee-0.10.6.ebuild 3239
 RMD160 2d75f811c92c978d1c48b56fae8b270d41e379f4 banshee-0.10.6.ebuild 3239
 SHA256 fcd82fa9a1b2bdcc2a6846b21ec7d1000261377eca3a2861f0efb01f425d2a7f banshee-0.10.6.ebuild 3239
 MD5 2ce464fafc8bffde14c9b0f3effb7d8a banshee-0.9.12.ebuild 2282
 RMD160 9e809f79c6a4f9bcfebc6ce1fe0932d2e41d862c banshee-0.9.12.ebuild 2282
 SHA256 2d96d66362e60e6bbb0a1b516701aa5f7e18d19c4c0675c21160bbed7eb068fb banshee-0.9.12.ebuild 2282
-MD5 1c431dc8f1cb2ffc23e88861c3cb8a73 files/banshee-0.10-AudioCdCore.cs.diff 568
-RMD160 3e22939a5cf1eaf939f1aa4e4329e4a0b0fb3b12 files/banshee-0.10-AudioCdCore.cs.diff 568
-SHA256 e16515bcc5f0732d59a246ca550db90e328597b0e3218b6a6220888b5260230d files/banshee-0.10-AudioCdCore.cs.diff 568
-MD5 423f45ba97b6d9d101eb21a2ba85cb97 files/banshee-0.10.5-utilsfix.patch 778
-RMD160 b0f6476c8fed036e60351200c91847a5c9bb6942 files/banshee-0.10.5-utilsfix.patch 778
-SHA256 d5575431810bdd1bda46f643f5762b43cb64f5090b1d078a53c3e4b1dcf13ff6 files/banshee-0.10.5-utilsfix.patch 778
-MD5 d2f2f2a8d85cb8505768e3b54519219f files/digest-banshee-0.10-r1 65
-RMD160 1d5b7316221f7535a58833f3e9083daf1fb829b4 files/digest-banshee-0.10-r1 65
-SHA256 ecec991da8f4a56f08243f761d9a04da3f5c0c25354d4ae51720359403b4332d files/digest-banshee-0.10-r1 65
-MD5 f0bcad684ef636265462d49c42199a08 files/digest-banshee-0.10.2 67
-RMD160 026f249b9a95a885d7a317d7ad89f09ae4d60453 files/digest-banshee-0.10.2 67
-SHA256 127134ecff116109ef617a347ddc54a353f373b0be3902af706c857f06a99da9 files/digest-banshee-0.10.2 67
-MD5 c97dc16a07c557a56a81612b73c672f2 files/digest-banshee-0.10.4 67
-RMD160 f885671037433c4bb46ef9e713e7d9c06e121ce0 files/digest-banshee-0.10.4 67
-SHA256 0904094b784bed1a5a5170479834da30d369776afd1c06e8b5c7f1ebf1616df6 files/digest-banshee-0.10.4 67
-MD5 a2a229ef669f5257310240e5ce7cfe28 files/digest-banshee-0.10.5 247
-RMD160 a1b27d22d656fab82121ef09ce80f5e603347640 files/digest-banshee-0.10.5 247
-SHA256 3be58768f3ee5af532c603e5f090ae1ee90f3202ad3cbacf30dff9ac4349bae2 files/digest-banshee-0.10.5 247
 MD5 98c573a2052a1859ba3be21e03a2ede6 files/digest-banshee-0.10.5-r1 512
 RMD160 31c543fea79c1a48449cc8c3a2c8c09aae6be638 files/digest-banshee-0.10.5-r1 512
 SHA256 8c1461426a471084fbaa94d478130e2c278d8b93c7fdbf670abaaeaa9e9a0aef files/digest-banshee-0.10.5-r1 512
@@ -58,7 +28,7 @@ SHA256 50e382a1cdc9b8d5bd7a6e62bae3e8b57cf36e157f70d0136b57d50edf2e8041 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEAfs9wUpWvClEHQoRAggbAJ0QBuhpjXTK879rocgHAXLaDkH/DwCcCu9m
-NnoWR1v3gX9SkY0zuZ5RJAA=
-=9CpM
+iD4DBQFEAf0PwUpWvClEHQoRAgiqAJidxBgfwYtLSchIptcEyOgJWvx8AJ43V6Wo
+4KttNQ0gqMAoE0ACJbgx3g==
+=V5pN
 -----END PGP SIGNATURE-----
