@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.10.ebuild,v 1.1 2006/01/30 22:45:27 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.10.ebuild,v 1.2 2006/02/26 23:57:05 chriswhite Exp $
 
 inherit eutils distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~wrobel/webapp-config/${PF}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 S=${WORKDIR}/${PF}
 
