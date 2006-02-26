@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/sdparm-0.96.ebuild,v 1.1 2005/11/22 05:08:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/sdparm-0.96.ebuild,v 1.2 2006/02/26 17:11:37 kumba Exp $
 
 DESCRIPTION="Utility to output and modify parameters on a SCSI device, like hdparm"
 HOMEPAGE="http://sg.torque.net/sg/sdparm.html"
@@ -8,7 +8,7 @@ SRC_URI="http://sg.torque.net/sg/p/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 mips ~ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"

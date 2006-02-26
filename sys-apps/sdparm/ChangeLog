@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sdparm
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.10 2005/12/15 16:06:45 kumba Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.11 2006/02/26 17:11:37 kumba Exp $
+
+  26 Feb 2006; Joshua Kinard <kumba@gentoo.org> -sdparm-0.94.ebuild,
+  sdparm-0.96.ebuild:
+  Removed 0.94; Marked 0.96 stable on sparc, x86, and mips.
 
 *sdparm-0.97 (15 Dec 2005)
 
