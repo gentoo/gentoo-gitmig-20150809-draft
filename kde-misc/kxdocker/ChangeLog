@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/kxdocker
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/ChangeLog,v 1.4 2005/11/20 12:03:04 kugelfang Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/ChangeLog,v 1.5 2006/02/26 06:35:40 dragonheart Exp $
+
+*kxdocker-1.0.0a (26 Feb 2006)
+
+  26 Feb 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/kxdocker-1.0.0a-parallelmake.patch, -kxdocker-0.37.ebuild,
+  -kxdocker-0.38.ebuild, +kxdocker-1.0.0a.ebuild:
+  version bump as per bug #112850 thanks to Alessio Cassibba
 
   20 Nov 2005; Danny van Dyk <kugelfang@gentoo.org> kxdocker-0.39.ebuild:
   Marked ~amd64.
