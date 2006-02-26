@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.9-r1.ebuild,v 1.3 2006/02/20 15:25:30 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.9-r1.ebuild,v 1.4 2006/02/26 20:25:44 dertobi123 Exp $
 
 inherit gnome2 eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://releases.navi.cx/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="perl tcltk python ssl mmx ipv6 nls dbus libsexy libnotify"
 
 RDEPEND=">=dev-libs/glib-2.0.3

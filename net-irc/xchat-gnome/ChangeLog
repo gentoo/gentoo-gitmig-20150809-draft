@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.16 2006/02/20 15:25:30 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.17 2006/02/26 20:25:44 dertobi123 Exp $
+
+  26 Feb 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  xchat-gnome-0.9-r1.ebuild:
+  re-added to ~ppc, bug #123412
 
   20 Feb 2006; Alec Warner <antarus@gentoo.org>
   xchat-gnome-0.9-r1.ebuild:
