@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 96191358944962996872a0d6dc26c4c3 ChangeLog 7450
 MD5 cb37c0311b2a968a888b843afb2d6b94 files/digest-openal-20050504-r1 69
 MD5 cb37c0311b2a968a888b843afb2d6b94 files/digest-openal-20050504-r2 69
@@ -14,3 +17,10 @@ MD5 ec6dcddda50a0138e1f50eb0d1299798 metadata.xml 254
 MD5 a117fde0dd63f159a6c944791aecae76 openal-20050504-r1.ebuild 1946
 MD5 f383acd27d7c404fc3f11f9136bfb97d openal-20050504-r2.ebuild 2014
 MD5 a58d84e5d00a7af918acb00b4d6c4c39 openal-20051024.ebuild 2003
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEAbtBugEuf3OQ0akRAlN7AJ96iqP7Iht41wf/kn5fo+S4BuPfRQCfbIU0
+tUwHuwCV8F1QPX3NpfIRIT4=
+=7oRk
+-----END PGP SIGNATURE-----
