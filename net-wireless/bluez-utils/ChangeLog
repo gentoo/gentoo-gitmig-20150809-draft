@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.69 2006/02/25 18:55:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.70 2006/02/26 18:58:28 dertobi123 Exp $
+
+  26 Feb 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  bluez-utils-2.24.ebuild:
+  ppc stable, bug #122323
 
   25 Feb 2006; Alastair Tse <liquidx@gentoo.org> bluez-utils-2.24.ebuild:
   stable bump for x86

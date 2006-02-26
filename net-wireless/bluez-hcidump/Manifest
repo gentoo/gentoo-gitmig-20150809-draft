@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 33b6a8d3f3266ad81a950b16a015939e ChangeLog 3137
-RMD160 36b83dd8bbdde1488d2f9168fc3a9584bcedc169 ChangeLog 3137
-SHA256 1952516ff5790495c8287cfab6c9cc38b171d06d6cf15e60d693922614be51cc ChangeLog 3137
 MD5 716da5187c5dee230472328ccec29a7b bluez-hcidump-1.21.ebuild 633
-RMD160 93d545d542f778ca3fca3689e130c162a82187f2 bluez-hcidump-1.21.ebuild 633
-SHA256 97f98f384dc85f520ddf611bc0a7406412edd3b3dbfbf7af4bb123d973a85f62 bluez-hcidump-1.21.ebuild 633
 MD5 79df655d52731d3b93021d35515f8e9a bluez-hcidump-1.29.ebuild 672
-RMD160 2aa9e3d5896e902023348040fdb826a99231d679 bluez-hcidump-1.29.ebuild 672
-SHA256 110b07bedd765174579f7ec229ed6c9a9555397a957ee918de4deeeb32200627 bluez-hcidump-1.29.ebuild 672
-MD5 24913b35be8827ff2bac6a43cc68a9a0 bluez-hcidump-1.30.ebuild 671
-RMD160 6715434d26b390bb6002a23308d757d0be33289d bluez-hcidump-1.30.ebuild 671
-SHA256 d3f5b22503b2d5568b9385daa7b2fea7d1d374aaa938477f63886f20b8de6bd5 bluez-hcidump-1.30.ebuild 671
+MD5 6d09104269a53dd1ed8d77e60f645f0c bluez-hcidump-1.30.ebuild 670
 MD5 082298306787840fa0bcc28c4663034e files/digest-bluez-hcidump-1.21 70
-RMD160 179fad1005777703afecb48ab82cd3649eb13ddc files/digest-bluez-hcidump-1.21 70
-SHA256 afbfb6959838f200665c7d984f445a8a7540367065d6baf8d000c12c4bddbe19 files/digest-bluez-hcidump-1.21 70
 MD5 65293ac39669a38ee7987840fc2016da files/digest-bluez-hcidump-1.29 70
-RMD160 850833ce8096db0d7dfcb721290df2464c22cd84 files/digest-bluez-hcidump-1.29 70
-SHA256 26ed35a901a77f9e1acb00f3469306cadf67f646f9fe89e450d35d894cafef01 files/digest-bluez-hcidump-1.29 70
-MD5 5c2ad62ab8bae744e9fc8d755b25869a files/digest-bluez-hcidump-1.30 256
-RMD160 73915506c1a934c73b46137b687c46b3ef91ade1 files/digest-bluez-hcidump-1.30 256
-SHA256 1296f07d7ca519e54806124d76f9416fc8a484667391c82b8dd6324e14717cd8 files/digest-bluez-hcidump-1.30 256
+MD5 36d770946b015dcc37a877a047158d0c files/digest-bluez-hcidump-1.30 70
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
-RMD160 fb83fc852c808450a2cc256fa9b9c7c784b884e2 metadata.xml 235
-SHA256 492cfc1c578fed368c8ae0ed98fbf455f9a5fa097235004b6cf3a3981d6fa983 metadata.xml 235
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEAKiy9ZFPrqoILX8RAqbCAJ9yr9kjtVC74hzIgKOKoz0+KyGncwCgkKjR
-Wxg4QwtF6VLLp3JOAyODc3Q=
-=C9cK
------END PGP SIGNATURE-----

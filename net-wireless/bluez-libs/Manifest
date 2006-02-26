@@ -1,52 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 90799c05d6e00acd15a0846d53abb524 ChangeLog 7953
-RMD160 b00c5749d802f68ada164dd359d02cfab341274a ChangeLog 7953
-SHA256 9983408dd58c3825cdca94e392540b6ff36b09a1480a92b8bd863fbdd2d427d3 ChangeLog 7953
 MD5 7bf99a228717805d212ebf45e536c534 bluez-libs-2.19.ebuild 568
-RMD160 c27df281e1e11b20561e7d0f240d67111daf7f1e bluez-libs-2.19.ebuild 568
-SHA256 4aaf933b520f55b0df5441421ee139527242eb975a3de5fda4c965ca66ff4d06 bluez-libs-2.19.ebuild 568
 MD5 ce1932c628f7ce277a37eafe3237c327 bluez-libs-2.21.ebuild 627
-RMD160 2e3ca12c0fbdc0e36092d4d77dcbbcdac7e366ac bluez-libs-2.21.ebuild 627
-SHA256 39cdcbe46267a5dfb6adf40d0c3a6824f9c9b5251e32e3a3c51d8044c29cbb1f bluez-libs-2.21.ebuild 627
 MD5 1151af5976eb79939fb7b78d014abb47 bluez-libs-2.22.ebuild 624
-RMD160 460822fa0c1f21a80ac5b032a5f6aebbadd3e2d9 bluez-libs-2.22.ebuild 624
-SHA256 04645a4213261951f26928b2bf0ba3799e1602b0d7b25d7ed24299f4c4ff905f bluez-libs-2.22.ebuild 624
-MD5 58cba7c427e54ae4ee0eb19dffb1efb4 bluez-libs-2.24.ebuild 629
-RMD160 f8f2ef4772459fd9c694c7b9c3aa1644d9e4a2e4 bluez-libs-2.24.ebuild 629
-SHA256 bf3f295727635140352c5f1b283beacbe17f883a77e3e5cd3acf430a6c9d52fd bluez-libs-2.24.ebuild 629
+MD5 936dc49ddf4aaca7fd9ded5200983285 bluez-libs-2.24.ebuild 628
 MD5 19198afd86ddebf03816160bfd592b2e bluez-libs-2.25.ebuild 630
-RMD160 d1428fdd8e56e7151210fe679f4a4de7afa3af7f bluez-libs-2.25.ebuild 630
-SHA256 61cf8b037e94ce9b35b8f617f2c9ce09ed38e5fd02faae1525d8bd5a4ab84fa8 bluez-libs-2.25.ebuild 630
 MD5 d8ae1c76ebaed0d5c69e90b4aade8624 files/2.16-bluetooth.h.patch 269
-RMD160 b11f7e82fc7db22a72f676a148c6cbcaf9bb0c2a files/2.16-bluetooth.h.patch 269
-SHA256 a77ac4eea5d846c34d03bf165385839a466337db45ea012038f03083146cf5c1 files/2.16-bluetooth.h.patch 269
 MD5 de3e6042ceea4fbca926d59617ffdb36 files/bluez-libs-2.10-handsfree.patch 1030
-RMD160 2a84e0402ec9487b50425bf7d8ae1ab3779a2a08 files/bluez-libs-2.10-handsfree.patch 1030
-SHA256 9b5404e2e7b28a68b069d646fde643a1e253a4a3275da9c65bec044d5bea2beb files/bluez-libs-2.10-handsfree.patch 1030
 MD5 2179cb867e0877152871bb390fa4a772 files/digest-bluez-libs-2.19 67
-RMD160 dff0d9a00f1cae70f73e296889338129c43117de files/digest-bluez-libs-2.19 67
-SHA256 4012842e83b1124924351a353cc75ba28ce30bf5862e1443a2c0d1ef50aebed7 files/digest-bluez-libs-2.19 67
 MD5 b6bfa99265bf1f4e626ff183c1532cdd files/digest-bluez-libs-2.21 67
-RMD160 3acfe0441ff1fd90415f6a7239e1af84c264e821 files/digest-bluez-libs-2.21 67
-SHA256 826730662fdf6addb7ee3b923b9a0bfa2876573bf795cbba3007f1d538410552 files/digest-bluez-libs-2.21 67
 MD5 73903e2d7b846d67e8d966cf6bfa1d0a files/digest-bluez-libs-2.22 67
-RMD160 128f5f1e65b35df0823a11fa988f3d07b9a799c7 files/digest-bluez-libs-2.22 67
-SHA256 553365bf854d0f57af88a2beedc667e5a2e6fe03854acae92f5c74727edba4b5 files/digest-bluez-libs-2.22 67
 MD5 ea03fa9f1953d9866d2b134a8dab34bf files/digest-bluez-libs-2.24 67
-RMD160 66e4692f5b26b0741c59592100f08a1734ea0119 files/digest-bluez-libs-2.24 67
-SHA256 5d20ddc808965a0be276b4a2063dd6a8ff17f5a9a8a21c5d7eca5551165f597a files/digest-bluez-libs-2.24 67
 MD5 36a4cfdd84cdcc34a5206e54f4f5f6c7 files/digest-bluez-libs-2.25 67
-RMD160 052a2e56305f80e5fcd20e7c71fe38ceadaaf2ce files/digest-bluez-libs-2.25 67
-SHA256 ef0da813d70fc3316456d05ca5564a887366c5e2bbb779283f668b29aed6e35a files/digest-bluez-libs-2.25 67
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
-RMD160 fb83fc852c808450a2cc256fa9b9c7c784b884e2 metadata.xml 235
-SHA256 492cfc1c578fed368c8ae0ed98fbf455f9a5fa097235004b6cf3a3981d6fa983 metadata.xml 235
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEAKgW9ZFPrqoILX8RAiDZAKClXd9+TDhVrTQZ7ul5haeBVVZhJgCglXbe
-AxLaZwCK4zJ5fmw/TclRW9Q=
-=y5pq
------END PGP SIGNATURE-----
