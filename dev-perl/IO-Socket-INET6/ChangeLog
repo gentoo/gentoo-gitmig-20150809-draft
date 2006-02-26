@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Socket-INET6
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.7 2006/01/31 21:16:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.8 2006/02/26 04:12:17 kumba Exp $
+
+  26 Feb 2006; Joshua Kinard <kumba@gentoo.org> IO-Socket-INET6-2.51.ebuild:
+  Added ~mips to KEYWORDS.
 
   31 Jan 2006; Aron Griffis <agriffis@gentoo.org>
   IO-Socket-INET6-2.51.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Socket6
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.16 2006/01/28 20:36:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.17 2006/02/26 04:11:02 kumba Exp $
+
+  26 Feb 2006; Joshua Kinard <kumba@gentoo.org> Socket6-0.19.ebuild:
+  Added ~mips to KEYWORDS.
 
   28 Jan 2006; Markus Rothe <corsair@gentoo.org> Socket6-0.19.ebuild:
   Added ~ppc64
