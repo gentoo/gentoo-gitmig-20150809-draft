@@ -1,6 +1,6 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.15 2006/02/26 14:53:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.16 2006/02/26 14:59:34 mcummings Exp $
 
 *mod_perl-2.0.2 (26 Feb 2006)
 
@@ -9,7 +9,8 @@
   +files/1.29/75_mod_perl.conf, mod_perl-1.29.ebuild,
   mod_perl-2.0.1-r2.ebuild, +mod_perl-2.0.2.ebuild:
   Bug 77551 and friends: 1.29 unmasked; 2.0.1 unmasked; 2.0.2 added; all
-  should be installing appropritately for new-style apaches.
+  should be installing appropritately for new-style apaches. Thanks to  
+  Benedikt Boehm and Yuval Yaari for patches, ebuilds, and patience.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   mod_perl-1.99.11.ebuild, mod_perl-1.99.16.ebuild,
