@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b30ea2e0bd182aeb79ed915ebdafcdd2 ChangeLog 417
+RMD160 9da54f881a313bc30958a7934fe0e9f18cc878d7 ChangeLog 417
+SHA256 fdd928d3ec03b9618477e1e3eb844969f7fb2f2b36392a8eae3234d58619786b ChangeLog 417
+MD5 1cf5e3d6582c7ded52f23f7356e63db1 cl-zpb-ttf-0.3.ebuild 699
+RMD160 5836f5155d7ab9355b2092b1a10e4eb41fa17cdd cl-zpb-ttf-0.3.ebuild 699
+SHA256 49350a530873d8eee98c2152d0b838d3b2f333ad7edf13d1a962a8bcd1d30b65 cl-zpb-ttf-0.3.ebuild 699
+MD5 e44bff4a84ec5027ee7ab9e45ab39feb files/digest-cl-zpb-ttf-0.3 223
+RMD160 d99ffe227cb6524ef035f042855098063f9a9fd4 files/digest-cl-zpb-ttf-0.3 223
+SHA256 9c26b34ff52c26171ba77b9f77cce09aae593c570b0a161da4d47b457b41a016 files/digest-cl-zpb-ttf-0.3 223
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+RMD160 5edb79931b874dc3a72128f0742b9d4c4eb3c8c1 metadata.xml 164
+SHA256 f8efc9385015233c71f279f85bd0a327525b7136cf8714cc04449d8bea4ce22f metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEAg5QyiNZaEAZA+ARAvVFAJ4gzC8Ih4SHZw7gybgCLozy/vldXQCfaoM3
+yRmO2GWB4FZbGpxCD9ivDBM=
+=sUkl
+-----END PGP SIGNATURE-----

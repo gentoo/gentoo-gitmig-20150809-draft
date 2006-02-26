@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-zpb-ttf
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-zpb-ttf/ChangeLog,v 1.1 2006/02/26 20:23:32 mkennedy Exp $
+
+*cl-zpb-ttf-0.3 (26 Feb 2006)
+
+  26 Feb 2006; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-zpb-ttf-0.3.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
+
