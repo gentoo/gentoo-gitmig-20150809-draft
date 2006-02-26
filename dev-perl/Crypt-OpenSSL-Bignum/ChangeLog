@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-Bignum
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Bignum/ChangeLog,v 1.2 2006/02/22 19:59:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Bignum/ChangeLog,v 1.3 2006/02/26 19:45:38 kumba Exp $
+
+  26 Feb 2006; Joshua Kinard <kumba@gentoo.org>
+  Crypt-OpenSSL-Bignum-0.03.ebuild:
+  Added ~mips to KEYWORDS.
 
   22 Feb 2006; <nixnut@gentoo.org> Crypt-OpenSSL-Bignum-0.03.ebuild:
   Added ~ppc keyword. Bug 123488
