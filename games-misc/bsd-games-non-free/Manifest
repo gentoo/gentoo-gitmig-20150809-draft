@@ -1,7 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 67a1561888578f7827bd1b2463c304d9 ChangeLog 1637
-MD5 0ea13e714e5a30e95819bdd774fa4528 bsd-games-non-free-2.13.ebuild 1810
-MD5 77fef1db6b90eb37661125f9be1a29af bsd-games-non-free-2.17.ebuild 1632
+RMD160 68cb3dce19976f18032442cfc1b6a31525f023e8 ChangeLog 1637
+SHA256 322adc3908dff33fa00371a5a1dba93240be4823d359cba46a8c33d756ccf4c1 ChangeLog 1637
+MD5 a4c4c9819b8ddd1600d4b3df64bc9d2b bsd-games-non-free-2.17.ebuild 1612
+RMD160 ec3d4187ee895d1e84e0a62647ec144d4589af98 bsd-games-non-free-2.17.ebuild 1612
+SHA256 6036814a2e1a8007df6e9187cb9e693b44a72879e5d6dc554682ce1963df8ea6 bsd-games-non-free-2.17.ebuild 1612
 MD5 582347263c44f4dce3b7d0b7cd8f5cc8 files/config.params-gentoo 1232
-MD5 f791791f24963261fb91e227bc16e615 files/digest-bsd-games-non-free-2.13 75
+RMD160 80134cf438def776cdbb2845ed5ea3d300463bd7 files/config.params-gentoo 1232
+SHA256 48f4033d57ca2c8c28fc18d4065fb4171f61f5c0a051b12ed1e33a0b5b972759 files/config.params-gentoo 1232
 MD5 1d46f32c7e30d96d69cd5dd7a02d9dd5 files/digest-bsd-games-non-free-2.17 75
+RMD160 42c24e534932574f3797a110c3935b7760142e3f files/digest-bsd-games-non-free-2.17 75
+SHA256 e0be58bb8bb0d265af173b30adc3a9de9c3022cc097aeba480feaeaf2819f8d2 files/digest-bsd-games-non-free-2.17 75
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEAVGP2+ySkm8kpY0RArfAAKCtW2N+n/oUgsqvkEtcLdl2KS+lOgCfUnmC
+5Zp0Aa3JnIOvM9w5jw38ILw=
+=A4Qp
+-----END PGP SIGNATURE-----
