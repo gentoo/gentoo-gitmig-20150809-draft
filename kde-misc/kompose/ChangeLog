@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kompose
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/ChangeLog,v 1.12 2006/02/26 19:41:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/ChangeLog,v 1.13 2006/02/26 23:06:00 chriswhite Exp $
+
+  26 Feb 2006; Chris White <chriswhite@gentoo.org> kompose-0.5.3.ebuild:
+  x86 stable for bug #124071.
 
   26 Feb 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   kompose-0.5.3.ebuild:
