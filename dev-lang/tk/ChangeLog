@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.65 2006/02/08 04:07:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.66 2006/02/26 19:30:21 kumba Exp $
+
+  26 Feb 2006; Joshua Kinard <kumba@gentoo.org> tk-8.4.9.ebuild:
+  Marked stable on mips.
 
   03 Feb 2006; Mike Frysinger <vapier@gentoo.org>
   +files/tk-configure-LANG.patch, tk-8.4.9.ebuild, tk-8.4.11.ebuild,
