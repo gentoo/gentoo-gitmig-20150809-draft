@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.5.1.ebuild,v 1.2 2006/02/23 22:49:58 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.5.1.ebuild,v 1.3 2006/02/26 06:17:59 halcy0n Exp $
 
 inherit eutils games
 
@@ -21,7 +21,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+
 	if use nls ; then
 		sed -i \
 			-e '/^localedir =/s:=.*:=/usr/share/locale:' \
