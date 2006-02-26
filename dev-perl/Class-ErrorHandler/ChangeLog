@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-ErrorHandler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.10 2006/02/20 16:48:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.11 2006/02/26 04:46:15 kumba Exp $
+
+  26 Feb 2006; Joshua Kinard <kumba@gentoo.org>
+  Class-ErrorHandler-0.01.ebuild:
+  Added ~mips to KEYWORDS.
 
   20 Feb 2006; Markus Rothe <corsair@gentoo.org>
   Class-ErrorHandler-0.01.ebuild:
