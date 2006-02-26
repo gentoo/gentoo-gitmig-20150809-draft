@@ -1,0 +1,14 @@
+--- powerpc-utils-papr-1.0.1.orig/Makefile	2006-02-15 14:23:19.000000000 -0600
++++ powerpc-utils-papr-1.0.1/Makefile	2006-02-16 17:52:58.000000000 -0600
+@@ -20,11 +20,9 @@
+ 	@$(MAKE) -C doc
+ 
+ install: all
+-	@$(call install_doc,$(FILES),$(DESTDIR))
+ 	@$(foreach d,$(SUBDIRS), $(MAKE) -C $d install;)
+ 
+ uninstall: 
+-	@$(call uninstall_doc,$(FILES),$(DESTDIR))
+ 	@$(foreach d,$(SUBDIRS), $(MAKE) -C $d uninstall;)
+ 
+ rpm: all
