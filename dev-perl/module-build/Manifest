@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5bd14e5c37fabfdb9cbdb239162792eb ChangeLog 4358
-RMD160 5649512cbead4d6ccf70da643ff6983d95ed5910 ChangeLog 4358
-SHA256 69cd7747ba46346008834f639bf805e8fec11301ff2d6d850f8fc8b0a81dff43 ChangeLog 4358
+MD5 cbda2257fc0000eb0b125bd9206525e5 ChangeLog 4461
 MD5 02fe7753001f89b0f496f0669d31a1da files/digest-module-build-0.25 69
-RMD160 f16693c37e68fe6e206d94ac0409418b3f5f5638 files/digest-module-build-0.25 69
-SHA256 bf2193761dd4633b445b538d3a6b9cfb5103a075fa3b0fb0bd64dc98eb700c03 files/digest-module-build-0.25 69
 MD5 c6b9381a0113c337f6074a192e6c195f files/digest-module-build-0.26.10 71
-RMD160 8a9f51c1c6eb3ac68bfb92364a3ea25f3c8a84f5 files/digest-module-build-0.26.10 71
-SHA256 f1784bd1924a5a56b861713b5c1869a5643136035ceb5ef061d6e1f14f6aa791 files/digest-module-build-0.26.10 71
 MD5 5a5b67bf218f82dfc2d09bbcbd77865f files/digest-module-build-0.26.11 71
-RMD160 92e20e84c1b42c83e9dba21e853e394cf86dec87 files/digest-module-build-0.26.11 71
-SHA256 2419e6d154601cd307b3411cb2cee83a5d7cc5406966e0cd700b99fbb488cff4 files/digest-module-build-0.26.11 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 MD5 d6ed4f5a70e7dd12c5eaa9719e964cc0 module-build-0.25.ebuild 654
-RMD160 de1ec95d0fa1c5f7b69bad431c80c7f52465c363 module-build-0.25.ebuild 654
-SHA256 69eeaf57d63bd15d4843ad171750bbffd9f765b325709c0c8d3265f9e39de218 module-build-0.25.ebuild 654
 MD5 3a8577282ec116df62383cf94cf4c1e5 module-build-0.26.10.ebuild 699
-RMD160 19c39cb1bd2e631b0c62bc9fd25a7692051a18fb module-build-0.26.10.ebuild 699
-SHA256 997447de58634ea94c4bfc71d6d7cff1764c850461ce7dcdfadba8f8770d7e16 module-build-0.26.10.ebuild 699
-MD5 362edf7ae7754ecc555cde4a3fe3ee0b module-build-0.26.11.ebuild 687
-RMD160 9d4b1353db32cda0060f6dffc507ed40fab8e9db module-build-0.26.11.ebuild 687
-SHA256 de81eef6e10ded12919d7fd5d5da0b7e371a7404ddd88c3511da2e168f163159 module-build-0.26.11.ebuild 687
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD4908JrHF4yAQTrARAtrjAJwOACqE70p7xPQgzmLDWN6bAd5WEwCfQj3G
-4izA8ZcknbsDazvEaPad/fc=
-=QgR6
------END PGP SIGNATURE-----
+MD5 2339f3d03fd3fced9159d6cbe9727236 module-build-0.26.11.ebuild 686

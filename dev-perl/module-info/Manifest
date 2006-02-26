@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e6faec8fab8c1431f251ebca71d81125 ChangeLog 2884
+MD5 48cc36864ba3db85a067e3f779a7ce6f ChangeLog 2983
 MD5 18663cc44364f4bed4075ed501e97aeb files/digest-module-info-0.20 67
 MD5 3c184afb8a1c566d42f6ae18ab3906d1 files/digest-module-info-0.26 67
 MD5 822c2be3cda4b067bc2908248faed33c files/digest-module-info-0.28 67
@@ -9,12 +6,5 @@ MD5 6cea523e5456ec1e7ec8565ad9bd5711 files/digest-module-info-0.29.0 68
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 9ff536ec3c684c553720e812c9c6f69e module-info-0.20.ebuild 602
 MD5 37a079103ddebdaccc3eb41be2fbb9d1 module-info-0.26.ebuild 602
-MD5 5fa3f7424451f1f228d288ef49f3a78f module-info-0.28.ebuild 642
+MD5 db97648df5ac7d1a771b285d58317628 module-info-0.28.ebuild 641
 MD5 3db8e52a934dc154cce37e65df235eac module-info-0.29.0.ebuild 674
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDx8V1tG5z4I8BtQoRArNRAJ0bJmUHY1ZeYhsE3eYZ0yeUDlwiKwCeN/7d
-YuDRQFHu+dHcsHtwJSSRP+c=
-=e6XA
------END PGP SIGNATURE-----
