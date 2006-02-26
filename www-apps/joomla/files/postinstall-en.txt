@@ -1,10 +1,10 @@
 You are almost done!
 
-  0. Setup the db.
+  0. Setup the db
 
   1. Restart Apache
 
-  2. Login on http://${VHOST_HOSTNAME}/${VHOST_APPDIR} 
+  2. Login on http://${VHOST_HOSTNAME}/${VHOST_APPDIR}
   and finish the installation. IMPORTANT: the web
   installer will complain that configuration.php is not writeable. When you
   are done, create configuration.php in ${MY_INSTALLDIR} and copy the generated
@@ -13,7 +13,7 @@ You are almost done!
   # chown apache:apache configuration.php
   # chmod u+w configuration.php
 
-  3. You can now launch your browser and point it to your MOS site e.g.
+  3. You can now launch your browser and point it to your Joomla site e.g.
 
   http://${VHOST_HOSTNAME}/${VHOST_APPDIR} -> Main Site
   http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/administrator -> Admin
