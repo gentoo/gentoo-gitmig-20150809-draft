@@ -1,0 +1,11 @@
+--- configure
++++ configure
+@@ -24032,7 +24032,7 @@
+ # Check whether --with-threads or --without-threads was given.
+ if test "${with_threads+set}" = set; then
+   withval="$with_threads"
+-  with_threads="yes"
++  with_threads="$withval"
+ else
+   with_threads="no"
+ fi;
