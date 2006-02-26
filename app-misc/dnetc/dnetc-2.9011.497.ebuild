@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9011.497.ebuild,v 1.1 2006/01/15 16:34:23 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9011.497.ebuild,v 1.2 2006/02/26 06:52:37 halcy0n Exp $
 
 inherit eutils versionator
 
@@ -9,7 +9,7 @@ MIN_PV="$(get_version_component_range 3)"
 
 DESCRIPTION="distributed.net client"
 HOMEPAGE="http://www.distributed.net"
-SRC_URI="x86? (http://http.distributed.net/pub/dcti/prerelease/rc/dnetc${MIN_PV}-linux-x86-elf-uclibc.tar.gz)"
+SRC_URI="x86? ( http://http.distributed.net/pub/dcti/prerelease/rc/dnetc${MIN_PV}-linux-x86-elf-uclibc.tar.gz )"
 LICENSE="distributed.net"
 SLOT="0"
 KEYWORDS="~x86 -*"
