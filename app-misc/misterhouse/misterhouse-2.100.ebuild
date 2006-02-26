@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/misterhouse/misterhouse-2.100.ebuild,v 1.2 2006/02/11 21:22:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/misterhouse/misterhouse-2.100.ebuild,v 1.3 2006/02/26 12:45:20 mcummings Exp $
 
 
 DESCRIPTION="Mister House, an open source home automation program with X10 support"
@@ -9,7 +9,7 @@ LICENSE="GPL-1"
 SRC_URI="mirror://sourceforge/misterhouse/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="tcltk mysql"
 
 DEPEND=""
