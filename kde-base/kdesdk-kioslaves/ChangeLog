@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-kioslaves
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.29 2006/01/22 22:52:58 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.30 2006/02/26 17:24:29 corsair Exp $
+
+  26 Feb 2006; Markus Rothe <corsair@gentoo.org>
+  kdesdk-kioslaves-3.5.1.ebuild:
+  Added ~ppc64
 
 *kdesdk-kioslaves-3.5.1 (23 Jan 2006)
 
