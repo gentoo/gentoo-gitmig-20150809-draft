@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.9.5.ebuild,v 1.7 2006/01/13 13:57:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.9.5.ebuild,v 1.8 2006/02/26 06:44:28 halcy0n Exp $
 
 inherit eutils games flag-o-matic
 
@@ -29,6 +29,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/widelands-0.0.9-amd64.patch"
 	epatch "${FILESDIR}/widelands-makefile.patch"
+	epatch "${FILESDIR}/widelands-0.0.9.5-gcc41.patch"
 	sed -i -e "s:__ppc__:__PPC__:g" "${S}/src/machdep.h" || die "sed failed"
 }
 

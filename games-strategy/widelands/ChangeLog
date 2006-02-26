@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.8 2006/01/13 13:57:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.9 2006/02/26 06:44:28 halcy0n Exp $
+
+  26 Feb 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/widelands-0.0.9.5-gcc41.patch, widelands-0.0.9.5.ebuild:
+  Add patch to fix compilation with gcc-4.1 by Konrad Campowsky <frollen AT cs
+  DOT tu-berlin DOT de>; bug #120082
 
   13 Jan 2006; Stefan Schweizer <genstef@gentoo.org>
   +files/widelands-makefile.patch, widelands-0.0.9.5.ebuild:
