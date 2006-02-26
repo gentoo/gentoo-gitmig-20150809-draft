@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/afbinit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.11 2006/01/31 17:04:43 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.12 2006/02/26 05:43:13 fmccor Exp $
+
+  26 Feb 2006; Ferris McCormick <fmccor@gentoo.org> afbinit-1.0.1-r3.ebuild:
+  Mark stable.  This needs to go stable because it is required by kernels
+  >= 2.6.15, and they are required on SB1000 (earlier kernels have race
+  instability problems of an unreproducible but unpredictable nature showing
+  up as SegFaults and inability to build some packages, like sbcl).
+  Change uses mmap shared rather than private, and should be safe on all
+  systems.  Used only in init sequence.  Change courtesy Jurij Smakov.
 
 *afbinit-1.0.1-r3 (31 Jan 2006)
 
