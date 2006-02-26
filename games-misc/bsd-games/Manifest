@@ -16,16 +16,16 @@ SHA256 96639f25206401c0dde3f9f28ac287c9e26c3efb526481fa48b482f8c9ab4ac0 files/bs
 MD5 cd4e0a199968b029d1d043c45b36b0c8 files/config.params-gentoo 1244
 RMD160 2425b6fb3388464263ad8392f700b0b43ae2c5a3 files/config.params-gentoo 1244
 SHA256 07dbcfe4883f22fb1a2d05d474a6c79d47516eb9bece5c9060baff4b2fd5f2a0 files/config.params-gentoo 1244
-MD5 cb372290d9037a0b968c5dede115709e files/digest-bsd-games-2.17 209
-RMD160 0c53e7b7a2440439c13f249ee428e8dfd8789423 files/digest-bsd-games-2.17 209
-SHA256 2521f00420f7009f5d5cbfc73a9961a5eaf91cc7b42601d41edf1ceac0d1469b files/digest-bsd-games-2.17 209
+MD5 34bdaae560dcc141430d688e434fe2df files/digest-bsd-games-2.17 494
+RMD160 64b4b5849e5b38aab3caa4f4ca8b2b4b2f52bfe4 files/digest-bsd-games-2.17 494
+SHA256 35ea7693434619095082a1ac1e6cf1a26cfef202daca35499729e4addd8162da files/digest-bsd-games-2.17 494
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEAVHa2+ySkm8kpY0RAlYJAJ4oCMsiY2hzghQC0YZMtH9JoBuDYQCglvl9
-j1BbPLAWNuj7y47JbyqBOE8=
-=Fiog
+iD8DBQFEAVH72+ySkm8kpY0RAhxFAKCIqqCKgrCEbMgG06qVKJKIAeNUmwCfflAS
+weVPqAJuvDAoIeyYqtQdsSs=
+=lLeh
 -----END PGP SIGNATURE-----
