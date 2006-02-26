@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.4.1.ebuild,v 1.2 2006/02/03 21:49:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.4.1.ebuild,v 1.3 2006/02/26 04:33:26 vapier Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="Crazy Eddie's GUI System"
 HOMEPAGE="http://www.cegui.org.uk/"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/crayzedsgui/${PN}_mk2-source-${PV}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE="opengl devil doc xerces-c"
+IUSE="devil doc examples opengl xerces-c"
 
 RDEPEND="=media-libs/freetype-2*
 	xerces-c? ( >=dev-libs/xerces-c-2.6.0 )
@@ -26,7 +26,10 @@ S=${WORKDIR}/cegui_mk2
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	gnuconfig_update #work around symlink bug #101280
+	if use examples ; then
+		cp -r Samples Samples.clean
+		find Samples.clean '(' -name 'Makefile*' -o -name CVS ')' -print0 | xargs -0 rm -rf
+	fi
 }
 
 src_compile() {
@@ -44,10 +47,11 @@ src_install() {
 	make install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog README TODO ReadMe.html
 	if use doc ; then
-		dohtml -r documentation/api_reference/*
-		insinto /usr/share/doc/${PF}/Docs
-		doins documentation/Falagard_Skining_Docs.pdf
+		dohtml -r documentation/api_reference
+		dodoc documentation/*.pdf
+	fi
+	if use examples ; then
 		insinto /usr/share/doc/${PF}/Samples
-		doins -r Samples/*
+		doins -r Samples.clean/*
 	fi
 }
