@@ -1,4 +1,4 @@
-MD5 73b707a953aa0d5691d2f3ff4c102c25 ChangeLog 1060
+MD5 25b0b4556562b24d51c8d2914bb4241d ChangeLog 1057
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-File-Spec-0.84 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-File-Spec-0.87 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-File-Spec-3.01 0
@@ -10,5 +10,5 @@ MD5 f3a9886183c82ae946e9573e6c7baa22 perl-File-Spec-0.84.ebuild 473
 MD5 91ff62172e554b6900615d160ca1a131 perl-File-Spec-0.87.ebuild 479
 MD5 a1069c29d18b08056d0f3a385f9c09c2 perl-File-Spec-3.01.ebuild 490
 MD5 6f651724bc83c02a66e0439637347175 perl-File-Spec-3.06.ebuild 481
-MD5 471a7a9ecd3a378e671d6a53958ad92d perl-File-Spec-3.12.ebuild 511
+MD5 b54d87e2f03dcbc13bda206090854d27 perl-File-Spec-3.12.ebuild 507
 MD5 996071e5a79c5f465564fbeaa9347edd perl-File-Spec-3.15.ebuild 494

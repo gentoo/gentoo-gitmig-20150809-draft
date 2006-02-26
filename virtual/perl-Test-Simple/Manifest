@@ -1,4 +1,4 @@
-MD5 c460ea2f987b4451bb48945d2eb93572 ChangeLog 921
+MD5 f867948edd10b38a2915faccbdb62fbc ChangeLog 918
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.47 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.53 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.54 0
@@ -9,4 +9,4 @@ MD5 623a74c43c19cf47b2ed21f56ef319c3 perl-Test-Simple-0.47.ebuild 482
 MD5 7d2b944279b014232cbe45e2d4ff8602 perl-Test-Simple-0.53.ebuild 496
 MD5 007d03d88648ae17467319bfc6caae26 perl-Test-Simple-0.54.ebuild 523
 MD5 591418feeb7f55ff10ccfd1e49db1ac4 perl-Test-Simple-0.60.ebuild 508
-MD5 a537ded5032701224b44f01ca2f23ecd perl-Test-Simple-0.62.ebuild 523
+MD5 04bf866ee03938f0d49c0ac06183a5de perl-Test-Simple-0.62.ebuild 519
