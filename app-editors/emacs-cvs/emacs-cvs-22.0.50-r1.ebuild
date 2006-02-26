@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r1.ebuild,v 1.1 2006/02/09 01:38:23 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r1.ebuild,v 1.2 2006/02/26 21:48:47 mkennedy Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -10,7 +10,7 @@ ECVS_BRANCH="HEAD"
 inherit elisp-common cvs alternatives flag-o-matic eutils
 
 IUSE="X Xaw3d aqua gif gtk jpeg nls png spell tiff"
-# IUSE="X Xaw3d aqua gif gtk jpeg nls png spell tiff xft"
+# IUSE="X Xaw3d aqua gif gtk jpeg nls png spell tiff xft source"
 
 S=${WORKDIR}/emacs
 
@@ -41,8 +41,7 @@ PROVIDE="virtual/emacs virtual/editor"
 
 SLOT="22.0.50"
 LICENSE="GPL-2"
-# KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc-macos"
-KEYWORDS="-*"					# until XFT support is finalized
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc-macos"
 
 DFILE=emacs-${SLOT}.desktop
 
@@ -64,7 +63,7 @@ src_unpack() {
 #	if use xft; then
 #		ECVS_BRANCH=XFT_JHD_BRANCH
 #	else
-		ECVS_BRANCH=HEAD
+#		ECVS_BRANCH=HEAD
 #	fi
 	cvs_src_unpack
 	cd ${S};
@@ -163,12 +162,25 @@ src_install () {
 		# defaults to aspell if installed
 		elisp-site-file-install ${FILESDIR}/40aspell-gentoo.el
 	fi
-	newenvd ${FILESDIR}/50emacs-${SLOT}.envd 50emacs-${SLOT}
-
+	insinto /etc/env.d
+	cat >${D}/etc/env.d/50emacs-cvs-${SLOT} <<EOF
+INFOPATH=/usr/share/info/emacs-${SLOT}
+EOF
 	einfo "Fixing manpages..."
 	for m in  ${D}/usr/share/man/man1/* ; do
 		mv ${m} ${m/.1/.emacs-${SLOT}.1} || die "mv man failed"
 	done
+
+#	if use source; then
+#		insinto /usr/share/emacs/${SLOT}/src
+#		# This is not mean to install all the source -- just the
+#		# source you might find via find-function
+#		doins src/*.[ch]
+# #		cat >00emacs-cvs-${SLOT}-gentoo.el <<EOF
+# # (setq find-function-C-source-directory "/usr/share/emacs/${SLOT}/src")
+# # EOF
+# #		elisp-site-file-install 00emacs-cvs-${SLOT}-gentoo.el || die # need to move outside of NNfoo-gentoo.el for different versions (site-lisp is shared)
+#	fi
 
 	dodoc BUGS ChangeLog README
 
