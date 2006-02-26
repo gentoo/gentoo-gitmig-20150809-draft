@@ -1,0 +1,24 @@
+diff -Nur portage-2.1_pre5/bin/emerge portage-2.1_pre5.patched/bin/emerge
+--- portage-2.1_pre5/bin/emerge	2006-02-20 16:58:13.000000000 -0800
++++ portage-2.1_pre5.patched/bin/emerge	2006-02-22 16:44:48.000000000 -0800
+@@ -1934,7 +1934,7 @@
+ 			y=portage.portdb.findname(x[pkgindex])
+ 			if not "--pretend" in myopts:
+ 				print ">>> Emerging ("+str(mergecount)+" of "+str(len(mymergelist))+")",x[pkgindex],"to",x[1]
+-				emergelog(" >>> Emerging ("+str(mergecount)+" of "+str(len(mymergelist))+") "+x[pkgindex]+" to "+x[1])
++				emergelog(" >>> emerge ("+str(mergecount)+" of "+str(len(mymergelist))+") "+x[pkgindex]+" to "+x[1])
+ 
+ 			self.pkgsettings["EMERGE_FROM"] = x[0][:]
+ 			self.pkgsettings.backup_changes("EMERGE_FROM")
+diff -Nur portage-2.1_pre5/pym/portage.py portage-2.1_pre5.patched/pym/portage.py
+--- portage-2.1_pre5/pym/portage.py	2006-02-21 02:01:08.000000000 -0800
++++ portage-2.1_pre5.patched/pym/portage.py	2006-02-22 16:44:32.000000000 -0800
+@@ -5334,6 +5334,8 @@
+ 		return 1
+ 
+ 	def update_ents(self, update_iter):
++		if len(update_iter) == 0:
++			return
+ 		if not self.populated:
+ 			self.populate()
+ 
