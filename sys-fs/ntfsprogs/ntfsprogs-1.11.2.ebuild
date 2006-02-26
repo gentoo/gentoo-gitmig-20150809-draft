@@ -1,9 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.11.2.ebuild,v 1.6 2005/11/19 16:14:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.11.2.ebuild,v 1.7 2006/02/26 03:26:27 vapier Exp $
 
 DESCRIPTION="User tools for NTFS filesystems"
-HOMEPAGE="http://linux-ntfs.sourceforge.net/"
+HOMEPAGE="http://www.linux-ntfs.org/"
 SRC_URI="mirror://sourceforge/linux-ntfs/${P}.tar.gz"
 
 LICENSE="GPL-2"
