@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.78 2006/02/21 22:11:37 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.79 2006/02/26 05:11:06 kumba Exp $
+
+  26 Feb 2006; Joshua Kinard <kumba@gentoo.org> irssi-0.8.10.ebuild:
+  Marked stable on mips.
 
   21 Feb 2006; Luis Medinas <metalgod@gentoo.org> irssi-0.8.10.ebuild:
   Stable on amd64.
