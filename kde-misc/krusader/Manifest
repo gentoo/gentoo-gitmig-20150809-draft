@@ -1,4 +1,4 @@
-MD5 b41fe637a83818c6dbfecb1491ffa5b7 ChangeLog 7971
+MD5 9eee3c4245b3682de426fbd085b42e5e ChangeLog 8062
 MD5 5114fe81b3da50dc171889c659b60a34 files/digest-krusader-1.60.0 68
 MD5 197fa5c939ba779dbd4ee97668c43233 files/digest-krusader-1.60.1 68
 MD5 197fa5c939ba779dbd4ee97668c43233 files/digest-krusader-1.60.1-r1 68
@@ -7,6 +7,6 @@ MD5 614659d0975e58b68e85b6f357f796ce files/digest-krusader-1.70.0_beta2 74
 MD5 fca1ac57741d1327d8a82d4c4870fc83 krusader-1.60.0.ebuild 1451
 MD5 72f915343c445c5626159a988765eada krusader-1.60.1-r1.ebuild 1435
 MD5 6d77bb6e752d1dc2de0a5b3f416c30ee krusader-1.60.1.ebuild 1531
-MD5 fdbf875ed0435a325a96b14e6b0bc75e krusader-1.70.0.ebuild 1609
+MD5 780aa77186117f5ed2af49052fd40a22 krusader-1.70.0.ebuild 1618
 MD5 809cc234ffc12faf63225cad48968cce krusader-1.70.0_beta2.ebuild 1509
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
