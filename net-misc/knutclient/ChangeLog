@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knutclient
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.12 2005/08/31 18:25:48 cryos Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.13 2006/02/26 19:55:43 dertobi123 Exp $
+
+  26 Feb 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  knutclient-0.8.6.ebuild:
+  ppc stable, bug #124073
 
 *knutclient-0.8.6 (31 Aug 2005)
 
