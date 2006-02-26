@@ -4,9 +4,6 @@ Hash: SHA1
 MD5 7bd2710196c9257232b58c77315770e8 ChangeLog 6521
 RMD160 60913931401c63cd2f8a7636853c6be7b588ecdd ChangeLog 6521
 SHA256 0ef80fe14961ccfdb1f3c5a9498633f177bac00d95490b8138bc2f5e664a821b ChangeLog 6521
-MD5 f4d93145991cc94d47beea16d596172e files/digest-man-pages-2.22 250
-RMD160 f3f74882f4c8b74de3f319f549fe6fd393a6c7b6 files/digest-man-pages-2.22 250
-SHA256 2f42857dbf5c6e7c71a01806501b9806aad415c62adb81e2676c040cd4310a9e files/digest-man-pages-2.22 250
 MD5 698893103828ce0996ad838401956bc6 files/digest-man-pages-2.23 250
 RMD160 9fd71757af8ac1bb14af18d18780eee6e1cedd95 files/digest-man-pages-2.23 250
 SHA256 aaffc53af059b58c86d5e92d2c9045d7dad5256aea91036d9d756e724f0dbf70 files/digest-man-pages-2.23 250
@@ -16,9 +13,6 @@ SHA256 58a645ceea25ea919c869733d5cb961fa1a6ee9ab4fd5e761f86dd6eed23dedb files/di
 MD5 078cd80352b7ac508adeda912eba0cc9 files/man-pages-2.08-updates.patch 351
 RMD160 090c1d31d4589fa19f8cb7e287a84f4f18e612e1 files/man-pages-2.08-updates.patch 351
 SHA256 c1302276b420acf3d9447cb3436ee2b70567b92917d7cf912c59f622086d1e37 files/man-pages-2.08-updates.patch 351
-MD5 bccb2c80d65fd962d3eb0de908291a87 man-pages-2.22.ebuild 1415
-RMD160 895b93b9d52053bdbe841ac449a27c5ea6d255b6 man-pages-2.22.ebuild 1415
-SHA256 fccb3a60543e516421a564a3187a73568f991f9090ab864ca4b88774db5a8542 man-pages-2.22.ebuild 1415
 MD5 efa494788933ba960cdc0ad6dafec436 man-pages-2.23.ebuild 1415
 RMD160 81273ef8ee96c4937c3985fb87c64ba0813aa5d6 man-pages-2.23.ebuild 1415
 SHA256 e2aa7258a272d4904a74430eedf2c82bdbc69f90f70f62161d608d51c4b9a100 man-pages-2.23.ebuild 1415
@@ -31,7 +25,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEAR+A2+ySkm8kpY0RAj2lAJ95wOOvJl+ZjR1cYrfYpXwo8zvEdgCgia0W
-tfX0IqRQsYIwv7aGApCMS9o=
-=OSNT
+iD8DBQFEAR/Z2+ySkm8kpY0RAkdvAJ0YAMeNDkmN5C0zEcb8P+YgsP9FSwCfbbAA
+yfn6pBIr385t2jX6FcQFKms=
+=9SFY
 -----END PGP SIGNATURE-----
