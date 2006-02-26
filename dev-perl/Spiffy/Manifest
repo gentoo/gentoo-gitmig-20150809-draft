@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 532620b5fe42fdb252709944b220909a ChangeLog 1012
+MD5 3427ccfa6907f857fb067ca273a5a0b0 ChangeLog 1108
 MD5 edcb433b2ae86259e3bc14b793185eb6 Spiffy-0.26.ebuild 516
 MD5 34422f2af29e347087b3e50d114264c5 Spiffy-0.29.ebuild 527
-MD5 a219c095a397e2eab75926ed42215ab3 Spiffy-0.30.ebuild 529
+MD5 d12ef7a3dbccd5c2a11a2ced8a47a216 Spiffy-0.30.ebuild 535
 MD5 00131c43fdd9f09a6b92820e1d76fbc9 files/digest-Spiffy-0.26 62
 MD5 fde8adb2efa125b5f6639f260ad1e8a0 files/digest-Spiffy-0.29 62
 MD5 e71c034dcddc51355c39e59d7f06fb52 files/digest-Spiffy-0.30 62
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD+QactG5z4I8BtQoRAqmHAJ9sY64HyxyXryCDg2zuy5Z3zlko/wCaA8Oz
-52KUoSMsBpdVbKDBZaTasWk=
-=nSAl
------END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Spiffy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spiffy/ChangeLog,v 1.7 2006/02/20 00:00:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spiffy/ChangeLog,v 1.8 2006/02/26 01:16:05 kumba Exp $
+
+  26 Feb 2006; Joshua Kinard <kumba@gentoo.org> Spiffy-0.30.ebuild:
+  Added ~mips to KEYWORDS.
 
 *Spiffy-0.30 (20 Feb 2006)
 
