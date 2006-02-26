@@ -1,9 +1,37 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5761c6207f54bfbe27fe6e0fe2e0f322 ChangeLog 1131
+RMD160 852606649db8a726d0434196defb803e51c61eee ChangeLog 1131
+SHA256 b54ef77904903e079784bd060ce7fe5891a3b216ea52f09906757405d88f6c99 ChangeLog 1131
 MD5 db202d22d4b7d54cd9a6789312803f07 files/digest-thoggen-0.3 63
+RMD160 b12b5970987d73be12c7e5ecc2b683043741e8e4 files/digest-thoggen-0.3 63
+SHA256 fd5da790b5d1645aa1d1b44041eee0b27521a41b3e809ed1b20a3002f56ce327 files/digest-thoggen-0.3 63
 MD5 3a84e2ada235ed3faf87addeab62a248 files/digest-thoggen-0.4 63
+RMD160 8ccf18ddd806532edb86d6e605f7d3488356eff6 files/digest-thoggen-0.4 63
+SHA256 b09cc13358a53fc4dce5a71002f851a61233a3d806c2cd0caa6630608cced527 files/digest-thoggen-0.4 63
 MD5 217d68a4a42e126364b87033fadc7e7c files/digest-thoggen-0.4.1 65
+RMD160 4203b763ec4b67450e073b843ff671af4f668639 files/digest-thoggen-0.4.1 65
+SHA256 39a555e474a1208cf166b3125a3cedf352cbda13c765770bcae2db5dbfcede66 files/digest-thoggen-0.4.1 65
 MD5 214c2419992cfee26543fedc1e4711ea files/thoggen-0.3-new-dbus-hal.patch 13464
+RMD160 823be193ea58678b0dce1e70a2f0c6fcbb3f05d9 files/thoggen-0.3-new-dbus-hal.patch 13464
+SHA256 1e80b866bf75b83b0e92953ee0f8d676e0988795a2dfcab4076588c81f94bbe4 files/thoggen-0.3-new-dbus-hal.patch 13464
 MD5 d9885b371cf444e9a26ef0f8a0418d9b metadata.xml 219
-MD5 2679bb37b316b77ffedaf5b490b5cb0e thoggen-0.3.ebuild 1386
-MD5 a9cb9be9eb43cb801872f672b666270f thoggen-0.4.1.ebuild 1298
-MD5 536b1378561953062cd52271505036bd thoggen-0.4.ebuild 1296
+RMD160 c3357aa8edfab7033261267720250a36fc96e7f8 metadata.xml 219
+SHA256 c76952c442b16a3d2efe40e95e84f1110ec9b13775882012b30a25ca3b063ada metadata.xml 219
+MD5 c359458d879f77bea36a94431f588a75 thoggen-0.3.ebuild 1315
+RMD160 635096119b02cd3e2d32ac050d1c49f651e82f3a thoggen-0.3.ebuild 1315
+SHA256 23e96c2923e3f5272f31bb4f684fb6a15165ef2812ffeb971c1e4df2a2f40c98 thoggen-0.3.ebuild 1315
+MD5 c02120f2f5b82795ed32e98f8fd33892 thoggen-0.4.1.ebuild 1228
+RMD160 0c963d250257415023005589d0f65fdd288027db thoggen-0.4.1.ebuild 1228
+SHA256 7b73ce75bbf3cca44580b47fcd2e76db099f32fe42310ea9e7ad2f79caeeb0fb thoggen-0.4.1.ebuild 1228
+MD5 87ebfd4ab1ee46dc08cfaab703836084 thoggen-0.4.ebuild 1226
+RMD160 729ad6263fc985487b2829a8de372ba875047e20 thoggen-0.4.ebuild 1226
+SHA256 e42a237023bb720a0ed073c5991d030ef321295b4a15782277c87461ef851d85 thoggen-0.4.ebuild 1226
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEAX27r2QksT29OyARAoL7AJ9qSPg/E3oFeTQY7PONg1VZbNKJnwCfQKte
+/mwlAuiFSd7smVUop5wCpo4=
+=gRaB
+-----END PGP SIGNATURE-----
