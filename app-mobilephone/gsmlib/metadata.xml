@@ -2,5 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>mobile-phone</herd>
-<longdescription>Library and Applications to access GSM mobile phones.</longdescription>
+<longdescription>Library and applications to access GSM mobile phones.</longdescription>
 </pkgmetadata>

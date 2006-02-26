@@ -1,16 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/gsmlib-1.11_pre041028.ebuild,v 1.5 2005/08/17 13:14:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/gsmlib-1.11_pre041028.ebuild,v 1.6 2006/02/26 09:06:56 mrness Exp $
 
 inherit eutils
 
-MY_A=${PN}-pre${PV%_pre*}-${PV#*_pre}
-
-DESCRIPTION="Library and Applications to access GSM mobile phones"
-SRC_URI="http://www.pxh.de/fs/gsmlib/snapshots/${MY_A}.tar.gz"
+DESCRIPTION="Library and applications to access GSM mobile phones"
+SRC_URI="http://www.pxh.de/fs/gsmlib/snapshots/${PN}-pre${PV%_pre*}-${PV#*_pre}.tar.gz"
 HOMEPAGE="http://www.pxh.de/fs/gsmlib/"
-
-DEPEND=""
 
 IUSE=""
 SLOT="0"
@@ -19,24 +15,17 @@ KEYWORDS="~amd64 ppc sparc x86"
 
 RESTRICT="test"
 
-S=${WORKDIR}/${PN}-${PV%_pre*}
+S="${WORKDIR}/${PN}-${PV%_pre*}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
 
-	# Fix gsm_map_key.h for gsm_map_key.h
-	epatch ${FILESDIR}/gsmlib-1.11-include-gcc34-fix.patch
-
-}
-
-src_compile() {
-	econf
-	emake || die
+	epatch "${FILESDIR}/${P%_pre*}-include-gcc34-fix.patch"
+	epatch "${FILESDIR}/${P%_pre*}-gcc41.patch"
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS NEWS README
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc Changelog README
 }
 
