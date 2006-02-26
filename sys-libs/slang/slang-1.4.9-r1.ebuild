@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.22 2006/02/25 19:17:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.23 2006/02/26 00:05:56 halcy0n Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ IUSE="cjk unicode"
 DEPEND=">=sys-libs/ncurses-5.2-r2"
 
 src_unpack() {
-	unpack ${A}		 
+	unpack ${A}
 	cd ${S}
 
 	epatch ${WORKDIR}/${P}.patch
