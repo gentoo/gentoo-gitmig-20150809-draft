@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1e93993b5be8f4c5cad06ae183f43db1 ChangeLog 6601
+MD5 629bf6881a2e87a3e1a291c4e0ee3d3b ChangeLog 6701
+RMD160 92e65fd7d70e3f004027b1427426d5190272a68e ChangeLog 6701
+SHA256 62059d7e8dac0d45ae5424c865f630a0a52d6679e35843571ad2f36c6b0b547b ChangeLog 6701
 MD5 aa690ff148a4b4bbb5a59276fbb583a8 files/digest-libpcap-0.8.3-r1 65
+RMD160 c7d9bb2ee4829732e35ee9722ccb9185bc380b15 files/digest-libpcap-0.8.3-r1 65
+SHA256 f7b754550fed0138ffcb2f5f7c8c689ea8ccd5ee1d61c0505afbf1b0fc1113d4 files/digest-libpcap-0.8.3-r1 65
 MD5 be632c8eb1c0f14e48313ceb1bc3917d files/digest-libpcap-0.9.3 65
+RMD160 c009508871602abeed48f35799e685928a893b27 files/digest-libpcap-0.9.3 65
+SHA256 c2c39b76e7a73eb23c5b1beab5f6cd69766cbca298e61e1696f7c8c1ef0720c0 files/digest-libpcap-0.9.3 65
 MD5 ade19e417c8377e4ebbafd8ccbb77f69 files/digest-libpcap-0.9.4 65
+RMD160 02cf96ba818b0be29f102e9031792d3a99f7c09a files/digest-libpcap-0.9.4 65
+SHA256 d3aaad841877ad54d1ba1e6f45f42ad464c3a1cd74b94f7451865519741767f4 files/digest-libpcap-0.9.4 65
 MD5 29710cca211a266690d649eff1ffe287 files/libpcap-0.8.1-fPIC.patch 298
+RMD160 4cf97341a5da39c97553871312c9381f30457bdb files/libpcap-0.8.1-fPIC.patch 298
+SHA256 cd4cbc5aa3ba94095e85cf026b015f20af9ed77c05b529b2cb902e5ba365a7c3 files/libpcap-0.8.1-fPIC.patch 298
 MD5 daf575fe650740e0e4013da7b86f2b50 files/libpcap-0.9.3-whitespace.diff 679
+RMD160 70ccf92874b1665253608ffeffa7de89c2af48d7 files/libpcap-0.9.3-whitespace.diff 679
+SHA256 4ff701485da6f577980048b9b91810ba7aa529c3be021dea30c8205b0a130606 files/libpcap-0.9.3-whitespace.diff 679
 MD5 2f0cfe611a39b442ed7e9f3427f3c2c8 libpcap-0.8.3-r1.ebuild 1477
+RMD160 4d3422079463b76a053825488b80f73d36313339 libpcap-0.8.3-r1.ebuild 1477
+SHA256 754089cc1a4deb4a2fd917071314db39d6e6db810a97074f994102059859a458 libpcap-0.8.3-r1.ebuild 1477
 MD5 81739741e24d96e839c58274b7eade90 libpcap-0.9.3.ebuild 1514
-MD5 b58f12517bf4d96ea56b4678bbe5f057 libpcap-0.9.4.ebuild 1537
+RMD160 a6286584f3b661f861b17414f47ac311796937a8 libpcap-0.9.3.ebuild 1514
+SHA256 518e5a96f10808b90f7483b59dd4f944561196dbd096d428ac05fb852b67f999 libpcap-0.9.3.ebuild 1514
+MD5 3eb5e41fc66b5b47d9a779a277a7c417 libpcap-0.9.4.ebuild 1540
+RMD160 8fe81e0345f9e5f84938f0895d9b7ad2ad24210d libpcap-0.9.4.ebuild 1540
+SHA256 ff22b77ab99d5f10b3b1a1286b26b51bb223a36c44b707b11466d79b633037db libpcap-0.9.4.ebuild 1540
 MD5 50057505c6cef15415ae8f8ca7378d82 metadata.xml 261
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDyaoA2+ySkm8kpY0RAkYHAJ453P7KRFb01qK644biW9oqzAq7JQCeL3wG
-nfScikNZaT2jWqc8uRu524Y=
-=Ivk+
------END PGP SIGNATURE-----
+RMD160 5bcf72e234ef387b24ffb9221623eaf927a41f02 metadata.xml 261
+SHA256 92d6c306fe13ead877997b8ff3007ffa601a1e7c96ca3ec2208f88884a95c791 metadata.xml 261
