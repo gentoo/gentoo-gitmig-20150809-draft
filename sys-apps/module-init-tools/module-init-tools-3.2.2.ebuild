@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2.ebuild,v 1.3 2006/01/29 13:27:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2.ebuild,v 1.4 2006/02/26 19:02:01 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -67,7 +67,7 @@ src_compile() {
 
 #	if ! use no-old-linux ; then
 		einfo "Building modutils..."
-		cd ${WORKDIR}/modutils-${MODUTILS_PV}
+		cd "${WORKDIR}"/modutils-${MODUTILS_PV}
 		econf \
 			--disable-strip \
 			--prefix=/ \
@@ -95,11 +95,13 @@ src_install() {
 #	if ! use no-old-linux ; then
 		local mymake=""
 		[ "${ARCH}" = "hppa" ] && mymake="ARCH=hppa"
-		cd ${WORKDIR}/modutils-${MODUTILS_PV}
+		cd "${WORKDIR}"/modutils-${MODUTILS_PV}
 		einstall prefix="${D}" ${mymake}
-
 		docinto modutils-${MODUTILS_PV}
 		dodoc CREDITS ChangeLog NEWS README TODO
+
+		# remove man pages provided by the man-pages package now #124127
+		rm -r "${D}"/usr/share/man/man2
 
 		cd "${S}"
 		# This copies the old version of modutils to *.old so it still works
