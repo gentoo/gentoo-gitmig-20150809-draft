@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/libapreq2
-# Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.5 2005/08/14 21:20:49 ferdy Exp $
+# Copyright 2003-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.6 2006/02/26 16:31:27 mcummings Exp $
+
+*libapreq2-2.07 (26 Feb 2006)
+
+  26 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  libapreq2-2.06.ebuild, +libapreq2-2.07.ebuild:
+  Marking 2.06 stable, adding 2.07
 
   14 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> libapreq2-2.06.ebuild:
   keyworded ~alpha, wrt bug #102503

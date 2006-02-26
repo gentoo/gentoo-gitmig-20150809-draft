@@ -1,19 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.06.ebuild,v 1.5 2006/02/26 16:31:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.07.ebuild,v 1.1 2006/02/26 16:31:27 mcummings Exp $
 
 inherit perl-module
 
 IUSE="doc"
 
-MY_P=${P}-dev
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="An Apache Request Perl Module"
-SRC_URI="mirror://cpan/authors/id/J/JO/JOESUF/${MY_P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/J/JO/JOESUF/${P}.tar.gz"
 HOMEPAGE="http://httpd.apache.org/apreq/"
 SLOT="2"
 LICENSE="Apache-2.0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="${DEPEND}
 	>=dev-perl/ExtUtils-XSBuilder-0.23
@@ -25,6 +23,13 @@ mydoc="TODO README CHANGES INSTALL"
 myconf="--with-apache2-apxs=/usr/sbin/apxs2"
 SRC_TEST="skip"
 
+src_unpack() {
+	cd ${S}
+	unpack ${A}
+	sed -i -e "s/PERL \$PERL_OPTS/PERL/" ${S}/acinclude.m4
+	sed -i -e "s/PERL \$PERL_OPTS/PERL/" ${S}/aclocal.m4
+	sed -i -e "s/PERL \$PERL_OPTS/PERL/" ${S}/configure
+}
 src_test() {
 	if [ "${SRC_TEST}" == "do" ]; then
 		if [ "`id -u`" == '0' ]; then
@@ -39,7 +44,12 @@ src_test() {
 	fi
 }
 
+src_compile() {
+	cd ${S}
+	perl Makefile.PL ${myconf}
+}
 src_install() {
+
 	emake -j1 DESTDIR=${D} LT_LDFLAGS="-L${D}/usr/lib" install || die
 	make docs
 	rm -f ${S}/docs/man/man3/_*
