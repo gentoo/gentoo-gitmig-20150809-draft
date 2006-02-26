@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r1.ebuild,v 1.9 2006/02/11 16:57:21 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r1.ebuild,v 1.10 2006/02/26 15:25:45 tupone Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,30 +11,33 @@ SRC_URI="http://www.clanlib.org/download/files/ClanLib-${PV}-1.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0.7"
 KEYWORDS="amd64 x86" #not big endian safe #82779
-IUSE="opengl X sdl vorbis doc mikmod clanVoice clanJavaScript ipv6"
+IUSE="opengl sdl vorbis doc mikmod ipv6"
 
-DEPEND="virtual/libc
-	media-libs/libpng
+# opengl keyword does not drop the GL/GLU requirement.
+# Autoconf files need to be fixed
+RDEPEND="media-libs/libpng
 	media-libs/jpeg
-	media-libs/freetype
-	opengl? ( virtual/opengl )
-	sdl? ( media-libs/libsdl )
-	X? (
-		|| (
-			( media-libs/mesa
-			x11-libs/libXt
-			x11-proto/inputproto
-			x11-proto/xf86vidmodeproto )
-			virtual/x11
+	virtual/opengl
+	virtual/glu
+	sdl? (
+		media-libs/libsdl
+		media-libs/sdl-gfx
+	)
+	|| (
+		(
+			x11-libs/libXmu
+			x11-libs/libXxf86vm
 		)
+		virtual/x11
 	)
 	mikmod? ( >=media-libs/libmikmod-3.1.9 )
 	vorbis? ( media-libs/libvorbis )"
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	|| (
-		( media-libs/mesa
-		x11-libs/libXmu
-		x11-libs/libXxf86vm )
+		(
+			x11-libs/libXt
+			x11-proto/xf86vidmodeproto
+		)
 		virtual/x11
 	)"
 
@@ -67,8 +70,6 @@ src_compile() {
 		--disable-dependency-tracking \
 		$(use_enable x86 asm386) \
 		$(use_enable doc docs) \
-		$(use_enable clanVoice) \
-		$(use_enable clanJavaScript) \
 		$(use_enable opengl clanGL) \
 		$(use_enable sdl clanSDL) \
 		$(use_enable vorbis clanVorbis) \
