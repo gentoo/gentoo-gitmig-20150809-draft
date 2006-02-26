@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/perforce-gui
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-gui/ChangeLog,v 1.5 2004/07/02 05:11:15 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-gui/ChangeLog,v 1.6 2006/02/26 22:13:13 hd_brummy Exp $
+
+  26 Feb 2006; Joerg Bornkessel <hd_brummy@gentoo.org> Manifest:
+  fixed digest, bug #123923
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   perforce-gui-2003.1.ebuild, perforce-gui-2003.2.ebuild:
