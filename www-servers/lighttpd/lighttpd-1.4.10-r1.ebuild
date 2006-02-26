@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.10.ebuild,v 1.2 2006/02/13 15:24:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.10-r1.ebuild,v 1.1 2006/02/26 01:07:37 ka0ttic Exp $
 
 inherit eutils depend.php
 
@@ -95,7 +95,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-#    EPATCH_SUFFIX="diff" epatch ${FILESDIR}/${PV}
+	EPATCH_SUFFIX="diff" epatch ${FILESDIR}/${PV}
 
 #    einfo "Regenerating autoconf/automake files"
 #    libtoolize --copy --force || die "libtoolize failed"
@@ -171,13 +171,11 @@ src_install() {
 	use minimal && remove_non_essential
 }
 
-pkg_preinst() {
+pkg_postinst () {
 	enewgroup lighttpd
 	enewuser lighttpd -1 -1 /var/www/localhost/htdocs lighttpd
 	fowners lighttpd:lighttpd /var/l{ib,og}/lighttpd
-}
 
-pkg_postinst () {
 	echo
 	if [[ -f ${ROOT}etc/conf.d/spawn-fcgi.conf ]] ; then
 		einfo "spawn-fcgi is now included with lighttpd"
