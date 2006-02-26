@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.1.ebuild,v 1.3 2006/02/24 13:39:32 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.1.ebuild,v 1.4 2006/02/26 20:04:46 metalgod Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -82,6 +82,9 @@ src_unpack() {
 
 	# Sqlite configure check fix
 	sed -i -e 's/SQLITE, sqlite3/SQLITE3, sqlite3/' configure.in
+
+	# Sqlite version fix
+	sed -i -e 's/sqlite3 >= 3.3.1/sqlite3 >= 3.3/' configure.in
 
 	# Don't log so much
 	! use debug && sed -i -e \
