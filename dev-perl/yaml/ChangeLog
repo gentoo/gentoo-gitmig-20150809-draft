@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.32 2006/02/20 21:10:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.33 2006/02/26 01:33:51 kumba Exp $
+
+  26 Feb 2006; Joshua Kinard <kumba@gentoo.org> yaml-0.39.ebuild,
+  yaml-0.58.ebuild:
+  0.39 stable on mips, ~mips added to 0.59 for Bug #119199.
 
   20 Feb 2006; Michael Cummings <mcummings@gentoo.org> -yaml-0.57.ebuild:
   Removing extraneous ebuild

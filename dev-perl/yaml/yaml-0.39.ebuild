@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/yaml-0.39.ebuild,v 1.8 2006/02/13 14:27:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/yaml-0.39.ebuild,v 1.9 2006/02/26 01:33:51 kumba Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/I/IN/INGY/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND=">=virtual/perl-Test-Simple-0.54"
