@@ -1,6 +1,11 @@
 # ChangeLog for app-text/enchant
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.49 2005/12/08 03:06:07 joem Exp $
+# Copyright 2000-20065 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.50 2006/02/26 16:25:18 foser Exp $
+
+*enchant-1.2.2 (26 Feb 2006)
+
+  26 Feb 2006; Marinus Schraal <foser@gentoo.org> enchant-1.2.2.ebuild :
+  New release, don't use gnome2 eclass, add huspell as possible backend
 
 *enchant-1.2.0 (08 Dec 2005)
 
