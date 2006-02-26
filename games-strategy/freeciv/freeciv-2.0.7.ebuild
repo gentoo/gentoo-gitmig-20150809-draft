@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.7.ebuild,v 1.3 2006/01/20 21:45:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.7.ebuild,v 1.4 2006/02/26 06:55:31 halcy0n Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.freeciv.org/pub/freeciv/stable/${MY_P}.tar.bz2
 		esd? (
 			http://www.freeciv.org/ftp/contrib/sounds/sets/stdsounds3.tar.gz )
 		sdl? (
-			http://www.freeciv.org/ftp/contrib/sounds/sets/stdsounds3.tar.gz ))"
+			http://www.freeciv.org/ftp/contrib/sounds/sets/stdsounds3.tar.gz ) )"
 
 LICENSE="GPL-2"
 SLOT="0"
