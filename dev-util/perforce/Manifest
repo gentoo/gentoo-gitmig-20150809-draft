@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c1a169d1ea4fe6895df1fd06f447693a ChangeLog 2038
 MD5 eea9a75c7d12c12184bd83fe70d9f07f files/digest-perforce-2002.2 342
 MD5 eea9a75c7d12c12184bd83fe70d9f07f files/digest-perforce-2002.2-r1 342
@@ -14,3 +17,11 @@ MD5 d53d9d125d38ef7d1a8eade7f0b8235b perforce-2002.2-r1.ebuild 1557
 MD5 8a7e63e1f49bb2af948f9c27f6d888fd perforce-2002.2.ebuild 1479
 MD5 56dc0382fba1f624e4ecbf8387557473 perforce-2003.1-r1.ebuild 1473
 MD5 ada216fcf1d6b19e8ba435bb8340e544 perforce-2003.1.ebuild 1470
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEAiYUdn07HTTCgIoRAuxmAJ9Cpz85wXUqWu9x2v7M5fDZKUkLWwCglkEq
+N9zgscaWQV6eZQFW7E245is=
+=HaTG
+-----END PGP SIGNATURE-----
