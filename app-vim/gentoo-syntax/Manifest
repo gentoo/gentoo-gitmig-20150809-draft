@@ -1,46 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4b1e6b91293d46aa116c7fa57a5c79bb ChangeLog 10917
-RMD160 2655b98208d4d9a72a8610b397d1d24a094420f4 ChangeLog 10917
-SHA256 120184d17c3113ac0639870562d783c29008e9ef77e5afa5c25e7ffdda92d55f ChangeLog 10917
+MD5 f133c092bd26ebad8a75d2f0786531c4 ChangeLog 11021
 MD5 2dc9234dc95eba7cfcf252e4bef5a538 files/digest-gentoo-syntax-20050325 74
-RMD160 8598a88e7b360b01ae557f96a4d12036d45fa7e3 files/digest-gentoo-syntax-20050325 74
-SHA256 7e38bb361e5bcfbbcd09f666c30361716ecaa6326dda59e8d1ad50def400ce5e files/digest-gentoo-syntax-20050325 74
 MD5 1ba3532364668721658b08c429f67268 files/digest-gentoo-syntax-20050515 74
-RMD160 b20c8672ce5ca0976c86daf0c6f7d3c6967c5a5b files/digest-gentoo-syntax-20050515 74
-SHA256 c4b313cfef04d3c1376dadfb3cb15e981e465b3391fbf67857138d0d72db4133 files/digest-gentoo-syntax-20050515 74
 MD5 e6970a1a669fc8424e2e5706fdfb169b files/digest-gentoo-syntax-20050618 74
-RMD160 a79cec69e6cf20d321362afe754a938d09a17dae files/digest-gentoo-syntax-20050618 74
-SHA256 99941e529498e3a2112ee426b5837865cb6fcc18272d552c617497d3182b1406 files/digest-gentoo-syntax-20050618 74
 MD5 4e89bd41ee3214e01f085de87e7f9584 files/digest-gentoo-syntax-20051221 74
-RMD160 eeed5a66e6e0e3646f2305ab8f892432db27ef73 files/digest-gentoo-syntax-20051221 74
-SHA256 e807b54533ef422030d64254ab65df8409a62d8f4bcc3e4dd5866b56178df7e1 files/digest-gentoo-syntax-20051221 74
 MD5 2ebb63d791d0b453712e27584f1b1c67 files/gentoo-syntax-20050211-fix-escapes.patch 558
-RMD160 ff46fc951f18c92a6b28d77235665e8116095736 files/gentoo-syntax-20050211-fix-escapes.patch 558
-SHA256 e4db624d5e0d587527afaac93c0a723bb4bee2d7846898019630b288fa6222fd files/gentoo-syntax-20050211-fix-escapes.patch 558
 MD5 298bb984862016f9d7de0f6861c3fd73 files/gentoo-syntax-20050211-fix-xml.patch 2149
-RMD160 e1ed9cb5df099ba6b6bc9563312c732c0d2af661 files/gentoo-syntax-20050211-fix-xml.patch 2149
-SHA256 046fa8ce4aa5d3996e9a5d4b3f4b8cb9791e0525d3c9a0dda6757e5456bdeabc files/gentoo-syntax-20050211-fix-xml.patch 2149
 MD5 281f945de86c115d25c786f771a010b0 gentoo-syntax-20050325.ebuild 1706
-RMD160 5df8464938cf20c900c5b025f844c0cce8d792dc gentoo-syntax-20050325.ebuild 1706
-SHA256 aabb9c9edf9f8f0c6c0dcb7388472e81efb8a7a0ae7f091124376bc9758a7633 gentoo-syntax-20050325.ebuild 1706
 MD5 eda76e8279b1627896fa1a2278a1b11c gentoo-syntax-20050515.ebuild 1718
-RMD160 93d321a9cb7f431cc6ec6375ad52f6502f974cd9 gentoo-syntax-20050515.ebuild 1718
-SHA256 005c8a34c4850a6e498772f6a00a4ad0c7760267c8a595fee684f144de563512 gentoo-syntax-20050515.ebuild 1718
 MD5 75352365463eb79e506d8701bff81f55 gentoo-syntax-20050618.ebuild 1721
-RMD160 f7a24aebbbe8c5f6cc0b44d12c2699fbdb588083 gentoo-syntax-20050618.ebuild 1721
-SHA256 079b7c6579e1d3330375ed56952d063514d1464dc609c6ca2248098bc39685e5 gentoo-syntax-20050618.ebuild 1721
-MD5 ac74ea4b10bc46fc2dbd7ab13b7d91c3 gentoo-syntax-20051221.ebuild 1643
-RMD160 f6d128bcb8f0a9087e7e9bbb5bf3175711f54973 gentoo-syntax-20051221.ebuild 1643
-SHA256 4ec35a5c53bc6db2c62590143568df7b29e02888b356fe5b5dfe660f0b49f03a gentoo-syntax-20051221.ebuild 1643
+MD5 6501e3c088f09382991c079fc20d0d6c gentoo-syntax-20051221.ebuild 1642
 MD5 c12b313eed9efb8f61723cb9ebf22c36 metadata.xml 253
-RMD160 aec1a411ed3592aa10fe3b2b80952362c7bd1b6d metadata.xml 253
-SHA256 e12ae1196e99a89e610778695e0712ce305387072752329dfc7c31c07d4105c3 metadata.xml 253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9rntLLFUmVNQ7rkRAtz5AKCClZDHL+yz6+rbuxg4usEssFVwcwCgxOTE
-LLPTcJQsAkSLbesqsglIfAY=
-=mcMe
------END PGP SIGNATURE-----
