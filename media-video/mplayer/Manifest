@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a212e3d2e3ead327af70b18591cdc1c ChangeLog 64330
+MD5 acc77fa09e6aeaba640d6db49fe4e26d ChangeLog 64443
 MD5 4165dc479a988a3d1c6424a57d55c447 files/digest-mplayer-1.0.20060102 433
 MD5 f0e9cc1ec24f436c14acd87dbc827cfd files/digest-mplayer-1.0.20060217 433
 MD5 bdc2a05b83ca16773f288d75afe99b33 files/digest-mplayer-1.0_pre7-r1 432
@@ -13,12 +13,12 @@ MD5 38c7908ce49f7f6a272993ba5bc9dd09 files/mplayer-mythtv.patch 13755
 MD5 995f560631c6874f08bf6cc9ae01fb08 files/mplayer.desktop 794
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 68d6838c693d5653b1f80338c2f62362 mplayer-1.0.20060102.ebuild 16567
-MD5 a8b782fa32fb65258bae17b8991eb62f mplayer-1.0.20060217.ebuild 16662
+MD5 c5559b6224b858242cf8b821881c71cf mplayer-1.0.20060217.ebuild 16666
 MD5 c14023b29e9f342df8ed9457db1253f4 mplayer-1.0_pre7-r1.ebuild 16913
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD/Pa8JrHF4yAQTrARAkIXAKCfsieua6WnK9wgFrEpIcY6imon7QCgoot5
-9F8Tq9TgWnTH4CgX3UNiUB8=
-=DfV2
+iD8DBQFEAbv7ugEuf3OQ0akRAoVmAKCSzt5Hy83IvBu1G4fJTBoRld7ouACgkegJ
+yOsy/5+kDy64eTN+L4az2gg=
+=XU6k
 -----END PGP SIGNATURE-----
