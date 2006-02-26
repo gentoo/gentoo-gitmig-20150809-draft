@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.46 2006/02/13 13:05:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.47 2006/02/26 16:34:51 mcummings Exp $
+
+  26 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  HTML-Mason-1.32.ebuild, -HTML-Mason-1.3101.ebuild:
+  Marking 1.32 stable, removing 1.3101
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   HTML-Mason-1.26.ebuild, HTML-Mason-1.32.ebuild, HTML-Mason-1.3101.ebuild:
