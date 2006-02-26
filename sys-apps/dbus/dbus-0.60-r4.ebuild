@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r4.ebuild,v 1.10 2006/02/21 04:39:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r4.ebuild,v 1.11 2006/02/26 03:38:29 vapier Exp $
 
 inherit eutils mono python multilib debug qt3 autotools toolchain-funcs
 
@@ -8,9 +8,9 @@ DESCRIPTION="A message bus system, a simple way for applications to talk to each
 HOMEPAGE="http://dbus.freedesktop.org/"
 SRC_URI="http://dbus.freedesktop.org/releases/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ~ppc ppc64 ~sh sparc x86"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 sh sparc x86"
 IUSE="doc gcj gtk mono python qt selinux X xml2"
 
 RDEPEND=">=dev-libs/glib-2.6
@@ -42,7 +42,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix gcj now with gcc4 support
 	epatch "${FILESDIR}"/${PN}-0.60-gcj-2.patch
@@ -101,7 +101,7 @@ src_compile() {
 		|| die "econf failed"
 
 	# Don't build the mono examples, they require gtk-sharp
-	touch ${S}/mono/example/{bus-listener,echo-{server,client}}.exe
+	touch "${S}"/mono/example/{bus-listener,echo-{server,client}}.exe
 
 	# after the compile, it uses a selinuxfs interface to
 	# check if the SELinux policy has the right support
