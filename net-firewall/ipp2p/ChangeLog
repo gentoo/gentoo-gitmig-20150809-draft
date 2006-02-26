@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipp2p
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ChangeLog,v 1.13 2005/10/28 06:32:58 eradicator Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ChangeLog,v 1.14 2006/02/26 08:03:16 eradicator Exp $
+
+  26 Feb 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  ipp2p-0.7.4-r2.ebuild, ipp2p-0.8.0_rc3.ebuild, ipp2p-0.8.0.ebuild:
+  Fixed SLOT to 0.
 
 *ipp2p-0.8.0 (28 Oct 2005)
 

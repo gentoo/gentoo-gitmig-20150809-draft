@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.7.4-r2.ebuild,v 1.4 2005/08/07 17:33:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.7.4-r2.ebuild,v 1.5 2006/02/26 08:03:16 eradicator Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ DESCRIPTION="Netfilter module for dealing with P2P Applications."
 HOMEPAGE="http://www.ipp2p.org/index_en.html"
 SRC_URI="http://www.ipp2p.org/downloads/${P}.tar.gz"
 
-SLOT="${KV}"
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc sparc x86"
 
