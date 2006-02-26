@@ -1,15 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1c6dd4eece8db45cf03a0af1222e1474 ChangeLog 1140
+MD5 3e6ecb442b7828a50c1ffd62d5bbeb1c ChangeLog 1300
+RMD160 be0b2826d154d7a2dfe25b73966c32e0931d6634 ChangeLog 1300
+SHA256 001c508e0b310843dcda4b49a1e1d0161a6f777e9909bedfc9dcb4b78d3c2657 ChangeLog 1300
 MD5 24384d8111bf24d62810312066000ac7 files/digest-redland-1.0.0 66
+RMD160 d768abee58fb71dbde8f04998fd5de270219a868 files/digest-redland-1.0.0 66
+SHA256 9297f23336579a1634c9d57efb8a99a7a451af264d4f7a7492a6fe76a63aa485 files/digest-redland-1.0.0 66
 MD5 e5e72ebfaa1d2702685f3620d4b3a98f files/digest-redland-1.0.2 66
+RMD160 368af30e7717e7c2c32d981406e21eb4622ce973 files/digest-redland-1.0.2 66
+SHA256 8bf03289c90e7aec135f8d305087d2053b3337b9a24ef50a475b857251d153e2 files/digest-redland-1.0.2 66
+MD5 ff6ff7361003a20186f430f1594717f6 files/digest-redland-1.0.3 244
+RMD160 74219d7bda7e2fcbf84b458877d9659b3b93df02 files/digest-redland-1.0.3 244
+SHA256 e922abdb43909915fa2349c46a6e4ff584891002d523202086b49eac3baebbb7 files/digest-redland-1.0.3 244
+MD5 4c7cef6bddbff704dd486790b7421f38 files/redland-1.0.3-configure.patch 267
+RMD160 01154240bce4e0903aec55e9365dc7d099eaf1d1 files/redland-1.0.3-configure.patch 267
+SHA256 22a31320f6cacfaad2a942a2454e223b7bd3d6509063b3681d3a7941389b16ba files/redland-1.0.3-configure.patch 267
 MD5 1a82b295f8a7f691646f20b7b8dfc1f4 redland-1.0.0.ebuild 928
+RMD160 55874dc442541a2f0f8206e3fba2d56bdb4443fa redland-1.0.0.ebuild 928
+SHA256 caab963c65f2080c0ec774d3a53c13b43f2578898d70dd6120ac86b73572c6d3 redland-1.0.0.ebuild 928
 MD5 67be7248dae12297c38f763cb9fb731f redland-1.0.2.ebuild 1227
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDVFaYgIKl8Uu19MoRAjSFAJ9GVI+uEjeE7qhmzs6WYqPlxRcp8ACggE3w
-MSn1ncK6xBrPoBQvlrqPKwU=
-=5huL
------END PGP SIGNATURE-----
+RMD160 643254950d6de225a85741bef9863999f55deaf0 redland-1.0.2.ebuild 1227
+SHA256 673dee24e05cfd9f9ab5305855170a2f0e21548aae7cbd08f91b6f62bd3019f5 redland-1.0.2.ebuild 1227
+MD5 59eb2241f7d5a3e3e18959d79d985bac redland-1.0.3.ebuild 1153
+RMD160 120eae95ede01e1e15d8ac6efc299f375bc37e1b redland-1.0.3.ebuild 1153
+SHA256 92604972b97699ac90029deb58fcea9308ab9817078dff2ebba127f3b914990a redland-1.0.3.ebuild 1153
