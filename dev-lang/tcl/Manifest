@@ -1,4 +1,4 @@
-MD5 641a3aec47ca5070f53811974b21d7d5 ChangeLog 7900
+MD5 dfb9da0067c6a3a07dc024ce6be6cd37 ChangeLog 7899
 MD5 d8691f60be4023222834ccdf6ee6d498 files/digest-tcl-8.3.4 61
 MD5 3750ae675c54bcfb446406014a177605 files/digest-tcl-8.4.11 66
 MD5 3750ae675c54bcfb446406014a177605 files/digest-tcl-8.4.11-r1 66
@@ -14,4 +14,4 @@ MD5 0b8378f196b89bb5d3fce63d5dd6b21e tcl-8.4.11-r1.ebuild 3503
 MD5 57dee0c0856ba4776eaa46c4f14168d3 tcl-8.4.11.ebuild 3408
 MD5 a94e31aed8689fc3a31e268720b50938 tcl-8.4.6-r1.ebuild 3329
 MD5 90748478dfa508929dea3baefdcce7ef tcl-8.4.6.ebuild 2923
-MD5 a0bc090541c32b4748d89afe28b787cb tcl-8.4.9.ebuild 3423
+MD5 41ad4c4ba298af4bc2e184f2d6d37d60 tcl-8.4.9.ebuild 3422
