@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.159 2006/02/17 22:18:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.160 2006/02/26 17:14:36 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -326,6 +326,11 @@ unpack_2_6() {
 	env_setup_xmakeopts
 
 	cd "${S}"
+	
+	# since KBUILD_OUTPUT should only be used on the active kernel
+	# sources, we should unset it here.
+	[[ -n "${KBUILD_OUTPUT}" ]] && unset KBUILD_OUTPUT
+	
 	# this file is required for other things to build properly, so we
 	# autogenerate it ... touch .config to keep version.h build from
 	# spitting out an annoying warning
@@ -419,7 +424,7 @@ compile_headers() {
 
 compile_manpages() {
 	einfo "Making manpages ..."
-	env -u ARCH make mandocs
+	env -u ARCH -u KBUILD_OUTPUT make mandocs
 }
 
 # install functions
