@@ -1,0 +1,31 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+	provide jabber-server
+}
+
+
+
+start() {
+	#source /etc/env.d/java/20sun-jdk-1.5.0.06
+	#WILDFIRE_CMD="${JAVA_HOME}/bin/java"
+	WILDFIRE_CMD=`java-config -J`
+
+	ebegin "Starting Wildfire Server"
+        start-stop-daemon --chuid jabber --background --make-pidfile --pidfile /var/run/jabber/wildfire.pid --start --startas ${WILDFIRE_CMD} -- ${WILDFIRE_ARGS} > /var/log/wildfire.log 2>&1
+	eend
+}
+
+stop() {
+	ebegin "Stopping Wildfire Messenger"
+	start-stop-daemon --pidfile /var/run/jabber/wildfire.pid --stop
+	kill $(< /var/run/jabber/wildfire.pid)
+	sleep 2
+	if ps ax|grep "^ *$(< /var/run/jabber/wildfire.pid)" > /dev/null; then
+		eend 1
+	else
+		rm /var/run/jabber/wildfire.pid
+		eend 0
+	fi
+}

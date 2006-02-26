@@ -1,0 +1,7 @@
+WILDFIRE_HOME=/opt/wildfire
+WILDFIRE_LIB="${WILDFIRE_HOME}/lib"
+WILDFIRE_OPTS="-Xmx256m -DwildfireHome=${WILDFIRE_HOME} -Dwildfire.lib.dir=${WILDFIRE_LIB}"
+WILDFIRE_CLASS="-classpath ${WILDFIRE_LIB}/startup.jar"
+WILDFIRE_JAR="-jar ${WILDFIRE_LIB}/startup.jar"
+WILDFIRE_ARGS="-server ${WILDFIRE_OPTS} ${WILDFIRE_CLASS} ${WILDFIRE_JAR}"
+
