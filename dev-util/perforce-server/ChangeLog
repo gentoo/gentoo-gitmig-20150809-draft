@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/perforce-server
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-server/ChangeLog,v 1.4 2004/07/02 05:11:41 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-server/ChangeLog,v 1.5 2006/02/26 23:57:45 hd_brummy Exp $
+
+  26 Feb 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  files/digest-perforce-server-2003.2, Manifest:
+  fixed digest, bug #123923
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   perforce-server-2003.2.ebuild:
