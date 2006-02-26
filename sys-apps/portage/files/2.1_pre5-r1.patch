@@ -25,7 +25,16 @@ diff -Nur portage-2.1_pre5/pym/portage_locks.py portage-2.1_pre5-r1/pym/portage_
  		portage_util.writemsg("lockfile recurse\n",1)
 diff -Nur portage-2.1_pre5/pym/portage.py portage-2.1_pre5-r1/pym/portage.py
 --- portage-2.1_pre5/pym/portage.py	2006-02-21 02:01:08.000000000 -0800
-+++ portage-2.1_pre5-r1/pym/portage.py	2006-02-26 03:39:28.000000000 -0800
++++ portage-2.1_pre5-r1/pym/portage.py	2006-02-26 12:46:20.000000000 -0800
+@@ -4,7 +4,7 @@
+ # $Id: 2.1_pre5-r1.patch,v 1.2 2006/02/26 20:54:43 zmedico Exp $
+ 
+ 
+-VERSION="2.1_pre5"
++VERSION="2.1_pre5-r1"
+ 
+ # ===========================================================================
+ # START OF IMPORTS -- START OF IMPORTS -- START OF IMPORTS -- START OF IMPORT
 @@ -5334,6 +5334,8 @@
  		return 1
  

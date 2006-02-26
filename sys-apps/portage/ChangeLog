@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.81 2006/02/26 20:33:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.82 2006/02/26 20:54:43 zmedico Exp $
+
+  26 Feb 2006; Zac Medico <zmedico@gentoo.org>
+  files/2.1_pre5-r1.patch:
+  Bump 2.1_pre5 to 2.1_pre5-r1 in portage.py.
 
   26 Feb 2006; Zac Medico <zmedico@gentoo.org>
   +portage-2.1_pre5-r1.ebuild:
