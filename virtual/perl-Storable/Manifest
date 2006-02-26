@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aeb996dce9ca584e1810036f39063dd6 ChangeLog 739
-RMD160 8c2ad808cb981b9d1a8bbdd70e33d75f2f62e7f3 ChangeLog 739
-SHA256 e580dfa94f75f341825cd587c1cb0cb180b5b33591b8736826641873ad39525a ChangeLog 739
+MD5 3fc461d4edcfc95444f6557ec853c9ba ChangeLog 840
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Storable-2.07 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Storable-2.07 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Storable-2.07 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Storable-2.13 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Storable-2.13 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Storable-2.13 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Storable-2.15 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Storable-2.15 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Storable-2.15 0
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 MD5 3af71d367eb5b77c80976323b18d405d perl-Storable-2.07.ebuild 461
-RMD160 ad9ad7448154266a80d8f765aacf2629b48e57f6 perl-Storable-2.07.ebuild 461
-SHA256 e0b1f1fc9e430221d2aed9d050f23a7bb4c097e8a4b23bcc1fb4d97fd5fdd7d1 perl-Storable-2.07.ebuild 461
 MD5 4c73fde7c8b11723fada617861ab4931 perl-Storable-2.13.ebuild 506
-RMD160 daea6f6958e131992d531d0c20ad840f90e429f6 perl-Storable-2.13.ebuild 506
-SHA256 383c62e519586a895a179726cca3cd44f9a073ebc692d668e53dd8eb2baf3cbf perl-Storable-2.13.ebuild 506
-MD5 658a3c8235b235a384852081e3768156 perl-Storable-2.15.ebuild 507
-RMD160 149cce0cbd72c7819c415d31f236a4f06ed2df06 perl-Storable-2.15.ebuild 507
-SHA256 4816597d258c41041cec87bc3ab18b746fb3a19205ac1f0b1d29e1cdd95ee9b7 perl-Storable-2.15.ebuild 507
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9NbLI1lqEGTUzyQRAildAJ9cjtpKl6/F547/h4iskVtYFttQzACglKqj
-frlaXdzteT6DW42mlmQs0u0=
-=B34O
------END PGP SIGNATURE-----
+MD5 8afc10be506904ea498d7cd5e46228cd perl-Storable-2.15.ebuild 506

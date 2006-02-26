@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-DB_File
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/ChangeLog,v 1.5 2006/02/16 19:37:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/ChangeLog,v 1.6 2006/02/26 06:26:24 kumba Exp $
+
+  26 Feb 2006; Joshua Kinard <kumba@gentoo.org> perl-DB_File-1.814.ebuild:
+  Marked stable on mips.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   perl-DB_File-1.811.ebuild, perl-DB_File-1.813.ebuild,

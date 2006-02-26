@@ -1,46 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d48f36c017cd24c1cf2900064b27ac31 ChangeLog 781
-RMD160 5a9834bc1eba40d4df9315487e3f363ad9cdff69 ChangeLog 781
-SHA256 f37dd7279454004ca58c30b980dc2a69f9202216bbcea630df77bbaf9970a041 ChangeLog 781
+MD5 9d354d14c96322ff41650e43e3115fa4 ChangeLog 887
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-digest-base-1.05 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-digest-base-1.05 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-digest-base-1.05 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-digest-base-1.08 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-digest-base-1.08 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-digest-base-1.08 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-digest-base-1.10 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-digest-base-1.10 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-digest-base-1.10 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-digest-base-1.13 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-digest-base-1.13 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-digest-base-1.13 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-digest-base-1.14 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-digest-base-1.14 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-digest-base-1.14 0
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 MD5 5d52cc3a4e2b38a9854e002e2cae4c89 perl-digest-base-1.05.ebuild 487
-RMD160 4f002fb8ff08b99a710d54c0463a3888e583deed perl-digest-base-1.05.ebuild 487
-SHA256 62dc4d0e94db8f08b497b9888992c58437bed672249de6b8f24bb78ce9957e6b perl-digest-base-1.05.ebuild 487
 MD5 33f353395b5a9ba81e353eeae6caee8b perl-digest-base-1.08.ebuild 498
-RMD160 0b42d2823210c2efe4960415a5d4a0e198d02eca perl-digest-base-1.08.ebuild 498
-SHA256 df7ce7bc305f1cc2a72488f9e819be6b03b703dcc021db1c236202662b460c70 perl-digest-base-1.08.ebuild 498
 MD5 f9573e0d55b94629276139219607eea7 perl-digest-base-1.10.ebuild 487
-RMD160 3aa1ad440df20fb9871f041b493851d87a1398bb perl-digest-base-1.10.ebuild 487
-SHA256 14df0150479ef57af151eca3bba607b3658cf848d25f8acfdff7bbc17108f1ea perl-digest-base-1.10.ebuild 487
-MD5 9680006c02a073fb87ef843528a85826 perl-digest-base-1.13.ebuild 487
-RMD160 d6806a7648923f7715e0a90d4323d1d2f904694d perl-digest-base-1.13.ebuild 487
-SHA256 166f573bac010cc191b38254cf28128bda919cdfcc5b44a631d3afde9382e584 perl-digest-base-1.13.ebuild 487
+MD5 eff815aaa6abe3ec10f48e03896c43ff perl-digest-base-1.13.ebuild 486
 MD5 c1849a71b4d68924a6dc68a0adba0d7e perl-digest-base-1.14.ebuild 502
-RMD160 b67210afc455f52c9ecb99dc618af474b2b82092 perl-digest-base-1.14.ebuild 502
-SHA256 1f81d1794597865d6eb1a52fe370d57431a88b674204ed9883df17ac5d04f31d perl-digest-base-1.14.ebuild 502
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9Nm1I1lqEGTUzyQRAjgTAJ9S3ZJFRMW5ufef/GDHuON0CRxZ3wCdGYv9
-32fCGQo4xkbTOFyymhPYAo8=
-=Qig7
------END PGP SIGNATURE-----

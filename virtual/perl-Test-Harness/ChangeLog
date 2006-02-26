@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Test-Harness
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.3 2006/02/16 19:48:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.4 2006/02/26 06:30:01 kumba Exp $
+
+  26 Feb 2006; Joshua Kinard <kumba@gentoo.org>
+  perl-Test-Harness-2.42.ebuild:
+  Marked stable on mips.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   perl-Test-Harness-2.56.ebuild:

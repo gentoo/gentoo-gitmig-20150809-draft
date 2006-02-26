@@ -1,52 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2dbc6fe11fe18c1a448b0deb2edf8969 ChangeLog 958
-RMD160 584db8cd80ee0bf2bf2e062e29d761a122da4636 ChangeLog 958
-SHA256 5ba001fb64e1fd38e492fcb3079e467029788fb2c4ddecf8e65904598866fd50 ChangeLog 958
+MD5 73b707a953aa0d5691d2f3ff4c102c25 ChangeLog 1060
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-File-Spec-0.84 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-File-Spec-0.84 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-File-Spec-0.84 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-File-Spec-0.87 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-File-Spec-0.87 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-File-Spec-0.87 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-File-Spec-3.01 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-File-Spec-3.01 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-File-Spec-3.01 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-File-Spec-3.06 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-File-Spec-3.06 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-File-Spec-3.06 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-File-Spec-3.12 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-File-Spec-3.12 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-File-Spec-3.12 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-File-Spec-3.15 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-File-Spec-3.15 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-File-Spec-3.15 0
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 MD5 f3a9886183c82ae946e9573e6c7baa22 perl-File-Spec-0.84.ebuild 473
-RMD160 7e82b61b7e1e498cbe75ec0d7bacd8b0291eddf4 perl-File-Spec-0.84.ebuild 473
-SHA256 095e39d738b2422b06d4955f2858ebab8ebf68d02effef95652cb5f8e6ac3fb0 perl-File-Spec-0.84.ebuild 473
 MD5 91ff62172e554b6900615d160ca1a131 perl-File-Spec-0.87.ebuild 479
-RMD160 b8dd6cabc90b57ed921abc1439c4a39f67d98a5c perl-File-Spec-0.87.ebuild 479
-SHA256 4b145758137473c5be64179077af1c6838a8821527a3e192e55ffd285af74583 perl-File-Spec-0.87.ebuild 479
 MD5 a1069c29d18b08056d0f3a385f9c09c2 perl-File-Spec-3.01.ebuild 490
-RMD160 0254c41cf98fe82c5a4998201932fd6b6c8c8d4e perl-File-Spec-3.01.ebuild 490
-SHA256 d3c222430875c30e0c5d41d0757dc545ddbb3f83ee6b647cf5f2f4f104f6626c perl-File-Spec-3.01.ebuild 490
 MD5 6f651724bc83c02a66e0439637347175 perl-File-Spec-3.06.ebuild 481
-RMD160 4e5413344e989bd23549b4b3ea61856405a4103b perl-File-Spec-3.06.ebuild 481
-SHA256 2063db89c5af6d76065332b438fd6920ec13afbdf67357768cacee35fc26d170 perl-File-Spec-3.06.ebuild 481
-MD5 de3d883f3289613c27b9852a0848b89a perl-File-Spec-3.12.ebuild 512
-RMD160 77988f0e896deda7bc872a21ed56776f2dc80d7e perl-File-Spec-3.12.ebuild 512
-SHA256 98273b73939424ae9cf6cac0ae1b307d68b4bfb6aedb87a9cfd3947e974f56c8 perl-File-Spec-3.12.ebuild 512
+MD5 471a7a9ecd3a378e671d6a53958ad92d perl-File-Spec-3.12.ebuild 511
 MD5 996071e5a79c5f465564fbeaa9347edd perl-File-Spec-3.15.ebuild 494
-RMD160 f823ff5164f222deb3c6fd48778ef5964154db23 perl-File-Spec-3.15.ebuild 494
-SHA256 749af2764a2788ce0c2fc6cf7458803bcc6dd006d23aece2d498fdf5161595d9 perl-File-Spec-3.15.ebuild 494
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9NS1I1lqEGTUzyQRAnsFAJ9Z0NtHCb4l6GbhNXsc4OQJJb/xxACePWZl
-tOPzujHehXcRMGQ64HMxhB4=
-=CRBP
------END PGP SIGNATURE-----
