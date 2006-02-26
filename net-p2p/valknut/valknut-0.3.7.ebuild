@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.7.ebuild,v 1.6 2005/09/16 04:46:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.7.ebuild,v 1.7 2006/02/26 05:37:06 halcy0n Exp $
 
-inherit kde-functions
+inherit kde-functions eutils
 
 DESCRIPTION="Qt based client for DirectConnect"
 HOMEPAGE="http://dcgui.berlios.de/"
@@ -18,6 +18,11 @@ DEPEND=">=dev-libs/libxml2-2.4.22
 	ssl? ( dev-libs/openssl )"
 
 need-qt 3
+
+src_unpack () {
+	unpack ${A}
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+}
 
 src_compile() {
 	econf \
