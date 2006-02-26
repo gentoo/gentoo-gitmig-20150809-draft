@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.3.ebuild,v 1.1 2006/01/02 01:13:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.3.ebuild,v 1.2 2006/02/26 02:00:03 josejx Exp $
 
-inherit eutils linux-info flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="Handles power management and special keys on laptops."
 HOMEPAGE="http://pbbuttons.sf.net"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pbbuttons/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc ~x86"
 IUSE="acpi debug alsa oss ibam"
 
 DEPEND=">=sys-apps/baselayout-1.8.6.12-r1"
@@ -19,12 +19,6 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0 )"
 src_compile() {
 	# Fix crash bug on some systems
 	replace-flags -O? -O1
-
-	if ! linux_chkconfig_present INPUT_EVDEV ; then
-		eerror "Please enable CONFIG_INPUT_EVDEV in your kernel"
-		eerror "pbbuttonsd will not work without it."
-		die "Kernel not compiled with CONFIG_INPUT_EVDEV support"
-	fi
 
 	if use x86; then
 		if use acpi; then
@@ -54,11 +48,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	if linux_chkconfig_module INPUT_EVDEV ; then
-		ewarn "Ensure that the evdev kernel module is loaded otherwise"
-		ewarn "pbbuttonsd won't work."
-		einfo
-	fi
+	ewarn "Ensure that the evdev kernel module is loaded or built in, otherwise"
+	ewarn "pbbuttonsd won't work."
+	einfo
 
 	if use ppc ; then
 		einfo "It's recommended that you let pbbuttonsd act as the low level"
