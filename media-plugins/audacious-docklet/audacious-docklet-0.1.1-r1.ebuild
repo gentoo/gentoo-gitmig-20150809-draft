@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-docklet/audacious-docklet-0.1.1.ebuild,v 1.3 2006/02/25 23:18:58 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-docklet/audacious-docklet-0.1.1-r1.ebuild,v 1.1 2006/02/26 18:54:07 chainsaw Exp $
+
+inherit eutils
 
 DESCRIPTION="Audacious plugin that displays an icon in your systemtray"
 SRC_URI="http://nedudu.hu/downloads/${P}.tar.bz2"
@@ -15,6 +17,12 @@ RDEPEND=">=media-sound/audacious-0.2"
 
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-includes.patch
+}
 
 src_compile() {
 	econf $(use_enable nls) || die "econf failed"

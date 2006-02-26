@@ -1,0 +1,12 @@
+Index: audacious-docklet-0.1.1/src/tooltips.c
+===================================================================
+--- audacious-docklet-0.1.1.orig/src/tooltips.c
++++ audacious-docklet-0.1.1/src/tooltips.c
+@@ -3,6 +3,7 @@
+ #endif
+ 
+ #include <audacious/plugin.h>
++#include <audacious/beepctrl.h>
+ #include "eggtrayicon.h"
+ 
+ #include <glib.h>
