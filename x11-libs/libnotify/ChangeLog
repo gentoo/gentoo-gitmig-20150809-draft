@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.2 2006/02/19 21:36:41 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.3 2006/02/26 20:24:13 dertobi123 Exp $
+
+  26 Feb 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  libnotify-0.3.2.ebuild:
+  added to ~ppc, bug #123412
 
   19 Feb 2006; Luis Medinas <metalgod@gentoo.org> libnotify-0.3.2.ebuild:
   Added ~amd64 keyword.
