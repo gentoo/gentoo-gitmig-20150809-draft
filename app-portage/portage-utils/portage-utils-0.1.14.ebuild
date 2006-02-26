@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.12.ebuild,v 1.1 2006/01/12 15:45:48 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.14.ebuild,v 1.1 2006/02/26 03:45:52 solar Exp $
 
 inherit toolchain-funcs
 
