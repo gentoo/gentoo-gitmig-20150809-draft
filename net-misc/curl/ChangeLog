@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.65 2005/12/15 03:06:54 tsunam Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.66 2006/02/26 05:37:08 kumba Exp $
+
+  26 Feb 2006; Joshua Kinard <kumba@gentoo.org> curl-7.15.1.ebuild:
+  Marked stable on mips.
 
   15 Dec 2005; Joshua Jackson <tsunam@gentoo.org> curl-7.15.1.ebuild:
   Stable on x86 for security bug #114710
