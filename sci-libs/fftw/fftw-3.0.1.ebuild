@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1.ebuild,v 1.3 2005/03/28 19:31:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1.ebuild,v 1.4 2006/02/26 23:27:19 markusle Exp $
 
 IUSE="3dnow sse mpi"
 
@@ -15,21 +15,6 @@ LICENSE="GPL-2"
 DEPEND="virtual/libc"
 
 KEYWORDS="x86 ppc sparc alpha ~ia64 amd64"
-
-#-fpmath=xx is reported to cause trouble on pentium4 m series
-#(for 3.0.x: this sort of thing should be handled by the --enable-sse
-#style configure flags. these are set below using the use variables,
-#but under gcc-3.2.x, sse2 seems to cause trouble.)
-filter-mfpmath
-
-# in gcc 3.2.3 at least, using sse or sse2 causes trouble with -O3
-# according to the docs, -O0 can cause trouble too! So pending further
-# testing, ...
-
-if use sse; then
-	filter-flags -O3 -O1 -O -Os
-	append-flags -O2
-fi
 
 src_unpack() {
 	unpack "${P}.tar.gz"
@@ -46,6 +31,15 @@ src_compile() {
 	local myconf=""
 	local myconfsingle=""
 	local myconfdouble=""
+
+	# in gcc 3.2.3 at least, using sse or sse2 causes trouble with -O3
+	# according to the docs, -O0 can cause trouble too! So pending further
+	# testing, ...
+
+	if use sse; then
+		filter-flags -O3 -O1 -O -Os
+		append-flags -O2
+	fi
 
 	use mpi && myconf="${myconf} --enable-mpi"
 	#mpi is not a valid flag yet. In this revision it is used merely to block --enable-mpi option

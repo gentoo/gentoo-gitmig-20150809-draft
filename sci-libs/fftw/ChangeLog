@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.26 2006/02/11 20:19:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.27 2006/02/26 23:27:19 markusle Exp $
+
+  26 Feb 2006; Markus Dittrich <markusle@gentoo.org> fftw-3.0.1.ebuild:
+  Moved flag-o-matic functions from global scope to src_compile. 
+  Also removed filter-mfpmath since it didn't do anything. 
+  This fixes bug #123960.
 
 *fftw-3.1 (11 Feb 2006)
 
