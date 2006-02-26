@@ -1,19 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 478e52628d82f3fc209db57ca0693650 ChangeLog 7466
+MD5 e23ae45976f99bb0b0ea37440306670f ChangeLog 7592
+RMD160 be994d311b35efe79dcf15de0719bf7fa448e12c ChangeLog 7592
+SHA256 27e1fc91ec8ed88964acb41f4aacfd656e9819b0c2bf3296536ee4c0fa7f0a2b ChangeLog 7592
 MD5 016773a9d3c70b74b98b7fcb8a602a1b dovecot-0.99.14-r1.ebuild 5165
+RMD160 9079b9fc7893ecb777d02ec2b72bc098f090683f dovecot-0.99.14-r1.ebuild 5165
+SHA256 76aedc9947c4efce90840e5046611f1747a6e6544f948aa2ae77f36376760449 dovecot-0.99.14-r1.ebuild 5165
 MD5 3095ed47c7635193b8627dd4647c5bc9 dovecot-1.0_beta2.ebuild 3719
-MD5 bda0a6653940f9eae412b41b0be185ae dovecot-1.0_beta3.ebuild 4534
+RMD160 3f1b882989fa97ac6422dff3211ae5889276e2b0 dovecot-1.0_beta2.ebuild 3719
+SHA256 2aff469c39319fb4af286fc921b306a2aa917a4e175596f3fe0c53f9cb88b004 dovecot-1.0_beta2.ebuild 3719
+MD5 086025343666ac3f6ad1f43948e2639e dovecot-1.0_beta3.ebuild 4532
+RMD160 c0d2115e1b416da38b6d5e2db59957cfa6c4f8ef dovecot-1.0_beta3.ebuild 4532
+SHA256 86457d765e41adc4ccae417cf7d00912d58df85a15ebfea88277196d0fa36b42 dovecot-1.0_beta3.ebuild 4532
 MD5 2a50200054849ca5e0173cb709ef649d files/digest-dovecot-0.99.14-r1 67
+RMD160 bef49c59ecd06cab21f39c1d82d2c7699952dc7e files/digest-dovecot-0.99.14-r1 67
+SHA256 e5526bcfe07df3f84790bc082da36c32c5957e560df53ed63fd2a8cce940dbe6 files/digest-dovecot-0.99.14-r1 67
 MD5 a97ef7bb1cbec8304adb29ac531f5cea files/digest-dovecot-1.0_beta2 70
+RMD160 1bbcd3318d3cbebd25f80aca314ffa0965fcc862 files/digest-dovecot-1.0_beta2 70
+SHA256 211bea2990f98a7d9df0a14a8eddb150a74d9d390eda662c718274e235879db1 files/digest-dovecot-1.0_beta2 70
 MD5 87b33f708335dfccf0ff9e3a9c03b6ca files/digest-dovecot-1.0_beta3 256
+RMD160 4377944b29bc6554689dca4a78aa8adf206b38dc files/digest-dovecot-1.0_beta3 256
+SHA256 548a177d3080f4fe8067b9d5a1057736372ca13901f638f2cd9580c13fbde158 files/digest-dovecot-1.0_beta3 256
 MD5 155396035a3ecb1f5171b0432072181b files/dovecot.init 619
+RMD160 b0693a3f1e4aa34f2db5389e29d79b7e669622a8 files/dovecot.init 619
+SHA256 833c2121376e753c0a983cedc3854a855bce9b3765f6479aa15cad9acb23ca43 files/dovecot.init 619
 MD5 61e0d05b1306513aede2838fa81b05b5 metadata.xml 225
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD/fJrKRy60XGEcJIRAsTmAJ0ZX2nyTDzZzVuDI8UjTFn3vDmFmgCfcPS0
-b+tFBaAZkyA7ZJrsrYq9j1Y=
-=43rJ
------END PGP SIGNATURE-----
+RMD160 ac3483d68e92cb16beee7988f212b78ba94bb6af metadata.xml 225
+SHA256 b745d82a37a83bc996e64dc2579616898317e0192e05047ec68b93a59ffdaa95 metadata.xml 225
