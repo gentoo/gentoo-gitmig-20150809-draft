@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ksms/ksms-0.1.2.4.ebuild,v 1.1 2005/05/15 20:20:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ksms/ksms-0.1.2.4.ebuild,v 1.2 2006/02/26 09:25:28 mrness Exp $
 
 inherit kde
 
@@ -18,4 +18,5 @@ IUSE=""
 DEPEND="app-mobilephone/gsmlib"
 need-kde 3
 
-PATCHES="${FILESDIR}/${P}-empty-store.diff"
+PATCHES="${FILESDIR}/${P}-empty-store.patch
+	${FILESDIR}/${P}-gcc41.patch"
