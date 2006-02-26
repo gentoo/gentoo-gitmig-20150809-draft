@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/euler
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/ChangeLog,v 1.8 2006/02/12 15:45:26 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/ChangeLog,v 1.9 2006/02/26 23:54:26 markusle Exp $
+
+  26 Feb 2006; Markus Dittrich <markusle@gentoo.org> euler-1.60.6-r1.ebuild, ChangeLog:
+  Replaced cut in global scope with function from versionator.eclass.
+  This fixes bug #123961.
 
   12 Feb 2006; Markus Dittrich <markusle@gentoo.org>
   +files/command-gcc4-gentoo.patch, +files/configure-gentoo.patch,
