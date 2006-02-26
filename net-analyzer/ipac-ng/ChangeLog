@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ipac-ng
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.23 2006/01/16 01:16:23 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.24 2006/02/26 00:04:02 vanquirius Exp $
+
+  26 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> -ipac-ng-1.30.ebuild,
+  -ipac-ng-1.31-r1.ebuild, ipac-ng-1.31-r2.ebuild:
+  Mark 1.31-r2 x86 stable.
 
   16 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> ipac-ng-1.31-r2.ebuild:
   Use mirror://gentoo instead of my devspace.
