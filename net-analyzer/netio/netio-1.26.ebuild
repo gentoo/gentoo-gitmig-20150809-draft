@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.26.ebuild,v 1.1 2006/01/23 02:49:43 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.26.ebuild,v 1.2 2006/02/26 00:10:03 vanquirius Exp $
 
 inherit toolchain-funcs versionator
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${MY_P}.zip"
 
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~ppc ~ppc-macos ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
