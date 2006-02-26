@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-0.21.ebuild,v 1.6 2006/02/16 00:00:49 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-0.21.ebuild,v 1.7 2006/02/26 00:18:15 vanquirius Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,6 @@ SLOT="0"
 IUSE=""
 
 DEPEND="net-libs/libpcap"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf || die
@@ -22,6 +21,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README
 }
