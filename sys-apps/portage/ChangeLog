@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.80 2006/02/26 03:33:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.81 2006/02/26 20:33:40 zmedico Exp $
+
+  26 Feb 2006; Zac Medico <zmedico@gentoo.org>
+  +portage-2.1_pre5-r1.ebuild:
+  Regression fix for bug #124140 'Bad file descriptor' error when hardlink
+  file locking is used.
 
 *portage-2.1_pre5 (25 Feb 2006)
 

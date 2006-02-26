@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre5.ebuild,v 1.1 2006/02/26 03:33:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre5-r1.ebuild,v 1.1 2006/02/26 20:33:41 zmedico Exp $
 
 inherit toolchain-funcs
 
@@ -32,7 +32,7 @@ S=${WORKDIR}/${PN}-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	patch -p1 < "${FILESDIR}"/2.1_pre5.patch || die "Failed to apply patch"
+	patch -p1 < "${FILESDIR}"/2.1_pre5-r1.patch || die "Failed to apply patch"
 }
 
 src_compile() {
