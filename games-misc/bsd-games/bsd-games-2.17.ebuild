@@ -1,26 +1,23 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17.ebuild,v 1.4 2005/08/17 03:12:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17.ebuild,v 1.5 2006/02/26 06:58:25 vapier Exp $
 
 inherit eutils games
 
 DESCRIPTION="collection of games from NetBSD"
 HOMEPAGE="http://www.advogato.org/proj/bsd-games/"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/games/${P}.tar.gz
-	mirror://debian/pool/main/b/bsdgames/bsdgames_${PV}-2.diff.gz
-	nonfree? ( ftp://metalab.unc.edu/pub/Linux/games/${PN}-non-free-${PV}.tar.gz )"
+	mirror://debian/pool/main/b/bsdgames/bsdgames_${PV}-2.diff.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND="!games-misc/wtf
-	sys-libs/ncurses
-	sys-apps/miscfiles
-	sys-apps/less
-	sys-devel/flex"
+	sys-libs/ncurses"
 DEPEND="${RDEPEND}
+	sys-devel/flex
 	sys-devel/bison"
 
 # Set GAMES_TO_BUILD variable to whatever you want
@@ -34,7 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch \
-		"${DISTDIR}/bsdgames_${PV}-2.diff.gz" \
+		"${DISTDIR}"/bsdgames_${PV}-2.diff.gz \
 		"${FILESDIR}"/${P}-64bit.patch \
 		"${FILESDIR}"/${P}-gcc4.patch
 
