@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.52.ebuild,v 1.3 2006/02/21 08:28:18 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.52.ebuild,v 1.4 2006/02/26 18:45:50 dertobi123 Exp $
 
 inherit eutils
 
@@ -54,7 +54,7 @@ RDEPEND="|| ( ( x11-libs/libXrandr
 
 SLOT="0"
 LICENSE="OPERA-8.50"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 
 src_unpack() {
 	unpack ${A}
