@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.87 2006/02/22 20:03:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.88 2006/02/27 07:56:02 cardoe Exp $
+
+*mythtv-0.19_p9163 (27 Feb 2006)
+
+  27 Feb 2006; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-0.19_pre8642.ebuild, +mythtv-0.19_p9163.ebuild:
+  Added support for backendonly. Updated patchset ot fix LiveTV, mythtrancode
+  issues, and some other broken goodness from the release.
 
 *mythtv-0.19-r1 (22 Feb 2006)
 

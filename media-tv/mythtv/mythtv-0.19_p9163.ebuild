@@ -1,17 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_pre8642.ebuild,v 1.1 2006/01/18 19:05:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163.ebuild,v 1.1 2006/02/27 07:56:02 cardoe Exp $
 
 inherit flag-o-matic eutils debug qt3
 
+PATCHREV=9163
+MY_PV="${PV%_*}"
+
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://www.mythtv.org/mc/${PN}-${MY_PV}.tar.bz2
+	http://dev.gentoo.org/~cardoe/files/${PN}-${MY_PV}-rev${PATCHREV}.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa altivec arts debug dbox2 dvb dvd frontendonly ieee1394 jack joystick lcd lirc mmx nvidia oggvorbis opengl oss unichrome"
+IUSE="alsa altivec arts backendonly debug dbox2 dvb dvd frontendonly ieee1394 jack joystick lcd lirc mmx nvidia oggvorbis opengl oss unichrome"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -32,7 +36,8 @@ RDEPEND=">=media-libs/freetype-2.0
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
-	nvidia? ( media-video/nvidia-glx )
+	nvidia? ( media-video/nvidia-glx
+		|| ( x11-libs/libXvMC virtual/x11 ) )
 	oggvorbis? ( media-libs/libvorbis )
 	opengl? ( virtual/opengl )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
@@ -45,7 +50,11 @@ RDEPEND=">=media-libs/freetype-2.0
 DEPEND="${RDEPEND}
 	|| ( x11-apps/xinit virtual/x11 )"
 
-S=${WORKDIR}/mythtv
+PDEPEND="=x11-themes/mythtv-themes-${MY_PV}*"
+
+S="${WORKDIR}/${PN}-${MY_PV}"
+
+MYTHTV_GROUPS="video,audio"
 
 pkg_setup() {
 
@@ -53,6 +62,12 @@ pkg_setup() {
 		eerror "Qt is missing MySQL support. Please add"
 		eerror "'mysql' to your USE flags, and re-emerge Qt."
 		die "Qt needs MySQL support"
+	fi
+
+	if ! built_with_use x11-libs/qt opengl ; then
+		eerror "Qt requires OpenGL support. Please add"
+		eerror "'opengl' to your USE flags, and re-emerge Qt."
+		die "Qt needs OpenGL support."
 	fi
 
 	if ! has_version x11-libs/libXv && ! built_with_use x11-base/xorg-x11 xv; then
@@ -80,17 +95,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if [ $(get_libdir) != "lib" ] ; then
-		sed -i -e "s:\$\${PREFIX}/lib/:\$\${PREFIX}/$(get_libdir)/:g" \
-			-e "s:\$\${PREFIX}/lib$:\$\${PREFIX}/$(get_libdir):g" \
-			${S}/{filters,libs}/*/*.pro || die
-		sed -i -e "s:/lib/mythtv/:/$(get_libdir)/mythtv/:" \
-			${S}/libs/libmyth/mythcontext.cpp || die
-	fi
-
-#	# Fix bugs 40964 and 42943.
-#	filter-flags -fforce-addr -fPIC -momit-leaf-frame-pointer
-#	is-flag "-fomit-frame-pointer" || append-flags "-fomit-frame-pointer"
+	#Fixes of the bugs found in the 0.19 release
+	epatch "${WORKDIR}"/${PN}-${MY_PV}-rev${PATCHREV}.patch
 }
 
 src_compile() {
@@ -101,17 +107,17 @@ src_compile() {
 	use arts || myconf="${myconf} --disable-audio-arts"
 	use jack || myconf="${myconf} --disable-audio-jack"
 	use altivec || myconf="${myconf} --disable-altivec"
+	use unichrome && myconf="${myconf} --enable-xvmc"
+	use nvidia && myconf="${myconf} --enable-xvmc"
 	myconf="${myconf}
 		$(use_enable lirc)
 		$(use_enable joystick joystick-menu)
-		$(use_enable unichrome xvmc-vld)
 		$(use_enable dbox2)
 		$(use_enable dvb)
 		$(use_enable dvb dvb-eit)
 		--dvb-path=/usr/include
 		$(use_enable dvd)
 		$(use_enable opengl opengl-vsync)
-		$(use_enable nvidia xvmc)
 		$(use_enable ieee1394 firewire)
 		--enable-xrandr
 		--enable-xv
@@ -153,12 +159,25 @@ src_compile() {
 	hasq distcc ${FEATURES} || myconf="${myconf} --disable-distcc"
 	hasq ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
 
-#	if use frontendonly; then
-#		##Backend Removal
-#		cd ${S}
-#		sed -e "s:CCONFIG linux backend:CCONFIG linux:" \
-#			-i 'configure' || die "Removal of mythbackend failed"
-#	fi
+	if use frontendonly; then
+		##Backend Removal
+		ewarn
+		ewarn "You are using the experimental feature for only installing the frontend."
+		ewarn "You will not get Gentoo support nor support from MythTV upstream for this."
+		ewarn "If this breaks, you own both pieces."
+		ewarn
+		myconf="${myconf} --disable-backend"
+	fi
+
+	if use backendonly; then
+		##Frontend Removal
+		ewarn
+		ewarn "You are using the experimental feature for only installing the frontend."
+		ewarn "You will not get Gentoo support nor support from MythTV upstream for this."
+		ewarn "If this breaks, you own both pieces."
+		ewarn
+		myconf="${myconf} --disable-frontend"
+	fi
 
 	# let MythTV come up with our CFLAGS. Upstream will support this
 	CFLAGS=""
