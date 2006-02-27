@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2_rc1.ebuild,v 1.1 2006/02/17 07:48:54 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2_rc3.ebuild,v 1.1 2006/02/27 07:09:13 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
 IUSE="binfilter curl eds firefox gnome gtk java kde ldap mozilla xml2"
 
-MY_PV="${PV/_rc1/}"
-MY_PV2="oob680.1.1"
+MY_PV="${PV/_rc3/}"
+MY_PV2="oob680.3.0"
 PATCHLEVEL="OOB680"
-SRC="oob680-m1"
+SRC="oob680-m3"
 S="${WORKDIR}/ooo-build-${MY_PV2}"
 CONFFILE="${S}/distro-configs/Gentoo.conf.in"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
@@ -21,7 +21,8 @@ SRC_URI="http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-core.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${MY_PV2}.tar.gz
 	http://go-ooo.org/packages/libwpd/libwpd-0.8.3.tar.gz
 	http://go-oo.org/packages/SRC680/extras-2.tar.bz2
-	http://go-oo.org/packages/SRC680/hunspell_UNO_1.1.tar.gz"
+	http://go-oo.org/packages/SRC680/hunspell_UNO_1.1.tar.gz
+	http://go-oo.org/packages/xt/xt-20051206-src-only.zip"
 
 HOMEPAGE="http://go-oo.org"
 
