@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.0.50_pre20050225.ebuild,v 1.5 2005/12/12 03:52:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.0.50_pre20050225.ebuild,v 1.6 2006/02/27 19:37:06 mkennedy Exp $
 
 inherit elisp-common alternatives flag-o-matic eutils
 
@@ -17,8 +17,6 @@ SRC_URI="mirror://gentoo/${P/_pre/-}.tar.gz
 	cjk? ( mirror://sourceforge.jp/macemacsjp/12817/${INLINE}.tar.gz )
 	multi-tty? ( http://lorentey.hu/downloads/emacs/multi-tty/${MULTI_TTY}.patch.gz )"
 
-# Never use the sandbox, it causes Emacs to segfault on startup
-SANDBOX_DISABLED="1"
 RESTRICT="$RESTRICT nostrip"
 
 DEPEND=">=sys-apps/portage-2.0.51
@@ -78,12 +76,13 @@ src_unpack() {
 
 	# This will need to be updated for X-Compilation
 	sed -i -e "s:/usr/lib/\([^ ]*\).o:/usr/$(get_libdir)/\1.o:g" \
-	       ${S}/src/s/gnu-linux.h
+		   ${S}/src/s/gnu-linux.h
 
 	sed -i -e "s/-lungif/-lgif/g" configure* src/Makefile.in || die
 }
 
 src_compile() {
+	SANDBOX_ON=0
 
 	strip-flags
 
