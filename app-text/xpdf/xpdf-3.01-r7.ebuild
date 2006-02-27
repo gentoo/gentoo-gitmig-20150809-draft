@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r7.ebuild,v 1.13 2006/02/19 16:45:51 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r7.ebuild,v 1.14 2006/02/27 22:46:40 genstef Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="An X Viewer for PDF Files"
 HOMEPAGE="http://www.foolabs.com/xpdf/"
@@ -28,6 +28,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	use nodrm && epatch "${FILESDIR}"/${P}-poppler-nodrm.patch
+}
+
+src_compile() {
+	# broken, see bug 124179
+	replace-flags -Os -O2
+	emake || die "emake failed"
 }
 
 src_install() {
