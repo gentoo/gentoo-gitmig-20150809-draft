@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-20060206.ebuild,v 1.3 2006/02/10 16:58:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-20060206.ebuild,v 1.4 2006/02/27 21:13:49 chutzpah Exp $
 
 inherit eutils multilib
 
 DESCRIPTION="Easy to use tool for tagging and renaming MP3 and OGG/Vorbis files"
-HOMEPAGE="http://www.debain.org/software/cantus"
+HOMEPAGE="http://www.debain.org/software/cantus/"
 
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
