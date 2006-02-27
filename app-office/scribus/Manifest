@@ -1,4 +1,7 @@
-MD5 1776e36da3b10f86a55ed8b1026c73bc ChangeLog 8437
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e30ae02ca7274e41cc9f37c6dfda2e23 ChangeLog 8537
 MD5 ad6a8f28302ba5f2cd6602f15dcf8f0b files/digest-scribus-1.2.2.1 69
 MD5 5bb23dbcb9bbf3ed3c858a67aeb084f9 files/digest-scribus-1.2.3 67
 MD5 fc93f11e3086e449d9f0aae22dd57ea6 files/digest-scribus-1.2.4.1 69
@@ -12,8 +15,15 @@ MD5 52a4d4aea5809ba13ef7798f8270d1b1 files/scribus-1.3.2-fixes.diff 7168
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 MD5 22b9b515efb9df74f82a0d388b40ea32 scribus-1.2.2.1.ebuild 1043
 MD5 543928f3e03bb416a4cfa620e392411e scribus-1.2.3.ebuild 1044
-MD5 a96614bd32e9e3c142d5d33c182c599d scribus-1.2.4.1.ebuild 1046
+MD5 d1c440a27488c5e2d1bef447e6ab31f3 scribus-1.2.4.1.ebuild 1046
 MD5 13abbc9787cdb8e512bb496b2ff96f83 scribus-1.3.1-r1.ebuild 1229
 MD5 d6c11de9419f09836510b84720f65c43 scribus-1.3.1.ebuild 1101
 MD5 f65b8acbe6f92af6bba25a10b1e78c12 scribus-1.3.2-r1.ebuild 1171
 MD5 61058da19a29faa80ca1a8e143d9772f scribus-1.3.2.ebuild 1060
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEAzjYKRy60XGEcJIRAt3zAJ9eTSfojan0NRJ6NN0Cr2Su8jOBRwCePj2U
+1elS30De0oQz/lCpswurqLM=
+=G1qJ
+-----END PGP SIGNATURE-----
