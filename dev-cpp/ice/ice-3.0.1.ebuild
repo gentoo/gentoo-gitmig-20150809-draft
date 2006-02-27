@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ice-3.0.1.ebuild,v 1.1 2006/01/25 21:32:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ice-3.0.1.ebuild,v 1.2 2006/02/27 20:35:23 swegener Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/expat-1.9
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	built_with_use db nocxx && die "DB must be compiled with C++ support!"
+	built_with_use sys-libs/db nocxx && die "DB must be compiled with C++ support!"
 }
 
 src_unpack() {
