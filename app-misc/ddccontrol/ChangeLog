@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/ddccontrol
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.7 2006/02/20 09:03:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.8 2006/02/27 00:17:01 robbat2 Exp $
+
+*ddccontrol-0.3-r2 (27 Feb 2006)
+
+  27 Feb 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/ddccontrol-0.3-fix-libpanelapplet-dep.patch,
+  +files/ddccontrol-0.3-u64-conflicting-types.patch,
+  +ddccontrol-0.3-r2.ebuild:
+  Bug #124093 and #123581, patches for new libpci and gnome-2.12 from upstream
+  dev.
 
 *ddccontrol-0.3-r1 (20 Feb 2006)
 
