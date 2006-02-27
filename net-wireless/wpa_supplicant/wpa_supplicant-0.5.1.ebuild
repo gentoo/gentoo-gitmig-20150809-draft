@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.1.ebuild,v 1.2 2006/02/06 13:45:56 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.1.ebuild,v 1.3 2006/02/27 21:49:53 brix Exp $
 
 inherit eutils toolchain-funcs
 
@@ -78,8 +78,8 @@ src_unpack() {
 
 	if use madwifi; then
 		# Add include path for madwifi-driver headers
-		echo "CFLAGS += -I/usr/include/madwifi" >> ${CONFIG}
-		echo "CONFIG_DRIVER_MADWIFI=y"          >> ${CONFIG}
+		echo "CFLAGS += -I${ROOT}/usr/include/madwifi" >> ${CONFIG}
+		echo "CONFIG_DRIVER_MADWIFI=y"                 >> ${CONFIG}
 	fi
 }
 
