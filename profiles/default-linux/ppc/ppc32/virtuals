@@ -1,9 +1,8 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/virtuals,v 1.1 2006/02/22 10:44:12 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/virtuals,v 1.2 2006/02/27 08:18:50 lu_zero Exp $
 
 virtual/bootloader			sys-boot/yaboot
 virtual/jdk				dev-java/ibm-jdk-bin
 virtual/jre				dev-java/ibm-jre-bin
-virtual/ghc				dev-lang/ghc
 virtual/ooo				app-office/openoffice
