@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.50 2006/01/01 01:14:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.51 2006/02/27 14:19:22 caleb Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -38,7 +38,7 @@
 
 inherit eutils toolchain-funcs
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install econf emake einstall
+EXPORT_FUNCTIONS src_unpack src_compile src_install
 
 HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=${PN}"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
