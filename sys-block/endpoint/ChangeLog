@@ -1,0 +1,11 @@
+# ChangeLog for sys-block/endpoint
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/endpoint/ChangeLog,v 1.1 2006/02/27 09:07:07 robbat2 Exp $
+
+*endpoint-0.1.0 (27 Feb 2006)
+
+  27 Feb 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/endpoint-0.1.0-errormessages.patch, +metadata.xml,
+  +endpoint-0.1.0.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
