@@ -1,4 +1,4 @@
-MD5 ff055ad8143d7c4e0dad4bdec6eb55bb ChangeLog 32940
+MD5 22a8062343594a1d8ad8f61de7b8cc36 ChangeLog 33082
 MD5 cc5c84d3a0837007b8af4a1f2e657872 files/1.03-r14/auth-after-tls-only.patch 2151
 MD5 3eb989291a872a5ff2f5d40d6eba92d8 files/1.03-r14/maildir-quota-fix.patch 547
 MD5 b8f5d6adfb941c184715695cc58a5c72 files/1.03-r14/nullenvsender-recipcount.tls.patch 1616
