@@ -1,46 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 288a43abb406b4fb75f47c9fb77639b9 ChangeLog 13756
-RMD160 c8045c370c633be5731cc296da39f9e6511e50a4 ChangeLog 13756
-SHA256 61055056aaafa06ad89eff034bb9580e69c83811488ac64c6a6d84cc6378af1a ChangeLog 13756
+MD5 bab4fa24d5f965e46fcab4a63a250a01 ChangeLog 13867
 MD5 04125f54e4be33fd55348f69c38e0942 fetchmail-6.2.5.2-r1.ebuild 3051
-RMD160 fc375fe31f53511a354700edfbd816c6c6723c30 fetchmail-6.2.5.2-r1.ebuild 3051
-SHA256 0742fa2ea2607ef90c5d00fc93ecd1b45bc439ef90578b74c28deb53bed7d594 fetchmail-6.2.5.2-r1.ebuild 3051
-MD5 a8e10f9ee4049f1284452d5c74e3ba63 fetchmail-6.3.2.ebuild 2418
-RMD160 b653d909328d66df9bc10e96c0157e0dedc584c8 fetchmail-6.3.2.ebuild 2418
-SHA256 843d693b0cacf3916213d36a948721856d453e2ca793319323f1baff171b9684 fetchmail-6.3.2.ebuild 2418
+MD5 58a8d0602c41e8fdd6a73d4a2f2684ed fetchmail-6.3.2.ebuild 2417
 MD5 29d376a1042aeeeba94e911a943d5a7f files/conf.d-fetchmail 347
-RMD160 5a042695f6849653d32b17a6852025d1d695770a files/conf.d-fetchmail 347
-SHA256 8ba3e51b5a51b42daf8cfa2183c938afb04fd6a9cc941e1adb9faa10aff677bf files/conf.d-fetchmail 347
 MD5 c74bd41e6321522be59c6c475ce005f3 files/digest-fetchmail-6.2.5.2-r1 204
-RMD160 9ba569e09ec019202d30e68370ea71b9726b088a files/digest-fetchmail-6.2.5.2-r1 204
-SHA256 daaa486d4e911b7d7faccbb85cc6aed32282180a6f352cb6d2e4aa57783d276c files/digest-fetchmail-6.2.5.2-r1 204
 MD5 0447ecc3ec838faaeb51499d794c997e files/digest-fetchmail-6.3.2 69
-RMD160 3b379954f5a6a1cf72425a355de10d609c5ef3ae files/digest-fetchmail-6.3.2 69
-SHA256 cbf4560cc00d950ba3abfd0008ef2594473384a8cc1729aa047087bb7e978e90 files/digest-fetchmail-6.3.2 69
 MD5 44ab8af6373e139c7c4b8b8df77b0658 files/fetchmail 591
-RMD160 a24c5d093db4e8212ec7307dc070dc35a8da144b files/fetchmail 591
-SHA256 0de1c32b1a94755476cd81ba2c846adefb6680414d5e865a85743a1ff091f53f files/fetchmail 591
 MD5 cd9176a56e402a922bcf53d3ccf15e11 files/fetchmail-6.2.5-broken-headers.patch 288
-RMD160 1e5237c2cd24223ec4b98b2f67c5780d2026a559 files/fetchmail-6.2.5-broken-headers.patch 288
-SHA256 a72666259b30fed72a5c63519bfa0c888d14570c14c227c2418a2100cf08d326 files/fetchmail-6.2.5-broken-headers.patch 288
 MD5 bc67e24e50b2607de8ed8bbfe8c475ea files/fetchmail-6.2.5-gentoo.patch 1878
-RMD160 2ecfdea7a96694c3cae756e745537ef888e1ab0a files/fetchmail-6.2.5-gentoo.patch 1878
-SHA256 c64b3bc9b5a6982cee7b66f5a2940ee93fd3e9355f7051e58700e01d1c720295 files/fetchmail-6.2.5-gentoo.patch 1878
 MD5 9e74bd5507acf5a39559d76646bac254 files/fetchmail-6.2.5-kerberos.patch 1175
-RMD160 02a0d8829c1295e2d0a9c6e5fd518ba7cdf004e8 files/fetchmail-6.2.5-kerberos.patch 1175
-SHA256 050b320fb4d732c60d0a67a65aca0545007bd6152c6e19f691a08a4ce7dabef9 files/fetchmail-6.2.5-kerberos.patch 1175
 MD5 9fdac9fcc5797bfb643d850abe200105 files/fetchmail-6.2.5-mit-krb5-1.4.patch 406
-RMD160 2293f4b3bf2bc7795bc4bcb1d3a0a928bdd507ac files/fetchmail-6.2.5-mit-krb5-1.4.patch 406
-SHA256 ea822e17caf47dcbfc6f22d998717d0a01b9256037966221482397a752ac602b files/fetchmail-6.2.5-mit-krb5-1.4.patch 406
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
-SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEAKVTQlM6RnzZP+IRAuaCAJ9ovZHSLpUt44Sz5/RJa+Om71GI2gCgjvg5
-M34YJkSA6l+ua/Y4uHRBIBs=
-=CTAC
------END PGP SIGNATURE-----
