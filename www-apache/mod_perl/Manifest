@@ -1,4 +1,4 @@
-MD5 dacebec70fb4162f36292a19a2c6639c ChangeLog 11870
+MD5 bec7aef2939fd5428cfd333f8800ca63 ChangeLog 11962
 MD5 69c875b495ad39b70b13342cf7381ca4 files/1.29/75_mod_perl.conf 114
 MD5 4dcf07748f65bc0682e4d739ec14535d files/2.0.1/75_mod_perl.conf 1527
 MD5 39bbf08146125b9be7559d5c2d16b400 files/2.0.1/apache2-mod_perl-startup.pl 478
@@ -26,5 +26,5 @@ MD5 6ec74b6d66f58f57f7ba5e9536162150 mod_perl-1.29.ebuild 1865
 MD5 649bc1ee2ad5420453053010dcc141cb mod_perl-1.99.11.ebuild 3796
 MD5 9923645f9ba0b7d7efcefa76f182d405 mod_perl-1.99.16.ebuild 3811
 MD5 a960dceefeacaaef755e148535304195 mod_perl-2.0.1-r1.ebuild 4833
-MD5 bf1e4e96e1c02542dbc9138422f43fa5 mod_perl-2.0.1-r2.ebuild 5297
+MD5 f0c4c784ba4eb81d02136cdf683b871e mod_perl-2.0.1-r2.ebuild 5294
 MD5 ee239a68ee564c063cc41bfee831f69a mod_perl-2.0.2.ebuild 5309
