@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.12.ebuild,v 1.12 2006/02/19 22:31:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.12.ebuild,v 1.13 2006/02/27 20:39:08 swegener Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -76,7 +76,7 @@ src_compile() {
 		export CHOST=$(get_abi_CHOST)
 		[[ ${iscross} == 0 ]] && export CBUILD=${CHOST}
 		# Needed for older broken portage versions (bug #109036)
-		portageq has_version "${ROOT}" '<portage-2.0.51.22' && \
+		portageq has_version "${ROOT}" '<sys-apps/portage-2.0.51.22' && \
 			unset EXTRA_ECONF
 
 		cd ${S}-${ABI}
