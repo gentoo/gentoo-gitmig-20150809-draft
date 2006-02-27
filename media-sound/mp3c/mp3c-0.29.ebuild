@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.29.ebuild,v 1.8 2005/12/26 15:02:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.29.ebuild,v 1.9 2006/02/27 21:30:18 chutzpah Exp $
 
 IUSE="vorbis"
 
 DESCRIPTION="console based mp3 ripper, with cddb support"
-HOMEPAGE="http://mp3c.wspse.de/WSPse/Linux-MP3c.php3?lang=en"
+HOMEPAGE="http://wspse.de/WSPse/Linux-MP3c.php3"
 SRC_URI="ftp://excelsior.kullen.rwth-aachen.de/pub/linux/wspse/${P}.tar.gz"
 
 DEPEND="media-sound/lame
