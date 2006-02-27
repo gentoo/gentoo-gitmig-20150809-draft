@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a9d3f482cbe87c1d14ac37d449ed7aee ChangeLog 5210
-RMD160 25828e1c644536ff0921aad47fe18cee387f35f5 ChangeLog 5210
-SHA256 904e3c3a4b1d198f9ea83b5f12bbc8eaa6732ab6fbb5816e4b75b2bf824fcfcc ChangeLog 5210
+MD5 dac6b2933d28674ddd8a81fd4e5d7078 ChangeLog 5336
+RMD160 467bc416839653719ed15899af5d623face9da8f ChangeLog 5336
+SHA256 93c55f57dd3fa0a061a4fa8403943babaddbaa86ecc057d2a8f457dd53c80335 ChangeLog 5336
 MD5 59ac94a6db4621c0ebd90d8b8fe8d9c0 files/digest-vorbis-tools-1.0-r2 68
 RMD160 b8ad82163df70280f4fb8127379d86363eb698ad files/digest-vorbis-tools-1.0-r2 68
 SHA256 2738406b3dd946a4c026a900f5945d6eeebb71cb17e2b573ae4111c654f6c103 files/digest-vorbis-tools-1.0-r2 68
@@ -28,9 +25,9 @@ SHA256 5ab00710d822d203a1a38e1b6a9754137de4fe2cf5c4e79470419ed3f3927450 metadata
 MD5 a73db00f1c3bc8ab60df4554fd605bfa vorbis-tools-1.0-r2.ebuild 871
 RMD160 b1ebcb35881ef32adb4c2fa1c1450ce128e2c632 vorbis-tools-1.0-r2.ebuild 871
 SHA256 55180ebdb1534504725ccb3f7d45ce8a8c43c2b0f16f95eb7e979b9d93afcdd2 vorbis-tools-1.0-r2.ebuild 871
-MD5 7ea91b7ace733c0e460f96bed6a9bfe4 vorbis-tools-1.0.1-r1.ebuild 1379
-RMD160 467395df12ea3bd952a2c22f5675347dcc40810c vorbis-tools-1.0.1-r1.ebuild 1379
-SHA256 a09a39d64df5f46e4472fb87b9fc0a92a2e2e820219eea60ff7bdb7c8a3a8ff2 vorbis-tools-1.0.1-r1.ebuild 1379
+MD5 8f8239c6e2fdf1de3c44df27a184dc72 vorbis-tools-1.0.1-r1.ebuild 1385
+RMD160 8b439b9b5506496016313fdd0fa19eca45db39ac vorbis-tools-1.0.1-r1.ebuild 1385
+SHA256 7799528acd3c3e2e7076456073f2ce3a7097b35873c969644cf16ab407238da2 vorbis-tools-1.0.1-r1.ebuild 1385
 MD5 08f7faecc3e956ee8567026b16977ce3 vorbis-tools-1.0.1.ebuild 1300
 RMD160 6e9c295e4eb7203665e5c97b542b493e78c4bb72 vorbis-tools-1.0.1.ebuild 1300
 SHA256 38a592773e514455241b2fc7a6c95ce33c95c872551ce795716798f2c1f80f5e vorbis-tools-1.0.1.ebuild 1300
@@ -40,10 +37,3 @@ SHA256 b40612b4dd2091f10935e719a5cb9a983b1219980264749173030682d1f4b5b8 vorbis-t
 MD5 2e2513113b32c5e3bbe336e25533bde2 vorbis-tools-1.1.1.ebuild 1274
 RMD160 0067633e7fbeeed28e18c6b950f9d801122033db vorbis-tools-1.1.1.ebuild 1274
 SHA256 6c641649f1db85db95ce2c55c91bf4ae956ea39d22833d03a60d03050ea89dd3 vorbis-tools-1.1.1.ebuild 1274
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5MMbAiZjviIA2XgRAgeXAJ9vbj/hdlwLeWQGafk3fkCbz+CiKgCg3rbe
-mQST8RK6l+MDXnYGhiAAjRI=
-=REIN
------END PGP SIGNATURE-----
