@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/brainfuck-syntax
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/brainfuck-syntax/ChangeLog,v 1.7 2005/09/10 06:33:09 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/brainfuck-syntax/ChangeLog,v 1.8 2006/02/27 17:31:47 chutzpah Exp $
+
+  27 Feb 2006; Patrick McLean <chutzpah@gentoo.org>
+  brainfuck-syntax-1.0.1.ebuild:
+  Stable on amd64.
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   brainfuck-syntax-1.0.1.ebuild:
