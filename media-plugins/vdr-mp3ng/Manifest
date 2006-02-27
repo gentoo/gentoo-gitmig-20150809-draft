@@ -2,18 +2,33 @@
 Hash: SHA1
 
 MD5 aa874dcc9fa2a734ef764aa912dbc5d6 ChangeLog 650
+RMD160 c615e5837aac3226d05f1ff753543737537f4edc ChangeLog 650
+SHA256 e00f4d384c8ede5868c2820287d135caedae1ceeeaf09647ddf4181f433f7b4b ChangeLog 650
 MD5 46b03067cc8c9cd090efa8917a88a922 files/confd 1771
+RMD160 a0948b604095eee995965e448dbe92d1936a69b7 files/confd 1771
+SHA256 f70818c4885927c53dc6aeb65ebd164f22cf73964065dcca65948fb0a130d07a files/confd 1771
 MD5 a9eb9beb21097a63ccc0b0adccb47115 files/digest-vdr-mp3ng-0.9.13_pre3 154
+RMD160 7d0d60333d4ceaf992dc57fceb1fde36d7d35e5c files/digest-vdr-mp3ng-0.9.13_pre3 154
+SHA256 2df06230cb44282ebb271bc23583430097c64d31e9bdb917196fc5e2cf38cf25 files/digest-vdr-mp3ng-0.9.13_pre3 154
 MD5 64850f83317e8aab4bfa1e9f88eddeeb files/mp3ngsources 251
+RMD160 6507ffdb9ac9e8c236625a72f2e0eb1d28c2bbc5 files/mp3ngsources 251
+SHA256 2d25c96bc169d24d1e52395eac306a7485a8c80cf9bfac0b0eda9c440b0d30b0 files/mp3ngsources 251
 MD5 aa7b32f894ebbeb60b324427712da7bd files/vdr-mp3ng-0.9.13_pre3-1.3.37.diff 1064
+RMD160 6aeeb7018b473761ab47a7b71008e0d28b7d9a3d files/vdr-mp3ng-0.9.13_pre3-1.3.37.diff 1064
+SHA256 ec73f3f4e4d3e458c682c4cf27ac0485a6d42ef005f3ab3f07b783189f5d0244 files/vdr-mp3ng-0.9.13_pre3-1.3.37.diff 1064
 MD5 c2e80e832f8316d741e9a0f9fab97c4f files/vdr-mp3ng-0.9.13_pre3-gentoo.diff 1313
+RMD160 f9d839082ca30ff6b782e44281261c6483db3fee files/vdr-mp3ng-0.9.13_pre3-gentoo.diff 1313
+SHA256 766a0bbdffab942a4665d9e662c5bdcee33c5a587fe6f037da5e4ae9c5a4873c files/vdr-mp3ng-0.9.13_pre3-gentoo.diff 1313
 MD5 6a8a6784a889090822eb1f33ae8552d0 metadata.xml 479
-MD5 fa786171d2e717301398652768fd2ac3 vdr-mp3ng-0.9.13_pre3.ebuild 1585
+RMD160 59a7b853a80db121c17ad25e44b8688a1745b0f8 metadata.xml 479
+SHA256 511f84f516b19e091aee3c3c67c9d9aef45613dd0c080ad35e74c0a34a0438e4 metadata.xml 479
+MD5 ad9e88fccbdfc85cccfe3663f41fcec7 vdr-mp3ng-0.9.13_pre3.ebuild 1587
+RMD160 270f2b166ef0cd068cf77e123446a6fca9fc91c1 vdr-mp3ng-0.9.13_pre3.ebuild 1587
+SHA256 9c0fb6f72fcd76a06bec5f56d6019dd96f565aab1b785840dd82c3a8be3b7c14 vdr-mp3ng-0.9.13_pre3.ebuild 1587
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-Comment: no further Information
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD5Okxdn07HTTCgIoRArDmAJ9DXW/jomBOXoDhTDsUjhVHsOD2wgCeJbwm
-fTAG4k5XAgNelQ/1S3pRcrw=
-=f7NF
+iD8DBQFEA2MbI1lqEGTUzyQRAhTLAJ0bAgKaOGiZUP6MUOfR902oOUh1gQCgl89C
+0Uh+ZkKyy0swpRj5FVo+ZtE=
+=2iV7
 -----END PGP SIGNATURE-----
