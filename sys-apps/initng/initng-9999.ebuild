@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-9999.ebuild,v 1.7 2006/02/25 05:12:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-9999.ebuild,v 1.8 2006/02/27 00:47:53 vapier Exp $
 
 ESVN_REPO_URI="http://svn.initng.thinktux.net/initng/trunk"
 ESVN_PROJECT="initng"
@@ -19,7 +19,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	subversion_src_unpack
-	./autogen.sh || die "autogen failed"
+	emake -f Makefile.cvs || die "autogen failed"
 }
 
 src_compile() {
