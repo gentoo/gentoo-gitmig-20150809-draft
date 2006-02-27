@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.0-r2.ebuild,v 1.9 2006/01/20 19:52:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.0-r2.ebuild,v 1.10 2006/02/27 14:59:27 zaheerm Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -27,7 +27,8 @@ RDEPEND=">=dev-libs/glib-2.6.3
 		>=media-libs/xine-lib-1.0.1
 		>=gnome-base/gconf-2 )
 	!xine? (
-		|| ( =media-libs/gstreamer-0.8.10 =media-libs/gstreamer-0.8.11 )
+		|| ( =media-libs/gstreamer-0.8.10 =media-libs/gstreamer-0.8.11
+		=media-libs/gstreamer-0.8.12 )
 		=media-libs/gst-plugins-0.8*
 		=media-plugins/gst-plugins-gnomevfs-0.8*
 		=media-plugins/gst-plugins-pango-0.8*
@@ -50,7 +51,8 @@ RDEPEND=">=dev-libs/glib-2.6.3
 			=media-plugins/gst-plugins-a52dec-0.8*
 			=media-plugins/gst-plugins-dvdread-0.8*
 			=media-plugins/gst-plugins-mpeg2dec-0.8*
-			=media-plugins/gst-plugins-dvdnav-0.8.11 ) )
+			|| ( =media-plugins/gst-plugins-dvdnav-0.8.11
+			=media-plugins/gst-plugins-dvdnav-0.8.12 ) ) )
 		win32codecs? ( =media-plugins/gst-plugins-pitfdll-0.8* ) )
 	nsplugin? (
 		>=net-libs/gecko-sdk-1.7
