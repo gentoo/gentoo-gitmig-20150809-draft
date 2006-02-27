@@ -1,4 +1,4 @@
-MD5 9a2b9865545ca62b671da37639ae3206 ChangeLog 6899
+MD5 316a6e34b95e635073f56c86bb8b2a7b ChangeLog 6991
 MD5 aa690ff148a4b4bbb5a59276fbb583a8 files/digest-libpcap-0.8.3-r1 65
 MD5 be632c8eb1c0f14e48313ceb1bc3917d files/digest-libpcap-0.9.3 65
 MD5 ade19e417c8377e4ebbafd8ccbb77f69 files/digest-libpcap-0.9.4 65
@@ -6,5 +6,5 @@ MD5 29710cca211a266690d649eff1ffe287 files/libpcap-0.8.1-fPIC.patch 298
 MD5 daf575fe650740e0e4013da7b86f2b50 files/libpcap-0.9.3-whitespace.diff 679
 MD5 2f0cfe611a39b442ed7e9f3427f3c2c8 libpcap-0.8.3-r1.ebuild 1477
 MD5 81739741e24d96e839c58274b7eade90 libpcap-0.9.3.ebuild 1514
-MD5 6da1dac0d2782c3ae32722e2955e6444 libpcap-0.9.4.ebuild 1533
+MD5 4d324eb9a276e4fe7b8d7f62266cfe12 libpcap-0.9.4.ebuild 1534
 MD5 50057505c6cef15415ae8f8ca7378d82 metadata.xml 261
