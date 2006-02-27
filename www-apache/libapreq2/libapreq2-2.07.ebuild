@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.07.ebuild,v 1.1 2006/02/26 16:31:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.07.ebuild,v 1.2 2006/02/27 15:43:21 mcummings Exp $
 
 inherit perl-module
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 DEPEND="${DEPEND}
 	>=dev-perl/ExtUtils-XSBuilder-0.23
 	>=net-www/apache-2.0.48
-	doc? ( app-doc/doxygen )
+	app-doc/doxygen 
 	>=www-apache/mod_perl-2"
 
 mydoc="TODO README CHANGES INSTALL"
@@ -24,7 +24,6 @@ myconf="--with-apache2-apxs=/usr/sbin/apxs2"
 SRC_TEST="skip"
 
 src_unpack() {
-	cd ${S}
 	unpack ${A}
 	sed -i -e "s/PERL \$PERL_OPTS/PERL/" ${S}/acinclude.m4
 	sed -i -e "s/PERL \$PERL_OPTS/PERL/" ${S}/aclocal.m4
