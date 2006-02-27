@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.11.ebuild,v 1.11 2006/02/18 20:43:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.11.ebuild,v 1.12 2006/02/27 14:14:04 zaheerm Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins gnome2 eutils flag-o-matic libtool
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="esd alsa oss"
 
-RDEPEND=">=media-libs/gstreamer-0.8.11
+RDEPEND="|| ( =media-libs/gstreamer-0.8.11 =media-libs/gstreamer-0.8.12)
 	>=gnome-base/gconf-2
 	!alpha? ( !arm? ( !ia64? ( !mips? ( !ppc64? (
 		>=dev-libs/liboil-0.3.0 ) ) ) ) )"
@@ -22,9 +22,9 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11.5
 	>=dev-util/pkgconfig-0.9"
 
-PDEPEND="oss? ( >=media-plugins/gst-plugins-oss-${PV} )
-	alsa? ( >=media-plugins/gst-plugins-alsa-${PV} )
-	esd? ( >=media-plugins/gst-plugins-esd-${PV} )"
+PDEPEND="oss? ( =media-plugins/gst-plugins-oss-0.8* )
+	alsa? ( =media-plugins/gst-plugins-alsa-0.8* )
+	esd? ( =media-plugins/gst-plugins-esd-0.8* )"
 
 # we need x for the x overlay to get linked
 GST_PLUGINS_BUILD="x xshm"
