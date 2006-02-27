@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.0.10.ebuild,v 1.2 2006/02/26 00:01:50 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.0.10.ebuild,v 1.3 2006/02/27 15:07:11 corsair Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.vanheusden.com/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ppc64 x86"
 IUSE="ssl"
 
 DEPEND=">=sys-libs/ncurses-5"
