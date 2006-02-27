@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/p3nfs
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.11 2005/12/25 14:55:42 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.12 2006/02/27 23:02:48 mrness Exp $
+
+*p3nfs-5.19 (27 Feb 2006)
+
+  27 Feb 2006; Alin Nastac <mrness@gentoo.org> +p3nfs-5.19.ebuild:
+  Version bump.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> p3nfs-5.18-r1.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.
