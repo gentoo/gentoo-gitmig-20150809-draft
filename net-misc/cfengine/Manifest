@@ -1,8 +1,11 @@
-MD5 797bb4b66b4ea658782289c74383a6a7 ChangeLog 10368
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 36c7fe6ffec74c3c94895bfdf691510b ChangeLog 10467
 MD5 55b5cd09421554e49815035eda48164c cfengine-2.1.15-r1.ebuild 2250
 MD5 1459e55142a0b39e459109cc797e8ab2 cfengine-2.1.16.ebuild 2248
 MD5 ce1941ec8a3dc65efbf025fdb09a38c1 cfengine-2.1.17.ebuild 2243
-MD5 6df1e2bab6be58b876bdc327263d35d0 cfengine-2.1.18.ebuild 2250
+MD5 7bde7c700728b1865b53c29decb63e54 cfengine-2.1.18.ebuild 2249
 MD5 f4fe82c710efac73c0895ad268c54196 files/cfportage.README 2294
 MD5 f1a9344587920c108d487766f61e90cf files/cfservd.rc6 259
 MD5 1781d04ce20330f0e9b266753eff4c91 files/digest-cfengine-2.1.15-r1 68
@@ -11,3 +14,10 @@ MD5 e663ecd3739926ae43f89577216d85d7 files/digest-cfengine-2.1.17 68
 MD5 5968b30ead2b68a71df032bc34b04b22 files/digest-cfengine-2.1.18 68
 MD5 ade9e66709bdb04df3f0beba72f3a008 files/module-cfportage.tbz2 3099
 MD5 78ca953228396511baf3f7ccef97fe27 metadata.xml 984
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEAzkeKRy60XGEcJIRAtUsAJwIzzVH/wUYAsz8ivgANi7HuGvthwCglySv
+ZsjnpHZxt5H/i/J3RAH1v/g=
+=iiMG
+-----END PGP SIGNATURE-----
