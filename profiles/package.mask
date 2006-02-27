@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5042 2006/02/27 14:42:30 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5043 2006/02/27 17:12:16 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,6 +24,10 @@
 # Dead upstream, breaks with recent mono versions
 # No maintainer
 media-video/mvideo
+
+# Alec Warner <antarus@gentoo.org> (27 Feb 2006)
+# Maintainer did not respond and dead upstrea; bug # 20201
+x11-misc/bbapm
 
 # Mark Loeser <halcy0n@gentoo.org> (25 Feb 2006)
 # No maintainer and dead upstream; bug #122336
