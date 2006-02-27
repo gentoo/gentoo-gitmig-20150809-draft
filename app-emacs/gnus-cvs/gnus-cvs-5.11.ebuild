@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.11.ebuild,v 1.8 2005/05/03 10:08:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.11.ebuild,v 1.9 2006/02/27 19:50:43 mkennedy Exp $
 
 ECVS_SERVER="cvs.gnus.org:/usr/local/cvsroot"
 ECVS_MODULE="gnus"
@@ -20,8 +20,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
 
-# Never use the sandbox, it causes Emacs to segfault on startup
-SANDBOX_DISABLED="1"
 RESTRICT="$RESTRICT nostrip"
 
 DEPEND="virtual/emacs

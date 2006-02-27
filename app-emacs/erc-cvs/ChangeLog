@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/erc-cvs
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc-cvs/ChangeLog,v 1.6 2005/01/01 13:45:07 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc-cvs/ChangeLog,v 1.7 2006/02/27 19:48:27 mkennedy Exp $
+
+  27 Feb 2006; Matthew Kennedy <mkennedy@gentoo.org> erc-cvs-4.1.ebuild:
+  Remove SANDBOX_DISABLED=1 since it is not a problem with Emacs Lisp
+  extensions; Partially resolves Bug #76141.
 
   03 Sep 2004; Tom Martin <slarti@gentoo.org> erc-cvs-4.1.ebuild:
   Marked ~amd64, resolving bug 58408. Thanks to Gabriel Ebner
