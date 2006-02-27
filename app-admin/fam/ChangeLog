@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.44 2006/02/25 23:12:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.45 2006/02/27 00:22:33 jer Exp $
+
+  27 Feb 2006; Jeroen Roovers <jer@gentoo.org> fam-2.7.0-r4.ebuild:
+  Stable on hppa (bug #123829).
 
   25 Feb 2006; Joshua Kinard <kumba@gentoo.org> fam-2.7.0-r4.ebuild:
   Marked stable on mips.
