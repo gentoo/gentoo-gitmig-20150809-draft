@@ -1,82 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8b66d242cdd65066bf0e11a417730bfd ChangeLog 18636
-RMD160 bd3578c5b478e8a240a9f86451444983f3d64a3d ChangeLog 18636
-SHA256 c0726d8efb858cd2e08e9152f85c8777855a3daf9ddad16ffc4351c746b1667b ChangeLog 18636
 MD5 da4fb7c75a6d011f4d7e0d337d449129 ffmpeg-0.4.9_p20050226-r3.ebuild 4388
-RMD160 bb6e81aff569ad13e7bf13aa09f76602e4f2a590 ffmpeg-0.4.9_p20050226-r3.ebuild 4388
-SHA256 5135d135bcdd29a9e5f4dcd2e1d4b75bc851a465de513531537af6bf4684a7a5 ffmpeg-0.4.9_p20050226-r3.ebuild 4388
 MD5 ff615b7d4ca2c8355c1d0a358271e2d8 ffmpeg-0.4.9_p20050226-r5.ebuild 4543
-RMD160 d153ce0b9da74209ec9f0324e258dffdaf5785b8 ffmpeg-0.4.9_p20050226-r5.ebuild 4543
-SHA256 04a327cf69d6a1bdc381b6515f509b37733354385caadbaea0208fd673e24698 ffmpeg-0.4.9_p20050226-r5.ebuild 4543
 MD5 e4e188b8783b45bbc9c454b9f4de3aad ffmpeg-0.4.9_p20050906.ebuild 4781
-RMD160 5aa902e61f0ea1db96e65de8e97a038d41839a61 ffmpeg-0.4.9_p20050906.ebuild 4781
-SHA256 2892dbbab75019068039d6e90916687d408f99e430828eefc76c98d944bd6095 ffmpeg-0.4.9_p20050906.ebuild 4781
 MD5 faab330a828982afbde572059cedc47f ffmpeg-0.4.9_p20051120.ebuild 4707
-RMD160 780c136f2421f22a874dbb389b9d0770922229e6 ffmpeg-0.4.9_p20051120.ebuild 4707
-SHA256 c0407f86a50fd884266d46a607e16d7917d65f0a87c9e7baee4718dc401b14a2 ffmpeg-0.4.9_p20051120.ebuild 4707
 MD5 a0bb2c92819f677e9a54da4e25610aaf ffmpeg-0.4.9_p20051216.ebuild 5657
-RMD160 5f63e67a19662dde24d487c879aa2a0e02ec1483 ffmpeg-0.4.9_p20051216.ebuild 5657
-SHA256 4eff2720f2eeed0ed8d0bce81f2a9ca5efcff9309eeeb352b1b9d600460b93d8 ffmpeg-0.4.9_p20051216.ebuild 5657
 MD5 003b0062185efcb0ea5a6115fa8a646a files/0.4.8-gcc3.4-magicF2W.patch 994
-RMD160 4192e2537d220d4b63c55bdea36ac7f5532d8a6a files/0.4.8-gcc3.4-magicF2W.patch 994
-SHA256 3d359f8483903dcc876be0ee4ff511d63a8cf57fade26d58f72e4a3ec0694226 files/0.4.8-gcc3.4-magicF2W.patch 994
 MD5 99176b97ac8dd94ffc1d23961cc54906 files/digest-ffmpeg-0.4.9_p20050226-r3 73
-RMD160 e14f7f51254a902bb6fe34a7949da49de95daa2e files/digest-ffmpeg-0.4.9_p20050226-r3 73
-SHA256 460237af1ea0f9de66f0b5648f27ae4e48d7fc2dcb0078a50738db5151a8c1c4 files/digest-ffmpeg-0.4.9_p20050226-r3 73
 MD5 99176b97ac8dd94ffc1d23961cc54906 files/digest-ffmpeg-0.4.9_p20050226-r5 73
-RMD160 e14f7f51254a902bb6fe34a7949da49de95daa2e files/digest-ffmpeg-0.4.9_p20050226-r5 73
-SHA256 460237af1ea0f9de66f0b5648f27ae4e48d7fc2dcb0078a50738db5151a8c1c4 files/digest-ffmpeg-0.4.9_p20050226-r5 73
 MD5 39cf7a98d0f59cfde5b82ab7fedf19d0 files/digest-ffmpeg-0.4.9_p20050906 73
-RMD160 cfa0a33966f1d3cec98f1f9a138e46bad84b4a59 files/digest-ffmpeg-0.4.9_p20050906 73
-SHA256 1a3efb79c9a1069492f640b27e3c1fd9dd57e09ad69bb04984c5cf571d78a7b4 files/digest-ffmpeg-0.4.9_p20050906 73
 MD5 e7fdab307678c48f460afd6a50358fd2 files/digest-ffmpeg-0.4.9_p20051120 76
-RMD160 26ceab1db8565cb3e01a9d0dfc477f9b5b3e9cda files/digest-ffmpeg-0.4.9_p20051120 76
-SHA256 33cdf4a536d64f29d47f5712a2bf9a63a6a07e87a69ae8b235168a838d1f375d files/digest-ffmpeg-0.4.9_p20051120 76
 MD5 901fef6a53861dbe2d583688478546ac files/digest-ffmpeg-0.4.9_p20051216 76
-RMD160 b2fa9ae9699ba46efeef82025bac9d493f8bf45f files/digest-ffmpeg-0.4.9_p20051216 76
-SHA256 61b82cac8ca3bda3af573eef3b528771d181495e46e8fab0f859d6e05394c05e files/digest-ffmpeg-0.4.9_p20051216 76
 MD5 20274823abfde904ae73478349585dd0 files/ffmpeg-0.4.9_p20050226-gcc4.patch 2319
-RMD160 e9b87f2fc0f1f1b1847df573f3098af331056a0b files/ffmpeg-0.4.9_p20050226-gcc4.patch 2319
-SHA256 ee18f6a837fd5724f08720b9785f0603f85db97b22120f33586b8a9811c5efef files/ffmpeg-0.4.9_p20050226-gcc4.patch 2319
 MD5 7ff9e08e701f8a8a860c09bd9259843f files/ffmpeg-0.4.9_p20050906-osx.patch 11103
-RMD160 b479f18da37fdb088abc85e63ef998186cb45bf8 files/ffmpeg-0.4.9_p20050906-osx.patch 11103
-SHA256 e687fd7008c401c54e31552b15b56a5590b85d7ac8b2c39b906acca82a09b5c8 files/ffmpeg-0.4.9_p20050906-osx.patch 11103
 MD5 e592f1aa79ce0d709ac4980404956e87 files/ffmpeg-a52.patch 1111
-RMD160 193d2d855f2c613531f1b880a194c5be55ccab5c files/ffmpeg-a52.patch 1111
-SHA256 350bdb742f2cf65ca1fcde2b3252887962c951071fa41e6550f207e4534b4071 files/ffmpeg-a52.patch 1111
 MD5 96c7f1f67e0299ad71b9c0fad55c3960 files/ffmpeg-configure.patch 585
-RMD160 dcabb17bd6eddc8dc5e329c17a53933cb076e55c files/ffmpeg-configure.patch 585
-SHA256 577aab4740f0d3569f41666915190c64de8cbde1faf27260ddba67f99bce0d2d files/ffmpeg-configure.patch 585
 MD5 b1cd277309faaaa03e3dafb3b89b2a09 files/ffmpeg-libdir-pic.patch 6027
-RMD160 f66a87d1ea3662c7ab0b9010e0f19af49638161a files/ffmpeg-libdir-pic.patch 6027
-SHA256 30b404aaf936f3ed6fe0a1f94d7f03982fef3524c94e4ca2b98d97133347ecc8 files/ffmpeg-libdir-pic.patch 6027
 MD5 1a8c0be3a5a5ba1d929b7773265943b7 files/ffmpeg-missing_links.patch 1199
-RMD160 c92d8269c9d60661c57185c2aa6a8544d3d56e40 files/ffmpeg-missing_links.patch 1199
-SHA256 99aefb6d85efae932c639e530fbfd5f634df780ef57f9a5bfdd734dc758762b8 files/ffmpeg-missing_links.patch 1199
 MD5 b4ecc62e882107f766cf621bfc6c7e20 files/ffmpeg-osx.patch 5940
-RMD160 2cc2716ee5cf953a5a701815d850aa9530d3154d files/ffmpeg-osx.patch 5940
-SHA256 d0048b2556bbcab2b60e1692b353a83ced6db31ce03bf2cdeccfe1615b02fb49 files/ffmpeg-osx.patch 5940
 MD5 f486e0b9d41c3d417a3b918189f2be9e files/ffmpeg-shared-gcc4.patch 1575
-RMD160 9a7c31deb50caa7f7a209a02eb750ce43a6bcc74 files/ffmpeg-shared-gcc4.patch 1575
-SHA256 d052657af1553f1daa81c59974799134d619694906abb4363d16c9b14ca75389 files/ffmpeg-shared-gcc4.patch 1575
 MD5 1b97a7c3bc63b61423f8837f11aaa9cd files/ffmpeg-soname-symlink.patch 4937
-RMD160 3a3c83eb3e4bab26d039cd12bba938cf1a3f4f3b files/ffmpeg-soname-symlink.patch 4937
-SHA256 0dc937f36d55e4c984dac967e1d0a4c261ebd6871f473dc2633a0a15332c5693 files/ffmpeg-soname-symlink.patch 4937
 MD5 02a1298f3a982efa3dc25f1746e3dccc files/ffmpeg-unknown-options.patch 414
-RMD160 46f7d8e81ab42368dabb6e29dec29a02d780055b files/ffmpeg-unknown-options.patch 414
-SHA256 eb6f32617a42a9f55408ac64afd62c938aadb40bcf72c060a24ef5c426b4981b files/ffmpeg-unknown-options.patch 414
 MD5 f0c54c934c78216a2bd0b157028a6f84 files/gentoo-ffmpeg001.patch 752
-RMD160 78820d5af06e0419b31ad4ab4d6526b237e9d80f files/gentoo-ffmpeg001.patch 752
-SHA256 65a9dcc2191708ec64a82616dad202d80465b30a696386ec30bd1b459d4a3d83 files/gentoo-ffmpeg001.patch 752
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
-SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8zKnAiZjviIA2XgRArKrAJ4z9sLb9okrQPNCtBTk9RFfmj7LDwCgp0EB
-pFbSb+OHU44cfe8bDPcXOAU=
-=8NFi
------END PGP SIGNATURE-----
