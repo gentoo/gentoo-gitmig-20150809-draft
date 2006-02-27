@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.43 2006/02/25 19:13:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.44 2006/02/27 15:18:05 corsair Exp $
+
+  27 Feb 2006; Markus Rothe <corsair@gentoo.org> slang-1.4.9-r2.ebuild:
+  Stable on ppc64
 
   25 Feb 2006; Alastair Tse <liquidx@gentoo.org>
   -files/slang-utf8-acs.patch, -files/slang-utf8-fix.patch,
