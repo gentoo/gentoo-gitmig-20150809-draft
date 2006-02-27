@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163.ebuild,v 1.1 2006/02/27 07:56:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163.ebuild,v 1.2 2006/02/27 08:26:13 cardoe Exp $
 
 inherit flag-o-matic eutils debug qt3
 
@@ -239,5 +239,8 @@ pkg_postinst() {
 	echo
 	einfo "To always have MythBackend running and available run the following:"
 	echo "rc-update add mythbackend default"
+	echo
+	ewarn "Your recordings folder must be owned by the user 'mythtv' now"
+	echo "chown -R mythtv /path/to/store"
 }
 
