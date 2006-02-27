@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.4b-r1.ebuild,v 1.1 2006/01/03 03:11:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.4b-r1.ebuild,v 1.2 2006/02/27 15:40:02 matsuu Exp $
 
 inherit wxwidgets eutils flag-o-matic
 
@@ -32,6 +32,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.2.3-gcc41.patch # bug 113754
+	epatch "${FILESDIR}"/${PN}-1.2.3-x86.patch # bug 121634
 }
 
 src_compile() {
