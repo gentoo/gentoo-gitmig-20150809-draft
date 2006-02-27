@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.21 2006/02/23 12:06:11 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.22 2006/02/27 15:00:42 corsair Exp $
+
+  27 Feb 2006; Markus Rothe <corsair@gentoo.org> avrdude-5.1.ebuild:
+  Stable on ppc64
 
   23 Feb 2006; Henrik Brix Andersen <brix@gentoo.org> avrdude-5.1.ebuild:
   Stable on x86.
