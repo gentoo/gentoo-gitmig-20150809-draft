@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 218da42f0071b909ce0bf13d18bf80d4 ChangeLog 928
+MD5 9b953265b16526dd35b0d6f18730f0d1 ChangeLog 1101
+RMD160 bcf03f806ee75420c39ea38f69672ff81439af51 ChangeLog 1101
+SHA256 8a439a20b8ad694f52e489ce9f87f08b94dfa2aa91e4d5a1644875a267614560 ChangeLog 1101
 MD5 b3bf46cfc6e40fe45c749f0763a92945 files/27_mod_proxy_html.conf 278
+RMD160 122e0a68236a6804d362ea8c4e3a0ed727b62d2b files/27_mod_proxy_html.conf 278
+SHA256 ae6ba7d69af43de56dbda62c74daeb0de385db3ff1b6136cf0d87d99e52177f4 files/27_mod_proxy_html.conf 278
 MD5 118f52447a3a4a4c177622f197bbd33c files/digest-mod_proxy_html-2.4.3 66
+RMD160 024457722352d998e0810dcfbb57d51c1aa6d2d8 files/digest-mod_proxy_html-2.4.3 66
+SHA256 a14c209369c394aef0b2d721438e5d362e93fd400e5173d2cfbc3ce2d85477bd files/digest-mod_proxy_html-2.4.3 66
 MD5 6f53194d99929642bf12a7225212082a files/digest-mod_proxy_html-2.5.1 69
+RMD160 639093ca7f43b8fb946db8bf0093475835056162 files/digest-mod_proxy_html-2.5.1 69
+SHA256 5b2f82ae53079f94fd6bfead073a727787336c5672f1dcc325c7239d0ffff690 files/digest-mod_proxy_html-2.5.1 69
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
-MD5 5f2de1e837f271c7f729e7324d17ef19 mod_proxy_html-2.4.3.ebuild 702
-MD5 73a87eb633ab6b19b35b8b3e12e2fd57 mod_proxy_html-2.5.1.ebuild 766
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnUt7QlM6RnzZP+IRAvfBAJ9TQ3/T6iLyvCi82R8DskH7Lc4LfgCfX3DI
-LCPpPoMLHViJrPE39n2m8Pg=
-=eLO6
------END PGP SIGNATURE-----
+RMD160 d11ce73e47adf4b3d91309ec6489fded2f4d4e0e metadata.xml 226
+SHA256 376a327f91f69eb96f0c1b05cc1481dd7017a0570f631a03b1f6d14d58215ca8 metadata.xml 226
+MD5 ae9a655ff73b832680afecf191f4c851 mod_proxy_html-2.4.3.ebuild 747
+RMD160 966e3fc8902097edd4eba79805e0a1308d75d0ab mod_proxy_html-2.4.3.ebuild 747
+SHA256 d269c9faf94bed4092daebef8570a128d61a15a7c8895dbba0c70d54ba197de3 mod_proxy_html-2.4.3.ebuild 747
+MD5 a493d422b819f045a851d93a7d98cf51 mod_proxy_html-2.5.1.ebuild 807
+RMD160 4a5b296b4d1c79642180a917f22ebc173c13f40d mod_proxy_html-2.5.1.ebuild 807
+SHA256 04256ec1a47dab872b55130dc1e48070c273eb3f603b05d02462fd82137b72f5 mod_proxy_html-2.5.1.ebuild 807

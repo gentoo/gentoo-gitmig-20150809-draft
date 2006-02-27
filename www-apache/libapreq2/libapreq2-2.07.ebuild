@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.07.ebuild,v 1.3 2006/02/27 15:46:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.07.ebuild,v 1.4 2006/02/27 17:43:05 mcummings Exp $
 
 inherit perl-module
 
-IUSE="doc"
+IUSE=""
 
 DESCRIPTION="An Apache Request Perl Module"
 SRC_URI="mirror://cpan/authors/id/J/JO/JOESUF/${P}.tar.gz"
