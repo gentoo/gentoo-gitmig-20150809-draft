@@ -1,14 +1,24 @@
-MD5 c27ebb0e1a693571b087d8aa52001cc6 ChangeLog 2585
-MD5 85096de16c2a05f92c5a5fb0e800a2bc metadata.xml 252
-MD5 2103e3e0d1cdc13f7af6228374708293 knock-0.3.ebuild 750
-MD5 fec1aa1a7ddf0051975d7d924c619733 knock-0.4.ebuild 852
-MD5 22af62a98456e25958a863a729a5aabf knock-0.3.1.ebuild 774
-MD5 db1a1ddfc5b11e340ff2157b084ddce2 knock-0.5.ebuild 863
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 70f770aef4c54cb428f44af4fb351de1 ChangeLog 2680
 MD5 6f594c8b1eb17d15a0ab9a73331598e3 files/digest-knock-0.3 60
 MD5 5671d78faf881e925fe931f94ee38357 files/digest-knock-0.3.1 62
+MD5 4897af6befb034599f6c6467b17e8e53 files/digest-knock-0.4 60
 MD5 e29910cfc320b854bf223b518e84016b files/digest-knock-0.5 60
+MD5 ac58083c3cf8cbe43867dc69a30cbeec files/knockd.conf.patch 676
+MD5 141b7202730b744d2e3f884d1c8e8eec files/knockd.confd 264
 MD5 ae09af5fe36f302c2b18a66ec789e6d4 files/knockd.initd 492
 MD5 56d82b74345f127c4af5b92580b2b465 files/nonblock.patch 617
-MD5 ac58083c3cf8cbe43867dc69a30cbeec files/knockd.conf.patch 676
-MD5 4897af6befb034599f6c6467b17e8e53 files/digest-knock-0.4 60
-MD5 141b7202730b744d2e3f884d1c8e8eec files/knockd.confd 264
+MD5 22af62a98456e25958a863a729a5aabf knock-0.3.1.ebuild 774
+MD5 2103e3e0d1cdc13f7af6228374708293 knock-0.3.ebuild 750
+MD5 fec1aa1a7ddf0051975d7d924c619733 knock-0.4.ebuild 852
+MD5 6c7f7b452f6ad8cd559cca76505cad5f knock-0.5.ebuild 866
+MD5 85096de16c2a05f92c5a5fb0e800a2bc metadata.xml 252
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEAz4lKRy60XGEcJIRAlKEAJ4yQLHX8Jh/pnlJF6sUZw/FdsKZMQCfVnXg
+r0Os9jXI1239WG4Tm7jfI0g=
+=I1nQ
+-----END PGP SIGNATURE-----
