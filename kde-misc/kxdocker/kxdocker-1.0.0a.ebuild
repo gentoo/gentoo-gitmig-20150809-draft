@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/kxdocker-1.0.0a.ebuild,v 1.1 2006/02/26 06:35:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/kxdocker-1.0.0a.ebuild,v 1.2 2006/02/27 20:29:40 swegener Exp $
 
 inherit kde
 
@@ -18,7 +18,7 @@ RDEPEND=">=kde-misc/kxdocker-resources-1.0.0"
 #	i18n? ( >=kde-misc/kxdocker-i18n-1.0.2 )"
 
 DEPEND="${RDEPEND}
-	arts? ( ~kde-base/arts )"
+	arts? ( kde-base/arts )"
 
 # List of needed plugins
 #kde-misc/kxdocker-arpmanager-1.0.0
