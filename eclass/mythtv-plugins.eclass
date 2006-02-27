@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.11 2006/02/12 10:16:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.12 2006/02/27 07:59:57 cardoe Exp $
 #
 # Author: Doug Goldstein <cardoe@gentoo.org>
 #
@@ -14,7 +14,7 @@ MYTHPLUGINS="mythbrowser mythcontrols mythdvd mythflix mythgallery mythgame myth
 MTVCONF=""
 S="${WORKDIR}/mythplugins-${PV}"
 
-RDEPEND="~media-tv/mythtv-${PV}"
+RDEPEND="=media-tv/mythtv-${PV}*"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
