@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail-qfilter
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/ChangeLog,v 1.11 2006/02/20 21:06:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/ChangeLog,v 1.12 2006/02/27 19:31:54 hansmi Exp $
+
+  27 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
+  qmail-qfilter-2.1.ebuild:
+  Fixed ebuild, bug 124085.
 
 *qmail-qfilter-2.1 (20 Feb 2006)
 
