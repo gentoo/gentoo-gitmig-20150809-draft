@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libifp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/ChangeLog,v 1.2 2006/02/06 04:02:54 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/ChangeLog,v 1.3 2006/02/27 15:32:08 chutzpah Exp $
+
+  27 Feb 2006; Patrick McLean <chutzpah@gentoo.org> libifp-1.0.0.2.ebuild:
+  Stable on amd64.
 
   06 Feb 2006; Patrick McLean <chutzpah@gentoo.org> libifp-1.0.0.2.ebuild:
   Fix dependency syntax (bug #121742).
