@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/bcm4400
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.15 2005/08/27 21:35:00 genstef Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.16 2006/02/27 23:49:19 genstef Exp $
+
+*bcm4400-3.0.14 (27 Feb 2006)
+
+  27 Feb 2006; Stefan Schweizer <genstef@gentoo.org> +bcm4400-3.0.14.ebuild:
+  Version bump thanks to Philip Kovacs <kovacsp3@comcast.net> in bug 124304
 
   27 Aug 2005; Stefan Schweizer <genstef@gentoo.org> +bcm4400-3.0.13.ebuild:
   version bump
