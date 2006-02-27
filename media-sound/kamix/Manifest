@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e6212cda45d2f6ec7828f13f92a6e31e ChangeLog 3025
+MD5 95e7d8f17a3ea9f129c0c7c9d93fbae2 ChangeLog 3110
 MD5 235e2f9a7ebc68ce021272095ef6f4cd files/digest-kamix-0.6.1 64
 MD5 bae98cc9535c5e35a42ece295c633016 files/digest-kamix-0.6.5 64
 MD5 4b0683945326590cad2f95339c098733 kamix-0.6.1.ebuild 571
-MD5 8be212ce1e5a0cf8511f919eb8918be9 kamix-0.6.5.ebuild 579
+MD5 c76ccb56967d3f969961030617abc019 kamix-0.6.5.ebuild 575
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD/wmXFdQwWVoAgN4RAushAKC9Xx48xGZJ6Zs/OBcExAk/yrhICACfRyag
-Fnp79I1XSRLvrk0+/rTRWQ8=
-=MEJy
------END PGP SIGNATURE-----
