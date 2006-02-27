@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.8.7-r1.ebuild,v 1.8 2006/01/29 21:46:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.8.7-r1.ebuild,v 1.9 2006/02/27 09:51:11 zaheerm Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,8 +21,11 @@ IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
-DEPEND="|| ( =media-libs/gstreamer-0.8.10 =media-libs/gstreamer-0.8.11 )
-	dev-util/pkgconfig"
+RDEPEND="|| ( =media-libs/gstreamer-0.8.10 =media-libs/gstreamer-0.8.11
+			 =media-libs/gstreamer-0.8.12 )"
+
+DEPEND="${RDEPEND}
+		dev-util/pkgconfig"
 
 src_compile() {
 
