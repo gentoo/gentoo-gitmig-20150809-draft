@@ -1,10 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.2.6.ebuild,v 1.2 2005/02/21 04:24:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.2.6.ebuild,v 1.3 2006/02/27 20:30:24 ciaranm Exp $
+
+inherit versionator
 
 IUSE="doc"
 
-MY_PV="v$(echo ${PV} | cut -d. -f1,2)"
+MY_PV="v$(get_version_component_range 1-2 )"
 
 DESCRIPTION="GNU Music Typesetter"
 SRC_URI="http://www.lilypond.org/ftp/${MY_PV}/${P}.tar.gz"
