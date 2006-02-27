@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/icewoed-1.8.ebuild,v 1.5 2005/07/07 05:21:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/icewoed-1.8.ebuild,v 1.6 2006/02/27 07:09:30 morfic Exp $
 
 DESCRIPTION="IceWM winoptions editor."
 SRC_URI="mirror://sourceforge/icecc/${P}.tar.bz2"
@@ -11,7 +11,7 @@ DEPEND="=x11-libs/qt-3*"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 
 src_unpack () {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/icesndcfg-1.3.ebuild,v 1.9 2006/01/25 11:20:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/icesndcfg-1.3.ebuild,v 1.10 2006/02/27 07:05:03 morfic Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ DEPEND="=x11-libs/qt-3*"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="x86 sparc ppc ~amd64"
 
 src_unpack() {
 	unpack ${A}

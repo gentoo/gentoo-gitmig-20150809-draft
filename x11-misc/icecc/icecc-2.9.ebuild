@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/icecc-2.9.ebuild,v 1.6 2005/09/05 13:08:01 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/icecc-2.9.ebuild,v 1.7 2006/02/27 06:56:19 morfic Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://icecc.sourceforge.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 SLOT="0"
 

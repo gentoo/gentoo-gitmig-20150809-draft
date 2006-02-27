@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icets
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/ChangeLog,v 1.20 2005/07/07 05:19:21 caleb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/ChangeLog,v 1.21 2006/02/27 06:53:13 morfic Exp $
+
+  27 Feb 2006; Daniel Goller <morfic@gentoo.org> icets-1.4.ebuild:
+  Adding ~amd64 keyword
 
   07 Jul 2005; Caleb Tennis <caleb@gentoo.org> icets-1.4.ebuild:
   Fix qt dep
