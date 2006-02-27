@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.22 2006/02/24 05:31:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.23 2006/02/27 01:24:02 weeve Exp $
+
+  27 Feb 2006; Jason Wever <weeve@gentoo.org> moc-2.4.0.ebuild:
+  Added ~sparc keyword wrt bug #104975.
 
 *moc-2.4.0 (24 Feb 2006)
 
