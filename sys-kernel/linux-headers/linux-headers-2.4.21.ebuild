@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.30 2005/07/21 17:14:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.31 2006/02/27 20:01:09 blubb Exp $
 
 ETYPE="headers"
 inherit eutils kernel
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
 PROVIDE="virtual/os-headers"
-KEYWORDS="amd64 ~sparc x86 -mips alpha ia64"
+KEYWORDS="alpha -amd64 ia64 -mips ~sparc x86"
 
 DEPEND="!virtual/os-headers
 	sparc? ( gcc64? ( sys-devel/gcc-sparc64 ) )"

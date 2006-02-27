@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6820c6b778c8972855fa769030a2aa2e ChangeLog 32019
-RMD160 26a3495d1da6be08cf0964619df857364768065b ChangeLog 32019
-SHA256 cda0e2fd09cc3624f98c7cc4f9f8bfac95aee14003d672a1f930cbe6a46bf95f ChangeLog 32019
+MD5 ded476404ac033de1460443cd9ffc8f3 ChangeLog 32261
+RMD160 893ea601904b9dc4204c3aaf94ff4e33282eddea ChangeLog 32261
+SHA256 93a3da6c0c1d8df820d3c568450dab7eb07dd8a618bf88b4df2582a77d895d6d ChangeLog 32261
 MD5 e32b5df37d1bd1fde32f19276f8bc5e2 files/2.6.11-ppc64-32ul-spinlock.patch 510
 RMD160 1a8a5a7c96049c7cac243022143fd7f20d678495 files/2.6.11-ppc64-32ul-spinlock.patch 510
 SHA256 ffb32af7a072d8e6c87b73eb525744da2442d472ca0f26af4e3f4468074453e3 files/2.6.11-ppc64-32ul-spinlock.patch 510
@@ -88,12 +85,12 @@ SHA256 3ed5c8722d94886ae12715e60172f217b8d1222a412c617a78f7e4270270b21b linux-he
 MD5 1c43697b46cd87859708b7601424a258 linux-headers-2.2.26.ebuild 2502
 RMD160 d629565254ce26e64eb18f435afa6e11fef555b2 linux-headers-2.2.26.ebuild 2502
 SHA256 c9058c44d67b37cf27302e39caa60ed63001c6ddc87a0ab5cdf41479f0111563 linux-headers-2.2.26.ebuild 2502
-MD5 83dfc41af41e560a10c1f0ed5c2a8c11 linux-headers-2.4.21-r1.ebuild 3933
-RMD160 55072f29fd580b9eda2281d7255dec31e0471655 linux-headers-2.4.21-r1.ebuild 3933
-SHA256 fc29bf931c4d27197747fc0202d17b6e82bd146b6112edcadcf2b4c0f16a52a5 linux-headers-2.4.21-r1.ebuild 3933
-MD5 210a17e3aad60927524a64e0179b068d linux-headers-2.4.21.ebuild 3719
-RMD160 6d1a093174f8000d4dfc521a59b68bb41114baa0 linux-headers-2.4.21.ebuild 3719
-SHA256 c0f32f1cd588708e728f2a22a70d0ff9f4db48da05f274138f2beac1688cd10e linux-headers-2.4.21.ebuild 3719
+MD5 a2a5e78513efa43a18e8b73b372c98f0 linux-headers-2.4.21-r1.ebuild 3930
+RMD160 e0802e01be8bbccddcf39bf0264fdbd150decba4 linux-headers-2.4.21-r1.ebuild 3930
+SHA256 648a9ed8257c5c8739ba3d14e19d85318391f9be2d036d243683e0734b11cf0b linux-headers-2.4.21-r1.ebuild 3930
+MD5 971ea18cb4c8e708e59090cf3677f32a linux-headers-2.4.21.ebuild 3716
+RMD160 171376f731ce8de8e227af326d0b74099ba6bf97 linux-headers-2.4.21.ebuild 3716
+SHA256 8b5d770503b11e2c983e5a43085f3db466e5ee7acf8e08a77c0d80a679bee12e linux-headers-2.4.21.ebuild 3716
 MD5 1b900a0e84285a3ed937541e17499296 linux-headers-2.4.22-r1.ebuild 4066
 RMD160 812ab7397d4e471f567f9fcaa1264eab047e9296 linux-headers-2.4.22-r1.ebuild 4066
 SHA256 fdc20f5a376f9b26263cc28604d189976f647326e0d6dc6cc3c947158bba7775 linux-headers-2.4.22-r1.ebuild 4066
@@ -109,12 +106,12 @@ SHA256 7188b4e8c7a978a58071bb27db512240be2ea7186bcad101df849b52a27a17e2 linux-he
 MD5 7a20e26b7cddf8179591f77334b5641c linux-headers-2.4.25.ebuild 3410
 RMD160 f84eec78868ebecac2cd20da46b1d693445b9990 linux-headers-2.4.25.ebuild 3410
 SHA256 133475da8ef8b54cf1e5084cfc3121ce38624ed0e7b642e767af74bc931d1abc linux-headers-2.4.25.ebuild 3410
-MD5 df0fbc123a44ae70a18a60b02d522cbb linux-headers-2.4.26-r1.ebuild 775
-RMD160 89a926db1651998982b2194a3bd7848fb86c1c11 linux-headers-2.4.26-r1.ebuild 775
-SHA256 16027d656f3bc60a312a7b21423693746087cfdc4c87025071b9d6653ffaa74e linux-headers-2.4.26-r1.ebuild 775
-MD5 6a3b45eded92aace1a5df1a478fa977b linux-headers-2.4.26.ebuild 3340
-RMD160 fd5d6ad737aaee19092bdee1754b6c8090fe42d4 linux-headers-2.4.26.ebuild 3340
-SHA256 454d34b0ee97133f55aec7cecec3d6a0d013372ea8ef96bec4327beb5a7c254c linux-headers-2.4.26.ebuild 3340
+MD5 ef6c9fc5cb00848cdfb02589897b0654 linux-headers-2.4.26-r1.ebuild 774
+RMD160 23ba86c86c833e18a6619e36ac42a3f85472d1f6 linux-headers-2.4.26-r1.ebuild 774
+SHA256 1f6ee719460fa1263b087456fa41b0f75d91ef3b132b126b2057107378ea4dd8 linux-headers-2.4.26-r1.ebuild 774
+MD5 da434d4a8e489fbbd6ff72d550db12ac linux-headers-2.4.26.ebuild 3336
+RMD160 e4a82259da9b374715abc62ed40253c325fca92f linux-headers-2.4.26.ebuild 3336
+SHA256 cced65636ef2c6b26be7d6dd3faa8cccf8b2abdca598678cb4efde7e02341af3 linux-headers-2.4.26.ebuild 3336
 MD5 35a08ce92d78b165f66c9d9748623dc0 linux-headers-2.6.11-r2.ebuild 2009
 RMD160 4f9e9531b20606c0863949f6e6ecf5dbde779903 linux-headers-2.6.11-r2.ebuild 2009
 SHA256 794d1ca8ee606b9b3623f1181787009e553ffa9f63f39f6cf5a4bb09d09c7240 linux-headers-2.6.11-r2.ebuild 2009
@@ -133,10 +130,3 @@ SHA256 c87234093af71505f599979e863a05c46cbb093717187eceb42c79b18b0fa31b linux-he
 MD5 248488cc2cb6484a305e8108b4eaaa6a metadata.xml 489
 RMD160 6d4140ba9953af0bc389edbdc0658982cd52c555 metadata.xml 489
 SHA256 16a5f3dcc59bc342281b445c1377954ec74a6a39ade615cb2b3b9ebd72d7ea57 metadata.xml 489
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9N3UJrHF4yAQTrARAshEAJ9rj5vCmqVxGvfcHclzg0nNWk7SWgCgwax4
-KpHZLurUOE7S7VEoASMVYTU=
-=JAKK
------END PGP SIGNATURE-----
