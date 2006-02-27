@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_proxy_html
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/ChangeLog,v 1.5 2005/12/12 10:05:30 ticho Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/ChangeLog,v 1.6 2006/02/27 17:46:19 vericgar Exp $
+
+  27 Feb 2006; Michael Stewart <vericgar@gentoo.org>
+  mod_proxy_html-2.4.3.ebuild, mod_proxy_html-2.5.1.ebuild:
+  Fix global-scope call to xml-config. Fixes bug 123965
 
   12 Dec 2005; Andrej Kacian <ticho@gentoo.org> mod_proxy_html-2.4.3.ebuild:
   Stable on x86, bug #106465.
