@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.92-r2.ebuild,v 1.1 2005/07/16 21:34:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.92-r2.ebuild,v 1.2 2006/02/27 01:09:20 weeve Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
 IUSE="debug jabber msn oscar yahoo flood gnutls openssl aimextras msnextras"
 
-DEPEND="virtual/libc
-	>=dev-libs/glib-2.0
+DEPEND=">=dev-libs/glib-2.0
 	msn? ( gnutls? ( net-libs/gnutls )
 		   openssl? ( dev-libs/openssl ) )
 	jabber? ( gnutls? ( net-libs/gnutls )

@@ -1,21 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.1.ebuild,v 1.2 2006/02/13 00:12:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.1.ebuild,v 1.3 2006/02/27 01:09:20 weeve Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="irc to IM gateway that support multiple IM protocols"
 HOMEPAGE="http://www.bitlbee.org/"
 SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz
-		 msnextras? ( mirror://${P}-msn6.akke.patch )"
+		 msnextras? ( mirror://gentoo/${P}-msn6.akke.patch )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
 IUSE="debug jabber msn oscar yahoo gnutls openssl msnextras"
 
-DEPEND="virtual/libc
-	>=dev-libs/glib-2.0
+DEPEND=">=dev-libs/glib-2.0
 	msn? ( gnutls? ( net-libs/gnutls )
 		   openssl? ( dev-libs/openssl ) )
 	jabber? ( gnutls? ( net-libs/gnutls )

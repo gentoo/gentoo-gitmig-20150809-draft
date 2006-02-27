@@ -1,6 +1,11 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.59 2006/02/13 00:12:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.60 2006/02/27 01:09:20 weeve Exp $
+
+  27 Feb 2006; Jason Wever <weeve@gentoo.org> bitlbee-0.92.ebuild,
+  bitlbee-0.92-r1.ebuild, bitlbee-0.92-r2.ebuild, bitlbee-0.92-r3.ebuild,
+  bitlbee-0.99.ebuild, bitlbee-1.0.ebuild, bitlbee-1.0.1.ebuild:
+  Applied fix suggestion from bug #124216.
 
   13 Feb 2006; Jason Wever <weeve@gentoo.org> bitlbee-1.0.1.ebuild:
   Fixed to use configure rather than econf as this configure ain't your
