@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.50 2006/02/24 06:52:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.51 2006/02/27 01:38:35 jer Exp $
+
+  27 Feb 2006; Jeroen Roovers <jer@gentoo.org> webalizer-2.01.10-r12.ebuild:
+  Stable on hppa (bug #106621).
 
   24 Feb 2006; Markus Rothe <corsair@gentoo.org>
   webalizer-2.01.10-r12.ebuild:

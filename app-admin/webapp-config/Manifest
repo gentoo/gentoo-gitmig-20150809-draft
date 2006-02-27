@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 af52f5e0d63e04ce5a7586e0fc27e167 ChangeLog 16567
+MD5 9c448951161ccedc7d3d1886b57f04d5 ChangeLog 16670
+RMD160 7373ff9c90d446ab49ea5cce5792649e4c20ac02 ChangeLog 16670
+SHA256 0391b2146af9a73203f95737562e017a309728053814bcdcca81518140fdf5ba ChangeLog 16670
 MD5 6aad9c4cd4548cb948cd4035286d6ac7 files/digest-webapp-config-1.11 70
+RMD160 ca23cee7582a6531fb0cd9f7b2c257d6b657028f files/digest-webapp-config-1.11 70
+SHA256 acbc5a4dbb6cf834e84059b4c11f6ceee74182a8ec7accd5b288a59467a7aa1d files/digest-webapp-config-1.11 70
 MD5 4a197b74bf68a2f921f202710177d4a6 files/digest-webapp-config-1.50.10 72
+RMD160 5a8574d5b0efa9f2a6e2c0caa83aa21836a09f80 files/digest-webapp-config-1.50.10 72
+SHA256 bfabef14cde20873daeb70aed7f83d43ffd4855376ded8e570032298b298c655 files/digest-webapp-config-1.50.10 72
 MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
+RMD160 7081530104e84534030353cb15c4a541bb8d5e05 metadata.xml 225
+SHA256 0986f8971072c8d055fccbc67cc59ac43eecd1f5592cd9c0ae729b23e550cc96 metadata.xml 225
 MD5 90bba75c31e392fd21e084681aeca6ae webapp-config-1.11.ebuild 1408
-MD5 5d5272b22baef54439f559d7894a7e09 webapp-config-1.50.10.ebuild 1679
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEAkBpFdQwWVoAgN4RAhs0AJ94IX9wJHDGOGhN8H/UDZYBO8lc/ACeM942
-7d+nLwZfPn3q1mVBswX0ifA=
-=oFEB
------END PGP SIGNATURE-----
+RMD160 a5b77eba6047c11500dd08ae6db3c897079b5079 webapp-config-1.11.ebuild 1408
+SHA256 ecef225ebe299b86b73617eaea247aff06fdd8278c9ce4da6d34b4427d7d0d66 webapp-config-1.11.ebuild 1408
+MD5 258b8ef048cd08e96b8b330b7680a59b webapp-config-1.50.10.ebuild 1671
+RMD160 e0172652dad62e3aebd3cfff36aebef25a4c74e3 webapp-config-1.50.10.ebuild 1671
+SHA256 27c22228b25c60368247acabb40fcc39c83e74c5afb5564972a19e9767be0058 webapp-config-1.50.10.ebuild 1671

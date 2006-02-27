@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.8 2006/02/24 06:52:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.9 2006/02/27 01:38:35 jer Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -22,7 +22,7 @@ SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${MY_P}-src.tar.bz2
 "
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 hppa ~ppc ppc64 sparc x86"
 IUSE="apache2 geoip nls search xtended"
 
 DEPEND="!geoip? ( =sys-libs/db-4.2* )
