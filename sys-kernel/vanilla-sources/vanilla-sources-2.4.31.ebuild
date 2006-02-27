@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.4.31.ebuild,v 1.5 2006/01/22 01:13:12 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.4.31.ebuild,v 1.6 2006/02/27 20:13:16 chutzpah Exp $
 
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
@@ -10,4 +10,4 @@ detect_version
 
 HOMEPAGE="http://www.kernel.org"
 SRC_URI="${KERNEL_URI}"
-KEYWORDS="~alpha ~amd64 ~ppc sparc x86"
+KEYWORDS="~alpha ~ppc sparc x86"
