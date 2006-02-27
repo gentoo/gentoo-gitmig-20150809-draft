@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-eZcomponents
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-eZcomponents/ChangeLog,v 1.3 2006/02/20 10:58:22 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-eZcomponents/ChangeLog,v 1.4 2006/02/27 09:08:34 sebastian Exp $
+
+  27 Feb 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  ezc-eZcomponents-1.0.1.ebuild:
+  Add more 1.0.1 packages.
 
 *ezc-eZcomponents-1.0.1 (20 Feb 2006)
 

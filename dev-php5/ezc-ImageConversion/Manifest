@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 97c30611386ae751cd1dde5ad9de50e5 ChangeLog 592
 RMD160 20ca491eb95b2e862de57497a0cb04aad131945f ChangeLog 592
 SHA256 e40684684bb57769cd15481a746affaa4b208b63395bca05455f2c8c0033da2f ChangeLog 592
+MD5 fb47d1cb7af17e9a9f161662b56feabd ezc-ImageConversion-1.0.1.ebuild 391
+RMD160 50e2406b613ae793d97e54a4a434b4f7c87f9c5f ezc-ImageConversion-1.0.1.ebuild 391
+SHA256 8dae686b0edaa74b5decb5ada40cc7b1e048bb20e0d3c9224bbb9b9ed42e11d8 ezc-ImageConversion-1.0.1.ebuild 391
 MD5 fb47d1cb7af17e9a9f161662b56feabd ezc-ImageConversion-1.0.ebuild 391
 RMD160 50e2406b613ae793d97e54a4a434b4f7c87f9c5f ezc-ImageConversion-1.0.ebuild 391
 SHA256 8dae686b0edaa74b5decb5ada40cc7b1e048bb20e0d3c9224bbb9b9ed42e11d8 ezc-ImageConversion-1.0.ebuild 391
 MD5 142a72740ca5211f2c75748a50a63ea4 files/digest-ezc-ImageConversion-1.0 250
 RMD160 46edd8b22ab0724491b8ec52518134833d46791c files/digest-ezc-ImageConversion-1.0 250
 SHA256 64252bbd15a55362dc0d184619be64f77f9aa7d598d718bb34a8c4a027b0e4ac files/digest-ezc-ImageConversion-1.0 250
+MD5 82807993a67399726075ad0850ab628b files/digest-ezc-ImageConversion-1.0.1 256
+RMD160 0d327ccec6d91318180fc4c51d22550c71a4c48b files/digest-ezc-ImageConversion-1.0.1 256
+SHA256 b5f64f3e3931a20136485b85342af3be88546736a435969c965e4674e1ebb781 files/digest-ezc-ImageConversion-1.0.1 256
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
 SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD3jCOaGfFFLhbXWkRAodEAKCDrE5B8ZNvnVU20CLly042Sun23wCgm/xX
-11HfXCYVQbiQI3Kr31B0uXc=
-=hXtJ
------END PGP SIGNATURE-----

@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 49960a757d418d1af3e072655cf1ffe2 ChangeLog 578
 RMD160 12c25a9748f18a7726309328d3aaf0ce5b201989 ChangeLog 578
 SHA256 3e6f7faa29e47aa67ba6f95e38e6e64eaa2baa06cb871f66f609cee0059a113a ChangeLog 578
+MD5 87fbf69d04326e602653d3517c84d68d ezc-ImageAnalysis-1.0.1.ebuild 376
+RMD160 4f7fd3bce6d2ee69df0e04914c6521e4f8482eb5 ezc-ImageAnalysis-1.0.1.ebuild 376
+SHA256 a5978588ba6fa361340a9118a45f8e354bf540f6a4a4842baaaf45b1345f8f75 ezc-ImageAnalysis-1.0.1.ebuild 376
 MD5 87fbf69d04326e602653d3517c84d68d ezc-ImageAnalysis-1.0.ebuild 376
 RMD160 4f7fd3bce6d2ee69df0e04914c6521e4f8482eb5 ezc-ImageAnalysis-1.0.ebuild 376
 SHA256 a5978588ba6fa361340a9118a45f8e354bf540f6a4a4842baaaf45b1345f8f75 ezc-ImageAnalysis-1.0.ebuild 376
 MD5 2984562ced30e02100a68b33d62067b7 files/digest-ezc-ImageAnalysis-1.0 244
 RMD160 cee2a3411d8cfc84b66e1e7aed5dfd4f50feb35d files/digest-ezc-ImageAnalysis-1.0 244
 SHA256 5a5eaaea44a1bd4a25dc2c66428c147dc3304add8fbf0d78fe1d460c3fbd6e97 files/digest-ezc-ImageAnalysis-1.0 244
+MD5 659fe629aecd9a846093fa6f466f6c3b files/digest-ezc-ImageAnalysis-1.0.1 250
+RMD160 396c17938c49e378bfe97b03e4804870720aad5a files/digest-ezc-ImageAnalysis-1.0.1 250
+SHA256 5fe02054cc29c39e5a6674e3a57d663539f41732c940734bb73e477bfc8449fd files/digest-ezc-ImageAnalysis-1.0.1 250
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
 SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD3jBwaGfFFLhbXWkRAimGAJ44jTnU4y99rdqMnmvGd1NZXyGCqgCfZ6ee
-StXzGiyTKubS/3oq7Y+EYBY=
-=iaDZ
------END PGP SIGNATURE-----
