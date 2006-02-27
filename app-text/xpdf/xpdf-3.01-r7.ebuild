@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r7.ebuild,v 1.14 2006/02/27 22:46:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r7.ebuild,v 1.15 2006/02/27 23:42:03 genstef Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="An X Viewer for PDF Files"
 HOMEPAGE="http://www.foolabs.com/xpdf/"
-SRC_URI="http://dev.gentoo.org/~genstef/files/dist/${P}-poppler.tar.bz2"
+SRC_URI="mirror://gentoo/${P}-poppler.tar.bz2
+	http://dev.gentoo.org/~genstef/files/dist/${P}-poppler.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
