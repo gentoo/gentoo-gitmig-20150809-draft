@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/svk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.25 2006/02/22 22:49:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.26 2006/02/27 19:24:16 agriffis Exp $
+
+*svk-1.07 (27 Feb 2006)
+
+  27 Feb 2006; Aron Griffis <agriffis@gentoo.org> +svk-1.07.ebuild:
+  Bump to 1.07 (from 1.06-r1)
 
   22 Feb 2006; Aron Griffis <agriffis@gentoo.org> svk-1.06-r1.ebuild:
   Mark 1.06-r1 ~ia64
