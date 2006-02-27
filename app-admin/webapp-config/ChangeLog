@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.20 2006/02/27 01:53:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.21 2006/02/27 03:51:26 kumba Exp $
+
+  27 Feb 2006; Joshua Kinard <kumba@gentoo.org>
+  webapp-config-1.50.10.ebuild:
+  Marked stable on mips.
 
   27 Feb 2006; Jason Wever <weeve@gentoo.org> webapp-config-1.50.10.ebuild:
   Stable on SPARC wrt bug #124205.
