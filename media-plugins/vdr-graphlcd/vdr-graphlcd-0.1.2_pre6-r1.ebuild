@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.2_pre6-r1.ebuild,v 1.2 2006/01/09 21:11:44 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.2_pre6-r1.ebuild,v 1.3 2006/02/27 23:30:40 hd_brummy Exp $
 
 inherit eutils vdr-plugin
 
@@ -25,6 +25,8 @@ DEPEND=">=media-video/vdr-1.2.6
 # DO NOT remove "!sys-apps/graphlcd-base" from DEPEND !!!
 # It will fix a conflict with ebuilds in Gentoo.de OVERLAY CVS
 
+PATCHES="${FILESDIR}/0.1.2/*"
+
 src_unpack() {
 
 	vdr-plugin_src_unpack
@@ -38,7 +40,7 @@ src_install() {
 
 	vdr-plugin_src_install
 
-	insopts -m0644 -ovdr -gvideo
+	insopts -m0644 -ovdr -gvdr
 
 	insinto /usr/share/vdr/${VDRPLUGIN}/logos
 	doins -r ${VDRPLUGIN}/logos/*
@@ -68,10 +70,10 @@ src_install() {
 	fi
 }
 
-pkg_preinstall() {
+pkg_preinst() {
 
-	if [[ -e /etc/vdr/plugins/graphlcd/fonts ]] && [[ ! -L /etc/vdr/plugins/graphlcd/fonts ]] ||
-	[[ -e /etc/vdr/plugins/graphlcd/logos ]] && [[ ! -L /etc/vdr/plugins/graphlcd/logos ]] ;then
+	if [[ -e /etc/vdr/plugins/graphlcd/fonts ]] && [[ ! -L /etc/vdr/plugins/graphlcd/fonts ]] \
+	|| [[ -e /etc/vdr/plugins/graphlcd/logos ]] && [[ ! -L /etc/vdr/plugins/graphlcd/logos ]] ;then
 
 		einfo "Remove wrong DIR in /etc/vdr/plugins/graphlcd from prior install"
 		einfo "Press CTRL+C to abbort"

@@ -1,6 +1,18 @@
-MD5 11164e4806dd81c423ca22c7e5c80d27 ChangeLog 622
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c4cedd0d8a94003cbebde0145c6c6d19 ChangeLog 869
+MD5 1b06ba652dc14eb1a4884d49cdd4e3df files/0.1.2/radiotext-lcr-service.diff 3469
 MD5 b52e340ed185e77044523dcee028aae6 files/confd 681
 MD5 c06ef00216c435d94502bd44c0cf7e51 files/digest-vdr-graphlcd-0.1.2_pre6-r1 72
 MD5 517fd6e47ab25170f56df5a2a07510e6 files/rc-addon.sh 453
 MD5 363fe851c7edc1284983ea5393b8c2a9 metadata.xml 403
-MD5 cd0c4d0ac39438207b7ce5b4728998b7 vdr-graphlcd-0.1.2_pre6-r1.ebuild 2500
+MD5 824f70c028a55184036797fed05dfacd vdr-graphlcd-0.1.2_pre6-r1.ebuild 2528
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEA4uvdn07HTTCgIoRAsj8AJ4u4S/12yxrdF5LrxjlwnVfPqBPyACdGdTz
+3jObOOjrX5dNG7rap2bCXnw=
+=mAbn
+-----END PGP SIGNATURE-----
