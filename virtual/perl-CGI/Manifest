@@ -1,4 +1,4 @@
-MD5 155bb73a0978931ae33b0701142170cf ChangeLog 1247
+MD5 09e450114bd5e932719e9dbc68aa8709 ChangeLog 1339
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-CGI-3.05 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-CGI-3.07 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-CGI-3.09 0
@@ -9,4 +9,4 @@ MD5 4a79107afa7ac3aae7675067f615be0e perl-CGI-3.05.ebuild 469
 MD5 c7f233e0ecc91d6bdc27347ba541219e perl-CGI-3.07.ebuild 449
 MD5 dbd762cdaf768218b14507968ca2dde9 perl-CGI-3.09.ebuild 449
 MD5 ab7e1b50519fd1f58179b4a6309bd2ce perl-CGI-3.10.ebuild 470
-MD5 eaeade062fb54195a668024776b95d2c perl-CGI-3.15.ebuild 470
+MD5 6feff04337e752e2146e69d1b05f0e4c perl-CGI-3.15.ebuild 471
