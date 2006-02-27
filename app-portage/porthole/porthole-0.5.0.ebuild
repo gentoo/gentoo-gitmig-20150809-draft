@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.5.0.ebuild,v 1.1 2005/12/23 04:40:34 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.5.0.ebuild,v 1.2 2006/02/27 20:41:43 fuzzyray Exp $
 
 inherit distutils
 
@@ -11,14 +11,16 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE="debug nls"
-DEPEND=">=dev-lang/python-2.3
+RDEPEND=">=dev-lang/python-2.3
 	>=sys-apps/portage-2.0.51-r3
 	>=dev-python/pygtk-2.4.0
 	>=dev-python/pyxml-0.8.4
 	>=gnome-base/libglade-2.5.0
-	nls? ( >=sys-devel/gettext-0.14 )"
+	nls? ( virtual/libintl )
+	debug? ( >=dev-python/pycrash-0.4_pre3 )"
 
-RDEPEND="${DEPEND} debug? ( >=dev-python/pycrash-0.4_pre3 )"
+DEPEND="${RDEPEND}
+	nls? ( >=sys-devel/gettext-0.14 )"
 
 src_install() {
 	distutils_src_install

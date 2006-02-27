@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.22 2006/01/06 01:15:26 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.23 2006/02/27 20:41:43 fuzzyray Exp $
+
+  27 Feb 2006; Paul Varner <fuzzyray@gentoo.org> porthole-0.5.0.ebuild:
+  Updated RDEPEND and DEPEND to remove gettext from RDEPEND. Bug #123114
 
   06 Jan 2006; Paul Varner <fuzzyray@gentoo.org> porthole-0.4.1.ebuild:
   Change pkg_setup() to use built_with_use. Patch from Alec Warner
