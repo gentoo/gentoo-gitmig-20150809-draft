@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b10eb7aa6ebc204d639a9605f38b5dba ChangeLog 13085
-RMD160 33229486d4b8690074a827b00476c6565bdcffa7 ChangeLog 13085
-SHA256 d19907f085afc425d0ab896a514a0c55ba3db6552a3ffb49d83db6e44754078e ChangeLog 13085
+MD5 a98fdecb283d9ee4ac59c4ff27490d91 ChangeLog 13223
+RMD160 54ad3fa25baf9cad2fa382c4330b56bf3bff514f ChangeLog 13223
+SHA256 e05bb9010096ccd5197c7eecdb50464d707f5e22fbc0e6d72b75d9b86cfdad8b ChangeLog 13223
 MD5 21db8312c316fc17a0df1ac3cdf2f20c files/digest-vserver-sources-2.0.1-r1 1099
 RMD160 481b827187c3fe469100630f35b17bd80831d764 files/digest-vserver-sources-2.0.1-r1 1099
 SHA256 58971f12bfced101ac5a3904ab8c5a6c375b80a1b742ffcb1c2377d817fa3f2c files/digest-vserver-sources-2.0.1-r1 1099
-MD5 22984ffee5c7e4cffecc3426d750b7a7 files/digest-vserver-sources-2.0.2_rc9 1105
-RMD160 1a98f6b00542761ce3230b8b46399cadbe875ec3 files/digest-vserver-sources-2.0.2_rc9 1105
-SHA256 4a572a0caac51d73fa5eeeaa7dbc88f5604d8ee4782e096be41758e7ef3fe497 files/digest-vserver-sources-2.0.2_rc9 1105
+MD5 7a1320035f7cfea1ffdd2eec4446aae9 files/digest-vserver-sources-2.0.2_rc9 1105
+RMD160 0b18e42f872cda23494f45598c7dade7b5b350fc files/digest-vserver-sources-2.0.2_rc9 1105
+SHA256 fca0ef35806537fd15662c6b65e16ce5f9dfa7ffc1a107669519fc3dfdeebbd8 files/digest-vserver-sources-2.0.2_rc9 1105
 MD5 640ee12078dee22d59e4dc1e9a152ea0 files/digest-vserver-sources-2.1.0-r1 1099
 RMD160 0e6e919788aa7b89fa7ab5263ee009bf022d6461 files/digest-vserver-sources-2.1.0-r1 1099
 SHA256 1aaf2f69bbca0c122dc85658f64b5b8be39fd433070fc3bd5c446aad3d10b73b files/digest-vserver-sources-2.1.0-r1 1099
@@ -34,7 +34,7 @@ SHA256 17666144b0894076365d60d91ec8c6c1ecdb0e580ea11832e74e3369150608e8 vserver-
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEAx4/flZ8QqxhrsMRAs76AJsFmBJUh5Whnp8R8cOZOTugjPNoCwCgtJJb
-s5Iiclq0S3/hcVLfF7X6090=
-=McT0
+iD8DBQFEAx7VflZ8QqxhrsMRAnJ0AKDHL3P/LOKRTerYrknA7PKO8r/nhgCeP3kM
+f/nc1iM7NLKCle7vHM3SMHE=
+=BBas
 -----END PGP SIGNATURE-----
