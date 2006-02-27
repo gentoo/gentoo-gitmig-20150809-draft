@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bdb76290e84e71c5d5b994b860a66218 ChangeLog 11317
 MD5 909705b6dbfe23a99cd6353c2a1a0710 bluez-utils-2.19.ebuild 2897
 MD5 bc6b50744c64a764187e0f446a3233de bluez-utils-2.21.ebuild 2630
@@ -36,3 +39,10 @@ MD5 c4facfc6935ff330d67a8d106303d781 files/digest-bluez-utils-2.24 68
 MD5 8ed52f505ae338adbf3e9e650ae8f77b files/digest-bluez-utils-2.25 68
 MD5 7449a658ef08ac7e86b221b3c43961af files/pin.sample 26
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEAxjxKRy60XGEcJIRAo7QAJ9RSwpuibU0pAzPGTTJSUSNIYwb9ACgpVmN
+HWhUQYY8w1Kxzr7Pvu18/FE=
+=HVc8
+-----END PGP SIGNATURE-----
