@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/madman-0.93.ebuild,v 1.8 2005/09/04 10:45:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/madman-0.93.ebuild,v 1.9 2006/02/27 21:26:01 chutzpah Exp $
 
 IUSE=""
 
 inherit eutils
 
 DESCRIPTION="MP3 organizer/ID3 tag-editor extraordinaire"
-HOMEPAGE="http://madman.sf.net"
+HOMEPAGE="http://madman.sourceforge.net/"
 SRC_URI="mirror://sourceforge/madman/${P}.tar.gz"
 
 LICENSE="GPL-2"
