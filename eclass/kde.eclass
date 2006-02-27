@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.147 2006/02/09 20:12:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.148 2006/02/27 15:14:02 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -46,6 +46,13 @@ kde_pkg_setup() {
 			eerror "You must either disable this use flag, or recompile"
 			eerror "$(best_version kde-base/kdelibs) with this use flag enabled."
 			die
+		fi
+	fi
+
+	if [ "${PN}" = "kdelibs" ] ; then
+		use doc && if ! built_with_use =x11-libs/qt-3* doc ; then
+			eerror "Building kdelibs with the doc use flag requires qt to be built with the doc use flag."
+			eerror "Please re-emerge qt-3 with this use flag enabled."
 		fi
 	fi
 
