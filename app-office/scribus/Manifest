@@ -1,67 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bb6ec771ddc106b1232de86ba8576277 ChangeLog 8345
-RMD160 c84c985e39101b8ac0bd9b75fde684e388bd9318 ChangeLog 8345
-SHA256 d66e3b2e8088cc770065206a14fa2eb654a8bb96b162798a559a9638094de7de ChangeLog 8345
+MD5 1776e36da3b10f86a55ed8b1026c73bc ChangeLog 8437
 MD5 ad6a8f28302ba5f2cd6602f15dcf8f0b files/digest-scribus-1.2.2.1 69
-RMD160 a2ba191f485b8a2017e2b517ccb31f80e2a9bd7a files/digest-scribus-1.2.2.1 69
-SHA256 02bfb47f528e48f12254ee8e3cb8cf068ed5b0ad9364dd2af603ad29a7952311 files/digest-scribus-1.2.2.1 69
 MD5 5bb23dbcb9bbf3ed3c858a67aeb084f9 files/digest-scribus-1.2.3 67
-RMD160 292e1a04aec77861fb6a0d034026954248e184df files/digest-scribus-1.2.3 67
-SHA256 c105e29a5c6236559c817886514790cc9ae9767e128cbf893609065c5acf00af files/digest-scribus-1.2.3 67
 MD5 fc93f11e3086e449d9f0aae22dd57ea6 files/digest-scribus-1.2.4.1 69
-RMD160 83b0aeac47b70df4763037664a24d170fb9870be files/digest-scribus-1.2.4.1 69
-SHA256 d75fc4076c5af19deb81e4e874295179eada199f8bc175b3e2c2e2dd554d21f7 files/digest-scribus-1.2.4.1 69
 MD5 ccc6537c02e7409e9a57042e16571e0c files/digest-scribus-1.3.1 67
-RMD160 f1e58aeedac413e9b588f200e6a89539676ffcbf files/digest-scribus-1.3.1 67
-SHA256 de1bdfd3302f7e3adce34c686256dbe9616667566035c76c80b4fadad3a97fb0 files/digest-scribus-1.3.1 67
 MD5 ccc6537c02e7409e9a57042e16571e0c files/digest-scribus-1.3.1-r1 67
-RMD160 f1e58aeedac413e9b588f200e6a89539676ffcbf files/digest-scribus-1.3.1-r1 67
-SHA256 de1bdfd3302f7e3adce34c686256dbe9616667566035c76c80b4fadad3a97fb0 files/digest-scribus-1.3.1-r1 67
 MD5 e80c793c1fcf10d28d462fb8a6493c1f files/digest-scribus-1.3.2 67
-RMD160 e884124b21440598f90b1f3cdf4f9e14e21f1baf files/digest-scribus-1.3.2 67
-SHA256 a2998247fbb919c16d95e026a228f4ab3b709b97adfcb17e3b9b366185bf9c00 files/digest-scribus-1.3.2 67
 MD5 e80c793c1fcf10d28d462fb8a6493c1f files/digest-scribus-1.3.2-r1 67
-RMD160 e884124b21440598f90b1f3cdf4f9e14e21f1baf files/digest-scribus-1.3.2-r1 67
-SHA256 a2998247fbb919c16d95e026a228f4ab3b709b97adfcb17e3b9b366185bf9c00 files/digest-scribus-1.3.2-r1 67
 MD5 3565120be42bbd9f2058048693556306 files/scribus-1.3.1-gcc41.patch 1908
-RMD160 bc1837f2e16cec544a443b2a84b736aa42cb34f9 files/scribus-1.3.1-gcc41.patch 1908
-SHA256 519ba20e06d8d6a48bb21b822ea952440805174f89766595961ce21a641e7a74 files/scribus-1.3.1-gcc41.patch 1908
 MD5 b1dfef871a289717c0e84876f5225a3a files/scribus-1.3.1-memleak.patch 1186
-RMD160 b4fb735a7277cfe78063d981668d3e32559d3955 files/scribus-1.3.1-memleak.patch 1186
-SHA256 1ae628285747ca1dcaa6cc31199a6e25cad53c117f3126595ffe77a10cf559f6 files/scribus-1.3.1-memleak.patch 1186
 MD5 52a4d4aea5809ba13ef7798f8270d1b1 files/scribus-1.3.2-fixes.diff 7168
-RMD160 a69d44eae2ee668e506aae587e61d331eb5a2ede files/scribus-1.3.2-fixes.diff 7168
-SHA256 238cda097635bcba8a0d02107557b5e99e6fbafd33815a33cbc00bb6eb39a3d0 files/scribus-1.3.2-fixes.diff 7168
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
-RMD160 3b01d5dab901ee93217f72b711954d3cccbb1717 metadata.xml 217
-SHA256 2f5dfc1eb79d2d9ee02663da6e1449f499c3a37b7f4cc2391e18d7789a314669 metadata.xml 217
 MD5 22b9b515efb9df74f82a0d388b40ea32 scribus-1.2.2.1.ebuild 1043
-RMD160 263ecb0128e134b1e6f15aaff5d200a3addcce8d scribus-1.2.2.1.ebuild 1043
-SHA256 7e44ed1b84edf2cce0a780820622fad803d90d8c0c8ce02bbbe8b5a20cbd49ba scribus-1.2.2.1.ebuild 1043
 MD5 543928f3e03bb416a4cfa620e392411e scribus-1.2.3.ebuild 1044
-RMD160 e0baa815fe26dc809d4516da2261df20bfd4aa07 scribus-1.2.3.ebuild 1044
-SHA256 2152f6504bfe8b90cf52420f98afd362d0852477d22e787d553c6165ebfb1190 scribus-1.2.3.ebuild 1044
-MD5 daff929c20661a52d8099f1083fb1f7f scribus-1.2.4.1.ebuild 1047
-RMD160 60c88c0a639af1db2df018d53a8cedb13c0672d7 scribus-1.2.4.1.ebuild 1047
-SHA256 9fb0390e5b299b5a64fc3c7db852a3ecb81b99bead54b7e0dab5478edac38244 scribus-1.2.4.1.ebuild 1047
+MD5 a96614bd32e9e3c142d5d33c182c599d scribus-1.2.4.1.ebuild 1046
 MD5 13abbc9787cdb8e512bb496b2ff96f83 scribus-1.3.1-r1.ebuild 1229
-RMD160 96429fb0f540eab92e9ff0fae54c46b6c6040d29 scribus-1.3.1-r1.ebuild 1229
-SHA256 161a83eedabeca42aa7f55b5f5801c0c7a3c111d6e87cf0be8a120693ccd78b5 scribus-1.3.1-r1.ebuild 1229
 MD5 d6c11de9419f09836510b84720f65c43 scribus-1.3.1.ebuild 1101
-RMD160 7b0de635ae31d2781279a133eb89284dd949c44b scribus-1.3.1.ebuild 1101
-SHA256 b8e7b15c492c035006128d74fec23dcdb6ad527d84c9f96156fb4cd2860dfeb6 scribus-1.3.1.ebuild 1101
 MD5 f65b8acbe6f92af6bba25a10b1e78c12 scribus-1.3.2-r1.ebuild 1171
-RMD160 59ba8d9875c1839c277ab946d94a226f304b5e81 scribus-1.3.2-r1.ebuild 1171
-SHA256 5b988eba32908b4b566afddb589fa1fa005e083a1302acd3f7c01625449e2366 scribus-1.3.2-r1.ebuild 1171
 MD5 61058da19a29faa80ca1a8e143d9772f scribus-1.3.2.ebuild 1060
-RMD160 bb915e67e8394838bf048b0a3b1d26a426fd1799 scribus-1.3.2.ebuild 1060
-SHA256 bf7d7ff6b2c2b567dbf6a40eade5363a799f20b755ce1bbf6486478e31fe503f scribus-1.3.2.ebuild 1060
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEANy6CRZPokWLroQRAiPdAKCrXh1eGpMMJ3do2h9sXQgDp/KYjACeNWDB
-lP6dQ6ja/lR5W507G2pdJko=
-=dpYv
------END PGP SIGNATURE-----
