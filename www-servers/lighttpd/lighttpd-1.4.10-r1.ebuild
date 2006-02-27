@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.10-r1.ebuild,v 1.1 2006/02/26 01:07:37 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.10-r1.ebuild,v 1.2 2006/02/27 12:49:38 ka0ttic Exp $
 
-inherit eutils depend.php
+inherit eutils autotools depend.php
 
 DESCRIPTION="Lightweight high-performance web server"
 HOMEPAGE="http://www.lighttpd.net/"
@@ -97,12 +97,7 @@ src_unpack() {
 
 	EPATCH_SUFFIX="diff" epatch ${FILESDIR}/${PV}
 
-#    einfo "Regenerating autoconf/automake files"
-#    libtoolize --copy --force || die "libtoolize failed"
-#    aclocal || die "aclocal failed"
-#    autoheader || die "autoheader failed"
-#    automake --add-missing --copy || die "automake failed"
-#    autoconf || die "autoconf failed"
+	eautoreconf || die
 
 	# dev-python/docutils installs rst2html.py not rst2html
 	sed -i -e 's|\(rst2html\)|\1.py|g' doc/Makefile.in || \

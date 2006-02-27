@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3770e708b28d7b0adcc42c060df81acd ChangeLog 18594
-RMD160 bcaa46bf3cb83b16d941ef39f92fd303beda367d ChangeLog 18594
-SHA256 2986e8a2d13eda0bcba0b1d76cf0ce9b2396deb9765debc1900bd382ad5eb5b7 ChangeLog 18594
+MD5 368e9b40d2dad3cd9d18708830e343c4 ChangeLog 18895
+RMD160 01f76216623163c360dd17cc1e5970b6a3657b67 ChangeLog 18895
+SHA256 69785539fd36f2ae56a57287876bfc9bc10d0ed1e6438ce0024bbbfd5b9f74e9 ChangeLog 18895
 MD5 24669453e8f69faf4212dfa43e90e3dd files/1.4.10/01_all_r990_mod_cgi_dont_reset_physical_path.diff 517
 RMD160 b0e9a693102fb2ea4e6cf750cd4559f9c25a7834 files/1.4.10/01_all_r990_mod_cgi_dont_reset_physical_path.diff 517
 SHA256 9f3d49f04b3b8423b06f0ddf35cce855c2187d3f0a84f22479aa5df871901144 files/1.4.10/01_all_r990_mod_cgi_dont_reset_physical_path.diff 517
@@ -43,9 +43,9 @@ SHA256 203ef9efa0ae11226c871962eb0f7fc6b16d3789c1714accdda8197b8b9d39c6 files/1.
 MD5 3ee9e11b239661b01e45c56381c49d7d files/1.4.10/13_all_r1006_mod_cgi_close_unused_pipe_fds.diff 1987
 RMD160 fa2e223ef49682a3c881e794e88169d416798dae files/1.4.10/13_all_r1006_mod_cgi_close_unused_pipe_fds.diff 1987
 SHA256 996efc5821728c7d9da0f47fef64189bb1638f4ebac57e6f004e54dfbabab25d files/1.4.10/13_all_r1006_mod_cgi_close_unused_pipe_fds.diff 1987
-MD5 60758dff6ef226aeaf6673361e62a097 files/1.4.10/14_all_r1007_mod_alias_lowercase_support.diff 695
-RMD160 1fb2b16fd8c37849ef24c0ae6510b20508cf79f6 files/1.4.10/14_all_r1007_mod_alias_lowercase_support.diff 695
-SHA256 3285c1e6c948e7b01c14d4f17d7ad7641a016493299cef8c24489ac1057c4b20 files/1.4.10/14_all_r1007_mod_alias_lowercase_support.diff 695
+MD5 81e540213c5ca381e6b82e51571c6874 files/1.4.10/14_all_r1007_mod_alias_lowercase_support.diff 695
+RMD160 9b09acb448e2b7ac7150e624a636c2e9dda69530 files/1.4.10/14_all_r1007_mod_alias_lowercase_support.diff 695
+SHA256 ce2a5865240a4f589b578ab608abae81c3f1bf0cfd3d265cbdc3bd24887b4f14 files/1.4.10/14_all_r1007_mod_alias_lowercase_support.diff 695
 MD5 df5b2360ea380d988bf16905ab214286 files/conf/lighttpd.conf 8182
 RMD160 450cf40f4ec517331f8932618a3c492cb566e4f3 files/conf/lighttpd.conf 8182
 SHA256 c0f6951e00d4e8c928f1799a84976ab8bb536bd59a104c13ca9d1d3661d8cebd files/conf/lighttpd.conf 8182
@@ -115,9 +115,9 @@ SHA256 d2d37a8b2a2f7441fdb4975154cd4d0c37e561db26811709160ea155e564cbe7 lighttpd
 MD5 21c52e6883435f851e46d8e229eb46ad lighttpd-1.3.16.ebuild 2545
 RMD160 b38563e9ea9caec25d88476cf00b4915e34cb8f7 lighttpd-1.3.16.ebuild 2545
 SHA256 bc56e550b1a3691f8c3a3b4f788455317f772ab540bd2017ff48cbed9d1df14d lighttpd-1.3.16.ebuild 2545
-MD5 7f88f3fe26cae97a601c64f9c5ffb57c lighttpd-1.4.10-r1.ebuild 5140
-RMD160 2e567e62bf1f400cb4668148e3fa8d07f41c7c25 lighttpd-1.4.10-r1.ebuild 5140
-SHA256 5d7e9e78f18d842e046e889c20dd343b4eb1c44e8eaf289bb32c4d316c66eae4 lighttpd-1.4.10-r1.ebuild 5140
+MD5 1bf721486856da30412cef4918944905 lighttpd-1.4.10-r1.ebuild 4883
+RMD160 755096c51305b8db8deb1b647dd54d771e9e89f3 lighttpd-1.4.10-r1.ebuild 4883
+SHA256 12340e95cd0b9642e86688952e79a71efea3019edc67198f8b8306482de10093 lighttpd-1.4.10-r1.ebuild 4883
 MD5 409c3573899a53281837a5bcb1bb1813 lighttpd-1.4.7.ebuild 5153
 RMD160 605b1403f4d5f6fe1ce708837a81a0a890a79aeb lighttpd-1.4.7.ebuild 5153
 SHA256 e6a228737feaca20eefa06f147d59cea5f9935f54790af3dfe7d09a4264cfdac lighttpd-1.4.7.ebuild 5153
@@ -130,7 +130,7 @@ SHA256 c99edd41b36c5354a29c2fa2e37fccd83568d306d1531f0ce7bbaebf703f2a56 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEAP+SEZCkKN40op4RAq6MAJ0dJLg2RhMGW1Sygw8WHDE2lyrlMgCgvcCb
-kepSnEiRGCI1PWt7zj3wY2g=
-=Ev2n
+iD8DBQFEAvV0EZCkKN40op4RAqOgAKC3mKiwzvG5YAxDSIKaIDd9mny/HwCcClDk
+NcJQrQDbBBQ6mxeABJsZcs8=
+=tCLV
 -----END PGP SIGNATURE-----
