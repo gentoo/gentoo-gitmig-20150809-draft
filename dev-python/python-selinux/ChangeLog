@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/python-selinux
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.32 2006/02/22 17:03:49 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.33 2006/02/27 01:25:29 pebenito Exp $
+
+*python-selinux-2.16-r2 (27 Feb 2006)
+
+  27 Feb 2006; Chris PeBenito <pebenito@gentoo.org>
+  +python-selinux-2.16-r2.ebuild:
+  Update and require libselinux that has compatability aliases for selinux_aux
+  functions in the SWIG wrapper.
 
   22 Feb 2006; Stephen Bennett <spb@gentoo.org>
   python-selinux-2.16-r1.ebuild:
