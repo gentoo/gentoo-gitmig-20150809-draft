@@ -1,6 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.465 2006/02/15 06:18:26 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.466 2006/02/27 17:27:27 vericgar Exp $
+
+*apache-2.2.0-r1 (27 Feb 2006)
+
+  27 Feb 2006; Michael Stewart <vericgar@gentoo.org>
+  +apache-2.2.0-r1.ebuild:
+  Fix parse_modules_config so that it correctly detects an upgrade. Thanks to
+  bemis for helping debug this. Fixes bug 124245
 
 *apache-2.2.0 (15 Feb 2006)
 
