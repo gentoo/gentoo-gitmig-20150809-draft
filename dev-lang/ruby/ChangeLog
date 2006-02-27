@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.187 2006/02/26 18:16:51 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.188 2006/02/27 14:34:54 caleb Exp $
+
+*ruby-1.8.4.20060226 (27 Feb 2006)
+
+  27 Feb 2006; Caleb Tennis <caleb@gentoo.org> +ruby-1.8.4.20060226.ebuild:
+  Adding a new 1.8.4 snapshot as of today, see if it helps with some YAML and
+  other bugs
 
   26 Feb 2006; Joshua Kinard <kumba@gentoo.org> ruby-1.8.4-r1.ebuild:
   Marked stable on mips.
