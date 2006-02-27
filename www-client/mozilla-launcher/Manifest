@@ -1,12 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d9670c2d226edaf42ca1090d370cab4a ChangeLog 16301
-RMD160 636a608298655697b98d25b341a4dd82d45ca9b5 ChangeLog 16301
-SHA256 d4608739d29d54987bfa5c8f8a39c147bd054a1fbad89cb4be410f54da039020 ChangeLog 16301
+MD5 57f21aac6171e858547e608484f68ff8 ChangeLog 16484
+RMD160 b8bfe3e146c0cbd58b31c5a962b209b9a383751e ChangeLog 16484
+SHA256 08081072b71381a94b693ab242d1f7bc4741b16418e7c4604b4667365a720e73 ChangeLog 16484
 MD5 fd2d3637ead0861d84d21d41a227aaaa files/digest-mozilla-launcher-1.45 250
 RMD160 6b88206cc3f1fcf86b88755e83686e0fc11104a4 files/digest-mozilla-launcher-1.45 250
 SHA256 4a546dfda25630ac94d0432b742b017a7dee17afd3192dd85f9c195184c8aabc files/digest-mozilla-launcher-1.45 250
+MD5 0755d3aa7a8b0b81117e0d4abf165ccb files/digest-mozilla-launcher-1.47 250
+RMD160 449b452500e29e815518413a3dc7394ecda59ba0 files/digest-mozilla-launcher-1.47 250
+SHA256 e15a123917cf058e16cfa1c4213504f4e2b331e7e9e420171fdf1e0689ded059 files/digest-mozilla-launcher-1.47 250
 MD5 5f2388f082f553879f178d465eb546a3 files/mozilla-launcher-1.35-multilib.patch 1297
 RMD160 66ab62d893c62031c0580b3ba91d58e19f096b01 files/mozilla-launcher-1.35-multilib.patch 1297
 SHA256 022c666ec7d2dd80b8c3a6e6a8cc31feaac85ac7c422c3313609a44e489ae276 files/mozilla-launcher-1.35-multilib.patch 1297
@@ -22,10 +25,13 @@ SHA256 07f3fe1fb1af952e38a0b0c581c994fb7566833a96f832a965fbac340f064e5b metadata
 MD5 a72acb797ead0612a7caaa960988c78f mozilla-launcher-1.45.ebuild 958
 RMD160 62a4d181ba196a1e5092ce4712613e65ba4c1f42 mozilla-launcher-1.45.ebuild 958
 SHA256 9633201a5b4640229bdc3ed9f09eb2c8c30d8c87960b7d9999b35260123d48fd mozilla-launcher-1.45.ebuild 958
+MD5 e1719045f3897526b7177b891e12415a mozilla-launcher-1.47.ebuild 968
+RMD160 aec54b87cdba7f79d2cbaff84ceaa6725df82e47 mozilla-launcher-1.47.ebuild 968
+SHA256 3cb546aad9f88c6c3ca807a2b0d2a5788c4110a6bc038f22d73df72f6276d304 mozilla-launcher-1.47.ebuild 968
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD3jcHJrHF4yAQTrARApg1AKDHQHiCPjlhHagX3jH05dYtFg8EjwCffsk1
-RqFBPc5dti3QueAiyUtIGes=
-=0yG3
+iD8DBQFEA2Q1JrHF4yAQTrARAtXLAKC0kF1qW/w18HwiMf8oUR9JCMgXqwCcDR0t
+U7hh5lqAaG0r0eRyGh7De0c=
+=HoGw
 -----END PGP SIGNATURE-----
