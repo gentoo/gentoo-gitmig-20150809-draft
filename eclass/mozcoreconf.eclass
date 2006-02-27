@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.5 2006/02/01 21:41:58 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.6 2006/02/27 03:22:01 anarchy Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
@@ -31,6 +31,7 @@ mozconfig_init() {
 	declare TB=$([[ ${PN} == *thunderbird ]] && echo true || echo false)
 	declare SB=$([[ ${PN} == *sunbird ]] && echo true || echo false)
 	declare EM=$([[ ${PN} == enigmail ]] && echo true || echo false)
+	declare SM=$([[ ${PN} == seamonkey ]] && echo true || echo false)
 
 	####################################
 	#
@@ -58,6 +59,13 @@ mozconfig_init() {
 		*thunderbird)
 			cp mail/config/mozconfig .mozconfig \
 				|| die "cp mail/config/mozconfig failed" ;;
+		seamonkey)
+			# The other builds have an initial --enable-extensions in their
+			# .mozconfig.  The "default" set in configure applies to mozilla
+			# specifically.
+			: >.mozconfig || die "initial mozconfig creation failed"
+			mozconfig_annotate "" --enable-application=suite
+			mozconfig_annotate "" --enable-extensions=default ;;
 	esac
 
 	####################################
@@ -159,14 +167,18 @@ mozconfig_init() {
 		--with-system-png \
 		--with-system-zlib \
 		--disable-updater \
-		--enable-single-profile \
-		--disable-profilesharing \
-		--disable-profilelocking \
 		--enable-default-toolkit=gtk2 \
 		--enable-pango \
 		--enable-svg \
 		--enable-svg-renderer=cairo \
 		--enable-system-cairo
+
+	if [[ ${PN} != seamonkey ]]; then
+		mozconfig_annotate gentoo \
+			--enable-single-profile \
+			--disable-profilesharing \
+			--disable-profilelocking
+	fi
 
 	# Here is a strange one...
 	if is-flag '-mcpu=ultrasparc*' || is-flag '-mtune=ultrasparc*'; then
