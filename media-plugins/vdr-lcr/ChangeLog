@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-lcr
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-lcr/ChangeLog,v 1.1 2006/02/28 00:05:20 hd_brummy Exp $
+
+*vdr-lcr-0.0.3 (28 Feb 2006)
+
+  28 Feb 2006; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
+  +vdr-lcr-0.0.3.ebuild:
+  import ebuild from gentoo.de overlay cvs
+
