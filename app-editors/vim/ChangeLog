@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.213 2006/02/28 16:22:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.214 2006/02/28 16:28:17 ciaranm Exp $
+
+  28 Feb 2006; Ciaran McCreesh <ciaranm@gentoo.org>
+  -vim-7.0_alpha20060123.ebuild, -vim-7.0_alpha20060205.ebuild,
+  -vim-7.0_alpha20060218.ebuild:
+  Tidy up.
 
 *vim-7.0_alpha20060228 (28 Feb 2006)
 
