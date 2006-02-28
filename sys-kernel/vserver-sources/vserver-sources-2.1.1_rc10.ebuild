@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.1.1_rc9-r1.ebuild,v 1.1 2006/02/27 15:43:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.1.1_rc10.ebuild,v 1.1 2006/02/28 17:53:01 phreak Exp $
 
 ETYPE="sources"
 CKV="2.6.15"
