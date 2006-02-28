@@ -3,7 +3,7 @@
 @@ -120,4 +120,22 @@
  	tVolumeState GetVolumeState();
  };
-
+ 
 +// Radiotext
 +struct RadioTextService_v1_0 {
 +  int rds_info;
@@ -25,17 +25,17 @@
 +
 
 --- state.c.orig	2005-05-07 11:23:42.000000000 +0200
-+++ state.c	2006-02-27 18:55:41.000000000 +0100
++++ state.c	2006-02-28 17:28:31.000000000 +0100
 @@ -15,6 +15,7 @@
  #include "strfct.h"
-
+ 
  #include <vdr/i18n.h>
 +#include <vdr/plugin.h>
-
+ 
  #include "compat.h"
-
+ 
 @@ -568,6 +569,8 @@
-
+ 
  void cGraphLCDState::GetProgramme()
  {
 +    bool ptitle = false;
@@ -67,10 +67,10 @@
  					event.presentSubtitle = "";
  					if (!isempty(present->ShortText()))
  						event.presentSubtitle = present->ShortText();
-@@ -639,6 +646,55 @@
+@@ -638,6 +645,54 @@
+ 		}
  	}
  #endif
- 	mutex.Unlock();
 +
 +#if VDRVERSNUM >= 10330
 +	{ // get&display Radiotext
@@ -96,7 +96,6 @@
 +	}
 +#endif
 +
-+
 +#if VDRVERSNUM >= 10330
 +	{ // get&display LcrData
 +		cPlugin *p;
@@ -120,6 +119,6 @@
 +		}
 +	}
 +#endif
+ 	mutex.Unlock();
  }
-
- tChannelState cGraphLCDState::GetChannelState()
+ 
