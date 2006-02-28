@@ -1,8 +1,16 @@
-MD5 24745c2aaacc115ffc82fbde885fbb01 vultureng-0.6.ebuild 1978
-MD5 4b8497c2752c2caff82d4e2d99b695a9 metadata.xml 245
-MD5 d209a7080f42e7e559213a8fac3d10a1 vultureng-0.7.ebuild 1979
-MD5 3632818fd3ad18eee40d54d34c6d4032 ChangeLog 1184
-MD5 b3305b15e391715634a7be58ee16eb25 vultureng-0.8.ebuild 2006
-MD5 b8f04a173281536feefd7b511b4ab04b files/digest-vultureng-0.7 66
-MD5 6befc587a6fc87175425a4999570270b files/digest-vultureng-0.6 66
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 66333a74168136172c12467542cdb953 ChangeLog 1387
 MD5 6898e93bb4daf8b53aeba0407d2d1d14 files/digest-vultureng-0.8 66
+MD5 0cc9da3ec4010ccc395185eb2674487d files/digest-vultureng-1.1 66
+MD5 4b8497c2752c2caff82d4e2d99b695a9 metadata.xml 245
+MD5 b3305b15e391715634a7be58ee16eb25 vultureng-0.8.ebuild 2006
+MD5 9a9343f7ca057a3abffb229a924cd6de vultureng-1.1.ebuild 2332
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEBLnzjG8pv1lIUX4RAmb/AJ9Qii1DDVpjWOhnDz8UiQMMHazfeQCeOUfY
+KSyFkMalSRK9x2/udLS+Jxc=
+=ge8s
+-----END PGP SIGNATURE-----
