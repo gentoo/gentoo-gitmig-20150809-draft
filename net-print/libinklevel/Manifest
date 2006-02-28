@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fd5b0f209f79e3816af4c566f0450d26 libinklevel-0.6.4.ebuild 586
-MD5 dee3dc9e6a9c39595d4e92861afdf0af libinklevel-0.6.3.ebuild 583
-MD5 ec27c78613e5d8f556b6632066daad30 ChangeLog 1599
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 b33dc9ae8a9a84292cfbb180b0ffcc81 ChangeLog 1803
+RMD160 aae3f4d5692fbbecad41e9a85de1b4423bc6a08c ChangeLog 1803
+SHA256 c680b3201f0192ddb4a41d20625bc423ae174b58facc72840cb97af90bfd3615 ChangeLog 1803
 MD5 20f52131c54c7afab8cd4a10e3f9e761 files/digest-libinklevel-0.6.3 68
+RMD160 65ee8286327ea653e20d4975c35c47809d92d9c9 files/digest-libinklevel-0.6.3 68
+SHA256 a0ec6997e5c1442045c64a6cba3de71cafe14913d7c8738b50cf598c249f23f5 files/digest-libinklevel-0.6.3 68
 MD5 c0b767fae98bad97f60a0cd79ca1c13c files/digest-libinklevel-0.6.4 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCpNMfevY57Fted3ERAmg4AKCKv3W/x0IJB6uo+Gktac2IKdRR7ACgsuWx
-TJEu6Q1NpTe3fBjYve8QVDE=
-=3QO6
------END PGP SIGNATURE-----
+RMD160 55c6c44333bd46969351b1a929a34a3e32376038 files/digest-libinklevel-0.6.4 68
+SHA256 1ce33fa0de68937a5065f08d7c58866304ed1a9ab927af613b6d786c3c0b3398 files/digest-libinklevel-0.6.4 68
+MD5 eac3dfdfe72a13744c015e753d2292d4 files/digest-libinklevel-0.6.5_rc1 259
+RMD160 5e14d1cce7ed19b2ce03d01d9b6cf4b3241bba95 files/digest-libinklevel-0.6.5_rc1 259
+SHA256 554123cc41f457525f12504e256ce6f8ed1114e7b64b647c0bb7b26068d1844c files/digest-libinklevel-0.6.5_rc1 259
+MD5 dee3dc9e6a9c39595d4e92861afdf0af libinklevel-0.6.3.ebuild 583
+RMD160 5a7d05754e14020839a5cd0410c12fe0619d0f36 libinklevel-0.6.3.ebuild 583
+SHA256 423bd0aad743ecf787e26f5733fb7bec5510a180738e99b8632963a080b71d8b libinklevel-0.6.3.ebuild 583
+MD5 fd5b0f209f79e3816af4c566f0450d26 libinklevel-0.6.4.ebuild 586
+RMD160 a471b96a4b4c2842017919cedf1ee2f854692679 libinklevel-0.6.4.ebuild 586
+SHA256 89c262f824928e94d2940f17f80629e25ed1af1ae389432eae0ace4564c60e4b libinklevel-0.6.4.ebuild 586
+MD5 561f7784d6c4cedb22a0650144a804f3 libinklevel-0.6.5_rc1.ebuild 593
+RMD160 79a7acc003c8ec532279bd050085508b52fcae80 libinklevel-0.6.5_rc1.ebuild 593
+SHA256 98dfdff0ec5829c6a4e0f6add8f3b8ebc8e8b53bcc6bec01fa351dd97c7e7a07 libinklevel-0.6.5_rc1.ebuild 593
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 metadata.xml 161
+SHA256 7c85e6739a71f5bb23e8de36c88677d772946e61f7285892f7554e37bd2bca76 metadata.xml 161
