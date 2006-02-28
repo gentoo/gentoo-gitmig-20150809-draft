@@ -1,4 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7ff6ce794bc139b91da530408c35fe63 ChangeLog 1536
+RMD160 778d0e3f580f5ebf004669dcfd6f047ef1bca523 ChangeLog 1536
+SHA256 7fa417238540c388d4ced250a874555b24998a7bded43ef9e714cec40e863737 ChangeLog 1536
 MD5 cfa44cff8feeef067fab312596bf27c2 addpatches-0.2.ebuild 507
+RMD160 16abb8dca2d4df8a0f13e3068198b2b5275d8923 addpatches-0.2.ebuild 507
+SHA256 834daf5abe1da8fc794504ae9f3c4cfc9b4f0fe5dde251f872dfa8e14beb6895 addpatches-0.2.ebuild 507
 MD5 a78f717ce830128c5ddb444f10e1ad5b files/addpatches 3187
+RMD160 586a301dac9b555c185854f6aece70855a28d9a8 files/addpatches 3187
+SHA256 fbc0bd43051282bb076b90fb7794aa58b889da1ede8ea8d408c5520cdb987fc0 files/addpatches 3187
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-addpatches-0.2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-addpatches-0.2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-addpatches-0.2 0
+MD5 f28cf32dd967bb0b2d173feee9a88f25 metadata.xml 304
+RMD160 7327a53047d0496a4c06a3485ecb075e36370081 metadata.xml 304
+SHA256 a7632c813293a3d129460cb9e92f3ec6ff8a9f27fc300a20cd45190ccf495d6a metadata.xml 304
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEA+rJSENan+PfizARAlObAKCDq+FyTJlsRi4EpulvVwRscoSrCwCcDezD
+ymKPe7f/jETfiwIbTByE7hs=
+=BciK
+-----END PGP SIGNATURE-----
