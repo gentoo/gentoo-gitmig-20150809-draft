@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.81 2006/02/24 12:36:44 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.82 2006/02/28 10:38:58 uberlord Exp $
+
+*dhcp-3.0.4_beta3 (28 Feb 2006)
+
+  28 Feb 2006; Roy Marples <uberlord@gentoo.org> +files/dhcpd.conf,
+  +files/dhcpd.init, +dhcp-3.0.4_beta3.ebuild:
+  Version bump.
+  3.0.4_beta3 has had the init script and config renamed to dhcpd.
+  The config file has also changed slightly and the new init script can now be
+  fully multiplexed as a result.
+  You *have* to remove the old dhcp init script.
 
 *dhcp-3.0.4_beta2-r2 (24 Feb 2006)
 *dhcp-3.0.3-r5 (24 Feb 2006)
