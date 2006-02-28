@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.12 2006/02/08 21:18:56 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.13 2006/02/28 13:19:01 ehmsen Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -59,6 +59,35 @@ tetex-3_src_unpack() {
 #
 
 PATH=/bin:/usr/bin
+
+# Fix for all those with altered umask for root
+umask 022
+
+# Make sure we have a correct environment, bug #30432
+# The list of env. vars is taken from the INSTALL file
+for texvar in AFMFONTS BIBINPUTS BSTINPUTS DVILJFONTS DVIPSFONTS \
+	DVIPSHEADERS GFFONTS GLYPHFONTS INDEXSTYLE MFBASES MFINPUTS \
+	MFPOOL MFTINPUTS MPINPUTS MPMEMS MPPOOL MPSUPPORT OCPINPUTS \
+	OFMFONTS OPLFONTS OTPINPUTS OVFFONTS OVPFONTS PKFONTS PSHEADERS \
+	T1FONTS T1INPUTS TEXBIB TEXCONFIG TEXDOCS TEXFONTMAPS TEXFONTS \
+	TEXFORMATS TEXINDEXSTYLE TEXINPUTS TEXMFCNF TEXMFDBS TEXMFINI \
+	TEXPICTS TEXPKS TEXPOOL TEXPSHEADERS TEXSOURCES TFMFONTS TRFONTS \
+	VFFONTS XDVIFONTS XDVIVFS ; do
+
+	if [ "${!texvar}" ]; then
+		if ! $(echo ${!texvar} | grep '^:\|::\|:$' &>/dev/null) ; then
+			export ${texvar}="${!texvar}:"
+		fi
+	fi
+done
+
+if [ "$TEXINPUTS" ]; then
+	if $(echo ${TEXINPUTS} | grep '/usr/share/texmf' &>/dev/null) ; then
+		export TEXINPUTS=$(echo ${TEXINPUTS} | sed -e 's|/usr/share/texmf/*:\?||g')
+	elif $(echo ${TEXINPUTS} | grep '/var/lib/texmf' &>/dev/null) ; then
+		export TEXINPUTS=$(echo ${TEXINPUTS} | sed -e 's|/var/lib/texmf/*:\?||g')
+	fi
+fi
 
 for conf in texmf.cnf fmtutil.cnf updmap.cfg
 do
