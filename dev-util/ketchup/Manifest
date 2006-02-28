@@ -1,18 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 215919e35e64949407960f640f20245f ChangeLog 780
+MD5 adbbc2e9c95900f51834af8f71ca6bca ChangeLog 989
+RMD160 cf6cf9856e121304296af06d93c92207bb8a61fd ChangeLog 989
+SHA256 2b47c4df5daac0536a51be13cd8478378d8236e0be7931aa255e52ec6ae21f31 ChangeLog 989
 MD5 cdfd35508318525d1080c64d12e3f9fd files/digest-ketchup-0.9.5 64
+RMD160 a5598d3e04da55a4f0a1ebe682b88f5c6851f6df files/digest-ketchup-0.9.5 64
+SHA256 7758807158c6318cb123d552f172f1c25406e1d2abdc2f8ccd0cfacb29ff4dd7 files/digest-ketchup-0.9.5 64
 MD5 8a368708a3efb93651727a03361bc162 files/digest-ketchup-0.9.6 64
+RMD160 3bb3c0b157df7f1b74456da593a1b6b5abf4a873 files/digest-ketchup-0.9.6 64
+SHA256 6489906bf86d492cad879e66bfbe780e3d6df66a0d2463679e36d92ed5288e4a files/digest-ketchup-0.9.6 64
 MD5 8a368708a3efb93651727a03361bc162 files/digest-ketchup-0.9.6-r1 64
+RMD160 3bb3c0b157df7f1b74456da593a1b6b5abf4a873 files/digest-ketchup-0.9.6-r1 64
+SHA256 6489906bf86d492cad879e66bfbe780e3d6df66a0d2463679e36d92ed5288e4a files/digest-ketchup-0.9.6-r1 64
+MD5 46881f15b6a209d0550a49723628d2e1 files/digest-ketchup-0.9.6_p20060228 268
+RMD160 9aed48574a389f5739699748cfcb9c6e8b2edd08 files/digest-ketchup-0.9.6_p20060228 268
+SHA256 35d8a580f6268fd7622abac12f0fb89ba44342bb21147b216583afa49fed76ff files/digest-ketchup-0.9.6_p20060228 268
 MD5 efd5fee311d215143c9c0b91bb3a5cfe ketchup-0.9.5.ebuild 663
+RMD160 f9b2c2b85281ffe830f19bff189b5fa0f19aa982 ketchup-0.9.5.ebuild 663
+SHA256 08a68e35d5220a9d762b48902b48b5274d7e88a0addf5822b8f3abe56b280489 ketchup-0.9.5.ebuild 663
 MD5 c3fe5f4623c7c4607a0326eb6412ca4a ketchup-0.9.6-r1.ebuild 665
+RMD160 4bbb53fd8fc300c2f23718bdcf3cec8054e3ffc9 ketchup-0.9.6-r1.ebuild 665
+SHA256 80de6226fc7d762473029cb7f50f660088a7dce0274ed5a48e8e135c8d398fe3 ketchup-0.9.6-r1.ebuild 665
 MD5 24be4af05713ef1da7c090f3cea7f0f2 ketchup-0.9.6.ebuild 663
-MD5 0cbe3ee0e8e5b0b58fdf0cea8add2b49 metadata.xml 495
+RMD160 9fd32a9d29d57a51ef36d1d91137555ca77010bc ketchup-0.9.6.ebuild 663
+SHA256 0a46b91bb1334d9496b3272e99ba4c7e8391e87d3e6735ba61465a4ab1216e7b ketchup-0.9.6.ebuild 663
+MD5 07c6726f2820bc40c60e12b4aedd294c ketchup-0.9.6_p20060228.ebuild 815
+RMD160 e0d3478b8aebded09975121ad3d0395baa57f9e6 ketchup-0.9.6_p20060228.ebuild 815
+SHA256 461c936f9bfdc1f8a69a0ae0d7c8fe8d473dde46f0da24c57093649426d37693 ketchup-0.9.6_p20060228.ebuild 815
+MD5 6df9021a9d85cfaf9bd8352c2893342b metadata.xml 495
+RMD160 c1bdbcf88d866b684f0ef2b216e265c509e55eab metadata.xml 495
+SHA256 a31f2347e4965e7b02a4405da12aab05ae3c5383ce9c7fb182c1acce0b0f7bb6 metadata.xml 495
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDrYOL/aM9DdBw91cRAmmzAJwNUh93eVZ98uW6BBM/UyzEyrmpigCfWSYC
-nKijhm5YIL/FdzLwZDLlHNw=
-=jI8K
+iD8DBQFEBLeqJrHF4yAQTrARArRLAKDLKuO8HcOhgosooKyNAZoG/1S8EQCgmqxh
+HGDGy6JhGOiXeVvDZPhsgAg=
+=ZrKa
 -----END PGP SIGNATURE-----
