@@ -1,6 +1,11 @@
 # ChangeLog for net-im/kopete
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.50 2006/02/21 14:56:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.51 2006/02/28 20:49:42 flameeyes Exp $
+
+  28 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kopete-0.12_alpha1-xscreensaver.patch, kopete-0.12_alpha1.ebuild:
+  Add patch to disable xscreensaver and add a useflag to map it with. Also fix
+  modular x dependencies.
 
 *kopete-0.12_alpha1 (21 Feb 2006)
 
