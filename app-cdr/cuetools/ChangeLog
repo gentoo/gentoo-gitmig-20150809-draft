@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cuetools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuetools/ChangeLog,v 1.8 2006/02/04 18:17:06 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuetools/ChangeLog,v 1.9 2006/02/28 22:45:20 sbriesen Exp $
+
+*cuetools-1.3.1 (28 Feb 2006)
+
+  28 Feb 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  +cuetools-1.3.1.ebuild:
+  version bumb, patches now included by upstream.
 
 *cuetools-1.3-r1 (04 Feb 2006)
 
