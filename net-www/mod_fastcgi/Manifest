@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 597520bb7bdbf84dd41ab0b40fe6b479 ChangeLog 2299
+MD5 d342485cff0ff39a0218d4e791a890b8 ChangeLog 2503
+RMD160 b44ef52fc03cd478ca5cc537ad8524337d7c51a3 ChangeLog 2503
+SHA256 bea2006b044213e6600feebab5845609752526710bc717e86fcf9bfd36092f76 ChangeLog 2503
 MD5 de79c0397228d06bdfd6fdb48ded2ea8 files/2.4.2-r1/20_mod_fastcgi.conf 200
+RMD160 07cbd022ac00d12bf2896a962ede6cd8b9e020d1 files/2.4.2-r1/20_mod_fastcgi.conf 200
+SHA256 5b5f84300fd3d2e489252a56b715f3cf31519cdccc947661d2fb05dba3da21e1 files/2.4.2-r1/20_mod_fastcgi.conf 200
 MD5 f91641961f208de56af9e453c8cf414c files/20_mod_fastcgi.conf 221
+RMD160 aa8ff7719ab15d2060abd4ca41b702ed3b79927e files/20_mod_fastcgi.conf 221
+SHA256 70161d2b0e69aa66df428f08e0d4694d95e547df6ff86adc48141da3a8d7a430 files/20_mod_fastcgi.conf 221
 MD5 e243c356a4eb728bb4372c4f99296d37 files/Makefile-2.4.0 436
+RMD160 42bc6f5e6840f3e8bd4e02a0684963a269730676 files/Makefile-2.4.0 436
+SHA256 532293d7ddc71bed1322ff181e5389af55267f1cf02a36b17b3cf8e7d1add33e files/Makefile-2.4.0 436
 MD5 c28c5986e00f82855ecbd1887f1cd72b files/digest-mod_fastcgi-2.4.2 68
+RMD160 a154504520a12c58edf2c770c4dd008ef2cb1f1e files/digest-mod_fastcgi-2.4.2 68
+SHA256 38e7d062f802a530d51b2f4ee9b869f6c90a7d578bb53c417913495e9e6048ff files/digest-mod_fastcgi-2.4.2 68
 MD5 c28c5986e00f82855ecbd1887f1cd72b files/digest-mod_fastcgi-2.4.2-r1 68
+RMD160 a154504520a12c58edf2c770c4dd008ef2cb1f1e files/digest-mod_fastcgi-2.4.2-r1 68
+SHA256 38e7d062f802a530d51b2f4ee9b869f6c90a7d578bb53c417913495e9e6048ff files/digest-mod_fastcgi-2.4.2-r1 68
 MD5 60fafe97f43e4a2c2a38c4423b6b3958 files/mod_fastcgi.conf 92
+RMD160 2ba4a9934b04b1136a282ea265a31b33c233f3f6 files/mod_fastcgi.conf 92
+SHA256 ba0378f70eacd21509fe3485644ca2e9b866a9cbfabd159c14ffe4877540beb9 files/mod_fastcgi.conf 92
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
-MD5 905f3a9d2f7953412a16327a4707a693 mod_fastcgi-2.4.2-r1.ebuild 852
-MD5 db1c511d9d8c1c684ec67d18815a450b mod_fastcgi-2.4.2.ebuild 3204
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDTdUlwUpWvClEHQoRAjgbAJ9O7Hx1ia6z607/MQruyj3ou5yOgwCeLQuU
-NHEC4a5RpkUwieKKAE1VJMY=
-=St8a
------END PGP SIGNATURE-----
+RMD160 d11ce73e47adf4b3d91309ec6489fded2f4d4e0e metadata.xml 226
+SHA256 376a327f91f69eb96f0c1b05cc1481dd7017a0570f631a03b1f6d14d58215ca8 metadata.xml 226
+MD5 a562dcc4db591918b049a563aed8bd84 mod_fastcgi-2.4.2-r1.ebuild 853
+RMD160 9e98ec2f0c05cbd1e4019e849eb0b1b416457042 mod_fastcgi-2.4.2-r1.ebuild 853
+SHA256 3f09cf7ecb9d905ebe5013f2fa06a056d882ee4f6dd663e4cb0aad0930a31046 mod_fastcgi-2.4.2-r1.ebuild 853
+MD5 ba3d22cddcacc69644b0f5cf97f2e6b5 mod_fastcgi-2.4.2.ebuild 3205
+RMD160 1acdab758844021ec1ddc050bd2ef93938a29439 mod_fastcgi-2.4.2.ebuild 3205
+SHA256 3b66b7345c3e0b78c4698cf22e31e57903ab8af446dec6d39761c513ad2b8671 mod_fastcgi-2.4.2.ebuild 3205

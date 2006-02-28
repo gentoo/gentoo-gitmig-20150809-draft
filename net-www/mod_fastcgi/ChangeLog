@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_fastcgi
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/ChangeLog,v 1.15 2005/10/13 02:30:10 metalgod Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/ChangeLog,v 1.16 2006/02/28 18:14:53 vericgar Exp $
+
+  28 Feb 2006; Michael Stewart <vericgar@gentoo.org>
+  mod_fastcgi-2.4.2.ebuild, mod_fastcgi-2.4.2-r1.ebuild:
+  Add the correct license. See licenses/mod_fastcgi for the correct terms.
+  Fixes bug 94510
 
   13 Oct 2005; Luis Medinas <metalgod@gentoo.org>
   mod_fastcgi-2.4.2-r1.ebuild:
