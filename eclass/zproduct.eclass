@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.21 2005/07/11 15:08:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.22 2006/02/28 02:58:47 vapier Exp $
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
 
 # This eclass is designed to streamline the construction of
@@ -24,8 +24,7 @@ ZI_DIR="${ROOT}/var/lib/zope/"
 ZP_DIR="${ROOT}/usr/share/zproduct"
 DOT_ZFOLDER_FPATH="${ZP_DIR}/${PF}/.zfolder.lst"
 
-zproduct_src_install()
-{
+zproduct_src_install() {
 	## Assume that folders or files that shouldn't be installed
 	#  in the zproduct directory have been already been removed.
 	## Assume $S set to the parent directory of the zproduct(s).
@@ -70,8 +69,7 @@ zproduct_src_install()
 	debug-print "${FUNCNAME}: result is ${RESULT}"
 }
 
-docs_move()
-{
+docs_move() {
 	# if $1 == "/", then this breaks.
 	if [ -n "$1" ] ; then
 		docinto $1
@@ -87,8 +85,7 @@ docs_move()
 	done
 }
 
-zproduct_pkg_postinst()
-{
+zproduct_pkg_postinst() {
 	#*check for multiple zinstances, if several display install help msg.
 
 	#*Use zprod-update to install this zproduct to the default zinstance.
@@ -108,8 +105,7 @@ zproduct_pkg_postinst()
 
 # This function is deprecated! Still used, until a new system developed.
 
-zproduct_pkg_prerm()
-{
+zproduct_pkg_prerm() {
 	# remove this zproduct from all zinstances.
 	# process zinstance.lst and proceed with zprod-update del
 	debug-print-function ${FUNCNAME} ${*}
@@ -153,8 +149,7 @@ zproduct_pkg_prerm()
 
 # Add this zproduct to the top zinstance.
 
-zproduct_pkg_config()
-{
+zproduct_pkg_config() {
 	einfo "To add zproducts to other zinstances execute:"
 	einfo "\tzprod-manager add"
 }
