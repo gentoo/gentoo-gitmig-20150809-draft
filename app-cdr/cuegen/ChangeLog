@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/cuegen
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuegen/ChangeLog,v 1.1 2006/02/28 21:54:11 sbriesen Exp $
+
+*cuegen-1.2.0 (28 Feb 2006)
+
+  28 Feb 2006; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +cuegen-1.2.0.ebuild:
+  initial commit
+
