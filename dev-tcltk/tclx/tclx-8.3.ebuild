@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.ebuild,v 1.16 2005/01/09 12:14:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.ebuild,v 1.17 2006/02/28 00:16:50 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -20,8 +20,6 @@ DEPEND="=dev-lang/tcl-8.3*
 	X? ( =dev-lang/tk-8.3* )"
 
 S=${WORKDIR}/${PN}${PV}
-
-[ $ARCH = alpha ] && append-flags -fPIC
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
