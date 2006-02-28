@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ssc-0.8.ebuild,v 1.7 2005/08/09 23:07:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ssc-0.8.ebuild,v 1.8 2006/02/28 22:50:28 tupone Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="2D Geometric Space Combat"
 HOMEPAGE="http://sscx.sourceforge.net/"
@@ -27,6 +27,7 @@ src_unpack() {
 		-e "s:/usr/local/share/:${GAMES_DATADIR}/:" \
 		src/{asteroid.cc,audio.cc,config.cc,menu.cc} \
 		|| die "sed failed"
+	epatch "${FILESDIR}/${P}-gcc34.patch"
 }
 
 src_install () {
