@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/rsibreak
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.1 2006/02/28 14:59:26 flameeyes Exp $
+
+*rsibreak-0.5.0 (28 Feb 2006)
+
+  28 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +rsibreak-0.5.0.ebuild:
+  Initial import; ebuild based on the one submitted by Tobias Roeser
+  <le.petit.fou@web.de> in bug #124174.
+
