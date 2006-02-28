@@ -1,21 +1,18 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/hdoc-0.8.3.ebuild,v 1.3 2005/05/04 17:07:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/hdoc-0.8.3.ebuild,v 1.4 2006/02/28 20:20:24 dcoutts Exp $
 
 DESCRIPTION="A documentation generator for Haskell"
-
 HOMEPAGE="http://www.fmi.uni-passau.de/~groessli/hdoc/"
+SRC_URI="http://www.fmi.uni-passau.de/~groessli/hdoc/${P}.tar.gz"
 
 LICENSE="GPL-2"
-
-IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+IUSE=""
 
 DEPEND="virtual/ghc"
-RDEPEND="virtual/libc"
-
-SRC_URI="http://www.fmi.uni-passau.de/~groessli/hdoc/${P}.tar.gz"
+RDEPEND=""
 
 src_compile() {
 	econf --with-compiler=ghc || die "econf failed"

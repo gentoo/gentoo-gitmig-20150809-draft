@@ -5,4 +5,9 @@
 <maintainer>
   <email>kosmikus@gentoo.org</email>
 </maintainer>
+<longdescription lang="en">
+HDoc generates documentation in HTML format for Haskell modules. The generated
+documents are cross linked and include summaries and detailed descriptions for
+the documented functions, data types, type classes and instance declarations.
+</longdescription>
 </pkgmetadata>
