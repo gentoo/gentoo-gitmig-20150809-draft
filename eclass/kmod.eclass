@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.18 2006/01/12 13:41:52 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.19 2006/02/28 03:05:59 vapier Exp $
 
 # !!!!!!!!!!
 #
@@ -234,8 +234,7 @@ kmod_do_buildpatches()
 	fi
 }
 
-kmod_src_unpack ()
-{
+kmod_src_unpack () {
 	check_KV
 	kmod_universal_unpack
 }
@@ -267,8 +266,7 @@ kmod_universal_unpack()
 	fi
 }
 
-kmod_src_compile ()
-{
+kmod_src_compile () {
 	if is_kernel 2 5 || is_kernel 2 6
 	then
 		# If we're on 2.5/2.6 and not koutputing, we need to make
@@ -283,8 +281,7 @@ kmod_src_compile ()
 	emake KERNEL_DIR=${KERNEL_DIR} || die
 }
 
-kmod_pkg_postinst()
-{
+kmod_pkg_postinst() {
 	einfo "Checking kernel module dependancies"
 	test -r "${ROOT}/${KV_OUTPUT}/System.map" && \
 		depmod -ae -F "${ROOT}/${KV_OUTPUT}/System.map" -b "${ROOT}" -r ${KV}
