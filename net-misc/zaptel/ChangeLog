@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.70 2006/02/02 01:14:58 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.71 2006/02/28 02:20:53 stkn Exp $
+
+  28 Feb 2006; Stefan Knoblich <stkn@gentoo.org>
+  -files/zaptel-bristuff-0.2.0-RC7k.patch,
+  -files/zaptel-bristuff-0.2.0-RC8l.patch, -files/zaptel-1.0.3-gentoo.diff,
+  -zaptel-1.0.4-r1.ebuild, -zaptel-1.0.6-r1.ebuild,
+  -zaptel-1.0.9_p1-r1.ebuild:
+  Removed old 1.0.x versions.
 
 *zaptel-1.2.3 (02 Feb 2006)
 
