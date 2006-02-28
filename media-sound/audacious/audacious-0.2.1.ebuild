@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.2.1.ebuild,v 1.2 2006/02/28 20:06:51 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.2.1.ebuild,v 1.3 2006/02/28 21:50:47 chainsaw Exp $
 
-IUSE="aac alsa esd flac gnome jack lirc mmx modplug mp3 musepack nls oss sdl sid sndfile vorbis wma"
+IUSE="aac alsa esd flac gnome jack lirc mmx modplug mp3 musepack nls oss sid sndfile vorbis wma"
 
 inherit flag-o-matic
 
