@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.14 2006/01/12 13:41:52 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.15 2006/02/28 03:05:35 vapier Exp $
 
 # !!!!!!!!!!
 #
@@ -15,19 +15,16 @@
 # This eclass differs from kmod.eclass because it doesn't require modules
 # to be added to the kernel source tree first.
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Based on the $ECLASS eclass"
 
 SRC_URI="${SRC_URI:-unknown - please fix me!!}"
 KERNEL_DIR="${KERNEL_DIR:-/usr/src/linux}"
 
-kernel-mod_getmakefilevar ()
-{
+kernel-mod_getmakefilevar() {
 	grep $1 $2 | head -n 1 | cut -d = -f 2- | awk '{ print $1 }'
 }
 
-kernel-mod_getversion ()
-{
+kernel-mod_getversion() {
 	# yes, this is horrible, but it is effective
 	#
 	# KV_DIR contains the real directory name of the directory containing
@@ -90,8 +87,7 @@ kernel-mod_getversion ()
 	einfo "Building for Linux ${KV_VERSION_FULL} found in ${KERNEL_DIR}"
 }
 
-kernel-mod_configoption_present ()
-{
+kernel-mod_configoption_present() {
 	[ -e "${KERNEL_DIR}/.config" ] || die "kernel has not been configured yet"
 
 	if egrep "^CONFIG_${1}=[ym]" ${ROOT}/usr/src/linux/.config >/dev/null
@@ -102,8 +98,7 @@ kernel-mod_configoption_present ()
 	fi
 }
 
-kernel-mod_configoption_module ()
-{
+kernel-mod_configoption_module() {
 	[ -e "${KERNEL_DIR}/.config" ] || die "kernel has not been configured yet"
 
 	if egrep "^CONFIG_${1}=[m]" ${ROOT}/usr/src/linux/.config >/dev/null
@@ -114,8 +109,7 @@ kernel-mod_configoption_module ()
 	fi
 }
 
-kernel-mod_configoption_builtin ()
-{
+kernel-mod_configoption_builtin() {
 	[ -e "${KERNEL_DIR}/.config" ] || die "kernel has not been configured yet"
 
 	if egrep "^CONFIG_${1}=[y]" ${ROOT}/usr/src/linux/.config >/dev/null
@@ -126,13 +120,11 @@ kernel-mod_configoption_builtin ()
 	fi
 }
 
-kernel-mod_modules_supported ()
-{
+kernel-mod_modules_supported() {
 	kernel-mod_configoption_builtin "MODULES"
 }
 
-kernel-mod_check_modules_supported ()
-{
+kernel-mod_check_modules_supported() {
 	if ! kernel-mod_modules_supported
 	then
 		eerror "Your current kernel does not support loading external modules."
@@ -141,8 +133,7 @@ kernel-mod_check_modules_supported ()
 	fi
 }
 
-kernel-mod_checkzlibinflate_configured ()
-{
+kernel-mod_checkzlibinflate_configured() {
 	einfo "Checking for status of CONFIG_ZLIB_INFLATE support in your kernel"
 
 	. ${KERNEL_DIR}/.config || die "kernel has not been configured yet"
@@ -207,8 +198,7 @@ kernel-mod_checkzlibinflate_configured ()
 	die "Kernel doesn't include zlib support"
 }
 
-kernel-mod_src_compile ()
-{
+kernel-mod_src_compile() {
 	emake KERNEL_DIR=${KERNEL_DIR} || die
 }
 
