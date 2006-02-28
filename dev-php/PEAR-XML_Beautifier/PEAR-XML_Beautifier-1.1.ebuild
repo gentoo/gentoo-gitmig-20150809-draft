@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Beautifier/PEAR-XML_Beautifier-1.1.ebuild,v 1.8 2004/11/07 04:04:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Beautifier/PEAR-XML_Beautifier-1.1.ebuild,v 1.9 2006/02/28 09:09:41 sebastian Exp $
 
 inherit php-pear
 
@@ -9,3 +9,5 @@ LICENSE="PHP"
 SLOT="0"
 KEYWORDS="x86 ppc ia64 sparc"
 IUSE=""
+RDEPEND="dev-php/PEAR-XML_Util
+	dev-php/PEAR-XML_Parser"
