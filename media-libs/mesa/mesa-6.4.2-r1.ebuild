@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2-r1.ebuild,v 1.1 2006/02/16 04:30:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2-r1.ebuild,v 1.2 2006/02/28 01:28:43 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -55,7 +55,9 @@ S="${WORKDIR}/${MY_P}"
 # Think about: ggi, svga, fbcon, no-X configs
 
 if use debug; then
-	RESTRICT="${RESTRICT} nostrip"
+	if ! has splitdebug ${FEATURES}; then
+		RESTRICT="${RESTRICT} nostrip"
+	fi
 fi
 
 pkg_setup() {
