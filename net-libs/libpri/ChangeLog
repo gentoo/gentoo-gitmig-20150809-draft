@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpri
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.46 2006/02/02 00:55:53 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.47 2006/02/28 02:23:39 stkn Exp $
+
+  28 Feb 2006; Stefan Knoblich <stkn@gentoo.org> -libpri-1.0.4.ebuild,
+  -libpri-1.0.6.ebuild, -libpri-1.0.7.ebuild, -libpri-1.0.9.ebuild:
+  Removed old 1.0.x versions.
 
 *libpri-1.2.2 (02 Feb 2006)
 
