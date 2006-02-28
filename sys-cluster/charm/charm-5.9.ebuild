@@ -1,13 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.3 2006/01/12 21:38:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.4 2006/02/28 02:58:56 markusle Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Charm++ is a message-passing parallel language and runtime system."
 LICENSE="charm"
 HOMEPAGE="http://charm.cs.uiuc.edu/"
-SRC_URI="${P}.tar.gz"
+SRC_URI="mirror://gentoo/${PN}-examples-gentoo.patch.bz2
+		${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~x86"
@@ -29,9 +30,9 @@ pkg_nofetch() {
 	echo
 	einfo "Please download ${P}.tar.gz from"
 	einfo "${CHARM_DOWNLOAD}"
-	einfo "after agreeing to the license and then move it to "
-	einfo "${DISTDIR}"
-	einfo "Be sure to select the ${PV} version!"
+	einfo "as well as ${PN}-examples-gentoo.patch.bz2"
+	einfo "from ${GENTOO_MIRRORS}"
+	einfo "and then move both to ${DISTDIR}"
 	echo
 }
 
@@ -48,7 +49,7 @@ src_unpack() {
 
 	# patch the example Makefiles so they run out of
 	# the box
-	epatch "${FILESDIR}"/${PN}-examples-gentoo.patch
+	epatch "${WORKDIR}"/${PN}-examples-gentoo.patch
 
 	# enable proper detection of python in configure
 	epatch "${FILESDIR}"/${PN}-python-configure-gentoo.patch
