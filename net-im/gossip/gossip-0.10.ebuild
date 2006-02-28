@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.10.ebuild,v 1.2 2006/02/24 14:02:26 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.10.ebuild,v 1.3 2006/02/28 22:42:46 compnerd Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Lightweight Jabber client for GNOME"
-HOMEPAGE="http://gossip.imendio.org/"
+HOMEPAGE="http://developer.imendio.com/wiki/Gossip"
 
 LICENSE="GPL-2"
 SLOT="0"
