@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.5.ebuild,v 1.14 2005/12/31 00:10:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.5.ebuild,v 1.15 2006/02/28 18:54:26 sanchan Exp $
 
 inherit eutils libtool
 
@@ -14,6 +14,7 @@ KEYWORDS="alpha ~amd64 ia64 ~ppc ~ppc-macos ppc64 sparc x86"
 IUSE="doc debug nls test"
 
 DEPEND="sys-devel/libtool
+	dev-util/pkgconfig
 	test? ( dev-libs/check )
 	doc? ( app-text/openjade
 		>=app-text/docbook-sgml-dtd-3.1-r1 )"
@@ -49,6 +50,7 @@ src_test() {
 src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS NEWS README
+	dobin confuse-config
 	if use doc ; then
 		dohtml doc/html/*.html || die
 	fi

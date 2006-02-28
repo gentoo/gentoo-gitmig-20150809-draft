@@ -1,15 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4565cd96bcb306c756d080a383a3f00c ChangeLog 1554
-MD5 d8178b0758566f2c07d770e19c452dc3 confuse-2.5.ebuild 1229
+MD5 22bd950adfbe7ae3ab26bf9ff250b4ff ChangeLog 1823
+RMD160 133d78b1f721205f1ffe388ce366712d2af0f499 ChangeLog 1823
+SHA256 04546f41af092a9bb93f60918de86743933b1eae150178fa9403004d895777db ChangeLog 1823
+MD5 5032a76f7e4e6128e670add1b5da0a0b confuse-2.5.ebuild 1269
+RMD160 271e1dacfd53ea2c284b05d8e44650710299a138 confuse-2.5.ebuild 1269
+SHA256 b176b2df6d7395cbd11f5b31f1245bdfafa01a8ae36b71b2454de37594297d07 confuse-2.5.ebuild 1269
 MD5 e63af9d342810c6b32080c4d5c4a5456 files/confuse-2.5-maketest.patch 581
-MD5 52586bc716a63758a26e05b633a2bab0 files/digest-confuse-2.5 63
+RMD160 4be7e8c57f29fbd97e8c26d7885be32f2ae26c8f files/confuse-2.5-maketest.patch 581
+SHA256 2ea10b5ae544e3c0c13222b9c1dc9a2a66f1493456aff2cacb45f9b3c539727c files/confuse-2.5-maketest.patch 581
+MD5 92f4beaecc4c511facf974b5a65c19bc files/digest-confuse-2.5 235
+RMD160 1dba1ac55329f6e3a4987c40a27e3b1cad96efa8 files/digest-confuse-2.5 235
+SHA256 02af8b771cc982ff935bf9c1e43213dcb5fa13c3e5076c2de848fda2ed48f01b files/digest-confuse-2.5 235
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
+RMD160 3965c22a153ed350bcbd52de07c08ad47dd03cd7 metadata.xml 165
+SHA256 fb7ede94a0633f77d601e3e81580eac1624a3bca14401a49d94082579507ba0a metadata.xml 165
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDtcyIAiZjviIA2XgRApk5AJ9k5uMbZ4ehQXoDmwhcDhcMkdFf2wCgyeT6
-9WcnJvCUZAFd8HQRZz+wekM=
-=KmjQ
+iD8DBQFEBJvl1c24p4LpXH8RAnnBAJ9Py7pDSJM1PopiXNtkKcMcRLLalwCeMoR+
+M5T2HvHerGhrBm4EA68kAP0=
+=eVcB
 -----END PGP SIGNATURE-----
