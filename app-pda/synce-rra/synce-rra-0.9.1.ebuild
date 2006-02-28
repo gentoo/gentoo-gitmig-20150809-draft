@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-rra/synce-rra-0.9.1.ebuild,v 1.1 2006/01/11 06:31:06 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-rra/synce-rra-0.9.1.ebuild,v 1.2 2006/02/28 21:35:55 truedfx Exp $
 
 inherit eutils autotools
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-textrel.patch
+	epatch "${FILESDIR}"/${P}-nowerror.patch
 	sed -i -e \
 	"s:libtoolize --copy --automake:libtoolize --copy --force	--automake:g" \
 	bootstrap

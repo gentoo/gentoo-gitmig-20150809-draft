@@ -1,24 +1,55 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0fec2a14370ff21fc49f7274d0c65039 ChangeLog 1862
+MD5 030d1d901472af3bba2192785a80dfb0 ChangeLog 2014
+RMD160 48ba4cb99cdfbc278d2d60ae660446aa9db6f0ca ChangeLog 2014
+SHA256 456ea2fc13e2486b86bcfe3b2ff7d494ef33713af1d443d16765f24445062f05 ChangeLog 2014
 MD5 23c695b57b320fc579e5eeca9eddeb42 files/0.9.0-gcc34.patch 635
+RMD160 6462087d6c8f5e92a849c41eff1c9e387c298ea2 files/0.9.0-gcc34.patch 635
+SHA256 bda7559999ac3bcd312f8d53fa6b225d97328e03a8613e53855d2688f76bc1a8 files/0.9.0-gcc34.patch 635
 MD5 9f0b8f60164fc14c9920e012284136b1 files/digest-synce-rra-0.8.4 67
+RMD160 121b89472490d9f0a4942d58477cef597e799fab files/digest-synce-rra-0.8.4 67
+SHA256 f65970c96209ec90b8064f00ffdcf330de5c8123965c131423108dbd3e375844 files/digest-synce-rra-0.8.4 67
 MD5 9f0b8f60164fc14c9920e012284136b1 files/digest-synce-rra-0.8.4-r1 67
+RMD160 121b89472490d9f0a4942d58477cef597e799fab files/digest-synce-rra-0.8.4-r1 67
+SHA256 f65970c96209ec90b8064f00ffdcf330de5c8123965c131423108dbd3e375844 files/digest-synce-rra-0.8.4-r1 67
 MD5 e74de00e3dbd372656493163ee5d1dbb files/digest-synce-rra-0.8.9 135
+RMD160 f42d413c96af76b28879f47439a1a155f84eff39 files/digest-synce-rra-0.8.9 135
+SHA256 0cc0272414d4a704f2b5e6453cc5c70bdabd72b00f5dc49c71543abca3f06507 files/digest-synce-rra-0.8.9 135
 MD5 0a0b5bd2c90ed9063fa72627b67a53d6 files/digest-synce-rra-0.9.0 67
+RMD160 eac2e8ce4f84e5884505a7441be960558268e9db files/digest-synce-rra-0.9.0 67
+SHA256 56f06779543fa27119916b27591f59eb0e2005744e2c3b6370f1f6329d7d375a files/digest-synce-rra-0.9.0 67
 MD5 a19ae1e965659eee16fbf9c13eb8b5f0 files/digest-synce-rra-0.9.1 67
+RMD160 8d1faa01a4eb5808afeac00e5188598df06b45b3 files/digest-synce-rra-0.9.1 67
+SHA256 b7065c2a2fb7acfa04221159f7fb411ae6f920ff0253bf1e04d09a5f6d1abe08 files/digest-synce-rra-0.9.1 67
+MD5 fa576753e0be1d9fa1e8711d3eed9316 files/synce-rra-0.9.1-nowerror.patch 1437
+RMD160 2ac23ef812b449b6605c320a994580aa9d946577 files/synce-rra-0.9.1-nowerror.patch 1437
+SHA256 7f6cba4610771e8195d63e8449a729f6d0e3e82b401d6e2420011ebd2fb0322e files/synce-rra-0.9.1-nowerror.patch 1437
 MD5 408f942b4cda92c45d93908a0817c8e0 files/synce-rra-0.9.1-textrel.patch 17285
+RMD160 93ae45b38c02d27b7ba701ed9623b960f77fcaaf files/synce-rra-0.9.1-textrel.patch 17285
+SHA256 868ec268a7109981bf3282ddba27b10a6012bf6a1c1c9b59d1b29ca99c734f3a files/synce-rra-0.9.1-textrel.patch 17285
 MD5 7d421aa9d03395eea78de128fe6ad125 metadata.xml 229
+RMD160 84a856569c303c8b8ab54a71649f54a20c21f91e metadata.xml 229
+SHA256 4e2c737921ba817aab196c423ef7f295e2281e33fc23d4fed24d2bbc6bd7243c metadata.xml 229
 MD5 009223ace0c235f525628b65a929d806 synce-rra-0.8.4-r1.ebuild 717
+RMD160 0b66a693f74b6947477237a4573171a37b5dcd0b synce-rra-0.8.4-r1.ebuild 717
+SHA256 91000bcbe21fd897caa0ad55fb081c898aa9fbca93541e8c69d65c1e384b0d30 synce-rra-0.8.4-r1.ebuild 717
 MD5 a39ec8721ebdc398274d29f445077a7c synce-rra-0.8.4.ebuild 671
+RMD160 6fbe5c5f4454695eae70652abd400b535c518a4a synce-rra-0.8.4.ebuild 671
+SHA256 a336483a34adea1001b8413ae3daf2262b633a6ef4f337720a0df55cbf1b0a44 synce-rra-0.8.4.ebuild 671
 MD5 49b45141c22209fe804867a5879bc87f synce-rra-0.8.9.ebuild 824
+RMD160 50425edfd4653571304f372712098c6b19760162 synce-rra-0.8.9.ebuild 824
+SHA256 cb97eefa54347e3d5c77366a45d1f5a5844f17d469715c5664159689b9e89aea synce-rra-0.8.9.ebuild 824
 MD5 dc17bd30dec8123639832e5d5c07b18a synce-rra-0.9.0.ebuild 756
-MD5 1021e38ee957e840a2bbcd79856617a1 synce-rra-0.9.1.ebuild 880
+RMD160 5d8a5024acb55cbc28efdd31734acecfb15a7778 synce-rra-0.9.0.ebuild 756
+SHA256 6776deca9ae28fb77172931d8b4e18fabd3a7d2dad6273638077472246582e1b synce-rra-0.9.0.ebuild 756
+MD5 846f3e1f28005018922ada53e5610982 synce-rra-0.9.1.ebuild 919
+RMD160 8e13c38051380341bec057b6e6eff6e76e74682e synce-rra-0.9.1.ebuild 919
+SHA256 424bbb463c1cb7cd9a80451bb2daa5938b2d7093917245e135b59f3ced6b214c synce-rra-0.9.1.ebuild 919
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDxRx1FdQwWVoAgN4RAob3AJ4ySxz0zugHF6ViDl9DS8pdH/+ejQCeKpk0
-Yk1QgVquJfRH6IvueF1shU0=
-=uOIo
+iD8DBQFEBMJUwnQyISwouHwRAnDGAKCgRkJHC8PNWh53Svtcqjd7FEgiQgCeM2mE
+0kO7XWX6dl21ATAlxOcp4Tk=
+=xjtz
 -----END PGP SIGNATURE-----
