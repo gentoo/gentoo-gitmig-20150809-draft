@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gsnes9x/gsnes9x-3.12.ebuild,v 1.1 2005/07/22 00:13:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gsnes9x/gsnes9x-3.12.ebuild,v 1.2 2006/02/28 21:01:35 tupone Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ S=${WORKDIR}/GSnes9x-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${P}-sandbox.patch"
 	autoheader && \
 	aclocal -I macros && \
 	automake --gnu --include-deps Makefile -c -a && \
