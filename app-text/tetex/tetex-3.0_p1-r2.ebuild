@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r2.ebuild,v 1.2 2006/02/15 16:16:26 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r2.ebuild,v 1.3 2006/02/28 12:25:59 ehmsen Exp $
 
 inherit tetex-3 flag-o-matic versionator virtualx
 
@@ -59,6 +59,9 @@ src_test() {
 }
 
 src_install() {
+	insinto /usr/share/texmf/dvips/pstricks
+	doins ${FILESDIR}/pst-circ.pro
+
 	tetex-3_src_install
 
 	# virtex was removed from tetex-3
