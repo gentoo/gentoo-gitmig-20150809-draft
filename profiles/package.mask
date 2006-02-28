@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5044 2006/02/27 20:59:01 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5045 2006/02/28 19:13:17 zzam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -315,10 +315,6 @@ dev-tex/mpm
 # mainly masked due to broken dep, waiting for maintainer comments.
 <gnustep-base/gnustep-gui-0.9.4-r2
 <gnustep-base/gnustep-back-art-0.9.5
-
-# Matthias Schwarzott <zzam@gentoo.org>
-# masked for testing on kernel 2.4
-=media-tv/linuxtv-dvb-1.1.1_p20060108
 
 # John N. Laliberte <allanonjl@gentoo.org> (08 Jan 2006)
 # mask until ia64 tests libgda
