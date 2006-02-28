@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.14 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.15 2006/02/28 02:56:47 vapier Exp $
 #
 # Copyright 2002-2003 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003 Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -51,8 +51,7 @@ elisp_pkg_postrm() {
 	elisp-site-regen
 }
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install \
-	pkg_postinst pkg_postrm
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst pkg_postrm
 
 # Local Variables: ***
 # mode: shell-script ***
