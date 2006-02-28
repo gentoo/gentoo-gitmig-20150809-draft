@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.10 2006/02/12 02:12:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.11 2006/02/28 17:17:54 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
@@ -152,11 +152,14 @@ src_compile () {
 		myconf="${myconf} --disable-ffmpeg"
 	fi
 
+	use vlm && \
+		myconf="${myconf} --enable-vlm --enable-sout" || \
+		myconf="${myconf} --disable-vlm"
+
 	econf \
 		$(use_enable altivec) \
 		$(use_enable stream sout) \
 		$(use_enable httpd) \
-		$(use_enable vlm) \
 		$(use_enable gnutls) \
 		$(use_enable v4l) \
 		$(use_enable cdda) $(use_enable cdda cddax)\
