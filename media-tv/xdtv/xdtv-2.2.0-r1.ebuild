@@ -1,11 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.7 2006/02/04 17:30:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.8 2006/02/28 03:51:10 vapier Exp $
 
 inherit font multilib autotools
 
-IUSE="alsa jpeg encode ffmpeg xvid lirc xinerama
-	neXt Xaw3d mmx zvbi aqua_theme carbone_theme xv debug dvb"
+IUSE="alsa jpeg encode ffmpeg xvid lirc xinerama neXt Xaw3d mmx zvbi aqua_theme carbone_theme xv debug dvb"
 
 DESCRIPTION="TV viewer with support for AVI recording and plugins"
 HOMEPAGE="http://xawdecode.sourceforge.net/"
