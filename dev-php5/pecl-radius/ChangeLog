@@ -1,0 +1,10 @@
+# ChangeLog for dev-php5/pecl-radius
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-radius/ChangeLog,v 1.1 2006/02/28 11:35:30 sebastian Exp $
+
+*pecl-radius-1.2.4 (28 Feb 2006)
+
+  28 Feb 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +pecl-radius-1.2.4.ebuild:
+  Initial ebuild.
+
