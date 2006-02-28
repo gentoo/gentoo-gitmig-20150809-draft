@@ -1,18 +1,16 @@
-MD5 5d3dff4a552a9253481ac645b29dd077 ChangeLog 1168
-RMD160 f6aa85596e41dd6dfc5f278bdd7657393a4c9faf ChangeLog 1168
-SHA256 55d3a24b43aa9fbfed954258c4a7219667dafa57bdd49f05a7e65667d603dacb ChangeLog 1168
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 904f130ca71908f7f902e8aee437d58f ChangeLog 1318
 MD5 5009236d8b451fecef858961aed24428 files/digest-libmodplug-0.7 66
-RMD160 7e7b0a438de10bf76da0d1c96111548761540c38 files/digest-libmodplug-0.7 66
-SHA256 41053000021ec22c91a3b7328c9da9a5dd8b1d3c6f03e9f425d74f263a4e75ec files/digest-libmodplug-0.7 66
 MD5 b10f6248932b7fd4ce0df1a025df6e8a files/libmodplug-0.7-amd64.patch 1550
-RMD160 b3bb1b94f9abfa921b06556640e39017cf0238f9 files/libmodplug-0.7-amd64.patch 1550
-SHA256 2d11e29894222c3b4332019fabb1757701ad57e5027b114c01e98ba06e5793bc files/libmodplug-0.7-amd64.patch 1550
 MD5 9ad05c4679d06d99935b79cc3ad19026 files/libmodplug-0.7-asneeded.patch 421
-RMD160 453028054887c5366aee85a34bfb7571c787fff4 files/libmodplug-0.7-asneeded.patch 421
-SHA256 221ce05b1f727f2c22747463db6b3917f32d74a9cd26ad6c24f96738975568e3 files/libmodplug-0.7-asneeded.patch 421
-MD5 1724088506c54785cdef8ad6a0196193 libmodplug-0.7.ebuild 805
-RMD160 dbdaaec4485904afbd8b0d8ece98c8035ac16fcc libmodplug-0.7.ebuild 805
-SHA256 4767bf4dbb27312e720cc2d248532267c868c40df6f457cbafb97ba6ddf08625 libmodplug-0.7.ebuild 805
+MD5 9888120b364b864da25038707c0e1030 libmodplug-0.7.ebuild 811
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
-RMD160 f9de13e16a150195633b055ebe61bb4cea95160d metadata.xml 248
-SHA256 6a8ca116bded5cdd92cb700f92acd22b01ae159ef1b69c60a03fc9859bb9b3d6 metadata.xml 248
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEBKxzViELBEf1JB0RApkSAJwNZ8Dp+t9wsg2EQWAQlN25LmtpUwCeJsKH
+ckXf7EFLmiY5OHCD5hppTcE=
+=gmUv
+-----END PGP SIGNATURE-----
