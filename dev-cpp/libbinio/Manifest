@@ -1,24 +1,18 @@
-MD5 180503f63fba9ebec47d334b6d86705e ChangeLog 1616
-RMD160 9d2c7da3f917892548912503a2fcd4dc078048fc ChangeLog 1616
-SHA256 4570e43b862682097bd83d5d006d8b1f95cdc1695ea0b2e9d7ec02b7ed406a07 ChangeLog 1616
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 be057eb22187531237d974ea5dfc16a0 ChangeLog 1764
 MD5 2276483f87057a438fb25dc0b61c195c files/digest-libbinio-1.2 65
-RMD160 6a0189f94360a76a5a392475267afdede7a8a3a8 files/digest-libbinio-1.2 65
-SHA256 fbbc95891ffdc47593b394c99cc2b8c965dd3edec69549c8656da8ecd0b4705a files/digest-libbinio-1.2 65
 MD5 e5e473002a0e114687fe4ae1d6ce6381 files/digest-libbinio-1.3 65
-RMD160 03a662a0ea9a01d04343c83422627cd467599885 files/digest-libbinio-1.3 65
-SHA256 fa75ccf83117c1fbd7996a1d89a12c6bf9c8777bf46ced4929e9a76b80b8a856 files/digest-libbinio-1.3 65
 MD5 b2b2352a99072a579e0e8b934c669361 files/digest-libbinio-1.4 65
-RMD160 b7385dfde70e3002d38bcd59711eda1e8852ff26 files/digest-libbinio-1.4 65
-SHA256 14a506c3c07b547ecd04a12e1de0e9d5216ff866bed3324398355e499a38aae2 files/digest-libbinio-1.4 65
 MD5 90c41044d21ff48862e332109ee88b0f libbinio-1.2.ebuild 553
-RMD160 dd41ee2e9eb4b0cab9f4bb43a017cf6ae853cb04 libbinio-1.2.ebuild 553
-SHA256 e60618b6fe4a095f636b14def427760dcff8b6539ec5bced70d8361970a833a9 libbinio-1.2.ebuild 553
 MD5 fdb8e82b886896da0b70de4aebe0bed3 libbinio-1.3.ebuild 553
-RMD160 6b194e19d66ad46ce410ec613e63ef3499ddc101 libbinio-1.3.ebuild 553
-SHA256 e62ef396b985f6bf83c26bed22e492f946bc7b855613f7a4a3dbb0b0027fea01 libbinio-1.3.ebuild 553
-MD5 a89a3e001f5f8c7b1f8d8070934e85fe libbinio-1.4.ebuild 568
-RMD160 5cda6a7f06dd0ce28adb6cefe4529a0ac1e54d08 libbinio-1.4.ebuild 568
-SHA256 e67b295ffbb230377ab772e54a8a0c75870e6118874aa0c84620e624a5ec0da9 libbinio-1.4.ebuild 568
+MD5 1daf16d458940719ad0a2bcbac877f8b libbinio-1.4.ebuild 574
 MD5 0c27f7afe2c19e3a67f3c7d36045ef6e metadata.xml 217
-RMD160 10502ca8db744fb17f8aa850db63b4693089d9b6 metadata.xml 217
-SHA256 b31effdc7f36117156646f1e71b9b0389589d290da87f3e6351aa34a30d777f6 metadata.xml 217
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEBKwSViELBEf1JB0RAkzsAJ9FjNruRsxyD/SFMuvUPauDu96tDwCdH8ND
+M+AyFue4yQ3sqbOaPcEEpKg=
+=ajL9
+-----END PGP SIGNATURE-----
