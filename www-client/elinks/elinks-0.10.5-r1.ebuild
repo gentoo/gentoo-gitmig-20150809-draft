@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5-r1.ebuild,v 1.6 2006/01/22 11:41:44 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5-r1.ebuild,v 1.7 2006/02/28 01:50:02 jer Exp $
 
 inherit eutils
 
 IUSE="gpm zlib bzip2 ssl X lua guile perl ruby gnutls idn javascript ipv6 \
-samba ftp gopher nntp finger javascript debug nls"
+samba ftp gopher nntp finger debug nls"
 
 MY_P=${P/_/}
 DESCRIPTION="Advanced and well-established text-mode web browser"
