@@ -1,7 +1,31 @@
-MD5 28ecd1fb2ebf920a2d7ad09ec69039db ChangeLog 1717
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f04a960c8443e189c40ea1d90fc2c19c ChangeLog 1818
+RMD160 01ca711693d2d13837b9e5836b26bc3a37f3d6b0 ChangeLog 1818
+SHA256 3b6f3f7965f17b5316107feb211848e2226208201b2c24f486079dbe630ec42a ChangeLog 1818
 MD5 aecc8da463fd7a070c24c5441ebb5e5c files/digest-knutclient-0.8.5 69
+RMD160 d629a8a09589d5fb02cc9d5a5faed9ffd7ee1bdf files/digest-knutclient-0.8.5 69
+SHA256 66ac27118f6fb77f0baf129dc8ee190fc8b6dd47a075810cf1c87f147ddbd5f3 files/digest-knutclient-0.8.5 69
 MD5 e4d5c361a955a869636e3e5e42a72a3a files/digest-knutclient-0.8.6 69
+RMD160 e7ca753a7ab6a45749a8a5949adae407173aeb92 files/digest-knutclient-0.8.6 69
+SHA256 5813694e0fa6d3f69e042ac94351c32412a4653b243e4712bbacbd55fbd1b871 files/digest-knutclient-0.8.6 69
 MD5 8e2ff7d646fbe3bf5bd42a98079b5a6e files/knutclient-0.8.5-arts-configure.patch 3569
+RMD160 c74f1502c67a7cbf23bb28d497e1e529a98ebfb6 files/knutclient-0.8.5-arts-configure.patch 3569
+SHA256 a43e189b54386a7ddb3dc845272cd931ea053ee095f675d454ffd22e72f6ad0f files/knutclient-0.8.5-arts-configure.patch 3569
 MD5 dcd346b3b0b07de7ede806cb3c418d94 knutclient-0.8.5.ebuild 620
-MD5 bf92521f2bcb0418a093ab95994e02ca knutclient-0.8.6.ebuild 639
+RMD160 abf6a60cc4d3cd0f98b34f12112c8ea3b34c6ac9 knutclient-0.8.5.ebuild 620
+SHA256 ca3bd4869c92a375f56979a97d157bef3196b2a38db6a634d93bc0a57ece02bb knutclient-0.8.5.ebuild 620
+MD5 7d35074301a27cf1282e8d17c39ed6ee knutclient-0.8.6.ebuild 634
+RMD160 fd1f53a397bba036c6a632766d3e9802d241a085 knutclient-0.8.6.ebuild 634
+SHA256 1772e0981b57ba9e7ee479b9f38e6890927ae355731cb117f82135912e277a4c knutclient-0.8.6.ebuild 634
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEA+OaSENan+PfizARArQgAJ4qtNRVgGbYGWniCH1iCvXDYzBBmgCbBRM+
+7eW8HSqmMEsxf9/8CLl0W4k=
+=7YqS
+-----END PGP SIGNATURE-----
