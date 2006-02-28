@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sounds/asterisk-sounds-1.2.0_beta1.ebuild,v 1.1 2005/09/09 18:58:28 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sounds/asterisk-sounds-1.2.1.ebuild,v 1.1 2006/02/28 02:45:33 stkn Exp $
 
 inherit eutils
 
@@ -16,19 +16,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~hppa ~amd64 ~ppc"
 
-DEPEND="net-misc/asterisk"
+DEPEND=">=net-misc/asterisk-1.2.0"
 
 S="${WORKDIR}/${MY_P}"
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-
-	# some descriptions missing are missing the .gsm extension, fix them
-	# make install fails otherwise
-	epatch ${FILESDIR}/${P}-description.diff
-}
 
 src_install() {
 	make DESTDIR=${D} install || die "Make install failed"

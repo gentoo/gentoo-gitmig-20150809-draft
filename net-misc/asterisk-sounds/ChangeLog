@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk-sounds
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sounds/ChangeLog,v 1.8 2006/02/28 02:26:47 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sounds/ChangeLog,v 1.9 2006/02/28 02:45:33 stkn Exp $
+
+*asterisk-sounds-1.2.1 (28 Feb 2006)
+
+  28 Feb 2006; Stefan Knoblich <stkn@gentoo.org>
+  -files/asterisk-sounds-1.2.0_beta1-description.diff,
+  -asterisk-sounds-1.2.0_beta1.ebuild, +asterisk-sounds-1.2.1.ebuild:
+  Version bump and remove 1.2.0_beta version.
 
   28 Feb 2006; Stefan Knoblich <stkn@gentoo.org>
   -asterisk-sounds-1.0.6.ebuild:
