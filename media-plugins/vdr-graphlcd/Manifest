@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c4cedd0d8a94003cbebde0145c6c6d19 ChangeLog 869
+MD5 56a04a17f4e71612c94b055c8c2e62f5 ChangeLog 978
 MD5 1b06ba652dc14eb1a4884d49cdd4e3df files/0.1.2/radiotext-lcr-service.diff 3469
 MD5 b52e340ed185e77044523dcee028aae6 files/confd 681
 MD5 c06ef00216c435d94502bd44c0cf7e51 files/digest-vdr-graphlcd-0.1.2_pre6-r1 72
 MD5 517fd6e47ab25170f56df5a2a07510e6 files/rc-addon.sh 453
 MD5 363fe851c7edc1284983ea5393b8c2a9 metadata.xml 403
-MD5 824f70c028a55184036797fed05dfacd vdr-graphlcd-0.1.2_pre6-r1.ebuild 2528
+MD5 697cc942cd5927ccc84fbf7025f5219a vdr-graphlcd-0.1.2_pre6-r1.ebuild 2527
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 Comment: no further Information
 
-iD8DBQFEA4uvdn07HTTCgIoRAsj8AJ4u4S/12yxrdF5LrxjlwnVfPqBPyACdGdTz
-3jObOOjrX5dNG7rap2bCXnw=
-=mAbn
+iD8DBQFEA5kTdn07HTTCgIoRAonTAKCaM9/AITqKQtHmkccqOjPjhOShgACaA4fa
+DL9+k1iU3qzlJMjzYokApjM=
+=Rt4a
 -----END PGP SIGNATURE-----
