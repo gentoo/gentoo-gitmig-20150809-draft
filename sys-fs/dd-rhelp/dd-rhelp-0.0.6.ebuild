@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rhelp/dd-rhelp-0.0.6.ebuild,v 1.1 2006/02/28 01:46:39 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rhelp/dd-rhelp-0.0.6.ebuild,v 1.2 2006/02/28 01:56:28 kumba Exp $
 
 MY_P="${P/-/_}"
 S="${WORKDIR}/${MY_P}"
@@ -14,11 +14,6 @@ KEYWORDS="~mips ~x86"
 IUSE=""
 
 DEPEND="sys-fs/dd-rescue"
-
-src_compile() {
-	cd ${S}
-	econf && emake
-}
 
 src_install() {
 	make install DESTDIR="${D}" || die
