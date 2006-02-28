@@ -1,14 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c2dc308cc3c47f716be20338850416ed ChangeLog 876
+RMD160 8994a9a5b0332a13728c6c76b233b98e0459e7d4 ChangeLog 876
+SHA256 cd25e7defa1927d7318ae4ad5f35c6e9a0311c43458c306a1f961cd47c760d9b ChangeLog 876
 MD5 95d299423cea7583af6bda19176114db files/digest-genromfs-0.5.1 65
+RMD160 2f18329e79f9d3dcd0da7ffdb70d341e0181e890 files/digest-genromfs-0.5.1 65
+SHA256 e5db6f3f9beff92ec2a2b337c9d3d5aa6e977aa0cf11c89ac6d5ef524d6777fe files/digest-genromfs-0.5.1 65
 MD5 7c3e90348452a90bb8b970796de2e070 files/genromfs-0.5.1-build.patch 315
+RMD160 de6d43274503347d0e6a9c013a715e42fb753aed files/genromfs-0.5.1-build.patch 315
+SHA256 e3f38f38943125b1934b95f36becb4f56f92ea56be8ca06aa5f7f65aa861fb1c files/genromfs-0.5.1-build.patch 315
 MD5 2b2b26502f433fc7a265edbdcc4b0334 genromfs-0.5.1.ebuild 702
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvI3l2+ySkm8kpY0RAvvSAJ9aPJT1NHEONWkb14bods/on6+zOwCgoIa2
-um54R9xRzRPvJ+7rteOcjDI=
-=IfPf
------END PGP SIGNATURE-----
+RMD160 555d298be5df3d7915ef47ad20750d5ea76399bf genromfs-0.5.1.ebuild 702
+SHA256 d0b1138bf61df753281cfaba0ece8bfd914de0f28df5893d3bbb53758a00fbf1 genromfs-0.5.1.ebuild 702
+MD5 6ed687143b0bdc0e022ebb9642db7c2e metadata.xml 336
+RMD160 80a3cf349a37296e7b8656617a1986affdc437e9 metadata.xml 336
+SHA256 40c97b8a1692406683530c7f6ec7127e2d3f97865989a2de720a32897be5718d metadata.xml 336
