@@ -1,0 +1,11 @@
+# ChangeLog for sys-fs/dd-rhelp
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rhelp/ChangeLog,v 1.1 2006/02/28 01:46:39 kumba Exp $
+
+*dd-rhelp-0.0.6 (28 Feb 2006)
+
+  28 Feb 2006; Joshua Kinard <kumba@gentoo.org> +metadata.xml,
+  +dd-rhelp-0.0.6.ebuild:
+  Initial import of dd_rhelp; a wrapper script for dd_rescue that continuously
+  tries to recover data from bad/damaged block devices (like disks).
+
