@@ -2,14 +2,21 @@
 Hash: SHA1
 
 MD5 940a19d86d75c3c898bfd52e49d775f8 ChangeLog 496
+RMD160 6567673f890eff7454f2fbd6d12a67eeeb1552bc ChangeLog 496
+SHA256 b00b82a71b56a5f81bd6004c8176e9535dfef16eaed723486bf9464818f90149 ChangeLog 496
 MD5 3208436a558872bd854ba7fdfb067bae files/digest-vdr-lcr-0.0.3 65
+RMD160 e62155e22f1e8266aaaba7860a1b46ca651900d4 files/digest-vdr-lcr-0.0.3 65
+SHA256 8dfd9bfb089ab38f42851fdffcd30da28fe6831d9f9f52ade1c78b4e96d22a62 files/digest-vdr-lcr-0.0.3 65
 MD5 39901b6ecb5930c3cf71fefaf9d10228 metadata.xml 478
-MD5 3b72a9800404bf4472938f485ed762c6 vdr-lcr-0.0.3.ebuild 924
+RMD160 62abe311cbffbdc6cc53077d61c61e6c56a26d09 metadata.xml 478
+SHA256 ecb47d31cbb74129d21cfdd3684166c0a5655da49312b65927401348cb44b3e4 metadata.xml 478
+MD5 d2a514800bdb1a740ca71c8b4acb98eb vdr-lcr-0.0.3.ebuild 940
+RMD160 c2dee94c3356072b8678c1915926ade7c39aad91 vdr-lcr-0.0.3.ebuild 940
+SHA256 3107ee35a361ca62112c1e373dccb6940b6c1e5f9e6996cf4b9e8e773d4f24e5 vdr-lcr-0.0.3.ebuild 940
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-Comment: no further Information
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEA57ldn07HTTCgIoRAm2fAKC4ZZrtz4gy6SMYG2NB2uuKPqUqFwCfXsEb
-qBKx3roDQ32MbQWq+i6Mpqg=
-=Fsq9
+iD8DBQFEA+H4CRZPokWLroQRAt1EAKDEmf1xkklPei8+6sjXW2PrFp8sGgCaAh3u
+UIct6iMIzlQ+JeKYoicw/Vk=
+=qwte
 -----END PGP SIGNATURE-----
