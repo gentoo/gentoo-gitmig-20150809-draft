@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.9-r2.ebuild,v 1.7 2006/02/27 14:14:04 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.9-r2.ebuild,v 1.8 2006/02/28 05:34:03 halcy0n Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins gnome2 eutils flag-o-matic libtool
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11.5
 	>=dev-util/pkgconfig-0.9"
 
-PDEPEND="oss? ( =media-plugins/gst-plugins-oss-0.8*)
+PDEPEND="oss? ( =media-plugins/gst-plugins-oss-0.8* )
 	alsa? ( =media-plugins/gst-plugins-alsa-0.8* )
 	esd? ( =media-plugins/gst-plugins-esd-0.8* )"
 

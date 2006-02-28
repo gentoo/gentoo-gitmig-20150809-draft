@@ -1,21 +1,73 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7805e1daa3e2650b311ce3750d3e5087 ChangeLog 19420
+RMD160 e7504284c96d95a4c73adea4e71ee78ebf7412f3 ChangeLog 19420
+SHA256 47f726f36532e4a577e7ec929f642bdf8523274ac837be8bf32d628759c2db36 ChangeLog 19420
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-0.8.10 72
+RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-0.8.10 72
+SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-0.8.10 72
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-0.8.11 72
+RMD160 07cd6ccf43ed8faecb5ed4337eea60fbc6e3e3bb files/digest-gst-plugins-0.8.11 72
+SHA256 a76335f344c7fb9dc3151468f9e4fab17f2112d74ba799a05906df748b74f5fd files/digest-gst-plugins-0.8.11 72
 MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-0.8.12 72
+RMD160 8b2eba97f297dd77e2f30774b899c300bf6836d6 files/digest-gst-plugins-0.8.12 72
+SHA256 13553c6cc65d4b9da823594715049ea6a89679f80d0f7e62aacef4bffef57cbf files/digest-gst-plugins-0.8.12 72
 MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-0.8.2 71
+RMD160 362432529c08687318541e969eb60f6dfb84449d files/digest-gst-plugins-0.8.2 71
+SHA256 07e6f6f1a0108253473079d85f29a885ad002c21e655140ed94552cc5a2b5d8e files/digest-gst-plugins-0.8.2 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-0.8.8 71
+RMD160 74fb762aa4b4c37e0cf13ceb60aec1e2c80a83dd files/digest-gst-plugins-0.8.8 71
+SHA256 8c042a1f86509a2d902bbc3d63874d8347af12c132215e8c67582fa8835e6089 files/digest-gst-plugins-0.8.8 71
 MD5 e7dee4055c35107671d72e665c03c783 files/digest-gst-plugins-0.8.8-r2 147
+RMD160 a95a3f197c9865f8ca46229bd12c66d94e61fe9e files/digest-gst-plugins-0.8.8-r2 147
+SHA256 3e9f506f63722ed05ded7610f08eb6bf77c6505e8658b919c30ec2d173734468 files/digest-gst-plugins-0.8.8-r2 147
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-0.8.9-r2 71
+RMD160 59910917ac9fe162d7686f1702fb5bdd98a25154 files/digest-gst-plugins-0.8.9-r2 71
+SHA256 06e49fc70cfec9d2553ced28a9c9246324fdd21c25f6bea9142de83f1f5a8153 files/digest-gst-plugins-0.8.9-r2 71
 MD5 a619f8fe6364e211b5c12d36fa4c60dc files/gst-plugins-0.8.11-conffix.patch 845
+RMD160 617ccaab015478f6ac6b79f0ef04fb96aefd053b files/gst-plugins-0.8.11-conffix.patch 845
+SHA256 a5276aa1fc567987cdd67b2024e8ee27f3a83d99834a6b9e09647f7aa4f9c870 files/gst-plugins-0.8.11-conffix.patch 845
 MD5 047909fa0e548bb37041ef3b534f7a30 files/gst-plugins-0.8.8-gstplaybin_subfont.patch 3927
+RMD160 be9be7eca293f1c87e9ba3e4d906cf9677b16a19 files/gst-plugins-0.8.8-gstplaybin_subfont.patch 3927
+SHA256 a0ebd5f5aa930db31c5ef07db1c1934d0cd605dea0479e80d23b94fa2d1f6d3c files/gst-plugins-0.8.8-gstplaybin_subfont.patch 3927
 MD5 62a6ceb0d791f58680a8260b121f06ba files/gst-plugins-0.8.9-qtdemux-fixrawpcm.patch 698
+RMD160 9bed5ccefc5c07cd9f427770fc8a510d6976388e files/gst-plugins-0.8.9-qtdemux-fixrawpcm.patch 698
+SHA256 fa0368120cfc8b08989a6c52be86e434be547925252a2c852305e118e582c5ff files/gst-plugins-0.8.9-qtdemux-fixrawpcm.patch 698
 MD5 5f3b15884236441972571887125d0a48 files/gst-plugins-0.8.9-riffmedia-isompeg4.patch 1178
+RMD160 e6f0380abfb1a7e2b8eeb33477b70bdd8f2187ed files/gst-plugins-0.8.9-riffmedia-isompeg4.patch 1178
+SHA256 57ab2e51bb569206d7fef567a65c48fb559d810d9f43bb73b1c1ad3f21e03df8 files/gst-plugins-0.8.9-riffmedia-isompeg4.patch 1178
 MD5 08ef8415d9778f702053aa3e0090404b files/gst-plugins-0.8.9-ximagefix.patch 2525
-MD5 6b829470b9b73e719be1636593040792 gst-plugins-0.8.10.ebuild 1990
-MD5 938406066e080f9a49e7130b502ed8cc gst-plugins-0.8.11.ebuild 2046
+RMD160 a2f3fb7887d802fc0070d8e1b141936f1f49144c files/gst-plugins-0.8.9-ximagefix.patch 2525
+SHA256 4e2510561fd7672f803f33b230fcc3fded7da472c49742570ea9a55ea19358d5 files/gst-plugins-0.8.9-ximagefix.patch 2525
+MD5 7796808ad2990ea5af49e0a1f6f33f1c gst-plugins-0.8.10.ebuild 1992
+RMD160 fc3ce16bfd3754d4e91a8324f8910d783d4aed58 gst-plugins-0.8.10.ebuild 1992
+SHA256 f542a4f29ae6d1fd5eac1fb184f08f41f0caef41d798546003cb374adafe0f2b gst-plugins-0.8.10.ebuild 1992
+MD5 9c9cdfed83dee781fa6d20146ae7664f gst-plugins-0.8.11.ebuild 2047
+RMD160 b2bc9a2162de190eb4c918f86836b6abb4e68ae1 gst-plugins-0.8.11.ebuild 2047
+SHA256 c8de6379a57582aa4a4e9d03ce7101d0cf7f1750e89d98d5789191e382c14822 gst-plugins-0.8.11.ebuild 2047
 MD5 e1252df8ca9d6f42f00d81ec7ac9369b gst-plugins-0.8.12.ebuild 2021
+RMD160 7ac832cfe664881192f8ba43d5e7e7a8397e46ff gst-plugins-0.8.12.ebuild 2021
+SHA256 3296073b2faa693328ff89c9ad5605b4e21f12b7bab2e6576337ebfb944a8a44 gst-plugins-0.8.12.ebuild 2021
 MD5 1b1f6a35ef00183ae4d1fad94cfcb208 gst-plugins-0.8.2.ebuild 1868
-MD5 c43944cf1779018348b7d0eb9c1b876d gst-plugins-0.8.8-r2.ebuild 2281
-MD5 38951aa11eb9d6300186eb9754aab5b8 gst-plugins-0.8.8.ebuild 2020
-MD5 8e600f92a41c33669c4abe6eac978a99 gst-plugins-0.8.9-r2.ebuild 2330
+RMD160 79385adb18e569dfedb32eb68da5e8a248a29a00 gst-plugins-0.8.2.ebuild 1868
+SHA256 87131c027955590de2c03144d233177f4a189d2d337a7bc1b4698ce77f094620 gst-plugins-0.8.2.ebuild 1868
+MD5 d964b7f4cd88ee7da20f90721e3dc576 gst-plugins-0.8.8-r2.ebuild 2282
+RMD160 031017557bf78d1510bd384accd6513c2baccfaf gst-plugins-0.8.8-r2.ebuild 2282
+SHA256 d9cfd20318e8f1e15448566670fc1f759b793c97d3978f7cc7c7bc04f1a92e8c gst-plugins-0.8.8-r2.ebuild 2282
+MD5 7749f09fe3b95de5da3c4f522016bbdf gst-plugins-0.8.8.ebuild 2021
+RMD160 826488409ec3af5fee91d4ee8679ca4285cd5bcc gst-plugins-0.8.8.ebuild 2021
+SHA256 d89412192938969f3dd7a5f2d89818cd5905b8aa212b9edd55c020d58544d6c2 gst-plugins-0.8.8.ebuild 2021
+MD5 f0148bfc4d16fd9cd82a64e93fc304ef gst-plugins-0.8.9-r2.ebuild 2331
+RMD160 f5f87c2738f0715e57bd609459a0e9da9a11a4e0 gst-plugins-0.8.9-r2.ebuild 2331
+SHA256 e80e36ba4d02b8c89fbab33df82a4243250424aca76e18e941a417db830af135 gst-plugins-0.8.9-r2.ebuild 2331
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
+SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEA+EeCRZPokWLroQRAhaYAJ9aNIBBWYAIA93Zs3+qZ8xJTGNBgQCfR9kG
+Sms8rVi+Zkb7+qzmyPcEnhk=
+=U6GD
+-----END PGP SIGNATURE-----
