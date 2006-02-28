@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.2.0.ebuild,v 1.2 2006/02/28 03:04:12 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.2.1.ebuild,v 1.1 2006/02/28 03:04:12 stkn Exp $
 
 IUSE="mysql sqlite h323"
 
@@ -17,7 +17,7 @@ MY_P="${P/_/-}"
 
 DESCRIPTION="Additional Plugins for Asterisk"
 HOMEPAGE="http://www.asterisk.org/"
-SRC_URI="http://ftp.digium.com/pub/asterisk/old-releases/${MY_P}.tar.gz
+SRC_URI="http://ftp.digium.com/pub/asterisk/${MY_P}.tar.gz
 	 sqlite? ( http://www.sqlite.org/sqlite-${SQLITE_PV}.tar.gz )"
 
 S=${WORKDIR}/${MY_P}
@@ -66,9 +66,9 @@ src_unpack() {
 	#
 	# gentoo patchset
 	#
-	epatch ${FILESDIR}/${P}-gentoo-base.diff
-	epatch ${FILESDIR}/${P}-gentoo-res_sqlite3.diff
-	epatch ${FILESDIR}/${P}-gentoo-ooh323c.diff
+	epatch ${FILESDIR}/${PN}-1.2.0-gentoo-base.diff
+	epatch ${FILESDIR}/${PN}-1.2.0-gentoo-res_sqlite3.diff
+	epatch ${FILESDIR}/${PN}-1.2.0-gentoo-ooh323c.diff
 
 	# patch sqlite
 	if use sqlite; then
