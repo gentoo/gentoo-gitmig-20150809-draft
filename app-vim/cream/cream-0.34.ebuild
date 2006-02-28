@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.34.ebuild,v 1.1 2006/02/24 15:19:02 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.34.ebuild,v 1.2 2006/02/28 15:32:55 ciaranm Exp $
 
 inherit vim-plugin eutils fdo-mime
 
@@ -86,6 +86,10 @@ EOF
 
 	# make taglist ebuild aware, bug #66052
 	epatch ${FILESDIR}/${PN}-0.30-ebuilds.patch
+
+	# more filetypes for EnhancedCommentify, including the Gentoo ones
+	epatch ${FILESDIR}/enhancedcommentify-2.1-gentooisms.patch
+	epatch ${FILESDIR}/enhancedcommentify-2.1-extra-ft-support.patch
 
 	# rename vim help files to avoid conflicts with other vim packages
 	prefix_help_file cream help/EnhancedCommentify.txt \
