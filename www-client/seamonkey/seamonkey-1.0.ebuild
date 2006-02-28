@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.ebuild,v 1.1 2006/02/27 21:05:39 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.ebuild,v 1.2 2006/02/28 13:59:25 anarchy Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
 
-PVER="0.1"
+PVER="0.2"
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
 HOMEPAGE="http://www.mozilla.org"
@@ -19,7 +19,7 @@ LICENSE="MPL-1.1 NPL-1.1"
 IUSE="java ldap  mozcalendar mozdevelop moznocompose moznoirc moznomail moznoroaming postgres"
 
 RDEPEND="java? ( virtual/jre )
-	=www-client/mozilla-launcher-1.47
+	~www-client/mozilla-launcher-1.47
 	>=dev-libs/nss-3.10
 	>=dev-libs/nspr-4.6.1"
 
@@ -33,36 +33,36 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/mozilla
 
 pkg_setup() {
-if ! use moznoirc && use moznocompose; then
-	ewarn ""
-	ewarn "It looks like you want to have Chatzilla but don't want to have"
-	ewarn "Composer. This cannot be done, because Chatzilla does not work"
-	ewarn "without Composer. Composer will be build."
-	ewarn ""
-	ewarn "Continuing in 10 seconds.."
-	ewarn ""
-	sleep 10
-fi
-if use mozcalendar && use moznomail; then
-	ewarn ""
-	ewarn "It looks like you want to have Calendar but don't want to have"
-	ewarn "Mail. This cannot be done, because Calendar does not work"
-	ewarn "without Mail. Mail will be build."
-	ewarn ""
-	ewarn "Continuing in 10 seconds.."
-	ewarn ""
-	sleep 10
-fi
-if ! use moznomail && use moznocompose; then
-	ewarn ""
-	ewarn "It looks like you want to have Mail but don't want to have"
-	ewarn "Composer. This cannot be done, because Mail does not work"
-	ewarn "without Composer. Composer will be build."
-	ewarn ""
-	ewarn "Continuing in 10 seconds.."
-	ewarn ""
-	sleep 10
-fi
+	if ! use moznoirc && use moznocompose; then
+		ewarn ""
+		ewarn "It looks like you want to have Chatzilla but don't want to have"
+		ewarn "Composer. This cannot be done, because Chatzilla does not work"
+		ewarn "without Composer. Composer will be build."
+		ewarn ""
+		ewarn "Continuing in 10 seconds.."
+		ewarn ""
+		epause 10
+	fi
+	if use mozcalendar && use moznomail; then
+		ewarn ""
+		ewarn "It looks like you want to have Calendar but don't want to have"
+		ewarn "Mail. This cannot be done, because Calendar does not work"
+		ewarn "without Mail. Mail will be build."
+		ewarn ""
+		ewarn "Continuing in 10 seconds.."
+		ewarn ""
+		epause 10
+	fi
+	if ! use moznomail && use moznocompose; then
+		ewarn ""
+		ewarn "It looks like you want to have Mail but don't want to have"
+		ewarn "Composer. This cannot be done, because Mail does not work"
+		ewarn "without Composer. Composer will be build."
+		ewarn ""
+		ewarn "Continuing in 10 seconds.."
+		ewarn ""
+		epause 10
+	fi
 }
 
 src_unpack() {
