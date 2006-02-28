@@ -1,11 +1,37 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b40e7ad88845ff9ebed64d37c26813f8 ChangeLog 3572
-MD5 1e433c9ae0ffeed4f71f8c2c68e2ebad metadata.xml 310
-MD5 c5435205a572201b2e9c92882ee484c2 tclx-8.3-r1.ebuild 2069
-MD5 40a0aaf8ce1d370fc2314e16439fedaf tclx-8.3.5.ebuild 1861
-MD5 db25e7f7021bea9cc9afd5297950cf6b tclx-8.3.ebuild 1652
-MD5 3c218afaa0edc44f1195d0c013f7d85c files/digest-tclx-8.3 180
+RMD160 3f949d2158c5e120baff59109d5da8b0dae0055b ChangeLog 3572
+SHA256 6baa18a80cffb869762385cb91537e8884c748d1d36ff865befae3a86c3f3e82 ChangeLog 3572
 MD5 1d4e6ad4bf55d13d432197bc480ac445 files/digest-tclx-8.3-r1 188
+RMD160 126de370799a166a8a37a5596f846e3b67e0367b files/digest-tclx-8.3-r1 188
+SHA256 27885584314c486a45084ac1eac14c1c1698d1721bfd261cb01c82288ce3cc4f files/digest-tclx-8.3-r1 188
 MD5 d46f93a255785ed6c5b88a1a065da82d files/digest-tclx-8.3.5 194
+RMD160 03b0b3b84c83823f2dfd582fdf3601ecf0fcdb03 files/digest-tclx-8.3.5 194
+SHA256 d2fed982d064f68c974656d553a1958f54679140014408cac9460b4655232895 files/digest-tclx-8.3.5 194
 MD5 fa76370803a64a3cf2f0d01a5d1ac3b5 files/tclx-8.3-argv.patch 802
+RMD160 c72517d6ebe1a87de533753bbb7f6bd4b1f18a2c files/tclx-8.3-argv.patch 802
+SHA256 97ddac1f8df238448b482d05a014946b5d6aa279336b2111fe81e9fe108d9bac files/tclx-8.3-argv.patch 802
 MD5 92db3525521a7be527aaea89eb2aca51 files/tclx-8.3-makecfg.patch 10999
+RMD160 5327648103e033563a5747676e41e31f202b51a2 files/tclx-8.3-makecfg.patch 10999
+SHA256 50d90fc514f95196f198d61a362f7745fd343695e7abda96eda749d53fd46d87 files/tclx-8.3-makecfg.patch 10999
 MD5 f4af4334bd8c05af3b43ee89b4dfb03c files/tclx-8.3-varinit.patch 386
+RMD160 4a697796894cd6573573330843c6a9312aa15e0f files/tclx-8.3-varinit.patch 386
+SHA256 7415da5026eab39fa272bd2e0b145cc6030f3a32a95fefc72d0ec9977f364cab files/tclx-8.3-varinit.patch 386
+MD5 1e433c9ae0ffeed4f71f8c2c68e2ebad metadata.xml 310
+RMD160 670b51616608433db64d5a9bf9f219f8e6b57d37 metadata.xml 310
+SHA256 a4377ecaedab2f9a2a969d7c1fab2a7a621e70a125c5929282e7c0c09af76381 metadata.xml 310
+MD5 c5435205a572201b2e9c92882ee484c2 tclx-8.3-r1.ebuild 2069
+RMD160 4fab3341ae85ed75c076fd133466f4a941881aea tclx-8.3-r1.ebuild 2069
+SHA256 c10f39fa883615b6d68ec66c29dedbc0cf71312e5b2c9b8f0133d7bfab87e755 tclx-8.3-r1.ebuild 2069
+MD5 6e5e90f817abf95bb40fdcad8569d2c7 tclx-8.3.5.ebuild 1661
+RMD160 69d6ceaa41b030e2752a6bcfbb0d76c266c46cc0 tclx-8.3.5.ebuild 1661
+SHA256 98cf449e005b6d47c866236f51940ec77c3ef3eacb9218aa91b7c47486281c6b tclx-8.3.5.ebuild 1661
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEA5iL2+ySkm8kpY0RAr+0AJ0U0Y7D7iGyfpwg3gGKs0DPegC1ZgCgqPZJ
+T2neBEsth6VDnUzDWczfSlQ=
+=WD4x
+-----END PGP SIGNATURE-----
