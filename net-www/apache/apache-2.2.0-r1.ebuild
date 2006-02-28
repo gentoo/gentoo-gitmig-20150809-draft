@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r1.ebuild,v 1.1 2006/02/27 17:27:28 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r1.ebuild,v 1.2 2006/02/28 05:16:06 vericgar Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -242,9 +242,11 @@ src_install () {
 	# create our LoadModule lines
 	if ! useq static-modules; then
 	load_module=''
+	moddir="${D}/usr/$(get_libdir)/apache2/modules"
 	for m in ${mods}; do
 		endid="no"
-		if [ -e "${D}/usr/lib/apache2/modules/mod_${m}.so" ]; then
+
+		if [ -e "${moddir}/mod_${m}.so" ]; then
 			for def in ${mod_defines}; do
 				if [ "${m}" == "${def%:*}" ]; then
 					load_module="${load_module}\n<IfDefine ${def#*:}>"
@@ -348,8 +350,8 @@ src_install () {
 
 	# protect the suexec binary
 	if ! useq no-suexec; then
-		fowners root:apache /usr/sbin/suexec
-		fperms 4710 /usr/sbin/suexec
+		fowners root:apache /usr/sbin/suexec2
+		fperms 4710 /usr/sbin/suexec2
 	fi
 
 	keepdir /etc/apache2/vhosts.d
