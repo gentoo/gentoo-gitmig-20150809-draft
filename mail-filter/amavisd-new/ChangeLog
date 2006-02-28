@@ -1,6 +1,15 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.76 2006/02/20 22:43:17 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.77 2006/02/28 01:21:46 ticho Exp $
+
+  28 Feb 2006; Andrej Kacian <ticho@gentoo.org>
+  -files/amavisd-new-2.2.1-amavisd.conf-gentoo.patch,
+  -amavisd-new-2.2.1-r2.ebuild, -amavisd-new-2.3.0.ebuild,
+  -amavisd-new-2.3.1.ebuild, -amavisd-new-2.3.2.ebuild,
+  -amavisd-new-2.3.3.ebuild, -amavisd-new-2.3.3-r1.ebuild,
+  amavisd-new-2.3.3-r2.ebuild:
+  Use epause instead of sleep. Bug #124323, by Ciaran McCreesh <ciaranm at
+  gentoo.org>. Removed old ebuilds.
 
   20 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
   amavisd-new-2.2.1-r2.ebuild, amavisd-new-2.3.0.ebuild,
