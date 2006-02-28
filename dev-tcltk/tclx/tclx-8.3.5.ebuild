@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.5.ebuild,v 1.12 2006/02/28 00:25:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.5.ebuild,v 1.13 2006/02/28 00:37:29 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,13 +22,21 @@ S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {
 	unpack ${A}
+
+	# Fix bug in configure script #119619
+	local d
+	for d in */unix/configure ; do
+		cd "${WORKDIR}"/${d%/*}
+		EPATCH_SINGLE_MSG="Fixing ${d} ..." \
+		epatch "${FILESDIR}"/${P}-configure.patch
+	done
+
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-8.3-varinit.patch
-
 	sed -i \
 		-e "/^TCLX_INST_MAN/ s:=.*:= \$\{TCLX_PREFIX\}/share/man:" \
-		-e "" "${S}/unix/Common.mk.in" \
-			|| die "sed Makefile failed"
+		-e "" "${S}"/unix/Common.mk.in \
+		|| die "sed Makefile failed"
 }
 
 src_compile() {
