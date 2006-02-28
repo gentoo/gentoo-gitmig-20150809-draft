@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.26 2005/11/01 21:18:12 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.27 2006/02/28 11:09:25 nattfodd Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 #
@@ -183,4 +183,4 @@ latex-package_rehash() {
 	fi
 }
 
-EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm has_tetex_3
+EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
