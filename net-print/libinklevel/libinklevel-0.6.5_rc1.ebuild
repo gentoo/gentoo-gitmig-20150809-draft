@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/libinklevel-0.6.5_rc1.ebuild,v 1.1 2006/02/28 00:32:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/libinklevel-0.6.5_rc1.ebuild,v 1.2 2006/02/28 00:36:00 genstef Exp $
 
 DESCRIPTION="A library to get the ink level of your printer"
 HOMEPAGE="http://libinklevel.sourceforge.net/"
@@ -16,7 +16,7 @@ DEPEND="sys-libs/libieee1284"
 S=${WORKDIR}/${PN}
 
 src_install () {
-	make DESTDIR=${D}/usr install || die
-	dodoc COPYING README
+	make DESTDIR=${D}/usr install || die "make install failed"
+	dodoc README
 }
 
