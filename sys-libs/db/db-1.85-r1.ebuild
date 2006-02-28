@@ -1,12 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.31 2005/01/30 19:39:20 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.32 2006/02/28 09:45:44 pauldv Exp $
 
 inherit eutils
 
 DESCRIPTION="db 1.85 -- required for RPM 4.0 to compile; that's about it."
 HOMEPAGE="http://www.sleepycat.com/"
-SRC_URI="ftp://ftp.sleepycat.com/releases/db.${PV}.tar.gz"
+SRC_URI="ftp://ftp.sleepycat.com/releases/db.${PV}.tar.gz
+	 mirror://gentoo/db.1.85.patch"
 
 LICENSE="DB"
 SLOT="1"
@@ -18,9 +19,9 @@ DEPEND="virtual/libc"
 S=${WORKDIR}/db.${PV}
 
 src_unpack() {
-	unpack ${A}
+	unpack db.${PV}.tar.gz
 	cd ${S}
-	epatch ${FILESDIR}/db.${PV}.patch
+	epatch ${DISTDIR}/db.${PV}.patch
 }
 
 src_compile() {
