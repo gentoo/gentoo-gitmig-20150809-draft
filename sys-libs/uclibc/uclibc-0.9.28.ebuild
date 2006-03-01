@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.17 2006/01/27 01:05:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.18 2006/03/01 23:30:05 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -403,7 +403,7 @@ src_test() {
 
 	# assert test fails on pax/grsec enabled kernels - normal
 	# vfork test fails in sandbox (both glibc/uclibc)
-	make check || die "test failed"
+	make UCLIBC_ONLY=1 check || die "test failed"
 }
 
 src_install() {
