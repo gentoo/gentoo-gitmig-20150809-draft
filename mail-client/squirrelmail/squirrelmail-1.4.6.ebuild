@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.5.ebuild,v 1.4 2006/02/13 14:29:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.6.ebuild,v 1.1 2006/03/01 02:04:42 eradicator Exp $
 
 IUSE="crypt ldap spell ssl virus-scan mysql postgres"
 
@@ -35,12 +35,12 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 HOMEPAGE="http://www.squirrelmail.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ~ppc sparc ~x86"
 
 DEPEND=""
 
 RDEPEND="virtual/php
-	virtual/perl-DB_File
+	perl-core/DB_File
 	crypt? ( app-crypt/gnupg )
 	ldap? ( net-nds/openldap )
 	spell? ( || ( app-text/aspell app-text/ispell ) )
@@ -51,6 +51,7 @@ src_unpack() {
 	unpack ${MY_P}.tar.bz2
 
 	cd ${S}
+
 	mv config/config_default.php config/config.php
 	epatch ${FILESDIR}/${PN}-fortune.patch
 
