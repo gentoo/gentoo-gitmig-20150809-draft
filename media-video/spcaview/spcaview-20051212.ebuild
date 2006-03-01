@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spcaview/spcaview-20051212.ebuild,v 1.2 2006/02/19 22:57:15 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spcaview/spcaview-20051212.ebuild,v 1.3 2006/03/01 11:20:56 kingtaco Exp $
 
 DESCRIPTION="A webcam viewer for the spca5xx driver."
 HOMEPAGE="http://mxhaard.free.fr/sview.html"
@@ -13,7 +13,7 @@ DEPEND="media-libs/libsdl"
 RDEPEND="${DEPEND} media-video/spca5xx"
 
 src_install() {
-	dodir usr/bin
+	dodir /usr/bin
 	make BIN=${D}/usr/bin install || die
 	dodoc README Changelog
 }
