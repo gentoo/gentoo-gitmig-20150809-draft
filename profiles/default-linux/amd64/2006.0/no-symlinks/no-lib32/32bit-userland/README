@@ -1,0 +1,11 @@
+Known bugs with this profile:
+
+* bug 119012
+  -> linux-headers breaks
+  -> all packages which provide kernel modules break
+* configure scripts using uname -m fail
+  -> openssl breaks
+* python-packages must use the same ABI as dev-lang/python
+* bug 118815
+  -> nothing broken per-se, but without this patch switching profiles is harder
+* emul-packages get pulled in although needless
