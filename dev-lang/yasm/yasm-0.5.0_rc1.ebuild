@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-0.5.0_rc1.ebuild,v 1.1 2006/03/01 00:42:17 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-0.5.0_rc1.ebuild,v 1.2 2006/03/01 22:17:12 kugelfang Exp $
 
 inherit versionator
 
@@ -13,9 +13,15 @@ SRC_URI="http://www.tortall.net/projects/yasm/releases/${MYP}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
-IUSE=""
+IUSE="nls"
 
-DEPEND=""
+RDEPEND="nls? ( virtual/libintl )"
+DEPEND="nls? ( sys-devel/gettext )"
+
+src_compile() {
+	econf $(use_enable nls) || die "econf failed"
+	emake || die "emake failed"
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"

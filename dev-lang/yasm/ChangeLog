@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.6 2006/03/01 00:42:17 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.7 2006/03/01 22:17:12 kugelfang Exp $
+
+  01 Mar 2006; Danny van Dyk <kugelfang@gentoo.org> yasm-0.4.0.ebuild,
+  yasm-0.5.0_rc1.ebuild:
+  Added NLS USE flag to the ebuilds. Thanks to Diego Petteno.
 
 *yasm-0.5.0_rc1 (01 Mar 2006)
 
