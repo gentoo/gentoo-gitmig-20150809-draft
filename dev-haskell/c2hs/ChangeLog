@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.13 2006/02/18 18:28:13 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.14 2006/03/01 19:21:30 corsair Exp $
+
+  01 Mar 2006; Markus Rothe <corsair@gentoo.org> c2hs-0.14.5.ebuild:
+  Added ~ppc64; bug #124469
 
   18 Feb 2006; <duncan@gentoo.org> -files/cabalfix.patch,
   +files/ghc622inc.patch, c2hs-0.14.5.ebuild:

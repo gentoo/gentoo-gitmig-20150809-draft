@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hmake
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.18 2006/02/04 14:55:42 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.19 2006/03/01 19:37:24 corsair Exp $
+
+  01 Mar 2006; Markus Rothe <corsair@gentoo.org> hmake-3.10.ebuild:
+  Added ~ppc64; bug #124469
 
   04 Feb 2006; Alexandre Buisse <nattfodd@gentoo.org>
   +files/ghc-version.patch, hmake-3.10.ebuild:

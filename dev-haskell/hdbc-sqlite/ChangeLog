@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hdbc-sqlite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/ChangeLog,v 1.2 2006/02/23 20:14:33 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/ChangeLog,v 1.3 2006/03/01 19:35:27 corsair Exp $
+
+  01 Mar 2006; Markus Rothe <corsair@gentoo.org>
+  hdbc-sqlite-0.99.0.0.ebuild:
+  Added ~ppc64; bug #124469
 
   23 Feb 2006; Duncan Coutts <dcoutts@gentoo.org>
   hdbc-sqlite-0.99.0.0.ebuild:
