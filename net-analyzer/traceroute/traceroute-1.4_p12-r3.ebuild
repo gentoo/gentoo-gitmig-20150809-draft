@@ -1,13 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r3.ebuild,v 1.4 2005/12/25 15:03:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r3.ebuild,v 1.5 2006/03/01 02:01:44 vanquirius Exp $
 
 inherit eutils flag-o-matic
 
-MY_P=${PN}-${PV/_p/a}
+MY_P="${PN}-${PV/_p/a}"
 DESCRIPTION="Utility to trace the route of IP packets"
 HOMEPAGE="http://ee.lbl.gov/"
-SRC_URI="ftp://ee.lbl.gov/${MY_P}.tar.gz"
+SRC_URI="ftp://ee.lbl.gov/${MY_P}.tar.gz
+	mirror://gentoo/${PN}-1.4-genpatches.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -16,7 +17,7 @@ IUSE="static"
 
 DEPEND=""
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -25,15 +26,15 @@ src_unpack() {
 	# nasty hack until bug 93363 is fixed
 	chmod 644 config.{guess,sub}
 
-	epatch "${FILESDIR}"/traceroute-1.4-target-resolv.patch
-	epatch "${FILESDIR}"/traceroute-1.4a12-LDFLAGS.patch
-	epatch "${FILESDIR}"/traceroute-1.4a5-bigpacklen.patch
-	epatch "${FILESDIR}"/traceroute-1.4a12.patch
-	epatch "${FILESDIR}"/traceroute-1.4a5-droproot.patch
-	epatch "${FILESDIR}"/traceroute-1.4a5-llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch.patch
-	epatch "${FILESDIR}"/traceroute-1.4a5-secfix.patch
-	epatch "${FILESDIR}"/traceroute-1.4a5-unaligned.patch
-	epatch "${FILESDIR}"/traceroute-1.4-emptylabel.patch
+	epatch "${WORKDIR}"/traceroute-1.4-target-resolv.patch
+	epatch "${WORKDIR}"/traceroute-1.4a12-LDFLAGS.patch
+	epatch "${WORKDIR}"/traceroute-1.4a5-bigpacklen.patch
+	epatch "${WORKDIR}"/traceroute-1.4a12.patch
+	epatch "${WORKDIR}"/traceroute-1.4a5-droproot.patch
+	epatch "${WORKDIR}"/traceroute-1.4a5-llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch.patch
+	epatch "${WORKDIR}"/traceroute-1.4a5-secfix.patch
+	epatch "${WORKDIR}"/traceroute-1.4a5-unaligned.patch
+	epatch "${WORKDIR}"/traceroute-1.4-emptylabel.patch
 
 	# assume linux by default #26699
 	sed -i '/^t=/s:generic:linux:' configure
@@ -48,5 +49,5 @@ src_install() {
 	fperms 4711 /usr/sbin/traceroute
 
 	doman traceroute.8
-	dodoc CHANGES INSTALL
+	dodoc CHANGES
 }

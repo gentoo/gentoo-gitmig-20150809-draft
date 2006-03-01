@@ -1,9 +1,0 @@
---- traceroute-1.4a12/Makefile.in
-+++ traceroute-1.4a12/Makefile.in
-@@ -82,5 +82,5 @@
- traceroute: $(OBJ)
- 	@rm -f $@
--	$(CC) $(CFLAGS) -o $@ $(OBJ) $(LIBS)
-+	$(CC) $(LDFLAGS) -o $@ $(OBJ) $(LIBS)
- 
- version.o: version.c

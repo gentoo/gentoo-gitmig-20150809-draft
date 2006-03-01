@@ -1,6 +1,19 @@
 # ChangeLog for net-analyzer/traceroute
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.26 2005/12/25 15:03:02 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.27 2006/03/01 02:01:44 vanquirius Exp $
+
+  01 Mar 2006; Marcelo Goes <vanquirius@gentoo.org>
+  -files/traceroute-1.4-emptylabel.patch,
+  -files/traceroute-1.4-target-resolv.patch,
+  -files/traceroute-1.4a12-LDFLAGS.patch, -files/traceroute-1.4a12.patch,
+  -files/traceroute-1.4a5-bigpacklen.patch,
+  -files/traceroute-1.4a5-droproot.patch,
+  -files/traceroute-1.4a5-llanfairpwllgwyngyllgogerychwyrndrobwllllantysilio
+  gogogoch.patch, -files/traceroute-1.4a5-lsrr.patch,
+  -files/traceroute-1.4a5-secfix.patch,
+  -files/traceroute-1.4a5-unaligned.patch, traceroute-1.4_p12-r2.ebuild,
+  traceroute-1.4_p12-r3.ebuild:
+  Move patches to mirrors, do not install INSTALL.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   traceroute-1.4_p12-r3.ebuild:

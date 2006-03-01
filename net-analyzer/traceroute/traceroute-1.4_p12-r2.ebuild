@@ -1,14 +1,15 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r2.ebuild,v 1.11 2004/12/05 03:43:07 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r2.ebuild,v 1.12 2006/03/01 02:01:44 vanquirius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
-MY_P=${PN}-1.4a12
-S=${WORKDIR}/${MY_P}
+MY_P="${PN}-1.4a12"
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Utility to trace the route of IP packets"
 HOMEPAGE="http://ee.lbl.gov/"
-SRC_URI="ftp://ee.lbl.gov/${MY_P}.tar.gz"
+SRC_URI="ftp://ee.lbl.gov/${MY_P}.tar.gz
+	mirror://gentoo/${PN}-1.4-genpatches.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -22,9 +23,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	use sparc && epatch ${FILESDIR}/traceroute-1.4a12.patch
-	epatch ${FILESDIR}/traceroute-1.4-target-resolv.patch
+	cd "${S}"
+	use sparc && epatch "${WORKDIR}"/traceroute-1.4a12.patch
+	epatch "${WORKDIR}"/traceroute-1.4-target-resolv.patch
 }
 
 src_compile() {
@@ -37,7 +38,7 @@ src_compile() {
 
 	# assume linux by default #26699
 	# -taviso
-	sed -i 's/t="generic"/t="linux"/g' ${S}/configure.in
+	sed -i 's/t="generic"/t="linux"/g' "${S}"/configure.in
 	autoreconf
 
 	econf || die
@@ -46,10 +47,10 @@ src_compile() {
 
 src_install() {
 	dodir /usr/sbin
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	fowners root:wheel /usr/sbin/traceroute
 	fperms 4710 /usr/sbin/traceroute
 
 	doman traceroute.8
-	dodoc CHANGES INSTALL
+	dodoc CHANGES
 }
