@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.21.1.ebuild,v 1.1 2006/03/01 09:46:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.21.1.ebuild,v 1.2 2006/03/01 21:09:34 spyderous Exp $
 
 DESCRIPTION="fish is the Friendly Interactive SHell"
 HOMEPAGE="http://roo.no-ip.org/fish/"
@@ -34,5 +34,8 @@ pkg_postinst() {
 	einfo "If you want to use fish as your default shell, you need to add it"
 	einfo "to /etc/shells. This is not recommended because fish doesn't install"
 	einfo "to /bin."
+	einfo
+	ewarn "Completion files moved to ${ROOT}usr/share/fish/completions."
+	ewarn "You may safely delete ${ROOT}etc/fish.d/completions."
 	einfo
 }
