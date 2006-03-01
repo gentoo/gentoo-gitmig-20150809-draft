@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r1.ebuild,v 1.2 2006/02/28 05:16:06 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r1.ebuild,v 1.3 2006/03/01 01:38:41 vericgar Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -335,7 +335,7 @@ src_install () {
 		sed -i -e "s:VERSION:${PVR}:" ${D}/etc/apache2/modules.d/00_apache_manual.conf
 	else
 		einfo "USE=-docs :: Removing Manual"
-		rm ${D}/etc/apache2/modules.d/
+		rm ${D}/etc/apache2/modules.d/00_apache_manual.conf
 		rm -rf ${D}/usr/share/doc/${PF}/manual
 	fi
 
