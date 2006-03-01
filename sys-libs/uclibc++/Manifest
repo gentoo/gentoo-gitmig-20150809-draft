@@ -1,14 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 18f8ce2647c53e03dbdf726800e16031 ChangeLog 703
+MD5 8cee1308c7d5a609e10179a42f42e3c4 ChangeLog 825
+RMD160 85ed3a0d799411154293ada1becef6ca89d98582 ChangeLog 825
+SHA256 2b4c71cfef4f0adf8e5df6ee9d8b2a53eec867211fc5cae230bbdec6a59d86b1 ChangeLog 825
 MD5 1e50bd5dcb1bbf78f9487e6ef5cc99a9 files/digest-uclibc++-0.1.12 65
+RMD160 1be723a04edd1226186d785b83632aa3bd5330c3 files/digest-uclibc++-0.1.12 65
+SHA256 bf44b2b7390c3638299460d51b900211776534d66bdff6d9ac0ced2234035f82 files/digest-uclibc++-0.1.12 65
+MD5 1f5a471a471730d6a4c74c2617b56e25 files/digest-uclibc++-0.2.0 235
+RMD160 014ccb61e7d5614eb90c9231098a941271a669d2 files/digest-uclibc++-0.2.0 235
+SHA256 5eb9adc57e2e8d8be3fb90a3062c9e864fc3214e2e2f81ee5cf1dab9c3f8d4c9 files/digest-uclibc++-0.2.0 235
 MD5 8ef75eba39772bdd1a8facc7815dbebb metadata.xml 161
+RMD160 77385273ea1d12ed4093a4167307486b74d1cf82 metadata.xml 161
+SHA256 a11fdd02015a232398fdf22a20d26a95fc34d44c54513e6b26b6128d0b76122e metadata.xml 161
 MD5 dc5ed1e39fb9456338fd55564468ae6b uclibc++-0.1.12.ebuild 1856
+RMD160 28288a5b5adf38204d877cebb44f04584b3ba63b uclibc++-0.1.12.ebuild 1856
+SHA256 88b7ebfd252731fbdb68a7ebf4c27d1e111a096b1442d2a14a9760e54ca4bde7 uclibc++-0.1.12.ebuild 1856
+MD5 b9ebc15d5fc9a9cd5d1b683bd67ddc09 uclibc++-0.2.0.ebuild 1854
+RMD160 1af7a795f9f7aee8c436bb78d40d99463a6cc03d uclibc++-0.2.0.ebuild 1854
+SHA256 80b88fe6d7c50485998a0f6ad6593b3e37685f488dc1f19b9ae0ae51eb10261c uclibc++-0.2.0.ebuild 1854
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDuxF82+ySkm8kpY0RAnu8AJ9CBZAa5vSPBim2ifvVTxm1boL9TQCfcJ0j
-e63SJjIgdbOdtrRFvb9tNF8=
-=/F/9
+iD8DBQFEBSTm2+ySkm8kpY0RAgaAAJ9SClThtFBUWmvMK/3jdy8b41qBBACgpPAg
+Mb0LVNHgfqAt6GRZTzYbCGQ=
+=9qtb
 -----END PGP SIGNATURE-----
