@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.5 2006/02/24 10:10:13 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.6 2006/03/01 16:10:54 corsair Exp $
 
 inherit multilib
 
@@ -12,12 +12,12 @@ SRC_URI="x86?  ( mirror://gentoo/${P}-x86.tbz2 )
 		 amd64? ( mirror://gentoo/${P}-amd64.tbz2 )
 		 alpha? ( mirror://gentoo/${P}-alpha.tbz2 )
 		 sparc? ( mirror://gentoo/${P}-sparc.tbz2 )
-		 ppc? ( mirror://gentoo/${P}-ppc.tbz2 )"
-#		 ppc64? ( mirror://gentoo/${P}-ppc64.tbz2 )
+		 ppc? ( mirror://gentoo/${P}-ppc.tbz2 )
+		 ppc64? ( mirror://gentoo/${P}-ppc64.tbz2 )"
 HOMEPAGE="http://www.haskell.org"
 
 LICENSE="as-is"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 # add these when they are ready: ~ppc64
 SLOT="0"
 
