@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.107 2006/02/28 03:51:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.108 2006/03/01 00:30:36 vanquirius Exp $
+
+  01 Mar 2006; Marcelo Goes <vanquirius@gentoo.org>
+  +files/netpbm-10.32-parallel.patch, netpbm-10.32.ebuild:
+  Add Martin von Gagern <Martin dot vGagern at gmx dot net>'s patch to fix
+  parallel compilation for bug 116665.
 
 *netpbm-10.32 (28 Feb 2006)
 
