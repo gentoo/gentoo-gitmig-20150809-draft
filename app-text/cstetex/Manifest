@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1261c4cbb8727c3cf6574e88bce284a6 ChangeLog 1946
-RMD160 0d6222f24a54ac55779105a1dd3de10000f0f8ea ChangeLog 1946
-SHA256 f44ee214183ebbbd3268577399a9a2ba1d7d039f3b3782dd9dbc1bc77f22d352 ChangeLog 1946
+MD5 1f1a7ba7ad13a6960bb1ce3df90043bd ChangeLog 2053
+RMD160 1d378a42b7dd2e74d8e165371bacc04e48c2f2a2 ChangeLog 2053
+SHA256 a51100fcdc53689baece98742cda033bbdcc4467f0c09a974c936cd8fdc34baf ChangeLog 2053
 MD5 7f1fd9d5b656ffd51b823389f8cb1419 cstetex-2.0.2-r1.ebuild 1719
 RMD160 af7b4fb22eb2d357364115ffa7cedc48404eeecf cstetex-2.0.2-r1.ebuild 1719
 SHA256 b148a68cdd8caf14396f35133d01b02c89831516307b8638a314040fb97b32f6 cstetex-2.0.2-r1.ebuild 1719
-MD5 6bebe70bf59c992230ffe7bb757f1a7a cstetex-2.0.2-r2.ebuild 2020
-RMD160 94d2f7a18a8bd8de433c08e3cb725a6225bf8abe cstetex-2.0.2-r2.ebuild 2020
-SHA256 99b26e57aae5cad01ff0ebedacda859719c5bccb8fb4a91d18b71a09cf269a1c cstetex-2.0.2-r2.ebuild 2020
+MD5 87e7dd7bb61dffb92b912caa638f2277 cstetex-2.0.2-r2.ebuild 2018
+RMD160 0bb1631fd7b5f78cf3ead8f601200e6869cb9c4c cstetex-2.0.2-r2.ebuild 2018
+SHA256 75a0ddb8c02127da248434d08ec04394a0554a5702d46f032997d86d4c422790 cstetex-2.0.2-r2.ebuild 2018
 MD5 912aea791088e715e491a7ccaa7eb25f files/cstetex-2.0.2-dvi-draw-conflicting-types.patch 410
 RMD160 8417f8ee01a46fe1c066d7fd2cd20c7f33ab0a52 files/cstetex-2.0.2-dvi-draw-conflicting-types.patch 410
 SHA256 5f6a525bb57f25a722178716e142a6555058903be0ce3944263b424896941126 files/cstetex-2.0.2-dvi-draw-conflicting-types.patch 410
@@ -49,10 +46,3 @@ SHA256 88a06ef62c423805a0fed011db59e9c170a2482c29f0359dec8ae962395a28ba files/xp
 MD5 d9dc13509a20a79585e3586c5d749c26 metadata.xml 454
 RMD160 e47b158718be57d58b835ab2f842cc698e2dc9f0 metadata.xml 454
 SHA256 e2b6db816fd1f2e6fdea09ab79c774add3781c6695fb7cc0c85cad66264a02e6 metadata.xml 454
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD+QJGSENan+PfizARAvUZAJ4sSUBvAje4T5vjH0perDPq1IY10QCfWEGO
-kAjWuuYmWR/D02hQS5vsTq4=
-=VN4z
------END PGP SIGNATURE-----

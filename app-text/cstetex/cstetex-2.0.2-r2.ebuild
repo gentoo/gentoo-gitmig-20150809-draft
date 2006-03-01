@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/cstetex-2.0.2-r2.ebuild,v 1.2 2006/02/19 23:42:13 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/cstetex-2.0.2-r2.ebuild,v 1.3 2006/03/01 20:28:38 blubb Exp $
 
 inherit tetex-2
 
@@ -15,7 +15,7 @@ for FILE in ${CSTEX}; do
 	SRC_URI="${SRC_URI} ftp://math.feld.cvut.cz/pub/cstex/base/${FILE}"
 done
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 src_unpack() {
 	tetex-2_src_unpack
