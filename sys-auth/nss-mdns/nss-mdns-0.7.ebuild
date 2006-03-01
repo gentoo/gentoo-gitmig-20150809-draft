@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.7.ebuild,v 1.2 2005/12/21 07:43:14 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.7.ebuild,v 1.3 2006/03/01 23:14:02 compnerd Exp $
 
 inherit eutils
 
@@ -46,5 +46,5 @@ pkg_postinst() {
 	ewarn "/etc/mdns.allow"
 	ewarn
 	ebeep 5
-	sleep 10
+	epause 10
 }
