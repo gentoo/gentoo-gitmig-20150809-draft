@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.20 2006/02/18 23:07:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.21 2006/03/01 21:30:07 dragonheart Exp $
+
+*conky-1.4.0-r1 (01 Mar 2006)
+*conky-1.3.5-r1 (01 Mar 2006)
+
+  01 Mar 2006; Daniel Black <dragonheart@gentoo.org> -conky-1.3.5.ebuild,
+  +conky-1.3.5-r1.ebuild, -conky-1.4.0.ebuild, +conky-1.4.0-r1.ebuild:
+  remove bmpx dependancy as it is masked
 
   18 Feb 2006; Daniel Black <dragonheart@gentoo.org> conky-1.4.0.ebuild:
   media-sound/beep-media-player masked pending removed - removed optional

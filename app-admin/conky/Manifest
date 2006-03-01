@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3c20051a302a3ffbfd6628f5f128754d ChangeLog 3753
-RMD160 b501b370e71311525aac3b8a5de65a618c30ebb9 ChangeLog 3753
-SHA256 6cf7eb2a02914f5d4d773820166620cc8120a6a2e294ab6dddf28c6224d57450 ChangeLog 3753
+MD5 731ceffa5af7a5c40a6413ca6b815fa6 ChangeLog 4001
+RMD160 fc1a0b7c20388b85676a3c7e7a1bf5667c9896f9 ChangeLog 4001
+SHA256 1fc2818f2a8b17bdf5eecc6841623c04ef13262bdfb7349609906257e2c74c80 ChangeLog 4001
 MD5 daec6353bf84e62c4edd4d82d00cd350 conky-1.3.4-r2.ebuild 2662
 RMD160 cb44f4d794c053ce408b57c4efadb8ada3239204 conky-1.3.4-r2.ebuild 2662
 SHA256 a5f19b74b6edcbf2b1e307239add9960b8e2b3e01f8f32e1da90e2cc79ab1736 conky-1.3.4-r2.ebuild 2662
-MD5 1fb8ed3829e3a05007be9048e75b8922 conky-1.3.5.ebuild 2310
-RMD160 7bd68a407b99eed8b4ce160f39d7759531d8a39e conky-1.3.5.ebuild 2310
-SHA256 839179ccea8039d7c97a7a07e391159ad4cbc4ab8b69555f8422045d5acee160 conky-1.3.5.ebuild 2310
-MD5 faff9c1768f8853e571209e49f283161 conky-1.4.0.ebuild 2661
-RMD160 b10bd4de41253b62d2397606b5b69072a3cd0072 conky-1.4.0.ebuild 2661
-SHA256 b965e95449ae64702d4269898f1ecbea4f0740716624634617b5322802debadb conky-1.4.0.ebuild 2661
+MD5 18290bbc2ed560becdfe5c1eed21f28a conky-1.3.5-r1.ebuild 2247
+RMD160 a37dedf494b4b89e7656a175590b4b971fa2e6f0 conky-1.3.5-r1.ebuild 2247
+SHA256 b59fc2bfcf438818650a43063a569d69e927cb040f52bb24c812bd22b4c37222 conky-1.3.5-r1.ebuild 2247
+MD5 fa2f79b5d80632976a3716536b1f05c5 conky-1.4.0-r1.ebuild 2595
+RMD160 0f9691efbac011e7af1621eef30a5c4f7115a54d conky-1.4.0-r1.ebuild 2595
+SHA256 26e69b1e2b113d0bbae746924aaa109d3a751c3c3e445f0257b812f576f52eb8 conky-1.4.0-r1.ebuild 2595
 MD5 d9296cc5c3fc007026e784f5825b153e files/conky-1.3.4-arraybounds.patch 1560
 RMD160 dcb1c9b195a03e19b2e477dbc149228930588b52 files/conky-1.3.4-arraybounds.patch 1560
 SHA256 4d1eb88c938305b680e4880a8b0f34264b72d4083ce660ef8afdaead8a752710 files/conky-1.3.4-arraybounds.patch 1560
@@ -22,12 +22,12 @@ SHA256 5ebd3da731900f6db25c6cc1a3dbbb71d33e458b9f4d9b3fb1771bb7abdc218b files/co
 MD5 c5c1fb804afb4bd1255b602c8894a317 files/digest-conky-1.3.4-r2 64
 RMD160 9f59088f6ea3f519eb67f2ae7e798fb72e7366e6 files/digest-conky-1.3.4-r2 64
 SHA256 c2ba6df2c3b68c39c7ba6ab81d23388e515bf9c9095bd0e6ed9df03c36625312 files/digest-conky-1.3.4-r2 64
-MD5 2441f16c8370649ea372b69c895f0bd1 files/digest-conky-1.3.5 64
-RMD160 b2cabf5d33d7915ced97e820f8b87a9d23887c90 files/digest-conky-1.3.5 64
-SHA256 4b2c1d690aafb4a33771921f6425cdb31ca0fd8bb57a839b7ce6bda1d2aeb7c3 files/digest-conky-1.3.5 64
-MD5 dd1c99f09b0ec583eadca05832f8c5ea files/digest-conky-1.4.0 238
-RMD160 4743c690e8a6d5923fd3a83d25c1f021549978cb files/digest-conky-1.4.0 238
-SHA256 61e0266fd2231aa366ed5009e12d8667da17bc789f026bf0dd082af02853261f files/digest-conky-1.4.0 238
+MD5 2441f16c8370649ea372b69c895f0bd1 files/digest-conky-1.3.5-r1 64
+RMD160 b2cabf5d33d7915ced97e820f8b87a9d23887c90 files/digest-conky-1.3.5-r1 64
+SHA256 4b2c1d690aafb4a33771921f6425cdb31ca0fd8bb57a839b7ce6bda1d2aeb7c3 files/digest-conky-1.3.5-r1 64
+MD5 dd1c99f09b0ec583eadca05832f8c5ea files/digest-conky-1.4.0-r1 238
+RMD160 4743c690e8a6d5923fd3a83d25c1f021549978cb files/digest-conky-1.4.0-r1 238
+SHA256 61e0266fd2231aa366ed5009e12d8667da17bc789f026bf0dd082af02853261f files/digest-conky-1.4.0-r1 238
 MD5 5d84594f42f7e10ad9b8a6bf8617b5bd files/portmon-mpd.patch 7143
 RMD160 fe1ccafec1903de6c9b1db99e8278c06c86be2c9 files/portmon-mpd.patch 7143
 SHA256 6952b4756e2d59d34d00896b6e1a53d6514993dd0b53312c9b464ac9ba91b4b8 files/portmon-mpd.patch 7143
@@ -35,9 +35,9 @@ MD5 32bd4230c3ee12a8d5502d4bd57a9a3d metadata.xml 588
 RMD160 b40ff9a4903b330dcef016836e32f78709f10d0a metadata.xml 588
 SHA256 6cf91473c528b64d87041a3088f4930e270349ebdebd3c6dca06dc4943370b5a metadata.xml 588
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFD9+SbmdTrptrqvGERAqZSAJ43tCFnNfCT3l0rXxqYxhmg7ke3fQCdHNK3
-L9OcH7YweoEq6NQMqN2I6Jc=
-=CdQZ
+iD8DBQFEBhJumdTrptrqvGERAiWGAJ98reKCdZoz19q6skwVhSFya5eenACfTwT1
+KOuWCNSqFhIO9uWww1JZuJo=
+=WoTn
 -----END PGP SIGNATURE-----

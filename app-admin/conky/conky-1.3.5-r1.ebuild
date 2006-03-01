@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.3.5.ebuild,v 1.2 2006/01/06 20:31:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.3.5-r1.ebuild,v 1.1 2006/03/01 21:30:07 dragonheart Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/conky/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="truetype X ipv6 bmpx"
+IUSE="truetype X ipv6"
 
 DEPEND_COMMON="
 	virtual/libc
@@ -26,9 +26,6 @@ DEPEND_COMMON="
 				virtual/x11
 		)
 		truetype? ( >=media-libs/freetype-2 )
-		bmpx? ( media-sound/bmpx
-				>=sys-apps/dbus-0.35
-			)
 	)"
 
 RDEPEND="${DEPEND_COMMON}"
@@ -61,12 +58,11 @@ src_compile() {
 	fi
 	local myconf
 	myconf="--enable-double-buffer --enable-own-window --enable-proc-uptime \
-		--enable-mpd --enable-mldonkey"
+		--enable-mpd --enable-mldonkey --disable-bmpx"
 	econf \
 		${myconf} \
 		$(use_enable truetype xft) \
 		$(use_enable X x11) \
-		$(use_enable bmpx) \
 		$(use_enable !ipv6 portmon) || die "econf failed"
 	emake ${mymake} || die "compile failed"
 }
