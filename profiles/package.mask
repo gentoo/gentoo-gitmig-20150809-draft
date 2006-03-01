@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5046 2006/03/01 04:28:49 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5047 2006/03/01 13:25:19 azarah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,17 @@
 ##
 ##   End example
 ##
+
+# Martin Schlemmer <azarah@gentoo.org (01 Mar 2006)
+# Have multiple issues, and 0.13 release have segfaults (fixed in svn, but
+# _only_ after 0.13 release although the fact was known before the 0.13
+# release).  Either way, no bugfix release was made, and upstream was very
+# agro about the fact that I did not still want to add the 0.13 with known
+# issues.  I dont want to maintain this anymore as working with upstream
+# needs a lot of patience and diplomacy, and I do not have the energy any
+# longer.  I will remove it from the tree if nobody steps up shortly to
+# take over.
+media-sound/bmpx
 
 # Jory A. Pratt <anarchy@gentoo.org> (27 Feb 2006)
 # Initial Import to tree, testing needed
