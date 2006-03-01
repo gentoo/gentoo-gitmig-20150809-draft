@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.18 2006/03/01 23:30:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.19 2006/03/01 23:37:14 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -101,8 +101,10 @@ pkg_setup() {
 
 PIE_STABLE="arm mips ppc x86"
 
+CPU_ALPHA=""
 CPU_AMD64=""
 CPU_ARM="GENERIC_ARM ARM{610,710,720T,920T,922T,926T,_{SA110,SA1100,XSCALE}}"
+CPU_IA64=""
 CPU_M68K=""
 CPU_MIPS="MIPS_ISA_{1,2,3,4,MIPS{32,64}}"
 CPU_PPC=""
@@ -178,8 +180,10 @@ src_unpack() {
 
 	local target config_target
 	case $(tc-arch) in
+		alpha) target="alpha";   config_target="no cpu-specific options";;
 		amd64) target="x86_64";  config_target="no cpu-specific options";;
 		arm)   target="arm";     config_target="GENERIC_ARM";;
+		ia64)  target="ia64";    config_target="no cpu-specific options";;
 		m68k)  target="m68k";    config_target="no cpu-specific options";;
 		mips)  target="mips";    config_target="MIPS_ISA_1";;
 		ppc)   target="powerpc"; config_target="no cpu-specific options";;
