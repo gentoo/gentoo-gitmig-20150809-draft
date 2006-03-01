@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r3.ebuild,v 1.1 2006/03/01 16:03:53 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r3.ebuild,v 1.2 2006/03/01 19:50:11 pylon Exp $
 
 inherit eutils pam
 
 DESCRIPTION="Concurrent Versions System - source code revision control tools"
 HOMEPAGE="http://www.nongnu.org/cvs/"
 
-SRC_URI="http://ftp.gnu.org/non-gnu/cvs/source/feature/${PV}/${P}.tar.bz2
-	doc? ( http://ftp.gnu.org/non-gnu/cvs/source/feature/${PV}/cederqvist-${PV}.html.tar.bz2
-		http://ftp.gnu.org/non-gnu/cvs/source/feature/${PV}/cederqvist-${PV}.pdf
-		http://ftp.gnu.org/non-gnu/cvs/source/feature/${PV}/cederqvist-${PV}.ps )"
+SRC_URI="mirror://gnu/non-gnu/cvs/source/feature/${PV}/${P}.tar.bz2
+	doc? ( mirror://gnu/non-gnu/cvs/source/feature/${PV}/cederqvist-${PV}.html.tar.bz2
+		mirror://gnu/non-gnu/cvs/source/feature/${PV}/cederqvist-${PV}.pdf
+		mirror://gnu/non-gnu/cvs/source/feature/${PV}/cederqvist-${PV}.ps )"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
