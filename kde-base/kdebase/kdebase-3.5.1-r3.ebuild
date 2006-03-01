@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.1-r3.ebuild,v 1.1 2006/02/28 22:47:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.1-r3.ebuild,v 1.2 2006/03/01 09:20:39 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -31,7 +31,20 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	hal? ( >=sys-apps/dbus-0.33
 	       =sys-apps/hal-0.5*
 		   sys-apps/pmount )
-	zeroconf? ( net-misc/mDNSResponder )"
+	zeroconf? ( net-misc/mDNSResponder )
+	xcomposite? ( || ( (
+			x11-libs/libXcomposite
+			x11-libs/libXdamage
+			) <=x11-base/xorg-x11-6.9 )
+		)
+	|| ( (
+			x11-libs/libXau
+			x11-libs/libXfixes
+			x11-libs/libXrender
+			x11-libs/libXtst
+			xscreensaver? ( x11-libs/libXScrnSaver )
+			xinerama? ( x11-libs/libXinerama )
+		) virtual/x11 )"
 
 RDEPEND="${DEPEND}
 	sys-apps/usbutils
@@ -45,14 +58,7 @@ RDEPEND="${DEPEND}
 			x11-apps/mkfontdir
 			|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
 			x11-apps/setxkbmap
-		) virtual/x11 )
-	xcomposite? ( || ( (
-			x11-libs/libXcomposite
-			x11-libs/libXdamage
-			) <=x11-base/xorg-x11-6.9 )
-		)
-	xscreensaver? ( || ( x11-libs/libXScrnSaver virtual/x11 ) )
-	xinerama? ( || ( x11-libs/libXinerama virtual/x11 ) )"
+		) virtual/x11 )"
 
 DEPEND="${DEPEND}
 	xcomposite? ( || ( (
