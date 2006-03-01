@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/lhs2tex
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.7 2006/02/23 20:45:47 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.8 2006/03/01 20:01:24 corsair Exp $
+
+  01 Mar 2006; Markus Rothe <corsair@gentoo.org> lhs2tex-1.10_pre.ebuild:
+  Added ~ppc64; bug #124469
 
   23 Feb 2006; Duncan Coutts <dcoutts@gentoo.org> lhs2tex-1.10_pre.ebuild:
   Add ~amd64 to KEYWORDS
