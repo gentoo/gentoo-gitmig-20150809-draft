@@ -1,47 +1,39 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.2-r1.ebuild,v 1.11 2006/03/01 10:40:37 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.2-r1.ebuild,v 1.1 2006/03/01 10:40:37 ticho Exp $
 
 inherit eutils gnuconfig
 
 FCONF_P="fetchmailconf-1.43.2"
 
 DESCRIPTION="the legendary remote-mail retrieval and forwarding utility"
-HOMEPAGE="http://www.catb.org/~esr/fetchmail/"
-SRC_URI="http://www.catb.org/~esr/${PN}/${PN}-6.2.5.tar.gz
-		http://download.berlios.de/${PN}/${PN}-patch-${PV}.gz
-		http://download.berlios.de/${PN}/${FCONF_P}.gz"
+HOMEPAGE="http://fetchmail.berlios.de"
+SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sparc ~x86"
 IUSE="ssl nls ipv6 kerberos krb4 hesiod"
 
 RDEPEND="hesiod? ( net-dns/hesiod )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	kerberos? ( app-crypt/mit-krb5 )
-	sys-devel/gettext
+	nls? ( sys-devel/gettext )
 	elibc_FreeBSD? ( sys-libs/com_err )"
 
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 
-S="${WORKDIR}/${PN}-6.2.5"
-
 src_unpack() {
 	unpack ${A} || die "unpack failed"
 	cd ${S} || die "cd \${S} failed"
 
-	epatch ${WORKDIR}/${PN}-patch-${PV} || die "epatch to ${PV} failed"
-
-	epatch ${FILESDIR}/${PN}-6.2.5-gentoo.patch || die
-	epatch ${FILESDIR}/${PN}-6.2.5-kerberos.patch || die
 	# this patch fixes bug #34788 (ticho@gentoo.org 2004-09-03)
 	epatch ${FILESDIR}/${PN}-6.2.5-broken-headers.patch || die
-	# this patch fixes bug #97263 (ticho@gentoo.org 2005-06-01)
-	if has_version '>=app-crypt/mit-krb5-1.4' ; then
-		epatch ${FILESDIR}/${PN}-6.2.5-mit-krb5-1.4.patch || die
-	fi
+
+	# this patch fixes bug #124477 - this will be fixed in 6.3.3
+	# - ticho 2006-03-01
+	epatch ${FILESDIR}/patch-${PV}.1-fix-netrc-SIGSEGV.diff || die
 
 	autoconf
 	gnuconfig_update
@@ -64,16 +56,12 @@ src_compile() {
 }
 
 src_install() {
-	# update fetchmailconf (security bug #110366)
-	mv -f "../fetchmailconf-1.43.2" "fetchmailconf" || \
-		die "couldn't update fetchmailconf"
-
 	einstall || die
 
 	dohtml *.html
 
 	dodoc FAQ FEATURES ABOUT-NLS NEWS NOTES README \
-		README.NTLM README.SSL TODO COPYING MANIFEST
+		README.NTLM README.SSL TODO COPYING
 
 	doman ${D}/usr/share/man/*.1
 	rm -f ${D}/usr/share/man/*.1
