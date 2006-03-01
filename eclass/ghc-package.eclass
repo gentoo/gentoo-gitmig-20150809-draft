@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.15 2005/09/13 12:51:30 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.16 2006/03/01 12:58:01 dcoutts Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 #
@@ -42,7 +42,7 @@ ghc-getghcpkgbin() {
 _GHC_VERSION_CACHE=""
 ghc-version() {
 	if [[ -z "${_GHC_VERSION_CACHE}" ]]; then
-		_GHC_VERSION_CACHE="$($(ghc-getghc) --version | sed 's:^.*version ::')"
+		_GHC_VERSION_CACHE="$($(ghc-getghc) --numeric-version)"
 	fi
 	echo "${_GHC_VERSION_CACHE}"
 }
