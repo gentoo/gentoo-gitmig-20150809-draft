@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4f6a86992df94bf2629b3f31ef945fd0 ChangeLog 2077
-MD5 d39a6dd3af176592dc47aff3885ca667 files/digest-oinkmaster-1.1 65
+MD5 b8ba055456fd04a860461e0f3c4c2fba ChangeLog 2236
+RMD160 23c2ddf2b71bc77882c0247c077948fda3620fd9 ChangeLog 2236
+SHA256 30e38813c4bfeb473f5eeb189393f49e0574756cfaf7e41c655984cb9198bca0 ChangeLog 2236
 MD5 cc825c2a99a50e5fdc0dd0a10ddd5a36 files/digest-oinkmaster-1.2 65
+RMD160 e19929e9695170d39db84b5fd0bfeb3fce8d7aa0 files/digest-oinkmaster-1.2 65
+SHA256 cecc1a95c012385bf3b00adfc7c4f8d86789e10bddaf7ea9e25992963df4acee files/digest-oinkmaster-1.2 65
+MD5 ac4b56d4038bfedcbfc2078c6a3af6cd files/digest-oinkmaster-2.0 241
+RMD160 6a8f4a1c5d57ba9937e96ef69755b0223bf4d53a files/digest-oinkmaster-2.0 241
+SHA256 57d82db25da051d554cfc8e69d468ed3dd79cb0e5036e78d1f403819c70996d7 files/digest-oinkmaster-2.0 241
 MD5 b807b01f2e4bbab81ecbe6b01657d13b metadata.xml 220
-MD5 9bfb7a103040285d749b4f2fc68f5c10 oinkmaster-1.1.ebuild 973
+RMD160 29b308dba5cf3f531c3b3895bd0f77b041c89bf4 metadata.xml 220
+SHA256 e1bb91d746d60c0bcd964678569e1b56bf8f16050d042a9b1b95cae5903a68dc metadata.xml 220
 MD5 80b3917e2f5892c18acc42fdd503ff2c oinkmaster-1.2.ebuild 839
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD02L0H6mNYUtVdIARAp/FAJ9wBLgctllpBdFajS4mnrEFFpX4kgCaAn1l
-ClOymF9gEfuRcrTzDeuJiU0=
-=E33w
------END PGP SIGNATURE-----
+RMD160 5940bf9d7ff0c6aec5b61958d03efb60833ca506 oinkmaster-1.2.ebuild 839
+SHA256 962377f7b004443918766465990e8d184d09fdc8cffcdbeb92e71529a5e07afc oinkmaster-1.2.ebuild 839
+MD5 2e2d232bfedf05bf73fe304e0833076f oinkmaster-2.0.ebuild 847
+RMD160 32cc1f40b8a8f1b56153dd4988ea9e09d92273d0 oinkmaster-2.0.ebuild 847
+SHA256 96391bd376b050d5258f8f73191885a6f89edb287cdf022a63d315c063fd8304 oinkmaster-2.0.ebuild 847
