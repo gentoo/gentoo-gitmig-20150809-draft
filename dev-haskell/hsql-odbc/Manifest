@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 21f5222896e01eed0f4accde4788b71a ChangeLog 479
-RMD160 fc9e414ecab92e1a958eee91933bffe3ef9d4e59 ChangeLog 479
-SHA256 468c9c7bad51c048c31d9db181776227244177c7a82d5b8cd529ee90f1bcf1e5 ChangeLog 479
+MD5 cc17edde3feb56a50fd302a2ea803c2c ChangeLog 589
+RMD160 88ae08af08d10219f9f1254e7d3cc150b8eaf1c7 ChangeLog 589
+SHA256 4d6e418adb3d1335da5bac62fdd677a2178d9b514ca57c7f1bbfe1bbc5ac1c6f ChangeLog 589
 MD5 8b88f3b8f094ddbdd05b6694b7543fc7 files/digest-hsql-odbc-1.7 223
 RMD160 7d319609e94b9fd8a725bbb036d5f6ae37e818f6 files/digest-hsql-odbc-1.7 223
 SHA256 68b6c539208dcf5c7056e412864a29dda67a3bea95995b53b80c981b76e3cedd files/digest-hsql-odbc-1.7 223
-MD5 13d86766e4b3d5bc467ebcc838b0d9cd hsql-odbc-1.7.ebuild 858
-RMD160 1d4ff7becffe2c44b16c381f2324f455ebd6c956 hsql-odbc-1.7.ebuild 858
-SHA256 ddb5ca6cdcf6391ae27045580ad23f0ffe1bd6f013f5ea4313314cd1abe66418 hsql-odbc-1.7.ebuild 858
+MD5 68f89beebe978393dffad3f834c73563 hsql-odbc-1.7.ebuild 862
+RMD160 2fee063d3ad38b661383aba40f147d04fc289128 hsql-odbc-1.7.ebuild 862
+SHA256 644103b66cb8d2b6d416f553d5de28ec464ccd43e70ef7ef58ce637ef805477b hsql-odbc-1.7.ebuild 862
 MD5 c694674dcbef799cd4fdb6914683ebff metadata.xml 223
 RMD160 7783e6057effb8b8f0b79cffe8b557b32c633839 metadata.xml 223
 SHA256 1d00c8be162a6cb87b3de440b3e63e10b39c12d56e8fbfe592e75aed872b2508 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/hRF/B0cxt+cq+wRAvePAJ4l3ER3GpndZbqNoQTdvz/WA9qY6QCgsQ/H
-JLsGKIAILYZfakJoHECSCg4=
-=FoJK
------END PGP SIGNATURE-----

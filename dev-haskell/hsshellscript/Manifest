@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0465ffdad7881bc6ad9aad73b4f9a298 ChangeLog 1462
-MD5 3f6e26f4a44d1b5c6ff6380d989e6af6 metadata.xml 222
-MD5 d6e969e4cbfa253d8eff3155448a639a hsshellscript-2.3.0.ebuild 1072
-MD5 342a987a2862d37266ce8637603dd0b1 hsshellscript-2.2.2.ebuild 1073
-MD5 7c00a3397ce6b85f8ea299b2b193823f hsshellscript-2.6.0.ebuild 1295
+MD5 7c4e8c4b432a3cd28844f0c4aa5cf041 ChangeLog 1582
+RMD160 e0c35eac2af6089a0e0721da0e5e98f5453d5370 ChangeLog 1582
+SHA256 f95217dbeb5f8571a10b38ddd1473340b95387f410607d66746c74bf19882b14 ChangeLog 1582
 MD5 7ae622841800669416a46ccab3d9a9b0 files/digest-hsshellscript-2.2.2 71
+RMD160 a9428679ec03796917c22b6a8970848808695b26 files/digest-hsshellscript-2.2.2 71
+SHA256 57217b493a9a512a1118dcbc002eed599c0d4a6962abff1cca22bfc7a9d69156 files/digest-hsshellscript-2.2.2 71
 MD5 e99cbf0bf1d4793de8d69765d43ded70 files/digest-hsshellscript-2.3.0 72
+RMD160 9ca2c5ede3b6fd90779ca1fbcb546e105887b9d6 files/digest-hsshellscript-2.3.0 72
+SHA256 38f5d5a5b2a79a1597db4405a43299267b090a5da81090c25ee72688756a0b4b files/digest-hsshellscript-2.3.0 72
 MD5 669d010e1fd7c5bb71478b2efb700fff files/digest-hsshellscript-2.6.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfb6aBQBy/eDH5uERAunFAJ9zBDkTbZSJW/Zfgg664v+WMvblwgCeOzye
-/X2BXPyPE2TqofCb8ErJiH0=
-=ADTS
------END PGP SIGNATURE-----
+RMD160 f4a2ef6f24dde272da05f3d2745a3ea17a699a6c files/digest-hsshellscript-2.6.0 71
+SHA256 70b65511951746f91be722d20917b05a39a06a38cb01908b2faf7d92de6a6db7 files/digest-hsshellscript-2.6.0 71
+MD5 342a987a2862d37266ce8637603dd0b1 hsshellscript-2.2.2.ebuild 1073
+RMD160 4a59f3fa98db978e127c0b7d55a1e8c5b2a40d82 hsshellscript-2.2.2.ebuild 1073
+SHA256 0db1482d4db6fb76e522c3044049f7c45e500035e218c15aca7f3c839216804a hsshellscript-2.2.2.ebuild 1073
+MD5 d6e969e4cbfa253d8eff3155448a639a hsshellscript-2.3.0.ebuild 1072
+RMD160 b010469f25625f36347ff64b9951c602f033123a hsshellscript-2.3.0.ebuild 1072
+SHA256 a96d5457de9a1df482936ec07ed1bc971e2be6b8e27acbb58434c80234132ae9 hsshellscript-2.3.0.ebuild 1072
+MD5 b2e7bfcefbada9a3f69c9f4dead82ea0 hsshellscript-2.6.0.ebuild 1300
+RMD160 656f9a87ded40f1e65b163ca4580bbfa8573f10e hsshellscript-2.6.0.ebuild 1300
+SHA256 93384923163604ab44902989850d0c53fccea6093824ba2f4fc344c50a73189e hsshellscript-2.6.0.ebuild 1300
+MD5 3f6e26f4a44d1b5c6ff6380d989e6af6 metadata.xml 222
+RMD160 b1c9360cd0375800038801fb4f1bbe8f5898fd3e metadata.xml 222
+SHA256 ad870a1799e6b550fc263faba3ccc5bcdb7a68b1a5a023bff6fb2b103398ef27 metadata.xml 222

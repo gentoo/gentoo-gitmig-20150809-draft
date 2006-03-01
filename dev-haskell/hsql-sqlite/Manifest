@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3165c31647553d81314d4202c8a0148 ChangeLog 489
-RMD160 9fb52f61ca2e1fd1e381af4808daded08d51a439 ChangeLog 489
-SHA256 31604a9cff157ae2825b277022f6f583ac2a48eac2b6797adbbe1ff3d3b08643 ChangeLog 489
+MD5 5fdae8d86fa410551300de6813892cd2 ChangeLog 603
+RMD160 52ea13e21985060bbd24bbc11c16ff6d86c25552 ChangeLog 603
+SHA256 818bd47dfef77ecd4ce0eed8a022e8ec8f98b2b9b7f5baa48c629e11ff04668e ChangeLog 603
 MD5 8b88f3b8f094ddbdd05b6694b7543fc7 files/digest-hsql-sqlite-1.7 223
 RMD160 7d319609e94b9fd8a725bbb036d5f6ae37e818f6 files/digest-hsql-sqlite-1.7 223
 SHA256 68b6c539208dcf5c7056e412864a29dda67a3bea95995b53b80c981b76e3cedd files/digest-hsql-sqlite-1.7 223
-MD5 587534a384b7624d4912a1e7923cab04 hsql-sqlite-1.7.ebuild 768
-RMD160 978a17711a2bc9df29fcb464d5fdf86d7b263d5c hsql-sqlite-1.7.ebuild 768
-SHA256 7f7dcd669a357dfb9f945a957f8e4a828c15cf1db10b4411305b89c7831d5f4d hsql-sqlite-1.7.ebuild 768
+MD5 e8919bdc31ba4e7178dbce5ab5e83e2f hsql-sqlite-1.7.ebuild 772
+RMD160 a07b457a8d10eae6840758f5e3ed7c387b6e3daa hsql-sqlite-1.7.ebuild 772
+SHA256 879102a31a97ae8dbecfd37b243ebc4a6ca7837c648634744eac9c5f7536131d hsql-sqlite-1.7.ebuild 772
 MD5 c694674dcbef799cd4fdb6914683ebff metadata.xml 223
 RMD160 7783e6057effb8b8f0b79cffe8b557b32c633839 metadata.xml 223
 SHA256 1d00c8be162a6cb87b3de440b3e63e10b39c12d56e8fbfe592e75aed872b2508 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/hTT/B0cxt+cq+wRAiPYAJ9eoEl/gqf4VwP4Kwcie6O9uaUldACgoFuh
-Apw5zCHRp5n20vrH2OPdlJc=
-=LDOn
------END PGP SIGNATURE-----
