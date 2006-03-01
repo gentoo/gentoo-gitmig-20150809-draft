@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.1.ebuild,v 1.2 2005/09/25 22:19:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.1.ebuild,v 1.3 2006/03/01 00:18:20 caleb Exp $
 
 inherit eutils multilib base
 
@@ -11,7 +11,7 @@ LICENSE="APSL-2 BSD"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug"
+IUSE="debug java"
 
 PATCHES="${FILESDIR}/${P}-Makefiles.patch"
 
@@ -31,6 +31,10 @@ src_compile() {
 
 	cd ${S}/mDNSPosix
 	emake os=${os} ${debug} || die "make mDNSPosix failed"
+
+	if use java; then
+		emake os=${os} ${debug} Java || die "make mDNSPosix java failed"
+	fi
 
 	cd ${S}/Clients
 	emake os=${os} ${debug} || die "make Clients failed"
@@ -78,6 +82,12 @@ src_install() {
 	# Fix multilib-strictness
 	mv ${D}/lib ${D}/$(get_libdir)
 	mv ${D}/usr/lib ${D}/usr/$(get_libdir)
+
+	if use java; then
+		java-pkg_dojar ${S}/mDNSPosix/build/prod/dns_sd.jar
+		java-pkg_doso ${S}/mDNSPosix/build/prod/libjdns_sd.so
+	fi
+
 }
 
 pkg_postinst() {

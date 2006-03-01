@@ -1,24 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e110f34bac8e308172df60f7aa54244a ChangeLog 2783
-MD5 8b3554909fb9a64630ea24a3a85d850d mDNSResponder-98.ebuild 1015
-MD5 642f4d4d00cc80310934d0f8c3839f5a mDNSResponder-107.1.ebuild 2311
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 526779dd93f31199a9486a8c97b3d859 files/dnsextd.init.d 998
-MD5 b74cd777522f1afe94e70f9fe28f8152 files/mDNSResponderPosix.conf.d 67
-MD5 27629c08c7cc567113bdd270b670feaf files/mdnsd.init.d 845
-MD5 dc4d5a4581328c0742083dbf8794512c files/digest-mDNSResponder-107.1 72
-MD5 3e72df7f18d10cc944d1d2756f75a543 files/mDNSResponderPosix.init.d 1247
-MD5 ccbbf27de7cb7a7a00b82ce91dc784ee files/dnsextd.conf.d 426
+RMD160 f72ceeba72a95579538152c2526ca8200a4ad067 ChangeLog 2783
+SHA256 0313aad6ba3e9e9d485cab25f5c887ced20a5c20923620ea2968d342174ca3d4 ChangeLog 2783
+MD5 6bc193747762e84f664f6a3303296b23 files/digest-mDNSResponder-107.1 262
+RMD160 54c2bd241c40159e8fe7ceca16011b3377551684 files/digest-mDNSResponder-107.1 262
+SHA256 41f4cf29d74c7713a1ce6dc791412c2cfebc5209f9784322a71ad998cc610ddb files/digest-mDNSResponder-107.1 262
 MD5 854ae89c0e0738fa68590659fe262309 files/digest-mDNSResponder-98 69
-MD5 6bfaec39e5143be17c23ebdbdd0ada06 files/mDNSResponderPosix.conf 437
+RMD160 b772a385d55bab2dd53fb8b0f279f03acb1a4832 files/digest-mDNSResponder-98 69
+SHA256 90fc1ccffd98e61b27f1c40a2046987b063ae304d50dc9c4e745645a1def33f3 files/digest-mDNSResponder-98 69
+MD5 ccbbf27de7cb7a7a00b82ce91dc784ee files/dnsextd.conf.d 426
+RMD160 fb7e2a3eef91c441e140b7d883e681f80479d24d files/dnsextd.conf.d 426
+SHA256 dd1d5210743beb98aa631fcd3611313bbba7d3862b323ac52ccd57d81c337f0d files/dnsextd.conf.d 426
+MD5 526779dd93f31199a9486a8c97b3d859 files/dnsextd.init.d 998
+RMD160 977ec57c04533fe44a15237dd093e7670daa5dd7 files/dnsextd.init.d 998
+SHA256 47da76c48b3e380209b6ee98683121c783e4399535b1142601fafacfed59a153 files/dnsextd.init.d 998
+MD5 b7d4403ae11819a11cd52f31af9548ac files/mDNSResponder-107.1-Makefiles.patch 5584
+RMD160 7f46ad1ebc92a6f6ef18e769c32907878298b437 files/mDNSResponder-107.1-Makefiles.patch 5584
+SHA256 310631377c83246fb8d40207014157a86236a1f4132505593ad141b4078b5909 files/mDNSResponder-107.1-Makefiles.patch 5584
 MD5 7087496865b0e264a209619124877965 files/mDNSResponder-98-Makefiles.patch 3631
-MD5 2550bc56ecb633b4002835a7256d4734 files/mDNSResponder-107.1-Makefiles.patch 5442
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNyKgj5H05b2HAEkRAlZJAJ0U7XgdxpG80RfByEg8s42EliCePQCffvZQ
-hA9MOPBny+++/N/rkzua7vY=
-=LFRq
------END PGP SIGNATURE-----
+RMD160 e6cf2d5bdbc84196407cc8e0bdb94ec16b7b41f0 files/mDNSResponder-98-Makefiles.patch 3631
+SHA256 8e43b1a664e4cf532afeef54f8a3be8f1b62435bb6391793ace271d06ce2e4ff files/mDNSResponder-98-Makefiles.patch 3631
+MD5 6bfaec39e5143be17c23ebdbdd0ada06 files/mDNSResponderPosix.conf 437
+RMD160 1691be0362ec145874611696d3833e81a85d73d2 files/mDNSResponderPosix.conf 437
+SHA256 e1c6b8967b6bf29aa54a71bbb91302655af3d6fcdd8d2e3e4df5770deb114493 files/mDNSResponderPosix.conf 437
+MD5 b74cd777522f1afe94e70f9fe28f8152 files/mDNSResponderPosix.conf.d 67
+RMD160 dfd5c6dae9157eeef7a5c62c7b3d041b8bd63340 files/mDNSResponderPosix.conf.d 67
+SHA256 9b9880836a55fb24120454062936da1a2120736a3ade53992f000433a3d563e3 files/mDNSResponderPosix.conf.d 67
+MD5 3e72df7f18d10cc944d1d2756f75a543 files/mDNSResponderPosix.init.d 1247
+RMD160 2ef8feecba3481bda13a79627b6b664bbbda3793 files/mDNSResponderPosix.init.d 1247
+SHA256 4585aa2a9591e5af5d1d5f1b069c10d66f8f1ca2a35db7f5c6b13e317b8b4e16 files/mDNSResponderPosix.init.d 1247
+MD5 27629c08c7cc567113bdd270b670feaf files/mdnsd.init.d 845
+RMD160 1dd264f5bb68dd2e73007b2d4f4133edae79339e files/mdnsd.init.d 845
+SHA256 87df2b720556e5b3cdc5e6aedae45a237e9e58ecde8799429c02527cd0d9c072 files/mdnsd.init.d 845
+MD5 501fc0cb1abb02772c666ca66a265790 mDNSResponder-107.1.ebuild 2538
+RMD160 bb8b8fbb2db5d1c9465556bf53da4dcbaf7ff17e mDNSResponder-107.1.ebuild 2538
+SHA256 42e2fb87cbef654b79ddc580117ac907369c38ed4fc342fd04627cbad459bfac mDNSResponder-107.1.ebuild 2538
+MD5 8b3554909fb9a64630ea24a3a85d850d mDNSResponder-98.ebuild 1015
+RMD160 329d5ec64aacee5e4a26f1c0d48f270ce09d5188 mDNSResponder-98.ebuild 1015
+SHA256 f7de606d22cd08b3f87882f10a971be8d32d1687e4be77ee7b1a36cfcb7a2fcb mDNSResponder-98.ebuild 1015
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156

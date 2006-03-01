@@ -1,6 +1,6 @@
 diff -Nur mDNSResponder-107.1.orig/Clients/Makefile mDNSResponder-107.1/Clients/Makefile
 --- mDNSResponder-107.1.orig/Clients/Makefile	2004-09-24 23:15:26.000000000 +0200
-+++ mDNSResponder-107.1/Clients/Makefile	2005-08-27 14:36:34.000000000 +0200
++++ mDNSResponder-107.1/Clients/Makefile	2006-02-22 20:49:14.000000000 +0100
 @@ -49,11 +49,14 @@
  #############################################################################
  
@@ -22,7 +22,16 @@ diff -Nur mDNSResponder-107.1.orig/Clients/Makefile mDNSResponder-107.1/Clients/
  targets: build/dns-sd
 diff -Nur mDNSResponder-107.1.orig/mDNSPosix/Makefile mDNSResponder-107.1/mDNSPosix/Makefile
 --- mDNSResponder-107.1.orig/mDNSPosix/Makefile	2005-04-14 23:07:10.000000000 +0200
-+++ mDNSResponder-107.1/mDNSPosix/Makefile	2005-08-27 14:32:35.000000000 +0200
++++ mDNSResponder-107.1/mDNSPosix/Makefile	2006-02-22 21:25:42.000000000 +0100
+@@ -224,7 +224,7 @@
+ 
+ COREDIR = ../mDNSCore
+ SHAREDDIR = ../mDNSShared
+-JDK = /usr/jdk
++JDK = `java-config -O`
+ 
+ CC = @cc
+ LD = ld -shared
 @@ -384,7 +384,7 @@
  
  all: setup Daemon libdns_sd Client Responder ProxyResponder Identify NetMonitor dnsextd $(OPTIONALTARG)
@@ -143,3 +152,4 @@ diff -Nur mDNSResponder-107.1.orig/mDNSPosix/Makefile mDNSResponder-107.1/mDNSPo
  
  $(OBJDIR)/com/apple/dnssd/%.class:	$(JAVASRC)/%.java
  	$(JAVAC) -d $(OBJDIR) -classpath $(OBJDIR) $<
+
