@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.9_beta2.ebuild,v 1.4 2006/02/05 21:36:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.9_rc1.ebuild,v 1.1 2006/03/01 15:59:42 flameeyes Exp $
 
 inherit kde
 
-MY_P="${P/_beta/b}"
+MY_P="${P/_rc/rc}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A Latex Editor and TeX shell for kde"
 HOMEPAGE="http://kile.sourceforge.net/"
-SRC_URI="mirror://sourceforge/kile/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/kile/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT=0
@@ -32,13 +32,15 @@ for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
 done
 
+PATCHES="${FILESDIR}/${P}-gcc41.patch"
+
 src_unpack() {
 	kde_src_unpack
 
 	if [[ -n ${LINGUAS} ]]; then
 		MAKE_TRANSL=$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))
 		einfo "Building translations for: ${MAKE_TRANSL}"
-		sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_TRANSL}:" ${S}/translations/Makefile.am || die "sed for locale failed"
+		sed -i -e "s:^SUBDIRS.*=.*:SUBDIRS = ${MAKE_TRANSL}:" ${S}/translations/Makefile.am || die "sed for locale failed"
 		rm -f ${S}/configure
 	fi
 }
