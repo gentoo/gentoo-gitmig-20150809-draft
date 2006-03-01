@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5047 2006/03/01 13:25:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5048 2006/03/01 14:43:48 hansmi Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -136,10 +136,6 @@ dev-tinyos/tos-getenv
 # Diego Pettenò <flameeyes@gentoo.org> (12 Feb 2006)
 # Beta releases
 =media-sound/amarok-1.4_beta*
-
-# Michael Hanselmann <hansmi@gentoo.org> (12 Feb 2006)
-# Masked for testing.
-mail-mta/netqmail
 
 # Markus Dittrich <markusle@gentoo.org> (11 Feb 2006)
 # new version for fftw, needs some additional testing
