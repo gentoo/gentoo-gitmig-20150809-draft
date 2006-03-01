@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-3.4.5.ebuild,v 1.1 2005/12/22 02:02:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-3.4.5.ebuild,v 1.2 2006/03/01 01:10:28 vapier Exp $
 
 case ${CHOST} in
 	hppa*)    CTARGET=hppa64-${CHOST#*-};;
@@ -8,6 +8,7 @@ case ${CHOST} in
 	powerpc*) CTARGET=${CHOST/powerpc/powerpc64};;
 	s390*)    CTARGET=${CHOST/s390/s390x};;
 	sparc*)   CTARGET=${CHOST/sparc/sparc64};;
+	i?86*)    CTARGET=x86_64-${CHOST#*-};;
 esac
 export CTARGET
 export USE="nocxx nossp nopie -fortran -gcj -objc -multilib"
@@ -20,7 +21,11 @@ inherit toolchain eutils
 
 DESCRIPTION="64bit kernel compiler"
 
-KEYWORDS="-* ~hppa ~mips ~ppc ~s390 ~sparc"
+KEYWORDS="-* ~hppa ~mips ~ppc ~s390 ~sparc ~x86"
+
+# unlike every other target, hppa has not unified the 32/64 bit
+# ports in binutils yet
+DEPEND="hppa? ( sys-devel/binutils-hppa64 )"
 
 src_unpack() {
 	gcc_src_unpack
