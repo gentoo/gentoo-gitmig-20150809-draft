@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/mtp-target-bin-1.2.0.ebuild,v 1.5 2006/01/29 00:00:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/mtp-target-bin-1.2.0.ebuild,v 1.6 2006/03/01 22:40:18 tupone Exp $
 
 inherit games
 
@@ -39,10 +39,11 @@ src_install() {
 	cp -pPR "${S}/"* "${D}/${GAMES_PREFIX_OPT}"/${PN}/
 
 	games_make_wrapper ${PN}-client ./client "${GAMES_PREFIX_OPT}/${PN}/client" ../lib
-	games_make_wrapper ${PN}-server ./server "${GAMES_PREFIX_OPT}/${PN}/server" ../lib
+	games_make_wrapper ${PN}-server ./mtp_target_service "${GAMES_PREFIX_OPT}/${PN}/server" ../lib
 
 	dosym /usr/lib/liblualib.so "${GAMES_PREFIX_OPT}"/${PN}/lib/liblualib50.so.5.0
 	dosym /usr/lib/liblua.so "${GAMES_PREFIX_OPT}"/${PN}/lib/liblua50.so.5.0
+	dosym /usr/lib/libcurl.so "${GAMES_PREFIX_OPT}"/${PN}/lib/libcurl.so.2
 
 	prepgamesdirs
 	cd "${D}/${GAMES_PREFIX_OPT}"/${PN}
