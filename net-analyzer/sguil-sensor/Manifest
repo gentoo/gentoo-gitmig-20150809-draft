@@ -1,4 +1,4 @@
-MD5 1541a460c82215fa23ef1fefec7c0cf7 ChangeLog 1557
+MD5 3e8671de6e58f1d7a97328c12829d80e ChangeLog 1557
 MD5 7dea1d8d6ed9dadaa3768e6ba138fe76 files/digest-sguil-sensor-0.5.3-r2 69
 MD5 21efd06f535dcc5b39027550e66c2b4e files/digest-sguil-sensor-0.6.0_p1 72
 MD5 6af6111c55df2266d93202e4ac6af862 files/digest-sguil-sensor-0.6.1 70
@@ -8,4 +8,4 @@ MD5 87465a7b8792682b4dae8e2e46eed0bb files/sensor_agent.initd 757
 MD5 5355b4f79a0130d075711f0a54840239 metadata.xml 223
 MD5 2e2cd8bb5e2d134cfafb10559453d43f sguil-sensor-0.5.3-r2.ebuild 2721
 MD5 d89ca1a68f0568d033d51ba2921547e4 sguil-sensor-0.6.0_p1.ebuild 2748
-MD5 b5b6e07b2a2c2dd457e7d6b0b84c6c76 sguil-sensor-0.6.1.ebuild 2748
+MD5 80839c1f3dfbc5cecacc7330e65a1034 sguil-sensor-0.6.1.ebuild 2745
