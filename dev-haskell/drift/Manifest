@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 90b909f5c5f99ba5e6e84b638d8b2d7d ChangeLog 817
-RMD160 4131db6f36b1751fa584caa100ca5d698e0a6265 ChangeLog 817
-SHA256 38e446d0fc214ff8c84431e06df0eaad249fd3431f4ca716b356655f333a07c6 ChangeLog 817
+MD5 434cf751faf6671e4041dbc59beb53ee ChangeLog 915
 MD5 c044471a67d38c35ee16c1c7f7225527 drift-2.0.4.ebuild 831
-RMD160 0b0e1bfd5863356a534ba954c88d4f27dfd4c8a2 drift-2.0.4.ebuild 831
-SHA256 f4ae1fb2ea9b72ca42f48d3f1027cdd58d46c28b678edc30bc75fa1e269f9008 drift-2.0.4.ebuild 831
 MD5 e76cac8a7e7b89c94862f259aa55e5c6 drift-2.1.0.ebuild 827
-RMD160 e34570ed0e114031807f738c6d86c241aaa1c380 drift-2.1.0.ebuild 827
-SHA256 e8060b33e9b6d89d63de2f3ac8d11822be9d64369daaf090232feedf97837140 drift-2.1.0.ebuild 827
-MD5 8a4dc7473a4358772b2de5a6cdedacef drift-2.1.2.ebuild 841
-RMD160 d7d2e329a6d44ad96e8dd5f086108c2ceaffedcc drift-2.1.2.ebuild 841
-SHA256 c304ccc4f90e91157b71ad07fb7233bcaff4f3f9e96bfd1c6f8680e51a4e0ddc drift-2.1.2.ebuild 841
+MD5 df1c3b0e4108f608004be9f4062619c2 drift-2.1.2.ebuild 848
 MD5 ef4178698c778fa0dad69a79526d4a86 files/digest-drift-2.0.4 63
-RMD160 6eeaef1d1f035a52bc2baac9f3518a7520c2f4dc files/digest-drift-2.0.4 63
-SHA256 491347a41f179d2a8fbde7c2258366d720fb68d658d3f237a716c90ed253cebe files/digest-drift-2.0.4 63
 MD5 58458ce024b7d5fbdd1bdf276b33cccc files/digest-drift-2.1.0 63
-RMD160 10b39fa3a31218cbc34f2715ae6e46aed1796afa files/digest-drift-2.1.0 63
-SHA256 8efa8e3f4fdc374c5a9832ece51c682a28208f9e0b2103de46be06deaad94300 files/digest-drift-2.1.0 63
 MD5 9a63d39d2faa4115539634e988adbf0d files/digest-drift-2.1.2 235
-RMD160 a895c965ec7c95ee3c72d10a3e8f38f55b74c4f1 files/digest-drift-2.1.2 235
-SHA256 5f77061504ecd3e345da3a458703dd6670754334fbc4dc7e57818e39fc2177b9 files/digest-drift-2.1.2 235
 MD5 e0ce59fd27b9382896cdb87d5fa48f89 metadata.xml 286
-RMD160 eea8b96926379c8a0e31660f268dd917615d41a3 metadata.xml 286
-SHA256 0e0b237f9b1c40f9e276e0a0d11ba30285761b6348f19d6da06b0dc6c8a9efe2 metadata.xml 286
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/zv0/B0cxt+cq+wRApcDAJ4rpibk67DZ4M6a/GoFSe99vNzkjgCeOmjR
-k6QCyXRFgYX59VoicgbISKA=
-=xHY3
------END PGP SIGNATURE-----

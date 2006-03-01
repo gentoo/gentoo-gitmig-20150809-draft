@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8767d96f5a56e1ac21a8ba2f48c173f0 ChangeLog 878
-RMD160 7b2c232d7de20fbbd0d82aa8772924738bde9b70 ChangeLog 878
-SHA256 e5dc736455c48a19472746c42aecf4193618a7477def73564cd715655b9713a0 ChangeLog 878
+MD5 448d896301d93633619413b0d2322989 ChangeLog 987
 MD5 4bdb0f2eea0626f11f6d857caa1391c6 files/digest-haskell-src-exts-0.2 259
-RMD160 df546f2230daa874979146ec3ce2f2ba749f7f93 files/digest-haskell-src-exts-0.2 259
-SHA256 7817d91ce21644746cc0fdbe58944032ffe773b2853244e53505a03d9ffd69fb files/digest-haskell-src-exts-0.2 259
-MD5 b1c16488daf7f28566ca05afa2aa57d5 haskell-src-exts-0.2.ebuild 982
-RMD160 3996cba4e65c0db11c0cea0262573406229fd819 haskell-src-exts-0.2.ebuild 982
-SHA256 1e583c75c2508167b6af6767171e381eece386e5229dfb4ffaa39c814193dd1b haskell-src-exts-0.2.ebuild 982
+MD5 0e8737b711236a336c7b311eeb524906 haskell-src-exts-0.2.ebuild 989
 MD5 5173f3cddccbc40b8657fb05a97bfae1 metadata.xml 671
-RMD160 fd9612929239d60ebebb881ba6f46fbe7c436fef metadata.xml 671
-SHA256 7acde279d06a1095afbb79856ee028b68346cd45ebee58f734e965045e625c1d metadata.xml 671
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD9JAR/B0cxt+cq+wRAhMOAJ9HDfrLUcbnMlcHPMoKxTcdU/h2DwCaA9DC
-31/eAyHa9PDpSG8BV5bUCzg=
-=7lk4
------END PGP SIGNATURE-----

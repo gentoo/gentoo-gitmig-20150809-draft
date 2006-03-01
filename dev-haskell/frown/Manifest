@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce37cde792475dcc71a79004f019e7ab ChangeLog 869
-RMD160 d24b27d88fc3b361cbfe9b0eea4fb4899971f0b0 ChangeLog 869
-SHA256 6f6e65bed73e6039a9929351ae7d4c25e008b0f2cf89debc225d08a1ff8dca96 ChangeLog 869
+MD5 ef4bf1aca54c29222ac28d8c3864f25c ChangeLog 970
 MD5 d382ade2ea4d45840fa3dc6eb91d23cc files/digest-frown-0.6.1-r1 238
-RMD160 8caa51bcab47bccd62fe019d4954a60370834ecc files/digest-frown-0.6.1-r1 238
-SHA256 7d4e554364b91a2e15a2773b36311026181043a1066237af63cbbc61371d1d66 files/digest-frown-0.6.1-r1 238
-MD5 63bdb6ca82bba6ed3b831da88a80e703 frown-0.6.1-r1.ebuild 789
-RMD160 ac081f029bd6336f6f511986cef21911bcbacd91 frown-0.6.1-r1.ebuild 789
-SHA256 a92e3fc0bc98173971b3cf44f1301fef0f3b189286d88e92992da8349074d5b9 frown-0.6.1-r1.ebuild 789
+MD5 39a308f499099a42acea7a38b482aa19 frown-0.6.1-r1.ebuild 796
 MD5 c694674dcbef799cd4fdb6914683ebff metadata.xml 223
-RMD160 7783e6057effb8b8f0b79cffe8b557b32c633839 metadata.xml 223
-SHA256 1d00c8be162a6cb87b3de440b3e63e10b39c12d56e8fbfe592e75aed872b2508 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/0X+/B0cxt+cq+wRAoYDAKCh/i94yBVyWgkG/vwIoZQQEAiYPwCbBNqg
-KGB7iPfLWxC6sykKN5YC7mk=
-=/xtM
------END PGP SIGNATURE-----
