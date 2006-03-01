@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1e2f7f8482744cf339af77566fec1fd5 ChangeLog 27741
-RMD160 aa5d15ed0ef1163ba6f0b83db3449891bf08a2e2 ChangeLog 27741
-SHA256 3ff454a69d8b9dd6f92f45f484d5fa6309ac821c22e6b2c5fdb64a293deffcae ChangeLog 27741
+MD5 0772c4c216fa420d11d82e9de9fe4b69 ChangeLog 27854
+RMD160 2b09e81d66256f4e09a5b89eead84e53a3b8b7bf ChangeLog 27854
+SHA256 02363818906729bd4a10b589443fa4038c31a94d76666c5acaa00a045610d16c ChangeLog 27854
 MD5 33d51532d0f696fefa15593b2cf2f6de files/digest-vanilla-sources-2.0.40-r1 66
 RMD160 617d8f3ea4a2fd806a1e0ad9fc6983ea03c9b468 files/digest-vanilla-sources-2.0.40-r1 66
 SHA256 4ece3e070b473d46bc025a4b7d4769998672a8ce5bccc8119a19740c78c9e3f0 files/digest-vanilla-sources-2.0.40-r1 66
@@ -154,9 +151,9 @@ SHA256 aef1d3f5e7f73fd64e783692fd540bc26399ee20aa2f743aedfb0ebee45a45a7 vanilla-
 MD5 4956f6a505b58441034cf9a64b26e293 vanilla-sources-2.6.15.3.ebuild 498
 RMD160 35dfde716e37add81be16c32c29b9478f5df58af vanilla-sources-2.6.15.3.ebuild 498
 SHA256 ebd74457e5b446e69f68a593a46b097010d596f80fe515b3a6636ba25db7bf61 vanilla-sources-2.6.15.3.ebuild 498
-MD5 982a2b0afd5c705687308a2ec2a48af2 vanilla-sources-2.6.15.4.ebuild 498
-RMD160 b695eb76e1b268be46fadbb4bb47c2456226888a vanilla-sources-2.6.15.4.ebuild 498
-SHA256 fa6d4a5bc4dee48c2143e31ef7174cbe31ed68f44749fc9cf6bb4190aa3d3a20 vanilla-sources-2.6.15.4.ebuild 498
+MD5 35ad195e201dbebe6aef33c2d98f5e7d vanilla-sources-2.6.15.4.ebuild 502
+RMD160 259d420413825aa0ab485ae0d3d1185e0374d195 vanilla-sources-2.6.15.4.ebuild 502
+SHA256 9ed9528615d3307b66023d4d87ba45b377cc7aa3138a72b8c695d2bcae873251 vanilla-sources-2.6.15.4.ebuild 502
 MD5 a6d1e6f6a3dd468c9363b300fb1ffde0 vanilla-sources-2.6.15.ebuild 489
 RMD160 1ab643eed15ad48fd87da8ee4f2703c58a1bb2a5 vanilla-sources-2.6.15.ebuild 489
 SHA256 69c39fe10583e7c546e5bd06d16e5e9eb93572325847cc9c81d84f2ef8d72625 vanilla-sources-2.6.15.ebuild 489
@@ -181,10 +178,3 @@ SHA256 b62cba6961685d2156c8470049780528816b257eb707a5953fa222d0806c32b5 vanilla-
 MD5 2b03b5303004069d236540fff82d3077 vanilla-sources-2.6.7.ebuild 456
 RMD160 1e1311dc0d49a868d622d3822e19daf850691462 vanilla-sources-2.6.7.ebuild 456
 SHA256 27f7a520f446755bdacca4f69d5ece31904bf4a9d76edbf9ab99d7e89cbff9e0 vanilla-sources-2.6.7.ebuild 456
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBE3yV3J2n04EauwRAh+sAJ9iTanFDLdNhyBP3/uP77pHXROw5wCg07rO
-Rad+1pgLkBkf8ncd3oJCIys=
-=6Dpl
------END PGP SIGNATURE-----
