@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 57156e812d5761e64cade0f26acb929e ChangeLog 840
-RMD160 5e1a13ab2b1e95f295fdc4e2b0bd4d5f449965d3 ChangeLog 840
-SHA256 4d9b7501c2ee060a173bfe26df719291524f613b39c99d7daf69a36c7b11b19f ChangeLog 840
+MD5 69205c295d975581c480d8663daf7422 ChangeLog 943
 MD5 83e167c7993d1a2328ae5e177ebf948f files/digest-lhs2tex-1.10_pre 68
-RMD160 948df093fc98108bacbf2d9c961e655e3d2e5bed files/digest-lhs2tex-1.10_pre 68
-SHA256 2a275b6083f2a6f63b62ecaa25d3510a166a496868da221dcb8f6ffa7d01ff6f files/digest-lhs2tex-1.10_pre 68
 MD5 e1cc548aeb7707cdab1fa7be50d8ab06 files/digest-lhs2tex-1.9 64
-RMD160 aa14b932038ef6e986932bf5bc27448e9f90e229 files/digest-lhs2tex-1.9 64
-SHA256 6cf855baf5b2f1407b7266b4f3052fbb345e6e71bf123effdeddf58a439bc529 files/digest-lhs2tex-1.9 64
-MD5 2c8ba74d6c2dac336ebb162f971750c8 lhs2tex-1.10_pre.ebuild 984
-RMD160 7ebb94dacbc382414bde3e612c86a4e542a19ac3 lhs2tex-1.10_pre.ebuild 984
-SHA256 5cd2303688c64c1e37ff7e1b65c83cd30ea02755fbe94b3098b9f61b00384b82 lhs2tex-1.10_pre.ebuild 984
+MD5 88fda475f1711ccd8439dbb2a97c7a52 lhs2tex-1.10_pre.ebuild 991
 MD5 bfe2ed685012f4e009d6d0cf08e33235 lhs2tex-1.9.ebuild 997
-RMD160 166f4e66015ee19400d795d5dc804c119b52227a lhs2tex-1.9.ebuild 997
-SHA256 a851b7651256adb3dc10511b5af21c094fd852b714d6ce15976690e5598c95df lhs2tex-1.9.ebuild 997
 MD5 f214e1ec640136029ee84e938434e82e metadata.xml 259
-RMD160 0a2b91b59fe9daa2f826eaef79636b0738f042b9 metadata.xml 259
-SHA256 a450d24928feca3321b4478f3d8b46949214cd2aa75e93e2e25ebbe1b1d73352 metadata.xml 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD4DBQFD/h8E/B0cxt+cq+wRAtpwAJ4rKU7vQfqwDZMHh5KpEU3U6o8JzACUCy/3
-x0X6RfH47lrBqc1rxvRTnw==
-=Chqa
------END PGP SIGNATURE-----
