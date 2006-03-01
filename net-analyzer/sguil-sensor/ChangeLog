@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/sguil-sensor
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/ChangeLog,v 1.8 2005/12/24 23:24:32 strerror Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/ChangeLog,v 1.9 2006/03/01 14:12:17 strerror Exp $
+
+*sguil-sensor-0.6.1 (01 Mar 2006)
+
+  01 Mar 2006; Benjamin Smee <strerror@gentoo.org>
+  +sguil-sensor-0.6.1.ebuild:
+  Version bump
 
 *sguil-sensor-0.6.0_p1 (24 Dec 2005)
 
