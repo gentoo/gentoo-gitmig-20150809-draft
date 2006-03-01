@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.42 2006/02/22 07:41:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.43 2006/03/01 02:17:43 eradicator Exp $
+
+*evms-2.5.5 (01 Mar 2006)
+
+  01 Mar 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/2.5.4/corrolator_race.patch, -files/2.5.4/degraded_raid.patch,
+  -evms-2.5.4.ebuild, +evms-2.5.5.ebuild:
+  Version bump.
 
 *evms-2.5.4 (22 Feb 2006)
 
