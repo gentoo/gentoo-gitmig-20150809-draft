@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.0.ebuild,v 1.4 2006/02/28 03:51:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.0.ebuild,v 1.5 2006/03/01 09:36:50 flameeyes Exp $
 
 inherit font multilib autotools flag-o-matic
 
@@ -31,6 +31,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 	neXt? ( x11-libs/neXtaw )
 	Xaw3d? ( !neXt? ( x11-libs/Xaw3d ) )
+	!neXt? ( !Xaw3d? ( || ( x11-libs/libXaw virtual/x11 ) ) )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20051216 )
 	xvid? ( >=media-libs/xvid-1.0 )
 	encode? ( >=media-sound/lame-3.93 )
@@ -42,26 +43,23 @@ RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 		media-libs/libvorbis )
 	png? ( media-libs/libpng )
 	|| ( ( x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXpm
-		x11-libs/libXt
-		x11-libs/libICE
-		x11-libs/libXmu
-		x11-libs/libXxf86vm
-		x11-libs/libXxf86dga
-		x11-libs/libSM
-		x11-libs/libXaw
-		x11-libs/libXv )
-		virtual/x11 )
-	xinerama? ( || ( x11-libs/libXinerama virtual/x11 ) )"
+			x11-libs/libXext
+			x11-libs/libXpm
+			x11-libs/libXt
+			x11-libs/libXmu
+			x11-libs/libXxf86vm
+			x11-libs/libXxf86dga
+			x11-libs/libXv
+			xinerama? ( x11-libs/libXinerama )
+		) virtual/x11 )"
 
 DEPEND="${RDEPEND}
 	dvb? ( media-tv/linuxtv-dvb-headers )
 	|| ( ( x11-proto/videoproto
-		x11-proto/xproto
-		x11-proto/xextproto )
-		virtual/x11 )
-	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )"
+			x11-proto/xproto
+			x11-proto/xextproto
+			xinerama? ( x11-proto/xineramaproto )
+		) virtual/x11 )"
 
 FONT_S="${S}/font"
 FONT_SUFFIX="pcf.gz"
