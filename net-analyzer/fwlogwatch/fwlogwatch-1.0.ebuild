@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/fwlogwatch-1.0.ebuild,v 1.5 2005/05/21 16:47:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/fwlogwatch-1.0.ebuild,v 1.6 2006/03/01 17:01:41 vanquirius Exp $
 
 DESCRIPTION="A packet filter and firewall log analyzer"
 HOMEPAGE="http://fwlogwatch.inside-security.de/"
@@ -16,7 +16,7 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i \
 		-e "s/^CFLAGS = /CFLAGS = ${CFLAGS} /g" Makefile || \
@@ -42,6 +42,6 @@ src_install() {
 
 	doins fwlogwatch.config fwlogwatch.template
 
-	dodoc AUTHORS ChangeLog CREDITS COPYING README
+	dodoc AUTHORS ChangeLog CREDITS README
 	doman fwlogwatch.8
 }
