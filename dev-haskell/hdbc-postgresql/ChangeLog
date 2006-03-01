@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hdbc-postgresql
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-postgresql/ChangeLog,v 1.3 2006/03/01 19:33:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-postgresql/ChangeLog,v 1.4 2006/03/01 19:39:11 hansmi Exp $
+
+  01 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
+  hdbc-postgresql-0.99.0.0.ebuild:
+  Added to ~ppc. See bug #124469.
 
   01 Mar 2006; Markus Rothe <corsair@gentoo.org>
   hdbc-postgresql-0.99.0.0.ebuild:

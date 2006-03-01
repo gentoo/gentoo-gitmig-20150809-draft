@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/hdbc-odbc-0.99.0.0.ebuild,v 1.2 2006/02/23 20:16:45 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/hdbc-odbc-0.99.0.0.ebuild,v 1.3 2006/03/01 19:37:48 hansmi Exp $
 
 CABAL_FEATURES="lib haddock"
 inherit haskell-cabal versionator
@@ -11,7 +11,7 @@ SRC_URI="http://quux.org/devel/hdbc/${PN}_${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~x86 ~amd64"	#if possible try testing with "~ppc" and "~sparc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 hdbc_PV=$(get_version_component_range 1-3)

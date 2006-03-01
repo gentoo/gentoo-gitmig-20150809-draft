@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hs-plugins
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/ChangeLog,v 1.9 2005/12/16 10:59:32 araujo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/ChangeLog,v 1.10 2006/03/01 19:39:39 hansmi Exp $
+
+  01 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
+  hs-plugins-0.9.10-r1.ebuild:
+  Added to ~ppc. See bug #124469.
 
   16 Dec 2005; Luis F. Araujo <araujo@gentoo.org>
   hs-plugins-0.9.10-r1.ebuild:
