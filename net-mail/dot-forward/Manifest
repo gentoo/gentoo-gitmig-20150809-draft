@@ -1,18 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9cafd49c3043566feddc0144d22a924e ChangeLog 2470
-MD5 42c22b661196ed5253e6047fd7048f98 dot-forward-0.71-r1.ebuild 1004
-MD5 92352311ad7890148639b56bc4a81bbc dot-forward-0.71-r2.ebuild 1004
+MD5 c355ce7da31a1ffc68e403dd06d2951b ChangeLog 2649
+RMD160 124982aec0aca3f70b4e2b7b05efb371b00a0548 ChangeLog 2649
+SHA256 9c3739fc30bf5ed7dd6ce9f7e78bee4cbb76afa4508125cd54771ad9125c85d4 ChangeLog 2649
+MD5 8cf229e10863736fb77c17d69796c5d7 dot-forward-0.71-r2.ebuild 1106
+RMD160 223f514743af642d8da6cb03f4c1911aaf1408b5 dot-forward-0.71-r2.ebuild 1106
+SHA256 292a1a113c00f35990706789da00bdeb861d511bf2301bb4e913323fd6b4d6fa dot-forward-0.71-r2.ebuild 1106
 MD5 170b78e7a24cf34fa1256bc6b1e4f469 files/0.71-errno.patch 243
+RMD160 516e8c42083f8805f0ddef50961b773c4fee990f files/0.71-errno.patch 243
+SHA256 924e0154181011e67dde22da580af340d7feb9aacc8fa350112eab00a7514c54 files/0.71-errno.patch 243
 MD5 ec78dbd60b8f7aa9ddcbee4685688fe8 files/0.71-head-1.patch 589
-MD5 8f5247dcfeba2890710d9c0ba840f385 files/digest-dot-forward-0.71-r1 67
+RMD160 00488d26a4bd28f537ecb9b6c2f8ce55cfe97f53 files/0.71-head-1.patch 589
+SHA256 b681eef1a91cbd01bdd33326d3ba221d8344764601a3c010c665d44844e5b17d files/0.71-head-1.patch 589
 MD5 8f5247dcfeba2890710d9c0ba840f385 files/digest-dot-forward-0.71-r2 67
+RMD160 838a9fed334a12d7c7110d3280c171602991e305 files/digest-dot-forward-0.71-r2 67
+SHA256 c4d820261b394c19224de9b678ec53c1955ec0eae83592802cc90bda49972a77 files/digest-dot-forward-0.71-r2 67
 MD5 78eb3f48b22f507275d9af90c1ae5a5c metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDWf88gIKl8Uu19MoRAsSuAJoCq8eSR8pxOhKpyRcsg8PD6J0HtACgghZH
-23cfOkGjIrSZPfSF4Yiap/Y=
-=8cJd
------END PGP SIGNATURE-----
+RMD160 aa4ad961079c26af99cc726320fc79401e65ea9a metadata.xml 159
+SHA256 b0c15ada9b1606aa2ff9da86e0b7f0bbcd31f202958e29b4d862bf81a1a374e7 metadata.xml 159

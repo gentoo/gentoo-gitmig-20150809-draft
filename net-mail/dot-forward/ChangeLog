@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dot-forward
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.21 2005/10/18 03:30:24 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.22 2006/03/01 19:46:25 hansmi Exp $
+
+  01 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
+  -dot-forward-0.71-r1.ebuild, dot-forward-0.71-r2.ebuild:
+  Removed old version, marked stable on amd64, create qmail group.
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   dot-forward-0.71-r2.ebuild:

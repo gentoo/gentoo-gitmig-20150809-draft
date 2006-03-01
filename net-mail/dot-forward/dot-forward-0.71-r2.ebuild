@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r2.ebuild,v 1.6 2005/10/22 08:58:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r2.ebuild,v 1.7 2006/03/01 19:46:25 hansmi Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 m68k mips ppc s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc s390 sh sparc x86"
 IUSE=""
 
 # See bug 97850
@@ -42,3 +42,8 @@ src_install() {
 	doins dot-forward || die
 }
 
+pkg_setup() {
+	# keep in sync with mini-qmail pkg
+	einfo "Creating qmail group"
+	enewgroup qmail 201
+}
