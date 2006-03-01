@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1014f7eff2a5a4c43cb6512b46e6730b ChangeLog 6970
+MD5 b681f3fc82f02961911c5c17b5fdf446 ChangeLog 7068
 MD5 90f87bece03065a1f9cea89962b34258 darcs-1.0.2.ebuild 1391
 MD5 0b3a84cb5b7d77858fda8034a24e9408 darcs-1.0.3.ebuild 1371
 MD5 dfdf6d8f6fc2fb544124444a213fa933 darcs-1.0.4.ebuild 1412
-MD5 05d09f12848d0230383161e833596d28 darcs-1.0.5.ebuild 1744
+MD5 6d0aa76c722d74332d4fbf5af0d09b5f darcs-1.0.5.ebuild 1751
 MD5 f575d4994edef2bafd09e0c520feb65f files/digest-darcs-1.0.2 63
 MD5 7a71d24a646e5a87396a3ae6e47d67c4 files/digest-darcs-1.0.3 63
 MD5 da9a5baba3176cbc6ba4df0190fc4b00 files/digest-darcs-1.0.4 63
 MD5 2bae2d256674251392dd30e47f52478f files/digest-darcs-1.0.5 63
 MD5 c694674dcbef799cd4fdb6914683ebff metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8yKI/B0cxt+cq+wRAuI0AKCaSpDUW2sJLC/+JSQHW2yakh+d1gCeMBuv
-kCNaCm4mUjoUgNjyTUsDWo8=
-=nMVe
------END PGP SIGNATURE-----
