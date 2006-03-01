@@ -27,4 +27,4 @@ MD5 1b6de3a03925b8036ad711249c281ad9 files/tcp.qmqp.sample 571
 MD5 236eb15657100fcae1828d2ab834971d files/tcp.qmtp.sample 997
 MD5 ab8e1f0ae6b685ef461847c8c4a15a94 files/tcp.smtp.sample 3585
 MD5 1f12f659d2cf9550971387cb78c2f0af metadata.xml 278
-MD5 1aca1b8378529cd7b86714045e5cbe39 netqmail-1.05.ebuild 11795
+MD5 3fc512f0cbb5fb3a1b0d7159ec6fcecd netqmail-1.05.ebuild 11790
