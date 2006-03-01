@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.101 2006/03/01 16:44:36 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.102 2006/03/01 17:12:44 pylon Exp $
+
+  01 Mar 2006; Lars Weiler <pylon@gentoo.org>
+  -files/cvs-1.11.18-klocwork.patch, -files/cvs-1.12.11-klocwork.patch,
+  -files/cvs.pam, -files/cvs.pam-include, -cvs-1.11.17.ebuild,
+  -cvs-1.11.18.ebuild, -cvs-1.11.18-r1.ebuild, -cvs-1.11.19.ebuild,
+  -cvs-1.12.9.ebuild, -cvs-1.12.10.ebuild, -cvs-1.12.11.ebuild,
+  -cvs-1.12.11-r1.ebuild, -cvs-1.12.12.ebuild, -cvs-1.12.12-r1.ebuild:
+  Spring-clean
 
 *cvs-1.12.13 (01 Mar 2006)
 
