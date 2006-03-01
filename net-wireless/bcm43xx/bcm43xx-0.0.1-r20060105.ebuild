@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/bcm43xx-0.0.1-r20060105.ebuild,v 1.3 2006/01/10 18:03:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/bcm43xx-0.0.1-r20060105.ebuild,v 1.4 2006/03/01 21:44:10 kugelfang Exp $
 
 inherit linux-mod
 
@@ -13,10 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="debug"
-DEPEND=""
+DEPEND="net-wireless/ieee80211softmac"
 RDEPEND="${DEPEND}
-		net-wireless/ieee80211softmac
-		>=net-wireless/wireless-tools-28_pre4"
+		>=net-wireless/wireless-tools-28_pre4
+		>=sys-apps/hotplug-20040923-r1"
 
 BUILD_TARGETS="modules"
 MODULE_NAMES="bcm43xx(net/wireless:)"
