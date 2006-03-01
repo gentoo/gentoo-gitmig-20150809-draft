@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5045 2006/02/28 19:13:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5046 2006/03/01 04:28:49 latexer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -67,11 +67,6 @@ dev-haskell/hdbc-odbc
 # Diego Pettenò <flameeyes@gentoo.org> (21 Feb 2006)
 # Pre-releases outside of KDE release cycle
 >=net-im/kopete-0.12_alpha1
-
-# Peter Johanson <latexer@gentoo.org> (14 Jan 2006)
-# Masking new mono as well, until beagle is fixed.
-=dev-lang/mono-1.1.13.2
-=dev-dotnet/libgdiplus-1.1.13.2
 
 # Duncan Coutts <dcoutts@gentoo.org> (19 Feb 2006)
 # Masked because there is no working version of wxGTK-2.4.x.
@@ -266,11 +261,6 @@ dev-lang/gnat-gpl
 # Tom Payne <twp@gentoo.org> (15 Jan 2006)
 # sys-fs/convertfs is broken. Masked pending likely removal. Bug # 107635.
 sys-fs/convertfs
-
-# Peter Johanson <latexer@gentoo.org> (14 Jan 2006)
-# Masking mono-1.1.13.1 til Mono.Posix changes can be fixed in consuming applications
-=dev-lang/mono-1.1.13.1
-=dev-dotnet/libgdiplus-1.1.13
 
 # Benjamin Smee <strerror@gentoo.org> (14 Jan 2006)
 # Masking openldap 2.3.x for testing
