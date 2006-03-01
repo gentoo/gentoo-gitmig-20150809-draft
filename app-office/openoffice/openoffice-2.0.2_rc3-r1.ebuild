@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2_rc3.ebuild,v 1.2 2006/02/27 20:21:07 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2_rc3-r1.ebuild,v 1.1 2006/03/01 17:56:59 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
-IUSE="binfilter curl eds firefox gnome gtk java kde ldap mozilla xml2"
+IUSE="binfilter cairo curl eds firefox gnome gtk java kde ldap mozilla xml2"
 
 MY_PV="${PV/_rc3/}"
 MY_PV2="oob680.3.0"
@@ -42,6 +42,8 @@ RDEPEND="!app-office/openoffice-bin
 		>=gnome-base/gnome-vfs-2.6
 		>=gnome-base/gconf-2.0 )
 	gtk? ( >=x11-libs/gtk+-2.4 )
+	cairo? ( >=x11-libs/cairo-1.0.2
+		>=x11-libs/gtk+-2.8 )
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
 	kde? ( >=kde-base/kdelibs-3.2 )
 	mozilla? ( !firefox? ( >=www-client/mozilla-1.7.12 )
@@ -144,6 +146,7 @@ src_unpack() {
 	#Some fixes for our patchset
 	cd ${S}
 	epatch ${FILESDIR}/${MY_PV}/removecrystalcheck.diff
+	epatch ${FILESDIR}/${MY_PV}/gentoo-${MY_PV}.diff
 
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
@@ -160,6 +163,7 @@ src_unpack() {
 	echo "`use_enable eds evolution2`" >> ${CONFFILE}
 	echo "`use_enable gnome gnome-vfs`" >> ${CONFFILE}
 	echo "`use_enable gnome lockdown`" >> ${CONFFILE}
+	echo "`use_enable gnome atkbridge`" >> ${CONFFILE}
 
 }
 
@@ -193,9 +197,11 @@ src_compile() {
 		--with-tag=${SRC} \
 		"${GTKFLAG}" \
 		`use_enable kde` \
+		`use_enable cairo` \
+		`use_with cairo system-cairo` \
+		`use_enable gnome quickstart` \
 		--disable-access \
 		--disable-mono \
-		--disable-cairo \
 		--disable-post-install-scripts \
 		--enable-hunspell \
 		--with-system-hunspell \
@@ -248,5 +254,4 @@ pkg_postinst() {
 	einfo
 	einfo " oobase2, oocalc2, oodraw2, oofromtemplate2, ooimpress2, oomath2,"
 	einfo " ooweb2 or oowriter2"
-
 }
