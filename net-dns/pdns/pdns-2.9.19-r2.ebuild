@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.19.ebuild,v 1.2 2005/10/30 14:21:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.19-r2.ebuild,v 1.1 2006/03/01 22:28:38 swegener Exp $
 
 inherit eutils
 
@@ -30,19 +30,21 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/2.9.18-default-mysql-options.patch
 	epatch "${FILESDIR}"/2.9.19-ldap-fix.patch
+	epatch "${FILESDIR}"/2.9.19-slash-support.patch
 }
 
 src_compile() {
 	local modules="pipe geo" myconf=""
 
-	use mysql	&& modules="${modules} gmysql"
-	use postgres	&& modules="${modules} gpgsql"
-	use sqlite	&& modules="${modules} gsqlite"
-	use ldap	&& modules="${modules} ldap"
-	use tdb		&& modules="${modules} xdb"
-	use debug 	&& myconf="${myconf} --enable-verbose-logging"
+	useq mysql && modules="${modules} gmysql"
+	useq postgres && modules="${modules} gpgsql"
+	useq sqlite && modules="${modules} gsqlite"
+	useq ldap && modules="${modules} ldap"
+	useq tdb && modules="${modules} xdb"
+	useq debug && myconf="${myconf} --enable-verbose-logging"
 
 	econf \
+		--sysconfdir=/etc/powerdns \
 		--with-modules= \
 		--with-dynmodules="${modules}" \
 		--with-pgsql-includes=/usr/include \
@@ -61,13 +63,18 @@ src_compile() {
 src_install () {
 	make DESTDIR="${D}" install || die
 
-	mv "${D}"/etc/pdns.conf{-dist,}
+	mv "${D}"/etc/powerdns/pdns.conf{-dist,}
+
+	# set defaults: setuid=pdns, setgid=pdns
+	sed -i -e 's/^# set\([ug]\)id=$/set\1id=pdns/g' \
+		"${D}"/etc/powerdns/pdns.conf
+
 	doinitd "${FILESDIR}"/pdns
 
 	if use recursor
 	then
 		doinitd "${FILESDIR}"/precursor
-		insinto /etc
+		insinto /etc/powerdns
 		doins "${FILESDIR}"/recursor.conf
 	fi
 
@@ -75,13 +82,23 @@ src_install () {
 	use doc && dohtml -r codedocs/html/.
 }
 
+pkg_preinst() {
+	einfo "checking for pdns group... creating if missing."
+	enewgroup pdns
+	einfo "checking for pdns user... creating if missing."
+	enewuser pdns -1 -1 /var/empty pdns -c "Added by PowerDNS ebuild"
+}
+
 pkg_postinst() {
+	ewarn
+	ewarn "ATTENTION: the config files have moved from /etc to /etc/powerdns!"
+	ewarn
 	einfo
 	einfo "pdns now provides multiple instances support. You can create more instances"
 	einfo "by symlinking the pdns init script to another name."
 	einfo
 	einfo "The name must be in the format pdns-<suffix> and PowerDNS will use the"
-	einfo "/etc/pdns-<suffix>.conf configuration file instead of the default."
+	einfo "/etc/powerdns/pdns-<suffix>.conf configuration file instead of the default."
 	einfo
 	einfo "Also all backends, except the bind and random backends, are now compiled as"
 	einfo "loadable modules and must be loaded with load-modules= in the configuration"

@@ -1,14 +1,49 @@
-MD5 89c60895d2b280c03f283222c6050d2f ChangeLog 3819
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b1efdb86c71f910179d01d38b7848d8d ChangeLog 4190
+RMD160 4de1593ba76d0e5935082638fae93170010abc42 ChangeLog 4190
+SHA256 bd7b0cb60de6a97db88e3293f48482e59479060e7b43dd6d7c350695a00e21d6 ChangeLog 4190
 MD5 90fb32e843326d14359c508cef855929 files/2.9.18-default-mysql-options.patch 606
+RMD160 bfc5e2aeee2bc3e01a62a430b087e7ca5742a85b files/2.9.18-default-mysql-options.patch 606
+SHA256 228a6c42a11a2eab82b68f8c04d5881f8be39746010675feba7ebf16add18151 files/2.9.18-default-mysql-options.patch 606
 MD5 48d0e8119d1617f7ab3594f836cd98fb files/2.9.18-ldap-fix.patch 853
+RMD160 534c56b2bbd3e4ee477166d7430e57aff1f7c75d files/2.9.18-ldap-fix.patch 853
+SHA256 ce247e0f25da2296882bb08a09f04acaba237149deacf0eb7e92895dc49e5ccc files/2.9.18-ldap-fix.patch 853
 MD5 ad994e3dbae5cffa058fb8153b130751 files/2.9.19-ldap-fix.patch 285
-MD5 e59bb419d93a7d7bdcb13764c57b3f6d files/digest-pdns-2.9.18 63
-MD5 15eea3e4726a75c942fb7c48ee25b30c files/digest-pdns-2.9.19 63
-MD5 15eea3e4726a75c942fb7c48ee25b30c files/digest-pdns-2.9.19-r1 63
+RMD160 ed1a9a25e033888b46bc2ef85f158f568bf2bd97 files/2.9.19-ldap-fix.patch 285
+SHA256 ab31cb03c27e9e63913b84c2b563965ecc65f318772ef2b475fb652e5bb2079f files/2.9.19-ldap-fix.patch 285
+MD5 f9ae0c2f510b8e504994a2ad31409408 files/2.9.19-slash-support.patch 384
+RMD160 547cbef86cfea7c2ce755faf8d5e85ad60dfb1af files/2.9.19-slash-support.patch 384
+SHA256 014882e8d657fe7ca388327a46f1fb7a7bca8dac10fe04f069e7414d344278bc files/2.9.19-slash-support.patch 384
+MD5 18c6124e8f07ca7e1f334a6a7ea4b6e2 files/digest-pdns-2.9.18 235
+RMD160 36fc22c1c3e7d6f1107dd3f9eb99c1ede0278886 files/digest-pdns-2.9.18 235
+SHA256 82926090a266fc97fc0f0ac57fbb2f3d16ba559d25f30ffed71be9f56e6702f0 files/digest-pdns-2.9.18 235
+MD5 7c635ea76a8c4a51b00b99519a1fe8fc files/digest-pdns-2.9.19-r2 235
+RMD160 368ed8b2e5638d47b5b9840acfc3db4fba45fe50 files/digest-pdns-2.9.19-r2 235
+SHA256 55dfe1e00b6a161466c08a9d87c15af5ff28cbf5fda8df6a88d42768970c56a6 files/digest-pdns-2.9.19-r2 235
 MD5 6ab134a1e83514c326fad4a0f5539094 files/pdns 1240
+RMD160 ba798457cc9453e7a44f187aeeee25ed803cab5c files/pdns 1240
+SHA256 d13d9c494022f8c1bf6656576624e3af0c8f72ac1a738b55c0f35534db1ba532 files/pdns 1240
 MD5 558969af8e34a040723147fe14a53a44 files/precursor 488
+RMD160 dd6edc1dcb39ecf62bfb9c2473dae47a8c485694 files/precursor 488
+SHA256 a480d9401cd04e17f5ea67b350e33bf5c8328faaf3b0625491c8b3462d6f72ae files/precursor 488
 MD5 bbb2b0b25869b840d8fa2d242a8b20c2 files/recursor.conf 392
+RMD160 7915a231407c0fb32914d10e98c489d0de41c6cf files/recursor.conf 392
+SHA256 2f77a91649d79b05b23ca417d719569c0752e6555a83148f31c8056d02214afa files/recursor.conf 392
 MD5 56567ddcaf248499457a1ce74277c910 metadata.xml 573
+RMD160 74995a273e6513bb6689ec0ad74bf5b0b0fdf5c1 metadata.xml 573
+SHA256 26a6150230ca87a16d882d1cdac565a040e75e7bf02ee9348688569924e1bfc3 metadata.xml 573
 MD5 7e3f6249fc15cbedf45e33ba7167427c pdns-2.9.18.ebuild 2383
-MD5 6eca6f2a3eee91ecbc13c47f7a03b20c pdns-2.9.19-r1.ebuild 2870
-MD5 135361381d689dec1b19c4efa7092611 pdns-2.9.19.ebuild 2373
+RMD160 a21aee73e17e6c3df0d68c6841ca5c251894913c pdns-2.9.18.ebuild 2383
+SHA256 3421c4b499067231957a3e544616ebcfab421bf7419f224120f6ed03455fe26b pdns-2.9.18.ebuild 2383
+MD5 a63f22f9c598e5db33af2dabe6a9f3b7 pdns-2.9.19-r2.ebuild 2919
+RMD160 d84028a1aa6973664c97f1ec2e3631e129e57b97 pdns-2.9.19-r2.ebuild 2919
+SHA256 130e075c8b12a6028c1bdbad1e371e640ba52618a968b4e1ccb0325964f3e3db pdns-2.9.19-r2.ebuild 2919
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEBiAjI1lqEGTUzyQRAngxAKC99Lcq979RDGWytTnGZHOxBGKt6wCg3lI0
+EccjQp2KEnbTWO0C5Etomzs=
+=E4PS
+-----END PGP SIGNATURE-----
