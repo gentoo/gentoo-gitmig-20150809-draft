@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.11_rc3.ebuild,v 1.5 2006/02/09 16:22:03 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.11_rc3.ebuild,v 1.6 2006/03/01 04:45:09 vapier Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,6 @@ SRC_URI="mirror://alsaproject/lib/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="doc jack"
 
@@ -26,8 +25,9 @@ PDEPEND="jack? ( >=media-plugins/alsa-jack-1.0.10_rc1 )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/${PN}-1.0.10_rc3-hardened.patch"
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-1.0.10_rc3-hardened.patch
+	epatch "${FILESDIR}"/${PN}-1.0.10-no-wordexp-header.patch
 
 	eautoreconf
 }
