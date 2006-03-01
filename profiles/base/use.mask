@@ -33,3 +33,5 @@ input_devices_wacom
 
 # beep-media-player is in package.mask
 bmp
+# as is bmpx
+bmpx
