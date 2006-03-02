@@ -1,36 +1,10 @@
-Index: sbin/rc
-===================================================================
---- sbin/rc	(revision 1934)
-+++ sbin/rc	(working copy)
-@@ -407,7 +407,7 @@
- 	         grep -ve '\(depcache\|deptree\|envcache\)')
- 
- 	# Update the dependency cache
--	/sbin/depscan.sh -u
-+	/sbin/depscan.sh
- 
- 	# Now that the dependency cache are up to date, make sure these
- 	# are marked as started ...
-Index: sbin/rc-services.sh
-===================================================================
---- sbin/rc-services.sh	(revision 1934)
-+++ sbin/rc-services.sh	(working copy)
-@@ -10,7 +10,7 @@
- 
- if [ "${RC_GOT_DEPTREE_INFO}" != "yes" ]
- then
--	if ! /sbin/depscan.sh -u
-+	if ! /sbin/depscan.sh
- 	then
- 		echo
- 		eerror "Error running '/sbin/depscan.sh'!"
 --- sbin/depscan.sh	2005-07-22 01:24:27.000000000 +0100
 +++ sbin/depscan.sh	2006-03-02 20:28:03.000000000 +0000
 @@ -1,58 +1,64 @@
  #!/bin/bash
  # Copyright 1999-2004 Gentoo Foundation
  # Distributed under the terms of the GNU General Public License v2
--# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/files/baselayout-1.11.14-depscan.patch,v 1.2 2006/03/02 20:34:20 uberlord Exp $
+-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/files/baselayout-1.11.14-depscan.patch,v 1.3 2006/03/02 22:27:16 uberlord Exp $
  
 -source /etc/init.d/functions.sh
 -
@@ -143,3 +117,41 @@ Index: sbin/rc-services.sh
  
 -
  # vim:ts=4
+--- sbin/rc	2006-03-02 22:10:56.000000000 +0000
++++ sbin/rc	2006-03-02 20:28:03.000000000 +0000
+@@ -1,5 +1,5 @@
+ #!/bin/bash
+-# Copyright 1999-2005 Gentoo Foundation
++# Copyright 1999-2006 Gentoo Foundation
+ # Distributed under the terms of the GNU General Public License v2
+ # $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/files/baselayout-1.11.14-depscan.patch,v 1.3 2006/03/02 22:27:16 uberlord Exp $
+ 
+@@ -111,7 +111,7 @@
+ 
+ 	echo
+ 	echo -e "${GOOD}Gentoo Linux${GENTOO_VERS}; ${BRACKET}http://www.gentoo.org/${NORMAL}"
+-	echo -e " Copyright 1999-2005 Gentoo Foundation; Distributed under the GPLv2"
++	echo -e " Copyright 1999-2006 Gentoo Foundation; Distributed under the GPLv2"
+ 	echo
+ 
+ 	check_statedir /proc
+@@ -407,7 +407,7 @@
+ 	         grep -ve '\(depcache\|deptree\|envcache\)')
+ 
+ 	# Update the dependency cache
+-	/sbin/depscan.sh -u
++	/sbin/depscan.sh
+ 
+ 	# Now that the dependency cache are up to date, make sure these
+ 	# are marked as started ...
+--- sbin/rc-services.sh	2005-03-08 16:07:30.000000000 +0000
++++ sbin/rc-services.sh	2006-03-02 20:28:03.000000000 +0000
+@@ -10,7 +10,7 @@
+ 
+ if [ "${RC_GOT_DEPTREE_INFO}" != "yes" ]
+ then
+-	if ! /sbin/depscan.sh -u
++	if ! /sbin/depscan.sh
+ 	then
+ 		echo
+ 		eerror "Error running '/sbin/depscan.sh'!"
