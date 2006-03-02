@@ -20,12 +20,14 @@
  # more system db >= 4.3
  system-db-4.3-use-lpthread.diff
  # iz#58474 - build this part with db 4.2/4.3/4.4
-@@ -969,6 +967,8 @@
+@@ -969,6 +967,10 @@
  gentoo-gcc-naming-and-versioning.diff
  # searchpaths of nspr/nss libs
  gentoo-xmlsecurity-system-nss.diff
 +# hack: drop gcc libs
 +store-drop-gcc-libs-on-linking.diff
++# Build without mozilla is broken i#59729
++buildfix-without-mozilla.diff
  
  #
  # NOTE: 64 bit OOo is work in progress!
