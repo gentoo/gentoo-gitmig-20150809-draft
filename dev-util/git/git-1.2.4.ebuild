@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.2.2.ebuild,v 1.1 2006/02/19 22:32:41 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.2.4.ebuild,v 1.1 2006/03/02 16:00:44 ferdy Exp $
 
 inherit python toolchain-funcs eutils
 
@@ -53,6 +53,8 @@ exportmakeopts() {
 	# Older python versions need own subproccess.py
 	python_version
 	[[ ${PYVER} < 2.4 ]] && myopts="${myopts} WITH_OWN_SUBPROCESS_PY=YesPlease"
+
+	use elibc_uclibc && myopts="${myopts} NO_ICONV=YesPlease"
 
 	export MY_MAKEOPTS=${myopts}
 }

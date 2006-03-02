@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.79 2006/02/23 12:24:05 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.80 2006/03/02 16:00:44 ferdy Exp $
+
+*git-1.2.4 (02 Mar 2006)
+
+  02 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> -git-1.2.1.ebuild,
+  -git-1.2.2.ebuild, +git-1.2.4.ebuild:
+  New upstream version. Trim old ones
 
 *git-1.2.3 (23 Feb 2006)
 
