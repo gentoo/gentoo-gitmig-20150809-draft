@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre5-r1.ebuild,v 1.1 2006/02/26 20:33:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre5-r2.ebuild,v 1.1 2006/03/02 04:07:12 zmedico Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="The Portage Package Management System. The primary package management and distribution system for Gentoo."
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2 http://dev.gentoo.org/~jstubbs/releases/${PN}-${PV}.tar.bz2"
+SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2 http://dev.gentoo.org/~zmedico/releases/${PN}-${PV}.tar.bz2"
 LICENSE="GPL-2"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86"
@@ -32,7 +32,7 @@ S=${WORKDIR}/${PN}-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	patch -p1 < "${FILESDIR}"/2.1_pre5-r1.patch || die "Failed to apply patch"
+	patch -p1 < "${FILESDIR}"/2.1_pre5-r2.patch || die "Failed to apply patch"
 }
 
 src_compile() {

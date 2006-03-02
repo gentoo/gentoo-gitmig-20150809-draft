@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.84 2006/02/27 23:03:45 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.85 2006/03/02 04:07:12 zmedico Exp $
+
+*portage-2.1_pre5-r2 (01 Mar 2006)
+
+  01 Mar 2006; Zac Medico <zmedico@gentoo.org>
+  +portage-2.1_pre5-r2.ebuild:
+  Regression fix for bug #124568 problem with wheel group in dobin and dosbin
+  for *bsd and darwin.  A fix is also included for bug #124203 clean phase
+  misbehavior on upgrade from portage-2.0.x.
 
   27 Feb 2006; Zac Medico <zmedico@gentoo.org>
   portage-2.0.53.ebuild, portage-2.0.54.ebuild:
