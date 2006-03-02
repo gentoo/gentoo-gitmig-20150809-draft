@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.60 2006/02/27 12:49:38 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.61 2006/03/02 18:19:09 ka0ttic Exp $
+
+  02 Mar 2006; Aaron Walker <ka0ttic@gentoo.org> lighttpd-1.4.10-r1.ebuild:
+  Add sed to fix typo in mod_cml docs for bug 124590.
 
   27 Feb 2006; Aaron Walker <ka0ttic@gentoo.org>
   files/1.4.10/14_all_r1007_mod_alias_lowercase_support.diff,

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.10-r1.ebuild,v 1.2 2006/02/27 12:49:38 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.10-r1.ebuild,v 1.3 2006/03/02 18:19:09 ka0ttic Exp $
 
 inherit eutils autotools depend.php
 
@@ -102,6 +102,10 @@ src_unpack() {
 	# dev-python/docutils installs rst2html.py not rst2html
 	sed -i -e 's|\(rst2html\)|\1.py|g' doc/Makefile.in || \
 		die "sed doc/Makefile.in failed"
+
+	# fix typo
+	sed -i -e 's|\(output_content\)_\(type\)|\1\2|' doc/cml.txt || \
+		die "sed doc/cml.txt failed"
 }
 
 src_compile() {
