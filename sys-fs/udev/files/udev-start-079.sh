@@ -168,9 +168,6 @@ main() {
 	[[ -z ${CDBOOT} ]] && [[ -x /sbin/evms_activate ]] && \
 		/sbin/evms_activate -q &>/dev/null
 	eend 0
-
-	# Same thing as /dev/.devfsd
-	touch /dev/.udev
 }
 
 main
