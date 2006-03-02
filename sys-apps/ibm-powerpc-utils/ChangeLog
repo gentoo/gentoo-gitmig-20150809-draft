@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ibm-powerpc-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.1 2006/02/26 19:38:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.2 2006/03/02 20:46:52 ranger Exp $
+
+  02 Mar 2006; Brent Baude <ranger@gentoo.org> metadata.xml:
+  Replacing bad metadata file
 
 *ibm-powerpc-utils-1.0.0 (26 Feb 2006)
 
