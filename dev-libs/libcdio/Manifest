@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 73a82d9489a8a9546b13c0d68a942d9f ChangeLog 6024
-RMD160 17eb0c622f48d8dc1b9a3552594b391f096fb061 ChangeLog 6024
-SHA256 1412bfb17e6dca0cc3a4194b7f8f53f5b4f860dc3a2af7db12db69311446568a ChangeLog 6024
+MD5 cae71175392c202e0fc2c4596156f71c ChangeLog 6251
+RMD160 b55ad87ea7035e4ea7721c6702b6cee979e806b8 ChangeLog 6251
+SHA256 1934a339bfec74efdeb97726ebccd4d169d4634af0dbd6855453ed8cb3826d1d ChangeLog 6251
 MD5 0165911115603b51b34b8ae19ab71e2a files/digest-libcdio-0.64 65
 RMD160 62054a8147645683f92d15003fc1311cc2a852ec files/digest-libcdio-0.64 65
 SHA256 0c3ae23e88a6fccd63913a0bc67bd3a64a2bf2e85eba6627ac6bc82146d54922 files/digest-libcdio-0.64 65
@@ -34,9 +34,9 @@ SHA256 b7ff230276729d67c66d1592293feea5b83b14df2f28e9d8ea6e4c6a3e5117f1 files/di
 MD5 a6c330ba467869360ed8db78de15e9b7 files/libcdio-0.75-freebsd.patch 1227
 RMD160 40aa05effd3eb76888b4bef47aa6ebe59d365fd9 files/libcdio-0.75-freebsd.patch 1227
 SHA256 24e4fa7895473ae68fae7d7466da82c78b2145288920f183f63a9e7bc48d3357 files/libcdio-0.75-freebsd.patch 1227
-MD5 5144474b861b2c0c64387055b29e8b11 files/libcdio-0.76-dragonfly.patch 526
-RMD160 c849e615361f805d13100ed79828b654d9b79af1 files/libcdio-0.76-dragonfly.patch 526
-SHA256 2c9465eeec8c75aa2e5f6a601b0f15ff0d7ae1fb25798f1fe47370c0c96771c2 files/libcdio-0.76-dragonfly.patch 526
+MD5 04048ab171e35ac220031eab12bb7dd7 files/libcdio-0.76-dragonfly.patch 941
+RMD160 d017b28aee6d4b71da0b030d3bdabafc04bc3db2 files/libcdio-0.76-dragonfly.patch 941
+SHA256 c1e0e0cc3c5ab1ac93376987294100974b40aac78110754c7af0862c79e22685 files/libcdio-0.76-dragonfly.patch 941
 MD5 6e3318ce4e73be555c875919d7866b52 files/libcdio-0.76-nrg-crash.patch 858
 RMD160 7c6a5c69eaefa7fa37de6603dadc7b360a8dc9d4 files/libcdio-0.76-nrg-crash.patch 858
 SHA256 896bc5e98be9125d580124b3da5b9309650b6cc2eb1bbd7fd64b4c0654834447 files/libcdio-0.76-nrg-crash.patch 858
@@ -61,9 +61,9 @@ SHA256 d8d96827b0e26267ba7af9245696f65a62d2f1d98faca836635b9d210398d695 libcdio-
 MD5 5e28084adc64a06f4c2dde45edc0b542 libcdio-0.75.ebuild 1326
 RMD160 06d260a89c232f27754714da68051742116da40f libcdio-0.75.ebuild 1326
 SHA256 7c35bbe6786f78d10cd780f7fee2c14d58691174507039ea413d80af5ed29969 libcdio-0.75.ebuild 1326
-MD5 ad830bf735aad6997d0529a4ddb8c046 libcdio-0.76-r1.ebuild 1462
-RMD160 cb10826bffafc25d143d4edd70e9d50f9ebb293e libcdio-0.76-r1.ebuild 1462
-SHA256 22e09c9dba9de2a6636d4ef9d6cfc424ef01eca44ac95a60d4a46fd58012a145 libcdio-0.76-r1.ebuild 1462
+MD5 d6ca5ebece95fd283bc98459c3ef7561 libcdio-0.76-r1.ebuild 1466
+RMD160 9320ce4a69117a197e57416a8fc834bc42608675 libcdio-0.76-r1.ebuild 1466
+SHA256 ba26fd55132cc05c06e978b51a5675637b661b9267e67b75766ad85f66737375 libcdio-0.76-r1.ebuild 1466
 MD5 4be6f517760fa9937eed8d4f62e1a204 libcdio-0.76.ebuild 1329
 RMD160 1b72072bfdc5d3b058543f7e85cc4fcd0be05029 libcdio-0.76.ebuild 1329
 SHA256 d1d837a8e7d60ea0a319f9530f37f3ad728560d7a19e0dff5272fd8d74c88ecb libcdio-0.76.ebuild 1329
@@ -73,7 +73,7 @@ SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD+zilAiZjviIA2XgRAnxoAKChdRILGzC7L7q8nnVSbCfKpKTh2QCgyvg1
-E8+KXIvqKy/oO2L6ob/HZk4=
-=GTPO
+iD8DBQFEB01YAiZjviIA2XgRAvs/AJ9ZKVAI/uArBlliwa/pxeKScCie3gCfdMF7
+dN/98L9cDbd+rDvh+HbNlpw=
+=l/MA
 -----END PGP SIGNATURE-----
