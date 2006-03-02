@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/daemontools-0.76-r5.ebuild,v 1.1 2005/12/11 09:49:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/daemontools-0.76-r5.ebuild,v 1.2 2006/03/02 03:57:36 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,15 +21,16 @@ S=${WORKDIR}/admin/${P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-errno.patch
-	epatch ${FILESDIR}/${PV}-head-1.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-errno.patch
+	epatch "${FILESDIR}"/${PV}-head-1.patch
+	epatch "${FILESDIR}"/${PV}-warnings.patch
 
 	use static && LDFLAGS="${LDFLAGS} -static"
 
 	echo "$(tc-getCC) ${CFLAGS}" > src/conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > src/conf-ld
-	echo ${S} > src/home
+	echo "${S}" > src/home
 }
 
 src_compile() {
@@ -50,7 +51,7 @@ src_install() {
 
 	dodoc CHANGES ../package/README TODO
 
-	newinitd ${FILESDIR}/svscan.init svscan
+	newinitd "${FILESDIR}"/svscan.init svscan
 }
 
 pkg_postinst() {

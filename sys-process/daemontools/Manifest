@@ -1,7 +1,34 @@
-MD5 ea7d4d257ee7a69a1b9c3f93071e54b7 ChangeLog 4280
-MD5 0b9029ee963d21b86b60b55a615dab50 daemontools-0.76-r5.ebuild 1588
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 6ce7442b288dd69b4e456d00690a8344 files/0.76-head-1.patch 791
-MD5 bbfe31d704c11d12b2c48b510ad06b77 files/svscan.init 796
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a16ce51689e9d65803e81d535203a5ee ChangeLog 4456
+RMD160 fd089d368b63ca879c813ece10cc3514a423addd ChangeLog 4456
+SHA256 4f7ed8598b024e7a606126f3ad2ffb066ac2a8cca8277b694286aca7faa58725 ChangeLog 4456
+MD5 92b27149b861f543b9ef2d5a7c1474c6 daemontools-0.76-r5.ebuild 1639
+RMD160 492754647004b410b8aabb516284035c7d92763d daemontools-0.76-r5.ebuild 1639
+SHA256 7964503d5dfea233f400c636b8fbad7ef5775355815f29c73840f776e6a81bb0 daemontools-0.76-r5.ebuild 1639
 MD5 c75438b1c3b9d9f67691bd10cf3c8e52 files/0.76-errno.patch 246
+RMD160 be7d0b13dac87a0f9a40de3b97aec20cb6c7b665 files/0.76-errno.patch 246
+SHA256 1afaa3b5a26e7382cfe1c9880ddf3910fde4ded6fa815440ef087506543a3947 files/0.76-errno.patch 246
+MD5 6ce7442b288dd69b4e456d00690a8344 files/0.76-head-1.patch 791
+RMD160 70c7cf62931178d28a134f2baec7247bcb97412c files/0.76-head-1.patch 791
+SHA256 e444e85cb751b3df45eaa0569c45fd4ff03faf8b351d8f8cb7cfc9589943ba7b files/0.76-head-1.patch 791
+MD5 ad68177f50bfffb6a1cbf8c668de6a55 files/0.76-warnings.patch 1305
+RMD160 3b2f56931712fa5c087b6b4e0a36545999535829 files/0.76-warnings.patch 1305
+SHA256 42bfcc27660ef6459d39fbaaa9f1852313baadf7b96201872e4deb12804f4833 files/0.76-warnings.patch 1305
 MD5 3f0f5c5f8ae8169640d4dff02605d25e files/digest-daemontools-0.76-r5 67
+RMD160 5a96fd8ba9f31155c4e0409e0de2b4f728855802 files/digest-daemontools-0.76-r5 67
+SHA256 d40f21b757598ea1a893341208485c0930825f3423e86cc22e684ef125268c05 files/digest-daemontools-0.76-r5 67
+MD5 bbfe31d704c11d12b2c48b510ad06b77 files/svscan.init 796
+RMD160 e6c688c40ae5d806757af554a9e3a10e4c817420 files/svscan.init 796
+SHA256 2ae51e0ea3e5c2aee24228e437d89d571618cb806da117127b232e3c0102f717 files/svscan.init 796
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEBm1d2+ySkm8kpY0RAujlAKCEd+nz3zepmz6c1330ec5Ayka5HQCfZ52t
+qAkHcmPblnXh1nMCNxguzHk=
+=TolU
+-----END PGP SIGNATURE-----
