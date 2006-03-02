@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3180bac97fd7db1faf1846bf94390d57 ChangeLog 2008
 RMD160 0d406432b22dd4ae154bd84a321dedb618f985e1 ChangeLog 2008
 SHA256 4e9472ec04b6af75f558581bee1946b9f4dfb3b16c6fa2f570720fe1abd27b12 ChangeLog 2008
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 8a9e93c7073fbb40c2dc09f1e392501e xf86-video-voodoo-1.0.0.5.ebuild 594
 RMD160 8c947df075822caab32c809f7ede2dc6d2103a63 xf86-video-voodoo-1.0.0.5.ebuild 594
 SHA256 4d0e09e21e21ac4bcabb1dbca4d3a2f4192aebe311128c49a85c95d49f774713 xf86-video-voodoo-1.0.0.5.ebuild 594
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEBo6L2+ySkm8kpY0RAjwQAJ9l0LeIiOegeLx01Svc2rcP0ATkhQCgrSWQ
+HdfziLBj7Qwj9cHZlQ5FdJQ=
+=c4sh
+-----END PGP SIGNATURE-----

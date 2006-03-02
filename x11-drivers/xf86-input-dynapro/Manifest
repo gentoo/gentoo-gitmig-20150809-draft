@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8dda6368ce30489f663a1b4be6e22688 ChangeLog 2256
 RMD160 0921e89a616d76ccbe94719cad8ecf52fafa8a8a ChangeLog 2256
 SHA256 8ef987d0c8d45525b3bcae3d938971a829cd9f4ba89bc3c73b24021ad44f2207 ChangeLog 2256
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 d35fe97c7969cf73bf57d0dec7af2057 xf86-input-dynapro-1.0.0.5.ebuild 549
 RMD160 d5550c461ec909e07d5d88b5359ce3cc59e41424 xf86-input-dynapro-1.0.0.5.ebuild 549
 SHA256 4217c2f45dd31fc3e838bd6dcaaf8aa88fc4365e25f06898b16b5b42a5cad668 xf86-input-dynapro-1.0.0.5.ebuild 549
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEBouc2+ySkm8kpY0RAiDQAJ98PwMCM1MRi8EHWNxBFQn6G7fyCQCdG+ov
+PByay3/WunDa1CuMjzyQavs=
+=IDHD
+-----END PGP SIGNATURE-----
