@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.6.1.ebuild,v 1.5 2005/09/23 23:54:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.6.1.ebuild,v 1.6 2006/03/02 04:00:34 fuzzyray Exp $
 
 DESCRIPTION="Man page editor using XML tags"
 HOMEPAGE="http://wolfpack.twu.net/ManEdit/"
@@ -11,10 +11,15 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	=x11-libs/gtk+-1*
+RDEPEND="=x11-libs/gtk+-1*
 	sys-libs/zlib
-	app-arch/bzip2"
+	app-arch/bzip2
+	|| ( ( x11-libs/libXi
+		)
+		virtual/x11
+	)"
+
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	# It autodetects x86 processors and adds the -march option itself
