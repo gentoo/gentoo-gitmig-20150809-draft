@@ -1,36 +1,88 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0b661d36c91f2269caec50164c43e212 ChangeLog 10700
+MD5 a5aa408d7bd9e958414023e80a37dcf9 ChangeLog 10817
+RMD160 893de6bf9d631db213ff19e7fd109e7fbd1cb8de ChangeLog 10817
+SHA256 02f8de24fe78f0285e9c219b441be85f4f26478e67bdb839d8eca81bf9043889 ChangeLog 10817
 MD5 58901e14592bd22f99f6634711471faa files/digest-xbox-sources-2.4.31 223
-MD5 919591635a2262a4f48f6a761b4a58f1 files/digest-xbox-sources-2.4.32 139
-MD5 92be6bd4e8f0ecd4740aaf2f96e626b8 files/digest-xbox-sources-2.4.32-r1 142
+RMD160 f01addd11928192d9e639040c571c9cd728fb206 files/digest-xbox-sources-2.4.31 223
+SHA256 628d3813a784d4136f3798554167b0c0328bcbefb445cbf2a7d17f05ef7b215d files/digest-xbox-sources-2.4.31 223
+MD5 0b18f7a6056c9668fe306338f5b487ac files/digest-xbox-sources-2.4.32 509
+RMD160 162d34a587796b23d73f422ab759b232528a96a8 files/digest-xbox-sources-2.4.32 509
+SHA256 cbf660809c59f8054142a289f2fc91791c98bd9470e1fabc692d895a409d5450 files/digest-xbox-sources-2.4.32 509
+MD5 1e8fa55567be92735869ee5c00700297 files/digest-xbox-sources-2.4.32-r1 518
+RMD160 041b04f003de10221f950d0e8131f90e32a623df files/digest-xbox-sources-2.4.32-r1 518
+SHA256 9cbc03de53d486b9c57a49ebdbc6eece4fd1c4ca81c7476ee9f8f5e1bff41ed2 files/digest-xbox-sources-2.4.32-r1 518
 MD5 8220c1bd949620000d8cb140587af9a2 files/digest-xbox-sources-2.6.10-r2 146
+RMD160 9e747fa3d7076124ef7546edba9ded756a65930e files/digest-xbox-sources-2.6.10-r2 146
+SHA256 b979b04c877369807a29efe08700fea4ce4ae7102f4c77ecdfc9c9888f41b95f files/digest-xbox-sources-2.6.10-r2 146
 MD5 08bc733159be011e83d11401f0a67a64 files/digest-xbox-sources-2.6.11.7 208
+RMD160 8171b8e0c6fe46109c0d42095cf75bf4f74c0a86 files/digest-xbox-sources-2.6.11.7 208
+SHA256 c89fbc3ab22669af2db7d7fd04d077264cff0d24e8f10dc08873eac06afb1bcc files/digest-xbox-sources-2.6.11.7 208
 MD5 825681c2f2e6bd9d2a12415bbdb211c2 files/digest-xbox-sources-2.6.12.5 211
+RMD160 7068b02d9d60e06d404f52a30d9ce0f4e867e3e0 files/digest-xbox-sources-2.6.12.5 211
+SHA256 1125bba2e1f7c36b84aeab2ee81260a784f4805607ddbe03ac96e96d00d4cece files/digest-xbox-sources-2.6.12.5 211
 MD5 0038232b9367a03efedda07beb7662c3 files/digest-xbox-sources-2.6.14.3 212
+RMD160 f770481878de905aa1190feab0b5fcbc2afa6b4f files/digest-xbox-sources-2.6.14.3 212
+SHA256 aaca604477dbe23bda1fdb4936a6f4800784d34b68fa2679c367aa0df80fee5d files/digest-xbox-sources-2.6.14.3 212
 MD5 7695b79187fcc27339ab62af1112ec11 files/xbox-sources-2.6.10.74070.patch 525
+RMD160 102148e31948d5f8cfdef47efa7ee00ef0aff230 files/xbox-sources-2.6.10.74070.patch 525
+SHA256 18a391f2cbfd86699cd341ca80a23ae42cf776875e5b5f6e0c0d523b303a713d files/xbox-sources-2.6.10.74070.patch 525
 MD5 655251f31f0bdc85bdd0cd0280af22b7 files/xbox-sources-2.6.10.75963.patch 979
+RMD160 14aab03249741ac23af237b188c53206c2a0fbad files/xbox-sources-2.6.10.75963.patch 979
+SHA256 0184b4b9b2d2aa622eb51b5da347eaf6bd7c98ae5558db9e55abf6496c35e248 files/xbox-sources-2.6.10.75963.patch 979
 MD5 01cd908ed2515a0bd37c9b45fbe758a6 files/xbox-sources-2.6.10.77666.patch 5942
+RMD160 6e8630f683c85fd4e4dedc25dd735b9a35d5e0d2 files/xbox-sources-2.6.10.77666.patch 5942
+SHA256 1bf24b11082e2533c9d205ad687fc262e539f6c66ab8c067cd88c9d3ea4f9750 files/xbox-sources-2.6.10.77666.patch 5942
 MD5 a3f4cfc55b03f9a6104da43da9c38928 files/xbox-sources-2.6.10.77923.patch 1094
+RMD160 50ec1bc522111e00861ffe25a3d7ebf1ae28d458 files/xbox-sources-2.6.10.77923.patch 1094
+SHA256 e99dba0efdcece19556d982b95cecad6864c2e3fcce4ef35acdfe7065981bf5c files/xbox-sources-2.6.10.77923.patch 1094
 MD5 eb75782ba6714f1c78b956e1497816f3 files/xbox-sources-2.6.10.81106.patch 826
+RMD160 135fdc562969f587f835cbeb36caeb2758bc42f7 files/xbox-sources-2.6.10.81106.patch 826
+SHA256 94310f4984903c583cc01871ad1f1d6df5978a5f5c27cfb9f2b6dab9d7c32eab files/xbox-sources-2.6.10.81106.patch 826
 MD5 77a23c26c0468c64ee5bc13c9999d79b files/xbox-sources-2.6.10.82141.patch 7684
+RMD160 37c1e3f74793eca0842c8ba3a1f63c8875f1e1ea files/xbox-sources-2.6.10.82141.patch 7684
+SHA256 f74b6038107191bfe7db95f0524ebd577db258334211e3809ebd3138d20b69b0 files/xbox-sources-2.6.10.82141.patch 7684
 MD5 cd0a7533c43364e377348613c6d76bb7 files/xbox-sources-2.6.10.brk-locked.patch 9736
+RMD160 a93cc57fd6adba11a9357332e3ef4f7c9c9182b7 files/xbox-sources-2.6.10.brk-locked.patch 9736
+SHA256 22ef7cd630c8161fcd7f9cbe1fefa1f1e80b5d4dd36dcb77eef976edf91189da files/xbox-sources-2.6.10.brk-locked.patch 9736
 MD5 8812f60b8d02b0b3b4c46a3311ddd851 files/xbox-sources-2.6.10.smbfs.patch 2662
+RMD160 5941cdf850c816da16dae5b13ce343bbb316f152 files/xbox-sources-2.6.10.smbfs.patch 2662
+SHA256 f65e98389d2410db7e3aa449ae449e7bb3d68704e54faaffb8cefb81fbc838a5 files/xbox-sources-2.6.10.smbfs.patch 2662
 MD5 c942eca63f26d0e933a366491340e95b files/xbox-sources-2.6.8.1.CAN-2004-1056.patch 6187
+RMD160 c82e788ba0b8e2b585fe1477e0f1d489a5724521 files/xbox-sources-2.6.8.1.CAN-2004-1056.patch 6187
+SHA256 29f4e29248a78adddae2ebd6ba44bbff56c7dd2f16aeb2cfb8e6857fea762df3 files/xbox-sources-2.6.8.1.CAN-2004-1056.patch 6187
 MD5 b0a1f80aff51d6601e8924329023b241 files/xbox-sources.AF_UNIX.patch 515
+RMD160 218bc5cc29e3fbaa59e895a210f82e275ebdfb7b files/xbox-sources.AF_UNIX.patch 515
+SHA256 8463aee1127f677102522127f38f2557fc46b5a6a0d38f8d3da15cad8d840c10 files/xbox-sources.AF_UNIX.patch 515
 MD5 f76b51ca6e5a6091136065aa1636c806 metadata.xml 439
+RMD160 912563f73aed5f3b5f288e4981b6880c77777dfe metadata.xml 439
+SHA256 c40590d02500515ef99df8a5db1d0b2f4e4f5bbc9131df4625417ff82558166f metadata.xml 439
 MD5 89addc6f4a493eeb6dbcdda60f676eda xbox-sources-2.4.31.ebuild 674
-MD5 438b08a3283427d095f2ab988492bc94 xbox-sources-2.4.32-r1.ebuild 560
-MD5 4c3c0f0a3212d588897ab22b1a75ee10 xbox-sources-2.4.32.ebuild 557
+RMD160 016592c640beee16963b6d6573ab0ea3cd084f27 xbox-sources-2.4.31.ebuild 674
+SHA256 3eeb498aa24848c6f3245f2eed5082a31926a858dd2b614ee2195b3c752c573c xbox-sources-2.4.31.ebuild 674
+MD5 a1778dda02e079115fe7aa0b29ee1df7 xbox-sources-2.4.32-r1.ebuild 559
+RMD160 dd13c00a82761dad7ef7a2539968df84fc6b8eaa xbox-sources-2.4.32-r1.ebuild 559
+SHA256 a68d6d4765b0ad3cf46cf5dda39fa7260bb56cbd72bf5e36ff7ddcb65bf33482 xbox-sources-2.4.32-r1.ebuild 559
+MD5 9d7f1f1d86587794197f3545da6d7734 xbox-sources-2.4.32.ebuild 556
+RMD160 a1bd42ad14ac2f54893893e23109fe5404d0943d xbox-sources-2.4.32.ebuild 556
+SHA256 5908d4a25b51debec82055a9defb1205738fc2c282d81edbd56e99795e4173e4 xbox-sources-2.4.32.ebuild 556
 MD5 1df4e1be57111fb6bb58e32a4417ca82 xbox-sources-2.6.10-r2.ebuild 1034
+RMD160 d05d351e48fadf36359955882047504fb12f4a45 xbox-sources-2.6.10-r2.ebuild 1034
+SHA256 8a1f517331b59ab41915458e7f7c426e3148c12d1c52bf1525b04d3cae0336c7 xbox-sources-2.6.10-r2.ebuild 1034
 MD5 d2b9540dd03dbf408ca07c92041160c6 xbox-sources-2.6.11.7.ebuild 743
+RMD160 0bf779f015bf7d1e1e123dc6b457420c4cf2f87e xbox-sources-2.6.11.7.ebuild 743
+SHA256 762fb8955e7888972e9f0a75ff0590f44d5bd5850e2ef0e11b855a54d79d8c8d xbox-sources-2.6.11.7.ebuild 743
 MD5 3191e85e95059a1dbd15d49aea68aecc xbox-sources-2.6.12.5.ebuild 621
+RMD160 742f05d487ca4a3e4b5ce2fd264146b086f8e25a xbox-sources-2.6.12.5.ebuild 621
+SHA256 a3269b8b3b29036bbbd239200716c45a836a47aad8584ed311c111281c199814 xbox-sources-2.6.12.5.ebuild 621
 MD5 a50e11c191e044e7ca74d45bd8ba3ada xbox-sources-2.6.14.3.ebuild 623
+RMD160 1a7ef4cf42be66d3c9bc93692da941d3ed60c46e xbox-sources-2.6.14.3.ebuild 623
+SHA256 d7c07643361d580b0b39f6b94c54be752c6f275f11987fa3fc540236693e942d xbox-sources-2.6.14.3.ebuild 623
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDvD9dD78nYLRGtEERAoEmAJ4mCMv9X8xQQ4WIBjFxkNG1GzdBQgCdGyZy
-e8cnr9DR3yJ2mkfwX91K/S8=
-=O8eY
+iD8DBQFEB2AYD78nYLRGtEERArSVAJ9M++T2ApTozc2wdanc1FKI7FgwKACeJZH7
+dxoOld5x5FD6FXqUkme33qE=
+=lDLC
 -----END PGP SIGNATURE-----
