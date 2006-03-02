@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3348681c9a930abae0d1a55678e07ad9 ChangeLog 2582
-RMD160 3d68bcf14583aa3916aa27c8be3f8c02627a26b2 ChangeLog 2582
-SHA256 72c13c7e0ad67311ee48dbcac24c1dc6fd4c372e524130e414c3b4b360d59c9d ChangeLog 2582
+MD5 bf991bd4898a005d931484d17a1065c3 ChangeLog 2671
+RMD160 7a40f73ca2fcd07621574096217c284173e2cb66 ChangeLog 2671
+SHA256 720ba6bb728a98961b7a7541daa8367bd052e450c02241ae312e3a71291bf998 ChangeLog 2671
 MD5 978bb89eb6293ac482b193ade2a80b94 files/2.3.3-jde-new-buffer-menu-gentoo.patch 509
 RMD160 4fa3d7976d5ff3a34b40e215bd72d9857bc7cee7 files/2.3.3-jde-new-buffer-menu-gentoo.patch 509
 SHA256 a753cdda699327582e61ac46643be6e4dc925099d7fae2c865a589b437587b3d files/2.3.3-jde-new-buffer-menu-gentoo.patch 509
@@ -46,7 +46,7 @@ SHA256 0be32d412b86728bc6f77b96859d0f0f786f9bdbe82dc7f719efb1233dbd82ce metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEBoYESENan+PfizARAhJEAJ93hWefHVZEo3FO7mreiHZVrDBazwCdHxHw
-L0JdiFeIs7vvGv2UpIinrM4=
-=hm0L
+iD8DBQFEBoZISENan+PfizARAhPBAJoC00vfhwzhvG+uE6sgqYyf0AQbaQCfba+l
+nc9nfE0MuYbzxFwDLGeAV5M=
+=SOjb
 -----END PGP SIGNATURE-----
