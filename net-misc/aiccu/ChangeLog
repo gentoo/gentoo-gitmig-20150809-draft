@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.5 2006/02/05 09:24:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.6 2006/03/02 19:17:18 jokey Exp $
+
+  02 Mar 2006; Markus Ullmann <jokey@gentoo.org> aiccu-2005.01.31.ebuild,
+  aiccu-2005.01.31-r1.ebuild:
+  Adding ~arm keyword
 
 *aiccu-2005.01.31-r1 (05 Feb 2006)
 
