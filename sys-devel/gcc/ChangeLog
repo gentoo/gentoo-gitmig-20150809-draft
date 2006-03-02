@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.501 2006/03/02 12:02:15 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.502 2006/03/02 19:31:13 azarah Exp $
+
+  02 Mar 2006; Martin Schlemmer <azarah@gentoo.org>
+  +files/awk/fixlafiles.awk-no_gcc_la:
+  Add fixlafiles.awk for gcc's without libtool linker scripts.
 
   02 Mar 2006; <chrb@gentoo.org> ChangeLog:
   fix broken manifest (File: files/stubs/gcc-4.1-htb-stub.patch)
