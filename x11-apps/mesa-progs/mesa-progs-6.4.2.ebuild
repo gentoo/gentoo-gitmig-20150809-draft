@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-6.4.2.ebuild,v 1.1 2006/02/14 23:53:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-6.4.2.ebuild,v 1.2 2006/03/02 01:10:09 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -9,10 +9,11 @@ MY_PN="${MY_PN/-progs}"
 MY_P="${MY_PN}-${PV}"
 LIB_P="${MY_PN}Lib-${PV}"
 PROG_P="${MY_PN}Demos-${PV}"
-DESCRIPTION="Mesa's OpenGL utility and demo programs"
+DESCRIPTION="Mesa's OpenGL utility and demo programs (like glxgears)"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mesa3d/${LIB_P}.tar.bz2
 	mirror://sourceforge/mesa3d/${PROG_P}.tar.bz2"
+
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
@@ -69,6 +70,5 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${S}/progs/xdemos/glxgears
-	dobin ${S}/progs/xdemos/glxinfo
+	dobin "${S}"/progs/xdemos/{glxgears,glxinfo} || die
 }
