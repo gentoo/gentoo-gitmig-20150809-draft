@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mt-daapd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.17 2006/02/28 17:10:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.18 2006/03/02 11:37:47 flameeyes Exp $
+
+*mt-daapd-0.2.4 (02 Mar 2006)
+
+  02 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +mt-daapd-0.2.4.ebuild:
+  Add new version to fix issues with iTunes 6.0.4.
 
 *mt-daapd-0.3.0_pre20060227 (28 Feb 2006)
 
