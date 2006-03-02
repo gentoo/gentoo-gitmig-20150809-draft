@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash-completion
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.132 2006/02/08 21:56:57 tove Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.133 2006/03/02 12:03:27 ka0ttic Exp $
+
+*bash-completion-20060301 (02 Mar 2006)
+
+  02 Mar 2006; Aaron Walker <ka0ttic@gentoo.org>
+  +files/20060301/01_all_no_xine.diff,
+  +files/20060301/02_all_mplayer_flac.diff,
+  +bash-completion-20060301.ebuild:
+  Version bump; closes bugs 101311, 111681, 111765, 117770, and 122591.
 
   25 Nov 2005; Tom Gall <tgall@gentoo.org> 
   bash-completion-20050121-r10.ebuild:
