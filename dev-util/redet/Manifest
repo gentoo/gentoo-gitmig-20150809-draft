@@ -1,4 +1,6 @@
-MD5 63e54bfdc4050ad8636a59f9d49e6c0d ChangeLog 369
+MD5 8902dd06c030e55123118ac1091ded70 ChangeLog 477
 MD5 b91ec39e0c39df22d7189f32c2f04175 files/digest-redet-8.4 59
+MD5 f6d7d36b62339293f301bec4a320f74e files/digest-redet-8.8 59
 MD5 411c9d8d6e623f4b9482a42869154369 metadata.xml 334
 MD5 4bbc0efd0a25abf70d52117db5a560b4 redet-8.4.ebuild 1053
+MD5 f23004e89e8fd310d082b6ecf6b8cab9 redet-8.8.ebuild 1053
