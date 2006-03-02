@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 47d86745f2b13ea9380103424e56c537 ChangeLog 2332
 RMD160 5af60dcf0bed9347135c3e64ce8022322f9772f3 ChangeLog 2332
 SHA256 e1f9709dfdf37a4b12a6f70dbf8fb63e7ba59f4ef2dffab014e17fabb90cb7ed ChangeLog 2332
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 cb6f2a89ae8927b7ffc6727653704ebe xf86-input-microtouch-1.0.0.5.ebuild 553
 RMD160 341611e5f219687bfe8df7a8ab1685a1c2a5b80c xf86-input-microtouch-1.0.0.5.ebuild 553
 SHA256 d103997ecd1a8f6cd99682c832b470ac1cd737dd2d3e452ada7258e07cab5816 xf86-input-microtouch-1.0.0.5.ebuild 553
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEBlWy2+ySkm8kpY0RAvq+AJ9EBHAKxmdEXeX1woQbKfCpUgCPygCfRA2V
+Bra17wWvCPIZ6bODilX9TVw=
+=Vacq
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 88b6d9110153bf9dcb2dd6b9c27a312d ChangeLog 2008
 RMD160 272d4de40b3b4dcb62fc051962333ba15c7e5bd0 ChangeLog 2008
 SHA256 aa6d89b12b344cb6ed93bfb63dee5629f9cc0c08502d8e3ab7f971b77b20b71d ChangeLog 2008
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 4d562207e8b9f8a25e96d39b7575fbf2 xf86-video-cirrus-1.0.0.5.ebuild 587
 RMD160 3c2603a5befba2b834d755211091c1d9007e083c xf86-video-cirrus-1.0.0.5.ebuild 587
 SHA256 b7a662243589f634d440b0d994781a1927daa6d8ed24fce50d0fafe6f80a0984 xf86-video-cirrus-1.0.0.5.ebuild 587
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEBlOq2+ySkm8kpY0RAgegAKCrZfYPnVU0pC88gg3w8d9ymjeCygCfb4qI
+NFwQLBveId/hHFwJgLMqC3U=
+=ZXao
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 83b5dd84c3da0f037f8db6bec4598ed3 ChangeLog 2232
 RMD160 ef6bbec13e64b1015ca7b03a6d2d6e608bd186da ChangeLog 2232
 SHA256 3ec4c43d938f304be6338bfd1d3327b246379d1a98f3b582788f9d0046355ed6 ChangeLog 2232
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 059dd045adfeed95e84bbd41b7ce1690 xf86-input-aiptek-1.0.0.5.ebuild 541
 RMD160 c05e37eccce6d6ac4c879ef20b362399625b9134 xf86-input-aiptek-1.0.0.5.ebuild 541
 SHA256 e4a1c0956b9606d00abfd83b49c6561d9891e0f5da2153c37862ad4b5d1dc30b xf86-input-aiptek-1.0.0.5.ebuild 541
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEBlRS2+ySkm8kpY0RAsZfAKCmt3/ulVhnTIeXoXYsa8dkMdTdoACgqSqw
+d0PPfEI0PKpvHUeek4JXL3E=
+=qA7m
+-----END PGP SIGNATURE-----

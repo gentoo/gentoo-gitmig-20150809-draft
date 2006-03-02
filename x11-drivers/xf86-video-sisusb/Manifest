@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8e52f7ef25a4caca4bdbf81b60ccbc28 ChangeLog 2451
 RMD160 c284cb57891ab59400488ddc7d7ed57f9d6126e0 ChangeLog 2451
 SHA256 7dada12fb353dd9ed02936d9ba26fc0ead1421c6c67577d0cbfcd461564e8a3f ChangeLog 2451
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 8f764a5ce79a27bb5dd95b3b2712ea18 xf86-video-sisusb-0.7.1.3.ebuild 665
 RMD160 4e5956be62289c8b254d7b122966598b3ca67ee2 xf86-video-sisusb-0.7.1.3.ebuild 665
 SHA256 a4a7720b4128aafba028f0d04fb2b03c949ba01e4b23da612fd0d9f79ddc3d84 xf86-video-sisusb-0.7.1.3.ebuild 665
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEBlPU2+ySkm8kpY0RAhP2AJ4tOnuG/xqwHfmWFbSd3zHcO8p1KwCfTaq/
+KbNJ8u+t3q8calowCSkklrE=
+=9ykU
+-----END PGP SIGNATURE-----
