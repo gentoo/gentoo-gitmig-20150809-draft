@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/arp-sk-0.0.16.ebuild,v 1.2 2005/02/25 12:24:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/arp-sk-0.0.16.ebuild,v 1.3 2006/03/02 21:45:37 jokey Exp $
 
 DESCRIPTION="A swiss knife tool for ARP"
 HOMEPAGE="http://www.arp-sk.org/"
@@ -18,7 +18,7 @@ src_install() {
 	# We don't need libcompat as it has a potential to clash with other packages.
 	rm -fr ${D}/usr/lib
 
-	dodoc ARP AUTHORS CONTRIB ChangeLog INSTALL README TODO
+	dodoc ARP AUTHORS CONTRIB ChangeLog README TODO
 }
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arp-sk
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/ChangeLog,v 1.6 2005/04/24 22:44:41 vanquirius Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/ChangeLog,v 1.7 2006/03/02 21:45:37 jokey Exp $
+
+  02 Mar 2006; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Removed INSTALL from dodoc
 
   24 Apr 2005; Marcelo Goes <vanquirius@gentoo.org> -arp-sk-0.0.15.ebuild:
   Removing old ebuild.
