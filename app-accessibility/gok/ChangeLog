@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.60 2006/01/26 05:21:33 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.61 2006/03/02 19:18:56 allanonjl Exp $
+
+*gok-1.0.6 (02 Mar 2006)
+
+  02 Mar 2006; <allanon@gentoo.org> +gok-1.0.6.ebuild:
+  new version. remove static useflag.
 
   26 Jan 2006; Leonardo Boshell <leonardop@gentoo.org> gok-1.0.5.ebuild:
   Added modular X deps. Patch provided by Olivier Crete on bug #115679.
