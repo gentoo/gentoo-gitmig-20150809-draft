@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.210-r4.ebuild,v 1.1 2006/02/26 22:26:33 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.210-r4.ebuild,v 1.2 2006/03/02 19:36:04 hollow Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -63,6 +63,7 @@ src_install() {
 	keepdir /var/run/vservers.rev
 	keepdir /var/run/vshelper
 	keepdir /var/lock/vservers
+	keepdir /var/cache/vservers
 
 	keepdir "${VDIRBASE}"
 	fperms 000 "${VDIRBASE}"
