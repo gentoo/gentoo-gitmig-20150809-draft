@@ -7,9 +7,6 @@ SHA256 236d09bf8aed1a3f73c26bdb287957a21212646ecb6eec21abaafa9ef6e3b2ef baselayo
 MD5 451568e708e86c242de50019b6e93aee baselayout-1.11.14-r6.ebuild 19294
 RMD160 c7066c362b521a219879f75e2f0ee3c5ac453f1b baselayout-1.11.14-r6.ebuild 19294
 SHA256 6402c637dd955ed769bc7935cff875b08fa986b7faa7ad09e719d34b70a9979c baselayout-1.11.14-r6.ebuild 19294
-MD5 7673a45893f509afd83ada05b4b35aa0 baselayout-1.12.0_pre16-r2.ebuild 19369
-RMD160 94a2378e774f72fb6fc69c95efd68fd7b65b6417 baselayout-1.12.0_pre16-r2.ebuild 19369
-SHA256 a7769f6871020f797f57a0ddadc461b8af4e874ec0b0037114e351fee66ba0cf baselayout-1.12.0_pre16-r2.ebuild 19369
 MD5 6497485e7b7794ef1deddf70b24026b9 baselayout-1.12.0_pre16-r3.ebuild 19369
 RMD160 6021fa3ffb964c1aaa92751b5963812d54203ace baselayout-1.12.0_pre16-r3.ebuild 19369
 SHA256 a1c8692827f099d5cc24ea774233248ce35edd2947a43d619f2b5dd7c519d2a5 baselayout-1.12.0_pre16-r3.ebuild 19369
@@ -49,9 +46,6 @@ SHA256 8be386254cdb00a3903244c63173c6f59df705f561d5e8c9e3865614baa84919 files/di
 MD5 00d79deae663edaa627c8bbc572c6967 files/digest-baselayout-1.11.14-r6 256
 RMD160 61e4bfb394dabe52a62e8b2b56102ad0e6f60d66 files/digest-baselayout-1.11.14-r6 256
 SHA256 939da19d06f033b18784c7ab4a9d168d9b68caaf4cdbafde33ae754a10af754d files/digest-baselayout-1.11.14-r6 256
-MD5 324a8c9e6f96a33dc71431b9acf77759 files/digest-baselayout-1.12.0_pre16-r2 274
-RMD160 7744288e0c7416ec5ea044a9b0f51b30e3c2583d files/digest-baselayout-1.12.0_pre16-r2 274
-SHA256 4800938394cdc3186eb178b7e9a0dc7d2f24954b860f697d00dfdb02fce94e74 files/digest-baselayout-1.12.0_pre16-r2 274
 MD5 324a8c9e6f96a33dc71431b9acf77759 files/digest-baselayout-1.12.0_pre16-r3 274
 RMD160 7744288e0c7416ec5ea044a9b0f51b30e3c2583d files/digest-baselayout-1.12.0_pre16-r3 274
 SHA256 4800938394cdc3186eb178b7e9a0dc7d2f24954b860f697d00dfdb02fce94e74 files/digest-baselayout-1.12.0_pre16-r3 274
