@@ -1,0 +1,17 @@
+Patch to fix compile and load problem.
+Caused by a cleanup:
+http://lkml.org/lkml/2006/1/26/327
+
+--- omnibook-20060126/dmi.c	2003-09-29 11:50:34.000000000 +0200
++++ omnibook-20060126/dmi.c	2006-03-02 02:00:39.000000000 +0100
+@@ -128,7 +128,9 @@
+ 
+ 	while( fp < 0xFFFFF)
+ 	{
+-		isa_memcpy_fromio(buf, fp, 15);
++		void __iomem *addr = ioremap(fp, 15);
++		memcpy_fromio(buf, addr, 15);
++		iounmap(addr);
+ 		if(memcmp(buf, "_DMI_", 5)==0 && dmi_checksum(buf))
+ 		{
+ 			u16 num=buf[13]<<8|buf[12];
