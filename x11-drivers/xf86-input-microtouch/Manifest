@@ -7,6 +7,6 @@ SHA256 f7ccd10c75c6bb1dde3261d4e236875a244039e2f3bc4a73d0dc4f622435b503 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 e56e26131c28950d3ebdd6b9b3f903df xf86-input-microtouch-1.0.0.5.ebuild 548
-RMD160 75f77194feb8e5e847a48304d99c08ef68c120e5 xf86-input-microtouch-1.0.0.5.ebuild 548
-SHA256 7425f9bca1585c73a250f7f26659ac99253dfcfc03272ebfdcb1189637776f1f xf86-input-microtouch-1.0.0.5.ebuild 548
+MD5 cb6f2a89ae8927b7ffc6727653704ebe xf86-input-microtouch-1.0.0.5.ebuild 553
+RMD160 341611e5f219687bfe8df7a8ab1685a1c2a5b80c xf86-input-microtouch-1.0.0.5.ebuild 553
+SHA256 d103997ecd1a8f6cd99682c832b470ac1cd737dd2d3e452ada7258e07cab5816 xf86-input-microtouch-1.0.0.5.ebuild 553

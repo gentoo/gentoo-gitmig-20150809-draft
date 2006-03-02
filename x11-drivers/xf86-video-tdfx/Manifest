@@ -7,6 +7,6 @@ SHA256 eabc0d42d3906f024959b13d7603fe46daee821eca1c5dddccf5a021db9ef268 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 245050eafbfd2169dc065fa6eddd2888 xf86-video-tdfx-1.1.1.3.ebuild 827
-RMD160 66183b7bca90c8c57d7920329b08616416580865 xf86-video-tdfx-1.1.1.3.ebuild 827
-SHA256 d5be4e9fca6069daf1fa37d456dd94526f210af887a6e004e84f4cc1288bbc8a xf86-video-tdfx-1.1.1.3.ebuild 827
+MD5 cc371dda09ad4bb4b3e7f23662b9a89d xf86-video-tdfx-1.1.1.3.ebuild 832
+RMD160 92d5dd26ff73217f615c82a223a6c54b065fbd63 xf86-video-tdfx-1.1.1.3.ebuild 832
+SHA256 f00ac7779ce847b3768fc0c3eb7f1baf8009e69f58a2fce35b9ddd9ad18b62e1 xf86-video-tdfx-1.1.1.3.ebuild 832

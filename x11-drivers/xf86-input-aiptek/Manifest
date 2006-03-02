@@ -7,6 +7,6 @@ SHA256 7cf8bd91513d59a1eff9de364faa0be273bbdcfe6e1792e3595564ebeb45ed47 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 3ef79d7ebe60e97e161829a2d7bc39fc xf86-input-aiptek-1.0.0.5.ebuild 536
-RMD160 631c6b697662ebeea93b54f210703d513fd2024f xf86-input-aiptek-1.0.0.5.ebuild 536
-SHA256 b2ae779b8e6c389fe9b0ebdd84332aec3c43b0026e77a900f3bbdbba2026c5d6 xf86-input-aiptek-1.0.0.5.ebuild 536
+MD5 059dd045adfeed95e84bbd41b7ce1690 xf86-input-aiptek-1.0.0.5.ebuild 541
+RMD160 c05e37eccce6d6ac4c879ef20b362399625b9134 xf86-input-aiptek-1.0.0.5.ebuild 541
+SHA256 e4a1c0956b9606d00abfd83b49c6561d9891e0f5da2153c37862ad4b5d1dc30b xf86-input-aiptek-1.0.0.5.ebuild 541

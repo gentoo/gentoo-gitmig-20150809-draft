@@ -7,6 +7,6 @@ SHA256 76492aaa11f747882d197f2363308d996dc1d69ba1ad2da08b0456bc99685f39 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 f3504c98a097d6b97a0ea2cd4da643fc xf86-input-elographics-1.0.0.5.ebuild 551
-RMD160 1963afb408e5c92ee2e1c14ba7da2586df466ae8 xf86-input-elographics-1.0.0.5.ebuild 551
-SHA256 7d3242d08840795deeb84b79e77e93cef09e1ae31a942c143090ab50d146e299 xf86-input-elographics-1.0.0.5.ebuild 551
+MD5 ef8fd5d7c8ceb6f2ba4ae86afec3a82e xf86-input-elographics-1.0.0.5.ebuild 556
+RMD160 b95cd81d8e4e3ce889baeb0db85a4acaf131072c xf86-input-elographics-1.0.0.5.ebuild 556
+SHA256 d4e3a10555dd0160a316fb5f5fc26c9e585ce493de85d56fbd2c1dcd24e10ab9 xf86-input-elographics-1.0.0.5.ebuild 556
