@@ -1,17 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a714a9c6d126d067b7a4444d41b76428 ChangeLog 1722
-MD5 20fe97af5a405bb51c964f2b791eb0c1 wterm-6.2.9-r1.ebuild 806
-MD5 f9937700e98690e07f19531bb3b32228 wterm-6.2.9-r2.ebuild 954
-MD5 b14e34f4d4ba29b277588cac30508e10 wterm-6.2.9.ebuild 737
+MD5 c037dd240109c21c20da7dc85d60c67a ChangeLog 1815
+RMD160 cebe7214de6ad28e7f3aff35d8ddd63dd5901cca ChangeLog 1815
+SHA256 50cb8c424ef177407c89f274efc6d89b047f4926135e8468e234b89c816c41a4 ChangeLog 1815
 MD5 0b2a748c025855769dc0cb12266b9e3c files/digest-wterm-6.2.9 64
+RMD160 1458d09b3dcfc9945b265100ad1303bc112b7c3d files/digest-wterm-6.2.9 64
+SHA256 055d7591b6653da2884756eeb434965d4d7ca107bf76bfa6bedec100e9dbe243 files/digest-wterm-6.2.9 64
 MD5 0b2a748c025855769dc0cb12266b9e3c files/digest-wterm-6.2.9-r1 64
+RMD160 1458d09b3dcfc9945b265100ad1303bc112b7c3d files/digest-wterm-6.2.9-r1 64
+SHA256 055d7591b6653da2884756eeb434965d4d7ca107bf76bfa6bedec100e9dbe243 files/digest-wterm-6.2.9-r1 64
 MD5 0b2a748c025855769dc0cb12266b9e3c files/digest-wterm-6.2.9-r2 64
+RMD160 1458d09b3dcfc9945b265100ad1303bc112b7c3d files/digest-wterm-6.2.9-r2 64
+SHA256 055d7591b6653da2884756eeb434965d4d7ca107bf76bfa6bedec100e9dbe243 files/digest-wterm-6.2.9-r2 64
+MD5 af618b360ff60430037b59cfbe944dde wterm-6.2.9-r1.ebuild 826
+RMD160 bf667d359f429cf6f56ff4aa42e7a4e0fd4760f7 wterm-6.2.9-r1.ebuild 826
+SHA256 cbee7b0df24ebd9c52d9baf0f60547b8df2f783e7eac54292f0b0a92eee769be wterm-6.2.9-r1.ebuild 826
+MD5 d0db197e776dd9db34423039657ef8a6 wterm-6.2.9-r2.ebuild 974
+RMD160 fb16c6ad432254186395eb03054dfc7a34171187 wterm-6.2.9-r2.ebuild 974
+SHA256 7ff84451ade791b05beb53bc8203fe36296e43f49bea51d0de281269491de18a wterm-6.2.9-r2.ebuild 974
+MD5 5a85de8c88cd65971a9114c7f76083ae wterm-6.2.9.ebuild 757
+RMD160 a1ae3a99033ef39f5771e039a87eef81ba74e6f9 wterm-6.2.9.ebuild 757
+SHA256 ed46a7c29dee9feae1876520e7fc39b76f1ef717514d13d58504e6fd36ba8e05 wterm-6.2.9.ebuild 757
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDP/TvwUpWvClEHQoRAtUUAKCC7WeJaGrV+UsvODOzHnasJXru4wCfYgOj
-kP7O7uE9Rk9zbpeoyRQWCnw=
-=qT/Q
+iD8DBQFEBtXwr2QksT29OyARAirTAKCPNqOlrW7QCTtejwZeo7BSBQgpEQCeKUMU
+DiwI9F+pMpShG9Wyenkdtd0=
+=iu2L
 -----END PGP SIGNATURE-----
