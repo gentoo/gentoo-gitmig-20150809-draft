@@ -1,16 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.12 2006/02/17 20:37:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.13 2006/03/02 03:39:23 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="An X11 implementation maintained by the X.Org Foundation (meta
-package)"
+DESCRIPTION="An X11 implementation maintained by the X.Org Foundation (meta package)"
 HOMEPAGE="http://xorg.freedesktop.org"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE_INPUT_DEVICES="
 	input_devices_acecad
 	input_devices_aiptek
