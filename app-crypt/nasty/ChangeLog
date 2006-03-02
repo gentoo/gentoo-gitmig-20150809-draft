@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/nasty
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/nasty/ChangeLog,v 1.2 2005/12/12 03:25:47 robbat2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/nasty/ChangeLog,v 1.3 2006/03/02 02:45:56 vanquirius Exp $
+
+  02 Mar 2006; Marcelo Goes <vanquirius@gentoo.org> -nasty-0.6.ebuild,
+  nasty-0.6-r1.ebuild:
+  Remove old ebuild, remove DEPEND=DEPEND.
 
 *nasty-0.6-r1 (12 Dec 2005)
 
