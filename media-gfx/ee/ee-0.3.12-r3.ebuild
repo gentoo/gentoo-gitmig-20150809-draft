@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ee-0.3.12-r3.ebuild,v 1.4 2005/10/18 04:22:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ee-0.3.12-r3.ebuild,v 1.5 2006/03/02 19:50:05 vanquirius Exp $
 
 inherit gnuconfig eutils
 
@@ -16,6 +16,10 @@ IUSE="nls"
 DEPEND="=sys-libs/db-1*
 	>=gnome-base/gnome-libs-1.4.1.2-r1
 	nls? ( sys-devel/gettext )"
+
+RDEPEND="=sys-libs/db-1*
+	>=gnome-base/gnome-libs-1.4.1.2-r1
+	nls? ( virtual/libintl )"
 
 src_unpack() {
 	unpack ${A}
