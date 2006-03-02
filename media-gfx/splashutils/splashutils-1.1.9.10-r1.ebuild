@@ -1,16 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.9.ebuild,v 1.4 2006/03/02 17:41:52 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.1 2006/03/02 17:41:52 uberlord Exp $
 
 inherit eutils multilib linux-mod
 
 MISCSPLASH="miscsplashutils-0.1.3"
-GENTOOSPLASH="splashutils-gentoo-0.1.13"
-V_KLIBC="1.0.14"
+GENTOOSPLASH="splashutils-gentoo-0.1.14"
 V_JPEG="6b"
 V_PNG="1.2.8"
-V_ZLIB="1.2.1"
+V_ZLIB="1.2.3"
 V_FT="2.1.9"
+
+ZLIBSRC="libs/zlib-${V_ZLIB}"
+LPNGSRC="libs/libpng-${V_PNG}"
+JPEGSRC="libs/jpeg-${V_JPEG}"
+FT2SRC="libs/freetype-${V_FT}"
 
 IUSE="hardened png truetype kdgraphics"
 
@@ -22,10 +26,7 @@ SRC_URI="mirror://gentoo/${PN}-lite-${PV}.tar.bz2
 	 mirror://sourceforge/libpng/libpng-${V_PNG}.tar.bz2
 	 ftp://ftp.uu.net/graphics/jpeg/jpegsrc.v${V_JPEG}.tar.gz
 	 mirror://sourceforge/freetype/freetype-${V_FT}.tar.bz2
-	 http://www.gzip.org/zlib/zlib-${V_ZLIB}.tar.bz2
-	 ftp://ftp.kernel.org/pub/linux/libs/klibc/klibc-${V_KLIBC}.tar.bz2
-	 ftp://ftp.kernel.org/pub/linux/libs/klibc/Stable/klibc-${V_KLIBC}.tar.bz2
-	 ftp://ftp.kernel.org/pub/linux/libs/klibc/Testing/klibc-${V_KLIBC}.tar.bz2"
+	 http://www.gzip.org/zlib/zlib-${V_ZLIB}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -38,7 +39,8 @@ RDEPEND="truetype? ( >=media-libs/freetype-2 )
 	!media-gfx/bootsplash
 	media-gfx/fbgrab"
 DEPEND="${RDEPEND}
-	virtual/linux-sources"
+	virtual/linux-sources
+	>=dev-libs/klibc-1.0.14-r1"
 
 S="${WORKDIR}/${P/_/-}"
 SG="${WORKDIR}/${GENTOOSPLASH}"
@@ -82,13 +84,15 @@ src_unpack() {
 	# Ensure that we call depscan with --svcdir
 	cd "${WORKDIR}/${GENTOOSPLASH}"
 	epatch "${FILESDIR}/splashutils-depscan.patch"
-	
-	mv ${WORKDIR}/{libpng-${V_PNG},jpeg-${V_JPEG},zlib-${V_ZLIB},freetype-${V_FT},klibc-${V_KLIBC}} ${S}/libs
-	ln -s ../../linux ${S}/libs/klibc-${V_KLIBC}/linux
+
+	mv ${WORKDIR}/{libpng-${V_PNG},jpeg-${V_JPEG},zlib-${V_ZLIB},freetype-${V_FT}} ${S}/libs
 	# We need to delete the Makefile and let it be rebuilt when splashutils
 	# is being configured. Either that, or we end up with a segfaulting kernel
 	# helper.
 	rm ${S}/libs/zlib-${V_ZLIB}/Makefile
+	cd ${S}
+
+	epatch ${FILESDIR}/splashutils-1.1.9.10-ppc-2.6.14.patch
 
 	# Check whether the kernel tree has been patched with fbsplash.
 	if [[ ! -e ${KV_DIR}/include/linux/console_splash.h ]]; then
@@ -102,17 +106,22 @@ src_unpack() {
 		spl_conf yes CONFIG_FBSPLASH
 	fi
 
-	# This should make splashutils compile on systems with hardened GCC.
-	sed -e 's@K_CFLAGS =@K_CFLAGS = -fno-stack-protector@' -i ${S}/Makefile
-	sed -e 's@CFLAGS  =@CFLAGS  = -fno-stack-protector@' -i ${S}/libs/klibc-${V_KLIBC}/klibc/MCONFIG
+	if built_with_use sys-devel/gcc vanilla ; then
+		ewarn "Your GCC was built with the 'vanilla' flag set. If you can't compile"
+		ewarn "splashutils, you're on your own, as this configuration is not supported."
+	else
+		# This should make splashutils compile on systems with hardened GCC.
+		sed -e 's@K_CFLAGS =@K_CFLAGS = -fno-stack-protector@' -i ${S}/Makefile
+	fi
 
 	mkdir ${S}/kernel
 
 	# Use tty16 as the default silent tty.
 	sed -i -e 's/#define TTY_SILENT.*/#define TTY_SILENT 16/' ${S}/splash.h
 
-	# Setup the kernel object directory
-	echo "KRNLOBJ = ${KV_OUT_DIR}" >> ${S}/libs/klibc-${V_KLIBC}/MCONFIG
+	if ! use truetype ; then
+		sed -i -e 's/fbtruetype kbd/kbd/' ${SM}/Makefile
+	fi
 }
 
 src_compile() {
@@ -121,20 +130,21 @@ src_compile() {
 	spl_conf_use truetype CONFIG_TTF_KERNEL
 	spl_conf_use kdgraphics CONFIG_SILENT_KD_GRAPHICS
 	sed -i -e "s/^CFLAGS[ \t]*=.*/CFLAGS = ${CFLAGS}/" Makefile
-	emake -j1 MISCINCS="-I${KV_OUT_DIR}/include" \
-		LIBCSRC="libs/klibc-${V_KLIBC}/klibc" \
-		|| die "failed to build splashutils"
 
 	cd ${SM}
 	emake LIB=$(get_libdir) || die "failed to build miscsplashutils"
+	cd ${S}
+	export ZLIBSRC LPNGSRC JPEGSRC FT2SRC
+	emake -j1 LIB=$(get_libdir) ARCH=$(tc-arch-kernel) || die "failed to build splashutils"
 }
 
 src_install() {
 	cd ${SM}
 	make DESTDIR=${D} install || die
 
+	export ZLIBSRC LPNGSRC JPEGSRC FT2SRC
 	cd ${S}
-	make DESTDIR=${D} LIBCSRC="libs/klibc-${V_KLIBC}/klibc" install || die
+	make DESTDIR=${D} install || die
 
 	keepdir /lib/splash/{tmp,cache,bin}
 	dosym /lib/splash/bin/fbres /sbin/fbres
@@ -193,12 +203,12 @@ pkg_postinst() {
 	ewarn "If you're upgrading from a pre-1.0 splashutils version, make sure that you"
 	ewarn "rebuild your initrds. You can use the splash_geninitramfs script to do that."
 	echo ""
-	ewarn "It is required that you add 'quiet CONSOLE=/dev/tty1' to your kernel"
+	ewarn "It is required that you add 'console=tty1' to your kernel"
 	ewarn "command line parameters."
 	echo ""
 	einfo "After these modifications, the relevant part of the kernel command"
 	einfo "line might look like:"
-	einfo "  splash=silent,fadein,theme:emergence quiet CONSOLE=/dev/tty1"
+	einfo "  splash=silent,fadein,theme:emergence console=tty1"
 	echo ""
 	einfo "The sample Gentoo themes (emergence, gentoo) have been removed from the"
 	einfo "core splashutils package. To get some themes you might want to emerge:"

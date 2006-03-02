@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.9-r1.ebuild,v 1.7 2006/02/02 15:46:17 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.9-r1.ebuild,v 1.8 2006/03/02 17:41:52 uberlord Exp $
 
 inherit eutils multilib linux-mod
 
@@ -80,6 +80,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	ln -s ${KV_DIR} ${S}/linux
+
+	# Ensure that we call depscan with --svcdir
+	cd "${WORKDIR}/${GENTOOSPLASH}"
+	epatch "${FILESDIR}/splashutils-depscan.patch"
 
 	mv ${WORKDIR}/{libpng-${V_PNG},jpeg-${V_JPEG},zlib-${V_ZLIB},freetype-${V_FT}} ${S}/libs
 	# We need to delete the Makefile and let it be rebuilt when splashutils

@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.9.ebuild,v 1.4 2006/03/02 17:41:52 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.8-r1.ebuild,v 1.1 2006/03/02 17:41:52 uberlord Exp $
 
 inherit eutils multilib linux-mod
 
 MISCSPLASH="miscsplashutils-0.1.3"
-GENTOOSPLASH="splashutils-gentoo-0.1.13"
-V_KLIBC="1.0.14"
+GENTOOSPLASH="splashutils-gentoo-0.1.12"
+V_KLIBC="1.0.8"
 V_JPEG="6b"
 V_PNG="1.2.8"
 V_ZLIB="1.2.1"
@@ -29,7 +29,7 @@ SRC_URI="mirror://gentoo/${PN}-lite-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="amd64 ppc x86"
 RDEPEND="truetype? ( >=media-libs/freetype-2 )
 	png? ( >=media-libs/libpng-1.2.7 )
 	>=media-libs/jpeg-6b
@@ -49,7 +49,7 @@ pkg_setup() {
 		ewarn "Due to problems with klibc, it is currently impossible to compile splashutils"
 		ewarn "with 'hardened' GCC flags. As a workaround, the package will be compiled with"
 		ewarn "-fno-stack-protector. Hardened GCC features will not be used while building"
-		ewarn "the splash kernel helper."
+		ewarn "the fbsplash kernel helper."
 	fi
 }
 
@@ -121,9 +121,7 @@ src_compile() {
 	spl_conf_use truetype CONFIG_TTF_KERNEL
 	spl_conf_use kdgraphics CONFIG_SILENT_KD_GRAPHICS
 	sed -i -e "s/^CFLAGS[ \t]*=.*/CFLAGS = ${CFLAGS}/" Makefile
-	emake -j1 MISCINCS="-I${KV_OUT_DIR}/include" \
-		LIBCSRC="libs/klibc-${V_KLIBC}/klibc" \
-		|| die "failed to build splashutils"
+	emake -j1 MISCINCS="-I${KV_OUT_DIR}/include" || die "failed to build splashutils"
 
 	cd ${SM}
 	emake LIB=$(get_libdir) || die "failed to build miscsplashutils"
@@ -134,7 +132,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	cd ${S}
-	make DESTDIR=${D} LIBCSRC="libs/klibc-${V_KLIBC}/klibc" install || die
+	make DESTDIR=${D} install || die
 
 	keepdir /lib/splash/{tmp,cache,bin}
 	dosym /lib/splash/bin/fbres /sbin/fbres
@@ -190,8 +188,9 @@ pkg_postinst() {
 		echo ""
 	fi
 
-	ewarn "If you're upgrading from a pre-1.0 splashutils version, make sure that you"
-	ewarn "rebuild your initrds. You can use the splash_geninitramfs script to do that."
+	ewarn "If you upgrade your kernel from pre-2.6.12 to 2.6.12 or higher, please"
+	ewarn "make sure that you remerge this package and rebuild your initrds. You"
+	ewarn "can use the splash_geninitramfs script to do that."
 	echo ""
 	ewarn "It is required that you add 'quiet CONSOLE=/dev/tty1' to your kernel"
 	ewarn "command line parameters."
