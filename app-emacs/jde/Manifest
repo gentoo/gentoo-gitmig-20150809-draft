@@ -2,23 +2,51 @@
 Hash: SHA1
 
 MD5 3348681c9a930abae0d1a55678e07ad9 ChangeLog 2582
+RMD160 3d68bcf14583aa3916aa27c8be3f8c02627a26b2 ChangeLog 2582
+SHA256 72c13c7e0ad67311ee48dbcac24c1dc6fd4c372e524130e414c3b4b360d59c9d ChangeLog 2582
 MD5 978bb89eb6293ac482b193ade2a80b94 files/2.3.3-jde-new-buffer-menu-gentoo.patch 509
+RMD160 4fa3d7976d5ff3a34b40e215bd72d9857bc7cee7 files/2.3.3-jde-new-buffer-menu-gentoo.patch 509
+SHA256 a753cdda699327582e61ac46643be6e4dc925099d7fae2c865a589b437587b3d files/2.3.3-jde-new-buffer-menu-gentoo.patch 509
 MD5 6acb955ff8a6964dc6a09732e8f7c9ee files/2.3.5-70jde-gentoo.el 101
+RMD160 29b4060213b295253b98d8d87e1ca4ff0b4dc363 files/2.3.5-70jde-gentoo.el 101
+SHA256 70d74dbeb54df187a1b5752e0299316d017362a0f9295a741b6163a282eeef44 files/2.3.5-70jde-gentoo.el 101
 MD5 991a8910d2c8572f9ee653354614916c files/2.3.5-cedet-version-adjust-gentoo.patch 549
+RMD160 13314203797de62cc06ee58937d99fa7fdef0266 files/2.3.5-cedet-version-adjust-gentoo.patch 549
+SHA256 7557dfafc8ed08e664184acfdb4109f268d9cc6cd80623fca319098b0f68d761 files/2.3.5-cedet-version-adjust-gentoo.patch 549
 MD5 7158a0f444921d301f3048ce0c65435c files/70jde-gentoo.el 223
+RMD160 5cd87f1837e7b6a77e349cb78123e0b08a9bdf65 files/70jde-gentoo.el 223
+SHA256 af86182771547c0fd8b132f85fce82aa4d60e76cdd1f41db044a2e9167e0c6e9 files/70jde-gentoo.el 223
 MD5 9f280cc7e0e050bd10d6585bf23ef45a files/digest-jde-2.3.3 62
+RMD160 2b485f78699de37c94ab2dde9354f5c59e79f63b files/digest-jde-2.3.3 62
+SHA256 432cb5deb9d3245653524342a364fe8755c1c8f879965c32a32f59c0f43eafc2 files/digest-jde-2.3.3 62
 MD5 9f280cc7e0e050bd10d6585bf23ef45a files/digest-jde-2.3.3-r1 62
+RMD160 2b485f78699de37c94ab2dde9354f5c59e79f63b files/digest-jde-2.3.3-r1 62
+SHA256 432cb5deb9d3245653524342a364fe8755c1c8f879965c32a32f59c0f43eafc2 files/digest-jde-2.3.3-r1 62
 MD5 54c2c6fef8729628f62a445430024f44 files/digest-jde-2.3.5 62
+RMD160 3ee2af3df9440b8ce6e109d49a4efdab70cd4dea files/digest-jde-2.3.5 62
+SHA256 7744658e3cfe3be907ec4f54f2d251a301848109d343f10849aa19e27c0743b1 files/digest-jde-2.3.5 62
 MD5 54c2c6fef8729628f62a445430024f44 files/digest-jde-2.3.5-r1 62
+RMD160 3ee2af3df9440b8ce6e109d49a4efdab70cd4dea files/digest-jde-2.3.5-r1 62
+SHA256 7744658e3cfe3be907ec4f54f2d251a301848109d343f10849aa19e27c0743b1 files/digest-jde-2.3.5-r1 62
 MD5 857f9ce87c6030f3d8eb7d3105f30c8e jde-2.3.3-r1.ebuild 1297
+RMD160 22331a2f004905d71fee493618da3a9c763d5053 jde-2.3.3-r1.ebuild 1297
+SHA256 988b1707198571707d2391a68fe34677177ca8cb9e89d9b4bb0d03fcccd31cb1 jde-2.3.3-r1.ebuild 1297
 MD5 f55e226bbfa9f5e1d1609b07a382f49c jde-2.3.3.ebuild 1105
+RMD160 bb1c280dbfde349154df12c54107527eab983034 jde-2.3.3.ebuild 1105
+SHA256 4d8c87633b0fada4970d6129ede6ca328cadbd53a3ab86902fe859617ca3ada1 jde-2.3.3.ebuild 1105
 MD5 95543a7fa538ea024d094ad7658ddbd9 jde-2.3.5-r1.ebuild 1254
-MD5 053f73255b0f10f1a8efc1f8a4f6c8b6 jde-2.3.5.ebuild 1088
+RMD160 b47e2d7d7c34508b569c8fae06fcc90006240687 jde-2.3.5-r1.ebuild 1254
+SHA256 9c99cac22c54a2cd16fee004cc696bf2c03db2d583824c36f80141990911e723 jde-2.3.5-r1.ebuild 1254
+MD5 c1c899aaeaf0145c655acc1bbddc6661 jde-2.3.5.ebuild 1084
+RMD160 04ec4a7a1639bb8877bf3644ed9372f17747628d jde-2.3.5.ebuild 1084
+SHA256 b07140d04f910dceec80a5be71f1551e7379aaae99609ad870ae52d2bbf0bb1e jde-2.3.5.ebuild 1084
 MD5 b6c7ee3b6ef85ad220fab5240fb1a05e metadata.xml 737
+RMD160 1ffe7fbd32a23f6167b4d233b5917c8daca2ec7a metadata.xml 737
+SHA256 0be32d412b86728bc6f77b96859d0f0f786f9bdbe82dc7f719efb1233dbd82ce metadata.xml 737
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDM0aJI1lqEGTUzyQRAq+pAKCfDmv8Gveq8LLRyiZZSBldvFY/RQCfSpOW
-m8+X7nWyDUeK2IPax78excY=
-=FubB
+iD8DBQFEBoYESENan+PfizARAhJEAJ93hWefHVZEo3FO7mreiHZVrDBazwCdHxHw
+L0JdiFeIs7vvGv2UpIinrM4=
+=hm0L
 -----END PGP SIGNATURE-----
