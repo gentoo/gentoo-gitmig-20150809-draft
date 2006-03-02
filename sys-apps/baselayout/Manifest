@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 00400bf62c5cb9c3839230f5a95dad3f ChangeLog 70590
-RMD160 a758653adabb932dc8b2c44fafcc1b5c3a08f843 ChangeLog 70590
-SHA256 e4747ad1596e444ebb605a7ac98614535152882e0949eca47ba1a28b79d187bb ChangeLog 70590
+MD5 abdc5d2fe7ba45fb2111b5829cc92bd4 ChangeLog 70847
+RMD160 eb5a4788d6e59a1e5912bdcb95975115fb188338 ChangeLog 70847
+SHA256 1cce6aa9dd3f4a73fbb6b940160c15a0343f29a269a8de3dc4fcc11993b267f4 ChangeLog 70847
 MD5 22a10db577b1b646d12ba31ed7b77a6c baselayout-1.11.13-r2.ebuild 19014
 RMD160 3d1348291157e3f973f4ad16e4f222fd32645593 baselayout-1.11.13-r2.ebuild 19014
 SHA256 236d09bf8aed1a3f73c26bdb287957a21212646ecb6eec21abaafa9ef6e3b2ef baselayout-1.11.13-r2.ebuild 19014
@@ -13,6 +10,9 @@ SHA256 6402c637dd955ed769bc7935cff875b08fa986b7faa7ad09e719d34b70a9979c baselayo
 MD5 7673a45893f509afd83ada05b4b35aa0 baselayout-1.12.0_pre16-r2.ebuild 19369
 RMD160 94a2378e774f72fb6fc69c95efd68fd7b65b6417 baselayout-1.12.0_pre16-r2.ebuild 19369
 SHA256 a7769f6871020f797f57a0ddadc461b8af4e874ec0b0037114e351fee66ba0cf baselayout-1.12.0_pre16-r2.ebuild 19369
+MD5 6497485e7b7794ef1deddf70b24026b9 baselayout-1.12.0_pre16-r3.ebuild 19369
+RMD160 6021fa3ffb964c1aaa92751b5963812d54203ace baselayout-1.12.0_pre16-r3.ebuild 19369
+SHA256 a1c8692827f099d5cc24ea774233248ce35edd2947a43d619f2b5dd7c519d2a5 baselayout-1.12.0_pre16-r3.ebuild 19369
 MD5 8d10a229861f862fca52cd8e3bc655d9 files/baselayout-1.11.0-split-out-udev.patch 7413
 RMD160 48eef541397ec0a21230de93518eed8a1ea63c16 files/baselayout-1.11.0-split-out-udev.patch 7413
 SHA256 397221c066cbbb65d572df431b4babde766dc92d9177005e522e0df8faa25030 files/baselayout-1.11.0-split-out-udev.patch 7413
@@ -34,9 +34,9 @@ SHA256 3bdaae5c1ce59856f77b57e8312a369b61fe1f3cbb17993454a699ea7703e0a6 files/ba
 MD5 6a8967d43dfa400cdfbab80fc49a7e85 files/baselayout-1.11.14-udhcpc.patch 1301
 RMD160 e07f8165814a29dee4aa044e6817f8b79193403f files/baselayout-1.11.14-udhcpc.patch 1301
 SHA256 99c2274703515f7f52c8480e55c93beea28968a284abb351250bd14a111431fc files/baselayout-1.11.14-udhcpc.patch 1301
-MD5 d34a28f706a5848f231d1a185df477a1 files/baselayout-1.12.0_pre16-depscan.patch 3470
-RMD160 9bd6b4965091518bc9844e59a48dcff216b1bb72 files/baselayout-1.12.0_pre16-depscan.patch 3470
-SHA256 03a1e9ed16009cf2690329405579eab2550e9fe03e10bf2dadc0ba4fe70b2622 files/baselayout-1.12.0_pre16-depscan.patch 3470
+MD5 ad54dfecf1af6424be9130191942ea61 files/baselayout-1.12.0_pre16-depscan.patch 4240
+RMD160 30944e22e039cba13a56fe59b96378473ddd7a52 files/baselayout-1.12.0_pre16-depscan.patch 4240
+SHA256 2e8b48e891a0ebd487f0c2ff70203ecca02521a0b9e584a4c5146dc3a3cba3b6 files/baselayout-1.12.0_pre16-depscan.patch 4240
 MD5 1bfe1cc270a840e3a8fd6762445485ea files/baselayout-1.12.0_pre16-sv.patch 473
 RMD160 ed1c71c282895e5b40d78ec78b6dfeb074d4a517 files/baselayout-1.12.0_pre16-sv.patch 473
 SHA256 e68b407eabbfd65e097dc6863b5cd8aa834a59a6051df952c1a522c980bb626a files/baselayout-1.12.0_pre16-sv.patch 473
@@ -52,13 +52,9 @@ SHA256 939da19d06f033b18784c7ab4a9d168d9b68caaf4cdbafde33ae754a10af754d files/di
 MD5 324a8c9e6f96a33dc71431b9acf77759 files/digest-baselayout-1.12.0_pre16-r2 274
 RMD160 7744288e0c7416ec5ea044a9b0f51b30e3c2583d files/digest-baselayout-1.12.0_pre16-r2 274
 SHA256 4800938394cdc3186eb178b7e9a0dc7d2f24954b860f697d00dfdb02fce94e74 files/digest-baselayout-1.12.0_pre16-r2 274
+MD5 324a8c9e6f96a33dc71431b9acf77759 files/digest-baselayout-1.12.0_pre16-r3 274
+RMD160 7744288e0c7416ec5ea044a9b0f51b30e3c2583d files/digest-baselayout-1.12.0_pre16-r3 274
+SHA256 4800938394cdc3186eb178b7e9a0dc7d2f24954b860f697d00dfdb02fce94e74 files/digest-baselayout-1.12.0_pre16-r3 274
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 RMD160 99e2546d3cc014ca5af909b5adb2f43693664bad metadata.xml 385
 SHA256 fbd7e4a5615d68c8d6f9438136dd18e41c43b393a9c00b0bea12661d790441e1 metadata.xml 385
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBy7lEbVyYKaZ/NERAhyrAJ9MySa7yL+3RGvXZ9Z2DvACZ7JsLACbBlSf
-ovM4FcWfIu6Ahqkc6ynFfUw=
-=crcT
------END PGP SIGNATURE-----

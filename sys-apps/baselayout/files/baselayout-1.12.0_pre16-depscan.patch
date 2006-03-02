@@ -129,3 +129,25 @@ Index: sbin/depscan.sh
  
  eend ${retval} "Failed to cache service dependencies"
  
+--- sbin/rc	2006-01-23 09:03:49.000000000 +0000
++++ /sbin/rc	2006-03-02 19:37:01.000000000 +0000
+@@ -517,7 +517,7 @@
+ 	check_critical_services
+ 
+ 	# Update the dependency cache
+-	/sbin/depscan.sh -u
++	/sbin/depscan.sh 
+ 
+ 	# Now that the dependency cache are up to date, make sure these
+ 	# are marked as started ...
+--- sbin/rc-services.sh	2006-02-08 12:11:06.000000000 +0000
++++ /lib/rcscripts/sh/rc-services.sh	2006-03-02 19:39:17.000000000 +0000
+@@ -9,7 +9,7 @@
+ 
+ if [[ ${RC_GOT_DEPTREE_INFO} != "yes" ]] ; then
+ 	# Only try and update if we are root
+-	if [[ ${EUID} == "0" ]] && ! /sbin/depscan.sh -u ; then
++	if [[ ${EUID} == "0" ]] && ! /sbin/depscan.sh ; then
+ 		echo
+ 		eerror "Error running '/sbin/depscan.sh'!"
+ 		eerror "Please correct any problems above."
