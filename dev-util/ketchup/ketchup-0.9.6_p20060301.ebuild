@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ketchup-0.9.6_p20060228.ebuild,v 1.1 2006/02/28 20:50:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ketchup-0.9.6_p20060301.ebuild,v 1.1 2006/03/02 03:18:41 morfic Exp $
 
 DESCRIPTION="tool for updating or switching between versions of the Linux kernel source"
 HOMEPAGE="http://www.selenic.com/ketchup/wiki/"
