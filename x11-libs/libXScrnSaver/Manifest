@@ -7,9 +7,9 @@ SHA256 f8fd3d2bfae1ea73cc758f49c2fa4f279a4c96fa9a83d6c987379d58daa8d53a files/di
 MD5 654768f60116da50c3825fc104b72f31 files/fix_shadow_manpages.patch 539
 RMD160 07f6835d4d8c78026a891bbcd7d95e6d07f71a39 files/fix_shadow_manpages.patch 539
 SHA256 e31439f7c0c7d92f3e23c5fae0beab5534332d0e95da63eb1e2cd9d1599bf892 files/fix_shadow_manpages.patch 539
-MD5 3ac49e3f2b97cda2243fc8cf03763b17 libXScrnSaver-1.0.1-r1.ebuild 592
-RMD160 14babe54a6d71d8ea6fff9d9ba4911772531c6fd libXScrnSaver-1.0.1-r1.ebuild 592
-SHA256 dfc43fd1a0b569ea9099abf2c771ba7679cd25f042500e1fab300f60cb04f44d libXScrnSaver-1.0.1-r1.ebuild 592
+MD5 f34177e90be3f591ad4b042a3a164c0e libXScrnSaver-1.0.1-r1.ebuild 591
+RMD160 ea38b59d04c06dc6f6e105b9250fb5cd4b2561d0 libXScrnSaver-1.0.1-r1.ebuild 591
+SHA256 1e1338e89e6421761277a12b7e65449bad90ddeb04303d1176c43e1171af312e libXScrnSaver-1.0.1-r1.ebuild 591
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
