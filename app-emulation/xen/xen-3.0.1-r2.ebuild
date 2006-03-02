@@ -1,20 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.1-r1.ebuild,v 1.1 2006/02/05 10:37:28 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.1-r2.ebuild,v 1.1 2006/03/02 11:43:49 chrb Exp $
 
 inherit mount-boot flag-o-matic
 
 DESCRIPTION="The Xen virtual machine monitor and Xend daemon"
 HOMEPAGE="http://xen.sourceforge.net"
-#REV="8738"
-#MY_P="xen-3.0-testing-${REV}"
-#SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 SRC_URI="http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/xen-3.0.1-src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="doc debug screen custom-cflags"
+IUSE="doc debug screen custom-cflags pae"
 
 DEPEND="sys-apps/iproute2
 	net-misc/bridge-utils
@@ -31,8 +28,6 @@ DEPEND="sys-apps/iproute2
 	)
 	sys-devel/dev86
 	|| ( sys-fs/udev sys-apps/hotplug )"
-
-#S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -60,6 +55,10 @@ src_compile() {
 		myopt="${myopt} debug=y"
 	fi
 
+	if use pae; then
+		myopt="${myopt} XEN_TARGET_X86_PAE=y"
+	fi
+
 	if ! use custom-cflags; then
 		unset CFLAGS
 	fi
@@ -75,9 +74,13 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} -C xen install || die "installing xen failed"
+	local myopt
+	if use pae; then
+		myopt="${myopt} XEN_TARGET_X86_PAE=y"
+	fi
 
-	make DESTDIR=${D} XEN_PYTHON_NATIVE_INSTALL=1 -C tools install \
+	make DESTDIR=${D} ${myopt} -C xen install || die "installing xen failed"
+	make DESTDIR=${D} ${myopt} XEN_PYTHON_NATIVE_INSTALL=1 -C tools install \
 	    || die "installing tools failed"
 
 	if use doc; then
@@ -87,17 +90,10 @@ src_install() {
 		mv ${D}/usr/share/doc/{${PN},${PF}}
 	fi
 
-	# bind xend to localhost per default
-	sed -i -e "s/\((xend-address  *\)'')/\1\'localhost\')/" \
-		${D}/etc/xen/xend-config.sxp
-
 	newinitd ${FILESDIR}/xend-init xend
 	newconfd ${FILESDIR}/xend-conf xend
 	newconfd ${FILESDIR}/xendomains-conf xendomains
 	newinitd ${FILESDIR}/xendomains-init xendomains
-
-	# for upstream change tracking
-	#dodoc ${S}/XEN-VERSION
 
 	if use screen; then
 		sed -i -e 's/SCREEN="no"/SCREEN="yes"/' ${D}/etc/init.d/xendomains
@@ -112,4 +108,8 @@ src_install() {
 pkg_postinst() {
 	einfo "Please visit the Xen and Gentoo wiki:"
 	einfo "http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
+	if use pae; then
+		einfo ""
+		einfo "This is a PAE build of Xen. It will *only* boot PAE kernels!"
+	fi
 }
