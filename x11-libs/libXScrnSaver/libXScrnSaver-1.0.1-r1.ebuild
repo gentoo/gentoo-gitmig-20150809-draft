@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXScrnSaver/libXScrnSaver-1.0.1-r1.ebuild,v 1.1 2006/02/22 04:29:24 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXScrnSaver/libXScrnSaver-1.0.1-r1.ebuild,v 1.2 2006/03/02 02:11:27 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -8,7 +8,7 @@ SNAPSHOT="yes"
 inherit x-modular
 
 DESCRIPTION="X.Org XScrnSaver library"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext"
 DEPEND="${RDEPEND}
