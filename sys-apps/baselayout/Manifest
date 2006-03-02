@@ -16,9 +16,9 @@ SHA256 397221c066cbbb65d572df431b4babde766dc92d9177005e522e0df8faa25030 files/ba
 MD5 ec29ba4690f7c58a8d562195bc9eed42 files/baselayout-1.11.14-adsl.patch 501
 RMD160 81db918f622eba2eef3f76e0441023998b367d3f files/baselayout-1.11.14-adsl.patch 501
 SHA256 5634f36c4f27ddae7a4a22c6dc7b6adad5f83cdb5d9f4291ce061d62361a71c8 files/baselayout-1.11.14-adsl.patch 501
-MD5 08bc03119bcc983bc0d3ed981e014132 files/baselayout-1.11.14-depscan.patch 4105
-RMD160 ce5d8e4002a80008de3890cc0ab377dee9ba0835 files/baselayout-1.11.14-depscan.patch 4105
-SHA256 897d20710f0ff5c62b2116ac8b077b239db674284bfee3c95de891753412198d files/baselayout-1.11.14-depscan.patch 4105
+MD5 5651d7e5c42c69c9343cb156fc816f9d files/baselayout-1.11.14-depscan.patch 3198
+RMD160 75cf15798fe495f7928d0dac4a620f6b4308b4e5 files/baselayout-1.11.14-depscan.patch 3198
+SHA256 8baf535a28e952a251d729de9c88941849dcf1e0fc1de4fa6fa143a0cc5de12c files/baselayout-1.11.14-depscan.patch 3198
 MD5 ab0d5a169769126f5c9d679a86244ee2 files/baselayout-1.11.14-essidnet.patch 619
 RMD160 9cd29b7be10ef4c665be44a84c84df64fca8c64e files/baselayout-1.11.14-essidnet.patch 619
 SHA256 2fdce59727910e4ae4f30aedc0d1ae32b852bfc9f740e049676104052900407b files/baselayout-1.11.14-essidnet.patch 619
