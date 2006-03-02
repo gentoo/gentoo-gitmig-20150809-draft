@@ -1,21 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6bb128d1bc4bbb9ac7a057f869bc5ee6 ChangeLog 70198
-RMD160 50c11883b6c850213819fdc5b3a9a69a63fb576f ChangeLog 70198
-SHA256 e45fbae10ed65da54e3c562abf4bfac4e20fc65e8947333c1c2bf3650e421efb ChangeLog 70198
+MD5 00400bf62c5cb9c3839230f5a95dad3f ChangeLog 70590
+RMD160 a758653adabb932dc8b2c44fafcc1b5c3a08f843 ChangeLog 70590
+SHA256 e4747ad1596e444ebb605a7ac98614535152882e0949eca47ba1a28b79d187bb ChangeLog 70590
 MD5 22a10db577b1b646d12ba31ed7b77a6c baselayout-1.11.13-r2.ebuild 19014
 RMD160 3d1348291157e3f973f4ad16e4f222fd32645593 baselayout-1.11.13-r2.ebuild 19014
 SHA256 236d09bf8aed1a3f73c26bdb287957a21212646ecb6eec21abaafa9ef6e3b2ef baselayout-1.11.13-r2.ebuild 19014
 MD5 df00a32c6cfd96048ed3137f14fbe963 baselayout-1.11.14-r5.ebuild 19253
 RMD160 8e1874b303bc2a380df987dc4e96ab25830a5443 baselayout-1.11.14-r5.ebuild 19253
 SHA256 8519b85ba780be44bfe62e049a7f12421dd976005a1a675eeb8f7ed0509fbefc baselayout-1.11.14-r5.ebuild 19253
+MD5 451568e708e86c242de50019b6e93aee baselayout-1.11.14-r6.ebuild 19294
+RMD160 c7066c362b521a219879f75e2f0ee3c5ac453f1b baselayout-1.11.14-r6.ebuild 19294
+SHA256 6402c637dd955ed769bc7935cff875b08fa986b7faa7ad09e719d34b70a9979c baselayout-1.11.14-r6.ebuild 19294
 MD5 fb8201b6a7cab159eca5eabda983f0dc baselayout-1.12.0_pre13-r1.ebuild 19334
 RMD160 6d4368265b739ad56957d0806036ff06aff9caf3 baselayout-1.12.0_pre13-r1.ebuild 19334
 SHA256 3a6d2ae02c37c0f09ce8e184b1b1c1684e9da46dc89ef0b597c66cee2b9ba74b baselayout-1.12.0_pre13-r1.ebuild 19334
 MD5 f9b68ad1393b6d46a91445790d9d7b30 baselayout-1.12.0_pre16-r1.ebuild 19328
 RMD160 0edd054ea113afcbb0b70bf908adc53d5069ddd6 baselayout-1.12.0_pre16-r1.ebuild 19328
 SHA256 f98eaa0bbe9947b0c52a855081ffad3284b87eedd24717d82919a49007ee593a baselayout-1.12.0_pre16-r1.ebuild 19328
+MD5 7673a45893f509afd83ada05b4b35aa0 baselayout-1.12.0_pre16-r2.ebuild 19369
+RMD160 94a2378e774f72fb6fc69c95efd68fd7b65b6417 baselayout-1.12.0_pre16-r2.ebuild 19369
+SHA256 a7769f6871020f797f57a0ddadc461b8af4e874ec0b0037114e351fee66ba0cf baselayout-1.12.0_pre16-r2.ebuild 19369
 MD5 f4335a8a3a66e4ce9e0c3bd23d50f682 baselayout-1.12.0_pre16.ebuild 19288
 RMD160 a7dd31de8dba65cbaebe8f73ac085bb39e9ecca1 baselayout-1.12.0_pre16.ebuild 19288
 SHA256 297476549cd2a2539878ae5c15cb9027541c7be1db823b374787545c8ea5d276 baselayout-1.12.0_pre16.ebuild 19288
@@ -25,6 +31,9 @@ SHA256 397221c066cbbb65d572df431b4babde766dc92d9177005e522e0df8faa25030 files/ba
 MD5 ec29ba4690f7c58a8d562195bc9eed42 files/baselayout-1.11.14-adsl.patch 501
 RMD160 81db918f622eba2eef3f76e0441023998b367d3f files/baselayout-1.11.14-adsl.patch 501
 SHA256 5634f36c4f27ddae7a4a22c6dc7b6adad5f83cdb5d9f4291ce061d62361a71c8 files/baselayout-1.11.14-adsl.patch 501
+MD5 0e175d524d7dc9aaa9fee463d625ab9f files/baselayout-1.11.14-depscan.patch 3622
+RMD160 33ba0dfb97478d120cf12d9335c0336063f875bc files/baselayout-1.11.14-depscan.patch 3622
+SHA256 d6332de01c78597769fe866eaf9efe08f23d31d01d8512a28c0405523924a994 files/baselayout-1.11.14-depscan.patch 3622
 MD5 ab0d5a169769126f5c9d679a86244ee2 files/baselayout-1.11.14-essidnet.patch 619
 RMD160 9cd29b7be10ef4c665be44a84c84df64fca8c64e files/baselayout-1.11.14-essidnet.patch 619
 SHA256 2fdce59727910e4ae4f30aedc0d1ae32b852bfc9f740e049676104052900407b files/baselayout-1.11.14-essidnet.patch 619
@@ -40,6 +49,9 @@ SHA256 99c2274703515f7f52c8480e55c93beea28968a284abb351250bd14a111431fc files/ba
 MD5 8ea4c9d04ce5657625cf371ee8c055be files/baselayout-1.12.0_pre13-iproute2.patch 598
 RMD160 722515a13ff899c873bb22669ad8476c59af998a files/baselayout-1.12.0_pre13-iproute2.patch 598
 SHA256 d270f9e1900d1abb2b32e8295783b2f868454dfb8c12869e2964f24e17cf5010 files/baselayout-1.12.0_pre13-iproute2.patch 598
+MD5 d34a28f706a5848f231d1a185df477a1 files/baselayout-1.12.0_pre16-depscan.patch 3470
+RMD160 9bd6b4965091518bc9844e59a48dcff216b1bb72 files/baselayout-1.12.0_pre16-depscan.patch 3470
+SHA256 03a1e9ed16009cf2690329405579eab2550e9fe03e10bf2dadc0ba4fe70b2622 files/baselayout-1.12.0_pre16-depscan.patch 3470
 MD5 1bfe1cc270a840e3a8fd6762445485ea files/baselayout-1.12.0_pre16-sv.patch 473
 RMD160 ed1c71c282895e5b40d78ec78b6dfeb074d4a517 files/baselayout-1.12.0_pre16-sv.patch 473
 SHA256 e68b407eabbfd65e097dc6863b5cd8aa834a59a6051df952c1a522c980bb626a files/baselayout-1.12.0_pre16-sv.patch 473
@@ -52,6 +64,9 @@ SHA256 8be386254cdb00a3903244c63173c6f59df705f561d5e8c9e3865614baa84919 files/di
 MD5 00d79deae663edaa627c8bbc572c6967 files/digest-baselayout-1.11.14-r5 256
 RMD160 61e4bfb394dabe52a62e8b2b56102ad0e6f60d66 files/digest-baselayout-1.11.14-r5 256
 SHA256 939da19d06f033b18784c7ab4a9d168d9b68caaf4cdbafde33ae754a10af754d files/digest-baselayout-1.11.14-r5 256
+MD5 00d79deae663edaa627c8bbc572c6967 files/digest-baselayout-1.11.14-r6 256
+RMD160 61e4bfb394dabe52a62e8b2b56102ad0e6f60d66 files/digest-baselayout-1.11.14-r6 256
+SHA256 939da19d06f033b18784c7ab4a9d168d9b68caaf4cdbafde33ae754a10af754d files/digest-baselayout-1.11.14-r6 256
 MD5 a65d49ca9a3a16bf744aebc2180cc299 files/digest-baselayout-1.12.0_pre13-r1 274
 RMD160 a3b004639a949ac82a707e3413b23eb96bf0587b files/digest-baselayout-1.12.0_pre13-r1 274
 SHA256 536181e6af76b11cbe6d8f612c6438482a9e0cbfb59b7280c5a6011c3e411219 files/digest-baselayout-1.12.0_pre13-r1 274
@@ -61,13 +76,16 @@ SHA256 4800938394cdc3186eb178b7e9a0dc7d2f24954b860f697d00dfdb02fce94e74 files/di
 MD5 324a8c9e6f96a33dc71431b9acf77759 files/digest-baselayout-1.12.0_pre16-r1 274
 RMD160 7744288e0c7416ec5ea044a9b0f51b30e3c2583d files/digest-baselayout-1.12.0_pre16-r1 274
 SHA256 4800938394cdc3186eb178b7e9a0dc7d2f24954b860f697d00dfdb02fce94e74 files/digest-baselayout-1.12.0_pre16-r1 274
+MD5 324a8c9e6f96a33dc71431b9acf77759 files/digest-baselayout-1.12.0_pre16-r2 274
+RMD160 7744288e0c7416ec5ea044a9b0f51b30e3c2583d files/digest-baselayout-1.12.0_pre16-r2 274
+SHA256 4800938394cdc3186eb178b7e9a0dc7d2f24954b860f697d00dfdb02fce94e74 files/digest-baselayout-1.12.0_pre16-r2 274
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 RMD160 99e2546d3cc014ca5af909b5adb2f43693664bad metadata.xml 385
 SHA256 fbd7e4a5615d68c8d6f9438136dd18e41c43b393a9c00b0bea12661d790441e1 metadata.xml 385
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD9eYZEbVyYKaZ/NERAhlSAJ9gAU7Z9fpi46F7G+z7slatk3+kWgCeL0pk
-O5UgwxNxF5NeHKkq1I5YImA=
-=Ylkd
+iD8DBQFEBy1dEbVyYKaZ/NERAlKTAJ905OJZf7fd5X1KeP8rN+wVQMm+yQCfTl4J
+CotXLMqDFIIBsuK8sZpQCNI=
+=fMW8
 -----END PGP SIGNATURE-----
