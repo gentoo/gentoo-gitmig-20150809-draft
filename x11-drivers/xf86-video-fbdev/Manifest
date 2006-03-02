@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 877301b899f5dadf4a315412ae5d7dbf ChangeLog 2311
 RMD160 2055228dcab96ad58b12fb519ef4269b58ea255a ChangeLog 2311
 SHA256 72bb42298458508faeef4ba21b6b0f5cc353e04c4fbb5c9a0b6c30c5cd468140 ChangeLog 2311
@@ -10,13 +7,6 @@ SHA256 14f093fbb27bcaba944aa413f257e31298ec04512bbd73c475a365fef47cf389 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 95bb2de8eca9698dc1c27c854374eb8d xf86-video-fbdev-0.1.0.5.ebuild 588
-RMD160 a23979193fe592e9cfd53ffc23ca52b951060ce5 xf86-video-fbdev-0.1.0.5.ebuild 588
-SHA256 eccc2c1cc3382dd94eab5ed4df9d7a6cd0756c6a541b176b4fdb337c08d2bb2c xf86-video-fbdev-0.1.0.5.ebuild 588
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBlTk2+ySkm8kpY0RArjRAJ9H4CKTKNsjSYfE8zWGzMrylHHNxgCgvyEr
-NaaFlHKU7hgkymKBvIc0vp0=
-=Ztcb
------END PGP SIGNATURE-----
+MD5 b29a19cae616acfe048720cd3f248a95 xf86-video-fbdev-0.1.0.5.ebuild 593
+RMD160 315157ee69b23d754e7229a90ec0c284a5cff6c8 xf86-video-fbdev-0.1.0.5.ebuild 593
+SHA256 d76d959dd292aea2ede7b7473f99dd600de8f1383ff440f4f731731ec2ed9e37 xf86-video-fbdev-0.1.0.5.ebuild 593

@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 83b5dd84c3da0f037f8db6bec4598ed3 ChangeLog 2232
 RMD160 ef6bbec13e64b1015ca7b03a6d2d6e608bd186da ChangeLog 2232
 SHA256 3ec4c43d938f304be6338bfd1d3327b246379d1a98f3b582788f9d0046355ed6 ChangeLog 2232
@@ -10,13 +7,6 @@ SHA256 7cf8bd91513d59a1eff9de364faa0be273bbdcfe6e1792e3595564ebeb45ed47 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 059dd045adfeed95e84bbd41b7ce1690 xf86-input-aiptek-1.0.0.5.ebuild 541
-RMD160 c05e37eccce6d6ac4c879ef20b362399625b9134 xf86-input-aiptek-1.0.0.5.ebuild 541
-SHA256 e4a1c0956b9606d00abfd83b49c6561d9891e0f5da2153c37862ad4b5d1dc30b xf86-input-aiptek-1.0.0.5.ebuild 541
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBlRS2+ySkm8kpY0RAsZfAKCmt3/ulVhnTIeXoXYsa8dkMdTdoACgqSqw
-d0PPfEI0PKpvHUeek4JXL3E=
-=qA7m
------END PGP SIGNATURE-----
+MD5 fbc940b5375bd9f165227c24edbeff64 xf86-input-aiptek-1.0.0.5.ebuild 546
+RMD160 b3b30e822c33ebd598473fdea82fc0c2b1088d82 xf86-input-aiptek-1.0.0.5.ebuild 546
+SHA256 4d535c5ba9c2028affc947958d275cc6150504aba8ed17d67e6df668e714823f xf86-input-aiptek-1.0.0.5.ebuild 546

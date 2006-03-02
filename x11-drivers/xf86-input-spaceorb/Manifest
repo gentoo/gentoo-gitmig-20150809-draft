@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c09227e33df1af482f2eb8bd9f7c8c96 ChangeLog 2280
 RMD160 c8a533c4b921048e7088bdab7a494b87a956b8bd ChangeLog 2280
 SHA256 72c2c89a9a2196f5b0fa682427553071cb570e0d9635184f1b9c3719a9a6e156 ChangeLog 2280
@@ -10,13 +7,6 @@ SHA256 4dbf680bde1c491482016291bdd3cca9d5ff4ca5da98c5c2ea54a1d47de309d6 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 57d58d243fa29854e8b7182eb3d89b69 xf86-input-spaceorb-1.0.0.5.ebuild 547
-RMD160 cf29346823745e08a0f3aea6b9b5213e3a367407 xf86-input-spaceorb-1.0.0.5.ebuild 547
-SHA256 54eb7c1ec3f501652ebea6ef89e78757f709cf1cca2c1b43dec013a366261aea xf86-input-spaceorb-1.0.0.5.ebuild 547
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBlIm2+ySkm8kpY0RAkvvAJ97I0yGfcAWNliaaN5QlEZcZg14lACfTwVt
-c65O8R8/Rsgh2OzxqXtHTjs=
-=FiWb
------END PGP SIGNATURE-----
+MD5 3c9a0b41f32014bfa7eab5369a16c647 xf86-input-spaceorb-1.0.0.5.ebuild 552
+RMD160 ab3cc5df473205bc9e155a0d3e41639892a1984a xf86-input-spaceorb-1.0.0.5.ebuild 552
+SHA256 6299334191560ddda9b0520a646f9bfcd0c35025cabbded082ab1e3eb9aeecb2 xf86-input-spaceorb-1.0.0.5.ebuild 552

@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 83a831da71faea33f0ad81ecf9951495 ChangeLog 2280
 RMD160 f236f58063eb888fb4c2056f40436f0ea1de6a7e ChangeLog 2280
 SHA256 d59daa8fdeddfc06c5bfbd2da995b8f96ab05b34421450e7b91f30c6ea8a48ba ChangeLog 2280
@@ -10,13 +7,6 @@ SHA256 188b6e8d3169c55403b2cdc17811fc9ebb50d627971262868052b2c9be2c1050 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 f246bc6f5617acb2366f4db76c10d748 xf86-input-penmount-1.0.0.5.ebuild 547
-RMD160 f05ce149f1fb8cd0f785f2d68ca273135ee683d0 xf86-input-penmount-1.0.0.5.ebuild 547
-SHA256 10efce6f97182bf9541839d56cf61e1c4db745c6aae6af701e64f2dd2fbbe653 xf86-input-penmount-1.0.0.5.ebuild 547
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBlZJ2+ySkm8kpY0RApXaAKCAS+sxmPZMn5uZaAOAlZvuEHlLugCeMztO
-I/4o4LUDecqBhGJ2K11gvFo=
-=lOsw
------END PGP SIGNATURE-----
+MD5 ee5692742621dbbce32227a48ba5eae4 xf86-input-penmount-1.0.0.5.ebuild 552
+RMD160 ceacf021b01fec59e8756de30570b232e2a33a29 xf86-input-penmount-1.0.0.5.ebuild 552
+SHA256 bdbaf4386e8f32ddb02357fb52e4d1c710814e1dad5f13bf72a9202274cd98cc xf86-input-penmount-1.0.0.5.ebuild 552

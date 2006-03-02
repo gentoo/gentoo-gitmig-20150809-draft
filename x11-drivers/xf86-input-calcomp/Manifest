@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2e64999001fb0fb9a65ea17d7013c07d ChangeLog 2256
 RMD160 3b7557a878838399b048e0b8a3ffcd32a3ebca56 ChangeLog 2256
 SHA256 02fb6d774ef381e180ce5479c49fab6ea60a8a74de150aa9ba6cecfe78c54cf5 ChangeLog 2256
@@ -10,13 +7,6 @@ SHA256 30409b2a5fa868dfd73d7010da12b3c10b5908cc203d5be887d11e1864b466e0 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 329048a45abdc9d0e4abf1236490c568 xf86-input-calcomp-1.0.0.5.ebuild 544
-RMD160 ee726f209b8137b415c196f9ad2172ed3856e2c9 xf86-input-calcomp-1.0.0.5.ebuild 544
-SHA256 707db8408ebdac24386b147e41c8e7b9584bb565fb520acd01ebf2aa93581a31 xf86-input-calcomp-1.0.0.5.ebuild 544
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBlV02+ySkm8kpY0RAtHbAKCFeyuvRaz4EDz0Lfsj6XjHEuQwoACfWcVo
-XoXotovPRLE+WGemesz680o=
-=ISRi
------END PGP SIGNATURE-----
+MD5 0c9b015290ab8d815e1f2e7c6f0e6d04 xf86-input-calcomp-1.0.0.5.ebuild 549
+RMD160 d777cf8cd375a8f678029ed1e56c8232c82c16ce xf86-input-calcomp-1.0.0.5.ebuild 549
+SHA256 7839cd126ba4f0677bdcd62b53f765aa1ea4fa581a1d0d480a83b79846b28303 xf86-input-calcomp-1.0.0.5.ebuild 549
