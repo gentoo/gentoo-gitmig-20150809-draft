@@ -11,22 +11,34 @@ Index: sbin/rc
  
  	# Now that the dependency cache are up to date, make sure these
  	# are marked as started ...
-Index: sbin/depscan.sh
+Index: sbin/rc-services.sh
 ===================================================================
---- sbin/depscan.sh	(revision 1934)
-+++ sbin/depscan.sh	(working copy)
+--- sbin/rc-services.sh	(revision 1934)
++++ sbin/rc-services.sh	(working copy)
+@@ -10,7 +10,7 @@
+ 
+ if [ "${RC_GOT_DEPTREE_INFO}" != "yes" ]
+ then
+-	if ! /sbin/depscan.sh -u
++	if ! /sbin/depscan.sh
+ 	then
+ 		echo
+ 		eerror "Error running '/sbin/depscan.sh'!"
+--- sbin/depscan.sh	2005-07-22 01:24:27.000000000 +0100
++++ sbin/depscan.sh	2006-03-02 20:28:03.000000000 +0000
 @@ -1,58 +1,64 @@
  #!/bin/bash
  # Copyright 1999-2004 Gentoo Foundation
  # Distributed under the terms of the GNU General Public License v2
--# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/files/baselayout-1.11.14-depscan.patch,v 1.1 2006/03/02 17:37:20 uberlord Exp $
+-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/files/baselayout-1.11.14-depscan.patch,v 1.2 2006/03/02 20:34:20 uberlord Exp $
  
 -source /etc/init.d/functions.sh
+-
+-if [[ $1 == "--debug" ]] ; then
 +. /sbin/functions.sh
 +mysvcdir="${svcdir}"
 +update=false
- 
--if [[ $1 == "--debug" ]] ; then
++
 +while [[ -n $1 ]] ; do
 +	case "$1" in
 +		--debug|-d)
@@ -95,9 +107,9 @@ Index: sbin/depscan.sh
 -	shift
  fi
 -[ ${update} -eq 0 ] && exit 0
- 
-+! ${update} && exit 0
 +
++! ${update} && exit 0
+ 
  ebegin "Caching service dependencies"
  
  # Clean out the non volitile directories ...
@@ -131,16 +143,3 @@ Index: sbin/depscan.sh
  
 -
  # vim:ts=4
-Index: sbin/rc-services.sh
-===================================================================
---- sbin/rc-services.sh	(revision 1934)
-+++ sbin/rc-services.sh	(working copy)
-@@ -10,7 +10,7 @@
- 
- if [ "${RC_GOT_DEPTREE_INFO}" != "yes" ]
- then
--	if ! /sbin/depscan.sh -u
-+	if ! /sbin/depscan.sh
- 	then
- 		echo
- 		eerror "Error running '/sbin/depscan.sh'!"
