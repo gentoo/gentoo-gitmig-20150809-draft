@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/eventlog
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.1 2006/03/02 17:50:15 mr_bones_ Exp $
+
+*eventlog-0.2.4 (02 Mar 2006)
+
+  02 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +eventlog-0.2.4.ebuild:
+  initial commit
+
