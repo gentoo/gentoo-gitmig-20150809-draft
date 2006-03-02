@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.9.ebuild,v 1.2 2006/02/28 22:42:46 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.9.ebuild,v 1.3 2006/03/02 17:05:10 foser Exp $
 
 inherit gnome2 eutils
 
@@ -12,7 +12,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/glib-2.6
+RDEPEND="|| ( x11-libs/libXScrnSaver
+		virtual/x11 )
+	>=dev-libs/glib-2.6
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2
 	>=gnome-base/gconf-1.2
