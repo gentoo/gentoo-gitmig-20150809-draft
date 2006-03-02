@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.7.1.ebuild,v 1.8 2006/02/27 15:26:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.7.1.ebuild,v 1.9 2006/03/02 21:06:40 chriswhite Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://david-peter.de/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 mips ~ppc ~ppc-macos ppc64 ~s390 sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 mips ppc ~ppc-macos ppc64 ~s390 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.2
