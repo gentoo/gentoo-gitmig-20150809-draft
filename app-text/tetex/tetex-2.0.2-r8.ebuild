@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r8.ebuild,v 1.11 2006/03/01 14:54:38 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r8.ebuild,v 1.12 2006/03/02 09:52:07 ehmsen Exp $
 
 inherit tetex-2 flag-o-matic
 
@@ -30,8 +30,6 @@ src_unpack() {
 
 	# bug 85404
 	EPATCH_OPTS="-d ${S} -p1" epatch ${FILESDIR}/${P}-epstopdf-wrong-rotation.patch
-
-	EPATCH_OPTS="-d ${S} -p1" epatch ${FILESDIR}/${P}-flex-compile.patch
 
 	# bug 118264
 	EPATCH_OPTS="-d ${WORKDIR} -p0" epatch ${FILESDIR}/${P}-dvi-draw-conflicting-types.patch
