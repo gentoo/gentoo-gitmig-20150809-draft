@@ -1,34 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 63fb9722d0db93952b65524888e82932 ChangeLog 2720
-RMD160 dc6cb3817a3efe19278a88199be75cf38485918d ChangeLog 2720
-SHA256 61ed1c43ad037b1ab97cd4e7aef1f2830df29a7742542a3c7dce912053200d74 ChangeLog 2720
-MD5 558751a49c78c15d130bf5670c746a61 Devel-StackTrace-1.03.ebuild 615
-RMD160 7479c35611c14a64f66dee7a291d17242397f43e Devel-StackTrace-1.03.ebuild 615
-SHA256 11b7a28feebbd6a22906c5667137de8f2f9a1e58ecb1a7641936ee14629c93c3 Devel-StackTrace-1.03.ebuild 615
-MD5 a7ce5c96225ed934a6f3bb61ffe16f3e Devel-StackTrace-1.11.ebuild 613
-RMD160 0d97c3d3bce37d5dfb8a17ae2b95359404830e07 Devel-StackTrace-1.11.ebuild 613
-SHA256 65884e06dbe14e68db311726e3b6e12d47055fc2e4f9ac16cd8e4db7538b3a1e Devel-StackTrace-1.11.ebuild 613
-MD5 780a3f866ba2d9b91e91e49d127d76cc Devel-StackTrace-1.12.ebuild 611
-RMD160 883a7913ac5348f37023be81699601a2b873d173 Devel-StackTrace-1.12.ebuild 611
-SHA256 dace304867cceec433e7416d546977a19c3c4bb3ec95bcdc7fbb9cb0fa99f043 Devel-StackTrace-1.12.ebuild 611
-MD5 237365ee0c1b7afa2dc1ddeb0a88fe1a files/digest-Devel-StackTrace-1.03 71
-RMD160 81a2383d887552ae5d62854285907bc46bdb459a files/digest-Devel-StackTrace-1.03 71
-SHA256 742f6766cb40292bc100a0b8800ae3aa41c7b03ac570f9544be3dc0188842af6 files/digest-Devel-StackTrace-1.03 71
-MD5 63f49967e70cb5aa3f7d5aae447447ef files/digest-Devel-StackTrace-1.11 71
-RMD160 9a46f60f5167c51ac23ccc2223ae8b74222c34f7 files/digest-Devel-StackTrace-1.11 71
-SHA256 92ea3995a08835f55f26531d5adab1455754db52ee6f8248e1961267f871826c files/digest-Devel-StackTrace-1.11 71
+MD5 8653c447f2316c5d319f5bcdf9b7c93e ChangeLog 2923
+MD5 1fc5fe63492344ee993aad9f53e75d17 Devel-StackTrace-1.12.ebuild 622
 MD5 b0ad874091073deaedbe1e7ab944e972 files/digest-Devel-StackTrace-1.12 71
-RMD160 8911b254817a743915e4db31c63a2fbefae2b428 files/digest-Devel-StackTrace-1.12 71
-SHA256 00a1c76b86777ea6a106734eb07b4f5dbcf324ff53101abcdc875cf9fa504c15 files/digest-Devel-StackTrace-1.12 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD8GnytG5z4I8BtQoRAuIAAJ0S8GTmCXGgO5Bmd+t4uRjLa08CegCeMWi2
-IdPTBJeNE6Yi6vfWvguuKeo=
-=i7eV
+iD8DBQFECKTqFdQwWVoAgN4RAgAjAKDNeShIDO3q0MKFvSdX+/hCpU/dggCfasKz
+Bun8+o0yrVK1Fcy8SKcicxk=
+=hnAJ
 -----END PGP SIGNATURE-----
