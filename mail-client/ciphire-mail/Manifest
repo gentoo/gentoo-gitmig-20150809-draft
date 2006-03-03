@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 43a2bfe7894b942615c81d59701501a2 ChangeLog 1586
-MD5 d710cca36c76de67d0211c50a68dbf47 ciphire-mail-1.0.0.ebuild 3513
-MD5 19d647af343b228a902e742526077e14 ciphire-mail-1.1.009.ebuild 4398
-MD5 0cee41deb1036f3fca7a2a4b6927b20f ciphire-mail-1.1.015.ebuild 4563
+MD5 3a9334e22c4d8892181912900491ec5e ChangeLog 1833
+RMD160 0e3b1b70357bef8fd933b9793716a5719a83cdc4 ChangeLog 1833
+SHA256 e5c4d9f4463b8c87bf439a5166161fa86cdc4d103cdf3241d6956734813aa356 ChangeLog 1833
+MD5 2ab56c5f03551f4c86779364571b1fe7 ciphire-mail-1.0.0.ebuild 3471
+RMD160 f17b8887270ab307ed5dc7ebf65c0b14792e49a0 ciphire-mail-1.0.0.ebuild 3471
+SHA256 236ca0352a2ae44508bee047907fb0d9b41811ab35b24251ebba203c35faf1d9 ciphire-mail-1.0.0.ebuild 3471
+MD5 75a745531597418eb2a2693967d30842 ciphire-mail-1.1.009.ebuild 4356
+RMD160 2ebda8f6c2a055901012d22747b13dd353859e60 ciphire-mail-1.1.009.ebuild 4356
+SHA256 5ddafbabca39efc90a9db3401a25e2286e624dfc940d47096b77956f3a5a111a ciphire-mail-1.1.009.ebuild 4356
+MD5 b1a4508961ba24226ee050ea47699058 ciphire-mail-1.1.015.ebuild 4524
+RMD160 3ed7771aa271c14a2dbddc72767a5fa26f6272a1 ciphire-mail-1.1.015.ebuild 4524
+SHA256 8f050cb7fa5b9a13503b2903c194f0887d0a8b63c78dee9c6785bfba0dd8992d ciphire-mail-1.1.015.ebuild 4524
 MD5 3ba822caed60cb1af266084b7298fe80 files/digest-ciphire-mail-1.0.0 83
+RMD160 48c1da557b72d8e9d2fcd1d6208400359f831783 files/digest-ciphire-mail-1.0.0 83
+SHA256 fc9f49631cf1d1b4565b465f0594db96cc2ec5731f7e6a737628ba37345b9d4e files/digest-ciphire-mail-1.0.0 83
 MD5 bc3695b7104bb878d3e496ad4f7d6e10 files/digest-ciphire-mail-1.1.009 147
+RMD160 f7f6f0aabce1094d924312ea08fc744cf1cf57a7 files/digest-ciphire-mail-1.1.009 147
+SHA256 69f1f93074577906a2e89ea9e963eb6d2acbf7e4fa84a1f4fa33ec7504430ae4 files/digest-ciphire-mail-1.1.009 147
 MD5 fe76f274577e0471d8abeeed5b301ac9 files/digest-ciphire-mail-1.1.015 147
+RMD160 ad699fe807c6e3f0b0be9eaef47367e065aa3ef5 files/digest-ciphire-mail-1.1.015 147
+SHA256 96403b799649fb059d44352b9438321e90da0dc0cb3e8e2a41f94581489be745 files/digest-ciphire-mail-1.1.015 147
 MD5 b612d343db3c54560665171eb7db245c metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD2rZ/QlM6RnzZP+IRArUhAKC0T/lEOAB4gQ1wJsp4GjKWtbFhrQCfQwfP
-4TNE7GYhyiSCum4S+gFkNwo=
-=zvAO
------END PGP SIGNATURE-----
+RMD160 7af8dd320b92b8c61a58767f5221770cd236c63a metadata.xml 223
+SHA256 4b7a3ec9381367d73e7d7f56f27fcf2a703d7731c345cc88af4587743936e2f0 metadata.xml 223

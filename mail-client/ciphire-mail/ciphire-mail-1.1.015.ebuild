@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ciphire-mail-1.1.015.ebuild,v 1.5 2006/01/28 00:10:25 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ciphire-mail-1.1.015.ebuild,v 1.6 2006/03/03 13:59:35 blubb Exp $
 
 inherit eutils qt3
 
@@ -20,8 +20,7 @@ RDEPEND="|| ( ( x11-libs/libSM
 				x11-libs/libXext )
 			virtual/x11 )
 	x86? ( $(qt_min_version 3.2) )
-	amd64? ( app-emulation/emul-linux-x86-glibc
-			 >=app-emulation/emul-linux-x86-baselibs-2.1.1
+	amd64? ( >=app-emulation/emul-linux-x86-baselibs-2.1.1
 			 >=app-emulation/emul-linux-x86-xlibs-1.2
 			 >=app-emulation/emul-linux-x86-qtlibs-1.1 )"
 # We need X and QT regardless, as the USE=X is more just for the session
