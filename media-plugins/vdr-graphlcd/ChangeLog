@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-graphlcd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/ChangeLog,v 1.5 2006/02/28 20:06:44 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/ChangeLog,v 1.6 2006/03/03 16:56:08 hd_brummy Exp $
+
+*vdr-graphlcd-0.1.3 (03 Mar 2006)
+
+  03 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/0.1.3/radiotext-lcr-service.diff,
+  vdr-graphlcd-0.1.2_pre6-r1.ebuild, +vdr-graphlcd-0.1.3.ebuild:
+  version bump, 0.1.2* removed no more needed block to gentoo.de ebuild
 
   28 Feb 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
   files/0.1.2/radiotext-lcr-service.diff:
