@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.21 2006/02/16 22:27:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.22 2006/03/03 13:51:25 blubb Exp $
+
+  03 Mar 2006; Simon Stelling <blubb@gentoo.org> mbrola-3.0.1h-r1.ebuild,
+  mbrola-3.0.1h-r3.ebuild:
+  remove the dependency on app-emulation/emul-linux-x86-glibc since 2004.3 has
+  been deprecated a while ago
 
   16 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
   mbrola-3.0.1h-r1.ebuild, mbrola-3.0.1h-r3.ebuild:

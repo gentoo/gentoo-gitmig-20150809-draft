@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r3.ebuild,v 1.4 2006/02/16 22:27:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r3.ebuild,v 1.5 2006/03/03 13:51:25 blubb Exp $
 
 IUSE=""
 
@@ -30,7 +30,7 @@ SRC_URI="${TCTS}/${PN}/bin/pclinux/mbr${MY_PV}.zip
 
 DEPEND="app-arch/unzip"
 
-RDEPEND="amd64? ( app-emulation/emul-linux-x86-glibc )"
+RDEPEND=""
 
 SLOT="0"
 LICENSE="MBROLA"

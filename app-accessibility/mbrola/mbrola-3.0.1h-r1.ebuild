@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.17 2006/02/16 22:27:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.18 2006/03/03 13:51:25 blubb Exp $
 
 IUSE=""
 
@@ -20,8 +20,7 @@ RDEPEND=">=app-accessibility/festival-1.4.2"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-RDEPEND="${RDEPEND}
-	amd64? ( app-emulation/emul-linux-x86-glibc )"
+RDEPEND="${RDEPEND}"
 
 SLOT="0"
 LICENSE="MBROLA"
