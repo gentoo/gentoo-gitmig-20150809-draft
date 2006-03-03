@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/shoutcast-trans-bin-0.4.0-r1.ebuild,v 1.3 2004/12/19 06:44:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/shoutcast-trans-bin-0.4.0-r1.ebuild,v 1.4 2006/03/03 14:01:44 blubb Exp $
 
 IUSE=""
 
@@ -14,8 +14,7 @@ SRC_URI="http://www.shoutcast.com/downloads/sc_trans_posix_${SVER}.tgz"
 LICENSE="shoutcast"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
-DEPEND="amd64? ( app-emulation/emul-linux-x86-glibc )
-	media-sound/shoutcast-server-bin"
+DEPEND="media-sound/shoutcast-server-bin"
 S="${WORKDIR}/sc_trans_${SVER}"
 
 src_compile() {

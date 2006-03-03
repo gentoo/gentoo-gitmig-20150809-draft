@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/shoutcast-server-bin
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/ChangeLog,v 1.12 2005/05/28 22:50:15 luckyduck Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/ChangeLog,v 1.13 2006/03/03 14:00:37 blubb Exp $
+
+  03 Mar 2006; Simon Stelling <blubb@gentoo.org>
+  shoutcast-server-bin-1.9.5.ebuild:
+  remove the dependency on app-emulation/emul-linux-x86-glibc since 2004.3 has
+  been deprecated a while ago
 
   28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   shoutcast-server-bin-1.9.5.ebuild:
