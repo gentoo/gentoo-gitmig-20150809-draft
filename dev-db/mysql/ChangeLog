@@ -1,6 +1,27 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.304 2006/02/20 05:51:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.305 2006/03/03 01:31:54 vivo Exp $
+
+*mysql-5.1.7_beta (03 Mar 2006)
+
+  03 Mar 2006; Francesco Riosa <vivo@gentoo.org> mysql-4.1.18-r30.ebuild,
+  mysql-5.0.18-r30.ebuild, -mysql-5.1.6_alpha-r30.ebuild,
+  +mysql-5.1.7_beta.ebuild:
+  - added $MY_EXTRAS_VER to control version of mysql-extras to download
+  - version bump for 5.1, this version is still unsupported.
+    important, side by side install (slot) support has been removed in 5.1
+    series has a test, 5.0 and 4.1 will follow ... but carefully.
+  Changes in the eclass affecting the ebuilds:
+  - added $MY_EXTRAS_VER to control version of mysql-extras to download
+  - added "embedded" use flag, control the install of ebedded server libs.
+  - added "raid" use flag (5.0 only), raid is deprecated and this use should 
+    stay disabled, upstream removed support for raid in MySQL 5.1
+  - fix Bug 111073 mysql configure fails to locate zlib on multilib 64-bit
+    systems.
+    thanks to all the bug writers for the fix-
+  - adopted "eautoreconf" instead of the previous complex combinations of
+    autotools programs, thanks flameeyes for the suggestion.
+  - a pair of steps in the direction of un-slotting MySQL
 
   20 Feb 2006; Joshua Kinard <kumba@gentoo.org> mysql-4.1.18-r30.ebuild:
   Added ~mips to KEYWORDS.
