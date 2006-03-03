@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 460d52221ef517260188f99f3ecae4e1 ChangeLog 3538
-RMD160 9bfa1bf3935917a77d95c2d8729c58105d46c44b ChangeLog 3538
-SHA256 92f973f8fcce49bdbffbd24114312950ea9cd7c210896f1cc597dce3c19fe340 ChangeLog 3538
+MD5 3a24f3c2967600b777304b9b24b28d5d ChangeLog 3679
+RMD160 e2d324605641fe51f39e579017d15cef0f235fab ChangeLog 3679
+SHA256 2b8dbe547a5bdb62a021069ff5d4ece675ce732789c117de10f15200aa5321a2 ChangeLog 3679
 MD5 787d8c0e312170927dde02eadb05f199 files/digest-freepops-0.0.31 68
 RMD160 c9dfb79b7d5ffddc2249713168b508ff28b6457c files/digest-freepops-0.0.31 68
 SHA256 599d0d34b98210ef208d66468404f082d4cb66218acb5b110fe9db9e076b2f30 files/digest-freepops-0.0.31 68
@@ -13,9 +13,9 @@ SHA256 bb338deed6e6da09817c9c9cb88edb121685df4d12ac1eb5f70f844edbb4f49c files/di
 MD5 8711bb3f89904131b5a9acef59e4c3ee files/digest-freepops-0.0.97 250
 RMD160 e3fe7f1a33cf13d5a0baea9a1e1d68f7829e0fd7 files/digest-freepops-0.0.97 250
 SHA256 ba49a95060d00388af06fc91b2a3b07ec1e8bd6491ab2702f62bcf97902b3c61 files/digest-freepops-0.0.97 250
-MD5 c420ef563110bc5ba389105616e175a2 files/digest-freepops-0.0.97-r1 461
-RMD160 3136e3df0784275ab398cfeddb7c4176909b4d89 files/digest-freepops-0.0.97-r1 461
-SHA256 937ef07745760b613c1bb3267dd37282392f5be5373b303a70724216068ea569 files/digest-freepops-0.0.97-r1 461
+MD5 15a5cff68dc364dcbf0a00e7806d33b5 files/digest-freepops-0.0.97-r1 461
+RMD160 661d8774aa6f643458e6d3e8ad91db97737a6a42 files/digest-freepops-0.0.97-r1 461
+SHA256 cdf1e78756325216683d91347371e8ca42ee964c044b09220c6e956011d5599a files/digest-freepops-0.0.97-r1 461
 MD5 21057de46bc1ad28a002f98771043d47 files/freepops-0.0.31-srcmake.patch 466
 RMD160 a4816afa18a1bc79ac8a9e92da7939e99b9f35b2 files/freepops-0.0.31-srcmake.patch 466
 SHA256 3060aa25d84ac2618acf2317bfc4a2ac0077fca9e0bbbe67e64d16beb9a3b250 files/freepops-0.0.31-srcmake.patch 466
@@ -41,9 +41,9 @@ MD5 c5cea2c71a3038980c2975d684e9e1fb metadata.xml 288
 RMD160 9156c20410e399eefadae2d44edaa536f0a93c0f metadata.xml 288
 SHA256 313310f7c1c73fdab56202d7087ea4275c706996f4f9049cc1bdd7ddbabba9db metadata.xml 288
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFD/FTTmdTrptrqvGERAq8AAJwOqBcJcu3+7lsk0JuxzRrY8Y3y/gCcDq7D
-YtPXFCEIbotDx7eNJozaAZY=
-=7eEk
+iD8DBQFECGPpmdTrptrqvGERAgd+AJ4zWxTXKw6oIu/COAXFSqQExtLTPQCeK5DR
+ChTwS+0kWIZuVMEZ8w1ELAQ=
+=+Br0
 -----END PGP SIGNATURE-----
