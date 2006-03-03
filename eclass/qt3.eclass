@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt3.eclass,v 1.13 2006/02/24 10:08:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt3.eclass,v 1.14 2006/03/03 14:40:09 flameeyes Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -59,5 +59,5 @@ qt_min_version_list() {
 		*) VERSIONS="=${QTPKG}3*";;
 	esac
 
-	echo "${VERSIONS}"
+	echo ${VERSIONS}
 }
