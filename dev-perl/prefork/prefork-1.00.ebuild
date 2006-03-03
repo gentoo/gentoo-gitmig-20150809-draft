@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/prefork-1.00.ebuild,v 1.12 2006/02/13 14:25:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/prefork-1.00.ebuild,v 1.13 2006/03/03 20:58:00 chriswhite Exp $
 
 inherit perl-module
 
 DESCRIPTION="Optimized module loading for forking or non-forking processes"
-HOMEPAGE="http://search.cpan.org/search?module=${PN}"
+HOMEPAGE="http://search.cpan.org/search?module=prefork"
 SRC_URI="mirror://cpan/authors/id/A/AD/ADAMK/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"
