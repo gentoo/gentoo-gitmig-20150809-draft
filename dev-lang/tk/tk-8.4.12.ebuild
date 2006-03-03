@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.11.ebuild,v 1.5 2006/02/08 04:07:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.12.ebuild,v 1.1 2006/03/03 16:15:17 matsuu Exp $
 
 inherit eutils
 
@@ -39,10 +39,13 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/remove-control-v-8.4.9.diff
-	epatch ${FILESDIR}/${PN}-8.4.9-man.patch
-	epatch ${FILESDIR}/${P}-multilib.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/remove-control-v-8.4.9.diff
+	epatch "${FILESDIR}"/${PN}-8.4.9-man.patch
+	epatch "${FILESDIR}"/${PN}-8.4.11-multilib.patch
+
+	# Bug 117982
+	sed -i -e "s/relid'/relid/" "${S}"/unix/{configure,tcl.m4} || die
 
 	local d
 	for d in */configure ; do
@@ -53,7 +56,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/unix
+	cd "${S}"/unix
 
 	local mylibdir=$(get_libdir) ; mylibdir=${mylibdir//\/}
 	local local_config_use=""
@@ -74,7 +77,7 @@ src_install() {
 	local v1
 	v1=${PV%.*}
 
-	cd ${S}/unix
+	cd "${S}"/unix
 	make DESTDIR=${D} install || die
 
 	# fix the tkConfig.sh to eliminate refs to the build directory
