@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.36-r1.ebuild,v 1.1 2006/03/03 03:24:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.36-r1.ebuild,v 1.2 2006/03/03 12:36:15 flameeyes Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="highly optimized and portable routines for integer based number theoretic applications"
 HOMEPAGE="http://math.libtomcrypt.org/"
@@ -23,11 +23,11 @@ src_unpack() {
 }
 
 src_compile() {
-	emake -f makefile.shared IGNORE_SPEED=1 || die
+	emake -f makefile.shared IGNORE_SPEED=1 LIBPATH="/usr/$(get_libdir)" || die
 }
 
 src_install() {
-	make -f makefile.shared install DESTDIR="${D}" || die
+	make -f makefile.shared install DESTDIR="${D}" LIBPATH="/usr/$(get_libdir)" || die
 	dodoc changes.txt *.pdf
 	docinto demo ; dodoc demo/*
 }
