@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060217.ebuild,v 1.13 2006/03/03 01:57:56 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060302.ebuild,v 1.1 2006/03/03 01:57:56 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,8 +9,8 @@ IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl bindist
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
 dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
 lirc live livecd lzo mad matroska matrox mmx mmxext musepack nas nls nvidia
-vorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora
-truetype v4l v4l2 win32codecs X xanim xinerama xmms xv xvid xvmc"
+vorbis opengl openal oss png real rtc samba sdl sse sse2 svga tga theora
+truetype v4l v4l2 win32codecs X x264 xanim xinerama xmms xv xvid xvmc"
 # openal
 BLUV=1.4
 SVGV=1.9.17
@@ -34,6 +34,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
+	openal? ( media-libs/openal )
 	bidi? ( dev-libs/fribidi )
 	cdparanoia? ( media-sound/cdparanoia )
 	dga? ( || ( x11-libs/libXxf86dga virtual/x11 ) )
@@ -44,6 +45,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	encode? (
 		media-sound/lame
 		dv? ( >=media-libs/libdv-0.9.5 )
+		x264? ( media-libs/x264-svn )
 		)
 	esd? ( media-sound/esound )
 	gif? ( media-libs/giflib )
@@ -126,11 +128,11 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 pkg_setup() {
 	if use real && use x86; then
-				REALLIBDIR="/opt/RealPlayer/codecs"
+		REALLIBDIR="/opt/RealPlayer/codecs"
 	fi
 }
 
@@ -232,8 +234,8 @@ src_compile() {
 
 
 
-	#FIXME make x264 work in the snapshot
-	local myconf="--disable-x264 --disable-external-faad"
+
+	local myconf="--disable-external-faad"
 	################
 	#Optional features#
 	###############
@@ -252,9 +254,10 @@ src_compile() {
 	myconf="${myconf} $(use_enable edl)"
 
 	if use encode ; then
-		myconf="${myconf} --enable-mencoder $(use_enable dv libdv)"
+		myconf="${myconf} --enable-mencoder $(use_enable dv libdv) \
+											$(use_enable x264)"
 	else
-		myconf="${myconf} --disable-mencoder --disable-libdv"
+		myconf="${myconf} --disable-mencoder --disable-libdv --disable-x264"
 	fi
 
 	myconf="${myconf} $(use_enable gtk gui)"
@@ -387,7 +390,7 @@ src_compile() {
 	use esd || myconf="${myconf} --disable-esd"
 	use mad || myconf="${myconf} --disable-mad"
 	use nas || myconf="${myconf} --disable-nas"
-	myconf="${myconf} --disable-openal"
+	use openal || myconf="${myconf} --disable-openal"
 	use oss || myconf="${myconf} --disable-ossaudio"
 
 	#################

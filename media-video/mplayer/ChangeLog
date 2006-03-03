@@ -1,10 +1,17 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.352 2006/02/26 14:29:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.353 2006/03/03 01:57:56 lu_zero Exp $
 
   26 Feb 2006; Bryan Østergaard <kloeri@gentoo.org
   mplayer-1.0.20060217.ebuild:
   Stable on alpha, bug 115760.
+
+*mplayer-1.0.20060302 (02 Mar 2006)
+
+  02 Mar 2006; Luca Barbato <lu_zero@gentoo.org>
+  mplayer-1.0.20060217.ebuild, +mplayer-1.0.20060302.ebuild:
+  openal removed again from 20060217, since could not work for everybody, new
+  snapshot with fixes and x264 support
 
   22 Feb 2006; Aron Griffis <agriffis@gentoo.org>
   mplayer-1.0.20060217.ebuild:
