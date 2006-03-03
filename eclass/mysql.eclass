@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.20 2006/02/28 12:52:27 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.21 2006/03/03 01:33:07 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -18,14 +18,17 @@ DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="http://www.mysql.com/"
 NEWP="${P/_/-}"
 SRC_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/${NEWP}.tar.gz
-	mirror://gentoo/mysql-extras-20060115.tar.bz2"
+	mirror://gentoo/mysql-extras-${MY_EXTRAS_VER}.tar.bz2"
 LICENSE="GPL-2"
-IUSE="big-tables berkdb debug minimal perl selinux srvdir ssl static"
+IUSE="big-tables berkdb debug embedded minimal perl selinux srvdir ssl static"
 RESTRICT="primaryuri confcache"
 DEPEND="app-admin/eselect-mysql"
 
 mysql_version_is_at_least "4.01.03.00" \
 && IUSE="${IUSE} cluster extraengine"
+
+mysql_version_is_at_least "5.00.00.00" \
+|| IUSE="${IUSE} raid"
 
 mysql_version_is_at_least "5.00.18.00" \
 && IUSE="${IUSE} max-idx-128"
@@ -133,11 +136,6 @@ mysql_src_unpack() {
 	sed -i -e "s/zlib\/Makefile dnl/dnl zlib\/Makefile/" "${S}/configure.in"
 	rm -f scripts/mysqlbug
 
-	# Multilib issue with zlib detection
-	mysql_version_is_at_least "5.00.15.00" \
-	&& sed -i -e "s:zlib_dir/lib:zlib_dir/$(get_libdir):g" \
-		"${S}/config/ac-macros/zlib.m4"
-
 	# Make charsets install in the right place
 	find . -name 'Makefile.am' \
 		-exec sed --in-place -e 's!$(pkgdatadir)!'${MY_SHAREDSTATEDIR}'!g' {} \;
@@ -165,21 +163,12 @@ mysql_src_unpack() {
 	for d in ${rebuilddirlist}; do
 		einfo "reconfiguring dir \"${d}\""
 		pushd "${d}" &>/dev/null
-		for buildstep in \
-			'libtoolize --copy --force' \
-			'aclocal --force' \
-			'autoheader --force -Wnone' \
-			'autoconf --force -Wnone' \
-			'automake --force --force-missing -Wnone' \
-			'gnuconfig_update'
-		do
-			einfo "performing ${buildstep}"
-			${buildstep} || die "failed ${buildstep/ */} dir \"${d}\""
-		done
+		AT_GNUCONF_UPDATE="yes" eautoreconf
 		popd &>/dev/null
 	done
 
-	if useq berkdb && ! mysql_check_version_range "5.01.00.00 to 5.01.06.99"
+	#TODO berkdb in 5.1 need to be worked on
+	if useq berkdb && ! mysql_check_version_range "5.01.00.00 to 5.01.08.99"
 	then
 		[[ -w "${bdbdir}/ltmain.sh" ]] && cp -f ltmain.sh "${bdbdir}/ltmain.sh"
 		pushd "${bdbdir}" && sh s_all || die "failed bdb reconfigure" &>/dev/null
@@ -247,7 +236,11 @@ mysql_src_compile() {
 			myconf="${myconf} --without-raid"
 			ewarn "disabling raid support, has problem with static"
 		else
-			myconf="${myconf} --with-raid"
+			if mysql_version_is_at_least "5.00.00.00" ; then
+				myconf="${myconf} --without-raid"
+			else
+				myconf="${myconf} `use_with raid`"
+			fi
 		fi
 
 		if ! mysql_version_is_at_least "5.00.00.00" ; then
@@ -279,7 +272,9 @@ mysql_src_compile() {
 			ewarn "bdb berkeley-db disabled due to arch or version"
 			myconf="${myconf} --without-berkeley-db"
 		else
-			useq berkdb \
+			#TODO berkdb in 5.1 need to be worked on
+			useq berkdb && \
+			! mysql_check_version_range "5.01.00.00 to 5.01.08.99" \
 				&& myconf="${myconf} --with-berkeley-db=./bdb" \
 				|| myconf="${myconf} --without-berkeley-db"
 		fi
@@ -293,6 +288,15 @@ mysql_src_compile() {
 		mysql_version_is_at_least "4.01.11.00" &&  myconf="${myconf} `use_with big-tables`"
 
 		mysql_version_is_at_least "5.01.06.00" &&  myconf="${myconf} --with-ndb-binlog"
+
+		if useq embedded ; then
+			#REMIND, need the privilege control enabled ?
+			myconf="${myconf} --without-embedded-privilege-control"
+			myconf="${myconf} --with-embedded-server"
+		else
+			myconf="${myconf} --without-embedded-privilege-control"
+			myconf="${myconf} --without-embedded-server"
+		fi
 	else
 		for i in ${minimal_exclude_list}; do
 			myconf="${myconf} --without-${i}"
@@ -362,18 +366,15 @@ mysql_src_compile() {
 		--enable-thread-safe-client \
 		--with-comment="Gentoo Linux ${PF}" \
 		--with-unix-socket-path="/var/run/mysqld/mysqld.sock" \
-		--with-zlib-dir=/usr \
 		--with-lib-ccflags="-fPIC" \
 		--without-readline \
 		--without-docs \
 		${myconf} || die "bad ./configure"
 
 	# TODO Move this before autoreconf !!!
-	find . -name 'Makefile' \
-	-exec sed --in-place \
-	-e 's|^pkglibdir\s*=\s*$(libdir)/mysql|pkglibdir = $(libdir)|' \
-	-e 's|^pkgincludedir\s*=\s*$(includedir)/mysql|pkgincludedir = $(includedir)|' \
-	{} \;
+	find . -type f -name Makefile -print0 \
+	| xargs -0 -n100 sed -i \
+	-e 's|^pkglibdir *= *$(libdir)/mysql|pkglibdir = $(libdir)|;s|^pkgincludedir *= *$(includedir)/mysql|pkgincludedir = $(includedir)|'
 
 	emake || die "compile problem"
 }
@@ -493,39 +494,29 @@ mysql_src_install() {
 		"${WORKDIR}/mysql-extras/fill_help_tables.sql-5.0" \
 		"${D}/usr/share/mysql${MY_SUFFIX}/fill_help_tables.sql"
 
-	# MOVED HERE DUE TO BUG #121445
-	# create a list of files, to be used
-	# by external utilities
-	mkdir -p "${D}/var/lib/eselect/mysql/"
-	local filelist="${D}/var/lib/eselect/mysql/mysql${MY_SUFFIX}.filelist"
-	pushd "${D}/" &>/dev/null
-		env -i find usr/bin/ usr/sbin/ usr/share/man \
-			-type f -name "*${MY_SUFFIX}*" \
-			-and -not -name "mysql_config${MY_SUFFIX}" \
-			> "${filelist}"
-		echo "${MY_SYSCONFDIR#"/"}" >> "${filelist}"
-		echo "${MY_LIBDIR#"/"}" >> "${filelist}"
-		echo "${MY_SHAREDSTATEDIR#"/"}" >> "${filelist}"
-	popd &>/dev/null
-
+	if [[ ${SLOT} -gt 0 ]] ; then
+		# MOVED HERE DUE TO BUG #121445
+		# create a list of files, to be used
+		# by external utilities
+		mkdir -p "${D}/var/lib/eselect/mysql/"
+		local filelist="${D}/var/lib/eselect/mysql/mysql${MY_SUFFIX}.filelist"
+		pushd "${D}/" &>/dev/null
+			find usr/bin/ usr/sbin/ \
+				-type f -name "*${MY_SUFFIX}*" \
+				-and -not -name "mysql_config${MY_SUFFIX}" \
+				> "${filelist}"
+			find usr/share/man \
+				-type f -name "*${MY_SUFFIX}*" \
+				| sed -e 's/$/.gz/' \
+				>> "${filelist}"
+			echo "${MY_SYSCONFDIR#"/"}" >> "${filelist}"
+			echo "${MY_LIBDIR#"/"}" >> "${filelist}"
+			echo "${MY_SHAREDSTATEDIR#"/"}" >> "${filelist}"
+		popd &>/dev/null
+	fi
 }
 
 mysql_pkg_preinst() {
-
-	## create a list of files, to be used
-	## by external utilities
-	## will be used in pkg_postinst
-	#local filelist="${TMPDIR}/FILELIST"
-	#pushd "${D}/" &>/dev/null
-	#	mkdir -p "${ROOT}/var/lib/eselect/mysql/"
-	#	env -i find usr/bin/ usr/sbin/ usr/share/man \
-	#		-type f -name "*${MY_SUFFIX}*" \
-	#		-and -not -name "mysql_config${MY_SUFFIX}" \
-	#		> "${filelist}"
-	#	echo "${MY_SYSCONFDIR#"/"}" >> "${filelist}"
-	#	echo "${MY_LIBDIR#"/"}" >> "${filelist}"
-	#	echo "${MY_SHAREDSTATEDIR#"/"}" >> "${filelist}"
-	#popd &>/dev/null
 
 	enewgroup mysql 60 || die "problem adding group mysql"
 	enewuser mysql 60 -1 /dev/null mysql \
@@ -546,27 +537,12 @@ mysql_pkg_postinst() {
 	chown mysql:mysql "${ROOT}${MY_LOGDIR}"/mysql*
 	chmod 0660 "${ROOT}${MY_LOGDIR}"/mysql*
 
-	## list of files, to be used
-	## by external utilities
-	#mkdir -p "${ROOT}/var/lib/eselect/mysql/"
-	#cp "${TMPDIR}/FILELIST" "${ROOT}/var/lib/eselect/mysql/mysql${MY_SUFFIX}.filelist"
-
 	if ! useq minimal; then
 		if [[ ${SLOT} -gt 0 ]] ; then
-			#if [[ -f "${ROOT}/usr/sbin/mysqld" ]] ; then
-				einfo "you may want to read:"
-				einfo "http://www.gentoo.org/doc/en/mysql-upgrade-slotted.xml"
-			#else
-			#	local tmpres="$( eselect mysql show )"
-			#	# "like grep -q unset"
-			#	if [[ "{$tmpres}" == "{$tmpres/unset/}" ]] ; then
-			#		eselect mysql set 1
-			#	else
-			#		einfo "The version of mysql emerged now stils is _NOT_ the default"
-					einfo "you may want to run \"eselect mysql  list\" followed by a "
-					einfo "\"eselect mysql set 1\" to choose the default mysql server"
-			#	fi
-			#fi
+			einfo "you may want to read:"
+			einfo "http://www.gentoo.org/doc/en/mysql-upgrade-slotted.xml"
+			einfo "you may want to run \"eselect mysql  list\" followed by a "
+			einfo "\"eselect mysql set 1\" to choose the default mysql server"
 		fi
 
 		# your friendly public service announcement...
@@ -575,7 +551,8 @@ mysql_pkg_postinst() {
 		einfo "\"emerge --config =${CATEGORY}/${PF}\""
 		einfo "if this is a new install."
 		einfo
-		einfo "InnoDB is not optional as of MySQL-4.0.24, at the request of upstream."
+		mysql_version_is_at_least "5.01.00.00" \
+		|| einfo "InnoDB is not optional as of MySQL-4.0.24, at the request of upstream."
 	fi
 }
 
@@ -688,8 +665,10 @@ mysql_pkg_config() {
 }
 
 mysql_pkg_prerm() {
-	# external program
-	eselect mysql slot_remove "${SLOT}"
+	if [[ ${SLOT} -gt 0 ]] ; then
+		# external program
+		eselect mysql slot_remove "${SLOT}"
+	fi
 }
 
 mysql_pkg_postrm() {
