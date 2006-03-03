@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/PEAR-Auth-1.3.0.ebuild,v 1.1 2006/03/03 05:17:38 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/PEAR-Auth-1.3.0.ebuild,v 1.2 2006/03/03 19:20:37 chtekk Exp $
 
 inherit php-pear-r1 depend.php
 
@@ -19,5 +19,5 @@ RDEPEND=">=dev-php/PEAR-PEAR-1.3.6
 	dev-php/PEAR-File_SMBPasswd"
 
 pkg_setup() {
-	require_php_with_use mcrypt mhash
+	require_php_with_use crypt mhash
 }
