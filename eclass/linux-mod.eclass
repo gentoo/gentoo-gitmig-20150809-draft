@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.59 2006/03/03 20:57:15 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.60 2006/03/03 21:04:58 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -79,7 +79,7 @@
 #						documents for $modulename
 
 
-inherit linux-info
+inherit linux-info eutils
 EXPORT_FUNCTIONS pkg_setup pkg_postinst src_install src_compile pkg_postrm
 
 IUSE="" # don't put pcmcia here, rather in the ebuilds that actually support pcmcia
@@ -168,7 +168,7 @@ pcmcia_src_unpack() {
 			einfo "but you are not using the built-in PCMCIA support."
 			einfo "We will assume you know what you are doing, but please"
 			einfo "consider using the built in PCMCIA support instead."
-			sleep 10
+			epause 10
 
 			unpack_pcmcia_sources ${pcmcia_tbz};
 		fi
