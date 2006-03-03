@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.20 2005/10/07 02:01:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.21 2006/03/03 14:34:49 blubb Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened n32 n64 emul-linux-x86"
 
@@ -27,7 +27,6 @@ DEPEND="virtual/libc
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )
 	>=sys-devel/bison-1.875
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
-	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
 	!build? (
 		gcj? (
 			gtk? ( >=x11-libs/gtk+-2.2 )
@@ -362,13 +361,6 @@ do_patch_tarball() {
 		cp ${S}/gcc/config/sh/t-sh64 ${S}/gcc/config/sh/t-sh64-uclibc || \
 			die "can't copy sh/t-sh64"
 
-		if use multilib && [ "${ARCH}" = "amd64" ]
-		then
-			mv -f ${WORKDIR}/patch/06* ${WORKDIR}/patch/exclude/
-			bzip2 -c ${FILESDIR}/gcc331_use_multilib.amd64.patch > \
-				${WORKDIR}/patch/06_amd64_gcc331-use-multilib.patch.bz2
-		fi
-
 		epatch ${WORKDIR}/patch
 
 		# the uclibc patches need autoconf to be run
@@ -376,10 +368,6 @@ do_patch_tarball() {
 		use build || ( cd ${S}/libstdc++-v3; autoconf; cd ${S} )
 		#use build && use elibc_uclibc && ewarn "uclibc in build stage is not supported yet" && exit 1
 
-	elif use multilib && [ "${ARCH}" = "amd64" ]
-	then
-		# We need this even if there isnt a patchset
-		epatch ${FILESDIR}/gcc331_use_multilib.amd64.patch
 	fi
 }
 
@@ -511,15 +499,6 @@ src_unpack() {
 	    fi
 	fi
 
-	if use amd64 && use multilib ; then
-		# this should hack around the GCC_NO_EXECUTABLES bug
-		epatch ${FILESDIR}/3.4.1/gcc-3.4.1-glibc-is-native.patch
-		cd ${S}/libstdc++-v3
-		einfo "running autoreconf..."
-		autoreconf
-		cd ${S}
-	fi
-
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 
@@ -577,10 +556,6 @@ src_compile() {
 		einfo "Multilib support enabled. This is still experimental."
 		myconf="${myconf} --enable-multilib"
 	else
-		if [ "${ARCH}" = "amd64" ]
-		then
-			einfo "WARNING: Multilib not enabled. You will not be able to build 32bit binaries."
-		fi
 		myconf="${myconf} --disable-multilib"
 	fi
 
@@ -741,13 +716,7 @@ src_install() {
 
 	# The LDPATH stuff is kinda iffy now that we need to provide compatibility
 	# with older versions of GCC for binary apps.
-	if use multilib && [ "${ARCH}" = "amd64" ]
-	then
-		# amd64 is a bit unique because of multilib.  Add some other paths
-		LDPATH="${LIBPATH}:${LIBPATH}/32:${LIBPATH}/../lib64:${LIBPATH}/../lib32"
-	else
-		LDPATH="${LIBPATH}"
-	fi
+	LDPATH="${LIBPATH}"
 	if [ "${BULIB}" != "" ]
 	then
 		LDPATH="${LDPATH}:${LOC}/lib/gcc-lib/${CCHOST}/${BULIB}"
@@ -939,25 +908,13 @@ pkg_preinst() {
 
 	# Make again sure that the linker "should" be able to locate
 	# libstdc++.so ...
-	if use multilib && [ "${ARCH}" = "amd64" ]
-	then
-		# Can't always find libgcc_s.so.1, make it find it
-		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
-	else
-		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
-	fi
+	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
 	${ROOT}/sbin/ldconfig
 }
 
 pkg_postinst() {
 
-	if use multilib && [ "${ARCH}" = "amd64" ]
-	then
-		# Can't always find libgcc_s.so.1, make it find it
-		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
-	else
-		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
-	fi
+	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
 	if [ "${ROOT}" = "/" -a "${CHOST}" = "${CCHOST}" ]
 	then
 		gcc-config --use-portage-chost ${CCHOST}-${GCC_RELEASE_VER}

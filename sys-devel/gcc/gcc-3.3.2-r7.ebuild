@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.24 2005/10/07 02:01:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.25 2006/03/03 14:34:49 blubb Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj emul-linux-x86"
 
@@ -122,7 +122,6 @@ DEPEND="virtual/libc
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
-	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
@@ -286,13 +285,6 @@ src_unpack() {
 #		mv -f ${WORKDIR}/patch/{40,41}* ${WORKDIR}/patch/exclude/
 		mv -f ${WORKDIR}/patch/41* ${WORKDIR}/patch/exclude/
 
-		if use multilib && [ "${ARCH}" = "amd64" ]
-		then
-			mv -f ${WORKDIR}/patch/06* ${WORKDIR}/patch/exclude/
-			bzip2 -c ${FILESDIR}/gcc331_use_multilib.amd64.patch > \
-				${WORKDIR}/patch/06_amd64_gcc331-use-multilib.patch.bz2
-		fi
-
 		epatch ${WORKDIR}/patch
 	fi
 
@@ -370,18 +362,12 @@ src_compile() {
 		myconf="${myconf} --enable-interpreter --enable-java-awt=xlib --with-x"
 	fi
 
-	# Multilib not yet supported
-	if use multilib && [ "${ARCH}" = "amd64" ]
+	if [ "${ARCH}" = "amd64" ]
 	then
-		einfo "WARNING: Multilib support enabled. This is still experimental."
-		myconf="${myconf} --enable-multilib"
-	else
-		if [ "${ARCH}" = "amd64" ]
-		then
-			einfo "WARNING: Multilib not enabled. You will not be able to build 32bit binaries."
-		fi
-		myconf="${myconf} --disable-multilib"
+		einfo "WARNING: Multilib not enabled. You will not be able to build 32bit binaries."
 	fi
+	myconf="${myconf} --disable-multilib"
+
 
 	# Fix linking problem with c++ apps which where linkedi
 	# agains a 3.2.2 libgcc
@@ -497,14 +483,7 @@ src_install() {
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
 	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
-	if use multilib && [ "${ARCH}" = "amd64" ]
-	then
-		# amd64 is a bit unique because of multilib.  Add some other paths
-		echo "LDPATH=\"${LIBPATH}:${LIBPATH}/32:${LIBPATH}/../lib64:${LIBPATH}/../lib32\"" >> \
-			${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
-	else
-		echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
-	fi
+	echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
 	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
@@ -655,16 +634,6 @@ src_install() {
 	doins ${FILESDIR}/awk/fixlafiles.awk
 	exeinto /sbin
 	doexe ${FILESDIR}/fix_libtool_files.sh
-
-	if use multilib && [ "${ARCH}" = "amd64" ]
-	then
-		# If using multilib, GCC has a bug, where it doesn't know where to find
-		# -lgcc_s when linking while compiling with g++ .  ${LIBPATH} is in
-		# it's path though, so ln the 64bit and 32bit versions of -lgcc_s
-		# to that directory.
-		ln -sf ${LIBPATH}/../lib64/libgcc_s.so ${D}/${LIBPATH}/libgcc_s.so
-		ln -sf ${LIBPATH}/../lib32/libgcc_s_32.so ${D}/${LIBPATH}/libgcc_s_32.so
-	fi
 }
 
 pkg_preinst() {
@@ -676,25 +645,13 @@ pkg_preinst() {
 
 	# Make again sure that the linker "should" be able to locate
 	# libstdc++.so ...
-	if use multilib && [ "${ARCH}" = "amd64" ]
-	then
-		# Can't always find libgcc_s.so.1, make it find it
-		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
-	else
-		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
-	fi
+	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
 	${ROOT}/sbin/ldconfig
 }
 
 pkg_postinst() {
 
-	if use multilib && [ "${ARCH}" = "amd64" ]
-	then
-		# Can't always find libgcc_s.so.1, make it find it
-		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
-	else
-		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
-	fi
+	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
 	if [ "${ROOT}" = "/" -a "${CHOST}" = "${CCHOST}" ]
 	then
 		gcc-config --use-portage-chost ${CCHOST}-${GCC_RELEASE_VER}
