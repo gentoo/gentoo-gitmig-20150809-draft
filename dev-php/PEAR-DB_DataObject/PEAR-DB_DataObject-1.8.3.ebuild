@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/PEAR-DB_DataObject-1.8.2.ebuild,v 1.1 2006/02/28 09:09:40 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/PEAR-DB_DataObject-1.8.3.ebuild,v 1.1 2006/03/03 05:20:36 sebastian Exp $
 
 inherit php-pear-r1
 
