@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0c1952fcf52da72b9e4c712a15db67b8 ChangeLog 1557
+MD5 36464103f38023598232b6eb10d76f0c ChangeLog 1682
+RMD160 dc04aa88b7a8fc2c5dc0a0994f2e94d10f677bc8 ChangeLog 1682
+SHA256 0634a3e12f551e2b8209b4f6d4538b1964d2ea6b91a55334e8fe2c17dc0a8dd7 ChangeLog 1682
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-linuxtv-dvb-headers-3.1 0
-MD5 d95c9e4c2a276974c0daa3dfca603a8b linuxtv-dvb-headers-3.1.ebuild 510
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-linuxtv-dvb-headers-3.1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-linuxtv-dvb-headers-3.1 0
+MD5 3a6d713d7523224fb1fd72ef19c28b7f linuxtv-dvb-headers-3.1.ebuild 516
+RMD160 565100f314703dd037505d2714d441856812e300 linuxtv-dvb-headers-3.1.ebuild 516
+SHA256 cc9ba6283e333e6ef981d8e970e932f553ae4fb535e2b5dc4a563fd2f8d0701f linuxtv-dvb-headers-3.1.ebuild 516
 MD5 29522d05d6d333b4917b88b6ad461f95 metadata.xml 505
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD/O6AJrHF4yAQTrARAsnYAJ9WJcOnHE/yAkYmLRXxPJNbWjP1WgCZAYAX
-us+c+wI1VV+TwBLE9I+ApFA=
-=OHRY
------END PGP SIGNATURE-----
+RMD160 a81c4ad86c107aba5bfb508fe8da152c06a4d1eb metadata.xml 505
+SHA256 63c65df7daf36867355ddd996be3e140edc2c11e7a5fa26c9591e064aae23602 metadata.xml 505
