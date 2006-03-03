@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-joystick
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-joystick/ChangeLog,v 1.13 2006/02/15 22:11:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-joystick/ChangeLog,v 1.14 2006/03/03 18:36:57 fmccor Exp $
+
+  03 Mar 2006; Ferris McCormick <fmccor@gentoo.org>
+  xf86-input-joystick-1.0.0.5.ebuild:
+  Add ~sparc keyword.  Believed to work on sparc.
 
   15 Feb 2006; Markus Rothe <corsair@gentoo.org>
   xf86-input-joystick-1.0.0.5.ebuild:

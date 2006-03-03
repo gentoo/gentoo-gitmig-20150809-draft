@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c3bea162bfb12fa3b58dbea86fb1bf40 ChangeLog 2158
-RMD160 4a3590ae22b2b465233cb836b5452c15b37bbcc7 ChangeLog 2158
-SHA256 857d8219192c980315c7fc0bc89dc5e3075beea8d9f5e31ac8e16e022ee91603 ChangeLog 2158
+MD5 3bf8009d59ac878de96891145d33d6c9 ChangeLog 2298
+RMD160 2451c5a94e22231752c21b88f958d864fa5a82b3 ChangeLog 2298
+SHA256 6e168bbeb6978111707027e4237840792c369ec7356e2477bc6bed7625820893 ChangeLog 2298
 MD5 482357396050cc2204f28350a3a02db2 files/digest-xf86-input-joystick-1.0.0.5 150
 RMD160 f4d99628cc2709b04a8b46e509db11fa8fe30d09 files/digest-xf86-input-joystick-1.0.0.5 150
 SHA256 b3fe91a12b27f6e7dc2d94f436706b4c61c10d9c3eaba75ccedcb68075b08f21 files/digest-xf86-input-joystick-1.0.0.5 150
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 650234bcf7242204d2d853b68afdeb93 xf86-input-joystick-1.0.0.5.ebuild 549
-RMD160 443f1c1ca990408c56ad6137b1b0a859534fb035 xf86-input-joystick-1.0.0.5.ebuild 549
-SHA256 04628595b6a10e8e79ea64621c0ebd4f6d5339c3a6ab9d48736c0ee3c98b9b5b xf86-input-joystick-1.0.0.5.ebuild 549
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6cs2+ySkm8kpY0RAnQKAKC1uddvj8vOpwyi7dOk73aaoupgWwCfRfBN
-+tZsXRxWPv2nQSkGP/onAEU=
-=p3CS
------END PGP SIGNATURE-----
+MD5 41009fe4faffb00e56d1bb04dbd6f3d1 xf86-input-joystick-1.0.0.5.ebuild 556
+RMD160 fef74ca3cd97168a945e7f20c5842afddc4c5a4f xf86-input-joystick-1.0.0.5.ebuild 556
+SHA256 27cf9b393510ebcfd1a978bcfe2149ffe25ebd97c44eae16ee92a043c6768b11 xf86-input-joystick-1.0.0.5.ebuild 556
