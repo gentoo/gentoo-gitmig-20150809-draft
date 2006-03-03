@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cc88e0955b2b2a0b046167bb8de2a866 ChangeLog 2232
-RMD160 b8a901cfa5421ee94a7b1cf7442f15a7f91166d3 ChangeLog 2232
-SHA256 92947f3982e9289039d84d6b7d987baccf2bc0cb4143bc4318112bdae2e8b570 ChangeLog 2232
-MD5 74983a75c1a114ebe0c58e4016935e91 files/digest-xf86-input-citron-2.1.1.5 334
-RMD160 73204967bfc2672c75896102ba5dfb182757214f files/digest-xf86-input-citron-2.1.1.5 334
-SHA256 fb4e89f039a8250fb715bc6c4889075f9d848869a184071c6a94fc0f30fd183c files/digest-xf86-input-citron-2.1.1.5 334
+MD5 f35c0c271f01c47901f8a075efc30e9f ChangeLog 2534
+RMD160 82df853c628df664708631ad217fe605fa3ee04c ChangeLog 2534
+SHA256 b4dcd924ecea3badf5b1e2e1c0f6e119738c1fa74bf1c4479c85528ced838911 ChangeLog 2534
+MD5 40ee8dec94f9f9b41954cc4971fd455c files/digest-xf86-input-citron-2.1.5 530
+RMD160 3f605688a8e1bf09f910b036fd13fe10d8aad003 files/digest-xf86-input-citron-2.1.5 530
+SHA256 62d236f73472881df8c3ff3d529b6ed0a5ea0976aab39418049d81e1f9b87822 files/digest-xf86-input-citron-2.1.5 530
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 9a53e27352398a6bd6cd7996f4be12b3 xf86-input-citron-2.1.1.5.ebuild 550
-RMD160 478cb0be3f70893d3f297beccb4c984b67e51f80 xf86-input-citron-2.1.1.5.ebuild 550
-SHA256 87ccb58b073be296a1499f01a461f326da94133ce5a1d97e7ba029c64e00d462 xf86-input-citron-2.1.1.5.ebuild 550
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6UO2+ySkm8kpY0RAjv7AKC/BqHXjI0oh8PYqchpPh3B/nwQlQCdEvsx
-TecotHtUp/s9f4QD2HwqnYA=
-=5L5T
------END PGP SIGNATURE-----
+MD5 df8cf5168a5fcbaf661506fe43f0535f xf86-input-citron-2.1.5.ebuild 551
+RMD160 6cd5cb736de3a5b9ebde79bab2e32388e3ae556c xf86-input-citron-2.1.5.ebuild 551
+SHA256 70b202f7aa481f55e15ceeb5cbb93d645150a4b57832d40af0d81648675638f7 xf86-input-citron-2.1.5.ebuild 551

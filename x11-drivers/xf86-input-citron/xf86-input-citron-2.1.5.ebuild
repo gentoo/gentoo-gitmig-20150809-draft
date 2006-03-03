@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-citron/xf86-input-citron-2.1.1.5.ebuild,v 1.8 2006/03/03 02:07:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-citron/xf86-input-citron-2.1.5.ebuild,v 1.1 2006/03/03 03:23:24 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
