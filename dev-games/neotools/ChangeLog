@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/neotools
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/ChangeLog,v 1.8 2005/09/30 18:42:04 wolf31o2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/ChangeLog,v 1.9 2006/03/03 20:45:24 tupone Exp $
+
+*neotools-0.8.2 (03 Mar 2006)
+
+  03 Mar 2006; <Tupone@gentoo.org> +files/neotools-0.8.2-errno.patch,
+  +neotools-0.8.2.ebuild:
+  Version bump and fix bug #118996 (errno.h include missing)
 
   30 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> neotools-0.8.1.ebuild:
   Removed INSTALL.
