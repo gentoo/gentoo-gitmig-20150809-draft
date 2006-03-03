@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.161 2006/02/28 02:56:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.162 2006/03/03 21:54:52 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -333,9 +333,9 @@ unpack_2_6() {
 	# this file is required for other things to build properly, so we
 	# autogenerate it ... touch .config to keep version.h build from
 	# spitting out an annoying warning
-	make -s mrproper ${xmakeopts} || die "make mrproper failed"
 	touch .config
 	make -s include/linux/version.h ${xmakeopts} || die "make include/linux/version.h failed"
+	make -s mrproper ${xmakeopts} || die "make mrproper failed"
 	rm -f .config
 }
 
