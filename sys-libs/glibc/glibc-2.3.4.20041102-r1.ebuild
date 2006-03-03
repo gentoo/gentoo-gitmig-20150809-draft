@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.24 2006/01/26 02:17:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.25 2006/03/03 14:13:40 blubb Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -67,8 +67,6 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 	selinux? ( !build? ( sys-libs/libselinux ) )"
 RDEPEND="nls? ( sys-devel/gettext )
 	selinux? ( !build? ( sys-libs/libselinux ) )"
-# until amd64's 2004.3 is purged out of existence
-PDEPEND="amd64? ( multilib? ( ~app-emulation/emul-linux-x86-glibc-${PV} ) )"
 
 PROVIDE="virtual/libc"
 

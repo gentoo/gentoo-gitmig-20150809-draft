@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r2.ebuild,v 1.11 2006/01/26 02:17:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r2.ebuild,v 1.12 2006/03/03 14:13:40 blubb Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1147,9 +1147,6 @@ if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 		;;
 	esac
 fi
-
-# until amd64's 2004.3 is purged out of existence
-PDEPEND="amd64? ( multilib? ( ~app-emulation/emul-linux-x86-glibc-${PV} ) )"
 
 pkg_setup() {
 	if use nptlonly && ! use nptl ; then
