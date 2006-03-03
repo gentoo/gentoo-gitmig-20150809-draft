@@ -1,37 +1,50 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.1.8.ebuild,v 1.5 2006/03/03 19:18:10 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.2.0.ebuild,v 1.1 2006/03/03 19:18:10 zaheerm Exp $
 
-inherit eutils
+inherit eutils gnome2
 
 DESCRIPTION="Flumotion Streaming server"
 HOMEPAGE="http://www.fluendo.com"
 SRC_URI="http://www.flumotion.net/src/flumotion/${P}.tar.bz2"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="v4l speex jpeg dv"
+KEYWORDS="~x86 ~amd64"
+IUSE="v4l speex jpeg dv gstreamer08"
 SLOT="0"
 
 RDEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/glib-2.4
 	>=gnome-base/libglade-2
-	|| ( =media-libs/gstreamer-0.8.9-r2
-	=media-libs/gstreamer-0.8.10
-	=media-libs/gstreamer-0.8.11 )
-	=media-libs/gst-plugins-0.8*
-	=media-plugins/gst-plugins-gnomevfs-0.8*
-	v4l? ( =media-plugins/gst-plugins-v4l-0.8* )
-	=media-plugins/gst-plugins-ogg-0.8*
-	=media-plugins/gst-plugins-theora-0.8*
-	=media-plugins/gst-plugins-vorbis-0.8*
-	=media-plugins/gst-plugins-libpng-0.8*
-	speex? ( =media-plugins/gst-plugins-speex-0.8* )
-	dv? ( =media-plugins/gst-plugins-dv-0.8*
-	      =media-plugins/gst-plugins-raw1394-0.8* )
+	gstreamer08? ( =media-libs/gstreamer-0.8*
+		=media-libs/gst-plugins-0.8*
+		=media-plugins/gst-plugins-gnomevfs-0.8*
+		=media-plugins/gst-plugins-ogg-0.8*
+		=media-plugins/gst-plugins-theora-0.8*
+		=media-plugins/gst-plugins-vorbis-0.8*
+		=media-plugins/gst-plugins-libpng-0.8*
+		=dev-python/gst-python-0.8*
+		v4l? ( =media-plugins/gst-plugins-v4l-0.8* )
+		speex? ( =media-plugins/gst-plugins-speex-0.8* )
+		dv? ( =media-plugins/gst-plugins-dv-0.8* ) )
+	!gstreamer08? ( =media-libs/gstreamer-0.10*
+		=media-libs/gst-plugins-base-0.10*
+		=media-libs/gst-plugins-good-0.10*
+		=media-plugins/gst-plugins-gnomevfs-0.10*
+		=media-plugins/gst-plugins-ogg-0.10*
+		=media-plugins/gst-plugins-theora-0.10*
+		=media-plugins/gst-plugins-vorbis-0.10*
+		=media-plugins/gst-plugins-libpng-0.10*
+		=dev-python/gst-python-0.10*
+		v4l? ( =media-plugins/gst-plugins-v4l-0.10* )
+		speex? ( =media-plugins/gst-plugins-speex-0.10* )
+		dv? ( =media-plugins/gst-plugins-dv-0.10*
+			=media-plugins/gst-plugins-raw1394-0.10* ) )
 	>=dev-python/pygtk-2.4.0
-	=dev-python/gst-python-0.8*
-	>=dev-python/twisted-1.3.0
+	|| ( ( >=dev-python/twisted-2.0
+			>=dev-python/twisted-web-0.5.0-r1
+			>=dev-python/twisted-names-0.2.0 )
+			=dev-python/twisted-1.3* )
 	dev-python/imaging
 	"
 
@@ -44,7 +57,13 @@ DOCS="AUTHORS COPYING ChangeLog INSTALL \
 	  NEWS README TODO"
 
 src_compile() {
-	econf --localstatedir=/var || die
+	mkdir -p "${T}/home"
+	export HOME="${T}/home"
+	export GST_REGISTRY=${T}/home/registry.cache.xml
+	addpredict /root/.gconfd
+	addpredict /root/.gconf
+	addpredict /var/lib/cache/gstreamer-0.8
+	econf --disable-install-schemas --localstatedir=/var || die
 
 	emake || die
 	# fix ${exec_prefix} not being expanded
@@ -69,9 +88,7 @@ src_install() {
 	dodir /etc/flumotion/managers/default/flows
 	dodir /etc/flumotion/workers
 
-	insinto /etc/flumotion/managers/default/flows
 	cd ${S}/conf
-	doins managers/default/flows/ogg-test-theora.xml
 	insinto /etc/flumotion/managers/default
 	doins managers/default/planet.xml
 	insinto /etc/flumotion/workers
@@ -80,7 +97,7 @@ src_install() {
 	insinto /etc/flumotion
 	doins default.pem
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/flumotion-init-0.1.8 flumotion
+	newexe ${FILESDIR}/flumotion-init-0.2.0 flumotion
 
 	keepdir /var/run/flumotion
 	keepdir /var/log/flumotion
