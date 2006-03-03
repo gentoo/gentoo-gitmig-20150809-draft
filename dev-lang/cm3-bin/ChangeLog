@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/cm3-bin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/ChangeLog,v 1.5 2005/04/26 19:48:58 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/ChangeLog,v 1.6 2006/03/03 13:55:52 blubb Exp $
+
+  03 Mar 2006; Simon Stelling <blubb@gentoo.org>
+  cm3-bin-5.2.7_pre050331.ebuild:
+  remove the dependency on app-emulation/emul-linux-x86-glibc since 2004.3 has
+  been deprecated a while ago
 
   26 Apr 2005; Aron Griffis <agriffis@gentoo.org> cm3-bin-5.2.6.ebuild,
   cm3-bin-5.2.7_pre050331.ebuild:
