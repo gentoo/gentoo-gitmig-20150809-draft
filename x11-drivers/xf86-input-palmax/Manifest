@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 11deaeb03154f12c5138b89c17b76e75 ChangeLog 2232
-RMD160 4881539728efb44ae48609186a2e095b3f230985 ChangeLog 2232
-SHA256 ae168e26d03f11627d0e98330e2eab9682a7aee9b9f9eaa6276cdb79e031eda5 ChangeLog 2232
+MD5 98c0ee74d2324c18bcda56a2d924cac5 ChangeLog 2355
+RMD160 ad37068e27f2cd8004de9b6bac1ff9c5ada95869 ChangeLog 2355
+SHA256 2ee09e17efef5536c763749dab6ec1f8ff1144d62964f5fff92f674cc6be2488 ChangeLog 2355
 MD5 1322c99aaad557106ebe7dde25cc976d files/digest-xf86-input-palmax-1.0.0.5 148
 RMD160 75d1abc9b08915174bcb5c4d2f33165731edd0da files/digest-xf86-input-palmax-1.0.0.5 148
 SHA256 97dcae6fb7b7de7de176c4401c9011c9e3b043b109bfb946e5e096b73bc0146f files/digest-xf86-input-palmax-1.0.0.5 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 56864f5078c55104f5e8f3da96afb0fc xf86-input-palmax-1.0.0.5.ebuild 550
-RMD160 73a77f3c635432fd58f7e536bbef9a0ca06ea83e xf86-input-palmax-1.0.0.5.ebuild 550
-SHA256 2ce70a666be0f1399fed5ed82d5664e4c00eb545ecfc0282dc3cfdafc957702e xf86-input-palmax-1.0.0.5.ebuild 550
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6Oq2+ySkm8kpY0RAqMoAJ9JNU8CN8fgbaceuuYgSxxyr9KlVgCfWaRw
-hcFMgPeU/ZLgxZF/65V57KY=
-=6cOZ
------END PGP SIGNATURE-----
+MD5 8a2094969bb09a7a7a2ee62665fe070b xf86-input-palmax-1.0.0.5.ebuild 557
+RMD160 dbea60b24a268c5feb599f11046a1dc4dbf18921 xf86-input-palmax-1.0.0.5.ebuild 557
+SHA256 7f94b3c3e608d4329785ad1fa49c9fa6c80b00c8d306a0707f7c24e101154206 xf86-input-palmax-1.0.0.5.ebuild 557
