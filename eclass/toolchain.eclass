@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.245 2006/01/18 23:05:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.246 2006/03/03 02:14:50 halcy0n Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1024,9 +1024,9 @@ gcc_src_unpack() {
 		 version_string="${version_string} ${BRANCH_UPDATE}"
 	fi
 
-	version_string="${version_string} (${release_version})"
-	einfo "patching gcc version: ${version_string}"
-	gcc_version_patch "${version_string}"
+
+	einfo "patching gcc version: ${version_string} (${release_version})"
+	gcc_version_patch "${version_string}" "${release_version}"
 
 	# Misdesign in libstdc++ (Redhat)
 	if [[ ${GCCMAJOR} -ge 3 ]] && [[ -e ${S}/libstdc++-v3/config/cpu/i486/atomicity.h ]] ; then
@@ -2110,8 +2110,16 @@ do_gcc_config() {
 gcc_version_patch() {
 	[[ -z $1 ]] && die "no arguments to gcc_version_patch"
 
-	sed -i -e "s~\(const char version_string\[\] = \"\).*\(\".*\)~\1$1\2~" \
-	       -e 's~http:\/\/gcc\.gnu\.org\/bugs\.html~http:\/\/bugs\.gentoo\.org\/~' ${S}/gcc/version.c || die "failed to update version.c with Gentoo branding."
+	if grep -qs VERSUFFIX "${S}"/gcc/version.c ; then
+		sed -i -e "s~VERSUFFIX \"\"~VERSUFFIX \" ($2)\"~" "${S}"/gcc/version.c \
+		|| die "failed to update VERSUFFIX with Gentoo branding"
+	else
+		version_string="$1 ($2)"
+		sed -i -e "s~\(const char version_string\[\] = \"\).*\(\".*\)~\1$version_string\2~" \
+		        "${S}"/gcc/version.c || die "failed to update version.c with Gentoo branding."
+	fi
+	sed -i -e 's~gcc\.gnu\.org\/bugs\.html~bugs\.gentoo\.org\/~'\
+	"${S}"/gcc/version.c || die "Failed to change the bug URL"
 }
 
 # The purpose of this DISGUSTING gcc multilib hack is to allow 64bit libs
