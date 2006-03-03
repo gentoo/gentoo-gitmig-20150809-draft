@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.2.0.21-r1.ebuild,v 1.1 2006/01/30 17:53:19 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.2.0.21-r1.ebuild,v 1.2 2006/03/03 14:03:49 blubb Exp $
 
 inherit eutils qt3 rpm
 
@@ -17,8 +17,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="static arts esd"
 DEPEND="
-	amd64? ( app-emulation/emul-linux-x86-glibc
-		>=app-emulation/emul-linux-x86-xlibs-1.2
+	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.2
 		>=app-emulation/emul-linux-x86-baselibs-2.1.1
 		!static? ( >=app-emulation/emul-linux-x86-qtlibs-1.1 ) )
 	x86? ( >=sys-libs/glibc-2.3.2 )"
