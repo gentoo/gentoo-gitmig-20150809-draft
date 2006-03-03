@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/pecl-radius
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-radius/ChangeLog,v 1.1 2006/02/28 11:36:24 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-radius/ChangeLog,v 1.2 2006/03/03 07:33:42 sebastian Exp $
+
+  03 Mar 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  pecl-radius-1.2.4.ebuild:
+  Fix whitespace.
 
 *pecl-radius-1.2.4 (28 Feb 2006)
 
