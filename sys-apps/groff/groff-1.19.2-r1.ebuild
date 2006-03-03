@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.2.ebuild,v 1.1 2005/11/18 05:30:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.2-r1.ebuild,v 1.1 2006/03/03 01:57:55 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -75,6 +75,10 @@ src_install() {
 		mandir="${D}"/usr/share/man \
 		infodir="${D}"/usr/share/info \
 		install || die
+
+	# The following links are required for man #123674
+	dosym eqn /usr/bin/geqn
+	dosym tbl /usr/bin/gtbl
 
 	dodoc BUG-REPORT ChangeLog FDL MORE.STUFF NEWS \
 		PROBLEMS PROJECTS README REVISION TODO VERSION

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/groff
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.60 2005/11/18 05:30:11 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.61 2006/03/03 01:57:55 vapier Exp $
+
+*groff-1.19.2-r1 (03 Mar 2006)
+
+  03 Mar 2006; Mike Frysinger <vapier@gentoo.org> +groff-1.19.2-r1.ebuild:
+  Add back in symlinks for man #123674 by Justin Findlay.
 
 *groff-1.19.2 (18 Nov 2005)
 
