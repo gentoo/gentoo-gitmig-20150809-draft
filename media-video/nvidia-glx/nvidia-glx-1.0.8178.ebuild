@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8178.ebuild,v 1.3 2006/01/14 21:34:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8178.ebuild,v 1.4 2006/03/03 23:52:47 vapier Exp $
 
 inherit eutils multilib versionator
 
@@ -19,11 +19,9 @@ SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PAC
 
 LICENSE="NVIDIA"
 SLOT="0"
-
 KEYWORDS="-* ~amd64 ~x86"
-
-RESTRICT="nostrip multilib-pkg-force"
 IUSE="dlloader"
+RESTRICT="nostrip multilib-pkg-force"
 
 RDEPEND="|| ( >=x11-base/xorg-server-0.99.1-r7 virtual/x11 )
 	 || ( media-libs/mesa virtual/x11 )
@@ -268,7 +266,7 @@ pkg_postinst() {
 	echo
 	einfo "You may also be interested in media-video/nvidia-settings"
 	echo
-	einfo "nVidia have requested that any bug reports submitted have the"
+	einfo "nVidia has requested that any bug reports submitted have the"
 	einfo "output of /usr/bin/nvidia-bug-report.sh included."
 }
 
