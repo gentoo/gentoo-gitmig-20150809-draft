@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9eb6f3946a55d9e3d9aae83493f50bdd ChangeLog 2350
 RMD160 a0f8479202932fffdd7ef94a5c192b60cbd40daa ChangeLog 2350
 SHA256 b90e8d5957dc27f5e945673aa661b7a4a58e7a9268d370ccf9c425039dc342b2 ChangeLog 2350
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 627601b0c2c4e7fb4cc27edb922a1459 xf86-input-digitaledge-1.0.1.3.ebuild 565
 RMD160 f5b36c74d5bddf2e35a27ce0ccf7dd25a67d6535 xf86-input-digitaledge-1.0.1.3.ebuild 565
 SHA256 9eb47b04dbb4892c05c2cbf4f8716bf4f63f0e5087eef664a5e2efb11909f31f xf86-input-digitaledge-1.0.1.3.ebuild 565
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEB6Xi2+ySkm8kpY0RAvEoAJ4puDsrjku04kLr61qWG4NT1N/fnQCdHRfb
+1pXSaU4RuWJhPoDErk1ZZ/U=
+=jbvJ
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 414f9861a5a227d49054fa2f21f51eed ChangeLog 2356
 RMD160 4a2a8e58ef04dedf45fff5b4478129cbda64be4f ChangeLog 2356
 SHA256 cc67e67a2751f3748346007580f969f1348c02cda436df28a6fca90145b1c674 ChangeLog 2356
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 5bbf0b21331ecd1ec67d80d409ff6ead xf86-input-elographics-1.0.0.5.ebuild 565
 RMD160 4abb4219d32bf17504d3827155d7ba25d31cd820 xf86-input-elographics-1.0.0.5.ebuild 565
 SHA256 54c5f50ba96df9593b8f2d1ae5d1367ba088141e69be5eca66a6131170c1c58c xf86-input-elographics-1.0.0.5.ebuild 565
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEB6P92+ySkm8kpY0RAmj8AJ9oE9nbI8YOqJquGvX+72CKjFv9lwCgpREV
+gs5z5ZTt41yNqI4tnRbXAdg=
+=YkA7
+-----END PGP SIGNATURE-----

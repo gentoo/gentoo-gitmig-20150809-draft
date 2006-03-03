@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 543e7010609f147ebcc3c1a743b2ffed ChangeLog 2280
 RMD160 f99c7ae1909c26acfceced830222a69f1d091235 ChangeLog 2280
 SHA256 066dfbbbde57df5bc4d41457b450b80cee6c6bb129a993353c648fc3463112e7 ChangeLog 2280
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 918a38bc6d63cbf5e4949e74aecf3006 xf86-input-hyperpen-1.0.0.5.ebuild 556
 RMD160 b6e78dd99b5fd8826acbe4fb49237bcef5731839 xf86-input-hyperpen-1.0.0.5.ebuild 556
 SHA256 8cc7b3e18d0eb6b5fe2bf1bbac7931b3f4e01a0b0c5181dec4314a2377aaeca3 xf86-input-hyperpen-1.0.0.5.ebuild 556
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEB6U42+ySkm8kpY0RAm4mAJ0SLl6LOdU15qif+1KmGMDVKrQcVQCgpQsc
+aduHv5DfDTh02if/Ipgmlhw=
+=Xzvu
+-----END PGP SIGNATURE-----

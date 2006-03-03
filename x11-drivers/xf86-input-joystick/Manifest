@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c3bea162bfb12fa3b58dbea86fb1bf40 ChangeLog 2158
 RMD160 4a3590ae22b2b465233cb836b5452c15b37bbcc7 ChangeLog 2158
 SHA256 857d8219192c980315c7fc0bc89dc5e3075beea8d9f5e31ac8e16e022ee91603 ChangeLog 2158
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 650234bcf7242204d2d853b68afdeb93 xf86-input-joystick-1.0.0.5.ebuild 549
 RMD160 443f1c1ca990408c56ad6137b1b0a859534fb035 xf86-input-joystick-1.0.0.5.ebuild 549
 SHA256 04628595b6a10e8e79ea64621c0ebd4f6d5339c3a6ab9d48736c0ee3c98b9b5b xf86-input-joystick-1.0.0.5.ebuild 549
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEB6cs2+ySkm8kpY0RAnQKAKC1uddvj8vOpwyi7dOk73aaoupgWwCfRfBN
++tZsXRxWPv2nQSkGP/onAEU=
+=p3CS
+-----END PGP SIGNATURE-----

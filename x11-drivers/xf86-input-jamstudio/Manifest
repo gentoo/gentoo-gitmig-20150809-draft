@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 48a86754552039b788c6dd19c20641be ChangeLog 2306
 RMD160 8e97b6a73c7fbbc91f5e569f16cf730bf33ad873 ChangeLog 2306
 SHA256 764cd22674ef1381a6ed63b6c10ee83c4a2db6b9606254446b6f8b2e71d9a0a8 ChangeLog 2306
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 d17785e54b1a1eb01af830ef2a3e0ab3 xf86-input-jamstudio-1.0.0.5.ebuild 559
 RMD160 187cde2f263b2b323274fdf6ebc66367544e6ba7 xf86-input-jamstudio-1.0.0.5.ebuild 559
 SHA256 bfd5d80a833a6062f262bfdbed73fe053be366e46cc7b406975e91f88ebb9b6e xf86-input-jamstudio-1.0.0.5.ebuild 559
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEB6QR2+ySkm8kpY0RAp73AKCGLnOeqGfCmiMuk1YcBiPb1AbZxACggORp
+gxbjxCIcuq1i40F+pZr01zs=
+=gJP+
+-----END PGP SIGNATURE-----
