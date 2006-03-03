@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.9.13.ebuild,v 1.2 2005/09/17 21:32:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.9.13.ebuild,v 1.3 2006/03/03 15:57:09 mr_bones_ Exp $
 
 inherit games
 
@@ -13,14 +13,16 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.1.5
+RDEPEND=">=media-libs/libsdl-1.1.5
 	media-libs/jpeg
 	sys-libs/zlib
 	media-libs/libpng
 	media-libs/sdl-image
 	media-libs/sdl-net
 	media-libs/sdl-mixer
-	virtual/x11"
+	|| ( x11-libs/libX11 virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( x11-libs/libXt virtual/x11 )"
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
