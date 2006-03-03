@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.14 2006/01/28 23:26:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.15 2006/03/03 01:46:36 lu_zero Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # x86 profile.  This works, for example, if another architecture's
@@ -14,7 +14,6 @@
 -sse2
 -3dnow
 -3dnowext
--win32codecs
 -kqemu
 
 # Unmask nvidia XvMC support
@@ -33,3 +32,7 @@
 -video_cards_nvidia
 -video_cards_fglrx
 -video_cards_vmware
+
+#codec support
+-win32codecs
+-x264

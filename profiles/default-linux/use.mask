@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.17 2005/10/30 19:32:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.18 2006/03/03 01:46:36 lu_zero Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -42,3 +42,6 @@ n64
 
 # Only used by mips and old amd64 profiles
 multilib
+
+# ppc and x86/amd64
+x264

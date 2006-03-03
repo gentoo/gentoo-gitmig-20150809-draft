@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.31 2006/02/05 09:00:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.32 2006/03/03 01:46:36 lu_zero Exp $
 
 # UNKNOWN - SECTION
 
@@ -16,6 +16,10 @@ drac
 # 2005/12/01 - Daniel Gryniewicz <dang@gentoo.org>
 # There is now a kqemu that works and is stable on amd64
 -kqemu
+
+# 2006/03/03 - Luca Barbato <lu_zero@gentoo.org>
+# codec support x264
+-x264
 
 # 2006/02/05 - Donnie Berkholz <spyderous@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
