@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d2dc166a2697e2f5283cb60d7ddd5bb5 ChangeLog 1137
-MD5 b8bad24fa9de992f9f7eff5a41b98a86 emul-linux-x86-compat-1.0-r1.ebuild 971
-MD5 ff6244bd767be7b762499ec878b384ba emul-linux-x86-compat-1.0.ebuild 924
+MD5 49c3e5933e3d546b61e5b63963be8f4b ChangeLog 1369
+RMD160 de1d7de43d58bfb6c3eb0f5c0ce924fbfe898de5 ChangeLog 1369
+SHA256 b6ce81de8c5060c9a513c7be940ab4ad953ad051d771a8637f83ff3b864d5d8b ChangeLog 1369
+MD5 4f447142c6da5607f3e3a132a75d6245 emul-linux-x86-compat-1.0-r1.ebuild 929
+RMD160 b5a15c5428bee78bdf661073cedd0c840334c7df emul-linux-x86-compat-1.0-r1.ebuild 929
+SHA256 bc85ed234567c2ce9749f8298129c8abd86f5bcaae1588d2250204910b8887ce emul-linux-x86-compat-1.0-r1.ebuild 929
+MD5 89d1653d54c0d55930eaef471a649ed9 emul-linux-x86-compat-1.0.ebuild 882
+RMD160 b88b8415663ef6ca5f42c945889a6fdfa6247e8e emul-linux-x86-compat-1.0.ebuild 882
+SHA256 df870f51084d44f73f30ca967858ff90d8110a0318a2bbee326067cc466bc78f emul-linux-x86-compat-1.0.ebuild 882
 MD5 3ac141b3a5850345c246b5c4ce924ccc files/75emul-linux-x86-compat 51
+RMD160 1c52b6d125a8ee61fb909a085a8c935096e2bcb4 files/75emul-linux-x86-compat 51
+SHA256 6d5b1311705d20d551fd993fcacef7237e818dcb39a757e00a0943c0a4b4dc24 files/75emul-linux-x86-compat 51
 MD5 4c37476a27e99f8df37a1c0b0288c74e files/digest-emul-linux-x86-compat-1.0 79
+RMD160 08e3f5f2d7b42150153c9429f50e55e6b5b0597a files/digest-emul-linux-x86-compat-1.0 79
+SHA256 2bd08ebaa147386096c760d2eff1cf69e2c3a235f9421845589dd2c4fc9ca847 files/digest-emul-linux-x86-compat-1.0 79
 MD5 4c37476a27e99f8df37a1c0b0288c74e files/digest-emul-linux-x86-compat-1.0-r1 79
+RMD160 08e3f5f2d7b42150153c9429f50e55e6b5b0597a files/digest-emul-linux-x86-compat-1.0-r1 79
+SHA256 2bd08ebaa147386096c760d2eff1cf69e2c3a235f9421845589dd2c4fc9ca847 files/digest-emul-linux-x86-compat-1.0-r1 79
 MD5 5e8c61d551dad88488a66992865ba737 metadata.xml 290
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvZUP2G5bA0cA/ScRAnpKAKDANWmkI2APw1kOGD0hVZGgowCQ7QCfYmnL
-NvHkVdqOQcxvRJqKCCw/+GA=
-=zGKH
------END PGP SIGNATURE-----
+RMD160 29c2eafcf00e4b115ba5ae455218ee6eebda67ae metadata.xml 290
+SHA256 8f04703141bc8cd55a0e56bf7593f657a891ed4796e71e3d6e8770c7ea098c30 metadata.xml 290
