@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.502 2006/03/02 19:31:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.503 2006/03/03 02:24:32 halcy0n Exp $
+
+*gcc-4.1.0 (03 Mar 2006)
+
+  03 Mar 2006; Mark Loeser <halcy0n@gentoo.org>
+  -gcc-4.1.0_pre20060223.ebuild, +gcc-4.1.0.ebuild:
+  Bump to 4.1.0
 
   02 Mar 2006; Martin Schlemmer <azarah@gentoo.org>
   +files/awk/fixlafiles.awk-no_gcc_la:

@@ -1,8 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0_pre20060223.ebuild,v 1.2 2006/02/25 05:51:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0.ebuild,v 1.1 2006/03/03 02:24:33 halcy0n Exp $
+
+PATCH_VER="1.0"
+UCLIBC_VER="1.0"
 
 ETYPE="gcc-compiler"
+
+# whether we should split out specs files for multiple {PIE,SSP}-by-default
+# and vanilla configurations.
+SPLIT_SPECS=no #${SPLIT_SPECS-true} hard disable until #106690 is fixed
 
 inherit toolchain
 
@@ -10,7 +17,7 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+s
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="-*"
+KEYWORDS="~x86"
 
 RDEPEND="!sys-devel/hardened-gcc
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
@@ -43,24 +50,3 @@ DEPEND="${RDEPEND}
 PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )
 	x86? ( !nocxx? ( !elibc_uclibc? ( !build? ( =virtual/libstdc++-3.3 ) ) ) )"
 
-pkg_setup() {
-	if [ -z $I_PROMISE_TO_SUPPLY_PATCHES_WITH_BUGS ] ; then
-		die "Please \`export I_PROMISE_TO_SUPPLY_PATCHES_WITH_BUGS=1\` or define it in your make.conf if you want to use this ebuild.  This is to try and cut down on people filing bugs for a compiler we do not currently support."
-	fi
-}
-
-src_unpack() {
-	toolchain_src_unpack
-
-	echo ${PV/_/-} > "${S}"/gcc/BASE-VER
-	echo "" > "${S}"/gcc/DATESTAMP
-}
-
-pkg_postinst() {
-	toolchain_pkg_postinst
-
-	einfo "This gcc-4 ebuild is provided for your convenience, and the use"
-	einfo "of this compiler is not supported by the Gentoo Developers."
-	einfo "Please file bugs related to gcc-4 with upstream developers."
-	einfo "Compiler bugs should be filed at http://gcc.gnu.org/bugzilla/"
-}
