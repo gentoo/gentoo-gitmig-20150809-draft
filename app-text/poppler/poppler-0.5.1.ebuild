@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.1.ebuild,v 1.1 2006/03/03 19:11:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.1.ebuild,v 1.2 2006/03/03 21:58:35 dang Exp $
 
 DESCRIPTION="Poppler is a PDF rendering library based on the xpdf-3.0 code base."
 HOMEPAGE="http://poppler.freedesktop.org"
@@ -27,6 +27,7 @@ src_compile() {
 		--disable-poppler-qt \
 		--disable-gtk-test \
 		--enable-opi \
+		--disable-cairo-output \
 		--enable-xpdf-headers \
 		$(use_enable jpeg libjpeg) \
 		|| die "configuration failed"
