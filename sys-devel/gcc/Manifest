@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f29b56c9561e6f6398e12dcbfb852396 ChangeLog 102263
 RMD160 5da43e01a157fb86f9b29396f9f2b4a2cf005ff6 ChangeLog 102263
 SHA256 bfe35be9d1ad4a7cb3ec94f41b36b5356f285ae86f94ff517d23a87317e9b349 ChangeLog 102263
@@ -247,9 +250,6 @@ SHA256 e9b63d3644c0c10e871d5bd94ceae55bec0726b76e9a7c43c83daf6c840dfb5c files/st
 MD5 d71c91009df788366867cb67fc875d6d files/stubs/gcc-4.0-ssp-stub.patch 1068
 RMD160 a72cfd5921084366d8ed93786254c37b3cd782e1 files/stubs/gcc-4.0-ssp-stub.patch 1068
 SHA256 259b08fc6ba1a5fcc6848c1a0742e9b90dd43985c61fab4ea2e9e79ec795d982 files/stubs/gcc-4.0-ssp-stub.patch 1068
-MD5 efd3cd0393251c31ca584bae3004de39 files/stubs/gcc-4.1-htb-stub.patch 676
-RMD160 1bd8f095e5bf7814336810fbf24ec5baabc111e8 files/stubs/gcc-4.1-htb-stub.patch 676
-SHA256 2e9ac4eb200a6be96f524613fa0864afb5a3e487284d8401758a108bfc6f3b9b files/stubs/gcc-4.1-htb-stub.patch 676
 MD5 1c3582bb4238e245158cdb6efff44318 gcc-2.95.3-r9.ebuild 7578
 RMD160 02df011b78b81d8d51b53aed592a2f0729c37872 gcc-2.95.3-r9.ebuild 7578
 SHA256 671f67d21a42492bda655bbcd977831669cec21d3b45bcfbb55d97b26e612fd9 gcc-2.95.3-r9.ebuild 7578
@@ -295,3 +295,10 @@ SHA256 0e7417e4294f3ce2ab6454253c9d96c474156cb48eb0e559bdd5f288110733e0 gcc-4.1.
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
 SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEB8bp2+ySkm8kpY0RAkxJAJ4zY+X14KY9rocq+0SkmIyyhai7PgCdE7t5
+2dY9Ts42Gvf/wafWSxPuF2k=
+=nW2d
+-----END PGP SIGNATURE-----
