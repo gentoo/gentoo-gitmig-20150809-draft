@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3.ebuild,v 1.3 2005/07/15 21:11:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3.ebuild,v 1.4 2006/03/03 04:30:24 robbat2 Exp $
 
 inherit java-pkg
 
@@ -37,6 +37,6 @@ src_install() {
 	dodoc CHANGES.txt README.txt
 	java-pkg_newjar build/lucene-1.5-rc1-dev.jar ${PN}.jar
 
-	use doc && java-pkg_dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/* build/docs/*
 	use source && java-pkg_dosrc src/java/org
 }
