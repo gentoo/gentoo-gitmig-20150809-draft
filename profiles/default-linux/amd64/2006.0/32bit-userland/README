@@ -1,11 +1,9 @@
-Known bugs with this profile:
+Disclaimer: Don't even think about using this profile outside a chroot.
+All problems related to the profile should block tracker bug #124816.
 
-* bug 119012
-  -> linux-headers breaks
-  -> all packages which provide kernel modules break
-* configure scripts using uname -m fail
-  -> openssl breaks
-* python-packages must use the same ABI as dev-lang/python
-* bug 118815
-  -> nothing broken per-se, but without this patch switching profiles is harder
-* emul-packages get pulled in although needless
+Since getting this profile running with a stage3 is rather... "tricky",
+I've put together an experimental stage:
+
+http://dev.gentoo.org/~blubb/32bit-userland.tar.bz2
+
+Have fun!
