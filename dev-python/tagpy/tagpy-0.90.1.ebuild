@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.90.1.ebuild,v 1.1 2006/03/03 14:09:00 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.90.1.ebuild,v 1.2 2006/03/03 18:52:49 sbriesen Exp $
 
 inherit distutils
 
@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64"
 IUSE="examples"
 
 DEPEND="virtual/python
-	media-libs/taglib
-	dev-libs/boost"
+	>=media-libs/taglib-1.4
+	>=dev-libs/boost-1.33.0"
 
 src_install() {
 	distutils_src_install

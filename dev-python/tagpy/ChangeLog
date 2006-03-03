@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tagpy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.1 2006/03/03 14:09:00 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.2 2006/03/03 18:52:49 sbriesen Exp $
+
+  03 Mar 2006; Stefan Briesenick <sbriesen@gentoo.org> tagpy-0.90.1.ebuild:
+  fixed dependencies.
 
 *tagpy-0.90.1 (03 Mar 2006)
 
