@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130-r1.ebuild,v 1.13 2006/01/14 14:58:11 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130-r1.ebuild,v 1.14 2006/03/03 14:10:19 blubb Exp $
 
 MAN_VER="3.3.5"
 PATCH_VER="1.4"
@@ -50,7 +50,6 @@ RDEPEND="virtual/libc
 	elibc_glibc? ( >=sys-libs/glibc-2.3.2-r9 )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
-	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
 	sparc? ( hardened? ( >=sys-libs/glibc-2.3.3.20040420 ) )
 	!build? (
 		gcj? (

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r3.ebuild,v 1.9 2006/02/25 05:51:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r3.ebuild,v 1.10 2006/03/03 14:10:19 blubb Exp $
 
 PATCH_VER="1.5"
 PATCH_GCC_VER="4.0.2"
@@ -33,7 +33,6 @@ KEYWORDS="-* ~ia64"
 RDEPEND="!sys-devel/hardened-gcc
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
 	>=sys-libs/zlib-1.1.4
-	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
 	fortran? (
 	  dev-libs/gmp
 	  dev-libs/mpfr
