@@ -4,6 +4,9 @@ SHA256 8d2f4b7b6c72ad3061657389c4d9f1b98fd526195ec6df7544392562932ec496 ChangeLo
 MD5 91f251deb3a322d16a5ea68576f1c9a9 files/digest-poppler-0.4.3-r4 137
 RMD160 433f6cc961ec1aa027b262f4aed0a35cf801bc9b files/digest-poppler-0.4.3-r4 137
 SHA256 b61bc1efb297dc97a7615c8588eadc3a7bcbf1fe72d00af76053f4025b66e34d files/digest-poppler-0.4.3-r4 137
+MD5 e876193dfd11bf13602043abf0ecec21 files/digest-poppler-0.5.0-r4 241
+RMD160 4ac5024c341597422cfd4e2a1625b6ff9f1b4e6f files/digest-poppler-0.5.0-r4 241
+SHA256 51bb8ae71c9ac143ae67a7cecb81aa02fdf8798baf3bc90ebb499692ba5d3ea7 files/digest-poppler-0.5.0-r4 241
 MD5 e876193dfd11bf13602043abf0ecec21 files/digest-poppler-0.5.0-r5 241
 RMD160 4ac5024c341597422cfd4e2a1625b6ff9f1b4e6f files/digest-poppler-0.5.0-r5 241
 SHA256 51bb8ae71c9ac143ae67a7cecb81aa02fdf8798baf3bc90ebb499692ba5d3ea7 files/digest-poppler-0.5.0-r5 241
