@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyogg
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyogg/ChangeLog,v 1.17 2005/10/02 14:16:43 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyogg/ChangeLog,v 1.18 2006/03/03 13:38:49 sbriesen Exp $
+
+  03 Mar 2006; Stefan Briesenick <sbriesen@gentoo.org> pyogg-1.3-r1.ebuild:
+  added 'examples' USE flag.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> pyogg-1.3-r1.ebuild:
   Mark 1.3-r1 stable on ia64
