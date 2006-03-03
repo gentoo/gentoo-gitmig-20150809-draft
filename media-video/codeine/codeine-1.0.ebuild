@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/codeine-1.0.ebuild,v 1.1 2005/09/06 02:20:56 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/codeine-1.0.ebuild,v 1.2 2006/03/03 14:51:13 herbs Exp $
 
 inherit kde multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.methylblue.com/codeine/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 RDEPEND="media-libs/xine-lib"
@@ -27,7 +27,8 @@ src_compile(){
 	local myconf="prefix=/usr"
 	use debug && myconf="${myconf} debug=full"
 	# Fix multilib issue.
-	myconf="${myconf} libdir=/usr/$(get_libdir)"
+	myconf="${myconf} libdir=/usr/$(get_libdir)
+			qtlibs=${QTDIR}/$(get_libdir)"
 
 	scons configure ${myconf} || die
 	scons || die
