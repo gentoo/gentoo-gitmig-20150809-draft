@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 61c96e04ccab3b57cf018db8b7c7f85c ChangeLog 1724
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 d038cfec510bb0bdc8b594491732e473 shoutcast-trans-bin-0.4.0-r1.ebuild 2138
-MD5 444bda065732036d15241d5a349bbb82 files/shoutcast_trans 938
+MD5 9ddd94fd6241826344530a6945c9be53 ChangeLog 1922
+RMD160 687b6147be205bbbeac57038944d276ea8bb5d7c ChangeLog 1922
+SHA256 33550a513a6d013d0722e5cb2e5abc354cc3dfb44ff81fcfc275ef0df90cae81 ChangeLog 1922
 MD5 9ccef27495f4b1f47acfefdb67ccffab files/digest-shoutcast-trans-bin-0.4.0-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZMEOKf2g/qXtneoRAl/xAKC9VdWwoknQRY7jZSiz6xNCJI2JBQCgqexv
-dRuB8scKY37mPLNYPg8G58c=
-=BFwv
------END PGP SIGNATURE-----
+RMD160 312215e486419c7be7b734fa66957a0fb3d3bada files/digest-shoutcast-trans-bin-0.4.0-r1 67
+SHA256 71bc29718cec131c004306f0cb26fc00aade7e73ff71764be1e2ccf264ea1faf files/digest-shoutcast-trans-bin-0.4.0-r1 67
+MD5 444bda065732036d15241d5a349bbb82 files/shoutcast_trans 938
+RMD160 c95492c064274fbcae5597f669c1d5794814e4e3 files/shoutcast_trans 938
+SHA256 0ab80d64f597f501dd0d07f2c9222d15afbc9c9e4b94d8ea2a8d9190ddabd3a4 files/shoutcast_trans 938
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 509ce3e43175556b58c82d49af833f1e shoutcast-trans-bin-0.4.0-r1.ebuild 2086
+RMD160 48db1e2751bdf937ce61f913c3a57be9687d0cb5 shoutcast-trans-bin-0.4.0-r1.ebuild 2086
+SHA256 3d62ec98f1fa4ee4c7466b325d4d2bb4e4f884b2da8fe40f43ab694520cb8d1b shoutcast-trans-bin-0.4.0-r1.ebuild 2086
