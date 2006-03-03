@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/monopd-0.9.3.ebuild,v 1.3 2005/07/14 03:05:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/monopd-0.9.3.ebuild,v 1.4 2006/03/03 19:27:18 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="server for atlantik games"
 HOMEPAGE="http://unixcode.org/monopd/"
@@ -15,6 +15,12 @@ IUSE=""
 
 DEPEND=">=net-libs/libcapsinetwork-0.3.0
 	>=sys-libs/libmath++-0.0.3"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-dosfix.patch"
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
