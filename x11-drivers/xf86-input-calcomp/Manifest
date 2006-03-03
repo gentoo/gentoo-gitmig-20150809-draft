@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2e64999001fb0fb9a65ea17d7013c07d ChangeLog 2256
 RMD160 3b7557a878838399b048e0b8a3ffcd32a3ebca56 ChangeLog 2256
 SHA256 02fb6d774ef381e180ce5479c49fab6ea60a8a74de150aa9ba6cecfe78c54cf5 ChangeLog 2256
@@ -10,13 +7,6 @@ SHA256 30409b2a5fa868dfd73d7010da12b3c10b5908cc203d5be887d11e1864b466e0 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 0c9b015290ab8d815e1f2e7c6f0e6d04 xf86-input-calcomp-1.0.0.5.ebuild 549
-RMD160 d777cf8cd375a8f678029ed1e56c8232c82c16ce xf86-input-calcomp-1.0.0.5.ebuild 549
-SHA256 7839cd126ba4f0677bdcd62b53f765aa1ea4fa581a1d0d480a83b79846b28303 xf86-input-calcomp-1.0.0.5.ebuild 549
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBozZ2+ySkm8kpY0RAhb7AJ9qO7eRQAsD7iNO8vdRhp4mRhWWtwCfWau1
-SZXnM5xSaGwWvOqItfNiARw=
-=8A5b
------END PGP SIGNATURE-----
+MD5 54994c66288cf79a2b95b6ad62b66df4 xf86-input-calcomp-1.0.0.5.ebuild 553
+RMD160 2fc27d1fcd222aedede99818ae6bd57e7c280dda xf86-input-calcomp-1.0.0.5.ebuild 553
+SHA256 67d04d020f68835b4c86222c99957dabd53a1314b17ef390158db0b194a6e659 xf86-input-calcomp-1.0.0.5.ebuild 553

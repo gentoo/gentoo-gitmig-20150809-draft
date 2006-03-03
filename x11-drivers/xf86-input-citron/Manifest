@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 cc88e0955b2b2a0b046167bb8de2a866 ChangeLog 2232
 RMD160 b8a901cfa5421ee94a7b1cf7442f15a7f91166d3 ChangeLog 2232
 SHA256 92947f3982e9289039d84d6b7d987baccf2bc0cb4143bc4318112bdae2e8b570 ChangeLog 2232
@@ -10,13 +7,6 @@ SHA256 fb4e89f039a8250fb715bc6c4889075f9d848869a184071c6a94fc0f30fd183c files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 e76fc82e305d215b4b15152a63082da0 xf86-input-citron-2.1.1.5.ebuild 546
-RMD160 db2dcaeed054f9e8e439afbe52088f82785bf5fe xf86-input-citron-2.1.1.5.ebuild 546
-SHA256 cea6e67d50ea9d2ca17fd3ff24c00cefb06dd1cc139bcf0d52c54fb9ea029f73 xf86-input-citron-2.1.1.5.ebuild 546
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBowU2+ySkm8kpY0RAnUbAJ9Fkhj5Oflt1f2fhmUK/oQ/Gp200gCgrqRj
-n743VPoDct9jWLlXYGP0Mlw=
-=Yw94
------END PGP SIGNATURE-----
+MD5 9a53e27352398a6bd6cd7996f4be12b3 xf86-input-citron-2.1.1.5.ebuild 550
+RMD160 478cb0be3f70893d3f297beccb4c984b67e51f80 xf86-input-citron-2.1.1.5.ebuild 550
+SHA256 87ccb58b073be296a1499f01a461f326da94133ce5a1d97e7ba029c64e00d462 xf86-input-citron-2.1.1.5.ebuild 550

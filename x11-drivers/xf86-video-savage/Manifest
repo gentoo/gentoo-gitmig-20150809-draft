@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d3f7e38d1a5eb490b9373f40bb57c7c8 ChangeLog 2496
 RMD160 cda39fc57b9ea4f66915ae538bc1c8fa8d4da80f ChangeLog 2496
 SHA256 b44df750699a49abc5bdb3a1fd28d167ec66a9a9b8a7c5d30a739733c817cfaa ChangeLog 2496
@@ -10,13 +7,6 @@ SHA256 111822af28c1f24a7de6864140ce2249bdb42461421c57bcd88a79fe30a1aef9 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 ead0d41b1b0c406e9a0834593c0d50ed xf86-video-savage-2.0.2.3.ebuild 843
-RMD160 c21fd64441301ea91157021dc40184cf97f22f0e xf86-video-savage-2.0.2.3.ebuild 843
-SHA256 883ae388ccab581de95b9d1c32300c5a75fc768d5b3644e56300461369388998 xf86-video-savage-2.0.2.3.ebuild 843
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBozC2+ySkm8kpY0RAokKAKCuYi2/EiAuWykoGgKXvZowYhGIKwCgvqen
-ox5myQZyaV21L/6ClQ0r0wE=
-=8dgF
------END PGP SIGNATURE-----
+MD5 2a9b985098a2be2b407dc21e3366a924 xf86-video-savage-2.0.2.3.ebuild 847
+RMD160 f40f5e4e0f2ae9250228e488f74b3dbc12a959aa xf86-video-savage-2.0.2.3.ebuild 847
+SHA256 d0748c72104ee6a3e0108f133f122b85ec6e10c0835adde3ceae1b2dc680cc4b xf86-video-savage-2.0.2.3.ebuild 847

@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 bf2fced4fd1f539d919c525a869cfae5 ChangeLog 1991
 RMD160 f1d86f329030ab5346fe950674082cbfa4be6872 ChangeLog 1991
 SHA256 cb3e33800a0a1d8b523919307e7ee716eb5ee76661b92fd8d188f88a6442558e ChangeLog 1991
@@ -10,13 +7,6 @@ SHA256 7055a91bb0eb4c847a666b6c82ea3bbc0fb3f5464360d7004eb5988e6ebc4147 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 a62eb3b2ca9255da6ff349dfc308e078 xf86-video-imstt-1.0.0.5.ebuild 539
-RMD160 e5c5cc19e860b6079f74e152d56c2500ee17dadf xf86-video-imstt-1.0.0.5.ebuild 539
-SHA256 37bbbfb9873ffd8d6759a5ab70c83b245c8a000cdafe5e71a332eed452cadf94 xf86-video-imstt-1.0.0.5.ebuild 539
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBlJ22+ySkm8kpY0RAjQFAJ45va7g5aOdHyq3L54glBu2Ftf3iwCcDDfw
-84oKPXOOKctBwhXccDX0kbw=
-=2YW5
------END PGP SIGNATURE-----
+MD5 2c84cd6fe86e91d211ec381968f94fdb xf86-video-imstt-1.0.0.5.ebuild 543
+RMD160 c6812adac64f7a4f336079eb95cf6fc82efdd19c xf86-video-imstt-1.0.0.5.ebuild 543
+SHA256 64e1c414529bd686bb69df69ac06e025678e3f609d45e840987b1278929fb84a xf86-video-imstt-1.0.0.5.ebuild 543

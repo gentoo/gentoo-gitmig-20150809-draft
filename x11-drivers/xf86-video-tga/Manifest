@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1b3a89503c42d6938d2ec4547d1dd76d ChangeLog 1942
 RMD160 b12c6e88dc3e6dd3a09c47cdf6130e0104dbbd16 ChangeLog 1942
 SHA256 539cb0390eb619f42e92999076127d91cee1109d7e126c419f1a3ba53d35f759 ChangeLog 1942
@@ -10,13 +7,6 @@ SHA256 3a4bd2d5d2de27225fe00d43160a38c4ed95451469ede648d27a46f2ce2fc370 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 7a433c6ff1925af6d68df984f55aec0b xf86-video-tga-1.0.0.5.ebuild 602
-RMD160 059a1159b31e304af03d2ab1b88874f110fa9108 xf86-video-tga-1.0.0.5.ebuild 602
-SHA256 50fe6984fd33bdc381f36bbe62ce9e82105a2ff570bcc3afedf11f8a530b2de2 xf86-video-tga-1.0.0.5.ebuild 602
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBlP+2+ySkm8kpY0RAov5AJ43gslhQQAMgqcAP/Z9i863QiwghgCeLtYh
-Qmi92XpdmOOylaorruQ2Bak=
-=Q5Ke
------END PGP SIGNATURE-----
+MD5 9a5fbbd6399374624ccce5b74504c74e xf86-video-tga-1.0.0.5.ebuild 606
+RMD160 c7d5bbd9d4a3591d50702268aad9f6e4aa0d9215 xf86-video-tga-1.0.0.5.ebuild 606
+SHA256 91d0acbec1926cf7f2dc22713b5d8c12e3b7002d6ab8df76c5f15f29fab97c2a xf86-video-tga-1.0.0.5.ebuild 606

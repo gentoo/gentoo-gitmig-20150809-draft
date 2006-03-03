@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 545313f4bdc3ef42ffdacfbdc87ac8b6 ChangeLog 2040
 RMD160 e98523c697706d7172bfcd7ae1ac9f8528b92362 ChangeLog 2040
 SHA256 9e214654a30a557add9df00d11767066b6e7261162465bd07eead1a9a171560e ChangeLog 2040
@@ -10,13 +7,6 @@ SHA256 e32fbe3df07a52595d862cbf93440c7fcf8cb0be6bf9d46da052fa3c9b7d1058 files/di
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 c18151bfbf7c4d5a1bf44fe93f21064a xf86-video-siliconmotion-1.3.1.5.ebuild 601
-RMD160 60fe9554012bc3e71c5d3b0cc1cead8eea7b769b xf86-video-siliconmotion-1.3.1.5.ebuild 601
-SHA256 9e5cd89f7f99bd501d04559ed2230bffe1777844cfca60ecf18fe43f3a0cdb03 xf86-video-siliconmotion-1.3.1.5.ebuild 601
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBlZf2+ySkm8kpY0RAsleAJ0e2y6JFMubtYBwtbYXUWeNhqD6xACeIsKx
-SeAFsAQTs1gsI8H6gNxPiuQ=
-=nphh
------END PGP SIGNATURE-----
+MD5 9b9d9a79e18cc3f6fb08909931d1be1e xf86-video-siliconmotion-1.3.1.5.ebuild 605
+RMD160 3d2ff18145bc8fb62f95c40897d008cf670042d2 xf86-video-siliconmotion-1.3.1.5.ebuild 605
+SHA256 8ce119441885814288232ef013e8cf6a05c058d291050f92c013339f500c7586 xf86-video-siliconmotion-1.3.1.5.ebuild 605
