@@ -1,14 +1,13 @@
 # Copyright 2005-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/svninfo-0.2.1.ebuild,v 1.3 2006/03/03 18:40:57 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/svninfo-0.5.ebuild,v 1.1 2006/03/03 18:40:57 nattfodd Exp $
 
 inherit latex-package
 
-S="${WORKDIR}/${PN}"
 LICENSE="LPPL-1.2"
 DESCRIPTION="A LaTeX module to acces SVN version info"
 HOMEPAGE="http://www.brucker.ch/projects/svninfo/index.en.html"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://www.brucker.ch/projects/svninfo/download/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""

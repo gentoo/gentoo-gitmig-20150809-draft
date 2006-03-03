@@ -1,15 +1,34 @@
-MD5 df3c536c8e465a1f19c921e8501cb732 ChangeLog 562
-RMD160 68b029baf7d0fdb0e7fbcbe4a9674bf444666b03 ChangeLog 562
-SHA256 36328ebd5393f9359e4d7283f0e512325b02da65859282e7c984c6167c9bebce ChangeLog 562
-MD5 6821ce4ad1f73d433429d51e44add4e8 files/digest-svninfo-0.2.1 244
-RMD160 16b6dde7dfd6ddd26f555e918bb034f96eeb54cf files/digest-svninfo-0.2.1 244
-SHA256 294a7ce53e6fea0dc3cb3dcf06086823bbed8cf66778bb84a14446036417d956 files/digest-svninfo-0.2.1 244
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 98c482d47adff929ef7c8d7a046b557b ChangeLog 811
+RMD160 795dc6de12ba508f58f78ab68dd626fced77cc81 ChangeLog 811
+SHA256 e7f97c9801de1488a75fe3a40b7c60f26e6cbd36bbd43b688ae5fdf410554735 ChangeLog 811
+MD5 5176f1babf15d140b9290ea65c20ee17 files/digest-svninfo-0.2.1 244
+RMD160 ba436df7f38ecd32d0e1b9e9d68ad45d769b5719 files/digest-svninfo-0.2.1 244
+SHA256 626d4ea9fba151fd37d3e86fb59b6b53b14b7168cc117c511135cf5ce16f9bb1 files/digest-svninfo-0.2.1 244
+MD5 a05779e66fef03b090b40a52cfe05ac8 files/digest-svninfo-0.5 232
+RMD160 01b68ec8a8d5d19c64779e40b331acefa1283a08 files/digest-svninfo-0.5 232
+SHA256 f14a59804f78f3d2b313a8770450c22b51faeb864ffb123b0856b5beb39499d6 files/digest-svninfo-0.5 232
 MD5 7f0fe0b238914bff2b530b1807870261 files/svninfo-0.2.1-latex-compile.patch 774
 RMD160 f08b0fdc788fd3b4a235eab2494b33fc2d676ab2 files/svninfo-0.2.1-latex-compile.patch 774
 SHA256 00927815d3c8dfcb722e5a812dcf996ab5f0520199e378ec386dad2e08092f7b files/svninfo-0.2.1-latex-compile.patch 774
+MD5 4ddf55af274c5b8e4e65ac4802bce318 files/svninfo-0.5-latex-compile.patch 269
+RMD160 94b3f0964a023af692cc2df496c28bd6e82f653b files/svninfo-0.5-latex-compile.patch 269
+SHA256 48e44728adef50ed336273ee25e88e4b6c4ce688d27b223cffc76257583dbefb files/svninfo-0.5-latex-compile.patch 269
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
-MD5 bde5d646f75119dc2563659d5e41850e svninfo-0.2.1.ebuild 657
-RMD160 d2e31d6fb98ea3c1c674dcefc998ba6458f5a66a svninfo-0.2.1.ebuild 657
-SHA256 f7675da31fcb119fe574bda98cedfd5da95301ab5e50393f341ed15f1048028c svninfo-0.2.1.ebuild 657
+MD5 d5f110ae58297e0160b3ef1031ac56e6 svninfo-0.2.1.ebuild 648
+RMD160 db0417fd35d9813e2eb1b055b2672e68269fc3f9 svninfo-0.2.1.ebuild 648
+SHA256 6cea191cb3c7cee6cafc35bd75fe85a418c3d6334ab28be3cd51194d7fd37d7f svninfo-0.2.1.ebuild 648
+MD5 e3c5d631909170019975f8a36292218f svninfo-0.5.ebuild 656
+RMD160 f5ed765a1b5dd2e684746cfc98cceee65e0ea97a svninfo-0.5.ebuild 656
+SHA256 8e683e1529e6752350382bdd09e211bfa8b9fe4d0bb3a62d48c9be740aa9d0d9 svninfo-0.5.ebuild 656
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFECJv+wx9vvAARv2sRAtdAAJ4s5xFz4+DXJxQAiVQzDOkTLqmI/QCeLJFy
+qtQWfpVoXk2WB2NsLH5vCJQ=
+=MRHI
+-----END PGP SIGNATURE-----
