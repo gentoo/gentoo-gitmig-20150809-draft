@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.40 2006/02/16 21:46:50 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.41 2006/03/03 22:03:35 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -292,8 +292,17 @@ get_version() {
 
 		KV_LOCAL="$(get_localversion ${KV_OUT_DIR})"
 	fi
-	# and if we STILL haven't got it, then we better just set it to KV_DIR
+	# and if we STILL have not got it, then we better just set it to KV_DIR
 	KV_OUT_DIR="${KV_OUT_DIR:-${KV_DIR}}"
+
+	if [ ! -s "${KV_OUT_DIR}/.config" ]
+	then
+		qeerror "Could not find a usable .config in the kernel source directory."
+		qeerror "Please ensure that ${KERNEL_DIR} points to a configured set of Linux sources."
+		qeerror "If you are using KBUILD_OUTPUT, please set the environment var so that"
+		qeerror "it points to the necessary object directory so that it might find .config."
+		return 1
+	fi
 
 	KV_LOCAL="${KV_LOCAL}$(get_localversion ${KV_DIR})"
 	KV_LOCAL="${KV_LOCAL}$(linux_chkconfig_string LOCALVERSION)"
@@ -304,15 +313,6 @@ get_version() {
 
 	qeinfo "Found sources for kernel version:"
 	qeinfo "    ${KV_FULL}"
-
-	if [ ! -s "${KV_OUT_DIR}/.config" ]
-	then
-		qeerror "Could not find a usable .config in the kernel source directory."
-		qeerror "Please ensure that ${KERNEL_DIR} points to a configured set of Linux sources."
-		qeerror "If you are using KBUILD_OUTPUT, please set the environment var so that"
-		qeerror "it points to the necessary object directory so that it might find .config."
-		return 1
-	fi
 
 	return 0
 }
