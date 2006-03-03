@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.14-r6.ebuild,v 1.1 2006/03/02 17:37:20 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.14-r6.ebuild,v 1.2 2006/03/03 00:48:05 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -534,7 +534,7 @@ pkg_postinst() {
 	# not to quit properly on reboot, and causes a fsck of / on next reboot.
 	if [[ ${ROOT} == / ]] && ! use build && ! use bootstrap; then
 		# Regenerate init.d dependency tree
-		/sbin/depscan.sh &>/dev/null
+		/sbin/depscan.sh --update &>/dev/null
 
 		# Regenerate /etc/modules.conf, else it will fail at next boot
 		einfo "Updating module dependencies..."
