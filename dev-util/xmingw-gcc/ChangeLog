@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/xmingw-gcc
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/ChangeLog,v 1.14 2005/10/07 17:54:38 cretin Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/ChangeLog,v 1.15 2006/03/03 19:07:57 cretin Exp $
+
+  03 Mar 2006; Stefan Jones <cretin@gentoo.org> xmingw-gcc-3.4.2.ebuild,
+  xmingw-gcc-3.4.2-r1.ebuild, xmingw-gcc-3.4.4.ebuild:
+  Move einfo to pkg_postinst() from pkg_config()
+  bug #119093
 
   07 Oct 2005; Stefan Jones <cretin@gentoo.org> xmingw-gcc-3.4.2-r1.ebuild,
   xmingw-gcc-3.4.4.ebuild:

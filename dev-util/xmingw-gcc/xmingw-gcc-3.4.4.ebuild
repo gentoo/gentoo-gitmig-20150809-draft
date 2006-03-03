@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.4.ebuild,v 1.3 2005/10/07 17:54:38 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.4.ebuild,v 1.4 2006/03/03 19:07:57 cretin Exp $
 
 inherit eutils
 
@@ -89,7 +89,7 @@ src_install() {
 	rm ${D}/opt/xmingw/info/dir ${D}/opt/xmingw/lib/libiberty.a
 }
 
-pkg_config() {
+pkg_postinst() {
 	einfo "Now emerge dev-util/xmingw-runtime and remerge dev-util/xmingw-gcc"
 	einfo "if you require fortran, java or C++ support"
 }

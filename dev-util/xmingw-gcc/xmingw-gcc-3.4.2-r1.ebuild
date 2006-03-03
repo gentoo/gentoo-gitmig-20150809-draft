@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.2-r1.ebuild,v 1.5 2005/10/07 17:54:38 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.2-r1.ebuild,v 1.6 2006/03/03 19:07:57 cretin Exp $
 
 MY_P=${P/xmingw-/}
 S=${WORKDIR}/${MY_P}
@@ -84,7 +84,7 @@ src_install() {
 	doenvd ${FILESDIR}/05xmingw
 }
 
-pkg_config() {
+pkg_postinst() {
 	einfo "Now emerge dev-util/xmingw-runtime and remerge dev-util/xmingw-gcc"
 	einfo "if you require fortran, java or C++ support"
 }
