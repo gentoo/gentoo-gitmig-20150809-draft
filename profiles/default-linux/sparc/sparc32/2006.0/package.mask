@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/package.mask,v 1.6 2006/01/21 23:27:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/package.mask,v 1.7 2006/03/03 01:11:17 gustavoz Exp $
 
 # Masked until bug #60413 is fixed.
 media-libs/xine-lib
 
+# Gustavo Zacarias <gustavoz@gentoo.org>
 # Jason Wever <weeve@gentoo.org>
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Packages masked that have hard deps on alsa
@@ -76,6 +77,7 @@ app-editors/jext
 app-misc/freemind
 app-misc/jdictionary
 app-misc/jitac
+app-misc/largorecipes
 app-misc/openjnlp
 app-portage/portagemaster
 dev-db/henplus
@@ -103,7 +105,7 @@ dev-java/colt
 dev-java/commons-beanutils
 dev-java/commons-cli
 dev-java/commons-collections
-dev-java/commons-daemons
+dev-java/commons-daemon
 dev-java/commons-dbcp
 dev-java/commons-digester
 dev-java/commons-discovery
@@ -205,6 +207,7 @@ dev-java/xom
 dev-java/sun-jms
 dev-java/sun-jmx
 dev-util/checkstyle
+dev-util/eclipse-sdt-bin
 dev-util/eclipse-sdk
 dev-util/jarwizard
 dev-util/jconfig
@@ -214,7 +217,9 @@ dev-util/poseidonCE
 games-rpg/pcgen
 kde-base/kdebindings-meta
 kde-base/kdejava
+kde-base/qtjava
 media-gfx/aoi
+net-misc/java-wakeonlan
 net-misc/mindterm
 www-servers/jboss
 www-servers/jetty
