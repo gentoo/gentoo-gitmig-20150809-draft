@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060302.ebuild,v 1.1 2006/03/02 16:44:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060302.ebuild,v 1.2 2006/03/03 18:23:38 lu_zero Exp $
 
 inherit multilib
 
@@ -24,6 +24,7 @@ S=${WORKDIR}/${PN}
 src_compile() {
 	./configure --prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
+		--enable-pic \
 		$(use_enable debug) \
 		$(use_enable threads pthread) \
 		|| die "configure failed"
