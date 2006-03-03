@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>kernel</herd>
+  <maintainer>
+    <email>pete4abw@comcast.net</email>
+    <name>Peter Hyman</name>
+  </maintainer>
+  <maintainer>
+    <email>genstef@gentoo.org</email>
+    <name>Stefan Schweizer</name>
+  </maintainer>
+</pkgmetadata>
