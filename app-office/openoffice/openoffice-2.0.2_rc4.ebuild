@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2_rc4.ebuild,v 1.1 2006/03/04 06:24:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2_rc4.ebuild,v 1.2 2006/03/04 20:42:24 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -114,10 +114,8 @@ pkg_setup() {
 		ewarn " To get a localized build, set the according LINGUAS variable(s). "
 		ewarn
 	else
-		export LINGUAS_OOO="${LINGUAS//en/en_US}"
-		export LINGUAS_OOO="${LINGUAS_OOO//en_US_GB/en_GB}"
-		export LINGUAS_OOO="${LINGUAS_OOO//en_US_US/en_US}"
-		export LINGUAS_OOO="${LINGUAS_OOO//_/-}"
+		export LINGUAS_OOO=`echo ${LINGUAS} | \
+			sed -e 's/\ben\b/en_US/g' -e 's/_/-/g'`
 	fi
 
 	if use !java; then
@@ -181,6 +179,20 @@ src_compile() {
 		export JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
 	fi
 
+	# Compile problems with these ...
+	filter-flags "-funroll-loops"
+	filter-flags "-fomit-frame-pointer"
+	filter-flags "-fprefetch-loop-arrays"
+	filter-flags "-fno-default-inline"
+	filter-flags "-fstack-protector"
+	filter-flags "-ftracer"
+	append-flags "-fno-strict-aliasing"
+	replace-flags "-O3" "-O2"
+	replace-flags "-Os" "-O2"
+
+	# Now for our optimization flags ...
+	export ARCH_FLAGS="${CFLAGS}"
+
 	# Make sure gnome-users get gtk-support
 	export GTKFLAG="`use_enable gtk`" && use gnome && GTKFLAG="--enable-gtk"
 
@@ -208,20 +220,6 @@ src_compile() {
 		--with-system-hunspell \
 		--mandir=/usr/share/man \
 		|| die "Configuration failed!"
-
-	# Compile problems with these ...
-	filter-flags "-funroll-loops"
-	filter-flags "-fomit-frame-pointer"
-	filter-flags "-fprefetch-loop-arrays"
-	filter-flags "-fno-default-inline"
-	filter-flags "-fstack-protector"
-	filter-flags "-ftracer"
-	append-flags "-fno-strict-aliasing"
-	replace-flags "-O3" "-O2"
-	replace-flags "-Os" "-O2"
-
-	# Now for our optimization flags ...
-	export ARCH_FLAGS="${CFLAGS}"
 
 	einfo "Building OpenOffice.org..."
 	use kde && set-kdedir 3
@@ -255,4 +253,5 @@ pkg_postinst() {
 	einfo
 	einfo " oobase2, oocalc2, oodraw2, oofromtemplate2, ooimpress2, oomath2,"
 	einfo " ooweb2 or oowriter2"
+
 }
