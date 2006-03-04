@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 49ddb8cd641952adf6c53ecd99abfbf5 ChangeLog 2485
-RMD160 ec10ecbb5d6d801fe738792d839bb0ac0b46838e ChangeLog 2485
-SHA256 b1df179e0086e120b048a236a6ecb444f14fa94324eb96f51f6b8cf44ccfa73c ChangeLog 2485
+MD5 9bf4764f9ba13da72978a7fd24c7ffbd ChangeLog 2593
+RMD160 4422e594a6f5facc6f0fd5876fcaf7e7b02dcfc3 ChangeLog 2593
+SHA256 ec0c8f69fdee1cd6f99e5fecb43a86f615bf4ffbc96ac970e8995da289d03b22 ChangeLog 2593
 MD5 5f3f604de6ae79fbe548ce3864657873 files/digest-xf86-input-mouse-1.0.4 527
 RMD160 ccb41a2f54710bb174f8b91b3762fa8eedaaf97c files/digest-xf86-input-mouse-1.0.4 527
 SHA256 b6c30a76d7873a8300a519fc2e5d8d07129d94ef75171a7086e52e9884edb1f0 files/digest-xf86-input-mouse-1.0.4 527
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 15e8f398d7116d2dfa166d63f1756bc7 xf86-input-mouse-1.0.4.ebuild 560
-RMD160 d47ade27ee830810250173ff4fc225c1e502ee84 xf86-input-mouse-1.0.4.ebuild 560
-SHA256 3103192f801870abcfe1475132ae5b2e8510371e49b3388294c411a1f404f7f7 xf86-input-mouse-1.0.4.ebuild 560
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBlce2+ySkm8kpY0RApIWAJ0aj7I+bDc/TnWUAlNlxst8eUdWyACeMv3y
-1QvOvVw5iiH8lYAzlUv26CY=
-=CWJF
------END PGP SIGNATURE-----
+MD5 d3d3a7ed6fddf6cd4202041f416de7db xf86-input-mouse-1.0.4.ebuild 569
+RMD160 28262ddc5f365dbab07a46b8240e03e63bff14ef xf86-input-mouse-1.0.4.ebuild 569
+SHA256 2b634b01eaeac6f2780a1fb0a71def252fd380494f4277c2574c88ba0125d2af xf86-input-mouse-1.0.4.ebuild 569
