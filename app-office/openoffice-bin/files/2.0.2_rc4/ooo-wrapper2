@@ -115,5 +115,8 @@ if (!(-f '/proc/version')) {
     print STDERR "\n\n --- Warning - OO.o will not work without a mounted /proc filesystem --- \n\n\n";
 }
 
+# Clear PYTHONPATH, otherwise Python scripting does not work
+delete $ENV{'PYTHONPATH'};
+
 # And here we go.
 exec "$SystemInstallDir/program/soffice", @ooo_argv
