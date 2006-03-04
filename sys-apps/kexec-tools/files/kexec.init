@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/files/kexec.init,v 1.5 2006/01/20 20:39:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/files/kexec.init,v 1.6 2006/03/04 20:16:03 genstef Exp $
 
 depend() {
 	need checkfs
@@ -9,7 +9,7 @@ depend() {
 
 start() {
 	[ -z "$KNAME" ] && KNAME="bzImage"
-	[ -z "$BOOTPATH" ] && BOOTPATH="/boot"
+	[ -z "$BOOTPART" ] && BOOTPART="/boot"
 	[ -z "$BOOTMOUNT" ] && BOOTMOUNT=1
 	[ -z "$ROOTPART" ] && ROOTPART="`cut -f 1 -d' ' /etc/mtab | grep / | tr '\n' '\t' | cut -f 1`"
 	[ -z "$KPARAM" ] && KPARAM="`sed -r 's:root=[a-zA-Z0-9/]+\s*::g' /proc/cmdline`"
@@ -22,7 +22,7 @@ start() {
 		LOCS="`cut -f 2 -d' ' /etc/mtab | tr '\n' ' '`" 
 		for x in $LOCS
 		do
-			if [ "$x" == "$BOOTPATH" ]
+			if [ "$x" == "$BOOTPART" ]
 			then
 				MNT=0
 			fi
@@ -30,18 +30,18 @@ start() {
 
 		if [ $MNT -eq 1 -a $BOOTMOUNT -eq 1 ]
 		then
-			/bin/mount $BOOTPATH
+			/bin/mount $BOOTPART
 			if [ $? -ne 0 ]
 			then
 				eerror "Couldn't mount $BOOTPART"
 				MNT="0"
 			fi
 		fi
-		kexec -l $BOOTPATH/$KNAME --append="root=$ROOTPART $KPARAM" $INITRDOPT
+		kexec -l $BOOTPART/$KNAME --append="root=$ROOTPART $KPARAM" $INITRDOPT
 		RES=$?
 		if [ $MNT -eq 1 -a $BOOTMOUNT -eq 1 ]
 		then
-			/bin/umount $BOOTPATH
+			/bin/umount $BOOTPART
 			if [ $? -ne 0 ]; then
 				eerror "Couldn't umount $BOOTPART"
 			fi
