@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.2-r1.ebuild,v 1.7 2006/03/04 20:45:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.2.2.ebuild,v 1.1 2006/03/04 20:45:16 chainsaw Exp $
 
-IUSE="aac alsa esd flac gnome jack libvisual lirc mmx modplug mp3 musepack nls oss sdl sid sndfile vorbis wma"
+IUSE="aac alsa esd flac gnome jack lirc mmx modplug mp3 musepack nls oss sid sndfile vorbis wma"
 
-inherit flag-o-matic eutils
+inherit flag-o-matic
 
 DESCRIPTION="Audacious Player - Your music, your way, no exceptions."
 HOMEPAGE="http://audacious-media-player.org/"
@@ -14,9 +14,11 @@ SRC_URI="http://audacious-media-player.org/release/${P}.tgz
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~x86"
 
 RDEPEND="app-arch/unzip
+	net-misc/curl
+	media-libs/musicbrainz
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3.1
 	>=dev-cpp/libbinio-1.4
@@ -28,8 +30,6 @@ RDEPEND="app-arch/unzip
 	jack? ( >=media-libs/bio2jack-0.4
 		media-libs/libsamplerate
 		media-sound/jack-audio-connection-kit )
-	libvisual? ( =media-plugins/libvisual-plugins-0.2.0
-		     >=media-libs/libsdl-1.2.5 )
 	lirc? ( app-misc/lirc )
 	modplug? ( media-libs/libmodplug )
 	musepack? ( media-libs/libmpcdec
@@ -43,14 +43,6 @@ RDEPEND="app-arch/unzip
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )
 	>=dev-util/pkgconfig-0.9.0"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-no-sigabrt-on-null-path.diff
-	epatch ${FILESDIR}/${PV}-thumbnail.diff
-	epatch ${FILESDIR}/${PV}-segfault.diff
-}
 
 src_compile() {
 	if ! useq mp3; then
@@ -90,7 +82,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS FAQ NEWS README
+	dodoc AUTHORS NEWS README
 
 	# Gentoo_ice skin installation; bug #109772
 	insinto /usr/share/audacious/Skins/gentoo_ice
@@ -101,7 +93,6 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Your XMMS skins, if any, have been symlinked."
 	einfo "MP3 support is now optional, you may want to enable the mp3 USE-flag."
 	echo
 }
