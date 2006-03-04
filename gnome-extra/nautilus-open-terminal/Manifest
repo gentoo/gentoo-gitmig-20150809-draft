@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2ada7b4cd2534ec225af3a56e666c32f ChangeLog 939
+MD5 e94f96f9092cc5de88c809a42924fb1d ChangeLog 1063
+RMD160 acbf367cc3ca35aea6fbebc28d7bef6a38a05603 ChangeLog 1063
+SHA256 d34438ee71a1ffda04a567048a68e65f092d60813aac15e3e02028d69058f0e9 ChangeLog 1063
 MD5 b75720f4371a90dcb84d54b5e2b7a145 files/digest-nautilus-open-terminal-0.4 78
-MD5 06a1fb133fc4fccd444d3fb85d0e2887 files/digest-nautilus-open-terminal-0.6 78
+RMD160 6a0bfbf682bb1da4517e94f285fce12f1a36b890 files/digest-nautilus-open-terminal-0.4 78
+SHA256 3b3d492720a8906342c6fac280d55b4ae00e601464051ecaf66fe15177f644bb files/digest-nautilus-open-terminal-0.4 78
+MD5 20c94d9313e66430e25d1f132b706c31 files/digest-nautilus-open-terminal-0.6 280
+RMD160 3455d866d8b1fc5a9be2be7c09d2b4ab95f56a80 files/digest-nautilus-open-terminal-0.6 280
+SHA256 02d6a8c02cea36810328fd075572dd8145975acab6c3941c89fa46190b179e6e files/digest-nautilus-open-terminal-0.6 280
 MD5 50f2cc1fcef3723bd92ec0e9bca49566 metadata.xml 309
+RMD160 d0977e13825c236d9aad744a216e73eeb3b9d4c7 metadata.xml 309
+SHA256 0790ea36963eed639f41684d2b2eae7c19c7b44a6f1b8b89b600cb29524a7595 metadata.xml 309
 MD5 2d41251f04ca43d652351e1672d554d1 nautilus-open-terminal-0.4.ebuild 773
-MD5 9fa3e1f293998f0e35bb975f7d923c51 nautilus-open-terminal-0.6.ebuild 817
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD0XBmKRy60XGEcJIRAoUhAJ9/MkRSxcBMWlEmDPwEMwUN51hyvACgrtST
-f68DkCJ0sLqcbryzXfA6vtM=
-=HE5+
------END PGP SIGNATURE-----
+RMD160 86900d161735eab061ce7ff75db6944fca532191 nautilus-open-terminal-0.4.ebuild 773
+SHA256 73e1b2acd67bece1570d5ed0ef048305389b3c9d2cd9710eccbc66cb246a538b nautilus-open-terminal-0.4.ebuild 773
+MD5 d5effcf8ef307a9121c6f93f0944fd3c nautilus-open-terminal-0.6.ebuild 816
+RMD160 fec2b5b1d88e6f0fddca2895291fb8a80394cf1e nautilus-open-terminal-0.6.ebuild 816
+SHA256 ca0d4c39c1ac7fc5ee4dbead4ee79a81dcf37fdff757ca80d537ac7598b06c4b nautilus-open-terminal-0.6.ebuild 816
