@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/pyvorbis-1.4-r1.ebuild,v 1.10 2006/03/03 13:39:32 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/pyvorbis-1.4-r1.ebuild,v 1.11 2006/03/04 00:56:44 sbriesen Exp $
 
 inherit distutils eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.andrewchatham.com/pyogg/download/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86"
-IUSE="examples"
+IUSE=""
 
 DEPEND="dev-lang/python
 	>=media-libs/libogg-1.0
@@ -33,8 +33,6 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
-	if use examples; then
-		insinto /usr/share/doc/${PF}/examples
-		doins test/*
-	fi
+	insinto /usr/share/doc/${PF}/examples
+	doins test/*
 }
