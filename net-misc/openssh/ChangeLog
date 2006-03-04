@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.156 2006/02/28 00:09:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.157 2006/03/04 01:48:14 vapier Exp $
+
+*openssh-4.3_p2 (04 Mar 2006)
+
+  04 Mar 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-4.3_p1-krb5-typos.patch, +openssh-4.3_p2.ebuild:
+  Version bump and add patch from upstream #124494 by RiverRat.
 
   28 Feb 2006; Mike Frysinger <vapier@gentoo.org> files/sshd.rc6:
   Add restart function by Michal Fojtik to init.d script #124271.
