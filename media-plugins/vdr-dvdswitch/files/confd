@@ -1,0 +1,12 @@
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdswitch/files/confd,v 1.1 2006/03/04 21:32:44 hd_brummy Exp $
+# Global config file for vdrplugin dvdswitch
+
+# Script to use for reading DVDs
+#  default: Use standard-script
+#DVDSWITCH_READ_DVD="/usr/share/vdr/dvdchanger/dvdchanger_readdvd.sh"
+
+
+# Script to use for writing DVDs
+#  default: Use standard-script
+#DVDSWITCH_WRITE_DVD="/usr/share/vdr/dvdchanger/dvdchanger_writedvd.sh"
+

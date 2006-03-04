@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0cf7b23fd2460ee97d4908af69f3adfc ChangeLog 451
+MD5 9e9f28f1db0fc474d6b6031552a37292 files/confd 438
+MD5 a661530dbfd06339933c307f5c91fb03 files/digest-vdr-dvdswitch-0.1.0 71
+MD5 520f0be6e94ea65d198e5acb33f76ff5 files/rc-addon.sh 405
+MD5 2b547c9031a9710165a2be3ad3393292 metadata.xml 451
+MD5 085629b2f1d6529780084fbda75959a6 vdr-dvdswitch-0.1.0.ebuild 795
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFECgeMdn07HTTCgIoRAn1wAJ45o6B4zUNZFu+er+4pkr13JEy8wACfbuC0
+17mUCvLDDBIynJOOYg0ppRo=
+=OOIK
+-----END PGP SIGNATURE-----

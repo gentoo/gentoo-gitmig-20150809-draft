@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-dvdswitch
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdswitch/ChangeLog,v 1.1 2006/03/04 21:32:44 hd_brummy Exp $
+
+*vdr-dvdswitch-0.1.0 (04 Mar 2006)
+
+  04 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org> +files/confd,
+  +files/rc-addon.sh, +metadata.xml, +vdr-dvdswitch-0.1.0.ebuild:
+  import ebuild from gentoo.de CVS, version bump
+
