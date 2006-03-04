@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.12 2006/02/03 21:18:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.13 2006/03/04 17:43:51 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -183,6 +183,7 @@ vdr-plugin_src_install() {
 		if [[ -f "${f}" ]]; then
 			insinto /etc/conf.d
 			newins "${f}" vdr.${VDRPLUGIN}
+			VDR_PLUGIN_CONFIG_FILE_INSTALLED=1
 			break
 		fi
 	done
@@ -204,6 +205,11 @@ vdr-plugin_pkg_postinst() {
 	einfo
 	einfo "  emerge --config ${PN}"
 	einfo
+	if [[ -n "${VDR_PLUGIN_CONFIG_FILE_INSTALLED}" ]]; then
+		einfo "And have a look at the config-file"
+		einfo "/etc/conf.d/vdr.${VDRPLUGIN}"
+		einfo
+	fi
 }
 
 vdr-plugin_pkg_postrm() {
