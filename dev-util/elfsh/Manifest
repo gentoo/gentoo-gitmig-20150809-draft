@@ -1,27 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 afe3820b2f0873b5cfb015ba30de099d ChangeLog 1165
-RMD160 d363c1c95f4e3810adf8c3fd84c57aa2fe28bc45 ChangeLog 1165
-SHA256 14f15af45f8e298cdaa3306de9453a9290c94dc6adf87bc0b6a4aee93a5118b6 ChangeLog 1165
+MD5 78d6f076c6cd165a92ea270c93ddc83e ChangeLog 1288
+RMD160 dacc6f42e73ae88327b858284e361cb2f8a4af5c ChangeLog 1288
+SHA256 89e2d9844cc8394df6626037660e8cef1da38ed4dd15a67eba9ce077ba8dbcbb ChangeLog 1288
 MD5 307dbef0cc687ed8f6f5f7f67393ea0e elfsh-0.51_beta3.ebuild 921
 RMD160 2bc185c714bde3d600495cb61de54dfd94dcd705 elfsh-0.51_beta3.ebuild 921
 SHA256 30b1be72ee4fc31f741cc22fc1d060629a362ea44ccbff18d9cabefeec03408f elfsh-0.51_beta3.ebuild 921
+MD5 189098eea7a95e9bb96b1840176af431 elfsh-0.65_rc1.ebuild 1388
+RMD160 c52b4ac9021082c75e9bcd6113d036e4073b13fb elfsh-0.65_rc1.ebuild 1388
+SHA256 47832c80b22ddbd97640cd5eadb0ef77fee213c35658b14bb63f1fc7820a536e elfsh-0.65_rc1.ebuild 1388
 MD5 f130345b5343f3e9253dfde8eb549427 files/0.51_beta3-gentoo.patch 2027
 RMD160 25addaf101cd9442496c33d8349519793870c79b files/0.51_beta3-gentoo.patch 2027
 SHA256 7e2ca434936f97c2726ebf5c1bae92f67b4d0f4de7bbfba9719447eb566da32d files/0.51_beta3-gentoo.patch 2027
 MD5 958b1ec6ce8d6069b0accc19cacdbdff files/digest-elfsh-0.51_beta3 256
 RMD160 c15d6f1d249c87ebae5aa8fa1eb581d91089dae5 files/digest-elfsh-0.51_beta3 256
 SHA256 538be0f0e8541f7a0bbb6521bfe9c936c72fff6b9d0cc270cc5d5841731b98d8 files/digest-elfsh-0.51_beta3 256
+MD5 1cba64ed741b54ee403512f39e34308a files/digest-elfsh-0.65_rc1 232
+RMD160 f318aac2795d548b660c79f4ff5962255cd2a9ae files/digest-elfsh-0.65_rc1 232
+SHA256 930252a18020d9219bbb64814280920c778534f36f2eff0398c06f1f49a67b8f files/digest-elfsh-0.65_rc1 232
 MD5 1b15d9b8549cda1aa82a9be3fb149245 metadata.xml 596
 RMD160 99b4ab6b5f56a9d36c0cc579a47a89c577ff920f metadata.xml 596
 SHA256 99373629ef64621114fee7b984193462811dee2e2c755207379361b0ea9f4d8c metadata.xml 596
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iQCVAwUBQ9ljB54WFLgrx1GWAQKshwQAu0KvJJlJMvHUIaGsvDSvRehljOiHUeNh
-mOqfc0OZULDUvuRhwpCCwHr4VLCMlkHu0aMujQQmTm6jlhDaU8eZouOMnY7L6ih1
-anPVHTlV5PILR4OTzfpVDWWwOutScAp/LDkhiDMSvm6mYkTRy73ODjd/l6fj/amx
-KqFhifQ2MVY=
-=krR0
+iD8DBQFECTA92+ySkm8kpY0RAjy3AJ4zUUuRvI9Xp/wbIrUQKMGvm7ep4ACghnID
+wGlUbBqPvdphKSA4aTaOH2Q=
+=Lx2f
 -----END PGP SIGNATURE-----
