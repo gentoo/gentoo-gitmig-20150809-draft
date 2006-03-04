@@ -13,15 +13,15 @@ SHA256 1919903937e871e53aa38cb0d77e3a9da92efd30401faaed3f18082b64375d3f files/di
 MD5 83cd756148c5260fa077190d61ab987b files/digest-libtommath-0.36-r1 62
 RMD160 cbdbe04455b9ced10095cc4e585151d50a817ff5 files/digest-libtommath-0.36-r1 62
 SHA256 1919903937e871e53aa38cb0d77e3a9da92efd30401faaed3f18082b64375d3f files/digest-libtommath-0.36-r1 62
-MD5 fe30d50167368627b013e2a11f0af8ac files/libtommath-0.36-shared-lib.patch 649
-RMD160 e8769bb757003d01ed8fff3b188e07ff4b93bdae files/libtommath-0.36-shared-lib.patch 649
-SHA256 493d6be0f8d90d7f2a5ffdd9c36a55ddd70b6c17de05d0aff870336fc481d0f1 files/libtommath-0.36-shared-lib.patch 649
+MD5 404409394ac12e4c21eef4a1ab4eb7a2 files/libtommath-0.36-shared-lib.patch 948
+RMD160 0dd3cd1bb4508623c24e4f57106d05975d81904f files/libtommath-0.36-shared-lib.patch 948
+SHA256 c09eae16b6094ba85e78413abc72b57437c51abfd9caff9aa87558223a385b23 files/libtommath-0.36-shared-lib.patch 948
 MD5 87523239a8e9209fca019fb62dc7444a libtommath-0.35.ebuild 604
 RMD160 8b20d3f6478f6ec20c35e36f411289da8992768b libtommath-0.35.ebuild 604
 SHA256 ce968a1616d28a7b4c25bac76e4fc7a5b935ffb89b797e3501578f631e087030 libtommath-0.35.ebuild 604
-MD5 f1317767e8056ac7a29512a32677bb22 libtommath-0.36-r1.ebuild 918
-RMD160 f85bd593a989f4e4f93148d5c41b8da32a63c6a2 libtommath-0.36-r1.ebuild 918
-SHA256 0a51bd6270e5ebe3efa0c30e24b9681b32ecf08462f7fb81923e919c766eade9 libtommath-0.36-r1.ebuild 918
+MD5 ba5121374b9ab27d5c5fbf9dcb969433 libtommath-0.36-r1.ebuild 886
+RMD160 6dc35162c2743f9df9350f4ae34b1f5622323a0f libtommath-0.36-r1.ebuild 886
+SHA256 e37f1722c1fccb4712d1bbb034c8278a398ad42d5ac115f1091d83b24947171e libtommath-0.36-r1.ebuild 886
 MD5 5afac0db0d425286d04f7e396f199a7a libtommath-0.36.ebuild 663
 RMD160 bf9b8aa6eca6b52291ceb11ff3dc2203f0596337 libtommath-0.36.ebuild 663
 SHA256 677eb3da3db52ee92ffa5accee63e1e7badd5f0361e86192c7575bddaf1438b2 libtommath-0.36.ebuild 663
@@ -31,7 +31,7 @@ SHA256 2e9300d449e61d31d6a36f98430599a8aaff4ad32b4281492c3702d98784b1b3 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFECDhUAiZjviIA2XgRApKPAKDo8fGdeQiJiq48blOAGcRK7KeTgACgg7D9
-RiIlhuIYiwpSsq7tNv2ySAQ=
-=VNv4
+iD8DBQFECPpf2+ySkm8kpY0RAp8lAJ9u+VTy1xBY7bJ/XLFVlND21lrvmgCfdNt/
+shWZbpwfc25u/buhxTqmpRw=
+=11U3
 -----END PGP SIGNATURE-----
