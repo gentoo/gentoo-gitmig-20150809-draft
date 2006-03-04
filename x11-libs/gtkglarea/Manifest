@@ -1,17 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 eae108bfe267c86628ec823c70a27b0d gtkglarea-1.2.3-r1.ebuild 1155
-MD5 fc30972897ec6e3dc99886a695499dae gtkglarea-1.99.0.ebuild 955
-MD5 267f95756fd6b8fb6939bb4693e296bb ChangeLog 3252
+MD5 8d99dbbc23a4b432414ca18492a8d544 ChangeLog 3400
+RMD160 9481ea6e450bace9bf90aad23a65869f5df6b5cc ChangeLog 3400
+SHA256 cc2fad2f05f1a98c19f7c9d82abfc45b347d770758add39bf4c015ff8f87cca6 ChangeLog 3400
 MD5 0cf1a1b6421616a534c50a4410c7f2d8 files/digest-gtkglarea-1.2.3-r1 67
-MD5 cf5103633e96b0320f959d7cd5490f66 files/gtkglarea-1.2.3-m4.patch 285
+RMD160 8bb1facd6cdea7f5499d02fd2de7c1242e550e3a files/digest-gtkglarea-1.2.3-r1 67
+SHA256 a1ba6bdc6560220e2fa22f697e0972fd9ef3bc26bf8a79b5024ee306490de695 files/digest-gtkglarea-1.2.3-r1 67
 MD5 f49438c0f88d925df7289b2314a02362 files/digest-gtkglarea-1.99.0 69
+RMD160 95781da37747cc57ac40542b15d7d45884e01515 files/digest-gtkglarea-1.99.0 69
+SHA256 090aeafcf571dcd30923d0b8e72c62f0165e19d8fee00cd73674873417984fbe files/digest-gtkglarea-1.99.0 69
+MD5 cf5103633e96b0320f959d7cd5490f66 files/gtkglarea-1.2.3-m4.patch 285
+RMD160 68ed82a7511800f003cccdf7b16c5bd70d7f09d6 files/gtkglarea-1.2.3-m4.patch 285
+SHA256 28505ad74b846624f67b4bf0e33dd43a72d84ce6344d3d12e3bac83e1ac8d978 files/gtkglarea-1.2.3-m4.patch 285
+MD5 eae108bfe267c86628ec823c70a27b0d gtkglarea-1.2.3-r1.ebuild 1155
+RMD160 5220665636973d56550df7283a9445a6e3cb8dcd gtkglarea-1.2.3-r1.ebuild 1155
+SHA256 1b9e54acb02c14138e39179e81cdae4a477fd352ceec4f488bd7f35b3abfeb9f gtkglarea-1.2.3-r1.ebuild 1155
+MD5 8b8612c77ae373585e498c571bcb602f gtkglarea-1.99.0.ebuild 924
+RMD160 6a5413d33a17379ed203a196ad2ea545915a9075 gtkglarea-1.99.0.ebuild 924
+SHA256 6ce6a5899f13817635917887b3d94eee8b5717aba76452b14ff674020cd50857 gtkglarea-1.99.0.ebuild 924
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDBXbqgIKl8Uu19MoRAowzAJ9PEfJrRyAcHrdlhY8fBucgu9hRTACfU1PB
-z6hAMQWwb/UYoa+3/MoNyOM=
-=Yyns
+iD8DBQFECfeHwUpWvClEHQoRAgUSAJ932LGf7PAB6hJTGAHcyzTsIWhYtQCfYmi6
+daFktXpDc0xp9pFdFEsUqlU=
+=DCvW
 -----END PGP SIGNATURE-----
