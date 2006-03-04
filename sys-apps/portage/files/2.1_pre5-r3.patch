@@ -1,6 +1,6 @@
-diff -Nur portage-2.1_pre5/bin/dobin portage-2.1_pre5-r2/bin/dobin
+diff -Nur portage-2.1_pre5/bin/dobin portage-2.1_pre5-r3/bin/dobin
 --- portage-2.1_pre5/bin/dobin	2006-02-03 22:56:26.000000000 -0800
-+++ portage-2.1_pre5-r2/bin/dobin	2006-03-01 16:12:52.000000000 -0800
++++ portage-2.1_pre5-r3/bin/dobin	2006-03-03 14:15:23.000000000 -0800
 @@ -12,16 +12,11 @@
  	install -d "${D}${DESTTREE}/bin" || exit 2
  fi
@@ -19,9 +19,9 @@ diff -Nur portage-2.1_pre5/bin/dobin portage-2.1_pre5-r2/bin/dobin
  	else
  		echo "!!! ${0##*/}: ${x} does not exist" 1>&2
  		false
-diff -Nur portage-2.1_pre5/bin/dosbin portage-2.1_pre5-r2/bin/dosbin
+diff -Nur portage-2.1_pre5/bin/dosbin portage-2.1_pre5-r3/bin/dosbin
 --- portage-2.1_pre5/bin/dosbin	2006-02-03 22:56:26.000000000 -0800
-+++ portage-2.1_pre5-r2/bin/dosbin	2006-03-01 16:12:47.000000000 -0800
++++ portage-2.1_pre5-r3/bin/dosbin	2006-03-03 14:15:23.000000000 -0800
 @@ -12,16 +12,11 @@
  	install -d "${D}${DESTTREE}/sbin" || exit 2
  fi
@@ -40,9 +40,9 @@ diff -Nur portage-2.1_pre5/bin/dosbin portage-2.1_pre5-r2/bin/dosbin
  	else
  		echo "!!! ${0##*/}: ${x} does not exist" 1>&2
  		false
-diff -Nur portage-2.1_pre5/bin/ebuild.sh portage-2.1_pre5-r2/bin/ebuild.sh
+diff -Nur portage-2.1_pre5/bin/ebuild.sh portage-2.1_pre5-r3/bin/ebuild.sh
 --- portage-2.1_pre5/bin/ebuild.sh	2006-02-20 17:20:37.000000000 -0800
-+++ portage-2.1_pre5-r2/bin/ebuild.sh	2006-03-01 19:26:00.000000000 -0800
++++ portage-2.1_pre5-r3/bin/ebuild.sh	2006-03-03 14:15:23.000000000 -0800
 @@ -727,6 +727,11 @@
  }
  
@@ -55,9 +55,9 @@ diff -Nur portage-2.1_pre5/bin/ebuild.sh portage-2.1_pre5-r2/bin/ebuild.sh
  	if [ "$USERLAND" == "BSD" ] && type -p chflags &>/dev/null; then
  		chflags -R noschg,nouchg,nosappnd,nouappnd,nosunlnk,nouunlnk \
  			"${PORTAGE_BUILDDIR}"
-diff -Nur portage-2.1_pre5/bin/emerge portage-2.1_pre5-r2/bin/emerge
+diff -Nur portage-2.1_pre5/bin/emerge portage-2.1_pre5-r3/bin/emerge
 --- portage-2.1_pre5/bin/emerge	2006-02-20 16:58:13.000000000 -0800
-+++ portage-2.1_pre5-r2/bin/emerge	2006-02-26 03:39:28.000000000 -0800
++++ portage-2.1_pre5-r3/bin/emerge	2006-03-03 14:15:23.000000000 -0800
 @@ -1934,7 +1934,7 @@
  			y=portage.portdb.findname(x[pkgindex])
  			if not "--pretend" in myopts:
@@ -67,9 +67,31 @@ diff -Nur portage-2.1_pre5/bin/emerge portage-2.1_pre5-r2/bin/emerge
  
  			self.pkgsettings["EMERGE_FROM"] = x[0][:]
  			self.pkgsettings.backup_changes("EMERGE_FROM")
-diff -Nur portage-2.1_pre5/pym/portage_locks.py portage-2.1_pre5-r2/pym/portage_locks.py
+diff -Nur portage-2.1_pre5/bin/emerge-webrsync portage-2.1_pre5-r3/bin/emerge-webrsync
+--- portage-2.1_pre5/bin/emerge-webrsync	2006-02-03 22:56:26.000000000 -0800
++++ portage-2.1_pre5-r3/bin/emerge-webrsync	2006-03-02 11:16:10.000000000 -0800
+@@ -5,13 +5,11 @@
+ # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
+ # Rewritten from the old, Perl-based emerge-webrsync script
+ 
+-if [ -z "$PULLED_NICENESS" ]; then
+-	PULLED_NICENESS="$(/usr/lib/portage/bin/portageq envvar PORTAGE_NICENESS)"
+-	if [ -n "$PULLED_NICENESS" ]; then
+-		export PULLED_NICENESS
+-		exec nice -n $PORTAGE_NICENESS "$0" "$@"
+-		echo "failed pulling PORTAGE_NICENESS, disabling"
+-	fi
++# If PORTAGE_NICENESS is overriden via the env then it will
++# still pass through the portageq call and override properly.
++PORTAGE_NICENESS="$(/usr/lib/portage/bin/portageq envvar PORTAGE_NICENESS)"
++if [ -n "${PORTAGE_NICENESS}" ]; then
++	renice $PORTAGE_NICENESS $$ > /dev/null
+ fi
+ 
+ GENTOO_MIRRORS="${GENTOO_MIRRORS} $(/usr/lib/portage/bin/portageq gentoo_mirrors)"
+diff -Nur portage-2.1_pre5/pym/portage_locks.py portage-2.1_pre5-r3/pym/portage_locks.py
 --- portage-2.1_pre5/pym/portage_locks.py	2006-02-15 10:36:48.000000000 -0800
-+++ portage-2.1_pre5-r2/pym/portage_locks.py	2006-02-26 03:39:05.000000000 -0800
++++ portage-2.1_pre5-r3/pym/portage_locks.py	2006-03-03 14:15:23.000000000 -0800
 @@ -122,7 +122,8 @@
  			raise
  
@@ -80,15 +102,15 @@ diff -Nur portage-2.1_pre5/pym/portage_locks.py portage-2.1_pre5-r2/pym/portage_
  		# The file was deleted on us... Keep trying to make one...
  		os.close(myfd)
  		portage_util.writemsg("lockfile recurse\n",1)
-diff -Nur portage-2.1_pre5/pym/portage.py portage-2.1_pre5-r2/pym/portage.py
+diff -Nur portage-2.1_pre5/pym/portage.py portage-2.1_pre5-r3/pym/portage.py
 --- portage-2.1_pre5/pym/portage.py	2006-02-21 02:01:08.000000000 -0800
-+++ portage-2.1_pre5-r2/pym/portage.py	2006-03-01 19:30:24.000000000 -0800
++++ portage-2.1_pre5-r3/pym/portage.py	2006-03-03 14:16:05.000000000 -0800
 @@ -4,7 +4,7 @@
- # $Id: 2.1_pre5-r2.patch,v 1.1 2006/03/02 04:07:12 zmedico Exp $
+ # $Id: 2.1_pre5-r3.patch,v 1.1 2006/03/04 02:05:24 zmedico Exp $
  
  
 -VERSION="2.1_pre5"
-+VERSION="2.1_pre5-r2"
++VERSION="2.1_pre5-r3"
  
  # ===========================================================================
  # START OF IMPORTS -- START OF IMPORTS -- START OF IMPORTS -- START OF IMPORT

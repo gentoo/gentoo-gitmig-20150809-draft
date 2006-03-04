@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.85 2006/03/02 04:07:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.86 2006/03/04 02:05:24 zmedico Exp $
+
+*portage-2.1_pre5-r3 (03 Mar 2006)
+
+  03 Mar 2006; Zac Medico <zmedico@gentoo.org>
+  +portage-2.1_pre5-r3.ebuild:
+  Regression fix for emerge-webrsync.  See bug #124621.
 
 *portage-2.1_pre5-r2 (01 Mar 2006)
 

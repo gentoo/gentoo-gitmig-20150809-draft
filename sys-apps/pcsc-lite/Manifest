@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fec0209805a94781c38af9dd7d47d1fb ChangeLog 2430
-RMD160 a47a2973ec851539c4d73f5d28ed1148358d26eb ChangeLog 2430
-SHA256 ca58c0d353cda3665f2c38f6630f683284767cc8a6431c03ef4400c5dc4d7041 ChangeLog 2430
+MD5 b7bab09d63d59c31f7a3a9192aedd79e ChangeLog 2578
+RMD160 7659c64ed24d988b58297d8cf959ef05f3b07d12 ChangeLog 2578
+SHA256 800a54d50d3bb1883c1471bcc0c3aa2ea4c49b84469e3225f093ea6b21842981 ChangeLog 2578
 MD5 aa81afb9cffef205c955fc1ab2a9bfd1 files/digest-pcsc-lite-1.2.0 67
 RMD160 e58ff2331fe3c9c65ce978155799c0484b667e52 files/digest-pcsc-lite-1.2.0 67
 SHA256 b64fd693c9dd3400c95953e3870e5577f190d544c65cbe3d8745bbe161f85b6b files/digest-pcsc-lite-1.2.0 67
@@ -16,6 +13,9 @@ SHA256 60f20906a3ad1be795a75d46ef8858af1dbbd06f634ada9d91274f29b70e2db3 files/di
 MD5 2fcf707bd0b28ed8be807fc32f06fdbe files/digest-pcsc-lite-1.2.9_beta9 74
 RMD160 d4233ebd1aa766aed8079c0c394d7dcd69687a4c files/digest-pcsc-lite-1.2.9_beta9 74
 SHA256 1d99b4cf821c83fefbba9ba0d3e90a18537998b7abc46c7d6f692396fad073d1 files/digest-pcsc-lite-1.2.9_beta9 74
+MD5 82ab7ef371a023667dc79066cb87c4b3 files/digest-pcsc-lite-1.3.0 247
+RMD160 6ce17bd1fbf499b4b17515dab8b4e51f577beaa9 files/digest-pcsc-lite-1.3.0 247
+SHA256 e3a3dce89ea4e2056b72e6ca71e28ced42e401dea495a5c396b112f06113bb7b files/digest-pcsc-lite-1.3.0 247
 MD5 4a6af6338f7bf5bdc3b2488aa9fd3ea4 files/pcscd-confd 84
 RMD160 02f722d5cae6dc5c160a76e923a7e23964b3fe83 files/pcscd-confd 84
 SHA256 b2ca734ebf73e367f24434895935e6215582a104bc7924d1d02af0d74877322b files/pcscd-confd 84
@@ -37,10 +37,6 @@ SHA256 9e5d7a90227d6f7ec0c1e35666cd55b8020ae0cae19cbfd23fe69e4a35fac215 pcsc-lit
 MD5 b22781e0bf6f65567ee849a95eecbe6b pcsc-lite-1.2.9_beta9.ebuild 1295
 RMD160 e93e7bd886979aae396e37675b0bb58731029368 pcsc-lite-1.2.9_beta9.ebuild 1295
 SHA256 6c2e557f9da746cf734cadcdb4e9531390436c69833c24f59c4df71391e348e3 pcsc-lite-1.2.9_beta9.ebuild 1295
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6/Tz2+ySkm8kpY0RAhxpAKDA8hkJqk9aEYAN9a7KiZYaJPqLhwCgwkDw
-O7+ZdVdL8rhhdjpwZwoGB90=
-=BB7O
------END PGP SIGNATURE-----
+MD5 d6b196447e56ab77058c9f404beaadc3 pcsc-lite-1.3.0.ebuild 1289
+RMD160 a21be7f139b57626b9e5441b0af566f84e6ea8dd pcsc-lite-1.3.0.ebuild 1289
+SHA256 4989f02b5413ef87c96752a607ff6a7383f0631b3d1200198aab4a04cb424ce1 pcsc-lite-1.3.0.ebuild 1289
