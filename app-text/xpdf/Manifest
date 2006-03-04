@@ -7,9 +7,9 @@ SHA256 ebbaec613cff6d4535e7290505e4f597fdf4d0f26560f2f3889c482fefbe317c files/di
 MD5 ddc9f57937bb7077b0b7e5661cf8d1f3 files/digest-xpdf-3.01-r8 253
 RMD160 8770f26914bc17bb1f8dd6e9f74c6e99f315faf6 files/digest-xpdf-3.01-r8 253
 SHA256 ebbaec613cff6d4535e7290505e4f597fdf4d0f26560f2f3889c482fefbe317c files/digest-xpdf-3.01-r8 253
-MD5 9c412a4808a52086a3040aa771e16b62 files/xpdf-3.01-poppler-0.5.1.patch 2797
-RMD160 963040540b97cc432bd4e9c4ba361feb0d729301 files/xpdf-3.01-poppler-0.5.1.patch 2797
-SHA256 85679785a1f12b3e003e56f7d24d9c143f93e82c6391cb38823e752d0b055841 files/xpdf-3.01-poppler-0.5.1.patch 2797
+MD5 5fd70ac5b3e7bb3e116335725a466f5e files/xpdf-3.01-poppler-0.5.1.patch 2964
+RMD160 a8aef3ef8b95b5b63365a7e423ec28529394f3b5 files/xpdf-3.01-poppler-0.5.1.patch 2964
+SHA256 c2535c4b5f0f24358425aaa565c844bab0459494647b1a96f6d4bf22ef9e9c7a files/xpdf-3.01-poppler-0.5.1.patch 2964
 MD5 82bf7fedf2b17d230c7b9bc8c0b14da5 files/xpdf-3.01-poppler-nodrm.patch 1712
 RMD160 9be0eb12d1c2501e9a8eae7c7844832a030e2a11 files/xpdf-3.01-poppler-nodrm.patch 1712
 SHA256 50ee43c573fc046bdb74bc368ed4a589b062bc1b9454e68be49a9397540ea4ee files/xpdf-3.01-poppler-nodrm.patch 1712

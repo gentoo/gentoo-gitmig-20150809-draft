@@ -9,9 +9,17 @@
      return gFalse;
    }
    displayDest(d, zoom, rotate, gTrue);
---- xpdf-3.01-poppler/XPDFCore.cc.orig	2006-03-04 12:07:31.000000000 +0100
-+++ xpdf-3.01-poppler/XPDFCore.cc	2006-03-04 12:11:58.000000000 +0100
-@@ -461,7 +461,7 @@
+--- xpdf-3.01-poppler/XPDFCore.cc.orig	2006-03-04 17:53:00.000000000 +0100
++++ xpdf-3.01-poppler/XPDFCore.cc	2006-03-04 17:53:40.000000000 +0100
+@@ -16,6 +16,7 @@
+ #include <dirent.h>
+ #include "gmem.h"
+ #include "GooString.h"
++#include "UGooString.h"
+ #include "GooList.h"
+ #include "Error.h"
+ #include "GlobalParams.h"
+@@ -461,7 +462,7 @@
        namedDest = NULL;
        if ((dest = ((LinkGoTo *)action)->getDest())) {
  	dest = dest->copy();
@@ -20,7 +28,7 @@
  	namedDest = namedDest->copy();
        }
      } else {
-@@ -469,7 +469,7 @@
+@@ -469,7 +470,7 @@
        namedDest = NULL;
        if ((dest = ((LinkGoToR *)action)->getDest())) {
  	dest = dest->copy();
@@ -29,7 +37,7 @@
  	namedDest = namedDest->copy();
        }
        s = ((LinkGoToR *)action)->getFileName()->getCString();
-@@ -492,7 +492,7 @@
+@@ -492,7 +493,7 @@
        delete fileName;
      }
      if (namedDest) {
@@ -38,23 +46,23 @@
        delete namedDest;
      }
      if (dest) {
-@@ -599,7 +599,7 @@
+@@ -599,7 +600,7 @@
        if (obj1.isArray()) {
  	for (i = 0; i < obj1.arrayGetLength(); ++i) {
  	  if (obj1.arrayGet(i, &movieAnnot)->isDict()) {
 -	    if (movieAnnot.dictLookup("Subtype", &obj2)->isName("Movie")) {
-+	    if (movieAnnot.dictLookup((UGooString &) "Subtype", &obj2)->isName("Movie")) {
++	    if (movieAnnot.dictLookup(UGooString("Subtype"), &obj2)->isName("Movie")) {
  	      obj2.free();
  	      break;
  	    }
-@@ -611,8 +611,8 @@
+@@ -611,8 +612,8 @@
        }
      }
      if (movieAnnot.isDict()) {
 -      if (movieAnnot.dictLookup("Movie", &obj1)->isDict()) {
 -	if (obj1.dictLookup("F", &obj2)) {
-+      if (movieAnnot.dictLookup((UGooString &) "Movie", &obj1)->isDict()) {
-+	if (obj1.dictLookup((UGooString &) "F", &obj2)) {
++      if (movieAnnot.dictLookup(UGooString("Movie"), &obj1)->isDict()) {
++	if (obj1.dictLookup(UGooString("F"), &obj2)) {
  	  if ((fileName = LinkAction::getFileSpecName(&obj2))) {
  	    if (!isAbsolutePath(fileName->getCString())) {
  	      fileName2 = appendToPath(
