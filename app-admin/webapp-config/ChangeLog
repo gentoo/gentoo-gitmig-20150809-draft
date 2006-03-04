@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.23 2006/03/03 13:10:36 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.24 2006/03/04 16:04:23 wrobel Exp $
+
+*webapp-config-1.50.11 (04 Mar 2006)
+
+  04 Mar 2006; <wrobel@gentoo.org> webapp-config-1.50.10.ebuild,
+  +webapp-config-1.50.11.ebuild:
+  Added webapp-config-1.50.11 to the tree. Added a check for python>=2.4 to
+  both 1.50.* ebuilds. If the check fails, testing will be disabled.
 
   03 Mar 2006; Jose Luis Rivero <yoswink@gentoo.org>
   webapp-config-1.50.10.ebuild:
