@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060302.ebuild,v 1.2 2006/03/03 19:03:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060302.ebuild,v 1.3 2006/03/04 06:58:43 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -69,6 +69,8 @@ src_unpack() {
 	cd ${S}
 	cp -R ${S_BASE} ${S_STATIC}
 	mv ${S_BASE} ${S_SHARED}
+	cd ${S_SHARED}
+	epatch "${FILESDIR}/ffmpeg-shared-gcc4.1.patch"
 
 }
 
