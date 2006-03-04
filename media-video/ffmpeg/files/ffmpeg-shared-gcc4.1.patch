@@ -1,5 +1,5 @@
---- /var/tmp/portage/ffmpeg-0.4.9_p20060302/work/ffmpeg-0.4.9-p20060302-shared//libavcodec/i386/dsputil_mmx.c	2006-03-04 07:50:27.000000000 +0100
-+++ /tmp/dsputil_mmx.c	2006-03-04 07:49:04.000000000 +0100
+--- ffmpeg.orig/libavcodec/i386/dsputil_mmx.c	2006-03-04 07:50:27.000000000 +0100
++++ ffmpeg/libavcodec/i386/dsputil_mmx.c	2006-03-04 07:49:04.000000000 +0100
 @@ -619,10 +619,22 @@
  
  static inline void transpose4x4(uint8_t *dst, uint8_t *src, int dst_stride, int src_stride){
