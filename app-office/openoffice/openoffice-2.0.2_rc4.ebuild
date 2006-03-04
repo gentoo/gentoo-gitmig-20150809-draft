@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2_rc4.ebuild,v 1.2 2006/03/04 20:42:24 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2_rc4.ebuild,v 1.3 2006/03/04 22:08:52 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -107,7 +107,7 @@ pkg_setup() {
 	ewarn " instead. "
 	ewarn
 
-	strip-linguas af ar be_BY bg bn br bs ca cs cy da de el en en_GB en_US en_ZA es et fa fi fr ga gu_IN he hi_IN hr hu it ja km ko lo lt lv mk nb ne nl nn nr ns pa_IN pl pt_BR ru rw sh_YU sk sl sr_CS st sv sw_TZ th tn tr vi xh zh_CN zh_TW zu
+	strip-linguas af ar az be bg bs ca cs cy da de el en en_CA en_GB en_US en_ZA es et eu fi fr ga gl gu he hi hr hu is it ja ka km ko lt lv mk ms nb ne nl nn no nr nso pa pl pt pt_BR ru rw sk sl sq sr st sv sw th tr ts uk vi wa xh zh_CN zh_TW zu
 
 	if [ -z "${LINGUAS}" ]; then
 		export LINGUAS_OOO="en-US"
