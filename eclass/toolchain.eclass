@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.246 2006/03/03 02:14:50 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.247 2006/03/04 05:55:29 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -146,11 +146,15 @@ else
 	# these are features introduced in 4.0
 	if version_is_at_least "4.0" ; then
 		IUSE="${IUSE} objc-gc mudflap"
-	fi
 
-	# >=4.0 doesn't support hardened yet
-	if ! version_is_at_least "4.0" ; then
-		IUSE="${IUSE} hardened"
+		# =4.0* doesn't support hardened yet
+		if [[ ${PV} == 4.0* ]] ; then
+			IUSE="${IUSE} hardened"
+		fi
+
+		if version_is_at_least "4.1" ; then
+			IUSE="${IUSE} objc++"
+		fi
 	fi
 
 	# Support upgrade paths here or people get pissed
@@ -1080,6 +1084,7 @@ gcc-compiler-configure() {
 
 	if version_is_at_least "4.0" ; then
 		confgcc="${confgcc} $(use_enable mudflap libmudflap)"
+		confgcc="${confgcc} --disable-libssp"
 	fi
 
 	# GTK+ is preferred over xlib in 3.4.x (xlib is unmaintained
@@ -1109,9 +1114,10 @@ gcc-compiler-configure() {
 	GCC_LANG="c"
 	is_cxx && GCC_LANG="${GCC_LANG},c++"
 	is_gcj && GCC_LANG="${GCC_LANG},java"
-	if is_objc ; then
+	if is_objc || is_objcxx ; then
 		GCC_LANG="${GCC_LANG},objc"
 		use objc-gc && confgcc="${confgcc} --enable-objc-gc"
+		is_objcxx && GCC_LANG="${GCC_LANG},obj-c++"
 	fi
 
 	# fortran support just got sillier! the lang value can be f77 for
@@ -2225,6 +2231,12 @@ is_objc() {
 	gcc-lang-supported objc || return 1
 	use build && return 1
 	use objc
+}
+
+is_objcxx() {
+	gcc-lang-supported 'obj-c++' || return 1
+	use build && return 1
+	use objc++
 }
 
 is_ada() {
