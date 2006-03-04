@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2_p20040306.ebuild,v 1.6 2005/11/09 12:58:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2_p20040306.ebuild,v 1.7 2006/03/04 14:32:33 nixphoeni Exp $
 
 inherit eutils
 
@@ -15,8 +15,16 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="-alpha ppc ~sparc x86"
 
-RDEPEND="virtual/x11
-	truetype? ( virtual/xft )
+RDEPEND="|| ( ( x11-libs/libX11
+		x11-libs/libXrandr
+		x11-libs/libXft
+		x11-libs/libXrender
+		x11-proto/xextproto
+		xinerama? ( x11-libs/libXinerama )
+		)
+		virtual/x11
+	)
+	truetype? ( || ( x11-libs/libXft virtual/xft ) )
 	ruby? ( || ( >=dev-lang/ruby-1.8 dev-lang/ruby-cvs ) )
 	>=dev-lang/swig-1.3.20
 	>=media-libs/imlib2-1.1.0

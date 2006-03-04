@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/kahakai
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.22 2005/11/09 12:58:43 gustavoz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.23 2006/03/04 14:32:33 nixphoeni Exp $
+
+  04 Mar 2006; Joe Sapp <nixphoeni@gentoo.org> metadata.xml,
+  kahakai-0.6.2_p20040306.ebuild:
+  Added modular X dependencies
 
   09 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> kahakai-0.6.2.ebuild,
   kahakai-0.6.2_p20040306.ebuild:
