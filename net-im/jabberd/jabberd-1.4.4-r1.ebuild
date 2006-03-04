@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4.ebuild,v 1.1 2006/03/04 02:28:57 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r1.ebuild,v 1.1 2006/03/04 15:00:35 humpback Exp $
 
 inherit eutils
 
@@ -77,6 +77,8 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install || die "make install failed"
+	insinto /etc/conf.d ; newins ${FILESDIR}/jabber-conf.d jabber
+	exeinto /etc/init.d ; newexe ${FILESDIR}/jabber.rc6-r8 jabber
 	dosed 's/\/var\/lib\/spool\/jabberd/\/var\/spool\/jabber/g' /etc/jabber/jabber.xml
 	dosed 's/\/var\/lib\/log\/jabberd/\/var\/log\/jabber/g' /etc/jabber/jabber.xml
 	dosed 's/\/var\/lib\/run\/jabberd/\/var\/run\/jabber/g' /etc/jabber/jabber.xml
