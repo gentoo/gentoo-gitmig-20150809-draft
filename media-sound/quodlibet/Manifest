@@ -1,24 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 032262984906ec9c26dc6298199da831 ChangeLog 2339
-RMD160 0a709e40840ae36b865672802f56c912f52d155f ChangeLog 2339
-SHA256 2b34d64dfb8acfdb027d61d0e2e0986c8ff2a3a094e74e049fffad3a9514ec86 ChangeLog 2339
+MD5 3e664cdd430c1578e12df9ce317bdccc ChangeLog 2587
+RMD160 20545d2d85851f80d0cdc35819b633baa8157250 ChangeLog 2587
+SHA256 5d22949c76a18f71b8b823b8f445496611fa02cb1e618e5a4e2d71b742776537 ChangeLog 2587
 MD5 704b13a70e462cea62a9f57f66a7330e files/digest-quodlibet-0.11-r1 66
 RMD160 7095c83ceb23dab39aca2b8e6d80547d525d8ec2 files/digest-quodlibet-0.11-r1 66
 SHA256 cb0048d6fd3d439f324188ee145db8817fc94f97e5cfe9cf1d69df1b04f2048b files/digest-quodlibet-0.11-r1 66
 MD5 d1918953015d3fb5fb6ae39e652fb2c7 files/digest-quodlibet-0.17.1 250
 RMD160 e8ccb5f5ae6485195899e921e5d4ea0aca6429ff files/digest-quodlibet-0.17.1 250
 SHA256 76c88f86559b5d175b628e8682d25e77de08d48af60df8a81eb3653327b6b3b1 files/digest-quodlibet-0.17.1 250
-MD5 d1918953015d3fb5fb6ae39e652fb2c7 files/digest-quodlibet-0.17.1-r1 250
-RMD160 e8ccb5f5ae6485195899e921e5d4ea0aca6429ff files/digest-quodlibet-0.17.1-r1 250
-SHA256 76c88f86559b5d175b628e8682d25e77de08d48af60df8a81eb3653327b6b3b1 files/digest-quodlibet-0.17.1-r1 250
+MD5 d1918953015d3fb5fb6ae39e652fb2c7 files/digest-quodlibet-0.17.1-r2 250
+RMD160 e8ccb5f5ae6485195899e921e5d4ea0aca6429ff files/digest-quodlibet-0.17.1-r2 250
+SHA256 76c88f86559b5d175b628e8682d25e77de08d48af60df8a81eb3653327b6b3b1 files/digest-quodlibet-0.17.1-r2 250
 MD5 12f4c8a30285076702d5b683fd400068 files/digest-quodlibet-0.8.1 67
 RMD160 a3b767f20933c2701c6f288d996e8d76bd07af71 files/digest-quodlibet-0.8.1 67
 SHA256 acbee40581eab18ff5121dba1e4c862c2a868521b6c15ffadc5d326b3c56e317 files/digest-quodlibet-0.8.1 67
-MD5 bae1e21b3e339f41736e4984cd43f811 files/quodlibet-0.17.1-gstcheck.patch 871
-RMD160 a56b20536a45e1d2bb9af2b73c7947b3b4e846d2 files/quodlibet-0.17.1-gstcheck.patch 871
-SHA256 f8653fef96ca8f9e98fc4afc56dcfa6aff0540fec0ec36ccf6dd9c799cb8210e files/quodlibet-0.17.1-gstcheck.patch 871
 MD5 a1c9620cc4536cfdb260002b24be843a files/quodlibet-0.17.1-multilibfix.patch 303
 RMD160 0261ff0ef973c3816d81f230fd529e80339ffc0a files/quodlibet-0.17.1-multilibfix.patch 303
 SHA256 d617e64d526add925bfcbe9d8ce3c491cba42fa4f501bc71e331dcc84a36956e files/quodlibet-0.17.1-multilibfix.patch 303
@@ -28,9 +25,9 @@ SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata
 MD5 80b6e1e0c43599a4b17d8b92e18ca3a9 quodlibet-0.11-r1.ebuild 867
 RMD160 3a628d23d6e4fe9e116103dfc86b07cb5eb66824 quodlibet-0.11-r1.ebuild 867
 SHA256 99892ea07c6a44bdcf76bf587e348ff4b90cc8dc4478e71e594fcdabeda2dd7e quodlibet-0.11-r1.ebuild 867
-MD5 e328ac8c0f6c09677463693b9e27386d quodlibet-0.17.1-r1.ebuild 1665
-RMD160 11020eba48a05cb6cc9491f0ad6562feffe2f3f8 quodlibet-0.17.1-r1.ebuild 1665
-SHA256 0d7f47f1f5637abef1651a68fa7f6887ddb0155d964603caea74084957338286 quodlibet-0.17.1-r1.ebuild 1665
+MD5 c7969c63fbdc2b17cfaef8ef805f8996 quodlibet-0.17.1-r2.ebuild 1746
+RMD160 86d36e5cb9c64e510e4aca29c61510d5a9295990 quodlibet-0.17.1-r2.ebuild 1746
+SHA256 3560ddbc98e0535991b3e906db3043b4e1cb7418d0d4c797ffb606eed90b0dc0 quodlibet-0.17.1-r2.ebuild 1746
 MD5 d84806b01733ef2435f19fd208ce083f quodlibet-0.17.1.ebuild 1555
 RMD160 a5b24438d7ad5799a38bb9682cdad89057ef3909 quodlibet-0.17.1.ebuild 1555
 SHA256 b594d9c0b55833eb912e45c6da52d1774fc3782645f32de3369dcf93d8af7c69 quodlibet-0.17.1.ebuild 1555
@@ -40,7 +37,7 @@ SHA256 7b38feeb9c52bbfa642cc50e8e0fa10a8fb69447c3cf9a3dec40de8b866a926d quodlibe
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFECQaPwUpWvClEHQoRAhL9AJsH/yP6u2d1W0uFG11OC171p9yPBACfbUoW
-CpLFu9iJKxj3fl1IAL4n3bE=
-=B4pU
+iD8DBQFECcaTwUpWvClEHQoRArAUAJ90ScZacVOhI4T2zCq4LqAillAD1ACbBx29
+kTEVDgPTwGhTU1fFgtude/U=
+=hLcy
 -----END PGP SIGNATURE-----

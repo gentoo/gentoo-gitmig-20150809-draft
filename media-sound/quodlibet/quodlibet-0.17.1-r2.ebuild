@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.17.1-r1.ebuild,v 1.1 2006/03/04 03:17:19 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.17.1-r2.ebuild,v 1.1 2006/03/04 16:56:30 metalgod Exp $
 
 inherit eutils virtualx
 
@@ -39,10 +39,14 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-multilibfix.patch
-	#Ugly patch to avoid access violations resulting of a bad makefile
-	epatch ${FILESDIR}/${P}-gstcheck.patch
 }
 src_compile() {
+	mkdir -p "${T}/home"
+	export HOME="${T}/home"
+	export GST_REGISTRY=${T}/home/registry.cache.xml
+	addpredict /root/.gconfd
+	addpredict /root/.gconf
+	addpredict /var/lib/cache/gstreamer-0.8
 	Xemake || die "make failed"
 	Xemake extensions || die "make extensions failed"
 }
