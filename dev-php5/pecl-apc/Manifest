@@ -1,12 +1,28 @@
-MD5 283423bbb574862c927a7c6e2b1b6cfa ChangeLog 701
-RMD160 de144a7d50b7be0bd9586b3edbab8c93fbbdc0b0 ChangeLog 701
-SHA256 df4ba0ee03793f3e0c7ebfbba8c550b3066b55657a377cd73c78fe829c341ea8 ChangeLog 701
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 24962343f7a20c5d687dc64add014624 ChangeLog 836
+RMD160 bab388681542d497bc01f6187b001dea4ac037ec ChangeLog 836
+SHA256 f0b859fab177c56a1d668d7dda2a64b7757c12fbf86d32ad728eaa28c7bdc058 ChangeLog 836
 MD5 66795850fe4fb57f021182ccdd3e3203 files/digest-pecl-apc-3.0.8 57
 RMD160 dcb355e13d2dae25850e1d47389686de63278e58 files/digest-pecl-apc-3.0.8 57
 SHA256 00cace789053719fe85b322602a0f85c537a832de53f74720d969d4ab4c8c60d files/digest-pecl-apc-3.0.8 57
+MD5 d017ac22b1f501982506d92d7f546184 files/digest-pecl-apc-3.0.9 217
+RMD160 440146e0ed7756ab176f1bdcae60f14ca60e2c17 files/digest-pecl-apc-3.0.9 217
+SHA256 8b558e124c017734b1c2ae46f3dbc8170b029e052d5829f8a6287e428e683f9e files/digest-pecl-apc-3.0.9 217
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a metadata.xml 157
 SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 metadata.xml 157
 MD5 7b3c692e7527df799d245607f5b86ef8 pecl-apc-3.0.8.ebuild 2187
 RMD160 cf98686d3bb1411c4b1de283be58a7d9ea5ee076 pecl-apc-3.0.8.ebuild 2187
 SHA256 4a5c175ebec2e96e154345cf4377a5be503a41dc52b3f879611aee23ab979cca pecl-apc-3.0.8.ebuild 2187
+MD5 cc7466e0e36fb91defa02d5edac81b8f pecl-apc-3.0.9.ebuild 2191
+RMD160 ccb1687be678d143be446b5ce2b3e2fbf973d51e pecl-apc-3.0.9.ebuild 2191
+SHA256 62b408e62bc576af175b4eb1fc67e5388fc5d41a93a53ba5802365d656950bd8 pecl-apc-3.0.9.ebuild 2191
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFECgLfaGfFFLhbXWkRAibdAJ42qvof8WANv2mrijsE7KEUrO2ADgCgg3sz
+IyAhnj74ik0Wd0unkVGnMYM=
+=wMq3
+-----END PGP SIGNATURE-----
