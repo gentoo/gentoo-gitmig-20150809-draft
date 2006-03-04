@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.99.ebuild,v 1.1 2006/03/03 17:32:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.99.ebuild,v 1.2 2006/03/04 00:23:27 halcy0n Exp $
 
 inherit distutils eutils multilib
 
@@ -37,7 +37,7 @@ src_install() {
 
 	distutils_src_install
 	cd ${S}
-	
+
 	#The following three lines probably do not do their jobs and should be
 	#changed
 	PYTHONPATH="${D}/usr/$(get_libdir)/site-packages" ${python} setup2.py
@@ -51,7 +51,7 @@ PYMOL_SCRIPTS="/usr/share/pymol/scripts"
 export PYMOL_PATH PYMOL_DATA PYMOL_SCRIPTS
 ${python} \${PYMOL_PATH}/__init__.py \$*
 EOF
-	
+
 	exeinto /usr/bin
 	doexe ${T}/pymol
 	dodoc DEVELOPERS CHANGES
