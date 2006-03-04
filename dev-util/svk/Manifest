@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 56d30c3759a57e24f7a14b14c01a083c ChangeLog 3660
-RMD160 51b5019421df5eebd66c070968a13f252c7fa7e6 ChangeLog 3660
-SHA256 1c8974713fb3dfb5cc15913405c498464d1ebc068b83e5e78b8b3d58a2bf821a ChangeLog 3660
+MD5 feedecb2080a5ef2e5cfa0ccaa692eec ChangeLog 3833
+RMD160 97e8bd43c4f350c80631dc9ce93bf34254ded887 ChangeLog 3833
+SHA256 19a9040bf9babefe879c3affec74f62d8203140d733f25457aabed000464f6dd ChangeLog 3833
 MD5 b64e484116f5963bfeccf06dde781d96 files/digest-svk-1.00 60
 RMD160 21e3b87ed4d0b9bb9707d7f3bfd37577aacab079 files/digest-svk-1.00 60
 SHA256 77971f3d9558eb24a28987cf7d93801f32d8c84fa9070dd5d88e965bd1bc3a19 files/digest-svk-1.00 60
@@ -28,6 +28,9 @@ SHA256 956476612a5e46f042c1dba8a21c4bc30db71ac3f6c388d582cf03e64de9f2e4 files/di
 MD5 d5d38eb7e6e72e44df53a8e6a82ef55b files/digest-svk-1.07 226
 RMD160 df5dee98391cf4a94d41e056ee585d8f6cf24144 files/digest-svk-1.07 226
 SHA256 fb83d63c9d37e459735f95ee33b0cee51f7ea40a6e651762a1084a9a057020a4 files/digest-svk-1.07 226
+MD5 d5d38eb7e6e72e44df53a8e6a82ef55b files/digest-svk-1.07-r1 226
+RMD160 df5dee98391cf4a94d41e056ee585d8f6cf24144 files/digest-svk-1.07-r1 226
+SHA256 fb83d63c9d37e459735f95ee33b0cee51f7ea40a6e651762a1084a9a057020a4 files/digest-svk-1.07-r1 226
 MD5 cc0dd7817cfd7332d4df793ce97c28ff files/svk-1.00-nognupgtest.patch 283
 RMD160 c7a5ffa719613d799d93ce02c890ee1ef5e9308a files/svk-1.00-nognupgtest.patch 283
 SHA256 e868ed54ba0686751dfc29462da8dc4452c9c5e5cc4df5b3a421c5529f1f1c6b files/svk-1.00-nognupgtest.patch 283
@@ -43,6 +46,9 @@ SHA256 cd017d3f57202cc5f1a6e66e7af2911d201a0b23012a44eb895913faed54df78 files/sv
 MD5 54e6235911ca6a7bf15ad739dddd441a files/svk-1.05-nognupgtest.patch 294
 RMD160 5a397b8bbd9a6dc357ca42c56c1f455407c89a15 files/svk-1.05-nognupgtest.patch 294
 SHA256 2b94af144ba503f190bae26db624da968544014f1fa2be6185efacb9cd08aca6 files/svk-1.05-nognupgtest.patch 294
+MD5 18dff34632e9bbae618f852ed7c18187 files/svk-1.07-xxdiff.patch 1020
+RMD160 627e9081588cd8a6f834679e8bfc40234e4dfac7 files/svk-1.07-xxdiff.patch 1020
+SHA256 7af4e6d62ffb8aaaef5a14747e61a459f7be01b7806c1b57e77f35d0672eb035 files/svk-1.07-xxdiff.patch 1020
 MD5 abaeaac662a08acda33cbe2d531e7543 metadata.xml 223
 RMD160 071f2a29e6cd015bdabef8ba277e90dee2bd0232 metadata.xml 223
 SHA256 ae2bc880cff89faf2346ca40f20e1c64dae39faed50327712cc3940c26d20a96 metadata.xml 223
@@ -67,13 +73,16 @@ SHA256 9c0f47959d3ae7189897253a5e2cd6db4bdc149e8a53cb408abb50e466c8d42a svk-1.06
 MD5 d86a9d87c25f9abfaed7755970a0e40a svk-1.06.ebuild 1931
 RMD160 23acdbffc273f1827644c0b9df3751703f556fe4 svk-1.06.ebuild 1931
 SHA256 b76e3fd2e49219eab9cdf469198bed72a48e3eb5b6b7e879e38ca80a526e9d68 svk-1.06.ebuild 1931
+MD5 993b6f0446902d4cd3f4c3b097343ee0 svk-1.07-r1.ebuild 2034
+RMD160 7402ef8883dd831aa77d91754551d6725348e4c4 svk-1.07-r1.ebuild 2034
+SHA256 aea0c5a30c8a125d9f67b600a4682865a5bf838c4271486271d56869fded0dcb svk-1.07-r1.ebuild 2034
 MD5 ba56c64ebf7b72d6167c4fd233f2e6cf svk-1.07.ebuild 1958
 RMD160 aa5d2eba432025eedcf7330afa8ac44615c9d9a8 svk-1.07.ebuild 1958
 SHA256 c7d064c9c5674afb552848177c61347bc9cd5f586ec1d24a1f417e6df7b45ffc svk-1.07.ebuild 1958
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEA1HsJrHF4yAQTrARAk/cAJ91rIhsWmrMfAxdH4zpgjuOx4apoQCcDJdS
-EfoZfrrqZAb/WTadMaTzCsg=
-=27+y
+iD8DBQFECSsWJrHF4yAQTrARArwFAJ9VAUipryTIRo7Z14/Uw9ti5FaMvQCguU32
+96WovBPoklg7jykUSCC3sQ8=
+=mm5y
 -----END PGP SIGNATURE-----
