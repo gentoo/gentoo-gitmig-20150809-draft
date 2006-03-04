@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-ttf
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.24 2005/12/24 02:51:30 seemant Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.25 2006/03/04 17:17:35 grobian Exp $
+
+  04 Mar 2006; Fabian Groffen <grobian@gentoo.org> sdl-ttf-2.0.7.ebuild:
+  Marked ~ppc-macos (bug #78781)
 
   24 Dec 2005; Seemant Kulleen <seemant@gentoo.org> sdl-ttf-2.0.7.ebuild:
   changed dep to be friendly with modular X
