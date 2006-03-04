@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5055 2006/03/04 05:33:54 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5056 2006/03/04 19:39:11 pylon Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,7 +23,6 @@
 
 # Robin H. Johnson <robbat2@gentoo.org> (11 Feb 2006)
 # zlib interaction is badly broken. See bug #124733.
-# Upstream mailing lists/website also unavailable.
 =dev-util/cvs-1.12.13
 
 # Mark Loeser <halcy0n@gentoo.org> (02 Mar 2006)
