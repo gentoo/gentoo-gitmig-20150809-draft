@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r1.ebuild,v 1.1 2006/03/04 15:00:35 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r2.ebuild,v 1.1 2006/03/04 15:22:20 humpback Exp $
 
 inherit eutils
 
@@ -85,6 +85,14 @@ src_install() {
 	dosed 's/\/var\/lib\/spool\/jabberd/\/var\/spool\/jabber/g' /etc/jabber/jabber.xml.dist
 	dosed 's/\/var\/lib\/log\/jabberd/\/var\/log\/jabber/g' /etc/jabber/jabber.xml.dist
 	dosed 's/\/var\/lib\/run\/jabberd/\/var\/run\/jabber/g' /etc/jabber/jabber.xml.dist
+	dosed 's/jabber.pid/jabberd14.pid/g' /etc/jabber/jabber.xml
+	dosed 's/jabber.pid/jabberd14.pid/g' /etc/jabber/jabber.xml.dist
+
+	#Change the config file to the older name
+
+	mv ${D}/etc/jabber/jabber.xml ${D}/etc/jabber/multiple.xml
+	mv ${D}/etc/jabber/jabber.xml.dist ${D}/etc/jabber/multiple.xml.dist
+
 	}
 
 pkg_postinst() {
