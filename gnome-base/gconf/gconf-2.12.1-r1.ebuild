@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.12.1-r1.ebuild,v 1.1 2006/03/01 18:42:03 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.12.1-r1.ebuild,v 1.2 2006/03/04 18:21:36 compnerd Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 MY_PN=GConf
 MY_P=${MY_PN}-${PV}
