@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5054 2006/03/03 19:53:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5055 2006/03/04 05:33:54 chriswhite Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1486,10 +1486,6 @@ games-fps/aaut
 # <weeve@gentoo.org> (02 Mar 2004)
 # mask slib-3.1.1 until gnucash can get a fix for it
 =dev-libs/slib-3.1.1
-
-# <absinthe@gentoo.org> (17 Feb 2004)
-# major API changes; not compatible with anything yet
->=dev-libs/libmal-0.40
 
 # <robbat2@gentoo.org> (10 Jan 2004)
 # blocked for testing
