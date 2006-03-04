@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/quotient/quotient-0.8.8.ebuild,v 1.6 2004/07/19 22:10:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/quotient/quotient-0.8.8.ebuild,v 1.7 2006/03/04 09:12:12 lucass Exp $
 
 inherit distutils
 
 MY_PN="Quotient"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Quotient is an open source product that combines a multi-protocol messaging server with tools for information management and retrieval. Quotient brings together your email, IM/IRC and IP telephony."
-HOMEPAGE="http://www.twistedmatrix.com/"
+HOMEPAGE="http://divmod.org/projects/quotient"
 SRC_URI="mirror://sourceforge/divmod/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
