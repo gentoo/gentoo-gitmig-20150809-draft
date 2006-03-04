@@ -1,17 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 de3a796dd59ef15d4c4809d67ab8495d ChangeLog 2739
-MD5 8cf0b02ec0ef33ba9f52a2903d897dba metadata.xml 486
-MD5 c3caecbcb399d51d826bfc44474cad7f tuareg-mode-1.44.3.ebuild 689
-MD5 30adf517275a5374995623dd7ca175e6 tuareg-mode-1.45.0.ebuild 692
+MD5 dff68b19af69659534177cd8751b1179 ChangeLog 2904
+RMD160 ed5217504cdb73d9d2778b1b58bb1f0781868cbc ChangeLog 2904
+SHA256 4d30dc720d679330ef12e22f5ef079623fc55027940a845998a0baf61653e2b9 ChangeLog 2904
 MD5 8459f3f754a0bce0db441d3dafa3f931 files/50tuareg-mode-gentoo.el 285
+RMD160 5b5dece392f0a6650d27b21cdc567ee3348367d8 files/50tuareg-mode-gentoo.el 285
+SHA256 9a7bb81b8f0e66c8f687793311f26314cf6a00113995426d7579efad8dbb5538 files/50tuareg-mode-gentoo.el 285
 MD5 cd3c5f0b44d106df0e00f032d583f205 files/digest-tuareg-mode-1.44.3 70
+RMD160 be5138ad0d9e70ffba65692ec64205e7870d1d74 files/digest-tuareg-mode-1.44.3 70
+SHA256 ec4539032d4553501f0c10028e25c2623d057388aefe9fed0881c6372cb7a0ae files/digest-tuareg-mode-1.44.3 70
 MD5 531e8ed36ddb73768dc13cbb8672e642 files/digest-tuareg-mode-1.45.0 70
+RMD160 50c5000391834acbf910879555a9277aac08debe files/digest-tuareg-mode-1.45.0 70
+SHA256 6e70492479ea9c1f15790a272ae8b168bd1f88f75358fe722dfbce58201e6049 files/digest-tuareg-mode-1.45.0 70
+MD5 45b577adc486fccd292a2c576ca50740 files/digest-tuareg-mode-1.45.3 256
+RMD160 9c881d4acb9e2f05e99803da0d48c3f96a4b81af files/digest-tuareg-mode-1.45.3 256
+SHA256 8cbe3076da8ca304857fa3bdf857f5ac2d7d500ba3a8fe40754a721f4a0a2d3f files/digest-tuareg-mode-1.45.3 256
+MD5 8cf0b02ec0ef33ba9f52a2903d897dba metadata.xml 486
+RMD160 e8c4cf0a4feaa34b3244360a8944fb4cd4ce97e8 metadata.xml 486
+SHA256 1ade28881788ffd0d6f0b6f0c295e8be0d6c5c1fc33fdf9121843d41a8161bf1 metadata.xml 486
+MD5 c3caecbcb399d51d826bfc44474cad7f tuareg-mode-1.44.3.ebuild 689
+RMD160 ccd59e099757440ea085f3b5ce19d10433a9b318 tuareg-mode-1.44.3.ebuild 689
+SHA256 3f0fcdc7a8841bf6efccb519353a403289dcff7185abf100473aa51cc7a9fd53 tuareg-mode-1.44.3.ebuild 689
+MD5 30adf517275a5374995623dd7ca175e6 tuareg-mode-1.45.0.ebuild 692
+RMD160 12c550986d045f6ff6d2aa098dced8b430e43857 tuareg-mode-1.45.0.ebuild 692
+SHA256 2e3ff6f006ee8a02b80b8a25fb9d4fe066e00fe3f9a30038ca06ebb66cd6f1bf tuareg-mode-1.45.0.ebuild 692
+MD5 f163057d5761f888b8df0308d4bf2dc6 tuareg-mode-1.45.3.ebuild 692
+RMD160 f8e8d0fe0fdd3eb950cd446764d4edc7fa209b1c tuareg-mode-1.45.3.ebuild 692
+SHA256 f5acffcd9d372a345dda74c5c13b0ae53d872d449487a8424f2af426072195fc tuareg-mode-1.45.3.ebuild 692
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDMsUJyiNZaEAZA+ARAoQkAJ9LdHnVNKSfLQQbbkaO1stgGb3IYQCcDIXP
-9VhT8CHe6BqTH55KBTi36Jo=
-=krnR
+iD8DBQFEChJQyiNZaEAZA+ARAg02AJ93WdtDuGYBSfILfiGVeOVzWcFbJQCfZQGz
+ZApvBiC4UxuePuKEhi6kS2w=
+=CWBZ
 -----END PGP SIGNATURE-----
