@@ -1,0 +1,71 @@
+--- xpdf-3.01-poppler/PDFCore.cc.orig	2006-03-04 12:07:21.000000000 +0100
++++ xpdf-3.01-poppler/PDFCore.cc	2006-03-04 12:06:43.000000000 +0100
+@@ -857,7 +857,7 @@
+   if (!doc) {
+     return gFalse;
+   }
+-  if (!(d = doc->findDest(dest))) {
++  if (!(d = doc->findDest((UGooString *) dest))) {
+     return gFalse;
+   }
+   displayDest(d, zoom, rotate, gTrue);
+--- xpdf-3.01-poppler/XPDFCore.cc.orig	2006-03-04 12:07:31.000000000 +0100
++++ xpdf-3.01-poppler/XPDFCore.cc	2006-03-04 12:11:58.000000000 +0100
+@@ -461,7 +461,7 @@
+       namedDest = NULL;
+       if ((dest = ((LinkGoTo *)action)->getDest())) {
+ 	dest = dest->copy();
+-      } else if ((namedDest = ((LinkGoTo *)action)->getNamedDest())) {
++      } else if ((namedDest = (GooString *) ((LinkGoTo *)action)->getNamedDest())) {
+ 	namedDest = namedDest->copy();
+       }
+     } else {
+@@ -469,7 +469,7 @@
+       namedDest = NULL;
+       if ((dest = ((LinkGoToR *)action)->getDest())) {
+ 	dest = dest->copy();
+-      } else if ((namedDest = ((LinkGoToR *)action)->getNamedDest())) {
++      } else if ((namedDest = (GooString *) ((LinkGoToR *)action)->getNamedDest())) {
+ 	namedDest = namedDest->copy();
+       }
+       s = ((LinkGoToR *)action)->getFileName()->getCString();
+@@ -492,7 +492,7 @@
+       delete fileName;
+     }
+     if (namedDest) {
+-      dest = doc->findDest(namedDest);
++      dest = doc->findDest((UGooString *) namedDest);
+       delete namedDest;
+     }
+     if (dest) {
+@@ -599,7 +599,7 @@
+       if (obj1.isArray()) {
+ 	for (i = 0; i < obj1.arrayGetLength(); ++i) {
+ 	  if (obj1.arrayGet(i, &movieAnnot)->isDict()) {
+-	    if (movieAnnot.dictLookup("Subtype", &obj2)->isName("Movie")) {
++	    if (movieAnnot.dictLookup((UGooString &) "Subtype", &obj2)->isName("Movie")) {
+ 	      obj2.free();
+ 	      break;
+ 	    }
+@@ -611,8 +611,8 @@
+       }
+     }
+     if (movieAnnot.isDict()) {
+-      if (movieAnnot.dictLookup("Movie", &obj1)->isDict()) {
+-	if (obj1.dictLookup("F", &obj2)) {
++      if (movieAnnot.dictLookup((UGooString &) "Movie", &obj1)->isDict()) {
++	if (obj1.dictLookup((UGooString &) "F", &obj2)) {
+ 	  if ((fileName = LinkAction::getFileSpecName(&obj2))) {
+ 	    if (!isAbsolutePath(fileName->getCString())) {
+ 	      fileName2 = appendToPath(
+--- xpdf-3.01-poppler/XPDFViewer.cc.orig	2006-03-04 12:12:08.000000000 +0100
++++ xpdf-3.01-poppler/XPDFViewer.cc	2006-03-04 12:12:58.000000000 +0100
+@@ -274,7 +274,7 @@
+   // find the page number for a named destination
+   *pageOut = pageA;
+   *destOut = NULL;
+-  if (destName && (*destOut = core->getDoc()->findDest(destName))) {
++  if (destName && (*destOut = core->getDoc()->findDest((UGooString*)destName))) {
+     if ((*destOut)->isPageRef()) {
+       pageRef = (*destOut)->getPageRef();
+       *pageOut = core->getDoc()->findPage(pageRef.num, pageRef.gen);
