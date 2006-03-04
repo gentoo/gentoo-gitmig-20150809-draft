@@ -1,34 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5752479cf588731943a8e5eb18e13b09 ChangeLog 806
-RMD160 0f0ce5a54bbe3dc71c43d31ea770104e4558bd51 ChangeLog 806
-SHA256 d7d73098ba5c1626da7668c3923cf9a58ecc56c63547599c2acd2c00950b7a5a ChangeLog 806
-MD5 3208436a558872bd854ba7fdfb067bae files/digest-vdr-lcr-0.0.3 65
-RMD160 e62155e22f1e8266aaaba7860a1b46ca651900d4 files/digest-vdr-lcr-0.0.3 65
-SHA256 8dfd9bfb089ab38f42851fdffcd30da28fe6831d9f9f52ade1c78b4e96d22a62 files/digest-vdr-lcr-0.0.3 65
-MD5 6b64e26255419c16e9debcb98fbb4aae files/digest-vdr-lcr-0.0.4 65
-RMD160 7d89a5a5632aeea56eedd29b461d67de107c040b files/digest-vdr-lcr-0.0.4 65
-SHA256 c1b25d42ee9096800536aeb26cb72cdb5ca544d27d032106fd957f3c3e4f2ae7 files/digest-vdr-lcr-0.0.4 65
-MD5 030ef1c95d088b744224d88eeace0faa files/digest-vdr-lcr-0.0.5 241
-RMD160 1b7a849df202dd9e1922998cb265a59fd136b65c files/digest-vdr-lcr-0.0.5 241
-SHA256 0a4a0cdd516aa7148c1e81982930b155093e29423acbe23363ad4012b19980bd files/digest-vdr-lcr-0.0.5 241
+MD5 2c293451e313125de050c237ac5b1a3e ChangeLog 937
+MD5 c50e3417f0ccbf6858f77cbbe8c6abf3 files/digest-vdr-lcr-0.0.5 65
 MD5 39901b6ecb5930c3cf71fefaf9d10228 metadata.xml 478
-RMD160 62abe311cbffbdc6cc53077d61c61e6c56a26d09 metadata.xml 478
-SHA256 ecb47d31cbb74129d21cfdd3684166c0a5655da49312b65927401348cb44b3e4 metadata.xml 478
-MD5 d2a514800bdb1a740ca71c8b4acb98eb vdr-lcr-0.0.3.ebuild 940
-RMD160 c2dee94c3356072b8678c1915926ade7c39aad91 vdr-lcr-0.0.3.ebuild 940
-SHA256 3107ee35a361ca62112c1e373dccb6940b6c1e5f9e6996cf4b9e8e773d4f24e5 vdr-lcr-0.0.3.ebuild 940
-MD5 9bc7c9b639bd0703f47165a7ff08fc9c vdr-lcr-0.0.4.ebuild 968
-RMD160 309309b3236aafd04098f21bc1934cd00c3501df vdr-lcr-0.0.4.ebuild 968
-SHA256 469ff93857b2245b3067c81e7138925d6e2e028964bfe54149bc2de8607cdb70 vdr-lcr-0.0.4.ebuild 968
 MD5 68919c57858090cc01db4720d4e88a20 vdr-lcr-0.0.5.ebuild 963
-RMD160 4793fe375d80a0decb47abb8218242048d2cb4e7 vdr-lcr-0.0.5.ebuild 963
-SHA256 0dcbdd547facc58e06c1cde21b9d87a9fb931eee1bf41e86f461e464f050112b vdr-lcr-0.0.5.ebuild 963
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
+Comment: no further Information
 
-iD8DBQFECcDfZfSl1Kp5KmoRAhU8AKCIii2nygEmNjRYY76hKpfz0H3pYgCgsUbU
-99H3E658FY9duFkIzbFCPDk=
-=laA8
+iD8DBQFECduodn07HTTCgIoRArU+AJ4hkdxHeyq4Z+KPKgZ6dQIoAKtK/QCfeR+c
+lUva1Fn8KEoQjsHjyyiqDJ4=
+=3MJG
 -----END PGP SIGNATURE-----
