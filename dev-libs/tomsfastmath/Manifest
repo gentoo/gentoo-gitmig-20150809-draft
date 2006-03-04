@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b6548d3ca34139daa0b5f22d8874ce67 tomsfastmath-0.03.ebuild 650
-MD5 366488dcb82796353d83f78ebe8789e8 tomsfastmath-0.05.ebuild 703
-MD5 8cbe245299db8ecd4ee45d433d33de48 metadata.xml 595
 MD5 08de52da121a68e7eeda3984110a6b41 ChangeLog 500
-MD5 b37ec5a14eb40086a0cbe204c74d4bc0 files/digest-tomsfastmath-0.05 57
+RMD160 5496d06694ddd81405a4bb3e280d97431c55ba7a ChangeLog 500
+SHA256 0b076761aba01a6c1f35f89de8b1555ffc98d1452000209d66ebad5ddf9bab5b ChangeLog 500
 MD5 ae19a99d559ec8356a20eb9af462bf46 files/digest-tomsfastmath-0.03 57
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC+WIMgIKl8Uu19MoRAtmWAKCCwjwAn5gYjWw/Z53HbdRc2TMb3wCeKl0u
-K2UqMpMQfQdFZC6WStheKOs=
-=j4JH
------END PGP SIGNATURE-----
+RMD160 9674935224a95432d1c38a159b4ecd2ae31906ac files/digest-tomsfastmath-0.03 57
+SHA256 47458f50cab18cbbdc83909799fadd3073dc52c4d4dfd36acd790d094da180aa files/digest-tomsfastmath-0.03 57
+MD5 b37ec5a14eb40086a0cbe204c74d4bc0 files/digest-tomsfastmath-0.05 57
+RMD160 7a5240de91f6e83bb8f651a9dcd0ec42c3604daa files/digest-tomsfastmath-0.05 57
+SHA256 836a2f7c3888a38ca330f5cdfe59b29c9c2c3c2a2c1ac975583b2eae1fac715f files/digest-tomsfastmath-0.05 57
+MD5 8cbe245299db8ecd4ee45d433d33de48 metadata.xml 595
+RMD160 a8691a48b1afb6f063460ebe2af76f335a848672 metadata.xml 595
+SHA256 7a6f705028c9052d2d15ac7e8a889c149a51831c06afb4f414cd83eda05e433e metadata.xml 595
+MD5 b6548d3ca34139daa0b5f22d8874ce67 tomsfastmath-0.03.ebuild 650
+RMD160 7e58867ae58dbac8afde451a2d3440f73990606b tomsfastmath-0.03.ebuild 650
+SHA256 5bf06936062f758d31c30f2d0566b8fee53f42be3108eb8a71ef3648f29df6a8 tomsfastmath-0.03.ebuild 650
+MD5 face0cacffaa7c593d7541eb6dd6ce9c tomsfastmath-0.05.ebuild 699
+RMD160 58609ce2eb4228753d2f9e358d8b16123d57fe89 tomsfastmath-0.05.ebuild 699
+SHA256 624ac057ba5e444aaacf6d22488dca2c89294654e919916ad166a74039569982 tomsfastmath-0.05.ebuild 699
