@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexfs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexfs/ChangeLog,v 1.2 2006/01/22 22:14:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexfs/ChangeLog,v 1.3 2006/03/04 20:13:11 mrness Exp $
+
+  04 Mar 2006; Alin Nastac <mrness@gentoo.org> obexfs-0.7.ebuild:
+  Add net-wireless/bluez-libs missing dependency (#124849).
 
 *obexfs-0.7 (22 Jan 2006)
 
