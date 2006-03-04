@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94-r1.ebuild,v 1.1 2006/02/20 19:56:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94-r1.ebuild,v 1.2 2006/03/04 22:11:00 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -55,7 +55,7 @@ src_unpack() {
 		EPATCH_MULTI_MSG="Applying SELINUX patches ..." \
 		EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/selinux
 		( cd "${PATCHDIR}" ; epatch selinux/GLUE* ) || die "glue failed"
-	else
+	elif use acl ; then
 		EPATCH_MULTI_MSG="Applying ACL patches ..." \
 		EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/acl
 	fi
