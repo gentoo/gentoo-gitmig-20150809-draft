@@ -1,6 +1,16 @@
-MD5 107f515ecc29671019c46688e350b3a9 ChangeLog 3120
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fe79d5d94226a5678c97a167e3ebee74 ChangeLog 3221
 MD5 b8d39b20e3fe608fc79e75c9da09b275 files/digest-kiso-0.8.2c 65
 MD5 8a290422f225f3458b9a21aab377bd2b files/digest-kiso-0.8.3 63
 MD5 8ee1b37cc4a6c7e8c3fc6ffac7b2c41f kiso-0.8.2c.ebuild 918
-MD5 94d477999c81d104c81bec182c99cec5 kiso-0.8.3.ebuild 918
+MD5 e42f5b70092fd848cf13f54fe2a8ae1f kiso-0.8.3.ebuild 918
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFECS10FdQwWVoAgN4RAswZAKDX+FJSiqcYTm2HKx3ThaU34UFdLQCcDrjR
+SZySE6x/2JNIQtYCouevCrY=
+=fT3H
+-----END PGP SIGNATURE-----
