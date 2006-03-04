@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc++/uclibc++-0.2.0.ebuild,v 1.2 2006/03/03 01:44:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc++/uclibc++-0.2.0.ebuild,v 1.3 2006/03/04 04:26:31 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,7 +27,7 @@ DEPEND=""
 S=${WORKDIR}/uClibc++-${PV}
 
 src_unpack() {
-	mv "${DISTDIR}"/${A} ${A}2
+	cp "${DISTDIR}"/${A} ${A}2
 	unpack ./${A}2
 	cd "${S}"
 	make -s defconfig || die "defconfig failed"
