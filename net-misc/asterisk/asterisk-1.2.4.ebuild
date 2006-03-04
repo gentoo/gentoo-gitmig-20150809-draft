@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.4.ebuild,v 1.2 2006/02/04 23:47:46 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.4.ebuild,v 1.3 2006/03/04 20:46:41 stkn Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ MY_P="${P/_/-}"
 
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
-SRC_URI="http://ftp.digium.com/pub/asterisk/${MY_P}.tar.gz
+SRC_URI="http://ftp.digium.com/pub/asterisk/old-releases/${MY_P}.tar.gz
 	 http://www.netdomination.org/pub/asterisk/${PN}-${AST_PATCHES}.tar.bz2
 	 bri? ( http://www.netdomination.org/pub/asterisk/asterisk-${PV}-bristuff-${BRI_VERSION}.diff.gz
 		http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )"
