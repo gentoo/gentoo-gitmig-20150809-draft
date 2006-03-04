@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1767 2006/03/03 16:41:30 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1768 2006/03/04 02:47:24 compnerd Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -779,6 +779,7 @@ media-video/dvdrip:subtitles - Enables support for subtitle ripping
 media-video/fenice:srvdir - Enables support for /srv directory
 media-video/ffmpeg:network - Enables network streaming support
 media-video/ffmpeg:x264 - Enables h264 encoding using x264
+media-video/flumotion:gstreamer08 - Use GStreamer 0.8 over GStreamer 0.10
 media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telephony)
 media-video/kmplayer:mplayer - Enables video playback by mplayer
 media-video/lives:libvisual - Enable libvisual support
