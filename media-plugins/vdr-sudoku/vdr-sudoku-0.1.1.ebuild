@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sudoku/vdr-sudoku-0.1.1.ebuild,v 1.2 2005/12/24 11:15:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sudoku/vdr-sudoku-0.1.1.ebuild,v 1.3 2006/03/04 20:27:58 zzam Exp $
 
 inherit vdr-plugin
 
@@ -10,7 +10,7 @@ SRC_URI="http://toms-cafe.de/vdr/sudoku/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND="media-video/vdr"
