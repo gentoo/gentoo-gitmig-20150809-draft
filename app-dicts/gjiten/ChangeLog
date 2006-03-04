@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/gjiten
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.12 2005/10/15 12:06:00 matsuu Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.13 2006/03/04 08:29:16 matsuu Exp $
+
+*gjiten-2.5 (04 Mar 2006)
+
+  04 Mar 2006; MATSUU Takuto <matsuu@gentoo.org>
+  +files/gjiten-2.5-gentoo.patch, +gjiten-2.5.ebuild:
+  Version bumped, Bug 124631.
 
 *gjiten-2.4 (15 Oct 2005)
 
