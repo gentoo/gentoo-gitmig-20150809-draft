@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.2_pre20060118.ebuild,v 1.1 2006/01/19 19:45:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.2_pre20060118.ebuild,v 1.2 2006/03/04 01:33:14 cardoe Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 IUSE=""
 
 RESTRICT="nomirror"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 DEPEND=""
 RDEPEND="dev-perl/DBI
 	dev-perl/DBD-mysql
