@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2_rc3-r1.ebuild,v 1.2 2006/03/02 09:55:07 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2_rc4.ebuild,v 1.1 2006/03/04 06:24:52 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
 IUSE="binfilter cairo curl eds firefox gnome gtk java kde ldap mozilla xml2"
 
-MY_PV="${PV/_rc3/}"
-MY_PV2="oob680.3.0"
+MY_PV="${PV/_rc4/}"
+MY_PV2="oob680.5.0"
 PATCHLEVEL="OOB680"
-SRC="oob680-m3"
+SRC="oob680-m5"
 S="${WORKDIR}/ooo-build-${MY_PV2}"
 CONFFILE="${S}/distro-configs/Gentoo.conf.in"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
