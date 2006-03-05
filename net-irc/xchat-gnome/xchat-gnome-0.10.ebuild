@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.10.ebuild,v 1.1 2006/03/02 23:02:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.10.ebuild,v 1.2 2006/03/05 17:22:20 swegener Exp $
 
 inherit gnome2 eutils autotools
 
@@ -31,6 +31,7 @@ RDEPEND=">=dev-libs/glib-2.0.3
 DEPEND="${RDEPEND}
 	gnome-base/gnome-common
 	>=dev-util/pkgconfig-0.7
+	>=app-text/gnome-doc-utils-0.3.2
 	nls? ( sys-devel/gettext )"
 
 # gnome-base/gnome-common is temporarily needed for re-creating configure
