@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta3.ebuild,v 1.4 2005/10/09 16:48:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta3.ebuild,v 1.5 2006/03/05 09:41:35 genstef Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -33,13 +33,14 @@ pkg_setup() {
 }
 
 src_compile() {
+	sed -i "s:#if RT2500_DBG:#ifdef RT2500_DBG:" Module/oid.h || die "sed failed"
+
 	if use qt; then
 		cd ${S}/Utilitys
 		${QTDIR}/bin/qmake -o Makefile raconfig2500.pro
 		emake || die "make Utilities failed"
 	fi
 
-	sed -i "s:#if RT2500_DBG:#ifdef RT2500_DBG:" oid.h
 	linux-mod_src_compile
 }
 
