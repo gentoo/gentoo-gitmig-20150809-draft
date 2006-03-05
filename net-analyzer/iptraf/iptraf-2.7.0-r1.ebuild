@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.23 2005/11/01 05:10:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.24 2006/03/05 20:53:03 jokey Exp $
 
 inherit eutils flag-o-matic
 
@@ -42,7 +42,7 @@ src_compile() {
 
 src_install() {
 	dosbin src/{iptraf,cfconv,rvnamed} || die
-	dodoc  FAQ README* CHANGES RELEASE-NOTES INSTALL
+	dodoc  FAQ README* CHANGES RELEASE-NOTES
 	doman Documentation/*.8
 	dohtml Documentation/*.html
 	keepdir /var/{lib,run,log}/iptraf

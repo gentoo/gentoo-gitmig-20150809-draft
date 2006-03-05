@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0.ebuild,v 1.1 2005/11/01 05:44:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0.ebuild,v 1.2 2006/03/05 20:53:03 jokey Exp $
 
 inherit eutils
 
@@ -28,17 +28,12 @@ src_unpack() {
 }
 
 src_compile() {
-	emake \
-		CFLAGS="${CFLAGS}" \
-		LDOPTS="${LDFLAGS}" \
-		TARGET="/usr/sbin" \
-		WORKDIR="/var/lib/iptraf" \
-		-C src || die
+	emake CFLAGS="${CFLAGS}" LDOPTS="${LDFLAGS}" TARGET="/usr/sbin" WORKDIR="/var/lib/iptraf" -C src || die
 }
 
 src_install() {
 	dosbin src/{iptraf,rawtime,rvnamed} || die
-	dodoc FAQ README* CHANGES RELEASE-NOTES INSTALL
+	dodoc FAQ README* CHANGES RELEASE-NOTES
 	doman Documentation/*.8
 	dohtml -r Documentation/*
 	keepdir /var/{lib,run,log}/iptraf
