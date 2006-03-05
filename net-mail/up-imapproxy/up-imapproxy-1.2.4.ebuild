@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.4.ebuild,v 1.1 2006/02/09 11:15:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.4.ebuild,v 1.2 2006/03/05 08:22:20 tsunam Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.imapproxy.org/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="kerberos ssl tcpd"
 
 DEPEND=">=sys-libs/ncurses-5.1

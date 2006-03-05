@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 de2ae703fcbce99da66b9249d28d986c ChangeLog 1616
-RMD160 4e23985c441113f62a7bd3bf471ab6d2e2233e47 ChangeLog 1616
-SHA256 9c24ef337bcb0207f90e07cb0dd4cb863b98f8926d03825c139d0d47de6ef24e ChangeLog 1616
+MD5 c4167584b508213d25b25ad67ee5d9ca ChangeLog 1725
+RMD160 aeb0d7d76d93d0ccc5c394796c6518a0afb6b224 ChangeLog 1725
+SHA256 95e2e61dced21c83b39854a6634d66754856e243002b9e5e582b7c77fedd0699 ChangeLog 1725
 MD5 41b1d37cf457ac257131d32a89292291 files/1.2.4-string-format-fix.patch 375
 RMD160 9c2a9cd5d70ddbf85fd3495666fc3e9cb0c6d772 files/1.2.4-string-format-fix.patch 375
 SHA256 20d200e39fb497bf98c459b4aa796ba236163b6abbd246ec578e8b0143f69c63 files/1.2.4-string-format-fix.patch 375
@@ -40,13 +40,13 @@ SHA256 c3e3cffee9261d82a36400c37d81f6ba7874efbf8ad99cee2f51dbdec5534d69 up-imapp
 MD5 ea4ee0608cee6e1e29d270f0ecfe60e7 up-imapproxy-1.2.3_rc2.ebuild 1280
 RMD160 18463e6fa084da908955eed7031c60cfcdc49a4e up-imapproxy-1.2.3_rc2.ebuild 1280
 SHA256 2239c1451cf0bda494e1166e929bfca73eeb77f6bd0a90beadbc979fd72ef3c9 up-imapproxy-1.2.3_rc2.ebuild 1280
-MD5 e10e131eed3d8f3cf5a5ecc4b9b01cbb up-imapproxy-1.2.4.ebuild 1277
-RMD160 1560ee2e8daf236fd41f4189c773ba6773cdcec7 up-imapproxy-1.2.4.ebuild 1277
-SHA256 a843d07aee6f843126b5d5fcdb619cce1760c8284c85aa2b12aea4ed0fae944b up-imapproxy-1.2.4.ebuild 1277
+MD5 f9e32c64b6a4c82daee85f562a2ffcbc up-imapproxy-1.2.4.ebuild 1278
+RMD160 e774184a082851d575330ef7a3361c54a74faa1f up-imapproxy-1.2.4.ebuild 1278
+SHA256 6f9e928606cb6e372661a6494313c0266e8e64a930e2a127b4961d7b091397d3 up-imapproxy-1.2.4.ebuild 1278
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD6yRfV3J2n04EauwRAsiiAJ4lVXb7uFNdXgOWvaYOdyalrvz0LwCaA04E
-ZMkQGJRIX5frg+Q2zE4Ew00=
-=bfFt
+iD8DBQFECp/JSENan+PfizARAmR+AKCBBy0wgcr7iycaYpxJ724oAVFNzgCbBqJ0
+TTyRQRObpRyt9z3/24cNDUw=
+=IkXW
 -----END PGP SIGNATURE-----
