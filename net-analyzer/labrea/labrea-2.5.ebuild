@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/labrea/labrea-2.5.ebuild,v 1.5 2006/02/15 23:22:27 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/labrea/labrea-2.5.ebuild,v 1.6 2006/03/05 21:11:56 jokey Exp $
 
 DESCRIPTION="'Sticky' Honeypot and IDS"
 HOMEPAGE="http://labrea.sourceforge.net/"
@@ -24,7 +24,8 @@ src_compile() {
 
 src_install() {
 	einstall || die "einstall failed"
-	dodoc AUTHORS ChangeLog INSTALL README TODO NEWS
+	dodoc AUTHORS ChangeLog README TODO NEWS
+	newdoc INSTALL README.first
 }
 
 pkg_postinst() {
