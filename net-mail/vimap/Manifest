@@ -1,28 +1,51 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 be36d41a985ba8f1839742d888e4cd57 vimap-2002c-r1.ebuild 3631
-MD5 549d8988f8cd0c288bcd0c3d7ab2ff7e vimap-2002c-r3.ebuild 4690
-MD5 290ee971bc40c8b98682c1eace7ec79f vimap-2002c-r2.ebuild 4110
-MD5 b388d883757f5856bf9943ee4b46846e vimap-2002c.ebuild 2687
 MD5 938eb83d02568e7588684c80d1f00164 ChangeLog 2611
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 2cc8deb01d6efd5a650d6fc5519289bd files/uw-ipop2.xinetd 564
-MD5 c6e5f24322fad9b16d63b1e08ca3bee8 files/uw-ipop3s.xinetd 474
-MD5 b9265aebc1d378faf06199471ceabc4f files/uw-imap.xinetd 492
+RMD160 70e1549587d9367d423739433225c96dc885ccbe ChangeLog 2611
+SHA256 a6498254b05eaf0bbd756f0ed585c68a286b0b02404992ada0614bb9f38927be ChangeLog 2611
 MD5 ff493c5938360a4411843914673d4a05 files/digest-vimap-2002c 63
-MD5 28c291d52426cc5d25be57406f14e096 files/uw-imap.pam-system-auth 344
+RMD160 1b2bf967e3de54069136ff30b97e26c25f25fb9c files/digest-vimap-2002c 63
+SHA256 b1128773052737e02023f8e0dfa1d10083dd16ba123e0652022580a6e1df8031 files/digest-vimap-2002c 63
 MD5 ff493c5938360a4411843914673d4a05 files/digest-vimap-2002c-r1 63
+RMD160 1b2bf967e3de54069136ff30b97e26c25f25fb9c files/digest-vimap-2002c-r1 63
+SHA256 b1128773052737e02023f8e0dfa1d10083dd16ba123e0652022580a6e1df8031 files/digest-vimap-2002c-r1 63
 MD5 ff493c5938360a4411843914673d4a05 files/digest-vimap-2002c-r2 63
+RMD160 1b2bf967e3de54069136ff30b97e26c25f25fb9c files/digest-vimap-2002c-r2 63
+SHA256 b1128773052737e02023f8e0dfa1d10083dd16ba123e0652022580a6e1df8031 files/digest-vimap-2002c-r2 63
 MD5 ff493c5938360a4411843914673d4a05 files/digest-vimap-2002c-r3 63
-MD5 fbd30c975d120429f29509866d292745 files/uw-ipop3.xinetd 473
-MD5 cde23dc2375a8c33998202c8f0c9ae0e files/vimap-2002c-amd64-so-fix.patch 675
+RMD160 1b2bf967e3de54069136ff30b97e26c25f25fb9c files/digest-vimap-2002c-r3 63
+SHA256 b1128773052737e02023f8e0dfa1d10083dd16ba123e0652022580a6e1df8031 files/digest-vimap-2002c-r3 63
+MD5 28c291d52426cc5d25be57406f14e096 files/uw-imap.pam-system-auth 344
+RMD160 83119b2960c3dadfd4def18368382c69787b6d2c files/uw-imap.pam-system-auth 344
+SHA256 36b853138232649786b754ffd55d23ded8e85c4f5048a5806262a18e358e38f9 files/uw-imap.pam-system-auth 344
+MD5 b9265aebc1d378faf06199471ceabc4f files/uw-imap.xinetd 492
+RMD160 f38b90d562f02f2387a729d35b6a60490f9ee203 files/uw-imap.xinetd 492
+SHA256 d935692a8e7433ca1194cfad0ce48a9d2fe6013873f569a826c1ed2fd595aa8d files/uw-imap.xinetd 492
 MD5 a801fe6d35ae75b0abeb6e410b3b6ea2 files/uw-imaps.xinetd 487
-MD5 0ec3cd52bf3e7064a3d9e60a5ac16291 files/imap-2002c-virtual.patch.bz2 10394
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCkOOYViELBEf1JB0RAi4dAKCFfoECoNq48jg7NukSEd6OjVxDHwCcC8QF
-dx6GcWW8olHdta2oMzkapGg=
-=b/Iu
------END PGP SIGNATURE-----
+RMD160 bc4d2c6ea873bbf313e5728688d9776290b1eab1 files/uw-imaps.xinetd 487
+SHA256 a501426cc717b70b69cb729069466de448048f5f8f78c379aaf8d4bd61c8be5a files/uw-imaps.xinetd 487
+MD5 2cc8deb01d6efd5a650d6fc5519289bd files/uw-ipop2.xinetd 564
+RMD160 3c750a01697ec9e997b94408ef3a9b0e889dc2ab files/uw-ipop2.xinetd 564
+SHA256 f6aab06935f38b2c423cfa44a20a6bfc3f947143fb4c40a460712e6c8d8ea85d files/uw-ipop2.xinetd 564
+MD5 fbd30c975d120429f29509866d292745 files/uw-ipop3.xinetd 473
+RMD160 6743466d3b178995fa0a1229fedda5713395a234 files/uw-ipop3.xinetd 473
+SHA256 bf073c9c44bd707f8ab6686090a50acc967c6d1a13c7db2c8b55aad54778c409 files/uw-ipop3.xinetd 473
+MD5 c6e5f24322fad9b16d63b1e08ca3bee8 files/uw-ipop3s.xinetd 474
+RMD160 d12bd772752f8ab83b3c84180ba1ef9b45a6e1c6 files/uw-ipop3s.xinetd 474
+SHA256 e771aca41925e4a1e05d292b4b3b3f3df0c1af9c700bdf25d2e7a0d19d7892f2 files/uw-ipop3s.xinetd 474
+MD5 cde23dc2375a8c33998202c8f0c9ae0e files/vimap-2002c-amd64-so-fix.patch 675
+RMD160 f13adf21e7043175d2b2dd356b2ba48554e9e99f files/vimap-2002c-amd64-so-fix.patch 675
+SHA256 8f80dff390a5d87afd71ab07bbff0eed00acb14b3bfa2355f33ba22e833af202 files/vimap-2002c-amd64-so-fix.patch 675
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
+SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
+MD5 be36d41a985ba8f1839742d888e4cd57 vimap-2002c-r1.ebuild 3631
+RMD160 531fcbd0e5d145ea6c81636ade7e065addf22aa2 vimap-2002c-r1.ebuild 3631
+SHA256 b8895da2a8c9c54ffbfa4d5d35a78bd02c1cb54f6601248332507dbe50ff5a30 vimap-2002c-r1.ebuild 3631
+MD5 290ee971bc40c8b98682c1eace7ec79f vimap-2002c-r2.ebuild 4110
+RMD160 c99286c42b8591b314b75fdbb17ee11c5a6e6345 vimap-2002c-r2.ebuild 4110
+SHA256 9f2b6613221daa0b141a006655d15c59f9cf95e523d36080bd39aac70045041e vimap-2002c-r2.ebuild 4110
+MD5 549d8988f8cd0c288bcd0c3d7ab2ff7e vimap-2002c-r3.ebuild 4690
+RMD160 4e0e1f71ee0e683644cb48aa4a39ae5e98ae7da4 vimap-2002c-r3.ebuild 4690
+SHA256 c32a463fdce3ce71e287deaf3aab7c1367a61e1df750ae2211fe520de4ac07c4 vimap-2002c-r3.ebuild 4690
+MD5 b388d883757f5856bf9943ee4b46846e vimap-2002c.ebuild 2687
+RMD160 bacad47ef28b62d3353acaa194ea7c3d306de69d vimap-2002c.ebuild 2687
+SHA256 c1442d6f3d625b5a175dc802698d8617c1493b890cd225256dddf33248e88f6a vimap-2002c.ebuild 2687
