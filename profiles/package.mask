@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5059 2006/03/05 15:18:48 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5060 2006/03/05 18:40:14 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Markus Dittrich <markusle@gentoo.org> (05 Mar 2006)
+# masked version bumped sci-libs/vtk for further testing
+=sci-libs/vtk-5.0.0
 
 # Stuart Herbert <stuart@gentoo.org> (05 Mar 2006)
 # Upstream have pulled the binaries
