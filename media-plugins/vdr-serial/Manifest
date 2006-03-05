@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ff4e070afde5daf9d3d66f8ce949d392 ChangeLog 384
+RMD160 f0543c9b639c5da7a52d5415f6711eb3e8fc7fcb ChangeLog 384
+SHA256 163c2d9398713dcffccebfb5c01b5eb76759cc0512f0c71dfdc29acc74388f5b ChangeLog 384
+MD5 e3cc973c93f13af7fb127312d3a2a716 files/digest-vdr-serial-0.0.6a 241
+RMD160 f4b6f6539629a5cc83610665fab5b7aa950b7cb4 files/digest-vdr-serial-0.0.6a 241
+SHA256 8f8755cb32a22d479cfaaf21b5d4407e17e8c412fb5cb26e861ddef9d74acdfc files/digest-vdr-serial-0.0.6a 241
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 23175df0204b521b916ed1da29bce853 vdr-serial-0.0.6a.ebuild 577
+RMD160 abbd1b6d0d12a75c80ffd7d0b09822740bdc573c vdr-serial-0.0.6a.ebuild 577
+SHA256 9f40eb03c09f2449b5370c411cede291ff0cd58392f76e266abb72300d7e24a7 vdr-serial-0.0.6a.ebuild 577
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFECsj/ZfSl1Kp5KmoRAugUAKDNS1cwoHiHJMZifxL86UgmH95/rACgnRpv
+whfDlddHHSakoav/nRoNOjQ=
+=HpA0
+-----END PGP SIGNATURE-----
