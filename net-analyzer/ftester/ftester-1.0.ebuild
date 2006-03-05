@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ftester/ftester-1.0.ebuild,v 1.1 2006/02/14 12:20:00 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ftester/ftester-1.0.ebuild,v 1.2 2006/03/05 20:25:08 jokey Exp $
 
 DESCRIPTION="Ftester - Firewall and Intrusion Detection System testing tool"
 HOMEPAGE="http://dev.inversepath.com/trac/ftester"
@@ -17,7 +17,7 @@ DEPEND="dev-perl/Net-RawIP
 	dev-perl/Net-PcapUtils"
 
 src_install() {
-	dodoc COPYING CREDITS Changelog LICENSE ftest.conf
+	dodoc CREDITS Changelog ftest.conf
 	doman ftester.8
 	dosbin ftestd ftest freport
 }
