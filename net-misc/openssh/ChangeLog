@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.158 2006/03/05 00:20:01 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.159 2006/03/05 14:54:55 lcars Exp $
+
+  05 Mar 2006; Andrea Barisani <lcars@gentoo.org> openssh-4.3_p1.ebuild,
+  openssh-4.3_p2.ebuild, openssh-4.3_p2-r1.ebuild:
+  Restored ldap support in 4.3 versions.
 
 *openssh-4.3_p2-r1 (05 Mar 2006)
 

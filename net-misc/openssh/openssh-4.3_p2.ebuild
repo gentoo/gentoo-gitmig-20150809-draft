@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2.ebuild,v 1.1 2006/03/04 01:48:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2.ebuild,v 1.2 2006/03/05 14:54:55 lcars Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -10,7 +10,7 @@ PARCH=${P/_/}
 
 X509_PATCH="${PARCH}+x509-5.3.diff.gz"
 SECURID_PATCH="${PARCH}+SecurID_v1.3.2.patch"
-LDAP_PATCH="" #${PARCH/-4.3/-lpk-4.1}-0.3.6.patch"
+LDAP_PATCH="${PARCH/-4.3p2/-lpk-4.3p1}-0.3.7.patch"
 HPN_PATCH="${PARCH/p2/p1}-hpn11.diff"
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
@@ -18,8 +18,8 @@ HOMEPAGE="http://www.openssh.com/"
 SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 	hpn? ( http://www.psc.edu/networking/projects/hpn-ssh/${HPN_PATCH} )
 	X509? ( http://roumenpetrov.info/openssh/x509-5.3/${X509_PATCH} )
-	smartcard? ( http://www.omniti.com/~jesus/projects/${SECURID_PATCH} )"
-#	ldap? ( http://www.opendarwin.org/en/projects/openssh-lpk/files/${LDAP_PATCH} )
+	smartcard? ( http://www.omniti.com/~jesus/projects/${SECURID_PATCH} )
+	ldap? ( http://www.opendarwin.org/en/projects/openssh-lpk/files/${LDAP_PATCH} )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -46,14 +46,6 @@ S=${WORKDIR}/${PARCH}
 src_unpack() {
 	unpack ${PARCH}.tar.gz
 	cd "${S}"
-
-	if use ldap ; then
-		eerror "Sorry, but this version does not yet support"
-		eerror "ldap.  Please mask 4.3_p2 for"
-		eerror "now and check back later:"
-		eerror " # echo '=net-misc/openssh-4.3_p2' >> /etc/portage/package.mask"
-		die "boooooooooooooo"
-	fi
 
 	sed -i \
 		-e '/_PATH_XAUTH/s:/usr/X11R6/bin/xauth:/usr/bin/xauth:' \
