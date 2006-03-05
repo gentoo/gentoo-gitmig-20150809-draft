@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4_beta1.ebuild,v 1.5 2006/02/19 22:03:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4_beta2.ebuild,v 1.1 2006/03/05 20:24:35 flameeyes Exp $
 
-LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ko lt nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz xx zh_CN zh_TW"
+LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ko
+lt nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz xx zh_CN
+zh_TW"
 LANGS_DOC="da de es et fr it nl pt pt_BR ru sv"
 
 USE_KEG_PACKAGING=1
@@ -29,8 +31,8 @@ DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase )
 	arts? ( kde-base/arts
 	        || ( kde-base/kdemultimedia-arts kde-base/kdemultimedia ) )
 	xine? ( >=media-libs/xine-lib-1_rc4 )
-	gstreamer? ( =media-libs/gstreamer-0.8*
-	             =media-libs/gst-plugins-0.8* )
+	gstreamer? ( =media-libs/gstreamer-0.10*
+		=media-libs/gst-plugins-base-0.10* )
 	musicbrainz? ( >=media-libs/tunepimp-0.3 )
 	>=media-libs/taglib-1.4
 	mysql? ( >=dev-db/mysql-4.0.16 )
@@ -54,16 +56,10 @@ DEPEND="${DEPEND}
 need-kde 3.3
 
 pkg_setup() {
-	if use arts && ! use xine && ! use gstreamer; then
-		ewarn "aRts support is deprecated, if you have problems please consider"
-		ewarn "enabling support for Xine (preferred) or GStreamer"
-		ewarn "(emerge amarok again with USE=\"xine\" or USE=\"gstreamer\")."
-		ebeep 2
-	fi
-
-	if ! use arts && ! use xine && ! use gstreamer; then
+	if ! use xine && ! use gstreamer && ! use akode && ! use real; then
 		eerror "amaroK needs either aRts (deprecated), Xine (preferred) or GStreamer to work,"
-		eerror "please try again with USE=\"arts\", USE=\"xine\" or USE=\"gstreamer\"."
+		eerror "please try again enabling at least one of akode, xine, gstreamer or real"
+		eerror "useflags."
 		die
 	fi
 
@@ -73,16 +69,6 @@ pkg_setup() {
 	append-flags -fno-inline
 }
 
-src_unpack() {
-	kde_src_unpack
-
-	# fix parallel make issues
-	sed -i -e 's:$(top_builddir)/amarok/src/libamarok.la:libamarok.la:' \
-		${S}/amarok/src/Makefile.am
-
-	rm -f ${S}/configure
-}
-
 src_compile() {
 	# amarok does not respect kde coding standards, and makes a lot of
 	# assuptions regarding its installation directory. For this reason,
@@ -90,7 +76,8 @@ src_compile() {
 	PREFIX="${KDEDIR}"
 
 	# Extra, unsupported engines are forcefully disabled.
-	local myconf="$(use_with arts) $(use_with xine) $(use_with gstreamer)
+	local myconf="$(use_with arts) $(use_with xine)
+				  $(use_with gstreamer gstreamer10)
 	              $(use_enable mysql) $(use_enable postgres postgresql)
 	              $(use_with opengl) $(use_with xmms)
 	              $(use_with visualization libvisual)
@@ -103,8 +90,7 @@ src_compile() {
 				  $(use_with real helix)
 	              --without-mas
 	              --without-nmm
-				  --without-ifp
-				  --without-gstreamer10"
+				  --without-ifp"
 
 	kde_src_compile
 }

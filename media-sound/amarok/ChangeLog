@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.112 2006/03/03 14:41:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.113 2006/03/05 20:24:34 flameeyes Exp $
+
+*amarok-1.4_beta2 (05 Mar 2006)
+
+  05 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -amarok-1.4_beta1.ebuild, -amarok-1.4_beta1-r1.ebuild,
+  +amarok-1.4_beta2.ebuild:
+  Add amarok 1.4_beta2.
 
 *amarok-1.4_beta1-r1 (03 Mar 2006)
 
