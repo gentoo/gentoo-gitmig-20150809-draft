@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.159 2006/03/05 14:54:55 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.160 2006/03/05 22:16:14 vapier Exp $
+
+  05 Mar 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-4.3_p2-selinux.patch.glue, openssh-4.3_p2-r1.ebuild:
+  Glue selinux and X509 support #125108 by Alon Bar-Lev.
 
   05 Mar 2006; Andrea Barisani <lcars@gentoo.org> openssh-4.3_p1.ebuild,
   openssh-4.3_p2.ebuild, openssh-4.3_p2-r1.ebuild:

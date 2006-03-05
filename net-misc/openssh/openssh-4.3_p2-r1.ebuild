@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r1.ebuild,v 1.2 2006/03/05 14:54:55 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r1.ebuild,v 1.3 2006/03/05 22:16:14 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -55,7 +55,12 @@ src_unpack() {
 	use X509 && epatch "${DISTDIR}"/${X509_PATCH}
 	use sftplogging && epatch "${FILESDIR}"/openssh-4.2_p1-sftplogging-1.4-gentoo.patch.bz2
 	use chroot && epatch "${FILESDIR}"/openssh-3.9_p1-chroot.patch
-	epatch "${FILESDIR}"/openssh-4.3_p2-selinux.patch
+	if use X509 ; then
+		cp "${FILESDIR}"/openssh-4.3_p2-selinux.patch .
+		epatch "${FILESDIR}"/openssh-4.3_p2-selinux.patch.glue ./openssh-4.3_p2-selinux.patch
+	else
+		epatch "${FILESDIR}"/openssh-4.3_p2-selinux.patch
+	fi
 	use smartcard && epatch "${FILESDIR}"/openssh-3.9_p1-opensc.patch
 	if ! use X509 ; then
 		if [[ -n ${SECURID_PATCH} ]] && use smartcard ; then
