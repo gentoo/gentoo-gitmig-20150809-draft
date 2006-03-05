@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4ef70dcf883dcbb7992ef179282f1ca5 ChangeLog 1162
+MD5 973bca9e98923e7a450dc6c255c8649a ChangeLog 1286
+RMD160 8bfeab6bd645dd2ef4a34594efd6a6a1c4d336fc ChangeLog 1286
+SHA256 cb20a348ef6c2337e2450c6ffe3fa6815454a610e8496e661a78018c36a0bcbb ChangeLog 1286
 MD5 4cebebd00e1b468ed723ce38470e87e8 files/digest-proxychains-2.1-r2 67
+RMD160 216bcef624d3ebb7d40ca39abbeb4f7f3ad06624 files/digest-proxychains-2.1-r2 67
+SHA256 4b4cfef2d59b91c7bd80c8c29985495bed327916928533057bbc22d72a8a1ac2 files/digest-proxychains-2.1-r2 67
+MD5 d02c1c2d474459ef7a3f93ee2ef213f6 files/digest-proxychains-3.0 247
+RMD160 2f03c20c33407e687fd6a9301687c66c82e85125 files/digest-proxychains-3.0 247
+SHA256 c30ee9633c2740c29d049ac5d0058beecfb81769fb46f6bd05c3f554f1ea147f files/digest-proxychains-3.0 247
 MD5 1c061d1b2cf15c31098b00f930145f11 files/proxychains-2.1-autotools.patch 2198
+RMD160 ded3a3e79afe06556290c7b356835771591c9b47 files/proxychains-2.1-autotools.patch 2198
+SHA256 f04b89f2a15c83eb86e1ea2c893dc9ddc4ec59f9a26d6f4cae4af82438a4ce9e files/proxychains-2.1-autotools.patch 2198
 MD5 31f74f67a6811847c3b733a8ee3595c3 files/proxychains-2.1-libc-connect.patch 294
+RMD160 814d467c699e122b0b50982001582b8e66c4e49d files/proxychains-2.1-libc-connect.patch 294
+SHA256 4efd61c2052a00ba9c779ee83854537b40f90dc3eea2c1292188705b387a3293 files/proxychains-2.1-libc-connect.patch 294
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
 MD5 7ebce22a77ec6ee78d053fc5532410e9 proxychains-2.1-r2.ebuild 1271
+RMD160 efa6cf93e7571524ad5ce4255a60dce8a0b99c91 proxychains-2.1-r2.ebuild 1271
+SHA256 b4c8e65cb3d7446c12fb60be2b812242f2ac9cda60fad82519ea89e9c90bb862 proxychains-2.1-r2.ebuild 1271
+MD5 0571512b04e569958bdc7238d948ec9e proxychains-3.0.ebuild 907
+RMD160 919cd8c40a8cf03510ed7bb0b81af15351176111 proxychains-3.0.ebuild 907
+SHA256 fcd6e9d59b676210164977dc8efe2839212d105c86b47be9c048e5601746579c proxychains-3.0.ebuild 907
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDY0GRgIKl8Uu19MoRAl8nAJ9iJKf7/C8186NcjQnaHz/2ObWJIQCfWJwZ
-RZmUDIb1BCw28+OcgvsglDE=
-=dGal
+iD8DBQFEC0TT2+ySkm8kpY0RAqQSAJ0UrV0PxipAtgYqThxQcwZgm2dhOgCdFDgN
+cgmhbZ0UKkSeXYB9TCdcTYQ=
+=8uEh
 -----END PGP SIGNATURE-----
