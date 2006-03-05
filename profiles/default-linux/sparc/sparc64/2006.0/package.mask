@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/package.mask,v 1.11 2006/03/04 22:47:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/package.mask,v 1.12 2006/03/05 04:07:25 weeve Exp $
 
 # Jason Wever <weeve@gentoo.org>
 # gradm requires 64 bit support, which doesn't exist in this profile
@@ -21,6 +21,7 @@ app-misc/jitac
 app-misc/largorecipes
 app-misc/openjnlp
 app-portage/portagemaster
+app-vim/ant
 dev-db/henplus
 dev-db/hsqldb
 dev-java/adaptx
@@ -147,6 +148,7 @@ dev-java/xmlc
 dev-java/xom
 dev-java/sun-jms
 dev-java/sun-jmx
+dev-tex/ppower4
 dev-util/checkstyle
 dev-util/eclipse-cdt-bin
 dev-util/eclipse-sdt-bin
@@ -163,6 +165,8 @@ kde-base/qtjava
 media-gfx/aoi
 net-misc/java-wakeonlan
 net-misc/mindterm
+net-p2p/xnap
+sci-misc/zetagrid
 www-servers/jboss
 www-servers/jetty
 www-servers/orion
