@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c75bf3728db021728aea5299e0ab69d7 ChangeLog 443
+RMD160 7016f1a02411e3229d920b0c72165c9fdbeef665 ChangeLog 443
+SHA256 97cd1ac8b39580410a876a2932b57fbea7b8c293b8ba96d37d78e04cc914b7d5 ChangeLog 443
+MD5 49da836bbe9772f2f257e3505e51de94 files/digest-vdr-prefermenu-0.6.4 250
+RMD160 3ef9c4c2814911296f6db9ecf78e5055e7b37576 files/digest-vdr-prefermenu-0.6.4 250
+SHA256 c5f8f5e69ccbad27d16d0985c02c7fc8a794613ddd86b5e5297bfa61b73f9b98 files/digest-vdr-prefermenu-0.6.4 250
+MD5 d07cdd1e1b75bac442cdde0d738e28e8 files/vdr-prefermenu-0.6.4-includes.diff 1178
+RMD160 8cf84f8c59beb6690877264a36c833fbccc60814 files/vdr-prefermenu-0.6.4-includes.diff 1178
+SHA256 5f5d0d9a7a6b13fe51f7eb05b1f7dc0a856627ebc51ea95b8650434dc83c8a77 files/vdr-prefermenu-0.6.4-includes.diff 1178
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 64222eb79c0b561ca0d842258623e37c vdr-prefermenu-0.6.4.ebuild 782
+RMD160 3c2c75031186225b72ad65585bb41cdf23a13760 vdr-prefermenu-0.6.4.ebuild 782
+SHA256 7b1a6cba187ef946afc534d998c3aa0db37fcc40e8e1b81bd79bdf0461f2b1e0 vdr-prefermenu-0.6.4.ebuild 782
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFECtNFZfSl1Kp5KmoRAg/UAJ4mojKHLU/cpN8hpwLa/cIAv4kz7QCfZFFU
+B9dkntlEjcBmD7VGWJANoDs=
+=rmfb
+-----END PGP SIGNATURE-----
