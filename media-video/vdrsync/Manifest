@@ -1,15 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7b2a100e0d644dfb0e41a8c169faac97 ChangeLog 807
+MD5 a1cd26987aa11d9f43c0d4ed0a45f9ad ChangeLog 905
+RMD160 f47b3c0fb1a9aca5bf8ad3defede5afa3323d602 ChangeLog 905
+SHA256 87b1a46fb08c0d70d1eb38a1dc930e4aab1f3143f652f8979566d615ace3bb89 ChangeLog 905
 MD5 ce3ab9c2f0c809f743cf98969b32f408 files/digest-vdrsync-0.1.3_pre050322 63
-MD5 ddab6dd873304661b343b889490c90f7 metadata.xml 303
+RMD160 a3141ea02e87791604deb74d6e3f8fe19621ce3b files/digest-vdrsync-0.1.3_pre050322 63
+SHA256 1e5f5725d1fed4834e60a3fce26388c17832497b9dfd8e0f87bfd3514295f6d5 files/digest-vdrsync-0.1.3_pre050322 63
+MD5 266e295c7c4117888ba25fd17d8d09f4 metadata.xml 297
+RMD160 d72be1feed6d2a5aa1d29028b478c7710494f345 metadata.xml 297
+SHA256 c5f471e28305fd98cccb56b4196466a6b601cf6ec3a392cfeaaefeef7990a983 metadata.xml 297
 MD5 6d8ecc2dfaa59fdda4f622c52f0d0788 vdrsync-0.1.3_pre050322.ebuild 1303
+RMD160 a83077cfe5c8016cd100eec1a7caada8b8eaaa6b vdrsync-0.1.3_pre050322.ebuild 1303
+SHA256 c8b019dbe117fd250e6751346a35aefc0eb920012a4ed5ddc65fc3af9ec9ed2f vdrsync-0.1.3_pre050322.ebuild 1303
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
-Comment: no further Information
 
-iD8DBQFECzHbdn07HTTCgIoRAhYdAJ4p5BG/ldV2AmR/K1zGRxM2L2MtWgCeIKNH
-AGWtitiIfpj/B65oye9dYec=
-=J3lY
+iD8DBQFEC0q1CRZPokWLroQRAieDAKDhYbKXntADLMlBlsH++Kg5rFk28ACgqjUD
+ZrBbER+9+Vn1n8paK50tAig=
+=yy/O
 -----END PGP SIGNATURE-----
