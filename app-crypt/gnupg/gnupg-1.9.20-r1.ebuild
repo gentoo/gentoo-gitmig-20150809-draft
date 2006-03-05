@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.20.ebuild,v 1.3 2006/02/17 01:08:01 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.20-r1.ebuild,v 1.1 2006/03/05 14:10:23 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ COMMON_DEPEND="
 	>=dev-libs/pth-1.3.7
 	smartcard? ( >=dev-libs/opensc-0.8.0 )
 	>=dev-libs/libgcrypt-1.1.94
-	>=dev-libs/libksba-0.9.12
+	>=dev-libs/libksba-0.9.13
 	>=dev-libs/libgpg-error-1.0
 	=dev-libs/libassuan-0.6.10
 	ldap? ( net-nds/openldap )
@@ -30,14 +30,12 @@ DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )"
 
 RDEPEND="${COMMON_DEPEND}
+	!app-crypt/gpg-agent
+	=app-crypt/gnupg-1.4*
 	X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
 	virtual/mta
 	selinux? ( sec-policy/selinux-gnupg )
 	nls? ( virtual/libintl )"
-
-RESTRICT="test"
-# self tests can't work since it depends on gpg-agent
-# Gentoo has put this in its own package (app-crypt/gpg-agent)
 
 src_unpack() {
 	unpack ${A}
@@ -65,10 +63,11 @@ src_compile() {
 		myconf="${myconf} --disable-photo-viewers"
 	fi
 
-	append-ldflags $(bindnow-flags)
+	use caps || append-ldflags $(bindnow-flags)
 
 	econf \
-		--disable-agent \
+		--enable-agent \
+		--enable-gpgsm \
 		--enable-symcryptrun \
 		--enable-gpg \
 		$(use_enable smartcard scdaemon) \
@@ -84,8 +83,9 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc ChangeLog NEWS README THANKS TODO VERSION
 
-	if ! use caps ; then
+	if ! use caps; then
 		fperms u+s,go-r /usr/bin/gpg2
+		fperms u+s,go-r /usr/bin/gpg-agent
 	fi
 }
 
