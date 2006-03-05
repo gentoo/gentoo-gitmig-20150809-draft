@@ -1,0 +1,12 @@
+# /etc/conf.d/vdr.bitstreamout:
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-bitstreamout/files/confd,v 1.1 2006/03/05 11:49:34 zzam Exp $
+
+# Global config file for vdr plugin bitstreamout
+
+# You may use mute.sh for muting the S/P-DIF out of the
+# sound card even if not used for AC3.  Note that this
+# script is designed for a C-Media PCI CMI8738 based sound card.
+# Please modify vdr_mute.sh depending of your sound-card
+#BITSTREAMOUT_MUTE="/usr/lib/vdr/cmi8738.sh"
+#BITSTREAMOUT_MUTE="/usr/lib/vdr/soundblaster.sh"
+
