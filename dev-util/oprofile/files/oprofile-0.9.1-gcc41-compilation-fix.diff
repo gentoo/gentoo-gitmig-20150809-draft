@@ -1,0 +1,93 @@
+--- libpp/arrange_profiles.cpp.orig	2006-02-15 13:26:05.780995781 +0100
++++ libpp/arrange_profiles.cpp	2006-02-15 13:16:37.997633075 +0100
+@@ -24,6 +24,44 @@
+ #include "parse_filename.h"
+ #include "locate_images.h"
+ 
++bool profile_classes::matches(profile_classes const & classes)
++{
++	if (v.size() != classes.v.size())
++		return false;
++
++	axis_types const axis2 = classes.axis;
++
++	switch (axis) {
++		case AXIS_EVENT:
++			break;
++		case AXIS_TGID:
++		case AXIS_TID:
++			return axis2 == AXIS_TID || axis2 == AXIS_TGID;
++		case AXIS_CPU:
++			return axis2 == AXIS_CPU;
++		case AXIS_MAX:
++			return false;
++	}
++
++	// check that the events match (same event, count)
++
++	std::vector<profile_class>::const_iterator it1 = v.begin();
++	std::vector<profile_class>::const_iterator end1 = v.end();
++	std::vector<profile_class>::const_iterator it2 = classes.v.begin();
++
++	while (it1 != end1) {
++		if (it1->ptemplate.event != it2->ptemplate.event)
++			return false;
++		if (it1->ptemplate.count != it2->ptemplate.count)
++			return false;
++		// differing unit mask is considered comparable
++		++it1;
++		++it2;
++	}
++
++	return true;
++}
++
+ using namespace std;
+ 
+ namespace {
+@@ -90,45 +128,6 @@
+ };
+ 
+ 
+-bool profile_classes::matches(profile_classes const & classes)
+-{
+-	if (v.size() != classes.v.size())
+-		return false;
+-
+-	axis_types const axis2 = classes.axis;
+-
+-	switch (axis) {
+-		case AXIS_EVENT:
+-			break;
+-		case AXIS_TGID:
+-		case AXIS_TID:
+-			return axis2 == AXIS_TID || axis2 == AXIS_TGID;
+-		case AXIS_CPU:
+-			return axis2 == AXIS_CPU;
+-		case AXIS_MAX:
+-			return false;
+-	}
+-
+-	// check that the events match (same event, count)
+-
+-	vector<profile_class>::const_iterator it1 = v.begin();
+-	vector<profile_class>::const_iterator end1 = v.end();
+-	vector<profile_class>::const_iterator it2 = classes.v.begin();
+-
+-	while (it1 != end1) {
+-		if (it1->ptemplate.event != it2->ptemplate.event)
+-			return false;
+-		if (it1->ptemplate.count != it2->ptemplate.count)
+-			return false;
+-		// differing unit mask is considered comparable
+-		++it1;
+-		++it2;
+-	}
+-
+-	return true;
+-}
+-
+-
+ /// We have more than one axis of classification, tell the user.
+ void report_error(profile_classes const & classes, axis_types newaxis)
+ {
