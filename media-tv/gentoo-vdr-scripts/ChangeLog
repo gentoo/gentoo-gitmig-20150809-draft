@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.44 2006/03/05 15:26:05 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.45 2006/03/05 17:25:11 zzam Exp $
+
+  05 Mar 2006; Matthias Schwarzott <zzam@gentoo.org>
+  -files/gentoo-vdr-scripts-0.1_alpha1-merge-commands.diff,
+  -files/gentoo-vdr-scripts-0.1_alpha4-video-parameter.diff,
+  -gentoo-vdr-scripts-0.2_alpha3.ebuild,
+  -gentoo-vdr-scripts-0.2_alpha3-r1.ebuild, -gentoo-vdr-scripts-0.2.ebuild,
+  -gentoo-vdr-scripts-0.2.1.ebuild, -gentoo-vdr-scripts-0.2.2.ebuild,
+  -gentoo-vdr-scripts-0.2.3.ebuild:
+  cleaned up old ebuilds
 
 *gentoo-vdr-scripts-0.2.4 (05 Mar 2006)
 
