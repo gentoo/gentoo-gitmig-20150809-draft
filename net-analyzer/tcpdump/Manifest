@@ -1,11 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 293b4be2bedf8b72d8db0805040e65cf ChangeLog 8817
+RMD160 78baec6fd28fc45f07720b50dc31706f8150f224 ChangeLog 8817
+SHA256 a271e42ac21aa0e08f6fa63aefb136ab5f3fa67d07f31e8f377a8c31aa1b1aa9 ChangeLog 8817
 MD5 d285bb203f9e48fc23492e4c72d61a94 files/digest-tcpdump-3.8.3-r4 65
+RMD160 6937a5acf351527c03c8f5cf39e965f787c7257e files/digest-tcpdump-3.8.3-r4 65
+SHA256 27a20b9fc4e3e68de25a12b50968eaa3ce5da2b1710b1b22a13270264c1ea406 files/digest-tcpdump-3.8.3-r4 65
 MD5 ede90d270bda1c6dcdf701ea18c6dbdc files/digest-tcpdump-3.9.3 65
+RMD160 4bd5a6d5f9980a94f71343e57a1de2158cd292b3 files/digest-tcpdump-3.9.3 65
+SHA256 01a22e654d0117ee48da8df301c0c85af42e97b7c5f65d6c070ef429c15e01d8 files/digest-tcpdump-3.9.3 65
 MD5 5b7e9e87db98adceedf64b926fb30901 files/digest-tcpdump-3.9.4 241
+RMD160 7ce1afbd50b447cfef1b5702157cfbfab6cfa78b files/digest-tcpdump-3.9.4 241
+SHA256 0f31cf28e2cf548760dec49e19d8e615588655abd6bc3a7a2c63372683fcb4ba files/digest-tcpdump-3.9.4 241
 MD5 f02e63da753d8b83de7f47d3de976e95 files/tcpdump-3.8.3-bgp-infinite-loop2.patch 556
+RMD160 3e093155ea609647f013620db348b7e6b5386526 files/tcpdump-3.8.3-bgp-infinite-loop2.patch 556
+SHA256 908406dfb314dfaf735885cba13d995e925754bd739bbd3d5b1e7cc9d85c34e4 files/tcpdump-3.8.3-bgp-infinite-loop2.patch 556
 MD5 373e9bba235a67d1de8eb1356151f32c files/tcpdump-3.8.3-gcc4.patch 3162
+RMD160 35f3e030da806af52103b056249e1303c7580304 files/tcpdump-3.8.3-gcc4.patch 3162
+SHA256 7a5e58eb31a826399e53fb5c20c3bb70fe17c01355fb3ed452624f392da4775e files/tcpdump-3.8.3-gcc4.patch 3162
 MD5 4d0df7aa1535098ccef25ba7e86e5e95 files/tcpdump-3.8.3-gentoo.patch 4002
+RMD160 ac99f45e1c7c9ebe6c6892fb6f2f751b9f9fd084 files/tcpdump-3.8.3-gentoo.patch 4002
+SHA256 d37b772383dfc5c1d708af751857e19d6f77143b1cbf86b008e76d3243fce506 files/tcpdump-3.8.3-gentoo.patch 4002
 MD5 1465cdeb961745379a8ae1402b3e51ab metadata.xml 268
+RMD160 896e1ec3be866fe1d515b55473f0ac763b9f8a12 metadata.xml 268
+SHA256 01030866e2f7de584ec505f71cfbfbbb48f8a790a0ea50a3da1974b74423f827 metadata.xml 268
 MD5 2323a0f53259fe81ae327e183ad6ab6d tcpdump-3.8.3-r4.ebuild 1472
+RMD160 dfa792e33f1f9390c4cd2bdd2b7293be233e67b8 tcpdump-3.8.3-r4.ebuild 1472
+SHA256 8c8e89933d8e9993a3754b6ada72aa3be31a8d6892d1a0bf88cf8c3229d0890b tcpdump-3.8.3-r4.ebuild 1472
 MD5 afcd04d0437ce5d2d0a481e14c230e7e tcpdump-3.9.3.ebuild 1457
-MD5 af83aa65f7394a00ce0646ed22c12547 tcpdump-3.9.4.ebuild 1467
+RMD160 62ada676444b761d22a3c18ce4a0bfa380cfd266 tcpdump-3.9.3.ebuild 1457
+SHA256 8a2c591401cae82f5f205df58ce45b4118f7867e54de0a7b60f2492864cf36a9 tcpdump-3.9.3.ebuild 1457
+MD5 cc1dfbd4636e8f8247cde2c4074e380a tcpdump-3.9.4.ebuild 1461
+RMD160 30fd6686dbeee226d091b939a70e34449fbeb115 tcpdump-3.9.4.ebuild 1461
+SHA256 946f1ceaf61ebe87cc30e7e9e00919ec8f9f4a90605d5c1a2c05f69be66f9487 tcpdump-3.9.4.ebuild 1461
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFECmEM2+ySkm8kpY0RAgiQAJ9AiWX6qI30iPlssgdW4uHh9tHxFACfYcaA
+eUrFK2dHGRPwBzaMeHoeHDM=
+=TwDC
+-----END PGP SIGNATURE-----
