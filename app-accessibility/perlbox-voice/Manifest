@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 58a47c27a8c0f0b7e48ed93de3fc981f ChangeLog 499
+MD5 b5384a4fce4a4e3f4521dafdc68dda73 files/digest-perlbox-voice-0.09 75
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 d5091c0c01b4f7789f80121453e42cb6 perlbox-voice-0.09.ebuild 689
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFEC1+WtG5z4I8BtQoRAjgDAJ0Xi2s1IFC1MrFJfJ0AaX98ULjQoQCffgV3
+RgQ36deCldz6C91D7jdp664=
+=C0hv
+-----END PGP SIGNATURE-----
