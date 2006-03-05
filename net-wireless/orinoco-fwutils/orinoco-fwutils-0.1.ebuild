@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-fwutils/orinoco-fwutils-0.1.ebuild,v 1.2 2006/01/30 22:00:28 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-fwutils/orinoco-fwutils-0.1.ebuild,v 1.3 2006/03/05 17:55:04 brix Exp $
 
 DESCRIPTION="ORiNOCO IEEE 802.11 wireless LAN firmware utilities"
 HOMEPAGE="http://www.nongnu.org/orinoco/"
@@ -33,4 +33,11 @@ src_install() {
 	dobin get_* parse_*
 
 	dodoc README
+}
+
+pkg_postinst() {
+	einfo
+	einfo "After fetching the firmware using these tools you must place it in"
+	einfo "/lib/firmware/ for the kernel driver to be able to load it."
+	einfo
 }
