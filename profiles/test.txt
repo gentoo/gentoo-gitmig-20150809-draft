@@ -1,5 +1,0 @@
-$Header: /var/cvsroot/gentoo-x86/profiles/test.txt,v 1.1 2006/03/05 02:23:50 pylon Exp $
-
-I need a test file for testing cvs trigger scripts
-
-Trigger 1
