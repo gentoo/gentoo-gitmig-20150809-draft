@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.15.20060110.ebuild,v 1.1 2006/01/30 03:13:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.15.20060110.ebuild,v 1.2 2006/03/05 19:41:05 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -56,7 +56,7 @@ src_compile() {
 }
 
 src_install() {
-	if use minimal; then
+	if use minimal ; then
 		into /
 		dosbin tc/tc || die "minimal"
 		return 0
@@ -69,6 +69,7 @@ src_install() {
 		install \
 		|| die "make install failed"
 	if use berkdb ; then
+		dodir /var/lib/arpd
 		# bug 47482, arpd doesn't need to be in /sbin
 		dodir /usr/sbin
 		mv "${D}"/sbin/arpd "${D}"/usr/sbin/
