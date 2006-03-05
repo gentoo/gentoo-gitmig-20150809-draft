@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6b08e0db4ba4e6e213a56d6394590e7c ChangeLog 25763
-RMD160 765fba26c0b9139d2268cd94f8a4d6b15f099a1b ChangeLog 25763
-SHA256 ae4163d5b2e764e16d259af74775e98461fc1ec5ccd1ec686aee0dd7f7d278ef ChangeLog 25763
+MD5 195a5e8a40f460d744bfc6c78eee7b52 ChangeLog 25950
+RMD160 afef862c2a0aed670b87a1fdff93d862fd5fff9f ChangeLog 25950
+SHA256 593003c3ea0f25cd547811364f9226712c6ecfe54432298260416e722aff150c ChangeLog 25950
 MD5 239a562c31f4486b3665948b60831839 files/digest-openssh-3.9_p1-r3 835
 RMD160 4caa67826d1847f62d6899f70be04ccb1234a260 files/digest-openssh-3.9_p1-r3 835
 SHA256 cff18a611c7cacebde002a7b0fea2f2e7e267566bcf456d4ed24da6693003848 files/digest-openssh-3.9_p1-r3 835
@@ -25,6 +25,9 @@ SHA256 6d29cb665247fb9bfd35bb4d6dd092433f5c38d7ad0adb5ab60ff2666246ea88 files/di
 MD5 ae5453ce00228584c7f60002ee0b2c4d files/digest-openssh-4.3_p2 1042
 RMD160 3e3baeaf0792353265c3e8d2c5414815cb2c3e7a files/digest-openssh-4.3_p2 1042
 SHA256 74fac47e5281569f157448d2c60ee1b8be7732392c080d87db6b225a33e57b21 files/digest-openssh-4.3_p2 1042
+MD5 ae5453ce00228584c7f60002ee0b2c4d files/digest-openssh-4.3_p2-r1 1042
+RMD160 3e3baeaf0792353265c3e8d2c5414815cb2c3e7a files/digest-openssh-4.3_p2-r1 1042
+SHA256 74fac47e5281569f157448d2c60ee1b8be7732392c080d87db6b225a33e57b21 files/digest-openssh-4.3_p2-r1 1042
 MD5 87593c73e26e1a3825fcb51f2270b694 files/openssh-3.9_p1-chroot.patch 3027
 RMD160 bdbdcadc59c1eda5cb516f8a601d1c8912b36ebb files/openssh-3.9_p1-chroot.patch 3027
 SHA256 14653a7eb8d0458f5a74baa4bbc6ba026d141432af745c5d52f3728328badc04 files/openssh-3.9_p1-chroot.patch 3027
@@ -85,6 +88,9 @@ SHA256 0be50a8ee5e7d2faf4961cc7eae96b22557e1b8e6b39f9da7d74b6c2c13fbc3b files/op
 MD5 50f8706c29e6d5c509c64cfba22a78b1 files/openssh-4.3_p1-krb5-typos.patch 301
 RMD160 3b1a82e230c870269f9aa25cd73e9c5be03db3f6 files/openssh-4.3_p1-krb5-typos.patch 301
 SHA256 98310c487625b5dbd86f4a2c1acd00c223911b6a7e505455bc4196063fa38b9c files/openssh-4.3_p1-krb5-typos.patch 301
+MD5 09e5245f22949581185b0bf197066b09 files/openssh-4.3_p2-selinux.patch 12576
+RMD160 7b69b64260951761a28b1278e25a0c248a73157f files/openssh-4.3_p2-selinux.patch 12576
+SHA256 be219ea2d309b851d14dcfc4d402adb1a7d01648218d46c865038eaa84398b27 files/openssh-4.3_p2-selinux.patch 12576
 MD5 eca7ba0b23754a710b42a79c1fb5e248 files/openssh-securid-1.3.1-updates.patch 445
 RMD160 b1db3dfa75f7e03d0dff41e85e285f8b749f27f0 files/openssh-securid-1.3.1-updates.patch 445
 SHA256 11c95cc508d20c8eb1e8faa0d2b5e68346cbb93db8fb560cfa8b4d2c0d1104b3 files/openssh-securid-1.3.1-updates.patch 445
@@ -121,13 +127,16 @@ SHA256 27defefc8b7f32748b4cb44b346eeca9497f5c226d95401a2febba663eb0b9b2 openssh-
 MD5 d9d5ef9d6626f46949671061c8fe71a8 openssh-4.3_p1.ebuild 5519
 RMD160 9e7b7b75accf88848bf9f1ed32949420780690cf openssh-4.3_p1.ebuild 5519
 SHA256 4627282f3cbfef247eddbe0b7728345b86df1a74b78ce1bf6e668272c7a137d0 openssh-4.3_p1.ebuild 5519
+MD5 4e84c41e9b056cc7f64f09421462a647 openssh-4.3_p2-r1.ebuild 5568
+RMD160 3b61c1ac0a71bbd0e8ce00779850073fa906b6cb openssh-4.3_p2-r1.ebuild 5568
+SHA256 706c053f4ad3cebf5ad15fd5a28d636ee326038330ba3c5acebab47ecef1de38 openssh-4.3_p2-r1.ebuild 5568
 MD5 2393449a462c67073f67179bf182977a openssh-4.3_p2.ebuild 5556
 RMD160 6ecd68a5cd3d0f0f52947c6f1dcb164597644690 openssh-4.3_p2.ebuild 5556
 SHA256 47b1a279831fcab420063bb100eb5428490eeec1c54f759ef2c99964d9caf49b openssh-4.3_p2.ebuild 5556
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFECPIY2+ySkm8kpY0RAn1TAJ9LvBvP1lbE6QMbh6vVvldeWUDfHgCeO0gQ
-KPK2iq8xVMla4yCsWxW7AHs=
-=Bj8T
+iD8DBQFECi6/J+ChZlpDtAoRAvFNAJ9He+kOJhsuiZzI6U8C31Q7miKFdwCghYsq
+8Fuy0p7hfHPTYmLP5+yDZYU=
+=8o0u
 -----END PGP SIGNATURE-----
