@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 12020f7079117612bb6e334179cb2630 ChangeLog 380
+RMD160 43d9ed84eee3c70dcb72d569546d0fd5a1cacdbd ChangeLog 380
+SHA256 7e6ce4d4a7d6fef90e13def580604837e56a96be38dc12fa20dce87720001f65 ChangeLog 380
+MD5 1513f420be14751ffeefd7eabeb99024 files/digest-vdr-taste-0.0.2d 467
+RMD160 d200b8c6c7ee9e0217965d3e18a91fd70cc8aa9f files/digest-vdr-taste-0.0.2d 467
+SHA256 81e1d45361f0fe8627e4c59a09aca87962f8031832ea16390da02efa797262fd files/digest-vdr-taste-0.0.2d 467
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 711c6a5759e72baa109bb79aa6dcfacd vdr-taste-0.0.2d.ebuild 595
+RMD160 43b04837902f2f202d7c0842d3eba1e3c62f21d2 vdr-taste-0.0.2d.ebuild 595
+SHA256 2e636824f65db78084348c64ba92eca1a27f7e9a1e9c238d3c4347f45436062c vdr-taste-0.0.2d.ebuild 595
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFECsq+ZfSl1Kp5KmoRAomdAKDbsKB7QFN7g1UdqmBLcTeFZ2foswCgvbeh
+Bc4abGbskaV4esNiRgllIE0=
+=2tCg
+-----END PGP SIGNATURE-----
