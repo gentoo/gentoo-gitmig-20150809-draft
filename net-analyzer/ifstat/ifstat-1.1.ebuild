@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ifstat-1.1.ebuild,v 1.11 2005/04/29 23:28:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ifstat-1.1.ebuild,v 1.12 2006/03/05 20:39:05 jokey Exp $
 
 IUSE="snmp"
 
@@ -22,5 +22,5 @@ src_compile() {
 
 src_install () {
 	einstall || die
-	dodoc COPYING HISTORY INSTALL README TODO VERSION
+	dodoc HISTORY README TODO VERSION
 }
