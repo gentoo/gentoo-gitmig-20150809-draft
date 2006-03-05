@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/bfilter
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.3 2005/12/31 16:28:10 mrness Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.4 2006/03/05 08:31:31 mrness Exp $
+
+*bfilter-0.10.3 (05 Mar 2006)
+
+  05 Mar 2006; Alin Nastac <mrness@gentoo.org>
+  -files/bfilter-0.9.4-droppriv.patch, files/bfilter.8, files/bfilter.conf,
+  files/bfilter.init, -bfilter-0.9.4.ebuild, +bfilter-0.10.3.ebuild:
+  Version bump (#124950). Credit goes to Alan Swanson <swanson@ukfsn.org>.
 
   31 Dec 2005; Alin Nastac <mrness@gentoo.org> bfilter-0.10.1.ebuild:
   Fix libsigc++ dependency (#117278).
