@@ -1,17 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e5cde2a1f32a3b650a6fc65c0d31ca99 ChangeLog 1245
+RMD160 c49c0c9e03865ea07a8e6c356ae38f5df3b773a5 ChangeLog 1245
+SHA256 724780b36dfe28e4106b177f2ed25911ad82286cea8fe950880007f38405d862 ChangeLog 1245
 MD5 76da7226792e224b1c67a6232833c650 files/digest-rackview-0.04-r1 66
+RMD160 d6f853e6d4908a654fee8bb72ea3f0669568da90 files/digest-rackview-0.04-r1 66
+SHA256 56c4c4ded02c61d8c0ef8c495fada747e542aadca80f7b7625269c2feae799b3 files/digest-rackview-0.04-r1 66
 MD5 6fdb382498c555fbba922d4a14ee953c files/digest-rackview-0.05 66
+RMD160 32bdd67180c00d043b699909e4e6a5cffbba887d files/digest-rackview-0.05 66
+SHA256 010e1554c1dcdc241d3d9549910d87d33cdb28d34db751f1f8c771a1a40c0718 files/digest-rackview-0.05 66
 MD5 0445ddd2b4bf5b008850fa80ea6f83f9 files/digest-rackview-0.09 66
+RMD160 7be199aacdc9a4405babe1986700ab2fe1eaf154 files/digest-rackview-0.09 66
+SHA256 f4f3cd04fdfa85bcd0170de8c0913fb9579ee971e8df940f95c6f456a5c6cca9 files/digest-rackview-0.09 66
+MD5 c4d4e08ea02ba90b6ff383c0ad1f74e7 metadata.xml 306
+RMD160 86a358f58414ea9819d156011795f19360efc2ad metadata.xml 306
+SHA256 0147b4caa9293eb54ea831a8a2a95575200e5c20ae4fa003064974193d01423f metadata.xml 306
 MD5 d6a3d54cd1dd8ea91544d1dac0ff0e09 rackview-0.04-r1.ebuild 2914
+RMD160 02d90da231eefdac1a9ef57b229c3bce9df0856a rackview-0.04-r1.ebuild 2914
+SHA256 c73cf08485984fac2c703875a728215a1546acdf54dc0f552a63f2dbf21b8ca5 rackview-0.04-r1.ebuild 2914
 MD5 1571abdace7c904e8c5cd440715f3ffd rackview-0.05.ebuild 2910
+RMD160 9bac2111e37b9d5414c7d9e87cfafbda6a0e301a rackview-0.05.ebuild 2910
+SHA256 0eeb7a4cd45c4b676c8487de4201b6f31bce27fae9f3f6d24a5c938e7d337303 rackview-0.05.ebuild 2910
 MD5 b1c2393b83ae010323bc87395ec61f10 rackview-0.09.ebuild 962
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD7lC+tG5z4I8BtQoRAiWvAJ9kMSV9F1Rzxv5c+neXWPzDo6ZhPgCdGW0g
-y0OekasTsMqP6zas7HSQQlY=
-=oZvW
------END PGP SIGNATURE-----
+RMD160 e662f47c2627319ba11885b7ce590ce780152ff9 rackview-0.09.ebuild 962
+SHA256 551502c4568a88f4c7c677a84634040d40749ea8c93c3f031f5da4762cba04ba rackview-0.09.ebuild 962
