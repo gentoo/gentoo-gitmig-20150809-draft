@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0fd885e4b7c5c431fae43e1b6035d43e ChangeLog 18026
-RMD160 bb6fdfd6dacea3be5963ca71c2926ccdcac32fcf ChangeLog 18026
-SHA256 b5a41629e52d56e464baf0278f67edb920025af01c2cd4e95f3bdc690e3b44c4 ChangeLog 18026
+MD5 64bbb61b13746dac3dfa97acda510a1b ChangeLog 18232
+RMD160 0a1df23537a3b1442629a807c9a85978d20dd764 ChangeLog 18232
+SHA256 55cfcb0dd3720a6dda25290beae62769e900f42f63cebed4b2840e725f976718 ChangeLog 18232
 MD5 1e105a96a7b5945e07d2e2febbf464a6 amarok-1.3.6.ebuild 3206
 RMD160 5a191332318d240ec23ed6532e96542ced169856 amarok-1.3.6.ebuild 3206
 SHA256 0f0d337d50f5e51832803ef3ef5b15b1b84ef13814d0e35094392bb73b1eeb80 amarok-1.3.6.ebuild 3206
 MD5 a3f0175170ae7d5ced31ae12818ceb56 amarok-1.3.8.ebuild 3849
 RMD160 8c26a9686a466c3e711db42ad060c58f47695bf7 amarok-1.3.8.ebuild 3849
 SHA256 e861d7aad63db24af75ab42ffa6a963664403ce99c638827934ff687bfec4e3d amarok-1.3.8.ebuild 3849
+MD5 2f320c62c9a23c789144cd618f6be742 amarok-1.4_beta2-r1.ebuild 2918
+RMD160 9b5539fec9f3614ff88b1f6039e90e30bf920a34 amarok-1.4_beta2-r1.ebuild 2918
+SHA256 cc2bc1f6f1fe62fec845b216bb5d62a86a67215102f1ef79c6ccee4f2e0a3c1c amarok-1.4_beta2-r1.ebuild 2918
 MD5 62c76b12fe2c5b3c7947200728843142 amarok-1.4_beta2.ebuild 3511
 RMD160 f82b913306b8101570d7a8d2e6c8bd56536ece0f amarok-1.4_beta2.ebuild 3511
 SHA256 b672c0280afda723131ac0b47f14a09a8daad3f0aae50bd812f0bc7b772a221c amarok-1.4_beta2.ebuild 3511
@@ -22,13 +22,9 @@ SHA256 9077a159e1b9d0b8da962a219de739c0ae90f5de27dad4c50b84a91b59ec6de0 files/di
 MD5 a2cbf713a42feda7eb45a7e0a11959cd files/digest-amarok-1.4_beta2 259
 RMD160 14b33493147f2211c2713352589c0cdbe0b165ad files/digest-amarok-1.4_beta2 259
 SHA256 ad5f2c72401dfc4ee83d8e67c7df8d7fa459aac50350f2f2dc234d23cc41ca5c files/digest-amarok-1.4_beta2 259
+MD5 a2cbf713a42feda7eb45a7e0a11959cd files/digest-amarok-1.4_beta2-r1 259
+RMD160 14b33493147f2211c2713352589c0cdbe0b165ad files/digest-amarok-1.4_beta2-r1 259
+SHA256 ad5f2c72401dfc4ee83d8e67c7df8d7fa459aac50350f2f2dc234d23cc41ca5c files/digest-amarok-1.4_beta2-r1 259
 MD5 b23600108f12c98a4fd574d3487ee598 metadata.xml 175
 RMD160 b83c98cecf42dee70ceb6176e04d25bd0ca3bb47 metadata.xml 175
 SHA256 bef114df47e8714056f8ba499d57edbba26f1a7e0dbaca7dbfbe4beae4272729 metadata.xml 175
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEC0jgAiZjviIA2XgRAkkuAJ9BSFfjEjwpCT/q2yoNEUuCKlPuBACcDyYm
-ehJeo7tB7yQTSBlpWgDQ148=
-=2d78
------END PGP SIGNATURE-----
