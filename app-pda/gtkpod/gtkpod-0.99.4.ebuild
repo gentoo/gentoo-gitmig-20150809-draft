@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.99.2.ebuild,v 1.4 2006/01/16 01:27:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.99.4.ebuild,v 1.1 2006/03/05 19:43:32 tester Exp $
 
 DESCRIPTION="GUI for iPod using GTK2"
 HOMEPAGE="http://gtkpod.sourceforge.net/"
@@ -14,7 +14,7 @@ IUSE="aac"
 DEPEND=">=x11-libs/gtk+-2.4.0
 	>=media-libs/libid3tag-0.15
 	>=gnome-base/libglade-2
-	>=media-libs/libgpod-0.3
+	>=media-libs/libgpod-0.3.2
 	aac? ( media-libs/libmp4v2 )"
 
 src_unpack() {
