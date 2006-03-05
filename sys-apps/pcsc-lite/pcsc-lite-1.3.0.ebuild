@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.3.0.ebuild,v 1.1 2006/03/04 02:08:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.3.0.ebuild,v 1.2 2006/03/05 22:22:51 vapier Exp $
 
 STUPID_NUM=1472
 MY_P="${PN}-${PV/_/-}"
@@ -10,7 +10,7 @@ SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~x86"
 IUSE="static debug"
 
 RDEPEND="!static? ( dev-libs/libusb )"
