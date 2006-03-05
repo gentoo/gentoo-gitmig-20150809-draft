@@ -1,5 +1,31 @@
-MD5 2fb755c6949eda2acfaf355332b05e0c ChangeLog 736
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8c2883140a3fe9e5960485f80cfb491f ChangeLog 879
+RMD160 70b4cbcc405a9b70dd873b1091fe8c46c71bbfe5 ChangeLog 879
+SHA256 d965776a29e9b2c3052708c65ae59f5a72474ae6f3c3492667f0541c26f0135e ChangeLog 879
 MD5 13fa45df8a1cbecb65daff7ac1bfcd9d eaccelerator-0.9.3.ebuild 3720
+RMD160 f29ac6c089ef81535cb03532e029903dbb9b68c9 eaccelerator-0.9.3.ebuild 3720
+SHA256 5502a9e7b313477aaa7be2a559e7caab9b1d6f26d24d377b3631cb6e04118981 eaccelerator-0.9.3.ebuild 3720
+MD5 8a8384315c15e8cd702d810cab144b12 eaccelerator-0.9.4.ebuild 3607
+RMD160 c3f8c95c8039120613b23373a86fcf2814b3ee0f eaccelerator-0.9.4.ebuild 3607
+SHA256 046ac026f9dbe23e587563517e82f8d7e1175bc7c0185e26715540f6a0edaf10 eaccelerator-0.9.4.ebuild 3607
 MD5 543f0982cc0ffa866a7b03985dc77edb files/digest-eaccelerator-0.9.3 70
+RMD160 9daf49b080c84103e6834e9d706b1ebbd9c95743 files/digest-eaccelerator-0.9.3 70
+SHA256 13c57c4ba3ac20c79deec67764b4fc6799067377ca29440491410843c3976f50 files/digest-eaccelerator-0.9.3 70
+MD5 f529d0c05e329339cb45697245c48d26 files/digest-eaccelerator-0.9.4 259
+RMD160 71c32edbd2480ece6043a8419b8779195d7a6f2c files/digest-eaccelerator-0.9.4 259
+SHA256 0e1f87d7bfd50ad6bcdca9064d362801d5828e0b8f24c125901eef02d040a990 files/digest-eaccelerator-0.9.4 259
 MD5 65491db56ada2c1237a6c790210c3592 files/eaccelerator-0.9.3-hash-fix.patch 776
+RMD160 7eac3fe23a48f484945a0a9e7eef09c99d0a7e01 files/eaccelerator-0.9.3-hash-fix.patch 776
+SHA256 762928aa4f1b931fbbee02eee45c6b6346640706709ec9235c36f0d5c8c6ff64 files/eaccelerator-0.9.3-hash-fix.patch 776
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
+RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a metadata.xml 157
+SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFECop5aGfFFLhbXWkRAkaxAKCWiqjcDIFz78zRbpClfKEKLzeKQACghy+T
+w7lluZB6UVnf2S5GI2u4nik=
+=N8n1
+-----END PGP SIGNATURE-----
