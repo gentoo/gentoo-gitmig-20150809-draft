@@ -22,13 +22,13 @@ SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata
 MD5 7ebce22a77ec6ee78d053fc5532410e9 proxychains-2.1-r2.ebuild 1271
 RMD160 efa6cf93e7571524ad5ce4255a60dce8a0b99c91 proxychains-2.1-r2.ebuild 1271
 SHA256 b4c8e65cb3d7446c12fb60be2b812242f2ac9cda60fad82519ea89e9c90bb862 proxychains-2.1-r2.ebuild 1271
-MD5 0571512b04e569958bdc7238d948ec9e proxychains-3.0.ebuild 907
-RMD160 919cd8c40a8cf03510ed7bb0b81af15351176111 proxychains-3.0.ebuild 907
-SHA256 fcd6e9d59b676210164977dc8efe2839212d105c86b47be9c048e5601746579c proxychains-3.0.ebuild 907
+MD5 b840fba9a8f53a9a2eb42baeb4949c69 proxychains-3.0.ebuild 900
+RMD160 fc30daf2f7783772058368033807f237b7ea5da8 proxychains-3.0.ebuild 900
+SHA256 ae246f49b2f44fc8515b74cefd5bb6d7eace56bc82b8f9e7984bfaa9dcf1094a proxychains-3.0.ebuild 900
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEC0TT2+ySkm8kpY0RAqQSAJ0UrV0PxipAtgYqThxQcwZgm2dhOgCdFDgN
-cgmhbZ0UKkSeXYB9TCdcTYQ=
-=8uEh
+iD8DBQFEC0Us2+ySkm8kpY0RAqgEAJoDXGpX7E7VHIouo9S4+gKeCjpSmgCgiG+s
+IA3t0iiZAVEtp3P1qZLuKeE=
+=B+2R
 -----END PGP SIGNATURE-----
