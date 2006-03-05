@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.14 2006/02/28 05:45:48 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.15 2006/03/05 00:30:56 weeve Exp $
+
+  05 Mar 2006; Jason Wever <weeve@gentoo.org> knutclient-0.8.6.ebuild:
+  Stable on SPARC wrt bug #124073.
 
   28 Feb 2006; Joshua Jackson <tsunam@gentoo.org> knutclient-0.8.6.ebuild:
   stable on x86; bug #124073
