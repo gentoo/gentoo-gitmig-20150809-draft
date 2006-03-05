@@ -1,6 +1,28 @@
-MD5 65f20a66c9112ef90daa3c291904ec56 ChangeLog 1704
-MD5 005fd4ad4a4b2dec83d3fad2564b8930 files/digest-xtermcontrol-2.4 68
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d83cba89fe7d8b1b0b3cd3261ceeee94 ChangeLog 1879
+RMD160 f2de3b0929f1364d6bd86b538f4997278effb476 ChangeLog 1879
+SHA256 34bd348b1da8e9949bf31eb04d9ae3899313a3f1b31e7d9ffe35382a6ce223de ChangeLog 1879
 MD5 ed6a2ee396b6ddf5d23b4862cd51ba7d files/digest-xtermcontrol-2.7 68
+RMD160 fb5ea2b2ff5bcceff7cd718a056ffb19add43a62 files/digest-xtermcontrol-2.7 68
+SHA256 d7546b7b0db3d23410e31922aee926dd45b1f5df0ba9d63ea2e9528280b70993 files/digest-xtermcontrol-2.7 68
+MD5 b4612a600ce6d6c7363b3d2725db5646 files/digest-xtermcontrol-2.8 250
+RMD160 1b3bf4a227d773afaf12b54aa54ccd9530f58682 files/digest-xtermcontrol-2.8 250
+SHA256 500747f09c10ddd8f5a5712721fc8a0285ebdcc5c8d022ac153739ce8dae14d8 files/digest-xtermcontrol-2.8 250
 MD5 75ba9574db9ed6115cb609a8c71bb611 metadata.xml 709
-MD5 a5c9ee897bac1d4cc08d67dbed2c381e xtermcontrol-2.4.ebuild 611
+RMD160 b8ba34db6e8c01a6ccc18385317cd4f359990070 metadata.xml 709
+SHA256 91a57ec09c65c3ed27694619ded32fae2601a741e2eeea1b73efa98cdfd8dfe3 metadata.xml 709
 MD5 c6cc65c4b4011aebbc6210886570b9e7 xtermcontrol-2.7.ebuild 573
+RMD160 963b49f1aec0d6ecefc98c98427d19d3b8a1bd97 xtermcontrol-2.7.ebuild 573
+SHA256 981adaff2ea81b69b452e1c3f03a8f672f5f9f9c65081afdaef31611c9345ce3 xtermcontrol-2.7.ebuild 573
+MD5 93b6dd0f1f23e3f7892ce556fbdea356 xtermcontrol-2.8.ebuild 576
+RMD160 0515d6584c56b146954519edff51574891be8f82 xtermcontrol-2.8.ebuild 576
+SHA256 444b29671f6640a4ffb22307120a1b16877a53785c6867ca1a904267c7b12986 xtermcontrol-2.8.ebuild 576
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFECkfCJrHF4yAQTrARAsEgAJ4sqZEXq5jXQtQJXUYS57qoGuQZKQCfepGE
+uO15HGewkUfX104d1FtJg3Q=
+=WEtS
+-----END PGP SIGNATURE-----
