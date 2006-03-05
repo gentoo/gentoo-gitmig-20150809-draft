@@ -1,4 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9986de501625a40dab79490acc895c1f ChangeLog 405
 MD5 745ec93d8d0437158d972d85157e3abf files/digest-vdr-burn-templates-0.0.1 78
 MD5 9e8ac54e7036eaeb61306b648f60610a metadata.xml 436
 MD5 df3d096e9974de7a80a2f6f7a60577a7 vdr-burn-templates-0.0.1.ebuild 635
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEC1RHdn07HTTCgIoRAt2oAJ0cKUXLNjf1hBnEVVYgLz/Jgj7mTwCgqmj3
+BM4NGxDxfsk/nFyRveBOIFg=
+=awzw
+-----END PGP SIGNATURE-----

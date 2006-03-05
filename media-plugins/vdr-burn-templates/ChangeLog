@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-burn-templates
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn-templates/ChangeLog,v 1.1 2006/03/05 21:12:21 hd_brummy Exp $
+
+*vdr-burn-templates-0.0.1 (05 Mar 2006)
+
+  05 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
+  +vdr-burn-templates-0.0.1.ebuild:
+  initial import
+
