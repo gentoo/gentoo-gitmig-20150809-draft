@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060302.ebuild,v 1.3 2006/03/04 06:58:43 lu_zero Exp $
+# $Header:
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -12,7 +12,9 @@ S_BASE=${WORKDIR}/${MY_P}
 S_STATIC=${S_BASE}-static
 S_SHARED=${S_BASE}-shared
 
-SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
+SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
+	amr? ( http://www.3gpp.org/ftp/Specs/archive/26_series/26.104/26104-510.zip
+	       http://www.3gpp.org/ftp/Specs/archive/26_series/26.204/26204-510.zip )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,8 +22,8 @@ SLOT="0"
 # ~ia64 ~arm ~mips ~hppa
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
-IUSE="aac altivec debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss test
-theora threads truetype v4l x264 xvid dts network zlib sdl"
+IUSE="aac altivec amr debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss
+	test theora threads truetype v4l v4l2 x264 xvid dts network zlib sdl"
 
 DEPEND="imlib? ( media-libs/imlib2 )
 	truetype? ( >=media-libs/freetype-2 )
@@ -39,10 +41,28 @@ DEPEND="imlib? ( media-libs/imlib2 )
 	ieee1394? ( =media-libs/libdc1394-1*
 	            sys-libs/libraw1394 )
 	test? ( net-misc/wget )
-	x264? ( media-libs/x264-svn )"
+	x264? ( media-libs/x264-svn )
+	amr? ( app-arch/unzip )"
 
 src_unpack() {
 	unpack ${A} || die
+	cd ${S_BASE}
+
+	# amr (float) support
+	if use amr; then
+		einfo "Including amr wide and narrow band (float) support ... "
+
+		# narrow band codec
+		mkdir ${S_BASE}/libavcodec/amr_float
+		cd ${S_BASE}/libavcodec/amr_float
+		unzip -q ${WORKDIR}/26104-510_ANSI_C_source_code.zip
+
+		# wide band codec
+		mkdir ${S_BASE}/libavcodec/amrwb_float
+		cd ${S_BASE}/libavcodec/amrwb_float
+		unzip -q ${WORKDIR}/26204-510_ANSI-C_source_code.zip
+	fi
+
 	cd ${S_BASE}
 
 	#Append -fomit-frame-pointer to avoid some common issues
@@ -71,7 +91,6 @@ src_unpack() {
 	mv ${S_BASE} ${S_SHARED}
 	cd ${S_SHARED}
 	epatch "${FILESDIR}/ffmpeg-shared-gcc4.1.patch"
-
 }
 
 src_compile() {
@@ -81,11 +100,9 @@ src_compile() {
 
 	local myconf=""
 
-	#disable mmx accelerated code if not requirested, or if PIC is required
+	#disable mmx accelerated code if not requested, or if PIC is required
 	# as the provided asm decidedly is not PIC.
-	if ( ! has_pic && use mmx ) || use amd64; then
-		myconf="${myconf} --enable-mmx"
-	else
+	if ( gcc-specs-pie || ! use mmx ) && ( ! use amd64 ); then
 		myconf="${myconf} --disable-mmx"
 	fi
 
@@ -93,31 +110,44 @@ src_compile() {
 		myconf="${myconf} --enable-memalign-hack"
 	fi
 
-	myconf="${myconf}
-		$(use_enable altivec) \
-		$(use_enable debug) \
-		$(use_enable encode mp3lame) \
-		$(use_enable a52) --disable-a52bin \
-		$(use_enable oss audio-oss) \
-		$(use_enable v4l) \
-		$(use_enable ieee1394 dv1394) $(use_enable ieee1394 dc1394) \
-		$(use_enable threads pthreads) \
-		$(use_enable xvid) \
-		$(use_enable ogg libogg) \
-		$(use_enable vorbis) \
-		$(use_enable theora) \
-		$(use_enable dts) \
-		$(use_enable network) \
-		$(use_enable zlib) \
-		$(use_enable sdl ffplay) \
-		$(use_enable x264) \
-		$(use_enable aac faad) $(use_enable aac faac) --disable-faadbin \
-		--enable-gpl \
-		--enable-pp \
-		--disable-opts"
+	# enabled by default
+	use altivec || myconf="${myconf} --disable-altivec"
+	use debug || myconf="${myconf} --disable-debug"
+	use oss || myconf="${myconf} --disable-audio-oss"
+	use v4l || myconf="${myconf} --disable-v4l"
+	use v4l2 || myconf="${myconf} --disable-v4l2"
+	use ieee1394 || myconf="${myconf} --disable-dv1394"
+	use network || myconf="${myconf} --disable-network"
+	use zlib || myconf="${myconf} --disable-zlib"
+	use sdl || myconf="${myconf} --disable-ffplay"
 
+	myconf="${myconf} --disable-opts"
+
+	# disabled by default
+	use encode && myconf="${myconf} --enable-mp3lame"
+	use a52 && myconf="${myconf} --enable-a52"
+	use ieee1394 && myconf="${myconf} --enable-dc1394"
+	use threads && myconf="${myconf} --enable-pthreads"
+	use xvid && myconf="${myconf} --enable-xvid"
+	use ogg && myconf="${myconf} --enable-libogg"
+	use vorbis && myconf="${myconf} --enable-vorbis"
+	use theora && myconf="${myconf} --enable-theora"
+	use dts && myconf="${myconf} --enable-dts"
+	use x264 && myconf="${myconf} --enable-x264"
+	use aac && myconf="${myconf} --enable-faad --enable-faac"
+	use amr && myconf="${myconf} --enable-amr_nb --enable-amr_wb"
+
+	myconf="${myconf} --enable-gpl --enable-pp"
+	
 	cd ${S_STATIC}
-	econf --disable-shared-pp --disable-shared --enable-static ${myconf} || die "Configure failed"
+	#econf generates configure options unknown to ffmpeg's configure, so configure manually
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--enable-static --disable-shared \
+		${myconf} || die "static failed"
+
+
 	emake CC="$(tc-getCC)" || die "static failed"
 
 	# Specific workarounds for too-few-registers arch...
@@ -125,15 +155,24 @@ src_compile() {
 		filter-flags -fforce-addr -momit-leaf-frame-pointer
 		append-flags -fomit-frame-pointer
 		is-flag -O? || append-flags -O2
-		ewarn ""
-		ewarn "Debug information will be almost useless as the frame pointer is omitted."
-		ewarn "This makes debugging harder, so crashes that has no fixed behavior are"
-		ewarn "difficult to fix. Please have that in mind."
-		ewarn ""
+		if (use debug); then
+			# no need to warn about debug if not using debug flag
+			ewarn ""
+			ewarn "Debug information will be almost useless as the frame pointer is omitted."
+			ewarn "This makes debugging harder, so crashes that has no fixed behavior are"
+			ewarn "difficult to fix. Please have that in mind."
+			ewarn ""
+		fi
 	fi
 
 	cd ${S_SHARED}
-	econf --enable-shared-pp --enable-shared --disable-static ${myconf} || die "Configure failed"
+	#econf generates configure options unknown to ffmpeg's configure, so configure manually
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--disable-static --enable-shared \
+		${myconf} || die "shared failed"
+
 	emake CC="$(tc-getCC)" || die "shared failed"
 }
 

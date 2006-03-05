@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.128 2006/03/04 17:51:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.129 2006/03/05 00:24:52 lu_zero Exp $
+
+  05 Mar 2006; Luca Barbato <lu_zero@gentoo.org>
+  ffmpeg-0.4.9_p20060302.ebuild:
+  Improved ebuild with amr and v4l2 support, thanks to Philip Kovacs
+  <kovacsp3@comcast.net> for the improved ebuild, other minor fixes
 
   04 Mar 2006; Luca Barbato <lu_zero@gentoo.org>
   files/ffmpeg-shared-gcc4.1.patch:
