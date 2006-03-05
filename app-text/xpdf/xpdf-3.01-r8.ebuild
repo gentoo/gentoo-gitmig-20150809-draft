@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r8.ebuild,v 1.1 2006/03/04 11:28:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r8.ebuild,v 1.2 2006/03/05 17:16:34 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,12 +30,6 @@ src_unpack() {
 	cd "${S}"
 	use nodrm && epatch "${FILESDIR}"/${P}-poppler-nodrm.patch
 	epatch "${FILESDIR}"/${P}-poppler-0.5.1.patch
-}
-
-src_compile() {
-	# broken, see bug 124179
-	replace-flags -Os -O2
-	emake || die "emake failed"
 }
 
 src_install() {

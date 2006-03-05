@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.137 2006/03/04 11:28:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.138 2006/03/05 17:16:34 genstef Exp $
+
+  05 Mar 2006; Stefan Schweizer <genstef@gentoo.org> xpdf-3.01-r7.ebuild,
+  xpdf-3.01-r8.ebuild:
+  -Os is not brokwn, bug 124179
 
 *xpdf-3.01-r8 (04 Mar 2006)
 
