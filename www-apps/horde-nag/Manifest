@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8c3ae8e16c747aeb4158d684a229d838 ChangeLog 1763
+RMD160 53b2cad87e8adc2d50ea8ea7fe310abf6b2590e4 ChangeLog 1763
+SHA256 bfc9b1c8cb8ccf1fb974cabd9ec1ffa90f4d9a336366a0e022151f706e3700c6 ChangeLog 1763
 MD5 66abde609e86dcbe7c35aab0cbb19ac7 files/digest-horde-nag-1.1.3 61
+RMD160 fc9b59db424c98a284e1c178662e147de64cc492 files/digest-horde-nag-1.1.3 61
+SHA256 0d99e17d8a36da6b5474de7aac5a8a3f0de6135ad9dbb72c7a4c18117248f33c files/digest-horde-nag-1.1.3 61
 MD5 688597260465d44a164c488b71608cfe files/digest-horde-nag-2.0.3 65
+RMD160 0e5e5efde5da82c27de64cf400daea8dc56d3a6d files/digest-horde-nag-2.0.3 65
+SHA256 c576a1e9715a427da6a3fcbdb11feed71e994a702a857b0f0a27d0199ca1da00 files/digest-horde-nag-2.0.3 65
 MD5 f7471181ee592d117fa2a796aadc49e6 files/digest-horde-nag-2.0.4 65
+RMD160 fe9a768e05bcf4fa5bcc9f759a49f17bc3b103e1 files/digest-horde-nag-2.0.4 65
+SHA256 0b26312f18265a731cf4378e924ce38389ca123b383890ad445dbbc8aadb66ba files/digest-horde-nag-2.0.4 65
 MD5 351685ba89f1629a6beceb1465731fea horde-nag-1.1.3.ebuild 434
+RMD160 fe445001b5f4539e2cf7979f9afad55fdf1be5b8 horde-nag-1.1.3.ebuild 434
+SHA256 8adabfd0322114a743365d6abc4385b6ed2bec9d2282b8961b72c0848abe909c horde-nag-1.1.3.ebuild 434
 MD5 2ddd318c4d13fccdef1cef6c22c06c07 horde-nag-2.0.3.ebuild 452
-MD5 0c30e903e6e6bca18b3b1b96f4f26bab horde-nag-2.0.4.ebuild 452
+RMD160 dfe8773d09d4b7b7737e7464687d5beebb871f5a horde-nag-2.0.3.ebuild 452
+SHA256 b212a79594baa338a608615ac90fe4b6e1cd1e8ce8eb50c2721299dc4561f57f horde-nag-2.0.3.ebuild 452
+MD5 ba63b6965984ec9953642fb1f2145a55 horde-nag-2.0.4.ebuild 459
+RMD160 c477e1a60c564da9bedcc7fa3b1234e17a1c8c57 horde-nag-2.0.4.ebuild 459
+SHA256 49460f7a0db3c2f8f8d5c8cad375e3d1fa97d0d3a94ddfc3676798b30ba06ea8 horde-nag-2.0.4.ebuild 459
 MD5 6d4c399f10b562f26c52f03f47275f66 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnNMQgIKl8Uu19MoRAgtbAJ4w83U57Se4YmruQ35HTvdJoFfIHgCdGn2R
-aQOJ3VtppAoYqsH0MAFWvAM=
-=5nbf
------END PGP SIGNATURE-----
+RMD160 b951ffc4e4475c25fa44edb437bc600b243f655d metadata.xml 305
+SHA256 f1c7f3f72278fb55a940d74e47a5c0cb20acbcd2efb2a4310d4544b0df61d471 metadata.xml 305
