@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.4.eclass,v 1.9 2005/12/31 13:59:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.4.eclass,v 1.10 2006/03/05 15:43:40 stuart Exp $
 #
 # eclass for handling the different nxserver binaries available
 # from nomachine's website
@@ -37,16 +37,16 @@ DESCRIPTION="an X11/RDP/VNC proxy server especially well suited to low bandwidth
 
 EXPORT_FUNCTIONS pkg_setup src_compile src_install pkg_postinst
 
-nxserver_pkg_setup() {
+nxserver-1.4_pkg_setup() {
 	einfo "Adding user 'nx' for the NX server"
 	enewuser nx -1 -1 /usr/NX/home/nx
 }
 
-nxserver_src_compile() {
+nxserver-1.4_src_compile() {
 	return;
 }
 
-nxserver_src_install() {
+nxserver-1.4_src_install() {
 	einfo "Installing"
 	find usr/NX/lib -type l -exec rm {} \;
 
@@ -81,7 +81,7 @@ nxserver_src_install() {
 	doins ${FILESDIR}/1.3.0/50nxserver
 }
 
-nxserver_pkg_postinst() {
+nxserver-1.4_pkg_postinst() {
 
 	# arg - the 'nx' user's home directory keeps moving
 	#
