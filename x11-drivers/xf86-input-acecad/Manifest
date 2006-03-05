@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3b2dc151b1877a9788ca779bd73d054 ChangeLog 2112
-RMD160 9dac0e23a87c4377370267477ecef750d83712c9 ChangeLog 2112
-SHA256 6ca5cdb354828f7b3e4114386aacce99be58f4d7360a120030fd0e9fbed50c8f ChangeLog 2112
+MD5 1403071d409526fb7e346e8a2af4dda2 ChangeLog 2232
+RMD160 338f0ee4610be8df839d3541b8f68a1090af8a08 ChangeLog 2232
+SHA256 31edabbe432ca599e50a13a63357c49f5d08ae318b7a3697659d617796552801 ChangeLog 2232
 MD5 92a3f1989e6d0955f8c6edddd3ab17c3 files/digest-xf86-input-acecad-1.0.0.5 148
 RMD160 6297a657aebd85701098623c036c27f7659ec9a0 files/digest-xf86-input-acecad-1.0.0.5 148
 SHA256 8d044fbe9bfe622bc336719495813df755ea7908110787d0573da4c0a7e91a7a files/digest-xf86-input-acecad-1.0.0.5 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 b1989525ee0adef493ca169498cc0284 xf86-input-acecad-1.0.0.5.ebuild 543
-RMD160 9a19b125e26c057acf09312dbfa11eb9fc960b05 xf86-input-acecad-1.0.0.5.ebuild 543
-SHA256 ebc18d0f95a9037a216bd60fe5de65da0c2ce2bdca9f65eb87cbe83b130d897c xf86-input-acecad-1.0.0.5.ebuild 543
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6g72+ySkm8kpY0RAp0zAKCPM7H15+fTpdg5yL5+Wn/jg6gIwACgrkQY
-VoBV06dD8Ei4My7JEs49cEQ=
-=v+lY
------END PGP SIGNATURE-----
+MD5 a57b2ffbb4955dbacbc20d911cf8bf7e xf86-input-acecad-1.0.0.5.ebuild 551
+RMD160 b4adf5b7bafabcb1f2c5a5406b93c45293815c6c xf86-input-acecad-1.0.0.5.ebuild 551
+SHA256 9e55f085b5acd015713d16ca2ce4764487f7863274f3b153f8ffa68ce0ccfaa7 xf86-input-acecad-1.0.0.5.ebuild 551
