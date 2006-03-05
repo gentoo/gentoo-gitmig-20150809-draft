@@ -140,14 +140,14 @@ diff -urN openssh-4.3p1.orig/configure.ac openssh-4.3p1/configure.ac
 diff -urN openssh-4.3p1.orig/monitor.c openssh-4.3p1/monitor.c
 --- openssh-4.3p1.orig/monitor.c	2005-11-04 23:07:05.000000000 -0500
 +++ openssh-4.3p1/monitor.c	2006-02-26 22:43:35.086150350 -0500
-@@ -111,6 +111,7 @@
- int mm_answer_pwnamallow(int, Buffer *);
- int mm_answer_auth2_read_banner(int, Buffer *);
- int mm_answer_authserv(int, Buffer *);
-+int mm_answer_authrole(int, Buffer *);
+@@ -115,6 +115,7 @@
  int mm_answer_authpassword(int, Buffer *);
  int mm_answer_bsdauthquery(int, Buffer *);
  int mm_answer_bsdauthrespond(int, Buffer *);
++int mm_answer_authrole(int, Buffer *);
+ int mm_answer_skeyquery(int, Buffer *);
+ int mm_answer_skeyrespond(int, Buffer *);
+ int mm_answer_keyallowed(int, Buffer *);
 @@ -181,6 +182,7 @@
      {MONITOR_REQ_SIGN, MON_ONCE, mm_answer_sign},
      {MONITOR_REQ_PWNAM, MON_ONCE, mm_answer_pwnamallow},
