@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Slurp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.18 2006/03/05 00:36:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.19 2006/03/05 07:12:41 tsunam Exp $
+
+  05 Mar 2006; Joshua Jackson <tsunam@gentoo.org> File-Slurp-9999.11.ebuild:
+  stable on x86; bug #124854
 
   05 Mar 2006; Jason Wever <weeve@gentoo.org> File-Slurp-9999.11.ebuild:
   Stable on SPARC wrt bug #124854.
