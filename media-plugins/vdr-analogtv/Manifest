@@ -1,0 +1,34 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c1b73dbfe00caf12726b5e34d13703ef ChangeLog 570
+RMD160 e01bb63f370b0913bd14d3111187ceda9c95d2b4 ChangeLog 570
+SHA256 3ba12694c3cd502d6e2ebd40ca02f39d6343421baf3190ab05edb3e69806188d ChangeLog 570
+MD5 a3a2bb500ad9c5636353dd16ddd7584a files/digest-vdr-analogtv-0.9.37 765
+RMD160 7ce1c2065f09de581e73ec6ffe9a4efa7ddadb01 files/digest-vdr-analogtv-0.9.37 765
+SHA256 a7e1944c5b68e2704f4ff09b4a3d513c475bea9a32cee358d0e737996866f81d files/digest-vdr-analogtv-0.9.37 765
+MD5 aadc269e760f01aca9684087026c7a18 files/vdr-analogtv-0.9.37-asm-fpic.diff 2720
+RMD160 d724da30a6f1a23f5c804b2fe83c72b6fc485034 files/vdr-analogtv-0.9.37-asm-fpic.diff 2720
+SHA256 7a79a4f7b0106681f94e0909e86dc1696aedc0c2e0b5ee7aed9b55d3dd5f7915 files/vdr-analogtv-0.9.37-asm-fpic.diff 2720
+MD5 6266d1cd92dd7a446cd70c92c22af9d5 files/vdr-analogtv-0.9.37-gcc-3.4.diff 2586
+RMD160 7599d040c5e3c5ab3394ab6bc0d52fab34cfa055 files/vdr-analogtv-0.9.37-gcc-3.4.diff 2586
+SHA256 3428b60d695aff4b3ef725b11f959beb1ebb11b1a38c1a2454753d72c16b7dff files/vdr-analogtv-0.9.37-gcc-3.4.diff 2586
+MD5 a9c0ced3696620529db50b5168b434bf files/vdr-analogtv-0.9.37-includes.diff 319
+RMD160 a2a37619632b11421d6e88ff92b3e45c61805e45 files/vdr-analogtv-0.9.37-includes.diff 319
+SHA256 2ab9547310066b878a8953b72c7106349511943f0bfb48fb782e2953b432e33c files/vdr-analogtv-0.9.37-includes.diff 319
+MD5 ba8f685344a8d264fc7ed5dbf3ad9d94 files/vdr-analogtv-0.9.37-kpes_to_ts.patch 697
+RMD160 88004b1c86715ffc0621677de659e9f92281343b files/vdr-analogtv-0.9.37-kpes_to_ts.patch 697
+SHA256 6509f51e531f2a3dd29283117184e2278e529d97e6896747897f36aeef2b1498 files/vdr-analogtv-0.9.37-kpes_to_ts.patch 697
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 cd8d4ef9bf0a348a476955db69a1bc17 vdr-analogtv-0.9.37.ebuild 1379
+RMD160 c8f89aed063134290bb535af2d231784c7d249a5 vdr-analogtv-0.9.37.ebuild 1379
+SHA256 53dbae9dab61beadcdb681348f21b18fe464b0a517b0c4caf1e0b916ff0590aa vdr-analogtv-0.9.37.ebuild 1379
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFECtUKZfSl1Kp5KmoRAgBLAKDnFfYPUX39hdIVjD+D+V6ME3UBYwCeIFzo
+6dMkJBL71w3dQvkwwiH0xrM=
+=Jy+v
+-----END PGP SIGNATURE-----
