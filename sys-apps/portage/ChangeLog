@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.87 2006/03/05 02:46:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.88 2006/03/05 23:28:35 zmedico Exp $
+
+  05 Mar 2006; Zac Medico <zmedico@gentoo.org> portage-2.1_pre5-r4.ebuild:
+  Readded keywords for ~mips and ~s390 since both have pycrypto in ~arch for
+  bug #120716.
 
 *portage-2.1_pre5-r4 (04 Mar 2006)
 
