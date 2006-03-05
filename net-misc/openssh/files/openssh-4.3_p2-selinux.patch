@@ -1,6 +1,5 @@
-diff -urN openssh-4.3p1.orig/Makefile.in openssh-4.3p1/Makefile.in
---- openssh-4.3p1.orig/Makefile.in	2006-01-01 03:47:05.000000000 -0500
-+++ openssh-4.3p1/Makefile.in	2006-02-26 22:43:35.093149679 -0500
+--- openssh-4.3p1/Makefile.in
++++ openssh-4.3p1/Makefile.in
 @@ -43,6 +43,7 @@
  CFLAGS=@CFLAGS@
  CPPFLAGS=-I. -I$(srcdir) @CPPFLAGS@ $(PATHS) @DEFS@
@@ -27,9 +26,8 @@ diff -urN openssh-4.3p1.orig/Makefile.in openssh-4.3p1/Makefile.in
  
  scp$(EXEEXT): $(LIBCOMPAT) libssh.a scp.o progressmeter.o
  	$(LD) -o $@ scp.o progressmeter.o bufaux.o $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
-diff -urN openssh-4.3p1.orig/auth.h openssh-4.3p1/auth.h
---- openssh-4.3p1.orig/auth.h	2005-07-06 21:50:20.000000000 -0400
-+++ openssh-4.3p1/auth.h	2006-02-26 22:43:35.174141912 -0500
+--- openssh-4.3p1/auth.h
++++ openssh-4.3p1/auth.h
 @@ -58,6 +58,7 @@
  	char		*service;
  	struct passwd	*pw;		/* set if 'valid' */
@@ -38,9 +36,8 @@ diff -urN openssh-4.3p1.orig/auth.h openssh-4.3p1/auth.h
  	void		*kbdintctxt;
  #ifdef BSD_AUTH
  	auth_session_t	*as;
-diff -urN openssh-4.3p1.orig/auth1.c openssh-4.3p1/auth1.c
---- openssh-4.3p1.orig/auth1.c	2005-07-17 03:26:44.000000000 -0400
-+++ openssh-4.3p1/auth1.c	2006-02-26 22:43:35.099149104 -0500
+--- openssh-4.3p1/auth1.c
++++ openssh-4.3p1/auth1.c
 @@ -370,7 +370,7 @@
  do_authentication(Authctxt *authctxt)
  {
@@ -70,9 +67,8 @@ diff -urN openssh-4.3p1.orig/auth1.c openssh-4.3p1/auth1.c
  
  	/* Verify that the user is a valid user. */
  	if ((authctxt->pw = PRIVSEP(getpwnamallow(user))) != NULL)
-diff -urN openssh-4.3p1.orig/auth2.c openssh-4.3p1/auth2.c
---- openssh-4.3p1.orig/auth2.c	2005-09-23 22:43:51.000000000 -0400
-+++ openssh-4.3p1/auth2.c	2006-02-26 22:43:35.096149391 -0500
+--- openssh-4.3p1/auth2.c
++++ openssh-4.3p1/auth2.c
 @@ -134,7 +134,7 @@
  {
  	Authctxt *authctxt = ctxt;
@@ -105,9 +101,8 @@ diff -urN openssh-4.3p1.orig/auth2.c openssh-4.3p1/auth2.c
  	} else if (strcmp(user, authctxt->user) != 0 ||
  	    strcmp(service, authctxt->service) != 0) {
  		packet_disconnect("Change of username or service not allowed: "
-diff -urN openssh-4.3p1.orig/configure.ac openssh-4.3p1/configure.ac
---- openssh-4.3p1.orig/configure.ac	2006-01-29 08:22:39.000000000 -0500
-+++ openssh-4.3p1/configure.ac	2006-02-26 22:43:35.164142871 -0500
+--- openssh-4.3p1/configure.ac
++++ openssh-4.3p1/configure.ac
 @@ -2945,6 +2945,20 @@
  			[#include <arpa/nameser.h>])
  	])
@@ -137,9 +132,8 @@ diff -urN openssh-4.3p1.orig/configure.ac openssh-4.3p1/configure.ac
  echo "                 Smartcard support: $SCARD_MSG"
  echo "                     S/KEY support: $SKEY_MSG"
  echo "              TCP Wrappers support: $TCPW_MSG"
-diff -urN openssh-4.3p1.orig/monitor.c openssh-4.3p1/monitor.c
---- openssh-4.3p1.orig/monitor.c	2005-11-04 23:07:05.000000000 -0500
-+++ openssh-4.3p1/monitor.c	2006-02-26 22:43:35.086150350 -0500
+--- openssh-4.3p1/monitor.c
++++ openssh-4.3p1/monitor.c
 @@ -115,6 +115,7 @@
  int mm_answer_authpassword(int, Buffer *);
  int mm_answer_bsdauthquery(int, Buffer *);
@@ -188,9 +182,8 @@ diff -urN openssh-4.3p1.orig/monitor.c openssh-4.3p1/monitor.c
  mm_answer_authpassword(int sock, Buffer *m)
  {
  	static int call_count;
-diff -urN openssh-4.3p1.orig/monitor.h openssh-4.3p1/monitor.h
---- openssh-4.3p1.orig/monitor.h	2005-02-02 08:20:53.000000000 -0500
-+++ openssh-4.3p1/monitor.h	2006-02-26 22:43:35.081150830 -0500
+--- openssh-4.3p1/monitor.h
++++ openssh-4.3p1/monitor.h
 @@ -30,7 +30,7 @@
  
  enum monitor_reqtype {
@@ -200,9 +193,8 @@ diff -urN openssh-4.3p1.orig/monitor.h openssh-4.3p1/monitor.h
  	MONITOR_REQ_SIGN, MONITOR_ANS_SIGN,
  	MONITOR_REQ_PWNAM, MONITOR_ANS_PWNAM,
  	MONITOR_REQ_AUTH2_READ_BANNER, MONITOR_ANS_AUTH2_READ_BANNER,
-diff -urN openssh-4.3p1.orig/monitor_wrap.c openssh-4.3p1/monitor_wrap.c
---- openssh-4.3p1.orig/monitor_wrap.c	2005-09-29 08:01:10.000000000 -0400
-+++ openssh-4.3p1/monitor_wrap.c	2006-02-26 22:43:35.090149967 -0500
+--- openssh-4.3p1/monitor_wrap.c
++++ openssh-4.3p1/monitor_wrap.c
 @@ -271,6 +271,23 @@
  	buffer_free(&m);
  }
@@ -227,9 +219,8 @@ diff -urN openssh-4.3p1.orig/monitor_wrap.c openssh-4.3p1/monitor_wrap.c
  /* Do the password authentication */
  int
  mm_auth_password(Authctxt *authctxt, char *password)
-diff -urN openssh-4.3p1.orig/monitor_wrap.h openssh-4.3p1/monitor_wrap.h
---- openssh-4.3p1.orig/monitor_wrap.h	2005-02-08 05:52:48.000000000 -0500
-+++ openssh-4.3p1/monitor_wrap.h	2006-02-26 22:43:35.444116023 -0500
+--- openssh-4.3p1/monitor_wrap.h
++++ openssh-4.3p1/monitor_wrap.h
 @@ -44,6 +44,7 @@
  DH *mm_choose_dh(int, int, int);
  int mm_key_sign(Key *, u_char **, u_int *, u_char *, u_int);
@@ -238,9 +229,8 @@ diff -urN openssh-4.3p1.orig/monitor_wrap.h openssh-4.3p1/monitor_wrap.h
  struct passwd *mm_getpwnamallow(const char *);
  char *mm_auth2_read_banner(void);
  int mm_auth_password(struct Authctxt *, char *);
-diff -urN openssh-4.3p1.orig/selinux.c openssh-4.3p1/selinux.c
---- openssh-4.3p1.orig/selinux.c	1969-12-31 19:00:00.000000000 -0500
-+++ openssh-4.3p1/selinux.c	2006-02-26 22:44:55.287459540 -0500
+--- openssh-4.3p1/selinux.c
++++ openssh-4.3p1/selinux.c
 @@ -0,0 +1,86 @@
 +#include "includes.h"
 +#include "auth.h"
@@ -328,18 +318,16 @@ diff -urN openssh-4.3p1.orig/selinux.c openssh-4.3p1/selinux.c
 +inline void setup_selinux_pty(const char *name, const char *tty) {}
 +inline void setup_selinux_exec_context(const char *name) {} 
 +#endif /* WITH_SELINUX */
-diff -urN openssh-4.3p1.orig/selinux.h openssh-4.3p1/selinux.h
---- openssh-4.3p1.orig/selinux.h	1969-12-31 19:00:00.000000000 -0500
-+++ openssh-4.3p1/selinux.h	2006-02-26 22:45:09.627084500 -0500
+--- openssh-4.3p1/selinux.h
++++ openssh-4.3p1/selinux.h
 @@ -0,0 +1,5 @@
 +#ifndef __SELINUX_H_
 +#define __SELINUX_H_
 +extern void setup_selinux_pty(const char *name, const char *tty);
 +extern void setup_selinux_exec_context(const char *name);
 +#endif /* __SELINUX_H_ */
-diff -urN openssh-4.3p1.orig/session.c openssh-4.3p1/session.c
---- openssh-4.3p1.orig/session.c	2005-12-23 22:59:12.000000000 -0500
-+++ openssh-4.3p1/session.c	2006-02-26 22:43:35.171142200 -0500
+--- openssh-4.3p1/session.c
++++ openssh-4.3p1/session.c
 @@ -59,6 +59,8 @@
  #include "kex.h"
  #include "monitor_wrap.h"
@@ -358,9 +346,8 @@ diff -urN openssh-4.3p1.orig/session.c openssh-4.3p1/session.c
  }
  
  static void
-diff -urN openssh-4.3p1.orig/sshpty.c openssh-4.3p1/sshpty.c
---- openssh-4.3p1.orig/sshpty.c	2005-05-27 07:13:41.000000000 -0400
-+++ openssh-4.3p1/sshpty.c	2006-02-26 22:43:35.155143734 -0500
+--- openssh-4.3p1/sshpty.c
++++ openssh-4.3p1/sshpty.c
 @@ -22,6 +22,8 @@
  #include "log.h"
  #include "misc.h"
