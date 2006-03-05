@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.5.0-r1.ebuild,v 1.1 2005/12/15 17:29:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.5.0-r1.ebuild,v 1.2 2006/03/05 14:29:13 stuart Exp $
 
 inherit eutils multilib
 
@@ -25,6 +25,7 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/nxcomp-1.5.0-r1-pic.patch
+	epatch ${FILESDIR}/nxcomp-1.5.0-r1-gcc4.patch
 }
 
 src_compile() {
