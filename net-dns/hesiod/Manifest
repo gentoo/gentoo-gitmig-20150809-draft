@@ -1,9 +1,37 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b3ffb5cf36cb72637ef233490ab0cb68 ChangeLog 2839
+RMD160 0c34302f7e1dd2d8f13ecae7e0e0034e4822a262 ChangeLog 2839
+SHA256 901556fc40fe1d33740a8ce7538c08ed98617f3f725d00f2ced81ba355f0a27c ChangeLog 2839
 MD5 6730c597da6926a28d780afaf5c0109d files/digest-hesiod-3.0.2 63
+RMD160 7e6e4db11ad87f8dabe00976c8cc6c1db99676c7 files/digest-hesiod-3.0.2 63
+SHA256 624909032e21ad1d75d1d8c39bcafb031b588997b2e6125d558083fcfdebf3ee files/digest-hesiod-3.0.2 63
 MD5 6730c597da6926a28d780afaf5c0109d files/digest-hesiod-3.0.2-r1 63
+RMD160 7e6e4db11ad87f8dabe00976c8cc6c1db99676c7 files/digest-hesiod-3.0.2-r1 63
+SHA256 624909032e21ad1d75d1d8c39bcafb031b588997b2e6125d558083fcfdebf3ee files/digest-hesiod-3.0.2-r1 63
 MD5 f7cf5631651df4137ae6d25e3641160e files/hesiod-3.0.2-env.patch 896
+RMD160 a71acc25dc66afd84f760454e8dd2225b2bc0794 files/hesiod-3.0.2-env.patch 896
+SHA256 a88bda3f711e041252a5e5488779db6019b5d53ecbd8404a95fa001bee10f670 files/hesiod-3.0.2-env.patch 896
 MD5 11b61fd03b2aec33a43ac3504090a5de files/hesiod-3.0.2-redhat.patch 6867
+RMD160 7dc751bef1afe0f8ed1810883af94bce61bb1d54 files/hesiod-3.0.2-redhat.patch 6867
+SHA256 db20848b4c74f30ac3a7b00c7fc2e1e16849d0fde40948be8b564841bb91041f files/hesiod-3.0.2-redhat.patch 6867
 MD5 ab2c3c431e03ef4d4fb4582e5f8579a2 files/hesiod-3.0.2-shlib.patch 1767
+RMD160 2cea87a1010d9bbebe222b4a410eb216d4b206b3 files/hesiod-3.0.2-shlib.patch 1767
+SHA256 18c7ac36502ee614855cb624fb94b9757ba4c90658c8d2921d8a5c45abca7890 files/hesiod-3.0.2-shlib.patch 1767
 MD5 30c1105fc1f037d97d0dfae4f4f0e065 files/hesiod-3.0.2-str.patch 2039
-MD5 bb08b5ac38188749354a3abeaf076e09 hesiod-3.0.2-r1.ebuild 1304
+RMD160 6b6b38779dbf37bbb9b742a04a636883468f3894 files/hesiod-3.0.2-str.patch 2039
+SHA256 0f67ee1c6626e11bd863290328058d6aec3df6a8ff964b8ad64dd9c2c7a4c9bb files/hesiod-3.0.2-str.patch 2039
+MD5 039f9839443a8d367ac9fb3d7f7966fd hesiod-3.0.2-r1.ebuild 1307
+RMD160 d96a4c6addd4cec4cc18885ccf6937fb9f7c5f30 hesiod-3.0.2-r1.ebuild 1307
+SHA256 6bb5d360ec9ffecf96e4dcc5fc79e3347dd57d99c45ba355cd2e3a02bdbcb876 hesiod-3.0.2-r1.ebuild 1307
 MD5 c2560b4653b2ee5b141e8e67138885d1 hesiod-3.0.2.ebuild 1570
+RMD160 ad25b810e43e9ffdbb341c3e5673210e35404ae6 hesiod-3.0.2.ebuild 1570
+SHA256 c8ab5f2748b3ab8383b97907e4a5216444595b7023813e531784c0d3c2987b90 hesiod-3.0.2.ebuild 1570
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFECmJY2+ySkm8kpY0RAnZmAJ9gWINuX/9QO332h7Ga5Ry6A8Wa6gCfR00l
+NXwbAQCD39LWREdNuoiNMTo=
+=KC+G
+-----END PGP SIGNATURE-----
