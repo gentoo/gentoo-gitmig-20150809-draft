@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.82 2006/03/05 15:30:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.83 2006/03/05 16:19:20 blubb Exp $
+
+  05 Mar 2006; Simon Stelling <blubb@gentoo.org> kpdf-3.5.1-r2.ebuild:
+  <Flameeyes> blubb, please revert kpdf and remove the patch from distfiles
+  local, i'll try to prepare a newer patch
 
   05 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> kpdf-3.5.1-r2.ebuild:
   Add (conditional) patch to build against poppler 0.5.1. Closes bug #124881.
