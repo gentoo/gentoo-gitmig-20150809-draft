@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/vdr-burn
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.1 2006/03/05 21:01:00 hd_brummy Exp $
+
+*vdr-burn-0.0.9-r2 (05 Mar 2006)
+
+  05 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-burn-0.0.9-gentoo.diff, +files/confd, +files/rc-addon.sh,
+  +files/reccmds.burn.conf, +metadata.xml, +vdr-burn-0.0.9-r2.ebuild:
+  import ebuild from gentoo.de cvs, rewritten
+

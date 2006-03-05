@@ -1,0 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2a34b730f7307ad1775db23e06165d4b ChangeLog 497
+MD5 f6f8b3ec53d3e84c03fc0656d97e3596 files/confd 1546
+MD5 d0dd077979b3a526760828fcf25fbd4e files/digest-vdr-burn-0.0.9-r2 65
+MD5 8a236a29a651ac8a7fa8b355275ec1ca files/rc-addon.sh 762
+MD5 4b9cd5bebdcfd5696d066bf30595978f files/reccmds.burn.conf 1325
+MD5 c8d63e7933a3dcb5b6e95929649a1e6d files/vdr-burn-0.0.9-gentoo.diff 2223
+MD5 55b1019701089e0f02884b2c57055e99 metadata.xml 457
+MD5 744fb88b0e9a42a20a3de9b427bd98b7 vdr-burn-0.0.9-r2.ebuild 1470
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEC1Gbdn07HTTCgIoRArfSAJ9O7wHn+hy36LpicBM7gG5/HHwaWACgq9Nq
+s9+llxPBx3LYPrul7MSR6fU=
+=I8KM
+-----END PGP SIGNATURE-----
