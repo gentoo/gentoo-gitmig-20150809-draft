@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.49 2006/02/21 14:15:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.50 2006/03/05 22:02:00 flameeyes Exp $
+
+*kopete-3.5.1-r1 (05 Mar 2006)
+
+  05 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kopete-3.5.x-msn-filetransfer.patch, +kopete-3.5.1-r1.ebuild:
+  Add patch from upstream to fix MSN filetransfer bug.
 
   21 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> kopete-3.4.1.ebuild,
   kopete-3.4.1-r1.ebuild, kopete-3.4.2.ebuild, kopete-3.4.3.ebuild,
