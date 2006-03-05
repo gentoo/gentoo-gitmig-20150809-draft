@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nx-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.11 2006/01/11 04:41:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.12 2006/03/05 13:21:33 stuart Exp $
+
+*nx-x11-1.5.0-r5 (05 Mar 2006)
+
+  05 Mar 2006; Stuart Herbert <stuart@gentoo.org> +files/1.5.0/50nx-x11,
+  +files/1.5.0/nx-x11-windows-linux-resume.patch, +nx-x11-1.5.0-r5.ebuild:
+  Version bump; thanks to Jon <scruggsj@sbcglobal.net>; see bug #101691
 
   11 Jan 2006; Jason Wever <weeve@gentoo.org> nx-x11-1.4.0-r4.ebuild:
   Added ~sparc keyword wrt bug #117825.
