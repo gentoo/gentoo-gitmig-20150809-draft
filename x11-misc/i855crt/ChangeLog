@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/i855crt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i855crt/ChangeLog,v 1.1 2006/03/03 10:47:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i855crt/ChangeLog,v 1.2 2006/03/05 10:42:57 blubb Exp $
+
+  05 Mar 2006; Simon Stelling <blubb@gentoo.org> i855crt-0.4.ebuild:
+  remove unneeded src_compile
 
 *i855crt-0.4 (03 Mar 2006)
 
