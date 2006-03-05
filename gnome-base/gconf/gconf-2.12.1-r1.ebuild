@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.12.1-r1.ebuild,v 1.2 2006/03/04 18:21:36 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.12.1-r1.ebuild,v 1.3 2006/03/05 05:52:01 compnerd Exp $
 
 inherit gnome2 eutils
 
@@ -45,7 +45,7 @@ src_unpack() {
 	cd ${S}
 
 	# Patch to prevent stomping of the last character (bug #120398)
-	epatch ${FILESIDR}/gconf-2.12.1-gconf_unescape_key.patch
+	epatch ${FILESDIR}/gconf-2.12.1-gconf_unescape_key.patch
 }
 
 src_install() {
