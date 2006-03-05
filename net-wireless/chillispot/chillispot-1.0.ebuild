@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-1.0.ebuild,v 1.2 2006/03/02 20:35:14 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-1.0.ebuild,v 1.3 2006/03/05 11:42:38 solar Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -32,4 +32,9 @@ src_compile() {
 src_install() {
 	einstall || die "einstall failed"
 	cd doc && dodoc chilli.conf freeradius.users hotspotlogin.cgi firewall.iptables
+
+	# init script provided by Michele Beltrame bug #124698
+	dodir /etc/init.d
+	exeinto /etc/init.d
+	newexe "${FILESDIR}"/${PN} ${PN}
 }
