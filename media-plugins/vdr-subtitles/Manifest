@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 95e297fce77765fa883f36e35d495044 ChangeLog 608
 RMD160 2b5bb979453bb5b0cd987956e07dd9565ad3a0ea ChangeLog 608
 SHA256 ee9ae74a42c0f1801c9d8e1454c995152af05abdead0309e6a706410ab5b533a ChangeLog 608
@@ -10,3 +13,10 @@ SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata
 MD5 108932155a0fce7cba7cee838214655c vdr-subtitles-0.3.10.ebuild 836
 RMD160 f0a0d2fcbcba030a742e86b471bbe7a8a87515f5 vdr-subtitles-0.3.10.ebuild 836
 SHA256 0f1477fb1ef8241959aaa95817a80215ed02330d78a468ad1b4bda22d51a9708 vdr-subtitles-0.3.10.ebuild 836
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFECszQZfSl1Kp5KmoRAg1ZAKDrzrpxqhy8KxWBBb8IZ/QsI04e5ACeMdwr
+hOS/ttPOIjsSnp+tuQrM73s=
+=cyei
+-----END PGP SIGNATURE-----

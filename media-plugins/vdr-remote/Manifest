@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 87c85de9975249f3a7a4f0ccd46c905c ChangeLog 516
 RMD160 44acc02f29baf09747866f01fe14032b9b0e8efd ChangeLog 516
 SHA256 c8521ace1af5be68f3effcdf132b2b333aca0502ba1d0f2440536897b62ae1c0 ChangeLog 516
@@ -16,3 +19,10 @@ SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata
 MD5 b208d4c6cb188611bd5b4deda0a5a233 vdr-remote-0.3.6.ebuild 495
 RMD160 2537f3c5ca4a9190a2fdca2f8f8ec0df830c7476 vdr-remote-0.3.6.ebuild 495
 SHA256 6e79523e2736d5bdadb73373ee3d46b00f3dd410d8cad6bd7e0c9c9156d8166c vdr-remote-0.3.6.ebuild 495
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFECsyrZfSl1Kp5KmoRAgIcAJ0XHQYhaYb2U10r2rtrzNantQ9tIACgxDd8
+bFWQUXZ3D+6M+FwJRx+IOfQ=
+=n3lE
+-----END PGP SIGNATURE-----
