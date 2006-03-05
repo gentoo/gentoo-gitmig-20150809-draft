@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.1-r2.ebuild,v 1.3 2006/02/05 12:29:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.1-r2.ebuild,v 1.4 2006/03/05 15:30:40 flameeyes Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -18,7 +18,8 @@ DEPEND=">=media-libs/freetype-2.0.5
 	>=app-text/poppler-bindings-0.5.0"
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/${P}-poppler-2.patch.bz2"
+	mirror://gentoo/${P}-poppler-2.patch.bz2
+	mirror://gentoo/${P}-poppler-0.5.1.patch.bz2"
 
 PATCHES="${FILESDIR}/${P}-saveas.patch
 	${DISTDIR}/${P}-poppler-2.patch.bz2"
@@ -29,6 +30,14 @@ pkg_setup() {
 		eerror "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
 		die "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
 	fi
+}
+
+src_unpack() {
+	kde-meta_src_unpack
+
+	# Lovely when libraries changes API in micro releases.
+	has_version ">=app-text/poppler-0.5.1" && \
+		epatch "${DISTDIR}/${P}-poppler-0.5.1.patch.bz2"
 }
 
 src_compile() {
