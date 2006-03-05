@@ -1,6 +1,31 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ecc6d63f4aa2e5bb20c0d6575ab7245e ChangeLog 1046
+RMD160 4463ab4a7a1afa674f3f7133caabac99d10ae97c ChangeLog 1046
+SHA256 8cbeaf9d73acca0d3d727cb6fe3725719b353e55ed0752da01fb5d173c371c6c ChangeLog 1046
 MD5 ae4e57adb8abb6ceb9f5f4eeea55a492 camorama-0.16.ebuild 655
-MD5 6c09e582882781b8e5e951830cc70bf9 metadata.xml 224
-MD5 372798ecf44adec6103371e49efe2993 ChangeLog 842
-MD5 740eb120a1cc41f836f1a3af18000a1c camorama-0.17.ebuild 669
+RMD160 fd4c8652bd915d715dde846378b36037e29316a2 camorama-0.16.ebuild 655
+SHA256 c33c8fd270689a921ceec45319bd200e5139ed64d6bc4572b19009a1e0edd2b2 camorama-0.16.ebuild 655
+MD5 4dff07fecf419c3c00f94c1b837ffb55 camorama-0.17.ebuild 755
+RMD160 6fd324b14b5c2e38da1e5e85b63d5950282c7f5c camorama-0.17.ebuild 755
+SHA256 a453f683ad7553644a50fee6d5f0d43d695a85f50e8ff9d4829e4b9fbc1e97ca camorama-0.17.ebuild 755
+MD5 e9d680565938d2919fb05e42e9fc1a91 files/0.17-gcc4.patch 986
+RMD160 4dd6a0874cee6972d31b3250df14d6bd9a6acde1 files/0.17-gcc4.patch 986
+SHA256 6ef4fbf011050b1c9b295079dafc36dffb8ab1437c099b710b509549e7b4ac0a files/0.17-gcc4.patch 986
 MD5 728eb1852fda23d5f256ad3407321e20 files/digest-camorama-0.16 65
+RMD160 b3e455b6dfee113dbdf7eb521e8309fbdb45963e files/digest-camorama-0.16 65
+SHA256 5458a6d82a5946c6dff57003f415a20328163577b5d5012bfe6fe0a2a360c22e files/digest-camorama-0.16 65
 MD5 9a2c7e8eab2e03086ac2a287651ae019 files/digest-camorama-0.17 66
+RMD160 d8c4887eea7b65411b3842845d7b9c9836d2aef8 files/digest-camorama-0.17 66
+SHA256 7937cb39100c7ce7fd3714150a663ad2a7c5f5ec7c76b75442ef126517a88faa files/digest-camorama-0.17 66
+MD5 6c09e582882781b8e5e951830cc70bf9 metadata.xml 224
+RMD160 a894a47c3ba494f6e918fe6ebc70da6877385457 metadata.xml 224
+SHA256 888efa552a0159d0de6ea80ae3d38ab453c12fcc62a0ede08e26ddc35fc1ed2d metadata.xml 224
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEC2rhp5vW4rUFj5oRArzmAJ4qGiwfcZCHexr08BIUFTahAhMoDwCfZSYF
+Gne+cucJTHZlqyCqK3cs560=
+=ktr3
+-----END PGP SIGNATURE-----
