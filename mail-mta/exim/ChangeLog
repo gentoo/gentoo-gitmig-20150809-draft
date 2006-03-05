@@ -1,6 +1,21 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.62 2006/02/20 16:58:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.63 2006/03/05 22:46:30 peitolm Exp $
+
+*exim-4.60-r1 (05 Mar 2006)
+
+  05 Mar 2006; Colin Morey <peitolm@gentoo.org>
+  -files/exim-4.33-r1-header-syntax.patch,
+  -files/exim-4.43-r2-host_aton-buff.patch, 
+  Second stage, removal of old patches.
+
+  05 Mar 2006; Colin Morey <peitolm@gentoo.org> -exim-4.43-r2.ebuild,
+  -exim-4.50-r1.ebuild, -exim-4.50-r2.ebuild, -exim-4.50.ebuild,
+  -exim-4.52.ebuild, +exim-4.60-r1.ebuild:
+  First stage of general tidy-up, getting rid of old versions of the ebuild
+  New version fixes #120229 (wrong processing of sqlite flag),
+  #100369 (exiscan move to mirrors), #120459 (exim has a large FILESDIR)
+  #110234 (Add support for AUTH_CYRUS_SASL)
 
   20 Feb 2006; Markus Rothe <corsair@gentoo.org> exim-4.60.ebuild:
   Stable on ppc64
@@ -93,7 +108,7 @@
   05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> exim-4.50-r1.ebuild:
   Stable on hppa.
 
-  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> exim-4.50-r1.ebuild:
+  02 Jul 2005; Bryan ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂstergaard <kloeri@gentoo.org> exim-4.50-r1.ebuild:
   Add ~alpha keyword.
 
   26 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> exim-4.50-r1.ebuild:
@@ -176,7 +191,7 @@
   exim-4.43.ebuild:
   KEYWORDS ~amd64 to close bug 61163.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> exim-4.42.ebuild:
+  10 Oct 2004; Bryan ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂstergaard <kloeri@gentoo.org> exim-4.42.ebuild:
   Stable on alpha.
 
   08 Oct 2004; Guy Martin <gmsoft@gentoo.org> exim-4.42.ebuild:
@@ -188,7 +203,7 @@
   +exim-4.43.ebuild:
   New Version Bump and Bump of 4.42 to stable.
 
-  04 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> exim-4.42.ebuild:
+  04 Oct 2004; Bryan ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂstergaard <kloeri@gentoo.org> exim-4.42.ebuild:
   Keyword ~alpha.
 
   05 Sep 2004; Guy Martin <gmsoft@gentoo.org> exim-4.41.ebuild,
@@ -275,7 +290,7 @@
   11 May 2004; Guy Martin <gmsoft@gentoo.org> exim-4.34.ebuild:
   Marked stable on hppa.
 
-  11 May 2004; Bryan Østergaard <kloeri@gentoo.org> exim-4.34.ebuild:
+  11 May 2004; Bryan ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂstergaard <kloeri@gentoo.org> exim-4.34.ebuild:
   Stable on alpha, bug #50217.
 
   11 May 2004; Jon Portnoy <avenj@gentoo.org> exim-4.34.ebuild :
