@@ -1,21 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 740d5bfc1173182786b9ef4805206137 ChangeLog 3955
-RMD160 6521c7461dd8193ad8988a6aa2ab6e720ea480aa ChangeLog 3955
-SHA256 52aafd9d9e1371352a945e0431d3f58637128ce74ec96b0d0b6cc5b43ff95331 ChangeLog 3955
+MD5 49d775e0f2f80ebc1d679b3b2d8ac1af ChangeLog 4231
+RMD160 fe3126e2a6a1561773fb4b3ce4bee7122f769f38 ChangeLog 4231
+SHA256 fb944f58a5208744f6b2de6364eafeb0c0ff6198422bb28b1faf8941b4d37996 ChangeLog 4231
 MD5 804311ec22b1fba76a61411d0c752a15 files/digest-mt-daapd-0.2.1.1 68
 RMD160 774b47dcfa875659f0da6eeed6fa76062868d157 files/digest-mt-daapd-0.2.1.1 68
 SHA256 857f910fe65da798f7ee7f3eb3264aaf5202a6d73a2f79fed699977e21f301ba files/digest-mt-daapd-0.2.1.1 68
-MD5 a83c2c2bb548a45b8b1294e009aff64d files/digest-mt-daapd-0.2.3-r2 66
-RMD160 e3308391eda8bffed09fdd9494d7739303a61ddf files/digest-mt-daapd-0.2.3-r2 66
-SHA256 da0f3c058aca6cc1c944f8bc9104e5037d2e8c64766602532314d55e8e5b1799 files/digest-mt-daapd-0.2.3-r2 66
 MD5 a5b2b709b9dc7706dfc6bea74d5c8cd8 files/digest-mt-daapd-0.2.4 244
 RMD160 df99fe6a1b4856a6ac473887207da3a4ec6becf0 files/digest-mt-daapd-0.2.4 244
 SHA256 25ac081e15ba74c03bdf1a071eb2f713e7861eafcd9deb0d863db8b238e4421c files/digest-mt-daapd-0.2.4 244
-MD5 9122db32bc5e7f504ecce2160d4d5018 files/digest-mt-daapd-0.3.0_pre20060220 265
-RMD160 82c71a6fbe178c21b889091423d894fa6eafcdb4 files/digest-mt-daapd-0.3.0_pre20060220 265
-SHA256 89d058d91b73e2cb548cbb925c40c52d8412989c37341ae53a599f4862205737 files/digest-mt-daapd-0.3.0_pre20060220 265
 MD5 fb8d5be3517dc6e6fc81df06b5510571 files/digest-mt-daapd-0.3.0_pre20060301 265
 RMD160 11bab3f4a3cebb4ea030c35dc0776ea11fed5203 files/digest-mt-daapd-0.3.0_pre20060301 265
 SHA256 bb53864161e1ef12df7554fb62eef36c81adb25c7cf3663b9fdc50b7cb407e61 files/digest-mt-daapd-0.3.0_pre20060301 265
@@ -31,6 +25,9 @@ SHA256 265088c7773653d2b2ee02da665f985d99535ab8f0d8b221d19b33e54e3f5c7b files/mt
 MD5 227a3d186fe7904440caec11492341db files/mt-daapd-0.2.3-sparc.patch 927
 RMD160 029a51e22054655fac678e254f427748b941ab48 files/mt-daapd-0.2.3-sparc.patch 927
 SHA256 fda7219e9cca646520debb1a1f853ea8144e6c3db7c04004cddeeb173df9645b files/mt-daapd-0.2.3-sparc.patch 927
+MD5 27aaa711fc485cc24fcb6269e94697a0 files/mt-daapd-cvs-20060301-doublefree.patch 769
+RMD160 faba94837060ef0614adff354eb1995f88066015 files/mt-daapd-cvs-20060301-doublefree.patch 769
+SHA256 c491438b48c3152f6e6f037956ee397cba92e6a1eadcbb83f55a49455935cafe files/mt-daapd-cvs-20060301-doublefree.patch 769
 MD5 d14aca83cf21b8c519b42962ba276e42 files/mt-daapd.init 540
 RMD160 2989476cfd7ed00cc6941c20acccc24d1412a4fb files/mt-daapd.init 540
 SHA256 c4a0f6af9711b7ada20e47826991706e8f466c5d9d6b04975bc71ada598442ab files/mt-daapd.init 540
@@ -43,22 +40,16 @@ SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata
 MD5 880127a188cf908b0ad84221e48eeebf mt-daapd-0.2.1.1.ebuild 1936
 RMD160 d3207f93ae7fa154ca49e89f2973d05555dfc5b3 mt-daapd-0.2.1.1.ebuild 1936
 SHA256 4287301a256053216fe2991cf8a98154a566a5202e45d53e2ac713061bda7b9b mt-daapd-0.2.1.1.ebuild 1936
-MD5 4e20971d10008c86db9e602e3b738fa1 mt-daapd-0.2.3-r2.ebuild 3500
-RMD160 1ec9be70b801403798f4dd38903d0b2ca67a81df mt-daapd-0.2.3-r2.ebuild 3500
-SHA256 517f1bf2397d3dc2e5952502d2f554dff0307ed7980cfdb881f0681da6855279 mt-daapd-0.2.3-r2.ebuild 3500
 MD5 968d9cce3ac940d07e1f331e71927441 mt-daapd-0.2.4.ebuild 3525
 RMD160 a053e3bb72c79afb981eac62a987ccb06109404f mt-daapd-0.2.4.ebuild 3525
 SHA256 79dc354c7c71b4a1075adfde2030b8ddac50a0f3ddf9ffb1a088309941fb1068 mt-daapd-0.2.4.ebuild 3525
-MD5 14e77e14a29c7d8e10d4039ada0e51be mt-daapd-0.3.0_pre20060220.ebuild 3901
-RMD160 81add0d49960306b48729a8bba48bc7b34b07d08 mt-daapd-0.3.0_pre20060220.ebuild 3901
-SHA256 636c6e7d06cba26a2b4b0bcd82405ffe8aa52b86173708399d012c81789f19fa mt-daapd-0.3.0_pre20060220.ebuild 3901
-MD5 efd241694583eb5bef2161c9dc26153a mt-daapd-0.3.0_pre20060301.ebuild 3901
-RMD160 a5e9025c0888bca53430c66cfc45c028c31268be mt-daapd-0.3.0_pre20060301.ebuild 3901
-SHA256 a301531d39328241713adce2ebbf5b561191a6a4d303790423d025aac2bb2cd2 mt-daapd-0.3.0_pre20060301.ebuild 3901
+MD5 2a7ca643cc651d33213a20a19465171e mt-daapd-0.3.0_pre20060301.ebuild 3988
+RMD160 ecac4507ac70d6f8898a8cf262268a6b56d57e6f mt-daapd-0.3.0_pre20060301.ebuild 3988
+SHA256 e95ff6c4ee9649e589726b2ebea9a6bf8f1601edb609d94d55fc7c17e8c890b8 mt-daapd-0.3.0_pre20060301.ebuild 3988
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD4DBQFEBtnPAiZjviIA2XgRAqwLAJ9qcJ2AQuxhqPduWwLn6BePftesWgCYza2M
-PMyfnDp3+gtibtpvxlka5Q==
-=1kRT
+iD8DBQFEC0PNAiZjviIA2XgRAt57AKCNVkvFG+rvy1xM+X6XL0k/nhztFwCfUvWs
+Yh4X50Ehk0oHi85moeTPyf0=
+=Twjr
 -----END PGP SIGNATURE-----

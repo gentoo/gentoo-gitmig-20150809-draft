@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre20060301.ebuild,v 1.1 2006/03/02 11:40:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre20060301.ebuild,v 1.2 2006/03/05 20:02:58 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -48,6 +48,12 @@ pkg_setup() {
 		eerror "same time. Please drop one of the useflag."
 		die "Invalid use of sqlite flags"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}/${MY_P}-doublefree.patch"
 }
 
 src_compile() {
