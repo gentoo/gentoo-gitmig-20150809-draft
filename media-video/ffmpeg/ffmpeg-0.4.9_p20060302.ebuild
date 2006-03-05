@@ -138,7 +138,7 @@ src_compile() {
 	use amr && myconf="${myconf} --enable-amr_nb --enable-amr_wb"
 
 	myconf="${myconf} --enable-gpl --enable-pp"
-	
+
 	cd ${S_STATIC}
 	#econf generates configure options unknown to ffmpeg's configure, so configure manually
 	./configure \
