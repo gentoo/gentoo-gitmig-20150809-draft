@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d1cd8a130dde4f16e578c50ed8b09187 ChangeLog 700
-RMD160 d71c7ba8aa6883bf80de9c1193703af4bc27cfc1 ChangeLog 700
-SHA256 2cbcb81a33d50708b36979cb703dca28ff5f1362738559153334c45096a5edd8 ChangeLog 700
+MD5 ea157ba3607b482aa211b44a6f853c8f ChangeLog 790
+RMD160 61596c3c803e4242d079732a00cc02c8d0a3fb5b ChangeLog 790
+SHA256 7834d448a72fe7fb1cda3b0bc399a3c8114bc4f174b0685d6fdd90ce03455520 ChangeLog 790
 MD5 2bb6391984e53ddbe3c8c9de934bfd0d files/digest-kopete-0.12_alpha1 262
 RMD160 1c5fb4556e6ae2ed77df50e392b985a1861f4bb7 files/digest-kopete-0.12_alpha1 262
 SHA256 5358f4ff86350539ce50fceb27dbafdda7513fe3cef9b588b8b25877f24c08b6 files/digest-kopete-0.12_alpha1 262
 MD5 638d3cc679fc614b53fbeff0c41aa05c files/kopete-0.12_alpha1-xscreensaver.patch 778
 RMD160 d188f074982191f6f961c7e32ec97a79746e73df files/kopete-0.12_alpha1-xscreensaver.patch 778
 SHA256 2152d2d2d1ed29b986d5b7f80a6f7bcabd56e5580146298973b4114353b5686d files/kopete-0.12_alpha1-xscreensaver.patch 778
-MD5 41f2829e280c45903652efb9a55aa831 kopete-0.12_alpha1.ebuild 1732
-RMD160 c83396b5b59caaf8517c5b9472630ee9a26f62c6 kopete-0.12_alpha1.ebuild 1732
-SHA256 91dfb9ba4ba1ae4e3c0d1e028fc97f03712ac098885d595c555b8674d903db44 kopete-0.12_alpha1.ebuild 1732
+MD5 b2e6a93c552560c63babaf079e0cedca kopete-0.12_alpha1.ebuild 1733
+RMD160 56c468d84688b1466e3b4a527483fa343768f718 kopete-0.12_alpha1.ebuild 1733
+SHA256 85a9e51a3e9e798c50a81d8b0441966061c3e0de826f55eea2d7eeed43b57c99 kopete-0.12_alpha1.ebuild 1733
 MD5 64e213d0db015eb97e16b31ec6e748c3 metadata.xml 254
 RMD160 ddca3e329213be86e7b2d62c52078a77ea308f4a metadata.xml 254
 SHA256 addaf999f171c0e580a0399105382e9b213e14f3bd85b74671742b41f41c2261 metadata.xml 254
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEBLeCAiZjviIA2XgRAt8MAJ9ilxsRaCfweIa3p8Z2LkhXcftz0QCdEz5V
-Ppe7KDChagcIi+OxuJ2OiQE=
-=m1yb
+iD8DBQFECisSr2QksT29OyARAhklAJ4r37c6pjnB54nrcwVq+SVBmvpnUgCfV76j
+0LMBqqvuXCRgbRIOa74iFIs=
+=fk3/
 -----END PGP SIGNATURE-----
