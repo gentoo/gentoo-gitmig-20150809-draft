@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5-r1.ebuild,v 1.2 2006/03/05 16:02:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5-r1.ebuild,v 1.3 2006/03/05 18:56:38 flameeyes Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs multilib
 
 MY_P="js-${PV}"
 DESCRIPTION="Stand-alone JavaScript C library"
@@ -24,11 +24,11 @@ src_unpack() {
 
 src_compile() {
 	tc-export CC LD AR
-	emake -j1 -f Makefile.ref || die
+	emake -j1 -f Makefile.ref LIBDIR="$(get_libdir)" || die
 }
 
 src_install() {
-	make -f Makefile.ref install DESTDIR="${D}" || die
+	make -f Makefile.ref install DESTDIR="${D}" LIBDIR="$(get_libdir)" || die
 	dodoc ../jsd/README
 	dohtml README.html
 }
