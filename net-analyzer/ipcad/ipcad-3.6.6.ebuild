@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.6.6.ebuild,v 1.5 2006/02/15 23:06:54 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.6.6.ebuild,v 1.6 2006/03/05 20:48:48 jokey Exp $
 
 DESCRIPTION="IP Cisco Accounting Daemon"
 HOMEPAGE="http://ipcad.sourceforge.net/"
@@ -26,7 +26,7 @@ src_install() {
 	sed -i -e "s/^aggregate/#aggregate/" ipcad.conf.default
 	sed -i -e "s/^pidfile = ipcad.pid;/pidfile = \/run\/ipcad.pid;/" ipcad.conf.default
 
-	dodoc AUTHORS ChangeLog COPYING INSTALL README BUGS FAQ ipcad.conf.simple ipcad.conf.default
+	dodoc AUTHORS ChangeLog README BUGS FAQ ipcad.conf.simple ipcad.conf.default
 	dosbin ipcad
 
 	insinto /etc
