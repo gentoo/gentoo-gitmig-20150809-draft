@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-osgi/eclipse-osgi-3.2_pre2.ebuild,v 1.1 2005/10/01 23:44:22 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-osgi/eclipse-osgi-3.2_pre2.ebuild,v 1.2 2006/03/05 01:18:55 compnerd Exp $
 
 inherit java-pkg
 
@@ -39,7 +39,7 @@ src_unpack() {
 
 src_compile() {
 	local targets="jar"
-	use doc && targets="${targets} javaodc"
+	use doc && targets="${targets} javadoc"
 
 	cd ${S}/${OSGI_PLUGIN}
 	ant -Dproject.name=org.eclipse.osgi \
@@ -50,6 +50,6 @@ src_install() {
 	java-pkg_dojar ${S}/${OSGI_PLUGIN}/dist/org.eclipse.osgi.jar || die "Failed to install jars"
 
 	if use doc ; then
-		java-pkg_dohtml -r ${S}/${OSGI_PLUGIN}/dist/docs/* || die "Failed to install docs"
+		java-pkg_dohtml -r ${S}/${OSGI_PLUGIN}/dist/doc/* || die "Failed to install docs"
 	fi
 }
