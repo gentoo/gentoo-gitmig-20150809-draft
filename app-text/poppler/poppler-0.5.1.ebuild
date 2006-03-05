@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.1.ebuild,v 1.2 2006/03/03 21:58:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.1.ebuild,v 1.3 2006/03/05 16:57:26 genstef Exp $
 
 DESCRIPTION="Poppler is a PDF rendering library based on the xpdf-3.0 code base."
 HOMEPAGE="http://poppler.freedesktop.org"
@@ -22,6 +22,9 @@ DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.9.6"
 
 src_compile() {
+	# -Os is broken, see bug 124179
+	replace-flags -Os -O2
+
 	econf --disable-poppler-qt4 \
 		--disable-poppler-glib \
 		--disable-poppler-qt \
