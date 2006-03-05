@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1443.20060207.ebuild,v 1.2 2006/02/17 13:52:03 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1443.20060207.ebuild,v 1.3 2006/03/05 19:05:37 brix Exp $
 
 inherit linux-mod
 
@@ -13,7 +13,7 @@ SRC_URI="http://snapshots.madwifi.org/madwifi-ng/${MY_P}.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE="amrr onoe"
 DEPEND="app-arch/sharutils"
