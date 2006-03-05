@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/libfpx-1.2.0.12.ebuild,v 1.2 2006/01/14 01:37:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/libfpx-1.2.0.12.ebuild,v 1.3 2006/03/05 08:25:37 lu_zero Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ S=${WORKDIR}/${MY_P2}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}/${P}-makefile.patch"
 }
 
 src_install() {
