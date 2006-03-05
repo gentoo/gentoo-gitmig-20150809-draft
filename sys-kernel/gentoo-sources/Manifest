@@ -10,9 +10,6 @@ SHA256 c857c13a71e7b9337aa7882f0f1df971590343d862fc9c0aeb5c4f9483312aad files/di
 MD5 5e338bac52f744bf36cd43167fa3c8bb files/digest-gentoo-sources-2.4.32-r2 144
 RMD160 abb9ab0f0cd679ebc566762b0bc805642b6c2a3a files/digest-gentoo-sources-2.4.32-r2 144
 SHA256 ddf2e3c8a9520aa849225c354ec26787affd8139db5ce7ae22e69c0ec6e73f9a files/digest-gentoo-sources-2.4.32-r2 144
-MD5 c7c22b8fec3ab8b6daa5d9be94b033b5 files/digest-gentoo-sources-2.6.14-r5 222
-RMD160 f800dd63eb35425e7496187880720863e27311f0 files/digest-gentoo-sources-2.6.14-r5 222
-SHA256 d272e27d054fe2041980fb0a065c9918b1ca50fbcaa62a07b199592a827faee1 files/digest-gentoo-sources-2.6.14-r5 222
 MD5 d8cc0aadf2f4bba70395cba766d32ef3 files/digest-gentoo-sources-2.6.14-r7 222
 RMD160 680b4593ba7e7ad5791d7f629a0cbc63a53793c0 files/digest-gentoo-sources-2.6.14-r7 222
 SHA256 fe07764acf6fd58af38b17bcba2ff60cdeb1ba20e19d23fdf22412d0e3ceb1d4 files/digest-gentoo-sources-2.6.14-r7 222
@@ -52,9 +49,6 @@ SHA256 8ddda9851494795d09e74e0c4f2689f82df01eb4e80b60dbfd4d098a66e63ce5 gentoo-s
 MD5 559a1e2977e072380bf674e333a4526d gentoo-sources-2.4.32-r2.ebuild 669
 RMD160 ef05d452967d6bf9fe27ff79ff762253c48a5412 gentoo-sources-2.4.32-r2.ebuild 669
 SHA256 fc2d5d8818f20efc7d5abec6da4ddb8a1d2884f02ba03cb5d722b7f6d3283583 gentoo-sources-2.4.32-r2.ebuild 669
-MD5 c04cead3d2ceff0e7a761db21ce4ef0a gentoo-sources-2.6.14-r5.ebuild 1226
-RMD160 f677da9daa1ab5a3f5e95bfdd68622d42c5de6cf gentoo-sources-2.6.14-r5.ebuild 1226
-SHA256 97d312e118b82fd18c1d239dc1e995cab220918b1601004cd7f255c41c1ac587 gentoo-sources-2.6.14-r5.ebuild 1226
 MD5 4cc37c56b3973c6aac8654bfef4bb13e gentoo-sources-2.6.14-r7.ebuild 1231
 RMD160 fc6bce11f108aa81d72024db22cc30bb6198e62e gentoo-sources-2.6.14-r7.ebuild 1231
 SHA256 8683daa3fdd83f67f42491915f8ffdb661179bd8018a2e38a7a2b722913a6b7c gentoo-sources-2.6.14-r7.ebuild 1231
@@ -88,7 +82,7 @@ SHA256 16eda12305d2f4dba1a5650d79f49204d23c82de0d9883424dc74b3d372e45e2 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEB32HTOXg++0VvJQRAr+iAKCRCUcJaSXrekRdIAwbQtF3OXsMLwCfe/AT
-xM1e5GO7UCectxhAgd6vhzM=
-=JjAt
+iD8DBQFECt70TOXg++0VvJQRAjHvAJ9QV/bRVwcbNbiBz+vNAhCdFbzfrQCgu/oc
+Kq2lijfhLQ7QWLYiJbut1mI=
+=hMml
 -----END PGP SIGNATURE-----
