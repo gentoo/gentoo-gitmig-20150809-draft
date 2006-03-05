@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vcd/vdr-vcd-0.7.ebuild,v 1.1 2006/03/05 10:28:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vcd/vdr-vcd-0.7.ebuild,v 1.2 2006/03/05 11:35:17 zzam Exp $
 
 inherit eutils vdr-plugin
 
@@ -10,7 +10,6 @@ HOMEPAGE="http://vdr.heiligenmann.de/"
 SRC_URI=" http://vdr.heiligenmann.de/download/vdr-${VDRPLUGIN}-${PV}.tgz
 		mirror://vdrfiles/${PN}/vcd-0.7.patch"
 
-RESTRICT="nomirror"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
