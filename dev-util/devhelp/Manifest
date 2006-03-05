@@ -1,18 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0753b62b5929af63b473663c23ef413d ChangeLog 4638
+MD5 5eef050dbfdcc1c65f3d3ff2af699cdc ChangeLog 4820
+RMD160 2ec8092497d4c86834ba9005b64b55a9b5ee2f10 ChangeLog 4820
+SHA256 c9556a46a28340622a52330730a4ce2d95f7ef71a272a23ff49b2ef97ae992b1 ChangeLog 4820
 MD5 a78a0bc4b35db3a8a55e4b7921b96cbe devhelp-0.10.ebuild 989
+RMD160 dea9b0f0c261a00ec0b2a1e03a5842c33d172c07 devhelp-0.10.ebuild 989
+SHA256 e2e497957ec6cbe388cb97cd37e1b837bf717b7cdc1912f4882fa7fbc1ecc910 devhelp-0.10.ebuild 989
+MD5 3b493fd5fb1223b53ed9b9afa09e1f3a devhelp-0.11.ebuild 1207
+RMD160 a95fe85b80675d827dc93b01038f5434d1540566 devhelp-0.11.ebuild 1207
+SHA256 42ae1147b73ed45c295d92e7ce08e1fc45938997268955f9fd51d0f2681f6771 devhelp-0.11.ebuild 1207
 MD5 89f2230e5e7ee5e293266f3aefdce1cc devhelp-0.9.3.ebuild 822
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 97787a43ecb1db80e848328e38bf43a495304647 devhelp-0.9.3.ebuild 822
+SHA256 b23df35088a159bc4c58292a659dc73d188530f49d825edb0b39fba5fbbdeb84 devhelp-0.9.3.ebuild 822
 MD5 668d7e317ea725c2b81021481519e2d5 files/devhelp-0.10-fix_includes.patch 433
+RMD160 9b5093db99ad362caf565be221ae6b5672ec547d files/devhelp-0.10-fix_includes.patch 433
+SHA256 a83b83f3019c78b74ae6737453ab894d8d12f73823d16ced19d49baffa72f621 files/devhelp-0.10-fix_includes.patch 433
+MD5 e7a1720fa0209b1d4e6726aef8825a8b files/devhelp-0.11-mozilla-includes.patch 1534
+RMD160 9f725d4d2030ac6537d838e24d084245dd27c37e files/devhelp-0.11-mozilla-includes.patch 1534
+SHA256 1d814a502e331d65ffe86e32543d7fae4708b2f672db349e635f4b4c621c197b files/devhelp-0.11-mozilla-includes.patch 1534
 MD5 15d29375caa5bdfbdfba36346b77c092 files/devhelp-0.9.3-fix_includes.patch 529
+RMD160 3259e3a1a8795ad9d8d88321fe024fb23240dda6 files/devhelp-0.9.3-fix_includes.patch 529
+SHA256 8a1c28d5056430b947557f589d77f691e5590b244bb407caca4f521c53b7bb03 files/devhelp-0.9.3-fix_includes.patch 529
 MD5 b8da92ecccae41d2267fc6f9186f64d2 files/digest-devhelp-0.10 65
+RMD160 c514387cb2cc6d3ec3da1338986b7c85fb0c63a4 files/digest-devhelp-0.10 65
+SHA256 266a691f36ff0cdfcf9bec2680b922b4cdf7220f97570fd94eb486336dbb819c files/digest-devhelp-0.10 65
+MD5 689c88716baf2a57a90e4ba1f3b66550 files/digest-devhelp-0.11 241
+RMD160 bec529bb3e99ccc19caf040423ce06be632bf8d0 files/digest-devhelp-0.11 241
+SHA256 1338a68a59b4c2e365fe7efec6ed7e24de1c614e444d0ec37f323169123447bf files/digest-devhelp-0.11 241
 MD5 4f7a4b06964d954b632540dbb4263fc4 files/digest-devhelp-0.9.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDGbrswUpWvClEHQoRAgYPAJ44WhiqDpDytHLVKdJfQfVIhivcggCcDZTI
-CPLPDD/zdHUBOPcO+ahg7hk=
-=BB9N
------END PGP SIGNATURE-----
+RMD160 ce7f2b0c60aef1f1c5e1493c4cb62f1dc556cd67 files/digest-devhelp-0.9.3 66
+SHA256 08d3d59ab4c2573bc4429d75a0e4ab0c34ef9edc2b34f884bf896557f19d6873 files/digest-devhelp-0.9.3 66
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
