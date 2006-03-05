@@ -1,21 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1dac88fa18f131b79156dfcc43fd4e8a ChangeLog 2479
+RMD160 be865d9cd69e2328757f7d9ffac00980b3342e0d ChangeLog 2479
+SHA256 46196fa25f1f7f6ddb413c0b8999e6bff58bdf92abcba84353b491f8605782e4 ChangeLog 2479
 MD5 08529dc8a202ab35f89e69dab4ee71f4 cksfv-1.3.3.ebuild 643
+RMD160 58db87762158bc45deb3dbd961842019f2ea06c4 cksfv-1.3.3.ebuild 643
+SHA256 d175662eb9ece2e16714b521204576efda3a3f5c3c6550a955ce051fcb475a2c cksfv-1.3.3.ebuild 643
 MD5 d76dbd915da21064a3923452e2bfa232 cksfv-1.3.5.ebuild 770
+RMD160 d987a40984bc78f275d672f35b3a9d21c968a067 cksfv-1.3.5.ebuild 770
+SHA256 5066815d00f8589c65e4d54d8e54803102c2c9f61844c1e3049302653a1a371c cksfv-1.3.5.ebuild 770
 MD5 5f5157da4a44bb0b281186f3a68db8d9 cksfv-1.3.6.ebuild 821
+RMD160 a85144d5179ebbec5ae068e13e92e185250f5122 cksfv-1.3.6.ebuild 821
+SHA256 2b092c9caf9a8ef2638548a9cf2c0dcd09879403678061281c23070e24a3596b cksfv-1.3.6.ebuild 821
 MD5 ced084f32783f44fade49f04fa81123e cksfv-1.3.7.ebuild 833
+RMD160 bfb4a3388a51d235aaa02e1e6ce4e43e7b6befaa cksfv-1.3.7.ebuild 833
+SHA256 3e1249b6bebda4acc312961b7b745abfa470c2f554607d59e65687410ebb8b75 cksfv-1.3.7.ebuild 833
 MD5 addea580ee7a24afd1ad60577d52f35b cksfv-1.3.8.ebuild 837
+RMD160 f85f4810d8a06b0188c2cb8110dd1b5188fe2bba cksfv-1.3.8.ebuild 837
+SHA256 749d14064019333592fc8bbfd7648fedfd3ebc0c6522e41fa398aee6f647445e cksfv-1.3.8.ebuild 837
 MD5 143c9b1bab6c4bbe7851810ba2d05ddb files/digest-cksfv-1.3.3 63
+RMD160 5179a71cb95a205b4c208dcfae58d202168b32ac files/digest-cksfv-1.3.3 63
+SHA256 ced4b07de3b62ee2e01da78716bf6cb3ea89b2f0e05641e8ce0f39808ea5aeab files/digest-cksfv-1.3.3 63
 MD5 c2e4f585431c4c3d7580b29d5e951c05 files/digest-cksfv-1.3.5 63
+RMD160 375586e8e0e2e218dc40058357c3b19cbae19118 files/digest-cksfv-1.3.5 63
+SHA256 f845dee21d3b27df93acca3c8df1da804eb7ca7ce77b9326597ae18993551d42 files/digest-cksfv-1.3.5 63
 MD5 fb06833cc9afeee51087ed9c7b3bdb6b files/digest-cksfv-1.3.6 63
+RMD160 26be4c45edd1095615dcc44dee86705fac2415f1 files/digest-cksfv-1.3.6 63
+SHA256 648c6e42333111e6e4cc6355ddb194560509c2e5058f9930a98f0df93484ad0c files/digest-cksfv-1.3.6 63
 MD5 b8e1672d5dbaff6cc0748f0f41ec6955 files/digest-cksfv-1.3.7 63
+RMD160 5567d20901700a956e18552ef8cb1f3e125bd6e4 files/digest-cksfv-1.3.7 63
+SHA256 c5b012fa23d2163bc74abff0eb929e1b776c6209bc7d8a9b282335a775598938 files/digest-cksfv-1.3.7 63
 MD5 1dd2bc2a6a13dbf949a130dee3f07fe2 files/digest-cksfv-1.3.8 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDuWRIKRy60XGEcJIRAgQ5AKCb4RA39Yzt4knUkD2n2I6U0QYTtwCgj1w1
-AkMYNff1hBKF1dHt24uF8eA=
-=PeST
------END PGP SIGNATURE-----
+RMD160 08c4445317bfd4d4dad259bb56b71c568e70ba83 files/digest-cksfv-1.3.8 63
+SHA256 88a96fceda28d8968a5ca1d394dc444ddd0e0241ac4473b044cec7783994ac4e files/digest-cksfv-1.3.8 63
+MD5 2620fe5a1bf42dbf0259a18cd1d5bb5b metadata.xml 357
+RMD160 4238fc7a375560a9186d81fead01d7cc65faef8e metadata.xml 357
+SHA256 a0bda6c5108e7117e46c9158bdb4138edcd2c9334e764951767a9a4225c651f6 metadata.xml 357
