@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.100.7.ebuild,v 1.3 2006/01/13 11:16:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.100.7.ebuild,v 1.4 2006/03/05 22:56:18 kito Exp $
 
 inherit flag-o-matic eutils multilib
 
 DESCRIPTION="A low-latency audio server"
-HOMEPAGE="http://jackit.sourceforge.net/"
+HOMEPAGE="http://www.jackaudio.org"
 SRC_URI="mirror://sourceforge/jackit/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
@@ -61,11 +61,7 @@ src_compile() {
 
 	sed -i "s/^CFLAGS=\$JACK_CFLAGS/CFLAGS=\"\$JACK_CFLAGS $(get-flag -march)\"/" configure
 
-	if use doc; then
-		myconf="--enable-html-docs --with-html-dir=/usr/share/doc/${PF}"
-	else
-		myconf="--disable-html-docs"
-	fi
+	use doc && myconf="--with-html-dir=/usr/share/doc/${PF}"
 
 	if use jack-tmpfs; then
 		myconf="${myconf} --with-default-tmpdir=/dev/shm"
@@ -89,10 +85,11 @@ src_compile() {
 		$(use_enable caps capabilities) $(use_enable caps stripped-jackd) \
 		$(use_enable coreaudio) \
 		$(use_enable debug) \
+		$(use_enable doc html-docs) \
 		$(use_enable mmx) \
 		$(use_enable oss) \
 		$(use_enable portaudio) \
-		$(use_enable sse) \
+		$(use_enable sse) $(use_enable sse dynsimd) \
 		--with-pic \
 		${myconf} || die "configure failed"
 	emake || die "compilation failed"
@@ -106,7 +103,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} datadir=${D}/usr/share install || die
+	make DESTDIR=${D} datadir=/usr/share/doc install || die
 
 	if use caps; then
 		if [[ "${KV:0:3}" == "2.4" ]]; then
@@ -126,8 +123,10 @@ src_install() {
 		mv ${D}/usr/share/doc/${PF}/reference/html \
 		   ${D}/usr/share/doc/${PF}/
 
-		mv ${S}/example-clients \
-		   ${D}/usr/share/doc/${PF}/
+		insinto /usr/share/doc/${PF}
+		doins -r ${S}/example-clients
+	else
+		rm -rf ${D}/usr/share/doc
 	fi
 
 	rm -rf ${D}/usr/share/doc/${PF}/reference
