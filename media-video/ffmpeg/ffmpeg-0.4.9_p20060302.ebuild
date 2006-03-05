@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060302.ebuild,v 1.6 2006/03/05 17:20:29 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
