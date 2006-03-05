@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/FlowScan-1.006.ebuild,v 1.3 2005/08/23 21:54:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/FlowScan-1.006.ebuild,v 1.4 2006/03/05 20:12:55 jokey Exp $
 
 inherit eutils
 
@@ -38,7 +38,8 @@ src_install() {
 
 	newinitd ${FILESDIR}/flowscan.init flowscan
 
-	dodoc COPYING Changes INSTALL *README* TODO
+	dodoc Changes *README* TODO
+	newdoc INSTALL README.update
 
 	keepdir /var/lib/flows/ft
 	keepdir /var/lib/flows/rrds
