@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre5-r3.ebuild,v 1.1 2006/03/04 02:05:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre5-r4.ebuild,v 1.1 2006/03/05 02:46:59 zmedico Exp $
 
 inherit toolchain-funcs
 
@@ -32,7 +32,17 @@ S=${WORKDIR}/${PN}-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	patch -p1 < "${FILESDIR}"/2.1_pre5-r3.patch || die "Failed to apply patch"
+	local my_patches="1000_r2763_fixpackages_features.patch
+		1010_r2764_emergelog_genlop.patch
+		1020_r2800_bug_124203_clean_phase_sanity.patch
+		1030_r2790_bug_124140_portage_locks_hardlink.patch
+		1040_r2804_bug_124568_dobin_wheel.patch
+		1050_r2805_bug_124621_webrsync_niceness.patch
+		1060_r2812_bug_124471_worldfile_ROOT.patch
+		version_bump_2.1_pre5-r4.patch"
+	for patch_name in ${my_patches}; do
+		patch -p0 --no-backup-if-mismatch < "${FILESDIR}"/${PV}/${patch_name} || die "Failed to apply patch"
+	done
 }
 
 src_compile() {
@@ -85,20 +95,12 @@ src_install() {
 	doexe "${S}"/src/tbz2tool
 	dosym newins /usr/lib/portage/bin/donewins
 
-	dodir /usr/lib/portage/pym
-	insinto /usr/lib/portage/pym
-	cd "${S}"/pym
-	doins *
-
-	dodir /usr/lib/portage/pym/cache
-	insinto /usr/lib/portage/pym/cache
-	cd "${S}"/pym/cache
-	doins *
-
-	dodir /usr/lib/portage/pym/elog_modules
-	insinto /usr/lib/portage/pym/elog_modules
-	cd "${S}"/pym/elog_modules
-	doins *
+	for mydir in pym pym/cache pym/elog_modules; do
+		dodir /usr/lib/portage/${mydir}
+		insinto /usr/lib/portage/${mydir}
+		cd "${S}"/${mydir}
+		doins *.py *.pyo
+	done
 
 	doman "${S}"/man/*.[0-9]
 	dodoc "${S}"/ChangeLog

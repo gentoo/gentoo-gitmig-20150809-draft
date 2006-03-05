@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.86 2006/03/04 02:05:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.87 2006/03/05 02:46:59 zmedico Exp $
+
+*portage-2.1_pre5-r4 (04 Mar 2006)
+
+  04 Mar 2006; Zac Medico <zmedico@gentoo.org>
+  +portage-2.1_pre5-r4.ebuild, +files/2.1_pre5,
+  +files/2.1_pre5/1000_r2763_fixpackages_features.patch,
+  +files/2.1_pre5/1010_r2764_emergelog_genlop.patch,
+  +files/2.1_pre5/1020_r2800_bug_124203_clean_phase_sanity.patch,
+  +files/2.1_pre5/1030_r2790_bug_124140_portage_locks_hardlink.patch,
+  +files/2.1_pre5/1040_r2804_bug_124568_dobin_wheel.patch,
+  +files/2.1_pre5/1050_r2805_bug_124621_webrsync_niceness.patch,
+  +files/2.1_pre5/1060_r2812_bug_124471_worldfile_ROOT.patch,
+  +files/2.1_pre5/version_bump_2.1_pre5-r4.patch:
+  Regression fix for bug #124471 world file corruption when ROOT != /.
+  All regression fixes for 2.1_pre5 are now split into separate patches.
 
 *portage-2.1_pre5-r3 (03 Mar 2006)
 
