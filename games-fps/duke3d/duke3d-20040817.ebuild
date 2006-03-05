@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817.ebuild,v 1.7 2006/01/28 23:09:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817.ebuild,v 1.8 2006/03/05 13:40:16 chainsaw Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
@@ -62,6 +62,7 @@ src_unpack() {
 	# need to sync features with build engine
 	epatch "${FILESDIR}/${PV}-duke3d-makefile-opts.patch"
 	epatch "${FILESDIR}/${PV}-gcc34.patch" # compile fixes for GCC 3.4
+	epatch "${FILESDIR}/${PV}-gcc4.patch" # compile fixes for GCC 4.0/4.1 by Mark Loeser
 	sed -i \
 		-e "/^use_opengl := / s:=.*:= $(use_tf opengl):" \
 		-e "/^use_physfs := / s:=.*:= false:" \
