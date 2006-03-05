@@ -1,9 +1,12 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.8 2006/03/05 14:21:43 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.9 2006/03/05 15:51:08 zypher Exp $
 
 *gpac-0.4.1_pre20060122 (22 Jan 2006)
 
+  05 Mar 2006; Marc Hildebrand <zypher@gentoo.org> gpac-0.4.1_pre20060122.ebuild:
+  Added ~ppc keyword.
+  
   05 Mar 2006; Marc Hildebrand <zypher@gentoo.org> gpac-0.4.1_pre20060122.ebuild:
   Interim version, pulled from cvs. Ebuild rewritten according to Josh Pryor's overlay
   that can be found in the forums.
