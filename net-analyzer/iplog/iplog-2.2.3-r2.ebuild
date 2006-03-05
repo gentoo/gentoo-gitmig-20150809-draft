@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/iplog-2.2.3-r2.ebuild,v 1.10 2006/02/15 23:08:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/iplog-2.2.3-r2.ebuild,v 1.11 2006/03/05 20:50:43 jokey Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_install() {
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		install || die
-	dodoc AUTHORS COPYING.* NEWS README TODO example-iplog.conf
+	dodoc AUTHORS NEWS README TODO example-iplog.conf
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/iplog.rc6 iplog
