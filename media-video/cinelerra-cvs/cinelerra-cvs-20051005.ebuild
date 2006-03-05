@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20051005.ebuild,v 1.4 2006/01/26 08:17:40 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20051005.ebuild,v 1.5 2006/03/05 17:33:31 zypher Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -18,11 +18,12 @@ KEYWORDS="~x86 ~amd64"
 IUSE="3dnow alsa esd mmx oss static"
 
 RDEPEND="!media-video/cinelerra
-	virtual/x11
 	media-libs/libpng
 	media-libs/libdv
 	media-libs/faad2
 	media-libs/faac
+	media-libs/a52dec
+	media-video/ffmpeg
 	x86? ( media-libs/x264-svn )
 	media-libs/libiec61883
 	media-video/mjpegtools
@@ -33,7 +34,6 @@ RDEPEND="!media-video/cinelerra
 	>=media-libs/libvorbis-1.1.0
 	>=media-libs/libogg-1.1
 	>=media-libs/libtheora-1.0_alpha4-r1
-	!media-video/cinelerra
 	|| ( (
 			x11-libs/libX11
 			x11-libs/libXv
