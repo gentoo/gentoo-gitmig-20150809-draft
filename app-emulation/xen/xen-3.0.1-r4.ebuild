@@ -1,13 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-9029-r1.ebuild,v 1.1 2006/03/03 12:20:56 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.1-r4.ebuild,v 1.1 2006/03/05 17:01:34 chrb Exp $
 
 inherit mount-boot flag-o-matic
 
 DESCRIPTION="The Xen virtual machine monitor and Xend daemon"
 HOMEPAGE="http://xen.sourceforge.net"
-MY_P="xen-unstable-${PV}"
-SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
+SRC_URI="http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/xen-3.0.1-src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,8 +28,6 @@ DEPEND="sys-apps/iproute2
 	)
 	sys-devel/dev86
 	|| ( sys-fs/udev sys-apps/hotplug )"
-
-S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -87,7 +84,7 @@ src_install() {
 	make DESTDIR=${D} ${myopt} gentoo-install || die "install xen failed"
 
 	if use doc; then
-		make DESTDIR=${D} -C docs install || die "installing docs failed"
+		make DESTDIR=${D} -C docs install || die "install docs failed"
 		# Rename doc/xen to the Gentoo-style doc/xen-x.y
 		mv ${D}/usr/share/doc/{${PN},${PF}}
 	fi
@@ -102,27 +99,18 @@ src_install() {
 	fi
 
 	# xend expects these to exist
-	dodir /var/run/xenstored
-	dodir /var/lib/xenstored
-	dodir /var/xen/dump
-
-	# for upstream change tracking
-	dodoc ${S}/XEN-VERSION
-
+	for dir in /var/run/xenstored /var/lib/xenstored /var/xen/dump; do
+		dodir ${dir}
+		keepdir ${dir}
+	done
 }
 
 pkg_postinst() {
 	einfo "Please visit the Xen and Gentoo wiki:"
 	einfo "http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
 
-	einfo ""
-	einfo "This is a snapshot of the xen-unstable tree."
-	einfo "Please report bugs in xen itself (and not the packaging) to"
-	einfo "bugzilla.xensource.com"
-
 	if use pae; then
 		einfo ""
 		einfo "This is a PAE build of Xen. It will *only* boot PAE kernels!"
 	fi
-
 }
