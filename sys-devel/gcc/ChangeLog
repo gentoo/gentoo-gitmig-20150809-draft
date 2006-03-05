@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.504 2006/03/03 14:34:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.505 2006/03/05 08:18:45 lu_zero Exp $
+
+  05 Mar 2006; Luca Barbato <lu_zero@gentoo.org> gcc-4.1.0.ebuild:
+  Marked ~ppc
 
   03 Mar 2006; Simon Stelling <blubb@gentoo.org>
   -files/gcc331_use_multilib.amd64.patch, gcc-3.3.2-r7.ebuild,
