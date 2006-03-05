@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-bitstreamout
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-bitstreamout/ChangeLog,v 1.1 2006/03/05 11:47:29 zzam Exp $
+
+*vdr-bitstreamout-0.84 (05 Mar 2006)
+
+  05 Mar 2006; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +vdr-bitstreamout-0.84.ebuild:
+  imported ebuild from gentoo.de
+

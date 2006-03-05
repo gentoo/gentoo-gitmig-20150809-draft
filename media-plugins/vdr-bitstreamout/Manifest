@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 00a4237d06711e36b100834b5d5b33e0 ChangeLog 404
+RMD160 0a0f248c2613820a7f2dc4ec787562861f564f00 ChangeLog 404
+SHA256 26b6806b9886489f203266856e86e818e8177b8ebd6ab2c01bf5bc359d5320c6 ChangeLog 404
+MD5 cfb2a0fd1ec23dbc73efebe51aae62e2 files/digest-vdr-bitstreamout-0.84 268
+RMD160 a70070f44663e09de5b607de2bf96d6f4918edab files/digest-vdr-bitstreamout-0.84 268
+SHA256 614930ec3675eb4a00ae90af1b6da1c15ca90c44dba393a1c48c2aa9f9647235 files/digest-vdr-bitstreamout-0.84 268
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 cf3595a15bdd748466403827136aa395 vdr-bitstreamout-0.84.ebuild 802
+RMD160 605e5b06796b751b62792196fdc5a460d98ba7f6 vdr-bitstreamout-0.84.ebuild 802
+SHA256 c0e47cf66ec00d96f4f6c557982d5bb701edbd475efbd1fef194e1da2b0bb686 vdr-bitstreamout-0.84.ebuild 802
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFECtACZfSl1Kp5KmoRAkKtAKDSmR7PAZ5qwfwcSFGfCyGNBvvK8ACfRpki
+luqVoFb6zCZefhsmumeNZtY=
+=WYc9
+-----END PGP SIGNATURE-----
