@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.5.0.ebuild,v 1.1 2006/03/05 14:17:33 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.5.0.ebuild,v 1.2 2006/03/05 15:30:42 stuart Exp $
 
 inherit eutils
 
@@ -56,6 +56,8 @@ src_install() {
 	dobin nxsetup
 	( use x86 && use commercial ) || dobin nxprint
 	( use x86 && use commercial ) || dobin nxclient
+
+	doenvd ${FILESDIR}/50nxserver
 
 	dodir ${NX_ETC_DIR}
 	for x in passwords passwords.orig ; do

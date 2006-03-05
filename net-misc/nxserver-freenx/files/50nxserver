@@ -1,0 +1,3 @@
+PATH=/usr/NX/bin
+ROOTPATH=/usr/NX/bin
+CONFIG_PROTECT="/usr/NX/etc /usr/NX/home"

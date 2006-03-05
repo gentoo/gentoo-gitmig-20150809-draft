@@ -1,4 +1,5 @@
-MD5 befba2a21c13773b3693312dcbad431a ChangeLog 3346
+MD5 56bd5b0dbb9a90cda7a7e1fe140a89ab ChangeLog 3541
+MD5 41f95f92c9e230d7cd356504a8e56269 files/50nxserver 80
 MD5 3210d19111775fb0cf59fb578879c5c2 files/digest-nxserver-freenx-0.2.7 63
 MD5 68fcece75aaa5f55ad36a18960a56806 files/digest-nxserver-freenx-0.2.8 63
 MD5 113c67a0f8b1fb7bc3d06e118148b5cc files/digest-nxserver-freenx-0.4.0 63
@@ -9,4 +10,4 @@ MD5 77fd36d93b0a1b9f35abbe6a1c146561 metadata.xml 482
 MD5 95bc5eb4659bbab6c1b40fe962683ee5 nxserver-freenx-0.2.7.ebuild 2744
 MD5 04d7b917ab2c64f2732141f4e8af10ec nxserver-freenx-0.2.8.ebuild 2932
 MD5 8e4563ab87d9d2099bcb111d74c4a0b2 nxserver-freenx-0.4.0.ebuild 2905
-MD5 4e450217002c91849915fb00104ac4f7 nxserver-freenx-0.5.0.ebuild 3083
+MD5 30921537bf907e1bcd0dcce612ca9fe8 nxserver-freenx-0.5.0.ebuild 3115
