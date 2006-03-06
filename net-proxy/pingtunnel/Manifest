@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 75087da4c56c8c676c1b9e3a214fb5e2 ChangeLog 597
 MD5 a8109fce1f0342daf3ddd3fb377cacd3 files/digest-pingtunnel-0.61 66
 MD5 bed1580dc780e5e8ee7dc4f7d2fb3f19 metadata.xml 380
 MD5 a4a133587449facd311895e6bf013852 pingtunnel-0.61.ebuild 810
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDKAEjG8pv1lIUX4RAjL5AJ4u4F8jXx0uU09Tx65Xu4zw7SCUhwCg4+Vh
+L+ts1Sn9XZLZ+iyJzhdmaXk=
+=dRiK
+-----END PGP SIGNATURE-----
