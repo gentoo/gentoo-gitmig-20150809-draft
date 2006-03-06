@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinclassic/vdr-skinclassic-0.0.1b.ebuild,v 1.1 2006/03/06 17:26:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinclassic/vdr-skinclassic-0.0.1b.ebuild,v 1.2 2006/03/06 17:49:30 zzam Exp $
 
 inherit vdr-plugin
 
@@ -14,4 +14,4 @@ LICENSE="GPL-2"
 
 KEYWORDS="~x86"
 
-DEPEND=">=media-video/vdr-1.3.0"
+DEPEND=">=media-video/vdr-1.3.27"
