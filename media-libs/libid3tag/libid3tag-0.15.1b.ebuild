@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b.ebuild,v 1.20 2006/01/19 20:09:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b.ebuild,v 1.21 2006/03/06 15:12:52 flameeyes Exp $
 
 inherit eutils multilib
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 sh sparc x86"
 IUSE="debug"
 
-DEPEND="virtual/libc
-	>=sys-libs/zlib-1.1.3"
+DEPEND=">=sys-libs/zlib-1.1.3"
 
 src_unpack() {
 	unpack ${A}
