@@ -1,12 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.14 2005/07/26 12:53:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.15 2006/03/06 20:51:59 blubb Exp $
 
 inherit eutils
 
 DESCRIPTION="Self-certifying File System client and server daemons"
 HOMEPAGE="http://www.fs.net/"
-SRC_URI="http://www.fs.net/sfs/@new-york.lcs.mit.edu,u83s4uk49nt8rmp4uwmt2exvz6d3cavh/pub/sfswww/dist/${P}.tar.gz"
+SRC_URI="http://www.fs.net/sfs/@new-york.lcs.mit.edu,u83s4uk49nt8rmp4uwmt2exvz6d3cavh/pub/sfswww/dist/${P}.tar.gz
+		mirror://gentoo/${P}-gcc3.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -37,7 +38,7 @@ src_unpack() {
 	cd ${S}
 	sed -i~ 's/-Werror//g' configure
 
-	epatch ${FILESDIR}/${P}-gcc3.patch.bz2
+	epatch ${WORKDIR}/${P}-gcc3.patch
 }
 
 src_compile() {
