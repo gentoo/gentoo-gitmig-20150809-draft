@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.8-r1.ebuild,v 1.2 2005/11/28 13:15:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.8-r1.ebuild,v 1.3 2006/03/06 03:45:05 stkn Exp $
 
 inherit eutils perl-app
 
@@ -10,7 +10,7 @@ BRI_VERSION="0.2.0-RC8h"
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="ftp://ftp.digium.com/pub/telephony/${PN}/old-releases/${P}.tar.gz
-	 ftp://ftp.digium.com/pub/telephony/${PN}/${PN}-addons-${ADDONS_VERSION}.tar.gz
+	 ftp://ftp.digium.com/pub/telephony/${PN}/old-releases/${PN}-addons-${ADDONS_VERSION}.tar.gz
 	 bri? ( http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )"
 
 S_ADDONS=${WORKDIR}/${PN}-addons-${ADDONS_VERSION}

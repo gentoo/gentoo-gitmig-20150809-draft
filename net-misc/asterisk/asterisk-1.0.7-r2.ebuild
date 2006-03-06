@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r2.ebuild,v 1.2 2005/11/28 13:15:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r2.ebuild,v 1.3 2006/03/06 03:45:05 stkn Exp $
 
 inherit eutils perl-app
 
