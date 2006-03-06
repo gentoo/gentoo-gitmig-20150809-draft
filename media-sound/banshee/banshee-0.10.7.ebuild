@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.7.ebuild,v 1.1 2006/03/06 18:31:15 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.7.ebuild,v 1.2 2006/03/06 18:58:12 metalgod Exp $
 
 inherit eutils gnome2 mono
 
@@ -97,4 +97,9 @@ pkg_postinst() {
 	einfo "In case you have an ipod please rebuild this package with USE=ipod"
 	einfo "If you have a audio player supported by libnjb please"
 	einfo "rebuild this package with USE=njb"
+	einfo
+	einfo
+	einfo "This version supports both gstreamer 0.8.x and 0.10.x"
+	einfo "This ebuild will only build Banshee with gstreamer 0.8.x support"
+	einfo
 }
