@@ -1,13 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c-r2.ebuild,v 1.1 2005/02/18 22:23:50 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c-r2.ebuild,v 1.2 2006/03/06 20:41:40 blubb Exp $
 
 inherit eutils flag-o-matic
 
 S=${WORKDIR}/imap-2002c1
 
 DESCRIPTION="Linuxconf style virtual domain patched UW server daemons for IMAP and POP network mail protocols."
-SRC_URI="ftp://ftp.cac.washington.edu/imap/imap-2002c1.tar.Z"
+SRC_URI="ftp://ftp.cac.washington.edu/imap/imap-2002c1.tar.Z
+		mirror://gentoo/imap-2002c-virtual.patch.bz2"
 HOMEPAGE="http://www.washington.edu/imap/ http://vimap.sf.net/"
 
 LICENSE="as-is"
@@ -43,7 +44,7 @@ src_unpack() {
 	# Tarball packed with bad file perms
 	chmod -R ug+w ${S}
 	cd ${S}
-	bzcat ${FILESDIR}/imap-2002c-virtual.patch.bz2 | patch -p0
+	epatch ${WORKDIR}/imap-2002c-virtual.patch
 	if use amd64; then
 		# Now we must make all the individual Makefiles use different CFLAGS,
 		# otherwise they would all use -fPIC
