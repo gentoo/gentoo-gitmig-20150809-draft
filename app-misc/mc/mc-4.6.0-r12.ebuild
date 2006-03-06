@@ -1,13 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r12.ebuild,v 1.5 2005/07/07 11:42:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r12.ebuild,v 1.6 2006/03/06 11:59:22 blubb Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="GNU Midnight Commander cli-based file manager"
 HOMEPAGE="http://www.ibiblio.org/mc/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/${PN}/${P}.tar.gz
-	http://www.spock.mga.com.pl/public/gentoo/${P}-sambalib-3.0.0.patch.bz2"
+	http://www.spock.mga.com.pl/public/gentoo/${P}-sambalib-3.0.0.patch.bz2
+	mirror://gentoo/${P}-can-2004-0226-0231-0232.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -35,7 +36,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-find.patch
 	epatch ${FILESDIR}/${P}-cpan-2003-1023.patch
-	epatch ${FILESDIR}/${P}-can-2004-0226-0231-0232.patch.bz2
+	epatch ${DISTDIR}/${P}-can-2004-0226-0231-0232.patch.bz2
 	epatch ${FILESDIR}/${P}-vfs.patch
 	epatch ${FILESDIR}/${P}-ftp.patch
 	epatch ${FILESDIR}/${P}-largefile.patch
