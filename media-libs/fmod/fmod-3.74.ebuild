@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.74.ebuild,v 1.4 2005/09/13 15:16:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.74.ebuild,v 1.5 2006/03/06 14:25:51 flameeyes Exp $
 
 MY_P="fmodapi${PV/.}linux"
 S=${WORKDIR}/${MY_P}
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND="${DEPEND}
-	 amd64? ( app-emulation/emul-linux-x86-baselibs )"
+	amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
 src_install() {
 	dolib api/libfmod-${PV}.so
