@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6684731f6effe93a0c17049659d183da ChangeLog 794
 MD5 3146d0dcfb49988761d4fcd2c666caf6 files/digest-ziproxy-1.5.2 66
 MD5 007b66959e3f4d9ec2759e2fbfba370a files/ziproxy.confd 384
 MD5 71e0da62940b75aeeddf33c1b056d72c files/ziproxy.initd 762
 MD5 13eac033f7cb4d69bd27489ab828449a metadata.xml 513
 MD5 00d4b67a84956aa3b7286a5ab5c24022 ziproxy-1.5.2.ebuild 1637
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDL6ljG8pv1lIUX4RAglwAJ911pCpHhs672IWGWaVIwczYkmiQgCfXnPR
+HtCdFbuiu7XJGu7Cj63q5/c=
+=i1Jy
+-----END PGP SIGNATURE-----
