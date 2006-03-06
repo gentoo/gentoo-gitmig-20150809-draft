@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.104-r1.ebuild,v 1.6 2006/03/06 04:52:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.104-r1.ebuild,v 1.7 2006/03/06 12:02:54 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -32,6 +32,8 @@ src_unpack() {
 
 	# tiny gcc4 fixes
 	epatch "${FILESDIR}"/${PN}-0.104-gcc4.patch
+	# fix from fedora
+	epatch "${FILESDIR}"/${PN}-0.103-mmx.patch
 
 	epunt_cxx #74497
 }
