@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.32 2006/02/25 07:33:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.33 2006/03/06 12:12:34 flameeyes Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -85,7 +85,9 @@ src_unpack() {
 		unpack ${_XA_IV32}${_XA_EXT}
 	fi
 	cd "${S}"
-	sed -i 's:/usr/X11R6:/usr:g' Makefile*
+	sed -i -e 's:/usr/X11R6:/usr:g' Makefile*
+
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 }
 
 src_compile() {
