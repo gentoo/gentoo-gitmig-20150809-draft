@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust-cvs/wanderlust-cvs-2.15.ebuild,v 1.1 2005/04/16 06:10:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust-cvs/wanderlust-cvs-2.15.ebuild,v 1.2 2006/03/06 01:10:38 mkennedy Exp $
 
 ECVS_SERVER="cvs.m17n.org:/cvs/root"
 ECVS_MODULE="wanderlust"
@@ -22,7 +22,6 @@ DEPEND="virtual/emacs
 	>=app-emacs/apel-10.6
 	virtual/flim
 	virtual/semi
-	!app-emacs/wl
 	!app-emacs/wanderlust"
 
 S="${WORKDIR}/${ECVS_MODULE}"
