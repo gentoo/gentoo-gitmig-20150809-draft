@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/icoutils/icoutils-0.22.0.ebuild,v 1.4 2005/03/15 05:33:35 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/icoutils/icoutils-0.22.0.ebuild,v 1.5 2006/03/06 14:10:22 flameeyes Exp $
 
 DESCRIPTION="A set of programs for extracting and converting images in Microsoft Windows icon and cursor files (.ico, .cur)."
 HOMEPAGE="http://www.student.lu.se/~nbi98oli"
@@ -11,7 +11,10 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="nls"
 
-DEPEND="media-libs/libpng
+RDEPEND="media-libs/libpng
+	nls? ( virtual/libintl )"
+
+DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_compile() {

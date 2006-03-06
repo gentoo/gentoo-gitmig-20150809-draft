@@ -1,7 +1,34 @@
-MD5 0a0491dc38e87f9d8806eecf4e7de347 ChangeLog 1216
-MD5 aa20f50306af18f917256bfc99e22073 icoutils-0.17.0.ebuild 630
-MD5 5189723dfaef651238e1023d0255673c icoutils-0.22.0.ebuild 783
-MD5 211e36989b61a018496e40a6fb33b807 icoutils-0.23.0.ebuild 796
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 98f4a5014d2e8128bc225cc87ec9ec9a ChangeLog 1449
+RMD160 e03c482454899df31d1b8eb85652b7efc2407e30 ChangeLog 1449
+SHA256 be6fcf06ed61edc281363aeb907324aacf821e734b07d0642220c5ae57c1b2e5 ChangeLog 1449
 MD5 06b2ab9bde565384278bdd10b8d8d4b6 files/digest-icoutils-0.17.0 67
+RMD160 71a26650a64a9eebd6d0ff44cfa9f3681f8159aa files/digest-icoutils-0.17.0 67
+SHA256 dc5e2e8a8e14ac5d7c986eede27ef5fcccb38eb3248e64f2ff4776bfae28de5a files/digest-icoutils-0.17.0 67
 MD5 70de881a8f9a14a104f86461a540bee2 files/digest-icoutils-0.22.0 67
+RMD160 df3c6c2989fbf4e25aafcad39e0b6d630733eaac files/digest-icoutils-0.22.0 67
+SHA256 7251a61ba86a4cf94486d71efcabd51f6baa5e2793cf1a43b82d9d460f5c3e25 files/digest-icoutils-0.22.0 67
 MD5 3e55b33ea2433fb9d3677ebbd75128fe files/digest-icoutils-0.23.0 67
+RMD160 68bc982efb953d6703e069f60999b036296e5350 files/digest-icoutils-0.23.0 67
+SHA256 3bc2541909fd729d305f8853048ab0db9473dbfbd66b48fc999b1480055bb5db files/digest-icoutils-0.23.0 67
+MD5 e108b03ea9cb49dba521b17e04603297 icoutils-0.17.0.ebuild 609
+RMD160 1a23923cf23b8534bdd8398763cf53f4391abfe2 icoutils-0.17.0.ebuild 609
+SHA256 e5400aace7d41a3a4e49482a2ba52427c773379be81a4d6cc0e6c64c04100791 icoutils-0.17.0.ebuild 609
+MD5 f3bbcf1ca04fe9f2a034603f9a8675b3 icoutils-0.22.0.ebuild 833
+RMD160 60bc3c204e1c7ef41e6684e5b135d070392df809 icoutils-0.22.0.ebuild 833
+SHA256 670245a78187af80c7c477bb374642df6885805bee30f97bc0dea001d015e34f icoutils-0.22.0.ebuild 833
+MD5 6b3d25c1446b37eca49f963382d82983 icoutils-0.23.0.ebuild 846
+RMD160 16d58c803e2848e159d70a5294953eb88a227d9b icoutils-0.23.0.ebuild 846
+SHA256 e658c782233e4ec945fe21c9606496b96bc9838ec55ce43d3bf9d3b45acd59af icoutils-0.23.0.ebuild 846
+MD5 ed8349e980407e49b724e04ee5a9a2ed metadata.xml 231
+RMD160 c13056229989c3d4f448a7c7abcff3f4ee7ce13c metadata.xml 231
+SHA256 4595c2615fd7c9095517949b1a920d4457f92801eb9d46307b18aafe58ec2a8a metadata.xml 231
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDEK7AiZjviIA2XgRAmd5AJ97QzHYpZSvVI+Bg8IUC3IDLID42wCeK71a
+YGOnhx7bI/xTIrrNylOC9qE=
+=hYYt
+-----END PGP SIGNATURE-----
