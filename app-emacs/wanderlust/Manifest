@@ -1,11 +1,49 @@
-MD5 42cbdeef12abd31687396ae303321803 metadata.xml 271
-MD5 5967e23878bd46218ff48534d9777af2 wanderlust-2.12.2.ebuild 1166
-MD5 15efbac5bf71b06ba5b629471f9efd1a ChangeLog 9120
-MD5 d119c0787a44b51692e5fb7a8416d9d7 wanderlust-2.10.1-r2.ebuild 1502
-MD5 86e3627cc8ff87372685fa6e57123fba wanderlust-2.14.0-r1.ebuild 1338
-MD5 2a2781c29d6e25ed6cda84e37b6a7231 wanderlust-2.8.1.ebuild 1262
-MD5 f88c48f36090dee006f752e22bf349b0 files/digest-wanderlust-2.14.0-r1 129
-MD5 cea1369dfbb86aa565214ecc4d43f3a3 files/digest-wanderlust-2.12.2 62
-MD5 a8f86382da45e4a1136e478ad781477e files/digest-wanderlust-2.10.1-r2 131
-MD5 44642f0fb41a990b0451d247cfb33033 files/digest-wanderlust-2.8.1 61
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3703267d1f4026204e344e91ee84adda ChangeLog 9307
+RMD160 673cd81446cb5fe15d62ba26f00fae2eeae816d8 ChangeLog 9307
+SHA256 196276da3591740f176155455e8bee8f650f7d4e6e0c9bb5850b0935b48e656f ChangeLog 9307
 MD5 bc00733431cbaa44de9d6de058098523 files/70wl-gentoo.el 317
+RMD160 ea07e12cb61a7bc12e35e6ab8d772aa86dd374a5 files/70wl-gentoo.el 317
+SHA256 f16d95efaa88029677b03476629d3146afb60c1bbaa0a39ca3b86aac990456fb files/70wl-gentoo.el 317
+MD5 a8f86382da45e4a1136e478ad781477e files/digest-wanderlust-2.10.1-r2 131
+RMD160 faaa54f0274c45089a341120369a1a0387739b34 files/digest-wanderlust-2.10.1-r2 131
+SHA256 e4864647ea6c83f19cac02baa71ac486b5e11f7e3d2195fd07f245d7b0c09062 files/digest-wanderlust-2.10.1-r2 131
+MD5 cea1369dfbb86aa565214ecc4d43f3a3 files/digest-wanderlust-2.12.2 62
+RMD160 f0d6671087f3d89af4ae05bb7fc8cdb9aa3a1d3c files/digest-wanderlust-2.12.2 62
+SHA256 2f590ce4dcf0c704ff82cc70ff5e2fd732a6cc6b528489ead05d5e238fcba70c files/digest-wanderlust-2.12.2 62
+MD5 f88c48f36090dee006f752e22bf349b0 files/digest-wanderlust-2.14.0-r1 129
+RMD160 e6e0c19baa7a1511a8320b0d6bcbde8502c1daf6 files/digest-wanderlust-2.14.0-r1 129
+SHA256 70fad8c7d03b72f36a57b2fc27de42fa424d6bffe9b1475936388b4feb430426 files/digest-wanderlust-2.14.0-r1 129
+MD5 f7d1f270eacb1e18c4abbada7d9c3435 files/digest-wanderlust-2.14.0-r2 479
+RMD160 53b4cf586cfdb372b2e8e46e0ab35ee1bb4bcb48 files/digest-wanderlust-2.14.0-r2 479
+SHA256 5bd2a9db1f07fa2e6e45a657b16a194c8455f063b406a0aaaf2cc248cd8cb32f files/digest-wanderlust-2.14.0-r2 479
+MD5 44642f0fb41a990b0451d247cfb33033 files/digest-wanderlust-2.8.1 61
+RMD160 cc3b7a604b345c529238b50d78495da8f51af3b3 files/digest-wanderlust-2.8.1 61
+SHA256 ed7966f927a90861d846da3c5733000f1b472256dba90c9c5afe3ea9ed863ab7 files/digest-wanderlust-2.8.1 61
+MD5 42cbdeef12abd31687396ae303321803 metadata.xml 271
+RMD160 ddc2a3c253d2dd89f817100afa72bca65813b1fb metadata.xml 271
+SHA256 8493e5a575f03504533323a2adc2355e185e3ddb2b4dec68e90adb122fcdd2df metadata.xml 271
+MD5 d119c0787a44b51692e5fb7a8416d9d7 wanderlust-2.10.1-r2.ebuild 1502
+RMD160 ed0938121513d3cfc776a34abe412e9d8b076ddf wanderlust-2.10.1-r2.ebuild 1502
+SHA256 cfb985872e38ae644cccb151f37bea36469bca5eb3ff3fa619d390bc65e39a6b wanderlust-2.10.1-r2.ebuild 1502
+MD5 5967e23878bd46218ff48534d9777af2 wanderlust-2.12.2.ebuild 1166
+RMD160 77b374f255a6e59b1bc2f19988e30c5c2f6901f3 wanderlust-2.12.2.ebuild 1166
+SHA256 f9219c92938749324a4f8489859a4d08089008e672c2b275e37fc23edba753a6 wanderlust-2.12.2.ebuild 1166
+MD5 86e3627cc8ff87372685fa6e57123fba wanderlust-2.14.0-r1.ebuild 1338
+RMD160 85efe00f360e194c40624691b9a0de1df4e671c5 wanderlust-2.14.0-r1.ebuild 1338
+SHA256 0f3cb028368d908265cc30c3c627b32c8faa63ada32125bdca06d5747d3c39ff wanderlust-2.14.0-r1.ebuild 1338
+MD5 91e0088435855bc452b1154487460817 wanderlust-2.14.0-r2.ebuild 1416
+RMD160 d3cb388165eda0a9777388016ecf86248ad4cd98 wanderlust-2.14.0-r2.ebuild 1416
+SHA256 618491cfe7952b26147d67d5ca1f6664de53a0896cbd1b30bc613e17ffde75a5 wanderlust-2.14.0-r2.ebuild 1416
+MD5 2a2781c29d6e25ed6cda84e37b6a7231 wanderlust-2.8.1.ebuild 1262
+RMD160 7b960e243c7b4344270616fde600f95693012b6a wanderlust-2.8.1.ebuild 1262
+SHA256 9f98c5ced059cf93a749fb30d8df75ec83c5da5c421d5f7c1e636eb307cd2cca wanderlust-2.8.1.ebuild 1262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEC+ENyiNZaEAZA+ARAkbtAJ9mc04/7CViA2XDpAoGirhhnjjtTQCfYHx9
+Q37a0lovhA3YwtRhFUUmnr0=
+=yk5m
+-----END PGP SIGNATURE-----
