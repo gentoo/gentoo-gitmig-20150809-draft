@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.1.2.ebuild,v 1.2 2006/02/14 15:12:14 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.1.2.ebuild,v 1.3 2006/03/06 11:41:44 markusle Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_compile() {
 	local myconf="${myconf} --disable-doc --without-MP --with-factory --with-libfac --prefix=${S}"
 	econf $(use_enable emacs) \
 		${myconf} || die "econf failed"
-	emake || die "make failed"
+	emake -j1 || die "make failed"
 }
 
 src_install () {
