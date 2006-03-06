@@ -10,11 +10,11 @@ MD5 5838403ff8fe47285fdc4235a53467ba files/squidguard-1.2.0-db4.patch 685
 MD5 71814cadfec6eed3d7ee2437fdd1f0ab files/squidguard-1.2.0-db41.patch 794
 MD5 d639b977d8cfd92f19913f1d9fa12564 files/squidguard-1.2.0-db42.patch 1348
 MD5 35bcd0f162808937c8e8dcfa3ffca0c4 metadata.xml 264
-MD5 4aa82c44fc5305463752806aa5a7e0cb squidguard-1.2.0-r1.ebuild 1933
+MD5 4c9af73656606823b5ac55a2f7f98df1 squidguard-1.2.0-r1.ebuild 1874
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDmt2+V3J2n04EauwRAn0lAKDSdFxef4ybhfQnKETbsfyZQgkPcQCgtSTK
-eWoykyjksZwN4K4IuXb3w8A=
-=6Xjy
+iD8DBQFEDKlfjG8pv1lIUX4RAkXYAKDwNJbxrGs6YiLwGSPUFsubIDM7/gCg03NI
+jWaxDYjDG6jmuJV8AGFBnGA=
+=8pUp
 -----END PGP SIGNATURE-----

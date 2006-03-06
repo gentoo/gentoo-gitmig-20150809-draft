@@ -1,16 +1,16 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.2.0-r1.ebuild,v 1.2 2005/10/04 21:26:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.2.0-r1.ebuild,v 1.3 2006/03/06 21:27:46 mrness Exp $
 
 inherit eutils
 
-MY_P=squidGuard-${PV}
 DESCRIPTION="Combined filter, redirector and access controller plugin for Squid."
 HOMEPAGE="http://www.squidguard.org"
-SRC_URI="http://ftp.teledanmark.no/pub/www/proxy/squidGuard/${MY_P}.tar.gz"
+SRC_URI="http://ftp.teledanmark.no/pub/www/proxy/squidGuard/squidGuard-${PV}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ppc64 ~amd64"
+KEYWORDS="~amd64 ppc ppc64 x86"
 IUSE=""
 
 RDEPEND="net-proxy/squid
@@ -19,14 +19,14 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/squidGuard-${PV}"
 
 src_unpack() {
 	unpack ${A} || die "unpack problem"
-	cd ${S}
-	epatch ${FILESDIR}/${P}-db4.patch  || die
-	epatch ${FILESDIR}/${P}-db41.patch || die
-	epatch ${FILESDIR}/${P}-db42.patch || die
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-db4.patch"
+	epatch "${FILESDIR}/${P}-db41.patch"
+	epatch "${FILESDIR}/${P}-db42.patch"
 
 	autoconf || die "autoconf problem"
 }
@@ -37,24 +37,24 @@ src_compile() {
 		--with-sg-logdir=/var/log/squidGuard \
 		|| die "configure problem"
 
-	mv src/Makefile src/Makefile.orig
-	sed <src/Makefile.orig >src/Makefile \
+	sed -i \
 		-e "s|logdir\t= /var/log/squidGuard|logdir\t= ${D}/var/log/squidGuard|" \
-		-e "s|cfgdir\t= /etc/squidGuard|cfgdir\t= ${D}/etc/squidGuard|"
+		-e "s|cfgdir\t= /etc/squidGuard|cfgdir\t= ${D}/etc/squidGuard|" \
+		src/Makefile
 
 	emake || die "compile problem"
 }
 
 src_install() {
-	make prefix=${D}/usr install
+	make prefix="${D}/usr" install
 
 	dodir /var/log/squidGuard
 	fowners squid:squid /var/log/squidGuard
 
 	insinto /etc/squidGuard/sample
-	doins ${FILESDIR}/squidGuard.conf.*
+	doins "${FILESDIR}"/squidGuard.conf.*
 	insinto /etc/squidGuard/sample/db
-	doins ${FILESDIR}/blockedsites
+	doins "${FILESDIR}"/blockedsites
 
 	dodoc ANNOUNCE CHANGELOG README
 	dohtml doc/*.html
