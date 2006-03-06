@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/nylon/nylon-1.2-r2.ebuild,v 1.2 2005/05/01 18:03:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/nylon/nylon-1.2-r2.ebuild,v 1.3 2006/03/06 19:32:23 mrness Exp $
 
 DESCRIPTION="A lightweight SOCKS proxy server"
 HOMEPAGE="http://monkey.org/~marius/nylon/"
@@ -14,9 +14,9 @@ IUSE=""
 DEPEND=">=dev-libs/libevent-0.6"
 
 src_install() {
-	einstall || die
+	einstall || die "make install failed"
 	dodoc README THANKS
 
-	insinto /etc ; doins ${FILESDIR}/nylon.conf
-	newinitd ${FILESDIR}/nylon.init nylond
+	insinto /etc ; doins "${FILESDIR}/nylon.conf"
+	newinitd "${FILESDIR}/nylon.init" nylond
 }
