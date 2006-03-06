@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0.ebuild,v 1.12 2005/10/06 21:22:49 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0.ebuild,v 1.13 2006/03/06 19:09:54 mrness Exp $
 
 DESCRIPTION="Proxy cache for Gentoo packages"
 HOMEPAGE="http://gertjan.freezope.org/replicator/"
@@ -21,23 +21,23 @@ src_install(){
 	# Daemon and repcacheman into /usr/bin
 	exeinto /usr/bin
 	doexe http-replicator
-	newexe ${FILESDIR}/http-replicator-3.0-callrepcacheman-0.1 repcacheman
+	newexe "${FILESDIR}/http-replicator-3.0-callrepcacheman-0.1" repcacheman
 	if has_version '>=sys-apps/portage-2.0.51'; then
-		newexe ${FILESDIR}/http-replicator-3.0-repcacheman-0.33 repcacheman.py
+		newexe "${FILESDIR}/http-replicator-3.0-repcacheman-0.33" repcacheman.py
 	else
-		newexe ${FILESDIR}/http-replicator-3.0-repcacheman-0.21 repcacheman.py
+		newexe "${FILESDIR}/http-replicator-3.0-repcacheman-0.21" repcacheman.py
 	fi
 
 	# Config file into /etc/conf.d
 	insinto /etc/conf.d
-	newins ${FILESDIR}/http-replicator-3.0.conf http-replicator
+	newins "${FILESDIR}/http-replicator-3.0.conf" http-replicator
 
 	# Docs
 	dodoc README debian/changelog
 
 	# init.d scripts
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/http-replicator-3.0.init http-replicator
+	newexe "${FILESDIR}/http-replicator-3.0.init" http-replicator
 
 	# Man Page - Not Gentooified yet
 	doman http-replicator.1
