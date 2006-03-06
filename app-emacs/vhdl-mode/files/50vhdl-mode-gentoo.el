@@ -1,7 +1,4 @@
+;; site-lisp configuration for vhdl-mode
 
-;;;
-;;; VHDL mode
-;;;
 (autoload 'vhdl-mode "vhdl-mode" "VHDL Mode" t)
-(setq auto-mode-alist (cons '("\\.vhdl?\\'" . vhdl-mode) auto-mode-alist))
-
+(add-to-list 'auto-mode-alist '("\\.vhdl?\\'" . vhdl-mode))

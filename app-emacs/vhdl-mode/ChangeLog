@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/vhdl-mode
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/ChangeLog,v 1.6 2005/08/28 02:30:55 tester Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/ChangeLog,v 1.7 2006/03/06 06:03:53 mkennedy Exp $
+
+*vhdl-mode-3.33.8 (06 Mar 2006)
+
+  06 Mar 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  files/50vhdl-mode-gentoo.el, +vhdl-mode-3.33.8.ebuild:
+  New upstream version; Use our Gentoo ports of app-emacs/cedet or
+  app-emacs/speedbar instead of the bundled ones; Resolves Bug #115547.
 
   28 Aug 2005; Olivier Crête <tester@gentoo.org> vhdl-mode-3.33.3.ebuild:
   Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing
