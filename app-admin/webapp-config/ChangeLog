@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.24 2006/03/04 16:04:23 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.25 2006/03/06 08:32:41 wrobel Exp $
+
+  06 Mar 2006; <wrobel@gentoo.org> webapp-config-1.50.10.ebuild,
+  webapp-config-1.50.11.ebuild:
+  Added 'keepdir /var/db/webapps' as a fix to bug #125154
 
 *webapp-config-1.50.11 (04 Mar 2006)
 

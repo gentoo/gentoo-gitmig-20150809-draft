@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.10.ebuild,v 1.9 2006/03/05 03:56:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.10.ebuild,v 1.10 2006/03/06 08:32:41 wrobel Exp $
 
 inherit eutils distutils
 
@@ -28,6 +28,7 @@ src_install() {
 	dodir /etc/vhosts
 	cp config/webapp-config ${D}/etc/vhosts/
 	keepdir /usr/share/webapps
+	keepdir /var/db/webapps
 	dodoc examples/phpmyadmin-2.5.4-r1.ebuild AUTHORS.txt TODO.txt CHANGES.txt examples/postinstall-en.txt
 	doman doc/webapp-config.5 doc/webapp-config.8 doc/webapp.eclass.5
 	dohtml doc/webapp-config.5.html doc/webapp-config.8.html doc/webapp.eclass.5.html
