@@ -1,6 +1,5 @@
-diff -aur /tmp/libdv-0.104/libdv/encode_x86_64.S /tmp/libdv-0.104-patched/libdv/encode_x86_64.S
---- /tmp/libdv-0.104/libdv/encode_x86_64.S	2004-11-17 03:36:30.000000000 +0000
-+++ /tmp/libdv-0.104-patched/libdv/encode_x86_64.S	2004-12-10 07:53:12.000000000 +0000
+--- libdv-0.104/libdv/encode_x86_64.S
++++ libdv-0.104/libdv/encode_x86_64.S
 @@ -47,7 +47,8 @@
  
  	mov	$63, %rcx                        # loop counter
@@ -21,9 +20,8 @@ diff -aur /tmp/libdv-0.104/libdv/encode_x86_64.S /tmp/libdv-0.104-patched/libdv/
  	
  vlc_num_bits_block_x86_loop:
  	movw	(%rdi), %ax        /* get the next coeffiecient */
-diff -aur /tmp/libdv-0.104/libdv/idct_block_mmx_x86_64.S /tmp/libdv-0.104-patched/libdv/idct_block_mmx_x86_64.S
---- /tmp/libdv-0.104/libdv/idct_block_mmx_x86_64.S	2004-10-20 04:49:24.000000000 +0100
-+++ /tmp/libdv-0.104-patched/libdv/idct_block_mmx_x86_64.S	2004-12-10 07:38:23.000000000 +0000
+--- libdv-0.104/libdv/idct_block_mmx_x86_64.S
++++ libdv-0.104/libdv/idct_block_mmx_x86_64.S
 @@ -22,7 +22,7 @@
  /* void _dv_idct_88(dv_coeff_t *block) */
  	/* argument block=rdi */
@@ -33,9 +31,8 @@ diff -aur /tmp/libdv-0.104/libdv/idct_block_mmx_x86_64.S /tmp/libdv-0.104-patche
  
  /* 
   *	column 0: even part
-diff -aur /tmp/libdv-0.104/libdv/quant_x86_64.S /tmp/libdv-0.104-patched/libdv/quant_x86_64.S
---- /tmp/libdv-0.104/libdv/quant_x86_64.S	2004-11-17 03:36:30.000000000 +0000
-+++ /tmp/libdv-0.104-patched/libdv/quant_x86_64.S	2004-12-10 07:36:42.000000000 +0000
+--- libdv-0.104/libdv/quant_x86_64.S
++++ libdv-0.104/libdv/quant_x86_64.S
 @@ -73,10 +73,10 @@
  	/*  pq = dv_quant_shifts[qno + dv_quant_offset[class]]; */
  	mov	%rsi,%rax	/* qno */
@@ -62,9 +59,8 @@ diff -aur /tmp/libdv-0.104/libdv/quant_x86_64.S /tmp/libdv-0.104-patched/libdv/q
  	lea	(%r11,%rax,4),%r11	/* r11 is pq */
  
  	/* extra = (class == 3); */
-diff -aur /tmp/libdv-0.104/libdv/vlc_x86_64.S /tmp/libdv-0.104-patched/libdv/vlc_x86_64.S
---- /tmp/libdv-0.104/libdv/vlc_x86_64.S	2004-10-20 04:49:24.000000000 +0100
-+++ /tmp/libdv-0.104-patched/libdv/vlc_x86_64.S	2004-12-12 05:43:49.000000000 +0000
+--- libdv-0.104/libdv/vlc_x86_64.S
++++ libdv-0.104/libdv/vlc_x86_64.S
 @@ -16,28 +16,28 @@
  	/* klass = dv_vlc_classes[maxbits][(bits & (dv_vlc_class_index_mask[maxbits])) >> */
  	/*         (dv_vlc_class_index_rshift[maxbits])];  */

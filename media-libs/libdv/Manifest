@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 304d121e8c864dca9fdda9e0d4ebbf1c ChangeLog 6699
 RMD160 eb3924894f6a9677a84450738898ae808feaafb3 ChangeLog 6699
 SHA256 243a09b37d242472069645ad09b01e73de07c3011e0ab964575ec8047932eaa3 ChangeLog 6699
@@ -19,9 +16,9 @@ SHA256 c16796e3ac7d6d27aa03b90f90952d3e3e2234ef7132ecc8c0a4711d5f1ad651 files/di
 MD5 3d3bbf2ecd039329fe6b73dc9ada38bf files/digest-libdv-0.99-r1 62
 RMD160 5ff13b02a01518faf9c931d11f3a74619794ee72 files/digest-libdv-0.99-r1 62
 SHA256 8fcd2519bb397f8d1bbd1fb22c9b8c1fbf39c2941c1f576a91ae3f7eb9401e3b files/digest-libdv-0.99-r1 62
-MD5 ccdc17c32d38a07aab1b06d6932a13f8 files/libdv-0.104-amd64reloc.patch 9114
-RMD160 239e36fe1d36e1188c11a6c36f21e8775aa4c8ee files/libdv-0.104-amd64reloc.patch 9114
-SHA256 aef82a5b9a3e55ec32a81f420cc332bef102000c5b75a21ea21b2417f49603e4 files/libdv-0.104-amd64reloc.patch 9114
+MD5 17d2e52bc602448ef8b68fc80478152a files/libdv-0.104-amd64reloc.patch 8362
+RMD160 ad08132a3956e41da4d4b9fa7cd7ab00a606e1bf files/libdv-0.104-amd64reloc.patch 8362
+SHA256 02d44df887e461b23e2bffae2d5f024a3cc9af8fd01abc7fc42ff7be2c8b2ba0 files/libdv-0.104-amd64reloc.patch 8362
 MD5 9c164b3ac9ace66bb2fcefc9ca939d28 files/libdv-0.104-gcc4.patch 1445
 RMD160 bd150c6b3ae4082fef0bd4347240af9764b47cfc files/libdv-0.104-gcc4.patch 1445
 SHA256 32c301e574c598328c2b72e54cec93431820b823b56aba55969350d46d936977 files/libdv-0.104-gcc4.patch 1445
@@ -34,28 +31,21 @@ SHA256 acaaafa94768d3b78d6923d54cabf7386da1c4ddf39f61c334b3f320aaadc7c3 files/li
 MD5 db1c07312c8a5de3d64bc80c44b26d6e files/libdv-0.99-disablegtk.patch 3309
 RMD160 7d61763cc742f8aaddc1931e030128490c0b0e69 files/libdv-0.99-disablegtk.patch 3309
 SHA256 57189f7e660507c50c80b16637f4b1cfdf345dd0d9718ed0c2c2c3db337cf166 files/libdv-0.99-disablegtk.patch 3309
-MD5 9ff480f44ba52c721c629991852b4ddf libdv-0.101.ebuild 1147
-RMD160 28d0182504ad83d86fcb6edadd65057c420c4ab3 libdv-0.101.ebuild 1147
-SHA256 2a7ae09476b120d250dad64f1d8616af9bcd70620630bfd99378f2959d9feb07 libdv-0.101.ebuild 1147
-MD5 46f8f748604df97f78df00b0b89a3768 libdv-0.102.ebuild 1155
-RMD160 212393c666a10434cc5627424fdb7307459988f4 libdv-0.102.ebuild 1155
-SHA256 337cd4a6787fecf35a89ece63d32481c36c4f44c4496710d2c3e770b6e08c69b libdv-0.102.ebuild 1155
-MD5 4252bbe0681e215183b4f5b1c1d8f0a7 libdv-0.104-r1.ebuild 1500
-RMD160 3aa3c933cd5eaced0fdf1f14a6070000b7d343dd libdv-0.104-r1.ebuild 1500
-SHA256 d1b173debca57f5c0c745404098be118e811694de75adb587095fc01ab8706d1 libdv-0.104-r1.ebuild 1500
-MD5 4b6f2ab5770ea5c031c0cebdcd4e3c90 libdv-0.104.ebuild 1225
-RMD160 d91c6065bd0c8918c282fd94071e2cb1ddd56a5f libdv-0.104.ebuild 1225
-SHA256 aad42beffb4248ed95a7b1cf868211ee57a68f1e2e1d006f2f939fb4baf08794 libdv-0.104.ebuild 1225
-MD5 9eddaa9f84b052f62b463beadff4dfe7 libdv-0.99-r1.ebuild 1169
-RMD160 c1cb5010e46bb19dafc015403a2ce8bb82f5f24d libdv-0.99-r1.ebuild 1169
-SHA256 da434d25ecbb198f1bb0af50ffc141a4a32f35fd7cf7656a5269360a4afaadc1 libdv-0.99-r1.ebuild 1169
+MD5 16e25f8306f5392534c9e122a15a1c68 libdv-0.101.ebuild 1236
+RMD160 2a5cacec8da1018143f3068c06ac0ea436f3eeb7 libdv-0.101.ebuild 1236
+SHA256 02e7d004fc639b4db55582b3a395db3ddbe694f2ad087529fd00284dbeace638 libdv-0.101.ebuild 1236
+MD5 c26a71dccb152be11ab822dc61fc4ae8 libdv-0.102.ebuild 1242
+RMD160 14f8761d90e57e3904c3e03d95e1d2b39a51dc5f libdv-0.102.ebuild 1242
+SHA256 4e5a6e28146796ea00e51d80c7bef0171bf5435ea9daf9a4c573e75871b5c853 libdv-0.102.ebuild 1242
+MD5 a318769d1c19f3fec42e7cb56401fb21 libdv-0.104-r1.ebuild 1485
+RMD160 cc2faa6e2c9bb0989f6ea9984b26c28c7d1b1d72 libdv-0.104-r1.ebuild 1485
+SHA256 cb9604503eca64b282935f8d3da28c16ffef5e36f981ca60ac5371b92e4d1e24 libdv-0.104-r1.ebuild 1485
+MD5 9af0184f9281e6dbf633dec4dd9173ec libdv-0.104.ebuild 1315
+RMD160 2724f17fc8fb46ad9db1455e80f34e007aaca971 libdv-0.104.ebuild 1315
+SHA256 4e9570cbef32f705b7d4f2ae222a55bae9d21870733fb37d6334d1f02b3eb801 libdv-0.104.ebuild 1315
+MD5 9bc1bd257f1c5ebac58211fcff44d975 libdv-0.99-r1.ebuild 1261
+RMD160 3e17c43f5d42e91ed461749582037f8215bdf043 libdv-0.99-r1.ebuild 1261
+SHA256 f84918b65f6e0dc4b6baf146cc46d3d33a271874a3876f947fd5079ffc758751 libdv-0.99-r1.ebuild 1261
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
 SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEC0pbCRZPokWLroQRAnyIAKC6HNmLXjlGDAiZhAMyES0dmxR9QgCgo+xU
-RuX6woaooZ4rm1qtTeR7vv0=
-=C/5o
------END PGP SIGNATURE-----
