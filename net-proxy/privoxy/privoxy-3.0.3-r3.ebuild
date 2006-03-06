@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.3-r3.ebuild,v 1.4 2006/01/12 18:35:56 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.3-r3.ebuild,v 1.5 2006/03/06 21:04:01 mrness Exp $
 
 inherit toolchain-funcs eutils
 
@@ -31,19 +31,19 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# add gzip and zlib decompression
-	epatch ${FILESDIR}/privoxy-zlib.patch
+	epatch "${FILESDIR}/privoxy-zlib.patch"
 
-	rm ${S}/autom4te.cache/{output.0,requests,traces.0}
+	rm "${S}"/autom4te.cache/{output.0,requests,traces.0}
 
 	sed -e 's:confdir .:confdir /etc/privoxy:' \
 		-e 's:logdir .:logdir /var/log/privoxy:' \
 		-e 's:logfile logfile:logfile privoxy.log:' \
-		-i ${S}/config || die "sed failed."
+		-i "${S}/config" || die "sed failed."
 	sed -e 's:^\+set-image-blocker{pattern}:+set-image-blocker{blank}:' \
-		-i ${S}/default.action.master || die "sed 2 failed."
+		-i "${S}/default.action.master" || die "sed 2 failed."
 }
 
 src_compile() {
@@ -76,17 +76,17 @@ src_install () {
 
 	insopts -m 0644 -g root -o root
 	diropts -m 0755 -g root -o root
-	for i in developer-manual faq man-page user-manual
-	do
-		insinto /usr/share/doc/${PF}/$i
-		doins doc/webserver/$i/*
+	local i
+	for i in developer-manual faq man-page user-manual ; do
+		insinto "/usr/share/doc/${PF}/${i}"
+		doins doc/webserver/"${i}"/*
 	done
 
 	insopts -m 0750 -g root -o root
 	insinto /usr/sbin
 	doins privoxy
-	newinitd ${FILESDIR}/privoxy.rc7 privoxy
+	newinitd "${FILESDIR}/privoxy.rc7" privoxy
 	insopts -m 0640
 	insinto /etc/logrotate.d
-	newins ${FILESDIR}/privoxy.logrotate privoxy
+	newins "${FILESDIR}/privoxy.logrotate" privoxy
 }

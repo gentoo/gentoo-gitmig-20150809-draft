@@ -7,11 +7,11 @@ MD5 199b985be5ba80912fdd3bf5776e697f files/privoxy-zlib.patch 17945
 MD5 f2b6a652dbfbc65e5b89024a8ea3da7e files/privoxy.logrotate 191
 MD5 2a366b72a6ff8d6d01cf0bef2ac71f0a files/privoxy.rc7 579
 MD5 a31f52e5785898edac47ca00310413e2 metadata.xml 291
-MD5 6dff3b3ec1f37b5b097d539dc946a6ca privoxy-3.0.3-r3.ebuild 2322
+MD5 116b629d35a9c45ff430fbbda3f46b51 privoxy-3.0.3-r3.ebuild 2355
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDxqGZntT9W3vfTuoRAtfLAJ41G6m/GdFt0wAZ7gRZuv5LB7FEIwCeIRpb
-tt42KWdPfkVYRONRSoiqUcQ=
-=otev
+iD8DBQFEDKPNjG8pv1lIUX4RAnzZAKCOHPOLEnIztA1cLtpCMhvYJgdgVwCg37Dc
+6/oG2ToqMHEkFR5+J76xjYo=
+=sW5v
 -----END PGP SIGNATURE-----
