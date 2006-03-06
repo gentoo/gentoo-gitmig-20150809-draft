@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopendaap/libopendaap-0.2.3.ebuild,v 1.8 2005/01/22 15:58:37 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopendaap/libopendaap-0.2.3.ebuild,v 1.9 2006/03/06 16:16:52 flameeyes Exp $
 
 IUSE=""
 
@@ -14,8 +14,6 @@ SLOT="0"
 LICENSE="crazney APSL-2"
 
 KEYWORDS="amd64 x86 ppc"
-
-DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

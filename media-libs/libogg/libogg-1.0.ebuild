@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.0.ebuild,v 1.19 2005/02/05 10:46:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.0.ebuild,v 1.20 2006/03/06 16:13:53 flameeyes Exp $
 
 DESCRIPTION="the Ogg media file format library"
 HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
@@ -10,8 +10,6 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc sparc x86"
 IUSE=""
-
-DEPEND="virtual/libc"
 
 src_compile() {
 	./configure --prefix=/usr --host=${CHOST} || die
