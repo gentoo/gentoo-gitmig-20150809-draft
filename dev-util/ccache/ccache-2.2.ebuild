@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.2.ebuild,v 1.9 2005/01/21 05:36:37 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.2.ebuild,v 1.10 2006/03/06 16:23:03 lisa Exp $
 
 DESCRIPTION="ccache is a fast compiler cache. It is used as a front end to your
 compiler to safely cache compilation output. When the same code is compiled
 again the cached output is used giving a significant speedup."
-SRC_URI="http://ccache.samba.org/ftp/ccache/${P}.tar.gz"
+SRC_URI="http://samba.org/ftp/ccache/${P}.tar.gz"
 HOMEPAGE="http://ccache.samba.org/"
 
 IUSE=""

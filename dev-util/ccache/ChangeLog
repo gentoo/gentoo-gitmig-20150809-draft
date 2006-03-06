@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ccache
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.40 2005/08/06 21:07:53 gongloo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.41 2006/03/06 16:23:03 lisa Exp $
+
+  06 Mar 2006; Lisa Seelye <lisa@gentoo.org> ccache-2.2.ebuild,
+  ccache-2.3.ebuild, ccache-2.4.ebuild:
+  Change SRC_URI to close bug #125246
 
   17 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> ccache-2.3.ebuild:
   Stable on sh.
