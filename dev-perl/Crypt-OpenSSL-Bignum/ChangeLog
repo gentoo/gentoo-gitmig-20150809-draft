@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-Bignum
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Bignum/ChangeLog,v 1.3 2006/02/26 19:45:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Bignum/ChangeLog,v 1.4 2006/03/06 02:20:10 yoswink Exp $
+
+  06 Mar 2006; Jose Luis Rivero <yoswink@gentoo.org>
+  Crypt-OpenSSL-Bignum-0.03.ebuild:
+  Added ~alpha keyword wrt bug #123488 Crypt-OpenSSL-Bignum-0.03.ebuild
 
   26 Feb 2006; Joshua Kinard <kumba@gentoo.org>
   Crypt-OpenSSL-Bignum-0.03.ebuild:
