@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/oops
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.6 2005/06/04 14:38:03 mrness Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.7 2006/03/06 20:33:14 mrness Exp $
+
+*oops-1.5.24_pre20050503-r1 (06 Mar 2006)
+
+  06 Mar 2006; Alin Nastac <mrness@gentoo.org>
+  +files/oops-1.5.24-textrel.patch, +oops-1.5.24_pre20050503-r1.ebuild:
+  Fix QA warnings and sanitize the ebuild code.
 
   04 Jun 2005; Alin Nastac <mrness@gentoo.org> -oops-1.5.23.ebuild:
   Remove obsolete version.

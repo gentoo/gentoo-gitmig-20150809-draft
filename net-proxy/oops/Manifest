@@ -1,16 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ade96e360b510e06a645a021c3efd0f3 oops-1.5.24_pre20050503.ebuild 2554
-MD5 c5f413ab29dd8cfe388327f32eb3026a ChangeLog 2737
-MD5 0bba18e763cee72e6af83a6bc6e1db87 metadata.xml 241
-MD5 6f1e80af4f1280cfb10b31ab9d2ab820 files/oops.cfg 17896
+MD5 3724d29a1c8a113233dbc92c2f22eb2f ChangeLog 2948
 MD5 a36b9f44efe9372d826e375c0b562cf4 files/digest-oops-1.5.24_pre20050503 140
+MD5 a36b9f44efe9372d826e375c0b562cf4 files/digest-oops-1.5.24_pre20050503-r1 140
+MD5 1d6a6205eb41cb5a0c93d0c643375dbf files/oops-1.5.24-textrel.patch 803
+MD5 6f1e80af4f1280cfb10b31ab9d2ab820 files/oops.cfg 17896
 MD5 5428b5e23f57fbf884ff1b92bd9ad562 files/oops.initd 515
+MD5 0bba18e763cee72e6af83a6bc6e1db87 metadata.xml 241
+MD5 528fcebcd8cd8cadd6c32de080d3f17c oops-1.5.24_pre20050503-r1.ebuild 2480
+MD5 ade96e360b510e06a645a021c3efd0f3 oops-1.5.24_pre20050503.ebuild 2554
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFCobzejiC39V7gKu0RAqI/AKDVXpiBeMhAgBR4KK2L3IN6/1KuXwCfVrr8
-QliBMgBvSbyDUsJlT1tvPvY=
-=u2ur
+iD8DBQFEDJyajG8pv1lIUX4RAg+/AKC9TNhgpHM1lMszloyJY5nrr+sY+gCgt+Qu
+50/s2o5Df+/ahYToObKtCrc=
+=Rdfi
 -----END PGP SIGNATURE-----
