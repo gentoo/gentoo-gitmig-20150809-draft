@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.3-r1.ebuild,v 1.17 2005/12/30 01:16:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.3-r1.ebuild,v 1.18 2006/03/06 15:49:45 flameeyes Exp $
 
 IUSE="mmx"
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc amd64"
 
-DEPEND=">=media-libs/jpeg-6b
+DEPEND=">=media-libs/jpeg-6b-r4
 	>=media-libs/libsdl-1.2.2
 	=dev-libs/glib-1.2*
 	x86? ( mmx? ( media-libs/jpeg-mmx ) )"
@@ -22,23 +22,16 @@ DEPEND=">=media-libs/jpeg-6b
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	cp ${FILESDIR}/jpegint.h .
-	cp movtar_play.c movtar_play.c.orig
-	sed -e "s:#include <jinclude.h>::" movtar_play.c.orig > movtar_play.c
+	sed -i -e "s:#include <jinclude.h>::" movtar_play.c
 
 	# Fix building with gcc4
 	epatch ${FILESDIR}/${P}-gcc4.patch
 	epatch ${FILESDIR}/${P}-m4.patch
 	# bug #101397
 	epatch ${FILESDIR}/${P}-asm.patch
-}
 
-src_compile() {
 	elibtoolize
-	econf --disable-dependency-tracking || die
-	emake || die
 }
-
 
 src_install() {
 	einstall || die
