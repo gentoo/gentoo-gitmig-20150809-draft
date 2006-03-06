@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 11673e29676b631531f27b6521569fd4 ChangeLog 3042
-RMD160 e08953769d500cf162fb7a3653a1c97ca2db063a ChangeLog 3042
-SHA256 a129ceeceadf5f35ba8021b0963af8a78f54b047695557761b89d0373718b686 ChangeLog 3042
+MD5 3fe49f9a4acd2d91eea61acfc209c777 ChangeLog 3278
+RMD160 310ccf0afee1411dc890e1f0daf0c0e8b07f2bac ChangeLog 3278
+SHA256 fc16538466738ea458cba80f2287fefe1ca3ce44def19fa684ec51545d1f0e86 ChangeLog 3278
 MD5 447c23445bda51f4e4ec5cd575be1233 banshee-0.10.5-r1.ebuild 3436
 RMD160 97397a86f40ad824e103547c9f97e725cea77928 banshee-0.10.5-r1.ebuild 3436
 SHA256 45ab98fee544385ff1a5e6b61a216c8be978b5f38bfb4ce319313e1bd7548a08 banshee-0.10.5-r1.ebuild 3436
@@ -13,6 +13,9 @@ SHA256 fcd82fa9a1b2bdcc2a6846b21ec7d1000261377eca3a2861f0efb01f425d2a7f banshee-
 MD5 8b6e93a0775ca4fe8004e1d6ea9748f3 banshee-0.10.7.ebuild 3033
 RMD160 cd029b0242b47a99e5fefb5d0449203ef2163717 banshee-0.10.7.ebuild 3033
 SHA256 658c4f1b15bf946afecee195793e5ab899f5489c519b6893aefd3329b6c3a9f6 banshee-0.10.7.ebuild 3033
+MD5 654e6f530b5d5936d4d9f82a39472de7 banshee-0.10.7_p1.ebuild 3276
+RMD160 1fac6cfcddf9eb3a380736adfbc94077e12a94ca banshee-0.10.7_p1.ebuild 3276
+SHA256 a9b869aa6f7bc1a4ef30c92744f880e4115d8b49b8f6ac83b28879d5925e675e banshee-0.10.7_p1.ebuild 3276
 MD5 2ce464fafc8bffde14c9b0f3effb7d8a banshee-0.9.12.ebuild 2282
 RMD160 9e809f79c6a4f9bcfebc6ce1fe0932d2e41d862c banshee-0.9.12.ebuild 2282
 SHA256 2d96d66362e60e6bbb0a1b516701aa5f7e18d19c4c0675c21160bbed7eb068fb banshee-0.9.12.ebuild 2282
@@ -25,6 +28,9 @@ SHA256 5bcc3a1dd327ba97aa0eef8c1d62d36e498cb75a2258ccfbc6a8f5ce8e15490d files/di
 MD5 9cd09c87dca84ae4286dfa759fb3aa97 files/digest-banshee-0.10.7 247
 RMD160 ce38fe31f1c8c49422c00b3ceeb8fcccf4f6db75 files/digest-banshee-0.10.7 247
 SHA256 30cc2e7d5f2c4dd26cb28117a99576c20b88db26d835c5737b1fc6132f6c7709 files/digest-banshee-0.10.7 247
+MD5 9cd09c87dca84ae4286dfa759fb3aa97 files/digest-banshee-0.10.7_p1 247
+RMD160 ce38fe31f1c8c49422c00b3ceeb8fcccf4f6db75 files/digest-banshee-0.10.7_p1 247
+SHA256 30cc2e7d5f2c4dd26cb28117a99576c20b88db26d835c5737b1fc6132f6c7709 files/digest-banshee-0.10.7_p1 247
 MD5 81d990077b77688af3d905db25b40e55 files/digest-banshee-0.9.12 67
 RMD160 0f7475a4adc008ed4d23f40fee68e2669a4a79e4 files/digest-banshee-0.9.12 67
 SHA256 b4febd54d17ef7f0d65b07485eadf3fb36153ffceb6d1fd32ceb4255f0e0b6ca files/digest-banshee-0.9.12 67
@@ -34,7 +40,7 @@ SHA256 50e382a1cdc9b8d5bd7a6e62bae3e8b57cf36e157f70d0136b57d50edf2e8041 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEDIJ/wUpWvClEHQoRArZAAJwKUimB8Lk48pWHrjDdm8F+/sdKJgCfUpjm
-NVnyjpwwnuAD27ZGojcP/Jw=
-=yo9B
+iD8DBQFEDIOowUpWvClEHQoRAqSvAJ9GehU2hv4gA1TmezcvwJs/D2m/TwCggi3M
+E0cZ/C9bQvZglkPRVTtIPvs=
+=LAlb
 -----END PGP SIGNATURE-----
