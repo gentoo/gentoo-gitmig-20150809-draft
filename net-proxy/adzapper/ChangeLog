@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/adzapper
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.25 2006/02/12 21:02:50 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.26 2006/03/06 18:38:30 gmsoft Exp $
+
+  06 Mar 2006; Guy Martin <gmsoft@gentoo.org> adzapper-20060203.ebuild:
+  Stable on hppa.
 
   12 Feb 2006; Jose Luis Rivero <yoswink@gentoo.org>
   adzapper-20060203.ebuild:
