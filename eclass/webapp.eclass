@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.39 2006/01/11 15:19:42 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.40 2006/03/06 08:36:51 wrobel Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -129,8 +129,8 @@ function webapp_configfile ()
 	for m in "$@" ; do
 		webapp_checkfileexists "${m}" "${D}"
 
-		local MY_FILE="$(webapp_strip_appdir ${m})"
-		MY_FILE="$(webapp_strip_cwd ${MY_FILE})"
+		local MY_FILE="$(webapp_strip_appdir "${m}")"
+		MY_FILE="$(webapp_strip_cwd "${MY_FILE}")"
 
 		einfo "(config) ${MY_FILE}"
 		echo "${MY_FILE}" >> ${D}/${WA_CONFIGLIST}
@@ -151,8 +151,8 @@ function webapp_hook_script ()
 	webapp_checkfileexists "${1}"
 
 	einfo "(hook) ${1}"
-	cp "${1}" "${D}/${MY_HOOKSCRIPTSDIR}/$(basename ${1})" || die "Unable to install ${1} into ${D}/${MY_HOOKSCRIPTSDIR}/"
-	chmod 555 "${D}/${MY_HOOKSCRIPTSDIR}/$(basename ${1})"
+	cp "${1}" "${D}/${MY_HOOKSCRIPTSDIR}/$(basename "${1}")" || die "Unable to install ${1} into ${D}/${MY_HOOKSCRIPTSDIR}/"
+	chmod 555 "${D}/${MY_HOOKSCRIPTSDIR}/$(basename "${1}")"
 }
 
 # ------------------------------------------------------------------------
@@ -206,14 +206,14 @@ function webapp_serverowned ()
 {
 	local a=""
 	local m=""
-	if [ ${1} = "-R" ]; then
+	if [ "${1}" = "-R" ]; then
 		shift
 		for m in "$@" ; do
 			for a in $(find ${D}/${m}); do
 				a=${a/${D}\/\///}
 				webapp_checkfileexists "${a}" "$D"
-				local MY_FILE="$(webapp_strip_appdir ${a})"
-				MY_FILE="$(webapp_strip_cwd ${MY_FILE})"
+				local MY_FILE="$(webapp_strip_appdir "${a}")"
+				MY_FILE="$(webapp_strip_cwd "${MY_FILE}")"
 
 				einfo "(server owned) ${MY_FILE}"
 				echo "${MY_FILE}" >> "${D}/${WA_SOLIST}"
@@ -222,8 +222,8 @@ function webapp_serverowned ()
 	else
 		for m in "$@" ; do
 			webapp_checkfileexists "${m}" "$D"
-			local MY_FILE="$(webapp_strip_appdir ${m})"
-			MY_FILE="$(webapp_strip_cwd ${MY_FILE})"
+			local MY_FILE="$(webapp_strip_appdir "${m}")"
+			MY_FILE="$(webapp_strip_cwd "${MY_FILE}")"
 
 			einfo "(server owned) ${MY_FILE}"
 			echo "${MY_FILE}" >> "${D}/${WA_SOLIST}"
@@ -254,7 +254,7 @@ function webapp_server_configfile ()
 	local my_file
 
 	if [ -z "${3}" ]; then
-		my_file="${1}-$(basename ${2})"
+		my_file="${1}-$(basename "${2}")"
 	else
 		my_file="${1}-${3}"
 	fi
