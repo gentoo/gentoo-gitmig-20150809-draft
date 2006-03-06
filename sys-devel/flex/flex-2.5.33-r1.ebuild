@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.33-r1.ebuild,v 1.3 2006/02/27 15:13:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.33-r1.ebuild,v 1.4 2006/03/06 04:24:54 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,6 @@ src_unpack() {
 	[[ -n ${DEB_VER} ]] && epatch "${WORKDIR}"/${PN}_${PV}-${DEB_VER}.diff
 	epatch "${FILESDIR}"/${PN}-2.5.31-include.patch
 	epatch "${FILESDIR}"/${P}-isatty.patch #119598
-	sed -i -e 's:yystr:__yystr:g' flex.skl skel.c #124084
 }
 
 src_compile() {
