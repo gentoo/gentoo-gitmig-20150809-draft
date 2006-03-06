@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.29 2006/03/03 01:55:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.30 2006/03/06 02:54:21 vapier Exp $
+
+  06 Mar 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/ntfsprogs-1.13.0-pkg-config.patch, ntfsprogs-1.13.0.ebuild:
+  Fix fuse detection when gnome support is disabled #124919 by Konstantin
+  Sobolev. Also add support for USE=crypt.
 
 *ntfsprogs-1.13.0 (03 Mar 2006)
 
