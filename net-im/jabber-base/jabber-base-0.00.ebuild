@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/jabber-base-0.00.ebuild,v 1.2 2006/02/28 16:42:48 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/jabber-base-0.00.ebuild,v 1.3 2006/03/06 12:23:11 humpback Exp $
 
 inherit eutils
 
@@ -34,15 +34,19 @@ S="${WORKDIR}"
 
 
 src_install() {
-	# Add our default jabber group and user
-	enewgroup jabber
-	enewuser jabber -1 -1 -1 jabber
 
 	keepdir /etc/jabber
 	keepdir /var/run/jabber
 	keepdir /var/spool/jabber
 	keepdir /var/log/jabber
 
+}
+
+pkg_postinst() {
+	#Users should not be created in src_install see bug #124680
+	# Add our default jabber group and user
+	enewgroup jabber
+	enewuser jabber -1 -1 -1 jabber
 	fowners jabber:jabber /etc/jabber /var/log/jabber /var/spool/jabber /var/run/jabber
 	fperms 770 /etc/jabber /var/log/jabber /var/spool/jabber /var/run/jabber
 }
