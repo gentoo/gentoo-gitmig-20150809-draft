@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ketchup
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ChangeLog,v 1.6 2006/03/02 03:18:41 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ChangeLog,v 1.7 2006/03/06 05:16:57 morfic Exp $
+
+  06 Mar 2006; Daniel Goller <morfic@gentoo.org> +files/ketchup-list.patch,
+  ketchup-0.9.6.ebuild, ketchup-0.9.6-r1.ebuild,
+  ketchup-0.9.6_p20060301.ebuild:
+  Adding patch to fix issue with -l as reported in bug #124874
 
 *ketchup-0.9.6_p20060301 (02 Mar 2006)
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ketchup-0.9.6_p20060301.ebuild,v 1.1 2006/03/02 03:18:41 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ketchup-0.9.6_p20060301.ebuild,v 1.2 2006/03/06 05:16:57 morfic Exp $
+
+inherit eutils
 
 DESCRIPTION="tool for updating or switching between versions of the Linux kernel source"
 HOMEPAGE="http://www.selenic.com/ketchup/wiki/"
@@ -20,6 +22,7 @@ S=${WORKDIR}
 
 src_install() {
 	cd Ketchup* 2>/dev/null	# nightly snapshots unpack into a directory
+	epatch "${FILESDIR}/ketchup-list.patch"
 
 	dobin ./ketchup || die "could not install script"
 
