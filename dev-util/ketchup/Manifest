@@ -1,12 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2c0b441d1f7eae91217830a899609818 ChangeLog 1508
-RMD160 59a50a03f0e62b96d3985f3545c55f6f1245b2e4 ChangeLog 1508
-SHA256 87d34d10f06e2829aa39f7fb66d90131b8f5fe136e7b45b6c0dbc5b1a01039e8 ChangeLog 1508
-MD5 cdfd35508318525d1080c64d12e3f9fd files/digest-ketchup-0.9.5 64
-RMD160 a5598d3e04da55a4f0a1ebe682b88f5c6851f6df files/digest-ketchup-0.9.5 64
-SHA256 7758807158c6318cb123d552f172f1c25406e1d2abdc2f8ccd0cfacb29ff4dd7 files/digest-ketchup-0.9.5 64
+MD5 62891a3031400a7ef323fc921d96e1ed ChangeLog 1604
+RMD160 071f018c1c8a9adc8d3fd54f3295e5c86fc86b41 ChangeLog 1604
+SHA256 7a6480a6ef2f7e644da3d94f4938a57c2cc527c2cfe5b4ed0af6e7d205ae05ea ChangeLog 1604
 MD5 8a368708a3efb93651727a03361bc162 files/digest-ketchup-0.9.6 64
 RMD160 3bb3c0b157df7f1b74456da593a1b6b5abf4a873 files/digest-ketchup-0.9.6 64
 SHA256 6489906bf86d492cad879e66bfbe780e3d6df66a0d2463679e36d92ed5288e4a files/digest-ketchup-0.9.6 64
@@ -19,9 +16,6 @@ SHA256 eaa0eb4657d04a7760e291b1cd4c9234aa466818df0f168e4c702728ef02d431 files/di
 MD5 d086689be24172c9d9110cdf9f75dcc3 files/ketchup-list.patch 444
 RMD160 d714d72ee656e79218e6f559d57eef5033732883 files/ketchup-list.patch 444
 SHA256 5d94dbc8993a0e10e183e8432ba834345cc7564abe9f83a7f375bed03e966aae files/ketchup-list.patch 444
-MD5 efd5fee311d215143c9c0b91bb3a5cfe ketchup-0.9.5.ebuild 663
-RMD160 f9b2c2b85281ffe830f19bff189b5fa0f19aa982 ketchup-0.9.5.ebuild 663
-SHA256 08a68e35d5220a9d762b48902b48b5274d7e88a0addf5822b8f3abe56b280489 ketchup-0.9.5.ebuild 663
 MD5 7d1462b4c5e35d269a18ce2ff63764ff ketchup-0.9.6-r1.ebuild 721
 RMD160 e90befccd68346a3b1342115ab5f5dcacc752ad1 ketchup-0.9.6-r1.ebuild 721
 SHA256 aad70b50b1f5a811d356c0cdfc51eca4f77f94a02eebec03baa2766f94ee4cea ketchup-0.9.6-r1.ebuild 721
@@ -37,7 +31,7 @@ SHA256 a31f2347e4965e7b02a4405da12aab05ae3c5383ce9c7fb182c1acce0b0f7bb6 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEC8XN/aM9DdBw91cRAgZQAJ4zI1BQ6IsVXlE5kNktL3CiikI5+QCeILg5
-iVFmtTzq/uIgLJek742jjFI=
-=luT3
+iD8DBQFEC8h7/aM9DdBw91cRAipcAJ9ND7fQge1QFe8oau8A48zlIOnI4wCgj/vx
+Ua8erW8DqclmbipID306duE=
+=NZ/w
 -----END PGP SIGNATURE-----
