@@ -1,23 +1,24 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/libclalsadrv-1.0.1.ebuild,v 1.9 2005/09/04 12:22:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/libclalsadrv-1.0.1.ebuild,v 1.10 2006/03/06 14:46:58 flameeyes Exp $
 
 IUSE=""
 
-inherit eutils
+inherit eutils multilib toolchain-funcs
 
-S="${WORKDIR}/clalsadrv-${PV}"
+MY_P="clalsadrv-${PV}"
+
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="An audio library by Fons Adriaensen <fons.adriaensen@skynet.be>"
 HOMEPAGE="http://users.skynet.be/solaris/linuxaudio"
-SRC_URI="http://users.skynet.be/solaris/linuxaudio/downloads/clalsadrv-${PV}.tar.bz2"
+SRC_URI="http://users.skynet.be/solaris/linuxaudio/downloads/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 sparc x86 ~ppc"
 
-DEPEND="virtual/libc
-	>=media-libs/libclthreads-1.0.0
+DEPEND=">=media-libs/libclthreads-1.0.0
 	media-libs/alsa-lib"
 
 src_unpack() {
@@ -27,10 +28,11 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+	tc-export CC CXX
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	make CLALSADRV_LIBDIR="/usr/$(get_libdir)" DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS
 }
