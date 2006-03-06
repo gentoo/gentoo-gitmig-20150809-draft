@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-1.01.ebuild,v 1.3 2005/05/06 22:08:57 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-1.01.ebuild,v 1.4 2006/03/06 18:17:14 spock Exp $
 
 inherit eutils
 
@@ -11,14 +11,13 @@ SRC_URI="http://uade.ton.tut.fi/uade/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
-IUSE="xmms sdl alsa oss perl bmp"
+IUSE="xmms sdl alsa oss perl"
 
 RDEPEND="virtual/libc
 	xmms? (	>=media-sound/xmms-1.2.2
 		x11-libs/gtk+ )
 	sdl? ( media-libs/libsdl )
-	alsa? ( >=media-libs/alsa-lib-1.0.5 )
-	bmp? ( >=media-sound/beep-media-player-0.7_rc1 )"
+	alsa? ( >=media-libs/alsa-lib-1.0.5 )"
 
 DEPEND="${RDEPEND}
 	xmms? ( sys-devel/libtool )"
@@ -32,7 +31,6 @@ src_compile() {
 		$(use_with sdl) \
 		$(use_with alsa) \
 		$(use_with xmms) \
-		$(use_with bmp) \
 		|| die "configure failed"
 	emake || die 'emake failed'
 }

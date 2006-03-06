@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-2.01.ebuild,v 1.3 2006/02/06 12:55:48 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-2.01.ebuild,v 1.4 2006/03/06 18:17:14 spock Exp $
 
 inherit eutils
 
@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="xmms"
 
 RDEPEND="virtual/libc
-	 media-libs/libao
-	 xmms? ( >=media-sound/xmms-1.2.2 )"
+	media-libs/libao
+	xmms? ( >=media-sound/xmms-1.2.2 )"
 
 DEPEND="${RDEPEND}"
 
@@ -38,8 +38,4 @@ src_install() {
 	make install || die 'make install failed'
 	dodoc AUTHORS ChangeLog doc/BUGS doc/PLANS
 	doman doc/uade123.1
-}
-
-pkg_postinst() {
-	einfo "The 2.x series of UADE currently doesn't support Beep Media Player."
 }
