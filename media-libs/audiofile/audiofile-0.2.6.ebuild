@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.2.6.ebuild,v 1.8 2004/07/14 18:49:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.2.6.ebuild,v 1.9 2006/03/06 14:20:17 flameeyes Exp $
 
 inherit libtool gnuconfig
 
@@ -13,8 +13,6 @@ SRC_URI="http://www.68k.org/~michael/audiofile/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa amd64 mips ~ia64"
-
-DEPEND="virtual/libc"
 
 src_compile() {
 	# Allows configure to detect mipslinux systems

@@ -1,14 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.2.3-r1.ebuild,v 1.22 2004/07/14 18:49:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.2.3-r1.ebuild,v 1.23 2006/03/06 14:20:17 flameeyes Exp $
 
 inherit libtool gnuconfig
 
 DESCRIPTION="An elegant API for accessing audio files"
 HOMEPAGE="http://www.68k.org/~michael/audiofile/"
 SRC_URI="http://www.68k.org/~michael/audiofile/${P}.tar.gz"
-
-DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="GPL-2"

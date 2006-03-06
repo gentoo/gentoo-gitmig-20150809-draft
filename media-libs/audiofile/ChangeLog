@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/audiofile
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.36 2004/12/29 00:39:06 ciaranm Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.37 2006/03/06 14:20:17 flameeyes Exp $
+
+  06 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  audiofile-0.2.3-r1.ebuild, audiofile-0.2.4.ebuild, audiofile-0.2.5.ebuild,
+  audiofile-0.2.6.ebuild, audiofile-0.2.6-r1.ebuild:
+  Drop virtual/libc dependency.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
