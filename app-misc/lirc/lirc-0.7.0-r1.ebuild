@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.16 2006/02/20 08:59:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.17 2006/03/06 20:18:50 blubb Exp $
 
 inherit eutils linux-mod flag-o-matic
 
@@ -62,7 +62,9 @@ DEPEND="virtual/linux-sources
 	sys-devel/autoconf
 	${RDEPEND}"
 
-SRC_URI="mirror://sourceforge/lirc/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/lirc/${P}.tar.bz2
+		mirror://gentoo/lirc-0.7.0-xbox.patch.bz2
+		mirror://gentoo/lirc-0.7.0-streamzap.patch.bz2"
 
 src_unpack() {
 	unpack ${A}
@@ -71,10 +73,10 @@ src_unpack() {
 		if kernel_is 2 6; then
 			ewarn "Streamzap is not Kernel 2.6 ready and will not be compiled"
 		else
-			epatch ${FILESDIR}/lirc-0.7.0-streamzap.patch.bz2
+			epatch ${DISTDIR}/lirc-0.7.0-streamzap.patch.bz2
 		fi
 	fi
-	epatch ${FILESDIR}/lirc-0.7.0-xbox.patch.bz2
+	epatch ${DISTDIR}/lirc-0.7.0-xbox.patch.bz2
 
 	filter-flags -Wl,-O1
 	sed	-i -e "s:-O2 -g:${CFLAGS}:" configure configure.in
