@@ -1,10 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/squirm-1.23.ebuild,v 1.2 2005/07/10 01:09:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/squirm-1.23.ebuild,v 1.3 2006/03/06 21:55:43 mrness Exp $
 
 DESCRIPTION="A redirector for Squid"
 HOMEPAGE="http://squirm.foote.com.au"
 SRC_URI="http://squirm.foote.com.au/${P}.tgz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
@@ -13,17 +14,18 @@ IUSE=""
 RDEPEND="net-proxy/squid"
 
 src_unpack() {
-	unpack ${A} || die "unpack failed"
-	cd ${S} || die
-	mv Makefile Makefile.orig
-	sed -e 's|^EXTRALIBS=.*|EXTRALIBS=|' \
+	unpack ${A}
+
+	sed -i \
+		-e 's|^EXTRALIBS=.*|EXTRALIBS=|' \
 		-e 's|^PREFIX=.*|PREFIX=/usr/squirm|' \
 		-e "s|^OPTIMISATION=.*|OPTIMISATION=${CFLAGS}|" \
-		-e "s|^CFLAGS =.*|CFLAGS=${CFLAGS} -DPREFIX=\\\\\"\$(PREFIX)\\\\\"|" Makefile.orig > Makefile
+		-e "s|^CFLAGS =.*|CFLAGS=${CFLAGS} -DPREFIX=\\\\\"\$(PREFIX)\\\\\"|" \
+		"${S}/Makefile"
 }
 
 src_install() {
-	make PREFIX=${D}/usr/squirm install || die "make install failed"
+	make PREFIX="${D}/usr/squirm" install || die "make install failed"
 }
 
 pkg_postinst() {
