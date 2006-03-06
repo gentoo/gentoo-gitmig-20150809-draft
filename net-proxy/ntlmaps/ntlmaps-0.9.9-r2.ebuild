@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ntlmaps-0.9.9-r2.ebuild,v 1.3 2005/10/11 00:48:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ntlmaps-0.9.9-r2.ebuild,v 1.4 2006/03/06 19:29:45 mrness Exp $
 
 inherit eutils
 
@@ -23,10 +23,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 
 	#stupid windoze style
-	cd ${S}
+	cd "${S}"
 	sed -i -e 's/\r//' lib/*.py server.cfg *.txt doc/*.{txt,htm}
 }
 
@@ -43,7 +43,7 @@ src_install() {
 	insopts -m0640 -g ntlmaps
 	insinto /etc/ntlmaps
 	doins server.cfg
-	newinitd ${FILESDIR}/ntlmaps.init ntlmaps
+	newinitd "${FILESDIR}/ntlmaps.init" ntlmaps
 	# log -------------------------------------------------------------------
 	diropts -m 0770 -g ntlmaps
 	keepdir /var/log/ntlmaps
@@ -61,5 +61,5 @@ pkg_preinst() {
 
 pkg_prerm() {
 	einfo "Removing python compiled bytecode"
-	rm -f ${ROOT}/usr/lib/ntlmaps/*.py?
+	rm -f "${ROOT}"/usr/lib/ntlmaps/*.py?
 }
