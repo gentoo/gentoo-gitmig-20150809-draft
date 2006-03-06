@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.2.ebuild,v 1.2 2006/02/22 20:43:51 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.2-r1.ebuild,v 1.1 2006/03/06 08:51:11 satya Exp $
 
 
 inherit eutils
@@ -16,15 +16,19 @@ DEPEND=">sys-apps/sed-4
 	>=net-fs/samba-3.0.1
 	dev-perl/perl-ldap
 	dev-perl/Crypt-SmbHash
-	dev-perl/Digest-SHA1"
+	dev-perl/Digest-SHA1
+	dev-perl/Unicode-MapUTF8
+	"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+#KEYWORDS="-* ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~x86"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
 
+	# conf install path cleanup
 	sed -i "s:/etc/opt/IDEALX/\(smbldap-tools/\):/etc/\1:g" smbldap_tools.pm
 	sed -i "s:/etc/opt/IDEALX/\(smbldap-tools/\):/etc/\1:g" configure.pl
 	sed -i "s:/etc/opt/IDEALX:/etc:g" smbldap.conf
@@ -41,17 +45,6 @@ src_install() {
 	dosbin configure.pl
 
 	rm -f ${D}/usr/sbin/*.spec
-	#libs
-#	exeinto /etc/samba ; doexe smbldap_tools.pm
-#	eval `perl '-V:installarchlib'`
-#	dodir ${installarchlib}
-#	dosym /etc/samba/smbldap_tools.pm ${installarchlib}
-#	dosym /etc/samba/smbldap_tools.pm ${sbin_dir}
-#	#scripts
-#	dodir ${sbin_ln_dir}
-#	for script in ${script_list}; do
-#		dosym ${sbin_dir}/${script} ${sbin_ln_dir}/${script}
-#	done
 	#docs
 	dodoc CONTRIBUTORS COPYING ChangeLog FILES INFRA INSTALL README TODO
 	if use doc; then
