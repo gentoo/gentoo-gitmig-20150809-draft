@@ -1,28 +1,34 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/libclthreads-1.0.2.ebuild,v 1.3 2005/07/25 12:41:22 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/libclthreads-1.0.2.ebuild,v 1.4 2006/03/06 14:41:16 flameeyes Exp $
 
 IUSE=""
 
-inherit eutils
+inherit eutils multilib toolchain-funcs
 
-S="${WORKDIR}/clthreads-${PV}"
+MY_P="clthreads-${PV}"
+
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="An audio library by Fons Adriaensen <fons.adriaensen@skynet.be>"
 HOMEPAGE="http://users.skynet.be/solaris/linuxaudio"
-SRC_URI="http://users.skynet.be/solaris/linuxaudio/downloads/clthreads-${PV}.tar.bz2"
+SRC_URI="http://users.skynet.be/solaris/linuxaudio/downloads/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 
-DEPEND="virtual/libc"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}/${P}-makefile.patch"
+}
 
 src_compile() {
-	epatch "${FILESDIR}/${P}-makefile.patch"
+	tc-export CC CXX
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	make CLTHREADS_LIBDIR="/usr/$(get_libdir)" DESTDIR="${D}" install || die "make install failed"
 }
