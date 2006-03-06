@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/wwwoffle
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.7 2005/08/14 10:05:36 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.8 2006/03/06 22:54:55 mrness Exp $
+
+  06 Mar 2006; Alin Nastac <mrness@gentoo.org> -files/wwwoffled-online-2.8b,
+  -files/wwwoffled, -wwwoffle-2.8b.ebuild, wwwoffle-2.8e.ebuild:
+  Remove old version. Sanitize the ebuild code.
 
   14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> wwwoffle-2.8e.ebuild:
   Stable on ppc.
