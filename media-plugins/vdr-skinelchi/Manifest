@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4a725502df864bee162dca425e3a2fdf ChangeLog 405
+MD5 085d42d9f37f7dfaf85168f91d931fbb files/digest-vdr-skinelchi-0.1.1 67
+MD5 dc2500e0bc291cb8d5d685d8e4ae3279 metadata.xml 509
+MD5 93b4e3e01126ad6d5d1cd24e2d869abf vdr-skinelchi-0.1.1.ebuild 516
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEDGg7dn07HTTCgIoRAhpfAJ9xIeLNz6b5iQNE0FFC1ZfzERG2cACfRMNW
+GxdAt35naDyTYnQbLLO+sZE=
+=Tv+j
+-----END PGP SIGNATURE-----

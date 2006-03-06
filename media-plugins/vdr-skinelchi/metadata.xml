@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>media-tv</herd>
+<maintainer>
+    <email>hd_brummy@gentoo.org</email>
+    <name>Joerg Bornkessel</name>
+<!--  <description>Description of the maintainership</description> -->
+</maintainer>
+<maintainer>
+    <email>zzam@gentoo.org</email>
+    <name>Matthias Schwarzott</name>
+</maintainer>
+    <longdescription>Video Disk Recorder (VDR) skin plugin</longdescription>
+</pkgmetadata>
