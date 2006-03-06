@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 62891a3031400a7ef323fc921d96e1ed ChangeLog 1604
-RMD160 071f018c1c8a9adc8d3fd54f3295e5c86fc86b41 ChangeLog 1604
-SHA256 7a6480a6ef2f7e644da3d94f4938a57c2cc527c2cfe5b4ed0af6e7d205ae05ea ChangeLog 1604
+MD5 c56f1b9ec5968713a76615d42bf0da86 ChangeLog 1705
+RMD160 152aa6af0852f0ea3eb6720ef5c9b6ef720b71f4 ChangeLog 1705
+SHA256 cf4b477f26394a10d66ad3f9c0ab3878df3d1779d8fc52303cd2af72aeb17f78 ChangeLog 1705
 MD5 8a368708a3efb93651727a03361bc162 files/digest-ketchup-0.9.6 64
 RMD160 3bb3c0b157df7f1b74456da593a1b6b5abf4a873 files/digest-ketchup-0.9.6 64
 SHA256 6489906bf86d492cad879e66bfbe780e3d6df66a0d2463679e36d92ed5288e4a files/digest-ketchup-0.9.6 64
@@ -16,9 +16,9 @@ SHA256 eaa0eb4657d04a7760e291b1cd4c9234aa466818df0f168e4c702728ef02d431 files/di
 MD5 d086689be24172c9d9110cdf9f75dcc3 files/ketchup-list.patch 444
 RMD160 d714d72ee656e79218e6f559d57eef5033732883 files/ketchup-list.patch 444
 SHA256 5d94dbc8993a0e10e183e8432ba834345cc7564abe9f83a7f375bed03e966aae files/ketchup-list.patch 444
-MD5 7d1462b4c5e35d269a18ce2ff63764ff ketchup-0.9.6-r1.ebuild 721
-RMD160 e90befccd68346a3b1342115ab5f5dcacc752ad1 ketchup-0.9.6-r1.ebuild 721
-SHA256 aad70b50b1f5a811d356c0cdfc51eca4f77f94a02eebec03baa2766f94ee4cea ketchup-0.9.6-r1.ebuild 721
+MD5 f9b0b52d64bc8281edeaafde9d3fe3ad ketchup-0.9.6-r1.ebuild 719
+RMD160 96dd0bf214098b777a9bdb554eb32c09c25769a4 ketchup-0.9.6-r1.ebuild 719
+SHA256 a7465a5ba1cb109d742e66c167508b60b7af36df4f5022fcf31095ef18193055 ketchup-0.9.6-r1.ebuild 719
 MD5 ef4a3b474c29d7f8d96ec11b4322b76c ketchup-0.9.6.ebuild 718
 RMD160 fc782e6c15f2e0b9250d6f4ccf78f3c7363c3fa5 ketchup-0.9.6.ebuild 718
 SHA256 5ad1cc9dc95961ae71d32f5e3df0ab8c5bee7ac96a2dbb67d5bd048646d51c72 ketchup-0.9.6.ebuild 718
@@ -31,7 +31,7 @@ SHA256 a31f2347e4965e7b02a4405da12aab05ae3c5383ce9c7fb182c1acce0b0f7bb6 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEC8h7/aM9DdBw91cRAipcAJ9ND7fQge1QFe8oau8A48zlIOnI4wCgj/vx
-Ua8erW8DqclmbipID306duE=
-=NZ/w
+iD8DBQFEC8rF/aM9DdBw91cRAlkiAKCZUm0jAnKBldiFxTAcr6efS/VCNQCggOvd
+OTLEgA5MF+99bJ2nwuGN8qw=
+=92kT
 -----END PGP SIGNATURE-----
