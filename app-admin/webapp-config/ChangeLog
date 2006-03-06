@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.26 2006/03/06 09:37:50 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.27 2006/03/06 21:26:12 wrobel Exp $
+
+*webapp-config-1.50.13 (06 Mar 2006)
+
+  06 Mar 2006; <wrobel@gentoo.org> -webapp-config-1.50.12.ebuild,
+  +webapp-config-1.50.13.ebuild:
+  Second version of the libdir fix for bug #125156
 
 *webapp-config-1.50.12 (06 Mar 2006)
 
