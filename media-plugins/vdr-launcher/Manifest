@@ -1,0 +1,28 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 382fbebeba0b86a3b92f17e123da364a ChangeLog 464
+RMD160 072f4c3e8229c82a5a161bf0c55f293c4b057bd8 ChangeLog 464
+SHA256 d2e2635a91869c88347f468a907cdf0a0c7aa736cb63f377dc1a6fd1fe18ebd9 ChangeLog 464
+MD5 3e581d4c2fe6c5a559d58f67a8c02fa3 files/confd 394
+RMD160 1cf9ba71b2f5fe7cf0018aa89c8e46c96f894545 files/confd 394
+SHA256 b8d21482fcb6aed677949974395a0c3351448ee1ed693af19842725a4683f910 files/confd 394
+MD5 b93a4f4a4e2afec28cbe8bc8562c1ce2 files/digest-vdr-launcher-0.0.2a-r1 268
+RMD160 197e87a2497ab0b978d809d4bf55c1af236fc0b9 files/digest-vdr-launcher-0.0.2a-r1 268
+SHA256 13ba6c24eadb351835925ef4960c5446b94d5bc5f4898b038bef2301ef58052c files/digest-vdr-launcher-0.0.2a-r1 268
+MD5 cebb3b1a74d57461a7385537aa6c66d5 files/rc-addon.sh 366
+RMD160 17ae6c8b06a37f17ba531d0146cfb25b9c95a33e files/rc-addon.sh 366
+SHA256 aa6f0d9df18ac00f7a104f1bf124a0dd99d97f6a494f1abdc9bd752512682e3f files/rc-addon.sh 366
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 8217e993e5e737219e7b8d3c51781605 vdr-launcher-0.0.2a-r1.ebuild 568
+RMD160 88b977bc87979e27c314a8902b99b35dcdc48cba vdr-launcher-0.0.2a-r1.ebuild 568
+SHA256 23ff50045e9e20e6d1a55e26baf20637c22fcd161b72c72e7213dc29ba89c60b vdr-launcher-0.0.2a-r1.ebuild 568
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEC9HjZfSl1Kp5KmoRAnS4AKCPZ3r23/STvHtkw7TmuNLiMOK/ZQCgidc9
+6YE9RqUh7tq+9fuPhc80jWQ=
+=p23Q
+-----END PGP SIGNATURE-----
