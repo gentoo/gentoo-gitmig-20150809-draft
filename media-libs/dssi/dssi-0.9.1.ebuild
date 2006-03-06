@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-0.9.1.ebuild,v 1.1 2006/02/22 01:20:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-0.9.1.ebuild,v 1.2 2006/03/06 14:22:17 flameeyes Exp $
 
 inherit multilib
 
 IUSE="qt"
 
-DESCRIPTION="DSSI is a plugin API for software instruments with user interfaces, permitting them to be hosted in-process by audio applications."
+DESCRIPTION="Plugin API for software instruments with user interfaces"
 HOMEPAGE="http://dssi.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dssi/${P}.tar.gz"
 
