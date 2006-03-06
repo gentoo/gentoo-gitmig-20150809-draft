@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.5.ebuild,v 1.1 2006/02/04 18:40:13 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.5.ebuild,v 1.2 2006/03/06 13:18:10 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -27,7 +27,7 @@ src_unpack() {
 
 	vdr-plugin_src_unpack
 
-	epatch ${FILESDIR}/${PN}-0.2.4-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	use !exif && sed -i "s:#WITHOUT_LIBEXIF:WITHOUT_LIBEXIF:" Makefile
 }
