@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060302.ebuild,v 1.6 2006/03/05 17:20:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060302.ebuild,v 1.7 2006/03/06 21:50:54 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -23,7 +23,7 @@ SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE="aac altivec amr debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss
-	test theora threads truetype v4l v4l2 x264 xvid dts network zlib sdl"
+	test theora threads truetype v4l x264 xvid dts network zlib sdl"
 
 DEPEND="imlib? ( media-libs/imlib2 )
 	truetype? ( >=media-libs/freetype-2 )
@@ -114,8 +114,7 @@ src_compile() {
 	use altivec || myconf="${myconf} --disable-altivec"
 	use debug || myconf="${myconf} --disable-debug"
 	use oss || myconf="${myconf} --disable-audio-oss"
-	use v4l || myconf="${myconf} --disable-v4l"
-	use v4l2 || myconf="${myconf} --disable-v4l2"
+	use v4l || myconf="${myconf} --disable-v4l --disable-v4l2"
 	use ieee1394 || myconf="${myconf} --disable-dv1394"
 	use network || myconf="${myconf} --disable-network"
 	use zlib || myconf="${myconf} --disable-zlib"
