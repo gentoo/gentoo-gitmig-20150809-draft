@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 033a0283891af00044ce7d5202019111 ChangeLog 28024
 RMD160 a230bb099430edca02bea5cd3f9447192941d72c ChangeLog 28024
 SHA256 bc23b757e996a9bfd24ab7c99b488a12e43cf31583582d193e995112bb3f4ccd ChangeLog 28024
@@ -10,6 +7,9 @@ SHA256 c27a598441e79ed0b5dcbbb2e12a08d7ecd1b10fae342c4f5109e22fcd2ca522 files/di
 MD5 bbee39c27938e2322785eb6ac82662b4 files/digest-vim-core-7.0_alpha20060228 578
 RMD160 b8a50b3a019aaf80418168c7e557624e92c7b48f files/digest-vim-core-7.0_alpha20060228 578
 SHA256 9db7914ba780c7188fbfe1014a56668905f1d2035191d41eb46b36da1bb2c257 files/digest-vim-core-7.0_alpha20060228 578
+MD5 bd8265bd1db1b6618587ab372b0cca0f files/digest-vim-core-7.0_alpha20060306 578
+RMD160 536ea8f1d20897c7c0cdb8cc25c2f72b00dc67ea files/digest-vim-core-7.0_alpha20060306 578
+SHA256 b9623daa69077c32c976265133f9d5018dece36cacdcf1fa4cc7c680222061ca files/digest-vim-core-7.0_alpha20060306 578
 MD5 c2d0302eae7fc80b2a1cb38ddab9d3d3 files/rphillips-invalcolorpatch.diff 722
 RMD160 3051c7877483b00ff6bb43c9136bbb4b784c5f3d files/rphillips-invalcolorpatch.diff 722
 SHA256 6678f6dd8b84d9b2c2454b346eb1febb17548f3e17b9f33ca6fc877a250660a1 files/rphillips-invalcolorpatch.diff 722
@@ -34,10 +34,6 @@ SHA256 d85fa00e113e8b8289f71471f33403d0a85ee12b6260c30a0f8f7a91fdfff974 vim-core
 MD5 b451f73efc3b3a8897dcb8192bc3f40d vim-core-7.0_alpha20060228.ebuild 766
 RMD160 ebb012bc8d4b62cf1762a38bb03357ca260a5096 vim-core-7.0_alpha20060228.ebuild 766
 SHA256 716ae195220142d15e969dcfeb67171c2dde9d374fa9fae542b7bf1afaa7e346 vim-core-7.0_alpha20060228.ebuild 766
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBHp5LLFUmVNQ7rkRAg5TAJ9NIsES1Jp2VdEz7ldSVA0K+7UU/QCfQHoQ
-n3cqOzk69DqmKcI1YUyfFzk=
-=IYg6
------END PGP SIGNATURE-----
+MD5 b451f73efc3b3a8897dcb8192bc3f40d vim-core-7.0_alpha20060306.ebuild 766
+RMD160 ebb012bc8d4b62cf1762a38bb03357ca260a5096 vim-core-7.0_alpha20060306.ebuild 766
+SHA256 716ae195220142d15e969dcfeb67171c2dde9d374fa9fae542b7bf1afaa7e346 vim-core-7.0_alpha20060306.ebuild 766
