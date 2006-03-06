@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.1.ebuild,v 1.11 2006/02/19 22:11:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.1.ebuild,v 1.12 2006/03/06 04:13:26 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -100,6 +100,9 @@ src_install() {
 
 		docinto modutils-${MODUTILS_PV}
 		dodoc CREDITS ChangeLog NEWS README TODO
+
+		# remove man pages provided by the man-pages package now #124127
+		rm -r "${D}"/usr/share/man/man2
 
 		cd "${S}"
 		# This copies the old version of modutils to *.old so it still works

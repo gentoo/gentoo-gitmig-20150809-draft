@@ -16,12 +16,6 @@ SHA256 3b73235cbeb5c414d596c64ccbdbbe12fae090676047aabfea13d5039ad7ba9c files/di
 MD5 0943f2e29b15a610fe01b111c3d948e7 files/digest-module-init-tools-3.2.2 144
 RMD160 560c3a45b70e6045c30f46e5478176acfd8d49d3 files/digest-module-init-tools-3.2.2 144
 SHA256 7a385e11f5c27165bea98eae9968f126e8b3ad1efd15950dbedaf33792e517c7 files/digest-module-init-tools-3.2.2 144
-MD5 95f5372a9e15db429a6db167289d7d6e files/digest-module-init-tools-3.2_pre7 147
-RMD160 c3ebb54cd5955b059d2320ff1fe35e28f1602283 files/digest-module-init-tools-3.2_pre7 147
-SHA256 54f7cf3dcfa53b9ada7fea39d3a26f062ca19f00dde9ed39511098f1b6baed68 files/digest-module-init-tools-3.2_pre7 147
-MD5 95f5372a9e15db429a6db167289d7d6e files/digest-module-init-tools-3.2_pre7-r1 147
-RMD160 c3ebb54cd5955b059d2320ff1fe35e28f1602283 files/digest-module-init-tools-3.2_pre7-r1 147
-SHA256 54f7cf3dcfa53b9ada7fea39d3a26f062ca19f00dde9ed39511098f1b6baed68 files/digest-module-init-tools-3.2_pre7-r1 147
 MD5 d179298a960a2576683689fe19818c8b files/generate-modprobe-assume-kernel.patch 3767
 RMD160 cc8338f0fb85197c24932122366eb666bb8333a4 files/generate-modprobe-assume-kernel.patch 3767
 SHA256 a3b2765acb7622e6aad545d964e5c7b053929143d1d2e734a2c87c2bc7081b38 files/generate-modprobe-assume-kernel.patch 3767
@@ -55,22 +49,16 @@ SHA256 79dd9e08809f82bdb1b61fc95cf603a62bc8ed1b4b0e1f68b8fc68c887d7d46a module-i
 MD5 47229c8c9b55ff325e42a6d1fa6cb4aa module-init-tools-3.1-r1.ebuild 5550
 RMD160 0e4994609de3193a1a3481b72ceb32735b50dc5d module-init-tools-3.1-r1.ebuild 5550
 SHA256 25dabf4903c1dddf8c31cf99798e0569d8018a97c83ce544cc982608b86da44b module-init-tools-3.1-r1.ebuild 5550
-MD5 43d8d0acc1e023fb876a18cee67fef6d module-init-tools-3.2.1.ebuild 5756
-RMD160 09a730518d2784578c30d8118921e15a82fe2dcd module-init-tools-3.2.1.ebuild 5756
-SHA256 d199e8fcd59fd6bbb5da558bbe9e5d12787530de304ff17533acf58c1bde7fdd module-init-tools-3.2.1.ebuild 5756
+MD5 b0fbdf2a890920ad30858c1820dfbc5a module-init-tools-3.2.1.ebuild 5859
+RMD160 73800223657e4561b0e7f0caf4ef9275835da99f module-init-tools-3.2.1.ebuild 5859
+SHA256 e1731fabd92e919d5c7e6e44e418da0fddca195aa505e2ed4dd13aac923abc54 module-init-tools-3.2.1.ebuild 5859
 MD5 cf9cd5eaa065e208551fdd004fc04b40 module-init-tools-3.2.2.ebuild 5874
 RMD160 fc6dbac0b1dfec66ea6ed08019c5460b9546d184 module-init-tools-3.2.2.ebuild 5874
 SHA256 ee4307c886eafaf6b281baf164445ce96c8e7626fd0a4f376fb9692a21cb25f1 module-init-tools-3.2.2.ebuild 5874
-MD5 0e9cc79d40e71ac19d2c30beb83ee0a3 module-init-tools-3.2_pre7-r1.ebuild 5833
-RMD160 3820435479d863a2ee97b7e024647a9e40d4c4ba module-init-tools-3.2_pre7-r1.ebuild 5833
-SHA256 57e583e102d6c316f16ef1f098660f807880cb34ce16364611a413a793ee97d6 module-init-tools-3.2_pre7-r1.ebuild 5833
-MD5 ef19ad39c0567e3720cd650a2a07f6b2 module-init-tools-3.2_pre7.ebuild 5434
-RMD160 28c27e66a96863f18a06eb7f9c9bd63ca53d47a7 module-init-tools-3.2_pre7.ebuild 5434
-SHA256 ea6da4c3e5890dc80869429f1a80f354cd45647dd547bfc03b3b3c5cfdbb1e78 module-init-tools-3.2_pre7.ebuild 5434
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEAft+2+ySkm8kpY0RAhePAJ9gNxN/d0HPZPU7H/w/cVKzrfsodACggxq7
-i0wH/l2xtfPhuMtln5FgUh0=
-=AGeF
+iD8DBQFEC7cv2+ySkm8kpY0RAveNAJwOmeLvEFjSlOAPwlbEuz0B5XfSywCgmwtd
+p9Mjr0K3eVZANdBaJhY7AXA=
+=8Via
 -----END PGP SIGNATURE-----
