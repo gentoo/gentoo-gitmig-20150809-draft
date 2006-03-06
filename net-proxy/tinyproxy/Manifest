@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 23766bed9ffa8536c1e6107d3604e12a ChangeLog 2412
 MD5 9a5f65bb4b75d82277efa9cddc4d05ca files/digest-tinyproxy-1.6.3 67
 MD5 7041efb40925a2cc0cea7b352e809ef5 files/tinyproxy.rc 552
 MD5 9cafc01ae2d4a91da29afd4613e9683f metadata.xml 226
 MD5 aa2e83bf09570ed6b579378afe8a8ae2 tinyproxy-1.6.3.ebuild 1145
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDLEOjG8pv1lIUX4RAlUGAJ48dvmwtttHSrsmIsPjsImPU2wpagCghA0Z
+C67SXUYP+FZji+8sPMn61dU=
+=YJoT
+-----END PGP SIGNATURE-----
