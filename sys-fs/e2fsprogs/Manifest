@@ -1,5 +1,8 @@
-MD5 7494ec0da4a169d9df1e04a8fe8a49d4 ChangeLog 13897
-MD5 9e039cf7d94d2e9614d8bae0e36e9b81 e2fsprogs-1.38-r1.ebuild 4100
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f5132ef371e728bfd65d97051c21922e ChangeLog 14013
+MD5 9f384af90617256b84d47627943d8db5 e2fsprogs-1.38-r1.ebuild 4102
 MD5 6fbfc726ec96aa19955c90f44e25d3f9 e2fsprogs-1.38.ebuild 3733
 MD5 0911aedd4968aa4053139791a961e2a2 files/digest-e2fsprogs-1.38 67
 MD5 0911aedd4968aa4053139791a961e2a2 files/digest-e2fsprogs-1.38-r1 67
@@ -12,3 +15,10 @@ MD5 bafe5afeafcb558958527f12baf5c815 files/e2fsprogs-1.38-libintl.patch 470
 MD5 f199f07604566fda4f2a4dabac83a535 files/e2fsprogs-1.38-tests-locale.patch 656
 MD5 71ae8634de714335ebbc93dc0bbbd643 files/e2fsprogs-1.38-vfat-labels.patch 6667
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEDEu8KRy60XGEcJIRAvbrAKCNTdgo2ykojMUjN/Bu9e9DTzzwYQCePtaA
+QTfKurca0O//O8j3tdu+6oE=
+=gWUQ
+-----END PGP SIGNATURE-----
