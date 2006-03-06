@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-2.0.3.ebuild,v 1.4 2005/09/09 12:30:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-2.0.3.ebuild,v 1.5 2006/03/06 13:57:03 flameeyes Exp $
 
 inherit eutils
 
@@ -13,11 +13,10 @@ SRC_URI="mirror://sourceforge/imms/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
-IUSE="bmp xmms"
+IUSE=""
 
 RDEPEND="=dev-db/sqlite-3*
-	xmms? ( >=media-sound/xmms-1.2.7 )
-	bmp? ( >=media-sound/beep-media-player-0.9.7 )
+	>=media-sound/xmms-1.2.7
 	>=media-libs/taglib-1.1
 	>=dev-libs/libpcre-4.3
 	=sci-libs/fftw-3*
@@ -38,19 +37,9 @@ src_install () {
 	dobin build/immstool || die
 	dobin build/analyzer || die
 
-	# install xmms plugin
-	if use xmms
-	then
-		exeinto "$(xmms-config --general-plugin-dir)"
-		doexe build/libxmmsimms*.so || die
-	fi
+	exeinto "$(xmms-config --general-plugin-dir)"
+	doexe build/libxmmsimms*.so || die
 
-	# install bmp plugin
-	if use bmp
-	then
-		exeinto "$(beep-config --general-plugin-dir)"
-		doexe build/libbmpimms*.so || die
-	fi
 	dodoc README
 }
 
