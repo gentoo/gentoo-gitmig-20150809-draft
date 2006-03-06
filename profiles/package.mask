@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5063 2006/03/06 18:51:41 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5064 2006/03/06 21:15:27 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Michael Sterrett <mr_bones_@gentoo.org> (06 Mar 2006)
+# masked due to security issues: bug #125289
+# unmask locally at your own risk.
+games-fps/cube
 
 # Luis Medinas <metalgod@gentoo.org> (06 Mar 2006)
 # Mask banshee-0.10.7_p1 because it builds only 
