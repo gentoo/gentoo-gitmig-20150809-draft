@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cae5539da6a3c372bd59ddcc2e836c53 ChangeLog 3731
+MD5 cb285a1eb6890b78fccad6833ebc2a32 ChangeLog 3842
+RMD160 ab39ab5d722e513a0f7ecccfbe5fcabc38d95b6c ChangeLog 3842
+SHA256 c8e2b1639069231f363634cec2171f406f9c785219bf9eb3e80bd0b3c3b9a39c ChangeLog 3842
 MD5 9d1c5f06b01f4cc5b729407e44de4078 files/digest-libdts-0.0.2-r3 64
+RMD160 f7ad28ca33f6fdf4b570d21463526ff59825d774 files/digest-libdts-0.0.2-r3 64
+SHA256 30ffb948ecad1bcb7d0bb38278cdd2a2a938a17ed6338efbd12d899d5fe94f5b files/digest-libdts-0.0.2-r3 64
 MD5 fd6b9d9fe6c3ddd6a9c69a3f5fa00fdd files/libdts-0.0.2-freebsd.patch 501
+RMD160 45b2b4e946f72fe22635b0570792165b36968370 files/libdts-0.0.2-freebsd.patch 501
+SHA256 fbb4a28ae2871ccd5ac6bd431c0fd31517d85e23885bf967b5967b92d844ca19 files/libdts-0.0.2-freebsd.patch 501
 MD5 2828f6a30d2829e6df8ba4fc11868140 files/libdts-0.0.2-libtool.patch 3533
-MD5 609b9cfdf03c00389c7aad6b9e47b7c1 libdts-0.0.2-r3.ebuild 1041
+RMD160 6c9d90cac92150c8aa710a44be0ed085c5bb44aa files/libdts-0.0.2-libtool.patch 3533
+SHA256 37fed429417d5d6da1d293ff4ae77f625346a847d3543d21a995caec7f8e751e files/libdts-0.0.2-libtool.patch 3533
+MD5 aabd0ede92725b2bd0519286cb5c077c libdts-0.0.2-r3.ebuild 925
+RMD160 6fac86952127c2b99155961414b4c00738da3438 libdts-0.0.2-r3.ebuild 925
+SHA256 1b520a395c901ff095e9765adee9502c1c54d8968c35fb8df462eb0b128b3be6 libdts-0.0.2-r3.ebuild 925
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDx5qu2+ySkm8kpY0RAhUeAKCsZegWQBwm4gEJ2WMVq5BdpuFZ3gCfRuJA
-2iPH+Smck/isqkGXacU2X1U=
-=kwHx
------END PGP SIGNATURE-----
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158

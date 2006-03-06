@@ -1,18 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 64f9aa7104d8a2ccf54032f9d238dab3 ChangeLog 1256
-MD5 cef7e83b32153a9f7e7dc559c62ed6cf libclxclient-1.0.1.ebuild 788
-MD5 ae2f0ce6b633cd6e8ea199bdabb85098 metadata.xml 227
-MD5 a618c818698cdb24a571c92d00be2277 libclxclient-1.0.0.ebuild 785
-MD5 2de3383c26084e6501926b8c8fd9adfb files/libclxclient-1.0.1-makefile.patch 863
+MD5 bd85fe91de17146ab591c50bc4fbba06 ChangeLog 1673
+RMD160 de2a73cd1bb67de5b958e7c09cd7920665f4c787 ChangeLog 1673
+SHA256 47361e739397cc71fdf55cb8ce6644be5996488ea537bac560a2d8bee7e30f0b ChangeLog 1673
 MD5 04e32b8b7e18ab98b65e207950ea73af files/digest-libclxclient-1.0.1 67
-MD5 0e0fa6de7f1df54bd29e84d83f2f961c files/digest-libclxclient-1.0.0 67
-MD5 2de3383c26084e6501926b8c8fd9adfb files/libclxclient-1.0.0-makefile.patch 863
+RMD160 cad25d9521713a2d7847061bd57d0029c872e35c files/digest-libclxclient-1.0.1 67
+SHA256 a72723a148f822f8e927590f653c47474ea20ff75cb351d454219335502455e1 files/digest-libclxclient-1.0.1 67
+MD5 f2ed0101f56731ad43c01a11cf197704 files/libclxclient-1.0.1-gcc41.patch 1027
+RMD160 5a72dd9fa941c8222101c8fc9e36e983db991abb files/libclxclient-1.0.1-gcc41.patch 1027
+SHA256 e1da6351bf077f785421e1ff1a32eeecf880ef6c211eabb691e3913bc22d27fc files/libclxclient-1.0.1-gcc41.patch 1027
+MD5 7e38634086f6608b2ebefcdf0afaf49f files/libclxclient-1.0.1-makefile.patch 1057
+RMD160 e8130198db115a463687869e7c8608c6a8d1398d files/libclxclient-1.0.1-makefile.patch 1057
+SHA256 3b5014b49f0227a250128c2206ee6923787a92ea219be3c7cd84d8ee2db82fdd files/libclxclient-1.0.1-makefile.patch 1057
+MD5 4620f975a9f8b57eaaeeaa8329dedebd libclxclient-1.0.1.ebuild 973
+RMD160 e319389f15c13b96e8ea93b9998007155e09b785 libclxclient-1.0.1.ebuild 973
+SHA256 269b04e21914bb8d9f2bda3b775c94be2e62f253ec7e6c3fb94385439dd2db40 libclxclient-1.0.1.ebuild 973
+MD5 2f758c82434233f84f01f80f850a1112 metadata.xml 217
+RMD160 906a4752f7a779a157215dc1c5f05e8de62aeb4a metadata.xml 217
+SHA256 cbd33766e3d30e5e0112ad6c57ffc10052659ebb132a0a16fb3462ea8c5a2789 metadata.xml 217
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDDJnuj5H05b2HAEkRAnnoAJ9k53D2kLNutMKyjvjgoHnCB9Ho5QCbB3jA
-eN3oxfuPJJIMwmBgbi9MBVs=
-=ymgO
+iD8DBQFEDE4lAiZjviIA2XgRAu1hAJ9nZT0Me/rYtYIUev5inLa9OeyxcwCgnYTH
+CfY6x+nAgwNLbfrQpF1Fzrc=
+=HwEC
 -----END PGP SIGNATURE-----
