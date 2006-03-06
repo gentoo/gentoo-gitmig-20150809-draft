@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-0.9.9.ebuild,v 1.1 2005/12/06 22:33:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-0.9.9.ebuild,v 1.2 2006/03/06 20:57:45 mrness Exp $
 
 inherit eutils
 
@@ -10,11 +10,10 @@ SRC_URI="http://www.pps.jussieu.fr/~jch/software/files/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	sys-apps/texinfo"
+DEPEND="sys-apps/texinfo"
 RDEPEND="${DEPEND}
 	app-admin/sudo"
 
@@ -26,7 +25,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
 
 src_compile() {
@@ -36,12 +35,12 @@ src_compile() {
 src_install() {
 	einstall "PREFIX=/usr" "TARGET=${D}" || die "install failed"
 	mv polipo.man polipo.1
-	doman ${S}/polipo.1
-	doinfo ${S}/polipo.info
+	doman "${S}/polipo.1"
+	doinfo "${S}/polipo.info"
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/polipo.initd polipo
-	insinto /etc/polipo ; doins ${FILESDIR}/config
-	insinto /etc/cron.daily ; newins ${FILESDIR}/polipo.crond polipo.sh
+	exeinto /etc/init.d ; newexe "${FILESDIR}/polipo.initd" polipo
+	insinto /etc/polipo ; doins "${FILESDIR}/config"
+	insinto /etc/cron.daily ; newins "${FILESDIR}/polipo.crond" polipo.sh
 
 	diropts -m0750 -o polipo -g polipo
 	dodir /var/cache/polipo
