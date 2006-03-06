@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.14-r1.ebuild,v 1.2 2006/01/03 23:39:49 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.14-r1.ebuild,v 1.3 2006/03/06 20:49:47 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -235,7 +235,7 @@ src_install() {
 	dodoc utils/fvwm_make_directory_menu.sh  utils/fvwm_make_browse_menu.sh \
 	utils/quantize_pixmaps utils/xselection.c
 
-	dodoc ${FILESDIR}/README.transluceny.gz
+	dodoc ${FILESDIR}/README.transluceny
 
 	# fix a couple of symlinks.
 	prepallman

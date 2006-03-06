@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.13-r1.ebuild,v 1.2 2006/01/15 17:40:34 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.13-r1.ebuild,v 1.3 2006/03/06 20:49:47 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,6 +8,7 @@ DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop wind
 HOMEPAGE="http://www.fvwm.org/"
 SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
 	mirror://gentoo/fvwm-2.5.11-translucent-menus.diff.gz
+	mirror://gentoo/fvwm-64bit-fixes.diff.gz
 	perl? ( http://users.tpg.com.au/users/scottie7/FvwmTabs-v3-4.tar.gz )"
 
 LICENSE="GPL-2 FVWM"
@@ -62,7 +63,7 @@ src_unpack() {
 
 	# 64bit fixes.
 	# XXX: incvs
-	cd ${S}; epatch ${FILESDIR}/fvwm-64bit-fixes.diff.gz
+	cd ${S}; epatch ${WORKDIR}/fvwm-64bit-fixes.diff
 
 	# remove XBell when grab fails.
 	cd ${S}; epatch ${FILESDIR}/fvwm-noxbell-grab-fail.diff
@@ -233,7 +234,7 @@ src_install() {
 	dodoc utils/fvwm_make_directory_menu.sh  utils/fvwm_make_browse_menu.sh \
 	utils/quantize_pixmaps utils/xselection.c
 
-	dodoc ${FILESDIR}/README.transluceny.gz
+	dodoc ${FILESDIR}/README.transluceny
 
 	# fix a couple of symlinks.
 	prepallman
