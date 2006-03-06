@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.85 2006/02/12 00:07:04 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.86 2006/03/06 23:45:54 morfic Exp $
+
+  06 Mar 2006; Daniel Goller <morfic@gentoo.org> -boost-1.31.0.ebuild,
+  -boost-1.33.0.ebuild, -boost-1.33.0-r1.ebuild:
+  Remove old ebuilds
 
   12 Feb 2006; Daniel Goller <morfic@gentoo.org> boost-1.33.1.ebuild:
   Fix installation of documentation
