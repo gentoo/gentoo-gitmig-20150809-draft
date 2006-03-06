@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.101.ebuild,v 1.8 2005/05/07 10:18:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.101.ebuild,v 1.9 2006/03/06 04:52:16 vapier Exp $
 
 inherit eutils
 
@@ -16,9 +16,10 @@ IUSE="debug gtk sdl xv"
 RDEPEND="dev-libs/popt
 	gtk? ( =x11-libs/gtk+-1.2* )
 	sdl? ( >=media-libs/libsdl-1.2.4.20020601 )
-	xv? ( virtual/x11 )"
+	xv? ( || ( x11-libs/libXv virtual/x11 ) )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	gtk? ( || ( ( x11-proto/xextproto x11-libs/libXt ) virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A} && cd "${S}"

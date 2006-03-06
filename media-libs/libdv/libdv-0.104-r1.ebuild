@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.104-r1.ebuild,v 1.5 2006/02/07 18:06:11 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.104-r1.ebuild,v 1.6 2006/03/06 04:52:16 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,12 +19,7 @@ RDEPEND="dev-libs/popt
 	xv? ( || ( x11-libs/libXv virtual/x11 ) )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	gtk? ( || ( ( x11-proto/xextproto
-				x11-libs/libXt
-			)
-			virtual/x11
-		)
-	)"
+	gtk? ( || ( ( x11-proto/xextproto x11-libs/libXt ) virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}
