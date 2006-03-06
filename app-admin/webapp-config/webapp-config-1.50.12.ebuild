@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.11.ebuild,v 1.3 2006/03/06 08:32:41 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.12.ebuild,v 1.1 2006/03/06 09:37:50 wrobel Exp $
 
 inherit eutils distutils
 
