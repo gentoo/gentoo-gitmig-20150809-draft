@@ -1,22 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9220a292f427fc38825f47296a06dcf4 ChangeLog 3788
-MD5 29571a78277bd35aeb290d9489e826d8 files/1.100/10_mod_log_sql.conf 877
+MD5 b457222b88e107a5c5a1ba9df3b30371 ChangeLog 4032
+RMD160 c213c8826033f38ed0a1cbc14b976151dabe86de ChangeLog 4032
+SHA256 151ae973e5e452b3c3fe2fae56cfe57f298c1a6a6a349d29eafd019a0a900564 ChangeLog 4032
+MD5 29571a78277bd35aeb290d9489e826d8 files/1.100/42_mod_log_sql.conf 877
+RMD160 5884ac0d6192d7fa2be4d2dfd97a279bcb24b6b7 files/1.100/42_mod_log_sql.conf 877
+SHA256 f9f02864e80d468a833ac54712eb01e425a365e39e2b9dad35b6e7519d10d082 files/1.100/42_mod_log_sql.conf 877
 MD5 390ab3cee83f80c19f7102a98e2ec510 files/10_mod_log_sql.conf 1287
+RMD160 61a701df931482a6b66d72a1987fa46d7e59dc06 files/10_mod_log_sql.conf 1287
+SHA256 33afb738a14e6380c09c8fc49964e1166afdd425766c2cfb40317ee9633b164b files/10_mod_log_sql.conf 1287
 MD5 1224e8eacc308462c8a4eb86b12f6ac7 files/10_mod_log_sql_apache2.conf 1114
+RMD160 ce95448ec972b610b7a3ab264194145a46519ed9 files/10_mod_log_sql_apache2.conf 1114
+SHA256 fc1316abdde4e34fa7920ee0a7f0fc5f7181bad4e4a27e7308410127791f42b2 files/10_mod_log_sql_apache2.conf 1114
 MD5 86f476a1d8473e45132caa3f88a6a5bc files/digest-mod_log_sql-1.100 70
+RMD160 ac2546679d8b89147095375de0ea43dbba59f5f8 files/digest-mod_log_sql-1.100 70
+SHA256 a81a4d33b0a24276dcaa4fd4d66e57faa4093ac2db0fda28a3219702f47aa418 files/digest-mod_log_sql-1.100 70
 MD5 7a6e57cfb8898c79734fcf40291206cb files/digest-mod_log_sql-1.97 68
+RMD160 419a8b21738a1b141c737e18b5da65abec093b98 files/digest-mod_log_sql-1.97 68
+SHA256 82c3afb8c65e2aec7a20363c656e753226a59e68defad3be1d83af5efadbcabd files/digest-mod_log_sql-1.97 68
 MD5 37cf2cb766664bd12fc8af5c9dd4444f files/digest-mod_log_sql-1.98-r1 68
+RMD160 ed553d9ce731349d6e3d9904c9578055679f799a files/digest-mod_log_sql-1.98-r1 68
+SHA256 1e99c9a98325a709da834990842e8248d1b957f4415a859616dbd5a7cb969352 files/digest-mod_log_sql-1.98-r1 68
 MD5 9081e8e239b5a17a817f21f7370afecc files/mod_log_sql-1.97-gentoo.patch 913
+RMD160 4833ef7b437436e4735aee731466827d20e6311f files/mod_log_sql-1.97-gentoo.patch 913
+SHA256 c5a3854c5389600a9a0407794725826d1eeff9ddcf40c3b5edda9c07b7e7b7f1 files/mod_log_sql-1.97-gentoo.patch 913
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
-MD5 27af64f8043404fe65256378ef0d848b mod_log_sql-1.100.ebuild 1632
+RMD160 d11ce73e47adf4b3d91309ec6489fded2f4d4e0e metadata.xml 226
+SHA256 376a327f91f69eb96f0c1b05cc1481dd7017a0570f631a03b1f6d14d58215ca8 metadata.xml 226
+MD5 c35cd58c779bce19885fed32dafda61d mod_log_sql-1.100.ebuild 1632
+RMD160 0a58c396c328f9d4dce320673b13190665d38fc5 mod_log_sql-1.100.ebuild 1632
+SHA256 7d8f5dcdf7baec30e6d1316b5822603dfdd2c2f057abf02521eff8cebf8c796c mod_log_sql-1.100.ebuild 1632
 MD5 90e440c9abfbc7e431036821771b8ff9 mod_log_sql-1.97.ebuild 3108
+RMD160 b9355a8182395f3ff45559ede620ab9db5797121 mod_log_sql-1.97.ebuild 3108
+SHA256 ce27cf56401096d5b29e82ce6ba22d41a48bb26b810c9818f8003cf98ea5ba42 mod_log_sql-1.97.ebuild 3108
 MD5 0aaa0f5a0a95c1386dafbf090dc2edf3 mod_log_sql-1.98-r1.ebuild 2988
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDSXVSKf2g/qXtneoRAsPzAKC+DCDuInMNP5sq6dNTgkLEuJempQCeMdBl
-7ZzvyValsVTUF7ne63uKDkg=
-=COuh
------END PGP SIGNATURE-----
+RMD160 c4c00f534837ae4577a71d04ef75bad3e261f0c2 mod_log_sql-1.98-r1.ebuild 2988
+SHA256 b80e69a2df0251edcbcbd3b8ce339068f10d5db0d22a08d51884da280138fb70 mod_log_sql-1.98-r1.ebuild 2988
