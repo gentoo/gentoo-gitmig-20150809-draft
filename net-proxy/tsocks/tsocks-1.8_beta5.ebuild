@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/tsocks-1.8_beta5.ebuild,v 1.7 2005/10/04 21:29:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/tsocks-1.8_beta5.ebuild,v 1.8 2006/03/06 22:05:36 mrness Exp $
 
 inherit multilib
 
@@ -13,24 +13,24 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
 
-S=${WORKDIR}/tsocks-1.8
+S="${WORKDIR}/${P%%_*}"
 
 src_compile() {
 	# NOTE: the docs say to install it into /lib. If you put it into
 	# /usr/lib and add it to /etc/ld.so.preload on many systems /usr isn't
 	# mounted in time :-( (Ben Lutgens) <lamer@gentoo.org>
 	./configure \
-		--host=${CHOST} \
+		--host="${CHOST}" \
 		--prefix=/usr \
 		--with-conf=/etc/socks/tsocks.conf \
 		--mandir=/usr/share/man \
 		--libdir=/$(get_libdir) \
-		|| die
-	emake || die
+		|| die "configure failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dobin validateconf inspectsocks saveme
 	insinto /etc/socks
 	doins tsocks.conf.*.example
