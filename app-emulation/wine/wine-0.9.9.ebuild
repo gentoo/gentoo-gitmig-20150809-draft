@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.9.ebuild,v 1.1 2006/03/03 01:02:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.9.ebuild,v 1.2 2006/03/06 04:43:12 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -70,6 +70,7 @@ src_unpack() {
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
 	epatch "${FILESDIR}"/wine-gentoo-no-ssp.patch #66002
 	sed -i '/^MimeType/d' tools/wine.desktop || die #117785
+	epatch "${FILESDIR}"/wine-0.9.9-flex.patch #124084
 }
 
 config_cache() {
@@ -86,24 +87,23 @@ config_cache() {
 
 src_compile() {
 	export LDCONFIG=/bin/true
-#	use arts    || export ARTSCCONFIG=""
-#	use esd     || export ESDCONFIG=""
-#	use scanner || export sane_devel="no"
-#	config_cache jack jack/jack.h
-#	config_cache cups cups/cups.h
-#	config_cache alsa alsa/asoundlib.h sys/asoundlib.h asound:snd_pcm_open
-#	config_cache nas audio/audiolib.h audio/soundlib.h
-#	config_cache xml2 libxml/parser.h libxslt/pattern.h libxslt/transform.h
-#	config_cache ldap ldap.h lber.h
-#	config_cache gif gif_lib.h
-#	config_cache glut glut:glutMainLoop
-#	config_cache jpeg jpeglib.h
-#	config_cache oss sys/soundcard.h machine/soundcard.h soundcard.h
-#	config_cache lcms lcms.h
+	use arts    || export ARTSCCONFIG=""
+	use esd     || export ESDCONFIG=""
+	use scanner || export sane_devel="no"
+	config_cache jack jack/jack.h
+	config_cache cups cups/cups.h
+	config_cache alsa alsa/asoundlib.h sys/asoundlib.h asound:snd_pcm_open
+	config_cache nas audio/audiolib.h audio/soundlib.h
+	config_cache xml2 libxml/parser.h libxslt/pattern.h libxslt/transform.h
+	config_cache ldap ldap.h lber.h
+	config_cache gif gif_lib.h
+	config_cache glut glut:glutMainLoop
+	config_cache jpeg jpeglib.h
+	config_cache oss sys/soundcard.h machine/soundcard.h soundcard.h
+	config_cache lcms lcms.h
 	use x86 && config_cache truetype freetype:FT_Init_FreeType
 
 	strip-flags
-#	use lcms && append-flags -I"${ROOT}"/usr/include/lcms
 
 	#	$(use_enable amd64 win64)
 	econf \
