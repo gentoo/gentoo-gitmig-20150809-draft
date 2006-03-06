@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 57f21aac6171e858547e608484f68ff8 ChangeLog 16484
-RMD160 b8bfe3e146c0cbd58b31c5a962b209b9a383751e ChangeLog 16484
-SHA256 08081072b71381a94b693ab242d1f7bc4741b16418e7c4604b4667365a720e73 ChangeLog 16484
+MD5 31c4dc7133526e71adf3dfaa9df65351 ChangeLog 16666
+RMD160 ba659bb674c4107bba6ad4657a57185c81664728 ChangeLog 16666
+SHA256 ce62b3e4e1a81890d4e727f34db8a6fbc94a0fb30c3c9a08123034299e43a3de ChangeLog 16666
 MD5 fd2d3637ead0861d84d21d41a227aaaa files/digest-mozilla-launcher-1.45 250
 RMD160 6b88206cc3f1fcf86b88755e83686e0fc11104a4 files/digest-mozilla-launcher-1.45 250
 SHA256 4a546dfda25630ac94d0432b742b017a7dee17afd3192dd85f9c195184c8aabc files/digest-mozilla-launcher-1.45 250
 MD5 0755d3aa7a8b0b81117e0d4abf165ccb files/digest-mozilla-launcher-1.47 250
 RMD160 449b452500e29e815518413a3dc7394ecda59ba0 files/digest-mozilla-launcher-1.47 250
 SHA256 e15a123917cf058e16cfa1c4213504f4e2b331e7e9e420171fdf1e0689ded059 files/digest-mozilla-launcher-1.47 250
+MD5 e929a4ff61cf03505afda7df1b9cebca files/digest-mozilla-launcher-1.49 250
+RMD160 e6404756f084cfa6bd8b75bc57e21f734dffbc79 files/digest-mozilla-launcher-1.49 250
+SHA256 28eddf171cd0fb7a014165d6fd25b5d1f9c0b08df75749ad51a8045cd8ec3aea files/digest-mozilla-launcher-1.49 250
 MD5 5f2388f082f553879f178d465eb546a3 files/mozilla-launcher-1.35-multilib.patch 1297
 RMD160 66ab62d893c62031c0580b3ba91d58e19f096b01 files/mozilla-launcher-1.35-multilib.patch 1297
 SHA256 022c666ec7d2dd80b8c3a6e6a8cc31feaac85ac7c422c3313609a44e489ae276 files/mozilla-launcher-1.35-multilib.patch 1297
@@ -28,10 +31,13 @@ SHA256 9633201a5b4640229bdc3ed9f09eb2c8c30d8c87960b7d9999b35260123d48fd mozilla-
 MD5 e1719045f3897526b7177b891e12415a mozilla-launcher-1.47.ebuild 968
 RMD160 aec54b87cdba7f79d2cbaff84ceaa6725df82e47 mozilla-launcher-1.47.ebuild 968
 SHA256 3cb546aad9f88c6c3ca807a2b0d2a5788c4110a6bc038f22d73df72f6276d304 mozilla-launcher-1.47.ebuild 968
+MD5 50f99d679162f832099561c8ebaeab1e mozilla-launcher-1.49.ebuild 968
+RMD160 09e797411c717bf413f8a429222d10ec90b6a089 mozilla-launcher-1.49.ebuild 968
+SHA256 ea0fa7bfaacb885d44a58702f81583fdb460edc054f136b5187fb55b11d9b5d8 mozilla-launcher-1.49.ebuild 968
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEA2Q1JrHF4yAQTrARAtXLAKC0kF1qW/w18HwiMf8oUR9JCMgXqwCcDR0t
-U7hh5lqAaG0r0eRyGh7De0c=
-=HoGw
+iD8DBQFEDJ6VJrHF4yAQTrARAi6iAKCgv9P7Zg2uzd2TeOoH+yznJvVflACgsRGi
+Q/exmt0jf9PyOtPGELaPo6E=
+=0W/c
 -----END PGP SIGNATURE-----
