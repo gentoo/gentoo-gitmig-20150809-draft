@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.97.ebuild,v 1.2 2006/02/20 22:06:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.97.ebuild,v 1.3 2006/03/06 17:17:26 mrness Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,12 +10,10 @@ SRC_URI="http://www.vmailmgr.org/archive/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc"
-RDEPEND="${DEPEND}
-	>=sys-apps/ucspi-unix-0.34
+RDEPEND=">=sys-apps/ucspi-unix-0.34
 	virtual/qmail
 	>=net-mail/qmail-autoresponder-0.95"
 
