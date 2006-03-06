@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r1.ebuild,v 1.9 2006/01/04 00:07:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r1.ebuild,v 1.10 2006/03/06 15:58:58 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ PATCHLEVEL="1"
 DESCRIPTION="An mpeg library for linux"
 HOMEPAGE="http://heroinewarrior.com/libmpeg3.php3"
 SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2
-	http://digilander.libero.it/dgp85/gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
+	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -49,9 +49,9 @@ src_unpack() {
 
 	if ! use mmx || has_pic ; then
 		sed -i -e 's:^NASM =.*:NASM =:' \
-		       -e 's|^HAVE_NASM :=.*|HAVE_NASM=n|' \
-		       -e 's|USE_MMX = 1|USE_MMX = 0|' \
-		       Makefile
+			-e 's|^HAVE_NASM :=.*|HAVE_NASM=n|' \
+			-e 's|USE_MMX = 1|USE_MMX = 0|' \
+			Makefile
 	fi
 }
 
