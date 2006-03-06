@@ -1,57 +1,32 @@
-MD5 c6a3200824175af217352ffeed421736 ChangeLog 10599
-RMD160 8c5a84a4a1b4759db1dc83c8532944aabfdb1a8e ChangeLog 10599
-SHA256 0ee0ae6dbf24691ec633efe78c1d719cfb1d5c9b01052d83ee7cce4f951e9d5a ChangeLog 10599
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cb6d372b433db5ae6cb20a28def46b3e ChangeLog 10753
 MD5 4d196387e01aa6fa4f0f852781b47a58 dante-1.1.15-r1.ebuild 2320
-RMD160 1ae4f8560b9931787eccf2f27002eb44c9c80e42 dante-1.1.15-r1.ebuild 2320
-SHA256 b944b6578f62b22b1f7156b3338cbf085baee85b742bbce9212c39f97db764d9 dante-1.1.15-r1.ebuild 2320
 MD5 633c678a48846de5c6ecb2729f85aedc dante-1.1.15-r2.ebuild 2500
-RMD160 7cbfc5723ccbeec74b9f94cab5900253b38f9303 dante-1.1.15-r2.ebuild 2500
-SHA256 2661c2e5066df15b8c8bff60c3dcbc5735e3eb68164f65584dff809f9b190032 dante-1.1.15-r2.ebuild 2500
 MD5 8430c3b3d9e96126615eb8928b3374d9 dante-1.1.18.ebuild 2269
-RMD160 9235fccce949d4e579f6929c298183d14c18e04f dante-1.1.18.ebuild 2269
-SHA256 4f097fd2e97ec99d4cfd80ec185c4abb875c7af79c980ec67293978872c5f8ab dante-1.1.18.ebuild 2269
+MD5 240abdb10d1f3a255e63e12f88b9a396 dante-1.1.19.ebuild 2324
 MD5 72d9add89e45e3cb921c99d79bdf31a7 files/dante-1.1.15-bindresvport.patch 485
-RMD160 4f4c9db0eb8a6f974453b6d014372720f7e7fe3e files/dante-1.1.15-bindresvport.patch 485
-SHA256 930b617334b42ab8da104c3d211e7268bb3960ecd9184b09ec2386e0cbc6e844 files/dante-1.1.15-bindresvport.patch 485
 MD5 30064015b5702cf8059a1639167e8a3f files/dante-1.1.15-getipnodebyname.patch 789
-RMD160 4122b900bb83daa73a666684ea43cb75be1cd681 files/dante-1.1.15-getipnodebyname.patch 789
-SHA256 b5d47f1e2c04861c13a833fb81a75ae3f12faf43452acf64b8316c07515ff47e files/dante-1.1.15-getipnodebyname.patch 789
 MD5 5e74662c76571e30e6a190a2d4d1193a files/dante-1.1.15-optionalpam.patch 10896
-RMD160 50c26f2bc8919dfdaa72e5ad89689c373a206390 files/dante-1.1.15-optionalpam.patch 10896
-SHA256 69442289df84495f7fded561d26ab89f75793f5ede28e1511a7722e56d57bcd8 files/dante-1.1.15-optionalpam.patch 10896
 MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.15_pre1-socksify.patch 811
-RMD160 4edaad9e92f2ab689cf10b3decd2aa02d24d1f62 files/dante-1.1.15_pre1-socksify.patch 811
-SHA256 2e39a9cb13ae30eaf4129583dbd28d6df08133564aa679b81b5feb21532822d5 files/dante-1.1.15_pre1-socksify.patch 811
 MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.18-socksify.patch 811
-RMD160 4edaad9e92f2ab689cf10b3decd2aa02d24d1f62 files/dante-1.1.18-socksify.patch 811
-SHA256 2e39a9cb13ae30eaf4129583dbd28d6df08133564aa679b81b5feb21532822d5 files/dante-1.1.18-socksify.patch 811
+MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.19-socksify.patch 811
 MD5 eb2041b3f61750335f8702515cb20b7c files/dante-sockd-conf 463
-RMD160 037abbc191675c690c7219ffdec738405d1ea669 files/dante-sockd-conf 463
-SHA256 b22c8261148fcb96cfd8942baa85633a790826a444920f7d87fc23d2dcf18a74 files/dante-sockd-conf 463
 MD5 e83585fe2c94dacd28e2c2a00e23186d files/dante-sockd-init 1648
-RMD160 6e4471055e95e397c50d9c1b06d83d4d622a6f6c files/dante-sockd-init 1648
-SHA256 590218f56b0aef0ee04334362d835bb00b8311e646965f6f426409f4e154d9d3 files/dante-sockd-init 1648
 MD5 0a5831b02f1ee3c0b9810c4354839906 files/digest-dante-1.1.15-r1 64
-RMD160 04de23f885dfe7d981202e9d424e7ae4f7baafcf files/digest-dante-1.1.15-r1 64
-SHA256 7ee45307c367057f1c5f4b67ee949c11feb9f9aee2483f4653436b610701d8a5 files/digest-dante-1.1.15-r1 64
 MD5 0a5831b02f1ee3c0b9810c4354839906 files/digest-dante-1.1.15-r2 64
-RMD160 04de23f885dfe7d981202e9d424e7ae4f7baafcf files/digest-dante-1.1.15-r2 64
-SHA256 7ee45307c367057f1c5f4b67ee949c11feb9f9aee2483f4653436b610701d8a5 files/digest-dante-1.1.15-r2 64
 MD5 d4207d41125a3aa07fab48cc977a786c files/digest-dante-1.1.18 64
-RMD160 dd63247dfd8e7cf7cff8d56f4e0f054849def53b files/digest-dante-1.1.18 64
-SHA256 a47d0bd516fecb455ee3df0e8a5a928b7ed7dd19945021b242476c0fd1448153 files/digest-dante-1.1.18 64
+MD5 5a5e158be05adc8ea86859160ec8595a files/digest-dante-1.1.19 64
 MD5 aa0bc92f8670b91aaf92f1e89b7e06c7 files/sockd.conf 7031
-RMD160 3ed9c0523eade831f01f867f8fea1889c2f429b6 files/sockd.conf 7031
-SHA256 6771ee3ca79790f5842d13847408128feb4ef5f1e798ba73fd663b427366a422 files/sockd.conf 7031
 MD5 05b76026b104b3a12fcd5d42aecc3041 files/sockd.conf-with-libwrap.patch 870
-RMD160 f34216f2542bf51563334e1fcaf87f9f687d6fe8 files/sockd.conf-with-libwrap.patch 870
-SHA256 ba4bb30ad5933b890d1b09c6468708f37abf012de3f8696482d1c46c5c1f2978 files/sockd.conf-with-libwrap.patch 870
 MD5 7573426ad7edc9ea4dd95f020205fda4 files/sockd.conf-with-pam.patch 295
-RMD160 67950c8d3fca41399540644ea47f549631868795 files/sockd.conf-with-pam.patch 295
-SHA256 e67499de8b976e17a9c7c0556e999e03f4bf06e8e57b78ba6dd41a128de0b719 files/sockd.conf-with-pam.patch 295
 MD5 cf06ad88e50a36ba1326579ab64366b8 files/socks.conf 4185
-RMD160 1eaacd974befc24a22fa5f157528fffbfc54992c files/socks.conf 4185
-SHA256 3dc8c06ca5a8309015c495ea50f62097ee6a605ac262665ffa5f19e0e8a5a9d8 files/socks.conf 4185
 MD5 19688263fcbda666eeb085869012f86a metadata.xml 246
-RMD160 bf022485cb8a0289c3151fc974670fd86687d6be metadata.xml 246
-SHA256 7302ea59a7112d51c6936fa5aa83204412d7391441c729a54de3651b81c35add metadata.xml 246
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDIPHjG8pv1lIUX4RAl3EAJ45yYd7vI4+eJFWja4mpS/BLnG4jgCg7eng
+rR9KmkoS2B8f+dAVEj1M7eE=
+=3Qrn
+-----END PGP SIGNATURE-----
