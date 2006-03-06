@@ -1,18 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8bf91d93a2378f85947583b4b4612bb6 ChangeLog 1827
-MD5 dd1c1a4f4073faa09d3e758118eccd38 files/digest-paros-3.2.4 65
+MD5 4554b139fe6c1c36a8491d21a2499026 ChangeLog 1961
 MD5 0c098a3c9837a7e5771887b9f80d5a9f files/digest-paros-3.2.8 65
 MD5 a74dd1f3bc0b99d7f69be66c8087180c files/digest-paros-3.2.9 65
 MD5 4b03e120ede9dfedec0594e35156b38c metadata.xml 256
-MD5 5889d9a2522fe457dad0cb30a4e09d13 paros-3.2.4.ebuild 879
 MD5 1f54a8876ea9b7f223d9e152ac4b9a1b paros-3.2.8.ebuild 879
-MD5 9707d078d33a1b6ded91a2d949ad64fa paros-3.2.9.ebuild 880
+MD5 ed976bff6d6ff8a802edd4bcb2ed6a86 paros-3.2.9.ebuild 891
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD2H3WjG8pv1lIUX4RAoZoAKCREtWlXXdZB48p/GlZ7rR7ujualgCfU33z
-hAA48VmpJGe2a6xafXfBkEw=
-=nSFC
+iD8DBQFEDJ9bjG8pv1lIUX4RAgrQAJ0ab4NtjZK/GU2SdviKNUE32H9HowCgr2lw
+ndnLotRz5i4kBpt6uefmEeM=
+=IOln
 -----END PGP SIGNATURE-----
