@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4e2ff98808071b69bd9073b7dd7f2423 ChangeLog 12673
-RMD160 b2ea9cac094d674a8b2227b6656fbb702bb42491 ChangeLog 12673
-SHA256 32a5e1cecc0cefb6101f83fd0de57afa583c4151fdd7f5152ad6b3f4b6184f27 ChangeLog 12673
+MD5 6d6bac491d068e903df517026ee60dfa ChangeLog 13000
+RMD160 5d1deb235e32446a3db7946ef8519b4a164c416e ChangeLog 13000
+SHA256 3bec7dc99c361e8b0f977f1c2110da3caa1df0218b1077659f25b4eab5153ae5 ChangeLog 13000
 MD5 520bad9028981b2837696c4f7a4f84b4 acroread-5.10.ebuild 2511
 RMD160 a380b3d15bf8a6e9a85f7560a2278bed34eb049e acroread-5.10.ebuild 2511
 SHA256 572031e3ebcc4fd68c077739473e39b32986e97b1017a0a3a63cddf57a108cb3 acroread-5.10.ebuild 2511
@@ -13,9 +10,15 @@ SHA256 d9e75642a2be98e573b9fa8c956e18fa32ef6b1d8793dcd5a921a43a147e7844 acroread
 MD5 27b188ba45b47ca6bab0aea706272c08 acroread-7.0.5-r1.ebuild 3082
 RMD160 c251e799223fd2e7e51e5672652daa4916696188 acroread-7.0.5-r1.ebuild 3082
 SHA256 6b4a61807c9160b25a80027062b7fd56e0a5f4617583801db694bf8d97efb366 acroread-7.0.5-r1.ebuild 3082
+MD5 683cce4a179493863680573b197aaa5c acroread-7.0.5-r2.ebuild 3932
+RMD160 143f8b602c7f094f1dfe40dd99c284f96c8b12cc acroread-7.0.5-r2.ebuild 3932
+SHA256 653db83b004b796f5b47eeaeae4ec191d14bea4f06de49385b2c2023e949f935 acroread-7.0.5-r2.ebuild 3932
 MD5 458977f344d5b207b3e2f4ffcb18ee7e acroread-7.0.5.ebuild 2881
 RMD160 e14edc614a4cb1418fa20fdf139fbea9b4d4511d acroread-7.0.5.ebuild 2881
 SHA256 7765f682e38b75e2c56953d5c49f39fcdd07b5cdaf9e21f5881778f8788ee12e acroread-7.0.5.ebuild 2881
+MD5 6342d575c40b159048a7397f3285a518 files/acroread-low-startup-fontissue.patch 355
+RMD160 dff0634b7042c697d51138757119cd40013b2a63 files/acroread-low-startup-fontissue.patch 355
+SHA256 6011cfa9d16ba8a0669e56074c43febd89a15fe1fba43c96b8d57e68b4aa84f2 files/acroread-low-startup-fontissue.patch 355
 MD5 00414d6be2296740cc5225ca93a3d035 files/acroread-scim.patch 488
 RMD160 a4b6466a2afd7be298d46aa039f3e882ea6c12ce files/acroread-scim.patch 488
 SHA256 4c826838f8ab1e8a9aa288609e04e2141308e57b4038d6e68fb0c869a6b4d808 files/acroread-scim.patch 488
@@ -31,13 +34,9 @@ SHA256 742129c989e2f63df6b564f3807e77b4f27f111a8ea7fe4c8bb9d6184f8bf99a files/di
 MD5 a7710a4939e2b52a8c5f42df6ab4a49e files/digest-acroread-7.0.5-r1 458
 RMD160 a6bd913c7c2f6c6a4ba96ae5af4854f11e6d6c0c files/digest-acroread-7.0.5-r1 458
 SHA256 ef2def44e1ed155f332ebf27a156ed009f3f95f097005cea727339b271cf1316 files/digest-acroread-7.0.5-r1 458
+MD5 aa2f4981a0dde9c6c52cd2b96330d09f files/digest-acroread-7.0.5-r2 4480
+RMD160 fa4e5b9892cfacfda33bebd7ab49734fe93fba50 files/digest-acroread-7.0.5-r2 4480
+SHA256 66ac279619beba5ad6069acf229adfcbd15ef1c9bff9710363c75577f6930d93 files/digest-acroread-7.0.5-r2 4480
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 metadata.xml 161
 SHA256 7c85e6739a71f5bb23e8de36c88677d772946e61f7285892f7554e37bd2bca76 metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/CsSSENan+PfizARAqTKAJ0YkQ99jkEqqy4QPhYMznS5zfch2gCfRm6u
-NCnI18uoGUrapTZSfB+EccA=
-=WyMT
------END PGP SIGNATURE-----
