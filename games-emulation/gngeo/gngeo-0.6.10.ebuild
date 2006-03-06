@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.6.10.ebuild,v 1.1 2006/03/06 17:21:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.6.10.ebuild,v 1.2 2006/03/06 19:58:41 mr_bones_ Exp $
 
-inherit flag-o-matic games
+inherit eutils games
 
 DESCRIPTION="A NeoGeo emulator"
 HOMEPAGE="http://m.peponas.free.fr/gngeo/"
@@ -19,6 +19,12 @@ RDEPEND="virtual/opengl
 	>=media-libs/libsdl-1.2"
 DEPEND="${RDEPEND}
 	x86? ( >=dev-lang/nasm-0.98 )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-execstacks.patch"
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
