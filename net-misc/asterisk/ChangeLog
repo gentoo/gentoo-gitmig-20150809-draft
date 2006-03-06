@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.104 2006/03/06 03:45:05 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.105 2006/03/06 04:41:15 rajiv Exp $
+
+*asterisk-1.0.10-r1 (06 Mar 2006)
+*asterisk-1.0.9-r3 (06 Mar 2006)
+*asterisk-1.0.8-r2 (06 Mar 2006)
+*asterisk-1.0.7-r3 (06 Mar 2006)
+
+  06 Mar 2006; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  +files/1.0.0/asterisk-1.0.10-vmail.cgi.patch, +asterisk-1.0.7-r3.ebuild,
+  +asterisk-1.0.8-r2.ebuild, -asterisk-1.0.9-r2.ebuild,
+  +asterisk-1.0.9-r3.ebuild, -asterisk-1.0.10.ebuild,
+  +asterisk-1.0.10-r1.ebuild:
+  new diff for vmail.cgi to fully fix bug #111836.
 
   06 Mar 2006; Stefan Knoblich <stkn@gentoo.org> asterisk-1.0.8-r1.ebuild,
   asterisk-1.0.9-r2.ebuild, asterisk-1.0.10.ebuild:
@@ -88,7 +100,7 @@
   +asterisk-1.0.8-r1.ebuild, -asterisk-1.0.9.ebuild,
   -asterisk-1.0.9-r1.ebuild, +asterisk-1.0.9-r2.ebuild,
   -asterisk-1.2.0_beta1.ebuild, +asterisk-1.2.0_beta1-r1.ebuild:
-  Security revbump, fixes #11836. Removed old insecure versions. Thanks to
+  Security revbump, fixes #111836. Removed old insecure versions. Thanks to
   Rajiv Manglani <rajiv@gentoo.org> for reporting this one.
 
   29 Oct 2005; Stefan Knoblich <stkn@gentoo.org>
