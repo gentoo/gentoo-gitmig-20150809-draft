@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0c8bfdc46cd8fabc78f087ea55b43d10 ChangeLog 3595
-RMD160 72033e9a510068f304aaaf734c121ad510f7f178 ChangeLog 3595
-SHA256 252b95dd16baf50309a064dcde7b317c05e0b9c5626e41c29b65eea2c2fa6f09 ChangeLog 3595
+MD5 f0bec73b825981d2aa59c0e684315d14 ChangeLog 3761
+RMD160 9e225e00c2895550bd061578d501cc3cc95573ff ChangeLog 3761
+SHA256 5c119f18a8b6bc5c8ce0b34318765e2fdc4f7157e194ec4c15e5a4b2b7a75057 ChangeLog 3761
 MD5 3d47855a9c3abeeaacd705ff63e2499d files/digest-logilab-common-0.10.0 65
 RMD160 1d8e92ba767dfa17d43654df42c2e58a736dac04 files/digest-logilab-common-0.10.0 65
 SHA256 b2470108c90797f6817b016bd9e6c56d998d51e63a844307acfdd91ad92af76c files/digest-logilab-common-0.10.0 65
@@ -19,6 +19,9 @@ SHA256 a610f7329c57d41bb9a03de1d2dbddfb8f79811979a4bd4240dcb125f3142687 files/di
 MD5 df0f4b5c51241d3d6b89a52883bca6b6 files/digest-logilab-common-0.14.0 241
 RMD160 5526b555aa65f6d31494948db422829c38855584 files/digest-logilab-common-0.14.0 241
 SHA256 9100493b830f3f3ea8a79b0b0cf3f514a4eea8f4d58ce4da7ffeba07c5423503 files/digest-logilab-common-0.14.0 241
+MD5 6f73e3d961b1fcb8492556ff23cdb539 files/digest-logilab-common-0.14.1 241
+RMD160 5ce006c74297dd987f028ca60588897c621d4563 files/digest-logilab-common-0.14.1 241
+SHA256 c363aac6a7ad2bf8e93ccc0f73c59642c08a028e4e5142ab7b8238d3315c25c7 files/digest-logilab-common-0.14.1 241
 MD5 229d5c1c48d6d7a481231e941be3abc6 files/digest-logilab-common-0.5.0 63
 RMD160 6574edd2ac4a312f1f30a55e814fc7dc97b595eb files/digest-logilab-common-0.5.0 63
 SHA256 664bf1037c309e0580262c86e042d588476bcf9eb2f523dacd7c4c1009a505f9 files/digest-logilab-common-0.5.0 63
@@ -49,6 +52,9 @@ SHA256 b4c02164d44d9fbe14e0a9d2070712ee19b5e96b6d57a262e72c31c7bd149988 logilab-
 MD5 02ce2b987def9426bf7ae93baf1bed6b logilab-common-0.14.0.ebuild 1416
 RMD160 857935bdadd07ab78161f755019ead1c9599d1af logilab-common-0.14.0.ebuild 1416
 SHA256 935c4e818a01f43323692be40d55e8c6f01f19c5993bad53dad7175746e0eb02 logilab-common-0.14.0.ebuild 1416
+MD5 f6cd81c0561bba7058521a607cc5e49f logilab-common-0.14.1.ebuild 1424
+RMD160 193a55917ec72561d822d70c230323e441dea250 logilab-common-0.14.1.ebuild 1424
+SHA256 3dc603d749c037b21d8009ca8fb03961745646d0fe54c4256303466611d155ca logilab-common-0.14.1.ebuild 1424
 MD5 49e47ae120639f7eaed252393cd57f9c logilab-common-0.5.0.ebuild 627
 RMD160 694647c1b68324005ff4afebc391319588e92e84 logilab-common-0.5.0.ebuild 627
 SHA256 86478a41c2dec75ddd940e80956a14c1299479534307627ee89e4bbd648e6616 logilab-common-0.5.0.ebuild 627
@@ -61,7 +67,7 @@ SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEDG+cW78445TWHXcRApe5AJ9jVCIatZu7HgJEOM3r3pAhkBm7fACgkg3b
-8tHgJdutfJ7jpHZmGxeQut0=
-=PTOx
+iD8DBQFEDHEBW78445TWHXcRAj+gAJ0ZLtqI9FjjeO6KUkmsexaAJIizTACeNbir
+fQOwLFBK9jt4/Re4AsIsTFc=
+=Ehxh
 -----END PGP SIGNATURE-----
