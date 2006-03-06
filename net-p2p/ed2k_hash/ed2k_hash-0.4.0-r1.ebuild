@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ed2k_hash-0.4.0-r1.ebuild,v 1.1 2005/09/26 14:32:29 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ed2k_hash-0.4.0-r1.ebuild,v 1.2 2006/03/06 14:31:32 mkay Exp $
 
 inherit flag-o-matic eutils
 
@@ -32,7 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} mydocdir=${D}/usr/share/doc/${PF}/html || die
+	make install DESTDIR=${D} mydocdir=/usr/share/doc/${PF}/html || die
 
 	dodoc AUTHORS COPYING INSTALL README TODO
 }
