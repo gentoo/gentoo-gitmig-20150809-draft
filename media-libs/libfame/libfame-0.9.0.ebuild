@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0.ebuild,v 1.21 2005/01/04 10:01:36 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0.ebuild,v 1.22 2006/03/06 15:07:48 flameeyes Exp $
 
 inherit flag-o-matic gnuconfig
 
@@ -12,8 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc sparc x86"
 IUSE="mmx sse"
-
-DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A} || die

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.8.ebuild,v 1.23 2005/09/04 12:37:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.8.ebuild,v 1.24 2006/03/06 15:02:57 flameeyes Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="1.2"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos sparc x86"
 IUSE="doc static"
 
-DEPEND="virtual/libc
-	doc? ( app-doc/doxygen )"
+DEPEND="doc? ( app-doc/doxygen )"
 
 pkg_preinst() {
 	# these could cause problems if they exist from
