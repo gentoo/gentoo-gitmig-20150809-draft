@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38-r1.ebuild,v 1.4 2006/02/11 16:45:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38-r1.ebuild,v 1.5 2006/03/06 02:02:08 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -107,6 +107,7 @@ src_install() {
 	dodir /$(get_libdir)
 	mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)/
 	dolib.a lib/*.a || die "dolib.a"
+	rm -f "${D}"/usr/$(get_libdir)/libcom_err.a
 	local x
 	cd "${D}"/$(get_libdir)
 	for x in *.so ; do
