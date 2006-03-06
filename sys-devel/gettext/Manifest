@@ -1,31 +1,73 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 417febf61ac7e268e0252516ded8556a ChangeLog 12061
-MD5 38756cea2e4f8e36c2e45b890f1a7463 files/50po-mode-gentoo.el 183
+MD5 67d0e4260bb6fde1ece8379ba5cb7c29 ChangeLog 12300
+RMD160 ba92d1420ae824ee1dabeb1c2068fb1722cff46d ChangeLog 12300
+SHA256 7e40f62962d7f111835d42428b2187fa06f7e705037e2aa0bec0bb633a90a562 ChangeLog 12300
+MD5 26632b2c8167333a89f1818c6cd5002d files/50po-mode-gentoo.el 322
+RMD160 fe6603c8a72c7674f8b55201f44c9854fa209991 files/50po-mode-gentoo.el 322
+SHA256 96e59f3fffb71699946e4b930dec98bce68a8234f598f4f85024ee61713991c0 files/50po-mode-gentoo.el 322
 MD5 83b80576c27ac3a75d70802eb9c92790 files/digest-gettext-0.12.1-r2 67
+RMD160 5ff31fa4a478d78834a6040212719a21bf9d4e6f files/digest-gettext-0.12.1-r2 67
+SHA256 51b34f1d1822291f6eca31fb8cce9ac0b4d3f6d9e642505a02c12aa9df65ee38 files/digest-gettext-0.12.1-r2 67
 MD5 0e4a00cc30a91523c838cd17b5841399 files/digest-gettext-0.14.1-r1 67
+RMD160 5c893426f96c95fa05101cca163a945fe9c743b4 files/digest-gettext-0.14.1-r1 67
+SHA256 3f8a286abfa0f5cad65d38700be7ba0f022fdb14ba3d40cc6e0f3b8333c711aa files/digest-gettext-0.14.1-r1 67
 MD5 44ad3082200305087e6244f5a2665892 files/digest-gettext-0.14.2 67
+RMD160 174f1d4eb215107ca5c6f0f547326cbf4d1d36c2 files/digest-gettext-0.14.2 67
+SHA256 963e2b3f148f9a1dc74d4f35851978ef6f263c83bf6608055a668fe0c4564358 files/digest-gettext-0.14.2 67
 MD5 bc7e7f683a64a5f805af77b1ed851b65 files/digest-gettext-0.14.4 67
-MD5 ba2eaf73c69d33eeb6f259f2c2da4ded files/digest-gettext-0.14.5 67
+RMD160 aff6841aff333515d31f30a9bbff7560f1c38464 files/digest-gettext-0.14.4 67
+SHA256 c18cfdc7206aad25d6ae6995ae1a8aaff8df42dbbfcdd57e6c1e4933288e5b78 files/digest-gettext-0.14.4 67
+MD5 27c91552a76d6da12679275b9ea673c5 files/digest-gettext-0.14.5 247
+RMD160 9a3b6ac776d04c4cb1d47e719799019b4a352354 files/digest-gettext-0.14.5 247
+SHA256 45a205048306e5682574784e72ae5f5318035f7e66c1022fd0fb24567e076f5a files/digest-gettext-0.14.5 247
 MD5 fada337fd753f2580b6849dc560498ff files/gettext-0.12.1-tempfile.patch 2226
+RMD160 37b4d034297ffe992807b32255eebb3c77e3d067 files/gettext-0.12.1-tempfile.patch 2226
+SHA256 61346e28d53ae1fd3e5a2aa36e74364b313f0e4239214558f2ad0517cdf6ff29 files/gettext-0.12.1-tempfile.patch 2226
 MD5 3b9aefbb552545fdf0836f56121c9ae5 files/gettext-0.12.1-without_java.patch 2743
+RMD160 d2c302c367f5880009590a9b59b0eaff353f04a3 files/gettext-0.12.1-without_java.patch 2743
+SHA256 6dfefe191bc9435a957f7f6ff0658a771cf6ccffbaf169cae79ce7017a0421ee files/gettext-0.12.1-without_java.patch 2743
 MD5 3077319e6090fcd6262e2d8fd463441f files/gettext-0.14.1-lib-path-tests.patch 707
+RMD160 4ec25fa507f8f58a361991237f1b32ad52caff92 files/gettext-0.14.1-lib-path-tests.patch 707
+SHA256 c9681e9dc9f04ffb041e5fa6dac886d529231ddb1b73688157d69c3277b96097 files/gettext-0.14.1-lib-path-tests.patch 707
 MD5 2a60a632eb22d99acfa09d16828fe073 files/gettext-0.14.1-no-java-tests.patch 2885
+RMD160 0a0775f4a3addc2f56702b7436d92a65f6aa3752 files/gettext-0.14.1-no-java-tests.patch 2885
+SHA256 752313dc0ea8886248b5b7b4c941d76da9062bcd5b383ac39c3b07dccbbbbfd3 files/gettext-0.14.1-no-java-tests.patch 2885
 MD5 095399be17e9cf19b7b02ffcd1fb95a5 files/gettext-0.14.1-tempfile.patch 2636
+RMD160 5151e60a1295a3b6f2adc4b96657141752863904 files/gettext-0.14.1-tempfile.patch 2636
+SHA256 0cf4f174e406aefbd3e868f86058c810e5c1f518f0bd5a8577d20eed6f7654a3 files/gettext-0.14.1-tempfile.patch 2636
 MD5 3b9aefbb552545fdf0836f56121c9ae5 files/gettext-0.14.1-without_java.patch 2743
+RMD160 d2c302c367f5880009590a9b59b0eaff353f04a3 files/gettext-0.14.1-without_java.patch 2743
+SHA256 6dfefe191bc9435a957f7f6ff0658a771cf6ccffbaf169cae79ce7017a0421ee files/gettext-0.14.1-without_java.patch 2743
 MD5 dfcc1d12d05c42f262de0dada08ed90d files/gettext-0.14.2-fix-race.patch 417
+RMD160 df2087f9972697c76e6468fffce7484b9a0cc02b files/gettext-0.14.2-fix-race.patch 417
+SHA256 b3fd8ada4d6cb75824d7bf7437d309b5a23a2aca6819b5e592a24654203c2c0e files/gettext-0.14.2-fix-race.patch 417
 MD5 b56837fdd725fc00c173b57b951b90cc files/gettext-0.14.2-no-java-tests.patch 2524
+RMD160 447a61b261c08fae6f30ae3f2026e73f2891d73a files/gettext-0.14.2-no-java-tests.patch 2524
+SHA256 3fc3ea40a777e294637f4875f7bd135640c93b25e2f07cbf86c6b4faca19c7e0 files/gettext-0.14.2-no-java-tests.patch 2524
 MD5 0890c612ec51d74a5cefbb0ca3ab8ae7 gettext-0.12.1-r2.ebuild 2543
+RMD160 30c9a08528a2d892acc4a9fc7721c63f24738f91 gettext-0.12.1-r2.ebuild 2543
+SHA256 76781139f584490dc0f68743d3988502e9ea1bf7f237d5a73a60acfe2db2121e gettext-0.12.1-r2.ebuild 2543
 MD5 ac4041bb4e436a9935d04cd63b40d425 gettext-0.14.1-r1.ebuild 2886
+RMD160 3219951877a0daed5f3559166f3fe70816383807 gettext-0.14.1-r1.ebuild 2886
+SHA256 500d69b64ac6d4695602d03349c101a198dbee3de2405a35670df04a4a9c5a24 gettext-0.14.1-r1.ebuild 2886
 MD5 f46f927893861e2d082d7b836f597ef7 gettext-0.14.2.ebuild 3509
+RMD160 1e96d72f1b9da7aaab7d44c17226d73972c280fe gettext-0.14.2.ebuild 3509
+SHA256 7cf3917af5826427269c0a05ab74a92bc51d61a71e50146f6bf854ef228ff372 gettext-0.14.2.ebuild 3509
 MD5 430e22b4c52c95f6c61427e5ec6d9439 gettext-0.14.4.ebuild 3578
+RMD160 1eb595e00bda4e5a08d4bd8fa17f1d2fcc4aa582 gettext-0.14.4.ebuild 3578
+SHA256 d820305ff98fc063b4e6912813f9d4a4950a818cd25a5e55d2daa26427e4a77a gettext-0.14.4.ebuild 3578
 MD5 dc7a517c686c00d2be213dc35a8185df gettext-0.14.5.ebuild 3842
+RMD160 ff7c7e3dfdde6a94e11c1750fc9c9d6d1ac99265 gettext-0.14.5.ebuild 3842
+SHA256 bcc4a9a7b4aff9dc41121ef6c23147e4eb4050bbde0314898a5dec18f29fcf4b gettext-0.14.5.ebuild 3842
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDmMiMgIKl8Uu19MoRAk7mAJ412QA9Dfr27N0OP74874/TTWytTwCdHPiO
-uY2JfMyvcDUxlgrHz+4U+Xs=
-=+r5G
+iD8DBQFEC6OFyiNZaEAZA+ARAi5mAJ9Kt6215sjvy2mND61ClBsoNkv0TQCfUjR/
+1HDiR7EtqtGXDkACMoUOM8s=
+=Sfbe
 -----END PGP SIGNATURE-----

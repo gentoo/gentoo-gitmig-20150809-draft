@@ -1,8 +1,8 @@
 
 ;; site-file configuration for po-mode
 
-;; po-mode
-(setq auto-mode-alist (append '(("\\.po$" . po-mode)) auto-mode-alist))
+(autoload 'po-mode "po-mode" "Major mode for translators to edit PO files" t)
+(autoload 'po-find-file-coding-system "po-compat")
 
-(autoload 'po-mode "po-mode" ".po file editting mode" t)
-
+(add-to-list 'auto-mode-alist '("\\.po\\'\\|\\.po\\." . po-mode))
+(modify-coding-system-alist 'file "\\.po\\'\\|\\.po\\." 'po-find-file-coding-system)
