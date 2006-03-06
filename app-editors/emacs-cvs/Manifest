@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 702f3011653a39651e4a0720ba9a19dc ChangeLog 6943
-RMD160 b8bb68f7f0c345e5e8bb3ab2ca5114e679200667 ChangeLog 6943
-SHA256 da67ffb4ce277ebe6dc7be2d1c7396b5c6938f0bece5a6dfe7f7ce499375be98 ChangeLog 6943
+MD5 99844f0598516e29994aa69ca903498a ChangeLog 7115
+RMD160 0b88ba00e51c3e312fa69011c5ab240cd877916e ChangeLog 7115
+SHA256 d23098680e13053aab36b776383802535bd9c170e7ae47fb3337db27d0c903df ChangeLog 7115
 MD5 f0756af862b825d76bba1038935926b5 emacs-cvs-22.0.50-r1.ebuild 5902
 RMD160 774ce7098425636c190ec6392e39fbd698cd25eb emacs-cvs-22.0.50-r1.ebuild 5902
 SHA256 ee3135380e18793731460bf1e7fdfd49b51b9566dc556562592af410ae7ac0d8 emacs-cvs-22.0.50-r1.ebuild 5902
@@ -31,9 +31,9 @@ SHA256 3931cd9401f587dae3bc898f39bffebe349b3597bbf7bd3199b7ec1ab01167d1 files/em
 MD5 277b238c9263aabcc2ef92de1d6d68bb files/emacs-cvs-21.3.50-nofink.diff 1520
 RMD160 31c8fc31a4715d26e1566d87f09b947d1664b136 files/emacs-cvs-21.3.50-nofink.diff 1520
 SHA256 09f387ecc0a53f02acbe445b3e9c82cd815700c7313329e0bc5d8baa39a925a7 files/emacs-cvs-21.3.50-nofink.diff 1520
-MD5 5f423550e3d32b7c0511eccd93a94750 files/emacs-subdirs-el-gentoo.diff 1369
-RMD160 142e80ab7dc4620275ec9623f646e0b2c4a1c6bf files/emacs-subdirs-el-gentoo.diff 1369
-SHA256 c407b31c785b275f12337e41e58ff8386219b1c94a1c98b69eee82a10eb54074 files/emacs-subdirs-el-gentoo.diff 1369
+MD5 bd7222d2c80bddb9077f389897887cdf files/emacs-subdirs-el-gentoo.diff 1580
+RMD160 fea0e4ade096977b4f77b7b0234c8097dda3650e files/emacs-subdirs-el-gentoo.diff 1580
+SHA256 d01a8119a565689a37499e6d5aedcbf7e9329e1612840d281ae5a0c183059d6e files/emacs-subdirs-el-gentoo.diff 1580
 MD5 91da809381cbee2642bee45da75c182b files/xft-bgalpha.patch 690
 RMD160 eb4bee1226982b1b470f0b267960fd177cbc5eb1 files/xft-bgalpha.patch 690
 SHA256 51e1ee64d1fbfebec95e1863b476692c7291f44fb32a7f85e025b57c447d5f6f files/xft-bgalpha.patch 690
@@ -49,7 +49,7 @@ SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEAiJMyiNZaEAZA+ARAsoZAJ9EnJGLMTJM+EZ6zHYzfUz7n5hjYgCfSLIA
-l5XlrbKqC+VRFIcpiW0oV+g=
-=cqVV
+iD8DBQFEC39CyiNZaEAZA+ARAnNHAJ4kcXi84Heq+NQfQezKikAKmd19ywCfQEiI
+ILGWAUW/OHldj8+ohN9gEQg=
+=tWDr
 -----END PGP SIGNATURE-----
