@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.1 2006/03/06 01:14:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.2 2006/03/06 15:35:28 markusle Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -91,7 +91,9 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_WRAP_CPP:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_WRAP_UI:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_QT_DIR:PATH=/qt/3/plugins"
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DESIRED_QT_VERSION:STRING=3"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DDESIRED_QT_VERSION:STRING=3"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_MOC_EXECUTABLE:FILEPATH=/usr/qt/3/bin/moc"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_UIC_EXECUTABLE:FILEPATH=/usr/qt/3/bin/uic"
 	fi
 
 
@@ -105,7 +107,7 @@ src_compile() {
 	cmake ${CMAKE_VARIABLES} . && cmake ${CMAKE_VARIABLES} . \
 		|| die "cmake configuration failed"
 
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
