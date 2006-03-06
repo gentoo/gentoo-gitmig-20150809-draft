@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7979c118043dea8386f7f45e3c2523ae libgig-2.0.1.ebuild 986
-MD5 308b535606ff042fe1a30875ae69aa4e ChangeLog 620
-MD5 1776c85e78a72bdf3b0b8551927166b3 libgig-2.0.0.ebuild 1002
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 f9a32044e574799a513d8004654bd428 files/digest-libgig-2.0.1 65
+MD5 3241a61c55b3b26bb2bab25bdcd962cc ChangeLog 758
+RMD160 30e3410867354fed05036f0533e411fadcc547e5 ChangeLog 758
+SHA256 c84f5216ef8ad37cad74b95c89a0c41ad76a6246462b9b7f048eb8d7f46fc31f ChangeLog 758
 MD5 b9775023f1a01bb8d6f08f22e0b02fab files/digest-libgig-2.0.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGuefj5H05b2HAEkRAnQTAJ9cM+wEGpN8s3Y7Yv88p2oEQXaLlgCdHWHK
-3mR6ozhmwBchF2CnH2ZohtM=
-=CP/b
------END PGP SIGNATURE-----
+RMD160 ba5bbd80b05c0f659e967c8ffec3549b80731d31 files/digest-libgig-2.0.0 65
+SHA256 d684adb78e66c8ee0b9d4a39d7409cdab166d5967181a2509c158752c339f140 files/digest-libgig-2.0.0 65
+MD5 f9a32044e574799a513d8004654bd428 files/digest-libgig-2.0.1 65
+RMD160 1df86e2158146faf53d0ac1a8519f3ced3da5e98 files/digest-libgig-2.0.1 65
+SHA256 eb592c4af9c533bda00fb0dfa3cc30e0df8fb4b30fd3c654f89605541cd46693 files/digest-libgig-2.0.1 65
+MD5 ae9bdb37af9f336eb99a897490eb83ea libgig-2.0.0.ebuild 1001
+RMD160 7a85d70ae3544f329397d99eb90fbc617a537518 libgig-2.0.0.ebuild 1001
+SHA256 09507bfcdbbc815ca9ad588d9644cbcc53b9bcf69e495fee24646bcff2193a8b libgig-2.0.0.ebuild 1001
+MD5 0caf7e54b82e5bfc834f2659caaf08d0 libgig-2.0.1.ebuild 984
+RMD160 2e59773f0b7b92466b80f5bda22d62c66adfc60d libgig-2.0.1.ebuild 984
+SHA256 bc62353ce9057ae5b200a4d03899531ce1be519195096ea9589cb4b13e872029 libgig-2.0.1.ebuild 984
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
