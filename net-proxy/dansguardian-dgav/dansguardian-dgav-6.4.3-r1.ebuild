@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/dansguardian-dgav-6.4.3-r1.ebuild,v 1.1 2005/12/08 22:39:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/dansguardian-dgav-6.4.3-r1.ebuild,v 1.2 2006/03/06 18:16:16 mrness Exp $
 
 inherit eutils
 
@@ -18,7 +18,6 @@ SLOT="0"
 KEYWORDS="~ppc ~sparc ~x86"
 IUSE=""
 DEPEND="!net-proxy/dansguardian
-	virtual/libc
 	net-libs/libesmtp
 	app-antivirus/clamav"
 
@@ -27,16 +26,16 @@ S="${WORKDIR}/${DG_PN}-${DG_PV}"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S} || die "source dir not found"
-	epatch ${FILESDIR}/dansguardian-xnaughty-2.7.6-1.diff
-	epatch ../${DG_PN}-${DG_PV}-antivirus-${PV}.patch
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	cd "${S}" || die "source dir not found"
+	epatch "${FILESDIR}/dansguardian-xnaughty-2.7.6-1.diff"
+	epatch "../${DG_PN}-${DG_PV}-antivirus-${PV}.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
 
 src_compile() {
 	./configure \
 		--prefix= \
-		--installprefix=${D} \
+		--installprefix="${D}" \
 		--mandir=/usr/share/man/ \
 		--cgidir=/var/www/localhost/cgi-bin/ \
 		--logrotatedir="${D}/etc/logrotate.d" \
@@ -48,10 +47,10 @@ src_compile() {
 src_install() {
 	make install || die "make install failed"
 
-	newinitd ${FILESDIR}/dansguardian.init dansguardian
+	newinitd "${FILESDIR}/dansguardian.init" dansguardian
 
 	insinto /etc/logrotate.d
-	newins ${FILESDIR}/dansguardian.logrotate dansguardian
+	newins "${FILESDIR}/dansguardian.logrotate" dansguardian
 
 	doman dansguardian.8
 	dodoc README*
