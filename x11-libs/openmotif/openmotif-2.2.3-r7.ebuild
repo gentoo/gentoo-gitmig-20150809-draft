@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r7.ebuild,v 1.3 2005/12/12 06:01:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r7.ebuild,v 1.4 2006/03/06 20:29:24 blubb Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -8,7 +8,8 @@ MY_P=${P/m/M}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Open Motif"
 HOMEPAGE="http://www.motifzone.org/"
-SRC_URI="ftp://ftp.motifzone.net/om${PV}/src/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.motifzone.net/om${PV}/src/${MY_P}.tar.gz
+		mirror://gentoo/${P}-CAN-2004-0914-newer.patch.bz2"
 
 LICENSE="MOTIF"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
@@ -47,8 +48,8 @@ src_unpack() {
 
 	# various patches
 	epatch ${FILESDIR}/${P}-mwm-configdir.patch
-	epatch ${FILESDIR}/${P}-CAN-2004-0687-0688.patch.bz2
-	epatch ${FILESDIR}/${P}-CAN-2004-0914-newer.patch.bz2
+	epatch ${FILESDIR}/${P}-CAN-2004-0687-0688.patch
+	epatch ${WORKDIR}/${P}-CAN-2004-0914-newer.patch
 	epatch ${FILESDIR}/${P}-CAN-2004-0914_sec8.patch
 	epatch ${FILESDIR}/${P}-char_not_supported.patch
 	epatch ${FILESDIR}/${P}-pixel_length.patch

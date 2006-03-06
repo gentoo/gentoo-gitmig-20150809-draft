@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r9.ebuild,v 1.11 2005/07/08 12:15:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r9.ebuild,v 1.12 2006/03/06 20:29:24 blubb Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -8,7 +8,8 @@ MY_P=${P}-4_MLI.src
 S=${WORKDIR}/motif
 DESCRIPTION="Open Motif (Metrolink Bug Fix Release)"
 HOMEPAGE="http://www.openmotif.org/"
-SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz
+		mirror://gentoo/${P}-CAN-2004-0914-newer.patch.bz2"
 
 LICENSE="MOTIF"
 SLOT="0"
@@ -29,8 +30,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-CAN-2004-0687-0688.patch.bz2
-	epatch ${FILESDIR}/${P}-CAN-2004-0914-newer.patch.bz2
+	epatch ${FILESDIR}/${P}-CAN-2004-0687-0688.patch
+	epatch ${WORKDIR}/${P}-CAN-2004-0914-newer.patch
 	epatch ${FILESDIR}/${P}-CAN-2004-0914_sec8.patch
 
 	ebegin "adjusting file permissions"

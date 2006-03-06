@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r13.ebuild,v 1.8 2006/02/16 19:49:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r13.ebuild,v 1.9 2006/03/06 20:29:24 blubb Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -8,7 +8,8 @@ MY_P=${P}-4_MLI.src
 S=${WORKDIR}/motif
 DESCRIPTION="Open Motif (Metrolink Bug Fix Release)"
 HOMEPAGE="http://www.openmotif.org/"
-SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz
+		mirror://gentoo//${P}-CAN-2004-0914-newer.patch.bz2"
 
 LICENSE="MOTIF"
 KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc-macos ppc64 sparc x86"
@@ -30,8 +31,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-CAN-2004-0687-0688.patch.bz2
-	epatch ${FILESDIR}/${P}-CAN-2004-0914-newer.patch.bz2
+	epatch ${FILESDIR}/${P}-CAN-2004-0687-0688.patch
+	epatch ${WORKDIR}/${P}-CAN-2004-0914-newer.patch
 	epatch ${FILESDIR}/${P}-CAN-2004-0914_sec8.patch
 	epatch ${FILESDIR}/CAN-2005-0605.patch
 
