@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.6 2006/03/04 21:12:49 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.7 2006/03/06 08:36:47 sebastian Exp $
+
+  06 Mar 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  pecl-apc-3.0.9.ebuild:
+  Support for PHP 5.0 has been dropped, closes bug 125138.
 
 *pecl-apc-3.0.9 (04 Mar 2006)
 

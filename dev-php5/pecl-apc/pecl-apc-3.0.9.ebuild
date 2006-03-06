@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.0.9.ebuild,v 1.1 2006/03/04 21:12:49 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.0.9.ebuild,v 1.2 2006/03/06 08:36:47 sebastian Exp $
 
 PHP_EXT_NAME="apc"
 PHP_EXT_PECL_PKG="APC"
@@ -15,7 +15,7 @@ LICENSE="PHP"
 SLOT="0"
 IUSE="mmap"
 
-need_php_by_category
+DEPEND="${DEPEND} >=dev-lang/php-5.1.1"
 
 pkg_setup() {
 	has_php
