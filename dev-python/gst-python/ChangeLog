@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.9 2006/01/18 02:54:15 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.10 2006/03/06 18:12:29 zaheerm Exp $
+
+  06 Mar 2006; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/gst-python-0.10-leakfix.diff, gst-python-0.10.2.ebuild:
+  fix gst-python leak
 
 *gst-python-0.10.2 (18 Jan 2006)
 

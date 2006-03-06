@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.2.ebuild,v 1.1 2006/01/18 02:54:15 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.2.ebuild,v 1.2 2006/03/06 18:12:29 zaheerm Exp $
 
 inherit python
 
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 		       dev-libs/libxml2 )"
 
 src_compile() {
+	epatch ${FILESDIR}/gst-python-0.10-leakfix.diff
 	econf $(use_enable doc docs) || die
 	emake || die
 }
