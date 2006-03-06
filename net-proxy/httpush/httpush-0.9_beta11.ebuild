@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/httpush/httpush-0.9_beta11.ebuild,v 1.3 2006/02/13 15:02:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/httpush/httpush-0.9_beta11.ebuild,v 1.4 2006/03/06 19:18:38 mrness Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="xml2"
+IUSE="xml"
 
 RDEPEND="dev-perl/URI
 	virtual/perl-MIME-Base64
@@ -21,15 +21,15 @@ RDEPEND="dev-perl/URI
 	dev-perl/Net-SSLeay
 	dev-perl/Crypt-SSLeay
 	dev-perl/HTML-Parser
-	xml2? ( dev-perl/XML-Twig )"
+	xml? ( dev-perl/XML-Twig )"
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	if ! useq xml2 ; then
+	if ! use xml ; then
 		echo
 		einfo "If you'd like to use httpush's learning mode, please CTRL-C now"
-		einfo "and enable the xml2 USE flag."
+		einfo "and enable the xml USE flag."
 		epause 3
 		echo
 	fi
@@ -37,7 +37,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i 's:^\(require httpush;\)$:push @INC, "/usr/lib/httpush";\n\1:' \
 		httpush.pl || die "sed INC failed"
 	sed -i 's:^\(.*DATADIR="\)data\(.*\)$:\1/var/lib/httpush\2:' *.pl \

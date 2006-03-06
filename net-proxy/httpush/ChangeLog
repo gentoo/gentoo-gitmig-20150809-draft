@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/httpush
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/httpush/ChangeLog,v 1.4 2006/02/13 15:02:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/httpush/ChangeLog,v 1.5 2006/03/06 19:18:38 mrness Exp $
+
+  06 Mar 2006; Alin Nastac <mrness@gentoo.org> httpush-0.9_beta11.ebuild:
+  Replace xml2 USE flag with xml.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   httpush-0.9_beta11.ebuild:
