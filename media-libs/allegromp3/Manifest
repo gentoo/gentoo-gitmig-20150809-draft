@@ -1,14 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d489f465775c6754a52c565c66e3bbb5 ChangeLog 781
-MD5 3918eb4e10002099da6690d81ae465ff allegromp3-2.0.2.ebuild 927
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 5deedf0ed2f8bc22ffb6b80a5df2baac ChangeLog 901
+RMD160 2ff79d2908f2463593c03fde046022eae56fc5e5 ChangeLog 901
+SHA256 c58b812175fc67f05dec6afe26b8b23009953904a982b85e9648a8be61ac1aba ChangeLog 901
+MD5 89313f02b2afdaab998b2cd23fea6e90 allegromp3-2.0.2.ebuild 950
+RMD160 69fe2f00e26d31761d1007a26f40e5175ea956f5 allegromp3-2.0.2.ebuild 950
+SHA256 849454688000a0786a5224178c50d2e3aa883e86f88dd561ec82235ad5dc3b6b allegromp3-2.0.2.ebuild 950
 MD5 005bc10b0b8f57cd5670a8d3616cd518 files/digest-allegromp3-2.0.2 53
+RMD160 2525b8826c55d470ea4bbea9a54ff1e9354ec08c files/digest-allegromp3-2.0.2 53
+SHA256 7d2a400f3869f65d3c4c72fd7cf28a8927beb9d11047da9f4feb6c81e0924d22 files/digest-allegromp3-2.0.2 53
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFBW1h/I1lqEGTUzyQRAkxiAKCRfu++tgKgHFpS5wPwhe9ZV3wj/ACgvl5q
-K7Nn+DTizjVg7BK6+qaH/VQ=
-=bJ4h
+iD8DBQFEDENyAiZjviIA2XgRAutvAJ0c083MyR2fEcU7Zw+dfJJyVlJpegCfYh5h
+mp/QyrJZ++NRBDpIicWvv9E=
+=b4VG
 -----END PGP SIGNATURE-----

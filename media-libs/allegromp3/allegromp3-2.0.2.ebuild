@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegromp3/allegromp3-2.0.2.ebuild,v 1.7 2004/06/24 22:55:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegromp3/allegromp3-2.0.2.ebuild,v 1.8 2006/03/06 14:13:23 flameeyes Exp $
 
 IUSE=""
 
@@ -12,8 +12,10 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND=">=media-libs/allegro-4.0.0
-	virtual/mpg123
+RDEPEND=">=media-libs/allegro-4.0.0
+	virtual/mpg123"
+
+DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 S=${WORKDIR}

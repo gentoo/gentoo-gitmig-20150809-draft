@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegromp3
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegromp3/ChangeLog,v 1.6 2004/09/30 00:50:58 swegener Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegromp3/ChangeLog,v 1.7 2006/03/06 14:13:22 flameeyes Exp $
+
+  06 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  allegromp3-2.0.2.ebuild:
+  Make unzip a build-time dependency.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   allegromp3-2.0.2.ebuild:
