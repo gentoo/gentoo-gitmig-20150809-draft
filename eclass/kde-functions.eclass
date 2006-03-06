@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.133 2006/02/17 22:18:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.134 2006/03/06 13:55:29 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -416,10 +416,14 @@ need-autoconf() {
 # Note that only the kde versioning scheme is supported - ie x.y, and we only iterate through y
 # (i.e. x can contain more . separators).
 deprange() {
-	echo -n "|| ( "
-	deprange-list $@
-	echo -n " )"
+	local list="$(deprange-list $@)"
+	if [[ ${list%% *} == "${list}" ]]; then
+		echo "${list}"
+	else
+		echo "|| ( ${list} )"
+	fi
 }
+
 deprange-list() {
 	# Assign, parse params
 	local MINVER=$1; shift
