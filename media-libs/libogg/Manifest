@@ -1,22 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f901cb70b6af2e9a904ead07ba4c12aa ChangeLog 4520
+MD5 fb7bfd5edf3043dcf437ee39b50d7482 ChangeLog 4726
+RMD160 66ab7427cc4602f4f2b29bf84df2ae3d0cf7b9e2 ChangeLog 4726
+SHA256 6640c0d61e520c37a93dd156d34792dda3f702953b7dd5ef74745d8c5ff72cb0 ChangeLog 4726
 MD5 cbb43595399aa585c5246a9fa024dfc6 files/digest-libogg-1.0 62
+RMD160 036095a08df8757a6c09e801e14964276caaa855 files/digest-libogg-1.0 62
+SHA256 5d641cd5c60215c3473dae42a3706728c5c864a845328385e2c5ff9665424a11 files/digest-libogg-1.0 62
 MD5 12db5904065ddca9ba537a41acabe033 files/digest-libogg-1.1 62
+RMD160 d4d1203270edfbb6ee560cc05031b639864ec7b6 files/digest-libogg-1.1 62
+SHA256 59d029a332d6da2980e5e41175885246125ef6e83695b8d9b275702ee553f5c3 files/digest-libogg-1.1 62
 MD5 4d79721bf9b4c725e460b92e51ac0db7 files/digest-libogg-1.1.1 64
+RMD160 8738731a8c0601ab8c04a33ef316edc734424bf6 files/digest-libogg-1.1.1 64
+SHA256 3fa9bd0a6e1671e8b0786940c8fe4e218a6cd1ca6eb00dbf83ada3dabae8b304 files/digest-libogg-1.1.1 64
 MD5 cdafb2eb72c29878b8f8909e35641486 files/digest-libogg-1.1.2 64
+RMD160 1c26e2346ae6777c25e7f8e0f3c6e480c4e87ad4 files/digest-libogg-1.1.2 64
+SHA256 88a9f8ecc4d1dad16f72adf166e952734d2f0944862237574dbb0c3c7581dcf0 files/digest-libogg-1.1.2 64
 MD5 97ec70bcef26aacda46bbfc3607903f0 files/digest-libogg-1.1.3 64
-MD5 cd5454a52eca5720e627a3001d702c25 libogg-1.0.ebuild 1249
-MD5 50b684b77c1b80fa4d0235335a0feba8 libogg-1.1.1.ebuild 869
-MD5 079f165f10e185a681dafe915f945585 libogg-1.1.2.ebuild 661
-MD5 e4fa5043177bac54a516942e5faca8bb libogg-1.1.3.ebuild 653
-MD5 71e7782a6d1ab64fa5600b53d058f025 libogg-1.1.ebuild 860
-MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwwr/wUpWvClEHQoRAsMyAKCEyvGOy0rIsn1/M8BOfkvEWZEddwCfT38c
-G80asuTgC42qbmzIykN3Ejg=
-=ZTGr
------END PGP SIGNATURE-----
+RMD160 6020cbb185e732a1b768d1f3e6909dd7489635f3 files/digest-libogg-1.1.3 64
+SHA256 a4931a602735f59bcc3e7ab7fb8e71c3c53ba33a10b5454eeb1b28e6defa0430 files/digest-libogg-1.1.3 64
+MD5 639d0727fa08d0ed47e5632f381091b3 libogg-1.0.ebuild 1229
+RMD160 fd71d86684973d61082a8a2db2dff9e3e3991a71 libogg-1.0.ebuild 1229
+SHA256 bdc6b37a4a4a5b19894f1b4b53adac1038cf23ea362d35542ce4777f017e04ff libogg-1.0.ebuild 1229
+MD5 cac5e287e85bed68531fe5200c397675 libogg-1.1.1.ebuild 850
+RMD160 058000a22397167afa70f8ba1e996c0190358af3 libogg-1.1.1.ebuild 850
+SHA256 3d5476cc79cd33a18fca12670d9b2b3ca17638f09836a02ac5d9f4f1fc3483d5 libogg-1.1.1.ebuild 850
+MD5 9ec20a36709a8b9efc1daa87b288c0b4 libogg-1.1.2.ebuild 641
+RMD160 14355a7bbfeafc1e2139c579cc6690d6b693cf1b libogg-1.1.2.ebuild 641
+SHA256 fc0f68a75dfab7387fefe3c21d1ab210a4a57e47f93881a84fda0548038e3145 libogg-1.1.2.ebuild 641
+MD5 43d4de4b91b52197a920a0cdc9eebde6 libogg-1.1.3.ebuild 631
+RMD160 d28c9343608279714a2d503079813a6f7550ffb8 libogg-1.1.3.ebuild 631
+SHA256 42e70e326dbfad5651e33a85d9642b926de306fb4481b615ea42ed1ae281372c libogg-1.1.3.ebuild 631
+MD5 233826be9e8d18f29377965a421463dc libogg-1.1.ebuild 840
+RMD160 ead870779d7947eee3271385bf0bd1f80fb4f0c0 libogg-1.1.ebuild 840
+SHA256 20647b9175c0503d76c37963d2a667e2ff61fe6fffa297361db8c3293e5e3990 libogg-1.1.ebuild 840
+MD5 cd51cc289ae6b56fd7fe1f3fec474f88 metadata.xml 248
+RMD160 05122080e3580393675ec87101f0eb48aba15ea5 metadata.xml 248
+SHA256 790cfd8d63ed9248363a7e773fd9bdad79266c4153368dceb5109a63b2a2aa8f metadata.xml 248
