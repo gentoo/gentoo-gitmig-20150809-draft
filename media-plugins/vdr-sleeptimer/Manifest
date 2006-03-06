@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eb67a67371fcec0b9a564a6b1126ff2a ChangeLog 437
+RMD160 15450697388da8ddd577127d103121c78882a2ff ChangeLog 437
+SHA256 5d1b4abe65d398aee3d48de1ec0dde5e5be0a9d97f33336f0dd1b8dd49edfc31 ChangeLog 437
+MD5 6174f5c3f0def9ffff887f2a43d10c03 files/digest-vdr-sleeptimer-0.6 241
+RMD160 6c998499319697290465c49d868532cdb43b662a files/digest-vdr-sleeptimer-0.6 241
+SHA256 0196474e93ef72dcc62e3d69f097c31f99fade00c73f0b0cd03cd85dd8e82376 files/digest-vdr-sleeptimer-0.6 241
+MD5 963bbc9f1a52dd8436ed1f02becb1c7b files/vdr-sleeptimer-0.6-includes.diff 372
+RMD160 bc44a30070a5095df969c19c4dcb83100ca09487 files/vdr-sleeptimer-0.6-includes.diff 372
+SHA256 898289a134c5a5184e568ccabf280a7fa10ee0bd5310df4130d523f6e8177a11 files/vdr-sleeptimer-0.6-includes.diff 372
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 aabccdd26bee1b7167e870db9f6583a5 vdr-sleeptimer-0.6.ebuild 572
+RMD160 b1db07517bed2b445a8ac3479393e4ee6d10b20e vdr-sleeptimer-0.6.ebuild 572
+SHA256 6cc51f80a9d030d6a8623bd18ca449d96c0ecc9831b1573bc05499d6ecc85473 vdr-sleeptimer-0.6.ebuild 572
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEC9PfZfSl1Kp5KmoRAvUpAKCDo9ZvF5xjCo2cDEFmQRJtJa3EcwCfZuhk
+sqHZccfhiwsnmQ3q96FqATI=
+=faYp
+-----END PGP SIGNATURE-----
