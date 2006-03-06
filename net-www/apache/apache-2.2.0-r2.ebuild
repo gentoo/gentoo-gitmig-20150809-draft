@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.1 2006/03/06 18:27:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.2 2006/03/06 19:01:34 hollow Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -51,6 +51,7 @@ pkg_setup() {
 	for x in ${MPM_LIST}; do
 		if useq mpm-${x}; then
 			if [ "x${mpm}" == "x" ]; then
+				mpm=${x}
 				einfo "Selected MPM: ${mpm}"
 			else
 				eerror "You have selected more then one mpm USE-flag."
