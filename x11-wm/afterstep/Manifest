@@ -1,30 +1,20 @@
-MD5 4c789ea324106b780e3093ae513d032d ChangeLog 7754
-RMD160 3606239835b31d12ed59a828e4402c2355058f84 ChangeLog 7754
-SHA256 2393d6d5c08d8885248736ebaa092fd9d5a07cb863b01a0fdbbc623651100758 ChangeLog 7754
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 05be599e59155c20c2eb98daa5fc0e34 ChangeLog 7856
 MD5 440edf372021969ab3c3efa34e50da24 afterstep-2.00.05.ebuild 3695
-RMD160 e47d606b5b16722986e3f1d86caa9e05e25db817 afterstep-2.00.05.ebuild 3695
-SHA256 d39eca94c9bc0273e6c1bb7a572880dceadac01129b9a389cd6213e8b5ea151f afterstep-2.00.05.ebuild 3695
 MD5 0ab4a200ab43540c0170e3068053d5e5 afterstep-2.1.2.ebuild 3713
-RMD160 c04024012e53e8a8843b624ede65ef935dcf7c30 afterstep-2.1.2.ebuild 3713
-SHA256 7f0d2ead01e7da36eb15b85db22980b974e4ac0d188257a1a3b2448a95835a68 afterstep-2.1.2.ebuild 3713
-MD5 66078496c7c807961e1f84f7bcc405fb afterstep-2.2.0.ebuild 3731
-RMD160 d16e7d34814f6fc24253f80f9d5db8936a586e73 afterstep-2.2.0.ebuild 3731
-SHA256 64684c082f4f53678e8350f909449c0d1fd2dd8aa00ebb1a947946cb83d8db17 afterstep-2.2.0.ebuild 3731
+MD5 d8a436ecb352ee8ed4d94c3314ed20a9 afterstep-2.2.0.ebuild 3733
 MD5 720723e9a9846b9d6a7e64a25b1adbbc files/afterstep 29
-RMD160 a1fafb8971d47c7cebfe972bb74bbef19de4ac52 files/afterstep 29
-SHA256 c6e31f7e4912188f1ce7c41298cb66178944960628e1451efd42331236cbc3c5 files/afterstep 29
 MD5 7d3868b85f7325c35e5165a8c10ce77d files/afterstep-1.8.11-gentoo.diff 1321
-RMD160 26d04b31388a2713c3b7764b3d1301a0b77bce3c files/afterstep-1.8.11-gentoo.diff 1321
-SHA256 880ffbda3e4a9e3d6898dc780696ff71769d0fdbb180b65eed28f24700f0c670 files/afterstep-1.8.11-gentoo.diff 1321
 MD5 aa6dd1f671415f2083b1161571752859 files/digest-afterstep-2.00.05 71
-RMD160 c36c7f9b7d8f163603357e056a3e4e3c9bd6402e files/digest-afterstep-2.00.05 71
-SHA256 15c1e4057be29a34cab6db9244606a9cd88998a0786b0e48580d82fd1030e4c1 files/digest-afterstep-2.00.05 71
 MD5 f92576044c379b6c3b3240972a1be536 files/digest-afterstep-2.1.2 69
-RMD160 35e0f1e34f39ebd8ae8502b1dae4b8d174483262 files/digest-afterstep-2.1.2 69
-SHA256 77b25f8c0ee111fce53a4beba067ac44e71e7de386bbbecb7ec49b25f7d0469a files/digest-afterstep-2.1.2 69
 MD5 6fefa7dc391d4e2ee106bd74fce5ed55 files/digest-afterstep-2.2.0 69
-RMD160 f5258ff96c57a42217311fc5760aa17fedea9fa3 files/digest-afterstep-2.2.0 69
-SHA256 a1750f7c407e9cb66f84deac065db64c3864f321bb9c8dcdcfb742ef35a3b998 files/digest-afterstep-2.2.0 69
 MD5 bb0cd3dcc1a371b3fba19147868d7c5c metadata.xml 350
-RMD160 8a78f43601183735a3e88e99953e83fa319a2c9c metadata.xml 350
-SHA256 ffc449f67b60b79df064e7843b19ce9c16ab0ccc495de3b9cd9b1a38bf6b0c26 metadata.xml 350
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEDb3pKRy60XGEcJIRAiqYAJ9sJt6Jz84g273mXZ7smyFGhIgoXACeIhJ2
+zaTlkVlmgKzGFe1+GXIlOiQ=
+=LzE0
+-----END PGP SIGNATURE-----
