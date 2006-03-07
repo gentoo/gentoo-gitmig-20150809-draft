@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 45a5fd59fe2ff41ae0b878ea4e590547 ChangeLog 938
+MD5 ee29c46483a9c8b34071d7ce08ff530b ChangeLog 1072
+RMD160 eb6e9b3eccd699f800575a12d19efedc72d88460 ChangeLog 1072
+SHA256 b9255158dad07dfeee87e8a391e483d9fa3cc813763291d484eb1553b56355c1 ChangeLog 1072
 MD5 6f68d6ba7868d9a1267c051b31ac3011 files/digest-qsampler-0.1.0 66
+RMD160 641bbc649b04e68d6cf9a6e82395d6d5efe5488b files/digest-qsampler-0.1.0 66
+SHA256 765f3c7b1d39e36f12f83f8ae26e037d994c0b9a7d8200547c23d81ff709e03e files/digest-qsampler-0.1.0 66
 MD5 5e7db067c4ed83e8e7db11b327a67d56 files/digest-qsampler-0.1.2 66
+RMD160 adab3612593fdc40f1b27ff47342fc1799b20de1 files/digest-qsampler-0.1.2 66
+SHA256 a8aceddad51891a1849563ded5b7059f449886567f13f71f360deadde551aced files/digest-qsampler-0.1.2 66
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 d387592c96f04d51237ba2e99b3c8406 qsampler-0.1.0.ebuild 1284
-MD5 00b6d9f0a1d86f3d0c99bab4b9d6b5ba qsampler-0.1.2.ebuild 1296
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDbz5zj5H05b2HAEkRAuP6AJ9Y9ssHOZekyhl1j601nRBwFIAVrACfWUiJ
-EdIzTiHZSGIlG+i+6E8Vqj4=
-=DyUc
------END PGP SIGNATURE-----
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 f7441f3b96bcebda60755c53a5768734 qsampler-0.1.0.ebuild 1270
+RMD160 286f19bbc3a76dc2de39c790383f3ee4fe1f1c2c qsampler-0.1.0.ebuild 1270
+SHA256 58bcb1ce9a082557396916b14a6c52d5790270b7e690785d748d523056a4f1d4 qsampler-0.1.0.ebuild 1270
+MD5 db52415b24d11231a864a2d39a6137fc qsampler-0.1.2.ebuild 1282
+RMD160 1652db80b071dcfb897fdf1e5c500b0c534fb0a4 qsampler-0.1.2.ebuild 1282
+SHA256 ccdd15334c75e227755dafd53a086ff2718f970c4ee007a5f27cea5cf55e72fd qsampler-0.1.2.ebuild 1282
