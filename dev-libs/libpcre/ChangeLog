@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpcre
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.70 2005/12/31 16:46:35 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.71 2006/03/07 23:22:44 carlo Exp $
+
+*libpcre-6.6 (07 Mar 2006)
+
+  07 Mar 2006; Carsten Lohrke <carlo@gentoo.org> +libpcre-6.6.ebuild:
+  Version bump.
 
   31 Dec 2005; Fabian Groffen <grobian@gentoo.org> libpcre-6.4.ebuild:
   Removed ~ppc-macos since it doesn't configure, and if it does, it doesn't
