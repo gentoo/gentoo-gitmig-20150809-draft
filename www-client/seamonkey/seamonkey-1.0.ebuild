@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.ebuild,v 1.3 2006/02/28 19:30:36 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.ebuild,v 1.4 2006/03/07 18:00:03 anarchy Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
@@ -19,7 +19,7 @@ LICENSE="MPL-1.1 NPL-1.1"
 IUSE="java ldap  mozcalendar mozdevelop moznocompose moznoirc moznomail moznoroaming postgres"
 
 RDEPEND="java? ( virtual/jre )
-	~www-client/mozilla-launcher-1.47
+	>=www-client/mozilla-launcher-1.47
 	>=dev-libs/nss-3.10
 	>=dev-libs/nspr-4.6.1"
 
