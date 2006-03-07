@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/tar
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.52 2005/08/12 08:39:38 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.53 2006/03/07 19:51:33 solar Exp $
+
+*tar-1.15.1-r1 (07 Mar 2006)
+
+  07 Mar 2006; <solar@gentoo.org> +files/tar-CVE-2006-0300.patch,
+  +tar-1.15.1-r1.ebuild:
+  - security bump. numerous bugs in xheader.c ; CVE-2006-0300 ; bug 123038
 
   12 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> tar-1.15.1.ebuild:
   Remove the charset.alias file (created on non-GNU systems, useless here).
