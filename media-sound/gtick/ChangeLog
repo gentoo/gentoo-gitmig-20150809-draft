@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gtick
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.17 2005/09/04 11:02:21 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.18 2006/03/07 14:51:38 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> gtick-0.2.4.ebuild:
+  Drop virtual/libc dependency.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> gtick-0.2.4.ebuild,
   gtick-0.2.13.ebuild, gtick-0.3.0.ebuild, gtick-0.3.4.ebuild:
