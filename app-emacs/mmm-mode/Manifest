@@ -1,15 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a361537ebcec43a0295ac568da078075 ChangeLog 496
+MD5 113e7c71ebd3b7b7647314df7e4accec ChangeLog 653
+RMD160 4580bc904574781939e5b85af7966397b46ebeca ChangeLog 653
+SHA256 ea117a6dc32996d6199729530a86b908bf76b56bf972eb4aef742e6636359647 ChangeLog 653
 MD5 15fbbb4437f8e2a5f3078a68727ba406 files/50mmm-mode-gentoo.el 106
+RMD160 b7237cde25c3dd23c65ba8946a7c1379a373bbac files/50mmm-mode-gentoo.el 106
+SHA256 7df40b3f2511344cbf97a4731013fe0a2a8ce8505687241cb60ae29b7e00b515 files/50mmm-mode-gentoo.el 106
 MD5 a91bc1220be4b1f18aee15a6391cb7aa files/digest-mmm-mode-0.4.7 66
+RMD160 a8091a10be2f758e0bb5eb8630a6ebd3d636bf51 files/digest-mmm-mode-0.4.7 66
+SHA256 226d674f16c87d0320c92c9eeb2a048947a630ea81cb09d23fd5614f20add3c0 files/digest-mmm-mode-0.4.7 66
+MD5 15e4f0235525e04dcf9cc3734bd2c9ab files/digest-mmm-mode-0.4.8 244
+RMD160 81a691aec747ec6e0b20d561504139f0db08235c files/digest-mmm-mode-0.4.8 244
+SHA256 caf37da863389e57a0459d7ffd587c97954af6e40bc7d40d1df6a081089edc1b files/digest-mmm-mode-0.4.8 244
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 metadata.xml 158
+SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab metadata.xml 158
 MD5 2b5f7f5ae70dc73806c052160c3999b0 mmm-mode-0.4.7.ebuild 959
+RMD160 87d59c0bbcde43fcf86abfad53c7e90abfa02a3a mmm-mode-0.4.7.ebuild 959
+SHA256 1ea95ed06bd136224e76703a315b9a36dc99710f856761769749b63dd7cd7e98 mmm-mode-0.4.7.ebuild 959
+MD5 a035461b48c1a2880fee89d4a44bffb6 mmm-mode-0.4.8.ebuild 888
+RMD160 ca1e1236e5be653dea749d5be1acbcb441ae6297 mmm-mode-0.4.8.ebuild 888
+SHA256 c37c17fdf9be81b675698d58543c414f6ae3329abf2ac332af79f07a3a97b872 mmm-mode-0.4.8.ebuild 888
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDXPQscsIHjyDViGQRAhrMAJ9vaIYOdlC3OqICvExiWlsB2ibETwCdFvcz
-j1swhW8S9AcrN7PZwlBEUXI=
-=l+w1
+iD8DBQFEDevIyiNZaEAZA+ARArf7AJ42MZXxELjbK0opa0MR1EdxLiJrsACdHn8U
+JaXAG5HmA7tUO1igUTzCXHU=
+=s9g1
 -----END PGP SIGNATURE-----
