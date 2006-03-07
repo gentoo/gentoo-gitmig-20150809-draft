@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.5.ebuild,v 1.9 2006/01/16 17:12:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.5.ebuild,v 1.10 2006/03/07 13:06:43 flameeyes Exp $
 
 IUSE="ogg sse"
 
@@ -15,8 +15,7 @@ SLOT="0"
 LICENSE="BSD as-is"
 KEYWORDS="~x86 ~hppa ~amd64 ~alpha ~ia64 ~ppc ~sparc ppc64"
 
-DEPEND="virtual/libc
-	ogg? ( >=media-libs/libogg-1.0 )"
+DEPEND="ogg? ( >=media-libs/libogg-1.0 )"
 
 src_compile() {
 	local myconf

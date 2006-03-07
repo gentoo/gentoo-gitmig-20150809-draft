@@ -1,17 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce1d027dae3e29a4918a3c2b79745b13 ChangeLog 1103
+MD5 cbc809e9f676db6181f28fe1a0fad0ef ChangeLog 1305
+RMD160 0b353862949df457a4de1d9e428da64d27166c6f ChangeLog 1305
+SHA256 20e7d3316cab323af95621e28da38dff74356fbbcdbc5da688dfd415d320e5a4 ChangeLog 1305
 MD5 660db26baf676986869aa173c0811512 files/digest-varconf-0.5.0 66
+RMD160 f33331248a2d6df4f5f0d54becde21d0fa39fd26 files/digest-varconf-0.5.0 66
+SHA256 42130b4c99de47c9d490495f66d20f3c3406413c30a09ebc573a3683f16cc0b4 files/digest-varconf-0.5.0 66
 MD5 be8125d632622f14f5d1a1b6233bf711 files/digest-varconf-0.5.4 66
+RMD160 514fcc99ac65bf7871399e2f04e915efe188f2e5 files/digest-varconf-0.5.4 66
+SHA256 4dbf502e0da5196fcc38d6ce204b5c7dfc130d8a1d2c75fa823f5aa21d385c1a files/digest-varconf-0.5.4 66
 MD5 728347745ec5b55123cbe8de60dfc36a files/digest-varconf-0.6.2 66
-MD5 3fcb26db57a3e027c94a9e433042d3c5 varconf-0.5.0.ebuild 605
-MD5 8e128fb324a393e321b6107a70b00cc7 varconf-0.5.4.ebuild 604
-MD5 39957e596fc6fce5bd98c1393049ec27 varconf-0.6.2.ebuild 585
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC7UE6I1lqEGTUzyQRAgY3AJ9hxu+BAHCKdbjkdJkWTSIijjiFPACcDwbG
-YmAYxeL/ZGjAe3/sTAW7naw=
-=s6++
------END PGP SIGNATURE-----
+RMD160 71b3d68232ef7c8bd694986a6d64bdccea2634fd files/digest-varconf-0.6.2 66
+SHA256 7073c1b993837a12bd07a58f86ca6145fbe7314f8a125ff1841c74077aef2eec files/digest-varconf-0.6.2 66
+MD5 ed8349e980407e49b724e04ee5a9a2ed metadata.xml 231
+RMD160 c13056229989c3d4f448a7c7abcff3f4ee7ce13c metadata.xml 231
+SHA256 4595c2615fd7c9095517949b1a920d4457f92801eb9d46307b18aafe58ec2a8a metadata.xml 231
+MD5 72a17a252ec01f93151274f3a7d8f309 varconf-0.5.0.ebuild 583
+RMD160 10400efd8aac2b3deafa33b0dfe9d560523aa9a7 varconf-0.5.0.ebuild 583
+SHA256 7f9fe80f6ca2c990e1197107631f729f79d75214d15da973a8326c7402d8f8ee varconf-0.5.0.ebuild 583
+MD5 341af814111cf2f536cc94c9fd81e296 varconf-0.5.4.ebuild 582
+RMD160 cf4aa6899f84e63be87e6fb0527505109ce7a037 varconf-0.5.4.ebuild 582
+SHA256 0bb3ed94f4473e5d7b76e2eef975e2c4419f0f4d7e38ee491dab3bf7ce52d503 varconf-0.5.4.ebuild 582
+MD5 25c331df18f15fd57a4a92c1a94f0346 varconf-0.6.2.ebuild 563
+RMD160 6be3e023e4d8325012dd0c2e095c8af268776476 varconf-0.6.2.ebuild 563
+SHA256 426db47a4ab4854675f9da2db12204d24f1fcd7c7b18d6c76fde106b73c7c849 varconf-0.6.2.ebuild 563
