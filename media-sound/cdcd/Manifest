@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 78bacf9692f3817fae73ed93086f19c2 ChangeLog 2997
-MD5 a15728e5d34aa48f21368d9600654c41 cdcd-0.6.6.ebuild 736
-MD5 405089b53190476bb2494a4ed11bd348 cdcd-0.6.6-r1.ebuild 811
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 94ddd3305c2a35012c44768f37ea30f2 cdcd-0.6.4.ebuild 775
-MD5 0046c0fdb538d85b9b5fd853815a0956 files/digest-cdcd-0.6.4 62
+MD5 8a97ca5d4032dad26e4c24bffac165bc ChangeLog 3145
+RMD160 810acec9144f69c7b49e9e7a8542e5958529b55c ChangeLog 3145
+SHA256 c77150446dd84b55a732d5a83a3dc9facc430b550db6422de8fbbb23005ce900 ChangeLog 3145
+MD5 3aa9fb7e4d01533d46d85707fe893423 cdcd-0.6.4.ebuild 765
+RMD160 62361d4448e147504e93344a64af9238892105ca cdcd-0.6.4.ebuild 765
+SHA256 00642032c7706d3644bb707e2c35130ddf6d7da39606f684cadd6782f635231e cdcd-0.6.4.ebuild 765
+MD5 fcd96d0ef6473368dbb9ac9934615fee cdcd-0.6.6-r1.ebuild 765
+RMD160 e42f495a2d2fd80a0a6d92989db44750a2836bc1 cdcd-0.6.6-r1.ebuild 765
+SHA256 af2c4fd16c6c3c979027e0f622f87b6402ec5f18dc05cc113de041560dce7b53 cdcd-0.6.6-r1.ebuild 765
+MD5 b27d2691390e7c63eb7c44291f353c78 cdcd-0.6.6.ebuild 724
+RMD160 90534d1e1be63e6d2e932c0959c3a1c2f5ae4c92 cdcd-0.6.6.ebuild 724
+SHA256 fd7827dbd1eeaf321d22586e23b6bbce25c2de83357b22ed6ac0c7628c073eed cdcd-0.6.6.ebuild 724
 MD5 87fbaee82f519b5db720d80f64dbed8e files/cdcd-0.6.4-gentoo.patch 346
-MD5 e177c90f7b82ca5b8744a9f573dce5f0 files/digest-cdcd-0.6.6 62
+RMD160 66b3950cc5d34b5060715938857ca5462f215b0b files/cdcd-0.6.4-gentoo.patch 346
+SHA256 0981c1101f5e367992c0454ca679eb8b82423d523e70e597ab126f604345ccd8 files/cdcd-0.6.4-gentoo.patch 346
 MD5 7e17a3eb77b8594b8d24a6fd9ac374ba files/cdcd-0.6.6-fbsd.patch 811
+RMD160 d6cfd3223241e313aa3c4bf156e740097248df44 files/cdcd-0.6.6-fbsd.patch 811
+SHA256 13f12aff578280c25a592762d784a3cb9e40b3a485f87a178c6cd6bae2fcdd27 files/cdcd-0.6.6-fbsd.patch 811
+MD5 0046c0fdb538d85b9b5fd853815a0956 files/digest-cdcd-0.6.4 62
+RMD160 db78fe72ad8b6c5e976bc52e0928e07af719b247 files/digest-cdcd-0.6.4 62
+SHA256 59551d442dcceab9178f69fd7f9015626e03148cad2d374b5d83bb75f297319f files/digest-cdcd-0.6.4 62
+MD5 e177c90f7b82ca5b8744a9f573dce5f0 files/digest-cdcd-0.6.6 62
+RMD160 f0f0f2d43b375757b6fef69d7d9a19a0dd22fbbe files/digest-cdcd-0.6.6 62
+SHA256 3ec6fec8505485bda48a0db16f514071a3df7095bb83cd49d6f4b5d1ab5fde27 files/digest-cdcd-0.6.6 62
 MD5 e177c90f7b82ca5b8744a9f573dce5f0 files/digest-cdcd-0.6.6-r1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDAxFIj5H05b2HAEkRAhVIAKCO24DSGmZptYn4Ntd+tlnysimiWwCfeVMY
-c3WoZbH2VwuO+Yrx0CdUgYc=
-=09OS
------END PGP SIGNATURE-----
+RMD160 f0f0f2d43b375757b6fef69d7d9a19a0dd22fbbe files/digest-cdcd-0.6.6-r1 62
+SHA256 3ec6fec8505485bda48a0db16f514071a3df7095bb83cd49d6f4b5d1ab5fde27 files/digest-cdcd-0.6.6-r1 62
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
