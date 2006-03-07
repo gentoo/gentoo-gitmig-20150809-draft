@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpglen
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpglen/ChangeLog,v 1.6 2005/09/03 23:18:53 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpglen/ChangeLog,v 1.7 2006/03/07 16:45:04 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  mpglen-0.1.ebuild:
+  Drop virtual/libc dependency. Respect CC, CFLAGS and LDFLAGS.
 
   03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> mpglen-0.1.ebuild:
   Don't install COPYING file.
