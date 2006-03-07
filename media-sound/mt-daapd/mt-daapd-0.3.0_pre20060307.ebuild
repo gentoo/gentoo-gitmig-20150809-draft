@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre20060301.ebuild,v 1.2 2006/03/05 20:02:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre20060307.ebuild,v 1.1 2006/03/07 11:11:07 flameeyes Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic base
 
 CVS="${PV#*pre}"
 
@@ -33,6 +33,8 @@ DEPEND="sys-libs/zlib
 	vorbis? ( media-libs/libvorbis )
 	flac? ( media-libs/flac )"
 
+PATCHES="${FILESDIR}/${MY_P}-segfault.patch"
+
 pkg_setup() {
 	if use howl && use avahi && ! built_with_use net-dns/avahi howl-compat; then
 		eerror "You requested avahi support, but this package requires"
@@ -42,18 +44,6 @@ pkg_setup() {
 		eerror "Please recompile net-dns/avahi with +howl-compat."
 		die "Missing howl-compat support in avahi."
 	fi
-
-	if use sqlite && use sqlite3; then
-		eerror "You can't enable both sqlite 2.x and sqlite 3.x suppor at the"
-		eerror "same time. Please drop one of the useflag."
-		die "Invalid use of sqlite flags"
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/${MY_P}-doublefree.patch"
 }
 
 src_compile() {
