@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.114 2006/03/05 20:44:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.115 2006/03/07 10:08:21 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -amarok-1.4_beta2.ebuild, amarok-1.4_beta2-r1.ebuild:
+  Add ifp useflag to enable iRiver access; thanks to Gabriel Devenyi in bug
+  #122634.
 
 *amarok-1.4_beta2-r1 (05 Mar 2006)
 
