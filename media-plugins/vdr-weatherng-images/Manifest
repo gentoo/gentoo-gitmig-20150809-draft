@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0c54d6fcad5393dd3e7eca58755573d7 ChangeLog 433
+MD5 66382b8885d7627b2ae28c357610ec1e files/digest-vdr-weatherng-images-0.0.5 68
+MD5 95c34568c5cbf1d332e2da83d21428f2 metadata.xml 463
+MD5 be2b800297354dd411726faabe5f54e5 vdr-weatherng-images-0.0.5.ebuild 690
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEDgJAdn07HTTCgIoRAqCwAJ4oq3QIaLLhThZRzx0WhS4TuvNC8wCfbKJS
+z4cDK7nDHFdXC1lBdh5wiwQ=
+=cgtG
+-----END PGP SIGNATURE-----
