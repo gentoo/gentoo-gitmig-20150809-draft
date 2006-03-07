@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcsc-ase-iiie-drv
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-ase-iiie-drv/ChangeLog,v 1.1 2005/11/06 17:11:49 pylon Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-ase-iiie-drv/ChangeLog,v 1.2 2006/03/07 22:36:44 kingtaco Exp $
+
+  07 Mar 2006; Mike Doty <kingtaco@gentoo.org> pcsc-ase-iiie-drv-3.1.ebuild:
+  multilib-strict goodness + ~amd64 keyword
 
 *pcsc-ase-iiie-drv-3.1 (06 Nov 2005)
 
