@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-gui
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gui/ChangeLog,v 1.4 2004/06/24 23:21:21 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gui/ChangeLog,v 1.5 2006/03/07 12:53:00 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml:
+  Add maintainer-needed metadata.
 
   25 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> sdl-gui-0.10.3.ebuild:
   fix HOMEPAGE; header fix
