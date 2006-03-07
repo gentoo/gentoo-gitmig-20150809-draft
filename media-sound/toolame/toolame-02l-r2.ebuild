@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/toolame-02l-r2.ebuild,v 1.1 2005/08/25 12:21:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/toolame-02l-r2.ebuild,v 1.2 2006/03/07 16:05:23 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,21 +14,17 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="virtual/libc
-	sys-devel/gcc"
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/${P}-uint.patch
+	epatch "${FILESDIR}/${P}-gentoo.diff"
+	epatch "${FILESDIR}/${P}-uint.patch"
 }
 
 src_compile() {
 	# Enable largefile support, as toolame doesn't use autoconf
-	( use elibc_glibc || use elibc_uclibc ) && \
-		append-flags "-D_FILE_OFFSET_BITS=64"
+	append-lfs-flags
 
 	tc-export CC
 

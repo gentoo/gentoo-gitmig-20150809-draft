@@ -1,20 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 03d87115353b6e3b11240a5ad2dff0fd ChangeLog 1815
-MD5 e53f02956bc1bd05fbbf3afd336781cf toolame-02l.ebuild 660
-MD5 ef52f6b4eb180f3e8fb264b04dc2e3ca toolame-02l-r2.ebuild 934
-MD5 c6d157b936d85a2218795dcb6bf6e653 toolame-02l-r1.ebuild 700
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 4b1a1622289b050b59a5243fae23d193 files/toolame-02l-uint.patch 950
-MD5 5cc792797a252d3d4d12b9857d393ee8 files/digest-toolame-02l-r2 60
-MD5 03d22f398bef3ac46ba7c7a7910d2d80 files/toolame-02l-gentoo.diff 2153
+MD5 9c137f42292d24187d732fe5e373c7da ChangeLog 2019
+RMD160 a0219ee16451245c3a0fcfa05def0ba02580c87f ChangeLog 2019
+SHA256 a28c0c0e61be77601585f6c66e0e7996e840289659fb023ca09ba478d352c2b9 ChangeLog 2019
 MD5 5cc792797a252d3d4d12b9857d393ee8 files/digest-toolame-02l 60
+RMD160 cba51cf83061ba4f3bbd131e37f53aad93ab0a82 files/digest-toolame-02l 60
+SHA256 a4fa94d0edc5b2e8884b0ae67fc9ad87002e2a601646113c2d4140d2adeaea0d files/digest-toolame-02l 60
 MD5 5cc792797a252d3d4d12b9857d393ee8 files/digest-toolame-02l-r1 60
+RMD160 cba51cf83061ba4f3bbd131e37f53aad93ab0a82 files/digest-toolame-02l-r1 60
+SHA256 a4fa94d0edc5b2e8884b0ae67fc9ad87002e2a601646113c2d4140d2adeaea0d files/digest-toolame-02l-r1 60
+MD5 5cc792797a252d3d4d12b9857d393ee8 files/digest-toolame-02l-r2 60
+RMD160 cba51cf83061ba4f3bbd131e37f53aad93ab0a82 files/digest-toolame-02l-r2 60
+SHA256 a4fa94d0edc5b2e8884b0ae67fc9ad87002e2a601646113c2d4140d2adeaea0d files/digest-toolame-02l-r2 60
+MD5 908e9ecd93fb4deffd1a8d650f478cc7 files/toolame-02l-gentoo.diff 2164
+RMD160 3e6cb598189ea4f65d37f84c0527e69e7e0832a6 files/toolame-02l-gentoo.diff 2164
+SHA256 018a75133b23eb4f9692183b56b508750cfc463fe76d3db13bb1b321a6d02088 files/toolame-02l-gentoo.diff 2164
+MD5 4b1a1622289b050b59a5243fae23d193 files/toolame-02l-uint.patch 950
+RMD160 18e8d2c6eebde1bab5de3fab5d51d1f4a4f32db3 files/toolame-02l-uint.patch 950
+SHA256 d45a1564663337b0f7b50120f3491542b9ceaf6a003b73d786f9f41f01d78dfa files/toolame-02l-uint.patch 950
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 645ed8c9c436fdc1e716328d10da8acc toolame-02l-r1.ebuild 662
+RMD160 371152392be2b9a727a787f6789088e15549f97d toolame-02l-r1.ebuild 662
+SHA256 eafd767dc92d1c6f1868ca1c8b0d87613d17f9bcfc58ae069c83f6069526b026 toolame-02l-r1.ebuild 662
+MD5 81cfc3a3e6cfb1c1ac42d7dd6ff700a7 toolame-02l-r2.ebuild 832
+RMD160 45a9579922ac9b89e301b6072f83fc8777bd2cc4 toolame-02l-r2.ebuild 832
+SHA256 b9c30683c395ff064a8a4b2e430b9bbb761a4e3fd02ffebf3137af77a6e657bc toolame-02l-r2.ebuild 832
+MD5 f66d505020d7cbebf40718be235c2aee toolame-02l.ebuild 622
+RMD160 8fc97e4df6632045bb58dbb1728b0044a1905361 toolame-02l.ebuild 622
+SHA256 e3f0423b5d19144c4f54f50901d856b392695080d73bcbfa00b47091394dd144 toolame-02l.ebuild 622
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDDbgAj5H05b2HAEkRApWYAJ9kKou2C0lnSZbA+/BMWA+rYC9RBwCfaAw9
-HY1wpFg1Lers/miLsEWDCrc=
-=U8ql
+iD8DBQFEDa9QAiZjviIA2XgRArT3AJ4gh/ACUpV0fUakxPc8cMfY+7OjyACfdvXr
+hdopCiQZEBswO0ouyTKtQYs=
+=6GY/
 -----END PGP SIGNATURE-----

@@ -51,7 +51,7 @@
  
  $(PGM):	$(OBJ) Makefile
 -	$(CC) $(PG) -o $(PGM) $(OBJ) $(LIBS)
-+	$(CC) -o $(PGM) $(OBJ) $(LIBS)
++	$(CC) $(LDFLAGS) -o $(PGM) $(OBJ) $(LIBS)
  
  clean:
 -	-rm $(OBJ) $(DEP)

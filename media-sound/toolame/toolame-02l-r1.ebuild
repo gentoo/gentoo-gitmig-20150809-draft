@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/toolame-02l-r1.ebuild,v 1.2 2005/08/24 16:15:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/toolame-02l-r1.ebuild,v 1.3 2006/03/07 16:05:23 flameeyes Exp $
 
 IUSE=""
 
@@ -13,9 +13,6 @@ SRC_URI="mirror://sourceforge/toolame/${P}.tgz"
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="amd64 ~sparc ~x86 ~ppc"
-
-DEPEND="virtual/libc
-	sys-devel/gcc"
 
 src_compile() {
 	epatch ${FILESDIR}/${P}-gentoo.diff
