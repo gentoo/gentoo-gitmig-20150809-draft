@@ -1,4 +1,6 @@
 MD5 1c2a690b46ceba1e72b25bab5afa8e9b ChangeLog 374
 MD5 f311b8f14f7e9987944f51a08a1cdcc1 files/digest-gst-plugins-bad-0.10.0 75
+MD5 87b38f54a8ed5d5b92a82520b1a48f26 files/digest-gst-plugins-bad-0.10.1 75
 MD5 f8ce26a044344c9ea788ed23683dc166 gst-plugins-bad-0.10.0.ebuild 891
+MD5 bb40b1141591815349e6074f7d442072 gst-plugins-bad-0.10.1.ebuild 1065
 MD5 2c3969fab7145ef127d739e7f740403b metadata.xml 313
