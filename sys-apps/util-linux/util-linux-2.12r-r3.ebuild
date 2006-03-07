@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r3.ebuild,v 1.1 2006/01/23 23:47:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r3.ebuild,v 1.2 2006/03/07 00:26:30 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -108,6 +108,9 @@ src_unpack() {
 
 	# Bug #108988 unable to always seek when omiting frame pointers 
 	epatch "${FILESDIR}"/${PN}-2.12r-fdisk-frame-pointers.patch
+
+	# Patches from Fedora
+	epatch "${FILESDIR}"/${PN}-2.12r-umount-nosysfs.patch
 
 	# Enable random features
 	local mconfigs="MCONFIG"
