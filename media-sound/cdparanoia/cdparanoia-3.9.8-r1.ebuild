@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r1.ebuild,v 1.7 2005/05/31 15:31:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r1.ebuild,v 1.8 2006/03/07 13:42:30 flameeyes Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -13,8 +13,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips ppc64"
 IUSE=""
-
-DEPEND="virtual/libc"
 
 S=${WORKDIR}/${MY_P}
 

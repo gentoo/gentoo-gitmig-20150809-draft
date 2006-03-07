@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.4.ebuild,v 1.14 2004/07/30 02:41:16 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.4.ebuild,v 1.15 2006/03/07 13:40:22 flameeyes Exp $
 
 IUSE=""
 
@@ -9,8 +9,7 @@ inherit eutils gnuconfig
 DESCRIPTION="a simple yet powerful command line cd player"
 SRC_URI="mirror://sourceforge/libcdaudio/${P}.tar.gz"
 HOMEPAGE="http://cdcd.undergrid.net/"
-DEPEND="virtual/libc
-	>=sys-libs/ncurses-5.0
+DEPEND=">=sys-libs/ncurses-5.0
 	>=sys-libs/readline-4.0
 	>=media-libs/libcdaudio-0.99.4"
 

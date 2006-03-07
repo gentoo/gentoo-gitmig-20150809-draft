@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdcd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/ChangeLog,v 1.22 2005/08/17 10:27:50 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/ChangeLog,v 1.23 2006/03/07 13:40:22 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> cdcd-0.6.4.ebuild,
+  cdcd-0.6.6.ebuild, cdcd-0.6.6-r1.ebuild:
+  Drop virtual/libc dependency.
 
 *cdcd-0.6.6-r1 (17 Aug 2005)
 
