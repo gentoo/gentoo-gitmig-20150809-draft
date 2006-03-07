@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ffb99e6fa87ac7ebe9c76873b17996b3 ChangeLog 2002
-MD5 b80089fdaeb4e2d2ea37d2bcdfc37e0c libshout-2.0.ebuild 741
-MD5 653d23c498dea890005f93a1e405e65c libshout-1.0.9.ebuild 680
-MD5 8d2e4d58820c68d7b8717301fae624b7 libshout-2.1.ebuild 739
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 69a1f35ad25992cf08dba3cfe67ec76a ChangeLog 2155
+RMD160 7471582866543466556b49edd2c5f4b69880fd72 ChangeLog 2155
+SHA256 911a3e64eb596a45cf0e4909b0c32fe662d2666f21261d60e1fd6b5241892025 ChangeLog 2155
 MD5 ce971a7025858bd966169a50ea414da8 files/digest-libshout-1.0.9 66
-MD5 d81a4c86f0dc97eac56635a203a9c8c1 files/digest-libshout-2.1 64
+RMD160 b96644e19a93d12be40827b083f405773a42aa94 files/digest-libshout-1.0.9 66
+SHA256 ed7a9c85e9c6f405c83ecb97971f9892d1070c213a152ed5f5914e030b503a88 files/digest-libshout-1.0.9 66
 MD5 56a5376f348440e030d9b55b81e3cde2 files/digest-libshout-2.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGuldj5H05b2HAEkRAvpPAJ9jx6es94aJp2sxh3cADyHh+/JFFgCfbEcr
-GI0o3f7MNPmvPy+ZKD6aSdA=
-=kLEe
------END PGP SIGNATURE-----
+RMD160 3cf973b925497eec04fb02e23be22579487a2809 files/digest-libshout-2.0 64
+SHA256 2865b045ce39794b2075a32354b2b42d514be241388a5db30c5a082505ef5693 files/digest-libshout-2.0 64
+MD5 d81a4c86f0dc97eac56635a203a9c8c1 files/digest-libshout-2.1 64
+RMD160 6d555e85c6453a227599ee3738c512ec1f8f7ae1 files/digest-libshout-2.1 64
+SHA256 dd0fa99272bff82987708f293d44471877852ed5ce93f5aae4283be552cb1b30 files/digest-libshout-2.1 64
+MD5 267fbac2d9c680d801239b2b15df8b7d libshout-1.0.9.ebuild 648
+RMD160 5ccc9615e46167f001b8c882978b451e6223d3c7 libshout-1.0.9.ebuild 648
+SHA256 e14085efcd579662958d86767c6d3887e3badd0d72210319c288ca6942dcf1d4 libshout-1.0.9.ebuild 648
+MD5 759a2bc3ea44c2bfe80dc284d2e58b71 libshout-2.0.ebuild 725
+RMD160 6947e9bcc7085c1057e054d220ba4ad7885dffd2 libshout-2.0.ebuild 725
+SHA256 91c897de61a7975c2b8e4df236033214771213a80dd8e90071a8e8b373293c65 libshout-2.0.ebuild 725
+MD5 c9cc26377fff2850159c9e7db31129cb libshout-2.1.ebuild 723
+RMD160 1fe866fae1df61f9973b1691e4898c884e9d77bc libshout-2.1.ebuild 723
+SHA256 03d256df56ebd28535ea11db4a7b662b0d147174ac6df529d69324197e6de5f5 libshout-2.1.ebuild 723
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
