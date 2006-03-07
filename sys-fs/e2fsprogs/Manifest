@@ -1,24 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f5132ef371e728bfd65d97051c21922e ChangeLog 14013
+MD5 06b23ab050d0b71dd13c2ed4eb77a48a ChangeLog 13996
+RMD160 109ddadf36c39d387a0a7a6ac0bdad404addf6b6 ChangeLog 13996
+SHA256 ffe2bf14f498626ffc861dd3b28525df6398e8d22d4401ba40fe414a96f68fae ChangeLog 13996
 MD5 9f384af90617256b84d47627943d8db5 e2fsprogs-1.38-r1.ebuild 4102
+RMD160 2486ff30146abe2c2afda46e13759fa336b6ca91 e2fsprogs-1.38-r1.ebuild 4102
+SHA256 4564cbca8b2efcc0655f9c111884dbbd72b22af1f1f93c6aa8cb12b03098ede5 e2fsprogs-1.38-r1.ebuild 4102
 MD5 6fbfc726ec96aa19955c90f44e25d3f9 e2fsprogs-1.38.ebuild 3733
+RMD160 0c3f178dab7d5f01294f977b153a1f99d8ef3a8e e2fsprogs-1.38.ebuild 3733
+SHA256 c56b40621fce536c2891fbb1d8932e5a379a80454a38d0b7c4d0bb3a94c48446 e2fsprogs-1.38.ebuild 3733
 MD5 0911aedd4968aa4053139791a961e2a2 files/digest-e2fsprogs-1.38 67
+RMD160 fea673f4fa6081ae0e28b5c4111aed139af12390 files/digest-e2fsprogs-1.38 67
+SHA256 bf28fd56f8851a85654d0da5a23afeabe055c714f963ae7245e8516e61b1de6e files/digest-e2fsprogs-1.38 67
 MD5 0911aedd4968aa4053139791a961e2a2 files/digest-e2fsprogs-1.38-r1 67
+RMD160 fea673f4fa6081ae0e28b5c4111aed139af12390 files/digest-e2fsprogs-1.38-r1 67
+SHA256 bf28fd56f8851a85654d0da5a23afeabe055c714f963ae7245e8516e61b1de6e files/digest-e2fsprogs-1.38-r1 67
 MD5 1a896f2697b055d4b8b4139c3482ac9e files/e2fsprogs-1.32-mk_cmds-cosmetic.patch 316
+RMD160 42dae53c318fb52b39c8e1d357974111bf8712bf files/e2fsprogs-1.32-mk_cmds-cosmetic.patch 316
+SHA256 182da8741b852fdaf2d17a485da0451ec0c665adb83327b29b3372e2e43f712a files/e2fsprogs-1.32-mk_cmds-cosmetic.patch 316
 MD5 c5e6ed46f8a6b9f75273863110887b22 files/e2fsprogs-1.36-makefile.patch 3546
+RMD160 e3192ce562e534f75fd22679b7d222611f7d031d files/e2fsprogs-1.36-makefile.patch 3546
+SHA256 6c6880203317d881cec66a8862baf998b0a8f8e0d62ea45e2efc1ba867ccca6c files/e2fsprogs-1.36-makefile.patch 3546
 MD5 ebeacdb9470e8d7ad33a259a71164672 files/e2fsprogs-1.38-blkid-ext23.patch 714
+RMD160 3f3a0f85feb1b8a2d1b8a2c86b98d7628b14f50d files/e2fsprogs-1.38-blkid-ext23.patch 714
+SHA256 39e46cecab03e91a8af0ada31474354604e475d48615f95189aefce4a5e0455e files/e2fsprogs-1.38-blkid-ext23.patch 714
 MD5 478cd49f138b6b047fb1c465c9d05c80 files/e2fsprogs-1.38-blkid-swsuspend.patch 1772
+RMD160 fa309cb7d99f27f4f3d863a0a2dd2c49ad198045 files/e2fsprogs-1.38-blkid-swsuspend.patch 1772
+SHA256 423509aa13c0a63438cff5e120dfe2cbcea25211e8a0776a65ff06c7f4fbd673 files/e2fsprogs-1.38-blkid-swsuspend.patch 1772
 MD5 e85d057f99af6c980acf9a8697da9dd7 files/e2fsprogs-1.38-disconnected-inodes.patch 2881
+RMD160 67d0fba3c12e88d7f9dadff84d263593e857cc0e files/e2fsprogs-1.38-disconnected-inodes.patch 2881
+SHA256 50f810077d6422848df327535ceeae14d6d91299aca36604fda2b7fbb8d34c17 files/e2fsprogs-1.38-disconnected-inodes.patch 2881
 MD5 bafe5afeafcb558958527f12baf5c815 files/e2fsprogs-1.38-libintl.patch 470
+RMD160 9104175f1eb21209fe754c9cad0f088ec5161d3d files/e2fsprogs-1.38-libintl.patch 470
+SHA256 ca55f1be5d5dd3d46fcb9d316e63f28ac2cd13c79459644dadf4b6d8b35a3a91 files/e2fsprogs-1.38-libintl.patch 470
 MD5 f199f07604566fda4f2a4dabac83a535 files/e2fsprogs-1.38-tests-locale.patch 656
+RMD160 16c625c16144ed16942fa19988524b7b5727c583 files/e2fsprogs-1.38-tests-locale.patch 656
+SHA256 7d12df7c4f00f1c1c81dcbd74cc0f8c1cffaa3b5089fbaa40222a7a9f2fbe598 files/e2fsprogs-1.38-tests-locale.patch 656
 MD5 71ae8634de714335ebbc93dc0bbbd643 files/e2fsprogs-1.38-vfat-labels.patch 6667
+RMD160 f652ce374cfd1a019905f1e2f2582b50db66fa2f files/e2fsprogs-1.38-vfat-labels.patch 6667
+SHA256 2d8f1cc10a390a66b490e5e168c38e1d3bbdd79234b38ad926b34c34196ba6cf files/e2fsprogs-1.38-vfat-labels.patch 6667
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEDEu8KRy60XGEcJIRAvbrAKCNTdgo2ykojMUjN/Bu9e9DTzzwYQCePtaA
-QTfKurca0O//O8j3tdu+6oE=
-=gWUQ
------END PGP SIGNATURE-----
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
