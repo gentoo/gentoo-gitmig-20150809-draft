@@ -1,4 +1,4 @@
-MD5 7234faf4120a52e350b2060241d2d3ca ChangeLog 30793
+MD5 e397bc1a786bb01210f45ecfe4fb7b1d ChangeLog 30885
 MD5 4d08519a369aeb7229167e0d1d7e75a8 files/digest-sylpheed-2.0.4 68
 MD5 6b71dbeb45c82f1bb30f96347c10921f files/digest-sylpheed-2.2.0 68
 MD5 01498a2c484618f1d4c663eac986c55e files/sylpheed-2.1-shared-mime-info.diff 1637
@@ -7,4 +7,4 @@ MD5 4cbec71671b7349c904f860a12fee5d9 files/sylpheed-namespace.diff 550
 MD5 f4242298cfab21456442bfe52505d2b8 files/sylpheed-procmime.diff 1119
 MD5 126ca8f672f0296d2f1e6830e6729a91 metadata.xml 231
 MD5 38118ad46ff05a99e88f44780bf8ff9c sylpheed-2.0.4.ebuild 1445
-MD5 567867f03f28e3376db72b88bf403178 sylpheed-2.2.0.ebuild 1473
+MD5 87cf9b2e164b0de2899c5b22cd982dda sylpheed-2.2.0.ebuild 1472
