@@ -1,6 +1,16 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.8 2006/02/02 10:08:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.9 2006/03/07 08:26:46 robbat2 Exp $
+
+*open-iscsi-1.0.514 (07 Mar 2006)
+*open-iscsi-1.0.490-r1 (07 Mar 2006)
+*open-iscsi-1.0.490 (07 Mar 2006)
+
+  07 Mar 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/open-iscsi-485-out.state.patch, files/iscsid-init.d,
+  +open-iscsi-1.0.490.ebuild, +open-iscsi-1.0.490-r1.ebuild,
+  +open-iscsi-1.0.514.ebuild:
+  New upstream snapshots. Not for production use at all!.
 
   02 Feb 2006; Robin H. Johnson <robbat2@gentoo.org>
   open-iscsi-0.5.485.ebuild:

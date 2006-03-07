@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/files/iscsid-init.d,v 1.3 2005/09/23 05:55:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/files/iscsid-init.d,v 1.4 2006/03/07 08:26:46 robbat2 Exp $
 
 PID_FILE=/var/run/iscsid.pid
 CONFIG_FILE=/etc/iscsid.conf
@@ -10,9 +10,11 @@ DUMP_NODE="${DUMP_DIR}/node.dump"
 DUMP_DISCOVERY="${DUMP_DIR}/discovery.dump"
 INITIATORNAME=/etc/initiatorname.iscsi
 DAEMON=/usr/sbin/iscsid
+NAME="iSCSI initiator service"
 
 depend() {
 	after modules
+	use net
 }
 
 checkconfig() {
@@ -28,14 +30,28 @@ checkconfig() {
 	fi
 }
 
+do_modules() {
+	msg="$1"
+	shift
+	modules="$1"
+	shift
+	opts="$@"
+	for m in ${modules}; do
+		ebegin "${msg} - ${m}"
+		modprobe ${opts} $m
+		ret=$?
+		eend $ret
+		[ $ret -ne 0 ] && return $ret
+	done
+	return 0
+}
+
 start() {
 	checkconfig || return 1
-	ebegin "Loading iSCSI modules"
-	modprobe scsi_transport_iscsi && modprobe iscsi_tcp
+	do_modules 'Loading iSCSI modules' 'scsi_transport_iscsi iscsi_tcp'
 	ret=$?
-	eend $ret
-	[ $ret -gt 0 ] && return $ret
-	ebegin "Starting iSCSI initiator service"
+	[ $ret -ne 0 ] && return 1
+	ebegin "Starting ${NAME}"
 	start-stop-daemon --start --exec $DAEMON --quiet
 	ret=$?
 	eend $ret
@@ -43,18 +59,15 @@ start() {
 }
 	
 stop() {
-	ebegin "Stopping iSCSI initiator service"
+	ebegin "Stopping ${NAME}"
 	start-stop-daemon --signal HUP --stop --quiet --exec $DAEMON #--pidfile $PID_FILE
 	eend $?
 
 	# ugly, but pid file is not removed by iscsid
 	rm -f $PID_FILE
 	
-	ebegin "Removing iSCSI modules"
-	modprobe -r iscsi_tcp
-	modprobe -r scsi_transport_iscsi
+	do_modules 'Removing iSCSI modules' 'iscsi_tcp scsi_transport_iscsi' '-r'
 	ret=$?
-	eend $ret
 	return $ret
 }
 
