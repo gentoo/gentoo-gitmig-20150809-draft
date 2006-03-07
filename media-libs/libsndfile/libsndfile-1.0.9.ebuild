@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.9.ebuild,v 1.10 2005/03/02 19:44:42 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.9.ebuild,v 1.11 2006/03/07 11:18:29 flameeyes Exp $
 
 inherit eutils
 
@@ -12,8 +12,6 @@ KEYWORDS="x86 ~ppc ~alpha ~ia64 sparc amd64 ppc64"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
-
-DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

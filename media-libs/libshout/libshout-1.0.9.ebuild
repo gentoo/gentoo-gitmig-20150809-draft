@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-1.0.9.ebuild,v 1.11 2005/02/26 21:50:56 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-1.0.9.ebuild,v 1.12 2006/03/07 11:15:41 flameeyes Exp $
 
 IUSE=""
 
@@ -11,9 +11,6 @@ HOMEPAGE="http://developer.icecast.org/libshout/"
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc"
 LICENSE="GPL-2"
-
-DEPEND="sys-devel/gcc
-	virtual/libc"
 
 src_compile() {
 	./configure --prefix=/usr \

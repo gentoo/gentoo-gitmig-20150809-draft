@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.12-r1.ebuild,v 1.3 2006/02/17 21:06:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.12-r1.ebuild,v 1.4 2006/03/07 11:18:29 flameeyes Exp $
 
 inherit eutils libtool autotools
 
@@ -24,9 +24,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-flac.patch"
 
 	eautoreconf
-
 	epunt_cxx
-	elibtoolize
 }
 
 src_compile() {
@@ -34,7 +32,8 @@ src_compile() {
 		$(use_enable sqlite) \
 		$(use_enable static) \
 		$(use_with flac) \
-		--disable-dependency-tracking
+		--disable-dependency-tracking \
+		|| die "econf failed"
 
 	# fix this weird doc installation directory libsndfile decides
 	# to something more standard

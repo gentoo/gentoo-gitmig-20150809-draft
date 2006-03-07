@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-2.1.ebuild,v 1.3 2005/09/04 12:32:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-2.1.ebuild,v 1.4 2006/03/07 11:15:41 flameeyes Exp $
 
 IUSE=""
 
@@ -12,9 +12,8 @@ SLOT="0"
 KEYWORDS="x86 sparc amd64 ppc ppc64"
 LICENSE="GPL-2"
 
-RDEPEND="virtual/libc
-	 media-libs/libogg
-	 media-libs/libvorbis"
+RDEPEND="media-libs/libogg
+	media-libs/libvorbis"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libshout
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.18 2005/09/04 12:32:04 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.19 2006/03/07 11:15:41 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> libshout-1.0.9.ebuild,
+  libshout-2.0.ebuild, libshout-2.1.ebuild:
+  Drop virtual/libc dependency.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> libshout-2.0.ebuild,
   libshout-2.1.ebuild:
