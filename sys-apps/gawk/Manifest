@@ -1,19 +1,67 @@
-MD5 d4a449698c2a6ebf4218491456c60d87 ChangeLog 10696
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8711bf797f2916e0faf889445e835c7b ChangeLog 10865
+RMD160 90be5bb09f1c95dd073edf32cc5f2841865ff2ed ChangeLog 10865
+SHA256 be2199378cc6f1f7e5c75725febc16ce3aaaf2e0ffa44932f7072207fa5d8107 ChangeLog 10865
 MD5 c40ec6dfabda5864b7f62fa57d2329bd files/64bitnumfile.patch 340
+RMD160 8a664f7b8a97852302bc341571446668ae16d966 files/64bitnumfile.patch 340
+SHA256 655d50ce49fefd24eb1fe1e940de0e9b1fe4de29468abfd373855eedbaedf7fa files/64bitnumfile.patch 340
 MD5 a3d79dbed6a930b14071084a6c2dbcc7 files/digest-gawk-3.1.3-r2 63
+RMD160 7c40d89b3ff61953f18aabfe2cf70f091f43943f files/digest-gawk-3.1.3-r2 63
+SHA256 83b1b6f52c39ec78f2006a936f5bdd368d7579e63171660e2037afa55d1c6b21 files/digest-gawk-3.1.3-r2 63
 MD5 e01879d30ddf2eb060f2ba2fa745a922 files/digest-gawk-3.1.4-r4 132
+RMD160 01fa77e995fe3517c042b86bd6bbff4e245b1a04 files/digest-gawk-3.1.4-r4 132
+SHA256 a26dc74e995cf0885426c2d129a773eb181629626f3aba014174855224868316 files/digest-gawk-3.1.4-r4 132
 MD5 214193d03d4c328a4ba33aadc008d301 files/digest-gawk-3.1.5 63
+RMD160 bd5fb146adc427050f7dc3af925d41e4811f99c5 files/digest-gawk-3.1.5 63
+SHA256 fa4f5e8a35a911a8be3761d6bbd3e2b5d9b2c7db6b2515dcb9f21349554166f4 files/digest-gawk-3.1.5 63
 MD5 7b48ab999f661a00e70da4eb9ede8376 files/filefuncs/Makefile 1192
+RMD160 58c7e6d157d7ab62736b8cc167f8d4f5bd58489c files/filefuncs/Makefile 1192
+SHA256 2f6024ec2991c21a42d6f998bb6082daabb9a37ca789ab4ac7c5a2cdb57f0cfb files/filefuncs/Makefile 1192
 MD5 3159f74841ac19ed6237645e562f60c0 files/filefuncs/filefuncs.c 10992
+RMD160 326a54ea0cc42c819d44cf2a749cb141388c4ef0 files/filefuncs/filefuncs.c 10992
+SHA256 c647aa27170ef8e001d47bdf86c47809afd7f6d5a89be2f9769ce05b55ed8309 files/filefuncs/filefuncs.c 10992
 MD5 1a6ff83a6dd7c5f300803cae1cabd4ae files/gawk-3.1.2-dec-alpha-compiler.diff 461
+RMD160 6a27630fe5096cd617860e51e3f625c8a53930a5 files/gawk-3.1.2-dec-alpha-compiler.diff 461
+SHA256 89167dddd66d78d000673dc7be4b3a482459310c50d1868f5b9c021c16a3aa34 files/gawk-3.1.2-dec-alpha-compiler.diff 461
 MD5 8a25d43ff539b0c949fc5bbce8488e06 files/gawk-3.1.3-getpgrp_void.patch 1225
+RMD160 ea06ae87acd4d8df1a9a7c160c00b2d13d3ab564 files/gawk-3.1.3-getpgrp_void.patch 1225
+SHA256 2e43682e4c86e6f50eeca42b3fc333c1c9c080838b29f3020c88f1d95dc02767 files/gawk-3.1.3-getpgrp_void.patch 1225
 MD5 3cca4692ffa1c396bff698d02f1a41e0 files/gawk-3.1.4-disable-DFA.patch 1837
+RMD160 327f9fcec9a00a8d14cd897787e48a0fc1dd78db files/gawk-3.1.4-disable-DFA.patch 1837
+SHA256 fbd75950d40a2d02700d36ea584133df3f9051b6dd8645420c1493f2c16ee967 files/gawk-3.1.4-disable-DFA.patch 1837
 MD5 6778659e2892fddf115cee2c244e60a8 files/gawk-3.1.4-flonum.patch 3341
+RMD160 0deb7fd892ab4e5ff318a017727f5424d477f1d6 files/gawk-3.1.4-flonum.patch 3341
+SHA256 da3464cffbfb688c0719172737e6f5f8c4b2e47e19bf83e5ef2e1a586d512ed3 files/gawk-3.1.4-flonum.patch 3341
 MD5 334e1cf92033c20c5e401f5ae5f498cc files/gawk-3.1.4-nextc.patch 716
+RMD160 e2251ab1467c1f474aaa4cff5f538003cbe78619 files/gawk-3.1.4-nextc.patch 716
+SHA256 f12a56397330a6abe4c60cb56365d572c3e1f8a1c49e095e4325eedc749150e0 files/gawk-3.1.4-nextc.patch 716
 MD5 513af85f3e12197f97b42c3fee7c491c files/gawk-3.1.4-uplow.patch 5636
+RMD160 623c4c86ceb45cf7e021ee88b3559cbebe37a433 files/gawk-3.1.4-uplow.patch 5636
+SHA256 92a026f634f54a844536c527addc23bce45efeeb4ce7e6748bd1dc827e953cf8 files/gawk-3.1.4-uplow.patch 5636
 MD5 89145324fea9791b0caa1b09f5cee0cb files/gawk-3.1.5-core.patch 643
+RMD160 89842d57c8ea3ea9407f73c4255cc371a4eb3bb2 files/gawk-3.1.5-core.patch 643
+SHA256 692196c7178051543506c53469ac7a3942d740e6e39a1bb8d840c792b367b6d7 files/gawk-3.1.5-core.patch 643
 MD5 499e2881f167a17f2123ca338836e91d files/gawk-3.1.5-gcc4.patch 826
+RMD160 a68e7ed7c70aa6be454961aa25903fe236650227 files/gawk-3.1.5-gcc4.patch 826
+SHA256 7b7d37a6ecb51300f46ad611d486a074eb522dabb949e500664943df7f52b0e3 files/gawk-3.1.5-gcc4.patch 826
 MD5 e0f9b7570483cbca8caa3706b334416c gawk-3.1.3-r2.ebuild 2764
+RMD160 c4d3aeb0e1215cf8d70cea91adfab727f98ec4a9 gawk-3.1.3-r2.ebuild 2764
+SHA256 b7943e60e2abb13c5078197e51443f744904d2c63622929f9e78b5d2f4233482 gawk-3.1.3-r2.ebuild 2764
 MD5 09fbc4e3606506a36a62d00e0a4a4dea gawk-3.1.4-r4.ebuild 3856
-MD5 2121b89d0dbdf835be64ebf098624652 gawk-3.1.5.ebuild 3090
+RMD160 67025a744155d92ff6f3509d2ec2e3debc788931 gawk-3.1.4-r4.ebuild 3856
+SHA256 8c00d64de905e8849a3075a0f5b6b3d187a1debfabebb584c0f458a2e7f27c74 gawk-3.1.4-r4.ebuild 3856
+MD5 4835a87b88e9c902f6b16922e95f6a28 gawk-3.1.5.ebuild 3114
+RMD160 74aba58dbd717923d5eb9fd98aa4c80ce34b76ba gawk-3.1.5.ebuild 3114
+SHA256 855f2b718296556c7a0b872718d5017bcd098483af7c6774d597b29161249731 gawk-3.1.5.ebuild 3114
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDdctAiZjviIA2XgRAhd4AKDghuZ+7RAMkisLF+ZgOKS73vAzCACg3uWv
+vH8RgGQt8oaRjSAeBIjRCo0=
+=g5Pa
+-----END PGP SIGNATURE-----

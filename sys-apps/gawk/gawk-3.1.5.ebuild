@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.5.ebuild,v 1.6 2005/10/13 00:11:25 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.5.ebuild,v 1.7 2006/03/07 18:55:27 flameeyes Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="GNU awk pattern-matching language"
 HOMEPAGE="http://www.gnu.org/software/gawk/gawk.html"
@@ -36,7 +36,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--bindir=/bin \
-		--libexec=/usr/lib/misc \
+		--libexec=/usr/$(get_libdir)/misc \
 		$(use_enable nls) \
 		--enable-switch \
 		|| die
