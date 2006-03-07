@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/squeak-fullimage
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-fullimage/ChangeLog,v 1.5 2006/03/07 11:32:03 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-fullimage/ChangeLog,v 1.6 2006/03/07 11:46:17 araujo Exp $
+
+  07 Mar 2006; Luis F. Araujo <araujo@gentoo.org>
+  -squeak-fullimage-3.4.5170.ebuild:
+  Removing unmaintained/out of date images.
 
 *squeak-fullimage-3.8.6665 (07 Mar 2006)
 

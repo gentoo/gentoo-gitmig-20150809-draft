@@ -1,12 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dad7923e3ea96fd3f5569c2384330a49 ChangeLog 1616
-RMD160 052308fc4f0c3a2454a79f7ff18b5f8b1debe357 ChangeLog 1616
-SHA256 10d2548db85fac9e35d9485c2ed912760d5a843ad2269c29059d94de65c10941 ChangeLog 1616
-MD5 c47ea324aaf69084cd07c9a19d3e133f files/digest-squeak-fullimage-3.4.5170 129
-RMD160 caea60acbc8b8c4eafaec03dd5d50be53997ad18 files/digest-squeak-fullimage-3.4.5170 129
-SHA256 2f2e630f3ac6a5b5ca7f22a68f2d258ae8c60130ab5c86bdac9d1e479b9fd544 files/digest-squeak-fullimage-3.4.5170 129
+MD5 1b2d0d6e79d10a3f24bbb0eba9494c39 ChangeLog 1748
+RMD160 3f388fbe1acdfb0606fcca0a17f08a3570f3bfc4 ChangeLog 1748
+SHA256 32d8e33a2e635b193760cd0953d6d8a2414ed8fffac477225dad03ec71769fb9 ChangeLog 1748
 MD5 9fe48b0176607ba4e789a8ef1f78075e files/digest-squeak-fullimage-3.5.5180 129
 RMD160 cc9093da9796c7bdedbb6850f2f493debd58dd0a files/digest-squeak-fullimage-3.5.5180 129
 SHA256 676d5346300ba33e2fb4b74a5db0558c2133d43abab752d87ae8ed52b8e0507b files/digest-squeak-fullimage-3.5.5180 129
@@ -22,9 +19,6 @@ SHA256 150d8b7b4dc819860d12ca642bed5b4fa221e01cb324ad01cfd3b98baed886ee files/di
 MD5 253a1e2fa2566d32f1c4be90f5b5e69c metadata.xml 857
 RMD160 f7db7ab51d12751c94ddbd7a4cb0daebbc7377d9 metadata.xml 857
 SHA256 4e652f209955420453637c6a4b45f7f7dfbfc0884518724b1ef8e70d7e624085 metadata.xml 857
-MD5 0b78351046e9f0090e76507690d1a1f3 squeak-fullimage-3.4.5170.ebuild 1014
-RMD160 f03557bfaec7dbe606e4372501a7b19db7d94908 squeak-fullimage-3.4.5170.ebuild 1014
-SHA256 7e95df480455faa1aa65f86503bf1533fcc2fba63500eb57ddffe3d248f7d3d8 squeak-fullimage-3.4.5170.ebuild 1014
 MD5 b79b3bbb2affab640d2e98f75bbdaf62 squeak-fullimage-3.5.5180.ebuild 1210
 RMD160 379be41b2f0c3b5f1740fd8688d59761868ee90d squeak-fullimage-3.5.5180.ebuild 1210
 SHA256 c6e5cd2af17ac87b648af69e9552d93ae8675e9d8c6f3384bea91c8eb96ffce5 squeak-fullimage-3.5.5180.ebuild 1210
@@ -40,7 +34,7 @@ SHA256 6cad71aadb540e07b63d3af8ef644ec9852047b0a006778c9e77e320192c6f2d squeak-f
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEDW8ZdZ42PGEF17URAg+EAKCvz84pxyiK/o927s3Z46WoyKflXACgnAy3
-gUKESNNH/xac22ZSWT+bg9M=
-=6INb
+iD8DBQFEDXJxdZ42PGEF17URAnH4AKCyF9ikj1Qg6fAvDeR9GKntw7V/+wCeIhtm
+X0qz2PU4aV+gpr0hBfFTwdY=
+=im9V
 -----END PGP SIGNATURE-----
