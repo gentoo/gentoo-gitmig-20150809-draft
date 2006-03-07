@@ -1,6 +1,6 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.81 2006/03/06 14:48:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.82 2006/03/07 21:00:06 tove Exp $
 
   06 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   e2fsprogs-1.38-r1.ebuild:
@@ -10,7 +10,7 @@
   e2fsprogs-1.38-r1.ebuild:
   stable on ppc64, bug #125158
 
-  11 Feb 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  11 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/e2fsprogs-1.38-libintl.patch, e2fsprogs-1.38-r1.ebuild:
   Add patch to fix libintl linkage on non-glibc systems. Bug #122368.
 
@@ -31,7 +31,7 @@
   Stable on mips.
 
   02 Sep 2005; Mike Frysinger <vapier@gentoo.org> e2fsprogs-1.38.ebuild:
-  Add support for FreeBSD #103388 by Diego PettenÃ².
+  Add support for FreeBSD #103388 by Diego Pettenò
 
   28 Aug 2005; Mike Frysinger <vapier@gentoo.org> e2fsprogs-1.35-r1.ebuild,
   e2fsprogs-1.36.ebuild, e2fsprogs-1.36-r2.ebuild, e2fsprogs-1.37.ebuild,
@@ -52,7 +52,7 @@
   20 Jul 2005; Markus Rothe <corsair@gentoo.org> e2fsprogs-1.38.ebuild:
   Stable on ppc64
 
-  19 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org> e2fsprogs-1.38.ebuild:
+  19 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> e2fsprogs-1.38.ebuild:
   Stable on alpha.
 
   18 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> e2fsprogs-1.38.ebuild:
@@ -72,7 +72,7 @@
   29 Jun 2005; Joshua Kinard <kumba@gentoo.org> e2fsprogs-1.37-r1.ebuild:
   Marked stable on mips.
 
-  28 Jun 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  28 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
   e2fsprogs-1.37-r1.ebuild:
   Stable on alpha.
 
@@ -150,7 +150,7 @@
   06 Dec 2004; Mike Frysinger <vapier@gentoo.org> e2fsprogs-1.35-r1.ebuild:
   Make sure kernel defines dont clash with internal defines #48829.
 
-  23 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  23 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   e2fsprogs-1.35-r1.ebuild:
   Stable on alpha.
 
@@ -202,7 +202,7 @@
   02 Jun 2004; Travis Tilley <lv@gentoo.org> e2fsprogs-1.35.ebuild:
   stable on amd64
 
-  17 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> e2fsprogs-1.35.ebuild:
+  17 May 2004; Bryan Østergaard <kloeri@gentoo.org> e2fsprogs-1.35.ebuild:
   Add ~alpha.
 
   27 Apr 2004; Michael McCabe <randy@gentoo.org> e2fsprogs-1.35.ebuild:
