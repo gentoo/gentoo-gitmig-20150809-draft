@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a74d0ace4a10bb444f1c0a2972e96a7f awesfx-0.5.0c.ebuild 1275
-MD5 6a3801726b0073f12ab43ff0af1c80be ChangeLog 2119
-MD5 5f3d314fe7cc4940884de1dd700d27f9 awesfx-0.5.0d.ebuild 1274
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 413587b49e630a9b899620cc979a5a5d files/digest-awesfx-0.5.0c 65
-MD5 a2f1d07a053240ebc621d1834c928e6f files/awesfx-0.5.0b-makefile-noalsa.patch 3507
+MD5 06a477324447999f818fec3afbb6c283 ChangeLog 2251
+RMD160 80fea8ea7cbfb4950048bf228e57f39537ff8e00 ChangeLog 2251
+SHA256 817b18163e0321fcb0d943fef5087d6f09612fe9c415934627ff3c34c46e6c52 ChangeLog 2251
+MD5 3b6a8cb135c381a1419f3663366fbbda awesfx-0.5.0c.ebuild 1261
+RMD160 adac4b9d8887a60d2a17aab8c7bfe90a04a81358 awesfx-0.5.0c.ebuild 1261
+SHA256 f58c4ffe5c64d7810ebbbad3c50bde5db8e76dcd2c379b7c9dfa0fef477176ee awesfx-0.5.0c.ebuild 1261
+MD5 d1cfb935fd607beeb4d6c6db8e96458c awesfx-0.5.0d.ebuild 1260
+RMD160 b64e25d69e4a749f50115e3a24b1037c93cb092e awesfx-0.5.0d.ebuild 1260
+SHA256 c4a59578e9205b2ebf92f2fabe03a88b23becd53bf9c08b40a93da04192069c2 awesfx-0.5.0d.ebuild 1260
 MD5 f2718083317de4e006954291d3da6f4e files/awesfx-0.5.0b-configure-noalsa.patch 7814
+RMD160 87e09f4b62e040f55a2aebb79cf4046534ca7e86 files/awesfx-0.5.0b-configure-noalsa.patch 7814
+SHA256 7687e4ba3cdd31d14d3a152ec9d9128864edd1edaffaf7c814158fb6039c1a9e files/awesfx-0.5.0b-configure-noalsa.patch 7814
+MD5 a2f1d07a053240ebc621d1834c928e6f files/awesfx-0.5.0b-makefile-noalsa.patch 3507
+RMD160 6e45ae1a0fa89cd0f900be054617f5caeb732b60 files/awesfx-0.5.0b-makefile-noalsa.patch 3507
+SHA256 c73b2992bcb551a5db0fb3826f7384dc2eb8ae988897cd2d1e36e9940c9aad65 files/awesfx-0.5.0b-makefile-noalsa.patch 3507
+MD5 413587b49e630a9b899620cc979a5a5d files/digest-awesfx-0.5.0c 65
+RMD160 392293d47314052f6991b641b8f91dba4070d521 files/digest-awesfx-0.5.0c 65
+SHA256 18c6b08a7dcc5d0c145cfadb1179abdd935fe3fc5e77c8ace3f1d0df9f91059b files/digest-awesfx-0.5.0c 65
 MD5 a1f68aeea912a0dfbc5ed004d02b2bda files/digest-awesfx-0.5.0d 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLgBuj5H05b2HAEkRArP3AJ9RPi6Q6SjAJqt8hyXt2QqFycaJ+QCeNHGw
-oDsrpaA5awm46NtERsCM1eI=
-=QgKm
------END PGP SIGNATURE-----
+RMD160 9b707057304171343fcd7f11b7b0c43df7ca58e0 files/digest-awesfx-0.5.0d 65
+SHA256 deb69dfe5f011f007bbdb7be20b39805045cd13dfea831f121faabb23f530ac3 files/digest-awesfx-0.5.0d 65
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158

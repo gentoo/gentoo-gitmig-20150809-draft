@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 84a55895b0e8fac923b2bad30542d9d8 ChangeLog 1892
-MD5 5e987e5bf573456e8866c150a8b1ad0a bladeenc-0.94.2-r1.ebuild 630
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 89ae622b39c2564b8601d45bc0cb9e7b ChangeLog 2007
+RMD160 b1e1936d3c27b8c4cff1d5768d51bf850b010bc8 ChangeLog 2007
+SHA256 4990ba6b0e631de73a430610d5fe487273271ae4059e1c806376f5d85ef7d74f ChangeLog 2007
+MD5 8972375886384d356408987a12efcd62 bladeenc-0.94.2-r1.ebuild 607
+RMD160 50f47572a28e6ed4b40abc215e38c2dfcb2a2ec7 bladeenc-0.94.2-r1.ebuild 607
+SHA256 6e9ac7eebde264d7b59b0739dab3577e86f521246d6079b15cc3de5e7148b109 bladeenc-0.94.2-r1.ebuild 607
 MD5 b582b66a647571df5d3507528f8548cf files/bladeenc-0.94.2-secfix.diff 394
+RMD160 c2e34fa904733f38db134e857da6acf96fa1a9ae files/bladeenc-0.94.2-secfix.diff 394
+SHA256 e57d8d91881e15889e7cb4f965c6f026061f0f7dbd33c24ad43e5060aed20d5e files/bladeenc-0.94.2-secfix.diff 394
 MD5 a1cd123ae2cdc12d1c72ecb7d52df91d files/digest-bladeenc-0.94.2-r1 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGtUcj5H05b2HAEkRAvkTAKCjCyrA3FwFcWihkpTYKeT7YpYgSQCeNx/s
-fxKG3XEo/QhH9KslXImpuzQ=
-=5DOX
------END PGP SIGNATURE-----
+RMD160 f56f53a1f334759393069765f729a6f4940178a9 files/digest-bladeenc-0.94.2-r1 78
+SHA256 f28cff5f57664ca381643da3e6fc5859c4bc562b1ca2ddc8a2f9cad8b85305b0 files/digest-bladeenc-0.94.2-r1 78
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
