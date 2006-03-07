@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ming
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.18 2005/10/01 12:01:03 nelchael Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.19 2006/03/07 11:56:06 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  ming-0.2a.ebuild, ming-0.2a-r1.ebuild:
+  Drop virtual/libc dependency. Add maintainer-needed metadata.
 
 *ming-0.2a-r2 (01 Oct 2005)
 
