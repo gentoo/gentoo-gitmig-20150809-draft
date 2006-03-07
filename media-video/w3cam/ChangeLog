@@ -1,6 +1,11 @@
 # ChangeLog for media-video/w3cam
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/ChangeLog,v 1.8 2005/09/03 23:19:20 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/ChangeLog,v 1.9 2006/03/07 17:21:07 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  w3cam-0.7.2.ebuild:
+  Don't use test, use [[ ]], and use econf instead of ./configure. Drop
+  virtual/libc dependency.
 
   03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> w3cam-0.7.2.ebuild:
   Don't install COPYING file.

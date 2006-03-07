@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/w3cam-0.7.2.ebuild,v 1.10 2005/09/03 23:19:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/w3cam-0.7.2.ebuild,v 1.11 2006/03/07 17:21:07 flameeyes Exp $
 
 #
 # You can set the default device that vidcat and w3camd use by setting
@@ -19,8 +19,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE="truetype"
 
-DEPEND="virtual/libc
-	sys-libs/zlib
+DEPEND="sys-libs/zlib
 	media-libs/jpeg
 	media-libs/libpng
 	truetype? ( media-libs/freetype )"
@@ -28,17 +27,13 @@ DEPEND="virtual/libc
 src_compile() {
 	local myconf
 
-	test -n "${W3CAM_DEVICE}" && \
+	[[ -n "${W3CAM_DEVICE}" ]] && \
 		myconf="${myconf} --with-device=${W3CAM_DEVICE}"
 
 	use truetype && \
 		myconf="${myconf} --with-ttf-inc=/usr/include/freetype"
 
-	./configure \
-	    --host=${CHOST} \
-	    --prefix=/usr \
-	    --mandir=/usr/share/man/man1 \
-	    ${myconf} || die "./configure failed"
+	econf ${myconf} || die "econf failed"
 	emake || die
 }
 
@@ -46,7 +41,7 @@ src_install() {
 	dobin vidcat w3camd/w3camd
 	doman vidcat.1
 	dodoc ChangeLog.txt FAQ.txt README SAMPLES TODO.txt \
-	    index.html w3cam.css w3cam.cgi w3cam.cgi.scf
+		index.html w3cam.css w3cam.cgi w3cam.cgi.scf
 	docinto samples
 	dodoc samples/*
 	docinto w3camd
