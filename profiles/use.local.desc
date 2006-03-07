@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1774 2006/03/07 02:49:19 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1775 2006/03/07 04:33:11 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1300,16 +1300,10 @@ sys-devel/gcc:nossp - Disable SSP support (NOT FOR GENERAL USE)
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gcc:objc-gc - Build support for the Objective C code language Garbage Collector
 sys-devel/gcc:objc++ - Build support for the Objective C++ language
-sys-devel/gcc-bfin:mudflap - Add support for mudflap, a pointer use checking library
 sys-devel/gcc-bfin:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/gcc-bfin:objc - Build support for the Objective C code language
-sys-devel/gcc-bfin:objc-gc - Build support for the Objective C code language Garbage Collector
-sys-devel/gcc-bfin:objc++ - Build support for the Objective C++ language
-sys-devel/gcc-nios2:mudflap - Add support for mudflap, a pointer use checking library
 sys-devel/gcc-nios2:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/gcc-nios2:objc - Build support for the Objective C code language
-sys-devel/gcc-nios2:objc-gc - Build support for the Objective C code language Garbage Collector
-sys-devel/gcc-nios2:objc++ - Build support for the Objective C++ language
 sys-devel/kgcc64:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
 sys-fs/clvm:nocman - Allow users to build clvm without cman support and with gulm support
