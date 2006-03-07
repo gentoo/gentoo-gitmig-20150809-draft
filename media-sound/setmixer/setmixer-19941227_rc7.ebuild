@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/setmixer/setmixer-19941227_rc7.ebuild,v 1.10 2005/07/25 19:10:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/setmixer/setmixer-19941227_rc7.ebuild,v 1.11 2006/03/07 15:48:12 flameeyes Exp $
 
 IUSE=""
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_PV="27DEC94"
 DEB_REV="7"
@@ -17,17 +17,15 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 
-DEPEND="virtual/libc"
-
 S=${WORKDIR}/${PN}-${MY_PV}.orig
 
 src_unpack() {
 	unpack ${A}
-	epatch ${PN}_${MY_PV}-${DEB_REV}.diff
+	epatch "${DISTDIR}/${PN}_${MY_PV}-${DEB_REV}.diff.gz"
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" clean setmixer || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" clean setmixer || die
 }
 
 src_install() {
@@ -35,5 +33,5 @@ src_install() {
 	dodoc README setmixer.lsm
 	doman setmixer.1
 	insinto /etc ; doins debian/setmixer.conf
-	exeinto /etc/init.d ; newexe ${FILESDIR}/setmixer.rc setmixer
+	newinitd ${FILESDIR}/setmixer.rc setmixer
 }
