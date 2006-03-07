@@ -1,6 +1,11 @@
 # ChangeLog for media-video/xvattr
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/ChangeLog,v 1.12 2005/09/16 23:09:10 ciaranm Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/ChangeLog,v 1.13 2006/03/07 19:12:13 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  xvattr-1.3-r1.ebuild:
+  Changed the dirty hack to disable GTK to a proper patch to xvattr so that it
+  has a --without-gtk switch. Port to modular X.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

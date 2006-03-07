@@ -1,14 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a87640d6ea0155b9bdb83b53ea7eb1b6 xvattr-1.3-r1.ebuild 1322
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 0c9aceb6a697eeca592d5ae657e99701 ChangeLog 1508
-MD5 fd84f844012dd8c0aca7748aeaf2797f files/digest-xvattr-1.3-r1 61
+MD5 eec165ef79cf71e7eb124be604611f86 ChangeLog 1730
+RMD160 e21b6bb0b9f9b5daf6ca6e921c547c6bdc932901 ChangeLog 1730
+SHA256 21107502df2fe0ab5b9c2fcf3aff00e99d1e60a0bfce668abf61349d7d123bef ChangeLog 1730
+MD5 3f61f3a77e3d662c86c88056a6107bc8 files/digest-xvattr-1.3-r1 482
+RMD160 66b0b90a95f273436b79cb6e86989f138e657e74 files/digest-xvattr-1.3-r1 482
+SHA256 848ed1a8e05a731e52862b008ed13b68b76568dd4a70b1bde10f6337b8efc862 files/digest-xvattr-1.3-r1 482
+MD5 0338bfb24d7bfb6450aac4dd025c0096 metadata.xml 223
+RMD160 86b42c49b694db39ddb3fdc60b98a3ad1a0c3392 metadata.xml 223
+SHA256 dd48e823ec9a151bc3611121402ed26ee24eb3304aa62870b1e875a8fa0ac812 metadata.xml 223
+MD5 d8684e099c6cf53b724656955f0c0919 xvattr-1.3-r1.ebuild 1060
+RMD160 2935e21f28ade92ae4e86168925f430869e315a8 xvattr-1.3-r1.ebuild 1060
+SHA256 e8f426ab7c72f54ef4b305df49bc506989278ad9b82716cc1d5805e7360ee1c7 xvattr-1.3-r1.ebuild 1060
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDK1DKLLFUmVNQ7rkRAoQWAKDDPJNxkWiI+MgYoCm2QHqhsnK5oACgjC6h
-+/BzfP0bK1Z+MUdjJJSSloI=
-=b/61
+iD8DBQFEDdsaAiZjviIA2XgRAqCuAKCw9OnWsLGKFrD0VEkqaAMGvWwcpACdFUV5
+9M69jasMZWgyjHejvgodYf4=
+=sUtJ
 -----END PGP SIGNATURE-----
