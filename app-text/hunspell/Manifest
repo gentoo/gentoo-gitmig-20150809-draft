@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ef896bc25c2df06bddb124913459f75a ChangeLog 687
+MD5 07f71248fe28f4a0f1396570675cdd3c ChangeLog 796
 MD5 2ee23fc18433d16280f97a3d381ae78a files/digest-hunspell-1.1.3 66
 MD5 f68502846fc6d13abf7ca3c160d4fa45 files/digest-hunspell-1.1.4 66
 MD5 1d6c3ebe073637dc68dc5b3036177cb5 files/hunspell-1.1.3-renameexes.patch 4612
 MD5 6c27bd8351e45b24f183ddca92c7fba8 hunspell-1.1.3.ebuild 1710
-MD5 4fd405bbcf8b40c58df90753885f29d6 hunspell-1.1.4.ebuild 1880
+MD5 28a5cf89baf58764e7efaf6eba53853d hunspell-1.1.4.ebuild 1887
 MD5 b86e3c93f969dbb4f433611cb0f6b0b0 metadata.xml 222
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEDd/dZfNLSOUrp0sRAmMWAJ4okwst+DM9XtI1g0kphdsuDsESEwCfbj4r
-al1mC5vpdtotENyB4FGxZ7w=
-=fM+y
+iD8DBQFEDfltKRy60XGEcJIRAgUZAJwOsIOcMaxisvPSItsz+p7+dVVKsgCfSnsC
+N7tdeq5UPppfWmtElnKznxQ=
+=bZYi
 -----END PGP SIGNATURE-----
