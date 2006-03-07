@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 88b6d9110153bf9dcb2dd6b9c27a312d ChangeLog 2008
-RMD160 272d4de40b3b4dcb62fc051962333ba15c7e5bd0 ChangeLog 2008
-SHA256 aa6d89b12b344cb6ed93bfb63dee5629f9cc0c08502d8e3ab7f971b77b20b71d ChangeLog 2008
+MD5 a11b24c767d956ac78f3d9d61a105b8f ChangeLog 2107
 MD5 6596c691b8c50fcb19416eb3ea70b21b files/digest-xf86-video-cirrus-1.0.0.5 334
-RMD160 8558d5fdbcd6c45e7096d960e49973a9872b7b58 files/digest-xf86-video-cirrus-1.0.0.5 334
-SHA256 696196c2654e9d34190fcc8c42fa40bdcb5a4dca784f504617fb333c90b177a1 files/digest-xf86-video-cirrus-1.0.0.5 334
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
-SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 1da0945655a724ca354b0148d6efe93e xf86-video-cirrus-1.0.0.5.ebuild 591
-RMD160 7e9ef7f972bfd136ad38550f039a90fc0d7bffbb xf86-video-cirrus-1.0.0.5.ebuild 591
-SHA256 00dc258774a51e01f51c564f0bd987277614cb0ba25d9534c7e8b6010f297ab4 xf86-video-cirrus-1.0.0.5.ebuild 591
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6SN2+ySkm8kpY0RAnkMAJwK3kPiRP/tcGJ0N5QfvHgt4fvmfACgjkPK
-9tNylHUuCoBNVwyGclf5hXg=
-=bCPn
------END PGP SIGNATURE-----
+MD5 fc8f8ff3ba01cd7b68d2938c56ae5fb2 xf86-video-cirrus-1.0.0.5.ebuild 596
