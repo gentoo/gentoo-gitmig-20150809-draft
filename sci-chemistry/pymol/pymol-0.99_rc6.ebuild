@@ -1,10 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.99.ebuild,v 1.2 2006/03/04 00:23:27 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.99_rc6.ebuild,v 1.1 2006/03/07 16:16:52 spyderous Exp $
 
 inherit distutils eutils multilib
 
-MY_P="${PN}-${PV/./_}rc1"
+MY_PV=${PV/_}
+MY_S_P="${PN}-${MY_PV}"
+MY_PV=${MY_PV/./_}
+MY_P="${PN}-${MY_PV}"
 DESCRIPTION="A Python-extensible molecular graphics system."
 HOMEPAGE="http://pymol.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pymol/${MY_P}-src.tgz"
@@ -12,7 +15,7 @@ SRC_URI="mirror://sourceforge/pymol/${MY_P}-src.tgz"
 LICENSE="PSF-2.2"
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 
 DEPEND="dev-lang/python
 	dev-python/pmw
@@ -21,10 +24,14 @@ DEPEND="dev-lang/python
 	media-libs/libpng
 	sys-libs/zlib
 	virtual/glut"
+S="${WORKDIR}/${MY_S_P}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	# Turn off splash screen.  Please do make a project contribution
+	# if you are able though.
+	[[ -n "$WANT_NOSPLASH" ]] && epatch ${FILESDIR}/nosplash-gentoo.patch
 
 	# Respect CFLAGS
 	sed -i \
@@ -59,7 +66,7 @@ EOF
 	mv examples ${D}/usr/share/doc/${PF}/
 
 	dodir /usr/share/pymol
-	mv tests ${D}/usr/share/pymol/
+	mv test ${D}/usr/share/pymol/
 	mv data ${D}/usr/share/pymol/
 	mv scripts ${D}/usr/share/pymol/
 }
