@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r1.ebuild,v 1.8 2006/01/28 19:06:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r1.ebuild,v 1.9 2006/03/07 23:14:21 vapier Exp $
 
 inherit eutils
 
@@ -15,7 +15,6 @@ KEYWORDS="x86 ~ppc ~sparc"
 IUSE="X ssl"
 
 DEPEND=">=dev-lang/perl-5.6.1
-	X? ( virtual/x11 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )"
 
 S=${WORKDIR}/${MY_P}

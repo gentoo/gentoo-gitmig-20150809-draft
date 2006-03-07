@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.5.ebuild,v 1.4 2005/09/05 19:17:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.5.ebuild,v 1.5 2006/03/07 23:14:21 vapier Exp $
 
 inherit eutils multilib flag-o-matic elisp-common
 
@@ -21,7 +21,6 @@ KEYWORDS="~amd64 ppc sparc x86"
 IUSE="doc emacs java odbc ssl X"
 
 RDEPEND=">=dev-lang/perl-5.6.1
-	X? ( virtual/x11 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	emacs? ( virtual/emacs )
 	java? ( >=virtual/jdk-1.2 )
