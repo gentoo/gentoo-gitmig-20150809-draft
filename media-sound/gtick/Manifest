@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d6b6f61c28f3fa597424906b09e96d5e gtick-0.2.13.ebuild 548
-MD5 aa5ace7b59fd7543d0fb0f0400f42c1b ChangeLog 2146
-MD5 cb6663f5a9cc04a8425e3dd6d469f57b gtick-0.3.4.ebuild 606
-MD5 70180f0241efce6cd6e47bbe5751d7ba gtick-0.2.4.ebuild 584
-MD5 a0fe62caa29da4546b00ec6610bdfcb7 gtick-0.3.0.ebuild 604
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 e3a5325eb7038c07fb9b9a784f50ecba files/digest-gtick-0.3.4 64
-MD5 a0b3ffc484fedb3547eabe3ca9c8cc1b files/digest-gtick-0.3.0 64
-MD5 963ec566bcc173d8386ef3f1d7ade6e4 files/digest-gtick-0.2.4 63
+MD5 626faa99c7c8bfbde40ba7e3fad18a8c ChangeLog 2252
+RMD160 6765c12931039f7e65af0f3f6ba7ce1b7e274f80 ChangeLog 2252
+SHA256 d1fbb07193e2342c77639861ee36566c10549f00bf1861258f1a304ddd60c5f4 ChangeLog 2252
 MD5 ef0dad6558842cb8241917c7d78f655c files/digest-gtick-0.2.13 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGtRVj5H05b2HAEkRAsoWAJ9JGwCouHN0lKRCfGUM4Co8lVVt0wCaAu2H
-F4JOtNzkaT5KfOoyMDiWpN0=
-=zoWh
------END PGP SIGNATURE-----
+RMD160 a6bd27e91f183f0163769128d6751fe7b74214c2 files/digest-gtick-0.2.13 65
+SHA256 44019eb1abf1c6713ab884c76482808dc5aceaa3e61c80ea3a9a24ce2330b370 files/digest-gtick-0.2.13 65
+MD5 963ec566bcc173d8386ef3f1d7ade6e4 files/digest-gtick-0.2.4 63
+RMD160 30a3845bdb7244a0d558236c76f783377aafc4cb files/digest-gtick-0.2.4 63
+SHA256 e3963dc9cda74b917e5ce2db67d5b77fdc8f1efab8be278799bc1f0022f7bca4 files/digest-gtick-0.2.4 63
+MD5 a0b3ffc484fedb3547eabe3ca9c8cc1b files/digest-gtick-0.3.0 64
+RMD160 230dafb5f885a5559163a3ff59269e8dbc4d24f9 files/digest-gtick-0.3.0 64
+SHA256 f479f2cd82af96759aeb9b1431e4f823f6a98e97f96ab449d9838f67c8cce3dd files/digest-gtick-0.3.0 64
+MD5 e3a5325eb7038c07fb9b9a784f50ecba files/digest-gtick-0.3.4 64
+RMD160 52b7a75489853363e12c2b5a1a4ee2ced9d9b9e5 files/digest-gtick-0.3.4 64
+SHA256 bdbce8f6798f4cb0077198e5cd4c7a60e0aaf3604695334cd3991595078bc82a files/digest-gtick-0.3.4 64
+MD5 d6b6f61c28f3fa597424906b09e96d5e gtick-0.2.13.ebuild 548
+RMD160 47fff02dfcd6a95eb7905f555aafb9311426fcd0 gtick-0.2.13.ebuild 548
+SHA256 ad703d2064422b08807d14088efc797fb7ad7bccf514495a651d171d65af28fd gtick-0.2.13.ebuild 548
+MD5 accc020555250501ee05e626c69e695b gtick-0.2.4.ebuild 570
+RMD160 b04f8601cfb83478c8a9b8e1356137e93d0d9fc8 gtick-0.2.4.ebuild 570
+SHA256 98d045c5dfd25a8a1f88cda0ceced371a6603b4ff8439a81ffd4182f9e4911d3 gtick-0.2.4.ebuild 570
+MD5 a0fe62caa29da4546b00ec6610bdfcb7 gtick-0.3.0.ebuild 604
+RMD160 d6df78670be6fb87c07698ddc6a19868fb40b0e2 gtick-0.3.0.ebuild 604
+SHA256 f1ae01e7ed17f335255c80baa9f7a1538e3205d909e5f02bec00d23efe7256e1 gtick-0.3.0.ebuild 604
+MD5 cb6663f5a9cc04a8425e3dd6d469f57b gtick-0.3.4.ebuild 606
+RMD160 8f90cbe8a211e07760170cfa7c03fbcf3a2fbafb gtick-0.3.4.ebuild 606
+SHA256 d2a232e6fffb862727edd5136ccc27d4c53698cb0284e0f7c7f78b5d1de11d17 gtick-0.3.4.ebuild 606
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
