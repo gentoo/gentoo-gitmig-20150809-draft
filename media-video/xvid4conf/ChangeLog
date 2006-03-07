@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xvid4conf
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvid4conf/ChangeLog,v 1.5 2005/09/10 15:41:46 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvid4conf/ChangeLog,v 1.6 2006/03/07 17:22:07 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> xvid4conf-1.12.ebuild:
+  Drop virtual/libc dependency.
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> xvid4conf-1.12.ebuild:
   Don't install INSTALL file.
