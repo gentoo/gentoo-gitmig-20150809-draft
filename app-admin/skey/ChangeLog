@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/skey
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.39 2006/03/06 14:44:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.40 2006/03/07 20:57:20 tove Exp $
 
   06 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> skey-1.1.5-r5.ebuild:
   Stable on sparc wrt #125056
@@ -43,7 +43,7 @@
   07 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> skey-1.1.5-r4.ebuild:
   Stable on sparc
 
-  06 Feb 2005; Bryan Ãstergaard <kloeri@gentoo.org> skey-1.1.5-r4.ebuild:
+  06 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> skey-1.1.5-r4.ebuild:
   Stable on alpha.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
@@ -67,7 +67,7 @@
   18 Sep 2004; Joshua Kinard <kumba@gentoo.org> skey-1.1.5-r3.ebuild:
   Marked stable on mips.
 
-  16 Sep 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org> skey-1.1.5-r3.ebuild:
+  16 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> skey-1.1.5-r3.ebuild:
   Stable on alpha, bug 63995.
 
   15 Sep 2004; Jason Wever <weeve@gentoo.org> skey-1.1.5-r3.ebuild:
