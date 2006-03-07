@@ -52,3 +52,7 @@ video_cards_tga
 video_cards_tseng
 video_cards_vesa
 video_cards_via
+
+# 2006/03/07 - Donnie Berkholz <spyderous@gentoo.org>
+# Modular X: mask for architectures lacking direct rendering      
+dri

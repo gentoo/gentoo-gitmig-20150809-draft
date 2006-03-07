@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.44 2006/02/06 14:48:30 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.45 2006/03/07 18:17:44 spyderous Exp $
+
+# 2006/03/07 - Donnie Berkholz <spyderous@gentoo.org>
+# Modular X: mask for architectures lacking direct rendering
+dri
 
 # Stephen P. Becker <geoman@gentoo.org>
 # more modular X stuff

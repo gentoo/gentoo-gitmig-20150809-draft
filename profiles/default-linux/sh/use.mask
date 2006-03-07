@@ -38,3 +38,7 @@ qdbm
 # Luca Longinotti <chtekk@gentoo.org>
 # mask Oracle
 oci8
+
+# 2006/03/07 - Donnie Berkholz <spyderous@gentoo.org>
+# Modular X: mask for architectures lacking direct rendering      
+dri
