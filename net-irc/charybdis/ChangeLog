@@ -1,0 +1,12 @@
+# ChangeLog for net-irc/charybdis
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.1 2006/03/07 02:50:56 antarus Exp $
+
+*charybdis-1.1.0 (07 Mar 2006)
+
+  07 Mar 2006; Alec Warner <antarus@gentoo.org>
+  +files/charybdis-1.1.0-paths.patch, +files/charybdis-ircd.confd,
+  +files/charybdis-ircd.initd, +charybdis-1.1.0.ebuild:
+  Initial commit, ebuild submitted by Michael Tharp <gxti AT partiallystapled
+  DOT com>
+
