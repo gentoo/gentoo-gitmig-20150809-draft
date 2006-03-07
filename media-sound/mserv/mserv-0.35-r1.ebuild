@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.1 2006/01/10 17:07:28 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.2 2006/03/07 15:13:05 flameeyes Exp $
 
-inherit webapp eutils
+inherit webapp eutils toolchain-funcs
 
 DESCRIPTION="Jukebox-style music server"
 HOMEPAGE="http://www.mserv.org"
@@ -15,12 +15,11 @@ IUSE="oggvorbis"
 WEBAPP_MANUAL_SLOT="yes"
 SLOT="0"
 
-DEPEND="virtual/libc"
 RDEPEND=">=dev-lang/perl-5.6.1
-	 virtual/mpg123
-	 media-sound/sox
-	 net-www/apache
-	 oggvorbis? ( media-sound/vorbis-tools )"
+	virtual/mpg123
+	media-sound/sox
+	net-www/apache
+	oggvorbis? ( media-sound/vorbis-tools )"
 
 pkg_setup() {
 	webapp_pkg_setup
@@ -44,7 +43,7 @@ src_compile() {
 
 	# Optional suid wrapper
 	cd ${S}/support
-	gcc -I.. -I../mserv ${CFLAGS} mservplay.c -o mservplay || die
+	$(tc-getCC) -I.. -I../mserv ${CFLAGS} ${LDFLAGS} mservplay.c -o mservplay || die
 }
 
 src_install() {
