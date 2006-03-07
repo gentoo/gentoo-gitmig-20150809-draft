@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>media-tv</herd>
+	<maintainer>
+		<email>zzam@gentoo.org</email>
+		<name>Matthias Schwarzott</name>
+	</maintainer>
+	<maintainer>
+		<email>hd_brummy@gentoo.org</email>
+		<name>Joerg Bornkessel</name>
+	</maintainer>
+	<longdescription>
+		Plugin weatherng for the Video Disk Recorder (VDR)
+		Show weahter data for your City.
+	</longdescription>
+</pkgmetadata>
