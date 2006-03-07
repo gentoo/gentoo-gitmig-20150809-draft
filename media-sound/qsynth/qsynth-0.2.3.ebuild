@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.2.3.ebuild,v 1.5 2006/02/07 20:43:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.2.3.ebuild,v 1.6 2006/03/07 15:30:15 flameeyes Exp $
 
 DESCRIPTION="A Qt application to control FluidSynth"
 HOMEPAGE="http://qsynth.sf.net/"
@@ -11,8 +11,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="amd64 ~ppc ~sparc x86"
 
-DEPEND="virtual/libc
-	=x11-libs/qt-3*
+DEPEND="=x11-libs/qt-3*
 	media-sound/fluidsynth"
 
 src_compile() {
