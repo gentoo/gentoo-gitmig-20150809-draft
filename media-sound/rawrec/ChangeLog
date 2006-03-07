@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rawrec
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/ChangeLog,v 1.8 2005/09/15 19:49:03 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/ChangeLog,v 1.9 2006/03/07 15:39:32 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> rawrec-0.9.98.ebuild:
+  Drop virtual/libc dependency. Respect CC, CFLAGS and LDFLAGS.
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> rawrec-0.9.98.ebuild:
   Mark 0.9.98 stable on alpha
