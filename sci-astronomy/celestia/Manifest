@@ -1,20 +1,43 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0dc20a10a68ff489641c9a903310a9a9 ChangeLog 7073
+MD5 0ecb130695ba729e1e7cb32a0dd59f51 ChangeLog 7230
+RMD160 232a3a3725daabcdedd9066065aaf27df557076a ChangeLog 7230
+SHA256 b2f00b1cd6b72260238363ec0e8a16357da61c42e1b5575f94dbbe18b3b92408 ChangeLog 7230
 MD5 6be90f964bc6ca0195b0623338dfd1f0 celestia-1.3.2.ebuild 3063
+RMD160 3693e0d7a28a52d9445c9d92b3693f4ad190e7d3 celestia-1.3.2.ebuild 3063
+SHA256 36aec6cd0b0c6b33cfdc1bfe415b5d6cd2607a1ac89c6410b113ce2514cb5cbe celestia-1.3.2.ebuild 3063
 MD5 511913cb6dac5097274e61a8257fa1a5 celestia-1.4.0.ebuild 2943
-MD5 c0b33aa7379f9e5b806fa8d2712da01b celestia-1.4.1.ebuild 2943
+RMD160 86df3a5eed845422da99907dd737824e87a57c45 celestia-1.4.0.ebuild 2943
+SHA256 0b2b8133affce05a7cde09843407622a1968615faea75c362d45e58ae09476e1 celestia-1.4.0.ebuild 2943
+MD5 bebcc43e948a0ff30ff810abd512ce47 celestia-1.4.1.ebuild 2995
+RMD160 0241b72dd7e8510ed50c4cfb29f93265dbbe1d34 celestia-1.4.1.ebuild 2995
+SHA256 d499682a80097be986ef6b7f280c162165849952077b7dc7339b43b3a95d0068 celestia-1.4.1.ebuild 2995
 MD5 f659f2616eeaaa4d3b6422e586d2bfa2 files/celestia-1.3.2-noarts.patch 3566
+RMD160 32cc8eacfe3cd571d8d16ab99730436e98033e6e files/celestia-1.3.2-noarts.patch 3566
+SHA256 d6e58016dca095d949b6492aeb12fa8b881ae1b47ac2858ff89f20b393b912ad files/celestia-1.3.2-noarts.patch 3566
+MD5 5f63556bba262455321ec2a466ef3bf8 files/celestia-1.4.1-gcc-4.1.patch 1191
+RMD160 b9bfae5bc1b5bf93a95760e3fd558645668cdca6 files/celestia-1.4.1-gcc-4.1.patch 1191
+SHA256 ea26fe154cf92c613c54edd5e0e51c1b8562ee5ccd74ab191a8a386cd8986e67 files/celestia-1.4.1-gcc-4.1.patch 1191
 MD5 d4ff8e51fb3a546279e7442cf24e07d7 files/digest-celestia-1.3.2 68
+RMD160 1ee0c8d835557d2f14c2b4c5689934975c5e2a84 files/digest-celestia-1.3.2 68
+SHA256 3a8b183f8ff6e80549e206c4586934cdcdee1f47745a8fc55658926ce5d43404 files/digest-celestia-1.3.2 68
 MD5 8e1dfea9c274b2242b921a467ec1d54b files/digest-celestia-1.4.0 68
+RMD160 78d294bf21394de3d099bf54b80418353ca9a96f files/digest-celestia-1.4.0 68
+SHA256 9227be756baf3edf7163b08ba9cbf31d02edbccb04bba98e90ecda2a7e02bc94 files/digest-celestia-1.4.0 68
 MD5 c5a1e667a20a16f4aef1d1772bee8762 files/digest-celestia-1.4.1 68
+RMD160 733f5936d1409c42f537662229fac8c26f295e53 files/digest-celestia-1.4.1 68
+SHA256 cf215ec0326b4dc3f109e50849b4d7174dadf3ebe1ebecc6e7ab7dcb7ab7d47b files/digest-celestia-1.4.1 68
 MD5 f96a6eb019a59bf1a643b96c43657af8 files/resmanager.h.patch 893
+RMD160 e6917203264b7a544f05ed0622955bef3bbe328a files/resmanager.h.patch 893
+SHA256 41164fb00e673f9277dad12f19721ab3dfcda0dc2e7de1b0ca7c9cb86a1786c5 files/resmanager.h.patch 893
 MD5 1b55bd73a1313e288a88762af6cd0fb7 metadata.xml 330
+RMD160 536bf8245e499cf71b58fcdcd1f0fffe69803f16 metadata.xml 330
+SHA256 291517a872db6b61a0a890151a65ad52dfca7f470137307b122f290e5e519f44 metadata.xml 330
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD9W3o/aM9DdBw91cRAplSAJ9zlM/ADd0SAdsm0Vo7Sj27VDAEBACgxZNl
-s4suPpZbmGBVpye80f7gQFQ=
-=IYnu
+iD8DBQFEDPSv/aM9DdBw91cRAt74AKC5BQUu151m1qBDvDFvpwuZxRFAGACgmkmm
+Hr+jFj/BdIksVr5i+9mEZzk=
+=7ZHs
 -----END PGP SIGNATURE-----
