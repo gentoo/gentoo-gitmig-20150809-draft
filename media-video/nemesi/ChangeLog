@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nemesi
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nemesi/ChangeLog,v 1.8 2005/11/02 20:18:17 genstef Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/nemesi/ChangeLog,v 1.9 2006/03/07 16:46:40 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> nemesi-0.5.0.ebuild,
+  nemesi-0.5.1.ebuild, nemesi-0.5.2.ebuild, nemesi-0.5.3.ebuild:
+  Drop virtual/libc dependency.
 
   02 Nov 2005; Stefan Schweizer <genstef@gentoo.org> nemesi-0.5.0.ebuild,
   nemesi-0.5.1.ebuild, nemesi-0.5.2.ebuild, nemesi-0.5.3.ebuild:

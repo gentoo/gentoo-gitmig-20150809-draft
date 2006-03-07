@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nemesi/nemesi-0.5.2.ebuild,v 1.3 2005/11/02 20:18:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nemesi/nemesi-0.5.2.ebuild,v 1.4 2006/03/07 16:46:40 flameeyes Exp $
 
 DESCRIPTION="Tiny rtsp client"
 HOMEPAGE="http://streaming.polito.it/"
@@ -11,8 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="gtk sdl"
 
-DEPEND="virtual/libc
-		gtk? ( >=x11-libs/gtk+-2.4 )
+DEPEND="gtk? ( >=x11-libs/gtk+-2.4 )
 		sdl? ( media-libs/libsdl )
 		media-video/ffmpeg
 		virtual/ghostscript"
