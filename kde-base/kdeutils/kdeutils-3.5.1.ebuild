@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.1.ebuild,v 1.1 2006/01/28 14:43:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.1.ebuild,v 1.2 2006/03/07 19:45:23 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -9,16 +9,25 @@ DESCRIPTION="KDE utilities"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="crypt snmp pbbuttonsd xmms"
 
-DEPEND="~kde-base/kdebase-${PV}
+BOTH_DEPEND="~kde-base/kdebase-${PV}
 	snmp? ( net-analyzer/net-snmp )
 	pbbuttonsd? ( app-laptop/pbbuttonsd )
 	dev-lang/python
 	xmms? ( media-sound/xmms )
-	dev-libs/gmp"
+	dev-libs/gmp
+	|| ( x11-libs/libXtst virtual/x11 )"
 
-RDEPEND="${DEPEND}
+RDEPEND="${BOTH_DEPEND}
 	crypt? ( app-crypt/gnupg )
 	!x11-misc/superkaramba"
+
+DEPEND="${BOTH_DEPEND}
+	|| ( (
+			x11-libs/libX11
+			x11-proto/xextproto
+			x11-proto/xproto
+		) virtual/x11 )
+	virtual/os-headers"
 
 src_unpack() {
 	kde_src_unpack
