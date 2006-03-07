@@ -1,0 +1,11 @@
+--- configure.bak	2006-02-20 23:50:24.000000000 +0100
++++ configure	2006-02-20 23:50:47.000000000 +0100
+@@ -4138,7 +4138,7 @@
+ 
+ 
+ 
+-if test x$VG_PLATFORM = xx86-linux -o x$VG_PLATFORM = xamd64-linux; then
++if test x$VG_PLATFORM = xx86-linux; then
+   VG_X86_LINUX_TRUE=
+   VG_X86_LINUX_FALSE='#'
+ else

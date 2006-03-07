@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/valgrind
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.56 2005/12/05 18:37:01 griffon26 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.57 2006/03/07 18:38:19 griffon26 Exp $
+
+  07 Mar 2006; Maurice van der Pot <griffon26@gentoo.org>
+  +files/valgrind-3.1.0-amd64-nomultilib-fix.patch, valgrind-3.1.0.ebuild:
+  Added patch created by Marco Matthies <gentoo-bugzilla@moinmarco.de> for 
+  bug #114407 reported by Scott Robert Ladd <gentoo@coyotegulch.com>. This
+  problem occurred only on amd64 without multilib.
 
   03 Dec 2005; Maurice van der Pot <griffon26@gentoo.org>
   valgrind-3.1.0.ebuild:

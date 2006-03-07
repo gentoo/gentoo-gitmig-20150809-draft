@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 df3003fc7d32d481b23fe4125bdc60f5 ChangeLog 6728
+MD5 c08e1561575e5b97afda56e5dc29abeb ChangeLog 7064
 MD5 26192577445b467e528408118f7ee6ec files/digest-valgrind-2.2.0-r2 139
 MD5 c6fe697b4c25fb9e5c7482496ebabf06 files/digest-valgrind-2.4.0 140
 MD5 a5dde62cbb4bb255219643b61493b950 files/digest-valgrind-2.4.1 68
@@ -17,6 +17,7 @@ MD5 d177de2c2f79d24d4ad74644ee49f667 files/valgrind-2.4.1-static-const.patch 439
 MD5 24971d28d91da6c61168fa217d10b47b files/valgrind-3.0.0-pie-fix.patch 864
 MD5 9af0c7aae878323f117ea148ee2930d4 files/valgrind-3.0.1-mfence.patch 600
 MD5 fc133b72d5c0341cc194c9cee839c058 files/valgrind-3.0.1-pic-fix.patch 3565
+MD5 2622d413602e236208128310f4736453 files/valgrind-3.1.0-amd64-nomultilib-fix.patch 302
 MD5 799f0b61a3a686b4074bd61acc572c5c metadata.xml 1003
 MD5 9c6171e63f2c500b26cd6c2dd98d42e8 valgrind-2.2.0-r2.ebuild 1716
 MD5 98fd3a4e78d2c75a2de9d2f7595a649c valgrind-2.4.0.ebuild 1407
@@ -24,11 +25,11 @@ MD5 cb18085a00f509803e6e539543cb20f9 valgrind-2.4.1.ebuild 1881
 MD5 16efe20081a8edc14768a1ea1e4664be valgrind-3.0.0.ebuild 1799
 MD5 c824aeed84391f896caea42dc444afc6 valgrind-3.0.1-r1.ebuild 1887
 MD5 fc311d6ac7b19d831f6e18e9588c2053 valgrind-3.0.1.ebuild 1690
-MD5 0cb8b50fb0b3ea6de23044336c0126b0 valgrind-3.1.0.ebuild 2172
+MD5 35c90975bda820631eb617e6b33038af valgrind-3.1.0.ebuild 2354
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDlIjcMGnpIbeahxwRAiOuAJ42Idr0CWGsfLftODoGqHAg04fMWQCgrruP
-x0qX9xuVSxynxHpxx950fgk=
-=Af7M
+iD8DBQFEDdMoMGnpIbeahxwRAkA1AJ9nrDUqwME1gHrUVgA9zocEPtXbDwCfcMBt
+EsljCqvMIvtYeSadbv9Y0hc=
+=pnjv
 -----END PGP SIGNATURE-----
