@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.248 2006/03/07 05:40:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.249 2006/03/07 23:06:49 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -135,7 +135,7 @@ else
 	IUSE="multislot"
 
 	if [[ ${PN} != "kgcc64" ]] ; then
-		IUSE="${IUSE} altivec bootstrap build fortran gcj gtk multilib nls nocxx objc vanilla"
+		IUSE="${IUSE} altivec bootstrap build fortran gcj gtk hardened multilib nls nocxx objc vanilla"
 		[[ -n ${PIE_VER}    ]] && IUSE="${IUSE} nopie"
 		[[ -n ${PP_VER}     ]] && IUSE="${IUSE} nossp"
 		[[ -n ${HTB_VER}    ]] && IUSE="${IUSE} boundschecking"
@@ -149,11 +149,6 @@ else
 	# these are features introduced in 4.0
 	if tc_version_is_at_least "4.0" ; then
 		IUSE="${IUSE} objc-gc mudflap"
-
-		# =4.0* doesn't support hardened yet
-		if [[ ${PV} == 4.0* ]] ; then
-			IUSE="${IUSE} hardened"
-		fi
 
 		if tc_version_is_at_least "4.1" ; then
 			IUSE="${IUSE} objc++"
@@ -546,7 +541,7 @@ make_gcc_hard() {
 }
 
 create_vanilla_specs_file() {
-	pushd ${WORKDIR}/build/gcc > /dev/null
+	pushd "${WORKDIR}"/build/gcc > /dev/null
 	if use hardened ; then
 		# if using hardened, then we need to move xgcc out of the way
 		# and recompile it
@@ -556,20 +551,20 @@ create_vanilla_specs_file() {
 		mv gcc.o gcc.o.hard
 		make xgcc
 		einfo "Creating a vanilla gcc specs file"
-		./xgcc -dumpspecs > ${WORKDIR}/build/vanilla.specs
+		./xgcc -dumpspecs > "${WORKDIR}"/build/vanilla.specs
 		# restore everything to normal
 		mv gcc.o.hard gcc.o
 		mv xgcc.hard xgcc
 		mv Makefile.orig Makefile
 	else
 		einfo "Creating a vanilla gcc specs file"
-		./xgcc -dumpspecs > ${WORKDIR}/build/vanilla.specs
+		./xgcc -dumpspecs > "${WORKDIR}"/build/vanilla.specs
 	fi
 	popd > /dev/null
 }
 
 create_hardened_specs_file() {
-	pushd ${WORKDIR}/build/gcc > /dev/null
+	pushd "${WORKDIR}"/build/gcc > /dev/null
 	if ! use hardened ; then
 		# if not using hardened, then we need to move xgcc out of the way
 		# and recompile it
@@ -579,27 +574,27 @@ create_hardened_specs_file() {
 		mv gcc.o gcc.o.vanilla
 		make xgcc
 		einfo "Creating a hardened gcc specs file"
-		./xgcc -dumpspecs > ${WORKDIR}/build/hardened.specs
+		./xgcc -dumpspecs > "${WORKDIR}"/build/hardened.specs
 		# restore everything to normal
 		mv gcc.o.vanilla gcc.o
 		mv xgcc.vanilla xgcc
 		mv Makefile.orig Makefile
 	else
 		einfo "Creating a hardened gcc specs file"
-		./xgcc -dumpspecs > ${WORKDIR}/build/hardened.specs
+		./xgcc -dumpspecs > "${WORKDIR}"/build/hardened.specs
 	fi
 	popd > /dev/null
 }
 
 create_hardenednossp_specs_file() {
-	pushd ${WORKDIR}/build/gcc > /dev/null
+	pushd "${WORKDIR}"/build/gcc > /dev/null
 	cp Makefile Makefile.orig
 	sed -i -e "s/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_PIE ${gcc_common_hard}/g" Makefile
 	mv xgcc xgcc.moo
 	mv gcc.o gcc.o.moo
 	make xgcc
 	einfo "Creating a hardened no-ssp gcc specs file"
-	./xgcc -dumpspecs > ${WORKDIR}/build/hardenednossp.specs
+	./xgcc -dumpspecs > "${WORKDIR}"/build/hardenednossp.specs
 	# restore everything to normal
 	mv gcc.o.moo gcc.o
 	mv xgcc.moo xgcc
@@ -608,14 +603,14 @@ create_hardenednossp_specs_file() {
 }
 
 create_hardenednopie_specs_file() {
-	pushd ${WORKDIR}/build/gcc > /dev/null
+	pushd "${WORKDIR}"/build/gcc > /dev/null
 	cp Makefile Makefile.orig
 	sed -i -e "s/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_SSP ${gcc_common_hard}/g" Makefile
 	mv xgcc xgcc.moo
 	mv gcc.o gcc.o.moo
 	make xgcc
 	einfo "Creating a hardened no-pie gcc specs file"
-	./xgcc -dumpspecs > ${WORKDIR}/build/hardenednopie.specs
+	./xgcc -dumpspecs > "${WORKDIR}"/build/hardenednopie.specs
 	# restore everything to normal
 	mv gcc.o.moo gcc.o
 	mv xgcc.moo xgcc
@@ -624,14 +619,14 @@ create_hardenednopie_specs_file() {
 }
 
 create_hardenednopiessp_specs_file() {
-	pushd ${WORKDIR}/build/gcc > /dev/null
+	pushd "${WORKDIR}"/build/gcc > /dev/null
 	cp Makefile Makefile.orig
 	sed -i -e "s/^HARD_CFLAGS.*/HARD_CFLAGS = ${gcc_common_hard}/g" Makefile
 	mv xgcc xgcc.moo
 	mv gcc.o gcc.o.moo
 	make xgcc
 	einfo "Creating a hardened no-pie no-ssp gcc specs file"
-	./xgcc -dumpspecs > ${WORKDIR}/build/hardenednopiessp.specs
+	./xgcc -dumpspecs > "${WORKDIR}"/build/hardenednopiessp.specs
 	# restore everything to normal
 	mv gcc.o.moo gcc.o
 	mv xgcc.moo xgcc
@@ -913,7 +908,7 @@ gcc-compiler_pkg_postinst() {
 		echo
 		einfo "For more information on the steps to take when upgrading "
 		einfo "from gcc-3.3 please refer to: "
-		einfo "http://www.gentoo.org/proj/en/base/x86/gcc-upgrading-guide.xml"
+		einfo "http://www.gentoo.org/doc/en/gcc-upgrading.xml"
 		echo
 	fi
 }
@@ -1342,7 +1337,7 @@ gcc_do_make() {
 		BOOT_CFLAGS=${BOOT_CFLAGS-"$(get_abi_CFLAGS) ${CFLAGS}"}
 	fi
 
-	pushd ${WORKDIR}/build
+	pushd "${WORKDIR}"/build
 	einfo "Running make LDFLAGS=\"${LDFLAGS}\" STAGE1_CFLAGS=\"${STAGE1_CFLAGS}\" LIBPATH=\"${LIBPATH}\" BOOT_CFLAGS=\"${BOOT_CFLAGS}\" ${GCC_MAKE_TARGET}"
 
 	emake \
@@ -1460,8 +1455,8 @@ gcc_src_compile() {
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""
 
 	# Build in a separate build tree
-	mkdir -p ${WORKDIR}/build
-	pushd ${WORKDIR}/build > /dev/null
+	mkdir -p "${WORKDIR}"/build
+	pushd "${WORKDIR}"/build > /dev/null
 
 	# Install our pre generated manpages if we do not have perl ...
 	[[ ! -x /usr/bin/perl ]] && [[ -n ${MAN_VER} ]] && \
@@ -1517,9 +1512,9 @@ gcc-library_src_install() {
 	fi
 
 	if [[ -n ${GCC_LIB_USE_SUBDIR} ]] ; then
-		mkdir -p ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/
-		mv "${D}"${LIBPATH}/* ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/
-		mv ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/ "${D}"${LIBPATH}
+		mkdir -p "${WORKDIR}"/${GCC_LIB_USE_SUBDIR}/
+		mv "${D}"${LIBPATH}/* "${WORKDIR}"/${GCC_LIB_USE_SUBDIR}/
+		mv "${WORKDIR}"/${GCC_LIB_USE_SUBDIR}/ "${D}"${LIBPATH}
 
 		dodir /etc/env.d
 		echo "LDPATH=\"${LIBPATH}/${GCC_LIB_USE_SUBDIR}/\"" >> "${D}"/etc/env.d/99${PN}
@@ -1548,7 +1543,7 @@ gcc-compiler_src_install() {
 	done
 	einfo "Installing GCC..."
 	# Do the 'make install' from the build directory
-	cd ${WORKDIR}/build
+	cd "${WORKDIR}"/build
 	S=${WORKDIR}/build \
 	make DESTDIR="${D}" install || die
 	# Punt some tools which are really only useful while building gcc
@@ -1583,7 +1578,7 @@ gcc-compiler_src_install() {
 		fi
 		create_gcc_env_entry hardenednopiessp
 
-		cp ${WORKDIR}/build/*.specs "${D}"${LIBPATH}
+		cp "${WORKDIR}"/build/*.specs "${D}"${LIBPATH}
 	fi
 
 	# Make sure we dont have stuff lying around that
@@ -1747,7 +1742,7 @@ gcc_movelibs() {
 # Travis Tilley <lv@gentoo.org> (03 Sep 2004)
 #
 gcc_quick_unpack() {
-	pushd ${WORKDIR} > /dev/null
+	pushd "${WORKDIR}" > /dev/null
 	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
 	export UCLIBC_GCC_VER=${UCLIBC_GCC_VER:-${PATCH_GCC_VER}}
 	export PIE_GCC_VER=${PIE_GCC_VER:-${GCC_RELEASE_VER}}
@@ -1817,13 +1812,13 @@ exclude_gcc_patches() {
 	for i in ${GENTOO_PATCH_EXCLUDE} ; do
 		if [[ -f ${WORKDIR}/patch/${i} ]] ; then
 			einfo "Excluding patch ${i}"
-			rm -f ${WORKDIR}/patch/${i} || die "failed to delete ${i}"
+			rm -f "${WORKDIR}"/patch/${i} || die "failed to delete ${i}"
 		fi
 	done
 	for i in ${PIEPATCH_EXCLUDE} ; do
 		if [[ -f ${WORKDIR}/piepatch/${i} ]] ; then
 			einfo "Excluding piepatch ${i}"
-			rm -f ${WORKDIR}/piepatch/${i} || die "failed to delete ${i}"
+			rm -f "${WORKDIR}"/piepatch/${i} || die "failed to delete ${i}"
 		fi
 	done
 }
