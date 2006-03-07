@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cdplay
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdplay/ChangeLog,v 1.13 2005/09/14 07:07:46 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdplay/ChangeLog,v 1.14 2006/03/07 13:46:10 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> cdplay-0.9-r1.ebuild:
+  Drop virtual/libc dependency. Respect CFLAGS, LDFLAGS, CC.
 
   14 Sep 2005; Aron Griffis <agriffis@gentoo.org> cdplay-0.9-r1.ebuild:
   Mark 0.9-r1 stable on alpha
