@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.54 2006/01/16 11:10:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.55 2006/03/07 00:16:31 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -128,8 +128,8 @@ tc-binutils_apply_patches() {
 	elibtoolize --portage --no-uclibc
 
 	# make sure we filter $LINGUAS so that only ones that
-	# actually work with all the subdirs make it through
-	strip-linguas -i */po
+	# actually work make it through #42033
+	strip-linguas -u */po
 }
 
 toolchain-binutils_src_unpack() {
@@ -140,6 +140,13 @@ toolchain-binutils_src_unpack() {
 toolchain-binutils_src_compile() {
 	strip-flags && replace-flags -O3 -O2 #47581
 
+	local x
+	echo
+	for x in CATEGORY CBUILD CHOST CTARGET CFLAGS LDFLAGS ; do
+		einfo "$(printf '%10s' ${x}:) ${!x}"
+	done
+	echo
+
 	cd "${MY_BUILDDIR}"
 	local myconf=""
 	use nls \
@@ -147,6 +154,7 @@ toolchain-binutils_src_compile() {
 		|| myconf="${myconf} --disable-nls"
 	use multitarget && myconf="${myconf} --enable-targets=all"
 	[[ -n ${CBUILD} ]] && myconf="${myconf} --build=${CBUILD}"
+#	is_cross && myconf="${myconf} --with-sysroot=/usr/${CTARGET}"
 	myconf="--prefix=/usr \
 		--host=${CHOST} \
 		--target=${CTARGET} \
