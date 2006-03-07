@@ -1,8 +1,18 @@
-MD5 3cb7c12d9c464b2274ce357ee278704c ChangeLog 6246
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1af3955c7e6c1a55ef27ec3386c4639b ChangeLog 6351
 MD5 ce43e9fae32e2db595e780b4a4b2fcd8 files/digest-mtr-0.69 60
 MD5 ce43e9fae32e2db595e780b4a4b2fcd8 files/digest-mtr-0.69-r1 60
 MD5 1b2fafeb55048e9993c48c330ca7a4bf files/mtr-0.69-debian.patch 2558
 MD5 0bbdffc84e47f22daaf46c76e941a02a files/mtr-ac-res_mkquery.patch 510
 MD5 720bffd73acf542e859034ca9d443c19 metadata.xml 244
-MD5 28bbbddbfbc77ed851f2210cf7d5db2a mtr-0.69-r1.ebuild 1391
+MD5 2330435a084053a1eb5f4b72ffe550ab mtr-0.69-r1.ebuild 1395
 MD5 59a554945b84eb7036b372325acdffae mtr-0.69.ebuild 1343
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDfMrFdQwWVoAgN4RAgdxAKCG2d5lbtsR4fNABpITX77+xMtgOwCfYwds
+RZcMfovBjdCMzQQkT/Ydy+c=
+=g/vn
+-----END PGP SIGNATURE-----
