@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2_rc4.ebuild,v 1.3 2006/03/04 22:08:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2_rc4.ebuild,v 1.4 2006/03/07 16:24:46 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -144,6 +144,7 @@ src_unpack() {
 	#Some fixes for our patchset
 	cd ${S}
 	cp ${FILESDIR}/${MY_PV}/buildfix-without-mozilla.diff ${S}/patches/src680/ || die
+	cp ${FILESDIR}/${MY_PV}/buildfix-no-java.diff ${S}/patches/src680/ || die
 	epatch ${FILESDIR}/${MY_PV}/removecrystalcheck.diff
 	epatch ${FILESDIR}/${MY_PV}/gentoo-${MY_PV}.diff
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.191 2006/03/04 22:08:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.192 2006/03/07 16:24:46 suka Exp $
+
+  07 Mar 2006; Andreas Proschofsky <suka@gentoo.org>
+  files/2.0.2/gentoo-2.0.2.diff, +files/2.0.2/buildfix-no-java.diff,
+  openoffice-2.0.2_rc4.ebuild:
+  Buildfix for systems without java, see bug #125251
 
   04 Mar 2006; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.2_rc4.ebuild:
