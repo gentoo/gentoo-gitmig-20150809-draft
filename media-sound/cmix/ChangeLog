@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/cmix
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmix/ChangeLog,v 1.9 2005/09/04 10:35:00 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmix/ChangeLog,v 1.10 2006/03/07 14:03:52 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/cmix-1.6-ldflags.patch, cmix-1.6.ebuild:
+  Drop virtual/libc dependency. Respect CC and LDFLAGS, don't strip binaries
+  unconditionally.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> cmix-1.6.ebuild:
   Don't install COPYING file.
