@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/fmdrv
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmdrv/ChangeLog,v 1.6 2004/09/14 16:28:13 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmdrv/ChangeLog,v 1.7 2006/03/07 14:43:42 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> fmdrv-1.0.7.ebuild:
+  Drop virtual/libc dependency. Respect CC, CFLAGS, LDFLAGS. Avoid dirty sed
+  hack.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> fmdrv-1.0.7.ebuild:
   Stable amd64.

@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmdrv/fmdrv-1.0.7.ebuild,v 1.6 2004/09/14 16:28:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmdrv/fmdrv-1.0.7.ebuild,v 1.7 2006/03/07 14:43:42 flameeyes Exp $
+
+inherit toolchain-funcs
 
 IUSE=""
 
@@ -13,22 +15,11 @@ SLOT="0"
 
 LICENSE="as-is"
 
-DEPEND="virtual/libc"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	sed -i \
-		-e "s:BINDIR=/usr/local/bin:BINDIR=${D}usr/bin:" \
-		Makefile
-
-	echo "" > .depend
-}
-
-
 src_compile() {
-	emake fmdrv || die
+	emake fmdrv \
+		CC="$(tc-getCC)" CXX="$(tc-getCXX)" \
+		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
+		LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
