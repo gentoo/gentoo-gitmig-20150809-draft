@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/cd-discid-0.8.ebuild,v 1.9 2005/03/16 17:12:15 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/cd-discid-0.8.ebuild,v 1.10 2006/03/07 13:36:02 flameeyes Exp $
 
 IUSE=""
 
@@ -14,11 +14,10 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 
-DEPEND="virtual/libc"
-
 src_compile() {
-	echo $(tc-getCC) ${CFLAGS} -o cd-discid cd-discid.c
-	$(tc-getCC) ${CFLAGS} -o cd-discid cd-discid.c
+	echo $(tc-getCC) ${CFLAGS} ${LDFLAGS} -o cd-discid cd-discid.c
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o cd-discid cd-discid.c \
+		|| die "compile failed"
 }
 
 src_install () {
