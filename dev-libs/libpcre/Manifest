@@ -1,4 +1,4 @@
-MD5 4c2cbed23d59ed253b0d4da6b93ee71d ChangeLog 8822
+MD5 2c015049b96b5702375d351e02a89ba2 ChangeLog 8919
 MD5 9aa6aa1ebfe1906cfd3ce45e47a58873 files/digest-libpcre-4.2-r1 61
 MD5 e8b4b76c398da338c2c88e5321435d78 files/digest-libpcre-4.4 61
 MD5 4e0522aaf9e2d5a196830b897f2341d2 files/digest-libpcre-4.5 61
@@ -22,5 +22,5 @@ MD5 a588281f5693f0ab201655b0e19c75a7 libpcre-5.0.ebuild 1059
 MD5 e6a7a5e86e3dbcfed3918bf935a3ae9c libpcre-6.1.ebuild 1298
 MD5 82d42612ef743a584ee9f540227ceb89 libpcre-6.3.ebuild 1380
 MD5 47c8a6e828dc3af7dd08de68d43bf85c libpcre-6.4.ebuild 1361
-MD5 b34b34c28cecfacd235bd7e9a089d05c libpcre-6.6.ebuild 1370
+MD5 ee4f5924b941b5475bcf5e5ee21a9867 libpcre-6.6.ebuild 1359
 MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
