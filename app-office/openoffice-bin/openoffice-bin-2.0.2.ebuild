@@ -1,14 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.2_rc4.ebuild,v 1.1 2006/02/28 07:40:57 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.2.ebuild,v 1.1 2006/03/07 22:06:25 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
 IUSE="gnome java"
 
-MY_PV="${PV/_/}"
+MY_PV="${PV}rc4"
 MY_PV2="${MY_PV}_060227"
-MY_PV3="${PV/_rc4/}-5"
+MY_PV3="${PV}-5"
 MILESTONE="OOB680_m5"
 PACKED="${MILESTONE}_native_packed-1"
 BUILDID="9011"
@@ -16,10 +16,10 @@ S="${WORKDIR}/${PACKED}_en-US.${BUILDID}/RPMS"
 DESCRIPTION="OpenOffice productivity suite"
 
 LANGPACK="OOo_${MY_PV2}_LinuxIntel_langpack"
-LANGPACKPATH="http://62.156.160.56/pub/OpenOffice.org/${MY_PV}/${LANGPACK}"
+LANGPACKPATH="http://oootranslation.services.openoffice.org/pub/OpenOffice.org/${MY_PV}/${LANGPACK}"
 LANGSUFFIX="${MY_PV3}.i586.tar.gz"
 
-SRC_URI="mirror://openoffice/contrib/rc/${MY_PV}/OOo_${MY_PV2}_LinuxIntel_install.tar.gz
+SRC_URI="mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.tar.gz
 	linguas_af? ( ${LANGPACKPATH}_af.tar.gz )
 	linguas_be_BY? ( ${LANGPACKPATH}_be-BY.tar.gz )
 	linguas_bg? ( ${LANGPACKPATH}_bg.tar.gz )
