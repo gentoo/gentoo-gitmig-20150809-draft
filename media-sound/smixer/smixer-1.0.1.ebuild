@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/smixer-1.0.1.ebuild,v 1.15 2004/07/01 07:58:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/smixer-1.0.1.ebuild,v 1.16 2006/03/07 15:52:29 flameeyes Exp $
+
+inherit toolchain-funcs
 
 IUSE=""
 
@@ -12,12 +14,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc hppa amd64 sparc"
 
-DEPEND="virtual/libc"
-
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_compile() {
-	emake || die
+	emake LD="$(tc-getCC)" CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS}" LFLAGS="${LDFLAGS}" || die
 }
 
 src_install () {
