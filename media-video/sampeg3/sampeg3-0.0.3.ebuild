@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/sampeg3-0.0.3.ebuild,v 1.6 2005/09/10 15:43:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/sampeg3-0.0.3.ebuild,v 1.7 2006/03/07 17:15:53 flameeyes Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="MPEG video encoder targeted for optimum picture quality"
 HOMEPAGE="http://rachmaninoff.informatik.uni-mannheim.de/sampeg/"
@@ -13,20 +15,27 @@ KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
-DEPEND="virtual/libc
-		sys-libs/zlib
-		>=media-libs/libvideogfx-1.0
+RDEPEND=">=media-libs/libvideogfx-1.0
 		media-libs/libpng
 		media-libs/jpeg
-		virtual/x11"
+		|| ( (
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXv
+			) virtual/x11 )"
 
-src_compile() {
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
-	emake || die
+DEPEND="${RDEPEND}
+	|| ( x11-libs/libXt virtual/x11 )"
+
+pkg_setup() {
+	append-flags -fpermissive
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 
 src_install() {

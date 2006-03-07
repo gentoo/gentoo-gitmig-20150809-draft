@@ -1,6 +1,11 @@
 # ChangeLog for media-video/sampeg3
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/ChangeLog,v 1.8 2005/09/10 15:43:16 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/ChangeLog,v 1.9 2006/03/07 17:15:53 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/sampeg3-0.0.3-gcc4.patch, metadata.xml, sampeg3-0.0.3.ebuild:
+  Drop virtual/libc dependency, update to modular X, allow building with gcc4,
+  use econf instead of ./configure.
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> sampeg3-0.0.3.ebuild:
   Don't install INSTALL file.

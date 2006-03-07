@@ -1,0 +1,27 @@
+Index: sampeg3-0.0.3/src/coding/dct/idctblk_fp_aan.hh
+===================================================================
+--- sampeg3-0.0.3.orig/src/coding/dct/idctblk_fp_aan.hh
++++ sampeg3-0.0.3/src/coding/dct/idctblk_fp_aan.hh
+@@ -50,6 +50,9 @@
+ 
+ #include "coding/dct/dctblk.hh"
+ 
++#ifndef PI
++#define PI M_PI
++#endif
+ 
+ template <class OutputType,int Low,int High> class IDCTBlk_AccurateFP
+   : public IDCTBlk<OutputType,Low,High>
+Index: sampeg3-0.0.3/src/test/rdcurves.cc
+===================================================================
+--- sampeg3-0.0.3.orig/src/test/rdcurves.cc
++++ sampeg3-0.0.3/src/test/rdcurves.cc
+@@ -86,7 +86,7 @@ private:
+   static const int left = 3*28;
+   static const int top  = 26*28;
+   static const double width=16*28;
+-  static const double height = width*3/4;
++  static const double height = (16*28)*3/4;
+ };
+ 
+ 
