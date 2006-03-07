@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.53 2006/03/07 19:51:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.54 2006/03/07 21:11:27 jer Exp $
+
+  07 Mar 2006; Jeroen Roovers <jer@gentoo.org> tar-1.15.1-r1.ebuild:
+  Stable on hppa (bug #123038).
 
 *tar-1.15.1-r1 (07 Mar 2006)
 
