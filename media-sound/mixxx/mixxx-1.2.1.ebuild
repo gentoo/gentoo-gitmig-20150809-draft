@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.2.1.ebuild,v 1.9 2005/07/25 15:50:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.2.1.ebuild,v 1.10 2006/03/07 14:59:03 flameeyes Exp $
 
 inherit qt3
 
@@ -15,8 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 SLOT="0"
 
-DEPEND="virtual/libc
-	$(qt_min_version 3.1)
+DEPEND="$(qt_min_version 3.1)
 	media-sound/madplay
 	=sci-libs/fftw-2*
 	media-libs/libogg
