@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/fapg-0.22.ebuild,v 1.6 2004/10/19 07:30:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/fapg-0.22.ebuild,v 1.7 2006/03/07 14:37:20 flameeyes Exp $
 
 IUSE=""
 
@@ -14,11 +14,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc amd64 sparc ~ppc64"
 
-DEPEND="virtual/libc"
 
 src_compile() {
-	# emake || die
-	$(tc-getCC) ${CFLAGS} -o fapg fapg.c || die
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o fapg fapg.c || die "build failed"
 }
 
 src_install() {
