@@ -1,6 +1,10 @@
 # ChangeLog for media-video/recmpeg
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/recmpeg/ChangeLog,v 1.9 2005/09/10 15:42:48 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/recmpeg/ChangeLog,v 1.10 2006/03/07 16:54:29 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  recmpeg-1.0.5.ebuild:
+  Drop virtual/libc dependency.
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> recmpeg-1.0.5.ebuild:
   Don't install INSTALL file.
