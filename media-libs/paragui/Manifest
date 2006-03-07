@@ -1,18 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bd44bed9fd2160b018b48c7bea6e1ee0 ChangeLog 2729
-MD5 1bd266a3ed034d07f67f0b52ee5105e3 paragui-1.0.4.ebuild 696
-MD5 4445345d7ad9e9cabdb1345047e07f61 paragui-1.1.7.ebuild 812
-MD5 16b18552180f5dd564b73f4a86915449 paragui-1.1.8.ebuild 917
+MD5 f553c276cfb435cd6a70a4fcf6c12eef ChangeLog 2831
+RMD160 971e96a7294a5db2b34c7b0f459049b772af83ae ChangeLog 2831
+SHA256 f42db4065c9c8c46eea8b32f7c0fad2044dcdebea338438f8063e4cf4ea16282 ChangeLog 2831
 MD5 9534d30864250e81bfaa47900c5c7061 files/digest-paragui-1.0.4 66
+RMD160 913cde2c2a20972b70786c5812ad8560e80b5cb6 files/digest-paragui-1.0.4 66
+SHA256 9e61621f24a9ba909a8619292e808fac6fe80c8acfd9178fe3b2719873efff2e files/digest-paragui-1.0.4 66
 MD5 86d14fd1c5e607d6ad92be49ee5ec2be files/digest-paragui-1.1.7 66
+RMD160 fbebd7e262f8cc4ff67ebfbcb8ce1d018479ac00 files/digest-paragui-1.1.7 66
+SHA256 45a865119d129cdc9a683950086450505c1c0b24daf71100aba021645c2cf544 files/digest-paragui-1.1.7 66
 MD5 592b7c9ace3a853054e50036992653c3 files/digest-paragui-1.1.8 66
+RMD160 e93143cf521f4229d3c90784a3c9d2ec744df51b files/digest-paragui-1.1.8 66
+SHA256 2d23b3d45c2d76a38a7aa9509eacc1f3e64ffd67b81cdd8fdbf5ce3af4ad4cf4 files/digest-paragui-1.1.8 66
 MD5 2d8694d2a1bd2020763d9fbb18624810 files/paragui-1.1.8-header.patch 297
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGe40FdQwWVoAgN4RAtxzAKDW3So0bI64DjE6z/7DLlzoAl5wmACgxqOM
-/C+eJIE202jBWu0AeLa/UPU=
-=VvCF
------END PGP SIGNATURE-----
+RMD160 4a940c2952d993f736efdeb302d7f5433587e454 files/paragui-1.1.8-header.patch 297
+SHA256 258f0e3869b5bbaf8f3ed7f0c74e44521dd41217ab5c399c5c0e1bd3c17f6379 files/paragui-1.1.8-header.patch 297
+MD5 ed8349e980407e49b724e04ee5a9a2ed metadata.xml 231
+RMD160 c13056229989c3d4f448a7c7abcff3f4ee7ce13c metadata.xml 231
+SHA256 4595c2615fd7c9095517949b1a920d4457f92801eb9d46307b18aafe58ec2a8a metadata.xml 231
+MD5 1bd266a3ed034d07f67f0b52ee5105e3 paragui-1.0.4.ebuild 696
+RMD160 26f90a9397ad700446158efc9d50b0d2c9a24ffc paragui-1.0.4.ebuild 696
+SHA256 d9ceff2120e0eb2c6f7547544e7e89419528967bb81ba3120266e581ff517166 paragui-1.0.4.ebuild 696
+MD5 4445345d7ad9e9cabdb1345047e07f61 paragui-1.1.7.ebuild 812
+RMD160 335dd40a9a0e084ae9a7bb520d042db3430ee8ac paragui-1.1.7.ebuild 812
+SHA256 4857a0e9f15c3445e0c9a19eae41df0003e8fea64dbca563abca6443b294f023 paragui-1.1.7.ebuild 812
+MD5 16b18552180f5dd564b73f4a86915449 paragui-1.1.8.ebuild 917
+RMD160 9c20ac8e8fb3d0910ece0383b9f6d53193d12e04 paragui-1.1.8.ebuild 917
+SHA256 106ae97f37088e208b289c6f3ecea6115f6b18faf3701f85b71607493e8ac4af paragui-1.1.8.ebuild 917
