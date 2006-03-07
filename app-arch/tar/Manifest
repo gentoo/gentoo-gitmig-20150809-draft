@@ -1,48 +1,26 @@
-MD5 06225b337fa2b567671c81f0d2e62786 ChangeLog 10961
-RMD160 d84390dfc358ec30c0fc5aaea665c39776fac13a ChangeLog 10961
-SHA256 c9d759bd87718427284c883000c9ef70b1a7d0e70633e6e726296b00a159c223 ChangeLog 10961
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ed3ffc7ea3814a022be93612cbac54c0 ChangeLog 11082
 MD5 a1433bcc25f8f63d8ee96bddbf877962 files/1.15.1-flex-arg.patch 519
-RMD160 7859cef187a2bb7a85ee74d310d8d9f9e25e411b files/1.15.1-flex-arg.patch 519
-SHA256 c594e45633cf45306060c6fa2649a1033b8955e8d86bca349dadbd686c505f93 files/1.15.1-flex-arg.patch 519
 MD5 9873b609521d574ae1f98d1c092c80e4 files/append.at 1065
-RMD160 2c4875d13e7fe7f324fceaa5de8f7f9778cb7e07 files/append.at 1065
-SHA256 4cfab61e61427e091b4409d39cfc41cd24db7b1948134a9fe49916711ab45d6f files/append.at 1065
 MD5 e7c9ac5824e453f73a56032123c46f97 files/digest-tar-1.14 62
-RMD160 d2936a138d8c8fe281af93627228a5ac49db4d29 files/digest-tar-1.14 62
-SHA256 bbcbb622679d81a979d5f122ffd634b67926510d169c0372c4d1b029c7e397c9 files/digest-tar-1.14 62
 MD5 1ce0c7df0ad9ec0c279340132692d7d4 files/digest-tar-1.15.1 64
-RMD160 32d50b7ec775afe42658cd9c8259ff47388c975d files/digest-tar-1.15.1 64
-SHA256 fc1114fb23b853b92ed91903c0a26e482b84194414732a74ccba050a17121a9b files/digest-tar-1.15.1 64
 MD5 f7a21f9f5928613f14747b9af765414f files/digest-tar-1.15.1-r1 238
-RMD160 f3ddee28290c332c2f47deb49c798a117bcbcb60 files/digest-tar-1.15.1-r1 238
-SHA256 eea23c8236851bf6a88f8c709db6bd7a4ba13c77bb454702bee6d9d494c5c8e6 files/digest-tar-1.15.1-r1 238
 MD5 6c645ac1da5d382a9f7ca85729b7e9e9 files/tar-1.15.1-dont-abort-long-names.patch 1586
-RMD160 3c13978030c20830996fd56ddeb3f95024c23530 files/tar-1.15.1-dont-abort-long-names.patch 1586
-SHA256 049132675793b924a581fcf025c449bff03b29b754f1eda85cbf30a0b962daa7 files/tar-1.15.1-dont-abort-long-names.patch 1586
 MD5 971970980dc4f15a093acfe810dae560 files/tar-1.15.1-gcc4-test.patch 637
-RMD160 d68855cb453cf5372c127976348725e4f948ab52 files/tar-1.15.1-gcc4-test.patch 637
-SHA256 5934d530e51e17c9f7ee8d82149f8a5ec56f3ba45a68a4434360a23c750eb5bf files/tar-1.15.1-gcc4-test.patch 637
 MD5 71aa7eea494a25b07f4ea14a7f8a7a99 files/tar-1.15.1-less-verbose-newer.patch 770
-RMD160 a133fef0ae9fedc44e79f9c44ebf47a8e53b58e6 files/tar-1.15.1-less-verbose-newer.patch 770
-SHA256 2247c879862ced954d20b77adca5bfd18519da0bee67ea946fe3a047c28b167e files/tar-1.15.1-less-verbose-newer.patch 770
 MD5 c6222f8e6644e897361b0426c753fc8d files/tar-1.15.1-lseek.patch 5270
-RMD160 5f9b369b4c6bb0160c6cc4fe37af83d9cc1e016f files/tar-1.15.1-lseek.patch 5270
-SHA256 a633c41829595a7f31d25cd0711d473bb79c3bf552a6fd6f13f8758d3342b8ba files/tar-1.15.1-lseek.patch 5270
 MD5 2e0f6c79abe0ead888d78dfeca151ff0 files/tar-CVE-2006-0300.patch 3677
-RMD160 924b5e6aa64df7cb6ba3314ae114b12e26db3210 files/tar-CVE-2006-0300.patch 3677
-SHA256 1eb197a54ef561c2e5589663bf7cc75dbb641907dec295210003bfe990699e90 files/tar-CVE-2006-0300.patch 3677
 MD5 faf9e0ee102b11c24ce1645ec3847643 files/tar.1 12886
-RMD160 cf5d4b864a562a11725811c6378840aa2d9bcfd5 files/tar.1 12886
-SHA256 e283a0a341baae4a5ed7b5149aa2bb13111ccea2184fb3fe968a82f6fd5c4f95 files/tar.1 12886
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
-SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 d4f800ee8a2c5ddd00931249e680def8 tar-1.14.ebuild 1329
-RMD160 9d88370eb3cf5cabf303d5a6d17fb9bc40c5db13 tar-1.14.ebuild 1329
-SHA256 1c5fe7d0433f9bfb5a3f874a1e3fd7dd74aae5a24908e893ba450c0e9537c2d8 tar-1.14.ebuild 1329
-MD5 a85b35e6eecf99a8deb9b17405111e5c tar-1.15.1-r1.ebuild 2103
-RMD160 55eef29b61be4f722f56e5bbcf6ecdb29e1a95cc tar-1.15.1-r1.ebuild 2103
-SHA256 369e47737dd682d5d120f4c0e0bdbd1e638dccb3e7d5c0d15fe4cfce41ff10b8 tar-1.15.1-r1.ebuild 2103
+MD5 15feaa3f2b782be08c349b31ffc362d2 tar-1.15.1-r1.ebuild 2107
 MD5 e9fe7de46eb4b1aa489fc8a619e1f042 tar-1.15.1.ebuild 2046
-RMD160 e346fdab686eed6297d588eaa6da5985719961db tar-1.15.1.ebuild 2046
-SHA256 84970c0f467e30f4fa034c923e570a59441927909c0bb4c198bf3ea5b7580e99 tar-1.15.1.ebuild 2046
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEDf6QKRy60XGEcJIRAvbsAJ9QZIrAqG8cdhpvGsc9e5Qp1Gyl9gCfbxFw
+hDk/i9Kb+4iHMpOg9lCQWys=
+=+PSL
+-----END PGP SIGNATURE-----
