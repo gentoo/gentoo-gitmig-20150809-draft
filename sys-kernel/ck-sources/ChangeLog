@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.133 2006/02/07 21:05:51 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.134 2006/03/07 07:46:39 marineam Exp $
+
+*ck-sources-2.6.15_p5 (06 Mar 2006)
+
+  06 Mar 2006; Michael Marineau <marineam@gentoo.org>
+  -ck-sources-2.6.14_p8-r2.ebuild, -ck-sources-2.6.15_p3-r1.ebuild,
+  +ck-sources-2.6.15_p5.ebuild:
+  Version bump to ck5 and genpatches-10, includes a few security fixes, etc.
+  Closes bug #123167
 
 *ck-sources-2.6.15_p3-r1 (07 Feb 2006)
 
