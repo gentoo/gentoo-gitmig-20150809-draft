@@ -1,23 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8c91483a1c80f061e10bbfe37148a69f ChangeLog 2265
+MD5 c57f049ed203add74c164279ceac2a01 ChangeLog 2456
+RMD160 756ebd59f7cbef9cb4536a29fb34e2e53fedfd3b ChangeLog 2456
+SHA256 3fc9e394533ae05b6d84823e68b699c3385873ef16b1dd9e0929eaa2329ac65d ChangeLog 2456
 MD5 d73a9c5effa0eb340ee9eb4b799e32b8 files/4.6-gcc.patch 272
-MD5 234ec2d99e4c992ccc12fa76de885a0e files/5.0-beaming-bug.patch 928
-MD5 3cdff463ef32c2e7b16982e0db999cfa files/digest-mup-4.4 120
+RMD160 ade4321717cfccb387a7b8224e3d40b94b71dfc0 files/4.6-gcc.patch 272
+SHA256 0faeea66bf277931b3de0332fc53744790fb4e042d4ba01cb7a960a1c08b4220 files/4.6-gcc.patch 272
 MD5 54c05300dd4879fbf61504bc145fc1ef files/digest-mup-4.6 120
-MD5 631bd9db6b998acd073dbeae3e9cc0b8 files/digest-mup-5.0 120
+RMD160 abfef449a7d6df43ecd5ff9de177ff77baf5946f files/digest-mup-4.6 120
+SHA256 0b091d9eed455b1dff9e3db6075304633f23914b7be94d9cb899461f9f7262e5 files/digest-mup-4.6 120
 MD5 f4346f0c55847eeae7adeb14cce4f6c4 files/digest-mup-5.1 120
+RMD160 be4fc9e7434368f53c55f54f71faa8454e4981d5 files/digest-mup-5.1 120
+SHA256 55814ad87da9ed074f65c50c65feffaf883a684231aac985352d56490037d556 files/digest-mup-5.1 120
 MD5 af5a1af06445e7d8e07f574d0c40c3c6 files/mup-5.1css.patch 7807
+RMD160 0064ea652ef0485089704f48ae9bf5d2bfd59112 files/mup-5.1css.patch 7807
+SHA256 341879eadc23e207c5113fb971136042131ee249e3764f37ee73dd11b01d581d files/mup-5.1css.patch 7807
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 2aa7f964e840bea93ea0ceb418be50ed mup-4.4.ebuild 2103
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 MD5 41c3b17508896d4f8d030ffa37446b2a mup-4.6.ebuild 2134
-MD5 948103f2005dce62a32f289b0981a282 mup-5.0.ebuild 2119
-MD5 fa7e06c6e7cf9511e26c533d9752511f mup-5.1.ebuild 2212
+RMD160 3632b9c1c329d985a7c930bb0edb5f3858eae21b mup-4.6.ebuild 2134
+SHA256 54698870d88fabc0c5dd7c60153144764fec2fc99805a1a697c02d09d50b1fd5 mup-4.6.ebuild 2134
+MD5 be5e10347683df36501ba462a6fc2dfc mup-5.1.ebuild 2267
+RMD160 1e0a01524bb351a24cd0aeb9135bc1342dd68f4e mup-5.1.ebuild 2267
+SHA256 85b6e1c2003033589205c528702264b5a8f9ebf14c93581573f9fd8427073f09 mup-5.1.ebuild 2267
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD2msGQlM6RnzZP+IRAvpJAJoDpqhQa7FMMm3jK1Im5xTdgHXG0QCfUEUM
-UrQrwYvl1vlaw3uK/Z5D/cU=
-=rMqF
+iD8DBQFEDaYfAiZjviIA2XgRAptcAJ4lOwr5Yg/hguqPWscHHFRSqYFWFwCgivx/
+0ewjk1oo0VGRacgRvkYIApA=
+=bAZ1
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.1.ebuild,v 1.3 2006/01/27 18:48:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.1.ebuild,v 1.4 2006/03/07 15:26:10 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,8 +15,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="X svga"
 
 RDEPEND="X? ( || ( x11-libs/libX11 virtual/x11 ) )
-	svga? ( >=media-libs/svgalib-1.4.3 )
-	virtual/libc"
+	svga? ( >=media-libs/svgalib-1.4.3 )"
 
 DEPEND="${RDEPEND}
 	X? ( || ( x11-proto/xextproto virtual/x11 ) )"
@@ -31,12 +30,12 @@ src_compile() {
 	local param
 
 	cd ${S}/mup
-	echo $(tc-getCC) ${CFLAGS} -o mup *.c -lm
-	$(tc-getCC) ${CFLAGS} -o mup *.c -lm || die "mup compile failed"
+	echo $(tc-getCC) ${CFLAGS} ${LDFLAGS} -o mup *.c -lm
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o mup *.c -lm || die "mup compile failed"
 
 	cd ${S}/mkmupfnt
-	echo $(tc-getCC) ${CFLAGS} -o mkmupfnt *.c
-	$(tc-getCC) ${CFLAGS} -o mkmupfnt *.c || die "mkmupfnt compile failed"
+	echo $(tc-getCC) ${CFLAGS} ${LDFLAGS} -o mkmupfnt *.c
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o mkmupfnt *.c || die "mkmupfnt compile failed"
 
 	if use X || use svga ; then
 		cd ${S}/mupdisp
@@ -50,8 +49,8 @@ src_compile() {
 		else
 			param="${param} -DNO_VGA_LIB"
 		fi
-		echo $(tc-getCC) ${CFLAGS} -o mupdisp *.c -lm ${param}
-		$(tc-getCC) ${CFLAGS} -o mupdisp *.c -lm ${param} || die "mupdisp compile failed"
+		echo $(tc-getCC) ${CFLAGS} ${LDFLAGS} -o mupdisp *.c -lm ${param}
+		$(tc-getCC) ${CFLAGS} ${LDFLAS} -o mupdisp *.c -lm ${param} || die "mupdisp compile failed"
 	fi
 }
 
