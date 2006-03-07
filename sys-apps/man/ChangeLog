@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.83 2006/02/07 01:44:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.84 2006/03/07 15:21:48 agriffis Exp $
+
+  07 Mar 2006; Aron Griffis <agriffis@gentoo.org> man-1.6c.ebuild:
+  Mark 1.6c stable on ia64
 
 *man-1.6c (07 Feb 2006)
 
