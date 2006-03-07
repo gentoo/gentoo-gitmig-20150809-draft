@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/resid
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/ChangeLog,v 1.11 2005/08/07 13:07:10 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/ChangeLog,v 1.12 2006/03/07 12:51:03 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  resid-0.13-r1.ebuild:
+  Add maintainer-needed metadata. Drop virtual/libc dependency. Drop redundant
+  src_compile.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> resid-0.13-r1.ebuild:
   Stable on ppc.
