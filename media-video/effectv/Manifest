@@ -1,14 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 177e74fd3e0f0c5dcf8dbcc1fef93ede effectv-0.3.10.ebuild 1037
-MD5 7cd1f4a9f91a4f84362d4d5baadabf25 metadata.xml 323
-MD5 f07fbf44913c1c97d05d42c5c00a5a27 ChangeLog 432
+MD5 deef5c5f9f27b2390ff53f49007684cd ChangeLog 644
+RMD160 a6c9ac8b6b5200166edbb86111b1f0fd7de1de30 ChangeLog 644
+SHA256 a8947e1d5978c34b4489de9050a823c39b2c8e1575c5497dfb6056e10606cf96 ChangeLog 644
+MD5 1298d46d4a5219845ad0d32c3792c131 effectv-0.3.10.ebuild 961
+RMD160 707e091b65bd094aed823747cb1d424394279064 effectv-0.3.10.ebuild 961
+SHA256 954691844099eb8e588790603cb5016153bd70eb8e5b950aa8c040e687a5021b effectv-0.3.10.ebuild 961
 MD5 04e4ca37e7ef9c7138e8b2147dda4d7f files/digest-effectv-0.3.10 67
+RMD160 bcff9e3bdd338d79fa5c83e1bf732778bab6a1a0 files/digest-effectv-0.3.10 67
+SHA256 f9db583cab024d9e9b4ba4953db63a1bcf219edfe5d1cdf65971c7b7e6e10bba files/digest-effectv-0.3.10 67
+MD5 6f3b1ab5c4757825af62d93fd6fc1fe5 files/effectv-0.3.10-makefile.patch 598
+RMD160 059b929555c06c637b590599899099a607eee510 files/effectv-0.3.10-makefile.patch 598
+SHA256 972f4a05c97f934e7a22adf2578c9df4c78f11675da662766c078ac7ac6ba20f files/effectv-0.3.10-makefile.patch 598
+MD5 7cd1f4a9f91a4f84362d4d5baadabf25 metadata.xml 323
+RMD160 82d10c7f349509ceabbaf9ac9088eef41d5d39f4 metadata.xml 323
+SHA256 db4c539d074d1626f5128f94aeadbc7856e42784b257144c6f2b08385a02debf metadata.xml 323
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFCSdQ6FdQwWVoAgN4RAo4aAKCcaq6MljNbmgpEY45yRJ4ZCJ+eawCcCQTz
-kuD5vhsENuHiIuMgKtbrXvI=
-=r5EH
+iD8DBQFEDbYdAiZjviIA2XgRAvlBAKCJpDSghcU0keFnAEHqe0fX9LTTEQCfQJK7
+AGdr30OX9Nl3KRL0VAlK9TY=
+=DA8u
 -----END PGP SIGNATURE-----

@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/effectv-0.3.10.ebuild,v 1.1 2005/03/29 22:50:57 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/effectv-0.3.10.ebuild,v 1.2 2006/03/07 16:34:24 flameeyes Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="EffecTV is a real-time video effect-processor"
 HOMEPAGE="http://effectv.sourceforge.net/"
@@ -11,27 +11,24 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="mmx"
-DEPEND="virtual/libc
-		dev-lang/nasm
+DEPEND="x86? ( dev-lang/nasm )
 		media-libs/libsdl"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# modify path and comment out presets
-	sed -i -e 's:/usr/local:/usr:' \
-		-e 's:^USE_VLOOPBACK:#USE_VLOOPBACK:' \
-		-e 's:^ARCH:#ARCH:' config.mk
-	if ! use mmx; then
-		sed -i -e 's:^USE_MMX:#USE_MMX:' config.mk
-	fi
-	# use Gentoo CFLAGS and compiler
-	sed -i -e "s:\$(CONFIG.arch) \$(CFLAGS.opt):${CFLAGS}:" \
-		-e "s:^CC:#CC:" Makefile
+	epatch "${FILESDIR}/${P}-makefile.patch"
 }
 
 src_compile() {
-	emake || die "emake failed"
+	local mmx
+	local nasm
+
+	use mmx && mmx="yes" || mmx="no"
+	[[ $(tc-arch) == "x86" ]] && nasm="yes" || nasm="no"
+
+	emake CC="$(tc-getCC)" PREFIX="/usr" CFLAGS.opt="${CFLAGS}" \
+		USE_MMX=${mmx} USE_NASM=${nasm} ARCH= || die "emake failed"
 }
 
 src_install() {

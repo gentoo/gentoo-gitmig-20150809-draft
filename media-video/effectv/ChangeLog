@@ -1,6 +1,11 @@
 # ChangeLog for media-video/effectv
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/ChangeLog,v 1.1 2005/03/29 22:50:57 chriswhite Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/ChangeLog,v 1.2 2006/03/07 16:34:24 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/effectv-0.3.10-makefile.patch, effectv-0.3.10.ebuild:
+  Avoid the dirty sed hack, allow to disable nasm on non-x86, respect CC,
+  CFLAGS and LDFLAGS.
 
 *effectv-0.3.10 (30 Mar 2005)
 
