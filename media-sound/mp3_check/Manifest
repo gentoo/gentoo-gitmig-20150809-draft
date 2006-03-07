@@ -1,4 +1,25 @@
-MD5 c5274259d111ad669cdfb7ad681916b7 ChangeLog 1116
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 1f31c263b00afb2d13a70ad697a1d0d9 mp3_check-1.98.ebuild 750
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8aa5ff4d583a686955e1d828894f6432 ChangeLog 1301
+RMD160 fa15f2f9fd8e4c4f92233768f31ee03a8655cbb6 ChangeLog 1301
+SHA256 96d52720dc6e971d4d7ab8f76b042f846560c7299856dadf4167635f51d36fcd ChangeLog 1301
 MD5 2ce2df63f669e37a9afe8d5a8416c197 files/digest-mp3_check-1.98 65
+RMD160 84d0d09b9a2e25a344e8f35e0b39a40ecabbbdde files/digest-mp3_check-1.98 65
+SHA256 2b8e7efab692405c745f24b5b331e1c95e69cc6889e10e5393a98f127baa2758 files/digest-mp3_check-1.98 65
+MD5 8e5e779fad92fc1c4595957530fd33a9 files/mp3_check-1.98-makefile.patch 605
+RMD160 f016505e9f57368ea533a6bbdff00308a990a9e6 files/mp3_check-1.98-makefile.patch 605
+SHA256 3176916608374310f7eeb11528d89cc02404b0010adecbee669e192fc9f0db93 files/mp3_check-1.98-makefile.patch 605
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 efdc5f24820de9219c3152561dc465ee mp3_check-1.98.ebuild 712
+RMD160 6a05520c0a22a490b30ecf2744f7fb9d763da859 mp3_check-1.98.ebuild 712
+SHA256 dd535120fb780638965e1fc2a3f645c27e013cbf324170f301612df7d1224f4b mp3_check-1.98.ebuild 712
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDaE6AiZjviIA2XgRAiKCAJ0SdrmFb19P5x6sMiCBMw8omrie+ACgktnF
+ziVkX+SQo2ymeX2QLKwWw0g=
+=s6y1
+-----END PGP SIGNATURE-----
