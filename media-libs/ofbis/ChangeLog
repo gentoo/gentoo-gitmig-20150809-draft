@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ofbis
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ofbis/ChangeLog,v 1.6 2004/07/01 08:02:26 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ofbis/ChangeLog,v 1.7 2006/03/07 12:03:21 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  ofbis-0.1.1.ebuild:
+  Drop virtual/libc dependency. Add maintainer-needed metadata.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ofbis-0.1.1.ebuild:
   virtual/glibc -> virtual/libc
