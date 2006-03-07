@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.14.3.ebuild,v 1.9 2005/03/23 16:18:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.14.3.ebuild,v 1.10 2006/03/07 12:35:49 flameeyes Exp $
 
 IUSE="java javascript jpeg opengl png truetype truetype zlib"
 
@@ -12,8 +12,7 @@ SLOT="0"
 LICENSE="LGPL-2.1 GPL-2"
 KEYWORDS="~x86 ~sparc ~amd64"
 
-DEPEND="virtual/x11
-	app-doc/doxygen
+RDEPEND="virtual/x11
 	zlib? ( sys-libs/zlib )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
@@ -21,6 +20,9 @@ DEPEND="virtual/x11
 	javascript? ( www-client/mozilla )
 	java? ( virtual/jdk )
 	opengl? ( virtual/opengl virtual/glut )"
+
+DEPEND="${RDEPEND}
+	app-doc/doxygen"
 
 # TODO: add support for java via libmozjs (http://www.mozilla.org/js/spidermonkey/)
 

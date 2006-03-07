@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openvrml
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/ChangeLog,v 1.15 2005/03/23 16:18:10 seemant Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/ChangeLog,v 1.16 2006/03/07 12:35:49 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  openvrml-0.14.3.ebuild:
+  Add maintainer-needed metadata. Make doxygen a build-time dependency.
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> openvrml-0.14.3.ebuild:
   change dep from net-www/mozilla to www-client/mozilla
