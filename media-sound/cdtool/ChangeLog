@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdtool
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/ChangeLog,v 1.9 2005/04/20 19:01:26 luckyduck Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/ChangeLog,v 1.10 2006/03/07 13:58:19 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/cdtool-2.1.5-ldflags.patch, cdtool-2.1.5-r1.ebuild:
+  Respect CC and LDFLAGS, add debug useflag.
 
 *cdtool-2.1.5-r1 (20 Apr 2005)
 
