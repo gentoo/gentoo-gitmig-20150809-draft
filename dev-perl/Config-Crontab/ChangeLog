@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Config-Crontab
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Crontab/ChangeLog,v 1.1 2006/03/07 13:48:51 mcummings Exp $
+
+*Config-Crontab-1.11 (07 Mar 2006)
+
+  07 Mar 2006; <mcumming@gentoo.org> +metadata.xml,
+  +Config-Crontab-1.11.ebuild:
+  Bug 124981, dep for media-tv/kalva
+
