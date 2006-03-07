@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libuta
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuta/ChangeLog,v 1.8 2004/12/22 18:26:12 gustavoz Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuta/ChangeLog,v 1.9 2006/03/07 11:21:15 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  libuta-0.4.1-r1.ebuild:
+  Add maintainer-needed metadata. Drop redundant src_compile.
 
   22 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> libuta-0.4.1-r1.ebuild,
   libuta-0.4.3.ebuild, libuta-0.4.4.ebuild:
