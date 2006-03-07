@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daudio/daudio-0.3.ebuild,v 1.7 2005/07/25 12:17:36 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daudio/daudio-0.3.ebuild,v 1.8 2006/03/07 14:20:35 flameeyes Exp $
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Distributed audio on the local network"
 HOMEPAGE="http://daudio.sourceforge.net/"
@@ -12,10 +14,17 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc -sparc x86"
 
 IUSE=""
-DEPEND="virtual/libc
-	>=media-libs/libmad-0.15.0b-r1"
+DEPEND=">=media-libs/libmad-0.15.0b-r1"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-makefile.patch"
+}
 
 src_compile() {
+	tc-export CC
 	emake -C client || die "emake failed"
 	emake -C server || die "emake failed"
 	emake -C streamer || die "emake failed"

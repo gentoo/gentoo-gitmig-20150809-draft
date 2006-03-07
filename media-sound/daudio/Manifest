@@ -1,15 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2bcd690dc227658160fcb053065837c9 daudio-0.3.ebuild 859
-MD5 0f8cea6d35874a690c812eaa32edfad9 ChangeLog 885
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 3b7135b59be0a344d69ad9161abe1c7b ChangeLog 1059
+RMD160 9570876d4da53da9b6d310f27be6e29581e031a9 ChangeLog 1059
+SHA256 3f3c1a0602b10b34564145de42d78836e2808e08cdc98918260a60c40aa9873b ChangeLog 1059
+MD5 1c05c5fe03c0dce4fe17727a2abdc92d daudio-0.3.ebuild 978
+RMD160 07be7e8e556cece75f070ce299ceee01a0b30773 daudio-0.3.ebuild 978
+SHA256 681b6553f0b52fe48cd81db95f5a7a70d5d096a78222a4b340b1e55d973ef359 daudio-0.3.ebuild 978
+MD5 e1842de604485ddcb88afcfec63a5c09 files/daudio-0.3-makefile.patch 1683
+RMD160 a11d213c9245bd24b3a72dfe2ae2456b318e0f1e files/daudio-0.3-makefile.patch 1683
+SHA256 945eb5afd0fe8763d0dac6cd1ffa5feeb66ae707f37c4e202cbab0944df6fb84 files/daudio-0.3-makefile.patch 1683
 MD5 640efb652053494b2f0e86908f564444 files/daudio.rc 535
+RMD160 05f907629a1dd5e3efe8890b06116cfaf0f3d939 files/daudio.rc 535
+SHA256 5ec76326f4f36d293f020c47fffd763fd034f56d68d995d87fada38ca99539f7 files/daudio.rc 535
 MD5 1a45fb71ea5e016c3603b5efdd1fd8b1 files/digest-daudio-0.3 61
+RMD160 2d102f4658bdea005eba9deb561ac369ff60c292 files/digest-daudio-0.3 61
+SHA256 e808925e745ae16bb8c9d90f4bd2adc63b014eb9142396453745bdb30cc17092 files/digest-daudio-0.3 61
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDIMd4V3J2n04EauwRAqhrAJ9PhEk+ayHZuXmr74z6n/3F6IKU/QCdESci
-8o/oCAa9+udLlt0OozQ0kOc=
-=XW3I
+iD8DBQFEDZa/AiZjviIA2XgRApjrAJoDp20QxTiFHh+Ipur8xY6tJ5c6GgCeKgvn
+CpdUe/OxFmB2qgew124mzJk=
+=OlPE
 -----END PGP SIGNATURE-----
