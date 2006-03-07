@@ -1,12 +1,46 @@
-MD5 07849faadff329d78dbb9b0406e79aa1 squeak-fullimage-3.2.4956.ebuild 1004
-MD5 726a58ac8085c99468906ad238cd6bbf squeak-fullimage-3.6.5429.ebuild 1104
-MD5 2ef5028ed63b41e0d15cbcb6cd3b6ac8 squeak-fullimage-3.6.5424.ebuild 1250
-MD5 b79b3bbb2affab640d2e98f75bbdaf62 squeak-fullimage-3.5.5180.ebuild 1210
-MD5 0b78351046e9f0090e76507690d1a1f3 squeak-fullimage-3.4.5170.ebuild 1014
-MD5 4535507c6b9741f477236ce191912079 ChangeLog 1439
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 d01d765b41f8c065ec9a19a7c7278e76 files/digest-squeak-fullimage-3.2.4956 129
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dad7923e3ea96fd3f5569c2384330a49 ChangeLog 1616
+RMD160 052308fc4f0c3a2454a79f7ff18b5f8b1debe357 ChangeLog 1616
+SHA256 10d2548db85fac9e35d9485c2ed912760d5a843ad2269c29059d94de65c10941 ChangeLog 1616
 MD5 c47ea324aaf69084cd07c9a19d3e133f files/digest-squeak-fullimage-3.4.5170 129
+RMD160 caea60acbc8b8c4eafaec03dd5d50be53997ad18 files/digest-squeak-fullimage-3.4.5170 129
+SHA256 2f2e630f3ac6a5b5ca7f22a68f2d258ae8c60130ab5c86bdac9d1e479b9fd544 files/digest-squeak-fullimage-3.4.5170 129
 MD5 9fe48b0176607ba4e789a8ef1f78075e files/digest-squeak-fullimage-3.5.5180 129
+RMD160 cc9093da9796c7bdedbb6850f2f493debd58dd0a files/digest-squeak-fullimage-3.5.5180 129
+SHA256 676d5346300ba33e2fb4b74a5db0558c2133d43abab752d87ae8ed52b8e0507b files/digest-squeak-fullimage-3.5.5180 129
 MD5 277c5b13b803bc7b53c2303166389f6a files/digest-squeak-fullimage-3.6.5424 134
+RMD160 1121d997d29fd7c52f991c9696e6139bbf9f9fda files/digest-squeak-fullimage-3.6.5424 134
+SHA256 ce915f10fcb522c3331ed999240fca97fa93349f48b703bf4d6260b835e4d220 files/digest-squeak-fullimage-3.6.5424 134
 MD5 2046414939363ef56525dd2aa0163e3a files/digest-squeak-fullimage-3.6.5429 134
+RMD160 88ab56f68194cded2a7d41d07d39fdeacd558aa7 files/digest-squeak-fullimage-3.6.5429 134
+SHA256 4155de5157f5e23732a039d1609e32af1942943137562b04c2594dfda5aa7a66 files/digest-squeak-fullimage-3.6.5429 134
+MD5 82ec93870494b7e209a5989a6df4d7cf files/digest-squeak-fullimage-3.8.6665 497
+RMD160 497543011be5bdc8e7cf6bc3ea76d0c5d9d90507 files/digest-squeak-fullimage-3.8.6665 497
+SHA256 150d8b7b4dc819860d12ca642bed5b4fa221e01cb324ad01cfd3b98baed886ee files/digest-squeak-fullimage-3.8.6665 497
+MD5 253a1e2fa2566d32f1c4be90f5b5e69c metadata.xml 857
+RMD160 f7db7ab51d12751c94ddbd7a4cb0daebbc7377d9 metadata.xml 857
+SHA256 4e652f209955420453637c6a4b45f7f7dfbfc0884518724b1ef8e70d7e624085 metadata.xml 857
+MD5 0b78351046e9f0090e76507690d1a1f3 squeak-fullimage-3.4.5170.ebuild 1014
+RMD160 f03557bfaec7dbe606e4372501a7b19db7d94908 squeak-fullimage-3.4.5170.ebuild 1014
+SHA256 7e95df480455faa1aa65f86503bf1533fcc2fba63500eb57ddffe3d248f7d3d8 squeak-fullimage-3.4.5170.ebuild 1014
+MD5 b79b3bbb2affab640d2e98f75bbdaf62 squeak-fullimage-3.5.5180.ebuild 1210
+RMD160 379be41b2f0c3b5f1740fd8688d59761868ee90d squeak-fullimage-3.5.5180.ebuild 1210
+SHA256 c6e5cd2af17ac87b648af69e9552d93ae8675e9d8c6f3384bea91c8eb96ffce5 squeak-fullimage-3.5.5180.ebuild 1210
+MD5 2ef5028ed63b41e0d15cbcb6cd3b6ac8 squeak-fullimage-3.6.5424.ebuild 1250
+RMD160 ed74ca4ac6ccb41de837c49eec04c7a4a20d1228 squeak-fullimage-3.6.5424.ebuild 1250
+SHA256 20b2bd512f6b9a399593112803cf54a1d47cd6ce773720150f66e827e6318d29 squeak-fullimage-3.6.5424.ebuild 1250
+MD5 726a58ac8085c99468906ad238cd6bbf squeak-fullimage-3.6.5429.ebuild 1104
+RMD160 ab230f837b80b9d003e63f1777d2e4b221bd2c77 squeak-fullimage-3.6.5429.ebuild 1104
+SHA256 12ac3af94796dbec2ebd8e0df47b213894f9ce94e5b86704fd29c444ee1e16f7 squeak-fullimage-3.6.5429.ebuild 1104
+MD5 48fb5cdc4fe793d902fb776899ea0cdd squeak-fullimage-3.8.6665.ebuild 1273
+RMD160 b6905d10e83a04e040c6204f400614d10dfaa9b3 squeak-fullimage-3.8.6665.ebuild 1273
+SHA256 6cad71aadb540e07b63d3af8ef644ec9852047b0a006778c9e77e320192c6f2d squeak-fullimage-3.8.6665.ebuild 1273
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEDW8ZdZ42PGEF17URAg+EAKCvz84pxyiK/o927s3Z46WoyKflXACgnAy3
+gUKESNNH/xac22ZSWT+bg9M=
+=6INb
+-----END PGP SIGNATURE-----
