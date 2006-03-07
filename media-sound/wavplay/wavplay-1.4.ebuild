@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavplay/wavplay-1.4.ebuild,v 1.12 2006/02/19 02:19:58 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavplay/wavplay-1.4.ebuild,v 1.13 2006/03/07 16:15:20 flameeyes Exp $
 
 IUSE=""
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A command line player/recorder for wav files"
 SRC_URI="http://ibiblio.org/pub/linux/apps/sound/players/${P}.tar.gz mirror://gentoo/${P}.patch"
@@ -14,16 +14,15 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-amd64 -sparc x86"
 
-DEPEND="virtual/libc"
-
 src_unpack() {
-	unpack ${P}.tar.gz
-	epatch ${DISTDIR}/${P}.patch
-	epatch ${FILESDIR}/${P}-gcc34.patch
+	unpack ${A}
+	epatch "${DISTDIR}/${P}.patch"
+	epatch "${FILESDIR}/${P}-gcc34.patch"
 }
 
 src_compile() {
-	emake no_x || die
+	emake CC="$(tc-getCC)" CP="$(tc-getCXX)" \
+		CFLAGS="${CFLAGS}" CCFLAGS="${CXXFLAGS}" LDOPTS="${LDFLAGS}" no_x || die
 }
 
 src_install () {
