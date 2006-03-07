@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libvideogfx
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvideogfx/ChangeLog,v 1.6 2006/03/07 11:27:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvideogfx/ChangeLog,v 1.7 2006/03/07 11:52:09 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libvideogfx-1.0.3-gcc4.patch, libvideogfx-1.0.3.ebuild:
+  Sanitise dependencies, port to modular Xorg, drop src_compile to use econf,
+  add patch to build with gcc4.
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   libvideogfx-1.0.3.ebuild:

@@ -1,19 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 63323198d952c3a28471de656a28292a ChangeLog 2122
+MD5 c6b212eeb9d4265ac519d89e4482bbfa ChangeLog 2297
+RMD160 166f1fb0a3d3447a63524d55969c0f12f795977e ChangeLog 2297
+SHA256 c6a20b73502c2e6696f1c96489ff5252524a37a257c3f2b0a710c99c1a79105a ChangeLog 2297
 MD5 6a50642c5c8129217df944bf99398c6e files/digest-ming-0.2a 58
+RMD160 dee6449393d9e1e46db92a746d9fa7be3c53f8b7 files/digest-ming-0.2a 58
+SHA256 b0328341f2c6f6e615797cd458acb6d74bec8913fce578ece50bf1e0dd069ed6 files/digest-ming-0.2a 58
 MD5 6a50642c5c8129217df944bf99398c6e files/digest-ming-0.2a-r1 58
+RMD160 dee6449393d9e1e46db92a746d9fa7be3c53f8b7 files/digest-ming-0.2a-r1 58
+SHA256 b0328341f2c6f6e615797cd458acb6d74bec8913fce578ece50bf1e0dd069ed6 files/digest-ming-0.2a-r1 58
 MD5 6a50642c5c8129217df944bf99398c6e files/digest-ming-0.2a-r2 58
+RMD160 dee6449393d9e1e46db92a746d9fa7be3c53f8b7 files/digest-ming-0.2a-r2 58
+SHA256 b0328341f2c6f6e615797cd458acb6d74bec8913fce578ece50bf1e0dd069ed6 files/digest-ming-0.2a-r2 58
 MD5 0d2b63f032d402518c9384d5db4404b1 files/ming-0.2a-fpic.patch 1814
+RMD160 b033493ac9c522774acaa81b2ddd68a46b995a9e files/ming-0.2a-fpic.patch 1814
+SHA256 54b7a3492a9136eb91b09dd36b07049db38adb110d08a2f734c752bfda2d815b files/ming-0.2a-fpic.patch 1814
 MD5 e086353fa9ba2b2e6b9ca9c87b04a367 files/ming-0.2a-gentoo.diff 369
-MD5 87461a3623c74599e30f95401a4ddfb9 ming-0.2a-r1.ebuild 2065
+RMD160 9db5b5e84dd46c794e6502f51c67e5b146c35e51 files/ming-0.2a-gentoo.diff 369
+SHA256 0c78843c402ec5e6df5e97a2cef8e9ab72961749e059b95dbf565e770b24a666 files/ming-0.2a-gentoo.diff 369
+MD5 ed8349e980407e49b724e04ee5a9a2ed metadata.xml 231
+RMD160 c13056229989c3d4f448a7c7abcff3f4ee7ce13c metadata.xml 231
+SHA256 4595c2615fd7c9095517949b1a920d4457f92801eb9d46307b18aafe58ec2a8a metadata.xml 231
+MD5 bd8beb3aae8b0694bb3cfed4987ea0c2 ming-0.2a-r1.ebuild 2054
+RMD160 e443f8c5258a23243a6d99eddcc041eacb8eed88 ming-0.2a-r1.ebuild 2054
+SHA256 e1b1a7cfd877095928f6e710fbb97fc0308f15ac4b4a3356f4715984e47ce38c ming-0.2a-r1.ebuild 2054
 MD5 b2dfb3a9b6846fff7079f57c20f81526 ming-0.2a-r2.ebuild 2222
-MD5 643f282cd1ce7dbcae57305dd0c24a09 ming-0.2a.ebuild 1183
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzErG2+ySkm8kpY0RAnyHAKCJOsApVykdy3A4GBiB2sz8W0xiLgCePKLs
-k9PVCQUggpAwBF0BFWWuI4A=
-=O0kn
------END PGP SIGNATURE-----
+RMD160 4fd777f03068d402a9fdcd658348fac184cb7853 ming-0.2a-r2.ebuild 2222
+SHA256 58dc14eb780b3e91593844d930328b5f517b453657e6959359988ffb6124f153 ming-0.2a-r2.ebuild 2222
+MD5 6e8e25682a0a27c2f29a89dcfc12a201 ming-0.2a.ebuild 1163
+RMD160 1a46af5263a1e1e1d546ba3948e84cb5c9f6bb0a ming-0.2a.ebuild 1163
+SHA256 698243eefa4720d891d8c4f460ab0596f7bd175c68e5d02a5eb5c6a5b91b27bc ming-0.2a.ebuild 1163

@@ -1,0 +1,55 @@
+Index: libvideogfx-1.0.3/libvideogfx/graphics/datatypes/bitmap.hh
+===================================================================
+--- libvideogfx-1.0.3.orig/libvideogfx/graphics/datatypes/bitmap.hh
++++ libvideogfx-1.0.3/libvideogfx/graphics/datatypes/bitmap.hh
+@@ -222,25 +222,25 @@ namespace videogfx {
+     {
+       Create(w,h,border,halign,valign);
+     }
+-    ~BitmapProvider_Mem() { if (d_bitmap_ptr) delete[] d_bitmap_ptr; }
++    ~BitmapProvider_Mem() { if (this->d_bitmap_ptr) delete[] this->d_bitmap_ptr; }
+ 
+     void Create(int w,int h,int border=0,int halign=1,int valign=1)
+     {
+       CalcInternalSizes(w,h,border,halign,valign,
+-			d_internal_width,d_internal_height,border);
++			this->d_internal_width,this->d_internal_height,border);
+ 
+       // total size including border
+ 
+-      d_total_width  = d_internal_width +2*border;
+-      d_total_height = d_internal_height+2*border;
++      this->d_total_width  = this->d_internal_width +2*border;
++      this->d_total_height = this->d_internal_height+2*border;
+ 
+-      if (d_bitmap_ptr)
+-	delete[] d_bitmap_ptr;
++      if (this->d_bitmap_ptr)
++	delete[] this->d_bitmap_ptr;
+ 
+-      d_bitmap_ptr = new Pel[d_total_width * d_total_height];
+-      d_width  = w;
+-      d_height = h;
+-      d_border = border;
++      this->d_bitmap_ptr = new Pel[this->d_total_width * this->d_total_height];
++      this->d_width  = w;
++      this->d_height = h;
++      this->d_border = border;
+       SetFramePtrs();
+     }
+   };
+Index: libvideogfx-1.0.3/libvideogfx/utility/smartpointer.hh
+===================================================================
+--- libvideogfx-1.0.3.orig/libvideogfx/utility/smartpointer.hh
++++ libvideogfx-1.0.3/libvideogfx/utility/smartpointer.hh
+@@ -159,8 +159,8 @@ namespace videogfx {
+       return *this;
+     }
+ 
+-    operator T*()   { AssertDescr(counter,"smart pointer is NULL"); return pointer; }
+-    T& operator()() { AssertDescr(counter,"smart pointer is NULL"); return *pointer; }
++    operator T*()   { AssertDescr(this->counter,"smart pointer is NULL"); return pointer; }
++    T& operator()() { AssertDescr(this->counter,"smart pointer is NULL"); return *pointer; }
+ 
+     void Decouple()
+     {
