@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/peercast
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.7 2005/06/20 18:15:08 chainsaw Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.8 2006/03/07 18:11:19 flameeyes Exp $
+
+*peercast-0.1216 (07 Mar 2006)
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/peercast-0.1216-amd64.patch, +files/peercast-0.1216-makefile.patch,
+  +files/peercast.init.gpl, +files/peercast.wrapper.sh, metadata.xml,
+  +peercast-0.1216.ebuild:
+  Add peercast-0.1216 as per bug #123432; ebuild based on the one provided by
+  upstream. It's being built from sources now, so install in /usr instead of
+  /opt and provide a wrapper script to run it, runs natively on amd64. Dropped
+  x86 keyword waiting for testing, also remove -* as it's no more a binary.
 
   20 Jun 2005; Tony Vroon <chainsaw@gentoo.org> peercast-0.1212.ebuild:
   Change to Gentoo mirrors now that the distfile has propagated.
