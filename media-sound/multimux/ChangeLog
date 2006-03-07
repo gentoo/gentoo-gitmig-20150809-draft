@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/multimux
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/ChangeLog,v 1.6 2005/10/31 22:29:34 matsuu Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/ChangeLog,v 1.7 2006/03/07 15:19:05 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/multimux-0.2.4-makefiles.patch, metadata.xml,
+  multimux-0.2.4.ebuild:
+  Drop virtual/libc dependency. Respect CC, CFLAGS and LDFLAGS.
 
 *multimux-0.2.4 (31 Oct 2005)
 
