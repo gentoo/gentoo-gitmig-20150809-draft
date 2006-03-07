@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.247 2006/03/04 05:55:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.248 2006/03/07 05:40:19 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -55,6 +55,9 @@ is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
 }
 
+tc_version_is_at_least() { version_is_at_least "$1" "${2:-${GCC_PV}}" ; }
+
+
 GCC_PV=${TOOLCHAIN_GCC_PV:-${PV}}
 GCC_PVR=${GCC_PV}
 [[ ${PR} != "r0" ]] && GCC_PVR=${GCC_PVR}-${PR}
@@ -94,7 +97,7 @@ fi
 PREFIX=${TOOLCHAIN_PREFIX:-/usr}
 
 if [[ ${GCC_VAR_TYPE} == "versioned" ]] ; then
-	if version_is_at_least 3.4.0 ; then
+	if tc_version_is_at_least 3.4.0 ; then
 		LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/lib/gcc/${CTARGET}/${GCC_CONFIG_VER}}
 	else
 		LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/lib/gcc-lib/${CTARGET}/${GCC_CONFIG_VER}}
@@ -144,7 +147,7 @@ else
 	fi
 
 	# these are features introduced in 4.0
-	if version_is_at_least "4.0" ; then
+	if tc_version_is_at_least "4.0" ; then
 		IUSE="${IUSE} objc-gc mudflap"
 
 		# =4.0* doesn't support hardened yet
@@ -152,7 +155,7 @@ else
 			IUSE="${IUSE} hardened"
 		fi
 
-		if version_is_at_least "4.1" ; then
+		if tc_version_is_at_least "4.1" ; then
 			IUSE="${IUSE} objc++"
 		fi
 	fi
@@ -1082,9 +1085,15 @@ gcc-compiler-configure() {
 		confgcc="${confgcc} --disable-multilib"
 	fi
 
-	if version_is_at_least "4.0" ; then
+	if tc_version_is_at_least "4.0" ; then
 		confgcc="${confgcc} $(use_enable mudflap libmudflap)"
-		confgcc="${confgcc} --disable-libssp"
+
+		if want_libssp ; then
+			confgcc="${confgcc} --enable-libssp"
+		else
+			export gcc_cv_libc_provides_ssp=yes
+			confgcc="${confgcc} --disable-libssp"
+		fi
 	fi
 
 	# GTK+ is preferred over xlib in 3.4.x (xlib is unmaintained
@@ -1862,15 +1871,15 @@ do_gcc_SSP_patches() {
 
 	if [[ -n ${PP_FVER} ]] ; then
 		# Etoh keeps changing where files are and what the patch is named
-		if version_is_at_least 3.4.1 ; then
+		if tc_version_is_at_least 3.4.1 ; then
 			# >3.4.1 uses version in patch name, and also includes docs
 			ssppatch="${S}/gcc_${PP_VER}.dif"
 			sspdocs="yes"
-		elif version_is_at_least 3.4.0 ; then
+		elif tc_version_is_at_least 3.4.0 ; then
 			# >3.4 put files where they belong and 3_4 uses old patch name
 			ssppatch="${S}/protector.dif"
 			sspdocs="no"
-		elif version_is_at_least 3.2.3 ; then
+		elif tc_version_is_at_least 3.2.3 ; then
 			# earlier versions have no directory structure or docs
 			mv ${S}/protector.{c,h} ${S}/gcc
 			ssppatch="${S}/protector.dif"
@@ -1899,7 +1908,7 @@ do_gcc_SSP_patches() {
 	# if gcc in a stage3 defaults to ssp, is version 3.4.0 and a stage1 is built
 	# the build fails building timevar.o w/:
 	# cc1: stack smashing attack in function ix86_split_to_parts()
-	if use build && version_is_at_least 3.4.0 ; then
+	if use build && tc_version_is_at_least 3.4.0 ; then
 		if gcc -dumpspecs | grep -q "fno-stack-protector:" ; then
 			epatch "${GCC_FILESDIR}"/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch
 		fi
@@ -2197,50 +2206,64 @@ is_uclibc() {
 	[[ ${CTARGET} == *-uclibc ]]
 }
 
+is_allowed() {
+	return 0
+#	[[ -z ${TOOLCHAIN_ALLOWED_LANGS} ]] && return 0
+#	[[ " ${TOOLCHAIN_ALLOWED_LANGS} " != " "*$1*" " ]] 
+}
+
 is_cxx() {
 	gcc-lang-supported 'c++' || return 1
+	is_allowed 'c++' || return 1
 	use build && return 1
 	! use nocxx
 }
 
 is_f77() {
 	gcc-lang-supported f77 || return 1
+	is_allowed 'f77' || return 1
 	use build && return 1
 	use fortran
 }
 
 is_f95() {
 	gcc-lang-supported f95 || return 1
+	is_allowed 'f95' || return 1
 	use build && return 1
 	use fortran
 }
 
 is_fortran() {
 	gcc-lang-supported fortran || return 1
+	is_allowed 'fortran' || return 1
 	use build && return 1
 	use fortran
 }
 
 is_gcj() {
 	gcc-lang-supported java || return 1
+	is_allowed 'gcj' || return 1
 	use build && return 1
 	use gcj
 }
 
 is_objc() {
 	gcc-lang-supported objc || return 1
+	is_allowed 'objc' || return 1
 	use build && return 1
 	use objc
 }
 
 is_objcxx() {
 	gcc-lang-supported 'obj-c++' || return 1
+	is_allowed 'obj-c++' || return 1
 	use build && return 1
 	use objc++
 }
 
 is_ada() {
 	gcc-lang-supported ada || return 1
+	is_allowed 'ada' || return 1
 	use build && return 1
 	use ada
 }
