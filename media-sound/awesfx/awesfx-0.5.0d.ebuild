@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.5.0d.ebuild,v 1.3 2005/09/19 00:03:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.5.0d.ebuild,v 1.4 2006/03/07 13:25:13 flameeyes Exp $
 
 IUSE="alsa"
 
@@ -14,8 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 
-DEPEND="virtual/libc
-	alsa? ( >=media-libs/alsa-lib-1.0.0 )"
+DEPEND="alsa? ( >=media-libs/alsa-lib-1.0.0 )"
 
 BANK_LOC="/usr/share/sounds/sf2"
 

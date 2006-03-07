@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/bladeenc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/ChangeLog,v 1.14 2005/09/04 11:05:39 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/ChangeLog,v 1.15 2006/03/07 13:27:49 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  bladeenc-0.94.2-r1.ebuild:
+  Drop virtual/libc dependency.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   bladeenc-0.94.2-r1.ebuild:

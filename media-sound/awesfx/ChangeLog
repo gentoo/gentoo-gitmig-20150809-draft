@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/awesfx
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.17 2005/09/19 00:03:19 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.18 2006/03/07 13:25:13 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> awesfx-0.5.0c.ebuild,
+  awesfx-0.5.0d.ebuild:
+  Drop virtual/libc dependency.
 
   19 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> awesfx-0.5.0c.ebuild,
   awesfx-0.5.0d.ebuild:
