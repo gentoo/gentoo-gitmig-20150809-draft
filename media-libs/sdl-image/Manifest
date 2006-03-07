@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 44a0abf2b4f94a013a6bae43ce1caacd ChangeLog 2967
 RMD160 7efffde160496870834d8eddb64b175de34ef9f9 ChangeLog 2967
 SHA256 1ecbe81b17d7aa56db9eaa1c2421b8d314cc682525f5ddc2659e70a64ae93cd9 ChangeLog 2967
@@ -16,3 +19,10 @@ SHA256 449d46b9cb65f6519bddef884b7b03bb6f9ec988ed55be8c5f75a15da96df370 sdl-imag
 MD5 ea6a25423846f84e20ff38b85204fc84 sdl-image-1.2.4.ebuild 1253
 RMD160 ecab3f9a279f75eed7ee256505bc58c2e18fc2c9 sdl-image-1.2.4.ebuild 1253
 SHA256 f21488edf20064e80261e0ce342f53c407abb9a9c908625aa40d33f8a25a76c4 sdl-image-1.2.4.ebuild 1253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDYJzAiZjviIA2XgRAo3LAJ4kfbjZmLOEUtzZV0SfSkPGEGNQYQCfc2sg
+goreYnT8Gr7mmZnllTjnOsY=
+=Yr7h
+-----END PGP SIGNATURE-----
