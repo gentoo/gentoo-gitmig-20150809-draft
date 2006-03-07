@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.103 2006/03/01 19:50:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.104 2006/03/07 09:25:09 pylon Exp $
+
+*cvs-1.11.21 (07 Mar 2006)
+
+  07 Mar 2006; Lars Weiler <pylon@gentoo.org> +cvs-1.11.21.ebuild:
+  Version bump of upstream's stable branch.
 
   01 Mar 2006; Lars Weiler <pylon@gentoo.org> cvs-1.12.12-r3.ebuild,
   cvs-1.12.13.ebuild:
