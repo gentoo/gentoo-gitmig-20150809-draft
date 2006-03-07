@@ -1,13 +1,43 @@
-MD5 fb57fcde44357bb4419fe1f935e60db0 squeak-3.2.5.ebuild 2883
-MD5 ae2ed21696810355735fa19e142a8728 squeak-3.6_p3.ebuild 2289
-MD5 089c45d3dac7d6205be11ce05c159b2a squeak-3.4.1.ebuild 2967
-MD5 2a6a1bed5b4c6febe9ad64acf71ed652 squeak-3.4.1-r1.ebuild 3310
-MD5 628d3dac9297f90b3325815bec25ecdc ChangeLog 2230
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 ececbbb7977edaa44dd1d5479b6c6327 squeak-3.4.1-r2.ebuild 3578
-MD5 66b6405c56a2abd2413db79bfc04f71a files/digest-squeak-3.6_p3 137
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0e938a099e336829e61dc8dd3d7cc6dc ChangeLog 2639
+RMD160 092ff1d66cb55be690f764b622c3b2925d713b98 ChangeLog 2639
+SHA256 1eef8a1ae398e56e2f5477a946d6f383ba7ff9661336a89397852e91f847496f ChangeLog 2639
+MD5 5f69c839fb4eedb981ed9ae897a4f074 files/digest-squeak-3.4.1-r1 253
+RMD160 d4d0069929818a4a3f783354d329793673654697 files/digest-squeak-3.4.1-r1 253
+SHA256 cd30fe02179cc0b4a3cd9691728d32e1401b5b5e0d13e48de4f48eef6ddedbec files/digest-squeak-3.4.1-r1 253
+MD5 5f69c839fb4eedb981ed9ae897a4f074 files/digest-squeak-3.4.1-r2 253
+RMD160 d4d0069929818a4a3f783354d329793673654697 files/digest-squeak-3.4.1-r2 253
+SHA256 cd30fe02179cc0b4a3cd9691728d32e1401b5b5e0d13e48de4f48eef6ddedbec files/digest-squeak-3.4.1-r2 253
+MD5 752c7cc0844aab8dcc47172617b15959 files/digest-squeak-3.6_p3 321
+RMD160 4a0bc001484467eaf57ae7ee39d5063ff82d409d files/digest-squeak-3.6_p3 321
+SHA256 c99d8a9b35b8a0db0dacb6a6358cdea875c513c35e9ab7b5049148dde7ba090e files/digest-squeak-3.6_p3 321
+MD5 1df347961361ad54e90bed699a902c61 files/digest-squeak-3.7.7 253
+RMD160 6ae40ebe9b2ba35375047cb0640b14915d912c8f files/digest-squeak-3.7.7 253
+SHA256 b12dc99e7a8af93af5c65ce994d49706c16a792e5607b4448cf56ff1a216acc4 files/digest-squeak-3.7.7 253
 MD5 4b2bf4f92065c5e86350d0cbaefe5fb8 files/squeak-3.4.1-gcc33-string-fix.patch 16184
-MD5 95975b038cad92087afe83055e6b2137 files/digest-squeak-3.2.5 69
-MD5 e15651f69bf3b5c02f40bcffceefb53c files/digest-squeak-3.4.1 69
-MD5 e15651f69bf3b5c02f40bcffceefb53c files/digest-squeak-3.4.1-r1 69
-MD5 e15651f69bf3b5c02f40bcffceefb53c files/digest-squeak-3.4.1-r2 69
+RMD160 101ab86b4c2f1d0c6ab6a5ed7600cd4bc654654d files/squeak-3.4.1-gcc33-string-fix.patch 16184
+SHA256 ae47c66f2aeb33a65f1efbbc6165b3372e0bd929949ef6e2985cd224540fc4e9 files/squeak-3.4.1-gcc33-string-fix.patch 16184
+MD5 253a1e2fa2566d32f1c4be90f5b5e69c metadata.xml 857
+RMD160 f7db7ab51d12751c94ddbd7a4cb0daebbc7377d9 metadata.xml 857
+SHA256 4e652f209955420453637c6a4b45f7f7dfbfc0884518724b1ef8e70d7e624085 metadata.xml 857
+MD5 7b4680bb43143a8bbb507e68574e50ed squeak-3.4.1-r1.ebuild 3333
+RMD160 f70400e2f846295147212a06516989f4b92aafd3 squeak-3.4.1-r1.ebuild 3333
+SHA256 64f3f298f1bcb6fcab48ef8164ec54f709ef869315361966b072ef1b595cbfe1 squeak-3.4.1-r1.ebuild 3333
+MD5 92391d59192cc945ad7b40338bbb1f61 squeak-3.4.1-r2.ebuild 3595
+RMD160 657cc74ac4bc915102afe5411cd70824a39a2e48 squeak-3.4.1-r2.ebuild 3595
+SHA256 a64d12d82fbff23072425a4d0fdad065ac40b22695515b9fee53fc5c931f724e squeak-3.4.1-r2.ebuild 3595
+MD5 a16792eee2c076cf0cf25e2b6ea79f11 squeak-3.6_p3.ebuild 2330
+RMD160 48449a8c5c0e6b5a7cc1d30d57684e1bc49de4e9 squeak-3.6_p3.ebuild 2330
+SHA256 8547e89cc7969c7480e842a905b6ba9a77c788d8efa7092e4a878db2a7412d43 squeak-3.6_p3.ebuild 2330
+MD5 d5c866eed30a84a304ab3e9155ad14dc squeak-3.7.7.ebuild 1623
+RMD160 b9cae32e65c5891250fc130488ae55e33bbe32e2 squeak-3.7.7.ebuild 1623
+SHA256 09a480295da5c5f389d5b8cf60508733254b7f14c300d15e7d7683655f06e139 squeak-3.7.7.ebuild 1623
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEDWyidZ42PGEF17URAlc2AKDB4hiPZv3e431gKlSuioTESjUgugCfbFu2
+JiBzgSGDUVdGU6aeFxjUSO4=
+=ITuj
+-----END PGP SIGNATURE-----

@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/squeak
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/ChangeLog,v 1.14 2004/07/02 04:31:41 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/ChangeLog,v 1.15 2006/03/07 11:21:17 araujo Exp $
+
+  07 Mar 2006; Luis F. Araujo <araujo@gentoo.org> metadata.xml,
+  -squeak-3.2.5.ebuild, -squeak-3.4.1.ebuild, squeak-3.4.1-r1.ebuild,
+  squeak-3.4.1-r2.ebuild, squeak-3.6_p3.ebuild, +squeak-3.7.7.ebuild:
+  Porting all of the ebuilds to modular X.
+
+*squeak-3.7.7 (07 Mar 2006)
+
+  07 Mar 2006; Luis F. Araujo <araujo@gentoo.org> metadata.xml,
+  +squeak-3.7.7.ebuild:
+  Updating Squeak VM to latest stable version.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> squeak-3.2.5.ebuild,
   squeak-3.4.1-r1.ebuild, squeak-3.4.1-r2.ebuild, squeak-3.4.1.ebuild,
