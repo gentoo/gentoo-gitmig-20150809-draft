@@ -1,23 +1,39 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0bdb1e5198e80f7037eb9281ce8ffe3b ChangeLog 1695
+MD5 7514bfc9473dca1bcc38d4cb0999a199 ChangeLog 1853
+RMD160 4a3e16e11d87c17d1415c029da3e81246beaa775 ChangeLog 1853
+SHA256 f55594419ba0d3add3a21faf51e5907f2444516c2919958dc27d45cb04f2b3d0 ChangeLog 1853
 MD5 d1973ea3781773cbbe8510ea648ddb19 files/digest-mserv-0.35 62
+RMD160 5340aafa28d74dd04eec3c3e625176641c9f1b47 files/digest-mserv-0.35 62
+SHA256 b84f9bd9034846112bb489a6990a6c21a79b5acbb9c073a45ead2c88fb06d38a files/digest-mserv-0.35 62
 MD5 d1973ea3781773cbbe8510ea648ddb19 files/digest-mserv-0.35-r1 62
+RMD160 5340aafa28d74dd04eec3c3e625176641c9f1b47 files/digest-mserv-0.35-r1 62
+SHA256 b84f9bd9034846112bb489a6990a6c21a79b5acbb9c073a45ead2c88fb06d38a files/digest-mserv-0.35-r1 62
 MD5 d5465c51ab8fd155dab29a702c04897a files/mserv-0.35-acl 52
+RMD160 acfa41059112ec05c2f8b4985a1616ce0e7eb2b6 files/mserv-0.35-acl 52
+SHA256 6d72095bd3d88f924e155e62cc8155a575339a2d1b7d8b1035786c2fd1160d20 files/mserv-0.35-acl 52
 MD5 85efb51a180ddf66f95a59ffbbb9f81a files/mserv-0.35-confd 230
+RMD160 9992078df030a2729bc9e9706531b18494dfad8b files/mserv-0.35-confd 230
+SHA256 4c49734c89f53585fc83592229d6a3a2de40207f7ed2ebfb2ca19500d53b3435 files/mserv-0.35-confd 230
 MD5 e4b81c74040c77c60a324f42646e960e files/mserv-0.35-config 1515
+RMD160 c4b15985286afa0302175e19787521af4593ecc7 files/mserv-0.35-config 1515
+SHA256 c41b3f651798a79da23f2f512c129103ae4b511bbd32c2ba012ab674e03de2f5 files/mserv-0.35-config 1515
 MD5 324eccbee0054d56a6da344d0712b2cc files/mserv-0.35-initd 580
+RMD160 4b0d2ab7732f2f2b5fbeb8c1c4706ffac94130c5 files/mserv-0.35-initd 580
+SHA256 df2e940543ace9f480cabd787e7e63bcd06134d67987d12fd66bc8e670bd46aa files/mserv-0.35-initd 580
 MD5 80c9282eed058c3239f45586473cbf70 files/mserv-0.35-mservplay.patch 430
+RMD160 fcbaedd67bcad97ed348b7ded30996e0b5c4acea files/mserv-0.35-mservplay.patch 430
+SHA256 b23e16ffd2bcd0924ee3b7f6b12ce932ded7f638956870c992584effa467ad60 files/mserv-0.35-mservplay.patch 430
 MD5 bab25861d10f61d56534a40883052be3 files/mserv-0.35-paths.patch 2673
+RMD160 9376816a7c8762ab1dd53cd90b591ec29c31e476 files/mserv-0.35-paths.patch 2673
+SHA256 26f8acf367eb9da7bcfddbea2238120804b4ea9e020d3a94a04b51b92fd253d7 files/mserv-0.35-paths.patch 2673
 MD5 a823115f64db37b88b25a3689b0f9e19 files/mserv-0.35-webacl 39
+RMD160 72792ebc26a8412bd42c0e7b65d62c6f497b605e files/mserv-0.35-webacl 39
+SHA256 3f84ac32ee5eca5b13565a915ba736620f788a7cb031dbf8741b44d99551faa8 files/mserv-0.35-webacl 39
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 de6f612fe93d5d475791003e58184f92 mserv-0.35-r1.ebuild 2592
-MD5 6a26beb7d45a4d3c335db226d08c4329 mserv-0.35.ebuild 2556
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDw+nbEzitwsaoONoRAoBfAKCyOL56t9Giv5s9NeWyxGbR19cJWwCfcRsa
-YfiuJDD9SHIRXPPtvtLDZ90=
-=zECq
------END PGP SIGNATURE-----
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 fc24ac0df858353546117254705b68e4 mserv-0.35-r1.ebuild 2606
+RMD160 89d28284fb850fdbd3e80199c8dd4787cbd7d647 mserv-0.35-r1.ebuild 2606
+SHA256 d331f3d28d5ca9ae994b8d25ca96d512b155dc15253828c6ca83d3e8095c1e12 mserv-0.35-r1.ebuild 2606
+MD5 ec98a53b8bd38d4042f4716e6e6a19b9 mserv-0.35.ebuild 2565
+RMD160 21430ae7c20d0a70685ac9c5d5bb71bceff3e16d mserv-0.35.ebuild 2565
+SHA256 124c1704509e61bfaf481ed68c76581ce091ffd095cb39308d9eef691e0cae7b mserv-0.35.ebuild 2565
