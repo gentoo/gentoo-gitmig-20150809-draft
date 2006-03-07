@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4ec4a9128468ddda7a618568daa8ea6e ChangeLog 1600
-MD5 25d2623b0aafb762049394cb5a982bc9 denemo-0.5.9.ebuild 640
+MD5 52ee85f2c1d7b1699ded3c869f8e5059 ChangeLog 1708
+RMD160 3d0ea29aaad0caef3e453032f28a677479a0e96e ChangeLog 1708
+SHA256 5dfb8018c7ed1cc3a115210018aad5ed07c815a7eec83e1845e6c60e09565c82 ChangeLog 1708
+MD5 7a5760c09c2b3cb6ac5126c9f12b45b4 denemo-0.5.9.ebuild 627
+RMD160 8fb6948548452e888dbac9a2b7ee3147d9dcccf5 denemo-0.5.9.ebuild 627
+SHA256 927f6c2efdadbc7ddf2f28226accd70f19df8542cbe79115c1819dddc86eeb25 denemo-0.5.9.ebuild 627
 MD5 7c9230d3694419b6ee417d5a997c9509 denemo-0.7.2.ebuild 702
+RMD160 bf2c2859f77b2d1f432c8da93a2709e6a4ee7c5a denemo-0.7.2.ebuild 702
+SHA256 5dc9d5744c615969bdadcb09dcbe0a7ee5136263810daf10c4e438fc8a4aa482 denemo-0.7.2.ebuild 702
 MD5 1fd701024a19e829810bdacf8b95b816 denemo-0.7.4.ebuild 703
+RMD160 908ac5cf6e6b9fbff76c0437ed5e40a2c7c9b61f denemo-0.7.4.ebuild 703
+SHA256 84d6a3eb1f6b61d2d6e49b4816eb189db149dc22e9fc13bfddd79e1e0f777bf9 denemo-0.7.4.ebuild 703
 MD5 3f6f1cf45c08fe02d8aa60b1aeb756dd files/digest-denemo-0.5.9 64
+RMD160 cb1151371e4106094b413eed4046800ead4b0fc7 files/digest-denemo-0.5.9 64
+SHA256 9a19c2f417f520f94127a58697664a6a2804af437a306211e79b5dd6844544b1 files/digest-denemo-0.5.9 64
 MD5 cf903ece8513fee0c0c41f6af8f1c32b files/digest-denemo-0.7.2 64
+RMD160 10ae42efb0d9125de90a635af2008dc448df8337 files/digest-denemo-0.7.2 64
+SHA256 074e7df33cedf9183533d2135b9e84252a8148148128bcaf68fd7ca3a9fcb170 files/digest-denemo-0.7.2 64
 MD5 339243033991892977c38848e9666e99 files/digest-denemo-0.7.4 65
+RMD160 99b19e30782c8118d9b246c4e8ad7b05ec457482 files/digest-denemo-0.7.4 65
+SHA256 4b06060e3ad332e9d4f38008b11d0c0c91c2d678b0cf995808fdddff264fb1c6 files/digest-denemo-0.7.4 65
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkB1ewUpWvClEHQoRAv6OAJ0dhf8v598w4su2rrdQFnDE/lUwDwCbBv52
-v/QUffHObkV/NSUF6BlbRgU=
-=Kxr0
------END PGP SIGNATURE-----
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158

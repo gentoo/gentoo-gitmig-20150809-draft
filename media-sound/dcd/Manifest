@@ -1,6 +1,25 @@
-MD5 c8a2b440d02e7678dafd30d64ca68c6d dcd-0.95.ebuild 938
-MD5 3aeeee0f3e2f48dce924217bc622f538 dcd-0.90.ebuild 864
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 388e6efb44a97fd46a018fcad94f3757 ChangeLog 1489
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 77d3381eaffb538e0f340790d4ecff8e ChangeLog 1698
+RMD160 61b054d94b9ecf617c9f8cef95eae597bd5165ba ChangeLog 1698
+SHA256 92df0a2b000861382d7ad6a7b330ed8ec9a7a2790b659bdf85efca7f6dc54ff2 ChangeLog 1698
+MD5 4941c191c8ee9f982605dc57355ae494 dcd-0.95.ebuild 747
+RMD160 ed4a6e205ba2117b5071e3d717a19054df0dfe5d dcd-0.95.ebuild 747
+SHA256 eda8da50c22d8b218f657c1449feb82cff0d2daa634428c55a84a0b17b782610 dcd-0.95.ebuild 747
+MD5 1298c1543306b1a8abe39cfb39368f3d files/dcd-0.95-makefile.patch 393
+RMD160 f7dd4605c342e1a9436102ac317326480c9511db files/dcd-0.95-makefile.patch 393
+SHA256 f6d89f91b04fd91d8951f077d147cea2e68ed14e1bbc862cce6da43d29d64a47 files/dcd-0.95-makefile.patch 393
 MD5 37b75fcbb3400c97fbed557d65239563 files/digest-dcd-0.95 60
-MD5 9a48cf3703f5a7e7dda289f1e64f1c2c files/digest-dcd-0.90 60
+RMD160 7e9d3ab425906fb24c6a1216381041b43ded866e files/digest-dcd-0.95 60
+SHA256 666a2fbc919eaa896cc474de366618145aaad040f57f60432a17739ae017adb1 files/digest-dcd-0.95 60
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDZkQAiZjviIA2XgRAlkbAJ94cLks2OkUjaSX9xwi25Pf3hYyNgCg8pgX
+m5Dfllo+3G0HbtGHiBZbXVY=
+=G7M3
+-----END PGP SIGNATURE-----
