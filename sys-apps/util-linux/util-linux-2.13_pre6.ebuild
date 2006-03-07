@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13_pre6.ebuild,v 1.3 2006/02/24 01:49:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13_pre6.ebuild,v 1.4 2006/03/07 00:25:57 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -88,11 +88,6 @@ src_unpack() {
 	# fix cal display when using featureless terminals #112406
 	epatch "${FILESDIR}"/${PN}-2.12r-cal-dumb-terminal.patch
 
-	# fix prefix for installation #119734
-	sed -i \
-		-e '/^usr.*dir/s:/usr::' \
-		*/Makefile.in
-
 	sed -i -e '/chmod/s:4755:4711:' mount/Makefile.in
 }
 
@@ -100,8 +95,7 @@ src_compile() {
 #	append-ldflags $(bindnow-flags)
 	use static && append-ldflags -static
 	econf \
-		--sbindir=/sbin \
-		--bindir=/bin \
+		--prefix=/ \
 		$(use_with pam) \
 		$(use_with selinux) \
 		$(use_enable nls) \
