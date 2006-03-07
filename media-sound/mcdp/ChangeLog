@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mcdp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.15 2006/03/04 07:31:38 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.16 2006/03/07 14:57:51 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/mcdp-0.4a-makefile.patch, mcdp-0.4a.ebuild:
+  Drop virtual/libc dependency. Respect LDFLAGS. Don't strip.
 
 *mcdp-0.4a (04 Mar 2006)
 

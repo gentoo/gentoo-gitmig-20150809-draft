@@ -1,8 +1,37 @@
-MD5 0938d3d507d9eab7c2d5d9f2bdb05e7f ChangeLog 1581
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dd25221c556101a7ef68e9586f83e0a5 ChangeLog 1753
+RMD160 46f6a44bea482a712d900f5e940b3d2ec00d3832 ChangeLog 1753
+SHA256 a95230c0c40cb0c92d64b58bb7d470451a169fb272b38ca775a31dd0386a8b73 ChangeLog 1753
 MD5 65c764f79941bf06a15e474906cc1458 files/digest-mcdp-0.3j 60
+RMD160 7dc999cef45489e1e48541a73595818c0273a79d files/digest-mcdp-0.3j 60
+SHA256 983ca199f91d6018d78dcf76fdf51291f81a83b8d0262e0d720b8f8075ad1e28 files/digest-mcdp-0.3j 60
 MD5 d267a2e27ba778e3f9238ef745312ef5 files/digest-mcdp-0.4a 61
+RMD160 c1beb2da9924e714e7562c5fa4327e0bff306abe files/digest-mcdp-0.4a 61
+SHA256 892cfa9b3e1d493e354ce9bef136b88e16548a1ad2b8a579ba7355c9740b926a files/digest-mcdp-0.4a 61
 MD5 1159831fecf7d200807f7dc82bfa5bb1 files/mcdp-0.3j-dietlibc-fix.patch 365
+RMD160 930e7e9563aefbd79bfe2e874e745d76a49b7c0b files/mcdp-0.3j-dietlibc-fix.patch 365
+SHA256 82911558c9937ccbdf65518250207b5d2e9d1e767ef36a609a79c2dcf8bfc498 files/mcdp-0.3j-dietlibc-fix.patch 365
 MD5 e11e704b1701c91fbcc80c296aea7c08 files/mcdp-0.4a-dietlibc-fix.patch 464
+RMD160 5bed292de167b130a0978cba17f00e6465a71f27 files/mcdp-0.4a-dietlibc-fix.patch 464
+SHA256 01258225535f9a14d3d7ff9ce74946ae2a2e204d9181e13edaef754936a967a5 files/mcdp-0.4a-dietlibc-fix.patch 464
+MD5 e268232604a99639473848ff76f4ca66 files/mcdp-0.4a-makefile.patch 343
+RMD160 d12dbf88ab5d7660c5579eb2cde34150e9ef191b files/mcdp-0.4a-makefile.patch 343
+SHA256 33eab4e7308e66ee10883a2931d41360a456029e134d55a9167b92ca878091e8 files/mcdp-0.4a-makefile.patch 343
 MD5 665c40292df80db15daa43a21867e813 mcdp-0.3j.ebuild 727
-MD5 06ad512f679418c5cba6b003ad61b626 mcdp-0.4a.ebuild 773
+RMD160 8dd723534ba84630f07961adbedd8c0d28708ae4 mcdp-0.3j.ebuild 727
+SHA256 fdc3c110cda2ac1dc3034a83bdd737e10d2dc26159de8466db7222cf5b353a78 mcdp-0.3j.ebuild 727
+MD5 ee1f8eed210f39347710dc2c65eb7191 mcdp-0.4a.ebuild 816
+RMD160 31c7930f85165d00fdb60d34ecff09fc3c5ade11 mcdp-0.4a.ebuild 816
+SHA256 4068ce18877292d0e21f3d0c18d50732a1bca79d1a28267d4be1c72500d5822f mcdp-0.4a.ebuild 816
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDZ98AiZjviIA2XgRAg/kAJ0W4bPPuC1iMtxwj+CVknphSn2AJwCgqwck
+QfTZKLHYP7/7K8+d2ULWj3k=
+=VQd2
+-----END PGP SIGNATURE-----

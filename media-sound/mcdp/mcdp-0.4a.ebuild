@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/mcdp-0.4a.ebuild,v 1.1 2006/03/04 07:31:38 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/mcdp-0.4a.ebuild,v 1.2 2006/03/07 14:57:52 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,15 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc"
-
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/${P}-dietlibc-fix.patch
+	epatch "${FILESDIR}/${P}-dietlibc-fix.patch"
+	epatch "${FILESDIR}/${P}-makefile.patch"
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
