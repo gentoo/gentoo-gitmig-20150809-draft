@@ -1,4 +1,28 @@
-MD5 50eb59d5cf209b41044286a3f4523923 squeak-basicimage-3.6.5429.ebuild 1114
-MD5 c411bc694c0f93dc28f3615bec4ad5d3 ChangeLog 482
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0127763753567c8b86487277ef0c79d9 ChangeLog 662
+RMD160 03e9e71bd208693dbde534d77c8c5aee4b9b83c6 ChangeLog 662
+SHA256 2d3076c1a71cd5cf3631ab90673ee330179342ba68b8a1e87cbd61ce8ff624c5 ChangeLog 662
 MD5 75da034c67d502c24067388c1be2a526 files/digest-squeak-basicimage-3.6.5429 135
+RMD160 ad5c746c32fbfbec30d00dc4b685f347a6ee1be5 files/digest-squeak-basicimage-3.6.5429 135
+SHA256 02cfca370db5f562f3526206e649857a5ef9c8a13247d7a5e4ef105fb7bdf6e4 files/digest-squeak-basicimage-3.6.5429 135
+MD5 930efa76d0f105c879f4bb5234c9d372 files/digest-squeak-basicimage-3.8.6665 497
+RMD160 894ac4322c21d9a6cbbc03e8a68857068df713a4 files/digest-squeak-basicimage-3.8.6665 497
+SHA256 7ab76f124b8312e8ed6f0707342910b1ddba29256ff5c3965e6d82119aeef822 files/digest-squeak-basicimage-3.8.6665 497
+MD5 253a1e2fa2566d32f1c4be90f5b5e69c metadata.xml 857
+RMD160 f7db7ab51d12751c94ddbd7a4cb0daebbc7377d9 metadata.xml 857
+SHA256 4e652f209955420453637c6a4b45f7f7dfbfc0884518724b1ef8e70d7e624085 metadata.xml 857
+MD5 50eb59d5cf209b41044286a3f4523923 squeak-basicimage-3.6.5429.ebuild 1114
+RMD160 27f0bc04fbb5f6ca735ed1c2ed2ef585d555a945 squeak-basicimage-3.6.5429.ebuild 1114
+SHA256 151246461da06224dedcd0af88de8e5ef9fec99bd76f34c73a77c8e0a2bfa7ef squeak-basicimage-3.6.5429.ebuild 1114
+MD5 e76a2fba319e21332485b7dabdee0b33 squeak-basicimage-3.8.6665.ebuild 1235
+RMD160 0b36875f025db9aecf966cdb350381d9b8779377 squeak-basicimage-3.8.6665.ebuild 1235
+SHA256 d6c0f5d789dc3bc6dd038117b8f09b88396f94154aa1ae1fe5c16577c1459222 squeak-basicimage-3.8.6665.ebuild 1235
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEDW34dZ42PGEF17URAi4IAKDMwT9OJlUwz2K6+M0pTa1JJM6tdACfd4Me
+Tw5V2c27ggBtPXE8PlKOQXE=
+=Rxv8
+-----END PGP SIGNATURE-----
