@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6c66f3a1eff5fbdfe29dcde3d7c84463 vmailmgr-tools-0.2.ebuild 936
-MD5 781a944c6ea8d1da495bccf641ec27b7 ChangeLog 474
-MD5 911634f611838bc9b119dfb48b047c35 metadata.xml 250
+MD5 19cee52cbf310943998d93e500b64d5e ChangeLog 568
 MD5 fd7b0cf08fa0095ff41711a753c66e63 files/digest-vmailmgr-tools-0.2 69
 MD5 db03dc3441ee2b210d9e727cbf4247cd files/vmailmgr-tools-0.2-gcc34.patch 871
+MD5 911634f611838bc9b119dfb48b047c35 metadata.xml 250
+MD5 3809f0c6b6f3aae594d4217d1f16678e vmailmgr-tools-0.2.ebuild 912
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDr9aANSP4Vda7IdsRAuG+AJ4xrRPsKhAxfxn9BiKezx26i4qXSwCgioFj
-cePjEWCh11Qiw2KX1q4vqB4=
-=T6SV
+iD8DBQFEDaUxjG8pv1lIUX4RAhBHAJ9zmHbOIxlVLnGv8B3pp+/CHpq+jgCfeMdi
+2NWE6E9VgNYNLslv4mOjua8=
+=gDiY
 -----END PGP SIGNATURE-----
