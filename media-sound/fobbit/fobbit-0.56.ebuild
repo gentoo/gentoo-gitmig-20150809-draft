@@ -1,14 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fobbit/fobbit-0.56.ebuild,v 1.8 2005/07/09 19:12:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fobbit/fobbit-0.56.ebuild,v 1.9 2006/03/07 14:45:48 flameeyes Exp $
 
 MY_P="${PN}-0.60rc1"
 S="${WORKDIR}/${MY_P}/src"
 DESCRIPTION="Software to use the Creative VoiceBlaster USB VoIP phone device"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.fobbit.org/ http://www.sourceforge.net/projects/fobbit/"
-
-DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="BSD"
