@@ -1,88 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9b88461c2c7a22885eb6840af4a3757d ChangeLog 37726
-RMD160 05ceebc32372759adfb576d69710284cf5466ecd ChangeLog 37726
-SHA256 edb19d89c8fa5169ad7d5a53f72be0996889906d3a757fc6c96542644228a51f ChangeLog 37726
+MD5 0bd5b49fbcae8b48d9f4e7af7c080040 ChangeLog 37905
 MD5 c2fd2c8cd7f31c4c876db365a98b972e files/digest-postfix-2.1.5-r2 363
-RMD160 fd913cc9dcbb828e65a435424ccce15da0afa81b files/digest-postfix-2.1.5-r2 363
-SHA256 d97a93dcc916767d201aefdcac3818c17b8fd220a2325ac95815f2fcb78444eb files/digest-postfix-2.1.5-r2 363
 MD5 ff949f18a6d77e67fba4ed20907d0592 files/digest-postfix-2.2.4 135
-RMD160 81d57ff2b9be0a04dbb58bbfcc4902d0f20c7b45 files/digest-postfix-2.2.4 135
-SHA256 ae05f34a963bebb9360a425665cfbdb33f6afafcbdcfe22515a9cdf70e6e1635 files/digest-postfix-2.2.4 135
 MD5 a45bc89f84c0c8cd2f467b49eba737c8 files/digest-postfix-2.2.5 135
-RMD160 a3c2dc910bb9ba633f8a8e04f43e95622006f98c files/digest-postfix-2.2.5 135
-SHA256 071aa336549f38da568d919fb03d345472b80b8d7344680013fefa8ae4215c28 files/digest-postfix-2.2.5 135
 MD5 a45bc89f84c0c8cd2f467b49eba737c8 files/digest-postfix-2.2.5-r1 135
-RMD160 a3c2dc910bb9ba633f8a8e04f43e95622006f98c files/digest-postfix-2.2.5-r1 135
-SHA256 071aa336549f38da568d919fb03d345472b80b8d7344680013fefa8ae4215c28 files/digest-postfix-2.2.5-r1 135
 MD5 087ab3575175983e2f64959bc6d585fd files/digest-postfix-2.2.8 497
-RMD160 22f8946ed773ae95209cb9d34d02a29f9e628f75 files/digest-postfix-2.2.8 497
-SHA256 f12b1c9355bf39fbc72cd4988cf07d237420c53ebe2432954e008b7d38acf933 files/digest-postfix-2.2.8 497
 MD5 087ab3575175983e2f64959bc6d585fd files/digest-postfix-2.2.8-r1 497
-RMD160 22f8946ed773ae95209cb9d34d02a29f9e628f75 files/digest-postfix-2.2.8-r1 497
-SHA256 f12b1c9355bf39fbc72cd4988cf07d237420c53ebe2432954e008b7d38acf933 files/digest-postfix-2.2.8-r1 497
 MD5 dca94aada71eb97635d0f7cd638fb386 files/digest-postfix-2.2.9 497
-RMD160 f092a227a28b062391e481a7239f82c7e841283b files/digest-postfix-2.2.9 497
-SHA256 87e695782c1576b03d3df22343492407cdc3d2bb70f259df7c108ccda29fdd54 files/digest-postfix-2.2.9 497
 MD5 dca94aada71eb97635d0f7cd638fb386 files/digest-postfix-2.2.9-r1 497
-RMD160 f092a227a28b062391e481a7239f82c7e841283b files/digest-postfix-2.2.9-r1 497
-SHA256 87e695782c1576b03d3df22343492407cdc3d2bb70f259df7c108ccda29fdd54 files/digest-postfix-2.2.9-r1 497
 MD5 a3c32f8c9d1344be08f018d377a61f59 files/mailer.conf 438
-RMD160 b9efd9921c9e6295d8791e621e4e08510b526ac4 files/mailer.conf 438
-SHA256 4ea1fb59653bd12841501f30781bda51a66aae56a5560623f7d41709dc97c839 files/mailer.conf 438
 MD5 fd78f3c5211f280a77dc8c8acd3dd898 files/postfix-2.0.9-get-FQDN.patch 1057
-RMD160 492e9de53c0a16e71940ab4f4ed99bc4f76061fa files/postfix-2.0.9-get-FQDN.patch 1057
-SHA256 6e5f5a1f9bc60e04d6decc8491c5955c625396f23698d961c412b50ec793e878 files/postfix-2.0.9-get-FQDN.patch 1057
 MD5 98872da0bd186c6e0d2b884b0fa28b78 files/postfix.rc6 610
-RMD160 aa77be0be55cc95613ea6ab35d46bb9c650e8b8b files/postfix.rc6 610
-SHA256 30ec591c7442c39d7cb32c189218d492d3f880fb0c940197a1f7020e160658aa files/postfix.rc6 610
 MD5 8d7d372a5e867ebc0b1644ee19105e4e files/postfix.rc6.2.2.4 637
-RMD160 abea95b768a709e6fc62ef1c44af1f4743db7210 files/postfix.rc6.2.2.4 637
-SHA256 3c78b579d273d602647399d44867347dc7aa9c756abf7cec6c64ce7252c05d34 files/postfix.rc6.2.2.4 637
 MD5 b98f218de07ec565dfc175e0f3a3c7be files/postfix.rc6.2.2.5 631
-RMD160 a24a3858d99ed8ac7a492def32f044f7d32c4830 files/postfix.rc6.2.2.5 631
-SHA256 5c78e200b5f99946034e38900d295bbf9604fcd32b4326d272ab124f5d8fc59b files/postfix.rc6.2.2.5 631
+MD5 c6f19aa72d695ad889f9130c1b8c8baa files/postfix.rc6.2.2.9 637
 MD5 502e444ec6b9d6fb9bbef3bb0f5e284a files/smtp.pam 254
-RMD160 20dd773a4918a5d73a8ff6353c083018964892b6 files/smtp.pam 254
-SHA256 a13eedc9e0efe8066295719d780d188e28d3d0c0ca838f32fea874c4baf1c445 files/smtp.pam 254
 MD5 889559c8b5d02597e9e7eec89e328360 files/smtp.pass 141
-RMD160 799433a4ee9e9e32f20aa2d31f85f33faa2bc7e6 files/smtp.pass 141
-SHA256 c9b3b56a8df2367cc15bc43a70304fac7ebdd7697e1d450d1bcb4bfdd3e078e9 files/smtp.pass 141
 MD5 43e9368a07952c4aae9e370b59ce1450 files/smtp.sasl 131
-RMD160 6831f9bbfd76be0d39fdda4270120824ebb9f52f files/smtp.sasl 131
-SHA256 954ba1e80537ca01b935b856e31ec4e3e41c138f04b7cf99ccb969876b8b78e7 files/smtp.sasl 131
 MD5 86c229fe394877d2c6a26aa5367bc697 metadata.xml 253
-RMD160 27155323556701c38934832ee9970634a088bb5b metadata.xml 253
-SHA256 38f168ad00f8b59ee75efaf002d442b2793f280dafc70955c70920e974c6dfe0 metadata.xml 253
 MD5 ac54433bbfb8588c01144dd4d61ecdd7 postfix-2.1.5-r2.ebuild 7525
-RMD160 39807b6d7a75a3dc2e1c14d420e5ad5aa7d7d3db postfix-2.1.5-r2.ebuild 7525
-SHA256 97db204eaf91401fc986a9e6cbc897ab578c4afe75bc3c3ab09485baef7b3caf postfix-2.1.5-r2.ebuild 7525
 MD5 6a23485292037b5bd4444da2b636fabe postfix-2.2.4.ebuild 9235
-RMD160 2a5c3b1e3d5199cb6709f1fe414fd348a10c4a4c postfix-2.2.4.ebuild 9235
-SHA256 738532ba0a4c3d1887767a0e7cf168ef467f7a6af13f90aa650f122483c19d70 postfix-2.2.4.ebuild 9235
 MD5 f1052a274b0e52f23522e679c102d016 postfix-2.2.5-r1.ebuild 9246
-RMD160 a0819382fc9eb6342643a051962512fedcd73bd2 postfix-2.2.5-r1.ebuild 9246
-SHA256 50ada556958d24a35c708be4584520f532129e76d4e0ca5a50a4c73e11bcba44 postfix-2.2.5-r1.ebuild 9246
 MD5 b9d87dbf24464c335f81059f4c8ab124 postfix-2.2.5.ebuild 9535
-RMD160 40ab26c6582abbe6f3cffedc5ab6452c6412869b postfix-2.2.5.ebuild 9535
-SHA256 77dd108ea9cd6c4273aa5b056539ac6dc2706dfedebe6f349f3aea942e457d5f postfix-2.2.5.ebuild 9535
 MD5 e096b2140dc52302a2fdf4030e43992f postfix-2.2.8-r1.ebuild 10187
-RMD160 7b011604fd9f9051acf5b55d21b878ea9131bc7d postfix-2.2.8-r1.ebuild 10187
-SHA256 7989492a8aff9227e4490f6e037409dd003794b9c0f6a7c883c36a720e358906 postfix-2.2.8-r1.ebuild 10187
 MD5 f6abb5d8034f1922d26ad0bce760a017 postfix-2.2.8.ebuild 10408
-RMD160 f0e7c077fa3a0401127d044cc0fc404495980ed6 postfix-2.2.8.ebuild 10408
-SHA256 228c033b8206d180f701265ab121eaa3953732d9befdc75046da3096f4b06a72 postfix-2.2.8.ebuild 10408
-MD5 b9973ce0d7fd46902e9efd029e99da81 postfix-2.2.9-r1.ebuild 10187
-RMD160 412b1f821fa58fff280d06c5f3f1b3a1ef1858b4 postfix-2.2.9-r1.ebuild 10187
-SHA256 1ca37cfb05ce47d6828b99fbaf826cd1fecfbc5f1d195cbe1fa92b431f4e5835 postfix-2.2.9-r1.ebuild 10187
-MD5 539b4b9205fa9739708e91a771377c63 postfix-2.2.9.ebuild 10408
-RMD160 8bfb7c169f61b5dc0498054142587e9ac2c13a2e postfix-2.2.9.ebuild 10408
-SHA256 8323bea72328d553eb6577489aa75e7d1958371215d1e58c98064eb897c655f0 postfix-2.2.9.ebuild 10408
+MD5 647159588c88601c472344bb53dca79d postfix-2.2.9-r1.ebuild 10183
+MD5 07d4904ac988ffa461e57c46ca4131dd postfix-2.2.9.ebuild 10404
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEBze/5FrxP71izLARAjX8AKDQeX67+t18Ed1ixW045ofgxyA9IACbBMEn
-S78DF37SYzLlPQqDFeT0SNs=
-=jT9q
+iD8DBQFEDfYcViELBEf1JB0RApzKAJ9pow+/jzlPT0JGsfAAky+YcE3k9wCfaiiN
+3VYMAc51DcTbs40V3+5Ig68=
+=w6nX
 -----END PGP SIGNATURE-----

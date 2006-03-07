@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.9-r1.ebuild,v 1.1 2006/03/02 18:20:57 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.9-r1.ebuild,v 1.2 2006/03/07 21:07:20 ferdy Exp $
 
 inherit eutils ssl-cert toolchain-funcs flag-o-matic mailer pam
 IUSE="ipv6 pam ldap mysql postgres ssl sasl mbox nis vda selinux hardened cdb"
@@ -11,7 +11,7 @@ MY_SRC=${PN}-${MY_PV}
 #DEV_SRC=${MY_SRC}-newdb-nonprod
 VDA_VER=2.2.8
 VDA_P="${PN}-${VDA_VER}-vda"
-RC_VER="2.2.5"
+RC_VER="2.2.9"
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail."
 HOMEPAGE="http://www.postfix.org/"
