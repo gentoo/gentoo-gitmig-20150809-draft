@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.2 2006/02/06 17:45:19 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.3 2006/03/07 10:37:16 zaheerm Exp $
 
 #
 # Original Author: Saleem Abdulrasool <compnerd@gentoo.org>
@@ -9,7 +9,7 @@
 # plugin rather than in a single package.
 #
 
-my_plugins="directfb faac faad gsm ivorbis libmms musepack sdl wavpack"
+my_gst_plugins_bad="bz2 directfb dts divx faac faad gconf gconftool gsm ivorbis libmms musepack neon opengl sdl sdltest swfdec wavpack xvid"
 #qtdemux spped tta
 
 inherit eutils gst-plugins10
@@ -57,10 +57,10 @@ gst-plugins-bad_src_configure() {
 	einfo "Configuring to build ${GST_PLUGINS_BUILD} plugin(s) ..."
 
 	for plugin in ${GST_PLUGINS_BUILD} ; do
-		my_plugins="${my_plugins/${plugin}/}"
+		my_gst_plugins_bad="${my_gst_plugins_bad/${plugin}/}"
 	done
 
-	for plugin in ${my_plugins} ; do
+	for plugin in ${my_gst_plugins_bad} ; do
 		gst_conf="${gst_conf} --disable-${plugin}"
 	done
 
