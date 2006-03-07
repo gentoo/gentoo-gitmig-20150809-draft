@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>dev-scheme</herd>
+<herd>scheme</herd>
 <longdescription>
 CHICKEN is a compiler for the Scheme programming language. CHICKEN produces
 portable, efficient C, supports almost all of the current Scheme language
