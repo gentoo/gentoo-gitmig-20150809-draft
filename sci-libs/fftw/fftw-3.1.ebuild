@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.ebuild,v 1.1 2006/02/11 20:19:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.ebuild,v 1.2 2006/03/07 22:01:43 markusle Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -40,6 +40,13 @@ src_compile() {
 		myconfsingle="$myconfsingle --enable-k7"
 	fi
 
+	# disable building of shared libs for k7 (c.f. bug #125218)
+	if ! use 3dnow; then
+		myconfsingle="$myconfsingle --enable-shared"
+		myconfdouble="$myconfdouble --enable-shared"
+	fi
+
+
 	# Altivec-support in fftw is currently broken
 	# with gcc 3.4
 	if [ "`gcc-version`" != "3.4" ]; then
@@ -48,7 +55,6 @@ src_compile() {
 
 	cd "${S}-single"
 	econf \
-		--enable-shared \
 		--enable-threads \
 		--enable-float \
 		${myconfsingle} || \
@@ -58,7 +64,6 @@ src_compile() {
 	#the only difference here is no --enable-float
 	cd "${S}-double"
 	econf \
-		--enable-shared \
 		--enable-threads \
 		${myconfdouble} || \
 		die "./configure in double failed"
