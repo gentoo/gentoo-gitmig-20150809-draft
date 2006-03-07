@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.50 2006/03/05 22:02:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.51 2006/03/07 19:15:28 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> kopete-3.5.1-r1.ebuild:
+  Update dependencies based on the recent work on net-im/kopete. Fix modular X
+  dependencies.
 
 *kopete-3.5.1-r1 (05 Mar 2006)
 

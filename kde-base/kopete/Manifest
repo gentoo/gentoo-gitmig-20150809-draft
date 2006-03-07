@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b11c92093ce42055af39b76ea86489bb ChangeLog 6914
-RMD160 efc218476073d588ea42a9d91e8a390e83d4a5ac ChangeLog 6914
-SHA256 2718d4df3e5cab6f800c5e5262537cd045f297a051b62f80f3893d1e78c2120a ChangeLog 6914
+MD5 4727300136c6c22d3ab9341bb8b1f684 ChangeLog 7087
+RMD160 5dcdeaf49d10b9df06e4fafd2b289b8b656cf899 ChangeLog 7087
+SHA256 e51f75902b6ff4273f70e7089e5e921c9202f42dd320a9af7a5bf3ea14806d3c ChangeLog 7087
 MD5 100ba684bf2f7b3bd7061b488264a21d files/configure-fix-kdenetwork-gadu.patch 2626
 RMD160 e348401fcbe734b2e0d5ba767a3f64b31abf31dc files/configure-fix-kdenetwork-gadu.patch 2626
 SHA256 b71d184ff9c44bfeb2f8e90e75145ae5c77ff5a5f23165eca3c538374d40ef3b files/configure-fix-kdenetwork-gadu.patch 2626
@@ -52,9 +52,9 @@ SHA256 de51d6f25b786d62a0faa9eb30d6a2cc0d044db0b813f1df793175d8e0601131 kopete-3
 MD5 9163a9daf7e63d1196ab4ad33d7285d8 kopete-3.5.0.ebuild 999
 RMD160 9beb32cc03704f88e29cd186f53129ff9951f8ab kopete-3.5.0.ebuild 999
 SHA256 5d8bb2987e1daa85778c2c70dde2bfe1f60cffa49c0bc81f2359edf3af78bf37 kopete-3.5.0.ebuild 999
-MD5 f6c26091ffc5d9ae8671b8528ca1e6a8 kopete-3.5.1-r1.ebuild 1060
-RMD160 944913100357aeb9ba48b78331e7f2c24bbf9e57 kopete-3.5.1-r1.ebuild 1060
-SHA256 039654d3416df7b86eeb340e85de9852fe5f8ffdbae022d6700c623b7fd31d21 kopete-3.5.1-r1.ebuild 1060
+MD5 fa9e6f5a89533e912f65283628c06213 kopete-3.5.1-r1.ebuild 1544
+RMD160 84a63b6fb6eb4513357b73d0b964b04ace1fb86e kopete-3.5.1-r1.ebuild 1544
+SHA256 7d8c5e6a91b5a069736817771c423a3e194c6fce8b6e50751db5c9c59387810f kopete-3.5.1-r1.ebuild 1544
 MD5 1867e76514d764fcaa25db263d3dff65 kopete-3.5.1.ebuild 999
 RMD160 3392e00fd5c9b61167c200ce9c90ac2ca611fb26 kopete-3.5.1.ebuild 999
 SHA256 a288a6b2b6109a5e9ca196a44a0d748ee265bdf987a1f75ce0d3b9c27f2ecf77 kopete-3.5.1.ebuild 999
@@ -64,7 +64,7 @@ SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEC1+7AiZjviIA2XgRAoqaAKC/5vhL8Qi1OlWkh7h7veRaVmrDSgCfR5lJ
-Jc+hlxMpCSDd0pFJ5Xt9KR0=
-=pwkp
+iD8DBQFEDdvgAiZjviIA2XgRAuJKAJ4gEAYIPCpcGMWmI0pXe30yEv3FQwCdEANS
+XeguWHnOq+U/ge9XWMfcpT8=
+=if+l
 -----END PGP SIGNATURE-----
