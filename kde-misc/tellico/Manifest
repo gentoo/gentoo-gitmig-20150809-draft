@@ -1,46 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 765258d07177c68965a908e832682af8 ChangeLog 3954
-RMD160 1c074d87b2f4134b7a00ce8a7dee0cc8e393051a ChangeLog 3954
-SHA256 7577714076f55460fcafc27a103c80658e82963ec8263145f9c142b6c7f4eefa ChangeLog 3954
+MD5 366eb8700d91d89d867e535f59f28174 ChangeLog 4071
 MD5 31393b53f07a7c3549818f83deaf7347 files/digest-tellico-0.13.8 67
-RMD160 a21ffc6fafc822e0acb57b07667dcc4b577bdc90 files/digest-tellico-0.13.8 67
-SHA256 59dfaa4370510e82916ea81c06bed4b2b3e57ae6f84f3fe9031bc93f40cc7296 files/digest-tellico-0.13.8 67
 MD5 5b60965cffd2a5573ce2f307d1be7757 files/digest-tellico-1.0.1 66
-RMD160 86e6265d792ffcc8299b42379bbb2dc58a1ec6cc files/digest-tellico-1.0.1 66
-SHA256 89e29c478c88415fc6848c8e91a5138cd81098877d9dc0ddc8888b293d0f13b1 files/digest-tellico-1.0.1 66
 MD5 6045fd6d740eb50cb2308f3bab5d31e3 files/digest-tellico-1.0.2 66
-RMD160 7bd8fa81197f64035ece874e9680a43bfaa55fec files/digest-tellico-1.0.2 66
-SHA256 ef0b03a484158dae59cbdd4dd94930dbb6cba57873e5fd2b47fca369bf83146c files/digest-tellico-1.0.2 66
 MD5 562e08f808d1b80de1655c4dec047a14 files/digest-tellico-1.1 64
-RMD160 18aa0218d8709a5826cff060177a1b712fbf5435 files/digest-tellico-1.1 64
-SHA256 64cbd446fe4f5b3d70691e910ba50ae17acde5a711505b0a748bd2792ddc60c1 files/digest-tellico-1.1 64
 MD5 614a360b16e7ab3a56cbb38dd343dc63 files/digest-tellico-1.1.1 66
-RMD160 ef0574134ebe168403e2523afea352f787dec402 files/digest-tellico-1.1.1 66
-SHA256 267f4b534ce85d2c1e430a71d6feb422ee60e291a3ad9b5008a915c38a2c4738 files/digest-tellico-1.1.1 66
+MD5 bde643ba5f3a75ac1568dfeb08e6afab files/digest-tellico-1.1.2 66
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 MD5 08d89bdd9cf15f77618a9642179a81cc tellico-0.13.8.ebuild 639
-RMD160 2c90c97e04b752675278e4918a1ece446245d6c0 tellico-0.13.8.ebuild 639
-SHA256 8dffa6383ace646a806cb9062e93c130789568dd255c7a991057140b45133a25 tellico-0.13.8.ebuild 639
 MD5 bdfaddba74fd3d4b7a0c3612a3cd029c tellico-1.0.1.ebuild 737
-RMD160 6028050e158c0e3feb2e3102c3c03eeb78b62e5f tellico-1.0.1.ebuild 737
-SHA256 2e0fe730199ac2310687cdfd661d5c8c21ccf61c18887d6b80e1fd55bffb54e0 tellico-1.0.1.ebuild 737
 MD5 0d39c979c44afe58b16f990e046767dd tellico-1.0.2.ebuild 737
-RMD160 561af83f7b440b63a03b4d8bd9ffc3a1381c15b5 tellico-1.0.2.ebuild 737
-SHA256 27a60a19fd29f58ad8082484582f83d776e257de32f7f8e9cd54ec2b849c4d4d tellico-1.0.2.ebuild 737
 MD5 89d69c54618592bef471c65d6153c7a4 tellico-1.1.1.ebuild 1682
-RMD160 3e8effe475a47118cb5c608069d37150af3a91c3 tellico-1.1.1.ebuild 1682
-SHA256 ef9fcc2939660748f99dba67508014e307c581b283504434b7a67b961f6eb1e1 tellico-1.1.1.ebuild 1682
+MD5 379672caa93886887d022b1473cd415b tellico-1.1.2.ebuild 1680
 MD5 19c2d2ea998bc59838ff85013f01e3c4 tellico-1.1.ebuild 1680
-RMD160 bf4f954e04b1059c2bc98379c2efaadb584c6d3e tellico-1.1.ebuild 1680
-SHA256 5f2dd1f0d64c21c850b0845c4830445fc48e398af99e8d0c7409b5ff359d2d5d tellico-1.1.ebuild 1680
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/M3rCRZPokWLroQRAnvpAKCLwCWA9DEPOTgv/Zu4BGEFoKbsmACgsBz2
-ik6imDA30wfaaw4hBFdSvME=
-=ckR0
------END PGP SIGNATURE-----
