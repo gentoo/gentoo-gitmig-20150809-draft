@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.3.ebuild,v 1.1 2006/02/28 20:10:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.3.ebuild,v 1.2 2006/03/07 19:28:10 tupone Exp $
 
 inherit eutils flag-o-matic games
 
@@ -11,7 +11,7 @@ SRC_URI="http://t-o-m-e.net/dl/src/tome-${MY_PV}-src.tar.bz2"
 
 LICENSE="Moria"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
 IUSE="X Xaw3d gtk sdl"
 
 RDEPEND=">=sys-libs/ncurses-5
@@ -76,7 +76,7 @@ src_compile() {
 	fi
 	GENTOO_INCLUDES="${GENTOO_INCLUDES} -Ilua -I."
 	GENTOO_DEFINES="${GENTOO_DEFINES} -DUSE_LUA"
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 	cd src
 	make \
 		INCLUDES="${GENTOO_INCLUDES}" \
