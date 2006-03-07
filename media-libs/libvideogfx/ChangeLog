@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvideogfx
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvideogfx/ChangeLog,v 1.5 2004/07/01 08:01:32 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvideogfx/ChangeLog,v 1.6 2006/03/07 11:27:15 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  libvideogfx-1.0.3.ebuild:
+  Drop virtual/libc dependency. Add maintainer-needed metadata.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libvideogfx-1.0.3.ebuild:

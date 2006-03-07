@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvideogfx/libvideogfx-1.0.3.ebuild,v 1.6 2004/07/14 20:17:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvideogfx/libvideogfx-1.0.3.ebuild,v 1.7 2006/03/07 11:27:15 flameeyes Exp $
 
 DESCRIPTION="LibVideoGfx is a C++ library for low-level video processing."
 HOMEPAGE="http://rachmaninoff.informatik.uni-mannheim.de/libvideogfx/index.html"
@@ -13,14 +13,9 @@ KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
-DEPEND="virtual/libc
-		virtual/x11"
-
-# Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
-#RDEPEND=""
+DEPEND="virtual/x11"
 
 src_compile() {
-
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
@@ -31,10 +26,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
-
-
 	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README TODO
-
 }

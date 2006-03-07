@@ -1,3 +1,22 @@
-MD5 f7da55921351cf854df2f63e7aae30e4 libvideogfx-1.0.3.ebuild 936
-MD5 33657ca1648b775a67ae59894526da6d ChangeLog 717
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bd0c943e8cc9cbd23f3c7f5b8cc8befd ChangeLog 877
+RMD160 bdfcdb54b1e3322a02d6835bebebadf40ebfdabe ChangeLog 877
+SHA256 172cec8d75cfea5d12b9a5929623165b8bc08cccfca9d77fcffd096276bf4516 ChangeLog 877
 MD5 1e9b50805cbff8580d46777b35d813a5 files/digest-libvideogfx-1.0.3 69
+RMD160 3d4b1aa744dc4a0289f45d3de60af326b0a5170e files/digest-libvideogfx-1.0.3 69
+SHA256 a8a0a27f71ab0c15aade50b684758c0de859365b0f4251747a8cd3f201064412 files/digest-libvideogfx-1.0.3 69
+MD5 c9294f3ebb384750bd858faf68ce10b4 libvideogfx-1.0.3.ebuild 838
+RMD160 616e33e7c730913e859f1b39342fcd5f33ae8ed0 libvideogfx-1.0.3.ebuild 838
+SHA256 ce24b3310f32c7f1872bd9949fc921226e535c9d2409c2e15029379c3d9f1a4f libvideogfx-1.0.3.ebuild 838
+MD5 ed8349e980407e49b724e04ee5a9a2ed metadata.xml 231
+RMD160 c13056229989c3d4f448a7c7abcff3f4ee7ce13c metadata.xml 231
+SHA256 4595c2615fd7c9095517949b1a920d4457f92801eb9d46307b18aafe58ec2a8a metadata.xml 231
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDW4mAiZjviIA2XgRAjagAKC0xo9bChkdtVwq8q5WoU8mnk5cMACgqvSE
+pcC1GmGi3Cjw3gNN0IQDUho=
+=IQzU
+-----END PGP SIGNATURE-----
