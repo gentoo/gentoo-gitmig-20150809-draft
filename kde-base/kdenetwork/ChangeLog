@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.189 2006/03/05 22:31:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.190 2006/03/07 19:25:31 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdenetwork-3.5.1-r1.ebuild:
+  Update dependencies with kopete's modular xorg dependencies.
 
 *kdenetwork-3.5.1-r1 (05 Mar 2006)
 
