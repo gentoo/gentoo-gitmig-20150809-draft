@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/nurbs++
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nurbs++/ChangeLog,v 1.6 2004/06/24 23:17:32 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nurbs++/ChangeLog,v 1.7 2006/03/07 12:02:01 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml:
+  Add maintainer-needed metadata.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openquicktime
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.16 2005/09/13 20:26:48 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.17 2006/03/07 12:05:30 flameeyes Exp $
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml:
+  Add maintainer-needed metadata.
 
   13 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   openquicktime-1.0-r1.ebuild:
