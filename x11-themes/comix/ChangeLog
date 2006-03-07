@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/comix
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix/ChangeLog,v 1.13 2005/10/25 14:29:44 gustavoz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix/ChangeLog,v 1.14 2006/03/07 10:19:59 flameeyes Exp $
+
+*comix-1.3.6 (07 Mar 2006)
+
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +comix-1.3.6.ebuild:
+  Version bump, thanks to Marcelo Goes (vanquirius) in bug #118587. Also add
+  ~amd64 to the new version.
 
   25 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> comix-1.3.4.ebuild:
   Stable on sparc wrt #109815
