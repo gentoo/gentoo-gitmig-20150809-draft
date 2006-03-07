@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-7307.ebuild,v 1.1 2006/01/14 15:00:48 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-7428.ebuild,v 1.1 2006/03/07 13:41:46 hattya Exp $
 
 inherit elisp-common eutils
 
@@ -10,7 +10,7 @@ MY_P="${P/-ss/}"
 
 DESCRIPTION="Anthy -- free and secure Japanese input system"
 HOMEPAGE="http://anthy.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/anthy/18359/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/anthy/19120/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -34,7 +34,6 @@ src_compile() {
 			mkworddic/dict.args.in
 	fi
 
-	unset TMPDIR
 	econf ${myconf} || die
 	emake || die
 
