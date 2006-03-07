@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b277064523f5489b49ee27ec74737c13 ChangeLog 834
-MD5 d0dbcd5d7cfd35d5d7392f1e2833f3f1 recmpeg-1.0.5.ebuild 822
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+MD5 273182403d034867f959d41e8d0b5b09 ChangeLog 959
+RMD160 a1bd5ce57684556cac3db438cd7b734a23abfd5d ChangeLog 959
+SHA256 9eb753c50ab601d90a40d647bdf4b44c9f06e7bde51bbd964bd71c666992de0d ChangeLog 959
 MD5 b8fd974d42d5f9451db54b08e9685eeb files/digest-recmpeg-1.0.5 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDIv8Sj5H05b2HAEkRAjyrAKCFgC3jsZWXxvcTy90f2DBTbdTwWQCdEH6q
-NHVFpzGqjwlSIwayF3fb60U=
-=O4Fg
------END PGP SIGNATURE-----
+RMD160 78489163ba4cb4177996f9f5b37c7b2a92ce076b files/digest-recmpeg-1.0.5 64
+SHA256 fd6d20f185194f0dbe97bddaa6126d25d095711111a029d812c6e2fc351fbcbe files/digest-recmpeg-1.0.5 64
+MD5 0338bfb24d7bfb6450aac4dd025c0096 metadata.xml 223
+RMD160 86b42c49b694db39ddb3fdc60b98a3ad1a0c3392 metadata.xml 223
+SHA256 dd48e823ec9a151bc3611121402ed26ee24eb3304aa62870b1e875a8fa0ac812 metadata.xml 223
+MD5 306a59ad7bf5b27285a906da6be054a1 recmpeg-1.0.5.ebuild 809
+RMD160 2fc49fc66828e6109b3b577c9e8f9c7c1b2a2027 recmpeg-1.0.5.ebuild 809
+SHA256 7e7fa6b9a3f5dc156d4deb46616627650a69efcc12323e48af93e4de331b751a recmpeg-1.0.5.ebuild 809
