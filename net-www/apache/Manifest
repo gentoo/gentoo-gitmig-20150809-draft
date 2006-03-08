@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 898a78f141e4aee6046aff0f2e6f0b88 ChangeLog 77923
-RMD160 6e50f2f1d029e3ac106d08dfe260f4779ba95284 ChangeLog 77923
-SHA256 2bcd9b1c50a69acb5a1611be4a7d514efab3d3c9c2dc9c337736dc947b0b5b10 ChangeLog 77923
+MD5 5f509ed50a6ed98dcb26edadcc37242f ChangeLog 78109
+RMD160 8a3d53c927856eb8b988e7bad23e008bdaae380b ChangeLog 78109
+SHA256 667918872a37f7548701afadbe3964de13173f4702969276659669d4ea4bd082 ChangeLog 78109
 MD5 26a30fcfe2a6fbbf994b64756ed4f604 apache-1.3.32-r1.ebuild 6685
 RMD160 bed06d46549aa916c55c4010abb6200250aab467 apache-1.3.32-r1.ebuild 6685
 SHA256 960a79fc39624020599cb70dde4ed7c460ad924373755cfbffb0359f700f9c4d apache-1.3.32-r1.ebuild 6685
@@ -49,9 +46,9 @@ SHA256 b9048c96a2f8103c755b9640fb25993eddbb3cf49134ea7703cea0d2a58c4f5e apache-2
 MD5 5ed529e2445fa5a353d2b63067b7bacc apache-2.2.0-r1.ebuild 14074
 RMD160 67f5d9b3ace79952040f2fd9cbed43b2dbd981c1 apache-2.2.0-r1.ebuild 14074
 SHA256 72e1bfae9a27e80cdabf4b0b6688bfdaf997a377e90eaf62d5d03c24e6ff738b apache-2.2.0-r1.ebuild 14074
-MD5 edfbceb8a7d4241450a21cff89d60919 apache-2.2.0-r2.ebuild 14103
-RMD160 a43ae4e8be655858355dfe5eccd55ef55ce23e5a apache-2.2.0-r2.ebuild 14103
-SHA256 8da5d87b4edf43b2e7f73b3d50996ea5e364868a98b0f1b62d1dd46cd50cd235 apache-2.2.0-r2.ebuild 14103
+MD5 f0741c8cfbbac31c5dcbeff4d3bbd973 apache-2.2.0-r2.ebuild 14191
+RMD160 02024401beceb7bfdcbb1d395c5205db404f0d2a apache-2.2.0-r2.ebuild 14191
+SHA256 163e335c35c669ac099e31f3a73e0710821b3dd85fc00adc353feee72bd90654 apache-2.2.0-r2.ebuild 14191
 MD5 8b12871dd74fcd3f4fdf451c9d8c259e files/00_apache_manual.conf 781
 RMD160 d2e6224ca1621f7cf29c163c3c04e06aca7b7bde files/00_apache_manual.conf 781
 SHA256 068450680c6fec43b963360e0291f1e47cc1a1c0296efb46a0a4eb75eb891f4b files/00_apache_manual.conf 781
@@ -187,9 +184,9 @@ SHA256 5f1294744eca94fff4fdc4104980b9b7864a752224873293f3517f5df0ebb711 files/di
 MD5 658a784ac412b6489bad9d6522ad214c files/digest-apache-2.2.0-r1 536
 RMD160 250f73fa520dacab1f72303a2b78297311793c9b files/digest-apache-2.2.0-r1 536
 SHA256 33e99840918bb5d10d5d4ecf2368b3246cd91a640e0c9a094256e4025ca0425b files/digest-apache-2.2.0-r1 536
-MD5 b7db57ee172c09170afffd74a77d3dbc files/digest-apache-2.2.0-r2 536
-RMD160 0bc246f9c4f2c1707c3f393ea1fa3baa2d140287 files/digest-apache-2.2.0-r2 536
-SHA256 da35bf941e330235aa37b4fffe5d32cb6c006f12f754ac7ee7955e171f51b6e3 files/digest-apache-2.2.0-r2 536
+MD5 48cbdc6490c43868f9e23b4b2f02f0e3 files/digest-apache-2.2.0-r2 536
+RMD160 cb22045888ae2e75df66de168adc075cef4426c5 files/digest-apache-2.2.0-r2 536
+SHA256 156b784dcf683dc705d27d9e498f57ad7d4f9bd0d9191dc648b04552297bb393 files/digest-apache-2.2.0-r2 536
 MD5 b9ff3534313dae1b8ac96df0e3e01373 files/httpd-2.0.48-ipv6.patch 865
 RMD160 0309ce8d85fe499997a879205e4909e604599051 files/httpd-2.0.48-ipv6.patch 865
 SHA256 aba5ff0caafc53ac3cc391f1776ad3c49d44ca878ba81330e81578ab9dcaad67 files/httpd-2.0.48-ipv6.patch 865
@@ -226,10 +223,3 @@ SHA256 32618a274dd2433d5d3f6295c7047fc7caf16763ec4fa4a6234c92fe08d3b606 files/su
 MD5 27c9cb37c510e08bb69df277229a03ea metadata.xml 566
 RMD160 8aad2cbb313fa91b77c6f4891f8d3483d1460adc metadata.xml 566
 SHA256 9826f38d29b803e954faa6fafffc4d6f197bfcb0e14cc76af891c41081d948e2 metadata.xml 566
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDIgHmPFBzbX68WERAuQqAKCXzQlnNJgewqVEGMlpUiRF2928tACggKSo
-jNRxZPxWaZIzofj4siuGLy4=
-=NeFp
------END PGP SIGNATURE-----

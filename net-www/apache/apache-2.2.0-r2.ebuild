@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.2 2006/03/06 19:01:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.3 2006/03/08 01:55:16 vericgar Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -279,6 +279,8 @@ src_install () {
 	sed -i -e "s:APACHE2_OPTS=\".*\":APACHE2_OPTS=\"${APACHE2_OPTS}\":" \
 		${GENTOO_PATCHDIR}/init/apache2.confd \
 		|| die "sed failed"
+	
+	mv ${D}/etc/apache2/apache2-builtin-mods ${D}/etc/apache2/apache2-builtin-mods-2.2
 
 	newconfd ${GENTOO_PATCHDIR}/init/apache2.confd apache2
 	newinitd ${GENTOO_PATCHDIR}/init/apache2.initd apache2
