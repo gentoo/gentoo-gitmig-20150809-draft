@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.21.7-r1.ebuild,v 1.1 2006/03/08 14:16:31 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.21.7-r1.ebuild,v 1.2 2006/03/08 15:11:38 anarchy Exp $
 
 IUSE="opengl"
 
@@ -99,6 +99,11 @@ pkg_setup(){
 	# Set up X11 implementation
 	if has_version "x11-base/xorg-server"; then
 		X11_IMPLEM=xorg-x11
+	elif has_version "<x11-base/xorg-x11-6.8.99"; then
+		X11_IMPLEM=xorg-x11
+		X11_IMPLEM_V="$(best_version x11-base/xorg-x11)"
+		X11_IMPLEM_V="${X11_IMPLEM_V/${X11_IMPLEM}-/}"
+		X11_IMPLEM_V="${X11_IMPLEM_V##*\/}"
 	else
 		X11_IMPLEM_P="$(best_version virtual/x11)"
 		X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
@@ -284,8 +289,16 @@ src_install-libs() {
 		doexe ${BASE_DIR}/usr/X11R6/${pkglibdir}/modules/linux/libfglrxdrm.a
 	fi
 
-	cp -pPR ${ARCH_DIR}/usr/X11R6/${pkglibdir}/lib{fglrx_*,aticonfig} \
+	if has_version ">=x11-base/xorg-x11-6.8.99" || \
+		has_version "x11-base/xorg-server"
+	then
+		cp -pPR ${ARCH_DIR}/usr/X11R6/${pkglibdir}/lib{fglrx_*,aticonfig} \
 			${D}/usr/$(get_libdir)
+	else
+		cp -pPR ${ARCH_DIR}/usr/X11R6/${pkglibdir}/lib{fglrx_*,aticonfig.a} \
+			${D}/usr/$(get_libdir)
+	fi
+
 	#Not the best place
 	insinto ${X11_DIR}/include/X11/extensions
 	doins ${COMMON_DIR}/usr/X11R6/include/X11/extensions/fglrx_gamma.h
