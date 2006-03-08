@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59-r7.ebuild,v 1.1 2005/06/23 23:59:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59-r7.ebuild,v 1.2 2006/03/08 01:40:56 vapier Exp $
 
 inherit eutils
 
@@ -39,9 +39,6 @@ src_install() {
 
 	dodoc AUTHORS BUGS NEWS README TODO THANKS \
 		ChangeLog ChangeLog.0 ChangeLog.1 ChangeLog.2
-
-	# binutils installs this infopage
-	rm -f "${D}"/usr/share/info/standards.*
 }
 
 pkg_postinst() {

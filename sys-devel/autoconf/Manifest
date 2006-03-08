@@ -1,21 +1,43 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dbe187da39bfb1546a14fedc9bdbae0e autoconf-2.13.ebuild 1550
-MD5 2f177a535539f25d52f270603bca85fa autoconf-2.59-r6.ebuild 1237
-MD5 042a60afd1c1a505b3265169d373d0d7 autoconf-2.59-r7.ebuild 1336
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 80e4a2fe43c35a808b3dffe025361ff5 ChangeLog 10418
+RMD160 61b494a292300549a152cf9678110fea01af3723 ChangeLog 10418
+SHA256 b81614a501eea477f1783e8377ce10e3e1029bab7216185c4a57a28609877a79 ChangeLog 10418
+MD5 dbe187da39bfb1546a14fedc9bdbae0e autoconf-2.13.ebuild 1550
+RMD160 20a596d6c950f8ade72d7cbb75ef3d6856846460 autoconf-2.13.ebuild 1550
+SHA256 7acf568d88e966f39385ad840ee877b9f3b663fc5c91dc01db8158e6ac5ef43a autoconf-2.13.ebuild 1550
+MD5 2f177a535539f25d52f270603bca85fa autoconf-2.59-r6.ebuild 1237
+RMD160 888ecfad239d0d080576b91afd89eb4f361d0d7c autoconf-2.59-r6.ebuild 1237
+SHA256 51314c3ec91822538aeca63b60d8b66c29af109b441c1390bf9222e985cebfd6 autoconf-2.59-r6.ebuild 1237
+MD5 be87f24255343c35aec5fe96582063d7 autoconf-2.59-r7.ebuild 1259
+RMD160 8f5dafef7193460e3e5c4b72f7fa99558a63163e autoconf-2.59-r7.ebuild 1259
+SHA256 c14c4b32e3d940591c57922333ee814af19d9248dd767c3ea501eb690f02d61b autoconf-2.59-r7.ebuild 1259
 MD5 dee8e039dbcfd6a6543e28688615ee17 files/autoconf-2.13-destdir.patch 677
+RMD160 ff71fb18c1676455e267dfd8f3059e8c9384fe19 files/autoconf-2.13-destdir.patch 677
+SHA256 67c3eaf2f8aaf3acbcff387bc3fc6d46688b56a6b51043344e301bfaf16186a0 files/autoconf-2.13-destdir.patch 677
 MD5 edfa347b2a6e2c0de846cabda899b429 files/autoconf-2.13-gentoo.patch 898
+RMD160 c39068cd8477188cde4818049c32b4142689ca0d files/autoconf-2.13-gentoo.patch 898
+SHA256 5d6a4b9d8d789684b44addf565200a90ee92140d58bebf087373ae82c4d89ea8 files/autoconf-2.13-gentoo.patch 898
 MD5 616563340fe214518ae208b42550d851 files/autoconf-2.59-more-quotes.patch 1223
+RMD160 f704db2caacdb3c7eedbe39ec1745503b336391c files/autoconf-2.59-more-quotes.patch 1223
+SHA256 0bd6d00b2f77e89684ed7305c3821090950fcc6407ab045fd3ace91ac0b19abd files/autoconf-2.59-more-quotes.patch 1223
 MD5 02c192b9ea3e4945d007a8cfde221c73 files/digest-autoconf-2.13 65
+RMD160 832840b58fb801e51ef0f590614a61eb565e5330 files/digest-autoconf-2.13 65
+SHA256 867ffd3f8499014b6bd437350f14c4d3fe42cb0b8c8daa3c00c2d6d2e87893b6 files/digest-autoconf-2.13 65
 MD5 ed1c29020cbdfc79d6a1ece183afd936 files/digest-autoconf-2.59-r6 66
+RMD160 468925a5fd7ec734b45e394f5b51c1d2c5a0c577 files/digest-autoconf-2.59-r6 66
+SHA256 610a706c7ac9eba8caadccba589863ff920a33dab17af4075675a5ea6ff14537 files/digest-autoconf-2.59-r6 66
 MD5 ed1c29020cbdfc79d6a1ece183afd936 files/digest-autoconf-2.59-r7 66
+RMD160 468925a5fd7ec734b45e394f5b51c1d2c5a0c577 files/digest-autoconf-2.59-r7 66
+SHA256 610a706c7ac9eba8caadccba589863ff920a33dab17af4075675a5ea6ff14537 files/digest-autoconf-2.59-r7 66
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDK/2BKf2g/qXtneoRAmpWAJ9rQHsZZzyG/hsYRIqK58CXJT0T3wCfXGFI
-dynF5uf1VJD76AFSFDmJMM8=
-=2LbV
+iD8DBQFEDjZ92+ySkm8kpY0RAjQzAJ9fQZpD/cqjaMmR3Bz1H2n6n+ANAQCgopjK
+vncXM8s2AEVxjgY4drq4wgg=
+=ym3+
 -----END PGP SIGNATURE-----
