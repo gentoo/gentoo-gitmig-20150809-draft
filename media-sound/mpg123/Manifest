@@ -1,21 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dbf0274154aae330c7a1c46aa462beda ChangeLog 14073
+MD5 a7e54a9c8185ef5f94ad40f19375f466 ChangeLog 14332
+RMD160 5c1f030be7fd36bb823edbd0d302f70e07c0e0c9 ChangeLog 14332
+SHA256 67342ae29a53349653d2a5d227f045a1fae3972b7648d994e545a133dfd38ae1 ChangeLog 14332
 MD5 a147137fdcd756dd021b9807a2fae2b6 files/0.59s-set-terminal-line-settings-once.patch 767
+RMD160 7fe4d8c799ff633511b825d6cf624aba73900efa files/0.59s-set-terminal-line-settings-once.patch 767
+SHA256 b4c350475b6392a6fdc1b54141665112c829e02111e3080eb0c49f4edaf7a412 files/0.59s-set-terminal-line-settings-once.patch 767
 MD5 31d9204617f76bd0b55e6f1c7242886a files/digest-mpg123-0.59s-r10 141
-MD5 12a16d9aafab05a0ad9eace12cf3596a files/digest-mpg123-0.59s-r8 141
+RMD160 db276d65d08b92ba75556ba4cd658362b607e46d files/digest-mpg123-0.59s-r10 141
+SHA256 85c9a9e1f0cff786697f17ec1ccc161c7ffc018f5298742cd748d66eab309568 files/digest-mpg123-0.59s-r10 141
 MD5 31d9204617f76bd0b55e6f1c7242886a files/digest-mpg123-0.59s-r9 141
+RMD160 db276d65d08b92ba75556ba4cd658362b607e46d files/digest-mpg123-0.59s-r9 141
+SHA256 85c9a9e1f0cff786697f17ec1ccc161c7ffc018f5298742cd748d66eab309568 files/digest-mpg123-0.59s-r9 141
 MD5 154058014fa42867a57faa57b857521a files/mpg123-osx.diff 11227
+RMD160 572614f922a288d68f56b66a20d3a9264c92c895 files/mpg123-osx.diff 11227
+SHA256 2941998aeb4c77d9c7633c6fcf01d37cb1b019f1b3d4dabadfceb152f97d11b8 files/mpg123-osx.diff 11227
 MD5 083de56193d644c972c2cf5034aaa100 files/mpg123-respectusercflags.patch 854
+RMD160 da65d77e7cfa8822c86c04fdcbf0b0024293be48 files/mpg123-respectusercflags.patch 854
+SHA256 4d5fc7650687f3c7aeb3e82622bde477f24412d914e5ceb30000725d654185dd files/mpg123-respectusercflags.patch 854
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 c7bd4d6de9a930e986e8c396f2459e04 mpg123-0.59s-r10.ebuild 3384
-MD5 f0035c0fdcb5496afb587c41ea83c1a3 mpg123-0.59s-r8.ebuild 2875
-MD5 05675bb6e6c4d77cf959c767dfa1eaf9 mpg123-0.59s-r9.ebuild 3101
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 c924b307abfa6ad61afe07867d9c2fb1 mpg123-0.59s-r10.ebuild 3343
+RMD160 a58b51f149f514e911be68a7e2eaf6d400cedef1 mpg123-0.59s-r10.ebuild 3343
+SHA256 fde705f826c18afe6b72c2d7f9be5f53d48062707eb812198346453cd015d7a2 mpg123-0.59s-r10.ebuild 3343
+MD5 0e2ca915443489945f125d4c1176e536 mpg123-0.59s-r9.ebuild 3060
+RMD160 8d4898e70b67744b2fd15229da86b52ecf2141ba mpg123-0.59s-r9.ebuild 3060
+SHA256 fab00dccdb342fb8128e9edd63828fd52a39743691a1172df146bca06989a593 mpg123-0.59s-r9.ebuild 3060
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDU5Dmj5H05b2HAEkRAsmnAJ9bizjoSwQidexc00WvniF/DpSb+wCdFKbB
-DiJ68kET8anFRNLMAUW2MpI=
-=eq1X
+iD8DBQFEDvxIAiZjviIA2XgRAmQ8AJkBD/M2uC/Eh4z1XcNBOgjJu/0JxwCgxGKU
+AQXZrIGiXfywT5QFWuxolkY=
+=VsVf
 -----END PGP SIGNATURE-----

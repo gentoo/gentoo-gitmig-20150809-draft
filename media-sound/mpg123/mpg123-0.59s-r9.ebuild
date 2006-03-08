@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r9.ebuild,v 1.10 2005/09/02 12:55:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r9.ebuild,v 1.11 2006/03/08 15:46:03 flameeyes Exp $
 
 inherit eutils
 
@@ -10,16 +10,15 @@ S="${WORKDIR}/${PN}"
 DESCRIPTION="Real Time mp3 player"
 HOMEPAGE="http://www.mpg123.de/"
 SRC_URI="http://www.mpg123.de/mpg123/${PN}-pre${PV}.tar.gz
-	 http://dev.gentoo.org/~eradicator/${PN}/${P}-gentoo-${PATCH_VER}.tar.bz2"
+	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc-macos ppc64 sparc x86"
 IUSE="mmx 3dnow esd nas oss"
 
-RDEPEND="virtual/libc
-	 esd? ( media-sound/esound )
-	 nas? ( media-libs/nas )"
+RDEPEND="esd? ( media-sound/esound )
+	nas? ( media-libs/nas )"
 
 # alsa-1 b0rks and it's not a simple fix
 #	 alsa? ( media-libs/alsa-lib )"
