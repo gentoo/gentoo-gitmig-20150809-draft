@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.4.ebuild,v 1.2 2006/01/09 22:22:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.4.ebuild,v 1.3 2006/03/08 20:29:56 flameeyes Exp $
 
 inherit qt3 eutils
 
@@ -16,10 +16,9 @@ IUSE="flac mp3 musicbrainz vorbis"
 DEPEND="=x11-libs/qt-3*
 	media-libs/taglib
 	musicbrainz? ( media-libs/musicbrainz
-	               mp3? ( media-libs/libmad )
-	               vorbis? ( media-libs/libogg
-	                         media-libs/libvorbis )
-	               flac? ( media-libs/flac ) )"
+		mp3? ( media-libs/libmad )
+		vorbis? ( media-libs/libvorbis )
+		flac? ( media-libs/flac ) )"
 
 pkg_setup() {
 	if ! built_with_use x11-libs/qt mysql; then
@@ -34,19 +33,19 @@ src_compile() {
 	# requires dev-libs/xmlwrapp.
 
 	local myconf="--with-taglib
-	              --without-id3
-	              --without-mysql-embedded
-	              --without-musicextras"
+			--without-id3
+			--without-mysql-embedded
+			--without-musicextras"
 
 	if use musicbrainz; then
 		myconf="${myconf}
-	                --with-musicbrainz
-		        $(use_with mp3 mad)
-		        $(use_with vorbis ogg)
-		        $(use_with flac)"
+			--with-musicbrainz
+			$(use_with mp3 mad)
+			$(use_with vorbis ogg)
+			$(use_with flac)"
 	else
 		myconf="${myconf}
-	                --without-musicbrainz"
+			--without-musicbrainz"
 	fi
 
 	econf ${myconf}	|| die "configure failed"

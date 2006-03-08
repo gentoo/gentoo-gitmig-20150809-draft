@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.ebuild,v 1.5 2005/06/28 21:22:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.ebuild,v 1.6 2006/03/08 20:17:46 flameeyes Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/yammi/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 sparc ~ppc"
-IUSE="cdr encode kde ogg xmms"
+IUSE="cdr encode kde vorbis xmms"
 
 DEPEND=">=media-libs/taglib-1.3
 	xmms? ( media-sound/xmms )"
@@ -20,9 +20,9 @@ RDEPEND="${DEPEND}
 	kde? ( || ( kde-base/noatun kde-base/kdemultimedia ) )
 	media-sound/sox
 	virtual/mpg123
-	ogg? ( media-sound/vorbis-tools )
+	vorbis? ( media-sound/vorbis-tools )
 	encode? ( media-sound/cdparanoia
-		  media-sound/lame )"
+		media-sound/lame )"
 
 # sox, mpg123 and vorbis-tools are used for the 'prelisten' feature.
 # cdparanoia and lame are used by the yammiGrabAndEncode script.
