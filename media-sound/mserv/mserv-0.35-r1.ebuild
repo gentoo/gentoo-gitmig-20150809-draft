@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.2 2006/03/07 15:13:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.3 2006/03/08 12:51:11 flameeyes Exp $
 
 inherit webapp eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="mserv"
 
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
-IUSE="oggvorbis"
+IUSE="vorbis"
 
 WEBAPP_MANUAL_SLOT="yes"
 SLOT="0"
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/perl-5.6.1
 	virtual/mpg123
 	media-sound/sox
 	net-www/apache
-	oggvorbis? ( media-sound/vorbis-tools )"
+	vorbis? ( media-sound/vorbis-tools )"
 
 pkg_setup() {
 	webapp_pkg_setup
