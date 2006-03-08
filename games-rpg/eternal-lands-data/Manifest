@@ -1,12 +1,28 @@
-MD5 11ad7ec8f8da673d21e4cb8ec524465d ChangeLog 673
-RMD160 82b8470011f5daaf9a48dc67812f4fd9d6088675 ChangeLog 673
-SHA256 97a715812c9e3a6748f7a0e6d24f150ec93c2f0633d8373babf5e456b88d8ccb ChangeLog 673
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e9f603a46bdcabe2262c1153b3e93cb5 ChangeLog 875
+RMD160 353c85a2d4c054a4e1e4791685451abd129a2581 ChangeLog 875
+SHA256 acd0054dc81edb1971e73f126f170c07253a0ff2118abfa7f4524e175763ea86 ChangeLog 875
 MD5 21d0f15645821ad23ba2a65c93a8e017 eternal-lands-data-1.2.0_p1-r1.ebuild 1630
 RMD160 152cb022f4fc7c3940e370ad2c9cde592862284e eternal-lands-data-1.2.0_p1-r1.ebuild 1630
 SHA256 7651ee29c90fb1e944eda13cc5100dda2b5012c56a1c121a42cfa498324d376c eternal-lands-data-1.2.0_p1-r1.ebuild 1630
+MD5 a422fcb2a26dd5ad96b650a25376dff6 eternal-lands-data-1.2.0_p1-r2.ebuild 1795
+RMD160 35e392dc36be0609a35a1fcfcdae85ca0068eced eternal-lands-data-1.2.0_p1-r2.ebuild 1795
+SHA256 1d3a5ac6bd9c8099c1a50e46c133b7731adda40d47dfbc18b40b7bf29a56f191 eternal-lands-data-1.2.0_p1-r2.ebuild 1795
 MD5 9c8f36acf3f57473a96cd1f0233b8807 files/digest-eternal-lands-data-1.2.0_p1-r1 497
 RMD160 36232cd30f2a9a5905fac47bc3dc05a7bb3ab8ae files/digest-eternal-lands-data-1.2.0_p1-r1 497
 SHA256 f8ee8f38cb4aa519a74cffb37a85bdb0c553072ac4e6a75ffaf215457100731d files/digest-eternal-lands-data-1.2.0_p1-r1 497
+MD5 166866f328a01b5144ae59bfcf6911f2 files/digest-eternal-lands-data-1.2.0_p1-r2 521
+RMD160 a8fafe74296127e473cafa88694072cf334fd87e files/digest-eternal-lands-data-1.2.0_p1-r2 521
+SHA256 c80dee7da10d8f1625c32ca36e70f3d58019d408cdf593e4419508fb951e56ba files/digest-eternal-lands-data-1.2.0_p1-r2 521
 MD5 a20195e09a3313e5b377c3c4ecc29e26 metadata.xml 365
 RMD160 c06f3d4bff68a5e0f8ab2da3dc62c3d0cc570a20 metadata.xml 365
 SHA256 0a477bd6a9085aca7e4538f81c3b9d7710cead2395d222f9903c898df57b3e63 metadata.xml 365
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDsiMEbVyYKaZ/NERArWWAJ9GvCuQ7TC0DR9AjH1xcAG6/ihauACdFA9g
+/VkS/sZOp4SY3VRrWkK91JI=
+=SUnc
+-----END PGP SIGNATURE-----
