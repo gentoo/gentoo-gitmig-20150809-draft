@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/kscope-1.2.0.ebuild,v 1.6 2006/03/08 17:23:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/kscope-1.2.0.ebuild,v 1.7 2006/03/08 18:49:26 tove Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="|| ( kde-base/kate kde-base/kdebase)"
+DEPEND="|| ( kde-base/kate kde-base/kdebase )"
 RDEPEND="${DEPEND}
 	dev-util/ctags
 	>=dev-util/cscope-15.5-r4"
