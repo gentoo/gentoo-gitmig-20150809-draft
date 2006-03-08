@@ -1,0 +1,24 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/files/pymsn-t.initd,v 1.4 2006/03/08 00:55:01 humpback Exp $
+
+depend() {
+	need net
+	use jabber-server
+}
+
+start() {
+	ebegin "Starting MSN Jabber Transport"
+	start-stop-daemon --start --name "pymsn-t" --background --chuid jabber:jabber \
+		--exec /usr/bin/python /usr/lib/PATH/site-packages/pymsn-t/pymsn-t.py -- \
+		-c /etc/jabber/pymsn-t.xml \
+		-l /var/log/jabber/pymsn-t.log
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping MSN Jabber Transport"
+	start-stop-daemon --stop --quiet --pidfile /var/run/jabber/pymsn-t.pid
+	eend $?
+}
