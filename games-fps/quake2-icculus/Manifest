@@ -2,18 +2,36 @@
 Hash: SHA1
 
 MD5 9e14e81431a029df748fbdf29634c856 ChangeLog 3489
+RMD160 e9eabfaefa2c2f6c799370495f39d2a021716684 ChangeLog 3489
+SHA256 e04686d89ba05dc704c3509d696d573b4c2eda91e1e7d8fb5804a71e8901186a ChangeLog 3489
 MD5 a9abc17ddbcfc3e70d9b57276eaccfba files/0.16-rogue-nan.patch 242
+RMD160 b95d2ff792831da963ae782cc0bca706b1ce62ce files/0.16-rogue-nan.patch 242
+SHA256 9de64221141c8e9e2c519504176029a57ad627ca9b68830e53d53db31f01a3c0 files/0.16-rogue-nan.patch 242
 MD5 74cb73011282b923820f35f8450ba583 files/README-postinstall 3083
+RMD160 fc8094e39bf5ed779fdd4c5e2b911422e69d03da files/README-postinstall 3083
+SHA256 90f8cce0737adf8a95afac11ca30911a59801659cb5ebf29943792586eed1a45 files/README-postinstall 3083
 MD5 799bccbb58711b8831aeaeaa3142b965 files/digest-quake2-icculus-0.16.1 250
+RMD160 8efad9742cfdb742e06146f752044edebdf53e79 files/digest-quake2-icculus-0.16.1 250
+SHA256 7613d38ed0e2296c452b71b60df5928984ecda0f3e32f6127a6002b0eb682f70 files/digest-quake2-icculus-0.16.1 250
 MD5 2df7805117c32223db23d0ae9c61881e files/quake2-icculus-0.16.1-amd64.patch 534
+RMD160 ad9193d1977ac2c0036e30022b198e5ff8b850dd files/quake2-icculus-0.16.1-amd64.patch 534
+SHA256 e95aeace865f089b6c1c9e0c362da407d1bd603147fb6886b9c13b37218c3a37 files/quake2-icculus-0.16.1-amd64.patch 534
 MD5 8ca258baafe8f83f1ce63d9abe0b5bb6 files/quake2-icculus-0.16.1-gentoo-paths.patch 7688
+RMD160 db521205c1d787fb31262d1710a57b7da50194a9 files/quake2-icculus-0.16.1-gentoo-paths.patch 7688
+SHA256 22d47f76fe1f06028088d2b7d9b1bc0bf1c91c559149859373af29f467ed2ea9 files/quake2-icculus-0.16.1-gentoo-paths.patch 7688
 MD5 4b84093c6bccf958d3ca1b865c3f9402 files/quake2.xpm 1234
+RMD160 4afa56af8446c288b5779cf7e2c0b8dfe98e9bba files/quake2.xpm 1234
+SHA256 0a5232384c56ccead145345a30e4ed7004bf36fe7656d43c46f1bed34d8fc2a9 files/quake2.xpm 1234
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 0fdba12be0b11b6fe543042dd3bac062 quake2-icculus-0.16.1.ebuild 4439
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 e8544d74b79044004aff2514a37af5e0 quake2-icculus-0.16.1.ebuild 4652
+RMD160 bcdf711fc442db5157d582787eff12f4c9746817 quake2-icculus-0.16.1.ebuild 4652
+SHA256 fd931f76c9a1333ce2c58d6da237f6de0a50ca28655667942163a3d8f041fc1e quake2-icculus-0.16.1.ebuild 4652
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDbTfQgIKl8Uu19MoRArW5AJ9qGt4prDgJRe6cw3Q+sAjHW5/JYwCcCYCQ
-l+gCbdixILB9DEnVp6mH5Wc=
-=mIn6
+iD8DBQFEDjkQ2+ySkm8kpY0RAnAzAJ97qrr0bmlBrvmxmM4EnuqoziBZ3QCfcq+P
+Pj5sbCmWwQ6JiTdVZuRLBXg=
+=ywgy
 -----END PGP SIGNATURE-----

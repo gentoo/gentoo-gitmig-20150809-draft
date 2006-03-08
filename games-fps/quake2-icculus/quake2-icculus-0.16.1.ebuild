@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.10 2005/11/05 22:51:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.11 2006/03/08 01:51:56 vapier Exp $
 
 inherit eutils games
 
@@ -21,10 +21,17 @@ RDEPEND="opengl? ( virtual/opengl )
 	svga? ( media-libs/svgalib )
 	sdl? ( media-libs/libsdl )
 	aalib? ( media-libs/aalib )
-	X? ( virtual/x11 )
+	X? ( || (
+		( x11-libs/libX11 x11-libs/libXext x11-libs/libXxf86dga x11-libs/libXxf86vm )
+		virtual/x11
+	) )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )"
 DEPEND="${RDEPEND}
+	X? ( || (
+		( x11-proto/xproto x11-proto/xextproto x11-proto/xf86dgaproto x11-proto/xf86vidmodeproto )
+		virtual/x11
+	) )
 	rogue? ( app-arch/sharutils )
 	xatrix? ( app-arch/sharutils )"
 
