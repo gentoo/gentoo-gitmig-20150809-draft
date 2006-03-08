@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.9 2006/02/27 01:38:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.10 2006/03/08 19:19:51 smithj Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -109,7 +109,7 @@ src_install() {
 	doins ${WORKDIR}/${PN}.conf
 	use apache2 && sed -i -e "s/apache/apache2/g" ${D}/etc/webalizer.conf
 
-	dodoc README* CHANGES Copyright sample.conf ${FILESDIR}/${PV}/apache.webalizer
+	dodoc *README* CHANGES Copyright sample.conf ${FILESDIR}/${PV}/apache.webalizer
 	webapp_src_install
 }
 
