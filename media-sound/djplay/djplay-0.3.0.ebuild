@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.3.0.ebuild,v 1.1 2006/01/13 20:03:40 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.3.0.ebuild,v 1.2 2006/03/08 15:34:49 flameeyes Exp $
 
 IUSE=""
 
@@ -14,8 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="virtual/libc
-	media-libs/alsa-lib
+DEPEND="media-libs/alsa-lib
 	$(qt_min_version 3.2)
 	media-libs/libsamplerate
 	media-libs/libmpeg3

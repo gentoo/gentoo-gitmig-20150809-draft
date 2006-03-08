@@ -1,14 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e11c73bcd4db76f3fd168cbba93ccedd ChangeLog 380
-MD5 a696f91edb81ff18aa1de4efe4877742 djplay-0.3.0.ebuild 968
+MD5 0c766090eb7c207fd1ba162af675f027 ChangeLog 506
+RMD160 90a2fbef4896593a85c0a41ff42c51b9133f9fd8 ChangeLog 506
+SHA256 6511c8d0537d7e8b87b513c1d654008e1e4a951f797581ecd66fd6920af4fe0b ChangeLog 506
+MD5 b710b001f51de81386694e0c1e7faba7 djplay-0.3.0.ebuild 957
+RMD160 68a5f7f790c5baf64fdfaa83f35ecb3c7e64a287 djplay-0.3.0.ebuild 957
+SHA256 f6e5910d331e4f6665c9d6b94f218f32629609c8ef1865aff19106f88902af5b djplay-0.3.0.ebuild 957
 MD5 f11793ac18ac89156eb4d64ffb100d3f files/digest-djplay-0.3.0 64
-MD5 ae504e0c4333f4138cc3fdc48da58ce0 metadata.xml 264
+RMD160 dc88b448e1e96d0abff83bd18d3d1e2066df2896 files/digest-djplay-0.3.0 64
+SHA256 9c9f356d946e1c4dc615d672fe831188b162bbfb03e33f9af52f10fedfd563f4 files/digest-djplay-0.3.0 64
+MD5 ddfb3333c9094f5009caeec20777064b metadata.xml 248
+RMD160 2db1bef0220609103232cf3f5959a203235830da metadata.xml 248
+SHA256 2fda23b6df8a661010fc6584b3afefb9ef41e8051f1f9a6d6f79199f5bfdb5cf metadata.xml 248
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDyAexvpz1081QvMkRAsRvAJwNcGiW6Y6aB16XOhstEeUA7Ryr0ACaAiZP
-+xhIlNrvBatAPPnUTNN2BaM=
-=5Hyo
+iD8DBQFEDvmmAiZjviIA2XgRArEnAJ9lzHxkBvU1pH3ALYbjwEYdRFCG6wCg2Ud7
+otP4vBcvkU+iEuG7HlRnEgU=
+=B+hG
 -----END PGP SIGNATURE-----
