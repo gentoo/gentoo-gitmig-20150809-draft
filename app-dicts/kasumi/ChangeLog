@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/kasumi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.14 2006/02/06 19:28:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.15 2006/03/08 15:00:37 flameeyes Exp $
+
+  08 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kasumi-0.10-gcc41.patch, kasumi-0.10.ebuild:
+  Add fix for building with GCC 4.1. See bug #120593.
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> kasumi-0.10.ebuild:
   stable on amd64

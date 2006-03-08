@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-0.10.ebuild,v 1.5 2006/02/06 19:28:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-0.10.ebuild,v 1.6 2006/03/08 15:00:37 flameeyes Exp $
+
+inherit eutils
 
 DESCRIPTION="Anthy dictionary maintenance tool"
 HOMEPAGE="http://kasumi.sourceforge.jp/"
@@ -19,6 +21,13 @@ DEPEND="virtual/libc
 	>=dev-libs/expat-1.95
 	>=x11-libs/pango-1.2
 	nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-gcc41.patch"
+}
 
 src_compile() {
 	econf $(use_enable nls) || die
