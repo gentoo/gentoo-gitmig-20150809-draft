@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.5.ebuild,v 1.7 2006/03/07 18:55:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.5.ebuild,v 1.8 2006/03/08 01:22:21 vapier Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -36,7 +36,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--bindir=/bin \
-		--libexec=/usr/$(get_libdir)/misc \
+		--libexec='$(libdir)/misc' \
 		$(use_enable nls) \
 		--enable-switch \
 		|| die
