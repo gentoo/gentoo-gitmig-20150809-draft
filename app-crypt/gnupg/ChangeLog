@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.166 2006/03/05 14:10:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.167 2006/03/08 18:25:26 vanquirius Exp $
+
+*gnupg-1.4.2.2 (08 Mar 2006)
+
+  08 Mar 2006; Marcelo Goes <vanquirius@gentoo.org>
+  +files/gnupg-1.4.2.2-badruman.patch, +files/gnupg-1.4.2.2-selftest.patch,
+  +gnupg-1.4.2.2.ebuild:
+  1.4.2.2 version bump for bug 125217.
 
 *gnupg-1.9.20-r1 (05 Mar 2006)
 
