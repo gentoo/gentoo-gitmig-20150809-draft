@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.30 2006/01/31 10:25:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.31 2006/03/08 19:51:40 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -180,7 +180,7 @@ autotools_run_tool() {
 # Internal function to check for support
 autotools_check_macro() {
 	[[ -f configure.ac || -f configure.in ]] && \
-		autoconf --trace=$1 2>/dev/null
+		WANT_AUTOCONF="2.5" autoconf --trace=$1 2>/dev/null
 	return 0
 }
 
