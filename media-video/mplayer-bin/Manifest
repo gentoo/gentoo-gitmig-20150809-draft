@@ -1,18 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5bd0270302c21a41d0906a5f8687c73f ChangeLog 1594
-MD5 31fa5b3a7f08192c5f7c2b6f56c96e2c files/digest-mplayer-bin-1.0_pre7-r1 77
-MD5 3b5cbccfff9e3a30c952716ad4a600d1 files/digest-mplayer-bin-1.0_pre7-r2 77
+MD5 90a544eaae1d57173dccd94f53c63412 ChangeLog 1805
+RMD160 c1d6aa6511a0cf1d2137ecf5fc8d737d117caa56 ChangeLog 1805
+SHA256 5d11cbc333a6aa6e82758c1a9884f5289f5588dce9d7e6a387b8d4ac875ed652 ChangeLog 1805
+MD5 cc3c9b950addd0bf2607ddc24c081c78 files/digest-mplayer-bin-1.0.20060217 271
+RMD160 13bc8d235acb66e7610c6d0171616b72f8cdc613 files/digest-mplayer-bin-1.0.20060217 271
+SHA256 fd8e62c0f4568694a200a090ce4b4c10742beb0f290ec3b3da8e0e369ec5c907 files/digest-mplayer-bin-1.0.20060217 271
 MD5 6de0d18bfdfdfe51517d3eb29b2d4df1 files/digest-mplayer-bin-1.0_pre7-r3 77
+RMD160 e1924d886f9c6243b3a2397f1fd8afd9f4206ebe files/digest-mplayer-bin-1.0_pre7-r3 77
+SHA256 74bcdd104886565bac83de6e95cf5bb42162182c7188c1d18b68ca510495285f files/digest-mplayer-bin-1.0_pre7-r3 77
 MD5 d138fbd38b04f78fe9b3766051723a5b metadata.xml 218
-MD5 d9ec6c5a0cd8021bea43b1d8abccdf01 mplayer-bin-1.0_pre7-r1.ebuild 829
-MD5 14801b83d2fcbb186b1f2972fa0b6fb5 mplayer-bin-1.0_pre7-r2.ebuild 1110
+RMD160 cbc93b26738b5e98e127744c5a949cf2f0920778 metadata.xml 218
+SHA256 0522168dc16d1a5fe22d19e63237544b3bdbb06dcefb1df3d4fe8c54975a6d3b metadata.xml 218
+MD5 a27c2a74a50c89ff3b150cb72fcf8166 mplayer-bin-1.0.20060217.ebuild 1145
+RMD160 3fec0af3f437e433ac5a5412d33b2c479319be85 mplayer-bin-1.0.20060217.ebuild 1145
+SHA256 db76ead6b783b0835b16b4c633462be20fbb332c83bc63afd14df97c53d37b0a mplayer-bin-1.0.20060217.ebuild 1145
 MD5 e9c94d2d375925b0f970898cf1fbb722 mplayer-bin-1.0_pre7-r3.ebuild 1147
+RMD160 f3ab7bb96fcebe3bc934a3c309aecb42881540da mplayer-bin-1.0_pre7-r3.ebuild 1147
+SHA256 578513e27171c08b0b9c09720c9baf54a8de8cf6b67880233d170a1e300c3296 mplayer-bin-1.0_pre7-r3.ebuild 1147
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDZ4+tomPajV0RnrERAt6EAJ9cAiTAqGcfxTP+yQEwpimEPw1+bQCfSvyt
-Gr4m1xHih+yLrSNDSveFPh0=
-=YSnc
+iD8DBQFED1M/omPajV0RnrERArNIAJwL0/95jqzAzCtwYZ/TbFq85Az3YQCfSRL0
+kEnRRRUPTyg1ObfTaYGNSOw=
+=iYaO
 -----END PGP SIGNATURE-----
