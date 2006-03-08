@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.24.ebuild,v 1.1 2006/02/12 11:23:16 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.24.ebuild,v 1.2 2006/03/08 10:36:52 nelchael Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -17,6 +17,7 @@ SLOT="0"
 RDEPEND="|| ( (
 		x11-libs/libXxf86misc
 		x11-apps/xwininfo
+		x11-apps/appres
 		xinerama? ( x11-libs/libXinerama ) )
 	virtual/x11 )
 	media-libs/netpbm
