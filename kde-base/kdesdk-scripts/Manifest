@@ -1,8 +1,34 @@
-MD5 1803f2c8b968865ab380471e9a4c521e ChangeLog 3551
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ddb0b04da2ea6b18f626358721ea2379 ChangeLog 3544
+RMD160 7e3262f98ced5426d2f0e6de7f2585dd32a0dabe ChangeLog 3544
+SHA256 a708f7edd45f85cb2e500f1a454c2bb58666e1ffbf485027b70faebfe7c40f19 ChangeLog 3544
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kdesdk-scripts-3.4.1 206
+RMD160 537c88444c961cfc4b7af18ca00a8be224f64cee files/digest-kdesdk-scripts-3.4.1 206
+SHA256 39c922f0ac54c84622428b955b44427f3e093a3f6d089f601670375413cda7fc files/digest-kdesdk-scripts-3.4.1 206
 MD5 1e423fe06c976614875c91024253a35c files/digest-kdesdk-scripts-3.5.0 66
+RMD160 0f688457c3ce31725bc9e7dacd02fc00b522d5ba files/digest-kdesdk-scripts-3.5.0 66
+SHA256 68c3f0a231df037d9f160ef681108bd3667c570c618c70c218c18be641c7e3de files/digest-kdesdk-scripts-3.5.0 66
 MD5 37b63842d3bb2d884b13ebf46628a792 files/digest-kdesdk-scripts-3.5.1 66
+RMD160 4a4f776257134dc5753f59936f47f0a5c89ead63 files/digest-kdesdk-scripts-3.5.1 66
+SHA256 c55dc0a628300f22699d6bed9ebcd180dec8d93221eadc66b964184b1e09ca50 files/digest-kdesdk-scripts-3.5.1 66
 MD5 110e7c59cc98d457432bb38ac0986103 kdesdk-scripts-3.4.1.ebuild 468
+RMD160 e47a38600d1c8e0867ae48075f45d727ca8ae9b2 kdesdk-scripts-3.4.1.ebuild 468
+SHA256 0c2ce4d6d940a5260fb558e75513599ef66dfcad2b93ea0bf85c321c3f8186ad kdesdk-scripts-3.4.1.ebuild 468
 MD5 e9fe8020fdde66ba04d7887513093d7e kdesdk-scripts-3.5.0.ebuild 457
+RMD160 6616abccb138b4cc4cc115f27877e3371e94ec51 kdesdk-scripts-3.5.0.ebuild 457
+SHA256 63d37f5cf3fc49d111597d6d7618460df17e8f897f8940ceba2f20059f98c0ed kdesdk-scripts-3.5.0.ebuild 457
 MD5 0f5a939cc01d1958ea304c59a8e22e82 kdesdk-scripts-3.5.1.ebuild 459
+RMD160 0c3e605065f1062c0a78e4064712bad59192e456 kdesdk-scripts-3.5.1.ebuild 459
+SHA256 72c6cfeb95d920535d40157069a43068d7e1c3d6d3daccadb8f3715eaf72625c kdesdk-scripts-3.5.1.ebuild 459
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDyklV3J2n04EauwRAqiDAJsFNIH3OdtFTIyF/OHNVntrCWi6MQCdENf2
+J8/e5WDA9wVH1IX/6kqvtks=
+=xybr
+-----END PGP SIGNATURE-----
