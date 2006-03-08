@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.1_pre20060122.ebuild,v 1.2 2006/03/05 15:51:08 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.1_pre20060122.ebuild,v 1.3 2006/03/08 14:06:19 zypher Exp $
 
 inherit wxwidgets flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="aac amr debug ffmpeg jpeg mad mozilla ogg opengl oss png sdl svg ssl theora truetype vorbis wxwindows xml2 xvid"
+IUSE="aac amr debug ffmpeg jpeg mad mozilla ogg opengl oss png sdl ssl theora truetype vorbis wxwindows xml2 xvid"
 
 S="${WORKDIR}/${PN}"
 
@@ -131,10 +131,10 @@ src_compile() {
 		--datadir=${D}/usr/share \
 		--sysconfdir=${D}/etc \
 		--localstatedir=${D}/var/lib \
+		--enable-svg \
 		$(use_enable amr) \
 		$(use_enable debug) \
 		$(use_enable opengl) \
-		$(use_enable svg) \
 		$(use_enable oss oss-audio) \
 		$(use_enable ssl) \
 		${myconf} \
