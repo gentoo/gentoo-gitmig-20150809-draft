@@ -10,6 +10,9 @@ SHA256 cb0048d6fd3d439f324188ee145db8817fc94f97e5cfe9cf1d69df1b04f2048b files/di
 MD5 d1918953015d3fb5fb6ae39e652fb2c7 files/digest-quodlibet-0.17.1-r2 250
 RMD160 e8ccb5f5ae6485195899e921e5d4ea0aca6429ff files/digest-quodlibet-0.17.1-r2 250
 SHA256 76c88f86559b5d175b628e8682d25e77de08d48af60df8a81eb3653327b6b3b1 files/digest-quodlibet-0.17.1-r2 250
+MD5 a1c9620cc4536cfdb260002b24be843a files/quodlibet-0.17.1-multilibfix.patch 303
+RMD160 0261ff0ef973c3816d81f230fd529e80339ffc0a files/quodlibet-0.17.1-multilibfix.patch 303
+SHA256 d617e64d526add925bfcbe9d8ce3c491cba42fa4f501bc71e331dcc84a36956e files/quodlibet-0.17.1-multilibfix.patch 303
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
@@ -22,7 +25,7 @@ SHA256 3560ddbc98e0535991b3e906db3043b4e1cb7418d0d4c797ffb606eed90b0dc0 quodlibe
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEDH16wUpWvClEHQoRAr8yAJ9r3svym0dIF8TddBuFJnxoARWwQQCfSFx+
-AWMbliGyoqXaNLaFBd4wgc0=
-=vl0N
+iD8DBQFEDw5BwUpWvClEHQoRAkE3AJ9E8Syy/AGIzJ+7naAVFGobGDZaKgCbBTSe
+WROMSGUrybea2NvA6dkJvVY=
+=rTg7
 -----END PGP SIGNATURE-----
