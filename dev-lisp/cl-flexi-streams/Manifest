@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5fd93b43762f9e2d6faff1c4a5b11589 ChangeLog 596
+MD5 957f053890f1c4b61e1ad3882816e631 ChangeLog 747
+RMD160 44d26f52d29e0900c60e2462e8285ecfdcd701fc ChangeLog 747
+SHA256 7c8203768d77be79c0a395af9a5be4d1489e34a8c818ebf231e6418dba24f55b ChangeLog 747
 MD5 ef0a0f4dc05e22f3158b1e17478573df cl-flexi-streams-0.5.0.ebuild 850
+RMD160 71ea15378ea08fc866e1e83b5eefabf6fec9ebd7 cl-flexi-streams-0.5.0.ebuild 850
+SHA256 770bce851fa407672ee4a95ba06451fd89b37f9b831a6d87cc3e0694df2930c7 cl-flexi-streams-0.5.0.ebuild 850
 MD5 ec1adbaa9e756fdd51b5ffd2549bbacf cl-flexi-streams-0.5.2.ebuild 850
+RMD160 97f77dcb72c92cd4cade897afb9ddea6bb7b0152 cl-flexi-streams-0.5.2.ebuild 850
+SHA256 88eca1bf7f70b01d804571ccb2e43866ebdb9a0b5de1d0fbc62533090da4c552 cl-flexi-streams-0.5.2.ebuild 850
+MD5 1ee49eeb7ccbb796755f8a790bdaa9c4 cl-flexi-streams-0.5.3.ebuild 850
+RMD160 ec13c089d338f40aae4b9e285e7db352cfe4cde5 cl-flexi-streams-0.5.3.ebuild 850
+SHA256 7352277add019455e1c19c49068fe363dc400c66852c900746188118498a9a62 cl-flexi-streams-0.5.3.ebuild 850
 MD5 ae62d0ebd52c1ed7f4bf0d140ba3e576 files/digest-cl-flexi-streams-0.5.0 75
+RMD160 8912b79b09104ab9f8fca88041781477d0952bf6 files/digest-cl-flexi-streams-0.5.0 75
+SHA256 080988e673089bd206285a56336f3a3b1f29515a8c33c3da4e4cd7784c699669 files/digest-cl-flexi-streams-0.5.0 75
 MD5 cbf516f1112284bc8e1558b2489c175b files/digest-cl-flexi-streams-0.5.2 75
+RMD160 09276a3fe44bb7611c3b4d9de671d8b908514dee files/digest-cl-flexi-streams-0.5.2 75
+SHA256 53c8d3f50550809784923ab6b45166518e537db7390fe017d175d627a8d9f348 files/digest-cl-flexi-streams-0.5.2 75
+MD5 6e4314167aa0f9615a9eed457a59ec64 files/digest-cl-flexi-streams-0.5.3 271
+RMD160 a8c3d7f2eaaccf01b1622179e4a5a77f6615d7e3 files/digest-cl-flexi-streams-0.5.3 271
+SHA256 cc625f136a308069bb4397196923604cc2fd1418bfde655fe985756c64e1b80c files/digest-cl-flexi-streams-0.5.3 271
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+RMD160 5edb79931b874dc3a72128f0742b9d4c4eb3c8c1 metadata.xml 164
+SHA256 f8efc9385015233c71f279f85bd0a327525b7136cf8714cc04449d8bea4ce22f metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD2GcFyiNZaEAZA+ARAqkuAJ9fVHxXl5Tr7WbplgbC0/KIf5C7tQCeOZP8
-LAybQBIXESGZEAhARpk0KAU=
-=befu
+iD8DBQFEDnuRyiNZaEAZA+ARAqrxAJ9MfNtBokNlELLQBtc36I4MxjDz1ACfSWZE
+Qfap0qkNPdz86WFokTsNdlY=
+=nXD/
 -----END PGP SIGNATURE-----
