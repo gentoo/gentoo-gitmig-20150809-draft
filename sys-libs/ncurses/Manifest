@@ -1,27 +1,67 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3f55f7b2d4a2b28803f8a63eb3416bf2 ChangeLog 16459
+MD5 f8a120e06866c03685646b082c79cf73 ChangeLog 16629
+RMD160 23d2ec166a946b2d9266764288c5190dddf7ba97 ChangeLog 16629
+SHA256 3c24c51a94073c6956076fa030a1b1ecb0b2f6f6ce3282162e16a79f2b672536 ChangeLog 16629
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r5 64
+RMD160 b238795ec1b72d5e0cfaffa2701846e3218be2ee files/digest-ncurses-5.4-r5 64
+SHA256 f92a103594dfd5a20160a9b155cfb0eacc0dd53fcaa60d89f5542db4a1ed416d files/digest-ncurses-5.4-r5 64
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r6 64
+RMD160 b238795ec1b72d5e0cfaffa2701846e3218be2ee files/digest-ncurses-5.4-r6 64
+SHA256 f92a103594dfd5a20160a9b155cfb0eacc0dd53fcaa60d89f5542db4a1ed416d files/digest-ncurses-5.4-r6 64
 MD5 97d66c7857e4be9c07d6ae8d7798a16c files/digest-ncurses-5.4.20050319 142
+RMD160 96c03d6f2b75c2d681e4c70f15c09d47fef76da6 files/digest-ncurses-5.4.20050319 142
+SHA256 22f58f00dc26934ac7102ea8a89eaabc5d585b40cb4cb3465bed322d90095396 files/digest-ncurses-5.4.20050319 142
 MD5 cfb597b362a2079e24880e47e24357df files/digest-ncurses-5.5 64
+RMD160 7569b55dc3e4da22ad0df3d19015d62679b3f817 files/digest-ncurses-5.5 64
+SHA256 988db975bb4e8f9b2e07526e7a95367496153510f24f112d0bb16c38cfde4e65 files/digest-ncurses-5.5 64
 MD5 cfb597b362a2079e24880e47e24357df files/digest-ncurses-5.5-r1 64
+RMD160 7569b55dc3e4da22ad0df3d19015d62679b3f817 files/digest-ncurses-5.5-r1 64
+SHA256 988db975bb4e8f9b2e07526e7a95367496153510f24f112d0bb16c38cfde4e65 files/digest-ncurses-5.5-r1 64
+MD5 cfb597b362a2079e24880e47e24357df files/digest-ncurses-5.5-r2 64
+RMD160 7569b55dc3e4da22ad0df3d19015d62679b3f817 files/digest-ncurses-5.5-r2 64
+SHA256 988db975bb4e8f9b2e07526e7a95367496153510f24f112d0bb16c38cfde4e65 files/digest-ncurses-5.5-r2 64
 MD5 118971faee11066510aa77e6c6a2c51b files/ncurses-5.4-c++-templates.patch 351
+RMD160 d9a0e9387367be813e7067b4ddeddf907a2217b8 files/ncurses-5.4-c++-templates.patch 351
+SHA256 853fc14f7ab2f5eb156b2e7d658d79243877102a18cd2845e3ebd4eb24193d7c files/ncurses-5.4-c++-templates.patch 351
 MD5 1ecbf68a55269d2cebeb997f6973fc1d files/ncurses-5.4-share-sed.patch 686
+RMD160 95a2ee637ccad464e182ae5270fb7c569c080e69 files/ncurses-5.4-share-sed.patch 686
+SHA256 a4c04a260ddacc8d283b14120d8d467836aa091b7af3e08905c3e33170665b06 files/ncurses-5.4-share-sed.patch 686
 MD5 61ecd5aac5ddbd35cc4d4a00282eed01 files/ncurses-5.4-xterm.patch 495
+RMD160 4b63e381d8c155e83df1668985ed40c5b144ab9d files/ncurses-5.4-xterm.patch 495
+SHA256 120e60719cf70879af5b57318a8ebd52282f19ac3507f45a5aeda7811036253d files/ncurses-5.4-xterm.patch 495
 MD5 ad3890f5461218f96e1f999a48879711 files/ncurses-5.5-gfbsd.patch 3060
+RMD160 cf0eb3118ec5c0cd009d8569bb48fb92268b7877 files/ncurses-5.5-gfbsd.patch 3060
+SHA256 eb640dac78faf5970896d695d36953c2e36a89d92264cbea1b7a0c926ff635b1 files/ncurses-5.5-gfbsd.patch 3060
 MD5 2167b54d7c96964183554e767e5f5376 files/xterm-debian.ti 342
+RMD160 7f0506819afd9687891eaf03548c659c0ee1abd7 files/xterm-debian.ti 342
+SHA256 1b10cdbff41f757c9f23f42c58dd6966e3c253b36fc6ceae1034233535743de0 files/xterm-debian.ti 342
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 a885c047e0ef76d733b76f158c480f2a ncurses-5.4-r5.ebuild 6147
+RMD160 6a19bb177cf460e7937ab64479f4acbb39ff683b ncurses-5.4-r5.ebuild 6147
+SHA256 618b715b3b9c2e6757b6845921613d9cda86269189c954d2c8b1f075a2b7ca3b ncurses-5.4-r5.ebuild 6147
 MD5 b5d6d9fcc28b4190bbb3b53f3ee1ba97 ncurses-5.4-r6.ebuild 5446
+RMD160 6349acb60ed08fbfb884dc03fb95c3c96fdbd690 ncurses-5.4-r6.ebuild 5446
+SHA256 0d921a9e40a21f28cf85cd7d90a31cf711b90a256927b0002ad8f23fc4c1b8da ncurses-5.4-r6.ebuild 5446
 MD5 45af8f6f6c26f746944e5e170f4ce537 ncurses-5.4.20050319.ebuild 5741
+RMD160 3796a2dd6e2b47298d1197d96779312a049d3048 ncurses-5.4.20050319.ebuild 5741
+SHA256 028d5c9fc05aabd999529676ff19f32ce1a96165b40919f3afdbe5489510fe87 ncurses-5.4.20050319.ebuild 5741
 MD5 09ffb43a04a942aa18f6e40b991da362 ncurses-5.5-r1.ebuild 5351
+RMD160 4554c8bae8bc28c5735210bcaabf5b4cd51097d5 ncurses-5.5-r1.ebuild 5351
+SHA256 0ae216813de6c1597e35907221682fa730136a3c207cbae2d384bc1a53716ea8 ncurses-5.5-r1.ebuild 5351
+MD5 fe1e8a88bab44e8f2dbd51c5b1b6e110 ncurses-5.5-r2.ebuild 5421
+RMD160 e0564c3ed35fa0074181784b3016717abbdffef5 ncurses-5.5-r2.ebuild 5421
+SHA256 8f50d7f6d798db9bf2c2da1cbd6d519e055521a034d4d0ec87fc1a1132c53d43 ncurses-5.5-r2.ebuild 5421
 MD5 05ffcf86aeb3d3f5c9a5bfd5a72fb2d2 ncurses-5.5.ebuild 5253
+RMD160 3a75fe57295da50e2aa666c3382f4c67dbdbf6d0 ncurses-5.5.ebuild 5253
+SHA256 1b4bf44e80fd126e6141ef3b968323914e5313cdcb2a6cb9b1105f71d9d0a5d1 ncurses-5.5.ebuild 5253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDtoVzAiZjviIA2XgRAr95AJ4gz3BP0g4uKbT844Vwe68KqrqrwQCgx6BR
-GW7hHJPk4j9dIGRC9E3K/ME=
-=itwx
+iD8DBQFEDjIU2+ySkm8kpY0RApSeAKCwduiWrGGC2DGstU6yTsa0MX4b5wCgkkyS
+q77V4o7OA2FIYHBKKbET3rc=
+=DTUc
 -----END PGP SIGNATURE-----

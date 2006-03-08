@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/ncurses
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.106 2005/12/31 13:19:35 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.107 2006/03/08 01:22:09 vapier Exp $
+
+*ncurses-5.5-r2 (08 Mar 2006)
+
+  08 Mar 2006; Mike Frysinger <vapier@gentoo.org> +ncurses-5.5-r2.ebuild:
+  Make sure we move the wide versions of libs to /usr/lib as well.
 
   31 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> ncurses-5.5-r1.ebuild:
   Use $CHOST checks instead of $USERLAND checks for moving libraries around.
