@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r1.ebuild,v 1.13 2005/10/22 06:57:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r1.ebuild,v 1.14 2006/03/08 01:52:21 vapier Exp $
 
 inherit eutils games
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 
-DEPEND="virtual/x11
-	media-libs/imlib
+DEPEND="media-libs/imlib
 	=x11-libs/gtk+-1.2*"
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"

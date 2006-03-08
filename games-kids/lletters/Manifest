@@ -1,6 +1,28 @@
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 4748cfb2caed36e46c396f1824eadcbb lletters-0.1.95-r1.ebuild 1101
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3a23156ef185ff214cbaf083cc483913 ChangeLog 2685
+RMD160 57267b3a18200a214fcf2e1ce297609943aa2f6e ChangeLog 2685
+SHA256 faf67844bfd1fccc8d9a5e3da01d3230749877ae82f559082380b79107de529e ChangeLog 2685
 MD5 a259a5d00bd54dc2a2dc9905b28b808d files/digest-lletters-0.1.95-r1 141
+RMD160 2f8606a1256dd9063ff1974da479b851db600491 files/digest-lletters-0.1.95-r1 141
+SHA256 66306f20bfeebfe3b326b1fce24f14d8163a94afef593131989fbcf596f1751a files/digest-lletters-0.1.95-r1 141
 MD5 1291047f7e926ab70ceba5f6d7fde683 files/lletters-0.1.95-build.patch 875
+RMD160 71f83141e8ef0722985a071f7b12256de238e1b3 files/lletters-0.1.95-build.patch 875
+SHA256 00d79d876d449dce222d5bb5014bf6c2580a4bab0fd567dd12155282ca5ad693 files/lletters-0.1.95-build.patch 875
 MD5 a21b498ef02d981381f06d7e7ee0777b files/tellhow.h.gentoo 762
+RMD160 4d1bb69b706880bfd3cc80825c192f648bd969c0 files/tellhow.h.gentoo 762
+SHA256 208cfc6ec0caec0901ae6c3ca1623028212b2d8b52c482155dda19969f2bd862 files/tellhow.h.gentoo 762
+MD5 cbd179cb16524a4f515dbd91e2e5726d lletters-0.1.95-r1.ebuild 1085
+RMD160 bc2d48faad807713c16178e842679b964d04734e lletters-0.1.95-r1.ebuild 1085
+SHA256 53152e162c177c376f793383d37cd114926d984a456dc4519904ee1324e14c0a lletters-0.1.95-r1.ebuild 1085
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDjkp2+ySkm8kpY0RArYAAKDEZ2Yv+UvG3TeN6TXL/Z12peqJLgCfamy2
+E6La/zMmOk7l/8aYQlrKzIQ=
+=Fnoo
+-----END PGP SIGNATURE-----
