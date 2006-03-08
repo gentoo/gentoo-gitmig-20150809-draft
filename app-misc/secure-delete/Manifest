@@ -1,22 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bdc98cef20fb5f4023fdc6aa3aa190ab ChangeLog 2083
-RMD160 bb6e89ec706796c554f6d156495e62052308f4f1 ChangeLog 2083
-SHA256 681ff0a6a6aa35c1eb1c0ce081fcd5836ad2ab69ec1644ecd5c617f7cb7dbf21 ChangeLog 2083
+MD5 8698ba5512be2fdcbcd9e9d3422992a5 ChangeLog 2205
+RMD160 9c5b039c5bcf5012cb9c4c6b13320fe1d1755bc2 ChangeLog 2205
+SHA256 18d4ec766afee4ff18e58411fdc0c7e7de9139dc8d195ad63834d60de4be6b09 ChangeLog 2205
 MD5 1bee983c8785c87d868a02f06c49e29d files/digest-secure-delete-3.0 68
 RMD160 3af9566f9d5e506d0e6ac1857e68090ed660103a files/digest-secure-delete-3.0 68
 SHA256 0976979230089c353816e8d963a625b5ffe8ca29ceef4ad4f84dc11824602859 files/digest-secure-delete-3.0 68
+MD5 1746ba70c22589308d722045eb7a860d files/digest-secure-delete-3.1 250
+RMD160 523600cb5d99a0617b1f8b83f9643325741fc7bf files/digest-secure-delete-3.1 250
+SHA256 6caed62262c9b612927d8a44765bebb9209a049a2581e6ccfc6099452fdb7109 files/digest-secure-delete-3.1 250
+MD5 d5cbbeea26872849071fbb0f2a6d2c4a files/secure-delete-3.1-do-not-use-the-kernel-module.patch 1493
+RMD160 3a33fdf3361768d5c6af93def4bd50b9a53c08e3 files/secure-delete-3.1-do-not-use-the-kernel-module.patch 1493
+SHA256 76e2987c590f0e40455d0d4aec87fca97a7b55ae348fc8d9eeeacaec4b665849 files/secure-delete-3.1-do-not-use-the-kernel-module.patch 1493
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 RMD160 5b59fc85d3bafae0872cf691e5f032bac39ba539 metadata.xml 310
 SHA256 39e1273dd60bd3ceb460e9366a648c8fa21db1c292df4573e69f41cf6c84f6fc metadata.xml 310
 MD5 368e13118c25d89512de00ab88a0f03a secure-delete-3.0.ebuild 1129
 RMD160 53ca5decaabb7190af3319d8b53d3b08c32d9eb9 secure-delete-3.0.ebuild 1129
 SHA256 91272ead16f8a8d2d3660ff27c6eb8d97ef08b987538d11c4f2f4e4851936e24 secure-delete-3.0.ebuild 1129
+MD5 558e7b65c2538c4092bbbcb48bfc59b0 secure-delete-3.1.ebuild 1435
+RMD160 78f74ddfbdc6abab8092839a87cebd0c74bea247 secure-delete-3.1.ebuild 1435
+SHA256 6674206c0615b636e3d0cdd3b8443871fef01d7e9bebc276391235af1fcf0b50 secure-delete-3.1.ebuild 1435
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD6lxgV3J2n04EauwRAqp/AJ92AKTtOkkF12N+USiURmv2q4WHIQCgmbeS
-bJA4yX/v1VgBpNBjzUM847Q=
-=b+ae
+iD8DBQFEDzkDl5AvwDPiUowRAiCGAKDemPT3UbtvN/2/gDAK+A90NozekACePfwO
+BHZXIyfmSbM1hnqom4JW+Gs=
+=o8Pb
 -----END PGP SIGNATURE-----
