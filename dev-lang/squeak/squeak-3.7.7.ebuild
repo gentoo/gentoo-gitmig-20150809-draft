@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.7.7.ebuild,v 1.1 2006/03/07 11:21:17 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.7.7.ebuild,v 1.2 2006/03/08 14:54:35 araujo Exp $
 
 inherit base versionator fixheadtails eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 	local myconf=""
 	use X || myconf="--without-x"
 	use mmx && myconf="${myconf} --enable-mpg-mmx"
-	use threads && myconf="${myconf} --enable-mpg-pthreads"
+	use threads && myconf="${myconf} --enable-mpg-pthread"
 	use iconv || myconf="${myconf} --disable-iconv"
 	cd ${S}
 	mkdir build
