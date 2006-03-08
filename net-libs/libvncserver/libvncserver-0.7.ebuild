@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.7.ebuild,v 1.2 2004/12/30 20:05:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.7.ebuild,v 1.3 2006/03/08 02:00:07 vapier Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="nobackchannel no24bpp zlib jpeg"
 
-DEPEND="virtual/x11
-	zlib? ( sys-libs/zlib )
+DEPEND="zlib? ( sys-libs/zlib )
 	jpeg? ( media-libs/jpeg )"
 
 S=${WORKDIR}/LibVNCServer-${PV}
