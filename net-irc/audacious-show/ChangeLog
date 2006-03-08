@@ -1,0 +1,6 @@
+# ChangeLog for net-irc/audacious-show
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/audacious-show/ChangeLog,v 1.1 2006/03/08 21:46:00 hansmi Exp $
+
+  08 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> ChangeLog:
+  Added new ebuild, written by Frank Schmitt <gentoo@frank-schmitt.com>.
