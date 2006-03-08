@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.12.1.ebuild,v 1.2 2006/01/13 01:16:37 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.12.2.ebuild,v 1.1 2006/03/08 13:53:53 nattfodd Exp $
 
 DESCRIPTION="Online gallery generator"
 HOMEPAGE="http://home.gna.org/llgal"
@@ -26,5 +26,5 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}/" PREFIX=/usr SYSCONFDIR=/etc MANDIR=/usr/share/man \
 	install || die "Failed to install"
-	dodoc COPYING Changes UPGRADE
+	dodoc Changes UPGRADE
 }
