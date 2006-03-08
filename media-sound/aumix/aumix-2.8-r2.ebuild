@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r2.ebuild,v 1.15 2004/12/16 09:02:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r2.ebuild,v 1.16 2006/03/08 15:26:15 flameeyes Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="gtk gtk2 gpm nls"
 RDEPEND=">=sys-libs/ncurses-5.2
 	gpm? ( >=sys-libs/gpm-1.19.3 )
 	gtk? ( !gtk2? ( =x11-libs/gtk+-1.2* )
-	       gtk2? ( >=x11-libs/gtk+-2.0.0 ) )"
+		gtk2? ( >=x11-libs/gtk+-2.0.0 ) )"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51
