@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.32.ebuild,v 1.2 2006/03/01 00:30:36 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.32.ebuild,v 1.3 2006/03/08 01:58:39 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -56,7 +56,7 @@ src_unpack() {
 	cp Makefile.config.in Makefile.config
 	cat >> Makefile.config <<-EOF
 	# Gentoo toolchain options
-	CC = $(tc-getCC)
+	CC = $(tc-getCC) -Wall
 	CC_FOR_BUILD = $(tc-getBUILD_CC)
 	AR = $(tc-getAR)
 	RANLIB = $(tc-getRANLIB)
@@ -82,11 +82,13 @@ src_unpack() {
 	URTLIB = -lrle
 	URTHDR_DIR =
 	EOF
-	append-flags -Wall
+}
 
-	# Sparc support ...
+src_compile() {
 	replace-flags -mcpu=ultrasparc "-mcpu=v8 -mtune=ultrasparc"
 	replace-flags -mcpu=v9 "-mcpu=v8 -mtune=v9"
+
+	emake || die
 }
 
 src_install() {
