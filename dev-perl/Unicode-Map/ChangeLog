@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unicode-Map
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/ChangeLog,v 1.6 2005/10/02 13:23:17 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/ChangeLog,v 1.7 2006/03/08 07:49:57 corsair Exp $
+
+  08 Mar 2006; Markus Rothe <corsair@gentoo.org> Unicode-Map-0.112.ebuild:
+  Added ~ppc64; bug #125189
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> Unicode-Map-0.112.ebuild:
   Mark 0.112 stable on ia64
