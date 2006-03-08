@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.56 2006/03/08 00:15:43 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.57 2006/03/08 03:56:15 kingtaco Exp $
+
+  08 Mar 2006; Mike Doty <kingtaco@gentoo.org> tar-1.15.1-r1.ebuild:
+  amd64 stable bug 123038
 
   08 Mar 2006; <plasmaroo@gentoo.org> tar-1.15.1-r1.ebuild:
   Stable on IA64; bug #123038.
