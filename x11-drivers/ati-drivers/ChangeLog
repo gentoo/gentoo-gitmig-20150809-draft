@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.26 2006/03/08 14:16:31 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.27 2006/03/08 16:35:22 s4t4n Exp $
+
+  08 Mar 2006; Michele Noberasco <s4t4n@gentoo.org> ati-drivers-8.21.7-r1.ebuild:
+  Stable for x86. See bug #124215.
 
 *ati-drivers-8.21.7-r1 (08 Mar 2006)
 
