@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20051216.ebuild,v 1.19 2006/01/30 06:07:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20051216.ebuild,v 1.20 2006/03/08 23:55:31 flameeyes Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -113,7 +113,8 @@ src_compile() {
 		$(use_enable aac faad) $(use_enable aac faac) --disable-faadbin \
 		--enable-gpl \
 		--enable-pp \
-		--disable-opts"
+		--disable-opts \
+		--disable-strip"
 
 	cd ${S_STATIC}
 	econf --disable-shared-pp --disable-shared --enable-static ${myconf} || die "Configure failed"

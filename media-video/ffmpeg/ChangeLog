@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.130 2006/03/06 21:50:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.131 2006/03/08 23:55:31 flameeyes Exp $
+
+  08 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  ffmpeg-0.4.9_p20051216.ebuild, ffmpeg-0.4.9_p20060302.ebuild:
+  Disable strip, leaving to portage decide if and when to strip.
 
   06 Mar 2006; Luca Barbato <lu_zero@gentoo.org>
   ffmpeg-0.4.9_p20060302.ebuild:

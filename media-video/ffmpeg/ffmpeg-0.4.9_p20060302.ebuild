@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060302.ebuild,v 1.7 2006/03/06 21:50:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060302.ebuild,v 1.8 2006/03/08 23:55:31 flameeyes Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -136,7 +136,7 @@ src_compile() {
 	use aac && myconf="${myconf} --enable-faad --enable-faac"
 	use amr && myconf="${myconf} --enable-amr_nb --enable-amr_wb"
 
-	myconf="${myconf} --enable-gpl --enable-pp"
+	myconf="${myconf} --enable-gpl --enable-pp --disable-strip"
 
 	cd ${S_STATIC}
 	#econf generates configure options unknown to ffmpeg's configure, so configure manually
