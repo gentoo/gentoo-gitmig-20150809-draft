@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.18 2006/03/06 18:48:08 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.19 2006/03/08 16:43:20 metalgod Exp $
+
+  08 Mar 2006; Luis Medinas <metalgod@gentoo.org> banshee-0.10.7.ebuild:
+  Force the use of gst-0.8 on this revision. Fixes bug #125371.
 
 *banshee-0.10.7_p1 (06 Mar 2006)
 
