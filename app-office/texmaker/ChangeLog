@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.17 2006/01/25 14:08:57 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.18 2006/03/08 23:21:18 nattfodd Exp $
+
+  09 Mar 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  texmaker-1.11-r1.ebuild:
+  Typo, DEPEND -> RDEPEND. Thanks to Markus Ullmann.
 
   25 Jan 2006; Alexandre Buisse <nattfodd@gentoo.org> -texmaker-1.11.ebuild,
   texmaker-1.11-r1.ebuild, texmaker-1.21.ebuild:

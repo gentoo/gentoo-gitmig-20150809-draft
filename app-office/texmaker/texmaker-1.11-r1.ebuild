@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.11-r1.ebuild,v 1.6 2006/01/25 14:08:57 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.11-r1.ebuild,v 1.7 2006/03/08 23:21:18 nattfodd Exp $
 
 inherit kde-functions eutils
 
@@ -22,7 +22,7 @@ RDEPEND="|| ( ( x11-libs/libX11
 			virtual/x11
 		)"
 
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	virtual/tetex
 	app-text/psutils
 	virtual/ghostscript
