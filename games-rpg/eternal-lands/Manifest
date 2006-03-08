@@ -1,12 +1,31 @@
-MD5 894596addf82c454c06e91737a5d1ba6 ChangeLog 1902
-RMD160 d5f6f7e3ee41caaf0fd18ae1742018864d56a6e9 ChangeLog 1902
-SHA256 0a6961d292f871ca68cd56683c038811115d0a0920bf8811c3cd837947516843 ChangeLog 1902
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2e98f21211beda91c7cbf52fb8d6fdef ChangeLog 2433
+RMD160 e7157e628545d29da280efd9e455e821aeb30ea0 ChangeLog 2433
+SHA256 25d26814cfa5b8198aab8412175db371c1cd381cad8e06cbb2a4a7802d0322af ChangeLog 2433
+MD5 fcc6498cd90000593afb0db8c7f04fcf eternal-lands-1.2.0_p1-r1.ebuild 2767
+RMD160 60055f28dd80ac621f2e76ed18b4019a54891bc8 eternal-lands-1.2.0_p1-r1.ebuild 2767
+SHA256 b944ea48f860014b0773062eab0351915f8f3f37b7402d61be8c403886e38793 eternal-lands-1.2.0_p1-r1.ebuild 2767
 MD5 80a737ef2550f2350f72d8a6fe367541 eternal-lands-1.2.0_p1.ebuild 2594
 RMD160 5ec18ce80a8343a33a2df27b826b42f890f55590 eternal-lands-1.2.0_p1.ebuild 2594
 SHA256 bfdd5448dec1b84544bff02847b478def4b8e2edfcc6b3933b786ef9b53acf86 eternal-lands-1.2.0_p1.ebuild 2594
 MD5 942fb2903df55d0f4b9de1d5d9930aa5 files/digest-eternal-lands-1.2.0_p1 446
 RMD160 8d98b22fce1c8c96488485778fcb0c433503c265 files/digest-eternal-lands-1.2.0_p1 446
 SHA256 3ab6bd6c860bbada97e4e1512e85437d05b978a961b8534b16129a9f15fe3b63 files/digest-eternal-lands-1.2.0_p1 446
+MD5 942fb2903df55d0f4b9de1d5d9930aa5 files/digest-eternal-lands-1.2.0_p1-r1 446
+RMD160 8d98b22fce1c8c96488485778fcb0c433503c265 files/digest-eternal-lands-1.2.0_p1-r1 446
+SHA256 3ab6bd6c860bbada97e4e1512e85437d05b978a961b8534b16129a9f15fe3b63 files/digest-eternal-lands-1.2.0_p1-r1 446
+MD5 abb3e62b8f7cda5c1314c7a6f6ae3477 files/eternal-lands-1.2.0-vertex-array.patch 9710
+RMD160 93b497fd303732a8316a84f46f941da731a28f06 files/eternal-lands-1.2.0-vertex-array.patch 9710
+SHA256 35ae774363b0c8888953190f5c35e06d696279712a0fa14600516cb43ee79f73 files/eternal-lands-1.2.0-vertex-array.patch 9710
 MD5 a20195e09a3313e5b377c3c4ecc29e26 metadata.xml 365
 RMD160 c06f3d4bff68a5e0f8ab2da3dc62c3d0cc570a20 metadata.xml 365
 SHA256 0a477bd6a9085aca7e4538f81c3b9d7710cead2395d222f9903c898df57b3e63 metadata.xml 365
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDzC8EbVyYKaZ/NERAuCCAJ4hyrV0EpiNAKiWPSTRa90fIANC7QCdEtzB
+Ryggsm39tpdHWb/+VaQcF8g=
+=VZDb
+-----END PGP SIGNATURE-----

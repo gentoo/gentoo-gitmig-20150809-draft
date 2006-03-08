@@ -1,6 +1,18 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.10 2006/02/15 08:02:20 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.11 2006/03/08 19:29:47 uberlord Exp $
+
+*eternal-lands-1.2.0_p1-r1 (08 Mar 2006)
+
+  08 Mar 2006; Roy Marples <uberlord@gentoo.org>
+  +files/eternal-lands-1.2.0-vertex-array.patch,
+  +eternal-lands-1.2.0_p1-r1.ebuild:
+  Added a patch written by me that enables the use of compiled vertex arrays
+  as an in-game toggle. Some cards - appears to be IGP style chipsets using
+  the xorg driver - don't display in-game graphics correctly and this patch
+  is an interim fix until EL or X works 100%.
+  
+  This patch has been approved by 'Entropy' for use on the EL main server.
 
   15 Feb 2006; Roy Marples <uberlord@gentoo.org>
   eternal-lands-1.2.0_p1.ebuild:

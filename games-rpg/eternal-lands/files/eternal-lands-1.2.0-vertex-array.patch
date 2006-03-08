@@ -1,0 +1,217 @@
+--- elc/3d_objects.c	2006-01-27 18:18:30.000000000 +0000
++++ elc/3d_objects.c	2006-02-15 17:15:05.000000000 +0000
+@@ -125,7 +125,7 @@
+ 	// watch for a change
+ 	if(object_id->e3d_data != cur_e3d){
+ 		if(cur_e3d != NULL){
+-           	if(have_compiled_vertex_array)ELglUnlockArraysEXT();
++           	if(use_compiled_vertex_array)ELglUnlockArraysEXT();
+ 		}
+ 
+ 		if(have_vertex_buffers && vbo[0] && vbo[2]) {
+@@ -149,7 +149,7 @@
+ 		CHECK_GL_ERRORS();
+ 
+ 		// lock this new one
+-		if(have_compiled_vertex_array)ELglLockArraysEXT(0, object_id->e3d_data->face_no);
++		if(use_compiled_vertex_array)ELglLockArraysEXT(0, object_id->e3d_data->face_no);
+ 		// gather statistics
+ 		if(object_id->e3d_data != cur_e3d){
+ #ifdef  DEBUG
+@@ -274,7 +274,7 @@
+ 	// call the low level routine we share
+ 	draw_3d_object_detail(object_id);
+ 
+-	if(have_compiled_vertex_array)ELglUnlockArraysEXT();
++	if(use_compiled_vertex_array)ELglUnlockArraysEXT();
+ 	cur_e3d= NULL;
+ 	
+ 	if(object_id->self_lit && (!is_day || dungeon))glEnable(GL_LIGHTING);
+@@ -363,7 +363,7 @@
+ 		}
+ 	}
+ 
+-	if(have_compiled_vertex_array && (cur_e3d != NULL))ELglUnlockArraysEXT();
++	if(use_compiled_vertex_array && (cur_e3d != NULL))ELglUnlockArraysEXT();
+ 	if(have_multitexture && !dungeon && (clouds_shadows||use_shadow_mapping)){
+ 		ELglClientActiveTextureARB(detail_unit);
+ 		glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+--- elc/elconfig.c	2006-01-27 18:20:00.000000000 +0000
++++ elc/elconfig.c	2006-02-15 18:05:10.000000000 +0000
+@@ -180,6 +180,22 @@
+ }
+ #endif
+ 
++
++void change_compiled_vertex_array(int *value)
++{
++	if (*value)
++	{
++		*value = 0;
++	}
++	else if (!gl_extensions_loaded || have_compiled_vertex_array)
++	{
++		// don't check if we have hardware support when OpenGL 
++		// extensions are not initialized yet.
++		*value = 1;
++	}
++	else LOG_TO_CONSOLE(c_green2,disabled_compiled_vertex_arrays);
++}
++
+ void change_point_particles(int *value)
+ {
+ 	if (*value)
+@@ -981,6 +997,7 @@
+ 	add_var(BOOL,"clouds_shadows","cshad",&clouds_shadows,change_var,1,"Cloud Shadows","The clouds shadows are projected on the ground, and the game looks nicer with them on.",SPECIALVID);
+ 	add_var(BOOL,"show_fps","fps",&show_fps,change_var,1,"Show FPS","Show the current frames per second in the corner of the window",HUD);
+ 	add_var(BOOL,"use_mipmaps","mm",&use_mipmaps,change_var,1,"Mipmaps","Mipmaps is a texture effect that blurs the texture a bit - it may look smoother and better, or it may look worse depending on your graphics driver settings and the like.",SPECIALVID);
++	add_var(BOOL,"use_compiled_vertex_array","cva",&use_compiled_vertex_array,change_compiled_vertex_array,1,"Compiled Vertex Array","Some systems will not support the new compiled vertex array in EL. Disable this if some 3D objects do not display correctly.",SPECIALVID);
+ 	add_var(BOOL,"use_point_particles","upp",&use_point_particles,change_point_particles,1,"Point Particles","Some systems will not support the new point based particles in EL. Disable this if your client complains about not having the point based particles extension.",SPECIALVID);
+ 	add_var(INT,"particles_percentage","pp",&particles_percentage,change_particles_percentage,100,"Particle Percentage","If you experience a significant slowdown when particles are nearby, you should consider lowering this number.",SPECIALVID,0,100);
+  #ifdef	TERRAIN
+--- elc/el.ini	2006-02-15 18:12:36.000000000 +0000
++++ elc/el.ini	2006-02-15 17:31:01.000000000 +0000
+@@ -117,6 +117,8 @@
+ 
+ #use_mipmaps = 1
+ 
++#use_compiled_vertex_array = 1 
++
+ Some systems will not support the new point based particles in EL. If your client complaints
+ about not having the point based particles extension, set the following to 0:
+ 
+--- elc/gl_init.c	2006-01-17 00:27:41.000000000 +0000
++++ elc/gl_init.c	2006-02-15 18:09:25.000000000 +0000
+@@ -24,6 +24,7 @@
+ int use_vertex_buffers=0;
+ int vertex_arrays_built=0;
+ int have_compiled_vertex_array=0;
++int use_compiled_vertex_array=0;
+ int have_point_sprite=0;
+ int have_arb_compression=0;
+ int have_s3_compression=0;
+@@ -573,8 +574,12 @@
+ 		have_compiled_vertex_array=get_string_occurance("GL_EXT_compiled_vertex_array",extensions,ext_str_len,0);
+ 		if(have_compiled_vertex_array < 0) {
+ 			have_compiled_vertex_array=0;
++			use_compiled_vertex_array=0;
+ 			snprintf(str,sizeof(str),gl_ext_not_found,"GL_EXT_compiled_vertex_array");
+ 			LOG_TO_CONSOLE(c_red1,str);
++		} else if (!use_compiled_vertex_array) {
++			snprintf(str,sizeof(str),gl_ext_found_not_used,"GL_EXT_compiled_vertex_array");
++			LOG_TO_CONSOLE(c_green2,str);
+ 		} else {
+ 			snprintf(str,sizeof(str),gl_ext_found,"GL_EXT_compiled_vertex_array");
+ 			LOG_TO_CONSOLE(c_green2,str);
+--- elc/gl_init.h	2006-01-07 16:46:23.000000000 +0000
++++ elc/gl_init.h	2006-02-15 17:24:55.000000000 +0000
+@@ -27,6 +27,7 @@
+ extern int use_vertex_buffers; /*!< specifies if we use vertex buffer objects or not */
+ extern int vertex_arrays_built; /*!< flag that indicates whether the vertex array was already initialized or not */
+ extern int have_compiled_vertex_array; /*!< indicates whether we have the compiled vertex array extension or not */
++extern int use_compiled_vertex_array; /*!< specified if we use compiled vertex array or not */
+ extern int have_point_sprite; /*!< indicates whether we have point sprites or not */
+ extern int have_arb_compression; /*!< flag that indicates whether we have the ARB compression extension or not */
+ extern int have_s3_compression; /*!< flag that indicates whether we have the S3 compression extension or not */
+@@ -35,6 +36,7 @@
+ extern int have_shaders;
+ 
+ extern int use_mipmaps; /*!< indicates whether we use mipmaps or not */
++extern int use_compiled_vertex_array;
+ 
+ extern int have_arb_shadow;
+ extern int have_ogsl_pixel_shader;
+--- elc/reflection.c	2006-01-17 00:27:42.000000000 +0000
++++ elc/reflection.c	2006-02-15 17:15:29.000000000 +0000
+@@ -209,14 +209,14 @@
+ 			glNormalPointer(GL_FLOAT,0,array_normal);	
+ 	}
+ 	
+-	if(have_compiled_vertex_array)ELglLockArraysEXT(0, object_id->e3d_data->face_no);
++	if(use_compiled_vertex_array)ELglLockArraysEXT(0, object_id->e3d_data->face_no);
+ 	for(i=0;i<materials_no;i++)
+ 		if(array_order[i].count>0)
+ 			{
+ 				get_and_set_texture_id(array_order[i].texture_id);
+ 				glDrawArrays(GL_TRIANGLES,array_order[i].start,array_order[i].count);
+ 			}
+-	if(have_compiled_vertex_array)ELglUnlockArraysEXT();
++	if(use_compiled_vertex_array)ELglUnlockArraysEXT();
+ 	CHECK_GL_ERRORS();
+ 	glPopMatrix();//restore the scene
+ 	CHECK_GL_ERRORS();
+--- elc/shadows.c	2006-01-17 00:27:42.000000000 +0000
++++ elc/shadows.c	2006-02-15 17:16:11.000000000 +0000
+@@ -240,7 +240,7 @@
+ 	// watch for a change
+ 	if(object_id->e3d_data != cur_e3d){
+ 		if(cur_e3d != NULL){
+-           	if(have_compiled_vertex_array)ELglUnlockArraysEXT();
++           	if(use_compiled_vertex_array)ELglUnlockArraysEXT();
+ 		}
+ 		if(have_vertex_buffers && object_id->e3d_data->vbo[2]){
+ 			ELglBindBufferARB(GL_ARRAY_BUFFER_ARB, object_id->e3d_data->vbo[2]);
+@@ -257,7 +257,7 @@
+ 			}
+ 		CHECK_GL_ERRORS();
+ 		// lock this new one
+-		if(have_compiled_vertex_array)ELglLockArraysEXT(0,object_id->e3d_data->face_no);
++		if(use_compiled_vertex_array)ELglLockArraysEXT(0,object_id->e3d_data->face_no);
+ 		// gather statistics
+ 		if(object_id->e3d_data != cur_e3d){
+ #ifdef  DEBUG
+@@ -284,7 +284,7 @@
+ 				glDrawArrays(GL_TRIANGLES,array_order[i].start,array_order[i].count);
+ 			}
+ 	}
+-	//if(have_compiled_vertex_array)ELglUnlockArraysEXT();
++	//if(use_compiled_vertex_array)ELglUnlockArraysEXT();
+ 	glPopMatrix();//restore the scene
+ }
+ 
+@@ -338,7 +338,7 @@
+ 		draw_3d_object_shadow_detail(objects_list[l]);
+ 	}
+ 
+-    if(have_compiled_vertex_array && (cur_e3d != NULL))ELglUnlockArraysEXT();
++    if(use_compiled_vertex_array && (cur_e3d != NULL))ELglUnlockArraysEXT();
+ 	if(have_vertex_buffers){
+ 		ELglBindBufferARB(GL_ARRAY_BUFFER_ARB, 0);
+ 	}
+@@ -382,7 +382,7 @@
+ 
+ 	draw_3d_object_shadow_detail(object_id);
+ 	
+-	if(have_compiled_vertex_array)ELglUnlockArraysEXT();
++	if(use_compiled_vertex_array)ELglUnlockArraysEXT();
+ 	cur_e3d= NULL;
+ 	if(have_vertex_buffers){
+ 		ELglBindBufferARB(GL_ARRAY_BUFFER_ARB, 0);
+--- elc/translate.c	2006-01-19 21:01:40.000000000 +0000
++++ elc/translate.c	2006-02-15 17:58:49.000000000 +0000
+@@ -351,6 +351,7 @@
+ 	fatal_error_str[10],
+ 	no_e3d_list[50],
+ 	enabled_vertex_arrays[50],
++	disabled_compiled_vertex_arrays[50],
+ 	disabled_point_particles[50],
+ 	disabled_particles_str[50],
+ 	invalid_video_mode[75],
+@@ -848,6 +849,7 @@
+ 	add_xml_identifier(misc,"multimat",multiple_material_same_texture,"Two or more materials with the same texture name!",sizeof(multiple_material_same_texture));
+ 	add_xml_identifier(misc,"resync",resync_server,"Resync with the server...",sizeof(resync_server));
+ 	add_xml_identifier(misc,"vertex",enabled_vertex_arrays,"Vertex Arrays enabled (memory hog on!)...",sizeof(enabled_vertex_arrays));
++	add_xml_identifier(misc,"compiled",disabled_compiled_vertex_arrays,"Compiled Vertex Arrays disabled.",sizeof(disabled_compiled_vertex_arrays));
+ 	add_xml_identifier(misc,"point",disabled_point_particles,"Point Particles disabled.",sizeof(disabled_point_particles));
+ 	add_xml_identifier(misc,"particles",disabled_particles_str,"Particles completely disabled!",sizeof(disabled_particles_str));
+ 	add_xml_identifier(misc,"net",failed_sdl_net_init,"Couldn't initialize net",sizeof(failed_sdl_net_init));
+--- elc/translate.h	2006-01-19 21:01:40.000000000 +0000
++++ elc/translate.h	2006-02-15 17:52:09.000000000 +0000
+@@ -451,6 +451,7 @@
+ 		fatal_error_str[10],
+ 		no_e3d_list[50],
+ 		enabled_vertex_arrays[50],
++		disabled_compiled_vertex_arrays[50],
+ 		disabled_point_particles[50],
+ 		disabled_particles_str[50],
+ 		invalid_video_mode[75], 
