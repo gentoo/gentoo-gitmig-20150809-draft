@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e508ec45da29b2cb25a083aacb00e1e0 ChangeLog 2541
+MD5 dd9f33f9835808dfdb4e73623c7c3828 ChangeLog 2637
 MD5 7301e635c156f9b803a27cf6aee186de files/digest-jam-2.5 56
 MD5 7301e635c156f9b803a27cf6aee186de files/digest-jam-2.5-r3 56
 MD5 355cd982c580f42f3401def29ad621fe files/jam-2.5-amd64.patch 334
 MD5 d1bfd7c9f477fe91b1cc27f0324591a0 files/jam-2.5-cxx.patch 1089
 MD5 0add93cb0929ead47d332051dea533ef files/jam-2.5-dependency.patch 939
-MD5 55f9307795897805908e8343a685a71a jam-2.5-r3.ebuild 986
+MD5 e7a038bd0a0c6cb29b4f9a984c97fbbc jam-2.5-r3.ebuild 992
 MD5 a5686e3c1ed6f476191f125c7589d421 jam-2.5.ebuild 788
 MD5 d16e0e772acf4a3bf1cf907dc4cafafd metadata.xml 324
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDqvurKRy60XGEcJIRAos6AJ0fTo4c6++cQ5oHOe5iXtJZjxohzwCfUGfM
-Y+ZjlzeezG/M/NlqJlk+pQQ=
-=EoBy
------END PGP SIGNATURE-----

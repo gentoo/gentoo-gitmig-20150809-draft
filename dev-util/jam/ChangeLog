@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jam
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.18 2005/12/22 19:16:40 gustavoz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.19 2006/03/08 07:37:03 corsair Exp $
+
+  08 Mar 2006; Markus Rothe <corsair@gentoo.org> jam-2.5-r3.ebuild:
+  Added ~ppc64; bug #124670
 
   22 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org> jam-2.5-r3.ebuild:
   sparc stable wrt #107543
