@@ -10,9 +10,9 @@ SHA256 7acf568d88e966f39385ad840ee877b9f3b663fc5c91dc01db8158e6ac5ef43a autoconf
 MD5 2f177a535539f25d52f270603bca85fa autoconf-2.59-r6.ebuild 1237
 RMD160 888ecfad239d0d080576b91afd89eb4f361d0d7c autoconf-2.59-r6.ebuild 1237
 SHA256 51314c3ec91822538aeca63b60d8b66c29af109b441c1390bf9222e985cebfd6 autoconf-2.59-r6.ebuild 1237
-MD5 be87f24255343c35aec5fe96582063d7 autoconf-2.59-r7.ebuild 1259
-RMD160 8f5dafef7193460e3e5c4b72f7fa99558a63163e autoconf-2.59-r7.ebuild 1259
-SHA256 c14c4b32e3d940591c57922333ee814af19d9248dd767c3ea501eb690f02d61b autoconf-2.59-r7.ebuild 1259
+MD5 bb1ec79b35ab03ebcc5c6512d18347d8 autoconf-2.59-r7.ebuild 1253
+RMD160 5904a19e35ae39961e2dec4929b0274eba45cb21 autoconf-2.59-r7.ebuild 1253
+SHA256 e02f174f72ed00b40fdc9fda8b5a7c8e80ac509fffafce7f31d6aa16126538fb autoconf-2.59-r7.ebuild 1253
 MD5 dee8e039dbcfd6a6543e28688615ee17 files/autoconf-2.13-destdir.patch 677
 RMD160 ff71fb18c1676455e267dfd8f3059e8c9384fe19 files/autoconf-2.13-destdir.patch 677
 SHA256 67c3eaf2f8aaf3acbcff387bc3fc6d46688b56a6b51043344e301bfaf16186a0 files/autoconf-2.13-destdir.patch 677
@@ -37,7 +37,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEDjZ92+ySkm8kpY0RAjQzAJ9fQZpD/cqjaMmR3Bz1H2n6n+ANAQCgopjK
-vncXM8s2AEVxjgY4drq4wgg=
-=ym3+
+iD8DBQFEDjal2+ySkm8kpY0RAhmbAJ4qMS8xqxylNGUX/rRj8NFVu5pq4wCgkQ4B
+cj3yR+2g7QmOhBCBn0ELBoc=
+=pugE
 -----END PGP SIGNATURE-----
