@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/seaview
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.6 2005/08/07 14:41:58 ribosome Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.7 2006/03/08 00:11:54 spyderous Exp $
+
+*seaview-20060213 (08 Mar 2006)
+
+  08 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +seaview-20060213.ebuild:
+  Bump to most recent modification date on upstream's unversioned tarball.
+  Fixes problem with file-open dialog not finding files, among others.
 
 *seaview-20050713 (07 Aug 2005)
 
