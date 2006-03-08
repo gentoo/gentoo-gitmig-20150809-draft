@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.3.ebuild,v 1.14 2005/11/29 03:21:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.3.ebuild,v 1.15 2006/03/08 19:24:35 flameeyes Exp $
 
 IUSE=""
 
@@ -106,8 +106,7 @@ LICENSE="freedist"
 KEYWORDS="alpha amd64 ~hppa ia64 ppc sparc x86"
 
 DEPEND=""
-RDEPEND="|| ( media-sound/xmms media-sound/beep-media-player )
-	 app-arch/unzip"
+RDEPEND="media-sound/xmms"
 
 src_unpack() {
 	local bn
@@ -115,22 +114,13 @@ src_unpack() {
 	cd ${S}
 	for i in ${SRC_URI} ; do
 		bn=`basename $i`
-		if [ -n "`echo ${bn} | grep '\.zip'`" ] ; then
-			cp ${DISTDIR}/${bn} .
-		else
-			if [ -n "`echo ${bn} | grep '\.wsz'`" ] ; then
-				cp ${DISTDIR}/${bn} .
-			else
-				unpack ${bn}
-			fi
-		fi
+		case ${bn} in
+			*.zip|*.wsz) cp ${DISTDIR}/${bn} . ;;
+			*) unpack ${bn} ;;
+		esac
 	done
 
 	mv 7947-plastik.zip Plastik.zip
-}
-
-src_compile() {
-	einfo "Nothing to compile"
 }
 
 src_install () {

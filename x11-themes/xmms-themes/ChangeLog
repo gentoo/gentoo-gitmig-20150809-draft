@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/xmms-themes
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.17 2005/10/02 20:09:55 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.18 2006/03/08 19:24:35 flameeyes Exp $
+
+  08 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xmms-themes-0.0.3.ebuild:
+  Fix dependency to depend only on xmms, unzip is already depended on by xmms,
+  simplify src_unpack by using a case statement, drop redundant src_compile.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> xmms-themes-0.0.3.ebuild:
   Mark 0.0.3 stable on ia64
