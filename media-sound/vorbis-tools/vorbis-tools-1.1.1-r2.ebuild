@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.1.1-r1.ebuild,v 1.3 2005/12/09 21:53:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.1.1-r2.ebuild,v 1.1 2006/03/08 22:13:02 nattfodd Exp $
 
 IUSE="nls flac speex"
 
@@ -29,6 +29,12 @@ pkg_setup() {
 		eerror "media-libs/flac with +ogg, to build libOggFLAC."
 		die "Missing libOggFLAC library."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-utf8.patch
 }
 
 src_compile() {
