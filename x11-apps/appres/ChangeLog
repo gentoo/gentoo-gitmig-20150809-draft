@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/appres
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/appres/ChangeLog,v 1.9 2006/02/14 20:29:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/appres/ChangeLog,v 1.10 2006/03/08 14:55:48 flameeyes Exp $
+
+  08 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> appres-1.0.0.ebuild:
+  Add ~amd64 keyword (satisfy xscreensaver modular deps).
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org> appres-1.0.0.ebuild:
   Added ~ppc64
