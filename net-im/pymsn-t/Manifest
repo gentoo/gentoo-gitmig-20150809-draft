@@ -1,16 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ead305fa3c66bdfeacddef845619bc21 pymsn-t-0.9.5-r1.ebuild 1939
-MD5 1a6b5710ef33fcc74035d3e1ebda3da9 ChangeLog 1375
+MD5 17348ddc5c340ba88bfcf30d0cdcf689 ChangeLog 1701
+RMD160 2f1f0858bd91fd195ec6bb227df90c1042526655 ChangeLog 1701
+SHA256 d6b6f7adf98ddd0ae044f032314113f87ef2a5e57b6daf6b800d31f977068c34 ChangeLog 1701
+MD5 f4024dc267e74f2da2126cf4ec1cfad6 files/digest-pymsn-t-0.11a-r4 238
+RMD160 92366398f8f8885e7357d0c4f28b6c776e620e50 files/digest-pymsn-t-0.11a-r4 238
+SHA256 c21edc7c17248fddea219d2e214bed104b1a0fbabe8de8f59319b7cd2fbfb021 files/digest-pymsn-t-0.11a-r4 238
 MD5 08d64f26d0872c7dfe0f37e7ea6a83c3 metadata.xml 301
-MD5 bb6822e06ee573f7897518abba0db917 files/pymsn-t-0.9.5-arguments.patch 263
-MD5 d06863dd9cbeea1d2bd016de6b27742c files/digest-pymsn-t-0.9.5-r1 63
-MD5 a0581c27b7e350c2d92b331ea1b3a4f2 files/pymsn-t.initd 420
+RMD160 652c5ed7f3a20a68639aabe875700de1b678e34c metadata.xml 301
+SHA256 29338af6dcda7de2a806ed37a597a2850bb70aa856dd41e21eff17769f3fcecb metadata.xml 301
+MD5 eaa0bb302b20fb7673257ceac84d56d0 pymsn-t-0.11a-r4.ebuild 1958
+RMD160 e6b3066a2ec9e2e84766fef7e9547ab1f7d52be1 pymsn-t-0.11a-r4.ebuild 1958
+SHA256 1a12a2db77347406d44221dda547922c962ac4e57817be94150d636a2209079a pymsn-t-0.11a-r4.ebuild 1958
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKJ0H8zY1VwezZiERAtZcAJ9Dah04ii7JsuhsIBn14SGGu++HBQCdHl+W
-3JiJJr/Iqn3WOToGe/+hS3E=
-=PJZk
+iD8DBQFEDixl8zY1VwezZiERAj/ZAKCiKbru3qCqQ+xgiDmr0I07y4XcrQCcDgjW
+AHdL+4LNvdwg8bMujj0Aq8k=
+=WY88
 -----END PGP SIGNATURE-----

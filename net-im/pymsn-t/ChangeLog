@@ -1,6 +1,14 @@
 # ChangeLog for net-im/pymsn-t
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/ChangeLog,v 1.4 2005/09/14 21:59:42 humpback Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/ChangeLog,v 1.5 2006/03/08 00:53:38 humpback Exp $
+
+*pymsn-t-0.11a-r4 (08 Mar 2006)
+
+  08 Mar 2006; Gustavo Felisberto <humpback@gentoo.org>;
+  -files/pymsn-t-0.9.5-arguments.patch, -files/pymsn-t.initd,
+  -pymsn-t-0.9.5-r1.ebuild, +pymsn-t-0.11a-r4.ebuild:
+  Removed older versions and updated to a working version. Closes bug #111224.
+  Thanks to everyone that helped there.
 
 *pymsn-t-0.9.5-r1 (14 Sep 2005)
 
