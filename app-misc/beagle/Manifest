@@ -19,9 +19,6 @@ SHA256 58de87b2c7df8b6f2007f7588c4ec8719348cdfb4f8110449b59e9ea12e03b30 beagle-0
 MD5 df9f01c6b183c8ac425c16d56f221629 beagle-0.2.2.1.ebuild 3079
 RMD160 a176cb05ee88f1cfc3ee6f3d92c871606a44708b beagle-0.2.2.1.ebuild 3079
 SHA256 4101ab6337e8fe8088d397f5a0797c9bcfb20b85a7da0b73b64deefe85d81296 beagle-0.2.2.1.ebuild 3079
-MD5 2c686e09bdd52b1174c3b88af4dea459 beagle-0.2.2.ebuild 3077
-RMD160 316a87fc35ea20ef36e5a0c1c6085e69214acc56 beagle-0.2.2.ebuild 3077
-SHA256 e98ac6181cf5767f9e4e8d67adecfa3cba3c3dc76e7c5bf6835a57f514f0a8d1 beagle-0.2.2.ebuild 3077
 MD5 3375984ea7d16737cd465bae6ed3d928 files/beagle-0.1.1-null-task-source.patch 1347
 RMD160 d2e0b12ee591f6220f1da99836b5929f96b5c66f files/beagle-0.1.1-null-task-source.patch 1347
 SHA256 e8d6d80877056598c3e784a9ee998f0efc932b73bd0ae83342bcde83d60281be files/beagle-0.1.1-null-task-source.patch 1347
@@ -46,9 +43,6 @@ SHA256 a66364cc99de8c05fd17c45aea84804950879b5d680d6a09e38241dc61b4183c files/di
 MD5 28eeb69b044b7177e490c82774c03fc7 files/digest-beagle-0.2.1-r1 244
 RMD160 569650c37d16ea9f25d9cec3297005722b055318 files/digest-beagle-0.2.1-r1 244
 SHA256 a66364cc99de8c05fd17c45aea84804950879b5d680d6a09e38241dc61b4183c files/digest-beagle-0.2.1-r1 244
-MD5 b730484e8aaca68a872d985c5ff8c112 files/digest-beagle-0.2.2 244
-RMD160 cd6067a515e1480979aea0afc6afd53cf14bdee3 files/digest-beagle-0.2.2 244
-SHA256 1787148a47bc71d006f38434dde323483a057cbc66e4d6dcb48a9bb8210979a9 files/digest-beagle-0.2.2 244
 MD5 4584ba03bef906143737d8bf17542e00 files/digest-beagle-0.2.2.1 250
 RMD160 ec5d8ecab03f956ae5e8fe55ea80b16a972d977d files/digest-beagle-0.2.2.1 250
 SHA256 e047f49829c161b5a48fbed45c8921327d4aa23ee0342f2791ef1207b14d34af files/digest-beagle-0.2.2.1 250
@@ -58,7 +52,7 @@ SHA256 1a2e1ce6af1bd26a8f0a16c348c39be963f09c5c4986b66c3622f32c4e4f367e metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEDe7VwUpWvClEHQoRArt0AJ4h85/wEDNCi1pi+pTN0nr/jZglOgCfZ8Ek
-xyxzUAT461atLFV21Zv0nJo=
-=v2J8
+iD8DBQFEDiQnwUpWvClEHQoRAhnfAJ9EkK1274TT1ouf2DVY25wE9+9UEwCfT1Xz
+01JuuBbw84F0vpw1NCBAkvo=
+=4+PT
 -----END PGP SIGNATURE-----
