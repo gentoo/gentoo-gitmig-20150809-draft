@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r11.ebuild,v 1.8 2005/06/14 21:51:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r11.ebuild,v 1.9 2006/03/08 01:21:12 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -91,7 +91,7 @@ src_compile() {
 		export bash_cv_termcap_lib=gnutermcap
 	else
 		export bash_cv_termcap_lib=libcurses
-		myconf="${myconf} --with-ncurses"
+		myconf="${myconf} --with-curses"
 	fi
 
 	econf \

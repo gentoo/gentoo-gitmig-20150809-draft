@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r14.ebuild,v 1.2 2005/12/30 10:09:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r14.ebuild,v 1.3 2006/03/08 01:21:12 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -108,7 +108,7 @@ src_compile() {
 	# Force linking with system curses ... the bundled termcap lib
 	# sucks bad compared to ncurses
 	export bash_cv_termcap_lib=libcurses
-	myconf="${myconf} --with-ncurses"
+	myconf="${myconf} --with-curses"
 
 	econf \
 		$(use_with afs) \
