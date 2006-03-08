@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ruby-mode
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.15 2006/03/05 18:00:51 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.16 2006/03/08 07:34:24 mkennedy Exp $
+
+  08 Mar 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  files/50ruby-mode-gentoo.el:
+  Added inferior mode autoloads and add-to-list improvements for site-lisp
+  configuration.
 
 *ruby-mode-1.8.4 (05 Mar 2006)
 
