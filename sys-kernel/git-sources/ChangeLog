@@ -1,6 +1,21 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.14 2006/02/04 16:55:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.15 2006/03/08 11:19:40 robbat2 Exp $
+
+*git-sources-2.6.16_rc5-r10 (08 Mar 2006)
+
+  08 Mar 2006; Robin H. Johnson <robbat2@gentoo.org>
+  -git-sources-2.6.15-r1.ebuild, -git-sources-2.6.15-r5.ebuild,
+  -git-sources-2.6.15-r6.ebuild, -git-sources-2.6.15-r7.ebuild,
+  -git-sources-2.6.15-r8.ebuild, -git-sources-2.6.15-r11.ebuild,
+  -git-sources-2.6.15-r12.ebuild, -git-sources-2.6.16_rc1-r1.ebuild,
+  -git-sources-2.6.16_rc1-r2.ebuild, -git-sources-2.6.16_rc1-r3.ebuild,
+  -git-sources-2.6.16_rc1-r4.ebuild, -git-sources-2.6.16_rc1-r5.ebuild,
+  -git-sources-2.6.16_rc2-r1.ebuild, +git-sources-2.6.16_rc5-r10.ebuild:
+  This git-sources ebuild now actually applies the git patches, while a lot of
+  previous ebuilds missed the -git patch and only applied the -rc patch
+  (changes are made both to this ebuild and kernel-2.eclass). In conjuction
+  with this, the old broken ebuilds have been removed.
 
 *git-sources-2.6.16_rc2-r1 (04 Feb 2006)
 *git-sources-2.6.16_rc1-r5 (04 Feb 2006)

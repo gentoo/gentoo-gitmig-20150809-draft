@@ -1,20 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.16_rc1-r2.ebuild,v 1.1 2006/01/20 01:02:24 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.16_rc5-r10.ebuild,v 1.1 2006/03/08 11:19:40 robbat2 Exp $
 
-K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
-
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
+K_NOUSEPR="yes"
 ETYPE="sources"
+CKV="${PVR/-r/-git}"
 inherit kernel-2
 detect_version
 
 
 DESCRIPTION="The very latest -git version of the Linux kernel"
 HOMEPAGE="http://www.kernel.org"
-SRC_URI="${KERNEL_URI} mirror://kernel/linux/kernel/v2.6/snapshots/patch-${KV_FULL}.bz2"
+#SRC_URI="${KERNEL_URI} mirror://kernel/linux/kernel/v2.6/snapshots/patch-${KV_FULL}.bz2"
+SRC_URI="${KERNEL_URI}"
 KEYWORDS="~amd64 ~alpha ~arm ~ia64 ~ppc ~x86 ~ppc64"
 
 K_EXTRAEINFO="This kernel is not supported by Gentoo due to its unstable and
