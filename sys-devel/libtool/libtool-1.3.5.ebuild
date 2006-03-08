@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.3.5.ebuild,v 1.6 2005/04/26 23:07:44 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.3.5.ebuild,v 1.7 2006/03/08 01:50:38 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils libtool
 
@@ -18,16 +18,8 @@ DEPEND=">=sys-devel/autoconf-2.58
 # the autoconf dep is due to it complaining 'configure.ac:55: error: Autoconf version 2.58 or higher is required'
 # the automake dep is due to Bug #46037
 
-lt_setup() {
-	export WANT_AUTOCONF=2.5
-	export WANT_AUTOMAKE=1.5
-}
-
 src_unpack() {
-	lt_setup
-
 	unpack ${A}
-
 	cd "${S}"
 	echo
 	# Install updated missing script
@@ -36,17 +28,7 @@ src_unpack() {
 		automake --add-missing
 	}
 
-	epatch "${FILESDIR}"/1.4.3/${PN}-1.2f-cache.patch
-	epatch "${FILESDIR}"/1.4.3/${PN}-1.3.5-nonneg.patch
-	epatch "${FILESDIR}"/1.4.3/${PN}-1.3.5-mktemp.patch
-
-	uclibctoolize
-}
-
-src_compile() {
-	lt_setup
-	econf || die
-	emake || die
+	elibtoolize
 }
 
 src_install() {
