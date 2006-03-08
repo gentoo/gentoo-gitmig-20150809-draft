@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.9 2006/02/01 10:11:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.10 2006/03/08 18:44:36 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,6 +38,8 @@ src_unpack() {
 	# Paul Herman has been maintaining some updates to tripwire
 	# including autoconf support and portability fixes.
 	# http://www.frenchfries.net/paul/tripwire/
+	export EPATCH_OPTS="-F3 -l"
+	epatch ${FILESDIR}/tripwire-friend-classes.patch
 	epatch ${DISTDIR}/tripwire-2.3.1-2-pherman-portability-0.9.diff.bz2
 	epatch ${FILESDIR}/tripwire-2.3.0-50-rfc822.patch
 }
