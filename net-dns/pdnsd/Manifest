@@ -1,39 +1,19 @@
-MD5 d30f53f3541532570822d222f837e588 ChangeLog 7554
-RMD160 d409b01fe62ba9ddf1d66fadd4ca524e72c9ddfe ChangeLog 7554
-SHA256 01c9fe2d478190ff5d62d211281ac44731621d350e96fa40cf974105e5d18f9f ChangeLog 7554
-MD5 104a9136d4e55e47186ebcc1511b9f93 files/digest-pdnsd-1.1.10 68
-RMD160 570f3724f2bdd47a7bf23fbb73088bd621035af1 files/digest-pdnsd-1.1.10 68
-SHA256 432fe3e7e417e27292d00223dca96b337e4a286c06eb5298f1d9b47ad8a7e047 files/digest-pdnsd-1.1.10 68
-MD5 a8701579c070fdd7891f1bccaf63ae95 files/digest-pdnsd-1.2.2 67
-RMD160 be79a002aa633ab9181426b679742bc9af382113 files/digest-pdnsd-1.2.2 67
-SHA256 ee64a9cb29d5f85d2fe28c6a0881640c4606612f4a58857b83c49e483a70fce4 files/digest-pdnsd-1.2.2 67
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bcc4f3b712728070c5a1b1852c474334 ChangeLog 7836
 MD5 841f98e9e42888ec6d3869f716017c5f files/digest-pdnsd-1.2.3 67
-RMD160 bdea6159ef5232e8d7e436170fb3725912fd8015 files/digest-pdnsd-1.2.3 67
-SHA256 6e8e085938f058223fde4a6ebd7715c9be50ad17b989dabf518f4ee015ae3633 files/digest-pdnsd-1.2.3 67
 MD5 21ca3184ba7f84328d7cfbe1c4fcb596 files/digest-pdnsd-1.2.4 67
-RMD160 e37ed27094be13f412e4673dd837cef47197489d files/digest-pdnsd-1.2.4 67
-SHA256 97c85d352566ff3e25c4f88b50bbe6f7361050930222dae2cb65a4083ffc0d32 files/digest-pdnsd-1.2.4 67
 MD5 2a7e9d9f54bd31a3675c491d0b6ee187 files/pdnsd.conf.test 377
-RMD160 fbf25b78728754fa1f9cf5259c43cce9cb22a995 files/pdnsd.conf.test 377
-SHA256 8ef1e68c43cefde86598158d2b624cbdd66d2436d681cabbc6327d34d5886058 files/pdnsd.conf.test 377
 MD5 27071ebe71d4f810d57d7cfbd4099788 files/pdnsd.online 452
-RMD160 45ecfe4acf625d62a299ee1ba46c6559901e2e66 files/pdnsd.online 452
-SHA256 6fe3f33c7c5554f9577abfc5f7dc9547ba508ab68fe3590d8f1bb9598a865e9a files/pdnsd.online 452
 MD5 65809ab9f525565a98ebe800edea45ab files/pdnsd.rc6 755
-RMD160 deb6e6eed3ad8dabcc313b6e78abdd5c574c1c35 files/pdnsd.rc6 755
-SHA256 7f6b8782a8b4fff6b0cb1b8bfebdddf5777a5788aae76044cba499023c73423f files/pdnsd.rc6 755
-MD5 4ddec129fff42063dc6b05493cd55a78 metadata.xml 264
-RMD160 733a57e0e0a1af0096238355163b4a2fa59fdd51 metadata.xml 264
-SHA256 35b9f289d83da6b872d3d6c3ea4f5e94ffc814a62771e13153022dfb8da5816d metadata.xml 264
-MD5 45a79e5f7a6854ab6782a75e6f89296a pdnsd-1.1.10.ebuild 3270
-RMD160 2c254aa1ceef18bd21db05084346ecccc9742913 pdnsd-1.1.10.ebuild 3270
-SHA256 aee0040cabe80d2b446eceba2a0cb4ebccc1c0d69724d607a80515ae627519e8 pdnsd-1.1.10.ebuild 3270
-MD5 ca9244827dd64c825a52bfea6a5c5c6c pdnsd-1.2.2.ebuild 4283
-RMD160 6b0ee4a9a9d485ab6eb1f6d03c627e3826e229f8 pdnsd-1.2.2.ebuild 4283
-SHA256 5dd7ed93d37039cf2aa17151699b9be52d3bb1dcdbbd911db956dde79424b0a0 pdnsd-1.2.2.ebuild 4283
+MD5 03c559c81ebc357c5f906e8247f1b79b metadata.xml 402
 MD5 ff5367e7e1e820b6d58bbf69326d72a1 pdnsd-1.2.3.ebuild 4280
-RMD160 8a515cb5656d92ce9566227f54f3b23dbc704125 pdnsd-1.2.3.ebuild 4280
-SHA256 ce94e5cfe76ca3dcb9b519890b77db4540f62db16f1905d3f0c9a9d15d95a970 pdnsd-1.2.3.ebuild 4280
-MD5 5959785ddd61ce87347ab590b0dbf87f pdnsd-1.2.4.ebuild 4121
-RMD160 134edab6567dd808cd8b5fe3e86e2ac27c8b50df pdnsd-1.2.4.ebuild 4121
-SHA256 20a0d823140c4e2e112533ac65d692066e7bc39e015b24a6229110162a926e42 pdnsd-1.2.4.ebuild 4121
+MD5 f08d76208d59badfa27cb87eb325423a pdnsd-1.2.4.ebuild 3885
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEDz+ZjG8pv1lIUX4RAoPSAJ4j3eMsJc09DQPvxcCReHS8+C+u+ACgxokc
+JAfbCaBfBc5vz0XAWXhT/Mk=
+=5x1k
+-----END PGP SIGNATURE-----

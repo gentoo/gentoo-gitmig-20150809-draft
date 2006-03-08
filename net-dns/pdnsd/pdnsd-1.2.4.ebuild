@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.4.ebuild,v 1.2 2006/02/01 20:29:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.4.ebuild,v 1.3 2006/03/08 20:32:57 mrness Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.phys.uu.nl/%7Erombouts/pdnsd/releases/${P}-par.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~s390 ~sparc x86"
 IUSE="ipv6 debug isdn nptl"
 
 pkg_setup() {
@@ -47,40 +47,38 @@ pkg_preinst() {
 	enewuser pdnsd -1 -1 /var/lib/pdnsd pdnsd
 }
 
-
 src_test() {
 	if [ -x /usr/bin/dig ];	then
-		mkdir ${T}/pdnsd
-		echo -n -e "pd12\0\0\0\0" > ${T}/pdnsd/pdnsd.cache
-		IPS=$(grep ^nameserver ${ROOT}/etc/resolv.conf | sed -e 's/nameserver \(.*\)/\tip=\1;/g' | xargs)
-		#IPS=$(grep ^nameserver ${ROOT}/etc/resolv.conf |  sed -e 's/nameserver//g' | head -n 1)
-		sed -e "s/\tip=/${IPS}/" -e "s:cache_dir=:cache_dir=${T}/pdnsd:" ${FILESDIR}/pdnsd.conf.test \
-			> ${T}/pdnsd.conf.test
-		src/pdnsd -c ${T}/pdnsd.conf.test -g -s -d -p ${T}/pid || die "couldn't start daemon"
-		find ${T} -ls
+		mkdir "${T}/pdnsd"
+		echo -n -e "pd12\0\0\0\0" > "${T}/pdnsd/pdnsd.cache"
+		IPS=$(grep ^nameserver "${ROOT}/etc/resolv.conf" | sed -e 's/nameserver \(.*\)/\tip=\1;/g' | xargs)
+		sed -e "s/\tip=/${IPS}/" -e "s:cache_dir=:cache_dir=${T}/pdnsd:" "${FILESDIR}/pdnsd.conf.test" \
+			> "${T}/pdnsd.conf.test"
+		src/pdnsd -c "${T}/pdnsd.conf.test" -g -s -d -p "${T}/pid" || die "couldn't start daemon"
+		find "${T}" -ls
 
-		[ -s ${T}/pid ] || die "empty or no pid file created"
-		[ -S ${T}/pdnsd/pdnsd.status ] || die "no socket created"
-		src/pdnsd-ctl/pdnsd-ctl   -c ${T}/pdnsd server all up || die "failed to communicate to daemon"
-		src/pdnsd-ctl/pdnsd-ctl   -c ${T}/pdnsd status || die "failed to communicate to daemon"
+		[ -s "${T}/pid" ] || die "empty or no pid file created"
+		[ -S "${T}/pdnsd/pdnsd.status" ] || die "no socket created"
+		src/pdnsd-ctl/pdnsd-ctl -c "${T}/pdnsd" server all up || die "failed to start the daemon"
+		src/pdnsd-ctl/pdnsd-ctl -c "${T}/pdnsd" status || die "failed to communicate with the daemon"
 		sleep 3
 
 		dig @127.0.0.1 -p 33455 www.gentoo.org  | fgrep "status: NOERROR" || die "www.gentoo.org lookup failed"
-		kill `cat ${T}/pid` || die "failed to terminate daemon"
+		kill $(<"${T}/pid") || die "failed to terminate daemon"
 	fi
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	# Copy cache from prev older versions
-	[ -f ${ROOT}/var/lib/pdnsd/pdnsd.cache ] && \
-		cp ${ROOT}/var/lib/pdnsd/pdnsd.cache ${D}/var/cache/pdnsd/pdnsd.cache
+	[ -f "${ROOT}/var/lib/pdnsd/pdnsd.cache" ] && \
+		cp "${ROOT}/var/lib/pdnsd/pdnsd.cache" "${D}/var/cache/pdnsd/pdnsd.cache"
 
 	# Don't clobber existing cache - copy prev cache so unmerging prev version
 	# doesn't remove the cache.
-	[ -f ${ROOT}/var/cache/pdnsd/pdnsd.cache ] && \
-		rm  ${D}/var/cache/pdnsd/pdnsd.cache
+	[ -f "${ROOT}/var/cache/pdnsd/pdnsd.cache" ] && \
+		rm  "${D}/var/cache/pdnsd/pdnsd.cache"
 
 	dodoc AUTHORS ChangeLog* NEWS README THANKS TODO README.par
 	docinto contrib ; dodoc contrib/{README,dhcp2pdnsd,pdnsd_dhcp.pl}
@@ -88,28 +86,22 @@ src_install() {
 	docinto txt ; dodoc doc/txt/*
 	newdoc doc/pdnsd.conf pdnsd.conf.sample
 
-	# Remind users that the cachedir has moved to /var/cache
-	#[ -f ${ROOT}/etc/pdnsd/pdnsd.conf ] && \
-	#	sed -e "s#/var/lib#/var/cache#g" ${ROOT}/etc/pdnsd/pdnsd.conf \
-	#	> ${D}/etc/pdnsd/pdnsd.conf
-
-	newinitd ${FILESDIR}/pdnsd.rc6 pdnsd
-	newinitd ${FILESDIR}/pdnsd.online pdnsd-online
-
+	newinitd "${FILESDIR}/pdnsd.rc6" pdnsd
+	newinitd "${FILESDIR}/pdnsd.online" pdnsd-online
 
 	keepdir /etc/conf.d
-	local config=${D}/etc/conf.d/pdnsd-online
+	local config="${D}/etc/conf.d/pdnsd-online"
 
-	echo -e "# Enter the interface that connects you to the dns servers" >> ${config}
-	echo "# This will correspond to /etc/init.d/net.${IFACE}" >> ${config}
-	echo -e "\n# IMPORTANT: Be sure to run depscan.sh after modifiying IFACE" >>  ${config}
-	echo "IFACE=ppp0" >> ${config}
+	echo -e "# Enter the interface that connects you to the dns servers" >> "${config}"
+	echo "# This will correspond to /etc/init.d/net.${IFACE}" >> "${config}"
+	echo -e "\n# IMPORTANT: Be sure to run depscan.sh after modifiying IFACE" >> "${config}"
+	echo "IFACE=ppp0" >> "${config}"
 
-	config=${D}/etc/conf.d/pdnsd
-	${D}/usr/sbin/pdnsd --help | sed "s/^/# /g" > ${config}
-	echo "# Command line options" >> ${config}
-	use ipv6 && echo PDNSDCONFIG="-a" >> ${config} \
-		|| echo PDNSDCONFIG="" >> ${config}
+	config="${D}/etc/conf.d/pdnsd"
+	"${D}/usr/sbin/pdnsd" --help | sed "s/^/# /g" > "${config}"
+	echo "# Command line options" >> "${config}"
+	use ipv6 && echo PDNSDCONFIG="-a" >> "${config}" \
+		|| echo PDNSDCONFIG="" >> "${config}"
 }
 
 pkg_postinst() {
