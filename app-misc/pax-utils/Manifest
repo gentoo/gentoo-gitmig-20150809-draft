@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6f477fc38cb87cffef1d7702de726984 ChangeLog 9345
+MD5 e29d7b3cb1eb8641f0d33a4d254afe3a ChangeLog 9445
+RMD160 2f749737ba5d7d994e22cedd3089f5ecfe516855 ChangeLog 9445
+SHA256 8cd083afee048b913a8474eac0f5faf119944597f33fb47ea68ff6131da3e822 ChangeLog 9445
 MD5 ef0d6edb066135c347d7cf0b303e502d files/digest-pax-utils-0.1.10 250
+RMD160 6e1b1941e72c6ce2d9b7cf7122c504d807e46651 files/digest-pax-utils-0.1.10 250
+SHA256 b7dfe0f488fa34a13c0bb7ebc34076ddbff90184f187436cdaad8db0644893a9 files/digest-pax-utils-0.1.10 250
 MD5 496d43931c308efd71d497e2a0145a26 files/digest-pax-utils-0.1.9 247
+RMD160 fd5739cef65eecb8957ab4ead4bf920b493e5482 files/digest-pax-utils-0.1.9 247
+SHA256 8b550e9f6744a2e4bd23d0a26f87d7e18a99e86d0c73f49a0b191735d7c6512b files/digest-pax-utils-0.1.9 247
 MD5 b98c7b9dfd7e41ac1b8eb030e65e5c9c files/pax-utils-0.1.10.patch 1187
+RMD160 721102c1ea7b7a657a7a5592d06bbddd01167cf6 files/pax-utils-0.1.10.patch 1187
+SHA256 0cc46058e30c3c590fa3da9270f2e7172669f6ea7baaaaf8c8daaefb4bf19b6d files/pax-utils-0.1.10.patch 1187
 MD5 90f775b6c4fdbeb494f7d8e1d94ad30d metadata.xml 604
-MD5 0434d536b3759f2b3db021f598a34d35 pax-utils-0.1.10.ebuild 1189
+RMD160 7f581ee400ba8449455baf903183c12136a53838 metadata.xml 604
+SHA256 f3aaada3dde296c02797c2f68e88bf7f3cf650449aaf956126bc54ebd36e686e metadata.xml 604
+MD5 e12ee09530692561dfaa06bac7e25d55 pax-utils-0.1.10.ebuild 1183
+RMD160 1743b0f87c66f09e24b6cd5190ade8a916e575df pax-utils-0.1.10.ebuild 1183
+SHA256 9263531edc646d0aa5681c970f39787a8222ea1b585fd5b2045267bbd1c78432 pax-utils-0.1.10.ebuild 1183
 MD5 ecc20ffdd7188cc6b47fd7aa6a9234d4 pax-utils-0.1.9.ebuild 1094
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEDuKRKRy60XGEcJIRAsW9AJ4w0zLUOmlAe1rEddEhzUsrda1D0gCgsF+y
-gS0ZcUCo2Zw2kFE3dEFUHOk=
-=TPSG
------END PGP SIGNATURE-----
+RMD160 5915fa639bb41710494f8741df20589ba55a4e98 pax-utils-0.1.9.ebuild 1094
+SHA256 c8a258265fd59e4c0aec9614075b198d895e8cad231aea6b919d40b2ff38ad5e pax-utils-0.1.9.ebuild 1094
