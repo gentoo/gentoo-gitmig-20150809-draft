@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.162 2006/03/03 21:54:52 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.163 2006/03/08 11:02:29 robbat2 Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -23,6 +23,8 @@
 #						  automatically set within the kernel Makefile
 # K_NOUSENAME			- if this is set then EXTRAVERSION will not include the
 #						  first part of ${PN} in EXTRAVERSION
+# K_NOUSEPR				- if this is set then EXTRAVERSION will not include the
+#						  anything based on ${PR}.
 # K_PREPATCHED			- if the patchset is prepatched (ie: mm-sources,
 #						  ck-sources, ac-sources) it will use PR (ie: -r5) as
 #						  the patchset version for
@@ -74,6 +76,26 @@ LICENSE="GPL-2"
 # set LINUX_HOSTCFLAGS if not already set
 [[ -z ${LINUX_HOSTCFLAGS} ]] && \
 	LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
+
+# debugging functions
+#==============================================================
+# this function exists only to help debug kernel-2.eclass
+# if you are adding new functionality in, put a call to it
+# at the start of src_unpack, or during SRC_URI/dep generation.
+debug-print-kernel2-variables() {
+	debug-print "PVR: ${PVR}"
+	debug-print "CKV: ${CKV}"
+	debug-print "OKV: ${OKV}"
+	debug-print "KV: ${KV}"
+	debug-print "KV_FULL: ${KV_FULL}"
+	debug-print "RELEASETYPE: ${RELEASETYPE}"
+	debug-print "RELEASE: ${RELEASE}"
+	debug-print "UNIPATCH_LIST_DEFAULT: ${UNIPATCH_LIST_DEFAULT} "
+	debug-print "UNIPATCH_LIST_GENPATCHES: ${UNIPATCH_LIST_GENPATCHES} "
+	debug-print "UNIPATCH_LIST: ${UNIPATCH_LIST}"
+	debug-print "S: ${S}"
+	debug-print "KERNEL_URI: ${KERNEL_URI}"
+}
 
 #Eclass functions only from here onwards ...
 #==============================================================
@@ -140,11 +162,18 @@ detect_version() {
 	# we can work on better sorting EXTRAVERSION.
 	# first of all, we add the release
 	EXTRAVERSION="${RELEASE}"
+	debug-print "0 EXTRAVERSION:${EXTRAVERSION}"
 	[[ -n ${KV_EXTRA} ]] && EXTRAVERSION=".${KV_EXTRA}${EXTRAVERSION}"
 
-	if [[ -n ${K_PREPATCHED} ]]; then
+	debug-print "1 EXTRAVERSION:${EXTRAVERSION}"
+	if [[ -n "${K_NOUSEPR}" ]]; then
+		# Don't add anything based on PR to EXTRAVERSION
+		debug-print "1.0 EXTRAVERSION:${EXTRAVERSION}"
+	elif [[ -n ${K_PREPATCHED} ]]; then
+		debug-print "1.1 EXTRAVERSION:${EXTRAVERSION}"
 		EXTRAVERSION="${EXTRAVERSION}-${PN/-*}${PR/r}"
 	elif [[ "${ETYPE}" = "sources" ]]; then
+		debug-print "1.2 EXTRAVERSION:${EXTRAVERSION}"
 		# For some sources we want to use the PV in the extra version
 		# This is because upstream releases with a completely different
 		# versioning scheme.
@@ -153,10 +182,11 @@ detect_version() {
 		  vserver) K_USEPV=1;;
 		esac
 
-		[[ -z ${K_NOUSENAME} ]] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*}"
-		[[ -n ${K_USEPV} ]]     && EXTRAVERSION="${EXTRAVERSION}-${PV//_/-}"
-		[[ -n ${PR//r0} ]]      && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+		[[ -z "${K_NOUSENAME}" ]] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*}"
+		[[ -n "${K_USEPV}" ]]     && EXTRAVERSION="${EXTRAVERSION}-${PV//_/-}"
+		[[ -n "${PR//r0}" ]] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
+	debug-print "2 EXTRAVERSION:${EXTRAVERSION}"
 
 	# The only messing around which should actually effect this is for KV_EXTRA
 	# since this has to limit OKV to MAJ.MIN.PAT and strip EXTRA off else
@@ -202,6 +232,8 @@ detect_version() {
 					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-git*}.bz2 ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
 	fi
+
+	debug-print-kernel2-variables	
 
 	handle_genpatches
 }
@@ -957,13 +989,18 @@ headers___fix() {
 #==============================================================
 kernel-2_src_unpack() {
 	universal_unpack
+	debug-print "Doing unipatch"
 
 	[[ -n ${UNIPATCH_LIST} || -n ${UNIPATCH_LIST_DEFAULT} || -n ${UNIPATCH_LIST_GENPATCHES} ]] && \
 		unipatch "${UNIPATCH_LIST_DEFAULT} ${UNIPATCH_LIST_GENPATCHES} ${UNIPATCH_LIST}"
+	
+	debug-print "Doing premake"
 
 	# allow ebuilds to massage the source tree after patching but before
 	# we run misc `make` functions below
 	[[ $(type -t kernel-2_hook_premake) == "function" ]] && kernel-2_hook_premake
+	
+	debug-print "Doing unpack_set_extraversion"
 
 	[[ -z ${K_NOSETEXTRAVERSION} ]] && unpack_set_extraversion
 	unpack_fix_docbook
