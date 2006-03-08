@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.5 2006/01/14 11:44:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.6 2006/03/08 20:38:48 mrness Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -26,8 +26,8 @@ S=${WORKDIR}/${P}.orig
 
 src_unpack() {
 	unpack ${DEBIANPKG_TARBALL}
-	cd ${S}
-	EPATCH_OPTS="-p1" epatch ${DISTDIR}/${DEBIANPKG_PATCH}
+	cd "${S}"
+	EPATCH_OPTS="-p1" epatch "${DISTDIR}/${DEBIANPKG_PATCH}"
 }
 
 src_compile() {
