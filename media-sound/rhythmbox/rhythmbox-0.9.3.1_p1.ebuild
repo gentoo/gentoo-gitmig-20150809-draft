@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.3.1_p1.ebuild,v 1.2 2006/02/06 18:28:17 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.3.1_p1.ebuild,v 1.3 2006/03/08 16:37:01 metalgod Exp $
 
 inherit gnome2 eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.rhythmbox.org/"
 SRC_URI="http://ftp.gnome.org/pub/gnome/sources/rhythmbox/0.9/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="vorbis flac aac mad ipod avahi howl daap dbus musicbrainz tagwriting
 gstreamer010"
 #I want tagwriting to be on by default in the future. It is just a local flag
