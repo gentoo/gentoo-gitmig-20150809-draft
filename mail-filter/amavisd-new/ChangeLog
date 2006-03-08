@@ -1,6 +1,6 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.77 2006/02/28 01:21:46 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.78 2006/03/08 19:10:14 tove Exp $
 
   28 Feb 2006; Andrej Kacian <ticho@gentoo.org>
   -files/amavisd-new-2.2.1-amavisd.conf-gentoo.patch,
@@ -240,15 +240,15 @@
   29 Mar 2005; Markus Rothe <corsair@gentoo.org> amavisd-new-2.2.1.ebuild:
   Stable on ppc64
 
-  05 Mar 2005; TuáşĽn VÄn <langthang@gentoo.org> amavisd-new-2.2.1.ebuild:
+  05 Mar 2005; Tuấn Văn <langthang@gentoo.org> amavisd-new-2.2.1.ebuild:
   x86 stable.
 
-  24 Jan 2005; TuáşĽn VÄn <langthang@gentoo.org> amavisd-new-2.2.1.ebuild:
+  24 Jan 2005; Tuấn Văn <langthang@gentoo.org> amavisd-new-2.2.1.ebuild:
   tuned deps by Christian Zoffoli <xmerlin@gentoo.org>. Bug #79360.
 
 *amavisd-new-2.2.1 (19 Jan 2005)
 
-  19 Jan 2005; TuáşĽn VÄn <langthang@gentoo.org>
+  19 Jan 2005; Tuấn Văn <langthang@gentoo.org>
   +files/amavisd-new-2.2.1-amavisd.conf-gentoo.patch,
   +files/amavisd-new-2.2.1-qmail-lf-workaround.patch,
   +amavisd-new-2.2.1.ebuild:
@@ -259,11 +259,11 @@
 
 *amavisd-new-0.20040701 (19 Jan 2005)
 
-  19 Jan 2005; TuáşĽn VÄn <langthang@gentoo.org>
+  19 Jan 2005; Tuấn Văn <langthang@gentoo.org>
   +amavisd-new-0.20040701.ebuild, -amavisd-new-20040701.ebuild:
   rename amavisd-new-20040701 to amavisd-new-0.20040701
 
-  19 Jan 2005; TuáşĽn VÄn <langthang@gentoo.org>
+  19 Jan 2005; Tuấn Văn <langthang@gentoo.org>
   -files/addr_extensions_in_sql.patch, -files/lost_connection.patch,
   -files/sql_timeout.patch, -amavisd-new-20030616_p8.ebuild,
   -amavisd-new-20030616_p9.ebuild:
