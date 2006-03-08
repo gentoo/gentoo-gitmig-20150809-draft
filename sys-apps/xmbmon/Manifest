@@ -2,23 +2,51 @@
 Hash: SHA1
 
 MD5 1ac020de05308a507db43d8a16c91b55 ChangeLog 1554
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 c64efab0f0a18fa4a17711f31a9ba405 xmbmon-2.0.3.ebuild 1510
-MD5 f924b4529d447126126533c75c6d27b6 xmbmon-2.0.5.ebuild 1631
-MD5 495469e39e1df68b8c60b7ea7dcaf1a3 xmbmon-2.0.5-r1.ebuild 1808
+RMD160 05d799534909701f0363f155256daaa58232ffb7 ChangeLog 1554
+SHA256 856ce8b4a555f5a2c60fc7ba30425c22b72ce073c45df572d9b411292b49b14a ChangeLog 1554
 MD5 bcbf7a71b0097dda70c0ca258cf00c84 files/digest-xmbmon-2.0.3 61
-MD5 9c27e9d00e4c46cdac30f402fc3092c0 files/xmbmon-2.0.3-gcc34.patch 702
-MD5 8e27c8cca2ba525771b72a602b821d19 files/mbmon.rc 489
+RMD160 2ae173667187059036d694f6b3569b7e6d45c6fd files/digest-xmbmon-2.0.3 61
+SHA256 e1e5b01618271a38858e468e5ed115180dbc5f07a21a6d7c2814785d97f4435e files/digest-xmbmon-2.0.3 61
 MD5 0c353771c30cbc519c6e0691ff79a0ad files/digest-xmbmon-2.0.5 125
-MD5 7cd8051a9606fc6b11bdb465b0e676b2 files/xmbmon-2.0.5-amd64.patch 674
-MD5 d94cced51ed9cc01b86bb1ce4e22cd62 files/mbmon.confd 280
-MD5 3c8f0268ab51de0a52f5969f1c42af33 files/xmbmon-2.0.5-loopback.patch 1181
-MD5 00bb33e41041d97c8a371e193368b65d files/xmbmon-2.0.5-pid.patch 505
+RMD160 e0a3afb2afd652a7e29ca20a0999ddfc06606fd5 files/digest-xmbmon-2.0.5 125
+SHA256 c4aae7199c46e4477f7d92d9ffe18ad9f71a91d55909674fcc833dbb324f43f2 files/digest-xmbmon-2.0.5 125
 MD5 0c353771c30cbc519c6e0691ff79a0ad files/digest-xmbmon-2.0.5-r1 125
+RMD160 e0a3afb2afd652a7e29ca20a0999ddfc06606fd5 files/digest-xmbmon-2.0.5-r1 125
+SHA256 c4aae7199c46e4477f7d92d9ffe18ad9f71a91d55909674fcc833dbb324f43f2 files/digest-xmbmon-2.0.5-r1 125
+MD5 d94cced51ed9cc01b86bb1ce4e22cd62 files/mbmon.confd 280
+RMD160 dd14496ebc4a396974d89e01f0fe16a7668ea5e9 files/mbmon.confd 280
+SHA256 c7cb6b0527dfa9e93cae38625db182e5582bd3825f5451c9c8795d0cdaa10d1f files/mbmon.confd 280
+MD5 8e27c8cca2ba525771b72a602b821d19 files/mbmon.rc 489
+RMD160 0f80993e16d4a8be194afcdd6877cda5d388bcef files/mbmon.rc 489
+SHA256 cf6427d27243c787ca795c8e31d7722a5a84b6f10dcc96191b8cc29784c4f991 files/mbmon.rc 489
+MD5 9c27e9d00e4c46cdac30f402fc3092c0 files/xmbmon-2.0.3-gcc34.patch 702
+RMD160 e5220bd4e652daf634e6ee97a6be131afa85d150 files/xmbmon-2.0.3-gcc34.patch 702
+SHA256 d0c11548e3f51c5177f41a10f5da59e6f920ec36356f1513423f097ab90bd0cc files/xmbmon-2.0.3-gcc34.patch 702
+MD5 7cd8051a9606fc6b11bdb465b0e676b2 files/xmbmon-2.0.5-amd64.patch 674
+RMD160 4419b3ac9727afd1105c91a12317500d33111bed files/xmbmon-2.0.5-amd64.patch 674
+SHA256 e80b14a78ff4d6f308a9d38f4998062121eba2ae3b42de4f882e33d17f9fdb7b files/xmbmon-2.0.5-amd64.patch 674
+MD5 3c8f0268ab51de0a52f5969f1c42af33 files/xmbmon-2.0.5-loopback.patch 1181
+RMD160 f1660591c1cc7946c719931070a8566bc768a7fb files/xmbmon-2.0.5-loopback.patch 1181
+SHA256 f55f730a37de771846a215be7d5aad24e9df7fa35041a000679625a10e313ac5 files/xmbmon-2.0.5-loopback.patch 1181
+MD5 00bb33e41041d97c8a371e193368b65d files/xmbmon-2.0.5-pid.patch 505
+RMD160 4b6f6fdbab69e991d6e1c42a1c7c203c27686e4b files/xmbmon-2.0.5-pid.patch 505
+SHA256 f57e6747dcd1a463892cd8302cbd4a0e62ea3995dd51e432d1c7329a903fe317 files/xmbmon-2.0.5-pid.patch 505
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 f1f83d78865eefc3b7701e96d372f60d xmbmon-2.0.3.ebuild 1541
+RMD160 7634fa15b6bef58d5e4a8e67d584ad6251345224 xmbmon-2.0.3.ebuild 1541
+SHA256 0f20747df296d912cec4d9447704216ea5dca8b83baa0bf7e37d46b73dc859ce xmbmon-2.0.3.ebuild 1541
+MD5 27803e7ad015b67da77708b7c2e5cc8b xmbmon-2.0.5-r1.ebuild 1879
+RMD160 0c460e224128d2e436b36a552e3b7a656c684d48 xmbmon-2.0.5-r1.ebuild 1879
+SHA256 7535dd9d9185947a0dbcfe0e5c1706e3e2228ca3d0bc33caaffda14a03238451 xmbmon-2.0.5-r1.ebuild 1879
+MD5 aa33b20cf4860d556f361367364d49c5 xmbmon-2.0.5.ebuild 1661
+RMD160 d38af6140cab46814fee17c6c83da7a77ac29aea xmbmon-2.0.5.ebuild 1661
+SHA256 8d9e98ea0951bea30b3e6491ce3aad52c41276eddc3db691155bc9e35a7123e2 xmbmon-2.0.5.ebuild 1661
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFCs6g5gIKl8Uu19MoRAmu1AJ4gGpo0jeMlwrF39AlfqlfZCfRM4ACZARJi
-JjvnQWvS1RVHspLjsca7IUI=
-=8Iw0
+iD8DBQFEDjlu2+ySkm8kpY0RAiQ0AJsFg5y0XNLmdFUhvEXf0CnQVFHMRwCgqVs4
+yWrLZLOlvzut2rNqHPP1VkU=
+=431W
 -----END PGP SIGNATURE-----

@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.5.ebuild,v 1.1 2005/02/05 03:32:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.5.ebuild,v 1.2 2006/03/08 01:53:30 vapier Exp $
 
-inherit gnuconfig eutils
+inherit eutils
 
 MY_P="${PN}${PV//.}"
 DESCRIPTION="Mother Board Monitor Program for X Window System"
@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="X"
 
-DEPEND="virtual/libc
-	X? ( virtual/x11 )"
+DEPEND="X? ( || ( ( x11-libs/libXt x11-libs/libSM x11-libs/libX11 x11-libs/libICE ) virtual/x11 ) )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -31,8 +30,6 @@ src_unpack() {
 }
 
 src_compile() {
-	gnuconfig_update
-
 	econf || die "Configure failed"
 	emake mbmon || die "Make mbmon failed"
 	if use X ; then
