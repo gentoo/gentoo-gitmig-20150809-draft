@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.7 2005/12/14 19:52:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.8 2006/03/08 20:08:13 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
@@ -70,11 +70,11 @@ egethome() {
 	case ${CHOST} in
 	*-darwin*|*-freebsd*|*-dragonfly*)
 		# Darwin, OSX, FreeBSD and DragonFly use position 9 to store homedir
-		cut -d: -f9 <<<${ent}
+		echo ${ent} | cut -d: -f9
 		;;
 	*)
 		# Linux, NetBSD and OpenBSD use position 6 instead
-		cut -d: -f6 <<<${ent}
+		echo ${ent} | cut -d: -f6
 		;;
 	esac
 }
@@ -90,11 +90,11 @@ egetshell() {
 	case ${CHOST} in
 	*-darwin*|*-freebsd*|*-dragonfly*)
 		# Darwin, OSX, FreeBSD and DragonFly use position 9 to store homedir
-		cut -d: -f10 <<<${ent}
+		echo ${ent} | cut -d: -f10
 		;;
 	*)
 		# Linux, NetBSD and OpenBSD use position 6 instead
-		cut -d: -f7 <<<${ent}
+		echo ${ent} cut -d: -f7
 		;;
 	esac
 }
