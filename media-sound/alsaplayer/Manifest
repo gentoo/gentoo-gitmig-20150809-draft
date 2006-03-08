@@ -1,19 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bcdd4545d04342df52af1c44d4316dcc ChangeLog 6694
+MD5 92c92e2346169282667a0475e24e322c ChangeLog 6815
+RMD160 b8d5e080a3f2e220e0f991c2da6bfc925adc4c14 ChangeLog 6815
+SHA256 10aee7416f8877cea4bf92d345fa92a6c9f658d7d03c9a0fabd32c90a8daa87d ChangeLog 6815
 MD5 fa9994cba4a0be6f81deb33e4e3100e7 alsaplayer-0.99.76-r1.ebuild 2047
+RMD160 3ff7b1a02aeedf564b8971ef75a0bd4c31681456 alsaplayer-0.99.76-r1.ebuild 2047
+SHA256 421c43b16e01158b1b21724dbc046818360e485eb2d8e8fb94de9887f729a3b8 alsaplayer-0.99.76-r1.ebuild 2047
 MD5 e08924c6b04962b4305c5c898723b41d alsaplayer-0.99.76-r2.ebuild 1987
-MD5 41d025f12a81a5c43e55d58ed0dbcbde alsaplayer-0.99.76.ebuild 1604
+RMD160 422f92d4aac141ae810e6f602f7a546d6fcb2a77 alsaplayer-0.99.76-r2.ebuild 1987
+SHA256 f90922c69f4fa2b74d25aa3f8a2836bd9d5b633eb39ca508a0d44d46f6061215 alsaplayer-0.99.76-r2.ebuild 1987
+MD5 1cc0f259b38ece5e3505dfd10a301ad5 alsaplayer-0.99.76.ebuild 1591
+RMD160 a88ba053d89059abb71a4cf5555865db07cd3429 alsaplayer-0.99.76.ebuild 1591
+SHA256 a30e9eb74eefa21eb18ad290085c76fb18abba23ccb618ae06db69a66df2d40c alsaplayer-0.99.76.ebuild 1591
 MD5 4d1180a1109044fb119335839a357f95 files/alsaplayer-endian.patch 1143
+RMD160 23bdea0124ec79ab5cdd2e39303a12563d2769d6 files/alsaplayer-endian.patch 1143
+SHA256 4f413733e131c1da74f00f559db173c8adcc7d6c9fc870d96e88a586c53e682d files/alsaplayer-endian.patch 1143
 MD5 53bd2804a0e111a7f5fd3e65e8ccd493 files/digest-alsaplayer-0.99.76 71
+RMD160 12be3dc8de071b323342e84140a2ddffdda5dbd7 files/digest-alsaplayer-0.99.76 71
+SHA256 9da9b7922fce81b06ce833158e7bcdcd20c662086819288591fe648cee26735a files/digest-alsaplayer-0.99.76 71
 MD5 53bd2804a0e111a7f5fd3e65e8ccd493 files/digest-alsaplayer-0.99.76-r1 71
+RMD160 12be3dc8de071b323342e84140a2ddffdda5dbd7 files/digest-alsaplayer-0.99.76-r1 71
+SHA256 9da9b7922fce81b06ce833158e7bcdcd20c662086819288591fe648cee26735a files/digest-alsaplayer-0.99.76-r1 71
 MD5 53bd2804a0e111a7f5fd3e65e8ccd493 files/digest-alsaplayer-0.99.76-r2 71
+RMD160 12be3dc8de071b323342e84140a2ddffdda5dbd7 files/digest-alsaplayer-0.99.76-r2 71
+SHA256 9da9b7922fce81b06ce833158e7bcdcd20c662086819288591fe648cee26735a files/digest-alsaplayer-0.99.76-r2 71
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDpc/WAiZjviIA2XgRAo5fAKCOohauh2g0uSChrkgIpVckTHNgyQCfZWAV
-KA5NV2iQ4cwmBDT2yTGS92s=
-=i7Oa
+iD8DBQFEDvXiAiZjviIA2XgRAj3MAKDpgSn4avnwQulttOsrAn1/9XiR4QCfecry
+oM3FAsFjwRH+7aK8QQhpGBU=
+=CqXi
 -----END PGP SIGNATURE-----
