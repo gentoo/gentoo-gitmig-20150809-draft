@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 efc263e9b6e892fb16d8dd9c8a31b6b2 ChangeLog 32336
-RMD160 c29d8ec5bb48689b6107ed0ef96303316b6adbf9 ChangeLog 32336
-SHA256 5706b4893a0ff8bae8cb7bc399c3cc37da7d4a1572c2d1c3982ebb7a02992d09 ChangeLog 32336
+MD5 5c5dd5e2cf2530edbe7c33b1e3bb38b7 ChangeLog 32443
+RMD160 e7418f45481bc1b2be16a7ab7486a96d78ce06f6 ChangeLog 32443
+SHA256 066bac6a54dcc564a3e51b86fdadfd2b6a576b83b23237d163e2a4d1c652ec2d ChangeLog 32443
 MD5 95f6cf79b236723dc8e09937391dd4de evolution-1.2.4.ebuild 6245
 RMD160 5539a866e6b196898af7bd91fca67f3576a4f9f9 evolution-1.2.4.ebuild 6245
 SHA256 f2bdfdf19456786a2053b44b5a5b4a67db949790eac29cde7f626d9b8a67e3f0 evolution-1.2.4.ebuild 6245
@@ -19,9 +19,9 @@ SHA256 a2be03f4a4ffd0101e3b1e50e0ce2d3e4bba094759f9c34b22c5d1400015bc9e evolutio
 MD5 c2143b072b734ff9a01c1bf05c02196c evolution-2.4.1.ebuild 6385
 RMD160 69ae6d0240c5a028e10b8d7d4b3e0dcb74fdc5bb evolution-2.4.1.ebuild 6385
 SHA256 954fa28449a230e5aaa059d8b66f5766e9bdfd21e7080c09eae7818f18cb44ce evolution-2.4.1.ebuild 6385
-MD5 eb860986d05a4dc0ba13905f4fc035cd evolution-2.4.2.1.ebuild 5761
-RMD160 e6e343aabce1aae0cb04d15665249433c557dfd6 evolution-2.4.2.1.ebuild 5761
-SHA256 ae96a8ac324f1449031a25f29fb6301e6125f8ed5b727515dcd87f901086af7a evolution-2.4.2.1.ebuild 5761
+MD5 4f31d4d9452857478885bfa9bab14e4f evolution-2.4.2.1.ebuild 5760
+RMD160 d25cf15d1d96c61e60cae0314ff89ccec0d9ff96 evolution-2.4.2.1.ebuild 5760
+SHA256 bdb9b441fa2edd27f8f1370edd52332cf7ad52646ddc953f0374617bf97a3c58 evolution-2.4.2.1.ebuild 5760
 MD5 69340630836c71c73ff1fa374ff69ad3 evolution-2.4.2.ebuild 5663
 RMD160 d0a1781003d2920ef61c006bfff52fb45df5bf88 evolution-2.4.2.ebuild 5663
 SHA256 8b457aa42a973db38865303f27e8545f22c7ebbede54fdf9371799f4c88b333b evolution-2.4.2.ebuild 5663
@@ -43,9 +43,9 @@ SHA256 62640b57c044d1e308aa3a36924e440128fe6c5e8a7e741ef19825f6e839b476 files/di
 MD5 5ed7243a0f9ac1f4533f95f2ac2cd159 files/digest-evolution-2.4.2 70
 RMD160 30e10e88229c16e4a648420262ab74b66fb080ac files/digest-evolution-2.4.2 70
 SHA256 2b5fceafd090f4a6db3b2e7a67599c9a908482d17b1c269d3da1942a479a33fb files/digest-evolution-2.4.2 70
-MD5 5b251dccca668c00b3b15692399253a9 files/digest-evolution-2.4.2.1 72
-RMD160 da185d700cf5358aa8ac7d0dd0cf54e7891ab01a files/digest-evolution-2.4.2.1 72
-SHA256 07b0e99031431ac21e2c0a01e4a01a0268315b8ab11f120d1c1c60156b1ab58a files/digest-evolution-2.4.2.1 72
+MD5 c26dc1fd2762cde6c32c4c52d3ce9644 files/digest-evolution-2.4.2.1 262
+RMD160 59ab19f6fa13bb17b8756d4ea326d9827b839bf8 files/digest-evolution-2.4.2.1 262
+SHA256 66512ea95e1843f7da7daff072e06ae1c770a51c57cf954c66d8924ba2c9213c files/digest-evolution-2.4.2.1 262
 MD5 c837abd50d990dea46fcea32b8a1b001 files/evolution-1.1.90-kde.patch 689
 RMD160 64dd8efc58e99c0c2037ac47ffe6c6db5a15aafe files/evolution-1.1.90-kde.patch 689
 SHA256 efe5df721db55743cb9e63aca62ce03c77d82755ac57dd486eef3269adce0836 files/evolution-1.1.90-kde.patch 689
@@ -92,9 +92,9 @@ MD5 f0750af493d9560f5faf50f39fd644c5 metadata.xml 285
 RMD160 0c12c7c2e6dd66ea44e83541384d6b634c642bc0 metadata.xml 285
 SHA256 0c662917bda7d3035eab7db55ade83dadca650d2ceddc44b7765ba5f898bd816 metadata.xml 285
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD57Z6JrHF4yAQTrARArBmAJ9TBMdhX6bRnFJip11ndWiuxEjskgCgq/LN
-SpdToV4C2JkPvnbMZ8b9CNA=
-=2LE2
+iD8DBQFEELu+JrHF4yAQTrARAm2MAJ9q2RzKMUErzqeiqU2EPSFbsHlwXwCgkJLF
+bzzUeHeausMBW4HgcWFKXYU=
+=bOck
 -----END PGP SIGNATURE-----
