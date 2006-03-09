@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060302-r1.ebuild,v 1.1 2006/03/05 15:57:56 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060302-r1.ebuild,v 1.2 2006/03/09 02:09:50 flameeyes Exp $
 
-inherit multilib
+inherit multilib eutils
 
 IUSE="debug mp4 threads"
 
@@ -21,6 +21,13 @@ DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
 S=${WORKDIR}/${PN}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-nostrip.patch"
+}
 
 src_compile() {
 	./configure --prefix=/usr \
