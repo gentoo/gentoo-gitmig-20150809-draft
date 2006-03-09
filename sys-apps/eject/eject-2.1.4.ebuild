@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.1.4.ebuild,v 1.1 2006/02/18 05:38:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.1.4.ebuild,v 1.2 2006/03/09 23:52:17 vapier Exp $
 
 inherit eutils
 
@@ -24,6 +24,11 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-2.0.13-xmalloc.patch
 	epatch "${FILESDIR}"/${PN}-2.1.4-toggle.patch
+}
+
+src_compile() {
+	econf $(use_enable nls) || die
+	emake || die
 }
 
 src_install() {
