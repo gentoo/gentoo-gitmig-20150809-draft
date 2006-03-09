@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.6.5.ebuild,v 1.1 2006/03/06 12:28:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.6.5.ebuild,v 1.2 2006/03/09 00:28:21 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic
 
@@ -34,6 +34,7 @@ pkg_setup() {
 }
 
 src_compile() {
+	# Don't run strip while installing stuff, leave to portage the job.
 	econf \
 		$(use_enable lzo) \
 		$(use_enable bzip2 bz2) \
@@ -41,11 +42,11 @@ src_compile() {
 		$(use_with flac) \
 		|| die "./configure died"
 
-	emake || die "make failed"
+	emake STRIP="true" || die "make failed"
 }
 
 src_install() {
-	einstall || die "make install failed"
+	einstall STRIP="true" || die "make install failed"
 	dodoc AUTHORS ChangeLog README TODO
 	dohtml doc/mkvmerge-gui.html doc/images/*
 	docinto examples
