@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.4.ebuild,v 1.1 2006/02/22 22:11:43 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.4.ebuild,v 1.2 2006/03/09 22:09:41 dju Exp $
 
 inherit distutils webapp
 
@@ -45,6 +45,11 @@ pkg_setup () {
 		die "pkg_setup failed"
 	fi
 
+	ebegin "Creating tracd group and user"
+	enewgroup tracd
+	enewuser tracd -1 -1 -1 tracd
+	eend ${?}
+
 	webapp_pkg_setup
 }
 
@@ -80,9 +85,4 @@ src_install () {
 
 	cp ${FILESDIR}/tracd.confd ${T}/tracd && doconfd ${T}/tracd
 	cp ${FILESDIR}/tracd.initd ${T}/tracd && doinitd ${T}/tracd
-
-	ebegin "Creating tracd group and user"
-	enewgroup tracd
-	enewuser tracd -1 -1 -1 tracd
-	eend ${?}
 }

@@ -1,4 +1,4 @@
-MD5 e7845a5bf9b512e1733dbf8a73001b62 ChangeLog 6261
+MD5 826497310b80752fa5484d8fc2368ec1 ChangeLog 6400
 MD5 469236380f880bdb92903ecee4587ae3 files/0.8.4-postinst-en.txt 1035
 MD5 1ef68ae7232130e8152d6e007afc4352 files/0.9.3-postinst-en.txt 2275
 MD5 1ef68ae7232130e8152d6e007afc4352 files/0.9.4-postinst-en.txt 2275
@@ -10,4 +10,4 @@ MD5 4dc8d28369a56b8efd84fd118c2cb28b files/tracd.initd 743
 MD5 fc3b5dec4ccef02547c54bf840024aa6 metadata.xml 220
 MD5 f605a49aef73a61cbcc7527da21fd418 trac-0.8.4.ebuild 1511
 MD5 77a1c85e49192f2beab5eaed1a331785 trac-0.9.3.ebuild 2486
-MD5 938ce45780809e0ff56a2be9132de8b6 trac-0.9.4.ebuild 2711
+MD5 c326214db79b5b93ee26a324371e186d trac-0.9.4.ebuild 2711
