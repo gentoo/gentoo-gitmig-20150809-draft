@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-2.2.1.ebuild,v 1.1 2005/12/23 21:57:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-2.2.1.ebuild,v 1.2 2006/03/09 01:45:02 flameeyes Exp $
 
 inherit multilib
 
@@ -20,6 +20,8 @@ RDEPEND="opengl? ( x11-base/opengl-update )
 	 >=app-emulation/emul-linux-x86-baselibs-2.0"
 
 S=${WORKDIR}
+
+RESTRICT="nostrip"
 
 pkg_preinst() {
 	# Check for bad symlink before installing, bug 84441.
