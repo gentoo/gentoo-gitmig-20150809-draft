@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.35 2006/03/06 20:41:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.36 2006/03/09 20:49:33 agriffis Exp $
+
+*mozilla-launcher-1.50 (09 Mar 2006)
+
+  09 Mar 2006; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-launcher-1.50.ebuild:
+  Bump to 1.50 (from 1.49). Fix bug 114683: -ProfileManager doesn't work with
+  DeerPark
 
 *mozilla-launcher-1.49 (06 Mar 2006)
 
