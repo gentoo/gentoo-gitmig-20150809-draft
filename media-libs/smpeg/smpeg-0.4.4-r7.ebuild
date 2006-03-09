@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r7.ebuild,v 1.6 2006/03/08 08:41:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r7.ebuild,v 1.7 2006/03/09 21:38:06 gustavoz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.lokigames.com/pub/open-source/smpeg/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc-macos ppc64 sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc-macos ppc64 sh sparc ~x86"
 IUSE="X debug gtk mmx opengl"
 
 DEPEND=">=media-libs/libsdl-1.2.0

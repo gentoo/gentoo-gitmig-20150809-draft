@@ -1,4 +1,7 @@
-MD5 442a925a66ed2bcbe98822c425b46b1e ChangeLog 4139
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7f5bddcf01c4f49350f9b5453cc49be7 ChangeLog 4248
 MD5 228adf6a40bb4eef222c38d23f97014b files/digest-smpeg-0.4.4-r6 63
 MD5 228adf6a40bb4eef222c38d23f97014b files/digest-smpeg-0.4.4-r7 63
 MD5 3ab2c17a1fa8a3c293ec83d7f4d45515 files/smpeg-0.4.4-PIC.patch 9472
@@ -8,4 +11,11 @@ MD5 7d1d2f2e55e8d98f7d62dcbb680cec7d files/smpeg-0.4.4-gnu-stack.patch 955
 MD5 dcc2db7c8aa509096fc557b99bd35490 files/smpeg-0.4.4-m4.patch 233
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 b63e03b493d3ddac7e67c5189de1a1d4 smpeg-0.4.4-r6.ebuild 1608
-MD5 7002d1a7f579b699bab7a601018bd975 smpeg-0.4.4-r7.ebuild 1690
+MD5 9f5a04ed30bb1cae07d1b26a59a79b1a smpeg-0.4.4-r7.ebuild 1690
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEEKBRKRy60XGEcJIRAhAZAJ940R6gImqIx5Fk3Z+Ba7IUHxtm5ACgjYoR
+9mGEiijwABwbYF54ftzZ1SE=
+=qnuE
+-----END PGP SIGNATURE-----
