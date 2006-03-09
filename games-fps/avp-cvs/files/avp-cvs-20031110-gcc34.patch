@@ -1,0 +1,46 @@
+--- win95/hash_tem.hpp.original	2006-03-09 23:04:02.000000000 +0100
++++ win95/hash_tem.hpp	2006-03-09 23:28:20.000000000 +0100
+@@ -432,24 +432,25 @@
+ 				// remove the current entry pointed to, advancing to the next
+ 				void Remove()
+ 				{
+-					if (!nEntriesRemaining)
++					if (!ConstIterator::nEntriesRemaining)
+ 					{
+ 						HT_FAIL("HTT: Tried to Remove() via an iterator which was Done()");
+ 					}
+-					Node * oldP = *nodePP;
+-					*nodePP = oldP->nextP;
++					Node * oldP = *ConstIterator::nodePP;
++					*ConstIterator::nodePP = oldP->nextP;
+ 					delete oldP;
+-					if (!*nodePP)
++					if (!*ConstIterator::nodePP)
+ 					{
+ 						do
+ 						{
+-							++ chainPP;
+-							-- nChainsRemaining;
++							++ ConstIterator::chainPP;
++							-- ConstIterator::nChainsRemaining;
+ 						}
+-						while (nChainsRemaining && !*chainPP);
+-						nodePP = chainPP;
++						while (ConstIterator::nChainsRemaining
++						       && !*ConstIterator::chainPP);
++						ConstIterator::nodePP = ConstIterator::chainPP;
+ 					}
+-					-- nEntriesRemaining;
++					-- ConstIterator::nEntriesRemaining;
+ 					-- *tableNEntriesP;
+ 				}
+ 
+@@ -702,7 +703,7 @@
+ 
+ 	
+ //	for(HashTable<TYPE>::ConstIterator it(ht); !it.Done(); it.Next() )
+-	for (_base_HashTable::ConstIterator it(ht); !it.Done(); it.Next() )
++	for (typename _base_HashTable::ConstIterator it(ht); !it.Done(); it.Next() )
+ 	{
+ 		AddRegardless( it.Get() );
+ 	}
