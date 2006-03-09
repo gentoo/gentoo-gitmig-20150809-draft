@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.31 2006/03/05 16:03:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.32 2006/03/09 23:31:44 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -79,6 +79,7 @@ horde_pkg_setup() {
 			HORDE_PHP_FEATURES=${HORDE_PHP_FEATURES:2}
 		fi
 		if ! built_with_use ${param} dev-lang/php ${HORDE_PHP_FEATURES} ; then
+			echo
 			if [[ ${param} == "-o" ]] ; then
 				eerror "You MUST re-emerge php with at least one of"
 			else
@@ -115,7 +116,7 @@ horde_src_install() {
 	dodoc README docs/*
 	mv docs/CREDITS "${T}"/
 	rm -f COPYING LICENSE README docs/*
-	mv CREDITS "${T}"/docs/
+	mv "${T}"/CREDITS docs/
 
 	dodir ${destdir}
 	cp -r . ${D}/${destdir}/ || die "install files"
