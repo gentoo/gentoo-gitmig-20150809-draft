@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-0.10.ebuild,v 1.6 2006/03/08 15:00:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-0.10.ebuild,v 1.7 2006/03/09 19:31:05 flameeyes Exp $
 
 inherit eutils
 
@@ -13,13 +13,15 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~x86"
 IUSE="nls"
 
-DEPEND="virtual/libc
-	>=x11-libs/gtk+-2.2
+RDEPEND=">=x11-libs/gtk+-2.2
 	>=dev-libs/glib-2.2
 	>=media-libs/freetype-2
 	>=dev-libs/atk-1.4
 	>=dev-libs/expat-1.95
 	>=x11-libs/pango-1.2
+	nls? ( virtual/libintl )"
+
+DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
