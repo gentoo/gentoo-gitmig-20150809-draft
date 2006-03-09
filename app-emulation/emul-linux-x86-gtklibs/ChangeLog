@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.17 2006/01/05 21:54:16 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.18 2006/03/09 01:31:07 flameeyes Exp $
+
+  09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  emul-linux-x86-gtklibs-2.1.ebuild, emul-linux-x86-gtklibs-2.2.ebuild,
+  emul-linux-x86-gtklibs-2.3.ebuild:
+  Add strip restriction, as the binaries are already stripped.
 
   05 Jan 2006; Herbie Hopkins <herbs@gentoo.org>
   emul-linux-x86-gtklibs-2.3.ebuild:

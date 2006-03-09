@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.14 2006/01/05 21:55:49 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.15 2006/03/09 01:38:38 flameeyes Exp $
+
+  09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  emul-linux-x86-qtlibs-2.1.1.ebuild, emul-linux-x86-qtlibs-2.2.ebuild:
+  Add strip restriction, as the binaries are already stripped.
 
   05 Jan 2006; Herbie Hopkins <herbs@gentoo.org>
   emul-linux-x86-qtlibs-2.2.ebuild:
