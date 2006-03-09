@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rman
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.21 2006/02/07 05:38:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.22 2006/03/09 22:15:39 agriffis Exp $
+
+  09 Mar 2006; Aron Griffis <agriffis@gentoo.org> rman-3.2.ebuild:
+  Mark 3.2 stable on ia64
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> rman-3.2.ebuild:
   Mark 3.2 stable on alpha
