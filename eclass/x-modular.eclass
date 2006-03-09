@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.46 2006/02/28 01:27:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.47 2006/03/09 20:39:30 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -230,7 +230,7 @@ x-modular_reconf_source() {
 x-modular_src_unpack() {
 	if [[ ${PN:0:11} = "xorg-server" ]] || [[ -n "${DRIVER}" ]]; then
 		if gcc-specs-now; then
-			msg="Do not emerge ${PN} without vanilla gcc!"
+			msg="Do not emerge ${PN} without vanilla gcc specs!"
 			eerror "$msg"
 			die "$msg"
 		fi
