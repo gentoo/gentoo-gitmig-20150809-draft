@@ -19,13 +19,13 @@ SHA256 39e1273dd60bd3ceb460e9366a648c8fa21db1c292df4573e69f41cf6c84f6fc metadata
 MD5 368e13118c25d89512de00ab88a0f03a secure-delete-3.0.ebuild 1129
 RMD160 53ca5decaabb7190af3319d8b53d3b08c32d9eb9 secure-delete-3.0.ebuild 1129
 SHA256 91272ead16f8a8d2d3660ff27c6eb8d97ef08b987538d11c4f2f4e4851936e24 secure-delete-3.0.ebuild 1129
-MD5 558e7b65c2538c4092bbbcb48bfc59b0 secure-delete-3.1.ebuild 1435
-RMD160 78f74ddfbdc6abab8092839a87cebd0c74bea247 secure-delete-3.1.ebuild 1435
-SHA256 6674206c0615b636e3d0cdd3b8443871fef01d7e9bebc276391235af1fcf0b50 secure-delete-3.1.ebuild 1435
+MD5 1a2bc44de69f5e7f8b7ac4b09ef7a4d8 secure-delete-3.1.ebuild 1435
+RMD160 ca8d29a8c3a6f858e8e910b6bd7c83ba9880f22d secure-delete-3.1.ebuild 1435
+SHA256 3d68264434973b3f4a0463bf85c6f7a7e71da000676b535de4f8dc947d66f04d secure-delete-3.1.ebuild 1435
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEDzkDl5AvwDPiUowRAiCGAKDemPT3UbtvN/2/gDAK+A90NozekACePfwO
-BHZXIyfmSbM1hnqom4JW+Gs=
-=o8Pb
+iD8DBQFEEIZVCRZPokWLroQRAv+3AJ0RcqyAbdiV6fO4/H/FBrfBp79RZgCfTEYq
+4id+9X1NYQ6hl7uMqjMF2L0=
+=WtZ6
 -----END PGP SIGNATURE-----
