@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/damageproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/damageproto/ChangeLog,v 1.14 2006/02/14 22:58:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/damageproto/ChangeLog,v 1.15 2006/03/09 14:40:57 agriffis Exp $
+
+  09 Mar 2006; Aron Griffis <agriffis@gentoo.org> damageproto-1.0.3.ebuild:
+  Mark 1.0.3 ~ia64
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org> damageproto-1.0.3.ebuild:
   Added ~ppc64
