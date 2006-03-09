@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.69 2006/03/09 19:11:28 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.70 2006/03/09 20:19:24 gustavoz Exp $
+
+  09 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  autoconf-2.59-r7.ebuild:
+  Stable on sparc wrt #125423
 
   09 Mar 2006; Luis Medinas <metalgod@gentoo.org> autoconf-2.59-r7.ebuild:
   Stable on amd64. Bug #125423.
