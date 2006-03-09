@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1216.ebuild,v 1.1 2006/03/07 18:11:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1217.ebuild,v 1.1 2006/03/09 18:40:58 flameeyes Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -25,8 +25,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch "${FILESDIR}/${P}-makefile.patch"
-	epatch "${FILESDIR}/${P}-amd64.patch"
+	epatch "${FILESDIR}/${PN}-0.1216-makefile.patch"
+	epatch "${FILESDIR}/${PN}-0.1216-amd64.patch"
 }
 
 src_compile() {
