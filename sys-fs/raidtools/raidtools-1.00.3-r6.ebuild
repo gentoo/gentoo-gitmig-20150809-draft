@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r6.ebuild,v 1.2 2005/06/10 01:34:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r6.ebuild,v 1.3 2006/03/09 23:56:50 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-s390x.patch
 	epatch "${FILESDIR}"/${P}-raidstop.patch
 	epatch "${FILESDIR}"/${P}-PIC.patch
+	epatch "${FILESDIR}"/${P}-build.patch #125586
 	epatch "${FILESDIR}"/${P}-quiet-raidstart.patch
 
 	# Buffer overflow fix

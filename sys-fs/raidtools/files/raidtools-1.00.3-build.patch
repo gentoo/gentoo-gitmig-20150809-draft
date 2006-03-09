@@ -1,0 +1,15 @@
+we'll take care of stripping thank you very much
+
+http://bugs.gentoo.org/125586
+
+--- raidtools/Makefile.in
++++ raidtools/Makefile.in
+@@ -98,7 +98,7 @@
+ install_bin: 
+ 	[ -d $(ROOTDIR)/$(SBIN) ] || mkdir -p $(ROOTDIR)/$(SBIN)
+ 	for n in $(BINARIES); do \
+-	    install -s -m755 $$n $(ROOTDIR)/$(SBIN)/$$n ;\
++	    install -m755 $$n $(ROOTDIR)/$(SBIN)/$$n ;\
+ 	done
+ 	for i in $(RAIDSTARTLINKS); do \
+ 	    rm -f $(ROOTDIR)/$(SBIN)/$$i ;\

@@ -1,28 +1,55 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dd0b355eb26c0915dea409062a9d8fc3 raidtools-1.00.3-r4.ebuild 1760
-MD5 1bf4cc61cf76ff5cb930966443ea4c89 raidtools-1.00.3-r6.ebuild 1696
-MD5 e5925e14a9189114c4aac437b92ed49a raidtools-1.00.3-r5.ebuild 1689
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 b4d34745180b45c2e39d874d0df13f09 ChangeLog 5969
-MD5 5ff54c0c871ac497487c3bfaeffd09cb files/raidtools.cron 555
-MD5 402cd2a18b3b385d4af9458ba862607b files/raidtools-1.00.3-mkraid.patch 578
-MD5 54b6277ec8d8f24e23ece051ea2e8680 files/digest-raidtools-1.00.3-r4 68
-MD5 6d940ee820e10c9e01a1fe6f25424740 files/raidtools-1.00.3-quiet-raidstart.patch 1824
-MD5 0fa91a341c38be56295db45f2a73aade files/raidtools-1.00.3-gcc33.patch 3044
-MD5 7c7f2c7b6997c11ecef66713443b1c36 files/raid-stop.sh 809
-MD5 effa29906fa5b9b7755ac3f16442c07f files/raidtools-1.00.3-raidstop.patch 2921
-MD5 54b6277ec8d8f24e23ece051ea2e8680 files/digest-raidtools-1.00.3-r5 68
-MD5 709b59b7f6b66ab6515513ef420d0d07 files/raidtools-1.00.3-PIC.patch 954
+MD5 29e152566dcdec826be62441b84b847b ChangeLog 6151
+RMD160 193f1732b4bcab2203ac0f367d134d8fd602fd8c ChangeLog 6151
+SHA256 98a20092cd198126b49970bb1a9c9ce44075bddbdccf5252a3fc3a5243310f6c ChangeLog 6151
 MD5 54b6277ec8d8f24e23ece051ea2e8680 files/digest-raidtools-1.00.3-r6 68
-MD5 1ed9388ea5a0f44ceea181fc7ffa2552 files/raidtools-1.00.3-s390x.patch 1515
+RMD160 75c8bee022b08316e83b8174b1ecf177e84bf81c files/digest-raidtools-1.00.3-r6 68
+SHA256 93f8ca667d91fddfd82ab38f0fc13c1828e99c80df19e77ba0f835e4bd2526d0 files/digest-raidtools-1.00.3-r6 68
 MD5 eb64a68bf1a0328f152b2d5251432d2c files/raid-start.sh 1522
+RMD160 7bfd363a6fc066ee015fe7f4a28cd50b62b4e0b4 files/raid-start.sh 1522
+SHA256 724a66ad49894d6b25f6103dd8666031e19ed1b3c5b9874db1e026fb80b84abb files/raid-start.sh 1522
+MD5 7c7f2c7b6997c11ecef66713443b1c36 files/raid-stop.sh 809
+RMD160 83f264da2d3591116c9ce68706a1cbe6cbec039f files/raid-stop.sh 809
+SHA256 02d23ff6ed5347c5b9dc891b86ef8d8f7b8473a8dbc35d7b5cb3ec7143d9cc7f files/raid-stop.sh 809
 MD5 435ff32ca3b1b4451c986fe8f68fa819 files/raidtools-1.00.3-2.6.Headers.patch 1511
+RMD160 f9fd7a03ac49d81254b0b85150e57590c3eb18aa files/raidtools-1.00.3-2.6.Headers.patch 1511
+SHA256 6761216667a9e1ba10bd0f1bbe469604bb5ff648642dc73eaee45c9e38a0c422 files/raidtools-1.00.3-2.6.Headers.patch 1511
+MD5 709b59b7f6b66ab6515513ef420d0d07 files/raidtools-1.00.3-PIC.patch 954
+RMD160 8392c6a10fc76e42e9a5d5bbce182b91a5dde91a files/raidtools-1.00.3-PIC.patch 954
+SHA256 5c70fd352a86755fbae9023785bfea1de102c78781f12a1596108561ff38420d files/raidtools-1.00.3-PIC.patch 954
+MD5 bbd5fee7e83715432cb5a96946382def files/raidtools-1.00.3-build.patch 437
+RMD160 0723ea8511c8f7323a3c9a1ca0e9381c20b22423 files/raidtools-1.00.3-build.patch 437
+SHA256 bfbc5c35dbaaced519afaf01c2780a44841212318009f39a2fdb09d0743ce330 files/raidtools-1.00.3-build.patch 437
+MD5 0fa91a341c38be56295db45f2a73aade files/raidtools-1.00.3-gcc33.patch 3044
+RMD160 bcff3b4fa9c961d4616722af19ac49a71cc9a227 files/raidtools-1.00.3-gcc33.patch 3044
+SHA256 079c40e87c3faface03b72f4764d8f8d36cda318c99f050e62859754210f4f1e files/raidtools-1.00.3-gcc33.patch 3044
+MD5 402cd2a18b3b385d4af9458ba862607b files/raidtools-1.00.3-mkraid.patch 578
+RMD160 9736141a4562ef43e4b8cd3cf4fb0216538d2bc3 files/raidtools-1.00.3-mkraid.patch 578
+SHA256 f778d6f4536dcff0b945c5ba7647efd20e66aba0c1a0c40be693a6e66cde7f20 files/raidtools-1.00.3-mkraid.patch 578
+MD5 6d940ee820e10c9e01a1fe6f25424740 files/raidtools-1.00.3-quiet-raidstart.patch 1824
+RMD160 7f2d15673f78176fc7852979103f98789b5c6fe5 files/raidtools-1.00.3-quiet-raidstart.patch 1824
+SHA256 7db7185e4515d55d196b0f837e743f1ced7a8b2664ab0ed2556e3b216c0e9e3a files/raidtools-1.00.3-quiet-raidstart.patch 1824
+MD5 effa29906fa5b9b7755ac3f16442c07f files/raidtools-1.00.3-raidstop.patch 2921
+RMD160 26fa92efec1e6a166eab3dece1f8f02728cf18a8 files/raidtools-1.00.3-raidstop.patch 2921
+SHA256 487c8cfd77b2d380aefa1abefda47cbafda91e564853d79c66ede9b59b13b7b8 files/raidtools-1.00.3-raidstop.patch 2921
+MD5 1ed9388ea5a0f44ceea181fc7ffa2552 files/raidtools-1.00.3-s390x.patch 1515
+RMD160 97da5e302f8bbe5c61de6cf91e41b3b097b583e0 files/raidtools-1.00.3-s390x.patch 1515
+SHA256 607c5b727426aa6eeb1b51cb2531b1096094ebf5b90a235907f2b49a3f0c40bb files/raidtools-1.00.3-s390x.patch 1515
+MD5 5ff54c0c871ac497487c3bfaeffd09cb files/raidtools.cron 555
+RMD160 308e4e7b8af8dae07acc77e605656035b206323b files/raidtools.cron 555
+SHA256 0b3e1b6a0115864127236feb93a65649f9b79c07828adfb03605038cf3bbf249 files/raidtools.cron 555
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 889fa242d449d2e30d62d8ce1b6d1c0f raidtools-1.00.3-r6.ebuild 1743
+RMD160 ce9a02da066aeb53172d8e6edfd22fe0ba1fb8cf raidtools-1.00.3-r6.ebuild 1743
+SHA256 622286e332e6641fac241e0ccb2659f56a994b7d7d01ecf9778bbdf9f6d3dd36 raidtools-1.00.3-r6.ebuild 1743
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDK2Y3LLFUmVNQ7rkRAjWvAKCvZMk2NHxhTyWyjwr8DTEAeumxTwCggtBR
-DTxHBQno6FTEvHjaUBEaSsA=
-=zoeA
+iD8DBQFEEMEj2+ySkm8kpY0RAtQ+AJ9KObkQFZmiuYr1Dvllkml50xHvEQCgw4yN
+kzv1W4fu72QbjcBno7paNFE=
+=xvoK
 -----END PGP SIGNATURE-----
