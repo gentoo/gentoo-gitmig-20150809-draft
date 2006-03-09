@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.1.ebuild,v 1.2 2006/03/09 20:03:09 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.1-r1.ebuild,v 1.1 2006/03/09 20:03:09 chtekk Exp $
 
 inherit apache-module eutils
 
@@ -69,6 +69,17 @@ pkg_setup() {
 	: ${SUPHP_LOGFILE:="/var/log/apache2/suphp_log"}
 }
 
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+
+	epatch "${FILESDIR}/suphp-apache22-compat.patch"
+	if has_version ">=dev-libs/apr-1.0.0" ; then
+		sed -e "s|apr-config|apr-1-config|g" -i configure
+	fi
+}
+
 src_compile() {
 	local myargs=
 	use checkpath || myargs="${myargs} --disable-checkpath"
@@ -80,9 +91,13 @@ src_compile() {
 	        --with-apache-user=${SUPHP_APACHEUSER} \
 	        --with-logfile=${SUPHP_LOGFILE} \
 	        --with-apxs=${APXS2}"
-
-	CFLAGS="$(apr-config --includes) $(apu-config --includes)" \
-	econf ${myargs} || die "econf failed"
+	if has_version ">=dev-libs/apr-1.0.0" ; then
+		CFLAGS="$(apr-1-config --includes) $(apu-1-config --includes)" \
+		econf ${myargs} || die "econf failed"
+	else
+		CFLAGS="$(apr-config --includes) $(apu-config --includes)" \
+		econf ${myargs} || die "econf failed"
+	fi
 
 	emake || die "make failed"
 }

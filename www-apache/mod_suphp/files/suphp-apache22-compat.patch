@@ -1,0 +1,75 @@
+--- src/apache2/mod_suphp.c	Sat Jan  7 19:03:59 2006
++++ src/apache2/mod_suphp.c	Sat Jan  7 19:20:32 2006
+@@ -56,7 +56,7 @@
+         return -1;
+        
+     rv = apr_bucket_read(b, &bucket_data, &bucket_data_len, APR_BLOCK_READ);
+-    if (!APR_STATUS_IS_SUCCESS(rv) || (bucket_data_len == 0))
++    if ((rv != APR_SUCCESS) || (bucket_data_len == 0))
+     {
+         return 0;
+     }
+@@ -558,7 +558,9 @@
+             return rv;
+         }
+         
+-        APR_BRIGADE_FOREACH(bucket, bb)
++		
++		bucket = APR_BRIGADE_FIRST(bb);
++		while (bucket != APR_BRIGADE_SENTINEL(bb))
+         {
+             const char *data;
+             apr_size_t len;
+@@ -582,6 +584,8 @@
+             {
+                 child_stopped_reading = 1;
+             }
++			
++			bucket = APR_BUCKET_NEXT(bucket);
+         }
+         apr_brigade_cleanup(bb);
+     }
+@@ -634,12 +638,15 @@
+             
+             const char *buf;
+             apr_size_t blen;
+-            APR_BRIGADE_FOREACH(b, bb)
++			b = APR_BRIGADE_FIRST(bb);
++			while (b != APR_BRIGADE_SENTINEL(bb))
+             {
+                 if (APR_BUCKET_IS_EOS(b))
+                     break;
+                 if (apr_bucket_read(b, &buf, &blen, APR_BLOCK_READ) != APR_SUCCESS)
+                     break;
++
++				b = APR_BUCKET_NEXT(b);
+             }
+             apr_brigade_destroy(bb);
+             suphp_log_script_err(r, proc->err);
+@@ -655,12 +662,14 @@
+             /* empty brigade (script output) */
+             const char *buf;
+             apr_size_t blen;
+-            APR_BRIGADE_FOREACH(b, bb)
++			b = APR_BRIGADE_FIRST(bb);
++			while (b != APR_BRIGADE_SENTINEL(bb))
+             {
+                 if (APR_BUCKET_IS_EOS(b))
+                     break;
+                 if (apr_bucket_read(b, &buf, &blen, APR_BLOCK_READ) != APR_SUCCESS)
+                     break;
++				b = APR_BUCKET_NEXT(b);
+             }
+             apr_brigade_destroy(bb);
+             return HTTP_MOVED_TEMPORARILY;
+--- configure	2006-03-04 19:06:30.000000000 +0100
++++ configure	2006-03-04 19:05:37.000000000 +0100
+@@ -20425,7 +20425,7 @@
+                     | cut -f2 -d"/" \
+                     | cut -f1 -d" "`
+     major_version=`echo $APACHE_VERSION|cut -f1,2 -d.`
+-    if test "$major_version" = "2.0"; then
++    if test "$major_version" = "2.2"; then
+       APACHE_VERSION_2=true
+       APACHE_VERSION_1_3=false
+     else
