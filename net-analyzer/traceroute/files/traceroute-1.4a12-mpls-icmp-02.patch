@@ -1,0 +1,194 @@
+--- traceroute-1.4a12/traceroute.c	Thu Dec 14 08:04:50 2000
++++ traceroute/traceroute.c	Sun Aug 17 21:21:07 2003
+@@ -282,6 +282,55 @@
+ };
+ #endif
+ 
++/*
++ * Support for ICMP extensions
++ *
++ * http://www.ietf.org/proceedings/01aug/I-D/draft-ietf-mpls-icmp-02.txt
++ */
++#define ICMP_EXT_OFFSET    8 /* ICMP type, code, checksum, unused */ + \
++                         128 /* original datagram */
++#define ICMP_EXT_VERSION 2
++/*
++ * ICMP extensions, common header
++ */
++struct icmp_ext_cmn_hdr {
++#if BYTE_ORDER == BIG_ENDIAN
++       u_char   version:4;
++       u_char   reserved1:4;
++#else
++       u_char   reserved1:4;
++       u_char   version:4;
++#endif
++       u_char   reserved2;
++       u_short  checksum;
++};
++
++/*
++ * ICMP extensions, object header
++ */
++struct icmp_ext_obj_hdr {
++    u_short length;
++    u_char  class_num;
++#define MPLS_STACK_ENTRY_CLASS 1
++    u_char  c_type;
++#define MPLS_STACK_ENTRY_C_TYPE 1
++};
++
++struct mpls_header {
++#if BYTE_ORDER == BIG_ENDIAN
++    u_int32_t label:20;
++    u_char  exp:3;
++    u_char  s:1;
++    u_char  ttl:8;
++#else
++    u_char  ttl:8;
++    u_char  s:1;
++    u_char  exp:3;
++    u_int32_t label:20;
++#endif
++};
++
++
+ u_char	packet[512];		/* last inbound (icmp) packet */
+ 
+ struct ip *outip;		/* last output (udp) packet */
+@@ -348,6 +397,7 @@
+ void	tvsub(struct timeval *, struct timeval *);
+ __dead	void usage(void);
+ int	wait_for_reply(int, struct sockaddr_in *, const struct timeval *);
++void	decode_extensions(u_char *buf, int ip_len);
+ #ifndef HAVE_USLEEP
+ int	usleep(u_int);
+ #endif
+@@ -876,6 +926,8 @@
+ 			}
+ 			if (cc == 0)
+ 				Printf(" *");
++			if (cc && probe == nprobes-1)
++			    decode_extensions(packet, cc);
+ 			(void)fflush(stdout);
+ 		}
+ 		putchar('\n');
+@@ -884,6 +936,118 @@
+ 			break;
+ 	}
+ 	exit(0);
++}
++
++void
++decode_extensions(u_char *buf, int ip_len)
++{
++	struct icmp_ext_cmn_hdr *cmn_hdr;
++	struct icmp_ext_obj_hdr *obj_hdr;
++	struct mpls_header *mpls;
++	int datalen, obj_len;
++	u_int32_t mpls_h;
++	struct ip *ip;
++
++	ip = (struct ip *)buf;
++
++	if (ip_len <= sizeof(struct ip) + ICMP_EXT_OFFSET) {
++	    /*
++	     * No support for ICMP extensions on this host
++	     */
++	    return;
++	}
++
++	/*
++	 * Move forward to the start of the ICMP extensions, if present
++	 */
++	buf += (ip->ip_hl << 2) + ICMP_EXT_OFFSET;
++	cmn_hdr = (struct icmp_ext_cmn_hdr *)buf;
++
++	if (cmn_hdr->version != ICMP_EXT_VERSION) {
++	    /*
++	     * Unknown version
++	     */
++	    return;
++	}
++
++	datalen = ip_len - ((u_char *)cmn_hdr - (u_char *)ip);
++
++	/*
++	 * Check the checksum, cmn_hdr->checksum == 0 means no checksum'ing
++	 * done by sender.
++	 *
++	 * If the checksum is ok, we'll get 0, as the checksum is calculated
++	 * with	the checksum field being 0'd.
++	 */
++	if (ntohs(cmn_hdr->checksum) &&
++	    in_cksum((u_short *)cmn_hdr, datalen)) {
++
++	    return;
++	}
++
++	buf += sizeof(*cmn_hdr);
++	datalen -= sizeof(*cmn_hdr);
++
++	while (datalen > 0) {
++	    obj_hdr = (struct icmp_ext_obj_hdr *)buf;
++	    obj_len = ntohs(obj_hdr->length);
++
++	    /*
++	     * Sanity check the length field
++	     */
++	    if (obj_len > datalen) {
++		return;
++	    }
++
++	    datalen -= obj_len;
++
++	    /*
++	     * Move past the object header
++	     */
++	    buf += sizeof(struct icmp_ext_obj_hdr);
++	    obj_len -= sizeof(struct icmp_ext_obj_hdr);
++
++	    switch (obj_hdr->class_num) {
++	    case MPLS_STACK_ENTRY_CLASS:
++		switch (obj_hdr->c_type) {
++		case MPLS_STACK_ENTRY_C_TYPE:
++		    while (obj_len >= sizeof(u_int32_t)) {
++			mpls_h = ntohl(*(u_int32_t *)buf);
++
++			buf += sizeof(u_int32_t);
++			obj_len -= sizeof(u_int32_t);
++
++			mpls = (struct mpls_header *) &mpls_h;
++			printf("\n     MPLS Label=%d CoS=%d TTL=%d S=%d",
++			       mpls->label, mpls->exp, mpls->ttl, mpls->s);
++		    }
++		    if (obj_len > 0) {
++			/*
++			 * Something went wrong, and we're at a unknown offset
++			 * into the packet, ditch the rest of it.
++			 */
++			return;
++		    }
++		    break;
++		default:
++		    /*
++		     * Unknown object, skip past it
++		     */
++		    buf += ntohs(obj_hdr->length) -
++			sizeof(struct icmp_ext_obj_hdr);
++		    break;
++		}
++		break;
++
++	    default:
++		/*
++		 * Unknown object, skip past it
++		 */
++		buf += ntohs(obj_hdr->length) -
++		    sizeof(struct icmp_ext_obj_hdr);
++		break;
++	    }
++	}
+ }
+ 
+ int

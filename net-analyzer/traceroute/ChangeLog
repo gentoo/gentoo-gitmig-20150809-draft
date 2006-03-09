@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.27 2006/03/01 02:01:44 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.28 2006/03/09 18:07:30 vanquirius Exp $
+
+*traceroute-1.4_p12-r4 (09 Mar 2006)
+
+  09 Mar 2006; Marcelo Goes <vanquirius@gentoo.org>
+  +files/traceroute-1.4a12-mpls-icmp-02.patch,
+  +traceroute-1.4_p12-r4.ebuild:
+  Add patch from Fedora's cvs to add support for ICMP extensions. Fixes bug
+  125604. Thanks to Thorsten Fischer <thorsten at irmplc dot com>.
 
   01 Mar 2006; Marcelo Goes <vanquirius@gentoo.org>
   -files/traceroute-1.4-emptylabel.patch,
