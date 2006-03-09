@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.6.ebuild,v 1.7 2006/03/09 21:36:46 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.8.1.ebuild,v 1.1 2006/03/09 21:36:46 joem Exp $
 
-inherit gnome2 eutils flag-o-matic
+inherit gnome2 eutils autotools flag-o-matic
 
 DESCRIPTION="gnome front end to gnupg"
 HOMEPAGE="http://seahorse.sourceforge.net/"
@@ -16,16 +16,16 @@ RDEPEND=">=app-crypt/gnupg-1.2.0
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2
 	>=x11-libs/gtk+-2.4
-	>=gnome-base/eel-2
 	>=gnome-base/gnome-mime-data-2
 	>=gnome-base/libbonobo-2
 	>=gnome-base/libbonoboui-2
 	>=gnome-base/gnome-vfs-2
 	>=app-editors/gedit-2.8.0
+	>=gnome-base/nautilus-2.10
 	dev-util/intltool
 	dev-libs/glib
-	x11-misc/shared-mime-info
 	>=net-libs/libsoup-2.2
+	x11-misc/shared-mime-info
 	ldap? ( net-nds/openldap )"
 
 #no ~ppc64 keyword yet 	>=gnome-base/bonobo-activation-2
@@ -37,16 +37,9 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO THANKS"
 IUSE="ldap"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/${P}-gnome-2.10.patch"
-}
-
 src_compile() {
-	autoconf
 	append-ldflags $(bindnow-flags)
-	G2CONF=$(use_enable ldap)
+	G2CONF="${G2CONF} $(use_enable ldap) --disable-update-mime-database"
 	gnome2_src_compile
 }
 

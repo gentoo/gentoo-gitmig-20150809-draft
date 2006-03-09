@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.3-r1.ebuild,v 1.14 2005/09/09 15:22:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.3-r1.ebuild,v 1.15 2006/03/09 21:36:46 joem Exp $
 
 inherit gnome2 eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
 
-RDEPEND="virtual/x11
-	>=app-crypt/gnupg-1.2.0
+RDEPEND=">=app-crypt/gnupg-1.2.0
 	=app-crypt/gpgme-0.3.14-r1
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2"

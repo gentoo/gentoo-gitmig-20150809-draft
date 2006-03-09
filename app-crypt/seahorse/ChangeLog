@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.52 2006/01/14 08:58:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.53 2006/03/09 21:36:46 joem Exp $
+
+*seahorse-0.8.1 (09 Mar 2006)
+
+  09 Mar 2006; Joe McCann <joem@gentoo.org> +seahorse-0.8.1.ebuild:
+  New version, bugfixes and support for upcoming version of gedit
 
 *seahorse-0.8 (14 Jan 2006)
 
