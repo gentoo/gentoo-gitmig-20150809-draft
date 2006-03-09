@@ -10,12 +10,12 @@ SHA256 0e615f1700bebc818dccdb206ed88c61e8fc1a39fff3700d76746987931c630a 4suite-1
 MD5 9e6c97e3848323c3cce48fc5c0d4e74c 4suite-1.0_beta1.ebuild 923
 RMD160 9f4946da0b4c5aef5f755b40ce520aa16c8cd0a5 4suite-1.0_beta1.ebuild 923
 SHA256 9d5e02862ac07b3499ac9bfb0a267cacf8298d83020f86f04ad5545a923f7ad9 4suite-1.0_beta1.ebuild 923
-MD5 42ed704b65ceb00abdc63a31411fe7bd 4suite-1.0_beta3.ebuild 919
-RMD160 96fb44886f7ec31eb1e2d3b86976a612a83d9225 4suite-1.0_beta3.ebuild 919
-SHA256 c6722b6b9ccdb4a40e91cea274baead68941747a360a3eba19bf30301bb62227 4suite-1.0_beta3.ebuild 919
-MD5 248475c621064c12c89cfb8b249a85d3 ChangeLog 3694
-RMD160 6bf3c34d2d8486f8709de4dad4a959397dbbea65 ChangeLog 3694
-SHA256 4c71d40241a8fd231a8548563a9643d64311627cf199f07de341041412b039b3 ChangeLog 3694
+MD5 ca5c763104edb986119caa8e7fec9c4c 4suite-1.0_beta3.ebuild 919
+RMD160 b379662a614cc5fe126735722fd21286810314dc 4suite-1.0_beta3.ebuild 919
+SHA256 56e602b67ccf86f871a3f797d9f3ba08ba546cbc8d14d3ca39d0efeb65d10b2b 4suite-1.0_beta3.ebuild 919
+MD5 8e2271930d51dacfda4c5a2d9525924a ChangeLog 3803
+RMD160 a81fdffe2f19372efdf37c9e3858513b5f482de0 ChangeLog 3803
+SHA256 3c2127c66cce06051c495bceaf473c553f2daae8cff77bc577ed0237e19a3cda ChangeLog 3803
 MD5 e4f5bacdc78ce6bf3ca1598b295d7cb0 files/1.0_b3-add_root_opt.diff 497
 RMD160 83a815333df7d490a90570d509c12b0f08b2a3bc files/1.0_b3-add_root_opt.diff 497
 SHA256 ac423244b41bf1b28309cc17e764edea6d5ce91ef9225b7b379b670e69785928 files/1.0_b3-add_root_opt.diff 497
@@ -31,16 +31,16 @@ SHA256 9c26ac8cf692d4a4250ebc9a6543af574db33a9f668760f492ec61239b3dbdb2 files/di
 MD5 4accf062639961ade3688282243879b4 files/digest-4suite-1.0_beta1 66
 RMD160 fa74bc60cba784aabd5098c240313afc5363473c files/digest-4suite-1.0_beta1 66
 SHA256 a79899eca3e7ac4e3e5938db56033e40890bfb6f3578ad9dca6cd6d0ce1ed69c files/digest-4suite-1.0_beta1 66
-MD5 1b5b875041cdbd791bfe63fd69a6b3f3 files/digest-4suite-1.0_beta3 253
-RMD160 37a370252dcaa6784487f0ab242ccc81ad1f8ce9 files/digest-4suite-1.0_beta3 253
-SHA256 6d77a2acd72cd1535f6299d12c8b51accf98c0fa72b8a65e05a7a9f4b17d745d files/digest-4suite-1.0_beta3 253
+MD5 bb0136b3ed779cc6fbdee33bd06ca3e2 files/digest-4suite-1.0_beta3 253
+RMD160 cc237ec2d7fa8895fb5170b7a73a3f7784e29dab files/digest-4suite-1.0_beta3 253
+SHA256 63a1a7e601dae085f533edbf6d66d4908b105379b8c49c62e12083d07f372756 files/digest-4suite-1.0_beta3 253
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD+4Px9ZFPrqoILX8RAnG7AKDTlWSBfDtm6CQ3C4dlVEDBrRpbrwCdGHlg
-EbknGMgThajbLuq0LzY0Q24=
-=gth6
+iD8DBQFEELElJrHF4yAQTrARAvCJAJ4xeU1+P1AgSNNIYetU0NzDPyiUoACeP4Wo
+3OjhdHZ5F01i0NWzcDMIHZM=
+=xNJ6
 -----END PGP SIGNATURE-----
