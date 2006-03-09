@@ -1,34 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ea37eb3cc7c3e1c3323f7707c3576b5d ChangeLog 2998
-RMD160 ea6ba7ce07b54200ce2a9c66cdacf642e5aaea66 ChangeLog 2998
-SHA256 80b6f0ba97e1d917d74e903e6b290219f8d867d234f281f3bf99cd4375fef4cb ChangeLog 2998
+MD5 c26a529470153a7fcf4c067f3e091d6b ChangeLog 3137
+RMD160 674ee7b2a3194f9c81adef9088a443b1e606dcaf ChangeLog 3137
+SHA256 b9b7bdd0639462aea90f75256199ea05c8eaa02742b7b876644f0be09bf26076 ChangeLog 3137
 MD5 8453ae3c91fc2fbd94a61cd9c642bb1d files/digest-horde-turba-1.2.5 63
 RMD160 b4613555623d07b93633e22995dd4601bd2e01c7 files/digest-horde-turba-1.2.5 63
 SHA256 87123cf64eafab7d13806e9f8e4d5de1f46fb568410be1cff31de2efa462b792 files/digest-horde-turba-1.2.5 63
-MD5 5d12747a63afd55f2aeab1ebc4839b27 files/digest-horde-turba-2.0.4 67
-RMD160 99ebb6f3125434cee469e08cf0bdc239d5aa1106 files/digest-horde-turba-2.0.4 67
-SHA256 eabf6197b47725a339d6b56a8b110cc0b3207c197bf06c5bc5d81c8e2e2bbe16 files/digest-horde-turba-2.0.4 67
 MD5 3de83a334b89c5e3308bc4a026d969fd files/digest-horde-turba-2.0.5 67
 RMD160 35013e3809339acf38b7fdbf6748789c3712dfec files/digest-horde-turba-2.0.5 67
 SHA256 9cbb9e18c58fd0f48bc9e22a10442a34179fe77f08a5b3aca78239db8efafbbc files/digest-horde-turba-2.0.5 67
+MD5 16dd153149d648c03fbf734b5e475fee files/digest-horde-turba-2.1 241
+RMD160 2198529e7a755f799368b4658d33f3785263370e files/digest-horde-turba-2.1 241
+SHA256 7767bd81632556a8ca066344fb143e8bcf32e33bbf7e5cdccad42782b54afbcf files/digest-horde-turba-2.1 241
 MD5 4a64c82bf8e2a72a45219595e0b212b7 horde-turba-1.2.5.ebuild 454
 RMD160 34a58edf18d52343c0e67975aa747cf9a6df76f4 horde-turba-1.2.5.ebuild 454
 SHA256 ceac85c931824cda445c773d61cf00a6aa05e1a003cdf730ccbe46e76d6f95e4 horde-turba-1.2.5.ebuild 454
-MD5 f1f8863987cd32ee313a988c50a83536 horde-turba-2.0.4.ebuild 472
-RMD160 b11dda8d736decda64c2edbf14f5213143f7a8a5 horde-turba-2.0.4.ebuild 472
-SHA256 d94b07c1187fd444c3a3a96639d9535c93c62cce950d89dd04569aa0e35152dc horde-turba-2.0.4.ebuild 472
 MD5 a7f7989d5610cf9ab60b4c29ab95eaed horde-turba-2.0.5.ebuild 479
 RMD160 d63b4f65a8e7fee8d74c4896a48259160ad6e5fb horde-turba-2.0.5.ebuild 479
 SHA256 55d458045b756d35059523224096b4d38368c3876e1e374c7b8553ce06b4412b horde-turba-2.0.5.ebuild 479
+MD5 b3364dfe1d1321ab5711b7359eb64634 horde-turba-2.1.ebuild 477
+RMD160 f06b25dca9d9b029fd1684025b4dc7d3b9bcf975 horde-turba-2.1.ebuild 477
+SHA256 5a11ee352a9159013097720ed51d4223a5dc0790e1534d6c39343853e128887d horde-turba-2.1.ebuild 477
 MD5 4a52cd771138efea4026da82a803a812 metadata.xml 1156
 RMD160 e3c3c5e874de736e614b7820739d97434588a81f metadata.xml 1156
 SHA256 f21ba74392c9cd17b191d2e8945524f855b206abc8504e833f93798f56bc5616 metadata.xml 1156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFECwzH2+ySkm8kpY0RAqOEAKC6BnWJmEFId+gh10niurh7SFpvfQCgsX8E
-YQzaW5aBnhMia89+RrwnWm4=
-=YbIs
------END PGP SIGNATURE-----
