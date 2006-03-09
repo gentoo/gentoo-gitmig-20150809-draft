@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d842f3ed4352449d6810d08eab7cbcf4 ChangeLog 5074
-RMD160 6af0484ee69f1d506ce459b958c671f5b3e10ba0 ChangeLog 5074
-SHA256 dc35f93ef8e165c08c06665bf49b3a0acbac8e4cd9817b09f54dd0416b813898 ChangeLog 5074
+MD5 39015374148455f46c24f87ec8a96957 ChangeLog 5181
+RMD160 1f092a304610ead850695a1ae186dd5072c2d1af ChangeLog 5181
+SHA256 bfc554ec9e71cd523e69cbb018df9d4cdd3c27f51715ca6a0cbbdbf99715e494 ChangeLog 5181
 MD5 a1c4a2f9990b3356ce169554c82dd2f6 files/digest-gtkam-0.1.10-r1 64
 RMD160 45622c1df59c290774ca03cb46a4a27bede373b1 files/digest-gtkam-0.1.10-r1 64
 SHA256 f723b6635544edd54196ccb4b863b0cab59379b9fad013451dcbdcb6c3443702 files/digest-gtkam-0.1.10-r1 64
@@ -16,9 +13,9 @@ SHA256 edfa2f1a29af3ea6b4b8b9ada488d0c06e59cfdc2b67ca8fcc8e20e6b7b6cd59 files/di
 MD5 9895bd6e825868f9d33ec407108e7d50 files/digest-gtkam-0.1.12-r1 64
 RMD160 92087f3a2ccb95fd661463e18b820ee6fa03a062 files/digest-gtkam-0.1.12-r1 64
 SHA256 edfa2f1a29af3ea6b4b8b9ada488d0c06e59cfdc2b67ca8fcc8e20e6b7b6cd59 files/digest-gtkam-0.1.12-r1 64
-MD5 e569de888dd5163735f0d5fc972e6135 files/digest-gtkam-0.1.12-r2 238
-RMD160 a06f1546de606f1939dfbb88d6f31000a4b33f2d files/digest-gtkam-0.1.12-r2 238
-SHA256 0ded1d244aeaf481d977bc60a473a17e9a5a81c8fe4eb830f51a8dc82dfe7951 files/digest-gtkam-0.1.12-r2 238
+MD5 aa578fe84238f88e4e1db68b8438e3ed files/digest-gtkam-0.1.12-r2 238
+RMD160 5372181d7a8f2ab2523a42ca0012ecbf9049c7f4 files/digest-gtkam-0.1.12-r2 238
+SHA256 453bfa8d66978833cc63eedfcc7183b78f5c21f07c4ddb3d539e764419d72987 files/digest-gtkam-0.1.12-r2 238
 MD5 2cee4a75ae4dbbcd3345e16c18018ade files/gtkam-0.1.10-gtk24.patch 976
 RMD160 d65367d34d0bc924c93cd2e2917c4b1e2ff0a02c files/gtkam-0.1.10-gtk24.patch 976
 SHA256 67d40956c272291a4d333a82bac237349116fdb22ff5d53fbdd5a586c7c60ba1 files/gtkam-0.1.10-gtk24.patch 976
@@ -43,19 +40,12 @@ SHA256 4d32a0aab728d92b4f66df15f7620beab3d6b7ee09b10b8f14d107c4b39fa214 gtkam-0.
 MD5 40928e4f954bd1b1991cfdfc79dd7b44 gtkam-0.1.12-r1.ebuild 1158
 RMD160 f1c42ea1208d52f5eaf71bab9f850a2d45ebf412 gtkam-0.1.12-r1.ebuild 1158
 SHA256 5f478ebbd6959b66adbebd7c6410a0760903197c9c7156a9c100643a2712af82 gtkam-0.1.12-r1.ebuild 1158
-MD5 cd6a1abd51aded1440e5b94660aa88ba gtkam-0.1.12-r2.ebuild 1179
-RMD160 0a1eb57eeb6520b946131611a01b3143fe15f438 gtkam-0.1.12-r2.ebuild 1179
-SHA256 83c8feacfd07b90b684caa3731c38caef34a5e7da974f66851faf26fe98a1c4c gtkam-0.1.12-r2.ebuild 1179
+MD5 e0f087512a9d9f53ca7be81de38427e4 gtkam-0.1.12-r2.ebuild 1178
+RMD160 7f6de6a0fc3db7faf44670ed66012487d8b13978 gtkam-0.1.12-r2.ebuild 1178
+SHA256 c8018eff9ae68dca98e906216f5f6717c550a0c03dd80667b99d80c513c88dee gtkam-0.1.12-r2.ebuild 1178
 MD5 b9cf5355ba6178aae4261866e51374ea gtkam-0.1.12.ebuild 1305
 RMD160 8a5c9e7b232ec89b1a67d7dd1dcd0736c5b07386 gtkam-0.1.12.ebuild 1305
 SHA256 df27de58105a99cd10ba5f1cf7526e326ede61a6aed340d7e30d0a3055fc4078 gtkam-0.1.12.ebuild 1305
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6P0aJrHF4yAQTrARAh2IAKDIg1zgAc7rfIrupgN803EM8EpkGQCfVUoz
-WuMyaXfe2MT+VlJwwaV9LnE=
-=k3lX
------END PGP SIGNATURE-----
