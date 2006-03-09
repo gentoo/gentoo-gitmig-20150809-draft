@@ -1,0 +1,41 @@
+Index: skim-scim-anthy-0.9.0.1/setupui/anthyui.ui
+===================================================================
+--- skim-scim-anthy-0.9.0.1.orig/setupui/anthyui.ui
++++ skim-scim-anthy-0.9.0.1/setupui/anthyui.ui
+@@ -2428,36 +2428,7 @@
+ <layoutdefaults spacing="6" margin="11"/>
+ <includehints>
+     <includehint>kcombobox.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+     <includehint>klineedit.h</includehint>
+-    <includehint>klineedit.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+-    <includehint>klineedit.h</includehint>
+-    <includehint>skimeditshortcutbutton.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+-    <includehint>skimeditshortcutbutton.h</includehint>
+-    <includehint>skimeditshortcutbutton.h</includehint>
+-    <includehint>klineedit.h</includehint>
+-    <includehint>klineedit.h</includehint>
+-    <includehint>klineedit.h</includehint>
+-    <includehint>skimeditshortcutbutton.h</includehint>
+-    <includehint>klineedit.h</includehint>
+-    <includehint>klineedit.h</includehint>
+-    <includehint>skimeditshortcutbutton.h</includehint>
+-    <includehint>skimeditshortcutbutton.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+-    <includehint>kcombobox.h</includehint>
+-    <includehint>kdualcolorbutton.h</includehint>
+-    <includehint>kdualcolorbutton.h</includehint>
+     <includehint>kdualcolorbutton.h</includehint>
+ </includehints>
+ </UI>

@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ce888e2fa2d8501c123f7e3dd708f8ed ChangeLog 471
+RMD160 a5ba8680ca1d152572c7e78fd8d55f322b1bf634 ChangeLog 471
+SHA256 b217fa078da36158b3d78e65913fd8b0c2d3dbd2b12232b5b6a4a6fcf06d67b3 ChangeLog 471
+MD5 1a1576df3ba9d75e60a43c1b706c246d files/digest-skim-scim-anthy-0.9.0.1 271
+RMD160 0af609db3e9d1319488b142856d6fb370a29e6cb files/digest-skim-scim-anthy-0.9.0.1 271
+SHA256 b7746b4840aeefe50e8345c8be49fffd79f0db1b3569f1915d46cdc55aa0bfa3 files/digest-skim-scim-anthy-0.9.0.1 271
+MD5 cf583cceceadfe8f010e5d4018d5f117 files/skim-scim-anthy-0.9.0.1-qt335.patch 1830
+RMD160 9c9057fed42af723db816f5ea9bb1cfb327dbc69 files/skim-scim-anthy-0.9.0.1-qt335.patch 1830
+SHA256 1acf0dd3a42e47f86d4b43227c8c4f20cb7aef5f2b26aaef6e67ede2fa3e8070 files/skim-scim-anthy-0.9.0.1-qt335.patch 1830
+MD5 a3fc3d9586168ee09c0a7311ba3bc913 metadata.xml 247
+RMD160 cfe812061a0f64272a6a26898ed1f9ee3477b516 metadata.xml 247
+SHA256 129b1c092273a1e5002cf942be322b1d5858bec4848f44ab9cfd189db86d7123 metadata.xml 247
+MD5 1f5d3bcc5d18665247ce982ca53cafeb skim-scim-anthy-0.9.0.1.ebuild 1075
+RMD160 192420e8109bdc3c02c3b52189a534fe9060899a skim-scim-anthy-0.9.0.1.ebuild 1075
+SHA256 de167d028beddde143c64ee09008dfcb43105f963b89e9afda96a940a98a56b4 skim-scim-anthy-0.9.0.1.ebuild 1075
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEELPFAiZjviIA2XgRAjOkAJ9A1TAnWYKsaYfitafimApKsp9l7gCcDPJj
+BAHcxSE24p4wnZhJSA67lWQ=
+=eaX3
+-----END PGP SIGNATURE-----
