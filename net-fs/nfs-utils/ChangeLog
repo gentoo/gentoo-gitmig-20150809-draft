@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.72 2006/01/29 05:55:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.73 2006/03/09 00:43:40 vapier Exp $
+
+  09 Mar 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/nfs-utils-1.0.7-no-stripping.patch, nfs-utils-1.0.7-r2.ebuild:
+  Let portage strip binaries.
 
   29 Jan 2006; Mike Frysinger <vapier@gentoo.org>
   +files/nfs-utils-1.0.6-usn36.patch, -files/nfs-utils-1.0.6-usn36.patch.gz,

@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b94b089a64ff876396b5a2834b7b41d2 ChangeLog 10789
-RMD160 5c608ce26063d25f1bf321bb24ab81cfd5aa7d9d ChangeLog 10789
-SHA256 801dac4e09b8bb44cf35d6c0aed706b2a614b5b3374b6427ff7fdf5fc3bb80f3 ChangeLog 10789
+MD5 3a73784118ede5f34ef6bcd450fba792 ChangeLog 10942
+RMD160 3a91e8fb65dd6e85d210b332feb3136d4f9c4e19 ChangeLog 10942
+SHA256 56805ab83900215b436ba469d02056793cbaca54be478e6701dba7c79e66b7d7 ChangeLog 10942
 MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r6 67
 RMD160 813c5ac91e1e991aa5f5b7396051e66ceadb76a3 files/digest-nfs-utils-1.0.6-r6 67
 SHA256 1352c2a3716deea0bfbbdfcc1e498379611fe929bf0d842d11f5b31c7b399a9a files/digest-nfs-utils-1.0.6-r6 67
@@ -31,6 +31,9 @@ SHA256 697490e2fbef35617cfa34434e0a90ec2bf804d51409d2bbfb6b9fcea4310a0e files/nf
 MD5 39cf4f293c56793694cb75afbd5c0c17 files/nfs-utils-1.0.7-man-pages.patch 219
 RMD160 7fdda782077c5bf423586bf5385a23dbf8204aca files/nfs-utils-1.0.7-man-pages.patch 219
 SHA256 0ae11565eea729a409df095450593060320039e18a4a67fac71db176ed27fcce files/nfs-utils-1.0.7-man-pages.patch 219
+MD5 cf22f0e5e058bf8171c2604d9a278368 files/nfs-utils-1.0.7-no-stripping.patch 394
+RMD160 8faa5132e5a92f8d2a2fb6f7ed55bb07d526aea9 files/nfs-utils-1.0.7-no-stripping.patch 394
+SHA256 694b544c651a9191cdf4b6fe927364fcb97b9100bdaa0f9dbcb07bcd5ab03a12 files/nfs-utils-1.0.7-no-stripping.patch 394
 MD5 fc332370f9517304bc251f505b17abf2 files/nfs.confd 533
 RMD160 bad552a256a86bc374cd7ff3d685afa4ff5d816e files/nfs.confd 533
 SHA256 a9b8395590b8d15b52eee8cb637fdc23afce007de42442ef4448e76f2ac899fd files/nfs.confd 533
@@ -43,13 +46,13 @@ SHA256 42f511d0cc6e82e29b011c686ba8bb7965f4d92eb6e47ba3e63d4c7edfe9883a metadata
 MD5 9ff9d72b0fb667d05d3d3ae955bf8f55 nfs-utils-1.0.6-r6.ebuild 2923
 RMD160 91d0907cfdf42ba33a5d869960d44d335c6db846 nfs-utils-1.0.6-r6.ebuild 2923
 SHA256 67f8ae21a2b2fd81b18ed552a3ba173ee3524020432db068a2dd020407176240 nfs-utils-1.0.6-r6.ebuild 2923
-MD5 5aa17cc2095bdbd3379b5eb15ab91784 nfs-utils-1.0.7-r2.ebuild 3346
-RMD160 cc4ee9f41ffb01167d5801518b6fdb293d440ee4 nfs-utils-1.0.7-r2.ebuild 3346
-SHA256 5f14de5e1a6552ed25861c8917919eb8faafb092a431cc5b0e77f34c8bf95bb8 nfs-utils-1.0.7-r2.ebuild 3346
+MD5 4c8dfc12ffcb58cd0ea75ce4332dceee nfs-utils-1.0.7-r2.ebuild 3392
+RMD160 80b1e54ca7c7beacb66e990a7dffbbbf7b18acce nfs-utils-1.0.7-r2.ebuild 3392
+SHA256 48310cde36c845d3e0b04d5a4462c8706f767f3043d6d3ca67e908d8568705de nfs-utils-1.0.7-r2.ebuild 3392
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD3SLg2+ySkm8kpY0RAs1jAKCS+t9ndZb68f9DyYkS+0nSJcvMjwCeMR4S
-umNpS3pxUXoAOVeIq2/3RQU=
-=yYOX
+iD8DBQFED3qW2+ySkm8kpY0RAmD5AJ9c4JzPVwAwfge6tHM3cA8xQpLRtACcDVRF
+hLzaJSSITJ80Dzhe1xKVDkA=
+=GBxl
 -----END PGP SIGNATURE-----
