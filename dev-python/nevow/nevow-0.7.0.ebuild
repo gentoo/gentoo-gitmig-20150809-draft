@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.7.0.ebuild,v 1.3 2006/02/13 23:05:49 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.7.0.ebuild,v 1.4 2006/03/09 20:04:06 kugelfang Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/Nevow-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc test"
 
 DEPEND=">=dev-lang/python-2.4
