@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXtst
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.17 2006/02/14 22:45:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.18 2006/03/09 14:06:54 agriffis Exp $
+
+  09 Mar 2006; Aron Griffis <agriffis@gentoo.org> libXtst-1.0.1.ebuild:
+  Mark 1.0.1 ~ia64
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org> libXtst-1.0.1.ebuild:
   Added ~ppc64
