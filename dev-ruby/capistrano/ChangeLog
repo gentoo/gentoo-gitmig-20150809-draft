@@ -1,0 +1,26 @@
+# ChangeLog for dev-ruby/switchtower
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.1 2006/03/09 13:37:26 caleb Exp $
+
+*capistrano-1.1.0 (09 Mar 2006)
+
+  09 Mar 2006; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
+  +capistrano-1.1.0.ebuild:
+  version bumping and renaming project to capistrano
+
+  25 Jan 2006; Caleb Tennis <caleb@gentoo.org> switchtower-0.10.0.ebuild:
+  x86 stable
+
+  09 Jan 2006; Caleb Tennis <caleb@gentoo.org> switchtower-0.10.0.ebuild:
+  Change dep to net-ssh-1.0.5
+
+*switchtower-0.10.0 (02 Jan 2006)
+
+  02 Jan 2006; Caleb Tennis <caleb@gentoo.org> +switchtower-0.10.0.ebuild:
+  Version bump
+
+*switchtower-0.9.0 (20 Oct 2005)
+
+  20 Oct 2005; Caleb Tennis <caleb@gentoo.org> +switchtower-0.9.0.ebuild:
+  Initial commit
+
