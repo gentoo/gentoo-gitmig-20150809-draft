@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/win32codecs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.31 2005/11/29 12:24:16 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.32 2006/03/09 02:45:07 flameeyes Exp $
+
+  09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  win32codecs-20050412.ebuild:
+  Restrict striping, as the package is binary.
 
   07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   win32codecs-20050216.ebuild, win32codecs-20050412.ebuild:

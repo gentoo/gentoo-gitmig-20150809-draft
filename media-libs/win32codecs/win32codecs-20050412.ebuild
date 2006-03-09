@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20050412.ebuild,v 1.4 2005/11/07 09:45:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20050412.ebuild,v 1.5 2006/03/09 02:45:07 flameeyes Exp $
 
 inherit multilib
 
@@ -13,6 +13,8 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE="quicktime real"
 
 S=${WORKDIR}/all-${PV}
+
+RESTRICT="nostrip"
 
 pkg_setup() {
 	# This is a binary x86 package => ABI=x86
