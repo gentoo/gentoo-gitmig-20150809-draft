@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5068 2006/03/09 12:07:35 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5069 2006/03/09 14:43:12 trapni Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Christian Parpart <trapni@gentoo.org> (09 Mar 2006)
+# These are about to be removed
+=www-apps/mediawiki-1.3*
 
 # Francesco Riosa <vivo@gentoo.org> (09 Mar 2006)
 # These version _remove_ slotting, masked for testing
@@ -762,18 +766,10 @@ x11-misc/driconf
 =sys-cluster/drbd-0.7.12
 =sys-cluster/drbd-0.7.13
 
-# Christian Parpart <trapni@gentoo.org> (30 Aug 2005)
-# Masked for testing
-=www-apps/mediawiki-1.5.0_rc4
-
 # Brandon Low <lostlogic@lostlogicx.com> (29 Aug 2005)
 # Masked because it needs java 1.5
 net-im/jive-messenger
 net-im/wildfire
-
-# Christian Parpart <trapni@gentoo.org> (25 Aug 2005)
-# masked for testing
-=www-apps/mediawiki-1.5.0_rc3
 
 # Luis F. Araujo <araujo@gentoo.org> (24 Aug 2005)
 # This is a binary package version.
@@ -783,10 +779,6 @@ net-im/wildfire
 # vapier@gentoo.org (23 Aug 2005)
 # Mask since it breaks wings #97798
 =dev-lang/erlang-10.2.6
-
-# Christian Parpart <trapni@gentoo.org> (23 Aug 2005)
-# masked for testing
-=www-apps/mediawiki-1.5.0_rc2
 
 # Luis Medinas <metalgod@gentoo.org> (23 Aug 2005)
 # Mask -alpha03 versions until i stablize that version
