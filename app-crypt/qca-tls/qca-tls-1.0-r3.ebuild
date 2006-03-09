@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0-r3.ebuild,v 1.1 2006/02/13 10:50:15 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0-r3.ebuild,v 1.2 2006/03/09 02:22:33 humpback Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ src_compile() {
 	sed -i \
 		-e "/^CFLAGS/s:$: ${CFLAGS}:" \
 		-e "/^CXXFLAGS/s:$: ${CXXFLAGS}:" \
+		-e "/-strip/d" \
 		Makefile
 	emake || die "emake failed"
 }
