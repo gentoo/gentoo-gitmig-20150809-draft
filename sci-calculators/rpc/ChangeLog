@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/rpc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/rpc/ChangeLog,v 1.2 2004/12/25 18:17:27 swegener Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/rpc/ChangeLog,v 1.3 2006/03/09 17:15:53 markusle Exp $
+
+  09 Mar 2006; Markus Dittrich <markusle@gentoo.org>
+  -files/rpc-0.98-gcc-34.patch, rpc-0.98.ebuild:
+  Moved large patch to the mirrors (see bug #123634).
 
 *rpc-0.98 (25 Dec 2004)
 
