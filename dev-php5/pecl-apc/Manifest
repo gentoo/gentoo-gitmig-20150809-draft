@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5d2a5797c8c9aef7f563e4c0d067051e ChangeLog 978
-RMD160 d55b30e222c23c923de80b872a368b198680d2f6 ChangeLog 978
-SHA256 d1a97f2470c8fde6a729aaa7af89036a057ab2c3adc795d0098fa9d82b6c2ffb ChangeLog 978
-MD5 66795850fe4fb57f021182ccdd3e3203 files/digest-pecl-apc-3.0.8 57
-RMD160 dcb355e13d2dae25850e1d47389686de63278e58 files/digest-pecl-apc-3.0.8 57
-SHA256 00cace789053719fe85b322602a0f85c537a832de53f74720d969d4ab4c8c60d files/digest-pecl-apc-3.0.8 57
-MD5 d017ac22b1f501982506d92d7f546184 files/digest-pecl-apc-3.0.9 217
-RMD160 440146e0ed7756ab176f1bdcae60f14ca60e2c17 files/digest-pecl-apc-3.0.9 217
-SHA256 8b558e124c017734b1c2ae46f3dbc8170b029e052d5829f8a6287e428e683f9e files/digest-pecl-apc-3.0.9 217
+MD5 edc53da496ed5addb5be08a6ae771da6 ChangeLog 1128
+RMD160 b7edc15c57786b9f0be4af4c356b78e4286a2cf4 ChangeLog 1128
+SHA256 36258f4a5c845044ada79fae0700b6c5d37bed2a59a62d3489e794c8b7a2c2c4 ChangeLog 1128
+MD5 b2c68e311b2b85a27b71c55c8997bcad files/digest-pecl-apc-3.0.8 217
+RMD160 b74444432a9701d25c201316275ccb4b5b905523 files/digest-pecl-apc-3.0.8 217
+SHA256 513960169cedd2be9198c7f3566e1757fb699467b52e77d7ca69886ae99509b7 files/digest-pecl-apc-3.0.8 217
+MD5 419251fcea672d3aa9ca2f94c6abcbf6 files/digest-pecl-apc-3.0.9 217
+RMD160 78fc7b3c59d8064bc1b3a0d0c1122a4e80cf2a0c files/digest-pecl-apc-3.0.9 217
+SHA256 a42f2776ec0169e7cab1ce2f97d9c43c5e9e1d924401159627153bb2a53fe59e files/digest-pecl-apc-3.0.9 217
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a metadata.xml 157
 SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 metadata.xml 157
@@ -19,10 +16,3 @@ SHA256 4a5c175ebec2e96e154345cf4377a5be503a41dc52b3f879611aee23ab979cca pecl-apc
 MD5 c0ae250649e4081e0816f543e68bc98d pecl-apc-3.0.9.ebuild 2210
 RMD160 a133d676030adfa5ae6c9feb7b783ca83904cd61 pecl-apc-3.0.9.ebuild 2210
 SHA256 8d42653c60764e4dd3ab8176b07af96829dd714caef51bb560568731ba260dc7 pecl-apc-3.0.9.ebuild 2210
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEC/SsaGfFFLhbXWkRAq9WAJ0Ve7aeOwP6geFyxdyCOr/hXEdoQQCfbzMY
-Kc4ZEQSrfr5f35/bCOQ2RO4=
-=b+E0
------END PGP SIGNATURE-----

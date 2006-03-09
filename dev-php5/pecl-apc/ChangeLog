@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.7 2006/03/06 08:36:47 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.8 2006/03/09 16:36:43 chtekk Exp $
+
+  09 Mar 2006; Luca Longinotti <chtekk@gentoo.org>
+  files/digest-pecl-apc-3.0.8, files/digest-pecl-apc-3.0.9, Manifest:
+  Fix digests wrt bug #125612.
 
   06 Mar 2006; Sebastian Bergmann <sebastian@gentoo.org>
   pecl-apc-3.0.9.ebuild:
