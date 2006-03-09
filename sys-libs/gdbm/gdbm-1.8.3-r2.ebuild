@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r2.ebuild,v 1.3 2005/10/06 02:42:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r2.ebuild,v 1.4 2006/03/09 23:48:53 vapier Exp $
 
 inherit eutils libtool multilib
 
@@ -43,7 +43,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	if [[ -e ${ROOT}/usr/$(get_libdir)/libgdbm.so.2 ]] ; then
-		ewarn "Please run revdep-rebuild --soname libgdbm.so.2"
+		ewarn "Please run revdep-rebuild --library libgdbm.so.2"
 		ewarn "After that completes, it will be safe to remove the old"
 		ewarn "library (${ROOT}usr/$(get_libdir)/libgdbm.so.2)."
 	fi

@@ -1,15 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 046114f372f30d94d173376091d4175a gdbm-1.8.3-r2.ebuild 1444
-MD5 893b34bd914ab4b81e0df07da6818acf ChangeLog 4848
+MD5 cc16ee3bb26d57e426fe730d9344024d ChangeLog 5016
+RMD160 43389c9fd531d7fed08d7c56f7c28d3fcc5f9f3d ChangeLog 5016
+SHA256 e1a071509fc07bc8a0bc247b4755473adcbb51b0c30800f04f9ddcbf17ae078e ChangeLog 5016
 MD5 c7bef9bbd37f161be399c58c61edef94 files/digest-gdbm-1.8.3-r2 62
+RMD160 8a62a91ff748e66e8c6dc8983ada793dcddb11c3 files/digest-gdbm-1.8.3-r2 62
+SHA256 ada3dce64e1ba096522d4ce125b4815b3ec1e01694d850bfb7b880c715d1b726 files/digest-gdbm-1.8.3-r2 62
 MD5 9ed34cb95efec19c95fbf28a2e7e0986 files/gdbm-1.8.3-fix-install-ownership.patch 1567
+RMD160 e058ffe36f57dd421ac70bdbb4ed64cd1e641aa6 files/gdbm-1.8.3-fix-install-ownership.patch 1567
+SHA256 e08df8b252176475c47615fbe87e554fc7391b29192131aba03e91f687a8076c files/gdbm-1.8.3-fix-install-ownership.patch 1567
+MD5 92332e10213c98f499ee172634c7e9f0 gdbm-1.8.3-r2.ebuild 1445
+RMD160 486dd1992ccaaf1ff3cba2301cfdbbe147861605 gdbm-1.8.3-r2.ebuild 1445
+SHA256 98a5fb5d3acb2191933d0e51fc36ce136f01f484aacdb45bb2382f96693a00d7 gdbm-1.8.3-r2.ebuild 1445
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDRI9qgIKl8Uu19MoRAhkrAJ9VpMAOIyGdBVBtyeB5K+CXg5sAhQCfbUS0
-KBLBts638YkjTVq3K3yCswk=
-=Smzg
+iD8DBQFEEL9F2+ySkm8kpY0RAtQvAJ9VmM51+7Q5Fe6Qcpe7ZO8eP/YwaACeIZa+
+1nWwsFJOgvn6DmsdjlfcHOI=
+=3cyo
 -----END PGP SIGNATURE-----
