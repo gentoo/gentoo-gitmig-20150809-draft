@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hdbc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/ChangeLog,v 1.3 2006/03/01 19:36:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/ChangeLog,v 1.4 2006/03/09 17:39:20 dcoutts Exp $
+
+  09 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> hdbc-0.99.0.ebuild:
+  Add ~sparc to KEYWORDS. See bug #124902
 
   01 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> hdbc-0.99.0.ebuild:
   Added to ~ppc. See bug #124469.
@@ -10,6 +13,6 @@
 
 *hdbc-0.99.0 (23 Feb 2006)
 
-  23 Feb 2006; <duncan@gentoo.org> +metadata.xml, +hdbc-0.99.0.ebuild:
+  23 Feb 2006; <dcoutts@gentoo.org> +metadata.xml, +hdbc-0.99.0.ebuild:
   Initial import.
 
