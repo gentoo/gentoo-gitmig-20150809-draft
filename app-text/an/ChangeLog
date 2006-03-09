@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.21 2006/01/31 15:00:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.22 2006/03/09 11:27:40 yoswink Exp $
+
+  09 Mar 2006; Jose Luis Rivero <yoswink@gentoo.org> an-0.95.3.ebuild:
+  Marked alpha stable for bug #113966
 
   31 Jan 2006; Joseph Jezak <josejx@gentoo.org> an-0.95.3.ebuild:
   Marked ppc stable for bug #113966.
