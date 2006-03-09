@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.9_beta8.ebuild,v 1.2 2005/11/27 18:05:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.9_beta8.ebuild,v 1.3 2006/03/09 23:49:47 vapier Exp $
 
 STUPID_NUM=1133
 MY_P="${PN}-${PV/_/-}"
@@ -44,5 +44,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "You should run 'revdep-rebuild --soname libpcsclite.so.0'"
+	ewarn "You should run 'revdep-rebuild --library libpcsclite.so.0'"
 }
