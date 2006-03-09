@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.305 2006/03/03 01:31:54 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.306 2006/03/09 14:00:20 vivo Exp $
+
+*mysql-5.0.19 (09 Mar 2006)
+*mysql-5.0.18-r60 (09 Mar 2006)
+*mysql-4.1.18-r60 (09 Mar 2006)
+
+  09 Mar 2006; Francesco Riosa <vivo@gentoo.org> +mysql-4.1.18-r60.ebuild,
+  +mysql-5.0.18-r60.ebuild, +mysql-5.0.19.ebuild:
+  Added unslotted MySQL for version 4.0.18, 5.0.18 and 5.0.19, all are masked
+  waiting for the revert to be announced and documented.
 
 *mysql-5.1.7_beta (03 Mar 2006)
 
