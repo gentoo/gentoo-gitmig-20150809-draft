@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.21 2006/03/01 09:36:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.22 2006/03/09 11:37:19 flameeyes Exp $
+
+*xdtv-2.3.1 (09 Mar 2006)
+
+  09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +xdtv-2.3.1.ebuild:
+  Version bump, now uses internal ffmpeg (patched) copy.
 
   01 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.3.0.ebuild:
   Make libXaw optional in case NeXt and Xaw3d are not requested. Thanks to TGL
