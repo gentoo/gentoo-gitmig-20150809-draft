@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/prosper
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/ChangeLog,v 1.15 2005/04/03 06:03:34 j4rg0n Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/ChangeLog,v 1.16 2006/03/09 12:38:25 ehmsen Exp $
+
+  09 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org> prosper-1.5-r1.ebuild:
+  Do not install INSTALL to doc.
 
   03 Apr 2005; Lina Pezzella <j4rg0n@gentoo.org> prosper-1.5-r1.ebuild:
   Testing ppc-macos. Bug #86077. Thanks to Benjamin Braatz for reporting
