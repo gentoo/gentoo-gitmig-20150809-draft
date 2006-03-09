@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.18-r2.ebuild,v 1.1 2005/11/20 17:46:42 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.18-r2.ebuild,v 1.2 2006/03/09 00:05:24 flameeyes Exp $
 
 inherit eutils depend.apache
 
@@ -33,6 +33,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/platforms/gentoo
 	epatch ${FILESDIR}/${PV}/apcupsd.in.patch
+
+	# Avoid usage of install -s, leave to portage stripping binaries
+	sed -i -e 's:(INSTALL_PROGRAM) -s:(INSTALL_PROGRAM):g' \
+		${S}/src/Makefile.in ${S}/src/cgi/Makefile.in
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/apcupsd
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.12 2005/11/20 17:46:42 tantive Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.13 2006/03/09 00:05:24 flameeyes Exp $
+
+  09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  apcupsd-3.10.18-r2.ebuild:
+  Don't strip binaries forcefully during install, leave to portage the job.
 
 *apcupsd-3.10.18-r2 (20 Nov 2005)
 
