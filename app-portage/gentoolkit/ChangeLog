@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.74 2006/02/09 13:37:08 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.75 2006/03/09 15:49:49 fuzzyray Exp $
+
+*gentoolkit-0.2.2_pre3 (09 Mar 2006)
+
+  09 Mar 2006; Paul Varner <fuzzyray@gentoo.org>
+  -gentoolkit-0.2.2_pre2.ebuild, +gentoolkit-0.2.2_pre3.ebuild:
+  New release to add genpkgindex support script. Update revdep-rebuild to look
+  at .la files for missing dependencies.
 
   09 Feb 2006; Joshua Kinard <kumba@gentoo.org> gentoolkit-0.2.1.ebuild:
   Marked stable on mips.
