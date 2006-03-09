@@ -1,4 +1,4 @@
-MD5 9b4099000db49e3732f457a52aad8d3c ChangeLog 11472
+MD5 8100135344ce30bb6b47e37ce7fb94c5 ChangeLog 11586
 MD5 a1433bcc25f8f63d8ee96bddbf877962 files/1.15.1-flex-arg.patch 519
 MD5 9873b609521d574ae1f98d1c092c80e4 files/append.at 1065
 MD5 e7c9ac5824e453f73a56032123c46f97 files/digest-tar-1.14 62
@@ -12,5 +12,5 @@ MD5 2e0f6c79abe0ead888d78dfeca151ff0 files/tar-CVE-2006-0300.patch 3677
 MD5 56e20bf1ea261a6f85c2d2b9ba7f3df1 files/tar.1 12885
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d4f800ee8a2c5ddd00931249e680def8 tar-1.14.ebuild 1329
-MD5 ba5b63a86e9e83caebecb1215efbea7f tar-1.15.1-r1.ebuild 2102
+MD5 5aeadac0927b335dd288740e1e3cd29c tar-1.15.1-r1.ebuild 2101
 MD5 e9fe7de46eb4b1aa489fc8a619e1f042 tar-1.15.1.ebuild 2046
