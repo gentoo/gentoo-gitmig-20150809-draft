@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cb38f042d0fd968a01f605dae6e68f3b ChangeLog 1763
 RMD160 0e8d9ccea155654902e596ea4419e6fbb162317c ChangeLog 1763
 SHA256 d0ecb69cfeee40e90bce359724f3ff4c2240d6e0b486382c2d0f983ec8a3a7ea ChangeLog 1763
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 fc7b35e67eccbdaff1abbf222e0be614 xf86rushproto-1.1.2.ebuild 477
 RMD160 2f2625fe462b15ad13687b60a268c07ece5c0be8 xf86rushproto-1.1.2.ebuild 477
 SHA256 53c62d356b7aee3fcbcb4001d1c74d86f9c232f1625b26c92e56892e10338f28 xf86rushproto-1.1.2.ebuild 477
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFEEDxxJrHF4yAQTrARAjzjAJwMAW44ekJbcCXbJBu0wYnZ2D1fRgCfQCGa
+sL2Lpz1lAuq05MqZkZgbbeM=
+=vpHw
+-----END PGP SIGNATURE-----

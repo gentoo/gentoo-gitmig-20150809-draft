@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6cebdd0fe121bdd77bdbcfa128785fb7 ChangeLog 1723
 RMD160 aaa935172f3b3f721679ca80b407ed74f954a1e4 ChangeLog 1723
 SHA256 76dbc1acfcaaabcec51530771dd644ad8bdfa81b9187edb3de75b4ca01a1f78f ChangeLog 1723
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 6095f42ee7dd67abf0a9e731c75bef5b xcmiscproto-1.1.2.ebuild 471
 RMD160 343f7ce542b8d801fc5a80dc7e0d39812377fc0a xcmiscproto-1.1.2.ebuild 471
 SHA256 91acaf02713ebf7953febecc14ea3f39b14e6d4a1c69458b5103f27549c9d2ff xcmiscproto-1.1.2.ebuild 471
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFEEDvOJrHF4yAQTrARArocAKDCfeYJOR3OUL3CRMDRQr7fBOs+kwCfaLGo
+j25MFkBBhlMMrk9MXbPgIsY=
+=+rjc
+-----END PGP SIGNATURE-----
