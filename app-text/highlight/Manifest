@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 68eb51b54d8863bf73c27b94557a57d1 ChangeLog 697
+MD5 577ae7b8c9e0d323b0cddec9eec70a9c ChangeLog 812
+RMD160 6e7793c9bd32de4728206b6cf5c51c47d38d64ea ChangeLog 812
+SHA256 ca5a89fb27f58d8f3a8b1e4270776bc0fe3d7f258d3819f055f2f27034d767a0 ChangeLog 812
 MD5 d716e985f39f79a63ff522693913dde0 files/digest-highlight-2.2.9 68
-MD5 0aff21f6e391333328a1eab9a5964df1 files/digest-highlight-2.4.3 68
+RMD160 48c5801cf2f7d64178b5162f2153ff91dc7f1e7a files/digest-highlight-2.2.9 68
+SHA256 2e195b95f797c02e4f475f9d67f32048caaf44eb9a68eb112fd30f970ba1f83f files/digest-highlight-2.2.9 68
+MD5 9c2ee7bd68963ed3bef02e40e7eb8830 files/digest-highlight-2.4.3 250
+RMD160 b4d436018d69b36249a1139a5e1355acc3a5e591 files/digest-highlight-2.4.3 250
+SHA256 3a43b49a4037eb8d9b3a1834db51e193fb7d5ca0e4fb54f9df6a2b1aff77f45d files/digest-highlight-2.4.3 250
 MD5 02e1e2d575455ce3e555b0a395907b9d highlight-2.2.9.ebuild 650
-MD5 e9ee486593d39cd16734e69b2ccf1d69 highlight-2.4.3.ebuild 635
+RMD160 6647c7d23bdb075891b3c8e44421a331a529c439 highlight-2.2.9.ebuild 650
+SHA256 59d3f40850ab94e0f48a29cd75d1206d6288a05b98ed3148a78b4508e49a5d0a highlight-2.2.9.ebuild 650
+MD5 f494485a7c1dd2de4bae2fc9c465a995 highlight-2.4.3.ebuild 613
+RMD160 859a6e0cd0ae5532d0bf7961da54e26bb9dcc1b0 highlight-2.4.3.ebuild 613
+SHA256 86282773e3c3ac58e577e509e8b8cd207846470263bd1fbd4d37701aaf770e13 highlight-2.4.3.ebuild 613
 MD5 ccf9ea2ff9f57801ca037faea678a353 metadata.xml 165
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDkWHZQlM6RnzZP+IRAv6ZAKCTLS3DDJUdNluRQ3tzdqtZHJQkUwCgqO7r
-WAs0hgJvb/aXUaoJhc7IDzY=
-=2mPo
------END PGP SIGNATURE-----
+RMD160 a19f2f41b6bb8ff7e515fae359722fe97486d289 metadata.xml 165
+SHA256 ed934d2d9acbec5aa808ae118e4fbd161f08a1781a5d2ec5aea5ab3b47ce7ec5 metadata.xml 165
