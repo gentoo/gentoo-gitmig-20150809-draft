@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d13db53deff6e40b8dd6a781d44ab8b3 ChangeLog 402
+RMD160 3e11f2f79afd0a18c9a42bdf252eb923f36ee312 ChangeLog 402
+SHA256 6c52e317f9ceae1059b6506576cb9195b9223ba5684a90f64112f8e6c47d8b0f ChangeLog 402
+MD5 8bc68333d43c1140b0e962ff6ff2283c files/digest-vdr-dummydevice-0.0.1 250
+RMD160 575fb77ccda3ae1bb8ff0c8fc37c125501b962ad files/digest-vdr-dummydevice-0.0.1 250
+SHA256 66566ea478c0b0bcaa4f47bf4bbd3aa493c313ee1db261e0f93c162ac586e854 files/digest-vdr-dummydevice-0.0.1 250
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 1b98a0702ef024c6d9e7a99538bbe936 vdr-dummydevice-0.0.1.ebuild 539
+RMD160 7b85e529e13b42f0bd3dd30695c82f35e3e904eb vdr-dummydevice-0.0.1.ebuild 539
+SHA256 680f6b355234c08f18f9eca4b92456898f45d8d6af9beb9c80d48068da9b9c4c vdr-dummydevice-0.0.1.ebuild 539
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEEFTqZfSl1Kp5KmoRAun+AKDgk4p0zeCjgy2C99EkbCHs+rLVMACgtxG2
+UDPqi3ZF2RKWPp5e9dGSVJ0=
+=RXeW
+-----END PGP SIGNATURE-----
