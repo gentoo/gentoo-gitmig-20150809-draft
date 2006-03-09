@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-0.12_beta23.ebuild,v 1.3 2005/11/20 00:01:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-0.12_beta23-r3.ebuild,v 1.1 2006/03/09 19:53:00 genstef Exp $
 
 inherit linux-mod eutils
 
 MY_P=${PN}_${PV/_beta/.beta}
-SRC_PATCH="${MY_P}-1.diff"
+SRC_PATCH="${MY_P}-7.diff"
 DESCRIPTION="at76c503 is a Linux driver for the wlan USB adapter based on the Atmel at76c503 chip. It currently supports ad-hoc mode, infrastructure mode, and WEP. It supports adapters from Atmel, the Belkin F5D6050, Netgear MA101, and others."
 HOMEPAGE="http://developer.berlios.de/projects/at76c503a/"
 SRC_URI="mirror://debian/pool/contrib/a/at76c503a/${MY_P}.orig.tar.gz
@@ -36,6 +36,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${WORKDIR}/${SRC_PATCH}
+	epatch ${FILESDIR}/at76-7-gcc4.diff
 	convert_to_m Makefile
 	sed -si "s:-cp \$(KERNEL_SRC)/.tmp_versions/\*.mod \$(MODVERDIR)::" Makefile
 }

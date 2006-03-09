@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/at76c503a
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.8 2005/11/20 00:01:20 betelgeuse Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.9 2006/03/09 19:53:00 genstef Exp $
+
+*at76c503a-0.12_beta23-r3 (09 Mar 2006)
+
+  09 Mar 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/at76-7-gcc4.diff, -at76c503a-0.12_beta19.ebuild,
+  -at76c503a-0.12_beta23.ebuild, -at76c503a-0.12_beta23-r1.ebuild,
+  +at76c503a-0.12_beta23-r3.ebuild:
+  New debian version, gcc4 fix thanks to Maxim <maximsch2@gmail.com> in bug
+  125474
 
   19 Nov 2005; Petteri Räty <betelgeuse@gentoo.org>
   at76c503a-0.12_beta19.ebuild, at76c503a-0.12_beta23.ebuild,
