@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.12-r2.ebuild,v 1.4 2006/02/07 20:03:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.12-r2.ebuild,v 1.5 2006/03/09 23:53:48 agriffis Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ia64 ~ppc sparc ~x86"
+KEYWORDS="alpha ~amd64 ia64 ~ppc sparc ~x86"
 IUSE="exif gnome nls"
 
 RDEPEND=">=x11-libs/gtk+-2
