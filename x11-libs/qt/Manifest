@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6c3560d61ccbc9ca225e22cfcdde7dca ChangeLog 6787
 RMD160 90fc908c79f82490974d2dff1cb1fac0e38dc2b9 ChangeLog 6787
 SHA256 d052a4ae71af4f5dd1a53c7247c2dfeac3f3a3299749bc40e76c5871a1f2b3c4 ChangeLog 6787
@@ -85,3 +88,10 @@ SHA256 12afba544cd95d5be5caf7ab0cd634e7e74ed1deb5967e3c1f3af1c0f09a8ec6 qt-4.1.0
 MD5 dec77c41b5849f0ebdcde7fa9ea25690 qt-4.1.1.ebuild 6351
 RMD160 f301ece0c483410df03fb22be0e381f2e3e5a18e qt-4.1.1.ebuild 6351
 SHA256 b67eda7a5fa11318f3887762ab3625832b0ea77a3e7ecd02ae84f9c9eefeefbd qt-4.1.1.ebuild 6351
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFEEDmsJrHF4yAQTrARAn+WAJkBsQx/FvFbQDJhD98WSwgacj4nxQCgigGx
+MUvMJBaXVHj//aiELu85P7g=
+=NYBZ
+-----END PGP SIGNATURE-----
