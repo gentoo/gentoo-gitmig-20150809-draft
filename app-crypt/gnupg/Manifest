@@ -1,29 +1,57 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e9421e6700a6d599021cf2979808c68c ChangeLog 27787
+MD5 f871725292a26c9f8c971ac2a3ce6e2b ChangeLog 27874
+RMD160 ee2cc2b9f5d2ed844b11b4bca5466a10efb2e979 ChangeLog 27874
+SHA256 ca6b1ba0b7712bfa5b3ee75c5c693bca5f018913f3ffd9896b9fa348b7e162d1 ChangeLog 27874
 MD5 f972c88baf3f90f8ef0953df6f328e28 files/digest-gnupg-1.4.2-r3 190
+RMD160 410230fb169484809a308599ecce378edbf4d6e3 files/digest-gnupg-1.4.2-r3 190
+SHA256 f5da031277620b47d9fd79f68d62c250549988ce4b8a43056125eb60136cade3 files/digest-gnupg-1.4.2-r3 190
 MD5 bc6b26af83d8258c025e691ff0c1a711 files/digest-gnupg-1.4.2.1 192
+RMD160 b8c8d5bfb1a47653bb7f3bece9dabe89eb400674 files/digest-gnupg-1.4.2.1 192
+SHA256 f7f0e622b0560788a2a39017139b25272be3d156563dfcb93b637bad8cb077d1 files/digest-gnupg-1.4.2.1 192
 MD5 836c0ef2fdc33d5ad4accba36f1d3cb6 files/digest-gnupg-1.4.2.2 192
+RMD160 004eb4304beb787cf1e7cdaa4d0f1e40a2e8c368 files/digest-gnupg-1.4.2.2 192
+SHA256 450a96797352ba0face93626ff1bed0380227767cfbe0cfd2fd671c0f78b007f files/digest-gnupg-1.4.2.2 192
 MD5 b5311626934af7a07b0760601cc3db45 files/digest-gnupg-1.9.20-r1 244
+RMD160 2cee39773952b56927ea28d0eb108c517493c002 files/digest-gnupg-1.9.20-r1 244
+SHA256 a3f14c72acb1d4aa2102ab2ef7d02f12ae0451eef8528fed05a59b07e733d3d0 files/digest-gnupg-1.9.20-r1 244
 MD5 e893ac3e7a6b11ab9806e16d3a8582fd files/gnupg-1.4.2-badruman.patch 463
+RMD160 d45ba287a2254380b379191afaec315bd278af57 files/gnupg-1.4.2-badruman.patch 463
+SHA256 d2e5f0d993ada9683991553eca4c40935d399572226cc59a2fd0a2cf0972be7e files/gnupg-1.4.2-badruman.patch 463
 MD5 c23d51ccf048f10b5e8b10b45570c13a files/gnupg-1.4.2-jari.patch 370
+RMD160 93e4099381de6cefadacf28ffd170b3cd5585c9f files/gnupg-1.4.2-jari.patch 370
+SHA256 d244d5d6f9f9e01f0cad2577d23c506f11e073210efbd48702ab62847cc60e73 files/gnupg-1.4.2-jari.patch 370
 MD5 ee3a4487eadfb9858f32adde3554394c files/gnupg-1.4.2-keyserver.patch 389
+RMD160 ce11305302e2c9777913a7697c44195844fce1d2 files/gnupg-1.4.2-keyserver.patch 389
+SHA256 7f2a020d9fb5a8f7d4dd94f6e70168a348713afb66ad2088123a76e5e439030b files/gnupg-1.4.2-keyserver.patch 389
 MD5 fb96d149b5fc7dacc041dda2a57b2315 files/gnupg-1.4.2-mpicoder.patch 991
+RMD160 72d876fdec86f491b729ccaf95be9d0d1053a8f6 files/gnupg-1.4.2-mpicoder.patch 991
+SHA256 af1c3a0420546226eaa420728a06e9d8eb74e73f17cf4c350aeaebdfdc2bed0b files/gnupg-1.4.2-mpicoder.patch 991
 MD5 552b43a0705ea006efa282b7d5645143 files/gnupg-1.4.2-selftest.patch 1358
+RMD160 7eeca9456366fbc9717de8becb3f42e9230d4b66 files/gnupg-1.4.2-selftest.patch 1358
+SHA256 ee99cdee58e519311b4b372595ce99e5da1e38ace8d5a60bf1394937f3e53495 files/gnupg-1.4.2-selftest.patch 1358
 MD5 af68eb5d9d81d48514f170f580d9e83d files/gnupg-1.4.2.1-badruman.patch 558
+RMD160 a96b834dd0bfeeb7b6086248f8bef65ba8830aa2 files/gnupg-1.4.2.1-badruman.patch 558
+SHA256 0b924dce1e5f92f54d52c8f228b8763d674f8f8055d6a81e221774c9ab79bab6 files/gnupg-1.4.2.1-badruman.patch 558
 MD5 e6487554fb0e281b61ae10aa5105dad9 files/gnupg-1.4.2.1-selftest.patch 1374
+RMD160 87809c8f21da31868ad92721396e5a4ba96b4612 files/gnupg-1.4.2.1-selftest.patch 1374
+SHA256 c6991fefaef0efee0fe6291a50e928f57024d93636955aa1754b8bcc10b633da files/gnupg-1.4.2.1-selftest.patch 1374
 MD5 04c1fed4cbc17d814bbdbf09cc1d9000 files/gnupg-1.4.2.2-badruman.patch 558
+RMD160 11954ae9fd632244781877c00b2531c6eea32583 files/gnupg-1.4.2.2-badruman.patch 558
+SHA256 6cdb944d17df449f2cdce1a255c6fd83e1f4a34edd4d6e5c691bcc1d3c418257 files/gnupg-1.4.2.2-badruman.patch 558
 MD5 81f86906b16ceca11d4820e173203475 files/gnupg-1.4.2.2-selftest.patch 1374
+RMD160 4ed131ac7605de9b672395208a10443146cbd23a files/gnupg-1.4.2.2-selftest.patch 1374
+SHA256 22ed605597427c06103e7a75d5cdc5c0acf72d60300ffaed9cab4c2bf94aceef files/gnupg-1.4.2.2-selftest.patch 1374
 MD5 7704ccabfdf30bc1a86ad81b8449abec gnupg-1.4.2-r3.ebuild 6872
+RMD160 07ee3dc77ad9a0465b1beea4409be8139fec0205 gnupg-1.4.2-r3.ebuild 6872
+SHA256 0f6a7801b4dc89e52646ffb7039530a0776e9929e65ac0a4c49bd820c69f0800 gnupg-1.4.2-r3.ebuild 6872
 MD5 8dcabb00eac251f533b741a88fca98d8 gnupg-1.4.2.1.ebuild 6839
-MD5 ce4f8a093e7b06200e3d02b1f5243d34 gnupg-1.4.2.2.ebuild 6846
+RMD160 af2774aa8b2b899b0c9bf8f5704be6fc57b2110c gnupg-1.4.2.1.ebuild 6839
+SHA256 19cbaaab359632cd37321038e1f54391035a7a00c4275a7450fc45cf962db971 gnupg-1.4.2.1.ebuild 6839
+MD5 d55bc506b78b68c78ccc4cdb31284ac3 gnupg-1.4.2.2.ebuild 6847
+RMD160 3f1f04760636a21b74c8aac699f630931be00f9d gnupg-1.4.2.2.ebuild 6847
+SHA256 88b0c90f66980e474edf9ba7a963dcef6c9fd1a2f9cf0518e68f0c783f10aab6 gnupg-1.4.2.2.ebuild 6847
 MD5 657a743dbb9b75102f7ef9ec68dd26ef gnupg-1.9.20-r1.ebuild 3239
+RMD160 08bea59e88ebf23f4c028dccac5d249c6d4abd4f gnupg-1.9.20-r1.ebuild 3239
+SHA256 91f69ba5ec8137dec5889a3445b1e87bbead096488471c6c91090761059c7dcb gnupg-1.9.20-r1.ebuild 3239
 MD5 b507ee36c7487372de42cc9dab034370 metadata.xml 481
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEEKszViELBEf1JB0RAqcwAJ9vo8vp9J1GJC1WcoHFL+v2DrrnlQCbB8Tq
-YH0PzVW1sBGNq4XMOzg7NFs=
-=DnT2
------END PGP SIGNATURE-----
+RMD160 d5c4e2fc7b94966795cc4c039d850302d8552448 metadata.xml 481
+SHA256 d88eadc2c75a18f57dcd38f20aa72ee7c79504f62bcab3f7dea60651ccd4b672 metadata.xml 481
