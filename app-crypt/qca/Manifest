@@ -1,16 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eadce6147dc40587fc5bf1c40bc205da ChangeLog 2798
-MD5 79ff5b8052703491612213e47cdb6947 files/digest-qca-1.0-r2 59
+MD5 c24197c84b401e72c462d98a40c0019f ChangeLog 2926
+RMD160 77b9cb2a30dd2021ec3e30f0b6423415e0ba0872 ChangeLog 2926
+SHA256 6ecc742e7e91d6b7301db5d068ad4d80a1d6ad896fb6af7ba40645019fbfe9e0 ChangeLog 2926
+MD5 2323bf42b55a722609732dcd1a558bd4 files/digest-qca-1.0-r2 223
+RMD160 8e20220dc4fc74d4055cc71f2f7f6cc0875073f4 files/digest-qca-1.0-r2 223
+SHA256 6739aa693753de597bfb6aec78009c9862a0b93a3e0e333d33a6ab878754f1d0 files/digest-qca-1.0-r2 223
 MD5 2efadaf203fdd3186a7e909c0d02c425 files/qca-1.0-fbsd.patch 753
+RMD160 481eee7ad8e334f1551c00de7ac7f597694a92a2 files/qca-1.0-fbsd.patch 753
+SHA256 53a0257ecbf917741b41ab4bc50a1d9518cb1bd86f0be36dbf3a1c6ef1d5257c files/qca-1.0-fbsd.patch 753
 MD5 ee5764e49e4425fb387e29a7d8e2fec0 files/qca-pathfix.patch 267
+RMD160 933217ccfdf29b4b37a8a6106ec79bb42f68ab13 files/qca-pathfix.patch 267
+SHA256 423980ef7c981a1af07297e1f8abd4769a70e2e92a638012cac68d912b0dea4c files/qca-pathfix.patch 267
 MD5 b5393a27b5b3d74649028c3befaf49fe metadata.xml 226
-MD5 365b5ba7ea24f47bf72806fd97d05620 qca-1.0-r2.ebuild 1047
+RMD160 da1b2c8ba1ec28b4a0251ee5778e1308a5383d52 metadata.xml 226
+SHA256 e65360d3209b9067f6ffa4dae086e721ec97c01f2a06531e83add1511021a717 metadata.xml 226
+MD5 3ab9974e6e596bea98a2c1786734280d qca-1.0-r2.ebuild 1066
+RMD160 f91e589eeb254dd5521c810b2f388a0c6490c3a6 qca-1.0-r2.ebuild 1066
+SHA256 da00ddd776eaf87a92a6ebeb09e6ed0a9fe63a25c76db8dc4ee9327ddfa21f6e qca-1.0-r2.ebuild 1066
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDXlEk8zY1VwezZiERAmFIAKCjC+noGokXqFc5g4Q9R01HYewhXgCfYbiE
-F8icsFeQcXAfYhWIaxjSc5U=
-=vxg7
+iD8DBQFED48M8zY1VwezZiERAmk8AJ0VmY3Srsjar5NHUq2q7IlpL9VktgCfbjma
+mphI24hbUoBuZFEFXbI0BCc=
+=TWdz
 -----END PGP SIGNATURE-----
