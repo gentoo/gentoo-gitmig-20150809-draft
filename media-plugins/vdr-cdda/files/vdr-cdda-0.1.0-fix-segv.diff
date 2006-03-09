@@ -1,0 +1,11 @@
+--- cdda-0.1.0/cdda_menu.h-orig	2006-03-09 18:46:52.657736750 +0100
++++ cdda-0.1.0/cdda_menu.h	2006-03-09 18:48:37.752304750 +0100
+@@ -60,7 +60,7 @@
+     char *mp_newCddbServerFqdn;
+     int m_newCddbServerPort;
+     int m_newInfoView;
+-    const char *m_cddbPrioTxt[3];
++    const char *m_cddbPrioTxt[4];
+   protected:
+     void Store(void);
+   public:
