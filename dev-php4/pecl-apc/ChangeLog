@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/pecl-apc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/ChangeLog,v 1.5 2006/03/04 21:12:18 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/ChangeLog,v 1.6 2006/03/09 16:34:27 chtekk Exp $
+
+  09 Mar 2006; Luca Longinotti <chtekk@gentoo.org>
+  files/digest-pecl-apc-3.0.8, files/digest-pecl-apc-3.0.9, Manifest:
+  Fix digests wrt bug #125612.
 
 *pecl-apc-3.0.9 (04 Mar 2006)
 
