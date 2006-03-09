@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.3.2.ebuild,v 1.2 2006/01/10 00:06:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.3.2.ebuild,v 1.3 2006/03/09 00:36:50 vapier Exp $
+
+inherit multilib
 
 DESCRIPTION="Restricted shell for SSHd"
 HOMEPAGE="http://rssh.sourceforge.net/"
@@ -21,9 +23,9 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		--libexecdir=/usr/lib/misc \
+		--libexecdir='$(libdir)/misc' \
 		--with-scp=/usr/bin/scp \
-		--with-sftp-server=/usr/lib/misc/sftp-server \
+		--with-sftp-server="/usr/$(get_libdir)/misc/sftp-server" \
 		$(use_enable static) \
 		 || die "econf failed"
 	emake || die
