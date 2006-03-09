@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p4.ebuild,v 1.2 2005/12/26 22:06:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p4.ebuild,v 1.3 2006/03/09 19:35:22 pauldv Exp $
 
 inherit eutils gnuconfig db
 
@@ -100,7 +100,7 @@ src_compile() {
 
 src_install() {
 
-	einstall libdir="${D}/usr/$(get_libdir)" || die
+	einstall libdir="${D}/usr/$(get_libdir)" strip="${D}/bin/strip" || die
 
 	db_src_install_usrbinslot
 
