@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.32 2006/03/09 23:31:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.33 2006/03/09 23:35:52 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -115,7 +115,7 @@ horde_src_install() {
 	# many horde apps include in their help page #121003)
 	dodoc README docs/*
 	mv docs/CREDITS "${T}"/
-	rm -f COPYING LICENSE README docs/*
+	rm -rf COPYING LICENSE README docs/*
 	mv "${T}"/CREDITS docs/
 
 	dodir ${destdir}
