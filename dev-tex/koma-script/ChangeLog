@@ -1,13 +1,15 @@
 # ChangeLog for dev-tex/koma-script
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.14 2006/02/06 18:02:34 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.15 2006/03/09 12:51:25 ehmsen Exp $
 
   06 Feb 2006; Alexandre Buisse <nattfodd@gentoo.org>
   koma-script-20040616.ebuild, koma-script-20040824.ebuild,
   koma-script-20051125.ebuild:
   koma-script is provided by tetex-3 so block >=app-text/tetex-3.0
 
-  19 Jan 2006; Martin Ehmsen <ehmsen@gentoo.org> ChangeLog:
+*koma-script-20051125 (19 Jan 2006)
+
+  19 Jan 2006; Martin Ehmsen <ehmsen@gentoo.org> +koma-script-20051125.ebuild:
   Version bumped. Thanks to Kai Sommer <gentoo@sokai.name>, closing bug #114045.
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
