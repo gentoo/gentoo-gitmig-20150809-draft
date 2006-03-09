@@ -1,33 +1,21 @@
-MD5 6ace43df7412abd45deba930842a92ed ChangeLog 41764
-RMD160 0ee2054a34dd0022e4cd9ccfefa508a9029b50c1 ChangeLog 41764
-SHA256 55a3a86d60248d5d5f3ff26f8350435c0c793d966fdaf04d6b57617eb69f59cf ChangeLog 41764
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4175fefc1cccd9b79057fe21092e40db ChangeLog 41885
 MD5 500f7e71be57d40b0a8042cab1484df9 files/2.0.1/alwayscrystal.diff 3222
-RMD160 6f563dccad523db881def1fdb711df3949c2a687 files/2.0.1/alwayscrystal.diff 3222
-SHA256 22af14b2c3bd7d796eeda2f4a423f4290e71d2f2790a82038b837c6219133ef1 files/2.0.1/alwayscrystal.diff 3222
 MD5 a37e5fa90440a0a85f589bebdf4590b3 files/2.0.2/buildfix-no-java.diff 1636
-RMD160 f4dc9e55807c290eddd3d00c95912a52facaae04 files/2.0.2/buildfix-no-java.diff 1636
-SHA256 cb0ac75f1fc23aebf2cdb8b34353ccae7de5b0f66822f148c62d6ead69e15331 files/2.0.2/buildfix-no-java.diff 1636
 MD5 4f55a923f95c001976f2b8abaaad829a files/2.0.2/buildfix-without-mozilla.diff 4656
-RMD160 139421dcaafc8ac0cbd28b13d3e6f9206a83c924 files/2.0.2/buildfix-without-mozilla.diff 4656
-SHA256 f5d95319e0129d04185b427147c9df7a0c2a4f5624da08226e04951365797323 files/2.0.2/buildfix-without-mozilla.diff 4656
 MD5 9f159544d9421964200f7226443226b8 files/2.0.2/gentoo-2.0.2.diff 446
-RMD160 177ad35ca8ff9f382cb5085c151b6d30db7ede35 files/2.0.2/gentoo-2.0.2.diff 446
-SHA256 e1c2f2533b415c7cea29c39ed9be3de44c8b6b940aaf4abebc1a6e3b5eda3089 files/2.0.2/gentoo-2.0.2.diff 446
 MD5 d741869e1665d1423c2086f1723b93d7 files/2.0.2/removecrystalcheck.diff 572
-RMD160 5e7b6c92506bd7d3f4e09e3ee43656a6f4f8c30d files/2.0.2/removecrystalcheck.diff 572
-SHA256 06a05ee5a27ce6a1de1c9eeebe4e22b860d0a6292f778ec6c81aa2c28c1daa08 files/2.0.2/removecrystalcheck.diff 572
 MD5 9017e3971f27ac77833ae962069feccf files/digest-openoffice-2.0.1 2024
-RMD160 94f476c151e7c42212f2d6dd05b48443ca784e1e files/digest-openoffice-2.0.1 2024
-SHA256 ac0d68a776f61080710f7f031ed79457a1f1a30bc24abcc85a563ce1df2d9d46 files/digest-openoffice-2.0.1 2024
 MD5 1f8990606df11c3ff346d97aadbc1b21 files/digest-openoffice-2.0.2_rc4 2265
-RMD160 ba682582865f839aec79aad9015c139c44f7c886 files/digest-openoffice-2.0.2_rc4 2265
-SHA256 542a1facb3a89b97e0e6b539d06d1388de3be2224dca6fdf09bf65756ab5af8d files/digest-openoffice-2.0.2_rc4 2265
 MD5 e3ec4a70395943b59adad7fc4f0538d7 metadata.xml 461
-RMD160 3e99c165e962e73417462c6df7a476a558b3ae18 metadata.xml 461
-SHA256 7a25927f2c830703539753c0f7295551795419ef0d05b72db505a2ac1094d291 metadata.xml 461
 MD5 e00605b0acc60de47e6eee98a5f32894 openoffice-2.0.1.ebuild 7274
-RMD160 ed88f0dc45b87c259271f83fa9d4fd8bb55fab93 openoffice-2.0.1.ebuild 7274
-SHA256 56a67a1cd040cd120cb5227ed0fa926fbf378c5ba46e267bc43a9b0218f87fa7 openoffice-2.0.1.ebuild 7274
-MD5 d69fcaebc79b4e1c0a6c143c84c1f840 openoffice-2.0.2_rc4.ebuild 7853
-RMD160 97b49281eca3bff7939f0fc45aba69e86a600f53 openoffice-2.0.2_rc4.ebuild 7853
-SHA256 dea1cdf3e7e78bd398a538042d5b9920a68161f4459787e770fa09551422e248 openoffice-2.0.2_rc4.ebuild 7853
+MD5 f7bec4b8b59309a4c7469589794cf82d openoffice-2.0.2_rc4.ebuild 7864
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEEEmqKRy60XGEcJIRAnU5AJ0UcNGtF79GVkrpL/ydXeLosF/E/QCfdYSf
+BYE2cXTR5wL36Iu6KAUWbjs=
+=S4vt
+-----END PGP SIGNATURE-----
