@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.1 2005/08/17 10:27:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.2 2006/03/09 17:01:24 flameeyes Exp $
 
-inherit kde-functions
+inherit kde-functions eutils
 
 DESCRIPTION="Qt immodules input method framework plugin for SCIM"
 HOMEPAGE="http://scim.freedesktop.org/"
@@ -12,12 +12,14 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="nls arts"
+IUSE="nls debug"
 
-DEPEND="|| ( >=app-i18n/scim-1.4.2 >=app-i18n/scim-cvs-1.4.2 )
-	nls? ( sys-devel/gettext )
-	arts? ( kde-base/arts )
+RDEPEND="|| ( >=app-i18n/scim-1.4.2 >=app-i18n/scim-cvs-1.4.2 )
+	nls? ( virtual/libintl )
 	$(qt_min_version 3.3.4)"
+
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
 	if [ ! -e /usr/qt/3/plugins/inputmethods/libqimsw-none.so ] ; then
@@ -25,19 +27,20 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-qtimm-check.patch"
+
+	make -f admin/Makefile.common || die "reautotooling failed"
+}
+
 src_compile() {
-
-	# bug #84369
-	if which kde-config >/dev/null 2>&1 ; then
-		export KDEDIR=$(kde-config --prefix)
-		export kde_kcfgdir=/usr/share/config.kcfg
-		export kde_servicesdir=/usr/share/services
-	fi
-
-	econf --enable-mt \
+	econf \
 		$(use_enable nls) \
-		$(use_with arts) || die
-	emake -j1 || die "make failed."
+		$(use_enable debug scim-debug) || die
+	emake || die "make failed."
 }
 
 src_install() {
