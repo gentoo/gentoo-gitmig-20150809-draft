@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.22 2006/03/03 09:28:58 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.23 2006/03/09 12:37:01 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -22,7 +22,6 @@ SRC_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/${NEWP}.tar.gz
 LICENSE="GPL-2"
 IUSE="big-tables berkdb debug embedded minimal perl selinux srvdir ssl static"
 RESTRICT="primaryuri confcache"
-DEPEND="app-admin/eselect-mysql"
 
 mysql_version_is_at_least "4.01.03.00" \
 && IUSE="${IUSE} cluster extraengine"
@@ -339,6 +338,14 @@ mysql_src_compile() {
 		myconf="${myconf} --with-row-based-replication"
 	fi
 
+	#TODO rechek again later, had problem with assembler enabled 
+	#     and some combination of use-flags with 5.1
+	if mysql_check_version_range "5.01.00.00 to 5.01.08.99" ; then
+		myconf="${myconf} --disable-assembler"
+	else
+		myconf="${myconf} --enable-assembler"
+	fi
+
 	#Bug #114895,Bug #110149
 	filter-flags "-O" "-O[01]"
 	#glibc-2.3.2_pre fix; bug #16496
@@ -359,7 +366,6 @@ mysql_src_compile() {
 		--libdir="${MY_LIBDIR}" \
 		--includedir="${MY_INCLUDEDIR}" \
 		--with-low-memory \
-		--enable-assembler \
 		--enable-local-infile \
 		--with-mysqld-user=mysql \
 		--with-client-ldflags=-lstdc++ \
