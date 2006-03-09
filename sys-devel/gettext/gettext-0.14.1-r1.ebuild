@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1-r1.ebuild,v 1.3 2005/08/24 00:35:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1-r1.ebuild,v 1.4 2006/03/09 23:49:18 vapier Exp $
 
 inherit eutils gnuconfig toolchain-funcs mono libtool
 
@@ -100,5 +100,5 @@ pkg_postinst() {
 	ewarn "Any package that linked against the previous version"
 	ewarn "of gettext will have to be rebuilt."
 	ewarn "Please 'emerge gentoolkit' and run:"
-	ewarn "revdep-rebuild --soname libintl.so.2"
+	ewarn "revdep-rebuild --library libintl.so.2"
 }
