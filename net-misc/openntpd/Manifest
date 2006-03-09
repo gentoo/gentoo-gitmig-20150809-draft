@@ -1,19 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 69ddea1111f7ab8e44798f61ab57135b ChangeLog 2946
+MD5 f4f05d0d038613026b4a09a675b95773 ChangeLog 3186
+RMD160 9bc226869353cedddd6f765257e4ddcb8705a17a ChangeLog 3186
+SHA256 a04bc9a4896c6b9c7d20dbe902f1d6cf9ba47cd972da8bf65635e02d190ba4d2 ChangeLog 3186
 MD5 71e8d0be6ce1e3324576b9ddce02c74e files/3.6.1_p1-ntpd.8.patch 664
+RMD160 98de0f67ddbbee68b73326c5abc81f18588652b9 files/3.6.1_p1-ntpd.8.patch 664
+SHA256 8fdfc228c1d3955cbb7451ac3edb7978eafb7f08a6dcc1fd6887d25c69c0c3ee files/3.6.1_p1-ntpd.8.patch 664
 MD5 8ff46ca71725c4c9ccbdaed5ecbd8ea3 files/3.6.1_p1-pollerr.patch 1218
+RMD160 08ac74e0b22ae1174fdd8030c52c9ec20bf4b23c files/3.6.1_p1-pollerr.patch 1218
+SHA256 0c4daaeb700665a8ee7479145e5812ac4d0c7dd440a7a7c493d5473d1f9ae191 files/3.6.1_p1-pollerr.patch 1218
 MD5 ab87a8b0466a0c1c687eb7648b7f8754 files/digest-openntpd-3.6.1_p1-r1 68
+RMD160 73658a449dfad94a40749206453838ca773453e4 files/digest-openntpd-3.6.1_p1-r1 68
+SHA256 5f1832487b76fe8d443bfec0cf63c53d3cf93ceb22ea72708f3788c888389241 files/digest-openntpd-3.6.1_p1-r1 68
 MD5 369bed7d1a552bee3536c8f71d38397a files/digest-openntpd-3.7_p1 66
+RMD160 73f64cca899be58738f627c523bad1341d3da49a files/digest-openntpd-3.7_p1 66
+SHA256 0a7023736610a4e014dcc564e06a808fac604685039dc7c8ca8c5e41a36bb132 files/digest-openntpd-3.7_p1 66
 MD5 9cb3424ed5b3f20a231d581b78629afb files/openntpd.conf.d 257
+RMD160 4c38cd2071729c2a28cc8232b532cb7f8c20026b files/openntpd.conf.d 257
+SHA256 c461d78609c57306cc6e25dc5dfb1e245e9d403f669416e48544aaedd056830d files/openntpd.conf.d 257
 MD5 31c9feba04713eebbe16cd1979fca83d files/openntpd.rc 918
-MD5 5b2bb7e8dd4728c8a2dadedec85df4a3 openntpd-3.6.1_p1-r1.ebuild 1202
-MD5 9bfe9bba92a9a831d94acc2a86607e9c openntpd-3.7_p1.ebuild 1211
+RMD160 de933d6a855d3772c9420d24d4a95f79b54d02c2 files/openntpd.rc 918
+SHA256 4b0fe843b56ee1eb9d62344d6d951bee1a42c9ec871863f50eb859a69b5c507d files/openntpd.rc 918
+MD5 ed8349e980407e49b724e04ee5a9a2ed metadata.xml 231
+RMD160 c13056229989c3d4f448a7c7abcff3f4ee7ce13c metadata.xml 231
+SHA256 4595c2615fd7c9095517949b1a920d4457f92801eb9d46307b18aafe58ec2a8a metadata.xml 231
+MD5 98a331c1a65ea36b090a16e1ee5bb27e openntpd-3.6.1_p1-r1.ebuild 1191
+RMD160 cd59779aae5769f08863ed3e49c920cfb95dc02b openntpd-3.6.1_p1-r1.ebuild 1191
+SHA256 daaa8e5b9174f5431b2ff87fbfe470fa4f50514716e436867cfc2e4e30622082 openntpd-3.6.1_p1-r1.ebuild 1191
+MD5 79b6a03cf9846092167a96ccc3695ac9 openntpd-3.7_p1.ebuild 1238
+RMD160 1a10c6f750b6b92dff6631d6221632e6d3505ba5 openntpd-3.7_p1.ebuild 1238
+SHA256 338efc8c5aea71772ba88f18228e426d047852d6d324a581c58258c7169374aa openntpd-3.7_p1.ebuild 1238
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDxa4T2+ySkm8kpY0RAlkFAJ4g8sypCfh1ZLBfA2IRBrNCrFL4sgCgkrgT
-VN87uQXP5WptYX3vR9D9YcY=
-=SUf+
+iD8DBQFED3f+AiZjviIA2XgRAhwaAJ47QiCKrqeibBvMtNnC8sulVrBHXwCfXEJl
+KSaU3xoEj5rEa6GXa/ru0ns=
+=P1Qc
 -----END PGP SIGNATURE-----

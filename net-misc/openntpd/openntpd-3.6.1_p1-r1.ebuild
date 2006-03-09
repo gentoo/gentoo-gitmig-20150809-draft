@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.6.1_p1-r1.ebuild,v 1.4 2005/08/24 00:08:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.6.1_p1-r1.ebuild,v 1.5 2006/03/09 00:33:52 flameeyes Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="ssl selinux"
 
-RDEPEND="virtual/libc
-	ssl? ( dev-libs/openssl )
+RDEPEND="ssl? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-ntp )
 	!<=net-misc/ntp-4.2.0-r2"
 DEPEND="${RDEPEND}

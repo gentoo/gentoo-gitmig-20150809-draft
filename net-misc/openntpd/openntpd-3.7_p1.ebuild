@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.7_p1.ebuild,v 1.10 2006/01/12 01:15:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.7_p1.ebuild,v 1.11 2006/03/09 00:33:52 flameeyes Exp $
 
 inherit eutils
 
@@ -38,7 +38,9 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_with !ssl builtin-arc4random) || die
+	econf \
+		--disable-strip \
+		$(use_with !ssl builtin-arc4random) || die
 	emake || die "emake failed"
 }
 
