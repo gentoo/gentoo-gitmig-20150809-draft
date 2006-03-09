@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 018568b51154748156d2d0489f5615b5 ChangeLog 2468
-RMD160 dd31c26147e7b838ad59f8cd973c75117d500f24 ChangeLog 2468
-SHA256 59c77400add2cbbed6028f189025522775a58271f986bba2f55f181989e6f398 ChangeLog 2468
-MD5 90642d9fe862149c9fd0441ef24224ad emul-linux-x86-sdl-2.2.ebuild 645
-RMD160 f98e0b0edd657fc91245fe401f5f60e19d7217ac emul-linux-x86-sdl-2.2.ebuild 645
-SHA256 38c1a40336bf34b23824a732eb191b696ce684598b535bd76044f1dbd63dbfd1 emul-linux-x86-sdl-2.2.ebuild 645
-MD5 8b812f77094db15e447873ecbcd0a3d7 emul-linux-x86-sdl-2.3.ebuild 645
-RMD160 3525e61bb733733aadc203fb432d9d39061e6090 emul-linux-x86-sdl-2.3.ebuild 645
-SHA256 aceca54ea2f12b9e3fd32c378c87b3d2bf09d7ec429bf4bdc82fcba72305e4ab emul-linux-x86-sdl-2.3.ebuild 645
+MD5 5edbea86e237ecc21a49af2b7bd9a6aa ChangeLog 2667
+RMD160 d1d5080c775fe667e2de1e60473fa4923c31987f ChangeLog 2667
+SHA256 0fcba382274bfd101e5635713d3244e377be29a4dbc3b8b646d890225cfb67a1 ChangeLog 2667
+MD5 2ce0b8de0e8e2897bbde6dd04131053a emul-linux-x86-sdl-2.2.ebuild 647
+RMD160 df61495f4c66290d4ba518ee3e822039b06ed56d emul-linux-x86-sdl-2.2.ebuild 647
+SHA256 536719e0a0ac59d799a384524af588efba8b1e51bf5b2fb04ed15783a8dc5e87 emul-linux-x86-sdl-2.2.ebuild 647
+MD5 7abfb9f76fef76c42f08bc495ba26ca0 emul-linux-x86-sdl-2.3.ebuild 647
+RMD160 c8a54fc08dd5cdc5d295a3fba94be11faea1b4bb emul-linux-x86-sdl-2.3.ebuild 647
+SHA256 6078a46d5d4db3f3262fda914f6dbed4c016fb7ad69a22d5d620dfef9a32dbf7 emul-linux-x86-sdl-2.3.ebuild 647
 MD5 68cf1526b0b64fd6709c99ad93e248a4 files/digest-emul-linux-x86-sdl-2.2 75
 RMD160 5d46f092363e139aa48a1c1ae2035b006daf9f78 files/digest-emul-linux-x86-sdl-2.2 75
 SHA256 e42c45ace51237feffd9d361f5f6c34311bb198758528d7c03637cdfdf04dec2 files/digest-emul-linux-x86-sdl-2.2 75
@@ -19,10 +16,3 @@ SHA256 dc11e27803c8f449efabc434d1ed6c51434f730279799df2b0e1cec17f5d2e7c files/di
 MD5 ef1a1d0bbdb241725417e87002ec4d16 metadata.xml 223
 RMD160 5334a75802c04f73f2bbe2e5c133178728cc9bba metadata.xml 223
 SHA256 90a4ae3bb1a82ba35e2971274b7c2437d3f717075382f02ece1b1c79421c1282 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFED4eEAiZjviIA2XgRAjC7AKDqXgrHOwazeYWq5ECMoC70ZiyEtwCgzSjf
-KyrgFrlT0TaNyjoAkQSSorY=
-=KhdW
------END PGP SIGNATURE-----
