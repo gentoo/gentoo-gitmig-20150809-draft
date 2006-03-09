@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.6.ebuild,v 1.3 2006/03/05 22:19:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.6.ebuild,v 1.4 2006/03/09 23:49:20 vapier Exp $
 
 inherit eutils
 
@@ -68,7 +68,7 @@ pkg_postinst() {
 	einfo "groups with usermod -G.  root always has access."
 	if [[ -e ${ROOT}/usr/lib/libopenct.so.0 ]] ; then
 		echo
-		ewarn "Please run: revdep-rebuild --soname libopenct.so.0"
+		ewarn "Please run: revdep-rebuild --library libopenct.so.0"
 		echo
 	fi
 }

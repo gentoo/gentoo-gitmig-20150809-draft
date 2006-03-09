@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.1a.ebuild,v 1.8 2005/12/24 16:36:59 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.1a.ebuild,v 1.9 2006/03/09 23:48:19 vapier Exp $
 
 DESCRIPTION="A library to execute a function when a specific event occurs on a file descriptor"
 HOMEPAGE="http://monkey.org/~provos/libevent/"
@@ -47,7 +47,7 @@ pkg_postinst() {
 		ewarn "to rebuild all packages that were built with libevent-1.0x."
 		ewarn
 		ewarn "Run the following to see which packages will be rebuilt:"
-		ewarn "    revdep-rebuild --soname ${ver}.so.1 -p"
+		ewarn "    revdep-rebuild --library ${ver}.so.1 -p"
 		ewarn
 		ewarn "If you are satisfied with the output, re-run without the '-p' to rebuild."
 		ewarn

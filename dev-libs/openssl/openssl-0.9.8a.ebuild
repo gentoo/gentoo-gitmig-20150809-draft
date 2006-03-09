@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8a.ebuild,v 1.4 2006/02/12 22:12:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8a.ebuild,v 1.5 2006/03/09 23:49:09 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -149,8 +149,8 @@ pkg_postinst() {
 	if [[ -e ${ROOT}/usr/$(get_libdir)/libcrypto.so.0.9.7 ]] ; then
 		ewarn "You must re-compile all packages that are linked against"
 		ewarn "OpenSSL 0.9.7 by using revdep-rebuild from gentoolkit:"
-		ewarn "# revdep-rebuild --soname libssl.so.0.9.7"
-		ewarn "# revdep-rebuild --soname libcrypto.so.0.9.7"
+		ewarn "# revdep-rebuild --library libssl.so.0.9.7"
+		ewarn "# revdep-rebuild --library libcrypto.so.0.9.7"
 		ewarn "After this, you can delete /usr/$(get_libdir)/libssl.so.0.9.7"
 		ewarn "and /usr/$(get_libdir)/libcrypto.so.0.9.7"
 	fi

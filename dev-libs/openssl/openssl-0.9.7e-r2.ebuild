@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e-r2.ebuild,v 1.4 2006/02/13 02:57:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e-r2.ebuild,v 1.5 2006/03/09 23:49:09 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -274,8 +274,8 @@ pkg_postinst() {
 	test -f ${ROOT}/usr/$(get_libdir)/libssl.so.0.9.6 && {
 		einfo "You can now re-compile all packages that are linked against"
 		einfo "OpenSSL 0.9.6 by using revdep-rebuild from gentoolkit:"
-		einfo "# revdep-rebuild --soname libssl.so.0.9.6"
-		einfo "# revdep-rebuild --soname libcrypto.so.0.9.6"
+		einfo "# revdep-rebuild --library libssl.so.0.9.6"
+		einfo "# revdep-rebuild --library libcrypto.so.0.9.6"
 		einfo "After this, you can delete /usr/lib/libssl.so.0.9.6 and /usr/lib/libcrypto.so.0.9.6"
 	}
 
