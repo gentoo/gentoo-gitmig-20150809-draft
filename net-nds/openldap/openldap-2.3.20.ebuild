@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.20.ebuild,v 1.1 2006/02/19 23:54:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.20.ebuild,v 1.2 2006/03/09 23:49:16 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -75,9 +75,9 @@ openldap_upgrade_warning() {
 	ewarn "consider updating your applications to only use 2.3"
 	ewarn "as the backwards compatible libraries will be removed in future."
 	ewarn "Do rebuild your applications against the new libraries do:"
-	ewarn "# revdep-rebuild --soname liblber.so.2"
-	ewarn "# revdep-rebuild --soname libldap.so.2"
-	ewarn "# revdep-rebuild --soname libldap_r.so.2"
+	ewarn "# revdep-rebuild --library liblber.so.2"
+	ewarn "# revdep-rebuild --library libldap.so.2"
+	ewarn "# revdep-rebuild --library libldap_r.so.2"
 	echo
 	ewarn "Note that there are substantial changes to how openldap functions"
 	ewarn "in 2.3, if you are using bdb as a backend. You should issue the"

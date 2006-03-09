@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r4.ebuild,v 1.1 2006/01/13 17:58:05 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r4.ebuild,v 1.2 2006/03/09 23:49:16 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -68,9 +68,9 @@ openldap_upgrade_warning() {
 	ewarn "'access to attribute=' is now 'access to attrs='"
 	echo
 	ewarn "You must also run revdep-rebuild after upgrading from 2.1 to 2.2:"
-	ewarn "# revdep-rebuild --soname liblber.so.2"
-	ewarn "# revdep-rebuild --soname libldap.so.2"
-	ewarn "# revdep-rebuild --soname libldap_r.so.2"
+	ewarn "# revdep-rebuild --library liblber.so.2"
+	ewarn "# revdep-rebuild --library libldap.so.2"
+	ewarn "# revdep-rebuild --library libldap_r.so.2"
 }
 
 pkg_setup() {
