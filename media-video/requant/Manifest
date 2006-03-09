@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 58dfb9dbdb6086cf9da8832f0733d526 ChangeLog 386
+MD5 f6e7791ca39fba2cc1c1238efdb5d709 ChangeLog 545
 MD5 5510cd6fc2d4b54671b851974ca20fd3 files/digest-requant-0.0.1 69
 MD5 72218fae70d3ae2c8b605729729c3fe9 metadata.xml 445
 MD5 198842db27972386b83ea964424618d3 requant-0.0.1.ebuild 835
@@ -9,7 +9,7 @@ MD5 198842db27972386b83ea964424618d3 requant-0.0.1.ebuild 835
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 Comment: no further Information
 
-iD8DBQFEC01wdn07HTTCgIoRArvJAJ4kbaxt7sz27Y/WTRGcnZdWzfpf7gCfSQs6
-vkZ3H3G9W5o2q6m8/Xp6ElA=
-=BfEL
+iD8DBQFED3lydn07HTTCgIoRAvJvAJ4uW8TnJhX+gRSrBY9DB8ARyHMXHACfTjB7
+9b9ZyBQfq0SsgoE2XtIIdnc=
+=H26l
 -----END PGP SIGNATURE-----

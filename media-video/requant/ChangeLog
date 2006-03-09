@@ -1,6 +1,10 @@
 # ChangeLog for media-video/requant
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/requant/ChangeLog,v 1.1 2006/03/05 20:43:14 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/requant/ChangeLog,v 1.2 2006/03/09 00:39:58 hd_brummy Exp $
+
+  09 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org> Manifest:
+  digest fixed,http://bugs.gentoo.de/view.php?id=396, thanks to Lapheus for
+  reporting this
 
 *requant-0.0.1 (05 Mar 2006)
 
