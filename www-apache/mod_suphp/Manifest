@@ -13,9 +13,9 @@ SHA256 59a2c8876291b3a883b38e3840cd5fed86f7fc44d53ec2aece917411d7ea1617 files/di
 MD5 e13102858fd8132c87bfc61e2d089691 files/digest-mod_suphp-0.6.1-r1 235
 RMD160 8faac9395fa8a523aab5d1d427fb92e7ca7bb933 files/digest-mod_suphp-0.6.1-r1 235
 SHA256 59a2c8876291b3a883b38e3840cd5fed86f7fc44d53ec2aece917411d7ea1617 files/digest-mod_suphp-0.6.1-r1 235
-MD5 d57cae6ff210d37eefad751f436d60f7 files/suphp-apache22-compat.patch 2360
-RMD160 11fd01355efef32209d5228ed0340ce9501b78c7 files/suphp-apache22-compat.patch 2360
-SHA256 b45d6cb81a31c7844cb0fe9206f9c7b77229c7bf7c20a6ef3382f70171945613 files/suphp-apache22-compat.patch 2360
+MD5 326471608e497bc910d8e30007730619 files/suphp-apache22-compat.patch 2393
+RMD160 88b5e6fd1727f234545f2c613222bac0db8e4048 files/suphp-apache22-compat.patch 2393
+SHA256 56a62662bec13ee7021890695af23d53102b9b09ce2172292ab0f5ff000cac52 files/suphp-apache22-compat.patch 2393
 MD5 4c2c4f6d464975c72a932c9eef2e3461 files/suphp.conf 905
 RMD160 a95a7ed6f3d135ea6ab6e6ecaa272b735a306f43 files/suphp.conf 905
 SHA256 8a1dd8bee95dc8ab599cdcca966a583e7fbde5c41b377aa208e1f60af54b6dd7 files/suphp.conf 905
