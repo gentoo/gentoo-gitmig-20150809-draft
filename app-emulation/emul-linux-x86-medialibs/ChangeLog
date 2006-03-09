@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.6 2006/03/09 01:36:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.7 2006/03/09 01:48:18 flameeyes Exp $
+
+  09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  emul-linux-x86-medialibs-1.0.ebuild, emul-linux-x86-medialibs-1.1.ebuild,
+  emul-linux-x86-medialibs-1.1-r1.ebuild,
+  emul-linux-x86-medialibs-1.2.ebuild:
+  Use nostrip instead of strip restriction for compatibility with older portage.
 
   09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   emul-linux-x86-medialibs-1.0.ebuild, emul-linux-x86-medialibs-1.1.ebuild,

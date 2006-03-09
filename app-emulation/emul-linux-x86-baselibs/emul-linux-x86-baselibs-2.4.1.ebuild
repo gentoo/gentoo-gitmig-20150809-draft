@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-2.4.1.ebuild,v 1.4 2006/03/09 01:26:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-2.4.1.ebuild,v 1.5 2006/03/09 01:52:35 flameeyes Exp $
 
 DESCRIPTION="Base libraries for emulation of 32bit x86 on amd64"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
@@ -17,7 +17,7 @@ S=${WORKDIR}
 RDEPEND="virtual/libc
 	app-emulation/emul-linux-x86-compat"
 
-RESTRICT="strip"
+RESTRICT="nostrip"
 
 src_install() {
 	cd ${WORKDIR}

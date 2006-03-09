@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-sdl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.17 2006/03/09 01:40:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.18 2006/03/09 01:46:18 flameeyes Exp $
+
+  09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  emul-linux-x86-sdl-2.2.ebuild, emul-linux-x86-sdl-2.3.ebuild:
+  Use nostrip instead of strip restriction for compatibility with older portage.
 
   09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   emul-linux-x86-sdl-2.2.ebuild, emul-linux-x86-sdl-2.3.ebuild:

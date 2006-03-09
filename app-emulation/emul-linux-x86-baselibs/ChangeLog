@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.47 2006/03/09 01:26:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.48 2006/03/09 01:52:35 flameeyes Exp $
+
+  09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  emul-linux-x86-baselibs-2.4.1.ebuild,
+  emul-linux-x86-baselibs-2.4.2.ebuild:
+  Use nostrip instead of strip restriction for compatibility with older portage.
 
   09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   emul-linux-x86-baselibs-2.4.1.ebuild,
