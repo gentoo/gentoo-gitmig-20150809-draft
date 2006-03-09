@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/latexmk-307a.ebuild,v 1.1 2005/11/18 18:14:55 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/latexmk-307a.ebuild,v 1.2 2006/03/09 12:41:55 ehmsen Exp $
 
 DESCRIPTION="Perl script for automatically building LaTeX documents."
 HOMEPAGE="http://www.phys.psu.edu/~collins/software/latexmk/"
@@ -17,6 +17,6 @@ RDEPEND="virtual/tetex
 src_install() {
 	cd ${WORKDIR}
 	newbin latexmk.pl latexmk
-	dodoc CHANGES INSTALL README latexmk.pdf latexmk.ps latexmk.txt
+	dodoc CHANGES README latexmk.pdf latexmk.ps latexmk.txt
 	doman latexmk.1
 }
