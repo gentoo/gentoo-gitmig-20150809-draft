@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b7bab09d63d59c31f7a3a9192aedd79e ChangeLog 2578
-RMD160 7659c64ed24d988b58297d8cf959ef05f3b07d12 ChangeLog 2578
-SHA256 800a54d50d3bb1883c1471bcc0c3aa2ea4c49b84469e3225f093ea6b21842981 ChangeLog 2578
+MD5 43b4de24868bf93e2c6ac7166d516d4e ChangeLog 2843
+RMD160 971a7fbb85732f9c73dea87713b81d3e9cf6de75 ChangeLog 2843
+SHA256 d5e56c04c2347e892e6e21b066db8759810180f251ce75562c6309a46dace9bd ChangeLog 2843
 MD5 aa81afb9cffef205c955fc1ab2a9bfd1 files/digest-pcsc-lite-1.2.0 67
 RMD160 e58ff2331fe3c9c65ce978155799c0484b667e52 files/digest-pcsc-lite-1.2.0 67
 SHA256 b64fd693c9dd3400c95953e3870e5577f190d544c65cbe3d8745bbe161f85b6b files/digest-pcsc-lite-1.2.0 67
@@ -31,22 +28,15 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 MD5 272824b62204c9a0bf9ce4fb52758f07 pcsc-lite-1.2.0.ebuild 1272
 RMD160 d6b96bdacd1ee14a56efc79af6ca6720789eb789 pcsc-lite-1.2.0.ebuild 1272
 SHA256 864f7c9e9743d30ece55d9eca0f9878f894e24ea075203988773079e72da346d pcsc-lite-1.2.0.ebuild 1272
-MD5 30a6f7ae4a3ac8ce924d8a31651086a5 pcsc-lite-1.2.9_beta10.ebuild 1296
-RMD160 2bf912295fb8de7ad05ca9d954f7d176f780a405 pcsc-lite-1.2.9_beta10.ebuild 1296
-SHA256 60a62ec30051333973933fab5e1f704c01c9163f8794b7e5b0e41fbdbc0f0bbd pcsc-lite-1.2.9_beta10.ebuild 1296
-MD5 b491a8d2750e8405ba206f7e69a99797 pcsc-lite-1.2.9_beta8.ebuild 1295
-RMD160 99acb1337fb5ba98c2f6ac9dd26e9758f55059ce pcsc-lite-1.2.9_beta8.ebuild 1295
-SHA256 9e5d7a90227d6f7ec0c1e35666cd55b8020ae0cae19cbfd23fe69e4a35fac215 pcsc-lite-1.2.9_beta8.ebuild 1295
-MD5 b22781e0bf6f65567ee849a95eecbe6b pcsc-lite-1.2.9_beta9.ebuild 1295
-RMD160 e93e7bd886979aae396e37675b0bb58731029368 pcsc-lite-1.2.9_beta9.ebuild 1295
-SHA256 6c2e557f9da746cf734cadcdb4e9531390436c69833c24f59c4df71391e348e3 pcsc-lite-1.2.9_beta9.ebuild 1295
-MD5 d2e66ea0db8fa2118367330eb8fcd685 pcsc-lite-1.3.0.ebuild 1322
-RMD160 e419395cd3e06b61073c6ca8fb1e7f96e967a549 pcsc-lite-1.3.0.ebuild 1322
-SHA256 7525377149d0759929d5f0fcc410eaca30b436d0585ff027e7d9efc00d9e2712 pcsc-lite-1.3.0.ebuild 1322
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEC2U02+ySkm8kpY0RAjk1AJ4kxEyGlUoxNPg7xqfiw683X0j3QACgtfS7
-zCPU5X9/f6fJxIJoq8vZiVs=
-=Wx1p
------END PGP SIGNATURE-----
+MD5 cdffb242056d08f00a2521d20f8795bd pcsc-lite-1.2.9_beta10.ebuild 1297
+RMD160 1dd0e8626e797e802d67ec563a431e7024ce42d8 pcsc-lite-1.2.9_beta10.ebuild 1297
+SHA256 880ee328566ade9056e963485590da2162b574cbe37eda28052e37eb298d1592 pcsc-lite-1.2.9_beta10.ebuild 1297
+MD5 baa267f1896768868c13f155be706c92 pcsc-lite-1.2.9_beta8.ebuild 1296
+RMD160 bfe6c9bd403b26e0357be9a96490184211eed33c pcsc-lite-1.2.9_beta8.ebuild 1296
+SHA256 cba4cb35476ce10c55d0fa357ffeb82e454a639c61850e59f87120fa3dfe07e9 pcsc-lite-1.2.9_beta8.ebuild 1296
+MD5 bf5ad15420b1dc51945951fd79726304 pcsc-lite-1.2.9_beta9.ebuild 1296
+RMD160 3ab74a0ee8794e9dc84a348e701e6dd8b7d07a40 pcsc-lite-1.2.9_beta9.ebuild 1296
+SHA256 4773122a39a6f5374321056c11308124ffe4a7132f28bb4081e785448712a49f pcsc-lite-1.2.9_beta9.ebuild 1296
+MD5 edd9ebcba214fc1fb1d16945eb97771f pcsc-lite-1.3.0.ebuild 1323
+RMD160 3318cd67234a19ba78f5b39555afe4f3eabed6f3 pcsc-lite-1.3.0.ebuild 1323
+SHA256 9fee39318a18013520be7a33ce3cec4f3f1708247a25482cb3b8018fa04d80da pcsc-lite-1.3.0.ebuild 1323
