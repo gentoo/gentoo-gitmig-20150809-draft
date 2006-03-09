@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.2.ebuild,v 1.2 2006/02/22 00:16:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.2.ebuild,v 1.3 2006/03/09 18:25:30 joem Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ RDEPEND="=app-office/abiword-${PV}
 		>=gnome-extra/libgda-1.2
 		>=gnome-extra/libgnomedb-1.2 )
 	math? ( >=x11-libs/gtkmathview-0.7.5 )
-	pdf? ( >=app-text/poppler-0.4 )
+	pdf? ( >=app-text/poppler-0.5.0-r1 )
 	readline? ( sys-libs/readline )
 	thesaurus? ( >=app-text/aiksaurus-1.2 )
 	wordperfect? ( >=app-text/libwpd-0.8 )
@@ -40,6 +40,12 @@ RDEPEND="=app-office/abiword-${PV}
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/poppler_abi_change.patch
+}
 
 src_compile() {
 	local myconf="--enable-all \
