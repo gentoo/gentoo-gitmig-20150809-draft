@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/pymsn-t-0.11a-r4.ebuild,v 1.1 2006/03/08 00:53:38 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/pymsn-t-0.11a-r4.ebuild,v 1.2 2006/03/09 20:06:57 kugelfang Exp $
 
 inherit eutils python
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://msn-transport.jabberstudio.org/"
 SRC_URI="http://msn-transport.jabberstudio.org/tarballs/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=">=net-im/jabber-base-0.0
 	>=dev-lang/python-2.3"

@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pymsn-t
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/ChangeLog,v 1.5 2006/03/08 00:53:38 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/ChangeLog,v 1.6 2006/03/09 20:06:57 kugelfang Exp $
+
+  09 Mar 2006; Danny van Dyk <kugelfang@gentoo.org> pymsn-t-0.11a-r4.ebuild:
+  Marked ~amd64.
 
 *pymsn-t-0.11a-r4 (08 Mar 2006)
 
