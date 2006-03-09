@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.5.4.ebuild,v 1.1 2005/11/09 01:38:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.5.4.ebuild,v 1.2 2006/03/09 00:15:43 flameeyes Exp $
 
 MY_PN=${PN}src
 DESCRIPTION="Uncompress rar files"
@@ -17,7 +17,7 @@ DEPEND="!app-arch/unrar-gpl"
 S=${WORKDIR}/unrar
 
 src_compile() {
-	emake -f makefile.unix CXXFLAGS="$CXXFLAGS" || die "emake failed"
+	emake -f makefile.unix CXXFLAGS="$CXXFLAGS" STRIP="true" || die "emake failed"
 }
 
 src_install() {
