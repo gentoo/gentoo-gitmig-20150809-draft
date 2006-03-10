@@ -1,4 +1,4 @@
-MD5 51b72708b484bd6bd89313845d78dabb ChangeLog 20424
+MD5 7ab1923ba0fa26cd7088564f1a83767a ChangeLog 20532
 MD5 217724099165841cf8d84c4449344b2b files/digest-kdeedu-3.3.2 67
 MD5 8c7a533efeec6ea8c10027674472c7dd files/digest-kdeedu-3.3.2-r1 133
 MD5 8c7a533efeec6ea8c10027674472c7dd files/digest-kdeedu-3.3.2-r2 133
@@ -24,7 +24,7 @@ MD5 0a4c5b2e6bf26b17b618e2bdcb51a5b9 kdeedu-3.4.1.ebuild 380
 MD5 e7cd9b62dca74069886026f2b18a1aa1 kdeedu-3.4.2-r1.ebuild 497
 MD5 e9ab02b63c7cc15a2e5b90d211f62ea2 kdeedu-3.4.2-r2.ebuild 550
 MD5 cb126b5f74362daf4ecc8786f8b9f0e1 kdeedu-3.4.2.ebuild 381
-MD5 aa88214c586ca6c554453f14af21651f kdeedu-3.4.3-r10.ebuild 511
+MD5 d81b4415a328e29d3bc44e424eb78462 kdeedu-3.4.3-r10.ebuild 511
 MD5 bd238288f73f0ab8a077b338d8944965 kdeedu-3.4.3.ebuild 599
 MD5 5630013c63a14cf24d5c97f2cc5d41f3 kdeedu-3.5.0.ebuild 539
 MD5 5730445816b8e25f98d2ee180d13d32d kdeedu-3.5.1.ebuild 540
