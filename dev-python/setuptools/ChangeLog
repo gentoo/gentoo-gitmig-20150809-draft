@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.6 2006/02/19 22:59:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.7 2006/03/10 02:42:12 agriffis Exp $
+
+  10 Mar 2006; Aron Griffis <agriffis@gentoo.org>
+  setuptools-0.6_alpha10.ebuild:
+  Mark 0.6_alpha10 ~ia64
 
   19 Feb 2006; Bryan Østergaard <kloeri@gentoo.org
   setuptools-0.6_alpha10.ebuild:
