@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.138 2006/01/28 14:42:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.139 2006/03/10 04:30:19 agriffis Exp $
+
+  10 Mar 2006; Aron Griffis <agriffis@gentoo.org> kdetoys-3.4.3.ebuild:
+  Mark 3.4.3 stable on ia64
 
   28 Jan 2006; Dan Armak <danarmak@gentoo.org> +kdetoys-3.5.1.ebuild:
   Version 3.5.1. Not yet released upstream, so package.masked for now.
