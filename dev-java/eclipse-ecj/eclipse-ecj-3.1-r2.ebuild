@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.1-r2.ebuild,v 1.2 2005/12/18 17:27:18 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.1-r2.ebuild,v 1.3 2006/03/10 19:48:08 corsair Exp $
 
 inherit eutils java-pkg
 
@@ -10,7 +10,7 @@ DESCRIPTION="Eclipse Compiler for Java"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://dev.gentoo.org/~karltk/projects/java/distfiles/${P}-gentoo-r2.tar.bz2"
 LICENSE="EPL-1.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 SLOT="3.1"
 
 IUSE="doc jikes"
