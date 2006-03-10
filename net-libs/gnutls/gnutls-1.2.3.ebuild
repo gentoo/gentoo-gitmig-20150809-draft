@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.3.ebuild,v 1.14 2006/01/03 12:04:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.3.ebuild,v 1.15 2006/03/10 00:49:15 vanquirius Exp $
 
 inherit eutils gnuconfig
 
@@ -79,10 +79,10 @@ pkg_postinst() {
 	ewarn
 	ewarn "What is required is a revdep-rebuild."
 	ewarn "To show you what is needed to rebuild"
-	ewarn 'revdep-rebuild --soname-regexp libgnutls.so.1[0-1] -- -p'
+	ewarn 'revdep-rebuild --library=libgnutls.so.1[0-1] -- -p'
 	ewarn ""
 	ewarn "Then do:"
-	ewarn 'revdep-rebuild --soname-regexp libgnutls.so.1[0-1]'
+	ewarn 'revdep-rebuild --library=libgnutls.so.1[0-1]'
 	einfo ""
 	einfo "Afterward just try:"
 	einfo "revdep-rebuild -- -p"
