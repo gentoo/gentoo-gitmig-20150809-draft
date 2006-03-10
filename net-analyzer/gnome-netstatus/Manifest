@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d89cbc0597d2c01bae11fe89cc80b386 ChangeLog 7174
-RMD160 2cccc73731fe3074469c0b23ad4a37292d63e42e ChangeLog 7174
-SHA256 e0b8f0fb2d5d5fc8da6b7d77ab6e2a0fbadc63c794bdfd879fe1305843c7dd62 ChangeLog 7174
+MD5 30997a67be53b19b9f7a59d3dbdec750 ChangeLog 7287
+RMD160 224cc41f75b07fd326c0055925e908068b3ef134 ChangeLog 7287
+SHA256 4fc05c3758f50ad827fff7f4ec0af697da98efd448f91cf4d61db48703c1bf6d ChangeLog 7287
 MD5 1be6bc7c3c71d0d777fbef0592e7218b files/digest-gnome-netstatus-2.10.0 75
 RMD160 9768c9d55d27b9f4238ac9b5108a2b550465f068 files/digest-gnome-netstatus-2.10.0 75
 SHA256 a022f2b402e88c9014e8460271f8afb607ff0e49823d23c20a3e12b200277fea files/digest-gnome-netstatus-2.10.0 75
@@ -13,9 +10,9 @@ SHA256 a022f2b402e88c9014e8460271f8afb607ff0e49823d23c20a3e12b200277fea files/di
 MD5 1be6bc7c3c71d0d777fbef0592e7218b files/digest-gnome-netstatus-2.10.0-r2 75
 RMD160 9768c9d55d27b9f4238ac9b5108a2b550465f068 files/digest-gnome-netstatus-2.10.0-r2 75
 SHA256 a022f2b402e88c9014e8460271f8afb607ff0e49823d23c20a3e12b200277fea files/digest-gnome-netstatus-2.10.0-r2 75
-MD5 aef863196af3a3d138148892c004c19d files/digest-gnome-netstatus-2.12.0 75
-RMD160 c26dad1a69909b2d5339f37558688ade6a2f9030 files/digest-gnome-netstatus-2.12.0 75
-SHA256 2b79cc54a1e6bf8e74cb259a31cb0381bf1fd57adb34fa145b6bdb4c68be0a13 files/digest-gnome-netstatus-2.12.0 75
+MD5 bc0806b77510a09cc40b0a034dfc761f files/digest-gnome-netstatus-2.12.0 271
+RMD160 2afd38f75698dfa361e17612fbab5f5716602e31 files/digest-gnome-netstatus-2.12.0 271
+SHA256 fe5c23446e69e6f4e440cec182e0113042692608c28bdfdfa94fa45a7e64ecd5 files/digest-gnome-netstatus-2.12.0 271
 MD5 20268c12e6447722fccaf6d5178ab2b8 files/gnome-netstatus-2.10.0-amd64.patch 410
 RMD160 ef85dcf2e22fa4fb4301f091e098a18a38dff321 files/gnome-netstatus-2.10.0-amd64.patch 410
 SHA256 0732f1a1ac6e1efd3ad34ac95e591d8421cf516c690141a90cfa041118a3311c files/gnome-netstatus-2.10.0-amd64.patch 410
@@ -31,16 +28,9 @@ SHA256 3499df62332b5782976e2ad8aa393a64ae737217f6d17fe5fcb5e5477c91d52b gnome-ne
 MD5 97f8a858994fc26019a6d6edb1511d18 gnome-netstatus-2.10.0.ebuild 699
 RMD160 5740e1478e962cc2b2f55d74a1c57b0619fa5dd9 gnome-netstatus-2.10.0.ebuild 699
 SHA256 c003927bdd3cba501dd7d6294943d65d75ffb99923d08d98d8de24725c2be306 gnome-netstatus-2.10.0.ebuild 699
-MD5 7f95215192b4b411afeca3b1e9660cbd gnome-netstatus-2.12.0.ebuild 892
-RMD160 07fcfa45240ad2e0a0571571accb3db4274440ac gnome-netstatus-2.12.0.ebuild 892
-SHA256 7b08bf5a65c253e84726e626961cd21e9b91b66020e3bfde3bed7a9d8d4a1b01 gnome-netstatus-2.12.0.ebuild 892
+MD5 20a62f364c1f8ff1894b7da95922d9cd gnome-netstatus-2.12.0.ebuild 891
+RMD160 bea549580b6bbde16226f4a8a6f73bda8ca6b266 gnome-netstatus-2.12.0.ebuild 891
+SHA256 9624d4d74da5a384cadf4154976f8b665323c658e6a5cd0546d97a872d136964 gnome-netstatus-2.12.0.ebuild 891
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFD57o4JrHF4yAQTrARAr0UAKDA9P3d3/CtZ5vobL3/fTHUcGfH/ACVEBUK
-DCJomu+RcySQ1q02NnBI3g==
-=IzJC
------END PGP SIGNATURE-----
