@@ -1,55 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bb053f18e54083f02e0b09e3eeba47a3 ChangeLog 18301
-RMD160 b6260db69aead0ae41ef3aeaf2f7afe378530a05 ChangeLog 18301
-SHA256 64e0b14fcd420ac0753548495b3aee1a17c95e3b9a85e0d16989dd0819ffe2d2 ChangeLog 18301
+MD5 530ec1bff0076280010a0df1d7f7bccf ChangeLog 18404
 MD5 5557c7fb6275f031e3770c70993baf69 files/3.2.4-64bit-display.patch 1566
-RMD160 964f2e17a1ea3bf13ef5c77c745bad048fad1d13 files/3.2.4-64bit-display.patch 1566
-SHA256 f1cf8a0af323248ce747d842ef1387ffc4c7b60a00664c722199e6bb54883d22 files/3.2.4-64bit-display.patch 1566
 MD5 7e94d86add2921b1262479b92f51da27 files/3.2.4-linux26-slab.patch 521
-RMD160 6d8a91f6df93528fd59ccc69b7d42b2821859d28 files/3.2.4-linux26-slab.patch 521
-SHA256 1d07c222617a781b3f7b294961c718e7b6df468424302145ed072e8062df412a files/3.2.4-linux26-slab.patch 521
 MD5 eb892816cc3a56418f4157eb67e18fa6 files/3.2.5-top-sort.patch 1384
-RMD160 7ab964b4dd310d5032826abe64a46b8b6e968a80 files/3.2.5-top-sort.patch 1384
-SHA256 bd52bdde8f43e9f1428d18efa13691abd83a25ea2f99d8c44fabccd7f2ba902b files/3.2.5-top-sort.patch 1384
 MD5 a26e86ab1efcb58809f0f46aa735ef07 files/digest-procps-3.2.4-r3 64
-RMD160 a70c013d85c6654c0890fa2fede7e8c1941e2f37 files/digest-procps-3.2.4-r3 64
-SHA256 5f813f8c2df3ce38136b3f80d8239a09502efbfcb54734d85339e34981113ed1 files/digest-procps-3.2.4-r3 64
 MD5 f4e5ac4b1eaf4acdbf0dc9573cdf5438 files/digest-procps-3.2.5-r1 64
-RMD160 cd7f3de7022a1950dd302a3568bf4fe996f38d16 files/digest-procps-3.2.5-r1 64
-SHA256 8ff5c03a6f4f98ebe0f369c72fefd6c7b48749f1c8d2ac3a1566605b9425034f files/digest-procps-3.2.5-r1 64
 MD5 21a0dfaadcef71823a8a53d709451d61 files/digest-procps-3.2.6 64
-RMD160 dba445dcf88d4ee03a08c7fccfecc9ca2d53dd91 files/digest-procps-3.2.6 64
-SHA256 4bb9212de9b072063bf7204a808c20e7e9483ff31478e6805fb1e7baac8e674f files/digest-procps-3.2.6 64
 MD5 f9e1b99ab8000432b594c2a22c7d6ca4 files/procps-3.2.5-proc-mount.patch 588
-RMD160 098d4584c80b24f1ea37829822dec4d66d0fa401 files/procps-3.2.5-proc-mount.patch 588
-SHA256 b8dc0e3bba6f24930761c7a78750c878bad51098266013ffde761eb44bfd626e files/procps-3.2.5-proc-mount.patch 588
 MD5 c9fd7d71e11288f4c3e9387b42a7e465 files/procps-3.2.6-mips-n32_isnt_usable_on_mips64_yet.patch 380
-RMD160 1f0796a5e1745d32ac12786e712823ae0359c986 files/procps-3.2.6-mips-n32_isnt_usable_on_mips64_yet.patch 380
-SHA256 7fa2c0891f8c96072e0cd6578228b122ca69602e89416e7a73c370895d93a267 files/procps-3.2.6-mips-n32_isnt_usable_on_mips64_yet.patch 380
 MD5 7ba1d9bd2f1c46766282250643ab9ebd files/procps-mips-define-pagesize.patch 1028
-RMD160 aa0cb4fdf76d50bae983683e0de0a06daba52361 files/procps-mips-define-pagesize.patch 1028
-SHA256 9000966beaa7ae9e8261dfc691b7b7bec08857e8404de60f30b10bbe6e702d8e files/procps-mips-define-pagesize.patch 1028
 MD5 5fdac6b265f6ff3866056fb2d97d2a0c files/procps-mips-n32_isnt_usable_on_mips64_yet.patch 431
-RMD160 baae7cdff022beb1bff0c346338fa583c025d19d files/procps-mips-n32_isnt_usable_on_mips64_yet.patch 431
-SHA256 c1fa4dbaa23cd6e3173da01fbeac9808adb5f56148bd720a2c1d03bd72682f83 files/procps-mips-n32_isnt_usable_on_mips64_yet.patch 431
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
-SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 b4c0071255f4d33e7d87742f10426d4c procps-3.2.4-r3.ebuild 2364
-RMD160 dcd31cd6d5712ef64b3cfb0b64377bb8c1c512f6 procps-3.2.4-r3.ebuild 2364
-SHA256 b3a4e1680e6dfc2aa91ba39780e6ac7514f18eac0605c33072ff4881957e9e7c procps-3.2.4-r3.ebuild 2364
 MD5 4a4b346c7f5174c2bad1dbbff1af6b80 procps-3.2.5-r1.ebuild 2277
-RMD160 aaab08b1e8a49187fd7a83d2ce8a629e8a56fff8 procps-3.2.5-r1.ebuild 2277
-SHA256 94b63365b4ca1880adfb3d4f8413bb1acec0f1b3cf5b748bff2e5e14fd538219 procps-3.2.5-r1.ebuild 2277
-MD5 e6ef537c9ecec2034764085dc2b1ab8f procps-3.2.6.ebuild 2211
-RMD160 f597af774d031b274b9f413254eb957079148bb6 procps-3.2.6.ebuild 2211
-SHA256 32d7f9569339665aac277c52893c211fe96d0545df6b9657692d90cf8d4cb9e5 procps-3.2.6.ebuild 2211
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEEbraoFw4q70f3SsRAs/CAJ0cR06f/ADGVYyPLfKRGUyHwdeUIACfaK6t
-8po89SFT2AknH46SnV2CFbI=
-=AFkF
------END PGP SIGNATURE-----
+MD5 f31efa45a30e68c8743e36a78f25a925 procps-3.2.6.ebuild 2211

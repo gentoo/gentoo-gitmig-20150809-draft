@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.12 2006/03/10 17:44:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.13 2006/03/10 19:37:04 corsair Exp $
+
+  10 Mar 2006; Markus Rothe <corsair@gentoo.org> procps-3.2.6.ebuild:
+  Stable on ppc64; bug #125546
 
   10 Mar 2006; <nixnut@gentoo.org> procps-3.2.6.ebuild:
   Stable on ppc. Bug #125546
