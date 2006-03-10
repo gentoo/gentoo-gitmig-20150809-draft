@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1776 2006/03/07 10:07:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1777 2006/03/10 07:05:11 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -684,7 +684,7 @@ media-libs/xine-lib:vidix - Support for vidix video output
 media-libs/xine-lib:video_cards_i810 - VIDEO_CARDS setting to build driver for video_cards_i810 cards
 media-libs/xine-lib:video_cards_nvidia - VIDEO_CARDS setting to build driver for nvidia video cards
 media-libs/xine-lib:video_cards_via - VIDEO_CARDS setting to build driver for video_cards_via" cards
-media-libs/xine-lib:xvmc - Support for XVideo Motion Compensation (accellerated mpeg playback)
+media-libs/xine-lib:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
 media-plugins/bmp-wma:wma123 - Installs optional commandline wma player
 media-plugins/eq-xmms:sse-filters - Enable SSE-based equalizer's implementation
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
@@ -761,8 +761,10 @@ media-tv/mythtv:backendonly - Builds only the backend component rather then the 
 media-tv/mythtv:dbox2 - Enable support for Nokia DBOX2 DVB boxes
 media-tv/mythtv:frontendonly - Only builds the Frontend component rather then the whole suite
 media-tv/mythtv:lcd - Enable LCD display support using lcdproc
-media-tv/mythtv:nvidia - Enable nVidia XvMC decoding support
-media-tv/mythtv:unichrome - Enable VIA Unichrome hardware MPEG decoding
+media-tv/mythtv:video_cards_i810 - VIDEO_CARDS setting to build driver for video_cards_i810 cards
+media-tv/mythtv:video_cards_nvidia - VIDEO_CARDS setting to build driver for nvidia video cards
+media-tv/mythtv:video_cards_via - VIDEO_CARDS setting to build driver for video_cards_via" cards
+media-tv/mythtv:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
 media-tv/tvbrowser:themes - Install extra theme packs
 media-tv/xawtv:xext - Enable use of XFree extentions (DGA,VidMode,DPMS)
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
