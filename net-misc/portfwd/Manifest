@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5d524af2c612054536aa23b6f049d3dd ChangeLog 1730
+MD5 6bb4cf5811b8338133ca3a6762a1defe ChangeLog 1830
 MD5 960ab2c321e4752e952e9878a8e5ae71 files/digest-portfwd-0.26 64
 MD5 3e26912825dccefb4a4474400d2c7eb6 files/digest-portfwd-0.26_rc6 67
 MD5 3e26912825dccefb4a4474400d2c7eb6 files/digest-portfwd-0.26_rc6-r1 67
@@ -11,11 +8,4 @@ MD5 ffc48b45008b806173e4a719e023b7c4 files/portfwd.init 887
 MD5 800884f7ac3c6ca781b99313b2f0cdb6 portfwd-0.26.ebuild 1557
 MD5 77be0277167ea42c6c758fc858529c89 portfwd-0.26_rc6-r1.ebuild 1568
 MD5 a202c2ace5e7604f357b1845dd71d441 portfwd-0.26_rc6.ebuild 1570
-MD5 b67b95ba81afe026c1f0dbb517033e79 portfwd-0.28.ebuild 1555
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrcGPCRZPokWLroQRAn/HAKDYgEm0Ktj4rMM7LVZ3d6GC6B30tQCdFSA4
-cFJBTc1GxZR66lw3m/wNruE=
-=KWUj
------END PGP SIGNATURE-----
+MD5 e6706ed8325f8eb57f5921497d6db4ea portfwd-0.28.ebuild 1555

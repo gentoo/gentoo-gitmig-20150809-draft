@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/portfwd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.13 2005/12/24 21:45:41 halcy0n Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.14 2006/03/10 05:41:58 agriffis Exp $
+
+  10 Mar 2006; Aron Griffis <agriffis@gentoo.org> portfwd-0.28.ebuild:
+  Mark 0.28 stable on ia64
 
   24 Dec 2005; Mark Loeser <halcy0n@gentoo.org> portfwd-0.28.ebuild:
   Stable on x86; bug #94096
