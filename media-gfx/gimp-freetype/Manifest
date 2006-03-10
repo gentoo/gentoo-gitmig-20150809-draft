@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0b8c3b2a5f2796f88078cfbdcde4ea0e gimp-freetype-0.5.ebuild 802
-MD5 db72cf08c6fe4302a99f2114d79eef81 gimp-freetype-0.2-r3.ebuild 898
-MD5 7b9ec7bcaecd59e4a211e4dd6ddf1c8c gimp-freetype-0.6.ebuild 703
-MD5 bc377a9f4b12c9626fc0e09d6d5e3648 ChangeLog 2904
-MD5 4b36c6fccca2978cab3373ab53fd7c3f metadata.xml 631
+MD5 9ac82b997dbd683790a5c6000d690966 ChangeLog 3010
 MD5 d231ccb326ac2e7f1e63b0b3a5288efb files/digest-gimp-freetype-0.2-r3 69
 MD5 37f8eb7c89a60bf1b7d125d972a925a9 files/digest-gimp-freetype-0.5 69
 MD5 c20cacdb70c1cc6a938fbbf561c5e427 files/digest-gimp-freetype-0.6 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDEQ9WntT9W3vfTuoRAh5OAJ41GE6vmmAasUA7wRgk/Max0E2J7QCgojmx
-GBSiu7J0kW6OZcfkVgWThe8=
-=Gv5V
------END PGP SIGNATURE-----
+MD5 db72cf08c6fe4302a99f2114d79eef81 gimp-freetype-0.2-r3.ebuild 898
+MD5 0b8c3b2a5f2796f88078cfbdcde4ea0e gimp-freetype-0.5.ebuild 802
+MD5 833d44dcd8a066cd05de36432c16a2af gimp-freetype-0.6.ebuild 712
+MD5 4b36c6fccca2978cab3373ab53fd7c3f metadata.xml 631
