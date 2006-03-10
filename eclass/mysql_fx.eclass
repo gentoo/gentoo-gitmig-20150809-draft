@@ -1,9 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.9 2006/03/10 11:41:39 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.10 2006/03/10 12:29:44 herbs Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
+
+inherit multilib
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -153,7 +155,7 @@ mysql_choose_better_version() {
 # THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
 mysql_lib_symlinks() {
 	local d dirlist maxdots soname sonameln other better
-	pushd "${ROOT}/usr/lib" &> /dev/null
+	pushd "${ROOT}/usr/$(get_libdir)" &> /dev/null
 		# dirlist must contain the less significative directory left
 		dirlist="mysql $( mysql_make_file_list mysql )"
 
@@ -179,7 +181,7 @@ mysql_lib_symlinks() {
 	popd &> /dev/null
 
 	# "include"s and "mysql_config", needed to compile other sw
-	for other in "/usr/lib/mysql" "/usr/include/mysql" "/usr/bin/mysql_config" ; do
+	for other in "/usr/$(get_libdir)/mysql" "/usr/include/mysql" "/usr/bin/mysql_config" ; do
 		pushd "${ROOT}${other%/*}" &> /dev/null
 		better=$( mysql_choose_better_version "${other##*/}" )
 		if ! [[ -d "${other##*/}" ]] ; then
