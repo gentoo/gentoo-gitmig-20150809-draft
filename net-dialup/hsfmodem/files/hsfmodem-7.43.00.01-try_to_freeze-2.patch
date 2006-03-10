@@ -1,0 +1,39 @@
+diff -urN hsfmodem-7.43.00.01full/modules/Makefile hsfmodem-7.43.00.01full-try_to_freeze-2/modules/Makefile
+--- hsfmodem-7.43.00.01full/modules/Makefile	2006-02-08 01:12:09.000000000 -0500
++++ hsfmodem-7.43.00.01full-try_to_freeze-2/modules/Makefile	2006-03-09 16:20:14.000000000 -0500
+@@ -82,6 +82,8 @@
+ FOUND_TTY_START_STOP := $(shell grep -q 'stop_tx.*tty_stop' ${REAL_KERNELSRC}/include/linux/serial_core.h 2>/dev/null && echo -DFOUND_TTY_START_STOP)
+ FOUND_CLASS_DEVICE_PARENT := $(shell grep -q 'struct[ \t]*class_device[ \t]*\*[ \t]*parent' ${REAL_KERNELSRC}/include/linux/device.h 2>/dev/null && echo -DFOUND_CLASS_DEVICE_PARENT)
+ FOUND_REFRIGERATOR := $(shell grep -q 'refrigerator' ${REAL_KERNELSRC}/include/linux/suspend.h 2>/dev/null && echo -DFOUND_REFRIGERATOR)
++FOUND_TRY_TO_FREEZE_LONG := $(shell grep -q 'try_to_freeze.*long' ${REAL_KERNELSRC}/include/linux/sched.h 2>/dev/null && echo -DFOUND_TRY_TO_FREEZE_LONG)
++FOUND_TRY_TO_FREEZE_VOID := $(shell grep -q 'try_to_freeze.*void' ${REAL_KERNELSRC}/include/linux/sched.h 2>/dev/null && echo -DFOUND_TRY_TO_FREEZE_VOID)
+ FOUND_MODULE_PARAM :=  $(shell grep -q 'module_param' ${REAL_KERNELSRC}/include/linux/moduleparam.h 2>/dev/null && echo -DFOUND_MODULE_PARAM)
+ FOUND_PM_MESSAGE_T := $(shell grep -q 'pm_message_t' ${REAL_KERNELSRC}/include/linux/pci.h 2>/dev/null && echo -DFOUND_PM_MESSAGE_T)
+ FOUND_PM_MESSAGE_STRUCT := $(shell grep -q '^typedef struct pm_message' ${REAL_KERNELSRC}/include/linux/pm.h 2>/dev/null && echo -DFOUND_PM_MESSAGE_STRUCT)
+@@ -93,7 +95,7 @@
+ FOUND_TOUCH_ATIME := $(shell grep -q 'touch_atime' ${REAL_KERNELSRC}/include/linux/fs.h 2>/dev/null && echo -DFOUND_TOUCH_ATIME)
+ FOUND_KZALLOC := $(shell grep -q 'kzalloc' ${REAL_KERNELSRC}/include/linux/slab.h 2>/dev/null && echo -DFOUND_KZALLOC)
+ 
+-CFLAGS+= $(FOUND_CLASS_SIMPLE) $(FOUND_UART_REGISTER_PORT) $(FOUND_TTY_START_STOP) $(FOUND_CLASS_DEVICE_PARENT) $(FOUND_REFRIGERATOR) $(FOUND_MODULE_PARAM) $(FOUND_PM_MESSAGE_T) $(FOUND_PM_MESSAGE_STRUCT) $(FOUND_PCI_CHOOSE_STATE) $(FOUND_LINUX_SUSPEND) $(FOUND_USB_DRIVER_OWNER) $(FOUND_PCI_REGISTER_DRIVER) $(FOUND_TTY_NEW_API) $(FOUND_TOUCH_ATIME) $(FOUND_KZALLOC)
++CFLAGS+= $(FOUND_CLASS_SIMPLE) $(FOUND_UART_REGISTER_PORT) $(FOUND_TTY_START_STOP) $(FOUND_CLASS_DEVICE_PARENT) $(FOUND_REFRIGERATOR) $(FOUND_TRY_TO_FREEZE_LONG) $(FOUND_TRY_TO_FREEZE_VOID) $(FOUND_MODULE_PARAM) $(FOUND_PM_MESSAGE_T) $(FOUND_PM_MESSAGE_STRUCT) $(FOUND_PCI_CHOOSE_STATE) $(FOUND_LINUX_SUSPEND) $(FOUND_USB_DRIVER_OWNER) $(FOUND_PCI_REGISTER_DRIVER) $(FOUND_TTY_NEW_API) $(FOUND_TOUCH_ATIME) $(FOUND_KZALLOC)
+ 
+ else
+ KO= o
+diff -urN hsfmodem-7.43.00.01full/modules/osservices.c hsfmodem-7.43.00.01full-try_to_freeze-2/modules/osservices.c
+--- hsfmodem-7.43.00.01full/modules/osservices.c	2006-01-27 07:49:32.000000000 -0500
++++ hsfmodem-7.43.00.01full-try_to_freeze-2/modules/osservices.c	2006-03-09 16:21:24.000000000 -0500
+@@ -526,6 +526,14 @@
+ #ifdef FOUND_REFRIGERATOR
+ 				if (current->flags & PF_FREEZE)
+ 					refrigerator(PF_FREEZE);
++#else
++#ifdef FOUND_TRY_TO_FREEZE_LONG
++				try_to_freeze(PF_FREEZE);
++#else
++#ifdef FOUND_TRY_TO_FREEZE_VOID
++				try_to_freeze();
++#endif
++#endif
+ #endif
+ 				schedule();
+ 			}

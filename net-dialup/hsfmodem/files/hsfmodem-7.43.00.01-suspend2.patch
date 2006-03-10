@@ -1,0 +1,27 @@
+diff -urN hsfmodem-7.43.00.01full/modules/osservices.c hsfmodem-7.43.00.01full-suspend2/modules/osservices.c
+--- hsfmodem-7.43.00.01full/modules/osservices.c	2006-01-27 07:49:32.000000000 -0500
++++ hsfmodem-7.43.00.01full-suspend2/modules/osservices.c	2006-02-24 09:40:03.000000000 -0500
+@@ -28,9 +28,22 @@
+ #include <linux/smp_lock.h>
+ #include <linux/file.h>
+ #include <linux/kmod.h>
++
+ #ifdef FOUND_LINUX_SUSPEND
++#define UINT8 UINT8_suspend
++#define BOOL BOOL_suspend
++#define UINT16 UINT16_suspend
++#define UINT32 UINT32_suspend
++#define INT32 INT32_suspend
++#undef INT64
+ #include <linux/suspend.h>
+-#endif
++#undef UINT8
++#undef BOOL
++#undef UINT16
++#undef UINT32
++#undef INT32
++#endif /* FOUND_LINUX_SUSPEND */
++
+ #if ( LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,7) )
+ #include <linux/completion.h>
+ #endif
