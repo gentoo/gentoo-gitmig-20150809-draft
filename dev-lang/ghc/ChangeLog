@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.79 2006/03/01 16:21:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.80 2006/03/10 23:14:23 dcoutts Exp $
+
+  10 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> ghc-6.4.1-r2.ebuild:
+  Change what flags we use to disable hardened gcc and how we set them. We now
+  use one set of flags rather than picking them conditionally.
+  Use an option which should fix the executable-stack problem (bug #123698).
+  Prepare for hppa arch support and misc minor tidy-ups.
 
   01 Mar 2006; Markus Rothe <corsair@gentoo.org> ghc-6.4.1-r2.ebuild:
   Added ~ppc64; bug #88362
