@@ -116,8 +116,10 @@ start() {
 		do
 			# check that the block device really exists
 			# by opening it for reading
-			local errmsg=$( : 2>/dev/null <$device )
-			if [[ -b $device ]] && [[ $? == 0 || $(errmsg) == "*: No medium found" ]]
+			local errmsg status
+			errmsg=$(: 2>&1 <$device)
+			status=$?
+			if [[ -b $device ]] && [[ ${status} == 0 || ${errmsg} == *": No medium found" ]]
 			then
 				eval args=\${`basename $device`_args}
 				do_hdparm

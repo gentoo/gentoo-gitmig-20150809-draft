@@ -19,9 +19,9 @@ SHA256 9a33de11faf795519a08acde93ae9a79e855343f515d652726daf7810c3ac6ca files/di
 MD5 35393ff70cd0030c94e6355281ed7f62 files/hdparm-conf.d.3 327
 RMD160 2b3e0f38a748b57fcc8d5624a931d4a148d707a7 files/hdparm-conf.d.3 327
 SHA256 9e10f9d8eb9971207d89e2d14709d0f19ba7061b1239f57924348015784aa89a files/hdparm-conf.d.3 327
-MD5 f42909619389f174c489f64f41c6ed13 files/hdparm-init-7 2696
-RMD160 1a1e3534f0b3809bbc559b1270086b6b2bd006ee files/hdparm-init-7 2696
-SHA256 cd342adbee2aab94654f41ac0d74cc22184a36a28b6ff5ef7bcba0e8908b70cb files/hdparm-init-7 2696
+MD5 7f5a5fa02b1f15d3c0de76bf5abff70d files/hdparm-init-7 2724
+RMD160 4b9b4c2664fe44cc07955ee18182863cc0c9034d files/hdparm-init-7 2724
+SHA256 a76a193d9bb54ead30d61cc829a023b4d32e24a92195eea318b3c11af6ce9470 files/hdparm-init-7 2724
 MD5 e08f57b51abd6ee896b7df3255dcaa4a hdparm-5.7-r1.ebuild 1092
 RMD160 9dc7057c062a101230685b501eea4a1d3738d725 hdparm-5.7-r1.ebuild 1092
 SHA256 d08256e2a0eb2f85c2d762f87877a68792cb6a2aa1c34740c1a58f500402997a hdparm-5.7-r1.ebuild 1092
@@ -38,9 +38,9 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD+6tw2+ySkm8kpY0RAl8aAJ4xVChnpNuezsrTL2cE8kJeYHTrzACfSyrN
-vjQqu2iom9jLgY1UZR+4YUw=
-=+AMd
+iD8DBQFEEM/i2+ySkm8kpY0RAsADAJ9B77hb9ukaUEWTnuMGLhKnMBg1qQCeLjcc
+1/EvuI4jvd31jfm/fhAmxIs=
+=dwPS
 -----END PGP SIGNATURE-----
