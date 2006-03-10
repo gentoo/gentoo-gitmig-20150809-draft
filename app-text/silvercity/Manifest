@@ -1,19 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0cb5a626c8e8722dd46cffe6e2bd3d96 ChangeLog 1926
+MD5 2e93c1e5d29c82b8bbe1ea6b86b8ddb6 ChangeLog 2031
+RMD160 4a64e6c02547dbde86b34a990ad137d12ebe650a ChangeLog 2031
+SHA256 540a1ebc9df71f4d48841382522ca1d70bde703d232366f96e7e5bd54ebccf15 ChangeLog 2031
 MD5 473f4dc8a23b6cadb4151a191cbc0768 files/0.9.6-api-fix.patch 1837
+RMD160 ded235e305d89a2929e65e627f6cabaae729f73e files/0.9.6-api-fix.patch 1837
+SHA256 0aaa82583b0cdf091ba6a161b782926b526bac30b5ecf132f7649f6b6c6c2690 files/0.9.6-api-fix.patch 1837
 MD5 712defea7eee794d4e5337ce64fe9452 files/digest-silvercity-0.9.5-r1 68
+RMD160 92814c2f5d2d97da685d5e2c618c18e11d510221 files/digest-silvercity-0.9.5-r1 68
+SHA256 fb346f3de37064c7db28b4078fe6935cd745d32ef526517f4a5ac91114241350 files/digest-silvercity-0.9.5-r1 68
 MD5 e858e8c199ec71a4fdce649cbcf9cf89 files/digest-silvercity-0.9.6 68
+RMD160 b0db2dc631e9006a6fcb38098f4d59f5f5afa056 files/digest-silvercity-0.9.6 68
+SHA256 a36e09c02d471e4f980be195d3f85ac7d53e5f08b2caf63213cf8aee0f66d1da files/digest-silvercity-0.9.6 68
 MD5 e858e8c199ec71a4fdce649cbcf9cf89 files/digest-silvercity-0.9.6-r1 68
+RMD160 b0db2dc631e9006a6fcb38098f4d59f5f5afa056 files/digest-silvercity-0.9.6-r1 68
+SHA256 a36e09c02d471e4f980be195d3f85ac7d53e5f08b2caf63213cf8aee0f66d1da files/digest-silvercity-0.9.6-r1 68
 MD5 fc3b5dec4ccef02547c54bf840024aa6 metadata.xml 220
+RMD160 dcc7b97d4b6eb6a017014b427fa9fd9c2ce04583 metadata.xml 220
+SHA256 09bece3580791397bbf0b4d68ff9ac4abbc37150cf11fe7848f924119ca76b84 metadata.xml 220
 MD5 5ba92c074ce75d51e48c3c7bde0b0456 silvercity-0.9.5-r1.ebuild 889
-MD5 def29abfd8c30092ce1ef073fe7cd43b silvercity-0.9.6-r1.ebuild 1056
+RMD160 1e93243e8e17a328c6bc8028fdaa8b05a8349864 silvercity-0.9.5-r1.ebuild 889
+SHA256 4f143664b6191404559fc84e97a34a00d60cc1a6dd1d800b0efa55b25bd3acf5 silvercity-0.9.5-r1.ebuild 889
+MD5 7c6664ae46db0ff0c2b859e2afd002d6 silvercity-0.9.6-r1.ebuild 1064
+RMD160 701918bce3c371011babf2828b83c770f6f2f577 silvercity-0.9.6-r1.ebuild 1064
+SHA256 8c797ae3003df36ee02db62499a3b7ac7c0c69662424442d091c041659a8ec21 silvercity-0.9.6-r1.ebuild 1064
 MD5 af3a0fdaea75f809ac1b7262d8f4fe84 silvercity-0.9.6.ebuild 956
+RMD160 439a119419860ce8d7ef67bcd9f36bdd61669ae2 silvercity-0.9.6.ebuild 956
+SHA256 6b7fdd29a766fc94a5f2874f065545cdc678da9e2c9f9735dc96a308cbfe4b99 silvercity-0.9.6.ebuild 956
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD+PgwugEuf3OQ0akRAqNfAJ9O13IaF7vqBtWFWpBoF3smZcfg4QCfeeBY
-TbK1AY9ol6ZT/YGOsQ73hOw=
-=HJii
+iD8DBQFEEOdVJrHF4yAQTrARAnINAJ9mNtpmTC705XxtnCfFQNhw9+oXKACgtBLZ
+68KRJs9OEANkhsedHNTJhoE=
+=DIpw
 -----END PGP SIGNATURE-----
