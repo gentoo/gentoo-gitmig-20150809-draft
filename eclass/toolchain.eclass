@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.249 2006/03/07 23:06:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.250 2006/03/10 00:46:18 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -482,17 +482,24 @@ libc_has_ssp() {
 
 	local my_libc=${ROOT}/${libc_prefix}/${libc_file}
 
-	# Check for the libc to have the __guard symbols
+	# Check for gcc-4.x style ssp support
 	if  [[ -n $(readelf -s "${my_libc}" 2>/dev/null | \
-	            grep 'OBJECT.*GLOBAL.*__guard') ]] && \
-	    [[ -n $(readelf -s "${my_libc}" 2>/dev/null | \
-	            grep 'FUNC.*GLOBAL.*__stack_smash_handler') ]]
+	            grep 'FUNC.*GLOBAL.*__stack_chk_fail') ]]
 	then
 		return 0
-	elif is_crosscompile ; then
-		die "'${my_libc}' was detected w/out ssp, that sucks (a lot)"
 	else
-		return 1
+		# Check for gcc-3.x style ssp support
+		if  [[ -n $(readelf -s "${my_libc}" 2>/dev/null | \
+		            grep 'OBJECT.*GLOBAL.*__guard') ]] && \
+		    [[ -n $(readelf -s "${my_libc}" 2>/dev/null | \
+		            grep 'FUNC.*GLOBAL.*__stack_smash_handler') ]]
+		then
+			return 0
+		elif is_crosscompile ; then
+			die "'${my_libc}' was detected w/out ssp, that sucks (a lot)"
+		else
+			return 1
+		fi
 	fi
 }
 
