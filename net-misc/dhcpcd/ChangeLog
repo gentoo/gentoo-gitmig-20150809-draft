@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.76 2006/02/27 20:34:50 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.77 2006/03/10 18:13:55 uberlord Exp $
+
+*dhcpcd-2.0.3 (10 Mar 2006)
+
+  10 Mar 2006; Roy Marples <uberlord@gentoo.org> +dhcpcd-2.0.3.ebuild:
+  New release, fixes #124543 and #124675.
 
   27 Feb 2006; Rene Nussbaumer <killerfox@gentoo.org> dhcpcd-2.0.2.ebuild:
   Stable on hppa. See bug #124239.
