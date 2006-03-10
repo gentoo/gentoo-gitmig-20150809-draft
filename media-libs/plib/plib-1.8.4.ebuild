@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.8.4.ebuild,v 1.9 2006/01/25 05:26:24 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.8.4.ebuild,v 1.10 2006/03/10 21:46:58 halcy0n Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="multimedia library used by many games"
 HOMEPAGE="http://plib.sourceforge.net/"
@@ -24,6 +24,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+
 	# Since plib only provides static libraries, force
 	# building as PIC or plib is useless to amd64/etc...
 	append-flags -fPIC

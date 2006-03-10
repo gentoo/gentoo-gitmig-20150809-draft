@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/plib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.26 2006/01/25 05:26:24 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.27 2006/03/10 21:46:58 halcy0n Exp $
+
+  10 Mar 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/plib-1.8.4-gcc41.patch, plib-1.8.4.ebuild:
+  Patch to fix compilation with gcc-4.1 by Karol Szumski <mareviq AT interia
+  DOT pl>; bug #121349
 
   25 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org> plib-1.6.0.ebuild,
   plib-1.8.3.ebuild, plib-1.8.4.ebuild:
