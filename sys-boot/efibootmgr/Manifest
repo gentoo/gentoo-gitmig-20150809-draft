@@ -1,7 +1,37 @@
-MD5 5d822bd4d62bfb1071cb9a6ab38b247e ChangeLog 1136
-MD5 78fc29bf052a5244c63204ddcdd7a1ac metadata.xml 157
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9463ea057a6dc0ade5c4afac5656c176 ChangeLog 1284
+RMD160 47b66b86d1a9d83e5f03e782cbed1ff7b90e8572 ChangeLog 1284
+SHA256 86b53bd6027a9a470945f9a1179fca1072b1647ccd658e31ae9c81bb4cbef246 ChangeLog 1284
 MD5 b9b5fcf20acb023f6ac6aa6543ad3f78 efibootmgr-0.4.2.ebuild 1315
+RMD160 09d95f630a499df10e899eec0eb96dccb6eb61a7 efibootmgr-0.4.2.ebuild 1315
+SHA256 2909ca36ba44a40b26e6790f3fb16aa39374a47fdcb95b62cea80cd7edd7e6de efibootmgr-0.4.2.ebuild 1315
 MD5 d9a9f83ceed1153f9a21c3122482ea9e efibootmgr-0.5.0.ebuild 789
-MD5 52674d9178b4c50989bfc0724bdd879d files/efibootmgr-0.4.1-makefile.patch 548
-MD5 8a773da209c77878c6b3ca8da87d54d2 files/digest-efibootmgr-0.5.0 67
+RMD160 bcbe6529344c5632124de7de48dfbacc4d33a0bd efibootmgr-0.5.0.ebuild 789
+SHA256 d3dc5809f7bb49df0ecd90027633f606d7c78caae19465f12327b3208ad771c1 efibootmgr-0.5.0.ebuild 789
+MD5 0830a5fcb082a4ebb45ee41c0b7fff7f efibootmgr-0.5.3.ebuild 697
+RMD160 31aad8aabb1af757fbad33fb75c9d869f8128d75 efibootmgr-0.5.3.ebuild 697
+SHA256 3e764cd8a349802e706a3fc4f087a718226fa621e230f8de1adb187865957fea efibootmgr-0.5.3.ebuild 697
 MD5 8234d5c715dd59b7b135a7372b626de5 files/digest-efibootmgr-0.4.2 67
+RMD160 375c49a04a0a2fd656edc29168d930de0f7e0225 files/digest-efibootmgr-0.4.2 67
+SHA256 2b29104001720f625e403f751a175008e5250f230a56608ed42ad150b7fc0afc files/digest-efibootmgr-0.4.2 67
+MD5 8a773da209c77878c6b3ca8da87d54d2 files/digest-efibootmgr-0.5.0 67
+RMD160 0f5485290310d357fcdbed108f9732934cdebe3d files/digest-efibootmgr-0.5.0 67
+SHA256 ae7e05db1df4b113dc8a289224e5a371989a9532ca7cba134855e582cc5e88e1 files/digest-efibootmgr-0.5.0 67
+MD5 32b02ae9f8259a51e48b5202bf78eced files/digest-efibootmgr-0.5.3 247
+RMD160 bb9a699246e49d00075308b6731a0229b4f20dd6 files/digest-efibootmgr-0.5.3 247
+SHA256 84a09c82bc388b9c9a98044b059f5ed26d8ea1c1bce2e5e5625b478514c83995 files/digest-efibootmgr-0.5.3 247
+MD5 52674d9178b4c50989bfc0724bdd879d files/efibootmgr-0.4.1-makefile.patch 548
+RMD160 255e59f18579ec6c13691813d2ffff96798b2e29 files/efibootmgr-0.4.1-makefile.patch 548
+SHA256 6c85b2f001ef8c7d4c5904722b505a6375b08a668f1cfd7919b5cd42f522defc files/efibootmgr-0.4.1-makefile.patch 548
+MD5 78fc29bf052a5244c63204ddcdd7a1ac metadata.xml 157
+RMD160 d78bc90d4c0fdb88250c9822e913c6f0159b2e8b metadata.xml 157
+SHA256 7e261fbe78f2088ab2a27fe3bd23a4224dde9a11031edcb4b7bb95dd3ba1fe4a metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFEEbixJrHF4yAQTrARAjlbAJ9oH4HLoIjLOx7KaE8VGFFhs3VaigCfRLiM
+yRcbafNaElY3dHv8HG7/W+4=
+=KevO
+-----END PGP SIGNATURE-----
