@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r2.ebuild,v 1.9 2005/04/27 00:12:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r2.ebuild,v 1.10 2006/03/10 23:39:53 joshuabaergen Exp $
 
 inherit libtool flag-o-matic
 
@@ -13,8 +13,17 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 ppc-macos sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	virtual/x11"
+RDEPEND="virtual/libc
+	|| ( ( x11-libs/libXp
+			x11-libs/libXt )
+		virtual/x11 )"
+
+DEPEND="${RDEPEND}
+	|| ( ( x11-libs/libXaw
+			x11-libs/libXft
+			x11-proto/printproto
+			x11-proto/xextproto )
+		virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}

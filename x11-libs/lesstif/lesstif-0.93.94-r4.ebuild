@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.94-r4.ebuild,v 1.8 2006/02/16 19:51:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.94-r4.ebuild,v 1.9 2006/03/10 23:39:53 joshuabaergen Exp $
 
 inherit libtool flag-o-matic multilib
 
@@ -15,11 +15,18 @@ KEYWORDS="alpha ~amd64 hppa ~ia64 ppc ppc-macos ppc64 sparc x86"
 IUSE="static"
 
 RDEPEND="virtual/libc
-	virtual/x11
+	|| ( ( x11-libs/libXp
+			x11-libs/libXt )
+		virtual/x11 )
 	>=x11-libs/motif-config-0.9"
 
 DEPEND="dev-lang/perl
-	${RDEPEND}"
+	${RDEPEND}
+	|| ( ( x11-libs/libXaw
+			x11-libs/libXft
+			x11-proto/printproto
+			x11-proto/xextproto )
+		virtual/x11 )"
 
 PROVIDE="virtual/motif"
 
