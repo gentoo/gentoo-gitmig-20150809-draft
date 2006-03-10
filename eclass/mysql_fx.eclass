@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.8 2006/02/01 18:10:10 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.9 2006/03/10 11:41:39 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -114,7 +114,7 @@ mysql_version_is_at_least() {
 # THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
 mysql_make_file_list() {
 	local items= left=0
-	items=$( ls -d ${1}-[[:digit:]][[:digit:]][[:digit:]] )
+	items=$( ls -d ${1}-[[:digit:]][[:digit:]][[:digit:]] 2>/dev/null )
 
 	while [[ ${left} -lt ${#items[@]} ]] ; do
 		local lowest_idx=${left}

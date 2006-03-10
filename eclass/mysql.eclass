@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.23 2006/03/09 12:37:01 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.24 2006/03/10 11:41:39 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -520,6 +520,10 @@ mysql_src_install() {
 			echo "${MY_SHAREDSTATEDIR#"/"}" >> "${filelist}"
 		popd &>/dev/null
 	fi
+	
+	# It's safer portage wis doing this in instal, but we can't
+	# if it's a slotted install
+	[[ ${SLOT} -eq 0 ]] && ROOT="${D}" mysql_lib_symlinks	
 }
 
 mysql_pkg_preinst() {
@@ -532,7 +536,9 @@ mysql_pkg_preinst() {
 mysql_pkg_postinst() {
 
 	mysql_init_vars
-	mysql_lib_symlinks
+	# slotted, manage lib symlinks on the real file-system
+	# to cope with other version installed
+	[[ ${SLOT} -ne 0 ]] && mysql_lib_symlinks
 
 	# mind at FEATURES=collision-protect before to remove this
 	[ -d "${ROOT}/var/log/mysql" ] \
