@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/steghide-0.5.1.ebuild,v 1.9 2005/11/14 21:51:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/steghide-0.5.1.ebuild,v 1.10 2006/03/10 07:22:56 halcy0n Exp $
 
 inherit eutils
 
@@ -19,15 +19,16 @@ DEPEND=">=app-crypt/mhash-0.8.18-r1
 
 src_unpack(){
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-gcc34.patch
+	epatch "${FILESDIR}"/${P}-gcc34.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 }
 
 src_compile() {
 	econf || die "configure failed"
-	epatch ${FILESDIR}/fix-libtool-invocation.patch
+	epatch "${FILESDIR}"/fix-libtool-invocation.patch
 	emake || die "make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "installation failed"
+	make DESTDIR="${D}" install || die "installation failed"
 }
