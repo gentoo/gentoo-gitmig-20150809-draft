@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netio
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/ChangeLog,v 1.12 2006/03/02 18:04:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/ChangeLog,v 1.13 2006/03/10 00:00:28 hansmi Exp $
+
+  10 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> netio-1.26.ebuild:
+  Stable on ppc.
 
   02 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> netio-1.26.ebuild:
   Stable on sparc
