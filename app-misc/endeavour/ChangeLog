@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/endeavour
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.19 2005/01/01 15:00:36 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.20 2006/03/10 05:19:56 halcy0n Exp $
+
+  10 Mar 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/endeavour-2.4.6-gcc41.patch, endeavour-2.4.6.ebuild:
+  Patch to fix compilation with gcc-4.1, thanks to Patrizio Bassi <hetfield666
+  AT gmail DOT com> for reporting the problem; bug #125010
 
 *endeavour-2.4.6 (23 Dec 2004)
 

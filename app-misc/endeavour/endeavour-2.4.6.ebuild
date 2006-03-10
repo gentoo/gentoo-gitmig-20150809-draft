@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.4.6.ebuild,v 1.4 2005/04/08 04:08:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.4.6.ebuild,v 1.5 2006/03/10 05:19:56 halcy0n Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack ${M}.tgz
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc33.patch
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 }
 
 src_compile() {
@@ -40,9 +41,9 @@ src_install() {
 	doman endeavour2.1
 
 	dodir /usr/share/endeavour2
-	cp -R data/* ${D}/usr/share/endeavour2 || die
+	cp -R data/* "${D}"/usr/share/endeavour2 || die
 	dodir /usr/share/endeavour2/icons/
-	cp -R images/* ${D}/usr/share/endeavour2/icons/
+	cp -R images/* "${D}"/usr/share/endeavour2/icons/
 
 	cd images
 	insinto /usr/share/icons
@@ -50,7 +51,7 @@ src_install() {
 		icon_trash_empty_48x48.xpm
 
 	# install mimetypes
-	cd ${WORKDIR}/${M}
+	cd "${WORKDIR}"/${M}
 	mv README README.mimetypes
 	dodoc README.mimetypes
 	insinto /usr/share/endeavour2/

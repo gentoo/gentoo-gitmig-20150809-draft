@@ -1,0 +1,16 @@
+diff -ur endeavour-2.4.6-orig/endeavour2/disk.cpp endeavour-2.4.6/endeavour2/disk.cpp
+--- endeavour-2.4.6-orig/endeavour2/disk.cpp	2006-03-10 00:08:03.000000000 -0500
++++ endeavour-2.4.6/endeavour2/disk.cpp	2006-03-10 00:12:37.000000000 -0500
+@@ -130,12 +130,7 @@
+ 	if(path == NULL)
+ 	    return(0);
+ 
+-	// Dan S: typecast is due to const.
+-#if defined(__cplusplus) || defined(c_plusplus)
+-	while(ISBLANK(reinterpret_cast<char>(*path)))
+-#else
+ 	while(ISBLANK(*path))
+-#endif
+ 	    path++;
+ 
+ 	return(*path == DIR_DELIMINATOR);

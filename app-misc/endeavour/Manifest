@@ -1,7 +1,34 @@
-MD5 d13bd02ebdf6a534043d85a2bb9573b0 ChangeLog 3066
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c6c960d9ddc32741fd22f3f84d6c04c3 ChangeLog 3312
+RMD160 6e3dd38a585c5847851b688db91016107548e59c ChangeLog 3312
+SHA256 c815819912fb6e98c6063d72c9cbfec88cd99d52d099d20fc2ad590ba400dc30 ChangeLog 3312
 MD5 40e76c87eefb26dab5341ea9dd3eb913 endeavour-2.3.6.ebuild 1320
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 8f680f37b3440e871fa464b3a3aae648 endeavour-2.4.6.ebuild 1401
+RMD160 75681b3374616de43d6ca069f5a940d5daacadb1 endeavour-2.3.6.ebuild 1320
+SHA256 103b2428126896d2d490f60114425c750a39d6a4f862f8f0b24f540a36d3a92a endeavour-2.3.6.ebuild 1320
+MD5 96b1f27c546d02f992485e3fa60cc5b6 endeavour-2.4.6.ebuild 1447
+RMD160 ff97b8cd11bad34169b17d0d31f8c12da461999b endeavour-2.4.6.ebuild 1447
+SHA256 c6cc60e9de0a5dea88645547312ac0d682d8b76325bb2f5b4e13d7697c43a412 endeavour-2.4.6.ebuild 1447
 MD5 8bad28a83ee1a70fcbc5bf58e1aefc18 files/digest-endeavour-2.3.6 136
-MD5 a2f4fc1ce0559ff8c155d69ae4e5b8f7 files/digest-endeavour-2.4.6 136
+RMD160 b67dc0f38790543b3621e139447fd1fd89b29fbd files/digest-endeavour-2.3.6 136
+SHA256 842f5053fa63b857b8ad5c623c8dfc996e3f170f230296bab43f9b2f76d2b1df files/digest-endeavour-2.3.6 136
+MD5 ba54711f825043d46ed1178aae122d04 files/digest-endeavour-2.4.6 500
+RMD160 4c54d4223a7ee9a77f9ddcd38c2e78288c128633 files/digest-endeavour-2.4.6 500
+SHA256 4bb9e2fa39b02402d41b57cec78f3e2fea0f69972e5b54fba0bbfe09f430b766 files/digest-endeavour-2.4.6 500
 MD5 78d7303ccc10e5d6c76b68047c56e03e files/endeavour-2.4.6-gcc33.patch 897
+RMD160 0d45998f14af8e14648fbcd39b59e46ff076b393 files/endeavour-2.4.6-gcc33.patch 897
+SHA256 870648f231ad16c34c5f6acae7381721986f8c9ba4baa51a2dac9a3fe7a0ac51 files/endeavour-2.4.6-gcc33.patch 897
+MD5 ac3378a093527e3f987a690b9cb412c2 files/endeavour-2.4.6-gcc41.patch 528
+RMD160 e582861d24c9d0d17ae27b5983dbc4998e2c9574 files/endeavour-2.4.6-gcc41.patch 528
+SHA256 24268f7da303337be51732baca1aff22f3aa89061de8e8353f68951bac87214a files/endeavour-2.4.6-gcc41.patch 528
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+RMD160 5b59fc85d3bafae0872cf691e5f032bac39ba539 metadata.xml 310
+SHA256 39e1273dd60bd3ceb460e9366a648c8fa21db1c292df4573e69f41cf6c84f6fc metadata.xml 310
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEEQyKCRZPokWLroQRAntAAKDMyXKnkAQ+jcKEVnIIpNgf/kGATACfQHHY
+TYHaO5prW1ywFD/0teKXFO4=
+=14Tw
+-----END PGP SIGNATURE-----
