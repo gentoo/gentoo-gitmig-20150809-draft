@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.226 2006/02/20 11:56:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.227 2006/03/10 18:05:39 carlo Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1512,7 +1512,7 @@ set_arch_to_portage() {
 # preserve_old_lib /path/to/libblah.so.0
 # preserve_old_lib_notify /path/to/libblah.so.0
 #
-# These functions are useful when a lib in your package changes --soname.  Such
+# These functions are useful when a lib in your package changes --library.  Such
 # an example might be from libogg.so.0 to libogg.so.1.  Removing libogg.so.0
 # would break packages that link against it.  Most people get around this
 # by using the portage SLOT mechanism, but that is not always a relevant
@@ -1553,7 +1553,7 @@ preserve_old_lib_notify() {
 		ewarn "In order to avoid breaking packages that link against it, this older version"
 		ewarn "is not being removed.  In order to make full use of this newer version,"
 		ewarn "you will need to execute the following command:"
-		ewarn "  revdep-rebuild --soname ${SONAME}"
+		ewarn "  revdep-rebuild --library ${SONAME}"
 		ewarn
 		ewarn "After doing that, you can safely remove ${LIB}"
 		ewarn "Note: 'emerge gentoolkit' to get revdep-rebuild"
