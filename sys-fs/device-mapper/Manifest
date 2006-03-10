@@ -1,24 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9e18e7c9adf61b825eabbc563c4f5aca ChangeLog 7773
+MD5 81b2c58364d21a7b8a5524ee3cb4eb69 ChangeLog 7875
+RMD160 c4ac020ced04c580f0e61bd52c038317381b8273 ChangeLog 7875
+SHA256 08f051797f794e84aca90f74a48619daed00e5c462f56731e3697ef79b21b3f7 ChangeLog 7875
 MD5 59f35fefa1dd03f7ee86366801b9f7e3 device-mapper-1.01.03.ebuild 1182
+RMD160 c8b8bf2710b6cc0ec41065a730f7b08d117efa8c device-mapper-1.01.03.ebuild 1182
+SHA256 fdd0e5c9215ce055973890df6f1e759d2604758c92d3d3277b530858e9d60c56 device-mapper-1.01.03.ebuild 1182
 MD5 2f5e48e73ac001ad15923ac4d7c26e99 device-mapper-1.01.04.ebuild 1062
+RMD160 514b61ee592be93173c544b4b6ceb496dac9c697 device-mapper-1.01.04.ebuild 1062
+SHA256 96aa0717ef34b0970c47f945230a2883c57ec28db1203171f61cf2d8650e282f device-mapper-1.01.04.ebuild 1062
 MD5 526bac3c394586578064fc76cfef9197 device-mapper-1.01.05.ebuild 1058
-MD5 5b5c093eb7a82ceef135f0b468be3706 device-mapper-1.02.02.ebuild 1253
+RMD160 6120e744a15f525284130c3ded8805f02a9a6a54 device-mapper-1.01.05.ebuild 1058
+SHA256 ae6cd97b088a02b38c466633b70057e9df0d3fc911737f03fd02b8d1048d951a device-mapper-1.01.05.ebuild 1058
+MD5 a78c6f74320b93fa2feb4cee3fb2447a device-mapper-1.02.02.ebuild 1250
+RMD160 08e05081e663a550845475f8b18df64f1101bd44 device-mapper-1.02.02.ebuild 1250
+SHA256 89d69cb4b6159db51838f4b6f7cd9849a862fd6cc0dbebd44fa378bcf11fd8b2 device-mapper-1.02.02.ebuild 1250
 MD5 1f955d475c7ff12e846e6a2fd9fe3707 device-mapper-1.02.03.ebuild 1260
+RMD160 3ccc2aee6cb423f26ebbcce03a8a4ddb78a13858 device-mapper-1.02.03.ebuild 1260
+SHA256 7a89ecc04ecd09b8c27f977e41e12f448246410d5485f6711d41ee01212ebbc2 device-mapper-1.02.03.ebuild 1260
 MD5 598551bf56dbc299bb5f4e415af15a47 files/digest-device-mapper-1.01.03 70
+RMD160 2352b0311c2b5118fdf37a3aa686fa34bbcbe7dd files/digest-device-mapper-1.01.03 70
+SHA256 19c713ce86e95ce7789b5e41113d202d55b08fb89129ffa77630c6f66aa2421c files/digest-device-mapper-1.01.03 70
 MD5 3fc77eb6eb999eed47e505401962ea5e files/digest-device-mapper-1.01.04 70
+RMD160 38c6e16f3ac841109c269294911054fead1dc5d1 files/digest-device-mapper-1.01.04 70
+SHA256 d91bba2b8dfe3e4f38567bf9248da3dc6eb6e53c1e429d3fda4bca5612a2c8b6 files/digest-device-mapper-1.01.04 70
 MD5 fb4feaf7d87de0dd9cadf12c126a4ac5 files/digest-device-mapper-1.01.05 70
+RMD160 b405dfc5fc8ff8d61d82ac0e86e477365e32d0b0 files/digest-device-mapper-1.01.05 70
+SHA256 bc50f23912c3d843b8b8437857ecd4972594075685fb9532010263fc2dfe7248 files/digest-device-mapper-1.01.05 70
 MD5 3604e6aa0f6d59b6fe8f6dfaefcee5ca files/digest-device-mapper-1.02.02 70
+RMD160 4274c488efd08ceb586f00f9abd68e1d6bc5f35e files/digest-device-mapper-1.02.02 70
+SHA256 e067c44db6eeb4edde91ee38714f4ef3f3add1107c8c1d8d42ac2f96690188cd files/digest-device-mapper-1.02.02 70
 MD5 aad294e72c568caa8b17b7d7d9546512 files/digest-device-mapper-1.02.03 256
+RMD160 73c6ba56e73bbdd14f7f4fb546083b1fd563b42b files/digest-device-mapper-1.02.03 256
+SHA256 e075137af30d0f1c70bb1e5cb192966cf5640bac1a760c17925ab05b23ca2304 files/digest-device-mapper-1.02.03 256
 MD5 ab82e97df1e8ce801b65daa33c8cbfb0 files/dm-start.sh 1935
+RMD160 958d82be017334926cb2b50444d03c70102e7431 files/dm-start.sh 1935
+SHA256 8517fe91386350b236d6fc6fa1c69f4f5076a8a6c251a0d7c34fe16d08180dfa files/dm-start.sh 1935
 MD5 aaf96e8a4fd3711078f75fe3fac2072b files/dmtab 426
+RMD160 59b4a51881ec14c393f1a043d39732246854173e files/dmtab 426
+SHA256 a7d5976c780b23193ec78146e4ed12e0cd0deca853ee0198baa4eeaf2cdc53f2 files/dmtab 426
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEDEkkKRy60XGEcJIRAsXQAJ9QQiKlFzUnzDsHzFkKZXEF1omdyACeMFOj
-s7tJzqkE9aVITPiY6FV9YaE=
-=r1Le
------END PGP SIGNATURE-----
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
