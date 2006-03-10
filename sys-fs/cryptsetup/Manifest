@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eb6b7186a703c6bf83ef5b60185b9c0b ChangeLog 3939
-RMD160 c774327a9b099a158253da25d78b5fc73881dddf ChangeLog 3939
-SHA256 d821d153a99f7110ab9cd834c3cf1abc4e3bf760d20a15f0ecb1555ae8341753 ChangeLog 3939
+MD5 71d1a76f47dfe8530d539e607380ec7b ChangeLog 4058
+RMD160 186566a8eeae61591e0b97b91ece7da6d7e8a846 ChangeLog 4058
+SHA256 c9fae0ae676bbd6258617cfbfdfe7825031f9ae785b114fcdbd4c494b3ea3c02 ChangeLog 4058
 MD5 137aad0c10ef7409026e8a4a5b94b82a cryptsetup-0.1-r2.ebuild 1756
 RMD160 69dbee2c3fa3174fd321171b5ba98024a867c1cc cryptsetup-0.1-r2.ebuild 1756
 SHA256 fb5c1c662eef230ffc73de545ece0a92221da9d29fa5f76fc04d1328a062b1b7 cryptsetup-0.1-r2.ebuild 1756
-MD5 99d986b3d24975ab381a59ea9dcb48bd cryptsetup-0.1-r3.ebuild 1852
-RMD160 7818caf8e035e737b42038c49c6d2374e938b13f cryptsetup-0.1-r3.ebuild 1852
-SHA256 4f8d011cb586edfe4ebad805337f9c4537a253210193460417cb9cbde291471f cryptsetup-0.1-r3.ebuild 1852
+MD5 0fcf813211bb2df32e0f6e9d6d26ed26 cryptsetup-0.1-r3.ebuild 1851
+RMD160 6464b11800f83746aaddb18fee740a536aef41d9 cryptsetup-0.1-r3.ebuild 1851
+SHA256 bfeed137fae5b55e4efd41a93cc1bd1b86bff6c783304a7ca917e435759f0afa cryptsetup-0.1-r3.ebuild 1851
 MD5 327d83538ed5305bdc3568cd353410bb files/cryptfs.confd 1337
 RMD160 f98acce860d95d69e8e95d9bab32ba5bb5bef421 files/cryptfs.confd 1337
 SHA256 8c8e815297eb20140ae7d4d555d3bfdd373ad368adf179841516430da370505c files/cryptfs.confd 1337
@@ -32,9 +32,9 @@ MD5 cd57823a7232b359b6a8674cde9fadde metadata.xml 290
 RMD160 ae946fba0cede1d9ed84ab44513289d771848779 metadata.xml 290
 SHA256 f91bc6f8ed02a4423cd94cf59ab800e44b6bbdd05407e1ef54601b6dd46f6476 metadata.xml 290
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFEDfQoV3J2n04EauwRAhw4AKCxUNXBcV4UI8jj+s0C8OvJvW6avACglvfD
-q38Bu6BgiU3AGKETjk1xqHA=
-=iyhS
+iD8DBQFEEgEQJrHF4yAQTrARAvWIAKCS7cWCSQyg143p4+/SS3K+neikJQCgnIvP
+LPOR+dliduWRnu3mitu1MBA=
+=tZeK
 -----END PGP SIGNATURE-----
