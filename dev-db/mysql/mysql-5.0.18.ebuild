@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.18.ebuild,v 1.6 2006/03/10 18:39:57 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.18.ebuild,v 1.7 2006/03/10 19:53:03 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -677,7 +677,7 @@ pkg_postinst() {
 	#			then
 	#				# gah this is not totally correct
 	#				einfo "found previous library, please run"
-	#				einfo "revdep-rebuild --soname=${mylibtmpver}"
+	#				einfo "revdep-rebuild --library=${mylibtmpver}"
 	#			fi
 	#			rm -f "../${mylibtmpver}"
 	#		fi

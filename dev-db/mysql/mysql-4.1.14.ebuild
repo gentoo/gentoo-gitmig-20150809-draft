@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.32 2006/02/18 11:35:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.33 2006/03/10 19:53:03 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -61,7 +61,7 @@ mysql_upgrade_warning() {
 	ewarn "must recompile the other packages on your system that link with"
 	ewarn "libmysqlclient after the upgrade completes.  To obtain such a list"
 	ewarn "of packages for your system, you may use:"
-	ewarn "revdep-rebuild --soname=libmysqlclient.so.12"
+	ewarn "revdep-rebuild --library=libmysqlclient.so.12"
 	ewarn "from app-portage/gentoolkit."
 	ewarn ""
 	ewarn "the value of \"innodb_log_file_size\" into /etc/mysql/my.cnf file "
