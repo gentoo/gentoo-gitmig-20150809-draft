@@ -1,6 +1,13 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.149 2006/01/24 16:09:17 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.150 2006/03/10 20:01:48 joem Exp $
+
+*abiword-2.4.2-r1 (10 Mar 2006)
+
+  10 Mar 2006; Joe McCann <joem@gentoo.org>
+  +files/abiword-2.4.2-spell_crash_1.patch,
+  +files/abiword-2.4.2-spell_crash_2.patch, +abiword-2.4.2-r1.ebuild:
+  Patches to fix crash on check spelling. Thanks to reporters in bug 120820
 
 *abiword-2.4.2 (25 Jan 2006)
 
