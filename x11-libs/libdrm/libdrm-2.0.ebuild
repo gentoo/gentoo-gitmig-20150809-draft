@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.0.ebuild,v 1.7 2006/03/09 14:23:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.0.ebuild,v 1.8 2006/03/10 20:27:22 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -28,7 +28,7 @@ pkg_postinst() {
 	if [[ -e ${ROOT}/usr/$(get_libdir)/libdrm.so.1 ]] ; then
 		ewarn "You must re-compile all packages that are linked against"
 		ewarn "libdrm 1 by using revdep-rebuild from gentoolkit:"
-		ewarn "# revdep-rebuild --soname libdrm.so.1"
+		ewarn "# revdep-rebuild --library libdrm.so.1"
 		ewarn "After this, you can delete /usr/$(get_libdir)/libdrm.so.1"
 		ewarn "and /usr/$(get_libdir)/libdrm.so.1.0.0 ."
 		epause
