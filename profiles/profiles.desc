@@ -12,7 +12,7 @@ hppa		default-linux/hppa/2005.0			stable
 ia64		default-linux/ia64/2005.0			stable
 m68k		default-linux/m68k					dev
 mips		default-linux/mips/2004.2			stable
-ppc			default-linux/ppc/2005.0			stable
+ppc		default-linux/ppc/ppc32/2006.0			stable
 ppc64		default-linux/ppc64/2005.0			stable
 ppc-macos	default-darwin/macos/10.4			dev
 s390		default-linux/s390/2006.0			stable
