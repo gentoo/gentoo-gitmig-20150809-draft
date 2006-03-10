@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta3.ebuild,v 1.1 2006/02/28 10:38:58 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta3.ebuild,v 1.2 2006/03/10 11:09:23 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.isc.org/isc/dhcp/${MY_P}.tar.gz"
 
 LICENSE="isc-dhcp"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="static selinux"
 
 RDEPEND="selinux? ( sec-policy/selinux-dhcp )"
