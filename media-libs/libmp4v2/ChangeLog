@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmp4v2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.10 2006/01/08 21:38:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.11 2006/03/10 20:18:36 agriffis Exp $
+
+  10 Mar 2006; Aron Griffis <agriffis@gentoo.org> libmp4v2-1.4.1.ebuild:
+  Mark 1.4.1 ~ia64. #124699
 
   08 Jan 2006; Jeroen Roovers <jer@gentoo.org> libmp4v2-1.4.1.ebuild:
   Marked ~hppa (bug #111427).
