@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dcc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.24 2006/02/06 21:01:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.25 2006/03/10 03:16:35 agriffis Exp $
+
+  10 Mar 2006; Aron Griffis <agriffis@gentoo.org> dcc-1.3.24.ebuild:
+  Mark 1.3.24 ~ia64
 
   06 Feb 2006; Aron Griffis <agriffis@gentoo.org> dcc-1.3.16.ebuild:
   Mark 1.3.16 stable on alpha
