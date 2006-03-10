@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/PEAR-PHPUnit2/PEAR-PHPUnit2-2.3.5.ebuild,v 1.2 2006/02/28 09:12:30 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/PEAR-PHPUnit2/PEAR-PHPUnit2-2.3.5.ebuild,v 1.3 2006/03/10 11:07:42 sebastian Exp $
 
 inherit php-pear-r1 depend.php
 
@@ -11,8 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 RDEPEND=">=dev-php/PEAR-Benchmark-1.2.2-r1
-	>=dev-php/PEAR-Log-1.8.7-r1
-	dev-php5/xdebug"
+	>=dev-php/PEAR-Log-1.8.7-r1"
 
 pkg_setup() {
 	require_php_with_use pcre spl xml
