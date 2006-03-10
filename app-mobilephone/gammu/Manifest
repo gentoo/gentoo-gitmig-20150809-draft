@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 77509ea614a2edc817c0034778460e5e ChangeLog 4901
+MD5 0d45508c6df0cb41951d7a1de8c5f80b ChangeLog 4999
+RMD160 56b644c6220f65226c31b9347398a54a856bb845 ChangeLog 4999
+SHA256 ca6c6226f21c6f4cedaea8c93e2eaee4682215ff63828c2acc5b0a8aacfc7926 ChangeLog 4999
 MD5 fe619bd2a9bf0758cba9ac45162c8758 files/digest-gammu-1.01.0-r1 64
+RMD160 90200fcdc9efed40cfdce8c60aa391103d4e32f3 files/digest-gammu-1.01.0-r1 64
+SHA256 529b8fe103b34717eca65a87995bec1504e84a52656cb494d83b96bf8cc5daea files/digest-gammu-1.01.0-r1 64
 MD5 468e231ccea93dcde78c5b1d767f6601 files/digest-gammu-1.02.0 64
+RMD160 3e586de4417fe8f2ae671913e4939e74c59b6d20 files/digest-gammu-1.02.0 64
+SHA256 4e5d57c403e57a76a4963cebbcb05a68e201460be6538067c6efdf814d24ab31 files/digest-gammu-1.02.0 64
 MD5 33f5aa8593cdf2bf3524869f6f128ec5 files/digest-gammu-1.04.0-r2 64
+RMD160 bec4f58e0e775fab2becc6a3658bfa8200ec9ada files/digest-gammu-1.04.0-r2 64
+SHA256 da9582bb61a28535bac74fbf0ebbc7f0f849ceede6af82e0d1c537cd144f974b files/digest-gammu-1.04.0-r2 64
 MD5 c99ecf9019c20984a405aeea6c2c6e60 files/gammu-1.01.0-caller.patch 1021
+RMD160 24feeb9a25825a9b132806d1b2fb50ad1d668386 files/gammu-1.01.0-caller.patch 1021
+SHA256 23d24597a7fc428a5bb30d9e947c86d19e1fc17fec95e622ff17dff9917689a4 files/gammu-1.01.0-caller.patch 1021
 MD5 2dba94c27d92141070e9b76dba40f24b files/gammu-1.04.0-devfunc-sock.patch 381
+RMD160 3629d13e07b5dc23aae210927fcb0e36c28951fa files/gammu-1.04.0-devfunc-sock.patch 381
+SHA256 6442452674d17cad838940d6d46ad9d252e15bc580131d349826cd833d861015 files/gammu-1.04.0-devfunc-sock.patch 381
 MD5 6c95de75bc61252ba025920f0a90675c gammu-1.01.0-r1.ebuild 1655
+RMD160 d0a6f1b993bcb45d4e5aa9649b8cfff44777f77a gammu-1.01.0-r1.ebuild 1655
+SHA256 936cb1028722fa65f427ff13d2230835f1eb9aff7f587b3b25c5e505d59aec5f gammu-1.01.0-r1.ebuild 1655
 MD5 ca8fe507eb178df89cbf153ea4efbbb3 gammu-1.02.0.ebuild 1573
-MD5 405b24d8cd04edbce91083fe9cbde3a4 gammu-1.04.0-r2.ebuild 1341
+RMD160 d24a365b3f6dcefac0000066f2f09ee436d2af63 gammu-1.02.0.ebuild 1573
+SHA256 97940bda42f4d17a2605db1f06b879927f5172b6e1b4827645c54548c7ef822b gammu-1.02.0.ebuild 1573
+MD5 a227c59c190b576e7b8846d358bb070e gammu-1.04.0-r2.ebuild 1340
+RMD160 b8550fb5f5a6a49ce76dad21e59900a10b2863da gammu-1.04.0-r2.ebuild 1340
+SHA256 295a1a4737186bd88d6f83e9369819203c9f24508e402f3017c23f884df3f162 gammu-1.04.0-r2.ebuild 1340
 MD5 e161c5ddb0e2ddbe68a21690f41e90e1 metadata.xml 227
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEAFe0jG8pv1lIUX4RAqqwAKDRYwFFVyPbePWVz9/W44isWuomQACgwOwU
-p7hQj0XNOXhJYLIYhJc9OKs=
-=Wti3
------END PGP SIGNATURE-----
+RMD160 65693c5c45e518f2a8fbd80e1b6268e7c6eb43be metadata.xml 227
+SHA256 029172d59605ac64b3ac7b9b02223db28f156b2a5ceccb39806bc1bf572e40c4 metadata.xml 227
