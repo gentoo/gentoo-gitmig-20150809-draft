@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.227 2006/03/10 18:05:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.228 2006/03/10 23:24:21 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -139,6 +139,10 @@ EPATCH_FORCE="no"
 #
 epatch() {
 	_epatch_draw_line() {
+		# this func produces a lot of pointless noise when debugging is turned on ...
+		local is_debug=0
+		[[ $- == *x* ]] && is_debug=1 && set +x
+
 		local i=0 str_length="" str_out=""
 
 		# Handle calls that do not have args, or wc not being installed ...
@@ -153,6 +157,7 @@ epatch() {
 		done
 		echo ${str_out}
 
+		[[ ${is_debug} -eq 1 ]] && set -x
 		return 0
 	}
 	_epatch_assert() { local _pipestatus=${PIPESTATUS[*]}; [[ ${_pipestatus// /} -eq 0 ]] ; }
