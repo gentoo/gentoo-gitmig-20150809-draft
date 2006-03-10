@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/zoo
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/ChangeLog,v 1.21 2006/02/27 19:28:55 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/ChangeLog,v 1.22 2006/03/10 00:37:36 vapier Exp $
+
+*zoo-2.10-r2 (10 Mar 2006)
+
+  10 Mar 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/zoo-2.10-CAN-2005-2349.patch, +files/zoo-2.10-febz-183426.patch,
+  +files/zoo-2.10-security_pathsize.patch, +zoo-2.10-r2.ebuild:
+  Grab a bunch of patches from Fedora and cleanup the sources more.
 
   27 Feb 2006; Simon Stelling <blubb@gentoo.org> zoo-2.10-r1.ebuild:
   stable on amd64 wrt bug 123782
