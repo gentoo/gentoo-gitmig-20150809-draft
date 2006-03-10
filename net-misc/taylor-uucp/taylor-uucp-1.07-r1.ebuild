@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07-r1.ebuild,v 1.3 2006/03/10 00:56:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07-r1.ebuild,v 1.4 2006/03/10 19:38:38 hansmi Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/uucp/uucp-${PV}.tar.gz"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ia64 ppc ~sparc x86"
 
 DEPEND=">=sys-apps/sed-4"
 RDEPEND=""
