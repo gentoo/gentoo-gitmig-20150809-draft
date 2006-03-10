@@ -1,22 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f4f469e612eb8ab7a1763c6370f26f86 ChangeLog 2371
-MD5 aea027d84f6423b914b714245343a0c4 elilo-3.4-r3.ebuild 1641
-MD5 e23073f70ebd042c239f9b30543627bc elilo-3.6.ebuild 1595
-MD5 85650d47a2950be23774d73205b19e97 files/digest-elilo-3.4-r3 61
-MD5 151eac50c18a0db6412abfdce0444845 files/digest-elilo-3.6 232
+MD5 28d143762e6196236321944997e0c8e0 ChangeLog 2520
+RMD160 f112b4cfb298c22de3ee0f39b3bb86a622e16cc0 ChangeLog 2520
+SHA256 b523b4be22fb38ba38826e5e0a42cac0fb24455748161878d32d9aafbadb02fd ChangeLog 2520
+MD5 24e5e38b2e95ae9eaa46fa34f75c57a3 elilo-3.4-r3.ebuild 1702
+RMD160 ae2b285b982c6c979b0b4160a3c8ea7078d1d9aa elilo-3.4-r3.ebuild 1702
+SHA256 0d2a3d22067e5eda6a3c5fb35f6176b5d013924502ab7759397a7140c93d3aa9 elilo-3.4-r3.ebuild 1702
+MD5 3c6c6811fcd8ce2413dfc92c525341eb elilo-3.6.ebuild 1657
+RMD160 d76feb03a0cd4bb26971f9a5a6fc41b205c4e76e elilo-3.6.ebuild 1657
+SHA256 61ca372c0015235a5324be998e26faa78a4545e64b2f2237ef8b9a457654027a elilo-3.6.ebuild 1657
+MD5 f0780671bcf192ebb0f1d7ee557f1286 files/digest-elilo-3.4-r3 440
+RMD160 caaa7f3ae538215d21bf39adea015337f7a0f73c files/digest-elilo-3.4-r3 440
+SHA256 5c8f0a906d06ee6ddf5508d1660f29827a89f48806fbfadac1b2a9af1618c0f3 files/digest-elilo-3.4-r3 440
+MD5 8f06a45c25f09850bdccdef1717c9073 files/digest-elilo-3.6 443
+RMD160 09228a66e9af58c3d91677face2c0bd3eff5d8eb files/digest-elilo-3.6 443
+SHA256 a25b11588df44ddc979dfdfc5f261ad426e319b1527015ca46a53b7aa8f67115 files/digest-elilo-3.6 443
 MD5 2640f713f5f00cf0a17e31d220c8242c files/elilo-3.3a-devscheme.patch 3571
+RMD160 5d9adf423262c563f8124d67dedd14da6bf6f8d5 files/elilo-3.3a-devscheme.patch 3571
+SHA256 9d21c53d4d9e0e17bd26d803403eee1c33fd0144d472d937d1fd2e5d79532a03 files/elilo-3.3a-devscheme.patch 3571
 MD5 2b2d58955c4ad612fee3bcf9b977bc41 files/elilo-3.4-makefile.patch 338
+RMD160 d518cf64f722ce3822916ab89eb73fde6fd1703e files/elilo-3.4-makefile.patch 338
+SHA256 5ca82d521066b55959a68f7a66f1dc9263ef23c3296c6a8b870cf9457398f11f files/elilo-3.4-makefile.patch 338
 MD5 d8b9c6b6a99161eaad38eae80039af69 files/elilo-3.4-proc-sigsetjmp.patch 374
+RMD160 28930ed268d88e815a49cfbc3d3a91f699bcbb5b files/elilo-3.4-proc-sigsetjmp.patch 374
+SHA256 e43106570cb55cb279029743b2909e1b2e59ca58cbcdf1f3f47f19341e323fa3 files/elilo-3.4-proc-sigsetjmp.patch 374
 MD5 5e611594843275c52c4b4921b89a23e4 files/elilo.8-3.4 3286
+RMD160 d78c905052268c673dfec42f6cbe4cdfff8e7cd2 files/elilo.8-3.4 3286
+SHA256 22c2388e7b6ce5778249acbbe987e19618428ff556c554690a818d888744e2a5 files/elilo.8-3.4 3286
 MD5 28d31c36279045f43b3c61c5000b7821 files/elilo.conf.sample 150
+RMD160 d268dd0c0b18b1467694acab4c9f1943b713b532 files/elilo.conf.sample 150
+SHA256 aa42c5582f5b282ed1fe5ef85c2c190e7c66283da905c4ef23886d313845d353 files/elilo.conf.sample 150
 MD5 a479f5334497679bd91ddc7181866f52 files/eliloalt.8-3.4 550
+RMD160 ff0ba8d02c5a6a1800a4e8fd494681e78230e88e files/eliloalt.8-3.4 550
+SHA256 9b49f022c95f11de63ff27fb9cba2c58a4966fe8750192a1e8c192d5e1d5b77f files/eliloalt.8-3.4 550
 MD5 78fc29bf052a5244c63204ddcdd7a1ac metadata.xml 157
+RMD160 d78bc90d4c0fdb88250c9822e913c6f0159b2e8b metadata.xml 157
+SHA256 7e261fbe78f2088ab2a27fe3bd23a4224dde9a11031edcb4b7bb95dd3ba1fe4a metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD/Q1GJrHF4yAQTrARAiItAKDAqZ00v1ne8mKLLHPGHGeTBpQqPQCfQrEJ
-zR6YhjoEt7vNZPDTPXTT6XE=
-=AsEZ
+iD8DBQFEEcorJrHF4yAQTrARAsP8AKDGEXzWyDwYuPmhlIt3tEVyGUOjLQCfUR/c
+lwzq/P6keIZ2B68m1piOGTw=
+=d82a
 -----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/elilo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.15 2006/02/23 01:15:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.16 2006/03/10 18:49:06 agriffis Exp $
+
+  10 Mar 2006; Aron Griffis <agriffis@gentoo.org> elilo-3.4-r3.ebuild,
+  elilo-3.6.ebuild:
+  Add elilo-3.4.gz to SRC_URI to fix script installation
 
   23 Feb 2006; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
   elilo-3.4-r3.ebuild, elilo-3.6.ebuild:

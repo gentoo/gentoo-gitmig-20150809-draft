@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.6.ebuild,v 1.3 2006/02/23 01:15:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.6.ebuild,v 1.4 2006/03/10 18:49:06 agriffis Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Linux boot loader for EFI-based systems such as IA-64"
 HOMEPAGE="http://elilo.sourceforge.net/"
-SRC_URI="mirror://sourceforge/elilo/${P}.src.tgz"
+SRC_URI="mirror://sourceforge/elilo/${P}.src.tgz
+	mirror://gentoo/elilo-3.4.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,11 +23,11 @@ PROVIDE="virtual/bootloader"
 S=${WORKDIR}/${PN}
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.src.tgz
+	gzip -dc ${DISTDIR}/elilo-3.4.gz > elilo-script
 	cd ${S}
 	epatch ${FILESDIR}/elilo-3.4-makefile.patch
 	epatch ${FILESDIR}/elilo-3.3a-devscheme.patch
-	gzip -dc ${DISTDIR}/elilo-3.4.gz > $T/elilo
 }
 
 src_compile() {
@@ -44,7 +45,7 @@ src_compile() {
 }
 
 src_install() {
-	dosbin ${T}/elilo || die "elilo failed"
+	newsbin ${WORKDIR}/elilo-script elilo || die "elilo failed"
 	dosbin tools/eliloalt || die "eliloalt failed"
 
 	exeinto /usr/lib/elilo
