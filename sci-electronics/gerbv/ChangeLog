@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gerbv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.8 2006/01/22 15:51:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.9 2006/03/10 19:51:02 plasmaroo Exp $
+
+  10 Mar 2006; <plasmaroo@gentoo.org> gerbv-1.0.1-r1.ebuild,
+  +files/gerbv-1.0.0-gcc-4.10.patch:
+  Fix GCC4 compile issue (bug #125186).
 
   22 Jan 2006; <plasmaroo@gentoo.org> gerbv-0.15.ebuild, gerbv-0.16-r1.ebuild,
   -gerbv-0.16.ebuild, gerbv-1.0.1-r1.ebuild, -gerbv-1.0.1.ebuild:
