@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.70 2006/03/09 20:19:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.71 2006/03/10 19:01:13 nixnut Exp $
+
+  10 Mar 2006; <nixnut@gentoo.org> autoconf-2.59-r7.ebuild:
+  Stable on ppc. Bug #125423
 
   09 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   autoconf-2.59-r7.ebuild:
