@@ -1,6 +1,9 @@
-MD5 baa6ce8cc279eb6f2638bc57707ed44b ChangeLog 3978
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 46af5a0c5b981c9bd6df8171794aa353 ChangeLog 4084
 MD5 87f1d7380ea0332635470db9c20c248b eselect-0.9.6.ebuild 1317
-MD5 d9bd2bcd380f4acf4ba430feafc1e083 eselect-1.0.ebuild 1256
+MD5 06edd0b37f8d61cb5c0652f48be0bf40 eselect-1.0.ebuild 1253
 MD5 205e4671b260218c2306268f03b5ac85 eselect-1.0_rc1.ebuild 1293
 MD5 d7fbc376e3aef8783786443e22621b40 eselect-1.0_rc2.ebuild 1319
 MD5 c7f28f299bf397889d5c4ffb8bcc1772 files/digest-eselect-0.9.6 65
@@ -8,3 +11,10 @@ MD5 6eaa890869f036affb6665958af7dff1 files/digest-eselect-1.0 238
 MD5 361d784eca93f6c4384fc4cfbc32e55f files/digest-eselect-1.0_rc1 68
 MD5 825b17d965ed7489b0351a0adbe012bb files/digest-eselect-1.0_rc2 68
 MD5 ca75babbaadabb722f6415ddec4c0ce8 metadata.xml 226
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEEdvUViELBEf1JB0RAiAGAJ9xnV4oOGqKSeqPS7Fd/VFf8DHpzACfUNOF
+Vn8VwdOEmUbh8TI7Z1yU33c=
+=M4rp
+-----END PGP SIGNATURE-----
