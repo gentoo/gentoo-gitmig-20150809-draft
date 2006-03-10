@@ -1,19 +1,67 @@
-MD5 67c6d1ce5f6d5b00cfce3f47ea01a52e ChangeLog 38411
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4beb5bfcce6debd44042a8c151dbfd0d ChangeLog 38515
+RMD160 cc1c7b2a13fabe0da899c1d6e505a13d1ccd1a4c ChangeLog 38515
+SHA256 ac991ac5c6f7b4fa7e4f30e6f6af0c10ca30909a4a330463ec94f237aa569ef9 ChangeLog 38515
 MD5 a81151c8ce798cbb8498e4e3723dd5bb files/README.gentoo 2458
+RMD160 ac4f6cbf6a73d8d74e5ed604d539d3e187139e70 files/README.gentoo 2458
+SHA256 90d86b2f167d5ad5c6c82e5a4422a1eb2dd70a365a56fbe6c9f82640e3658806 files/README.gentoo 2458
 MD5 8655ff25f25d7e80f85a5e527d43e94b files/digest-samba-3.0.14a-r2 209
+RMD160 bdbde65e9d4ad0e5c4051226afee11ae853c9d22 files/digest-samba-3.0.14a-r2 209
+SHA256 dea790af76ff0bbc8379af6139464f3574f2df94b9916d1f026e68b3390d7237 files/digest-samba-3.0.14a-r2 209
 MD5 15a9e77f4ef8bd8a597b0efe99599337 files/digest-samba-3.0.14a-r3 209
+RMD160 28c6a39480f107dda8c63108a501ff8654d1c059 files/digest-samba-3.0.14a-r3 209
+SHA256 14a107eb6204746d72464c56162b024bd95a2b8e3778c2d80f30b58a58b20852 files/digest-samba-3.0.14a-r3 209
 MD5 b0edbbe79d56d73a741ab67940725cd5 files/digest-samba-3.0.20-r1 208
+RMD160 a78f0ac5a6c91db04917bf4c7b85836951cc044e files/digest-samba-3.0.20-r1 208
+SHA256 aedbc24da44d46ed100f95759ba72236c37a32b5da1d156064ad9bd15407a735 files/digest-samba-3.0.20-r1 208
 MD5 101abdf5b841b3e0dc27ab5ae299ff79 files/digest-samba-3.0.20a 209
+RMD160 93e82e41963b6353624c515efa12e5af61ad660b files/digest-samba-3.0.20a 209
+SHA256 1214ba01d28a5815fe37373d2be51409915bacb5b0d3ec59d5dcac49a793bfdf files/digest-samba-3.0.20a 209
 MD5 8184e6df43d80b0fde18c5920a5c1e66 files/digest-samba-3.0.20b 210
+RMD160 543bf95703456c4af718d0b991964703b120bd0c files/digest-samba-3.0.20b 210
+SHA256 07c74c34402600edb4ade79ca726daa3e38c1fc33096dbd441aa00aca4daffcc files/digest-samba-3.0.20b 210
 MD5 ad50e9df5afa7a68ae92fafc5d3daf16 files/digest-samba-3.0.21a 771
-MD5 adb7ab134c8c36d103e72cf1b41c3255 files/digest-samba-3.0.21b 771
+RMD160 a32a0d0ac8be9be925086fb62047d31557758121 files/digest-samba-3.0.21a 771
+SHA256 faf73ffb71cafa8a1e1e6ec414653152cbf27f66534cd17d415314c612bcb8f4 files/digest-samba-3.0.21a 771
+MD5 dc35f89eee1482d5d66160435a4ed501 files/digest-samba-3.0.21b 771
+RMD160 e7ca1a5340c12879038990aa3c5ee18c7e086048 files/digest-samba-3.0.21b 771
+SHA256 67e85a0163908cb088d46451c58fad2f34fb3707764f9efe9d52af36372d1b61 files/digest-samba-3.0.21b 771
 MD5 064044b71a87a5fd0d0a9991b291f1aa files/digest-samba-3.0.21c 771
+RMD160 7f98dee6fd8921ee4cb881db03200444109d77e2 files/digest-samba-3.0.21c 771
+SHA256 6c6e6be13ac92b83a03f76234a239ac5fe2bd3b7bb26e3cf50c8f0de9ab9f6a2 files/digest-samba-3.0.21c 771
 MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
+RMD160 a168f5ebf64e25d8c80c1c33220b2695ae8f3645 metadata.xml 491
+SHA256 f6534dfe5249b4f1482818d56c36126ae4681eb5b7d24dbf985f6be6f2c58493 metadata.xml 491
 MD5 61f0df98191ae242f294459ac9eee7e7 samba-3.0.14a-r2.ebuild 9269
+RMD160 c2ffb9a911f45c1f83313c9972938b6028f374a7 samba-3.0.14a-r2.ebuild 9269
+SHA256 5c1b64cee4479cba6f07981995bf562c49ed45d8d8de6fcc76d0ed65227906cd samba-3.0.14a-r2.ebuild 9269
 MD5 b342ed3ffe76e40848625e839ed5820c samba-3.0.14a-r3.ebuild 9280
+RMD160 4bc9f7e1787db5cd13795d932096ed4a706c4f43 samba-3.0.14a-r3.ebuild 9280
+SHA256 cbe9ead876929affb6abb501528cc07a7622fa3eca6d21eb062bb9762867f243 samba-3.0.14a-r3.ebuild 9280
 MD5 bb4b14ed3ad863261a32c5e7501a8b3e samba-3.0.20-r1.ebuild 7959
+RMD160 7536305083e1cd63b4b6ac70731c765d642f6d61 samba-3.0.20-r1.ebuild 7959
+SHA256 80fa7f68e69f30523eef9cfe18f59dc197928013944ab1a8bd050d04e7acc981 samba-3.0.20-r1.ebuild 7959
 MD5 315301fc1dbdf015c2aa049887bd9d59 samba-3.0.20a.ebuild 8177
+RMD160 275f88116fba3c19031721f21a848190233308e8 samba-3.0.20a.ebuild 8177
+SHA256 e412aa2fa18b3b88cec99a2483addfa4ae67d1ad1e088ace2194184c857d3b64 samba-3.0.20a.ebuild 8177
 MD5 56eb4dab3e8e14f80e89d6b85f7dd902 samba-3.0.20b.ebuild 8625
+RMD160 67ac257cf61ffcaf2fab2a3dbcff0a35840bc673 samba-3.0.20b.ebuild 8625
+SHA256 7c816bdf1e9d104d9402add068b96930ce06d869bcce69df8cdcd6725db908f2 samba-3.0.20b.ebuild 8625
 MD5 c5a70bc09be5f115ebfbc5fb000be560 samba-3.0.21a.ebuild 8614
-MD5 142400b4ea0d452e11957044c7cbee5a samba-3.0.21b.ebuild 8615
+RMD160 8ab10e38ca352508befe26e9ceba22fa28580942 samba-3.0.21a.ebuild 8614
+SHA256 8c18e7127bcb06a0d4867a001dbcf71478154d747862cc7a32ef3f9c8ffc2818 samba-3.0.21a.ebuild 8614
+MD5 16df0eb32aa46e86bbaa94700466984c samba-3.0.21b.ebuild 8615
+RMD160 2a0255a14f8c3e66cede79c87b1cc512e719d8f4 samba-3.0.21b.ebuild 8615
+SHA256 d149cbb9defd2b1090253582a4bbf06bcaf90f26c89686a3d66a8f028ff7af04 samba-3.0.21b.ebuild 8615
 MD5 5c77ef195240c56181d7e72fbbc26163 samba-3.0.21c.ebuild 8614
+RMD160 b4447944b1a8b9dc9b8ce0dcd318518e54fd9ead samba-3.0.21c.ebuild 8614
+SHA256 c760d44c512b26c29fecd93bf995cc7e416a23d12c94bbc9e490f3f75c1bb1fc samba-3.0.21c.ebuild 8614
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFEEMwOJrHF4yAQTrARAskAAJ4jnjLmgdoJiwl2z5sQWS5JzMPt2QCgpZdX
+7wxk6Tg0tG4j2qGO1NuwfRI=
+=m5AT
+-----END PGP SIGNATURE-----
