@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cff3aa3e93f666d57a82ad53295e93af ChangeLog 18410
-RMD160 1ca025f26ad8124cd7035df409269e68acfacc53 ChangeLog 18410
-SHA256 51f673e5576bf60662801fddf29e14bde384064ef112dc1bb7cd80d34d188551 ChangeLog 18410
+MD5 5476afab9050417b03df7c6b8b2ed570 ChangeLog 18512
+RMD160 421681765e4d88b0cf12538de58efabd76c97e74 ChangeLog 18512
+SHA256 944ed0def55676f61997dd71d2efc96d583464694f1d67b2a1bd158eed5f1a0e ChangeLog 18512
 MD5 6aad9c4cd4548cb948cd4035286d6ac7 files/digest-webapp-config-1.11 70
 RMD160 ca23cee7582a6531fb0cd9f7b2c257d6b657028f files/digest-webapp-config-1.11 70
 SHA256 acbc5a4dbb6cf834e84059b4c11f6ceee74182a8ec7accd5b288a59467a7aa1d files/digest-webapp-config-1.11 70
@@ -19,16 +16,9 @@ SHA256 0986f8971072c8d055fccbc67cc59ac43eecd1f5592cd9c0ae729b23e550cc96 metadata
 MD5 90bba75c31e392fd21e084681aeca6ae webapp-config-1.11.ebuild 1408
 RMD160 a5b77eba6047c11500dd08ae6db3c897079b5079 webapp-config-1.11.ebuild 1408
 SHA256 ecef225ebe299b86b73617eaea247aff06fdd8278c9ce4da6d34b4427d7d0d66 webapp-config-1.11.ebuild 1408
-MD5 ff0a94c8622bb1f64e09cd4915070e20 webapp-config-1.50.10.ebuild 1870
-RMD160 710933b577b88eb686ca73eab0e91fe5c7979e63 webapp-config-1.50.10.ebuild 1870
-SHA256 b659cd5d95c7b8d0c9cae220498cbb1555b8aad893d76de5e7bc602d123179e8 webapp-config-1.50.10.ebuild 1870
+MD5 a4fc5ad7697ee281f41a3fe2b3f3268c webapp-config-1.50.10.ebuild 1869
+RMD160 1ed0d9b3841e36824692d9091cf5a4de685294a6 webapp-config-1.50.10.ebuild 1869
+SHA256 7855510e993bd9312257bbf940248e3a2f587a957b4295685efb5cde4687939c webapp-config-1.50.10.ebuild 1869
 MD5 a2d7cef50ebbe1791b47f632a392b3d5 webapp-config-1.50.13.ebuild 1876
 RMD160 338222f72e981044b78d900c2d271e8390742f9f webapp-config-1.50.13.ebuild 1876
 SHA256 a5aeacc07d00222b2c0615f56e3da6850c7deadd2011328440e9a38ad3947953 webapp-config-1.50.13.ebuild 1876
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEKWKJrHF4yAQTrARAu0iAKCFPnTOep5DxQEnbIzbSpmqwckCzACdGSoZ
-JFrwURbO6A2WGnTPs4UNwjk=
-=JocK
------END PGP SIGNATURE-----

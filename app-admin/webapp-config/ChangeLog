@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.31 2006/03/09 22:00:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.32 2006/03/10 00:34:28 hansmi Exp $
+
+  10 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
+  webapp-config-1.50.10.ebuild:
+  Stable on ppc.
 
   09 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   webapp-config-1.50.13.ebuild:
