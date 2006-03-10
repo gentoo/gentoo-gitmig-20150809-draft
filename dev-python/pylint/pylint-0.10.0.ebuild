@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.10.0.ebuild,v 1.1 2006/03/06 18:39:59 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.10.0.ebuild,v 1.2 2006/03/10 23:46:58 marienz Exp $
 
 inherit distutils eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 DEPEND="|| ( >=dev-python/optik-1.4 >=dev-lang/python-2.3 )
 		>=dev-python/logilab-common-0.13.0
-		>=dev-python/astng-0.15.0"
+		>=dev-python/astng-0.15.1"
 
 DOCS="doc/*.txt"
 
@@ -23,14 +23,14 @@ src_unpack() {
 	cd "${S}"
 
 	# these two tests do not pass
-	for testname in func_w0401.py func_format.py \
+	for testname in func_format.py \
 		func_noerror_staticmethod_as_decorator.py; do
 		mv test/input/${testname} test/input/${testname}.skipped ||
 		die "skipping ${testname} failed"
 	done
 
 	epatch "${FILESDIR}/${P}-extra-todo.patch"
-	epatch "${FILESDIR}/${P}-skip-gtk-test.patch"
+	epatch "${FILESDIR}/${P}-extra-gtk-disable.patch"
 }
 
 src_install() {
@@ -39,7 +39,7 @@ src_install() {
 	# and it makes .py[co] generation very noisy because there are
 	# files with SyntaxErrors in there)
 	python_version
-	rm -rf ${D}/usr/$(get_libdir)/python${PYVER}/site-packages/pylint/test
+	rm -rf "${D}/usr/$(get_libdir)/python${PYVER}/site-packages/pylint/test"
 }
 
 src_test() {

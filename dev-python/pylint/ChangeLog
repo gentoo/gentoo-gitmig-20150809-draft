@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.25 2006/03/06 18:39:59 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.26 2006/03/10 23:46:58 marienz Exp $
+
+  10 Mar 2006; Marien Zwart <marienz@gentoo.org>
+  +files/pylint-0.10.0-extra-gtk-disable.patch,
+  files/pylint-0.10.0-extra-todo.patch,
+  -files/pylint-0.10.0-skip-gtk-test.patch, pylint-0.10.0.ebuild:
+  Depend on a bugfixed astng allowing more tests to pass.
 
 *pylint-0.10.0 (06 Mar 2006)
 

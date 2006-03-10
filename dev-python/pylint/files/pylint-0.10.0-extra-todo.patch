@@ -6,7 +6,7 @@
          todo.sort()
          if PY23:
 -            self.assertEqual(todo, ['E0503', 'F0002', 'F0202', 'F0321', 'I0001'])
-+            self.assertEqual(todo, ['C0321', 'C0322', 'C0323', 'C0324', 'E0503', 'F0002', 'F0202', 'F0321', 'I0001', 'R0401'])
++            self.assertEqual(todo, ['C0321', 'C0322', 'C0323', 'C0324', 'E0503', 'F0002', 'F0202', 'F0321', 'I0001'])
          else:
              self.assertEqual(todo, ['F0002', 'F0202', 'F0321', 'I0001'])
  
