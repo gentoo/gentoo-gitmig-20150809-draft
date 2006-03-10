@@ -1,15 +1,58 @@
-MD5 220dba406a92601d03c1b08490645e2f ChangeLog 8059
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0afa6ed9d3a6d13782933a7fbcfb7dc4 ChangeLog 8233
+RMD160 032b3a2234b1ea3d13b955d0640f23f85cabb3a6 ChangeLog 8233
+SHA256 bfce77be9f276da1b4bac9071eed8738627f4459bae39b3dd8e5d663b149a5cb ChangeLog 8233
 MD5 18d017187b228dd614d7ae00283f788a files/digest-libfwbuilder-1.0.2-r2 72
-MD5 13138cb561dd1abf594ba0eabcbbcfcf files/digest-libfwbuilder-2.0.10 71
+RMD160 fff42504b084dfbdfa82f1b0655d14dc23885dcb files/digest-libfwbuilder-1.0.2-r2 72
+SHA256 fca42ca1bcd0bf449424f6008b194a9508feaa788499f2cd89c7bd25dd3afc91 files/digest-libfwbuilder-1.0.2-r2 72
+MD5 8d7d58dd8f04faf069a57566a94b8bab files/digest-libfwbuilder-2.0.10 259
+RMD160 e52a82ee3996522d10c67622f8d2c561e84ec641 files/digest-libfwbuilder-2.0.10 259
+SHA256 dc7ac64c152c48150c1bf2a75de3affddc3fea95fcfcffd6e2e586d6e976fc03 files/digest-libfwbuilder-2.0.10 259
 MD5 318eed1dc99e8153d2dfdfd9cca6923e files/digest-libfwbuilder-2.0.6 70
+RMD160 f0ddb0a4556752b933e1a0eca1e745f7aec578c0 files/digest-libfwbuilder-2.0.6 70
+SHA256 d263684296ee0d6eeef7deab21ae42d6dc52d47b80d4d3dc67ba51c1040db26d files/digest-libfwbuilder-2.0.6 70
 MD5 5814377092615185560afd95d6514ffe files/digest-libfwbuilder-2.0.7 70
+RMD160 dc08c250eaa051d508a854f05bc765c2c7fbaa58 files/digest-libfwbuilder-2.0.7 70
+SHA256 0579be00fe2511e42b11b51dd8a4ade44cde3b62a64309d187c8bc764d7aa16f files/digest-libfwbuilder-2.0.7 70
 MD5 d41e02a2b604af59172850a3c1a4d60f files/digest-libfwbuilder-2.0.8 70
+RMD160 e0d32646422dd2382ccf99a7fe4a22b70a5d9533 files/digest-libfwbuilder-2.0.8 70
+SHA256 45f8ea93bf5967db7b494879839945a9aeb94366659e39d608354b0f55f74193 files/digest-libfwbuilder-2.0.8 70
 MD5 385e4e0f1c7c8636e0f9b213785ff7c4 files/digest-libfwbuilder-2.0.9 70
+RMD160 8efec0451733bba3294b144c0c39ce877f8410f9 files/digest-libfwbuilder-2.0.9 70
+SHA256 fc73762fb9ddba597a76cbe720b8f48ceaf9a1eb184106740a7a1fe8a8e8d07a files/digest-libfwbuilder-2.0.9 70
 MD5 bd7f345d52b044e87b5cea9d1017f4bf files/libfwbuilder-1.0.2-libxml2.patch 2166
+RMD160 7d049cdf9e5d4ea24f0c47a00416451ccd459893 files/libfwbuilder-1.0.2-libxml2.patch 2166
+SHA256 075d97fd4df4b6e012f24de946de2744228e9865aa896657d34dfd1484d82ab2 files/libfwbuilder-1.0.2-libxml2.patch 2166
+MD5 9fa5f117b914955b9cd48ae1cfbe0c90 files/libfwbuilder-2.0.10-gcc41.patch 1639
+RMD160 61d8ea51775a507d38b1831788e4ec2e5ad7a89c files/libfwbuilder-2.0.10-gcc41.patch 1639
+SHA256 dca7c16f5bcc00153e7528afb8e6b204215c49251910be9b07b3d11e2d523f9e files/libfwbuilder-2.0.10-gcc41.patch 1639
 MD5 79f3fbdc4294417deabd422ed8ec6a4f libfwbuilder-1.0.2-r2.ebuild 958
-MD5 2adbb4770171a5fc7170e3e65d68e4bf libfwbuilder-2.0.10.ebuild 812
+RMD160 8151d69cb978b0ff9ab201d9fe843851e1918e0c libfwbuilder-1.0.2-r2.ebuild 958
+SHA256 c6a5f36529787c0e8297781f91a58f6ba3c74019d2cd9abcf951d0d509d40db4 libfwbuilder-1.0.2-r2.ebuild 958
+MD5 d1db0c7fe9d92842fcae60a7c73f4958 libfwbuilder-2.0.10.ebuild 903
+RMD160 a7b115ca763a2be672092dccd21bfee6a584de3c libfwbuilder-2.0.10.ebuild 903
+SHA256 22fddae82c692df92c56c65636f6957e68502aeb2b459cfc06c014fa2cc1bea7 libfwbuilder-2.0.10.ebuild 903
 MD5 990394895c89adcecd264ca76a39f1bd libfwbuilder-2.0.6.ebuild 799
+RMD160 fccccdb7986dd8637ca447bf128d723eefc528f1 libfwbuilder-2.0.6.ebuild 799
+SHA256 86521bce4f2d7ede126de2cca8c90d43ef20e74984e7e34f5c09ca281d5fc7ea libfwbuilder-2.0.6.ebuild 799
 MD5 4968e44d4179ddba6e7ad31bb6fb2215 libfwbuilder-2.0.7.ebuild 804
+RMD160 4a15be239a47c40ca4f64b990b4c01a6b5281452 libfwbuilder-2.0.7.ebuild 804
+SHA256 a4e97d565d5f228d969221ce3e7997eb69308c416f847a174f6216c53c5bfd96 libfwbuilder-2.0.7.ebuild 804
 MD5 f3ec80a11a8b755aa603285aaf303172 libfwbuilder-2.0.8.ebuild 804
+RMD160 a3d5d25837c9004c191badece8b375e069a7e492 libfwbuilder-2.0.8.ebuild 804
+SHA256 2956b17cd62ebe137b9869845a13fb2eaaff210f9548ecdcb42443beac555e94 libfwbuilder-2.0.8.ebuild 804
 MD5 7b940aa96bd322bd7f08ec693cb72b1b libfwbuilder-2.0.9.ebuild 811
+RMD160 3e5fa0670c337da8e6d298822a47045b98285a8c libfwbuilder-2.0.9.ebuild 811
+SHA256 d9d6eb6bcf2a2f88cae71410b9649f317ff3550affcd90937f5eb27f8c2b17c3 libfwbuilder-2.0.9.ebuild 811
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
+RMD160 fef9d1a57d9abcae3b3536edb05096c67cfdf7c8 metadata.xml 220
+SHA256 2bf8af6b1a1b4477258316f7442781b522a2401b9333ed89a734dc1aa5b132fc metadata.xml 220
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEEelACRZPokWLroQRAps5AJ9Z698g154Iseu0CxvihaclFGMFrwCeKZq4
+FxVVLRYlhA9LPUmNRLFf0O0=
+=PHVD
+-----END PGP SIGNATURE-----
