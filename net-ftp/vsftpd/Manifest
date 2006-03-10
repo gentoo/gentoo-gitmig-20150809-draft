@@ -28,9 +28,9 @@ SHA256 08b680a8531ecc8ccd9bf7cd91dc2de0a49105803a6d8fdcbe0f0dd47de8f6e0 files/vs
 MD5 b9603a9d37ef056865406509e3b4ad38 files/vsftpd.conf.d 94
 RMD160 6882e38862b4bff82b020e3b9d2a50806cb98760 files/vsftpd.conf.d 94
 SHA256 42cba53a77d07f6643088c60a1ad6b8acc03e8892f8b3b8e8a40fad34097864b files/vsftpd.conf.d 94
-MD5 8df8f4a0d1fac0ddf21aab9f9c11fa1c files/vsftpd.init 1628
-RMD160 5bcb4d37fccbed0f36ac099abe4f2c50dabb85a8 files/vsftpd.init 1628
-SHA256 8db12e352f594bd6643c3fc5d3fe86f771d7b140261e207f9aae7d9668ecdc2e files/vsftpd.init 1628
+MD5 01b1dfe3fbe782f5ea096f68624d33ce files/vsftpd.init 1608
+RMD160 c5cf48f2816de5460046d473762d74cae42959d1 files/vsftpd.init 1608
+SHA256 10d6cd1cf3f171f801db5bbd764eb8ceeb6af7fa7f9f7c12fd9c9ed690d35a1e files/vsftpd.init 1608
 MD5 b0551ddc57103f1dcca71524691540a0 files/vsftpd.init.d 1038
 RMD160 0d084e2cfbe72238d7ce265f7c4e46b59183aa32 files/vsftpd.init.d 1038
 SHA256 e2b1713e6279053582d5372a7b2b27db7be7ced944ee61f8c2c3be853d6de207 files/vsftpd.init.d 1038
@@ -56,9 +56,9 @@ MD5 ee0270e6094ec9f071f47cba896a119c vsftpd-2.0.4.ebuild 2556
 RMD160 925cdf69d5d8ca562e13c84f55ddb5ec7fdab75d vsftpd-2.0.4.ebuild 2556
 SHA256 9ecd6f6b531377fa55ad7554a79ad6eb5507cfd3864b39598a35abe4a1b07a83 vsftpd-2.0.4.ebuild 2556
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD30yBEbVyYKaZ/NERAvxbAJ9H7n74bLyFxBR626du5gD74IdePgCfe6xt
-Y9W9tAkgdt1ouul8wLGEagc=
-=s6j1
+iD8DBQFEEW0zEbVyYKaZ/NERAn/hAJ4rxYf0SPW5NvzXxKyfzTN/36xawgCgmmEi
+47xJnp2cOmDGKSZhl+1UGno=
+=qrse
 -----END PGP SIGNATURE-----
