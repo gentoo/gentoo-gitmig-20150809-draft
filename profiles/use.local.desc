@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1777 2006/03/10 07:05:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1778 2006/03/10 08:40:14 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -761,6 +761,8 @@ media-tv/mythtv:backendonly - Builds only the backend component rather then the 
 media-tv/mythtv:dbox2 - Enable support for Nokia DBOX2 DVB boxes
 media-tv/mythtv:frontendonly - Only builds the Frontend component rather then the whole suite
 media-tv/mythtv:lcd - Enable LCD display support using lcdproc
+media-tv/mythtv:nvidia - Enable XvMC support for nvidia (depreciated in new ebuild)
+media-tv/mythtv:unichrome - Enable XvMC support for unichrome chips (depreciated in new ebuild)
 media-tv/mythtv:video_cards_i810 - VIDEO_CARDS setting to build driver for video_cards_i810 cards
 media-tv/mythtv:video_cards_nvidia - VIDEO_CARDS setting to build driver for nvidia video cards
 media-tv/mythtv:video_cards_via - VIDEO_CARDS setting to build driver for video_cards_via" cards
