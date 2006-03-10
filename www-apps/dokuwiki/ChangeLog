@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/dokuwiki
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.4 2005/12/18 06:58:09 ramereth Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.5 2006/03/10 04:58:49 ramereth Exp $
+
+*dokuwiki-20060305 (10 Mar 2006)
+
+  10 Mar 2006; Lance Albertson <ramereth@gentoo.org>
+  +dokuwiki-20060305.ebuild:
+  * Version bump + Update SRC_URI 
+  * Marked ~amd64 
+  * Thanks to Elias Probst <elias.probst@gmx.de> bug #125300 for the 
+    patched ebuild
 
   18 Dec 2005; Lance Albertson <ramereth@gentoo.org>
   dokuwiki-20050922.ebuild:
