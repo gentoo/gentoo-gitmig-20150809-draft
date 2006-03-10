@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.1-r2.ebuild,v 1.8 2006/03/10 05:58:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.1-r2.ebuild,v 1.9 2006/03/10 19:42:19 hansmi Exp $
 
 inherit apache-module perl-module eutils multilib
 DESCRIPTION="An embedded Perl interpreter for Apache2"
@@ -8,7 +8,7 @@ SRC_URI="mirror://cpan/authors/id/G/GO/GOZER/${P}.tar.gz"
 HOMEPAGE="http://perl.apache.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ia64 ppc ppc64 ~sparc x86"
 IUSE=""
 SLOT="1"
 
