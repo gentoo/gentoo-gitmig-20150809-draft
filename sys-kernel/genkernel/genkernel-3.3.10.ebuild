@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.3.10.ebuild,v 1.3 2006/02/09 14:57:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.3.10.ebuild,v 1.4 2006/03/10 19:23:30 plasmaroo Exp $
 
 VERSION_DMAP='1.00.17'
 VERSION_DMRAID='1.0.0.rc9'
@@ -78,6 +78,6 @@ pkg_postinst() {
 	ewarn "reiser4 and have a problem, do not file a bug.  We know it does not"
 	ewarn "work and we don't plan on fixing it since reiser4 is the one that is"
 	ewarn "broken in this regard.  Try using a sane filesystem like ext3 or"
-	ewarn "even resier3."
+	ewarn "even reiser3."
 	echo
 }
