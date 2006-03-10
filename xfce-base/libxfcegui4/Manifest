@@ -1,49 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 70f7bfd3b15bd4b142b9f3a7677989be ChangeLog 7912
-RMD160 db939c4a6efa2199f0fa8dbae3a7c5bdc16ea2f6 ChangeLog 7912
-SHA256 8814772a9bef0ac96875cb5f94f0c46059e4858d99a2638f1ba90ca73f0b6073 ChangeLog 7912
+MD5 9afd783c6c823c2c77311b3f17508bfa ChangeLog 8025
 MD5 d07a25a965ca8315611ea916b2d60f3d files/digest-libxfcegui4-4.2.1 69
-RMD160 72b5ebdd876fdbd106d964798cf1233b249a169f files/digest-libxfcegui4-4.2.1 69
-SHA256 dc56b6f0a5fff80212f6b5fd2a42a5d17b491c4b1099e5a93bf1a3cb99270135 files/digest-libxfcegui4-4.2.1 69
 MD5 daed0f9e9ebfcfd09728f348e74eb1b2 files/digest-libxfcegui4-4.2.2 69
-RMD160 99115daa11e4ebb50726fa9c722eebf69abcd950 files/digest-libxfcegui4-4.2.2 69
-SHA256 fe432a77b40de9496b86ef0c41f99f8afec6938c1d91a792e2e9918889cae814 files/digest-libxfcegui4-4.2.2 69
-MD5 0e59da2e2854454cb86d1476d0d0f914 files/digest-libxfcegui4-4.2.2-r1 253
-RMD160 70e0fbb501dcb27f1f1e28143e876796c19f4878 files/digest-libxfcegui4-4.2.2-r1 253
-SHA256 52530d4bd56a45d09de222b811534ada8f55e32022b92c7e09875e9443b9d2b3 files/digest-libxfcegui4-4.2.2-r1 253
+MD5 daed0f9e9ebfcfd09728f348e74eb1b2 files/digest-libxfcegui4-4.2.2-r1 69
 MD5 daed0f9e9ebfcfd09728f348e74eb1b2 files/digest-libxfcegui4-4.2.2-r2 69
-RMD160 99115daa11e4ebb50726fa9c722eebf69abcd950 files/digest-libxfcegui4-4.2.2-r2 69
-SHA256 fe432a77b40de9496b86ef0c41f99f8afec6938c1d91a792e2e9918889cae814 files/digest-libxfcegui4-4.2.2-r2 69
 MD5 c676fb37b17d371979fa290cb4a422fa files/digest-libxfcegui4-4.2.3 69
-RMD160 8db21d8132646d8fdfb316eaefd84430c43bfe07 files/digest-libxfcegui4-4.2.3 69
-SHA256 4a332199f8a93ab2bb9f7ba74ce2950a0014c935ec0c5b72a60c19573f7feeb9 files/digest-libxfcegui4-4.2.3 69
 MD5 a1dfdce2e330255275e6bc6aa4a640f4 files/taskbar-gtk-2.8.patch 875
-RMD160 8202a807a649b9cb2ce43fcf77b748d3f0dc345b files/taskbar-gtk-2.8.patch 875
-SHA256 a221d5714f36d022b6b260cc68645b0ed412f80277da27ac00c5fdf717d8db65 files/taskbar-gtk-2.8.patch 875
 MD5 4c0aa9e2cb3327324da76d4c3aee9bce libxfcegui4-4.2.1.ebuild 419
-RMD160 64dbab2b731675dbed12b3f488b234171959b4ba libxfcegui4-4.2.1.ebuild 419
-SHA256 1208d6bc0441a9d6a564b68b10aac2f6a56c748ddad49cd672670dc0840b06da libxfcegui4-4.2.1.ebuild 419
-MD5 74e64dd5905c4dd97792b2286ab70f96 libxfcegui4-4.2.2-r1.ebuild 505
-RMD160 a241bd2239e989055b51a5141ab07736ad2cab19 libxfcegui4-4.2.2-r1.ebuild 505
-SHA256 9b3c7163b34f6d423c1ed925bcfebd8864191e74b8947f901c180107f03c8b13 libxfcegui4-4.2.2-r1.ebuild 505
+MD5 283a0d03eeddc9339e3bf0c20e95c734 libxfcegui4-4.2.2-r1.ebuild 504
 MD5 a5ee7fdf5aa5486a98c90c49a932b0ee libxfcegui4-4.2.2-r2.ebuild 699
-RMD160 7144b8ccfbaa0606cefa060f266f7989bba6b0bf libxfcegui4-4.2.2-r2.ebuild 699
-SHA256 f6c69b262d2ea4aeb02ccd7505a41bca84b6d882564f56fac22c837d3654eb31 libxfcegui4-4.2.2-r2.ebuild 699
 MD5 7ec0910721ace5d7f0c74c4800748b03 libxfcegui4-4.2.2.ebuild 429
-RMD160 91b1eb20bd3529d4930812ff178068e2dabebb00 libxfcegui4-4.2.2.ebuild 429
-SHA256 7b21db69572ab6ea872343ff0880071f41a71267e1d56c50a2358e359a39caa3 libxfcegui4-4.2.2.ebuild 429
 MD5 ad02ec50d4a34dcc290b0057317ae14a libxfcegui4-4.2.3.ebuild 610
-RMD160 4ebd8952d4197cb889b7f41dedbaf1194748c679 libxfcegui4-4.2.3.ebuild 610
-SHA256 bf38cfd379bd2e9eb86c79b5814db29b79ecf74cf448fe1f4e1ebc1476b5d282 libxfcegui4-4.2.3.ebuild 610
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
-SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6obsJrHF4yAQTrARAp1QAJ9Hqe3tyiHBpnhDRg/pAOlFP4VJIgCeJ0EJ
-6m/mHfE42Reeg2MOCAJmbVs=
-=g8Sz
------END PGP SIGNATURE-----
