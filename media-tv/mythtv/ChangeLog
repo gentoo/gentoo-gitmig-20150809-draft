@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.88 2006/02/27 07:56:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.89 2006/03/10 09:26:01 cardoe Exp $
+
+*mythtv-0.19_p9163-r1 (10 Mar 2006)
+
+  10 Mar 2006; Doug Goldstein <cardoe@gentoo.org> -mythtv-0.18.1-r2.ebuild,
+  -mythtv-0.19.ebuild, -mythtv-0.19-r1.ebuild, +mythtv-0.19_p9163-r1.ebuild:
+  USE flag tweaks, some more error msgs based on configuration, fine tune some
+  depends, install contrib directory
 
 *mythtv-0.19_p9163 (27 Feb 2006)
 

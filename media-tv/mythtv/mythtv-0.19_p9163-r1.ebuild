@@ -1,18 +1,25 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19-r1.ebuild,v 1.1 2006/02/22 20:03:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163-r1.ebuild,v 1.1 2006/03/10 09:26:01 cardoe Exp $
 
 inherit flag-o-matic eutils debug qt3
 
+PATCHREV=9163
+MY_PV="${PV%_*}"
+
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org/"
-SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2
-	http://dev.gentoo.org/~cardoe/files/${P}_8926_9094.patch.bz2"
+SRC_URI="http://www.mythtv.org/mc/${PN}-${MY_PV}.tar.bz2
+	http://dev.gentoo.org/~cardoe/files/${PN}-${MY_PV}-rev${PATCHREV}.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa altivec arts debug dbox2 dvb dvd frontendonly ieee1394 jack joystick lcd lirc mmx nvidia oggvorbis opengl oss unichrome"
+
+IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
+
+IUSE="alsa altivec arts backendonly debug dbox2 dvb dvd frontendonly ieee1394 jack joystick lcd
+lirc mmx oggvorbis opengl xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -24,32 +31,38 @@ RDEPEND=">=media-libs/freetype-2.0
 		x11-libs/libXxf86vm
 		)
 	virtual/x11 )
+	xvmc? (
+		|| ( x11-libs/libXvMC virtual/x11 )
+		video_cards_nvidia? ( media-video/nvidia-glx )
+		video_cards_via? ( || ( x11-drivers/xf86-video-via virtual/x11 ) )
+		video_cards_i810? ( || ( x11-drivers/xf86-video-i810 virtual/x11 ) )
+	)
 	$(qt_min_version 3.3)
 	dev-db/mysql
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	arts? ( kde-base/arts )
-	dvd? ( media-libs/libdvdnav )
+	dvd? ( 	media-libs/libdvdnav
+		media-libs/libdts )
 	dvb? ( media-libs/libdvb )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
-	nvidia? ( media-video/nvidia-glx
-		|| ( x11-libs/libXvMC virtual/x11 ) )
 	oggvorbis? ( media-libs/libvorbis )
 	opengl? ( virtual/opengl )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
-			sys-libs/libavc1394
+			>=sys-libs/libavc1394-0.5.0
 			>=media-libs/libiec61883-1.0.0 )
 	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )
-	!x11-base/xfree
 	!<x11-base/xorg-x11-6.8"
 
 DEPEND="${RDEPEND}
 	|| ( x11-apps/xinit virtual/x11 )"
 
-PDEPEND="~x11-themes/mythtv-themes-${PV}"
+PDEPEND="=x11-themes/mythtv-themes-${MY_PV}*"
 
-MYTHTV_GROUPS="video,audio"
+S="${WORKDIR}/${PN}-${MY_PV}"
+
+MYTHTV_GROUPS="video,audio,plugdev,tty"
 
 pkg_setup() {
 
@@ -71,11 +84,29 @@ pkg_setup() {
 		die "xorg-x11 needs XV support"
 	fi
 
-	if use nvidia; then
+	if use xvmc && use video_cards_nvidia; then
 		echo
-		ewarn "You enabled the 'nvidia' USE flag, you must have a GeForce 4 or"
+		ewarn "You enabled the 'xvmc' USE flag, you must have a GeForce 4 or"
 		ewarn "greater to use this. Otherwise, you'll have crashes with MythTV"
 		echo
+	fi
+
+	if built_with_use dev-db/mysql utf8; then
+		echo
+		ewarn "Your MySQL installation on this machine most likely won't work"
+		ewarn "because you compiled it with USE=utf8. Either use another mysql"
+		ewarn "server (on another machine) or recompile MySQL without utf8."
+		echo
+	fi
+
+	if has x11-libs/libX11 virtual/x11; then
+		echo
+		eerror "Congratulations. You've unmasked modular X but somehow managed"
+		eerror "to royally screw up its installation. This means you've broke"
+		eerror "dependancy checking for ALL your X based apps. You don't have"
+		eerror "to believe me but don't insist the dependancies for MythTV are"
+		eerror "broken, because it is you that is broken."
+		die "You are broken"
 	fi
 
 	einfo
@@ -91,21 +122,17 @@ src_unpack() {
 	cd ${S}
 
 	#Fixes of the bugs found in the 0.19 release
-	#Release rev: 8926
-	#Patch rev: 9094
-	epatch "${WORKDIR}"/${P}_8926_9094.patch
+	epatch "${WORKDIR}"/${PN}-${MY_PV}-rev${PATCHREV}.patch
 }
 
 src_compile() {
-	use unichrome && use nvidia && die "You can not have USE="unichrome" and USE="nvidia" at the same time. Must disable one or the other."
 	local myconf="--prefix=/usr --mandir=/usr/share/man"
 	use oss || myconf="${myconf} --disable-audio-oss"
 	use alsa || myconf="${myconf} --disable-audio-alsa"
 	use arts || myconf="${myconf} --disable-audio-arts"
 	use jack || myconf="${myconf} --disable-audio-jack"
 	use altivec || myconf="${myconf} --disable-altivec"
-	use unichrome && myconf="${myconf} --enable-xvmc"
-	use nvidia && myconf="${myconf} --enable-xvmc"
+	use xvmc && myconf="${myconf} --enable-xvmc"
 	myconf="${myconf}
 		$(use_enable lirc)
 		$(use_enable joystick joystick-menu)
@@ -156,12 +183,25 @@ src_compile() {
 	hasq distcc ${FEATURES} || myconf="${myconf} --disable-distcc"
 	hasq ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
 
-#	if use frontendonly; then
-#		##Backend Removal
-#		cd ${S}
-#		sed -e "s:CCONFIG linux backend:CCONFIG linux:" \
-#			-i 'configure' || die "Removal of mythbackend failed"
-#	fi
+	if use frontendonly; then
+		##Backend Removal
+		ewarn
+		ewarn "You are using the experimental feature for only installing the frontend."
+		ewarn "You will not get Gentoo support nor support from MythTV upstream for this."
+		ewarn "If this breaks, you own both pieces."
+		ewarn
+		myconf="${myconf} --disable-backend"
+	fi
+
+	if use backendonly; then
+		##Frontend Removal
+		ewarn
+		ewarn "You are using the experimental feature for only installing the backend."
+		ewarn "You will not get Gentoo support nor support from MythTV upstream for this."
+		ewarn "If this breaks, you own both pieces."
+		ewarn
+		myconf="${myconf} --disable-frontend"
+	fi
 
 	# let MythTV come up with our CFLAGS. Upstream will support this
 	CFLAGS=""
@@ -192,14 +232,15 @@ src_install() {
 		newconfd ${FILESDIR}/mythbackend-0.18.2.conf mythbackend
 	fi
 
-	dobin ${FILESDIR}/runmythfe
+	if ! use backendonly; then
+		dobin ${FILESDIR}/runmythfe
 
-	ewarn "Want MythFrontend to always? Add the following to your"
-	ewarn "myth user. i.e. My user is mythtv"
-	echo "crontab -e -u mythtv"
-	echo "* * * * * /usr/bin/runmythfe &"
-	ewarn "And you're all set."
-
+		ewarn "Want MythFrontend to always? Add the following to your"
+		ewarn "myth user. i.e. My user is mythtv"
+		echo "crontab -e -u mythtv"
+		echo "* * * * * /usr/bin/runmythfe &"
+		ewarn "And you're all set."
+	fi
 	dodoc keys.txt docs/*.{txt,pdf}
 	dohtml docs/*.html
 
@@ -207,6 +248,9 @@ src_install() {
 	chown -R mythtv "${D}"/etc/mythtv
 	keepdir /var/log/mythtv
 	chown -R mythtv "${D}"/var/log/mythtv
+
+	insinto /usr/share/mythtv/contrib
+	doins contrib/*
 }
 
 pkg_preinst() {
@@ -223,5 +267,8 @@ pkg_postinst() {
 	echo
 	einfo "To always have MythBackend running and available run the following:"
 	echo "rc-update add mythbackend default"
+	echo
+	ewarn "Your recordings folder must be owned by the user 'mythtv' now"
+	echo "chown -R mythtv /path/to/store"
 }
 
