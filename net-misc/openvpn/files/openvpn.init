@@ -3,8 +3,8 @@
 # Distributed under the terms of the GNU General Public License v2
 
 VPNDIR="/etc/openvpn"
-VPN="${myservice##*.}"
-if [[ -n ${VPN} && ${myservice} != "openvpn" ]]; then
+VPN="${SVCNAME##*.}"
+if [[ -n ${VPN} && ${SVCNAME} != "openvpn" ]]; then
 	VPNPID="/var/run/openvpn.${VPN}.pid"
 else
 	VPNPID="/var/run/openvpn.pid"
@@ -31,7 +31,7 @@ checktundevice() {
 }
 
 start() {
-	ebegin "Starting ${myservice}"
+	ebegin "Starting ${SVCNAME}"
 
 	checktundevice || return 1
 
@@ -53,7 +53,7 @@ start() {
 }
 
 stop() {
-	ebegin "Stopping ${myservice}"
+	ebegin "Stopping ${SVCNAME}"
 	start-stop-daemon --stop --exec /usr/sbin/openvpn --pidfile "${VPNPID}"
 	eend $?
 }

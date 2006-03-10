@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4ef7e8b5e35d1d98dfdcb3af0fc55c3f ChangeLog 11243
 RMD160 850dbfea2dade7e3c03af3ab598371b97fcf5ed9 ChangeLog 11243
 SHA256 c93211ad83927b0b1a52286d40fd3110feaa41f7e21addf1f679def9cc03c5d9 ChangeLog 11243
@@ -7,12 +10,19 @@ SHA256 3468b243cfcdfa3b3de259c138e29325b45aac5d6a783fcce82d0e3608cd9896 files/di
 MD5 9f0fcb64287dc55bb770ca86415e5cdd files/openvpn-2.0.4-darwin.patch 717
 RMD160 66aa5ea349329cf3e6089aa75eb7c80e0d21063b files/openvpn-2.0.4-darwin.patch 717
 SHA256 ad70b77c10bb57a07af3d512e953fc8b5a07108df5bf9795e0cb12e1ba2b2136 files/openvpn-2.0.4-darwin.patch 717
-MD5 e3c739fa378e74cf7a83a17f4a2e30cc files/openvpn.init 1449
-RMD160 656afe868d939e6d6122c63f73146a157d6c6646 files/openvpn.init 1449
-SHA256 5a40a7292f91ac3d7bfd19739147cbacda9253e9636f003f1e882051c9e8dbad files/openvpn.init 1449
+MD5 d4061ba2232ddd94c4f4f4f26ae82586 files/openvpn.init 1441
+RMD160 4287bc944c914772348431cb6356191aa61d8215 files/openvpn.init 1441
+SHA256 0e08f772a4fbbb28c0e9190c67430da5cc8d78acadbbb1b61447b96df2c96399 files/openvpn.init 1441
 MD5 62aa0438042b29eba4a6afd971037761 metadata.xml 440
 RMD160 120089ec9c799161dfeeacd9a3adfc40b4317f06 metadata.xml 440
 SHA256 408ca4fc4f58fa21e629582d0a44a759f9695a018479d70efbd3338b6bdbcfd6 metadata.xml 440
 MD5 8533ac9753dad98c69bf979a98ac0641 openvpn-2.0.5-r2.ebuild 3866
 RMD160 af06b66ebaa4d5a87242968e552b90ee1f4b2cd9 openvpn-2.0.5-r2.ebuild 3866
 SHA256 92880feb5eee1bdf41a3b627fd84119384ffd5706c09850f642fe7f42eb286d0 openvpn-2.0.5-r2.ebuild 3866
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEEW7eEbVyYKaZ/NERAmMnAJ46jJBgOqcBXRLNIazEh8s6tlFAKgCfYcHG
+tPsJFZ8jMBdE+Spxyf5t2Ek=
+=OIKB
+-----END PGP SIGNATURE-----
