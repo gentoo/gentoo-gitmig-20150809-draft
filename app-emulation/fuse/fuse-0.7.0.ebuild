@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.7.0.ebuild,v 1.4 2005/10/02 16:48:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.7.0.ebuild,v 1.5 2006/03/10 06:02:40 halcy0n Exp $
+
+inherit eutils
 
 DESCRIPTION="Free Unix Spectrum Emulator by Philip Kendall"
 HOMEPAGE="http://fuse-emulator.sourceforge.net/"
@@ -36,6 +38,12 @@ DEPEND="dev-lang/perl
 	gnome? ( =dev-libs/glib-1* )
 	libdsk? ( >=app-emulation/libdsk-1.1.5
 		app-emulation/lib765 )"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+}
 
 src_compile() {
 	local guiflag
