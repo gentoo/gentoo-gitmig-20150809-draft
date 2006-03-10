@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.16.ebuild,v 1.8 2006/02/18 11:35:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.16.ebuild,v 1.9 2006/03/10 18:39:57 vivo Exp $
 
 # helper function, version (integer) may have section separated by dots
 # for readbility
@@ -103,7 +103,8 @@ mysql_mv_patches() {
 	local index_file="${1:-"${WORKDIR}/mysql-extras/index.txt"}"
 	local my_ver="${2:-"${MYSQL_VERSION_ID}"}"
 	local my_test_fx=${3:-"_mysql_test_patch_easy"}
-	local dsc=(), ndsc=0 i
+	local dsc ndsc=0 i
+	dsc=( )
 
 	# values for flags are (2^x):
 	#  1 - one patch found
