@@ -1,18 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 888455a8f4ac2e2b53c476fb0f48e549 ChangeLog 9589
-RMD160 a2e7ee8d07f34a8ab03348e47889c3caa0580e3b ChangeLog 9589
-SHA256 378004960b84d1dfe563a2d9acc5400e30095f2977d8bdbe1df8a217dff14900 ChangeLog 9589
+MD5 1387296e22e0e457eaa51089e0af9c4c ChangeLog 9699
+RMD160 39ff13284edfa5600b105db068d32a0dc417c0b5 ChangeLog 9699
+SHA256 fbdd7ebeab9ae312e21b2f9414e865a0ea93042c10279c134ad11e7fa4647aaf ChangeLog 9699
 MD5 4a12b02268da91a70551d700de39f32a files/digest-sound-juicer-2.10.1 72
 RMD160 ba5561da36a9214b07808f6b5519b149128f5485 files/digest-sound-juicer-2.10.1 72
 SHA256 fce4729ca17bcfcbfe3f5b08537636c2bf9b6f736e1dbb6c8123217440a6b435 files/digest-sound-juicer-2.10.1 72
 MD5 4538566af04ec19705e775fb45b5dada files/digest-sound-juicer-2.12.2-r1 72
 RMD160 aa8a4dfdcd38f9d957fa00fc380e1afad8fcd10d files/digest-sound-juicer-2.12.2-r1 72
 SHA256 b551e7da60ff1d1aec684ea2494cfd1053d8894163799c6568919f945102b1c1 files/digest-sound-juicer-2.12.2-r1 72
-MD5 5103b579529115f822154ff655959b52 files/digest-sound-juicer-2.12.3 72
-RMD160 0630564b34b33ba18669e1214b7bf1db66f57a88 files/digest-sound-juicer-2.12.3 72
-SHA256 2dab262de37bd444ebf512cea2e87509ad4f1276e660ff1c32d61a497fc51af2 files/digest-sound-juicer-2.12.3 72
+MD5 2692d361222d33a5cd828596048b1e98 files/digest-sound-juicer-2.12.3 262
+RMD160 b0c3c411e3fed93c1aff0490a0d16dd135a0db76 files/digest-sound-juicer-2.12.3 262
+SHA256 d6bd9ef188936597f460009b3bd11802c32b6ea96af2d4ce7918c3e7932fbdcb files/digest-sound-juicer-2.12.3 262
 MD5 cbfffb6cc091ffb81864b0d6c464ad92 files/sound-juicer-2.12.2-file-chooser-3.patch 802
 RMD160 4a04e1620f46b59d265bb385408cc86ee15252e2 files/sound-juicer-2.12.2-file-chooser-3.patch 802
 SHA256 763c4be70bd3d6623adc0aefdf368a74633eb2b70b89d0159d6eaa30f1e04c84 files/sound-juicer-2.12.2-file-chooser-3.patch 802
@@ -25,13 +22,6 @@ SHA256 b4aa2801f0b036d750d0edcf2a920fdef6825454aaeb3bd9fab6ccc16360daed sound-ju
 MD5 5bbc1031e86b118c601ff99b49b74733 sound-juicer-2.12.2-r1.ebuild 1468
 RMD160 210fb6b58e36d5e8dd0ab47e023591ffa9aa29a0 sound-juicer-2.12.2-r1.ebuild 1468
 SHA256 c5ada1d7bfd253cd5afd95fc67cd7d963fda0426739941b2de089610843ab908 sound-juicer-2.12.2-r1.ebuild 1468
-MD5 b30a6982ac1248bee84ed374e01bea8d sound-juicer-2.12.3.ebuild 1326
-RMD160 cca4423bbf3f0be4459fc2d7b8763961ba990100 sound-juicer-2.12.3.ebuild 1326
-SHA256 fdb3b3de2933ca302221c406f02de5c8b6f2415014eb8d388490137b4010ef56 sound-juicer-2.12.3.ebuild 1326
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6RY8JrHF4yAQTrARAl31AJ9AfuSL3IDW/smqWog4UP3+DTsN6wCaA42u
-r/FLYZnss2BjvEf350LTotQ=
-=ysL8
------END PGP SIGNATURE-----
+MD5 a74f389b841bbd836247381a9b6f47cd sound-juicer-2.12.3.ebuild 1325
+RMD160 8635e966860b51a981d76b34ffc488a8e9fed141 sound-juicer-2.12.3.ebuild 1325
+SHA256 8e7ec9c181f8a3af7e28f06cc7cafe0e0cfdf5794fd7bf5111a3a2cb839cb02c sound-juicer-2.12.3.ebuild 1325

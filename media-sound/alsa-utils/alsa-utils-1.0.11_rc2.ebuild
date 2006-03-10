@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.11_rc2.ebuild,v 1.7 2006/03/01 05:22:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.11_rc2.ebuild,v 1.8 2006/03/10 00:07:35 agriffis Exp $
 
 inherit eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://alsaproject/utils/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0.9"
-KEYWORDS="alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="nls"
 
 DEPEND=">=sys-libs/ncurses-5.1
