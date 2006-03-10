@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f3d925ac5621e4ecd1e8d9b4c8d46df4 ChangeLog 5593
-RMD160 f2db724af99ddbafe8266919f563ce47e706dff9 ChangeLog 5593
-SHA256 ad2c994a1b4eb6f66053cdaa319bd9e3ba7e4cce178836f87b4bf9ce32c0df09 ChangeLog 5593
+MD5 1c4d7b85335f94ea44679496f7cda9db ChangeLog 5694
+RMD160 eff95a2e7ba84b5daa6911da9add4f0e0bcbaeaf ChangeLog 5694
+SHA256 c98b64c3c28a5bbae282f7f64de084aaebba4b5b63a248fae0ec8566b532ba7a ChangeLog 5694
 MD5 cea1b5e70a462468c8eff6794df9c876 fetchyahoo-2.10.0.ebuild 1090
 RMD160 60ff8fd53afeddbfb1f1a153cd4802a00d75ef53 fetchyahoo-2.10.0.ebuild 1090
 SHA256 e5a9b0b110be25e77ab5b9e81e5f41400fed8e93e71c67667586f41738abcc80 fetchyahoo-2.10.0.ebuild 1090
-MD5 14ea6f7b110af0d2c0873c93b4655977 fetchyahoo-2.10.2.ebuild 1088
-RMD160 8ebfbad90cd2419354b2727abdc85eb21c20cbb2 fetchyahoo-2.10.2.ebuild 1088
-SHA256 acd79962b80af519f3b86b9234f84f49808f39d90b70dffcde767bf203649cfd fetchyahoo-2.10.2.ebuild 1088
+MD5 e78dec095be82129f7c11502aa63b06d fetchyahoo-2.10.2.ebuild 1088
+RMD160 b8ddf97f73189d5ad7a729b54b6ad7a6179c07dd fetchyahoo-2.10.2.ebuild 1088
+SHA256 50f0e9952d55caafba34c89c7a6908d805f303e58da7ea4446707161616ab34a fetchyahoo-2.10.2.ebuild 1088
 MD5 487fdb3cdcf2bce791d4b74840919d11 files/digest-fetchyahoo-2.10.0 68
 RMD160 5bebe6d652de12bf71ce33ea51c15ef784497d34 files/digest-fetchyahoo-2.10.0 68
 SHA256 4429c036e60eca1b5773a5762c0c8c128a5ad3db147c6ab1104c4022b6766cb6 files/digest-fetchyahoo-2.10.0 68
@@ -19,10 +16,3 @@ SHA256 107162175c745b9dcc2c67fc92376e739e6e7210c38b23d52835832684263125 files/di
 MD5 3d496e6508901dc733aa1f375a56d5b7 metadata.xml 221
 RMD160 9a7b2e74dac3316f205898ea552e2122cfee5543 metadata.xml 221
 SHA256 a1ed3ee948281ffe111c6c4587df3547b3ea57d8603c2e888b6842c03f2dca7e metadata.xml 221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEAKd7QlM6RnzZP+IRAvq2AKCXUghiNQsfjJer0KyQwme3fMcH3ACfUUYO
-7JD4zisEK9kMRgWulOCKkHw=
-=ut+w
------END PGP SIGNATURE-----
