@@ -1,20 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fd9071afd940f2e2dd387bcef65d9a3a ChangeLog 3808
+MD5 eb106696e4132e73617dbe29307cae13 ChangeLog 4037
 MD5 25fc41dea981da0f005db63a43768868 files/digest-hcfpcimodem-1.06-r1 144
 MD5 395bd74ffc3553d4ef151865b7601bb1 files/digest-hcfpcimodem-1.08 144
-MD5 a2b09ba68937c610b9c2f5156690c3a4 files/digest-hcfpcimodem-1.10 144
+MD5 a2b09ba68937c610b9c2f5156690c3a4 files/digest-hcfpcimodem-1.10-r1 144
 MD5 790c0fbf3202d068fbb35b11296985c2 files/hcfpcimodem-1.06-simple_class.patch 5124
 MD5 9ec542df181d86f49f4d66377de83a59 files/hcfpcimodem-1.08-upstream-20051215.patch 2777
+MD5 d49ba111af3016191da29fc85232ae77 files/hcfpcimodem-1.10-suspend2.patch 800
 MD5 78b35559c72b662ac59d18d5c59ab93f hcfpcimodem-1.06-r1.ebuild 1904
 MD5 9180a9a60e4066ac19d6caaba94f527b hcfpcimodem-1.08.ebuild 1859
-MD5 82cce9c3134c78f5cb5da3248e41c378 hcfpcimodem-1.10.ebuild 1777
+MD5 91f632c23d36f21a6e17bc567c4cc219 hcfpcimodem-1.10-r1.ebuild 1889
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD+548jG8pv1lIUX4RAmk7AKCePP0VnVCwX9CIOhsdVlf/thOdMACeI+A/
-WFT68L4VJJFhbgxA+cBlblU=
-=zico
+iD8DBQFEEY2ejG8pv1lIUX4RAkB9AJ9uSgbs7CitLsHKmay7hpZRzesRkQCfdiuG
+xvHHd6gvFZCxTnF2s3tUFIY=
+=xKTW
 -----END PGP SIGNATURE-----

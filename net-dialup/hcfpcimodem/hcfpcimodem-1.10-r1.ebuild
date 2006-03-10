@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.10.ebuild,v 1.1 2006/02/21 23:11:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.10-r1.ebuild,v 1.1 2006/03/10 14:30:39 mrness Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND="dev-lang/perl
 
 S="${WORKDIR}/${P}full"
 
-pkg_setup () {
+pkg_setup() {
 	MOD_N="hcfpci"
 	# Check to see if module is inserted into kernel, otherwise, build fails
 	if [ "`lsmod | sed '/^'$MOD_N'serial/!d'`" ]; then
@@ -44,8 +44,14 @@ pkg_setup () {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+
+	epatch "${FILESDIR}/${P}-suspend2.patch"
+}
+
 src_compile() {
-	emake all || die
+	emake all || die "make failed"
 }
 
 pkg_preinst() {
@@ -58,7 +64,7 @@ pkg_preinst() {
 }
 
 src_install () {
-	make PREFIX="${D}/usr/" ROOT="${D}" install || die
+	make PREFIX="${D}/usr/" ROOT="${D}" install || die "make install failed"
 
 	use doc && dodoc "${DISTDIR}/${MY_DOC}"
 }
