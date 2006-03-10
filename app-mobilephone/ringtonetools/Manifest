@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aa2441f654eabace230300474df7b1f8 ChangeLog 2140
+MD5 7e6a921a31e984167cbccbdccf41e355 ChangeLog 2241
+RMD160 65ef3b23e9e24fce3f1b921b79f43884fdc6a8b1 ChangeLog 2241
+SHA256 2b2cac3aae15afc61d8b6c562e1dbc6a9925e2457ae61abc1f978e348ec6804b ChangeLog 2241
 MD5 7a05a2ff80ea525ec5fb1b64716fdc87 files/digest-ringtonetools-2.25 69
+RMD160 6e3792051125dc58d70b58a54e31db5d83b22b18 files/digest-ringtonetools-2.25 69
+SHA256 6f6b3c8ca64ad1204a0eece25c5d1bb7f811e7675e5ce0619454c9d6c83d2fda files/digest-ringtonetools-2.25 69
 MD5 5f82ddb66312b23dbbe92c30fe8ffe8f files/digest-ringtonetools-2.26 69
+RMD160 9d56e118293d561a5a8dcb94c71128aa4a62401e files/digest-ringtonetools-2.26 69
+SHA256 d16e06cf75886d9787e8144d5248fb225005a27089a9aad21d9bdbde7722ef60 files/digest-ringtonetools-2.26 69
 MD5 e0919fb286fd58ee9c1f699d99da7235 metadata.xml 305
+RMD160 76539196faceab5d8ac8fa07c2c68c37685cdba3 metadata.xml 305
+SHA256 f6b859172b2a92cb6b24f9c314b7545953e96863949115380fd6e3d97fa6fd8d metadata.xml 305
 MD5 e6e3a3d252bb9ed76e2aac747af43fcf ringtonetools-2.25.ebuild 662
-MD5 ceb50cc43908c735a8446a4d393fee87 ringtonetools-2.26.ebuild 663
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEAHdujG8pv1lIUX4RAnzsAJ9g3XVLiruvPwCARZ9UEeR2C/0LJgCgwAWZ
-WKGVxQgPT4JRCKV653edPJw=
-=56EX
------END PGP SIGNATURE-----
+RMD160 9c59b06a07d9df92fcf019b8421801cd96c16190 ringtonetools-2.25.ebuild 662
+SHA256 bdbc489ec7f61c0c0412827e8bc09da0776df86408cf00ef44e1d7641f8f706e ringtonetools-2.25.ebuild 662
+MD5 a5c41d15e5f6a95568e89ac44cd8b9c9 ringtonetools-2.26.ebuild 662
+RMD160 c791f86670c5c25d6864b94a55fd65bb68f146df ringtonetools-2.26.ebuild 662
+SHA256 4b7d7284c01b9da574bc05551e2a660b192e6201346a9d9996049de1f0fb0b69 ringtonetools-2.26.ebuild 662
