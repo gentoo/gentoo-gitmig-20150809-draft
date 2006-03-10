@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2ffddbdd359e000bd7223736e1e90001 ChangeLog 1754
-RMD160 79622d006b6d3b9f59852760f8cbe7c155e178fd ChangeLog 1754
-SHA256 d5d70dd24f5b2494553a7ea67be190ae246a4d4d197f019c6755323d88c011b7 ChangeLog 1754
+MD5 61c5492dd17e7efa2b50d23b65b227ba ChangeLog 1857
+RMD160 788436bdeaa7e706e0fea9b80fa354eb76ed351c ChangeLog 1857
+SHA256 2fdb398b4c258409fa44196f0147e8423fa4e72bd1ddaa5908ef7f58a5b80133 ChangeLog 1857
 MD5 195505d69578f84ed6f92646e4f56d48 chillispot-0.99.ebuild 957
 RMD160 c91062227308950af4dc7a4e3b5d5c8c04c75330 chillispot-0.99.ebuild 957
 SHA256 9fb1914eb5cac0614e56378899aedca8286cecaffa307cd1bece7714403541d4 chillispot-0.99.ebuild 957
-MD5 d8b35cd74db225d32c832a40f73e3ac0 chillispot-1.0.ebuild 1086
-RMD160 cdede04f9530233e4938162317a9ec905a0ed044 chillispot-1.0.ebuild 1086
-SHA256 6709e9bc50e8c8c6777ae952188ee558c8abbb9a662f98e2254da73d7fdeab99 chillispot-1.0.ebuild 1086
+MD5 ecef75180389f2ebfdbfb5fc86eea91c chillispot-1.0.ebuild 1088
+RMD160 960f8e9f2747ecd562d965f1306fe4d86304f275 chillispot-1.0.ebuild 1088
+SHA256 fd76780cbba2f83c69fac6ade9cbbca8b399da2d0bec0aa433017587400bb301 chillispot-1.0.ebuild 1088
 MD5 ac3fecfbcdad5be9fcc8b48b3ceac893 files/chillispot 823
 RMD160 d23bb68f059450e9cbdbc22f7f9644eaa2766902 files/chillispot 823
 SHA256 762b797b49740cfb411398e79f03973c037df4b3d74a37c3f73c67d5908c0afd files/chillispot 823
@@ -19,18 +16,9 @@ SHA256 259af928283ea87ec76f8f0edb89e284c9ba302f9ec42a52cde8991c542b5318 files/ch
 MD5 5718ef8b1369dc44135cbf9765c605b6 files/digest-chillispot-0.99 67
 RMD160 5f646dc2391cea4a3ce541ed7fe47c33ac3525f3 files/digest-chillispot-0.99 67
 SHA256 b2c5fffbacf352917a6fe1136661be79a7485898567ec322496e427c42df0cf3 files/digest-chillispot-0.99 67
-MD5 aaccf6391e152850e62cdf6824c7345d files/digest-chillispot-1.0 244
-RMD160 d1a27b0e8218f70366f09ca90af039dcf9a4df9e files/digest-chillispot-1.0 244
-SHA256 4346f4f9c86380d268f561d037bb64269c5f9dfb118edd2af4bba5067cdc4b46 files/digest-chillispot-1.0 244
+MD5 fc804fd6899a6f78a83a25a42a545f3a files/digest-chillispot-1.0 244
+RMD160 dc7c061c0b4ae1f97a4735618334f1d0e6abfe8b files/digest-chillispot-1.0 244
+SHA256 6b3bafe809acae1471fc095154fed410cfa98bcbc9ddbaf42dc2bf1c147fb9a8 files/digest-chillispot-1.0 244
 MD5 86dbc1c8f833da6ec3297a3ab4667c30 metadata.xml 651
 RMD160 a7c43df50fc2fed539f290e65db02d9385daba29 metadata.xml 651
 SHA256 2da1fedef83847fb3c7680e12df467e61ba350dd5897855d82ac75db16195595 metadata.xml 651
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iQCVAwUBRArOzZ4WFLgrx1GWAQJdYwP7Brr8l7MSVcJ5lF1mINFPw0qwc+fIUINJ
-R0TdC5wV2qQ4iC9AG17XyhzUlPSgvdc/Nu8LU2P+FpSLSnUgKtSXrO2xrhqnJ6Ef
-Z+oUm3ML4FuL3u9ULzmbDFoIZIskk2Cx2Zt7PSTAwtFUzdSFqG7rRe6bbOBIUbDB
-xX9TDuomamw=
-=wn+i
------END PGP SIGNATURE-----
