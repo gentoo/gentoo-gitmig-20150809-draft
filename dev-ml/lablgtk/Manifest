@@ -1,13 +1,49 @@
-MD5 6e934f3cd648263ebe99894ebde86f5c lablgtk-1.2.6.ebuild 1250
-MD5 c4c12b4432ed151fd8c2d5c5ae3f125c lablgtk-2.4.0.ebuild 2150
-MD5 18405341ad8e64754f0cfa7704a342a3 lablgtk-1.2.5.ebuild 1243
-MD5 b145b55a801224a43737ea1f45423875 lablgtk-2.6.0.ebuild 2124
-MD5 b99cb535b97431267ce7b72529504557 ChangeLog 5726
-MD5 845dbbef4eb685e1bfd5f9e13a03f2b8 metadata.xml 225
-MD5 37fcb926e404a63d7c2a0034a7232264 lablgtk-1.2.7.ebuild 1307
-MD5 581f9b34fc71deb0d4970288ac26d18e files/lablgtk-2.4.0-gcc34.patch 563
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bf6f3e885a2a787e313a723c0dc23e8e ChangeLog 5829
+RMD160 6ee63e3dfbaeaa867d7900c50ecf9ee588bcbee1 ChangeLog 5829
+SHA256 bc92c319d42cfcb0488bd44ef29841b4155cab352c8759f42b6c63895555026c ChangeLog 5829
 MD5 58e497f72394c82abd2991deb196cb5d files/digest-lablgtk-1.2.5 65
+RMD160 309728bfddc5a35505cbc49fba850c77f6e3f134 files/digest-lablgtk-1.2.5 65
+SHA256 1176abf010b5913910cb9b52fd3ffdc734d280076e63b86c68166cda84ff148e files/digest-lablgtk-1.2.5 65
 MD5 7942d753e9ae00567c6a9f7de0242d53 files/digest-lablgtk-1.2.6 65
+RMD160 7e0cb9fcd6c0c913958015097bc20705d0cf5887 files/digest-lablgtk-1.2.6 65
+SHA256 92f4ab09664461f36e301395e4405a5e531d493104c0e3c184f2d4e5a5dfdf7c files/digest-lablgtk-1.2.6 65
 MD5 a31a4824fac7faf0a0df2d8b8705b67f files/digest-lablgtk-1.2.7 65
+RMD160 184aee6b61fba5b32d71abd3da18ba885f4f4561 files/digest-lablgtk-1.2.7 65
+SHA256 d9340199fdbed3482785f336f23d619f4cab339a34cd734fd22728441632b90d files/digest-lablgtk-1.2.7 65
 MD5 7cbae54b1d8a667973bd4d3689f25605 files/digest-lablgtk-2.4.0 65
+RMD160 a40db27e3c5673930e5a58cf301eb49967f988cf files/digest-lablgtk-2.4.0 65
+SHA256 20bc14cfacc5032350b4b3a8539e8d87530dc376e4fa284ad7f67d34b119891f files/digest-lablgtk-2.4.0 65
 MD5 3742965f7b5abc9cc04644f9ce631853 files/digest-lablgtk-2.6.0 65
+RMD160 898469686362569f4110c232ffe8e2318589ac46 files/digest-lablgtk-2.6.0 65
+SHA256 45d6d01dae5310c6cce987be41983d56867f6201c24bfe36cf94951b196b8065 files/digest-lablgtk-2.6.0 65
+MD5 581f9b34fc71deb0d4970288ac26d18e files/lablgtk-2.4.0-gcc34.patch 563
+RMD160 99635722d359af71b09ea655b28af8ba465e85df files/lablgtk-2.4.0-gcc34.patch 563
+SHA256 6d087ccc994d25782c05d7ef7d666abd8147483b7a236ecc5f51f59ad96051bd files/lablgtk-2.4.0-gcc34.patch 563
+MD5 18405341ad8e64754f0cfa7704a342a3 lablgtk-1.2.5.ebuild 1243
+RMD160 a589a823f8ddcadfd0ca6210242b304ccd8aba4c lablgtk-1.2.5.ebuild 1243
+SHA256 6b7743ccd204161714acd71cabddf143130e27114133fbb76f3ae6f24b67f764 lablgtk-1.2.5.ebuild 1243
+MD5 6e934f3cd648263ebe99894ebde86f5c lablgtk-1.2.6.ebuild 1250
+RMD160 ccceb06d9d7a4f2654c126bf44cc2091e79bf9a2 lablgtk-1.2.6.ebuild 1250
+SHA256 183f197a088293f759987718591366cffadffd63c2588b0108b1f219f8328ec1 lablgtk-1.2.6.ebuild 1250
+MD5 37fcb926e404a63d7c2a0034a7232264 lablgtk-1.2.7.ebuild 1307
+RMD160 3a8648c92c2239e1570ce4187e18b98233cb384e lablgtk-1.2.7.ebuild 1307
+SHA256 89f39884fe675b24fc76b64420598916e6e8db4cb6813f3bef03bc2c8e180568 lablgtk-1.2.7.ebuild 1307
+MD5 c4c12b4432ed151fd8c2d5c5ae3f125c lablgtk-2.4.0.ebuild 2150
+RMD160 cfad8065a8c3b59bd2752fdc287dcb3ed8b7ab1c lablgtk-2.4.0.ebuild 2150
+SHA256 4ddf19c8822359ba2af7276cb9c581194c067784e91c2948ab0e1b085e6ddd50 lablgtk-2.4.0.ebuild 2150
+MD5 8b0f4a15073be2c35a4c371e51a6c84a lablgtk-2.6.0.ebuild 2125
+RMD160 0d0eed9c5b28b57f922b87974626c364be97fff7 lablgtk-2.6.0.ebuild 2125
+SHA256 e546d600043fa8722bff0ba19527200594ecf898b2628aad311cacd19267758d lablgtk-2.6.0.ebuild 2125
+MD5 845dbbef4eb685e1bfd5f9e13a03f2b8 metadata.xml 225
+RMD160 138a4a018327b252bca64596a96ca8ba9889518e metadata.xml 225
+SHA256 5c308b27332bed379ee06e522386288fa511e83e6449d834dea9ebcd8e827592 metadata.xml 225
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFEEOmrJrHF4yAQTrARAjrPAJ4gIj3i07objbjYvzQJyQBo4bZhvgCgxG/+
+yDGXvsxjpNLuNR0rIc1FVEc=
+=tW6i
+-----END PGP SIGNATURE-----
