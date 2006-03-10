@@ -1,58 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b7ea210096354b5a017b04e52f8b2abc ChangeLog 11685
-RMD160 aa3b07d4931a0c2351408d42f6133d6b791e53a5 ChangeLog 11685
-SHA256 114d36f245b405ef6624b10baef3b39aa2ccb4452808d7ae6b12c6aebb143a76 ChangeLog 11685
+MD5 b2433db541c6ede43805f5c990fbbf1a ChangeLog 11783
 MD5 c18e90be9c36c7efb06211733ad765ff files/1.2.7-debugflag.patch 396
-RMD160 c1c52e57c34dd1b218fd26b338be7b3a47aa7cc6 files/1.2.7-debugflag.patch 396
-SHA256 a00700f5170bf56bef28ffce010c530734f97fbf5d4341b08e9804d022314655 files/1.2.7-debugflag.patch 396
 MD5 5f64e4b71c311ff7b6489953fc8bf1f9 files/1.2.7-nptl.patch 1178
-RMD160 dd48fbebb541e6e4257b99cd09a72701e3cbc4b9 files/1.2.7-nptl.patch 1178
-SHA256 cf319b0a91f563fbae6a3590264f8bfe9d767ad55179f616adf804609b1aa0db files/1.2.7-nptl.patch 1178
 MD5 5dbb2a47d1d863a55f564e874c871d30 files/1.3.0-gpgme3_hack.patch 878
-RMD160 d01f33df1e045791ba169759a0476c2a4bfe20c9 files/1.3.0-gpgme3_hack.patch 878
-SHA256 7cdf7f5a111b07b1b37db144dec58464851ff4daa7c6cef7155ca9d5254afb2b files/1.3.0-gpgme3_hack.patch 878
 MD5 52dadf7b64ef4fb690c7892d94b445d6 files/1.3.0-no_stupid_koloboks.patch 3160
-RMD160 242a92a26fcaa1e86efdadfe330ae780ae80d713 files/1.3.0-no_stupid_koloboks.patch 3160
-SHA256 a227ed596bd50fdbee52854fde7381f12b1ab4326b7f222ab89f6e6254ca9c1c files/1.3.0-no_stupid_koloboks.patch 3160
 MD5 100dc5f1d551dc769a337a71734d0e59 files/1.3.0-suse_bool.patch 191
-RMD160 0b8b913f192328485f213c9d7cf12575158c4584 files/1.3.0-suse_bool.patch 191
-SHA256 e061f929c965d28724cc2ff5ad7a859035331e24c52f8fd9cd2c73a07d32898a files/1.3.0-suse_bool.patch 191
 MD5 60faacd9044ad4dd88db77e0bd53dc7f files/1.3.2-email_typo.patch 620
-RMD160 7b8b9edb0f88e2d1a1372d86e8d174ffee910cd2 files/1.3.2-email_typo.patch 620
-SHA256 18a9a5b10d25ee4f017b78183257950a71af20a7927e071f5f05191c078d3eb3 files/1.3.2-email_typo.patch 620
 MD5 3795e526fdf015e985be17fca698e2d1 files/digest-licq-1.2.7 64
-RMD160 072fc2d49a3387b2ad781155dea82a78a457266f files/digest-licq-1.2.7 64
-SHA256 8e8ed4a8d98a7d8af1456a3811d3793c4fb326a55b2a84c42bac403b1d939eca files/digest-licq-1.2.7 64
 MD5 b0a924ef22c21dd596d7918631f18559 files/digest-licq-1.3.0 64
-RMD160 7e9e4bf0ae34e11e876fcd1c5d7c3cd9ddd31c3b files/digest-licq-1.3.0 64
-SHA256 c6f59d6e143febf42e5c1eb8090eace762be301a3d493076dbf10795dfc29b1a files/digest-licq-1.3.0 64
 MD5 b7d176e7d3091d82fed1f4931604b327 files/digest-licq-1.3.2 64
-RMD160 9dccc420a19b5832c671b1d7caba6cd927223c65 files/digest-licq-1.3.2 64
-SHA256 3ea7c8fa70f2b3a254b6c07462ea69cb93ed2cf9d6f5a6357c45d176ff0e76c4 files/digest-licq-1.3.2 64
 MD5 b7d176e7d3091d82fed1f4931604b327 files/digest-licq-1.3.2-r1 64
-RMD160 9dccc420a19b5832c671b1d7caba6cd927223c65 files/digest-licq-1.3.2-r1 64
-SHA256 3ea7c8fa70f2b3a254b6c07462ea69cb93ed2cf9d6f5a6357c45d176ff0e76c4 files/digest-licq-1.3.2-r1 64
 MD5 f30c97a120a37f90edd8abdf612cd52a licq-1.2.7.ebuild 3368
-RMD160 e14a1039669c88d963e1f2c97a5309efe95da1d2 licq-1.2.7.ebuild 3368
-SHA256 3c8ebe9846d903477e50a45b0570dd8eb19dd502012022ad661a231edddee39d licq-1.2.7.ebuild 3368
 MD5 2d149efe7ebe39b0e944db660fd88c89 licq-1.3.0.ebuild 3799
-RMD160 b15fb6f2bbaa3e13be1324c3284ef79fccb3f2cd licq-1.3.0.ebuild 3799
-SHA256 f93c401f23ea86be0c611ac2ed248bdbf1ad4a22345912baab470af4d18ddd23 licq-1.3.0.ebuild 3799
 MD5 b6602d07b65d88645dac04ab170a8f51 licq-1.3.2-r1.ebuild 4987
-RMD160 69f5250be13cc71db8fda7be33bf77baba6f8963 licq-1.3.2-r1.ebuild 4987
-SHA256 16fca5a247af784617954ee6c92cb189ada81eeb19e90cd08606baccd738e9eb licq-1.3.2-r1.ebuild 4987
-MD5 22cbfc799681b3c4e6f2aed8df8065c9 licq-1.3.2.ebuild 4859
-RMD160 e1ca88ee4ca5d8d4232a015939c06becda5ecc85 licq-1.3.2.ebuild 4859
-SHA256 d68ec65fcaf8f5b3454eab8771acbb9965f0ba7ae4e1c2bf94c09f02b3a15a1e licq-1.3.2.ebuild 4859
+MD5 0bc9f8233ca4e3ff3d0537b347d4a9b4 licq-1.3.2.ebuild 4858
 MD5 7adc6310a4dbd42bad26caa80683d4ec metadata.xml 249
-RMD160 09f64f681d0dd11fd8a5784ae17b7eaaa87cc12f metadata.xml 249
-SHA256 bfa15ab9faf7742a9f33d2ba72410a089690beb639884f357b135951cd663230 metadata.xml 249
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5+c8JrHF4yAQTrARAvAwAJ0bzjNInjqAo5hbCUm5FSIt+J2nKQCgnV6B
-GeciyBeG4daqZXq3K+NRmIM=
-=Ukss
------END PGP SIGNATURE-----

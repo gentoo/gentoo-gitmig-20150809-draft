@@ -1,6 +1,9 @@
 # ChangeLog for net-im/licq
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.73 2006/02/07 00:17:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.74 2006/03/10 05:38:09 agriffis Exp $
+
+  10 Mar 2006; Aron Griffis <agriffis@gentoo.org> licq-1.3.2.ebuild:
+  Mark 1.3.2 stable on ia64
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> licq-1.3.2.ebuild:
   Mark 1.3.2 stable on alpha
