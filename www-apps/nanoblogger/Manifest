@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a0fb499f93c1ee17d1e8d0e8b3109821 ChangeLog 2751
-RMD160 9d4febd93d028d25b34c60101bcf2fdaf62a087e ChangeLog 2751
-SHA256 246ecc5ecff2775321b9acd91d1a7e02c9c429b6fd4b2c96fdf8748e4da97712 ChangeLog 2751
+MD5 4edd9c48452f26330f0a7b2d567e71e8 ChangeLog 2856
+RMD160 ef63b782c0785f6dca2cfec8c2c264cc7426ea74 ChangeLog 2856
+SHA256 972f03591932fdf5ce674e5e4aa23a3083f721787f58fb39a28ea72244a89736 ChangeLog 2856
 MD5 1ab32e1e0e5fef5232ec0b69d002f8eb files/digest-nanoblogger-3.1-r3 66
 RMD160 68d615a20bf819659ae902e46c06685ce44a9e73 files/digest-nanoblogger-3.1-r3 66
 SHA256 347143d737bed30b4b3cc5515744349468dd27c1768c3692d7f0b510e51af5e1 files/digest-nanoblogger-3.1-r3 66
@@ -22,13 +22,13 @@ SHA256 eb7a497a8da7d0f553cee9e2cbd186c7a65284470d0d46348dd39c0d942d8954 metadata
 MD5 c53627b4a2e95411854d11a23f0645d6 nanoblogger-3.1-r3.ebuild 1668
 RMD160 f848ccd1c6d20468c1f8ce03f625a2fc26caf71f nanoblogger-3.1-r3.ebuild 1668
 SHA256 68deb86ad03e50cf8b0411a21f9db9c9797d1a5d7482d4edeb35dc8a685c03e4 nanoblogger-3.1-r3.ebuild 1668
-MD5 f2598f9f29b0d956d398ba874de0cbbd nanoblogger-3.2.3.ebuild 2143
-RMD160 dbabe1639cca2c9cfb7ff7563086a92f31359fff nanoblogger-3.2.3.ebuild 2143
-SHA256 764b8b8b7d985a7c8d87048464af9373df84f32af34f116d476ef32ef371c76b nanoblogger-3.2.3.ebuild 2143
+MD5 e6d556a525735b0f874ee3117b1a5445 nanoblogger-3.2.3.ebuild 2142
+RMD160 b639725b8f970176cf234c73234cf8209d429c7e nanoblogger-3.2.3.ebuild 2142
+SHA256 62ea68276b67674e5f2fd08517cdc015c0656ae2dd52cdcabfb069a67decaac0 nanoblogger-3.2.3.ebuild 2142
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFD6n/jJrHF4yAQTrARAmunAJ92OImDoYgbyHTE8tJGn5vpXBdqlQCfS1sv
-3YmkfwalVqyQg4Dugi7l7C8=
-=vNGF
+iD8DBQFEENccJrHF4yAQTrARAm4NAJ4hF3eCpGoCdz5GBFdarAFDd3+yfQCgnzLT
+KGWrJ1xz6mlbtK/4OJeoBjA=
+=Go6g
 -----END PGP SIGNATURE-----
