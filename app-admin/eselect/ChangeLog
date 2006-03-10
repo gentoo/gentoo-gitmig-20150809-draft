@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.14 2006/03/10 07:35:23 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.15 2006/03/10 18:20:25 pylon Exp $
+
+  10 Mar 2006; Lars Weiler <pylon@gentoo.org> eselect-1.0.ebuild:
+  Stable on ppc wrt bug #125630.
 
   10 Mar 2006; Michele Noberasco <s4t4n@gentoo.org> eselect-1.0.ebuild:
   Stable for x86. See bug #125630.
