@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b45d53724f62a330e24b6ef6e6c29f1e comedi-0.7.68.ebuild 687
+MD5 3c8d993a521af834675d07d3e2553d79 ChangeLog 988
+RMD160 1c72a74087bfc2eb87e5d4843d596e8d4d509404 ChangeLog 988
+SHA256 4167cda9da7a5a16f7c0dd356c21a3da535f008096e80182a2116658cadce711 ChangeLog 988
 MD5 7022ba8cfbf929ee23751664b4eb625a comedi-0.7.67.ebuild 593
-MD5 092d014168eb5dc95ecb32bc8e487a95 ChangeLog 840
-MD5 2134be6a8452efc15d542b70b134dcc7 metadata.xml 249
+RMD160 7fef4d7e4145e23ea919e6e9b509d8ca60b494c4 comedi-0.7.67.ebuild 593
+SHA256 a2b69f5e81a93b3554f5982ece23a947372072927bfcff8795988bdf8601cd28 comedi-0.7.67.ebuild 593
+MD5 b45d53724f62a330e24b6ef6e6c29f1e comedi-0.7.68.ebuild 687
+RMD160 e3c11968d999a052592fb37ba993a2fef7838755 comedi-0.7.68.ebuild 687
+SHA256 5fcb4001da4d1424466771f68d0ac3702f6a5cf91a87dfb9335a6e3f34f3d419 comedi-0.7.68.ebuild 687
 MD5 804f8a7a298030bd85bd7f91df6388ac files/digest-comedi-0.7.67 65
+RMD160 314b22917b38bfdd1bba8f27b5985ef10ba6500a files/digest-comedi-0.7.67 65
+SHA256 2d5386ce7c022649cd40f185f8fc6c5ae757faeedbadbaa28e69046644ea8c40 files/digest-comedi-0.7.67 65
 MD5 6c65ff5c4dd2926c5e7773cf22b307c4 files/digest-comedi-0.7.68 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0NVoI1lqEGTUzyQRApGIAJ96cSAs9NDpiOAz3kJdKw4QSwCOsACgm9oJ
-onhRtfOhapg+iTaauERIp/4=
-=Am/i
------END PGP SIGNATURE-----
+RMD160 517f619bd8eaf16a6e9bb8888bf9a117fadce044 files/digest-comedi-0.7.68 65
+SHA256 b9f94e283bc1108452318bad0be5a7a6a58bb8bd18513c8dd66da46e7c25645d files/digest-comedi-0.7.68 65
+MD5 4eda2fda81ea6a89d8f1f4a2dcd12a85 metadata.xml 233
+RMD160 d81ec1a0582856aeac5ef3bfec5c80d9850216f6 metadata.xml 233
+SHA256 dce03f6cdd96135caf3c971a5ca4a8c916f44532fe8cfb6df88b7bdade407e8b metadata.xml 233

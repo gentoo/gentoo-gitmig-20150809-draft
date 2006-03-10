@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/comedi
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/comedi/ChangeLog,v 1.2 2004/12/28 03:39:14 swegener Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/comedi/ChangeLog,v 1.3 2006/03/10 17:56:53 caleb Exp $
+
+  10 Mar 2006; Caleb Tennis <caleb@gentoo.org> metadata.xml:
+  Setting over to maintainer needed, to make this more up to date with current
+  portage
 
 *comedi-0.7.68 (27 Dec 2004)
 
