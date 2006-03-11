@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kio-locate
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.21 2006/03/11 15:13:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.22 2006/03/11 22:53:23 weeve Exp $
+
+  11 Mar 2006; Jason Wever <weeve@gentoo.org> kio-locate-0.4.4-r1.ebuild:
+  Stable on SPARC wrt bug #125494.
 
   11 Mar 2006; <nixnut@gentoo.org> kio-locate-0.4.4-r1.ebuild:
   Stable on ppc. Bug #125494
