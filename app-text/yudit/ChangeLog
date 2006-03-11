@@ -1,6 +1,10 @@
 # ChangeLog for app-text/yudit
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.14 2005/01/01 16:45:08 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.15 2006/03/11 00:17:39 joshuabaergen Exp $
+
+  11 Mar 2006; Joshua Baergen <joshuabaergen@gentoo.org> yudit-2.6.ebuild,
+  yudit-2.7.6.ebuild:
+  Add modular X dependencies (Mauricio L. Pilla, bug #124081).
 
   13 Mar 2004; Jason Wever <weeve@gentoo.org> yudit-2.7.6.ebuild:
   Stable on sparc.

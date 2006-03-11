@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/yudit-2.7.6.ebuild,v 1.7 2005/01/01 16:45:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/yudit-2.7.6.ebuild,v 1.8 2006/03/11 00:17:40 joshuabaergen Exp $
 
 DESCRIPTION="free (Y)unicode text editor for all unices"
 SRC_URI="http://yudit.org/download/${P}.tar.bz2"
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
 IUSE=""
 
-DEPEND="virtual/x11
+DEPEND="|| ( x11-libs/libX11 virtual/x11 )
 	>=sys-devel/gettext-0.10"
 
 src_compile() {
