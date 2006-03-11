@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0.ebuild,v 1.8 2006/02/09 01:55:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0.ebuild,v 1.9 2006/03/11 22:59:07 hansmi Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.jdom.org/dist/source/${MY_P}.tar.gz"
 HOMEPAGE="http://www.jdom.org"
 LICENSE="JDOM"
 SLOT="${PV}"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 RDEPEND=">=virtual/jre-1.3
 		dev-java/saxpath
 		dev-java/xalan
