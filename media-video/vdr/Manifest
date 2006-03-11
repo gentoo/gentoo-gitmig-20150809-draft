@@ -19,6 +19,7 @@ MD5 8ab5e09df0c6e501ade0c8eaebda30f2 files/digest-vdr-1.3.36-r3 530
 MD5 f1609fd224b6e6ae1696db31f61a0cbc files/digest-vdr-1.3.41 530
 MD5 995b2416cc7c5e79bb602619065eb092 files/digest-vdr-1.3.41-r1 530
 MD5 ef1b1e2c1501da34fcfdb75035b64402 files/digest-vdr-1.3.41-r2 146
+MD5 6949d3998241501e3538f7b22cc7ec0e files/digest-vdr-1.3.44 144
 MD5 aa8d0f66c8831be73c049584d6143c8b files/vdr-1.2.6-gentoo.diff 1995
 MD5 aa18122fb081cdc19d419d53ad1f63de files/vdr-1.2.6_CAN-2005-0071.patch 893
 MD5 472e23b8b78fd88b22e140386af74b3d files/vdr-1.3.32-daemon.patch 794
@@ -40,11 +41,12 @@ MD5 fc877f5af6daffeec70f1e60a4de19ae vdr-1.3.36.ebuild 4720
 MD5 b957236697e858570ec39f3af678c3cd vdr-1.3.41-r1.ebuild 4720
 MD5 557c328330456c501c87110f29fafb90 vdr-1.3.41-r2.ebuild 4725
 MD5 0a32e88862bf95092c8f22fcc129dc06 vdr-1.3.41.ebuild 4717
+MD5 2610cad41164ec38d8e2a0aae3c79f15 vdr-1.3.44.ebuild 4783
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 Comment: no further Information
 
-iD8DBQFEEW52dn07HTTCgIoRAhzWAJ0QbP48PJIhm7RYhLv1v03ZUHXDtACfYkR9
-bY4o8ck/1oXa5+X48c0dRMk=
-=EbGt
+iD8DBQFEEzasdn07HTTCgIoRAnSzAJ46v7RqmbLsgGKqZe1k1r0dAwbv1wCgs7XD
+YaPZl63lEEG9lDyEKIVmlFM=
+=16Th
 -----END PGP SIGNATURE-----
