@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/kspread-1.5_beta2.ebuild,v 1.1 2006/03/11 15:51:01 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/kspread-1.5_beta2.ebuild,v 1.2 2006/03/11 20:29:20 flameeyes Exp $
 
 KMNAME=koffice
 MAXKOFFICEVER=${PV}
@@ -39,6 +39,8 @@ KMCOMPILEONLY="filters/liboofilter"
 KMEXTRA="filters/kspread"
 
 need-kde 3.4
+
+PATCHES="${FILESDIR}/${P}-gcc41.patch"
 
 src_unpack() {
 	kde-meta_src_unpack unpack
