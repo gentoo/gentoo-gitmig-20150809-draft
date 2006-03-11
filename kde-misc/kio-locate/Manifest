@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b2cb1f94e1d21d41df509328d70908c5 ChangeLog 2540
-RMD160 29f484de54f64b45c938484dd962d8ced395a526 ChangeLog 2540
-SHA256 589a3d5f4b20b4e05242060831ef7b088f61c7d8b1d4031a24175f54d874f31d ChangeLog 2540
+MD5 bd0fc16922ad420c391635cd16e6ae03 ChangeLog 2633
+RMD160 59f6c97cbd820eb466b6131f356e5970ade8aa34 ChangeLog 2633
+SHA256 71ba711da2b4e32e37a11d47479eb6fd1d8c544240e0a1c9f78baefdd0a5862d ChangeLog 2633
 MD5 149ef0ef857ecaa5596a4efc341027a9 files/digest-kio-locate-0.3.4 68
 RMD160 a1394621a2da3506856b87b1e5caa5f96e2803f3 files/digest-kio-locate-0.3.4 68
 SHA256 cfa92a2d33362ddf20fad613babfd1a9e5f12d32b788adbd80469c380465908f files/digest-kio-locate-0.3.4 68
@@ -28,9 +28,9 @@ SHA256 2b8efb5c61629a426f41728bc048cdd7429ef29c6d40560b73716d5c4c5499f5 kio-loca
 MD5 2efa12b98b3032c685f76b471f206bc1 kio-locate-0.4.3.ebuild 1053
 RMD160 79eb8f6cafa8be884daabec939c70303e1bbc5cc kio-locate-0.4.3.ebuild 1053
 SHA256 2131655da0044ce526271d7c22c1b1b59417cc67f76d772842ba24302ef92a5b kio-locate-0.4.3.ebuild 1053
-MD5 fd6cbecedba6c109c6222e036baf40aa kio-locate-0.4.4-r1.ebuild 1161
-RMD160 b497aaa9d3238090a7879d99c9fb32926afe6239 kio-locate-0.4.4-r1.ebuild 1161
-SHA256 7687ab187e561c3907425e117d42368bf3ca52cec053fc28b64dad6d9a4ab56e kio-locate-0.4.4-r1.ebuild 1161
+MD5 2411615dc699e0d6242de593bfefa18e kio-locate-0.4.4-r1.ebuild 1160
+RMD160 9d75137efcd944093ad3bffd82bc717e665c28cd kio-locate-0.4.4-r1.ebuild 1160
+SHA256 55df6ba0775d12f30d5ae1dd9f321f1a2e15d3bb220e9cb327ea0837eeb89807 kio-locate-0.4.4-r1.ebuild 1160
 MD5 855dac34e9133c80debdd59366f30c03 kio-locate-0.4.4.ebuild 1053
 RMD160 4b2b07ca0511311a153367231d8f633e2b6a39ff kio-locate-0.4.4.ebuild 1053
 SHA256 91fc32ac9f65b7c5403ba76334d9ab3b344a0422b9ee3ad99029875bf702f5fb kio-locate-0.4.4.ebuild 1053
@@ -38,9 +38,9 @@ MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
 SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEEmq4SENan+PfizARAqyJAKCTAwivD6VmSrZC7J3zjlGnN6xycQCdFMwF
-BIBQCLNEt4TSWQ4dsKqr/zE=
-=3OSL
+iD8DBQFEEujloFw4q70f3SsRAiLSAKCjbZ/EkEBlFJaSlYVIJQg4SqzSnACeJZF4
+wzcEcsn2vv2qlphSpzAK+6g=
+=7SkE
 -----END PGP SIGNATURE-----
