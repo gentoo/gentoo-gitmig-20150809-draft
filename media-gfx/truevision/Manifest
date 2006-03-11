@@ -1,7 +1,31 @@
-MD5 4b3aa4515156c160aeee281057853fd2 ChangeLog 2444
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 89ddc6cc9ee0fd7d3c49a2093d505f2a ChangeLog 2545
+RMD160 b31ab46800b6ab4743d137c7afbf77d223fe1d79 ChangeLog 2545
+SHA256 3bf39a9df0a54b359bd06664f4ecae487e39f875cf8d373cf0e42768bfd0f92b ChangeLog 2545
 MD5 fd3f729570328f8ed534b1490a977561 files/digest-truevision-0.3.10 226
+RMD160 10f10c0e1950233e595ce294e9150eafc3563530 files/digest-truevision-0.3.10 226
+SHA256 6ff26f7567cc033206b73d2c5fe4e2b2e0aaa700c4edc98717d2b2b2d39734ae files/digest-truevision-0.3.10 226
 MD5 db96c3ee256871c2378ba6682336c31f files/digest-truevision-0.5.5.2 151
+RMD160 970e2e8109b0d67ce675e992586ae2ed6c36c9d3 files/digest-truevision-0.5.5.2 151
+SHA256 007a25018f8dbb2e49c9b1125ee443eca0762f31826246ebf7dbac2fedd0310a files/digest-truevision-0.5.5.2 151
 MD5 af313393d2d89915d57517cba88c51ba files/truevision-0.5.5.2-makefile-mime-magic.patch 877
+RMD160 c64d93f0a3ce9caf6639ab24b9c3462c94bb791e files/truevision-0.5.5.2-makefile-mime-magic.patch 877
+SHA256 ac50eb97c85059c29d856d2ca763ac57e74989cd186cfacb3e7cd356efa8e83a files/truevision-0.5.5.2-makefile-mime-magic.patch 877
 MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
+RMD160 60f70b15d67f0e6aafc59833b2f0a30e30b51765 metadata.xml 161
+SHA256 e8daadc5e27e3ef1148993b5b48d96e93bc36d798a1f416693f7f8c84be427e1 metadata.xml 161
 MD5 9da200cf0cba8f50e7871458a1ae51cb truevision-0.3.10.ebuild 1121
-MD5 59ed554b9a0a06156275f0abc1ca181a truevision-0.5.5.2.ebuild 1653
+RMD160 a99dbff6843766f9c3e9af8b36ac48abd30297cb truevision-0.3.10.ebuild 1121
+SHA256 db4101f4923a09c03cc1191c65cfbf90a4314a0df00f01ae8e3dd8fb75a0792e truevision-0.3.10.ebuild 1121
+MD5 642599bafb149b37ed1c13628e69e2fa truevision-0.5.5.2.ebuild 1649
+RMD160 87bfd0b069ad51f543901916219a3b227b06398a truevision-0.5.5.2.ebuild 1649
+SHA256 c31dd1f4bbab99c013371f0e0eb97173ecfa04bbbb44b4370525f3a38ee6405a truevision-0.5.5.2.ebuild 1649
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEEk64CRZPokWLroQRAvK2AJ4nivyFyi7NYxAGM8v9+kvbU5SJJwCeMdbI
+vvYw5u5Y7/2nuB1XEwYvbfY=
+=2zMj
+-----END PGP SIGNATURE-----
