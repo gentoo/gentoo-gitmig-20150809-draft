@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0acc325c1b75ada9740e486ea218521e ChangeLog 14085
-RMD160 b318013f9f97e05adef3f1d3329e0dbcabc017b4 ChangeLog 14085
-SHA256 e49cd4ea00ea2e872954c324c0befc40422dc1d97ebe7c2164340e50bf95254c ChangeLog 14085
+MD5 282819b51a2f8a0ab396f1471ad0b060 ChangeLog 14425
+RMD160 a3489455616346cb5c827dfb38875577d60bf96c ChangeLog 14425
+SHA256 b1dcc0bf83ba3e7515590a6531cd2cc39870661d1fb53ba7d610e54af5158375 ChangeLog 14425
 MD5 21db8312c316fc17a0df1ac3cdf2f20c files/digest-vserver-sources-2.0.1-r1 1099
 RMD160 481b827187c3fe469100630f35b17bd80831d764 files/digest-vserver-sources-2.0.1-r1 1099
 SHA256 58971f12bfced101ac5a3904ab8c5a6c375b80a1b742ffcb1c2377d817fa3f2c files/digest-vserver-sources-2.0.1-r1 1099
 MD5 0ccc3e347d645df7a3133ad2db858de2 files/digest-vserver-sources-2.0.2_rc10 1108
 RMD160 b54476392be9aa65364e03e0c5432d7d411c2c86 files/digest-vserver-sources-2.0.2_rc10 1108
 SHA256 41afd13feca08524c17cbdbdbe5ad364c18d8953639b622a800cddc6bcc00dc0 files/digest-vserver-sources-2.0.2_rc10 1108
-MD5 379cf41c6a9a4fef852f449898b290db files/digest-vserver-sources-2.0.2_rc11-r1 1123
-RMD160 a735651dcfd859c6164b53e6f8ef767caefa8c12 files/digest-vserver-sources-2.0.2_rc11-r1 1123
-SHA256 331b16a29c34db81f381c258ec320d0d5db41fa7fb4758b5366a87a8e5fb5216 files/digest-vserver-sources-2.0.2_rc11-r1 1123
+MD5 6b768a61e398b65ca8fc3a8017f84edf files/digest-vserver-sources-2.0.2_rc11-r1 1123
+RMD160 40e942465e83dff8a28ea499feb4623f2701bbf5 files/digest-vserver-sources-2.0.2_rc11-r1 1123
+SHA256 2e1ef4bf6f3743fa827b382e82d2ea920cbd9d51cfb049f98d80a4420cf8ef19 files/digest-vserver-sources-2.0.2_rc11-r1 1123
 MD5 640ee12078dee22d59e4dc1e9a152ea0 files/digest-vserver-sources-2.1.0-r1 1099
 RMD160 0e6e919788aa7b89fa7ab5263ee009bf022d6461 files/digest-vserver-sources-2.1.0-r1 1099
 SHA256 1aaf2f69bbca0c122dc85658f64b5b8be39fd433070fc3bd5c446aad3d10b73b files/digest-vserver-sources-2.1.0-r1 1099
 MD5 1626fa9439833cf9488865b8639f1ebc files/digest-vserver-sources-2.1.1_rc10 1108
 RMD160 5ad7fcecd9af239cecb78fbb40a087165c064f34 files/digest-vserver-sources-2.1.1_rc10 1108
 SHA256 0be0f708348f46b40e2693077fbf316fba7cdea094f250d33fbebf28cf07540a files/digest-vserver-sources-2.1.1_rc10 1108
-MD5 84f31b52ee2c038467a6da77ffdb810f files/digest-vserver-sources-2.1.1_rc11 1114
-RMD160 66356fd7edec7931a9b04aea706f61d51cc8fa8a files/digest-vserver-sources-2.1.1_rc11 1114
-SHA256 2b588aca263bda0cfe612512cf0c6bcc30cd1c9d6bc798ebdd420b2faffaa536 files/digest-vserver-sources-2.1.1_rc11 1114
+MD5 1770dd893f13802ccced92f665ce5c53 files/digest-vserver-sources-2.1.1_rc11-r1 1123
+RMD160 fba285a064501fac17b15bd13d2e81dec37b40c2 files/digest-vserver-sources-2.1.1_rc11-r1 1123
+SHA256 9fbab8c1ca4f423def97657c798e4848a729d914b73b22037d4b187f240fa784 files/digest-vserver-sources-2.1.1_rc11-r1 1123
 MD5 f703b135c202d58849f005abf3c728b4 metadata.xml 526
 RMD160 a4f731a00e46035b9b461489748060dcfbba3cb8 metadata.xml 526
 SHA256 09231c6b5cfedbd6574007a6d96a51e6257a23ba623a70df62e6674d0d94d068 metadata.xml 526
@@ -40,13 +40,13 @@ SHA256 2ee9717a3bfc69b2536c4682f5f6e671be6af1d52ebf66ea206d926a5d57d876 vserver-
 MD5 4a13e360e2fc917c0f224bca17e68f7c vserver-sources-2.1.1_rc10.ebuild 910
 RMD160 3954c8bb4865a9a75b3001e0919b8ce9e59e724d vserver-sources-2.1.1_rc10.ebuild 910
 SHA256 651423d39f472b05a62223cce54da393f7204af2e2819d7fb956d2e293ad0d9d vserver-sources-2.1.1_rc10.ebuild 910
-MD5 213d354dce4565c56d91561ae0d59a1e vserver-sources-2.1.1_rc11.ebuild 911
-RMD160 54e6f4e9e79638deec6238638832bb495d42e416 vserver-sources-2.1.1_rc11.ebuild 911
-SHA256 8ec591c6a8668c3e88791ba851064858ce57645e69cbc841c008b7c481b5fbd2 vserver-sources-2.1.1_rc11.ebuild 911
+MD5 a36920916a883cabc062da2fdc1b9b4d vserver-sources-2.1.1_rc11-r1.ebuild 914
+RMD160 beb3421ae43d6a778c94613ac66169690caece15 vserver-sources-2.1.1_rc11-r1.ebuild 914
+SHA256 da69b04dc29df706980185484276733edd7e646b23516e631fc452bf73c9f0ec vserver-sources-2.1.1_rc11-r1.ebuild 914
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEEwfCflZ8QqxhrsMRAtx8AKC0L/pu2djYqnDhWU89rkhHs6URrQCfdwKC
-OvukEFTGMz0vPaScuvzz6hE=
-=5Cwx
+iD8DBQFEEx6+flZ8QqxhrsMRAifYAJ9DAKmPxChvOcpu5mvSvzyK8Vg2MQCgyWaE
+TrU2lKpaLd/pOxc2asm86v4=
+=lPub
 -----END PGP SIGNATURE-----

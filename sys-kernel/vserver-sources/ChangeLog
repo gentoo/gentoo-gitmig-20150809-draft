@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/vserver-sources
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.87 2006/03/11 17:24:07 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.88 2006/03/11 19:02:12 phreak Exp $
+
+*vserver-sources-2.1.1_rc11-r1 (11 Mar 2006)
+
+  11 Mar 2006; Christian Heim <phreak@gentoo.org>
+  -vserver-sources-2.1.1_rc11.ebuild, +vserver-sources-2.1.1_rc11-r1.ebuild:
+  Finally fixing the _rc11's; 2.0.2 had issues with starting vservers (namely
+  kernel/namespace.c); 2.1.1 had (again) some sendfile issues (namly
+  fs/read_write.c)
 
 *vserver-sources-2.0.2_rc11-r1 (11 Mar 2006)
 
