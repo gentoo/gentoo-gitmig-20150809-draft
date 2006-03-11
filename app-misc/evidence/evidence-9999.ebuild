@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-9999.ebuild,v 1.9 2006/01/27 02:09:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-9999.ebuild,v 1.10 2006/03/11 10:58:13 vapier Exp $
 
 ECVS_MODULE="evidence"
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/evidence"
@@ -10,12 +10,11 @@ DESCRIPTION="GTK2 file-manager"
 HOMEPAGE="http://evidence.sourceforge.net/"
 
 LICENSE="GPL-2"
-IUSE="X debug gnome kde oggvorbis perl truetype xine mpeg"
+IUSE="X debug gnome kde vorbis perl truetype xine mpeg"
 
 DEPEND=">=dev-util/pkgconfig-0.5
 	=x11-libs/gtk+-2*
-	oggvorbis? ( media-libs/libvorbis
-		media-libs/libogg )
+	vorbis? ( media-libs/libvorbis media-libs/libogg )
 	perl? ( dev-libs/libpcre )
 	X? ( virtual/x11 )
 	truetype? ( =media-libs/freetype-2* )
@@ -50,7 +49,7 @@ src_compile() {
 		$(use_enable mpeg thumbnailer-mpeg3)
 		$(use_enable perl pcre)
 		$(use_enable X x)
-		$(use_enable oggvorbis plugin-vorbis)
+		$(use_enable vorbis plugin-vorbis)
 		$(use_enable truetype plugin-ttf)
 		$(use_enable debug)
 		$(use_with kde)
@@ -64,7 +63,7 @@ src_install() {
 	# Fixup broken symlinks
 	dosym efm /usr/share/evidence/icons/default
 	dosym efm /usr/share/evidence/themes/default
-	chown -R root:0 ${D}/usr/share/evidence
+	chown -R root:0 "${D}"/usr/share/evidence
 
 	dodoc docs/*
 }
