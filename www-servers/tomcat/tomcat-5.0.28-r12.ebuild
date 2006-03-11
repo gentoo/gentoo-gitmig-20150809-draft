@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r12.ebuild,v 1.3 2006/03/11 17:38:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r12.ebuild,v 1.4 2006/03/11 17:51:21 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -48,6 +48,12 @@ S=${WORKDIR}/jakarta-${P}-src
 TOMCAT_HOME="/usr/share/${PN}-${SLOT}"
 TOMCAT_NAME="${PN}-${SLOT}"
 WEBAPPS_DIR="/var/lib/${TOMCAT_NAME}/default/webapps"
+
+pkg_setup() {
+	# new user for tomcat
+	enewgroup tomcat
+	enewuser tomcat -1 -1 /dev/null tomcat
+}
 
 src_unpack() {
 	unpack ${A}
@@ -130,9 +136,6 @@ src_compile(){
 
 }
 src_install() {
-	# new user for tomcat
-	enewgroup tomcat
-	enewuser tomcat -1 -1 /dev/null tomcat
 
 	cd ${S}/jakarta-tomcat-5/build
 

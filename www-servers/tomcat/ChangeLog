@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.48 2006/03/11 17:38:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.49 2006/03/11 17:51:21 betelgeuse Exp $
+
+  11 Mar 2006; Petteri Räty <betelgeuse@gentoo.org>
+  tomcat-5.0.28-r12.ebuild:
+  Moved enewgroup and enewuser calls to pkg_setup from src_install for bug
+  #124680.
 
   11 Mar 2006; Petteri Räty <betelgeuse@gentoo.org>
   tomcat-5.0.27-r6.ebuild, -tomcat-5.0.28-r9.ebuild,
