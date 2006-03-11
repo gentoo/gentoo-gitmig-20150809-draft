@@ -1,4 +1,4 @@
-MD5 cd2ea96dc2b06386f063e8b1462957a1 ChangeLog 3184
+MD5 299f8153214c7b8c806cad43f352f025 ChangeLog 3181
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kexi-1.4.2 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kexi-1.4.2-r1 68
 MD5 82af01b67d83c02945f1e26ae9529232 files/digest-kexi-1.5_beta1 253
@@ -7,5 +7,5 @@ MD5 5f3683b6817935e4f6269bd64398c479 files/kexi-1.4.2-gcc41.patch 1094
 MD5 01b797c688b5f719c1aa8172e7fefd1e kexi-1.4.2-r1.ebuild 1130
 MD5 3459c72e14104b6ae964cf21299a23dc kexi-1.4.2.ebuild 1077
 MD5 231ba18c6c699034c49b88c89438a10e kexi-1.5_beta1.ebuild 1137
-MD5 231ba18c6c699034c49b88c89438a10e kexi-1.5_beta2.ebuild 1137
+MD5 600bf21776840b35a9d9c3aa3e9af5ba kexi-1.5_beta2.ebuild 1137
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157

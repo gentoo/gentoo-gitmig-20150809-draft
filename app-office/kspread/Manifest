@@ -1,4 +1,4 @@
-MD5 c3c2bb98f6f00cf3c9654d41e6e8d4e3 ChangeLog 3869
+MD5 17041ca98e20a91893ff3565570bb1cc ChangeLog 3866
 MD5 902823ac54984271d00a3e72454440b1 files/digest-kspread-1.4.2 250
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kspread-1.4.2-r1 68
 MD5 82af01b67d83c02945f1e26ae9529232 files/digest-kspread-1.5_beta1 253
@@ -7,5 +7,5 @@ MD5 f1f58cce115f40fcba31a4976b61d260 files/kspread-1.4.2-gcc41.patch 451
 MD5 3d2a2ae8f85c854c5d0968e926d78f89 kspread-1.4.2-r1.ebuild 1220
 MD5 c25f4c8ea619ddbe186c5c06f03fd2dd kspread-1.4.2.ebuild 1164
 MD5 a64c3b86bebf367a73cad56f9d69165d kspread-1.5_beta1.ebuild 1128
-MD5 a64c3b86bebf367a73cad56f9d69165d kspread-1.5_beta2.ebuild 1128
+MD5 ed1675452f6f6360ec0e53228635d180 kspread-1.5_beta2.ebuild 1128
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157

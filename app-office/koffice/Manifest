@@ -1,4 +1,4 @@
-MD5 8cdfbdcf1e0fc9ebc04f33ca651f1178 ChangeLog 21762
+MD5 f5133df1e88023400ed9165c8e542b52 ChangeLog 21759
 MD5 6ee3768e50296eb2a8158093ee518133 files/CAN-2005-0064.patch 829
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-koffice-1.4.2-r4 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-koffice-1.4.2-r6 68
@@ -13,5 +13,5 @@ MD5 7185dbf038a28ae5e5e7b7256bd7fa51 koffice-1.4.2-r4.ebuild 1605
 MD5 b3d9b72fb4595e51d7b48af3c1f1cf9c koffice-1.4.2-r6.ebuild 1605
 MD5 6a1d2ec12afd0fcb1117d7f8e22d7152 koffice-1.4.2-r7.ebuild 1732
 MD5 36b3cd2605fdb937061e52d6a24a3e69 koffice-1.5_beta1.ebuild 1707
-MD5 36b3cd2605fdb937061e52d6a24a3e69 koffice-1.5_beta2.ebuild 1707
+MD5 98e018143fbdec3ca73b598ccd10b3b9 koffice-1.5_beta2.ebuild 1707
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
