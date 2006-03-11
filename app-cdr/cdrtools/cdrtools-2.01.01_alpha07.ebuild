@@ -1,19 +1,19 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha01-r2.ebuild,v 1.7 2005/10/12 06:04:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha07.ebuild,v 1.1 2006/03/11 15:10:47 pylon Exp $
 
 inherit eutils gnuconfig toolchain-funcs flag-o-matic
 
 MY_CRYPT_VERS="2.01-encrypt-1.0rc1"
 
 DESCRIPTION="A set of tools for CD recording, including cdrecord"
-HOMEPAGE="http://cdrecord.berlios.de/old/private/cdrecord.html"
+HOMEPAGE="http://cdrecord.berlios.de/"
 SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2
 	on-the-fly-crypt? ( http://burbon04.gmxhome.de/linux/files/${PN}-${MY_CRYPT_VERS}.diff.gz )"
 
 LICENSE="GPL-2 freedist"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~s390 ~sparc ~x86"
 IUSE="on-the-fly-crypt unicode"
 
 DEPEND="virtual/libc
@@ -29,11 +29,10 @@ src_unpack() {
 
 	# CAN-2004-0806 - Bug 63187
 	epatch ${FILESDIR}/${PN}-2.01-scsi-remote.patch
-
-	# UTF-8 support, see Bug #28369
-	if use unicode; then
-		epatch ${FILESDIR}/mkisofs-iconv-10.patch || die "Can't apply utf-8 patch"
-	fi
+	epatch ${FILESDIR}/${PN}-2.01a27-writemode.patch
+	epatch ${FILESDIR}/${PN}-2.01.01a03-warnings.patch
+	epatch ${FILESDIR}/${PN}-2.01.01a01-scanbus.patch
+	epatch ${FILESDIR}/${PN}-2.01.01a03-rezero.patch
 
 	# Add support for On-The-Fly AES encryption
 	# http://burbon04.gmxhome.de/linux/CDREncryption.html
@@ -41,8 +40,10 @@ src_unpack() {
 		epatch ${DISTDIR}/${PN}-${MY_CRYPT_VERS}.diff.gz || die "Can't apply encryption patch"
 	fi
 
+	# ppc-macos support
 	cd ${S}/DEFAULTS
 	use ppc-macos && MYARCH="mac-os10" || MYARCH="linux"
+
 	sed -i "s:/opt/schily:/usr:g" Defaults.${MYARCH}
 	sed -i "s:/usr/src/linux/include::g" Defaults.${MYARCH}
 
@@ -60,7 +61,7 @@ src_compile() {
 	gnuconfig_update
 
 	if use unicode; then
-		local flags="$(test_flag -finput-charset=ISO-8859-1 -fexec-charset=UTF-8)"
+		local flags="$(test-flags -finput-charset=ISO-8859-1 -fexec-charset=UTF-8)"
 		if [[ -n ${flags} ]]; then
 			append-flags ${flags}
 		else
@@ -68,7 +69,6 @@ src_compile() {
 			ewarn "cdrtools with unicode in USE. unicode flag will be ignored."
 		fi
 	fi
-
 	emake CC="$(tc-getCC) -D__attribute_const__=const" COPTX="${CFLAGS}" CPPOPTX="${CPPFLAGS}" LDOPTX="${LDFLAGS}" || die
 }
 
@@ -102,7 +102,7 @@ src_install() {
 	doins include/scg/*.h
 
 	cd ${S}
-	dodoc ABOUT Changelog README README.{ATAPI,audio,cdplus,cdrw,cdtext,clone,copy,DiskT@2,linux,linux-shm,multi,parallel,raw,rscsi,sony,verify} START
+	dodoc ABOUT Changelog README README.{ATAPI,audio,cdplus,cdrw,cdtext,clone,copy,DiskT@2,linux-shm,multi,parallel,raw,rscsi,sony,verify} START READMEs/README.linux
 	doman */*.1
 	doman */*.8
 
@@ -112,7 +112,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Note the special license on cdrecord/cdrecord.c starting from line 4648."
 	if use ppc-macos ; then
 		einfo
 		einfo "Darwin/OS X use the following device names:"
