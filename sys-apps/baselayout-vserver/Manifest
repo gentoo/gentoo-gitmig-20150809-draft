@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fb9fbd9e69aaf1e06d911e3db5098669 ChangeLog 5484
-RMD160 edd341c0197434167e3bb0ecbc95b2dee42517ca ChangeLog 5484
-SHA256 ed3f2001074bf1fcf901864241b583386fc2c6b76f253705a7ac13dae57357ae ChangeLog 5484
+MD5 7a383c0b4bae094aba230bce55753a4a ChangeLog 5671
+RMD160 0816c8f3079817cc5afef4bfaed8654069394f81 ChangeLog 5671
+SHA256 e712b43ff952670e7048e0fef628f26b3bd62db961eadd2b6648b655aeb0c0ca ChangeLog 5671
 MD5 28ead1d66338b46a6ecab7953139b45b baselayout-vserver-1.11.14-r1.ebuild 15841
 RMD160 55e3401d76818284cfa11937de549598e7a0eaf4 baselayout-vserver-1.11.14-r1.ebuild 15841
 SHA256 c24501625dd556bf46f543db281880d1773c9317cc770e4af1a2a88ee760b13a baselayout-vserver-1.11.14-r1.ebuild 15841
@@ -13,9 +13,6 @@ SHA256 3bde266626e6eb946483d6336ecc897ea941756e56708c173a17ba23aa704999 baselayo
 MD5 f8f4314afe00de037943e53171b12d48 baselayout-vserver-1.12.0_pre16.ebuild 12515
 RMD160 a78a7db00b11b6173996753d65a5043fffc4dc8a baselayout-vserver-1.12.0_pre16.ebuild 12515
 SHA256 32e485bf21282130ef1cb6d223c35be39cc4d2b02a02b89859e60681409e4615 baselayout-vserver-1.12.0_pre16.ebuild 12515
-MD5 8bbf6c606bd60a3825fd79aaab624805 baselayout-vserver-1.12.0_pre8-r2.ebuild 12601
-RMD160 e7de602a8614ec2a406cfb1e8583392564bc86d6 baselayout-vserver-1.12.0_pre8-r2.ebuild 12601
-SHA256 8017e9a3a4e1cf6233dbfad9fda6c173a3f0b3c864e9c27c8b915e6920ca4dd9 baselayout-vserver-1.12.0_pre8-r2.ebuild 12601
 MD5 ec29ba4690f7c58a8d562195bc9eed42 files/baselayout-vserver-1.11.14-adsl.patch 501
 RMD160 81db918f622eba2eef3f76e0441023998b367d3f files/baselayout-vserver-1.11.14-adsl.patch 501
 SHA256 5634f36c4f27ddae7a4a22c6dc7b6adad5f83cdb5d9f4291ce061d62361a71c8 files/baselayout-vserver-1.11.14-adsl.patch 501
@@ -31,9 +28,6 @@ SHA256 7f73007be5392e08711827128b8efa944ece58c5da7b5606f387b02e6a1aceb4 files/ba
 MD5 6a8967d43dfa400cdfbab80fc49a7e85 files/baselayout-vserver-1.11.14-udhcpc.patch 1301
 RMD160 e07f8165814a29dee4aa044e6817f8b79193403f files/baselayout-vserver-1.11.14-udhcpc.patch 1301
 SHA256 99c2274703515f7f52c8480e55c93beea28968a284abb351250bd14a111431fc files/baselayout-vserver-1.11.14-udhcpc.patch 1301
-MD5 cd1ba3815d5592a3c65f185cc7585107 files/baselayout-vserver-1.12.0_pre8-init-timeout-fix.patch 339
-RMD160 8972ac7a0318a57b35047d754235aacc9d3ca6f7 files/baselayout-vserver-1.12.0_pre8-init-timeout-fix.patch 339
-SHA256 c44f7c4de01c604d60e52968f9c393c7b50fc72a378b945ff7e1b1df775aa8c1 files/baselayout-vserver-1.12.0_pre8-init-timeout-fix.patch 339
 MD5 645ee27aa823d5fb836b8f160326201e files/baselayout-vserver-1.12.0_pre8-whitelist-fixes.patch 1236
 RMD160 0f7416cfb1eeff5bf159ee64cba7c3067defb837 files/baselayout-vserver-1.12.0_pre8-whitelist-fixes.patch 1236
 SHA256 daf0e8d5db3e82977e2f0e86530005f3386dbb751aae98c214ea52b1b5d10df3 files/baselayout-vserver-1.12.0_pre8-whitelist-fixes.patch 1236
@@ -49,16 +43,13 @@ SHA256 949e1593b90a62939e3a919166fc7789051f2a760574c3f21e89263dd5e68fe8 files/di
 MD5 df8b7ff09184684431afa2d74667a3e6 files/digest-baselayout-vserver-1.12.0_pre16 298
 RMD160 7272acfb7faca410ef2d90c5c12c775775608d20 files/digest-baselayout-vserver-1.12.0_pre16 298
 SHA256 89d7211dc57314c1709e05326f364247de371e76df6b10299115362360431414 files/digest-baselayout-vserver-1.12.0_pre16 298
-MD5 f6300fc5175902aa7e634664ac6d96bc files/digest-baselayout-vserver-1.12.0_pre8-r2 295
-RMD160 d1fa69c9a21dae4478179be846da9a1ead707d40 files/digest-baselayout-vserver-1.12.0_pre8-r2 295
-SHA256 0d9ccc11eb84db164243b6be1d1bf6fd6a52a9a626d2b17d7cc3c3db56cd260a files/digest-baselayout-vserver-1.12.0_pre8-r2 295
 MD5 e5ba31c20aa49371e645a8950abd1054 metadata.xml 231
 RMD160 532e75c33676f402571b5033faf42b7d0dbb9d28 metadata.xml 231
 SHA256 018942ba3f2ac5b93ec2576f55ff8d85b7808b35b751bfabb1879957f4f6c442 metadata.xml 231
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD/WAUmPFBzbX68WERAgupAJ9Rwl83iJw0zXnSieSAQESXEPttKgCeLRD7
-cglzwuUR9vLLaxsO92hmSf0=
-=asnc
+iD8DBQFEEu6DflZ8QqxhrsMRAtnwAJ9NrspQm2viHOxKZkCwj+f05iRUVQCeNA8W
+nIj7nNBOFoNuUzQQN90NW5c=
+=9cbm
 -----END PGP SIGNATURE-----
