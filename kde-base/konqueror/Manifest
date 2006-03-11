@@ -1,4 +1,4 @@
-MD5 1e6cf71e4dad0f2139b9a32c4cdee67e ChangeLog 5380
+MD5 644ec6c8892f96e51cd52fd21498a7b3 ChangeLog 5485
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-konqueror-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-konqueror-3.4.2 287
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-konqueror-3.4.2-r1 287
@@ -11,5 +11,5 @@ MD5 0451e0225115ecd1a652e2ecfebc180f konqueror-3.4.2-r1.ebuild 969
 MD5 9de0d7f28bcceea80bbdb2a1b1def058 konqueror-3.4.2.ebuild 780
 MD5 cd85cd458abebe64de2b4aff9b503bcb konqueror-3.4.3.ebuild 780
 MD5 54666f48de74eab568697d61b6aaab1e konqueror-3.5.0-r1.ebuild 1011
-MD5 1dec9675d233b5620f8ca09cce9dd84a konqueror-3.5.1.ebuild 753
+MD5 6b6e0fab763127b12fdf08632daf92f9 konqueror-3.5.1.ebuild 792
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
