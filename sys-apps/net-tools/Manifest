@@ -7,22 +7,22 @@ SHA256 cf5a4a1385ae8afc05e75111c8b28443e25d548045f2f2aa6aae56d57d0b7a23 ChangeLo
 MD5 05ebbcad45030e806f8be710defa0aac files/digest-net-tools-1.60-r11 145
 RMD160 07580e2db793ffa3ecc34b26d08b87eaca9843a0 files/digest-net-tools-1.60-r11 145
 SHA256 34a785cca437996fcf6d321fed6e103f5657283eae4b61afe1752f0e83870c49 files/digest-net-tools-1.60-r11 145
-MD5 4802eef34bc8a4b6054d38ed352e13e5 files/digest-net-tools-1.60-r12 530
-RMD160 14d13eb5c6ae7e56dea8ac90a53602d2286eefa3 files/digest-net-tools-1.60-r12 530
-SHA256 9169424321a91be50a4fdc3a4abcecf606c0fbc5dec9b7cc9d5396a30fd08962 files/digest-net-tools-1.60-r12 530
+MD5 2980d3d55d65458c49537de9da05fdfb files/digest-net-tools-1.60-r12 530
+RMD160 c76d091038a495d066458427f8e6644038412490 files/digest-net-tools-1.60-r12 530
+SHA256 0c4e35ec52f37e1174db06e925ac0039ee0058056c94bce11f4e14aa81890c0a files/digest-net-tools-1.60-r12 530
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 89b93cb8df63ffec2ad24ac8e30a5ea7 net-tools-1.60-r11.ebuild 1933
 RMD160 20b97f94baef955376da8a7f99233bed39fd8281 net-tools-1.60-r11.ebuild 1933
 SHA256 76cd1aa5be58d1a7dcc19cbb7cb6e2a86ed1e33f246fd093bf4a9082e000190c net-tools-1.60-r11.ebuild 1933
-MD5 4120e9abc576658aed17a07d49ca61a8 net-tools-1.60-r12.ebuild 2109
-RMD160 2b1fa478b5e02a3bf874350c32f56895254efc0c net-tools-1.60-r12.ebuild 2109
-SHA256 4781d7fbf175c5cd153beae8503a0a6620a89f49c4010318d40e1d6de961e587 net-tools-1.60-r12.ebuild 2109
+MD5 1b6e411d4c0425cebe4201a4d81fc6cf net-tools-1.60-r12.ebuild 2157
+RMD160 95958bba175bcacd5b10c13f2124d94867394dd7 net-tools-1.60-r12.ebuild 2157
+SHA256 c68d5da45298574c75188abd17d889a0e811cf9dfb3f887af702586ef37fb512 net-tools-1.60-r12.ebuild 2157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEEmLq2+ySkm8kpY0RAqf9AJ4kOwK1EsGPWkvKbwF7t07sK05rfACdEwa4
-EbjSws7DkeFCFLfDPZ0JePs=
-=FKHr
+iD8DBQFEEqPM2+ySkm8kpY0RAtUbAJ9cDAbFzY5xiJHkQnkjN+2uvpmJzACfUv0i
+W64ZAj39fBTZEuWmwxSVEV0=
+=nGfY
 -----END PGP SIGNATURE-----

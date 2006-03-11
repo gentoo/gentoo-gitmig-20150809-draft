@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r12.ebuild,v 1.1 2006/03/11 05:39:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r12.ebuild,v 1.2 2006/03/11 10:16:02 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
-PVER=1.2
+PVER="1.3"
 DESCRIPTION="Standard Linux networking tools"
 HOMEPAGE="http://sites.inka.de/lina/linux/NetTools/"
 SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
@@ -62,6 +62,7 @@ src_compile() {
 src_install() {
 	make BASEDIR="${D}" install || die "make install failed"
 	make -C ethercard-diag DESTDIR="${D}" install || die "make install ethercard-diag failed"
+	mv "${D}"/usr/share/man/man8/ether{,-}wake.8
 	mv "${D}"/usr/sbin/mii-diag "${D}"/sbin/ || die "mv mii-diag failed"
 	mv "${D}"/bin/* "${D}"/sbin/ || die "mv bin to sbin failed"
 	mv "${D}"/sbin/{hostname,domainname,netstat,dnsdomainname,ypdomainname,nisdomainname} "${D}"/bin/ \
