@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.8 2005/12/18 18:06:40 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.9 2006/03/11 17:56:34 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -35,6 +35,13 @@ DEPEND=">=virtual/jdk-1.3
 	jikes? ( >=dev-java/jikes-1.21 )"
 
 S=${WORKDIR}/${P}-src
+
+pkg_setup() {
+	# add a user for cjdbc
+	if ! enewgroup cjdbc || ! enewuser cjdbc -1 /bin/sh /dev/null cjdbc; then
+		die "Unable to add cjdbc user and cjdbc group."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -111,11 +118,6 @@ src_install() {
 	# an environment file to set the home directory
 	dodir /etc/env.d/
 	echo "CJDBC_HOME=/usr/share/${PN}-${SLOT}" > ${D}etc/env.d/20cjdbc
-
-	# add a user for cjdbc
-	if ! enewgroup cjdbc || ! enewuser cjdbc -1 /bin/sh /dev/null cjdbc; then
-		die "Unable to add cjdbc user and cjdbc group."
-	fi
 
 	# we need a log directory
 	dodir /var/log/c-jdbc

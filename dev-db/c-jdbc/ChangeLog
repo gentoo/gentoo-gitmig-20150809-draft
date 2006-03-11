@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/c-jdbc
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/ChangeLog,v 1.6 2005/12/18 18:06:40 nichoj Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/ChangeLog,v 1.7 2006/03/11 17:56:34 betelgeuse Exp $
+
+  11 Mar 2006; Petteri Räty <betelgeuse@gentoo.org> c-jdbc-1.0.4-r1.ebuild:
+  Moved enewgroup and enewuser calls from src_install to pkg_setup for bug
+  #124680.
 
   18 Dec 2005; Joshua Nichols <nichoj@gentoo.org> c-jdbc-1.0.4-r1.ebuild:
   Loosened jaxen and dom4j dependencies.
