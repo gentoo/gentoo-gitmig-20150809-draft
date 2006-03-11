@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.67 2006/03/11 15:38:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.68 2006/03/11 18:57:10 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -109,11 +109,16 @@ elif [[ "$KMNAME" == "koffice" ]]; then
 		1.4.0)
 			SRC_PATH="mirror://kde/stable/koffice-1.4/src/koffice-$PV.tar.bz2"
 			;;
+		1.5_beta2)
+			SRC_PATH="mirror://kde/unstable/koffice-${PV/_/-}/koffice-${TARBALLVER}.tar.bz2"
+			;;
+		*)
+			# Identify beta and rc versions by underscore
+			if [[ ${PV/_/} != ${PV} ]]; then
+				SRC_PATH="mirror://kde/unstable/koffice-${PV/_/-}/src/koffice-${TARBALLVER}.tar.bz2"
+			fi
+			;;
 	esac
-	# Identify beta and rc versions by underscore
-	if [[ ${PV/_/} != ${PV} ]]; then
-		SRC_PATH="mirror://kde/unstable/koffice-${PV/_/-}/src/koffice-${TARBALLVER}.tar.bz2"
-	fi
 fi
 
 # Common xdelta code
