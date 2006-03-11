@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hsql
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.5 2006/03/09 17:43:16 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.6 2006/03/11 20:33:26 dcoutts Exp $
+
+  11 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> hsql-1.7.ebuild:
+  Remove the backends from PDEPEND. Use a message in pkg_postinst instead.
 
   09 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> hsql-1.7.ebuild:
   Add ~sparc to KEYWORDS. See bug #124902
