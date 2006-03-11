@@ -1,31 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dcd0469b532dc7639e0951df50fb32de ChangeLog 3705
-RMD160 af13c30a52e4a48c16b98fdc100d74cf99e77bdc ChangeLog 3705
-SHA256 68e0b7ea8c59040889e0dcefe534d10bd7fd90aa8b7dd6c759f22bbf5200c21e ChangeLog 3705
+MD5 935bb65fb86226b8cd7a3fe7c19a6080 ChangeLog 3828
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-krita-1.4.2 68
-RMD160 4fbdb279d7cdc49eeb424654474ff4b15dce2c5b files/digest-krita-1.4.2 68
-SHA256 7791e992f4d48e943f3d513459c63a8e5280d4052a33f729f6ef1a8be3b9cc81 files/digest-krita-1.4.2 68
 MD5 82af01b67d83c02945f1e26ae9529232 files/digest-krita-1.5_beta1 253
-RMD160 0e78237b9b17a1c13e8f3a1031875bddec8bafdb files/digest-krita-1.5_beta1 253
-SHA256 43ee5c0ab325495515723afb3fc2e4bc79eba3f6987fbc2dad504492e5a6e076 files/digest-krita-1.5_beta1 253
+MD5 a08e04910037e4b3b9e9cbfb92eda61e files/digest-krita-1.5_beta2 69
 MD5 7d57f921f9a3827f925a3457413914b8 files/krita-1.4.2-gcc41.patch 656
-RMD160 38a6dddfb244c2b65525edd8bd219854397eff8a files/krita-1.4.2-gcc41.patch 656
-SHA256 4f7fdc791cc6f811ed375741d1e1cc97eec7fbc72f0b23a22e0520afdf37f108 files/krita-1.4.2-gcc41.patch 656
 MD5 6899eb2eb91d5005991e4680ace4f505 krita-1.4.2.ebuild 1004
-RMD160 40a188e95543656dae9c88695442f6145b0f3b90 krita-1.4.2.ebuild 1004
-SHA256 7bfa387897d57c579f9e75b9af845fdaf9809d37d28dcacb7cf36f5caae65586 krita-1.4.2.ebuild 1004
 MD5 0a4771e46a324b59fc1a4fb26165c4e7 krita-1.5_beta1.ebuild 1180
-RMD160 c1c928b72d2a0f680b4aa633ecf52800e5bcaad4 krita-1.5_beta1.ebuild 1180
-SHA256 2054a893fed480cc0b3b66f9c412168672958839a680835babbb9323092ec539 krita-1.5_beta1.ebuild 1180
+MD5 60a0170cdd2a43cf46539864a1940e57 krita-1.5_beta2.ebuild 1179
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
-SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBud2JrHF4yAQTrARAn48AKCtrW5Fp2qkLpVqGxrAvPEHpNh/EgCgwUbY
-4l01vQ2ZBaxHsedaAtO8YR8=
-=+zjx
------END PGP SIGNATURE-----
