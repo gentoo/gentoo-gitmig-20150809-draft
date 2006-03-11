@@ -4,21 +4,9 @@ Hash: SHA1
 MD5 da45466a574c0c99684eb380fd2999e5 ChangeLog 4232
 RMD160 b9dacc31cfdf3df837d883f635d9e40ea3517cba ChangeLog 4232
 SHA256 336c92d59828a25f94a037e32894cebabc286c23236f0d6a97367e51b62bf6b5 ChangeLog 4232
-MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r3 66
-RMD160 15d300d5e830ae15160766fd3d44a543c4c0c3d1 files/digest-ftp-0.17-r3 66
-SHA256 386ec7dce64712dbbb8b81f072f3ea065346af722dcf0869eec0361bac155346 files/digest-ftp-0.17-r3 66
-MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r5 66
-RMD160 15d300d5e830ae15160766fd3d44a543c4c0c3d1 files/digest-ftp-0.17-r5 66
-SHA256 386ec7dce64712dbbb8b81f072f3ea065346af722dcf0869eec0361bac155346 files/digest-ftp-0.17-r5 66
 MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r6 66
 RMD160 15d300d5e830ae15160766fd3d44a543c4c0c3d1 files/digest-ftp-0.17-r6 66
 SHA256 386ec7dce64712dbbb8b81f072f3ea065346af722dcf0869eec0361bac155346 files/digest-ftp-0.17-r6 66
-MD5 10adb0b3b66639bdb39e7c976667eb68 files/netkit-ftp-0.17+ssl-0.2+auth.diff 424
-RMD160 62947ded40cf1e10a75426e68a1c45961b98035c files/netkit-ftp-0.17+ssl-0.2+auth.diff 424
-SHA256 2e22454a382a09f311d1af2b3c48cccf131a6014001118dc25a5803692e555c9 files/netkit-ftp-0.17+ssl-0.2+auth.diff 424
-MD5 93f2e2f560f76d5ca833c2172fc2b501 files/netkit-ftp-0.17+ssl-0.2.diff 45616
-RMD160 64e149df2376ed396a1fc4b8f46d2b4d27a0ac1c files/netkit-ftp-0.17+ssl-0.2.diff 45616
-SHA256 2c5c639448b2e32713b61d1abbecd8aafa4be3fcb8d7c54584c36b2702a4c5f0 files/netkit-ftp-0.17+ssl-0.2.diff 45616
 MD5 ac6ceef9cbe7bce5e89b97acaba3934f files/netkit-ftp-0.17-acct.patch 419
 RMD160 131d0f7f411a9317bef4a9489371499824dc1982 files/netkit-ftp-0.17-acct.patch 419
 SHA256 c5a50791759b7f15c7743b8af9f233efa7765715044262f5220634b86a11bafa files/netkit-ftp-0.17-acct.patch 419
@@ -46,12 +34,6 @@ SHA256 5a5dfb273a24a95757205562925430e84995e30e0bd48a38148dbf8c91a532e1 files/ne
 MD5 c6d25ab53501677130cabad19092b0a5 files/netkit-ftp-0.17-ssl-0.2.patch 29528
 RMD160 1c692ead2aa9033c503c0a8732fa583dc2d87cee files/netkit-ftp-0.17-ssl-0.2.patch 29528
 SHA256 352184f5ea05a184f8ef46f1408878b3306cfa5cb288bdb68e06075b0031c8b1 files/netkit-ftp-0.17-ssl-0.2.patch 29528
-MD5 80ca646c7ebf7d86e937294242836ea6 ftp-0.17-r3.ebuild 1034
-RMD160 e6ee8a4d87efae61fee95490485d97015989790b ftp-0.17-r3.ebuild 1034
-SHA256 8526f6848c341b86005d248e4fd6e3001db614f83bb2d1089b84ff64ab512012 ftp-0.17-r3.ebuild 1034
-MD5 45fd632e8f4c81f73a7ab97dac005132 ftp-0.17-r5.ebuild 1413
-RMD160 35a3e86451fcea3a9f2fd0fad299a6c18db5d82b ftp-0.17-r5.ebuild 1413
-SHA256 f9507a057c77df28ac90e1586a21988a63655793c9e48225d6608007ff7ae8b2 ftp-0.17-r5.ebuild 1413
 MD5 f575917c2d3103fe0cd22c5ccdc33433 ftp-0.17-r6.ebuild 1540
 RMD160 15c4dbdf7515fac59d671a6bc0e03ee8d1662d07 ftp-0.17-r6.ebuild 1540
 SHA256 f59c39e9d6c14dd3e52423299a2c676e86f44833758b4d84946934b73b5f7c3d ftp-0.17-r6.ebuild 1540
@@ -59,9 +41,9 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDnUg2+ySkm8kpY0RAkybAJ4wUf+mZTLqcbmLAoYa7ZxGxIKgwQCbBFF2
-yzhh6Uftyjd0TgvP9hLXBjU=
-=OZbl
+iD8DBQFEEkPo2+ySkm8kpY0RAv4vAKC712vegYxpRwnXpXe0Z6ZzrmrY1wCguQap
+TmhTp92SB7YC6NchoWk9MYM=
+=msQy
 -----END PGP SIGNATURE-----
