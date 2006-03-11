@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.5.0.ebuild,v 1.1 2006/02/28 14:59:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.5.0.ebuild,v 1.2 2006/03/11 06:08:26 tsunam Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.omat.nl/drupal/?q=node/23"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 x86"
 
 IUSE=""
 
