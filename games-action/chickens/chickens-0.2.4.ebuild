@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.5 2006/01/28 21:19:10 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.6 2006/03/11 17:29:00 ferdy Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="http://havoc.sourceforge.net/chickens/files/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~alpha ~amd64 ppc x86"
 IUSE=""
 
 DEPEND="media-libs/allegro"
