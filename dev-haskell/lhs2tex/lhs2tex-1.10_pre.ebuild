@@ -1,17 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/lhs2tex-1.10_pre.ebuild,v 1.7 2006/03/01 20:01:24 corsair Exp $
-
-SRC_URI="http://www.cs.uu.nl/~andres/lhs2tex/${P/_pre/pre}.tar.bz2"
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/lhs2tex-1.10_pre.ebuild,v 1.8 2006/03/11 00:23:13 dcoutts Exp $
 
 DESCRIPTION="Preprocessor for typesetting Haskell sources with LaTeX"
 HOMEPAGE="http://www.cs.uu.nl/~andres/lhs2tex"
+SRC_URI="http://www.cs.uu.nl/~andres/lhs2tex/${P/_pre/pre}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 x86"
+KEYWORDS="~amd64 ~ppc64 ~sparc x86"
+IUSE="doc"
 
 S="${WORKDIR}/${P/_pre/pre}"
 

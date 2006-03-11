@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-0.9.10-r1.ebuild,v 1.3 2006/03/01 19:39:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-0.9.10-r1.ebuild,v 1.4 2006/03/11 00:21:58 dcoutts Exp $
 
 inherit ghc-package
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cse.unsw.edu.au/pub/users/dons/${PN}/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-amd64 ~ppc ~x86" # currently broken on amd64
+KEYWORDS="-amd64 ~ppc ~sparc ~x86" # currently broken on amd64
 IUSE="doc"
 
 DEPEND="virtual/ghc

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/lhs2tex
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.8 2006/03/01 20:01:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.9 2006/03/11 00:23:09 dcoutts Exp $
+
+  10 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> lhs2tex-1.10_pre.ebuild:
+  Add ~sparc to KEYWORDS. See bug #124902
 
   01 Mar 2006; Markus Rothe <corsair@gentoo.org> lhs2tex-1.10_pre.ebuild:
   Added ~ppc64; bug #124469
