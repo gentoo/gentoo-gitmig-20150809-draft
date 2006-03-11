@@ -1,19 +1,70 @@
-MD5 b11c4d3064c807f259eae5a15f61232a metadata.xml 4326
-MD5 0b1ac52dc3bcf567017d7f496464eb81 ogre-0.15.1.ebuild 1436
-MD5 6c1cd410785288a28065ef62272776cb ogre-1.0.6.ebuild 2540
-MD5 df0b4799b3ceef6be597881d6289f945 ogre-1.0.5.ebuild 2536
-MD5 fcf412acd8bd58918ffa8c5e6639151a ogre-1.0.2.ebuild 2384
-MD5 269e60601427284b5996689c4d5ff208 ogre-1.0.3_p1.ebuild 2446
-MD5 f9df69d54123bd5bac080ca1d837a119 ogre-1.0.4.ebuild 2536
-MD5 24a70171384ad7a8b14c8a5e4e891521 ogre-1.0.1.ebuild 2217
-MD5 7030c9d4b1bf78391a2f2a43762da67d ChangeLog 3066
-MD5 a71b8412cf3e1e75c6d8cf54120adc2e files/ogre-1.0.2-autotools.patch 672
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0624b15e7f287337bfac57092bbaeb5c ChangeLog 3272
+RMD160 8fc0e296aec5e19b2b50454e6bbac9409e3d2682 ChangeLog 3272
+SHA256 bb585c5a0bd4e5129ebcdda2b156bd9b483c48025297ae347cf32cb8c5caa350 ChangeLog 3272
 MD5 0d32a739d9a15e9734ab1f73a763e150 files/0.15.1-nocg.patch 1535
-MD5 00b83fe5730136f01f243b1f16fd478f files/ogre-1.0.1-autotools.patch 3482
+RMD160 9969ea43bb6caa6cf19e297de2e60cf62c5a2d9e files/0.15.1-nocg.patch 1535
+SHA256 7b931bde184602cf09704685f7967827f24e32926ec8dc0a5411f8f24960279e files/0.15.1-nocg.patch 1535
 MD5 1a623c9495c1a9f63d402d570d74e79d files/digest-ogre-0.15.1 77
-MD5 9de5e022778cac123fc7bcb450ea7e55 files/digest-ogre-1.0.6 76
-MD5 f8f854062e8f3ade51a25fa86c2c4d4d files/digest-ogre-1.0.2 76
+RMD160 756b7e1b664125da08f03b038c0ea40007166809 files/digest-ogre-0.15.1 77
+SHA256 7b7b5109bcac30b60b75bbc75ba96812e821974cb0c765a05bb1d7b9036c0fce files/digest-ogre-0.15.1 77
 MD5 77b04d7b9bd7c05800bc038e8e7e5536 files/digest-ogre-1.0.1 76
+RMD160 2b32b8751905c3ea1cff4f94fb215fa063bc288f files/digest-ogre-1.0.1 76
+SHA256 9ef9ee86bf22028f619772fed4a77da34edbacfed4dab6da801efa16610c2b3e files/digest-ogre-1.0.1 76
+MD5 f8f854062e8f3ade51a25fa86c2c4d4d files/digest-ogre-1.0.2 76
+RMD160 9dc6e367b23fc69627a171365ba10370299e51da files/digest-ogre-1.0.2 76
+SHA256 b3ee7f20ca72790d58f7f7c5c1937b7ecb9c9edf482ec94a164d6e7fa5d90f0e files/digest-ogre-1.0.2 76
 MD5 cf71b4b5f6ddad4290f634c826385b29 files/digest-ogre-1.0.3_p1 78
-MD5 d8129c8c4e2aed4621f8d7250eedb118 files/digest-ogre-1.0.5 76
+RMD160 9f35e9af5dc8eec5d70763f7ecb799e571c0489e files/digest-ogre-1.0.3_p1 78
+SHA256 96d2e49c814104ba60c85a0682257d679276a835feded9ef08b2e8645fea1642 files/digest-ogre-1.0.3_p1 78
 MD5 ccbf336b72643dadd3f83a7cd0051558 files/digest-ogre-1.0.4 76
+RMD160 e52671d692da10b59f06c67878581c846f18541b files/digest-ogre-1.0.4 76
+SHA256 05c48029e6e19fc18d5387f2f7ac7789494363c7ac5d089a19e83c1832d083c7 files/digest-ogre-1.0.4 76
+MD5 d8129c8c4e2aed4621f8d7250eedb118 files/digest-ogre-1.0.5 76
+RMD160 690ba97c62dc8614b665c6fff35b7ac6a5abf096 files/digest-ogre-1.0.5 76
+SHA256 4e0ff1c466fd0aad46b75f81fd2819d8dac56b3021b30f5958e838bb27d3a84e files/digest-ogre-1.0.5 76
+MD5 407aa30fcdb085369e6d75dc884d5838 files/digest-ogre-1.0.6 274
+RMD160 1245c68b48814b269c22f8b19dba5cb88ab1f547 files/digest-ogre-1.0.6 274
+SHA256 83b1b88475bcd86f981654840875f1375aed8c4a3b2c93d65fca824a630fd032 files/digest-ogre-1.0.6 274
+MD5 00b83fe5730136f01f243b1f16fd478f files/ogre-1.0.1-autotools.patch 3482
+RMD160 601c6533ab832176d8cf37668557d4338831dc59 files/ogre-1.0.1-autotools.patch 3482
+SHA256 43982939136c12a24743b6ab661b08fb39356ed41e7cbe3631252f163c80b4b5 files/ogre-1.0.1-autotools.patch 3482
+MD5 a71b8412cf3e1e75c6d8cf54120adc2e files/ogre-1.0.2-autotools.patch 672
+RMD160 ec1594fa23efee31ca5c78f68a13def0657ff061 files/ogre-1.0.2-autotools.patch 672
+SHA256 38d3d7ec2682c14cd617057bb09bdd1bb476e3d46af494b4055c196c730259b3 files/ogre-1.0.2-autotools.patch 672
+MD5 6346d883e358b13caee4ac980927f835 files/ogre-1.0.6-gcc41.patch 2964
+RMD160 53f750cdd7113d1642a15bbbcee5bcc5470bc4ea files/ogre-1.0.6-gcc41.patch 2964
+SHA256 4ee1c89b97ecbb9e0735bef2a0232d63c2116eaa4e09dba6e7c8bfe64562a65a files/ogre-1.0.6-gcc41.patch 2964
+MD5 b11c4d3064c807f259eae5a15f61232a metadata.xml 4326
+RMD160 dc14cc3b5869cbfddc4791048dcbb92bc59553de metadata.xml 4326
+SHA256 18f503fee6e9acb25ea9f9d7efafb0c6c454bfb1519a13b811f2aed18f1b7927 metadata.xml 4326
+MD5 0b1ac52dc3bcf567017d7f496464eb81 ogre-0.15.1.ebuild 1436
+RMD160 6b1d571bd72c17a0e93a2a683cb78c81b4dbfeb0 ogre-0.15.1.ebuild 1436
+SHA256 f5705dcac9ff289e48f02ce9b402f33eeb93964cf9702d93fd8ff656ab1030b4 ogre-0.15.1.ebuild 1436
+MD5 24a70171384ad7a8b14c8a5e4e891521 ogre-1.0.1.ebuild 2217
+RMD160 946436e94814209e60671bc91290266effca677b ogre-1.0.1.ebuild 2217
+SHA256 d2d59165ac9fae080147da3b9670c909bcfc7a48f7e913bfe5a935be9f8ebc71 ogre-1.0.1.ebuild 2217
+MD5 fcf412acd8bd58918ffa8c5e6639151a ogre-1.0.2.ebuild 2384
+RMD160 4746c745f5c2648c8567e4690623cb2f52bf7657 ogre-1.0.2.ebuild 2384
+SHA256 7dc7910482c2a145e99bcd1af5488f317da612c6a5e6621a2077e01b6000b949 ogre-1.0.2.ebuild 2384
+MD5 269e60601427284b5996689c4d5ff208 ogre-1.0.3_p1.ebuild 2446
+RMD160 66726a2dea9c7f004fa4a32ba57bd97aa5bf8cd7 ogre-1.0.3_p1.ebuild 2446
+SHA256 3eefa2f5e54eaf8a19941c78249c5846d8c0f93b3ddf2b9d4838e2112114a1b1 ogre-1.0.3_p1.ebuild 2446
+MD5 f9df69d54123bd5bac080ca1d837a119 ogre-1.0.4.ebuild 2536
+RMD160 638ec60eeffa452d9e7e74089da6d9b79d4530bf ogre-1.0.4.ebuild 2536
+SHA256 bd2a803be6c28f8ee115e2b1b3d12ebfe711795c9e09485c5316ca39a0e830c1 ogre-1.0.4.ebuild 2536
+MD5 df0b4799b3ceef6be597881d6289f945 ogre-1.0.5.ebuild 2536
+RMD160 3718796ade1d69252f1721c91364f9b3dba713c0 ogre-1.0.5.ebuild 2536
+SHA256 1e82e8bdba7c153ebdf50cdb27587733a0808eb9145ed02684771d5691d8416c ogre-1.0.5.ebuild 2536
+MD5 a0c1128d9ae0ae074fbbd14254b3a040 ogre-1.0.6.ebuild 2578
+RMD160 6c64b02f453dec273f90aa73a5b8c744951196e3 ogre-1.0.6.ebuild 2578
+SHA256 687e75d433cc78a4f6e6ee9e3874db423a86692d937b352907e0acdfe8f63c66 ogre-1.0.6.ebuild 2578
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEEiQzCRZPokWLroQRAhIWAJwNLQVHGNs7+J1UzVMLA0YFH+jpZgCeN9CN
+5cVm2yjxRazhthwWmHEwwiA=
+=V7Bq
+-----END PGP SIGNATURE-----
