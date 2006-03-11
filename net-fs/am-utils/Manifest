@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 11d94f119ba225e0a6d2d857c9db10fe ChangeLog 2114
-RMD160 906ffc1e7738deecdb9d97165701c2f46f604263 ChangeLog 2114
-SHA256 f472b83214eb622dfa4bb81377d49f70d298768229868e29e459af3aaebe90c6 ChangeLog 2114
+MD5 f6619b1d0027176204a8d71aea8d32e6 ChangeLog 2234
+RMD160 23ff62609804d77f7adc72973b3d4c7fef5646a4 ChangeLog 2234
+SHA256 2795e5caff4944eefb65f56bf9a1510ce2e5ec0ec794bf3eed8b558b85d07562 ChangeLog 2234
 MD5 57f0b92d5624e6bec78f2fa92b971eee am-utils-6.0.10.ebuild 1090
 RMD160 c0406c768d632fc5b3f9aca49647b3525cfa5030 am-utils-6.0.10.ebuild 1090
 SHA256 d240be39dee575fa0401e5f9ce43f16cc07a746f4857b73fc00c244ff14810b1 am-utils-6.0.10.ebuild 1090
@@ -13,6 +13,9 @@ SHA256 a133fe08ec8e8e6f102e95da4deed8ce3e5ef7b0605cb4dedc94a6713edb08e1 am-utils
 MD5 f35d52030c7705f5ba01999bc04674cf am-utils-6.1.3.ebuild 842
 RMD160 b1968d70d42458b1d32d8710fe6bd7e64e7d8028 am-utils-6.1.3.ebuild 842
 SHA256 c27ec3edaf5a6c9c4cea24581bacbae3ef86f91cd30cada5734805d01c44a685 am-utils-6.1.3.ebuild 842
+MD5 b674eb3fc0db3adb7c01a4006b744846 am-utils-6.1.4.ebuild 840
+RMD160 d1594d7f930c50cbdf20664b30b7273678c95321 am-utils-6.1.4.ebuild 840
+SHA256 8f2cbec97ae66366c95742077b4ad4c24080768f7b2880a0e51dd7d9a6d3ae5a am-utils-6.1.4.ebuild 840
 MD5 be507ff6c41cb6a4a15be900320c8429 files/am-utils-6.0.10-parallel-build.patch 2323
 RMD160 4c84b291c744749e9c135ab27fa3ae36a8d34660 files/am-utils-6.0.10-parallel-build.patch 2323
 SHA256 c65ba75087864dc70e6d2e0b0003007797a7331d40ed2eb5de4611fe24efa7b0 files/am-utils-6.0.10-parallel-build.patch 2323
@@ -37,13 +40,16 @@ SHA256 7a37c78cc328eacfc9e11704a6da19a7cd0f0068874786d4eb11e24863822ea4 files/di
 MD5 546ea0c6b82fca57e79040714048a62b files/digest-am-utils-6.1.3 247
 RMD160 d477cb3145da91ed3007fa7c8ded1f7e94ebb72c files/digest-am-utils-6.1.3 247
 SHA256 30340b6f688a554c8acb7287317962c75795fa5d61c278f6ee12e2fb52783f72 files/digest-am-utils-6.1.3 247
+MD5 c81abd8fbc9d9b9c53369790936799c3 files/digest-am-utils-6.1.4 247
+RMD160 06f09d1ae612122d90f2278c8f0bb8d7dcb05681 files/digest-am-utils-6.1.4 247
+SHA256 b479b047ef96625305f85b283798c82efeafd81499a3a9d71c13e2a1583e517d files/digest-am-utils-6.1.4 247
 MD5 a3dd8511b8874ce1b494dce2472c709c metadata.xml 159
 RMD160 8e0977b9abd90afe9e1d5c1326823a5726f6e2a4 metadata.xml 159
 SHA256 562c59615c028ffa088de789b3a792fd4cbbbfe71628ddd6a55d3b176becbc6b metadata.xml 159
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD59YTJrHF4yAQTrARAvPUAJ40ZEbVKY/k3CBQY/RCTLKtWZAzEACgjjqx
-Pzms1vBym7vKnWTinA2Wl/E=
-=nXpp
+iD8DBQFEEsEJ2+ySkm8kpY0RAjOjAJ9dewB03NxeZ3tTnHaHNfSRtBs5kgCeKCsU
+Fw5ZqSTX7oKhU6skGCf+dyk=
+=N3na
 -----END PGP SIGNATURE-----
