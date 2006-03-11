@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.11.1-r1.ebuild,v 1.5 2006/02/05 21:22:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.11.1-r1.ebuild,v 1.6 2006/03/11 07:44:04 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -82,7 +82,7 @@ src_compile() {
 		--enable-shared=no \
 		--enable-static=yes \
 		$(use_with pam libpam) \
-		$(use_with skey libskey) \
+		$(use_with skey) \
 		$(use_with selinux) \
 		$(use_enable nls) \
 		|| die "bad configure"
