@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha01-r2.ebuild,v 1.9 2006/03/11 15:29:40 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha01-r2.ebuild,v 1.10 2006/03/11 19:12:35 metalgod Exp $
 
 inherit eutils gnuconfig toolchain-funcs flag-o-matic
 
