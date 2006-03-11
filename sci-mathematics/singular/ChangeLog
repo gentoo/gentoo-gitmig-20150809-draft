@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.9 2006/03/06 11:41:44 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.10 2006/03/11 20:23:03 markusle Exp $
+
+  11 Mar 2006; Markus Dittrich <markusle@gentoo.org>
+  singular-3.0.1.2.ebuild:
+  Filtered hashval LDFLAG since it breaks the configure script. 
+  Thanks to Patrizio Bassi <hetfield666@gmail.com> for his help in 
+  debugging this. This fixes bug #125180.
 
   06 Mar 2006; Markus Dittrich <markusle@gentoo.org>
   singular-3.0.1.2.ebuild:

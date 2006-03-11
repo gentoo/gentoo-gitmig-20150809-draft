@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.1.2.ebuild,v 1.3 2006/03/06 11:41:44 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.1.2.ebuild,v 1.4 2006/03/11 20:23:03 markusle Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 PV_MAJOR=${PV%.*}
 MY_PV=${PV//./-}
@@ -35,6 +35,13 @@ src_unpack () {
 }
 
 src_compile() {
+	# need to filter this LDFLAGS, otherwise the configure
+	# script chokes (see bug #125180)
+	filter-flags -Wl,-hashvals
+	filter-ldflags -hashvals
+	filter-ldflags -Wl,-hashvals
+
+
 	local myconf="${myconf} --disable-doc --without-MP --with-factory --with-libfac --prefix=${S}"
 	econf $(use_enable emacs) \
 		${myconf} || die "econf failed"
