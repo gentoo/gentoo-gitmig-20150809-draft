@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5ed4be194844d36764ac1d64f1606ace ChangeLog 3100
-RMD160 754007a41c4a6eab61d132da3f58352750a25239 ChangeLog 3100
-SHA256 56a0f316bb3810215ff04cf503cddec95b38dfaeb3c3ff70c31ea8f431c45e87 ChangeLog 3100
+MD5 f62bc7413f087f4367ed16b795ccae7f ChangeLog 3450
+RMD160 04a3d4b851e72c6f18ac86127a853c25a5509a97 ChangeLog 3450
+SHA256 cce17624c022be1e722aa751b6e84a1ce4b9add4df5ce35a9f9a79c45cbde6c1 ChangeLog 3450
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-v4l-0.10.0 77
 RMD160 002939134d98d4c0cf79c6fc11212d2cd95b6544 files/digest-gst-plugins-v4l-0.10.0 77
 SHA256 e75a88cb347541c450eae77cffbf5c5f42168d2076b9186554b7765ad5bcbefa files/digest-gst-plugins-v4l-0.10.0 77
@@ -13,6 +10,12 @@ SHA256 84598b441cbc895d520dfebbd3a4661e3fdf4af6ccf0cf3193408af54cf245af files/di
 MD5 4d9a06718bb82db62ea71d1b2fc00ae3 files/digest-gst-plugins-v4l-0.10.2 77
 RMD160 10413c5f1ef58ef250faba0fd8f821757d33794c files/digest-gst-plugins-v4l-0.10.2 77
 SHA256 fc970518dbc39d0002049936f4849d8a81dc68b07599d7f856bf540a651f6299 files/digest-gst-plugins-v4l-0.10.2 77
+MD5 73770b61668a182a437ba54871c72cc1 files/digest-gst-plugins-v4l-0.10.3 277
+RMD160 53fee61c0c0f4f5f560c0dbc4f958aa33a0da570 files/digest-gst-plugins-v4l-0.10.3 277
+SHA256 f61f03734f890c5a33f3c26ce29474417bcc5b343b65c30ca3be7eeaff9e4e2e files/digest-gst-plugins-v4l-0.10.3 277
+MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-v4l-0.10.4 277
+RMD160 bee1889727ca635912779fbcac2958f0ceba48b0 files/digest-gst-plugins-v4l-0.10.4 277
+SHA256 f47f4fd7829d14012ef690db4a45f568549f7a5015a00bd9ba03a41f3584e654 files/digest-gst-plugins-v4l-0.10.4 277
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-v4l-0.8.10 72
 RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-v4l-0.8.10 72
 SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-v4l-0.8.10 72
@@ -37,6 +40,12 @@ SHA256 c4a86d911140c9d2e8b146fa709e4479d02db9d993198f7a71bd66410c04168d gst-plug
 MD5 59ced56d49959c74bed19f961de15e95 gst-plugins-v4l-0.10.2.ebuild 476
 RMD160 f0fb0facade4b844f9e9b023ec9be05a4cf218f1 gst-plugins-v4l-0.10.2.ebuild 476
 SHA256 85dae61d13936ff906a63f1586ae85403d83c28551f24e2a411d4e6d3b4477da gst-plugins-v4l-0.10.2.ebuild 476
+MD5 c269f15788a73143d42fcbb2896d31a1 gst-plugins-v4l-0.10.3.ebuild 491
+RMD160 875dfeff514e6b6ccc11fa2d923af305da6110b9 gst-plugins-v4l-0.10.3.ebuild 491
+SHA256 18d11f3e105d87d9cd6797131d071aa62e92c9735b1312c0b15a2952fe64e48b gst-plugins-v4l-0.10.3.ebuild 491
+MD5 c269f15788a73143d42fcbb2896d31a1 gst-plugins-v4l-0.10.4.ebuild 491
+RMD160 875dfeff514e6b6ccc11fa2d923af305da6110b9 gst-plugins-v4l-0.10.4.ebuild 491
+SHA256 18d11f3e105d87d9cd6797131d071aa62e92c9735b1312c0b15a2952fe64e48b gst-plugins-v4l-0.10.4.ebuild 491
 MD5 97ff23c767ccf75b64cd47c28dafa12f gst-plugins-v4l-0.8.10.ebuild 473
 RMD160 c4bbe0793a7fc38a486f47511ded0f6efdcaa6ff gst-plugins-v4l-0.8.10.ebuild 473
 SHA256 218c659b5f28a326fc0eb9b776577fafe92536049c94dd965998340b5e5aa659 gst-plugins-v4l-0.8.10.ebuild 473
@@ -55,10 +64,3 @@ SHA256 7ba8f3b8eb19ee4c58727fa905dd645f2683a7025dcc999b4ceb4a90a9df8afb gst-plug
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
 RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
 SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1 metadata.xml 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBsssr2QksT29OyARAnhYAKCWTJujgM+pb+Eqt787CrxohmDNpgCghCIy
-fWYEPoh0Mi05p24YHD9MEB8=
-=u470
------END PGP SIGNATURE-----
