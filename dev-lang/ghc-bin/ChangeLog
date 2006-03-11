@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.40 2006/03/11 17:38:47 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.41 2006/03/11 21:59:11 dcoutts Exp $
+
+  11 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> ghc-bin-6.4.1.ebuild:
+  Fix paths in hsc2hs and ghcprof wrapper scripts.
 
   11 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> ghc-bin-6.4.1.ebuild:
   Relocate paths only in the scripts that need relocating. Use /bin/bash

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.7 2006/03/11 17:38:47 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.8 2006/03/11 21:59:12 dcoutts Exp $
 
 inherit base multilib
 
@@ -40,7 +40,10 @@ src_unpack() {
 	# relocate from /usr to /opt/ghc
 	sed -i -e "s|/usr|${LOC}|g" \
 		usr/bin/ghc-${PV} usr/bin/ghci-${PV} usr/bin/ghc-pkg-${PV} \
-		usr/$(get_libdir)/ghc-${PV}/package.conf
+		usr/bin/hsc2hs usr/$(get_libdir)/ghc-${PV}/package.conf
+
+	sed -i -e "s|/usr/$(get_libdir)|${LOC}/$(get_libdir)|" \
+		usr/bin/ghcprof
 
 	# fix hardened gcc flags in the ghc driver script
 	if grep -q GHC_CFLAGS usr/bin/ghc; then
