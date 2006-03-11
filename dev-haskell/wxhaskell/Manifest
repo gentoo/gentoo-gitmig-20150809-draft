@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9ac9dfcb73672985bf8dd03e469b5a81 ChangeLog 3249
-RMD160 f6b038bb3402b85bb607284f2d1310c7eb868f07 ChangeLog 3249
-SHA256 add7d579cedbf8e806ba24cee44cb274fa0ca9e94c111837168c0edbfc36788f ChangeLog 3249
+MD5 2aaed4b381fbf95c5ebe0b73932c73bb ChangeLog 3435
+RMD160 f0f5d6d88a3d8357becaedabab001979225d1596 ChangeLog 3435
+SHA256 6fb5e4175a9f299226782f048d5c8a5924cdc98234b767f215c9ecf9f8aa66bf ChangeLog 3435
 MD5 045506c36a937e84a6203f2205c9dfd4 files/digest-wxhaskell-0.8-r1 244
 RMD160 396f688c25e1c117f0f3c5a2a8ca372d230db9de files/digest-wxhaskell-0.8-r1 244
 SHA256 4ad92a7532e732e05f38cc736707005c632d6f326ae32a140c705cd9db63e824 files/digest-wxhaskell-0.8-r1 244
@@ -19,16 +19,16 @@ SHA256 1d00c8be162a6cb87b3de440b3e63e10b39c12d56e8fbfe592e75aed872b2508 metadata
 MD5 67196ffe4b985a8118e89a0ac673e114 wxhaskell-0.8-r1.ebuild 2859
 RMD160 c7b76e5ce6ce99dbf3a4c0aa9928845d2363bdef wxhaskell-0.8-r1.ebuild 2859
 SHA256 c4cd43db6ff6b65cbf2fac0dbcd78c8f9da8fcc9ce0d6f26efc425405ee93950 wxhaskell-0.8-r1.ebuild 2859
-MD5 b64f100228db701180e2761fb0baf435 wxhaskell-0.9.4.ebuild 2840
-RMD160 60f8d78ae0a4a16ab797a660b22523e772659ebb wxhaskell-0.9.4.ebuild 2840
-SHA256 a26e453fca882f837bf305fa4a109f94c0f5fdb21ca128fc7eb29df7e10d04b7 wxhaskell-0.9.4.ebuild 2840
+MD5 53887ef9622903fd025b45079fcd0542 wxhaskell-0.9.4.ebuild 2953
+RMD160 d8c347bd7d8fe0508edd3b9a92b22756c6e24d7c wxhaskell-0.9.4.ebuild 2953
+SHA256 01a79decd8651bc3a49f0dd9f75157ae7e24c35cf23334395b3b3eaaf344d8de wxhaskell-0.9.4.ebuild 2953
 MD5 40618bf3fcadeef0837c0b8a6c281b64 wxhaskell-0.9.ebuild 2856
 RMD160 bee28d1368b27bedd59168c2d313cc057859628a wxhaskell-0.9.ebuild 2856
 SHA256 4e902a85da1903f6b7678796e2809339947bbb99f0d077e1068ba9c1567f96f1 wxhaskell-0.9.ebuild 2856
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD+L3p/B0cxt+cq+wRApxUAJ4sXpl8RlO1lbOqk3LKMjg3+GQCJgCfe62l
-gSaAgicOqj5lAmhXv07Q3Wk=
-=IvCH
+iD8DBQFEErl2/B0cxt+cq+wRAqEGAKCFgXlmFAICS8dfkNa6wgtjDnqTawCeLr9Q
+KyHqg2okP8OuXbaUVGpuaek=
+=EW44
 -----END PGP SIGNATURE-----

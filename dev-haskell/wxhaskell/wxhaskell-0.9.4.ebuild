@@ -1,17 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.4 2006/02/19 18:50:26 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.5 2006/03/11 11:50:30 dcoutts Exp $
 
 inherit flag-o-matic wxwidgets ghc-package
 
 DESCRIPTION="a portable and native GUI library for Haskell"
 HOMEPAGE="http://wxhaskell.sourceforge.net/"
 SRC_URI="mirror://sourceforge/wxhaskell/${PN}-src-${PV}.zip"
+
 LICENSE="wxWinLL-3"
 SLOT="0"
-
-KEYWORDS="~x86 ~ppc ~amd64"
-
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=virtual/ghc-6.2
@@ -93,7 +92,10 @@ src_install() {
 	fi
 
 	# substitute for the ${wxhlibdir} in package files and register them
-	sed -i -e "s:\${wxhlibdir}:${D}/usr/lib/${P}:" ${D}/usr/lib/${P}/*.pkg
+	# for ghc-6.2 change the package to be exposed by default.
+	sed -i -e "s:\${wxhlibdir}:${D}/usr/lib/${P}:" \
+		   -e "s:auto = False:auto = True:" \
+		   ${D}/usr/lib/${P}/*.pkg
 	ghc-setup-pkg ${D}/usr/lib/${P}/*.pkg
 	ghc-install-pkg
 }

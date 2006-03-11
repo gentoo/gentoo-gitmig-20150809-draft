@@ -1,20 +1,24 @@
 # ChangeLog for dev-haskell/wxhaskell
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.19 2006/02/19 18:50:26 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.20 2006/03/11 11:50:30 dcoutts Exp $
 
-  19 Feb 2006; <duncan@gentoo.org> wxhaskell-0.8-r1.ebuild,
+  10 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> wxhaskell-0.9.4.ebuild:
+  Make the wxhaskell package be exposed by default with ghc-6.2.2
+  Add ~sparc to KEYWORDS. See bug #124902
+
+  19 Feb 2006; <dcoutts@gentoo.org> wxhaskell-0.8-r1.ebuild,
   wxhaskell-0.9.ebuild, wxhaskell-0.9.4.ebuild:
   Masking 0.8-r1 and 0.9 since wxGTK-2.4.x doesn't work due to bug #123323
   Updating all ebuild versions to remove gtk2 USE flag (bug #106560).
   Also add app-arch/unzip to DEPEND (bug #69831)
   Other changes to install location and how the package is registered.
 
-  17 Feb 2006; <duncan@gentoo.org> wxhaskell-0.8-r1.ebuild,
+  17 Feb 2006; <dcoutts@gentoo.org> wxhaskell-0.8-r1.ebuild,
   wxhaskell-0.9.ebuild, wxhaskell-0.9.4.ebuild:
   Require that wxGTK was built with USE="X -odbc -unicode"
   Hopefully this will address bugs #92827 and #110932.
 
-  16 Feb 2006; <duncan@gentoo.org> metadata.xml, wxhaskell-0.8-r1.ebuild,
+  16 Feb 2006; <dcoutts@gentoo.org> metadata.xml, wxhaskell-0.8-r1.ebuild,
   wxhaskell-0.9.ebuild, wxhaskell-0.9.4.ebuild:
   Seriously broken on amd64. Temporarily disabling all versions on amd64.
   It appears to install a file as "/usr/lib" which overwrites the /usr/lib
