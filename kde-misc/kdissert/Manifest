@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ab5ff4b1af47c831afdf3a9f0e098e87 ChangeLog 2989
-RMD160 52830e54a965f9f919f10eb59a577be2ef1d7b42 ChangeLog 2989
-SHA256 2bf7140390ec7e262b083eb31b9efd28153562ea47e2fcc5e378a01d544312a7 ChangeLog 2989
+MD5 3963c2cf044097c2476b1bb58e3a3c92 ChangeLog 3080
+RMD160 bc178032051a0df44344ced6f004f8990a9fee31 ChangeLog 3080
+SHA256 1dc27664e69486123400f9a91d5a846ca5ebff84c9be804e557ff3f53f6115e4 ChangeLog 3080
 MD5 41a4e81509b92498f4cf56f577e8d50b files/digest-kdissert-1.0.5 67
 RMD160 da6f48fdee8b0b3eedd5d9f604de60be40770dc3 files/digest-kdissert-1.0.5 67
 SHA256 0595340d17a7a19be979e3ccad6ba92d3e8fefe2a074ce344f29b9a0268214d8 files/digest-kdissert-1.0.5 67
@@ -16,9 +16,9 @@ SHA256 ddf761d688c8268385b31e8165097b62aedfb5ac7e35ba7774307189d6eefb33 files/kd
 MD5 437dcf6eb6a982038eef9e438f2bdfb4 files/kdissert-1.0.5-bksys.diff 887
 RMD160 0fa298a61aa231e83c6b53992d70d54e194168bd files/kdissert-1.0.5-bksys.diff 887
 SHA256 49685f3d4f1d1960a4f82c75f638f05aaf86fe2bcf41d8202583b3fe3ee52479 files/kdissert-1.0.5-bksys.diff 887
-MD5 8a390f68cb9eb957ad04430ec3bb3bbf kdissert-1.0.5-r1.ebuild 1649
-RMD160 6f52d0b86ff0a014dcc905750ffe8ebf64642365 kdissert-1.0.5-r1.ebuild 1649
-SHA256 56c340bce084896b0f4adf983458b6e3db31cb0d12dcf103b7f80bee6414b134 kdissert-1.0.5-r1.ebuild 1649
+MD5 7de14c981f11f858eb9ad38800523b8e kdissert-1.0.5-r1.ebuild 1648
+RMD160 414480636b0c22ece5d562e0829460e82c7591ee kdissert-1.0.5-r1.ebuild 1648
+SHA256 9ec414f674583f283b959c6e7d6503af0caff275c61fbb95d55a14f2eba92b24 kdissert-1.0.5-r1.ebuild 1648
 MD5 150668a8c2ee1e5ac42d4b32bd4b1d6b kdissert-1.0.5.ebuild 920
 RMD160 d2fe85e7b2ba1569beedb0b773b672de63185bb3 kdissert-1.0.5.ebuild 920
 SHA256 29036ec4f10908ed8e17887ae0e345d6ab9ea6278eba03df964eebd0b0ab8020 kdissert-1.0.5.ebuild 920
@@ -26,9 +26,9 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEEmoRSENan+PfizARAjxbAJ9gWWYa3gwdzG7yr++uMrxSOsffUgCdFygA
-osaGBXQ/SicWfzD0hN8PMOo=
-=4wTz
+iD8DBQFEErvcoFw4q70f3SsRAp+GAKCrYEdpzUr84W7u+LiS/jcAXgla3wCgpyTc
+KEQsfZPfZBeJ8hTu7qNLCt0=
+=hJ7T
 -----END PGP SIGNATURE-----
