@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.19 2006/03/01 23:37:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.20 2006/03/11 03:23:37 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -326,7 +326,6 @@ src_unpack() {
 
 	# Allow users some custom control over the config
 	if use savedconfig ; then
-		[[ -r .config ]] && rm .config
 		for conf in ${PN}-${PV}-${PR} ${PN}-${PV} ${PN}; do
 			configfile=${ROOT}/etc/${PN}/${CTARGET}/${conf}.config
 			einfo "Checking existence of ${configfile} ..."

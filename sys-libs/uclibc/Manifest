@@ -25,13 +25,13 @@ SHA256 d715ea2db96d95973ff7863f9264688635f8e568a6a77419aebc456b7186e5ae uclibc-0
 MD5 8f5c84f63767d16871a6e48dcaaf290e uclibc-0.9.27.ebuild 10434
 RMD160 93ca81eb6db89ba584c365c1f55e9e109e45db8a uclibc-0.9.27.ebuild 10434
 SHA256 daf0fc19156207e91470c195f528f82eb178550896b3a1d8fbe48e51779c62fe uclibc-0.9.27.ebuild 10434
-MD5 ed825c5bceae63333accc21484958f3e uclibc-0.9.28.ebuild 14042
-RMD160 ba2aaf3bab14fe3ab161d07fc88194dfea01e5ce uclibc-0.9.28.ebuild 14042
-SHA256 d4d95bddfbca1a626ed0ce79b80feccfac34f85a87e92aa976840f8a57b9f46e uclibc-0.9.28.ebuild 14042
+MD5 062f46763841afe490c1eb770e5e2b47 uclibc-0.9.28.ebuild 14009
+RMD160 0d89685990aa4c4710ab1b8e826a5966bd3cfdf1 uclibc-0.9.28.ebuild 14009
+SHA256 0dbe25596db31bdceae79bfd550292f8da2d9e08abf57f1ce3ec5f69d76dd8b0 uclibc-0.9.28.ebuild 14009
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEBjBW2+ySkm8kpY0RAoKbAJ4zSbpSKN+smMnP5NI+KNZ6FoRxJQCcDj0K
-WVosqpcCK3Xx7xnw+lA/iOk=
-=oFPp
+iD8DBQFEEkMi2+ySkm8kpY0RApibAKCkN1I0X2htwoNW6R5U7ANwyq7GuQCfSAAg
+aMuOxMxq8GeqNXkf+clak2M=
+=nrEM
 -----END PGP SIGNATURE-----
