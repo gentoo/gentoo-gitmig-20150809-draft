@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 33cf4c17aada1cdd836a872646e800ad xml-xmlbeans-20041217.ebuild 1476
-MD5 7177fecf58d4c65cfc6f3b8e36952529 ChangeLog 1822
-MD5 2f7eb11c0417ec3403532aa25b5a6c6e metadata.xml 1122
+MD5 ddfd945774ed52496184308dab55bf48 ChangeLog 1928
+RMD160 a9b26249b0591c7629be4b9d0d5e64cfe2a160eb ChangeLog 1928
+SHA256 22f5b77f7f385496f7703cf323bbd7b0b6edd69baca266ec6e0c14fe486c8f40 ChangeLog 1928
 MD5 d17fbe1ca053cfb927b65bec2afd966f files/digest-xml-xmlbeans-20041217 75
+RMD160 2854beac21de8cf59f8d2ad4042ece2256dc9550 files/digest-xml-xmlbeans-20041217 75
+SHA256 e10c92758ca87a895397a3c7d8b77bf8756cf26b404d5e5d7ec74212ed5ba345 files/digest-xml-xmlbeans-20041217 75
 MD5 27c134bfb7f6284ad713592a1bba9919 files/xml-xmlbeans-gentoo.patch 7484
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDJDFZ/rLF9B432nYRAny6AKDAGBEGvyRWtZSWX0d5UA99E45SkgCfXEmv
-w5hPyv8ReawM1eqDRdh6zGY=
-=Fl0V
------END PGP SIGNATURE-----
+RMD160 8151151602749edc6c87c61e869c25006c1e05fc files/xml-xmlbeans-gentoo.patch 7484
+SHA256 228a300b69307f4cba5281e5730ac3460cfc7697ba54e8b918c734b68f1258ef files/xml-xmlbeans-gentoo.patch 7484
+MD5 2f7eb11c0417ec3403532aa25b5a6c6e metadata.xml 1122
+RMD160 bf7bf550a70fd5d0ad1301fb1d4576bdc0385ad6 metadata.xml 1122
+SHA256 e17caa002b304b030177bb1188f0b1a3c9d744fcbb2c2af4665c85612d57d18b metadata.xml 1122
+MD5 bf62d1ee678aded377192bcb8c9bcf60 xml-xmlbeans-20041217.ebuild 1477
+RMD160 65675128209b4bf553d595dc728d037a6d054512 xml-xmlbeans-20041217.ebuild 1477
+SHA256 f06ced45967da18e4aa7e54e2194216d3301514ba4a42dbf7bb4acfdd397f525 xml-xmlbeans-20041217.ebuild 1477
