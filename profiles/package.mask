@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5075 2006/03/11 20:21:31 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5076 2006/03/11 21:33:47 dcoutts Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -152,18 +152,6 @@ dev-util/glimmer
 # needs goffice-0.2.0, so masking both for now
 >=app-office/gnumeric-1.6.2
 >=x11-libs/goffice-0.2.0
-
-# Duncan Coutts <dcoutts@gentoo.org) (23 Feb 2006)
-# needs testing
-dev-haskell/hsql
-dev-haskell/hsql-mysql
-dev-haskell/hsql-postgresql
-dev-haskell/hsql-sqlite
-dev-haskell/hsql-odbc
-dev-haskell/hdbc
-dev-haskell/hdbc-postgresql
-dev-haskell/hdbc-sqlite
-dev-haskell/hdbc-odbc
 
 # Diego Pettenò <flameeyes@gentoo.org> (21 Feb 2006)
 # Pre-releases outside of KDE release cycle
