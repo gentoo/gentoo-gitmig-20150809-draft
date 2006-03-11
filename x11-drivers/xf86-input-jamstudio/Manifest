@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 48a86754552039b788c6dd19c20641be ChangeLog 2306
-RMD160 8e97b6a73c7fbbc91f5e569f16cf730bf33ad873 ChangeLog 2306
-SHA256 764cd22674ef1381a6ed63b6c10ee83c4a2db6b9606254446b6f8b2e71d9a0a8 ChangeLog 2306
+MD5 d97f4c1562e1a5b3ffc834bebdb8765c ChangeLog 2418
+RMD160 37aa716386c047e25ad1493b1e10c10cb673e024 ChangeLog 2418
+SHA256 b0d02bb7d0e405d4438e4163661d692d6e63f53b808ba17a16eb980e853feec8 ChangeLog 2418
 MD5 a384c536cf185958665caf71b4367f6b files/digest-xf86-input-jamstudio-1.0.0.5 151
 RMD160 f21d08ffb58bb4ba9d805a8abe70350b5127ec76 files/digest-xf86-input-jamstudio-1.0.0.5 151
 SHA256 44633120179ce08e2ac4a1f4b61d3e93e0804885c5ce99ed8775ffdec6b54a36 files/digest-xf86-input-jamstudio-1.0.0.5 151
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 d17785e54b1a1eb01af830ef2a3e0ab3 xf86-input-jamstudio-1.0.0.5.ebuild 559
-RMD160 187cde2f263b2b323274fdf6ebc66367544e6ba7 xf86-input-jamstudio-1.0.0.5.ebuild 559
-SHA256 bfd5d80a833a6062f262bfdbed73fe053be366e46cc7b406975e91f88ebb9b6e xf86-input-jamstudio-1.0.0.5.ebuild 559
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6QR2+ySkm8kpY0RAp73AKCGLnOeqGfCmiMuk1YcBiPb1AbZxACggORp
-gxbjxCIcuq1i40F+pZr01zs=
-=gJP+
------END PGP SIGNATURE-----
+MD5 355295a41f631382a13b964ce2cb122a xf86-input-jamstudio-1.0.0.5.ebuild 565
+RMD160 607b73f35591729852036eb5ee85c350b8c380be xf86-input-jamstudio-1.0.0.5.ebuild 565
+SHA256 b8a1308b6e8cb8ad4b24ca12c69143ec3631d682efb705c9f981bfcf3eeb9bab xf86-input-jamstudio-1.0.0.5.ebuild 565
