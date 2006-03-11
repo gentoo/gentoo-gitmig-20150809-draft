@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20050505.ebuild,v 1.2 2006/03/11 19:26:15 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20050505-r1.ebuild,v 1.1 2006/03/11 19:26:15 mkennedy Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_unpack() {
 }
 
 src_compile() {
-	sed -i "/^COPTIMISE/s/.*/COPTIMISE = ${CFLAGS}/" linux2.gmk
+	sed -i "/^COPTIMISE/s/.*/COPTIMISE = ${CFLAGS}/" linux{2,26}.gmk
 	local loadpath="~/.jasspa:/usr/share/jasspa/site:/usr/share/jasspa"
 	if use X
 	then
@@ -60,4 +60,7 @@ src_install() {
 	fi
 	dodoc ../*.txt ../change.log
 	cp -r ${T}/* ${D}/usr/share/jasspa
+
+	insinto /usr/share/applications
+	doins ${FILESDIR}/jasspa-microemacs.desktop
 }

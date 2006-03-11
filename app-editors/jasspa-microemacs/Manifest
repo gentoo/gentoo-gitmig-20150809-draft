@@ -1,12 +1,43 @@
-MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 6ebf3f3bdb835ad9aaf644bda690f81d jasspa-microemacs-20021205.ebuild 1550
-MD5 3472a407c9d115d9fc32eabbd59db032 ChangeLog 1996
-MD5 a5079b0e532b9c5bec63618134e324e0 jasspa-microemacs-20050505.ebuild 1673
-MD5 78fe17a31bc275f29af45a7e72bbd94c jasspa-microemacs-20040301.ebuild 1717
-MD5 608fddff5239517630dfc390ab84f187 jasspa-microemacs-20040301-r2.ebuild 1689
-MD5 311c5a9595e89418254035a3e5330f2a files/digest-jasspa-microemacs-20021205 79
-MD5 f2126111b13fb10129895df8aa7b417b files/digest-jasspa-microemacs-20040301 287
-MD5 6bd07eac50b8b848056244f580fa657b files/digest-jasspa-microemacs-20050505 287
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 48825c8c18cfcfc38be8ecd57054279e ChangeLog 2475
+RMD160 148618db49eb95b808a358760083da4e7a1b0b60 ChangeLog 2475
+SHA256 d88ab3e181dd9be87208b0da86e78931294f55cf6003d08984bd5adde677dbe7 ChangeLog 2475
 MD5 f2126111b13fb10129895df8aa7b417b files/digest-jasspa-microemacs-20040301-r2 287
+RMD160 d94961203ff3f7ad0d301ae04ffc52bee7a84619 files/digest-jasspa-microemacs-20040301-r2 287
+SHA256 adc2f5daddec5ec70134f4e59b4e99ff55480f81eec4a20ca63f7fcb6a177d91 files/digest-jasspa-microemacs-20040301-r2 287
+MD5 869b1954ad61d9e54850d128ca274fe6 files/digest-jasspa-microemacs-20050505 1045
+RMD160 0cd79ff9535ccf7cece5fe5d8dcd45e25d71e2c9 files/digest-jasspa-microemacs-20050505 1045
+SHA256 32af4a529ad07f9b1f22183037a33af780e8b83c4e32fd739dbae3886428395a files/digest-jasspa-microemacs-20050505 1045
+MD5 869b1954ad61d9e54850d128ca274fe6 files/digest-jasspa-microemacs-20050505-r1 1045
+RMD160 0cd79ff9535ccf7cece5fe5d8dcd45e25d71e2c9 files/digest-jasspa-microemacs-20050505-r1 1045
+SHA256 32af4a529ad07f9b1f22183037a33af780e8b83c4e32fd739dbae3886428395a files/digest-jasspa-microemacs-20050505-r1 1045
 MD5 7b5e1eb4627dc2312d5bcb24d55324d8 files/jasspa-microemacs-xorg.patch 456
+RMD160 c51863bcc11784853e8fdad650c316aad1f25a6e files/jasspa-microemacs-xorg.patch 456
+SHA256 5518288f802dbde4cd0b72def6e5d6f614200213c56f5c4a7364705ee7175b73 files/jasspa-microemacs-xorg.patch 456
+MD5 f1d7ec4394e1e668f67b0b4a7deaac51 files/jasspa-microemacs.desktop 222
+RMD160 60670f3355dde3429beda63edcc22f286e3262a8 files/jasspa-microemacs.desktop 222
+SHA256 73d09fba91361d239cd9baed98afe760254424c5d9a456e47156cd05af921ec7 files/jasspa-microemacs.desktop 222
 MD5 8a2f8b31aa6eb71c4a995f35ed745226 files/me 187
+RMD160 7e9c240173741c7df21dddd1506e6196e9d35b14 files/me 187
+SHA256 e51e7ac1a6798cc498f19893d890637d039943d17d61bbc94b13f8047a5fe434 files/me 187
+MD5 62604a92b780f92573af8e01be0863be jasspa-microemacs-20040301-r2.ebuild 1713
+RMD160 9c90730ffd5c76fe28ced18d909f0850e521bf38 jasspa-microemacs-20040301-r2.ebuild 1713
+SHA256 0b9e40a0cd9ace8de89070d1456e694d23ec5be9efcdf34332eb00d53780dc67 jasspa-microemacs-20040301-r2.ebuild 1713
+MD5 d674590fc62ca812d55d7b0372e22d69 jasspa-microemacs-20050505-r1.ebuild 1785
+RMD160 5f0d9e6737734904552d38479f1bce628a3b7573 jasspa-microemacs-20050505-r1.ebuild 1785
+SHA256 f09449b2ccef693e7ef8b67cc9f8af93d2f525a60def46ffd593b43888624c5c jasspa-microemacs-20050505-r1.ebuild 1785
+MD5 82fb2fa66f5176d5e81148a55a02511a jasspa-microemacs-20050505.ebuild 1698
+RMD160 66de4c043d488d43c58dcc9ae18171eee0493cd1 jasspa-microemacs-20050505.ebuild 1698
+SHA256 0fe5f5b86a6678e44560e6dad2dbdf1c2026c7eca5ad738aea1f4ecb089dcee7 jasspa-microemacs-20050505.ebuild 1698
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 metadata.xml 158
+SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEEyRjyiNZaEAZA+ARAh8VAJ9vASrrwlVgm+2FcFP3BGGnrrCvvQCfezVi
+FJ/9NiI9+xVfFdU0X1gCoYU=
+=QOhP
+-----END PGP SIGNATURE-----

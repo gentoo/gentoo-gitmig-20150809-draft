@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/jasspa-microemacs
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.12 2005/05/21 19:48:33 usata Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.13 2006/03/11 19:26:15 mkennedy Exp $
+
+*jasspa-microemacs-20050505-r1 (11 Mar 2006)
+
+  11 Mar 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/jasspa-microemacs.desktop, -jasspa-microemacs-20021205.ebuild,
+  -jasspa-microemacs-20040301.ebuild, jasspa-microemacs-20040301-r2.ebuild,
+  jasspa-microemacs-20050505.ebuild, +jasspa-microemacs-20050505-r1.ebuild:
+  Add Freedesktop.org .desktop file; Resolves Bug #107026; Corrected build
+  system to obey CFLAGS; Port to modular X dependencies; Remove old ebuilds.
 
 *jasspa-microemacs-20050505 (21 May 2005)
 
