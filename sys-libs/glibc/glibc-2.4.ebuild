@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.2 2006/03/11 09:09:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.3 2006/03/11 09:21:48 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -57,7 +57,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 LICENSE="LGPL-2"
 
-IUSE="nls pic build nptl nptlonly erandom hardened userlocales multilib selinux glibc-omitfp profile"
+IUSE="nls pic build nptl nptlonly hardened userlocales multilib selinux glibc-omitfp profile"
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -924,7 +924,6 @@ glibc_do_configure() {
 	popd > /dev/null
 
 	use nls || myconf="${myconf} --disable-nls"
-	use erandom || myconf="${myconf} --disable-dev-erandom"
 	myconf="${myconf} $(use_enable hardened stackguard-randomization)"
 	if [[ $(<"${T}"/.ssp.compat) == "yes" ]] ; then
 		myconf="${myconf} --enable-old-ssp-compat"
@@ -1148,12 +1147,7 @@ src_unpack() {
 	setup_env
 
 	case $(tc-arch) in
-		hppa)
-			GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 2000-all-2.3.2-propolice-guard-functions-v3.patch"
-			use hardened || GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 6490_hppa_hardened-disable__init_arrays.patch"
-		;;
 		mips)
-			GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 3000-all-2.3.4-dl_execstack-PaX-support.patch 6640_mips_unistd_h-fixes.patch"
 			use_multilib \
 				&& GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 6680_mips_nolib3264.patch" \
 				|| GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 5005_all_enable-multilib-with-cross-compile.patch"
@@ -1190,7 +1184,6 @@ src_unpack() {
 	else
 		echo "yes" > "${T}"/.ssp.compat
 	fi
-	#epatch "${FILESDIR}"/2.3.5/glibc-2.3.5-frandom-detect.patch
 
 	case $(tc-arch) in
 		#alpha)
@@ -1200,8 +1193,8 @@ src_unpack() {
 		amd64)
 			if ! has_multilib_profile && ! is_crosscompile; then
 				# CONF_LIBDIR support
-				epatch ${FILESDIR}/2.3.4/glibc-gentoo-libdir.patch
-				sed -i -e "s:@GENTOO_LIBDIR@:$(get_libdir):g" ${S}/sysdeps/unix/sysv/linux/configure
+				epatch "${FILESDIR}"/2.4/glibc-gentoo-libdir.patch
+				sed -i -e "s:@GENTOO_LIBDIR@:$(get_libdir):g" "${S}"/sysdeps/unix/sysv/linux/configure
 			fi
 		;;
 		ppc64)

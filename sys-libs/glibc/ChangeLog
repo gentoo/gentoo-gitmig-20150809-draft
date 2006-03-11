@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.434 2006/03/10 23:54:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.435 2006/03/11 09:21:48 vapier Exp $
+
+  11 Mar 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/2.4/glibc-gentoo-libdir.patch, glibc-2.4.ebuild:
+  Update non-multilib amd64 patch for glibc-2.4 #125793 by Jean Bréfort.
 
 *glibc-2.4 (10 Mar 2006)
 
