@@ -1,22 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d7179d0b79fdc01831668bf6e27d2efb ChangeLog 8920
-RMD160 cd15b828b19cbbc8bfcd5fe6a48b1f704a6606a4 ChangeLog 8920
-SHA256 e3760a8e4972adee2269964d92c12c0b4b9c1ee040f29ade6132666ba8de5777 ChangeLog 8920
+MD5 1f6978e04143e1fe80094828231126ee ChangeLog 9131
+RMD160 ec45543850b2cd022d70365de4becc2982017489 ChangeLog 9131
+SHA256 cf5a4a1385ae8afc05e75111c8b28443e25d548045f2f2aa6aae56d57d0b7a23 ChangeLog 9131
 MD5 05ebbcad45030e806f8be710defa0aac files/digest-net-tools-1.60-r11 145
 RMD160 07580e2db793ffa3ecc34b26d08b87eaca9843a0 files/digest-net-tools-1.60-r11 145
 SHA256 34a785cca437996fcf6d321fed6e103f5657283eae4b61afe1752f0e83870c49 files/digest-net-tools-1.60-r11 145
+MD5 4802eef34bc8a4b6054d38ed352e13e5 files/digest-net-tools-1.60-r12 530
+RMD160 14d13eb5c6ae7e56dea8ac90a53602d2286eefa3 files/digest-net-tools-1.60-r12 530
+SHA256 9169424321a91be50a4fdc3a4abcecf606c0fbc5dec9b7cc9d5396a30fd08962 files/digest-net-tools-1.60-r12 530
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 89b93cb8df63ffec2ad24ac8e30a5ea7 net-tools-1.60-r11.ebuild 1933
 RMD160 20b97f94baef955376da8a7f99233bed39fd8281 net-tools-1.60-r11.ebuild 1933
 SHA256 76cd1aa5be58d1a7dcc19cbb7cb6e2a86ed1e33f246fd093bf4a9082e000190c net-tools-1.60-r11.ebuild 1933
+MD5 4120e9abc576658aed17a07d49ca61a8 net-tools-1.60-r12.ebuild 2109
+RMD160 2b1fa478b5e02a3bf874350c32f56895254efc0c net-tools-1.60-r12.ebuild 2109
+SHA256 4781d7fbf175c5cd153beae8503a0a6620a89f49c4010318d40e1d6de961e587 net-tools-1.60-r12.ebuild 2109
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD+QWc2+ySkm8kpY0RAtyBAJ45XNUOmsM8rtf5gMxRC4/Iz5EPjgCfVc1K
-moOxs1/eTJMjeTfbyY7LJ6E=
-=/o3A
+iD8DBQFEEmLq2+ySkm8kpY0RAqf9AJ4kOwK1EsGPWkvKbwF7t07sK05rfACdEwa4
+EbjSws7DkeFCFLfDPZ0JePs=
+=FKHr
 -----END PGP SIGNATURE-----
