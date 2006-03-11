@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.3 2006/03/11 09:21:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.4 2006/03/11 09:34:03 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -1090,8 +1090,10 @@ fi
 # we'll handle stripping ourself #46186
 RESTRICT="nostrip multilib-pkg-force"
 
-# We need a new-enough binutils for as-needed
+# General: We need a new-enough binutils for as-needed
+# arch: we need to make sure our binutils/gcc supports TLS
 DEPEND=">=sys-devel/gcc-3.3.3
+	arm? ( >=sys-devel/binutils-2.16.90 >=sys-devel/gcc-4.1.0 )
 	nptl? ( >=sys-kernel/linux-headers-2.6.5 )
 	>=sys-devel/binutils-2.15.94
 	>=sys-devel/gcc-config-1.3.12
