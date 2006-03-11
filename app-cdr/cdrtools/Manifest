@@ -37,9 +37,9 @@ SHA256 d9883585c53ad46dc178ba0712cb9f9284702cdf16a6094ddb4f83b46a86a89d files/di
 MD5 8165b59a7b14939c58a88ca1f272cad4 files/digest-cdrtools-2.01-r3 147
 RMD160 aaa829740855d592bd4799b732d859c0b259706e files/digest-cdrtools-2.01-r3 147
 SHA256 ca0d505c29fb72735649a526f8efcadbfdbac03c93900b7974d98b1e9f8be158 files/digest-cdrtools-2.01-r3 147
-MD5 0e8283f78b14f3ead0e78d197e1d5ed1 files/digest-cdrtools-2.01.01_alpha01-r2 153
-RMD160 4e8720fb059030ab3b89b68b205120c441569bac files/digest-cdrtools-2.01.01_alpha01-r2 153
-SHA256 152b8cc3954b4ecc911932d9d61dbf8f17b05aac0ed5225d8c9fa21a10a87b30 files/digest-cdrtools-2.01.01_alpha01-r2 153
+MD5 325a542a0ef938f1b20b9d687d2cf68f files/digest-cdrtools-2.01.01_alpha01-r2 551
+RMD160 37c6b1cbf18da2dffb1e432393bb8c4af8ace5d7 files/digest-cdrtools-2.01.01_alpha01-r2 551
+SHA256 a596844cf1d1416970cec0901bdb13e41c52e3fbe8da2f3a5c8235b1b7feed32 files/digest-cdrtools-2.01.01_alpha01-r2 551
 MD5 090f4a5367e86219d1b69fdbcef4e42a files/digest-cdrtools-2.01.01_alpha07 265
 RMD160 380b83497581f00eb470106153212c5c2022b77d files/digest-cdrtools-2.01.01_alpha07 265
 SHA256 04615914cb6a31e5706c963877c4c52197ddc9bd3acb67a8046cc1c341718a66 files/digest-cdrtools-2.01.01_alpha07 265
@@ -52,7 +52,7 @@ SHA256 21400abf2dad3e5b7b0d2f7f9586c33cba6336b42a97e1f2b3e7e8b9db0daae5 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEEyE1wUpWvClEHQoRAnpGAJwJeFGWzn5WX9yQJ9OyVlCDOFweZACgg374
-TmoJ44C8pi4PQLYjc5KbqCY=
-=br7z
+iD8DBQFEEyGKwUpWvClEHQoRApI0AJsE2jhmgxM9y0RxO3uZDAEzigsLKACbBGqq
+jB9WuPULsArXwG2SJUYZ//s=
+=Ntg9
 -----END PGP SIGNATURE-----
