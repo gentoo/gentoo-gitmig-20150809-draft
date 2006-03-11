@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.9.1-r1.ebuild,v 1.2 2005/09/04 06:17:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.9.1-r1.ebuild,v 1.3 2006/03/11 00:09:19 joshuabaergen Exp $
 
 inherit eutils
 
@@ -13,8 +13,12 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="X ipv6 crypt openssh"
 
-DEPEND="X? ( virtual/x11 )
+RDEPEND="X? ( || ( ( x11-libs/libSM
+					x11-libs/libXext )
+				virtual/x11 ) )
 	!openssh? ( !virtual/ssh )"
+DEPEND="${RDEPEND}
+	X? ( || ( x11-proto/xextproto virtual/x11 ) )"
 PROVIDE="virtual/ssh"
 
 pkg_setup() {

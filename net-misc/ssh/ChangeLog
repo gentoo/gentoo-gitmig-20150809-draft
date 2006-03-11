@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ssh
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ChangeLog,v 1.11 2005/02/14 16:33:37 humpback Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ChangeLog,v 1.12 2006/03/11 00:09:19 joshuabaergen Exp $
+
+  11 Mar 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  ssh-3.2.9.1-r1.ebuild:
+  Add modular X dependencies (Mauricio L. Pilla, bug #124168).
 
   14 Feb 2005; Gustavo Felisberto <humpback@gentoo.org>; -ssh-3.2.5.ebuild,
   -ssh-3.2.9.1.ebuild:
