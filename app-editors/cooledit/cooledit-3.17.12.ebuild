@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/cooledit-3.17.12.ebuild,v 1.5 2005/10/04 13:45:05 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/cooledit-3.17.12.ebuild,v 1.6 2006/03/11 00:47:26 joshuabaergen Exp $
 
 IUSE="nls spell"
 
@@ -10,8 +10,11 @@ SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/apps/editors/X/cooledit/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
-DEPEND="virtual/x11
+
+RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
 	spell? ( app-text/ispell )"
+DEPEND="${RDEPEND}
+	|| ( x11-libs/libXpm virtual/x11 )"
 
 src_compile() {
 	# Fix for bug 40152 (04 Feb 2004 agriffis)
