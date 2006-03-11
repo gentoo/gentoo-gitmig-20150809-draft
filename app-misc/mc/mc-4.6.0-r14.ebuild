@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r14.ebuild,v 1.8 2006/03/06 11:59:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r14.ebuild,v 1.9 2006/03/11 10:53:45 blubb Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,8 @@ HOMEPAGE="http://www.ibiblio.org/mc/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/${PN}/${P}.tar.gz
 	mirror://gentoo/${P}-sambalib-3.0.10.patch.bz2
 	mirror://gentoo/${P}-can-2004-0226-0231-0232.patch.bz2
-	7zip? ( http://sgh.nightmail.ru/files/u7z/${U7Z} )"
+	7zip? ( http://sgh.nightmail.ru/files/u7z/${U7Z} )
+	slang? ( unicode? ( mirror://gentoo/${P}-utf8.patch.bz2 ) )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -68,7 +69,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gcc4.patch
 	epatch ${FILESDIR}/${P}-bug-102356.patch
 	if use slang && use unicode; then
-		epatch ${FILESDIR}/${P}-utf8.patch.bz2
+		epatch ${DISTDIR}/${P}-utf8.patch.bz2
 	fi
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.88 2006/03/06 11:59:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.89 2006/03/11 10:53:45 blubb Exp $
+
+  11 Mar 2006; Simon Stelling <blubb@gentoo.org> mc-4.6.0-r12.ebuild,
+  mc-4.6.0-r13.ebuild, mc-4.6.0-r14.ebuild:
+  add missing utf8 patch to SRC_URI; bug 125175
 
   06 Mar 2006; Simon Stelling <blubb@gentoo.org> mc-4.6.0-r12.ebuild,
   mc-4.6.0-r13.ebuild, mc-4.6.0-r14.ebuild:
