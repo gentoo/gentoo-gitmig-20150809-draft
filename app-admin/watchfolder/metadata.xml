@@ -2,5 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer><email>deltacow@gentoo.org</email></maintainer>
+<maintainer>
+	<email>deltacow@gentoo.org</email>
+	<name>Scott Stoddard</name>
+</maintainer>
 </pkgmetadata>
