@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/audacious-show/audacious-show-1.2.0.ebuild,v 1.1 2006/03/08 21:46:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/audacious-show/audacious-show-1.2.0.ebuild,v 1.2 2006/03/11 17:33:53 ferdy Exp $
 
 DESCRIPTION="XChat plugin to control audacious and to show whatever you're
 currently playing to others"
@@ -9,7 +9,7 @@ SRC_URI="http://nedudu.hu/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~alpha ~x86"
 IUSE=""
 
 DEPEND="
