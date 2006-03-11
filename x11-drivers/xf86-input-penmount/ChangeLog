@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-penmount
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-penmount/ChangeLog,v 1.15 2006/03/03 20:19:13 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-penmount/ChangeLog,v 1.16 2006/03/11 09:46:51 gmsoft Exp $
+
+  11 Mar 2006; Guy Martin <gmsoft@gentoo.org>
+  xf86-input-penmount-1.0.0.5.ebuild:
+  Added ~hppa to KEYWORDS.
 
   03 Mar 2006; Ferris McCormick <fmccor@gentoo.org>
   xf86-input-penmount-1.0.0.5.ebuild:
