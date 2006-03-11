@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-0.8.2.ebuild,v 1.1 2006/03/10 19:36:40 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-0.8.2.ebuild,v 1.2 2006/03/11 20:53:40 halcy0n Exp $
 
 inherit multilib eutils
 
@@ -19,6 +19,7 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-gcc-4.10.patch" || die 'epatch failed!'
 }
 
