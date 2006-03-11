@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/xsdlib-20050627.ebuild,v 1.6 2006/01/23 03:14:33 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/xsdlib-20050627.ebuild,v 1.7 2006/03/11 19:59:05 hansmi Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${MY_P}.zip"
 
 LICENSE="as-is Apache-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc jikes source"
 
 RDEPEND=">=virtual/jre-1.3

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/relaxng-datatype
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxng-datatype/ChangeLog,v 1.5 2006/01/23 03:12:39 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxng-datatype/ChangeLog,v 1.6 2006/03/11 19:58:37 hansmi Exp $
+
+  11 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
+  relaxng-datatype-1.0.ebuild:
+  Stable on ppc.
 
   23 Jan 2006; Joshua Nichols <nichoj@gentoo.org>
   relaxng-datatype-1.0.ebuild:

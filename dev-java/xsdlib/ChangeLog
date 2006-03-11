@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xsdlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.6 2006/01/23 03:14:33 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.7 2006/03/11 19:59:05 hansmi Exp $
+
+  11 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
+  xsdlib-20050627.ebuild:
+  Stable on ppc.
 
   23 Jan 2006; Joshua Nichols <nichoj@gentoo.org> xsdlib-20050627.ebuild:
   Marked stable on amd64.

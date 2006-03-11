@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1.ebuild,v 1.7 2006/01/23 03:56:26 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1.ebuild,v 1.8 2006/03/11 20:01:09 hansmi Exp $
 
 inherit java-pkg eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://mirrors.combose.com/apache/ws/jaxme/source/${MY_P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc source"
 
 RDEPEND=">=virtual/jre-1.4

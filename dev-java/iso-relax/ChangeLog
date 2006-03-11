@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/iso-relax
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/ChangeLog,v 1.7 2006/02/17 05:47:02 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/ChangeLog,v 1.8 2006/03/11 19:59:48 hansmi Exp $
+
+  11 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
+  iso-relax-20041111.ebuild:
+  Stable on ppc.
 
   17 Feb 2006; Joshua Nichols <nichoj@gentoo.org> iso-relax-20041111.ebuild:
   Disabled jikes support as breakage reported by Leonid Kabanov
