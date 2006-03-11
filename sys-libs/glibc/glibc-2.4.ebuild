@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.1 2006/03/10 23:54:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.2 2006/03/11 09:09:42 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -24,8 +24,7 @@
 #  CHOST = CTARGET  - install into /
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
-#KEYWORDS="~amd64 ~arm -hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-KEYWORDS="-* ~amd64 ~ppc ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 
 BRANCH_UPDATE=""
 
@@ -269,7 +268,7 @@ toolchain-glibc_headers_compile() {
 	# Pick out the correct location for build headers
 	local myconf="--disable-sanity-checks --enable-hacker-mode"
 	myconf="${myconf}
-		--enable-add-ons=nptl,glibc-ports-${PV}
+		--enable-add-ons=nptl,ports
 		--without-cvs
 		--enable-bind-now
 		--build=${CBUILD_OPT:-${CBUILD}}
@@ -871,8 +870,10 @@ want__thread() {
 
 	[[ -n ${WANT__THREAD} ]] && return ${WANT__THREAD}
 
-	$(tc-getCC ${CTARGET}) -c ${FILESDIR}/test-__thread.c -o ${T}/test2.o &> /dev/null
+	echo 'extern __thread int i;' > "${T}"/test-__thread.c
+	$(tc-getCC ${CTARGET}) -c "${T}"/test-__thread.c -o "${T}"/test-__thread.o &> /dev/null
 	WANT__THREAD=$?
+	rm -f "${T}"/test-__thread.[co]
 
 	return ${WANT__THREAD}
 }
