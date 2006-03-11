@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.14-r3.ebuild,v 1.2 2006/02/23 07:11:03 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.14-r3.ebuild,v 1.3 2006/03/11 14:53:30 phreak Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -40,11 +40,11 @@ src_unpack() {
 		sed -i -e '/^UNICODE=/s:no:yes:' etc/rc.conf
 	fi
 
-	epatch "${FILESDIR}"/baselayout-vserver-1.11.14-adsl.patch
-	epatch "${FILESDIR}"/baselayout-vserver-1.11.14-essidnet.patch
-	epatch "${FILESDIR}"/baselayout-vserver-1.11.14-iwconfig.patch
-	epatch "${FILESDIR}"/baselayout-vserver-1.11.14-udhcpc.patch
-	epatch "${FILESDIR}"/baselayout-vserver-1.11.14-manuser.patch
+	epatch "${FILESDIR}"/${P}-adsl.patch
+	epatch "${FILESDIR}"/${P}-essidnet.patch
+	epatch "${FILESDIR}"/${P}-iwconfig.patch
+	epatch "${FILESDIR}"/${P}-udhcpc.patch
+	epatch "${FILESDIR}"/${P}-manuser.patch
 }
 
 src_compile() {

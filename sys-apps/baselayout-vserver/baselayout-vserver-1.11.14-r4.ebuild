@@ -1,18 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.14-r1.ebuild,v 1.2 2006/02/07 07:04:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.14-r4.ebuild,v 1.1 2006/03/11 14:53:30 phreak Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
 SV=1.6.${PV##*.}
-SVREV=
 
-S="${WORKDIR}/rc-scripts-vserver-${SV}${SVREV}"
+S="${WORKDIR}/rc-scripts-vserver-${SV}"
 DESCRIPTION="Filesystem baselayout and init scripts for Linux-VServer"
 HOMEPAGE="http://dev.croup.de/proj/gentoo-vps"
-SRC_URI="mirror://gentoo/rc-scripts-vserver-${SV}${SVREV}.tar.bz2
-	http://dev.gentoo.org/~hollow/distfiles/rc-scripts-vserver-${SV}${SVREV}.tar.bz2
-	http://dev.gentoo.org/~phreak/distfiles/rc-scripts-vserver-${SV}${SVREV}.tar.bz2"
+SRC_URI="mirror://gentoo/rc-scripts-vserver-${SV}.tar.bz2
+	http://dev.gentoo.org/~hollow/distfiles/rc-scripts-vserver-${SV}.tar.bz2
+	http://dev.gentoo.org/~phreak/distfiles/rc-scripts-vserver-${SV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,8 +40,12 @@ src_unpack() {
 		sed -i -e '/^UNICODE=/s:no:yes:' etc/rc.conf
 	fi
 
-	epatch "${FILESDIR}"/baselayout-vserver-1.11.14-adsl.patch
-	epatch "${FILESDIR}"/baselayout-vserver-1.11.14-essidnet.patch
+	epatch "${FILESDIR}"/${P}-adsl.patch
+	epatch "${FILESDIR}"/${P}-essidnet.patch
+	epatch "${FILESDIR}"/${P}-iwconfig.patch
+	epatch "${FILESDIR}"/${P}-udhcpc.patch
+	epatch "${FILESDIR}"/${P}-manuser.patch
+	epatch "${FILESDIR}"/${P}-iproute.patch
 }
 
 src_compile() {
@@ -312,6 +315,7 @@ src_install() {
 		docinto /
 		dodoc ${FILESDIR}/copyright
 		dodoc "${S}"/ChangeLog
+		dodoc "${S}"/ChangeLog.vserver
 	fi
 
 	#

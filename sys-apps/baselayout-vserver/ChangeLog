@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/baselayout-vserver
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/ChangeLog,v 1.27 2006/03/11 14:36:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/ChangeLog,v 1.28 2006/03/11 14:53:30 phreak Exp $
+
+*baselayout-vserver-1.11.14-r4 (11 Mar 2006)
+
+  11 Mar 2006; Christian Heim <phreak@gentoo.org>
+  +files/baselayout-vserver-1.11.14-iproute.patch,
+  -baselayout-vserver-1.11.14-r1.ebuild,
+  baselayout-vserver-1.11.14-r3.ebuild,
+  +baselayout-vserver-1.11.14-r4.ebuild:
+  Revision bump, fixing #125786 thanks to Jason Stubbs and Roy Marples
 
   11 Mar 2006; Christian Heim <phreak@gentoo.org>
   -files/baselayout-vserver-1.12.0_pre8-init-timeout-fix.patch,
