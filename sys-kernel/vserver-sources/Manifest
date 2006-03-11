@@ -1,21 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c5a6849894b04a1f1e7e5cdb7710ee74 ChangeLog 13562
-RMD160 9c8c808085f95cdfaded96e9b4ac484129de522a ChangeLog 13562
-SHA256 642f3840bb3fc93e36a659a3f7786026ae18872f79f04fdf5233d2ac4c9d6cfb ChangeLog 13562
+MD5 0f2ea9cf3f64c7ecdb803a5734d7a069 ChangeLog 13810
+RMD160 6ce6ea3e612357b30a7bfacce35d88499453f67c ChangeLog 13810
+SHA256 bdc325d17069c2f6d1613943f0b73b92a8342604726d2c302386a33717edf343 ChangeLog 13810
 MD5 21db8312c316fc17a0df1ac3cdf2f20c files/digest-vserver-sources-2.0.1-r1 1099
 RMD160 481b827187c3fe469100630f35b17bd80831d764 files/digest-vserver-sources-2.0.1-r1 1099
 SHA256 58971f12bfced101ac5a3904ab8c5a6c375b80a1b742ffcb1c2377d817fa3f2c files/digest-vserver-sources-2.0.1-r1 1099
 MD5 0ccc3e347d645df7a3133ad2db858de2 files/digest-vserver-sources-2.0.2_rc10 1108
 RMD160 b54476392be9aa65364e03e0c5432d7d411c2c86 files/digest-vserver-sources-2.0.2_rc10 1108
 SHA256 41afd13feca08524c17cbdbdbe5ad364c18d8953639b622a800cddc6bcc00dc0 files/digest-vserver-sources-2.0.2_rc10 1108
+MD5 2737e2729834fb2622211aabd9abc4ff files/digest-vserver-sources-2.0.2_rc11 1114
+RMD160 88fc3caffda3f9ad49ac62a58380bdd1df1cb848 files/digest-vserver-sources-2.0.2_rc11 1114
+SHA256 9e7e1e6bcbae6dfdd8d91b6cfa80dee200e81c80eb5e4afc1567f9d56e14f4d6 files/digest-vserver-sources-2.0.2_rc11 1114
 MD5 640ee12078dee22d59e4dc1e9a152ea0 files/digest-vserver-sources-2.1.0-r1 1099
 RMD160 0e6e919788aa7b89fa7ab5263ee009bf022d6461 files/digest-vserver-sources-2.1.0-r1 1099
 SHA256 1aaf2f69bbca0c122dc85658f64b5b8be39fd433070fc3bd5c446aad3d10b73b files/digest-vserver-sources-2.1.0-r1 1099
 MD5 1626fa9439833cf9488865b8639f1ebc files/digest-vserver-sources-2.1.1_rc10 1108
 RMD160 5ad7fcecd9af239cecb78fbb40a087165c064f34 files/digest-vserver-sources-2.1.1_rc10 1108
 SHA256 0be0f708348f46b40e2693077fbf316fba7cdea094f250d33fbebf28cf07540a files/digest-vserver-sources-2.1.1_rc10 1108
+MD5 84f31b52ee2c038467a6da77ffdb810f files/digest-vserver-sources-2.1.1_rc11 1114
+RMD160 66356fd7edec7931a9b04aea706f61d51cc8fa8a files/digest-vserver-sources-2.1.1_rc11 1114
+SHA256 2b588aca263bda0cfe612512cf0c6bcc30cd1c9d6bc798ebdd420b2faffaa536 files/digest-vserver-sources-2.1.1_rc11 1114
 MD5 f703b135c202d58849f005abf3c728b4 metadata.xml 526
 RMD160 a4f731a00e46035b9b461489748060dcfbba3cb8 metadata.xml 526
 SHA256 09231c6b5cfedbd6574007a6d96a51e6257a23ba623a70df62e6674d0d94d068 metadata.xml 526
@@ -25,16 +31,22 @@ SHA256 025c2128afd82ef4eeb7cf806fc133024d476d71ae4726b87f2517d28727813d vserver-
 MD5 30583196d790a2551c58bfb3769c484a vserver-sources-2.0.2_rc10.ebuild 910
 RMD160 fc7a5db925c7b77b38f2b716919db244149ee8ba vserver-sources-2.0.2_rc10.ebuild 910
 SHA256 f8d042a85375b3125a0111426ec1e1e3e62e254f822e2aeef05a22748fc62fc7 vserver-sources-2.0.2_rc10.ebuild 910
+MD5 a7d10cb42f4e7588ed8ed5dcd91ce4a6 vserver-sources-2.0.2_rc11.ebuild 911
+RMD160 c48037bcd61adcf6ff637fce3a6ccd3f0f12785e vserver-sources-2.0.2_rc11.ebuild 911
+SHA256 b9e7fb9cadae8b6c804a48825d695f3f98b48977e2480008c07cbe226d000a3a vserver-sources-2.0.2_rc11.ebuild 911
 MD5 a6bd6220fe89c7a6816aed723b96e2bc vserver-sources-2.1.0-r1.ebuild 908
 RMD160 2ebb3030ad381c4a79cdb4214abc13b971b3ae43 vserver-sources-2.1.0-r1.ebuild 908
 SHA256 2ee9717a3bfc69b2536c4682f5f6e671be6af1d52ebf66ea206d926a5d57d876 vserver-sources-2.1.0-r1.ebuild 908
 MD5 4a13e360e2fc917c0f224bca17e68f7c vserver-sources-2.1.1_rc10.ebuild 910
 RMD160 3954c8bb4865a9a75b3001e0919b8ce9e59e724d vserver-sources-2.1.1_rc10.ebuild 910
 SHA256 651423d39f472b05a62223cce54da393f7204af2e2819d7fb956d2e293ad0d9d vserver-sources-2.1.1_rc10.ebuild 910
+MD5 213d354dce4565c56d91561ae0d59a1e vserver-sources-2.1.1_rc11.ebuild 911
+RMD160 54e6f4e9e79638deec6238638832bb495d42e416 vserver-sources-2.1.1_rc11.ebuild 911
+SHA256 8ec591c6a8668c3e88791ba851064858ce57645e69cbc841c008b7c481b5fbd2 vserver-sources-2.1.1_rc11.ebuild 911
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEBI4MflZ8QqxhrsMRAmVgAKCsf424PTcpkPJUPZAXfK3EMCeSTQCfan1f
-MJs6omQPU9B27fECqwtcHX4=
-=ptSI
+iD8DBQFEEt7ZflZ8QqxhrsMRAgMoAJ0XCOOZmLjQInGeVjLKlc/M/uBZ0wCgq+U5
+f0L1NY2WSYpspCbnTZhra80=
+=CKUh
 -----END PGP SIGNATURE-----
