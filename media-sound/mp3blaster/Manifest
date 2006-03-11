@@ -1,27 +1,19 @@
-MD5 f7274b2676cecdff8e7ac6bfd5cea967 ChangeLog 3171
-RMD160 d5e45e34b59bde38eb5eb0a8393e2636589b373d ChangeLog 3171
-SHA256 4567201528a82374596b52ad5d0ef923064d5c729a5a3b19f6ef8aa78c45231d ChangeLog 3171
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a0796a481355ec98787b1a36a349dfea ChangeLog 3337
 MD5 5b6f9d99b3e96b63be78c5d7a7b951ee files/digest-mp3blaster-3.1.3 68
-RMD160 e0bdb29299674d5a905519b080e61139cbe39ca2 files/digest-mp3blaster-3.1.3 68
-SHA256 269da690ffb7cc595fef7521cc5c3da4f3b5877ffee6e08abae10f74eee930bc files/digest-mp3blaster-3.1.3 68
 MD5 441643269ce24bf3d921465d51b702c4 files/digest-mp3blaster-3.2.0 68
-RMD160 3b22dd157d83051f2294692e730fc6bba2b72d10 files/digest-mp3blaster-3.2.0 68
-SHA256 2be54e61a535a3ebc6e65eee670db5d48403bc0c76fe573ffafe60a9047e7e9e files/digest-mp3blaster-3.2.0 68
 MD5 d4e81cd14d26307a1edcf80779cd571e files/digest-mp3blaster-3.2.2 250
-RMD160 81a01150401a332474ece02453531c34f16abfe6 files/digest-mp3blaster-3.2.2 250
-SHA256 2c1d53a54a11950256e25177570ebf5a4645bf5db369b405c22abcece4e619ec files/digest-mp3blaster-3.2.2 250
 MD5 7a841800d584eafa732f19ccceab4eba files/mp3blaster-3.1.1-gcc3.1-fixes_cl.patch 591
-RMD160 8c4cc35bd472d03b6db8f93452d09c34d1798395 files/mp3blaster-3.1.1-gcc3.1-fixes_cl.patch 591
-SHA256 bbef6fc63489e5a2a2702e5ab7751b89046d5714295b060876c3a8aaf29d297f files/mp3blaster-3.1.1-gcc3.1-fixes_cl.patch 591
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 MD5 a52c9c31e77143bb6b59b71fa7c4e0f9 mp3blaster-3.1.3.ebuild 1437
-RMD160 f0a7b6e3d3829c478154dca514c3d0714b5b92a7 mp3blaster-3.1.3.ebuild 1437
-SHA256 f9bfea248c09e39f4d6acc037eb16deea97f81c32c1b2954ecbe828deaf68d4c mp3blaster-3.1.3.ebuild 1437
 MD5 5f92c4979dff4ee9c767d5c943a6457d mp3blaster-3.2.0.ebuild 1437
-RMD160 ca4f8a0e99bd0545dfeedf0ecd1dc2264d6103c3 mp3blaster-3.2.0.ebuild 1437
-SHA256 2d38bf14b46ff40f70cd12ec32d6f7098a4861a51b3fe197428582ee45a5775d mp3blaster-3.2.0.ebuild 1437
-MD5 08744456410c51f5c4ee01475e3a7728 mp3blaster-3.2.2.ebuild 1408
-RMD160 84190d15da5e1118a280dbc869bd2092b2e49576 mp3blaster-3.2.2.ebuild 1408
-SHA256 104ec29062d92f39e7ac7127ae8bc3c4eaa5c13a483b1434aec31406af9da133 mp3blaster-3.2.2.ebuild 1408
+MD5 94c305cbed6576705543b6d7d20a38c2 mp3blaster-3.2.2.ebuild 1412
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEEwlaViELBEf1JB0RAkMuAJ46vm2iFxwSONy3nIQ+q7QK7mKcgQCdFjlv
+PGLlg46v7HYF804+AFjurPQ=
+=736I
+-----END PGP SIGNATURE-----
