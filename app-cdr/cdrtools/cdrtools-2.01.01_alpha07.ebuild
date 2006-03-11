@@ -1,24 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha07.ebuild,v 1.1 2006/03/11 15:10:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha07.ebuild,v 1.2 2006/03/11 15:16:01 pylon Exp $
 
 inherit eutils gnuconfig toolchain-funcs flag-o-matic
 
-MY_CRYPT_VERS="2.01-encrypt-1.0rc1"
-
 DESCRIPTION="A set of tools for CD recording, including cdrecord"
 HOMEPAGE="http://cdrecord.berlios.de/"
-SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2
-	on-the-fly-crypt? ( http://burbon04.gmxhome.de/linux/files/${PN}-${MY_CRYPT_VERS}.diff.gz )"
+SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2"
 
 LICENSE="GPL-2 freedist"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~s390 ~sparc ~x86"
-IUSE="on-the-fly-crypt unicode"
+IUSE="unicode"
 
 DEPEND="virtual/libc
 	!app-cdr/dvdrtools"
-RDEPEND="on-the-fly-crypt? ( || ( sys-fs/cryptsetup sys-fs/cryptsetup-luks ) )"
 PROVIDE="virtual/cdrtools"
 
 S=${WORKDIR}/${PN}-2.01.01
@@ -33,12 +29,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.01.01a03-warnings.patch
 	epatch ${FILESDIR}/${PN}-2.01.01a01-scanbus.patch
 	epatch ${FILESDIR}/${PN}-2.01.01a03-rezero.patch
-
-	# Add support for On-The-Fly AES encryption
-	# http://burbon04.gmxhome.de/linux/CDREncryption.html
-	if use on-the-fly-crypt; then
-		epatch ${DISTDIR}/${PN}-${MY_CRYPT_VERS}.diff.gz || die "Can't apply encryption patch"
-	fi
 
 	# ppc-macos support
 	cd ${S}/DEFAULTS
