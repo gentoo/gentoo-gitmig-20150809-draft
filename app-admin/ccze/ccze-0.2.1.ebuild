@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1.ebuild,v 1.13 2005/01/01 10:56:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1.ebuild,v 1.14 2006/03/11 23:34:05 joker Exp $
 
-inherit fixheadtails
+inherit fixheadtails autotools
 
 DESCRIPTION="A flexible and fast logfile colorizer"
 HOMEPAGE="http://bonehunter.rulez.org/software/ccze/"
@@ -20,10 +20,19 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# GCC 4.x fixes
+	sed -e 's/-Wswitch -Wmulticharacter/-Wswitch/' \
+	    -i src/Makefile.in
+	sed -e '/AC_CHECK_TYPE(error_t, int)/d' \
+	    -i configure.ac
+
+	eautoreconf
+
 	ht_fix_file Rules.mk.in
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog ChangeLog-0.1 NEWS THANKS INSTALL README FAQ
+	dodoc AUTHORS ChangeLog ChangeLog-0.1 NEWS THANKS README FAQ
 }
