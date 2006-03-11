@@ -1,28 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1466562d89ca052abe33ba4dd46ab87c ChangeLog 562
-RMD160 8928b995700aecfa3cc66c95f4c67a64a3547d04 ChangeLog 562
-SHA256 eeb65e1eac70b61cc22295b741e5f82b47fbdc0299b7d41f33b865cbc5899c6d ChangeLog 562
+MD5 1a034818808e065777c3f7f5d04f0542 ChangeLog 717
+RMD160 89707f2c4f28e68743badae5be3e45d69a099cf9 ChangeLog 717
+SHA256 1d30f6f85295455b08af68783767a8ad77e30646053ff08474cc29ece019058b ChangeLog 717
 MD5 48a45305511cc9097fc6bfbe45eeb02e files/digest-katapult-0.3.1.1 250
 RMD160 bfb6ddc20b9e4f85ce32ef1a2f26f3b910d57f86 files/digest-katapult-0.3.1.1 250
 SHA256 e37eb23b6fe899c0dee0c94dc19e084d7322bb986d04ae36eeccebc7db8cf906 files/digest-katapult-0.3.1.1 250
 MD5 b4607240093c03d1aa34f3cfd865f162 files/digest-katapult-0.3.1.2 265
 RMD160 ab16c7da08d2f4cd3447f75a496a6f4cd9bee5b0 files/digest-katapult-0.3.1.2 265
 SHA256 5af543ef74e01ebb1c322c85ede1ed48ec9d699ac22674112e411f6996d33db1 files/digest-katapult-0.3.1.2 265
-MD5 36e259a7cd080e497e9ff38b182bbb7d katapult-0.3.1.1.ebuild 492
-RMD160 b7ae80ce4349750927e2cadc6a840900d7d4a2cc katapult-0.3.1.1.ebuild 492
-SHA256 16ef41defd6dc61c48d403bfc649eda002a064e179d8867761c0055796c00369 katapult-0.3.1.1.ebuild 492
-MD5 4e328d789f7e439739cffb876b5dbee7 katapult-0.3.1.2.ebuild 501
-RMD160 5523d47dcbcb3ccd0bd8f7097b57762d6f0f8bea katapult-0.3.1.2.ebuild 501
-SHA256 cf56297002864428f4ced4e5856583e5d641bfd62821ca3927bd3d9ce024d5e0 katapult-0.3.1.2.ebuild 501
+MD5 d83c004f081ba6a38925a66bfecd03cf katapult-0.3.1.1.ebuild 494
+RMD160 f57e09a8aaea01451b3ccc5441fc63a26a071adf katapult-0.3.1.1.ebuild 494
+SHA256 905bb07e7da7f3b4b1f0eed215bc680b98ded74bc8020db5091aa53a2eccb85e katapult-0.3.1.1.ebuild 494
+MD5 0ee603917188da75a2347bba87a15737 katapult-0.3.1.2.ebuild 503
+RMD160 85b9379429ed463b7f1452ccb2febdfd377d8624 katapult-0.3.1.2.ebuild 503
+SHA256 56fa13a463f31f20c25745a389580ceda907c12e925d5949a3580b88353f52f5 katapult-0.3.1.2.ebuild 503
 MD5 9b3a540894ad552b2bdb7538bdd95dee metadata.xml 247
 RMD160 cfbcab66aac2f2a6947df91e47d55b96d483f747 metadata.xml 247
 SHA256 3dee667978321b1af7559d4e85f8492a58f5737c5e11ba339c4e6d460313adfe metadata.xml 247
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDK6/AiZjviIA2XgRAiXJAJ9zeG0r8OxqxaqRhuzVTN1I8hXVDgCgha26
-9bv91e9h/9Om8RK1oUZdrFA=
-=cdbG
+iD8DBQFEEmhnSENan+PfizARAgKuAJ4ttThOmTVOCtIkRdXcUanRzbdRtwCfR1cT
+E1EnVnMxKpr9gPvGk8mlY3I=
+=ZoZA
 -----END PGP SIGNATURE-----
