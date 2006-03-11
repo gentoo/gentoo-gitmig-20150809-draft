@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p11.ebuild,v 1.2 2006/03/08 01:21:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p11.ebuild,v 1.3 2006/03/11 13:56:51 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -15,12 +15,12 @@ READLINE_PLEVEL=1
 DESCRIPTION="The standard GNU Bourne again shell"
 HOMEPAGE="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html"
 # Hit the GNU mirrors before hitting Chet's site
+#		printf 'mirror://gnu/bash/bash-%s-patches/bash%s-%03d\n' \
+#			${MY_PV} ${MY_PV/\.} ${i}
 SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz
 	ftp://ftp.cwru.edu/pub/bash/${MY_P}.tar.gz
 	$(for ((i=1; i<=PLEVEL; i++)); do
 		printf 'ftp://ftp.cwru.edu/pub/bash/bash-%s-patches/bash%s-%03d\n' \
-			${MY_PV} ${MY_PV/\.} ${i}
-		printf 'mirror://gnu/bash/bash-%s-patches/bash%s-%03d\n' \
 			${MY_PV} ${MY_PV/\.} ${i}
 	done)
 	$(for ((i=1; i<=READLINE_PLEVEL; i++)); do
