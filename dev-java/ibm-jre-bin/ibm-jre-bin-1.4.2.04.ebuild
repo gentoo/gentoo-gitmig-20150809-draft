@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.04.ebuild,v 1.1 2006/02/08 08:54:29 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.04.ebuild,v 1.2 2006/03/12 13:36:26 betelgeuse Exp $
 
 inherit java eutils
 
@@ -104,12 +104,12 @@ pkg_postinst() {
 	java_pkg_postinst
 
 	if ! use X; then
-		eerror
-		eerror "You have not enabled the X useflag.  It is possible that"
-		eerror "you do not have an X server installed.  Please note that"
-		eerror "some parts of the IBM JRE require an X server to properly"
-		eerror "function.  Be careful which Java libraries you attempt to"
-		eerror "use with your installation."
-		eerror
+		ewarn
+		ewarn "You have not enabled the X useflag.  It is possible that"
+		ewarn "you do not have an X server installed.  Please note that"
+		ewarn "some parts of the IBM JRE require an X server to properly"
+		ewarn "function.  Be careful which Java libraries you attempt to"
+		ewarn "use with your installation."
+		ewarn
 	fi
 }
