@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.14 2006/01/28 01:35:11 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.15 2006/03/12 13:24:36 chtekk Exp $
 #
 # ########################################################################
 #
@@ -32,7 +32,7 @@ inherit flag-o-matic eutils confutils libtool php-common-r1
 # copies of php which are compiled into other packages (e.g. php support
 # for the thttpd web server) don't need these variables
 
-if [ "${PHP_PACKAGE}" = 1 ]; then
+if [[ "${PHP_PACKAGE}" == 1 ]] ; then
 	HOMEPAGE="http://www.php.net/"
 	LICENSE="PHP-3"
 	SRC_URI="http://www.php.net/distributions/${MY_PHP_P}.tar.bz2"
@@ -46,12 +46,6 @@ DEPEND="${DEPEND}
 	!dev-php/php
 	!dev-php/php-cgi
 	!dev-php/mod_php
-	>=sys-devel/m4-1.4.3
-	>=sys-devel/libtool-1.5.18
-	>=sys-devel/automake-1.9.6
-	sys-devel/automake-wrapper
-	>=sys-devel/autoconf-2.59
-	sys-devel/autoconf-wrapper
 	berkdb? ( =sys-libs/db-4* )
 	bzip2? ( app-arch/bzip2 )
 	cdb? ( dev-db/cdb )
@@ -107,6 +101,15 @@ DEPEND="${DEPEND} !media-libs/libswf"
 # simplistic for now
 RDEPEND="${RDEPEND} ${DEPEND}"
 
+# those are only needed at compile-time
+DEPEND="${DEPEND}
+		>=sys-devel/m4-1.4.3
+		>=sys-devel/libtool-1.5.18
+		>=sys-devel/automake-1.9.6
+		sys-devel/automake-wrapper
+		>=sys-devel/autoconf-2.59
+		sys-devel/autoconf-wrapper"
+
 # Additional features
 #
 # They are in PDEPEND because we need PHP installed first!
@@ -123,12 +126,6 @@ PDEPEND="${PDEPEND}
 # ========================================================================
 
 PHP_INI_FILE="php.ini"
-
-# ========================================================================
-# Hardened-PHP Support
-# ========================================================================
-
-[ -n "${HARDENEDPHP_PATCH}" ] && SRC_URI="${SRC_URI} hardenedphp? ( http://gentoo.longitekk.com/${HARDENEDPHP_PATCH} )"
 
 # ========================================================================
 
@@ -175,6 +172,7 @@ php5_0-sapi_check_awkward_uses() {
 	# XML related extensions
 	confutils_use_depend_all "soap"	"xml"
 	confutils_use_depend_all "simplexml"	"xml"
+	confutils_use_depend_all "xmlrpc"	"xml"
 	confutils_use_depend_all "xsl"	"xml"
 	confutils_use_depend_all "wddx"	"xml"
 
@@ -216,12 +214,47 @@ php5_0-sapi_check_awkward_uses() {
 	confutils_use_conflict "readline" "libedit"
 
 	# Recode is not liked
-	confutils_use_conflict "recode" "mysql" "imap" "nis"
+	confutils_use_conflict "recode" "mysql" "imap" "yaz"
 
 	# the MM extension isn't thread-safe
 	confutils_use_conflict "sharedmem" "threads"
 
 	confutils_warn_about_missing_deps
+}
+
+php5_0-sapi_set_php_ini_dir() {
+	PHP_INI_DIR="/etc/php/${PHPSAPI}-php5"
+	PHP_EXT_INI_DIR="${PHP_INI_DIR}/ext"
+	PHP_EXT_INI_DIR_ACTIVE="${PHP_INI_DIR}/ext-active"
+}
+
+php5_0-sapi_install_ini() {
+	destdir=/usr/$(get_libdir)/php5
+
+	# get the extension dir
+	PHPEXTDIR="`"${D}/${destdir}/bin/php-config" --extension-dir`"
+
+	# work out where we are installing the ini file
+	php5_0-sapi_set_php_ini_dir
+
+	local phpinisrc=php.ini-dist
+
+	dodir ${PHP_INI_DIR}
+	insinto ${PHP_INI_DIR}
+	newins ${phpinisrc} ${PHP_INI_FILE}
+
+	dodir ${PHP_EXT_INI_DIR}
+	dodir ${PHP_EXT_INI_DIR_ACTIVE}
+
+	# Install any extensions built as shared objects
+	if useq sharedext ; then
+		for x in `ls "${D}/${PHPEXTDIR}/"*.so | sort` ; do
+			inifilename=${x/.so/.ini}
+			inifilename=`basename ${inifilename}`
+			echo "extension=`basename ${x}`" >> "${D}/${PHP_EXT_INI_DIR}/${inifilename}"
+			dosym "${PHP_EXT_INI_DIR}/${inifilename}" "${PHP_EXT_INI_DIR_ACTIVE}/${inifilename}"
+		done
+	fi
 }
 
 # ========================================================================
@@ -231,106 +264,100 @@ php5_0-sapi_check_awkward_uses() {
 php5_0-sapi_pkg_setup() {
 	# let's do all the USE flag testing before we do anything else
 	# this way saves a lot of time
-
 	php5_0-sapi_check_awkward_uses
 }
 
 php5_0-sapi_src_unpack() {
-	if [ "${PHP_PACKAGE}" == 1 ] ; then
+	if [[ "${PHP_PACKAGE}" == 1 ]] ; then
 		unpack ${A}
 	fi
 
 	cd "${S}"
 
-	# lib64 support
-	if [ -n "${LIB64_PATCH}" ] ; then
-		epatch "${WORKDIR}/${LIB64_PATCH}"
+	# Change PHP branding
+	PHPPR=${PR/r/}
+	if [[ "${PHPPR}" != "0" ]] ; then
+		sed -e "s|^EXTRA_VERSION=\"\"|EXTRA_VERSION=\"-pl${PHPPR}-gentoo\"|g" -i configure.in || die "Unable to change PHP branding to -pl${PHPPR}-gentoo"
 	else
-		ewarn "There is no lib64 patch available for this PHP release yet!"
+		sed -e "s|^EXTRA_VERSION=\"\"|EXTRA_VERSION=\"-gentoo\"|g" -i configure.in || die "Unable to change PHP branding to -gentoo"
+	fi
+
+	# multilib-strict support
+	if [[ -n "${MULTILIB_PATCH}" ]] && [[ -f "${WORKDIR}/${MULTILIB_PATCH}" ]] ; then
+		epatch "${WORKDIR}/${MULTILIB_PATCH}"
+	else
+		ewarn "There is no multilib-strict patch available for this PHP release yet!"
+	fi
+
+	# Apply general PHP5 patches
+	if [[ -d "${WORKDIR}/${MY_PHP_PV}/php5" ]] ; then
+		EPATCH_SOURCE="${WORKDIR}/${MY_PHP_PV}/php5" EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch
+	fi
+
+	# Apply version-specific PHP patches
+	if [[ -d "${WORKDIR}/${MY_PHP_PV}/${MY_PHP_PV}" ]] ; then
+		EPATCH_SOURCE="${WORKDIR}/${MY_PHP_PV}/${MY_PHP_PV}" EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch
 	fi
 
 	# Patch PHP to show Gentoo as the server platform
 	sed -e "s/PHP_UNAME=\`uname -a | xargs\`/PHP_UNAME=\`uname -s -n -r -v | xargs\`/g" -i configure.in || die "Failed to fix server platform name"
 
-	# Patch PHP to support heimdal instead of mit-krb5
-	if has_version "app-crypt/heimdal" ; then
-		sed -e "s|gssapi_krb5|gssapi|g" -i acinclude.m4 || die "Failed to fix heimdal libname"
-		sed -e 's|PHP_ADD_LIBRARY(k5crypto, 1, $1)||g' -i acinclude.m4 || die "Failed to fix heimdal crypt lib"
-	fi
-
-	# Patch for PostgreSQL support
-	if use postgres ; then
-		sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i ext/pgsql/config.m4 || die "Failed to fix PostgreSQL include paths"
-	fi
-
 	# Disable interactive make test
 	sed -e 's/'`echo "\!getenv('NO_INTERACTION')"`'/false/g' -i run-tests.php
 
-	# Patch for session persistence bug
-	epatch "${FILESDIR}/5.0-any/php5-soap_persistence_session.diff"
-
-	# stop php from activating the apache config, as we will do that ourselves
+	# Stop PHP from activating the Apache config, as we will do that ourselves
 	for i in configure sapi/apache/config.m4 sapi/apache2filter/config.m4 sapi/apache2handler/config.m4 ; do
 		sed -i.orig -e 's,-i -a -n php5,-i -n php5,g' ${i}
 		sed -i.orig -e 's,-i -A -n php5,-i -n php5,g' ${i}
 	done
 
-	# imap support
-	use imap && epatch "${FILESDIR}/5.0-any/php5-imap-symlink.diff"
+	# Patch PHP to support heimdal instead of mit-krb5
+	if has_version "app-crypt/heimdal" ; then
+		sed -e 's|gssapi_krb5|gssapi|g' -i acinclude.m4 || die "Failed to fix heimdal libname"
+		sed -e 's|PHP_ADD_LIBRARY(k5crypto, 1, $1)||g' -i acinclude.m4 || die "Failed to fix heimdal crypt library reference"
+	fi
 
-	# iodbc support
-	use iodbc && epatch "${FILESDIR}/5.0-any/php5-iodbc-config.diff"
-	use iodbc && epatch "${FILESDIR}/5.0-any/php5-with-iodbc.diff"
+	# Patch for PostgreSQL support
+	if useq postgres ; then
+		sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i ext/pgsql/config.m4 || die "Failed to fix PostgreSQL include paths"
+	fi
 
-	# hardenedphp support
-	if use hardenedphp ; then
-		if [ -n "${HARDENEDPHP_PATCH}" ] ; then
+	# Hardened-PHP support 
+	if useq hardenedphp ; then
+		if [[ -n "${HARDENEDPHP_PATCH}" ]] && [[ -f "${DISTDIR}/${HARDENEDPHP_PATCH}" ]] ; then
 			epatch "${DISTDIR}/${HARDENEDPHP_PATCH}"
 		else
-			ewarn "There is no Hardened-PHP available for this PHP release yet!"
+			ewarn "There is no Hardened-PHP patch available for this PHP release yet!"
 		fi
 	fi
 
-	# fix problems compiling with apache2
-	if useq apache2 && ! useq threads ; then
-		epatch "${FILESDIR}/5.0-any/php5-prefork.patch"
-	fi
-
-	# fix configure scripts to correctly support HardenedPHP
-	# and patch PHP to support libtool 1.5
-	epatch "${FILESDIR}/5.0-any/php5-libtool-1.5.patch"
+	# Fix configure scripts to correctly support Hardened-PHP
 	einfo "Running aclocal"
 	WANT_AUTOMAKE=1.9 aclocal --force || die "Unable to run aclocal successfully"
 	einfo "Running libtoolize"
 	libtoolize --copy --force || die "Unable to run libtoolize successfully"
 
-	# rebuild configure to make sure it's up to date
+	# Rebuild configure to make sure it's up to date
 	einfo "Rebuilding configure script"
 	WANT_AUTOCONF=2.5 autoreconf --force -W no-cross || die "Unable to regenerate configure script successfully"
 
-	# run elibtoolize
+	# Run elibtoolize
 	elibtoolize
 
 	# Just in case ;-)
-	chmod 755 configure || die "Failed to chmod configure to 755"
-}
-
-set_php_ini_dir() {
-	PHP_INI_DIR="/etc/php/${PHPSAPI}-php5"
-	PHP_EXT_INI_DIR="${PHP_INI_DIR}/ext"
-	PHP_EXT_INI_DIR_ACTIVE="${PHP_INI_DIR}/ext-active"
+	chmod 0755 configure || die "Failed to chmod configure to 0755"
 }
 
 php5_0-sapi_src_compile() {
 	destdir=/usr/$(get_libdir)/php5
-	set_php_ini_dir
+	php5_0-sapi_set_php_ini_dir
 
 	cd "${S}"
 	confutils_init
 
 	my_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR} --with-config-file-scan-dir=${PHP_EXT_INI_DIR_ACTIVE} --without-pear"
 
-	#				extension		USE flag		shared support?
+	#							extension		USE flag		shared support?
 	enable_extension_enable		"bcmath"		"bcmath"		1
 	enable_extension_with		"bz2"			"bzip2"			1
 	enable_extension_enable		"calendar"		"calendar"		1
@@ -365,7 +392,7 @@ php5_0-sapi_src_compile() {
 	enable_extension_with		"oci8"			"oci8"			1
 	enable_extension_with		"oci8-instant-client"	"oci8-instant-client"	1
 	enable_extension_with		"oracle"		"oracle7"		1
-	enable_extension_with		"openssl"		"ssl"			1
+	enable_extension_with		"openssl"		"ssl"			0
 	enable_extension_with		"openssl-dir"	"ssl"			0 "/usr"
 	enable_extension_with		"ovrimos"		"ovrimos"		1
 	enable_extension_enable		"pcntl" 		"pcntl" 		1
@@ -407,7 +434,7 @@ php5_0-sapi_src_compile() {
 		enable_extension_with "qdbm"		"qdbm"		1
 	fi
 
-	# support for the GD graphics library
+	# Support for the GD graphics library
 	if useq gd-external ; then
 		enable_extension_with	"freetype-dir"	"truetype"		0 "/usr"
 		enable_extension_with	"t1lib"			"truetype"		0 "/usr"
@@ -435,7 +462,7 @@ php5_0-sapi_src_compile() {
 
 	# Interbase support
 	if useq firebird || useq interbase ; then
-		my_conf="${my_conf} --with-interbase"
+		my_conf="${my_conf} --with-interbase=/usr"
 	fi
 
 	# LDAP support
@@ -476,21 +503,21 @@ php5_0-sapi_src_compile() {
 	enable_extension_with		"readline"		"readline"		0
 	enable_extension_with		"libedit"		"libedit"		1
 
-	# session support
+	# Session support
 	if ! useq session ; then
 		enable_extension_disable	"session"	"session"		1
 	else
 		enable_extension_with		"mm"		"sharedmem"		0
 	fi
 
-	# sqlite support
+	# Sqlite support
 	if ! useq sqlite ; then
 		enable_extension_without	"sqlite"		"sqlite"	0
 	else
 		enable_extension_enable		"sqlite-utf8"	"nls"		0
 	fi
 
-	# fix ELF-related problems
+	# Fix ELF-related problems
 	if useq pic ; then
 		einfo "Enabling PIC support"
 		my_conf="${my_conf} --with-pic"
@@ -498,11 +525,11 @@ php5_0-sapi_src_compile() {
 
 	# apache2 & threads support
 	if useq apache2 && useq threads ; then
-		my_conf="${my_conf} --enable-maintainer-zts --enable-experimental-zts"
+		my_conf="${my_conf} --enable-maintainer-zts"
 		ewarn "Enabling ZTS for Apache2 MPM"
 	fi
 
-	# catch cflag problems
+	# Catch CFLAGS problems
 	php_check_cflags
 
 	# multilib support
@@ -510,9 +537,7 @@ php5_0-sapi_src_compile() {
 		my_conf="--with-libdir=$(get_libdir) ${my_conf}"
 	fi
 
-	# all done
-
-	# we don't use econf, because we need to override all of its settings
+	# We don't use econf, because we need to override all of its settings
 	./configure --prefix=${destdir} --sysconfdir=/etc --cache-file=./config.cache ${my_conf} || die "configure failed"
 	emake || die "make failed"
 }
@@ -527,7 +552,7 @@ php5_0-sapi_src_install() {
 	useq sharedext && PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules"
 	make INSTALL_ROOT="${D}" ${PHP_INSTALLTARGETS} || die "install failed"
 
-	# install missing header files
+	# Install missing header files
 	if useq nls ; then
 		dodir ${destdir}/include/php/ext/mbstring/libmbfl/mbfl
 		insinto ${destdir}/include/php/ext/mbstring/libmbfl/mbfl
@@ -536,16 +561,15 @@ php5_0-sapi_src_install() {
 		done
 	fi
 
-	# get the extension dir
+	# Get the extension dir
 	PHPEXTDIR="`"${D}/${destdir}/bin/php-config" --extension-dir`"
 
-	# don't forget the php.ini file
+	# Don't forget the php.ini file
 	local phpinisrc=php.ini-dist
 	einfo "Setting extension_dir in php.ini"
 	sed -e "s|^extension_dir .*$|extension_dir = ${PHPEXTDIR}|g" -i ${phpinisrc}
 
-	# A patch for PHP for security. PHP-CLI interface is exempt, as it cannot be
-	# fed bad data from outside.
+	# A patch for PHP for security
 	einfo "Securing fopen wrappers"
 	sed -e 's|^allow_url_fopen .*|allow_url_fopen = Off|g' -i ${phpinisrc}
 
@@ -553,37 +577,8 @@ php5_0-sapi_src_install() {
 	einfo "Setting correct include_path"
 	sed -e 's|^;include_path = ".:/php/includes".*|include_path = ".:/usr/share/php5:/usr/share/php"|' -i ${phpinisrc}
 
-	# create the directory where we'll put php5-only php scripts
+	# Create the directory where we'll put php5-only php scripts
 	keepdir /usr/share/php5
-}
-
-php5_0-sapi_install_ini() {
-	destdir=/usr/$(get_libdir)/php5
-
-	# get the extension dir
-	PHPEXTDIR="`"${D}/${destdir}/bin/php-config" --extension-dir`"
-
-	# work out where we are installing the ini file
-	set_php_ini_dir
-
-	local phpinisrc=php.ini-dist
-
-	dodir ${PHP_INI_DIR}
-	insinto ${PHP_INI_DIR}
-	newins ${phpinisrc} ${PHP_INI_FILE}
-
-	dodir ${PHP_EXT_INI_DIR}
-	dodir ${PHP_EXT_INI_DIR_ACTIVE}
-
-	# Install any extensions built as shared objects
-	if useq sharedext ; then
-		for x in `ls "${D}/${PHPEXTDIR}/"*.so | sort` ; do
-			inifilename=${x/.so/.ini}
-			inifilename=`basename ${inifilename}`
-			echo "extension=`basename ${x}`" >> "${D}/${PHP_EXT_INI_DIR}/${inifilename}"
-			dosym "${PHP_EXT_INI_DIR}/${inifilename}" "${PHP_EXT_INI_DIR_ACTIVE}/${inifilename}"
-		done
-	fi
 }
 
 php5_0-sapi_pkg_postinst() {
