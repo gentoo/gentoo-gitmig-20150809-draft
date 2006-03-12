@@ -1,22 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 843e2c6f4b934479421e8391593aff7c ChangeLog 2727
-MD5 451a7f7f02d3d485fdc7b6b735f3ec46 files/digest-jbidwatcher-0.9.7 69
+MD5 beda6e15df52b92e3a62650842100f65 ChangeLog 2865
+RMD160 390ab6eb3970b20ad6725768dc532056671a33ff ChangeLog 2865
+SHA256 3ab4172343264876de3ae2bbfde0d84d3188a7335692a58ab30138e2177e6e94 ChangeLog 2865
 MD5 af1ad3b07a94f624e49bad21318031b8 files/digest-jbidwatcher-0.9.7.1 71
-MD5 d0fdaf1156e8b181b282c9cd2dd4ad95 files/digest-jbidwatcher-0.9.8 69
+RMD160 a47f33acb3ca0f84de2d61fbef1a52305ea5c588 files/digest-jbidwatcher-0.9.7.1 71
+SHA256 6b811af979ffa0995950f0de6203a65732bf8f3272be557ed47bafa4a4f7c368 files/digest-jbidwatcher-0.9.7.1 71
 MD5 437b62c544323eaba985ca1e8e9c691e files/digest-jbidwatcher-0.9.9 69
+RMD160 39764edeb933f1ad973d7e165568f8d9e0d39e68 files/digest-jbidwatcher-0.9.9 69
+SHA256 082c138d2bef233f1fff2cb33d20af7a37dcd0c1a8d48f179d556908e26b6261 files/digest-jbidwatcher-0.9.9 69
 MD5 e4a099a9465fab9439db2f10b38539f8 files/jbidwatcher-0.9.8-build_xml.patch 2328
+RMD160 c0237befef352f3ac1f7038fea984f88e2a67b58 files/jbidwatcher-0.9.8-build_xml.patch 2328
+SHA256 9b3ded50f7d23a219c566e9b4d89bb2223cfd6ea583777d51149925b088c3148 files/jbidwatcher-0.9.8-build_xml.patch 2328
 MD5 9e35f6ed9dd9312fafd1fd5d2161a3cf files/jbidwatcher-0.9.8-javadoc.patch 1232
+RMD160 d69310d98bb52c6b721e3a7c9dae4f6146c39198 files/jbidwatcher-0.9.8-javadoc.patch 1232
+SHA256 5da11ef100c6b84ead5c1e2a9c54dc3f32e9eae0adeee2c2a1d01b75160cec51 files/jbidwatcher-0.9.8-javadoc.patch 1232
 MD5 1ad956dceb43c8e3683600af056217c1 jbidwatcher-0.9.7.1.ebuild 1169
-MD5 87ab883daca9c7942dec30618af87190 jbidwatcher-0.9.7.ebuild 1167
-MD5 bfecafc0a7b1fe53dcafb30caa41b75b jbidwatcher-0.9.8.ebuild 1456
+RMD160 6da9b47efdfb9fa0944a98154433e8e983688f8f jbidwatcher-0.9.7.1.ebuild 1169
+SHA256 a922ca3fd351e19b2306fb55c5d89fc06b2e48c0aec2ed7ab5dc536db668e869 jbidwatcher-0.9.7.1.ebuild 1169
 MD5 658e67b76a26c5d162a8ec38e9ce05cc jbidwatcher-0.9.9.ebuild 1568
+RMD160 ab1c41616add5fe13e2eca54c5d6ee336e8afc71 jbidwatcher-0.9.9.ebuild 1568
+SHA256 f8ee0516bc87eb47e716af549f2c7ca540415b8a85691c0d61577a9c55477f75 jbidwatcher-0.9.9.ebuild 1568
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnLBMndWRXhKOboURAlExAKDE/NvoKV9C9w1v5w+BF1caS77AkQCeNN+i
-Gwd7dNO/bNHgDa+V94B/eHA=
-=d2p6
------END PGP SIGNATURE-----
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
