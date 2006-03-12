@@ -1,5 +1,15 @@
-MD5 bcadf39170c734433170728c4191a011 komport-0.5.9.ebuild 566
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 41bcf80b399b7ce487cec25f08d518b4 ChangeLog 852
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 4f3fd78f4486d4772bc9b0f79755b559 files/digest-komport-0.5.9 65
 MD5 50f57a07e20a6c00d06873c77ef3b9b0 files/komport-0.5.9-configure-arts.diff 3131
+MD5 a74276984facbf9216623b146e62d765 komport-0.5.9.ebuild 570
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEFDFajG8pv1lIUX4RAnyBAKDTnOWelKrEmTdU3IPrwi066Xl1fQCbBlUL
+yYgj/p0O0GA8icbrvKuJdTw=
+=GHy0
+-----END PGP SIGNATURE-----
