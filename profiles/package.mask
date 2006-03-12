@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5083 2006/03/12 22:52:20 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5084 2006/03/12 23:31:55 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Michael Sterrett <mr_bones_@gentoo.org> (12 Mar 2006)
+# masked due to security issues: bug #125990
+net-libs/enet
 
 # Francesco Riosa <vivo@gentoo.org> (12 Mar 2006)
 # Masking of slotted versions, waiting for an overlay setup
