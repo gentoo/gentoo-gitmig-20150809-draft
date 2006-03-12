@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b7896746e042473951b6c298da2b0e17 ChangeLog 606
-MD5 d63ede8903fd4d4928b41518357b52fb bpalogin-2.0.2.ebuild 681
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 598dac84daa9d75476576f2d69884d7c bpalogin-2.0.2.ebuild 659
 MD5 fa9222ea98a932b1e036ca301106102d files/bpalogin.rc 425
 MD5 5aa93377ef25d0bd126ad9a787aa70ce files/digest-bpalogin-2.0.2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBm5hxjtv59x0+BrURAuZuAJ0eZypi756Dz9RRCFo5Aur4yZwM8ACfeNad
-ziFQDohKoFkYU7f7KL3DyK8=
-=3aRM
------END PGP SIGNATURE-----
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
