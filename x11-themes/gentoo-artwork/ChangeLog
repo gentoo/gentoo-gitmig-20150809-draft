@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gentoo-artwork
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.15 2006/01/23 20:37:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.16 2006/03/12 11:43:03 spock Exp $
+
+  12 Mar 2006; Michał Januszewski <spock@gentoo.org>
+  gentoo-artwork-0.4.1.ebuild:
+  Added a fix for bug #119410 (misspelled filename).
 
   23 Jan 2006; Markus Rothe <corsair@gentoo.org>
   gentoo-artwork-0.4.1.ebuild:

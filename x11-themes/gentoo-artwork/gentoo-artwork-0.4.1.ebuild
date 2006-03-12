@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.1.ebuild,v 1.4 2006/01/23 20:37:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.1.ebuild,v 1.5 2006/03/12 11:43:03 spock Exp $
 
 DESCRIPTION="A collection of miscellaneous Gentoo Linux logos and artwork"
 SRC_URI="mirror://gentoo/gentoo-artwork-0.2.tar.bz2
@@ -25,6 +25,10 @@ src_unpack() {
 	unpack gentoo-artwork-0.4.tar.bz2
 	mv ${WORKDIR}/gentoo-artwork-0.4 ${WORKDIR}/gentoo-artwork-0.4.1
 	unpack gentoo-artwork-0.4.1.tar.bz2
+
+	# fix errors in filenames
+	mv ${S}/pixmaps/1280x1024/gentoo-freedom-1280x1024,jpg \
+		${S}/pixmaps/1280x1024/gentoo-freedom-1280x1024.jpg
 
 	# remove misspelled files
 	rm ${S}/icons/gentoo/{32x32,48x48,64x64}/slypheed.png

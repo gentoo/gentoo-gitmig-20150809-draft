@@ -1,5 +1,25 @@
-MD5 6b10de3586bada3b0877ab2119c93877 ChangeLog 2394
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5c1f0b970a355ac1e656fb3faada32fe ChangeLog 2531
+RMD160 4a675ed6bfc62bcbcd49b8fa1589f75698367be8 ChangeLog 2531
+SHA256 6127d05b25f670acaf7360dea894851d2d2db7f8d9228905221008113af1db53 ChangeLog 2531
 MD5 de1f0ea045c9198cdf5873099611aafb files/digest-gentoo-artwork-0.4.1 292
+RMD160 a5b5ff1406ca00ab0c700c1c87b13b9f7855c048 files/digest-gentoo-artwork-0.4.1 292
+SHA256 5e1dff8049113bb53ecec39efbf3256265775ba7996cdc6dd131c87825cc79f7 files/digest-gentoo-artwork-0.4.1 292
 MD5 575bd06a169679bee6fc2ad12fa8e386 files/offensive_list 48
-MD5 013caadcb60f3983bf58a06045d4032a gentoo-artwork-0.4.1.ebuild 1935
+RMD160 c84ed20967eea0ebd161b21889cb67f5b28237cf files/offensive_list 48
+SHA256 263b94f16e0398607d8716f78f07a5c55f106861324022cbc24dbc5836a600c2 files/offensive_list 48
+MD5 c1fa2e55a316c070bb676707e3d359ed gentoo-artwork-0.4.1.ebuild 2073
+RMD160 5f05c07542e350d181c2b718197c1d3b7b3097f1 gentoo-artwork-0.4.1.ebuild 2073
+SHA256 766ffb601288e435eddf0231580eeea5a5b0ba0a0b4b270db728969d808b35d8 gentoo-artwork-0.4.1.ebuild 2073
 MD5 42bb15c37e072cf6216b4692514d08c9 metadata.xml 275
+RMD160 00be6987871f84525152f39959451ceb12ca8368 metadata.xml 275
+SHA256 8e543ecb32c0ae7562a30b11924bf94edd4f6db02aa59f1555938e1beab22568 metadata.xml 275
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEFAldchej4aZK9/cRAk5HAJ9pmfUmfivExGd2EgV20+NEsD2wKQCeJ/zP
+bhXFtvAPB2o5nUniFp49cgA=
+=AzwX
+-----END PGP SIGNATURE-----
