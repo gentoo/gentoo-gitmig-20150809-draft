@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivam2/ivam2-0.3-r1.ebuild,v 1.4 2005/08/19 20:51:57 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivam2/ivam2-0.3-r1.ebuild,v 1.5 2006/03/12 14:16:39 mrness Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 IUSE=""
 SLOT="0"
 
-DEPEND="virtual/libc
-	dev-libs/liboop
+DEPEND="dev-libs/liboop
 	>=dev-libs/libdaemon-0.4
 	>=dev-lang/python-2.3
 	net-dialup/isdn4k-utils"
