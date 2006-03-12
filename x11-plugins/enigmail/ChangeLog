@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.7 2006/03/10 04:32:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.8 2006/03/12 22:53:57 agriffis Exp $
+
+  12 Mar 2006; Aron Griffis <agriffis@gentoo.org> enigmail-0.94.0.ebuild:
+  Remove ~ia64 (missing tbird dep).  Will re-add when thunderbird-1.5* builds
+  successfully for me on ia64
 
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org> enigmail-0.94.0.ebuild:
   Mark 0.94.0 ~ia64
