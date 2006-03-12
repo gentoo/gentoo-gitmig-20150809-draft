@@ -1,27 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 42a974da3e6107eef7db7c0563af3b5f ChangeLog 4250
+MD5 20c7cb4063fe9429217a8ead2eab29c9 ChangeLog 4410
+RMD160 bf25a4a2754ff7225897b8ef9961032282be2aed ChangeLog 4410
+SHA256 0ce08e408946a1724631dd9e5f4dc5af94e435fb441e2130d368a007a9e04c40 ChangeLog 4410
 MD5 b62aef084315e664ba8ce901882c4087 files/25maven 61
-MD5 03cf0059efc0fa7a81f91bf9f74ada41 files/digest-maven-bin-1.0 62
+RMD160 ca0f043b265e32d8562b28468a10d9ef3de29af0 files/25maven 61
+SHA256 62c6406c011b250a027a01c8f55d9a11b0f9366091f5194ecffaa5f17c15b01e files/25maven 61
 MD5 a122c6cbe18f3260971b5a9237ce581a files/digest-maven-bin-1.0.2 64
+RMD160 d0e7e6f1eddca4c3a7998555d0ef4c87a24cdd11 files/digest-maven-bin-1.0.2 64
+SHA256 28b529e98f57588de046015f89c81ee2650c8c7de9a16cb3308b068800380487 files/digest-maven-bin-1.0.2 64
 MD5 fc48ae8abd9687043ff4f42b956fec9c files/digest-maven-bin-1.0_rc3 66
-MD5 73a1ddbeab35cfa7b9cdf22069268280 files/digest-maven-bin-1.0_rc4 66
-MD5 e1bfab71e11346fc00790a6ad2d21e75 files/digest-maven-bin-2.0.1-r1 69
+RMD160 93b315a5e823c1a981634d50f5248df787f26b62 files/digest-maven-bin-1.0_rc3 66
+SHA256 3b6e25cee292ded717802ef29c0d9bea7e191d9ffa5900e9ecf8621f8b11eb6d files/digest-maven-bin-1.0_rc3 66
 MD5 68806e9eabf8247e7025cf825bd7c4a6 files/digest-maven-bin-2.0.2 69
+RMD160 64af305ed13cf36e3e97519d9ff02deb6f63a8f4 files/digest-maven-bin-2.0.2 69
+SHA256 7255e26000880b22208ad005ab3663a92a36d041a4abdacd611e49c91920421e files/digest-maven-bin-2.0.2 69
 MD5 ab1d62eede92eae029e1f5a25a40fdbe files/maven 5108
+RMD160 324047be03ff25943367b52092e5cb88c5580cff files/maven 5108
+SHA256 ddce53375271fd6e9515350083fd4c97ae86213e5bdb9984faf770ccdac1ff10 files/maven 5108
 MD5 74a13098bf9c5a96e423bb88a8c7927c files/maven-bin-1.0-script.patch 2110
+RMD160 35b68462ab0d44d0b9c3087c03b5a7c62efadd90 files/maven-bin-1.0-script.patch 2110
+SHA256 2b3808755bd76a2ccf44ce930b3e636ff9ea93074524e8f58530fee50324aef3 files/maven-bin-1.0-script.patch 2110
 MD5 abe862c7b29f46f35c1c3dbd7e933de8 maven-bin-1.0.2.ebuild 951
-MD5 6abad25d688c61908f861a552d81ca44 maven-bin-1.0.ebuild 840
+RMD160 5ace7bfc7469dd805391c1fe7511eebf0d1a0dd9 maven-bin-1.0.2.ebuild 951
+SHA256 ad3f8792a472ddd16643578314029fd1023eb6987d6f668ba19fedbf75ad64d0 maven-bin-1.0.2.ebuild 951
 MD5 0fd9270c9e7a5650cb4d16daef5d6ef4 maven-bin-1.0_rc3.ebuild 760
-MD5 85dc27c1a0baf62ae39262f3c55b0e3c maven-bin-1.0_rc4.ebuild 763
-MD5 dbbd1f580f402c0a39db55d6378caaa8 maven-bin-2.0.1-r1.ebuild 919
+RMD160 e338121008ea3d356aa0e8799567c3b0757680fa maven-bin-1.0_rc3.ebuild 760
+SHA256 3a17aa303e5974fb8a5195aee631961403de63adda850e55c4b84950427b7323 maven-bin-1.0_rc3.ebuild 760
 MD5 ba064201f381c0668dcc4e9eabe1842c maven-bin-2.0.2.ebuild 916
+RMD160 90b2c3f80ae7f1c468573b9feeca43c24b8d9c36 maven-bin-2.0.2.ebuild 916
+SHA256 ef4d4e75aa9ceec33f955cf8ba14385a66e4dfe4702204c12a6a98445c250e1b maven-bin-2.0.2.ebuild 916
 MD5 8eec08a2cf3441c55736840e21a71c5a metadata.xml 534
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzv+RndWRXhKOboURAvmJAKCh9XOTMSwJ8vDUIgbEiI/lQFnX5wCg9A6q
-nj/TzPsY0IAZXyUpNgQshbY=
-=a88w
------END PGP SIGNATURE-----
+RMD160 648f2d4155a499dc365fa68f641c8515bc899aee metadata.xml 534
+SHA256 60f4d996c9ce3665ec37a9fd540913261ed9568069c6df06d0bf583e2dcfa93d metadata.xml 534
