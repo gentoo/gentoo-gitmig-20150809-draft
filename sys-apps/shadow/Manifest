@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f4b2aa7a4fe6eaa57aafb59a5f3f64b8 ChangeLog 24315
-RMD160 3b19d194f7f44f2189d2b8ff1a89e8ed404e2256 ChangeLog 24315
-SHA256 197b62725a4b10c1ee8f4c0bf7c79ea856f4f023e634afab4469116f2fe04bcd ChangeLog 24315
+MD5 4cf1e3e22a51cc7ced00ce697e60a1b5 ChangeLog 24624
+RMD160 135ef82845403c5bed04c034118cf5f95868b4aa ChangeLog 24624
+SHA256 b6a575ecb3e0352621467010160c65347cc3e6cca9267f62d628ab42dc1e08b5 ChangeLog 24624
 MD5 6e0bc0211949c624da0ea08d994a7038 files/default/useradd 96
 RMD160 55c38953c800c6aae1ebe4312028560f77e7414f files/default/useradd 96
 SHA256 31aa2cbe4a34a9f7d4d134c1fecd007c9bbf4d40e19d0dcddbcd396f1853b490 files/default/useradd 96
@@ -22,9 +22,18 @@ SHA256 76f9c442acc143a966bf3da9170c52583e70a4f86912c3e72a83d0ba78474160 files/di
 MD5 2b6cc6ba67673510780c1c4474587e62 files/digest-shadow-4.0.14-r1 67
 RMD160 46cef7289437c7f0c43bf56cd03e1c6716287f65 files/digest-shadow-4.0.14-r1 67
 SHA256 40f7ed35551b6f856a45fff826cdaf231e0dc458b5d5431b92f022d560419d80 files/digest-shadow-4.0.14-r1 67
+MD5 e762a86e8069be90d8d92c729a7ea723 files/digest-shadow-4.0.14-r2 247
+RMD160 538a905f79791302dcdccc7b0ea73a31bbe89f6b files/digest-shadow-4.0.14-r2 247
+SHA256 1902d92c71601c84369242225380eea36c18bc3b7b9f676f1806f85e387614cd files/digest-shadow-4.0.14-r2 247
 MD5 46c2be2ed8b26ec007e3ed1f476491d8 files/digest-shadow-4.0.7-r4 66
 RMD160 6b4e254fe2230dd1ad173f02310fea6b7a87d7ab files/digest-shadow-4.0.7-r4 66
 SHA256 d736922bcacc93c8394219cff03d1a22dffa8b4db05bd6b188db2a2110a33ad2 files/digest-shadow-4.0.7-r4 66
+MD5 b1efe75ceba3c645eaab09c580809342 files/login.defs 6254
+RMD160 1daa093f13d56126833e6e97d6dd60498a68304a files/login.defs 6254
+SHA256 b7bfd7b1c34ce3d35865b572abc69d278dea4eef4f349c26b238735547c4ac22 files/login.defs 6254
+MD5 e01e197ed3b6d2ec6ae83d23b33088b8 files/login.pamd 1019
+RMD160 062e018d7c0e6c3b9963f695051322f762809edc files/login.pamd 1019
+SHA256 4d1844dbfc9292ae82789c26767190b6ca2cad0f77a55fee86dbf292444762e0 files/login.pamd 1019
 MD5 4b7d75b12f1bea9f349dff4c48c18b8b files/pam.d-include/login 245
 RMD160 100e5514b65603d1fa0001cc0dce5dd2caaf232f files/pam.d-include/login 245
 SHA256 39bbe2ed696a22c7549a39a7cfd47c16e347e5af4fd71b8c01ec87fce59ba0a0 files/pam.d-include/login 245
@@ -193,13 +202,16 @@ SHA256 a47d6fcfa1d07c8855670b259bcc97d20cb8e171183ea9bafa937dc4122671f7 shadow-4
 MD5 5dbd60f9f583f3f25d1969d8cdc2a964 shadow-4.0.14-r1.ebuild 7121
 RMD160 969f1b92aaa895e055bb8516d89d0b7c6888deef shadow-4.0.14-r1.ebuild 7121
 SHA256 e14582ffe4958c2af59f81cf3c2d787fb3da62853e8b5fb295b4bb92ad3076ac shadow-4.0.14-r1.ebuild 7121
+MD5 eaa9a3cb90a0c5c444bc518cc3f20a1f shadow-4.0.14-r2.ebuild 7671
+RMD160 16fe54ebbd36a5551053fe924df528a6b753df4f shadow-4.0.14-r2.ebuild 7671
+SHA256 aa038dad4842cd329eafb84000f509f4fb880c9b01270fde4f06ffb96a1cb9b1 shadow-4.0.14-r2.ebuild 7671
 MD5 b2f49d9316731f342a8aee3d826cece9 shadow-4.0.7-r4.ebuild 7174
 RMD160 7a795cc523e6d543a33837b4aa9618fe7fbea171 shadow-4.0.7-r4.ebuild 7174
 SHA256 0554fbb6eb37686d54ef27c1be211595976b390f3a1a549a807225c91fc3e72a shadow-4.0.7-r4.ebuild 7174
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEEoAt2+ySkm8kpY0RAh6tAKCtu64HMqh4MaCY4aIYlzd/twSuOQCfViiL
-/MqMdO+SU02HOFREtCaIJ74=
-=iwPD
+iD8DBQFEFLMKAiZjviIA2XgRArGQAJ0SY+8Y3f0elxnezyuaS5HOdjYKDQCg62bY
+oEdvSdRDZkKECVFrdZ9DNLo=
+=QhxN
 -----END PGP SIGNATURE-----
