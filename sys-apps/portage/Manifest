@@ -34,9 +34,6 @@ SHA256 3ad39a43bef0fa94b5fd3ffd2173c8b076ffbd3179e9c15c9844fdaddeaa6aed files/2.
 MD5 b0f0aee3708359245752289af4a8923b files/2.1_pre5/version_bump_2.1_pre5-r4.patch 378
 RMD160 3e96116e5c06994417fc3dfa2fd344676f8f7a53 files/2.1_pre5/version_bump_2.1_pre5-r4.patch 378
 SHA256 5619c164def7cd20db802ca878714669fe258ac285a219e24068f378f8e70d98 files/2.1_pre5/version_bump_2.1_pre5-r4.patch 378
-MD5 43e6f0038bd9660c6df8c3b6019b33d8 files/2.1_pre6/1000-r2849-quiet-spinner.patch 553
-RMD160 9f83e5d105348dcab20d37212e83422be4b4b86d files/2.1_pre6/1000-r2849-quiet-spinner.patch 553
-SHA256 7277668d65bb47fa5d82f7b9e098378872ff6c8b67b3caa2298324d242952d17 files/2.1_pre6/1000-r2849-quiet-spinner.patch 553
 MD5 43e6f0038bd9660c6df8c3b6019b33d8 files/2.1_pre6/1000_r2849_quiet_spinner.patch 553
 RMD160 9f83e5d105348dcab20d37212e83422be4b4b86d files/2.1_pre6/1000_r2849_quiet_spinner.patch 553
 SHA256 7277668d65bb47fa5d82f7b9e098378872ff6c8b67b3caa2298324d242952d17 files/2.1_pre6/1000_r2849_quiet_spinner.patch 553
@@ -106,7 +103,7 @@ SHA256 a67029416b25744d4ea79e74b9f9effd57500c275beaaa22272f76031179d72c portage-
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEFCob/ejvha5XGaMRAkoJAKCqmWqxzFc/nRTwQJH91fnR6X6XrwCdGU+G
-H5SVuBHDlNpeNSGQgGCaRYU=
-=gjqN
+iD8DBQFEFDC5/ejvha5XGaMRApp3AJ0XQGTKDoUhqSmna0urnwu6hLqXFwCcDARD
+0RISGqRqPhQD4tuHbufBTIY=
+=tecS
 -----END PGP SIGNATURE-----
