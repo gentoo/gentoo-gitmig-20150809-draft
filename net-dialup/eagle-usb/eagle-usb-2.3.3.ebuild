@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.3.1-r1.ebuild,v 1.1 2005/11/04 05:36:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.3.3.ebuild,v 1.1 2006/03/12 10:34:51 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.eagle-usb.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="net-dialup/ppp"
@@ -18,17 +18,17 @@ RDEPEND="net-dialup/ppp"
 MODULE_NAMES="${PN}(net:${S}/driver)"
 CONFIG_CHECK="!IPV6 USB"
 BUILD_TARGETS=" "
-BUILD_PARAMS="KERNELSRC=${KV_DIR}"
+BUILD_PARAMS="KERNELSRC='${KV_DIR}'"
 
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/${P}-kernel-2.6.14.patch
+	epatch "${FILESDIR}/${P}-kernel-2.6.14.patch"
 }
 
 src_compile() {
 	./autogen.sh || die "autogen.sh failed"
-	CONFIG_FILES=Makefile.common econf --with-kernel-src=${KV_DIR} || die "econf failed"
+	CONFIG_FILES=Makefile.common econf --with-kernel-src="${KV_DIR}" || die "econf failed"
 	for i in pppoa utils/scripts utils/eagleconnect; do
 		emake -C ${i} || die "emake ${i} failed"
 	done
@@ -40,15 +40,15 @@ src_install() {
 	linux-mod_src_install
 
 	for i in driver/firmware driver/user pppoa utils/scripts utils/eagleconnect; do
-		make DESTDIR=${D} -C ${i} install || die "make ${i} install failed"
+		make DESTDIR="${D}" -C ${i} install || die "make ${i} install failed"
 	done
 
 	doman doc/man/*
 	dodoc README ChangeLog
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/initd ${PN}
-	insinto /etc/conf.d ; newins ${FILESDIR}/confd ${PN}
-	insopts -m 600 ; insinto /etc/ppp/peers ; doins ${FILESDIR}/dsl.peer
+	newinitd "${FILESDIR}/initd" "${PN}"
+	newconfd "${FILESDIR}/confd" "${PN}"
+	insopts -m 600 ; insinto /etc/ppp/peers ; doins "${FILESDIR}/dsl.peer"
 }
 
 pkg_postinst() {
