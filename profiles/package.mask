@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5079 2006/03/12 13:10:20 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5080 2006/03/12 13:44:19 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Petteri Räty <betelgeuse@gentoo.org> (12 Mar 2006)
+# Because of changes in ebay our current versions do not work
+# See bug #125813 for details.
+<=app-misc/jbidwatcher-0.9.9
 
 # John N. Laliberte <allanonjl@gentoo.org> (12 Mar 2006)
 # GNOME 2.14 mask. You must follow instructions here:
