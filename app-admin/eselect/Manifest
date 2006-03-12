@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 46af5a0c5b981c9bd6df8171794aa353 ChangeLog 4084
+MD5 15329a601bd2fb32667814ebb74e2a2b ChangeLog 4186
+RMD160 d7bf1cac0488017f7c1e72646aa5388c350534c4 ChangeLog 4186
+SHA256 ba185deb62cb541b250a051c0cd225c7c7c888f11373e4ff0c54ad78d4d6522d ChangeLog 4186
 MD5 87f1d7380ea0332635470db9c20c248b eselect-0.9.6.ebuild 1317
-MD5 06edd0b37f8d61cb5c0652f48be0bf40 eselect-1.0.ebuild 1253
+RMD160 f62ec55a231e6761f4a7bb003dcc2d77e1b274eb eselect-0.9.6.ebuild 1317
+SHA256 4ed516bb40ecc971111f3b5c1d8eb67d50666f1f5f40812b49fe1ccf7c089119 eselect-0.9.6.ebuild 1317
+MD5 04f466896a851f939981e4eee2dfab48 eselect-1.0.ebuild 1252
+RMD160 91f57a0cda8183775985b08fa0fffeee60aa7ad7 eselect-1.0.ebuild 1252
+SHA256 2ccff7ade24ff62ab50c199804b41b0f2b99f8f7798f659a9a187ee4d347c9f9 eselect-1.0.ebuild 1252
 MD5 205e4671b260218c2306268f03b5ac85 eselect-1.0_rc1.ebuild 1293
+RMD160 3a8782b58a639ef9d8f88e5adc547b1ae597ee7c eselect-1.0_rc1.ebuild 1293
+SHA256 f3a7f4f2b5c98df65d5eaf643a8841ef38d4ce95c7e755c867d845b8be0b9460 eselect-1.0_rc1.ebuild 1293
 MD5 d7fbc376e3aef8783786443e22621b40 eselect-1.0_rc2.ebuild 1319
+RMD160 62fdb24c89abf313a352ef0a19c4d6f60827137c eselect-1.0_rc2.ebuild 1319
+SHA256 df9277ad03f3459e929e08fc0d9ce8b1fc1a026fae0d9d4428fddcaf077ff455 eselect-1.0_rc2.ebuild 1319
 MD5 c7f28f299bf397889d5c4ffb8bcc1772 files/digest-eselect-0.9.6 65
+RMD160 3b2ffaad893c47a87c66610b383c9e96894e1d13 files/digest-eselect-0.9.6 65
+SHA256 ae65c6bb34561b18038d27da5428cdc3c7e3d381625456f497387bcdf8246c5e files/digest-eselect-0.9.6 65
 MD5 6eaa890869f036affb6665958af7dff1 files/digest-eselect-1.0 238
+RMD160 7a12d0135e65462646675820dbbf2a4b44ed0190 files/digest-eselect-1.0 238
+SHA256 8d1bd2c9f1852efa5b17efbe03e1ee14af92ff6edf60a351d3c6d85c0a507dbd files/digest-eselect-1.0 238
 MD5 361d784eca93f6c4384fc4cfbc32e55f files/digest-eselect-1.0_rc1 68
+RMD160 a73b0dde99b1122c179ce567a1926c2600be92cd files/digest-eselect-1.0_rc1 68
+SHA256 e11c47264dbad54fea866485cb279b5bdbe333bf2424fc0312aa0e66e813e283 files/digest-eselect-1.0_rc1 68
 MD5 825b17d965ed7489b0351a0adbe012bb files/digest-eselect-1.0_rc2 68
+RMD160 6d1fdc441948eff520c961847fd290d56780fb70 files/digest-eselect-1.0_rc2 68
+SHA256 62a9a94cfc85e944b5b54517085d8b1c5884e267c45d8b4c8bfe35b76feed697 files/digest-eselect-1.0_rc2 68
 MD5 ca75babbaadabb722f6415ddec4c0ce8 metadata.xml 226
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEEdvUViELBEf1JB0RAiAGAJ9xnV4oOGqKSeqPS7Fd/VFf8DHpzACfUNOF
-Vn8VwdOEmUbh8TI7Z1yU33c=
-=M4rp
------END PGP SIGNATURE-----
+RMD160 c17329676784fd7b99439a08e9e15d942763da61 metadata.xml 226
+SHA256 ef8f7fb97dfc4aed17d7da4859d4b9af2ab812238eee190ab015c57ee896127e metadata.xml 226
