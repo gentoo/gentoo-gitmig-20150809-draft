@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/smtptools
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/smtptools/ChangeLog,v 1.2 2004/12/13 23:24:16 ticho Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/smtptools/ChangeLog,v 1.3 2006/03/12 09:43:58 vapier Exp $
+
+  12 Mar 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/smtptools-0.2.3-cleanups.patch, smtptools-0.2.3.ebuild:
+  Fix building with newer gcc versions and cleanup implicit warnings that hate
+  64bit hosts.
 
   14 Dec 2004; Andrej Kacian <ticho@gentoo.org> smtptools-0.2.3.ebuild:
   Stable on x86.
