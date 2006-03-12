@@ -4,11 +4,11 @@ Hash: SHA1
 MD5 b957a6b44bcda6917821b6aaab565ac8 ChangeLog 471
 MD5 b83bdfc8f19123454df20f2afb06f760 files/digest-kdsl-0.5 62
 MD5 16c5b39fa6802640136fc348c2a90d54 kdsl-0.5.ebuild 593
-MD5 0ae3d6e295e79577e6d7fce0c199ec83 metadata.xml 343
+MD5 ee9594261fdef954da03f55e45e359ee metadata.xml 447
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDrrZYAiZjviIA2XgRAhtCAKDT/ygrmc3hy7wh1Uyl6bDC7vA/DgCeOtKa
-dPt+mh2p1diQU7q3veRrAuc=
-=2SBX
+iD8DBQFEFC/9jG8pv1lIUX4RAoXxAJ93zmy+SkJjGOnCDbT0ScIp6pn7PQCg7rS4
+8iMU29DzGTRhAIky39iOVz0=
+=Pvpl
 -----END PGP SIGNATURE-----
