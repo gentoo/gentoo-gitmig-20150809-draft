@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-MD5/perl-Digest-MD5-2.33.ebuild,v 1.2 2006/02/13 19:22:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-MD5/perl-Digest-MD5-2.33.ebuild,v 1.3 2006/03/12 07:51:20 vapier Exp $
 
 DESCRIPTION="Virtual for Digest-MD5"
 HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
@@ -8,9 +8,8 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64"
-
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
+
 DEPEND=""
 RDEPEND="|| ( ~dev-lang/perl-5.8.7 ~perl-core/Digest-MD5-${PV} )"
-
