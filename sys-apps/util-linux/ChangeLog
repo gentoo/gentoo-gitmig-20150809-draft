@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.148 2006/03/07 00:26:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.149 2006/03/12 23:03:56 flameeyes Exp $
+
+  12 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  util-linux-2.12r-r3.ebuild:
+  Drop pam useflag and dependency over pam-login, as all the stuff that might
+  use pam is provided by shadow on modern systems.
 
   07 Mar 2006; Mike Frysinger <vapier@gentoo.org>
   +files/util-linux-2.12r-umount-nosysfs.patch, util-linux-2.12r-r3.ebuild:

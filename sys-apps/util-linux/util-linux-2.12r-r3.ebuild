@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r3.ebuild,v 1.2 2006/03/07 00:26:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r3.ebuild,v 1.3 2006/03/12 23:03:56 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -18,12 +18,11 @@ SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="crypt old-crypt nls static pam selinux perl"
+IUSE="crypt old-crypt nls static selinux perl"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2
 	>=sys-fs/e2fsprogs-1.34
 	selinux? ( sys-libs/libselinux )
-	pam? ( sys-apps/pam-login )
 	crypt? ( app-crypt/hashalot )
 	perl? ( dev-lang/perl )"
 DEPEND="${RDEPEND}
@@ -71,7 +70,7 @@ src_unpack() {
 	# Use update_mtab() to avoid dups in mtab for 'mount -f'
 	epatch "${FILESDIR}"/${PN}-2.12q-use-update_mtab-for-fake.patch
 
-	# Fix unreadable df output when using devfs ... this check is kind of 
+	# Fix unreadable df output when using devfs ... this check is kind of
 	# a hack, but whatever, the output isnt critical at all :P
 	[[ -e /dev/.devfsd ]] && epatch "${FILESDIR}"/no-symlink-resolve.patch
 
@@ -106,7 +105,7 @@ src_unpack() {
 	# fix cal display when using featureless terminals #112406
 	epatch "${FILESDIR}"/${PN}-2.12r-cal-dumb-terminal.patch
 
-	# Bug #108988 unable to always seek when omiting frame pointers 
+	# Bug #108988 unable to always seek when omiting frame pointers
 	epatch "${FILESDIR}"/${PN}-2.12r-fdisk-frame-pointers.patch
 
 	# Patches from Fedora
@@ -116,7 +115,6 @@ src_unpack() {
 	local mconfigs="MCONFIG"
 	use old-crypt && mconfigs="${mconfigs} ${OLD_CRYPT_P}/MCONFIG"
 	sed -i \
-		-e "/^HAVE_PAM=/s:no:$(yesno pam):" \
 		-e "/^HAVE_SELINUX=/s:no:$(yesno selinux):" \
 		-e "/^DISABLE_NLS=/s:no:$(yesno !nls):" \
 		-e "/^HAVE_KILL=/s:no:yes:" \
