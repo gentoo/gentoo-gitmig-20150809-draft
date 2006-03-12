@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/gtkterm-0.99.5.ebuild,v 1.4 2006/01/02 17:36:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/gtkterm-0.99.5.ebuild,v 1.5 2006/03/12 13:22:16 mrness Exp $
 
 DESCRIPTION="A serial port terminal written in GTK+, similar to Windows' HyperTerminal."
 HOMEPAGE="http://www.jls-info.com/julien/linux/"
@@ -16,9 +16,9 @@ DEPEND=">=x11-libs/gtk+-2.0
 
 src_compile() {
 	econf ${myconf} || die './configure failed'
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	einstall || die
+	einstall || die "einstall failed"
 }

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f38f5cb4fec4f8c491a24d981c9d1921 ChangeLog 1920
 MD5 ac506cc1c8863add8ecc1594882e0191 files/digest-gtkterm-0.99.5 66
 MD5 f743ac41909cecc6ccb50f11b2463432 gtkterm-0.99.5.ebuild 677
 MD5 1adff32ae48e747000270527cb695f6d metadata.xml 290
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEFCCUjG8pv1lIUX4RAvonAKC8Lk4kqfisQ09FpfdGCiVDrHtI5ACdGOwv
+6cz1Nimwg4v8Azd63pXQghc=
+=pBGO
+-----END PGP SIGNATURE-----
