@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/gnuradius
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/ChangeLog,v 1.7 2005/12/26 13:02:43 mrness Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/ChangeLog,v 1.8 2006/03/12 13:06:46 mrness Exp $
+
+  12 Mar 2006; Alin Nastac <mrness@gentoo.org> -gnuradius-1.3.ebuild,
+  -gnuradius-1.3-r1.ebuild, gnuradius-1.3-r2.ebuild:
+  Remove old revisions. Quote $WORKDIR and $D. Restrict make tests.
 
   26 Dec 2005; Alin Nastac <mrness@gentoo.org> gnuradius-1.3-r2.ebuild:
   Stable on x86.

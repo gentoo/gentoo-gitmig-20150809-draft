@@ -1,18 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a9fe4a84ece8781ef5778eb8466dcb94 gnuradius-1.3.ebuild 1332
-MD5 bb218b31754bdee3c28180d0697b82b5 gnuradius-1.3-r1.ebuild 1307
-MD5 f66e51fcc711ce45ae174e8c0074bb5d ChangeLog 1244
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 266edc1d5ff0cd25da1e12bbda76cfc3 gnuradius-1.3-r2.ebuild 1402
-MD5 2fcc0ff6ac050e6fdc1bf8a233e9eeac files/digest-gnuradius-1.3 63
-MD5 2fcc0ff6ac050e6fdc1bf8a233e9eeac files/digest-gnuradius-1.3-r1 63
+MD5 3cacd34342b37288e2bdf1ee98930305 ChangeLog 1436
 MD5 2fcc0ff6ac050e6fdc1bf8a233e9eeac files/digest-gnuradius-1.3-r2 63
+MD5 e935a8b83e1d1ef39b267362e05cb604 gnuradius-1.3-r2.ebuild 1394
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDr+oCNSP4Vda7IdsRAutyAJ47jKkTrvkVaarhKWf24U0OFPxyLQCfa/tM
-eC8mfTyscGNPidLQ6WpvZz0=
-=mg48
+iD8DBQFEFBz4jG8pv1lIUX4RAif8AJ9TNF7dshESlxD0IGAkCb4JtG5wOgCdFsXT
+kLThbDwcdWHmCFyIN505Om0=
+=8Srf
 -----END PGP SIGNATURE-----

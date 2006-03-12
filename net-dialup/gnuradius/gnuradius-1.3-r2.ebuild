@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.3-r2.ebuild,v 1.3 2005/12/26 13:02:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.3-r2.ebuild,v 1.4 2006/03/12 13:06:46 mrness Exp $
 
 inherit libtool
 
-MY_P=radius-${PV}
+MY_P="radius-${PV}"
 
 DESCRIPTION="GNU radius authentication server"
 HOMEPAGE="http://www.gnu.org/software/radius/radius.html"
@@ -26,15 +26,13 @@ DEPEND="!net-dialup/freeradius
 	snmp? ( net-analyzer/net-snmp )
 	pam? ( sys-libs/pam )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-
-	elibtoolize --reverse-deps
-}
+RESTRICT="test"
 
 src_compile() {
+	elibtoolize --reverse-deps
+
 	local myconf="--enable-client \
 		`use_with guile` \
 		`use_with guile server-guile` \
@@ -54,5 +52,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "installation failed"
+	make DESTDIR="${D}" install || die "installation failed"
 }
