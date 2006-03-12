@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capifwd/capifwd-0.6.3.ebuild,v 1.3 2005/06/26 08:44:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capifwd/capifwd-0.6.3.ebuild,v 1.4 2006/03/12 09:23:20 mrness Exp $
 
 inherit eutils
 
@@ -12,13 +12,15 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
+
 DEPEND="net-dialup/capi4k-utils"
 
 S="${WORKDIR}/linux-server"
 
 src_unpack() {
-	unpack ${A} || die
-	cd ${S}
+	unpack ${A}
+
+	cd "${S}"
 	epatch "${FILESDIR}/${P}.patch"
 
 	#Replace obsolete sys_errlist with strerror
@@ -32,8 +34,6 @@ src_install() {
 	dodoc AUTHORS ChangeLog README
 
 	# install init-script
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/capifwd.init capifwd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/capifwd.conf capifwd
+	newinitd "${FILESDIR}/capifwd.init" capifwd
+	newconfd "${FILESDIR}/capifwd.conf" capifwd
 }

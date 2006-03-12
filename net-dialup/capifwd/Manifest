@@ -1,7 +1,17 @@
-MD5 8ab960a234e39751b6e04c7922908314 ChangeLog 662
-MD5 d2acf377c86761937a704f2455f1e353 metadata.xml 255
-MD5 7cef2cfa047b0d4447903a7924fef8bf capifwd-0.6.3.ebuild 1050
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4a25d6a6e0fc005639f8e1722b35bc2f ChangeLog 763
+MD5 0a6b7138c28ba440221aa43808312251 capifwd-0.6.3.ebuild 1014
 MD5 3e3512b77612880bfe174bee8870e609 files/capifwd-0.6.3.patch 1057
 MD5 449537e26587ce2daaf23629bcad366a files/capifwd.conf 255
 MD5 d9ba73a7ed9b8ec964aa75ce3890da52 files/capifwd.init 552
 MD5 c285576667acfe2e958402cd0d600ad7 files/digest-capifwd-0.6.3 65
+MD5 d2acf377c86761937a704f2455f1e353 metadata.xml 255
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEE+iXjG8pv1lIUX4RAs2yAJ43ztwk9vsbYn8+swhrBQSgB2QJcACeK43V
+oZ76G3NUmKZcF4pwDSeUWiY=
+=/Kkt
+-----END PGP SIGNATURE-----
