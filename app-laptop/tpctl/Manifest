@@ -1,26 +1,54 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fea9249baebbbdc6b77fddb3f1767ecf ChangeLog 2596
+MD5 dc0a10b1c9fb574767e143f786e287ca ChangeLog 2836
+RMD160 590d26a1d482a4976b3b647959d692e112c93f2c ChangeLog 2836
+SHA256 f05c3bfc13737471110f1a9267461ca8a0e63611296940f5779d823fbfc1fa10 ChangeLog 2836
 MD5 4b8b1c61ee0756b730105821afcae4e6 files/apmiser.rc 560
+RMD160 63f6f4ad375462571af799dccfc75dc11de51e6f files/apmiser.rc 560
+SHA256 ee1216be5da02297f0a4d70e68c8af1d2f25c6cac90379b6c8ff8fd85b89e9d8 files/apmiser.rc 560
 MD5 4a6eccb7b79fc6b89897fa42a9d63835 files/digest-tpctl-3.2 60
+RMD160 5725f12a8bd202b60127c39aa50445046b510e4d files/digest-tpctl-3.2 60
+SHA256 4e3c17dfac9895781efcffced4615229c33cff8186805a81c6f074d48670bce6 files/digest-tpctl-3.2 60
 MD5 ff97f2ecd88355bf3dfcd6192b3efe56 files/digest-tpctl-4.16 61
+RMD160 f5e401fa78eb35675657a7f1fd66772fd1508383 files/digest-tpctl-4.16 61
+SHA256 d7ed4d294fe30fa7edf39699e79b88384a016ae06e2d7d7b07f74010bb133c2e files/digest-tpctl-4.16 61
+MD5 9a3d080b982c372cdbc5fba36eab0292 files/digest-tpctl-4.17 229
+RMD160 98823ef02d1d3dba5ec7eb600f6855d04ed4c306 files/digest-tpctl-4.17 229
+SHA256 277b8995922f140f8b3bf356e474009867e9a108a07e3968877b95c0fbde867a files/digest-tpctl-4.17 229
 MD5 603d662e5051a7e33e5c3cb5cae78962 files/digest-tpctl-4.2 60
+RMD160 6f9d628595a25a41a3a43a9312ff8acc7153750b files/digest-tpctl-4.2 60
+SHA256 f220122854982f33482a5d614be136c572df393de9081cff878134144ddd7588 files/digest-tpctl-4.2 60
 MD5 07d45c78b0ee95cb84c2fcdca379afc6 files/digest-tpctl-4.4 60
+RMD160 479fb83c09911b49bda32cfbb79e192d00a0c8ff files/digest-tpctl-4.4 60
+SHA256 953d34588626b4fc2922e562de7c0938079bef761651086eeb1aa96e232ef516 files/digest-tpctl-4.4 60
 MD5 07d45c78b0ee95cb84c2fcdca379afc6 files/digest-tpctl-4.4-r1 60
+RMD160 479fb83c09911b49bda32cfbb79e192d00a0c8ff files/digest-tpctl-4.4-r1 60
+SHA256 953d34588626b4fc2922e562de7c0938079bef761651086eeb1aa96e232ef516 files/digest-tpctl-4.4-r1 60
 MD5 7ea9886f5d9abae5110c5f584d5555fb files/digest-tpctl-4.8 60
+RMD160 aaf608c88b46c1fff7d3e5dacb47a69cbef3f490 files/digest-tpctl-4.8 60
+SHA256 620a5d5c07ff9f2163e12f8b4151607f8608f3071e3d19c6c2b288c4a5fe6f46 files/digest-tpctl-4.8 60
 MD5 556f25877822405f7dfd77680d2f6e49 files/tpctlir-cli-4.4-r1.diff 770
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 378285addb18218102b43da3383da2cf01f8d492 files/tpctlir-cli-4.4-r1.diff 770
+SHA256 daf48325ac03b5cf5eeead8be35e7b8d97140d2443bd6309f4301d55ba418b60 files/tpctlir-cli-4.4-r1.diff 770
+MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
+RMD160 54af1e9a61e5ed1b49b2bbbf3ef2278999c66b13 metadata.xml 159
+SHA256 ed3a0d440cfa5672284f4172ebde0ea6506c1a38e9a3ed9f14f3d2c093aac42f metadata.xml 159
 MD5 2f4094eedc3aeaece52841fa463897cb tpctl-3.2.ebuild 1478
+RMD160 b315edca34abe8f50e4b77101d20ac141e595ec5 tpctl-3.2.ebuild 1478
+SHA256 9a9422f7c6af66bc609858da93332efcb9f7f7c21213ecfc3065a603e0e71b41 tpctl-3.2.ebuild 1478
 MD5 32d951d4387538395114e855a6d2945f tpctl-4.16.ebuild 1015
+RMD160 c545482f315acb8f2f6056e6d10f385c5cbd96f1 tpctl-4.16.ebuild 1015
+SHA256 6bf9d9f5396a75974d0c800ec2533358e40f755373ddac2a18b28486fbe2b62a tpctl-4.16.ebuild 1015
+MD5 9eb44089e459462b9b0e44cefddeb6ec tpctl-4.17.ebuild 1013
+RMD160 bc0beb34e0c1ef3c607da1435f25f83cba3c39f7 tpctl-4.17.ebuild 1013
+SHA256 8e1e58458018de4ac8aa23a6f47702e69b1071785d5376c110fce815481b3421 tpctl-4.17.ebuild 1013
 MD5 3419199a9b7da60895caf80c894ab27d tpctl-4.2.ebuild 1478
+RMD160 d34ee52fbddd880cc55770181245eae286a80e6c tpctl-4.2.ebuild 1478
+SHA256 55e72e93bccf7a2d9ec3f7c35b5e36649ea1bd5ef2077854d3a71057c8f165e6 tpctl-4.2.ebuild 1478
 MD5 fefbcf9dbfd273ce24af45381bdfa0c7 tpctl-4.4-r1.ebuild 1620
+RMD160 c37909fa03e5e661b21534a36eb01c6ff99b357c tpctl-4.4-r1.ebuild 1620
+SHA256 7aeeeb52608e142971fd09324119d6f4802767f032f6064aef390abf99b7ad12 tpctl-4.4-r1.ebuild 1620
 MD5 8a137ec2e81e6384c845860483dfca1f tpctl-4.4.ebuild 1476
+RMD160 3d5bbc445b85f896d3b22ffe7e7dea03de0d136c tpctl-4.4.ebuild 1476
+SHA256 39a6ba62e372bb2b86b51b114a817801c62105fce15bd14482ed2df522953954 tpctl-4.4.ebuild 1476
 MD5 e39dfb3bb70c1820ffa4a8c2932fb4a8 tpctl-4.8.ebuild 1615
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxaeBAiZjviIA2XgRAu64AJoDqS2NG5XPQJNpM8gcVG0iDkSDRwCfRLd2
-yVsa39wOHapHJQz1mNAplhY=
-=uIVf
------END PGP SIGNATURE-----
+RMD160 bf96b7775a33648e5a19ea77e60112b1fec9869b tpctl-4.8.ebuild 1615
+SHA256 79e64c6d2ba169fc932d6d2f1730ce970aaf3db1ee0bf8b2d8bc4aef6d484936 tpctl-4.8.ebuild 1615
