@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.49.ebuild,v 1.4 2005/10/04 19:29:58 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.49.ebuild,v 1.5 2006/03/12 21:23:35 mrness Exp $
 
 inherit linux-info eutils
 
@@ -12,8 +12,6 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="ppc x86"
 IUSE=""
-
-DEPEND="virtual/libc"
 
 S="${WORKDIR}/${P}/pppoed"
 
@@ -28,17 +26,17 @@ pkg_setup() {
 }
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-gcc-3.3.patch
+	epatch "${FILESDIR}/${P}-gcc-3.3.patch"
 }
 
 src_compile() {
 	econf \
-		--sysconfdir=/etc/ppp/pppoed || die
-	make || die
+		--sysconfdir=/etc/ppp/pppoed || die "econf failed"
+	make || die "make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog NEWS README*
 
