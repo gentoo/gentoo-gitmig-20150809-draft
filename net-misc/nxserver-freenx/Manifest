@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 56bd5b0dbb9a90cda7a7e1fe140a89ab ChangeLog 3541
 RMD160 9062e465ba9c480cbd1edf3882ab153b825a6213 ChangeLog 3541
 SHA256 16f0a1b3c47885e1b851aabaa09758101e4ba245307a05bae4a02f2c4cd2248c ChangeLog 3541
@@ -37,3 +40,10 @@ SHA256 bd39f3cfd9c050942111db1d5e51456b755abd301fba33182fe0fcf8751639d5 nxserver
 MD5 bd9ca4ace1427f2cd7380549e5302a9b nxserver-freenx-0.5.0.ebuild 3116
 RMD160 41e03b55cbafdf87cacf4d719f62fd7e29058449 nxserver-freenx-0.5.0.ebuild 3116
 SHA256 5cbae026d6403540654804b2fdb9e8bdf17192d0d7fd32173fe47ed882590171 nxserver-freenx-0.5.0.ebuild 3116
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEFJsSI1lqEGTUzyQRApx0AJ4gEhfeaBFSnLQOu42qI1hi3HCGzACgrtUg
+t+bKeAtKdff2TWPVpgg++MU=
+=cwuh
+-----END PGP SIGNATURE-----
