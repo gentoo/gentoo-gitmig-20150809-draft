@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.11.ebuild,v 1.1 2005/10/27 03:24:27 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.11.ebuild,v 1.2 2006/03/12 12:34:22 mrness Exp $
 
 MY_PN="eciadsl-usermode-${PV}"
 
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MY_PN}"
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README* TROUBLESHOOTING* ChangeLog || die "failed to install documentation"
 }
 

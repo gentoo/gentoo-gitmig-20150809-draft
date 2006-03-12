@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.10.ebuild,v 1.5 2005/09/17 01:00:26 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.10.ebuild,v 1.6 2006/03/12 12:34:22 mrness Exp $
 
 inherit fixheadtails
 
@@ -23,7 +23,7 @@ S="${WORKDIR}/${MY_PN}"
 
 src_unpack() {
 	unpack ${A} || die "failed to unpack"
-	cd ${S} || die "source directory not found"
+	cd "${S}" || die "source directory not found"
 	ht_fix_all
 
 	einfo "Correct obsolete nice parameters"
@@ -39,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	make ROOT=${D} install || die "Install failed"
+	make ROOT="${D}" install || die "Install failed"
 }
 
 pkg_postinst() {

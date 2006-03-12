@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9e0e80789e33c41739797b67a077897b gnome-ppp-0.3.21.ebuild 732
-MD5 b8efe9c32a6a13c566ff6b85fef56837 gnome-ppp-0.3.23.ebuild 823
-MD5 b756bc44455a97e296910897a9d0f2a4 ChangeLog 2676
-MD5 202034bd87dab639103a4f2f07b6c376 metadata.xml 222
-MD5 8ea51cfe4abfe780e5596ed904d051b5 files/digest-gnome-ppp-0.3.21 68
+MD5 90c7ee5a1863c9623ed6b39426739ce7 ChangeLog 2809
 MD5 99eed8d11c523b3a26e5ae30eb1d790d files/digest-gnome-ppp-0.3.23 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDqHxWNSP4Vda7IdsRAlRUAJ4qTbCRzwKWSVIuOT5aK1FlB2rSmwCfbJlt
-hTeDnn4OxzFBTmDySjamz7A=
-=aYnT
------END PGP SIGNATURE-----
+MD5 afb9403df020e6407e400e165b59faf3 gnome-ppp-0.3.23.ebuild 825
+MD5 202034bd87dab639103a4f2f07b6c376 metadata.xml 222
