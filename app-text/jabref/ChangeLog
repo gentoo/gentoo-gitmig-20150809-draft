@@ -1,6 +1,11 @@
 # ChangeLog for app-text/jabref
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.36 2005/12/11 22:42:06 nichoj Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.37 2006/03/12 16:53:26 nichoj Exp $
+
+  12 Mar 2006; <nichoj@gentoo.org> -files/jabref-1.7-nojarbundler.patch,
+  -files/jabref-1.8_beta-nojarbundler.patch, -jabref-1.7.ebuild,
+  -jabref-1.8_beta.ebuild, -jabref-1.8.ebuild:
+  Pruned old versions with the same keywords.
 
 *jabref-1.8.1 (11 Dec 2005)
 

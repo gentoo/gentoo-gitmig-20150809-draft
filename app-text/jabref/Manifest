@@ -1,27 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 271913ac70a9fc0fd50a15e9da89e01b ChangeLog 4732
-MD5 d229ae67e003f0be52f27a896f6bdeac files/digest-jabref-1.7 68
+MD5 9481e2898c1eb870f9b1510b2bbbf1c9 ChangeLog 4964
+RMD160 39ad82f4cb120b62972a0ad067df7dc86f1e4c66 ChangeLog 4964
+SHA256 22198a4cc0d40f2e913833708d483ae96cfb5c8f9866b0f732840a4a0c8b2705 ChangeLog 4964
 MD5 5b3028166c382f310e75f818ad5a744e files/digest-jabref-1.7.1-r1 70
-MD5 008da3292b19b877ec94155af9f36be3 files/digest-jabref-1.8 68
+RMD160 9718bcea4ac7289d59b9178032e719749b298a28 files/digest-jabref-1.7.1-r1 70
+SHA256 861c8954781e4976ce6dbc7b6d6bfb43264f95dd80bdddb3457a4ddc33c2fa09 files/digest-jabref-1.7.1-r1 70
 MD5 2a972e285243ea508854929f17e46851 files/digest-jabref-1.8.1 70
-MD5 3a9ac7073a9bf1e5846ffdc2bdf26c67 files/digest-jabref-1.8_beta 69
-MD5 3d6ae9f90fac167b5ab3261cb88584d4 files/jabref-1.7-nojarbundler.patch 3153
+RMD160 3e6793ad19e0aca7d13053bceeed7a65d2c9a979 files/digest-jabref-1.8.1 70
+SHA256 7e16347d41d9fbbfaa641b2b8d35368b63414849c1c1535e413c18cc79e8ada7 files/digest-jabref-1.8.1 70
 MD5 95ffcffd70b173a4f8956d0afdc47da4 files/jabref-1.7.1-nojarbundler.patch 3616
+RMD160 ea6dc5b450f29b43acc09b93b14bb452cceed0c6 files/jabref-1.7.1-nojarbundler.patch 3616
+SHA256 9fb170efa84a3347d3c19a4ef556664e76e41db6e0c53d1493fd9e435d14ec56 files/jabref-1.7.1-nojarbundler.patch 3616
 MD5 cfa957ae95e31719e0deeef0139b4fef files/jabref-1.8-classpath_cleanup.patch 6558
+RMD160 ecaf87d8a146443ed0cb936048de75b4d7157e4b files/jabref-1.8-classpath_cleanup.patch 6558
+SHA256 ca9118b9a8deab4ea593b6de19dd93750b9ffc2d62c24b6f4b49421393559e30 files/jabref-1.8-classpath_cleanup.patch 6558
 MD5 ecd0980ac0a8147eddf0141cb6735623 files/jabref-1.8-fix_jarbundler.patch 926
-MD5 280fb96a2fe36be70c17a115248befcf files/jabref-1.8_beta-nojarbundler.patch 2364
+RMD160 7da5ca8cd89d88453c529d379864edc0e5be181d files/jabref-1.8-fix_jarbundler.patch 926
+SHA256 0d1994b48c99c59022e164e0e31734eb17a0377fe5e1fdd398786f18ea0649b6 files/jabref-1.8-fix_jarbundler.patch 926
 MD5 a426d50a86db47b2de3cfc39918e3aca jabref-1.7.1-r1.ebuild 1646
-MD5 dd486b35ee2ca674a0b490d27f945d77 jabref-1.7.ebuild 1532
+RMD160 71744f78a0d20c717882654e3f4028bffda0d33d jabref-1.7.1-r1.ebuild 1646
+SHA256 e4b18da83aaf4a4b50ac5290185756c9c340759f130b096215ff157f3b2b8159 jabref-1.7.1-r1.ebuild 1646
 MD5 630e44734099bd9581bba000a16620ae jabref-1.8.1.ebuild 1813
-MD5 1cbbde1f51c446d32598c8b2d903d30f jabref-1.8.ebuild 1799
-MD5 451cda0c3d111590d6d0cd62de2d6659 jabref-1.8_beta.ebuild 1686
+RMD160 87d0516ec4724ac7ad30acdda0b94f09e86d1dd2 jabref-1.8.1.ebuild 1813
+SHA256 d7a905ef86d8210c8af8709a5381216d6530a794e0f8b85c6fcf46558320c293 jabref-1.8.1.ebuild 1813
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDnKulndWRXhKOboURAkFNAKCkLVYfYNczDH/RajYwaHjo2IcMeQCfZSfS
-MojvloyNvdSnFTbMA21CLcw=
-=WI8x
------END PGP SIGNATURE-----
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
