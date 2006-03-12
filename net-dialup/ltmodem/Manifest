@@ -1,17 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b41ce83bd7bafd70606f679404e5edd2 ChangeLog 3608
-MD5 0093643280b04ff8473b33e908df5b67 files/digest-ltmodem-8.31_alpha10-r1 137
+MD5 8f18a9f1e9d0012cbd4642aadf853850 ChangeLog 3761
 MD5 c1fadb641074695c728bd065813e112f files/digest-ltmodem-8.31_alpha10-r2 137
 MD5 b990e7d5303c86f37ea21cf471d22e03 files/ltmodem_devfs 198
-MD5 bb8e933a4cd687ae8b987774ae2ed41c ltmodem-8.31_alpha10-r1.ebuild 3548
-MD5 fd9bc2dc8a7bcda7562cc71b931923bb ltmodem-8.31_alpha10-r2.ebuild 3600
+MD5 582d28d185a3f78c74af49a29dfd4102 ltmodem-8.31_alpha10-r2.ebuild 3602
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD0MjAjG8pv1lIUX4RAhUZAJ4platFTAh2AaTMgke1Pohj3Uk4lACeOmlM
-Ca4Zhi7JVXQmVHztxjgOHrA=
-=P0lw
------END PGP SIGNATURE-----

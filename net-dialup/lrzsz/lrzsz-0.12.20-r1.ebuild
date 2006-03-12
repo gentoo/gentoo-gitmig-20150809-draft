@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.5 2006/02/05 08:53:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.6 2006/03/12 17:00:35 mrness Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,12 +16,12 @@ IUSE="nls"
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/${PN}-makefile-smp.patch
+	epatch "${FILESDIR}/${PN}-makefile-smp.patch"
 }
 
 src_compile() {
 	append-flags -Wstrict-prototypes
-	econf $(use_enable nls) || die
+	econf $(use_enable nls) || die "econf failed"
 	emake || die "emake failed"
 }
 
@@ -35,7 +35,7 @@ src_install() {
 	make \
 		prefix="${D}/usr" \
 		mandir="${D}/usr/share/man" \
-		install || die
+		install || die "make install failed"
 
 	local x
 	for x in {r,s}{b,x,z} ; do

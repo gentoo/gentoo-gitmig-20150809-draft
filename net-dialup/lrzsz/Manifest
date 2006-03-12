@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9d78a3ff367a8a0fada00f27b6fb9238 ChangeLog 2856
 MD5 f80a86c7ba2802ef0504f62f182bc046 files/digest-lrzsz-0.12.20-r1 65
 MD5 bd12dbf8699043e8c2bbe12c154d4b47 files/lrzsz-makefile-smp.patch 4310
 MD5 e8c08d32fec4e9c2a5a7ae2f6b5cd7e2 lrzsz-0.12.20-r1.ebuild 1143
 MD5 29d92f71b5132598910e225de4e85f93 metadata.xml 364
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEFFO/jG8pv1lIUX4RAvKqAJ9l9JTPd/b+oEMVuX3rDt386YdneACgwRlh
+VkQbu0nqoevM22tBfQAQZyU=
+=PNxB
+-----END PGP SIGNATURE-----
