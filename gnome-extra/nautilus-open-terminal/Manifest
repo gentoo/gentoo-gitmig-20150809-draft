@@ -1,6 +1,9 @@
-MD5 97d465c3f230e32653b5097e7dd07528 ChangeLog 1272
-RMD160 29874ff390fafe785a27ed83ae5ba5d589cfb94a ChangeLog 1272
-SHA256 4e386e942399a5e4ef83188b694419fc1877fa9d22737f45a0c52f053257cf63 ChangeLog 1272
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a7a01d4e02db0b21f32a3dbd04013a7c ChangeLog 1373
+RMD160 3aeb2c8a021578cbcaf0224ff03915be246e698f ChangeLog 1373
+SHA256 a2985ab42e09e3d2036e4b28d1edd080dd006255d998dae37245ee84182df436 ChangeLog 1373
 MD5 b75720f4371a90dcb84d54b5e2b7a145 files/digest-nautilus-open-terminal-0.4 78
 RMD160 6a0bfbf682bb1da4517e94f285fce12f1a36b890 files/digest-nautilus-open-terminal-0.4 78
 SHA256 3b3d492720a8906342c6fac280d55b4ae00e601464051ecaf66fe15177f644bb files/digest-nautilus-open-terminal-0.4 78
@@ -13,6 +16,13 @@ SHA256 0790ea36963eed639f41684d2b2eae7c19c7b44a6f1b8b89b600cb29524a7595 metadata
 MD5 2d41251f04ca43d652351e1672d554d1 nautilus-open-terminal-0.4.ebuild 773
 RMD160 86900d161735eab061ce7ff75db6944fca532191 nautilus-open-terminal-0.4.ebuild 773
 SHA256 73e1b2acd67bece1570d5ed0ef048305389b3c9d2cd9710eccbc66cb246a538b nautilus-open-terminal-0.4.ebuild 773
-MD5 4bf18acdad15f4da8976ccd7d4dd6533 nautilus-open-terminal-0.6.ebuild 812
-RMD160 5bc89e2e83143367ff37957b2ad6c07aa596a134 nautilus-open-terminal-0.6.ebuild 812
-SHA256 cf13ff661fef4131abbe312f7a98d241dd4cfa848882e740e8552770fbba6466 nautilus-open-terminal-0.6.ebuild 812
+MD5 3c89f0dd6ba7541f1fe8d217db0ae6df nautilus-open-terminal-0.6.ebuild 812
+RMD160 c30506a0e9753154fd57c20e5d1b226ec08022a1 nautilus-open-terminal-0.6.ebuild 812
+SHA256 634759dc20f774c274c05fe4066b1f3db9c73c4dae6df2290213304107372acc nautilus-open-terminal-0.6.ebuild 812
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEE+qqoFw4q70f3SsRArqoAKCyZeu3Zu+5G3HxN4JgsyHw8V80rACgrMgp
+U0XTSw9AC9uzDlYBdJMX4pg=
+=4ZJJ
+-----END PGP SIGNATURE-----
