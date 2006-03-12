@@ -1,5 +1,15 @@
-MD5 116450f8b1a264f023c3c4feeab28fab ChangeLog 2789
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e34ffcd845a03b42a715009858145401 ChangeLog 2924
 MD5 27a94c69d14897cce8aad4061b77b3f1 files/0.3.6-TextScrollWindow.diff 731
 MD5 3b0e2974aedea907c4f10800a66c7652 files/digest-multiimonc-0.3.6 69
 MD5 8713e089cd57dc168f2e660676f408d3 metadata.xml 361
-MD5 23328e9a822f07bad62d4639526d58cc multiimonc-0.3.6.ebuild 852
+MD5 6caf4c7c6a9e44e324d635727a1b87ef multiimonc-0.3.6.ebuild 844
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEFGpyjG8pv1lIUX4RAnCKAKDVR/TiX0hHRqecU7wLiIm6Co2gnQCfTGmV
+ljiPZWW1NtgiBWZ7iwyTtww=
+=Vr4C
+-----END PGP SIGNATURE-----
