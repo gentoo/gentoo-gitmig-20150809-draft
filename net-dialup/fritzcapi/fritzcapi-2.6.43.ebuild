@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.1 2006/02/22 19:42:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.2 2006/03/12 12:02:25 mrness Exp $
 
 inherit linux-mod rpm eutils
 
@@ -41,7 +41,7 @@ pkg_setup() {
 	FRITZCAPI_BUILD_CARDS=""
 	FRITZCAPI_BUILD_TARGETS=""
 	MODULE_NAMES=""
-	BUILD_PARAMS="KDIR=${KV_DIR} LIBDIR=${WORKDIR}/var/lib/fritz"
+	BUILD_PARAMS="KDIR='${KV_DIR}' LIBDIR='${WORKDIR}'/var/lib/fritz"
 	BUILD_TARGETS="all"
 
 	if ! use amd64; then
@@ -96,14 +96,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if ! use amd64; then
-		rpm_unpack ${DISTDIR}/km_${P/2.6./2.6-}.i586.rpm
-	else
-		rpm_unpack ${DISTDIR}/km_${P/2.6./2.6-}.x86_64.rpm
-	fi
-	cd ${S}
-	mkdir -p ${WORKDIR}/var/lib/fritz
-	ln fritz.*/lib/*-lib.o ${WORKDIR}/var/lib/fritz
+	rpm_unpack "${DISTDIR}/${A}" || die "failed to unpack ${A} file"
+
+	cd "${S}"
+	mkdir -p "${WORKDIR}/var/lib/fritz"
+	ln fritz.*/lib/*-lib.o "${WORKDIR}/var/lib/fritz"
 	for i in $(find . -name Makefile); do
 		sed -i 's:-C \$(KDIR) SUBDIRS=:-C $(KDIR) $(if $(KBUILD_OUTPUT),O=$(KBUILD_OUTPUT)) SUBDIRS=:' ${i}
 		sed -i 's:$(PWD)/../lib/$(CARD)-lib.o:$(LIBDIR)/$(CARD)-lib.o:' ${i}
@@ -119,12 +116,12 @@ src_install() {
 	dodir /lib/firmware /etc
 
 	[ "${FRITZCAPI_BUILD_TARGETS/xusb_CZ/}" != "${FRITZCAPI_BUILD_TARGETS}" ] && \
-		dodoc ${S}/fritz.xusb_CZ/README.fxusb_CZ
+		dodoc "${S}/fritz.xusb_CZ/README.fxusb_CZ"
 
 	[ "${FRITZCAPI_BUILD_TARGETS/usb2/}" != "${FRITZCAPI_BUILD_TARGETS}" ] && (
 		insinto /lib/firmware
 		insopts -m0644
-		doins ${S}/fritz.usb2/*.frm
+		doins "${S}"/fritz.usb2/*.frm
 	)
 }
 

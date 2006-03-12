@@ -1,33 +1,21 @@
-MD5 b28566be3fa8483c667b1588032b9986 ChangeLog 3919
-RMD160 5991121539f4735f45c0be1c5ab8fc8757fcf695 ChangeLog 3919
-SHA256 e6b4c2502ce25439706a3bafdd6c9fd4db59edb5ef28df74dba98fc394047356 ChangeLog 3919
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f843255cf48ef9ec859baa5a5333cf34 ChangeLog 4073
 MD5 5485d246d87e5397761c0395b02c20e9 files/digest-fritzcapi-2.6.32 443
-RMD160 e7596e30f8156dbd637965b1d9e2e3735eeb9218 files/digest-fritzcapi-2.6.32 443
-SHA256 1de5c289b7a170d6b5c5cbbd8276dd8bac9f1440926d3bae6cd72529af318821 files/digest-fritzcapi-2.6.32 443
 MD5 385a495faa071b68234deddba9facb7e files/digest-fritzcapi-2.6.35 597
-RMD160 3f7f33059f128fdceb45dcba21eec542d1024b8a files/digest-fritzcapi-2.6.35 597
-SHA256 c9ace41185ddbfd68ce162f2db38d2a9ba5c040e797b1fa023eb635420b6a4c6 files/digest-fritzcapi-2.6.35 597
 MD5 4cab6f38300d72504a096d115b88440a files/digest-fritzcapi-2.6.42 150
-RMD160 bbf172d41f3f4b986e6f2a98708c822ba18ec712 files/digest-fritzcapi-2.6.42 150
-SHA256 88746cc5f5b2988f8df68338fc80c63dfe3cdd1c605e23c8d6bbc8cf680ccb59 files/digest-fritzcapi-2.6.42 150
-MD5 028f9d03268a88f75ab13f1c31f83767 files/digest-fritzcapi-2.6.43 542
-RMD160 95e382f60944777de7af81a40d80732e347a3a4c files/digest-fritzcapi-2.6.43 542
-SHA256 60364bdf51ef70f8c4f4a53eb1aead745b1266cd09d855c1fa842a309aeae1ef files/digest-fritzcapi-2.6.43 542
+MD5 92edc11ebe48a38861b6343de11e23e3 files/digest-fritzcapi-2.6.43 150
 MD5 9944aebce0f4b12843c5312ac4ba90b5 files/fritzcapi-fix-for-2.6.10.patch 473
-RMD160 5eab1ed550087c7170af74a8a2d78a55fd03974e files/fritzcapi-fix-for-2.6.10.patch 473
-SHA256 1d36397fad7c32970ea4f2d1efd144a8fb5e2a92bc0fc9633a76f3235a2221f1 files/fritzcapi-fix-for-2.6.10.patch 473
 MD5 bdf7edcbbf6c4c9fe836310037d003a0 fritzcapi-2.6.32.ebuild 5791
-RMD160 dd62fc739eed958134fefc8685ab9a7b4355aa8b fritzcapi-2.6.32.ebuild 5791
-SHA256 58431edb9a6f2ee43db00909368084af6170fff834f97f3dabb42504472a527c fritzcapi-2.6.32.ebuild 5791
 MD5 11e4f3489033bacd0498e6c62bc3c422 fritzcapi-2.6.35.ebuild 6228
-RMD160 db5ca8159e0fd2dc7c8ab94595bdaf29684a79e5 fritzcapi-2.6.35.ebuild 6228
-SHA256 2cf45a28e5a690763cc985a841975f32386717665ca8210d66def3c10ab36dc8 fritzcapi-2.6.35.ebuild 6228
 MD5 274199dd7a68a8b5d0918dc6fc6de3c6 fritzcapi-2.6.42.ebuild 4889
-RMD160 74985bbfced5beb593369b4823f07c611ba74d94 fritzcapi-2.6.42.ebuild 4889
-SHA256 4fb80006fe8716fa0eec03fc5e060f70e87371181944699c8c1bd15edd0d53c8 fritzcapi-2.6.42.ebuild 4889
-MD5 4514d6eff370376b9dcb0dc8d14c113e fritzcapi-2.6.43.ebuild 4887
-RMD160 fe0b6ffbb8397cee99bea229b4772ef0799fa065 fritzcapi-2.6.43.ebuild 4887
-SHA256 a9181068a7f9f9196c9bbeb6a303dd0f57e44cfe1e3c48214b4102300e6b2d40 fritzcapi-2.6.43.ebuild 4887
+MD5 26735b6d4a678993b946fdd53e5c9b0e fritzcapi-2.6.43.ebuild 4831
 MD5 0498b76c69caf75c82ab7115df4cd4f8 metadata.xml 319
-RMD160 d4d008a13689fabae0994a25a60961b2fc5e6269 metadata.xml 319
-SHA256 ce891f4c7e75069036c8c422a1502ce9bbd4670be2e7f918dfa9da5e917787fc metadata.xml 319
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEFA3hjG8pv1lIUX4RAvH/AJ9vljlpsPmURb01AZrxPAmxXDV+SQCgtrH5
+99CYoGjqQlXyimsIb/8sKKw=
+=8C79
+-----END PGP SIGNATURE-----
