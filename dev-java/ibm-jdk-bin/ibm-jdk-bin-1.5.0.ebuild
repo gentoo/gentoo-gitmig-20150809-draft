@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.4 2006/02/08 07:41:57 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.5 2006/03/12 13:35:12 betelgeuse Exp $
 
 inherit java eutils
 
@@ -103,10 +103,10 @@ pkg_postinst() {
 	java_pkg_postinst
 	if ! use X; then
 		echo
-		eerror "You're not using X so its possible that you dont have"
-		eerror "a X server installed, please read the following warning: "
-		eerror "Some parts of IBM JDK require XFree86 to be installed."
-		eerror "Be careful which Java libraries you attempt to use."
+		ewarn "You're not using X so its possible that you dont have"
+		ewarn "a X server installed, please read the following warning: "
+		ewarn "Some parts of IBM JDK require XFree86 to be installed."
+		ewarn "Be careful which Java libraries you attempt to use."
 	fi
 	if ! use browserplugin && use mozilla; then
 		ewarn
