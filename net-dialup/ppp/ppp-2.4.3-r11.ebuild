@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r11.ebuild,v 1.1 2006/02/21 22:44:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r11.ebuild,v 1.2 2006/03/12 21:08:41 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -15,14 +15,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="activefilter atm dhcp eap-tls gtk ipv6 mppe-mppc pam radius"
 
-RDEPEND="virtual/libc
-	activefilter? ( >=virtual/libpcap-0.9.3 )
+DEPEND="activefilter? ( >=virtual/libpcap-0.9.3 )
 	atm? ( net-dialup/linux-atm )
 	pam? ( sys-libs/pam )
 	gtk? ( =x11-libs/gtk+-1* )
 	eap-tls? ( net-misc/curl >=dev-libs/openssl-0.9.7 )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 pkg_setup() {
 	if use mppe-mppc; then
@@ -82,31 +79,31 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${WORKDIR}/patch/ppp_flags.patch
-	epatch ${WORKDIR}/patch/mpls.patch
-	epatch ${WORKDIR}/patch/killaddr-smarter.patch
-	epatch ${WORKDIR}/patch/upstream-fixes.patch
-	epatch ${WORKDIR}/patch/rp-pppoe-any-interface.patch
-	epatch ${WORKDIR}/patch/wait-children.patch
+	epatch "${WORKDIR}/patch/ppp_flags.patch"
+	epatch "${WORKDIR}/patch/mpls.patch"
+	epatch "${WORKDIR}/patch/killaddr-smarter.patch"
+	epatch "${WORKDIR}/patch/upstream-fixes.patch"
+	epatch "${WORKDIR}/patch/rp-pppoe-any-interface.patch"
+	epatch "${WORKDIR}/patch/wait-children.patch"
 
 	use eap-tls && {
 		# see http://eaptls.spe.net/index.html for more info
 		einfo "Enabling EAP-TLS support"
-		epatch ${WORKDIR}/patch/eaptls-0.7-gentoo.patch
-		use mppe-mppc || epatch ${WORKDIR}/patch/eaptls-mppe-0.7.patch
+		epatch "${WORKDIR}/patch/eaptls-0.7-gentoo.patch"
+		use mppe-mppc || epatch "${WORKDIR}/patch/eaptls-mppe-0.7.patch"
 	}
 
 	use mppe-mppc && {
 		einfo "Enabling MPPE-MPPC support"
-		epatch ${WORKDIR}/patch/mppe-mppc-1.1.patch
-		use eap-tls && epatch ${WORKDIR}/patch/eaptls-mppe-0.7-with-mppc.patch
+		epatch "${WORKDIR}/patch/mppe-mppc-1.1.patch"
+		use eap-tls && epatch "${WORKDIR}/patch/eaptls-mppe-0.7-with-mppc.patch"
 	}
 
 	use atm && {
 		einfo "Enabling PPPoATM support"
-		sed -i "s/^#HAVE_LIBATM=yes/HAVE_LIBATM=yes/" ${S}/pppd/plugins/pppoatm/Makefile.linux
+		sed -i "s/^#HAVE_LIBATM=yes/HAVE_LIBATM=yes/" pppd/plugins/pppoatm/Makefile.linux
 	}
 
 	use activefilter || {
@@ -125,32 +122,33 @@ src_unpack() {
 	}
 
 	einfo "Enabling CBCP"
-	sed -i "s/^#CBCP=y/CBCP=y/" ${S}/pppd/Makefile.linux
+	sed -i "s/^#CBCP=y/CBCP=y/" pppd/Makefile.linux
 
 	use dhcp && {
 		# copy the ppp-dhcp plugin files
 		einfo "Copying ppp-dhcp plugin files..."
-		tar -xzf ${DISTDIR}/ppp-dhcpc.tgz -C ${S}/pppd/plugins/
-		sed -i -e 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe dhcp/' ${S}/pppd/plugins/Makefile.linux
-		sed -i -e "s/-O2/${CFLAGS} -fPIC/" ${S}/pppd/plugins/dhcp/Makefile.linux
-		epatch ${WORKDIR}/patch/dhcp-sys_error_to_strerror.patch
+		tar -xzf "${DISTDIR}/ppp-dhcpc.tgz" -C pppd/plugins/ \
+			&& sed -i -e 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe dhcp/' pppd/plugins/Makefile.linux \
+			&& sed -i -e "s/-O2/${CFLAGS} -fPIC/" pppd/plugins/dhcp/Makefile.linux \
+			|| die "ppp-dhcp plugin addition failed"
+		epatch "${WORKDIR}/patch/dhcp-sys_error_to_strerror.patch"
 	}
 
 	# Set correct libdir
 	sed -i -e "s:/lib/pppd:/$(get_libdir)/pppd:" \
-		${S}/pppd/{pathnames.h,pppd.8} || die
+		pppd/{pathnames.h,pppd.8}
 
-	find ${S} -type f -name Makefile.linux \
+	find . -type f -name Makefile.linux \
 		-exec sed -i -e '/^CC[[:space:]]*=/d' {} \;
 
 	use radius && {
 		#set the right paths in radiusclient.conf
 		sed -i -e "s:/usr/local/etc:/etc:" \
-			-e "s:/usr/local/sbin:/usr/sbin:" ${S}/pppd/plugins/radius/etc/radiusclient.conf
+			-e "s:/usr/local/sbin:/usr/sbin:" pppd/plugins/radius/etc/radiusclient.conf
 		#set config dir to /etc/ppp/radius
 		sed -i -e "s:/etc/radiusclient:/etc/ppp/radius:g" \
-			${S}/pppd/plugins/radius/{*.8,*.c,*.h} \
-			${S}/pppd/plugins/radius/etc/*
+			pppd/plugins/radius/{*.8,*.c,*.h} \
+			pppd/plugins/radius/etc/*
 	}
 }
 
@@ -171,9 +169,9 @@ src_compile() {
 }
 
 pkg_preinst() {
-	if use radius && [ -d ${ROOT}/etc/radiusclient ] && has_version "<${CATEGORY}/${PN}-2.4.3-r5"; then
+	if use radius && [ -d "${ROOT}/etc/radiusclient" ] && has_version "<${CATEGORY}/${PN}-2.4.3-r5"; then
 		ebegin "Copy /etc/radiusclient to /etc/ppp/radius"
-		cp -pPR ${ROOT}/etc/radiusclient ${ROOT}/etc/ppp/radius
+		cp -pPR "${ROOT}/etc/radiusclient" "${ROOT}/etc/ppp/radius"
 		eend $?
 	fi
 }
@@ -185,7 +183,7 @@ src_install() {
 		doman ${y}/${y}.8
 		dosbin ${y}/${y}
 	done
-	chmod u+s-w ${D}/usr/sbin/pppd
+	chmod u+s-w "${D}/usr/sbin/pppd"
 
 	dosbin pppd/plugins/rp-pppoe/pppoe-discovery
 
@@ -199,8 +197,8 @@ src_install() {
 	doins etc.ppp/options
 
 	insopts -m0755
-	newins ${FILESDIR}/ip-up.baselayout ip-up
-	newins ${FILESDIR}/ip-down.baselayout ip-down
+	newins "${FILESDIR}/ip-up.baselayout" ip-up
+	newins "${FILESDIR}/ip-down.baselayout" ip-down
 
 	if use pam; then
 		insinto /etc/pam.d
@@ -210,8 +208,8 @@ src_install() {
 
 	local PLUGINS_DIR=/usr/$(get_libdir)/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 	#closing " for syntax coloring
-	dodir ${PLUGINS_DIR}
-	insinto ${PLUGINS_DIR}
+	dodir "${PLUGINS_DIR}"
+	insinto "${PLUGINS_DIR}"
 	insopts -m0755
 	doins pppd/plugins/minconn.so || die "minconn.so not build"
 	doins pppd/plugins/passprompt.so || die "passprompt.so not build"
@@ -240,13 +238,13 @@ src_install() {
 
 	insinto /etc/modules.d
 	insopts -m0644
-	newins ${FILESDIR}/modules.ppp ppp
+	newins "${FILESDIR}/modules.ppp" ppp
 	if use mppe-mppc; then
-		sed -i -e 's/ppp_mppe/ppp_mppe_mppc/' ${D}/etc/modules.d/ppp
+		sed -i -e 's/ppp_mppe/ppp_mppe_mppc/' "${D}/etc/modules.d/ppp"
 	fi
 
 	dodoc PLUGINS README* SETUP Changes-2.3 FAQ
-	dodoc ${FILESDIR}/README.mpls
+	dodoc "${FILESDIR}/README.mpls"
 
 	dosbin scripts/pon
 	dosbin scripts/poff
@@ -281,8 +279,8 @@ pkg_postinst() {
 		echo
 	fi
 
-	if [ ! -e ${ROOT}/dev/.devfsd ] && [ ! -e ${ROOT}/dev/.udev ] && [ ! -e ${ROOT}/dev/ppp ]; then
-		mknod ${ROOT}/dev/ppp c 108 0
+	if [ ! -e "${ROOT}/dev/.devfsd" ] && [ ! -e "${ROOT}/dev/.udev" ] && [ ! -e "${ROOT}/dev/ppp" ]; then
+		mknod "${ROOT}/dev/ppp" c 108 0
 	fi
 	if [ "$ROOT" = "/" ]; then
 		/sbin/update-modules
@@ -295,7 +293,7 @@ pkg_postinst() {
 		cp -pP "${ROOT}/etc/ppp/chap-secrets.example" "${ROOT}/etc/ppp/chap-secrets"
 
 	# lib name has changed
-	sed -i -e "s:^pppoe.so:rp-pppoe.so:" ${ROOT}etc/ppp/options
+	sed -i -e "s:^pppoe.so:rp-pppoe.so:" "${ROOT}/etc/ppp/options"
 
 	if use radius && has_version "<${CATEGORY}/${PN}-2.4.3-r5"; then
 		echo
