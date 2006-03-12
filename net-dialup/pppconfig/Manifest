@@ -1,7 +1,15 @@
-MD5 ae53d828d59ad2228a7ddc18c07d3c71 ChangeLog 3083
-MD5 075c1c15d87393ab98a10d051bbfd1bd files/digest-pppconfig-2.3.11 68
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b9db410c1e8b941b280ade6bf3f44884 ChangeLog 3249
 MD5 075c1c15d87393ab98a10d051bbfd1bd files/digest-pppconfig-2.3.11-r2 68
 MD5 0a18599faef6a8d04e0df3fb632aa3e4 files/pppconfig 219
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 a17952d0c5b0c1ce0fc0d8af13fe9608 pppconfig-2.3.11-r2.ebuild 1672
-MD5 c4d95862f441200aedd85d9a89d8f483 pppconfig-2.3.11.ebuild 776
+MD5 194c1cc3e6e32d163b75efbcc7bc3d07 pppconfig-2.3.11-r2.ebuild 1678
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEFJANjG8pv1lIUX4RAhr4AJ4lLMSfyqKfdEu5jFRNVCexGgNVMACghtSv
+k02DXrAl74bi7OLmm1jKJUk=
+=dVMT
+-----END PGP SIGNATURE-----

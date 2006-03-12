@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/pppconfig-2.3.11-r2.ebuild,v 1.4 2005/12/24 15:33:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/pppconfig-2.3.11-r2.ebuild,v 1.5 2006/03/12 21:17:53 mrness Exp $
 
 DESCRIPTION="A text menu based utility for configuring ppp."
 SRC_URI="http://http.us.debian.org/debian/pool/main/p/pppconfig/${PN}_${PV}.tar.gz"
@@ -16,18 +16,18 @@ RDEPEND="net-dialup/ppp
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_install () {
 	dodir /etc/chatscripts /etc/ppp/resolv
 	dosbin 0dns-down 0dns-up dns-clean
 	newsbin pppconfig pppconfig.real
-	dosbin ${FILESDIR}/pppconfig
+	dosbin "${FILESDIR}/pppconfig"
 	doman pppconfig.8
 	dodoc debian/{copyright,changelog}
 
 	if use nls; then
-		cd ${S}/po
+		cd "${S}/po"
 		local MY_LOCALE_LANGUAGES lang
 
 		if [ -n "${LINGUAS}" ]; then #install messages only in user-selected languages

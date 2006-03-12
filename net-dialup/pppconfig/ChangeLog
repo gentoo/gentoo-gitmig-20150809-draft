@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/pppconfig
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.17 2005/12/24 15:33:10 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.18 2006/03/12 21:17:53 mrness Exp $
+
+  12 Mar 2006; Alin Nastac <mrness@gentoo.org> -pppconfig-2.3.11.ebuild,
+  pppconfig-2.3.11-r2.ebuild:
+  Remove obsolete revision. Quote $WORKDIR, $FILESDIR and $S.
 
   24 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   pppconfig-2.3.11-r2.ebuild:
