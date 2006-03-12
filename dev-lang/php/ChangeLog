@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.74 2006/03/12 17:00:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.75 2006/03/12 17:07:02 ferdy Exp $
+
+  12 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> php-5.1.2.ebuild:
+  Stable on alpha wrt security bug #125878
 
   12 Mar 2006; Simon Stelling <blubb@gentoo.org> php-4.4.2.ebuild,
   php-5.1.2.ebuild:
