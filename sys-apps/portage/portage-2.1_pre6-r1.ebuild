@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre6.ebuild,v 1.3 2006/03/11 20:48:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre6-r1.ebuild,v 1.1 2006/03/12 14:02:53 zmedico Exp $
 
 inherit toolchain-funcs
 
@@ -31,11 +31,19 @@ S=${WORKDIR}/${PN}-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	local my_patches="1000-r2849-quiet-spinner.patch"
+	local my_patches="1000_r2849_quiet_spinner.patch
+		1010_r2854_obey_keeptemp.patch
+		1020_r2857_bug_54040_resume_tree.patch
+		1030_r2860_exec_stack_no_ppc64.patch
+		1040_r2861_cache_cleanse.patch
+		1050_r2862_ebuild_unmerge.patch
+		1060_r2863_bug_125919_find_compat.patch"
 	for patch_name in ${my_patches}; do
 		einfo "Applying ${patch_name} ..."
 		patch -p0 --no-backup-if-mismatch < "${FILESDIR}"/${PV}/${patch_name} >/dev/null || die "Failed to apply patch"
 	done
+	einfo "Setting portage.VERSION to ${PVR} ..."
+	sed -i "s/^VERSION=.*/VERSION=\"${PVR}\"/" pym/portage.py || die "Failed to patch portage.VERSION"
 }
 
 src_compile() {
