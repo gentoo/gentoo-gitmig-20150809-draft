@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dwun/dwun-0.96e.ebuild,v 1.5 2005/10/04 18:15:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dwun/dwun-0.96e.ebuild,v 1.6 2006/03/12 10:17:33 mrness Exp $
 
 DESCRIPTION="Dialer Without a Useful Name (DWUN)"
 HOMEPAGE="http://dwun.sourceforge.net/"
@@ -11,12 +11,10 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/libc"
-
 src_unpack() {
 	unpack ${A}
 
-	sed -i -e "s:TODO QUICKSTART README UPGRADING ChangeLog COPYING AUTHORS::" ${S}/Makefile.in
+	sed -i -e "s:TODO QUICKSTART README UPGRADING ChangeLog COPYING AUTHORS::" "${S}/Makefile.in"
 }
 
 src_compile() {
@@ -30,8 +28,7 @@ src_install() {
 	insinto /etc
 	newins doc/examples/complete-rcfile dwunrc
 	newins debian/dwunauth dwunauth
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/dwun dwun
+	newinitd "${FILESDIR}/dwun" dwun
 
 	dodoc AUTHORS ChangeLog QUICKSTART README TODO UPGRADING
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/dwun
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dwun/ChangeLog,v 1.5 2005/10/04 18:15:08 mrness Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dwun/ChangeLog,v 1.6 2006/03/12 10:17:32 mrness Exp $
+
+  12 Mar 2006; Alin Nastac <mrness@gentoo.org> dwun-0.96e.ebuild:
+  Quote strings containing env vars. Remove virtual/libc from dependencies.
 
   04 Oct 2005; Alin Nastac <mrness@gentoo.org> dwun-0.96e.ebuild:
   Remove COPYING and INSTALL from docs.
