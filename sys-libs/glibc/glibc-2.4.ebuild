@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.5 2006/03/11 11:02:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.6 2006/03/12 11:22:40 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -842,9 +842,6 @@ want_linuxthreads() {
 want_tls() {
 	# Archs that can use TLS (Thread Local Storage)
 	case $(tc-arch) in
-		alpha|amd64|ia64|mips|ppc|ppc64|s390|sh)
-			return 0;
-		;;
 		sparc)
 			# 2.3.6 should have tls support on sparc64
 			# when using newer binutils
@@ -856,10 +853,11 @@ want_tls() {
 		x86)
 			# requires i486 or better #106556
 			[[ ${CTARGET} == i[4567]86* ]] && return 0
+			return 1
 		;;
 	esac
 
-	return 1
+	return 0
 }
 
 want__thread() {
@@ -936,7 +934,7 @@ glibc_do_configure() {
 	[[ ${CTARGET} == *-softfloat-* ]] && myconf="${myconf} --without-fp"
 
 	if [ "$1" == "linuxthreads" ] ; then
-		if want_tls && [[ ${CTARGET} != i[45]86-* ]] ; then
+		if want_tls ; then
 			myconf="${myconf} --with-tls"
 
 			if want__thread && use linuxthreads-tls ; then
@@ -1092,7 +1090,7 @@ RESTRICT="nostrip multilib-pkg-force"
 
 # General: We need a new-enough binutils for as-needed
 # arch: we need to make sure our binutils/gcc supports TLS
-DEPEND=">=sys-devel/gcc-3.3.3
+DEPEND=">=sys-devel/gcc-3.4.4
 	arm? ( >=sys-devel/binutils-2.16.90 >=sys-devel/gcc-4.1.0 )
 	nptl? ( >=sys-kernel/linux-headers-2.6.5 )
 	>=sys-devel/binutils-2.15.94
