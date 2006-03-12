@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-net-ping/perl-net-ping-2.31.ebuild,v 1.1 2006/02/07 12:01:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-net-ping/perl-net-ping-2.31.ebuild,v 1.2 2006/03/12 15:27:51 mcummings Exp $
 
 DESCRIPTION="Virtual for net-ping"
 HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
@@ -12,5 +12,5 @@ KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
 
 IUSE=""
 DEPEND=""
-RDEPEND="~perl-core/net-ping-${PV}"
+RDEPEND="|| ( >=dev-lang/perl-5.8.7 ~perl-core/net-ping-${PV} )"
 
