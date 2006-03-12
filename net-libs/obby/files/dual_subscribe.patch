@@ -1,0 +1,15 @@
+--- inc/document_info.hpp.original	2006-03-12 14:58:25.000000000 +0000
++++ inc/document_info.hpp	2006-03-12 14:57:39.000000000 +0000
+@@ -643,9 +643,9 @@
+ {
+ 	if(is_subscribed(user) )
+ 	{
+-		throw std::logic_error(
+-			"obby::basic_document_info::user_subscribe"
+-		);
++	//	throw std::logic_error(
++	//		"obby::basic_document_info::user_subscribe"
++	//	);
+ 	}
+ 
+ 	m_users.push_back(&user);
