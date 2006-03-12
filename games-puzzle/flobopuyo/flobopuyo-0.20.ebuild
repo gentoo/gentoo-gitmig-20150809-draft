@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20.ebuild,v 1.7 2006/02/02 07:23:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20.ebuild,v 1.8 2006/03/12 04:31:28 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -28,6 +28,7 @@ src_unpack() {
 
 	find . -type f -name ".*" -exec rm -f \{\} \;
 	sed -i \
+		-e "/strip/d" \
 		-e "s:^DATADIR=.*:DATADIR=\"${GAMES_DATADIR}/${PN}\":" \
 		-e "/^INSTALL_BINDIR/s:/\$(PREFIX)/games:${GAMES_BINDIR}:" \
 		-e "/^CC=/s/g++/$(tc-getCXX)/" \

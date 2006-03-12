@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/flobopuyo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/ChangeLog,v 1.6 2006/02/02 07:23:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/ChangeLog,v 1.7 2006/03/12 04:31:28 mr_bones_ Exp $
+
+  12 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  flobopuyo-0.20.ebuild:
+  let portage handle the stripping of the binary (bug #125550)
 
   02 Feb 2006; Michael Sterrett <mr_bones_@gentoo.org>
   +files/flobopuyo-0.20-gcc41.patch, flobopuyo-0.20.ebuild:
