@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/l2tpd
-# Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/ChangeLog,v 1.14 2004/12/05 09:43:26 mrness Exp $
+# Copyright 2003-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/ChangeLog,v 1.15 2006/03/12 16:07:36 mrness Exp $
+
+  12 Mar 2006; Alin Nastac <mrness@gentoo.org>
+  -files/l2tpd-0.69-can-2004-0649.patch, -l2tpd-0.69-r2.ebuild,
+  l2tpd-0.70_pre20031121.ebuild:
+  Remove old version. Beutify the code of the remaining version.
 
   05 Dec 2004; Alin Nastac <mrness@gentoo.org> l2tpd-0.70_pre20031121.ebuild:
   Stable on x86.
