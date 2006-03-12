@@ -6,4 +6,9 @@
 		<email>zzam@gentoo.org</email>
 		<name>Matthias Schwarzott</name>
 	</maintainer>
+	<maintainer>
+		<email>hd_brummy@gentoo.org</email>
+		<name>Joerg Bornkessel</name>
+	</maintainer>
+	<longdescription>vdr Plugin: DVB Frontend Status Monitor (signal strengt/noise)</longdescription>
 </pkgmetadata>

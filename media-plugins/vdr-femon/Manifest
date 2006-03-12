@@ -1,40 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b567be67eceb66c14fed5b8b402e46f0 ChangeLog 1030
-RMD160 ff4adc612c140b79b1df572a85fea7eab9411874 ChangeLog 1030
-SHA256 a1ff5e821946e551e52f87480ee4072bcf3f0eed96d0d48427ba6648e3866a9f ChangeLog 1030
+MD5 13e2f53d95924de2525ec19f1c4bcb10 ChangeLog 1207
 MD5 a56a5dbae3107fd3c80e79b285f37b0e files/digest-vdr-femon-0.9.1 63
-RMD160 fda3b845182bf95d1cb7da49d14bb798c216d0d7 files/digest-vdr-femon-0.9.1 63
-SHA256 98bcdfb1533ee6572dd8c5636367f4f03aafacd7bf417934570ac4dab34634e2 files/digest-vdr-femon-0.9.1 63
 MD5 f4720cc38be3acde8a7f21ec71ec3420 files/digest-vdr-femon-0.9.4 63
-RMD160 6e0c1a1e49d9413659103c1e3a9930391ab15186 files/digest-vdr-femon-0.9.4 63
-SHA256 13b488cc736108d17c4680dc59ed24612165dd2cd117266149d4dee85b49419f files/digest-vdr-femon-0.9.4 63
 MD5 81358cc350f1be8daa219ce7d345e2f3 files/digest-vdr-femon-0.9.5 63
-RMD160 eccf848a9dd2e72981e3753ea22931a2cc199c4f files/digest-vdr-femon-0.9.5 63
-SHA256 84486fee7e9de93a0b589e4fea0c3185ba21752124964bd1958cc6ccda19a800 files/digest-vdr-femon-0.9.5 63
 MD5 3ae489c4755bbf6e2ab1aaee24c2d331 files/digest-vdr-femon-0.9.6 235
-RMD160 837b2e0a5cb2f81b3dbdb416baf8896d4c9f67c4 files/digest-vdr-femon-0.9.6 235
-SHA256 93ee834f66d218e27ea3c91b6b6cb200aec2cc1dc11f6062ad1a9b7f8d126013 files/digest-vdr-femon-0.9.6 235
-MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
-RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 metadata.xml 259
-SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata.xml 259
+MD5 037f1f79c51ed93392be9e75ec818751 files/digest-vdr-femon-0.9.8 63
+MD5 55ae4af79ffa416ab4b061128bf4aae3 metadata.xml 457
 MD5 fe6b5364d530fbb5fc7282d6fdc32640 vdr-femon-0.9.1.ebuild 544
-RMD160 36a928c5f726ceff697cd44dd4953983cf027f98 vdr-femon-0.9.1.ebuild 544
-SHA256 664e6391a2b286a17545f79d17005a56f82d4535bc68eb81f57033d6ee6825eb vdr-femon-0.9.1.ebuild 544
 MD5 33fc8d487fce789387ae031b76833d82 vdr-femon-0.9.4.ebuild 544
-RMD160 65db0e76eb67b2d7fb4a1303d39cd66bab7019e4 vdr-femon-0.9.4.ebuild 544
-SHA256 453678acc656d8c1f164e42336c48245923f850b244afd58e0147ba18dc35641 vdr-femon-0.9.4.ebuild 544
 MD5 9bd701f17393bc952c0493b8ade100e3 vdr-femon-0.9.5.ebuild 543
-RMD160 1d4d079df6a0b296ca9f7f3adc416452605eca41 vdr-femon-0.9.5.ebuild 543
-SHA256 91eb7d31027bdbe550c2511a6bc6796ca96384b125ccb2c95c339c56b9e05423 vdr-femon-0.9.5.ebuild 543
 MD5 27f3af1c244710a32d1050ac8e13d63a vdr-femon-0.9.6.ebuild 544
-RMD160 78151dd838acedc4a4d7b95b64bcafeb1706c059 vdr-femon-0.9.6.ebuild 544
-SHA256 714fc2ab8dd23e806ef113adc350f49c13d7140a967d0c89b07833a8daaa14c2 vdr-femon-0.9.6.ebuild 544
+MD5 4a5866f9d8d89112e3fe67b63a0a2706 vdr-femon-0.9.8.ebuild 549
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+Comment: no further Information
 
-iD8DBQFD5ibGZfSl1Kp5KmoRAn3NAJ97uATy/klhqZcXTh4Dx7TlVapTggCfYMuJ
-cdEksom95S7BHfRZ80h6WjY=
-=T+Sn
+iD8DBQFEE3kvdn07HTTCgIoRAulYAJ9H/3kjyzQwYBHjJUnFPVoa6V5zxwCgpH0G
+oPwlbO9Fwycgm6wZ6Ra7F8U=
+=faQU
 -----END PGP SIGNATURE-----
