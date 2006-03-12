@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/kpnadsl4linux-1.10-r1.ebuild,v 1.14 2005/10/04 18:47:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/kpnadsl4linux-1.10-r1.ebuild,v 1.15 2006/03/12 14:42:32 mrness Exp $
 
 DESCRIPTION="ADSL4Linux, a PPTP start/stop/etc. program especially for Dutch users, for gentoo."
 HOMEPAGE="http://www.adsl4linux.nl/"
@@ -12,11 +12,8 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64 ppc64"
 IUSE=""
 
-DEPEND="virtual/libc"
-RDEPEND="${DEPEND}
-	sys-apps/gawk
-	>=net-dialup/pptpclient-1.1.0
-	>=net-dialup/ppp-2.4.0"
+RDEPEND=">=net-dialup/pptpclient-1.7.0
+	>=net-dialup/ppp-2.4.2"
 
 src_compile() {
 	make || die "Make failed."
@@ -27,14 +24,14 @@ src_install() {
 	dodoc Changelog README
 	exeinto /etc/init.d/
 	newexe init.d.adsl adsl
-	dosbin ${FILESDIR}/${PN}-config
+	dosbin "${FILESDIR}/${PN}-config"
 }
 
 pkg_postinst() {
 	einfo "Do _NOT_ forget to run the following if this is your _FIRST_ install:"
-	einfo "kpnadsl4linux-config"
-	einfo "etc-update"
+	einfo "   kpnadsl4linux-config"
+	einfo "   etc-update"
 	einfo
 	einfo "To start ${P} at boot type:"
-	einfo "rc-update add adsl default"
+	einfo "   rc-update add adsl default"
 }
