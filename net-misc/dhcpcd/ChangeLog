@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.78 2006/03/12 09:03:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.79 2006/03/12 17:34:36 chriswhite Exp $
+
+  12 Mar 2006; Chris White <chriswhite@gentoo.org> dhcpcd-2.0.3.ebuild:
+  Marked 2.0.3 ppc stable for bug #125828.
 
   12 Mar 2006; Markus Rothe <corsair@gentoo.org> dhcpcd-2.0.3.ebuild:
   Stable on ppc64; bug #125828
