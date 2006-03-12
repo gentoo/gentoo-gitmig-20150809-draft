@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1217.ebuild,v 1.2 2006/03/11 02:47:54 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1217.ebuild,v 1.3 2006/03/12 17:53:02 blubb Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.peercast.org/src/${P}-src.tgz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 DEPEND=""
 RDEPEND=""

@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4f61e1928517d6b88a15fbbb4542bcf2 ChangeLog 2251
+MD5 81a2d9a00537ab23f2e56d0cf4a102ee ChangeLog 2353
+RMD160 dcf474169d92ab83dfd2ce99e568c412790546c8 ChangeLog 2353
+SHA256 28d9513c0a966d2302bbea1e0cbc81070d178481fe794a1294a8669fc4a8a299 ChangeLog 2353
 MD5 9aa0a0713c5edcfc7e6a5dad02a2bb78 files/digest-peercast-0.1212 70
+RMD160 1956517a9a6faf32f3678358624223e5719fdda8 files/digest-peercast-0.1212 70
+SHA256 c87f067c6c7b5dfe4545265741c07a290f29c2e410a4060723e0c33489ae2d69 files/digest-peercast-0.1212 70
 MD5 ccb83f95f9c19145299082adbe267f5e files/digest-peercast-0.1217 68
+RMD160 d283ebee109e3e0dbab91f3e2ced8b599aab8b4f files/digest-peercast-0.1217 68
+SHA256 feac110a856b79ea7634d1cb23ddba7eae3e594be3e56a74f55703bee304d6d9 files/digest-peercast-0.1217 68
 MD5 53a464d7a03db2920377543df9720640 files/peercast-0.1216-amd64.patch 339
+RMD160 151287d81c1020ec984e0549e07c37abe972206f files/peercast-0.1216-amd64.patch 339
+SHA256 f9bcbfb554ae111a64134cfaac97374efc03fb633c62038154b16ddb605b7e8e files/peercast-0.1216-amd64.patch 339
 MD5 b368fad373ea3663bdccac28c3655869 files/peercast-0.1216-makefile.patch 961
+RMD160 a917432e551cd4546ad1f0f118e0f90dda260a8b files/peercast-0.1216-makefile.patch 961
+SHA256 bcbc8b92b01d6720734cf4d3deca3c7f8fa7925b80ef49259066f2d2b670cc51 files/peercast-0.1216-makefile.patch 961
 MD5 46edc53a482f19af8574b644d6ba02ec files/peercast.init 890
+RMD160 b44c15a09ad043a07bec66e8529f36d6630b7768 files/peercast.init 890
+SHA256 b1241064c545fb4569cb8457446187d49038ca9a6088af565c4f03171047303c files/peercast.init 890
 MD5 14e1c6925a3e64280f5a6ce143c95af7 files/peercast.init.gpl 565
+RMD160 f094b02dda13d5cb5f0c60cfa41fdd7b150ceb78 files/peercast.init.gpl 565
+SHA256 35dc6dfcecde9420b195977e22e18bac67bc588cf0695c44aca8f8964c3dd549 files/peercast.init.gpl 565
 MD5 8767b186abeb57c3f8c5537b2f0dd754 files/peercast.wrapper.sh 100
+RMD160 b32df43887271734dda5039b17fa5e0ec1218676 files/peercast.wrapper.sh 100
+SHA256 2c99ca72a5cc1f08ad453065f4a6af992c38ddb930b18211647fcc53f3cbccca files/peercast.wrapper.sh 100
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 MD5 f4851d46b0cf2a245e80c1a617fe610a peercast-0.1212.ebuild 1454
-MD5 9422a0f4a5ae28cbc178ab1cc260a183 peercast-0.1217.ebuild 1377
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEEjqGFdQwWVoAgN4RArHCAKC0gP8qfkXOAFS59O8oGaOQcSPyzQCgx+hf
-TvMgZ73HfGTq/B1Y7HUe6d8=
-=+4u1
------END PGP SIGNATURE-----
+RMD160 8a4c2b7f1a29e06efe05e3ba0eca358c6393c0c5 peercast-0.1212.ebuild 1454
+SHA256 be87f5c7077c8fcb69cf7dffddeb4960e3d2a88c08efb3088535d4f2b3948bd6 peercast-0.1212.ebuild 1454
+MD5 93ac4c1d0fcbf5980df812fe6f093ffd peercast-0.1217.ebuild 1371
+RMD160 3590793bfd8cb6db5680c6c245c41e29997d66d1 peercast-0.1217.ebuild 1371
+SHA256 442dbe6a5c594e43dc0c16bb2019be9d8d6299cb47c4e21d273648ea561ab0ec peercast-0.1217.ebuild 1371
