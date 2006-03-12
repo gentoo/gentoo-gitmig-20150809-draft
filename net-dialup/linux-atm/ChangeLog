@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/linux-atm
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.18 2005/10/08 20:50:57 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.19 2006/03/12 16:57:05 mrness Exp $
+
+  12 Mar 2006; Alin Nastac <mrness@gentoo.org> metadata.xml,
+  -linux-atm-2.4.1.ebuild, linux-atm-2.4.1-r1.ebuild:
+  Remove obsolete revision. Restrict make test.
 
   08 Oct 2005; Mike Frysinger <vapier@gentoo.org> -files/2.4.1-uclibc.patch,
   linux-atm-2.4.1-r1.ebuild:
