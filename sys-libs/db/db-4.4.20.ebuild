@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20.ebuild,v 1.3 2006/02/22 20:51:59 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20.ebuild,v 1.4 2006/03/12 15:24:18 pauldv Exp $
 
 inherit eutils gnuconfig db flag-o-matic
 
@@ -41,11 +41,8 @@ src_unpack() {
 	do
 		epatch ${DISTDIR}/patch.${MY_PV}.${i}
 	done
-	epatch ${FILESDIR}/${PN}-4.3-jarlocation.patch
+	epatch ${FILESDIR}/${PN}-${SLOT}-jarlocation.patch
 	epatch ${FILESDIR}/${PN}-${SLOT}-libtool.patch
-
-# Does no longer work on 4.4, but it's use is not clear.
-#	epatch ${FILESDIR}/${PN}-4.3.27-fix-dep-link.patch
 
 	gnuconfig_update "${S}/../dist"
 
@@ -106,7 +103,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall libdir="${D}/usr/$(get_libdir)" || die
+	einstall libdir="${D}/usr/$(get_libdir)" strip="${D}/bin/strip" || die
 
 	db_src_install_usrbinslot
 
