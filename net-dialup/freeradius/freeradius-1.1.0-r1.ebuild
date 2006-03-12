@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.0-r1.ebuild,v 1.2 2006/02/28 10:41:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.0-r1.ebuild,v 1.3 2006/03/12 11:51:43 mrness Exp $
 
 inherit eutils flag-o-matic
 
@@ -41,13 +41,13 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/${P}-whole-archive-gentoo.patch
-	epatch ${FILESDIR}/${P}-dict-attr-sizeof.patch
-	epatch ${FILESDIR}/${P}-libeap-fPIC.patch #needed for rlm_eap installation on amd64
+	epatch "${FILESDIR}/${P}-whole-archive-gentoo.patch"
+	epatch "${FILESDIR}/${P}-dict-attr-sizeof.patch"
+	epatch "${FILESDIR}/${P}-libeap-fPIC.patch" #needed for rlm_eap installation on amd64
 }
 
 src_compile() {
-	autoconf
+	autoconf || die "autoconf failed"
 
 	local myconf=" \
 		`use_enable debug developer` \
@@ -86,9 +86,9 @@ src_compile() {
 	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
 		--mandir=/usr/share/man \
 		--with-large-files --disable-ltdl-install --disable-static --with-pic \
-		${myconf} || die
+		${myconf} || die "configure failed"
 
-	make || die
+	make || die "make failed"
 }
 
 src_install() {
@@ -104,25 +104,22 @@ src_install() {
 	dodir /var/run/radiusd
 	diropts
 
-	make R=${D} install || die
+	make R="${D}" install || die "make install failed"
 	dosed 's:^#user *= *nobody:user = radiusd:;s:^#group *= *nobody:group = radiusd:' \
 	    /etc/raddb/radiusd.conf
-	chown -R root:radiusd ${D}/etc/raddb/*
+	chown -R root:radiusd "${D}"/etc/raddb/*
 
-	[ -z "${PR}" ] || mv ${D}/usr/share/doc/${P} ${D}/usr/share/doc/${PF}
-	gzip -f -9 ${D}/usr/share/doc/${PF}/{rfc/*.txt,*}
+	[ -z "${PR}" ] || mv "${D}/usr/share/doc/${P}" "${D}/usr/share/doc/${PF}"
+	gzip -f -9 "${D}/usr/share/doc/${PF}"/{rfc/*.txt,*}
 	dodoc CREDITS
 	#Copy SQL schemas to doc dir
 	docinto sql.schemas
 	dodoc src/modules/rlm_sql/drivers/rlm_sql_*/*.sql
 
-	rm ${D}/usr/sbin/rc.radiusd
+	rm "${D}/usr/sbin/rc.radiusd"
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/radius.init radiusd
-
-	insinto /etc/conf.d
-	newins ${FILESDIR}/radius.conf radiusd
+	newinitd "${FILESDIR}/radius.init" radiusd
+	newconfd "${FILESDIR}/radius.conf" radiusd
 }
 
 pkg_preinst() {
@@ -131,8 +128,8 @@ pkg_preinst() {
 }
 
 pkg_prerm() {
-	if [ -n "`${ROOT}/etc/init.d/radiusd status | grep start`" ]; then
-		${ROOT}/etc/init.d/radiusd stop
+	if [ -n "`'${ROOT}/etc/init.d/radiusd' status | grep start`" ]; then
+		"${ROOT}/etc/init.d/radiusd" stop
 	fi
 }
 

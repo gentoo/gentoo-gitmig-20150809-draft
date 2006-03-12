@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.48 2006/02/28 10:41:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.49 2006/03/12 11:51:43 mrness Exp $
+
+  12 Mar 2006; Alin Nastac <mrness@gentoo.org>
+  -files/freeradius-1.0.5-user-password-ha1.patch,
+  -files/freeradius-1.0.5-whole-archive-gentoo.patch,
+  -freeradius-1.0.5-r3.ebuild, freeradius-1.1.0-r1.ebuild:
+  Remove obsolete version. Quote strings containing env vars.
 
   28 Feb 2006; Alin Nastac <mrness@gentoo.org> freeradius-1.1.0-r1.ebuild:
   Add debug USE flag (#124367). Mark as stable on amd64 and x86.
