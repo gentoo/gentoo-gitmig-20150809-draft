@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9ebee800d4857a2c63bb63fc03729023 ChangeLog 1018
-RMD160 5f247ee624840c3557855bff37ed8e3375d70ffb ChangeLog 1018
-SHA256 5dc34d643af784d355d7ef72c07921e80c44f7242825a7825870ca6859984fe9 ChangeLog 1018
+MD5 bf3c464bc31f072e5e77369259c7f43f ChangeLog 1151
+RMD160 19bd09f1b6b6bba01667f2639a71f37e5a8b0b09 ChangeLog 1151
+SHA256 c7f3f27e1f35cf2292b0ab506c74ffde12156c1dc5e3621be9b900b50c0e6f0a ChangeLog 1151
 MD5 2bb6391984e53ddbe3c8c9de934bfd0d files/digest-kopete-0.12_alpha1 262
 RMD160 1c5fb4556e6ae2ed77df50e392b985a1861f4bb7 files/digest-kopete-0.12_alpha1 262
 SHA256 5358f4ff86350539ce50fceb27dbafdda7513fe3cef9b588b8b25877f24c08b6 files/digest-kopete-0.12_alpha1 262
 MD5 2bb6391984e53ddbe3c8c9de934bfd0d files/digest-kopete-0.12_alpha1-r1 262
 RMD160 1c5fb4556e6ae2ed77df50e392b985a1861f4bb7 files/digest-kopete-0.12_alpha1-r1 262
 SHA256 5358f4ff86350539ce50fceb27dbafdda7513fe3cef9b588b8b25877f24c08b6 files/digest-kopete-0.12_alpha1-r1 262
+MD5 3d5c836f53b4db0142257b264dd27760 files/digest-kopete-0.12_beta1 259
+RMD160 39180130a670754c2decd579d2f421941075b6e4 files/digest-kopete-0.12_beta1 259
+SHA256 49254109389e626e7d6952e1f0e813cf0eed8807d0f88cfeef806d4aa12b50f0 files/digest-kopete-0.12_beta1 259
 MD5 638d3cc679fc614b53fbeff0c41aa05c files/kopete-0.12_alpha1-xscreensaver.patch 778
 RMD160 d188f074982191f6f961c7e32ec97a79746e73df files/kopete-0.12_alpha1-xscreensaver.patch 778
 SHA256 2152d2d2d1ed29b986d5b7f80a6f7bcabd56e5580146298973b4114353b5686d files/kopete-0.12_alpha1-xscreensaver.patch 778
@@ -22,13 +25,16 @@ SHA256 5ef94a50442c5f752853b7bb4b764ff4b7693feaefc0896cdcc08f60d28c5d62 kopete-0
 MD5 b2e6a93c552560c63babaf079e0cedca kopete-0.12_alpha1.ebuild 1733
 RMD160 56c468d84688b1466e3b4a527483fa343768f718 kopete-0.12_alpha1.ebuild 1733
 SHA256 85a9e51a3e9e798c50a81d8b0441966061c3e0de826f55eea2d7eeed43b57c99 kopete-0.12_alpha1.ebuild 1733
+MD5 e73fced8206f7d01e4b8e50af1ba5907 kopete-0.12_beta1.ebuild 1749
+RMD160 644ef8a26015e7921f49544ed8203b3b5c86bc70 kopete-0.12_beta1.ebuild 1749
+SHA256 35b9d45f74402e63e1a6b6b28c2784fc10e8b82700dff8e4c7b907c5e0875a52 kopete-0.12_beta1.ebuild 1749
 MD5 64e213d0db015eb97e16b31ec6e748c3 metadata.xml 254
 RMD160 ddca3e329213be86e7b2d62c52078a77ea308f4a metadata.xml 254
 SHA256 addaf999f171c0e580a0399105382e9b213e14f3bd85b74671742b41f41c2261 metadata.xml 254
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEC19uAiZjviIA2XgRApTTAKCrFuTtKPZjVs7cvWvbGtPP3eI+jwCgwQPW
-EtkWYxTlg3RimZF0kdkgGSQ=
-=R5Dt
+iD8DBQFEFKIxAiZjviIA2XgRAivzAKDUkcbBADULxjSF0f+YvsKh7RDNXgCdFtdx
+wF+0WowQuc0BTQs86a16e5g=
+=cEE+
 -----END PGP SIGNATURE-----
