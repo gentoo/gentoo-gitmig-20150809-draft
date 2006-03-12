@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r17.ebuild,v 1.1 2006/01/21 12:17:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r17.ebuild,v 1.2 2006/03/12 16:03:03 hansmi Exp $
 
 IUSE="aliaschain cnamefix doc fwdzone ipv6 \
 	multipleip roundrobin semanticfix static selinux \
 	multidata datadir"
 
-inherit eutils
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Excellent high-performance DNS services"
 HOMEPAGE="http://cr.yp.to/djbdns.html"
@@ -45,33 +45,31 @@ src_unpack() {
 	cd ${S}
 
 	use ipv6 && use cnamefix && \
-	eerror "ipv6 cannot currently be used with the cnamefix patch" && \
-	exit -1
+		die "ipv6 cannot currently be used with the cnamefix patch"
 
 	use ipv6 && use multipleip && \
-	eerror "ipv6 cannot currently be used with the multipleip patch" && \
-	exit -1
+		die "ipv6 cannot currently be used with the multipleip patch"
 
-	use ipv6 && ( use fwdzone || use roundrobin ) && \
-	eerror "ipv6 cannot currently be used with the fwdzone or " && \
-	eerror "roundrobin patch." && \
-	eerror && \
-	eerror "If you would like to see ipv6 support along with one of " && \
-	eerror "those other patches please submit a working patch that " && \
-	eerror "combines ipv6 with either fwdzone or roundrobin but not " && \
-	eerror "both at the same time, since the latter 2 patches are " && \
-	eerror "mutually exclusive according to bug #31238." && exit -1
+	if use ipv6 && ( use fwdzone || use roundrobin ); then
+		eerror "ipv6 cannot currently be used with the fwdzone or "
+		eerror "roundrobin patch."
+		echo
+		eerror "If you would like to see ipv6 support along with one of "
+		eerror "those other patches please submit a working patch that "
+		eerror "combines ipv6 with either fwdzone or roundrobin but not "
+		eerror "both at the same time, since the latter 2 patches are "
+		eerror "mutually exclusive according to bug #31238."
+		die
+	fi
 
 	use fwdzone && use roundrobin && \
-	eerror "fwdzone and roundrobin do not work together according " && \
-	eerror "to bug #31238" && exit -1
+		die "fwdzone and roundrobin do not work together according to bug #31238"
 
 	use datadir && use multidata && \
-	die "The datadir and multidata patches are not compatible with each other" && \
-	exit -1
+		die "The datadir and multidata patches are not compatible with each other"
 
 	use cnamefix && \
-		sed s:'\r'::g < ${DISTDIR}/dnscache-cname-handling.patch \
+		sed 's:\r::g' < ${DISTDIR}/dnscache-cname-handling.patch \
 		> ${WORKDIR}/dnscache-cname-handling.patch && \
 		epatch ${WORKDIR}/dnscache-cname-handling.patch
 	use aliaschain && \
@@ -92,39 +90,35 @@ src_unpack() {
 	epatch ${FILESDIR}/headtail.patch
 	epatch ${FILESDIR}/dnsroots.patch
 
-	use ipv6 && {
+	if use ipv6; then
 		einfo "At present dnstrace does NOT support IPv6. It will " \
 		      "be compiled without IPv6 support."
 		cp -pR ${S} ${S}-noipv6
 		# Careful -- >=test21 of the ipv6 patch includes the errno patch
 		epatch ${WORKDIR}/${P}-${IPV6_PATCH}.diff
 		cd ${S}-noipv6
-		epatch ${FILESDIR}/${PV}-errno.patch
-	} || {
-		epatch ${FILESDIR}/${PV}-errno.patch
-	}
+	fi
+
+	epatch ${FILESDIR}/${PV}-errno.patch
 }
 
 src_compile() {
-	LDFLAGS=
-	use static && LDFLAGS="-static"
-	echo "gcc ${CFLAGS}" > conf-cc
-	echo "gcc ${LDFLAGS}" > conf-ld
+	use static && append-ldflags -static
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "/usr" > conf-home
-	MAKEOPTS="-j1" emake || die "emake failed"
+	MAKEOPTS="${MAKEOPTS} -j1" emake || die "emake failed"
 
-	# If djbdns is compiled with ipv6 support it breaks dnstrace
-	# therefore we must compile dnstrace separately without ipv6
+	# If djbdns is compiled with ipv6 support it breaks dnstrace.
+	# Therefore we must compile dnstrace separately without ipv6
 	# support.
 	if use ipv6; then
 		einfo "Compiling dnstrace without ipv6 support"
 		cd ${S}-noipv6
-		LDFLAGS=
-		use static && LDFLAGS="-static"
-		echo "gcc ${CFLAGS}" > conf-cc
-		echo "gcc ${LDFLAGS}" > conf-ld
+		echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+		echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 		echo "/usr" > conf-home
-		MAKEOPTS="-j1" emake dnstrace || die "emake failed"
+		MAKEOPTS="${MAKEOPTS} -j1" emake dnstrace || die "emake failed"
 	fi
 }
 
