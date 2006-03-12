@@ -1,6 +1,0 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/3.6_pre20041219/ioptions,v 1.1 2004/12/23 22:12:34 mrness Exp $
-
-# System-wide configuration for ipppd.
-# Normally, put all options into options.ipppX
