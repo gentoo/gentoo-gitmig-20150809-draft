@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5077 2006/03/12 01:21:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5078 2006/03/12 04:34:51 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Michael Sterrett <mr_bones_@gentoo.org> (11 Mar 2006)
+# masked due to security issues: bug #125647
+# unmask locally at your own risk.
+games-action/bzflag
 
 # Joerg Bornkessel <hd_brummy@gentoo.org (11 Mar 2006)
 # need testing
