@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.8.ebuild,v 1.3 2005/09/03 19:10:58 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.8.ebuild,v 1.4 2006/03/12 06:01:17 mr_bones_ Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://freesoftware.fsf.org/download/paragui/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2
@@ -25,8 +25,8 @@ DEPEND=">=media-libs/libsdl-1.2
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-header.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-header.patch
 }
 
 src_install() {
