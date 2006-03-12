@@ -1,9 +1,8 @@
-# vim: ft=apache sw=4 ts=4
-<IfDefine PHP4>
+<IfDefine PHP5>
 
 	# Load the module first
 	<IfModule !sapi_apache.c>
-		LoadModule php4_module    modules/libphp4.so
+		LoadModule php5_module    modules/libphp5.so
 	</IfModule>
 
 	# Set it to handle the files
@@ -12,6 +11,7 @@
 		AddType application/x-httpd-php .phtml
 		AddType application/x-httpd-php .php3
 		AddType application/x-httpd-php .php4
+		AddType application/x-httpd-php .php5
 		AddType application/x-httpd-php-source .phps
 	</IfModule>
 

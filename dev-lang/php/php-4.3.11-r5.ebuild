@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.3.11-r5.ebuild,v 1.8 2006/01/24 21:39:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.3.11-r5.ebuild,v 1.9 2006/03/12 13:25:34 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~alpha arm ia64 ~ppc s390 sh sparc x86"
@@ -8,42 +8,45 @@ KEYWORDS="~alpha arm ia64 ~ppc s390 sh sparc x86"
 # NOTE: Portage doesn't support setting PROVIDE based on the USE flags
 #		that have been enabled, so we have to PROVIDE everything for now
 #		and hope for the best
-#
-#		This will be sorted out when GLEP 37 is implemented
-
 PROVIDE="virtual/php virtual/httpd-php"
 
 # php package settings
 SLOT="4"
-MY_PHP_P="php-${PV}"
+MY_PHP_PV="${PV}"
+MY_PHP_P="php-${MY_PHP_PV}"
 PHP_PACKAGE=1
 
 # php patch settings
-HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.3-gentoo.patch.gz"
-LIB64_PATCH="${PV}/php${PV}-multilib-search-path.patch"
+PHP_PATCHSET_REV="2"
+HARDENEDPHP_PATCH="hardening-patch-${MY_PHP_PV}-0.4.3-gentoo.patch.gz"
+MULTILIB_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-multilib-search-path.patch"
+FASTBUILD_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-fastbuild.patch"
 
-inherit eutils php4_4-sapi apache-module
+inherit php4_4-sapi apache-module
 
 want_apache
 
-DESCRIPTION="The PHP language runtime engine"
+DESCRIPTION="The PHP language runtime engine."
 
 DEPEND="${DEPEND} app-admin/php-toolkit"
 RDEPEND="${RDEPEND} app-admin/php-toolkit"
 
-# fixed PCRE library for security issues, bug #102373
-SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-pcrelib-new-secpatch.tar.bz2"
-
 # PHP patchsets
-SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-patchset-${PV}-r1.tar.bz2"
+SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-patchset-${MY_PHP_PV}-r${PHP_PATCHSET_REV}.tar.bz2"
+
+# Hardened-PHP patch
+[[ -n "${HARDENEDPHP_PATCH}" ]] && SRC_URI="${SRC_URI} hardenedphp? ( http://gentoo.longitekk.com/${HARDENEDPHP_PATCH} )"
+
+# Fixed PCRE library for security issues, bug #102373
+SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-pcrelib-new-secpatch.tar.bz2"
 
 pkg_setup() {
 	# make sure the user has specified a SAPI
 	einfo "Determining SAPI(s) to build"
 	confutils_require_any "  Enabled  SAPI:" "  Disabled SAPI:" cli cgi apache apache2
 
-	if useq apache || useq apache2 ; then
-		if [ "${APACHE_VERSION}" != "0" ] ; then
+	if useq apache2 ; then
+		if [[ "${APACHE_VERSION}" != "0" ]] ; then
 			if ! useq threads ; then
 				APACHE2_SAFE_MPMS="peruser prefork"
 			else
@@ -80,51 +83,15 @@ pkg_setup() {
 src_unpack() {
 	# custom src_unpack, used only for PHP ebuilds that need additional patches
 	# normally the eclass src_unpack is used
-	if [ "${PHP_PACKAGE}" == 1 ] ; then
+	if [[ "${PHP_PACKAGE}" == 1 ]] ; then
 		unpack ${A}
 	fi
 
 	cd "${S}"
 
-	# fix PHP branding
-	sed -e 's|^EXTRA_VERSION=""|EXTRA_VERSION="-pl5-gentoo"|g' -i configure.in
-
-	# patch to fix pspell extension, bug #99312 (new patch by upstream)
-	use spell && epatch "${WORKDIR}/${PV}/php${PV}-pspell-ext-segf.patch"
-
-	# patch fo fix safe_mode bypass in CURL extension, bug #111032
-	use curl && epatch "${WORKDIR}/${PV}/php${PV}-curl-open_basedir.patch"
-
-	# fix header injection in mbstring extension
-	use nls && epatch "${WORKDIR}/${PV}/php${PV}-mbstring-header_inj.patch"
-
-	# patch to fix safe_mode bypass in GD extension, bug #109669
-	if use gd || use gd-external ; then
-		epatch "${WORKDIR}/${PV}/php${PV}-gd-safe_mode.patch"
-	fi
-
-	# patch open_basedir directory bypass, bug #102943
-	epatch "${WORKDIR}/${PV}/php${PV}-fopen_wrappers.patch"
-
-	# patch $GLOBALS overwrite vulnerability, bug #111011 and bug #111014
-	epatch "${WORKDIR}/${PV}/php${PV}-globals_overwrite.patch"
-
-	# patch phpinfo() XSS vulnerability, bug #111015
-	epatch "${WORKDIR}/${PV}/php${PV}-phpinfo_xss.patch"
-
-	# patch to fix session.save_path segfault and other issues in
-	# the apache2handler SAPI, bug #107602
-	epatch "${WORKDIR}/${PV}/php${PV}-apache2sapi.patch"
-
-	# patch to fix some issues in the apache SAPI
-	epatch "${WORKDIR}/${PV}/php${PV}-apachesapi.patch"
-
-	# patch to fix PCRE library security issues, bug #102373
-	epatch "${WORKDIR}/${PV}/php${PV}-pcre-security.patch"
-
-	# sobstitute the bundled PCRE library with a fixed version for bug #102373
+	# Substitute the bundled PCRE library with a fixed version for bug #102373
 	einfo "Updating bundled PCRE library"
-	rm -rf "${S}/ext/pcre/pcrelib" && mv -f "${WORKDIR}/pcrelib-new" "${S}/ext/pcre/pcrelib" || die "Unable to update the bundled PCRE library"
+	rm -Rf "${S}/ext/pcre/pcrelib" && mv -f "${WORKDIR}/pcrelib-new" "${S}/ext/pcre/pcrelib" || die "Unable to update the bundled PCRE library"
 
 	# we call the eclass src_unpack, but don't want ${A} to be unpacked again
 	PHP_PACKAGE=0
@@ -133,7 +100,6 @@ src_unpack() {
 }
 
 php_determine_sapis() {
-
 	# holds the list of sapis that we want to build
 	PHPSAPIS=
 
@@ -147,16 +113,15 @@ php_determine_sapis() {
 
 	# note - we can only build one apache sapi for now
 	# note - apache SAPI comes after the simpler cli/cgi sapis
-
 	if useq apache || useq apache2 ; then
-		if [ "${APACHE_VERSION}" != "0" ]; then
+		if [[ "${APACHE_VERSION}" != "0" ]] ; then
 			PHPSAPIS="${PHPSAPIS} apache${APACHE_VERSION}"
 		fi
 	fi
 }
 
 src_compile() {
-	if useq fastbuild ; then
+	if useq fastbuild && [[ -n "${FASTBUILD_PATCH}" ]] ; then
 		src_compile_fastbuild
 	else
 		src_compile_normal
@@ -221,6 +186,7 @@ src_compile_fastbuild() {
 		make sapi/cli/php || die "Unable to make CLI SAPI"
 		cp sapi/cli/php php-cli || die "Unable to copy CLI SAPI"
 	fi
+
 	if [[ ${build_cgi} = 1 ]] ; then
 		einfo
 		einfo "Building CGI SAPI"
@@ -234,6 +200,7 @@ src_compile_fastbuild() {
 		make sapi/cgi/php || die "Unable to make CGI SAPI"
 		cp sapi/cgi/php php-cgi || die "Unable to copy CGI SAPI"
 	fi
+
 	if [[ ${build_apache} = 1 ]] ; then
 		einfo
 		einfo "Building apache${USE_APACHE2} SAPI"
@@ -254,12 +221,12 @@ src_compile_normal() {
 	CLEAN_REQUIRED=0
 
 	for x in ${PHPSAPIS} ; do
-		if [ "${CLEAN_REQUIRED}" = 1 ]; then
+		if [[ "${CLEAN_REQUIRED}" = 1 ]] ; then
 			make clean
-			# echo > /dev/null
 		fi
 
 		PHPSAPI=${x}
+
 		case ${x} in
 			cli)
 				my_conf="--enable-cli --disable-cgi"
@@ -267,14 +234,14 @@ src_compile_normal() {
 				cp sapi/cli/php php-cli
 				;;
 			cgi)
-				my_conf="${orig_conf} --disable-cli --enable-cgi --enable-fastcgi"
+				my_conf="--disable-cli --enable-cgi --enable-fastcgi"
 				enable_extension_enable "discard-path" "discard-path" 0
 				enable_extension_enable "force-cgi-redirect" "force-cgi-redirect" 0
 				php4_4-sapi_src_compile
 				cp sapi/cgi/php php-cgi
 				;;
 			apache*)
-				my_conf="${orig_conf} --disable-cli --with-apxs${USE_APACHE2}=/usr/sbin/apxs${USE_APACHE2}"
+				my_conf="--disable-cli --with-apxs${USE_APACHE2}=/usr/sbin/apxs${USE_APACHE2}"
 				php4_4-sapi_src_compile
 				;;
 		esac
@@ -313,24 +280,22 @@ src_install() {
 			apache*)
 				einfo "Installing apache${USE_APACHE2} SAPI"
 				make INSTALL_ROOT="${D}" install-sapi || die "Unable to install ${x} SAPI"
-				if [ -n "${USE_APACHE2}" ] ; then
-					einfo "Installing Apache2 config for PHP (70_mod_php.conf)"
+				if [[ -n "${USE_APACHE2}" ]] ; then
+					einfo "Installing Apache2 config file for PHP4 (70_mod_php.conf)"
 					insinto ${APACHE_MODULES_CONFDIR}
-					doins "${FILESDIR}/4-any/apache-2.0/70_mod_php.conf"
+					newins "${FILESDIR}/70_mod_php.conf-apache2" "70_mod_php.conf"
 				else
-					einfo "Installing Apache config for PHP (70_mod_php.conf)"
+					einfo "Installing Apache config file for PHP4 (70_mod_php.conf)"
 					insinto ${APACHE_MODULES_CONFDIR}
-					doins "${FILESDIR}/4-any/apache-1.3/70_mod_php.conf"
+					newins "${FILESDIR}/70_mod_php.conf-apache1" "70_mod_php.conf"
 				fi
 				php4_4-sapi_install_ini
 				;;
 		esac
 	done
-
 }
 
-pkg_postinst()
-{
+pkg_postinst() {
 	# Output some general info to the user
 	if useq apache || useq apache2 ; then
 		APACHE1_MOD_DEFINE="PHP4"

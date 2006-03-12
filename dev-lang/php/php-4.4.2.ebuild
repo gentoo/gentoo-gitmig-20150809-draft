@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.1-r3.ebuild,v 1.11 2006/03/12 13:25:34 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.2.ebuild,v 1.1 2006/03/12 13:25:34 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 # NOTE: Portage doesn't support setting PROVIDE based on the USE flags
 #		that have been enabled, so we have to PROVIDE everything for now
@@ -17,7 +17,7 @@ MY_PHP_P="php-${MY_PHP_PV}"
 PHP_PACKAGE=1
 
 # php patch settings
-PHP_PATCHSET_REV="2"
+PHP_PATCHSET_REV="1"
 HARDENEDPHP_PATCH="hardening-patch-${MY_PHP_PV}-0.4.8-gentoo.patch.gz"
 MULTILIB_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-multilib-search-path.patch"
 FASTBUILD_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-fastbuild.patch"
