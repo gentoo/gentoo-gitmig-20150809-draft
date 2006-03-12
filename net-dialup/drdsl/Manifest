@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 10e3fa485419038907a53eff46723d36 ChangeLog 639
 MD5 b9510ad1e9aee65e1ee651ebf235d958 drdsl-1.2.0.ebuild 1042
 MD5 60b4aa32a37bb1371b13035febf613aa files/digest-drdsl-1.2.0 62
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEE/OIjG8pv1lIUX4RAorlAKCkT5Fgqs7on41ihE+rdQ+M3of+AQCgr1hD
+DI/zMbeVDIzupEeF6vdYmNw=
+=fSG+
+-----END PGP SIGNATURE-----
