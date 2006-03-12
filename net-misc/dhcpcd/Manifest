@@ -1,4 +1,7 @@
-MD5 02ced41da412726a4f266437181b56be ChangeLog 12301
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b3158fda3f34a122fa79a26730aab6a9 ChangeLog 12390
 MD5 0b8b0543807996684c88f7f67415e051 dhcpcd-2.0.0.ebuild 1272
 MD5 70bf138ebfdb54b39dcdae5dde78d180 dhcpcd-2.0.1.ebuild 1220
 MD5 b86d2a0f9ca20e5f5baf21f51e122969 dhcpcd-2.0.2.ebuild 1204
@@ -9,3 +12,10 @@ MD5 19210da0e60b9354398c4e7ea04ab528 files/digest-dhcpcd-2.0.1 65
 MD5 2623762d8a86ce9318f2c17e9ceaf0f1 files/digest-dhcpcd-2.0.2 241
 MD5 a41d036000bfe2fc1757f1b08a668c73 files/digest-dhcpcd-2.0.3 65
 MD5 8f5546891831502f0667f11299937b8f metadata.xml 308
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEFFCQFdQwWVoAgN4RAl1BAKC72Jt4WirOg8jZe9LSXmyzIz5AtwCgoc/w
+7By6UdGAJf5RMnzCiJJaoZc=
+=4Xp9
+-----END PGP SIGNATURE-----
