@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5081 2006/03/12 15:05:58 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5082 2006/03/12 19:24:07 yvasilev Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1667,4 +1667,17 @@ dev-db/mergeant
 # the new layout (/usr/lib/nsbrowser/plugins)
 # and should work in both mozilla and phoenix.
 =net-www/netscape-plugger-4.0-r2
+
+# Yuri Vasilevski yvasilev@gentoo.org (11 Mar 2006)
+# Masked for testing
+>=x11-libs/libmatchbox-1.7
+>=x11-wm/matchbox-window-manager-0.9.5
+>=x11-wm/matchbox-common-0.9.1
+>=x11-wm/matchbox-panel-0.9.2
+>=x11-wm/matchbox-desktop-0.9.1
+>=x11-plugins/matchbox-applet-input-manager-0.6
+>=x11-plugins/matchbox-applet-volume-0.1
+>=x11-plugins/matchbox-applet-startup-monitor-0.1
+>=x11-misc/matchbox-panel-manager-0.1
+>=x11-themes/matchbox-themes-extra-0.3
 

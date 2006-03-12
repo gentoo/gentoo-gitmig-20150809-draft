@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1779 2006/03/12 13:12:42 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1780 2006/03/12 19:24:07 yvasilev Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1558,6 +1558,8 @@ x11-libs/evas:cairo - Build the cairo graphical engine
 x11-libs/fltk:noxft - Disables fltk; use for non-english characters
 x11-libs/goffice:cairo - Enable cairo support
 x11-libs/gtkmathview:t1lib - Enable t1lib support
+x11-libs/libmatchbox:pango - Enable pango support
+x11-libs/libmatchbox:xsettings - Enable the use of xsettings for settings management.
 x11-libs/qt:immqt - Enable binary incompatible version of immodule for Qt
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
 x11-libs/wxGTK:no_wxgtk1 - Disable gtk support. Must be used in combination with gtk2
@@ -1593,6 +1595,13 @@ x11-wm/fluxbox:disablexmb - Disable XMB. Works around bug 65186.
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
 x11-wm/icewm:silverxp - Apply ybuttons.cc.patch necessary for SilverXP theme
+x11-wm/matchbox-desktop:dnotify - Use the linux kernel directory notification feature.
+x11-wm/matchbox-desktop:startup-notification - Enable startup-notification support.
+x11-wm/matchbox-panel:dnotify - Use the linux kernel directory notification feature.
+x11-wm/matchbox-panel:lowres - Optimize for low resolution screens.
+x11-wm/matchbox-panel:startup-notification - Enable startup-notification support.
+x11-wm/matchbox-window-manager:startup-notification - Enable startup-notification support.
+x11-wm/matchbox-window-manager:xcomposite - Enable support for Xorg Composite extension
 x11-wm/openbox:pango - Enable pango support
 x11-wm/openbox:startup-notification - Enable application startup notification
 x11-wm/sawfish:pango - Enable pango support
