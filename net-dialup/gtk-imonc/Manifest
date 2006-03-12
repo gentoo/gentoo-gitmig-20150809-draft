@@ -1,4 +1,14 @@
-MD5 9e373e92a5e96e23fab1563291037800 metadata.xml 330
-MD5 b7114c59dcff8a0538e22e9ec74c2cb4 gtk-imonc-0.6.4.1.ebuild 685
-MD5 eeb3c5782bf8ca2ac33e2b692ea0dc0b ChangeLog 1877
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4cf48ad65337535b2dcd7a72f67f30e6 ChangeLog 1995
 MD5 c6305f4a9a4537c8d6734bd93495a5cf files/digest-gtk-imonc-0.6.4.1 69
+MD5 9c7554b3c7cff981c09595e19b863cd1 gtk-imonc-0.6.4.1.ebuild 673
+MD5 9e373e92a5e96e23fab1563291037800 metadata.xml 330
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEFB/hjG8pv1lIUX4RAkSyAKDdigzjnCSYZmq70Jk7crPXbuJGDwCfSFTH
+L+RB50J2Y6HGU3Ih5b7KnSo=
+=9g20
+-----END PGP SIGNATURE-----
