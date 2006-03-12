@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.17.ebuild,v 1.3 2006/02/08 21:43:58 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.17.ebuild,v 1.4 2006/03/12 13:31:29 betelgeuse Exp $
 
 inherit java eutils
 
@@ -156,7 +156,7 @@ pkg_postinst () {
 
 	if ! use X; then
 		echo
-		eerror "Some parts of Sun's JDK require X11 to be installed."
-		eerror "Be careful which Java libraries you attempt to use."
+		ewarn "Some parts of Sun's JDK require X11 to be installed."
+		ewarn "Be careful which Java libraries you attempt to use."
 	fi
 }
