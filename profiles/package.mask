@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5078 2006/03/12 04:34:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5079 2006/03/12 13:10:20 allanonjl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,92 @@
 ##
 ##   End example
 ##
+
+# John N. Laliberte <allanonjl@gentoo.org> (12 Mar 2006)
+# GNOME 2.14 mask. You must follow instructions here:
+# http://d.g.o/~allanonjl/gnome/2.13/adding.from.overlay.txt
+# for adding files from our overlay.
+# Start GNOME 2.14 mask
+>=gnome-base/gconf-2.13
+>=gnome-base/orbit-2.13
+>=gnome-extra/at-spi-1.7
+>=dev-libs/atk-1.11
+>=gnome-base/gail-1.8.10
+>=dev-libs/glib-2.10
+>=gnome-base/gnome-vfs-2.13
+>=x11-libs/gtk+-2.8.14
+>=dev-util/gtk-doc-1.5
+>=gnome-base/libbonobo-2.13
+>=gnome-base/libbonoboui-2.13
+>=gnome-base/libgnome-2.13
+>=gnome-base/libgnomeui-2.13
+>=x11-libs/pango-1.11
+>=gnome-extra/bug-buddy-2.13
+>=gnome-base/control-center-2.13
+>=app-accessibility/dasher-3.99
+>=gnome-extra/deskbar-applet-2.13
+>=gnome-base/eel-2.13
+>=net-im/ekiga-1.99
+>=media-gfx/eog-2.13
+>=www-client/epiphany-1.9
+# do not forget about -extensions.
+>=www-client/epiphany-extensions-1.9
+>=mail-client/evolution-2.5
+>=gnome-extra/evolution-data-server-1.5
+>=gnome-extra/evolution-exchange-2.5
+>=gnome-extra/evolution-webcal-2.5
+>=gnome-extra/fast-user-switch-applet-2.13
+>=app-arch/file-roller-2.13
+>=gnome-extra/gcalctool-5.7
+>=gnome-extra/gconf-editor-2.13
+>=gnome-base/gdm-2.13
+>=app-editors/gedit-2.13
+>=gnome-base/gnome-applets-2.13
+>=x11-themes/gnome-backgrounds-2.13
+>=gnome-base/gnome-desktop-2.13
+>=app-text/gnome-doc-utils-0.5
+>=gnome-extra/gnome-games-2.13
+>=x11-themes/gnome-icon-theme-2.14
+>=gnome-base/gnome-keyring-0.4.8
+>=gnome-extra/gnome-media-2.13
+>=gnome-base/gnome-menus-2.13
+>=net-analyzer/gnome-nettool-2.13
+>=gnome-base/gnome-panel-2.13
+>=gnome-extra/gnome-screensaver-2.13
+# speech-tools and festival do not compile with gcc 4.1
+>=app-accessibility/gnome-speech-0.3.10
+>=gnome-extra/gnome-system-monitor-2.13
+>=app-admin/gnome-system-tools-2.13
+>=x11-terms/gnome-terminal-2.13
+>=x11-themes/gnome-themes-2.13
+>=gnome-extra/gnome2-user-docs-2.13
+>=gnome-extra/gnome-utils-2.13
+>=gnome-base/gnome-volume-manager-1.5.14
+>=app-accessibility/gnopernicus-1.0
+>=app-accessibility/gok-1.0.6
+# remember, they are using the 2.6 series for 2.14
+# so don't put this in the tree.
+>=x11-themes/gtk-engines-2.7
+>=gnome-extra/gtkhtml-3.9
+>=x11-libs/gtksourceview-1.5
+>=gnome-extra/gucharmap-1.5
+>=gnome-base/libgtop-2.13
+>=gnome-base/librsvg-2.14
+>=net-libs/libsoup-2.2.91
+>=x11-libs/wnck-2.13
+>=x11-wm/metacity-2.13
+>=gnome-base/nautilus-2.13
+>=gnome-extra/nautilus-cd-burner-2.13
+>=media-sound/sound-juicer-2.13
+>=media-video/totem-1.3
+>=net-misc/vino-2.13
+>=x11-libs/vte-0.11.20
+>=gnome-extra/yelp-2.13
+>=gnome-extra/zenity-2.13
+>=dev-cpp/glibmm-2.9
+>=dev-cpp/libxmlpp-2.13
+>=dev-python/pyorbit-2.13
+# End GNOME 2.14 mask
 
 # Michael Sterrett <mr_bones_@gentoo.org> (11 Mar 2006)
 # masked due to security issues: bug #125647
