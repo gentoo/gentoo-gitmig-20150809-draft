@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dial/dial-1.2.ebuild,v 1.7 2005/10/04 18:10:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dial/dial-1.2.ebuild,v 1.8 2006/03/12 09:57:17 mrness Exp $
 
 inherit eutils
 
@@ -13,15 +13,13 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/libc"
-RDEPEND="${DEPEND}
-	net-dialup/dwun"
+RDEPEND="net-dialup/dwun"
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc3.3.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc3.3.patch"
 }
 
 src_compile() {
