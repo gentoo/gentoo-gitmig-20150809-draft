@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3kult/mp3kult-0.7-r2.ebuild,v 1.2 2005/09/04 10:38:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3kult/mp3kult-0.7-r2.ebuild,v 1.3 2006/03/12 13:53:22 flameeyes Exp $
+
+inherit flag-o-matic
 
 IUSE=""
 
@@ -37,7 +39,7 @@ src_compile() {
 	# things that should access the real homedir
 	[[ -d "$REALHOME/.ccache" ]] && ln -sf "$REALHOME/.ccache" "$HOME/"
 
-	export LDFLAGS="-lssl"
+	append-ldflags -lssl
 	econf || die
 	emake || die
 }

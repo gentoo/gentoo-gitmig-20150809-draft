@@ -1,6 +1,9 @@
-MD5 642e842f0b8c3b5ad3c40edbf7deea57 ChangeLog 1087
-RMD160 6ec45834e53e0427af154fb70ab632951edfd9d4 ChangeLog 1087
-SHA256 d5991a1df326fac3a4ff9fe75835ec4cfe362766630fe2d400eb39a4d97285cd ChangeLog 1087
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3d2d0c72890ca0960988fb904e6322c2 ChangeLog 1190
+RMD160 67342e21a8dbe791119df9e6e90f1775536f3daf ChangeLog 1190
+SHA256 e2e3fff4938dea2b756d2663621c0d108ac2c4b66ec10e653726ada164b846c1 ChangeLog 1190
 MD5 7b989c066e996f89f577698ff23a71ed files/digest-mp3kult-0.7-r1 63
 RMD160 3829c309dad9ed9eef6a14904db154d11a7f87bf files/digest-mp3kult-0.7-r1 63
 SHA256 7cff02fab44fccad217bd351ae922bd5f315ca5930b589907de6a8bbc9e29f7d files/digest-mp3kult-0.7-r1 63
@@ -16,9 +19,16 @@ SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata
 MD5 345a61e8b9807860f5d029d4219895df mp3kult-0.7-r1.ebuild 894
 RMD160 c2dedb25a956af640aec3c92fe2274a95992031a mp3kult-0.7-r1.ebuild 894
 SHA256 e6dcbddd33cb642aade16bbe8eaf374666be84c52dae500b5e2af422233d5029 mp3kult-0.7-r1.ebuild 894
-MD5 d5961a558aa43f5438f74222062f1497 mp3kult-0.7-r2.ebuild 1368
-RMD160 a8f036a3f10177c0572795f5da0202c18bda17a9 mp3kult-0.7-r2.ebuild 1368
-SHA256 0bd91445f29ac7e85aa095c847b4182ff5b243288f5c596d205deed0d7c30e0f mp3kult-0.7-r2.ebuild 1368
+MD5 f65974b613be7f17b879d9a5d85badf7 mp3kult-0.7-r2.ebuild 1388
+RMD160 5bbb3163fdcb85ea2700abdbac1a78d5537752ef mp3kult-0.7-r2.ebuild 1388
+SHA256 c327542a9094af7da0851caddd50ae2482c9bb5ee352caac7b3c36a1b6fcd000 mp3kult-0.7-r2.ebuild 1388
 MD5 bcac1e0dfcac84c2f2ae3c5f478d61b0 mp3kult-0.7-r3.ebuild 602
 RMD160 e6269b7f6cba6803d2f8894cb4155a02bdb96679 mp3kult-0.7-r3.ebuild 602
 SHA256 91ea57a63dee711e5b71a2fcac7c3a85ff9b050abca454232bde9de41acc5cbf mp3kult-0.7-r3.ebuild 602
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEFCfNAiZjviIA2XgRAqd/AJ4v8UAwTxioJGquB/XxGgiEJvrVjwCgvWYK
+Ps85El+qlcFuMZmyqa5+p3Q=
+=+gjQ
+-----END PGP SIGNATURE-----
