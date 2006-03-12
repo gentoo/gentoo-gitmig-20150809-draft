@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.1 2006/02/22 21:43:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.2 2006/03/12 11:31:03 mrness Exp $
 
 inherit linux-mod eutils rpm
 
@@ -17,9 +17,10 @@ LICENSE="LGPL-2"
 KEYWORDS="~x86 ~amd64 -*"
 IUSE="unicode"
 SLOT="0"
-S=${WORKDIR}
 
 RDEPEND=">=net-dialup/capi4k-utils-20040810"
+
+S="${WORKDIR}"
 
 pkg_setup() {
 	use x86 && FCDSL_MODULES=("fcdsl2" "fcdslsl" "fcdslusb" "fcdslslusb" "fcdslusb2"
@@ -61,24 +62,24 @@ pkg_setup() {
 		done
 	fi
 	BUILD_TARGETS="all"
-	BUILD_PARAMS="KDIR=${KV_DIR} LIBDIR=${S}"
+	BUILD_PARAMS="KDIR='${KV_DIR}' LIBDIR='${S}'"
 }
 
 src_unpack() {
-	use x86 && rpm_unpack ${DISTDIR}/km_${P/2.6./2.6-}.i586.rpm
-	use amd64 && rpm_unpack ${DISTDIR}/km_${P/2.6./2.6-}.x86_64.rpm
+	local rpm_archive
+	for rpm_archive in ${A} ; do
+		rpm_unpack "${DISTDIR}/${rpm_archive}" || die "failed to unpack ${rpm_archive} file"
+	done
 
-	use x86 && rpm_unpack ${DISTDIR}/avm_${P/2.6./2.6-}.i586.rpm
-	use amd64 && rpm_unpack ${DISTDIR}/avm_${P/2.6./2.6-}.x86_64.rpm
-
+	cd "${S}"
 	mv usr/src/kernel-modules/fcdsl/src/src.fcdslusb1 \
 		usr/src/kernel-modules/fcdsl/src/src.fcdslusb
 
 	if use x86; then
 		for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
 			cd usr/src/kernel-modules/fcdsl/src/src.${FCDSL_MODULES[CARD]}
-			[ -f ${FILESDIR}/${FCDSL_MODULES[CARD]}.diff ] && epatch ${FILESDIR}/${FCDSL_MODULES[CARD]}.diff
-			cd ${S}
+			[ -f "${FILESDIR}/${FCDSL_MODULES[CARD]}.diff" ] && epatch "${FILESDIR}/${FCDSL_MODULES[CARD]}.diff"
+			cd "${S}"
 		done
 	fi
 
@@ -104,7 +105,7 @@ src_install() {
 		fi
 
 		insinto /lib/firmware/isdn
-		doins ${WORKDIR}/lib/firmware/isdn/${FCDSL_FIRMWARES[CARD]}
+		doins "${WORKDIR}/lib/firmware/isdn/${FCDSL_FIRMWARES[CARD]}"
 	done
 
 	insinto /etc/drdsl
@@ -169,8 +170,8 @@ detect_fcdsl_card() {
 		for BUS_ID in ${BUS_IDS}; do
 			if [ "${BUS_ID}" == "${FCDSL_IDS[CARD]}" ]; then
 				einfo "Found: ${FCDSL_NAMES[CARD]}"
-				FCDSL_FIRMWARE=${FCDSL_FIRMWARES[CARD]}
-				FCDSL_MODULE=${FCDSL_MODULES[CARD]}
+				FCDSL_FIRMWARE="${FCDSL_FIRMWARES[CARD]}"
+				FCDSL_MODULE="${FCDSL_MODULES[CARD]}"
 			fi
 		done
 	done
@@ -238,7 +239,7 @@ pkg_config() {
 				readpassword FCDSL_PASSWORD
 				echo '"'${FCDSL_USER}'" * "'${FCDSL_PASSWORD}'"' >>/etc/ppp/pap-secrets
 				unset FCDSL_PASSWORD
-				cat <<EOF >/etc/ppp/peers/${FCDSL_PROVIDER}
+				cat <<EOF >"/etc/ppp/peers/${FCDSL_PROVIDER}"
 connect ""
 ipcp-accept-remote
 ipcp-accept-local

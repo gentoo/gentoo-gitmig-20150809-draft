@@ -1,33 +1,21 @@
-MD5 334b332d91377e60da10e88467f03974 ChangeLog 4141
-RMD160 eefa32558a6ac5b336ad63779e1f47ab9b4c38eb ChangeLog 4141
-SHA256 98a5964713da8179dba4b92675326d583b9fcc4341202cd11c7112c2507005e0 ChangeLog 4141
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ebb5d1ba9ac674ff4c99c773766ee4f6 ChangeLog 4272
 MD5 0982f7b0c52fbeb78c2639512a38d4f3 fcdsl-2.6.20.7-r5.ebuild 7877
-RMD160 c1c98a030a614c9155a7430d9422f7dd50917473 fcdsl-2.6.20.7-r5.ebuild 7877
-SHA256 9c2ff34ebc76ee11e62b7f505bafe3f6dacc69607bc024488aed23fc660bc3fb fcdsl-2.6.20.7-r5.ebuild 7877
 MD5 148f263dda7f3624f16da4775621994b fcdsl-2.6.30.ebuild 8516
-RMD160 45a7314547a93edc491a202dfe1e931bc97a5526 fcdsl-2.6.30.ebuild 8516
-SHA256 859ea26741d55b4bce67761da8dad516808a8dccff3934244a7f4b1cc7d4ec1f fcdsl-2.6.30.ebuild 8516
-MD5 027b25a6e6259d5cafd715573e99e00f fcdsl-2.6.37.ebuild 7989
-RMD160 d3c6d72edf85d6cc9cb48a4c7ffd8755ebfa2ede fcdsl-2.6.37.ebuild 7989
-SHA256 78fd4e1a812c48536bf0ff38ee5b049f7034941eefc1472f9031458bac927c7d fcdsl-2.6.37.ebuild 7989
+MD5 90b3b5be88bd2c258df94ca649ef1760 fcdsl-2.6.37.ebuild 7907
 MD5 7d0d40b4547c891577925915b046cffc files/digest-fcdsl-2.6.20.7-r5 381
-RMD160 a06205a89ef0bc2a41c2a0771f04d5952af41d75 files/digest-fcdsl-2.6.20.7-r5 381
-SHA256 74a1afafe4f14438cf1901ed76bd0cac3afe05cf944b917c59efa5e7f6a8d2da files/digest-fcdsl-2.6.20.7-r5 381
 MD5 dab3e4adbbff865b35f3dce666fc454a files/digest-fcdsl-2.6.30 525
-RMD160 dcb6d62bbcc6e3331b50e256d254eeb282a1f76f files/digest-fcdsl-2.6.30 525
-SHA256 e7fd3baa3ff27ae3b504986d9f62fe83d916e9fe85892a1c48db82dfa3ae7f8f files/digest-fcdsl-2.6.30 525
-MD5 e41c4dcf268ff09e5857f2c60e586cbc files/digest-fcdsl-2.6.37 1042
-RMD160 d492ceb309343268216cdad8a1f78731fb32e0ba files/digest-fcdsl-2.6.37 1042
-SHA256 9a82e617c81de5fd9ccdffa972127d6f4a4cbc6b1dbba90df5f6d567ec720c3d files/digest-fcdsl-2.6.37 1042
+MD5 c0b3cc92d24bdd968271801fd0ec9f63 files/digest-fcdsl-2.6.37 286
 MD5 22a65f3dcb8b67dc53a23ef35886bf18 files/fcdsl.diff 4636
-RMD160 cbb6808cc70d914352153ffa38971f331977c432 files/fcdsl.diff 4636
-SHA256 6e30c6dd4f5e00f519b738c704171be15c7d8721fdce18a801b54fc62be9bb8c files/fcdsl.diff 4636
 MD5 4d073842f89f61ce68ae5ee7ac100d70 files/fcdsl2.diff 1867
-RMD160 a18821ffd68c63624e7e3b51b7306ba4a362f937 files/fcdsl2.diff 1867
-SHA256 1a9b844401810f124081da49432be11f1e7b2536cba6dbedb1b8a5d500b146f9 files/fcdsl2.diff 1867
 MD5 776e0c65eda5432a30f9beae8896ca97 files/fcdslsl.diff 1896
-RMD160 3025a672f4d21d2aa0456c224ddc7c97f1a18b44 files/fcdslsl.diff 1896
-SHA256 461cd3841d888275fe823f185c4cd8caafdae2e772ecac7b259a323e09b0e5d3 files/fcdslsl.diff 1896
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-RMD160 df94c60cc0bb7abe5913b464a33966b142b2fe1e metadata.xml 163
-SHA256 1137a0fd866641cf719b0c2e9e77ca9fa4541a42f2cc851fe4659cf2677acca3 metadata.xml 163
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEFAaIjG8pv1lIUX4RAqD6AKCgm1qxFB2QA6QJTof3hcJjY9++NgCg0Or0
+VmPzjJ8bWmG4wxIlGR0EBrY=
+=4Sek
+-----END PGP SIGNATURE-----
