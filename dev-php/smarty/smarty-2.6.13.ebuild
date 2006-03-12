@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.12.ebuild,v 1.1 2006/02/28 22:06:58 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.13.ebuild,v 1.1 2006/03/12 14:23:37 tomk Exp $
 
 inherit php-lib-r1
 
@@ -25,7 +25,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	# install to /usr/share/php/smarty, fixes bug #121952
 	einfo "${PHP_LIB_NAME} has been installed in /usr/share/php/${PHP_LIB_NAME}/."
 	einfo "To use it in your scripts, either"
 	einfo "1. define('SMARTY_DIR', \"/usr/share/php/${PHP_LIB_NAME}/\") in your scripts, or"
