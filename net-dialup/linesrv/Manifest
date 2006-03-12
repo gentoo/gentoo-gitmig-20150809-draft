@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2bc3603f3482aaa757ddcf7fe713bf03 ChangeLog 3533
+MD5 ac1df6cd55e8b2f8a240e3a582548f7b ChangeLog 3580
 MD5 2151cc793fd154ea019536d367c41d62 files/digest-linesrv-2.1.21-r1 71
 MD5 6ab46c52f9780b5929b76d590a5ecfdf files/lcshutdown.pam 288
 MD5 0616e8f26f040ffe8201402367a307e9 files/linecontrol.pam 313
 MD5 206f81642df836e930dc08fd15b1c0f2 files/linesrv.conf 1278
 MD5 b515ba3a84a7a9e6a58e1e8e3ba42b53 files/linesrv.rc6 651
-MD5 b3a07d8ecba8bc5982962eafe78d9508 linesrv-2.1.21-r1.ebuild 2935
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 181b8e31b84eec34c1d0cdc92ccfd239 linesrv-2.1.21-r1.ebuild 2934
+MD5 fbb4a536263b87c3346ee3d2e638a957 metadata.xml 465
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEFE2TjG8pv1lIUX4RAianAJsF8XC3qK4QjIQFR7Cv9rF7FXbhOwCg1w3l
-tzp2nhJa/X2FrXx2PUAfsIk=
-=mzwU
+iD8DBQFEFFB2jG8pv1lIUX4RAsgqAKCk76o/Ez1wRJP2qYjvpDoDz+DMUACfecx+
+ThyUV2Ahk9oRXPsgURh3GNs=
+=iYvo
 -----END PGP SIGNATURE-----

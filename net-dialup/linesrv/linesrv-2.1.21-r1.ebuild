@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.21-r1.ebuild,v 1.5 2006/03/12 16:34:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.21-r1.ebuild,v 1.6 2006/03/12 16:46:30 mrness Exp $
 
 inherit webapp flag-o-matic
 
@@ -35,7 +35,7 @@ src_unpack() {
 		"${S}/lclog/lclog.c" \
 		"${S}/htmlstatus/htmlstatus.c"
 	sed -i -e 's:^CFLAGS *=:CFLAGS = @CFLAGS@:' \
-		"${S}/server/Makefile.in" #set user CFLAGS 
+		"${S}/server/Makefile.in" #set user CFLAGS
 }
 
 src_compile() {
