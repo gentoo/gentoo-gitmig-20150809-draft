@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r1.ebuild,v 1.9 2005/09/19 21:14:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r1.ebuild,v 1.10 2006/03/12 10:05:59 mrness Exp $
 
 # You need SLIP in your kernel to run diald.
 
@@ -22,8 +22,8 @@ RDEPEND="net-dialup/ppp"
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/${P}-c-files.patch
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch "${FILESDIR}/${P}-c-files.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
 
 src_compile() {
@@ -40,7 +40,7 @@ src_compile() {
 src_install() {
 	dodir /etc/pam.d
 	make \
-		DESTDIR=${D} \
+		DESTDIR="${D}" \
 		sysconfdir=/etc \
 		bindir=/usr/bin \
 		sbindir=/usr/sbin \
@@ -49,17 +49,17 @@ src_install() {
 		BINGRP=root \
 		ROOTUID=root \
 		ROOTGRP=root \
-		install || die
+		install || die "make failed"
 
 	dodir /var/cache/diald
-	mknod -m 0660 ${D}/var/cache/diald/diald.ctl p
+	mknod -m 0660 "${D}/var/cache/diald/diald.ctl" p
 
 	dodoc BUGS CHANGES LICENSE NOTES README* \
 		THANKS TODO TODO.budget doc/diald-faq.txt
-	docinto setup ; cp -pPR setup/* ${D}/usr/share/doc/${PF}/setup
-	docinto contrib ; cp -pPR contrib/* ${D}/usr/share/doc/${PF}/contrib
+	docinto setup ; cp -pPR setup/* "${D}/usr/share/doc/${PF}/setup"
+	docinto contrib ; cp -pPR contrib/* "${D}/usr/share/doc/${PF}/contrib"
 	prepalldocs
 
-	insinto /etc/diald ; doins ${FILESDIR}/{diald.conf,diald.filter}
-	exeinto	/etc/init.d ; newexe ${FILESDIR}/diald-init diald
+	insinto /etc/diald ; doins "${FILESDIR}"/{diald.conf,diald.filter}
+	newinitd "${FILESDIR}/diald-init" diald
 }
