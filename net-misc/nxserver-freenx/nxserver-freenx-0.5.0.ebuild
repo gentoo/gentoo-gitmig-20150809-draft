@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.5.0.ebuild,v 1.2 2006/03/05 15:30:42 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.5.0.ebuild,v 1.3 2006/03/12 22:04:57 swegener Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="commercial"
 DEPEND="virtual/ssh
 	dev-tcltk/expect
 	net-analyzer/gnu-netcat
-	x86? ( commercial? ( >=net-misc/nxclient-1.4* )
+	x86? ( commercial? ( >=net-misc/nxclient-1.4 )
 	      !commercial? ( !net-misc/nxclient ) )
 	!x86? ( !net-misc/nxclient )
 	>=net-misc/nxproxy-1.4.0
