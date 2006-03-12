@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e55ef85b533171a31a92f5f7db2dbdd9 ChangeLog 7160
 RMD160 59e5e68b7a37a245e6f266880a76a7027d694e5c ChangeLog 7160
 SHA256 77a494540bd7cf9d65d8dcdffc5ddecfedfe3ee7f6ad3761a707ffb40d175701 ChangeLog 7160
@@ -13,12 +16,19 @@ SHA256 99253c4e2f8edbc9051f532d47104d83eb15bd36b4b889666bc0ce3ac27142d2 files/di
 MD5 5530b51e2aabfdddb68f05ba69c95171 libprelude-0.8.10-r1.ebuild 1099
 RMD160 af673175ecc44d1d0cafca839339c4f160a67b07 libprelude-0.8.10-r1.ebuild 1099
 SHA256 a5f1006cbb14497fdea0389486b3f0d1b0919648efa645f18c08d2696f8129b0 libprelude-0.8.10-r1.ebuild 1099
-MD5 5b6988ed82d29c687b04e7e6e8defe96 libprelude-0.9.3.ebuild 1339
-RMD160 0a6102cfa1c9aaccba422a33406d29dbcf0680f3 libprelude-0.9.3.ebuild 1339
-SHA256 afeb24d48aaabd7ff5dc0f1dace91efbf91c9f9540f36ae8d4e209196ec72bf5 libprelude-0.9.3.ebuild 1339
-MD5 603fb9f1344a742b03bcc5a74947646a libprelude-0.9.5.ebuild 1346
-RMD160 b646759f4a00413526850e63fe636318dd4fd706 libprelude-0.9.5.ebuild 1346
-SHA256 82b8998c8f0fa60ca86ea3d403c00ed24b0567848f9e655f7e40a2306c7ac4aa libprelude-0.9.5.ebuild 1346
+MD5 b768969536ddaa90a44fd625944109a4 libprelude-0.9.3.ebuild 1342
+RMD160 80b09c610a424f3b494afc7c1e2adeb6af949cac libprelude-0.9.3.ebuild 1342
+SHA256 5daa2d81bf5981ee4a0c1636584237d801deadfe6c7b2da451b111261f79941d libprelude-0.9.3.ebuild 1342
+MD5 ebd27fc424524ba35c0ebca22d90d090 libprelude-0.9.5.ebuild 1347
+RMD160 26326e719c7a390adda5fb2c97440a84fd6c4288 libprelude-0.9.5.ebuild 1347
+SHA256 0335f9ffaf9edea1b375a49793d3f389b4dd5351604fd09a886c002cccaa75ac libprelude-0.9.5.ebuild 1347
 MD5 58ac7b9f0648503cb1ef46d0e5c96a12 metadata.xml 224
 RMD160 ec0703b722f1640cff2d02757c9a4bece8d0797b metadata.xml 224
 SHA256 30cfdb9fdbd035694277f50307c0668ccffa7e2b49a9b93233cfba52d5887cfb metadata.xml 224
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEE9BF2+ySkm8kpY0RAqXlAJ9YDVAH47h8gKcfQUGD3S6YL/y1HgCfd1wj
+8pTGpC8nqomSwMY/tmdF12Y=
+=iyXt
+-----END PGP SIGNATURE-----
