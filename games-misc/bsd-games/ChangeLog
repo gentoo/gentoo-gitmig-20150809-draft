@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/bsd-games
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.16 2005/08/17 03:12:49 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.17 2006/03/12 22:50:12 mr_bones_ Exp $
+
+  12 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  bsd-games-2.17.ebuild:
+  needs miscfiles for /usr/share/dict/words - patch submitted by Nicholas Doyle
+  via bug #124223
 
   17 Aug 2005; Mike Frysinger <vapier@gentoo.org>
   +files/bsd-games-2.17-64bit.patch, -files/2.17-64bit.patch,
