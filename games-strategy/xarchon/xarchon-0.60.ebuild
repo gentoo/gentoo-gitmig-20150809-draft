@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xarchon/xarchon-0.60.ebuild,v 1.8 2005/05/01 18:11:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xarchon/xarchon-0.60.ebuild,v 1.9 2006/03/12 23:43:50 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -12,23 +12,20 @@ SRC_URI="ftp://ftp.seul.org/pub/xarchon/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="ppc x86"
 IUSE="esd joystick" # also has qt support but it fails :/
 
-RDEPEND="virtual/x11
-	=x11-libs/gtk+-1*
+DEPEND="=x11-libs/gtk+-1*
 	<dev-util/glade-2
 	esd? ( media-sound/esound )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${WORKDIR}/${P}-gtk.patch"
 	sed -i \
 		-e 's:gtk12-config:gtk-config:' configure \
-			|| die "sed configure failed"
+		|| die "sed configure failed"
 }
 
 src_compile() {
@@ -41,7 +38,7 @@ src_compile() {
 		$(use_enable joystick) \
 		--with-default-gtk \
 		${mysndconf} \
-			|| die
+		|| die
 	emake || die "emake failed"
 }
 
