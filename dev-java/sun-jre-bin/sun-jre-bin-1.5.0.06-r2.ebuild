@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.06-r2.ebuild,v 1.1 2006/01/20 01:17:43 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.06-r2.ebuild,v 1.2 2006/03/12 13:32:34 betelgeuse Exp $
 
 inherit java eutils
 
@@ -203,7 +203,11 @@ pkg_postinst() {
 		ewarn "can be given by #gentoo-hardened + hardened@gentoo.org"
 	fi
 
+	if ! use X; then
+		local xwarn="virtual/x11 and/or"
+	fi
+
 	echo
-	eerror "Some parts of Sun's JRE require virtual/x11 and virtual/lpr to be installed."
-	eerror "Be careful which Java libraries you attempt to use."
+	ewarn "Some parts of Sun's JRE require ${xwarn} virtual/lpr to be installed."
+	ewarn "Be careful which Java libraries you attempt to use."
 }

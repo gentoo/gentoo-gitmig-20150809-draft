@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.10.ebuild,v 1.6 2006/01/14 23:16:35 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.10.ebuild,v 1.7 2006/03/12 13:32:34 betelgeuse Exp $
 
 inherit java eutils
 
@@ -165,7 +165,9 @@ pkg_postinst () {
 		ewarn "can be given by #gentoo-hardened + hardened@gentoo.org"
 	fi
 
-	echo
-	eerror "Some parts of Sun's JDK require virtual/x11 to be installed."
-	eerror "Be careful which Java libraries you attempt to use."
+	if ! use X; then
+		echo
+		ewarn "Some parts of Sun's JDK require virtual/x11 to be installed."
+		ewarn "Be careful which Java libraries you attempt to use."
+	fi
 }
