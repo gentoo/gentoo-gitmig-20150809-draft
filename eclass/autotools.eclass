@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.31 2006/03/08 19:51:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.32 2006/03/12 16:47:55 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -55,7 +55,7 @@ eautoreconf() {
 	for x in $(autotools_get_subdirs); do
 		if [[ -d ${x} ]] ; then
 			cd "${x}"
-			eautoreconf
+			AT_NOELIBTOOLIZE="yes" eautoreconf
 			cd "${pwd}"
 		fi
 	done
@@ -69,6 +69,8 @@ eautoreconf() {
 
 	# Normally run by econf()
 	[[ ${AT_GNUCONF_UPDATE} == "yes" ]] && gnuconfig_update
+
+	[[ ${AT_NOELIBTOOLIZE} == "yes" ]] && return 0
 
 	# Call it here to prevent failures due to elibtoolize called _before_
 	# eautoreconf.
