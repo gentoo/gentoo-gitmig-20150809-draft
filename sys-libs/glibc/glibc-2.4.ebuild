@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.6 2006/03/12 11:22:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.7 2006/03/12 17:57:11 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -1168,22 +1168,23 @@ src_unpack() {
 
 	# Backwards SSP support
 	cd "${S}"
-	if ! type -p scanelf > /dev/null ; then
-		einfon "Scanning system for __guard to see if we need SSP compat ... "
-		if [[ -n $(scanelf -qyls__guard -F'#s%F' | grep -v '^/lib.*/libc-2.*.so$') ]] ; then
-			echo "yes" > "${T}"/.ssp.compat
-		else
-			# ok, a quick scan didnt find it, so lets do a deep scan ...
-			if [[ -n $(scanelf -qyRlps__guard -F'#s%F' | grep -v '^/lib.*/libc-2.*.so$') ]] ; then
-				echo "yes" > "${T}"/.ssp.compat
-			else
-				echo "no" > "${T}"/.ssp.compat
-			fi
-		fi
-		cat "${T}"/.ssp.compat
-	else
+# For now, we force everyone to have the extra symbols
+#	if ! type -p scanelf > /dev/null ; then
+#		einfon "Scanning system for __guard to see if we need SSP compat ... "
+#		if [[ -n $(scanelf -qyls__guard -F'#s%F' | grep -v '^/lib.*/libc-2.*.so$') ]] ; then
+#			echo "yes" > "${T}"/.ssp.compat
+#		else
+#			# ok, a quick scan didnt find it, so lets do a deep scan ...
+#			if [[ -n $(scanelf -qyRlps__guard -F'#s%F' | grep -v '^/lib.*/libc-2.*.so$') ]] ; then
+#				echo "yes" > "${T}"/.ssp.compat
+#			else
+#				echo "no" > "${T}"/.ssp.compat
+#			fi
+#		fi
+#		cat "${T}"/.ssp.compat
+#	else
 		echo "yes" > "${T}"/.ssp.compat
-	fi
+#	fi
 
 	case $(tc-arch) in
 		#alpha)
