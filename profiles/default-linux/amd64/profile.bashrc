@@ -60,6 +60,7 @@ if [[ ${EBUILD_PHASE} == "setup" ]]; then
 		ewarn ""
 		ewarn "Before you file a bug please remove these flags and "
 		ewarn "re-compile the package in question as well as all its dependencies"
+		sleep 5
 	fi
 fi
 unset trigger broken_flag
