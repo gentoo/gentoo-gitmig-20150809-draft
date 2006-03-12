@@ -1,0 +1,11 @@
+diff -u -r1.11 -r1.12
+--- src/mesa/drivers/dri/r200/r200_texmem.c	2005/02/10 22:36:06	1.11
++++ src/mesa/drivers/dri/r200/r200_texmem.c	2005/08/25 03:38:07	1.12
+@@ -427,7 +427,7 @@
+ 	    fprintf(stderr, "DRM_RADEON_TEXTURE:  again!\n");
+ 	 usleep(1);
+       }
+-   } while ( ret && errno == EAGAIN );
++   } while ( ret == -EAGAIN );
+ 
+    UNLOCK_HARDWARE( rmesa );

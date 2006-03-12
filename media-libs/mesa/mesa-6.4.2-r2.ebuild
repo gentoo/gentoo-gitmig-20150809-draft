@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2-r1.ebuild,v 1.2 2006/02/28 01:28:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2-r2.ebuild,v 1.1 2006/03/12 18:18:51 joshuabaergen Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -91,6 +91,21 @@ src_unpack() {
 	epatch ${FILESDIR}/6.4-multilib-fix.patch
 	epatch ${FILESDIR}/64bit-fix-have-dix-config.patch
 	epatch ${FILESDIR}/64bit-fix-indirect-vertex-array.patch
+
+	# Problem triggered by croquet 0.3 - bug #125004
+	epatch ${FILESDIR}/radeon-texture-problem.patch
+
+	# Don't compile debug code with USE=-debug - bug #125004
+	if ! use debug; then
+	   einfo "Removing DO_DEBUG defs in dri drivers..."
+	   find src/mesa/drivers/dri -name *.[hc] -exec egrep -l "\#define\W+DO_DEBUG\W+1" {} \; | xargs sed -i -re "s/\#define\W+DO_DEBUG\W+1/\#define DO_DEBUG 0/" ;
+	fi
+
+
+	# Fix dprintf issues with sys-libs/glibc-2.4, see bug #125806.
+	einfo "sed for dprintf to __mesa_dprintf..."
+	sed -i -e "s:dprintf:__mesa_dprintf:g" $(grep dprintf src/glu/sgi/* -rl) \
+		|| die "sed for dprintf to __mesa_dprintf failed. :("
 
 	# Set default dri drivers directory
 	echo "DEFINES += -DDEFAULT_DRIVER_DIR='\"/usr/$(get_libdir)/xorg/modules/dri\"'" >> ${HOSTCONF}
