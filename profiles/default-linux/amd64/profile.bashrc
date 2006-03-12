@@ -62,5 +62,5 @@ if [[ ${EBUILD_PHASE} == "setup" ]]; then
 		ewarn "re-compile the package in question as well as all its dependencies"
 		sleep 5
 	fi
-fi
 unset trigger broken_flag
+fi
