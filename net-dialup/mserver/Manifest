@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4392fdd9fa48d238947849de962a4ec3 ChangeLog 1063
+MD5 74e5b12b159f502e5bee6e57420c7c78 ChangeLog 1199
 MD5 946947bd8b3bb6e5521f666607498293 files/digest-mserver-0.5.5-r1 67
 MD5 946947bd8b3bb6e5521f666607498293 files/digest-mserver-0.5.5-r2 67
 MD5 7ec81b751992ca8b635dbe7b983be07c files/mserver-0.5.5-errno.patch 344
@@ -9,11 +9,11 @@ MD5 d14ac2b2c6a89fa068a56a9cefe007fb files/mserver-0.5.5-gcc4.patch 3310
 MD5 b989a733671e0f1d0fe9ecf07d25f548 files/mserver-init 683
 MD5 ab5275dadb8d579eb9204b98af8fe62f metadata.xml 269
 MD5 98c1afb05da798654bb856057daf8da6 mserver-0.5.5-r1.ebuild 1126
-MD5 dea38d2d50d34b27e320b3caf656c2a1 mserver-0.5.5-r2.ebuild 1051
+MD5 0b26039888615acf0c49fcc76ce12c45 mserver-0.5.5-r2.ebuild 1042
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD6jifjG8pv1lIUX4RAkoqAKCyloaFjadmmSPlBMDWF17/5foCRQCfVPTK
-XsoQmvIm24gvv8NUcRdHU2M=
-=Uu0S
+iD8DBQFEFGk4jG8pv1lIUX4RAploAJ4wec/sEnDet1hqCMJMGFX+oM76BQCgvdJt
+RIuC5xd8QpJVgxevTrNFyUk=
+=yK90
 -----END PGP SIGNATURE-----

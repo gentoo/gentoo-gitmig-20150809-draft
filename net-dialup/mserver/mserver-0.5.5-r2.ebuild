@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/mserver-0.5.5-r2.ebuild,v 1.1 2006/02/08 18:29:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/mserver-0.5.5-r2.ebuild,v 1.2 2006/03/12 18:32:08 mrness Exp $
 
 inherit eutils
 
@@ -10,11 +10,12 @@ SRC_URI="http://cpwright.com/mserver/download/c-${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="sys-libs/pam"
-RDEPEND="net-dialup/ppp"
+RDEPEND="${DEPEND}
+	net-dialup/ppp"
 
 src_unpack() {
 	unpack ${A}
@@ -36,6 +37,5 @@ src_install() {
 	insinto /etc/pam.d
 	doins pam/mserver
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/mserver-init mserver"
+	newinitd "${FILESDIR}/mserver-init" mserver
 }
