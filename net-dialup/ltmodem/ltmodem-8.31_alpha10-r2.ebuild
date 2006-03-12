@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r2.ebuild,v 1.2 2006/01/20 11:25:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r2.ebuild,v 1.3 2006/03/12 17:04:12 mrness Exp $
 
 inherit linux-mod
 
@@ -25,7 +25,7 @@ S_2_4="${WORKDIR}/${MY_P}"
 DEPEND="sys-apps/util-linux"
 
 BUILD_TARGETS="module"
-BUILD_PARAMS="KERNEL_DIR=${KV_DIR}"
+BUILD_PARAMS="KERNEL_DIR='${KV_DIR}'"
 
 pkg_setup() {
 	if kernel_is 2 4; then
