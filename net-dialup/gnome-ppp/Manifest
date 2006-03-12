@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 90c7ee5a1863c9623ed6b39426739ce7 ChangeLog 2809
 MD5 99eed8d11c523b3a26e5ae30eb1d790d files/digest-gnome-ppp-0.3.23 69
 MD5 afb9403df020e6407e400e165b59faf3 gnome-ppp-0.3.23.ebuild 825
 MD5 202034bd87dab639103a4f2f07b6c376 metadata.xml 222
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEFBZJjG8pv1lIUX4RAqUNAJ0dZRyRtTpNjd/gLZtiulsJSFrbPgCgvnAY
+YpVoFYMfXExd98OuLELyWk4=
+=wh8M
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/gnome-ppp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.18 2005/12/20 21:48:55 mrness Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.19 2006/03/12 12:38:22 mrness Exp $
+
+  12 Mar 2006; Alin Nastac <mrness@gentoo.org> -gnome-ppp-0.3.21.ebuild,
+  gnome-ppp-0.3.23.ebuild:
+  Remove old version. Quote $S.
 
   20 Dec 2005; Alin Nastac <mrness@gentoo.org> gnome-ppp-0.3.23.ebuild:
   Stable on x86.
