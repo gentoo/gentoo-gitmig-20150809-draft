@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 73638ce360ef9bf75ec848a983bbdd07 ChangeLog 1758
+MD5 ee56a1b4e4bac633a5ec251357bcb637 ChangeLog 1887
 MD5 d2098e94b0bce35534311d5e7f2ea7bb cistronradius-1.6.7-r1.ebuild 1378
-MD5 3f483f25444f849daf5aff5d81f38d83 metadata.xml 387
+MD5 8df11eddce253d600770875c5a1559b5 cistronradius-1.6.8.ebuild 1330
 MD5 5d4f1b24150e2bf15b722250050bb697 files/cistronradius.rc 839
 MD5 0f419b58334af5333e515168bb4588ce files/digest-cistronradius-1.6.7-r1 73
+MD5 03ae59f3c580371facc4e6fe358ecf3e files/digest-cistronradius-1.6.8 73
+MD5 3f483f25444f849daf5aff5d81f38d83 metadata.xml 387
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFDQr2LNSP4Vda7IdsRAmg7AKCNcO5jC7jVAawwilJLDUEGenM15QCfeGul
-AwSYYLXaN2hVkIattkth1og=
-=h4DL
+iD8DBQFEE+4ajG8pv1lIUX4RAprwAKCNdHCQZI3TMY//4Dux04xwRCD8VQCeLI4u
+rXDeC7pfJuyGdQ1FCX/ETOI=
+=feRE
 -----END PGP SIGNATURE-----
