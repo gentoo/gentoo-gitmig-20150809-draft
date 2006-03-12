@@ -1,22 +1,22 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-skk/scim-skk-0.3.0.ebuild,v 1.2 2005/09/23 03:09:04 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-skk/scim-skk-0.5.2.ebuild,v 1.1 2006/03/12 03:54:00 matsuu Exp $
 
 DESCRIPTION="Japanese input method SKK IMEngine for SCIM"
 HOMEPAGE="http://scim-imengine.sourceforge.jp/index.cgi?cmd=view;name=SCIMSKK"
-SRC_URI="mirror://sourceforge.jp/scim-imengine/15351/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/scim-imengine/18121/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="|| ( >=app-i18n/scim-1.0 >=app-i18n/scim-cvs-1.0 )"
+DEPEND="|| ( >=app-i18n/scim-1.2 >=app-i18n/scim-cvs-1.2 )"
 RDEPEND="${DEPEND}
-	app-i18n/skk-jisyo"
+	|| ( app-i18n/skk-jisyo virtual/skkserv )"
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS THANKS README
 }
