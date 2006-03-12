@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.43 2006/03/09 11:42:04 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.44 2006/03/12 15:53:07 blubb Exp $
+
+  12 Mar 2006; Simon Stelling <blubb@gentoo.org> freeciv-2.0.8.ebuild:
+  stable on amd64 wrt bug 125304
 
   09 Mar 2006; Jose Luis Rivero <yoswink@gentoo.org> freeciv-2.0.8.ebuild:
   Stable on alpha wrt security bug #125304
