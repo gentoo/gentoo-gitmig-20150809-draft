@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bpalogin/bpalogin-2.0.2.ebuild,v 1.5 2006/03/12 08:30:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bpalogin/bpalogin-2.0.2.ebuild,v 1.6 2006/03/12 08:34:59 mrness Exp $
 
 DESCRIPTION="A replacement for the Telstra supplied client for connecting and using Telstra's Big Pond Advance powered by Cable."
 SRC_URI="http://bpalogin.sourceforge.net/download/${P}.tar.gz"
@@ -16,6 +16,5 @@ src_install () {
 	insinto /etc
 	insopts -m600
 	doins bpalogin.conf
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/bpalogin.rc bpalogin
+	newinitd "${FILESDIR}/bpalogin.rc" bpalogin
 }
