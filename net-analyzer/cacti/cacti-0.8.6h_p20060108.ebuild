@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6h_p20060108.ebuild,v 1.1 2006/01/16 17:02:28 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6h_p20060108.ebuild,v 1.2 2006/03/12 03:24:31 ramereth Exp $
 
 inherit eutils webapp depend.apache
 
@@ -19,7 +19,7 @@ for i in $UPSTREAM_PATCHES ; do
 done
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
 IUSE="snmp"
 
 DEPEND=""
@@ -69,6 +69,7 @@ src_install() {
 	dodir ${MY_HTDOCSDIR}
 	cp -r . ${D}${MY_HTDOCSDIR}
 
+	webapp_serverowned ${MY_HTDOCSDIR}/rra
 	webapp_configfile ${MY_HTDOCSDIR}/include/config.php
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
 

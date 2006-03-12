@@ -21,6 +21,10 @@ New Install
 5. Point your web browser to:  http://your-server/cacti/
    Make sure to fill in all of the path variables carefully and
     correctly on the following screen.
+6. After you've gone through the setup wizard, go back to the main cacti page
+   and login as:
+	Username: admin
+	Password: admin
 
 Upgrading
 
