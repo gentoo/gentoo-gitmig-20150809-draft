@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.5 2006/01/29 08:04:42 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.6 2006/03/12 23:22:55 tupone Exp $
 
 inherit games
 
@@ -41,5 +41,7 @@ src_install() {
 	dodir ${GAMES_DATADIR}/BillardGL
 	cp -r lang/ Texturen/ "${D}/${GAMES_DATADIR}/BillardGL" || die "cp failed"
 	dodoc README
+	doicon "${FILESDIR}/${PN}.png"
+	make_desktop_entry ${PN} "BillardGL" ${PN}.png
 	prepgamesdirs
 }
