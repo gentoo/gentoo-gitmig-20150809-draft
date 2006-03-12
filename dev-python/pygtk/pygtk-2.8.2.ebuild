@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.8.2.ebuild,v 1.12 2006/02/04 19:06:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.8.2.ebuild,v 1.13 2006/03/12 07:45:52 vapier Exp $
 
 inherit gnome.org python flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="opengl doc"
 
 RDEPEND=">=dev-lang/python-2.3.5
