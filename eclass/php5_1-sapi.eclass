@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.17 2006/03/12 13:24:36 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.18 2006/03/13 17:12:22 chtekk Exp $
 #
 # ########################################################################
 #
@@ -407,12 +407,6 @@ php5_1-sapi_src_compile() {
 	enable_extension_with		"msql"			"msql"			1
 	enable_extension_with		"mssql"			"mssql"			1
 	enable_extension_with		"ncurses"		"ncurses"		1
-	enable_extension_with		"oci8"			"oci8"			1
-	if useq oci8-instant-client ; then
-		OCI8IC_PKG="`best_version dev-db/oracle-instantclient-basic`"
-		OCI8IC_PKG="`printf ${OCI8IC_PKG} | sed -e 's|dev-db/oracle-instantclient-basic-||g' | sed -e 's|-r.*||g'`"
-	fi
-	enable_extension_with		"oci8"			"oci8-instant-client"	1	"instantclient,/usr/lib/oracle/${OCI8IC_PKG}/client/lib"
 	enable_extension_with		"openssl"		"ssl"			0
 	enable_extension_with		"openssl-dir"	"ssl"			0 "/usr"
 	enable_extension_enable		"pcntl" 		"pcntl" 		1
@@ -520,17 +514,29 @@ php5_1-sapi_src_compile() {
 		enable_extension_with		"solid"			"solid"			1
 	fi
 
+	# Oracle support
+	if useq oci8 ; then
+		enable_extension_with		"oci8"			"oci8"			1
+	fi
+	if useq oci8-instant-client ; then
+		OCI8IC_PKG="`best_version dev-db/oracle-instantclient-basic`"
+		OCI8IC_PKG="`printf ${OCI8IC_PKG} | sed -e 's|dev-db/oracle-instantclient-basic-||g' | sed -e 's|-r.*||g'`"
+		enable_extension_with		"oci8"			"oci8-instant-client"	1	"instantclient,/usr/lib/oracle/${OCI8IC_PKG}/client/lib"
+	fi
+
 	# PDO support
 	if useq pdo ; then
 		enable_extension_with		"pdo-dblib"		"mssql"			1
 		enable_extension_with		"pdo-firebird"	"firebird"		1
 		enable_extension_with		"pdo-mysql"		"mysql"			1 "/usr"
-		enable_extension_with		"pdo-oci"		"oci8"			1
+		if useq oci8 ; then
+			enable_extension_with	"pdo-oci"		"oci8"			1
+		fi
 		if useq oci8-instant-client ; then
 			OCI8IC_PKG="`best_version dev-db/oracle-instantclient-basic`"
 			OCI8IC_PKG="`printf ${OCI8IC_PKG} | sed -e 's|dev-db/oracle-instantclient-basic-||g' | sed -e 's|-r.*||g'`"
+			enable_extension_with	"pdo-oci"		"oci8-instant-client"	1	"instantclient,/usr,${OCI8IC_PKG}"
 		fi
-		enable_extension_with		"pdo-oci"		"oci8-instant-client"	1	"instantclient,/usr,${OCI8IC_PKG}"
 		enable_extension_with		"pdo-odbc"		"odbc"			1 "unixODBC,/usr"
 		enable_extension_with		"pdo-pgsql"		"postgres"		1
 		enable_extension_without	"pdo-sqlite"	"sqlite"		1
