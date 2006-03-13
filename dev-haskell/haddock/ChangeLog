@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.31 2006/03/01 16:19:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.32 2006/03/13 11:33:43 jer Exp $
+
+  13 Mar 2006; Jeroen Roovers <jer@gentoo.org> haddock-0.7.ebuild:
+  Marked ~hppa (bug #125389).
 
   01 Mar 2006; Markus Rothe <corsair@gentoo.org> haddock-0.7.ebuild:
   Added ~ppc64; bug #88362
