@@ -1,0 +1,11 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.1 2006/03/13 20:14:43 wolf31o2 Exp $
+
+# Gustavo Zacarias <gustavoz@gentoo.org>
+# New toys enabled by 2.6 headers
+gnome-base/gnome-volume-manager
+gnome-extra/hal-device-manager
+sys-apps/hal
+sys-apps/ivman
+sys-apps/pmount
