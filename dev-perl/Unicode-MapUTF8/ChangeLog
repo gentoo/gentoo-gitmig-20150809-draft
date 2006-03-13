@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unicode-MapUTF8
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/ChangeLog,v 1.5 2006/03/11 12:13:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/ChangeLog,v 1.6 2006/03/13 21:02:12 gustavoz Exp $
+
+  13 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  Unicode-MapUTF8-1.11.ebuild:
+  Keyworded ~hppa wrt #125189
 
   11 Mar 2006; <nixnut@gentoo.org> Unicode-MapUTF8-1.11.ebuild:
   Added ~ppc. Bug #125189
