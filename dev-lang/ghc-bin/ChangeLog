@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.42 2006/03/13 11:31:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.43 2006/03/13 17:22:50 dcoutts Exp $
+
+  13 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> +files/ghc-updater,
+  ghc-bin-6.4.1.ebuild:
+  Re-register packages on reinstall. Include an updated ghc-updater script and
+  print a message after installation suggesting users run it if they have
+  upgraded ghc-bin or switched from ghc.
 
   13 Mar 2006; Jeroen Roovers <jer@gentoo.org> ghc-bin-6.4.1.ebuild:
   Marked ~hppa (bug #125389).

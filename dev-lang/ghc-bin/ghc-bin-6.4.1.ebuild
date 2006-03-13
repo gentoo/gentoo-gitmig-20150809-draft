@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.9 2006/03/13 11:31:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.10 2006/03/13 17:22:50 dcoutts Exp $
 
-inherit base multilib
+inherit base multilib ghc-package
 
 DESCRIPTION="Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
@@ -84,6 +84,21 @@ src_compile() {
 
 src_install () {
 	mv * "${D}"
+
+	# remove this local copy of ghc-updater next time the .tbz2 files
+	# are rebuilt, since then we'll pick up the fix from the ghc ebuild
+	into /opt/ghc
+	dosbin ${FILESDIR}/ghc-updater
+
 	insinto /etc/env.d
 	doins "${FILESDIR}/10ghc"
+}
+
+pkg_postinst () {
+	ghc-reregister
+	ewarn "IMPORTANT:"
+	ewarn "If you have upgraded from another version of ghc-bin or"
+	ewarn "if you have switched from ghc to ghc-bin, please run:"
+	ewarn "	/opt/ghc/sbin/ghc-updater"
+	ewarn "to re-merge all ghc-based Haskell libraries."
 }
