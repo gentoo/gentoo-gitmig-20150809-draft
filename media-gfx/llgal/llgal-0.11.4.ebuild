@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.11.4.ebuild,v 1.3 2006/03/08 13:53:53 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.11.4.ebuild,v 1.4 2006/03/13 07:05:17 tsunam Exp $
 
 DESCRIPTION="Online gallery generator"
 HOMEPAGE="http://home.gna.org/llgal"
@@ -8,7 +8,7 @@ SRC_URI="http://download.gna.org/llgal/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="media-gfx/imagemagick
