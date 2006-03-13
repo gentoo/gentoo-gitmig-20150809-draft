@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cf0694711f6a206df9f27eabf3141971 ChangeLog 1512
+MD5 199968a0bd62ea1b7889d3db620ac78d ChangeLog 1660
+RMD160 f96b114eb8ddfba9cf3b144b8670bdd9930e63d1 ChangeLog 1660
+SHA256 081a2ee45e4d30da61f8d0f399a1c49392dc409bbbbac0d7fe8fddf1d6631b77 ChangeLog 1660
 MD5 0cbe43e4a20d50f8b1cbcbe522a242c0 files/99ssh_askpass 38
+RMD160 f86d6d8e2df75a2ff599a5e75ace39ab1ac21bf4 files/99ssh_askpass 38
+SHA256 33bc9054a1c859670362dfc46e142ddcbef4a5e379244072754afd33964c9641 files/99ssh_askpass 38
 MD5 af95000e5cda99ca351864f8e03ed95c files/digest-gtk2-ssh-askpass-0.3 71
-MD5 5fe362149bda2a2fd437d3e4c411a630 gtk2-ssh-askpass-0.3.ebuild 734
+RMD160 9ffc5a453f2168e0bba65da23f1f563658c4627d files/digest-gtk2-ssh-askpass-0.3 71
+SHA256 0b4ea2764d5d6c5f986e30ee2c1ba64f49701a3cb98ee63ce47ff8d9bf2ecc02 files/digest-gtk2-ssh-askpass-0.3 71
+MD5 f8081346f10de37c067c990b02a0333f gtk2-ssh-askpass-0.3.ebuild 754
+RMD160 a4caec172d4b61eb4db20bea372d7638185b6327 gtk2-ssh-askpass-0.3.ebuild 754
+SHA256 4a1519fb7d6711760cf912fa80386acfd2c0201098dd0371908b5582caede5de gtk2-ssh-askpass-0.3.ebuild 754
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDboUUomPajV0RnrERAvrIAJ0Qch/uJ2MVCd8uMzJAkVQPh244SACffk/t
-RNiFFjF6VYMh13HZvux1dy8=
-=cFx4
------END PGP SIGNATURE-----
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
