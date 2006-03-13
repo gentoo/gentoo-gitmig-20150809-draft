@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-desktop
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.134 2006/02/06 19:51:50 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.135 2006/03/13 15:35:52 gustavoz Exp $
+
+  13 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-desktop-2.12.3.ebuild:
+  Stable on sparc
 
 *gnome-desktop-2.12.3 (06 Feb 2006)
 
