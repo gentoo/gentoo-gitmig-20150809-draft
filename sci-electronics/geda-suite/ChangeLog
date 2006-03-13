@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/geda-suite
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-suite/ChangeLog,v 1.1 2005/11/14 20:27:52 plasmaroo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-suite/ChangeLog,v 1.2 2006/03/13 23:59:14 deltacow Exp $
+
+  13 Mar 2006; Scott Stoddard <deltacow@gentoo.org>
+  geda-suite-20050820.ebuild:
+  Added ~amd64 closing bug 115614.
 
   14 Nov 2005; <plasmaroo@gentoo.org> +geda-suite-20050820.ebuild:
   Initial commit (#107929). This removes all non-core dependencies of the gEDA
