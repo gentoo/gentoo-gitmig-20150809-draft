@@ -1,6 +1,13 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.56 2006/03/10 01:37:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.57 2006/03/13 01:33:37 joem Exp $
+
+*epiphany-2.14.0 (13 Mar 2006)
+
+  13 Mar 2006; Joe McCann <joem@gentoo.org>
+  +files/epiphany-1.9.2-broken-firefox.patch, +epiphany-2.14.0.ebuild:
+  New version for gnome-2.14 release. Thanks to dsd,allanonjl, and compnerd
+  for helping during the dev cycle
 
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org> epiphany-1.8.3.ebuild:
   Mark 1.8.3 stable on ia64

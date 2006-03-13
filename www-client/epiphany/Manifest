@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6ca61993192d68a4a2f06054790413ad ChangeLog 19464
-RMD160 6b791fb582df3c70b0b1d84869a2dcc22b82867f ChangeLog 19464
-SHA256 e125a66307b5800416092a63673a72dfb0ef67f960d3fb9e9f61f885050db3aa ChangeLog 19464
+MD5 dd4fec07697aefe0ded341232084f7a7 ChangeLog 19719
+RMD160 c393d65446efe863856cbef6b14c9af01eaac3f5 ChangeLog 19719
+SHA256 93c645b9b733d0c966bc02d29a5e8de9486b99970f8e9c1e7107ecd453f23e60 ChangeLog 19719
 MD5 5ef08e685400da84661b9f037d81a668 epiphany-1.6.0-r3.ebuild 1539
 RMD160 7e1d0d366702dbe9efb6f732c64b5d35e9e9cd61 epiphany-1.6.0-r3.ebuild 1539
 SHA256 336e83e2fe1e9dc7c79f4aaeb5380da5120bba74b713351a6bbed2c696df17ae epiphany-1.6.0-r3.ebuild 1539
@@ -22,6 +19,9 @@ SHA256 534c536c06f4e089fb28a6cc6ea8ef9020961984a5ccf16430f8ddd5fe869446 epiphany
 MD5 e5b210ed9c4fc669ed477c5fc10edf23 epiphany-1.8.4.1.ebuild 1828
 RMD160 0fd41053199a6b34aab2859564ec423fd25a8a38 epiphany-1.8.4.1.ebuild 1828
 SHA256 bd7dcc7d4921dabd1f6953095d7d55c085de1e04658929805b4abcbea15232f1 epiphany-1.8.4.1.ebuild 1828
+MD5 6f27e1930dbc853d05b2b29799c0408a epiphany-2.14.0.ebuild 2148
+RMD160 8f1a23ecd30c65ac5230ac7a8440bc67bc77bb84 epiphany-2.14.0.ebuild 2148
+SHA256 fb14bb60b40be6ac69552d438e8a9e5d2289f3e75a14547dddf7d665af6bda8e epiphany-2.14.0.ebuild 2148
 MD5 6d49238d1100396b965c157b89c7038f files/digest-epiphany-1.6.0-r3 68
 RMD160 b99d47ca61cd962c2383dfede7efd7f52109cc32 files/digest-epiphany-1.6.0-r3 68
 SHA256 5e13dc8f1db669a0d78ad9d055b21f2fae62a264333cd729185bbb8a6be8256d files/digest-epiphany-1.6.0-r3 68
@@ -40,6 +40,9 @@ SHA256 eaa5a10e1393daf4e3b493e8cee3ac3dd548c5dbbfe0008f7ffa2fba02201ecc files/di
 MD5 c1c5c058f46fd7d3f0993a3799bf6883 files/digest-epiphany-1.8.4.1 256
 RMD160 b45f694013b20ef2e4e632eb5b6e0b01cefdace7 files/digest-epiphany-1.8.4.1 256
 SHA256 fc4db14b7380baa26e2ac416baa0a6c00a52f44f0285387c798331ab3017fec5 files/digest-epiphany-1.8.4.1 256
+MD5 6f420997e981654cd613894986a66c3f files/digest-epiphany-2.14.0 253
+RMD160 639372d724f65a5dd5c1ed529b16395b504d918e files/digest-epiphany-2.14.0 253
+SHA256 2c674567f47ec90c91b465c0008be2f8491b06d27e5482611e54016769654ede files/digest-epiphany-2.14.0 253
 MD5 c1fc78ef3e0793861e74799bbcb6238c files/epiphany-1.6.0-fix_includes.patch 519
 RMD160 1e34df540c5a6a611e9b37c3c94efaf9d36deca0 files/epiphany-1.6.0-fix_includes.patch 519
 SHA256 00746c1fd2ca4b92bd9d61f9ead21e10fc5a63243ca17999b4d62af4456567f2 files/epiphany-1.6.0-fix_includes.patch 519
@@ -55,13 +58,9 @@ SHA256 1e883ce76645d6293019a65282f2312223a5516473ad9e2f7483fd64af138f8f files/ep
 MD5 3e5d6d82d44078ec1c95566207f9bad1 files/epiphany-1.6.3-fix_includes.patch 369
 RMD160 c5819d9d146ef60cb70b0e8c6bfa21d113e3e58e files/epiphany-1.6.3-fix_includes.patch 369
 SHA256 41b4cf39d1efeb2b865b287729f3f1134ab572c2547434f65a1ffec3b680c24f files/epiphany-1.6.3-fix_includes.patch 369
+MD5 9bff9c987534a9f2cbefa291a28affe7 files/epiphany-1.9.2-broken-firefox.patch 563
+RMD160 ae6d867b1168ef98b2c50bcc2002f5fb088da7c8 files/epiphany-1.9.2-broken-firefox.patch 563
+SHA256 7012e6b2dcc15eea073be4e082f79ad549840216f315f339271539b9c469775e files/epiphany-1.9.2-broken-firefox.patch 563
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEENhxJrHF4yAQTrARAuMnAKDON1dJJqK9hgn8U/qiziG6KszlRgCdF12J
-xfalrSZRkSh3eZ9RPVvRfdY=
-=k6Ju
------END PGP SIGNATURE-----
