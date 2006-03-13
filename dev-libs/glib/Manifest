@@ -1,4 +1,7 @@
-MD5 3ed5091cf60ccf0ec28ec3ecbb0da5b5 ChangeLog 21119
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fb043d62fe68e66220903183c43851f5 ChangeLog 21214
 MD5 0b6b97a59b4b0e1acc433697ce022a3c files/digest-glib-1.2.10-r5 63
 MD5 60c45aba2f0c1b47590e8193b533d7c7 files/digest-glib-2.6.5 64
 MD5 2f09cd4f7926138eec7b57eaaf228fa9 files/digest-glib-2.8.4 64
@@ -13,5 +16,12 @@ MD5 b75614f954c7353c9e75e011ee1adb59 glib-1.2.10-r5.ebuild 1536
 MD5 3c669304d71f54e783024332877d71d0 glib-2.6.5.ebuild 1647
 MD5 ccdec0cc9433b698a20b32158000d2f3 glib-2.8.4.ebuild 1693
 MD5 eeb9bd7e6d8215bc9bd7bbcd50d3d6c0 glib-2.8.5.ebuild 1687
-MD5 5464d807c4040afdcd904970b8415207 glib-2.8.6.ebuild 1708
+MD5 4afcc63ee9ae312ed4bb687444dfb541 glib-2.8.6.ebuild 1707
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEFYpEKRy60XGEcJIRAuo0AKCCJawlnThaESDVkm6IXPtMIiBPxQCfcMQy
+sRfdpNXzgfvYxIvISUCOUTc=
+=amWK
+-----END PGP SIGNATURE-----
