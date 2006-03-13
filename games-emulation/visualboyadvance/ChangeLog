@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/visualboyadvance
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.23 2006/02/11 04:10:14 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.24 2006/03/13 03:19:39 mr_bones_ Exp $
+
+  13 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  visualboyadvance-1.7.2-r1.ebuild:
+  stable for x86
 
   11 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   visualboyadvance-1.7.2.ebuild, visualboyadvance-1.7.2-r1.ebuild:
