@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.40.2.ebuild,v 1.1 2006/02/24 18:57:09 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.40.2.ebuild,v 1.2 2006/03/13 00:52:38 vanquirius Exp $
 
 MY_P="${PN}_${PV}"
 DESCRIPTION="HTTrack Website Copier, Open Source Offline Browser"
@@ -9,7 +9,7 @@ SRC_URI="http://debian.httrack.com/dists/unstable/main/source/${MY_P}.orig.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 src_compile() {
