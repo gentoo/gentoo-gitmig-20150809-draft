@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.5 2006/03/01 12:54:35 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.6 2006/03/13 09:57:10 dcoutts Exp $
 #
 # Original authors: Andres Loeh <kosmikus@gentoo.org>
 #                   Duncan Coutts <dcoutts@gentoo.org>
@@ -126,9 +126,8 @@ cabal-configure() {
 		cabalconf="${cabalconf} --enable-executable-profiling";
 		cabalconf="${cabalconf} --enable-library-profiling"
 	fi
-	# Don't build GHCi libs for arches that do not support GHCi.
-	# Also building GHCi libs on ppc64 causes "TOC overflow".
-	if use alpha || use ppc64; then
+	# Building GHCi libs on ppc64 causes "TOC overflow".
+	if use ppc64; then
 		cabalconf="${cabalconf} --disable-library-for-ghci"
 	fi
 
