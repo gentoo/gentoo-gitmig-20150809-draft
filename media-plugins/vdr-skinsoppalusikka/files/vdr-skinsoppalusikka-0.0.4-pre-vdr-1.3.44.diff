@@ -1,0 +1,469 @@
+diff -ru skinsoppalusikka-0.0.4-orig/i18n.c skinsoppalusikka-0.0.4/i18n.c
+--- skinsoppalusikka-0.0.4-orig/i18n.c	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/i18n.c	2006-03-13 15:24:45.827484500 +0100
+@@ -29,7 +29,6 @@
+     "", // Hrvatski
+     "Soppalusikka kest", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "Soppalusikka", // English
+     "Soppalusikka", // Deutsch
+@@ -51,7 +50,6 @@
+     "", // Hrvatski
+     "Soppalusikka", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "min", // English
+     "min", // Deutsch
+@@ -73,7 +71,6 @@
+     "", // Hrvatski
+     "min", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "Stereo", // English
+     "Stereo", // Deutsch
+@@ -95,7 +92,6 @@
+     "", // Hrvatski
+     "Stereo", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "Left", // English
+     "Links", // Deutsch
+@@ -117,7 +113,6 @@
+     "", // Hrvatski
+     "Vasak", // Eesti
+     "", // Danske
+-    "", // Èesky (Czech)
+   },
+   { "Right", // English
+     "Recht", // Deutsch
+@@ -139,7 +134,6 @@
+     "", // Hrvatski
+     "Parem", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "Mute", // English
+     "Stumm", // Deutsch
+@@ -161,7 +155,6 @@
+     "", // Hrvatski
+     "Hääletu", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "Volume", // English
+     "Lautstärke", // Deutsch
+@@ -183,7 +176,6 @@
+     "", // Hrvatski
+     "Helitugevus", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "Show channel logos", // English
+     "", // Deutsch
+@@ -205,7 +197,6 @@
+     "", // Hrvatski
+     "Kanalilogo näitamine", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "Identify channel by", // English
+     "", // Deutsch
+@@ -227,7 +218,6 @@
+     "", // Hrvatski
+     "Kanali tuvastamise meetod", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "name", // English
+     "", // Deutsch
+@@ -249,7 +239,6 @@
+     "", // Hrvatski
+     "nimi", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "data", // English
+     "", // Deutsch
+@@ -271,7 +260,6 @@
+     "", // Hrvatski
+     "andmed", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "Channel logo cache size", // English
+     "", // Deutsch
+@@ -293,7 +281,6 @@
+     "", // Hrvatski
+     "Kanalilogo vahemälu suurus", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "Flush channel logo cache", // English
+     "Bildspeicher leeren", // Deutsch
+@@ -315,7 +302,6 @@
+     "", // Hrvatski
+     "Tühjenda kanalilogo vahemälu", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "Flushing channel logo cache...", // English
+     "Bildspeicher wird geleert...", // Deutsch
+@@ -337,7 +323,6 @@
+     "", // Hrvatski
+     "Kanalilogo vahemälu tühjendamine...", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "Languages", // English
+     "Sprachen", // Deutsch
+@@ -359,7 +344,6 @@
+     "", // Hrvatski
+     "Keeled", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { "Auxiliary information", // English
+     "", // Deutsch
+@@ -381,7 +365,6 @@
+     "", // Hrvatski
+     "Lisainfo", // Eesti
+     "", // Dansk
+-    "", // Èesky (Czech)
+   },
+   { NULL }
+ };
+Nur in skinsoppalusikka-0.0.4: i18n.c.orig.
+diff -ru skinsoppalusikka-0.0.4-orig/skinsoppalusikka.c skinsoppalusikka-0.0.4/skinsoppalusikka.c
+--- skinsoppalusikka-0.0.4-orig/skinsoppalusikka.c	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/skinsoppalusikka.c	2006-03-13 15:24:20.333891250 +0100
+@@ -14,7 +14,7 @@
+ #include <getopt.h>
+ #include <vdr/plugin.h>
+ 
+-#if defined(VDRVERSNUM) && VDRVERSNUM < 10344
++#if defined(VDRVERSNUM) && VDRVERSNUM < 10327
+ #error "You don't exist! Go away! Upgrade yourself!"
+ #endif
+ 
+diff -ru skinsoppalusikka-0.0.4-orig/soppalusikka.c skinsoppalusikka-0.0.4/soppalusikka.c
+--- skinsoppalusikka-0.0.4-orig/soppalusikka.c	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/soppalusikka.c	2006-03-13 15:24:20.345892000 +0100
+@@ -854,10 +854,10 @@
+   // draw additional information
+   char *info;
+   asprintf(&info, "%s: %d %s: %d", tr("Priority"), Recording->priority, tr("Lifetime"), Recording->lifetime);
+-  if (Info->Aux()) {
+-     char *aux = strdup(Info->Aux());
++  if (Info->Description()) {
++     char *aux = strdup(Info->Description());
+      info = strcatrealloc(info, "\n");
+-     info = strcatrealloc(info, tr("Auxiliary information"));
++     info = strcatrealloc(info, tr("Description"));
+      info = strcatrealloc(info, ": ");
+      info = strcatrealloc(info, striphtml(aux));
+      free(aux);
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/arrowdown.xpm skinsoppalusikka-0.0.4/symbols/arrowdown.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/arrowdown.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/arrowdown.xpm	2006-03-13 15:24:20.333891250 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const arrowdown_xpm[] = {
++static char * arrowdown_xpm[] = {
+ "12 12 2 1",
+ ".	c #FFFFFF",
+ "+	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/arrowup.xpm skinsoppalusikka-0.0.4/symbols/arrowup.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/arrowup.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/arrowup.xpm	2006-03-13 15:24:20.333891250 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const arrowup_xpm[] = {
++static  char * arrowup_xpm[] = {
+ "12 12 2 1",
+ ".	c #FFFFFF",
+ "+	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/audioleft.xpm skinsoppalusikka-0.0.4/symbols/audioleft.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/audioleft.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/audioleft.xpm	2006-03-13 15:24:20.333891250 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const audioleft_xpm[] = {
++static  char * audioleft_xpm[] = {
+ "27 18 3 1",
+ " 	c None",
+ ".	c #8D8F8D",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/audioright.xpm skinsoppalusikka-0.0.4/symbols/audioright.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/audioright.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/audioright.xpm	2006-03-13 15:24:20.333891250 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const audioright_xpm[] = {
++static  char * audioright_xpm[] = {
+ "27 18 3 1",
+ " 	c None",
+ ".	c #8D8F8D",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/audio.xpm skinsoppalusikka-0.0.4/symbols/audio.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/audio.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/audio.xpm	2006-03-13 15:24:20.333891250 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const audio_xpm[] = {
++static  char * audio_xpm[] = {
+ "27 18 3 1",
+ " 	c None",
+ ".	c #8D8F8D",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/dolbydigital.xpm skinsoppalusikka-0.0.4/symbols/dolbydigital.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/dolbydigital.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/dolbydigital.xpm	2006-03-13 15:24:20.333891250 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const dolbydigital_xpm[] = {
++static  char * dolbydigital_xpm[] = {
+ "27 18 3 1",
+ " 	c None",
+ ".	c #8D8F8D",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/encrypted.xpm skinsoppalusikka-0.0.4/symbols/encrypted.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/encrypted.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/encrypted.xpm	2006-03-13 15:24:20.333891250 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const encrypted_xpm[] = {
++static  char * encrypted_xpm[] = {
+ "27 18 3 1",
+ " 	c None",
+ ".	c #8D8F8D",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/ffwd1.xpm skinsoppalusikka-0.0.4/symbols/ffwd1.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/ffwd1.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/ffwd1.xpm	2006-03-13 15:24:20.333891250 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const ffwd1_xpm[] = {
++static  char * ffwd1_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/ffwd2.xpm skinsoppalusikka-0.0.4/symbols/ffwd2.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/ffwd2.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/ffwd2.xpm	2006-03-13 15:24:20.333891250 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const ffwd2_xpm[] = {
++static  char * ffwd2_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/ffwd3.xpm skinsoppalusikka-0.0.4/symbols/ffwd3.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/ffwd3.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/ffwd3.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const ffwd3_xpm[] = {
++static  char * ffwd3_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/ffwd.xpm skinsoppalusikka-0.0.4/symbols/ffwd.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/ffwd.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/ffwd.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const ffwd_xpm[] = {
++static  char * ffwd_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/frew1.xpm skinsoppalusikka-0.0.4/symbols/frew1.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/frew1.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/frew1.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const frew1_xpm[] = {
++static  char * frew1_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/frew2.xpm skinsoppalusikka-0.0.4/symbols/frew2.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/frew2.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/frew2.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const frew2_xpm[] = {
++static  char * frew2_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/frew3.xpm skinsoppalusikka-0.0.4/symbols/frew3.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/frew3.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/frew3.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const frew3_xpm[] = {
++static  char * frew3_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/frew.xpm skinsoppalusikka-0.0.4/symbols/frew.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/frew.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/frew.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const frew_xpm[] = {
++static  char * frew_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/pause.xpm skinsoppalusikka-0.0.4/symbols/pause.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/pause.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/pause.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const pause_xpm[] = {
++static  char * pause_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/play.xpm skinsoppalusikka-0.0.4/symbols/play.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/play.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/play.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const play_xpm[] = {
++static  char * play_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/radio.xpm skinsoppalusikka-0.0.4/symbols/radio.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/radio.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/radio.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const radio_xpm[] = {
++static  char * radio_xpm[] = {
+ "27 18 3 1",
+ " 	c None",
+ ".	c #8D8F8D",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/recording.xpm skinsoppalusikka-0.0.4/symbols/recording.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/recording.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/recording.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const recording_xpm[] = {
++static  char * recording_xpm[] = {
+ "27 18 2 1",
+ ".	c #FFFFFF",
+ "+	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/running.xpm skinsoppalusikka-0.0.4/symbols/running.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/running.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/running.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const running_xpm[] = {
++static  char * running_xpm[] = {
+ "27 18 2 1",
+ ".	c #FFFFFF",
+ "+	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/sfwd1.xpm skinsoppalusikka-0.0.4/symbols/sfwd1.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/sfwd1.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/sfwd1.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const sfwd1_xpm[] = {
++static  char * sfwd1_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/sfwd2.xpm skinsoppalusikka-0.0.4/symbols/sfwd2.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/sfwd2.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/sfwd2.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const sfwd2_xpm[] = {
++static  char * sfwd2_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/sfwd3.xpm skinsoppalusikka-0.0.4/symbols/sfwd3.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/sfwd3.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/sfwd3.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const sfwd3_xpm[] = {
++static  char * sfwd3_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/sfwd.xpm skinsoppalusikka-0.0.4/symbols/sfwd.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/sfwd.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/sfwd.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const sfwd_xpm[] = {
++static  char * sfwd_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/srew1.xpm skinsoppalusikka-0.0.4/symbols/srew1.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/srew1.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/srew1.xpm	2006-03-13 15:24:20.337891500 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const srew1_xpm[] = {
++static  char * srew1_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/srew2.xpm skinsoppalusikka-0.0.4/symbols/srew2.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/srew2.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/srew2.xpm	2006-03-13 15:24:20.341891750 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const srew2_xpm[] = {
++static  char * srew2_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/srew3.xpm skinsoppalusikka-0.0.4/symbols/srew3.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/srew3.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/srew3.xpm	2006-03-13 15:24:20.341891750 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const srew3_xpm[] = {
++static  char * srew3_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/srew.xpm skinsoppalusikka-0.0.4/symbols/srew.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/srew.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/srew.xpm	2006-03-13 15:24:20.341891750 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const srew_xpm[] = {
++static  char * srew_xpm[] = {
+ "28 21 2 1",
+ ".	c #FFFFFF",
+ "#	c #000000",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/teletext.xpm skinsoppalusikka-0.0.4/symbols/teletext.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/teletext.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/teletext.xpm	2006-03-13 15:24:20.341891750 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const teletext_xpm[] = {
++static  char * teletext_xpm[] = {
+ "27 18 3 1",
+ " 	c None",
+ ".	c #8D8F8D",
+diff -ru skinsoppalusikka-0.0.4-orig/symbols/vps.xpm skinsoppalusikka-0.0.4/symbols/vps.xpm
+--- skinsoppalusikka-0.0.4-orig/symbols/vps.xpm	2006-03-13 15:24:13.381456750 +0100
++++ skinsoppalusikka-0.0.4/symbols/vps.xpm	2006-03-13 15:24:20.341891750 +0100
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char *const vps_xpm[] = {
++static  char * vps_xpm[] = {
+ "27 18 2 1",
+ ".	c #FFFFFF",
+ "+	c #000000",
