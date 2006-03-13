@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-1.35.ebuild,v 1.4 2006/02/13 14:20:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-1.35.ebuild,v 1.5 2006/03/13 22:12:07 gustavoz Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cpan.org/authors/id/J/JE/JESSE/"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 #KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
-KEYWORDS="sparc x86"
+KEYWORDS="~hppa sparc x86"
 IUSE=""
 
 SRC_TEST="do"
