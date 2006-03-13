@@ -1,46 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3dd67288002d706620ee2e7007e7bc17 ChangeLog 1602
-RMD160 21b63587b4d7137bb7876b07971d8e2b858420e3 ChangeLog 1602
-SHA256 f7a5b9a67db60c0fd3bbdd5dffd5b5b4c8b6dddca2f8902ae655b0e66ab8b895 ChangeLog 1602
+MD5 2141c1849a672f574e9dc9290b54e6b8 ChangeLog 1692
 MD5 664d12107bdc14c139ce9a5f6dc6c4fe files/digest-sipsak-0.8.12 65
-RMD160 e04a2080cfe68afc1c5a77bc699bb295db88c303 files/digest-sipsak-0.8.12 65
-SHA256 358c152a82b25a500a7bd1324a188f54a177994846b91528032ac8a5fca643ab files/digest-sipsak-0.8.12 65
 MD5 940affa56618884a75018052679d7dff files/digest-sipsak-0.8.6 65
-RMD160 e3047dca2927c7cd40b709d2a43e243b98fdadc5 files/digest-sipsak-0.8.6 65
-SHA256 d92d7a0af64b5eb8e5cb71eed2cd47bb756d83b103dc30d0471c7585ef52e5c9 files/digest-sipsak-0.8.6 65
 MD5 2220372a4422369074370bdd16dece71 files/digest-sipsak-0.9.1 64
-RMD160 1894fc99d1dda9deabcde282a1cc1a8eb9ef96df files/digest-sipsak-0.9.1 64
-SHA256 cead7b7d6f513b3d0b1e2a6b225dd4c2b3cc84c4edfc3e01e71b0207312c8059 files/digest-sipsak-0.9.1 64
 MD5 0dcbd1bc2d638d1abf856b9d6f341cae files/digest-sipsak-0.9.5 64
-RMD160 8c1735d10a64d8e556b9ecfed59ef0cf30a9109c files/digest-sipsak-0.9.5 64
-SHA256 92b580a7afd8c726f563257b5070907c1592b5d12d4861a7d9358175994d15a9 files/digest-sipsak-0.9.5 64
 MD5 c0be307688d0f8e41049e2fa1d89959a files/digest-sipsak-0.9.6_p1 244
-RMD160 6dbc0dc4a0851b3fa57773702da4b2ab8a288bfd files/digest-sipsak-0.9.6_p1 244
-SHA256 f40415dbbdd56cd793b396e4c6273f184381b2aa4d30c42b092055bbb08aa16f files/digest-sipsak-0.9.6_p1 244
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
-RMD160 a989fff0cebc82a58a75fb3a2eec8da0712ad57e metadata.xml 248
-SHA256 d0e3ab77a8a7b859511b8d5fda83dc018351e6367724b097dcc13c4aa0a3ee6b metadata.xml 248
 MD5 f1bf4e23e45c32fa3a33ee08f039ab6c sipsak-0.8.12.ebuild 579
-RMD160 2a16d00048255f2cabe1b659e0a973268d95ad42 sipsak-0.8.12.ebuild 579
-SHA256 1ad811e5406db5e8e1111071d2b9d50d7bf36d3f8ee233721431102fbde682f1 sipsak-0.8.12.ebuild 579
 MD5 2866514f7df655b80a5036bbe4edc78d sipsak-0.8.6.ebuild 569
-RMD160 70cf630a92e305dc290fef7b156dbc82c5f42f8e sipsak-0.8.6.ebuild 569
-SHA256 61d7ad4a4b04256cda95f756d0d387dbd61d02671f86f4a8559c4fdf0306cf4d sipsak-0.8.6.ebuild 569
 MD5 c6defefe38a1142dc66d86fe621bd0dd sipsak-0.9.1.ebuild 611
-RMD160 9b59c331b2b43096bab079bdfcad79c1625d162e sipsak-0.9.1.ebuild 611
-SHA256 e6d64b212d0e33cbeb287d3000c904639b3f18c9bd9974b17edbe3865a0d5adc sipsak-0.9.1.ebuild 611
 MD5 d5c6845d4e12ea446d7ad72e93151514 sipsak-0.9.5.ebuild 810
-RMD160 a763d7921be274c9f57d1f426712343982a5a6b4 sipsak-0.9.5.ebuild 810
-SHA256 6f7acb1343ecca60390e659b907ef94b0f734db064bf8e000b2bac55bf322988 sipsak-0.9.5.ebuild 810
-MD5 c79fbed373ad5e3f92fd4861938eb793 sipsak-0.9.6_p1.ebuild 843
-RMD160 c0b0621b96d9083b26aa64ebbc1ff23b0ddc9644 sipsak-0.9.6_p1.ebuild 843
-SHA256 04318f3b10734358b86a4f2d94d9cb6f02251e0a6ebbc780fe03a1d0a12d60a6 sipsak-0.9.6_p1.ebuild 843
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD4f3BmdTrptrqvGERAj2nAJ0eB/+EEJtDfnHqZhQ/0gn2x5oxbQCfe0tB
-3G6/ybecaGRe039kwKRXPx8=
-=kxIe
------END PGP SIGNATURE-----
+MD5 031e57635f50c6d6b145d1664bd55774 sipsak-0.9.6_p1.ebuild 847
