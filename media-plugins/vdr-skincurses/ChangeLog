@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-skincurses
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skincurses/ChangeLog,v 1.1 2006/03/13 15:00:28 zzam Exp $
+
+*vdr-skincurses-0.0.5 (13 Mar 2006)
+
+  13 Mar 2006; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +vdr-skincurses-0.0.5.ebuild:
+  Imported ebuild from gentoo.de
+
