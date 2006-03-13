@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f1371db153d7c81f2e95e3055215daca Cache-Simple-TimedExpiry-0.23.ebuild 521
-RMD160 5deab823a0bf34efc9e1803d036f768bf9b5aff7 Cache-Simple-TimedExpiry-0.23.ebuild 521
-SHA256 6e91e904dc108d2a5d70c67b9c7513f982f1e53f7f29d5cb0ef2829d40b20d9e Cache-Simple-TimedExpiry-0.23.ebuild 521
-MD5 ce71cbe29df4d7ba2e28f6e2b16fb229 ChangeLog 762
-RMD160 ee954cc5f8207f84d0ba6fe6377b966f21ce1e5b ChangeLog 762
-SHA256 ae042fa84c38a70a1232308ca7e09b762853511fcb946f37024b9af5d6b6f0b3 ChangeLog 762
+MD5 9cc76520c7aecb87b86c3c443c1a924a Cache-Simple-TimedExpiry-0.23.ebuild 527
+MD5 b8ff823759957603612ef91251d13171 ChangeLog 887
 MD5 72e4cbdaefe6073161b9050eb94d3b6c files/digest-Cache-Simple-TimedExpiry-0.23 79
-RMD160 ba392f623a594abda7840f62d0ea058dd3570f29 files/digest-Cache-Simple-TimedExpiry-0.23 79
-SHA256 2f71b46bbd3cc8a32dd295ddf6eb256b3f0a3080dcd62244a6e344b9512bb7e1 files/digest-Cache-Simple-TimedExpiry-0.23 79
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEPAiJrHF4yAQTrARAgf9AKDM0/0x49EocZdXxQFkFztA/KWQKQCfSj90
-mWHUeISRGrprgKfOktmIU8g=
-=rLH+
------END PGP SIGNATURE-----
