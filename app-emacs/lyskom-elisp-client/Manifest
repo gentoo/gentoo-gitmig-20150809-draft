@@ -1,7 +1,31 @@
-MD5 8d9eede79fae91a752c2203ef05e438b ChangeLog 1136
-MD5 dd4b558dc2e1bb3a5c75f02bb5be8802 lyskom-elisp-client-0.47.1.ebuild 1072
-MD5 c076d3784c65f2704ac1d99d356698b6 lyskom-elisp-client-0.48.ebuild 1055
-MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dfb63e42ade4fe9be8e81ae10d9e817f ChangeLog 1252
+RMD160 f2429305789a3619f5e06188b2bf885900e047f0 ChangeLog 1252
+SHA256 0fc496d7b315d21f4c255630c8d0efc4cf5115b6f6eebef984f932a6b7e140e5 ChangeLog 1252
 MD5 68506112aa782d22a6f1ba8751f5362c files/50lyskom-elisp-client-gentoo.el 120
+RMD160 a0d041900e06c759655c45dddd4f5a32b5484b30 files/50lyskom-elisp-client-gentoo.el 120
+SHA256 df195a3753c44fbe41a472f9df158fed26a34ee3d481be6d369c69e0f6576a98 files/50lyskom-elisp-client-gentoo.el 120
 MD5 5b221d7303b611cdbc2796f5eab81800 files/digest-lyskom-elisp-client-0.47.1 82
+RMD160 bf1700d8d38c7fa0ab70328a92cf654c9916c3bd files/digest-lyskom-elisp-client-0.47.1 82
+SHA256 1e3fdb3de094192845fb255e8907941f529aeb37d48b90b116df8b20fee571fd files/digest-lyskom-elisp-client-0.47.1 82
 MD5 f8b254365362a9e5cffcbcae26ea5908 files/digest-lyskom-elisp-client-0.48 80
+RMD160 1fc0d12ba8269bb6a039280397497a98c2d26e67 files/digest-lyskom-elisp-client-0.48 80
+SHA256 856859c3a92c119c272fb1609f2c73c2682ea315f4ea3cffccb288908ca24adf files/digest-lyskom-elisp-client-0.48 80
+MD5 dd4b558dc2e1bb3a5c75f02bb5be8802 lyskom-elisp-client-0.47.1.ebuild 1072
+RMD160 109c34e1b7dfaec71fbf7b6da130d7910bb8a56e lyskom-elisp-client-0.47.1.ebuild 1072
+SHA256 67011af2c562b9bbb28f44d087be2879fb0f46b0349202eafb9df787a917275f lyskom-elisp-client-0.47.1.ebuild 1072
+MD5 25aef63e40d240ac3f6f2c55f239363e lyskom-elisp-client-0.48.ebuild 1055
+RMD160 e3d248b45dcee75ad48f9b0d56f835a4d8ac92c1 lyskom-elisp-client-0.48.ebuild 1055
+SHA256 eefeac8e4549f3c11c030c0bc23fc9662e46852b56852215a90e4f9cbbf6973f lyskom-elisp-client-0.48.ebuild 1055
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 metadata.xml 158
+SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEFRceSENan+PfizARAuo/AJwKg+iZsnoBvHk9LjN3mW53lH/BEgCeJgff
+kNy4ncgRjZ7a0zrkJwz5UGw=
+=DIKz
+-----END PGP SIGNATURE-----
