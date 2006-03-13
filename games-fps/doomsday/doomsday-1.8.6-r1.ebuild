@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.8.6.ebuild,v 1.2 2006/03/13 21:33:02 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.8.6-r1.ebuild,v 1.1 2006/03/13 21:33:02 tupone Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/deng/deng-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~ppc ~x86"
 IUSE="openal"
 
 DEPEND="virtual/opengl
@@ -23,6 +23,16 @@ DEPEND="virtual/opengl
 	openal? ( media-libs/openal )"
 
 S=${WORKDIR}/deng-${PV}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# Fixing music driver init
+	sed -i \
+		-e "s/musd_loaded.Init/musd_loaded.Init \&\& musd_loaded.Init/" \
+		-e "s/musd_loaded.Shut/if (musd_loaded.Shutdown) musd_loaded.Shut/" \
+		Src/s_mus.c
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"

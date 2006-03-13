@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/doomsday
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.10 2005/09/16 22:12:26 ciaranm Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.11 2006/03/13 21:33:02 tupone Exp $
+
+*doomsday-1.8.6-r1 (13 Mar 2006)
+
+  13 Mar 2006; <Tupone@gentoo.org> -files/1.8.0-filename-case.patch,
+  doomsday-1.8.6.ebuild, +doomsday-1.8.6-r1.ebuild:
+  Fix for bug #113067 (segfault with openal). Thanks Anton Romanov for report.
+  Minor dependency fixes.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
