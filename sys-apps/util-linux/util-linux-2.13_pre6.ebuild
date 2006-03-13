@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13_pre6.ebuild,v 1.4 2006/03/07 00:25:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13_pre6.ebuild,v 1.5 2006/03/13 19:33:22 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -17,13 +17,12 @@ SRC_URI="mirror://kernel/linux/utils/${PN}/testing/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="crypt nls static pam selinux perl"
+IUSE="crypt nls static selinux perl"
 
 RDEPEND="!sys-process/schedutils
 	>=sys-libs/ncurses-5.2-r2
 	>=sys-fs/e2fsprogs-1.34
 	selinux? ( sys-libs/libselinux )
-	pam? ( sys-apps/pam-login )
 	crypt? ( app-crypt/hashalot )
 	perl? ( dev-lang/perl )"
 DEPEND="${RDEPEND}
@@ -59,7 +58,7 @@ src_unpack() {
 	# Fix building with USE=-nls #123826
 	epatch "${FILESDIR}"/${PN}-2.13-no-nls.patch
 
-	# Fix unreadable df output when using devfs ... this check is kind of 
+	# Fix unreadable df output when using devfs ... this check is kind of
 	# a hack, but whatever, the output isnt critical at all :P
 	[[ -e /dev/.devfsd ]] && epatch "${FILESDIR}"/no-symlink-resolve.patch
 
@@ -96,9 +95,9 @@ src_compile() {
 	use static && append-ldflags -static
 	econf \
 		--prefix=/ \
-		$(use_with pam) \
 		$(use_with selinux) \
 		$(use_enable nls) \
+		--without-pam \
 		--enable-agetty \
 		--enable-cramfs \
 		--disable-init \
