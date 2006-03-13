@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.14.0.ebuild,v 1.1 2006/03/13 01:33:37 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.14.0.ebuild,v 1.2 2006/03/13 09:28:03 joem Exp $
 
 inherit eutils gnome2 multilib
 
@@ -76,5 +76,6 @@ src_compile() {
 	addpredict /usr/$(get_libdir)/mozilla-firefox/components/xpti.dat
 	addpredict /usr/$(get_libdir)/mozilla-firefox/components/compreg.dat.tmp
 	addpredict /usr/$(get_libdir)/mozilla/components/xpti.dat.tmp
+	addpredict /usr/$(get_libdir)/mozilla/components/xpti.dat
 	gnome2_src_compile
 }

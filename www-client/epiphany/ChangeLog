@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.57 2006/03/13 01:33:37 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.58 2006/03/13 09:28:03 joem Exp $
+
+  13 Mar 2006; Joe McCann <joem@gentoo.org> epiphany-2.14.0.ebuild:
+  Add another file to addpredict list which fixes sandbox error on mozilla
+  compile. Thanks to Priit Laes on bug 126028
 
 *epiphany-2.14.0 (13 Mar 2006)
 
