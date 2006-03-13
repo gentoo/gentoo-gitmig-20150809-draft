@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/gli
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/ChangeLog,v 1.2 2005/12/25 16:50:11 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/ChangeLog,v 1.3 2006/03/13 16:27:35 wolf31o2 Exp $
+
+*gli-0.3.1 (13 Mar 2006)
+*gli-0.3 (13 Mar 2006)
+
+  13 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/installer-dialog.desktop, +files/installer-faq.desktop,
+  +files/installer-gtk.desktop, -gli-0.2.ebuild, +gli-0.3.ebuild,
+  +gli-0.3.1.ebuild:
+  Added 0.3 and 0.3.1 ebuilds and removed 0.2 since it is no longer used.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> gli-0.2.ebuild:
   Use root:0, not root:root.

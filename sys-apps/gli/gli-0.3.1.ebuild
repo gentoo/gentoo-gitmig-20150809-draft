@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.2.ebuild,v 1.2 2005/12/25 16:50:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.3.1.ebuild,v 1.1 2006/03/13 16:27:35 wolf31o2 Exp $
 
 inherit eutils
 
@@ -18,6 +18,7 @@ RDEPEND=">=dev-python/pyparted-1.6.6
 	gtk? ( >=dev-python/pygtk-2.4.0 )
 	=dev-python/pythondialog-2.7*
 	sys-fs/e2fsprogs
+	sys-fs/hfsutils
 	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
 	sys-fs/dosfstools"
@@ -35,7 +36,6 @@ src_install() {
 	doexe ${FILESDIR}/installer-dialog ${FILESDIR}/installer \
 		|| die "copying dialog/installer scripts"
 	chown -R root:0 ${Ddir}
-	dodir /usr/sbin
 	dodir /usr/bin
 	if use gtk; then
 		doexe ${FILESDIR}/installer-gtk || die "copying gtk script"
@@ -43,8 +43,7 @@ src_install() {
 	fi
 	make_wrapper installer-dialog ./installer-dialog ${dir}/bin
 	make_wrapper installer ./installer ${dir}/bin
-	doicon ${FILESDIR}/gli.png
-	doicon ${FILESDIR}/gli-dialog.png
-	make_desktop_entry installer "Gentoo Linux Installer" gli.png
-		"Gentoo Linux Installer (Command Line)" gli-dialog.png
+	doicon ${FILESDIR}/gli.png ${FILESDIR}/gli-dialog.png
+	domenu ${FILESDIR}/installer-gtk.desktop \
+		${FILESDIR}/installer-dialog.desktop
 }
