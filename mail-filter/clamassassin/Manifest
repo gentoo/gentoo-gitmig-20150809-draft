@@ -1,18 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6bc100d8921cb5db2374813ef9c4432c ChangeLog 3070
+MD5 0e9b556b4a4936c6f37d0079f7570d99 ChangeLog 3148
+RMD160 21e7cfa0bbb9b82fc4247d9b5f9814251503fefa ChangeLog 3148
+SHA256 f8cc83c7a3d30d648918657f2972fdf1fcdc6b1d224549a2cb7e55c7c798ebac ChangeLog 3148
 MD5 9633342e004ddf7cfdd9ad00b9465e8e clamassassin-1.2.1.ebuild 886
+RMD160 879fc26bc2fc38b32a65e424e9523e021a1280f3 clamassassin-1.2.1.ebuild 886
+SHA256 d43f5d0b9040a307db3d675177e30d01d4315a1183676a6a1c8288d519b47bf8 clamassassin-1.2.1.ebuild 886
 MD5 d3c15b4f5b07c0ab69145d71c8e7f6b7 clamassassin-1.2.2.ebuild 945
-MD5 3fc6a0b58d1626532bb0880853007d5c clamassassin-1.2.3.ebuild 944
+RMD160 04f06aace663137922f0e1ff4278052ae67fef59 clamassassin-1.2.2.ebuild 945
+SHA256 4b7c12e2b745573500b99c5dcb9282e3091b425cee0bcb7113bb21d247478ab7 clamassassin-1.2.2.ebuild 945
+MD5 24b812778668181aedc1b7ac63fb289a clamassassin-1.2.3.ebuild 942
+RMD160 c3b6d0e3feb71cb3acad72d56d7df8da1a722650 clamassassin-1.2.3.ebuild 942
+SHA256 85870b6684b72cbe1474bd4006147cef341bb1b037d5a1acd55a178467cd00ba clamassassin-1.2.3.ebuild 942
 MD5 260a237b1e8241e0b63aa29c4bb7807a files/digest-clamassassin-1.2.1 69
+RMD160 c2000a57953fa5c2c8970e140734fa336cd26bd8 files/digest-clamassassin-1.2.1 69
+SHA256 49c1e5da515de8620d484e721f15aa54878eca1eb7065eb8e406d6884b6c2db9 files/digest-clamassassin-1.2.1 69
 MD5 832949fca57f09aec2601878733d90e9 files/digest-clamassassin-1.2.2 69
+RMD160 94d01ab7270672db7dc50d7b496daa55026eb8c0 files/digest-clamassassin-1.2.2 69
+SHA256 c7aee6b924a9489d5f439e32a0ddff3f1088161277ce3b4616f5a47714430838 files/digest-clamassassin-1.2.2 69
 MD5 a92afbcece85ee7f7b303b214f30d5ff files/digest-clamassassin-1.2.3 69
+RMD160 c9a78b9bfc8f82430c0d8478d6703a67080517c7 files/digest-clamassassin-1.2.3 69
+SHA256 fc3c4f5de19cda01a99692586e5755074031305f00c3f1402483545ac90d9b6a files/digest-clamassassin-1.2.3 69
 MD5 8a1c6c5f4c13a4109f6f4198fdd1874b metadata.xml 223
+RMD160 6159fc77e34fb07b40293af1aec8fe3b56393a88 metadata.xml 223
+SHA256 a12a05e718496d215f6c208639d3862f4a8471d6ff3131e29a75a2cdc0a9d6af metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDxoy4CHk4+ZoBpvsRAibJAKDJ08G9IMDOF6lx7df7IcZUpxRDKgCcDYu2
-On4FAvcusRTV4kFGwZv7q3Y=
-=cia5
+iD8DBQFEFYBF10xuJSrg3/sRAp9HAJ4/OnGASn54NnV/CzdLBkcd5ft7zgCeOTno
+7qniwu+fnE8U6qQDubxaGzk=
+=ZfHm
 -----END PGP SIGNATURE-----
