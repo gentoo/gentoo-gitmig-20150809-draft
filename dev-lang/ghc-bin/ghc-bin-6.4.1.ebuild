@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.8 2006/03/11 21:59:12 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.9 2006/03/13 11:31:44 jer Exp $
 
 inherit base multilib
 
@@ -10,12 +10,13 @@ HOMEPAGE="http://www.haskell.org/ghc/"
 SRC_URI="x86?  ( mirror://gentoo/${P}-x86.tbz2 )
 		 amd64? ( mirror://gentoo/${P}-amd64.tbz2 )
 		 alpha? ( mirror://gentoo/${P}-alpha.tbz2 )
+		 hppa? ( mirror://gentoo/${P}-hppa.tbz2 )
 		 sparc? ( mirror://gentoo/${P}-sparc.tbz2 )
 		 ppc? ( mirror://gentoo/${P}-ppc.tbz2 )
 		 ppc64? ( mirror://gentoo/${P}-ppc64.tbz2 )"
 
 LICENSE="as-is"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 IUSE="" # use the non-binary version if you want to have more choice
 

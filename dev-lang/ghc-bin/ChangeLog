@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.41 2006/03/11 21:59:11 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.42 2006/03/13 11:31:44 jer Exp $
+
+  13 Mar 2006; Jeroen Roovers <jer@gentoo.org> ghc-bin-6.4.1.ebuild:
+  Marked ~hppa (bug #125389).
 
   11 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> ghc-bin-6.4.1.ebuild:
   Fix paths in hsc2hs and ghcprof wrapper scripts.
