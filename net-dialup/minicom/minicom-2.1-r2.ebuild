@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r2.ebuild,v 1.3 2006/03/12 18:11:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r2.ebuild,v 1.4 2006/03/13 15:01:27 gustavoz Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://alioth.debian.org/download.php/123/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2-r3"
