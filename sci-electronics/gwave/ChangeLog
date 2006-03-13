@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gwave
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.5 2005/10/02 19:14:20 ribosome Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.6 2006/03/13 23:50:14 deltacow Exp $
+
+  13 Mar 2006; Scott Stoddard <deltacow@gentoo.org> gwave-20031224.ebuild:
+  Added ~amd64.
 
   02 Oct 2005; Olivier Fisette <ribosome@gentoo.org>
   -files/gwave-20030804.gcc33.patch.bz2, metadata.xml,
