@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 272810b8eb5eeb427734372e3ac75c7e ChangeLog 3663
 MD5 abdddf2c3b46b7a83de73052f77061fe XML-NamespaceSupport-1.08.ebuild 589
 MD5 3df1d07fba1da0aa833543bcb845267c XML-NamespaceSupport-1.09.ebuild 615
 MD5 76f23443775274572d2a867ac9cd093f files/digest-XML-NamespaceSupport-1.08 75
 MD5 2f50b6f2ae06fea42964e30e94665878 files/digest-XML-NamespaceSupport-1.09 75
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEFfAMKRy60XGEcJIRAuzoAKCB3gVfwKb44Pm9i3ffp2eNQx+7CACfXb/i
+lJ+EOnyMYNa2egsL07C+xmU=
+=UwxR
+-----END PGP SIGNATURE-----
