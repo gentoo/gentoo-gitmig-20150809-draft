@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6de6430b92354d891ae259daaf4e22ff ChangeLog 7938
-RMD160 7ab24642554fb93c7c4526221103eec26e8ae021 ChangeLog 7938
-SHA256 f7f5e9ee76562c1c363dfc69c626cc44d8b7c18bf800e774042a2d41356b764e ChangeLog 7938
+MD5 bf374c11bfe1121c9df4e8478b6ccec5 ChangeLog 8229
+RMD160 7818a3076c1f042f798d16d93684f18c81402cdb ChangeLog 8229
+SHA256 2db654acf295d1cf887cf91c969eb3b38a2344d3d516d6a9e338d094bbeea3c1 ChangeLog 8229
 MD5 d5d5b818347fd87b290ecb0b17516b34 files/05portage.envd 34
 RMD160 014194a1786a0983a8ba91c3924b798f353c330d files/05portage.envd 34
 SHA256 dbe8db19d03b39ad2b7f9f6dfcd24c615a14886b3fe6d5ce4dd88bac27c0e225 files/05portage.envd 34
@@ -55,6 +55,12 @@ SHA256 817ad4117790fce398cdc3ff783a8fa2c3b47ff9a9b189f21548388290b3aae8 files/2.
 MD5 e5d7c1f5d42a669221637111fcb9f85b files/2.1_pre6/1060_r2863_bug_125919_find_compat.patch 490
 RMD160 9521a7d094a3f825e1873f8004655afb8bee4b53 files/2.1_pre6/1060_r2863_bug_125919_find_compat.patch 490
 SHA256 33e1093537871d6c69f788fced2d2c423e628e0cac03ffbf2bb212891932b469 files/2.1_pre6/1060_r2863_bug_125919_find_compat.patch 490
+MD5 7c3b43171e8b8ae9d79d4392896e4fea files/2.1_pre6/1070_r2864_bug_125993_mergelist_keyerror.patch 485
+RMD160 964d183a883eb49883fb9e994ffa6f4e38b099f1 files/2.1_pre6/1070_r2864_bug_125993_mergelist_keyerror.patch 485
+SHA256 2c306ad9a725d174e94d392b6945b54acb2159c69e9de0e495e5419f37fca0ed files/2.1_pre6/1070_r2864_bug_125993_mergelist_keyerror.patch 485
+MD5 f45766b0fb33d8818c2890038adddb89 files/2.1_pre6/1080_r2865_bug_125942_postinst_env.patch 1512
+RMD160 fc5309ba1c444c3b4034c793fe68c3dbcfad94a0 files/2.1_pre6/1080_r2865_bug_125942_postinst_env.patch 1512
+SHA256 51c08a8ae14dd3809253c11249725f970af72620f58f5eb235605108a255be5f files/2.1_pre6/1080_r2865_bug_125942_postinst_env.patch 1512
 MD5 c906e2e6782e197725b70f84cfe112a4 files/README.RESCUE 137
 RMD160 b8d015f266501fd1f57c91899c6815de9f9d5685 files/README.RESCUE 137
 SHA256 69bea0c755eab59b6b4d90838b8551744f0b0c8eeac170b1cd13a71ee83f9ac4 files/README.RESCUE 137
@@ -73,9 +79,9 @@ SHA256 31fbf92704c8c3836a781144c1fe6c1a5d7a81e14fa79973821df688baf3f63d files/di
 MD5 0ad32101e0f506d39355653da01063db files/digest-portage-2.1_pre5-r4 253
 RMD160 0fda55221331fa51f8a16e2dc1dbe917d6029f08 files/digest-portage-2.1_pre5-r4 253
 SHA256 d35accf261e03854d47f27e0b03e01bbad0768a0d0fcc8e1a7f0934af6e4b3a0 files/digest-portage-2.1_pre5-r4 253
-MD5 3fb2faffeb73793f7928e07619991317 files/digest-portage-2.1_pre6-r1 253
-RMD160 db4da0bfd99ef42a13051e4089009e9ad3c316c2 files/digest-portage-2.1_pre6-r1 253
-SHA256 bf94181b86808452bb19e43fe4d58aeeb6736924e7bd453f38c0f166b227957c files/digest-portage-2.1_pre6-r1 253
+MD5 3fb2faffeb73793f7928e07619991317 files/digest-portage-2.1_pre6-r2 253
+RMD160 db4da0bfd99ef42a13051e4089009e9ad3c316c2 files/digest-portage-2.1_pre6-r2 253
+SHA256 bf94181b86808452bb19e43fe4d58aeeb6736924e7bd453f38c0f166b227957c files/digest-portage-2.1_pre6-r2 253
 MD5 9e669b11a86a57aa8d2a452531085bb6 files/xterm-titles.patch 1115
 RMD160 60cea5a3cfd37b6a3a15ced00a778defaca09212 files/xterm-titles.patch 1115
 SHA256 0e23efd78cff2d7702a4e3ddcf6b53cd7de417f03234397321281066ea8c026c files/xterm-titles.patch 1115
@@ -97,13 +103,13 @@ SHA256 6f7f1500f7a6ab4a7d651a7dbe44695995fdd2a37e4c6826d5eb9de5749b458a portage-
 MD5 f1758097241d74ff2fbfecea1e831732 portage-2.1_pre5-r4.ebuild 5072
 RMD160 381f37b7fc7c2fd218fff4375f9f7672e4c69d10 portage-2.1_pre5-r4.ebuild 5072
 SHA256 f21564ed3d7f7ac1822464e8bc21d1f69cefe418582fba1ba6f146841899e99c portage-2.1_pre5-r4.ebuild 5072
-MD5 6c59acf9c6f676370b4fc812a4d68780 portage-2.1_pre6-r1.ebuild 5261
-RMD160 cf7e94080dc58ee889c414bdce5f2b815c11583e portage-2.1_pre6-r1.ebuild 5261
-SHA256 a67029416b25744d4ea79e74b9f9effd57500c275beaaa22272f76031179d72c portage-2.1_pre6-r1.ebuild 5261
+MD5 38d6ce4b0fef393e8e1faf24d6b82810 portage-2.1_pre6-r2.ebuild 5353
+RMD160 3d927a78bdc006a8296f91621eb95284a7fdd695 portage-2.1_pre6-r2.ebuild 5353
+SHA256 2d9173f640240f8958c535dfdd336e918d41a9bb5b3cd2585b79c045fe82c973 portage-2.1_pre6-r2.ebuild 5353
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEFDC5/ejvha5XGaMRApp3AJ0XQGTKDoUhqSmna0urnwu6hLqXFwCcDARD
-0RISGqRqPhQD4tuHbufBTIY=
-=tecS
+iD8DBQFEFN9v/ejvha5XGaMRAggIAKDqEzrW7V+LC1nqOU+lQl9L2pGwvwCgrr3J
+0sLiSVTPETzOajob5L2zDX0=
+=HiZ/
 -----END PGP SIGNATURE-----

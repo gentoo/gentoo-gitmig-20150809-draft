@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre6-r1.ebuild,v 1.1 2006/03/12 14:02:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre6-r2.ebuild,v 1.1 2006/03/13 02:56:33 zmedico Exp $
 
 inherit toolchain-funcs
 
@@ -37,7 +37,9 @@ src_unpack() {
 		1030_r2860_exec_stack_no_ppc64.patch
 		1040_r2861_cache_cleanse.patch
 		1050_r2862_ebuild_unmerge.patch
-		1060_r2863_bug_125919_find_compat.patch"
+		1060_r2863_bug_125919_find_compat.patch
+		1070_r2864_bug_125993_mergelist_keyerror.patch
+		1080_r2865_bug_125942_postinst_env.patch"
 	for patch_name in ${my_patches}; do
 		einfo "Applying ${patch_name} ..."
 		patch -p0 --no-backup-if-mismatch < "${FILESDIR}"/${PV}/${patch_name} >/dev/null || die "Failed to apply patch"
