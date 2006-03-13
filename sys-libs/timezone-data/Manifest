@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ba0a83177e9c917af0c70231a567746f ChangeLog 2858
+MD5 39f60574a9f6b5e6ff4c6466526e28f0 ChangeLog 2968
+RMD160 fbc3a0ae9d9c76ccb3035976aef9e66bedc5892c ChangeLog 2968
+SHA256 4ec2b5a137c82e815cdfdea7b45e54db9440f63e484d1a124857db3d337c9c4a ChangeLog 2968
 MD5 4c2f960c03eccba94f44dcbb468cfd59 files/digest-timezone-data-2006a 126
+RMD160 6efcf4d8a760cf22996c22fc68cca20c788d4a76 files/digest-timezone-data-2006a 126
+SHA256 39c9ea429aae2d3153e84dd4f520d2917c04c0c5012f7161bcdb4cfb538dc889 files/digest-timezone-data-2006a 126
 MD5 4ea3ff149003fd3e011d1f17e9a73723 files/digest-timezone-data-2006b 476
+RMD160 4b8d4f338133a0eef11260fda0e606f7253f50e3 files/digest-timezone-data-2006b 476
+SHA256 c0b3f0197d170438ce5f806b29d6fa251370127e54e963101425f4d3f7cf72de files/digest-timezone-data-2006b 476
 MD5 e9e827c595ba2803b1090afe0cbf4cfa files/timezone-data-2005n-makefile.patch 3138
+RMD160 da24e48311546da1f9afbb0bcb09e0170ec06b01 files/timezone-data-2005n-makefile.patch 3138
+SHA256 8cc60da044c6bc744000dd899019513306f379959b62a48402d5a305dee9f65f files/timezone-data-2005n-makefile.patch 3138
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 158d3380b6344d8490b4cc82bf5c0a84 timezone-data-2006a.ebuild 848
+RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
+SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
+MD5 cc27e9b918e71527376022de81a994b2 timezone-data-2006a.ebuild 851
+RMD160 e2d665f03270148423d344eb15775e873c3c8999 timezone-data-2006a.ebuild 851
+SHA256 853a9f081d645f16587935dd32cbbc8ac075d7b30f253157cbe7edeaa75f84ab timezone-data-2006a.ebuild 851
 MD5 fa9228560d5d18a5170ce6e042657ade timezone-data-2006b.ebuild 853
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEAx5NKRy60XGEcJIRAtaqAJ9+vIqW0PiOHjB/a6Lar72xSghEPACdG+PG
-sTi/9rA7AEAts+96RyrSyEM=
-=/X3G
------END PGP SIGNATURE-----
+RMD160 05d7a732b4ece0ad174d5851750222df6885f7ce timezone-data-2006b.ebuild 853
+SHA256 d66586bb8d6a8389eed7ad85fbf60e4c2d57a546ab9bb5e3ef3eb6fb50be13e1 timezone-data-2006b.ebuild 853
