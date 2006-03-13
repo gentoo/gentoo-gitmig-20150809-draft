@@ -1,12 +1,14 @@
-MD5 3756f78160f424f60876dcd3d7631c61 ChangeLog 1545
-RMD160 f2b42ef1833fa808b354e8979925cf4d1c20a8dc ChangeLog 1545
-SHA256 82b08a9f90094e500596db6da3ba2976f1f55fbbaf5434d46bcc6083cdb102be ChangeLog 1545
-MD5 8dfe29928c66e47ca9fd0aa06fc1bc86 confcache-0.4.2.ebuild 634
-RMD160 06cf37de1f3b187cff45ee91ddb80a9fc6d5cc2c confcache-0.4.2.ebuild 634
-SHA256 bc7d8860749f01dc73c15462ca2237374a754ccb93290add5bc9c0189ef9bdf1 confcache-0.4.2.ebuild 634
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d980802d50a578c6f171d1d677b9c1c6 ChangeLog 1643
+MD5 2feedd67afbba398e0603b333880f68c confcache-0.4.2.ebuild 640
 MD5 8098534207e3d1933b8eb94f4f11a1c5 files/digest-confcache-0.4.2 247
-RMD160 e06a1a84925ed69cf89e7b30caf5e378764d0335 files/digest-confcache-0.4.2 247
-SHA256 5a2d4773ebe02f4107c6c8d17e1af4795cf77d1ed65da89e4edd1f5bb105d4a4 files/digest-confcache-0.4.2 247
 MD5 126182d41e8ea220308cac82369d1778 metadata.xml 225
-RMD160 d973b4a3a0e8ed0a3bc126ecb9dea3ce3371371f metadata.xml 225
-SHA256 0bc12d2711e9d0335e5a6b4561909de251122ba63cb2039e1f60e5cdcb52ad5b metadata.xml 225
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEFURLViELBEf1JB0RAgquAJ4np4xUFOJcpFoffkE3x2HLDcfyxwCeKRSN
+GZ2XYYHnAmZodVXRBWqdx3c=
+=dtxw
+-----END PGP SIGNATURE-----

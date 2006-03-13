@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/confcache
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confcache/ChangeLog,v 1.8 2006/03/03 23:47:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confcache/ChangeLog,v 1.9 2006/03/13 10:06:37 ferdy Exp $
+
+  13 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> confcache-0.4.2.ebuild:
+  Add ~alpha keyword
 
   03 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
   confcache-0.4.2.ebuild:
