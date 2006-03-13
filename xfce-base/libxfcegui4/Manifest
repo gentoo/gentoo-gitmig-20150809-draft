@@ -1,4 +1,7 @@
-MD5 9afd783c6c823c2c77311b3f17508bfa ChangeLog 8025
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2fc80afda9550ba74de3f99d77b69e63 ChangeLog 8164
 MD5 d07a25a965ca8315611ea916b2d60f3d files/digest-libxfcegui4-4.2.1 69
 MD5 daed0f9e9ebfcfd09728f348e74eb1b2 files/digest-libxfcegui4-4.2.2 69
 MD5 daed0f9e9ebfcfd09728f348e74eb1b2 files/digest-libxfcegui4-4.2.2-r1 69
@@ -6,8 +9,15 @@ MD5 daed0f9e9ebfcfd09728f348e74eb1b2 files/digest-libxfcegui4-4.2.2-r2 69
 MD5 c676fb37b17d371979fa290cb4a422fa files/digest-libxfcegui4-4.2.3 69
 MD5 a1dfdce2e330255275e6bc6aa4a640f4 files/taskbar-gtk-2.8.patch 875
 MD5 4c0aa9e2cb3327324da76d4c3aee9bce libxfcegui4-4.2.1.ebuild 419
-MD5 283a0d03eeddc9339e3bf0c20e95c734 libxfcegui4-4.2.2-r1.ebuild 504
+MD5 58fe7fc4bfd95abebe348d72f8663642 libxfcegui4-4.2.2-r1.ebuild 503
 MD5 a5ee7fdf5aa5486a98c90c49a932b0ee libxfcegui4-4.2.2-r2.ebuild 699
 MD5 7ec0910721ace5d7f0c74c4800748b03 libxfcegui4-4.2.2.ebuild 429
 MD5 ad02ec50d4a34dcc290b0057317ae14a libxfcegui4-4.2.3.ebuild 610
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEFdjVKRy60XGEcJIRAgWvAJ98K9al9dT532NDshSCeVEdeWHgRgCgoPNJ
+01K1I4uhQMVv2UXP5BY9CjU=
+=nxu3
+-----END PGP SIGNATURE-----
