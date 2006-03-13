@@ -1,20 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e0f156b16f58e8e251190673b2053cba ChangeLog 3296
+MD5 9e84933c581f729e55cb5cca0c8515f5 ChangeLog 3401
+RMD160 f8d668bc4fe335bf2822327e68ce164632ffecab ChangeLog 3401
+SHA256 306cb00607243f2485d665a146df8945671797e78ef2c23e58455c0dcfaf3a9a ChangeLog 3401
 MD5 229b766be0903bd758289c61402890b5 crypt-cbc-2.08.ebuild 614
+RMD160 8bd184bc4bcbd6dc211ec12c2f7d1d980ce486b6 crypt-cbc-2.08.ebuild 614
+SHA256 6b29381605cd1b3c049e7375bc77b522712f33a6f334a7179083cfc3f0d7acdb crypt-cbc-2.08.ebuild 614
 MD5 14c00dd6c928123095f4a5b942f5a845 crypt-cbc-2.11.ebuild 645
+RMD160 417a512d2a651993fb7c32eac99a6415b3d9eece crypt-cbc-2.11.ebuild 645
+SHA256 9b4925926cba39a497208f6a858a04beef8bbae5610318f9d1b2ca0c51e171a1 crypt-cbc-2.11.ebuild 645
 MD5 197c06afed08f796d6b7c1a33edcf88d crypt-cbc-2.15.ebuild 639
-MD5 ec440bcec36fc682bf4ca3020bc20657 crypt-cbc-2.17.ebuild 649
+RMD160 3e86d69ddc7640f0f45dd9ef73457a921e4890e6 crypt-cbc-2.15.ebuild 639
+SHA256 513e18d5a6253c1717fe6a92929941451d87c503c2f01a493463ba975d8b0864 crypt-cbc-2.15.ebuild 639
+MD5 74190249f39fd5a928ceac2b26387df2 crypt-cbc-2.17.ebuild 648
+RMD160 e8363f6a159e6b0075f39b5ebde946d01f38cd2e crypt-cbc-2.17.ebuild 648
+SHA256 f423b09f9d4d07032a6dc68c65423afbdc135cc2f810d5de0d4e426ba2113c68 crypt-cbc-2.17.ebuild 648
 MD5 fa3fc19345cd6ec2e7eded5284f9db02 files/digest-crypt-cbc-2.08 64
+RMD160 8ce8808c941410451aee77404b58a923e3666a62 files/digest-crypt-cbc-2.08 64
+SHA256 3605056f0fd4604c28c385f095d97452c09b8f5a3657ffaeeabbae4421f8cca2 files/digest-crypt-cbc-2.08 64
 MD5 f510ce2e66d97d831a409fe7a7846a1d files/digest-crypt-cbc-2.11 65
+RMD160 0ebd7219e3ec434f11da4247c2964586b8cb625b files/digest-crypt-cbc-2.11 65
+SHA256 4affb4c44ea6bf9d773655fb2612ae7bf0a5ea847fd767c28a23ab539bc17354 files/digest-crypt-cbc-2.11 65
 MD5 5aae37540b68ccdebdeac4ef611eb699 files/digest-crypt-cbc-2.15 65
-MD5 1802f19bb355f18a99b10af07ac34f61 files/digest-crypt-cbc-2.17 65
+RMD160 29b35a316d2cf87bf09edf7f54293e516bcc94a1 files/digest-crypt-cbc-2.15 65
+SHA256 d0c64ecef396c75b55bb5183b010fa7b9516f0eef422a355d011fb2b7e19f6b9 files/digest-crypt-cbc-2.15 65
+MD5 77440e6e52921949c52d2ae75bddfef7 files/digest-crypt-cbc-2.17 241
+RMD160 6da1ee268b5ad169a8ed7611b5fa87b302654a24 files/digest-crypt-cbc-2.17 241
+SHA256 0daf566da558b276686d731a6f0d41d5a393318fa150cdc533b1e71798bb8976 files/digest-crypt-cbc-2.17 241
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEFdAgFdQwWVoAgN4RAhraAJ9WVa7sri0WKKqpvpJWiZy0Mj4QiACfWwOv
-N1LzUZbSC4oi89W9AQESwOg=
-=NcOz
+iD8DBQFEFeWmFdQwWVoAgN4RAqzXAKDagK0bh9xCKvqfNxm8cABg/eSsRACfQONn
+tmSuU/bSUUUV4DeVnZ5UTUs=
+=f0zM
 -----END PGP SIGNATURE-----

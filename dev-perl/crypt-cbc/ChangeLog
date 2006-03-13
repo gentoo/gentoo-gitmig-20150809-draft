@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-cbc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.30 2006/03/13 20:57:10 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.31 2006/03/13 21:35:14 chriswhite Exp $
+
+  13 Mar 2006; Chris White <chriswhite@gentoo.org> crypt-cbc-2.17.ebuild:
+  x86 stable for bug #126048.
 
   13 Mar 2006; Chris White <chriswhite@gentoo.org> crypt-cbc-2.17.ebuild:
   ppc stable for bug #126048.
