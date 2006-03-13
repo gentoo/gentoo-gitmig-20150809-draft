@@ -1,35 +1,75 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 279ad6bb0a6b85613ac7417948c890de ChangeLog 14796
+MD5 c1b6254c428b2c9d6b81d726771357bf ChangeLog 14910
+RMD160 69ad394e0a4782b272890c3dfef9456e2a5dfabe ChangeLog 14910
+SHA256 7452bec1c7a798031917d730f999336c8834a4590a30c3155de3dfa1c335e092 ChangeLog 14910
 MD5 857c709217075d76229be25e413710d9 files/auerswald.usermap 397
+RMD160 4914f36a0095823448f43c54066e8758636396d9 files/auerswald.usermap 397
+SHA256 d7986d6e79316664314cdcd273635f5011c7a9365505663a5bb78227db747d49 files/auerswald.usermap 397
 MD5 6ac41911cd731019286016727a61f5ac files/config-3.8_pre20050821 2781
+RMD160 f9fdfd3d8b1360a278df98cf9b273b356da93d05 files/config-3.8_pre20050821 2781
+SHA256 08b531c1bf20d9d6188fab9f8afbff5693c2a3b99613880b6af0723375537081 files/config-3.8_pre20050821 2781
 MD5 6ac41911cd731019286016727a61f5ac files/config-3.9_pre20060124 2781
+RMD160 f9fdfd3d8b1360a278df98cf9b273b356da93d05 files/config-3.9_pre20060124 2781
+SHA256 08b531c1bf20d9d6188fab9f8afbff5693c2a3b99613880b6af0723375537081 files/config-3.9_pre20060124 2781
 MD5 58808a3af01ef0246beb7d1b038c3faa files/digest-isdn4k-utils-3.8_pre20050821 81
+RMD160 6b77b8e585dfb3d7fdf49af7c2b994433de0ef2b files/digest-isdn4k-utils-3.8_pre20050821 81
+SHA256 3ef01952101742da53a9dc3aa4bf0c0c5961e353e5b4597980e726c927cca201 files/digest-isdn4k-utils-3.8_pre20050821 81
 MD5 23a226d133fb2e0922ba3bcafacf7524 files/digest-isdn4k-utils-3.9_pre20060124 289
+RMD160 676939ffad818783078fcb4032a5648eace80578 files/digest-isdn4k-utils-3.9_pre20060124 289
+SHA256 388f54ca04dad83410194b4c3ba94a1218036e2782e752c056dc548c51e2f81b files/digest-isdn4k-utils-3.9_pre20060124 289
 MD5 a441b940d846a92ca2f3b6a44e9b8c6c files/eiconctrl-gcc4.patch 387
+RMD160 fe61b877fcc5a4a694fd82bf3438cd02e8dcb4b9 files/eiconctrl-gcc4.patch 387
+SHA256 24bde423307ce2aa5033dce8b8bb52983e9fcd2857ffea2ce34c3bdceb14eed6 files/eiconctrl-gcc4.patch 387
 MD5 86576c4c0ae856485125ae3ae08c973d files/hisax.conf 1144
+RMD160 0b8d175ef78b6ad7fceca687e9c0167475ddd477 files/hisax.conf 1144
+SHA256 6f281aa0ad3b6dafb0492ec98e5ad98156cfabac9a280d98a027bad10da3878d files/hisax.conf 1144
 MD5 7148803fd3fba535c4754a521cc2e6b6 files/hisax.initd 6556
+RMD160 96ac8ba7ebff41547f8bbcd975a92451f18066fa files/hisax.initd 6556
+SHA256 1f7b60a2ef6258acbd7549b4e16015bbf0a366102bbba1ca6d1ec49f6caa6602 files/hisax.initd 6556
 MD5 649d35c1add6b0d84e4280a432074351 files/hisax.usermap 122
+RMD160 10a4ab81d20faf1cd76b83f73a97f54b8ccd590f files/hisax.usermap 122
+SHA256 3f614ecb6c9a5d486acad83c31cf5ada7de4d93c39f53227a0406210cee6fdf5 files/hisax.usermap 122
 MD5 92412760dfacc81cfac908d522ac8e39 files/ioptions 86
+RMD160 7562b3b63d424743f1dc66d47ce27094c6ede1e2 files/ioptions 86
+SHA256 c6ea603efce6b2e0d4ae3b9a4202ab44c5d23545181a29947601e9503ed02b1d files/ioptions 86
 MD5 9898159595a17b492bb241b959f5f074 files/ipppd-pcap-0.9.3.patch 1590
+RMD160 aa62f3fdeb98b69e208cb96ad60db184ebf96273 files/ipppd-pcap-0.9.3.patch 1590
+SHA256 f5e6b84ca891880081b10416bd5d3c5d7126d7c692c29e469f9d7e44b0e14d35 files/ipppd-pcap-0.9.3.patch 1590
 MD5 06e7abc965c0eac1380c6c8ba4390378 files/isdn.blacklist 216
+RMD160 1d2a672f45ef1cfa1902d64a9c0221365af9b344 files/isdn.blacklist 216
+SHA256 0d526486dc22a815fa8ec1beb5f0e0ab1e26d21bc4a63e28ea70732314bb4ae1 files/isdn.blacklist 216
 MD5 6e0925cc6a39e1aa656b143bf4fc75f6 files/isdn.confd 634
+RMD160 dd6039533238a06b75cfe817e9c24a31af11b752 files/isdn.confd 634
+SHA256 611ade91c898328a81a0f740364acb8502777657d27963d11669d24c7f526cf9 files/isdn.confd 634
 MD5 d766854c3530b81f7efc43498b96154e files/isdn.initd 3828
+RMD160 af9e5cc5954f2fd1332b2b48bd04cb61fc30283b files/isdn.initd 3828
+SHA256 ad0a577646594d8ed16697b938646803df09c8dcd7501409f8f51eedebe920f7 files/isdn.initd 3828
 MD5 fc829217e8c183d2ab6e9b6dd5dd50e6 files/isdn.pcmcia 523
+RMD160 26b25fbf1e504321f6fb30876238ec52e04468e5 files/isdn.pcmcia 523
+SHA256 c42943bc84dd1d77732bc0c4db3d14e2a19abc5285ee76479b8f9c649fe5ea02 files/isdn.pcmcia 523
 MD5 01f12d0a19d1304719792797f8977782 files/isdn.pcmcia.conf 4581
+RMD160 06af23d70633ed1183054b5687f07dac5ba5c59b files/isdn.pcmcia.conf 4581
+SHA256 212293f7ca17272d215740d6d415bf9fbcd17d7c5f8bc8932904d5b6aac7ea62 files/isdn.pcmcia.conf 4581
 MD5 64c78da4643b660b18da623dcf0d9826 files/isdnlog.confd 679
+RMD160 6c3cfce8a979ce5b79abd4c8f59efececd2a29de files/isdnlog.confd 679
+SHA256 f293af570546ed89ebfd17003ce0c5053030efabf14b0250f04c20a88e745c0f files/isdnlog.confd 679
 MD5 7b9a91e7b9a8970a7368aa8e49e85563 files/isdnlog.initd 2418
+RMD160 d33f9587e1b6e7b4cabdd7d3dad84ea464f9cbd9 files/isdnlog.initd 2418
+SHA256 778a67e61daeb38bbcfc3e8d16b6c3d8a2bde9cf18bcc34fb10dde5f2b409e99 files/isdnlog.initd 2418
 MD5 e56d47fcff15cbd8278b196cdffd7433 files/isdnlog.logrotated 191
+RMD160 b9c0339d2e92efb388cde9af68bcb5ecd3f0893c files/isdnlog.logrotated 191
+SHA256 1a0d028b9ac55aa07edb12fb5f23dbe6bf3a94a0a20bdd91cd61052f5c514c25 files/isdnlog.logrotated 191
 MD5 521e30e785f269e397b134eaaedb9072 files/net.ippp0 2412
+RMD160 10ade1490a6cb92c0e953eb0eff819028379f596 files/net.ippp0 2412
+SHA256 517f6659c2d43a35abd1b3b7cd07740f46bc16443ea60b3862f397b5b959e922 files/net.ippp0 2412
 MD5 48266d44ebe70519d3fc67a6b0e260ff files/options.ippp0 443
+RMD160 8ed0921ae6912fdb4462181a1b9a5209f2bb0c0d files/options.ippp0 443
+SHA256 663e9db679a5cc471f07bd6e75ff450c3c7e6508f6bfd904b8da5437ec72d052 files/options.ippp0 443
 MD5 fc26bfe4f4efed33ef1dc46f1b0d0b77 isdn4k-utils-3.8_pre20050821.ebuild 11099
-MD5 3a6c98e35e64667ef6b400a2e303f244 isdn4k-utils-3.9_pre20060124.ebuild 12056
+RMD160 8109320af41f0886a1f1355920bc11a63eb46ec1 isdn4k-utils-3.8_pre20050821.ebuild 11099
+SHA256 147852594a4926cf9d5a5ed57f218615be5d4ae966f2eb08c63c9db9a22f9bfd isdn4k-utils-3.8_pre20050821.ebuild 11099
+MD5 3a95aedb16e7223fd6f2c9149d4d671a isdn4k-utils-3.9_pre20060124.ebuild 12056
+RMD160 0fec159d4c8e00bfddb0546eb6d38e21ed9a010e isdn4k-utils-3.9_pre20060124.ebuild 12056
+SHA256 1c8a46e6fb9aaeafea693d7b6693abba1d1c36375c6c0da24031cb8444103719 isdn4k-utils-3.9_pre20060124.ebuild 12056
 MD5 41bb308eb7db7d75c04a60f8cfb73be3 metadata.xml 418
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEFCqZjG8pv1lIUX4RAjA9AKC2mIxWr71YIYnQSNwB/mNKh3bGAwCfd0VC
-jDW7uL+ejlf34kYGV/fceDA=
-=srQy
------END PGP SIGNATURE-----
+RMD160 17c396ff690867e3973b4edc6e9d12913f2d122f metadata.xml 418
+SHA256 26d507f24caf982ef7137e998ccb984ed6c555dbd4134e4c291739aebe6fccf1 metadata.xml 418
