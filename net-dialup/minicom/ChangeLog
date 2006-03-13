@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.35 2006/03/13 15:01:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.36 2006/03/13 19:36:33 gustavoz Exp $
+
+  13 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> minicom-2.1-r2.ebuild:
+  Stable on hppa
 
   13 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> minicom-2.1-r2.ebuild:
   Stable on sparc
