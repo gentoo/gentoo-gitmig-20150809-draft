@@ -1,21 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1799e1639fa8ecedecdea56566ed2579 ChangeLog 851
+MD5 313f8c5427b001a7a0431d6136bde014 ChangeLog 1046
 MD5 7e7798b807c8766b6331d33684ac3b98 files/digest-vdr-setup-0.2.3 63
 MD5 3675ed9249bf7584ce1c4331fa2fbf42 files/digest-vdr-setup-0.3.1 63
 MD5 4dd1e551d51e11df975e6743ea2ead01 files/vdr-setup-0.2.3-gentoo.diff 6713
 MD5 41cf39f874c71c97dbe151092e736715 files/vdr-setup-0.3.1-gentoo.diff 6469
+MD5 2dab383f62b554eb038347bed47c18fb files/vdr-setup-0.3.1-lang.diff 6546
 MD5 92ddb2fe7e0e61f6cace4ca8ff84dedd files/vdr-setup-0.3.1-timers.diff 312
 MD5 13134d72f70ed4077f1783e4b9640e0c files/vdr-setup.xml 8338
 MD5 b76f00a750adf92ee7defa4febc4b88d metadata.xml 544
 MD5 8f022e87ee9ece56950ef705e7780109 vdr-setup-0.2.3.ebuild 1797
-MD5 56c82b72f1774b4e9d0f078b7fdfef8b vdr-setup-0.3.1.ebuild 1785
+MD5 57a27ab2f5217cb265c5057a026df2ba vdr-setup-0.3.1.ebuild 2018
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 Comment: no further Information
 
-iD8DBQFEEzS9dn07HTTCgIoRAkErAJsFyKBBQHvXQnoWONus8556tRg2ggCeIhbW
-ojWwmkR/0Lzwv1xLMM9nQmQ=
-=e+Iw
+iD8DBQFEFXyLdn07HTTCgIoRAr6yAJ0Zqnlub3OuwZLvvdzT327TmkH2pgCgujmI
+HHW3bpXhgAu1ZaRxcWMth1M=
+=9UIX
 -----END PGP SIGNATURE-----

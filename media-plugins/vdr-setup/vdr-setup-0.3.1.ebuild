@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1.ebuild,v 1.1 2006/03/11 20:35:57 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1.ebuild,v 1.2 2006/03/13 14:06:51 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -64,6 +64,10 @@ pkg_postinst() {
 
 	echo
 	einfo "Edit /etc/vdr/plugins/setup/*"
+	echo
+	eerror "vdr-setup is very sensible on Error's in your setup.conf"
+	einfo "Best way to fix this: Stop (at first) VDR , move setup.conf to setup.conf.bak"
+	einfo "and let create VDR a new setup.conf on next Start automatically"
 	echo
 	ewarn "Setup-Plugin will change the path of your channels.conf"
 	einfo "You will find a backup copy on /etc/vdr/channels/channels.conf.bak"
