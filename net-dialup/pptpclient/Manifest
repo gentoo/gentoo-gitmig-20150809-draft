@@ -1,42 +1,17 @@
-MD5 f061c51949276203668790cd8a742233 ChangeLog 5593
-RMD160 6e851583f63f4a24991c60ae669b3e44bc76182d ChangeLog 5593
-SHA256 ed4df8c47048bb6336f4ae652f443ba5e7f80025692b47c9112a7703372b55a3 ChangeLog 5593
-MD5 2ae5d625d43dc891c4e445b5049bb947 files/digest-pptpclient-1.5.0-r1 124
-RMD160 096f33c96fb9a519474ef32b421ed877cd214c79 files/digest-pptpclient-1.5.0-r1 124
-SHA256 c3d306e88d1a9b60a0e900152fd23d532a6aa8d405ca97139738763baafa9d45 files/digest-pptpclient-1.5.0-r1 124
-MD5 10a1583f3984e35a544b59b0d9595b2c files/digest-pptpclient-1.5.0-r2 135
-RMD160 45c6a522154d6069c9f926da0015b9efd0858c12 files/digest-pptpclient-1.5.0-r2 135
-SHA256 ec9b9803cb7e2548a235a93f820711b033c8c208e8792c0f6a1f1e9cd6d80545 files/digest-pptpclient-1.5.0-r2 135
-MD5 9dcb3e6b02bf8092a58d76b6d262e94b files/digest-pptpclient-1.6.0 129
-RMD160 c7b8e24722a63b88d48619cf3acef23f2e18148f files/digest-pptpclient-1.6.0 129
-SHA256 3470157c54474578f6b9fb7d44da8a8ec3e62c8e4b7bc91560dc3e94ed6e40f7 files/digest-pptpclient-1.6.0 129
-MD5 3faa8a65b9a15f9320a0ea924f25b6d3 files/digest-pptpclient-1.7.0 309
-RMD160 4d7779bbe557c0badc9e997b743764ffc7421f3c files/digest-pptpclient-1.7.0 309
-SHA256 fdd606f0eec493c216e620fab496dcf24853508902a4f2b4a3109cfe4500c69f files/digest-pptpclient-1.7.0 309
-MD5 eeee374ec64214d7f9c26a21ce8f4a36 files/new-mppe/options.pptp 340
-RMD160 adc667e771edab67316f855c8458978e386c51c3 files/new-mppe/options.pptp 340
-SHA256 cd50ad834140f6d5088d52190c5acee3eaea690cdb6550f90ba6d8837633b68e files/new-mppe/options.pptp 340
-MD5 dad6352a156cbe6ce71b057f50af2eec files/options.pptp 359
-RMD160 f9302762e0061e4fb06c86cf8ba9d34fd007567d files/options.pptp 359
-SHA256 26e794e283a186338b5306f915fe771e9209c2a23f64e5956d2d6b71a7ba22dd files/options.pptp 359
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bf52963832ffdaa326adda264b9a2895 ChangeLog 5874
+MD5 437731fcd809ae5dd2adfc4bd5746c09 files/digest-pptpclient-1.7.0 129
+MD5 eeee374ec64214d7f9c26a21ce8f4a36 files/options.pptp 340
 MD5 34862b5af00d851d068eb3e384093c3b files/pptp_fe.pl 8100
-RMD160 4b8c4591645a5f79daf2ba27e3e657db24323ffe files/pptp_fe.pl 8100
-SHA256 f980fd3ff529bd4476852be39e05579bbeb9dc5c299795050a8d146ed6c4c648 files/pptp_fe.pl 8100
 MD5 bd60480b6ba90362342540fb9cbe7ebe files/xpptp_fe.pl 5620
-RMD160 876401b301857b17e0ced6e191316f1ff89afe19 files/xpptp_fe.pl 5620
-SHA256 18c6098a66721a4f5c5b387c2ea312c21224c11ad6b2ddaec83f63049b1ab053 files/xpptp_fe.pl 5620
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-RMD160 df94c60cc0bb7abe5913b464a33966b142b2fe1e metadata.xml 163
-SHA256 1137a0fd866641cf719b0c2e9e77ca9fa4541a42f2cc851fe4659cf2677acca3 metadata.xml 163
-MD5 91a738e62b5ea1adbef4717455f58c19 pptpclient-1.5.0-r1.ebuild 1074
-RMD160 b15d2846fce5c687094125b8e152a34ef77cccfc pptpclient-1.5.0-r1.ebuild 1074
-SHA256 53db530346af545c2c860df62d3b8658d790f2b50fbe44e65070cbc4826038e5 pptpclient-1.5.0-r1.ebuild 1074
-MD5 816f285f7a0594ba2812e7a6858977a4 pptpclient-1.5.0-r2.ebuild 1132
-RMD160 d6dbc5ea97318152bbc5f19a62fb476dd6039584 pptpclient-1.5.0-r2.ebuild 1132
-SHA256 b2915d91508abab64d1dd6bbf47f6f5e1b17ae0f1059eee57121441a8c88f787 pptpclient-1.5.0-r2.ebuild 1132
-MD5 ff3bc276a9b0c2fc6dc07f4c72a39bfb pptpclient-1.6.0.ebuild 1124
-RMD160 bef2a1e94cbe0c01a8efca0b6d4af3bf45a6ff61 pptpclient-1.6.0.ebuild 1124
-SHA256 0041f2dda22b8fce0ffa42937937fb10b298f9c311b530cb1f62c89ee20cefc0 pptpclient-1.6.0.ebuild 1124
-MD5 2dafd4bb6441f9b777238d0da7293c38 pptpclient-1.7.0.ebuild 1121
-RMD160 b504238423e9f363f822f4bbfd31f5a88b8515e1 pptpclient-1.7.0.ebuild 1121
-SHA256 92e5538923e03388500c1f8ca6910cfa2268a31414995a32c3845b4719416ab5 pptpclient-1.7.0.ebuild 1121
+MD5 ee37a5b63158f3efa67cb4fc241cf868 metadata.xml 295
+MD5 84beb6d5e68db39a6731ddc15ea70847 pptpclient-1.7.0.ebuild 1143
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEFQj7jG8pv1lIUX4RAmP9AJ9EjfdBXk8mhoekbaiUGDhu00PxywCg4m+V
+AltBqUn29AB7HQe8aLopDs4=
+=zgWt
+-----END PGP SIGNATURE-----

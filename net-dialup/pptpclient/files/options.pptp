@@ -17,9 +17,7 @@ nodeflate
 #
 # We want MPPE
 #
-mppe-40
-mppe-128
-mppe-stateless
+require-mppe
 
 #
 # We want a sane mtu/mru

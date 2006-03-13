@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.7.0.ebuild,v 1.6 2006/02/07 20:47:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.7.0.ebuild,v 1.7 2006/03/13 05:53:43 mrness Exp $
 
 MY_P=${P/client}
 MY_CMD=pptp-command-20050401
@@ -19,7 +19,7 @@ DEPEND=">=net-dialup/ppp-2.4.2
 	dev-lang/perl
 	tcltk? ( dev-perl/perl-tk )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	emake OPTIMISE= DEBUG= CFLAGS="${CFLAGS}" || die "make failed"
@@ -34,10 +34,9 @@ src_install() {
 
 	# The current version of pptp-linux doesn't include the
 	# RH-specific portions, so include them ourselves.
-	cd ${FILESDIR}
 	insinto /etc/ppp
-	doins new-mppe/options.pptp
-	newsbin ${WORKDIR}/${MY_CMD} pptp-command
-	dosbin pptp_fe.pl
-	use tcltk && dosbin xpptp_fe.pl
+	doins "${FILESDIR}/options.pptp"
+	newsbin "${WORKDIR}/${MY_CMD}" pptp-command
+	dosbin "${FILESDIR}/pptp_fe.pl"
+	use tcltk && dosbin "${FILESDIR}/xpptp_fe.pl"
 }
