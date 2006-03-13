@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ups-monitor/ups-monitor-0.8.3.ebuild,v 1.1 2005/12/11 21:05:48 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ups-monitor/ups-monitor-0.8.3.ebuild,v 1.2 2006/03/13 20:31:43 jokey Exp $
 
 DESCRIPTION="A UPS monitor for NUT (Network UPS Tools)"
-HOMEPAGE="http://www.usm.edu.ec/~amadorm/software/"
-SRC_URI="http://www.usm.edu.ec/~amadorm/software/${P}.tar.gz"
+HOMEPAGE="http://rudd-o.com/wp-content/projects/files/ups-monitor"
+SRC_URI="http://rudd-o.com/wp-content/projects/files/ups-monitor/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
