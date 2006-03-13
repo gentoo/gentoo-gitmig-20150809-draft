@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-cdparanoia
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/ChangeLog,v 1.62 2006/03/11 22:55:44 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/ChangeLog,v 1.63 2006/03/13 10:24:11 zaheerm Exp $
+
+  13 Mar 2006; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  gst-plugins-cdparanoia-0.10.4.ebuild:
+  fix dep on gstreamer
 
 *gst-plugins-cdparanoia-0.10.4 (11 Mar 2006)
 
