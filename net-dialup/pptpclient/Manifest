@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bf52963832ffdaa326adda264b9a2895 ChangeLog 5874
+MD5 02aec27f5f91ceaef673bd6531b82d53 ChangeLog 5947
 MD5 437731fcd809ae5dd2adfc4bd5746c09 files/digest-pptpclient-1.7.0 129
+MD5 a2cab212edeaa33febd818a8b18586a4 files/digest-pptpclient-1.7.1 129
 MD5 eeee374ec64214d7f9c26a21ce8f4a36 files/options.pptp 340
 MD5 34862b5af00d851d068eb3e384093c3b files/pptp_fe.pl 8100
 MD5 bd60480b6ba90362342540fb9cbe7ebe files/xpptp_fe.pl 5620
 MD5 ee37a5b63158f3efa67cb4fc241cf868 metadata.xml 295
 MD5 84beb6d5e68db39a6731ddc15ea70847 pptpclient-1.7.0.ebuild 1143
+MD5 b9b0fb67f7793ea550b79e4e637731fb pptpclient-1.7.1.ebuild 1134
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEFQj7jG8pv1lIUX4RAmP9AJ9EjfdBXk8mhoekbaiUGDhu00PxywCg4m+V
-AltBqUn29AB7HQe8aLopDs4=
-=zgWt
+iD8DBQFEFQyCjG8pv1lIUX4RAofoAJ4grDHJFfrw6gaMO+tq45noz+rCPgCg78I6
+/JQzlvgEqD4Gpk/WWzSZ2PY=
+=pIum
 -----END PGP SIGNATURE-----
