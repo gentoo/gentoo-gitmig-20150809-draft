@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.2 2006/02/10 17:04:39 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.3 2006/03/13 19:34:23 kevquinn Exp $
 
 # This file is additional masking for the hardened profile
 
@@ -12,3 +12,10 @@
 # but be prepared to rebuild anything you build with gcc-4, later.
 # 2006-01-11 kevquinn
 =sys-devel/gcc-4*
+
+# Mask off glibc-2.4 until the approach for SSP compatibilty is
+# resolved in a way that doesn't break running systems, and we
+# have a sensible upgrade path.  Advise having a static busybox
+# around if you try it in a live system.
+# 2006-03-13 kevquinn
+=sys-libs/glibc-2.4*
