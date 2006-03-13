@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 45ad62421cc366aa2a6bec884213483d ChangeLog 2964
+MD5 855cb0c7a928a8d5bfb222c769b0aab3 ChangeLog 3072
 MD5 229b766be0903bd758289c61402890b5 crypt-cbc-2.08.ebuild 614
 MD5 14c00dd6c928123095f4a5b942f5a845 crypt-cbc-2.11.ebuild 645
 MD5 197c06afed08f796d6b7c1a33edcf88d crypt-cbc-2.15.ebuild 639
-MD5 5417ce657815d8f210dc81a18f5be70e crypt-cbc-2.17.ebuild 643
+MD5 be352681b4ea7998f7c5c8ca3d2fd0d7 crypt-cbc-2.17.ebuild 639
 MD5 fa3fc19345cd6ec2e7eded5284f9db02 files/digest-crypt-cbc-2.08 64
 MD5 f510ce2e66d97d831a409fe7a7846a1d files/digest-crypt-cbc-2.11 65
 MD5 5aae37540b68ccdebdeac4ef611eb699 files/digest-crypt-cbc-2.15 65
 MD5 77440e6e52921949c52d2ae75bddfef7 files/digest-crypt-cbc-2.17 241
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEFdBgKRy60XGEcJIRAjx7AJ4ma40yOkfboWlzI/I7BvKQPutrewCfX3Xw
-W3unYPGbQwtAgMjmoT0o7DE=
-=qlYF
+iD8DBQFEFdRUViELBEf1JB0RAkdJAKCG+tQFYRQmp4xURDRkbbHwuMDr7ACferTa
+LHQEnqnNhr7zVxdsRduuITc=
+=kO4F
 -----END PGP SIGNATURE-----
