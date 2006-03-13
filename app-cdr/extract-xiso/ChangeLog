@@ -1,6 +1,15 @@
 # ChangeLog for app-cdr/extract-xiso
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/ChangeLog,v 1.12 2005/05/25 23:13:53 chrb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/ChangeLog,v 1.13 2006/03/13 19:18:31 chrb Exp $
+
+*extract-xiso-2.5 (13 Mar 2006)
+
+  13 Mar 2006; <chrb@gentoo.org>
+  -files/extract-xiso-2.4_beta2-64bitfix.patch,
+  -files/extract-xiso-2.4_beta2-fnamefix.patch,
+  -extract-xiso-2.4_beta2.ebuild, -extract-xiso-2.4_beta2-r1.ebuild,
+  +extract-xiso-2.5.ebuild:
+  version bump, thanks to Pandor in bug #125997.
 
 *extract-xiso-2.4_beta2-r1 (26 May 2005)
 
