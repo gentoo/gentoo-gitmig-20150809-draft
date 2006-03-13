@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/jffnms
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/ChangeLog,v 1.1 2006/03/13 23:22:34 angusyoung Exp $
+
+*jffnms-0.8.2 (13 Mar 2006)
+
+  13 Mar 2006; Otavio Piske <angusyoung@gentoo.org> +files/mysql_db,
+  +files/postgresql_db, +files/postgresql_db_table, +jffnms-0.8.2.ebuild:
+  Jffnms ebuild. Initial release. Closes bug 92501
+
