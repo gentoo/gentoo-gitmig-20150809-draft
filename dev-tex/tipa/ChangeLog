@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/tipa
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tipa/ChangeLog,v 1.1 2005/02/22 12:51:18 usata Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tipa/ChangeLog,v 1.2 2006/03/13 20:20:36 ehmsen Exp $
+
+  13 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org> tipa-1.3.ebuild:
+  Added einfo to tell how to use tipa with dvips, bug #124846.
+  Added ~amd64.
 
 *tipa-1.3 (22 Feb 2005)
 
