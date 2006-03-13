@@ -1,30 +1,76 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a9dbfb0ab774a2e1982eeeac0f0da167 ChangeLog 11865
+MD5 14d4a9bba02dc4e4b22525287567515f ChangeLog 11977
+RMD160 8c9c2e0108f793b314fddf6812390a8a74f2d191 ChangeLog 11977
+SHA256 ceb2234e1f1395e166e68178fb2fa84edcf7d4c89693f8d185007cea7598c6ae ChangeLog 11977
 MD5 c6073a11ea3fcb5cc0d1625a54aad8d4 file-4.12.ebuild 2081
+RMD160 5bd6c02f65484890ba827b6b89356b40078b6103 file-4.12.ebuild 2081
+SHA256 4e79491dc2311248cf58cf17f51a1dc557d30a24873d129e852775b5c78235ed file-4.12.ebuild 2081
 MD5 213bc8ded7a22b2fcb129f4ee60e892c file-4.13.ebuild 2226
+RMD160 7c46c93d71b6f71025d2eb9f46864921e64d98ce file-4.13.ebuild 2226
+SHA256 dedeab3ce0c9ae89baf52ce80e97ef57d3df17d429d396151e832383ec889d6b file-4.13.ebuild 2226
 MD5 7b53e1d21af2cb92d83127a3765386bf file-4.15-r1.ebuild 1508
+RMD160 15b8bea26fe7465792c0c69956a245a4948052d2 file-4.15-r1.ebuild 1508
+SHA256 6b07fac1baa471ef4b34996595e21b3db4fdd0f96f7805ed590b653db4925541 file-4.15-r1.ebuild 1508
 MD5 7f81bd29a66992f3ff2432ca69f3fd35 file-4.16.ebuild 1510
+RMD160 4a06bad3978938dee2915c88c67f147e2503edc0 file-4.16.ebuild 1510
+SHA256 1cb0306f87cc9109a21821c0206a5eeb209ead01c6c881db56445a23950de41c file-4.16.ebuild 1510
+MD5 32657ec082ba93a2cb20d85ae95e27a3 file-4.17.ebuild 1396
+RMD160 5373abfa35c71b861cc1667bd1cfb34cc643cfd9 file-4.17.ebuild 1396
+SHA256 781bd34e22c7942eb06f3820423368223ba6064b42d136cc5358f4e7b9cae1fa file-4.17.ebuild 1396
 MD5 f0f2d2181cac822f0c4d4675fb1ff38c files/cracklib.magic 360
+RMD160 05397b39d061badb67e5e36ceb826f00d86d12df files/cracklib.magic 360
+SHA256 ce9de85e27f60a8905bcdfd3554df17ec49c9cd2d23342c6f45af9fb0e266965 files/cracklib.magic 360
 MD5 d336b3490362624aec2e30679c44a198 files/digest-file-4.12 61
+RMD160 9399062a1e0fb3d76be74632f304d59f9a58ddd9 files/digest-file-4.12 61
+SHA256 5e596cefa536f6527154ec84739380aee0a0c04575053783378d74650fa215d3 files/digest-file-4.12 61
 MD5 407c20e1fb3186144d6c7d2788714163 files/digest-file-4.13 61
+RMD160 a61c5ff1da4fb0c0aaa97f8bf5026b28b9085ed4 files/digest-file-4.13 61
+SHA256 098ad3c46fb5cdbf06c5647f5ed4609a0762e759201493a95ac06509de38bf3c files/digest-file-4.13 61
 MD5 56c4aa931e56a129d1c631c52a3b6d67 files/digest-file-4.15-r1 61
+RMD160 30b9d98f31b9bdd125b5f37ae7c1c3fc12e5d9cb files/digest-file-4.15-r1 61
+SHA256 a64b390d0deb9cc200ea85843ae04c106577409e3ef4fdac649cc19de0cf7bba files/digest-file-4.15-r1 61
 MD5 6dca9a167755298125478cb0d4417226 files/digest-file-4.16 61
+RMD160 d941418b9942695d4fa907ceaef950e927f11815 files/digest-file-4.16 61
+SHA256 cd2d22acf1e4561a75025667a691519a08a2279e490a92126e4692b87f8c61c4 files/digest-file-4.16 61
+MD5 ddbf41fdb2b8c638f96c372a752f212f files/digest-file-4.17 229
+RMD160 3f1a53e0b9c1473833a06ca9a70d9ed103be2520 files/digest-file-4.17 229
+SHA256 64609bf94d40e04a7181bdd7546d098db2cdacd0e2a392964ea8190cfb9a09e0 files/digest-file-4.17 229
 MD5 f856a50dada76a4ca5cee58fbd04e76b files/file-4.13-cross-compile.patch 964
+RMD160 3e5af901a69cb5da23ac635205445b8f35a68e12 files/file-4.13-cross-compile.patch 964
+SHA256 7368a9a110b5bc40e6921d5a2ac57d06fdd14ce457bf386ecda57b40303ae077 files/file-4.13-cross-compile.patch 964
 MD5 7a96e5548d52493366ab39f1c6ae9237 files/file-4.13-ia64.patch 530
+RMD160 0cfedddf598c573661e3315f8088079fdff057e7 files/file-4.13-ia64.patch 530
+SHA256 acf11a63b2c2c799511e03c1fc3b3788099c24d67a85262832f7be88c2a3d62c files/file-4.13-ia64.patch 530
 MD5 13c1a487996e5e26560f9feaae56e811 files/file-4.14-gcc2.patch 494
+RMD160 035e6b1d66ca630c02ab17e794b793ea8cfcfdbf files/file-4.14-gcc2.patch 494
+SHA256 5becac6e3cbdadb3c8adc267834f3456d6f69bbe3075ce2dbb5701c0f9127e61 files/file-4.14-gcc2.patch 494
 MD5 26e3155407a33adebfc7ed7d06a59988 files/file-4.15-cracklib-magic.patch 352
+RMD160 d501d8a193761b0a46ab0fef9b4b8f29da7a7067 files/file-4.15-cracklib-magic.patch 352
+SHA256 44348f030f3f6c971364d522e6999a5f92b870990094a9648f749ab659686eff files/file-4.15-cracklib-magic.patch 352
 MD5 cbb2d6e5512eb5f33299107848ca9e30 files/file-4.15-empty-mime-buffer.patch 708
+RMD160 f34914e619c54265c95e65dafb63b57adb6acbb5 files/file-4.15-empty-mime-buffer.patch 708
+SHA256 e630866ab52737003e8060985c34f4bc752d919b0adf6ed525af0c5d995cc946 files/file-4.15-empty-mime-buffer.patch 708
 MD5 26f26c3f7caf28f0bdb9dbb6fe83c254 files/file-4.15-libtool.patch 561
+RMD160 f2b9f4c93f199ab3145d70816b3c624349af97a0 files/file-4.15-libtool.patch 561
+SHA256 badb8261dad5df39bac1d6a6da1668eb8a2ff0b01c2c80baa8abfe07fd99681d files/file-4.15-libtool.patch 561
 MD5 08d341d8ec3debffb4216dd4ef844fa7 files/file-4.16-fix-array-64bit.patch 1942
+RMD160 a50c5be5f2b9527367883b00f91aec4a0e0cca53 files/file-4.16-fix-array-64bit.patch 1942
+SHA256 b37ed9960bebeff30023ab642d6690219c8a9f03a0e1900707018789883afd33 files/file-4.16-fix-array-64bit.patch 1942
 MD5 66df8eecd30769daeb3f643dc6432db3 files/file-4.xx-mips-gentoo.patch 5578
+RMD160 b7ec7953070aa0628bd9908337f89eb4cbee80a2 files/file-4.xx-mips-gentoo.patch 5578
+SHA256 669ff190784eaf135dcd8ada273eaa5445c3766d47e1194780fbba5e1901506f files/file-4.xx-mips-gentoo.patch 5578
 MD5 a952f0eca26a046e4b815529d2b734ef files/misc.magic 71
+RMD160 047771fe06c524610e832fbb11a97e2c4915376b files/misc.magic 71
+SHA256 d1eae7e2b67739581d9aa5cc57ea78368b9c82f02cf07422ab1ce2ad575b03b7 files/misc.magic 71
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDx12X2+ySkm8kpY0RAqNfAJ93vJaUGoDXpFTbnszr+a2MSwnNfwCcCi9J
-OgiMPh1LTDAw0pxYNUD/hHE=
-=PLux
+iD8DBQFEFOJ92+ySkm8kpY0RAkfyAKCoDM9Xq1pwkpuIaT0peX9VY8P1YgCfVGnJ
+5CJ3u6uHGJo2IewzVAAZpZ8=
+=HEo8
 -----END PGP SIGNATURE-----
