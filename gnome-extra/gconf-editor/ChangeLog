@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.75 2006/02/05 19:26:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.76 2006/03/13 22:40:53 joem Exp $
+
+*gconf-editor-2.14.0 (13 Mar 2006)
+
+  13 Mar 2006; Joe McCann <joem@gentoo.org> +gconf-editor-2.14.0.ebuild:
+  New version for gnome-2.14 release
 
   05 Feb 2006; Guy Martin <gmsoft@gentoo.org> gconf-editor-2.12.1.ebuild:
   Stable on hppa.
