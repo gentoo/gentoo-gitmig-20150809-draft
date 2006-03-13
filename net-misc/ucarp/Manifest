@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 d81f161bf3a4000665b0e04bfe9a81cc ChangeLog 1233
+MD5 c6a4990c7e7c1c7c9c532bef426fc902 metadata.xml 222
 MD5 5861d7a2edbc5841da436ac004d87f06 ucarp-0.7.ebuild 715
 MD5 5e06c67e4ec89f51ad9e89b0ad77d614 ucarp-1.1.ebuild 1114
-MD5 385612308ee8c3a9ddb2530c9b90e117 ChangeLog 1117
-MD5 c6a4990c7e7c1c7c9c532bef426fc902 metadata.xml 222
+MD5 3279193f87924c0b99511e6e89f9226e ucarp-1.2.ebuild 1115
 MD5 705d7cc5a9540cf4265ba8890308ef58 files/digest-ucarp-0.7 61
 MD5 3f0a78b9bbdbe61fd16e25ceb4ff1627 files/digest-ucarp-1.1 61
+MD5 7c4276f1d0f60ecd1cadb356e1ad7148 files/digest-ucarp-1.2 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCJGOHgMUyd/cdjWsRArmPAJ4poaN+HRNCwnl+eTvYWeB4o6uUlQCfd6Pi
-JiyuhgTVqBPGwgciLf1chBI=
-=iCmK
+iD8DBQFEFOLegMUyd/cdjWsRAkFYAJ49C/jyYbbHtsu/bkDIOOoLEC4jpwCePzC1
+MW6IqDqPVZ2JRZBp8hTHoB4=
+=eAbu
 -----END PGP SIGNATURE-----
