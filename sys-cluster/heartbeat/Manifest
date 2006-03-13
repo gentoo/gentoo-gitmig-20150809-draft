@@ -1,25 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b1c75dc59be3b1722281324e450b3a0d ChangeLog 6927
-MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3 68
-MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3-r1 68
-MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3-r2 68
-MD5 aaf8fa43df7ae5328ab7cce82d6a7547 files/digest-heartbeat-2.0.2 68
-MD5 aaf8fa43df7ae5328ab7cce82d6a7547 files/digest-heartbeat-2.0.2-r1 68
-MD5 4382b0b2d64b5483957114b7123e4a94 files/heartbeat-1.2.3-lvm.patch 1660
-MD5 30657e79d1e3630eed837297364fe17c files/heartbeat-1.2.3-misc_security_fixes.patch 7756
-MD5 343f80e3711eec80114c5ca01d38b8b0 files/heartbeat-init 821
+MD5 f9b07fc4b96c15ebbfc99af0eebd5533 ChangeLog 7126
 MD5 4a49236960a441f4fecb1530de623e76 heartbeat-1.2.3-r1.ebuild 2100
 MD5 f2b532351a9e4594ec5489b3855a2737 heartbeat-1.2.3-r2.ebuild 2154
 MD5 89f57373b255558325c63fbdd7f578f2 heartbeat-1.2.3.ebuild 1880
-MD5 deafecdceb04f13e2f0fcc45d252a68c heartbeat-2.0.2-r1.ebuild 2600
-MD5 aafa134b6be2b54b02e79348f54e578d heartbeat-2.0.2.ebuild 2668
 MD5 469a4f6cad0c54b4faed31a2852af816 metadata.xml 339
+MD5 2392c4eca484ca478d939c50bf36a213 heartbeat-2.0.4.ebuild 2664
+MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3 68
+MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3-r1 68
+MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3-r2 68
+MD5 4382b0b2d64b5483957114b7123e4a94 files/heartbeat-1.2.3-lvm.patch 1660
+MD5 30657e79d1e3630eed837297364fe17c files/heartbeat-1.2.3-misc_security_fixes.patch 7756
+MD5 343f80e3711eec80114c5ca01d38b8b0 files/heartbeat-init 821
+MD5 cae8a5342b1daa811a2421e405972387 files/digest-heartbeat-2.0.4 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD8KFEtG5z4I8BtQoRAj1yAKCJ0zqgSwkEWteTvBXohFStB7UpSQCdFRPq
-kxi/jBcYO44H7ERVr2CLlbU=
-=jzRf
+iD8DBQFEFOGRgMUyd/cdjWsRAoSZAKCQVQUT5UxBzH1FuWKqSdzv0KjEwgCfdFxF
+IHqvIUDuDM2cyDIuMajmOLs=
+=Hbyq
 -----END PGP SIGNATURE-----
