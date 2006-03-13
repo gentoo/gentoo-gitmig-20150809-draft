@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 be057eb22187531237d974ea5dfc16a0 ChangeLog 1764
+MD5 7f0673dfb5b835dc6073ea94bf3bdee9 ChangeLog 1861
 MD5 2276483f87057a438fb25dc0b61c195c files/digest-libbinio-1.2 65
 MD5 e5e473002a0e114687fe4ae1d6ce6381 files/digest-libbinio-1.3 65
 MD5 b2b2352a99072a579e0e8b934c669361 files/digest-libbinio-1.4 65
 MD5 90c41044d21ff48862e332109ee88b0f libbinio-1.2.ebuild 553
 MD5 fdb8e82b886896da0b70de4aebe0bed3 libbinio-1.3.ebuild 553
-MD5 1daf16d458940719ad0a2bcbac877f8b libbinio-1.4.ebuild 574
+MD5 82d19d7ca0d0107af187a854a062fdfb libbinio-1.4.ebuild 583
 MD5 0c27f7afe2c19e3a67f3c7d36045ef6e metadata.xml 217
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEBKwSViELBEf1JB0RAkzsAJ9FjNruRsxyD/SFMuvUPauDu96tDwCdH8ND
-M+AyFue4yQ3sqbOaPcEEpKg=
-=ajL9
+iD8DBQFEFbNGKRy60XGEcJIRAhJIAJ9G32lieIL5L5LSHXvvKsztLTRiNACfdkvm
+63NV+0elHlZ5di5AOTaTe9o=
+=8CzV
 -----END PGP SIGNATURE-----
