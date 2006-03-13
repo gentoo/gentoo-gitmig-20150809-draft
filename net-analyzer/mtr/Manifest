@@ -1,34 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1d0e894583a4fcc71e021c05f1febb73 ChangeLog 6542
-RMD160 c6861eaa3430e794fbed930f371b6e22484da1a2 ChangeLog 6542
-SHA256 7cbd496ad7d751b06c0ad5f3daa98b53e29afedabe8c0b8852c1fa5425a986d0 ChangeLog 6542
+MD5 8ad9090374ea37877cdbc51f43273cbf ChangeLog 6634
 MD5 ce43e9fae32e2db595e780b4a4b2fcd8 files/digest-mtr-0.69 60
-RMD160 9d462a51e801b26a74ff1621e70507f244a15f37 files/digest-mtr-0.69 60
-SHA256 942d6a82d50b198a06845718e91b7a8558a32e27d9af72eaf968784262a347d8 files/digest-mtr-0.69 60
 MD5 ce43e9fae32e2db595e780b4a4b2fcd8 files/digest-mtr-0.69-r1 60
-RMD160 9d462a51e801b26a74ff1621e70507f244a15f37 files/digest-mtr-0.69-r1 60
-SHA256 942d6a82d50b198a06845718e91b7a8558a32e27d9af72eaf968784262a347d8 files/digest-mtr-0.69-r1 60
 MD5 1b2fafeb55048e9993c48c330ca7a4bf files/mtr-0.69-debian.patch 2558
-RMD160 0d2408192d16432e9a1702d7b5817491664f03d9 files/mtr-0.69-debian.patch 2558
-SHA256 5d86d791b0bbcbc75fdeb1f65b26955aa55d0f7caebdcd5d2dd6324e9c0684a2 files/mtr-0.69-debian.patch 2558
 MD5 0bbdffc84e47f22daaf46c76e941a02a files/mtr-ac-res_mkquery.patch 510
-RMD160 6ee5bdf1e8b52779eb4288ffad6bae05d134d68b files/mtr-ac-res_mkquery.patch 510
-SHA256 2a369c93e2244967b75e89fb45541edafeb92f012cc78b9ee043685e0eb51785 files/mtr-ac-res_mkquery.patch 510
 MD5 720bffd73acf542e859034ca9d443c19 metadata.xml 244
-RMD160 e017aaa0a93030fffb56cd11f8894d932ca77173 metadata.xml 244
-SHA256 4b90774b23e03ba5cfff56d639ba013394dccf7597849fc010e54f69042b47d9 metadata.xml 244
-MD5 69733483d5697e607cf64cfc9b8e9cc2 mtr-0.69-r1.ebuild 1391
-RMD160 7003eace54222bb5562606e4fca6e2ce669b3243 mtr-0.69-r1.ebuild 1391
-SHA256 94ccfdd73c4b6d90fa9c777e89ecf640f006de7b08b877ed765083898dcb6788 mtr-0.69-r1.ebuild 1391
+MD5 ed7fb52dc576e24fe92b2a621ba39a0a mtr-0.69-r1.ebuild 1391
 MD5 59a554945b84eb7036b372325acdffae mtr-0.69.ebuild 1343
-RMD160 4a8972c5cbb01d730544031a079c4741d1fc3f0c mtr-0.69.ebuild 1343
-SHA256 20a6774f54037bcd057abb4cc3697903567fca099c7bf24776d399a6dc1d3aec mtr-0.69.ebuild 1343
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEEMeAJrHF4yAQTrARAmMTAJ0TRGNqSq4DnDgFwKHw961RJSaq1wCgqrCq
-b8sS1Rrj//8v7/+BlTrTPo8=
-=88L0
+iD8DBQFEFcbRKRy60XGEcJIRAl4SAJ40i0NL3TYf1l+wwsvHOusbnyhGQwCfaiKl
+hOqlAxLmKxgSVdaJg4fDKzY=
+=F1PH
 -----END PGP SIGNATURE-----
