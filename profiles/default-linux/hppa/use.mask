@@ -1,3 +1,7 @@
+# 2006/03/13 - Jeroen Roovers <jer@gentoo.org>
+# media-libs/openal: Masking until a version is available for hppa
+openal
+
 # 2006/03/07 - Donnie Berkholz <spyderous@gentoo.org>
 # Modular X: mask for architectures lacking direct rendering      
 dri
