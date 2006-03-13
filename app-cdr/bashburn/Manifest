@@ -1,22 +1,52 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e9ca1fabd10a422627d9ef35408dad3a bashburn-1.5.2.ebuild 1238
-MD5 54ea320b73f17e7186ccc773ea92c8dd bashburn-1.5.2.1.ebuild 1241
-MD5 f0b6d798d4890a802eb3bf0c4341db62 bashburn-1.4.ebuild 1161
-MD5 e39de763e6f86206b1b59b1434728154 bashburn-1.6.ebuild 1196
-MD5 450b2df427d217f6e90cc57b22b26a2c ChangeLog 2073
-MD5 70eaf71c2018b87fe06aed9df3799509 metadata.xml 225
+MD5 51f702d92b4711559e04221914210bfa ChangeLog 2229
+RMD160 04f209bc389c036c28e726e12d7770b287abd9f5 ChangeLog 2229
+SHA256 eb43ce29b28c746bd64a8586f4a55eea00a99d336c17f816b04ae02c5cdddac6 ChangeLog 2229
 MD5 e58d043ce302559492c61ec7112bd5c3 bashburn-1.3.ebuild 1006
+RMD160 2adba170230cee72aee9a0b9168be81b09fdf541 bashburn-1.3.ebuild 1006
+SHA256 1b52f1cb1c66562cff5dafeb5eeb59813a394be531d09842335d1336b40c7671 bashburn-1.3.ebuild 1006
+MD5 f0b6d798d4890a802eb3bf0c4341db62 bashburn-1.4.ebuild 1161
+RMD160 bb9536865bf3f7297e162fab1471333d5c6a5850 bashburn-1.4.ebuild 1161
+SHA256 de6fc4d54e5e8fbbb2a3ff5ddbf11f05915c88271ed036ea30dea03f22e948c8 bashburn-1.4.ebuild 1161
+MD5 54ea320b73f17e7186ccc773ea92c8dd bashburn-1.5.2.1.ebuild 1241
+RMD160 5e978d4b8b2b6881d76a47198683f4f45e76a18e bashburn-1.5.2.1.ebuild 1241
+SHA256 7dd95f11f147ee7333d2420803da6ae6db719424603807056871ba53515e0335 bashburn-1.5.2.1.ebuild 1241
+MD5 e9ca1fabd10a422627d9ef35408dad3a bashburn-1.5.2.ebuild 1238
+RMD160 4d59e61b599988ddfc53edf532de5233950367be bashburn-1.5.2.ebuild 1238
+SHA256 4e0b1f72e90c66e3e968df9ad166d9073fb933a780ca4427e814c98a8c220b72 bashburn-1.5.2.ebuild 1238
+MD5 e39de763e6f86206b1b59b1434728154 bashburn-1.6.ebuild 1196
+RMD160 8b34bb3ca230ddd57bb4b93b2678b1bcb9f1a68f bashburn-1.6.ebuild 1196
+SHA256 2462fca5db3a1c34686208e125f5fe4e29b032cf6f44f1e46696726e9a32eb2a bashburn-1.6.ebuild 1196
+MD5 436d6cf244bb69884588331ac8cf32bf bashburn-1.7.1.ebuild 1261
+RMD160 209cd33ec4c42edabe5e4b5ec89967aba4425a55 bashburn-1.7.1.ebuild 1261
+SHA256 cef7519b27712ae82e35de94669330fa8024ac9dc3d9bfb0f915faf604a6dcde bashburn-1.7.1.ebuild 1261
 MD5 6e40db728418e8f6c0888f6ff5c59b30 files/digest-bashburn-1.3 63
+RMD160 f66c47111b660dc25fc407cb6059944b91fae1c0 files/digest-bashburn-1.3 63
+SHA256 72032cf46362116f2f33568c1819e50c488b0fe60c2888bdc21847e2921a49ba files/digest-bashburn-1.3 63
 MD5 95d2f6782fd6b3110c90c5be7af436da files/digest-bashburn-1.4 63
-MD5 122fa3bffa00b421aa8c340e7c92ba88 files/digest-bashburn-1.6 63
+RMD160 43cf23c1bd08768cdb00d71ada25da1eae1c28b3 files/digest-bashburn-1.4 63
+SHA256 2825dce9dec86adad632131da17106f5da404179091dccdacada589ffa6fa104 files/digest-bashburn-1.4 63
 MD5 9924f6949f47a3428c41485070215af2 files/digest-bashburn-1.5.2 65
+RMD160 87d7faeaae0611b876e18fb01edb4bff2f71a27d files/digest-bashburn-1.5.2 65
+SHA256 acb3d0cdd84ec6c3863c3ef89b2b8ea9686bad5b95f722164b615a9ff468898a files/digest-bashburn-1.5.2 65
 MD5 13008aa88e5218fba943c35ec7cdfbbf files/digest-bashburn-1.5.2.1 67
+RMD160 4b442735d721c1d99366340d20a3ca49c2e3cd3c files/digest-bashburn-1.5.2.1 67
+SHA256 8e522bcce35d2f792a8431edf337aa41e8e6611d4b176d9b6559d67bd5425c50 files/digest-bashburn-1.5.2.1 67
+MD5 122fa3bffa00b421aa8c340e7c92ba88 files/digest-bashburn-1.6 63
+RMD160 1385181b5ddd4861067562c695dacfd257bdc08b files/digest-bashburn-1.6 63
+SHA256 4de73367f289de6bc2b92543cd7078b26845527bfb768701ddad574648a1c2c5 files/digest-bashburn-1.6 63
+MD5 be8fd8e8885a90b0b8e6234870407575 files/digest-bashburn-1.7.1 241
+RMD160 ca4d4b4a773a47647608c7540cf91a5431367734 files/digest-bashburn-1.7.1 241
+SHA256 f49d3fbeab61835a99e436923e255a6eb340798d43b41102f56ad129547d6cbb files/digest-bashburn-1.7.1 241
+MD5 70eaf71c2018b87fe06aed9df3799509 metadata.xml 225
+RMD160 7c157805d934c18e77b4ed4ebd28870843ec0b81 metadata.xml 225
+SHA256 d16e8c5dfbf984681d500dad1063583ba0a21e0b73da359178bb87c09d951c9c metadata.xml 225
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDD1E5Z/iYVBmujdURAthPAJ9JhOyGjyJDFKDJBXV2xankaB/eBQCgyZX0
-BG+GSQwImsTLtYYQGXD5iAU=
-=3NVu
+iD8DBQFEFedXub4+zaPCR/oRAi9tAJ49/MBzuxCpvu5XU7yNznKvYH13uQCeNCPy
+o1v6YulBiiOYmH3nAfOCfAU=
+=iJ4o
 -----END PGP SIGNATURE-----
