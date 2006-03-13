@@ -7,7 +7,6 @@
 # This script can be run as many times as you like. It will log the 
 # results in /var/log/ghc-updater.log
 #
-# OLD_GHC_VER     = old ghc version we are upgrading from
 # NEW_GHC_VER     = new ghc version we are upgrading to
 # PKGS_EXCEPTIONS = packages that should NOT be re-emerged for any reason
 # PKGS_MANUAL     = packages that should be re-emerged even if they don't
@@ -22,9 +21,10 @@
 # PKGS_MASKED     = list of packages that are installed, but masked.
 #
 
-OLD_GHC_VER=$(ls -d /usr/lib/ghc-* | sed 's:^.*ghc-::' \
-		| sort -g | tail -n 2 | head -n 1)
+shopt -s nullglob
+
 NEW_GHC_VER=$(ghc --version | sed 's:^.*version ::')
+NEW_GHC_LIBDIR=$(ghc --print-libdir)
 
 PKGS_EXCEPTIONS="dev-lang/ghc dev-lang/ghc-bin"
 PKGS_MANUAL=""
@@ -50,8 +50,6 @@ usage() {
 	echo "usage: ghc-updater [options]"
 	echo " -h, -?, --help   help"
 	echo " -p, --pretend    pretend (don't do anything)"
-	echo " -o version       set old ghc version to upgrade from [default: ${OLD_GHC_VER}]"
-	echo " -n version       set new ghc version to upgrade to [default: ${NEW_GHC_VER}]"
 }
 
 # 
@@ -67,14 +65,6 @@ while [ -n "$1" ]; do
 			;;
 		-p | --pretend)
 			PRETEND=1
-			;;
-		-o)
-			shift
-			OLD_GHC_VER="$1"
-			;;
-		-n)
-			shift
-			NEW_GHC_VER="$1"
 			;;
 		*)
 			usage
@@ -145,14 +135,22 @@ fi
 
 #
 #
-# Find all packages that have installed something in 
-# /usr/lib/ghc-${OLD_GHC_VER}
-# /usr/lib/ghc-bin-${OLD_GHC_VER}
+# Find all packages that have installed something in
+# directories of the form
+#   /usr/lib/ghc-<version>
+# or similar.
 #
-OLD_PACKAGES_DIR="/usr/lib/ghc-${OLD_GHC_VER} /usr/lib/ghc-bin-${OLD_GHC_VER} \
-	/opt/ghc/lib/ghc-${OLD_GHC_VER}"
+#   /usr/lib/ghc-bin-<version>
+# is included because an old ghc-bin ebuild was buggy and
+# installed to a wrong dir.
+#
+OLD_PACKAGES_DIR=""
+# Exclude new library dir and lib symlinks:
+for d in /{usr,opt/ghc}/lib{,64}/ghc{,-bin}-*; do
+    [[ "${d}" == ${NEW_GHC_LIBDIR} ]] || [[ -L ${d%/*} ]] || OLD_PACKAGES_DIR="${OLD_PACKAGES_DIR}${d} "
+done
 
-eloginfo "Starting GHC Updater from ${OLD_GHC_VER} to ${NEW_GHC_VER} :"
+eloginfo "Starting GHC Updater to $(which ghc), version ${NEW_GHC_VER} :"
 eloginfo "Searching for packages with files in the directories:"
 eloginfo "${OLD_PACKAGES_DIR}"
 
@@ -175,9 +173,9 @@ for content in `find ${PKG_DBDIR} -name CONTENTS`; do
     fi
 
     for d in ${OLD_PACKAGES_DIR}; do
-        if fgrep "${d}" ${content} > /dev/null; then
+        if fgrep "${d}/" ${content} > /dev/null; then
             PKGS_TO_REMERGE="${PKGS_TO_REMERGE} ${CATPKGVER}"
-            elogecho "Adding to list: ${CATPKGVER}"
+            elogecho "${CATPKGVER} has files in ${d}"
         fi
     done
 done    
@@ -194,7 +192,7 @@ PKGS_MISSING=""
 
 MASKED_STRING="been masked"
 BLOCKED_STRING="is blocking"
-MISSING_STRING="there are no masked or unmasked ebuilds to satisfy"
+MISSING_STRING='there are no ebuilds to satisfy'
 
 for pkg in ${PKGS_TO_REMERGE}; do
    emerge_output="$(emerge -p '>='$pkg 2>&1)"
@@ -226,7 +224,11 @@ if [[ -z ${DEPSORT} ]]; then
 fi
 PKGS_OK_SORTED="$(${PORTAGE_PYTHON} ${DEPSORT} ${PKGS_OK} | xargs)"
 
-eloginfo "Preparing to merge these packages in this order:"
+if [[ -n ${PRETEND} ]]; then
+	eloginfo "These are the packages that would be merged, in order:"
+else
+	eloginfo "Preparing to merge these packages in this order:"
+fi
 for pkg in $PKGS_OK_SORTED; do
 	elogecho ">=$pkg"
 done

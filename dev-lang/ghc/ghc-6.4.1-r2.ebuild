@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r2.ebuild,v 1.5 2006/03/13 13:34:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r2.ebuild,v 1.6 2006/03/13 17:16:20 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -198,8 +198,9 @@ pkg_postinst () {
 	einfo "want to unmerge it. It is no longer needed."
 	einfo
 	ewarn "IMPORTANT:"
-	ewarn "If you upgrade from another ghc version, please run"
-	ewarn "/usr/sbin/ghc-updater to re-merge all ghc-based"
-	ewarn "Haskell libraries."
+	ewarn "If you have upgraded from another version of ghc or"
+	ewarn "if you have switched from ghc-bin to ghc, please run:"
+	ewarn "	/usr/sbin/ghc-updater"
+	ewarn "to re-merge all ghc-based Haskell libraries."
 }
 
