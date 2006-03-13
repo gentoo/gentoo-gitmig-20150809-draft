@@ -1,4 +1,7 @@
-MD5 65d067202903ff0582514a50ec8f112c ChangeLog 4679
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bf47f68c6340e231f06690dfbef0d851 ChangeLog 4779
 MD5 92f73aafe5535cf0996be1b810ab7c9b files/digest-terminus-font-4.07 70
 MD5 675b78bea73e2d292d68944a6c455e73 files/digest-terminus-font-4.11 70
 MD5 604792fcc99234081b4cce8320970e91 files/digest-terminus-font-4.12 70
@@ -9,4 +12,11 @@ MD5 4f6089d8fbe33a45a4362987278239b6 terminus-font-4.07.ebuild 1108
 MD5 e21899a03a90811d9d0b67e3fb52cadf terminus-font-4.11.ebuild 1104
 MD5 aca9a9337d75444ff0336781f061a03d terminus-font-4.12.ebuild 1111
 MD5 4c0d6f214240637d310c1d9efbd41da9 terminus-font-4.14-r1.ebuild 1120
-MD5 72b22462b40575e3da96d8d2452532be terminus-font-4.14.ebuild 1110
+MD5 a386fe425ebd278eeec65c6c4e6f91d8 terminus-font-4.14.ebuild 1108
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEFcVAKRy60XGEcJIRAp7NAJ9Mpr38aFbA5PZC2OxCfMDMTAcPnQCgpttj
+ceETcKhNyQxbWbQ6naduNm4=
+=Is9m
+-----END PGP SIGNATURE-----
