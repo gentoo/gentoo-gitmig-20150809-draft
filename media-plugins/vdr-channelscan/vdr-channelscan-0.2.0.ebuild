@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-channelscan/vdr-channelscan-0.2.0.ebuild,v 1.1 2006/03/13 15:29:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-channelscan/vdr-channelscan-0.2.0.ebuild,v 1.2 2006/03/13 15:57:08 zzam Exp $
 
 inherit vdr-plugin
 
@@ -8,8 +8,8 @@ IUSE=""
 SLOT="0"
 
 DESCRIPTION="vdr Plugin: Channel Scanner"
-HOMEPAGE="http://kikko77.altervista.org/"
-SRC_URI="http://www.reelbox.org/software/source/vdr-plugins/${P}.tgz"
+HOMEPAGE="http://www.reel-multimedia.com"
+SRC_URI="mirror://gentoo/${P}.tgz"
 LICENSE="GPL-2"
 
 KEYWORDS="~x86"
@@ -35,7 +35,7 @@ src_install() {
 
 	cd ${S}/transponders
 	insinto /usr/share/vdr/channelscan/transponders
-	doins *.ini
+	doins *.tpl
 
 	insinto /etc/vdr/plugins
 	dosym /usr/share/vdr/channelscan/transponders /etc/vdr/plugins/transponders
