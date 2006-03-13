@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 da143139220e39181107a8ecd2984795 ChangeLog 476
+RMD160 36707a89d7b3fdc13a40dbbe32e16daf552ee0f2 ChangeLog 476
+SHA256 9984217688a7b5d1e9ebb5f8bf4f10d7dd194c5639afe47848d2bde927edbdc5 ChangeLog 476
+MD5 eac5250217ed297273925db379ff012f files/digest-matchbox-panel-manager-0.1 280
+RMD160 2ba4cd6fff9806dfc86e27cae4225282f21a5371 files/digest-matchbox-panel-manager-0.1 280
+SHA256 013a66868c0ecb54b25d584e464da1437d38e5afeca614f65c29d66cb7f4bdef files/digest-matchbox-panel-manager-0.1 280
+MD5 cc38cf633fdcea8cbb8f75bb3a5bfbdd matchbox-panel-manager-0.1.ebuild 846
+RMD160 bcbfb3983e007158e06e911f3c005a34eb566989 matchbox-panel-manager-0.1.ebuild 846
+SHA256 6a695a0b3f31d994c2c2ea847378beb2dff153a398fad6925e1c89046d83a64d matchbox-panel-manager-0.1.ebuild 846
+MD5 a80bc50cf196a9e5a2764d6f6081b56a metadata.xml 247
+RMD160 49e7f36b66be574d7f3341589ebff702e1c8c8a9 metadata.xml 247
+SHA256 5270fc293d10727efe22af7c71da351586b63251d10bbadd916060e405d88ce9 metadata.xml 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEFLpzyZl4piiTjjYRAq9kAKCvji7hGp6j2zwz0djWg4VZvzFH8ACggM8B
+tanWunYRY9bXj8uC03/VZC8=
+=GsdT
+-----END PGP SIGNATURE-----
