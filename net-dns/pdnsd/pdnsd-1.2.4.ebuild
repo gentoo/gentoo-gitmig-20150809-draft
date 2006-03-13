@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.4.ebuild,v 1.5 2006/03/12 07:28:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.4.ebuild,v 1.6 2006/03/13 15:41:30 gustavoz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.phys.uu.nl/%7Erombouts/pdnsd/releases/${P}-par.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ppc s390 ~sparc x86"
+KEYWORDS="~alpha ~amd64 arm ppc s390 sparc x86"
 IUSE="ipv6 debug isdn nptl"
 
 pkg_setup() {
