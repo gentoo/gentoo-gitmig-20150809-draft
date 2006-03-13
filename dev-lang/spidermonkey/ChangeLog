@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.19 2006/03/05 18:56:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.20 2006/03/13 06:57:14 tsunam Exp $
+
+  13 Mar 2006; Joshua Jackson <tsunam@gentoo.org>
+  spidermonkey-1.5-r1.ebuild:
+  Stable on x86; bug #124233
 
   05 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   spidermonkey-1.5-r1.ebuild:

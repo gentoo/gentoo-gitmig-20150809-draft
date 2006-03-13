@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 140e3e5381811d20228ba4f3d66ee69f ChangeLog 3042
-RMD160 f514a91128508404dfd89528faaa5d2bb4d6951a ChangeLog 3042
-SHA256 c947c240535a3f3aa6cc2e39c45c420049b57e41b7ec59e603d8778dd4d606b0 ChangeLog 3042
+MD5 9a5027284f0babe87ace21d4698a3862 ChangeLog 3149
+RMD160 969a34cbc7c21a2f79ef1f2b93265eafac5fbffd ChangeLog 3149
+SHA256 a7cbf0989723edd2db3d3e93f0b81f76c782749d558327b5634908a99614ccf0 ChangeLog 3149
 MD5 57c9cfb3e51451cfde5599ae7252d53b files/digest-spidermonkey-1.5 58
 RMD160 8a1f7320ac05902f86d4f7c067f5a7262847e69d files/digest-spidermonkey-1.5 58
 SHA256 89c47d95ebc98b10c2b12c20a453f640fee42e6b367c60327389b92779312764 files/digest-spidermonkey-1.5 58
@@ -22,9 +22,9 @@ SHA256 77e1e4039ec8c4fc957f74e10f5b15a7c651736f3bba1aca8fb82dcd4eab7287 files/sp
 MD5 28f680a9a90133efd1e29dd6945ceb90 files/spidermonkey-1.5_rc6-va_copy-fix.patch 1643
 RMD160 21120cef8fdfcd001b69edc3d06fcddf0e831fa9 files/spidermonkey-1.5_rc6-va_copy-fix.patch 1643
 SHA256 263621ca5db1a1318de846ad1b7a836d476e73f21d99cc07c516effb3acab096 files/spidermonkey-1.5_rc6-va_copy-fix.patch 1643
-MD5 5fe735408426a10fa5d59cd9c42b29a8 spidermonkey-1.5-r1.ebuild 870
-RMD160 72548fe9d8688d2a68f297868cc8ace162084334 spidermonkey-1.5-r1.ebuild 870
-SHA256 dc37f6072d349c7fc65314b13c5abd4fd282502a140ec082835be3f8b94df069 spidermonkey-1.5-r1.ebuild 870
+MD5 83b08661d4c3e2c7a73baf1a874e53f6 spidermonkey-1.5-r1.ebuild 866
+RMD160 74576a0a3f7eb28159be024d8b026d7cfd158906 spidermonkey-1.5-r1.ebuild 866
+SHA256 10a1d1360d6ee829b01de432e59aa7f10a017f1ef5cc6b9a771a811046aec8a0 spidermonkey-1.5-r1.ebuild 866
 MD5 bda3e2d90ac193430332a97a72a623a3 spidermonkey-1.5.ebuild 1350
 RMD160 bf40fbeb260d9def36aba74a5f795071ee3a7001 spidermonkey-1.5.ebuild 1350
 SHA256 f73f0ce456b7f628fdbbb1f6cad9104deb0bf5cb78549d93bb204ed43f2e7606 spidermonkey-1.5.ebuild 1350
@@ -35,9 +35,9 @@ MD5 168eaec996bbe59b074f1df9eb309e00 spidermonkey-1.5_rc6-r1.ebuild 1376
 RMD160 2debe413dc2d9cc52d56545ada521436a690baac spidermonkey-1.5_rc6-r1.ebuild 1376
 SHA256 569ddabff2a76f8ac4b262cf81bb7d15206345f8c89327e400476c3092860ab0 spidermonkey-1.5_rc6-r1.ebuild 1376
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFECzRIAiZjviIA2XgRAicIAKDab11nFcGwYRi3vrm+luFvN/KU9ACeK/BQ
-MFu3hsF/NRJUKInS/rUUijY=
-=ryj8
+iD8DBQFEFRfXSENan+PfizARAl7AAJ0f3Zp24A2ZZJi3hpNxeOn+JxCrJwCdG4Bt
+QK8sjkA0D0wHZU+cIHmEpu8=
+=8IJ7
 -----END PGP SIGNATURE-----
