@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/daimonin-client
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.12 2005/09/26 18:15:53 wolf31o2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.13 2006/03/13 21:18:36 mr_bones_ Exp $
+
+  13 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  daimonin-client-0.95b-r2.ebuild, daimonin-client-0.96.6_beta3.ebuild:
+  X is implicit
 
   26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   daimonin-client-0.95b-r2.ebuild:
