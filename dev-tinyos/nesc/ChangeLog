@@ -1,6 +1,11 @@
 # ChangeLog for dev-tinyos/nesc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/ChangeLog,v 1.5 2006/02/03 19:22:37 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/ChangeLog,v 1.6 2006/03/13 18:51:16 sanchan Exp $
+
+  13 Mar 2006; Sandro Bonazzola <sanchan@gentoo.org> metadata.xml,
+  nesc-1.2.1.ebuild:
+  Fix RDEPEND="${DEPEND}" warning, thanks to Daniel Ahlberg for 
+  gentoo.tampered.net.
 
 *nesc-1.2.4 (03 Feb 2006)
 

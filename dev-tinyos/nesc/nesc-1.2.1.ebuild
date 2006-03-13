@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/nesc-1.2.1.ebuild,v 1.2 2006/01/22 18:01:17 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/nesc-1.2.1.ebuild,v 1.3 2006/03/13 18:51:16 sanchan Exp $
 
 inherit eutils
 
@@ -13,8 +13,9 @@ KEYWORDS="~x86"
 IUSE="doc"
 DEPEND=">=dev-lang/perl-5.8.5-r2
 	>=dev-tinyos/tos-1.1.0"
+RDEPEND=">=dev-lang/perl-5.8.5-r2
+	>=dev-tinyos/tos-1.1.0"
 
-RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	if [ -z "${TOSDIR}" ]
