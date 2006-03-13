@@ -3,10 +3,10 @@
 <pkgmetadata>
 <herd>dev-embedded</herd>
 <maintainer>
-  <email>sanchan@gentoo.org</email>
+	<email>sanchan@gentoo.org</email>
 </maintainer>
- <longdescription>
+<longdescription>
 ncc  is an extension to gcc that knows how to compile nesC applications
 in the TinyOS environment.
- </longdescription>
+</longdescription>
 </pkgmetadata>

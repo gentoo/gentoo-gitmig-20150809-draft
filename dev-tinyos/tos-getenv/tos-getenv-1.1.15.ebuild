@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-getenv/tos-getenv-1.1.15.ebuild,v 1.1 2006/02/12 17:00:32 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-getenv/tos-getenv-1.1.15.ebuild,v 1.2 2006/03/13 18:43:25 sanchan Exp $
 
 CVS_MONTH="Dec"
 CVS_YEAR="2005"
@@ -17,6 +17,7 @@ KEYWORDS="~x86"
 DEPEND=">=dev-java/ibm-jdk-bin-1.4.0
 	dev-java/java-config"
 RDEPEND=">=dev-java/ibm-jdk-bin-1.4.0"
+IUSE=""
 
 S="${WORKDIR}/${MY_P}-${PV}${CVS_MONTH}${CVS_YEAR}cvs/tools/java/jni"
 

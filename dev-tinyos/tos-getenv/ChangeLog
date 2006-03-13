@@ -1,6 +1,10 @@
 # ChangeLog for dev-tinyos/tos-getenv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-getenv/ChangeLog,v 1.1 2006/02/12 17:00:32 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-getenv/ChangeLog,v 1.2 2006/03/13 18:43:24 sanchan Exp $
+
+  13 Mar 2006; Sandro Bonazzola <sanchan@gentoo.org> metadata.xml,
+  tos-getenv-1.1.15.ebuild:
+  Fix missing IUSE, thanks to Daniel Ahlberg for gentoo.tampered.net.
 
 *tos-getenv-1.1.15 (12 Feb 2006)
 

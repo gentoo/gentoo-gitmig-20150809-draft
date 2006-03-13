@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/ncc/ncc-1.1.15.ebuild,v 1.1 2006/01/22 09:30:30 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/ncc/ncc-1.1.15.ebuild,v 1.2 2006/03/13 18:40:20 sanchan Exp $
 
 CVS_MONTH="Dec"
 CVS_YEAR="2005"
@@ -22,6 +22,7 @@ RDEPEND=">=dev-tinyos/nesc-1.2.1
 	>=dev-tinyos/tos-1.1.15
 	>=dev-lang/perl-5.8.5-r2"
 
+IUSE=""
 
 S=${WORKDIR}/${MY_P}-${PV}${CVS_MONTH}${CVS_YEAR}cvs/tools/src/ncc
 
