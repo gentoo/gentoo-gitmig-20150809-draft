@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/kigb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/kigb/ChangeLog,v 1.7 2006/02/08 16:53:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/kigb/ChangeLog,v 1.8 2006/03/13 00:05:24 mr_bones_ Exp $
+
+*kigb-2.02 (13 Mar 2006)
+
+  13 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org> +kigb-2.02.ebuild:
+  version bump
 
   08 Feb 2006; Michael Sterrett <mr_bones_@gentoo.org> kigb-1.68.ebuild:
   modular X deps - patch from Tupone Alfredo via bug #121644
