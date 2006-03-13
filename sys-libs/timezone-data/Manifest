@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 39f60574a9f6b5e6ff4c6466526e28f0 ChangeLog 2968
 RMD160 fbc3a0ae9d9c76ccb3035976aef9e66bedc5892c ChangeLog 2968
 SHA256 4ec2b5a137c82e815cdfdea7b45e54db9440f63e484d1a124857db3d337c9c4a ChangeLog 2968
@@ -19,3 +22,10 @@ SHA256 853a9f081d645f16587935dd32cbbc8ac075d7b30f253157cbe7edeaa75f84ab timezone
 MD5 fa9228560d5d18a5170ce6e042657ade timezone-data-2006b.ebuild 853
 RMD160 05d7a732b4ece0ad174d5851750222df6885f7ce timezone-data-2006b.ebuild 853
 SHA256 d66586bb8d6a8389eed7ad85fbf60e4c2d57a546ab9bb5e3ef3eb6fb50be13e1 timezone-data-2006b.ebuild 853
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEFgNX5mJXAu5GbtIRAttrAJsGq08cDg9gIgLSnrnc2frc6kCWcwCfcnHP
+w43csbO9Mfw+cmtMD1FgfFM=
+=ETO1
+-----END PGP SIGNATURE-----
