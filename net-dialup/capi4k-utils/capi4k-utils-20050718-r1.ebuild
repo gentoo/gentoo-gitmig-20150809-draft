@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r1.ebuild,v 1.2 2005/09/03 20:32:22 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r1.ebuild,v 1.3 2006/03/14 01:09:58 sbriesen Exp $
 
 inherit eutils multilib gnuconfig linux-info
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.in-berlin.de/pub/capi4linux/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE="fax pppd tcpd usb pcmcia"
 
 DEPEND="virtual/linux-sources
