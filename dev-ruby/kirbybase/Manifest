@@ -1,14 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4cafb18210901727cd436371f3dc1b31 kirbybase-2.3.ebuild 866
-MD5 d48c8507a06845563f249e2d0af5d403 ChangeLog 354
-MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
+MD5 ce1d681155ad063e5b79edf900fd9feb ChangeLog 491
+RMD160 b7b3743dc2a61227f869b31397d33fb3e7118cd9 ChangeLog 491
+SHA256 b70afc58d1b0c492a70bbc4253641940292b7e48947fe51340daeb0954c8a8ab ChangeLog 491
 MD5 3cc1b7fc91465ce3e65c949209c98653 files/digest-kirbybase-2.3 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDY5oEZgSmR+etHJoRAmFdAKCU+hmnyEKAHmyQpuk1S+2mjWJGdQCffq9e
-hoEFryymYFWdB0QKx1B//ZQ=
-=Z7M0
------END PGP SIGNATURE-----
+RMD160 cd62416cf4564ae91bc52be3ac80699489735eb5 files/digest-kirbybase-2.3 69
+SHA256 45cd6a7e963b51c37deff565f6e709306d2495abebc0df73cf1d822598458d88 files/digest-kirbybase-2.3 69
+MD5 1ad7a0880c2f449d961ec7ff56ad49d7 files/digest-kirbybase-2.5.2 238
+RMD160 2d982408f8658933c96928a7bcbfd32ea7d9f9db files/digest-kirbybase-2.5.2 238
+SHA256 7e4ae8f70e208d5a6f0fb6d8876bb71b08e0badb48cba958f3378c1ca89652c0 files/digest-kirbybase-2.5.2 238
+MD5 4cafb18210901727cd436371f3dc1b31 kirbybase-2.3.ebuild 866
+RMD160 5599cf2df4f451129c9afc4eff1dac36ab174be8 kirbybase-2.3.ebuild 866
+SHA256 1ce7e1bed30b239eb5b0a56995345a90627137f036d08c8d6398b9c6e8a220fd kirbybase-2.3.ebuild 866
+MD5 e888b2bbf9d49ffd33d3aa91e25e3a07 kirbybase-2.5.2.ebuild 567
+RMD160 9d56a3de06d556f74c363bc04e24613373e76412 kirbybase-2.5.2.ebuild 567
+SHA256 c79a0c157a3bf389e420eb5f12f2996bcde882c0670679739aa3cee822dbf0d5 kirbybase-2.5.2.ebuild 567
+MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
+RMD160 097f8145a9994f98be4971b43b23b9e5e8bccb66 metadata.xml 158
+SHA256 70b396ab3c7a63a81cb895b7728bd9eccdc9770afdb9919f2c54694b685f7032 metadata.xml 158
