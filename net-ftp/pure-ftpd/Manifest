@@ -1,11 +1,52 @@
-MD5 ea30ef6fd7422d10aa2ebf3e643f13d3 ChangeLog 8081
-MD5 67d38509ecd6a60f600f15bd875bf8cc metadata.xml 446
-MD5 f864c9b0a924eab2443c67ad734a2135 pure-ftpd-1.0.20-r1.ebuild 2764
-MD5 f8fe6ca5c41f7b54eee2c8b8beab8ee8 pure-ftpd-1.0.20-r2.ebuild 2793
-MD5 458b5d7567f55f4257ea1a6bfe3ff150 files/ftpusers 177
-MD5 88b77efaa5f85e19f351960a5617026d files/pure-ftpd.conf_d 2826
-MD5 db2ba34b2491a9fb5042f78c029f6386 files/pure-ftpd.rc6-r1 741
-MD5 86b7638f0ed01530fff30204ba6b5ce7 files/pure-ftpd.xinetd 238
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ac2a44728b24e71654c2ffed513145af ChangeLog 8321
+RMD160 367aa12804c0de22583b3a215159c19392b482bd ChangeLog 8321
+SHA256 16eecac9d1352925af0627f25edbe042da719b1be4b5ebf976de1e6bfcb54b29 ChangeLog 8321
 MD5 0c2b784d8fe62db6dae7e77e6ac5a602 files/digest-pure-ftpd-1.0.20-r1 69
+RMD160 76bd42d6d274f5eec7b1e8513c99eb8fd47c369e files/digest-pure-ftpd-1.0.20-r1 69
+SHA256 45f55e86f3ddd13605a5fdf843b04f095701754e416079b68e6ef2d2e1077aad files/digest-pure-ftpd-1.0.20-r1 69
 MD5 0c2b784d8fe62db6dae7e77e6ac5a602 files/digest-pure-ftpd-1.0.20-r2 69
+RMD160 76bd42d6d274f5eec7b1e8513c99eb8fd47c369e files/digest-pure-ftpd-1.0.20-r2 69
+SHA256 45f55e86f3ddd13605a5fdf843b04f095701754e416079b68e6ef2d2e1077aad files/digest-pure-ftpd-1.0.20-r2 69
+MD5 ae89b1b322a519efee148d4b74e0aa6f files/digest-pure-ftpd-1.0.21 253
+RMD160 e310c21d2ff6e5cdf04497507034ad13496d2e22 files/digest-pure-ftpd-1.0.21 253
+SHA256 8c51d3765557768898da80ab1d4497bb95430c700a76640fe21ce0e89d2cfd1f files/digest-pure-ftpd-1.0.21 253
+MD5 458b5d7567f55f4257ea1a6bfe3ff150 files/ftpusers 177
+RMD160 dea29606ea28414d714453bd9469b375c077badd files/ftpusers 177
+SHA256 fb5ae1383661d9cfef2ace904e65255d725a4b7df07f2d399228758dd5601d26 files/ftpusers 177
 MD5 03fa7e601db23e23915f153f2fecf8a3 files/pure-ftpd-1.0.20-pam.patch 586
+RMD160 b90521a12ddff81cc2333ce0a2d060e257d98b46 files/pure-ftpd-1.0.20-pam.patch 586
+SHA256 a59b96a4c78d1a1d7362f4349290a89da15a4e76a5e9ec6ce40724a52c3788cf files/pure-ftpd-1.0.20-pam.patch 586
+MD5 838eccf3bc6e8cd91e86597d844616d0 files/pure-ftpd-1.0.21-pam.patch 586
+RMD160 3246183eb4914dd605c181da17aa02c8e1e99726 files/pure-ftpd-1.0.21-pam.patch 586
+SHA256 4eab3ab63c403e02782df0b07d2f83b741b0b07cb10e37046dc2c874682509a6 files/pure-ftpd-1.0.21-pam.patch 586
+MD5 88b77efaa5f85e19f351960a5617026d files/pure-ftpd.conf_d 2826
+RMD160 d682f122b83ec4f1cb61f25072297d1c130bb099 files/pure-ftpd.conf_d 2826
+SHA256 40ba72fefc82c88d4faa9c2ab3fe3e3dc8ba92bc1d5931232cd69498b813a356 files/pure-ftpd.conf_d 2826
+MD5 db2ba34b2491a9fb5042f78c029f6386 files/pure-ftpd.rc6-r1 741
+RMD160 141631f6702e512e99031baab1b44f26bd0515c4 files/pure-ftpd.rc6-r1 741
+SHA256 1060a6ba3c2df64fc5aec04db1781cdf717bec146f5f32b438a831e7176b7ac0 files/pure-ftpd.rc6-r1 741
+MD5 86b7638f0ed01530fff30204ba6b5ce7 files/pure-ftpd.xinetd 238
+RMD160 e0af4056a3e2e9a894c2fab85c73981ba7dbb8f4 files/pure-ftpd.xinetd 238
+SHA256 0682a3bd3cc90d5750001489f3b63522a32752d706309e9ad9bb971f900cbd4f files/pure-ftpd.xinetd 238
+MD5 67d38509ecd6a60f600f15bd875bf8cc metadata.xml 446
+RMD160 dcdde8fe2ed46439dddd7321fbce2258109183ad metadata.xml 446
+SHA256 c786d2fa92b681327a9a5a9963397280a135e77adc08ee60af1a623127d3851f metadata.xml 446
+MD5 f864c9b0a924eab2443c67ad734a2135 pure-ftpd-1.0.20-r1.ebuild 2764
+RMD160 4a65fa9eba287ac39ef8223541bd80d6b8dfcc93 pure-ftpd-1.0.20-r1.ebuild 2764
+SHA256 0581630bbaa975da18c80e5d7c4b3e7b96fc208104d4a5de1fd6ad877928de07 pure-ftpd-1.0.20-r1.ebuild 2764
+MD5 f8fe6ca5c41f7b54eee2c8b8beab8ee8 pure-ftpd-1.0.20-r2.ebuild 2793
+RMD160 af32cd6dfd4bd81f2effcb9202c3ac8115bf48f0 pure-ftpd-1.0.20-r2.ebuild 2793
+SHA256 fde58619e905088074f4c22040dd7d8c59f453ee242b59dd9060c7e00f6f5cc8 pure-ftpd-1.0.20-r2.ebuild 2793
+MD5 5ce77bcf2dd1f212167d923492294d73 pure-ftpd-1.0.21.ebuild 2790
+RMD160 c351de2c1bf2fb596bd6e46a7d4bd693ecf93270 pure-ftpd-1.0.21.ebuild 2790
+SHA256 89fc76c4349063e7e7fcdfa2e8b41c4b1e4fa07dddef6e807e432f578d963084 pure-ftpd-1.0.21.ebuild 2790
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEF1FH8zY1VwezZiERAixhAKCey5hjLB/ameX33lTT+tpbqfTUqACeMQnL
+S7qgtsNoammc7n6RITYqZmE=
+=Luqs
+-----END PGP SIGNATURE-----
