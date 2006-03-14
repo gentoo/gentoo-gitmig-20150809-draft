@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 41e0ce751dd83f5b950ba8ce614ec898 ChangeLog 18867
-RMD160 dbafecf26e1cd97fe944b7708fe35b56fb98d114 ChangeLog 18867
-SHA256 6873b6e7ca04097d333ef6f55702a695cd481a804e2c5129d6348da446636a7a ChangeLog 18867
+MD5 64e90d90e9ac974cbe4637ebd2a1fb61 ChangeLog 18979
+RMD160 22051a4a215084ea897cc68313bd411cfb9c8af2 ChangeLog 18979
+SHA256 70c73cba07e20ded9f147dafc8e2d372d5cf27b7a40f5abea5e70a9584646bef ChangeLog 18979
 MD5 4a197b74bf68a2f921f202710177d4a6 files/digest-webapp-config-1.50.10 72
 RMD160 5a8574d5b0efa9f2a6e2c0caa83aa21836a09f80 files/digest-webapp-config-1.50.10 72
 SHA256 bfabef14cde20873daeb70aed7f83d43ffd4855376ded8e570032298b298c655 files/digest-webapp-config-1.50.10 72
@@ -16,13 +16,13 @@ SHA256 0986f8971072c8d055fccbc67cc59ac43eecd1f5592cd9c0ae729b23e550cc96 metadata
 MD5 a4fc5ad7697ee281f41a3fe2b3f3268c webapp-config-1.50.10.ebuild 1869
 RMD160 1ed0d9b3841e36824692d9091cf5a4de685294a6 webapp-config-1.50.10.ebuild 1869
 SHA256 7855510e993bd9312257bbf940248e3a2f587a957b4295685efb5cde4687939c webapp-config-1.50.10.ebuild 1869
-MD5 cab6496a8c1ce79ae4d4a9c4fb8f1b79 webapp-config-1.50.13.ebuild 1878
-RMD160 b74352d39f1ab93c8d9b0becf0d9c76d1509bff7 webapp-config-1.50.13.ebuild 1878
-SHA256 b62925c807a093cf7b6a131f7389cdf18a10279c9053a3f077f4330f05825271 webapp-config-1.50.13.ebuild 1878
+MD5 1b9493025313c367019ee95f70fec102 webapp-config-1.50.13.ebuild 1877
+RMD160 68cbfb66fe0407883ddaedb1760a86e0941407bc webapp-config-1.50.13.ebuild 1877
+SHA256 aebcfad3d19115e49976ac7fb502d6e5e68461198c8461787390c7cf86fe1e6b webapp-config-1.50.13.ebuild 1877
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEFjk+2+ySkm8kpY0RAsZxAJwKkUeSthLSWiCas+ZjiEzjCvJtxwCgts7x
-RKSYFHIJqEFUWEvW5evuXZ8=
-=m3U4
+iD8DBQFEFlrCSENan+PfizARAtX3AJ0VwzsIf2pae67JjEqb5na0nJ+1rgCfc/8v
+DgD2w5azIf/Oc0c9/tPw/5E=
+=muUC
 -----END PGP SIGNATURE-----
