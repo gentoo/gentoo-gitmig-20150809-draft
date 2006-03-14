@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/ut2004-bonuspack-mega
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-mega/ChangeLog,v 1.1 2006/03/14 22:53:34 wolf31o2 Exp $
+
+*ut2004-bonuspack-mega-1 (14 Mar 2006)
+
+  14 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +ut2004-bonuspack-mega-1.ebuild:
+  Initial import. Ebuild by Allen Booker <gentoo-bugs@allen.brooker.gb.net>.
+  Closing bug #116528.
+
