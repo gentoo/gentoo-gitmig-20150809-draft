@@ -1,8 +1,16 @@
-MD5 abd623a8b7415b2f576b2c60b5e67951 ChangeLog 2654
-MD5 ab36ff18c942ef3b152e44ed2dcbdc44 PodParser-1.28.ebuild 577
-MD5 a281d839be41989bdd7274c95a384120 PodParser-1.30.ebuild 636
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1d3aa53ea88890f532ab1fc9e9f375bc ChangeLog 2803
+MD5 7f8e01fca672b13696b21dcdb87561d7 PodParser-1.30.ebuild 647
 MD5 9d5452040616811ad4185dc50ee1fd4d PodParser-1.32.ebuild 652
-MD5 a116f238f9e58252d2a2eac7fa4192ea files/digest-PodParser-1.28 65
 MD5 2206f7a4b5f1846a5ab56c6927a7a686 files/digest-PodParser-1.30 66
 MD5 284b158c172bfa7b09e801a868af971f files/digest-PodParser-1.32 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEFyVWFdQwWVoAgN4RAsKeAJ9RwISIbyELEEUoWmw+9aVnhsaXvQCfTxVa
+VDT8+imRo8N/c8SH1gGYfrg=
+=a92T
+-----END PGP SIGNATURE-----
