@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.2.1.1-r1.ebuild,v 1.1 2005/12/15 15:48:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.2.1.1-r1.ebuild,v 1.2 2006/03/14 10:38:29 george Exp $
 
 inherit toolchain-funcs
 
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 	|| ( ( x11-proto/inputproto
 			x11-proto/xextproto
 			app-text/rman
+			x11-misc/imake
 		)
 		virtual/x11
 	)"
