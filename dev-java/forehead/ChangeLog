@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/forehead
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/forehead/ChangeLog,v 1.1 2005/03/29 23:46:04 compnerd Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/forehead/ChangeLog,v 1.2 2006/03/14 04:49:06 nichoj Exp $
+
+  14 Mar 2006; Joshua Nichols <nichoj@gentoo.org> forehead-1.0_beta5.ebuild:
+  Added ~amd64 keyword (bug #111315).
 
 *forehead-1.0_beta5 (29 Mar 2005)
 
