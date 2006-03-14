@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.61.ebuild,v 1.1 2006/03/14 06:41:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.61.ebuild,v 1.2 2006/03/14 07:02:44 cardoe Exp $
 
 inherit eutils mono python multilib debug qt3 autotools
 
@@ -78,6 +78,7 @@ src_compile() {
 		--with-system-socket=/var/run/dbus/system_bus_socket \
 		--with-session-socket-dir=/tmp \
 		--with-dbus-user=messagebus \
+		--localstatedir=/var \
 		$(use_enable doc doxygen-docs) \
 		--disable-xml-docs \
 		${myconf} \
