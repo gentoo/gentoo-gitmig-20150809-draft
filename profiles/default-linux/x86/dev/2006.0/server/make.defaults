@@ -1,5 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/dev/2006.0/server/make.defaults,v 1.2 2006/01/24 17:17:42 wolf31o2 Exp $
-
-USE="apache2 cli ctype dba expat fastbuild force-cgi-redirect ftp gd mailwrapper memlimit mysql pcre posix session simplexml snmp soap sockets spl tokenizer truetype xml xsl"
