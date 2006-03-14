@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bfce999a05ee61b9d3ec7e9999d9ee87 ChangeLog 14401
 MD5 4b0e6d1d01dbc931144e227f599f63de files/digest-gnome-themes-2.10.0 73
 MD5 569c1a7b6f5f7b22f3cd324eace70ec8 files/digest-gnome-themes-2.10.2 73
@@ -8,3 +11,10 @@ MD5 195ef943d847e6ebd9958d34016d74cc gnome-themes-2.10.2.ebuild 736
 MD5 55ffa7813d39cf80931508c497fec946 gnome-themes-2.12.1.ebuild 719
 MD5 5385c689957d32bd1ec2b5aff0fbcc83 gnome-themes-2.12.3.ebuild 725
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEFwEhKRy60XGEcJIRAq1qAJwKqcx/SfO5bUJ6tfwAXmqzweiKwACePUNM
+64a3JYB7Lmglxt/TrJ3rE70=
+=XJy0
+-----END PGP SIGNATURE-----
