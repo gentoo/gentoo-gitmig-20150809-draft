@@ -1,21 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f02308c04a982f6beeb9c04e98f0477b ChangeLog 12565
+MD5 effd516bd67f353e62d4780b8f86e88e ChangeLog 12754
+RMD160 af723c32e5f98c334c09ee946cb17e4f32db6871 ChangeLog 12754
+SHA256 340843b3df65067ad6e18885f29cde62f069276c92e459ae4b9d3a9b39f210ad ChangeLog 12754
 MD5 b092b744c2d6bad14ded1d493391e8a5 files/bonobo-browser-2.10.1-lang.patch 362
+RMD160 d5d9ad237cee6a1fa5465261c47882c6c4e3978d files/bonobo-browser-2.10.1-lang.patch 362
+SHA256 e2731f06c7cc92a5ba7bc2eb45d4ca10e2d8678bcf53a735678d0c3c29ac28c8 files/bonobo-browser-2.10.1-lang.patch 362
 MD5 340f7f3f8d3a28b8b68395e3fb8c4d75 files/digest-libbonoboui-2.10.0 71
+RMD160 bfbde436de5f2379793934aa218c59abbe800ec2 files/digest-libbonoboui-2.10.0 71
+SHA256 7104b308a486b7e421ce98128f72cbfc3805a7fa5952c3df55ee902dbf1fb4c5 files/digest-libbonoboui-2.10.0 71
 MD5 c7cb039a7f150df3a8f8e4f8f54fee40 files/digest-libbonoboui-2.10.1 71
+RMD160 452294e45ded81485bda38f9c1131384eef8b5a5 files/digest-libbonoboui-2.10.1 71
+SHA256 ca7dc6d41d32e78251927aa6fa15b92185c89d8dc2c22f46b74d007cfaad49be files/digest-libbonoboui-2.10.1 71
 MD5 60b3dcace488d6b24154eb16f6d36827 files/digest-libbonoboui-2.10.1-r1 259
+RMD160 741a18b5f9dbd8fcbf6373246628910dbfd3306d files/digest-libbonoboui-2.10.1-r1 259
+SHA256 0c39489a4bf8126b109af4daad97e8b312c9bfe971bd6a57d319ad4b80353f47 files/digest-libbonoboui-2.10.1-r1 259
+MD5 5ddd728442f52fd0dff688d384623234 files/digest-libbonoboui-2.14.0 259
+RMD160 0fdbf77365a922d55e88fa4ee1bc33c903202ce1 files/digest-libbonoboui-2.14.0 259
+SHA256 56785b4e5420e46332132d8c260bdf322e36a68a9304015a7008679d61c8d48f files/digest-libbonoboui-2.14.0 259
 MD5 20a2b53b1010d3e8dc26c27363fbe46d files/digest-libbonoboui-2.8.1 71
+RMD160 2a7d1327130ab55be9fc5eab8c44ba0ea3a2ee6d files/digest-libbonoboui-2.8.1 71
+SHA256 bc791a15eb5fd3b7c38bb9a360bcabb91706dcc61cb4ae4399c82509ad2a0336 files/digest-libbonoboui-2.8.1 71
+MD5 b092b744c2d6bad14ded1d493391e8a5 files/libbonoboui-2.13.0-browser-lang.patch 362
+RMD160 d5d9ad237cee6a1fa5465261c47882c6c4e3978d files/libbonoboui-2.13.0-browser-lang.patch 362
+SHA256 e2731f06c7cc92a5ba7bc2eb45d4ca10e2d8678bcf53a735678d0c3c29ac28c8 files/libbonoboui-2.13.0-browser-lang.patch 362
 MD5 5e07e31d264aafce4cda52364fa51e8e libbonoboui-2.10.0.ebuild 884
+RMD160 cf711606de566fe505cd2833476d338e623fe7ec libbonoboui-2.10.0.ebuild 884
+SHA256 38ec9a13a68e930e06b873c310e154b034515943d7ba08c462f40748cd7d0d1c libbonoboui-2.10.0.ebuild 884
 MD5 09a530d287606da40fd1ef94aa005680 libbonoboui-2.10.1-r1.ebuild 1012
+RMD160 7a8cbbdcfb6edd5606c7c48b2c14e0aaf7008b5a libbonoboui-2.10.1-r1.ebuild 1012
+SHA256 3322b5555edec7bea9eb9cb06ce63facec19069e29d581181c954b24135a9024 libbonoboui-2.10.1-r1.ebuild 1012
 MD5 05efd02cc971c6af82dc6fcfbe56741d libbonoboui-2.10.1.ebuild 909
+RMD160 637483076a13a5e9915860e38ef947136f7877bc libbonoboui-2.10.1.ebuild 909
+SHA256 4c8d480a0033cc079f6489ff47483f02e578f0ab83c9470e1eb891b0b740972a libbonoboui-2.10.1.ebuild 909
+MD5 c0dbbd0419580133fb0bd452771dc9e2 libbonoboui-2.14.0.ebuild 1018
+RMD160 6ebdfae8d081ccfa2d38886be7f20b102b796ff1 libbonoboui-2.14.0.ebuild 1018
+SHA256 18ac248de9c0a6bd5a5cdb64499e9e8a7ae47932af407ac4ca9c6ce52af84246 libbonoboui-2.14.0.ebuild 1018
 MD5 4a582277ecb2b5b1fe21b783d5c28db4 libbonoboui-2.8.1.ebuild 824
+RMD160 5bb522fce535de01f4c2ce39f959f75d05526fb7 libbonoboui-2.8.1.ebuild 824
+SHA256 c6d47290505f7ff2630e3786725445bbefe31407810ceda312ef81a026724fb2 libbonoboui-2.8.1.ebuild 824
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEFwAtKRy60XGEcJIRAtu5AJ0ULABbH8EBV0DtT4vHMp1k7aa0HwCeOqDo
-zXXKnR7EkgBZztqCX5a3/zE=
-=WQn0
------END PGP SIGNATURE-----
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
