@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/liblockfile
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.28 2005/12/25 15:11:56 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.29 2006/03/14 23:49:32 langthang Exp $
+
+*liblockfile-1.06-r1 (14 Mar 2006)
+
+  14 Mar 2006; Tuấn Văn <langthang@gentoo.org>
+  +files/liblockfile-1.06-glibc24.patch, +liblockfile-1.06-r1.ebuild:
+  glic-2.4 support. Bugs #126042 reported by Jose daLuz <jdaluz@gmail.com>.
+  patch by Diego Pettenò <flameeyes@gentoo.org>.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   liblockfile-1.06.ebuild:
