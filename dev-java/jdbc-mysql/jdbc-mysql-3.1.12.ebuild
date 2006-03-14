@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.1.12.ebuild,v 1.2 2005/12/23 02:19:16 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.1.12.ebuild,v 1.3 2006/03/14 01:34:04 nichoj Exp $
 
 inherit eutils java-pkg
 
@@ -21,7 +21,8 @@ RDEPEND=">=virtual/jre-1.2
 DEPEND=">=virtual/jdk-1.2
 	${RDEPEND}
 	sys-apps/sed
-	dev-java/ant-core"
+	dev-java/ant-core
+	dev-java/junit"
 
 S="${WORKDIR}/${MY_P}"
 
