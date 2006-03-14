@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.94 2006/03/14 16:43:31 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.95 2006/03/14 23:08:05 metalgod Exp $
+
+  14 Mar 2006; Luis Medinas <metalgod@gentoo.org> heimdal-0.7.2.ebuild:
+  Stable on amd64. See bug #121839.
 
   14 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> heimdal-0.7.2.ebuild:
   Stable on alpha wrt security bug #121839
