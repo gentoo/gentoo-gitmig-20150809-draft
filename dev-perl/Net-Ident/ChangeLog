@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Ident
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.4 2006/01/13 22:02:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.5 2006/03/14 01:46:06 gustavoz Exp $
+
+  14 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> Net-Ident-1.20.ebuild:
+  Keyworded ~hppa
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   Net-Ident-1.20.ebuild:
