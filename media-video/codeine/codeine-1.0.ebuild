@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/codeine-1.0.ebuild,v 1.2 2006/03/03 14:51:13 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/codeine-1.0.ebuild,v 1.3 2006/03/14 06:31:40 halcy0n Exp $
 
 inherit kde multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.methylblue.com/codeine/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 RDEPEND="media-libs/xine-lib"

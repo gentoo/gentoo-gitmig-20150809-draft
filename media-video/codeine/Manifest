@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dcc1d6f840ad83155590f337595ca001 ChangeLog 1980
-RMD160 0fe6254865356e05ddd357a4849dab19095ad49f ChangeLog 1980
-SHA256 3b029a36e9294a13ee71c6a3eaf8477bfc4296bbe4a9aa96860f1633a8dd055b ChangeLog 1980
-MD5 9da4514f1a62f486b98dbece0bc01e81 codeine-1.0.ebuild 920
-RMD160 bf098cde961c53d16ebc8c8f74877cd1d0ed3fe2 codeine-1.0.ebuild 920
-SHA256 b597d34a53983dea52d8d8995a486c467e3599b37277e7b1e7b03b9a4686ac6d codeine-1.0.ebuild 920
+MD5 0b6198ab75f5d9823562887d8701cb80 ChangeLog 2081
+RMD160 05c9f873af441a1ecf835c3f8022c4f4d0dbcc88 ChangeLog 2081
+SHA256 7295233a68e960d5a626a8ddcb5eede75da9d0c2a9be628cfc7f25ff6d8f2312 ChangeLog 2081
+MD5 04d5ab108c1904bc700282af4adf0910 codeine-1.0.ebuild 921
+RMD160 1d4d5e84fdc442d2c67750277ac043624abb228d codeine-1.0.ebuild 921
+SHA256 3481eb7afbef751b34b909016f2d7e11b3bebf39a9344852cb67d0dda17868d7 codeine-1.0.ebuild 921
 MD5 fb6823bcf11eeb188f9c5b0876e113ce codeine-1.0_beta1.ebuild 858
 RMD160 341bbc52ea1e9f86b75f6a5d9b86155727ff918a codeine-1.0_beta1.ebuild 858
 SHA256 ab99e5cd70fac3de13746db7db84cdc40ff119cbf2a0785dd2e52b63e578332f codeine-1.0_beta1.ebuild 858
 MD5 9d838d8987e1f759ec0f4eb891d73b52 files/codeine-xine-lib-1.0.patch 455
 RMD160 6d6584eafb436109a72a887aa0347838fca94d1b files/codeine-xine-lib-1.0.patch 455
 SHA256 b3fc3437f7669883e94d7498f3b7c551d47fb825e7b99ff70974f2b2f00a1d95 files/codeine-xine-lib-1.0.patch 455
-MD5 a5276c6325c9efb7678ea0d1c1067dba files/digest-codeine-1.0 238
-RMD160 9217bea78ff25df349cc5aa19e06240e440731e4 files/digest-codeine-1.0 238
-SHA256 9e52ce0a352c5bdb5f0f74ae7881b31677963c183f2f9ec3e3857139ef7c8541 files/digest-codeine-1.0 238
+MD5 c1765e210c924b353cbf301ceb8f875a files/digest-codeine-1.0 238
+RMD160 3c5dac1009b58e43e78dc37e99fb3343d592e18a files/digest-codeine-1.0 238
+SHA256 50d316a0be68e04989cdab395bc45360f9d51f674847b101253adebb3a0668c5 files/digest-codeine-1.0 238
 MD5 4b415d0e0a2bd3e13d00a5890479afae files/digest-codeine-1.0_beta1 69
 RMD160 7d7fc939be0e1175b4175e3d32b360278a95862e files/digest-codeine-1.0_beta1 69
 SHA256 d0289515419991471969934995e17f49234be9ccb6ce812ac4dadcce684760f2 files/digest-codeine-1.0_beta1 69
@@ -23,9 +23,9 @@ MD5 f252d0d8aaea067fe6be5e09527ab18e metadata.xml 175
 RMD160 4e4c9dfa9b5102163a4f7b231f95672bd2266c0d metadata.xml 175
 SHA256 ee81a2309bd9eae88d896b77f0d87adbb941cf18f82eea08c025eb583ac6043d metadata.xml 175
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFECFf/2G5bA0cA/ScRAsuiAJ9+/uYlwNSHzF/kbk7+M0yZDH3tkQCfQYdy
-AbTYwbriuZ3bWyWzXA/1ToA=
-=hW28
+iD8DBQFEFmNWCRZPokWLroQRAgLXAJoDeWo/jPaWnUwdpapYxjRRkFmxVwCfQtPz
+l4ZrDqmNQ3tS9o8l+kbX6+4=
+=7XNL
 -----END PGP SIGNATURE-----
