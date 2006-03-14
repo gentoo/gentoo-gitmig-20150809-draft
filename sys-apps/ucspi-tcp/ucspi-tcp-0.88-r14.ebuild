@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r14.ebuild,v 1.1 2006/03/12 18:32:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r14.ebuild,v 1.2 2006/03/14 19:06:46 hansmi Exp $
 
 inherit eutils toolchain-funcs fixheadtails
 
@@ -45,7 +45,13 @@ src_unpack() {
 	if use ssl; then
 		if use ipv6 ; then
 			# Rediffed patch by hansmi@g.o
-			epatch ${DISTDIR}/ucspi-tcp-0.88-ipv6-ssl-20050405.patch
+			# -> broken, hansmi on 2006-03-14
+			# epatch ${DISTDIR}/ucspi-tcp-0.88-ipv6-ssl-20050405.patch
+			echo
+			ewarn "SSL support disabled when using IPv6!"
+			ewarn "Please supply us a patch or wait until someone else does."
+			ebeep
+			echo
 		else
 			epatch ${DISTDIR}/ucspi-tcp-ssl-20050405.patch.gz
 		fi
