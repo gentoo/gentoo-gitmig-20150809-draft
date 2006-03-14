@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.144 2006/03/02 17:47:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.145 2006/03/14 20:53:03 flameeyes Exp $
+
+  14 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4a-r1.ebuild:
+  Bump patchset to allow building with GCC 4.1, see bug #126202.
 
   02 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4a-r1.ebuild:
   Cleanup modular x deps.
