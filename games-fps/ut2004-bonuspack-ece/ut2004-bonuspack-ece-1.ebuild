@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ut2004-bonuspack-ece-1.ebuild,v 1.3 2005/08/30 19:12:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ut2004-bonuspack-ece-1.ebuild,v 1.4 2006/03/14 22:58:45 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://3dgamers/unrealtourn2k4/Missions/${MY_P}"
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 x86"
 RESTRICT="nostrip nomirror"
 IUSE=""
 
