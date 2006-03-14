@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.2 2006/03/14 16:38:50 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.3 2006/03/14 16:42:40 spock Exp $
 
 inherit eutils multilib linux-mod
 
@@ -223,6 +223,5 @@ pkg_postinst() {
 		einfo "core splashutils package. To get some themes you might want to emerge:"
 		einfo "  media-gfx/splash-themes-livecd"
 		einfo "  media-gfx/splash-themes-gentoo"
-		echo ""
 	fi
 }

@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 495acfb7b0629b3bded1a2edc4895c4a ChangeLog 11593
-RMD160 e4e788957178b5a6c5cb0b7d48fc956394695547 ChangeLog 11593
-SHA256 b9165aa34e756aa33a1f391dce44c10d726440f1321d709fda77bb96b3dfee88 ChangeLog 11593
+MD5 df47619f1d3505c4593906da84775dd9 ChangeLog 11735
+RMD160 9a10b29b270552a7f2bf8cd67b5c98942f98acf8 ChangeLog 11735
+SHA256 5f5489b46ea15698a77b08232a5cac90b774a9dc7e220391a8f911b59eef03d5 ChangeLog 11735
 MD5 c518e5f1875064cb0c5784f53f9db7f5 files/digest-splashutils-1.1.9.10 484
 RMD160 8f176907761f9183c88f84d66eaced9754414921 files/digest-splashutils-1.1.9.10 484
 SHA256 157839d129c211ed4bb6d781f6d2fd585022be56c4dc4881780451abdf3516ee files/digest-splashutils-1.1.9.10 484
@@ -25,12 +25,12 @@ SHA256 112dab3f2d432949d3110ebb9475b1405171ab196062be6f7dd244815e64f75b files/sp
 MD5 d78ee27cab85b59044d8ef3e7e5be4af files/splashutils-depscan.patch 2197
 RMD160 044f771f4d971abc177a1da9563cba76bc101d71 files/splashutils-depscan.patch 2197
 SHA256 ea06dec56d412a30abe7da31ab3485ab9748cf58740aa1f08b128b0b5e1e6df9 files/splashutils-depscan.patch 2197
-MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
-RMD160 90fef1dff5d0b3945073e90bb7ffec583ff1bbe8 metadata.xml 221
-SHA256 fd573abb9cf89f320d00d1c107a25a46a5dfba633087d4179d0b8bd9aa539c8e metadata.xml 221
-MD5 4948bcd6bc2781da5b6accb99d9bf538 splashutils-1.1.9.10-r1.ebuild 6475
-RMD160 bf32900928f6e41f1bd1b64cfcce14fde40f6457 splashutils-1.1.9.10-r1.ebuild 6475
-SHA256 8b90a5100d98dc24a3bb492be5605b4cce1fbf2091c6aadc62fae00844434561 splashutils-1.1.9.10-r1.ebuild 6475
+MD5 87131e5c56922624f8a0c7fe61cd28da metadata.xml 220
+RMD160 6bb03cb6947aadf2672a58c61c1fb7aa405eaf86 metadata.xml 220
+SHA256 969b4125e7620e2fe0d616cb3cabbe52bd79e6c4bdd725ce807d5f4c7c1ad75d metadata.xml 220
+MD5 f52ef30dba18091f48f9c963e809ec9d splashutils-1.1.9.10-r1.ebuild 6747
+RMD160 7fd0e782b433c5b3a1669c9e60ec043d1dda6648 splashutils-1.1.9.10-r1.ebuild 6747
+SHA256 1ee0f72419444d8146446a40aa7c9576695fdb63ca3b918a82b87b7bdd284a30 splashutils-1.1.9.10-r1.ebuild 6747
 MD5 45b9cbcf05a0792fde52c7eb0d413196 splashutils-1.1.9.10.ebuild 6342
 RMD160 a1139b705c17e5507aa6badb519f34afe3d711ec splashutils-1.1.9.10.ebuild 6342
 SHA256 34a5ca5b2130847da5aad36b18cd7fed4f0d7f8e234331fc053f186234c9aa51 splashutils-1.1.9.10.ebuild 6342
@@ -41,9 +41,9 @@ MD5 b2cf16f3800e9f1a6a8752da908d44d8 splashutils-1.1.9.9-r1.ebuild 6379
 RMD160 e7bd5573c82df2906086d464661f79d714e39340 splashutils-1.1.9.9-r1.ebuild 6379
 SHA256 bba1919d6267c9a55293ae30d61f5c02b57ef3b62ff26220c774dd35d0607485 splashutils-1.1.9.9-r1.ebuild 6379
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDH52chej4aZK9/cRAjwrAKCCxOm4Dm/gPtAcJKdLY6flMmEY2ACfQrR4
-dp0UYvqez8C72t5O+rT6DZY=
-=2eWE
+iD8DBQFEFvKXchej4aZK9/cRAgfyAJ9WO1CKIJ7Tx9Qokg2Q6gQiay0YrgCfQnjy
+jxWGAUUbqOoOCl1zhX93s9s=
+=BfyT
 -----END PGP SIGNATURE-----
