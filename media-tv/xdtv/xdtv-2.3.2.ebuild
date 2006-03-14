@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.2.ebuild,v 1.1 2006/03/14 23:33:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.2.ebuild,v 1.2 2006/03/14 23:47:38 flameeyes Exp $
 
 inherit font multilib autotools flag-o-matic
 
@@ -168,6 +168,9 @@ src_install() {
 		insinto /usr/share/icons/hicolor/${dim}x${dim}/apps
 		newins ${S}/xdtv-${dim}.png xdtv.png
 	done
+
+	# Remove fonts from being installed by autotools
+	rm -rf "${D}/usr/$(get_libdir)/X11"
 
 	# Install the led-fixed font with font.eclass
 	gzip font/*.pcf
