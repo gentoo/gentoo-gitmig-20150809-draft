@@ -1,28 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d539b12f4c5c76e5ac7800bd91d88da2 ChangeLog 6381
-RMD160 a5def38fe2b7e4cba872b2742cbe3f840c3b1196 ChangeLog 6381
-SHA256 8cf7f14f54c0bbef97ea58a9a7306ab3d02aad0feec4e743fc3e11ff58f8ce21 ChangeLog 6381
+MD5 3be682f3d5a2a99f4c9c79917607f7d3 ChangeLog 6483
 MD5 b5f98b4cf87ea619127e661ae4a35556 files/digest-slang-1.4.9-r1 494
-RMD160 6dbac91c514e2635369b6a9cb25ee6bc31992a54 files/digest-slang-1.4.9-r1 494
-SHA256 c9f9566aec42fda74490eb91710d5630b85bcf5c6a25e5c6a56b6af5638e6c4a files/digest-slang-1.4.9-r1 494
-MD5 3f8b5bbd9fa92e3296172541ce9b143a files/digest-slang-1.4.9-r2 494
-RMD160 606f8aeefed9af818ac3458729aef2dbbd986d19 files/digest-slang-1.4.9-r2 494
-SHA256 40d2638aa9f41bc97f09034ba078b2a1efd13f2c3afbd9f9a509ea31aa884c4c files/digest-slang-1.4.9-r2 494
+MD5 094909eb3092af15c2557a7052fad7aa files/digest-slang-1.4.9-r2 134
 MD5 bc00f0356947154d3250243bd5ec08f5 metadata.xml 219
-RMD160 355a59738ac2c3bb2de2c5cdf45b5a15a91fe4aa metadata.xml 219
-SHA256 2dd88647b8f46df7519fe3a112dba84d9af4c7933908984766cf3a25d2e30e3d metadata.xml 219
 MD5 9d14ded2d330bec23d17df71ff41547d slang-1.4.9-r1.ebuild 1847
-RMD160 a36cd6c819dde981829eb8836d7511e782527e25 slang-1.4.9-r1.ebuild 1847
-SHA256 14b2fe38ed50b9801d48d941f861d7ecf07f43a8905e7c55295e616af60d361c slang-1.4.9-r1.ebuild 1847
-MD5 4b3dc771ec18b807a7e0fac23fa09ef9 slang-1.4.9-r2.ebuild 1897
-RMD160 6f0d12cb3607c594c9aa485c385199a25318d210 slang-1.4.9-r2.ebuild 1897
-SHA256 aa6f0faf1bbe99e434f1026e97084a72d0ddd35bed20e8219347c83c4951127a slang-1.4.9-r2.ebuild 1897
+MD5 65dae2f111bdbc2bd01dbd01f29dbd2a slang-1.4.9-r2.ebuild 1899
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEENZCJrHF4yAQTrARAkZWAKCgRk30R3es8laLCmettn4WKJT+eQCfS4Ai
-WuRA27XLl0XQ6pUv++hXHMk=
-=zr81
+iD8DBQFEFyiYFdQwWVoAgN4RAlVvAKDShyejwDFzxm6nE3BLFLYRKfcm3ACffS9d
+GcHaPvyc2mHUSC6581y5smU=
+=5NHM
 -----END PGP SIGNATURE-----
