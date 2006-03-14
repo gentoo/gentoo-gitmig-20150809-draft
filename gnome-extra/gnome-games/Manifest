@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bcb83b53c734ab3634ca8d32e62eae6e ChangeLog 17463
 MD5 2301a09a3e02fd7e40f6ee5a7e79e95c files/digest-gnome-games-1.4.0.3-r3 72
 MD5 d12063544c92d2ed0dff801d3d593707 files/digest-gnome-games-2.10.0 72
@@ -19,3 +22,10 @@ MD5 fb12b312d93ffae751c6c41490a5cad3 gnome-games-2.12.1.ebuild 2042
 MD5 fec2347552ed17f814dcaa68be94021e gnome-games-2.12.2.ebuild 2031
 MD5 46b73953877e881b749320da4da92f22 gnome-games-2.12.3.ebuild 2039
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEFwR9KRy60XGEcJIRAkTqAJ4g3Za6meUwKMTKCOs452hXwat5xACfT05F
+CsPds4qBnIOdTFIH81Zjf1k=
+=WW+s
+-----END PGP SIGNATURE-----
