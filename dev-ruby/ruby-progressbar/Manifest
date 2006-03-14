@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 48b87aefa65b247946c9fefc6d2106e4 ChangeLog 1552
 RMD160 8e6a65770fd74698387c30834ce067cdeb66d9a4 ChangeLog 1552
 SHA256 8df0d3e21e07107b7da0e84ad65afadf2a04609c8363c1c53b28039df3f2592d ChangeLog 1552
-MD5 f119411f3e9711fbc67dde78bda48fb3 files/digest-ruby-progressbar-0.8 256
-RMD160 08641629ec1c84bd9ef4cf20a50d761419b5ab7a files/digest-ruby-progressbar-0.8 256
-SHA256 c1c624b5b6ca573313aa6e4a27c3b7bbfb781abedd7cb0acebab530ddc943b1f files/digest-ruby-progressbar-0.8 256
+MD5 65b58b0e3c97106cbb48929e90c2641d files/digest-ruby-progressbar-0.8 256
+RMD160 1ce772584ed7511b3f4f4484816f4f0a8a96fc51 files/digest-ruby-progressbar-0.8 256
+SHA256 8c056eabf3e0f9e8aeae4c1a01c155649d78b05bef6a262a57c758d938783690 files/digest-ruby-progressbar-0.8 256
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
 SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
 MD5 6fd59dd206ff18eccd8fedd8f1ca84ce ruby-progressbar-0.8.ebuild 542
 RMD160 1024c1293f242a5ad5ba1332509d3a980343afa8 ruby-progressbar-0.8.ebuild 542
 SHA256 603a01884267c15c3112265a9f73113cf19bd59914b4504f8d836d710a3ee6d5 ruby-progressbar-0.8.ebuild 542
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5Nl2JrHF4yAQTrARAupdAJ4sPsLJYia7QqAO5MezHdFJfXJFBACfVqB7
-aA3K7sqaRJRwJqbOlnRFqr0=
-=D+dA
------END PGP SIGNATURE-----
