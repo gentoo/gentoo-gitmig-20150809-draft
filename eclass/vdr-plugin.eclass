@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.13 2006/03/04 17:43:51 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.14 2006/03/14 16:03:01 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -195,6 +195,16 @@ vdr-plugin_src_install() {
 			break
 		fi
 	done
+
+	if which md5sum >/dev/null 2>&1; then
+		cd ${S}
+		insinto /usr/lib/vdr/checksums
+		(
+			cd ${ROOT}${VDR_INCLUDE_DIR}/vdr
+			md5sum *.h libsi/*.h|sort --key=2
+		) > header-md5-${PN}
+		doins header-md5-${PN}
+	fi
 }
 
 vdr-plugin_pkg_postinst() {
