@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1.ebuild,v 1.2 2006/03/07 02:49:15 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1.ebuild,v 1.3 2006/03/14 23:21:48 morfic Exp $
 
 inherit eutils flag-o-matic gnome2 kde-functions
 
@@ -102,4 +102,5 @@ src_install() {
 	dodoc AUTHORS README TODO NEWS TRANSLATORS ChangeLog \
 		CelestiaKeyAssignments.txt KbdMouseJoyControls.txt devguide.txt
 	dohtml coding-standards.html manual/*.html manual/*.css
+	cp models/*.3ds ${D}/usr/share/celestia/models/
 }
