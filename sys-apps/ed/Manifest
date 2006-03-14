@@ -1,16 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8437ba0a2d889f98ec8828bcaf39485c ChangeLog 2837
-MD5 fe11e0ded7a0d23a1974e46851c11442 ed-0.2-r6.ebuild 1535
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 1b60eebda7e05a6a35164bc4b23ac8ff files/digest-ed-0.2-r6 58
-MD5 0c8a87453a1d75e2ff8ed4510b306de0 files/0.2-mkstemp.patch 979
+MD5 a99cf67f5381e0e78bba3a4b9cd1b62e ChangeLog 3000
+RMD160 9e7b6e85253dc7f49e3240ba8a2ae3d5e2fcf825 ChangeLog 3000
+SHA256 55868522f1167fc73c0c58369e3c1a78ceb1ad56d92c7169326cd5c10424d4fd ChangeLog 3000
+MD5 2aa30e9d04b02570bc5c83500b29ec6d ed-0.2-r6.ebuild 1513
+RMD160 2b369e72d9c3828a2e2fb40d3105c9913eb4b0c5 ed-0.2-r6.ebuild 1513
+SHA256 2fa29bba4db12b29c1050265ada745e20740123baa4075626d952a9e75acb3c6 ed-0.2-r6.ebuild 1513
 MD5 549e2478edb18002261ae5dd055bcf5b files/0.2-info-dir.patch 373
+RMD160 33afa794dfc79f887d60bfba4c0482e295465761 files/0.2-info-dir.patch 373
+SHA256 755a8d012d872012e49323e9e149b0195f6a06caf45957feeefe7715face637c files/0.2-info-dir.patch 373
+MD5 0c8a87453a1d75e2ff8ed4510b306de0 files/0.2-mkstemp.patch 979
+RMD160 bb213e81c136d964018ac043c21b7aac23f78d24 files/0.2-mkstemp.patch 979
+SHA256 210a9a9cd99195e421c21b3bc8add15d9a12bea756f397b3214d5b399e6e895f files/0.2-mkstemp.patch 979
+MD5 1b60eebda7e05a6a35164bc4b23ac8ff files/digest-ed-0.2-r6 58
+RMD160 fe4ad32fbf4b54870ce8ab9cf94e6728e4e65ba9 files/digest-ed-0.2-r6 58
+SHA256 d4f720fe8eb3ce7a4aff962d62d0e919ba4b885d88efc3f1645559f2566c0a76 files/digest-ed-0.2-r6 58
+MD5 27ff24a3ed7ae08b78e8ed30035cb754 files/ed-0.2-configure-LANG.patch 1548
+RMD160 22bb3a5299ddd3d46a1ef7fd2cb6457cfda5f8b9 files/ed-0.2-configure-LANG.patch 1548
+SHA256 2501b6ae2e66fe1ea61960cf638d0aa977d1b13dadf4ab4f95b7ad87b9e9c858 files/ed-0.2-configure-LANG.patch 1548
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFB4ra0roRuSHgZdywRApcDAJ4tbOAxoPYZNfYMSMTGGoNrRahLNgCgj7AS
-eV4DtyW+HfuDHNSoSEvkKiA=
-=Lj+Y
+iD8DBQFEFiEH2+ySkm8kpY0RAh5JAJ4hilDZubHVM3ByXXmtlHP5lFnXVwCfYxxU
+WhSkEpx1wyVz8qS2Z8Aav/U=
+=ypDZ
 -----END PGP SIGNATURE-----

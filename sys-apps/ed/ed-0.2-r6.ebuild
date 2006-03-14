@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r6.ebuild,v 1.1 2005/01/10 17:01:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r6.ebuild,v 1.2 2006/03/14 01:46:51 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/ed/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -18,15 +18,14 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-info-dir.patch
-	epatch ${FILESDIR}/${PV}-mkstemp.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-info-dir.patch
+	epatch "${FILESDIR}"/${PV}-mkstemp.patch
+	epatch "${FILESDIR}"/${P}-configure-LANG.patch #126041
 
 	# This little autoconf line isn't critical.
 	# It's only needed when you want to cross-compile.
-	# Since ed is a system package, we don't want to 
-	# force an autoconf DEPEND.
-	if [[ ${CBUILD:-${CHOST}} != ${CHOST} ]] ; then
+	if tc-is-cross-compiler ; then
 		chmod 755 configure #73575
 		WANT_AUTOCONF=2.1 autoconf || die "autoconf failed"
 	fi
@@ -45,11 +44,11 @@ src_compile() {
 }
 
 src_install() {
-	chmod 0644 ${S}/ed.info
+	chmod 0644 "${S}"/ed.info
 	make \
-		prefix=${D}/ \
-		mandir=${D}/usr/share/man/man1 \
-		infodir=${D}/usr/share/info \
+		prefix="${D}"/ \
+		mandir="${D}"/usr/share/man/man1 \
+		infodir="${D}"/usr/share/info \
 		install || die
 	dodoc ChangeLog NEWS POSIX README THANKS TODO
 }
