@@ -1,17 +1,17 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.9.ebuild,v 1.3 2005/11/19 19:03:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.9.ebuild,v 1.4 2006/03/14 03:27:36 vapier Exp $
 
 inherit distutils eutils elisp-common
 
 DESCRIPTION="Set of python tools for processing plaintext docs into HTML, XML, etc."
 HOMEPAGE="http://docutils.sourceforge.net/"
 SRC_URI="mirror://sourceforge/docutils/${P}.tar.gz
-		 glep? ( mirror://gentoo/glep-${PV}.tbz2 )"
+	glep? ( mirror://gentoo/glep-${PV}.tbz2 )"
 
 LICENSE="public-domain PYTHON BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="glep emacs"
 DEPEND=">=dev-lang/python-2.3
 	emacs? ( virtual/emacs )"

@@ -7,15 +7,15 @@ SHA256 b1e67d3dc457f84bf3f98ca14804abb2806b1de7e772f24066dc2e32dbec8894 ChangeLo
 MD5 c45be82484f7cc076c69a559e3133d62 docutils-0.3.5.ebuild 1969
 RMD160 8b2f482bbe294e17cd099eff626aa9c9a47423b6 docutils-0.3.5.ebuild 1969
 SHA256 9d06457a80e81babb465873f3546a5e254e78e24691c29c554f8843d81df9f5c docutils-0.3.5.ebuild 1969
-MD5 d23c215d271b5677da428ecf35e775ef docutils-0.3.7.ebuild 2493
-RMD160 8d7f242d52629ec34caebeeed9b5b2f83fade40d docutils-0.3.7.ebuild 2493
-SHA256 0a95279ac5c9a388f39c92b638b5102801d606dbaa310abbc92d71a7adec1ae4 docutils-0.3.7.ebuild 2493
-MD5 1663689e9b352ee1dd81b9d6d78b2238 docutils-0.3.9.ebuild 2472
-RMD160 560ccfd89af3d88c50d798445e51444803e94541 docutils-0.3.9.ebuild 2472
-SHA256 0b42aa8d739d5e56b0356cd462ca6d8abf8473a06afbf046a3b0408856a7fd4d docutils-0.3.9.ebuild 2472
-MD5 26e11b99a559ef057054de986ac78f81 docutils-0.4.ebuild 2903
-RMD160 f1f8f84afd81b7991a7017a8f8cd9e9ceab4459a docutils-0.4.ebuild 2903
-SHA256 05be4623dcc1faa845a2389a188caf2350bcae0cdca8cf859375323587cc81e4 docutils-0.4.ebuild 2903
+MD5 839823b0d9c35f688458396d156c7e74 docutils-0.3.7.ebuild 2487
+RMD160 b44c8505961f12d68b430d31e91f1af5dd91a8b4 docutils-0.3.7.ebuild 2487
+SHA256 9387463dd9ea59e3763d7b0a173606c40574f71b25b582cc84cae97f17dbc262 docutils-0.3.7.ebuild 2487
+MD5 2da0b5e818fa1f9f254b206da8482bb8 docutils-0.3.9.ebuild 2496
+RMD160 e4beab0d6bda9b77f2203fcbf673d3c1cf49cb3e docutils-0.3.9.ebuild 2496
+SHA256 dbe9d4f37ecb3ac823df18493b55b93cad423a260b47c92464da30c69ffde4a4 docutils-0.3.9.ebuild 2496
+MD5 f205f619e40fba2289282b4454e6c63e docutils-0.4.ebuild 2929
+RMD160 eb120bf269e878b00a4e131d6b8156d2299e8316 docutils-0.4.ebuild 2929
+SHA256 34cebb649727c93a5db442afdcd7d3d8438578bfa86d0dd3265f9cd35fcb3b66 docutils-0.4.ebuild 2929
 MD5 db1120176b861cb2e4078bc45c16c3bb files/50docutils-0.4-gentoo.el 275
 RMD160 d017df7483e086d71f18800002f285b1a90be08c files/50docutils-0.4-gentoo.el 275
 SHA256 cbfccc2cf7f9b9dc00a0007fac424a5c634e083cfd29c0441becea75a9d92c8e files/50docutils-0.4-gentoo.el 275
@@ -44,9 +44,9 @@ MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD9QVfW78445TWHXcRArF/AJ9Nf8Q0AgsCWCjcwH5w9hP/ZXkiuwCfTD+L
-wm8b++sKDKsIkzlvriIFifw=
-=ggeJ
+iD8DBQFEFjik2+ySkm8kpY0RArTbAJ48jxQNDJM1ZDO4nKzHcfEvmgpkCACfVG10
+WgYnMFJNpW5JSV8EzJp+59Y=
+=SaIZ
 -----END PGP SIGNATURE-----
