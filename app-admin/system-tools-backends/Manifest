@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b648b806a0cbea1d4d7db1574b30d337 ChangeLog 3377
+MD5 8caeb8ce8f33f2bc7959b982bf3a8a4d ChangeLog 3487
 MD5 946729e7340edc6a1bae2e1a5e02a1d2 files/digest-system-tools-backends-1.2.0 80
 MD5 54db3221ddfb6a9393e2f1576f8d7a5e files/digest-system-tools-backends-1.4.0 80
 MD5 db143143d44f996cd2407f556fc67c92 files/digest-system-tools-backends-1.4.1 80
@@ -10,11 +10,11 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 aab38d32daaa9ee6e5c99cd978603fac system-tools-backends-1.2.0.ebuild 754
 MD5 481c8379524aaefeedacf79c8438321b system-tools-backends-1.4.0.ebuild 763
 MD5 fae31db36d742218cec23f62d63ecbce system-tools-backends-1.4.1.ebuild 764
-MD5 176a2805d0ef54172cff515faf177376 system-tools-backends-1.4.2.ebuild 776
+MD5 dceb97bd7e210501b45bef68e833eb94 system-tools-backends-1.4.2.ebuild 775
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEFZCNKRy60XGEcJIRAmhMAJoDZjQpRnws9Q5nZVgYu7epRZ7WXwCeK+RJ
-WbvxZE6yeS6Brk2fNp8QHLA=
-=Ybmv
+iD8DBQFEFwFkKRy60XGEcJIRAqwPAJ9LzCIABlNQPQ/KJ6yYnZhwVDvEhQCdGcjX
+NJRl6/m0dzd0ku3QHaHffSQ=
+=WsSX
 -----END PGP SIGNATURE-----
