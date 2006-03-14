@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.36 2006/03/02 18:11:07 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.37 2006/03/14 23:17:22 gustavoz Exp $
+
+  14 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  libglademm-2.6.1.ebuild:
+  Stable on hppa
 
 *libglademm-2.6.2 (02 Mar 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/libgnomemm-2.12.0.ebuild,v 1.6 2006/01/22 21:01:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/libgnomemm-2.12.0.ebuild,v 1.7 2006/03/14 23:16:15 gustavoz Exp $
 
 inherit gnome2
 IUSE=""
@@ -8,7 +8,7 @@ DESCRIPTION="C++ bindings for libgnome"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
 LICENSE="LGPL-2.1"
 
-KEYWORDS="amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
 SLOT="2.6"
 
 RDEPEND=">=dev-cpp/gtkmm-2.4
