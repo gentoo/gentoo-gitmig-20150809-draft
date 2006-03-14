@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.140 2006/03/14 23:55:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.141 2006/03/14 23:57:27 flameeyes Exp $
+
+  14 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -transcode-0.6.14-r2.ebuild, -transcode-1.0.2-r1.ebuild:
+  Drop old versions.
 
   14 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   transcode-0.6.14-r2.ebuild, transcode-0.6.14-r3.ebuild,
