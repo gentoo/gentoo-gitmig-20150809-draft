@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/yelp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.107 2006/02/03 22:24:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.108 2006/03/14 20:24:11 joem Exp $
+
+*yelp-2.14.0 (14 Mar 2006)
+
+  14 Mar 2006; Joe McCann <joem@gentoo.org> +yelp-2.14.0.ebuild:
+  new version for 2.14, has improved man/info support and beagle support
 
   03 Feb 2006; Aron Griffis <agriffis@gentoo.org> yelp-2.12.2.ebuild:
   Mark 2.12.2 stable on ia64
