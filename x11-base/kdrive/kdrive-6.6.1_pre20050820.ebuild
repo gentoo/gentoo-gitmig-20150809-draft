@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-6.6.1_pre20050820.ebuild,v 1.6 2006/02/14 22:09:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-6.6.1_pre20050820.ebuild,v 1.7 2006/03/14 21:49:45 spyderous Exp $
 
 SNAPSHOT="yes"
 
@@ -64,7 +64,7 @@ src_compile() {
 	fi
 
 	# Yes, we do need the LDFLAGS here in addition to the above append.
-	emake LDFLAGS="${LDFLAGS}"
+	emake LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {

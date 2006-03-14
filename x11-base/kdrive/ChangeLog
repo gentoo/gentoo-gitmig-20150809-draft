@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/kdrive
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.38 2006/02/14 22:09:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.39 2006/03/14 21:49:45 spyderous Exp $
+
+  14 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  kdrive-6.6.1_pre20050820.ebuild:
+  Add a die after emake.
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org>
   kdrive-6.6.1_pre20050820.ebuild:
