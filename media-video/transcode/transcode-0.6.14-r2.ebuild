@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r2.ebuild,v 1.14 2006/02/09 05:25:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r2.ebuild,v 1.15 2006/03/14 23:55:10 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="X 3dnow a52 altivec dv dvdread encode fame truetype \
 	gtk imagemagick jpeg lzo mjpeg mpeg mmx network ogg vorbis pvm quicktime \
-	sdl sse sse2 theora v4l xvid xml2"
+	sdl sse sse2 theora v4l xvid xml"
 
 RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	dv? ( >=media-libs/libdv-0.99 )
@@ -42,7 +42,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	theora? ( media-libs/libtheora )
 	jpeg? ( media-libs/jpeg )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	xml2? ( dev-libs/libxml2 )
+	xml? ( dev-libs/libxml2 )
 	truetype? ( >=media-libs/freetype-2 )
 	pvm? ( >=sys-cluster/pvm-3.4 )"
 
@@ -120,7 +120,7 @@ src_compile() {
 		$(use_enable sse2) \
 		$(use_enable theora) \
 		$(use_enable v4l) \
-		$(use_enable xml2 libxml2) \
+		$(use_enable xml libxml2) \
 		${myconf} \
 		--disable-avifile
 

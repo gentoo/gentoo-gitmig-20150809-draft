@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r1.ebuild,v 1.7 2006/03/14 23:51:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r1.ebuild,v 1.8 2006/03/14 23:55:10 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="X 3dnow a52 altivec dv dvdread mp3 fame truetype gtk imagemagick jpeg
 lzo mjpeg mpeg mmx network ogg vorbis quicktime sdl sse sse2 theora v4l2
-xvid xml2"
+xvid xml"
 
 RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	dv? ( >=media-libs/libdv-0.99 )
@@ -39,7 +39,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	>=media-video/ffmpeg-0.4.9_p20050226-r3
 	|| ( sys-libs/glibc dev-libs/libiconv )
 	>=media-libs/libmpeg2-0.4.0b
-	xml2? ( dev-libs/libxml2 )
+	xml? ( dev-libs/libxml2 )
 	X? ( || ( (
 			x11-libs/libXaw
 			x11-libs/libXv )
@@ -112,7 +112,7 @@ src_compile() {
 		$(use_enable lzo) \
 		$(use_enable a52) \
 		$(use_enable mpeg libmpeg3) \
-		$(use_enable xml2 libxml2) \
+		$(use_enable xml libxml2) \
 		$(use_enable mjpeg mjpegtools) \
 		$(use_enable sdl) \
 		$(use_enable gtk) \
