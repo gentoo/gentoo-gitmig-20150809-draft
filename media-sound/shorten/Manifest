@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0c3ce5c2112960a43078940d74702bac ChangeLog 1953
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 1a47b626990b164bbe6abac2b5220ea5 shorten-3.6.0.ebuild 577
+MD5 5d9eaf484d4e6730a3a23b26ddbc6c70 ChangeLog 2112
 MD5 bb6f4b87402da3c6eed7b279fd081a7b files/digest-shorten-3.6.0 65
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 5335601404bd02156aa734e85883a8b5 shorten-3.6.0.ebuild 579
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFBdftMArHZZzCEUG0RAkmxAJ9Krb7fGOclLDGTOLXg44XuLzVtygCeILnR
-y39kx/Xe+0W+mwhUd0zUNyo=
-=dPEW
+iD8DBQFEFzh3ViELBEf1JB0RAgXHAJ9o6i7FBDwZCNfDyHbndH2OZCT9SACfQX15
+PPjNsEfmz4mRG8yNt3WB90E=
+=20Er
 -----END PGP SIGNATURE-----
