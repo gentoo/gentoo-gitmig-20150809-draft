@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-2.2.ebuild,v 1.2 2006/03/14 12:48:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-2.2.ebuild,v 1.3 2006/03/14 16:37:26 foser Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_compile() {
 	local xkbbase
 
 	# see bug #113108
-	if has_version x11-misc/xkbdata; then
+	if has_version x11-apps/xkbcomp; then
 		xkbbase=/usr/share/X11/xkb
 	else
 		xkbbase=/usr/$(get_libdir)/X11/xkb
