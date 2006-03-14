@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d808426589bca917cc203b917a9f400e ChangeLog 472
+MD5 b6bfceb8ce5693f37031ada7efb2f7a9 ChangeLog 608
+RMD160 4133e8dbcc043e2346a709bb8af73c52debdb20c ChangeLog 608
+SHA256 82dd6ccb57b02cfcbabf4d1e81a54a4d95a624523c48c2d7969040c3accdbcf0 ChangeLog 608
 MD5 6b58de60ef0cd12f65c518d64de1b06c files/digest-sh-sources-2.6.13 301
+RMD160 ed695544aeac42fcbaf3cfe37818c7077108a994 files/digest-sh-sources-2.6.13 301
+SHA256 cff7fbb4fd81f0a0fc798cfa58339c0365313b9150cc736a3fac7c46d8516e45 files/digest-sh-sources-2.6.13 301
 MD5 ed1077ecd619d47d671d0ecd8115d9b3 files/digest-sh-sources-2.6.14 301
+RMD160 3c084918ffc249b642ad48d9da14938cf9c3c1b0 files/digest-sh-sources-2.6.14 301
+SHA256 963fdb66a5b511e488875757e7ad29e29f02cd72ddf53d23642fa139ae3ab857 files/digest-sh-sources-2.6.14 301
+MD5 e7cf86dbfdb3c5203f3aa425990c52d6 files/digest-sh-sources-2.6.15 1093
+RMD160 ef7ee066a6c55f0afc93d373273dd0d07d05c1c9 files/digest-sh-sources-2.6.15 1093
+SHA256 8a76d1113a7eaeda85231f2f2ceb03203bcbab18931621097710d25192e94d65 files/digest-sh-sources-2.6.15 1093
 MD5 b3c66b3038e3708ca4dbce6dcb595ecf metadata.xml 217
+RMD160 125aaf5c02dd3a3656e224e69a22bff6ed0a35e9 metadata.xml 217
+SHA256 52cbe39a16a6b2810dc9d8f04c8dce1a61347b82b84f3d7edf87736e074328c5 metadata.xml 217
 MD5 c56af3d70d5916789b05f3b4b9f61ddd sh-sources-2.6.13.ebuild 858
+RMD160 74e9a3fb7c7e06af62fa12b1d850a41d40dd76fb sh-sources-2.6.13.ebuild 858
+SHA256 eb1521fb1ddb0b66e346cf22b3c417188c16af8b7a5342aaa32cfb5f5096a0a2 sh-sources-2.6.13.ebuild 858
 MD5 2b5bd7fdb29d383ef727609da870c9b6 sh-sources-2.6.14.ebuild 859
+RMD160 7ed81ee51fd4ee01539dd6d19ed90a2632655c52 sh-sources-2.6.14.ebuild 859
+SHA256 b84597b918067e9c9ab7a116025f9186218397f0e7441b58ad97b6fa63ef4f39 sh-sources-2.6.14.ebuild 859
+MD5 36b153915ab10a0d0961fda2e8c58243 sh-sources-2.6.15.ebuild 860
+RMD160 6b3ddad1bfaa36641ee15ab819c6aa4ae99258ae sh-sources-2.6.15.ebuild 860
+SHA256 000ff7a428c46c3f5bb3cc1c59dc48a66ecbd8385fabbc5f42857770e1a1e3c6 sh-sources-2.6.15.ebuild 860
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDgBWFgIKl8Uu19MoRAoQJAJ4mIq96UdZyYxtiuRchaOlRwTayjwCggOjy
-zoPnWOvtpuSWVNLfIUc/y8k=
-=viCF
+iD8DBQFEFjGX2+ySkm8kpY0RAuoNAJ96I/aEKdVNYppSg1HKGLUDO3Gk9wCgpxMi
+Y93Uza+uT0bdvQiRZuaEjZY=
+=aLfU
 -----END PGP SIGNATURE-----
