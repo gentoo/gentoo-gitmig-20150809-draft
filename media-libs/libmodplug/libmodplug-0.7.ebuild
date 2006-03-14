@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/libmodplug-0.7.ebuild,v 1.15 2006/02/28 20:02:29 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/libmodplug-0.7.ebuild,v 1.16 2006/03/14 07:46:12 hansmi Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://modplug-xmms.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 #-sparc: 1.0 - Bus Error on play
-KEYWORDS="~alpha amd64 arm ia64 ~mips ppc ~ppc64 sh -sparc x86"
+KEYWORDS="~alpha amd64 arm ~hppa ia64 ~mips ppc ~ppc64 sh -sparc x86"
 IUSE=""
 
 RDEPEND=""
