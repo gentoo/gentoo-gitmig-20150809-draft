@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.79 2006/03/13 21:15:07 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.80 2006/03/14 06:05:56 tsunam Exp $
+
+  14 Mar 2006; Joshua Jackson <tsunam@gentoo.org> php-4.4.2.ebuild,
+  php-5.1.2.ebuild:
+  Stable php-4.4.2 and 5.1.2 for x86; bug #125878
 
   13 Mar 2006; Rene Nussbaumer <killerfox@gentoo.org> php-4.4.2.ebuild,
   php-5.1.2.ebuild:
