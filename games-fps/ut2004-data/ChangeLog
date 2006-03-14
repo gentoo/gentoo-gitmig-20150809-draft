@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/ut2004-data
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ChangeLog,v 1.5 2005/10/22 22:31:05 wolf31o2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ChangeLog,v 1.6 2006/03/14 23:16:09 wolf31o2 Exp $
+
+*ut2004-data-3186-r1 (14 Mar 2006)
+
+  14 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +ut2004-data-3186-r1.ebuild:
+  Added an updated revision which removes a few more files that are provided
+  in later ebuilds, such as ut2004-bonuspack-ece and ut2004-bonuspack-mega.
 
   22 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-data-3186.ebuild:
