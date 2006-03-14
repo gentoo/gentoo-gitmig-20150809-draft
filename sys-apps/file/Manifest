@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 14d4a9bba02dc4e4b22525287567515f ChangeLog 11977
-RMD160 8c9c2e0108f793b314fddf6812390a8a74f2d191 ChangeLog 11977
-SHA256 ceb2234e1f1395e166e68178fb2fa84edcf7d4c89693f8d185007cea7598c6ae ChangeLog 11977
+MD5 802db487ab4cd4a7b22bf760fe0fd18b ChangeLog 12150
+RMD160 ecf157e3a52fe93a5e710baabf6c1c1be41b7725 ChangeLog 12150
+SHA256 5e1f1487108346a98205817d7f6b05924553a79d12eadf7a84caf250d20f9cc4 ChangeLog 12150
 MD5 c6073a11ea3fcb5cc0d1625a54aad8d4 file-4.12.ebuild 2081
 RMD160 5bd6c02f65484890ba827b6b89356b40078b6103 file-4.12.ebuild 2081
 SHA256 4e79491dc2311248cf58cf17f51a1dc557d30a24873d129e852775b5c78235ed file-4.12.ebuild 2081
@@ -16,9 +16,9 @@ SHA256 6b07fac1baa471ef4b34996595e21b3db4fdd0f96f7805ed590b653db4925541 file-4.1
 MD5 7f81bd29a66992f3ff2432ca69f3fd35 file-4.16.ebuild 1510
 RMD160 4a06bad3978938dee2915c88c67f147e2503edc0 file-4.16.ebuild 1510
 SHA256 1cb0306f87cc9109a21821c0206a5eeb209ead01c6c881db56445a23950de41c file-4.16.ebuild 1510
-MD5 32657ec082ba93a2cb20d85ae95e27a3 file-4.17.ebuild 1396
-RMD160 5373abfa35c71b861cc1667bd1cfb34cc643cfd9 file-4.17.ebuild 1396
-SHA256 781bd34e22c7942eb06f3820423368223ba6064b42d136cc5358f4e7b9cae1fa file-4.17.ebuild 1396
+MD5 88fcaea73b5803f6da5a75a69c987cd2 file-4.17-r1.ebuild 1449
+RMD160 c4d94b94af5dbe4321f4fd444dfb65f68a021f11 file-4.17-r1.ebuild 1449
+SHA256 dc7074a371ba448b6d225857022ab0304400dedfd452165feed98c0cf5852a6d file-4.17-r1.ebuild 1449
 MD5 f0f2d2181cac822f0c4d4675fb1ff38c files/cracklib.magic 360
 RMD160 05397b39d061badb67e5e36ceb826f00d86d12df files/cracklib.magic 360
 SHA256 ce9de85e27f60a8905bcdfd3554df17ec49c9cd2d23342c6f45af9fb0e266965 files/cracklib.magic 360
@@ -34,9 +34,9 @@ SHA256 a64b390d0deb9cc200ea85843ae04c106577409e3ef4fdac649cc19de0cf7bba files/di
 MD5 6dca9a167755298125478cb0d4417226 files/digest-file-4.16 61
 RMD160 d941418b9942695d4fa907ceaef950e927f11815 files/digest-file-4.16 61
 SHA256 cd2d22acf1e4561a75025667a691519a08a2279e490a92126e4692b87f8c61c4 files/digest-file-4.16 61
-MD5 ddbf41fdb2b8c638f96c372a752f212f files/digest-file-4.17 229
-RMD160 3f1a53e0b9c1473833a06ca9a70d9ed103be2520 files/digest-file-4.17 229
-SHA256 64609bf94d40e04a7181bdd7546d098db2cdacd0e2a392964ea8190cfb9a09e0 files/digest-file-4.17 229
+MD5 ddbf41fdb2b8c638f96c372a752f212f files/digest-file-4.17-r1 229
+RMD160 3f1a53e0b9c1473833a06ca9a70d9ed103be2520 files/digest-file-4.17-r1 229
+SHA256 64609bf94d40e04a7181bdd7546d098db2cdacd0e2a392964ea8190cfb9a09e0 files/digest-file-4.17-r1 229
 MD5 f856a50dada76a4ca5cee58fbd04e76b files/file-4.13-cross-compile.patch 964
 RMD160 3e5af901a69cb5da23ac635205445b8f35a68e12 files/file-4.13-cross-compile.patch 964
 SHA256 7368a9a110b5bc40e6921d5a2ac57d06fdd14ce457bf386ecda57b40303ae077 files/file-4.13-cross-compile.patch 964
@@ -58,6 +58,9 @@ SHA256 badb8261dad5df39bac1d6a6da1668eb8a2ff0b01c2c80baa8abfe07fd99681d files/fi
 MD5 08d341d8ec3debffb4216dd4ef844fa7 files/file-4.16-fix-array-64bit.patch 1942
 RMD160 a50c5be5f2b9527367883b00f91aec4a0e0cca53 files/file-4.16-fix-array-64bit.patch 1942
 SHA256 b37ed9960bebeff30023ab642d6690219c8a9f03a0e1900707018789883afd33 files/file-4.16-fix-array-64bit.patch 1942
+MD5 9a6cd4738a5004a4e5bf71a0e82d73a5 files/file-4.17-init-mem.patch 698
+RMD160 f9f26c1ef4331b4ac22f513129a26420c0e00a75 files/file-4.17-init-mem.patch 698
+SHA256 7b41fe8c21862bdd9a858a87fb6a1d7831f0e11682c527d90ff2aaba80568ee6 files/file-4.17-init-mem.patch 698
 MD5 66df8eecd30769daeb3f643dc6432db3 files/file-4.xx-mips-gentoo.patch 5578
 RMD160 b7ec7953070aa0628bd9908337f89eb4cbee80a2 files/file-4.xx-mips-gentoo.patch 5578
 SHA256 669ff190784eaf135dcd8ada273eaa5445c3766d47e1194780fbba5e1901506f files/file-4.xx-mips-gentoo.patch 5578
@@ -70,7 +73,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEFOJ92+ySkm8kpY0RAkfyAKCoDM9Xq1pwkpuIaT0peX9VY8P1YgCfVGnJ
-5CJ3u6uHGJo2IewzVAAZpZ8=
-=HEo8
+iD8DBQFEFhJQ2+ySkm8kpY0RAk3gAJ9ku/tqktYV72+CaXnaWGwEZ71CvQCdGCx8
+gj/RGGcWDSjiZlak4elGOlk=
+=BMjN
 -----END PGP SIGNATURE-----
