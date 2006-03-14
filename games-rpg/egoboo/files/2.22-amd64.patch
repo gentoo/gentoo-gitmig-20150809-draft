@@ -1,0 +1,12 @@
+diff -ur egoboo/code/egobootypedef.h egoboo.new/code/egobootypedef.h
+--- egoboo/code/egobootypedef.h	2005-08-31 18:16:26.000000000 +0200
++++ egoboo/code/egobootypedef.h	2005-08-31 18:08:12.000000000 +0200
+@@ -99,7 +99,7 @@
+ 	/*Return the result*/
+ 	return data.f;
+ }
+-#elif __i386__
++#elif defined( __i386__ ) || defined( __x86_64__ )
+ #define _LITTLE_ENDIAN
+ #else
+ #define _BIG_ENDIAN
