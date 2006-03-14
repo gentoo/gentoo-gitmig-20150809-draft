@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dom4j
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.28 2006/03/11 20:02:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.29 2006/03/14 05:00:53 nichoj Exp $
+
+  14 Mar 2006; Joshua Nichols <nichoj@gentoo.org> dom4j-1.6.1.ebuild:
+  Disabled jikes support as per bug #123004.
 
   11 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> dom4j-1.6.1.ebuild:
   Stable on ppc.
