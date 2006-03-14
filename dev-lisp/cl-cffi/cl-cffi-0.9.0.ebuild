@@ -1,18 +1,18 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cffi/cl-cffi-051027.1544.ebuild,v 1.1 2005/10/28 16:04:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cffi/cl-cffi-0.9.0.ebuild,v 1.1 2006/03/14 07:34:06 mkennedy Exp $
 
 inherit common-lisp
 
 DESCRIPTION="The Common Foreign Function Interface (CFFI)"
 HOMEPAGE="http://common-lisp.net/project/cffi/"
-SRC_URI="http://common-lisp.net/project/cffi/tarballs/cffi-luis-${PV:0:6}-${PV:7:4}.tar.gz"
+SRC_URI="http://common-lisp.net/project/cffi/releases/cffi-${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
-S=${WORKDIR}/cffi-luis-${PV/./-}
+S=${WORKDIR}/cffi-${PV}
 
 DEPEND="doc? ( dev-lisp/sbcl virtual/tetex sys-apps/texinfo )"
 
@@ -25,12 +25,12 @@ src_compile() {
 src_install() {
 	dodir $CLSYSTEMROOT
 	insinto $CLSOURCEROOT/$CLPACKAGE
-	for i in cffi cffi-uffi-compat; do
+	for i in cffi cffi-tests cffi-examples cffi-uffi-compat; do
 		dosym $CLSOURCEROOT/$CLPACKAGE/$i.asd \
 			$CLSYSTEMROOT/
 	done
 	doins -r tests src uffi-compat examples *.asd
-	dodoc README COPYRIGHT HEADER
+	dodoc README COPYRIGHT HEADER TODO
 	dodoc doc/*.txt
 	if use doc; then
 		doinfo doc/*.info

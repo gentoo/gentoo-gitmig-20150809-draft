@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-cffi
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cffi/ChangeLog,v 1.2 2005/10/28 16:04:21 mkennedy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cffi/ChangeLog,v 1.3 2006/03/14 07:34:06 mkennedy Exp $
+
+*cl-cffi-0.9.0 (14 Mar 2006)
+
+  14 Mar 2006; Matthew Kennedy <mkennedy@gentoo.org> +cl-cffi-0.9.0.ebuild,
+  -cl-cffi-050925.2059.ebuild, -cl-cffi-051027.1544.ebuild:
+  New upstream version; Removed old ebuilds.
 
 *cl-cffi-051027.1544 (28 Oct 2005)
 
