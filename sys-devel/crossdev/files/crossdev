@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.51 2006/03/03 03:16:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.52 2006/03/14 02:10:50 vapier Exp $
 
 cd /
 
@@ -510,7 +510,7 @@ doemerge() {
 }
 
 # we include the '-u' so that we don't re-emerge packages
-EOPTS_DEF="${UOPTS} --nodeps"
+EOPTS_DEF="${UOPTS} --nodeps --oneshot"
 EOPTS_UP="${EOPTS_DEF} -u"
 EOPTS=${EOPTS_UP}
 
