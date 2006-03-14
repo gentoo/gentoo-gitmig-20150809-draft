@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-SPF-Query
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SPF-Query/ChangeLog,v 1.13 2006/03/10 03:19:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SPF-Query/ChangeLog,v 1.14 2006/03/14 01:24:01 gustavoz Exp $
+
+  14 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  Mail-SPF-Query-1.997.ebuild, Mail-SPF-Query-1.998.ebuild:
+  Keyworded ~hppa
 
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   Mail-SPF-Query-1.998.ebuild:
