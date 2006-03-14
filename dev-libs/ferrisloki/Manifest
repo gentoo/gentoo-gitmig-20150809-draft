@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 585cfca7dcaaf2eaec5d0f242d13b4fe ChangeLog 941
+MD5 7457599b012ba78b351323550e4b1edc ChangeLog 1067
+RMD160 80acf84ad0254f24c123fd5290dab89c67758f27 ChangeLog 1067
+SHA256 54697640110188e91ae4c398953c86ee16528221521f6ea32c12fc7277a561c6 ChangeLog 1067
 MD5 1d62a555ec71d8c1841d374fd334c588 ferrisloki-2.0.5.ebuild 600
+RMD160 95f59512223bfff4ad75ccc4b10f52a08af2838b ferrisloki-2.0.5.ebuild 600
+SHA256 73fa0956a9b1d0cb9df24cdc2650298fe5fc47aac75c127bc05281aee9506f32 ferrisloki-2.0.5.ebuild 600
 MD5 5a8d6ed74d957c0265f1f702a9c9c3b8 ferrisloki-2.1.1.ebuild 603
+RMD160 f43343b320ca01471095586a368d814298ce45a1 ferrisloki-2.1.1.ebuild 603
+SHA256 c3d85e3b7591621f3e0b9edc3087d7d163a3d7a8ba0b46e09411eb344fe7aa02 ferrisloki-2.1.1.ebuild 603
+MD5 90d9add007a730555de148496f13a943 ferrisloki-2.1.2.ebuild 603
+RMD160 ce9f8e0cab2cc0f844a55a0e409641a897b4d769 ferrisloki-2.1.2.ebuild 603
+SHA256 dc7b320f5143928af7e592d174c926196cfa23c0e6eb26eadaebe1e891339d33 ferrisloki-2.1.2.ebuild 603
 MD5 a51f7a7c9fa250e5d8e98f64f0647015 files/digest-ferrisloki-2.0.5 69
+RMD160 8cc914c1d7bcc878129e1ec64152fb95f6713036 files/digest-ferrisloki-2.0.5 69
+SHA256 fdf5729a6ada5a0b0f84e89309d5931b44cd15823be0bf294d9bec06d4754355 files/digest-ferrisloki-2.0.5 69
 MD5 0140d4df53bdd39a2b227fe1d5464d52 files/digest-ferrisloki-2.1.1 69
+RMD160 75c819c5f9be59bf7b3c3b6a91916c36768c38ea files/digest-ferrisloki-2.1.1 69
+SHA256 9b4e516f248a49a0c225ecfe0f7d80bd1d5cbb27e18e02c9a95fcd6b06e37792 files/digest-ferrisloki-2.1.1 69
+MD5 3fdf420bb1a253847331a69f41f5cdcc files/digest-ferrisloki-2.1.2 253
+RMD160 49ce1e7fc50a9b58b169f288182cda823df34f6e files/digest-ferrisloki-2.1.2 253
+SHA256 f974dc2ffdaba684bf489ffebeb555b3a1e6c9dcdcc3642b560cc4f41cd67341 files/digest-ferrisloki-2.1.2 253
 MD5 92329f92aff2f9d589eb69df1fc2c9fe metadata.xml 283
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxGO42+ySkm8kpY0RAiG2AJ4jmmg7M37vG3ygQSMWIkNg73vZaQCcCC5f
-Nxss1+Mifad1tUcB7jbdIJE=
-=U4eh
------END PGP SIGNATURE-----
+RMD160 8a99eefeca08f1b7c2a0515786ac11ab30e0601c metadata.xml 283
+SHA256 7151b2bbede09c81cc68100d49e69d401f1128fc30c619f588479b440d77c09c metadata.xml 283
