@@ -1,10 +1,40 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 45c759d942065d6e8b3176b9a1d1675e ChangeLog 5266
+RMD160 d60ceedfbdd6ed615a707fbd54b8f91d559328f5 ChangeLog 5266
+SHA256 86e87b87ade1ff2a71c252aab49793d159c10838aaf63ab7b888cb71d78a81ee ChangeLog 5266
 MD5 1bbfae8705264d80f234c7e386329e56 files/digest-pyrex-0.9.3-r1 63
+RMD160 b18e852a6013a63a4f2f360aa892c35f73977539 files/digest-pyrex-0.9.3-r1 63
+SHA256 19ac0f50ee0f9956e641463eb1d47dcf4cdf3f0df9f7b854520dfc8775a42d84 files/digest-pyrex-0.9.3-r1 63
 MD5 1bbfae8705264d80f234c7e386329e56 files/digest-pyrex-0.9.3-r2 63
+RMD160 b18e852a6013a63a4f2f360aa892c35f73977539 files/digest-pyrex-0.9.3-r2 63
+SHA256 19ac0f50ee0f9956e641463eb1d47dcf4cdf3f0df9f7b854520dfc8775a42d84 files/digest-pyrex-0.9.3-r2 63
 MD5 e16277e2e6a0398b090274b47e9ae7fe files/digest-pyrex-0.9.3.1 65
+RMD160 e159f8d5119af410088fbaf2b553e5978af49c99 files/digest-pyrex-0.9.3.1 65
+SHA256 403a9740849e9f7036f9d672011c797984dbed3e8e8982f9a85468fa3b4a5383 files/digest-pyrex-0.9.3.1 65
 MD5 b5bb4ba679c6de2f55651b7c6af8f013 files/pyrex-0.9.2.1-gcc4.patch 2877
+RMD160 22f56b2180aa727986da5408eea49c95184d1ec6 files/pyrex-0.9.2.1-gcc4.patch 2877
+SHA256 2786c8d26f951b9d019ab7ab6043335ad85562b70e2de0d6ac6baa4ea1e9974e files/pyrex-0.9.2.1-gcc4.patch 2877
 MD5 c587d86c063eda8fb02e18b9b1c83aec files/pyrex-0.9.3-python24_distutils.patch 622
+RMD160 d98009963a58899d46e28d5efad5eefc1b2bd5e5 files/pyrex-0.9.3-python24_distutils.patch 622
+SHA256 a53609201c03124869afef0d432be4ea090c1d3a290523641dc9ec7cdedd0b10 files/pyrex-0.9.3-python24_distutils.patch 622
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
+SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
 MD5 d08c9ca7453de3d3f1520a83830e794b pyrex-0.9.3-r1.ebuild 988
-MD5 7740990adfb680b93959612ce58142be pyrex-0.9.3-r2.ebuild 1064
-MD5 b47d3a13d2acee7812646d323f1b211a pyrex-0.9.3.1.ebuild 833
+RMD160 d684ea148c7e4d71e2d9b8a3afea89dae6656208 pyrex-0.9.3-r1.ebuild 988
+SHA256 f49c6dc88db2aa5029d2a5daedda12f884b4be04a4593db938cafce3b0ad0831 pyrex-0.9.3-r1.ebuild 988
+MD5 0e8e90e5c8c788babff67918befeffdc pyrex-0.9.3-r2.ebuild 1070
+RMD160 1150b85cf2512d58e030c2e7bf322cb92970325e pyrex-0.9.3-r2.ebuild 1070
+SHA256 21bac80c4a71e909a42f22602f3c0418e72872c5c613dc4db3eff248f5891f2c pyrex-0.9.3-r2.ebuild 1070
+MD5 7fea915a5fd5682f4bc9b6244ab26b1f pyrex-0.9.3.1.ebuild 837
+RMD160 291e2de6752e3811a5e1e026805eb19471cd8469 pyrex-0.9.3.1.ebuild 837
+SHA256 e75d537819be2106e33f47c1675ee69ff2284235eb627c6f43f5cbe120f41e1a pyrex-0.9.3.1.ebuild 837
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEFjn62+ySkm8kpY0RAkTiAKCESRIj8CpWKjZCgdHr1t3kMzu0jACfSTZt
+PaexVyn6SaL67b64O6fZpe4=
+=86kK
+-----END PGP SIGNATURE-----
