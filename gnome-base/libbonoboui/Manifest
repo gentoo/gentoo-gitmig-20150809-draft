@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f02308c04a982f6beeb9c04e98f0477b ChangeLog 12565
 MD5 b092b744c2d6bad14ded1d493391e8a5 files/bonobo-browser-2.10.1-lang.patch 362
 MD5 340f7f3f8d3a28b8b68395e3fb8c4d75 files/digest-libbonoboui-2.10.0 71
@@ -9,3 +12,10 @@ MD5 09a530d287606da40fd1ef94aa005680 libbonoboui-2.10.1-r1.ebuild 1012
 MD5 05efd02cc971c6af82dc6fcfbe56741d libbonoboui-2.10.1.ebuild 909
 MD5 4a582277ecb2b5b1fe21b783d5c28db4 libbonoboui-2.8.1.ebuild 824
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEFwAtKRy60XGEcJIRAtu5AJ0ULABbH8EBV0DtT4vHMp1k7aa0HwCeOqDo
+zXXKnR7EkgBZztqCX5a3/zE=
+=WQn0
+-----END PGP SIGNATURE-----
