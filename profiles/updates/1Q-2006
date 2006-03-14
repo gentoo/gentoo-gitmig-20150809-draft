@@ -29,3 +29,4 @@ move sci-mathematics/ktechlab sci-electronics/ktechlab
 move net-wireless/acx100 net-wireless/acx
 move sys-apps/hexdump sys-apps/esr-hexdump
 move dev-ruby/switchtower dev-ruby/capistrano
+move games-action/armagetron games-action/armagetronad
