@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e9682f41c033304dab3faf5635236de7 ChangeLog 11688
+MD5 6860b47d9f0ef83c64f27bae4501f261 ChangeLog 11795
 MD5 0c1971384fcc8685d250e89c0f0c3d88 cdrdao-1.1.7-r3.ebuild 2996
 MD5 64512dea0ed843a5ef724b3c56703c20 cdrdao-1.1.9-r2.ebuild 1970
 MD5 71328287f8bdbbfefbab9cc9334dd1f3 cdrdao-1.1.9.ebuild 1946
 MD5 0d9ee75fcb116cd45d954f11abfc4ecd cdrdao-1.2.0-r1.ebuild 1935
 MD5 eefd4f19ca3d98c76be0fde2b511270d cdrdao-1.2.0.ebuild 1744
 MD5 c060cd7076b90fbf2fc4cd39ba73fb26 cdrdao-1.2.1-r1.ebuild 1602
-MD5 d1bc9312a661d7891b531d7ef17abb5f cdrdao-1.2.1.ebuild 1554
+MD5 2d29ba5cf344ac617818883b2a4e60ec cdrdao-1.2.1.ebuild 1555
 MD5 6f398aabdbd1ed1aa966f460fdbac3d2 files/1.1.8-gcc34.patch 10476
 MD5 46fb619628173aa68a337e7d49dd25b6 files/cdrdao-1.1.7-gentoo-version.patch 753
 MD5 a7dc4823c3a7d7582f9b87afdddb51e0 files/cdrdao-1.1.7-r2-mp32dao-gentoo.diff 779
@@ -27,9 +27,9 @@ MD5 45fa9680f74df7e54494cf8ebd0842d3 files/digest-cdrdao-1.2.1-r1 65
 MD5 bfcab12a6211829eb71aa6ee3d0245be files/gcdmaster.desktop 127
 MD5 dbe5456b02450a781ff76c4ffc65fcec metadata.xml 319
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDwVVaoFw4q70f3SsRAqMaAKCxqiLWZHdFGHeEgP20zv+4FvuqOgCeO6xn
-O+gKo7ePszDb4/tRSmX3RAI=
-=ufLw
+iD8DBQFEF0+7KRy60XGEcJIRAi4kAJ9T5qyfAByY4I2tlYEbYGuM1Zjq1ACgnOBw
+ls/lAxa2IkhGw/JMR3KiJMQ=
+=rzYt
 -----END PGP SIGNATURE-----
