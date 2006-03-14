@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.223 2006/03/13 21:38:48 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.224 2006/03/14 17:37:50 gustavoz Exp $
+
+  14 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> gtk+-2.8.12.ebuild:
+  Stable on hppa
 
 *gtk+-2.8.15 (13 Mar 2006)
 
