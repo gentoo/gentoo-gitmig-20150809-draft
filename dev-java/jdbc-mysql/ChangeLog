@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.27 2006/03/14 01:34:04 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.28 2006/03/14 04:47:24 nichoj Exp $
+
+  14 Mar 2006; Joshua Nichols <nichoj@gentoo.org> jdbc-mysql-3.1.10.ebuild:
+  Stable on amd64.
 
   14 Mar 2006; <nichoj@gentoo.org> jdbc-mysql-3.1.12.ebuild:
   Added missing dependency on dev-java/junit (bug #120255).
