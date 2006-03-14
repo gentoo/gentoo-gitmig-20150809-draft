@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/imaze-1.4.ebuild,v 1.10 2006/01/25 22:11:47 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/imaze-1.4.ebuild,v 1.11 2006/03/14 02:59:28 mr_bones_ Exp $
 
 inherit games
 
@@ -13,11 +13,16 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE="Xaw3d joystick"
 
-DEPEND="virtual/x11
+RDEPEND="
+	|| ( ( x11-libs/libXmu x11-libs/libX11 x11-libs/libXaw x11-libs/libXt )
+
+		virtual/x11 )
 	|| (
 		Xaw3d? ( x11-libs/Xaw3d )
 		x11-libs/xview
 	)"
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xproto virtual/x11 )"
 
 S=${WORKDIR}/${P}/source
 
@@ -51,7 +56,7 @@ src_install() {
 		|| die "dogamesbin failed"
 	dodoc ../README
 	doman ../man6/*6
-	dodir "${GAMES_DATADIR}/${PN}"
-	cp -r ../labs/ ../sounds/ "${D}${GAMES_DATADIR}/${PN}/"
+	insinto "${GAMES_DATADIR}/${PN}"
+	doins -r ../labs/ ../sounds/ || die "doins failed"
 	prepgamesdirs
 }
