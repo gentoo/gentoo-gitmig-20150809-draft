@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r2.ebuild,v 1.6 2006/02/09 05:25:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r2.ebuild,v 1.7 2006/03/14 23:51:54 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X 3dnow a52 altivec dv dvdread extrafilters mp3 fame truetype gtk imagemagick jpeg
 lzo mjpeg mpeg mmx network ogg vorbis quicktime sdl sse sse2 theora v4l2
-xvid xml2 ffmpeg"
+xvid xml2"
 
 RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	dv? ( >=media-libs/libdv-0.99 )
@@ -37,7 +37,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	jpeg? ( media-libs/jpeg )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	truetype? ( >=media-libs/freetype-2 )
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r3 )
+	>=media-video/ffmpeg-0.4.9_p20050226-r3
 	|| ( sys-libs/glibc dev-libs/libiconv )
 	>=media-libs/libmpeg2-0.4.0b
 	xml2? ( dev-libs/libxml2 )
@@ -117,8 +117,8 @@ src_compile() {
 		$(use_enable jpeg libjpeg) \
 		--with-mod-path=/usr/$(get_libdir)/transcode \
 		$(use_with X x) \
-		$(use_with ffmpeg libpostproc-builddir "${ROOT}/usr/$(get_libdir)") \
 		${myconf} \
+		--with-libpostproc-builddir="${ROOT}/usr/$(get_libdir)" \
 		--with-lzo-includes=/usr/include/lzo \
 		--disable-avifile \
 		|| die
