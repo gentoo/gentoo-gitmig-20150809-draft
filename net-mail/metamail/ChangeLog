@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/metamail
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.26 2005/09/12 08:46:20 ticho Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.27 2006/03/14 18:45:11 langthang Exp $
+
+*metamail-2.7.45.3-r1 (14 Mar 2006)
+
+  14 Mar 2006; Tuấn Văn <langthang@gentoo.org>
+  +files/metamail-2.7.45.3-CVE-2006-0709.patch,
+  +metamail-2.7.45.3-r1.ebuild:
+  security bump. Bug #126052.
+  Patch by Ulf Harnhammar from Debian bug 
+  (http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=352482)
 
   12 Sep 2005; Andrej Kacian <ticho@gentoo.org> metamail-2.7.45.3.ebuild:
   Use mirror:// in SRC_URI.
