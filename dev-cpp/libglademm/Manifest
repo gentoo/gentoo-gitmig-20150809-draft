@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 39c95170c40d9433c3a0c215c8e44773 ChangeLog 5424
 MD5 0731a8a0e452b8680e9c1a35542a7cf0 files/digest-libglademm-2.0.1 68
 MD5 66fd7d47c340bb225311c438b12ceca1 files/digest-libglademm-2.2.0 69
@@ -16,3 +19,10 @@ MD5 63d0da3d2578d24d9c025eeae32e6b45 libglademm-2.6.0.ebuild 717
 MD5 20e3ebff93bb40fcacf5ee9379f6c79b libglademm-2.6.1.ebuild 713
 MD5 9fc3d7fcc1d78726eff874e2f4e0d90a libglademm-2.6.2.ebuild 720
 MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEF08WKRy60XGEcJIRAqTYAJ9Hnxt0tuDzrE8d3LOOmRIHIe/+8ACbBns8
+HvrBkgd7L7xaIe+a77G+ZZg=
+=eln5
+-----END PGP SIGNATURE-----
