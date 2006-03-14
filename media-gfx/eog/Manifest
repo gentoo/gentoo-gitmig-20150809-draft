@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f5cee3815e429820d897075763a3baa7 ChangeLog 12934
+MD5 caabdeb02e6260560148c88edce03716 ChangeLog 13025
 MD5 9f666ab55cf3a49721c52e65e9f03f7b eog-0.6-r4.ebuild 1199
 MD5 9108fb930b58fa6f30add3d79a41f741 eog-2.10.2.ebuild 1186
 MD5 bdb0bb61727604b4d41fe92f70f5b9ae eog-2.12.1.ebuild 1341
 MD5 d2cd942532aef0b94705c73fcde48119 eog-2.12.2.ebuild 1332
-MD5 5d9b47211eddcaebf96f6437b079e571 eog-2.12.3.ebuild 1339
+MD5 7e3f994c3d8cd868ca0e47aa81362bc1 eog-2.12.3.ebuild 1338
 MD5 fa7f4f22e5eeb44b6d71c12d55fe372c eog-2.8.2.ebuild 1139
 MD5 5f786f0751774fc1e127d27e4f0c31e9 files/digest-eog-0.6-r4 59
 MD5 bf37e4973ce6a51ab6722f47ae980223 files/digest-eog-2.10.2 63
@@ -21,7 +21,7 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEFYytKRy60XGEcJIRAupXAJ9tFJE0NrK5SFw/dRWobg4QRUnXzQCcCtpH
-FYBYQH9KlAnDlCFgx0YOOQk=
-=CO5N
+iD8DBQFEFwHZKRy60XGEcJIRAimqAJ9zNM0+b8/tG7777JyN+R18abPuFgCglAgj
+LOdfqmjxfmJq/meF9M0Bmhk=
+=aCZk
 -----END PGP SIGNATURE-----
