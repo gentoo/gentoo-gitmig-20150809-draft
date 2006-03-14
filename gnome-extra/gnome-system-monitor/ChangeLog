@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.106 2006/03/13 15:34:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.107 2006/03/14 17:57:21 gustavoz Exp $
+
+  14 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-system-monitor-2.12.2.ebuild:
+  Stable on hppa
 
   13 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-system-monitor-2.12.2.ebuild:
