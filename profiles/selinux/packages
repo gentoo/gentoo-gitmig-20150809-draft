@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.19 2005/04/01 01:30:48 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.20 2006/03/14 14:48:16 pebenito Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -24,7 +24,6 @@
 *>=net-misc/openssh-3.7.1_p2
 *>=sys-apps/coreutils-5.0.91
 *>=sys-apps/findutils-4.1.20-r1
-*>=sys-apps/pam-login-3.14
 *>=sys-apps/shadow-4.0.3-r7
 *>=sys-apps/util-linux-2.12
 *>=sys-libs/pam-0.77
@@ -34,6 +33,7 @@
 # optional SELinux-patched programs:
 >=app-admin/logrotate-3.6.5-r1
 >=gnome-base/gdm-2.4.4.7
+>=sys-apps/pam-login-3.14
 >=sys-apps/fcron-2.9.4
 >=sys-fs/udev-055
 >=sys-libs/pwdb-0.61-r4
