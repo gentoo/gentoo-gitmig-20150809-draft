@@ -16,9 +16,9 @@ SHA256 0fc9a6412228f7bb0e8cf30f3f9991cdcd980b998de45336607e366800a81079 bash-3.0
 MD5 03d8b9cfbce98de82d0b8879409b747b bash-3.0-r14.ebuild 4837
 RMD160 bfe4df76783354525948a3269e3cf0911f37fe8b bash-3.0-r14.ebuild 4837
 SHA256 308ac39dfee3b6401633067d0a0550d8b5881e93af2be98dcadb0b3184e92cb6 bash-3.0-r14.ebuild 4837
-MD5 599a2bab2abeada56ad1926c68b91b67 bash-3.1_p11.ebuild 4572
-RMD160 65f3ac06d9aaaabbeb11c1116986184b5369d637 bash-3.1_p11.ebuild 4572
-SHA256 ca77309fbd7c32ccdbf4a9ecd29f76429168222a97c311daf693808dda3aae8f bash-3.1_p11.ebuild 4572
+MD5 eb20d214de0aebadcd2a174f827eb947 bash-3.1_p11.ebuild 4564
+RMD160 f4447a783599610c4bfa83c63765f0eb91ec6e21 bash-3.1_p11.ebuild 4564
+SHA256 a45a930b1dbc323e238b7ed6dade187af4117854bff6b4995f37bef43295f2c1 bash-3.1_p11.ebuild 4564
 MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
 RMD160 bdeef415bb8ef5294bfdb47a00beb3523f5e33c5 files/bash-2.05b-empty-herestring.patch 836
 SHA256 a05098a9bb85520efc5c6d108fdcf635e4a9b20369d42d9aa0803c6b1d145cae files/bash-2.05b-empty-herestring.patch 836
@@ -184,7 +184,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEEteO2+ySkm8kpY0RArFnAKDC/KdIv1P/0bhcSH7aJipVto7L5ACgwQBM
-aSOfAUAgcQ4bi6JWJNpp1WI=
-=vsTk
+iD8DBQFEFiqa2+ySkm8kpY0RAkg9AJ9KnhLfjP7hM9DUEZQ1aIJdEu/rfgCfbXMP
+eS85oumd2t5PWCXkDzEBw6k=
+=zjuM
 -----END PGP SIGNATURE-----
