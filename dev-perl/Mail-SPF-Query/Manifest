@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3818c07318fe7a9d7f131d2acd3234bf ChangeLog 1861
 MD5 daa85ff8ae7da22647285242ab79b2ab Mail-SPF-Query-1.997.ebuild 654
 MD5 8c185525847e3b2dd8f765e5f6edbf54 Mail-SPF-Query-1.998.ebuild 691
 MD5 71e582a192c3b6a343098a3b8dad38d4 files/digest-Mail-SPF-Query-1.997 71
 MD5 cfd71e2c83c90cf6505f1befb4183f6b files/digest-Mail-SPF-Query-1.998 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+
+iD4DBQFEFhtEKRy60XGEcJIRAoTtAJjkvViMc63ereegkGItS4wj66OjAKCJxBK2
+EtCUM/VGbZsYrmEmZcFj+w==
+=XKMm
+-----END PGP SIGNATURE-----
