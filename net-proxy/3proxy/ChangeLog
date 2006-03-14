@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/3proxy
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.5 2005/07/30 07:18:34 mrness Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.6 2006/03/14 01:51:34 vapier Exp $
+
+*3proxy-0.5.2 (14 Mar 2006)
+
+  14 Mar 2006; Mike Frysinger <vapier@gentoo.org> +3proxy-0.5.2.ebuild:
+  Version bump.
 
   30 Jul 2005; Alin Nastac <mrness@gentoo.org> -3proxy-0.5b.ebuild:
   Remove obsolete version.
