@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.3.11.ebuild,v 1.4 2006/03/10 19:23:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.3.11.ebuild,v 1.5 2006/03/14 23:06:57 wolf31o2 Exp $
 
 VERSION_DMAP='1.00.17'
 VERSION_DMRAID='1.0.0.rc9'
@@ -25,8 +25,8 @@ SRC_URI="http://dev.gentoo.org/~plasmaroo/patches/kernel/genkernel/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-#KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="bootsplash ibm"
 
 DEPEND="sys-fs/e2fsprogs
