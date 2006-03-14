@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5086 2006/03/13 21:35:08 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5087 2006/03/14 20:01:13 joem Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -49,6 +49,9 @@ net-libs/enet
 # GNOME 2.14 mask. You must follow instructions here:
 # http://d.g.o/~allanonjl/gnome/2.13/adding.from.overlay.txt
 # for adding files from our overlay.
+#Most of these packages will break/not compile because of eclass
+#changes that won't be made until every package is in the tree.
+#Don't unmask these and don't file bugs for them
 # Start GNOME 2.14 mask
 >=gnome-base/gconf-2.13
 >=gnome-base/orbit-2.13
