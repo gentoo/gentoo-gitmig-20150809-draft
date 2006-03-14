@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.6.5.ebuild,v 1.3 2006/03/12 13:28:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.6.5.ebuild,v 1.4 2006/03/14 21:46:21 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="wxwindows flac bzip2 lzo"
 
 DEPEND=">=dev-libs/libebml-0.7.5
-	>=media-libs/libmatroska-0.7.5
+	>=media-libs/libmatroska-0.8.0
 	media-libs/libogg
 	media-libs/libvorbis
 	dev-libs/expat
