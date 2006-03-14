@@ -1,28 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b442679a50cfe773a9d0763b084cd549 ChangeLog 524
-RMD160 1a5707a76fc65025af655c17846454b7cf8b5f67 ChangeLog 524
-SHA256 052eb5833508f1383de80a7873ffe6ba7d4e23eb49e58cca0e3c55b7cdf5d906 ChangeLog 524
-MD5 8f1fae14095b09afcdaaf42a0f9fa187 files/confd 527
-RMD160 bceb8b2cc06c8636e84db0938d26cd4710f6f730 files/confd 527
-SHA256 c6710db485e723349b835e1267f4685140cb9708f86968c8b6ea14cb7ddc525f files/confd 527
+MD5 86a21ae15bd0a47937fc3a397dd3d802 ChangeLog 730
+RMD160 00598bdfb5b1c19bd229e0bfd78127ff499193a6 ChangeLog 730
+SHA256 246f9523da3810ba02f47044690d02270634ee389c169c3bec8b4c6283db6179 ChangeLog 730
+MD5 56d61f9e0b02581a533c9efd12bd0363 files/confd 545
+RMD160 0150ce8ec9f0e2bacd196c9a61f1c9f53557f067 files/confd 545
+SHA256 d515671f139346563cfc040249b03fe7ba1cd32d8e4c8f9948afff8fd5906b49 files/confd 545
 MD5 cfb2a0fd1ec23dbc73efebe51aae62e2 files/digest-vdr-bitstreamout-0.84 268
 RMD160 a70070f44663e09de5b607de2bf96d6f4918edab files/digest-vdr-bitstreamout-0.84 268
 SHA256 614930ec3675eb4a00ae90af1b6da1c15ca90c44dba393a1c48c2aa9f9647235 files/digest-vdr-bitstreamout-0.84 268
+MD5 45356cb364a75152c6956337531ca995 files/digest-vdr-bitstreamout-0.85 268
+RMD160 aaf230f688156fa222c3f07b27679ae48c2a242a files/digest-vdr-bitstreamout-0.85 268
+SHA256 e82621518ce03a686965181e6f8bfc4e263d4ed949b3b2ba5cb71ebefcdf08e1 files/digest-vdr-bitstreamout-0.85 268
 MD5 b6f5f97cf699156fd33a0bc3cd61f8c1 files/rc-addon.sh 207
 RMD160 d9a426c98e5ebbfca99caf1a1132f2b3f6a74715 files/rc-addon.sh 207
 SHA256 f0d8531b7e6e1cf83c9a57f8902a905fcb18ab5a5c8950893a64f4cabf660f5c files/rc-addon.sh 207
 MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
 RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
 SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
-MD5 cf3595a15bdd748466403827136aa395 vdr-bitstreamout-0.84.ebuild 802
-RMD160 605e5b06796b751b62792196fdc5a460d98ba7f6 vdr-bitstreamout-0.84.ebuild 802
-SHA256 c0e47cf66ec00d96f4f6c557982d5bb701edbd475efbd1fef194e1da2b0bb686 vdr-bitstreamout-0.84.ebuild 802
+MD5 d4929fc0a800325604c32172f5902ba1 vdr-bitstreamout-0.84.ebuild 867
+RMD160 e085e04f2ac669e8499993e2099c2e31b2dd7873 vdr-bitstreamout-0.84.ebuild 867
+SHA256 80db435354ee59b6254bf272f8a861ffa9eff037c3f21350957b51b7e972db9e vdr-bitstreamout-0.84.ebuild 867
+MD5 5516322c446870ec413a22ef68ed59b7 vdr-bitstreamout-0.85.ebuild 867
+RMD160 f907b7b507d023813904049c660e934d85c6ba1f vdr-bitstreamout-0.85.ebuild 867
+SHA256 4c5951410d15df7347b36754087b25d251ae7ff93fd7502a338847596a5487be vdr-bitstreamout-0.85.ebuild 867
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFECtB/ZfSl1Kp5KmoRAkxvAKDp8X1ozNt/HYaSsYzWHVqdflZN9QCeKXYW
-kcxr1gYcBF+YPH52IZOAEcU=
-=k3Fr
+iD8DBQFEFxuNZfSl1Kp5KmoRAulbAKCkN6XLMQFDKAzXCbqgzc3RonDyDQCg1zQp
+ln9MZneff9iS+j0RrL0YLMU=
+=S5Wl
 -----END PGP SIGNATURE-----
