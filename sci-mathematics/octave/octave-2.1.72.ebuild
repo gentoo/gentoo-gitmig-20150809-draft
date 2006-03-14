@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.72.ebuild,v 1.1 2006/01/31 03:47:04 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.72.ebuild,v 1.2 2006/03/14 21:27:17 markusle Exp $
 
 inherit flag-o-matic fortran
 
@@ -30,6 +30,14 @@ DEPEND="virtual/libc
 # source nor is it free (as in beer OR speech) Check out...
 # http://developer.intel.com/software/products/mkl/mkl52/index.htm for
 # more information
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/octave-2.1.72-gcc4.1-gentoo.patch
+}
+
 
 src_compile() {
 	filter-flags -ffast-math
