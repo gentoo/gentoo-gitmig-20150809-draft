@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/make.defaults,v 1.10 2006/03/10 15:24:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/make.defaults,v 1.11 2006/03/14 15:01:09 wolf31o2 Exp $
 
 FEATURES="sandbox autoconfig"
 
@@ -32,3 +32,6 @@ SYMLINK_LIB="yes"
 
 # Switch to nptl, but no nptlonly yet.
 USE="nptl -nptlonly"
+
+# These are added to make dev-lang/php behave properly.  See bug #120088
+USE="${USE} apache2 cli ctype dba expat fastbuild force-cgi-redirect ftp gd memlimit nls pcre posix session simplexml soap sockets spl ssl tokenizer truetype xml xsl zlib"

@@ -1,6 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/make.defaults,v 1.6 2006/02/09 17:14:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/make.defaults,v 1.7 2006/03/14 14:58:35 wolf31o2 Exp $
 
 # USE settings
 USE="apache2 berkdb bitmap-fonts crypt cups dlloader fortran fbcon foomaticdb gdbm gif gstreamer gtk gtk2 imlib jpeg libwww motif ncurses nls oss pam perl png python readline spell ssl tcpd truetype truetype-fonts type1-fonts udev X xml zlib"
+
+# These are added to make dev-lang/php behave properly.  See bug #120088
+USE="${USE} apache2 cli ctype dba expat fastbuild force-cgi-redirect ftp gd memlimit nls pcre posix session simplexml soap sockets spl ssl tokenizer truetype xml xsl zlib"
