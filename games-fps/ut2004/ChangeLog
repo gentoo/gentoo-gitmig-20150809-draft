@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.41 2006/01/06 18:52:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.42 2006/03/14 23:18:01 wolf31o2 Exp $
+
+*ut2004-3369-r3 (14 Mar 2006)
+
+  14 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -ut2004-3369-r1.ebuild, ut2004-3369-r2.ebuild, +ut2004-3369-r3.ebuild:
+  Added a new -r3 revision to forcefully pull in the latest ut2004-data and
+  ut2004-bonuspack-ece revisions, marking -r2 stable on x86 and amd64, and
+  removing -r1.
 
   06 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3369-r1.ebuild,
   ut2004-3369-r2.ebuild:

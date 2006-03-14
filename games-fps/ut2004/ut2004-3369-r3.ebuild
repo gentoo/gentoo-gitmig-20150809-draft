@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r1.ebuild,v 1.4 2006/01/06 18:52:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r3.ebuild,v 1.1 2006/03/14 23:18:01 wolf31o2 Exp $
 
 inherit eutils games
 
-MY_P="${PN}-lnxpatch${PV}-1.tar.bz2"
+MY_P="${PN}-lnxpatch${PV}-2.tar.bz2"
 DESCRIPTION="Unreal Tournament 2004 - Editor's Choice Edition"
 HOMEPAGE="http://www.unrealtournament2004.com/"
 SRC_URI="mirror://3dgamers/unrealtourn2k4/${MY_P}
@@ -14,13 +14,13 @@ SRC_URI="mirror://3dgamers/unrealtourn2k4/${MY_P}
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 # The executable pages are required.
 RESTRICT="nostrip nomirror stricter"
 IUSE="opengl dedicated"
 
-RDEPEND="games-fps/ut2004-data
-	games-fps/ut2004-bonuspack-ece
+RDEPEND=">=games-fps/ut2004-data-3186-r1
+	>=games-fps/ut2004-bonuspack-ece-1-r1
 	opengl? (
 		virtual/opengl )
 	dedicated? (
@@ -35,6 +35,7 @@ RDEPEND="games-fps/ut2004-data
 			x11-libs/libXau
 			x11-libs/libXdmcp )
 		virtual/x11 )"
+#	games-fps/ut2004-bonuspack-mega"
 
 S=${WORKDIR}/UT2004-Patch
 
