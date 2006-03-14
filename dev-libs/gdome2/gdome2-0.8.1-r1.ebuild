@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.1-r1.ebuild,v 1.6 2006/02/22 00:01:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.1-r1.ebuild,v 1.7 2006/03/14 21:06:59 chutzpah Exp $
 
 inherit gnome2
 
@@ -26,4 +26,7 @@ src_unpack() {
 
 	cd ${S}
 	echo -e '#!/bin/sh\npkg-config gdome2 $*' > gdome-config.in
+
+	# make docs honor DESTDIR
+	epatch "${FILESDIR}/${P}-docs-destdir.patch"
 }
