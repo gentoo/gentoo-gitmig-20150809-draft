@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 795b9d59e5a182509cdf0b46cbffaa79 ChangeLog 4735
+MD5 32c274a36f8c7201e984d10db0275b9d ChangeLog 4830
 MD5 0fae982a1638aacea39c862dd7ebbea6 files/digest-zip-2.3-r4 113
 MD5 fb9887f87ab17e70493c61561d859e08 files/digest-zip-2.31 114
 MD5 d9c724447892c616f7f5f407c62e0b2b files/digest-zip-2.31-r1 114
@@ -10,11 +7,4 @@ MD5 249bdbaf477c3e08661cd70e3e7aa5fa files/zip-2.31-exec-stack.patch 407
 MD5 ceb628bca144581dbeff71136122a8e2 files/zip-CAN-2004-1010.patch 673
 MD5 7a2b80d9c775f53e81a1dc80368fd681 zip-2.3-r4.ebuild 1110
 MD5 2c11e0b9f8f9da782af1e54db7523fd9 zip-2.31-r1.ebuild 1242
-MD5 a21ea5f771b074745cd48f975d80f4cd zip-2.31.ebuild 1073
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEFjVPFdQwWVoAgN4RArWAAKC2wZH4uwU3ZkYu+/Slu98t+hwzwACgsPmN
-TuHAISKk/Bsrvh4+FjiHt9k=
-=YAPK
------END PGP SIGNATURE-----
+MD5 d72ce7c332d2c6e800633a77f8f8c678 zip-2.31.ebuild 1069
