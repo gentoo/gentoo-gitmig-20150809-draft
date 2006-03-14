@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b9ea95150601e6356ded601ba34363b8 ChangeLog 4936
+RMD160 1153bc796bbd5975f526433933a75fa58543a38e ChangeLog 4936
+SHA256 09ad706896585e019414b459cd7ae9deb45a7f7294fa97bb87b520f890afa9e9 ChangeLog 4936
 MD5 0fae982a1638aacea39c862dd7ebbea6 files/digest-zip-2.3-r4 113
+RMD160 42f4f4e1ceb7b13c213a9c236dfa94c9aa2096a9 files/digest-zip-2.3-r4 113
+SHA256 7e3a25a2d0809a4115201af278d11a02b0906f99ba90d367e7648ac7fd63b6be files/digest-zip-2.3-r4 113
 MD5 fb9887f87ab17e70493c61561d859e08 files/digest-zip-2.31 114
-MD5 d9c724447892c616f7f5f407c62e0b2b files/digest-zip-2.31-r1 114
+RMD160 d2ed88f9640b178507a0d3ebba84459967055ace files/digest-zip-2.31 114
+SHA256 31c7d4e789658eec8d5d7d0ffc2ce2af0919b7d867ae4abce0371e308b320503 files/digest-zip-2.31 114
+MD5 b009eed54f390241bea0b96110afb737 files/digest-zip-2.31-r1 58
+RMD160 2dcbeb8ad64bfa86d81132068c4809770aa6274a files/digest-zip-2.31-r1 58
+SHA256 09a91c4cb9863d895519ebf275f5c34dae3d1d3d9970fad58938f4a6f3bbe27d files/digest-zip-2.31-r1 58
 MD5 6cf67950f3003a17d048c9a3ce4f243a files/zip-2.3-unix_configure-pic.patch 444
+RMD160 8fd81ff732abe0e6189cd593c98e0055a11dca36 files/zip-2.3-unix_configure-pic.patch 444
+SHA256 3e348be7890f21280fceab6cb2a87f3020b08a31608ab93d1b5a53667760e556 files/zip-2.3-unix_configure-pic.patch 444
 MD5 249bdbaf477c3e08661cd70e3e7aa5fa files/zip-2.31-exec-stack.patch 407
+RMD160 a27f0112dbbda418feef97b66240442190e8b5d7 files/zip-2.31-exec-stack.patch 407
+SHA256 108686d8854096422bd4895690a37202aee66757d0d2b43afa16d9fb914cbb29 files/zip-2.31-exec-stack.patch 407
 MD5 ceb628bca144581dbeff71136122a8e2 files/zip-CAN-2004-1010.patch 673
+RMD160 63050e116d9ce49b7b26654a9f88e90f0332d055 files/zip-CAN-2004-1010.patch 673
+SHA256 92ed24fad3d7dd9567f2771a14bbd4905ed36aaff71b37e89d919b1fcf07e431 files/zip-CAN-2004-1010.patch 673
 MD5 7a2b80d9c775f53e81a1dc80368fd681 zip-2.3-r4.ebuild 1110
+RMD160 6bb71b1c4baa70bf28c2396eb7dae96030eca179 zip-2.3-r4.ebuild 1110
+SHA256 41c7618ea0f0762b970a213a8b73da5f9f03c837edcc3050f79db361c138af7b zip-2.3-r4.ebuild 1110
 MD5 2c11e0b9f8f9da782af1e54db7523fd9 zip-2.31-r1.ebuild 1242
+RMD160 772972ed4388b25f771548295dad1563e5c35170 zip-2.31-r1.ebuild 1242
+SHA256 8af4ca2adc8f46002c22634defde307a37af8d9173dae8eb51a4f3558efb021c zip-2.31-r1.ebuild 1242
 MD5 10fcfcaf8adaed7c0f5aa5515ca8a286 zip-2.31.ebuild 1066
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEFvQuViELBEf1JB0RAgvqAJ99fNKlkFjO1q+ZdZ3iJR0sf7R3zwCfX1td
-+NTlI133zQMml9Xczt2TzqQ=
-=2r30
------END PGP SIGNATURE-----
+RMD160 bf1c86e42e4d93fdbd65832d6d37fc5c33dbc2c2 zip-2.31.ebuild 1066
+SHA256 00e5e2188440c8ec66a4ff88da78e16ad3c5f4a8a610160263d5a138783db8c6 zip-2.31.ebuild 1066
