@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.77.ebuild,v 1.11 2006/02/13 14:44:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.77.ebuild,v 1.12 2006/03/14 01:30:44 gustavoz Exp $
 
 inherit perl-app
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://razor.sourceforge.net/"
 SRC_URI="mirror://sourceforge/razor/razor-agents-${PV}.tar.bz2"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
