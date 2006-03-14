@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4857a6f7c13c3018b9e4cd843713a80b ChangeLog 1728
-RMD160 152f3ba878afb2133324824c2720e372637a2e33 ChangeLog 1728
-SHA256 07a06af6486e4aa28b8f1e2200b607f5d5f00ac8fd9961718d1a5fcd64e119b1 ChangeLog 1728
-MD5 ceac8cd95292d841d6308c6165907b00 Sys-Hostname-Long-1.2.ebuild 523
-RMD160 c4885212424dd099e15728090cffe4944f3da3cf Sys-Hostname-Long-1.2.ebuild 523
-SHA256 b77bf64afb4c5c479548633c0779f291dcf31f4f95c92b7471d65c48cfd16cd5 Sys-Hostname-Long-1.2.ebuild 523
-MD5 dccfa761477051c638e4d412750d64ba Sys-Hostname-Long-1.4.ebuild 533
-RMD160 b9a535c9f48b00dffdc909488e3ff2bfc9131127 Sys-Hostname-Long-1.4.ebuild 533
-SHA256 7d648159a648de01368413ce488c25d01d69f1308ac883409a322f3d5fa0aa44 Sys-Hostname-Long-1.4.ebuild 533
+MD5 9cf0cb904f26f6e89b39c3230a206475 ChangeLog 1863
+MD5 6f4ed03e64d6d4d21b649d81b48f9173 Sys-Hostname-Long-1.2.ebuild 529
+MD5 5c1e07ebe3341c5761a161ed6678b558 Sys-Hostname-Long-1.4.ebuild 539
 MD5 2902d9dcf3573609ada284f2d3f90e35 files/digest-Sys-Hostname-Long-1.2 71
-RMD160 7b6f5fc8763cbf78ddb3387f6cdbc92ed2689788 files/digest-Sys-Hostname-Long-1.2 71
-SHA256 fb92e9f9319b1b3702264bc231d5e01b434bc90c11491a72ffcfd6cf0a84ca03 files/digest-Sys-Hostname-Long-1.2 71
 MD5 c57b50e7ea1ccf19867e55e649024371 files/digest-Sys-Hostname-Long-1.4 71
-RMD160 f295e4c0befc15b945934089bf1892309e8dcdfc files/digest-Sys-Hostname-Long-1.4 71
-SHA256 ca59c085254e5f14862815394c8f91ed858ebe1e3e225cc78bf48fc087a0c26f files/digest-Sys-Hostname-Long-1.4 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEO2zJrHF4yAQTrARAmUwAJ9TR4ate1k8mwetBEwUgUlkHct8MwCgy364
-yLe2louGZCqsN3Hl4Hb9gvc=
-=GQ84
------END PGP SIGNATURE-----
