@@ -1,21 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 54f4dc3e891be45a4ba418a7cbc044a6 ChangeLog 2222
-RMD160 4cedc8853423007f06fa7acffebdb3b97aa12cb2 ChangeLog 2222
-SHA256 732aaae6d382c83f14951aea600debff8de5612a76effd9d8f47712603ad2e5b ChangeLog 2222
+MD5 08e6de6d6c72149884193a1dbada5477 ChangeLog 2516
+RMD160 fd1d6b6ad8aba68bb4770c2ed90ce0eec34fad98 ChangeLog 2516
+SHA256 8dc9bbeeaa7c7a651d25818a00720dbf2aaf1f1ade222195baa8f026d8cf352f ChangeLog 2516
 MD5 e30d4b2f8fe8b19ca55cc584def34557 files/digest-mailx-support-20030215 73
 RMD160 74ddb1c823e42e30f168703f6b5a58e9697d5254 files/digest-mailx-support-20030215 73
 SHA256 5ed956dd455aaacdf1458dfa20acc7d9a1008c1d9059f7d58c7a01d9f2162a6d files/digest-mailx-support-20030215 73
 MD5 9156b48faa859aa6a4c7e38a524e6f97 files/digest-mailx-support-20060102 265
 RMD160 abd5accfb33f2bd1b18223cbc7b0d603114925da files/digest-mailx-support-20060102 265
 SHA256 7c34aa7608943660495b692b11f7aa30286f77205de21c59bdf72225367b2366 files/digest-mailx-support-20060102 265
+MD5 9156b48faa859aa6a4c7e38a524e6f97 files/digest-mailx-support-20060102-r1 265
+RMD160 abd5accfb33f2bd1b18223cbc7b0d603114925da files/digest-mailx-support-20060102-r1 265
+SHA256 7c34aa7608943660495b692b11f7aa30286f77205de21c59bdf72225367b2366 files/digest-mailx-support-20060102-r1 265
 MD5 bf68aec6f17ac9cf58299e322196621d files/mailx-support-20030215-gentoo.patch 1793
 RMD160 4eb6370c8897c231ecc24b30551d06b9c298c430 files/mailx-support-20030215-gentoo.patch 1793
 SHA256 3b9384318875c1f42b5435e40e4d822ec77ff799045ca776705afdb7c5c063cf files/mailx-support-20030215-gentoo.patch 1793
+MD5 56661c47ab5d281b7fa72d560286bdac files/mailx-support-20060102-respect-ldflags.patch 537
+RMD160 71181201858b74bba585db4c792231b2c534edd2 files/mailx-support-20060102-respect-ldflags.patch 537
+SHA256 2c7b5c8d4031d836b0ffd38814ec4643cf2c7d330c4142c4fd9ce041b2711eb2 files/mailx-support-20060102-respect-ldflags.patch 537
 MD5 ab321007e8d91262484f177af41b4ff8 mailx-support-20030215.ebuild 620
 RMD160 05be24ce4c01717548fcd0a2d05ffa468333d6e2 mailx-support-20030215.ebuild 620
 SHA256 36947f3f49781bef68dd3e126113858e11c1219671fd1a376cbb202780154e8f mailx-support-20030215.ebuild 620
+MD5 8223240dac2b3e733d00e8ed2fc33537 mailx-support-20060102-r1.ebuild 772
+RMD160 a3f52a2d83213df584dd7195e8fb7350b2d3d1bb mailx-support-20060102-r1.ebuild 772
+SHA256 dc53a6a029400bcfacb662a1c680b36ddd109fc9f5b0bbdc2caa2126088a95c8 mailx-support-20060102-r1.ebuild 772
 MD5 0c5ab555389f58cf61781814f8c6a9a4 mailx-support-20060102.ebuild 553
 RMD160 0ff30a131b89241f050ff97c03594d60d6827da4 mailx-support-20060102.ebuild 553
 SHA256 e09c2df2e70e4f53494988ef741148a52a244510e33acee8115430b633eccd92 mailx-support-20060102.ebuild 553
@@ -23,9 +32,9 @@ MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
 SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEBcjZ5FrxP71izLARAm5zAKCb4vJ5SBSKvsqP+A46ejG8kkvGMwCeK3qv
-8sqpqIWCc3WtmIsvonjxIp0=
-=ROo2
+iD8DBQFEF01M5FrxP71izLARAqR2AJ0dtYlHrQ6y003ajSBI0A+GlrMYTACdHZht
+Hy5LAKQD40iA9dEXCHLCXV4=
+=5UTi
 -----END PGP SIGNATURE-----
