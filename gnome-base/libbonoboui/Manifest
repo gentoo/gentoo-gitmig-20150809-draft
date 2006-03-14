@@ -1,43 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f014b4b69883a5e4d82d0b5abedb6645 ChangeLog 12461
-RMD160 9c5787aef6cd04ed415798d92207081b60a87773 ChangeLog 12461
-SHA256 f275d43f8690638dd85899e37f7b239998013d5ce7a4403ab433ace3f04b2d3c ChangeLog 12461
+MD5 f02308c04a982f6beeb9c04e98f0477b ChangeLog 12565
 MD5 b092b744c2d6bad14ded1d493391e8a5 files/bonobo-browser-2.10.1-lang.patch 362
-RMD160 d5d9ad237cee6a1fa5465261c47882c6c4e3978d files/bonobo-browser-2.10.1-lang.patch 362
-SHA256 e2731f06c7cc92a5ba7bc2eb45d4ca10e2d8678bcf53a735678d0c3c29ac28c8 files/bonobo-browser-2.10.1-lang.patch 362
 MD5 340f7f3f8d3a28b8b68395e3fb8c4d75 files/digest-libbonoboui-2.10.0 71
-RMD160 bfbde436de5f2379793934aa218c59abbe800ec2 files/digest-libbonoboui-2.10.0 71
-SHA256 7104b308a486b7e421ce98128f72cbfc3805a7fa5952c3df55ee902dbf1fb4c5 files/digest-libbonoboui-2.10.0 71
 MD5 c7cb039a7f150df3a8f8e4f8f54fee40 files/digest-libbonoboui-2.10.1 71
-RMD160 452294e45ded81485bda38f9c1131384eef8b5a5 files/digest-libbonoboui-2.10.1 71
-SHA256 ca7dc6d41d32e78251927aa6fa15b92185c89d8dc2c22f46b74d007cfaad49be files/digest-libbonoboui-2.10.1 71
 MD5 60b3dcace488d6b24154eb16f6d36827 files/digest-libbonoboui-2.10.1-r1 259
-RMD160 741a18b5f9dbd8fcbf6373246628910dbfd3306d files/digest-libbonoboui-2.10.1-r1 259
-SHA256 0c39489a4bf8126b109af4daad97e8b312c9bfe971bd6a57d319ad4b80353f47 files/digest-libbonoboui-2.10.1-r1 259
 MD5 20a2b53b1010d3e8dc26c27363fbe46d files/digest-libbonoboui-2.8.1 71
-RMD160 2a7d1327130ab55be9fc5eab8c44ba0ea3a2ee6d files/digest-libbonoboui-2.8.1 71
-SHA256 bc791a15eb5fd3b7c38bb9a360bcabb91706dcc61cb4ae4399c82509ad2a0336 files/digest-libbonoboui-2.8.1 71
 MD5 5e07e31d264aafce4cda52364fa51e8e libbonoboui-2.10.0.ebuild 884
-RMD160 cf711606de566fe505cd2833476d338e623fe7ec libbonoboui-2.10.0.ebuild 884
-SHA256 38ec9a13a68e930e06b873c310e154b034515943d7ba08c462f40748cd7d0d1c libbonoboui-2.10.0.ebuild 884
-MD5 1195994adfc54946e7a6e2772b9e40fb libbonoboui-2.10.1-r1.ebuild 1012
-RMD160 781fb516a59afd13eff203aca8fb94f970d835ec libbonoboui-2.10.1-r1.ebuild 1012
-SHA256 988e75e925bf5e78557874b8ffeab86cc83271c94e45c76aa34b21ac5d0df689 libbonoboui-2.10.1-r1.ebuild 1012
+MD5 09a530d287606da40fd1ef94aa005680 libbonoboui-2.10.1-r1.ebuild 1012
 MD5 05efd02cc971c6af82dc6fcfbe56741d libbonoboui-2.10.1.ebuild 909
-RMD160 637483076a13a5e9915860e38ef947136f7877bc libbonoboui-2.10.1.ebuild 909
-SHA256 4c8d480a0033cc079f6489ff47483f02e578f0ab83c9470e1eb891b0b740972a libbonoboui-2.10.1.ebuild 909
 MD5 4a582277ecb2b5b1fe21b783d5c28db4 libbonoboui-2.8.1.ebuild 824
-RMD160 5bb522fce535de01f4c2ce39f959f75d05526fb7 libbonoboui-2.8.1.ebuild 824
-SHA256 c6d47290505f7ff2630e3786725445bbefe31407810ceda312ef81a026724fb2 libbonoboui-2.8.1.ebuild 824
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4m2UJrHF4yAQTrARAm1hAKC4hNcNqfvyROUuOJrujBqIUtBU2gCghrI5
-Y4eDMt69SYWja+Aun3EOoEY=
-=Cow4
------END PGP SIGNATURE-----
