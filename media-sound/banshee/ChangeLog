@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.19 2006/03/08 16:43:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.20 2006/03/14 21:46:00 metalgod Exp $
+
+*banshee-0.10.8 (14 Mar 2006)
+
+  14 Mar 2006; Luis Medinas <metalgod@gentoo.org> +banshee-0.10.8.ebuild:
+  Version Bump. For now realplayer support as been removed and daap support is
+  build upon avahi.
 
   08 Mar 2006; Luis Medinas <metalgod@gentoo.org> banshee-0.10.7.ebuild:
   Force the use of gst-0.8 on this revision. Fixes bug #125371.
