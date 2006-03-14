@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 78330a9574ae04f5bca0982c2037d17f ChangeLog 7832
-RMD160 8e9ced4a6444b8dad2ef80c373e330f4486b0636 ChangeLog 7832
-SHA256 a20d2ff18e64254a0515e7e3dfe51388bca76954aeae7d9e0f7e9fe2a14a5a6b ChangeLog 7832
+MD5 1ed0f0da7d7f69b98f304fb4270b8883 ChangeLog 7964
+RMD160 47edfc681122c9e876ad0c26248bd54aed76b37e ChangeLog 7964
+SHA256 58fd6d094b1ab59c117576b54e5ff2aad4918d1e9f6e21cad157cbeb0d23e508 ChangeLog 7964
 MD5 c05083a16f957fda1c27e0b0cfc91005 files/digest-gtk-engines-0.12 68
 RMD160 060c0919635c696cc51890760bd9c44e9af9199f files/digest-gtk-engines-0.12 68
 SHA256 da08a45da736daaa8a52a7c9798a4ebbf01e71293b9d57aa5566508fc9f9594c files/digest-gtk-engines-0.12 68
@@ -13,6 +10,9 @@ SHA256 c8d860bcad571261ea27fd6195e83003dd0064340572639123de148c1eb377a4 files/di
 MD5 82550dc12924920f5f7835e1ce9b0df1 files/digest-gtk-engines-2.6.7 70
 RMD160 474767139c9742941fb56253b5c36e9207de5eaf files/digest-gtk-engines-2.6.7 70
 SHA256 0cdb00a56df9c1170378b0c58f9a197cff0894d76bd2cc8a94691f12dfa49576 files/digest-gtk-engines-2.6.7 70
+MD5 16aa4dd3f6c795503be71db418db43c0 files/digest-gtk-engines-2.6.8 256
+RMD160 4b0be14a62229f2e0c7351d2efdd0ecebe5d181e files/digest-gtk-engines-2.6.8 256
+SHA256 e1f86c15a7e36c85812081cfef736c9f7f1e62f31c593b464eab7752748e4bcb files/digest-gtk-engines-2.6.8 256
 MD5 d792d5b0ca15aad2214ca213459bae78 gtk-engines-0.12.ebuild 825
 RMD160 b579a9ddd0510a9ef68be3ccffc73fbdc66383ff gtk-engines-0.12.ebuild 825
 SHA256 2799cc500b4df3e5349e7be959faa1f3a6fad25d661bbe6d2d1c0751cb438b59 gtk-engines-0.12.ebuild 825
@@ -22,13 +22,9 @@ SHA256 c4ca86851de8af58898840bfdc0b28a450101c5d308c3db0e475379f02ea7298 gtk-engi
 MD5 86621620d99a68d2b3f43537ff34a3de gtk-engines-2.6.7.ebuild 659
 RMD160 47c436e5ddde594abd709775a5093a8a732e3288 gtk-engines-2.6.7.ebuild 659
 SHA256 de266621f28c4447071da1321cb896eddf950f8d890c796eab644e70f9bfe7ea gtk-engines-2.6.7.ebuild 659
+MD5 237efbf8bc2b03569975ff0eac23b888 gtk-engines-2.6.8.ebuild 673
+RMD160 8a98c84533544a8a662e1b18f170ec6952d7fece gtk-engines-2.6.8.ebuild 673
+SHA256 7c8c0e8aecf367896ab95e8d3b28df59ab51a2ddcbc8fecb9216d5f855363c42 gtk-engines-2.6.8.ebuild 673
 MD5 36faf46cc298a5e4b601aafac15ec93b metadata.xml 568
 RMD160 55afc3bd5e963a38ca159fe1855fb86c1d205ed1 metadata.xml 568
 SHA256 cfae48dc83100358d4370ba22eaa6284c74288b749e2f34525358e3627fa8a89 metadata.xml 568
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD59iOJrHF4yAQTrARApUaAJsEBj62rFSSuw+qfVxbHdMU9MMFNACdGdGZ
-ERXIx3Bzm7AAdFuVLfnITNc=
-=I7K0
------END PGP SIGNATURE-----
