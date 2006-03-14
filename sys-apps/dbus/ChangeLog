@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.105 2006/03/14 06:56:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.106 2006/03/14 09:53:00 joem Exp $
+
+  14 Mar 2006; Joe McCann <joem@gentoo.org>
+  +files/dbus-0.60-decls-ansi-c.patch:
+  Add missing patch to cvs
 
   14 Mar 2006; Doug Goldstein <cardoe@gentoo.org> files/dbus.init-0.60:
   Handle PEBCAK error

@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 44dc0c8b446fb8a724644ccad081fd9b ChangeLog 15104
-RMD160 f0dcaafe653b654bbb3b2f87d77b39bc0515abc0 ChangeLog 15104
-SHA256 7363593fb10fe976f973b3a5167b9ffebc170e5d86aa131fec05c87ec6e2f1a1 ChangeLog 15104
+MD5 a6d0240ca91d3dc658970f67da600ead ChangeLog 15213
+RMD160 cd13c8b6db4540b8bfd01abc576caba9db75aaa8 ChangeLog 15213
+SHA256 45b63c5c754ff34a4a1cf175ab64bcd69f837011686c621872b6bc25a896776d ChangeLog 15213
 MD5 80bd8d05a4478ae3d83d952d19e928ac dbus-0.23.4-r1.ebuild 3647
 RMD160 ca03ac02fddf891a097814dac744774d2aaa3267 dbus-0.23.4-r1.ebuild 3647
 SHA256 d08b90313aab10d5a71e7e0858e3548983cb2dfc4bd7317dfb99a57c2a0faad0 dbus-0.23.4-r1.ebuild 3647
@@ -46,6 +43,9 @@ SHA256 f81ab960ebc7b7ef509357e17d3e859243a30eec2c54e8201940be64dc4417bf files/db
 MD5 038de28fe446b2303c072e96df531500 files/dbus-0.23.2-version_fix.patch 496
 RMD160 aa89233eccb414d573187ead682cf1caf4b2d45e files/dbus-0.23.2-version_fix.patch 496
 SHA256 659558b3f94b4d93cdcd721cb6e7d4b105aba5b404239f0a96c5cb5bca470394 files/dbus-0.23.2-version_fix.patch 496
+MD5 ed6d35b451adeb05e1bc0980b6016770 files/dbus-0.60-decls-ansi-c.patch 455
+RMD160 8e5343c0c50321132f04cd84927a1ac1fe75408d files/dbus-0.60-decls-ansi-c.patch 455
+SHA256 fac939d8facfddcafc47d8141d5b7804e9734169f3911143419c0d686191cffc files/dbus-0.60-decls-ansi-c.patch 455
 MD5 f99c8979a50414039ebe3893916dee05 files/dbus-0.60-gcj-2.patch 800
 RMD160 9ca85170e76d68e9c68f30246a13c9f906d4b66c files/dbus-0.60-gcj-2.patch 800
 SHA256 48468e84c3bcccf3a0bc6f0898e82356720d84a5f4f774e6edb4663c60012cac files/dbus-0.60-gcj-2.patch 800
@@ -100,10 +100,3 @@ SHA256 8ee10bf68b294a8eef518926360a7b538fa9dda198e47b1d9f6367b6de0cdbcd files/di
 MD5 d854e952b3179d33b2ece377ce9980f3 metadata.xml 222
 RMD160 cd880923dd3bbe29d863c21fdcc56700006a2bcc metadata.xml 222
 SHA256 3b1bdb4611693b7a059584a994f3760dce2f37a048d4c2c55c1756e17519e1cf metadata.xml 222
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEFmrUBtvusYtCZMsRAjWUAKCEi8P5Q19FjR3Md0Ecy4VtGpHpRgCgiqrt
-fhHM8k2MqYF8X9vY14PTv5k=
-=BnF1
------END PGP SIGNATURE-----
