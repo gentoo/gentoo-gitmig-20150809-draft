@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.66 2006/03/13 07:03:41 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.67 2006/03/14 18:47:26 flameeyes Exp $
+
+  14 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> pam-login-3.14.ebuild,
+  pam-login-3.17.ebuild, pam-login-4.0.11.1-r2.ebuild,
+  pam-login-4.0.12.ebuild, pam-login-4.0.14.ebuild:
+  Make sure pam-login blocks newer shadow so that it can't be installed after
+  it's upgraded.
 
   13 Mar 2006; Joshua Jackson <tsunam@gentoo.org> pam-login-4.0.14.ebuild:
   Stable x86 as depend for shadow; bug #125419

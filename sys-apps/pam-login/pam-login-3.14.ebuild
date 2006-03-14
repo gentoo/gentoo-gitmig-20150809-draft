@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.14.ebuild,v 1.21 2005/02/25 15:05:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.14.ebuild,v 1.22 2006/03/14 18:47:26 flameeyes Exp $
 
 inherit gnuconfig eutils
 
@@ -21,7 +21,8 @@ IUSE="livecd nls selinux"
 
 DEPEND="virtual/libc
 	sys-libs/pam
-	selinux? ( sys-libs/libselinux )"
+	selinux? ( sys-libs/libselinux )
+	!>=sys-apps/shadow-4.0.14-r2"
 
 src_unpack() {
 	unpack ${A}

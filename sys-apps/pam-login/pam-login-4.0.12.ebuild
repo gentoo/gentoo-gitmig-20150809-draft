@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-4.0.12.ebuild,v 1.3 2005/10/09 22:42:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-4.0.12.ebuild,v 1.4 2006/03/14 18:47:26 flameeyes Exp $
 
 inherit eutils libtool flag-o-matic pam autotools
 
@@ -23,7 +23,8 @@ DEPEND="virtual/libc
 	sys-libs/pam
 	>=sys-apps/shadow-4.0.11.1-r1
 	skey? ( app-admin/skey )
-	selinux? ( sys-libs/libselinux )"
+	selinux? ( sys-libs/libselinux )
+	!>=sys-apps/shadow-4.0.14-r2"
 # We need sys-apps/shadow-4.0.7-r1, as that no longer installs login.pamd
 
 src_unpack() {

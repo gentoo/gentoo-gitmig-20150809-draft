@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.17.ebuild,v 1.15 2005/12/21 10:00:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.17.ebuild,v 1.16 2006/03/14 18:47:26 flameeyes Exp $
 
 inherit gnuconfig eutils pam
 
@@ -22,7 +22,8 @@ IUSE="livecd nls selinux"
 DEPEND="virtual/libc
 	sys-libs/pam
 	>=sys-apps/shadow-4.0.7-r1
-	selinux? ( sys-libs/libselinux )"
+	selinux? ( sys-libs/libselinux )
+	!>=sys-apps/shadow-4.0.14-r2"
 # We need sys-apps/shadow-4.0.7-r1, as that no longer installs login.pamd
 
 src_unpack() {
