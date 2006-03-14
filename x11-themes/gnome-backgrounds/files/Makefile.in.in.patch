@@ -1,0 +1,10 @@
+diff -r -U 2 clean/gnome-backgrounds-2.12.3/po/Makefile.in.in gnome-backgrounds-2.12.3/po/Makefile.in.in
+--- clean/gnome-backgrounds-2.12.3/po/Makefile.in.in	2006-02-06 23:21:59.000000000 +0000
++++ gnome-backgrounds-2.12.3/po/Makefile.in.in	2006-02-07 16:16:37.000000000 +0000
+@@ -39,5 +39,5 @@
+ gettextsrcdir = $(datadir)/glib-2.0/gettext/po
+ subdir = po
+-install_sh = @install_sh@
++install_sh = ../install-sh
+ # Automake >= 1.8 provides @mkdir_p@.
+ # Until it can be supposed, use the safe fallback:
