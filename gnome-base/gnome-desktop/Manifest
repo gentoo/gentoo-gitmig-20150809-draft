@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9a98ff8e725b235ece5a77a91aad2c2f ChangeLog 16280
+MD5 cfcaf70f39d5c310e229555d9e121d16 ChangeLog 16383
 MD5 79c8cb7777a1a9aaee6cf55091178161 files/digest-gnome-desktop-2.10.0 74
 MD5 fc33ae327ce643e23d6cd59cf5773f27 files/digest-gnome-desktop-2.10.1 74
 MD5 88c70084020fb481d7b76375fb3e09ec files/digest-gnome-desktop-2.10.2 73
@@ -13,12 +10,5 @@ MD5 ada70d2ac7be7fb407903205feca008b gnome-desktop-2.10.1.ebuild 1165
 MD5 a82f5b9e02c3b83b4f9887a5870dee4a gnome-desktop-2.10.2.ebuild 1167
 MD5 63813ec7aeca76a800dd249d559c1966 gnome-desktop-2.12.1.ebuild 1230
 MD5 838160cc70be883e9df3a72127e930af gnome-desktop-2.12.2.ebuild 1222
-MD5 f88bfa4c3bc3a74b89a2ed377fbc2ab9 gnome-desktop-2.12.3.ebuild 1228
+MD5 f403651d21dd51e19e08c76058f5d409 gnome-desktop-2.12.3.ebuild 1227
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEFZFqKRy60XGEcJIRAgabAKCmdCfPZL3Zpo2DKD4zvN+Njp1+6gCfUNGN
-L9cBsMKO5XS39bGJ6vOferk=
-=8OdA
------END PGP SIGNATURE-----
