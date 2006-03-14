@@ -1,20 +1,19 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/files/dbus.init-0.60,v 1.1 2006/01/02 08:52:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/files/dbus.init-0.60,v 1.2 2006/03/14 06:56:39 cardoe Exp $
 
 start() {
-
 	ebegin "Starting D-BUS system messagebus"
 
+	# We need to test if /var/run/dbus exists, since script will fail if it does not
+	[[ ! -e /var/run/dbus ]] && mkdir /var/run/dbus 
+
 	start-stop-daemon --start --pidfile /var/run/dbus.pid --exec /usr/bin/dbus-daemon -- --system
-
 	eend $?
-
 }
 
 stop() {
-
 	local retval
 
 	ebegin "Stopping D-BUS system messagebus"
@@ -32,5 +31,4 @@ stop() {
 	[[ -S /var/run/dbus/system_bus_socket ]] && rm -f /var/run/dbus/system_bus_socket
 
 	return ${retval}
-
 }
