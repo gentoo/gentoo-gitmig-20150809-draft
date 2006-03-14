@@ -1,9 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0.ebuild,v 1.7 2006/03/14 21:43:29 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.3.ebuild,v 1.1 2006/03/14 21:43:29 halcy0n Exp $
 
 PATCH_VER="1.1"
-UCLIBC_VER="1.1"
+PATCH_GCC_VER="4.0.3"
+UCLIBC_VER="1.0"
+UCLIBC_GCC_VER="4.0.3"
+PIE_VER="8.7.8"
+PIE_GCC_VER="4.0.3"
+PP_VER=""
+HTB_VER="1.00"
 
 ETYPE="gcc-compiler"
 
@@ -17,7 +23,7 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+s
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="-* ~amd64 ~ppc ~x86"
+KEYWORDS="-* ~ia64"
 
 RDEPEND="!sys-devel/hardened-gcc
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
@@ -44,13 +50,15 @@ fi
 DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
 	>=sys-devel/bison-1.875
-	>=${CATEGORY}/binutils-2.16.1"
+	>=${CATEGORY}/binutils-2.15.94"
 
 PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )
 	x86? ( !nocxx? ( !elibc_uclibc? ( !build? ( =virtual/libstdc++-3.3 ) ) ) )"
 
 src_unpack() {
 	gcc_src_unpack
+
+	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
 
 	# Fix cross-compiling
 	epatch "${FILESDIR}"/4.0.2/gcc-4.0.2-cross-compile.patch
