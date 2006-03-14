@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.38 2006/03/14 03:13:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.39 2006/03/14 03:17:09 weeve Exp $
+
+  14 Mar 2006; Jason Wever <weeve@gentoo.org> zip-2.31.ebuild:
+  Stable on SPARC wrt bug #126101.
 
 *zip-2.31-r1 (14 Mar 2006)
 
