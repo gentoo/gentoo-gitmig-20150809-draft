@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.22 2006/03/09 11:37:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.23 2006/03/14 23:33:35 flameeyes Exp $
+
+*xdtv-2.3.2 (14 Mar 2006)
+
+  14 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +xdtv-2.3.2.ebuild:
+  Version bump.
 
 *xdtv-2.3.1 (09 Mar 2006)
 
