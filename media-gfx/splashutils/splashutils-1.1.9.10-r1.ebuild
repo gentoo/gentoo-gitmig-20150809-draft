@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.1 2006/03/02 17:41:52 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.2 2006/03/14 16:38:50 spock Exp $
 
 inherit eutils multilib linux-mod
 
@@ -21,12 +21,12 @@ IUSE="hardened png truetype kdgraphics"
 DESCRIPTION="Framebuffer splash utilities."
 HOMEPAGE="http://dev.gentoo.org/~spock/projects/gensplash/"
 SRC_URI="mirror://gentoo/${PN}-lite-${PV}.tar.bz2
-	 mirror://gentoo/${GENTOOSPLASH}.tar.bz2
-	 mirror://gentoo/${MISCSPLASH}.tar.bz2
-	 mirror://sourceforge/libpng/libpng-${V_PNG}.tar.bz2
-	 ftp://ftp.uu.net/graphics/jpeg/jpegsrc.v${V_JPEG}.tar.gz
-	 mirror://sourceforge/freetype/freetype-${V_FT}.tar.bz2
-	 http://www.gzip.org/zlib/zlib-${V_ZLIB}.tar.bz2"
+	mirror://gentoo/${GENTOOSPLASH}.tar.bz2
+	mirror://gentoo/${MISCSPLASH}.tar.bz2
+	mirror://sourceforge/libpng/libpng-${V_PNG}.tar.bz2
+	ftp://ftp.uu.net/graphics/jpeg/jpegsrc.v${V_JPEG}.tar.gz
+	mirror://sourceforge/freetype/freetype-${V_FT}.tar.bz2
+	http://www.gzip.org/zlib/zlib-${V_ZLIB}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -200,19 +200,29 @@ pkg_postinst() {
 		echo ""
 	fi
 
-	ewarn "If you're upgrading from a pre-1.0 splashutils version, make sure that you"
-	ewarn "rebuild your initrds. You can use the splash_geninitramfs script to do that."
-	echo ""
-	ewarn "It is required that you add 'console=tty1' to your kernel"
-	ewarn "command line parameters."
-	echo ""
-	einfo "After these modifications, the relevant part of the kernel command"
-	einfo "line might look like:"
-	einfo "  splash=silent,fadein,theme:emergence console=tty1"
-	echo ""
-	einfo "The sample Gentoo themes (emergence, gentoo) have been removed from the"
-	einfo "core splashutils package. To get some themes you might want to emerge:"
-	einfo "  media-gfx/splash-themes-livecd"
-	einfo "  media-gfx/splash-themes-gentoo"
-	echo ""
+	if has_version '<media-gfx/splashutils-1.0' ; then
+		ewarn "Since you are upgrading from a pre-1.0 version, please make sure that you"
+		ewarn "rebuild your initrds. You can use the splash_geninitramfs script to do that."
+		echo ""
+	fi
+
+	if ! test -f /proc/cmdline ||
+		! egrep -q '(console|CONSOLE)=(tty1|/dev/tty1)' /proc/cmdline ; then
+		ewarn "It is required that you add 'console=tty1' to your kernel"
+		ewarn "command line parameters."
+		echo ""
+		einfo "After these modifications, the relevant part of the kernel command"
+		einfo "line might look like:"
+		einfo "  splash=silent,fadein,theme:emergence console=tty1"
+		echo ""
+	fi
+
+	if ! has_version 'media-gfx/splash-themes-livecd' &&
+		! has_version 'media-gfx/splash-themes-gentoo'; then
+		einfo "The sample Gentoo themes (emergence, gentoo) have been removed from the"
+		einfo "core splashutils package. To get some themes you might want to emerge:"
+		einfo "  media-gfx/splash-themes-livecd"
+		einfo "  media-gfx/splash-themes-gentoo"
+		echo ""
+	fi
 }
