@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.90 2006/03/12 22:31:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.91 2006/03/14 20:47:44 ferdy Exp $
+
+  14 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> emacs-21.4-r3.ebuild:
+  Stable on alpha as per bug #76141. Tested by Thomas Cort <tcort@cs.ubishops.ca>
 
   12 Mar 2006; Jason Wever <weeve@gentoo.org> emacs-21.4-r3.ebuild:
   Stable on SPARC wrt bug #76141.
