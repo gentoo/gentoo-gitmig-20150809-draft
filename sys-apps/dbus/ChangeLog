@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.103 2006/03/10 00:32:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.104 2006/03/14 06:41:06 cardoe Exp $
+
+*dbus-0.61 (14 Mar 2006)
+
+  14 Mar 2006; Doug Goldstein <cardoe@gentoo.org>
+  +files/dbus-0.61-mono-tools-update.diff, +dbus-0.61.ebuild:
+  rev bump. dropped gcj support since the bindings are unmaintained and broken
+  and were problematic. Fixed monodoc depends to only require monodoc rather
+  then mono-tools as well.
 
   10 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> dbus-0.60-r4.ebuild:
   Stable on ppc.
