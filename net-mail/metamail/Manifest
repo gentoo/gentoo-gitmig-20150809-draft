@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ba8a208d20a38581d219b60eb8111ed2 ChangeLog 3883
+MD5 edb6b4daafbd8ba8fb82883842b8546e ChangeLog 3997
 MD5 b421f8d33431489dece46eb18ef7c643 files/digest-metamail-2.7.45.3 126
 MD5 a787cdcf9e8a3472fae8552fe2777a5f files/digest-metamail-2.7.45.3-r1 470
 MD5 573a9bfc8feea6f3e10f43aae15d5c53 files/metamail-2.7.45.3-CVE-2006-0709.patch 1900
 MD5 2c155e17aab4712ce1deb01c3601cc18 files/mime.types 16442
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 40bdebffd7f51e37411311b9fe460d49 metamail-2.7.45.3-r1.ebuild 1114
+MD5 1438ce0dd14db4e56c2ecf42565df637 metamail-2.7.45.3-r1.ebuild 1115
 MD5 111db6d63212d78d79a731558243e46d metamail-2.7.45.3.ebuild 1061
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEFzYuViELBEf1JB0RAozrAJ4sjcXpztnLC5aY416kPcdjUjt6swCdEh1g
-hcsEZF8hhgsD/ChPo5mr2l8=
-=xKsD
------END PGP SIGNATURE-----
