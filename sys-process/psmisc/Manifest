@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 828bba4382c4524754edc5bd3c666fc7 ChangeLog 9801
+MD5 678a9562979f1c52bb51974295981f42 ChangeLog 9901
 MD5 3ab218bf6bd06a64d5de56a84f9f5dc0 files/digest-psmisc-21.9 63
 MD5 4a62c9237180d858ab57c87dab6ce346 files/digest-psmisc-22.1 63
 MD5 31b893fab6c1a7d95752e63dd94bfa26 files/digest-psmisc-22.2 235
 MD5 fbd6d2d8f9aca96690539b33ccce8ff8 files/psmisc-22.1-force-locale.patch 334
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 08afad8cc7e0ba268cbcc4b4e4f95bcd psmisc-21.9.ebuild 1089
-MD5 2866d1f732972056de8dffdd6b99a01d psmisc-22.1.ebuild 1198
+MD5 8553a8743e547996e87fa0b6ba15a129 psmisc-22.1.ebuild 1196
 MD5 8390600906c065fb5279eeb8d741b8c7 psmisc-22.2.ebuild 1082
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEGBqAKRy60XGEcJIRAkKyAJ9fDJMMEWQpX33y5dGf79uDtdogzACfWWn5
-nJgLIzTFHo+USIuJVPbGV+U=
-=Upsk
------END PGP SIGNATURE-----
