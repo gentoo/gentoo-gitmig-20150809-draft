@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/kannadic
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/ChangeLog,v 1.13 2005/12/26 11:14:16 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/ChangeLog,v 1.14 2006/03/15 15:44:50 caleb Exp $
+
+  15 Mar 2006; Caleb Tennis <caleb@gentoo.org> kannadic-1.7.0.ebuild,
+  kannadic-2.0.3.ebuild:
+  Remove x11 dep as kdelibs already takes care of it
 
   26 Dec 2005; Markus Rothe <corsair@gentoo.org> kannadic-2.0.3.ebuild:
   Stable on ppc64
