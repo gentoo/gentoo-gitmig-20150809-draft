@@ -1,5 +1,5 @@
-MD5 40759424a61b9d07457bdd22284c25c4 ChangeLog 3477
+MD5 98c8628ee319c7a0101c0c1761dc42e9 ChangeLog 3578
 MD5 d29c89b04a7be61c3500c69982369f3b files/digest-stellarium-0.7.1 70
 MD5 41515c4b741475273695fa912b8b4a86 files/stellarium-0.7.1-gcc41.patch 2683
 MD5 e4bdac528fd001633aa222d2b42fe048 metadata.xml 219
-MD5 8c6845997decf60af384d8947fd3ac11 stellarium-0.7.1.ebuild 1093
+MD5 3295a30259abd0911223afb823e3de56 stellarium-0.7.1.ebuild 1098
