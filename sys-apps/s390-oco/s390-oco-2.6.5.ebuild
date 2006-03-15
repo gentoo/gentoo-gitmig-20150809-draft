@@ -1,40 +1,29 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/s390-oco-2.6.5.ebuild,v 1.9 2005/07/13 12:50:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/s390-oco-2.6.5.ebuild,v 1.10 2006/03/15 23:49:35 vapier Exp $
+
+inherit linux-mod
+
+STREAM="april2004"
 
 DESCRIPTION="Object-code only (OCO) modules for s390"
-HOMEPAGE="http://www10.software.ibm.com/developerworks/opensource/linux390/tape_3590-2.6.5-s390-april2004.shtml"
-if [[ ${CTARGET:-${CHOST}} == s390x-* ]] ; then
-SRC_URI="tape_3590-2.6.5-s390x-april2004.tar.gz"
-else
-SRC_URI="tape_3590-2.6.5-s390-april2004.tar.gz"
-fi
+HOMEPAGE="http://www.ibm.com/developerworks/linux/linux390/tape_3590-${PV}-s390-${STREAM}.shtml"
+SRC_URI="mirror://gentoo/tape_3590-${PV}-s390x-${STREAM}.tar.gz
+	mirror://gentoo/tape_3590-${PV}-s390-${STREAM}.tar.gz"
 
 LICENSE="IBM-ILNWP"
-SLOT="${KV}"
-KEYWORDS="~s390"
+SLOT="0"
+KEYWORDS="s390"
 IUSE=""
-RESTRICT="fetch"
 
-DEPEND="~sys-kernel/vanilla-sources-2.6.5"
+DEPEND="=sys-kernel/vanilla-sources-${PV}*"
 
 S=${WORKDIR}
 
-pkg_nofetch() {
-	einfo "Please download ${A} from"
-	einfo
-	einfo " o ${HOMEPAGE}"
-	einfo
-	einfo "and put it into ${DISTDIR}"
-}
-
-src_unpack() {
-	unpack ${A}
-	check_KV || die "Cannot find kernel in /usr/src/linux"
-}
-
 src_compile() {
-	mv tape3590-2.6.5-s390*-01-april2004.ko tape_3590.ko || die
+	[[ ${CHOST} == s390x* ]] \
+		&& mv tape_3590-${PV}-s390x-${STREAM}.ko tape_3590.ko \
+		|| mv tape_3590-${PV}-s390-${STREAM}.ko tape_3590.ko
 }
 
 src_install() {
