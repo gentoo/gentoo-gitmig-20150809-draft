@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/gnomesu-0.3.1.ebuild,v 1.21 2005/04/25 06:25:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/gnomesu-0.3.1.ebuild,v 1.22 2006/03/15 00:44:32 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -27,5 +27,5 @@ src_unpack() {
 }
 
 src_install() {
-	gnome2_src_install xsudocdir=${D}/usr/share/doc/${PF}
+	gnome2_src_install xsudocdir=/usr/share/doc/${PF}
 }
