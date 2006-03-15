@@ -25,16 +25,16 @@ SHA256 eb29ecb91cf1d54c7a21c0dc0230fe78585fd98c0fcb2a203d1ca40030ca4aac files/sh
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
-MD5 5e6e5cbd181e90937be71e1dca935fb0 showconsole-1.07.ebuild 1057
-RMD160 efb6a031f3dff900758b04035aa14e6be4821014 showconsole-1.07.ebuild 1057
-SHA256 7fe820d33d42633281b7b98fbca3b58d4ef9d501e93e45704b7f3ecbe0d3c3fa showconsole-1.07.ebuild 1057
-MD5 df5567332933982e909f29c995e709ca showconsole-1.08.ebuild 1224
-RMD160 6aec403edaf72680751ea8fcc9a15cb26262f377 showconsole-1.08.ebuild 1224
-SHA256 4f01e98e6d13532c64bfcad205705fdd6877b16b2303cd69b6bcd10eb349f0e5 showconsole-1.08.ebuild 1224
+MD5 2facf6c935c08677f61a3af1b6653c7d showconsole-1.07.ebuild 1065
+RMD160 c5f464a54b02c37a7a48e028ff93dd61e37afacc showconsole-1.07.ebuild 1065
+SHA256 638b6c12af8cd7468d7dc87ecf0ab49f646924bd499437d30e4f156369dbc0df showconsole-1.07.ebuild 1065
+MD5 23187ef127cdddd30ec3c02a500b4ff7 showconsole-1.08.ebuild 1234
+RMD160 6cf715979fc0589e4bfb9c33df02c370bf5f4186 showconsole-1.08.ebuild 1234
+SHA256 58db426c9bdd560a56e7644ba0f0a54785e225c78280c0180784bbbf7d18d535 showconsole-1.08.ebuild 1234
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFECmoG2+ySkm8kpY0RAqU3AJwIl3XElFWdpYxW6+aRuAFNeQxfGACeO6LN
-+lmoYq9Mg0ZWuK56OkaUpw4=
-=fobx
+iD8DBQFEF3JQ2+ySkm8kpY0RAq9hAKC+rnnvSeNs0Aa7chXJEFHt2gqDnACdEjOL
+KD1C80vu0Cuhvdng72/i0QY=
+=vvDK
 -----END PGP SIGNATURE-----
