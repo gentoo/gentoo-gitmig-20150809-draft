@@ -9,3 +9,14 @@
  {
  	_ASSERTE(m_pInstance == NULL);
  	
+--- riceplugin/DaedalusRender.h.old	2006-03-12 14:38:00.000000000 +0100
++++ riceplugin/DaedalusRender.h	2006-03-12 14:39:06.000000000 +0100
+@@ -60,7 +60,7 @@
+ 	
+ 	inline bool IsTexel0Enable() {return m_pColorCombiner->m_bTex0Enabled;}
+ 	inline bool IsTexel1Enable() {return m_pColorCombiner->m_bTex1Enabled;}
+-	inline bool CDaedalusRender::IsTextureEnabled() { return (m_pColorCombiner->m_bTex0Enabled||m_pColorCombiner->m_bTex1Enabled); }
++	inline bool IsTextureEnabled() { return (m_pColorCombiner->m_bTex0Enabled||m_pColorCombiner->m_bTex1Enabled); }
+ 
+ 	inline DaedalusRenderTexture& GetCurrentTexture() { return g_textures[gRSP.curTile]; }
+ 	inline DaedalusRenderTexture& GetTexture(DWORD dwTile) { return g_textures[dwTile]; }
