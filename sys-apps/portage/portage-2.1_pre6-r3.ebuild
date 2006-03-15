@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre6-r2.ebuild,v 1.1 2006/03/13 02:56:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre6-r3.ebuild,v 1.1 2006/03/15 02:03:14 zmedico Exp $
 
 inherit toolchain-funcs
 
@@ -39,7 +39,9 @@ src_unpack() {
 		1050_r2862_ebuild_unmerge.patch
 		1060_r2863_bug_125919_find_compat.patch
 		1070_r2864_bug_125993_mergelist_keyerror.patch
-		1080_r2865_bug_125942_postinst_env.patch"
+		1080_r2865_bug_125942_postinst_env.patch
+		1090_r2892_bug_126111_global_updates_stdout.patch
+		1100_r2890_bug_126120_applied_useflags.patch"
 	for patch_name in ${my_patches}; do
 		einfo "Applying ${patch_name} ..."
 		patch -p0 --no-backup-if-mismatch < "${FILESDIR}"/${PV}/${patch_name} >/dev/null || die "Failed to apply patch"
@@ -159,9 +161,10 @@ pkg_postinst() {
 	ewarn "If you are using any cache modules (such as the CDB cache"
 	ewarn "module) portage will not work until they have been disabled."
 	echo
-	einfo "The default cache format has changed beginning with this"
-	einfo "version. Before using emerge, run \`emerge --metadata\` to"
-	einfo "restore portage's local cache."
+	einfo "The default cache format has changed between 2.0.x and 2.1"
+	einfo "versions. If you have upgraded from 2.0.x, before using"
+	einfo "emerge, run \`emerge --metadata\` to restore portage's local"
+	einfo "cache."
 	echo
 	einfo "Flag ordering has changed for \`emerge --pretend --verbose\`."
 	einfo "Add EMERGE_DEFAULT_OPTS=\"--alphabetical\" to /etc/make.conf"
