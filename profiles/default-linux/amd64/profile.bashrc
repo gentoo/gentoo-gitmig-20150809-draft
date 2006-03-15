@@ -52,7 +52,7 @@ if [[ ${EBUILD_PHASE} == "setup" ]]; then
 			CXXFLAGS=${CXXFLAGS//${broken_flag}}
 		fi
 	done
-	for flag in "-fvisibility=hidden" "-fvisibility-hidden" "-fvisibility-inline-hidden" "-fPIC" "-m32" "-m64" "-g3" "-ggdb3" ; do
+	for flag in "-fvisibility=hidden" "-fvisibility-hidden" "-fvisibility-inline-hidden" "-fPIC" "-fpic" "-m32" "-m64" "-g3" "-ggdb3" ; do
 		hasme ${flag} ${CFLAGS} ${CXXFLAGS} && trigger=1 && \
 		ewarn "Your C(XX)FLAGS contain(s) \"${flag}\" which can break packages."
 	done
