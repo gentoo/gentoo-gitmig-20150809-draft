@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.10-r1.ebuild,v 1.1 2006/03/10 14:30:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.10-r2.ebuild,v 1.1 2006/03/15 00:12:37 mrness Exp $
 
-inherit eutils
+inherit eutils linux-info
 
 #The document is the same as in hsfmodem, even if it has a different URL
 MY_DOC="100498D_RM_HxF_Released.pdf"
@@ -23,6 +23,8 @@ DEPEND="dev-lang/perl
 S="${WORKDIR}/${P}full"
 
 pkg_setup() {
+	linux-info_pkg_setup
+
 	MOD_N="hcfpci"
 	# Check to see if module is inserted into kernel, otherwise, build fails
 	if [ "`lsmod | sed '/^'$MOD_N'serial/!d'`" ]; then
@@ -47,7 +49,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}/${P}-suspend2.patch"
+	if [ "${KV_EXTRA}" = "-suspend2" ]; then
+		epatch "${FILESDIR}/${P}-suspend2.patch"
+	fi
 }
 
 src_compile() {
