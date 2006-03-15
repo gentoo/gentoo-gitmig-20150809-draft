@@ -1,4 +1,4 @@
-MD5 096b7d8e66a12a851726b5ab34a1f2fb ChangeLog 11705
+MD5 ad5d6ede0a8eb40d40d46d3ceb9ea959 ChangeLog 11828
 MD5 2f35d065ff4b9256d80f3923fa864c5c files/digest-prosite-19.16 67
 MD5 88309b107f8fd9445fb2370e95506eff files/digest-prosite-19.17 67
 MD5 a652d8b43037190415fe10e9282d838f files/digest-prosite-19.18 67
@@ -11,4 +11,4 @@ MD5 98de3c18be9fae196528dc1ae064a614 prosite-19.17.ebuild 1246
 MD5 816bdf1daa3b43ac3e34ee2e29c30266 prosite-19.18.ebuild 1241
 MD5 4bc992bd06b47b580178c21734648c37 prosite-19.19.ebuild 1246
 MD5 3521d2f54ad4949ea85492479fb905c9 prosite-19.20.ebuild 1246
-MD5 3521d2f54ad4949ea85492479fb905c9 prosite-19.22.ebuild 1246
+MD5 2d9cef59b19b0a633275318612a9cbbb prosite-19.22.ebuild 1246
