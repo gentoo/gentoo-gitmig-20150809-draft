@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.44.ebuild,v 1.1 2006/03/11 20:44:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.44.ebuild,v 1.2 2006/03/15 10:43:13 zzam Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
-IUSE="aio bigpatch jumpplay lnbsharing sourcecaps yaepg setup-plugin subtitles"
+IUSE="debug aio bigpatch jumpplay lnbsharing sourcecaps yaepg setup-plugin subtitles"
 
 PATCHSET_V=1
 PATCHSET_NAME=gentoo-${PN}-patchset-${PV}-${PATCHSET_V}
@@ -39,6 +39,11 @@ CONF_DIR=/etc/vdr
 RC_DIR=/usr/lib/vdr/rcscript
 CAP_FILE=${S}/vdr-capabilities.sh
 CAPS="# Capabilities of the vdr-executable for use by startscript etc."
+
+
+pkg_setup() {
+	use debug && append-flags -g
+}
 
 add_cap() {
 	while [ "$1" ]; do
