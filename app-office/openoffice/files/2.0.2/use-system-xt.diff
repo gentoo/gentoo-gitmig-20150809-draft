@@ -1,0 +1,1078 @@
+Index: config_office/configure.in
+===================================================================
+--- config_office/configure.in.orig	2006-03-11 21:22:53.000000000 +0100
++++ config_office/configure.in	2006-03-11 21:25:44.000000000 +0100
+@@ -312,6 +312,13 @@ AC_ARG_WITH(xalan-jar,
+ [  --with-xalan-jar=JARFILE   Specify path to jarfile manually ],
+ [ XALAN_JAR="$withval"
+ ])
++AC_ARG_WITH(system-xt,
++[  --with-system-xt        Use xt already on system
++],,)
++AC_ARG_WITH(xt-jar,
++[  --with-xt-jar=JARFILE   Specify path to jarfile manually ],
++[ XT_JAR="$withval"
++])
+ AC_ARG_WITH(system-sablot,
+ [  --with-system-sablot    Use sablot already on system
+ ],,)
+@@ -3054,6 +3061,34 @@ BUILD_TYPE="$BUILD_TYPE XALAN"
+ fi
+ 
+ dnl ===================================================================
++dnl Check for system xt
++dnl ===================================================================
++AC_MSG_CHECKING([which xt to use])
++if test -n "$with_system_xt" -o -n "$with_system_libs" && \
++        test "$with_system_xt" != "no"; then
++        AC_MSG_RESULT([external])
++        SYSTEM_XT=YES
++        if test -z $XT_JAR; then
++          AC_CHECK_FILE(/usr/share/java/xt.jar, 
++            [ XT_JAR=/usr/share/java/xt.jar ],
++            [ AC_CHECK_FILE(/usr/share/java/xt-0.20050823.jar, 
++              [ XT_JAR=/usr/share/java/xt-0.20050823.jar ],
++                  [ AC_MSG_ERROR(xt.jar replacement not found)]
++              )
++            ]
++          )
++        else
++          AC_CHECK_FILE($XT_JAR, [],
++               [ AC_MSG_ERROR(xt.jar replacement not found.)], [])
++        fi
++else
++    AC_MSG_RESULT([internal])
++    SYSTEM_XT=NO
++fi
++AC_SUBST(SYSTEM_XT)
++AC_SUBST(XT_JAR)
++
++dnl ===================================================================
+ dnl Check for system sablot
+ dnl ===================================================================
+ AC_MSG_CHECKING([which sablot to use])
+Index: config_office/set_soenv.in
+===================================================================
+--- config_office/set_soenv.in.orig	2006-03-11 21:22:53.000000000 +0100
++++ config_office/set_soenv.in	2006-03-11 21:25:44.000000000 +0100
+@@ -1813,6 +1813,8 @@ ToFile( "SYSTEM_XERCES",     "@SYSTEM_XE
+ ToFile( "XERCES_JAR",        "@XERCES_JAR@",       "e" );
+ ToFile( "SYSTEM_XALAN",      "@SYSTEM_XALAN@",     "e" );
+ ToFile( "XALAN_JAR",         "@XALAN_JAR@",        "e" );
++ToFile( "SYSTEM_XT",         "@SYSTEM_XT@",        "e" );
++ToFile( "XT_JAR",            "@XT_JAR@",           "e" );
+ ToFile( "SYSTEM_SABLOT",     "@SYSTEM_SABLOT@",    "e" );
+ ToFile( "SABLOT_LIBS",       "@SABLOT_LIBS@",      "e" );
+ ToFile( "SYSTEM_ODBC_HEADERS","@SYSTEM_ODBC_HEADERS@","e" );
+Index: external/prj/d.lst
+===================================================================
+--- external/prj/d.lst.orig	2006-03-11 21:22:53.000000000 +0100
++++ external/prj/d.lst	2006-03-11 21:25:44.000000000 +0100
+@@ -23,7 +23,6 @@ mkdir: %_DEST%\inc%_EXT%\X11\extensions
+ mkdir: %_DEST%\pck%_EXT%
+ ..\%__SRC%\bin\*.zip %_DEST%\pck%_EXT%\*.zip
+ ..\common.pro\bin\*.zip %_DEST%\pck%_EXT%\*.zip
+-..\common\xt.jar %_DEST%\bin%_EXT%\xt.jar
+ 
+ ..\audio\rtufiles\lib\audio\libaudio.a %_DEST%\lib%_EXT%\libaudio.a
+ ..\audio\rtufiles\lib\audio\*.h %_DEST%\inc%_EXT%\audio\*
+Index: helpcontent2/settings.pmk
+===================================================================
+--- helpcontent2/settings.pmk.orig	2006-03-11 21:22:53.000000000 +0100
++++ helpcontent2/settings.pmk	2006-03-11 21:25:44.000000000 +0100
+@@ -1,8 +1,9 @@
++XT_JAR*=$(SOLARBINDIR)$/xt.jar
+ XML_APIS_JAR*=$(SOLARBINDIR)$/xml-apis.jar
+ XERCES_JAR*=$(SOLARBINDIR)$/xercesImpl.jar
+ DB_JAR*=$(SOLARBINDIR)$/db.jar
+ 
+-my_cp:=$(CLASSPATH)$(PATH_SEPERATOR)$(XML_APIS_JAR)$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(SOLARBINDIR)$/xt.jar$(PATH_SEPERATOR)$(SOLARBINDIR)$/unoil.jar$(PATH_SEPERATOR)$(SOLARBINDIR)$/ridl.jar$(PATH_SEPERATOR)$(SOLARBINDIR)$/jurt.jar$(PATH_SEPERATOR)$(SOLARBINDIR)$/jut.jar$(PATH_SEPERATOR)$(SOLARBINDIR)$/xmlsearch.jar$(PATH_SEPERATOR)$(SOLARBINDIR)$/xmlhelp.jar$(PATH_SEPERATOR)$(DB_JAR)
++my_cp:=$(CLASSPATH)$(PATH_SEPERATOR)$(XML_APIS_JAR)$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(XT_JAR)$(PATH_SEPERATOR)$(SOLARBINDIR)$/xt-xmlsearch.jar$(PATH_SEPERATOR)$(SOLARBINDIR)$/unoil.jar$(PATH_SEPERATOR)$(SOLARBINDIR)$/ridl.jar$(PATH_SEPERATOR)$(SOLARBINDIR)$/jurt.jar$(PATH_SEPERATOR)$(SOLARBINDIR)$/jut.jar$(PATH_SEPERATOR)$(SOLARBINDIR)$/xmlsearch.jar$(PATH_SEPERATOR)$(SOLARBINDIR)$/xmlhelp.jar$(PATH_SEPERATOR)$(DB_JAR)
+ 
+ .INCLUDE : $(INCCOM)$/aux_langs.mk
+ 
+Index: officecfg/org/openoffice/configuration/makefile.mk
+===================================================================
+--- officecfg/org/openoffice/configuration/makefile.mk.orig	2006-03-11 21:22:53.000000000 +0100
++++ officecfg/org/openoffice/configuration/makefile.mk	2006-03-11 21:25:44.000000000 +0100
+@@ -46,7 +46,14 @@ PACKAGE=org$/openoffice$/configuration
+ 
+ .INCLUDE :  settings.mk
+ 
+-JARFILES = jaxp.jar parser.jar xt.jar
++# Why do we depend on that? solenv/inc/target.mk:283:.IF "$(NEWCLASS)"!=""
++JARFILES = ..
++
++.IF "$(SYSTEM_XT)" == "YES"
++XCLASSPATH!:=$(XCLASSPATH)$(PATH_SEPERATOR)$(XT_JAR)
++.ELSE
++JARFILES = xt.jar
++.ENDIF
+ 
+ JAVACLASSFILES= \
+ 	$(CLASSDIR)$/$(PACKAGE)$/XMLDefaultGenerator.class \
+Index: officecfg/org/openoffice/helper/makefile.mk
+===================================================================
+--- officecfg/org/openoffice/helper/makefile.mk.orig	2006-03-11 21:22:53.000000000 +0100
++++ officecfg/org/openoffice/helper/makefile.mk	2006-03-11 21:25:44.000000000 +0100
+@@ -43,7 +43,14 @@ PACKAGE=org$/openoffice$/helper
+ 
+ .INCLUDE :  settings.mk
+ 
+-JARFILES = jaxp.jar parser.jar
++# Why do we depend on that? solenv/inc/target.mk:283:.IF "$(NEWCLASS)"!=""
++JARFILES = ..
++
++.IF "$(SYSTEM_XT)" == "YES"
++XCLASSPATH!:=$(XCLASSPATH)$(PATH_SEPERATOR)$(XT_JAR)
++.ELSE
++JARFILES = xt.jar
++.ENDIF
+ 
+ JAVACLASSFILES= \
+ 	$(CLASSDIR)$/$(PACKAGE)$/DefaultNamespaceRemover.class \
+Index: officecfg/prj/build.lst
+===================================================================
+--- officecfg/prj/build.lst.orig	2006-03-11 21:22:53.000000000 +0100
++++ officecfg/prj/build.lst	2006-03-11 21:25:44.000000000 +0100
+@@ -1,4 +1,4 @@
+-oc  officecfg   :   soltools solenv external transex3 NULL
++oc  officecfg   :   soltools solenv xt transex3 NULL
+ oc  officecfg                               usr30073    -   none NULL
+ oc  officecfg                               usr1        -   all oc_mkout NULL
+ oc  officecfg\org\openoffice\configuration  nmake       -   all oc_config NULL
+Index: readlicense_oo/prj/build.lst
+===================================================================
+--- readlicense_oo/prj/build.lst.orig	2006-03-11 21:22:53.000000000 +0100
++++ readlicense_oo/prj/build.lst	2006-03-11 21:25:44.000000000 +0100
+@@ -1,4 +1,4 @@
+-ro  readlicense_oo :   solenv external transex3 NULL
++ro  readlicense_oo :   solenv xt transex3 NULL
+ ro  readlicense_oo			usr1 - all ro_root NULL
+ ro  readlicense_oo\docs\readme			nmake - all ro_readme NULL
+ ro  readlicense_oo\html			nmake - all ro_html NULL
+Index: readlicense_oo/util/makefile.pmk
+===================================================================
+--- readlicense_oo/util/makefile.pmk.orig	2006-03-11 21:22:53.000000000 +0100
++++ readlicense_oo/util/makefile.pmk	2006-03-11 21:25:44.000000000 +0100
+@@ -70,7 +70,7 @@ $(MISC)$/$(GUI)$/readme% : $(MISC)$/read
+ $(MISC)$/readme%.html :
+     @+-$(MKDIR) $(@:d)
+ .IF "$(XSLTPROC)"=="NO_XSLTPROC"
+-	$(JAVAI) $(JAVACPS) $(SOLARBINDIR)$/xt.jar$(PATH_SEPERATOR)$(XERCES_JAR) -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $(subst,_$(@:b:s/_/./:e:s/.//), $(COMMONMISC)$/$(TARGET)$/$(@:b).xrm) ..$/readme.xsl os1=$(OS) gui1=$(GUI) cp1=$(CPUNAME) com1=$(COM) lang1=$(@:b:s/_/./:e:s/.//) type=html file=$@
++	$(JAVAI) $(JAVACPS) $(XT_JAR)$(PATH_SEPERATOR)$(XERCES_JAR) -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $(subst,_$(@:b:s/_/./:e:s/.//), $(COMMONMISC)$/$(TARGET)$/$(@:b).xrm) ..$/readme.xsl os1=$(OS) gui1=$(GUI) cp1=$(CPUNAME) com1=$(COM) lang1=$(@:b:s/_/./:e:s/.//) type=html file=$@
+ .ELSE
+ 	sed 's|xmlns:xt="http://www.jclark.com/xt"||;s|extension-element-prefixes="xt"||;s|.*xt:document.*||;s|<xsl:output method = "HTML" doctype-public = "-//W3C//DTD HTML 3.2//EN" />|<xsl:output method="html" doctype-public="-//W3C//DTD HTML 3.2//EN" />|' < ..$/readme.xsl | xsltproc -o $@ \
+ 	         --stringparam os1 $(OS) \
+@@ -86,7 +86,7 @@ $(MISC)$/readme%.html :
+ $(MISC)$/readme%.txt :
+     @+-$(MKDIR) $(@:d)
+ .IF "$(XSLTPROC)"=="NO_XSLTPROC"
+-	$(JAVAI) $(JAVACPS) $(SOLARBINDIR)$/xt.jar$(PATH_SEPERATOR)$(XERCES_JAR) -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $(subst,_$(@:b:s/_/./:e:s/.//), $(COMMONMISC)$/$(TARGET)$/$(@:b).xrm) ..$/readme.xsl os1=$(OS) gui1=$(GUI) cp1=$(CPUNAME) com1=$(COM) lang1=$(@:b:s/_/./:e:s/.//) type=text file=$@
++	$(JAVAI) $(JAVACPS) $(XT_JAR)$(PATH_SEPERATOR)$(XERCES_JAR) -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $(subst,_$(@:b:s/_/./:e:s/.//), $(COMMONMISC)$/$(TARGET)$/$(@:b).xrm) ..$/readme.xsl os1=$(OS) gui1=$(GUI) cp1=$(CPUNAME) com1=$(COM) lang1=$(@:b:s/_/./:e:s/.//) type=text file=$@
+ .ELSE
+ 	sed 's|xmlns:xt="http://www.jclark.com/xt"||;s|extension-element-prefixes="xt"||;s|.*xt:document.*||;s|<xsl:output method = "HTML" doctype-public = "-//W3C//DTD HTML 3.2//EN" />|<xsl:output method="text" />|' < ..$/readme.xsl | xsltproc -o $@ \
+ 	         --stringparam os1 $(OS) \
+Index: scp2/source/ooo/file_ooo.scp
+===================================================================
+--- scp2/source/ooo/file_ooo.scp.orig	2006-03-11 21:22:53.000000000 +0100
++++ scp2/source/ooo/file_ooo.scp	2006-03-11 21:25:44.000000000 +0100
+@@ -767,7 +767,10 @@ End
+ #endif
+ 
+ #ifdef SOLAR_JAVA
++STD_JAR_FILE( gid_File_Jar_Xt_XmlSearch, xt-xmlsearch )
++#ifndef SYSTEM_XT
+ STD_JAR_FILE( gid_File_Jar_Xt, xt )
++#endif
+ #ifndef SYSTEM_XALAN
+ STD_JAR_FILE( gid_File_Jar_Xalan, xalan )
+ #endif
+Index: scp2/source/ooo/makefile.mk
+===================================================================
+--- scp2/source/ooo/makefile.mk.orig	2006-03-11 21:22:53.000000000 +0100
++++ scp2/source/ooo/makefile.mk	2006-03-11 21:25:44.000000000 +0100
+@@ -166,6 +166,10 @@ SCPDEFS+=-DSYSTEM_BSH -DBSH_JAR=\""file:
+ SCPDEFS+=-DSYSTEM_HSQLDB -DHSQLDB_JAR=\""file://$(HSQLDB_JAR)"\"
+ .ENDIF 
+ 
++.IF "$(SYSTEM_XT)" == "YES" 
++SCPDEFS+=-DSYSTEM_XT -DXT_JAR=\""file://$(XT_JAR)"\"
++.ENDIF
++
+ .IF "$(SYSTEM_XML_APIS)" == "YES" 
+ SCPDEFS+=-DSYSTEM_XML_APIS
+ .ENDIF
+Index: scp2/source/ooo/module_hidden_ooo.scp
+===================================================================
+--- scp2/source/ooo/module_hidden_ooo.scp.orig	2006-03-11 21:22:53.000000000 +0100
++++ scp2/source/ooo/module_hidden_ooo.scp	2006-03-11 21:25:44.000000000 +0100
+@@ -142,6 +142,7 @@ Module gid_Module_Root_Files_3
+ 	gid_File_Jar_Scriptproviderforjava,
+ 	gid_File_Jar_Scriptproviderforjavascript,
+ 	gid_File_Jar_Xt,
++	gid_File_Jar_Xt_XmlSearch,
+ 	gid_File_Jar_Xml_Apis,
+ 	gid_File_Jar_Bsh,
+ 	gid_File_Jar_Classes,
+Index: scp2/source/ooo/profileitem_ooo.scp
+===================================================================
+--- scp2/source/ooo/profileitem_ooo.scp.orig	2006-03-11 21:22:53.000000000 +0100
++++ scp2/source/ooo/profileitem_ooo.scp	2006-03-11 21:25:44.000000000 +0100
+@@ -789,16 +789,21 @@ ProfileItem gid_Profileitem_Jvmfwk_Uno_J
+     ValueList21 = "$ORIGIN/classes/XMergeBridge.jar";
+     ValueList22 = "$ORIGIN/classes/XSLTFilter.jar";
+     ValueList23 = "$ORIGIN/classes/XSLTValidate.jar";
+-    ValueList24 = "$ORIGIN/classes/xt.jar";
+-    ValueList25 = "$ORIGIN/classes/activation.jar $ORIGIN/classes/agenda.jar";
+-    ValueList26 = "$ORIGIN/classes/aportisdoc.jar $ORIGIN/classes/avmedia.jar";
+-    ValueList27 = "$ORIGIN/classes/email.jar $ORIGIN/classes/fax.jar";
+-    ValueList28 = "$ORIGIN/classes/pexcel.jar $ORIGIN/classes/pocketword.jar";
+-    ValueList29 = "$ORIGIN/classes/mail.jar";
++#ifdef SYSTEM_XT
++    ValueList24 = XT_JAR;
++#else
++    ValueList25 = "$ORIGIN/classes/xt.jar";
++#endif
++    ValueList26 = "$ORIGIN/classes/activation.jar $ORIGIN/classes/agenda.jar";
++    ValueList27 = "$ORIGIN/classes/aportisdoc.jar $ORIGIN/classes/avmedia.jar";
++    ValueList28 = "$ORIGIN/classes/email.jar $ORIGIN/classes/fax.jar";
++    ValueList29 = "$ORIGIN/classes/pexcel.jar $ORIGIN/classes/pocketword.jar";
++    ValueList30 = "$ORIGIN/classes/mail.jar";
+ #ifdef SYSTEM_HSQLDB
+-    ValueList30 = HSQLDB_JAR;
++    ValueList31 = HSQLDB_JAR;
+ #else
+-    ValueList31 = "$ORIGIN/classes/hsqldb.jar";
++    ValueList32 = "$ORIGIN/classes/hsqldb.jar";
+ #endif
+-    ValueList32 = "$ORIGIN/classes/sdbc_hsqldb.jar";
++    ValueList33 = "$ORIGIN/classes/sdbc_hsqldb.jar";
++    ValueList34 = "$ORIGIN/classes/xt-xmlsearch.jar";
+ End
+Index: solenv/inc/tg_config.mk
+===================================================================
+--- solenv/inc/tg_config.mk.orig	2006-03-11 21:22:53.000000000 +0100
++++ solenv/inc/tg_config.mk	2006-03-11 21:25:44.000000000 +0100
+@@ -57,6 +57,7 @@ $(XCS_TRIM) :   $(DTDDIR)$/registry$/com
+                 $(XSLDIR)$/schema_trim.xsl 
+ .ENDIF
+ 
++XT_JAR*=$(SOLARBINDIR)$/xt.jar
+ XML_APIS_JAR*=$(SOLARBINDIR)$/xml-apis.jar
+ XERCES_JAR*=$(SOLARBINDIR)$/xercesImpl.jar
+ 
+@@ -67,9 +68,9 @@ $(PROCESSOUT)$/registry$/schema$/$(PACKA
+ .IF "$(NO_INSPECTION)"==""
+ 	$(JAVAI) $(JAVACPS) $(XML_APIS_JAR)$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/cfgimport.jar -Djavax.xml.parsers.SAXParserFactory=org.apache.xerces.jaxp.SAXParserFactoryImpl org.openoffice.configuration.Inspector $<
+ .ENDIF			# "$(NO_INSPECTION)"==""
+-	$(JAVAI) $(JAVACPS) $(SOLARBINDIR)$/xt.jar$(PATH_SEPERATOR)$(XERCES_JAR) -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/schema_val.xsl $(@:d)$*.val componentName=$(PACKAGE).$*
+-	$(JAVAI) $(JAVACPS) $(SOLARBINDIR)$/xt.jar$(PATH_SEPERATOR)$(XERCES_JAR) -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/sanity.xsl $(@:d)$*.san 
+-	$(JAVAI) $(JAVACPS) $(SOLARBINDIR)$/xt.jar$(PATH_SEPERATOR)$(XERCES_JAR) -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/schema_trim.xsl $(@:d)$*.tmp
++	$(JAVAI) $(JAVACPS) $(XT_JAR)$(PATH_SEPERATOR)$(XERCES_JAR) -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/schema_val.xsl $(@:d)$*.val componentName=$(PACKAGE).$*
++	$(JAVAI) $(JAVACPS) $(XT_JAR)$(PATH_SEPERATOR)$(XERCES_JAR) -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/sanity.xsl $(@:d)$*.san 
++	$(JAVAI) $(JAVACPS) $(XT_JAR)$(PATH_SEPERATOR)$(XERCES_JAR) -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/schema_trim.xsl $(@:d)$*.tmp
+ 	$(JAVAI) $(JAVACPS) $(XML_APIS_JAR)$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/schema.jar -Djavax.xml.parsers.SAXParserFactory=org.apache.xerces.jaxp.SAXParserFactoryImpl org.openoffice.helper.PrettyPrinter $(@:d)$*.tmp $@
+ .ELSE
+ # xsltproc already validates against the dtd.  For additional validation,
+@@ -104,7 +105,7 @@ $(PROCESSOUT)$/registry$/res$/{$(alllang
+     @+echo -------------+ creating locale dependent resource bundles
+ 	-$(MKDIRHIER) $(@:d)
+ .IF "$(XSLTPROC)"=="NO_XSLTPROC"
+-	$(JAVAI) $(JAVACPS) $(SOLARBINDIR)$/xt.jar$(PATH_SEPERATOR)$(XERCES_JAR) -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/resource.xsl $@ locale={$(subst,$/$(PACKAGEDIR)$/$(@:f), $(subst,$(PROCESSOUT)$/registry$/res$/, $@))}
++	$(JAVAI) $(JAVACPS) $(XT_JAR)$(PATH_SEPERATOR)$(XERCES_JAR) -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/resource.xsl $@ locale={$(subst,$/$(PACKAGEDIR)$/$(@:f), $(subst,$(PROCESSOUT)$/registry$/res$/, $@))}
+ .ELSE
+ 	$(XSLTPROC) -o $@ \
+ 	            --stringparam locale {$(subst,$/$(PACKAGEDIR)$/$(@:f), $(subst,$(PROCESSOUT)$/registry$/res$/, $@))} \
+@@ -134,8 +135,8 @@ $(PROCESSOUT)$/registry$/data$/$(PACKAGE
+ .IF "$(NO_INSPECTION)"==""
+ 	$(JAVAI) $(JAVACPS) $(XML_APIS_JAR)$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/cfgimport.jar -Djavax.xml.parsers.SAXParserFactory=org.apache.xerces.jaxp.SAXParserFactoryImpl org.openoffice.configuration.Inspector $<
+ .ENDIF			# "$(NO_INSPECTION)"==""
+-	$(JAVAI) $(JAVACPS) $(SOLARBINDIR)$/xt.jar$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/cfgimport.jar -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/data_val.xsl $(@:d)$*.val xcs=$(XCSROOT)$/registry$/schema$/$(PACKAGEDIR)$/$*.xcs schemaRoot=$(XCSROOT)$/registry$/schema
+-	$(JAVAI) $(JAVACPS) $(SOLARBINDIR)$/xt.jar$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/cfgimport.jar -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/alllang.xsl $(@:d)$*.tmp xcs=$(XCSROOT)$/registry$/schema$/$(PACKAGEDIR)$/$*.xcs schemaRoot=$(XCSROOT)$/registry$/schema
++	$(JAVAI) $(JAVACPS) $(XT_JAR)$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/cfgimport.jar -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/data_val.xsl $(@:d)$*.val xcs=$(XCSROOT)$/registry$/schema$/$(PACKAGEDIR)$/$*.xcs schemaRoot=$(XCSROOT)$/registry$/schema
++	$(JAVAI) $(JAVACPS) $(XT_JAR)$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/cfgimport.jar -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/alllang.xsl $(@:d)$*.tmp xcs=$(XCSROOT)$/registry$/schema$/$(PACKAGEDIR)$/$*.xcs schemaRoot=$(XCSROOT)$/registry$/schema
+ 	$(JAVAI) $(JAVACPS) $(XML_APIS_JAR)$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/schema.jar -Djavax.xml.parsers.SAXParserFactory=org.apache.xerces.jaxp.SAXParserFactoryImpl org.openoffice.helper.PrettyPrinter $(@:d)$*.tmp $@
+ .ELSE
+ # xsltproc already validates against the dtd.  For additional validation,
+@@ -173,7 +174,7 @@ $(PROCESSOUT)$/registry$/res$/{$(alllang
+     @+echo -------------+ creating locale dependent entries
+ 	-$(MKDIRHIER) $(@:d)
+ .IF "$(XSLTPROC)"=="NO_XSLTPROC"
+-	$(JAVAI) $(JAVACPS) $(SOLARBINDIR)$/xt.jar$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/cfgimport.jar -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/alllang.xsl $(@:d)$*.tmp xcs=$(XCSROOT)$/registry$/schema$/$(PACKAGEDIR)$/$*.xcs schemaRoot=$(XCSROOT)$/registry$/schema locale={$(subst,$/$(PACKAGEDIR)$/$(@:f), $(subst,$(PROCESSOUT)$/registry$/res$/, $@))}	
++	$(JAVAI) $(JAVACPS) $(XT_JAR)$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/cfgimport.jar -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/alllang.xsl $(@:d)$*.tmp xcs=$(XCSROOT)$/registry$/schema$/$(PACKAGEDIR)$/$*.xcs schemaRoot=$(XCSROOT)$/registry$/schema locale={$(subst,$/$(PACKAGEDIR)$/$(@:f), $(subst,$(PROCESSOUT)$/registry$/res$/, $@))}	
+ 	$(JAVAI) $(JAVACPS) $(XML_APIS_JAR)$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/schema.jar -Djavax.xml.parsers.SAXParserFactory=org.apache.xerces.jaxp.SAXParserFactoryImpl org.openoffice.helper.PrettyPrinter $(@:d)$*.tmp $@
+ .ELSE
+ 	$(XSLTPROC) -o $(@:d)$*.tmp \
+@@ -209,7 +210,7 @@ $(PROCESSOUT)$/registry$/spool$/$(PACKAG
+     @+echo -------------+ creating a module file
+ 	-$(MKDIRHIER) $(@:d) 
+ .IF "$(XSLTPROC)"=="NO_XSLTPROC"
+-	$(JAVAI) $(JAVACPS) $(SOLARBINDIR)$/xt.jar$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/cfgimport.jar -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/alllang.xsl $(@:d)$(@:f:s/.xcu/.tmp/) xcs=$(XCSROOT)$/registry$/schema$/$(PACKAGEDIR)$/$(<:b).xcs schemaRoot=$(XCSROOT)$/registry$/schema module={$(subst,$(<:b)-, $(*))}
++	$(JAVAI) $(JAVACPS) $(XT_JAR)$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/cfgimport.jar -Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser com.jclark.xsl.sax.Driver $< $(XSLDIR)$/alllang.xsl $(@:d)$(@:f:s/.xcu/.tmp/) xcs=$(XCSROOT)$/registry$/schema$/$(PACKAGEDIR)$/$(<:b).xcs schemaRoot=$(XCSROOT)$/registry$/schema module={$(subst,$(<:b)-, $(*))}
+ 	$(JAVAI) $(JAVACPS) $(XML_APIS_JAR)$(PATH_SEPERATOR)$(XERCES_JAR)$(PATH_SEPERATOR)$(PROCESSORDIR)$/schema.jar -Djavax.xml.parsers.SAXParserFactory=org.apache.xerces.jaxp.SAXParserFactoryImpl org.openoffice.helper.PrettyPrinter $(@:d)$(@:f:s/.xcu/.tmp/) $@
+ .ELSE
+ 	$(XSLTPROC) -o $(@:d)$(@:f:s/.xcu/.tmp/) \
+Index: solenv/inc/tg_jar.mk
+===================================================================
+--- solenv/inc/tg_jar.mk.orig	2006-03-11 21:22:53.000000000 +0100
++++ solenv/inc/tg_jar.mk	2006-03-11 21:25:44.000000000 +0100
+@@ -51,6 +51,12 @@ $(JARTARGETN) : $(JARMANIFEST) $(JAVACLA
+ 
+ CUSTOMMANIFESTFILEDEP:=$(MISC)$/$(TARGET)_$(CUSTOMMANIFESTFILE:f)
+ 
++.IF "$(SYSTEM_XT)" == "YES"
++XT_SUBST=$(XT_JAR)
++.ELSE
++XT_SUBST=xt.jar
++.ENDIF
++
+ .IF "$(SYSTEM_XML_APIS)" == "YES"
+ XML_APIS_SUBST=$(XML_APIS_JAR)
+ .ELSE
+@@ -72,7 +78,7 @@ XALAN_SUBST=xalan.jar
+ 
+ $(MISC)$/$(TARGET)_$(CUSTOMMANIFESTFILE:f) : $(subst,/,$/ $(DMAKE_WORK_DIR))$/$(CUSTOMMANIFESTFILE)
+ 	+-$(RM) $@
+-	+$(TYPE) $< | $(SED) s:xml-apis.jar:$(XML_APIS_SUBST):g | $(SED) s:xercesImpl.jar:$(XERCES_SUBST):g | $(SED) s:xalan.jar:$(XALAN_SUBST):g > $@
++	+$(TYPE) $< | $(SED) s:xt.jar:$(XT_SUBST):g | $(SED) s:xml-apis.jar:$(XML_APIS_SUBST):g | $(SED) s:xercesImpl.jar:$(XERCES_SUBST):g | $(SED) s:xalan.jar:$(XALAN_SUBST):g > $@
+ .ENDIF			# "$(CUSTOMMANIFESTFILE)"!=""
+ 
+ $(JARMANIFEST) .PHONY : $(CUSTOMMANIFESTFILEDEP)
+Index: xmlhelp/source/com/sun/star/help/makefile.mk
+===================================================================
+--- xmlhelp/source/com/sun/star/help/makefile.mk.orig	2006-03-11 21:22:53.000000000 +0100
++++ xmlhelp/source/com/sun/star/help/makefile.mk	2006-03-11 21:25:44.000000000 +0100
+@@ -42,9 +42,15 @@ TARGET  = com_sun_star_help
+ 
+ .INCLUDE : settings.mk
+ 
+-JARFILES 	= xt.jar unoil.jar ridl.jar jurt.jar jut.jar xmlsearch.jar
++JARFILES 	= xt-xmlsearch.jar unoil.jar ridl.jar jurt.jar jut.jar xmlsearch.jar
+ EXTRAJARFILES 	= 
+ 
++.IF "$(SYSTEM_XT)" == "YES"
++XCLASSPATH!:=$(XCLASSPATH)$(PATH_SEPERATOR)$(XT_JAR)
++.ELSE
++JARFILES += xt.jar
++.ENDIF
++
+ .IF "$(SYSTEM_XML_APIS)" == "YES"
+ XCLASSPATH!:=$(XCLASSPATH)$(PATH_SEPERATOR)$(XML_APIS_JAR)
+ .ELSE
+Index: xt/download/build-xt-src-only.sh
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ xt/download/build-xt-src-only.sh	2006-03-11 21:25:44.000000000 +0100
+@@ -0,0 +1,16 @@
++#! /bin/sh
++
++# Remove generated files from xt's "-src" zip file
++
++bin_src_zip=$1
++src_zip="$(basename $1 .zip)-only.zip"
++
++exclude_re="^xt-[0-9]*/\(ant\|docs/api\|lib\|thirdparty\)\|semantic\.cache"
++
++cp $bin_src_zip $src_zip
++
++unzip -l $bin_src_zip \
++    | grep / \
++    | sed -e "s/^[^/]*xt-/xt-/" \
++    | grep -e $exclude_re \
++    | zip -d -@ $src_zip
+Index: xt/makefile.mk
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ xt/makefile.mk	2006-03-11 21:25:44.000000000 +0100
+@@ -0,0 +1,71 @@
++#*************************************************************************
++#
++#   OpenOffice.org - a multi-platform office productivity suite
++#
++#   $RCSfile: use-system-xt.diff,v $
++#
++#   $Revision: 1.1 $
++#
++#   last change: $Author: suka $ $Date: 2006/03/15 09:30:07 $
++#
++#   The Contents of this file are made available subject to
++#   the terms of GNU Lesser General Public License Version 2.1.
++#
++#
++#     GNU Lesser General Public License Version 2.1
++#     =============================================
++#     Copyright 2005 by Sun Microsystems, Inc.
++#     901 San Antonio Road, Palo Alto, CA 94303, USA
++#
++#     This library is free software; you can redistribute it and/or
++#     modify it under the terms of the GNU Lesser General Public
++#     License version 2.1, as published by the Free Software Foundation.
++#
++#     This library is distributed in the hope that it will be useful,
++#     but WITHOUT ANY WARRANTY; without even the implied warranty of
++#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++#     Lesser General Public License for more details.
++#
++#     You should have received a copy of the GNU Lesser General Public
++#     License along with this library; if not, write to the Free Software
++#     Foundation, Inc., 59 Temple Place, Suite 330, Boston,
++#     MA  02111-1307  USA
++#
++#*************************************************************************
++
++PRJ=.
++
++PRJNAME=xt
++TARGET=xt
++
++.IF "$(SYSTEM_XT)" == "YES"
++all:
++        @echo "An installation of xt should already exist on your system."
++        @echo "Therefore the version provided here does not need to be built."
++
++.ELSE
++.IF "$(SOLAR_JAVA)"!=""
++# --- Settings -----------------------------------------------------
++
++.INCLUDE :	settings.mk
++
++# --- Files --------------------------------------------------------
++
++TARFILE_NAME=xt-20051206-src-only
++TARFILE_ROOTDIR=xt-20051206
++
++ADDITIONAL_FILES=makefile.mk
++PATCH_FILE_NAME=xt-20051206.patch
++BUILD_ACTION=dmake $(MFLAGS) $(CALLMACROS)
++
++# --- Targets ------------------------------------------------------
++
++.INCLUDE : set_ext.mk
++.INCLUDE : target.mk
++.INCLUDE : tg_ext.mk
++
++.ELSE
++all:
++        @echo Java disabled
++.ENDIF
++.ENDIF
+Index: xt/prj/build.lst
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ xt/prj/build.lst	2006-03-11 21:25:44.000000000 +0100
+@@ -0,0 +1,4 @@
++xt      xt      :       external NULL
++xt      xt                      usr1    -       all     xt_mkout NULL
++xt      xt                      nmake   -       all     xt NULL
++xt      xt\src\com\jclark\xsl   nmake   -       all     xt_xs xt NULL
+Index: xt/prj/d.lst
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ xt/prj/d.lst	2006-03-11 21:25:44.000000000 +0100
+@@ -0,0 +1 @@
++..\%__SRC%\class\*.jar %_DEST%\bin%_EXT%\
+Index: xt/src/com/jclark/xsl/dom/XmlSearchTransform.java
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ xt/src/com/jclark/xsl/dom/XmlSearchTransform.java	2006-03-11 21:25:44.000000000 +0100
+@@ -0,0 +1,10 @@
++package com.jclark.xsl.dom;
++
++import com.jclark.xsl.om.Node;
++import com.jclark.xsl.tr.Result;
++
++public interface XmlSearchTransform extends Transform
++{
++    public void transform(Node sourceRoot,
++                          Result result) throws TransformException;
++}
+Index: xt/src/com/jclark/xsl/dom/XmlSearchXSLTransformEngine.java
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ xt/src/com/jclark/xsl/dom/XmlSearchXSLTransformEngine.java	2006-03-11 21:25:44.000000000 +0100
+@@ -0,0 +1,178 @@
++// Derived from:
++// Id: XSLTransformEngine.java 96 2005-02-28 21:07:29Z blindsey
++// And added methods required by XmlSearch
++
++// Copyright (c) 1998, 1999 James Clark
++
++// Permission is hereby granted, free of charge, to any person obtaining
++// a copy of this software and associated documentation files (the
++// ``Software''), to deal in the Software without restriction, including
++// without limitation the rights to use, copy, modify, merge, publish,
++// distribute, sublicense, and/or sell copies of the Software, and to
++// permit persons to whom the Software is furnished to do so, subject to
++// the following conditions:
++
++// The above copyright notice and this permission notice shall be included
++// in all copies or substantial portions of the Software.
++
++// THE SOFTWARE IS PROVIDED ``AS IS'', WITHOUT WARRANTY OF ANY KIND, EXPRESS
++// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
++// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
++// IN NO EVENT SHALL JAMES CLARK BE LIABLE FOR ANY CLAIM, DAMAGES OR
++// OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
++// ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
++// OTHER DEALINGS IN THE SOFTWARE.
++
++// Except as contained in this notice, the name of James Clark shall
++// not be used in advertising or otherwise to promote the sale, use or
++// other dealings in this Software without prior written authorization
++// from James Clark.
++
++
++package com.jclark.xsl.dom;
++
++import com.jclark.xsl.tr.*;
++import com.jclark.xsl.om.*;
++import com.jclark.xsl.sax.ExtensionHandlerImpl;
++import com.jclark.xsl.sax.MultiNamespaceResult;
++import java.net.URL;
++import java.io.IOException;
++
++public class XmlSearchXSLTransformEngine
++    implements TransformEngine, XMLProcessor
++{
++    private Engine engine;
++    private DOMExtensions extend;
++
++    public Node load(URL url,
++                   int documentIndex,
++                   LoadContext context,
++                   NameTable nameTable) throws XSLException
++    {
++      throw new XSLException("external documents not supported");
++    }
++
++    public Result createResult(Node baseNode,
++                             int documentIndex,
++                             LoadContext loadContext,
++                             Node[] rootNodeRef) throws XSLException
++    {
++      if (baseNode == null)
++          throw new XSLException("cannot convert result tree fragment returned by extension function to a node-set with the DOM");
++      RootNode root = ((NodeBase)baseNode).root;
++      org.w3c.dom.DocumentFragment docFrag
++          = root.ownerDocument.createDocumentFragment();
++      String base = null;
++      URL baseURL = baseNode.getURL();
++      if (baseURL != null)
++          base = baseURL.toString();
++      rootNodeRef[0] =
++          new RootNode(docFrag,
++                       extend,
++                       loadContext,
++                       engine.getNameTable(),
++                       base,
++                       documentIndex);
++      return new MultiNamespaceResult(new DOMBuilder(docFrag), null);
++    }
++
++    public XmlSearchXSLTransformEngine()
++    {
++      engine = new EngineImpl(this, new ExtensionHandlerImpl());
++    }
++
++    public XmlSearchXSLTransformEngine(DOMExtensions extend)
++    {
++      this();
++      this.extend = extend;
++    }
++
++    private class TransformImpl implements XmlSearchTransform, ParameterSet
++    {
++      private Sheet sheet;
++
++      TransformImpl (Sheet sheet) {
++          this.sheet = sheet;
++      }
++
++      public void transform(org.w3c.dom.Node sourceRoot,
++                            org.w3c.dom.Node resultRoot)
++          throws TransformException {
++          try {
++              sheet.process(new RootNode(sourceRoot,
++                                         extend,
++                                         sheet.getSourceLoadContext(),
++                                         engine.getNameTable(),
++                                         null,
++                                         0),
++                            XmlSearchXSLTransformEngine.this,
++                            this, // ParameterSet
++                            new MultiNamespaceResult(new DOMBuilder(resultRoot),
++                                                     null));
++          }
++          catch (XSLException e) {
++              throw toTransformException(e);
++          }
++      }
++
++      public void transform(Node sourceRoot,
++                            Result result)
++          throws TransformException {
++          try {
++              sheet.process(sourceRoot,
++                            XmlSearchXSLTransformEngine.this,
++                            this, // ParameterSet
++                            result);
++          }
++          catch (XSLException e) {
++              throw toTransformException(e);
++          }
++      }
++      public Object getParameter(Name name) {
++          return null;
++      }
++    }
++
++    public Transform createTransform(org.w3c.dom.Node domNode)
++      throws TransformException
++    {
++      try {
++          return new TransformImpl(engine.createSheet(new RootNode(domNode,
++                                                                   extend,
++                                                                   engine.getSheetLoadContext(),
++                                                                   engine.getNameTable(),
++                                                                   null,
++                                                                   0)));
++      }
++      catch (XSLException e) {
++          throw toTransformException(e);
++      }
++      catch (IOException e) {
++          throw new Error("unexpected exception: " + e);
++      }
++    }
++
++    public NameTable getNameTable()
++    {
++      return engine.getNameTable();
++    }
++
++    public LoadContext getSourceLoadContext()
++    {
++      return engine.getSheetLoadContext();
++    }
++
++    private TransformException toTransformException(XSLException e)
++    {
++      org.w3c.dom.Node domNode = null;
++      Node node = e.getNode();
++      if (node != null) {
++          domNode = ((NodeBase)node).domNode;
++      }
++      String message = e.getMessage();
++      if (e == null) {
++          message = e.getException().toString();
++      }
++      return new TransformException(message, domNode);
++    }
++}
+Index: xt/src/com/jclark/xsl/makefile.mk
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ xt/src/com/jclark/xsl/makefile.mk	2006-03-11 21:25:44.000000000 +0100
+@@ -0,0 +1,74 @@
++#*************************************************************************
++#
++#   OpenOffice.org - a multi-platform office productivity suite
++#
++#   $RCSfile: use-system-xt.diff,v $
++#
++#   $Revision: 1.1 $
++#
++#   last change: $Author: suka $ $Date: 2006/03/15 09:30:07 $
++#
++#   The Contents of this file are made available subject to
++#   the terms of GNU Lesser General Public License Version 2.1.
++#
++#
++#     GNU Lesser General Public License Version 2.1
++#     =============================================
++#     Copyright 2005 by Sun Microsystems, Inc.
++#     901 San Antonio Road, Palo Alto, CA 94303, USA
++#
++#     This library is free software; you can redistribute it and/or
++#     modify it under the terms of the GNU Lesser General Public
++#     License version 2.1, as published by the Free Software Foundation.
++#
++#     This library is distributed in the hope that it will be useful,
++#     but WITHOUT ANY WARRANTY; without even the implied warranty of
++#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++#     Lesser General Public License for more details.
++#
++#     You should have received a copy of the GNU Lesser General Public
++#     License along with this library; if not, write to the Free Software
++#     Foundation, Inc., 59 Temple Place, Suite 330, Boston,
++#     MA  02111-1307  USA
++#
++#*************************************************************************
++
++PRJ = ..$/..$/..$/..
++PRJNAME = xt-xmlsearch
++PACKAGE = com$/jclark$/xsl
++TARGET = com_jclark_xsl
++
++# --- Settings -----------------------------------------------------
++
++.INCLUDE : settings.mk
++
++#.IF "$(XML_CLASSPATH)" != ""
++#XCLASSPATH+=:$(XML_CLASSPATH)
++#.ENDIF
++
++# Why do we depend on that? solenv/inc/target.mk:283:.IF "$(NEWCLASS)"!=""
++JARFILES = ..
++
++.IF "$(SYSTEM_XT)" == "YES"
++XCLASSPATH=$(XT_JAR)
++.ELSE
++JARFILES = xt.jar
++.ENDIF
++
++JAVAFILES             = $(subst,$(CLASSDIR)$/$(PACKAGE)$/, $(subst,.class,.java $(JAVACLASSFILES)))
++
++# --- Files --------------------------------------------------------
++
++JAVACLASSFILES        = \
++      $(CLASSDIR)$/$(PACKAGE)$/dom$/XmlSearchTransform.class \
++      $(CLASSDIR)$/$(PACKAGE)$/dom$/XmlSearchXSLTransformEngine.class
++
++JARCLASSDIRS  = com$/jclark
++JARTARGET     = $(PRJNAME).jar
++JARCOMPRESS   = TRUE
++CUSTOMMANIFESTFILE =
++
++
++# --- Targets ------------------------------------------------------
++
++.INCLUDE :  target.mk
+Index: xt/xt-20051206.patch
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ xt/xt-20051206.patch	2006-03-11 21:32:20.000000000 +0100
+@@ -0,0 +1,209 @@
++diff -rc misc/xt-20051206/build.xml misc/build/xt-20051206/build.xml
++*** misc/xt-20051206/build.xml	2005-12-06 14:30:46.000000000 +0100
++--- misc/build/xt-20051206/build.xml	2006-01-08 13:44:15.000000000 +0100
++***************
++*** 1,6 ****
++  <!-- $Id: use-system-xt.diff,v 1.1 2006/03/15 09:30:07 suka Exp $ -->
++  
++! <project name="federator" default="help" basedir=".">
++  
++    <!-- 
++      |ANT Build targets for compiling sources, generating
++--- 1,6 ----
++  <!-- $Id: use-system-xt.diff,v 1.1 2006/03/15 09:30:07 suka Exp $ -->
++  
++! <project name="federator" default="compile" basedir=".">
++  
++    <!-- 
++      |ANT Build targets for compiling sources, generating
++***************
++*** 238,244 ****
++        </srcfiles>
++      </uptodate>
++  
++!     <mkdir dir="${lib} "/>
++  
++      <!-- for debugging this build script -->  
++      <echo message="top: ${top}" />
++--- 238,244 ----
++        </srcfiles>
++      </uptodate>
++  
++!     <mkdir dir="${lib}"/>
++  
++      <!-- for debugging this build script -->  
++      <echo message="top: ${top}" />
++***************
++*** 306,311 ****
++--- 306,314 ----
++        
++        <classpath refid="compileJars" />
++  
+++       <include name="**/*.java"/>
+++       <exclude name="**/*Servlet*.java"/>
+++ 
++      </javac>
++  
++      <!-- bundle up any local properties files -->
++***************
++*** 314,323 ****
++      </copy>
++  
++      <!-- jar it up -->
++!     <jar jarfile="${stage}/xt${version}.jar" 
++           basedir="${stage}/xt"
++           includes="**/*" />
++!     <copy todir="${lib}" file="${stage}/xt${version}.jar"/>
++    </target>
++  
++  
++--- 317,326 ----
++      </copy>
++  
++      <!-- jar it up -->
++!     <jar jarfile="${stage}/xt.jar" 
++           basedir="${stage}/xt"
++           includes="**/*" />
++!     <copy todir="${top}/../../../class" file="${stage}/xt.jar"/>
++    </target>
++  
++  
++diff -rc misc/xt-20051206/makefile.mk misc/build/xt-20051206/makefile.mk
++*** misc/xt-20051206/makefile.mk	2006-01-08 13:44:48.000000000 +0100
++--- misc/build/xt-20051206/makefile.mk	2006-01-08 13:37:20.000000000 +0100
++***************
++*** 1 ****
++! dummy
++--- 1,40 ----
++! #*************************************************************************
++! #
++! #   $RCSfile: use-system-xt.diff,v $
++! #
++! #   $Revision: 1.1 $
++! #
++! #   last change: $Author: suka $ $Date: 2006/03/15 09:30:07 $
++! #
++! #   The Contents of this file are made available subject to
++! #   the terms of GNU Lesser General Public License Version 2.1.
++! #
++! #
++! #     GNU Lesser General Public License Version 2.1
++! #     =============================================
++! #     Copyright 2005 by Sun Microsystems, Inc.
++! #     901 San Antonio Road, Palo Alto, CA 94303, USA
++! #
++! #     This library is free software; you can redistribute it and/or
++! #     modify it under the terms of the GNU Lesser General Public
++! #     License version 2.1, as published by the Free Software Foundation.
++! #
++! #     This library is distributed in the hope that it will be useful,
++! #     but WITHOUT ANY WARRANTY; without even the implied warranty of
++! #     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++! #     Lesser General Public License for more details.
++! #
++! #     You should have received a copy of the GNU Lesser General Public
++! #     License along with this library; if not, write to the Free Software
++! #     Foundation, Inc., 59 Temple Place, Suite 330, Boston,
++! #     MA  02111-1307  USA
++! #
++! #*************************************************************************
++! 
++! PRJ=..$/..$/..$/..
++! PRJNAME=xt
++! TARGET=compile
++! 
++! .INCLUDE : ant.mk
++! 
++! ALLTAR : ANTBUILD
++*** misc/xt-20051206/src/xt/java/com/jclark/xsl/tr/AppendAction.java	2005-12-06 14:30:50.000000000 +0100
++--- misc/build/xt-20051206/src/xt/java/com/jclark/xsl/tr/AppendAction.java	2006-03-11 21:30:06.000000000 +0100
++***************
++*** 16,24 ****
++      public void invoke(ProcessContext context, 
++                         Node sourceNode, Result result) throws XSLException
++      {
++!         for (Enumeration enum = sequence.elements();
++!              enum.hasMoreElements();)
++!             ((Action)enum.nextElement()).invoke(context, sourceNode, result);
++      }
++  
++      void add(Action action)
++--- 16,24 ----
++      public void invoke(ProcessContext context, 
++                         Node sourceNode, Result result) throws XSLException
++      {
++!         for (Enumeration e = sequence.elements();
++!              e.hasMoreElements();)
++!             ((Action)e.nextElement()).invoke(context, sourceNode, result);
++      }
++  
++      void add(Action action)
++diff -rc misc/xt-20051206/src/xt/java/com/jclark/xsl/trax/TransformerFactoryImpl.java misc/build/xt-20051206/src/xt/java/com/jclark/xsl/trax/TransformerFactoryImpl.java
++*** misc/xt-20051206/src/xt/java/com/jclark/xsl/trax/TransformerFactoryImpl.java	2005-12-06 14:30:52.000000000 +0100
++--- misc/build/xt-20051206/src/xt/java/com/jclark/xsl/trax/TransformerFactoryImpl.java	2006-01-08 13:37:20.000000000 +0100
++***************
++*** 384,389 ****
++--- 384,396 ----
++  
++      }
++  
+++     /**
+++      *
+++      */
+++     public void setFeature(String name, boolean value) throws TransformerConfigurationException
+++     {
+++     }
+++ 
++      //
++      //
++      //
++*** misc/xt-20051206/src/xt/java/com/jclark/xsl/expr/PatternList.java	2005-12-06 14:30:50.000000000 +0100
++--- misc/build/xt-20051206/src/xt/java/com/jclark/xsl/expr/PatternList.java	2006-03-11 21:30:24.000000000 +0100
++***************
++*** 126,134 ****
++              case Node.ATTRIBUTE:
++              case Node.PROCESSING_INSTRUCTION:
++              case Node.ALLTYPES:            // for "node()" node test
++!                 for (Enumeration enum =
++!                          nameRules.elements();  enum.hasMoreElements(); ) {
++!                     append((Vector)enum.nextElement(), ppb, obj);
++                  }
++                  append(anyNameRules, ppb, obj);
++                  break;
++--- 126,134 ----
++              case Node.ATTRIBUTE:
++              case Node.PROCESSING_INSTRUCTION:
++              case Node.ALLTYPES:            // for "node()" node test
++!                 for (Enumeration e =
++!                          nameRules.elements();  e.hasMoreElements(); ) {
++!                     append((Vector)e.nextElement(), ppb, obj);
++                  }
++                  append(anyNameRules, ppb, obj);
++                  break;
++# GCJ 4.1 workaround (GCC PR19870)
++diff -rc misc/xt-20051206/src/xt/java/com/jclark/xsl/sax/XMLProcessorImpl.java misc/build/xt-20051206/src/xt/java/com/jclark/xsl/sax/XMLProcessorImpl.java
++*** misc/xt-20051206/src/xt/java/com/jclark/xsl/sax/XMLProcessorImpl.java	2005-12-06 14:30:50.000000000 +0100
++--- misc/build/xt-20051206/src/xt/java/com/jclark/xsl/sax/XMLProcessorImpl.java	2006-02-07 01:37:26.000000000 +0100
++***************
++*** 424,433 ****
++  
++      static private class RootNodeImpl extends ContainerNodeImpl 
++      {
++!         private String systemId;
++!         private int documentIndex;
++!         private Hashtable idTable = new Hashtable();
++!         private Hashtable unparsedEntityURITable = new Hashtable();
++          
++          RootNodeImpl(String systemId, int documentIndex, NamespacePrefixMap nsMap) {
++              super(nsMap);
++--- 424,433 ----
++  
++      static private class RootNodeImpl extends ContainerNodeImpl 
++      {
++!         String systemId;
++!         int documentIndex;
++!         Hashtable idTable = new Hashtable();
++!         Hashtable unparsedEntityURITable = new Hashtable();
++          
++          RootNodeImpl(String systemId, int documentIndex, NamespacePrefixMap nsMap) {
++              super(nsMap);
+Index: XmlSearch/prj/build.lst
+===================================================================
+--- XmlSearch/prj/build.lst.orig	2006-03-11 21:22:53.000000000 +0100
++++ XmlSearch/prj/build.lst	2006-03-11 21:25:44.000000000 +0100
+@@ -1,2 +1,2 @@
+-xh	XmlSearch	:	external codemaker NULL
++xh	XmlSearch	:	xt codemaker NULL
+ xh XmlSearch\src\com\sun\xmlsearch	nmake - all xs NULL
+Index: XmlSearch/src/com/sun/xmlsearch/makefile.mk
+===================================================================
+--- XmlSearch/src/com/sun/xmlsearch/makefile.mk.orig	2006-03-11 21:22:53.000000000 +0100
++++ XmlSearch/src/com/sun/xmlsearch/makefile.mk	2006-03-11 21:25:44.000000000 +0100
+@@ -21,7 +21,13 @@ TARGET  = com_sun_xmlsearch
+ 
+ .INCLUDE : settings.mk
+ 
+-JARFILES 		=  xt.jar
++JARFILES = xt-xmlsearch.jar
++
++.IF "$(SYSTEM_XT)" == "YES"
++XCLASSPATH!:=$(XCLASSPATH)$(PATH_SEPERATOR)$(XT_JAR)
++.ELSE
++JARFILES += xt.jar
++.ENDIF
+ 
+ .IF "$(SYSTEM_XML_APIS)" == "YES"
+ XCLASSPATH!:=$(XCLASSPATH)$(PATH_SEPERATOR)$(XML_APIS_JAR)
+Index: XmlSearch/src/com/sun/xmlsearch/tree/TreeBuilder.java
+===================================================================
+--- XmlSearch/src/com/sun/xmlsearch/tree/TreeBuilder.java.orig	2006-03-11 21:22:53.000000000 +0100
++++ XmlSearch/src/com/sun/xmlsearch/tree/TreeBuilder.java	2006-03-11 21:25:44.000000000 +0100
+@@ -125,6 +125,10 @@ public final class TreeBuilder extends H
+ 			return EmptyIterator;
+ 		}
+   
++		public SafeNodeIterator getNamespaces() {
++			return EmptyIterator;
++		}
++  
+ 		public SafeNodeIterator getChildren() {
+ 			return EmptyIterator;
+ 		}
+@@ -145,6 +149,7 @@ public final class TreeBuilder extends H
+ 
+ 		public URL getURL() { return null; }
+ 		public int getLineNumber() { return -1; }
++		public int getColumnNumber() { return -1; }
+ 		public NamespacePrefixMap getNamespacePrefixMap() {
+ 			return _parent.getNamespacePrefixMap();
+ 		}
+@@ -154,6 +159,12 @@ public final class TreeBuilder extends H
+ 		public String getUnparsedEntityURI(String name) {
+ 			return "getUnparsedEntityURI";
+ 		}
++		public String getPublicId() {
++			return "getPublicId";
++		}
++		public String getSystemId() {
++			return "getSystemId";
++		}
+   
+ 		public boolean isLeaf() { return true; }
+ 		public int getChildCount() { return 0; }
+Index: XmlSearch/src/com/sun/xmlsearch/xml/indexer/XmlIndexBuilder.java
+===================================================================
+--- XmlSearch/src/com/sun/xmlsearch/xml/indexer/XmlIndexBuilder.java.orig	2006-03-11 21:22:53.000000000 +0100
++++ XmlSearch/src/com/sun/xmlsearch/xml/indexer/XmlIndexBuilder.java	2006-03-11 21:25:44.000000000 +0100
+@@ -60,13 +60,13 @@ import com.jclark.xsl.tr.Result;
+ import com.jclark.xsl.tr.OutputMethod;
+ import com.jclark.xsl.tr.LoadContext;
+ 
+-import com.jclark.xsl.dom.Transform;
++import com.jclark.xsl.dom.XmlSearchTransform;
+ import com.jclark.xsl.dom.TransformEngine;
+ import com.jclark.xsl.dom.TransformException;
+-import com.jclark.xsl.dom.XSLTransformEngine;
++import com.jclark.xsl.dom.XmlSearchXSLTransformEngine;
+ 
+ public final class XmlIndexBuilder {
+-	final class MyXslEngine extends XSLTransformEngine {
++	final class MyXslEngine extends XmlSearchXSLTransformEngine {
+ 		public Node load(
+ 			URL url,
+ 			int documentIndex,
+@@ -436,8 +436,8 @@ public final class XmlIndexBuilder {
+ 
+ 	private TreeBuilder _treeBuilder;
+ 	private MyXslEngine _transformEngine;
+-	private Transform _indexingTransform;
+-	private Transform _defaultTransform;
++	private XmlSearchTransform _indexingTransform;
++	private XmlSearchTransform _defaultTransform;
+ 	private IndexAdapter _indexAdapter;
+ 
+ 	public XmlIndexBuilder(String indexDir) throws Exception {
+@@ -533,7 +533,7 @@ public final class XmlIndexBuilder {
+ 		return _treeBuilder.getRoot(docUrl);
+ 	}
+ 
+-	private Transform getTransform(String stylesheetName) throws Exception {
++	private XmlSearchTransform getTransform(String stylesheetName) throws Exception {
+ 		// System.out.println("creating indexing transform: " + stylesheetName);
+ 		URL stylesheetUrl = null;
+ 		if (_useLocalTransformFile) {
+@@ -553,7 +553,7 @@ public final class XmlIndexBuilder {
+                 dFactory.setValidating(false);
+                 DocumentBuilder dBuilder = dFactory.newDocumentBuilder();
+                 Document sheet = dBuilder.parse(stylesheetStream);
+-		return _transformEngine.createTransform(sheet);
++		return (XmlSearchTransform)_transformEngine.createTransform(sheet);
+ 	}
+ 
+ 	// GTM new:

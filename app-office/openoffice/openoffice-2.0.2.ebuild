@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2.ebuild,v 1.2 2006/03/14 18:22:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2.ebuild,v 1.3 2006/03/15 09:30:07 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -142,6 +142,7 @@ src_unpack() {
 	#Some fixes for our patchset
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/removecrystalcheck.diff
+	cp -vf ${FILESDIR}/${PV}/use-system-xt.diff patches/src680
 
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}

@@ -1,18 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 45ce976ab52dcf05e5bc7c22125a3558 ChangeLog 42305
+MD5 5718145305f5dfc12c14c42ce18efee8 ChangeLog 42467
+RMD160 bab6e13386f99b7fca6f8c96d4594d1c0536b500 ChangeLog 42467
+SHA256 e266d1187f206fba0318a51734f034d75ee8513c7ba13499f023ff6113658a47 ChangeLog 42467
 MD5 500f7e71be57d40b0a8042cab1484df9 files/2.0.1/alwayscrystal.diff 3222
+RMD160 6f563dccad523db881def1fdb711df3949c2a687 files/2.0.1/alwayscrystal.diff 3222
+SHA256 22af14b2c3bd7d796eeda2f4a423f4290e71d2f2790a82038b837c6219133ef1 files/2.0.1/alwayscrystal.diff 3222
 MD5 d741869e1665d1423c2086f1723b93d7 files/2.0.2/removecrystalcheck.diff 572
+RMD160 5e7b6c92506bd7d3f4e09e3ee43656a6f4f8c30d files/2.0.2/removecrystalcheck.diff 572
+SHA256 06a05ee5a27ce6a1de1c9eeebe4e22b860d0a6292f778ec6c81aa2c28c1daa08 files/2.0.2/removecrystalcheck.diff 572
+MD5 06529786538c2af9221a201193ea0b25 files/2.0.2/use-system-xt.diff 48815
+RMD160 298a19f11f5c7e4a7809a679e81a9886812cb9be files/2.0.2/use-system-xt.diff 48815
+SHA256 10b25f5d80b8b65497c7c6af33f133439d55a9d2f6f5f0ebedfeb6d9c5170693 files/2.0.2/use-system-xt.diff 48815
 MD5 9017e3971f27ac77833ae962069feccf files/digest-openoffice-2.0.1 2024
+RMD160 94f476c151e7c42212f2d6dd05b48443ca784e1e files/digest-openoffice-2.0.1 2024
+SHA256 ac0d68a776f61080710f7f031ed79457a1f1a30bc24abcc85a563ce1df2d9d46 files/digest-openoffice-2.0.1 2024
 MD5 0836fbc2095bfcc268aa53d173315588 files/digest-openoffice-2.0.2 2250
+RMD160 2f673ea71ecd7b4ba33308a1970747878cb53e57 files/digest-openoffice-2.0.2 2250
+SHA256 89a598733c3c4bb4cac78ef0ce28549043db2df6298b90b84359d236ae44d8b6 files/digest-openoffice-2.0.2 2250
 MD5 e3ec4a70395943b59adad7fc4f0538d7 metadata.xml 461
+RMD160 3e99c165e962e73417462c6df7a476a558b3ae18 metadata.xml 461
+SHA256 7a25927f2c830703539753c0f7295551795419ef0d05b72db505a2ac1094d291 metadata.xml 461
 MD5 e00605b0acc60de47e6eee98a5f32894 openoffice-2.0.1.ebuild 7274
-MD5 9ac5113c80e6c613685cb957f41efd0c openoffice-2.0.2.ebuild 7590
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEFwn1KRy60XGEcJIRAoHjAJ9m0BepGeu30bhI3lY4mP+LO/D2iwCeOzHz
-23+OFLSY67MD01Da8xeOmEw=
-=6wcu
------END PGP SIGNATURE-----
+RMD160 ed88f0dc45b87c259271f83fa9d4fd8bb55fab93 openoffice-2.0.1.ebuild 7274
+SHA256 56a67a1cd040cd120cb5227ed0fa926fbf378c5ba46e267bc43a9b0218f87fa7 openoffice-2.0.1.ebuild 7274
+MD5 5a93169b7214295b72fc34757d07766f openoffice-2.0.2.ebuild 7646
+RMD160 a5fab67ca2100f7f3acbf4355812d09291f146e8 openoffice-2.0.2.ebuild 7646
+SHA256 8e3331c4a9ec2ff710e97b65a1f6fe8ef6488ee0e2da159f2764552e25653bd2 openoffice-2.0.2.ebuild 7646
