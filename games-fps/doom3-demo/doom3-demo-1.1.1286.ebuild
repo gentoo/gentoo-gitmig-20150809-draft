@@ -1,14 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.9 2005/11/12 22:21:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.10 2006/03/15 22:33:42 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="Doom III - 3rd installment of the classic id 3D first-person shooter"
 HOMEPAGE="http://www.doom3.com/"
 SRC_URI="mirror://3dgamers/doom3/doom3-linux-${PV}-demo.x86.run
-	ftp://ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-${PV}-demo.x86.run
-	ftp://dl.xs4all.nl/pub/mirror/idsoftware/idstuff/doom3/linux/doom3-linux-${PV}-demo.x86.run
+	mirror://idsoftware/doom3/linux/doom3-linux-${PV}-demo.x86.run
 	mirror://gentoo/doom3.png"
 
 LICENSE="DOOM3"

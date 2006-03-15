@@ -1,14 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/red-blue-quake2/red-blue-quake2-0.1.ebuild,v 1.7 2005/11/05 22:53:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/red-blue-quake2/red-blue-quake2-0.1.ebuild,v 1.8 2006/03/15 22:30:47 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="red-blue Quake II !  play quake2 w/3d glasses !"
 HOMEPAGE="http://www.jfedor.org/red-blue-quake2/"
-SRC_URI="ftp://ftp.idsoftware.com/idstuff/source/q2source-3.21.zip
-	ftp://ftp.algx.net/idsoftware/source/q2source-3.21.zip
-	http://ftp.gentoo.skynet.be/pub/ftp.idsoftware.com/source/q2source-3.21.zip
+SRC_URI="mirror://idsoftware/source/q2source-3.21.zip
 	http://www.jfedor.org/red-blue-quake2/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -16,7 +14,9 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/x11"
+RDEPEND="|| (
+	x11-libs/libX11
+	virtual/x11 )"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 

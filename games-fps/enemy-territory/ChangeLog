@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/enemy-territory
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.29 2006/03/14 23:09:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.30 2006/03/15 22:32:16 wolf31o2 Exp $
+
+  15 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  enemy-territory-2.60.ebuild:
+  Changed to use idsoftware thirdpartymirror.
 
   14 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   enemy-territory-2.60.ebuild:

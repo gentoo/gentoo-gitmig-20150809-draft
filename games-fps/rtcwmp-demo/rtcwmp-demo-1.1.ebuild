@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwmp-demo/rtcwmp-demo-1.1.ebuild,v 1.3 2006/01/26 15:48:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwmp-demo/rtcwmp-demo-1.1.ebuild,v 1.4 2006/03/15 22:30:13 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -8,7 +8,7 @@ MY_P="wolfmpdemo-linux-${PV}-MP.x86.run"
 
 DESCRIPTION="Return to Castle Wolfenstein - Multi-player demo"
 HOMEPAGE="http://games.activision.com/games/wolfenstein/"
-SRC_URI="ftp://ftp.idsoftware.com/idstuff/wolf/linux/old/${MY_P}
+SRC_URI="mirror://idsoftware/wolf/linux/old/${MY_P}
 	mirror://3dgamers/returnwolfenstein/${MY_P}"
 
 LICENSE="RTCW"

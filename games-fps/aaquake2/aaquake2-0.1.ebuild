@@ -1,14 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.7 2005/11/05 22:50:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.8 2006/03/15 22:35:53 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="text mode Quake II"
 HOMEPAGE="http://www.jfedor.org/aaquake2/"
-SRC_URI="ftp://ftp.idsoftware.com/idstuff/source/q2source-3.21.zip
-	ftp://ftp.algx.net/idsoftware/source/q2source-3.21.zip
-	http://ftp.gentoo.skynet.be/pub/ftp.idsoftware.com/source/q2source-3.21.zip
+SRC_URI="mirror://idsoftware/source/q2source-3.21.zip
 	http://www.jfedor.org/aaquake2/quake2-ref_softaa-${PV}.tar.gz"
 
 LICENSE="GPL-2"

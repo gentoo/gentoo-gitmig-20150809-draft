@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwsp-demo/rtcwsp-demo-1.1b.ebuild,v 1.3 2006/01/26 15:48:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwsp-demo/rtcwsp-demo-1.1b.ebuild,v 1.4 2006/03/15 22:31:18 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -8,7 +8,7 @@ MY_P="wolfspdemo-linux-${PV}.x86.run"
 
 DESCRIPTION="Return to Castle Wolfenstein - Single-player demo"
 HOMEPAGE="http://games.activision.com/games/wolfenstein/"
-SRC_URI="ftp://ftp.idsoftware.com/idstuff/wolf/linux/old/${MY_P}
+SRC_URI="mirror://idsoftware/wolf/linux/old/${MY_P}
 	mirror://3dgamers/returnwolfenstein/${MY_P}"
 
 LICENSE="RTCW"
