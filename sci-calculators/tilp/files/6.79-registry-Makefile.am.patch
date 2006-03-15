@@ -1,0 +1,8 @@
+--- registry/Makefile.am	2005-03-17 08:18:47.000000000 +0000
++++ registry/Makefile.am.new	2005-06-26 18:19:23.000000000 +0000
+@@ -11,4 +11,4 @@
+ dist_registry_DATA = tilp.registry
+ 
+ install:
+-	@$(INSTALL) -d $(tilp_plugin_dir)
++	@$(INSTALL) -d $(DESTDIR)$(tilp_plugin_dir)

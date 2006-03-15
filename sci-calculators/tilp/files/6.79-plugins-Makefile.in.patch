@@ -1,0 +1,11 @@
+--- plugins/Makefile.in	2005-06-26 18:22:26.000000000 +0000
++++ plugins/Makefile.in.new	2005-06-26 18:27:22.000000000 +0000
+@@ -497,7 +497,7 @@
+ 
+ install: $(PLUGINS)
+ 	@echo Clean-up in plug-ins directory...
+-	@$(INSTALL) -d $(tilp_plugin_dir)
++	@$(INSTALL) -d $(DESTDIR)$(tilp_plugin_dir)
+ 	$(RM) $(DESTDIR)$(tilp_plugin_dir)/*.a 
+ 	$(RM) $(DESTDIR)$(tilp_plugin_dir)/*.la
+ 	$(RM) $(DESTDIR)$(tilp_plugin_dir)/*.so

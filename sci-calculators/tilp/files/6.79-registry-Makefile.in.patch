@@ -1,0 +1,11 @@
+--- registry/Makefile.in	2005-05-26 15:00:53.000000000 +0000
++++ registry/Makefile.in.new	2005-06-26 18:19:04.000000000 +0000
+@@ -493,7 +493,7 @@
+ 
+ 
+ install:
+-	@$(INSTALL) -d $(tilp_plugin_dir)
++	@$(INSTALL) -d $(DESTDIR)$(tilp_plugin_dir)
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

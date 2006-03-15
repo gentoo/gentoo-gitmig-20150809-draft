@@ -1,17 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 54b26d8fc24dc14b17f16a5948dbee1c tilp-6.76.ebuild 1421
-MD5 aad750930cf4020a7a0fb0871fbb3560 ChangeLog 3448
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 19f22f6cd7f216bca36431149033c082 files/6.76-makefile.patch 2495
-MD5 06d7047c0e38a61469e836701cd8e0e4 files/keepdir.patch 384
+MD5 3439c4791709aeec9891b0c4c97dfc96 ChangeLog 3857
 MD5 bc48a68d03eb437fcd76f7bd8993fac8 files/6.76-makefile-desktop.patch 706
+MD5 19f22f6cd7f216bca36431149033c082 files/6.76-makefile.patch 2495
+MD5 a8ed1b80bb7feac8670299818c8cfe17 files/6.79-Makefile.am.patch 271
+MD5 d10acf6a847c4e3d35c54588b441d2fe files/6.79-Makefile.in.patch 346
+MD5 bc48a68d03eb437fcd76f7bd8993fac8 files/6.79-makefile-desktop.patch 706
+MD5 2d3a08660eeedd4f6e4cfa66c228c8e2 files/6.79-makefile.patch 2397
+MD5 4b385789e9bf1af873c2524d10e4a0ae files/6.79-plugins-Makefile.am.patch 416
+MD5 05e34e1112be8b9b433d08097f27e451 files/6.79-plugins-Makefile.in.patch 417
+MD5 4cc0a17886e30c2497e830762379d321 files/6.79-registry-Makefile.am.patch 274
+MD5 30502ce98dee0daaab7547b23b33109a files/6.79-registry-Makefile.in.patch 389
 MD5 708836f6ae250add32825e8e7595d9b1 files/digest-tilp-6.76 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCMZP1Z/iYVBmujdURAuS2AKDm0HdlBOFPp8ckQUVaprG249HZPgCg+Rzs
-fvx5ONEdcBv2uXGSwV85+2s=
-=PCuN
------END PGP SIGNATURE-----
+MD5 c2274fc507f9bffa6eb4f350e2d28a32 files/digest-tilp-6.79 62
+MD5 06d7047c0e38a61469e836701cd8e0e4 files/keepdir.patch 384
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 54b26d8fc24dc14b17f16a5948dbee1c tilp-6.76.ebuild 1421
+MD5 779c5fe3f9a9bc59bb05040537effec2 tilp-6.79.ebuild 1873

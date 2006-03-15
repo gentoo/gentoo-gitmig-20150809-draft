@@ -1,0 +1,12 @@
+--- plugins/Makefile.in	2005/05/26 15:00:53	1132
++++ plugins/Makefile.in	2005/06/02 17:12:58	1152
+@@ -188,7 +188,7 @@
+ tilp_plugin_dir = @tilp_plugin_dir@
+ 
+ SUBDIRS = #test nv82 gfv
+-PLUGINS = test nv82 gfv
++PLUGINS = #test nv82 gfv
+ subdir = plugins
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+

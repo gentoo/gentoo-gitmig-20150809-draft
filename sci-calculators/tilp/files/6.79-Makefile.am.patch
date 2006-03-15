@@ -1,0 +1,12 @@
+--- plugins/Makefile.am	2005/02/28 11:57:59	871
++++ plugins/Makefile.am	2005/06/02 17:12:58	1152
+@@ -1,7 +1,7 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+ SUBDIRS = #test nv82 gfv
+-PLUGINS = test nv82 gfv
++PLUGINS = #test nv82 gfv
+ 
+ .PHONY: files
+ 
+
