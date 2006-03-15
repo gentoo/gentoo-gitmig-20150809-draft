@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.61 2006/03/03 01:57:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.62 2006/03/15 22:55:05 kugelfang Exp $
+
+  15 Mar 2006; Danny van Dyk <kugelfang@gentoo.org>
+  +files/groff-1.19.1-gcc-4.1.patch, groff-1.19.1-r2.ebuild:
+  Added a patch allow compilation with gcc-4.1.0.
 
 *groff-1.19.2-r1 (03 Mar 2006)
 

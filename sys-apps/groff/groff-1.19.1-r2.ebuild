@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.1-r2.ebuild,v 1.16 2005/09/29 07:57:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.1-r2.ebuild,v 1.17 2006/03/15 22:55:05 kugelfang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -43,6 +43,9 @@ src_unpack() {
 
 	# Fix make dependencies so we can build in parallel
 	epatch "${FILESDIR}"/${P}-parallel-make.patch
+
+	# Fix some headers to be compatible with gcc-4.1.0
+	epatch "${FILESDIR}"/${P}-gcc-4.1.patch
 
 	# Make sure we can cross-compile this puppy
 	if tc-is-cross-compiler ; then
