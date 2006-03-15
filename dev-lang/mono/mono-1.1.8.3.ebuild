@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.8.3.ebuild,v 1.7 2006/01/22 09:50:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.8.3.ebuild,v 1.8 2006/03/15 05:26:35 latexer Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="nptl icu X"
 
-DEPEND="virtual/libc
-	>=dev-libs/glib-2.0
+DEPEND=">=dev-libs/glib-2.0
 	sys-devel/bc
 	!<dev-dotnet/pnet-0.6.12
 	nptl? ( >=sys-devel/gcc-3.3.5-r1 )

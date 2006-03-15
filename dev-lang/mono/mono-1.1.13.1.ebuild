@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.13.1.ebuild,v 1.4 2006/02/20 01:33:46 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.13.1.ebuild,v 1.5 2006/03/15 05:26:35 latexer Exp $
 
-inherit eutils mono flag-o-matic multilib
+inherit eutils mono flag-o-matic multilib autotools
+
+RESTRICT="confcache"
 
 DESCRIPTION="Mono runtime and class libraries, a C# compiler/interpreter"
 HOMEPAGE="http://www.go-mono.com/"
@@ -13,8 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="nptl X"
 
-DEPEND="virtual/libc
-	>=dev-libs/glib-2.0
+DEPEND=">=dev-libs/glib-2.0
 	sys-devel/bc
 	!<dev-dotnet/pnet-0.6.12
 	nptl? ( >=sys-devel/gcc-3.3.5-r1 )
@@ -48,10 +49,10 @@ src_unpack() {
 			${S}/{scripts,}/*.pc.in || die "sed failed"
 	fi
 
-	libtoolize --copy --force || die "libtoolize failed"
-	aclocal || die "aclocal failed"
-	autoconf || die "autoconf failed"
-	automake || die "automake failed"
+	# Remove the dummy ltconfig and leave to libtoolize handling it
+	rm -f ${S}/libgc/ltconfig
+
+	eautoreconf
 }
 
 src_compile() {
