@@ -1,5 +1,28 @@
-MD5 746e09b3bfca67c0a95980e5137fb05b jpeg-mmx-0.1.6-r1.ebuild 1265
-MD5 9ca1abb6edb5b2df127a02296a66650e ChangeLog 2669
-MD5 a7968b3622999698bfb390cf300b5b21 files/jpeg-mmx-0.1.6-makefile.patch 617
-MD5 683af9622e30fd6fd39694fda1049c37 files/jpeg-mmx-0.1.6-PIC.patch 1450
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1b57b0278e511fae9ac81939a6d48173 ChangeLog 2884
+RMD160 162451151c8032c793faa475aa9155e126e4b274 ChangeLog 2884
+SHA256 b9954a93a00854e49011bda868d15429d8b3c19941401499165a263ea0e76116 ChangeLog 2884
 MD5 57d8f724c8c106355a0eae9961b436a3 files/digest-jpeg-mmx-0.1.6-r1 66
+RMD160 7a3e67d00c2bdcdbd8014d25dd304b8b6655cb20 files/digest-jpeg-mmx-0.1.6-r1 66
+SHA256 8d2160e2cb79cdd61dba9648b99300a043dc14898bc2c3f937a32661bbf10bb9 files/digest-jpeg-mmx-0.1.6-r1 66
+MD5 683af9622e30fd6fd39694fda1049c37 files/jpeg-mmx-0.1.6-PIC.patch 1450
+RMD160 8ad17d93b837c034d8898a16750f518178560672 files/jpeg-mmx-0.1.6-PIC.patch 1450
+SHA256 5432a54044fe1b7d329da6bb3e25032c35d063565b604dade744e07fdae8f0bc files/jpeg-mmx-0.1.6-PIC.patch 1450
+MD5 a29dd4cf4b9b3cfdac39cb28ebaaed4a files/jpeg-mmx-0.1.6-gcc41.patch 433
+RMD160 4b1fd3264797357cf919dc353790d7af46649d5c files/jpeg-mmx-0.1.6-gcc41.patch 433
+SHA256 bbf48654a5548d372534e693b3cb331d62a1f4496e4280b2c43942581b51a804 files/jpeg-mmx-0.1.6-gcc41.patch 433
+MD5 a7968b3622999698bfb390cf300b5b21 files/jpeg-mmx-0.1.6-makefile.patch 617
+RMD160 01568d248e10dbab6c972d136b34e0cb20fbdccb files/jpeg-mmx-0.1.6-makefile.patch 617
+SHA256 8e1fa0f3478f413f7f40840d6897e8217f03457e2f18799245775c5bc4ffecff files/jpeg-mmx-0.1.6-makefile.patch 617
+MD5 a12b785009e8cfd1ae514ce6cc355342 jpeg-mmx-0.1.6-r1.ebuild 1303
+RMD160 38ccea31400191f92ea2d24ec0ad998e3023056e jpeg-mmx-0.1.6-r1.ebuild 1303
+SHA256 a5661d09e24de75b00ed342ac4c6b2d15e2341f361f3c9a8c9210d4a9c14222a jpeg-mmx-0.1.6-r1.ebuild 1303
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEF7R0CRZPokWLroQRAgEVAJ9/+rk5uTioJA4FoiDg+M1WLKt2CQCfWVHc
+8N8bp+gJyPS7VWh5lGd/7hM=
+=zMO1
+-----END PGP SIGNATURE-----
