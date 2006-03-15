@@ -1,6 +1,8 @@
 Use system libpcre and make iselect not blow up
 
---- wml_backend/p2_mp4h/Makefile.am
+Index: wml_backend/p2_mp4h/Makefile.am
+===================================================================
+--- wml_backend/p2_mp4h/Makefile.am.orig
 +++ wml_backend/p2_mp4h/Makefile.am
 @@ -1,15 +1,15 @@
  
@@ -22,7 +24,9 @@ Use system libpcre and make iselect not blow up
  
  deb:
  	if test -f ../mp4h_$(VERSION).orig.tar.gz; then \
---- wml_backend/p2_mp4h/configure.ac
+Index: wml_backend/p2_mp4h/configure.ac
+===================================================================
+--- wml_backend/p2_mp4h/configure.ac.orig
 +++ wml_backend/p2_mp4h/configure.ac
 @@ -179,7 +179,6 @@ AC_SUBST(CFLAGS)
  AC_CONFIG_FILES([
@@ -32,7 +36,9 @@ Use system libpcre and make iselect not blow up
     lib/Makefile
     src/Makefile
     po/Makefile.in
---- wml_backend/p2_mp4h/src/Makefile.am
+Index: wml_backend/p2_mp4h/src/Makefile.am
+===================================================================
+--- wml_backend/p2_mp4h/src/Makefile.am.orig
 +++ wml_backend/p2_mp4h/src/Makefile.am
 @@ -1,5 +1,5 @@
  
@@ -50,17 +56,19 @@ Use system libpcre and make iselect not blow up
  
  include_HEADERS = mp4h.h
  noinst_HEADERS  = builtin.h ltdl.h
---- wml_aux/iselect/configure.in
+Index: wml_aux/iselect/configure.in
+===================================================================
+--- wml_aux/iselect/configure.in.orig
 +++ wml_aux/iselect/configure.in
-@@ -3,6 +3,7 @@
+@@ -3,6 +3,7 @@ dnl ##  configure.in -- GNU autoconf con
  dnl ##  Copyright (c) Ralf S. Engelschall, <rse@engelschall.com>
  dnl ##
  
 +AC_INIT(README)
  AC_PREREQ(2.10)dnl
- AC_REVISION($Revision: 1.1 $)
+ AC_REVISION($Revision: 1.2 $)
  SHTOOL="./etc/shtool"
-@@ -11,7 +12,6 @@
+@@ -11,7 +12,6 @@ T_ME=`$SHTOOL echo -e %b 2>/dev/null`
  echo "${T_MD}Configuring for iSelect `./etc/shtool version -l c -d long iselect_version.c`${T_ME}"
  echo "Copyright (c) 1996-1999 Ralf S. Engelschall, All Rights Reserved."
  
@@ -68,9 +76,11 @@ Use system libpcre and make iselect not blow up
  AC_CONFIG_HEADER(config_ac.h)dnl
  AC_PREFIX_DEFAULT(/usr/local)
  
---- wml_aux/iselect/aclocal.m4
+Index: wml_aux/iselect/aclocal.m4
+===================================================================
+--- wml_aux/iselect/aclocal.m4.orig
 +++ wml_aux/iselect/aclocal.m4
-@@ -186,24 +186,6 @@
+@@ -186,24 +186,6 @@ dnl ##  taken from shar-4.0's aclocal.m4
  dnl ##
  dnl ##########################################################
  dnl
@@ -95,3 +105,18 @@ Use system libpcre and make iselect not blow up
  dnl
  dnl
  dnl ##########################################################
+Index: wml_backend/p3_eperl/configure.in
+===================================================================
+--- wml_backend/p3_eperl/configure.in.orig
++++ wml_backend/p3_eperl/configure.in
+@@ -9,9 +9,8 @@ dnl #
+ dnl #   standard autoconf prolog
+ dnl #
+ 
+-AC_PREREQ(2.10)dnl
+ AC_REVISION($Revision: 1.2 $)
+-AC_INIT(README)
++AC_INIT
+ AC_CONFIG_HEADER(config_ac.h)dnl
+ AC_PREFIX_DEFAULT(/usr/local)
+ 

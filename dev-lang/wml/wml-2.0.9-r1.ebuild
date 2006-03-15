@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9-r1.ebuild,v 1.5 2005/09/17 08:25:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9-r1.ebuild,v 1.6 2006/03/15 02:43:14 flameeyes Exp $
 
-inherit fixheadtails eutils
+inherit fixheadtails eutils autotools multilib
 
 DESCRIPTION="Website META Language"
 HOMEPAGE="http://www.engelschall.com/sw/wml/"
@@ -15,24 +15,26 @@ IUSE=""
 
 RDEPEND="dev-libs/libpcre
 	dev-lang/perl"
-DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.58"
 
 src_unpack() {
 	unpack ${A}
 	ht_fix_all
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-autotools-update.patch
-	export WANT_AUTOCONF='2.5'
-	for d in $(find "${S}" -mindepth 2 -name configure -printf '%h ') ; do
-		cd "${d}"
-		autoconf || die "autoconf in ${d}"
+
+	epatch "${FILESDIR}/${P}-gcc41.patch"
+	epatch "${FILESDIR}/${P}-autotools-update.patch"
+
+	for d in $(find "${S}" \( -name configure.ac -o -name configure.in \) -exec dirname {} \;); do
+		pushd ${d} &>/dev/null
+		WANT_AUTOCONF="2.5" AT_NOELIBTOOLIZE="yes" eautoreconf
+		popd &>/dev/null
 	done
-	(cd "${S}"/wml_backend/p2_mp4h && automake) || die "automake failed in wml_backend/p2_mp4h"
+
+	elibtoolize
 }
 
 src_compile() {
-	econf --libdir=/usr/lib/wml || die "./configure failed"
+	econf --libdir=/usr/$(get_libdir)/wml || die "./configure failed"
 	emake || die "emake failed"
 }
 

@@ -1,18 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 f1c20eb9484d1d245122691d9d790ad7 wml-2.0.9-r1.ebuild 1115
-MD5 68d3173aab21e04ddc33145dbf24de70 wml-2.0.9.ebuild 1189
-MD5 d8ecef5564126370235f0a109c012881 ChangeLog 2323
-MD5 ea584f051a470445242165526961b55d files/digest-wml-2.0.9 62
-MD5 ea584f051a470445242165526961b55d files/digest-wml-2.0.9-r1 62
-MD5 63a4be7e9b23a8dad09660e70f9e11ac files/wml-2.0.9-autotools-update.patch 2720
+MD5 00be029177d86642594fdfd1bc6fff79 ChangeLog 2641
+RMD160 2b3d3c964131454889cd0fe86e98c201ee075427 ChangeLog 2641
+SHA256 3427fa7fd750b06dcbbfbb31a66c229327dd8e58c12adf865ae541d46ed338d2 ChangeLog 2641
 MD5 aefa456b69c01c50eca3fe8b497c1f59 files/2.0.9-fix-configure.in.patch 1411
+RMD160 54aa0b173fd0dc1fdc5f7f652682cec078f78a25 files/2.0.9-fix-configure.in.patch 1411
+SHA256 e59dee3fd10b2cc9603f15fbff1ccdf466d5c9fd919c09c058a0aaa3b7064286 files/2.0.9-fix-configure.in.patch 1411
+MD5 ea584f051a470445242165526961b55d files/digest-wml-2.0.9 62
+RMD160 1941f61a0f5ebb4dd9ad08e1f2dcf56f08f42d0d files/digest-wml-2.0.9 62
+SHA256 fd15b146e5c256edcb38458bf92c9f9ab5d93e165b4af09644ab6c2624c56db1 files/digest-wml-2.0.9 62
+MD5 ea584f051a470445242165526961b55d files/digest-wml-2.0.9-r1 62
+RMD160 1941f61a0f5ebb4dd9ad08e1f2dcf56f08f42d0d files/digest-wml-2.0.9-r1 62
+SHA256 fd15b146e5c256edcb38458bf92c9f9ab5d93e165b4af09644ab6c2624c56db1 files/digest-wml-2.0.9-r1 62
+MD5 aa98943ede07c2aebbd988153c882e74 files/wml-2.0.9-autotools-update.patch 3796
+RMD160 3a6f361805783317c81646e89493df04fe6e3b22 files/wml-2.0.9-autotools-update.patch 3796
+SHA256 f8ad37c0efec2e2f3bd4b93b94dcd0b5e945d3fde3fcb8a76b2b9a1ebd52001a files/wml-2.0.9-autotools-update.patch 3796
+MD5 22515a540cc3133e7da6990a68abf261 files/wml-2.0.9-gcc41.patch 361
+RMD160 7801e31d2e2d379c148902a697c46bec15cde831 files/wml-2.0.9-gcc41.patch 361
+SHA256 7c983ec6d7f659eb1b152f03b98764df40d51b6b5d1ceb7fbee4a79b695c5e33 files/wml-2.0.9-gcc41.patch 361
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+RMD160 5b59fc85d3bafae0872cf691e5f032bac39ba539 metadata.xml 310
+SHA256 39e1273dd60bd3ceb460e9366a648c8fa21db1c292df4573e69f41cf6c84f6fc metadata.xml 310
+MD5 f1f98a36c2d1d6ab3e914297b0081c88 wml-2.0.9-r1.ebuild 1110
+RMD160 13f47e5b54c3285a90ccb6a510816e115a1c6c95 wml-2.0.9-r1.ebuild 1110
+SHA256 815a157a814af6eca6fbea451285073995680319a640a384faba3e6854e459ce wml-2.0.9-r1.ebuild 1110
+MD5 68d3173aab21e04ddc33145dbf24de70 wml-2.0.9.ebuild 1189
+RMD160 46b03bd347f5499727b1d3adde0761e51a83a20f wml-2.0.9.ebuild 1189
+SHA256 798d843a4ef74be4ece571e32ecd3e91090363246d708f69a0b531eeceec7f0a wml-2.0.9.ebuild 1189
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDK9MXgIKl8Uu19MoRAkydAJ9sOpyF2TcuISu4hJJYMYZ9ZaNkiwCdHqqI
-5Mu7FMP3VwZ88rGbLIY9DUg=
-=cpQK
+iD8DBQFEF39PAiZjviIA2XgRAnwcAJ9zgq9HjwKzVY5lPc0Og5sc6ROgTQCg9D1f
+rekPbhjtMRJ7sOnhXqrBKLI=
+=ps7S
 -----END PGP SIGNATURE-----
