@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f9f721df2a39fbd5b1562b1f20ef87d8 lsdvd-0.15.ebuild 576
-MD5 eef2e5bf3a8692feb0114782ccf8f85c lsdvd-0.10.ebuild 573
-MD5 f9f7f0ac4f3cea2a8865ac15efb5fa08 ChangeLog 1965
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 aca040b796f83bfe668aa9fd82eaa035 ChangeLog 2047
 MD5 7c79ba5df2a82f2097890ac88e751d7d files/digest-lsdvd-0.10 61
 MD5 413017127b5d04811a6a1cf2340ba22d files/digest-lsdvd-0.15 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCpvzb06ebR+OMO78RAuYJAJwI+u77PfbGbeU/4yzDsQRL812q1ACeNtZN
-pog7DnoW0Ol+9ki14SCbNYM=
-=bUMN
------END PGP SIGNATURE-----
+MD5 eef2e5bf3a8692feb0114782ccf8f85c lsdvd-0.10.ebuild 573
+MD5 f278ad2c203271aeb249687b15bee55d lsdvd-0.15.ebuild 581
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
