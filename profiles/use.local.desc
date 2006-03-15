@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1780 2006/03/12 19:24:07 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1781 2006/03/15 01:46:22 joem Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -479,6 +479,7 @@ games-strategy/wesnoth:editor - Enable compilation editor
 games-strategy/wesnoth:lite - Lite install
 games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
+gnome-base/gnome-session:branding - Enable a custom gentoo branded splashscreen
 gnome-extra/evolution-data-server:firefox - Use Firefox's NSS/NSPR libraries if SSL is enabled
 gnome-extra/evolution-data-server:nntp - Add suppoort fot nntp
 gnome-extra/gnome-games:artworkextra - Add extra Artwork to gnome-games
