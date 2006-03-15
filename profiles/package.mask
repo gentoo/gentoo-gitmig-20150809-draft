@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5087 2006/03/14 20:01:13 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5088 2006/03/15 11:47:02 dcoutts Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -263,13 +263,6 @@ dev-util/glimmer
 # Diego Pettenò <flameeyes@gentoo.org> (21 Feb 2006)
 # Pre-releases outside of KDE release cycle
 >=net-im/kopete-0.12_alpha1
-
-# Duncan Coutts <dcoutts@gentoo.org> (19 Feb 2006)
-# Masked because there is no working version of wxGTK-2.4.x.
-# wxhaskell-0.8 and 0.9 are affected by bug #123323.
-# Try wxhaskell-0.9.4 which works with wxGTK-2.6.x.
-=dev-haskell/wxhaskell-0.8-r1
-=dev-haskell/wxhaskell-0.9
 
 # Tony Vroon <chainsaw@gentoo.org> (18 Feb 2006)
 # Masked pending removal - upstream has discontinued this project
