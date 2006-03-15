@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/ptabtools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.6 2006/01/08 12:34:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.7 2006/03/15 01:26:35 flameeyes Exp $
+
+*ptabtools-0.3.1-r2 (15 Mar 2006)
+
+  15 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/ptabtools-0.3.1-fPIC.patch,
+  +files/ptabtools-0.3.1-respectflags.patch,
+  +files/ptabtools-0.3.1-soname.patch, -ptabtools-0.3.1-r1.ebuild,
+  +ptabtools-0.3.1-r2.ebuild:
+  New version, this time respecting CFLAGS, LDFLAGS, CC, handling PIC
+  correctly (it can build on amd64), multilib safe, and setting a soname on
+  the shared library. Also fixed missing pkgconfig dependency.
 
   08 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Remove retiring dev from metadata.
