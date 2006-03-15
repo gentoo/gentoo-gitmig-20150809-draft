@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.43.00.01-r1.ebuild,v 1.1 2006/03/10 12:28:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.43.00.01-r2.ebuild,v 1.1 2006/03/15 00:20:31 mrness Exp $
 
-inherit eutils
+inherit eutils linux-info
 
 #The document is the same as in hcfpcimodem, even if it has a different URL
 MY_DOC="100498D_RM_HxF_Released.pdf"
@@ -24,6 +24,7 @@ DEPEND="dev-lang/perl
 S="${WORKDIR}"
 
 pkg_setup() {
+	linux-info_pkg_setup
 	if useq x86; then
 		MY_ARCH_S="${S}/${P}full"
 	elif useq amd64; then
@@ -34,9 +35,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${MY_ARCH_S}"
-	epatch ${FILESDIR}/${P}-suspend2.patch
-	epatch ${FILESDIR}/${P}-try_to_freeze-2.patch
 	epatch ${FILESDIR}/${P}-udev-group.patch
+	epatch ${FILESDIR}/${P}-try_to_freeze-2.patch
+	if [ "${KV_EXTRA}" = "-suspend2" ]; then
+		epatch ${FILESDIR}/${P}-suspend2.patch
+	fi
 }
 
 src_compile() {
