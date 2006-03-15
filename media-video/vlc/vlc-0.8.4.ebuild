@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4.ebuild,v 1.5 2006/01/02 15:34:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4.ebuild,v 1.6 2006/03/15 01:01:58 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
@@ -24,7 +24,7 @@ KEYWORDS="~amd64 ~ppc sparc ~x86"
 IUSE="a52 3dfx nls debug altivec httpd vlm gnutls live v4l cdda ogg matroska
 dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick stream
-mp3 xv bidi sdl png xml2 samba daap corba screen mod speex nsplugin shout real
+mp3 xv bidi sdl png xml samba daap corba screen mod speex nsplugin shout real
 win32codecs"
 
 RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
@@ -70,7 +70,7 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 		media-libs/libdvbpsi
 		aac? ( >=media-libs/faad2-2.0-r2 )
 		sdl? ( >=media-libs/libsdl-1.2.8 )
-		xml2? ( dev-libs/libxml2 )
+		xml? ( dev-libs/libxml2 )
 		samba? ( net-fs/samba )
 		vcd? ( >=dev-libs/libcdio-0.72
 			>=media-video/vcdimager-0.7.21 )
@@ -187,7 +187,7 @@ src_compile () {
 		$(use_enable 3dfx glide) \
 		$(use_enable sdl) \
 		$(use_enable png) \
-		$(use_enable xml2 libxml2) \
+		$(use_enable xml libxml2) \
 		$(use_enable samba smb) \
 		$(use_enable daap) \
 		$(use_enable corba) \
