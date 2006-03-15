@@ -1,0 +1,17 @@
+Index: mp3info-0.8.4/Makefile
+===================================================================
+--- mp3info-0.8.4.orig/Makefile
++++ mp3info-0.8.4/Makefile
+@@ -52,10 +52,10 @@ all: mp3info gmp3info doc
+ doc: mp3info.txt
+ 
+ mp3info: $(OBJS)
+-	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
+ 
+ gmp3info: $(XSRC) $(XOBJ) 
+-	$(CC) $(XSRC) $(CFLAGS) -o $@ $(XOBJ) `gtk-config --cflags --libs`
++	$(CC) $(XSRC) $(CFLAGS) $(LDFLAGS) -o $@ $(XOBJ) `gtk-config --cflags --libs`
+ 
+ mp3info.txt: mp3info.1
+ 	groff -t -e -mandoc -Tascii mp3info.1 | col -bx > mp3info.txt
