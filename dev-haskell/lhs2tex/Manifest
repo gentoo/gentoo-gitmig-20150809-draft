@@ -1,28 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c76d3730d31cba4aac80da78e514e4df ChangeLog 1061
-RMD160 ddef6dbc3dc7b06b548305cc29ff68246a8411fd ChangeLog 1061
-SHA256 ad4a2393977c40fe12f6bd67038d89476e8c18a58214ad66fc481425ccacb6ba ChangeLog 1061
+MD5 8b20854429a5ebd699684a9f3fd54539 ChangeLog 1245
+RMD160 7cdfec8431f4132a1558c507ea2f03ad3d7362b6 ChangeLog 1245
+SHA256 95f7232fad4387fb4a3baa999c40cc8e2be5ee254b825af464b347e5a53ca4f8 ChangeLog 1245
 MD5 26b08552316aebb1eb4f0d6057cbaf8f files/digest-lhs2tex-1.10_pre 250
 RMD160 ee5cefdf1409ea20ba9f77d9e737f6c23f343d16 files/digest-lhs2tex-1.10_pre 250
 SHA256 e460f3bc70e14cecd8a94e630f5a394381fb5fcb1bac04e2106836530bcadc5d files/digest-lhs2tex-1.10_pre 250
-MD5 e1cc548aeb7707cdab1fa7be50d8ab06 files/digest-lhs2tex-1.9 64
-RMD160 aa14b932038ef6e986932bf5bc27448e9f90e229 files/digest-lhs2tex-1.9 64
-SHA256 6cf855baf5b2f1407b7266b4f3052fbb345e6e71bf123effdeddf58a439bc529 files/digest-lhs2tex-1.9 64
-MD5 d0bc8f9074b52aaa904683c5838a1618 lhs2tex-1.10_pre.ebuild 996
-RMD160 4020233d2e572d0cf158a26bb623e3df37fe5de1 lhs2tex-1.10_pre.ebuild 996
-SHA256 7daef2208e0bac31fc6a93931f3349b5acb2fd0d2f9b3b750c441606e4c3b936 lhs2tex-1.10_pre.ebuild 996
-MD5 bfe2ed685012f4e009d6d0cf08e33235 lhs2tex-1.9.ebuild 997
-RMD160 166f4e66015ee19400d795d5dc804c119b52227a lhs2tex-1.9.ebuild 997
-SHA256 a851b7651256adb3dc10511b5af21c094fd852b714d6ce15976690e5598c95df lhs2tex-1.9.ebuild 997
+MD5 c493f5f9f666c972ba62f6a08abef5ed files/digest-lhs2tex-1.11 241
+RMD160 54bbe682ad752a641e8af03864030780e266e40c files/digest-lhs2tex-1.11 241
+SHA256 f2f2e77f8f7ecd11e081a5785368b78206d7d9611df5ccecf037515b894f4b69 files/digest-lhs2tex-1.11 241
+MD5 41b68d4602885ce2f1403b12ef7dcf44 lhs2tex-1.10_pre.ebuild 1007
+RMD160 106a7eeb38c363682a9bb48afc078b7b5d64eaed lhs2tex-1.10_pre.ebuild 1007
+SHA256 c9443bcf5121cbc947ace0ffdfe0bc6d7f2130a3bce800c50bb65a5746091683 lhs2tex-1.10_pre.ebuild 1007
+MD5 7467f1940baa83f69f94bc1fe1e9d02e lhs2tex-1.11.ebuild 1041
+RMD160 b7e8251528c808eee9452e3eb45b098ca4f97734 lhs2tex-1.11.ebuild 1041
+SHA256 4c6109b89a4febb6566d2ffc615864d843694af7dece8fc813aed5af9f63c5bd lhs2tex-1.11.ebuild 1041
 MD5 f214e1ec640136029ee84e938434e82e metadata.xml 259
 RMD160 0a2b91b59fe9daa2f826eaef79636b0738f042b9 metadata.xml 259
 SHA256 a450d24928feca3321b4478f3d8b46949214cd2aa75e93e2e25ebbe1b1d73352 metadata.xml 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEEhhg/B0cxt+cq+wRAuD/AJsHWnRtcB89WxZvOgr2xkTKgjG36QCgkVeX
-y6iPgJnJjcdRQVfRdgqYDzc=
-=zZZF
+iD8DBQFEGJAgOKSBj1ObwosRAm7QAJ9qlWDzu/SL0C5fSDfaWaDzT/Q/eACglvN/
+aea9/GMC08AzgSthm6EWXpU=
+=5GBG
 -----END PGP SIGNATURE-----
