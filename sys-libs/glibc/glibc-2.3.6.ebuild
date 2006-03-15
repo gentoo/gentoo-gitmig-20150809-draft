@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.16 2006/01/25 04:39:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6.ebuild,v 1.17 2006/03/15 02:40:37 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -236,14 +236,14 @@ toolchain-glibc_src_compile() {
 	if want_linuxthreads ; then
 		glibc_do_configure linuxthreads
 		einfo "Building GLIBC with linuxthreads..."
-		make PARALLELMFLAGS="${MAKEOPTS}" ${MAKEFLAGS} || die
+		make PARALLELMFLAGS="${MAKEOPTS}" ${MAKEFLAGS} || die "make for ${ABI} failed"
 	fi
 	if want_nptl ; then
 		# ... and then do the optional nptl build
 		unset LD_ASSUME_KERNEL
 		glibc_do_configure nptl
 		einfo "Building GLIBC with NPTL..."
-		make PARALLELMFLAGS="${MAKEOPTS}" ${MAKEFLAGS} || die
+		make PARALLELMFLAGS="${MAKEOPTS}" ${MAKEFLAGS} || die "make for ${ABI} failed"
 	fi
 }
 
