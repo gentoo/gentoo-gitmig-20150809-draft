@@ -1,49 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9b7401e34f77355ef2b6befe85ffa9a5 ChangeLog 9324
-RMD160 f73129de282941b2ddcf60e62ffa1789b8b9e7f8 ChangeLog 9324
-SHA256 5a265ed5951a9230e4b1b17278a85019c8329ed32ea9dbce87288fc8846bd391 ChangeLog 9324
+MD5 30937fa925f086217a9883fd00ebe593 ChangeLog 9422
 MD5 dbfc5d45b6177ffaf7dd74d4971a520a files/conf.d.timidity 912
-RMD160 ba936b4f721ed4d3dac2912659b13b125b09833a files/conf.d.timidity 912
-SHA256 df5cec5d1335b9bdaf87c358b6d69f4f9300454c16aceaaccb212c98fb08f5a3 files/conf.d.timidity 912
 MD5 2762e58e610bb861189b3d6b424312fc files/digest-timidity++-2.13.2 71
-RMD160 20a31646dd568dbe911c2b71e005ba924cf46180 files/digest-timidity++-2.13.2 71
-SHA256 37c70659352d2700ff92c185a98c17ccaace02bcdbcdd3b1bf0cad993b856cc2 files/digest-timidity++-2.13.2 71
 MD5 f9f8b7aa60633b1d571491781e2c2f1d files/digest-timidity++-2.13.2-r2 536
-RMD160 c335b2484ab9ba2e1c2cff0a5bc14325614c31ad files/digest-timidity++-2.13.2-r2 536
-SHA256 98bad02a8730d1cd370c7b6f53cecc9bf9ddaa29625e93f228b7feefed147f82 files/digest-timidity++-2.13.2-r2 536
 MD5 67ee26f08d8de1243029a0a8849cd022 files/gnuconfig_update.patch 477
-RMD160 9c5ba3ec8b953f177110cc755a8bd1c5bed3042c files/gnuconfig_update.patch 477
-SHA256 2906bd19277b08dbc3400708e568715298c54b904b12803c725ac72e08519447 files/gnuconfig_update.patch 477
 MD5 dbc4910aa5c6a5681dd4f121b5db63e8 files/init.d.timidity 457
-RMD160 af1eb92172f06b02f6761e414ea88b6e40c446f4 files/init.d.timidity 457
-SHA256 8882137a10d5e858fa3c20f91d439192dca0759f43702180085d3514a12a59fd files/init.d.timidity 457
 MD5 0868926c5290817cacb9a1849bc043c2 files/timidity++-2.13.2-gcc4.patch 1325
-RMD160 31383eb4a1d0a839d60af8d635aeba02febc9bb5 files/timidity++-2.13.2-gcc4.patch 1325
-SHA256 20ca5deb95ccbb527c0212f4ad002a5a8df1a9c005e210494abe7bc240cef3ee files/timidity++-2.13.2-gcc4.patch 1325
 MD5 16a4adec164836d4390dc6b0f9a69ce9 files/timidity++-2.13.2-gtk26.patch 588
-RMD160 588eefcb0727af0162b24b17970df300ea5fdd64 files/timidity++-2.13.2-gtk26.patch 588
-SHA256 fdb95708e353425fbc8f141d45f5b876fa85636f953200cdbc147834b4a31f56 files/timidity++-2.13.2-gtk26.patch 588
 MD5 15fce5a2d3dfc834b4de65428105e63b files/timidity-update 2513
-RMD160 d980dc303cc67b37ef63c66349376d947d1806cc files/timidity-update 2513
-SHA256 55e0067baebc73f87adbde61ce1669de27a72fd2db89519cbd0754f895d7d058 files/timidity-update 2513
 MD5 80fb82d4216373cbf4efafd7719628e0 files/timidity.cfg-r1 669
-RMD160 856294ef64ab459a03375cb86e5f0fbcdef88ab3 files/timidity.cfg-r1 669
-SHA256 50fb27ea57cc225fcb8e8368e8afc130f2bba22d0787ebb6beacd2112550f9ce files/timidity.cfg-r1 669
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
-MD5 d33d793a3bae608a126c71d47d6287f7 timidity++-2.13.2-r2.ebuild 4145
-RMD160 5241daaee2add56f312528a3cd4f0b5310423a50 timidity++-2.13.2-r2.ebuild 4145
-SHA256 36dad5de00647ae7699eef766c68f04c0c4c8ccc43e911a65c037e71f7016de8 timidity++-2.13.2-r2.ebuild 4145
+MD5 e5b964ef65e19627d6c44d2036d95b73 timidity++-2.13.2-r2.ebuild 4143
 MD5 401447625c092dcc856e210a90965753 timidity++-2.13.2.ebuild 3804
-RMD160 5d95982df19ac6640ce7f1744d5c24acbc6ad2ae timidity++-2.13.2.ebuild 3804
-SHA256 e3a9d36f06627c9093e87ed0c7c8726573643ff7d86a1820bb4f76edcb3bcec3 timidity++-2.13.2.ebuild 3804
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD99P4p5vW4rUFj5oRAgt1AJwLvtxDwcUnx+E7y7sgbOwO/z3QvgCgmnl/
-yeKXPD+w6CzKvQqwwdJvwr8=
-=EFqz
------END PGP SIGNATURE-----
