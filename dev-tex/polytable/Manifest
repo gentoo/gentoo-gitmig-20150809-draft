@@ -1,4 +1,28 @@
-MD5 39f990df91054fa2bc9da526d80d556d ChangeLog 927
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 051bc55bdf01e1262b0ed357eef74ea5 ChangeLog 1050
+RMD160 358dc16f1b55d766fa0cab8cca5481a78c1f52ce ChangeLog 1050
+SHA256 baf00141cbb46f6b6f1f678a6baf416db236d8fa3c6de0e80238fe3e3f4793ae ChangeLog 1050
 MD5 a6db2acc1510077b30e1e84183d360ad files/digest-polytable-0.7.2 66
+RMD160 3b54c7c53965b2d754d1bd39d4806c6163268d39 files/digest-polytable-0.7.2 66
+SHA256 6b2e1e66abc611c800db62074a9bcd1ea7e6af5da0ef2cf6d6dffaf88dc20419 files/digest-polytable-0.7.2 66
+MD5 845f53902b197452e02280e638e5ad3a files/digest-polytable-0.8.2 244
+RMD160 1a942afcc0a795031759a4f7ad7e2eefe45cba94 files/digest-polytable-0.8.2 244
+SHA256 985cec39306c006278b67dadb6b7e08cba1ecf7d8ac1c26c2fa7317c4551f3b6 files/digest-polytable-0.8.2 244
 MD5 f214e1ec640136029ee84e938434e82e metadata.xml 259
+RMD160 0a2b91b59fe9daa2f826eaef79636b0738f042b9 metadata.xml 259
+SHA256 a450d24928feca3321b4478f3d8b46949214cd2aa75e93e2e25ebbe1b1d73352 metadata.xml 259
 MD5 ebcb018993158e11501edd7fafcd5569 polytable-0.7.2.ebuild 656
+RMD160 2d94049da0aff44dbad7a3b67bf1e3035a267460 polytable-0.7.2.ebuild 656
+SHA256 5df8c0ad1a6ab662c31080d2a23099c221c9d8ed292355f8e28c7d45276a38c3 polytable-0.7.2.ebuild 656
+MD5 84589ebd2ff59e3907ad20a60c0dd981 polytable-0.8.2.ebuild 659
+RMD160 2a6172625b8a0cf1dfae2039bd945fd23835b0c7 polytable-0.8.2.ebuild 659
+SHA256 0934c403ecf38e65d5b49e3eeb55d5f9945a26f6054643485014d222976f9374 polytable-0.8.2.ebuild 659
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEGI+JOKSBj1ObwosRAurUAJ4sXfCsDlVJQ37Pae3Lf6CVaxuQ/QCfcHbR
+JyndWaxTPB5l85ONNW+Btdk=
+=/JTS
+-----END PGP SIGNATURE-----
