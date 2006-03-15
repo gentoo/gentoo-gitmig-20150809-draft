@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.70 2006/03/10 01:21:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.71 2006/03/15 14:33:36 johnm Exp $
+
+*gradm-2.1.8.200601212342-r1 (15 Mar 2006)
+
+  15 Mar 2006; John Mylchreest <johnm@gentoo.org>
+  +files/gradm_2.1.8.200601212342-fix_gradm_pam_symlinks.patch,
+  +files/gradm_2.1.8.200601212342-increase_num_pointers.patch,
+  +files/gradm_2.1.8.200601212342-ip_state_interface_fix.patch,
+  +gradm-2.1.8.200601212342-r1.ebuild:
+  Bumping to support hardened-sources-2.6.14-r6, namely the inodev_entry grsec
+  fix
 
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   gradm-2.1.8.200601212342.ebuild:

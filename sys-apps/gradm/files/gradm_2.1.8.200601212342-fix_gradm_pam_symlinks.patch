@@ -1,0 +1,13 @@
+--- gradm2/gradm_adm.c	2005/12/07 00:15:18	1.73
++++ gradm2/gradm_adm.c	2006/02/05 22:51:05	1.74
+@@ -158,8 +158,8 @@ add_gradm_pam_acl(struct role_acl *role)
+ 	add_proc_object_acl(current_subject, "/dev/null", proc_object_mode_conv("rw"), GR_FEXIST);
+ 	add_proc_object_acl(current_subject, "/lib", proc_object_mode_conv("rx"), GR_FEXIST);
+ 	add_proc_object_acl(current_subject, "/usr/lib", proc_object_mode_conv("rx"), GR_FEXIST);
+-	add_proc_object_acl(current_subject, "/lib64", proc_object_mode_conv("rx"), GR_FEXIST);
+-	add_proc_object_acl(current_subject, "/usr/lib64", proc_object_mode_conv("rx"), GR_FEXIST);
++	add_proc_object_acl(current_subject, "/lib64", proc_object_mode_conv("rx"), GR_FEXIST | GR_SYMLINK);
++	add_proc_object_acl(current_subject, "/usr/lib64", proc_object_mode_conv("rx"), GR_FEXIST | GR_SYMLINK);
+ 	add_proc_object_acl(current_subject, GRPAM_PATH, proc_object_mode_conv("x"), GR_FEXIST);
+ 
+ 	add_cap_acl(current_subject, "-CAP_ALL");
