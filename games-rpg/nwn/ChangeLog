@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.35 2006/01/23 15:04:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.36 2006/03/15 22:53:29 wolf31o2 Exp $
+
+  15 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.66.ebuild:
+  Fixing unpacking for bug #125979.
 
   23 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org> -files/nwn.png,
   nwn-1.66.ebuild:
