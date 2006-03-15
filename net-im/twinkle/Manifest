@@ -1,31 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 964f790287d5ddb97c74b3ce92792b99 ChangeLog 2084
-RMD160 4ae098d9e7e15f065701fe32cb0be3627950fa0f ChangeLog 2084
-SHA256 e6f0a21dc09ecee927ab3e14fbd346f96429c6de22cda45f43500095d6705926 ChangeLog 2084
+MD5 1e2ad95d6adb9358c4bc7ccab1752ac5 ChangeLog 2173
 MD5 e5bcd508b5d591a0e470e4d51ff090ea files/digest-twinkle-0.5 63
-RMD160 343ed06071e0256583c695bbc05007675690aca8 files/digest-twinkle-0.5 63
-SHA256 e9849a9393301c0b7a6cae01f870bc08f29a7e6c7ea8bbc390338f970e75b535 files/digest-twinkle-0.5 63
 MD5 93b3444eafa21c71fd9751cb4f73674d files/digest-twinkle-0.6.1 241
-RMD160 070b23567c7aadd13b50b445e8b2e1a6ca998a00 files/digest-twinkle-0.6.1 241
-SHA256 a61257fc8c2f65543d5f1ec7d1587c94ad26e9e3af1e9b8243eb38f2b5e51042 files/digest-twinkle-0.6.1 241
 MD5 bed5e3eed5c8eaef4460598e15633da5 files/twinkle-0.4.1-badcflags.patch 492
-RMD160 136c6387c0053d0457e4be766a8bfdbaeaccc5b1 files/twinkle-0.4.1-badcflags.patch 492
-SHA256 7bcb91795fa0e9c0db4dc174151ed9b3850eeca132844330d65d8429949296d9 files/twinkle-0.4.1-badcflags.patch 492
 MD5 81380b5fa13f903ff321873d95ed35bb metadata.xml 458
-RMD160 51da9f8eb28d451a724fa7b687894976057263c1 metadata.xml 458
-SHA256 9ee142b0e5854bae9e0365b52f6f0cf00a3b428c0c199ccce029108d03f42996 metadata.xml 458
 MD5 8a36bf119ad6f3118041917b2f4b58c5 twinkle-0.5.ebuild 984
-RMD160 a972bc10132a50d3286f91d22df270945aca8b49 twinkle-0.5.ebuild 984
-SHA256 78075b799ee4215b29f6db0d8ea51eedb109128db04d3fb60a60598b66a9cb03 twinkle-0.5.ebuild 984
-MD5 7f10dee6724077f94f8de5bda981a65b twinkle-0.6.1.ebuild 1014
-RMD160 d91b6be34a096a4313072a2d224d23da0546cc96 twinkle-0.6.1.ebuild 1014
-SHA256 3622c76dd30f72d41788c7bde6daefc2a2b9bae8019835a931fe48ae7380cddf twinkle-0.6.1.ebuild 1014
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD8kV/mdTrptrqvGERAqReAJ4ibbIzKqEYSo56lcEU2FYjNp8d8gCgnEdT
-M3CjU3vEt76tgobuSsL7YPI=
-=zk3w
------END PGP SIGNATURE-----
+MD5 6fdc39b43b2d0be0a0e2b195c5cf211e twinkle-0.6.1.ebuild 1018
