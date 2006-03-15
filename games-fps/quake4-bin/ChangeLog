@@ -1,10 +1,6 @@
 # ChangeLog for games-fps/quake4-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.8 2006/03/15 22:20:40 wolf31o2 Exp $
-
-  15 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
-  quake4-bin-1.0.6.ebuild:
-  Changed to use idsoftware thirdpartymirror.
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.9 2006/03/15 22:35:00 wolf31o2 Exp $
 
   15 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   quake4-bin-1.0.6.ebuild:
