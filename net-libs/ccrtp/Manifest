@@ -1,43 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4be08a269ca8c70a612800306c9c3c9d ChangeLog 979
-RMD160 195deff51dbc7677e86de8defff99acdf710e5fb ChangeLog 979
-SHA256 754e0e8fd2f5e3c49a7e63aa566acf438952d2e66c701a8727bd2ae1b933ad0a ChangeLog 979
+MD5 291dea540cbe0a7a4131f0f72c7a89a3 ChangeLog 1065
 MD5 179a095c09cbaae39e5732fd2db7f456 ccrtp-1.3.4.ebuild 615
-RMD160 0bf0ddf230062e05c03f4351249ca5eb59da736f ccrtp-1.3.4.ebuild 615
-SHA256 5edf2978b76517888f98fb43a993bdfbdd9fb385dfd3ddbadc710ae58cc82303 ccrtp-1.3.4.ebuild 615
 MD5 e0df19acdb4af8bfad118b85473805db ccrtp-1.3.5-r1.ebuild 702
-RMD160 ac11a303c73b8d1dc015b3e05bf480f8c2f21a06 ccrtp-1.3.5-r1.ebuild 702
-SHA256 4a820c96ba7c980c54cf5e019beb375146e1d3d50d00a61b10e598d6034e5772 ccrtp-1.3.5-r1.ebuild 702
 MD5 1a11fe5158f0b4fa5c0d52ef0f44e983 ccrtp-1.3.5.ebuild 615
-RMD160 ce798250bb261f823ed84959ac156cffc5fa904d ccrtp-1.3.5.ebuild 615
-SHA256 bd5de94f22756cc6944f174b1fb470250eefc51af211aa8e17771de95aa5f499 ccrtp-1.3.5.ebuild 615
-MD5 ab4fe7427ca760c0e9fe7b3f10b2f290 ccrtp-1.3.6.ebuild 715
-RMD160 cb5506c74977fa1aab19507ffadb60b84c536598 ccrtp-1.3.6.ebuild 715
-SHA256 e660537c547747a0c44c740e7512cadc5760eb2903c4fd602f239272b8de0c0e ccrtp-1.3.6.ebuild 715
+MD5 7128cd1a120200938dbd3000d99892bd ccrtp-1.3.6.ebuild 719
 MD5 2b12c1744c85b868fc95411e96b8f9e2 files/ccrtp-1.3.5-amd64.patch 699
-RMD160 b33884e20e3f217b473732fefc803b3aaf800d41 files/ccrtp-1.3.5-amd64.patch 699
-SHA256 0beb7b4bcf7e823437cb638e4e1a252d0097f25d8f6abbea650c66108e380dce files/ccrtp-1.3.5-amd64.patch 699
 MD5 e2450d97ee3ec317929ba907208f2a88 files/digest-ccrtp-1.3.4 63
-RMD160 dc3fc80fbeb9eacb6978474275c09a6aa8a87ad6 files/digest-ccrtp-1.3.4 63
-SHA256 f93ec1e2b351c27685c7fe8762dda331e05a3da8b46680603192a482c37231c0 files/digest-ccrtp-1.3.4 63
 MD5 46446c015677f6eb590de0f77206674f files/digest-ccrtp-1.3.5 63
-RMD160 9fc375eec7ae9ef49b3f1db5cda8a4dfeb312c76 files/digest-ccrtp-1.3.5 63
-SHA256 e32a9ec15234b958f15749da7a21d4113e24a67b34f74b95bae4f94cd0f9f6ab files/digest-ccrtp-1.3.5 63
 MD5 46446c015677f6eb590de0f77206674f files/digest-ccrtp-1.3.5-r1 63
-RMD160 9fc375eec7ae9ef49b3f1db5cda8a4dfeb312c76 files/digest-ccrtp-1.3.5-r1 63
-SHA256 e32a9ec15234b958f15749da7a21d4113e24a67b34f74b95bae4f94cd0f9f6ab files/digest-ccrtp-1.3.5-r1 63
 MD5 9a7c901a916d45ecf534500edf67ca21 files/digest-ccrtp-1.3.6 235
-RMD160 7ac172f618c4d66d00a6d371bfe265f267d2756d files/digest-ccrtp-1.3.6 235
-SHA256 12afe4708c3eccd25a1fd1ce7356e0c77c420c8681baf5bcf726e8e73d4208f7 files/digest-ccrtp-1.3.6 235
 MD5 c1a6093f6bf43cae3b4360e3620d9992 metadata.xml 252
-RMD160 36a03a2a4006b0c9775dc208924046213a02afb8 metadata.xml 252
-SHA256 870154279ed929fa180dc99c4cb2513cab3c78e1c602fc27ed8c67505262bd48 metadata.xml 252
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD/FY8mdTrptrqvGERAjcaAJ9zxeRlj7qQkNG+/gfSrLJplkP0wwCcC7cU
-sUIzo+2KsEMoF2pN3MIbEFw=
-=UIgx
------END PGP SIGNATURE-----
