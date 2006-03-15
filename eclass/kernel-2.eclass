@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.163 2006/03/08 11:02:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.164 2006/03/15 01:45:23 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -319,9 +319,7 @@ kernel_header_destdir() {
 }
 
 cross_pre_c_headers() {
-	[[ -z ${_E_CROSS_HEADERS_ONLY} ]] && return 1
-	[[ ${CHOST} == ${CTARGET} ]] && return 1
-	return 0
+	has _E_CROSS_HEADERS_ONLY ${USE} && [[ ${CHOST} != ${CTARGET} ]]
 }
 
 env_setup_xmakeopts() {
