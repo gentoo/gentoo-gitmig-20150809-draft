@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.15 2005/12/29 12:30:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.16 2006/03/15 01:47:04 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -77,9 +77,7 @@ alt_rprefix() {
 	fi
 }
 just_headers() {
-	[[ -z ${_E_CROSS_HEADERS_ONLY} ]] && return 1
-	[[ ${CHOST} == ${CTARGET} ]] && return 1
-	return 0
+	has _E_CROSS_HEADERS_ONLY ${USE} && [[ ${CHOST} != ${CTARGET} ]]
 }
 
 pkg_setup() {

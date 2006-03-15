@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.20 2006/03/11 03:23:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.21 2006/03/15 01:47:04 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -75,9 +75,7 @@ alt_rprefix() {
 	fi
 }
 just_headers() {
-	[[ -z ${_E_CROSS_HEADERS_ONLY} ]] && return 1
-	[[ ${CHOST} == ${CTARGET} ]] && return 1
-	return 0
+	has _E_CROSS_HEADERS_ONLY ${USE} && [[ ${CHOST} != ${CTARGET} ]]
 }
 
 pkg_setup() {

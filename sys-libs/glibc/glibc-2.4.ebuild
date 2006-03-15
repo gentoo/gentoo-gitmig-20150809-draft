@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.7 2006/03/12 17:57:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.8 2006/03/15 01:48:51 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -74,8 +74,7 @@ is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
 }
 just_headers() {
-	[[ -z ${_E_CROSS_HEADERS_ONLY} ]] && return 1
-	is_crosscompile
+	is_crosscompile && has _E_CROSS_HEADERS_ONLY ${USE}
 }
 
 GLIBC_RELEASE_VER=$(get_version_component_range 1-3)
