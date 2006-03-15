@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.12.7.ebuild,v 1.10 2006/02/16 04:22:14 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.12.7.ebuild,v 1.11 2006/03/15 00:47:04 allanonjl Exp $
 
 inherit eutils multilib gnome2
 
@@ -84,7 +84,7 @@ src_unpack() {
 }
 
 src_install() {
-	gnome2_src_install plugindir=${D}/usr/$(get_libdir)/nsbrowser/plugins/
+	gnome2_src_install plugindir=/usr/$(get_libdir)/nsbrowser/plugins/
 
 	# remove gdk-pixbuf loaders (#47766)
 	rm -fr ${D}/etc

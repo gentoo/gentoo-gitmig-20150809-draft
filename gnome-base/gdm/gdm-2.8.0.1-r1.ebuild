@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.1-r1.ebuild,v 1.10 2005/09/11 05:52:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.1-r1.ebuild,v 1.11 2006/03/15 00:50:19 allanonjl Exp $
 
 inherit eutils pam versionator gnome2
 
@@ -71,8 +71,8 @@ src_install() {
 
 	use pam && pam_prefix="PAM_PREFIX=${D}/etc"
 
-	gnome2_src_install ${pam_prefix} sysconfdir=${D}/etc/X11 \
-		localstatedir=${D}/var
+	gnome2_src_install ${pam_prefix} sysconfdir=/etc/X11 \
+		localstatedir=/var
 
 	# gdm-binary should be gdm to work with our init (#5598)
 	rm -f ${D}/usr/sbin/gdm
