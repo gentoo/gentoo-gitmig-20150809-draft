@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.3.12.ebuild,v 1.7 2006/01/25 17:23:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.3.12.ebuild,v 1.8 2006/03/15 22:38:47 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="FPS level editor"
 HOMEPAGE="http://www.qeradiant.com/?data=editors/gtk"
-SRC_URI="ftp://ftp.idsoftware.com/idstuff/qeradiant/GtkRadiant/GtkRadiant-1_3/Linux/linux-radiant-${PV}.run"
+SRC_URI="mirror://idsoftware/qeradiant/GtkRadiant/GtkRadiant-1_3/Linux/linux-radiant-${PV}.run"
 
 LICENSE="qeradiant"
 SLOT="0"

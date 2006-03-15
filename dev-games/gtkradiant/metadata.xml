@@ -7,8 +7,6 @@
  <name>Mike Frysinger</name>
 </maintainer>
 <longdescription>
-GtkRadiant is a level editor supporting multiple games and mods: Quake III Arena, Quake III: Team 
-Arena, Quake III Arena modifications, Return To Castle Wolfenstein, Jedi Knight II: Jedi Outcast, 
-Soldier Of Fortune II, Star Trek Voyager: Elite Force.
+GtkRadiant is a level editor supporting multiple games and mods: Quake III Arena, Quake III: Team Arena, Quake III Arena modifications, Return To Castle Wolfenstein, Jedi Knight II: Jedi Outcast, Soldier Of Fortune II, Star Trek Voyager: Elite Force.
 </longdescription>
 </pkgmetadata>
