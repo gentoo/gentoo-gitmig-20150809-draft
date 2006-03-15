@@ -228,3 +228,14 @@
  
      // open the clipboard before Add/SetData() and GetData()
      virtual bool Open() = 0;
+--- wxGTK-2.4.2/include/wx/protocol/file.h.orig	2006-02-26 19:02:25.000000000 -0800
++++ wxGTK-2.4.2/include/wx/protocol/file.h	2006-02-26 19:02:38.000000000 -0800
+@@ -13,7 +13,7 @@
+ #define __WX_PROTO_FILE_H__
+ 
+ #if defined(__GNUG__) && !defined(__APPLE__)
+-#pragma interface "sckfile.h"
++#pragma interface "file.h"
+ #endif
+ 
+ #include "wx/defs.h"
