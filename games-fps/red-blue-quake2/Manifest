@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0359a6214a9d058d3a0204ccbf6581f0 ChangeLog 478
+MD5 868992ac367464246347d4a34a866c46 ChangeLog 740
+RMD160 8d7dfa131f61fad84971fe5b091d6efdc71fe310 ChangeLog 740
+SHA256 889be1ec3bf103f5e7f379a7edbb64290ac0bcd22f1647299256a01d45bf476a ChangeLog 740
 MD5 86c6814acf8cf8b24f67557e5f96fb1e files/0.1-gentoo.patch 2304
+RMD160 e31601552a93bc268a78265e1899c9e4b9ccbd13 files/0.1-gentoo.patch 2304
+SHA256 3e5510ff62fdc50a8d8c93464871bc14df488938c99dbc7fc86fe095af7f8ab9 files/0.1-gentoo.patch 2304
 MD5 ac16b4e5cb958cca657192c316e60ec5 files/digest-red-blue-quake2-0.1 133
+RMD160 8b45300b92ba700f522cbd2b238aba77ec269be8 files/digest-red-blue-quake2-0.1 133
+SHA256 d4872a0182ccd24ab8c70b58d4217055cb2644b1589ede381595a31a130de32d files/digest-red-blue-quake2-0.1 133
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 0e273d499bde9cdc2940b2ac12c235ea red-blue-quake2-0.1.ebuild 1511
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDbTgfgIKl8Uu19MoRAk0eAJwLllijWW6uB9IulbDmMKgedlg2igCfdTMj
-HPmKRtgtpbJee9W7NPf2F4M=
-=uplT
------END PGP SIGNATURE-----
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 80c4b4cda878c74f8af495d5271b1fbb red-blue-quake2-0.1.ebuild 1392
+RMD160 432f2c680970696a98c947772d8ac614d10e1363 red-blue-quake2-0.1.ebuild 1392
+SHA256 9b0501dd981232efc17345fde8d4de0432d693e0dbee8849e3ebd143921f02ac red-blue-quake2-0.1.ebuild 1392
