@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23.ebuild,v 1.1 2006/03/08 19:34:02 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23.ebuild,v 1.2 2006/03/15 02:01:14 flameeyes Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="iptables daemon for ULOG target for userspace iptables filter logging"
 SRC_URI="http://ftp.netfilter.org/pub/ulogd/${P}.tar.bz2"
@@ -17,15 +17,22 @@ DEPEND="net-firewall/iptables
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-gcc41.patch"
+}
+
 src_compile() {
 	# enables logfiles over 2G (#74924)
-	append-flags -D_FILE_OFFSET_BITS=64
+	append-lfs-flags
 
 	econf \
 		`use_with mysql` \
 		`use_with postgres pgsql` \
 		|| die "configure failed"
-	make || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
