@@ -1,19 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5ea42cd683df5c4f48a843986f04a9d4 ChangeLog 942
+MD5 cabb24b289236767d2544910667008d3 ChangeLog 1095
+RMD160 62e7771d5dd5e29d7c0d552b0a769db22fbbb4e2 ChangeLog 1095
+SHA256 a08cb2e6b88cb7843893185e6e60e105313596d78d620c549418329e09a35894 ChangeLog 1095
 MD5 1234946f709d4f661a2030a3b01fab6b files/digest-quake1-2.40-r1 58
+RMD160 0ad1aa396abe29586e355aa0147e4f2551f4922c files/digest-quake1-2.40-r1 58
+SHA256 d13007d40751ea074ff7ca50283401d0b835f43a1f48292f7e596ff52b2e8fcd files/digest-quake1-2.40-r1 58
 MD5 b9e1b8831a33b812643b9d5f3cab8cf2 files/fix-sys_printf.patch 666
+RMD160 f15d2c23a34aa736754d4fa955b97b4503c15be2 files/fix-sys_printf.patch 666
+SHA256 100b6fe9a73ce0bbdcb0def8b64960828d46681afda7689885f889d4bd3bf1b3 files/fix-sys_printf.patch 666
 MD5 976762754aa92b2d6db912e4414ddf3b files/gentoo-paths.patch 1183
+RMD160 309f98d7e2aa1764f6fc911067e9bd189bc1f4bb files/gentoo-paths.patch 1183
+SHA256 38edbf6560e81b105ac9b1e59c4c575db678d787c3104bb7eb5b3a984359275d files/gentoo-paths.patch 1183
 MD5 b74e563d08363b8b88127fffaefb5944 files/makefile-cflags.patch 709
+RMD160 bee9c482c65aa0eef83b09f11834fcd8baab32aa files/makefile-cflags.patch 709
+SHA256 b8babe0d21d3a1086523afb92826f25fc32998a209bec46c5b9fa22803d8423a files/makefile-cflags.patch 709
 MD5 6a5b3a494d26b4f1b8d1063f9a0aa6e4 files/makefile-path-fixes.patch 1539
+RMD160 3242e8f52138317a09ce4273f20c7ccce604d107 files/makefile-path-fixes.patch 1539
+SHA256 aee91e7015d00332d442cc04540c41796ccc73e53732898f364a463219b6476e files/makefile-path-fixes.patch 1539
 MD5 6f4c55f7cf280c7c87e1e5a20934b813 files/makefile-sedable.patch 1064
+RMD160 fd62ad84ab3b56f76886add7f89203ad6f5ea4e0 files/makefile-sedable.patch 1064
+SHA256 b05646dd2eb350f0f6fa565fa6fb4181348faee60a5bba213109d31733482fdd files/makefile-sedable.patch 1064
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 7a1977ef24135e111cc2a05f905d3bfd quake1-2.40-r1.ebuild 2427
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDZGE2gIKl8Uu19MoRAjTQAJ9rpfanb1YgCAVRHI3Sf4DVsjv7kACdEyK0
-mlz2ilXBHCkcITT1hc3w7Hw=
-=YLc2
------END PGP SIGNATURE-----
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 93493b7ff36206b73b76c252ee996f05 quake1-2.40-r1.ebuild 2444
+RMD160 1a372b00df2fb2492cca86c4b2d96ccf75a2ac2c quake1-2.40-r1.ebuild 2444
+SHA256 2fbfa42ed24dc4ec3086900d109813eb59c41cde6090e5dd8bc86ffa251bbfbd quake1-2.40-r1.ebuild 2444

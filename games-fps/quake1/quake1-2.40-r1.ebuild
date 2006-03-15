@@ -1,19 +1,22 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40-r1.ebuild,v 1.4 2005/10/30 05:58:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40-r1.ebuild,v 1.5 2006/03/15 22:23:15 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="The original Quake engine straight from id !"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake/"
-SRC_URI="ftp://ftp.idsoftware.com/idstuff/source/q1source.zip"
+SRC_URI="mirror://idsoftware/source/q1source.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-*"
 IUSE="cdinstall X opengl svga 3dfx"
 
-RDEPEND="X? ( virtual/x11 )
+RDEPEND="X? (
+	|| (
+		x11-libs/libX11
+		virtual/x11 ) )
 	opengl? ( virtual/opengl )
 	svga? ( media-libs/svgalib )
 	3dfx? ( media-libs/glide-v3 )"
@@ -29,7 +32,7 @@ pkg_setup() {
 	ewarn "You probably want games-fps/quakeforge if you're"
 	ewarn "looking for a quake1 client ..."
 	ebeep
-	esleep
+	epause
 }
 
 src_unpack() {
