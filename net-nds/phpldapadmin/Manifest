@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ba3eab67b9312bc1aaa443fceea7d8d4 ChangeLog 4805
-RMD160 ad4586f1cb1213003dd47859e5954f571b9cfa98 ChangeLog 4805
-SHA256 a374c11f02c102ec0b172b36228b4182bf83d9d44a8ccf429a27f53f6ecc0f5c ChangeLog 4805
+MD5 b14ac5c86987b43e49df1a3da56e2593 ChangeLog 4966
+RMD160 eaf8c7634a9691d8360f56aad752a5e94c112b7d ChangeLog 4966
+SHA256 a0ced4c3a95dd06c7d05aab854f224765b9a08239363244c5c61a641e528e465 ChangeLog 4966
 MD5 40643f9becbb5569c5c9823f6a18fd41 files/digest-phpldapadmin-0.9.7 256
 RMD160 7d3536eb770ae3714633986481590454c14da7c1 files/digest-phpldapadmin-0.9.7 256
 SHA256 0f5417e3cf656d8cc468fe3418094fa26abd3fc4560f39023d724ec60fafe033 files/digest-phpldapadmin-0.9.7 256
-MD5 0ff689a9912797f098ed26a016ce2f0e files/digest-phpldapadmin-0.9.8.1 262
-RMD160 75ec0b136d932738a64449a75cab02cb204152d0 files/digest-phpldapadmin-0.9.8.1 262
-SHA256 e6c3b74aa5a44274f847e5946bd886f490d3a3c3837ed59ad3ac67413e726054 files/digest-phpldapadmin-0.9.8.1 262
+MD5 7d971fca87afcde040035679091fd511 files/digest-phpldapadmin-0.9.8.2 262
+RMD160 de3a3ffcdbbce4b5adbebbd0a393849e8449b46d files/digest-phpldapadmin-0.9.8.2 262
+SHA256 a214640af0ff38a3a9faa8a97c56c1979fb30f57ef940d5dc5eac8387a8fc4f5 files/digest-phpldapadmin-0.9.8.2 262
 MD5 c7ed0250049943c50a707864208ac950 files/digest-phpldapadmin-1.0.0 256
 RMD160 ec0f9d8cd6671c980c64d1b01ef3e261bd5d5972 files/digest-phpldapadmin-1.0.0 256
 SHA256 781789248a0361c8527c83687f8632398da3e6db21dca8d52ffef9d71a946999 files/digest-phpldapadmin-1.0.0 256
@@ -25,16 +25,16 @@ SHA256 608eb068385dacc92c20a04bee69d80e04dd3b6c9627a0ebf48e63674da81434 metadata
 MD5 4df2c044b8f772a4dbcc3d9812a1582c phpldapadmin-0.9.7.ebuild 959
 RMD160 ffd33b05ff0f85dacbd1ffef66ea4177a08b3589 phpldapadmin-0.9.7.ebuild 959
 SHA256 fe4a357ae21e512acab4e559ba84e6f473228d1a7c361804dc758b003362b42d phpldapadmin-0.9.7.ebuild 959
-MD5 4547a512dabe03e892090e45d3d57060 phpldapadmin-0.9.8.1.ebuild 906
-RMD160 7baabe385721953118c43c523433cf57f117de39 phpldapadmin-0.9.8.1.ebuild 906
-SHA256 bd0b7c46f2ecdefca9ad917b1e4e98e832e55330c9d18197bd7923b103c6c78d phpldapadmin-0.9.8.1.ebuild 906
+MD5 ff4e67dfbdceea5f15b85d0e95b7f0b4 phpldapadmin-0.9.8.2.ebuild 906
+RMD160 00f4eb46aa218e43fb9c2d0dff924771ef73c4ce phpldapadmin-0.9.8.2.ebuild 906
+SHA256 015390ee0bde55c8abdbe7b16b044d31d1cb09d6c5f01c1174ae81020331b862 phpldapadmin-0.9.8.2.ebuild 906
 MD5 b493fad98e0a1b5b43e06b6ec9865cb8 phpldapadmin-1.0.0.ebuild 904
 RMD160 22970d90c14c106ba4a49eb4305c36d10e91d8bc phpldapadmin-1.0.0.ebuild 904
 SHA256 8f985c333404df23237067f35341cc5c59b8466487eb6b39212e2ad334e95498 phpldapadmin-1.0.0.ebuild 904
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEAevqEzitwsaoONoRAi3sAJ4pp8xSV09f+8dl6j6OrW8uZF9C6wCfTtom
-gC5y6D7ghVM/FuzzaA3HlJ4=
-=GYHn
+iD8DBQFEGEBYEzitwsaoONoRAtUNAKDccaGleHl2CdAj74CDtdmuSMQ2uQCfU64s
+0zTpLGpwp+wxweBCjZ666Gs=
+=VzBb
 -----END PGP SIGNATURE-----
