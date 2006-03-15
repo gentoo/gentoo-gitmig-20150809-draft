@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.19.ebuild,v 1.4 2006/01/26 23:58:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.19.ebuild,v 1.5 2006/03/15 16:44:42 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -32,7 +32,7 @@ RDEPEND="esd? ( media-sound/esound )
 		gnome-base/gnome-libs )
 	readline? ( sys-libs/readline )
 	sdl? (
-		${XDPENED}
+		${XDEPEND}
 		|| (
 			(
 				x11-libs/libXt
