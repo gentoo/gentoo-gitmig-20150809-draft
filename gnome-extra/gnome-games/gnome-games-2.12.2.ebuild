@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.12.2.ebuild,v 1.9 2006/02/04 15:31:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.12.2.ebuild,v 1.10 2006/03/15 00:41:34 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -52,6 +52,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.12.0-no_lazy_bindings.patch
 
 	epatch ${FILESDIR}/${PN}-2.11.4-nohowl.patch
+
+	gnome2_omf_fix
 
 	autoconf || die "autoconf failed"
 }
