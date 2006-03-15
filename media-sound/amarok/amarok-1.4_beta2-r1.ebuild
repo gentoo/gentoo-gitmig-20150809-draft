@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4_beta2-r1.ebuild,v 1.2 2006/03/07 10:08:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4_beta2-r1.ebuild,v 1.3 2006/03/15 13:58:23 flameeyes Exp $
 
 LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ko
 lt nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz xx zh_CN
@@ -86,8 +86,7 @@ src_compile() {
 				  $(use_with real helix)
 				  $(use_with ifp)
 	              --without-mas
-	              --without-nmm
-				  --without-ifp"
+	              --without-nmm"
 
 	kde_src_compile
 }
