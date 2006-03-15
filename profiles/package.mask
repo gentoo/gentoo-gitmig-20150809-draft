@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5090 2006/03/15 15:25:17 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5091 2006/03/15 15:31:59 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marcelo Goes <vanquirius@gentoo.org> (15 Mar 2006)
+# Masked for bug 126256 (broken?)
+=net-print/hplip-0.9.9
 
 # Marinus Schraal <foser@gentoo.org> (13 Mar 2006)
 # 2 ancient packs without metadata up for removal
