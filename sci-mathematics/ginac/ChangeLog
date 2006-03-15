@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/ginac
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.6 2005/06/26 01:44:36 ribosome Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.7 2006/03/15 15:18:30 markusle Exp $
+
+  15 Mar 2006; Markus Dittrich <markusle@gentoo.org> ChangeLog:
+  Version bump. Also added small patch to allow compilation
+  with gcc-4.1. This fixes bug #125184.
 
   26 Jun 2005; Olivier Fisette <ribosome@gentoo.org> -ginac-1.1.3.ebuild,
   -ginac-1.1.6.ebuild:
