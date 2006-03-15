@@ -1,100 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b641e55f4916e4dc9282f35c9f43f323 ChangeLog 19121
-RMD160 ca22ae9b18b8b34f313826c28b541feff73d6e5e ChangeLog 19121
-SHA256 c365f46321ee05e0785669268d0d3de4e2efa6bc5b47946eb500d775305d4335 ChangeLog 19121
+MD5 034332aedc8a6cd77037c23a2b973dc7 ChangeLog 19243
 MD5 b1c7f6fe232921bb9516c1007f34efd4 files/digest-mldonkey-2.5.16-r9 128
-RMD160 ac6c8f66255f3d1825b7d2da0a767c08447d282e files/digest-mldonkey-2.5.16-r9 128
-SHA256 9211cd65f17bd15401012703fc7df4a928d8e74b088bc69ffd1b7723c98fa3b8 files/digest-mldonkey-2.5.16-r9 128
 MD5 f145ba120c09f53b0032ea8b3f930128 files/digest-mldonkey-2.5.21-r2 126
-RMD160 be097bb487eef1666027890606f82dd5345723fd files/digest-mldonkey-2.5.21-r2 126
-SHA256 1977bfa101c7b2ba848ca333333c8698de4f284d95ffd24102de508718b3eb9f files/digest-mldonkey-2.5.21-r2 126
 MD5 2db375201ae817eaa7075507d9700eed files/digest-mldonkey-2.6.0-r1 68
-RMD160 d6340fc12c2c1acf4bafa8f025f7015a2038abed files/digest-mldonkey-2.6.0-r1 68
-SHA256 3b1880ad114d618a56f9bf23b23b49877e6b467e5c7d181a87a90fbbd7ae5a9f files/digest-mldonkey-2.6.0-r1 68
 MD5 9613def727af8826277e993290216c36 files/digest-mldonkey-2.6.4-r2 144
-RMD160 e989fb0650f497dc8762bca4df058d7e97ed7800 files/digest-mldonkey-2.6.4-r2 144
-SHA256 825b031a7d34187abd97ef0700b38d52fa21610ef2f9a13b7ad13327720a7b69 files/digest-mldonkey-2.6.4-r2 144
 MD5 eed52b2efc88d5b19ac43a6f4eeb5af7 files/digest-mldonkey-2.6.5 144
-RMD160 d65bc425d19c78e448817f55c52f34e7ab52f0ec files/digest-mldonkey-2.6.5 144
-SHA256 11a3408d796575db697f44e44777b07fa1e51a0355cd3bb01bbc4aa492fdd33c files/digest-mldonkey-2.6.5 144
 MD5 0efadb757ab70fc302be8d3e139d8438 files/digest-mldonkey-2.6.7 144
-RMD160 c2ffd459bc1a99305b925b055c34d5fdd52fbe45 files/digest-mldonkey-2.6.7 144
-SHA256 2575c61ea6fa1dcfed06145cf53f6d93558ef23c38867bcb509c2dfa76dc3741 files/digest-mldonkey-2.6.7 144
 MD5 fb103852197a1645dfbc8926e0ccea68 files/digest-mldonkey-2.7.0 222
-RMD160 bbbc63aadc682d48e3f2ff372cd0c67e70bdc52e files/digest-mldonkey-2.7.0 222
-SHA256 4956ebc03852120ed74ae17a35a0bfef4d60d0a1009b6bd7383e72def00a5aad files/digest-mldonkey-2.7.0 222
 MD5 7402d9c8f1b22a006d2966e7702bbdc6 files/digest-mldonkey-2.7.1 144
-RMD160 3328923055916709388e092f33255f6c53abc038 files/digest-mldonkey-2.7.1 144
-SHA256 ef1727db6645433d3c9ce33212ce4a98f288ed2c72f1d6284789b9638167d74f files/digest-mldonkey-2.7.1 144
 MD5 7c787aa9daf94a51448026c3d113d87a files/digest-mldonkey-2.7.2 144
-RMD160 a22ba3ee4715096b4f721a777ef5206a5892f24f files/digest-mldonkey-2.7.2 144
-SHA256 d3ced411cec5768aa90a1e1b6c0e1ccc66dd9a7d6e49d954796c7a778e974e9a files/digest-mldonkey-2.7.2 144
 MD5 1beda07a92ca951192a55a1331894510 files/digest-mldonkey-2.7.3 144
-RMD160 b49ae2e0c1533c6a7829f65a489531ee22a4078d files/digest-mldonkey-2.7.3 144
-SHA256 b770761dd8501fd3bbb6f4f12aa79937ad0d9df9137a9e73d7381ca41f353420 files/digest-mldonkey-2.7.3 144
 MD5 ac93ed074d62909b2a496045f0740127 files/mldonkey 336
-RMD160 e12f193088e91ddb02baa63533115075abea0dae files/mldonkey 336
-SHA256 38392622dd39cd8d73e9a6944593e82e45ec0d12cc0134fb736d443a9b17f3d7 files/mldonkey 336
 MD5 be0c71929c461b50601e8715706a4a16 files/mldonkey-2.5.16-configure.patch 540
-RMD160 fb1485c4f1fe395d479c1368da92dbcaae1cbb6b files/mldonkey-2.5.16-configure.patch 540
-SHA256 896c51490445dc703334f118e301ef955dca394e931dc513d81dd2c7d15c75ff files/mldonkey-2.5.16-configure.patch 540
 MD5 be0c71929c461b50601e8715706a4a16 files/mldonkey-2.5.21-configure.patch 540
-RMD160 fb1485c4f1fe395d479c1368da92dbcaae1cbb6b files/mldonkey-2.5.21-configure.patch 540
-SHA256 896c51490445dc703334f118e301ef955dca394e931dc513d81dd2c7d15c75ff files/mldonkey-2.5.21-configure.patch 540
 MD5 05622542c4f7a93553ab90d66f871b2d files/mldonkey-2.6.0-gtk2-gentoo.patch 497
-RMD160 7bd0769ce39090cd21dd986d2b03e325815407f1 files/mldonkey-2.6.0-gtk2-gentoo.patch 497
-SHA256 8f0f9e1aac21a92578457ce886c91d46d95a44f6660f762e766bd2ac0d9b0bb8 files/mldonkey-2.6.0-gtk2-gentoo.patch 497
 MD5 93e16748ad44af182177978057266aa7 files/mldonkey-gui.desktop 263
-RMD160 c8da2a5e90446cefe75e93969b975093b2d367b0 files/mldonkey-gui.desktop 263
-SHA256 8ba9aec085500abbc7fcf53cf34a61e23a5b68cdc8b4b856f4395a5729608eb9 files/mldonkey-gui.desktop 263
 MD5 0308db20eac32dd62c1519106c6809a7 files/mldonkey.confd 770
-RMD160 b91f4a791a8577c731d9dc8ffbbdd8ce353c5bad files/mldonkey.confd 770
-SHA256 21e2b01ba6c709a898a5192ac070be5643422fb5330cf04d96320921fc59cd42 files/mldonkey.confd 770
 MD5 39035eb38db4becb71b58945466eeb95 files/mldonkey.initd 3063
-RMD160 66992e16a26f288ee9aaa3432b2e5739e977401a files/mldonkey.initd 3063
-SHA256 f4920a55aa53712e2f2514265f6298faba97fc5ff26cd674a32444629b12c150 files/mldonkey.initd 3063
 MD5 855aedd7fba1ffe74d7f6c0bce98f45f files/mldonkey.png 6835
-RMD160 2ef0cbc5be4de95893b43da0281bd52f5aabb314 files/mldonkey.png 6835
-SHA256 c16ecc040b5ea82ed06b04a76c5d7304d7aca2f0854176aa8d78aa90831d8798 files/mldonkey.png 6835
 MD5 ee159929f3e247f937fe88bb1919d8bd metadata.xml 242
-RMD160 d0edc89382298dee00d3571b62a5f457ef268751 metadata.xml 242
-SHA256 b354d71d5efbed0ff97e27564894438b42a8bd8b577007cadc6972dd37d6b5f8 metadata.xml 242
 MD5 a92ec1a9e1c381c49b544c81221a8bd0 mldonkey-2.5.16-r9.ebuild 2660
-RMD160 714d19804fdf4c4b37dda5459460cb31a7cf487a mldonkey-2.5.16-r9.ebuild 2660
-SHA256 c59575bec6c10e2f91cf9cd48e9e668534be2941c94a03defe1110afd037f845 mldonkey-2.5.16-r9.ebuild 2660
 MD5 e4d631474942d4a724d5be73a39df379 mldonkey-2.5.21-r2.ebuild 2692
-RMD160 fa85c8603f979b9567d7b1375c7ebbe8f349208e mldonkey-2.5.21-r2.ebuild 2692
-SHA256 7c7b7f8ae0365aae1d8c2267b22b9759099c19c39840cbb5e7bd508af43b6328 mldonkey-2.5.21-r2.ebuild 2692
 MD5 876a19eb631cabc1934807504f2fc435 mldonkey-2.6.0-r1.ebuild 3487
-RMD160 acbc4ef095609b3b248fd165d04dc9b353ffb8e3 mldonkey-2.6.0-r1.ebuild 3487
-SHA256 d82ed6d262c92b8b9cb72a3d20dc4ecf6c7385c75be7c260a1739adfeae5a8aa mldonkey-2.6.0-r1.ebuild 3487
 MD5 495438c7dda651104095d4d53e6662c6 mldonkey-2.6.4-r2.ebuild 4979
-RMD160 ca04f2bf99c531a0bea16c920d7ee5e1203b6c49 mldonkey-2.6.4-r2.ebuild 4979
-SHA256 3ed7bd55a56a1036ac3825648453def8b460a4d7d5f1f576604629bfdd79514b mldonkey-2.6.4-r2.ebuild 4979
 MD5 1c9c6bded549ef569052d0f75fafb019 mldonkey-2.6.5.ebuild 4979
-RMD160 11fb21d379026d36233f219789edf5e2525c328c mldonkey-2.6.5.ebuild 4979
-SHA256 770648e31237bb4ed703382822307393b5a4e2783d7d0e67e080e119acb38146 mldonkey-2.6.5.ebuild 4979
 MD5 f42930815313489969c08481c08603f2 mldonkey-2.6.7.ebuild 5029
-RMD160 2d8f9b11a99ae983ce29a17a0558cd97de590084 mldonkey-2.6.7.ebuild 5029
-SHA256 4dcc7aa3d971752b901d09d356d1579f605ca7d03f0b120d2b47e1adb8239419 mldonkey-2.6.7.ebuild 5029
 MD5 3586cd008283449062e3960e8b170ed8 mldonkey-2.7.0.ebuild 5093
-RMD160 e5ef60e2037f45eb8112ba0bd2e8145ea5a30812 mldonkey-2.7.0.ebuild 5093
-SHA256 3660805ed75250c5fcf77a8e0f11e8a345baa996d84bb1f9b94d154e55e545ed mldonkey-2.7.0.ebuild 5093
 MD5 df713d2d96f28dc3a77f8af3d1581704 mldonkey-2.7.1.ebuild 4984
-RMD160 5344f8115891d779e872b9d0abe8ec59282c0ded mldonkey-2.7.1.ebuild 4984
-SHA256 5a902f9664b6463acd7b86658b62086ff19aae22456de5b8e6774c8d98def0ea mldonkey-2.7.1.ebuild 4984
 MD5 07f1ca93a2181a341950e4474c45d237 mldonkey-2.7.2.ebuild 4979
-RMD160 262ad81e0b0b0a24bd64915a69413437c7f59585 mldonkey-2.7.2.ebuild 4979
-SHA256 86af5054d27415fe9a1b809bb025e9a0462c226df13fcf56aa4313c8dc62f3a1 mldonkey-2.7.2.ebuild 4979
-MD5 3548e2efc92a89ae60f8a52c050d634b mldonkey-2.7.3.ebuild 4984
-RMD160 6d56c7543f2bf68bd524fdad426e4e40815c4bc2 mldonkey-2.7.3.ebuild 4984
-SHA256 8e0e49d578155d6e6a6a7b738440cf8eeb5f74461ee6b8732787f17298588e11 mldonkey-2.7.3.ebuild 4984
+MD5 6e5e54b28c09d8819c280070b07d3d82 mldonkey-2.7.3.ebuild 4990
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEEO7WJrHF4yAQTrARApb8AKCmNvz5RPZ/0xELdLQtjrwEJ8utjACgm/s1
-jsBFAq/DqIa6GbvMoIgwvu0=
-=vc6W
+iD8DBQFEF2OUKRy60XGEcJIRAjTsAJ0YpveKndnZwOgpo5+E5WLKkb9bmACeOKnl
+x9i92CgG/OhWpsY7YtUvIc0=
+=8dUY
 -----END PGP SIGNATURE-----

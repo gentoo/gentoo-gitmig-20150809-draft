@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.7.3.ebuild,v 1.2 2006/03/10 03:13:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.7.3.ebuild,v 1.3 2006/03/15 00:44:48 gustavoz Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ia64 ~ppc ~x86"
 RESTRICT="nomirror"
 
 RDEPEND="dev-lang/perl
