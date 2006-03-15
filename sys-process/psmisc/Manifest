@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2428d912aa781657894a31fb554d2512 ChangeLog 9473
-RMD160 303f9ba174780e45678a895ca1b98b624985bcfd ChangeLog 9473
-SHA256 58187719aa75518611d12b3d83564090c121166065eb4c3619b145e4768ce844 ChangeLog 9473
+MD5 00a55462897ae672d1e5ffeca434ee6d ChangeLog 9589
+RMD160 cded825eb7e017f6ea2b50637bb2077fa3ebffac ChangeLog 9589
+SHA256 2f95c128db42e6c836b1a7e36c33efe3955e4dcf0ad0caf5922fd33a639254f9 ChangeLog 9589
 MD5 3ab218bf6bd06a64d5de56a84f9f5dc0 files/digest-psmisc-21.9 63
 RMD160 59e146eba1751f0245278bb11be13499dcb26f4a files/digest-psmisc-21.9 63
 SHA256 290790fb7b02547fa72fd9102164d9449e61261c97088805c781a3bf2e3dcd32 files/digest-psmisc-21.9 63
 MD5 4a62c9237180d858ab57c87dab6ce346 files/digest-psmisc-22.1 63
 RMD160 3bb9b382baaeea332c735879f432b4aad90ca511 files/digest-psmisc-22.1 63
 SHA256 b3d00d0a79cd0059a0abd53bfee5d0f5f4472001557f8573dcd6b56951d4ec72 files/digest-psmisc-22.1 63
+MD5 31b893fab6c1a7d95752e63dd94bfa26 files/digest-psmisc-22.2 235
+RMD160 0c806149c35f520fcf5a4eaebf1329073c2336c6 files/digest-psmisc-22.2 235
+SHA256 c0e455a65fcd13cc2d90c37eae7101a58bfdfd99e0c7a50886fa7667021d16e7 files/digest-psmisc-22.2 235
 MD5 fbd6d2d8f9aca96690539b33ccce8ff8 files/psmisc-22.1-force-locale.patch 334
 RMD160 e64d4133ce306dd1b86a7a31036527bfa0e32f7b files/psmisc-22.1-force-locale.patch 334
 SHA256 e40c65f07b1d2d5e7cc24d905a6f340b6d2262120ff536efaa65ce7bf5a03071 files/psmisc-22.1-force-locale.patch 334
@@ -22,10 +25,13 @@ SHA256 f5d551fb6e407505fa70aa4c31b64a54e724a45fa632fea658b9fde4c793437c psmisc-2
 MD5 477d8ab0397ac414f2990ed989e1f010 psmisc-22.1.ebuild 1204
 RMD160 bcbd2b64c8b658a34f94c02d1013054449bb0b2f psmisc-22.1.ebuild 1204
 SHA256 dcb568d05bcbceff39d0e92d9c9f63b222bb5cdedf23357e71e8d3f8ab220d9f psmisc-22.1.ebuild 1204
+MD5 8fdf295dde4aa50f8723a4db681897b3 psmisc-22.2.ebuild 1082
+RMD160 3a9abe1c1fc7fac2831a65dd72fe17693fa80cf9 psmisc-22.2.ebuild 1082
+SHA256 b5e432253f083fa2029cee9c06a8ba6a2349040de4f17f86133062f66c30cc8b psmisc-22.2.ebuild 1082
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD4Ytb2+ySkm8kpY0RAsc2AJ9qASDGzHCVj/sYqpglo8UhJxUiJgCgipZ3
-CRBDe0O8hbCoqlojiSPvZz8=
-=B0Bg
+iD8DBQFEF1zO2+ySkm8kpY0RAkU/AJ9ftsqc1V408//6ocvL9f0OliUM2wCfdfdb
+uB6T92uWj4yKnHjR2irRILs=
+=ppz/
 -----END PGP SIGNATURE-----

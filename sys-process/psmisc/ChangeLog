@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.28 2006/01/24 23:50:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.29 2006/03/15 00:14:03 vapier Exp $
+
+*psmisc-22.2 (15 Mar 2006)
+
+  15 Mar 2006; Mike Frysinger <vapier@gentoo.org> +psmisc-22.2.ebuild:
+  Version bump.
 
   24 Jan 2006; Mike Frysinger <vapier@gentoo.org>
   +files/psmisc-22.1-force-locale.patch, psmisc-22.1.ebuild:
