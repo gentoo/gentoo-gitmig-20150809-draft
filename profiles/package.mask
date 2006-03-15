@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5089 2006/03/15 15:22:41 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5090 2006/03/15 15:25:17 allanonjl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -120,7 +120,7 @@ net-libs/enet
 >=gnome-base/libgtop-2.13
 >=gnome-base/librsvg-2.14
 >=net-libs/libsoup-2.2.91
->=x11-libs/wnck-2.13
+>=x11-libs/libwnck-2.13
 >=x11-wm/metacity-2.13
 >=gnome-base/nautilus-2.13
 >=gnome-extra/nautilus-cd-burner-2.13
