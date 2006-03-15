@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/adesklets
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.22 2006/03/06 12:31:35 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.23 2006/03/15 08:01:11 s4t4n Exp $
+
+*adesklets-0.6.0 (15 Mar 2006)
+
+  15 Mar 2006; Michele Noberasco <s4t4n@gentoo.org> +adesklets-0.6.0.ebuild:
+  Version bump. Fixing bug #126086.
 
 *adesklets-0.5.1 (06 Mar 2006)
 
