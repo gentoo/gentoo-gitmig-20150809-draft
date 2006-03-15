@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/windowlab
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.18 2005/08/15 03:00:18 metalgod Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.19 2006/03/15 07:54:09 spyderous Exp $
+
+  15 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  windowlab-1.30.ebuild, windowlab-1.31.ebuild, windowlab-1.32.ebuild:
+  (#125526) Add modular X deps, based on work by Stephen Tallowitz.
 
   15 Aug 2005; Luis Medinas <metalgod@gentoo.org> windowlab-1.31.ebuild:
   Marked Stable on AMD64.
