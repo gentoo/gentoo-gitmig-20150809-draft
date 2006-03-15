@@ -1,19 +1,43 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 94ff569ff45451ee902f64f59e3cee15 ChangeLog 1630
+MD5 483619ddeaee8783ccc5a27d7a510a2a ChangeLog 1975
+RMD160 3b04b55071c126689223c13978f5fc06ca5aaff7 ChangeLog 1975
+SHA256 1560a97a63e220b4cf1545f02cedfa677a8857871c6793a9f2ffb1b48066267f ChangeLog 1975
 MD5 f8506076391ff39bc982421f72dbf114 files/digest-streamdvd-0.3 64
+RMD160 4764acfb5cda628a9a44663926a415818a8c6dbc files/digest-streamdvd-0.3 64
+SHA256 700fc97716b680a15fa41c176a296a12720d1c008edc95e4fccf86ce6bd27bcb files/digest-streamdvd-0.3 64
 MD5 d3bf0c2181a72f666e9524bc2a5614cb files/digest-streamdvd-0.4 65
+RMD160 5b663ddefa3bb2db987cdff8c06c8714c53a29c2 files/digest-streamdvd-0.4 65
+SHA256 4876610b3918360bf6a1629201fe4364517d8c3128adb937b107b4d517639abe files/digest-streamdvd-0.4 65
 MD5 d3bf0c2181a72f666e9524bc2a5614cb files/digest-streamdvd-0.4-r1 65
+RMD160 5b663ddefa3bb2db987cdff8c06c8714c53a29c2 files/digest-streamdvd-0.4-r1 65
+SHA256 4876610b3918360bf6a1629201fe4364517d8c3128adb937b107b4d517639abe files/digest-streamdvd-0.4-r1 65
+MD5 9ed1aad968bbdee7309192391e990bae files/streamdvd-0.4-gcc41.patch 463
+RMD160 7cbb8a50d24367b958ed2c4bd9581c27c4353567 files/streamdvd-0.4-gcc41.patch 463
+SHA256 ca4e20daddb00e232db67024d90bfa483d979f028e28602cfa4c5110b885f44f files/streamdvd-0.4-gcc41.patch 463
+MD5 99f5b5ffdc2bb741d94e0e053266c298 files/streamdvd-0.4-makefile.patch 1378
+RMD160 bdaabc1592cca2342f6e9967404ce877c49dfdbd files/streamdvd-0.4-makefile.patch 1378
+SHA256 ae86f76792f02af0e660540de44e90e5f59a0ffcb8f28610e81043f24df372ce files/streamdvd-0.4-makefile.patch 1378
 MD5 b397001453999b86439ac26574ba6bf8 files/streamdvd-0.4.patch 787
-MD5 b5117ee28e59b284a1cb9e2bb38dbbdd metadata.xml 500
-MD5 b70d0487b85037776a3d1d95d2c34085 streamdvd-0.3.ebuild 664
-MD5 40051e36f36f22892a83cc6d0b3b5579 streamdvd-0.4-r1.ebuild 1428
-MD5 b4cb32f160a974e8b83883d2c790478b streamdvd-0.4.ebuild 669
+RMD160 509152eb517c074557d9380178f45b329c0c23fe files/streamdvd-0.4.patch 787
+SHA256 42fc345e70ea021442fa21521abc212eeb93377d71d0ca221126cbae82affcfc files/streamdvd-0.4.patch 787
+MD5 4cd8662c9a593fb24361610bfae217c9 metadata.xml 496
+RMD160 831cb1d5b0c2f8b2e4a7ad1def5dfef40f15784f metadata.xml 496
+SHA256 d99147daf67459161e74f4a4aaa9f8a06e6aa8ce300f96771f2c00491a97231d metadata.xml 496
+MD5 d7396fd69bec2d610d1535bd7c89f8fc streamdvd-0.3.ebuild 631
+RMD160 b48024c07c609ae9381df82251a47a676a0e283a streamdvd-0.3.ebuild 631
+SHA256 33b394cbaf86bbb8f76fd4dddc53d8cab853a304548ff0c10a63d9ee9d2b1e8f streamdvd-0.3.ebuild 631
+MD5 66dcc7396b1a66946643e29545d3c1dd streamdvd-0.4-r1.ebuild 1533
+RMD160 e30d4f1ca62c8db910797911dcec1a584cf20cde streamdvd-0.4-r1.ebuild 1533
+SHA256 75a78a54d232c5e444a68d76b56ec199a7b9ddf8bd330d35655d84ed915064f4 streamdvd-0.4-r1.ebuild 1533
+MD5 15652efd6bfa8136d2eb0ad4389110b6 streamdvd-0.4.ebuild 636
+RMD160 cd2376144ebafe1ecc98cbf476da72cf04e9a0df streamdvd-0.4.ebuild 636
+SHA256 27763322f2044b5b50b74dd8098d6479bd91bb572ea4d126131d53187669dc85 streamdvd-0.4.ebuild 636
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDZVYej5H05b2HAEkRAsK6AJ9gDgTfDpAy7/3jlEBmARsbnb70/QCglXy8
-SAgCLE23Q/nYEJFgZ5qJg0g=
-=ePgu
+iD8DBQFEGBiiAiZjviIA2XgRApPLAJ9looyD9xvGNua3YWiFwTQWsHP+pgCdEJ58
+0ncF7FBJxjKHq8/FGwpLlmI=
+=OTQq
 -----END PGP SIGNATURE-----

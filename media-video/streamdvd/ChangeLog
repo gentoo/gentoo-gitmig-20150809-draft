@@ -1,6 +1,13 @@
 # ChangeLog for media-video/streamdvd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.13 2005/10/30 23:24:02 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.14 2006/03/15 13:37:18 flameeyes Exp $
+
+  15 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/streamdvd-0.4-gcc41.patch, +files/streamdvd-0.4-makefile.patch,
+  metadata.xml, streamdvd-0.3.ebuild, streamdvd-0.4.ebuild,
+  streamdvd-0.4-r1.ebuild:
+  Add patches to build with gcc 4.1 and to respect compiler and flags
+  variables; also fix --as-needed usage. Closes bug #126291.
 
   30 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   streamdvd-0.4-r1.ebuild:

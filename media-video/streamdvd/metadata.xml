@@ -3,10 +3,10 @@
 <pkgmetadata>
 <herd>video</herd>
 <longdescription>
-StreamDVD is a fast tool to backup Video DVDs 'on the fly', there will 
-be no ripping, demultiplexing, recoding, remultiplexing .... You can 
-select the wanted title, chapters, video, audio and subpicture streams 
-and also a resize factor and StreamDVD will write a 'ready to author' 
+StreamDVD is a fast tool to backup Video DVDs 'on the fly', there will
+be no ripping, demultiplexing, recoding, remultiplexing .... You can
+select the wanted title, chapters, video, audio and subpicture streams
+and also a resize factor and StreamDVD will write a 'ready to author'
 vob file to stdout.
 </longdescription>
 </pkgmetadata>

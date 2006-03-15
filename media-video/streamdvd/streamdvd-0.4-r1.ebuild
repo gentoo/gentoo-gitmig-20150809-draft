@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.10 2005/10/30 23:24:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.11 2006/03/15 13:37:18 flameeyes Exp $
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="fast tool to backup Video DVDs 'on the fly'"
 HOMEPAGE="http://www.badabum.de/streamdvd.html"
@@ -25,12 +27,14 @@ S="${WORKDIR}/StreamDVD-${PV}"
 src_unpack() {
 	unpack ${A}
 	cd ${S} || die
-	sed -i "s: -g -Wall : ${CFLAGS} :" Makefile
 	use X && epatch "${FILESDIR}/${P}.patch"
+
+	epatch "${FILESDIR}/${P}-makefile.patch"
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 }
 
 src_compile() {
-	emake all addon || die  # compile also optional packages
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" all addon || die  # compile also optional packages
 }
 
 src_install() {
