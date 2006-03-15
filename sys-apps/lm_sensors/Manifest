@@ -1,4 +1,4 @@
-MD5 24e5ca7f68b29dbbc777cb957354b406 ChangeLog 795
+MD5 0666fc0ff9c29a79aaf6a50f4b5817d8 ChangeLog 895
 MD5 8db9bb315b405ab2c9790e11ec768389 files/digest-lm_sensors-2.10.0 69
 MD5 edf2235c80b178421142d5a8d04e50fa files/digest-lm_sensors-2.9.2 68
 MD5 9256ad9507e5277c37efac49a28335e9 files/lm_sensors-2.10.0-fancontrol-init.d 742
@@ -10,6 +10,6 @@ MD5 1820ac1922d3df87cc3627a3dd587cf6 files/lm_sensors-2.9.2-lm_sensors-init.d 24
 MD5 8c53cf91a74a24b3c2187c551df425aa files/lm_sensors-2.9.2-sensord-conf.d 342
 MD5 c4ff4510a7e5d2d4e3b9e5e2848f5834 files/lm_sensors-2.9.2-sensord-init.d 739
 MD5 ca1a12423f60961873fad394f9bba183 files/lm_sensors-2.9.2-sensors-detect-gentoo.patch 5446
-MD5 ea92dffbe3b96059b40b41f3d86614c4 lm_sensors-2.10.0.ebuild 4146
+MD5 58b32f911ed2ca3aedab9f0ab756d55b lm_sensors-2.10.0.ebuild 4145
 MD5 62ceadd8ab0eb63dd32a627a5d871003 lm_sensors-2.9.2.ebuild 4069
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
