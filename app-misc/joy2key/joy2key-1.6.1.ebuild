@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/joy2key-1.6.1.ebuild,v 1.2 2005/07/31 11:09:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/joy2key-1.6.1.ebuild,v 1.3 2006/03/15 16:01:00 caleb Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X"
 
-DEPEND="X? ( virtual/x11 )"
+DEPEND="X? ( || ( x11-libs/libX11 virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}
