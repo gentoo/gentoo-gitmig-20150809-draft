@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d30a306cfdff05205344ff07df688c6e ChangeLog 22478
-RMD160 f59f88970d0e33892f7008aaa5c8d2eeec750392 ChangeLog 22478
-SHA256 7038247648b6e4698309ccb041c68bf29580a3f520f878cb87737c584c150cfe ChangeLog 22478
+MD5 7e134bbe760cad222aadd6bab1348efb ChangeLog 22657
+RMD160 180b2c41cf6376148e05dc4be38b8552dae8ac36 ChangeLog 22657
+SHA256 c25b2917628c533a77b69c6bc40200d22b26981b0319e0400cf62f90b504d021 ChangeLog 22657
 MD5 ab6e8b5ecc163d415aebb7d2c42238a3 files/config.default.php-2.7.0.patch 5533
 RMD160 4b043b198dc517846e5282d0574c9a05eb6906a3 files/config.default.php-2.7.0.patch 5533
 SHA256 5956d96dd9ba02107a46302703df458cf45a495ff175d5e64b0154d9e815b7a3 files/config.default.php-2.7.0.patch 5533
@@ -16,9 +16,9 @@ SHA256 fcb7855b1d5625530e11d71b2594ef631850ab163312d19fc98f55da39d1ba68 files/di
 MD5 3b6a4be3903f9737aaeed4cb2d1cd441 files/digest-phpmyadmin-2.7.0_p2 268
 RMD160 1240eee2470b5146d93d24ddd116c31b6ea87f04 files/digest-phpmyadmin-2.7.0_p2 268
 SHA256 f6ac671a9db61a92e56b5f543d1f59958f4beb8fb911137e8a1d0b6c9e774e28 files/digest-phpmyadmin-2.7.0_p2 268
-MD5 2e98de730709b9d0ba0bd41aae5b08a2 files/digest-phpmyadmin-2.8.0_beta1 274
-RMD160 b39227d755ca66a3bb74b329f1153949f809d26f files/digest-phpmyadmin-2.8.0_beta1 274
-SHA256 4e71b12a2d3c04c13ac654b00f16cf243e380862b908ee3b31c33b4edac7e754 files/digest-phpmyadmin-2.8.0_beta1 274
+MD5 8851528c551e62b6ae108470c224a2c4 files/digest-phpmyadmin-2.8.0 256
+RMD160 7379cd8c1fa426ebcca70ccc743ba600fba55e61 files/digest-phpmyadmin-2.8.0 256
+SHA256 a2090ef463dbcbbbe7f121c3e7b93778841008661275505819a3b0320b09259d files/digest-phpmyadmin-2.8.0 256
 MD5 1a6c1907f5c2327b00453d7675c13178 files/mysql-setup.sql.in-2.5.6 3231
 RMD160 7b462640601d77d01c8f11322cb2cb84ce8e79a6 files/mysql-setup.sql.in-2.5.6 3231
 SHA256 482ada180bcaf41fa4dc103edae4a78a55f3ced1fb2becc12124b914db1dcbfe files/mysql-setup.sql.in-2.5.6 3231
@@ -43,13 +43,13 @@ SHA256 41ba3ada95fcc36ca59ced583668d2189bd7c4b7ef0b8a52e3626a24687657de phpmyadm
 MD5 a24be197d7a2a4d85249218fda511daf phpmyadmin-2.7.0_p2.ebuild 2103
 RMD160 bfb3d4fb85fdd3733f5f32504bf2b36d8f713f2b phpmyadmin-2.7.0_p2.ebuild 2103
 SHA256 a5229fde41f51b5c0c820fc603b5123f8bd2e049d403e0f2f2d71822426d0a01 phpmyadmin-2.7.0_p2.ebuild 2103
-MD5 1f5563707a05ffa698185f53035d1f33 phpmyadmin-2.8.0_beta1.ebuild 2139
-RMD160 d0ce21e42cd8ecd51f3af38bc88652d3d2326a4d phpmyadmin-2.8.0_beta1.ebuild 2139
-SHA256 df403b86b725b708274857f33f7d4beb05b8aff86bc436e68a8fd6cae8891e8e phpmyadmin-2.8.0_beta1.ebuild 2139
+MD5 790a058ebffcf1b4b23b4829cabc6e99 phpmyadmin-2.8.0.ebuild 2381
+RMD160 51b185a9db4d2074850b24695e1bb8ae9599ec51 phpmyadmin-2.8.0.ebuild 2381
+SHA256 38415bb40a2ad57f1dcc3181d0cddcc99133c2c440304b109590edf402e46155 phpmyadmin-2.8.0.ebuild 2381
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD86qaEzitwsaoONoRAgnpAJsGG9D//mOd0cRd7X3YIuSQSY6SngCeJ8ij
-97yHbUtKwYfcMtrE8pVP7bY=
-=O75z
+iD8DBQFEGEaXEzitwsaoONoRAqaJAKCBuQj1y1gvwDT7YSoaS69Ek1I1+gCfeWmZ
+p2lEmfCWkGR0ulRWWGY3QRA=
+=MiUf
 -----END PGP SIGNATURE-----

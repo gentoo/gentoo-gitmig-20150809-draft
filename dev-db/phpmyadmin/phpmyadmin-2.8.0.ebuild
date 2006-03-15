@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.8.0_beta1.ebuild,v 1.1 2006/02/15 22:26:19 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.8.0.ebuild,v 1.1 2006/03/15 16:53:32 rl03 Exp $
 
 inherit eutils webapp depend.php
 
@@ -20,7 +20,16 @@ need_php
 
 pkg_setup() {
 	webapp_pkg_setup
-	require_php_with_use pcre mysql session
+	require_php_with_use pcre session
+	# see bug #124954
+	if ! built_with_use -o =${PHP_PKG} mysql mysqli ; then
+		eerror "${PHP_PKG} needs to be re-installed with one of the following"
+		eerror "USE flags enabled:"
+		eerror
+		eerror "mysql or mysqli if using dev-lang/php-5"
+		eerror "mysql if using dev-lang/php-4"
+		die "Re-install ${PHP_PKG}"
+	fi
 }
 
 src_unpack() {
@@ -62,12 +71,11 @@ src_install() {
 	cp -r . ${D}${MY_HTDOCSDIR}
 
 	webapp_configfile ${MY_HTDOCSDIR}/libraries/config.default.php
+	webapp_serverowned ${MY_HTDOCSDIR}/libraries/config.default.php
+
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en-2.8.0.txt
 	webapp_hook_script ${FILESDIR}/reconfig-2.8
 	webapp_src_install
-
-	fperms 0640 ${MY_HTDOCSDIR}/libraries/config.default.php
-	fowners root:apache ${MY_HTDOCSDIR}/libraries/config.default.php
 	# bug #88831, make sure the create script is world-readable.
 	fperms 0600 ${MY_SQLSCRIPTSDIR}/mysql/${PVR}_create.sql
 }
