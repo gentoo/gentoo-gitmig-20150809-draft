@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05.ebuild,v 1.11 2005/09/10 03:12:29 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05.ebuild,v 1.12 2006/03/15 01:44:21 vapier Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://mixter.void.ru/${P/.}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha arm amd64 hppa ia64 mips ppc sparc x86 ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="no-net2"
 
 DEPEND="!no-net2? ( virtual/libpcap net-libs/libnet )"
@@ -19,7 +19,7 @@ S=${WORKDIR}/${PN}-v${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i "s:-O3 -funroll-loops:${CFLAGS} -fPIC:" configure
 }
 
