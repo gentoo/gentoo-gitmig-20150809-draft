@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/qrna-2.0.3c.ebuild,v 1.6 2006/01/21 18:08:49 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/qrna-2.0.3c.ebuild,v 1.7 2006/03/15 02:49:37 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -39,7 +39,7 @@ src_install () {
 	cd "${S}"
 	dobin scripts/* || die
 
-	newdoc 00README || die
+	newdoc 00README README || die
 	insinto /usr/share/doc/${PF}
 	doins documentation/* || die
 

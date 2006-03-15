@@ -1,5 +1,5 @@
-MD5 715fcb9df42398fb754baab60d25a5bd ChangeLog 1878
+MD5 2c0b93c86f4716018cb28bdb56f80856 ChangeLog 2004
 MD5 9127b0a4628230fc3bf2e201ca7519a9 files/26qrna 30
 MD5 12392df208522b818f5f2c72a7770a0e files/digest-qrna-2.0.3c 65
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
-MD5 f367cf45122d902cd4bc3979139815f8 qrna-2.0.3c.ebuild 1380
+MD5 620917a1f1bec12a89992fc89d6fd50f qrna-2.0.3c.ebuild 1387
