@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>haskell</herd>
 <maintainer>
-  <email>kosmikus@gentoo.org</email>
+  <email>haskell@gentoo.org</email>
 </maintainer>
 <longdescription lang="en">
 HDoc generates documentation in HTML format for Haskell modules. The generated

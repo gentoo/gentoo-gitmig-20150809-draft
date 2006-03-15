@@ -1,26 +1,26 @@
 # ChangeLog for dev-haskell/cpphs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.6 2006/03/01 19:22:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.7 2006/03/15 18:09:02 dcoutts Exp $
 
   01 Mar 2006; Markus Rothe <corsair@gentoo.org> cpphs-1.1.ebuild:
   Added ~ppc64; bug #124469
 
-  16 Feb 2006; <duncan@gentoo.org> cpphs-1.1.ebuild:
+  16 Feb 2006; <dcoutts@gentoo.org> cpphs-1.1.ebuild:
   Add "bin" to CABAL_FEATURES in preparation for pending eclass updates.
 
-  13 Feb 2006; <duncan@gentoo.org> cpphs-1.1.ebuild:
+  13 Feb 2006; <dcoutts@gentoo.org> cpphs-1.1.ebuild:
   Eliminate a warning. (The haskell-cabal eclass doesn't grok "bin" yet)
 
 *cpphs-1.1 (11 Feb 2006)
 
-  11 Feb 2006; <duncan@gentoo.org> +cpphs-1.1.ebuild:
+  11 Feb 2006; <dcoutts@gentoo.org> +cpphs-1.1.ebuild:
   New version.
 
-  04 Oct 2005; <duncan@gentoo.org> cpphs-0.9.ebuild:
+  04 Oct 2005; <dcoutts@gentoo.org> cpphs-0.9.ebuild:
   Added ~sparc to KEYWORDS.
 
 *cpphs-0.9 (18 May 2005)
 
-  18 May 2005; <duncan@gentoo.org> +metadata.xml, +cpphs-0.9.ebuild:
+  18 May 2005; <dcoutts@gentoo.org> +metadata.xml, +cpphs-0.9.ebuild:
   Add a new ebuild for cpphs.
 

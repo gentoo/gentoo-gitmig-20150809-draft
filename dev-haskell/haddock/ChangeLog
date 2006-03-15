@@ -1,6 +1,6 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.32 2006/03/13 11:33:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.33 2006/03/15 18:11:21 dcoutts Exp $
 
   13 Mar 2006; Jeroen Roovers <jer@gentoo.org> haddock-0.7.ebuild:
   Marked ~hppa (bug #125389).
@@ -8,7 +8,7 @@
   01 Mar 2006; Markus Rothe <corsair@gentoo.org> haddock-0.7.ebuild:
   Added ~ppc64; bug #88362
 
-  10 Feb 2006; <duncan@gentoo.org> -haddock-0.6-r2.ebuild, haddock-0.7.ebuild:
+  10 Feb 2006; <dcoutts@gentoo.org> -haddock-0.6-r2.ebuild, haddock-0.7.ebuild:
   Marked ~alpha. Removed old haddock-0.6-r2 revision.
 
   12 Dec 2005; Luis f. Araujo <araujo@gentoo.org> haddock-0.7.ebuild:
@@ -33,7 +33,7 @@
   05 Aug 2005; Andres Loeh <kosmikus@gentoo.org> +haddock-0.7.ebuild:
   New version.
 
-  20 May 2005; <duncan@gentoo.org> haddock-0.6-r3.ebuild:
+  20 May 2005; <dcoutts@gentoo.org> haddock-0.6-r3.ebuild:
   Added ~sparc to KEYWORDS.
 
   10 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> haddock-0.6-r3.ebuild:
