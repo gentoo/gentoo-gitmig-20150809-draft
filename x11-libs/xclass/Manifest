@@ -1,13 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f7bc98f286b6b00d1123cdc88016e4b8 ChangeLog 1201
-MD5 091e3a9c87b87a1b1c1698eb16c37ba1 xclass-0.8.2-r1.ebuild 1427
+MD5 135cfa983b43de486be25f385aa7ea6d ChangeLog 1352
+RMD160 011d84ba6bafe1c28f7db2c484a1f40eea3c48db ChangeLog 1352
+SHA256 01e3cec8b58c833e1523ad5bf0a54fbacf043d6bac90b03066b4b98c3f7675b4 ChangeLog 1352
 MD5 5e06d8892b0af94c7e720a4c2873bc78 files/digest-xclass-0.8.2-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB1w6droRuSHgZdywRAredAJ42ZqiMWfKY5x/T8TA4jS/4iAHtPwCfcetn
-M8i7uofXDbaSsd1lMn2jSgM=
-=/RBe
------END PGP SIGNATURE-----
+RMD160 4ba015037cb6642a20c62d1ed44c2b44c04a88fa files/digest-xclass-0.8.2-r1 64
+SHA256 721cec3bc339a50e9454de95dc06532469a69e943b550c2c94e98464a5a703f4 files/digest-xclass-0.8.2-r1 64
+MD5 c624a5786164cb6dfb09552a7368bd0c xclass-0.8.2-r1.ebuild 1514
+RMD160 43650f716b2b6e08c14ab436979aededb00e53a3 xclass-0.8.2-r1.ebuild 1514
+SHA256 062b95f82b7bec9b2831f889daee08e71bfcee3f35a0b920c7d8b5bb7aca4af5 xclass-0.8.2-r1.ebuild 1514

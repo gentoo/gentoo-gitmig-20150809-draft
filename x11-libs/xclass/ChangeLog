@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xclass
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.12 2004/06/28 19:45:27 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.13 2006/03/15 08:10:10 spyderous Exp $
+
+  15 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xclass-0.8.2-r1.ebuild:
+  (#124064) Add modular X deps, based on work of Mauricio L. Pilla.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> xclass-0.8.2-r1.ebuild:
   glibc -> libc, add sed-4 dep
