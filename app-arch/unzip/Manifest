@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2cfef9ec1b142a17e066868a575ae136 ChangeLog 4192
 RMD160 02b05c44dee4e091ef6292108ed7668e0322dce6 ChangeLog 4192
 SHA256 beb9e7eb4ff93092c67027045e7b52332ec280ac5a679280a850cd228c329b6d ChangeLog 4192
 MD5 583a5d8bbc70fb1d858c5e40d686e8ce files/digest-unzip-5.50-r2 61
 RMD160 dfc4a6584289f800e5ed074eb781be0799ec04b6 files/digest-unzip-5.50-r2 61
 SHA256 750b8f12af7fb7e09ac4e213722177e6da6189362712332cfe74bc282ffd7aea files/digest-unzip-5.50-r2 61
-MD5 96a480a7d42cba427e44955d142d670c files/digest-unzip-5.52 61
-RMD160 df2fe32d8afdbcda2d43fdf94b4dae714176bee6 files/digest-unzip-5.52 61
-SHA256 e9af4b81b033f403cf752a7e53fcd7c7da32388080dbc7b841f42ffc64bd560e files/digest-unzip-5.52 61
+MD5 ee9202fe33b60c050a5f65de4d69bec4 files/digest-unzip-5.52 229
+RMD160 b5ea435df907108c5158bebb340ed73e605d43fc files/digest-unzip-5.52 229
+SHA256 be2db45669d3fb56f780e7c9f22ae73a9caaf8701bee3226d7d55d02b77d36b0 files/digest-unzip-5.52 229
 MD5 96a480a7d42cba427e44955d142d670c files/digest-unzip-5.52-r1 61
 RMD160 df2fe32d8afdbcda2d43fdf94b4dae714176bee6 files/digest-unzip-5.52-r1 61
 SHA256 e9af4b81b033f403cf752a7e53fcd7c7da32388080dbc7b841f42ffc64bd560e files/digest-unzip-5.52-r1 61
@@ -28,13 +25,6 @@ SHA256 18e6e03518e47f778585140e5b260befef6bb53ed2e73298f57ee94bd78d7fe7 unzip-5.
 MD5 c07c131a5b47a352bc255509f48737ed unzip-5.52-r1.ebuild 1453
 RMD160 a5ea5f73b57685cf777c3bf682304f5d40c57a14 unzip-5.52-r1.ebuild 1453
 SHA256 e764be652fcaabc1cd50083b7dc360294602e0ddbc3b74c6eab1c9bbff7c0a0a unzip-5.52-r1.ebuild 1453
-MD5 4f8de575a5f302b6da9abd0ea607cd9d unzip-5.52.ebuild 1391
-RMD160 3565a8657d133be7db176bd4a35491c2d56fee0f unzip-5.52.ebuild 1391
-SHA256 15efa1d249d4bc95604d709dea8f1529b629d041e58450a69cebdf8c96dae9f3 unzip-5.52.ebuild 1391
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8rxW2+ySkm8kpY0RAn65AKDFcVprK1+ZYRQnoB7WIGgS9FLePQCgl/3i
-6QxvX5P2Kkb9WJ9WKe0hwOQ=
-=UcZj
------END PGP SIGNATURE-----
+MD5 0106beb499a64c740f57f92911eb5ce7 unzip-5.52.ebuild 1391
+RMD160 885022fa91abd1bd4bc32ca6fb2e19b6d849d156 unzip-5.52.ebuild 1391
+SHA256 e40926b4b8ebda47d03de7b7b6255d81af1af069aee0323cc8ca8054f91de104 unzip-5.52.ebuild 1391
