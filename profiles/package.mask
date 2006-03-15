@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5088 2006/03/15 11:47:02 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5089 2006/03/15 15:22:41 allanonjl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -98,6 +98,7 @@ net-libs/enet
 >=gnome-base/gnome-menus-2.13
 >=net-analyzer/gnome-nettool-2.13
 >=gnome-base/gnome-panel-2.13
+>=gnome-base/gnome-session-2.14.0
 >=gnome-extra/gnome-screensaver-2.13
 # speech-tools and festival do not compile with gcc 4.1
 >=app-accessibility/gnome-speech-0.3.10
