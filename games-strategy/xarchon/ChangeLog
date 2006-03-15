@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/xarchon
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xarchon/ChangeLog,v 1.8 2006/03/12 23:43:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xarchon/ChangeLog,v 1.9 2006/03/15 18:42:06 tupone Exp $
+
+*xarchon-0.60-r1 (15 Mar 2006)
+
+  15 Mar 2006; <Tupone@gentoo.org> +files/01_all_gcc34_font.patch,
+  +xarchon-0.60-r1.ebuild:
+  Fix for bug #116209 (compile on gcc-3.4).
+  Patching font to select some present on the system
 
   12 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org> xarchon-0.50.ebuild,
   xarchon-0.60.ebuild:
