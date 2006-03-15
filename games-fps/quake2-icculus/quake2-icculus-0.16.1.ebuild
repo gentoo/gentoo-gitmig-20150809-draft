@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.11 2006/03/08 01:51:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.12 2006/03/15 22:15:36 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -9,8 +9,8 @@ DESCRIPTION="The icculus.org linux port of iD's quake2 engine"
 HOMEPAGE="http://icculus.org/quake2/"
 SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
 	!noqmax? ( http://icculus.org/quake2/files/maxpak.pak )
-	rogue? ( ftp://ftp.idsoftware.com/idstuff/quake2/source/roguesrc320.shar.Z )
-	xatrix? ( ftp://ftp.idsoftware.com/idstuff/quake2/source/xatrixsrc320.shar.Z )"
+	rogue? ( mirror://idsoftware/quake2/source/roguesrc320.shar.Z )
+	xatrix? ( mirror://idsoftware/quake2/source/xatrixsrc320.shar.Z )"
 
 LICENSE="GPL-2"
 SLOT="0"
