@@ -1,6 +1,9 @@
 # ChangeLog for media-video/lsdvd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.15 2005/06/08 14:12:15 luckyduck Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.16 2006/03/15 16:49:19 corsair Exp $
+
+  15 Mar 2006; Markus Rothe <corsair@gentoo.org> lsdvd-0.15.ebuild:
+  Added ~ppc64
 
 *lsdvd-0.15 (08 Jun 2005)
 
