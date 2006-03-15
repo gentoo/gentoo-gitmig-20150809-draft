@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.2.2.ebuild,v 1.2 2004/12/29 16:30:31 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.2.2.ebuild,v 1.3 2006/03/15 08:55:45 spyderous Exp $
 
 DESCRIPTION="The Massively Parallel Quantum Chemistry Program"
 HOMEPAGE="http://www.mpqc.org/"
@@ -11,19 +11,16 @@ LICENSE="GPL-2"
 SLOT="0"
 # Should work on x86, amd64 and ppc, at least
 KEYWORDS="x86 ~ppc amd64"
-IUSE="doc X"
+IUSE="doc"
 
 DEPEND="sys-devel/flex
 	sci-libs/blas
 	sci-libs/lapack
-	dev-lang/perl
-	X? ( virtual/x11 )"
+	dev-lang/perl"
 
 src_compile() {
 	CFLAGS_SAVE=${CFLAGS}; CXXFLAGS_SAVE=${CXXFLAGS}
 	myconf="${myconf} --prefix=/usr"
-	use X && myconf="${myconf} --x-includes=/usr/X11R6/include \
-	  --x-libraries=/usr/X11R6/lib"
 	./configure ${myconf} || die "configure failed"
 	sed -e "s:^CFLAGS =.*$:CFLAGS=${CFLAGS_SAVE}:" \
 	  -e "s:^FFLAGS =.*$:FFLAGS=${CFLAGS_SAVE}:" \
