@@ -3,19 +3,25 @@
 # This file is used by repoman.
 #
 #layout:
-#arch		profile_directory					status
+#arch		profile_directory				status
 
 alpha		default-linux/alpha/2005.0			stable
-amd64		default-linux/amd64/2005.1			stable
-arm			default-linux/arm/2004.3			stable
+
+# AMD64 Profiles
+amd64		default-linux/amd64/2006.0			stable
+amd64		default-linux/amd64/2006.0/no-multilib		stable
+amd64           default-linux/amd64/2006.0/no-symlinks          dev
+amd64           default-linux/amd64/2006.0/32bit-userland       dev
+
+arm		default-linux/arm/2004.3			stable
 hppa		default-linux/hppa/2005.0			stable
 ia64		default-linux/ia64/2005.0			stable
-m68k		default-linux/m68k					dev
+m68k		default-linux/m68k				dev
 mips		default-linux/mips/2004.2			stable
 ppc		default-linux/ppc/ppc32/2006.0			stable
 ppc64		default-linux/ppc64/2005.0			stable
 ppc-macos	default-darwin/macos/10.4			dev
 s390		default-linux/s390/2006.0			stable
-sh			default-linux/sh					dev
+sh		default-linux/sh				dev
 sparc		default-linux/sparc/sparc64/2006.0/2.4		stable
-x86			default-linux/x86/2005.1			stable
+x86		default-linux/x86/2005.1			stable
