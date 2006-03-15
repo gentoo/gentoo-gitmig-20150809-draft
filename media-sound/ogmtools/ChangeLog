@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ogmtools
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ChangeLog,v 1.24 2005/08/07 13:35:58 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ChangeLog,v 1.25 2006/03/15 16:50:17 corsair Exp $
+
+  15 Mar 2006; Markus Rothe <corsair@gentoo.org> ogmtools-1.5.ebuild:
+  Added ~ppc64
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> ogmtools-1.5.ebuild:
   Stable on ppc.
