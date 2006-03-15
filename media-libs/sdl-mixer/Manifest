@@ -1,4 +1,4 @@
-MD5 0f64fca115716fbd194c4724c7e93b56 ChangeLog 4986
+MD5 04aa7688f347dd3c772125d394cee2aa ChangeLog 5095
 MD5 f026901e029ec31037b0bca6dc7f07d8 files/1.2.5-gcc3.patch 1235
 MD5 53b2015dae19981548f34d124a734f8e files/digest-sdl-mixer-1.2.5-r1 67
 MD5 1ca1975170b01d4da4056cc84635b608 files/digest-sdl-mixer-1.2.6 68
@@ -7,5 +7,5 @@ MD5 b20854212133319dd5b400f71a372bcb files/sdl-mixer-1.2.5-amd64-mikmod.patch 92
 MD5 85c429a982fe437337599502a8fa6c1d files/sdl-mixer-1.2.6-mikmod-music-init.patch 260
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 aa7bbd3504cdcced50c4ae67f94d8c89 sdl-mixer-1.2.5-r1.ebuild 1420
-MD5 ba45a79ef45b1542a1cd6d7475b5a27b sdl-mixer-1.2.6-r1.ebuild 1506
+MD5 90fe661af5ff88ff926dbcafe43fefa7 sdl-mixer-1.2.6-r1.ebuild 1506
 MD5 f84eb8e4df8c2d8e6cc02b8f50990127 sdl-mixer-1.2.6.ebuild 1236
