@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/oroborus
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.21 2005/05/08 14:44:51 herbs Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.22 2006/03/15 08:07:48 spyderous Exp $
+
+  15 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  oroborus-2.0.4-r1.ebuild, oroborus-2.0.7.ebuild, oroborus-2.0.9.ebuild,
+  oroborus-2.0.13.ebuild:
+  (#124064) Add modular X deps.
 
   08 May 2005; Herbie Hopkins <herbs@gentoo.org> oroborus-2.0.13.ebuild:
   Stable on amd64.

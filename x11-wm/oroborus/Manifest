@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 617de7c2d459639a6e20528fb8c0a2bc oroborus-2.0.9.ebuild 1046
-MD5 13e24714087a1ef30da95b4fc5644cd7 oroborus-2.0.4-r1.ebuild 1048
-MD5 cfe80314ff96eb45746cd7444ac5b2a8 oroborus-2.0.7.ebuild 1038
-MD5 069e08733e54d051690f41ff139f4a1f oroborus-2.0.13.ebuild 1084
-MD5 7cc329c3dd4e6a400f9af7be3dc11daa ChangeLog 2727
-MD5 6f678fec0c073bdd194cc247a444ae0e metadata.xml 492
-MD5 a6eaa4a58b9b8d1ca30c9dad6b738e08 files/oroborus.desktop 100
-MD5 bcdeedeb1449ba297399d6ca934f174c files/digest-oroborus-2.0.7 68
-MD5 76979c6dea7bc0482c31850c6c22e2d7 files/digest-oroborus-2.0.9 68
-MD5 7fcf6981c9d6d5af5b4e0c30558dbd08 files/digest-oroborus-2.0.4-r1 66
+MD5 10e4f93abdc247560ceda450b9381275 ChangeLog 2919
+RMD160 b06181e8af372700cc171873457da92d01173673 ChangeLog 2919
+SHA256 6ec4b3d7f32326ec8b5cb9c73c54ce26771c4d29ceb439a9593e21983c3a596d ChangeLog 2919
 MD5 917859f4dd075888e0c2ffe0cac12f50 files/digest-oroborus-2.0.13 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfiYW2G5bA0cA/ScRAhgfAKDk/3db5G8X8slKdiJoD2vHYyVOxwCgsXrY
-HBcNXaU5uqFcFld7xKxTdKg=
-=6lrU
------END PGP SIGNATURE-----
+RMD160 16c6c5eb58f6d05ffc068a612626ed3dff9ca6cc files/digest-oroborus-2.0.13 69
+SHA256 4c5781e578319ddb358955fdc3f99f05c8a21c267756a618dfaee65ea81f7ba1 files/digest-oroborus-2.0.13 69
+MD5 7fcf6981c9d6d5af5b4e0c30558dbd08 files/digest-oroborus-2.0.4-r1 66
+RMD160 529b265094c3ad6d594c94a21594d0c2c2555d0d files/digest-oroborus-2.0.4-r1 66
+SHA256 b5024b81064e98574e7732e70e55ebb9373401cba6911481e7c8ad6de0ca7918 files/digest-oroborus-2.0.4-r1 66
+MD5 bcdeedeb1449ba297399d6ca934f174c files/digest-oroborus-2.0.7 68
+RMD160 8ffecffe9d9a99279cb773c7e70f53bd1cb2a28f files/digest-oroborus-2.0.7 68
+SHA256 312361298637c66ebe75f17a4b5657278493d95ac57b54a455e92c10acf0d249 files/digest-oroborus-2.0.7 68
+MD5 76979c6dea7bc0482c31850c6c22e2d7 files/digest-oroborus-2.0.9 68
+RMD160 b499fad45243a62894db75c4263fa4b0e3020fc9 files/digest-oroborus-2.0.9 68
+SHA256 bdd7511b8a85c3512f387e50576a8792587e49d2dadef63d2a44b5394996d7b3 files/digest-oroborus-2.0.9 68
+MD5 a6eaa4a58b9b8d1ca30c9dad6b738e08 files/oroborus.desktop 100
+RMD160 a220e9cfef37bde4cfd08f8e4d86b84688eb2a69 files/oroborus.desktop 100
+SHA256 45bbc57da8173e3d13108d3ce0b0a3c5ce61806ba0fac18a5aa13f7388b3536f files/oroborus.desktop 100
+MD5 6f678fec0c073bdd194cc247a444ae0e metadata.xml 492
+RMD160 507ac3867a7a9f0e821eba46ccacbfe67ea5b996 metadata.xml 492
+SHA256 bc5668b846cede4e8ce61de618fbcafb51fcef44caa1d522883b39b613473005 metadata.xml 492
+MD5 0e694dd6867a19368f95480dca025226 oroborus-2.0.13.ebuild 1243
+RMD160 fa77f71d2da18706b06b03b956f99176885f655f oroborus-2.0.13.ebuild 1243
+SHA256 5d981b08f5a9bacddaec1cf0884916cf23c234f8e14b257a958cd7685ce3784b oroborus-2.0.13.ebuild 1243
+MD5 94c7a8bb94c4ed92bdc223dd9253301f oroborus-2.0.4-r1.ebuild 1205
+RMD160 96b1aaefb57e6feaee1d40fcc9da591b484b5eb3 oroborus-2.0.4-r1.ebuild 1205
+SHA256 12999723b4909c5c7886cb81fe8c18b83719418aafab9157f66f1359d4073f54 oroborus-2.0.4-r1.ebuild 1205
+MD5 a55ec018e31816cc7ff576af8cdbcd6e oroborus-2.0.7.ebuild 1195
+RMD160 c3b808b1296fa0ed26769f14819065949200c844 oroborus-2.0.7.ebuild 1195
+SHA256 82f4893a07aa7921e552c704b2a2ff0244f26c61471a915c883761f287e18c69 oroborus-2.0.7.ebuild 1195
+MD5 f152e00767630dc85215a4b96ee7de46 oroborus-2.0.9.ebuild 1202
+RMD160 be95bacd1825024a1b5b86d4e6cc436bf8d4cf76 oroborus-2.0.9.ebuild 1202
+SHA256 3da7c5c98132ad08a8c73e58e032689ec4533b79079d7cc0b6ab90628b25fac1 oroborus-2.0.9.ebuild 1202
