@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/metamail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.31 2006/03/15 20:34:37 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.32 2006/03/15 21:23:46 ticho Exp $
+
+  15 Mar 2006; <ticho@gentoo.org> metamail-2.7.45.3-r1.ebuild:
+  Stable on x86, bug #126052.
 
   15 Mar 2006; Chris White <chriswhite@gentoo.org>
   metamail-2.7.45.3-r1.ebuild:
