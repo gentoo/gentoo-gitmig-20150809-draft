@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/epm
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.16 2005/10/19 15:57:21 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.17 2006/03/15 21:52:44 agriffis Exp $
+
+*epm-0.9.1 (15 Mar 2006)
+
+  15 Mar 2006; Aron Griffis <agriffis@gentoo.org> +epm-0.9.1.ebuild:
+  Bump to 0.9.1 (from 0.9.0). Adds --nosize option
 
   19 Oct 2005; Aron Griffis <agriffis@gentoo.org> epm-0.9.0.ebuild:
   stable 0.9.0 everywhere
