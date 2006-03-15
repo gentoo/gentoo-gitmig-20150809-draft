@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.24 2006/02/07 20:44:37 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.25 2006/03/15 00:51:03 flameeyes Exp $
+
+  15 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> files/tvtime-pic.patch:
+  Fix PIC handling on AMD64 systems when PIE is enabled, bug #122437. Many
+  thanks to Chris White for helping testing.
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> tvtime-0.9.15.ebuild:
   stable on amd64
