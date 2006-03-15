@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5406f268e06198e5d30987b0ee9db7a1 ChangeLog 379
+MD5 4d5150043b4716463095b77064597c5c files/digest-vdr-admin-0.4.0 63
+MD5 a79b0624672330e268c4180873d2d1ad files/rc-addon.sh 888
+MD5 f7765a39be5c98cd2db15e3aa3f483f2 metadata.xml 491
+MD5 9800aa9320667054c6b18482762f842b vdr-admin-0.4.0.ebuild 1073
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEGFk9dn07HTTCgIoRAmUkAJ9WDcHomD89zCYRxtV9wdEUWrnxeACfekeM
+5gY1IbYQPTBeZTe4bzuXx28=
+=XEPu
+-----END PGP SIGNATURE-----
