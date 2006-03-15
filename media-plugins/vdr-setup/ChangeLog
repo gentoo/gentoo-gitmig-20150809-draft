@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-setup
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.4 2006/03/13 14:06:51 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.5 2006/03/15 08:29:43 zzam Exp $
+
+  15 Mar 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-setup-0.3.1.ebuild:
+  modified check for patched version to not be confused when vdr is patched
+  without setup-plugin but with submenu
 
   13 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/vdr-setup-0.3.1-lang.diff, vdr-setup-0.3.1.ebuild:
