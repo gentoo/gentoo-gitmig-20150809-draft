@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.7.4.ebuild,v 1.6 2005/11/01 14:35:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.7.4.ebuild,v 1.7 2006/03/15 13:41:58 caleb Exp $
 
 inherit ruby
 USE_RUBY="ruby16 ruby18 ruby19"
@@ -21,7 +21,7 @@ DEPEND="virtual/ruby
 	>=media-libs/gd-2.0
 	jpeg? ( media-libs/jpeg )
 	truetype? ( media-libs/freetype )
-	X? ( virtual/x11 )"
+	X? ( || ( x11-libs/libX11 virtual/x11 ) )"
 
 src_compile() {
 	local myconf=""
@@ -44,7 +44,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR=${D} install || die
 
 	dodoc Changes TODO readme.* doc/manual.rd doc/INSTALL.*
 	dohtml doc/manual.html doc/manual_index.html

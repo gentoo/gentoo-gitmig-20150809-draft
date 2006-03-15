@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-gd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.5 2005/11/01 14:35:45 caleb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.6 2006/03/15 13:41:58 caleb Exp $
+
+  15 Mar 2006; Caleb Tennis <caleb@gentoo.org> ruby-gd-0.7.4.ebuild:
+  Fix X to modular dep
+
+  15 Mar 2006; Caleb Tennis <caleb@gentoo.org> ruby-gd-0.7.4.ebuild:
+  Change einstall to make DESTDIR=D install
 
   01 Nov 2005; Caleb Tennis <caleb@gentoo.org> ruby-gd-0.7.4.ebuild:
   Making X dep optional - bug #109289
