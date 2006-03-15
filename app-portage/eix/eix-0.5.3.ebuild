@@ -1,0 +1,43 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.3.ebuild,v 1.1 2006/03/15 17:57:45 genstef Exp $
+
+inherit eutils
+
+DESCRIPTION="Small utility for searching ebuilds with indexing for fast results"
+HOMEPAGE="http://dev.croup.de/proj/eix"
+SRC_URI="mirror://sourceforge/eix/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+IUSE=""
+
+DEPEND="sys-apps/portage"
+
+src_compile() {
+	local myconf
+	has_version =sys-apps/portage-2.1* && \
+		myconf="--with-portdir-cache-method=backport"
+	econf ${myconf} || die "econf failed"
+	emake || die "emake failed"
+}
+
+src_install() {
+	make DESTDIR="${D}" install || die "make install failed"
+}
+
+pkg_postinst() {
+	einfo "Please run 'update-eix' to setup the portage search database."
+	einfo "The database file will be located at /var/cache/eix"
+	echo
+	einfo "If you want to use cdb support, you need to add"
+	einfo "    PORTDIR_CACHE_METHOD=\"cdb\""
+	einfo "to /etc/eixrc or ~/.eixrc"
+	echo
+	einfo "If you want to use the backported cache patch of portage-2.1"
+	einfo "you need to add"
+	einfo "    PORTDIR_CACHE_METHOD=\"backport\""
+	einfo "to /etc/eixrc or ~/.eixrc"
+	einfo "backport is default when merging with portage-2.1"
+}
