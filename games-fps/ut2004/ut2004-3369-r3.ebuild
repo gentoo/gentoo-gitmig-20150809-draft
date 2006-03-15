@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r3.ebuild,v 1.1 2006/03/14 23:18:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r3.ebuild,v 1.2 2006/03/15 21:39:00 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -34,8 +34,8 @@ RDEPEND=">=games-fps/ut2004-data-3186-r1
 			x11-libs/libX11
 			x11-libs/libXau
 			x11-libs/libXdmcp )
-		virtual/x11 )"
-#	games-fps/ut2004-bonuspack-mega"
+		virtual/x11 )
+	games-fps/ut2004-bonuspack-mega"
 
 S=${WORKDIR}/UT2004-Patch
 
