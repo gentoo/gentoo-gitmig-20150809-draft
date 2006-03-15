@@ -1,22 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d35305a2c66d16cc8740260d0cb97036 ChangeLog 634
-RMD160 35810cc3e0c7c205b0ab3e69efc8f03c5f761376 ChangeLog 634
-SHA256 1485ebf2a699c7863bf0e19b8e3f8af5f721884e92431fdff721e46b414d4f03 ChangeLog 634
+MD5 130aa3bbe20989668b4fb778abb9b2f4 ChangeLog 771
+RMD160 695897e7b37bea472dc993d43685f2c223772242 ChangeLog 771
+SHA256 2d00b575b575b7f7deb47e51d2b69c761c8a06cf7c14971ae28925a07abff2b6 ChangeLog 771
 MD5 692913c598f954ec8f8e8a678f705aec files/digest-vdr-undelete-0.0.5 66
 RMD160 66be9dc19f57cdaa6b997025408f37fb28645d36 files/digest-vdr-undelete-0.0.5 66
 SHA256 9d1f8330968973ce779acb00244b7df37e3f3122b7493219cdda4f92b70db79a files/digest-vdr-undelete-0.0.5 66
+MD5 99d1253916fa18a81e88cf03970b3ce0 files/digest-vdr-undelete-0.0.6 244
+RMD160 dd9fbce4c2c344c845fd662c9e910f95d14181ca files/digest-vdr-undelete-0.0.6 244
+SHA256 e896ac9ef957bcee78657e3c0beea13a4f14f9feb47112a205d74f1a34dedace files/digest-vdr-undelete-0.0.6 244
 MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
 RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 metadata.xml 259
 SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata.xml 259
 MD5 939b470a31bde851be84b627fbd71a77 vdr-undelete-0.0.5.ebuild 501
 RMD160 9f71d381dd9457677a6b72f7b1dc01844b7369f7 vdr-undelete-0.0.5.ebuild 501
 SHA256 85ebec1b9a7aa19f3450bf24fffeda3bfc4e472f0ffa33c510d62f10f96f5019 vdr-undelete-0.0.5.ebuild 501
+MD5 cab68e8600cb96bf419d09a0bd31590f vdr-undelete-0.0.6.ebuild 500
+RMD160 7478554f074e3c3dfed2b845bdde830d63ec0045 vdr-undelete-0.0.6.ebuild 500
+SHA256 a512c5c907a52e7ce87f6489eaa18df2a61f693b1ed255329877d8a1758b22a7 vdr-undelete-0.0.6.ebuild 500
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFECfZRZfSl1Kp5KmoRAiGdAJ4kZybqwS/7+LasrJDk44RJs0PEqACg5c/q
-XCjMhrVpW6gN/X22msUDz9A=
-=Sdzr
+iD8DBQFEGJU1ZfSl1Kp5KmoRAoJrAKCUwAzAaDUc80fe9Wb/NLNrKulLywCeJ+MV
+lS0EJYA75mzGWE2D+LK42nQ=
+=thNS
 -----END PGP SIGNATURE-----
