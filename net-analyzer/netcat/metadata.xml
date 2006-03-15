@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>netmon</herd>
 <maintainer>
-	<email>vapier@gentoo.org</email>
+ <email>vapier@gentoo.org</email>
 </maintainer>
 <longdescription>the network swiss army knife</longdescription>
 </pkgmetadata>
