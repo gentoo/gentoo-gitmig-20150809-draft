@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-2.0.ebuild,v 1.4 2006/02/19 21:59:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-2.0.ebuild,v 1.5 2006/03/15 00:43:31 allanonjl Exp $
 
 inherit eutils gnome2 multilib flag-o-matic
 
@@ -33,16 +33,18 @@ DEPEND=">=x11-libs/gtk+-2.6
 	evolution? ( >=mail-client/evolution-2.4 )
 	sylpheed? ( virtual/sylpheed )"
 
-G2CONF="${G2CONF} $(use_enable ssl)"
-G2CONF="${G2CONF} $(use_enable sasl)"
-G2CONF="${G2CONF} $(use_enable ipv6)"
-# ssl, sasl and ipv6 requires either pop3 or imap, else they will be disabled
-G2CONF="${G2CONF} $(use_enable imap)"
-G2CONF="${G2CONF} $(use_enable pop pop3)"
-G2CONF="${G2CONF} $(use_enable gmail)"
-G2CONF="${G2CONF} $(use_enable evolution)"
-G2CONF="${G2CONF} --with-evolution-source-dir=/usr/include/evolution-2.4/"
-G2CONF="${G2CONF} $(use_enable sylpheed)"
+pkg_setup() {
+	G2CONF="${G2CONF} $(use_enable ssl)"
+	G2CONF="${G2CONF} $(use_enable sasl)"
+	G2CONF="${G2CONF} $(use_enable ipv6)"
+	# ssl, sasl and ipv6 requires either pop3 or imap, else they will be disabled
+	G2CONF="${G2CONF} $(use_enable imap)"
+	G2CONF="${G2CONF} $(use_enable pop pop3)"
+	G2CONF="${G2CONF} $(use_enable gmail)"
+	G2CONF="${G2CONF} $(use_enable evolution)"
+	G2CONF="${G2CONF} --with-evolution-source-dir=/usr/include/evolution-2.4/"
+	G2CONF="${G2CONF} $(use_enable sylpheed)"
+}
 
 src_unpack() {
 	unpack ${A}
@@ -51,6 +53,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-evolution-2.4.diff
 	epatch ${FILESDIR}/${P}-buildfix.diff
 	epatch ${FILESDIR}/${P}-gmail-properties-fix.diff
+
+	gnome2_omf_fix
 }
 
 src_compile() {
@@ -59,7 +63,7 @@ src_compile() {
 }
 
 src_install() {
-	gnome2_src_install evolution_plugindir="${D}/usr/$(get_libdir)/evolution/2.4/plugins"
+	gnome2_src_install evolution_plugindir="/usr/$(get_libdir)/evolution/2.4/plugins"
 }
 
 pkg_postinst() {
