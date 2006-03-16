@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.42 2006/02/08 15:23:28 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.43 2006/03/16 03:32:21 vapier Exp $
+
+*kbd-1.12-r6 (16 Mar 2006)
+
+  16 Mar 2006; Mike Frysinger <vapier@gentoo.org> +kbd-1.12-r6.ebuild:
+  Drop the italian euro keymap patch #75970.
 
   08 Feb 2006; Joel Martin <kanaka@gentoo.org> kbd-1.12-r5.ebuild:
   Don't run test programs when cross-compiling. Export CC for cross-compiling.
