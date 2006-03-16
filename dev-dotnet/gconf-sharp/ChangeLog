@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/gconf-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.36 2006/01/27 02:46:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.37 2006/03/16 21:47:50 latexer Exp $
+
+*gconf-sharp-2.8.2 (16 Mar 2006)
+*gconf-sharp-2.4.2 (16 Mar 2006)
+
+  16 Mar 2006; Peter Johanson <latexer@gentoo.org>
+  +gconf-sharp-2.4.2.ebuild, +gconf-sharp-2.8.2.ebuild:
+  Bump.
 
 *gconf-sharp-2.8.0 (26 Jan 2006)
 

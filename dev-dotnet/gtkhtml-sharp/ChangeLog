@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/gtkhtml-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.43 2006/01/27 16:41:58 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.44 2006/03/16 21:48:57 latexer Exp $
+
+*gtkhtml-sharp-2.8.2 (16 Mar 2006)
+*gtkhtml-sharp-2.4.2 (16 Mar 2006)
+
+  16 Mar 2006; Peter Johanson <latexer@gentoo.org>
+  +gtkhtml-sharp-2.4.2.ebuild, +gtkhtml-sharp-2.8.2.ebuild:
+  Bump.
 
   27 Jan 2006; Peter Johanson <latexer@gentoo.org>
   gtkhtml-sharp-2.8.0.ebuild:

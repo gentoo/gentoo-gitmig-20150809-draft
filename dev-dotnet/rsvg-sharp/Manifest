@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 764781a5f4d1f35df8d400415e33c1d0 ChangeLog 4593
 RMD160 8df86e87570f8ed2f583f98dacf8b774e250dfab ChangeLog 4593
 SHA256 316446295f57aa3c905f339a43bf03aa26b29da2e8198a3b49bdaa45340cd126 ChangeLog 4593
@@ -13,9 +10,15 @@ SHA256 922e1af27e66a616da6fa06cfb111ae70e588304abd1bb6d1338804022c2ed5f files/di
 MD5 a1d68897943900a3597a99cc8d5edf11 files/digest-rsvg-sharp-2.4.0 147
 RMD160 b63c81ba5e851d8a4440f90c68910f59cd7d4f00 files/digest-rsvg-sharp-2.4.0 147
 SHA256 25670332d38cab37caa443e690f4e6d6400e6ec60a1fa41a1e284896857d4fae files/digest-rsvg-sharp-2.4.0 147
+MD5 46df37e05899636b5446de3e1047ca6f files/digest-rsvg-sharp-2.4.2 533
+RMD160 abcb15db7d05ba608221354414b04f41a01ddd15 files/digest-rsvg-sharp-2.4.2 533
+SHA256 c722fe6367bc7304e7e04af1033d4dd2efcab956dee86114c70982ef45dbf1a9 files/digest-rsvg-sharp-2.4.2 533
 MD5 42cefaeaf6c4a7f03db4c0de8a0abbf4 files/digest-rsvg-sharp-2.8.0 147
 RMD160 a5e2a2b52714fed7b1a552fefd5a362bcdd99d41 files/digest-rsvg-sharp-2.8.0 147
 SHA256 196a130b96c9316902964f5f35ac96716ccc11853360f41d6b52d8988727e7b4 files/digest-rsvg-sharp-2.8.0 147
+MD5 268ca99224bc45249db87e3d3c665028 files/digest-rsvg-sharp-2.8.2 533
+RMD160 1a97a6d51142bdc89d63edd69720a838a42d2188 files/digest-rsvg-sharp-2.8.2 533
+SHA256 f29502346cf9d7ec6a2b99e066c197cb107136aea0a01f6cecdf299ab09ac6a4 files/digest-rsvg-sharp-2.8.2 533
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 RMD160 aafa4baf96cfa37bca8b5af9961b253e8d54deeb metadata.xml 222
 SHA256 2291d7f74fb8845472f5527edd49d2004d0626025dfc6622cbe6a8fe22dc846d metadata.xml 222
@@ -28,13 +31,12 @@ SHA256 c34490bb87a88543b25c8797411d72583e3a0966fece65f1885e13112c489409 rsvg-sha
 MD5 2ba2d19b97bcd903bca28c7829d77d39 rsvg-sharp-2.4.0.ebuild 487
 RMD160 adabb13ec49ed1c18a09a6f2555025c98872a93b rsvg-sharp-2.4.0.ebuild 487
 SHA256 8d473414ed150f7046dd22fb88adc8d29414c67cebbe4d828d9030ab2fa58417 rsvg-sharp-2.4.0.ebuild 487
+MD5 2ba2d19b97bcd903bca28c7829d77d39 rsvg-sharp-2.4.2.ebuild 487
+RMD160 adabb13ec49ed1c18a09a6f2555025c98872a93b rsvg-sharp-2.4.2.ebuild 487
+SHA256 8d473414ed150f7046dd22fb88adc8d29414c67cebbe4d828d9030ab2fa58417 rsvg-sharp-2.4.2.ebuild 487
 MD5 6c385a0fb8aa86277ef48b6a522f3cbc rsvg-sharp-2.8.0.ebuild 487
 RMD160 c9f59599b65c6dfd02ad64e67f9d6934876fde4f rsvg-sharp-2.8.0.ebuild 487
 SHA256 576e994c55578ba733dc725f7c954632cd8dfe02d962136f734d0af51f696a29 rsvg-sharp-2.8.0.ebuild 487
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD+S+EwUpWvClEHQoRAgiIAJ9tS/Y4Q9TxB3e9HMq3WccDT6m3+QCfUga+
-+wTygjRwSzDzgZxVUp+gx7g=
-=RE0H
------END PGP SIGNATURE-----
+MD5 6c385a0fb8aa86277ef48b6a522f3cbc rsvg-sharp-2.8.2.ebuild 487
+RMD160 c9f59599b65c6dfd02ad64e67f9d6934876fde4f rsvg-sharp-2.8.2.ebuild 487
+SHA256 576e994c55578ba733dc725f7c954632cd8dfe02d962136f734d0af51f696a29 rsvg-sharp-2.8.2.ebuild 487

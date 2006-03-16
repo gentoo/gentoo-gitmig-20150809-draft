@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/rsvg-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/rsvg-sharp/ChangeLog,v 1.32 2006/02/20 02:55:28 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/rsvg-sharp/ChangeLog,v 1.33 2006/03/16 21:49:09 latexer Exp $
+
+*rsvg-sharp-2.8.2 (16 Mar 2006)
+*rsvg-sharp-2.4.2 (16 Mar 2006)
+
+  16 Mar 2006; Peter Johanson <latexer@gentoo.org> +rsvg-sharp-2.4.2.ebuild,
+  +rsvg-sharp-2.8.2.ebuild:
+  Bump.
 
   20 Feb 2006; Luis Medinas <metalgod@gentoo.org> rsvg-sharp-2.8.0.ebuild:
   Re-keyword ~amd64 for 2.8.0.
