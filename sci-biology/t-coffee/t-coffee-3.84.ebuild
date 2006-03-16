@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-3.84.ebuild,v 1.1 2006/03/07 21:41:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-3.84.ebuild,v 1.2 2006/03/16 21:44:32 ribosome Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs flag-o-matic
 
 DESCRIPTION="A multiple sequence alignment package"
 LICENSE="t-coffee"
@@ -36,6 +36,7 @@ die_compile() {
 }
 
 src_compile() {
+	[[ $(gcc-version) == "3.4" ]] && append-flags -fno-unit-at-a-time
 	make all || die_compile
 }
 

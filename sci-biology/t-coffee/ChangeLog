@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/t-coffee
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.13 2006/03/07 21:41:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.14 2006/03/16 21:44:32 ribosome Exp $
+
+  16 Mar 2006; Olivier Fisette <ribosome@gentoo.org> -t-coffee-2.66.ebuild,
+  -t-coffee-3.27.ebuild, t-coffee-3.84.ebuild:
+  Add fno-unit-at-a-time when using GCC 3.4. Removed old versions.
 
 *t-coffee-3.84 (07 Mar 2006)
 
