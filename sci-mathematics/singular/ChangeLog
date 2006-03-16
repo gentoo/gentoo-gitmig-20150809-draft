@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.10 2006/03/11 20:23:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.11 2006/03/16 17:31:27 markusle Exp $
+
+  16 Mar 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/singular-3.0.1.2-gcc4.1-gentoo.patch, singular-3.0.1.2.ebuild:
+  Added patch to fix compile failure with gcc-4.1. This fixes 
+  bug #126159.
 
   11 Mar 2006; Markus Dittrich <markusle@gentoo.org>
   singular-3.0.1.2.ebuild:
