@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/proxychains
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/ChangeLog,v 1.8 2006/03/05 20:05:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/ChangeLog,v 1.9 2006/03/16 00:48:08 vapier Exp $
+
+*proxychains-3.1 (16 Mar 2006)
+
+  16 Mar 2006; Mike Frysinger <vapier@gentoo.org> +proxychains-3.1.ebuild:
+  Version bump.
 
 *proxychains-3.0 (05 Mar 2006)
 
