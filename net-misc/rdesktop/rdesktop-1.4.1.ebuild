@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.4.1.ebuild,v 1.13 2005/12/13 05:52:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.4.1.ebuild,v 1.14 2006/03/16 21:09:21 wolf31o2 Exp $
 
 inherit eutils
 
@@ -18,6 +18,7 @@ DEPEND="|| ( x11-libs/libXt virtual/x11 )
 
 src_compile() {
 	sed -i -e '/-O2/c\' -e 'cflags="$cflags ${CFLAGS}"' configure
+	sed -i -e 's:strip:true:' Makefile.in
 	econf \
 		--with-openssl=/usr \
 		`use_with debug` \
