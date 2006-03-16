@@ -1,28 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2f69202390101c183a79dbc87d3750aa ChangeLog 7771
-RMD160 5513bbd1efadd4cbe06de9f4c37d657897056947 ChangeLog 7771
-SHA256 4643aa7171c7c2e2273d740dd72f68d4cb4e2bec30a4c454b9bb6635f7cefdd0 ChangeLog 7771
+MD5 bca91c53e471a219f0cec53a9666c9a3 ChangeLog 7906
+RMD160 75ef9b889b677d2881a454f95e8760ecbb1d0f1b ChangeLog 7906
+SHA256 b6b7a2e804d6f6bcca38a7145306b653710b0eab44fed6db0070f28c0d4bec53 ChangeLog 7906
 MD5 786a6b1c325885af1776c3b23add917a files/digest-gtksourceview-1.2.0 72
 RMD160 b9c41a6bd2de9cbb332c277701c6ab3e4e76872f files/digest-gtksourceview-1.2.0 72
 SHA256 78b58b85e6172307abc96fea8440a34551f0271fde49b193ff8ba0d896b8f3be files/digest-gtksourceview-1.2.0 72
 MD5 088df070b51e3abe2e1090afdd67d7ca files/digest-gtksourceview-1.4.2 72
 RMD160 1a479ffc109a9d0bf4eaf119d4e129f9fa68a666 files/digest-gtksourceview-1.4.2 72
 SHA256 49f6d88f93f3fc8704f69492db9d43ccbeb247f39d188d018056aaec93ec5adc files/digest-gtksourceview-1.4.2 72
+MD5 a77cd94dfa5fcaa003ce6e7b3d86e538 files/digest-gtksourceview-1.6.0 262
+RMD160 555d3949e41c233add20e23955c8bb10a1af3541 files/digest-gtksourceview-1.6.0 262
+SHA256 769dcdea06eecfe64c87b8c2153575b0d36babec2abaea64c50ad0c127eb77f9 files/digest-gtksourceview-1.6.0 262
 MD5 5311d54156d920761a174b622c42ef0b gtksourceview-1.2.0.ebuild 843
 RMD160 54651748e114619653db563f8db72e33f7b87462 gtksourceview-1.2.0.ebuild 843
 SHA256 8bfa2d3bf2c62a00acff3f14ec2edb7572bbcb115447ac4898c2bd688bedfaf1 gtksourceview-1.2.0.ebuild 843
 MD5 a103a2cfed088e55ffd21e83dba527c8 gtksourceview-1.4.2.ebuild 851
 RMD160 8b499a9eda96a8bded99338455251f0ea8d3ecbf gtksourceview-1.4.2.ebuild 851
 SHA256 3e962c1a0fb4cbfc56ffb82584218dbfa84618c16b118fa6de18c143d7c666a8 gtksourceview-1.4.2.ebuild 851
+MD5 562b941a62d53e9886b0f4cb1e981d75 gtksourceview-1.6.0.ebuild 848
+RMD160 8d43a8b4fd72bccbdc0640f61499025ab0a1c823 gtksourceview-1.6.0.ebuild 848
+SHA256 0c215b7d9f229a41c499326ad7242d8947ba0dfbba2c796e11e26412ec338bef gtksourceview-1.6.0.ebuild 848
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6F0dJrHF4yAQTrARAl4fAKCA7uw873SHn8S7zEQ+ieLnTVGUowCgxi1U
-tPvsxaM50GYQQ6SbC4FmpLY=
-=8yTk
------END PGP SIGNATURE-----
