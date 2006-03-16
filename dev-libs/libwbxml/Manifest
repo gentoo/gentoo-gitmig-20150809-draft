@@ -1,5 +1,25 @@
-MD5 88dd6dcd97173572eaa775a552429a81 ChangeLog 331
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 64bb3bc68f58494553e9e77161105676 ChangeLog 432
+RMD160 7b0cd82e8ce4ad3bfcba0bf178d498f543f4ef42 ChangeLog 432
+SHA256 dc9d4c1210dde392f970e21ba0deae737df79d1cbcf19ce74767f22e81bd2805 ChangeLog 432
 MD5 c1d0ca9ee0021341515bfabae1bf6e0d files/digest-libwbxml-0.9.0 68
+RMD160 bcdb6ab72448c0ef162b5d685fe692837bb1ac9d files/digest-libwbxml-0.9.0 68
+SHA256 0bc3b948e131fb7dd9543054c95b36441001d6409ae4a0de4856208ed470767e files/digest-libwbxml-0.9.0 68
 MD5 11cfc652ee5ed35f75b0fbd6e3e8332f files/wbxml2-0.9.0.nokia-6600.patch 1884
-MD5 c0b4766394a5b3c05ac08784ebf9a9e8 libwbxml-0.9.0.ebuild 1261
+RMD160 0862c25c6f4809e386d3e20f87488a9bc9abb60b files/wbxml2-0.9.0.nokia-6600.patch 1884
+SHA256 b0f693ad00a4edd645805370b5ccabb42183893651c2f69526162239b4e9491e files/wbxml2-0.9.0.nokia-6600.patch 1884
+MD5 986f41622775beaaa7e4569948489d4f libwbxml-0.9.0.ebuild 1272
+RMD160 f97b572bd3b58436182eb31ff24118ddb3c327e5 libwbxml-0.9.0.ebuild 1272
+SHA256 0527f55d8b1cae2054ded1be6545e8457cec084dc57988010bf7c3e8c30546e2 libwbxml-0.9.0.ebuild 1272
 MD5 4d01239e46295f54006f3d3afd40ac08 metadata.xml 254
+RMD160 5c1b976d4bf83b9cb6770e8b6065df0c2fbad264 metadata.xml 254
+SHA256 51a4815eae0d318310ac2894236be562b906c9e662cbd13013c9733f9cc8503c metadata.xml 254
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEGbFGub4+zaPCR/oRAl0nAJ42aaM+BEzSBBtc4EXEnAAxUawjmgCdHenk
+nMwthw+52s9a+EPkScVdeQA=
+=YkO6
+-----END PGP SIGNATURE-----
