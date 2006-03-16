@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgmltools-lite
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.40 2006/02/08 20:42:54 tove Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.41 2006/03/16 14:21:59 ehmsen Exp $
+
+  16 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  sgmltools-lite-3.0.3-r7.ebuild, sgmltools-lite-3.0.3-r10.ebuild:
+  Don't install COPYING, found by QA script.
 
   30 Nov 2005; Tom Gall <tgall@gentoo.org> sgmltools-lite-3.0.3-r7.ebuild:
   stable on ppc64

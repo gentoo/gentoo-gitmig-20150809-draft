@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r10.ebuild,v 1.1 2005/08/13 10:17:34 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r10.ebuild,v 1.2 2006/03/16 14:21:59 ehmsen Exp $
 
 inherit python sgml-catalog
 
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
 	einstall etcdir=${D}/etc/sgml || die
 
-	dodoc COPYING ChangeLog POSTINSTALL README*
+	dodoc ChangeLog POSTINSTALL README*
 	dohtml -r .
 
 	cd ${WORKDIR}/nw-eps-icons-0.0.1/images

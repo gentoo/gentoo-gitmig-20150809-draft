@@ -1,6 +1,9 @@
 # ChangeLog for app-text/openjade
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.44 2005/06/25 17:07:57 liquidx Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.45 2006/03/16 14:26:25 ehmsen Exp $
+
+  16 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org> openjade-1.3.2-r1.ebuild:
+  Don't install COPYING, found by QA script.
 
   25 Jun 2005; Alastair Tse <liquidx@gentoo.org> openjade-1.3.2-r1.ebuild:
   add march to allowed flags. (#78284)

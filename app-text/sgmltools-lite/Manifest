@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7721e3b4aca24403785c49919835fd4b ChangeLog 7206
-RMD160 3e2a16506d414ab5818c1a14dd384c7f7424c87f ChangeLog 7206
-SHA256 964d1daebe9b93d6094a486883dcbc2185839c376f8e5e3b2b69ec0590bda0f7 ChangeLog 7206
-MD5 4068e19bd2400f18c7b90fc071c31619 files/digest-sgmltools-lite-3.0.3-r10 139
-RMD160 e43479e37a460c665cc76c911f9cb52d69b8a5a4 files/digest-sgmltools-lite-3.0.3-r10 139
-SHA256 da30e32f4ed2375eaf049f3f04c73c12ccfc015fc5d575e615f6f61984d113a9 files/digest-sgmltools-lite-3.0.3-r10 139
-MD5 4068e19bd2400f18c7b90fc071c31619 files/digest-sgmltools-lite-3.0.3-r7 139
-RMD160 e43479e37a460c665cc76c911f9cb52d69b8a5a4 files/digest-sgmltools-lite-3.0.3-r7 139
-SHA256 da30e32f4ed2375eaf049f3f04c73c12ccfc015fc5d575e615f6f61984d113a9 files/digest-sgmltools-lite-3.0.3-r7 139
+MD5 7d040715704c2d08b3b1c4a0db06838b ChangeLog 7368
+RMD160 19f9baab718f6fd9e3984e16331952ddb4986530 ChangeLog 7368
+SHA256 cf9299f0133e915e406529224973615bfffb714a0ddd1b5744c77e7e10737960 ChangeLog 7368
+MD5 5e15a24015005f40f108251f2ea4c4de files/digest-sgmltools-lite-3.0.3-r10 509
+RMD160 ac8cf4b5f48d0c4ca27585d3729196fede758cd7 files/digest-sgmltools-lite-3.0.3-r10 509
+SHA256 ad60f86cd27e769a718bfee420de0872664b88d4d2ba8181a998beaf4d9d930d files/digest-sgmltools-lite-3.0.3-r10 509
+MD5 5e15a24015005f40f108251f2ea4c4de files/digest-sgmltools-lite-3.0.3-r7 509
+RMD160 ac8cf4b5f48d0c4ca27585d3729196fede758cd7 files/digest-sgmltools-lite-3.0.3-r7 509
+SHA256 ad60f86cd27e769a718bfee420de0872664b88d4d2ba8181a998beaf4d9d930d files/digest-sgmltools-lite-3.0.3-r7 509
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
-MD5 7dcb8dd8e73abe3698aacd4a884cedd5 sgmltools-lite-3.0.3-r10.ebuild 2485
-RMD160 1c3c291433a460bf77dbf2e0652a3e97885419a6 sgmltools-lite-3.0.3-r10.ebuild 2485
-SHA256 60afbfaae3d6eef209410f4f450e327c5ab7936721102d3e57886baa7691a03f sgmltools-lite-3.0.3-r10.ebuild 2485
-MD5 3aae409f3e85d2f0204c951f5c86af1b sgmltools-lite-3.0.3-r7.ebuild 2050
-RMD160 3040b43e49c1c49f9dbfa4b3427aab3c506c43a9 sgmltools-lite-3.0.3-r7.ebuild 2050
-SHA256 0fed5b5920ff9eff52935687b54d987ac09ea2066856903870fe4a0df26ed399 sgmltools-lite-3.0.3-r7.ebuild 2050
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6lfbV3J2n04EauwRAg3gAJ9DBTCgFpIq333VyA50ylCvD6coiACfWcx8
-vlHxyepbi1E5Q/flTWrg944=
-=Q5ZE
------END PGP SIGNATURE-----
+MD5 d7e3fe08faa7cfaa234d8ee2a0334383 sgmltools-lite-3.0.3-r10.ebuild 2357
+RMD160 33272fb59bdb4972eb91dc79f7da5b1b35a61476 sgmltools-lite-3.0.3-r10.ebuild 2357
+SHA256 60344747a5f4b851ed9cc9de70addd09ef7c7d9ab8856225819fa775cb84f1c0 sgmltools-lite-3.0.3-r10.ebuild 2357
+MD5 85dd910117fcfdfec503c1f971e2b094 sgmltools-lite-3.0.3-r7.ebuild 1926
+RMD160 2566dab185db4e802d5a5573537e95d977999d3f sgmltools-lite-3.0.3-r7.ebuild 1926
+SHA256 2b061754a73fe7aedba63d011d567a50c941f7c6c0dcbff5300abb2f24c3a7fe sgmltools-lite-3.0.3-r7.ebuild 1926

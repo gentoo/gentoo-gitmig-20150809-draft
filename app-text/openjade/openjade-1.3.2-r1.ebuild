@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.29 2005/07/09 04:46:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.30 2006/03/16 14:26:25 ehmsen Exp $
 
 inherit libtool sgml-catalog eutils flag-o-matic gnuconfig multilib
 
@@ -82,7 +82,7 @@ src_install() {
 	insinto /usr/share/sgml/${P}/pubtext
 	doins pubtext/*
 
-	dodoc COPYING NEWS README VERSION
+	dodoc NEWS README VERSION
 	dohtml doc/*.htm
 
 	insinto /usr/share/doc/${PF}/jadedoc
