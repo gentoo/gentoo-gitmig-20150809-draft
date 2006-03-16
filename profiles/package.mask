@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5092 2006/03/15 18:05:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5093 2006/03/16 00:34:19 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (16 Mar 2006)
+# Only compiles with gcc-4.1.0
+=app-portage/eix-0.5.3
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (15 Mar 2006)
 # Masked for testing
