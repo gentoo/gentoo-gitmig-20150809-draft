@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/eurosym
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.16 2004/10/19 14:12:06 usata Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.17 2006/03/16 13:51:53 ehmsen Exp $
+
+  16 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org> eurosym-1.4.ebuild:
+  Fixed depends so it don't explicitly depends on tetex-1.
 
   19 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> eurosym-1.4.ebuild:
   Blocks >=tetex-2; bug #68129.
