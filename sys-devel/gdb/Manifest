@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 24c734dd6b8cb2365b2a93da8f831af0 ChangeLog 12827
-RMD160 fc8b4421b6e178c4ab7ac3d5983ea2a87b2c2c57 ChangeLog 12827
-SHA256 24420419b9dd84ce06ea0f34245876145bd4f7e7a39ac43744bcd319e707ee8e ChangeLog 12827
+MD5 fe400cfc4876d5e22b931225ed691d2a ChangeLog 13035
+RMD160 a73d54dcd5806a76a1a25d11392bde93b18474d0 ChangeLog 13035
+SHA256 bcd4cab5b3ec2f4a07077a42ee20f83700d6bc7bfcc21bfaf6123c0046688ada ChangeLog 13035
 MD5 d3ab2683d88b3cbecb8a9faa439703a1 files/bfd-malloc-wrap.patch 782
 RMD160 bf78ccc07532337d43abff34f84346a0dafc158f files/bfd-malloc-wrap.patch 782
 SHA256 be05f1eebc7debae1406bc951eeb44c90e8c3fe9e3c86b52df51584e793e4330 files/bfd-malloc-wrap.patch 782
@@ -31,6 +31,9 @@ SHA256 530a8a1595b235e4812f65739bd6b3ce600637b134359186171e0fb93339af80 files/di
 MD5 944b2661cbb8d3308ce71d31e66533ac files/digest-gdb-6.4-r3 121
 RMD160 2ef9734f3097ea95222f7e230a04b1c2ddc265ce files/digest-gdb-6.4-r3 121
 SHA256 530a8a1595b235e4812f65739bd6b3ce600637b134359186171e0fb93339af80 files/digest-gdb-6.4-r3 121
+MD5 944b2661cbb8d3308ce71d31e66533ac files/digest-gdb-6.4-r4 121
+RMD160 2ef9734f3097ea95222f7e230a04b1c2ddc265ce files/digest-gdb-6.4-r4 121
+SHA256 530a8a1595b235e4812f65739bd6b3ce600637b134359186171e0fb93339af80 files/digest-gdb-6.4-r4 121
 MD5 1de0e1b91ac150426719e904f0e1a5cd files/gdb-5.3-sparc-nat-asm.patch 521
 RMD160 2a264d95c0ba01d9967ce9abad6a4394db025aea files/gdb-5.3-sparc-nat-asm.patch 521
 SHA256 3157cea5211d2d0c4fd8a266eba748bf3e5d4764e32ec03a9685dbc23f2c6106 files/gdb-5.3-sparc-nat-asm.patch 521
@@ -82,6 +85,9 @@ SHA256 19303c5e0a5bcf303b9af29b7f7e3fdbbf61efaba2b8945fd83f4737f62274ae files/gd
 MD5 8b7f5c46b8dabbc9239c37f52278b971 files/gdb-6.3-uclibc.patch 8221
 RMD160 4faf607f4e430cb2eee461099dd86745d1fb0aef files/gdb-6.3-uclibc.patch 8221
 SHA256 c6692a46976941c2757c01a4f627232703157891e7f324d0ed88c9ea287a2e98 files/gdb-6.3-uclibc.patch 8221
+MD5 90ae3812714d1ca0d3e1edc73868d5ac files/gdb-6.4-avr-eclipse.patch 972
+RMD160 ed66f0c0fd1c36123dd6de0b487384a50da0fa6a files/gdb-6.4-avr-eclipse.patch 972
+SHA256 1ca138a5c1047e479c615fec19ad17daf4759124f4c9aec5051d393ad55a5390 files/gdb-6.4-avr-eclipse.patch 972
 MD5 8323dafe6749f0da44b8e11ebbbc96c4 files/gdb-6.4-relative-paths.patch 3147
 RMD160 f53af62cdcaaa66614d4a2c87b85698507f904ed files/gdb-6.4-relative-paths.patch 3147
 SHA256 0b39f8ac1f6c03257a0ab1cbfff3eac7af13d38026d0cc7e11f266df48d5a540 files/gdb-6.4-relative-paths.patch 3147
@@ -118,6 +124,9 @@ SHA256 ad9e4a623a7be0da045ccf45f1a3ebc68813afdbbaa5eceb9e496ea39175d9fb gdb-6.4-
 MD5 4bf796b02b98126172f826fb4b7fdb55 gdb-6.4-r3.ebuild 3024
 RMD160 14f7f2a7d68eecd9e6ee07e182862db9bdd671b3 gdb-6.4-r3.ebuild 3024
 SHA256 cf414a805fcbcb40b070b452d327cea75d3799a7d0a862e5f3820623ea533abd gdb-6.4-r3.ebuild 3024
+MD5 b4207388e1803a236745295bb3527554 gdb-6.4-r4.ebuild 3081
+RMD160 698d5df5275e66839db7cd773c03563484bd9b01 gdb-6.4-r4.ebuild 3081
+SHA256 13302b4dbbdc54449a83e0ad192559331ba76dba1987135e74368b56081d5ef6 gdb-6.4-r4.ebuild 3081
 MD5 64854d9e61c5f0c03dae7184dafa4f08 gdb-6.4.ebuild 2995
 RMD160 64d7c67013e9029c9387cf26d5c70275d6ae39c9 gdb-6.4.ebuild 2995
 SHA256 b83ed62def04ae3fd8812868c77fa7eb961a8475e57be5d4f9e407c926d6c575 gdb-6.4.ebuild 2995
@@ -125,9 +134,9 @@ MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
 SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFECyuR2+ySkm8kpY0RAgxOAJ4rtm8DdsVsJheERT548XGBwW/d7ACgvHtG
-zecoWDLF07WDSQGWs1Fxjdw=
-=/CDt
+iD8DBQFEGKzO2+ySkm8kpY0RApMvAKCGGvU5kQ6OM19XaL3STa/4X3O3JwCgs5o2
+seDIfPK5H1R54IOU5V5ro9s=
+=8PsL
 -----END PGP SIGNATURE-----

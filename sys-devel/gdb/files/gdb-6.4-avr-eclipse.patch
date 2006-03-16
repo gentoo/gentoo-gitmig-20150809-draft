@@ -1,0 +1,33 @@
+http://bugs.gentoo.org/126288
+
+2006-01-21  Daniel Jacobowitz  <dan@codesourcery.com>
+
+	* solib.c (info_sharedlibrary_command): Avoid internal_error.
+
+Index: gdb/solib.c
+===================================================================
+RCS file: /cvs/src/src/gdb/solib.c,v
+retrieving revision 1.82
+retrieving revision 1.83
+diff -u -p -r1.82 -r1.83
+--- gdb/solib.c	17 Dec 2005 22:34:02 -0000	1.82
++++ gdb/solib.c	21 Jan 2006 22:23:27 -0000	1.83
+@@ -698,16 +698,8 @@ info_sharedlibrary_command (char *ignore
+   int header_done = 0;
+   int addr_width;
+ 
+-  if (TARGET_PTR_BIT == 32)
+-    addr_width = 8 + 4;
+-  else if (TARGET_PTR_BIT == 64)
+-    addr_width = 16 + 4;
+-  else
+-    {
+-      internal_error (__FILE__, __LINE__,
+-		      _("TARGET_PTR_BIT returned unknown size %d"),
+-		      TARGET_PTR_BIT);
+-    }
++  /* "0x", a little whitespace, and two hex digits per byte of pointers.  */
++  addr_width = 4 + (TARGET_PTR_BIT / 4);
+ 
+   update_solib_list (from_tty, 0);
+ 
