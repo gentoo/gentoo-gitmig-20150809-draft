@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gtalk/gtalk-0.99.10.ebuild,v 1.3 2004/07/01 22:18:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gtalk/gtalk-0.99.10.ebuild,v 1.4 2006/03/16 13:39:01 caleb Exp $
 
 inherit elisp
 
@@ -15,7 +15,7 @@ SLOT="0"
 DEPEND="virtual/libc
 	ncurses? ( >=sys-libs/ncurses-5.2 )
 	gtk? ( =x11-libs/gtk+-1* )
-	X? ( virtual/x11 )"
+	X? ( || ( x11-libs/libXt virtual/x11 ) )"
 
 IUSE="X gtk ncurses"
 
