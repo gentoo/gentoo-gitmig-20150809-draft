@@ -1,15 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8330618d554f975f0cc2d2c8b3bf5826 ChangeLog 1650
+MD5 13f27a8e9564081f230cc1f1463a9749 ChangeLog 1789
+RMD160 2a60dc3750ae1413deb9ebd2f04bd461f4987552 ChangeLog 1789
+SHA256 d816aa601762b3e884a8ccb0715b79bc9ed420910c5228d277e485038c290fcf ChangeLog 1789
 MD5 af2e4c0e952d40232cb322d621f37995 files/digest-pathological-1.1.3-r1 71
+RMD160 68fd24320fff098fbe6a11340a2edc3017a5c921 files/digest-pathological-1.1.3-r1 71
+SHA256 d41c0833797aaf47f78c3484397120792862264471b896770d9fddd2fcd42af4 files/digest-pathological-1.1.3-r1 71
+MD5 19ff87e1acdd6e1c14472b03cd0bb640 files/pathological-1.1.3-build.patch 527
+RMD160 c63dd35a2f47e9a48ac4ff41646231778f8124b7 files/pathological-1.1.3-build.patch 527
+SHA256 93d4c806d11896a46d31b71fc81799141084cdde1323cc933c748b80f6ac4a3f files/pathological-1.1.3-build.patch 527
 MD5 c817c498f3d5e44ee7bec1c58f1bc643 files/pathological-1.1.3-music-py.patch 475
+RMD160 697d212e125fa0eca72f6aa78e80ac582955752f files/pathological-1.1.3-music-py.patch 475
+SHA256 35938ac1f96dad12c74fd57e0002fcf523fe573b269e03992d3ae006880819c0 files/pathological-1.1.3-music-py.patch 475
 MD5 95e2b5bfd7767aeae061c77f7e1a055e metadata.xml 221
-MD5 a8fc6bfad149b12eda20197f68045a8b pathological-1.1.3-r1.ebuild 2040
+RMD160 617e2d275f39c937dfdc8ae1ebc0b4fac331d0a9 metadata.xml 221
+SHA256 80c34a967b80bba5f0f27215677fdad5b1ed739678287b62db1f6c345cf69811 metadata.xml 221
+MD5 c70439354243ce4f3ca0b3e2b166ca43 pathological-1.1.3-r1.ebuild 2102
+RMD160 e9c0681d542bbd823471c019b56873d790970afa pathological-1.1.3-r1.ebuild 2102
+SHA256 dbdc0f63f78b321eaea8a8b1cf9740f2af26ab55ec6958b162707b3ab8a1a073 pathological-1.1.3-r1.ebuild 2102
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDeTmRgIKl8Uu19MoRAsdWAJsFT3JLIpFhJojGN0XljmP6w3Nf7wCeI9jg
-kebvN+23dnhQgModiewnpiA=
-=KuDn
+iD8DBQFEGNqu2+ySkm8kpY0RAggOAJ9Lz+syk11La2tf6AZ2MNBwTH2KEwCePwmG
+T1+FTe5ig2IURNCamiFKXHI=
+=GOQd
 -----END PGP SIGNATURE-----

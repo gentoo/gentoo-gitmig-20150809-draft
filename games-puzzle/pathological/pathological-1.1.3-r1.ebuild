@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3-r1.ebuild,v 1.2 2005/11/15 01:26:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3-r1.ebuild,v 1.3 2006/03/16 03:25:23 vapier Exp $
 
 inherit games eutils
 
@@ -21,7 +21,9 @@ RDEPEND=">=dev-python/pygame-1.5.5
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	gunzip pathological.6.gz
 
+	epatch "${FILESDIR}"/${P}-build.patch
 	epatch "${FILESDIR}"/${P}-music-py.patch
 
 	if use doc ; then
@@ -66,7 +68,7 @@ src_install() {
 
 	# documentation
 	dodoc README TODO
-	doman pathological.6.gz
+	doman pathological.6
 	use doc && dohtml -r html/
 
 	insinto /usr/share/pixmaps
