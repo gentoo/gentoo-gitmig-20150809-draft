@@ -73,7 +73,7 @@
  ## Process this file with automake to produce Makefile.in
  
 -gemhun_datadir = $(prefix)/@NO_PREFIX_PACKAGE_DATA_DIR@/pax/levels
-+gemhun_datadir = $(pkgdatadir)/pax/levels
++gemhun_datadir = $(pkgdatadir)/levels
  
  gemhun_data_DATA = \
  	level0.dat\
