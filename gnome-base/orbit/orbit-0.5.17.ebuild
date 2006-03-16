@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-0.5.17.ebuild,v 1.7 2005/04/29 01:00:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-0.5.17.ebuild,v 1.8 2006/03/16 18:46:14 foser Exp $
 
 inherit gnome.org libtool gnuconfig eutils multilib
 
@@ -20,7 +20,8 @@ IUSE=""
 DEPEND="sys-devel/gettext
 	>=sys-apps/tcp-wrappers-7.6
 	=dev-libs/glib-1.2*"
-RDEPEND="=dev-libs/glib-1.2*"
+RDEPEND="=dev-libs/glib-1.2*
+	dev-util/indent"
 
 src_unpack() {
 	unpack ${A}
