@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.24 2006/03/10 11:41:39 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.25 2006/03/16 20:39:00 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -442,17 +442,17 @@ mysql_src_install() {
 	newins "${TMPDIR}/my.cnf.ok" my.cnf
 
 	insinto "/etc/conf.d"
-	newins "${FILESDIR}/mysql-slot.conf.d-r1" "mysql"
+	newins "${FILESDIR}/mysql.conf.d-r1" "mysql"
 	mysql_version_is_at_least "5.00.11.00" \
-	&& newins "${FILESDIR}/mysqlmanager-slot.conf.d" "mysqlmanager"
+	&& newins "${FILESDIR}/mysqlmanager.conf.d" "mysqlmanager"
 
 	# minimal builds don't have the server
 	if ! useq minimal; then
 		exeinto /etc/init.d
-		newexe "${FILESDIR}/mysql-slot.rc6-r3" "mysql"
+		newexe "${FILESDIR}/mysql.rc6-r3" "mysql"
 
 		mysql_version_is_at_least "5.00.11.00" \
-		&& newexe "${FILESDIR}/mysqlmanager-slot.rc6" "mysqlmanager"
+		&& newexe "${FILESDIR}/mysqlmanager.rc6" "mysqlmanager"
 		insinto /etc/logrotate.d
 		sed -e "s!___MY_SUFFIX___!${MY_SUFFIX}!g" \
 			"${FILESDIR}/logrotate-slot.mysql" \
