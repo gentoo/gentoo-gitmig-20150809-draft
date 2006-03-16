@@ -1,27 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a0d70e8b500205b02758ec3d8d154423 ChangeLog 9213
-MD5 7a82279f793cdd8926569fcc1f2c51e6 files/digest-razor-2.67 68
-MD5 a903c073103cad6f1bccaa20ecdabf1e files/digest-razor-2.71 68
-MD5 26398bc0e13b9e5a931da6f14b3334a6 files/digest-razor-2.72 68
-MD5 12cf44d53c23d3ba61aaf5b525f05f45 files/digest-razor-2.74 69
-MD5 d63c1d9a90360d9f739cae1b3ef25622 files/digest-razor-2.75 69
+MD5 37fd7b82be23b511f9287100fdb8518b ChangeLog 9432
+RMD160 80e45024337e8a0dacbe948f2d693adb654933c2 ChangeLog 9432
+SHA256 dc6b4d06f3fa02a4d88feda5e578f2e9514d6bdbebe167de68e75a0d0c94a3ce ChangeLog 9432
 MD5 e10a413dc2a916a9bb6a2d31b98ce091 files/digest-razor-2.77 69
+RMD160 0c509fa2a79292bd8d2167fccacdc489ed03002b files/digest-razor-2.77 69
+SHA256 3858c9d38e6d70d4aee546f4eee02420b3d7e1ab423a1bbd9cc606d2bd908109 files/digest-razor-2.77 69
 MD5 24dd11756e78f757c2432cc068bf1666 files/digest-razor-2.80 253
+RMD160 ab8b1733d88fd675b8f8a327146aca58e2c9956a files/digest-razor-2.80 253
+SHA256 98989ad771838ab42ff1c6e930b2dffee573f2ec06fb1d12cf0e442be923a1a1 files/digest-razor-2.80 253
+MD5 f7ac38796e3f5650dc2ab995b70751c2 files/digest-razor-2.81 253
+RMD160 f8421f2bbe2d9838ac3389aa0bcb335df97fc548 files/digest-razor-2.81 253
+SHA256 329eec6028972ae50740f95a2dffe82fb2b8fc968ec21879eee355700d3a24d9 files/digest-razor-2.81 253
 MD5 eb86375c84c8a7db9512ca1943fd5a7a files/no-install-razor-agents.patch 292
+RMD160 8ea639c438deb1da6a72339d7585a96132593f50 files/no-install-razor-agents.patch 292
+SHA256 0a333ef827ffb4b6da05c17bf0cfc36a33447466be90d3ec65533f396bbb2a5b files/no-install-razor-agents.patch 292
 MD5 2be3e1984342f154b35258491bff1830 metadata.xml 417
-MD5 a60dc96665f7a9fe31e08ddc7c4bfb65 razor-2.67.ebuild 2743
-MD5 4ac5a3d558956427641f33e8c48d0dfd razor-2.71.ebuild 2866
-MD5 2c256841eeab5e67503a46a02ac71d5a razor-2.72.ebuild 2602
-MD5 492a0825f6b233bc7479ff2fe241404d razor-2.74.ebuild 2739
-MD5 a246f7a14c7c2f39457f87fde25e6557 razor-2.75.ebuild 2606
+RMD160 a5abe18dc7b0720bef3aae926ffd5c2afdc10e4c metadata.xml 417
+SHA256 f0db9dbeb86e5682b3b47b805e6ae29686321ef05e6d1b99b3ddc1a309f17167 metadata.xml 417
 MD5 aa0c6c81bb6375659b888ee454fcfa9c razor-2.77.ebuild 2613
+RMD160 bca787b212a11eae5c13a9d1e4b1cdbb9be430e3 razor-2.77.ebuild 2613
+SHA256 637e5c8f215e0c039228430da4cad23c9331770c4251e5ad310bd49bfbba447d razor-2.77.ebuild 2613
 MD5 d6f38d2ac9b67a87d2cd6f9fb3b82a3f razor-2.80.ebuild 2619
+RMD160 701402befc400c23dbad0ed76420e222a2808ced razor-2.80.ebuild 2619
+SHA256 df6f22b384f632fb99be3cee71bc6f1967b83e4613d5598915a6c03bc4620ed5 razor-2.80.ebuild 2619
+MD5 da99536ac3c1ce5d687807820a093c2f razor-2.81.ebuild 2616
+RMD160 7d202bc365dc38bafb9b1f9c7e8e1ac32f36b8a2 razor-2.81.ebuild 2616
+SHA256 cf334968331bcca8e7f0551b8cf294280c2efd41937fc1f268f73e8f80c2f2e7 razor-2.81.ebuild 2616
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEFhzZKRy60XGEcJIRAqd6AKCkhAbtepqPdjvkfY0jvLjepAisxQCgmXPl
-JsELoM/Bw1tRe+eaLjEk8bM=
-=6PXr
+iD8DBQFEGeTB10xuJSrg3/sRArM1AJ9Ebk3yExI7KfcbeE6Kb4kO/3RvogCfXuYk
+A+iqidCe+StCEEHJBEdL43c=
+=PUqj
 -----END PGP SIGNATURE-----

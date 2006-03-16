@@ -1,37 +1,29 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.71.ebuild,v 1.4 2006/02/13 14:44:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.81.ebuild,v 1.1 2006/03/16 22:20:33 ticho Exp $
 
-inherit perl-app eutils
-IUSE=""
+inherit perl-app
+
 DESCRIPTION="Vipul's Razor is a distributed, collaborative spam detection and filtering network"
 HOMEPAGE="http://razor.sourceforge.net/"
-SRC_URI="mirror://sourceforge/razor/razor-agents-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/razor/razor-agents-${PV}.tar.bz2"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
-S=${WORKDIR}/razor-agents-${PV}
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE=""
 
-RDEPEND="dev-lang/perl
-	dev-perl/Net-DNS
+DEPEND="dev-lang/perl"
+
+RDEPEND="dev-perl/Net-DNS
 	virtual/perl-net-ping
 	virtual/perl-Time-HiRes
 	dev-perl/Digest-SHA1
 	dev-perl/URI
 	dev-perl/Digest-Nilsimsa"
 
-
-src_install() {
-	# epatch ${FILESDIR}/no-install-razor-agents.patch #31365
-	sed -ie 's/(^)\$\(INSTALLSCRIPT\)\/razor-client$/#/' ${S}/Makefile \
-		|| die 'sed failed'
-	perl-module_src_install
-}
+S=${WORKDIR}/razor-agents-${PV}
 
 pkg_postinst() {
-	# insures appropriate symlinks have been created
-	/usr/bin/razor-client
-
 	einfo ""
 	einfo "Run 'razor-admin -create' to create a default config file in your"
 	einfo "home directory under /home/user/.razor. (Remember to change user to"
