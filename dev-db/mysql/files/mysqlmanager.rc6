@@ -1,12 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-slot.rc6-r1,v 1.2 2005/12/08 17:44:12 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysqlmanager.rc6,v 1.1 2006/03/16 20:39:44 vivo Exp $
 
 # external binaryes used: which, sed, tac
 
 depend() {
 	use dns net localmount netmount nfsmount
+	#provide mysql
 }
 
 # int in_list(char * elem, char * list)
@@ -34,14 +35,10 @@ get_slot_config() {
 	MY_SUFFIX="-${srv_slot}"
 	[[ "${MY_SUFFIX}" == '-0' ]] && MY_SUFFIX=''
 
-	basedir="" datadir="" pidfile="" socket=""
-	CHROOT="" NICE="" STARTUPTIMEOUT=5
+	basedir="" pidfile="" socket=""
 
-	local tmp_eval="mysql_slot_${srv_slot}${srv_num:+"_"}${srv_num}[@]"
+	local tmp_eval="mysqlmanager_slot_${srv_slot}${srv_num:+"_"}${srv_num}[@]"
 	local conf_d_parameters="${!tmp_eval}"
-	# collations need to be defined *after* the character sets,
-	#>so we will duplicate them
-	local collations=""
 	[[ ${conf_d_parameters[*]} == '()' ]] && conf_d_parameters=''
 
 	MY_CNF="/etc/mysql${MY_SUFFIX}/my.cnf"
@@ -52,20 +49,10 @@ get_slot_config() {
 	# grab the parameters from conf.d/mysql definition
 	for my_default in ${conf_d_parameters[*]}; do
 		case "${my_default}" in
-			nice=*)
-				NICE="${my_default#nice=}"
-				nice -n $NICE ls /tmp &>/dev/null || NICE=""
-				;;
 			mycnf=*) MY_CNF="${my_default#mycnf=}" ;;
-			startup_timeout=*) 
-				STARTUPTIMEOUT="${my_default#startup_timeout=}"	;;
 			basedir=*) basedir="${my_default#basedir=}" ;;
-			datadir=*) datadir="${my_default#datadir=}" ;;
 			pid-file=*) pidfile="${my_default#pid-file=}" ;;
 			socket=*) socket="${my_default#socket=}" ;;
-			*collation*=)
-				collations="${collations} --$( do_escape "${my_default}" )"
-				;;
 			*=*)
 				# list of parameters we already have
 				# prepend "--" because my_print_defaults do it
@@ -76,7 +63,7 @@ get_slot_config() {
 				;;
 		esac
 	done
-	
+
 	if [[ ! -r "${MY_CNF}" ]]; then
 		ewarn "Cannot access ${MY_CNF} !"
 		MY_CNF=""
@@ -86,11 +73,11 @@ get_slot_config() {
 		if [[ ! -x "${my_print_defaults}" ]]; then
 			eerror "my_print_defaults NOT found or not executable"
 			my_defaults=""
-		else			
+		else
 			my_defaults=$( ${my_print_defaults} \
 				--loose-verbose \
 				--config-file="${MY_CNF}" \
-				mysqld server )
+				manager )
 		fi
 	fi
 
@@ -98,80 +85,47 @@ get_slot_config() {
 	# conf.d mysql
 	for my_default in ${my_defaults}; do
 		case "${my_default}" in
-			--basedir=*)
-				[[ -z "${basedir}" ]] && basedir="${my_default#--basedir=}" ;;
-			--datadir=*)
-				[[ -z "${datadir}" ]] && datadir="${my_default#--datadir=}" ;;
 			--pid-file=*)
 				[[ -z "${pidfile}" ]] && pidfile="${my_default#--pid-file=}" ;;
 			--socket=*)
 				[[ -z "${socket}" ]] && socket="${my_default#--socket=}" ;;
-			--*collation*=)
-				# the order is inversed because we want the conf.d ones override
-				collations="$( do_escape "${my_default}" ) ${collations}"
-				;;
 		esac
 	done
 
 	# still empty, I'm in doubt if assign a default or break, will see
 	basedir="${basedir:-"/usr"}"
-	datadir="${datadir:-"/var/lib/mysql${MY_SUFFIX}"}"
-	pidfile="${pidfile:-"/var/run/mysqld/mysqld${MY_SUFFIX}.pid"}"
-	socket="${socket:-"/var/run/mysqld/mysqld${MY_SUFFIX}.sock"}"
-	unmanagedparams="${unmanagedparams} ${collations}"
+	pidfile="${pidfile:-"/var/run/mysqld/mysqlmanager${MY_SUFFIX}.pid"}"
+	socket="${socket:-"/var/run/mysqld/mysqlmanager${MY_SUFFIX}.sock"}"
 
 	if [[ ${DEBUG} -ge 3 ]] ; then
-		einfo "chroot dir => ${CHROOT}"
-		einfo "niceness   => ${NICE}"
 		einfo "basedir    => ${basedir}"
-		einfo "datadir    => ${datadir}"
 		einfo "pidfile    => ${pidfile}"
 		einfo "socket     => ${socket}"
 		einfo "Unamanged  => ${unmanagedparams}"
 	fi
 
 	# push these out to the script
-	export MY_SUFFIX NICE MY_CNF pidfile datadir basedir socket CHROOT
-	export unmanagedparams STARTUPTIMEOUT
+	export MY_SUFFIX MY_CNF pidfile basedir socket
+	export unmanagedparams
 	[[ ${DEBUG} -ge 4 ]] && einfo "<<< get_slot_config() ok"
-	return 0
-}
-
-checkconfig() {
-	[[ ${DEBUG} -ge 4 ]] && einfo ">>> checkconfig(\"${1}\")"
-	local datadir="$1"
-	if [ ! -d "${datadir}" ]; then
-		eerror "MySQL datadir is empty or invalid"
-		eerror "Please check your my.cnf : ${MY_CNF}"
-		[[ ${DEBUG} -ge 4 ]] && einfo "<<< checkconfig() KO"
-		return 1
-	fi
-
-	if [ ! -d "$datadir/mysql" ]; then
-		eerror "You don't appear to have the mysql database installed yet."
-		eerror "Please run /usr/bin/mysql_install_db to have this done..."
-		[[ ${DEBUG} -ge 4 ]] && einfo "<<< checkconfig() KO"
-		return 1
-	fi
-	[[ ${DEBUG} -ge 4 ]] && einfo "<<< checkconfig() ok"
 	return 0
 }
 
 start() {
 	[[ ${DEBUG} -ge 4 ]] && einfo ">>> start()"
-	MYSQL_GLOB_PID_FILE=${MYSQL_GLOB_PID_FILE:-"/var/run/svc-started-mysqld"}
+	MYSQL_GLOB_PID_FILE=${MYSQL_GLOB_PID_FILE:-"/var/run/svc-started-mysqlmanager"}
 	# servers are defined in /etc/conf.d/mysql
-	local serverlist=${!mysql_slot_*}
+	local serverlist=${!mysqlmanager_slot_*}
 	# provide default for empty conf.d/mysql
 	if [[ -z "${serverlist}" ]] ; then
 		serverlist=0
-		export mysql_slot_0=()
+		export mysqlmanager_slot_0=()
 	fi
 	local retstatus timeout
 	local globretstatus=1
 	local srv_slot srv_num
 	# server MUST NOT share same location for these
-	local pidfilelist=',' datadirlist=',' socketlist=','
+	local pidfilelist=',' socketlist=','
 
 	# additional security
 	rm -f "${MYSQL_GLOB_PID_FILE}" ; touch "${MYSQL_GLOB_PID_FILE}"
@@ -186,7 +140,7 @@ start() {
 	for srv in ${serverlist[*]} ; do
 		einfo "working on ${srv}"
 
-		srv_slot="${srv#mysql_slot_}"
+		srv_slot="${srv#mysqlmanager_slot_}"
 		if [[ "${srv_slot}" == "${srv_slot#*_}" ]] ; then
 			srv_num=''
 		else
@@ -198,18 +152,12 @@ start() {
 		get_slot_config "${srv_slot}" "${srv_num}" || retstatus=1
 
 		# timeout (seconds) before declare failed the startup
-		timeout=${STARTUPTIMEOUT}
 
 		# pre_run checks
-		[[ "$retstatus" -eq 0 ]] && checkconfig "${datadir}" || retstatus=2
 		if [[ "$retstatus" -eq 0 ]] ; then
 			if in_list "${pidfile}" "${pidfilelist}" ; then
 				retstatus=3
 				eerror "Sorry, won't start with same pid-file: ${pidfile}"
-			fi
-			if in_list "${datadir}" "${datadirlist}" ; then
-				retstatus=4
-				eerror "Sorry, won't start with same datadir: ${datadir}"
 			fi
 			if in_list "${socket}" "${socketlist}" ; then
 				retstatus=5
@@ -220,72 +168,54 @@ start() {
 		if [[ $retstatus -eq 0 ]] ; then
 			# additional security
 			rm -f ${pidfile} ${socket}
-			einfo "Starting mysqld${MY_SUFFIX:+"_"}${srv_slot}${srv_num:+"_"}${srv_num} (${MY_CNF})"
+			einfo "Starting mysqlmanager${MY_SUFFIX:+"_"}${srv_slot}${srv_num:+"_"}${srv_num} (${MY_CNF})"
 
-			[[ ${DEBUG} -ge 2 ]] && echo "starting mysqld with: "${basedir}/sbin/mysqld${MY_SUFFIX} ${unmanagedparams} --basedir=${basedir} --datadir=${datadir} --pid-file=${pidfile} --socket=${socket}
+			[[ ${DEBUG} -ge 2 ]] && echo "starting mysqlmanager with: "${basedir}/sbin/mysqlmanager${MY_SUFFIX} ${unmanagedparams} --pid-file=${pidfile} --socket=${socket}
 
 			start-stop-daemon --quiet --start --background \
-				${NICE:+"--nicelevel "}${NICE} \
 				--pidfile "${pidfile}" \
-				--exec ${basedir}/sbin/mysqld${MY_SUFFIX} \
+				--exec ${basedir}/sbin/mysqlmanager${MY_SUFFIX} \
 				-- \
 					${MY_CNF:+"--defaults-file="}${MY_CNF} \
 					${unmanagedparams} \
-					--basedir=${basedir} \
-					--datadir=${datadir} \
 					--pid-file=${pidfile} \
 					--socket=${socket}
 
 			retstatus=$?
 
-			# wait for socket creation
-			[[ ${DEBUG} -ge 1 ]] && echo ""
-			while ! [[ -S "${socket}" || "${timeout}" -lt 1 || "${retstatus}" -ne 0 ]] ; do
-				timeout=$(($timeout - 1))
-				[[ ${DEBUG} -ge 1 ]] && echo -n $(( $STARTUPTIMEOUT - $timeout ))
-				sleep 1
-			done
-			[[ ${DEBUG} -ge 1 ]] && echo ""
-			if [[ ! -S "${socket}" ]] ; then
-				eerror "MySQL${MY_SUFFIX} NOT started (${retstatus})"
-				retstatus=1
-			else
+			if [[ "${retstatus}" -eq 0 ]] ; then
 				pidfilelist="${pidfilelist}${pidfile},"
-				datadirlist="${datadirlist}${datadir},"
 				socketlist="${socketlist}${socket},"
+				globretstatus=0
+				echo "${srv_slot}${srv_num:+"_"}${srv_num}=${pidfile}" >> "${MYSQL_GLOB_PID_FILE}"
 			fi
 		fi
-
-		if [[ $retstatus -eq 0 ]]; then
-			globretstatus=0
-			echo "${srv_slot}${srv_num:+"_"}${srv_num}=${pidfile}" >> "${MYSQL_GLOB_PID_FILE}"
-		fi
 	done
-	# successfull if at least one mysqld started
+	# successfull if at least one mysqlmanager started
 	[[ ${DEBUG} -ge 4 ]] && einfo "<<< start()"
 	eend $globretstatus
 }
 
 stop () {
-	MYSQL_GLOB_PID_FILE=${MYSQL_GLOB_PID_FILE:-"/var/run/svc-started-mysqld"}
+	MYSQL_GLOB_PID_FILE=${MYSQL_GLOB_PID_FILE:-"/var/run/svc-started-mysqlmanager"}
 	local runwhat pidfile shutdown_elem
 	local PID cnt timeout
 	local retstatus=0
-	local shutdown_list="$(tac "${MYSQL_GLOB_PID_FILE}")"
+	local shutdown_list="$(< "${MYSQL_GLOB_PID_FILE}" )"
 
 	# shutdown in reverse order
 	ebegin
 	for shutdown_elem in $shutdown_list; do
 		runwhat=${shutdown_elem%%=*}
 		pidfile=${shutdown_elem#*=}
-		timeout=${STOPTIMEOUT:-"120"}
+		timeout=${STOPTIMEOUT:-"10"}
 
-		einfo "Stopping mysqld (${runwhat})"
+		einfo "Stopping mysqlmanager (${runwhat})"
 
 		PID=$(cat "${pidfile}" 2>/dev/null)
 		start-stop-daemon --stop --quiet --pidfile="${pidfile}"
 		[[ ${DEBUG} -ge 1 ]] && echo ""
-		while ! [[ -n "$PID" || $( kill -0 $PID 2>/dev/null ) || "${timeout}" -lt 1 ]] ; do
+		while [[ -n "$PID" && $( kill -0 $PID 2>/dev/null ) && "${timeout}" -ge 1 ]] ; do
 			timeout=$(($timeout - 1))
 			[[ ${DEBUG} -ge 1 ]] && echo -n $(( $STOPTIMEOUT - $timeout ))
 			sleep 1
