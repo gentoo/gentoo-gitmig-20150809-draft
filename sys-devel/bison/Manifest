@@ -1,23 +1,39 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8496a3351a2fca661aea952ad07888ba ChangeLog 6408
+MD5 bbbbd9c76bfac3c52a1337c635cc6db0 ChangeLog 6497
+RMD160 571d558ca7295608136e4df608655d82beecaf0f ChangeLog 6497
+SHA256 8a344972388017ba6f829029d377dbd648af8b1dacc17b5da5d9cb96e2632bd1 ChangeLog 6497
 MD5 891a59b63cc7cc11c919095f55a38de3 bison-1.875.ebuild 1796
+RMD160 c1e45b6dd3e8b00cd8360105b477cc3b17a2457c bison-1.875.ebuild 1796
+SHA256 bc58b359307667e7efc1843856227d6ad29e536e485ea18b2681824840e4b83d bison-1.875.ebuild 1796
 MD5 8daee23ecbd311833a371ff404cde24a bison-1.875d.ebuild 1791
+RMD160 b5553654327701aef430d2a89c9b3953527f2c54 bison-1.875d.ebuild 1791
+SHA256 5a6b81bb6ae12138d2ac6f09e23fe393402c506cb2fdee10ae6e9cd5bc93b55a bison-1.875d.ebuild 1791
 MD5 2242f1d96824a7a82fcb75e0660f1eb2 bison-2.0.ebuild 1468
-MD5 26a5b830e150ac1e54b0ac55ab8563ce bison-2.1.ebuild 1407
+RMD160 889f8a78e79c353ab7d44beee9d886c0dc6c6a6c bison-2.0.ebuild 1468
+SHA256 12b720f6c3693667fce03a4666c41b8cf67a1a7a9b3b7aa4bf951b10b75e2ad1 bison-2.0.ebuild 1468
+MD5 aaffda29a87349eaf2666fa28d79a465 bison-2.1.ebuild 1402
+RMD160 e301c91306215068a1e6888f1e1563ad79cbaf37 bison-2.1.ebuild 1402
+SHA256 cc6d8ff002bdc3f3b27dbe22e7025881130ac72d251faa05c23ab831c7fb40f3 bison-2.1.ebuild 1402
 MD5 61b224a9eaf1ae7f77c2d1456d8fda87 files/bison-1.32-extfix.patch 1170
+RMD160 41daa5ee80712e419a15233af15efbd174ac1adf files/bison-1.32-extfix.patch 1170
+SHA256 a47285e1b6f1ee53b8def53380068ad6a86ccd09e3338481f6d3d14c7e8b31c4 files/bison-1.32-extfix.patch 1170
 MD5 644a4912da3e5107f509022f173ec146 files/bison-1.875-gccerror.patch 1538
+RMD160 f635120e5ee491a41b7593bf7bd9011abb73413b files/bison-1.875-gccerror.patch 1538
+SHA256 336cf89a430b6e54d206e2aa564455f7a81f5116c063a3f45d0f42b6cedf44af files/bison-1.875-gccerror.patch 1538
 MD5 b0e8983afb264754c539f1eb53116970 files/bison-2.0-token-name-translate.patch 826
+RMD160 5e396bb32a633d5d8047e1ea7893e6322f663bd4 files/bison-2.0-token-name-translate.patch 826
+SHA256 9b9257066e1a80185599b3e871c6f1c44c0247659073ee53f3db49dc16f03c73 files/bison-2.0-token-name-translate.patch 826
 MD5 4a875793f3bd808692002c152e5e26c4 files/digest-bison-1.875 64
+RMD160 0260da00deb56295cd33a23232a61b52cedae796 files/digest-bison-1.875 64
+SHA256 7a87ee7b2909712e48b69bf3a4304e27a9903b4a4d48119dfa1df89598b627d2 files/digest-bison-1.875 64
 MD5 6af3f9859615301181f6a1536aa56fb1 files/digest-bison-1.875d 65
+RMD160 d39019b4f8910b40fd3e9efc2b07218fd078cb0c files/digest-bison-1.875d 65
+SHA256 0deb244adda1556b060e941639187abf002e67f509dfdd731ad31b6056828d4c files/digest-bison-1.875d 65
 MD5 4ac198b61c1a87f5070a32369477eda0 files/digest-bison-2.0 62
+RMD160 f8bb8d829b1e2c381eaadd0b51a0c27db429702f files/digest-bison-2.0 62
+SHA256 53b06127e183a00f4db6eb0b5c897709a0a503caf050f9943de586ed6fa30a72 files/digest-bison-2.0 62
 MD5 de372a3e3ac4588a2322ac386997d8c9 files/digest-bison-2.1 63
+RMD160 0fdd6a5ae0bd05d70728505711fe39759c7148a4 files/digest-bison-2.1 63
+SHA256 af8ed2bf8f0e956ca8261204a0ce67dd7d37e25acc314e65438eeef887218d8f files/digest-bison-2.1 63
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEGZsEKRy60XGEcJIRAoNmAKCjVaZu7o5+7cS17/72jGwMENOBygCdE+Tj
-zDZTTMoK5FCHggXVrYaru3E=
-=BDp+
------END PGP SIGNATURE-----
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
