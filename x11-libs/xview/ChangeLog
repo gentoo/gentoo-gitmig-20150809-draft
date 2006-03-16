@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/xview
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.19 2006/02/19 04:37:06 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.20 2006/03/16 06:24:52 spyderous Exp $
+
+  16 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>; xview-3.2.ebuild,
+  xview-3.2-r1.ebuild, xview-3.2-r3.ebuild, xview-3.2-r5.ebuild:
+  Fix for gcc 4.1. (#120910) Look for imake in the right place, fix by Octavio
+  Ruiz. No rev bump, since both result in compilation failures. Port remaining
+  ebuilds to modular X.
 
 *xview-3.2-r5 (19 Feb 2006)
 
