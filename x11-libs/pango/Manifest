@@ -34,6 +34,9 @@ SHA256 b7590b71869223d7c0ac3952fa4c406601bef7b5927d073bef26a38916938bb8 files/pa
 MD5 40faa11ac45a2600e6b3c7eeec64cc50 files/pango-1.10.2-slighthint.patch 1069
 RMD160 cce55e17f29aff964e25870e7123a892e4b34b30 files/pango-1.10.2-slighthint.patch 1069
 SHA256 6a9b67aec4c2c0d3c9b6e626117ce31e48f4d280f04f6b880bd36005523069f0 files/pango-1.10.2-slighthint.patch 1069
+MD5 b6a4250ddaea4f18ec8d7e05663cce83 files/pango-1.11.3-xfonts.patch 4540
+RMD160 1e0f2ed25a0c461554139f647d004298c5b7cc9c files/pango-1.11.3-xfonts.patch 4540
+SHA256 8c4ac42e9a61eb9d174420b8bdc22e41bab06de758200f2e3a036a5d82282fa8 files/pango-1.11.3-xfonts.patch 4540
 MD5 ee91ace9933dbdbea591e08b6a82bb44 files/pango-1.2.2-slighthint.patch 1124
 RMD160 c5e1d175f8bdf480c85121b94541ea7012919c9a files/pango-1.2.2-slighthint.patch 1124
 SHA256 ab7f65d18a1fde2dd7a941908f5a04c000b8c24d1711303945d5fadd42bf5b14 files/pango-1.2.2-slighthint.patch 1124
