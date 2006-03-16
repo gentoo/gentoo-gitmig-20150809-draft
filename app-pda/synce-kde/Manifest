@@ -1,18 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 27ae103659c81fe4e728d0fdbdbf2b1b synce-kde-0.7.2.ebuild 1180
-MD5 5957c436b8cfd49f06de4f8361b00c0c synce-kde-0.8.0.ebuild 1065
-MD5 abb732abd6ffb5b362d0d02e33f90b3a ChangeLog 1059
-MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
-MD5 ae738e60b77fa6612f9257117488ad5d synce-kde-0.6.1.ebuild 1181
+MD5 3621d08307732848475fa542b340ae9a ChangeLog 1200
+RMD160 138dfab7c5a52c5a193103cbc9fd97383e9f2729 ChangeLog 1200
+SHA256 43f5e27341fabdb3e1dabb6f08cdba0ac918ccc25f40f4c8419aeaa7ad78c504 ChangeLog 1200
 MD5 79536d5a6c86b20bb2307cc315815423 files/digest-synce-kde-0.6.1 129
+RMD160 c07486a2799d2c75c92c090a0974e05956900627 files/digest-synce-kde-0.6.1 129
+SHA256 d3d875c175acda0bc2d8d54af6b220d97d92146a2df7630a6588f6d815521ac7 files/digest-synce-kde-0.6.1 129
 MD5 9c54ff9a25a140c8fa92228da9a38ce7 files/digest-synce-kde-0.7.2 130
+RMD160 aaf7e63d72c0e363aa421caed5cf878d8f10c935 files/digest-synce-kde-0.7.2 130
+SHA256 7174327c160def34f8d36b4f80145fe4444ee4f0ec34b539a6b93ab5de3b54b9 files/digest-synce-kde-0.7.2 130
 MD5 c7b8c316b6386d225bd93a09fbc14da8 files/digest-synce-kde-0.8.0 129
+RMD160 ae33c84a5e1dfb3f90531f88a0f9217f755af3b5 files/digest-synce-kde-0.8.0 129
+SHA256 5b117e5862573bf63d22630d78b344bb02eff2bfe6c3b44713527934456806ac files/digest-synce-kde-0.8.0 129
+MD5 6eddba357334cdee1bc38b11a1b779d2 files/digest-synce-kde-0.9 473
+RMD160 09dac1fb6e97bf8e1a9b5706fe6007ac2d892a8b files/digest-synce-kde-0.9 473
+SHA256 8ccf2ad3d74306ab9d625757aba48d3e47548cdc878801fc3751e42c302d6605 files/digest-synce-kde-0.9 473
+MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
+RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
+SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
+MD5 ae738e60b77fa6612f9257117488ad5d synce-kde-0.6.1.ebuild 1181
+RMD160 9c952cf3c889783b8247d15f84895fa67c73d97b synce-kde-0.6.1.ebuild 1181
+SHA256 60ca5cf34040f705cde0beb69dbeee0f5856e947193cc2db5d62b5a90d5a5006 synce-kde-0.6.1.ebuild 1181
+MD5 27ae103659c81fe4e728d0fdbdbf2b1b synce-kde-0.7.2.ebuild 1180
+RMD160 ba02688787f64d12715f63664e5b2a73c27b4210 synce-kde-0.7.2.ebuild 1180
+SHA256 b54fa6ff7865a477d6ee451b79c066656d15f94d46203498b537413c6503edb2 synce-kde-0.7.2.ebuild 1180
+MD5 5957c436b8cfd49f06de4f8361b00c0c synce-kde-0.8.0.ebuild 1065
+RMD160 91ad84b5e966282aba2b4666db36deb704b1f42d synce-kde-0.8.0.ebuild 1065
+SHA256 6e809689f84b46829369e67d42ca284b009ffb30eeb8dee39f65a662320d9c2e synce-kde-0.8.0.ebuild 1065
+MD5 63260e928a0db616953419dd320a6726 synce-kde-0.9.ebuild 1071
+RMD160 a3b371a7b25acd16dad1eb98724eef2529caa4a6 synce-kde-0.9.ebuild 1071
+SHA256 e400aa9af9889e056be7216b9eee17a86511616503f3202a4a242bac2cb8cbd1 synce-kde-0.9.ebuild 1071
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFCkKaEI1lqEGTUzyQRAllUAKC7rlINJ1iG1bFwNiR3jOHFJmQkmQCfdyEY
-LhsbSesybKQmuRD7zURKhbk=
-=gv7k
+iD8DBQFEGbmiub4+zaPCR/oRAkIZAJ9RTqA/kEh13K9F42YGlN0SvFHinACfbMXF
+8o022hvISeuw/QujLdcHgaU=
+=K3K4
 -----END PGP SIGNATURE-----
