@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gtkgl-sharp
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkgl-sharp/ChangeLog,v 1.8 2005/05/21 15:11:02 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkgl-sharp/ChangeLog,v 1.9 2006/03/16 13:53:15 caleb Exp $
+
+  16 Mar 2006; Caleb Tennis <caleb@gentoo.org> gtkgl-sharp-0.05.ebuild:
+  Remove virtual/x11 as X11 is pulled in by gtk deps
 
   21 May 2005; Simon Stelling <blubb@gentoo.org> gtkgl-sharp-0.05.ebuild:
   added ~amd64 keyword
