@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 726d21ec90b2fe1cea673a7c5f75f5ed ChangeLog 2726
+MD5 2b6c734e8c03256b3f4b74c85f04eb41 ChangeLog 2831
 MD5 8763c1a3870083e63c2003b20eb84298 files/digest-luma-2.1.3 63
 MD5 98b841563f5d9dc42bd6eac0bf82f434 files/digest-luma-2.2.1 63
+MD5 f29b6cd5bd12bfb01eff337ee11019a1 files/digest-luma-2.3 61
 MD5 40e42f291627d87fef600818135a1978 luma-2.1.3.ebuild 1278
 MD5 ed3ebe6e6f992050db0e0b1ffce7e33e luma-2.2.1.ebuild 1128
+MD5 e7a2beb0b6bbf5c199a169eec51d7b30 luma-2.3.ebuild 1122
 MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDVTO+Z/iYVBmujdURAg8bAKDqJD/g6G1UMOiEZBwoqNJW8kl0HgCeK0f3
-MVPHyEuapIIZEX6GwvtBILM=
-=fwGU
------END PGP SIGNATURE-----
