@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r1.ebuild,v 1.2 2005/07/04 07:45:22 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r1.ebuild,v 1.3 2006/03/16 21:11:11 pauldv Exp $
 
 inherit eutils versionator multilib
 
@@ -43,8 +43,13 @@ db_getversym() {
 	local DBVER DBSYMSUFFIX
 	[ -n "${1}" ] && DBVER="${1}" || DBVER="$(db_getver)"
 	DBVER=($(get_version_components "${DBVER}"))
-	let DBSYMSUFFIX=(${DBVER[0]}*1000)+${DBVER[1]}
-	echo "_${DBSYMSUFFIX}"
+	if has_version '>=sys-libs/db-4.3'; then
+		DBSYMSUFFIX=""
+	else
+		let DBSYMSUFFIX=(${DBVER[0]}*1000)+${DBVER[1]}
+		DBSYMSUFFIX=_${DBSYMSUFFIX}
+	fi
+	echo "${DBSYMSUFFIX}"
 }
 
 src_unpack() {
