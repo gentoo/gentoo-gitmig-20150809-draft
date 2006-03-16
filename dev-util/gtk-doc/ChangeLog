@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.60 2006/02/19 16:38:34 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.61 2006/03/16 20:03:52 allanonjl Exp $
+
+*gtk-doc-1.5 (16 Mar 2006)
+
+  16 Mar 2006; John N. Laliberte <allanonjl@gentoo.org> +gtk-doc-1.5.ebuild:
+  new version.
 
   19 Feb 2006; Stephen P. Becker <geoman@gentoo.org> gtk-doc-1.4-r1.ebuild:
   stable on mips
