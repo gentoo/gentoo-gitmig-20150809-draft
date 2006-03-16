@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163-r1.ebuild,v 1.2 2006/03/10 21:45:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163-r1.ebuild,v 1.3 2006/03/16 18:09:13 herbs Exp $
 
-inherit flag-o-matic eutils debug qt3
+inherit flag-o-matic multilib eutils debug qt3
 
 PATCHREV=9163
 MY_PV="${PV%_*}"
@@ -123,10 +123,15 @@ src_unpack() {
 
 	#Fixes of the bugs found in the 0.19 release
 	epatch "${WORKDIR}"/${PN}-${MY_PV}-rev${PATCHREV}.patch
+
+	# Support installing in libdir != lib
+	epatch "${FILESDIR}/mythtv-0.19-libdir.patch"
 }
 
 src_compile() {
-	local myconf="--prefix=/usr --mandir=/usr/share/man"
+	local myconf="--prefix=/usr
+		--mandir=/usr/share/man
+		--libdir-name=$(get_libdir)"
 	use alsa || myconf="${myconf} --disable-audio-alsa"
 	use arts || myconf="${myconf} --disable-audio-arts"
 	use jack || myconf="${myconf} --disable-audio-jack"
