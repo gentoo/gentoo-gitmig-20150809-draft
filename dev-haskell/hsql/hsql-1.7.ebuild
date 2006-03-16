@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/hsql-1.7.ebuild,v 1.7 2006/03/11 21:31:06 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/hsql-1.7.ebuild,v 1.8 2006/03/16 14:14:52 dcoutts Exp $
 
 CABAL_FEATURES="lib haddock"
-inherit base ghc-package haskell-cabal
+inherit base eutils ghc-package haskell-cabal
 
 DESCRIPTION="SQL bindings for Haskell"
 HOMEPAGE="http://htoolkit.sourceforge.net/"

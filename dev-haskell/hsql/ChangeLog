@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hsql
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.7 2006/03/11 21:31:06 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.8 2006/03/16 14:14:52 dcoutts Exp $
+
+  16 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> hsql-1.7.ebuild:
+  QA fix; Add eutils to inherit.
 
   11 Mar 2006; Duncan Coutts <dcoutts@gentoo.org>
   +files/hsql-1.7-sqltext-to-int.patch, hsql-1.7.ebuild:
