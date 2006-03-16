@@ -2,21 +2,39 @@
 Hash: SHA1
 
 MD5 8a33b547a9772a55a6df04888a38e748 ChangeLog 6173
+RMD160 5580695598c0ef44b4c40b40a8670e1ded78c73c ChangeLog 6173
+SHA256 1b1ef32c15d757c2b424a6a8fd1a993bb1f62beb3891c5ad8159e2de91225667 ChangeLog 6173
 MD5 2b8888ea3c1b05e81e1bbf61b1f2b945 diffutils-2.8.4-r4.ebuild 1933
+RMD160 d136104a8f8e9443ad1ba349524c226d49e8b97d diffutils-2.8.4-r4.ebuild 1933
+SHA256 8a835111ea2235645f7870a57584b80620dbb9b8b005a55e12739a4aeb4d7c2b diffutils-2.8.4-r4.ebuild 1933
 MD5 17ec21b61ea607cb1d6ca6d672fa2196 diffutils-2.8.7-r1.ebuild 1696
-MD5 88a4de059e8e49fff9b4aada4824afd7 diffutils-2.8.7.ebuild 1404
+RMD160 95f4c24a00018f3561461c48af3c5578d255521a diffutils-2.8.7-r1.ebuild 1696
+SHA256 b02fc166089af60b6543dbf4f07fdf02f166128531a3e27cddfed633b5fe1394 diffutils-2.8.7-r1.ebuild 1696
 MD5 88eef724512016e5400a58e4057ef235 files/diffutils-2.8.4-Makefile-fix-typeo.patch 1158
+RMD160 499d0a348d642de171f6d63a2bd1fa3a90a4139e files/diffutils-2.8.4-Makefile-fix-typeo.patch 1158
+SHA256 45a55f626b3c5e23a32cd822f4328fb12bf88c70b0c695ee78280afa0e22edae files/diffutils-2.8.4-Makefile-fix-typeo.patch 1158
 MD5 bb27bd30edca169156e905ebe7dab570 files/diffutils-2.8.4-no-manpage.patch 1168
+RMD160 e3b4930d29c0996bdbdd60e3668dc58943ac41bf files/diffutils-2.8.4-no-manpage.patch 1168
+SHA256 4fcb0dcd26652926438c11537c45e8429a61dc36774326966932863d273fbb66 files/diffutils-2.8.4-no-manpage.patch 1168
 MD5 fcb3554acdf9074aad98b90af6cb915d files/diffutils-2.8.4-sdiff-no-waitpid.patch 525
+RMD160 ea9e3ca6220a5f85f35e39e68b31df6060a3cdf4 files/diffutils-2.8.4-sdiff-no-waitpid.patch 525
+SHA256 826a5b92458b88905c8e12ea9ad45fbc842274720b0800fcbd37b3886c6c4765 files/diffutils-2.8.4-sdiff-no-waitpid.patch 525
 MD5 a571ebf3fcef3b033e33a4f013521e13 files/diffutils-2.8.4-tabsize-dumps-core.diff 804
+RMD160 fe8c7f59fcbbaf2b6df328ef4c764ecae8a0a3a3 files/diffutils-2.8.4-tabsize-dumps-core.diff 804
+SHA256 7404734bdcbc9c9741cb9067e0949c8403d23a2750cfbe2034bb849fe0d209a1 files/diffutils-2.8.4-tabsize-dumps-core.diff 804
 MD5 7abb095c2c2ecdbd465a1953cb443289 files/digest-diffutils-2.8.4-r4 67
-MD5 28aba2261ffb7634265a612938df28f5 files/digest-diffutils-2.8.7 68
+RMD160 72cdf369e224d1bb95fb5cf5621332b3ccf74ace files/digest-diffutils-2.8.4-r4 67
+SHA256 ad1092bbbac5dbd31e7502cf4738add45425e7da81d294baa685449561123342 files/digest-diffutils-2.8.4-r4 67
 MD5 d639850d7ddca0f4a6eb5be82a1c42a2 files/digest-diffutils-2.8.7-r1 141
+RMD160 765948b4113010a964c2eaa63a192c248db59165 files/digest-diffutils-2.8.7-r1 141
+SHA256 a33d29b102b76da55c5791ca985ed9143f1e590480726979c9de4f3814971140 files/digest-diffutils-2.8.7-r1 141
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDxIvj2+ySkm8kpY0RAqX4AJ9MGDbREYguWnwzufg3qQ0VNjo/OQCeLRvk
-gjSKmEaWaMAFK/GeeSNwTzg=
-=jrht
+iD8DBQFEGKvJ2+ySkm8kpY0RAuwAAKCFNr6Iw9/0S2koMo3dztUn1HkJIwCdFIy9
+OUNEhJan4UHpxAwzNPLkJgY=
+=RPP/
 -----END PGP SIGNATURE-----
