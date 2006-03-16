@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r1.ebuild,v 1.14 2005/06/27 07:37:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r1.ebuild,v 1.15 2006/03/16 22:20:16 mrness Exp $
 
 inherit eutils
 
@@ -18,11 +18,11 @@ DEPEND="sys-libs/ncurses"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gentoo.diff"
 
 	# Adds 115200 bps support
-	epatch ${FILESDIR}/${P}-add-115200.patch
+	epatch "${FILESDIR}/${P}-add-115200.patch"
 
 	# Fixes the Makefile to use gentoo CFLAGS
 	sed -i \
@@ -32,14 +32,13 @@ src_unpack() {
 }
 
 src_compile() {
-	make WARN="" all prefix=/usr mandir=/usr/share/man || die
-
+	make WARN="" all prefix=/usr mandir=/usr/share/man || die "make failed"
 }
 
 src_install () {
 	dodir /usr/bin /usr/share/man/man1 /usr/lib/xc
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "make install failed"
 
 	insinto /usr/lib/xc
 	doins phonelist xc.init dotfiles/.[a-z]*
