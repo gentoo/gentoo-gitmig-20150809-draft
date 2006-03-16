@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.69 2006/03/10 00:10:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.70 2006/03/16 20:05:52 joem Exp $
+
+*sound-juicer-2.14.0 (16 Mar 2006)
+
+  16 Mar 2006; Joe McCann <joem@gentoo.org> +sound-juicer-2.14.0.ebuild:
+  new release for gnome-2.14. Supports gstreamer-0.10
 
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   sound-juicer-2.12.3.ebuild:
