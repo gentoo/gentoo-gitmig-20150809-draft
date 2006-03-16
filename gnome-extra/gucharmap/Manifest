@@ -1,28 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b57b59bf2021351879be612a56e5017 ChangeLog 6349
-RMD160 f5c67364a2088d1dc81851a23a0148c3d4f4de10 ChangeLog 6349
-SHA256 493f9769aa7a7f6a67abe3124c76a75bedf8b6cac862a51139f46dec4317d6f2 ChangeLog 6349
+MD5 b9470fee8ef1ded9cf9bd4bd7528ae4f ChangeLog 6476
+RMD160 ef2976cf80655dbf78b0c0365d7b23a093f3c9a1 ChangeLog 6476
+SHA256 81b5588d68a970d72a7a5f76777fadb98d66691a63890fb3ec3772be2f83b47e ChangeLog 6476
 MD5 23fe48af93ae1484c05189220173eea0 files/digest-gucharmap-1.4.3 69
 RMD160 c0c05cdf41ff295011778a4fcacf0ebe1923a4b8 files/digest-gucharmap-1.4.3 69
 SHA256 b26418fea37dc00230c43d4068602237a2c81526825d944e363c2bea3c8fe038 files/digest-gucharmap-1.4.3 69
 MD5 0d2a1591221a916c78dda2c4102a6257 files/digest-gucharmap-1.4.4 69
 RMD160 ce8c94d17df562745251ab96b5279e2b56912a17 files/digest-gucharmap-1.4.4 69
 SHA256 accccda4cbfbfe0be51a1522a479a207efd78707737dff5f61fa8090eee45885 files/digest-gucharmap-1.4.4 69
+MD5 79313d0e7c6d6a1bf1d9e55eafbd3b95 files/digest-gucharmap-1.6.0 253
+RMD160 09428c4a24277ba481e27ceb3a12dcc27f9351c3 files/digest-gucharmap-1.6.0 253
+SHA256 93f077e2a31c191dd1f62044e30f5b4c95ed619e9239fa40ce5f4b4a82693edc files/digest-gucharmap-1.6.0 253
 MD5 eec0dd20463a4959321c86d3ee1bf74b gucharmap-1.4.3.ebuild 828
 RMD160 cfcae1ceb643dc0afef5922a209787fddb5011af gucharmap-1.4.3.ebuild 828
 SHA256 f275dc1a7e9d9432dade6295cb22de48913097df20d86641105bc26e31eb4282 gucharmap-1.4.3.ebuild 828
 MD5 e7b6462d10fc1842da212b15559ab445 gucharmap-1.4.4.ebuild 922
 RMD160 86dc414082e3875fb35eb0781063e067605fa47d gucharmap-1.4.4.ebuild 922
 SHA256 2dea3134487a905b24aa2b2629eb015833371b2a2c413b2ad16ac022dcbcef20 gucharmap-1.4.4.ebuild 922
+MD5 331ff099e347b929545df4d03719d5c8 gucharmap-1.6.0.ebuild 1099
+RMD160 833f7e34059210f7643ed68b8b38f9f1ff27e5f5 gucharmap-1.6.0.ebuild 1099
+SHA256 c8571d5671695a2b9237539109393dc1cec955e2cea88fecff530ded68639586 gucharmap-1.6.0.ebuild 1099
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD49c8JrHF4yAQTrARAnBAAJ0aRNWzQv0nS+ON9SutuYM9gtDgYQCgqYao
-4cDiLvMd2cm+x5A8mh3xVvY=
-=GYmY
------END PGP SIGNATURE-----
