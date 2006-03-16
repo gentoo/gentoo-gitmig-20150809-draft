@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-1.2.1.2.ebuild,v 1.2 2006/02/23 22:36:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-1.2.1.2.ebuild,v 1.3 2006/03/16 23:25:02 tupone Exp $
 
 inherit eutils games
 
@@ -83,19 +83,17 @@ src_install() {
 	doins -r techs data maps tilesets || die "data copy failed"
 	dodoc readme.txt
 
+	cd ..
 	if use linguas_cs ; then
-		unpack cesky_${PV:0:5}.zip
-		cp cesky_${PV:0:5}.lng "${D}/${GAMES_DATADIR}"/${PN}/data/lang/ \
+		cp cesky.lng "${D}/${GAMES_DATADIR}"/${PN}/data/lang/ \
 			|| die "cp failed"
 	fi
 	if use linguas_he ; then
-		unpack hebrew_${PV:0:5}.zip
-		cp hebrew_${PV:0:5}.lng "${D}/${GAMES_DATADIR}"/${PN}/data/lang/ \
+		cp hebrew.lng "${D}/${GAMES_DATADIR}"/${PN}/data/lang/ \
 			|| die "cp failed"
 	fi
 	if use linguas_sk ; then
-		unpack slovak_${PV:0:5}.zip
-		cp slovak_${PV:0:5}.lng "${D}/${GAMES_DATADIR}"/${PN}/data/lang/ \
+		cp slovak.lng "${D}/${GAMES_DATADIR}"/${PN}/data/lang/ \
 			|| die "cp failed"
 	fi
 
