@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.40.ebuild,v 1.17 2005/04/22 09:19:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.40.ebuild,v 1.18 2006/03/16 14:02:08 caleb Exp $
 
 MY_PV=${PV/./}
 SRC_URI="http://www.cs.arizona.edu/icon/ftp/packages/unix/icon.v${MY_PV}src.tgz"
@@ -14,7 +14,9 @@ IUSE="X"
 
 S=${WORKDIR}/icon.v${MY_PV}src
 
-DEPEND="X? ( virtual/x11 )
+DEPEND="X? ( || (
+		( x11-libs/libX11 x11-libs/libXpm )
+	virtual/x11 ) )
 	sys-devel/gcc"
 
 src_unpack() {
