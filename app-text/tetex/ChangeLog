@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.116 2006/03/02 09:52:07 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.117 2006/03/16 12:22:42 ehmsen Exp $
+
+  16 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  +files/tetex-3.0_p1-pdftosrc-install.patch, tetex-3.0_p1-r2.ebuild:
+  Added pdftosrc binary and man page, bug #94860.
 
   02 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org> tetex-2.0.2-r8.ebuild,
   tetex-2.0.2-r9.ebuild:

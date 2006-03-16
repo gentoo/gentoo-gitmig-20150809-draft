@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r2.ebuild,v 1.3 2006/02/28 12:25:59 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r2.ebuild,v 1.4 2006/03/16 12:22:42 ehmsen Exp $
 
 inherit tetex-3 flag-o-matic versionator virtualx
 
@@ -43,6 +43,9 @@ src_unpack() {
 
 	#bug 115775
 	epatch ${FILESDIR}/${P}-xpdf-vulnerabilities.patch
+
+	# bug 94860
+	epatch ${FILESDIR}/${P}-pdftosrc-install.patch
 }
 
 src_compile() {
@@ -61,6 +64,9 @@ src_test() {
 src_install() {
 	insinto /usr/share/texmf/dvips/pstricks
 	doins ${FILESDIR}/pst-circ.pro
+
+	# install pdftosrc man page, bug 94860
+	doman ${S}/texk/web2c/pdftexdir/pdftosrc.1
 
 	tetex-3_src_install
 
