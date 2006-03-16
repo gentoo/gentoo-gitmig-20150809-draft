@@ -1,0 +1,30 @@
+diff -u -ruN totem-1.3.0.orig/configure.in totem-1.3.0/configure.in
+--- totem-1.3.0.orig/configure.in	2005-12-18 08:43:33.000000000 -0500
++++ totem-1.3.0/configure.in	2006-01-05 12:48:42.000000000 -0500
+@@ -236,7 +236,7 @@
+ 	AC_ARG_WITH([mozilla],
+ 		AS_HELP_STRING([--with-mozilla],[Which gecko engine to use (default: autodetect)]))
+ 
+-	GECKOS="firefox mozilla-firefox seamonkey mozilla xulrunner"
++	GECKOS="gecko-sdk firefox mozilla-firefox seamonkey mozilla xulrunner"
+ 	gecko=$with_mozilla
+ 
+ 	if test "x$gecko" = "x"; then
+@@ -266,6 +266,7 @@
+ 	AC_MSG_RESULT([$gecko])
+ 
+ 	case "$gecko" in
++		gecko-sdk) MOZILLA_VERSION_MIN=1.7 ;;
+ 		mozilla) MOZILLA_VERSION_MIN=1.7 ;;
+ 		seamonkey) MOZILLA_VERSION_MIN=1.0 ;;
+ 		*firefox) MOZILLA_VERSION_MIN=1.0 ;;
+@@ -310,7 +311,8 @@
+ 	MOZILLA_XPCOM_CFLAGS="-I`$PKG_CONFIG --variable=includedir $MOZILLA-xpcom`"
+ 	MOZILLA_PLUGINDIR="${MOZILLA_PLUGINDIR:-$MOZILLA_LIBDIR}"
+ 
+-	AC_PATH_PROG([MOZILLA_XPIDL], [xpidl], [no], [$MOZILLA_LIBDIR:$PATH])
++	AC_PATH_PROG([MOZILLA_XPIDL], [xpidl], [no],
++		[$MOZILLA_LIBDIR:$MOZILLA_LIBDIR/../bin:$PATH])
+ 	if test "x$MOZILLA_XPIDL" = "xno"; then
+ 		ENABLE_MOZILLA=no
+ 		AC_MSG_WARN([xpidl compiler not found])
