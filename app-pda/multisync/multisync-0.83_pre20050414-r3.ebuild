@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r3.ebuild,v 1.2 2006/02/09 17:07:38 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r3.ebuild,v 1.3 2006/03/16 17:40:27 sekretarz Exp $
 
-inherit versionator kde-functions
+inherit versionator kde-functions eutils
 
 CVS_VERSION="${PV/*_pre/}"
 S=${WORKDIR}/${PN}
@@ -13,7 +13,7 @@ HOMEPAGE="http://multisync.sourceforge.net/"
 SRC_URI="mirror://gentoo/${PN}-${CVS_VERSION}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="evo irmc nokia6600 ldap bluetooth pda kdepim arts kdeenablefinal"
 # evo       - evolution plugin
 # irmc      - bluetooth/irmc/irda plugin ( local )
@@ -43,6 +43,13 @@ DEPEND=">=gnome-base/libbonobo-2.2
 		ldap? ( >=net-nds/openldap-2.0.27
 				>=dev-libs/cyrus-sasl-2.1.4 )
 		nokia6600? ( >=dev-libs/libwbxml-0.9.0 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${PN}-gcc4.patch
+}
 
 make_plugin_list() {
 	local evoversion

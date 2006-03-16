@@ -1,0 +1,88 @@
+--- multisync/plugins/ldap_plugin/src/xml.c	2003-12-02 09:36:28.000000000 +1000
++++ multisync.wade/plugins/ldap_plugin/src/xml.c	2005-05-10 23:34:02.000000000 +1000
+@@ -55,7 +55,7 @@
+ 	}
+ 
+ 	while (cur != NULL) {
+-		xmlstr = xmlNodeListGetString(doc, cur->xmlChildrenNode, 1);
++		xmlstr =  ( char * ) xmlNodeListGetString( doc,  cur->xmlChildrenNode, 1);
+ 
+ 		if ((!xmlStrcmp(cur->name, (const xmlChar *)"serverport"))) {
+ 			conn->serverport = atoi(xmlstr);
+@@ -130,8 +130,8 @@
+ 	char port[256], debuglevel[256], scope[256], encryption[256], write[256], anonymous[256];
+ 	ldap_debug(conn, 2, "Saving state to file %s", conn->statefile);
+ 
+-	doc = xmlNewDoc("1.0");
+-	doc->children = xmlNewDocNode(doc, NULL, "config", NULL);
++	doc = xmlNewDoc( (const xmlChar *) "1.0");
++	doc->children = xmlNewDocNode(doc, NULL,  (const xmlChar *) "config", NULL);
+ 
+ 	snprintf(port, 256, "%i", conn->serverport);
+ 	snprintf(debuglevel, 256, "%i", conn->debug_level);
+@@ -140,18 +140,18 @@
+ 	snprintf(write, 256, "%i", conn->write);
+ 	snprintf(anonymous, 256, "%i", conn->anonymous);
+ 
+-	xmlNewChild(doc->children, NULL, "servername", conn->servername);
+-	xmlNewChild(doc->children, NULL, "serverport", port);
+-	xmlNewChild(doc->children, NULL, "binddn", conn->binddn);
+-	xmlNewChild(doc->children, NULL, "pwd", conn->pwd);
+-	xmlNewChild(doc->children, NULL, "searchbase", conn->searchbase);
+-	xmlNewChild(doc->children, NULL, "filter", conn->filter);
+-	xmlNewChild(doc->children, NULL, "scope", scope);
+-	xmlNewChild(doc->children, NULL, "debuglevel", debuglevel);
+-	xmlNewChild(doc->children, NULL, "authmech", conn->authmech);
+-	xmlNewChild(doc->children, NULL, "encryption", encryption);
+-	xmlNewChild(doc->children, NULL, "write", write);
+-	xmlNewChild(doc->children, NULL, "anonymous", anonymous);
++	xmlNewChild(doc->children, NULL,  (const xmlChar *) "servername",  	(const xmlChar *) conn->servername);
++	xmlNewChild(doc->children, NULL,  (const xmlChar *) "serverport",   	(const xmlChar *) port);
++	xmlNewChild(doc->children, NULL,  (const xmlChar *) "binddn",   	(const xmlChar *) conn->binddn);
++	xmlNewChild(doc->children, NULL,  (const xmlChar *) "pwd",  		(const xmlChar *) conn->pwd);
++	xmlNewChild(doc->children, NULL,  (const xmlChar *) "searchbase",  	(const xmlChar *) conn->searchbase);
++	xmlNewChild(doc->children, NULL,  (const xmlChar *) "filter",  		(const xmlChar *) conn->filter);
++	xmlNewChild(doc->children, NULL,  (const xmlChar *) "scope",  		(const xmlChar *) scope);
++	xmlNewChild(doc->children, NULL,  (const xmlChar *) "debuglevel",  	(const xmlChar *) debuglevel);
++	xmlNewChild(doc->children, NULL,  (const xmlChar *) "authmech",  	(const xmlChar *) conn->authmech);
++	xmlNewChild(doc->children, NULL,  (const xmlChar *) "encryption",  	(const xmlChar *) encryption);
++	xmlNewChild(doc->children, NULL,  (const xmlChar *) "write",  		(const xmlChar *) write);
++	xmlNewChild(doc->children, NULL,  (const xmlChar *) "anonymous",  	(const xmlChar *) anonymous);
+ 
+ 	xmlSaveFile(conn->statefile, doc);
+ 	xmlFreeDoc(doc);
+@@ -180,10 +180,10 @@
+ 
+ 		while (child) {
+ 			if ((!xmlStrcmp(child->name, (const xmlChar *)"modifyTimestamp"))) {
+-				entry->modifyTimestamp = xmlNodeListGetString(doc, child->xmlChildrenNode, 1);
++				entry->modifyTimestamp = (char *) xmlNodeListGetString( doc, child->xmlChildrenNode, 1);
+ 			}
+ 			if ((!xmlStrcmp(child->name, (const xmlChar *)"uid"))) {
+-				entry->uid = xmlNodeListGetString(doc, child->xmlChildrenNode, 1);
++				entry->uid = (char *) xmlNodeListGetString(doc, child->xmlChildrenNode, 1);
+ 			}
+ 
+ 			child = child->next;
+@@ -282,16 +282,16 @@
+ 
+ 	ldap_debug(conn, 2, "Saving head data to file %s", conn->dbfile);
+ 
+-	doc = xmlNewDoc("1.0");
+-	doc->children = xmlNewDocNode(doc, NULL, "ldap_entries", NULL);
++	doc = xmlNewDoc( (const xmlChar *) "1.0");
++	doc->children = xmlNewDocNode(doc, NULL,  (const xmlChar *) "ldap_entries", NULL);
+ 
+ 	while (ldaplist) {
+ 		entry = ((struct data_entry *)(ldaplist->data));
+ 		ldap_debug(conn, 3, "Saving entry: ModTs: %s, uid: %s", entry->modifyTimestamp, entry->uid);
+ 
+-		child = xmlNewChild(doc->children, NULL, "ldapentry", NULL);
+-		xmlNewChild(child, NULL, "modifyTimestamp", entry->modifyTimestamp);
+-		xmlNewChild(child, NULL, "uid", entry->uid);
++		child = xmlNewChild(doc->children, NULL,  (const xmlChar *)  "ldapentry", NULL);
++		xmlNewChild(child, NULL,  (const xmlChar *)  "modifyTimestamp",  (const xmlChar *) entry->modifyTimestamp);
++		xmlNewChild(child, NULL,  (const xmlChar *)  "uid",  (const xmlChar *)  entry->uid);
+ 
+ 		ldaplist = ldaplist->next;
+ 	}
