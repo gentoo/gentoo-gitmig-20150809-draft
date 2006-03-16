@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/wml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.22 2006/03/15 02:43:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.23 2006/03/16 23:04:24 flameeyes Exp $
+
+  16 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/wml-2.0.9-autotools-update.patch:
+  Revert patch changed by mistake.
 
   15 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   files/wml-2.0.9-autotools-update.patch, +files/wml-2.0.9-gcc41.patch,

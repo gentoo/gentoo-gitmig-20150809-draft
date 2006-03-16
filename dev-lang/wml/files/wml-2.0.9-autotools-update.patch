@@ -1,8 +1,6 @@
 Use system libpcre and make iselect not blow up
 
-Index: wml_backend/p2_mp4h/Makefile.am
-===================================================================
---- wml_backend/p2_mp4h/Makefile.am.orig
+--- wml_backend/p2_mp4h/Makefile.am
 +++ wml_backend/p2_mp4h/Makefile.am
 @@ -1,15 +1,15 @@
  
@@ -24,9 +22,7 @@ Index: wml_backend/p2_mp4h/Makefile.am
  
  deb:
  	if test -f ../mp4h_$(VERSION).orig.tar.gz; then \
-Index: wml_backend/p2_mp4h/configure.ac
-===================================================================
---- wml_backend/p2_mp4h/configure.ac.orig
+--- wml_backend/p2_mp4h/configure.ac
 +++ wml_backend/p2_mp4h/configure.ac
 @@ -179,7 +179,6 @@ AC_SUBST(CFLAGS)
  AC_CONFIG_FILES([
@@ -36,9 +32,7 @@ Index: wml_backend/p2_mp4h/configure.ac
     lib/Makefile
     src/Makefile
     po/Makefile.in
-Index: wml_backend/p2_mp4h/src/Makefile.am
-===================================================================
---- wml_backend/p2_mp4h/src/Makefile.am.orig
+--- wml_backend/p2_mp4h/src/Makefile.am
 +++ wml_backend/p2_mp4h/src/Makefile.am
 @@ -1,5 +1,5 @@
  
@@ -56,19 +50,17 @@ Index: wml_backend/p2_mp4h/src/Makefile.am
  
  include_HEADERS = mp4h.h
  noinst_HEADERS  = builtin.h ltdl.h
-Index: wml_aux/iselect/configure.in
-===================================================================
---- wml_aux/iselect/configure.in.orig
+--- wml_aux/iselect/configure.in
 +++ wml_aux/iselect/configure.in
-@@ -3,6 +3,7 @@ dnl ##  configure.in -- GNU autoconf con
+@@ -3,6 +3,7 @@
  dnl ##  Copyright (c) Ralf S. Engelschall, <rse@engelschall.com>
  dnl ##
  
 +AC_INIT(README)
  AC_PREREQ(2.10)dnl
- AC_REVISION($Revision: 1.2 $)
+ AC_REVISION($Revision: 1.3 $)
  SHTOOL="./etc/shtool"
-@@ -11,7 +12,6 @@ T_ME=`$SHTOOL echo -e %b 2>/dev/null`
+@@ -11,7 +12,6 @@
  echo "${T_MD}Configuring for iSelect `./etc/shtool version -l c -d long iselect_version.c`${T_ME}"
  echo "Copyright (c) 1996-1999 Ralf S. Engelschall, All Rights Reserved."
  
@@ -76,11 +68,9 @@ Index: wml_aux/iselect/configure.in
  AC_CONFIG_HEADER(config_ac.h)dnl
  AC_PREFIX_DEFAULT(/usr/local)
  
-Index: wml_aux/iselect/aclocal.m4
-===================================================================
---- wml_aux/iselect/aclocal.m4.orig
+--- wml_aux/iselect/aclocal.m4
 +++ wml_aux/iselect/aclocal.m4
-@@ -186,24 +186,6 @@ dnl ##  taken from shar-4.0's aclocal.m4
+@@ -186,24 +186,6 @@
  dnl ##
  dnl ##########################################################
  dnl
@@ -105,18 +95,3 @@ Index: wml_aux/iselect/aclocal.m4
  dnl
  dnl
  dnl ##########################################################
-Index: wml_backend/p3_eperl/configure.in
-===================================================================
---- wml_backend/p3_eperl/configure.in.orig
-+++ wml_backend/p3_eperl/configure.in
-@@ -9,9 +9,8 @@ dnl #
- dnl #   standard autoconf prolog
- dnl #
- 
--AC_PREREQ(2.10)dnl
- AC_REVISION($Revision: 1.2 $)
--AC_INIT(README)
-+AC_INIT
- AC_CONFIG_HEADER(config_ac.h)dnl
- AC_PREFIX_DEFAULT(/usr/local)
- 
