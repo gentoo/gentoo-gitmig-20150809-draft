@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3-r2.ebuild,v 1.3 2006/01/27 12:23:03 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3-r2.ebuild,v 1.4 2006/03/16 18:51:38 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module
 
@@ -266,7 +266,7 @@ pkg_postinst() {
 	einfo "svnadmin (see man svnadmin) or the following command to create it in"
 	einfo "/var/svn:"
 	einfo
-	einfo "    ebuild /path/to/ebuild/${PF}.ebuild config"
+	einfo "    emerge --config =${CATEGORY}/${PF}"
 	einfo
 	einfo "If you upgraded from an older version of berkely db and experience"
 	einfo "problems with your repository then run the following commands as root:"
