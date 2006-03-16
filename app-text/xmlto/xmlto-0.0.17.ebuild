@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.17.ebuild,v 1.15 2006/01/05 13:51:08 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.17.ebuild,v 1.16 2006/03/16 12:59:54 ehmsen Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="app-shells/bash
 	>=app-text/docbook-xsl-stylesheets-1.62.0-r1
 	~app-text/docbook-xml-dtd-4.2
 	sys-apps/util-linux"
-RDEPEND="${DEPEND}"
+
 #	tetex? ( >=app-text/passivetex-1.4 )"
 # Passivetex/xmltex need some sorting out <obz@gentoo.org>
 
