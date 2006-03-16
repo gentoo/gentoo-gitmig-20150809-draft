@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.53 2006/03/15 00:00:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.54 2006/03/16 03:38:50 vapier Exp $
 
 cd /
 
@@ -111,8 +111,7 @@ parse_target() {
 		      TARCH=${HARCH};
 		      BPKG="binutils-bfin";
 		      GPKG="gcc-bfin";
-		      LPKG="uclibc";
-		      STAGE=${STAGE_C_KERNEL};;
+		      LPKG="uclibc";;
 
 		cris*)
 		      TARCH=${HARCH};
@@ -126,8 +125,10 @@ parse_target() {
 		      TARCH=${HARCH};
 		      BPKG="binutils-nios2";
 		      GPKG="gcc-nios2";
-		      LPKG="uclibc";
-		      STAGE=${STAGE_C_KERNEL};;
+		      LPKG="uclibc";;
+
+		vax*) TARCH=${HARCH};
+		      LPKG="uclibc";;
 
 		ps2*) einfo "The ps2 target is really an alias for the ee/iop/dvp targets"
 		      ${CROSSDEV} -t ee  || exit 1
@@ -449,7 +450,12 @@ set_links() {
 	local cat=$1 pkg=$2
 	[[ -e ${PORTDIR_OVERLAY}/cross-${CTARGET}/${pkg} ]] \
 		&& rm -f "${PORTDIR_OVERLAY}"/cross-${CTARGET}/${pkg}
-	ln -s "${PORTDIR}"/${cat}/${pkg} "${PORTDIR_OVERLAY}"/cross-${CTARGET}/${pkg}
+	local srcdir=${PORTDIR}
+	if [[ -e ${PORTDIR_OVERLAY}/${cat}/${pkg} ]] ; then
+		einfo "Using ${cat}/${pkg} from ${PORTDIR_OVERLAY} instead of ${PORTDIR}"
+		srcdir=${PORTDIR_OVERLAY}
+	fi
+	ln -s "${srcdir}"/${cat}/${pkg} "${PORTDIR_OVERLAY}"/cross-${CTARGET}/${pkg}
 }
 set_portage() {
 	local cat=$1 pkg=$2 ver=$3
