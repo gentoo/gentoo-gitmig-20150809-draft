@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.61.ebuild,v 1.3 2006/03/15 01:36:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.61.ebuild,v 1.4 2006/03/16 06:43:23 cardoe Exp $
 
 inherit eutils mono python multilib debug qt3 autotools
 
@@ -41,10 +41,19 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.60-qt-pc.patch
 
 	# Fix GLIB Declaration for ANSI C
-	epatch ${FILESDIR}/${PN}-0.60-decls-ansi-c.patch
+	epatch "${FILESDIR}"/${PN}-0.60-decls-ansi-c.patch
 
 	#fix mono-tools depend
-	epatch ${FILESDIR}/${PN}-0.61-mono-tools-update.diff
+	epatch "${FILESDIR}"/${PN}-0.61-mono-tools-update.diff
+
+	#fix qt4 disabling
+	epatch "${FILESDIR}"/${PN}-0.61-qt-disabling.patch
+
+	#fix Trolltech's Makefile blunder
+	epatch "${FILESDIR}"/${PN}-0.61-i-hate-qt-so-much.patch
+
+	#fix libxml dep
+	epatch "${FILESDIR}"/${PN}-0.61-libxml-dep.patch
 
 	eautoreconf
 }
@@ -56,9 +65,9 @@ src_compile() {
 	use mono && myconf="${myconf} $(use_enable doc mono-docs)"
 
 	if use qt; then
-		myconf="${myconf} --enable-qt3=${QTDIR} QT_MOC=/usr/bin/moc --with-qt3-moc=${QTDIR}/bin/moc --disable-qt"
+		myconf="${myconf} --enable-qt3=${QTDIR} --with-qt-moc=/usr/bin/moc --with-qt3-moc=${QTDIR}/bin/moc --disable-qt"
 	else
-		myconf="${myconf} --disable-qt --disable-qt3"
+		myconf="${myconf} --disable-qt --disable-qt3 --without-qt-moc --without-qt3-moc"
 	fi
 
 	econf \

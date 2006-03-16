@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a7ab8c1a2ab856d93e01d7f849d29ae3 ChangeLog 15306
-RMD160 4cc99c3fdff46b3e5f6d31a76c0b784cbaaa54af ChangeLog 15306
-SHA256 70f3509f9a914b42e227bd6c38f25a28269ed7a031eab9c1c5b8bbf4214d0c57 ChangeLog 15306
+MD5 a600e7dac9ee9224f154bba12600400e ChangeLog 15543
+RMD160 7fcadd20f2e2903b941f27382e6330cab8096e02 ChangeLog 15543
+SHA256 ae2a28cbb8f4684669cbcd66cb86da7db249ee655f08254912bd3c0124eafba0 ChangeLog 15543
 MD5 80bd8d05a4478ae3d83d952d19e928ac dbus-0.23.4-r1.ebuild 3647
 RMD160 ca03ac02fddf891a097814dac744774d2aaa3267 dbus-0.23.4-r1.ebuild 3647
 SHA256 d08b90313aab10d5a71e7e0858e3548983cb2dfc4bd7317dfb99a57c2a0faad0 dbus-0.23.4-r1.ebuild 3647
@@ -19,9 +16,9 @@ SHA256 7cb5970a6e0cd9f63b737fa544618e48a451d0664b4d1d6568e8a4f84f9e4925 dbus-0.6
 MD5 c002c05d2aaf3510f3f13c68b500ea26 dbus-0.60-r4.ebuild 4625
 RMD160 3add3d3700d3f42b90d89053181451f38b80d1a1 dbus-0.60-r4.ebuild 4625
 SHA256 4b9ab333b66e1cfdcb15dc20f6df9e72528942d7b83c1551a40cf23003ac2d4e dbus-0.60-r4.ebuild 4625
-MD5 9590cd2be7a9bc7fa7259765e651ae3f dbus-0.61.ebuild 3718
-RMD160 737fceccf05a3498ca344b07a91251998a04cd8e dbus-0.61.ebuild 3718
-SHA256 4be21ba6247d55227b64aa0a384a19814a65af00f2d9151a45b49124bd5f4bb6 dbus-0.61.ebuild 3718
+MD5 783e674e9642fb13381a8f98de6cee52 dbus-0.61.ebuild 3998
+RMD160 8729028e40c215820ac1a36d63c8fab1a0e54115 dbus-0.61.ebuild 3998
+SHA256 6a783ebf6be369e4657d76ebdb57bfb04d77a71396b37aa4c3d9606480e38541 dbus-0.61.ebuild 3998
 MD5 d14e59575f04e55d21a04907b6fd9f3c files/30-dbus 243
 RMD160 b5e7a813cd5d91f2ea60bb22260e432cbfb72fd9 files/30-dbus 243
 SHA256 a8e8fec9769cc5d46df8216f7d1e1f9df422c4e46f293fd70d4b017fb01d959d files/30-dbus 243
@@ -70,9 +67,18 @@ SHA256 2493ebd9ea7b91eebb2d828efda70c08b087c3801e87eb077acb7cd0b2764766 files/db
 MD5 f1d9631e7b682986d77feccb080e46a4 files/dbus-0.60-qt.patch 453
 RMD160 d38dc02aefb3518900ff7140a47895c2a381e492 files/dbus-0.60-qt.patch 453
 SHA256 bdf3bbcba84a3c21e35785fbdf907ac501ec3bc3fe23e2d8ae94181dddff007a files/dbus-0.60-qt.patch 453
+MD5 6b633200fafa12b01d81713ce5e06248 files/dbus-0.61-i-hate-qt-so-much.patch 529
+RMD160 9ffd92cce17f43f3ebfe20193a2b1f56c8418ece files/dbus-0.61-i-hate-qt-so-much.patch 529
+SHA256 92576bc74a73816e23eb03c5a87d3057c18163d5f692bb7b77767290c6777676 files/dbus-0.61-i-hate-qt-so-much.patch 529
+MD5 73ce00ee8f58f2d40986041cbb361ec7 files/dbus-0.61-libxml-dep.patch 601
+RMD160 801e7293f16105e8a44f44c07e5b36b58e04c56a files/dbus-0.61-libxml-dep.patch 601
+SHA256 b395e206bffdce94ef61c7e5d037fb7eb74dba55ad1ab5aa04cbac69bd060d20 files/dbus-0.61-libxml-dep.patch 601
 MD5 95307718b51a47245f0aebcee2dc0467 files/dbus-0.61-mono-tools-update.diff 3628
 RMD160 b879be64e95be1d80bb97d9bc79bcdca9f42a06f files/dbus-0.61-mono-tools-update.diff 3628
 SHA256 47dcfafeff7ce3026797a0ff40cc32f1ca6453aa679c6d9548b0383c7ca18404 files/dbus-0.61-mono-tools-update.diff 3628
+MD5 1d1c73d8eea0a6f4ffe70c8091409ad0 files/dbus-0.61-qt-disabling.patch 501
+RMD160 a7c1af95cc8dd455387eefad00fa90d86015bbda files/dbus-0.61-qt-disabling.patch 501
+SHA256 acfd9f175223cb2679d37b941cae9d54adbd494be3c0f4f7be7e004c0bd02a20 files/dbus-0.61-qt-disabling.patch 501
 MD5 4fd89997ba6101161202f761bb666167 files/dbus-dnotify_configure-01.diff 2197
 RMD160 7059f7b8bbad594567e364555bac550ecc203da4 files/dbus-dnotify_configure-01.diff 2197
 SHA256 e94b5c4a45791fc90a97f07bcbc1c16a50a633a0633e34bf9180533792564645 files/dbus-dnotify_configure-01.diff 2197
@@ -103,10 +109,3 @@ SHA256 8ee10bf68b294a8eef518926360a7b538fa9dda198e47b1d9f6367b6de0cdbcd files/di
 MD5 d854e952b3179d33b2ece377ce9980f3 metadata.xml 222
 RMD160 cd880923dd3bbe29d863c21fdcc56700006a2bcc metadata.xml 222
 SHA256 3b1bdb4611693b7a059584a994f3760dce2f37a048d4c2c55c1756e17519e1cf metadata.xml 222
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEF2/YBtvusYtCZMsRApynAJ9ks64OSxVre8WaEMgnXjiIqH7TswCdHP5F
-CXfO07yoQyYzRBapcFMuM6E=
-=BBU+
------END PGP SIGNATURE-----
