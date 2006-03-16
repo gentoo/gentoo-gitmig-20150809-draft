@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03ef551e8c808ed3ed880625f8cb3105 ChangeLog 1625
 RMD160 a7572b7f36c3cb3b45350b3b8b63f27d591a9793 ChangeLog 1625
 SHA256 f7f510dba67068d9eb933e49274d0c4e49f7f0a4defd9e9b12358cf9d172712e ChangeLog 1625
@@ -28,3 +31,10 @@ SHA256 7cdd3e2cabe74cf9e0753b44bcb5aaf73226bfa20ea47001e6f88b9f5c7970c8 synce-tr
 MD5 345bcb7cab735fc27c5906f781545022 synce-trayicon-0.9.0.ebuild 790
 RMD160 7a9a030ac64d04e7fe6a2f7dafecb0d388ee143e synce-trayicon-0.9.0.ebuild 790
 SHA256 18695f61999da80712f7d87751b2db70711e79bf857b7847d5f3f424c959ec3e synce-trayicon-0.9.0.ebuild 790
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEGbuXub4+zaPCR/oRAmn6AJ4lr9T4TUQZIqjPib8RqSj8qNGnrQCfe+VL
+YojSJuEz4g9/BmVcZFir2ws=
+=evvA
+-----END PGP SIGNATURE-----

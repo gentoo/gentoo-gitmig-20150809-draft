@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 20f353393a18ce8a438a1631337f8366 ChangeLog 659
 RMD160 4605dc7a6f6c39a276fbbe8441177641769754a6 ChangeLog 659
 SHA256 e6b26e2ee33585b1413ffe9d8b4a2f00c1e6b33af3d495699c6393ac1c3b412e ChangeLog 659
@@ -10,3 +13,10 @@ SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata
 MD5 b5c8198df5c64bfae9dd92ccfdbd3143 synce-software-manager-0.9.0.ebuild 643
 RMD160 9fdddeb887a384bae30c490302b8109fcbbcfdd6 synce-software-manager-0.9.0.ebuild 643
 SHA256 fc11de7e3127fe08ec0be33b18278b981f6f2c11eb7aafb5910ad7d259986f3a synce-software-manager-0.9.0.ebuild 643
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEGbsGub4+zaPCR/oRAkgzAJ4jYZT9cGO0pWKYKBpDbLKgRAtAKgCfXinQ
+8xcRYabEd6PHU7RqfeoKY9Q=
+=hU8q
+-----END PGP SIGNATURE-----

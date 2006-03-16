@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4ea8e952f5e44e9c5313381a299eed22 ChangeLog 1547
 RMD160 e2fb9cd932b1852c49db50ab40083fe1d6371fb9 ChangeLog 1547
 SHA256 bdf06e58cdfe8a757c0bf0b6569a58348a3eefe6219c756d0dc24855c1a9f704 ChangeLog 1547
@@ -28,3 +31,10 @@ SHA256 0d1a60af6fbf1415771c3785d2e3ae94dbc90f360a83729f2e53c93d09ee15d4 synce-mu
 MD5 9bc013721a1d4b7943ae7f32fce6902a synce-multisync_plugin-0.9.0.ebuild 819
 RMD160 bbfa2150ef9e422da81759ff232b5ef158a921f9 synce-multisync_plugin-0.9.0.ebuild 819
 SHA256 aa3d679f8b6b9dbf558aa1548860b29d548ef18b088801f92f19b24898d9a330 synce-multisync_plugin-0.9.0.ebuild 819
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEGbpoub4+zaPCR/oRAg3BAKCI5AlSCp3IWUvtJeMGCbWO6kNn8ACfRGwg
+6+wH0kRofux4zVFbU/xWZRk=
+=BqRO
+-----END PGP SIGNATURE-----
