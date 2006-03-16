@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5938cfe374042f7cc5d4029afe7a3de8 ChangeLog 441
+RMD160 326f10f6a2c8f0714d4677b796a059c45b5939b5 ChangeLog 441
+SHA256 13d677de7d0f23f5a435a0682473d6ba576faa096790336a1dface226758d4f0 ChangeLog 441
+MD5 830a70355cde5dd07b64ba90eecd1763 cl-spatial-trees-0.1.ebuild 779
+RMD160 a9c58a50c5f6c5bc598ff40408f3e38c36542456 cl-spatial-trees-0.1.ebuild 779
+SHA256 18d802ddb26ebe3166aaff2f77424786427b8080d65fe415309ac547afae3b01 cl-spatial-trees-0.1.ebuild 779
+MD5 ccd4996a41728b35e73fe06c98cd8906 files/digest-cl-spatial-trees-0.1 250
+RMD160 9c10e32433ed34ecccb391b088c97a052e1570d9 files/digest-cl-spatial-trees-0.1 250
+SHA256 3309fff59ec7697a4da87d6505790fbccf72b202f567fb64e8dd784fd66daf81 files/digest-cl-spatial-trees-0.1 250
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+RMD160 5edb79931b874dc3a72128f0742b9d4c4eb3c8c1 metadata.xml 164
+SHA256 f8efc9385015233c71f279f85bd0a327525b7136cf8714cc04449d8bea4ce22f metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEGOnjyiNZaEAZA+ARAicVAJwPwlTgSQj7M1FbfTbV5zecns/H1QCfb4Fq
+TzGCtLOlQywSdI1U8UtrVGY=
+=gZ9a
+-----END PGP SIGNATURE-----
