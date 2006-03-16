@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dnspython
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.26 2006/02/02 19:04:55 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.27 2006/03/16 11:41:54 corsair Exp $
+
+  16 Mar 2006; Markus Rothe <corsair@gentoo.org> dnspython-1.3.5.ebuild:
+  Added ~ppc64; bug #126354
 
   02 Feb 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fix rmd160 digests.
