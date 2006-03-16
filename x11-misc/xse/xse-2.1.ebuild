@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.1.ebuild,v 1.1 2005/09/25 16:41:50 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.1.ebuild,v 1.2 2006/03/16 13:15:08 caleb Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ LICENSE="X11"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-DEPEND="virtual/x11"
+DEPEND="|| ( x11-libs/libXt virtual/x11 )"
 
 src_compile() {
 	xmkmf -a &> /dev/null || die

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.0.ebuild,v 1.4 2005/04/28 06:25:02 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.0.ebuild,v 1.5 2006/03/16 13:15:08 caleb Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 
 IUSE=""
-DEPEND="virtual/x11"
+DEPEND="|| ( x11-libs/libXt virtual/x11 )"
 
 src_unpack() {
 	local i
