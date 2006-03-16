@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/kiki
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/ChangeLog,v 1.7 2004/11/22 12:37:09 josejx Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/ChangeLog,v 1.8 2006/03/16 20:45:24 tupone Exp $
+
+*kiki-1.0.2 (16 Mar 2006)
+
+  16 Mar 2006; <Tupone@gentoo.org> +kiki-1.0.2.ebuild:
+  Version bump (bug #119213). Thanks to Matija Suklje for report
 
   22 Nov 2004; Joseph Jezak <josejx@gentoo.org> kiki-0.9.0-r1.ebuild:
   Marked ppc stable.
