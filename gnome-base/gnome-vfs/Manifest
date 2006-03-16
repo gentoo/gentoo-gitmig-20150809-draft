@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1932c1024d7bee673d65929347361d20 ChangeLog 23815
-RMD160 8ad3b89016b32ab397fd86acaf3f3c482ecc7607 ChangeLog 23815
-SHA256 3528375995b46ba27f67ebf3a0e23106453a11d021fc581102e2a0cce7dbfdce ChangeLog 23815
+MD5 2981732007c79f2bd9ad6c9a9078f730 ChangeLog 23976
+RMD160 2cfcfb001a823b470bf4cc51139cba7a3f47aff4 ChangeLog 23976
+SHA256 2769dbf26cc5eedf90079269de1704a4a290b8f56ce0e77bca2a048776acdede ChangeLog 23976
 MD5 4072a11c3c98c493cbc0bb851176fb44 files/1.0/gnome-vfs-1.0.5-codeset.patch 1762
 RMD160 b65d4b43bed4432d093744ee35ef0bfe44774a71 files/1.0/gnome-vfs-1.0.5-codeset.patch 1762
 SHA256 8ca4b5e145aa6ae9e497f2bce54a1a168b2836c5ffde08145961c5e3f523af86 files/1.0/gnome-vfs-1.0.5-codeset.patch 1762
@@ -37,6 +34,9 @@ SHA256 32c99b80fe431b9bfcdd4b22df42ccf2e7dd39900559f6e959927d97b7db7ff8 files/di
 MD5 e2667a783d3d83dbbd3e30a3f87f5384 files/digest-gnome-vfs-2.12.2 256
 RMD160 f56efeac7eb528be626ac29465dfa1de7de8e9bf files/digest-gnome-vfs-2.12.2 256
 SHA256 5b7654811e3e2d61f996efec3f936ffd068908dd3939bc42c1e287bee5f58190 files/digest-gnome-vfs-2.12.2 256
+MD5 f46737bb72c85275fac71c27e4a6900c files/digest-gnome-vfs-2.14.0 256
+RMD160 7f2214963fbd0a38f9831cc07569e55efa36286f files/digest-gnome-vfs-2.14.0 256
+SHA256 85949810a24f4e0557c6b3d713c2721e0277e88e0d7cd98c0e040e806a9d9718 files/digest-gnome-vfs-2.14.0 256
 MD5 ba8ad5c040af8bd498c9ec71ac1df40e files/gnome-vfs-2-CAN-2005-0706.patch 490
 RMD160 b0609022ed5ce0b782342ab7f1771ded69b44fbf files/gnome-vfs-2-CAN-2005-0706.patch 490
 SHA256 aa360ff6aff9ad766b97f96659f3440a7c5fddad80166170b7cf2e43f3bf0964 files/gnome-vfs-2-CAN-2005-0706.patch 490
@@ -76,13 +76,9 @@ SHA256 80da8db22c5c9da32f5f03926e924a19b9902799d56f35d75a61666dafec6449 gnome-vf
 MD5 f524aba4b9dd6fce7fb65af89c9aed7c gnome-vfs-2.12.2.ebuild 2158
 RMD160 bdc148af7ba169dba4f809a90f9319b939a0268c gnome-vfs-2.12.2.ebuild 2158
 SHA256 e955094c703694465ac948c511ca4aff12f1ba4f1f054d33d87870f835576204 gnome-vfs-2.12.2.ebuild 2158
+MD5 98c4b656e02d8eb97ead1369e7715669 gnome-vfs-2.14.0.ebuild 1973
+RMD160 d9d0f56196517bbee07e9421c9df8150a212b1b7 gnome-vfs-2.14.0.ebuild 1973
+SHA256 0e0865b90d3cfa3a388aaaf74f513bb45f38f052780f3b5dcc5f989194841bec gnome-vfs-2.14.0.ebuild 1973
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD47BTJrHF4yAQTrARAnvdAJ9tAosfTaIt/KjdpFh6jNnO/fw4lgCgiRB6
-6aI0ixgeu5XGB7sTpDlagug=
-=PlPZ
------END PGP SIGNATURE-----
