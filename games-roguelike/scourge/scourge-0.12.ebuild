@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.12.ebuild,v 1.2 2006/02/20 20:23:32 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.12.ebuild,v 1.3 2006/03/16 08:11:13 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -42,8 +42,10 @@ src_compile() {
 
 src_install() {
 	dogamesbin src/scourge || die "dogamesbin failed"
+	newicon assets/scourge.png scourge.png
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r data/ || die "doins failed"
 	dodoc AUTHORS README
+	make_desktop_entry scourge Scourge
 	prepgamesdirs
 }
