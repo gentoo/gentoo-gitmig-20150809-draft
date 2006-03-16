@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.225 2006/03/16 19:50:40 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.226 2006/03/16 23:08:53 allanonjl Exp $
+
+  16 Mar 2006; John N. Laliberte <allanonjl@gentoo.org> gtk+-2.8.16.ebuild:
+  add missing inherit on autotools eclass. fixes #126455
 
 *gtk+-2.8.16 (16 Mar 2006)
 
