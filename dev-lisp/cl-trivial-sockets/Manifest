@@ -1,15 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 90f117bd45e530b3394fc3d62886295f ChangeLog 1097
+MD5 13d8c5a035a111e3a5570bd14da98a4d ChangeLog 1248
+RMD160 2ba6ce364d7280f50eb7a7afb9b355d6698658d7 ChangeLog 1248
+SHA256 1c8a7c344b75026b19f89c8af3ca85985600898dd7a31360d7dcc0d7235506ec ChangeLog 1248
 MD5 d5ffd8fae8f0bf0ab4f86b952a62855f cl-trivial-sockets-0.2.ebuild 919
+RMD160 62202eedb0ec3d85b77c17e93c5a8d799946ac4b cl-trivial-sockets-0.2.ebuild 919
+SHA256 9acc34dd3ec804b9de4ccb6b62b58a188eefb6b6a16d764f2178d59b936ac8e1 cl-trivial-sockets-0.2.ebuild 919
+MD5 1520406c164418b78281606d77c0d936 cl-trivial-sockets-0.3.ebuild 830
+RMD160 cb0723fd1785b95712023adbffbb762a060ed730 cl-trivial-sockets-0.3.ebuild 830
+SHA256 d88880cad3550220df198d7d5b736002fb403dc763b0a4fb193eeec9b08e2230 cl-trivial-sockets-0.3.ebuild 830
 MD5 477c8cde2e97d937fba1e082cbc9276a files/0.2-asdf-depends-gentoo.patch 468
+RMD160 7c94940cac47a4cdd175cb24711c001c91c3d84d files/0.2-asdf-depends-gentoo.patch 468
+SHA256 d553d466d18e7402014ac2167965c816037870d6c3b0391fc9e31be9d31705f6 files/0.2-asdf-depends-gentoo.patch 468
 MD5 60cf13adb9e901bd8df2cf844fde2fd8 files/digest-cl-trivial-sockets-0.2 70
+RMD160 52b98d76d8709233dce2e06c8b46bd769f882982 files/digest-cl-trivial-sockets-0.2 70
+SHA256 1823b58c0c12eab795ad446abc32419b0a00630644fc258e4f77dd460df408b3 files/digest-cl-trivial-sockets-0.2 70
+MD5 0ee1850dfc98117989a18d2b0accbfdd files/digest-cl-trivial-sockets-0.3 253
+RMD160 a9e6e97affd5475c54f3d5ce89ccf662a105ae5d files/digest-cl-trivial-sockets-0.3 253
+SHA256 fffa01ce03aac0c2972eb5ff2ec8df5db97e3e9e1ca1055e55afada2ed56c078 files/digest-cl-trivial-sockets-0.3 253
 MD5 30342eac64da7401df8b5eb3fff7bd7f metadata.xml 407
+RMD160 3cd58ae68d1081e1494e68ae9c4d6d9f7995c645 metadata.xml 407
+SHA256 857bd64fa59f52e7a95dcdc6ac0e973d401c4c87bcd9f07190150e7901001eb3 metadata.xml 407
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDuV7ByiNZaEAZA+ARAqsMAJ9OLyNgjhS0bzbmFQlZhJVcNh2Z5QCeIHRj
-kpH1Bcpby9VFA5fZjgIylkE=
-=cPhd
+iD8DBQFEGQ7GyiNZaEAZA+ARAr5FAJ94M1JWkz/GZh1Z8ltyt/6jLoeBjQCdEycp
+9UVhopakbKBeZWpwgF868kk=
+=7h+D
 -----END PGP SIGNATURE-----
