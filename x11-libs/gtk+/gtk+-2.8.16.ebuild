@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.15.ebuild,v 1.1 2006/03/13 21:38:48 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.16.ebuild,v 1.1 2006/03/16 19:50:40 allanonjl Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
