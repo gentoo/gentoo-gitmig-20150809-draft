@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-3.7.ebuild,v 1.4 2006/01/08 09:48:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-3.7.ebuild,v 1.5 2006/03/16 14:39:39 ehmsen Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 src_install () {
 
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING INSTALL README TODO
+	dodoc AUTHORS ChangeLog README TODO
 
 	# Check bug #27399, the following binary conflicts with
 	# one provided by the 'normalize' package, so we're

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-2.8-r2.ebuild,v 1.4 2005/09/10 05:58:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-2.8-r2.ebuild,v 1.5 2006/03/16 14:39:39 ehmsen Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_unpack() {
 src_install () {
 
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING INSTALL README TODO
+	dodoc AUTHORS ChangeLog README TODO
 	newman ${FILESDIR}/${PN}-addid-man addid.1
 
 	# Check bug #27399, the following binary conflicts with
