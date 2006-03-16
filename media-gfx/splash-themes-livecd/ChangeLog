@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/splash-themes-livecd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/ChangeLog,v 1.9 2006/02/08 03:48:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/ChangeLog,v 1.10 2006/03/16 15:40:28 wolf31o2 Exp $
+
+*splash-themes-livecd-2006.0 (16 Mar 2006)
+
+  16 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +splash-themes-livecd-2006.0.ebuild:
+  Added 2006.0 splash theme. I am committing this straight to stable since it
+  was used by these architectures for the release and is known to work
+  properly. Plus, it really should have been added before the release, and I
+  simply forgot about it.
 
   08 Feb 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   splash-themes-livecd-2005.1.ebuild:

@@ -1,6 +1,6 @@
-MD5 0fb4a75571c117e8d4171e032f5d7daf ChangeLog 1609
-RMD160 a686b4474d1cef18d465b4a2eda8f4c9d7d4d6e4 ChangeLog 1609
-SHA256 5507598ec39b260a550a7e5955afbde7c0499d5bdfad3d6d92864f9de29d8b7f ChangeLog 1609
+MD5 1da2222927b750e25cc3ff7312f4f433 ChangeLog 2000
+RMD160 4487325e07dd646a18b08e304c899fec71518327 ChangeLog 2000
+SHA256 10508599adfe6c6d19154287374b258e40c6cea50bf7fc3bbd034e763821709d ChangeLog 2000
 MD5 1343d51c2fef69eb595c779bfde02674 files/digest-splash-themes-livecd-2004.3 81
 RMD160 39f72528fe676fb3ca68bb9e57daec4bc4538b21 files/digest-splash-themes-livecd-2004.3 81
 SHA256 403085c83b90c2c0cc2f663a318cc23dd3f0cbde75846f206661815deacf5fdd files/digest-splash-themes-livecd-2004.3 81
@@ -10,6 +10,9 @@ SHA256 fadefbebf825c3e597eb8ba2244304be93a4018f1cae2afde132ea52b3a3825c files/di
 MD5 54bf719e4b1ed5ec76c1b7848ef490e3 files/digest-splash-themes-livecd-2005.1 81
 RMD160 4fba994277759d40c362d3f14a6063f87541358d files/digest-splash-themes-livecd-2005.1 81
 SHA256 2bed0a6e49ce1d8b175100be129a4b09a3617f0a20d17713101141e56d56b8df files/digest-splash-themes-livecd-2005.1 81
+MD5 e34195a42124c07b0a72339d85118f3d files/digest-splash-themes-livecd-2006.0 80
+RMD160 b06b3a5f07df68a61cdfa8e1dbc532c804652a20 files/digest-splash-themes-livecd-2006.0 80
+SHA256 e9b04068e8748fb777633a4bf16960db5a8a9d6df96184dee4905425476bfe32 files/digest-splash-themes-livecd-2006.0 80
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 RMD160 8db5ed254a6b9baf8f53368da9e71c5532a46073 metadata.xml 159
 SHA256 b6e17484225400d76c65d178bf5a10dc0a8da7f345993c2acc63d1093a77c90d metadata.xml 159
@@ -22,3 +25,6 @@ SHA256 c687d42f2285e5592d6989196ea3936f4984bbe35f68c74386c2d6ee48475615 splash-t
 MD5 a366d8b6784d450cd57d0bddbab56773 splash-themes-livecd-2005.1.ebuild 834
 RMD160 e2d1cbf0cfdc18482abde72c59ae81d65a5e5c35 splash-themes-livecd-2005.1.ebuild 834
 SHA256 ea143e9234898b8a964448b56590f43bd10f24327a160b57672f1095a8e0017a splash-themes-livecd-2005.1.ebuild 834
+MD5 652244a0a0fca49af9e92c45a9770694 splash-themes-livecd-2006.0.ebuild 677
+RMD160 83c2c5062ee6780277477c40c44bb68dbf121aa1 splash-themes-livecd-2006.0.ebuild 677
+SHA256 91b03b40e667016de49890e5b851c0fd831e69f5c67f77383bf8c7d80363e4df splash-themes-livecd-2006.0.ebuild 677
