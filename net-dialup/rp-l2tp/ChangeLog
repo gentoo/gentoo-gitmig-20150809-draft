@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/rp-l2tp
-# Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/ChangeLog,v 1.13 2005/08/29 05:39:11 mrness Exp $
+# Copyright 2003-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/ChangeLog,v 1.14 2006/03/16 20:47:47 mrness Exp $
+
+  16 Mar 2006; Alin Nastac <mrness@gentoo.org> rp-l2tp-0.4.ebuild:
+  Simplify the ebuild code.
 
   29 Aug 2005; Alin Nastac <mrness@gentoo.org> rp-l2tp-0.4.ebuild:
   Fix cp -a usage for Gentoo BSD (#103487).
