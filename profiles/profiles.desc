@@ -1,6 +1,7 @@
 #############################################
 # default profile list
 # This file is used by repoman.
+# DO NOT ADD PROFILES WITH A "die" or "exit" IN THEM OR IT KILLS REPOMAN
 #
 #layout:
 #arch		profile_directory				status
@@ -10,9 +11,8 @@ alpha		default-linux/alpha/2005.0			stable
 # AMD64 Profiles
 amd64		default-linux/amd64/2006.0			stable
 amd64		default-linux/amd64/2006.0/no-multilib		stable
-#amd64		default-linux/amd64/2006.0/no-symlinks		dev
-#amd64		default-linux/amd64/2006.0/32bit-userland	dev
-# DO NOT ADD PROFILES WITH A "die" IN THEM OR IT KILLS REPOMAN
+amd64		default-linux/amd64/2006.0/no-symlinks		dev
+amd64		default-linux/amd64/2006.0/32bit-userland	dev
 
 arm		default-linux/arm/2004.3			stable
 hppa		default-linux/hppa/2005.0			stable
