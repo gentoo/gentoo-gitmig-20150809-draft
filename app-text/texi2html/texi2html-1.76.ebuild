@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.76.ebuild,v 1.9 2005/05/18 09:01:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.76.ebuild,v 1.10 2006/03/16 13:18:17 ehmsen Exp $
 
 DESCRIPTION="Perl script that converts Texinfo to HTML"
 HOMEPAGE="https://texi2html.cvshome.org/"
@@ -19,7 +19,7 @@ src_install() {
 		htmldir=/usr/share/doc/${PF}/html \
 		install || die "Installation Failed"
 
-	dodoc AUTHORS ChangeLog INSTALL INTRODUCTION NEWS README TODO
+	dodoc AUTHORS ChangeLog INTRODUCTION NEWS README TODO
 }
 
 pkg_preinst() {

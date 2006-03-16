@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.64-r1.ebuild,v 1.13 2005/01/01 16:38:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.64-r1.ebuild,v 1.14 2006/03/16 13:18:17 ehmsen Exp $
 
 inherit alternatives
 
@@ -27,7 +27,7 @@ src_install() {
 		htmldir=/usr/share/doc/${PF}/html \
 		install || die "Installation Failed"
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL INTRODUCTION NEWS \
+	dodoc AUTHORS COPYING ChangeLog INTRODUCTION NEWS \
 		README TODO
 }
 
