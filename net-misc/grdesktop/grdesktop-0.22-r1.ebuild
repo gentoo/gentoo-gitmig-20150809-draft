@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.22-r1.ebuild,v 1.8 2005/03/19 18:14:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.22-r1.ebuild,v 1.9 2006/03/16 13:08:31 allanonjl Exp $
 
 inherit eutils
 
@@ -32,6 +32,8 @@ src_unpack() {
 
 	# Correct icon path. See bug #50295.
 	sed -i -e 's:Icon=.*:Icon=grdesktop/icon.png:' grdesktop.desktop
+
+	gnome2_omf_fix
 }
 
 src_compile() {
