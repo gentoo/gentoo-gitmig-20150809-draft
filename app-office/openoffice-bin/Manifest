@@ -1,6 +1,9 @@
-MD5 f14f4a7f1138ecb24cad99b9a6ac6efe ChangeLog 22176
-RMD160 99c3676ae7fc4627775e1a59e7e269a4f709b4f0 ChangeLog 22176
-SHA256 e94d8cb367a40fcd3f48eac7d1fb30df1311cef76cd6a6bda65db7c24a58893a ChangeLog 22176
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 744d4b9be03002a0d680963f9fddcdb8 ChangeLog 22298
+RMD160 3d79cfa3365da37d6c0fb30bb4c1f7ae8beab1d8 ChangeLog 22298
+SHA256 85115029731b135740559817f96576231d588bfdfd21e0e4cb672e68efae81e7 ChangeLog 22298
 MD5 2c48c83e67165ca64be46547eaad3d0f files/2.0.1/ooo-wrapper2 3792
 RMD160 344d9c974d668678cda82514edadbd3e3a99f435 files/2.0.1/ooo-wrapper2 3792
 SHA256 11434bfc2e2b94b05f9ed4d13a51d206a6c69d4a5b3a3af8d979b9f8e553105c files/2.0.1/ooo-wrapper2 3792
@@ -19,6 +22,13 @@ SHA256 9160d9de32e063130943805fe72d9bb196700524a54a54cf1769a740ecd9183d metadata
 MD5 a44438211235d3779e9926fe33314a50 openoffice-bin-2.0.1.ebuild 7556
 RMD160 d963cea0360b99477133cf204a73c77c7b7bf8bd openoffice-bin-2.0.1.ebuild 7556
 SHA256 3e0ce971dbb78145796a1820812d710546c042dfbc0f9a26dce59fb96c8ac709 openoffice-bin-2.0.1.ebuild 7556
-MD5 c7dac0efbde2f45221ccb5a5a78c8acf openoffice-bin-2.0.2.ebuild 6769
-RMD160 09f60e8727b3c25a8abbcf0e9ea478ab120f988b openoffice-bin-2.0.2.ebuild 6769
-SHA256 8a57a3bd8e912cb498ee769a61ef8be748caf31ed67e81be4f342da17e98394a openoffice-bin-2.0.2.ebuild 6769
+MD5 51aacca9b964c1aecb7a3853f965f31a openoffice-bin-2.0.2.ebuild 6772
+RMD160 c4b8ad56ab8be2cee3721729deb93edcf6369251 openoffice-bin-2.0.2.ebuild 6772
+SHA256 0d301e22e19f8ffbac262195ea9ea72770cdfd37e7d8ac05cfbef6f098faac6d openoffice-bin-2.0.2.ebuild 6772
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEGZ11wUpWvClEHQoRAsUdAJ0fUVL6zXSta2JxyIU3fFJgLgWk+gCdH+o7
+e+tcpitARlRgMwTcRxdUuOc=
+=o520
+-----END PGP SIGNATURE-----
