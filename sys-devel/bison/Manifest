@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 56d59371f0e88e2c74e0d59462a8b873 bison-2.1.ebuild 1407
+MD5 0d65d401c5423ed159b0a9c0f462a155 ChangeLog 6304
+MD5 891a59b63cc7cc11c919095f55a38de3 bison-1.875.ebuild 1796
 MD5 8daee23ecbd311833a371ff404cde24a bison-1.875d.ebuild 1791
 MD5 2242f1d96824a7a82fcb75e0660f1eb2 bison-2.0.ebuild 1468
-MD5 891a59b63cc7cc11c919095f55a38de3 bison-1.875.ebuild 1796
-MD5 74ace92cfb9424b11c27843d501ee4e6 ChangeLog 6204
-MD5 4ac198b61c1a87f5070a32369477eda0 files/digest-bison-2.0 62
-MD5 644a4912da3e5107f509022f173ec146 files/bison-1.875-gccerror.patch 1538
-MD5 de372a3e3ac4588a2322ac386997d8c9 files/digest-bison-2.1 63
-MD5 6af3f9859615301181f6a1536aa56fb1 files/digest-bison-1.875d 65
-MD5 4a875793f3bd808692002c152e5e26c4 files/digest-bison-1.875 64
+MD5 ea229ea108f65768f60f9b68d3cf67bd bison-2.1.ebuild 1407
 MD5 61b224a9eaf1ae7f77c2d1456d8fda87 files/bison-1.32-extfix.patch 1170
+MD5 644a4912da3e5107f509022f173ec146 files/bison-1.875-gccerror.patch 1538
 MD5 b0e8983afb264754c539f1eb53116970 files/bison-2.0-token-name-translate.patch 826
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMlJMgIKl8Uu19MoRAkuQAJ9IyDVdexybictt94D1LN8h4MQsvQCfYG4f
-pKCPX8LP5wQtK8rtwjGJI6Q=
-=Qldl
------END PGP SIGNATURE-----
+MD5 4a875793f3bd808692002c152e5e26c4 files/digest-bison-1.875 64
+MD5 6af3f9859615301181f6a1536aa56fb1 files/digest-bison-1.875d 65
+MD5 4ac198b61c1a87f5070a32369477eda0 files/digest-bison-2.0 62
+MD5 de372a3e3ac4588a2322ac386997d8c9 files/digest-bison-2.1 63
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
