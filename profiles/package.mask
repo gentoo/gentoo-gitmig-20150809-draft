@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5095 2006/03/16 18:13:46 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5096 2006/03/16 21:46:53 ribosome Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -625,11 +625,6 @@ dev-libs/luabind
 # Roy Marples <uberlord@gentoo.org> (09 Dec 2005)
 # Masked for testing
 =net-misc/dhcp-3.0.4_beta*
-
-# Olivier Fisette <ribosome@gentoo.org> (08 Dec 2005)
-# The archive is no longer downloadable and we are not
-# allowed to mirror it.
-=sci-biology/t-coffee-2.66*
 
 # Markus Dittrich <markusle@gentoo.org> (07 Dec 2005)
 # This revision has the TDHF code enabled; need to
