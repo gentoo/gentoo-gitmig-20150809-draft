@@ -1,21 +1,39 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 65be440c1d6511e8812cd4daf935805b electric-7.00.ebuild 1014
-MD5 4d9825d4a03f679a6128e6ea1ab1b034 ChangeLog 3073
+MD5 82c57cb546ff15e8f60dbb9844883324 ChangeLog 3372
+RMD160 96e11f279b87ad74c5c95064488277d7f768506f ChangeLog 3372
+SHA256 31597b7de0078acdaac8d5b6143a4672e560f72f361d96dd0d73559a139c5d31 ChangeLog 3372
 MD5 05879f157295d3c898136422a0b79009 electric-6.08-r1.ebuild 954
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 67fe7d0e0440fec38e812682bd6fb218 files/digest-electric-7.00 66
-MD5 31522760b841deb101bacf8521455e79 files/6.08-fix-sandbox.patch 962
-MD5 aaf0ac9ca614a144e057e71e2056dace files/7.00-qt.patch 1373
+RMD160 1ebf7bf715c5d2b7be9e5907f73a2aa6c8b763ef electric-6.08-r1.ebuild 954
+SHA256 87b049c2389b414589e4440aa38c676d946d45138fb4b3946049a3aac4f1be2e electric-6.08-r1.ebuild 954
+MD5 8d3082cd533ee6ea479b770c0ae78794 electric-7.00.ebuild 1077
+RMD160 3d28ec67e6e24da62b1d3ae4a269860128bc90dc electric-7.00.ebuild 1077
+SHA256 8df96fa59dff2157a05063654d05671980375d642bd9691ae06232fef6df7b46 electric-7.00.ebuild 1077
 MD5 0bcd09959370bd09c26909326c5cc8f1 files/6.08-fix-sandbox-r1.patch 940
-MD5 08ac6be372fdf34293ebc04a592c6063 files/digest-electric-6.08-r1 66
-MD5 bff298428c1a56897e68ea9cd3ae68d4 files/7.00-fix-sandbox.patch 460
+RMD160 0a26108f95b14a02f4a07134c6f43747c2824986 files/6.08-fix-sandbox-r1.patch 940
+SHA256 b374e157447fbeb0d73decb90914e5147f5e90a34627c923f6d9c5d45606d1fb files/6.08-fix-sandbox-r1.patch 940
+MD5 31522760b841deb101bacf8521455e79 files/6.08-fix-sandbox.patch 962
+RMD160 464fc586b5a728da5d2600e417b7a98cd9b1d657 files/6.08-fix-sandbox.patch 962
+SHA256 599182c5a7cc12434a04ece09d119fdf9ed012ec4c5f927205644952d34f0e1d files/6.08-fix-sandbox.patch 962
 MD5 aaf0ac9ca614a144e057e71e2056dace files/6.08-qt.patch 1373
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDKHqGomPajV0RnrERAqlPAJ0ZPqS56wPcC2feImRsqApHVLcUOwCfTIIq
-NWLK8D+sZPUHKFthUJvWJI8=
-=Hn3d
------END PGP SIGNATURE-----
+RMD160 8357f37c8202fb5020b781165f1e32e0e2adee20 files/6.08-qt.patch 1373
+SHA256 72cb91cb6c2d8aa1a54e59cf34f1271e533899c85e1c7647be8d5982c9dff586 files/6.08-qt.patch 1373
+MD5 bff298428c1a56897e68ea9cd3ae68d4 files/7.00-fix-sandbox.patch 460
+RMD160 dd6d5d5900944df532d7e601c9467a29bd02dbac files/7.00-fix-sandbox.patch 460
+SHA256 21a7e60723912932cb8b12af30e93cb5785630d313849c2490c568c06da6e009 files/7.00-fix-sandbox.patch 460
+MD5 aaf0ac9ca614a144e057e71e2056dace files/7.00-qt.patch 1373
+RMD160 8357f37c8202fb5020b781165f1e32e0e2adee20 files/7.00-qt.patch 1373
+SHA256 72cb91cb6c2d8aa1a54e59cf34f1271e533899c85e1c7647be8d5982c9dff586 files/7.00-qt.patch 1373
+MD5 08ac6be372fdf34293ebc04a592c6063 files/digest-electric-6.08-r1 66
+RMD160 0fab1cd8c7a71127c2a1cc50d841e58a858096ef files/digest-electric-6.08-r1 66
+SHA256 d6629dfe44dd906c42576a8b7c77d6043b88fb814f66040794105b5f3f7f7a81 files/digest-electric-6.08-r1 66
+MD5 44ab2938cb0b073007a56dec6daba909 files/digest-electric-7.00 244
+RMD160 eb49c11a7725dc8740933c0e8cd8efd1e729a91e files/digest-electric-7.00 244
+SHA256 8077064357c7726e09ce8689b5ed29dda4502852481512d3e5e96e82e5c16beb files/digest-electric-7.00 244
+MD5 1fbbc1149884afc9dd74be078fadd38f files/electric-7.00-gcc4.1-gentoo.patch 390
+RMD160 4e825bb96d12522ca53ceddaa2b6a01bbcd0ea8d files/electric-7.00-gcc4.1-gentoo.patch 390
+SHA256 a5f4added89c3a2c0822f9caa6f62ee1e0dd94c6e590417948b479ffbb9f944a files/electric-7.00-gcc4.1-gentoo.patch 390
+MD5 93ebc6f559b2511533ff40817b45b7a5 files/electric-7.00-qt-gentoo.patch 2135
+RMD160 65e8950b0e47e19ba5ef579e602efdef86dde6be files/electric-7.00-qt-gentoo.patch 2135
+SHA256 6fbc2eaad676a814c4d87d5656333073aa35f9e02ab9639fbd4cd48f6a0f9a22 files/electric-7.00-qt-gentoo.patch 2135
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+RMD160 dc078172bfebcb25d69bdf8731714f9cce9d3e36 metadata.xml 156
+SHA256 5d22100902db7507a5b5493dd4a66cdb08025faf80a2c0b75e6392315c47f900 metadata.xml 156
