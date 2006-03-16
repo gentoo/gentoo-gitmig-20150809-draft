@@ -1,5 +1,5 @@
-MD5 3396ee1ca9d95ef9b53a89c8d53879e3 ChangeLog 619
+MD5 6f9ef83deee6580146f55cc8b70ab4bd ChangeLog 761
 MD5 91f3ac78542bd8b76dabada8cd5df588 files/digest-ibm-powerpc-utils-1.0.0 70
 MD5 a0b88c60b83161126a59980aaf905b62 files/ibm-powerpc-utils-1.0.0-remove-doc.patch 646
-MD5 466d33d3b49729f9b3ebc573ad7377c4 ibm-powerpc-utils-1.0.0.ebuild 902
+MD5 f95a20cc80aee10360177d27b1844ed9 ibm-powerpc-utils-1.0.0.ebuild 915
 MD5 702fa4fed6bdb3969c5e5bad5b654368 metadata.xml 245
