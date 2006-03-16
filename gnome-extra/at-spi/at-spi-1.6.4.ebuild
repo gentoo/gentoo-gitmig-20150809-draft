@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.6.4.ebuild,v 1.12 2005/08/31 14:32:05 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.6.4.ebuild,v 1.13 2006/03/16 19:19:54 allanonjl Exp $
 
 inherit gnome2
 
@@ -19,7 +19,19 @@ RDEPEND=">=gnome-base/gail-1.3
 	>=x11-libs/gtk+-2
 	dev-libs/popt
 	>=gnome-base/orbit-2
-	virtual/x11"
+	|| ( (
+			x11-libs/cairo
+	        x11-libs/libICE
+	        x11-libs/libSM
+	        x11-libs/libX11
+			x11-libs/libXau
+	        x11-libs/libXdmcp
+	        x11-libs/libXi
+	        x11-libs/libXtst
+	        x11-libs/pango
+		)
+		virtual/x11 )"
+
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
