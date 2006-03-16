@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 44515017a7ef1675d7da589b88377372 ChangeLog 1321
 MD5 2a9cc06fc8d62e325745ffebade06d98 files/digest-rppppoek-0.40 66
 MD5 0629a518bafe9606efcdf3cb58e61245 metadata.xml 283
 MD5 5148636355d72a5a56511b7abfebcd02 rppppoek-0.40.ebuild 546
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEGdHFjG8pv1lIUX4RAipWAKDuRppOwt+KmYtkng41ujldWdEsIgCgoE94
+VfAHditu2erP9A6G4qwwrfI=
+=67o8
+-----END PGP SIGNATURE-----
