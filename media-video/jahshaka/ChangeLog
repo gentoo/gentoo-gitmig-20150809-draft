@@ -1,6 +1,9 @@
 # ChangeLog for media-video/jahshaka
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.15 2006/02/15 10:06:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.16 2006/03/16 13:31:42 caleb Exp $
+
+  16 Mar 2006; Caleb Tennis <caleb@gentoo.org> jahshaka-2.0_rc1.ebuild:
+  remove virtual/x11 as other deps pull it in
 
   15 Feb 2006; Ciaran McCreesh <ciaranm@gentoo.org>
   -jahshaka-1.9_alpha90.ebuild, -jahshaka-1.9_alpha90-r1.ebuild:
