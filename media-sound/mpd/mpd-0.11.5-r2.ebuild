@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5-r2.ebuild,v 1.7 2006/02/07 21:27:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5-r2.ebuild,v 1.8 2006/03/16 15:55:14 ticho Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND=">=media-libs/libao-0.8.4
 	!media-sound/mpd-svn
 	sys-libs/zlib
 	aac? ( >=media-libs/faad2-2.0_rc2 )
-	alsa? ( media-libs/alsa-lib )
+	alsa? ( media-sound/alsa-utils )
 	audiofile? ( media-libs/audiofile )
 	flac? ( >=media-libs/flac-1.1.0 )
 	mad? ( media-libs/libmad

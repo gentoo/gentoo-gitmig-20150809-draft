@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.68 2006/02/07 21:27:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.69 2006/03/16 15:55:14 ticho Exp $
+
+  16 Mar 2006; <ticho@gentoo.org> mpd-0.11.5-r2.ebuild:
+  Depend on alsa-utils instead of alsa-libs, because alsa-utils provides
+  alsasound initscript we need. Bug #126417.
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> mpd-0.11.5-r2.ebuild:
   stable on amd64
