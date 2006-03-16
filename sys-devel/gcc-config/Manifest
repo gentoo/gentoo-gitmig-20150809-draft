@@ -1,43 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b1e39b540b96dbf38ed10dd665967b43 ChangeLog 23561
-RMD160 7cc57534fe305e26b053b8541f611b9a2e6a34f4 ChangeLog 23561
-SHA256 68d4a7d6ca0edf3e34d5f48adb781330e8fca7219f40911fec90ddd964e6f093 ChangeLog 23561
+MD5 7e55fbc9f19b0f30de63a031c3a2b0d0 ChangeLog 23679
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.12-r6 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-gcc-config-1.3.12-r6 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-gcc-config-1.3.12-r6 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.13-r1 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-gcc-config-1.3.13-r1 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-gcc-config-1.3.13-r1 0
 MD5 c7cf3a3617d90adfaacc7c2c012ddfb0 files/digest-gcc-config-2.0.0_beta2 79
-RMD160 3f13b2d85a378b6780eaeca0c2c41b44a14c2ae5 files/digest-gcc-config-2.0.0_beta2 79
-SHA256 734b05fb3128905d0c16f82e410cfb195a436d62a193e2ce5bad66d9ee44ca74 files/digest-gcc-config-2.0.0_beta2 79
 MD5 6ca78d8db840ae4aa3acdd0d91b649ba files/gcc-config-1.3.12 17638
-RMD160 3609864a459294a2459c1a5a78c7cacf2f31b9d7 files/gcc-config-1.3.12 17638
-SHA256 5008d5cb1aa3b6a56e751fb1f1367a2ff72a55024c8559e504b8ebaa35970583 files/gcc-config-1.3.12 17638
 MD5 235bdfabb33bcbaf51cf1adc6fe21df2 files/gcc-config-1.3.13 17941
-RMD160 8931a8625f961c5b48831544dfd44e89855b00bf files/gcc-config-1.3.13 17941
-SHA256 c2462b2b4be575db0a6181a3e5a16ea168be714a2caa494cd051f35a06cafeda files/gcc-config-1.3.13 17941
 MD5 1b19cf481e2777dff9722f36698c3b24 files/wrapper-1.4.7.c 9837
-RMD160 e4feac8cd8746ad7036ec32ff09f1b02d7eceaf8 files/wrapper-1.4.7.c 9837
-SHA256 f462c49721d291ce3b91c46e5fb8e567d6344f0e359e788301bac07065987744 files/wrapper-1.4.7.c 9837
 MD5 15eb934411212481076e228d609466d9 gcc-config-1.3.12-r6.ebuild 1458
-RMD160 6d940052ee970648e0aa5dc8a2528feed3f663ff gcc-config-1.3.12-r6.ebuild 1458
-SHA256 f8ce67362ace944a1d3a484f9b122ef365fa2a3ba497ff0163b20a287932b9ab gcc-config-1.3.12-r6.ebuild 1458
-MD5 ef62e5a3ffdc5e85b73893565866d399 gcc-config-1.3.13-r1.ebuild 1469
-RMD160 74f79b28e453c40df2b9dd73af6a0346c5aa2358 gcc-config-1.3.13-r1.ebuild 1469
-SHA256 73146699609012f6bf9d84f3f672ab9d64d815089b6c8c8378eab890c44940a0 gcc-config-1.3.13-r1.ebuild 1469
+MD5 26b8c2e8c9c64579b71a076bdb47aa89 gcc-config-1.3.13-r1.ebuild 1470
 MD5 35fee17d74ce037258c00f8d9e9dd820 gcc-config-2.0.0_beta2.ebuild 781
-RMD160 e4930963969a802ccb1d7269a978d536d7636c0b gcc-config-2.0.0_beta2.ebuild 781
-SHA256 8e197bb238702dfb7ec7497316f2e1bdaa97ce2d57c1e5e674b3c279bf994f7a gcc-config-2.0.0_beta2.ebuild 781
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
-SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEFlurSENan+PfizARAgtzAJ4lwF8C9oH5iLo10KLtbZ8FDUNGJQCdGIjg
-NvE4Z1/sOSoJo1JQ6d84+n0=
-=VsoK
+iD8DBQFEGZm/KRy60XGEcJIRAnjIAJ4/pKV14Ts84QPYYEK3dr3kZUyr9ACeLiKK
+VkyhMTQCBFALgfk1DZu8FIM=
+=U+nu
 -----END PGP SIGNATURE-----
