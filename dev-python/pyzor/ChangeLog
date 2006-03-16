@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.21 2006/03/14 01:34:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.22 2006/03/16 18:24:10 nelchael Exp $
+
+  16 Mar 2006; Krzysiek Pawlik <nelchael@gentoo.org> pyzor-0.4.0-r2.ebuild:
+  Stable on x86, see bug #125725.
 
   14 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> pyzor-0.4.0-r2.ebuild:
   Keyworded ~hppa
