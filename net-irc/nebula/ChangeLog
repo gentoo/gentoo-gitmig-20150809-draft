@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/nebula
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/nebula/ChangeLog,v 1.3 2005/08/22 04:24:46 swegener Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/nebula/ChangeLog,v 1.4 2006/03/16 13:31:00 caleb Exp $
+
+  16 Mar 2006; Caleb Tennis <caleb@gentoo.org> nebula-0.4.ebuild,
+  nebula-0.5.ebuild:
+  remove virtual/X11 as openmotif dep already pulls modular X in
 
 *nebula-0.5 (22 Aug 2005)
 
