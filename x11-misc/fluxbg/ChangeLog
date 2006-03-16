@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fluxbg
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxbg/ChangeLog,v 1.8 2005/05/10 10:52:07 swegener Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxbg/ChangeLog,v 1.9 2006/03/16 13:12:30 caleb Exp $
+
+  16 Mar 2006; Caleb Tennis <caleb@gentoo.org> fluxbg-0.7.ebuild:
+  Fix X dep to modular X
 
   28 Sep 2004; <pyrania@gentoo.org> fluxbg-0.7.ebuild:
   Finally fixed that gtkmm dependency hell. See bug #54104.
