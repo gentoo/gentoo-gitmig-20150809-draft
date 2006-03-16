@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/pdf2html-1.4.ebuild,v 1.12 2005/10/29 14:06:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/pdf2html-1.4.ebuild,v 1.13 2006/03/16 14:23:55 ehmsen Exp $
 
 inherit eutils
 
@@ -36,5 +36,5 @@ src_install() {
 	insinto /usr/share/${P}
 	doins *.png *.html
 
-	dodoc CHANGELOG INSTALL README VERSION || die "install failed"
+	dodoc CHANGELOG README VERSION || die "install failed"
 }
