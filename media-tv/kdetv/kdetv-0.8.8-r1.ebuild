@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.6 2006/02/05 17:13:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.7 2006/03/16 23:34:47 flameeyes Exp $
 
 LANGS="bg ca br da de cs cy el es et fi ga fr gl hu is it lt nb mt nl pa pl pt ro ru rw ta sr sv tr en_GB pt_BR zh_CN sr@Latn"
 LANGS_DOC="da et fr it nl pt ru sv"
@@ -55,3 +55,13 @@ src_compile() {
 	export BINDNOW_FLAGS="$(bindnow-flags)"
 	kde_src_compile all
 }
+
+src_install() {
+	kde_src_install
+
+	# Move the .desktop file in FDO's suggested place
+	dodir /usr/share/applications/kde
+	mv ${D}/usr/share/applnk/Multimedia/kdetv.desktop \
+		${D}/usr/share/applications/kde
+}
+

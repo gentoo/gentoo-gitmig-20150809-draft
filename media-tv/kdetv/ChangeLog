@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/kdetv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.21 2006/02/05 17:13:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.22 2006/03/16 23:34:47 flameeyes Exp $
+
+  16 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> kdetv-0.8.8-r1.ebuild:
+  Move the .desktop file in FDO's suggested directory.
 
   05 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> kdetv-0.8.8-r1.ebuild:
   Make use of the new support in kde eclass to set the translations and
