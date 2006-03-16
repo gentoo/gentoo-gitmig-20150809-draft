@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/orange-0.3.ebuild,v 1.1 2006/01/11 06:26:13 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/orange-0.3.ebuild,v 1.2 2006/03/16 18:13:56 sekretarz Exp $
 
 DESCRIPTION="A tool and library for extracting cabs from executable installers."
 HOMEPAGE="http://sourceforge.net/projects/synce/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/synce/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND=">=app-pda/dynamite-0.1
