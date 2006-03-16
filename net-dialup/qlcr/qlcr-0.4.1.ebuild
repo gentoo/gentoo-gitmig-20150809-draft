@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1.ebuild,v 1.4 2005/10/04 20:02:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1.ebuild,v 1.5 2006/03/16 20:08:14 mrness Exp $
 
 inherit eutils kde-functions
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/qlcr/${P}-1.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 
