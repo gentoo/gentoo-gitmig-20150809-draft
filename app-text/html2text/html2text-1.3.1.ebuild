@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/html2text-1.3.1.ebuild,v 1.13 2006/02/21 18:16:34 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/html2text-1.3.1.ebuild,v 1.14 2006/03/16 14:35:12 ehmsen Exp $
 
 inherit eutils
 
@@ -34,5 +34,5 @@ src_install() {
 	dobin html2text
 	doman html2text.1.gz
 	doman html2textrc.5.gz
-	dodoc CHANGES CREDITS INSTALL KNOWN_BUGS README TODO
+	dodoc CHANGES CREDITS KNOWN_BUGS README TODO
 }
