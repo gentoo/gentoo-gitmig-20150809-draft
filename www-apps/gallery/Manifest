@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 12a0efcec1eb2fda119a3677523e734b ChangeLog 14034
-RMD160 98e6c07d04798094503a645a6e077af4254ba945 ChangeLog 14034
-SHA256 052e27c7e72db9b4caaa7f0183efadc4a90ebc2ca9b406dc63f8472b1bbda5bc ChangeLog 14034
+MD5 a75d1b192baaa70c8a059743798e2c9b ChangeLog 14132
+RMD160 9ce6737d71bba604e34b78d909b90b9dcc8c3e4d ChangeLog 14132
+SHA256 987c0ffaf42c5e57cf0fbe790d1503ff625fecb4c38accb955ab5b5ddfc797f1 ChangeLog 14132
 MD5 88069f3f6c274e4285bbbba7f5cb5a4f files/FfmpegToolkit.class.patch 576
 RMD160 588323c161a42ffb2cd2320d7380eac92a2b2a90 files/FfmpegToolkit.class.patch 576
 SHA256 240266e2d9c49faf59661d8bf122ec2c5ce97d268ca6693fc92efddc7642e2ec files/FfmpegToolkit.class.patch 576
@@ -34,16 +31,9 @@ SHA256 a661e64645c3a56f89eb461836d7cc45aedc15cea62b7f8cba4483b80edebb6d gallery-
 MD5 ed6936e02ce4362444cd82843e5d150f gallery-2.0.3.ebuild 1122
 RMD160 2086d98050db67cda2fff897e6239ea6fa6f7ecf gallery-2.0.3.ebuild 1122
 SHA256 104b6584b13a9f2ebd2ebfa8dfa4b4891dafe24d691690569c1684e29ecc55e8 gallery-2.0.3.ebuild 1122
-MD5 fd63a2d9fa66a7561234edb2c1a15c8b gallery-2.0.4.ebuild 1123
-RMD160 3ecc2fc638c3ea96da4c0e8cae9e993830e9f32f gallery-2.0.4.ebuild 1123
-SHA256 eb389bf68195bbf6f2ff83752ec556a5da79694d9a4f3cd7e64571f6506592e0 gallery-2.0.4.ebuild 1123
+MD5 94a1920bb8c310034fd66fe990db8ba5 gallery-2.0.4.ebuild 1118
+RMD160 4824eeb713974f5cb51d8b46107f3aa22b0e36e2 gallery-2.0.4.ebuild 1118
+SHA256 00450fcf1f648308ecbb60a6f5eeb57756860feb0fd2f6054ce1d75fd55c0433 gallery-2.0.4.ebuild 1118
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 RMD160 c449ad35e8af3f158d8f8305f8a02ff98a420970 metadata.xml 280
 SHA256 fd37fa0f441b1b68ef8dc4bffbb0a51f0414aa7c370b48369453af5f4bff177a metadata.xml 280
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEGJKxCRZPokWLroQRAluWAKDAbtXCVDRTwHc8Tj2rfxl7NKGSEQCg1D0y
-sSFCwpBXhnL1GqZOv5TpXX8=
-=axyg
------END PGP SIGNATURE-----
