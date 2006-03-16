@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/kxmleditor-1.1.4.ebuild,v 1.6 2005/03/27 11:26:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/kxmleditor-1.1.4.ebuild,v 1.7 2006/03/16 23:36:10 flameeyes Exp $
 
 inherit kde
 
@@ -14,3 +14,12 @@ KEYWORDS="x86 ppc amd64 sparc"
 IUSE=""
 
 need-kde 3.1
+
+src_install() {
+	kde_src_install
+
+	dodir /usr/share/applications/kde
+	mv ${D}/usr/share/applnk/Applications/kxmleditor.desktop \
+		${D}/usr/share/applications/kde
+}
+

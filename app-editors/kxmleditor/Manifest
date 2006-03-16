@@ -1,4 +1,22 @@
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 8c33838bc951dd970ff3ff3b82a10e7c ChangeLog 3108
-MD5 c8d6f4211036b1a7e14fdba049ebcd1c kxmleditor-1.1.4.ebuild 491
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9b6d117436beacdf7374fe2acb3cd44c ChangeLog 3247
+RMD160 2edbb8f704a328946e2ee222d6f89041d3764ca5 ChangeLog 3247
+SHA256 4dbff0e72f106627711f7966c267f555007dab22c666dcac15ad11faa8f08347 ChangeLog 3247
 MD5 3e7ae5d8670e40ec7d534bb9a3a944bc files/digest-kxmleditor-1.1.4 69
+RMD160 1cfecdc1795005984d62a3e942a485ffe60adb26 files/digest-kxmleditor-1.1.4 69
+SHA256 eb4255f4e69b834bcf37c14f19a6be528066ac7ea0740c4a0f088c942a59733a files/digest-kxmleditor-1.1.4 69
+MD5 13590642598cd2f39be2b9027c922d07 kxmleditor-1.1.4.ebuild 661
+RMD160 452f8439665c49d0bc14f42bcb58214fb23fd9a4 kxmleditor-1.1.4.ebuild 661
+SHA256 163dc96c8b9296ebd04f76a463cb13afda749f534bc838aac2a200af52624e0b kxmleditor-1.1.4.ebuild 661
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEGfZ2AiZjviIA2XgRArsqAJ4q9LtH86DMU9D+x3Ggw8KasBrv8wCbBeeU
+ZwAIxWSgdsW9pxZPmu9KFOY=
+=adh7
+-----END PGP SIGNATURE-----
