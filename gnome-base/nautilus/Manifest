@@ -1,6 +1,6 @@
-MD5 21c1e6f051bf65fa38e4a7b369786653 ChangeLog 22904
-RMD160 3ba9125b123ca436b7bf8fa95757a6eb66120208 ChangeLog 22904
-SHA256 3a1553bf4c33f01bff25e75a660ac63047df0985264b411ab57f4b6db1d3e466 ChangeLog 22904
+MD5 81b6b91389cad380e357683e6f9c766e ChangeLog 23108
+RMD160 8d3e5fcc716e06aaa49f3dac575dc03677a24e3a ChangeLog 23108
+SHA256 c84d3342fe2f2c2e4abd53cc0952c4acd32652729b41b985ab65510ceffdd029 ChangeLog 23108
 MD5 3db7f854e279f4032b8d1e86d64157aa files/digest-nautilus-1.0.6-r9 68
 RMD160 2bab0a2286a8a819ac6565fc5d7999d86485e353 files/digest-nautilus-1.0.6-r9 68
 SHA256 f665e279c56f10ad5123efce98042dcf23e23480474b69d339716c391e3bf71f files/digest-nautilus-1.0.6-r9 68
@@ -13,6 +13,9 @@ SHA256 f23529e1caa79e4cba31b18cfa4cea7041066b6eb64f2611fdcbb2c784e56b06 files/di
 MD5 ce0f366310eca426982a50e22fdb9dfc files/digest-nautilus-2.12.2 69
 RMD160 8187f88e805b72d6e9813e2be2d27768b2ef55d4 files/digest-nautilus-2.12.2 69
 SHA256 0b3d2f8847c656e9ba3d95ac423f01f75b83103fe95dcead8e833531ff38e176 files/digest-nautilus-2.12.2 69
+MD5 d6ece8d8c9465a5f021fdb8a63eefa75 files/digest-nautilus-2.14.0 253
+RMD160 978a7d5f5954e49cb28ad032d52b95c83a8c0444 files/digest-nautilus-2.14.0 253
+SHA256 8b8e9231a7d37d028633327f8c13f60220607e61d60919a54a05e42e5f2db85a files/digest-nautilus-2.14.0 253
 MD5 7cb2f285f24e86a90c6a65b0b9356d39 files/macros/gnome.m4 16426
 RMD160 d1e90c27d9b40c5c1d4f364794a39aa42aaba16f files/macros/gnome.m4 16426
 SHA256 635f8c7e29b3bb1f92de64e0fb4c94afe02391cc2e1ee0c60843a43697c69873 files/macros/gnome.m4 16426
@@ -43,6 +46,9 @@ SHA256 dc61794d08f8de088ed23ac8265c334b4c184fff5a94b24b55ef9e901eef7d16 files/na
 MD5 6656801883a1b7be0c2f4f5b660c84c3 files/nautilus-2.12.1-symlink-del.patch 1906
 RMD160 64d6ed8c42b160c46356e752b29caaff7c4fa65d files/nautilus-2.12.1-symlink-del.patch 1906
 SHA256 f30b70428e25c79c769353b8963b3342e69ec0b4dd114f3002f8a913cf51649e files/nautilus-2.12.1-symlink-del.patch 1906
+MD5 960a9426b4468f4f4c4eaad973674022 files/nautilus-2.13.4-no-desktop.patch 1068
+RMD160 a93b790c83317c78860196bcbb315567fba6cc49 files/nautilus-2.13.4-no-desktop.patch 1068
+SHA256 c26db48959f7949afe78658c2a4d8e561e7aaed68877aa510b5f28f79a2543e2 files/nautilus-2.13.4-no-desktop.patch 1068
 MD5 76cc1af40c4dc75ce99179ae9b25a2cd files/nautilus-2.9.90-icon_view_gst.patch 8136
 RMD160 adc024c514ce2dd2af2962caa8941fce250ab2b1 files/nautilus-2.9.90-icon_view_gst.patch 8136
 SHA256 b6e7eef6e3ff11a9e3490e371ec06a9cd24b9251b7cad7262204071ff67a8a31 files/nautilus-2.9.90-icon_view_gst.patch 8136
@@ -61,3 +67,6 @@ SHA256 3c555b1e7b8264e25e997fdcce29e111f7a7b2791889712b58c4c53e6ca1c509 nautilus
 MD5 2fab2391cd8020b9a80771d635a31576 nautilus-2.12.2.ebuild 1906
 RMD160 5bf56a63ccb19f07842c4041deffab7ad4d1066a nautilus-2.12.2.ebuild 1906
 SHA256 7c437bffe569bb08c96fbf44c2bb37ff3470147ff433305e60eba39ce4b112e6 nautilus-2.12.2.ebuild 1906
+MD5 6fdb60da5c8dd389619d95cf1fe2a129 nautilus-2.14.0.ebuild 2097
+RMD160 31737651db47c7e10d829da0b7f07d3a81547dfd nautilus-2.14.0.ebuild 2097
+SHA256 7607be57705c9c1c081fad1b8f82143b193a0f9c249b0cffd8d51b6102e36393 nautilus-2.14.0.ebuild 2097

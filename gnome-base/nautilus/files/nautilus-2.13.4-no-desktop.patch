@@ -1,0 +1,33 @@
+--- nautilus-computer.desktop.in	2006-01-09 14:10:48.000000000 -0600
++++ nautilus-computer.desktop.in	2006-01-09 14:10:58.000000000 -0600
+@@ -3,7 +3,7 @@
+ _Name=Computer
+ _Comment=View your computer storage
+ TryExec=nautilus 
+-Exec=nautilus computer:
++Exec=nautilus --no-desktop computer:
+ Icon=gnome-fs-client
+ Terminal=false
+ StartupNotify=true
+--- src/network-scheme.desktop.in	2006-01-09 14:11:17.000000000 -0600
++++ src/network-scheme.desktop.in	2006-01-09 14:11:23.000000000 -0600
+@@ -3,7 +3,7 @@
+ _Name=Network Servers
+ _Comment=View your network servers in the Nautilus file manager
+ TryExec=nautilus
+-Exec=nautilus network:
++Exec=nautilus --no-desktop network:
+ Terminal=false
+ StartupNotify=true
+ Type=Application
+--- nautilus-home.desktop.in	2006-01-09 14:12:23.000000000 -0600
++++ nautilus-home.desktop.in	2006-01-09 14:12:31.000000000 -0600
+@@ -3,7 +3,7 @@
+ _Name=Home Folder
+ _Comment=View your home folder in the Nautilus file manager
+ TryExec=nautilus 
+-Exec=nautilus
++Exec=nautilus --no-desktop
+ Icon=gnome-fs-home
+ Terminal=false
+ StartupNotify=true
