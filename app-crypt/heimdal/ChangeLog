@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.97 2006/03/15 20:26:02 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.98 2006/03/16 05:37:30 dertobi123 Exp $
+
+  16 Mar 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  heimdal-0.7.2.ebuild:
+  ppc stable, bug #121839
 
   15 Mar 2006; Rene Nussbaumer <killerfox@gentoo.org> heimdal-0.7.2.ebuild:
   Stable on hppa. See bug #121839.
