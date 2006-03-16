@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7cd0468f9ba973dd9a0bd8e2cd2f7c43 ChangeLog 9237
-RMD160 1af6ba4443e664593861ea50d147477faa4e2d67 ChangeLog 9237
-SHA256 c63c826db937ee40b23b3adb2913635e52730cbc07183b8e91f5b8bfcfb91759 ChangeLog 9237
+MD5 84bb0c6a9ea9a8eae12af85bd0fffc16 ChangeLog 9393
+RMD160 0efcd518bb270198a689f55dc42879a7d9fe246d ChangeLog 9393
+SHA256 e733d754cc1cb967cf333bea5fcff01cf29428ed79ade79dfdb0ae08bc627611 ChangeLog 9393
 MD5 1b6464d33781295408a0040f65ef0518 files/digest-util-vserver-0.30.209-r1 563
 RMD160 33ef3a9600aee4254ead602205309ccb8b083211 files/digest-util-vserver-0.30.209-r1 563
 SHA256 63d21d3dfaf63cb2aa1fbe4cd9b3e710ee0647f963f41c7b586eb86728e4aab3 files/digest-util-vserver-0.30.209-r1 563
@@ -13,6 +13,9 @@ SHA256 c32a4f3d3f179735fdc7bad959294949fafc288d51880744c4d62d3dca7b174d files/di
 MD5 8d9cfa00af21d69beb6685341403bed7 files/digest-util-vserver-0.30.210-r5 566
 RMD160 af5b00631ce67db32a6ec003838c0e59b7acda7f files/digest-util-vserver-0.30.210-r5 566
 SHA256 77ea69fc68b2067c0d2e336724005cf332edaec688219620d5f2a8911f627830 files/digest-util-vserver-0.30.210-r5 566
+MD5 17eef7e9bb399a0981d47ffd4db05556 files/digest-util-vserver-0.30.210-r6 566
+RMD160 169c419de796e34c6a12c14a8cc2a67072104507 files/digest-util-vserver-0.30.210-r6 566
+SHA256 3aa7a439f0a9907c82a1a8b107dce0cb62eb2abee4223b68110883507374a3c9 files/digest-util-vserver-0.30.210-r6 566
 MD5 493021fa14e20216e8ce772e9dc10a62 metadata.xml 588
 RMD160 43bd819942f6f0c03bec0bcf67601a7099b59a2b metadata.xml 588
 SHA256 798e87b6d5fb379322178e9f8b7432371f630caaf3fd6ff369e35056483cc31d metadata.xml 588
@@ -25,10 +28,13 @@ SHA256 95ca0c1dde0e9c37c64c592bc8d1931ff716e539d55012bd6fa5cb859bfa6436 util-vse
 MD5 1b904d6d52fa23073d9f23d5e1e86bc6 util-vserver-0.30.210-r5.ebuild 2940
 RMD160 b6be76e818cf2f10a9ffaaa71c950f09a2161bdb util-vserver-0.30.210-r5.ebuild 2940
 SHA256 7edf52e95d8fdc1dc3101f7d99ebab55b8ac2533993df4ce8f06cf00f302e853 util-vserver-0.30.210-r5.ebuild 2940
+MD5 4e47805b6519e7db29f1fe7c36274c09 util-vserver-0.30.210-r6.ebuild 2940
+RMD160 e1ba06fb63519a9e69ce221c4ace3668dbca4f74 util-vserver-0.30.210-r6.ebuild 2940
+SHA256 c310e6564384fc07b9b56aa1e6660732ffb77d6d84fd18e3ac6d35807c0b3e37 util-vserver-0.30.210-r6.ebuild 2940
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEE9DrflZ8QqxhrsMRAnwtAJ0UiLQlLHiDt60KlvDxzZN2dpYoTQCgmRZQ
-Hsshy1S4POnBkmTC71mLK1w=
-=AHss
+iD8DBQFEGdIfmPFBzbX68WERArG2AJ433WKnLtLbRy02MpmlwcMY+rEZ+wCeIem2
+9yTN9qHMcLAy6ajgEqvtsEo=
+=Ldq6
 -----END PGP SIGNATURE-----
