@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 782b0bc43e7ee9aab5cd94fae2e7fe95 synce-trayicon-0.1.ebuild 698
-MD5 8d8012dd7140d9d75cb3453a1a93dbac synce-trayicon-0.8.ebuild 701
-MD5 b1f24669ede0d9767443d123ae50c718 synce-trayicon-0.9.0.ebuild 781
-MD5 e5d160b5c68c027f0e6ff489c99c6aae synce-trayicon-0.7.ebuild 697
-MD5 76518f0da8494b4fefd54b827ee80b13 ChangeLog 1519
-MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
-MD5 ecada659aab9cec7c3c8222653bf7ebe files/digest-synce-trayicon-0.9.0 72
+MD5 03ef551e8c808ed3ed880625f8cb3105 ChangeLog 1625
+RMD160 a7572b7f36c3cb3b45350b3b8b63f27d591a9793 ChangeLog 1625
+SHA256 f7f510dba67068d9eb933e49274d0c4e49f7f0a4defd9e9b12358cf9d172712e ChangeLog 1625
 MD5 7cf6c46055f841330b7540122edfe404 files/digest-synce-trayicon-0.1 70
+RMD160 1ef2f74d84a34ad1f9ce73b24c068910f1b03ecd files/digest-synce-trayicon-0.1 70
+SHA256 572a9f85bc09df7b2f8037a5eb1a2558be36fbc3e6b45d648bb9ef42a1fb7898 files/digest-synce-trayicon-0.1 70
 MD5 6c8237704b30a6931b8db50b011af622 files/digest-synce-trayicon-0.7 70
+RMD160 2ba75630596d8c4ec25bdc56896b6e97f6ae589e files/digest-synce-trayicon-0.7 70
+SHA256 4c42223e984ec57c7b258b5c3a289784adea7eafa7de06f66e04838370e81569 files/digest-synce-trayicon-0.7 70
 MD5 507eb400a46be42eaf48af2f916299d9 files/digest-synce-trayicon-0.8 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCerLnI1lqEGTUzyQRArTJAKCms5Zc5y8QNahi6DTXIvpC1XMUkwCbB+yq
-I0HKlUU1QmTqzFE1tO7nJZw=
-=+osl
------END PGP SIGNATURE-----
+RMD160 5b727b21781a7d200f3f121dee6171e106a98778 files/digest-synce-trayicon-0.8 70
+SHA256 0167634fd6bad60967d7153797643372dbed37f1b056b457c2e27e0d715738cb files/digest-synce-trayicon-0.8 70
+MD5 ecada659aab9cec7c3c8222653bf7ebe files/digest-synce-trayicon-0.9.0 72
+RMD160 742b2da1bd2b377386fc0a4cc0c2354cfa787723 files/digest-synce-trayicon-0.9.0 72
+SHA256 3fe96b1808cda3aea599efefbc4741cb40c5fa0fedf2fa9ce823e64cb2a820d4 files/digest-synce-trayicon-0.9.0 72
+MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
+RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
+SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
+MD5 782b0bc43e7ee9aab5cd94fae2e7fe95 synce-trayicon-0.1.ebuild 698
+RMD160 b87da3a02074617a0fe12a59075ae5f577cfbef0 synce-trayicon-0.1.ebuild 698
+SHA256 68dd7babdd464b833cd21dc7baea0b8c3e6f7be015dfcc7d39af30e5749cdfd1 synce-trayicon-0.1.ebuild 698
+MD5 e5d160b5c68c027f0e6ff489c99c6aae synce-trayicon-0.7.ebuild 697
+RMD160 eae389cd6ccfb09018f3ddfb6a7691e767db4ed6 synce-trayicon-0.7.ebuild 697
+SHA256 50d7a4a35c63b355789ff264c94f689c138f32938e08afba434402be47b6d89f synce-trayicon-0.7.ebuild 697
+MD5 8d8012dd7140d9d75cb3453a1a93dbac synce-trayicon-0.8.ebuild 701
+RMD160 eff83d4a74b3deeb06207b3ea7b74e8c8325f1bf synce-trayicon-0.8.ebuild 701
+SHA256 7cdd3e2cabe74cf9e0753b44bcb5aaf73226bfa20ea47001e6f88b9f5c7970c8 synce-trayicon-0.8.ebuild 701
+MD5 345bcb7cab735fc27c5906f781545022 synce-trayicon-0.9.0.ebuild 790
+RMD160 7a9a030ac64d04e7fe6a2f7dafecb0d388ee143e synce-trayicon-0.9.0.ebuild 790
+SHA256 18695f61999da80712f7d87751b2db70711e79bf857b7847d5f3f424c959ec3e synce-trayicon-0.9.0.ebuild 790
