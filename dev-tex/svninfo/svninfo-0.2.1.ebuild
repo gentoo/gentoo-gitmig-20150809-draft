@@ -1,8 +1,8 @@
 # Copyright 2005-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/svninfo-0.2.1.ebuild,v 1.3 2006/03/03 18:40:57 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/svninfo-0.2.1.ebuild,v 1.4 2006/03/16 12:49:22 ehmsen Exp $
 
-inherit latex-package
+inherit latex-package eutils
 
 S="${WORKDIR}/${PN}"
 LICENSE="LPPL-1.2"
