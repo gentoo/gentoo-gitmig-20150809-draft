@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5093 2006/03/16 00:34:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5094 2006/03/16 08:09:54 joem Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -78,6 +78,7 @@ net-libs/enet
 >=gnome-base/libbonoboui-2.13
 >=gnome-base/libgnome-2.13
 >=gnome-base/libgnomeui-2.13
+>=gnome-base/libgnomecanvas-2.13
 >=x11-libs/pango-1.11
 >=gnome-extra/bug-buddy-2.13
 >=gnome-base/control-center-2.13
