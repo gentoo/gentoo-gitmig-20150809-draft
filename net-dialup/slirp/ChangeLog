@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/slirp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slirp/ChangeLog,v 1.4 2005/12/27 10:15:41 mrness Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slirp/ChangeLog,v 1.5 2006/03/16 21:58:42 mrness Exp $
+
+*slirp-1.0.17 (16 Mar 2006)
+
+  16 Mar 2006; Alin Nastac <mrness@gentoo.org> slirp-1.0.16.ebuild,
+  +slirp-1.0.17.ebuild:
+  Remove virtual/libc dependency. Use mirror://sourceforge in SRC_URI. Version
+  bump.
 
   27 Dec 2005; Alin Nastac <mrness@gentoo.org> -slirp-1.0.13.ebuild:
   Remove obsolete version.
