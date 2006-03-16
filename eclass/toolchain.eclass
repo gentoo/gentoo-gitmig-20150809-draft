@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.250 2006/03/10 00:46:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.251 2006/03/16 09:11:55 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -891,7 +891,12 @@ gcc-compiler_pkg_preinst() {
 
 gcc-compiler_pkg_postinst() {
 	export LD_LIBRARY_PATH=${LIBPATH}:${LD_LIBRARY_PATH}
-	do_gcc_config
+
+	if has_version 'app-admin/eselect-compiler' ; then
+		do_eselect_compiler
+	else
+		do_gcc_config
+	fi
 
 	echo
 	einfo "If you have issues with packages unable to locate libstdc++.la,"
@@ -1990,22 +1995,12 @@ should_we_gcc_config() {
 	use build && return 0
 
 	# if the current config is invalid, we definitely want a new one
-	local curr_config
-	if has_version 'app-admin/eselect-compiler' ; then
-		curr_config=$(env -i eselect compiler show ${CTARGET} 2>&1) || return 0
-	else
-		curr_config=$(env -i gcc-config -c ${CTARGET} 2>&1) || return 0
-	fi
+	local curr_config=$(env -i gcc-config -c ${CTARGET} 2>&1) || return 0
 
 	# if the previously selected config has the same major.minor (branch) as
 	# the version we are installing, then it will probably be uninstalled
 	# for being in the same SLOT, make sure we run gcc-config.
-	local curr_config_ver
-	if has_version 'app-admin/eselect-compiler' ; then
-		curr_config_ver=$(env -i eselect compiler show ${CTARGET} | cut -f1 -d/ | awk -F - '{ print $5 }')
-	else
-		curr_config_ver=$(env -i gcc-config -S ${curr_config} | awk '{print $2}')
-	fi
+	local curr_config_ver=$(env -i gcc-config -S ${curr_config} | awk '{print $2}')
 
 	local curr_branch_ver=$(get_version_component_range 1-2 ${curr_config_ver})
 
@@ -2027,11 +2022,7 @@ should_we_gcc_config() {
 		einfo "switch to the newly installed gcc version, do the"
 		einfo "following:"
 		echo
-		if has_version 'app-admin/eselect-compiler' ; then
-			einfo "eselect compiler set <profile>"
-		else
-			einfo "gcc-config ${CTARGET}-${GCC_CONFIG_VER}"
-		fi
+		einfo "gcc-config ${CTARGET}-${GCC_CONFIG_VER}"
 		einfo "source /etc/profile"
 		echo
 		ebeep
@@ -2041,81 +2032,120 @@ should_we_gcc_config() {
 
 do_gcc_config() {
 	if ! should_we_gcc_config ; then
-		# Just make sure all our LDPATH's are updated
-		if has_version 'app-admin/eselect-compiler' ; then
-			eselect compiler update
-		else
-			env -i gcc-config --use-old --force
-		fi
+		env -i gcc-config --use-old --force
 		return 0
 	fi
 
-	if has_version 'app-admin/eselect-compiler' ; then
-		local current_gcc_config=$(env -i eselect compiler show ${CTARGET})
-		local current_specs=$(echo ${current_gcc_config} | cut -f2 -d/)
-		if eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${current_specs} &> /dev/null; then
-			einfo "The following compiler profile has been activated based on your previous profile:"
-			einfo "${CTARGET}-${GCC_CONFIG_VER}/${current_specs}"
+	local current_gcc_config="" current_specs="" use_specs=""
+
+	# We grep out any possible errors
+	current_gcc_config=$(env -i gcc-config -c ${CTARGET} | grep -v '^ ')
+	if [[ -n ${current_gcc_config} ]] ; then
+		# figure out which specs-specific config is active
+		current_specs=$(gcc-config -S ${current_gcc_config} | awk '{print $3}')
+		[[ -n ${current_specs} ]] && use_specs=-${current_specs}
+	fi
+	if [[ -n ${use_specs} ]] && \
+	   [[ ! -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}${use_specs} ]]
+	then
+		ewarn "The currently selected specs-specific gcc config,"
+		ewarn "${current_specs}, doesn't exist anymore. This is usually"
+		ewarn "due to enabling/disabling hardened or switching to a version"
+		ewarn "of gcc that doesnt create multiple specs files. The default"
+		ewarn "config will be used, and the previous preference forgotten."
+		ebeep
+		epause
+		use_specs=""
+	fi
+
+	gcc-config ${CTARGET}-${GCC_CONFIG_VER}${use_specs}
+}
+
+should_we_eselect_compiler() {
+	# we only want to switch compilers if installing to / or /tmp/stage1root
+	[[ ${ROOT} == "/" || ${ROOT} == "/tmp/stage1root" ]] || return 1
+
+	# we always want to run gcc-config if we're bootstrapping, otherwise
+	# we might get stuck with the c-only stage1 compiler
+	use bootstrap && return 0
+	use build && return 0
+
+	# if the current config is invalid, we definitely want a new one
+	local curr_config=$(env -i eselect compiler show ${CTARGET} 2>&1) || return 0
+	[[ -z ${curr_config} || ${curr_config} == "(none)" ]] && return 0
+
+	# if the previously selected config has the same major.minor (branch) as
+	# the version we are installing, then it will probably be uninstalled
+	# for being in the same SLOT, make sure we run gcc-config.
+	local curr_config_ver=$(echo ${curr_config} | cut -f1 -d/ | awk -F - '{ print $5 }')
+	local curr_branch_ver=$(get_version_component_range 1-2 ${curr_config_ver})
+
+	# If we're using multislot, just run gcc-config if we're installing
+	# to the same profile as the current one.
+	use multislot && return $([[ ${curr_config_ver} == ${GCC_CONFIG_VER} ]])
+
+	if [[ ${curr_branch_ver} == ${GCC_BRANCH_VER} ]] ; then
+		return 0
+	else
+		# if we're installing a genuinely different compiler version,
+		# we should probably tell the user -how- to switch to the new
+		# gcc version, since we're not going to do it for him/her.
+		# We don't want to switch from say gcc-3.3 to gcc-3.4 right in
+		# the middle of an emerge operation (like an 'emerge -e world'
+		# which could install multiple gcc versions).
+		einfo "The current gcc config appears valid, so it will not be"
+		einfo "automatically switched for you.  If you would like to"
+		einfo "switch to the newly installed gcc version, do the"
+		einfo "following:"
+		echo
+		einfo "eselect compiler set <profile>"
+		echo
+		ebeep
+		return 1
+	fi
+}
+
+do_eselect_compiler() {
+	if ! should_we_eselect_compiler; then
+		eselect compiler update
+		return 0
+	fi
+
+	local current_specs=$(env -i eselect compiler show ${CTARGET} | cut -f2 -d/)
+
+	if [[ -n ${current_specs} && ${current_specs} != "(none)" ]] && eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${current_specs} &> /dev/null; then
+		einfo "The following compiler profile has been activated based on your previous profile:"
+		einfo "${CTARGET}-${GCC_CONFIG_VER}/${current_specs}"
+	else
+		# We couldn't choose based on the old specs, so fall back on vanilla/hardened based on USE
+
+		local spec
+		if use hardened ; then
+			spec="hardened"
 		else
-			local prefix=${current_specs%-*}
-			[[ -n ${prefix} ]] && prefix="${prefix}-"
+			spec="vanilla"
+		fi
 
-			local spec
-			if use hardened ; then
-				spec="hardened"
-			else
-				spec="vanilla"
-			fi
-
-			if eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${prefix}${spec} &> /dev/null ; then
+		local profile
+		local isset=0
+		for profile in "${current_specs%-*}-${spec}" "${DEFAULT_ABI}-${spec}" "${spec}" ; do
+			if eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${profile} &> /dev/null ; then
 				ewarn "We were not able to select the currently in use profile with"
 				ewarn "your newly emerged gcc.  Instead, we have enabled the following:"
-				ewarn "${CTARGET}-${GCC_CONFIG_VER}/${prefix}${spec}"
+				ewarn "${CTARGET}-${GCC_CONFIG_VER}/${profile}"
 				ewarn "If this is incorrect, please use 'eselect compiler set' to"
 				ewarn "select another profile."
-			else
-				if [[ -n ${DEFAULT_ABI} ]] ; then
-					prefix="${DEFAULT_ABI}-"
-				fi
 
-				if eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${prefix}${spec} &> /dev/null ; then
-					ewarn "We were not able to select the currently in use profile with"
-					ewarn "your newly emerged gcc.  Instead, we have enabled the following:"
-					ewarn "${CTARGET}-${GCC_CONFIG_VER}/${prefix}${spec}"
-					ewarn "If this is incorrect, please use 'eselect compiler set' to"
-					ewarn "select another profile."
-				else
-					eerror "We were not able to automatically set the current compiler"
-					eerror "to your newly emerged gcc.  Please use 'eselect compiler set'"
-					eerror "to select your compiler."
-				fi
+				isset=1
+				break
 			fi
-		fi
-	else
-		local current_gcc_config="" current_specs="" use_specs=""
+		done
 
-		# We grep out any possible errors
-		current_gcc_config=$(env -i gcc-config -c ${CTARGET} | grep -v '^ ')
-		if [[ -n ${current_gcc_config} ]] ; then
-			# figure out which specs-specific config is active
-			current_specs=$(gcc-config -S ${current_gcc_config} | awk '{print $3}')
-			[[ -n ${current_specs} ]] && use_specs=-${current_specs}
+		if [[ ${isset} == 0 ]] ; then
+			eerror "We were not able to automatically set the current compiler"
+			eerror "to your newly emerged gcc.  Please use 'eselect compiler set'"
+			eerror "to select your compiler."
 		fi
-
-		if [[ -n ${use_specs} ]] && \
-		   [[ ! -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}${use_specs} ]]
-		then
-			ewarn "The currently selected specs-specific gcc config,"
-			ewarn "${current_specs}, doesn't exist anymore. This is usually"
-			ewarn "due to enabling/disabling hardened or switching to a version"
-			ewarn "of gcc that doesnt create multiple specs files. The default"
-			ewarn "config will be used, and the previous preference forgotten."
-			ebeep
-			epause
-			use_specs=""
-		fi
-
-		gcc-config ${CTARGET}-${GCC_CONFIG_VER}${use_specs}
 	fi
 }
 
