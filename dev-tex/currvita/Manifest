@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4a0e66303b573d7adee47986e9c6cfa6 currvita-0.9i.ebuild 1022
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 1da3a2a84397b818dc0022f0df7ceef1 ChangeLog 719
+MD5 b75dd90e2a91e1a8e2dae69180f3771d ChangeLog 865
+RMD160 bf67a6df62346eaa5e97bb34b17e015b3d049c65 ChangeLog 865
+SHA256 8af6dd96aba4b7b6007f89956c117e8f2625ec74c5a4368f7ee20a619c26df8b ChangeLog 865
+MD5 607c71f23172c5cb6f22ba12f13c4749 currvita-0.9i.ebuild 1003
+RMD160 555f654ac31d107de71df4639c11ecfa8c74739e currvita-0.9i.ebuild 1003
+SHA256 3fb44c24af45c62e3b4ead674a54fe10b3e849a948ae2bfd2013b813381a0fd2 currvita-0.9i.ebuild 1003
 MD5 4f2ce4b827e6c0f6c8c0bf3da0468c46 files/digest-currvita-0.9i 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBdR+tVWNWqTUmv+0RAlWJAJ9vuach+XJAWNPJKpMd3+jMGuWhcgCfTfJW
-khPmBIBkano24E6rkGeTgXU=
-=hdrd
------END PGP SIGNATURE-----
+RMD160 143a34bc53e67d3f9cc0ef899bde5025dec3955b files/digest-currvita-0.9i 64
+SHA256 cc1f911b1b59013ad26d1b923a57c5bbbbaf71db1658707b11b14963f2c709e4 files/digest-currvita-0.9i 64
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
+SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164

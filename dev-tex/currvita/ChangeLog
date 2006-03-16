@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/currvita
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/currvita/ChangeLog,v 1.4 2004/10/19 14:13:31 usata Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/currvita/ChangeLog,v 1.5 2006/03/16 13:46:02 ehmsen Exp $
+
+  16 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org> currvita-0.9i.ebuild:
+  Removed depend =app-text/tetex-1* since !>=app-text/tetex-2 is enough.
 
   19 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> currvita-0.9i.ebuild:
   Blocks >=tetex-2.
