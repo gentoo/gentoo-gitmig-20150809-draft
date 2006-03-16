@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/vbox3
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/vbox3/ChangeLog,v 1.3 2005/05/15 16:56:10 mrness Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/vbox3/ChangeLog,v 1.4 2006/03/16 22:15:48 mrness Exp $
+
+  16 Mar 2006; Alin Nastac <mrness@gentoo.org> vbox3-0.1.9.ebuild:
+  Remove virtual/libc dependency.
 
   15 May 2005; Alin Nastac <mrness@gentoo.org> vbox3-0.1.9.ebuild:
   Added ~amd64 keyword.

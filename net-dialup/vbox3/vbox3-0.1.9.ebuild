@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/vbox3/vbox3-0.1.9.ebuild,v 1.3 2005/05/15 16:56:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/vbox3/vbox3-0.1.9.ebuild,v 1.4 2006/03/16 22:15:48 mrness Exp $
 
 inherit eutils libtool
 
@@ -13,16 +13,15 @@ LICENSE="GPL-2"
 IUSE=""
 SLOT="0"
 
-DEPEND="virtual/libc
-	sys-libs/ncurses
+DEPEND="sys-libs/ncurses
 	dev-lang/tcl"
 RDEPEND="${DEPEND}
 	net-dialup/isdn4k-utils"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/makefile-${PV}.patch || die "failed to patch makefile"
+	cd "${S}"
+	epatch "${FILESDIR}/makefile-${PV}.patch" || die "failed to patch makefile"
 	elibtoolize
 }
 
@@ -37,5 +36,5 @@ src_install() {
 
 	# install logrotate configs
 	insinto /etc/logrotate.d
-	newins ${FILESDIR}/vbox3.logrotate vbox3
+	newins "${FILESDIR}/vbox3.logrotate" vbox3
 }

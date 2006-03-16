@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4fcea64783a9edf4e29194856fee9886 vbox3-0.1.9.ebuild 964
-MD5 cd5a7ced93a4c11b79797017741c094a ChangeLog 637
-MD5 f15551f78ce3ec5ff2e941977a01272b metadata.xml 225
+MD5 e8db38ef1186799bfcf08b2c51977215 ChangeLog 739
+MD5 b9a72f9dce2fd7544e6014e5c2c9a55b files/digest-vbox3-0.1.9 63
 MD5 15ef676fec91271f9a48dc7a1b7e82a2 files/makefile-0.1.9.patch 1211
 MD5 c578f2a311150c592b0e504f8f206cd1 files/vbox3.logrotate 428
-MD5 b9a72f9dce2fd7544e6014e5c2c9a55b files/digest-vbox3-0.1.9 63
+MD5 f15551f78ce3ec5ff2e941977a01272b metadata.xml 225
+MD5 43bb3b26df9e6495ce5b47458a9b2c8d vbox3-0.1.9.ebuild 956
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFCh38/jiC39V7gKu0RAkwCAKDN9nBJc86PRFB7GpVkosWDfsP3BwCfdH5c
-1XShnvLLmz25owTLP4vsYtY=
-=LjmH
+iD8DBQFEGeOmjG8pv1lIUX4RAodjAJ9tvAtT3F9088WCXO3NF2k7X6gcRACgirIe
+nkGCVZlF6ibMwCdwT8KiyRk=
+=CNi2
 -----END PGP SIGNATURE-----
