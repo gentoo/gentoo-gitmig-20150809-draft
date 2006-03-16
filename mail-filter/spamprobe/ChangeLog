@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamprobe
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.15 2006/02/19 18:55:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.16 2006/03/16 06:01:28 halcy0n Exp $
+
+  16 Mar 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/spamprobe-1.4b-gcc41.patch, spamprobe-1.4b.ebuild:
+  Add patch to fix compilation with gcc-4.1; bug #125347
 
 *spamprobe-1.4b (19 Feb 2006)
 
