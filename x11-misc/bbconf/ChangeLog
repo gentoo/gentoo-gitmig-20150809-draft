@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbconf
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbconf/ChangeLog,v 1.15 2005/07/07 05:18:09 caleb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbconf/ChangeLog,v 1.16 2006/03/16 13:09:43 caleb Exp $
+
+  16 Mar 2006; Caleb Tennis <caleb@gentoo.org> bbconf-1.10.ebuild:
+  remove x dep, as Qt pulls it in
 
   07 Jul 2005; Caleb Tennis <caleb@gentoo.org> bbconf-1.10.ebuild:
   Fix qt dep
