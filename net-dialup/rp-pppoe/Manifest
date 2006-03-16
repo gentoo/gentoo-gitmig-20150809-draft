@@ -1,30 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 452036ec25bde5b25a04ee8dc9f01445 ChangeLog 9841
+MD5 e33b7af5d24283785291966b51df0a52 ChangeLog 10197
 MD5 d455684124113e2349a9c674b55b493e files/digest-rp-pppoe-3.5-r11 125
-MD5 084f86d12b06314440de4fce0eee3c5c files/digest-rp-pppoe-3.6 125
 MD5 25bde10ecb7d85440305687fcb0be656 files/digest-rp-pppoe-3.7 125
 MD5 3ec97394e888b357e2c6020b3ab0155c files/rp-pppoe-3.5-dsa-557.patch 5581
 MD5 4e9fa8d65d286e5e37e953e7c822c70e files/rp-pppoe-3.5-gentoo-netscripts.patch 5180
 MD5 d6678e5d124fa519195709326558af27 files/rp-pppoe-3.5-on-demand-with-plugin.patch 1058
 MD5 fa756506d5f5af4fbd15dac93d9a1e69 files/rp-pppoe-3.5-username-charset.patch 1991
-MD5 b62b08755726e381ca8d6afd92662b8f files/rp-pppoe-3.6-gentoo-netscripts.patch 5214
-MD5 adcd7cb58c9366ef245cc00bb9c598f4 files/rp-pppoe-3.6-on-demand-with-plugin.patch 1062
-MD5 f1c5a33429cf0b27398d3527b2103bd2 files/rp-pppoe-3.6-plugin-options.patch 563
-MD5 f2caeab7f4873474a04c98ab57b6c92a files/rp-pppoe-3.6-username-charset.patch 1946
 MD5 1136fc6ab8a39846868abeecc59addfc files/rp-pppoe-3.7-gentoo-netscripts.patch 5218
 MD5 10c9907b8295cb2bde533dc839be54dd files/rp-pppoe-3.7-on-demand-with-plugin.patch 1062
 MD5 d33f0962a5a8171533812f5701181421 files/rp-pppoe-3.7-plugin-options.patch 554
 MD5 161308d48042efd0ade491fd5429e4bc files/rp-pppoe-3.7-username-charset.patch 1946
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 d728978d28ed0d7042bac5857e5f62ff rp-pppoe-3.5-r11.ebuild 2404
-MD5 70014f440ee102624727f6d9cda99d5e rp-pppoe-3.6.ebuild 2518
-MD5 adca0e42c4f8f2994eca1ed15a1bd09d rp-pppoe-3.7.ebuild 2524
+MD5 0c6719b47153d176887304dffe0848b9 rp-pppoe-3.7.ebuild 2551
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD58PvjG8pv1lIUX4RAs3NAKDWBHWNhRCrMVJnzCIs6AW+qqDyRQCfbIhP
-AYDlgtUyMKONTX+Q3pYtarQ=
-=l5FK
+iD8DBQFEGdDxjG8pv1lIUX4RApy1AJ9ed0Rnlvao6lQ6LQGc6q23wdQkvACeOYrl
+lYQO+ATJ9E+wtqaaE41JB7s=
+=BFxH
 -----END PGP SIGNATURE-----
