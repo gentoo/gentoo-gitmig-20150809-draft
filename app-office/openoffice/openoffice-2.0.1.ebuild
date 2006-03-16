@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.24 2006/02/15 12:12:05 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1.ebuild,v 1.25 2006/03/16 21:29:08 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
-IUSE="binfilter curl eds gnome gtk java kde ldap mozilla xml2"
+IUSE="binfilter eds gnome gtk java kde ldap mozilla xml2"
 
 MY_PV="${PV}.3"
 PATCHLEVEL="OOA680"
@@ -73,7 +73,7 @@ DEPEND="${RDEPEND}
 	dev-perl/Archive-Zip
 	dev-util/pkgconfig
 	dev-util/intltool
-	curl? ( >=net-misc/curl-7.9.8 )
+	>=net-misc/curl-7.9.8
 	sys-libs/zlib
 	sys-libs/pam
 	!dev-util/dmake
@@ -145,7 +145,6 @@ src_unpack() {
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
 
 	echo "`use_enable binfilter`" >> ${CONFFILE}
-	echo "`use_with curl system-curl`" >> ${CONFFILE}
 	echo "`use_with xml2 system-libxml`" >> ${CONFFILE}
 
 	echo "`use_with mozilla system-mozilla`" >> ${CONFFILE}
@@ -155,6 +154,8 @@ src_unpack() {
 	echo "`use_enable eds evolution2`" >> ${CONFFILE}
 	echo "`use_enable gnome gnome-vfs`" >> ${CONFFILE}
 	echo "`use_enable gnome lockdown`" >> ${CONFFILE}
+
+	echo "--with-system-curl"  >> ${CONFFILE}
 
 }
 
