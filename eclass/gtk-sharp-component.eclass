@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.23 2006/01/29 04:05:30 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.24 2006/03/16 07:02:44 latexer Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -16,6 +16,10 @@ RESTRICT="test"
 
 [ "${PV:0:1}" == "2" ] \
 	&& SOURCE_SERVER="http://www.go-mono.com/sources/gtk-sharp-2.0/"
+
+# Can be switched to [ "${PV:0:3}" == "2.8" ] when 2.8.0 is out of the tree.
+[ "${PV}" == "2.8.2" ] \
+	&& SOURCE_SERVER="http://www.go-mono.com/sources/gtk-sharp-2.8/"
 
 [ "${PV}" == "1.0.10" ] \
 	&& SOURCE_SERVER="http://www.go-mono.com/sources/gtk-sharp/"
@@ -90,16 +94,6 @@ gtk-sharp-component_fix_makefiles() {
 			${makefiles} || die "Failed to fix the gtk-sharp makefiles"
 	fi
 
-	# Changes specific to 1.9.3
-#	if [ "${PV:0:5}" == "1.9.3" ] || \
-#	   [ "${PV:0:5}" == "1.9.5" ] || \
-#	   [ "${PV:0:3}" == "2.3" ] || \
-#	   [ "${PV:0:3}" == "2.5" ] ; then
-#		sed -i -e "s:\$(API) \$(top_builddir)/parser/gapi-fixup.exe:\$(API):" \
-#			-e "s:\$(API) \$(top_builddir)/generator/gapi_codegen.exe:\$(API):" \
-#			${makefiles} || die "Failed to fix the gtk-sharp makefiles"
-#	fi
-
 	# Changes specific to *-sharp-1.0.x
 	if [ "${PV:0:3}" = "1.0" ] ; then
 		sed -i -e "s:\$(RUNTIME) \.\./parser/gapi-fixup.exe:${GAPI_FIXUP}:" \
@@ -107,12 +101,6 @@ gtk-sharp-component_fix_makefiles() {
 			-e "s: \.\./generator/gapi_codegen.exe::" \
 			${makefiles} || die "Failed to fix the gtk-sharp makefiles"
 	fi
-
-	# Changes only in 1.9.x
-#	if [ "${PV:0:1}" == "2" ]; then
-#		sed -i -e "s;\.\./[[:alpha:]]*/\([[:alpha:]]*\(-[[:alpha:]]*\)*\).dll;${GTK_SHARP_LIB_DIR}/\1.dll;g" \
-#			${makefiles} || die "Failed to fix the gtk-sharp makefiles"
-#	fi
 }
 
 gtk-sharp-component_src_unpack() {
