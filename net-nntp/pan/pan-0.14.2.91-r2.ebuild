@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.14.2.91-r2.ebuild,v 1.1 2005/04/30 16:09:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.14.2.91-r2.ebuild,v 1.2 2006/03/17 19:19:58 swegener Exp $
 
 inherit eutils libtool
 
@@ -25,8 +25,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.21
 	sys-devel/gettext"
 
-export CONFIG_PROTECT_MASK="/etc/gconf"
-
 pkg_setup() {
 	# Likely that glibc might of been compiled with nls turned off.
 	# Warn people that Pan requires glibc to have nls support.
@@ -38,10 +36,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix for building with gcc4
-	epatch ${FILESDIR}/${P}-gcc4-2.patch
+	epatch "${FILESDIR}"/${P}-gcc4-2.patch
 
 	elibtoolize || die "elibtoolize failed"
 }
@@ -52,7 +50,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "Installation failed"
+	make install DESTDIR="${D}" || die "Installation failed"
 	dodoc AUTHORS ChangeLog CREDITS NEWS README TODO || die "dodoc failed"
 	dohtml ANNOUNCE.html docs/{pan-shortcuts,faq}.html || die "dodoc failed"
 }

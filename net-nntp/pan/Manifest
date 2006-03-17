@@ -1,23 +1,49 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6ed7a7a5f6fad9864cd7c2f99c316db8 pan-0.14.2.91-r2.ebuild 1503
-MD5 46f15d3f60ab45741b8f5564e8bd1e9a ChangeLog 7648
-MD5 6225c7c8a053c3b857b7b6ca504bd4f9 pan-0.14.2.ebuild 1388
-MD5 fa3ef41f66f2528be36433103d3de8bb pan-0.14.2-r1.ebuild 1497
-MD5 087aeddbbb6077618899e307c8553b82 pan-0.14.2.91-r3.ebuild 1607
-MD5 b379ecb012e58dcb29c4feee0f5219f2 metadata.xml 180
-MD5 179a6776627498e226a1cc2d6bdc33d2 files/digest-pan-0.14.2-r1 64
-MD5 8ba6afcc31900a8353dc12ef62681f38 files/pan-0.14.2.91-gcc4-2.patch 698
-MD5 daf4b06f3fce576fbf35e97bcffa9305 files/pan-0.14.2.91-gcc4.patch 698
-MD5 bc715242bd05043ca432fb54b03e2fdf files/digest-pan-0.14.2.91-r3 67
+MD5 7da863d54e08c724a1bf9b0f06215c11 ChangeLog 7855
+RMD160 dd076e5bcb5a9115cf94aa5faf417bfea3ebe7b9 ChangeLog 7855
+SHA256 c4a3a91104cf08dd505955a9a13135ded61657eb01fe0aae0848ef7abc796838 ChangeLog 7855
+MD5 72c35710e002d771c38f77fafe79a81e files/digest-pan-0.14.2 238
+RMD160 0692796f69e5d5031dec0c6184cc2f0472ff2ca3 files/digest-pan-0.14.2 238
+SHA256 0d4a0d22cbed45ce133c3985187ad22f4546d158518158b2c1aa9436774752de files/digest-pan-0.14.2 238
+MD5 72c35710e002d771c38f77fafe79a81e files/digest-pan-0.14.2-r1 238
+RMD160 0692796f69e5d5031dec0c6184cc2f0472ff2ca3 files/digest-pan-0.14.2-r1 238
+SHA256 0d4a0d22cbed45ce133c3985187ad22f4546d158518158b2c1aa9436774752de files/digest-pan-0.14.2-r1 238
+MD5 d152a8653dee5ea6431db5edf1755d13 files/digest-pan-0.14.2.91-r2 247
+RMD160 c0e544450dd8022c47ba3b5280903cf4dc843ae4 files/digest-pan-0.14.2.91-r2 247
+SHA256 d0cbdc62146b373a7130015a1e027e5c0097cc53877112d489f2deb64dbdbfa0 files/digest-pan-0.14.2.91-r2 247
+MD5 d152a8653dee5ea6431db5edf1755d13 files/digest-pan-0.14.2.91-r3 247
+RMD160 c0e544450dd8022c47ba3b5280903cf4dc843ae4 files/digest-pan-0.14.2.91-r3 247
+SHA256 d0cbdc62146b373a7130015a1e027e5c0097cc53877112d489f2deb64dbdbfa0 files/digest-pan-0.14.2.91-r3 247
 MD5 daf054bb0ce6c974d349b379460e882b files/pan-0.14.2-update-desktop-file.patch 1028
-MD5 bc715242bd05043ca432fb54b03e2fdf files/digest-pan-0.14.2.91-r2 67
-MD5 179a6776627498e226a1cc2d6bdc33d2 files/digest-pan-0.14.2 64
+RMD160 12a05a7a1050b9d10d0ece9a117ecec930e4f6c2 files/pan-0.14.2-update-desktop-file.patch 1028
+SHA256 ee4b8d882baf52c19ac5b2897fbaa05dfd6efd6b066fc65eea7b4d53d7d99606 files/pan-0.14.2-update-desktop-file.patch 1028
+MD5 8ba6afcc31900a8353dc12ef62681f38 files/pan-0.14.2.91-gcc4-2.patch 698
+RMD160 cca70799a8507af85b2c60857bade4618f7fa75d files/pan-0.14.2.91-gcc4-2.patch 698
+SHA256 fd2ecb4b72c8046d30ef9dec43c088d5d346690c332a7b7dd9b66076b3ff7538 files/pan-0.14.2.91-gcc4-2.patch 698
+MD5 daf4b06f3fce576fbf35e97bcffa9305 files/pan-0.14.2.91-gcc4.patch 698
+RMD160 d608879b9a592ab1d65be0a8f18aad15972b0728 files/pan-0.14.2.91-gcc4.patch 698
+SHA256 618055bc7d43ad728f9db00087c91db7acd165a47b134efcedd9ec2f685bcde3 files/pan-0.14.2.91-gcc4.patch 698
+MD5 b379ecb012e58dcb29c4feee0f5219f2 metadata.xml 180
+RMD160 797b69d3fd6f36d441bda500c1310c91837720a4 metadata.xml 180
+SHA256 1bb112215f4f710d26b79a43b61ec93003963663cfdec7b3b7173cfdbf85f52c metadata.xml 180
+MD5 c187e5454875f125aae15c7d484cf599 pan-0.14.2-r1.ebuild 1464
+RMD160 2ebf773763b8ecdf5990983c37ad4b3632109b46 pan-0.14.2-r1.ebuild 1464
+SHA256 b58be4ddc80e685bfa5a74c1154c606b46a6cca03a0b514c682762ab8d4fb14f pan-0.14.2-r1.ebuild 1464
+MD5 982948aef9744fb57516037e9f5a1a1b pan-0.14.2.91-r2.ebuild 1470
+RMD160 bfeba03a25f8b86be9bb263de83a271ce977f5f5 pan-0.14.2.91-r2.ebuild 1470
+SHA256 97a65ea630ddc4f2d9b73c75044fefa6630454b33be7d57153f6354e6e23c42e pan-0.14.2.91-r2.ebuild 1470
+MD5 0f1d3059a2bf35a942ba4b47ae29cd0d pan-0.14.2.91-r3.ebuild 1576
+RMD160 a65d62e5701abe4d6a7288392c6634f5309f4b97 pan-0.14.2.91-r3.ebuild 1576
+SHA256 47492f10544542647adb76de13868559f10835740c328fba2ac3f562d85492bd pan-0.14.2.91-r3.ebuild 1576
+MD5 011e0c49d003dfb82b28b09ebfbc173e pan-0.14.2.ebuild 1351
+RMD160 f287c7152260e2fde6f0ee41daf178a0c8348282 pan-0.14.2.ebuild 1351
+SHA256 51e06bc77f8bd5ceb67b15c08ab64ec08977b27fcd39360055a8826c0cbbbb21 pan-0.14.2.ebuild 1351
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFCyD2x1ZcsMnZjRyIRAkgqAKCTsdmijtpaz4A7riOdALCOpBbSGwCeLKHz
-w9mbxSOVOu1ESIn2BiTZIeQ=
-=kiA3
+iD8DBQFEGwvsI1lqEGTUzyQRAlOZAJ9vPcxjwyPL/dQAHeYManm8mqFQwgCePR7+
+B0YPtk06yGUd3Sy0j4N4eWw=
+=qFSw
 -----END PGP SIGNATURE-----
