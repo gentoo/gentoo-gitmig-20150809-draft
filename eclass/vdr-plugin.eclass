@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.16 2006/03/15 09:48:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.17 2006/03/17 15:13:24 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -24,19 +24,21 @@
 #
 #
 
-# There are some special files in ${FILESDIR} which get installed when
-# they exist:
-
-# ${FILESDIR}/confd-${PV} or ${FILESDIR}/confd:
-#     The first matching is installed under /etc/conf.d/vdr.${VDRPLUGIN}
-#       (in example vdr-femon this would be /etc/conf.d/vdr.femon)
+# Installation of a config file for the plugin
 #
-#     Everything put in variable _EXTRAOPTS is appended to the command line of
-#     the plugin.
+#     If ${VDR_CONFD_FILE} is set install this file
+#     else install ${FILESDIR}/confd if it exists.
+
+#     Gets installed as /etc/conf.d/vdr.${VDRPLUGIN}.
+#     For the plugin vdr-femon this would be /etc/conf.d/vdr.femon
 
 
-# ${FILESDIR}/rc-addon-${PV}.sh or ${FILESDIR}/rc-addon.sh:
-#     The first matching is installed under /usr/lib/vdr/rcscript/plugin-${VDRPLUGIN}.sh
+# Installation of an rc-addon file for the plugin
+#
+#     If ${VDR_RCADDON_FILE} is set install this file
+#     else install ${FILESDIR}/rc-addon.sh if it exists.
+#
+#     Gets installed under /usr/lib/vdr/rcscript/plugin-${VDRPLUGIN}.sh
 #     (in example vdr-femon this would be /usr/lib/vdr/rcscript/plugin-femon.sh)
 #
 #     This file is sourced by the startscript when plugin is activated in /etc/conf.d/vdr
@@ -182,22 +184,25 @@ vdr-plugin_src_install() {
 	doins libvdr-*.so.*
 	dodoc README* HISTORY CHANGELOG
 
-	for f in ${FILESDIR}/confd-${PV} ${FILESDIR}/confd; do
-		if [[ -f "${f}" ]]; then
-			insinto /etc/conf.d
-			newins "${f}" vdr.${VDRPLUGIN}
-			VDR_PLUGIN_CONFIG_FILE_INSTALLED=1
-			break
-		fi
-	done
 
-	for f in ${FILESDIR}/rc-addon-${PV}.sh ${FILESDIR}/rc-addon.sh; do
-		if [[ -f "${f}" ]]; then
-			insinto "${VDR_RC_DIR}"
-			newins "${f}" plugin-${VDRPLUGIN}.sh
-			break
-		fi
-	done
+	# if VDR_CONFD_FILE is empty and ${FILESDIR}/confd exists take it
+	[[ -z ${VDR_CONFD_FILE} ]] && [[ -e ${FILESDIR}/confd ]] && VDR_CONFD_FILE=${FILESDIR}/confd
+
+	if [[ -n ${VDR_CONFD_FILE} ]]; then
+		insinto /etc/conf.d
+		newins "${VDR_CONFD_FILE}" vdr.${VDRPLUGIN}
+	fi
+
+
+	# if VDR_RCADDON_FILE is empty and ${FILESDIR}/rc-addon.sh exists take it
+	[[ -z ${VDR_RCADDON_FILE} ]] && [[ -e ${FILESDIR}/rc-addon.sh ]] && VDR_RCADDON_FILE=${FILESDIR}/rc-addon.sh
+
+	if [[ -n ${VDR_RCADDON_FILE} ]]; then
+		insinto "${VDR_RC_DIR}"
+		newins "${VDR_RCADDON_FILE}" plugin-${VDRPLUGIN}.sh
+	fi
+
+
 
 	insinto /usr/lib/vdr/checksums
 	if [[ -f ${ROOT}/usr/lib/vdr/checksums/header-md5-vdr ]]; then
@@ -222,7 +227,7 @@ vdr-plugin_pkg_postinst() {
 	einfo
 	einfo "  emerge --config ${PN}"
 	einfo
-	if [[ -n "${VDR_PLUGIN_CONFIG_FILE_INSTALLED}" ]]; then
+	if [[ -n "${VDR_CONFD_FILE}" ]]; then
 		einfo "And have a look at the config-file"
 		einfo "/etc/conf.d/vdr.${VDRPLUGIN}"
 		einfo
