@@ -1,8 +1,18 @@
-MD5 2d6f71da30de6722613bf35a9a29bd57 ChangeLog 2770
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a4ad5e2098648bfabee38ff27c119050 ChangeLog 2870
 MD5 2d1981778d937bdda235adb91f403901 files/digest-httrack-3.23 64
 MD5 b300cdb75d96c6d0184d6dae015e8fb3 files/digest-httrack-3.32.2 67
-MD5 2dd892c860c627851673a3ac942e7953 files/digest-httrack-3.40.2 262
+MD5 07255ec670e52fb5b53d941986ef022a files/digest-httrack-3.40.2 72
 MD5 2ac2a44593e1fd8f93fc6ed13667b213 httrack-3.23.ebuild 1156
 MD5 4fa12afc903790c609529a50d99b7833 httrack-3.32.2.ebuild 743
-MD5 ace55b57c0dd4cb7d709400ab08bbef2 httrack-3.40.2.ebuild 706
+MD5 c86f690300456c405fb3202f3aba2802 httrack-3.40.2.ebuild 705
 MD5 3eed8420335479b400d01f3817b3936a metadata.xml 252
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEGiFIFdQwWVoAgN4RArIQAKDZXfCdKwlLyVd0LuucfsYNnoxTyQCgqeP7
+uLCMdF577mmFwGeNlA7RL40=
+=Ljtp
+-----END PGP SIGNATURE-----
