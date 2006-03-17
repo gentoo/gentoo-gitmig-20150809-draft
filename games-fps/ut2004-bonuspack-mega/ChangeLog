@@ -1,6 +1,18 @@
 # ChangeLog for games-fps/ut2004-bonuspack-mega
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-mega/ChangeLog,v 1.2 2006/03/15 21:36:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-mega/ChangeLog,v 1.3 2006/03/17 21:16:24 wolf31o2 Exp $
+
+  17 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +ut2004-bonuspack-mega-1-r1.ebuild:
+  Added a new revision from Paul Bredbury <brebs@sent.com> and closing bug
+  #123202, bug #116528, and bug #126538.
+
+*ut2004-bonuspack-mega-1-r1 (17 Mar 2006)
+
+  17 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +ut2004-bonuspack-mega-1-r1.ebuild:
+  Added a new revision from Paul Bredbury <brebs@sent.com> and closing bug
+  #123202, bug #116528, and bug #126538.
 
   15 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Changed attribution to the proper author.  Apologies to Paul on this.
