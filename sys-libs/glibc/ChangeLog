@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.435 2006/03/11 09:21:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.436 2006/03/17 04:34:15 vapier Exp $
+
+*glibc-2.4-r1 (17 Mar 2006)
+
+  17 Mar 2006; Mike Frysinger <vapier@gentoo.org> +files/2.4/ssp_simple.c,
+  +glibc-2.4-r1.ebuild:
+  Cut some old mips patches, update the alpha xstat patch, fixup the ssp
+  compat patch #125909 and #125988, and fix the fnmatch patch #126164.
 
   11 Mar 2006; Mike Frysinger <vapier@gentoo.org>
   +files/2.4/glibc-gentoo-libdir.patch, glibc-2.4.ebuild:

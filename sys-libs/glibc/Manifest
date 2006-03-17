@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 16bc1ad4e8791df419e47fb7bda5e59d ChangeLog 90576
-RMD160 54c91d574fac5772e834c2285bf32a6d56e7ceb6 ChangeLog 90576
-SHA256 4aa71f42006e6f4222491e76a12104dd015351e282cf7b387cb4b6a7df2835fc ChangeLog 90576
+MD5 f015a9569db33a2a004d9bf4b4bb68cc ChangeLog 90849
+RMD160 717a6a0a5c8677eb8894201a513aa7ff2eba3bc8 ChangeLog 90849
+SHA256 c2d58d244c49ae5fd1caf24d067198faa00c4ad9a42e908d99862613e1f2dd87 ChangeLog 90849
 MD5 941f13d27badc76c1e3704c59acaff26 files/2.3.1/glibc-2.3.1-ctype-compat-v3.patch 2823
 RMD160 f1162b7f313f7ea18fb178157d3bd6205d818e3a files/2.3.1/glibc-2.3.1-ctype-compat-v3.patch 2823
 SHA256 0bc07eb47578d5bfb98774b18bf07aee2af44a7ccd947602c223b34e0d88394a files/2.3.1/glibc-2.3.1-ctype-compat-v3.patch 2823
@@ -292,6 +292,9 @@ SHA256 0d30aa973b76d6b2c1bc947046978bd0a6f61d7aaf495caf361d14d16a932348 files/2.
 MD5 818c7dc9314e97d36d4dff5efb480066 files/2.4/glibc-gentoo-libdir.patch 991
 RMD160 b68d1bb0fdbff82922905fff6a5d49301fa85c34 files/2.4/glibc-gentoo-libdir.patch 991
 SHA256 2358695c5c0a1e324ebb9c4941fb043e07b5c98cca6ab0685e5412524f2b359c files/2.4/glibc-gentoo-libdir.patch 991
+MD5 573124b48c3117a5acdac52496fdec32 files/2.4/ssp_simple.c 914
+RMD160 d9510f3b13f2fad4e2386c64644b592ef18efc7f files/2.4/ssp_simple.c 914
+SHA256 57d6a3d25b24f13758637bc0b15dd9d0305a4178a5fe55b0bb14a1d2e49fd7c8 files/2.4/ssp_simple.c 914
 MD5 bed7cbcac1e8582deda43664e5b3f19c files/digest-glibc-2.2.5-r10 290
 RMD160 d1e6a3360e9cbf8e1dbe6589ed8524ac2eae4e86 files/digest-glibc-2.2.5-r10 290
 SHA256 4f8f80b5f5795862c929f18b12a5aec45e12ca1352b5f58a8399a62db791dfc7 files/digest-glibc-2.2.5-r10 290
@@ -343,6 +346,9 @@ SHA256 8ec9b852e961654f255e4ae73c2fcc51482fb1b0519834688dba4614f8353216 files/di
 MD5 ae74cbe103b045037059f3a403f87c51 files/digest-glibc-2.4 1006
 RMD160 dd7230a51196b5c5ae244a905725804e888e6ee5 files/digest-glibc-2.4 1006
 SHA256 204561c6b585828c91e761ee2cab644e4f21b89faa622eeea32b15f0caadc88d files/digest-glibc-2.4 1006
+MD5 06c20bd835ea50d69896f3da358b79ad files/digest-glibc-2.4-r1 1006
+RMD160 ea8c1aae00598dff253cc3abbb898051199065b4 files/digest-glibc-2.4-r1 1006
+SHA256 4e0149c9f0b6a213670cd94568f9c3f4bc9a0241643080e406fec67b7a500b32 files/digest-glibc-2.4-r1 1006
 MD5 e4393f4721a207750581d6265d5f7f40 files/fix-sysctl_h.patch 376
 RMD160 b5dd68158224b09ddc42986be02351c74f81e0a0 files/fix-sysctl_h.patch 376
 SHA256 3a589f63fd1f3f6c5a00c66a10943d3d64630aefb1eb5b37e7f2a856fcea234a files/fix-sysctl_h.patch 376
@@ -421,6 +427,9 @@ SHA256 cbc0e956d7825fb11fcd5c7e58abc4273364bebb75b58b94f58e6bf0cb7463b9 glibc-2.
 MD5 287fce00bb2f09dcdb2ddd6eab037278 glibc-2.3.6.ebuild 40748
 RMD160 f41d2f46e5df9f90f27c00b39c73e5d0f651ac6d glibc-2.3.6.ebuild 40748
 SHA256 eed60a53a42b9c70b05068e15e7c58e3f1e3fc23b21f41c569fd112665f91775 glibc-2.3.6.ebuild 40748
+MD5 717064c4f4632ef3afa8992999e0431f glibc-2.4-r1.ebuild 42838
+RMD160 1b25b31e254d8db3bae84495ea20711b4ea4b4dd glibc-2.4-r1.ebuild 42838
+SHA256 78ad678634e3d15d5aaf3b650cf5a71d9882fdf714676a245b0cb4a46ef0bb3b glibc-2.4-r1.ebuild 42838
 MD5 7f1069e3cd454441cc5d0b3be9a02355 glibc-2.4.ebuild 42872
 RMD160 9e88f714e0180127c9dd840b75200ab95a44750c glibc-2.4.ebuild 42872
 SHA256 1e09c37c379e50ebda6ce85ffb8c1e7e2be0a03e3660dd8b675a4a8844fc0748 glibc-2.4.ebuild 42872
@@ -430,7 +439,7 @@ SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEGhUW2+ySkm8kpY0RAjHWAKCLF4k6158Tu78zrXV5iEcgVpluUACgg0Hm
-QJS3pXnaTc3CoT8ovAMkL64=
-=VZRo
+iD8DBQFEGjxb2+ySkm8kpY0RAtEdAKChZX/YgedEavPQWsRzaU6uCzyYhwCgt7b4
+c2MilZ99JZzQ5muPPzp2Otw=
+=ZN+X
 -----END PGP SIGNATURE-----
