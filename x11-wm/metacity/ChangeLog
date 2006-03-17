@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.150 2006/03/14 18:00:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.151 2006/03/17 22:20:44 dertobi123 Exp $
+
+  17 Mar 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  metacity-2.12.3.ebuild:
+  Stable gnome-2.12.3 for ppc, bug #126321
 
   14 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   metacity-2.12.3.ebuild:
