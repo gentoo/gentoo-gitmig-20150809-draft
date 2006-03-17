@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.122 2006/03/15 03:31:44 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.123 2006/03/17 22:22:41 dertobi123 Exp $
+
+  17 Mar 2006; Tobias Scherbaum <dertobi123@gentoo.org> eog-2.12.3.ebuild:
+  Stable gnome-2.12.3 for ppc, bug #126321
 
 *eog-2.14.0 (15 Mar 2006)
 
