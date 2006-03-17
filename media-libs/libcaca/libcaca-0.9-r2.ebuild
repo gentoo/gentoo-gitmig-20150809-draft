@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9-r1.ebuild,v 1.12 2006/03/17 01:49:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9-r2.ebuild,v 1.1 2006/03/17 01:49:38 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://sam.zoy.org/projects/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="ncurses slang doc imlib X"
 
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
@@ -21,16 +21,13 @@ RDEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
 	virtual/x11 ) )"
 
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )
-	sys-devel/automake
-	sys-devel/autoconf
-	sys-devel/libtool"
+	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${WORKDIR}"
 	# Let libtool build the libraries, see BUG #57359
-	epatch ${FILESDIR}/${P}-libtool.patch
+	epatch "${FILESDIR}/${P}-libtool2.patch"
 	cd "${S}"
 	eautoreconf
 }
@@ -42,7 +39,7 @@ src_compile() {
 	local myconf=""
 
 	if use X ; then
-		if [ -e /usr/lib/libX11.so ] || [ -e /usr/lib/libX11.a ]
+		if [ -e /usr/$(get_libdir)/libX11.so ] || [ -e /usr/$(get_libdir)/libX11.a ]
 		then
 			myconf="${myconf} --enable-x11 --with-x --x-libraries=/usr/$(get_libdir)"
 		else

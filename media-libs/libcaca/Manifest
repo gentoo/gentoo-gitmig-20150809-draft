@@ -1,15 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d15498668716f1e559472ad09fa15626 ChangeLog 2641
+MD5 dfa0e52feeb335c6b0e9cbb476bd1b2a ChangeLog 3017
+RMD160 b5e96e940bdc071774fd04720606717bd178a2f5 ChangeLog 3017
+SHA256 f2163199e65c18abb653955a93f96286acbbc87827bfbdf9cc9854ab23c043b6 ChangeLog 3017
 MD5 b74aa05e5d6b2a7d9b7108a84d6b82d7 files/digest-libcaca-0.9-r1 63
+RMD160 197954d96918f22627a41128f148b955279e4995 files/digest-libcaca-0.9-r1 63
+SHA256 a40d05c5ff9dd0feedcceffc4928ef4e0a28b689c3735e209bd8891364746af5 files/digest-libcaca-0.9-r1 63
+MD5 546621581bc2d5c5b8740520bcbff279 files/digest-libcaca-0.9-r2 235
+RMD160 1b5fc9a4bbbdffe62bb36508d96f00afe0830b86 files/digest-libcaca-0.9-r2 235
+SHA256 0419644ddb3da75c00e2ba0714d11ce095058775bd4807d920d9f3e153806e5f files/digest-libcaca-0.9-r2 235
 MD5 8f10a784d1326f49c14a32fb0bcdc430 files/libcaca-0.9-libtool.patch 4596
-MD5 bf267174b680306f5485724cee92017d libcaca-0.9-r1.ebuild 1710
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+RMD160 535f17f966b68c2f300df63639be56225c0d639d files/libcaca-0.9-libtool.patch 4596
+SHA256 b85ce6528449e0478c570caae436f814c574cd56cdf784194196a2d0d9477799 files/libcaca-0.9-libtool.patch 4596
+MD5 347cd869231b76bab7edada5d9bc813b files/libcaca-0.9-libtool2.patch 4375
+RMD160 ce1e4684b995abea83caf5b359571195f43b5158 files/libcaca-0.9-libtool2.patch 4375
+SHA256 4cdac586c27368ef1119535c0da3cb94c3d4ab062f64be07db8f9128b1ba584c files/libcaca-0.9-libtool2.patch 4375
+MD5 529a940a7ec88f6f8bbc7113e62426f2 libcaca-0.9-r1.ebuild 1698
+RMD160 bec3c2c0e8f9d5220dda4859acdba64cd637d84c libcaca-0.9-r1.ebuild 1698
+SHA256 e75efee355aed8584648a9d3a84b4e19a5b9f22695be03059b41db33917c28db libcaca-0.9-r1.ebuild 1698
+MD5 ab7ba6019c167e1c6c8f85588eb0f53a libcaca-0.9-r2.ebuild 1672
+RMD160 b2ddb8e1960b15687683da7b47f731e1aa5a5691 libcaca-0.9-r2.ebuild 1672
+SHA256 317f4dc2ec21b29edadff02cc4b442fa3a484d4a3090359362d6d33228751b72 libcaca-0.9-r2.ebuild 1672
+MD5 0338bfb24d7bfb6450aac4dd025c0096 metadata.xml 223
+RMD160 86b42c49b694db39ddb3fdc60b98a3ad1a0c3392 metadata.xml 223
+SHA256 dd48e823ec9a151bc3611121402ed26ee24eb3304aa62870b1e875a8fa0ac812 metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDtmx82+ySkm8kpY0RArSTAJ9VUjJ5ZXLQHthLcbl3zo3oyY10XQCgnCiy
-9NJWNowCXwwTtuRe2vKOrYg=
-=u6ZZ
+iD8DBQFEGhW/AiZjviIA2XgRAgcGAKCiS7BG6JJ6vNDujxxrMhqyyN/CBACdHlfa
+L0VwNdg2jTcDMsmYaKVsv44=
+=aaBq
 -----END PGP SIGNATURE-----

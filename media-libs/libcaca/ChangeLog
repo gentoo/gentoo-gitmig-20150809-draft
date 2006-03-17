@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libcaca
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.19 2005/12/13 20:47:39 seemant Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.20 2006/03/17 01:49:38 flameeyes Exp $
+
+*libcaca-0.9-r2 (17 Mar 2006)
+
+  17 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libcaca-0.9-libtool2.patch, metadata.xml, libcaca-0.9-r1.ebuild,
+  +libcaca-0.9-r2.ebuild:
+  New libtool patch, now link the demo programs installed dynamically instead
+  of statically, and allow use of --as-needed. This way it also fixes bug
+  #119428. Minor whitespace cleanup.
 
   13 Dec 2005; Seemant Kulleen <seemant@gentoo.org> libcaca-0.9-r1.ebuild:
   modular X deps
