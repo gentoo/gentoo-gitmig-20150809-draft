@@ -1,6 +1,11 @@
 # ChangeLog for games-util/showeq
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/ChangeLog,v 1.15 2005/12/10 15:23:21 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/ChangeLog,v 1.16 2006/03/17 21:22:45 tupone Exp $
+
+*showeq-5.3.0.0 (17 Mar 2006)
+
+  17 Mar 2006; <Tupone@gentoo.org> +showeq-5.3.0.0.ebuild:
+  Version bump, Bug #119732 . Thanks Jesse Waldack for report
 
 *showeq-5.2.4.0 (10 Dec 2005)
 
