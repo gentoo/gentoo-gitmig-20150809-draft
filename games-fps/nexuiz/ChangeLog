@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/nexuiz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/ChangeLog,v 1.4 2006/01/13 21:57:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/ChangeLog,v 1.5 2006/03/17 19:43:18 wolf31o2 Exp $
+
+*nexuiz-1.5 (17 Mar 2006)
+
+  17 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> +nexuiz-1.5.ebuild:
+  Version bumped to 1.5 and closing bug #122838.
 
   13 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org> nexuiz-1.2.1.ebuild:
   added to ~ppc, bug #118872
