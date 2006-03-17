@@ -1,46 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0bbd151defba7ccfde6b5f0b15930aa2 ChangeLog 3088
-RMD160 f94e951b5af70d48eefb6091aef77080c467040f ChangeLog 3088
-SHA256 43e42fb66bf90ba61346c6b77a803d63a57ef4dfead55d3a9f8e436beca7839b ChangeLog 3088
+MD5 77ece88bd018be3388fe76e7d0909669 ChangeLog 3198
 MD5 792d1ec217d44781e9d154e69f665156 files/digest-net-server-0.85 66
-RMD160 cb8b3cdb1ce68b8fe84f430178e179645ce9a5dc files/digest-net-server-0.85 66
-SHA256 61231cd1b0efff8b1865052abbc5f364121a2fc9dcd3f607ea2bf4df4c2ce274 files/digest-net-server-0.85 66
 MD5 8fc233c7ca183bb3aedc37e423b3fc8b files/digest-net-server-0.87 66
-RMD160 47dffade535f27072641faffd4ea8f88cf9c8780 files/digest-net-server-0.87 66
-SHA256 ab086309f575ac1bf023066c3346c8bd3652dd212f8a24fa807ce1b3a0dd0ddf files/digest-net-server-0.87 66
 MD5 8fc233c7ca183bb3aedc37e423b3fc8b files/digest-net-server-0.87-r1 66
-RMD160 47dffade535f27072641faffd4ea8f88cf9c8780 files/digest-net-server-0.87-r1 66
-SHA256 ab086309f575ac1bf023066c3346c8bd3652dd212f8a24fa807ce1b3a0dd0ddf files/digest-net-server-0.87-r1 66
 MD5 520e2a3b44486e93f7c4104322908782 files/digest-net-server-0.88 66
-RMD160 05184713dfd93db6c37447d0553f5d5610297dc9 files/digest-net-server-0.88 66
-SHA256 44d42f67dc4c3f7c3a5a6e41a7517b6912059ef925853c3ca84ea3d09b19e022 files/digest-net-server-0.88 66
 MD5 398644fc538635b3bbb19c6f0581bc6a files/digest-net-server-0.90 66
-RMD160 61f0440ae85bb170e1a215be799de011d74f426d files/digest-net-server-0.90 66
-SHA256 567cd0e80847ff3c3cfeb581a684248494657c8ccbe9f32f9fd1a302a684d3f4 files/digest-net-server-0.90 66
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 MD5 8ebfa90fd7ffc63ff01a1ff25bd56f63 net-server-0.85.ebuild 605
-RMD160 71a0b8418b0e4d858023efd0fbb65b49dc8a5f33 net-server-0.85.ebuild 605
-SHA256 2ff3fef1d1e8e9d1f386ace39000d9e632b86061d76c9e4d91ac2db086f2095e net-server-0.85.ebuild 605
 MD5 a25e4072a0b2144eb4256e264ab5bbf7 net-server-0.87-r1.ebuild 602
-RMD160 03ea4d7f31652e1ffd510f28328a82ff4754b3c0 net-server-0.87-r1.ebuild 602
-SHA256 3e0200a0df9ee7e215e6ba1540df147f4623a730960773cc33aec1f0a779b01d net-server-0.87-r1.ebuild 602
 MD5 4dcc804770af05b578530a1d30c6042c net-server-0.87.ebuild 598
-RMD160 5ba3c707c39b8c4907264c8b3ae3b231db225225 net-server-0.87.ebuild 598
-SHA256 8ba28c83c241b1a42bbba121582d892003efd8d3d034cd777fb1cb226e094bd2 net-server-0.87.ebuild 598
-MD5 f4c05cdcb20af8094eaf5b57c8a08d0e net-server-0.88.ebuild 621
-RMD160 ae9f22cd25ba7c79049952d4f4aa6d58e46f04c7 net-server-0.88.ebuild 621
-SHA256 20daa654ffc0f38456dcb36e25774248e9e2fc9df5e42dd20cc4ecc91cd13135 net-server-0.88.ebuild 621
+MD5 5095e3f9f5201f227c2ef6aebfee7243 net-server-0.88.ebuild 630
 MD5 167b9a7ec23f95265cb661d2334c8aa8 net-server-0.90.ebuild 627
-RMD160 3a64e0b1c0b460d2ce7d317dba79e0777ed1b4fb net-server-0.90.ebuild 627
-SHA256 bca2a706e16c1b3e77496fccc5d3ab0bca7ffbf92c4f85734c168e6201fb6a52 net-server-0.90.ebuild 627
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD4/8GJrHF4yAQTrARArmrAKCvYQz1E6XqZGSNMUBsRtnb4yexXACgj957
-WVYTFfTU84RANGPgQlICvoI=
-=F9CY
+iD8DBQFEGx7hFdQwWVoAgN4RAnXoAKCtyu53ANOJPWJVMrIXHlitDOanbACeME18
+ZyG6sg9b9tNYLP4oyCXE4K0=
+=rBwn
 -----END PGP SIGNATURE-----
