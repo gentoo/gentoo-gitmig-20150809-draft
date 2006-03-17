@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.0-r2.ebuild,v 1.4 2006/03/15 17:29:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.0-r2.ebuild,v 1.5 2006/03/17 15:20:23 stefaan Exp $
 
 inherit flag-o-matic eutils toolchain-funcs versionator
 
@@ -18,7 +18,10 @@ IUSE="debug kerberos pam doc"
 
 RDEPEND="=net-fs/openafs-kernel-${PV}
 	pam? ( sys-libs/pam )
-	kerberos? ( virtual/krb5 )"
+	kerberos? ( virtual/krb5 )
+	!>=sys-libs/glibc-2.4"
+# openafs fails horribly with glibc-2.4 on at least x86, this blocking depend
+# is introduced in the hope that it'll alert people to this.  see bug #126420
 
 PATCHDIR=${WORKDIR}/gentoo/patches/$(get_version_component_range 1-2)
 CONFDIR=${WORKDIR}/gentoo/configs

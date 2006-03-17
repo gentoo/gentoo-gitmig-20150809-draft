@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.62 2006/03/15 17:29:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.63 2006/03/17 15:20:23 stefaan Exp $
+
+  17 Mar 2006; Stefaan De Roeck <stefaan@gentoo.org>
+  openafs-1.4.0-r2.ebuild:
+  Added blocking dependency hoping it will alert people not to try glibc 2.4
+  with openafs (bug #126420)
 
   15 Mar 2006; Markus Rothe <corsair@gentoo.org> openafs-1.4.0-r2.ebuild:
   Stable on ppc64; bug #124381
