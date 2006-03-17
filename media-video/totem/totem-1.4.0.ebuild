@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.4.0.ebuild,v 1.1 2006/03/16 19:31:18 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.4.0.ebuild,v 1.2 2006/03/17 01:09:05 flameeyes Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -84,7 +84,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
-	G2CONF="i${G2CONF} --disable-vanity \
+	G2CONF="${G2CONF} --disable-vanity \
 			--disable-gtk \
 			$(use_with dbus) \
 			$(use_enable gnome nautilus) \
