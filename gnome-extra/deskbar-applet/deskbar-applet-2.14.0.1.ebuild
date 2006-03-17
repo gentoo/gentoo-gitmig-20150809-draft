@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.14.0.ebuild,v 1.1 2006/03/13 01:59:00 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.14.0.1.ebuild,v 1.1 2006/03/17 13:40:08 allanonjl Exp $
 
 inherit gnome2 eutils
 
