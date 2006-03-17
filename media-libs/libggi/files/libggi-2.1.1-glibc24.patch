@@ -1,0 +1,15 @@
+Index: libggi-2.1.1/programs/check/speed.c
+===================================================================
+--- libggi-2.1.1.orig/programs/check/speed.c
++++ libggi-2.1.1/programs/check/speed.c
+@@ -26,6 +26,10 @@
+ #include <time.h>
+ #endif
+ 
++#if !defined(CLK_TCK) && defined(CLOCKS_PER_SEC)
++#  define CLK_TCK CLOCKS_PER_SEC
++#endif
++
+ static struct {
+ 	ggi_visual_t vis;
+ 	int sx,sy,vx,vy;
