@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre20060313.ebuild,v 1.1 2006/03/17 00:33:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre20060317.ebuild,v 1.1 2006/03/17 23:08:54 flameeyes Exp $
 
 inherit eutils flag-o-matic base
 
@@ -89,7 +89,7 @@ src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
 	insinto /etc
-	newins contrib/mt-daapd.conf mt-daapd.conf.example
+	newins ${FILESDIR}/mt-daapd.conf.example mt-daapd.conf.example
 	doins contrib/mt-daapd.playlist
 
 	newinitd ${WORKDIR}/initd ${PN}

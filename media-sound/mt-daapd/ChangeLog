@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/mt-daapd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.22 2006/03/17 00:33:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.23 2006/03/17 23:08:54 flameeyes Exp $
+
+*mt-daapd-0.3.0_pre20060317 (17 Mar 2006)
+
+  17 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/mt-daapd.conf.example, -mt-daapd-0.3.0_pre20060313.ebuild,
+  +mt-daapd-0.3.0_pre20060317.ebuild:
+  Update nightlie (this time should work), and provide an already converted
+  example conf file.
 
 *mt-daapd-0.3.0_pre20060313 (17 Mar 2006)
 
