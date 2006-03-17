@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.49 2006/03/16 23:32:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.50 2006/03/17 19:24:45 grobian Exp $
+
+  17 Mar 2006; Fabian Groffen <grobian@gentoo.org> m4-1.4.4.ebuild:
+  Marked ~ppc-macos for progressive users (bug #126363)
 
   16 Mar 2006; Luca Barbato <lu_zero@gentoo.org> m4-1.4.4.ebuild:
   Marked ppc
