@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.107 2006/03/14 17:57:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.108 2006/03/17 21:06:30 joem Exp $
+
+*gnome-system-monitor-2.14.0 (17 Mar 2006)
+
+  17 Mar 2006; Joe McCann <joem@gentoo.org>
+  +gnome-system-monitor-2.14.0.ebuild:
+  new version for gnome-2.14. Uses cairo to draw nicer looking graphs
 
   14 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-system-monitor-2.12.2.ebuild:
