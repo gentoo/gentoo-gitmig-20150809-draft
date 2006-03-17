@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/luma
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/ChangeLog,v 1.24 2006/03/16 17:27:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/ChangeLog,v 1.25 2006/03/17 18:12:09 lucass Exp $
+
+  17 Mar 2006; Lukasz Strzygowski <lucass@gentoo.org> files/digest-luma-2.3,
+  Manifest:
+  Fixed digest (bug #126208).
 
 *luma-2.3 (16 Mar 2006)
 
