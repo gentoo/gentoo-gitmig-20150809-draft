@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/mpage-2.5.3.ebuild,v 1.9 2005/05/31 22:45:26 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/mpage-2.5.3.ebuild,v 1.10 2006/03/17 07:49:14 halcy0n Exp $
 
 DESCRIPTION="Many to one page printing utility"
 HOMEPAGE="http://www.mesa.nl/"
@@ -10,8 +10,6 @@ KEYWORDS="x86 sparc amd64 ~ppc"
 LICENSE="freedist"
 SLOT="0"
 IUSE=""
-
-DEPEND="virtual/libc"
 
 src_compile() {
 	emake \
