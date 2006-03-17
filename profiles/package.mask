@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5097 2006/03/17 08:35:32 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5098 2006/03/17 15:55:28 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (17 Mar 2006)
+# This is masked until a supporting kernel sources is released.
+>=sys-fs/squashfs-tools-3.0
 
 # Stefan Schweizer <genstef@gentoo.org> (16 Mar 2006)
 # Only compiles with gcc-4.1.0
