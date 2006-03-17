@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.8.2.ebuild,v 1.1 2006/03/16 21:48:43 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.8.2.ebuild,v 1.2 2006/03/17 03:51:42 latexer Exp $
 
 inherit eutils mono
 
 DESCRIPTION="Gtk# is a C# language binding for the GTK2 toolkit and GNOME libraries"
-SRC_URI="http://go-mono.com/sources/${PN}-2.0/${P}.tar.gz
+SRC_URI="http://go-mono.com/sources/${PN}-2.8/${P}.tar.gz
 		mirror://gentoo/${P}-configurable.diff.gz"
 HOMEPAGE="http://gtk-sharp.sourceforge.net/"
 
