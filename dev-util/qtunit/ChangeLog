@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qtunit
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/ChangeLog,v 1.17 2005/09/13 22:18:59 dang Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/ChangeLog,v 1.18 2006/03/17 15:58:03 caleb Exp $
+
+  17 Mar 2006; Caleb Tennis <caleb@gentoo.org> qtunit-0.9.8.ebuild:
+  Fix qmake call for Qt4
 
   13 Sep 2005; <dang@gentoo.org> qtunit-0.9.8.ebuild:
   Marked ~amd64
