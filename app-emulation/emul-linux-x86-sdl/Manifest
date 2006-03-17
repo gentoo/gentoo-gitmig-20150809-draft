@@ -1,18 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5edbea86e237ecc21a49af2b7bd9a6aa ChangeLog 2667
-RMD160 d1d5080c775fe667e2de1e60473fa4923c31987f ChangeLog 2667
-SHA256 0fcba382274bfd101e5635713d3244e377be29a4dbc3b8b646d890225cfb67a1 ChangeLog 2667
-MD5 2ce0b8de0e8e2897bbde6dd04131053a emul-linux-x86-sdl-2.2.ebuild 647
-RMD160 df61495f4c66290d4ba518ee3e822039b06ed56d emul-linux-x86-sdl-2.2.ebuild 647
-SHA256 536719e0a0ac59d799a384524af588efba8b1e51bf5b2fb04ed15783a8dc5e87 emul-linux-x86-sdl-2.2.ebuild 647
+MD5 44b43f90d084a415744e16cbfdec8005 ChangeLog 2767
+RMD160 0a54e5cc8409d9c3aa6b533a373f3440cbf98f35 ChangeLog 2767
+SHA256 9b287d6536f33ccdd5a083e7ca783470f460aa8945955eee41be3cd07fecb427 ChangeLog 2767
 MD5 7abfb9f76fef76c42f08bc495ba26ca0 emul-linux-x86-sdl-2.3.ebuild 647
 RMD160 c8a54fc08dd5cdc5d295a3fba94be11faea1b4bb emul-linux-x86-sdl-2.3.ebuild 647
 SHA256 6078a46d5d4db3f3262fda914f6dbed4c016fb7ad69a22d5d620dfef9a32dbf7 emul-linux-x86-sdl-2.3.ebuild 647
-MD5 68cf1526b0b64fd6709c99ad93e248a4 files/digest-emul-linux-x86-sdl-2.2 75
-RMD160 5d46f092363e139aa48a1c1ae2035b006daf9f78 files/digest-emul-linux-x86-sdl-2.2 75
-SHA256 e42c45ace51237feffd9d361f5f6c34311bb198758528d7c03637cdfdf04dec2 files/digest-emul-linux-x86-sdl-2.2 75
 MD5 c0826bcab78eb7a106cff551ee51012c files/digest-emul-linux-x86-sdl-2.3 75
 RMD160 6e8d8704b42fbfadedd0bf372d384aad438e4790 files/digest-emul-linux-x86-sdl-2.3 75
 SHA256 dc11e27803c8f449efabc434d1ed6c51434f730279799df2b0e1cec17f5d2e7c files/digest-emul-linux-x86-sdl-2.3 75
@@ -22,7 +16,7 @@ SHA256 90a4ae3bb1a82ba35e2971274b7c2437d3f717075382f02ece1b1c79421c1282 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFED4j2AiZjviIA2XgRApF/AKDqcAM26Gtr309hv1tZI50Qkon77ACgvgYa
-RIkD6+3hJqQ1TOiHOAgxMA4=
-=xxwA
+iD8DBQFEGvlZ2G5bA0cA/ScRAi+4AJ9EBVbQP/xUbc/dVwqHHQfpUZsRTACffV1x
+PzT+dtcNewwUjO0/WDI/E4s=
+=gVRE
 -----END PGP SIGNATURE-----
