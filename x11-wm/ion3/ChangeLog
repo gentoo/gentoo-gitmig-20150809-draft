@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/ion3
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.34 2006/03/14 19:33:21 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.35 2006/03/17 22:28:57 twp Exp $
+
+*ion3-20060317 (17 Mar 2006)
+
+  17 Mar 2006; Tom Payne <twp@gentoo.org>
+  +files/ion3-20060317-truetype.patch, -ion3-20060107.ebuild,
+  +ion3-20060317.ebuild:
+  Version bump.
 
 *ion3-20060305-r1 (14 Mar 2006)
 
