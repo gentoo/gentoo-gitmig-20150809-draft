@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kid
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/ChangeLog,v 1.3 2006/01/06 21:07:10 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/ChangeLog,v 1.4 2006/03/17 14:12:52 deltacow Exp $
+
+  17 Mar 2006; Scott Stoddard <deltacow@gentoo.org> kid-0.8.ebuild:
+  Added ~amd64.
 
 *kid-0.8 (06 Jan 2006)
 

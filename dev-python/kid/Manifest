@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1dc60232e78f95f7d73b782978f833df ChangeLog 707
+MD5 0875cd3ebd46abb7c6eeeef966d07bc0 ChangeLog 794
 MD5 fe1c90896206e3460519d78d6c59862b files/digest-kid-0.7.1 61
 MD5 8ca404dd6fc38189f1e8080ba75ec9ad files/digest-kid-0.8 59
 MD5 6afe8df6927655a755c858926a52bc5e files/kid-0.7.1-ezsetup-gentoo.patch 785
 MD5 d946c507fc4e90fa5fe5f516a6cd6a87 files/kid-0.8-ezsetup-gentoo.patch 743
 MD5 450f1bddbe4ff68dec6604b7903b7158 kid-0.7.1.ebuild 742
-MD5 6585acca4a437128e6b9e581a2bf5929 kid-0.8.ebuild 845
+MD5 16d66fa95aaa9fff7f8d12fe22fc28f7 kid-0.8.ebuild 854
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvtwp2jLqHNfbg2URAondAJ9Lywl84y5ctxQqCpupwPvjx7ND2gCfblv5
-Rr5BXzuGNPZqfLuKhDqrs94=
-=n4S4
------END PGP SIGNATURE-----
