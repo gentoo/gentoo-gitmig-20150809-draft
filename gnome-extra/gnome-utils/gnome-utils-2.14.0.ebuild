@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.14.0.ebuild,v 1.1 2006/03/16 20:40:12 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.14.0.ebuild,v 1.2 2006/03/17 20:18:23 joem Exp $
 
 inherit gnome2
 
@@ -16,7 +16,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=dev-libs/glib-2.9.1
 	>=gnome-base/gnome-desktop-2.9.91
 	>=gnome-base/libgnome-2.5
-	>=gnome-base/libgnomeui-2.5
+	>=gnome-base/libgnomeui-2.13.2
 	>=gnome-base/libglade-2.3
 	>=gnome-base/libbonoboui-2.1
 	>=gnome-base/gnome-vfs-2.8.4
