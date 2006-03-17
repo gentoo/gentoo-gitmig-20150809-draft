@@ -1,29 +1,57 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ecfdba71ba36afa844a004fb10ca4d96 ChangeLog 21440
+MD5 b20acc099956117af8aac41c9c1452f6 ChangeLog 21561
+RMD160 59916d3c986d0ee6e7197fd1bb12924bb31c8187 ChangeLog 21561
+SHA256 d9392e1e4944cf3d758db10f62cf92d0baea3b1f565d086f62dc1b8a5d3e7cac ChangeLog 21561
 MD5 0b6b97a59b4b0e1acc433697ce022a3c files/digest-glib-1.2.10-r5 63
+RMD160 9caaada48f1fa1693442954f4ebc832fb5364963 files/digest-glib-1.2.10-r5 63
+SHA256 c56c34d1616084c9e62c118c9dbb6766ccbcc92c7a27fe85e1adf814c6c31f2f files/digest-glib-1.2.10-r5 63
 MD5 f33e8752716d1a0dcd2f83e88fac990c files/digest-glib-2.10.1 241
+RMD160 0d03b69bfd103669972c4c106ebcd7637c15ffc5 files/digest-glib-2.10.1 241
+SHA256 1b8a85c56b12a28e688078f16b3ee0972bd5168ce140c6394c0afc197145cdb0 files/digest-glib-2.10.1 241
 MD5 60c45aba2f0c1b47590e8193b533d7c7 files/digest-glib-2.6.5 64
+RMD160 a5c8d84255997a1dfed4bf1305d84ca6b3a704dd files/digest-glib-2.6.5 64
+SHA256 c4552ebb9b5d2627d347193150214f843a529fe24de525fd58661f1090b4ead6 files/digest-glib-2.6.5 64
 MD5 2f09cd4f7926138eec7b57eaaf228fa9 files/digest-glib-2.8.4 64
+RMD160 db23c038661791faa273026744fb12fae9b2df38 files/digest-glib-2.8.4 64
+SHA256 7e99cbae87314d9523c0c9e5e1fecfef02b9c58698517cf04aaac450b2f1e8fb files/digest-glib-2.8.4 64
 MD5 95afbaa34b05c6331cea8db80e729665 files/digest-glib-2.8.5 64
+RMD160 2b1053654122baafe74a3420cced237002f22a91 files/digest-glib-2.8.5 64
+SHA256 71c57d2dd16cc1b61bebdf2cca62755f0dbbc52210bcaa03905049f3b2f735ba files/digest-glib-2.8.5 64
 MD5 411587311906220fe4765e5ccb81bbe1 files/digest-glib-2.8.6 238
+RMD160 5da8cbdd26807e9d44a548d9064a1405176e2630 files/digest-glib-2.8.6 238
+SHA256 30e7d4f7ac387cfa98e6c775cf1888a204523c609bc32d90ff24b7ff0900efc3 files/digest-glib-2.8.6 238
 MD5 2657ca6d0c857b4e97ad93525212ffa1 files/glib-1.2.10-gcc34-fix.patch 2008
+RMD160 7e92b8842a8232cada12453d7f5e5a587a2bf496 files/glib-1.2.10-gcc34-fix.patch 2008
+SHA256 848620bc200c2a42d726744fe6c36e20a396624e82b0c742b726dd72287e6cdd files/glib-1.2.10-gcc34-fix.patch 2008
 MD5 6da4b81e0a2656f101965a505c7cb6d4 files/glib-1.2.10-m4.patch 225
+RMD160 65218d0099218a1008827c1364b6e51c073d236b files/glib-1.2.10-m4.patch 225
+SHA256 c470b3ecc3b8fd6a2d52df816a1c4ccb3ad2d6048e37894f415c8ea9c7925b68 files/glib-1.2.10-m4.patch 225
 MD5 1a4565b760afb02416ff0d674c89c83f files/glib-2-macos.patch 989
+RMD160 90e681aec6f902f76551dc943f2b99d9cf7256ee files/glib-2-macos.patch 989
+SHA256 c8396affecb27325453d1b1447d9b1432c7e72b1565215e83e7005a95ce19713 files/glib-2-macos.patch 989
 MD5 7fec226893c96f1126810906e2fb3e5b files/glib-2.6.3-testglib-ssp.patch 344
+RMD160 6709acf85c52e39553e2e5ee93637f7e9cc7eca6 files/glib-2.6.3-testglib-ssp.patch 344
+SHA256 c2ece3d7b4533e3bfbe8100df5d0824176d9dfa0b18697a8919162956c8ebfa8 files/glib-2.6.3-testglib-ssp.patch 344
 MD5 02673367ae3d806f2df4dd6fbfff54f4 files/glib-2.8.3-macos.patch 307
+RMD160 f9212f17245cec6767cc1f0447e461c6e4917a6c files/glib-2.8.3-macos.patch 307
+SHA256 2c98a14c2df57484e73525c4cc249a7e1a73da3ae97193b34dbc83981d5df9d6 files/glib-2.8.3-macos.patch 307
 MD5 b75614f954c7353c9e75e011ee1adb59 glib-1.2.10-r5.ebuild 1536
+RMD160 3d4f672e95741cdc30e4004f2b5b553ffafde1fa glib-1.2.10-r5.ebuild 1536
+SHA256 8263c305e8eb26cce784278dc4ccc5a9e87948bffa87b6b9b6b97f53b1091b77 glib-1.2.10-r5.ebuild 1536
 MD5 372650579bc4e01a9be6d94fe4ee5e34 glib-2.10.1.ebuild 1639
+RMD160 7a2fe78d2edd554f5d413bc061ea9d294ffd1d8a glib-2.10.1.ebuild 1639
+SHA256 661f0a1dd3acf663725dda7f815acedc44695a8e8c2f1048205b6c8c0e9dac3f glib-2.10.1.ebuild 1639
 MD5 3c669304d71f54e783024332877d71d0 glib-2.6.5.ebuild 1647
+RMD160 3afa5b806494ed6ddc321e8dfdf3c19c0201532a glib-2.6.5.ebuild 1647
+SHA256 c70b2e000d7eb252871462db4beb717e16f031208f8980dece27a0c38c7c83e9 glib-2.6.5.ebuild 1647
 MD5 ccdec0cc9433b698a20b32158000d2f3 glib-2.8.4.ebuild 1693
+RMD160 ac4ba368fb1074379f49b709fc918cb62f3b0938 glib-2.8.4.ebuild 1693
+SHA256 07334835850f3d159007f5020bbc6dd0727df12ce1f6f9fe9966041708d8eb09 glib-2.8.4.ebuild 1693
 MD5 eeb9bd7e6d8215bc9bd7bbcd50d3d6c0 glib-2.8.5.ebuild 1687
-MD5 19abe3a8076497b3e62c2f868eadbf8f glib-2.8.6.ebuild 1706
+RMD160 0bccf02181a3545958019450205de0bb182656c0 glib-2.8.5.ebuild 1687
+SHA256 5907cb6ba62b13bdb7656f5adc4a8d1dab69abe2f17e9efd0b316cfa1d64848a glib-2.8.5.ebuild 1687
+MD5 6810056da9382159ec6d97c5016d702b glib-2.8.6.ebuild 1707
+RMD160 8c016dc16462ced5d8fa5a0fdd3f57f368eb2743 glib-2.8.6.ebuild 1707
+SHA256 1f5f3a1281363510518d2e2bdf4d58ab212b23d54411466ae0e399a68f76dddf glib-2.8.6.ebuild 1707
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEFv71KRy60XGEcJIRAuwVAKCkM4MfUz3VMePCwn2YY4h/yaPS3ACgoBxW
-SQu+CbmfxK8uMN4s6RLtJys=
-=FyLt
------END PGP SIGNATURE-----
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
