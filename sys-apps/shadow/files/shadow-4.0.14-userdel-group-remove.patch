@@ -1,0 +1,123 @@
+http://bugs.gentoo.org/126432
+
+----------------------------
+revision 1.61
+date: 2006/02/07 20:19:46;  author: kloczek;  state: Exp;  lines: +1 -70
+user's group is already removed by update_groups(). remove_group()
+is not needed (bug introduced in 4.0.14 on merge FC fixes). Fixed by Nicolas
+François <nicolas.francois@centraliens.net>
+=============================================================================
+
+Index: src/userdel.c
+===================================================================
+RCS file: /cvsroot/shadow/src/userdel.c,v
+retrieving revision 1.60
+retrieving revision 1.61
+diff -u -p -r1.60 -r1.61
+--- src/userdel.c	7 Feb 2006 16:39:41 -0000	1.60
++++ src/userdel.c	7 Feb 2006 20:19:46 -0000	1.61
+@@ -66,9 +66,7 @@
+ #define E_HOMEDIR	12	/* can't remove home directory */
+ static char *user_name;
+ static uid_t user_id;
+-static gid_t user_gid;
+ static char *user_home;
+-static char *user_group;
+ 
+ static char *Prog;
+ static int fflg = 0, rflg = 0;
+@@ -265,65 +263,6 @@ static void update_groups (void)
+ }
+ 
+ /*
+- * remove_group - remove the user's group unless it is not really a user-private group
+- */
+-static void remove_group ()
+-{
+-	char *glist_name;
+-	struct group *gr;
+-	struct passwd *pwd;
+-
+-	if (user_group == NULL || user_name == NULL)
+-		return;
+-
+-	if (strcmp (user_name, user_group)) {
+-		return;
+-	}
+-
+-	glist_name = NULL;
+-	gr = getgrnam (user_group);
+-	if (gr)
+-		glist_name = *(gr->gr_mem);
+-	while (glist_name) {
+-		while (glist_name && *glist_name) {
+-			if (strncmp (glist_name, user_name, 16)) {
+-				return;
+-			}
+-			glist_name++;
+-		}
+-	}
+-
+-	setpwent ();
+-	while ((pwd = getpwent ())) {
+-		if (strcmp (pwd->pw_name, user_name) == 0)
+-			continue;
+-
+-		if (pwd->pw_gid == user_gid) {
+-			return;
+-		}
+-	}
+-
+-	/* now actually do the removal if we haven't already returned */
+-
+-	if (!gr_remove (user_group)) {
+-		fprintf (stderr, _("%s: error removing group entry\n"), Prog);
+-	}
+-#ifdef SHADOWGRP
+-
+-	/*
+-	 * Delete the shadow group entries as well.
+-	 */
+-
+-	if (is_shadow_grp && !sgr_remove (user_group)) {
+-		fprintf (stderr, _("%s: error removing shadow group entry\n"),
+-			 Prog);
+-	}
+-#endif				/* SHADOWGRP */
+-	SYSLOG ((LOG_INFO, "remove group `%s'\n", user_group));
+-	return;
+-}
+-
+-/*
+  * close_files - close all of the files that were opened
+  *
+  *	close_files() closes all of the files that were opened for this
+@@ -652,7 +591,6 @@ static void remove_mailbox (void)
+ int main (int argc, char **argv)
+ {
+ 	struct passwd *pwd;
+-	struct group *grp;
+ 	int arg;
+ 	int errors = 0;
+ 
+@@ -760,10 +698,6 @@ int main (int argc, char **argv)
+ #endif
+ 	user_id = pwd->pw_uid;
+ 	user_home = xstrdup (pwd->pw_dir);
+-	user_gid = pwd->pw_gid;
+-	grp = getgrgid (user_gid);
+-	if (grp)
+-		user_group = xstrdup (grp->gr_name);
+ 	/*
+ 	 * Check to make certain the user isn't logged in.
+ 	 */
+@@ -817,9 +751,6 @@ int main (int argc, char **argv)
+ 	}
+ #endif
+ 
+-	/* Remove the user's group if appropriate. */
+-	remove_group ();
+-
+ 	if (rflg) {
+ 		if (remove_tree (user_home)
+ 		    || rmdir (user_home)) {

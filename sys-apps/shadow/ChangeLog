@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.133 2006/03/14 22:52:01 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.134 2006/03/17 01:17:16 vapier Exp $
+
+*shadow-4.0.14-r3 (17 Mar 2006)
+
+  17 Mar 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/shadow-4.0.14-userdel-group-remove.patch, +shadow-4.0.14-r3.ebuild:
+  Fix from upstream for bogus userdel warning #126432 by Gabriel Lavoie.
 
   14 Mar 2006; Emanuele Giaquinta <exg@gentoo.org> shadow-4.0.14-r1.ebuild:
   Stable on ppc; bug #125419
