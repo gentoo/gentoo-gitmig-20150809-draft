@@ -1,8 +1,34 @@
-MD5 6ed38766134111076aec078cdeecb332 ChangeLog 6648
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bb2eb1b9c36f203b546f6fcc20db3f15 ChangeLog 6785
+RMD160 75fc6769cfafc489d59b4d6385d1c590c04daf1a ChangeLog 6785
+SHA256 2602d010f12db3e357b1726f79286f82b802e13bd9e545298263594faf31f8a1 ChangeLog 6785
 MD5 a6d3ed19aa929a78fd0487b745f9914e digikam-0.7.4-r1.ebuild 984
+RMD160 a7db87184c4f0647917399d921a7501f2d163e57 digikam-0.7.4-r1.ebuild 984
+SHA256 3f095e2b898f67f06ee642c8cb35f3facc8e29f5fae808fbf98d3009d20f333e digikam-0.7.4-r1.ebuild 984
 MD5 6bc39209444c4f7101c045f2baade0b7 digikam-0.7.4-r2.ebuild 1112
-MD5 bcebe90e06fb7ff71da0f8f3fec6a101 digikam-0.8.1-r1.ebuild 2232
+RMD160 b693efa120d08320ff8fdc2326a0a037b50e030e digikam-0.7.4-r2.ebuild 1112
+SHA256 f7ef9ef84b6e2d2494dbb635b937150b1048983c661f3a2805efdd73d4509c0f digikam-0.7.4-r2.ebuild 1112
+MD5 65daf5b20fb4fe288f93d616c21c6174 digikam-0.8.1-r1.ebuild 2408
+RMD160 36320f5843226cfeee08014f01f58df87fad154a digikam-0.8.1-r1.ebuild 2408
+SHA256 22f2afe2a7e0083b8c0495d8fb736e80fbc5b5c3695dc3a3c1201224e48b0d76 digikam-0.8.1-r1.ebuild 2408
 MD5 55bccecf6ae17fe2365bc62da5ab1640 files/digest-digikam-0.7.4-r1 139
+RMD160 b2600f12268ed1d84a757284dced29f2b816d849 files/digest-digikam-0.7.4-r1 139
+SHA256 4d8791c5999c0c0dd4b89be5b5beab5ccf51821b2bb307f5b97e556a5508e4df files/digest-digikam-0.7.4-r1 139
 MD5 abbdf9d37c5fe072a9554cb85028aaf2 files/digest-digikam-0.7.4-r2 509
+RMD160 d92e1b6fd91ceee87d6d22085eb8776502b9c3c9 files/digest-digikam-0.7.4-r2 509
+SHA256 b702b73ce21e6c97cfc055278900c54bfe00e986d614be3554113a5f12159c8c files/digest-digikam-0.7.4-r2 509
 MD5 c4affbd1c3faa88a332982caae5b4d4b files/digest-digikam-0.8.1-r1 509
+RMD160 025d87b24d3314071ac728f6e00b0af4aa06fc4a files/digest-digikam-0.8.1-r1 509
+SHA256 f3fa6acbcb99956c8f27cc9cf1d32e0672d6db5c0b42853de6bb343af2762c59 files/digest-digikam-0.8.1-r1 509
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEGguCAiZjviIA2XgRAoauAJ9r1uMmQjnYdCZj7NZAdNfmqBN31gCfTPfQ
+I6DoztuccXmg74dYkSYHb7o=
+=zmgg
+-----END PGP SIGNATURE-----
