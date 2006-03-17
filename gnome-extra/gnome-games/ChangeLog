@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.144 2006/03/17 22:32:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.145 2006/03/17 22:47:42 wolf31o2 Exp $
+
+  17 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
+  Stable on x86 wrt bug #126321.
 
   17 Mar 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   gnome-games-2.12.3.ebuild:
