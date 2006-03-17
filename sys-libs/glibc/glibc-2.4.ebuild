@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.9 2006/03/15 02:40:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4.ebuild,v 1.10 2006/03/17 01:46:37 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -1118,6 +1118,7 @@ fi
 pkg_setup() {
 	if want_linuxthreads ; then
 		ewarn "glibc-2.4 is nptl-only!"
+		[[ ${CHOST} == i386-* ]] && eerror "NPTL requires a CHOST of i486 or better"
 		die "please add USE='nptl nptlonly' to make.conf"
 	fi
 
