@@ -1,33 +1,69 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ba0f8139d275a1a268266fd54f5cd7f5 ChangeLog 5741
+MD5 c5ca159826741d0c86a85be3f4000e6c ChangeLog 5891
+RMD160 4bf24c85425f548a24e1e49a2d5491bfdaf0bbeb ChangeLog 5891
+SHA256 43e1c1a107f057a95ef5e845c886926c523ec844ed81a53280be8031a778de36 ChangeLog 5891
 MD5 f6a188644f736d46d200c045eff82bea files/digest-pam_ldap-156 64
+RMD160 d577389f82c5b03c23d6892e0669bcf565537814 files/digest-pam_ldap-156 64
+SHA256 330aac96a0c8a97950e92d2793e706950b330e1641133187e101b28238fd6f19 files/digest-pam_ldap-156 64
 MD5 e7be3daad202a50aecd0d3888bf5c46e files/digest-pam_ldap-161 64
+RMD160 78425079d8ca2fa443f54a71aa43eab5f6dae5ac files/digest-pam_ldap-161 64
+SHA256 2760cbd229f1c8104c6a10b7b4ae93ee0b13d31c23959ba98e6ffed0dba9d2a9 files/digest-pam_ldap-161 64
 MD5 58a43c49c9c6fac27d940fccdbfd5cf3 files/digest-pam_ldap-164 64
+RMD160 3cc7afe8571ab600c637cf48618ba0f7f9605429 files/digest-pam_ldap-164 64
+SHA256 ca5b14633e536f6569128aa3d02d23bb4c45d79571384df360c8c23392e780d1 files/digest-pam_ldap-164 64
 MD5 4ca7e1ee799ccfbd7c71824bbbb752bd files/digest-pam_ldap-167 64
+RMD160 77105de1e96f2a205fc560cd7d7bc8fb87ffa870 files/digest-pam_ldap-167 64
+SHA256 989d6788c53670a96dadf4f6ef11db83da657b87c5ed8c8cfc2fa3ba5834ce03 files/digest-pam_ldap-167 64
 MD5 593769a88e934c0a00456d35cce22316 files/digest-pam_ldap-171 64
+RMD160 1de7819e74e9d5cfca6875449dee98e5829c2c64 files/digest-pam_ldap-171 64
+SHA256 0822829f2c9ccb8283d98af1d9e1eb58250658670a70c107d53436479e84e951 files/digest-pam_ldap-171 64
 MD5 92d9af6315a0760b81ac9345845545d9 files/digest-pam_ldap-176 64
+RMD160 9c10bfdfb4db2b34ef526204cb9da39702d815e8 files/digest-pam_ldap-176 64
+SHA256 51805ba4fbad6d9cb17a378315671b3ffa4c232a5cdd527069aace5081b4c19f files/digest-pam_ldap-176 64
 MD5 92d9af6315a0760b81ac9345845545d9 files/digest-pam_ldap-176-r1 64
+RMD160 9c10bfdfb4db2b34ef526204cb9da39702d815e8 files/digest-pam_ldap-176-r1 64
+SHA256 51805ba4fbad6d9cb17a378315671b3ffa4c232a5cdd527069aace5081b4c19f files/digest-pam_ldap-176-r1 64
 MD5 61dd00aa31218ca526651f07c4341122 files/digest-pam_ldap-178 64
+RMD160 7b5efc8340dd0720b01be7887c4c9a0932f5c020 files/digest-pam_ldap-178 64
+SHA256 aeddae2d34daa0b0e37bf570e2d4314bb41b3b748e3a4f61766c4a54c95add30 files/digest-pam_ldap-178 64
 MD5 61dd00aa31218ca526651f07c4341122 files/digest-pam_ldap-178-r1 64
-MD5 55dbd4fed041770fa85d674e37825ac4 files/digest-pam_ldap-180 64
+RMD160 7b5efc8340dd0720b01be7887c4c9a0932f5c020 files/digest-pam_ldap-178-r1 64
+SHA256 aeddae2d34daa0b0e37bf570e2d4314bb41b3b748e3a4f61766c4a54c95add30 files/digest-pam_ldap-178-r1 64
+MD5 3ea65a101b86aaba7723ba7b8f18b364 files/digest-pam_ldap-180 238
+RMD160 ab4e9b8f1868f4b730eac1df384af21928ccc03e files/digest-pam_ldap-180 238
+SHA256 d503ee270703fac9c7c601d9b35b7cda7f91885e5a38022766d96990ee207678 files/digest-pam_ldap-180 238
 MD5 b9c4286d38a1e35b660f7b6a1fa09c85 files/pam_ldap-176-fix-referral-tls.patch 783
+RMD160 8f08111201ecce847e54255a420a6e22d2bd68d3 files/pam_ldap-176-fix-referral-tls.patch 783
+SHA256 c72020176fce0a6d438134d2261cf55cfd1b4cc56d967943e0e77eb937f691f2 files/pam_ldap-176-fix-referral-tls.patch 783
 MD5 393d06cf4b76671f8e6ce72ac71bdad8 metadata.xml 218
+RMD160 1955c7446d4ceb77506ba7b58ee35913c576a72c metadata.xml 218
+SHA256 e0bb49cab71cc84d8bdad26876197164073722b378d27a5bf55bbfd2afdbd19c metadata.xml 218
 MD5 4b023670a3fda1682f07b431782f0982 pam_ldap-156.ebuild 795
+RMD160 5b7de1c25a44a4e13c77bd4c0a44b0d81bd794f1 pam_ldap-156.ebuild 795
+SHA256 c6f4b30489ae42ed67829954b8febaa3e19d0f29f602c2c69200fe6aef332919 pam_ldap-156.ebuild 795
 MD5 8d79b755dad3224b3299639b1b29f92e pam_ldap-161.ebuild 787
+RMD160 5381e2c6e3988926bae0f8d3a652f17ae4637394 pam_ldap-161.ebuild 787
+SHA256 79fa061e7a53332f3bf20f39bdbd116fad2f29ffe2f6a51fa7a0140260fee040 pam_ldap-161.ebuild 787
 MD5 b4163ed88541904ea1f9cca28305a9ce pam_ldap-164.ebuild 787
+RMD160 371540557a38c0188c6bbcfd2e025cc4456c3548 pam_ldap-164.ebuild 787
+SHA256 384832af0bc127a07c3c1daac26d4d91dad2afb9d0cff4c8ede96a2345a808a6 pam_ldap-164.ebuild 787
 MD5 bb30ee3ecc04f56295c52355c62c9b9e pam_ldap-167.ebuild 870
+RMD160 56c4d74f4a7823a9e686f2642bf29d25552e4ca4 pam_ldap-167.ebuild 870
+SHA256 8b30548b5cef259f4452cb478299bc3a2ca8b302ccc9db170a52c8fb492b8710 pam_ldap-167.ebuild 870
 MD5 c440eed4ae209f40c014491f59b67abc pam_ldap-171.ebuild 888
+RMD160 fc02039e5f64eed9690aa7687d677257fd4edc96 pam_ldap-171.ebuild 888
+SHA256 8f2ef09a15d6373da28abe82a4681d4b6845f51f359bbb1cc8d3518761a162fb pam_ldap-171.ebuild 888
 MD5 e4d4592b21f5043e86c060c5e2d9b238 pam_ldap-176-r1.ebuild 1128
+RMD160 3f13deae8f16ceb94374e17e13027dd9eb4271ce pam_ldap-176-r1.ebuild 1128
+SHA256 cb09075dfafaaecf3247220397a715b57fdafcb4c606cf65bcf755b4159cec79 pam_ldap-176-r1.ebuild 1128
 MD5 5bbc539df75bd714f7edc0a204fba3fe pam_ldap-176.ebuild 905
+RMD160 7076aeb2feb9b4aa4ed10c4f72f0a091257eb7bf pam_ldap-176.ebuild 905
+SHA256 31ef5781c4c14e78da729d10a0c59753c81d26653027002b46aaa17aa8afaee5 pam_ldap-176.ebuild 905
 MD5 19484f8cae5c130b09e5c5dcbeed92c4 pam_ldap-178-r1.ebuild 1138
+RMD160 fffe10ffc6ecc72441595ef9b481b75ee7b9b6ce pam_ldap-178-r1.ebuild 1138
+SHA256 1e6aad187df25443544f03a9b167b4a5799e9ae7d6cdb3e361f437dd91e63e69 pam_ldap-178-r1.ebuild 1138
 MD5 35d27202dc788579d73b378aff38c077 pam_ldap-178.ebuild 916
+RMD160 28183526a6054ec72284642295359e1e966c5464 pam_ldap-178.ebuild 916
+SHA256 a55e0ae98884689ccea20069b5e959b65d96d4be407215cc8ea1ba91140f43c0 pam_ldap-178.ebuild 916
 MD5 4ca1fb09370063483d15667474bfcce1 pam_ldap-180.ebuild 1118
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuNL1AiZjviIA2XgRAmVxAKDelQZwqX5FwmoafRyd2C9yR9cRRACgi5W3
-ElCOlsFmFmGPOj7ouF07p0Y=
-=f8TP
------END PGP SIGNATURE-----
+RMD160 12a3af14f7b329b5753b1902315e58f746b1e32d pam_ldap-180.ebuild 1118
+SHA256 0b0b4172b9592d0f1af82373505367e920815e66ecf81094555f6ee7ec53d58e pam_ldap-180.ebuild 1118
