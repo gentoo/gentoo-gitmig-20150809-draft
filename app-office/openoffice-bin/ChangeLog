@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.126 2006/03/16 19:43:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.127 2006/03/17 16:38:01 suka Exp $
+
+  17 Mar 2006; Andreas Proschofsky <suka@gentoo.org>
+  -files/2.0.1/ooo-wrapper2, -openoffice-bin-2.0.1.ebuild:
+  Remove openoffice-bin-2.0.1 for security bug #126433
 
   16 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   openoffice-bin-2.0.2.ebuild:
