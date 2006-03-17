@@ -1,31 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d1541dc41dc2426d305dff2fb627c1b4 ChangeLog 9089
-RMD160 934968c6ed11717ab82433fa00ff7255bb7753a6 ChangeLog 9089
-SHA256 2c6fea02607d582b699acc6bb206f38594818fce7273296a7317ab64f61ba1eb ChangeLog 9089
+MD5 3266b9c2f3d6752cf759ae650e163a7f ChangeLog 9226
+RMD160 99987330a81d24c0812196d0dc4b1a6fb3fc14c1 ChangeLog 9226
+SHA256 5d05e6e059ae5b8fd6c6ea0eeed0cd72c1a877d11bba5d5c3dff2e2f3b7e6440 ChangeLog 9226
 MD5 cf229deb36f1f079a65d6f95f567acef files/digest-kile-1.8.1-r1 64
 RMD160 aad3e4a573dfe1796fd5638baf352e5967c9cc53 files/digest-kile-1.8.1-r1 64
 SHA256 b59699c3391afd6cd0d52cc2a164de0728c20631a5092757aee5a645f65304d0 files/digest-kile-1.8.1-r1 64
-MD5 5da8de89aaba35a1a01593f551e91dfe files/digest-kile-1.9_rc1 241
-RMD160 7a1abf5017ac528b77c9f99f512b04b7808f3baf files/digest-kile-1.9_rc1 241
-SHA256 f67d93a2fd962c8ed5b45df823a392a59ac4257109c47ec8e6a83607786d58df files/digest-kile-1.9_rc1 241
+MD5 8af81431215e1f884ede9928fa3de2cc files/digest-kile-1.9 232
+RMD160 8f52fcfc9b4017fa7f30a7de49d3a65292cd1b19 files/digest-kile-1.9 232
+SHA256 fca73de892c2f04160f2600e5968163abc8d1d438bd79fbc5ddb4f0e52b30464 files/digest-kile-1.9 232
 MD5 0bbde3e9a4218efea57a330227808e7a files/kile-1.9_rc1-gcc41.patch 542
 RMD160 f4210f0a67815f71d74b6afe895013506b70d614 files/kile-1.9_rc1-gcc41.patch 542
 SHA256 3c1f5680384fbedcdb01f9d3e6f8ce65176ff0fe1103c2d8c206fcb527a4512b files/kile-1.9_rc1-gcc41.patch 542
 MD5 f57922ccd9e06a1ce1ea88e8a9832028 kile-1.8.1-r1.ebuild 668
 RMD160 fb5c314153e7c9c737fb48bbaa9a85cda9cbaa6a kile-1.8.1-r1.ebuild 668
 SHA256 444c027feb109338c1ee0b83ba1cdb6af0838265a6ab6b88918b51c8670599b3 kile-1.8.1-r1.ebuild 668
-MD5 89a6ffb62b4ec1faa083cc117486b049 kile-1.9_rc1.ebuild 1320
-RMD160 6b6c331e3bf5a0e2c862cd4bd44c3ac27f40a2b0 kile-1.9_rc1.ebuild 1320
-SHA256 f76f8b45eb2ff594ce07b2c1bae351038552a9abc11909d1a3d5b256a138c41c kile-1.9_rc1.ebuild 1320
+MD5 0b45d1cb8d1f939877acf6cd60edd89b kile-1.9.ebuild 1279
+RMD160 5b96ac2ae9c55fc040729d15b2dd46555f15d2fe kile-1.9.ebuild 1279
+SHA256 97b85205ec7b90ae63951ddffb4d753fac8eb053f92a17114d60ed3396118e61 kile-1.9.ebuild 1279
 MD5 fa58af71489f3336e2a705d8b1f474ca metadata.xml 181
 RMD160 602e33702bf0bc23743046d6ffcf5c6820f2170d metadata.xml 181
 SHA256 7e237c2519d9c85d1e328c3bfe740321930b669002736eef72b686b1c3130b3e metadata.xml 181
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEBcTHAiZjviIA2XgRAm/5AKCyVzmwAGvI/mLeUnhh/YieKbxVRACgvc81
-sOlKETOGmMtUtaztpTZQot8=
-=Lh5X
+iD8DBQFEGrRuAiZjviIA2XgRAisEAKDZdtTl3Va8eh+O1MJPfTpl+qvDSACgntgd
+KF/+wRortR9lRBNGGS+QMQw=
+=mNi1
 -----END PGP SIGNATURE-----

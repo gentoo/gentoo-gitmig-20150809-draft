@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.9_rc1.ebuild,v 1.1 2006/03/01 15:59:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.9.ebuild,v 1.1 2006/03/17 13:06:33 flameeyes Exp $
 
 inherit kde
 
@@ -27,12 +27,11 @@ RDEPEND="dev-lang/perl
 
 need-kde 3.2
 
-LANGS="br ca cs cy da de el en_GB es et eu fi fr ga gl hi hu is it ja lt mt nb nl nn pa pl pt pt_BR ro rw sk sr sr@Latn sv ta tr zh_CN"
+LANGS="br ca cs cy da de el en_GB es et eu fi fr ga gl hi hu is it ja lt mt nb
+nl nn pa pl pt pt_BR ro ru rw sk sr sr@Latn sv ta tr zh_CN"
 for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
 done
-
-PATCHES="${FILESDIR}/${P}-gcc41.patch"
 
 src_unpack() {
 	kde_src_unpack
