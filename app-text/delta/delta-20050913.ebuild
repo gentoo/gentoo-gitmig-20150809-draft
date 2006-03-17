@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/delta/delta-20050913.ebuild,v 1.3 2006/01/29 21:38:55 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/delta/delta-20050913.ebuild,v 1.4 2006/03/17 23:31:58 halcy0n Exp $
 
 MY_PV="${PV:0:4}.${PV:4:2}.${PV:6:2}"
 DESCRIPTION="Heuristically minimizes interesting files"
@@ -15,6 +15,10 @@ IUSE=""
 DEPEND="dev-lang/perl"
 
 S="${WORKDIR}"/${PN}-${MY_PV}
+
+src_compile() {
+	emake CFLAGS="${CFLAGS}"
+}
 
 src_install() {
 	exeinto /usr/bin/
