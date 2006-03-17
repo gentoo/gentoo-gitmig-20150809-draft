@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gfsview
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/ChangeLog,v 1.1 2006/02/07 04:37:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/ChangeLog,v 1.2 2006/03/17 05:10:00 deltacow Exp $
+
+  17 Mar 2006; Scott Stoddard <deltacow@gentoo.org> gfsview-0.4.ebuild:
+  Added ~amd64.
 
 *gfsview-0.4 (07 Feb 2006)
 

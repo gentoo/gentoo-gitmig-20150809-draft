@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/gfsview-0.4.ebuild,v 1.1 2006/02/07 04:37:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/gfsview-0.4.ebuild,v 1.2 2006/03/17 05:10:00 deltacow Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gfs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 DEPEND=">=x11-libs/gtkglext-1.0.6
