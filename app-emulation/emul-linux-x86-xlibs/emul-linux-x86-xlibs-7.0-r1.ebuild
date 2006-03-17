@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-7.0.ebuild,v 1.1 2006/03/17 15:44:44 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-7.0-r1.ebuild,v 1.1 2006/03/17 17:51:35 herbs Exp $
 
 inherit multilib
 
 DESCRIPTION="X11R6 libraries for emulation of 32bit x86 on amd64"
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="mirror://gentoo/emul-linux-x86-xlibs-${PV}.tar.bz2
+SRC_URI="mirror://gentoo/emul-linux-x86-xlibs-${PVR}.tar.bz2
 		video_cards_ati? mirror://gentoo/emul-linux-x86-xlibs-ati_dri-${PV}.tar.bz2
 		video_cards_i810? mirror://gentoo/emul-linux-x86-xlibs-i810_dri-${PV}.tar.bz2
 		video_cards_mga? mirror://gentoo/emul-linux-x86-xlibs-mga_dri-${PV}.tar.bz2
