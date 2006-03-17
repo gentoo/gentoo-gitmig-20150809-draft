@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-WaitStat/Proc-WaitStat-1.00.ebuild,v 1.2 2006/01/13 22:14:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-WaitStat/Proc-WaitStat-1.00.ebuild,v 1.3 2006/03/17 03:52:20 deltacow Exp $
 
 inherit perl-module
 
@@ -12,6 +12,6 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 
 DEPEND="dev-perl/IPC-Signal"

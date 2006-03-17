@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Signal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Signal/ChangeLog,v 1.3 2006/01/13 21:33:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Signal/ChangeLog,v 1.4 2006/03/17 03:51:02 deltacow Exp $
+
+  17 Mar 2006; Scott Stoddard <deltacow@gentoo.org> IPC-Signal-1.00.ebuild:
+  Added ~amd64.
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   IPC-Signal-1.00.ebuild:
