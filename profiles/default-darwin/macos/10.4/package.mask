@@ -39,6 +39,7 @@ sys-devel/automake-wrapper
 sys-devel/bison
 sys-devel/flex
 sys-devel/libperl
+sys-devel/m4
 sys-libs/com_err
 sys-libs/ncurses
 sys-libs/readline
