@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.309 2006/03/16 20:39:43 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.310 2006/03/17 20:18:06 vivo Exp $
+
+  17 Mar 2006; Francesco Riosa <vivo@gentoo.org> -mysql-4.1.18-r30.ebuild,
+  mysql-4.1.18-r60.ebuild, -mysql-5.0.18-r30.ebuild, mysql-5.0.19.ebuild,
+  mysql-5.1.7_beta.ebuild:
+  Further cleanup, slotting totally removed now, an overlay will be set up ASAP.
 
   16 Mar 2006; Francesco Riosa <vivo@gentoo.org> +files/mysql.conf.d-r1,
   +files/mysql.rc6-r3, -files/mysql-slot.conf.d,
