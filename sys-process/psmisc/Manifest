@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 78ad6911cce9b99659000e0ed66b136f ChangeLog 10006
+MD5 d8b5f18d7d6654d6d566ddf81033e05f ChangeLog 10108
 MD5 3ab218bf6bd06a64d5de56a84f9f5dc0 files/digest-psmisc-21.9 63
 MD5 4a62c9237180d858ab57c87dab6ce346 files/digest-psmisc-22.1 63
 MD5 31b893fab6c1a7d95752e63dd94bfa26 files/digest-psmisc-22.2 235
 MD5 fbd6d2d8f9aca96690539b33ccce8ff8 files/psmisc-22.1-force-locale.patch 334
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 93817ac83713e229efb011fa39464344 psmisc-21.9.ebuild 1088
-MD5 d31f490197f029f4c60ab87ea9184adb psmisc-22.1.ebuild 1196
+MD5 e16b2ee26721772b7854d045f39c7971 psmisc-22.1.ebuild 1196
 MD5 46b500e3a780d8ff5b41a7653738e4c6 psmisc-22.2.ebuild 1080
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEGkAgFdQwWVoAgN4RAk9zAJ47MXL2VJNEG0XF/xMXGb8t7i7oxACeJd5S
-k1+wpkSzrNEbUvQTZINlOZo=
-=fIC7
+iD8DBQFEGjSvFdQwWVoAgN4RAk0EAJ9kWMedcvIMWu4bvc5LsfcDYejmfQCg2TRs
+chegi0Yy/vS8uvtbRgqGj/g=
+=KKzD
 -----END PGP SIGNATURE-----
