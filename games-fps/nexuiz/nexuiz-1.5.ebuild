@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-1.5.ebuild,v 1.1 2006/03/17 19:43:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-1.5.ebuild,v 1.2 2006/03/17 20:07:44 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -52,6 +52,7 @@ pkg_setup() {
 	then
 		einfo "Defaulting to OpenGL client"
 	fi
+	games_pkg_setup
 }
 
 src_unpack() {
