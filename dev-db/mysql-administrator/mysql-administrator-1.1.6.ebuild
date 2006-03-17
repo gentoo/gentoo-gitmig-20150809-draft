@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.1.6.ebuild,v 1.2 2006/02/25 16:27:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.1.6.ebuild,v 1.3 2006/03/17 22:40:07 swegener Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="MySQL Administrator"
-HOMEPAGE="http://www.mysql.com/products/administrator/"
+HOMEPAGE="http://www.mysql.com/products/tools/administrator/"
 SRC_URI="mirror://mysql/Downloads/MySQLAdministrationSuite/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
