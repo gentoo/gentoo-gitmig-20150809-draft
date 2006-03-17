@@ -1,37 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 678a9562979f1c52bb51974295981f42 ChangeLog 9901
-RMD160 e2e443ca1f2bdb04fcb4ab50e3e5510255281220 ChangeLog 9901
-SHA256 3834fa33e70d8578f16ab1a9087c470f32b79b2900061dca50a3bae894acbb70 ChangeLog 9901
+MD5 78ad6911cce9b99659000e0ed66b136f ChangeLog 10006
 MD5 3ab218bf6bd06a64d5de56a84f9f5dc0 files/digest-psmisc-21.9 63
-RMD160 59e146eba1751f0245278bb11be13499dcb26f4a files/digest-psmisc-21.9 63
-SHA256 290790fb7b02547fa72fd9102164d9449e61261c97088805c781a3bf2e3dcd32 files/digest-psmisc-21.9 63
 MD5 4a62c9237180d858ab57c87dab6ce346 files/digest-psmisc-22.1 63
-RMD160 3bb9b382baaeea332c735879f432b4aad90ca511 files/digest-psmisc-22.1 63
-SHA256 b3d00d0a79cd0059a0abd53bfee5d0f5f4472001557f8573dcd6b56951d4ec72 files/digest-psmisc-22.1 63
 MD5 31b893fab6c1a7d95752e63dd94bfa26 files/digest-psmisc-22.2 235
-RMD160 0c806149c35f520fcf5a4eaebf1329073c2336c6 files/digest-psmisc-22.2 235
-SHA256 c0e455a65fcd13cc2d90c37eae7101a58bfdfd99e0c7a50886fa7667021d16e7 files/digest-psmisc-22.2 235
 MD5 fbd6d2d8f9aca96690539b33ccce8ff8 files/psmisc-22.1-force-locale.patch 334
-RMD160 e64d4133ce306dd1b86a7a31036527bfa0e32f7b files/psmisc-22.1-force-locale.patch 334
-SHA256 e40c65f07b1d2d5e7cc24d905a6f340b6d2262120ff536efaa65ce7bf5a03071 files/psmisc-22.1-force-locale.patch 334
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
-SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 93817ac83713e229efb011fa39464344 psmisc-21.9.ebuild 1088
-RMD160 3a79b5d3690da1df6381922be1d09543029b97e6 psmisc-21.9.ebuild 1088
-SHA256 99f1ecf7cc6de407e616bb0df241173ccba7cbeee62fcf548edb4395144e1561 psmisc-21.9.ebuild 1088
-MD5 1b89e12edc9c097b70d8ca960039986c psmisc-22.1.ebuild 1193
-RMD160 e3ddec61c755fe03699aebac65462ad06864cbe8 psmisc-22.1.ebuild 1193
-SHA256 4f9550eebbbaa470402790f703886579473ef19d4f12c0f84b32530ad492b9a3 psmisc-22.1.ebuild 1193
+MD5 d31f490197f029f4c60ab87ea9184adb psmisc-22.1.ebuild 1196
 MD5 46b500e3a780d8ff5b41a7653738e4c6 psmisc-22.2.ebuild 1080
-RMD160 f53e2578a97142ce229e3e42843f4d5dbdfbdf11 psmisc-22.2.ebuild 1080
-SHA256 f2ecea236776056ea754a6e6ef545b0c6c732b272ebdccf74baca2cbce4a0941 psmisc-22.2.ebuild 1080
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEGj1L2+ySkm8kpY0RAuguAJ9+Jy1gUnO4tji4PEeZ+IPu2oeE/gCfdwoU
-VKVcNos3P2e5B+FaJg6fpvk=
-=a8Gf
+iD8DBQFEGkAgFdQwWVoAgN4RAk9zAJ47MXL2VJNEG0XF/xMXGb8t7i7oxACeJd5S
+k1+wpkSzrNEbUvQTZINlOZo=
+=fIC7
 -----END PGP SIGNATURE-----

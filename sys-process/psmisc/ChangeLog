@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.32 2006/03/15 17:04:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.33 2006/03/17 04:50:22 chriswhite Exp $
+
+  17 Mar 2006; Chris White <chriswhite@gentoo.org> psmisc-22.1.ebuild:
+  x86 stable for bug #126234.
 
   15 Mar 2006; Markus Rothe <corsair@gentoo.org> psmisc-22.1.ebuild:
   Stable on ppc64; bug #126234
