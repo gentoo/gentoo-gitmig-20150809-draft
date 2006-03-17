@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/szip-1.1-r1.ebuild,v 1.3 2004/12/29 00:29:20 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/szip-1.1-r1.ebuild,v 1.4 2006/03/17 14:09:28 corsair Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.ncsa.uiuc.edu/HDF/szip/src/${MY_P}.tar.gz"
 LICENSE="szip"
 
 SLOT="0"
-KEYWORDS="x86 amd64 ppc"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 
 IUSE=""
 
