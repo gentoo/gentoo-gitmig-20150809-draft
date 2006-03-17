@@ -1,6 +1,9 @@
-MD5 4983ec82c0b5039f2a2b95c2f8df020c ChangeLog 10109
-RMD160 c4bf0985e9d5d439a610c753afca3bf8e527fc69 ChangeLog 10109
-SHA256 76b2d8fbe63ba682f17498997ad75fc1c284756cee1b72a7dc6f9d6e830ae7b5 ChangeLog 10109
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ed13175abbb108240bc518d953cc8053 ChangeLog 9405
+RMD160 19d9fce9b1ae1f41eda4f45c9005e088059f0fb6 ChangeLog 9405
+SHA256 108897efe2c180554d96af7b21770288a4f9f324a44403e674c1175a8b0fab86 ChangeLog 9405
 MD5 d687545889dacb43e121f4932d99a534 files/bash-3.0-etc-inputrc.patch 1443
 RMD160 8bf34837bef20bfc7062e32e4a23aa6af9ef2b49 files/bash-3.0-etc-inputrc.patch 1443
 SHA256 b43736c32ed9d9088ee1cbbff11b78d6f6993492f9da3e1eb5151a64a082d025 files/bash-3.0-etc-inputrc.patch 1443
@@ -19,6 +22,9 @@ SHA256 b6fe9787237d2482f81d6e0d8da312ab1e354a7ef882e2ec26d73e310e66e37b files/di
 MD5 899ae79419e83907ddf440269d4612c7 files/digest-readline-5.1_p2 675
 RMD160 79d095a461349da10278ec9218bceeeebef7b095 files/digest-readline-5.1_p2 675
 SHA256 edb7229211246792f9c599f577dccd1f420f8e856079cf0bda010a35ba5d79ed files/digest-readline-5.1_p2 675
+MD5 a46bee7317d675994b1b0f0b123cd494 files/digest-readline-5.1_p3 889
+RMD160 c8281d76792c651cd4dd0bf72169a18ff72b4d09 files/digest-readline-5.1_p3 889
+SHA256 eb1dcab7d8727d4fe93b8cc17552f77f62927ece921bdf42e6cff4810f89e8c2 files/digest-readline-5.1_p3 889
 MD5 9905e333ead392447a670e0f2374651a files/macos.patch 504
 RMD160 f1d8af91c277b9bf3b3402cde93af34a015f461d files/macos.patch 504
 SHA256 d745da0aa5338e799f1fb84593395364b9966d0053db3d1a952e0367f6a61877 files/macos.patch 504
@@ -67,6 +73,16 @@ SHA256 d57a566a03f6a2676011d998eab1329299ec9bccc79a50eea1c4f132ffdf9891 readline
 MD5 21c45284ab57e8c8b764e376fa19f880 readline-5.1-r2.ebuild 3064
 RMD160 f847c87947d7ef4bc8058b06c2860b388f5620da readline-5.1-r2.ebuild 3064
 SHA256 e026a51254d49d156682a380633177575df53d42ce093702dbf570fbffb24c4e readline-5.1-r2.ebuild 3064
-MD5 a0ef85c7c48ab4fde2d5da731052f2f1 readline-5.1_p2.ebuild 3146
-RMD160 4e547165a942c4cedb8374d407437bd1d9ef32b8 readline-5.1_p2.ebuild 3146
-SHA256 e78e07ab919314a5da608c1eba2c3aaff7a780505100f014ae37272bd014fe67 readline-5.1_p2.ebuild 3146
+MD5 af4ef6da27e4da94b155d4b640eb0dc1 readline-5.1_p2.ebuild 3148
+RMD160 9f273e863b53ec3da571df788c81bab513331b9b readline-5.1_p2.ebuild 3148
+SHA256 0143009dc5aaf35562acdc380d5272005cd00dfaf280c3ac9ee88d7519052f50 readline-5.1_p2.ebuild 3148
+MD5 ab9141593685f9aba7b825972647c47c readline-5.1_p3.ebuild 3161
+RMD160 daed35024c0a4de52173ffa39413ef91d60a46da readline-5.1_p3.ebuild 3161
+SHA256 576aed837441bf697b2db27dfa3963ce583ec1f0506409e325cee2e50163839f readline-5.1_p3.ebuild 3161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEG0N/2+ySkm8kpY0RAmS6AKCgmOIeOqc8ChoyEEsOTP8HYsaCcgCgxCfG
+gpNfdZFi1pJB7vnA72/TUys=
+=VfnU
+-----END PGP SIGNATURE-----
