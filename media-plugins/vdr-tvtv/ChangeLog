@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-tvtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvtv/ChangeLog,v 1.1 2006/03/17 06:49:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvtv/ChangeLog,v 1.2 2006/03/17 07:17:14 zzam Exp $
+
+  17 Mar 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-tvtv-0.2.12.ebuild:
+  added dependency to net-misc/curl
 
 *vdr-tvtv-0.2.12 (17 Mar 2006)
 

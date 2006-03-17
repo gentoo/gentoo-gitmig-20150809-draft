@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvtv/vdr-tvtv-0.2.12.ebuild,v 1.1 2006/03/17 06:49:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvtv/vdr-tvtv-0.2.12.ebuild,v 1.2 2006/03/17 07:17:14 zzam Exp $
 
 inherit vdr-plugin
 
@@ -14,5 +14,6 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.2.6"
+DEPEND=">=media-video/vdr-1.2.6
+	net-misc/curl"
 
