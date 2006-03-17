@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6.ebuild,v 1.2 2006/03/17 20:29:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6.ebuild,v 1.3 2006/03/17 20:55:25 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -8,11 +8,11 @@ SRCTYPE="free"
 DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework."
 HOMEPAGE="http://www.trolltech.com/"
 
-IMMQT_P="qt-x11-immodule-unified-qt3.3.5-20051018"
+IMMQT_P="qt-x11-immodule-unified-qt3.3.6-20060317-gentoo"
 
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
-	immqt? ( http://freedesktop.org/~daisuke/${IMMQT_P}.diff.bz2 )
-	immqt-bc? ( http://freedesktop.org/~daisuke/${IMMQT_P}.diff.bz2 )"
+	immqt? ( mirror://gentoo/${IMMQT_P}.diff.bz2 )
+	immqt-bc? ( mirror://gentoo/${IMMQT_P}.diff.bz2 )"
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 
 SLOT="3"
@@ -232,7 +232,7 @@ src_install() {
 	else
 		dolib lib/lib{editor,qassistantclient,designercore}.a
 		dolib lib/libqt-mt.la
-		dolib lib/libqt-mt.so.3.3.5 lib/libqui.so.1.0.0
+		dolib lib/libqt-mt.so.${PV} lib/libqui.so.1.0.0
 		cd ${D}/${QTBASE}/$(get_libdir)
 
 		for x in libqui.so ; do
@@ -242,12 +242,12 @@ src_install() {
 		done
 
 		# version symlinks - 3.3.5->3.3->3->.so
-		ln -s libqt-mt.so.3.3.5 libqt-mt.so.3.3
+		ln -s libqt-mt.so.${PV} libqt-mt.so.3.3
 		ln -s libqt-mt.so.3.3 libqt-mt.so.3
 		ln -s libqt-mt.so.3 libqt-mt.so
 
 		# libqt -> libqt-mt symlinks
-		ln -s libqt-mt.so.3.3.5 libqt.so.3.3.5
+		ln -s libqt-mt.so.${pv} libqt.so.${PV}
 		ln -s libqt-mt.so.3.3 libqt.so.3.3
 		ln -s libqt-mt.so.3 libqt.so.3
 		ln -s libqt-mt.so libqt.so
