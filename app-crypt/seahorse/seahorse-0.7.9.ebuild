@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.9.ebuild,v 1.9 2005/12/14 20:06:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.9.ebuild,v 1.10 2006/03/17 16:16:22 allanonjl Exp $
 
 inherit gnome2 eutils autotools flag-o-matic
 
@@ -45,6 +45,7 @@ src_unpack() {
 	# gedit-2.12. See bug #106133, <obz@gentoo.org>
 	epatch ${FILESDIR}/${P}-gedit-2.12.patch
 	epatch ${FILESDIR}/${P}-gpgme-1.1.0.patch
+	gnome2_omf_fix
 	# Re-configure
 	eautoconf
 
