@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vstgl/vstgl-0.6.2.ebuild,v 1.2 2005/08/23 20:43:40 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vstgl/vstgl-0.6.2.ebuild,v 1.3 2006/03/17 15:56:48 caleb Exp $
 
 inherit eutils
 
@@ -21,6 +21,13 @@ DEPEND="x11-libs/qt
 	# dev-util/kdoc"
 
 S=${WORKDIR}/${PN}
+
+src_unpack()
+{
+	unpack ${A}
+
+	sed -e "s:^qmake:${QTDIR}\/bin\/qmake QMAKE=${QTDIR}\/bin\/qmake:" -i ${S}/configure
+}
 
 src_install () {
 	einstall INSTALL_ROOT=${D} || die
