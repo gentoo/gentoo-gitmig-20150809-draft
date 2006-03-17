@@ -1,12 +1,22 @@
-MD5 59e71139312c12e8c3b04f38a77d6860 ChangeLog 395
-RMD160 bf3fa74799a0edc6540ee140334c117be5440220 ChangeLog 395
-SHA256 0ba21a38d6daab4568c51ea1e0dfbdd9a6864510914da6772e40bd96421cfa3a ChangeLog 395
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6044ddc5de52ca92a28455399a8cc224 ChangeLog 510
+RMD160 6ce7fbc28c47720a67e2c037e3f4f0cb4153c90c ChangeLog 510
+SHA256 a9e74ea6c28740ebc408c995aec36a3b90a2ae1c04125916b7d865c9506a4397 ChangeLog 510
 MD5 6f1df62054352745d4cc0a059dd35ceb files/digest-matchbox-applet-input-manager-0.6 286
 RMD160 f500b755ad505e8c0024210f8af4ac86e1b29452 files/digest-matchbox-applet-input-manager-0.6 286
 SHA256 770c47f7c4eccf821ffd2acda57bb4f9157ed5d8a1c8573d397243c3f6baa69a files/digest-matchbox-applet-input-manager-0.6 286
-MD5 a207e67c5704b17bc40a18f2197fe17c matchbox-applet-input-manager-0.6.ebuild 817
-RMD160 611c8f1b9b61de2f6dd4f8827275875c2070df92 matchbox-applet-input-manager-0.6.ebuild 817
-SHA256 71ca015be554795424fa375dc30e276f37ca1aa1de52af8741da87905ce15ea2 matchbox-applet-input-manager-0.6.ebuild 817
+MD5 5093dba202ff63225798f1f436e28f9a matchbox-applet-input-manager-0.6.ebuild 963
+RMD160 b3eeb4dec5afa0a211c8f8b7a205142e4e24f714 matchbox-applet-input-manager-0.6.ebuild 963
+SHA256 02f85c706c444a7734b915f28b9856ac986ba8a3a7f0f197fa0c91bbfd0c783a matchbox-applet-input-manager-0.6.ebuild 963
 MD5 a80bc50cf196a9e5a2764d6f6081b56a metadata.xml 247
 RMD160 49e7f36b66be574d7f3341589ebff702e1c8c8a9 metadata.xml 247
 SHA256 5270fc293d10727efe22af7c71da351586b63251d10bbadd916060e405d88ce9 metadata.xml 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEGvGEI1lqEGTUzyQRAjX4AJ9qzUT2U+Yh/79kJn8D1Y1/j3VHIQCggZsi
++rnvT60tTA0lYNxo5qm/8DE=
+=Xfa7
+-----END PGP SIGNATURE-----
