@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.7.30.ebuild,v 1.1 2006/03/17 14:13:09 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.7.32.ebuild,v 1.1 2006/03/17 17:53:36 allanonjl Exp $
 
 inherit eutils gnome2
 
