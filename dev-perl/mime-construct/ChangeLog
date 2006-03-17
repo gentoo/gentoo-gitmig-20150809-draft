@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/mime-construct
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mime-construct/ChangeLog,v 1.3 2006/01/17 10:09:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mime-construct/ChangeLog,v 1.4 2006/03/17 03:54:23 deltacow Exp $
+
+  17 Mar 2006; Scott Stoddard <deltacow@gentoo.org>
+  mime-construct-1.9-r1.ebuild:
+  Added ~amd64.
 
 *mime-construct-1.9-r1 (17 Jan 2006)
 
