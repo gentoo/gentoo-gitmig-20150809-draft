@@ -1,0 +1,13 @@
+--- deco/baghiraclient.h.orig	2006-03-17 12:49:33.000000000 +0100
++++ deco/baghiraclient.h	2006-03-17 12:52:47.000000000 +0100
+@@ -159,8 +159,8 @@
+     virtual KDecoration *createDecoration(KDecorationBridge *b);
+     virtual bool reset(unsigned long changed);
+     virtual QValueList<BorderSize> borderSizes() const;
+-    static QPixmap &BaghiraFactory::ButtonPixmap(Baghira::WindowState wState, Baghira::ButtonType type, Baghira::ButtonState state, int current, bool small);
+-    QImage* BaghiraFactory::DecoImage(QPixmap *pix, int x, int y, int width, int height);
++    static QPixmap &ButtonPixmap(Baghira::WindowState wState, Baghira::ButtonType type, Baghira::ButtonState state, int current, bool small);
++    QImage* DecoImage(QPixmap *pix, int x, int y, int width, int height);
+ 
+     static QBitmap helpMask, jaguarDownMask, jaguarMenuDownMask,
+             jaguarMenuMask, jaguarMask, milkMenuDownMask,

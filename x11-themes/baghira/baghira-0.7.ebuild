@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/baghira-0.7.ebuild,v 1.2 2005/10/04 12:37:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/baghira-0.7.ebuild,v 1.3 2006/03/17 13:23:45 flameeyes Exp $
 
 inherit kde
 
@@ -19,3 +19,5 @@ DEPEND="|| ( kde-base/kwin >=kde-base/kdebase-3.3 )
 need-kde 3.3
 
 S="${WORKDIR}/${PN}-release"
+
+PATCHES="${FILESDIR}/${P}-gcc41.patch"
