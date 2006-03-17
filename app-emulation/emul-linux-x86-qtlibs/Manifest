@@ -1,31 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0c094b8b17a66d04e94803508b03b748 ChangeLog 2761
-RMD160 c7dcf64b3053b1f50b5a6fc06c1f81619c0a5465 ChangeLog 2761
-SHA256 3c95a199f49763269f1577c4d5205517e7a715bca78fb83bf08d763baff832d1 ChangeLog 2761
-MD5 3a620c74728a8ac520108e3a2d27e7ca emul-linux-x86-qtlibs-2.1.1.ebuild 651
-RMD160 76ef4e1de0468bc2d88bbda38b177db8ee055c41 emul-linux-x86-qtlibs-2.1.1.ebuild 651
-SHA256 9d880d646abcb9546f686f29a78beba9d4b60b15de505a02aa71347a1ce36966 emul-linux-x86-qtlibs-2.1.1.ebuild 651
+MD5 812894412ec4cc0c67cd800885a2d600 .ChangeLog.swp 12288
+RMD160 5eef92e6b3526cc4868e9cb3a58d8bfd13ab7ceb .ChangeLog.swp 12288
+SHA256 bb53b05932840c9a51a6852334aabd6826b590c41cbef5e21afa8a85c2dfe7f8 .ChangeLog.swp 12288
+MD5 a2126776828187bb3eca63c085055e32 ChangeLog 3135
+RMD160 1c9a00a71af546a9b86b85acfb68d2c72b1e33d6 ChangeLog 3135
+SHA256 fadbb354a0b09f7297df781599147cddcf7a29dc0a878102f683a118c796bdfe ChangeLog 3135
 MD5 d4f5f68c00a37823972c27daa997de6a emul-linux-x86-qtlibs-2.2.ebuild 649
 RMD160 1c6d37ce559ace98982a28f727935e26612a005e emul-linux-x86-qtlibs-2.2.ebuild 649
 SHA256 6b7a207e771dec99aa646cc895ab62e2edde6d7e468ee0aab1d2755da3b10564 emul-linux-x86-qtlibs-2.2.ebuild 649
+MD5 1b9109ccb7c69fa5116b62aa68f410b3 emul-linux-x86-qtlibs-3.4.4.ebuild 847
+RMD160 7c3ab5993d38710c489070f326c4ecdbf78c86f3 emul-linux-x86-qtlibs-3.4.4.ebuild 847
+SHA256 dd8b73e3e7ea83e63b28f49c9a64ff96bf6bbd78f5fbcba049f6693d3bb0511b emul-linux-x86-qtlibs-3.4.4.ebuild 847
 MD5 c4e0363d341ecdf9a7297fe7d3654a84 files/45emul-linux-x86-qtlibs 121
 RMD160 ea50e2ee0c4f22f830af9b110e48d1706d90114d files/45emul-linux-x86-qtlibs 121
 SHA256 e50dc1bf0cb6f2c45c9a48ade7888790c36d1f6b39e4402b8c9d9a1536360f65 files/45emul-linux-x86-qtlibs 121
-MD5 c84cbe67169a12f2b57d33c5eba13ad9 files/digest-emul-linux-x86-qtlibs-2.1.1 81
-RMD160 f94d6cfd04099fb39bbddf68032c02d466ef1a85 files/digest-emul-linux-x86-qtlibs-2.1.1 81
-SHA256 dfc627c5786315a61db2f9b914dcb1eed0e3e05ffdf2d369cca43e986c4ba728 files/digest-emul-linux-x86-qtlibs-2.1.1 81
 MD5 fe426a9b74364ef95d2f18840429cca9 files/digest-emul-linux-x86-qtlibs-2.2 79
 RMD160 00ad11c92fc8926c0ec5d726bca84f8eaf3c32bd files/digest-emul-linux-x86-qtlibs-2.2 79
 SHA256 59a3371a31ab5ee907a540b1d742733faa6cfbfaf43a781a3a9da619c206de6b files/digest-emul-linux-x86-qtlibs-2.2 79
+MD5 6f6659b9dcfa20257255f19862fc0593 files/digest-emul-linux-x86-qtlibs-3.4.4 924
+RMD160 b83001e192ba71c145e9268d76c2ee59ec9777e1 files/digest-emul-linux-x86-qtlibs-3.4.4 924
+SHA256 209ef686a915ef493fd326e68c9838bc00aae691648dedf035ce089d8157052b files/digest-emul-linux-x86-qtlibs-3.4.4 924
 MD5 5e8c61d551dad88488a66992865ba737 metadata.xml 290
 RMD160 29c2eafcf00e4b115ba5ae455218ee6eebda67ae metadata.xml 290
 SHA256 8f04703141bc8cd55a0e56bf7593f657a891ed4796e71e3d6e8770c7ea098c30 metadata.xml 290
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFED4k3AiZjviIA2XgRAoicAJwJJfkr64dSous4sS1febXtNY2pggCgv0cy
-VcNhXisixRXPqtIhPJjiRgs=
-=Gd2+
+iD8DBQFEGt7Q2G5bA0cA/ScRAp3kAJ9DcXKjCjHdQF2WsygMFIS1cr70WQCePyu8
+v488DjjToyOiVXXHtZ0HOq4=
+=TT4g
 -----END PGP SIGNATURE-----

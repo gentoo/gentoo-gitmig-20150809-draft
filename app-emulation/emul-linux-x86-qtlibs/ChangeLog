@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.16 2006/03/09 01:47:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.17 2006/03/17 16:07:33 herbs Exp $
+
+*emul-linux-x86-qtlibs-3.4.4 (17 Mar 2006)
+
+  17 Mar 2006; Herbie Hopkins <herbs@gentoo.org>
+  -emul-linux-x86-qtlibs-2.1.1.ebuild, +emul-linux-x86-qtlibs-3.4.4.ebuild:
+  Add support for IME, enabled with immqt-bc use flag (bug 125588). Add kde
+  theme engines so 32bit qt apps don't look so out of place. Remove qt2 since
+  there hasn't been a qt2 ebuild in portage for ages.
 
   09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   emul-linux-x86-qtlibs-2.1.1.ebuild, emul-linux-x86-qtlibs-2.2.ebuild:
