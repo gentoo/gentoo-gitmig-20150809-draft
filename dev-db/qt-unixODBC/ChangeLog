@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/qt-unixODBC
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.13 2005/09/29 01:31:32 hardave Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.14 2006/03/17 17:32:30 caleb Exp $
+
+*qt-unixODBC-3.3.6 (17 Mar 2006)
+
+  17 Mar 2006; Caleb Tennis <caleb@gentoo.org> +qt-unixODBC-3.3.6.ebuild:
+  bumped to 3.3.6
 
   29 Sep 2005; Hardave Riar <hardave@gentoo.org>
   qt-unixODBC-3.3.4-r1.ebuild:
