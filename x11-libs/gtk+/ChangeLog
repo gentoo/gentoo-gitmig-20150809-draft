@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.226 2006/03/16 23:08:53 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.227 2006/03/17 22:17:20 dertobi123 Exp $
+
+  17 Mar 2006; Tobias Scherbaum <dertobi123@gentoo.org> gtk+-2.8.12.ebuild:
+  Stable gnome-2.12.3 for ppc, bug #126321
 
   16 Mar 2006; John N. Laliberte <allanonjl@gentoo.org> gtk+-2.8.16.ebuild:
   add missing inherit on autotools eclass. fixes #126455
