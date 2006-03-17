@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.10 2006/03/10 12:29:44 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.11 2006/03/17 20:17:53 vivo Exp $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
 # Maintainer: Francesco Riosa <vivo at gentoo.org>
@@ -112,52 +112,16 @@ mysql_version_is_at_least() {
 	[[ ${want_s} -le ${have_s} ]] && return 0 || return 1
 }
 
-# another one inherited from versionator.eclass (version_sort)
-# THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
-mysql_make_file_list() {
-	local items= left=0
-	items=$( ls -d ${1}-[[:digit:]][[:digit:]][[:digit:]] 2>/dev/null )
-
-	while [[ ${left} -lt ${#items[@]} ]] ; do
-		local lowest_idx=${left}
-		local idx=$(( ${lowest_idx} + 1 ))
-		while [[ ${idx} -lt ${#items[@]} ]] ; do
-			[[ "${items[${lowest_idx}]}" > "${items[${idx}]}" ]] \
-				&& lowest_idx=${idx}
-			idx=$(( ${idx} + 1 ))
-		done
-		local tmp=${items[${lowest_idx}]}
-		items[${lowest_idx}]=${items[${left}]}
-		items[${left}]=${tmp}
-		left=$(( ${left} + 1 ))
-	done
-	echo ${items[@]}
-}
-
-# THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
-mysql_choose_better_version() {
-	local items= better="" i
-	items="$( ls -d ${1}-[[:digit:]][[:digit:]][[:digit:]] )"
-	for i in ${items} ; do
-		if [[ "${i}" > "${better}" ]] ; then
-			better="${i}"
-		fi
-	done
-	echo "${better}"
-}
-
-
 # void mysql_lib_symlinks()
 #
 # To be called on the live filesystem, reassign symlinks to each mysql
-# library to the best version avaiable
+# library to the best version available
 # 2005-12-30 <vivo at gentoo.org>
-# THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
 mysql_lib_symlinks() {
 	local d dirlist maxdots soname sonameln other better
 	pushd "${ROOT}/usr/$(get_libdir)" &> /dev/null
 		# dirlist must contain the less significative directory left
-		dirlist="mysql $( mysql_make_file_list mysql )"
+		dirlist="mysql"
 
 		# waste some time in removing and recreating symlinks
 		for d in $dirlist ; do
@@ -179,18 +143,4 @@ mysql_lib_symlinks() {
 			done
 		done
 	popd &> /dev/null
-
-	# "include"s and "mysql_config", needed to compile other sw
-	for other in "/usr/$(get_libdir)/mysql" "/usr/include/mysql" "/usr/bin/mysql_config" ; do
-		pushd "${ROOT}${other%/*}" &> /dev/null
-		better=$( mysql_choose_better_version "${other##*/}" )
-		if ! [[ -d "${other##*/}" ]] ; then
-			[[ -L "${other##*/}" ]] && rm -f "${other##*/}"
-			! [[ -f "${other##*/}" ]] && ln -sf "${better}" "${other##*/}"
-		else
-			[[ -L "${other##*/}" ]] && rm -f "${other##*/}"
-			! [[ -d "${other##*/}" ]] && ln -s "${better}" "${other##*/}"
-		fi
-		popd &> /dev/null
-	done
 }
