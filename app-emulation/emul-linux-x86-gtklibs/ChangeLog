@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.19 2006/03/09 01:50:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.20 2006/03/17 16:11:41 herbs Exp $
+
+*emul-linux-x86-gtklibs-2.8.8 (17 Mar 2006)
+
+  17 Mar 2006; Herbie Hopkins <herbs@gentoo.org>
+  -emul-linux-x86-gtklibs-2.1.ebuild, -emul-linux-x86-gtklibs-2.2.ebuild,
+  +emul-linux-x86-gtklibs-2.8.8.ebuild:
+  Bump gtk to version 2.8.8, add gtk-engines-qt.
 
   09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   emul-linux-x86-gtklibs-2.1.ebuild, emul-linux-x86-gtklibs-2.2.ebuild,

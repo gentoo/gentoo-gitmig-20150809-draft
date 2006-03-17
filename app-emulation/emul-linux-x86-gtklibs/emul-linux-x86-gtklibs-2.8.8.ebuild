@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-2.2.ebuild,v 1.4 2006/03/09 01:50:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-2.8.8.ebuild,v 1.1 2006/03/17 16:11:41 herbs Exp $
 
 DESCRIPTION="Gtk+ 1/2 for emulation of 32bit x86 on amd64"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
@@ -9,17 +9,21 @@ HOMEPAGE="http://www.gentoo.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-* amd64"
-IUSE=""
+KEYWORDS="-* ~amd64"
+IUSE="qt"
 
 S="${WORKDIR}"
 
 RDEPEND=">=app-emulation/emul-linux-x86-xlibs-2.0
-	>=app-emulation/emul-linux-x86-baselibs-2.0"
+	>=app-emulation/emul-linux-x86-baselibs-2.5
+	qt? >=app-emulation/emul-linux-x86-qtlibs-3.4.4"
 
 RESTRICT="nostrip"
 
 src_install() {
+	# Avoid dep on qtlibs if qt support not required
+	use !qt && rm -f "${WORKDIR}/emul/linux/x86/usr/lib/gtk-2.0/2.4.0/engines/libqtengine.so"
+
 	cp -RPvf ${WORKDIR}/* ${D}/
 	doenvd ${FILESDIR}/50emul-linux-x86-gtklibs
 }
