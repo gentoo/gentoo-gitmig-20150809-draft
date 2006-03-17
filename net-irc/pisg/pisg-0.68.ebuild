@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.66.ebuild,v 1.5 2005/07/31 20:45:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.68.ebuild,v 1.1 2006/03/17 00:43:12 swegener Exp $
 
 DESCRIPTION="Perl IRC Statistics Generator"
 HOMEPAGE="http://pisg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
