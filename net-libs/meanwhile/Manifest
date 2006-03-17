@@ -1,49 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3f83efd6a074927d9cfe361671a495eb ChangeLog 3252
-RMD160 f0897b1ff4cc56579fca07f3948b5903c4d6ef33 ChangeLog 3252
-SHA256 44a185f5d61a64c4fc0cf7cd187777b89d11e65d86b250860e2700313c7733cc ChangeLog 3252
+MD5 6a142308fac9179603abe6d701a85cd8 ChangeLog 3352
 MD5 1e608d7c9f446aca8fec518e6e09c98c files/digest-meanwhile-0.3-r3 65
-RMD160 1c50be91d6cbcda3f9bb157c8a7d65ff9c902d72 files/digest-meanwhile-0.3-r3 65
-SHA256 457932ba977dd8294fe45b04b18ef45360aa56727b79dc4c60f78e715bbc3b60 files/digest-meanwhile-0.3-r3 65
 MD5 e36a0161c05416f3c5d2fc09be4f8fc4 files/digest-meanwhile-0.4.2 67
-RMD160 02230ac29b5fc018a5713d5d40603f4ed3ce98ee files/digest-meanwhile-0.4.2 67
-SHA256 4f6b76b23f93cdd4766cd967bc21582afc126dd21f688155ec5e940dc7f765c7 files/digest-meanwhile-0.4.2 67
 MD5 34c9150946cb37f0b304431f8da6d74e files/digest-meanwhile-0.5.0 67
-RMD160 2787b97f35f447e6ee1aa7a438ae0acb4ebdc608 files/digest-meanwhile-0.5.0 67
-SHA256 ab33255419137a40c4992d3d20897ddc08eb9a20527458bdfc757506c342570b files/digest-meanwhile-0.5.0 67
 MD5 38cb92996aeab18b918872d0e97b07fb files/digest-meanwhile-1.0.1 67
-RMD160 479b87380afd473a81c6c01384251c9376a69862 files/digest-meanwhile-1.0.1 67
-SHA256 49835eb4c633f550d2abb7a894405fed3162f3465d8f657963ef07678c221b4f files/digest-meanwhile-1.0.1 67
 MD5 68506d8bccc48c47f57b748e10373d7e files/digest-meanwhile-1.0.2 247
-RMD160 25baa3f81faff40be8c1cd62a486fdcc81ed2a05 files/digest-meanwhile-1.0.2 247
-SHA256 bf5ef1d68069d9ebd63b2b23f004326976f63faeacfa44a9a547a937197a359e files/digest-meanwhile-1.0.2 247
 MD5 54a68b70aac85bd876ebba642621ea12 files/mw_debug_glib.diff 388
-RMD160 cd533977308fa9b99adcc8ef848a393d714f0b8a files/mw_debug_glib.diff 388
-SHA256 fa730e3d222a313fe79a4979e861c9612dbd71253b8ed959a8650daa44ed5ade files/mw_debug_glib.diff 388
 MD5 b5b170d60d1f9a7bc8b9ab566c2a2b72 meanwhile-0.3-r3.ebuild 753
-RMD160 87ea6c8eefc6941cd89a98a7e4aa2974a05030c0 meanwhile-0.3-r3.ebuild 753
-SHA256 454fb6261f975278fad2bcfb352171614a889f83ae2d8aa504ab9270724b4510 meanwhile-0.3-r3.ebuild 753
-MD5 1090f64fec76b2cc0d15f37eff46a6af meanwhile-0.4.2.ebuild 634
-RMD160 9f680d1a20c59a6e90440d8ba61735178dc96995 meanwhile-0.4.2.ebuild 634
-SHA256 f97685e0a942be7a60b8fc14b780d816b4a45947ebd88d522cfd5b5cf88091f3 meanwhile-0.4.2.ebuild 634
+MD5 68d1f4e7274891bf002415a4d3785722 meanwhile-0.4.2.ebuild 640
 MD5 03b92539a6677467a58ccb2f68dd1150 meanwhile-0.5.0.ebuild 919
-RMD160 fab374997674f7a55d492fdb375875c47f5e8ca7 meanwhile-0.5.0.ebuild 919
-SHA256 b9fd5a79e9ebee0d4be4fc5c9e45fb3bc5b49b57a913930f59b235b43a1b4bb8 meanwhile-0.5.0.ebuild 919
 MD5 0500866756dc8d1441f4d49638298bde meanwhile-1.0.1.ebuild 891
-RMD160 cbccd6005446a18ff1b3a5478a6a18e4d0e597a5 meanwhile-1.0.1.ebuild 891
-SHA256 6f18dbd3933fb5a28a327110bba5dade09983b61fe9b2830fadc256065e6987d meanwhile-1.0.1.ebuild 891
 MD5 93f3d12eb0a6610ed6209300f165bc7e meanwhile-1.0.2.ebuild 884
-RMD160 20cfbeb89446c1dac31f420a2fe742bda2546eb9 meanwhile-1.0.2.ebuild 884
-SHA256 af1e5972bd1ce6ad7dc855b482178f1b2550ad93b7934c1161bdb28c3f9fb2d6 meanwhile-1.0.2.ebuild 884
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
-SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFD8yxg3mryvu3JUUURAmeCAJ9B7zJGjRRkPc7bWPtfwxJaeir9ggCfT0id
-7ALWCp8ApyJPRJj0YmPBjzw=
-=UFh7
+iD8DBQFEG01fKRy60XGEcJIRApsEAJ9NIsRw8ft+EQS4+oITDcqiALkbbgCglYid
+TG1HGnztO9s0muA5e3DWXYA=
+=9yop
 -----END PGP SIGNATURE-----
