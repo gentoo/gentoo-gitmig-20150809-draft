@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5098 2006/03/17 15:55:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5099 2006/03/17 22:30:07 allanonjl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -77,6 +77,8 @@ net-libs/enet
 >=dev-libs/glib-2.10
 >=gnome-base/gnome-vfs-2.13
 gnome-base/gnome-mount
+>=dev-python/gnome-python-extras-2.13
+>=dev-python/gnome-python-desktop-2.13
 >=x11-libs/gtk+-2.8.14
 >=dev-util/gtk-doc-1.5
 >=gnome-base/libbonobo-2.13
