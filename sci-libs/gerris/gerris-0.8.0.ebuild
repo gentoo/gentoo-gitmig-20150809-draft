@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-0.8.0.ebuild,v 1.1 2005/11/27 12:28:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-0.8.0.ebuild,v 1.2 2006/03/17 05:07:46 deltacow Exp $
 
 
 DESCRIPTION="The Gerris Flow Solver"
@@ -9,7 +9,7 @@ HOMEPAGE="http://gfs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gfs/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 DEPEND=">=dev-libs/glib-2.4.0
