@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.1.ebuild,v 1.7 2006/03/15 17:04:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.1.ebuild,v 1.8 2006/03/17 04:38:16 vapier Exp $
 
 inherit eutils
 
@@ -38,6 +38,7 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR="${D}" || die
+	dodoc AUTHORS ChangeLog NEWS README
 
 	# Some packages expect these to use /usr, others to use /
 	dodir /usr/bin
@@ -45,8 +46,5 @@ src_install() {
 	for f in * ; do
 		dosym /bin/${f} /usr/bin/${f}
 	done
-
-	dodoc AUTHORS ChangeLog NEWS README
-
 	use X || find "${D}" -name pstree.x11 -exec rm {} \;
 }
