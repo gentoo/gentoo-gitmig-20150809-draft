@@ -1,24 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4883b969f6622eea8909cc8505768308 ChangeLog 4211
-RMD160 417ebff87b5101832570f2673be1f660f68356c3 ChangeLog 4211
-SHA256 9dbcb89099210c60e38ba74c5a790b402a68d40339af1878c74e9c0ea655c453 ChangeLog 4211
-MD5 dccabae951c60ae1cffb9318b96e5e8b files/digest-libggi-2.0.1 65
-RMD160 37481c655ece291730d490cac95cdf477e28016a files/digest-libggi-2.0.1 65
-SHA256 ab0f53f2c90fcd7fb43a6e0f1b7886288d29049c98257871bbc34ae55739b4d1 files/digest-libggi-2.0.1 65
+MD5 b344f9430b9bfb8905bdd819bf806cda ChangeLog 4363
+RMD160 a76fd41cbe5ddfcb0b506fd5e58360ee806ae25c ChangeLog 4363
+SHA256 c300de70a1f225986048b97b4ef5a73e5830654ce8516ab77169a009260c1c5b ChangeLog 4363
 MD5 dccabae951c60ae1cffb9318b96e5e8b files/digest-libggi-2.0.1-r1 65
 RMD160 37481c655ece291730d490cac95cdf477e28016a files/digest-libggi-2.0.1-r1 65
 SHA256 ab0f53f2c90fcd7fb43a6e0f1b7886288d29049c98257871bbc34ae55739b4d1 files/digest-libggi-2.0.1-r1 65
-MD5 b93988b2735e152af47806e54abbef57 files/digest-libggi-2.1.0 69
-RMD160 477dee9ae4e1154fa76171b26b69730e234a6f5b files/digest-libggi-2.1.0 69
-SHA256 6b1ba451d8d0a0787070bfc27ae3b1dcb89bf04e55901303a5968b88bca4fabe files/digest-libggi-2.1.0 69
 MD5 026e0928dbe84dcf3e6921767870df9c files/digest-libggi-2.1.1 69
 RMD160 85d8130b0a645b5b6a4957a15718b5da3893d69f files/digest-libggi-2.1.1 69
 SHA256 bc61770105797bf65ccbc6b50776f0f3cbdfc23a6035d9e8b463d24ff116c915 files/digest-libggi-2.1.1 69
-MD5 0003d0005fedae0068066f6791125cba files/glibc-2.2.2-speed.diff 255
-RMD160 774999c2970b6704f6fa0cc2ffea789bc90f467e files/glibc-2.2.2-speed.diff 255
-SHA256 34fb505a606df421aacde6ec97027945b0df6c7b3645f6a6edb0b8c83043efe6 files/glibc-2.2.2-speed.diff 255
 MD5 ba5500ab4d04f2478eff5056de19fd4e files/libggi-2.0.1-ppc.patch 291
 RMD160 4c5e0a0e279ad93ebe75a849a5f0f02a920c935b files/libggi-2.0.1-ppc.patch 291
 SHA256 5a6d3963deaaaf604621ef5bf4ea119d70372e6d58b13b0c3e8582d6402befe6 files/libggi-2.0.1-ppc.patch 291
@@ -31,12 +22,6 @@ SHA256 9b14cb5ebdf9f8c295831f85929bb37fa3b74377d86caacf160f782567f202e3 files/li
 MD5 a7673eedbf820c4d90304d5b52e1cad1 libggi-2.0.1-r1.ebuild 1642
 RMD160 7624599e6803c2b91b6f2b0c615705eb887ef3f2 libggi-2.0.1-r1.ebuild 1642
 SHA256 b770151a1f780671c8792c61f075ebdddf65f7021398893818cf94d8ecc73058 libggi-2.0.1-r1.ebuild 1642
-MD5 8565bb352e3e1f7a37e3df631f551a28 libggi-2.0.1.ebuild 1401
-RMD160 f301750840ffb0433c75898f7594789146bf0ef6 libggi-2.0.1.ebuild 1401
-SHA256 cf479e94ded6edd2f8f05879dde50f26b03cfa72acd9f50458a1f16b7cac8a7a libggi-2.0.1.ebuild 1401
-MD5 864b27a44f45a80166a97b50358ab1b0 libggi-2.1.0.ebuild 1789
-RMD160 cd886018241ac63a706f05d6b85b5f237d2c9b95 libggi-2.1.0.ebuild 1789
-SHA256 8a84801e777765fa95bed8515e266706bdcc35c4a90a7ec170bf68bb80917920 libggi-2.1.0.ebuild 1789
 MD5 6a745110a0ffe67738e9cfe3ad8f621c libggi-2.1.1.ebuild 1971
 RMD160 b2f5ae3af9c01d8aeada1ca018cbdf6d293a829c libggi-2.1.1.ebuild 1971
 SHA256 b1ff170ca9631e643ea338dc5a448d1eba7aff7c5831adceb2ffa377e22cb22a libggi-2.1.1.ebuild 1971
@@ -46,7 +31,7 @@ SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEGg6gAiZjviIA2XgRAkMOAKCnGdTMxrtrH/WEjCguzRnT07/12gCg1DSq
-wJ5OR5YQA64zqboE+p7dczE=
-=7nQ9
+iD8DBQFEGg9IAiZjviIA2XgRAr5rAJ9ctR3Aqn6JyWwZI01W+5sDl8ZWqQCeNUAe
+OYpTFAuSXvcljy7A+rBehvg=
+=Mf7f
 -----END PGP SIGNATURE-----
