@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/regexp-common
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/regexp-common/ChangeLog,v 1.15 2006/01/16 21:32:12 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/regexp-common/ChangeLog,v 1.16 2006/03/17 20:27:41 chriswhite Exp $
+
+  17 Mar 2006; Chris White <chriswhite@gentoo.org>
+  -regexp-common-2.113.ebuild, regexp-common-2.120.ebuild:
+  amd64 stable for 2.120, killed old 2.113. Added SRC_TEST=do to enable test
+  cases.
 
   16 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org>
   regexp-common-2.120.ebuild:

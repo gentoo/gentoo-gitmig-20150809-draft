@@ -1,6 +1,14 @@
-MD5 334cda3df62b719433f039b1ae6de635 ChangeLog 1940
-MD5 fd3cefd7e3d14226b57fb39d31a70ee5 files/digest-regexp-common-2.113 71
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 946578f8e1d6283e9710530e359b857f ChangeLog 2138
 MD5 c61da6771018de963ff855b2d9404ca8 files/digest-regexp-common-2.120 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 155ec9e233463bdf0a375c346104693c regexp-common-2.113.ebuild 573
-MD5 d36d940f2566e586e561877bfcabd578 regexp-common-2.120.ebuild 581
+MD5 50caea995f1f875b164c6716109e5a99 regexp-common-2.120.ebuild 596
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEGxvCFdQwWVoAgN4RAgmmAJ9Etfu86PBRH1i4wAM5BZ7WxMJqPACgsa6R
+ijJLiBNXAQwNE++68mBWhyM=
+=iSrS
+-----END PGP SIGNATURE-----
