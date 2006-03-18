@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.14 2005/11/26 20:42:54 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.15 2006/03/18 16:43:20 flameeyes Exp $
 #
 # Author Rob Cakebread <pythonhead@gentoo.org>
 
@@ -19,7 +19,7 @@
 #   Arguments: (wxGTK 2.6) gtk-ansi gtk2-ansi unicode base-ansi base-unicode mac-ansi mac-unicode
 #   Note: Don't call this function directly from ebuilds
 
-inherit multilib
+inherit multilib flag-o-matic
 
 need-wxwidgets() {
 	debug-print-function $FUNCNAME $*
@@ -49,6 +49,9 @@ need-wxwidgets() {
 			exit 1;;
 		esac
 	fi
+
+	filter-ldflags -Wl,--as-needed --as-needed
+	filter-flags -Wl,--as-needed --as-needed
 }
 
 
