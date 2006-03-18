@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pympd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.7 2006/02/18 23:33:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.8 2006/03/18 20:04:42 ticho Exp $
+
+  18 Mar 2006; <ticho@gentoo.org> -pympd-0.05.ebuild, -pympd-0.05.2.ebuild,
+  pympd-0.06.ebuild:
+  0.06 stable on x86. Pruned obsolete ebuilds.
 
   18 Feb 2006; Andrej Kacian <ticho@gentoo.org> pympd-0.06.ebuild:
   Fixed the build procedure, so we don't need to sed the Makefile. Added a
