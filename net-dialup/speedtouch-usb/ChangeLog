@@ -1,0 +1,11 @@
+# ChangeLog for net-dialup/speedtouch-usb
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/ChangeLog,v 1.1 2006/03/18 20:10:52 mrness Exp $
+
+*speedtouch-usb-3.0.1.2 (18 Mar 2006)
+
+  18 Mar 2006; Alin Nastac <mrness@gentoo.org> +files/README,
+  +files/speedtch.usermap, +metadata.xml, +speedtouch-usb-3.0.1.2.ebuild:
+  Initial import from bug #110665. Credits goes to Paul Bredbury
+  <brebs@sent.com>.
+
