@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.2 2005/09/11 04:14:51 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.3 2006/03/18 22:28:45 nerdboy Exp $
 
 inherit eutils toolchain-funcs
 
@@ -38,7 +38,7 @@ DEPEND=">=sys-devel/make-3.80
 		>=dev-lang/tk-8.3.4 )
 	truetype? ( >=media-libs/freetype-2.0.0 )
 	motif? ( x11-libs/openmotif )
-	X? ( virtual/x11 )
+	X? || ( x11-libs/libX11 virtual/x11 )
 	nls? ( x11-terms/mlterm )"
 
 src_compile() {
