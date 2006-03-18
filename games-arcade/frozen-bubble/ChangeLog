@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/frozen-bubble
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.16 2005/09/16 22:06:39 ciaranm Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.17 2006/03/18 00:39:09 tupone Exp $
+
+*frozen-bubble-1.0.0-r6 (18 Mar 2006)
+
+  18 Mar 2006; <Tupone@gentoo.org> +frozen-bubble-1.0.0-r6.ebuild:
+  Fixing bug #121667 : client has no sdl patch applied. Thanks Rene' Nussbaumer
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
