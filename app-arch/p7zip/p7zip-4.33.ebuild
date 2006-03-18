@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.27.ebuild,v 1.6 2005/11/29 02:59:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.33.ebuild,v 1.1 2006/03/18 15:44:53 radek Exp $
 
 inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="Port of 7-Zip archiver for Unix"
 HOMEPAGE="http://p7zip.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src_all.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -19,8 +19,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	use static && epatch "${FILESDIR}"/p7zip-4.16_x86_static.patch
+	# be aware that CXX is now gcc in pattern due to upstream  (radek@20060318)
 	sed -i \
-		-e "/^CXX=/s:g++:$(tc-getCXX):" \
+		-e "/^CXX=/s:gcc:$(tc-getCXX):" \
 		-e "/^CC=/s:gcc:$(tc-getCC):" \
 		-e "s:-O1 -s:${CXXFLAGS}:" \
 		makefile* || die "cleaning up makefiles"
@@ -34,6 +35,8 @@ src_install() {
 	# this wrappers can not be symlinks, p7zip should be called with full path
 	make_wrapper 7za "/usr/lib/${PN}/7za"
 	make_wrapper 7z "/usr/lib/${PN}/7z"
+
+	dobin ${FILESDIR}/p7zip
 
 	exeinto /usr/$(get_libdir)/${PN}
 	doexe bin/7z bin/7za bin/7zCon.sfx || die "doexe bins"
