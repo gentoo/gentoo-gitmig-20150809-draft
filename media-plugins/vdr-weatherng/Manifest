@@ -1,19 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 60fa4af613e2ab5dd8bc1d848eaef23c ChangeLog 512
+MD5 3087e7abb35da618205231bf65b7ed4a ChangeLog 753
 MD5 ecd213d08b8b9809b4bdb46af714cf83 files/commands.weatherng.conf 119
 MD5 3b502807d03a9e772d6fd3d56b6f1ae9 files/confd 482
+MD5 74844928734b04f18406d904011545f5 files/confd-0.0.8 1829
 MD5 ae3e4eac1c26cc9d930bf6a13e2e75f6 files/digest-vdr-weatherng-0.0.5 67
+MD5 1c610c952a5270b67ecb61725aa524fc files/digest-vdr-weatherng-0.0.8_pre2 73
+MD5 908da94eefec7f64340dff8497634ccb files/rc-addon-0.0.8.sh 682
 MD5 cec36393d3093f94c0871e6694a06feb files/rc-addon.sh 532
 MD5 5c16ddc47669804c5e10110f592452cc files/vdr-weatherng-0.0.5.diff 15469
+MD5 0decc3c8062c0dec3eb6daf5f4a727af files/vdr-weatherng-0.0.8_pre2-gentoo.diff 3122
 MD5 7dfb137c446412814a7c98d51eceee7e metadata.xml 484
 MD5 2a29186a98e3ac9a5da1ece8d0e9127f vdr-weatherng-0.0.5.ebuild 1584
+MD5 9b80e0231e8036f2b9e9ad01ca51a4a2 vdr-weatherng-0.0.8_pre2.ebuild 1536
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 Comment: no further Information
 
-iD8DBQFEDhbodn07HTTCgIoRArAxAKCOctZ34Nkv5bvFg/pEfro10W8zHwCgn1yH
-zA7BmCMtBDasHahwne4wWcM=
-=4+hD
+iD8DBQFEHDjldn07HTTCgIoRAnnZAJ9ituTQ7hMlaidgXRSHUXiQetkpFQCgnYfY
+D3SLocyY+6zG+H3ictosHRo=
+=iGj0
 -----END PGP SIGNATURE-----
