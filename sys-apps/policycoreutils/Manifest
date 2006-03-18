@@ -1,6 +1,6 @@
-MD5 c02b36ca3fba86e15983c8f93d0f197f ChangeLog 8726
-RMD160 5e2699b0a31ee15898f82180487e6fcf72b719ed ChangeLog 8726
-SHA256 bbb63af0ed140207e134d36588f5ef62c3cd94c9da50fded11698a9567de63bd ChangeLog 8726
+MD5 3a3dee76d9dc60d688c76b5cc85d2d98 ChangeLog 8877
+RMD160 b561a2a859217451d1a57dd38b4007fe15e55b86 ChangeLog 8877
+SHA256 90658bb95f84a08776c66838191618b0b440899ab432c3c247b9c78188f4a921 ChangeLog 8877
 MD5 7a74a3135f746668eccc7a1521bd11cb files/digest-policycoreutils-1.22 146
 RMD160 56739c7ae8a107d6454da24ad5f060dcff45be6a files/digest-policycoreutils-1.22 146
 SHA256 87f0d07fb1c61b4378ea209bb4e3899e7a49a34b6d5f42d56a15ad2959fad45c files/digest-policycoreutils-1.22 146
@@ -10,6 +10,9 @@ SHA256 21a3813fd81998c1e574c38fb530b9614799231d6712b2836dc4d80a99129cd1 files/di
 MD5 8b17a28b65ab524d9d67e1933c22d12e files/digest-policycoreutils-1.28 146
 RMD160 648d684e043702076703b1cef6d0f4fa0643fec5 files/digest-policycoreutils-1.28 146
 SHA256 37f11cd1e1730957453ca06c7923ed66b948f03abede3f42f721321f5057f598 files/digest-policycoreutils-1.28 146
+MD5 cf3c74184b1dd410c37c783399547acd files/digest-policycoreutils-1.30 530
+RMD160 05b9492d5cf56b4e7367287f70fcdbf0739ea27f files/digest-policycoreutils-1.30 530
+SHA256 74c296380da48f17bcfb066637952d66c245bcd35c16953f01eb7b6839086557 files/digest-policycoreutils-1.30 530
 MD5 e4fae02aa0cf1196385194111e1a482c files/policycoreutils-1.22-genhomedircon-quiet.diff 670
 RMD160 b31741293cab8cbf37c54b579642b82e3fdc3b4d files/policycoreutils-1.22-genhomedircon-quiet.diff 670
 SHA256 7da07bbac5384b57666dfdaa68813a203b6840b6b6214438428479e1631459aa files/policycoreutils-1.22-genhomedircon-quiet.diff 670
@@ -34,3 +37,6 @@ SHA256 5016eb52a8c9937dd90377e9e1378b2809e45050e503045e27391ec298f1a2ad policyco
 MD5 e969769d088771f792770d988b7515b4 policycoreutils-1.28.ebuild 3566
 RMD160 8dc00dde490d097fc36587a195fa3e4a1f9efe81 policycoreutils-1.28.ebuild 3566
 SHA256 1009800d22a1515baae61a65af5e8393076893a9e7f8189b6a773d9e70dd4361 policycoreutils-1.28.ebuild 3566
+MD5 d3c661da7257a064016a7b59fde13df0 policycoreutils-1.30.ebuild 3518
+RMD160 3bae343edccc4a2973ec24215e7a5d6c408de3f6 policycoreutils-1.30.ebuild 3518
+SHA256 01f62da7d656396e6576edd041b5731764ddd22e48cdf9d10f996ae96234d01b policycoreutils-1.30.ebuild 3518

@@ -1,12 +1,18 @@
-MD5 607a912add79683506f7da07a293a2ab ChangeLog 4791
-RMD160 e7f39b100762f4f47975acd18c92de2cc1a98816 ChangeLog 4791
-SHA256 203489ae0117a534336e2268abfb3c8fedd23997dfae76bca3ca95758e1741fe ChangeLog 4791
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 754081ce5f79d2ad5bd50e12dd2a3c76 ChangeLog 4934
+RMD160 0786c814409e092e896ad3e62651e9fadbb73bff ChangeLog 4934
+SHA256 91e69eeb56010cc345cb1e64cbd7547550ed2b1924ca3c107f6f3d7c7dc0e4c0 ChangeLog 4934
 MD5 cbdc3b1a843b26798609fa020947c09a checkpolicy-1.24.ebuild 1086
 RMD160 3748ce87270fcc86b10677afee9a2183d1c3115f checkpolicy-1.24.ebuild 1086
 SHA256 295253434de71b4b19fd8fc4c52d7b1ff90f144c7a946a74318d9cdff33cf3e7 checkpolicy-1.24.ebuild 1086
 MD5 c7336fb4b576b61d23931fdb1ec1f276 checkpolicy-1.28.ebuild 989
 RMD160 e137b6c349720ff514396a29243f137dae7e3315 checkpolicy-1.28.ebuild 989
 SHA256 47c136e644c37fe071eeed13d51f18d2c263d2ecd9a398a9f70a664027ebc1c9 checkpolicy-1.28.ebuild 989
+MD5 21c590b6d6fe90a52ba93a0923559d52 checkpolicy-1.30.ebuild 808
+RMD160 70a8692e7ee7069fd6373c5ccfa3ab0332cdcf51 checkpolicy-1.30.ebuild 808
+SHA256 e4359b462542550db953795b538b24ecf041498f98944f12914ed33c96f83de3 checkpolicy-1.30.ebuild 808
 MD5 d607f647a52bbb00a5bf754fe4f1dc90 files/checkpolicy-1.16-no-netlink-warn.diff 1022
 RMD160 6ae7ec8718142abf43fa5350754384768ee988a6 files/checkpolicy-1.16-no-netlink-warn.diff 1022
 SHA256 4d587309e4a9cb6f1c02387736145cefffd729890f93061b9d2f8ea5588985e3 files/checkpolicy-1.16-no-netlink-warn.diff 1022
@@ -16,6 +22,16 @@ SHA256 16eddae124cec49d9fd7cc5af6bac6886a3eec51df407378fc47e5cab9d6c63e files/di
 MD5 10192f382d6d8c985c86357cbfe36960 files/digest-checkpolicy-1.28 64
 RMD160 c978b7274e3a803af09e4a32d71fed81d022a594 files/digest-checkpolicy-1.28 64
 SHA256 1a510878bfa77937d3e900ab5245c2a9cd0ebaabdc28cf70efd04d7f62880bb5 files/digest-checkpolicy-1.28 64
+MD5 42f78f326362459f10318ff857faa327 files/digest-checkpolicy-1.30 238
+RMD160 535f286feb82129a628432cf4ca1f9ceabb201ff files/digest-checkpolicy-1.30 238
+SHA256 12f379aa4de0422330f266fb38aae7ac8f7a47c58f678f85842300b6958d4c81 files/digest-checkpolicy-1.30 238
 MD5 927093fd813bc45afc77ef11c9258e91 metadata.xml 360
 RMD160 4bff1b5d7190e84f7934f5b152775fc2b8e12b73 metadata.xml 360
 SHA256 7f2dff51b3b78df07fc0b5a50f59713c51df2091150a298768bf81d2169a0fc2 metadata.xml 360
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEHB/vJ+ChZlpDtAoRAnbNAJ9P8K41/jtCsUpugqr9HcTTUQvm8gCdFLrT
+UzZbdlD5n7sbSbAjv15wQUU=
+=jANI
+-----END PGP SIGNATURE-----
