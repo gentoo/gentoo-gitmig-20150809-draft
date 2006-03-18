@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libesmtp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.26 2006/01/27 14:27:31 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.27 2006/03/18 01:20:53 ticho Exp $
+
+*libesmtp-1.0.4 (18 Mar 2006)
+
+  18 Mar 2006; <ticho@gentoo.org> -libesmtp-0.8.12.ebuild,
+  -libesmtp-1.0-r1.ebuild, -libesmtp-1.0.1.ebuild, +libesmtp-1.0.4.ebuild:
+  Version bumo, closes bug #115973, by Karol Jurak <karol.jurak at gmail.com>.
+  Pruned old ebuilds.
 
   27 Jan 2006; Tom Martin <slarti@gentoo.org> libesmtp-1.0.3.ebuild:
   Big tidy, resolving multilib errors and several other QA faults.
@@ -84,7 +91,7 @@
 
 *libesmtp-0.8.9 (21 Apr 2002)
 
-  21 Apr 2002; Ryan Phillips <rphillips@gentoo.org> libesmtp-0.8.9.ebuild
+  21 Apr 2002; Ryan Phillips <rphillips@gentoo.org> libesmtp-0.8.9.ebuild:
 
   Copied 0.8.6 ebuild to 0.8.9.  Fixes (#1961)
 

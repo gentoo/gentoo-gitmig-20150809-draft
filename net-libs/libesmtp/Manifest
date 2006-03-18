@@ -1,21 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9b1b1bcfea3a5d5bf5ac3441f56e5582 ChangeLog 3477
-MD5 395e602b515d970eab3a9d7ef8a2016f files/digest-libesmtp-0.8.12 68
-MD5 b6be4562678d38b5d76400ddc254e37a files/digest-libesmtp-1.0-r1 65
-MD5 d3159044f52697e5328eed2b789f0f8d files/digest-libesmtp-1.0.1 67
+MD5 d2c66fd84715b2744584dfe2f447d843 ChangeLog 3744
+RMD160 1f37b113ed679a2427aa1c6f38fd28dc7a4defa7 ChangeLog 3744
+SHA256 9d632ce7376898ebd76a36a9e9697acfa67391425a48249061108457fdc4a6bf ChangeLog 3744
 MD5 e7fb7627dfe48ba908ddc22564eead57 files/digest-libesmtp-1.0.3 69
+RMD160 02bd6dd949f872beba50ce55bb51a37d14f071d6 files/digest-libesmtp-1.0.3 69
+SHA256 d99a487eb691fb037ed205a5d4ff03499e88bd544b34026cd7b3fef95e6a93aa files/digest-libesmtp-1.0.3 69
+MD5 8992d710dad40fdb46e79c865c57b389 files/digest-libesmtp-1.0.4 247
+RMD160 0d91bc8a90d9cab1fb39ba5d00152eff442aac1e files/digest-libesmtp-1.0.4 247
+SHA256 2d17f288ef052768e43caaef973257bc8f611119503d53491f792f57746d54c3 files/digest-libesmtp-1.0.4 247
 MD5 43822a1b725899b2ad3fbc20f58ee840 files/libesmtp-1.0-openssl.patch 405
-MD5 7065f7b7252a510866887d53d1b8b684 libesmtp-0.8.12.ebuild 923
-MD5 ac1ca5b43d39d976cf1a621ee545b8a6 libesmtp-1.0-r1.ebuild 1374
-MD5 fe7313c2c7c21298b458bf779ae52a66 libesmtp-1.0.1.ebuild 1316
+RMD160 072d15cd287e11a7dd608e5a5bcadf915cfc98fa files/libesmtp-1.0-openssl.patch 405
+SHA256 bac3bdf83293bd92a6531f18e2db0707d4c9edeb035286b82142897d408402da files/libesmtp-1.0-openssl.patch 405
 MD5 dfd4b8ea2c46b113187619b1fd6e26b4 libesmtp-1.0.3.ebuild 1235
+RMD160 a2a8662dc2f5fe5bccd0bf78b1132c3ea7317ba0 libesmtp-1.0.3.ebuild 1235
+SHA256 d68adc3c524fff41aed844cafe8c3a0a5d8cee96ff28bc7732cec5244b82c71e libesmtp-1.0.3.ebuild 1235
+MD5 6ed6c94a12157446e3e344d754d49634 libesmtp-1.0.4.ebuild 1197
+RMD160 87444cb9dd0ddaed426683f365f7ce76ed875b1f libesmtp-1.0.4.ebuild 1197
+SHA256 5dc5b92a7a09dc57792573738f90752381997a93f64fe7b514bdefa9288e49ad libesmtp-1.0.4.ebuild 1197
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
+SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD4DBQFD2i3fCHk4+ZoBpvsRAjVEAJdawzuztEmoJQL9gEYD9tbwx0oAAJ9F0odN
-f9Z4k3TKKLQBY9YOx2WfxA==
-=cAAm
+iD8DBQFEG2CF10xuJSrg3/sRAm5dAJ4/d9mEw7CnOiXhAo2t+dlOO9jY+QCggXK4
+/HSkDrtYv8MoV/JrRQdGgB4=
+=KUqQ
 -----END PGP SIGNATURE-----
