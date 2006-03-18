@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-2.0.1.ebuild,v 1.6 2006/02/22 06:39:55 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-2.0.1.ebuild,v 1.7 2006/03/18 11:11:10 kugelfang Exp $
 
 inherit webapp eutils
 
@@ -37,31 +37,31 @@ src_install() {
 	cp -r * ${D}${MY_HTDOCSDIR}
 	einfo "Done"
 
-	ewarn *
-	ewarn * Please make sure you have register_globals = off set in your /etc/apache2/php.ini file
-	ewarn * If this is not an option for your web server and you NEED it set to on, then insert the following in your WordPress .htaccess file:
-	ewarn * php_flag register_globals off
-	ewarn *
+	ewarn
+	ewarn Please make sure you have register_globals = off set in your /etc/apache2/php.ini file
+	ewarn If this is not an option for your web server and you NEED it set to on, then insert the following in your WordPress .htaccess file:
+	ewarn php_flag register_globals off
+	ewarn
 
-	ewarn *
-	ewarn * You will need to create a table for your WordPress database.  This
-	ewarn * assumes you have some knowledge of MySQL, and already have it
-	ewarn * installed and configured.  If not, please refer to
-	ewarn * the Gentoo MySQL guide at the following URL:
-	ewarn * http://www.gentoo.org/doc/en/mysql-howto.xml
-	ewarn * Log in to MySQL, and create a new database called
-	ewarn * "wordpress". From this point, you will need to edit
-	ewarn * your wp-config.php file in $DocumentRoot/wordpress/
-	ewarn * and point to your database. Once this is done, you can log in to
-	ewarn * WordPress at http://localhost/wordpress
-	ewarn *
+	ewarn
+	ewarn You will need to create a table for your WordPress database.  This
+	ewarn assumes you have some knowledge of MySQL, and already have it
+	ewarn installed and configured.  If not, please refer to
+	ewarn the Gentoo MySQL guide at the following URL:
+	ewarn http://www.gentoo.org/doc/en/mysql-howto.xml
+	ewarn Log in to MySQL, and create a new database called
+	ewarn "wordpress". From this point, you will need to edit
+	ewarn your wp-config.php file in $DocumentRoot/wordpress/
+	ewarn and point to your database. Once this is done, you can log in to
+	ewarn WordPress at http://localhost/wordpress
+	ewarn
 
-	ewarn *
-	ewarn * If you are upgrading from a previous version BACK UP your
-	ewarn * database.  Once you are done with that, browse to
-	ewarn * http://localhost/wordpress/admin/wp-upgrade.php and follow
-	ewarn * the instructions on the screen.
-	ewarn *
+	ewarn
+	ewarn If you are upgrading from a previous version BACK UP your
+	ewarn database.  Once you are done with that, browse to
+	ewarn http://localhost/wordpress/admin/wp-upgrade.php and follow
+	ewarn the instructions on the screen.
+	ewarn
 
 	# handle documentation files
 	#
