@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/smtpclient/smtpclient-1.0.0.ebuild,v 1.5 2005/06/05 11:53:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/smtpclient/smtpclient-1.0.0.ebuild,v 1.6 2006/03/18 21:39:42 eradicator Exp $
 
 IUSE=""
 
@@ -14,18 +14,7 @@ KEYWORDS="ppc x86"
 
 DEPEND="virtual/libc"
 
-src_compile() {
-
-	econf || die "configure failed"
-
-	emake || die "parallel make failed"
-
-}
-
 src_install () {
-
 	dobin smtpclient
-
 	doman smtpclient.1
-
 }
