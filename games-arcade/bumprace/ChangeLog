@@ -1,6 +1,14 @@
 # ChangeLog for games-arcade/bumprace
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bumprace/ChangeLog,v 1.4 2005/01/18 03:52:21 weeve Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bumprace/ChangeLog,v 1.5 2006/03/18 11:05:14 tupone Exp $
+
+*bumprace-1.5.1 (18 Mar 2006)
+*bumprace-1.4.5 (18 Mar 2006)
+
+  18 Mar 2006; <Tupone@gentoo.org> +bumprace-1.4.5.ebuild,
+  +bumprace-1.5.1.ebuild, -bumprace-1.45.ebuild:
+  Version bump (Bug #122155). Thanks to Andreas Eriksson for report
+  Changed version schema as upstream went from 1.45 to 1.5.1
 
   17 Jan 2005; Jason Wever <weeve@gentoo.org> bumprace-1.45.ebuild:
   Added ~sparc keyword.
