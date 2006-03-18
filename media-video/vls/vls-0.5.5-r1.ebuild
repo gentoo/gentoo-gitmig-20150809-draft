@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vls/vls-0.5.5-r1.ebuild,v 1.6 2005/11/03 12:15:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vls/vls-0.5.5-r1.ebuild,v 1.7 2006/03/18 12:34:34 zzam Exp $
+
+inherit flag-o-matic
 
 IUSE="debug dvd dvb"
 
@@ -14,7 +16,11 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="dvd? ( >=media-libs/libdvdread-0.9.4
 	>=media-libs/libdvdcss-1.2.8 )
-	dvb? ( >=media-libs/libdvbpsi-0.1.3 )"
+	dvb? (
+		media-tv/linuxtv-dvb-headers
+		media-libs/libdvb
+	)
+	>=media-libs/libdvbpsi-0.1.3"
 
 src_compile() {
 	local myconf
@@ -22,7 +28,10 @@ src_compile() {
 
 	use dvd || myconf="${myconf} --disable-dvd"
 
-	use dvb && myconf="${myconf} --enable-dvb"
+	if use dvb; then
+		append-flags "-I/usr/include/libdvb"
+		myconf="${myconf} --enable-dvb --with-libdvb=/usr/lib"
+	fi
 
 	econf ${myconf} || die "econf failed"
 
