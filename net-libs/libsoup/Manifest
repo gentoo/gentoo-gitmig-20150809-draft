@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b59e5face12a9a2a691cdd12d987083 ChangeLog 10060
-RMD160 3bdd717460fee8e4dc89bfb690b1b2bbf8ebe603 ChangeLog 10060
-SHA256 1f35385c50d3f067e9b81f879a95b97ca45b49928df95b9d9e6cd4ee1f442a37 ChangeLog 10060
+MD5 e9215ed9a75f56f3106eb1c147c7be3e ChangeLog 10207
+RMD160 b8ef7f996a81299a5c822e3766068088d29eb6e5 ChangeLog 10207
+SHA256 18d5262fc706560e3ce32b32f6a02f7a6df85376893b2d32cdae6c6c58314c2c ChangeLog 10207
 MD5 6c44713499ec52c81ca81ed58a6286bf files/digest-libsoup-1.99.28 68
 RMD160 87c3da9ecd7c11c3742c14aef6978488718eb937 files/digest-libsoup-1.99.28 68
 SHA256 14f08532b1043270a7190b27c45028ffb114269bebab2310dd39a5d25234b179 files/digest-libsoup-1.99.28 68
@@ -22,6 +19,9 @@ SHA256 37779cb84c84d30a744a7b66e9501603e18d1afdaba02f6150499fbf7812daa4 files/di
 MD5 d649f5313580e6a0c13954b47038125c files/digest-libsoup-2.2.7 66
 RMD160 b6df71c680b2ad3389771de017c3b72f8f0edf12 files/digest-libsoup-2.2.7 66
 SHA256 3c6fe70f8160e421a833a178ba868b700ceb6fcf1258067f9ff92bc71acafaf8 files/digest-libsoup-2.2.7 66
+MD5 2271279eeff71b0c66cbba64b92e573c files/digest-libsoup-2.2.91 247
+RMD160 bc4b78db10b59adde1f4b3cd728a0e86e471213c files/digest-libsoup-2.2.91 247
+SHA256 f96a732168ada2b7c4202814d6e5e7677cb3fdf801a768f55c6f09c5bfe66bc6 files/digest-libsoup-2.2.91 247
 MD5 6128cc7bbf088e07b4040e8296a7c57b files/libsoup-1.99.26-msn.patch 627
 RMD160 5228ac45922496e1f7e9cc0a3a7973f9bfde00f2 files/libsoup-1.99.26-msn.patch 627
 SHA256 6005589fe38b2317985c62de5b910395883113258d8760776706a47cf2aab6b3 files/libsoup-1.99.26-msn.patch 627
@@ -49,13 +49,9 @@ SHA256 35010df7bc6f95df8fa9550f6f93df05f8dd1fe7a4bb3162ffdaa38c8cd3a1e3 libsoup-
 MD5 90f0eb246a8f38adad20cce3e0e2cc99 libsoup-2.2.7.ebuild 771
 RMD160 15d2e67a7253c7cf3d0ae751690164c1ad8621b5 libsoup-2.2.7.ebuild 771
 SHA256 aac5db241d27637e8320c8b28f8e6d5adcb65ed5c5d338403adbc0f41ce550d1 libsoup-2.2.7.ebuild 771
+MD5 189eb5c88d2ae413a12de34ebf341c54 libsoup-2.2.91.ebuild 800
+RMD160 65727f9d9394efcfda1c969f04ee64addc9a633e libsoup-2.2.91.ebuild 800
+SHA256 f3b223d0a296c667fe8a80fff4e806f23b38269c2a06dbfe7decdd75c0debd27 libsoup-2.2.91.ebuild 800
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD67EnV3J2n04EauwRAp8xAKDJW1xBt7tqAMS0zdiSoE2sFkWBLACdFmNV
-KmixsJmOyAMCSo8UJP0MDk8=
-=pQDZ
------END PGP SIGNATURE-----
