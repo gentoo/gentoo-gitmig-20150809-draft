@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IP-Country
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/ChangeLog,v 1.8 2006/03/14 01:41:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/ChangeLog,v 1.9 2006/03/18 17:13:52 corsair Exp $
+
+  18 Mar 2006; Markus Rothe <corsair@gentoo.org> IP-Country-2.20.ebuild:
+  Added ~ppc64; bug #126674
 
   14 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   IP-Country-2.20.ebuild:

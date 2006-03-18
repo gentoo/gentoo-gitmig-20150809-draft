@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Geography-Countries
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geography-Countries/ChangeLog,v 1.5 2006/03/14 01:39:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geography-Countries/ChangeLog,v 1.6 2006/03/18 17:12:50 corsair Exp $
+
+  18 Mar 2006; Markus Rothe <corsair@gentoo.org>
+  Geography-Countries-1.4.ebuild:
+  Added ~ppc64; bug #126674
 
   14 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   Geography-Countries-1.4.ebuild:
