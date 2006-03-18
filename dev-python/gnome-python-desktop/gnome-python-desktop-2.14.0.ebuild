@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.14.0.ebuild,v 1.1 2006/03/17 22:45:20 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.14.0.ebuild,v 1.2 2006/03/18 00:26:48 allanonjl Exp $
 
 inherit distutils gnome2 python
 
@@ -22,7 +22,7 @@ RDEPEND="virtual/python
 	>=gnome-base/libgnomeprintui-2.2.0
 	>=x11-libs/gtksourceview-1.1.90
 	>=x11-libs/libwnck-2.9.92
-	>=gnome-base/libgtop
+	>=gnome-base/libgtop-2.13.0
 	>=gnome-extra/nautilus-cd-burner-2.11.1
 	>=gnome-extra/gnome-media-2.10.0
 	>=gnome-base/gconf-2.10.0
