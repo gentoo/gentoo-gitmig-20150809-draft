@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.2.ebuild,v 1.1 2006/02/03 20:17:07 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.2.ebuild,v 1.2 2006/03/18 21:13:57 mrness Exp $
 
 inherit eutils fixheadtails
 
@@ -10,7 +10,7 @@ SRC_URI="http://open.nit.ca/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc x86"
 IUSE="gtk qt qdbm pam slp doc tcltk debug"
 
 RDEPEND=">=sys-libs/db-3
@@ -31,15 +31,15 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/${P}-gcc41.patch
-	epatch ${FILESDIR}/${P}-linux-serial.patch
-	epatch ${FILESDIR}/${P}-wireless-user.patch
+	epatch "${FILESDIR}/${P}-gcc41.patch"
+	epatch "${FILESDIR}/${P}-linux-serial.patch"
+	epatch "${FILESDIR}/${P}-wireless-user.patch"
 
 	if use tcltk; then
-		epatch ${FILESDIR}/${P}-tcl_8_4.patch
+		epatch "${FILESDIR}/${P}-tcl_8_4.patch"
 	fi
 
-	epatch ${FILESDIR}/${P}-external-xplc.patch
+	epatch "${FILESDIR}/${P}-external-xplc.patch"
 	local XPLC_VER=`best_version dev-libs/xplc`
 	XPLC_VER=${XPLC_VER#*/*-} #reduce it to ${PV}-${PR}
 	XPLC_VER=${XPLC_VER%%[_-]*} # main version without beta/pre/patch/revision
@@ -47,7 +47,7 @@ src_unpack() {
 		|| die "failed to set current xplc version"
 	rm -r "${S}/xplc"
 
-	use qt && epatch ${FILESDIR}/${P}-MOC-fix.patch
+	use qt && epatch "${FILESDIR}/${P}-MOC-fix.patch"
 
 	ht_fix_file "${S}/configure.ac"
 }
@@ -86,7 +86,7 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	if use doc ; then
 		#the list of files is too big for dohtml -r Docs/doxy-html/*
