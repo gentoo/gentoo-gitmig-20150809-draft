@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/cancd-0.1.0-r1.ebuild,v 1.1 2005/11/15 19:27:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/cancd-0.1.0-r1.ebuild,v 1.2 2006/03/18 01:27:05 robbat2 Exp $
+
+inherit eutils
 
 DESCRIPTION="This is the CA NetConsole Daemon, a daemon to receive output from
 the Linux netconsole driver."
@@ -15,10 +17,11 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/${P}-c-cleanup.patch
 	# slight makefile cleanup
 	sed -i.orig \
 		-e '/^CFLAGS/s,-g,,' \
-		-e '/^CFLAGS/s,-O2,,' \
+		-e '/^CFLAGS/s,-O2,-Wall -W -Wextra -Wundef -Wendif-labels -Wshadow -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-compare -Waggregate-return -Wstrict-prototypes -Wredundant-decls -Wunreachable-code -Wlong-long,' \
 		-e '/rm cancd cancd.o/s,rm,rm -f,' \
 		${S}/Makefile
 }
