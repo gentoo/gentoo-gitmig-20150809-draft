@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 045d5bb0e5c16ea6bd7be7f06379bba6 ChangeLog 1953
+MD5 31ddbca579c1b47ef6e8f2972a6d046a ChangeLog 2042
 MD5 0f67e24c7ecc9bad9281ccdf7e20f49f files/digest-findlib-1.0.4-r1 65
-MD5 3f36ae1f6492db8c59342c7f66103da2 findlib-1.0.4-r1.ebuild 1683
+MD5 2c9978e365dfefe2a814c98b34f4af0d findlib-1.0.4-r1.ebuild 1689
 MD5 845dbbef4eb685e1bfd5f9e13a03f2b8 metadata.xml 225
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD+6qNJrHF4yAQTrARArHkAKCGliDullGTEcPPSBwt9QbAuMHitQCfcdhh
-ohFMnazgqMnRDFYkgwK/+Rk=
-=TA3q
------END PGP SIGNATURE-----
