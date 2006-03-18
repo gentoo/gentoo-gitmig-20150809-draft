@@ -1,46 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0f3d8ba2a9803306294f5ac2d2887270 ChangeLog 1191
-RMD160 404b101c82f8b6e608575bd62539746324912850 ChangeLog 1191
-SHA256 637888a71c6e9ff084ee78a70212618dceecc10b79199a052d708bf94b381424 ChangeLog 1191
-MD5 d2cf3076f7c81c94fa90cd2609cd8311 files/digest-vdr-nordlichtsepg-0.3 69
-RMD160 0e2d8bc6c09531d41d8de7a26b64f34232bbe7d3 files/digest-vdr-nordlichtsepg-0.3 69
-SHA256 bfb826501d402028a52d9f0cee9d5bb47badcbf1947344d8db94f59563fc46d8 files/digest-vdr-nordlichtsepg-0.3 69
+MD5 adabe20d8303ed29262ff3a2fc4d7b00 ChangeLog 1453
+RMD160 089b417e47229bd3248b1e8e8ffdd57832e448a4 ChangeLog 1453
+SHA256 b4c8751d6f157208bac6e51b00ce75df66dae0c56b58561cf7dca0588bb80ff4 ChangeLog 1453
 MD5 54cdcb4f0ef703f3541344aaa76662f7 files/digest-vdr-nordlichtsepg-0.4 253
 RMD160 ad6e99d89474c1b554dffd8ca672ba2d4651588c files/digest-vdr-nordlichtsepg-0.4 253
 SHA256 f97272ce5c31316dbcbd7d68dca98d0b3e56afa404550044338e55a648370eb1 files/digest-vdr-nordlichtsepg-0.4 253
-MD5 290b75362cb6b8bb496e7eb84e1438ef files/digest-vdr-nordlichtsepg-0.5 69
-RMD160 ddbc74ef956875e1b4033063f1b38e5f423f24c2 files/digest-vdr-nordlichtsepg-0.5 69
-SHA256 a2d35ef6b1bfed168689a5ac74ad24e1ea3d7847c0fb9d1c7d2cf5d7ccb9ba6a files/digest-vdr-nordlichtsepg-0.5 69
-MD5 83ae5dbef9ba3cb9b8f49a3c3d5c330a files/digest-vdr-nordlichtsepg-0.6 253
-RMD160 1ec3a0f33765572b5c35aff7ff23873ac284b4a2 files/digest-vdr-nordlichtsepg-0.6 253
-SHA256 cd81ca12ead78ca6660140e667d18a5b5838d1cd37ffc1bc62dffab3a5345b2d files/digest-vdr-nordlichtsepg-0.6 253
 MD5 7d862d1e38e2bf90ff64a82ca51fb638 files/digest-vdr-nordlichtsepg-0.7 253
 RMD160 00a0a8c5ae9630f7e1b79b10444a0ebb493b4c70 files/digest-vdr-nordlichtsepg-0.7 253
 SHA256 174dce9a51c810bf942c4369453080ac6d9bfc634986dc02dcb4a81060247391 files/digest-vdr-nordlichtsepg-0.7 253
+MD5 4762580c223cb63acf538083e7e9f8cc files/digest-vdr-nordlichtsepg-0.8 253
+RMD160 44756aecd2af2193c0b31b0bb057ffce8237bf95 files/digest-vdr-nordlichtsepg-0.8 253
+SHA256 5d1e5e3acb8f240ff7d903a764f557e4db082fa123e76ae74656a31d35241018 files/digest-vdr-nordlichtsepg-0.8 253
 MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
 RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 metadata.xml 259
 SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata.xml 259
-MD5 0eba7c7cffadfb56039c973fed76693a vdr-nordlichtsepg-0.3.ebuild 514
-RMD160 0a1f5edd86bf39f9edc4599ead9a30c0f35c4e82 vdr-nordlichtsepg-0.3.ebuild 514
-SHA256 71c4d237d5bcc34d946a01033141e957dfbf590e85121e552a4b1eb17db1d4ee vdr-nordlichtsepg-0.3.ebuild 514
 MD5 f0da0310f9334532716bfbcc60164d51 vdr-nordlichtsepg-0.4.ebuild 513
 RMD160 a010998d3c39bb8bbd053ef1d497169b02e474e2 vdr-nordlichtsepg-0.4.ebuild 513
 SHA256 d9a61d8fd567f5ffb1b30c1e4a768942c7ebf0d620cce52ebde7845e3c95591e vdr-nordlichtsepg-0.4.ebuild 513
-MD5 1fecf99b73b4e8a06de146a9d5fb8564 vdr-nordlichtsepg-0.5.ebuild 514
-RMD160 a21ea00452b2b1f36d8f8ed77ba118cfa68cde15 vdr-nordlichtsepg-0.5.ebuild 514
-SHA256 ec0ca1cda0a129e9a893e70fd8faac5b10e8f83bfdf97d99e5994c9c39c77645 vdr-nordlichtsepg-0.5.ebuild 514
-MD5 21c8849d4a068b8ee287dedacd7e805c vdr-nordlichtsepg-0.6.ebuild 514
-RMD160 27b621b64a9004535158ebbc7fbd57a2f71d81bc vdr-nordlichtsepg-0.6.ebuild 514
-SHA256 333ea49f7046bacbc459e5004f2091ab428a8c8498bb29d1c54944a686d36995 vdr-nordlichtsepg-0.6.ebuild 514
 MD5 62a1385e7a606988c0d8666b3980faef vdr-nordlichtsepg-0.7.ebuild 521
 RMD160 1b316474426044f7fb5b6e98d78082db5f4bce1d vdr-nordlichtsepg-0.7.ebuild 521
 SHA256 2c9312c2cf636b9cde81af7c8835ff9358c005a5564d3b3fb4b27b5d68ee2970 vdr-nordlichtsepg-0.7.ebuild 521
+MD5 2f2c6a0eb88985f325350912df93386a vdr-nordlichtsepg-0.8.ebuild 521
+RMD160 0b1b1d39fe2719eac4b07b82fd9a91aa3f86c11c vdr-nordlichtsepg-0.8.ebuild 521
+SHA256 577bf81f7b81a8b66bffae622bbc769bcbb3283ee058f633112cc37625a4fa8f vdr-nordlichtsepg-0.8.ebuild 521
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEEF8KZfSl1Kp5KmoRAuWhAKDvkP9dpuZhDnuyN9rSxz/HSTSNzQCgwXln
-yO5TZP37x18MGHRIfCWSgO8=
-=79xP
+iD8DBQFEG8jLZfSl1Kp5KmoRAvgkAJ90ZEfsv3IFIrH7kwITtKos8XYZrgCfcng2
+2cJJEQOHSW9wFCwsTjlxAqg=
+=TNXk
 -----END PGP SIGNATURE-----
