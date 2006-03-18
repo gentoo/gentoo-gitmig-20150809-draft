@@ -1,6 +1,28 @@
-MD5 488c7dc7a8e0abd78eb224d23df4f4dc metadata.xml 493
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e55155f42c4248f7025c006f02d624e5 ChangeLog 1190
-MD5 3e10d1ffdd37b89952b5a565c195ccd3 visitors-0.2a.ebuild 812
-MD5 09a99d951e804af68f414249e7aa9dcc visitors-0.5.ebuild 808
-MD5 6f8f04ea357d209e7defb103934ab358 files/digest-visitors-0.5 63
+RMD160 029dfee9e2433651b88ca16be6cd46ad63d7206c ChangeLog 1190
+SHA256 8f345884bab3a3b9f89dd3091544620c0c01166891545e586a6c907e41dba648 ChangeLog 1190
 MD5 a85e3fdb5e561462134f69ce18711652 files/digest-visitors-0.2a 64
+RMD160 9688d07ef9d515402d5ceef80b5995a0d54b1bdb files/digest-visitors-0.2a 64
+SHA256 7ff8daa29095e5cc5973363352539bef05b6f0442140a391e73f7183f8c36089 files/digest-visitors-0.2a 64
+MD5 6f8f04ea357d209e7defb103934ab358 files/digest-visitors-0.5 63
+RMD160 f0a62b3717d8d1d79120a5fb76b12d94e018cd58 files/digest-visitors-0.5 63
+SHA256 ebd187ddd0af0bbf183b39dd02db7ebebecfa6ff292f5a999766137564fd1363 files/digest-visitors-0.5 63
+MD5 a452280568794e6685911937c6eb8fef metadata.xml 395
+RMD160 e48daf087d5c8d4b19feaeffda06973ae95f3c72 metadata.xml 395
+SHA256 8fc3548b42af3c051d52cb401023c6de062b57927e7d07ef7e95de34b9df2d0a metadata.xml 395
+MD5 3e10d1ffdd37b89952b5a565c195ccd3 visitors-0.2a.ebuild 812
+RMD160 e0636a5623d648d019963d6e548e126307d7eaa7 visitors-0.2a.ebuild 812
+SHA256 4473eac908a71c312cf4d436fd162c0d2b610d9fa83659d9db381745218d7ee8 visitors-0.2a.ebuild 812
+MD5 09a99d951e804af68f414249e7aa9dcc visitors-0.5.ebuild 808
+RMD160 9c98606e05ee93df24c2f3a9ba877a892c571b41 visitors-0.5.ebuild 808
+SHA256 4a4e7dfaf5fb3a09dee1641fe8dc19340508a2dfef468b9dc9b0353d8a1e4c9d visitors-0.5.ebuild 808
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHI/PV3J2n04EauwRAmYbAKDY40M70rZoqtxbOqXC0pt/U0uMRgCgzRvJ
+d6sbKp7BCTxDWQ58PEwusyM=
+=UoZt
+-----END PGP SIGNATURE-----
