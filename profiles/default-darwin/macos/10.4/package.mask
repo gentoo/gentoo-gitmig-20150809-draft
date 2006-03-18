@@ -11,6 +11,7 @@ app-editors/vim
 >=app-portage/esearch-0.7.1
 app-shells/bash
 app-shells/zsh
+app-text/htmltidy
 app-vim/phpdocs
 app-vim/gentoo-syntax
 app-vim/taglist

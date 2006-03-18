@@ -17,6 +17,7 @@ app-shells/zsh-4.2.3
 app-text/enscript-1.6.1
 app-text/rcs-5.7
 app-text/texi2html-1.57
+app-text/htmltidy-4.12.1
 dev-db/mysql-4.1.10a
 dev-java/ant-core-1.6.2
 dev-java/javascriptcore-96
