@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/axiom
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.8 2006/02/25 05:17:06 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.9 2006/03/18 21:34:05 plasmaroo Exp $
+
+  18 Mar 2006; <plasmaroo@gentoo.org> axiom-3.9-r1.ebuild, -axiom-3.9.ebuild,
+  -axiom-9999.ebuild:
+  Fix #121430, remove stale versions.
 
 *axiom-3.9-r1 (25 Feb 2006)
 

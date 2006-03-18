@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-3.9-r1.ebuild,v 1.1 2006/02/25 05:17:06 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-3.9-r1.ebuild,v 1.2 2006/03/18 21:34:05 plasmaroo Exp $
 
 inherit eutils
 
@@ -68,6 +68,14 @@ src_install() {
 	dodir /usr/bin
 	einstall INSTALL=${D}/opt/axiom COMMAND=${D}/usr/bin/axiom || die 'Failed to install Axiom!'
 	sed -e '2d;3i AXIOM=/opt/axiom' -i ${D}/usr/bin/axiom ${D}/opt/axiom/mnt/linux/bin/axiom || die 'Failed to patch axiom runscript!'
+	cat <<- EOF > ${D}/usr/bin/AXIOMsys
+		#!/bin/sh -
+		AXIOM=/opt/axiom
+		export AXIOM
+		PATH=\${AXIOM}/bin:\${PATH}
+		export PATH
+		exec \$AXIOM/bin/AXIOMsys \$*
+	EOF
 
 	# Get rid of /mnt/linux
 	cd ${D}/opt/axiom
@@ -75,7 +83,6 @@ src_install() {
 	rm -rf mnt
 
 	sed -e 's/AXIOMsys/sman/g' ${D}/usr/bin/axiom > ${D}/usr/bin/sman
-	sed -e 's:$AXIOM/bin/clef -e ::g' ${D}/usr/bin/axiom > ${D}/usr/bin/AXIOMsys
 	chmod +x ${D}/usr/bin/sman
 	chmod +x ${D}/usr/bin/AXIOMsys
 }
