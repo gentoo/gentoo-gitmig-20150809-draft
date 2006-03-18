@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1788 2006/03/18 15:29:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1789 2006/03/18 18:50:34 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -109,8 +109,8 @@ app-emulation/qemu:softmmu - Support for softmmu targets
 app-emulation/uade:audacious - Enables support for media-sound/audacious
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
 app-emulation/xen:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS 
-app-emulation/xen:screen - Enable support for running domain U consoles in a screen session
 app-emulation/xen:pae - Enable support for PAE kernels (usually x86-32 with >4GB memory)
+app-emulation/xen:screen - Enable support for running domain U consoles in a screen session
 app-forensics/samhain:login-watch - Compile in the module to watch for login/logout events
 app-forensics/samhain:mounts-check - Compile in the module to check for correct mount options
 app-forensics/samhain:netclient - Compile a client, rather than a standalone version
@@ -171,8 +171,8 @@ app-office/gnucash:quotes - Enable Online Stock Quote retrieval.
 app-office/grisbi:print - Enable TeX and printing support
 app-office/imposter:iksemel - Enable externel iksemel parsing support.
 app-office/openoffice:binfilter - Enable support for legacy StarOffice 5.x and earlier file formats
-app-office/openoffice:firefox - Build against Firefox instead of Mozilla
 app-office/openoffice:cairo - Enable cairo support
+app-office/openoffice:firefox - Build against Firefox instead of Mozilla
 app-office/scribus:cairo - Enable cairo support.
 app-office/tpp:figlet - Installs app-misc/figlet to support the --huge command
 app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)
@@ -381,9 +381,9 @@ dev-ml/lablgtk:gnomecanvas - Enable libgnomecanvas bindings compilation.
 dev-ml/ocamlsdl:noimage - Disable sdl-image support
 dev-ml/ocamlsdl:nomixer - Disable sdl-mixer support
 dev-perl/Eidetic:auth - Enables Apache-AuthTicket based cookie authentication
-dev-perl/HTML-Mason:modperl - Enable modperl support
 dev-perl/gtk-perl:applet - Enable gnome applet support
 dev-perl/gtk-perl:gnome-print - Enable gnome-print support
+dev-perl/HTML-Mason:modperl - Enable modperl support
 dev-perl/PDL:badval - Enable badval support in PDL
 dev-perl/RPC-XML:modperl - Enable modperl support
 dev-php/eaccelerator:inode - Enable inode-based caching.
@@ -450,9 +450,9 @@ dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 dev-util/pida:gvim - Enable gvim as embedded editor
 dev-util/strace:aio - Enable libaio support
 dev-util/subversion:nowebdav - Disables WebDAV support via neon library
-dev-util/svk:svn-mirror - Enable SVN-Mirror support
-dev-util/svk:patch - Enable patch creation, import support
 dev-util/svk:pager - Enable perl pager selection support
+dev-util/svk:patch - Enable patch creation, import support
+dev-util/svk:svn-mirror - Enable SVN-Mirror support
 games-action/xshipwars:yiff - Add support for the YIFF sound server
 games-arcade/bomns:editor - enables building the level editor
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
@@ -492,8 +492,8 @@ games-strategy/wesnoth:lite - Lite install
 games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
 gnome-base/gnome-session:branding - Enable a custom gentoo branded splashscreen
-gnome-base/nautilus:beagle - Enable support for beagle searching
 gnome-base/gnome-vfs:avahi - Support for avahi mdns daemon.
+gnome-base/nautilus:beagle - Enable support for beagle searching
 gnome-extra/evolution-data-server:firefox - Use Firefox's NSS/NSPR libraries if SSL is enabled
 gnome-extra/evolution-data-server:nntp - Add suppoort fot nntp
 gnome-extra/gnome-games:artworkextra - Add extra Artwork to gnome-games
@@ -662,9 +662,9 @@ media-libs/giflib:rle - Build converters for RLE format (utah raster toolkit)
 media-libs/glide-v3:voodoo1 - Support 3DFX Voodoo1 video cards
 media-libs/glide-v3:voodoo2 - Support 3DFX Voodoo2 video cards
 media-libs/glide-v3:voodoo5 - Support 3DFX Voodoo4 and Voodoo5 video cards
-media-libs/libifp:module - Build kernel module for non-root usage
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgphoto2:nousb - Disable USB support
+media-libs/libifp:module - Build kernel module for non-root usage
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
 media-libs/libsdl:noflagstrip - Allow users to use any CFLAGS they like completely (at their own risk)
 media-libs/libsdl:nojoystick - Allow users to disable joystick support completely (at their own risk)
@@ -699,10 +699,10 @@ media-libs/xine-lib:dxr3 - Support for DXR3 mpeg accelleration cards
 media-libs/xine-lib:i8x0 - Support the i8x0 XvMC libs
 media-libs/xine-lib:modplug - Build with modplug support
 media-libs/xine-lib:nvidia - Support the nvidia XvMC libs
-media-libs/xine-lib:vidix - Support for vidix video output
 media-libs/xine-lib:video_cards_i810 - VIDEO_CARDS setting to build driver for video_cards_i810 cards
 media-libs/xine-lib:video_cards_nvidia - VIDEO_CARDS setting to build driver for nvidia video cards
 media-libs/xine-lib:video_cards_via - VIDEO_CARDS setting to build driver for video_cards_via" cards
+media-libs/xine-lib:vidix - Support for vidix video output
 media-libs/xine-lib:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
 media-plugins/bmp-wma:wma123 - Installs optional commandline wma player
 media-plugins/eq-xmms:sse-filters - Enable SSE-based equalizer's implementation
@@ -803,9 +803,9 @@ media-video/dvdrip:mplayer - Enables video playback by mplayer
 media-video/dvdrip:rar - Enables rar compression of VOB fiels
 media-video/dvdrip:subtitles - Enables support for subtitle ripping
 media-video/fenice:srvdir - Enables support for /srv directory
+media-video/ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
 media-video/ffmpeg:network - Enables network streaming support
 media-video/ffmpeg:x264 - Enables h264 encoding using x264
-media-video/ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
 media-video/flumotion:gstreamer08 - Use GStreamer 0.8 over GStreamer 0.10
 media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telephony)
 media-video/kmplayer:mplayer - Enables video playback by mplayer
@@ -987,7 +987,6 @@ net-im/bitlbee:openssl - Use OpenSSL for SSL support in MSN and Jabber.
 net-im/centericq:gg - Enable support for the Gadu-Gadu IM protocol
 net-im/centericq:irc - Enable support for the IRC protocol
 net-im/centericq:lj - Enable support for the LiveJournal weblog system
-net-im/kopete:sametime - Enable support for the Sametime protocol for instant messaging
 net-im/centericq:rss - Enable support for RSS/RDF feeds
 net-im/ejabberd:mod_irc - Irc support in ejabberd
 net-im/ejabberd:mod_muc - Multi user chat support in ejabberd
@@ -996,8 +995,8 @@ net-im/ejabberd:web - Web support in ejabberd
 net-im/ekg2:gsm - Enable gsm plugin
 net-im/ekg2:nogg - Disable Gadu-Gadu plugin
 net-im/gaim:bonjour - Enable bonjour support
-net-im/gaim:startup-notification - Enable startup-notification support.
 net-im/gaim:silc - Enable SILC protocol support
+net-im/gaim:startup-notification - Enable startup-notification support.
 net-im/gaim:xscreensaver - Enable X idle time support instead of gaim idle time.
 net-im/gajim:srv -  SRV capabilities
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
@@ -1009,10 +1008,11 @@ net-im/kadu:mail - Enables mail module in kadu
 net-im/kadu:pheaders - Enables precompiled headers in kadu
 net-im/kadu:speech - Enables speech module in kadu
 net-im/kadu:voice - Enables voice chat in kadu
+net-im/kopete:sametime - Enable support for the Sametime protocol for instant messaging
 net-im/kopete:xscreensaver - Enable support for XScreenSaver extension
 net-im/psi:extras - Enables extra non official patches
-net-im/psi:xscreensaver - Enables detection of xscreensaver
 net-im/psi:insecure-patches - Enables extra non official patches that may pose as a security risc
+net-im/psi:xscreensaver - Enables detection of xscreensaver
 net-im/tmsnc:talkfilters - Enables Talkfilters support on tmsnc
 net-irc/atheme:largenet - Enable support/tweaks for large networks
 net-irc/bitchx:cdrom - Enables CD-ROM support
@@ -1300,8 +1300,8 @@ sys-cluster/charm:tcp - Use TCP (instead of UPD) for socket communication
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-cluster/lam-mpi:pbs - Add support for PBS scheduling stuff
 sys-cluster/magma-plugins:nogulm - Removes gulm support to magma-plugins
-sys-cluster/mpich2:fast - Fast mode
 sys-cluster/mpich2:cxx - Add cxx headers
+sys-cluster/mpich2:fast - Fast mode
 sys-cluster/mpich2:mpe - Add mpe support
 sys-cluster/ocfs:aio - Add aio support
 sys-cluster/torque:scp - Use SCP instead of RCP for copying files between machines.
@@ -1476,14 +1476,14 @@ x11-base/kdrive:font-server - Enables font server support
 x11-base/kdrive:speedo - Enables Speedo font support
 x11-base/kdrive:type1 - Enables Type1 font support
 x11-base/x11-drm:gatos - Installs DRM built to work alongside GATOS features
-x11-base/x11-drm:video_cards_tdfx - VIDEO_CARDS setting to build driver for video_cards_3dfx cards
 x11-base/x11-drm:video_cards_ati - VIDEO_CARDS setting to build driver for video_cards_ati cards
-x11-base/x11-drm:video_cards_sunffb - VIDEO_CARDS setting to build driver for video_cards_ffb cards
 x11-base/x11-drm:video_cards_i810 - VIDEO_CARDS setting to build driver for video_cards_i810 cards
 x11-base/x11-drm:video_cards_mga - VIDEO_CARDS setting to build driver for video_cards_mga cards
 x11-base/x11-drm:video_cards_nv - VIDEO_CARDS setting to build driver for video_cards_nv cards
-x11-base/x11-drm:video_cards_savage - VIDEO_CARDS setting to build driver for video_cards_savage cards
 x11-base/x11-drm:video_cards_sis - VIDEO_CARDS setting to build driver for video_cards_sis cards
+x11-base/x11-drm:video_cards_savage - VIDEO_CARDS setting to build driver for video_cards_savage cards
+x11-base/x11-drm:video_cards_sunffb - VIDEO_CARDS setting to build driver for video_cards_ffb cards
+x11-base/x11-drm:video_cards_tdfx - VIDEO_CARDS setting to build driver for video_cards_3dfx cards
 x11-base/x11-drm:video_cards_via - VIDEO_CARDS setting to build driver for video_cards_via" cards
 x11-base/xorg-server:glx - Enable OpenGL extension for X
 x11-base/xorg-server:nvidia - Enable binary Nvidia driver support
