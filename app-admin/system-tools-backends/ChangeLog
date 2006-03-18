@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-tools-backends
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.26 2006/03/17 22:42:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.27 2006/03/18 22:54:15 tester Exp $
+
+  18 Mar 2006; Olivier Crête <tester@gentoo.org>
+  system-tools-backends-1.4.2.ebuild:
+  Stable on amd64 per bug #126321
 
   17 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   system-tools-backends-1.4.2.ebuild:
