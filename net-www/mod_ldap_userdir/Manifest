@@ -1,12 +1,46 @@
-MD5 82873351138cf853fabe04d0aa52513d ChangeLog 1726
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f948134dfa325cbc3dcda1873d847b48 ChangeLog 1855
+RMD160 17e1b16e9c5141e52d413c6be61e070486ed2cd9 ChangeLog 1855
+SHA256 d153bae5ec19e26e2c9b41458798c36b940bac926790b8e2fff835f963db8346 ChangeLog 1855
 MD5 2c9d531cb0d54faa89c88213c28ecf26 files/1.1.4-r1/47_mod_ldap_userdir.conf 371
+RMD160 0f90844ada891bb1949fc158de93df39ac65a17d files/1.1.4-r1/47_mod_ldap_userdir.conf 371
+SHA256 f41127a5b57b5ba3f594dd8f3ccc5ca79b2c2cb45db2228b782dd2068e944c7f files/1.1.4-r1/47_mod_ldap_userdir.conf 371
 MD5 650877f5bf9738cca23bbbeeb5bf87d9 files/47_mod_ldap_userdir.conf 375
+RMD160 0f53ec1f8b3550b0977b7f3008ad31359dea6501 files/47_mod_ldap_userdir.conf 375
+SHA256 0b6c15f2a8f802d822f7744fef1fe7cf464a54b3e4d0cf45a1c2d7f941b459ff files/47_mod_ldap_userdir.conf 375
 MD5 7c29da41475b54ecba7e1ca97c9d9bea files/digest-mod_ldap_userdir-1.1.1 73
+RMD160 8e10bc52af4d2ee19d640fcb39feba2690b784cc files/digest-mod_ldap_userdir-1.1.1 73
+SHA256 48b41f588f304280c6c40f916fef8c389113854b5dc5204e17c7ca5218db08aa files/digest-mod_ldap_userdir-1.1.1 73
 MD5 9d191153d39cdfc62b5be04e66ec88c4 files/digest-mod_ldap_userdir-1.1.4 73
+RMD160 b1fd01caadc3376a236440dbcce8c751bdbc30bd files/digest-mod_ldap_userdir-1.1.4 73
+SHA256 78cf2cce0855cd50954693843370e795ba978a1f8fdb4ac7087c39aaa86ff7c7 files/digest-mod_ldap_userdir-1.1.4 73
 MD5 9d191153d39cdfc62b5be04e66ec88c4 files/digest-mod_ldap_userdir-1.1.4-r1 73
+RMD160 b1fd01caadc3376a236440dbcce8c751bdbc30bd files/digest-mod_ldap_userdir-1.1.4-r1 73
+SHA256 78cf2cce0855cd50954693843370e795ba978a1f8fdb4ac7087c39aaa86ff7c7 files/digest-mod_ldap_userdir-1.1.4-r1 73
 MD5 b89b865212327846622772a687a363df files/digest-mod_ldap_userdir-1.1.5 73
+RMD160 a9a4364861066c8a59f960eac14965a1df305735 files/digest-mod_ldap_userdir-1.1.5 73
+SHA256 6cbca6276707a693890fc0deb897d1612e10ff4f8a703a03f0b450271ae21fb4 files/digest-mod_ldap_userdir-1.1.5 73
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
+RMD160 d11ce73e47adf4b3d91309ec6489fded2f4d4e0e metadata.xml 226
+SHA256 376a327f91f69eb96f0c1b05cc1481dd7017a0570f631a03b1f6d14d58215ca8 metadata.xml 226
 MD5 457c489da37120586153b01d035d922a mod_ldap_userdir-1.1.1.ebuild 1748
+RMD160 c2a4aae722d1fbdbeb4b0a9a7846c2fe426953e9 mod_ldap_userdir-1.1.1.ebuild 1748
+SHA256 d05a82b2c1cb554c21caab6acb0bbfa9ebed154c715209cc4951d274f950b82d mod_ldap_userdir-1.1.1.ebuild 1748
 MD5 b01aacffc707a62b1b760d36af31191d mod_ldap_userdir-1.1.4-r1.ebuild 1268
+RMD160 70a89d8dd282993b25077e8e6a370869fabeb68c mod_ldap_userdir-1.1.4-r1.ebuild 1268
+SHA256 7025fcb5dde80ec94b81f1ef983b1e5fa92eb8204f162826fa6fd90e69eaa807 mod_ldap_userdir-1.1.4-r1.ebuild 1268
 MD5 9fb7efc598ddb660e7881f12960b8137 mod_ldap_userdir-1.1.4.ebuild 1753
-MD5 5a85719aab2b3ddd56f2360d8f881768 mod_ldap_userdir-1.1.5.ebuild 1280
+RMD160 25a487375365337a9cced0272381f3b3812df35f mod_ldap_userdir-1.1.4.ebuild 1753
+SHA256 7fa319a5a14749f10a4a3fb7dd7d4e02f2ad9dbf93d8e79bc803a889dac6791b mod_ldap_userdir-1.1.4.ebuild 1753
+MD5 998ce39bfef2ba93bf34158b52cc643e mod_ldap_userdir-1.1.5.ebuild 1294
+RMD160 4b39ab7000f8297d9e5c368ea6bf2abfb76edfbf mod_ldap_userdir-1.1.5.ebuild 1294
+SHA256 79074ca708e1c2deec7eb32fb1bafbf73e7a7aeec3b0c768bfb451d77f89b1f4 mod_ldap_userdir-1.1.5.ebuild 1294
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEG+zvugEuf3OQ0akRAohUAJ91557rlWXrj0rAx71O5Vd4is/hGgCfY/Qk
+Jb7S1zAvlmY6QGdDmVv7efg=
+=0iAT
+-----END PGP SIGNATURE-----
