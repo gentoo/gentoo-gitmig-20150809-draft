@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163.ebuild,v 1.3 2006/02/27 08:41:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163.ebuild,v 1.4 2006/03/18 12:49:28 zzam Exp $
 
 inherit flag-o-matic eutils debug qt3
 
@@ -33,7 +33,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	arts? ( kde-base/arts )
 	dvd? ( 	media-libs/libdvdnav
 		media-libs/libdts )
-	dvb? ( media-libs/libdvb )
+	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
