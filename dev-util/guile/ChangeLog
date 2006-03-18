@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/guile
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.49 2005/09/09 21:18:13 ranger Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.50 2006/03/18 01:30:03 corsair Exp $
+
+  18 Mar 2006; Markus Rothe <corsair@gentoo.org> guile-1.6.7.ebuild:
+  Stable on ppc64; bug #126569
 
   09 Sep 2005; Brent Baude <ranger@gentoo.org> guile-1.6.7.ebuild:
   Marking guile-1.6.7 as ~ppc64 for bug 103918
