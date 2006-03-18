@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.91 2006/03/14 01:55:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.92 2006/03/18 17:20:38 mcummings Exp $
+
+*spamassassin-3.1.1 (18 Mar 2006)
+
+  18 Mar 2006; Michael Cummings <mcummings@gentoo.org>
+  files/3.0.0-spamd.conf, +spamassassin-3.1.1.ebuild:
+  New SA, closes bug 125899, opens bug 126772, 126673, 126674, 126675, 126678,
+  126679, 126680, 126683, 126684, 126685. Joy
 
   14 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   spamassassin-3.1.0-r1.ebuild, spamassassin-3.1.0-r2.ebuild:
