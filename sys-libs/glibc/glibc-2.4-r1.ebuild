@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r1.ebuild,v 1.1 2006/03/17 04:34:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r1.ebuild,v 1.2 2006/03/18 00:53:22 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -28,24 +28,20 @@ KEYWORDS="-* ~amd64 ~x86"
 
 BRANCH_UPDATE=""
 
-# From linuxthreads/man
+# Generated man pages
 GLIBC_MANPAGE_VERSION="none"
 
-# From manual
+# Generated stuff in manual subdir
 GLIBC_INFOPAGE_VERSION="none"
 
 # Gentoo patchset
-PATCH_VER="1.2"
+PATCH_VER="1.3"
 
-# C Stubbs addon (contained in fedora, so ignoring)
-#CSTUBS_VER="2.1.2"
-#CSTUBS_TARBALL="c_stubs-${CSTUBS_VER}.tar.bz2"
-#CSTUBS_URI="mirror://gentoo/${CSTUBS_TARBALL}"
-
-# Fedora addons (from RHEL's glibc-2.3.4-2.src.rpm)
-#FEDORA_VER="20041219T2331"
-#FEDORA_TARBALL="glibc-fedora-${FEDORA_VER}.tar.bz2"
-#FEDORA_URI="mirror://gentoo/${FEDORA_TARBALL}"
+# Fedora addons (like c_stubs)
+# sniped from RHEL's glibc-2.4-4.src.rpm
+FEDORA_VER="20060306T1239"
+FEDORA_TARBALL="glibc-fedora-${FEDORA_VER}.tar.bz2"
+FEDORA_URI="mirror://gentoo/${FEDORA_TARBALL}"
 
 GENTOO_TOOLCHAIN_BASE_URI="mirror://gentoo"
 GENTOO_TOOLCHAIN_DEV_URI="http://dev.gentoo.org/~azarah/glibc"
@@ -168,10 +164,6 @@ get_glibc_src_uri() {
 				${GENTOO_TOOLCHAIN_DEV_URI}/glibc-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2"
 	fi
 
-	if [[ -n ${CSTUBS_URI} ]] ; then
-		GLIBC_SRC_URI="${GLIBC_SRC_URI} ${CSTUBS_URI}"
-	fi
-
 	if [[ -n ${FEDORA_URI} ]] ; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI} ${FEDORA_URI}"
 	fi
@@ -194,8 +186,15 @@ toolchain-glibc_src_unpack() {
 	unpack glibc-libidn-${GLIBC_RELEASE_VER}.tar.bz2 && mv glibc-libidn-${GLIBC_RELEASE_VER} libidn
 	unpack glibc-ports-${GLIBC_RELEASE_VER}.tar.bz2 && mv glibc-ports-${GLIBC_RELEASE_VER} ports
 
-	[[ -n ${CSTUBS_TARBALL} ]] && unpack ${CSTUBS_TARBALL}
-	[[ -n ${FEDORA_TARBALL} ]] && unpack ${FEDORA_TARBALL}
+	if [[ -n ${FEDORA_TARBALL} ]] ; then
+		# only pull out the stuff we actually want
+		mkdir "${WORKDIR}"/fedora
+		cd "${WORKDIR}"/fedora || die
+		unpack ${FEDORA_TARBALL}
+		mv c_stubs "${S}"/ || die
+		cd "${S}"
+		rm -r "${WORKDIR}"/fedora
+	fi
 
 	if [[ -n ${PATCH_VER} ]] ; then
 		cd "${WORKDIR}"
@@ -232,6 +231,8 @@ toolchain-glibc_src_unpack() {
 		ARCH=$(tc-arch) \
 		epatch "${WORKDIR}"/patches
 	fi
+
+	gnuconfig_update
 }
 
 toolchain-glibc_src_compile() {
@@ -1162,6 +1163,8 @@ src_unpack() {
 
 	# Optimized amd64 funcs appear to be unstable, enable at your own risk !
 	GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 6905_all_glibc-2.4-amd64-string.patch"
+	# These should be pretty safe though ...
+	GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 6901_all_2.4-new-libm-20060314.patch 6902_all_2.4-new-libm-s_ceil.patch"
 
 	toolchain-glibc_src_unpack
 
