@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.145 2006/03/17 22:47:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.146 2006/03/18 03:26:12 allanonjl Exp $
+
+*gnome-games-2.14.0 (18 Mar 2006)
+
+  18 Mar 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +files/gnome-games-2.13.1-guile_switch.patch,
+  +files/gnome-games-2.14.0-no_lazy_bindings.patch,
+  +gnome-games-2.14.0.ebuild:
+  new version.  remove howl support.
 
   17 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Stable on x86 wrt bug #126321.
