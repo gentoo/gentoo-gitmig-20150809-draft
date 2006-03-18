@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.146 2006/03/18 03:26:12 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.147 2006/03/18 22:42:02 tester Exp $
+
+  18 Mar 2006; Olivier Crête <tester@gentoo.org> gnome-games-2.12.3.ebuild:
+  Stable on amd64 per bug #126321
 
 *gnome-games-2.14.0 (18 Mar 2006)
 
