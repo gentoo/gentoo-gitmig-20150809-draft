@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/xfs-1.0.1.ebuild,v 1.4 2006/02/14 21:18:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/xfs-1.0.1.ebuild,v 1.5 2006/03/18 23:45:41 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -12,7 +12,8 @@ DESCRIPTION="X.Org Font Server"
 KEYWORDS="~amd64 ~arm ~mips ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ipv6"
 
-RDEPEND="x11-libs/libFS
+RDEPEND="x11-apps/ttmkfdir
+	x11-libs/libFS
 	x11-libs/libXfont"
 DEPEND="${RDEPEND}
 	x11-proto/fontsproto"
