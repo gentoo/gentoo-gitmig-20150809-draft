@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6.ebuild,v 1.3 2006/03/17 20:55:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6.ebuild,v 1.4 2006/03/18 05:41:30 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -247,7 +247,7 @@ src_install() {
 		ln -s libqt-mt.so.3 libqt-mt.so
 
 		# libqt -> libqt-mt symlinks
-		ln -s libqt-mt.so.${pv} libqt.so.${PV}
+		ln -s libqt-mt.so.${PV} libqt.so.${PV}
 		ln -s libqt-mt.so.3.3 libqt.so.3.3
 		ln -s libqt-mt.so.3 libqt.so.3
 		ln -s libqt-mt.so libqt.so

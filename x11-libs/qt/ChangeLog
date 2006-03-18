@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.294 2006/03/17 20:55:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.295 2006/03/18 05:41:29 vapier Exp $
+
+  18 Mar 2006; Mike Frysinger <vapier@gentoo.org> qt-3.3.6.ebuild:
+  Fix typo (pv -> PV) for libqt-mt.so symlink.
 
   17 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> qt-3.3.6.ebuild:
   Fix installation of libraries (3.3.5 -> ${PV}). Forward port immodule patch
