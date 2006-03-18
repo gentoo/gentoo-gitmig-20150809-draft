@@ -19,9 +19,9 @@ SHA256 e64c070d1e69900c76515bd79130473847a407bab14990862aeb2b84ac58848a files/sm
 MD5 8b979a58307d7196655758bd3d2466c4 files/smpeg-0.4.4-gcc41.patch 1390
 RMD160 20e11bfe56a0d95bb8e8d1d2f7430c164258bb9f files/smpeg-0.4.4-gcc41.patch 1390
 SHA256 e37883e2cc7588539db6b374f6641e62c3db48f8c188c05c4fbf3ddbf5db3112 files/smpeg-0.4.4-gcc41.patch 1390
-MD5 7d1d2f2e55e8d98f7d62dcbb680cec7d files/smpeg-0.4.4-gnu-stack.patch 955
-RMD160 172ac05d759cfe6cdeabc0eece97d35cbbcb052e files/smpeg-0.4.4-gnu-stack.patch 955
-SHA256 04a025a55d47b1f8520b3e6195b656c4bd9f52ab48d60704f69a8092ffa70abd files/smpeg-0.4.4-gnu-stack.patch 955
+MD5 14745b6539fdc5976873912db19e8be3 files/smpeg-0.4.4-gnu-stack.patch 955
+RMD160 dc286a77204956228960012389d82bc0949a5cec files/smpeg-0.4.4-gnu-stack.patch 955
+SHA256 a7240a297f045e338ec477ac9dfc1845749f4652eb63b9c1ebaea2e9ceef7c25 files/smpeg-0.4.4-gnu-stack.patch 955
 MD5 dcc2db7c8aa509096fc557b99bd35490 files/smpeg-0.4.4-m4.patch 233
 RMD160 5a417da55e0d8048850b71bbe82e94b794ad261b files/smpeg-0.4.4-m4.patch 233
 SHA256 e80d9b6dbb2c0e55972414378f999570d7620039185dbbd7a884d8d24b190d58 files/smpeg-0.4.4-m4.patch 233
@@ -37,7 +37,7 @@ SHA256 03d24039f20e62dfacfc1c1ef98769f28b5e5c56a2e506f52914bfec9fb174c7 smpeg-0.
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEGNyECRZPokWLroQRArZfAJ9iDf6rvFCy/EUmrqUAJDBkAVvN0ACePCkj
-KzZ4fTd6iQ5tqk1st4znGko=
-=/22s
+iD8DBQFEG0522+ySkm8kpY0RAq4hAJ9cCeG2aa02P0ZVo8mE4aERIHxdEACbBVCO
+zFbkMYkmV05NdkVYR509OWI=
+=8FYi
 -----END PGP SIGNATURE-----
