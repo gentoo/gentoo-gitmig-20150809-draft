@@ -1,9 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2004.3/package.mask,v 1.2 2006/01/11 15:42:00 gustavoz Exp $
-
-# Masked until bug #60413 is fixed.
-media-libs/xine-lib
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2004.3/package.mask,v 1.3 2006/03/18 00:39:37 gustavoz Exp $
 
 # Still needing 2.4 default
 sys-kernel/linux26-headers
@@ -19,52 +16,6 @@ sys-kernel/linux26-headers
 # Newer gcc works but we want users to upgrade profile for this
 >=sys-devel/gcc-3.4.1
 
-# Jason Wever <weeve@gentoo.org>
-# Jeremy Huddleston <eradicator@gentoo.org>
-# Packages masked that have hard deps on alsa
-app-accessibility/speech-dispatcher
-app-forensics/regviewer
-dev-games/neoengine
-dev-java/sun-j2sdk
-games-arcade/emergence-bin
-games-emulation/mupen64-alsasnd
-games-roguelike/crossfire-client
-media-libs/alsa-lib
-media-libs/alsa-oss
-media-libs/ladcca
-media-libs/libclalsadrv
-media-libs/libmustux
-media-plugins/alsa-jack
-media-plugins/gst-plugins-alsa
-media-plugins/xmms-alsa
-media-sound/alsa-patch-bay
-media-sound/alsa-tools
-media-sound/alsa-utils
-media-sound/alsamixergui
-media-sound/ams
-media-sound/aseqview
-media-sound/brutefir
-media-sound/gmorgan
-media-sound/gnome-alsamixer
-media-sound/horgand
-media-sound/jack-audio-connection-kit
-media-sound/jamin
-media-sound/kamix
-media-sound/tk707
-media-sound/krecord
-media-sound/museseq
-media-sound/pmidi
-media-sound/qjackconnect
-media-sound/qjackctl
-media-sound/qmidiarp
-media-sound/rosegarden
-media-sound/seq24
-media-sound/sfc
-media-sound/specimen
-media-sound/supercollider
-media-sound/tapiir
-media-video/gephe
-
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # New toys enabled by the dev/ profile and linux-headers-2.6
 gnome-base/gnome-volume-manager
@@ -72,11 +23,6 @@ gnome-extra/hal-device-manager
 sys-apps/hal
 sys-apps/ivman
 sys-apps/pmount
-
-# This probably won't work since -bin is ultra
-dev-haskell/haddock
-dev-lang/ghc
-dev-lang/ghc-bin
 
 # Jason Wever <weeve@gentoo.org>
 # Masking versions of libffi that don't apply to this profile
