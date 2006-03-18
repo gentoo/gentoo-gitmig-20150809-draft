@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1790 2006/03/18 19:43:22 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1791 2006/03/18 22:36:55 allanonjl Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -549,7 +549,9 @@ kde-base/ksysguard:zeroconf - Enable support for DNS Service Discovery (DNS-SD)
 kde-base/kwin:xcomposite - Enable support for Xorg Composite extension
 kde-misc/tellico:cddb - Access cddb servers to retrieve and submit information about compact discs.
 mail-client/balsa:gtkspell - Use gtkspell for dictionary support
+mail-client/evolution:bogofilter - Use bogofilter instead of spamassassin
 mail-client/evolution:firefox - Use Firefox's NSS/NSPR libraries if SSL is enabled
+mail-client/evolution:widescreen - Enable widescreen support
 mail-client/evolution:nntp - Enable evolution nntp (news) functionality
 mail-client/mail-notification:evolution - Provide an Evolution plugin
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
