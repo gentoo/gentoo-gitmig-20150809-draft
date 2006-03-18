@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.56 2006/03/10 00:45:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.57 2006/03/18 22:30:10 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -65,7 +65,7 @@ esac
 	SRC_URI="${SRC_URI} mirror://gentoo/elf2flt-${ELF2FLT_VER}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
-IUSE="nls multitarget multislot test"
+IUSE="nls multitarget multislot test vanilla"
 if use multislot ; then
 	SLOT="${CTARGET}-${BVER}"
 elif [[ ${CTARGET} != ${CHOST} ]] ; then
@@ -99,14 +99,14 @@ tc-binutils_unpack() {
 tc-binutils_apply_patches() {
 	cd "${S}"
 
-	if [[ -n ${PATCHVER} ]] ; then
+	if ! use vanilla && [[ -n ${PATCHVER} ]] ; then
 		EPATCH_SOURCE=${WORKDIR}/patch
 		[[ -n $(ls "${EPATCH_SOURCE}"/*.bz2 2>/dev/null) ]] \
 			&& EPATCH_SUFFIX="patch.bz2" \
 			|| EPATCH_SUFFIX="patch"
 		epatch
 	fi
-	if [[ -n ${UCLIBC_PATCHVER} ]] ; then
+	if ! use vanilla && [[ -n ${UCLIBC_PATCHVER} ]] ; then
 		EPATCH_SOURCE=${WORKDIR}/uclibc-patches
 		[[ -n $(ls "${EPATCH_SOURCE}"/*.bz2 2>/dev/null) ]] \
 			&& EPATCH_SUFFIX="patch.bz2" \
