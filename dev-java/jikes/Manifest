@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c07a07da1c55a5e32f3dc9590a5c9a7f ChangeLog 4495
+MD5 162d1b14d4d069ab3928fc1feb7321d3 ChangeLog 4587
 MD5 f4b99fcf9aad09cc8ac1414bab7f40d7 files/deprecated.patch 995
 MD5 69804c19e69a70f1d6c9bf2b837fbd8d files/digest-jikes-1.22-r1 63
-MD5 d2aa63d3ffc3653fbf702acc2fa43c74 jikes-1.22-r1.ebuild 771
+MD5 ba0a84cc83873bf22f8c0cdca85c9075 jikes-1.22-r1.ebuild 767
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDlN3MQiJ/wx066S4RAshlAJ4zIIJCQB/CF69hLu5C3x1tPXmNdQCgjS5Y
-SIbCmpybSDSXDANp+PSwcUg=
-=/9FG
------END PGP SIGNATURE-----
