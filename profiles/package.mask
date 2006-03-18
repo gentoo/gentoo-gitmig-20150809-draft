@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5102 2006/03/18 16:05:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5103 2006/03/18 21:36:19 plasmaroo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1489,10 +1489,6 @@ dev-lisp/cl-imho
 # nagios-*2 is still beta
 >=net-analyzer/nagios-core-2.0b_p1
 >=net-analyzer/nagios-2.0b_p1
-
-# <plasmaroo@gentoo.org> (16 Jan 2005)
-# Live CVS build, masking to keep the bunny rabbits happy.
->=sci-mathematics/axiom-9999
 
 # <mkennedy@gentoo.org> (Jan 12 2005)
 # no longer needed for the time being; use app-emacs/slime instead
