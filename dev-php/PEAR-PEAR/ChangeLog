@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.53 2006/03/14 10:14:27 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.54 2006/03/18 20:23:48 chtekk Exp $
+
+  18 Mar 2006; Luca Longinotti <chtekk@gentoo.org>
+  PEAR-PEAR-1.4.6-r1.ebuild, PEAR-PEAR-1.4.8.ebuild:
+  Add pear.symfony-project.com channel.
 
   14 Mar 2006; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-PEAR-1.4.6-r1.ebuild, PEAR-PEAR-1.4.8.ebuild:
