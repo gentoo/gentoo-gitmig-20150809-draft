@@ -14,8 +14,7 @@ alpha		default-linux/alpha/no-nptl/2.4			stable
 
 # AMD64 Profiles
 amd64		default-linux/amd64/2006.0			stable
-# <kingtaco> no-symlinks makes repoman act like a punk
-#amd64		default-linux/amd64/2006.0/no-symlinks		dev
+amd64		default-linux/amd64/2006.0/no-symlinks		dev
 #amd64		default-linux/amd64/2006.0/no-multilib		stable
 # I have commented this profile for the following reason:
 # <blubb> it doesn't work with a normal stage tarball and will break within 5 minutes for sure
