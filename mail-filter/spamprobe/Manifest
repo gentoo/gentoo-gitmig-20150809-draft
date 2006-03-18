@@ -1,21 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3b56009c49ed7f7d9d4d5224f61b3bd5 ChangeLog 2414
-RMD160 015beefd1656149ca79dfc7f37aae779a9090458 ChangeLog 2414
-SHA256 fdd6fb7b77d1815aabb168075aa3fad0bc64e76d9967b4dd12e03d19c66d7045 ChangeLog 2414
-MD5 3e2a7aa9ae39974be42efa119ee86ca2 files/digest-spamprobe-1.0a 66
-RMD160 fb252123c7902f97266580c48f3d201a18e7699c files/digest-spamprobe-1.0a 66
-SHA256 70bdaa2d03c1ea8d3808b183d8cba8de3fb8ad331afbb9d1aef8e74646223db4 files/digest-spamprobe-1.0a 66
-MD5 21f983f3dc3db1a9bff6cb7e29b01585 files/digest-spamprobe-1.2 65
-RMD160 3c65fa1911373d0e1f3a6e7c176a080968468baf files/digest-spamprobe-1.2 65
-SHA256 6b710218f1efdf0dab1b1dcc1044e7764a413f715879afa491d0cf382ffefdf3 files/digest-spamprobe-1.2 65
-MD5 076bb63b83991bf542674b5fae5123c8 files/digest-spamprobe-1.2a 66
-RMD160 51c9d844bd5d0f99353c885b28917bdd7be513e2 files/digest-spamprobe-1.2a 66
-SHA256 2f02b7bfc4812551ff3ca70f3f80f79ea2ae48b95aed2be98f6185318ff18b31 files/digest-spamprobe-1.2a 66
-MD5 5c047b3b36bfa7024fbe12f7b74c22d8 files/digest-spamprobe-1.4 65
-RMD160 437f33310ff4b2d19efb2e0591f78abc8f564ecc files/digest-spamprobe-1.4 65
-SHA256 f03d630acbc065b55c514c1179b21d3285ad06ee81629cb8285a617a402acf34 files/digest-spamprobe-1.4 65
+MD5 936f37add56ce896ca3f8d061d5acb66 ChangeLog 2615
+RMD160 12cb25de833777c3a97e725f7039dc3cf9531c41 ChangeLog 2615
+SHA256 ebd739e95bcbf176d9a1d820c91f88375128c6dd78d1892f65d5b9599be26188 ChangeLog 2615
 MD5 c95f74e0e80dfdf4979b7101a7668402 files/digest-spamprobe-1.4a 244
 RMD160 6f03c50d87bab24295c74abab5d033a9de6d43fe files/digest-spamprobe-1.4a 244
 SHA256 9735b136d45197b5803b5e4db5a8ff8b1644541ccc1fab92ff670dc2ae21eb8d files/digest-spamprobe-1.4a 244
@@ -28,28 +16,16 @@ SHA256 998b00e4fb1e4ad214baa7609cf9f9bb9732678d0fa444c4a352ca395c163a92 files/sp
 MD5 7a63986c893466830ff3fb3aad7f89fa metadata.xml 251
 RMD160 fe636c5fe7e6050829285b0af3d05793a7bd210c metadata.xml 251
 SHA256 01e22d563319856b8f2ad43bab5d9cb66de405ebfd186277b0c97253216359be metadata.xml 251
-MD5 e06b0edbed6cdb6cdbb478439520adea spamprobe-1.0a.ebuild 802
-RMD160 009b8481c99bbb6ababc40966414838046b37ab4 spamprobe-1.0a.ebuild 802
-SHA256 59dbd35787f39293f67d3ecca2262eda67589b650069767d8f47fa6ff1292aef spamprobe-1.0a.ebuild 802
-MD5 f1d945e7232a3569f5d0282729633354 spamprobe-1.2.ebuild 801
-RMD160 d30b1ab775410bd34b39a8f09b1c4eae46f5e805 spamprobe-1.2.ebuild 801
-SHA256 c431eee89f75880e6a40068d2a74853a4d65fc3c49f83e2eed8ce6afaab843dc spamprobe-1.2.ebuild 801
-MD5 79fd66fa0880b9447302f42c1680ba63 spamprobe-1.2a.ebuild 802
-RMD160 51c453130d5e0987021327d9d808f2a300622ef6 spamprobe-1.2a.ebuild 802
-SHA256 f612cb4d8d9d0bdd35975831837050c839c39be304252cb8a53eecc24cbb5425 spamprobe-1.2a.ebuild 802
-MD5 63ab151286219b368245cc104f9be3be spamprobe-1.4.ebuild 802
-RMD160 790f26eb2b6f72708902fb2565c056139bf30935 spamprobe-1.4.ebuild 802
-SHA256 a11f71a6c226b85f1ca7cfd80cf0d32ac24c57db441886d13af85ef44ea70b71 spamprobe-1.4.ebuild 802
-MD5 ba277001c8ed05d1ff6ce62a4d621ab4 spamprobe-1.4a.ebuild 803
-RMD160 b4e3132352fdcdfbd0ac7904578f570ced0a1b1c spamprobe-1.4a.ebuild 803
-SHA256 ca61c6048eec2b91981967bbdf552df7084051ffddb5d4fa3847f0cd470c0e87 spamprobe-1.4a.ebuild 803
+MD5 5d04b20c75e95d6a35c434dacf12b212 spamprobe-1.4a.ebuild 802
+RMD160 dc9639c518e8b82f4ae3007eea27d90cb900e87f spamprobe-1.4a.ebuild 802
+SHA256 bcf7113ba89cc5847ee042364287b6a4ce4803f763fe33062ed1447f233b8c8f spamprobe-1.4a.ebuild 802
 MD5 26d90f0966fbdc05e7787470038cbaa9 spamprobe-1.4b.ebuild 872
 RMD160 5528545e45f9ed869e646acf7aa4332d75b46a20 spamprobe-1.4b.ebuild 872
 SHA256 426f09bfa79e8c8dcc0f0aae68e8518ab0c07552f0c891b678f130fb27a6c766 spamprobe-1.4b.ebuild 872
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEGP9HCRZPokWLroQRAh5XAKDSsVMxjj2tjFhw8l9zNIQH17Vl1gCfVRWr
-0CnDIsedwu2jKN5KWGymKpc=
-=OMGu
+iD8DBQFEHF9P10xuJSrg3/sRAvWHAJ985byt+tUnwSXQnc6jgIcmlFTr3QCfe9w1
+wh4dRTmbtMSaSKS8ItnLuEs=
+=9TGK
 -----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/spamprobe
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.16 2006/03/16 06:01:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.17 2006/03/18 19:27:46 ticho Exp $
+
+  18 Mar 2006; <ticho@gentoo.org> -spamprobe-1.0a.ebuild,
+  -spamprobe-1.2.ebuild, -spamprobe-1.2a.ebuild, -spamprobe-1.4.ebuild,
+  spamprobe-1.4a.ebuild:
+  1.4a stable on x86. Pruned obsolete ebuilds.
 
   16 Mar 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/spamprobe-1.4b-gcc41.patch, spamprobe-1.4b.ebuild:
