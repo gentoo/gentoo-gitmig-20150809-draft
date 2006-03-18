@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.19.ebuild,v 1.1 2006/02/20 23:07:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.19.ebuild,v 1.2 2006/03/18 16:59:38 ticho Exp $
 
 inherit gnome2 eutils mono
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 RDEPEND=">=dev-libs/glib-2
 	doc? ( >=dev-util/gtk-doc-1.0 )
 	mono? ( dev-lang/mono
-			>=dev-dotnet/gtk-sharp-1.9.5 )"
+			>=dev-dotnet/gtk-sharp-2.4.0 )"
 
 DEPEND="dev-util/pkgconfig
 	doc? ( app-text/docbook-sgml-utils )
