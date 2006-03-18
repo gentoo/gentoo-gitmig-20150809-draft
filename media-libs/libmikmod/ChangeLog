@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libmikmod
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.30 2005/05/27 06:40:20 josejx Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.31 2006/03/18 22:35:22 flameeyes Exp $
+
+*libmikmod-3.1.11-r2 (18 Mar 2006)
+
+  18 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libmikmod-3.1.11-respectflags.patch, +libmikmod-3.1.11-r2.ebuild:
+  Add patch to respect LDFLAGS and avoid polluting CFLAGS, do a revbump as it
+  requires quite a bit of changes (to autotools) and it's better to fall back
+  in ~arch.
 
   27 May 2005; Joseph Jezak <josejx@gentoo.org> libmikmod-3.1.11-r1.ebuild:
   Marked ppc stable.

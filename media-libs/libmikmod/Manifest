@@ -1,12 +1,55 @@
-MD5 7cf3a690fd04473543751425e359d643 ChangeLog 4039
-MD5 95f6b778cd53d6ab3e97218f6ae22a40 libmikmod-3.1.10.ebuild 1026
-MD5 9b8f0a34c2717f3ff295b65c2772fd04 libmikmod-3.1.11-r1.ebuild 1089
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 fbacfd72b2a725f11ca968a2f36ee967 libmikmod-3.1.11.ebuild 1085
-MD5 3fe5e8c8ad4a371c9b0f7a8b268805d7 libmikmod-3.1.10-r1.ebuild 1102
-MD5 0624777bac2c07bc43ba979a97bd863d files/libmikmod-3.1.11-amd64-archdef.patch 490
-MD5 5308beabab9b1ad8dd38deeedb71e9da files/libmikmod-3.1.11-m4.patch 268
-MD5 af03c756b29b31b7868d42c0c21d1952 files/digest-libmikmod-3.1.11 68
-MD5 af03c756b29b31b7868d42c0c21d1952 files/digest-libmikmod-3.1.11-r1 68
-MD5 7f535a03cca26048f67cdf9af61100e5 files/digest-libmikmod-3.1.10-r1 68
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a8d8121911aac47b93bb8887d790cd03 ChangeLog 4375
+RMD160 06cac6aa3071bbec85b6fe17d76ebae43c3b82c6 ChangeLog 4375
+SHA256 7a6a4b324c02119dc1846c3cffb8d791e6ec7fde6a1f7ee8d779dec0b910c479 ChangeLog 4375
 MD5 7f535a03cca26048f67cdf9af61100e5 files/digest-libmikmod-3.1.10 68
+RMD160 11057a02b301896ef94af8ba7f90f1daebb3ad79 files/digest-libmikmod-3.1.10 68
+SHA256 38a3993a5ea9fa891da0b459b5ff424243078d1fe25505c329c0163f2b94d2de files/digest-libmikmod-3.1.10 68
+MD5 7f535a03cca26048f67cdf9af61100e5 files/digest-libmikmod-3.1.10-r1 68
+RMD160 11057a02b301896ef94af8ba7f90f1daebb3ad79 files/digest-libmikmod-3.1.10-r1 68
+SHA256 38a3993a5ea9fa891da0b459b5ff424243078d1fe25505c329c0163f2b94d2de files/digest-libmikmod-3.1.10-r1 68
+MD5 af03c756b29b31b7868d42c0c21d1952 files/digest-libmikmod-3.1.11 68
+RMD160 132f1455112f8588829420d0c8d0e760292b36cf files/digest-libmikmod-3.1.11 68
+SHA256 eeed368541a83daed8d70f560efe8ef1e08ef8534ccc64b67f658b725d647c18 files/digest-libmikmod-3.1.11 68
+MD5 af03c756b29b31b7868d42c0c21d1952 files/digest-libmikmod-3.1.11-r1 68
+RMD160 132f1455112f8588829420d0c8d0e760292b36cf files/digest-libmikmod-3.1.11-r1 68
+SHA256 eeed368541a83daed8d70f560efe8ef1e08ef8534ccc64b67f658b725d647c18 files/digest-libmikmod-3.1.11-r1 68
+MD5 390683167d648b72950db89680baf753 files/digest-libmikmod-3.1.11-r2 521
+RMD160 b51127b57f4e0f3fc479c7fbf90adbae301fee82 files/digest-libmikmod-3.1.11-r2 521
+SHA256 893794fe0bcb7844b12bb1b74b5ea8af95b76aaba1b9c178b5effc75d148adc6 files/digest-libmikmod-3.1.11-r2 521
+MD5 0624777bac2c07bc43ba979a97bd863d files/libmikmod-3.1.11-amd64-archdef.patch 490
+RMD160 eeba4322c3cc54391acc35c6cfb9e544d32b5daa files/libmikmod-3.1.11-amd64-archdef.patch 490
+SHA256 59101a6b5c25a4a8af7a18a7d9b206e3183380c80f490c251f9bb4140bcd7b6d files/libmikmod-3.1.11-amd64-archdef.patch 490
+MD5 5308beabab9b1ad8dd38deeedb71e9da files/libmikmod-3.1.11-m4.patch 268
+RMD160 b11341869880ae7880318247efa7d771f741a152 files/libmikmod-3.1.11-m4.patch 268
+SHA256 cd9b3a93005b332f298af392537651f2430df7f6400d68983a19788c33d401aa files/libmikmod-3.1.11-m4.patch 268
+MD5 d314b8d7786b9bc553e1683e5a7ee573 files/libmikmod-3.1.11-respectflags.patch 1637
+RMD160 b166b5e82e7683717afbfdbac89571c10fd01595 files/libmikmod-3.1.11-respectflags.patch 1637
+SHA256 cec50c01cdf9ee1ea4df792444a3dd1b6c9317ccc3fb1ec48a9c37d90e72a55b files/libmikmod-3.1.11-respectflags.patch 1637
+MD5 3fe5e8c8ad4a371c9b0f7a8b268805d7 libmikmod-3.1.10-r1.ebuild 1102
+RMD160 4ea7aa46199c5f57d6c846e8b9606362dce9c0a1 libmikmod-3.1.10-r1.ebuild 1102
+SHA256 e7d0eef280ee0222680654cd9ad881878028806ac546fa4bced5b0d12c9f50d3 libmikmod-3.1.10-r1.ebuild 1102
+MD5 95f6b778cd53d6ab3e97218f6ae22a40 libmikmod-3.1.10.ebuild 1026
+RMD160 3c84f9c4d0ecc6fe7662a757d9a31759525f86ad libmikmod-3.1.10.ebuild 1026
+SHA256 d4f4fc8c5209f83dafb9f9ff66b3deb3dd35ca3640c0536f6033cc0b594d4e2f libmikmod-3.1.10.ebuild 1026
+MD5 9b8f0a34c2717f3ff295b65c2772fd04 libmikmod-3.1.11-r1.ebuild 1089
+RMD160 dd07f5407565cb5dd9e9c86b0dd2864b3d7d534c libmikmod-3.1.11-r1.ebuild 1089
+SHA256 32293efd9b99401f9c400a35d3973b664048bd6b6da7233e4b2ccf0f3c22c241 libmikmod-3.1.11-r1.ebuild 1089
+MD5 0b2b902170d88290b2758c039e368a60 libmikmod-3.1.11-r2.ebuild 1223
+RMD160 63890741eed906db4f3b377050e8594e8aafdc7a libmikmod-3.1.11-r2.ebuild 1223
+SHA256 3a02535d3e719e55ebb93e5af9bbe0e9bbce4f94e27d693e942639a335994372 libmikmod-3.1.11-r2.ebuild 1223
+MD5 fbacfd72b2a725f11ca968a2f36ee967 libmikmod-3.1.11.ebuild 1085
+RMD160 9c06c92bf06144144144c87361ca58f2a204944a libmikmod-3.1.11.ebuild 1085
+SHA256 c22aabdc17509c4f2338a11728f4371287123010647f333e4f121b788e2e4973 libmikmod-3.1.11.ebuild 1085
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHIs3AiZjviIA2XgRAg8RAKCH4/EKWuDhotrf5IbmU4zBl2PnPACg098N
+omGICMjLcht8t2IA2J7EWWI=
+=RIcl
+-----END PGP SIGNATURE-----
