@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.93 2006/03/18 17:41:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.94 2006/03/18 19:56:27 mcummings Exp $
+
+  18 Mar 2006; Michael Cummings <mcummings@gentoo.org>
+  spamassassin-3.1.1.ebuild:
+  One last dep for 3.1.1, doesn't affect keywords :)
 
   18 Mar 2006; Markus Rothe <corsair@gentoo.org> spamassassin-3.1.1.ebuild:
   Added ~ppc64; bug #126672

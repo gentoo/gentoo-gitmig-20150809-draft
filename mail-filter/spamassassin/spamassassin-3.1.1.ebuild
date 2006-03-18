@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.1.ebuild,v 1.2 2006/03/18 17:41:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.1.ebuild,v 1.3 2006/03/18 19:56:27 mcummings Exp $
 
 inherit perl-module
 
@@ -26,6 +26,7 @@ DEPEND=">=dev-lang/perl-5.8.2-r1
 	dev-perl/Digest-SHA1
 	dev-perl/libwww-perl
 	>=dev-perl/Archive-Tar-1.26
+	app-crypt/gnupg
 	dev-perl/IO-Zlib
 	ssl? (
 		dev-perl/IO-Socket-SSL
