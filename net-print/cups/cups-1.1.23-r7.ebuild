@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.13 2006/02/07 03:03:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.14 2006/03/18 21:10:59 flameeyes Exp $
 
 inherit eutils flag-o-matic pam autotools
 
@@ -50,6 +50,7 @@ src_unpack() {
 	epatch ${FILESDIR}/cups-gentooalt.patch
 	epatch ${FILESDIR}/${P}-bindnow.patch
 	epatch ${FILESDIR}/cupsaddsmb.patch
+	epatch ${FILESDIR}/${P}-respectldflags.patch
 	eautoconf
 
 	# disable builtin xpdf

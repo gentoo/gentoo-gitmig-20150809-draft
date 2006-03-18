@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.159 2006/02/07 03:03:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.160 2006/03/18 21:10:59 flameeyes Exp $
+
+  18 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/cups-1.1.23-respectldflags.patch, cups-1.1.23-r7.ebuild:
+  Add patch to respect LDFLAGS while building shared libraries.
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> cups-1.1.23-r7.ebuild:
   Mark 1.1.23-r7 stable on alpha
