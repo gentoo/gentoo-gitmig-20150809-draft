@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 14869ed339001c39846e4ba45d60dbf7 ChangeLog 9467
 RMD160 382d9aef03f5611825f8df7fc966a7196f4020ab ChangeLog 9467
 SHA256 112aad8362878f4f53dd31963efb38cfe3cef820e54cd796c01bbc61aef8be52 ChangeLog 9467
@@ -37,12 +40,12 @@ SHA256 97490cf6e52efd8ad0158ecdab416cc2ff96e4933bd2aa47cc8b7c9cef3d5b91 files/gm
 MD5 ee91d8f397ce79dd0ff7e4ae48a47b21 files/gmp-4.1.4-multilib.patch 2864
 RMD160 707ed6bdca664ab07c7dcd48a4657f92b4b9cd62 files/gmp-4.1.4-multilib.patch 2864
 SHA256 11519c27029e0627ef9652cbcebdff689dfaecfb9aa9f6fd9a121bda0ee8d989 files/gmp-4.1.4-multilib.patch 2864
-MD5 6cd8393cd75268730f199290a62e318d files/gmp-4.1.4-noexecstack.patch 489
-RMD160 58b3b8f6d95cbc32cfb8fdb01d35cb6ce521836d files/gmp-4.1.4-noexecstack.patch 489
-SHA256 b6e9bff0c94928037223cc29d74e037ee4acce575ce250912d3c83239c4c4a02 files/gmp-4.1.4-noexecstack.patch 489
-MD5 23dc2aa78cf38e662cec9e402a6c13a2 files/gmp-4.1.4-nostackexec.patch 477
-RMD160 653b509e4140312a63bceccf290f6024f07cf133 files/gmp-4.1.4-nostackexec.patch 477
-SHA256 cb456a4b7cc740e30ec081cecd0fc0191851ba7cd111eadff723e09c4d4c328c files/gmp-4.1.4-nostackexec.patch 477
+MD5 cb63e3b3f3f4ba8ff2c9c05597a1d78b files/gmp-4.1.4-noexecstack.patch 489
+RMD160 e58517b928f97ec58fc13549a35927aea337a60f files/gmp-4.1.4-noexecstack.patch 489
+SHA256 5d6edea21033e8e77f4060a96a0a4bbc97438632d036b886732449ffbff91efc files/gmp-4.1.4-noexecstack.patch 489
+MD5 bbd0e9615a3d4c4e30f13fe0ce4a0d63 files/gmp-4.1.4-nostackexec.patch 333
+RMD160 2552417332eacce3a91bf455b42ace6a24f9ce78 files/gmp-4.1.4-nostackexec.patch 333
+SHA256 c2038c83eebba11293794af93d3cdf94b23cc1c7da70337474e1bd14ace2934b files/gmp-4.1.4-nostackexec.patch 333
 MD5 d2af66806a8974a7be3bf44cebef957d files/gmp-4.1.4-ppc64-asm-dots.patch 591
 RMD160 93723091cc2bf41de13a4270ac35bc350aeffaae files/gmp-4.1.4-ppc64-asm-dots.patch 591
 SHA256 71e2c485c5f76b3b0923c3c20e3707ac9dc9cab0aec48694a4f0b86a368d1f10 files/gmp-4.1.4-ppc64-asm-dots.patch 591
@@ -67,3 +70,10 @@ SHA256 48234fe275f5dc6096c42d621125101fa995b02e60c1288f645592bf879ebff4 gmp-4.1.
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
 SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEG05B2+ySkm8kpY0RAubJAKCa3Ap/AQVqxfEED/z6sY4zDPfsGgCeOIkt
+Dzl937skFO3MYuZntMEX7f0=
+=bovu
+-----END PGP SIGNATURE-----

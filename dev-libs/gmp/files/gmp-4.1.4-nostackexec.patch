@@ -1,5 +1,5 @@
---- gmp-4.1.4/acinclude.m4.orig	2005-12-29 19:18:24.000000000 +1100
-+++ gmp-4.1.4/acinclude.m4	2005-12-29 19:14:43.000000000 +1100
+--- gmp-4.1.4/acinclude.m4.orig
++++ gmp-4.1.4/acinclude.m4
 @@ -878,6 +878,7 @@
  fi
  echo ["')"] >> $gmp_configm4
@@ -8,9 +8,9 @@
  ])
  
  
---- /dev/null	2005-12-18 17:28:06.000000000 +1100
-+++ gmp-4.1.4/nostackexec	2005-12-29 19:17:32.000000000 +1100
+--- /dev/null
++++ gmp-4.1.4/nostackexec
 @@ -0,0 +1,3 @@
 +#ifdef __ELF__
-+.section .note.GNU-stack,"",@progbits
++.section .note.GNU-stack,"",%progbits
 +#endif

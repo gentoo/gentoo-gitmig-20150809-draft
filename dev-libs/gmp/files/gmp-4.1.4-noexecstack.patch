@@ -14,5 +14,5 @@ fixed executable stack as per bug #115038 thanks to Petteri Räty
 +++ gmp-4.1.4/nostackexec
 @@ -0,0 +1,3 @@
 +#ifdef __ELF__
-+.section .note.GNU-stack,"",@progbits
++.section .note.GNU-stack,"",%progbits
 +#endif
