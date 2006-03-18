@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9-r1.ebuild,v 1.13 2005/11/28 13:02:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9-r1.ebuild,v 1.14 2006/03/18 19:01:34 swegener Exp $
 
 inherit perl-app eutils flag-o-matic
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ia64 ppc64 s390 arm"
 IUSE="ipv6 perl ssl socks5"
 
-RDEPEND="!net-irc/irssi-cvs
-	!net-irc/irssi-svn
+RDEPEND="!net-irc/irssi-svn
 	>=dev-libs/glib-2.2.1
 	sys-libs/ncurses
 	ssl? ( dev-libs/openssl )

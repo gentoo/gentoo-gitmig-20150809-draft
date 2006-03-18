@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi-svn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/ChangeLog,v 1.14 2006/02/23 23:21:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/ChangeLog,v 1.15 2006/03/18 19:00:13 swegener Exp $
+
+  18 Mar 2006; Sven Wegener <swegener@gentoo.org> irssi-svn-0.3.ebuild:
+  Remove the old irssi-cvs blocker.
 
   23 Feb 2006; Sven Wegener <swegener@gentoo.org> irssi-svn-0.3.ebuild:
   Create the ChangeLog from upstream subversion repository, should fix bug

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.15 2006/02/23 23:21:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.16 2006/03/18 19:00:13 swegener Exp $
 
 inherit subversion perl-app flag-o-matic
 
@@ -19,8 +19,7 @@ RDEPEND=">=dev-libs/glib-2.2.1
 	sys-libs/ncurses
 	perl? ( dev-lang/perl )
 	ssl? ( dev-libs/openssl )
-	!net-irc/irssi
-	!net-irc/irssi-cvs"
+	!net-irc/irssi"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	www-client/lynx
@@ -65,7 +64,6 @@ src_install() {
 
 	use perl && fixlocalpod
 
-	prepalldocs
 	dodoc AUTHORS ChangeLog README TODO NEWS
 	dohtml -r "${S}"/docs/. || die "dohtml failed"
 }
