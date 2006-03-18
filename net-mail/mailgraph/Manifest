@@ -1,21 +1,43 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f50b5fe8d15f65d54eacdeefb7a81452 ChangeLog 1726
+MD5 b9a0d55adc84822400d02d8590673f22 ChangeLog 1839
+RMD160 9ce4fd27f0f740d75c9d0aadba2557d320b35aee ChangeLog 1839
+SHA256 7da33981a2f936215b1e5e01d0499a3508ea1a6c6cf0fd9fb58565a0a51ff4f4 ChangeLog 1839
 MD5 ca32a39fff4fa2c070d832feb539f47d files/digest-mailgraph-1.11 65
+RMD160 5b41a466e6c06d10f95f3dc14053b7b6423023a7 files/digest-mailgraph-1.11 65
+SHA256 2d24fd6ccc6707e02765b8723c0c67f5da2edd4c63980251188f5c154e6e9f03 files/digest-mailgraph-1.11 65
 MD5 ca32a39fff4fa2c070d832feb539f47d files/digest-mailgraph-1.11-r1 65
+RMD160 5b41a466e6c06d10f95f3dc14053b7b6423023a7 files/digest-mailgraph-1.11-r1 65
+SHA256 2d24fd6ccc6707e02765b8723c0c67f5da2edd4c63980251188f5c154e6e9f03 files/digest-mailgraph-1.11-r1 65
 MD5 9ee0db880c1b0a199d2483d4fceaa279 files/digest-mailgraph-1.12 65
+RMD160 fabc93ec718e8d2f904d3f561efbae72e5afa0c4 files/digest-mailgraph-1.12 65
+SHA256 a9f0526b7fdc2461173908d18f66861604999fceb15d72347c29449fcf9d0c90 files/digest-mailgraph-1.12 65
 MD5 33feb3504b889ed382183cecbbeafa57 files/mailgraph-1.11-regexp.patch 427
+RMD160 e338163b15308ac8e5a31544b2c392d74862baa4 files/mailgraph-1.11-regexp.patch 427
+SHA256 04048d73b3d8dd9add9e78770e80e4486bfea70bb4816dbe4c8ce2d60b1712fa files/mailgraph-1.11-regexp.patch 427
 MD5 fa47226fdde5601a3b0ae0d19377019f files/mailgraph.confd 476
+RMD160 39bf249be23c1336f3ad3dc9eaefc7ce3e31b11b files/mailgraph.confd 476
+SHA256 9c26a668322a34d433a2a3e4ce250a8d78f51534e6b1d392263560887c17d88a files/mailgraph.confd 476
 MD5 8c03fcc4cff6db35f4fce26f1eaadf3a files/mailgraph.initd 688
+RMD160 2b48ef4bc386ba19c9b83b9e25ce7517ae9b7908 files/mailgraph.initd 688
+SHA256 7fdb517fa070a5d4d9c27fda25b36e915fa51999ac31e4877a76bd1abad21753 files/mailgraph.initd 688
 MD5 fcc2836861933069a819e39b5193ae46 mailgraph-1.11-r1.ebuild 1425
+RMD160 eda0e51cfc4f3df0a9fc575d610664c2dc2a3c29 mailgraph-1.11-r1.ebuild 1425
+SHA256 5fb4087f7fb05df93ded933878af0c418ac292ea2a34e5e82f10e69e69d94d71 mailgraph-1.11-r1.ebuild 1425
 MD5 32091e12a0d4c659816591dc67c1ab04 mailgraph-1.11.ebuild 1383
-MD5 f1a0d0a3de45415f8f9b32e5fd249e70 mailgraph-1.12.ebuild 1392
+RMD160 5539fe8ab59201be7bb638c25e3a939cab539799 mailgraph-1.11.ebuild 1383
+SHA256 874f72ba9d742db64e6cb160e344bcd3344d6c4e31aef06ecdd07276fcf1a660 mailgraph-1.11.ebuild 1383
+MD5 7060c8b3a24bb7a9bd42177e57ed21f8 mailgraph-1.12.ebuild 1389
+RMD160 a6872a3e44e84fe305aede109c004ada63162323 mailgraph-1.12.ebuild 1389
+SHA256 35b486643d8e0cee7dbc00aeed27170db01cf11b87633faffcac464664fcb7ab mailgraph-1.12.ebuild 1389
 MD5 5da9e4b96f6f03e46d0e498b183b26de metadata.xml 163
+RMD160 9d7831690071ef6a890ce066c38c9c4e851a2107 metadata.xml 163
+SHA256 38427b537ef2f561a685876ae3a7799382a1bf7fabef6c2d8765ca9d05056aa2 metadata.xml 163
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD1bZQCRZPokWLroQRAn84AJ9Bz8kaBFu1No0KsFI3Px0sbzCjbQCcCcv1
-fUBza6Xb31L40wQ89BE36hU=
-=ZiG4
+iD8DBQFEHGZv10xuJSrg3/sRAnj/AJsFgwDs2m/qqjiTwdzv1u6vFuNEUgCffydr
+7zXaub12DFdhNzsPIiD4/1s=
+=p3IL
 -----END PGP SIGNATURE-----
