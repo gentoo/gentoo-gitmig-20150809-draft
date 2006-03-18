@@ -1,0 +1,8 @@
+
+
+*coreblog2-0.81b (18 Mar 2006)
+
+  18 Mar 2006; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
+  +coreblog2-0.81b.ebuild:
+  initial version, based on old coreblog
+
