@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0.4.ebuild,v 1.2 2006/03/18 10:46:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0.4.ebuild,v 1.3 2006/03/18 12:09:17 grobian Exp $
 
 inherit toolchain-funcs eutils
 
@@ -15,7 +15,7 @@ DEPEND=">=sys-devel/libtool-1.4.1
 
 IUSE="ssl debug"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~sparc ~x86"
 
 src_compile() {
 	local myconf
@@ -43,5 +43,17 @@ src_install () {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS INSTALL ChangeLog NEWS Notes README TODO
 	dohtml doc/api.xml
+
+	# a very dirty hack to get all .so's renamed to .dylib.  For some
+	# vague reason libtool wants to generate .so, while it should
+	# generate .dylib.  Regenerating libtool breaks compilation.  The
+	# generated objects are valid dylibs though.
+	if use ppc-macos;
+	then
+		for file in `find "${D}" -name "*.so" | sed 's/\.so$//'`;
+		do
+			mv "$file".so "$file".dylib
+		done
+	fi
 
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libesmtp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.28 2006/03/18 10:46:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.29 2006/03/18 12:09:17 grobian Exp $
+
+  18 Mar 2006; Fabian Groffen <grobian@gentoo.org> libesmtp-1.0.4.ebuild:
+  Marked ~ppc-macos
 
   18 Mar 2006; <ticho@gentoo.org> libesmtp-1.0.4.ebuild:
   Back to ~alpha, sorry.
