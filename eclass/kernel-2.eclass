@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.164 2006/03/15 01:45:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.165 2006/03/18 18:38:11 swegener Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -233,7 +233,7 @@ detect_version() {
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-git*}.bz2 ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
 	fi
 
-	debug-print-kernel2-variables	
+	debug-print-kernel2-variables
 
 	handle_genpatches
 }
@@ -355,11 +355,11 @@ unpack_2_6() {
 	env_setup_xmakeopts
 
 	cd "${S}"
-	
+
 	# since KBUILD_OUTPUT should only be used on the active kernel
 	# sources, we should unset it here.
 	[[ -n "${KBUILD_OUTPUT}" ]] && unset KBUILD_OUTPUT
-	
+
 	# this file is required for other things to build properly, so we
 	# autogenerate it ... touch .config to keep version.h build from
 	# spitting out an annoying warning
@@ -991,13 +991,13 @@ kernel-2_src_unpack() {
 
 	[[ -n ${UNIPATCH_LIST} || -n ${UNIPATCH_LIST_DEFAULT} || -n ${UNIPATCH_LIST_GENPATCHES} ]] && \
 		unipatch "${UNIPATCH_LIST_DEFAULT} ${UNIPATCH_LIST_GENPATCHES} ${UNIPATCH_LIST}"
-	
+
 	debug-print "Doing premake"
 
 	# allow ebuilds to massage the source tree after patching but before
 	# we run misc `make` functions below
 	[[ $(type -t kernel-2_hook_premake) == "function" ]] && kernel-2_hook_premake
-	
+
 	debug-print "Doing unpack_set_extraversion"
 
 	[[ -z ${K_NOSETEXTRAVERSION} ]] && unpack_set_extraversion

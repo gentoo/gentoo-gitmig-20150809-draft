@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.64 2006/03/17 14:43:32 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.65 2006/03/18 18:38:11 swegener Exp $
 
 # GNOME 2 ECLASS
 inherit libtool gnome.org debug fdo-mime eutils
@@ -206,7 +206,7 @@ gnome2_omf_fix() {
 	for filename in $(find ./ -name "Makefile.in" -o -name "Makefile.am") ; do
 		omf_makefiles="${omf_makefiles} ${filename}"
 	done
-	
+
 	ebegin "Fixing OMF Makefiles"
 
 	local retval=0

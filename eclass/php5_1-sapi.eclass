@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.18 2006/03/13 17:12:22 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.19 2006/03/18 18:38:11 swegener Exp $
 #
 # ########################################################################
 #
@@ -297,7 +297,7 @@ php5_1-sapi_src_unpack() {
 	else
 		ewarn "There is no multilib-strict patch available for this PHP release yet!"
 	fi
-	
+
 	# Apply general PHP5 patches
 	if [[ -d "${WORKDIR}/${MY_PHP_PV}/php5" ]] ; then
 		EPATCH_SOURCE="${WORKDIR}/${MY_PHP_PV}/php5" EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch
@@ -331,7 +331,7 @@ php5_1-sapi_src_unpack() {
 		sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i ext/pgsql/config.m4 || die "Failed to fix PostgreSQL include paths"
 	fi
 
-	# Hardened-PHP support 
+	# Hardened-PHP support
 	if useq hardenedphp ; then
 		if [[ -n "${HARDENEDPHP_PATCH}" ]] && [[ -f "${DISTDIR}/${HARDENEDPHP_PATCH}" ]] ; then
 			epatch "${DISTDIR}/${HARDENEDPHP_PATCH}"

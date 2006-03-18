@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.230 2006/03/17 23:23:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.231 2006/03/18 18:38:11 swegener Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -139,7 +139,7 @@ EPATCH_FORCE="no"
 # <azarah@gentoo.org> (10 Nov 2002)
 #
 epatch() {
-	_epatch_draw_line() { 
+	_epatch_draw_line() {
 		[[ -z $1 ]] && set "$(printf "%65s" '')"
 		echo "${1//?/=}"
 	}

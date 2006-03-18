@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.13 2006/03/12 13:24:36 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.14 2006/03/18 18:38:11 swegener Exp $
 #
 # ########################################################################
 #
@@ -319,7 +319,7 @@ php4_4-sapi_src_unpack() {
 		sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i ext/pgsql/config.m4 || die "Failed to fix PostgreSQL include paths"
 	fi
 
-	# Hardened-PHP support 
+	# Hardened-PHP support
 	if useq hardenedphp ; then
 		if [[ -n "${HARDENEDPHP_PATCH}" ]] && [[ -f "${DISTDIR}/${HARDENEDPHP_PATCH}" ]] ; then
 			epatch "${DISTDIR}/${HARDENEDPHP_PATCH}"
