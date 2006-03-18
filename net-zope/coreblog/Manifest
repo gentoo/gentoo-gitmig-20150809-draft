@@ -1,20 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7df2a78cbc36888bcf4dec9123e46baa ChangeLog 1201
+MD5 5de3ad7d2c079351c9a909957511581a ChangeLog 1325
+RMD160 d2d247bd40654548f381ff4117a53a41e3a8e8b4 ChangeLog 1325
+SHA256 36d055ff4dd7438287b9f2830c9bde062e2e654929cacc9489533aa3e7821557 ChangeLog 1325
 MD5 be302d904ebd5970225fad40bc3a46fd coreblog-0.6.ebuild 446
+RMD160 470b2491ab9a4e04439dbb8a7a0160be2439b578 coreblog-0.6.ebuild 446
+SHA256 3b7637d53977466efc08f72207293a9ee20cde6aacfcad5b1bb735977bcd1abc coreblog-0.6.ebuild 446
 MD5 f7dd10db2ee6a4d84b9b048aaba88fdd coreblog-1.0.ebuild 444
+RMD160 7e46973793b13a6a6d9cc78dbfaa063dfa97226e coreblog-1.0.ebuild 444
+SHA256 f353b0cc8ee2d237ebfd7ad79776638db7bc4c935df7a9f643fab82ea7e2aa53 coreblog-1.0.ebuild 444
 MD5 ab3589f2b29bbadd7070f9d4a807f449 coreblog-1.11.ebuild 447
+RMD160 d66b59559d55a8456e89c8ce0ffeb6f2473eef4b coreblog-1.11.ebuild 447
+SHA256 420a39b12eaf55b7d4c65d2b73872ca785d50af29544b3228c22452487e74ce4 coreblog-1.11.ebuild 447
 MD5 b569dfe8b6aa0b08e35fb0e5b4a11353 coreblog-1.20.ebuild 453
+RMD160 e1d008c5d43d245924e168059e679503afae4e52 coreblog-1.20.ebuild 453
+SHA256 96352e7dab97f863fc7c2855e68fc025454c7ba53cc0791ea16ddf9c492bd4d3 coreblog-1.20.ebuild 453
+MD5 43f226533c214ba573489f0877947606 coreblog-1.24.ebuild 461
+RMD160 f9cda956e7c88271daac666ced3e0eb95c9c56fa coreblog-1.24.ebuild 461
+SHA256 684abb7270bc4df0be97685f1c594be1a0f9302a85a04078f9bc3a0b34bb7fdb coreblog-1.24.ebuild 461
 MD5 b7d463c1b662da09f7cd4c9283bc2ff6 files/digest-coreblog-0.6 59
+RMD160 c3a39eec09e74b7231848f9929daecb401750bd0 files/digest-coreblog-0.6 59
+SHA256 207c36c370ae2c489b49fe1aa4d183db52cfa73f4e0c502cabc6e6feac92a86a files/digest-coreblog-0.6 59
 MD5 bb2032e03623aab437333e6985010ca6 files/digest-coreblog-1.0 58
+RMD160 61c5a37a1db88d3f6d2ba5deae990e24431627ad files/digest-coreblog-1.0 58
+SHA256 a547eaa115d507b4fa1bdb3776e0aadfb2eb25050c499b100d833bf760710dc4 files/digest-coreblog-1.0 58
 MD5 f38c7624b4d10057ff505bdeb88eb3a8 files/digest-coreblog-1.11 59
+RMD160 20a404a3434b765a03cebc8df82a1001474bbe51 files/digest-coreblog-1.11 59
+SHA256 fc1d20bb2df2dcbdc8c5e50d1fc1a598ec22cc410ee8d9ddb8e30987fcecd16a files/digest-coreblog-1.11 59
 MD5 b4991e7135a17cbe8a166ba9dc99e984 files/digest-coreblog-1.20 58
+RMD160 4af0820e2eac2067d4c6bd108efebf1a50b92ad7 files/digest-coreblog-1.20 58
+SHA256 38ad9f9a33dacb18ee1f023332f92f43ff91f0792c50ded3c82c101b68afe33f files/digest-coreblog-1.20 58
+MD5 8bb9838328d0c831b37f6d8d9c7caf24 files/digest-coreblog-1.24 226
+RMD160 1018a589a2ca01d7fb4b2319b030c5f1d69c97c7 files/digest-coreblog-1.24 226
+SHA256 5944e77ed6e0d0a48b0bb074b2d2195a8c4b8fcc0d3d508ef62835f59db3c216 files/digest-coreblog-1.24 226
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD2YXq2+ySkm8kpY0RAimlAJ97jLkAaGQ0zPkgn1Dv86PyXLWL4QCggzaz
-4hXmguSze80xBm5XZVA4dfE=
-=PJP+
------END PGP SIGNATURE-----
+RMD160 5e136d45f811478292bd2ee1798a9b0229ffe468 metadata.xml 161
+SHA256 e69ac7205cbc2e42a297e20d8f08922003390a345bbf50ccf00d1158a1c97cc5 metadata.xml 161
