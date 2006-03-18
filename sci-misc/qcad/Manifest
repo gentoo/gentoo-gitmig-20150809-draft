@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5e707390c1e66a0a477839be9fb4a0c6 ChangeLog 6540
+MD5 ded76dc2d82333c85007ecf496d4f3d2 ChangeLog 6644
 MD5 4d37f63dec6f0a0937438c9308f232a7 files/digest-qcad-2.0.4.0-r1 143
 MD5 4d37f63dec6f0a0937438c9308f232a7 files/digest-qcad-2.0.4.0-r2 143
 MD5 4d37f63dec6f0a0937438c9308f232a7 files/digest-qcad-2.0.4.0-r3 143
@@ -10,11 +7,4 @@ MD5 03a389a58ed129eda4567585a4094a33 files/qcad-2.0.4.0-1.src-gentoo.patch 2177
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 153726eb90066d26218441f810bd5c12 qcad-2.0.4.0-r1.ebuild 2653
 MD5 909354e6713c6ca98f4b94c97233eb4f qcad-2.0.4.0-r2.ebuild 2697
-MD5 393a08aeb4d32f26bde1eaefb08b4e22 qcad-2.0.4.0-r3.ebuild 2578
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDylwQntT9W3vfTuoRAjISAJ9nYIWI1IifaQeoitWaoMFbRyISTgCgqbgp
-vEtPqDX5y4oMZdu6Dtiajts=
-=WNWg
------END PGP SIGNATURE-----
+MD5 deb28c26b323012e328da8a43a1cd911 qcad-2.0.4.0-r3.ebuild 2587

@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/qcad
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.13 2006/01/15 14:28:20 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.14 2006/03/18 17:06:41 corsair Exp $
+
+  18 Mar 2006; Markus Rothe <corsair@gentoo.org> qcad-2.0.4.0-r3.ebuild:
+  Added ~ppc64; bug #126533
 
 *qcad-2.0.4.0-r3 (15 Jan 2006)
 
