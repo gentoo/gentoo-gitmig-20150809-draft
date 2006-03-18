@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060302.ebuild,v 1.2 2006/03/03 17:23:21 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060302.ebuild,v 1.3 2006/03/18 23:12:18 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -235,7 +235,7 @@ src_compile() {
 
 
 
-	local myconf="--disable-external-faad"
+	local myconf="--disable-external-faad --disable-tv-bsdbt848"
 	################
 	#Optional features#
 	###############
@@ -532,7 +532,7 @@ src_install() {
 	# of their zips ...
 	for x in $(find ${WORKDIR}/ -type d -name 'font-arial-*')
 	do
-		cp -Rd ${x} ${D}/usr/share/mplayer/fonts
+		cp -pPR ${x} ${D}/usr/share/mplayer/fonts
 	done
 	# Fix the font symlink ...
 	rm -rf ${D}/usr/share/mplayer/font
