@@ -1,0 +1,11 @@
+--- Makefile.in
++++ Makefile.in
+@@ -365,7 +365,7 @@
+ @BUILD_POP_TRUE@POP_INCLUDES = -I$(top_srcdir)/pop
+ @BUILD_NNTP_TRUE@NNTP_SUBDIR = nntp
+ @BUILD_NNTP_TRUE@NNTP_INCLUDES = -I$(top_srcdir)/nntp
+-SUBDIRS = m4 po intl doc contrib lib $(IMAP_SUBDIR) $(POP_SUBDIR) $(NNTP_SUBDIR)
++SUBDIRS = m4 po intl contrib lib $(IMAP_SUBDIR) $(POP_SUBDIR) $(NNTP_SUBDIR)
+ bin_SCRIPTS = muttngbug fleang
+ BUILT_SOURCES = keymap_defs.h patchlist.c version.h
+ muttng_SOURCES = $(BUILT_SOURCES) \
