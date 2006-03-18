@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d0046b7fbba8ac2940176f3834b71794 ChangeLog 1132
-MD5 6187a2d3a691c324ee6b6903a543e304 files/digest-serlook-0.2.4 71
+MD5 77ecf07e4d5fbdf3234e0fdc8ace3478 ChangeLog 1299
 MD5 fdaf3c1d625b2427c501d8b3bf5e1056 files/digest-serlook-0.3.1-r1 66
+MD5 ae26cfe4425ac23d4070de330d9c61e5 files/digest-serlook-0.3.2 139
 MD5 3f39eec80d1e4154a94aad447bc93a18 files/serlook-0.3.1-noarts.patch 3533
 MD5 cf5f047091cbfcd00440b6cce50aa9d3 metadata.xml 323
-MD5 ba9219bb47091095fd1ea80bf3540c3c serlook-0.2.4.ebuild 492
 MD5 e016f434ae3d1665e2ad96275f7c8b6e serlook-0.3.1-r1.ebuild 612
+MD5 f2588186d3b9ff8c8e2428b82ee0a54b serlook-0.3.2.ebuild 665
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDsRPJNSP4Vda7IdsRAjGUAKCB4mhKyubzgISK9aSqIhAhC48PngCfQflb
-knONl8YsQY6dYCh6eQp9hTw=
-=X9hq
+iD8DBQFEG9z5jG8pv1lIUX4RAo74AKCq2d4eIflPIAYhh2sXGDAWSozG5wCg32Lc
+vzxi8DmuU8HYzGsimIeLNWs=
+=3JgV
 -----END PGP SIGNATURE-----
