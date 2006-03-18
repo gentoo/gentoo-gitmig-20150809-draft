@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/portaudio
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.27 2005/09/09 19:34:23 ranger Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.28 2006/03/18 15:52:11 corsair Exp $
+
+  18 Mar 2006; Markus Rothe <corsair@gentoo.org> portaudio-18.1-r3.ebuild:
+  Stable on ppc64
 
   09 Sep 2005; Brent Baude <ranger@gentoo.org> portaudio-18.1-r3.ebuild:
   Marking portaudio-18.1-r3 ~ppc64 in support of bug 104254
