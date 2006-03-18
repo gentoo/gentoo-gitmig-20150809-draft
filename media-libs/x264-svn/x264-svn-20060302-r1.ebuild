@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060302-r1.ebuild,v 1.3 2006/03/18 16:17:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060302-r1.ebuild,v 1.4 2006/03/18 22:37:38 flameeyes Exp $
 
-inherit multilib eutils
+inherit multilib eutils toolchain-funcs
 
 IUSE="debug mp4 threads"
 
@@ -33,12 +33,15 @@ src_compile() {
 	./configure --prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
 		--enable-pic \
+		"--extra-cflags=${CFLAGS}" \
+		"--extra-ldflags=${LDFLAGS}" \
+		"--extra-asflags=${ASFLAGS}" \
 		$(use_enable debug) \
 		$(use_enable threads pthread) \
 		$(use_enable mp4 mp4-output) \
 		$myconf \
 		|| die "configure failed"
-	emake -j1 || die "make failed"
+	emake -j1 CC="$(tc-getCC)" || die "make failed"
 }
 
 src_install() {
