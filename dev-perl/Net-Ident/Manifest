@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2281332d90a2655ea7fb6aa8a7d16e0b ChangeLog 767
-MD5 f3c0cb381d60c6fa67efb67272b84b38 Net-Ident-1.20.ebuild 505
+MD5 29e0b71a56eba7a221518096487d4cb1 ChangeLog 867
+MD5 6e07d4fb22d6a428d66c2f5faedfbb66 Net-Ident-1.20.ebuild 511
 MD5 1992123138668d7030d4d599ed619d4a files/digest-Net-Ident-1.20 65
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEFiB/KRy60XGEcJIRAs6IAKCwPoSmuHM3MFMg3mzJOgZTxt3xQgCeO+6W
-pRT3vTTv3V5inVWe/56vxGw=
-=Rvfe
------END PGP SIGNATURE-----

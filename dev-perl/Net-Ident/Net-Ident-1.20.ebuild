@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/Net-Ident-1.20.ebuild,v 1.5 2006/03/14 01:46:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/Net-Ident-1.20.ebuild,v 1.6 2006/03/18 17:11:00 corsair Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~jpc/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~hppa ~ppc sparc x86"
+KEYWORDS="~hppa ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 mydoc="TODO"
