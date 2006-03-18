@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.62 2006/03/05 23:31:55 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.63 2006/03/18 13:01:22 allanonjl Exp $
+
+*gok-1.0.7 (18 Mar 2006)
+
+  18 Mar 2006; John N. Laliberte <allanonjl@gentoo.org> +gok-1.0.7.ebuild:
+  new version. remove static useflag.
 
   05 Mar 2006; John N. Laliberte <allanonjl@gentoo.org> -gok-1.0.6.ebuild:
   move gok 1.0.6 to gnome overlay since it needs newer libwnck.  fixes #124896
