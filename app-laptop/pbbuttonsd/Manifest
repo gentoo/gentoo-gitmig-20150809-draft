@@ -1,4 +1,4 @@
-MD5 d18ba2a37dc3b3e178c7b196ade8ad43 ChangeLog 10785
+MD5 391aa0d82e03adc3c180883e5a34702a ChangeLog 10879
 MD5 72caa2adac6c8260c57c0ae15cc259f3 files/digest-pbbuttonsd-0.6.6 68
 MD5 0d5e37ab33c0a4177affbe953a76f8f3 files/digest-pbbuttonsd-0.7.1 68
 MD5 d0c2afca8a18bbfdc406106d85d30193 files/digest-pbbuttonsd-0.7.2 68
@@ -10,4 +10,4 @@ MD5 7b9b4d9f5e7b4fde48b4597c4ba8cf06 pbbuttonsd-0.6.6.ebuild 1140
 MD5 56188b69fdef709ca5c120ff8d103765 pbbuttonsd-0.7.1.ebuild 1759
 MD5 e1e6ae1012afe163b24c85ac5919b7e2 pbbuttonsd-0.7.2.ebuild 1652
 MD5 8633c6aa5f0c71fa2e0e80a79c003e01 pbbuttonsd-0.7.3.ebuild 1728
-MD5 1a45829f3d869ed1afa59780fd2c39a9 pbbuttonsd-0.7.4.ebuild 1760
+MD5 334f0f3b7e6cfb46287a5e9a0d0e00cd pbbuttonsd-0.7.4.ebuild 1767
