@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ripmime-1.4.0.0.ebuild,v 1.5 2005/01/30 04:43:59 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ripmime-1.4.0.6.ebuild,v 1.1 2006/03/18 00:40:25 ticho Exp $
 
 DESCRIPTION="extract attachment files out of a MIME-encoded email pack"
 HOMEPAGE="http://pldaniels.com/ripmime/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.pldaniels.com/ripmime/${P}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 src_compile() {
