@@ -1,28 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9b708934d65a84e70564c4ed5dc6ab75 ChangeLog 10857
-RMD160 73fc46e99c06681f47fb47533e7b0c2c1e857d21 ChangeLog 10857
-SHA256 cbb67db581bed91253817cfe119d8c69f2d00bdcc8d16853a2ce8296eae8645d ChangeLog 10857
+MD5 8d50b3a1daa7acf4017576b62948802d ChangeLog 11047
+RMD160 2f1992fe44192a041ae92ba6b92d168b10f726ad ChangeLog 11047
+SHA256 62b9b6ea98851506186b0c88cc37615d5439b6d03a1a2deedc7894b96e6909c7 ChangeLog 11047
 MD5 6243a2f17f72037185664042ab0aab40 files/digest-gnopernicus-0.10.9 72
 RMD160 80cb24f7c9c3fb7962f42880d17633a05792b2ae files/digest-gnopernicus-0.10.9 72
 SHA256 aeeaf9030aa8660e501a685caa23ab79bfed85f94a190a30c3b1a6f7c34cdf20 files/digest-gnopernicus-0.10.9 72
 MD5 7d3d04ea3946c72607c9d23c5db43d42 files/digest-gnopernicus-0.12.0 72
 RMD160 dd2a41f52dfe50c2e3844c4beb78e9d6e0ea1bbe files/digest-gnopernicus-0.12.0 72
 SHA256 181ccf2dedf040b599c5ddff9f8c930775f2eae644802621e7d0321f68fccdee files/digest-gnopernicus-0.12.0 72
-MD5 9c62d0c99ced71996c5ebac0e6956fc2 gnopernicus-0.10.9.ebuild 1194
-RMD160 71c1a239544c73c5ba45cb367e9fcdb5a11ef16c gnopernicus-0.10.9.ebuild 1194
-SHA256 e1907e98ea5883ae2109807cec4f94e076887ee8683ca35b4bbc668601c09689 gnopernicus-0.10.9.ebuild 1194
+MD5 2a1eec00f728a5dd98ad68fa2ace0d4c files/digest-gnopernicus-1.0.3 259
+RMD160 0915a0c5341073640d85ba685d8a5ee57e42b989 files/digest-gnopernicus-1.0.3 259
+SHA256 df9578396fc44c40813554ee2ffc328d60eb0eaa37247d9a3d226141255f59c6 files/digest-gnopernicus-1.0.3 259
+MD5 c988e0f44176740203a20b9c34d53c3a gnopernicus-0.10.9.ebuild 1182
+RMD160 e163419bf38210e8748e58eb463eb07008e4ae61 gnopernicus-0.10.9.ebuild 1182
+SHA256 d9c04e1ce79a679d4739c4ecbdc28f3aac1fe8e21ffc2c4a967ec48207bdf802 gnopernicus-0.10.9.ebuild 1182
 MD5 1f8f301d25b7483372be9ebd8197ce9a gnopernicus-0.12.0.ebuild 1104
 RMD160 36f6a37d0ffdc079df894c924e8e470f9177b199 gnopernicus-0.12.0.ebuild 1104
 SHA256 7a4237cabd1e41af569616329cb6847ab0dc271fa8cdbf7ce0df45a24f197e7b gnopernicus-0.12.0.ebuild 1104
+MD5 f417787c2c9a8bbc0ec18acbd333c137 gnopernicus-1.0.3.ebuild 1127
+RMD160 576c0701c5eb424b78e3459c361167b1a84be33e gnopernicus-1.0.3.ebuild 1127
+SHA256 e11ce4a5a8afcfa1f309cfe7aea7d02897930bb8af8af38036324c48e7cf2c11 gnopernicus-1.0.3.ebuild 1127
 MD5 2bd8b2cae4ff1f77d73a72dc79ebc75d metadata.xml 728
 RMD160 965dcf5c2035984a13ab38f205ed583024088433 metadata.xml 728
 SHA256 ab445fedbd531c4db66b9e025d1dadd1b4bcf52d719b2bba8dad441bd1c85804 metadata.xml 728
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD5uDwJrHF4yAQTrARAtZrAKDKmg4qz/ZsS+i6cx2LbrkjU35XGgCbBG+j
-d7C7Dgmt4VXa03QzNij7ogI=
-=U6mr
------END PGP SIGNATURE-----
