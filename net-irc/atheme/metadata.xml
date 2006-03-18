@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-  <maintainer>
-    <email>beu@gentoo.org</email>
-    <name>Elfyn McBratney</name>
-  </maintainer>
   <herd>net-irc</herd>
 </pkgmetadata>

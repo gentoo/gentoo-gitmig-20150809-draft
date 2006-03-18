@@ -1,16 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 670bd500d34608227819c18a9092e610 atheme-0.2.2.ebuild 1443
 MD5 5c4924ed1f8ebb6ff0ecafb78eaf5e7f ChangeLog 531
-MD5 768955ffa40609049cdfead22879443d metadata.xml 261
+RMD160 8581db4db2cc6f0ba05bd166484b9d2faf075ba7 ChangeLog 531
+SHA256 955d61d4201f7e23c2fb89f12249d91e107ed99bbfbb2368633a795ada62dc8e ChangeLog 531
+MD5 670bd500d34608227819c18a9092e610 atheme-0.2.2.ebuild 1443
+RMD160 17bb134bdf797d60aadeb13e6ec2c2d90baa8733 atheme-0.2.2.ebuild 1443
+SHA256 c364353ac8cabe49eb12ba2e3891072e0aee0fe7b56396f522175a42af404171 atheme-0.2.2.ebuild 1443
 MD5 d9426639feac91a74b80c4f246c53f31 files/digest-atheme-0.2.2 61
+RMD160 267ea84528fe44c5cd13c52af4247c428d8c9bf9 files/digest-atheme-0.2.2 61
+SHA256 97491e27beb8bd9d9395d5da8be85b5f4bd0a093c33646db4c82725247881ef6 files/digest-atheme-0.2.2 61
 MD5 fe5c707d98c7536cfde95e9fcbe5117e files/make-postgresql-support-optional.patch 3008
+RMD160 6cb50e3b3a817e0305654068b13a8e5863a755f4 files/make-postgresql-support-optional.patch 3008
+SHA256 2ae5171ba545cceeb5f35305cc06a6bdf17d9faa8fb95464cee2a76a81f5ec37 files/make-postgresql-support-optional.patch 3008
 MD5 919862d853f6089d8ff610e008bf776b files/makefile-DESTDIR-support.patch 4632
+RMD160 3afcc77f2f51d728ce0dd81401c6d64f4556bc1a files/makefile-DESTDIR-support.patch 4632
+SHA256 30592c5c5482a9d4223f1ca9027169dc3502e7d927098ab4809cb4fc56b0e4c8 files/makefile-DESTDIR-support.patch 4632
+MD5 dadd013c1aa820e498a4ea28a4615ffd metadata.xml 163
+RMD160 49f2e0fedf2809839482dd53834531bbfb2ed48b metadata.xml 163
+SHA256 723ed38b6537174bee7ee28ce30a61dd5f5f66a1c966da088a9008f20fd9700d metadata.xml 163
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDc48zKRy60XGEcJIRAqqCAJ9EIEOnfnvSHbDlgpMzexle5WMJVACfYZQA
-lhDE3hXAV1Yu2LIwZNaN3nE=
-=h28a
+iD8DBQFEHI8JV3J2n04EauwRAlWiAKDIUycyG2Q3K2n5crFHqS4ZEUIWmgCg3cld
+dC0XrMsHv6k6VdLImeqUI6k=
+=4qif
 -----END PGP SIGNATURE-----
