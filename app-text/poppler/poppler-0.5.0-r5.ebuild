@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.0-r5.ebuild,v 1.10 2006/03/14 05:56:58 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.0-r5.ebuild,v 1.11 2006/03/18 22:35:10 vapier Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="jpeg cairo"
 
 RDEPEND=">=media-libs/freetype-2.1.8
