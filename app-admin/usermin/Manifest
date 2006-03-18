@@ -1,19 +1,43 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8f6025e356d1bb31db61123ef3e5236d ChangeLog 11088
+MD5 5f5d9cc3120169f7029dbd3aa8678010 ChangeLog 11217
+RMD160 9fb3f8e2da7a3d7cda55b51497e368ecbb7003bb ChangeLog 11217
+SHA256 0d646c31f2a6a668987c94e6affbf4490197030540cff15ff6c3aeffdb00a50f ChangeLog 11217
 MD5 73577e1e79ca49e1a7083b3e1c53a1c6 files/digest-usermin-1.180 66
+RMD160 60827b4c43f3a8409573c393bf6fe79da4072c84 files/digest-usermin-1.180 66
+SHA256 7fbf164941747fd82680428345f9c6b1c122c34121480737954c589539a4f32c files/digest-usermin-1.180 66
+MD5 3195f02e9675312447d5afad2bdcd586 files/digest-usermin-1.190 244
+RMD160 012f16291b5ab62e78f744195ae0082dc7c6df01 files/digest-usermin-1.190 244
+SHA256 e5bd416f5783f7da70665ab2b6e526a0dae81d8589c586c7c53a74fdf2f6f96d files/digest-usermin-1.190 244
 MD5 2e7c19bb66f99c168fc2e86b4bb4862c files/init.d.usermin 825
+RMD160 e3b471844d7dfdfaaa00d3da73d679514f29e5a0 files/init.d.usermin 825
+SHA256 b1103d5c733a0c49a19c407a718617454342b19c34f238f11dc20be3356d38bf files/init.d.usermin 825
 MD5 bd4b2cc177b4fb7b0f96edc60008a6b5 files/usermin-1.080-safestop.patch 620
+RMD160 2d15ab821d0dd70236260c5a5de3dbd09654cb9b files/usermin-1.080-safestop.patch 620
+SHA256 cd4ed0f18303bfd518791993f413a9b338a5e621a9ee17367f5590d1a970ea98 files/usermin-1.080-safestop.patch 620
 MD5 ba4e105ca9f8d294ba4e3d7774bf0760 files/usermin-1.150-setup-nocheck.patch 998
+RMD160 2ca2541b8c71bea584ef2b69364c3a564ef95b3a files/usermin-1.150-setup-nocheck.patch 998
+SHA256 e7d550caed8dc773102ca1330fb51de7f82c3763c1a70a1df8cebad7da0afb27 files/usermin-1.150-setup-nocheck.patch 998
 MD5 2e7603feaff187884dd9b1e66601f02b files/usermin.pam 382
+RMD160 aa0592ac8d2958107a712f544e651b4c14dbfdd4 files/usermin.pam 382
+SHA256 9485f22b3967b70b241ca3adf6ae4512bfef584558c6cf0b51f6504c61b6f39b files/usermin.pam 382
 MD5 609774f17b0470a793fb7791278e270d files/usermin.pam-include 210
+RMD160 8a95f72ac16a16c23c881b333e47c7cb7add5e5c files/usermin.pam-include 210
+SHA256 5c5a78f5c04dbf033c129054af7741769d23be4887533800515c9bcacffd6bf1 files/usermin.pam-include 210
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
+RMD160 5ae23077f29775d25714161f12bee0773317ea90 metadata.xml 226
+SHA256 2dedab96a5432a22169e538ec05751e1631088c658b557056de4d6ab4b89013f metadata.xml 226
 MD5 7599c4321fea923be98b95907b887625 usermin-1.180.ebuild 2290
+RMD160 ef35da9a0f204a04df28b343e478c4c558e435e1 usermin-1.180.ebuild 2290
+SHA256 e4a1c895a85474d6d37c5e4b98fdcd3db1c029fc5053d88a2b75e6fcb897b84b usermin-1.180.ebuild 2290
+MD5 38c45ad5509b85398ddc13221bdbcfd4 usermin-1.190.ebuild 2301
+RMD160 2640aaea97ba5967ac70dd55f9d8de982694c38e usermin-1.190.ebuild 2301
+SHA256 4fb5b717664ce167c430c116d877df0527696186e48ac4724934db56a3865370 usermin-1.190.ebuild 2301
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDulN6OpjtAl+gMRURAtWIAKDYvmskeYRiO86H9LMZKK/LJrFV8wCg4LJ6
-Hh0fsSpK4QywZKw6vRj7Ykg=
-=wfiK
+iD8DBQFEG90SOpjtAl+gMRURAq4cAKCeEdcn2q03fvpG+f4BY5qu1E7k9QCfb+5f
+/ByShiIJDRZtQNymF5hPoME=
+=J5Wh
 -----END PGP SIGNATURE-----
