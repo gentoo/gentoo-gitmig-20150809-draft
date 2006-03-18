@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>mysql</herd>
+<maintainer>
+	<email>mysql_bugs@gentoo.org</email>
+	<description>MySQL herd will not have a mysql@gentoo.org email</description>
+</maintainer>
 </pkgmetadata>

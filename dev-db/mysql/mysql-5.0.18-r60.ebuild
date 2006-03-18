@@ -1,42 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.18-r60.ebuild,v 1.1 2006/03/09 14:00:20 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.18-r60.ebuild,v 1.2 2006/03/18 11:53:53 vivo Exp $
 
-# MYSQL_VERSION_ID will be
-# major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo magic number, all [0..99]
-# this is an important piece, becouse from this variable depends many of the
-# choices the ebuild will do.
-# in particular the code below work only with PVR like "5.0.18-r3"
-# the result with the previous PVR is "5001803"
-MYSQL_VERSION_ID=""
-tpv=( ${PV//[-._]/ } ) ; tpv[3]="${PVR:${#PV}}" ; tpv[3]="${tpv[3]##*-r}"
-for vatom in 0 1 2 3; do
-	# pad to lenght 2
-	tpv[${vatom}]="00${tpv[${vatom}]}"
-	MYSQL_VERSION_ID="${MYSQL_VERSION_ID}${tpv[${vatom}]:0-2}"
-done
-# strip leading "0" (otherwise it's considered an octal number from bash)
-MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
-
-# for future use ...
-NDB_VERSION_ID=$(( ${MYSQL_VERSION_ID} / 100 ))
-MY_EXTRAS_VER="20060304"
-
-inherit mysql_fx mysql
+inherit mysql
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-SLOT=0
-
-DEPEND="${DEPEND}
-	>=sys-libs/readline-4.1
-	berkdb? ( sys-apps/ed )
-	ssl? ( >=dev-libs/openssl-0.9.6d )
-	userland_GNU? ( sys-process/procps )
-	>=sys-libs/zlib-1.2.3
-	>=sys-apps/texinfo-4.7-r1
-	>=sys-apps/sed-4"
-RDEPEND="${DEPEND} selinux? ( sec-policy/selinux-mysql )"
-# dev-perl/DBD-mysql is needed by some scripts installed by MySQL
-PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"
 
 src_test() {
 	cd ${S}

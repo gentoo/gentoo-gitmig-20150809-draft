@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.310 2006/03/17 20:18:06 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.311 2006/03/18 11:53:53 vivo Exp $
+
+  18 Mar 2006; Francesco Riosa <vivo@gentoo.org> mysql-5.0.18-r60.ebuild:
+  Cleaned up duplicate code on this one too (forgotten before).
 
   17 Mar 2006; Francesco Riosa <vivo@gentoo.org> -mysql-4.1.18-r30.ebuild,
   mysql-4.1.18-r60.ebuild, -mysql-5.0.18-r30.ebuild, mysql-5.0.19.ebuild,
