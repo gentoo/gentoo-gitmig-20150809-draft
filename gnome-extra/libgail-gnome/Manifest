@@ -1,24 +1,18 @@
-MD5 25ca68c70b4345047ad840e601c877db ChangeLog 7438
-RMD160 d19eefe94cd4f9632840b98f8f0c873bb13988f6 ChangeLog 7438
-SHA256 13cdf6feb78d0f2ddb9981ba8a734845351ab7063f45169ecedeec2e352f002c ChangeLog 7438
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6f49cee2d58ae4c4e90265af60d10243 ChangeLog 7551
 MD5 1029a121e1d0f339918f5dc9f0048c98 files/digest-libgail-gnome-1.1.1 72
-RMD160 10f963f8ae8d10686acb77cba20eb73d5eece28d files/digest-libgail-gnome-1.1.1 72
-SHA256 6645bd9a4c2ca26e98967d4ee6f542ac414455e877343be39ef76ccde4a9cbcc files/digest-libgail-gnome-1.1.1 72
 MD5 378c77324b6d851b36705d671f051851 files/digest-libgail-gnome-1.1.2 262
-RMD160 0a57d8969fd8a6d5b362dfbf71f01ff60d304472 files/digest-libgail-gnome-1.1.2 262
-SHA256 18b7fdd17daa57b202e007fd028b8fd46cb82a5a8812e78cc922aa1321786bc0 files/digest-libgail-gnome-1.1.2 262
 MD5 abb18458fc6ee65b748d62dda1c3d762 files/digest-libgail-gnome-1.1.3 72
-RMD160 9f37850b30e8b8353667d0311c8a27a18f7adcc2 files/digest-libgail-gnome-1.1.3 72
-SHA256 b217dc1c45f55269e3d6108ca9d0feaca9f9f23ab3b3a947e09e730e0d938918 files/digest-libgail-gnome-1.1.3 72
 MD5 1341715199eb9a74259c70fa97f409bd libgail-gnome-1.1.1.ebuild 784
-RMD160 30cfe4f15d55689999bbd8cd6fe025f9d4c47a32 libgail-gnome-1.1.1.ebuild 784
-SHA256 2c39c84eb58ea66dd0aa3f45db6b9400d79f4bad3eeb8ced6fff45380c0173dc libgail-gnome-1.1.1.ebuild 784
 MD5 8e51908a215e87a52b51add9c5c2448c libgail-gnome-1.1.2.ebuild 745
-RMD160 dca8ea45aaaaf3dc3ca1507787360fcf8b744eef libgail-gnome-1.1.2.ebuild 745
-SHA256 7d8f6b35adf163acb0ad174ce19427e96f1193855313668045cb2867a8eecaea libgail-gnome-1.1.2.ebuild 745
-MD5 f4fce5b2b6c0c02bee9dbe8f4c2097e0 libgail-gnome-1.1.3.ebuild 751
-RMD160 367ae217d7b82fbb102f160c8496883fb93866fb libgail-gnome-1.1.3.ebuild 751
-SHA256 07d1c298bfdc1ea12653430644c9590462b5f01250b75b27e3d80587df69d880 libgail-gnome-1.1.3.ebuild 751
+MD5 6ddde286933ae254dfaff70e51e34acc libgail-gnome-1.1.3.ebuild 748
 MD5 72e62f4df8c037e6ea57309ac6d81d77 metadata.xml 174
-RMD160 fcec784ea33cca49a78866d7f2068a167880ad3d metadata.xml 174
-SHA256 c0255e6a66375ac0e7f11c3712c6b47b7746432df4cf518e10c230674a6bc4f0 metadata.xml 174
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHJCAoGcCqvCmTSIRAhAGAKDaygBXrMrd4uVf4u6Jh+gCUH/CLgCfesW1
+wJ3Qw7jD1ovL/RV/q54txcQ=
+=/vIR
+-----END PGP SIGNATURE-----
