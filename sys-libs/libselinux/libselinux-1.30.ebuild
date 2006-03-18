@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.30.ebuild,v 1.1 2006/03/18 14:52:15 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.30.ebuild,v 1.2 2006/03/18 15:32:06 pebenito Exp $
 
 IUSE=""
 
@@ -39,4 +39,14 @@ src_compile() {
 src_install() {
 	python_version
 	make DESTDIR="${D}" PYLIBVER="python${PYVER}" install install-pywrap || die
+}
+
+pkg_postinst() {
+	python_version
+	python_mod_optimize ${ROOT}usr/lib/python${PYVER}/site-packages
+}
+
+pkg_postrm() {
+	python_version
+	python_mod_cleanup ${ROOT}usr/lib/python${PYVER}/site-packages
 }
