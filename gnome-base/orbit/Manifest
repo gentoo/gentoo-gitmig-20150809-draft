@@ -1,54 +1,28 @@
-MD5 6dd81503c2db0c6de6b1245bcfb05fa0 ChangeLog 7007
-RMD160 3ddedd91a621884c2d47c268435fb5799b7279d3 ChangeLog 7007
-SHA256 b0d0c4918aa4efca223f453103f6fb4169e010efd36e3e5d1b03465f62f623ca ChangeLog 7007
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6dfd66159d3f46bfb0b1bde6619e754f ChangeLog 7111
 MD5 51bfc1efb763de186ee1b1f1e594891a files/digest-orbit-0.5.17 66
-RMD160 97565dd3e11992bfa4dcd16576ab785219697b2b files/digest-orbit-0.5.17 66
-SHA256 0c830adb6814e3ff7b351864818f8a7b77bca4df48bbdefccce0e5420d7c64f7 files/digest-orbit-0.5.17 66
 MD5 51bfc1efb763de186ee1b1f1e594891a files/digest-orbit-0.5.17-r1 66
-RMD160 97565dd3e11992bfa4dcd16576ab785219697b2b files/digest-orbit-0.5.17-r1 66
-SHA256 0c830adb6814e3ff7b351864818f8a7b77bca4df48bbdefccce0e5420d7c64f7 files/digest-orbit-0.5.17-r1 66
 MD5 66a18f0f92e9cd0f658690bf1e5c862c files/digest-orbit-2.12.2 66
-RMD160 434447bac89fa9e56eecc6f0f8824a8de36f56bd files/digest-orbit-2.12.2 66
-SHA256 cde86b64f198b27d5ac8eb831ce7ae255f338e05e969d1e7bdd41fa400687bfb files/digest-orbit-2.12.2 66
 MD5 855e570b505cfbb5e8748ba5baf471bc files/digest-orbit-2.12.3 66
-RMD160 c1b19ee32461dd1883a576c5a2461116725882f5 files/digest-orbit-2.12.3 66
-SHA256 76b08f2f94fa70482e8168b32b3d6efb242f1d2901a93bba24821a9a38e9659b files/digest-orbit-2.12.3 66
 MD5 baa740810613ffcd2d1af90c6c82765f files/digest-orbit-2.12.4 66
-RMD160 b81c7da4012655e21b17367c2fb3794ab9fcd3d7 files/digest-orbit-2.12.4 66
-SHA256 e3165ee489a0d71495730c387f376d7c50b831d5dee798e4b4dc7792dc5eef41 files/digest-orbit-2.12.4 66
 MD5 fced0aa255251572aa96373440220366 files/digest-orbit-2.12.5 244
-RMD160 3007e9d4dcb97b8c286314ade6b9e1209640e19f files/digest-orbit-2.12.5 244
-SHA256 2ee25ab5a01443559790ac8c0872029d8cb048ccff97f3910b449bcd3db12c74 files/digest-orbit-2.12.5 244
 MD5 edd67041e7f776a4dc93cce1a1e4f221 files/digest-orbit-2.14.0 244
-RMD160 86f3a1aace650e9ccf14f7835964ffe7f22f27be files/digest-orbit-2.14.0 244
-SHA256 8a50b0ed65d2f11538da8f95880cc3d1a78acb038b337d93bc7c1f9d513c275d files/digest-orbit-2.14.0 244
 MD5 7105f3bdc076c48f0458e20ea8eaba34 files/orbit-0.5.17-m4.patch 472
-RMD160 6fefcb8d8e1e3f90de9686d84556bbbe56989d7f files/orbit-0.5.17-m4.patch 472
-SHA256 2cdd5ac15f5871b58e00bbd0a44a4af0115f4e0ff6df4806bff34e6e3f5a2b22 files/orbit-0.5.17-m4.patch 472
 MD5 f9325ad3ff0c1a2d06d5c26442679fd4 files/orbit-0.5.17-rpath-security-fix.patch 3628
-RMD160 915ff6987684983532a0113aac1db98ce4e0e451 files/orbit-0.5.17-rpath-security-fix.patch 3628
-SHA256 75d0af72ae02fe162e04e8d92afc65c8026f188cff03bae1a70bedf92d72aad8 files/orbit-0.5.17-rpath-security-fix.patch 3628
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 f5ff29bc81418c981e200ae428e708da orbit-0.5.17-r1.ebuild 1762
-RMD160 4823f1d7247a582a119ac6e8e0e5e272aa28e870 orbit-0.5.17-r1.ebuild 1762
-SHA256 c2c40345d0aa309873f555831fe7148672b322c604d057a6815cadd9d6aa7c09 orbit-0.5.17-r1.ebuild 1762
 MD5 08e7a09f09f864022260e261682f371b orbit-0.5.17.ebuild 1666
-RMD160 09900ae18119cf61ed3d5012275e62c92a62e4a7 orbit-0.5.17.ebuild 1666
-SHA256 4472b03bc6090af03ceac8675c2bc4d37abc183bd81f27085dd1dc22ec41ec85 orbit-0.5.17.ebuild 1666
 MD5 e3a8dc018eb029f302884b2fc80adf56 orbit-2.12.2.ebuild 1017
-RMD160 8171313c639fe137c170b900a31ef8c4d5f44fe5 orbit-2.12.2.ebuild 1017
-SHA256 c20fcccde94eb02c1338754d3e094993f3067ae5f0f4ecd204bf2e1ff6387937 orbit-2.12.2.ebuild 1017
 MD5 de5762757b63214d7f117d5141114acf orbit-2.12.3.ebuild 1064
-RMD160 1d0a5b323e11d4a66cadd7e1ac4c241e22335494 orbit-2.12.3.ebuild 1064
-SHA256 5a17f8995dfeede1293582a7f4732c62ab6a2afcd59874109ba8fbd8b38fd27d orbit-2.12.3.ebuild 1064
 MD5 44a60d7ad7e009b68b69f71049a258f4 orbit-2.12.4.ebuild 1064
-RMD160 db3d9ec84e11fc97a18c64a07627c7bdbbb73dda orbit-2.12.4.ebuild 1064
-SHA256 30ad554f11a5b4a422d8d559de0aef31d1e69237dee32a54dccf34aae0c2b377 orbit-2.12.4.ebuild 1064
-MD5 33dbdeb229d7d747bf91100fa352f645 orbit-2.12.5.ebuild 1070
-RMD160 4dbeccc39fc266924f1022a2ce33f45456e31a97 orbit-2.12.5.ebuild 1070
-SHA256 5cdee2e07018dc572687ce7d7f29f9997af01f2dd12b49e70ebbd188aff622ef orbit-2.12.5.ebuild 1070
+MD5 2cb37254b182deec0a059812905c3e32 orbit-2.12.5.ebuild 1067
 MD5 f3b3d0d63d9ab7481a3f88a3c8b1f2ac orbit-2.14.0.ebuild 1064
-RMD160 ac9c11895cd6ea05aeda57afa4cd5cb2895c1086 orbit-2.14.0.ebuild 1064
-SHA256 3cd94c19252b2905113cd773392e56233f12eb6bddd1e50a8a068d9b042d4b13 orbit-2.14.0.ebuild 1064
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHICyoGcCqvCmTSIRAi6fAJ9tCzknv8VPvjTNeTXrnqqQRl3P/wCfTYAO
+Q2hwGOqJ9OgyuY20AC6E3Aw=
+=IIxY
+-----END PGP SIGNATURE-----
