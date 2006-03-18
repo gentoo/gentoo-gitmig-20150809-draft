@@ -3,9 +3,6 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>ferringb@gentoo.org</email>
-</maintainer>
-<maintainer>
 	<email>ben@stijlstek.nl</email>
 	<name> Ben De Groot</name>
 	<description>he submitted, he'll help maintain</description>
