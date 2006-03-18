@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.5 2006/03/08 23:37:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.6 2006/03/18 16:03:27 flameeyes Exp $
 
 inherit eutils font autotools flag-o-matic
 
-PATCHLEVEL="2"
+PATCHLEVEL="3"
 
 IUSE="aalib alsa dv lirc mmx motif nls opengl quicktime X xv zvbi xext"
 
@@ -35,14 +35,14 @@ RDEPEND=">=sys-libs/ncurses-5.1
 			x11-libs/libXft
 			x11-libs/libXext
 			x11-libs/libXrender
-		) virtual/x11 )
-		xext? ( || ( (
+			xext? (
 				x11-libs/libXinerama
 				x11-libs/libXxf86dga
 				x11-libs/libXrandr
 				x11-libs/libXxf86vm
-			) virtual/x11 ) )
-		xv? ( || ( x11-libs/libXv virtual/x11 ) )
+			)
+			xv? ( x11-libs/libXv )
+		) virtual/x11 )
 	)
 	motif? ( x11-libs/openmotif
 		app-text/recode )
@@ -59,8 +59,8 @@ DEPEND="${RDEPEND}
 				x11-proto/videoproto
 				x11-proto/xproto
 				x11-proto/xextproto
+				xext? ( x11-proto/xineramaproto )
 			) virtual/x11 )
-			xext? ( || ( x11-proto/xineramaproto virtual/x11 ) )
 		)"
 
 pkg_setup() {

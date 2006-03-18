@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.35 2006/03/08 23:37:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.36 2006/03/18 16:03:27 flameeyes Exp $
+
+  18 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> xawtv-3.95-r1.ebuild:
+  Add patch to build with GCC 4.1, thanks to Matteo Azzali and Mark Loeser in
+  bug #126593.
 
   08 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> xawtv-3.95-r1.ebuild:
   Update patchlevel, adding a patch to avoid binaries to be stripped during
