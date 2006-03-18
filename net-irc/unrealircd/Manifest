@@ -1,6 +1,9 @@
-MD5 de1e12c58e335b38053db57fe581300a ChangeLog 5797
-RMD160 583227cc30b54cbfdaa5f35e950fa6a742bef3f4 ChangeLog 5797
-SHA256 e3f20a6dc6612dcbe89d146904203c9eaa2a86a5fd1a3a5a0642cf89ca74d068 ChangeLog 5797
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5e0c83e4b5892e4359b10145da696ee6 ChangeLog 5975
+RMD160 4ce296d876d20cf9af3974cc7eeaafd74eaf40da ChangeLog 5975
+SHA256 8648adb2d5f4201cd3521e4db3c27793a5994eaa84d8746bbbfdf5a43c38bd14 ChangeLog 5975
 MD5 0c44732c1496b1645f59af5da99b3bb4 files/digest-unrealircd-3.2.3 64
 RMD160 0ae1c4556b23baf43c7f57bfc4041a5c97f0c3c9 files/digest-unrealircd-3.2.3 64
 SHA256 e35ae0420e5ec9c09c7c9dd869ad5474e809c16b0531db72a1bb02c3274c2eed files/digest-unrealircd-3.2.3 64
@@ -25,6 +28,13 @@ SHA256 1a34e6c84221c021472bb7329c5ca92ccf57c8e7881ed2b40513d6b4386f4381 unrealir
 MD5 e383b823dba7444bc7987c02eea26996 unrealircd-3.2.3.ebuild 3416
 RMD160 ed6ae2df8403d3834a4cf7a1acf2d8b23337091d unrealircd-3.2.3.ebuild 3416
 SHA256 94f87c29cd574dafea983f8a625a6d4f227a53638fb38c6996af787818ce25ba unrealircd-3.2.3.ebuild 3416
-MD5 5cc577761a2169ed861d20015b6dade0 unrealircd-3.2.4.ebuild 3755
-RMD160 7169b0acffd8d944a71a99be11846ce7a9e083b6 unrealircd-3.2.4.ebuild 3755
-SHA256 f5ed0c6bb224f6aee9b3326c731cdefb5b67d5cd08c010e91cea0e0eb2aabe40 unrealircd-3.2.4.ebuild 3755
+MD5 c80c8c41639d5c0d2c5f831063767f1d unrealircd-3.2.4.ebuild 3931
+RMD160 8e9e2ad9f8752728430c7a028bbd9112cc1ec94b unrealircd-3.2.4.ebuild 3931
+SHA256 c0692258dc1c0d191647b80f24df352529433f42fd88d0727a4699691addb950 unrealircd-3.2.4.ebuild 3931
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEHF0dI1lqEGTUzyQRAvBNAKCe5xprbn0yweAPGKv5b0+rATkyHwCgzat6
+zTTnH07CDRaMXBjhDcF3MFM=
+=JO0k
+-----END PGP SIGNATURE-----

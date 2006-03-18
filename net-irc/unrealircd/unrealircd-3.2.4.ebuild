@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.4.ebuild,v 1.1 2006/02/18 20:58:21 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.4.ebuild,v 1.2 2006/03/18 19:18:41 swegener Exp $
 
-inherit eutils ssl-cert versionator
+inherit eutils ssl-cert versionator multilib
 
 MY_P=Unreal${PV}
 
@@ -14,7 +14,7 @@ SRC_URI="http://unrealircd.funny4chat.de/downloads/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="hub ipv6 ssl zlib curl"
 
 RDEPEND="ssl? ( dev-libs/openssl )
@@ -31,8 +31,9 @@ pkg_setup() {
 		eerror "You need net-misc/curl compiled with the ares USE flag to be able to use"
 		eerror "net-irc/unrealircd with the curl USE flag. Please note that ares support"
 		eerror "for net-misc/curl is incompatible with the ipv6 USE flag."
-	die "need net-misc/curl with ares support"
+		die "need net-misc/curl with ares support"
 	fi
+
 	enewuser unrealircd
 }
 
@@ -49,6 +50,13 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf=""
+	use curl && myconf="${myconf} --enable-libcurl=/usr"
+	use ipv6 && myconf="${myconf} --enable-inet6"
+	use zlib && myconf="${myconf} --enable-ziplinks"
+	use hub  && myconf="${myconf} --enable-hub"
+	use ssl  && myconf="${myconf} --enable-ssl"
+
 	econf \
 		--with-listen=5 \
 		--with-dpath=${D}/etc/unrealircd \
@@ -61,11 +69,7 @@ src_compile() {
 		--with-fd-setsize=1024 \
 		--enable-dynamic-linking \
 		--enable-prefixaq \
-		$(use_enable ipv6 inet6) \
-		$(use_enable ssl) \
-		$(use_enable zlib ziplinks) \
-		$(use_enable hub) \
-		$(use_enable curl libcurl '/usr') \
+		${myconf} \
 		|| die "econf failed"
 
 	sed -i \
@@ -81,7 +85,7 @@ src_install() {
 
 	newbin src/ircd unrealircd || die "newbin failed"
 
-	exeinto /usr/lib/unrealircd/modules
+	exeinto /usr/$(get_libdir)/unrealircd/modules
 	doexe src/modules/*.so || die "doexe failed"
 
 	dodir /etc/unrealircd || die "dodir failed"
@@ -101,7 +105,7 @@ src_install() {
 	doins networks/*.network || die "doins failed"
 
 	sed -i \
-		-e s:src/modules:/usr/lib/unrealircd/modules: \
+		-e s:src/modules:/usr/$(get_libdir)/unrealircd/modules: \
 		-e s:ircd\\.log:/var/log/unrealircd/ircd.log: \
 		${D}/etc/unrealircd/unrealircd.conf
 
