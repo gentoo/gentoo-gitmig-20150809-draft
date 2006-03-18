@@ -1,6 +1,9 @@
-MD5 b457222b88e107a5c5a1ba9df3b30371 ChangeLog 4032
-RMD160 c213c8826033f38ed0a1cbc14b976151dabe86de ChangeLog 4032
-SHA256 151ae973e5e452b3c3fe2fae56cfe57f298c1a6a6a349d29eafd019a0a900564 ChangeLog 4032
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 47a5cabbc7b90955970151a75df7d62b ChangeLog 4140
+RMD160 ce6cba8e758c5916f5fd7efef26837821e526c71 ChangeLog 4140
+SHA256 ed784bafe9ce7a7f6da57e1c464517fd8e64731f4b75f7bba8671dac79f9f015 ChangeLog 4140
 MD5 29571a78277bd35aeb290d9489e826d8 files/1.100/42_mod_log_sql.conf 877
 RMD160 5884ac0d6192d7fa2be4d2dfd97a279bcb24b6b7 files/1.100/42_mod_log_sql.conf 877
 SHA256 f9f02864e80d468a833ac54712eb01e425a365e39e2b9dad35b6e7519d10d082 files/1.100/42_mod_log_sql.conf 877
@@ -25,12 +28,19 @@ SHA256 c5a3854c5389600a9a0407794725826d1eeff9ddcf40c3b5edda9c07b7e7b7f1 files/mo
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 RMD160 d11ce73e47adf4b3d91309ec6489fded2f4d4e0e metadata.xml 226
 SHA256 376a327f91f69eb96f0c1b05cc1481dd7017a0570f631a03b1f6d14d58215ca8 metadata.xml 226
-MD5 c35cd58c779bce19885fed32dafda61d mod_log_sql-1.100.ebuild 1632
-RMD160 0a58c396c328f9d4dce320673b13190665d38fc5 mod_log_sql-1.100.ebuild 1632
-SHA256 7d8f5dcdf7baec30e6d1316b5822603dfdd2c2f057abf02521eff8cebf8c796c mod_log_sql-1.100.ebuild 1632
+MD5 e65309889bca4ed0734d7ca6d19adc3a mod_log_sql-1.100.ebuild 1629
+RMD160 9e48ff3b9ec6892229597e1a7274ecd34ee1ed34 mod_log_sql-1.100.ebuild 1629
+SHA256 29833434c19ffaa3354ecca7b85351c19d12e22eb653c65d76a3e62acaefa641 mod_log_sql-1.100.ebuild 1629
 MD5 90e440c9abfbc7e431036821771b8ff9 mod_log_sql-1.97.ebuild 3108
 RMD160 b9355a8182395f3ff45559ede620ab9db5797121 mod_log_sql-1.97.ebuild 3108
 SHA256 ce27cf56401096d5b29e82ce6ba22d41a48bb26b810c9818f8003cf98ea5ba42 mod_log_sql-1.97.ebuild 3108
 MD5 0aaa0f5a0a95c1386dafbf090dc2edf3 mod_log_sql-1.98-r1.ebuild 2988
 RMD160 c4c00f534837ae4577a71d04ef75bad3e261f0c2 mod_log_sql-1.98-r1.ebuild 2988
 SHA256 b80e69a2df0251edcbcbd3b8ce339068f10d5db0d22a08d51884da280138fb70 mod_log_sql-1.98-r1.ebuild 2988
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEG/LfugEuf3OQ0akRAjmxAJ48I+8+5xTELWkrMMFohxnae6OPpgCeNkk7
+AvBTi+L8LOACWIL1a1bYdig=
+=dMhz
+-----END PGP SIGNATURE-----
