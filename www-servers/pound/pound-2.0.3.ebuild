@@ -1,41 +1,45 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.7.ebuild,v 1.3 2006/03/18 15:35:46 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.0.3.ebuild,v 1.1 2006/03/18 15:35:46 solar Exp $
 
-MY_P=${P/p/P}
+inherit flag-o-matic
 
+MY_P="${P/p/P}"
 DESCRIPTION="A http/https reverse-proxy and load-balancer."
 SRC_URI="http://www.apsis.ch/pound/${MY_P}.tgz"
 HOMEPAGE="http://www.apsis.ch/pound/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha ~mips ~hppa"
-IUSE="ssl msdav unsafe"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
+IUSE="ssl msdav unsafe static"
 
 DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	local myconf
+	use static && append-ldflags -static
 
-	## check for ssl-support:
-	myconf="${myconf} `use_with ssl` `use_enable msdav` `use_enable unsafe`"
+	econf \
+		$(use_with ssl) \
+		$(use_enable msdav) \
+		$(use_enable unsafe) \
+		|| die "configure failed"
 
-	econf ${myconf} || die "configure failed"
 	emake || die "compile failed"
 }
 
 src_install() {
-	dosbin pound
+	dodir /usr/sbin
+	cp ${S}/pound ${D}/usr/sbin/
+
 	doman pound.8
+	dodoc README FAQ
 
-	dodoc README
-
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/pound.init pound
+	dodir /etc/init.d
+	newinitd ${FILESDIR}/pound.init-1.9 pound
 
 	insinto /etc
 	doins ${FILESDIR}/pound.cfg

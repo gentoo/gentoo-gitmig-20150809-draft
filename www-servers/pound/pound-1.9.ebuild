@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.9.ebuild,v 1.1 2005/07/07 15:45:08 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.9.ebuild,v 1.2 2006/03/18 15:35:46 solar Exp $
 
 inherit flag-o-matic
 
