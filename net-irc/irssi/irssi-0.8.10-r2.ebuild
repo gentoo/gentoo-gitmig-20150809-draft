@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10-r1.ebuild,v 1.1 2006/03/17 01:12:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10-r2.ebuild,v 1.1 2006/03/18 18:54:04 swegener Exp $
 
 inherit perl-app eutils flag-o-matic
 
@@ -30,7 +30,6 @@ src_compile() {
 
 	econf \
 		--with-proxy \
-		--without-terminfo \
 		--with-ncurses \
 		--with-perl-lib=vendor \
 		$(use_enable ssl) \

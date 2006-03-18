@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.80 2006/03/17 01:12:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.81 2006/03/18 18:54:04 swegener Exp $
+
+*irssi-0.8.10-r2 (18 Mar 2006)
+
+  18 Mar 2006; Sven Wegener <swegener@gentoo.org> -irssi-0.8.10-r1.ebuild,
+  +irssi-0.8.10-r2.ebuild:
+  Another revision bump to partly revert the last commit. Using ncurses for
+  all things causes too much trouble.
 
 *irssi-0.8.10-r1 (17 Mar 2006)
 
