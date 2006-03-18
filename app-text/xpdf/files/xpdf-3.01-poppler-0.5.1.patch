@@ -1,79 +1,208 @@
---- xpdf-3.01-poppler/PDFCore.cc.orig	2006-03-04 12:07:21.000000000 +0100
-+++ xpdf-3.01-poppler/PDFCore.cc	2006-03-04 12:06:43.000000000 +0100
-@@ -857,7 +857,7 @@
+diff -Naur xpdf-3.01-poppler.orig/PDFCore.cc xpdf-3.01-poppler/PDFCore.cc
+--- xpdf-3.01-poppler.orig/PDFCore.cc	2006-02-03 20:24:22.000000000 +0100
++++ xpdf-3.01-poppler/PDFCore.cc	2006-03-18 20:52:00.000000000 +0100
+@@ -851,7 +851,7 @@
+   return gTrue;
+ }
+ 
+-GBool PDFCore::gotoNamedDestination(GooString *dest) {
++GBool PDFCore::gotoNamedDestination(UGooString *dest) {
+   LinkDest *d;
+ 
    if (!doc) {
-     return gFalse;
-   }
--  if (!(d = doc->findDest(dest))) {
-+  if (!(d = doc->findDest((UGooString *) dest))) {
-     return gFalse;
-   }
-   displayDest(d, zoom, rotate, gTrue);
---- xpdf-3.01-poppler/XPDFCore.cc.orig	2006-03-04 17:53:00.000000000 +0100
-+++ xpdf-3.01-poppler/XPDFCore.cc	2006-03-04 17:53:40.000000000 +0100
+diff -Naur xpdf-3.01-poppler.orig/PDFCore.h xpdf-3.01-poppler/PDFCore.h
+--- xpdf-3.01-poppler.orig/PDFCore.h	2006-02-03 20:22:22.000000000 +0100
++++ xpdf-3.01-poppler/PDFCore.h	2006-03-18 20:52:42.000000000 +0100
 @@ -16,6 +16,7 @@
- #include <dirent.h>
- #include "gmem.h"
- #include "GooString.h"
+ #include <stdlib.h>
+ #include "SplashTypes.h"
+ #include "CharTypes.h"
 +#include "UGooString.h"
- #include "GooList.h"
- #include "Error.h"
- #include "GlobalParams.h"
-@@ -461,7 +462,7 @@
-       namedDest = NULL;
+ 
+ class GooString;
+ class GooList;
+@@ -155,7 +156,7 @@
+ 
+   virtual GBool gotoNextPage(int inc, GBool top);
+   virtual GBool gotoPrevPage(int dec, GBool top, GBool bottom);
+-  virtual GBool gotoNamedDestination(GooString *dest);
++  virtual GBool gotoNamedDestination(UGooString *dest);
+   virtual GBool goForward();
+   virtual GBool goBackward();
+   virtual void scrollLeft(int nCols = 1);
+diff -Naur xpdf-3.01-poppler.orig/XPDFApp.cc xpdf-3.01-poppler/XPDFApp.cc
+--- xpdf-3.01-poppler.orig/XPDFApp.cc	2006-02-03 20:27:48.000000000 +0100
++++ xpdf-3.01-poppler/XPDFApp.cc	2006-03-18 21:03:17.000000000 +0100
+@@ -236,7 +236,7 @@
+   return viewer;
+ }
+ 
+-XPDFViewer *XPDFApp::openAtDest(GooString *fileName, GooString *dest,
++XPDFViewer *XPDFApp::openAtDest(GooString *fileName, UGooString *dest,
+ 				GooString *ownerPassword,
+ 				GooString *userPassword) {
+   XPDFViewer *viewer;
+@@ -324,7 +324,7 @@
+   XFlush(display);
+ }
+ 
+-void XPDFApp::remoteOpenAtDest(GooString *fileName, GooString *dest, GBool raise) {
++void XPDFApp::remoteOpenAtDest(GooString *fileName, UGooString *dest, GBool raise) {
+   char cmd[remoteCmdSize];
+ 
+   sprintf(cmd, "%c +%.256s %.200s",
+@@ -362,7 +362,7 @@
+   char *p, *q;
+   GooString *fileName;
+   int page;
+-  GooString *destName;
++  UGooString *destName;
+ 
+   if (event->xproperty.atom != app->remoteAtom) {
+     *cont = True;
+@@ -393,7 +393,7 @@
+     page = 1;
+     destName = NULL;
+     if (*p == '+') {
+-      destName = new GooString(p + 1);
++      destName = new UGooString(p + 1);
+     } else {
+       page = atoi(p);
+     }
+diff -Naur xpdf-3.01-poppler.orig/XPDFApp.h xpdf-3.01-poppler/XPDFApp.h
+--- xpdf-3.01-poppler.orig/XPDFApp.h	2006-02-03 20:22:34.000000000 +0100
++++ xpdf-3.01-poppler/XPDFApp.h	2006-03-18 21:05:47.000000000 +0100
+@@ -18,6 +18,7 @@
+ #undef Object
+ #include "gtypes.h"
+ #include "SplashTypes.h"
++#include "UGooString.h"
+ 
+ class GooString;
+ class GooList;
+@@ -40,7 +41,7 @@
+   XPDFViewer *open(GooString *fileName, int page = 1,
+ 		   GooString *ownerPassword = NULL,
+ 		   GooString *userPassword = NULL);
+-  XPDFViewer *openAtDest(GooString *fileName, GooString *dest,
++  XPDFViewer *openAtDest(GooString *fileName, UGooString *dest,
+ 			 GooString *ownerPassword = NULL,
+ 			 GooString *userPassword = NULL);
+   void close(XPDFViewer *viewer, GBool closeLast);
+@@ -52,7 +53,7 @@
+   void setRemoteName(char *remoteName);
+   GBool remoteServerRunning();
+   void remoteOpen(GooString *fileName, int page, GBool raise);
+-  void remoteOpenAtDest(GooString *fileName, GooString *dest, GBool raise);
++  void remoteOpenAtDest(GooString *fileName, UGooString *dest, GBool raise);
+   void remoteReload(GBool raise);
+   void remoteRaise();
+   void remoteQuit();
+diff -Naur xpdf-3.01-poppler.orig/xpdf.cc xpdf-3.01-poppler/xpdf.cc
+--- xpdf-3.01-poppler.orig/xpdf.cc	2006-02-03 20:30:23.000000000 +0100
++++ xpdf-3.01-poppler/xpdf.cc	2006-03-18 21:04:30.000000000 +0100
+@@ -127,7 +127,7 @@
+   XPDFApp *app;
+   GooString *fileName;
+   int pg;
+-  GooString *destName;
++  UGooString *destName;
+   GooString *userPasswordStr, *ownerPasswordStr;
+   GBool ok;
+   int exitCode;
+@@ -239,7 +239,7 @@
+   destName = NULL;
+   if (argc == 3) {
+     if (argv[2][0] == '+') {
+-      destName = new GooString(&argv[2][1]);
++      destName = new UGooString(&argv[2][1]);
+     } else {
+       pg = atoi(argv[2]);
+       if (pg < 0) {
+diff -Naur xpdf-3.01-poppler.orig/XPDFCore.cc xpdf-3.01-poppler/XPDFCore.cc
+--- xpdf-3.01-poppler.orig/XPDFCore.cc	2006-02-03 21:37:06.000000000 +0100
++++ xpdf-3.01-poppler/XPDFCore.cc	2006-03-18 20:59:10.000000000 +0100
+@@ -442,7 +442,7 @@
+ void XPDFCore::doAction(LinkAction *action) {
+   LinkActionKind kind;
+   LinkDest *dest;
+-  GooString *namedDest;
++  UGooString *namedDest;
+   char *s;
+   GooString *fileName, *fileName2;
+   GooString *cmd;
+@@ -462,7 +462,7 @@
        if ((dest = ((LinkGoTo *)action)->getDest())) {
  	dest = dest->copy();
--      } else if ((namedDest = ((LinkGoTo *)action)->getNamedDest())) {
-+      } else if ((namedDest = (GooString *) ((LinkGoTo *)action)->getNamedDest())) {
- 	namedDest = namedDest->copy();
+       } else if ((namedDest = ((LinkGoTo *)action)->getNamedDest())) {
+-	namedDest = namedDest->copy();
++	namedDest = new UGooString(*namedDest);
        }
      } else {
-@@ -469,7 +470,7 @@
-       namedDest = NULL;
+       dest = NULL;
+@@ -470,7 +470,7 @@
        if ((dest = ((LinkGoToR *)action)->getDest())) {
  	dest = dest->copy();
--      } else if ((namedDest = ((LinkGoToR *)action)->getNamedDest())) {
-+      } else if ((namedDest = (GooString *) ((LinkGoToR *)action)->getNamedDest())) {
- 	namedDest = namedDest->copy();
+       } else if ((namedDest = ((LinkGoToR *)action)->getNamedDest())) {
+-	namedDest = namedDest->copy();
++	namedDest = new UGooString(*namedDest);
        }
        s = ((LinkGoToR *)action)->getFileName()->getCString();
-@@ -492,7 +493,7 @@
-       delete fileName;
-     }
-     if (namedDest) {
--      dest = doc->findDest(namedDest);
-+      dest = doc->findDest((UGooString *) namedDest);
-       delete namedDest;
-     }
-     if (dest) {
-@@ -599,7 +600,7 @@
-       if (obj1.isArray()) {
- 	for (i = 0; i < obj1.arrayGetLength(); ++i) {
- 	  if (obj1.arrayGet(i, &movieAnnot)->isDict()) {
--	    if (movieAnnot.dictLookup("Subtype", &obj2)->isName("Movie")) {
-+	    if (movieAnnot.dictLookup(UGooString("Subtype"), &obj2)->isName("Movie")) {
- 	      obj2.free();
- 	      break;
- 	    }
-@@ -611,8 +612,8 @@
-       }
-     }
-     if (movieAnnot.isDict()) {
--      if (movieAnnot.dictLookup("Movie", &obj1)->isDict()) {
--	if (obj1.dictLookup("F", &obj2)) {
-+      if (movieAnnot.dictLookup(UGooString("Movie"), &obj1)->isDict()) {
-+	if (obj1.dictLookup(UGooString("F"), &obj2)) {
- 	  if ((fileName = LinkAction::getFileSpecName(&obj2))) {
- 	    if (!isAbsolutePath(fileName->getCString())) {
- 	      fileName2 = appendToPath(
---- xpdf-3.01-poppler/XPDFViewer.cc.orig	2006-03-04 12:12:08.000000000 +0100
-+++ xpdf-3.01-poppler/XPDFViewer.cc	2006-03-04 12:12:58.000000000 +0100
-@@ -274,7 +274,7 @@
-   // find the page number for a named destination
-   *pageOut = pageA;
-   *destOut = NULL;
--  if (destName && (*destOut = core->getDoc()->findDest(destName))) {
-+  if (destName && (*destOut = core->getDoc()->findDest((UGooString*)destName))) {
-     if ((*destOut)->isPageRef()) {
-       pageRef = (*destOut)->getPageRef();
-       *pageOut = core->getDoc()->findPage(pageRef.num, pageRef.gen);
+       //~ translate path name for VMS (deal with '/')
+diff -Naur xpdf-3.01-poppler.orig/XPDFViewer.cc xpdf-3.01-poppler/XPDFViewer.cc
+--- xpdf-3.01-poppler.orig/XPDFViewer.cc	2006-02-03 20:31:24.000000000 +0100
++++ xpdf-3.01-poppler/XPDFViewer.cc	2006-03-18 21:01:32.000000000 +0100
+@@ -111,7 +111,7 @@
+ //------------------------------------------------------------------------
+ 
+ XPDFViewer::XPDFViewer(XPDFApp *appA, GooString *fileName,
+-		       int pageA, GooString *destName,
++		       int pageA, UGooString *destName,
+ 		       GooString *ownerPassword, GooString *userPassword) {
+   LinkDest *dest;
+   int pg;
+@@ -185,7 +185,7 @@
+ #endif
+ }
+ 
+-void XPDFViewer::open(GooString *fileName, int pageA, GooString *destName) {
++void XPDFViewer::open(GooString *fileName, int pageA, UGooString *destName) {
+   LinkDest *dest;
+   int pg;
+   double z;
+@@ -267,7 +267,7 @@
+   core->displayDest(dest, zoomA, rotateA, addToHist);
+ }
+ 
+-void XPDFViewer::getPageAndDest(int pageA, GooString *destName,
++void XPDFViewer::getPageAndDest(int pageA, UGooString *destName,
+ 				int *pageOut, LinkDest **destOut) {
+   Ref pageRef;
+ 
+diff -Naur xpdf-3.01-poppler.orig/XPDFViewer.h xpdf-3.01-poppler/XPDFViewer.h
+--- xpdf-3.01-poppler.orig/XPDFViewer.h	2006-02-03 20:22:57.000000000 +0100
++++ xpdf-3.01-poppler/XPDFViewer.h	2006-03-18 21:01:17.000000000 +0100
+@@ -48,12 +48,12 @@
+ public:
+ 
+   XPDFViewer(XPDFApp *appA, GooString *fileName,
+-	     int pageA, GooString *destName,
++	     int pageA, UGooString *destName,
+ 	     GooString *ownerPassword, GooString *userPassword);
+   GBool isOk() { return ok; }
+   ~XPDFViewer();
+ 
+-  void open(GooString *fileName, int pageA, GooString *destName);
++  void open(GooString *fileName, int pageA, UGooString *destName);
+   void clear();
+   void reloadFile();
+ 
+@@ -68,7 +68,7 @@
+                    GBool scrollToTop, GBool addToHist);
+   void displayDest(LinkDest *dest, double zoomA, int rotateA,
+ 		   GBool addToHist);
+-  void getPageAndDest(int pageA, GooString *destName,
++  void getPageAndDest(int pageA, UGooString *destName,
+ 		      int *pageOut, LinkDest **destOut);
+ 
+   //----- actions
