@@ -1,15 +1,55 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3d54797a4799b12366b52fba08adb6f2 ChangeLog 2134
+RMD160 fce38144696426f2a27ce315622e5cb9839f0b65 ChangeLog 2134
+SHA256 6dacc6381b6b88067f75323d41d36a2e80b30288585ad17f010a028d3d8f9fb4 ChangeLog 2134
 MD5 99189490f6840a16c1e14874719592cf files/1.8.6/99_mod_security.conf 3666
+RMD160 91198642f19e9031b9edb0429c9e388736caa072 files/1.8.6/99_mod_security.conf 3666
+SHA256 7a564bbd901bd26147a4febb7372aa9d72491a46a722b8676e7618e842ca520b files/1.8.6/99_mod_security.conf 3666
 MD5 4ff2b278a8aaff992f04347e4fda401b files/99_mod_security.conf 3671
+RMD160 9f455037b364ac2e9411120b54c66343a7aee257 files/99_mod_security.conf 3671
+SHA256 ff1bc53f4659d987c12ae47fbd810bb58be7555ccd1a8966243f1ea226c6c6eb files/99_mod_security.conf 3671
 MD5 93b283b1aef242964a12edd89989d103 files/digest-mod_security-1.7.6 70
+RMD160 e845f9b789a8b794de5059ee75c7bbbffa117303 files/digest-mod_security-1.7.6 70
+SHA256 a1652647049fc5cfd85ad48f4646fc57caa9c029c20fb9eae317cc3ed087a286 files/digest-mod_security-1.7.6 70
 MD5 acba071671480e82391bcf1022f3838a files/digest-mod_security-1.8.6 70
+RMD160 8ccd7081b8c861c5a02519e4b188467c290a7f22 files/digest-mod_security-1.8.6 70
+SHA256 4399e3c5e626dbf204f54694f472a0928df74132fa329e25a0b295c80e40447f files/digest-mod_security-1.8.6 70
 MD5 2858e79ac2a333e5542ed27274f38de8 files/digest-mod_security-1.8.7 69
+RMD160 449d9ce8e0b3fa3759a29e60cbd423a6f073126d files/digest-mod_security-1.8.7 69
+SHA256 d0ebb82a60b19ecee05c0e523c65f45c49906d06de1b279b57a70f0de5d20ccc files/digest-mod_security-1.8.7 69
 MD5 606e2333ef2c0c721942809eed9f4d54 files/digest-mod_security-1.8.7_rc2 73
+RMD160 27d226a33f9439e513702317daac0385bed95292 files/digest-mod_security-1.8.7_rc2 73
+SHA256 0fd959de2e4b95ce83a6ae0fd88f815a81a1dad1ea66d4d130b3e28d4ec9c86a files/digest-mod_security-1.8.7_rc2 73
 MD5 6f84c2ca2b3f3847a1b2f7807a089a40 files/digest-mod_security-1.9.1 76
+RMD160 7681dfa94ec21a4d64c7b0cb08543f7711a4d9a3 files/digest-mod_security-1.9.1 76
+SHA256 e888b71a45988227c0ac6791cf7dd935b7f3e54387b6b729b1c2cab4c0a003f1 files/digest-mod_security-1.9.1 76
 MD5 854e24ef0e50b53915629f226e76b43c files/mod_security.conf 3399
-MD5 7f9bf0fe84b572f62273fa022988c405 metadata.xml 285
+RMD160 e68dd188b6be79aa225cbb39867bcc3b93dc2c3a files/mod_security.conf 3399
+SHA256 e674c61610ad561ab0cf9200b298c5f7594b1ab684bc322a1708cfb5b80f6d19 files/mod_security.conf 3399
+MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
+RMD160 d11ce73e47adf4b3d91309ec6489fded2f4d4e0e metadata.xml 226
+SHA256 376a327f91f69eb96f0c1b05cc1481dd7017a0570f631a03b1f6d14d58215ca8 metadata.xml 226
 MD5 8ca8985829c6ecb7444c9eab39aad3c9 mod_security-1.7.6.ebuild 1321
+RMD160 85ea4169a018dcfdc22a66034ac45da2b6440213 mod_security-1.7.6.ebuild 1321
+SHA256 bc7c3310075daf05e7cf51c749b66174e04cc8b0906d1adeec79fb28d0737dbe mod_security-1.7.6.ebuild 1321
 MD5 aaf9229bf36d8b03387b64e88df4a047 mod_security-1.8.6.ebuild 949
+RMD160 44c80d6d169a02213977f10e4531a45a1ea742e5 mod_security-1.8.6.ebuild 949
+SHA256 d075582980d59eac4f4287770f58d71f1f628c79570e7cc46f1cffb389d9ca66 mod_security-1.8.6.ebuild 949
 MD5 bcc754737f51e31f11b60d0733d8edee mod_security-1.8.7.ebuild 987
+RMD160 83c4191ff38ed6ee2ea1ef3aaffd2b1e45a5574d mod_security-1.8.7.ebuild 987
+SHA256 a1f7e215fd03adc4feb2b1b400f400c616136702c88d31567394b8939e9f40a9 mod_security-1.8.7.ebuild 987
 MD5 d9a5f677510c88be378188ffc281af70 mod_security-1.8.7_rc2.ebuild 990
+RMD160 2a02ac38301f74c3204fd772bf5bf3bbce7eef58 mod_security-1.8.7_rc2.ebuild 990
+SHA256 7442f0d2e22142947a3d0a420f3f7448fa38b8d9af72c5a57777f278dcadec7e mod_security-1.8.7_rc2.ebuild 990
 MD5 65423c30d6932e66ace169fdbe5c3b10 mod_security-1.9.1.ebuild 1046
+RMD160 f450dda0e0db88c079e148070ccdad95002543df mod_security-1.9.1.ebuild 1046
+SHA256 4794facfb5338515bd333052302561e4a633c7df8555c86cbd45d6861efe9759 mod_security-1.9.1.ebuild 1046
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHI9XV3J2n04EauwRAjKPAKCfErQShnKCGtlbPXrLjlkcMwHCWgCcDuBe
+d8ln/DbCcyA902wkHzTa/TM=
+=jAD+
+-----END PGP SIGNATURE-----
