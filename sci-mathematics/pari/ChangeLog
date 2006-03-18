@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.27 2006/02/12 20:41:40 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.28 2006/03/18 17:04:50 corsair Exp $
+
+  18 Mar 2006; Markus Rothe <corsair@gentoo.org> pari-2.1.7-r1.ebuild:
+  Added ~ppc64; bug #126528
 
   12 Feb 2006; Scott Stoddard <deltacow@gentoo.org> pari-2.1.5-r4.ebuild:
   Fix multilib issue w.r.t. bug #122589
