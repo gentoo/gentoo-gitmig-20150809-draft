@@ -1,0 +1,10 @@
+# ChangeLog for www-apps/trac-webadmin
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/ChangeLog,v 1.1 2006/03/18 12:19:09 dju Exp $
+
+*trac-webadmin-0.1.1 (18 Mar 2006)
+
+  18 Mar 2006; Julien Allanos <dju@gentoo.org> +metadata.xml,
+  +trac-webadmin-0.1.1.ebuild:
+  Initial import.
+
