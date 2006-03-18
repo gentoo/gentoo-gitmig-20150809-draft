@@ -1,5 +1,9 @@
 
 
+  18 Mar 2006; Radoslaw Stachowiak <radek@gentoo.org>
+  +files/digest-coreblog2-0.81b, Manifest:
+  fixed broken initial commit
+
 *coreblog2-0.81b (18 Mar 2006)
 
   18 Mar 2006; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
