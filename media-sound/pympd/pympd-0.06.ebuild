@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.06.ebuild,v 1.3 2006/03/18 20:04:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.06.ebuild,v 1.4 2006/03/18 20:07:40 ticho Exp $
 
 inherit eutils python
 
@@ -41,7 +41,8 @@ pkg_postinst() {
 
 	echo
 	ewarn
-	ewarn "You need to remove the .pympd directory from your home directory, as new version uses different settings format"
+	ewarn "You need to remove the .pympd directory from your home directory, as new"
+	ewarn "version uses different settings format"
 	ewarn
 	echo
 }
