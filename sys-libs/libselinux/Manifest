@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4b8784cdc543ac5775d364f1a8b632e1 ChangeLog 6459
 RMD160 d44b0ec0bddf28b8e5b22fce2fdb52545d15f259 ChangeLog 6459
 SHA256 79bd5acfa6952563eda86b1c0fc44f91cb57d1a03b77f5710c2d5363c210c3cb ChangeLog 6459
@@ -28,16 +25,9 @@ SHA256 daaf6568f7847de8b33cdae57c6423a0d95e1c4d5d0bd72c2cccf812b08bfb9a libselin
 MD5 8cc2ebce6cf54e692848ad171c1deeb6 libselinux-1.28.ebuild 1024
 RMD160 f75c6d19126db889e806c8eab2c616dee62e0b11 libselinux-1.28.ebuild 1024
 SHA256 1b289b2bbab7521b0ba5446456ca0f686276ea9c306e8a4d49a70f5251854703 libselinux-1.28.ebuild 1024
-MD5 291c3bc9d29f1e8ba6b62441f7c89655 libselinux-1.30.ebuild 1156
-RMD160 cf52f7edab66028d275097fca1f23ac8edd5ab32 libselinux-1.30.ebuild 1156
-SHA256 039d76db4d6a017471070cca4e1cc78eb41678d36e7dfc4d53735153d94f38b3 libselinux-1.30.ebuild 1156
+MD5 7b4a0aeba500763d2260cbb6c4472844 libselinux-1.30.ebuild 1355
+RMD160 5772788711fc6de74dcb808b91d0eff10cec5d8f libselinux-1.30.ebuild 1355
+SHA256 1f903046f2e6703b0bb561cc753fd3df81322f8eba2813eb7ee2e802290f464b libselinux-1.30.ebuild 1355
 MD5 652c5e8a0a081bf4317359f04f65a603 metadata.xml 537
 RMD160 6adcd5fc653db8ad7780299214875297beb9c931 metadata.xml 537
 SHA256 e691ecff0c45ccbd6cf813fbd7f23e489dabad664e89e6b21b8c7c1785550f9e metadata.xml 537
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEHB6vJ+ChZlpDtAoRAr4oAJ9zLvSGJkSGxDfnw+W8ihg4HzKPEQCcCqqq
-9hQw7RzPeE8ZD6TkB4lTEaY=
-=qrhj
------END PGP SIGNATURE-----
