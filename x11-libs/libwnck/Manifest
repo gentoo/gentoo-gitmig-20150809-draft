@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e49c4660f3546a99df9ac4a7a2d3aa0d ChangeLog 13660
 MD5 5ad99f98086de45658268d8d707429b5 files/digest-libwnck-2.10.3 67
 MD5 15f2cc35cebe826791d622e3c9845093 files/digest-libwnck-2.12.1 247
@@ -13,3 +16,10 @@ MD5 8dff394f616a3112a684d9303351ccc9 libwnck-2.12.3.ebuild 737
 MD5 42b20470b5b528af116086114d080b65 libwnck-2.14.0.ebuild 740
 MD5 5c8fc7c865b134e91d23b93aa761ed65 libwnck-2.8.1-r1.ebuild 827
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHIDyoGcCqvCmTSIRAvpTAKC8iURPTykysAxpqh/YLXY0soq75gCeLyS1
+SOIIcAKCO2BRFWZWZU5ISs4=
+=BEAb
+-----END PGP SIGNATURE-----
