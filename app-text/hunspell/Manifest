@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 07f71248fe28f4a0f1396570675cdd3c ChangeLog 796
+MD5 486239990b3c16d3c65769e82f779f7d ChangeLog 879
+RMD160 f680a343f27df3585cf66a6f723135ccfc0c79c7 ChangeLog 879
+SHA256 ae0575c9250dcecbe14ca3de4fa918354af3e3a1919843e299e3e0533a5b4a3c ChangeLog 879
 MD5 2ee23fc18433d16280f97a3d381ae78a files/digest-hunspell-1.1.3 66
+RMD160 b38f06bbc5138f15f6883534dd09d7596ecd0f04 files/digest-hunspell-1.1.3 66
+SHA256 d8cc8d2ad668b0a0c01a5f4b652d8583be11e1960a7d0b1e9fda0a9ba9ada6a7 files/digest-hunspell-1.1.3 66
 MD5 f68502846fc6d13abf7ca3c160d4fa45 files/digest-hunspell-1.1.4 66
+RMD160 6f80a34d90b49ebbc8a7c9191c5b6932d48cf081 files/digest-hunspell-1.1.4 66
+SHA256 9ac882a26f04818e2893828e4c9a675da02b02228dedac76ebd2307b2000a95c files/digest-hunspell-1.1.4 66
 MD5 1d6c3ebe073637dc68dc5b3036177cb5 files/hunspell-1.1.3-renameexes.patch 4612
+RMD160 e4dc3ab77daf10f63852aca121d07d777ed96cf6 files/hunspell-1.1.3-renameexes.patch 4612
+SHA256 0386079314e941d443d57e650bd2aa84a63605ec2fadead474e576e7bb923939 files/hunspell-1.1.3-renameexes.patch 4612
 MD5 6c27bd8351e45b24f183ddca92c7fba8 hunspell-1.1.3.ebuild 1710
-MD5 28a5cf89baf58764e7efaf6eba53853d hunspell-1.1.4.ebuild 1887
+RMD160 0ea1abe5aad779201474b96dc6b8c45c337279f9 hunspell-1.1.3.ebuild 1710
+SHA256 80bbba53fcb8822faa4e4ff42ab0627252181320ad0f417e57882432c44fe915 hunspell-1.1.3.ebuild 1710
+MD5 e51b54f6a2d8b9db6fa018a20399d652 hunspell-1.1.4.ebuild 1890
+RMD160 ee04e672adf66dcbc4d6173086adfacefc586db5 hunspell-1.1.4.ebuild 1890
+SHA256 51db4d2d4a4b7eca006555d6fb3058acd2ba98f7d31b237fa8df79c7fc70e128 hunspell-1.1.4.ebuild 1890
 MD5 b86e3c93f969dbb4f433611cb0f6b0b0 metadata.xml 222
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEDfltKRy60XGEcJIRAgUZAJwOsIOcMaxisvPSItsz+p7+dVVKsgCfSnsC
-N7tdeq5UPppfWmtElnKznxQ=
-=bZYi
------END PGP SIGNATURE-----
+RMD160 a74fc306077c440fea351793a03168651fb28f13 metadata.xml 222
+SHA256 5e7b34981ea08b001bd6eac085d6876fbeef6a4fdd91575e4e9f988cadf4f03f metadata.xml 222
