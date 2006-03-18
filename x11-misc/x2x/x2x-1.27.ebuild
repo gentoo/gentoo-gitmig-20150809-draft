@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27.ebuild,v 1.12 2006/01/21 14:01:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27.ebuild,v 1.13 2006/03/18 16:57:27 nelchael Exp $
 
 inherit eutils
 
@@ -19,7 +19,10 @@ RDEPEND="|| ( (
 		x11-libs/libXext )
 	virtual/x11 )"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xproto virtual/x11 )"
+	|| ( (
+		app-text/rman
+		x11-proto/xproto )
+	virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}

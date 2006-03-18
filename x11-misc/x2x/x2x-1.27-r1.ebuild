@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r1.ebuild,v 1.5 2006/01/21 14:01:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r1.ebuild,v 1.6 2006/03/18 16:57:27 nelchael Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.digital.com/pub/Digital/SRC/x2x/${P}.tar.gz
 	mirror://gentoo/x2x_1.27-8-initvars.patch.gz
 	mirror://gentoo/x2x-1.27-license.patch.gz"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~mips ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~mips ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="|| ( (
@@ -21,7 +21,10 @@ RDEPEND="|| ( (
 		x11-libs/libXext )
 	virtual/x11 )"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xproto virtual/x11 )"
+	|| ( (
+		app-text/rman
+		x11-proto/xproto )
+	virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
