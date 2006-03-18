@@ -20,3 +20,7 @@ pyste
 
 # we don't have hardware to test. also see bug #113398
 dvb
+
+# mask mozilla/firefox (bug #108020)
+mozilla
+firefox
