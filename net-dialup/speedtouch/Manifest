@@ -1,36 +1,22 @@
-MD5 0e04088f85107674805610e1de3d32d6 ChangeLog 4904
-RMD160 c44406d71c558bb90e3e91f0d8084af2c409ea30 ChangeLog 4904
-SHA256 cc90fbe7a5d44159be7e7dc8d4d092f69f985b77aae08893d45f228ffe4157ad ChangeLog 4904
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0bef1181f2f43e38b82d2ad8242d9adf ChangeLog 5080
 MD5 d6eb26607fa211c61609dd783ecfdac9 files/adsl.sample 599
-RMD160 23ad83203725459c8f787ee012f7b54a4f8135f8 files/adsl.sample 599
-SHA256 478a454b347d2d666310eba8ff08cd648642dd39849e880965847c2c69adaec6 files/adsl.sample 599
 MD5 be6c41b714f7e55195d93fd478dc5e7e files/digest-speedtouch-1.3.1-r2 69
-RMD160 74929e5a323d2adb50ce19b447dc86eab717fc01 files/digest-speedtouch-1.3.1-r2 69
-SHA256 c4226a9fb30954216a4308330baae98b02a60e9385c9c18e07c5939df00bb974 files/digest-speedtouch-1.3.1-r2 69
 MD5 be6c41b714f7e55195d93fd478dc5e7e files/digest-speedtouch-1.3.1-r3 69
-RMD160 74929e5a323d2adb50ce19b447dc86eab717fc01 files/digest-speedtouch-1.3.1-r3 69
-SHA256 c4226a9fb30954216a4308330baae98b02a60e9385c9c18e07c5939df00bb974 files/digest-speedtouch-1.3.1-r3 69
 MD5 3c7d210090e2fed135170292f62e279b files/speedtch-hotplug 396
-RMD160 1c2c0aa58e8d245e2517166efbea819669d5e749 files/speedtch-hotplug 396
-SHA256 dbb7678143c79d767e9f3ebf7567ff53fa21b28a3f61f25487040579156161ac files/speedtch-hotplug 396
 MD5 4191035925db745944c75e26937c42a3 files/speedtouch-1.3.1-gcc4.patch 279
-RMD160 a67b5b6ddd04e829556fa7d08eead3370da55635 files/speedtouch-1.3.1-gcc4.patch 279
-SHA256 ce0ea7dcca347bb39f33a4fdb0710f49784daf502234a4d7ac12a545932ec6e7 files/speedtouch-1.3.1-gcc4.patch 279
 MD5 e1433d87a19203883aeaa0d4f791f91f files/speedtouch.confd 699
-RMD160 717785e7c2c841a3d8fd406b02ea210c2c92e5fe files/speedtouch.confd 699
-SHA256 bec2b3adcfa3fc598364b3d2eafc92d32ef3717fabe56b49bcb7de364abdee4e files/speedtouch.confd 699
 MD5 dbd6e2122fdf47b478bfba023762c105 files/speedtouch.initd 1809
-RMD160 272a58897de7dd37c83149852368aaf2eef5267e files/speedtouch.initd 1809
-SHA256 6a1453c101ba313bc5d3b2ea3c8db0d1bf5fa0087b19465630004c3fd625b944 files/speedtouch.initd 1809
 MD5 aa0803fb7b3133521df4ee07d7ff141a files/speedtouch.rc7 1655
-RMD160 645735b3d90c9c54fbda1c7a8ff0f6ee8374d24a files/speedtouch.rc7 1655
-SHA256 47bd40118f284164419bfd0fcd23804cad73f2d03787f3ba2b12a1a921a5aa1e files/speedtouch.rc7 1655
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-RMD160 df94c60cc0bb7abe5913b464a33966b142b2fe1e metadata.xml 163
-SHA256 1137a0fd866641cf719b0c2e9e77ca9fa4541a42f2cc851fe4659cf2677acca3 metadata.xml 163
-MD5 bec36c734bc14f9dbdf142e56b618041 speedtouch-1.3.1-r2.ebuild 3026
-RMD160 11b2882228e3666e60396683255f84d1f912ccd6 speedtouch-1.3.1-r2.ebuild 3026
-SHA256 cd0e4676b88ca92848819edbeb7c193699b6c977db5f2018d5438d66f4e51d00 speedtouch-1.3.1-r2.ebuild 3026
-MD5 fd31fe56ead1050cca25054273625ee0 speedtouch-1.3.1-r3.ebuild 2987
-RMD160 48198a0b97d3457518f27b520fc95a9b0f19782f speedtouch-1.3.1-r3.ebuild 2987
-SHA256 6269aa1c9321370de7abab82b06ac3c9598b73c3b3cbc71381fdaaf0799f20bc speedtouch-1.3.1-r3.ebuild 2987
+MD5 c4bdf842c691f9985ecb1c882b90b8d7 speedtouch-1.3.1-r2.ebuild 3269
+MD5 9a64a15259786735ca73902becf74471 speedtouch-1.3.1-r3.ebuild 3231
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHGyZjG8pv1lIUX4RAq5zAJ0TpoDqZDxowNePSK3+XW+9WgZ9YgCfd8uj
+MMPnl1Kd3lVhNSTmfAKS5fo=
+=/j7z
+-----END PGP SIGNATURE-----

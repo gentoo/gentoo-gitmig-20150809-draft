@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r2.ebuild,v 1.6 2005/10/04 20:18:07 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r2.ebuild,v 1.7 2006/03/18 20:24:40 mrness Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ~ppc x86"
 IUSE="static debug"
 
-DEPEND=""
-RDEPEND=">=net-dialup/ppp-2.4.1"
+RDEPEND=">=net-dialup/ppp-2.4.1
+	!net-dialup/speedtouch-usb"
 
 S=${WORKDIR}/${MY_P}
 
@@ -90,5 +90,9 @@ pkg_postinst() {
 	einfo "You need to pass -a /usr/share/speedtouch/boot.v123.bin to"
 	einfo "modem_run with this version. The URL for firmware is:"
 	einfo "http://www.speedtouchdsl.com/driver_upgrade_lx_3.0.1.2.htm"
+	echo
+	ewarn "This driver is obsoleted by the kernel-space driver, available"
+	ewarn "in >=2.6.10 kernels. The firmware and installation instructions"
+	ewarn "for this driver are available through net-dialup/speedtouch-usb."
 	echo
 }
