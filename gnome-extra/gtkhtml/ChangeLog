@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.57 2006/02/06 19:34:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.58 2006/03/18 19:17:42 allanonjl Exp $
+
+*gtkhtml-3.10.0 (18 Mar 2006)
+
+  18 Mar 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +gtkhtml-3.10.0.ebuild:
+  new version. remove static useflag. if you unmask this, it will cause
+  upgrade downgrade cycles since its in the same slot. (until we fix the deps
+  see bug #126700)
 
   06 Feb 2006; Aron Griffis <agriffis@gentoo.org> gtkhtml-1.1.10-r1.ebuild:
   Mark 1.1.10-r1 stable on ia64
