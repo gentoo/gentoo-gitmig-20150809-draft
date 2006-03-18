@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.5.1.ebuild,v 1.1 2006/01/28 14:50:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.5.1.ebuild,v 1.2 2006/03/18 00:27:26 gustavoz Exp $
 
 DESCRIPTION="KDE - merge this to pull in all non-developer kde-base/* packages"
 HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 
 SLOT="3.5"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="accessibility"
 
 # excluded: kdebindings, kdesdk, since these are developer-only packages

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.135 2006/01/28 14:50:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.136 2006/03/18 00:27:26 gustavoz Exp $
+
+  18 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> kde-3.5.1.ebuild:
+  ~hppa lovin
 
   28 Jan 2006; Dan Armak <danarmak@gentoo.org> +kde-3.5.1.ebuild:
   Version 3.5.1. Not yet released upstream, so package.masked for now.
