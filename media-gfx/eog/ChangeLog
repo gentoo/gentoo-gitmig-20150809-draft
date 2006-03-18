@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.124 2006/03/17 22:31:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.125 2006/03/18 22:17:13 tester Exp $
+
+  18 Mar 2006; Olivier Crête <tester@gentoo.org> eog-2.12.3.ebuild:
+  Stable on amd64 per bug #126321
 
   17 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> eog-2.12.3.ebuild:
   Stable on x86 wrt bug #126321.
