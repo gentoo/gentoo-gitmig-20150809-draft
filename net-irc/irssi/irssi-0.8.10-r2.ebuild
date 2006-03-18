@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10-r2.ebuild,v 1.1 2006/03/18 18:54:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10-r2.ebuild,v 1.2 2006/03/18 18:55:20 swegener Exp $
 
 inherit perl-app eutils flag-o-matic
 
@@ -21,8 +21,7 @@ RDEPEND="!net-irc/irssi-cvs
 	perl? ( dev-lang/perl )
 	socks5? ( >=net-proxy/dante-1.1.18 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9.0
-	>=sys-apps/sed-4"
+	>=dev-util/pkgconfig-0.9.0"
 
 src_compile() {
 	# Irssi uses extern inlines and that needs at least -O
