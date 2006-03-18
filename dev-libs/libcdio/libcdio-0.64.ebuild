@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.64.ebuild,v 1.12 2005/01/29 01:16:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.64.ebuild,v 1.13 2006/03/18 16:10:22 flameeyes Exp $
 
 IUSE=""
 
@@ -11,12 +11,6 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha amd64 ia64"
-
-
-src_compile() {
-	econf || die
-	emake || die
-}
 
 src_install() {
 	einstall || die
