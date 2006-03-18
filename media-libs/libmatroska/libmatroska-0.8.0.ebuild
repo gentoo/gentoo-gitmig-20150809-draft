@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.8.0.ebuild,v 1.3 2005/12/09 01:51:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.8.0.ebuild,v 1.4 2006/03/18 20:29:29 flameeyes Exp $
+
+inherit flag-o-matic eutils toolchain-funcs
 
 IUSE=""
-
-inherit flag-o-matic eutils
 
 DESCRIPTION="Extensible multimedia container format based on EBML"
 HOMEPAGE="http://www.matroska.org/"
@@ -18,6 +18,9 @@ DEPEND=">=dev-libs/libebml-0.7.6"
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-respectflags.patch"
 
 	cd ${S}/make/linux
 	sed -i -e 's/CXXFLAGS=/CXXFLAGS+=/g' Makefile
@@ -31,7 +34,8 @@ src_compile() {
 
 	emake PREFIX=/usr \
 		LIBEBML_INCLUDE_DIR=/usr/include/ebml \
-		LIBEBML_LIB_DIR=/usr/$(get_libdir) || die "make failed"
+		LIBEBML_LIB_DIR=/usr/$(get_libdir) \
+		CXX="$(tc-getCXX)" || die "make failed"
 }
 
 src_install() {

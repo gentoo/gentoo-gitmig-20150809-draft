@@ -1,21 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7098f625ec3a51771c81165c792ea8be ChangeLog 8974
+MD5 98fcd49d11c392b5a0da7ccf22a4db31 ChangeLog 9141
+RMD160 4f4ac8035555ed419a6b06f37701755b973ff9c2 ChangeLog 9141
+SHA256 021b81e3b6e9246caa0a57ea6e4b298693a0537fe8fd877c0a38c2a452f9b2e4 ChangeLog 9141
 MD5 fd84899f8aaf8c41f8bc2fd83b744cdc files/digest-libmatroska-0.7.3-r1 69
+RMD160 46029aeab74efc7f86a0fb2e81b3f319689093d5 files/digest-libmatroska-0.7.3-r1 69
+SHA256 a53b5bfc859116209a109087b4dcd47f937d2fef985c0848cf674e33573b7a0c files/digest-libmatroska-0.7.3-r1 69
 MD5 608a387def7db173656c6ea733bc3926 files/digest-libmatroska-0.7.6 69
+RMD160 2d4c0416f29c20684ef80be246e07602c74987d9 files/digest-libmatroska-0.7.6 69
+SHA256 38f5acc9b8661090e242542bbed5e97c2ff1f6fd7080d81964f93a7afc12c71d files/digest-libmatroska-0.7.6 69
 MD5 c6fd00fcb974074dc90e50cbf401a23f files/digest-libmatroska-0.7.7 69
+RMD160 815af5b5dfedce2cc4948962a36fdcbbd7cf869a files/digest-libmatroska-0.7.7 69
+SHA256 9b1a94c7dba9f364bf83ba98acb8aa9c21a73231d6d0b02970d6674a9b7ac0c7 files/digest-libmatroska-0.7.7 69
 MD5 ccab098d0a3bfb519827b9563e95a341 files/digest-libmatroska-0.8.0 69
+RMD160 3e74073a971bec2db3bfe57865400a5a7f2644d5 files/digest-libmatroska-0.8.0 69
+SHA256 d4b0ab04b97302a1dcc62913c7cccb31be68dc08d55a1d28d433b885974fc5ac files/digest-libmatroska-0.8.0 69
+MD5 3f645dd63a984daafafe2796c0b4d318 files/libmatroska-0.8.0-respectflags.patch 543
+RMD160 753b99ca667ac0c226615bd87682892c6f67671b files/libmatroska-0.8.0-respectflags.patch 543
+SHA256 91dcd9b2b16c97f152c9931d145f16ea86a3a709b1e2df1dc5543aeaa73057db files/libmatroska-0.8.0-respectflags.patch 543
 MD5 c95f16fd10678062af97f9f35ac7fd5f files/libmatroska-shared.patch 2513
+RMD160 40910883a74412903d749a13ad15e4ce7ae21965 files/libmatroska-shared.patch 2513
+SHA256 732ec1f850ee4f0c55e9b0b6adaaa7c74950cb9fd5295fd89098a206ca6e0d2b files/libmatroska-shared.patch 2513
 MD5 8f76cc1c5d7a64138df8781b81f0d317 libmatroska-0.7.3-r1.ebuild 1352
+RMD160 4ecfd2698826c662d8505c45b5a4ef68eb3871ae libmatroska-0.7.3-r1.ebuild 1352
+SHA256 53b1ffe1316d51964f2b718b904563fcd44c5d3439dfb8d6d82432bd79982f72 libmatroska-0.7.3-r1.ebuild 1352
 MD5 89d5f6c1004338c979c10c223cb00e91 libmatroska-0.7.6.ebuild 1242
+RMD160 ba88cba5fa5f8a8ca56dcfcc5d81b45f5d174aa6 libmatroska-0.7.6.ebuild 1242
+SHA256 2b17e40d36d4f136b7d698767b79d9a15b44d818ad54ce90fe8c0d2c89bf70d9 libmatroska-0.7.6.ebuild 1242
 MD5 b35836f7e6dfb65eda7a62fc2eab5293 libmatroska-0.7.7.ebuild 1072
-MD5 0e8dbd30914e1c01b24a05e6a61034ac libmatroska-0.8.0.ebuild 1072
+RMD160 f62b62900b8e100979aed290dd645c70c2c6d4f1 libmatroska-0.7.7.ebuild 1072
+SHA256 c4fe7524bcd98453fef41db1ef8f9d11600e7508bc8b5d54f85ecb83e49e1a63 libmatroska-0.7.7.ebuild 1072
+MD5 19a8439cec7c3eb8be037320f81eb14d libmatroska-0.8.0.ebuild 1167
+RMD160 9a06e49c3851438756c79428eae9d4ee060efa14 libmatroska-0.8.0.ebuild 1167
+SHA256 cc7446ab797f61b8603fabdac62b2beb092e4fd1cc01282c88216d8b977e4d6f libmatroska-0.8.0.ebuild 1167
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+RMD160 6e3fccd1ae62f02a0cb28d319aa185af0020822d metadata.xml 225
+SHA256 1a7f3e805478b42bc379b2a36944579d34d7e66ba5bf418a651e1cd58ad0a7f5 metadata.xml 225
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDmONBAiZjviIA2XgRAg3eAKCBc615fur7abrtBHKiksqNq6DCBQCfadXV
-3VL0va/m0Li4Rym7vlgFnm0=
-=9TLO
+iD8DBQFEHG2xAiZjviIA2XgRAhflAKCJa6/cpNNCUStEnYI7ajpm0vd0CACfcrqc
+EnRNIeHpiREPj+8Qm+ZIZaQ=
+=NJon
 -----END PGP SIGNATURE-----
