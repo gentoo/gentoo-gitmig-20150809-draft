@@ -1,43 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 db03dd4911088eeae3ebe977ba699b71 ChangeLog 6719
-RMD160 60379236994d7e7b6948b70c7759f1b0e5ce6e08 ChangeLog 6719
-SHA256 de84682f075c67d529eec65136223c21b974b66ec4afa4664dd83a78d009d36c ChangeLog 6719
-MD5 e6f5a8d21bd0da79aac766231f65d4f0 azureus-bin-2.3.0.4.ebuild 3848
-RMD160 1ec3f2f9130134c5633608c530f7dbe9fdbf8d33 azureus-bin-2.3.0.4.ebuild 3848
-SHA256 8b1d50f9287465573fce74be1b1f1429b749453bda8fec133894bca4019777e5 azureus-bin-2.3.0.4.ebuild 3848
-MD5 bc1047baa201ebb824f6f94b1cf289a9 azureus-bin-2.3.0.6.ebuild 3064
-RMD160 8e44d95bc4aaf8f9c57db892be00a41b47f16005 azureus-bin-2.3.0.6.ebuild 3064
-SHA256 8f085f5d6d7f3103bfd42185417fd37f74ca4965b934463f633b54bd9d06cf28 azureus-bin-2.3.0.6.ebuild 3064
+MD5 5e1be365502c582b8c83d1d101390c29 ChangeLog 6860
 MD5 3a9b952842f740b281b4573d50887188 azureus-bin-2.4.0.0.ebuild 3064
-RMD160 227a9f53dc2dd67755ae24147cc58ff9ca1ce05d azureus-bin-2.4.0.0.ebuild 3064
-SHA256 d12200b43c93ba4a5d48010d98c5ae21bca093cf8682d2832e147b8fa2c68424 azureus-bin-2.4.0.0.ebuild 3064
-MD5 6cf2c1041726decd44a55736aadda4f7 files/azureus-bin-gentoo.sh 1056
-RMD160 31af9752b941226dc70e2565b66874c82a5c81dd files/azureus-bin-gentoo.sh 1056
-SHA256 358456d16abdfce525ce232ab2d9d42b4314baee59e110b6b3e5ef0fe974a62a files/azureus-bin-gentoo.sh 1056
-MD5 70c17db47c9a596929112714f82ac010 files/azureus.desktop 153
-RMD160 817c8e44b1068b5030b19d5f61a516f560fd4e92 files/azureus.desktop 153
-SHA256 6eb562481d31292ed0ab9cf16f88c9385318b4c3a3c015fd26238624e1fe9f7c files/azureus.desktop 153
-MD5 2d3136c60488dd51bef012cbcb59201b files/azureus.png 743
-RMD160 234517f80f6306ef4cf3704de59473a00efb50ab files/azureus.png 743
-SHA256 951bcf1bbd46d049740f50be4d1cd41bbac0892ca40b83891db6a2beff9f6a30 files/azureus.png 743
-MD5 237fc0642db8aae1caac9d5316ec4412 files/digest-azureus-bin-2.3.0.4 382
-RMD160 c36a569e0d75e0983a299fd8e1cb0e6c0713277f files/digest-azureus-bin-2.3.0.4 382
-SHA256 663b9bcc285b06fbce601fd1b0eac93d2e9d0169cb04fbb31b4bbfdb54eaca1a files/digest-azureus-bin-2.3.0.4 382
-MD5 b621e2bdab22bfc427a7edc41465005e files/digest-azureus-bin-2.3.0.6 1078
-RMD160 e82d4f79b2c9729a42f3f8adec0e9b3d055cda9c files/digest-azureus-bin-2.3.0.6 1078
-SHA256 5fa675700db348348eee81a7b20e739768f99b6e300a3ab08775d4ed8fdb7793 files/digest-azureus-bin-2.3.0.6 1078
-MD5 387e475968b069506fb856e1e99695b0 files/digest-azureus-bin-2.4.0.0 1078
-RMD160 7e7337653d8023a7060bcdca138fdcfa1bc32566 files/digest-azureus-bin-2.4.0.0 1078
-SHA256 05c972ba21ad417fa6fd6d938c44a90a97868f98a4eac829be161edb6eb376b6 files/digest-azureus-bin-2.4.0.0 1078
+MD5 bc1047baa201ebb824f6f94b1cf289a9 azureus-bin-2.3.0.6.ebuild 3064
+MD5 04e00e08e41acb88e0ad2b3d1cf28d6c azureus-bin-2.4.0.2.ebuild 3064
+MD5 e6f5a8d21bd0da79aac766231f65d4f0 azureus-bin-2.3.0.4.ebuild 3848
 MD5 0d0384a2c9c3495944bd250aac2fd8a0 metadata.xml 276
-RMD160 30333f8e6bf59b86caedb107f84c17d6e4c0dd20 metadata.xml 276
-SHA256 ede99d07f35a45343fe0658cd64fa3b6fac103ca95b9285b94ebfa6883e7f3a0 metadata.xml 276
+MD5 387e475968b069506fb856e1e99695b0 files/digest-azureus-bin-2.4.0.0 1078
+MD5 b621e2bdab22bfc427a7edc41465005e files/digest-azureus-bin-2.3.0.6 1078
+MD5 70c17db47c9a596929112714f82ac010 files/azureus.desktop 153
+MD5 2d3136c60488dd51bef012cbcb59201b files/azureus.png 743
+MD5 96c803a4cc42698b83f65de016408e41 files/digest-azureus-bin-2.4.0.2 1078
+MD5 237fc0642db8aae1caac9d5316ec4412 files/digest-azureus-bin-2.3.0.4 382
+MD5 6cf2c1041726decd44a55736aadda4f7 files/azureus-bin-gentoo.sh 1056
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEC1ikOpjtAl+gMRURAmrzAJ4oTir7+fwjWZxyaUx8JMnnDPVvyQCfVbns
-I3TfZ+L+fJ/q0EwkP3Q5KJ8=
-=dBJY
+iD8DBQFEG9ydOpjtAl+gMRURApk4AJ4iS1NSNTckLzG+F8/KHCLHQ6BdTQCfZ3lJ
+IvRS1lkhpwwEjamArMbTQwE=
+=R3yu
 -----END PGP SIGNATURE-----
