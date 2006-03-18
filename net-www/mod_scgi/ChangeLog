@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_scgi
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/ChangeLog,v 1.13 2005/02/17 15:45:56 hollow Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/ChangeLog,v 1.14 2006/03/18 11:32:27 kloeri Exp $
+
+  18 Mar 2006; Bryan Østergaard <kloeri@gentoo.org
+  mod_scgi-1.2_alpha1-r2.ebuild:
+  Revert to ~x86, bug 106455.
 
   17 Feb 2005; Benedikt Boehm <hollow@gentoo.org> mod_scgi-1.2.ebuild:
   cleanup
