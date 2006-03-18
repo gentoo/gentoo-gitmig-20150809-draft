@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.6.ebuild,v 1.4 2006/02/04 18:36:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.6.ebuild,v 1.5 2006/03/18 20:29:26 flameeyes Exp $
+
+inherit eutils toolchain-funcs
 
 IUSE=""
-
-inherit flag-o-matic eutils
 
 DESCRIPTION="Extensible binary format library (kinda like XML)"
 HOMEPAGE="http://www.matroska.org/"
@@ -19,8 +19,9 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
+
+	epatch "${FILESDIR}/${P}-respectflags.patch"
 
 	if use ppc-macos; then
 		sed -i \
@@ -30,14 +31,12 @@ src_unpack() {
 			-e 's/LD=$(CXX)/LD=libtool/' ${S}/make/linux/Makefile \
 				|| die "sed Makefile failed"
 	fi
-
-	sed -i -e 's:CXXFLAGS=:CXXFLAGS+=:g' ${S}/make/linux/Makefile
 }
 
 src_compile() {
 	cd ${S}/make/linux
 
-	emake PREFIX=/usr || die "make failed"
+	emake PREFIX=/usr CXX="$(tc-getCXX)"|| die "make failed"
 }
 
 src_install() {

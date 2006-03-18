@@ -1,0 +1,13 @@
+Index: libebml-0.7.6/make/linux/Makefile
+===================================================================
+--- libebml-0.7.6.orig/make/linux/Makefile
++++ libebml-0.7.6/make/linux/Makefile
+@@ -94,7 +94,7 @@ $(LIBRARY): $(objects)
+ 	$(RANLIB) $@
+ 
+ $(LIBRARY_SO): $(objects_so)
+-	$(CXX) -shared -Wl,-soname,$(LIBRARY_SO_VER) -o $(LIBRARY_SO_VER) $(objects_so)
++	$(CXX) $(LDFLAGS) -shared -Wl,-soname,$(LIBRARY_SO_VER) -o $(LIBRARY_SO_VER) $(objects_so)
+ 	ln -s $(LIBRARY_SO_VER) $(LIBRARY_SO)
+ 
+ clean:

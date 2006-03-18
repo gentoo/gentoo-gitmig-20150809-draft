@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c317496c75a5ac7218315a9eeb9cef5f ChangeLog 8455
-RMD160 7ee0e978d4fb793fdf1210abda2763fbe9cd2383 ChangeLog 8455
-SHA256 8c175ca374cd77586684340827d9f224736dae8ccf159c4425a75c128693bc17 ChangeLog 8455
+MD5 aeae2f9d4dbe1c519946bdca2f920704 ChangeLog 8614
+RMD160 11bc28e1491bdb52ca36a7a915a01af65992ae10 ChangeLog 8614
+SHA256 e48b98b9488dfd85ae31f5066ca491032efe505a63ff97fcef04e560a0bed413 ChangeLog 8614
 MD5 3ff5642e6fac5f3c15a074ae89af2e6c files/digest-libebml-0.7.1-r1 65
 RMD160 b57f2f077395d506b2f55357d9ba875a2cd7f26a files/digest-libebml-0.7.1-r1 65
 SHA256 71c720c6c1a4e053c8aaf6a2beae552e45890280327362b70c5fb938db46b139 files/digest-libebml-0.7.1-r1 65
@@ -16,6 +16,9 @@ SHA256 9b65bc8c5e9190c5cc376e15dbb05c23cf89cc60ca1923ff2d829e1fc23578a6 files/di
 MD5 c180195692ccef2d8a8f28490dc890f3 files/digest-libebml-0.7.6 65
 RMD160 0df6beea27a10994b898939a9ae9f44ab5475c5a files/digest-libebml-0.7.6 65
 SHA256 3a13ac27011f585ff452376b7baed7e8b3d309c5b032c7fdfb211982482d172e files/digest-libebml-0.7.6 65
+MD5 9f62676e43427c9c403536811f4e1a0e files/libebml-0.7.6-respectflags.patch 503
+RMD160 95af5bb7bc5f7de1641a8f565cdb0a0c5c82a93c files/libebml-0.7.6-respectflags.patch 503
+SHA256 46077541f6fbe9e83f4849cff1beddfb112a4b4b660be863beb44040ef489153 files/libebml-0.7.6-respectflags.patch 503
 MD5 505ac5c579900c6a541ced0d9cc9442e files/libebml-shared.patch 1880
 RMD160 ed2c1836f8f22b4d0568b50a4c79bb1ba032754b files/libebml-shared.patch 1880
 SHA256 ed5b7c3f74d097483102a23a491b1664c16dab2b9bafe65c35096bf9284063a9 files/libebml-shared.patch 1880
@@ -31,16 +34,16 @@ SHA256 e463d74ca263f3d16e24c16130b28b8b69b3a68766a42d823df28867270beaa5 libebml-
 MD5 9cd165874cd7f05f7746799afbcdd405 libebml-0.7.5.ebuild 1135
 RMD160 8a66f9eadeb448aa91940236a48ade446c659fc2 libebml-0.7.5.ebuild 1135
 SHA256 0d1600dcc8265bf0e525653c5357d7a2781b56f5b1ce8a6befd11906bbc8b553 libebml-0.7.5.ebuild 1135
-MD5 dceff0a727652cf8820babac11049e41 libebml-0.7.6.ebuild 1134
-RMD160 71544988afbdc493671b773249b76342773eaa41 libebml-0.7.6.ebuild 1134
-SHA256 1de652cb2dfa13bdf34cbada00a66581ec44183d07eb79a1e5b2d239f9822e59 libebml-0.7.6.ebuild 1134
+MD5 0b82192a06c1af7d7fe49044d86bed24 libebml-0.7.6.ebuild 1138
+RMD160 2dd3fef463ce8f6aa5f716ca0854f54eabf3b211 libebml-0.7.6.ebuild 1138
+SHA256 d7f14282a5213c9373dd43716483ad058caa854ba20fbe31ee01995c7b1de561 libebml-0.7.6.ebuild 1138
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 RMD160 6e3fccd1ae62f02a0cb28d319aa185af0020822d metadata.xml 225
 SHA256 1a7f3e805478b42bc379b2a36944579d34d7e66ba5bf418a651e1cd58ad0a7f5 metadata.xml 225
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDDugAiZjviIA2XgRAs3LAJ98LWNqP7IxpLIKW+9YJCZ2b7u25gCguJXY
-faZ91atnDslc3GJ2ldg8PVk=
-=5NFT
+iD8DBQFEHG20AiZjviIA2XgRAvfiAKDfUkPtTk672qR39jsgx1cJxZBySgCfZsDW
+jzMe91LnC4PkqCycfVTc1SY=
+=JoyH
 -----END PGP SIGNATURE-----
