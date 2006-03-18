@@ -1,0 +1,39 @@
+Index: libupnp-1.2.1a/ixml/src/Makefile
+===================================================================
+--- libupnp-1.2.1a.orig/ixml/src/Makefile
++++ libupnp-1.2.1a/ixml/src/Makefile
+@@ -95,7 +95,7 @@ endif
+ VERSION=1.2.1
+ 
+ CFLAGS += -fPIC -c -Wall
+-C2FLAGS = -Wall $(DEFS) -shared -Wl,-soname,$(TARGET_OUTPUT)
++C2FLAGS = -Wall $(DEFS) $(LDFLAGS) -shared -Wl,-soname,$(TARGET_OUTPUT)
+ INCLUDES = -I. -I../inc -Iinc
+ 
+ ifeq ($(EFENCE),1)
+Index: libupnp-1.2.1a/upnp/src/makefile
+===================================================================
+--- libupnp-1.2.1a.orig/upnp/src/makefile
++++ libupnp-1.2.1a/upnp/src/makefile
+@@ -73,7 +73,7 @@ LIBS+= -lefence  
+ endif
+ 
+ INCLUDES = -I inc -I ../inc -I inc/tools
+-C2FLAGS = -Wall $(DEFS) -shared -Wl,-soname,libupnp.so
++C2FLAGS = -Wall $(DEFS) $(LDFLAGS) -shared -Wl,-soname,libupnp.so
+ 
+ ifeq ($(DEBUG),1)
+ DBG=DEBUG=1
+Index: libupnp-1.2.1a/threadutil/src/Makefile
+===================================================================
+--- libupnp-1.2.1a.orig/threadutil/src/Makefile
++++ libupnp-1.2.1a/threadutil/src/Makefile
+@@ -84,7 +84,7 @@ endif
+ CXX =$(CROSS_COMPILER)g++
+ CFLAGS += -fPIC -Wall -D_REENTRANT -I../inc
+ INCLUDE =
+-SHAREDFLAGS = -rdynamic -shared -Wl,-soname,
++SHAREDFLAGS = $(LDFLAGS) -rdynamic -shared -Wl,-soname,
+ 
+ libthreadutil.so_objects = $(OBJ_DIR)FreeList.o    \
+                            $(OBJ_DIR)LinkedList.o  \

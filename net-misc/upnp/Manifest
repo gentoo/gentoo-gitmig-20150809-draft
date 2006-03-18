@@ -1,20 +1,43 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 105ff63d161c52a3e5e5e90146055e79 ChangeLog 1649
+MD5 07ef66a319d3e12793604f8f58a7f885 ChangeLog 1799
+RMD160 922095772eb9eb78d92562219ae4cd3871ef9d15 ChangeLog 1799
+SHA256 271df70983614289cbd0ae4392c44ebb7fcec10c5395f448354ec4cd8fb040d7 ChangeLog 1799
 MD5 9c84a2a05767ba2a9032b767c32b19d9 files/digest-upnp-1.0.4 65
+RMD160 8d982194115143a0b5fae30bd8f548cb50865d50 files/digest-upnp-1.0.4 65
+SHA256 ea2c4e161f02a77dc9e0be56f0329f0e48ba26c3c00717fa919c44f55ad24db9 files/digest-upnp-1.0.4 65
 MD5 9c84a2a05767ba2a9032b767c32b19d9 files/digest-upnp-1.0.4-r1 65
+RMD160 8d982194115143a0b5fae30bd8f548cb50865d50 files/digest-upnp-1.0.4-r1 65
+SHA256 ea2c4e161f02a77dc9e0be56f0329f0e48ba26c3c00717fa919c44f55ad24db9 files/digest-upnp-1.0.4-r1 65
 MD5 3dbbca36405d3fb80da9e680a2457e1e files/digest-upnp-1.2.1a 66
+RMD160 343b66b4b7f0968fb8b45ef50ccac0d859d996cc files/digest-upnp-1.2.1a 66
+SHA256 c05bb2e39a269d282e3c1bdaa42d7aac7755bbae8ddf0ac53860b63f50dbc68b files/digest-upnp-1.2.1a 66
 MD5 c4aa95f0d28d69430c3521a3992e552a files/libupnp-1.2.1a-fbsd.patch 6469
+RMD160 839d612f5f542fd543a3ad84b7a741d2d2ab098b files/libupnp-1.2.1a-fbsd.patch 6469
+SHA256 cdc5164c681cea850bfda3ce2010dccedbfc84828eda7dc3f91338cc75f98573 files/libupnp-1.2.1a-fbsd.patch 6469
 MD5 821691c8c7f957f184793cb095707b7b files/libupnp-1.2.1a-gcc4.patch 666
+RMD160 e45d67dffc22ceba77bcb266c8d9e79590c97d5c files/libupnp-1.2.1a-gcc4.patch 666
+SHA256 163c4fabe3911441a50350f8014be4ce37889d559616dbb43d31f7c91a470409 files/libupnp-1.2.1a-gcc4.patch 666
+MD5 5a5138abf3b24355d111f9d6adaaa400 files/libupnp-1.2.1a-respectflags.patch 1398
+RMD160 aac05a6ce685514930df977342a78b79d1e71024 files/libupnp-1.2.1a-respectflags.patch 1398
+SHA256 58757f0e37eb03aa50f2789c0c6fb9b4b2b21d736bf0a8d614bd33f34b30562e files/libupnp-1.2.1a-respectflags.patch 1398
 MD5 d1e8a04f3971c238d992f69d683fe65b files/msmessenger.patch 590
+RMD160 e9aee63621cdd1a7b38caac5ca42924f189d7fe9 files/msmessenger.patch 590
+SHA256 d90a279e25c830c5b8e05e2695a79cc062f04da87b82abc9d4fb8b9dc9ab4a67 files/msmessenger.patch 590
 MD5 1ab317d5868a9b63279d0fd1a2013ff7 upnp-1.0.4-r1.ebuild 919
+RMD160 6535f9679e90556aa971a1ecc69876d36b439ef0 upnp-1.0.4-r1.ebuild 919
+SHA256 89b92ee76bf0b08a925db892ffed79d83c232430d2b99f67d4be955fca6faf13 upnp-1.0.4-r1.ebuild 919
 MD5 a0c64a5cb4d40e2ffa38d1a21c8d5915 upnp-1.0.4.ebuild 859
-MD5 d3298c0295c01240251ea52e81c2daa8 upnp-1.2.1a.ebuild 1516
+RMD160 c48bc0aa136eea2f9da8a49458ab2f16e26fae4c upnp-1.0.4.ebuild 859
+SHA256 6537077eb8f07d3fc23ad46da14226c3576fa2ccdb239708ef56d068e5758cb1 upnp-1.0.4.ebuild 859
+MD5 7215fa0dbb1f1fd8098961de725f207c upnp-1.2.1a.ebuild 1587
+RMD160 1540b50e813c2bd1369090872d8e20124dd5e413 upnp-1.2.1a.ebuild 1587
+SHA256 3505c31891fa8518c3df08d67a2a30b21dd645db9b8b7bfcd08e0c50d099b5d2 upnp-1.2.1a.ebuild 1587
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDn+DaAiZjviIA2XgRAiCSAJ9xLu8Tne7kak31RbKy/g1XMK2DHQCg6AkW
-gczD1nPjSGsLP+tWBeAnoqQ=
-=B69J
+iD8DBQFEHIJHAiZjviIA2XgRAlqEAKCLelGHYDAWXCObMLe2vrNRSB6x8QCfWq3p
+pxO7/n3t5JmExXXupPTDB9Q=
+=DEsh
 -----END PGP SIGNATURE-----
