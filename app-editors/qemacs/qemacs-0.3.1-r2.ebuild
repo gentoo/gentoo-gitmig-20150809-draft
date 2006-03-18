@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r2.ebuild,v 1.1 2005/04/23 07:50:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r2.ebuild,v 1.2 2006/03/18 23:41:53 joshuabaergen Exp $
 
 inherit eutils
 
@@ -13,8 +13,14 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="X png unicode xv"
 
-DEPEND="X? ( virtual/x11 )
+# For those so inclined, the libXv dep can probably
+# be made conditional on the xv USE flag somehow.
+RDEPEND="X? ( || ( x11-libs/libXv virtual/x11 ) )
 	png? ( =media-libs/libpng-1.2* )"
+DEPEND="${RDEPEND}
+	X? ( || ( ( x11-libs/libXft
+				x11-proto/xextproto )
+			virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}

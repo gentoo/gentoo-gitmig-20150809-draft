@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r1.ebuild,v 1.3 2005/03/17 13:46:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r1.ebuild,v 1.4 2006/03/18 23:41:53 joshuabaergen Exp $
 
 inherit eutils
 
@@ -13,8 +13,12 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="X png unicode"
 
-DEPEND="X? ( virtual/x11 )
+RDEPEND="X? ( || ( x11-libs/libXv virtual/x11 ) )
 	png? ( =media-libs/libpng-1.2* )"
+DEPEND="${RDEPEND}
+	X? ( || ( ( x11-libs/libXft
+				x11-proto/xextproto )
+			virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}
