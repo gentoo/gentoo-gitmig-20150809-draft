@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5106 2006/03/19 14:41:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5107 2006/03/19 18:32:48 halcy0n Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -907,12 +907,6 @@ net-im/wildfire
 # Diego Pettenò <flameeyes@gentoo.org> (18 August 2005)
 # Toxine needs to be verified with upstream for a few issues.
 media-video/toxine
-
-# Jory A. Pratt <anarchy@gentoo.org> (15 Aug 2005)
-# Mozilla rpath inclusion. For testing purposes only.
-=mail-client/mozilla-thunderbird-1.0.6-r5
-=www-client/mozilla-firefox-1.0.6-r6
-=www-client/mozilla-1.7.11-r2
 
 # Donnie Berkholz <spyderous@gentoo.org> (07 Aug 2005)
 # Modularized X, upstream release candidates
