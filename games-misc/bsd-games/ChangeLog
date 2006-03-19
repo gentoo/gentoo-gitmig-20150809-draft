@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/bsd-games
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.18 2006/03/17 19:05:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.19 2006/03/19 21:06:39 dertobi123 Exp $
+
+  19 Mar 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  bsd-games-2.17-r1.ebuild:
+  ppc stable, bug #122399
 
 *bsd-games-2.17-r1 (17 Mar 2006)
 
