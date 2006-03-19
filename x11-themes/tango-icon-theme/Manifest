@@ -1,58 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 536c9db7a61798374c1fc8d850d4d139 ChangeLog 1586
-RMD160 a9514fc37068f2ec4561963fcf328534ee93639a ChangeLog 1586
-SHA256 090f14193a632ca26dbaf373253afc0c9a4d1db7fe7b62525b4b68330ffea019 ChangeLog 1586
+MD5 34984da35922a97e19bc4179bfb9de2b ChangeLog 1703
 MD5 f6ad40c3e91258a909647a1e4bcf1ea2 files/digest-tango-icon-theme-0.6.3 74
-RMD160 086446d93fbdd4e9d9a8b84dce654e8ba54d6184 files/digest-tango-icon-theme-0.6.3 74
-SHA256 1a7bc9a21248284b3ad512bd6b4a172889cd32c0a1b157b5e25698f739c61ba9 files/digest-tango-icon-theme-0.6.3 74
 MD5 80c36d58e0284d99ef58201c2b6d6f80 files/digest-tango-icon-theme-0.6.4 75
-RMD160 3d563da0b35b0a4d2cbfb73b2d7fb262309c0adc files/digest-tango-icon-theme-0.6.4 75
-SHA256 e90b6252ee1aa083f8b2dd50eff268cddc848fc6e88bf7418f573684679d53bc files/digest-tango-icon-theme-0.6.4 75
 MD5 b5bcd4c849a3bfa0fa722a6de432d846 files/digest-tango-icon-theme-0.6.5 75
-RMD160 260cf1a6fbb665bf707102c0d52608aea6213370 files/digest-tango-icon-theme-0.6.5 75
-SHA256 b14f5b9731260d121f07ebe8b3d107d8a6b8c9da9849ed8050a8c4faf793ef3e files/digest-tango-icon-theme-0.6.5 75
 MD5 5579645a43e80b3286494dc8ce69456c files/digest-tango-icon-theme-0.6.6 75
-RMD160 1e59c10125693814cb2d27b0d81eb49deaa1129b files/digest-tango-icon-theme-0.6.6 75
-SHA256 fb95e6d2afb22da51b1d80a38d3f9cb921558a62a56950258151c54c8f62ffef files/digest-tango-icon-theme-0.6.6 75
 MD5 131c8ed8fa3736f96f72b8f922d7a7f5 files/digest-tango-icon-theme-0.6.7 271
-RMD160 014989e9532f0352100c09494292a25f88cfccfe files/digest-tango-icon-theme-0.6.7 271
-SHA256 299765e519e285847cd99bdbe57e6ed95e7e78f2d90169e7b1e38ec74a4ff0d6 files/digest-tango-icon-theme-0.6.7 271
 MD5 e361384432ecf8b849d53d44db33e53e files/digest-tango-icon-theme-0.7.0 271
-RMD160 a1a8b92f372feba7334c53e2058e2d5667610396 files/digest-tango-icon-theme-0.7.0 271
-SHA256 3c97c006d4e1c5071c8eefb9390b68e33ac1de59569531d19203ba9229604757 files/digest-tango-icon-theme-0.7.0 271
 MD5 b678602240be04a317c8cd7984d5fe56 files/digest-tango-icon-theme-0.7.1 271
-RMD160 848bcce73ad9cea96cd05304e3c3283fa912f969 files/digest-tango-icon-theme-0.7.1 271
-SHA256 e4ac1de862baee8f746194ca5db733ae487d09777635c4cac37df8cd9e3d2361 files/digest-tango-icon-theme-0.7.1 271
 MD5 a3014aa05822105a2b16fe0bd52692af metadata.xml 289
-RMD160 1cc2aea6ecccdc0e9164bcabd4ce089df7dcf02c metadata.xml 289
-SHA256 e38cf280de0fa48b4f7cb94581efddfe358598e3652f5a7a5cda9a7c4226a9c6 metadata.xml 289
 MD5 5d1ef4a5c5c1bffcc5afb462bb531e8b tango-icon-theme-0.6.3.ebuild 900
-RMD160 14d0f9ff60aa3282535ac3a968a3afedaa5c9841 tango-icon-theme-0.6.3.ebuild 900
-SHA256 51d08748fdeaecd363c67fd2ec773b0f8233d5cbb21ac4e3bc53da5043a42f5c tango-icon-theme-0.6.3.ebuild 900
 MD5 17f9873f2935aa8740bfcaaf4dadafe6 tango-icon-theme-0.6.4.ebuild 909
-RMD160 b0c60fa7cd2bf951aea9b5b4cd2dad413ad994b2 tango-icon-theme-0.6.4.ebuild 909
-SHA256 1c7043b4fc50436ec46506129fcb9178302f2669beacb6326a6a08a61d5ce8a0 tango-icon-theme-0.6.4.ebuild 909
 MD5 5cc90a3500bda895cdac0ad4b1ba86e2 tango-icon-theme-0.6.5.ebuild 911
-RMD160 d65eaeb28c7ba88b366678407fa20c0836463040 tango-icon-theme-0.6.5.ebuild 911
-SHA256 c92a165f0c73ba8a026b46cca231744a198f7cae101df4f0e60503628b3cea65 tango-icon-theme-0.6.5.ebuild 911
 MD5 5746240a9b16c5306ca7adc58a6c0150 tango-icon-theme-0.6.6.ebuild 911
-RMD160 ece32ba30bd5875675b14acd36d05ade24a7d8f7 tango-icon-theme-0.6.6.ebuild 911
-SHA256 b815fbe124d5ee18c669f1612c7202a063d341243364556494b66c53e83cd5ed tango-icon-theme-0.6.6.ebuild 911
 MD5 dc148c9f47412933ad0b964e04d9c5a1 tango-icon-theme-0.6.7.ebuild 911
-RMD160 d864610f8272ce83801120e6f1e281117ffe6bb3 tango-icon-theme-0.6.7.ebuild 911
-SHA256 4a3235d6e61f42338bb2111896704116ef1943f61994b1c2d8a85b9226e22e92 tango-icon-theme-0.6.7.ebuild 911
-MD5 ca8774ce79cc67e7969369cd96677f50 tango-icon-theme-0.7.0.ebuild 911
-RMD160 a38bbeea3c1689aa2b26967b358312664934d124 tango-icon-theme-0.7.0.ebuild 911
-SHA256 3aa5c87449c2cad08256f47333e0615b9dea74a64efeda8965e3241313772373 tango-icon-theme-0.7.0.ebuild 911
+MD5 719ea1c2940ffad381bb5ea4f0cf5274 tango-icon-theme-0.7.0.ebuild 908
 MD5 6a8920722aa3587b758a9b249e867b99 tango-icon-theme-0.7.1.ebuild 911
-RMD160 a71ce85db3c2b23c36722eebfd289d1df451219f tango-icon-theme-0.7.1.ebuild 911
-SHA256 bba2e68eae10e60eabe3bf2bca205d42df4a01d80c55bca8bdf95701283f7484 tango-icon-theme-0.7.1.ebuild 911
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBeDpwUpWvClEHQoRAvEqAKCIDvDjrHQWdXmTI8cj4iSaRY0xegCdF1ST
-Z05SkuqZ6adYRkewczXyTtE=
-=Zn57
------END PGP SIGNATURE-----
