@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1605ddb5cb95d3da9cd52ae74cc6d2a6 ChangeLog 706
-RMD160 1f6620c67fe9ed6d8bec5efa7148b4948f81b0c1 ChangeLog 706
-SHA256 9d3b9f7c525045d6fa5e116d2d0a5607448b71e5e9ebed65d0554571ccb6aa1b ChangeLog 706
+MD5 17d43bf4bd27b5bd1674cc4caf0981fd ChangeLog 804
+RMD160 3e1e60ff1025c6207cccad529ba7ad4bf6e7bd50 ChangeLog 804
+SHA256 608e9d19f7f4920026c938318cdc20256a98a8439919c8a84047bf4c22287140 ChangeLog 804
 MD5 42b9d917b2857228cfc0225c811be300 files/digest-sylpheed-claws-rssyl-0.3 229
 RMD160 e4d5ffadb1ab9f62f5eb0d728d43038232beb764 files/digest-sylpheed-claws-rssyl-0.3 229
 SHA256 084c5b3b810868857f16dc3b33b8a75d8a1c0d69b264d4c0b202898eafe86577 files/digest-sylpheed-claws-rssyl-0.3 229
@@ -16,13 +16,13 @@ SHA256 384109085a75ab2b172fa816ef2dd853a88467d9ee153ca55e623806b1ad3c30 metadata
 MD5 d841acb1787be4ef5561067e1103c7fb sylpheed-claws-rssyl-0.3.ebuild 828
 RMD160 5ab34e896bbbd346f21b122ffe5a2f3734d6d674 sylpheed-claws-rssyl-0.3.ebuild 828
 SHA256 22ed4cef9a1ee0c32d44b475daa73ad39548318eec1472fe846e898719ca770a sylpheed-claws-rssyl-0.3.ebuild 828
-MD5 1cb1e74ba74097db8b2ab6ec1447498e sylpheed-claws-rssyl-0.4.ebuild 962
-RMD160 9b5676c737c26d9fd637442ca84f6cb94ccd491f sylpheed-claws-rssyl-0.4.ebuild 962
-SHA256 07918960e573157d1eed6654ac81700d2398eda09c8962b26043ba36fdafdfc7 sylpheed-claws-rssyl-0.4.ebuild 962
+MD5 aac39fd52fb0bbce37e2b907ff9c6391 sylpheed-claws-rssyl-0.4.ebuild 961
+RMD160 9406457d25bd23c75f2273d17e956835e35fc64b sylpheed-claws-rssyl-0.4.ebuild 961
+SHA256 031e8aa788b1016f6467ae815f045d53b47097a87b2b0ebc861f4499cf72ac20 sylpheed-claws-rssyl-0.4.ebuild 961
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEAhYXQlM6RnzZP+IRApG0AJ9kpp2kFs5B3A4i244QpBbQrTz3wACdHjF6
-0yvm+5pd5Hvonp31TAVqE+M=
-=yZ4M
+iD8DBQFEHbco10xuJSrg3/sRAnDPAJ9sxn9g6QJBgZUagwESl+jbFWkAFACfZAwA
+xvOLJ2zaX/XnFbo0dNZj9pQ=
+=ns/6
 -----END PGP SIGNATURE-----
