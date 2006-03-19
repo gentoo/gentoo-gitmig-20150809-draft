@@ -1,0 +1,11 @@
+--- vbrfixc/vbrfix.cpp.orig	2003-07-17 19:58:21.000000000 +0200
++++ vbrfixc/vbrfix.cpp	2006-03-17 12:32:41.948814339 +0100
+@@ -348,7 +348,7 @@
+   unsigned char *fred;
+   fred=(unsigned char*)&n;
+   unsigned char t[4];
+-  t[0]=fred[3];t[1]=fred[2];t[2]=fred[1];t[3]=fred[0];
++  t[0]=fred[0];t[1]=fred[1];t[2]=fred[2];t[3]=fred[3];
+   outmp3.fWrite(t,4);
+   //fwrite(t,4,1,outmp3);
+ }
