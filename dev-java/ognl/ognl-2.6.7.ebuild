@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ognl-2.6.7.ebuild,v 1.4 2006/03/04 19:42:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ognl-2.6.7.ebuild,v 1.5 2006/03/19 22:41:14 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -13,13 +13,15 @@ SLOT="2.6"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc source"
 
-DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
-	dev-java/ant-contrib
-	${RDEPEND}"
 RDEPEND=">=virtual/jre-1.4
 	dev-java/javacc
 	=dev-java/javassist-3.1*"
+
+DEPEND=">=virtual/jdk-1.4
+	app-arch/unzip
+	dev-java/ant-core
+	dev-java/ant-contrib
+	${RDEPEND}"
 
 S="${WORKDIR}"
 

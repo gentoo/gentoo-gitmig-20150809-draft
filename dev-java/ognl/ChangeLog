@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ognl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.4 2006/03/04 19:42:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.5 2006/03/19 22:41:14 betelgeuse Exp $
+
+  19 Mar 2006; Petteri Räty <betelgeuse@gentoo.org> ognl-2.6.7.ebuild:
+  added app-arch/unzip to DEPEND
 
   04 Mar 2006; <nichoj@gentoo.org> ognl-2.6.7.ebuild:
   Adding missing ant-contrib dependency.
