@@ -1,10 +1,20 @@
-MD5 d474b14e2341ff76072d44acf24e2b25 ChangeLog 7234
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d7df1803edd72e4a0e1bc5244f12d1ed ChangeLog 7423
 MD5 553e59e99c389fdfe4b29b06bc8ec1fc files/digest-jfsutils-1.1.10 67
 MD5 553e59e99c389fdfe4b29b06bc8ec1fc files/digest-jfsutils-1.1.10-r1 67
 MD5 c1e5f215a1065684cd31897b775413de files/digest-jfsutils-1.1.7 66
 MD5 5d3d4b20f79aed4d73b8ae57d59fdcaf files/digest-jfsutils-1.1.8 66
-MD5 a7e4779549812abfe80afb368a8de6dd jfsutils-1.1.10-r1.ebuild 873
-MD5 099f17bf54b2dcaaa69658eacdd0eb8f jfsutils-1.1.10.ebuild 793
+MD5 1840b40f288cc90e4548ee6ff073b89e jfsutils-1.1.10-r1.ebuild 882
+MD5 e52a6f89ca8e99e0dc78d4817773d0b8 jfsutils-1.1.10.ebuild 802
 MD5 5fbdeaf98286f0c36589bc757203c6be jfsutils-1.1.7.ebuild 788
 MD5 b72a6dd935ac2386aa92b6fc203efb05 jfsutils-1.1.8.ebuild 792
 MD5 50282322ba80018fc86b2b1c6c248858 metadata.xml 410
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHdBtViELBEf1JB0RAvcZAJ90MQUUV1FeBUG+b1yvtKTFqfaFDwCeIHpj
+JIYFxjK/8NBW3CxnGfNDMvQ=
+=HZEs
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/jfsutils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.33 2006/01/23 18:07:05 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.34 2006/03/19 21:42:48 ferdy Exp $
+
+  19 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> jfsutils-1.1.10.ebuild,
+  jfsutils-1.1.10-r1.ebuild:
+  Add ~alpha wrt bug #116906. Reported by Stefaan De Roeck <stefaan@gentoo.org>
 
 *jfsutils-1.1.10-r1 (23 Jan 2006)
 
