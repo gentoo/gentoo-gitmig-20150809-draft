@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/tn5250-0.16.5.ebuild,v 1.8 2006/02/23 01:20:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/tn5250-0.16.5.ebuild,v 1.9 2006/03/19 22:21:09 joshuabaergen Exp $
 
 inherit eutils
 
@@ -13,10 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="X ssl slang"
 
-DEPEND="sys-libs/ncurses
-	X? ( virtual/x11 )
+RDEPEND="sys-libs/ncurses
 	ssl? ( dev-libs/openssl )
 	slang? ( sys-libs/slang )"
+DEPEND="${RDEPEND}
+	X? ( || ( x11-libs/libXt virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}

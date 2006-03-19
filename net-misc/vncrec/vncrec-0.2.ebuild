@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vncrec/vncrec-0.2.ebuild,v 1.4 2004/07/14 06:39:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vncrec/vncrec-0.2.ebuild,v 1.5 2006/03/19 22:18:04 joshuabaergen Exp $
 
 DESCRIPTION="VNC session recorder and player"
 HOMEPAGE="http://www.sodan.org/~penny/vncrec/"
@@ -11,7 +11,15 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( ( x11-libs/libXaw
+				x11-libs/libXp )
+			virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( ( app-text/rman
+			x11-misc/gccmakedep
+			x11-misc/imake
+			x11-proto/xextproto )
+		virtual/x11 )"
 
 src_compile() {
 	touch vncrec/vncrec.man
