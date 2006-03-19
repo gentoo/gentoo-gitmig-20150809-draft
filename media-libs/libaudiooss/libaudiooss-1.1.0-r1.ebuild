@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaudiooss/libaudiooss-1.1.0-r1.ebuild,v 1.6 2004/07/14 19:59:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaudiooss/libaudiooss-1.1.0-r1.ebuild,v 1.7 2006/03/19 22:53:36 joshuabaergen Exp $
 
 HOMEPAGE="http://romeo.skybert.no/~erik/linux.html"
 DESCRIPTION="Transparent OSS emulation on top of the Network Audio System"
@@ -11,8 +11,12 @@ SLOT="0"
 KEYWORDS="~x86 amd64"
 IUSE=""
 
-DEPEND="virtual/x11
-	media-libs/nas"
+RDEPEND="media-libs/nas
+	|| ( x11-libs/libX11 virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( ( x11-misc/gccmakedep
+			x11-misc/imake )
+		virtual/x11 )"
 
 S=${WORKDIR}/audiooss-${PV}
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libaudiooss
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaudiooss/ChangeLog,v 1.4 2004/06/24 23:05:48 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaudiooss/ChangeLog,v 1.5 2006/03/19 22:53:36 joshuabaergen Exp $
+
+  19 Mar 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  libaudiooss-1.1.0-r1.ebuild:
+  Add modular X dependencies.
 
   10 Dec 2003; Jon Portnoy <avenj@gentoo.org> libaudiooss-1.1.0-r1.ebuild :
   AMD64 keyworded.
