@@ -1,15 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c5822d878cc8f4696649c07fda4da893 kbiff-3.7.1.ebuild 628
-MD5 7cfcaf9312ecfb85fc8016413c14c02a ChangeLog 3107
-MD5 1a23b5c0867f884d4aceb48c3f5f1e48 metadata.xml 178
-MD5 cc9bbe8cd86ed11daedf19d99995007e files/kbiff-3.7.1-configure-arts.patch 3567
+MD5 6fbf9202cf84f61896b9d2144c2f5949 ChangeLog 3281
+RMD160 6100e32e57a2c6ffe29a250705d021ab99b3a6b5 ChangeLog 3281
+SHA256 9a220aebfb2283bc240b0cd09f7a1bbfabc741c9b41bdf6f5008c8fe218ca0dc ChangeLog 3281
 MD5 a25a5604b19a8f513e122df889b794ae files/digest-kbiff-3.7.1 64
+RMD160 3906427d186f6ef8bbe3f5706927292a6f07f2ed files/digest-kbiff-3.7.1 64
+SHA256 6515f5bb5c80234568a08d23fe0db3e77d140c3f6516fc935b30f11813150848 files/digest-kbiff-3.7.1 64
+MD5 8be4cba23e63e9a1f43268d7c0f58470 files/digest-kbiff-3.8 232
+RMD160 417de53d4593170d040cb3bcc16016d22af9cc76 files/digest-kbiff-3.8 232
+SHA256 54bbe3aaf6bf32288b2c0204f27df9051a796edda2d6191dfffad87ce0f4605d files/digest-kbiff-3.8 232
+MD5 cc9bbe8cd86ed11daedf19d99995007e files/kbiff-3.7.1-configure-arts.patch 3567
+RMD160 c1fa62e97da448e873c4b75868686430a7b020d3 files/kbiff-3.7.1-configure-arts.patch 3567
+SHA256 93bd0f385573c256559b3cad79fdc5c3d9968912f2dde49ea2ba86686f6eab6e files/kbiff-3.7.1-configure-arts.patch 3567
+MD5 c5822d878cc8f4696649c07fda4da893 kbiff-3.7.1.ebuild 628
+RMD160 0cb37ff5624a9189f06dc332263b71fc9bcaf6e6 kbiff-3.7.1.ebuild 628
+SHA256 f6b89ce73a7db9d19dabb9e282e433cd175cb441e4f2c881a4f574999ffdbca9 kbiff-3.7.1.ebuild 628
+MD5 33c37aaedb068f1a7cc381753b84bf78 kbiff-3.8.ebuild 622
+RMD160 5ffff752620cc75fbc12229f270ab53b26f4ca61 kbiff-3.8.ebuild 622
+SHA256 fe74397ea38845aa1c99f01c76c88d411b8065576e44f770268feb81bfc21dd4 kbiff-3.8.ebuild 622
+MD5 1a23b5c0867f884d4aceb48c3f5f1e48 metadata.xml 178
+RMD160 eaeb7e3b406157f6bd7ec15c03f4e7a0118444a1 metadata.xml 178
+SHA256 f8dd059c0e74a8abdf1077ff833c57266d9766c6aa4cfc09a480b7f2c9277295 metadata.xml 178
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC7phCQlM6RnzZP+IRAvmXAJ9sNSkCojI28ju0TwGhmXNEAXn45gCcCNW8
-lXgIPOenlQS1y9rMgES7nbA=
-=tuWi
+iD8DBQFEHKFS10xuJSrg3/sRAonhAJwN1sbrzY6WRvwP3A2n2dGRT6Hl/ACeOYUy
+0/gUYB+gKJh86DjDC1eT9js=
+=BrLQ
 -----END PGP SIGNATURE-----
