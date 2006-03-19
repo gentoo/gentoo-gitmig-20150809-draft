@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 45d99748f21ef43539bbad97b52c5724 ChangeLog 864
 RMD160 4807d2f13766f294d1626748aa7ce073fa7beda6 ChangeLog 864
 SHA256 22f48dbe97e81747cddd583c70efc4fd1d2c91aebeb777e14263e6f5cda72ac0 ChangeLog 864
@@ -16,3 +19,10 @@ SHA256 840549014aa9a7eec143dec9b9c4fc2cdce1658fadbb6bf1238757c317596829 metadata
 MD5 4fddd904144c45d048fac6d79fb7301d mysql-connector-net-1.0.4.ebuild 1615
 RMD160 95e9e25f576614b562ed179e9a31dcdd4a169543 mysql-connector-net-1.0.4.ebuild 1615
 SHA256 5d8aaa7099f501a960fd7d4f8346d81b4f0fc97a8cca6205925c475b65dd85c7 mysql-connector-net-1.0.4.ebuild 1615
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHdcdCRZPokWLroQRAirVAJ48sENY4W8yMJWE0BBUj4L8OVgeSQCgo5cx
+WdPkokJ56HG9LKlwPWfhRss=
+=oW3x
+-----END PGP SIGNATURE-----
