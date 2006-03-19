@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.6.1.ebuild,v 1.1 2006/02/26 08:43:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.6.1.ebuild,v 1.2 2006/03/19 06:41:15 vapier Exp $
 
 inherit autotools
 
@@ -12,12 +12,13 @@ SRC_URI="mirror://gnu/${PN}/REL-${PV}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls doc"
-S="${WORKDIR}/${MY_P}"
 
 DEPEND="sys-apps/texinfo
 	nls? ( >=sys-devel/gettext-0.10.35 )"
+
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	econf $(use_enable nls) || die
@@ -27,7 +28,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
-	if use doc; then
+	if use doc ; then
 		mv html_chapter/ html_node sharutils.html html_mono/ \
 			pdf/sharutils.pdf.gz "${D}/usr/share/doc/${PF}" \
 			|| die 'documentation installation failed'
