@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tree-DAG_Node
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-DAG_Node/ChangeLog,v 1.1 2006/03/19 00:43:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-DAG_Node/ChangeLog,v 1.2 2006/03/19 15:05:50 nixnut Exp $
+
+  19 Mar 2006; <nixnut@gentoo.org> Tree-DAG_Node-1.05.ebuild:
+  Added ~ppc. Bug #126745
 
 *Tree-DAG_Node-1.05 (19 Mar 2006)
 
