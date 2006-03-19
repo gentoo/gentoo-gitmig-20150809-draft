@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/palmos-sdk-4.0.ebuild,v 1.5 2004/06/24 22:53:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/palmos-sdk-4.0.ebuild,v 1.6 2006/03/19 22:22:25 halcy0n Exp $
 
 inherit rpm
 
@@ -10,7 +10,9 @@ LICENSE="Palm-SDK"
 
 SLOT="4.0"
 KEYWORDS="~x86"
-DEPEND="dev-lang/prc-tools"
+RDEPEND="dev-lang/prc-tools"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 # Note: There is an sdk40-docs.tar.gz but it's actually a zip file, so
 # might as well just get the zip file.
 SRC_URI="sdk40.tar.gz sdk40upd1.tar.gz

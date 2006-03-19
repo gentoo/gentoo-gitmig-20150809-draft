@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.5.1-r1.ebuild,v 1.1 2006/01/23 23:35:38 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.5.1-r1.ebuild,v 1.2 2006/03/19 22:20:51 halcy0n Exp $
 
 inherit gnatbuild flag-o-matic
 
@@ -17,7 +17,8 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${GCCVER}/gcc-core-${GCCVER}.tar
 # only on $PV, so should be safe to use in DEPEND/SRC_URI
 
 KEYWORDS="~amd64 ~x86"
-DEPEND=""
+DEPEND="app-arch/unzip"
+RDEPEND=""
 
 GNATSOURCE="${WORKDIR}/${P}-src"
 

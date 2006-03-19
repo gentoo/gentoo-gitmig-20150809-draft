@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/squeak-basicimage-3.6.5429.ebuild,v 1.3 2004/06/24 22:56:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/squeak-basicimage-3.6.5429.ebuild,v 1.4 2006/03/19 22:28:02 halcy0n Exp $
 
 MY_P="Squeak3.6-5429"
 DESCRIPTION="Squeak basic image file"
@@ -14,7 +14,9 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 PROVIDE="virtual/squeak-image"
 
-DEPEND=">=sys-apps/sed-4"
+RDEPEND=">=sys-apps/sed-4"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}
 

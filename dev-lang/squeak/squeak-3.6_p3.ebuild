@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.6_p3.ebuild,v 1.6 2006/03/07 11:21:17 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.6_p3.ebuild,v 1.7 2006/03/19 22:26:13 halcy0n Exp $
 
 inherit nsplugins libtool flag-o-matic eutils
 
@@ -21,6 +21,8 @@ DEPEND="nas? ( media-libs/nas )
 		virtual/x11 ) )"
 RDEPEND="${DEPEND}
 	virtual/squeak-image"
+DEPEND="${DEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}/Squeak-${MY_PV}"
 
