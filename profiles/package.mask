@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5103 2006/03/18 21:36:19 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5104 2006/03/19 02:06:23 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Doug Goldstein <cardoe@gentoo.org> (18 Mar 2006)
+# Masked for testing
+>=sys-apps/hal-0.5.7
 
 # Diego Pettenò <flameeyes@gentoo.org> (18 Mar 2006)
 # Masked as it requires C++ to build the bindings
