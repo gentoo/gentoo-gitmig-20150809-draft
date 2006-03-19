@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.32 2006/03/12 16:47:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.33 2006/03/19 22:35:50 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -144,7 +144,7 @@ eautomake() {
 
 	[[ -f Makefile.am ]] || return 0
 
-	[[ -f INSTALL && -f AUTHORS && -f ChangeLog ]] \
+	[[ -f INSTALL && -f AUTHORS && -f ChangeLog && -f NEWS ]] \
 		|| extra_opts="${extra_opts} --foreign"
 
 	# --force-missing seems not to be recognized by some flavours of automake
