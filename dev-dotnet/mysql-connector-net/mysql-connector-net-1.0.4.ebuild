@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/mysql-connector-net-1.0.4.ebuild,v 1.3 2005/08/23 19:54:55 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/mysql-connector-net-1.0.4.ebuild,v 1.4 2006/03/19 22:11:31 halcy0n Exp $
 
 inherit eutils multilib mono
 
@@ -14,8 +14,10 @@ KEYWORDS="~ppc ~x86"
 IUSE="doc"
 RESTRICT="nomirror"
 
-DEPEND=">=dev-lang/mono-1.0
+RDEPEND=">=dev-lang/mono-1.0
 		dev-dotnet/nant"
+DEPEND="${RDEPEND}
+		app-arch/unzip"
 
 src_unpack() {
 	mkdir ${WORKDIR}/${P}; cd ${WORKDIR}/${P};

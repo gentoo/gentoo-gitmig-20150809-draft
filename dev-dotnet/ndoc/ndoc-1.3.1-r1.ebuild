@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndoc/ndoc-1.3.1-r1.ebuild,v 1.1 2005/04/03 07:35:39 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndoc/ndoc-1.3.1-r1.ebuild,v 1.2 2006/03/19 22:12:35 halcy0n Exp $
 
 inherit mono
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="debug doc"
 DEPEND=">=dev-lang/mono-1.0
-	>=dev-dotnet/nant-0.85_rc2"
+	>=dev-dotnet/nant-0.85_rc2
+	app-arch/unzip"
 RDEPEND=">=dev-lang/mono-1.0"
 
 S=${WORKDIR}
