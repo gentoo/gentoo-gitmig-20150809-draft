@@ -1,6 +1,13 @@
 # ChangeLog for games-action/bzflag
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.19 2005/10/30 08:27:49 mr_bones_ Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.20 2006/03/19 21:34:29 tupone Exp $
+
+*bzflag-2.0.4.20050930-r1 (19 Mar 2006)
+
+  19 Mar 2006; <Tupone@gentoo.org>
+  +files/bzflag-2.0.4.20050930-callsignfix.patch,
+  +bzflag-2.0.4.20050930-r1.ebuild:
+  Fix for bug #125647 - server can be crashed remotely. Thanks Carlsten Lohrke
 
 *bzflag-2.0.4.20050930 (30 Oct 2005)
 
