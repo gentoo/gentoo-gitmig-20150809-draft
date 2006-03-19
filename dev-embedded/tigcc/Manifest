@@ -1,19 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 60bee4ddc14d654fa6716f0230f9d3ab ChangeLog 1829
+MD5 bb26989085a2bc405a8c3e8d9bf22abd ChangeLog 1932
+RMD160 0847b2d7b863611339b29ab5fe62c522b718d395 ChangeLog 1932
+SHA256 437873cf67f43bc38e71c4df28d2d1369a5d89700a96515680447c8aa02d3aac ChangeLog 1932
 MD5 627b7e86641edb82ffa0702ff65de4c1 files/a68k-fix.patch 625
+RMD160 8849731255aaa0746587d0d36de98a2841a914bf files/a68k-fix.patch 625
+SHA256 8c2f78daafa407fac7c3fc82bb4b4658d2f053741cdb974c0dcdc36ed3f83034 files/a68k-fix.patch 625
 MD5 75b1dd6ba9dd67df855f5d0a3165fd06 files/digest-tigcc-0.95-r2 315
+RMD160 ebbf1cb036f407d9c3bd64e5d54f7579ff3c4bfc files/digest-tigcc-0.95-r2 315
+SHA256 95c0d0573ee2a39498196107e89d9349c2ced72ccc16fa72cbe449bda7108326 files/digest-tigcc-0.95-r2 315
 MD5 1ea537485d88f982402fa3bf8930fd64 files/digest-tigcc-0.95_p3 315
+RMD160 c07eac761fb9ea169f62bf306383dbd418bd6c8f files/digest-tigcc-0.95_p3 315
+SHA256 e41278ab011a44202e7148629252a8defce1d9cdacae531fa1e6e89d5b0dc081 files/digest-tigcc-0.95_p3 315
 MD5 e161f0140b76a6dc3981581bc5103585 files/digest-tigcc-0.96_beta2 318
+RMD160 624654419fbd03bbde080b2761367df5604fc591 files/digest-tigcc-0.96_beta2 318
+SHA256 79d5fc895ab668ea2323a58a959c2f72d1ab915ddad8f5e78bcfc7dd1f2d5c27 files/digest-tigcc-0.96_beta2 318
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
+RMD160 3965c22a153ed350bcbd52de07c08ad47dd03cd7 metadata.xml 165
+SHA256 fb7ede94a0633f77d601e3e81580eac1624a3bca14401a49d94082579507ba0a metadata.xml 165
 MD5 2185d14d5b7a000dd09c66fa6c1425c6 tigcc-0.95-r2.ebuild 6492
+RMD160 f996302f315031df39da80bf0e431242c29a1a41 tigcc-0.95-r2.ebuild 6492
+SHA256 94371782d65cf114cbad5196540c67f5d2f02fa6b601862fef29160fef783fdc tigcc-0.95-r2.ebuild 6492
 MD5 ab3a26d7b8a324524371943f5425e13b tigcc-0.95_p3.ebuild 6493
-MD5 b49fdaa58b7567e5b120152f9f2abac7 tigcc-0.96_beta2.ebuild 6285
+RMD160 8b3c885054ff7153d3c2598a7774f4ff181538df tigcc-0.95_p3.ebuild 6493
+SHA256 d138b1bdb89ec7592a9d82e4247523bd2b52867e95f8045d3a54c50924f3bef8 tigcc-0.95_p3.ebuild 6493
+MD5 aba71e4e3d724b864f2c46e689355bab tigcc-0.96_beta2.ebuild 6307
+RMD160 debae289305d8aa6deabcddc7314a1ad1691ef7a tigcc-0.96_beta2.ebuild 6307
+SHA256 3b1f76a98955668391ef3795a8f57532fe743c3949c89e81a335bf96f1818d2f tigcc-0.96_beta2.ebuild 6307
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDoqwLAiZjviIA2XgRAtncAJwMgMVbqD+LwuGKlNeaOP/e4BYhBwCfYe6B
-hN4AROgNhJRzuQ1Ma7u70OY=
-=E4Kz
+iD8DBQFEHde3CRZPokWLroQRAt0qAKCSNsxcjCFmI/NhnzTTBnEhikEklwCgwQh3
+rA1xAiYhcOSsjxnivowbWf8=
+=q1YG
 -----END PGP SIGNATURE-----
