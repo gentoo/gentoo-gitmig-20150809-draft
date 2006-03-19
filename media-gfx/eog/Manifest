@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a0dc9a212d6fe8ff4ae25843a0460ce8 ChangeLog 13522
+MD5 00c8040574dd18cf50a75387ce083988 ChangeLog 13610
 MD5 9f666ab55cf3a49721c52e65e9f03f7b eog-0.6-r4.ebuild 1199
 MD5 9108fb930b58fa6f30add3d79a41f741 eog-2.10.2.ebuild 1186
 MD5 bdb0bb61727604b4d41fe92f70f5b9ae eog-2.12.1.ebuild 1341
 MD5 d2cd942532aef0b94705c73fcde48119 eog-2.12.2.ebuild 1332
-MD5 52373dc42beaa37132988e9425383e39 eog-2.12.3.ebuild 1333
+MD5 a9a9871aef8179579789dcd060cba8dd eog-2.12.3.ebuild 1333
 MD5 7c060aa5975b0a014a0038dce1c16921 eog-2.14.0.ebuild 1347
 MD5 fa7f4f22e5eeb44b6d71c12d55fe372c eog-2.8.2.ebuild 1139
 MD5 5f786f0751774fc1e127d27e4f0c31e9 files/digest-eog-0.6-r4 59
@@ -20,10 +17,3 @@ MD5 f4785b67530bea551199881bc37d55d5 files/eog-0.6-version_locale_dirs.patch 828
 MD5 56a52e0bf2f415e3ae03f5caaaee1301 files/eog-2.11.90-pkgconfig_macro.patch 655
 MD5 ccb7573c48cc8ef504557fdcda5b2707 files/eog-2.8.0-jpeg_build.patch 1210
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHIb1oGcCqvCmTSIRAueJAJ4jPtBop3cjLCCzq/UP6ZJ7MrFt/wCfVzYO
-5zDf/ubi+bJPoCXguW6muPU=
-=I9Qc
------END PGP SIGNATURE-----
