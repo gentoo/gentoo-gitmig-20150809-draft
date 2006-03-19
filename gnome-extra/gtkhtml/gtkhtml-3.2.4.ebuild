@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.2.4.ebuild,v 1.2 2006/01/12 23:10:04 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.2.4.ebuild,v 1.3 2006/03/19 02:28:10 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -21,7 +21,7 @@ RDEPEND=">=net-libs/libsoup-2.2.1
 	>=gnome-base/libglade-2
 	>=gnome-base/libbonoboui-2.2.4
 	>=gnome-base/gail-1
-	!=gnome-extra/gtkhtml-3.1*"
+	!=gnome-extra/gtkhtml-3.1.*"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.30
