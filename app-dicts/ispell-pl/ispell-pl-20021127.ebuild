@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pl/ispell-pl-20021127.ebuild,v 1.8 2005/01/01 12:55:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pl/ispell-pl-20021127.ebuild,v 1.9 2006/03/19 18:31:45 arj Exp $
 
 DESCRIPTION="Polish dictionary for ispell"
 SRC_URI="mirror://sourceforge/ispell-pl/${P}.tar.gz"
@@ -14,8 +14,13 @@ SLOT="0"
 
 DEPEND="app-text/ispell"
 
+DICTBUILD="./zbuduj.slownik.sh"
+
 src_compile() {
-	./zbuduj.slownik.sh
+	# update the script to be POSIX-compatible
+	sed "s/sort +1/sort -k 1/" $DICTBUILD > $DICTBUILD.tmp
+	cp $DICTBUILD.tmp $DICTBUILD
+	$DICTBUILD
 }
 
 src_install () {
