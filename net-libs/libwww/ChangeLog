@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.51 2006/01/08 12:46:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.52 2006/03/19 22:50:48 ehmsen Exp $
+
+  19 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  +files/libwww-5.4.0-respectflags.patch, libwww-5.4.0-r5.ebuild:
+  Added patch to make Makefiles respect users LDFLAGS,
+  thanks to flameeyes (bug #126863).
 
   08 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
   files/libwww-5.4.0-asneeded.patch:

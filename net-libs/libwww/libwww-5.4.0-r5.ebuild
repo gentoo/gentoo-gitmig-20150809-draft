@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r5.ebuild,v 1.1 2006/01/06 14:31:36 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r5.ebuild,v 1.2 2006/03/19 22:50:48 ehmsen Exp $
 
 inherit eutils multilib autotools
 
@@ -47,6 +47,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-noexport.patch"
 	# Mac OS X has no automake 1.4, only 1.6.3
 	epatch "${FILESDIR}/${P}-automake-macos.patch"
+	# Respect users LDFLAGS, bug #126863.
+	epatch "${FILESDIR}/${P}-respectflags.patch"
 
 	eautoreconf || die "autoreconf failed"
 }
