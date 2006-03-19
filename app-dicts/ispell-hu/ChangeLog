@@ -1,6 +1,14 @@
 # ChangeLog for app-dicts/ispell-hu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ChangeLog,v 1.7 2005/09/09 15:29:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ChangeLog,v 1.8 2006/03/19 18:57:29 arj Exp $
+
+*ispell-hu-1.0 (19 Mar 2006)
+
+  19 Mar 2006; Anders Rune Jensen <arj@gentoo.org> ispell-hu-1.0.ebuild:
+  version bump, possibly fixes #125833
+
+  19 2006; Anders Rune Jensen <arj@gentoo.org> ispell-hu-0.99.4.ebuild:
+  Add ~amd64 keyword. Remove dodoc TODO as it was missing
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> ispell-hu-0.99.4.ebuild:
   Mark 0.99.4 stable on alpha
