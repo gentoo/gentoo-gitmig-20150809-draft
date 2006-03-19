@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.35 2006/02/05 09:00:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.36 2006/03/19 21:46:39 ferdy Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -21,9 +21,6 @@ avi
 
 # No hardware to test
 pda
-
-# Can't get USB working to test
-gphoto2
 
 # No apm support on alpha
 apm
