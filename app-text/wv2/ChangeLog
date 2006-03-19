@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.30 2006/02/06 05:29:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.31 2006/03/19 22:39:38 flameeyes Exp $
+
+  19 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/wv2-0.2.2-respectflags.patch, wv2-0.2.2.ebuild:
+  Add patch to respect LDFLAGS.
 
   06 Feb 2006; Aron Griffis <agriffis@gentoo.org> wv2-0.2.2.ebuild:
   Mark 0.2.2 stable on ia64

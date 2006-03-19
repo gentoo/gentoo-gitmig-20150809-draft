@@ -1,0 +1,14 @@
+Index: wv2-0.2.2/configure.in
+===================================================================
+--- wv2-0.2.2.orig/configure.in
++++ wv2-0.2.2/configure.in
+@@ -245,9 +245,6 @@ else
+ 	AC_MSG_ERROR(* * * No iconv support - unable to continue * * *)
+ fi
+ 
+-CPPFLAGS=$_cppflags
+-LDFLAGS=$_ldflags
+-
+ AC_SUBST(WV_ICONV_CFLAGS)
+ AC_SUBST(WV_ICONV_LDFLAGS)
+ 

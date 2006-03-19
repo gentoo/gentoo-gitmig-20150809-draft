@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.2.2.ebuild,v 1.11 2006/02/06 05:29:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.2.2.ebuild,v 1.12 2006/03/19 22:39:38 flameeyes Exp $
+
+inherit eutils autotools
 
 DESCRIPTION="Excellent MS Word filter lib, used in most Office suites"
 SRC_URI="mirror://sourceforge/wvware/${P}.tar.bz2"
@@ -18,6 +20,15 @@ DEPEND=">=gnome-extra/libgsf-1.8.0
 
 RDEPEND="${DEPEND}
 	media-gfx/imagemagick"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-respectflags.patch"
+
+	eautoreconf
+}
 
 src_install() {
 	einstall || die
