@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ax25-tools-0.0.8-r1.ebuild,v 1.7 2005/03/12 19:51:29 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ax25-tools-0.0.8-r1.ebuild,v 1.8 2006/03/19 22:45:45 joshuabaergen Exp $
 
 inherit eutils check-kernel
 
@@ -16,7 +16,7 @@ IUSE="X"
 DEPEND="virtual/libc
 	sys-libs/zlib
 	>=dev-libs/libax25-0.0.5
-	X? ( virtual/x11 )"
+	X? ( || ( x11-libs/libX11 virtual/x11 ) )"
 
 src_compile() {
 	# If X is disabled, do not build smdiag
