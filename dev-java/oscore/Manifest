@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2ca53ed8e130aa8e3f763181fd883371 ChangeLog 544
+MD5 ff2f733687df120c870cf95de7e31aba ChangeLog 646
+RMD160 848a70dcce0ea142c75d0deef3c2cbff20110dae ChangeLog 646
+SHA256 19584f510b9bcee47dc924199324e9ef056ce5f63489e77732cdbdf778b49912 ChangeLog 646
 MD5 50cd3eee40c13508afc032423ce8c983 files/digest-oscore-2.2.5 62
+RMD160 b8e09bcaa75a151d9e689fd85c33a55b2ea29d73 files/digest-oscore-2.2.5 62
+SHA256 2121387f1b0675e1654aaff5d0f8fc72a4be1e8bf58eedea2778eae9be7c656a files/digest-oscore-2.2.5 62
 MD5 7c159e3cd8bb969251cd66132e66378d files/osbuild.xml 14828
+RMD160 fb3a62fd52b9c3f12a572dc0b0c6bd3200001287 files/osbuild.xml 14828
+SHA256 eb52646da86ffcf9e7933a6b11ce4a34b5a1e53e8997e631c88d7c425bc28a03 files/osbuild.xml 14828
 MD5 f5c1782d855ed6fde1343baa9df18fd2 files/oscore-2.2.5-build.patch 1351
+RMD160 63663cdb52ebfab32890e1ebe775b186e672e747 files/oscore-2.2.5-build.patch 1351
+SHA256 38a3a75a9ec3ec3425da273ddc4aebf07d5d7f7bcd62fca225c6058bb3307b43 files/oscore-2.2.5-build.patch 1351
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 46b6245fb746ffa2f78cd673b3b1997e oscore-2.2.5.ebuild 1690
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD054xndWRXhKOboURArPLAJwL4v9mHZHXz6CYQI2F216AjMR6kACeKEqP
-FhZqIKr8f7h2A/8s+6Vuk24=
-=YKkP
------END PGP SIGNATURE-----
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
+MD5 927d47a08fdeab9102a181d61c6d9380 oscore-2.2.5.ebuild 1707
+RMD160 88ac7db0f97bb548ef80f079b780928cdbf0919b oscore-2.2.5.ebuild 1707
+SHA256 fe9957b24eaec9e3f2182ef54f864e112a0790051c2e0497b77ba362dc0a91d2 oscore-2.2.5.ebuild 1707
