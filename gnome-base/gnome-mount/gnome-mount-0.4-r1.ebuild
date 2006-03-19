@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.4-r1.ebuild,v 1.1 2006/03/19 14:58:38 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.4-r1.ebuild,v 1.2 2006/03/19 19:23:23 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -19,8 +19,7 @@ RDEPEND=">=gnome-base/libgnomeui-2.13
 	>=x11-libs/gtk+-2.8
 	gnome-base/gnome-keyring
 	>=gnome-base/libglade-2
-	>=gnome-base/gconf-2
-	!sys-apps/pmount"
+	>=gnome-base/gconf-2"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
