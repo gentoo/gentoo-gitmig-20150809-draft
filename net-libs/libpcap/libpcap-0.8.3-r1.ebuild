@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.21 2005/08/04 09:39:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.22 2006/03/19 22:59:39 jokey Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -30,7 +30,7 @@ src_compile() {
 	emake || die "compile problem"
 
 	# no provision for this in the Makefile, so...
-	$(tc-getCC) -Wl,-soname,libpcap.so.0 -shared -fPIC -o libpcap.so.${PV:0:3} *.o \
+	$(tc-getCC) ${LDFLAGS} -Wl,-soname,libpcap.so.0 -shared -fPIC -o libpcap.so.${PV:0:3} *.o \
 		|| die "couldn't make a shared lib"
 }
 

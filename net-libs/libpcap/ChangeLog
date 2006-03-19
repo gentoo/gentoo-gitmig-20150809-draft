@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.53 2006/03/10 00:16:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.54 2006/03/19 22:59:39 jokey Exp $
+
+  19 Mar 2006; Markus Ullmann <jokey@gentoo.org> libpcap-0.8.3-r1.ebuild,
+  libpcap-0.9.3.ebuild, libpcap-0.9.4.ebuild:
+  Respecting LDFLAGS when building libpcap.so now
 
   10 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> libpcap-0.9.4.ebuild:
   Stable on ppc.
