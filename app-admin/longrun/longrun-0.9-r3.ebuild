@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r3.ebuild,v 1.1 2006/02/05 16:27:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r3.ebuild,v 1.2 2006/03/19 20:19:16 betelgeuse Exp $
 
 inherit eutils linux-info
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://kernel/linux/utils/cpu/crusoe/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-ppc ~x86"
+KEYWORDS="-ppc x86"
 IUSE=""
 
 DEPEND=""
