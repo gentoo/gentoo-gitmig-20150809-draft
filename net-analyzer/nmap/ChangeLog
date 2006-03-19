@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.117 2006/03/18 17:00:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.118 2006/03/19 20:08:27 ferdy Exp $
+
+  19 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> nmap-4.01.ebuild:
+  Stable on alpha as per bug #126009. Tested by Thomas Cort
+  <tcort@cs.ubishops.ca>
 
   18 Mar 2006; Markus Rothe <corsair@gentoo.org> nmap-4.01.ebuild:
   Stable on ppc64; bug #126009
