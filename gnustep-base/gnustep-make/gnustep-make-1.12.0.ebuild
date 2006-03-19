@@ -1,30 +1,21 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.1_pre20050312-r1.ebuild,v 1.2 2005/08/25 18:45:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.12.0.ebuild,v 1.1 2006/03/19 12:37:33 grobian Exp $
 
-ECVS_CVS_COMMAND="cvs -q"
-ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
-ECVS_USER="anoncvs"
-ECVS_AUTH="ext"
-ECVS_MODULE="gnustep/core/make"
-ECVS_CO_OPTS="-P -D ${PV/*_pre}"
-ECVS_UP_OPTS="-dP -D ${PV/*_pre}"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/savannah.gnu.org-gnustep"
-inherit gnustep cvs
+inherit gnustep
 
-S=${WORKDIR}/${ECVS_MODULE}
+DESCRIPTION="GNUstep Makefile Package"
 
-DESCRIPTION="The makefile package is a simple, powerful and extensible way to write makefiles for a GNUstep-based project."
 HOMEPAGE="http://www.gnustep.org"
-
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~alpha"
+SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-IUSE="debug doc layout-from-conf-file layout-osx-like non-flattened verbose"
+# removed doc from IUSE, because building documentation is broken
+IUSE="debug verbose layout-from-conf-file layout-osx-like non-flattened"
 DEPEND="${GNUSTEP_CORE_DEPEND}
-	>=sys-devel/make-3.75
-	${DOC_DEPEND}"
+	>=sys-devel/make-3.75"
 RDEPEND="${DEPEND}
 	${DOC_RDEPEND}"
 
@@ -113,18 +104,21 @@ pkg_setup() {
 		egnustep_user_root '~/GNUstep'
 	fi
 
-	einfo "GNUstep installation will be laid out thusly:"
-	einfo "\tGNUSTEP_SYSTEM_ROOT=`egnustep_system_root`"
-	einfo "\tGNUSTEP_LOCAL_ROOT=`egnustep_local_root`"
-	einfo "\tGNUSTEP_NETWORK_ROOT=`egnustep_network_root`"
-	einfo "\tGNUSTEP_USER_ROOT=`egnustep_user_root`"
-	ebeep
-	epause 10
+#	if use layout-from-conf-file || use layout-osx-like; then
+		einfo "GNUstep installation will be laid out as follows:"
+		einfo "\tGNUSTEP_SYSTEM_ROOT=`egnustep_system_root`"
+		einfo "\tGNUSTEP_LOCAL_ROOT=`egnustep_local_root`"
+		einfo "\tGNUSTEP_NETWORK_ROOT=`egnustep_network_root`"
+		einfo "\tGNUSTEP_USER_ROOT=`egnustep_user_root`"
+		ebeep
+		epause 10
+#	fi
 }
 
 src_unpack() {
-	cvs_src_unpack
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/make-user-defaults.patch-1.10.0
+	unpack ${A}
+#	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/make-user-defaults.patch-${PV}
+#	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/GNUstep-reset.sh.patch
 }
 
 src_compile() {
@@ -140,6 +134,7 @@ src_compile() {
 	myconf="$myconf --with-local-root=`egnustep_local_root`"
 	myconf="$myconf --with-network-root=`egnustep_network_root`"
 	myconf="$myconf --with-user-root=`egnustep_user_root`"
+	myconf="$myconf --enable-strip-makefiles"
 	econf $myconf || die "configure failed"
 
 	egnustep_make
@@ -149,14 +144,11 @@ src_install() {
 	. ${S}/GNUstep.sh
 
 	if [ -f ./[mM]akefile -o -f ./GNUmakefile ] ; then
-		local make_eval="INSTALL_ROOT=\${D} \
-		GNUSTEP_SYSTEM_ROOT=\${D}\$(egnustep_system_root) \
-		GNUSTEP_NETWORK_ROOT=\${D}\$(egnustep_network_root) \
-		GNUSTEP_LOCAL_ROOT=\${D}\$(egnustep_local_root) \
-		GNUSTEP_MAKEFILES=\${D}\$(egnustep_system_root)/Library/Makefiles \
-		GNUSTEP_USER_ROOT=\${TMP} \
-		GNUSTEP_DEFAULTS_ROOT=\${TMP}/\${__GS_USER_ROOT_POSTFIX} \
-		-j1"
+		local make_eval="\
+			special_prefix=\"\${D}\$(egnustep_system_root)\" \
+			makedir=\${D}\$(egnustep_system_root)/Library/Makefiles \
+			GNUSTEP_USER_ROOT=\${TMP} \
+			-j1"
 
 		if use debug ; then
 			make_eval="${make_eval} debug=yes"
@@ -164,17 +156,17 @@ src_install() {
 		if use verbose ; then
 			make_eval="${make_eval} verbose=yes"
 		fi
-		eval emake ${make_eval} install || die "install has failed"
+		eval make ${make_eval} install || die "install has failed"
 	else
 		die "no Makefile found"
 	fi
 
-	if use doc ; then
-		cd Documentation
-		eval emake ${make_eval} all || die "doc make has failed"
-		eval emake ${make_eval} install || die "doc install has failed"
-		cd ..
-	fi
+#	if use doc ; then
+#		cd Documentation
+#		eval emake ${make_eval} all || die "doc make has failed"
+#		eval emake ${make_eval} install || die "doc install has failed"
+#		cd ..
+#	fi
 
 	dodir /etc/conf.d
 	echo "GNUSTEP_SYSTEM_ROOT=$(egnustep_system_root)" > ${D}/etc/conf.d/gnustep.env
