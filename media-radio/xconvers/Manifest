@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7b1933e249ca8a450954346963e97457 ChangeLog 754
+MD5 4373a797b87f44e5d199d8fa3916a07a ChangeLog 895
+RMD160 b865579d927374c3d455dcf36aac6f80abcf9bde ChangeLog 895
+SHA256 1ed57dbf53c2ef337bc720c73e7deb4f9a769888ab4474ad01971425d3648932 ChangeLog 895
 MD5 9273c1385020eae8feeb230ff95bf30f files/digest-xconvers-0.8.2 66
+RMD160 3861d3a7d29d140bc1ced880c7de630ef35f5691 files/digest-xconvers-0.8.2 66
+SHA256 cebb022ac3a36d819c16afb7b9c4bd69d908ffed7e80808aaf9d8e2b24891286 files/digest-xconvers-0.8.2 66
 MD5 e425ded88c45bb4e2d971e811abf7023 files/digest-xconvers-0.8.3 66
+RMD160 8aae2cce952cd010e30165570dd072aa2e5c49f0 files/digest-xconvers-0.8.3 66
+SHA256 81c1bd2bb71adc9d6a4adfbac27f246b47ad0ba466f1cac678632136dbad30ab files/digest-xconvers-0.8.3 66
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 fad99015543c31611f555bae2d607d10 xconvers-0.8.2.ebuild 707
-MD5 ff26d58ca448020776ffaea924ac444d xconvers-0.8.3.ebuild 700
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmtxrV3J2n04EauwRAgPAAKCE6IxwaNRZaf+HpfIMC+00sloJTQCbBgZb
-XJmiHCjlzxi/eEMBPZtawwg=
-=JbEl
------END PGP SIGNATURE-----
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
+MD5 d11182e3eebc5d2571f05c71af19c9ef xconvers-0.8.2.ebuild 733
+RMD160 2ef044fc9834c89f44c74df0623716a9d08facd8 xconvers-0.8.2.ebuild 733
+SHA256 f98d9f01985a25e713a11e11fb7ebf22f3cabc737896215c14f234f43ce1b02c xconvers-0.8.2.ebuild 733
+MD5 fc9a893c430fc212a2aafa6e3faba19b xconvers-0.8.3.ebuild 726
+RMD160 5e3b443cd1e28ef816efb3f0e3b67c348a64c333 xconvers-0.8.3.ebuild 726
+SHA256 ebdcf8a84f076c074f4986368684771a3c7b062f455763aeb8c24c057b2e1381 xconvers-0.8.3.ebuild 726
