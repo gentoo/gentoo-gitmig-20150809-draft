@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.6 2006/03/18 16:03:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.7 2006/03/19 23:46:52 flameeyes Exp $
 
 inherit eutils font autotools flag-o-matic
 
-PATCHLEVEL="3"
+PATCHLEVEL="4"
 
 IUSE="aalib alsa dv lirc mmx motif nls opengl quicktime X xv zvbi xext"
 
