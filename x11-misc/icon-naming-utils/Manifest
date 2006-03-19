@@ -1,80 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-- -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a9a5cc638db90da6acadb276a282b573 ChangeLog 1751
-RMD160 1a2488440af916d04375c5ae965dd8de8c369bdb ChangeLog 1751
-SHA256 e5c0e81c9f8ff444dfa1e8b58dbacc61dcac4b942938f879b9bb6c7e9ad44432 ChangeLog 1751
+MD5 50f9b9435890e3e255acb62fbccc5170 ChangeLog 1868
 MD5 bd5440b327cecc2b5eeaaba50cd9a066 files/digest-icon-naming-utils-0.6.2 74
-RMD160 073c874f976921f63802707814a65d6b8ea0ed3c files/digest-icon-naming-utils-0.6.2 74
-SHA256 5e59a9c98eabd146a8ac09e3401e5043f6b0534c57295a7b3c38957f571ca190 files/digest-icon-naming-utils-0.6.2 74
 MD5 31f9daa04ded540b32c88bf11a98096c files/digest-icon-naming-utils-0.6.3 74
-RMD160 903abbeb013fa07036b47d09a4e25774fcb3e9b4 files/digest-icon-naming-utils-0.6.3 74
-SHA256 bcf5428b100f08559b655439a6e836a2135c10710a0467dc683b8b83652f44ce files/digest-icon-naming-utils-0.6.3 74
 MD5 a3f487e649e759105b08437912df1934 files/digest-icon-naming-utils-0.6.5 74
-RMD160 10dc720fa017f74cbeabe4ea86b2247f40a491ef files/digest-icon-naming-utils-0.6.5 74
-SHA256 414e3818089f5afd36f4f833ac790ff714af12be468bb5be6fd41eb9903382ca files/digest-icon-naming-utils-0.6.5 74
 MD5 0e1512cb0c651c4ba05375eddcc68b94 files/digest-icon-naming-utils-0.6.6 74
-RMD160 6303c7ce382bf8edd1e83bd1f47e29cd12029f85 files/digest-icon-naming-utils-0.6.6 74
-SHA256 14b859f54bdb89682945142663f39df4a57c069503345b2f0c319305174f5da0 files/digest-icon-naming-utils-0.6.6 74
 MD5 7c5ab5245ff2d2bce7f7685c3dab66ed files/digest-icon-naming-utils-0.6.6.1 76
-RMD160 6f91621fffcb07f41481bdb1bca4ab7de24c6a0e files/digest-icon-naming-utils-0.6.6.1 76
-SHA256 152e6569100c9db1c93a71125e99de5cd59e0efd43af958d6d6fbe1265a5c590 files/digest-icon-naming-utils-0.6.6.1 76
 MD5 dac355b3aa4081f5a22469de264692b1 files/digest-icon-naming-utils-0.6.7 268
-RMD160 a84c224300da1de64e76f9b7792f830711799370 files/digest-icon-naming-utils-0.6.7 268
-SHA256 f5ebdbebfa344e627e67d211630804a13ecfc999a14ca711e7588c8a92adc8f3 files/digest-icon-naming-utils-0.6.7 268
 MD5 9189e450f113f622c8253fedce7730f3 files/digest-icon-naming-utils-0.6.8 268
-RMD160 0930ba2bc6703d81a7c44e42c8c8a5aea96ff763 files/digest-icon-naming-utils-0.6.8 268
-SHA256 7c52d25c526600522e6da125f639af8cbea4b5182266ceeac90461422ce63a8f files/digest-icon-naming-utils-0.6.8 268
 MD5 c4d189f845d2510d659dbb24a09b4772 files/digest-icon-naming-utils-0.7.0 268
-RMD160 212c74032ed75c5a5ac6aeef9e8f8dc4c4540be4 files/digest-icon-naming-utils-0.7.0 268
-SHA256 7c47e8f452c52a1ce016e44df85b560ab295270c4e963dd654a9b41d4407053f files/digest-icon-naming-utils-0.7.0 268
 MD5 e3cd7e1601998f273aa719e24822113f files/digest-icon-naming-utils-0.7.1 268
-RMD160 61af50f7961a8bcc8500d7efe35b5f8e477d07a0 files/digest-icon-naming-utils-0.7.1 268
-SHA256 75a0e059c566e7ada21e03cc3145e99ce6aeba6092ac6b7eb95eef0ebd06be3a files/digest-icon-naming-utils-0.7.1 268
 MD5 e6f1d27aa90310465df6cc493828de98 icon-naming-utils-0.6.2.ebuild 732
-RMD160 9c94f4dfa0ad854dce9caa0bc83ee94b8ab7308f icon-naming-utils-0.6.2.ebuild 732
-SHA256 d2b4fb75316473a723a955686c37116a1a8952cf6429084779be2e79827f6bbe icon-naming-utils-0.6.2.ebuild 732
 MD5 a308c95649475f264e171fb9450989dd icon-naming-utils-0.6.3.ebuild 739
-RMD160 f8fe922b11d0d0fed5218c0e682ebf8b48907b54 icon-naming-utils-0.6.3.ebuild 739
-SHA256 573f26737486ef97778638a968eac736d20fdc036af10de2feb49dd34f19f127 icon-naming-utils-0.6.3.ebuild 739
 MD5 8fc779e2a14427cb70c06521a41fc46e icon-naming-utils-0.6.5.ebuild 739
-RMD160 34ff8f2cccceed2b13136984209543e911212a96 icon-naming-utils-0.6.5.ebuild 739
-SHA256 a40d018dbeb0f1fbc4be14676a4d60ab1006b40cb79f82a4a332b0a28c16505b icon-naming-utils-0.6.5.ebuild 739
 MD5 d3808eafc9d066d4533063575f85133c icon-naming-utils-0.6.6.1.ebuild 741
-RMD160 a1d4335f511f9e6e3951def7f9ec184c3ca57219 icon-naming-utils-0.6.6.1.ebuild 741
-SHA256 36aa0056f55f215f314ee5d2808564db5f00d5a3ddb0ce69cbf298de618dd169 icon-naming-utils-0.6.6.1.ebuild 741
 MD5 1103c8d730e23bf4d7ba8438dd7b3aff icon-naming-utils-0.6.6.ebuild 739
-RMD160 83bc42af163ca24c9bbfb6b8fa432849e7540e2f icon-naming-utils-0.6.6.ebuild 739
-SHA256 e6cc60b000ebbfe06835984cdfeaa7c095c813b5b80866f046046a185625bcea icon-naming-utils-0.6.6.ebuild 739
 MD5 697b196562c7cd050dbca56e70d0fc2a icon-naming-utils-0.6.7.ebuild 739
-RMD160 a7d96cff3d9d61fb0e1efe876fad1f92acfc5274 icon-naming-utils-0.6.7.ebuild 739
-SHA256 e727e8e0435106e0ffd753b031053f55bd695d602a2b7cde6b24252742f21080 icon-naming-utils-0.6.7.ebuild 739
 MD5 eb25638e253b38a999c1d555fef7530e icon-naming-utils-0.6.8.ebuild 739
-RMD160 c62e134c0d9311ec8b989f9b47dd8ae0f56587a8 icon-naming-utils-0.6.8.ebuild 739
-SHA256 5961d2d60472bcb9775c0f096caa9fc63e77ca6b76484477803ec7610109e085 icon-naming-utils-0.6.8.ebuild 739
-MD5 c1cd8291106b52b036f26d3bfe2c3cfd icon-naming-utils-0.7.0.ebuild 739
-RMD160 68aafb849ea8ad1dd7d8a9afbcd3e730173f7eb9 icon-naming-utils-0.7.0.ebuild 739
-SHA256 96ac16eeb8f1c92d61e101695b863ba888e25c86a4f23d9734955ab5882c3b51 icon-naming-utils-0.7.0.ebuild 739
+MD5 77b670b6657ff1878d7db0a10ca2ad27 icon-naming-utils-0.7.0.ebuild 736
 MD5 8cd12f14111aa7ccb6c9f6213ce028fb icon-naming-utils-0.7.1.ebuild 739
-RMD160 d45317194deae6c3f975bdbc8f7b9ff9d8a82bc2 icon-naming-utils-0.7.1.ebuild 739
-SHA256 166dd7c310414ed7ddfe8ea8a46e67a397ddf7613b4b24b4d3670b6c027edfbd icon-naming-utils-0.7.1.ebuild 739
 MD5 870a91577a60ccb6ea581e99f879e9b8 metadata.xml 248
-RMD160 507fd60616d5d14e274ac0628255acdddc90e4d4 metadata.xml 248
-SHA256 0d544700457efe5f7c24489f30572dd20c81a6d8879bf833f7d050408a79f36a metadata.xml 248
-- -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD4DBQFEBeCKwUpWvClEHQoRAtZ2AJ4/BgooXVdL9tH2Ivzs6I8/h1ZFFgCXVH+q
-K7xLBcol6JlRQS1Q6Hvc2A==
-=RWu/
-- -----END PGP SIGNATURE-----
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEHbOEoGcCqvCmTSIRAjlVAKCs/C9MeTEcxfoWpIg/vFdG2zj+qACgt0A1
-7C/rsn2L2QGXlu8wts/Kx68=
-=bJxD
+iD8DBQFEHbPhoGcCqvCmTSIRAoaIAJ0XzDsrK5meRozpWNeLleZpruWaJgCfTXDr
+BgjedN5gl/JC4JxdaKwWwFU=
+=Vovf
 -----END PGP SIGNATURE-----
