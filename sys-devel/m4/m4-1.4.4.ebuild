@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.4.ebuild,v 1.8 2006/03/17 19:24:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.4.ebuild,v 1.9 2006/03/19 21:04:19 ferdy Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
