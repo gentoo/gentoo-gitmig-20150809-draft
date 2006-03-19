@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5108 2006/03/19 18:43:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5109 2006/03/19 20:07:02 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -385,10 +385,6 @@ net-print/hpoj
 # Marcelo Goes <vanquirius@gentoo.org> (06 Feb 2006)
 # Mask tcpreplay beta branch. If you want it, unmask it.
 >=net-analyzer/tcpreplay-3.0_beta1
-
-# Petteri Räty <betelgeuse@gentoo.org> (05 Feb 2006)
-# masked until I get to test more than that it compiles
-=net-wireless/ndiswrapper-1.9
 
 # Andrej Kacian <andrej@kacian.sk> (04 Feb 2006)
 # Mask for testing, there has been a complete code layout change and at least
