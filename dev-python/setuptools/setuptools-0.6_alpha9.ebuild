@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6_alpha9.ebuild,v 1.3 2006/02/18 06:12:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6_alpha9.ebuild,v 1.4 2006/03/19 22:52:33 halcy0n Exp $
 
 inherit distutils
 
@@ -14,8 +14,9 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 S="${WORKDIR}/${MY_P}"
 
-DEPEND=">=dev-lang/python-2.4.2
-	app-arch/zip"
+RDEPEND=">=dev-lang/python-2.4.2"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 DOCS="EasyInstall.txt api_tests.txt pkg_resources.txt setuptools.txt"
 

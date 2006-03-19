@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherryflow/cherryflow-5.ebuild,v 1.3 2005/07/12 11:01:04 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherryflow/cherryflow-5.ebuild,v 1.4 2006/03/19 22:47:25 halcy0n Exp $
 
 inherit distutils
 
@@ -12,8 +12,10 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
+RDEPEND="virtual/python"
+DEPEND="app-arch/unzip"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_install() {
 	distutils_python_version
