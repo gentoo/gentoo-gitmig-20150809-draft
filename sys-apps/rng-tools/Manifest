@@ -19,13 +19,13 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 MD5 68969238ecde22a27b010488adfd490b rng-tools-1.0.ebuild 625
 RMD160 14c2d219e445e639c0f6b66b8ace8c300caf4be3 rng-tools-1.0.ebuild 625
 SHA256 8578a2d3e1e282c49d6fb66cdebf45af3cbee672c4490a0c2c0652a0fb730739 rng-tools-1.0.ebuild 625
-MD5 533e9260df39ad9115c7c57bcf274cd6 rng-tools-1.1.ebuild 765
-RMD160 6c9ae7a9c26430ba756bc96e3a4a1fcee73fe0ff rng-tools-1.1.ebuild 765
-SHA256 7135f920417f0d220108ed867fa9df9f860c58cd3861dd607787655c3a41cb63 rng-tools-1.1.ebuild 765
+MD5 982862e851f1a873f9aca352ef028268 rng-tools-1.1.ebuild 720
+RMD160 7a88cdf12856dddecf1a5e94a6914b2c45410c59 rng-tools-1.1.ebuild 720
+SHA256 2e81c25f60236caf406c6aa1b84336b59688c0ced215cab31986b55e935ed2bf rng-tools-1.1.ebuild 720
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD6nveJrHF4yAQTrARAtFIAJ9sDB5fXwjLMr3t+3kt6ATkqmib9wCeIUy9
-sm45S312yOn+I2RHYyj3fmU=
-=OfkJ
+iD8DBQFEHdoA2+ySkm8kpY0RAvf0AJ9CQOppRpobXnprxo5VwaYo4rDwlQCdHkFc
+DvkAVXsbd7kg/rVmwbpawjE=
+=szsR
 -----END PGP SIGNATURE-----
