@@ -1,12 +1,22 @@
-MD5 736f8e8ad900f1f23856399664e0f583 ChangeLog 480
-RMD160 0958a7c0ca5ee38543da4e69c0c1284081c9e427 ChangeLog 480
-SHA256 82fef86e375801da2e75cdd3da47283f4b89d123a15a06de1bfe70d7b5204414 ChangeLog 480
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a0681f1e904d56bdc77e91b776e23d21 ChangeLog 579
+RMD160 201053712e088960da4d3b862cfd8bf4fecbfdf7 ChangeLog 579
+SHA256 033a24e001af381d64da4a92a928ee6c3569517888de253ee87d3ae5e5ce9166 ChangeLog 579
 MD5 2dc232334e8a907b94035ae24d205ca6 files/digest-heap-buddy-0.1 66
 RMD160 1d526b2f82be6a5b5e5853e2c6bd36367095a238 files/digest-heap-buddy-0.1 66
 SHA256 26bebf487e9a05837cc1f0e707f7e10a6d4ab3d7e0c08b3d73c285ef780821b7 files/digest-heap-buddy-0.1 66
-MD5 caa0fb3dfcc87fad998c54b637cd6861 heap-buddy-0.1.ebuild 607
-RMD160 977cdad73617ae8d391f13f42265b46470c99ff3 heap-buddy-0.1.ebuild 607
-SHA256 149dad3a61984be637ece2a31624222f9eb28e143d351540ca6e463c9a1b5fd7 heap-buddy-0.1.ebuild 607
+MD5 2b39a99afbf35bb07547e2d5fb73bcd2 heap-buddy-0.1.ebuild 615
+RMD160 023c09df3e42830072f4075dee9e44df0c16e6b1 heap-buddy-0.1.ebuild 615
+SHA256 885e70ab6cef8eb2c04ff8eee843c8a4ebae3d5aecd6df0d7ea6419b3ec3858a heap-buddy-0.1.ebuild 615
 MD5 3df553e94423a0075a61a43a56dc6726 metadata.xml 256
 RMD160 4cb2d79fd66bacbe8aebed5aa03cde0153a0eb11 metadata.xml 256
 SHA256 c213280db6f2ba60c0bdfdcd476b3082ad6aab28cfb51143ae486c67b158b695 metadata.xml 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHX3fwUpWvClEHQoRAo6uAKCDCgH/WTJJywty9bNjbAZg+oEtegCeJejT
+4/yVr+9gKbemLPddPzrELQg=
+=Swzj
+-----END PGP SIGNATURE-----

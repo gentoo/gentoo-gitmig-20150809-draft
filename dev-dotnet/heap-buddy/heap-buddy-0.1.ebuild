@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/heap-buddy/heap-buddy-0.1.ebuild,v 1.2 2006/02/10 05:41:06 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/heap-buddy/heap-buddy-0.1.ebuild,v 1.3 2006/03/19 15:50:25 metalgod Exp $
 
 inherit mono
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.go-mono.com/sources/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-1.1.10
