@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.80 2006/02/03 16:22:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.81 2006/03/19 02:31:46 cardoe Exp $
+
+*hal-0.5.7 (19 Mar 2006)
+
+  19 Mar 2006; Doug Goldstein <cardoe@gentoo.org>
+  +files/hal-0.5.7-drop-privs.patch, +files/hal-0.5.7-hald-scripts.patch,
+  +files/hal-0.5.7-ignored-volumes.patch, +files/hal-0.5.7-part-table.patch,
+  +files/hal-0.5.7-plugdev-allow-send.patch, +files/hal-0.5.7-pmu-fix.patch,
+  +files/hal-0.5.7-sony-brightness.patch,
+  +files/hal-0.5.7-unclean-unmount.patch, +hal-0.5.7.ebuild:
+  rev bump but include a bunch of patches with the aim to make this our best
+  HAL yet
 
   03 Feb 2006; Guy Martin <gmsoft@gentoo.org> hal-0.4.8.ebuild:
   Stable on hppa.

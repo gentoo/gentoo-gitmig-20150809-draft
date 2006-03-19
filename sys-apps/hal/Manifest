@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3abe0b16707c8487dd5399ca244abf98 ChangeLog 10978
-RMD160 0f07ece34f5b160c8fc0f35fb83b126822af3abd ChangeLog 10978
-SHA256 cf5d74f528449de3dac8802cd36dc5516775d5beea05a7e169bfe4ef16a02969 ChangeLog 10978
+MD5 0cac14e0588ef23c8614a55f707b8b5e ChangeLog 11473
+RMD160 e7a6e288a3371db12d5d029a746b667fe062e3d1 ChangeLog 11473
+SHA256 819e7883b1b0d1d32957f8172d764f7aa8b1fbb1875c1b1de7d69362fdbadd3a ChangeLog 11473
 MD5 a1059812bd1e8a1fe46f132c96a3d002 files/0.5-hald.rc 660
 RMD160 6e0d9388502e6d83f9729dd4ceb018ac78470c21 files/0.5-hald.rc 660
 SHA256 0f03055ee662987b1a8010948979d27cce07003a5c9e7e23b7b3901d20c2d82a files/0.5-hald.rc 660
@@ -16,6 +16,9 @@ SHA256 b1a6145d9b725b1c8edabee21dde50a87f13918dbbb2f2ec7c0cf57cf343f22e files/di
 MD5 cf6c7a60aee75f95022e5d25562468eb files/digest-hal-0.5.5.1-r3 64
 RMD160 36321542e156bb606ce0e73e14236ea8e9ebbd6a files/digest-hal-0.5.5.1-r3 64
 SHA256 eeffb1e1be7fbdc78d37987f66a0867677f656e6f75463035e7a519c1b0f1318 files/digest-hal-0.5.5.1-r3 64
+MD5 2cab9d9e3415f54f6368f796cf3df8ff files/digest-hal-0.5.7 232
+RMD160 a3f08885fb362e481bd884a8f2192d3dc995fbee files/digest-hal-0.5.7 232
+SHA256 1d79783e98c3e4f937148d5fb93916927d2484d85501a1f9a53b75c2080c15c2 files/digest-hal-0.5.7 232
 MD5 a0ce1c268e0b7d0967ec7b8e0d0d26d2 files/hal-0.4.1-old_storage_policy.patch 1216
 RMD160 8ae241d65add4c759b7a5d43924319eafa4acdf7 files/hal-0.4.1-old_storage_policy.patch 1216
 SHA256 b4bfb81a7017fd56d05230ba87d935cc30d0482f7158fe04e93a513872bc8696 files/hal-0.4.1-old_storage_policy.patch 1216
@@ -43,6 +46,30 @@ SHA256 6ea5cd467e1b7b34308c9ecc0eaf2442a3272b7c02ef75d7c0af16566e523cc2 files/ha
 MD5 54eaacd46e87bd8025da51f2f9aaf56b files/hal-0.5.5.1-RBC.patch 660
 RMD160 36368684295dcfa4809ba0fe7b6a2575d2091e1e files/hal-0.5.5.1-RBC.patch 660
 SHA256 6e0b71024bc857e72ce694282f098e3d5fb17b7a2dec579193878f0812360799 files/hal-0.5.5.1-RBC.patch 660
+MD5 a0d9ed0437f487a2d2363a12ee167ed0 files/hal-0.5.7-drop-privs.patch 511
+RMD160 e97295947126263b192dfa7069098f93c8057431 files/hal-0.5.7-drop-privs.patch 511
+SHA256 74d92b01f9fc86c11e9b1ed1b24d85921149d0d1c885ac661b91939e0c0fc7ef files/hal-0.5.7-drop-privs.patch 511
+MD5 521a06ba0845bd3246d6ed4b589f110f files/hal-0.5.7-hald-scripts.patch 8636
+RMD160 339765377e3573b382df987903f301860601668f files/hal-0.5.7-hald-scripts.patch 8636
+SHA256 d0b713f84c7bc782ba7b13f439630a995588097db2141f4a97c110036f64001a files/hal-0.5.7-hald-scripts.patch 8636
+MD5 74ec55ccd95f9be1c3b68443bffa8ee4 files/hal-0.5.7-ignored-volumes.patch 1639
+RMD160 7e56e8d2c8196baf3dcb3057296f24f6bb96f4fb files/hal-0.5.7-ignored-volumes.patch 1639
+SHA256 2b66eba6b8d34c88219ac126e5f86843a8b207332c1e78c260bcc5458c3b3a63 files/hal-0.5.7-ignored-volumes.patch 1639
+MD5 7db42f6984b16dc4d4c5b8ba74c126e3 files/hal-0.5.7-part-table.patch 447
+RMD160 6432358deffe83d12e908517ab0cc4ee58052287 files/hal-0.5.7-part-table.patch 447
+SHA256 3b99d293545d6d9c02b467a32625057d4502b1d92f8d14e34d65382f0c0cb0db files/hal-0.5.7-part-table.patch 447
+MD5 05b561f59abfd3c77f737b54ecf3505c files/hal-0.5.7-plugdev-allow-send.patch 767
+RMD160 81da1983cd31552de014142b839f0e43d08909e5 files/hal-0.5.7-plugdev-allow-send.patch 767
+SHA256 19e5f88a512f8e146f63d43935039638b8e51be71f6eea8adcbf3f0c8ab63239 files/hal-0.5.7-plugdev-allow-send.patch 767
+MD5 935e086508663682ed61c2ea2c0d1d18 files/hal-0.5.7-pmu-fix.patch 982
+RMD160 930d9bed6014167629a93ead6f2bc9f2b03f04d1 files/hal-0.5.7-pmu-fix.patch 982
+SHA256 23b9e12361eb56c481ee747bac8adc6cda148faa6901507bc7e8479ee92aaf98 files/hal-0.5.7-pmu-fix.patch 982
+MD5 92141d6b083464e78ce0166e4c60c981 files/hal-0.5.7-sony-brightness.patch 717
+RMD160 85c53fb1c49fbb7325398173a43f256ba179c6a7 files/hal-0.5.7-sony-brightness.patch 717
+SHA256 25522ed95df9838401684184cc08364058dde6b2b064d3d4e1ba4ddaef9263d2 files/hal-0.5.7-sony-brightness.patch 717
+MD5 45d5017936175880db3c0a9740818275 files/hal-0.5.7-unclean-unmount.patch 357
+RMD160 e4f33aa6578ca3bd53d7973d99f897db4ac2216e files/hal-0.5.7-unclean-unmount.patch 357
+SHA256 b273a7d44dfcb115572b8699151281b65b8e0753440be98f9b1b1366594796ef files/hal-0.5.7-unclean-unmount.patch 357
 MD5 7ee3fd5b5ee117f14633350e5b335c2f files/hal-unmount.dev 397
 RMD160 78286dd9527bbb421082e73b0d08e06cd514d275 files/hal-unmount.dev 397
 SHA256 747a4c483f8a558f2c75666e9547e539475f112363f1dbfc6ea19ca393c8e89b files/hal-unmount.dev 397
@@ -58,13 +85,16 @@ SHA256 20ab981c2b2d490f6cf6358d36414614e5d5c2e9d2b1b4a2293a34d990e7d8ff hal-0.4.
 MD5 59bbdd78799e3dd45740cba91144c873 hal-0.5.5.1-r3.ebuild 3780
 RMD160 376b757b599b4788d4dce9d0d2aa39dddc90d95e hal-0.5.5.1-r3.ebuild 3780
 SHA256 7befb86e2b140e7a760afcb118fe090ee0913d389cf39037203d03fd9fba454d hal-0.5.5.1-r3.ebuild 3780
+MD5 c43bbd999cca2d262b00e0e630e76a17 hal-0.5.7.ebuild 5084
+RMD160 8e57f19a7e6ac92072b41ce242c9d1b5fcadd351 hal-0.5.7.ebuild 5084
+SHA256 f181948a00cbbef96c9e7304297b5c738b7938db768a2ef918820d0a0ff08bcb hal-0.5.7.ebuild 5084
 MD5 a60767d83157413d549c69b98fac962c metadata.xml 303
 RMD160 4daae060e581c6c55e5c71ba0c7bcf3a0e85634e metadata.xml 303
 SHA256 62790673a05bfb972185badd66802d64d99a8d6fc2a998b345a621903b195639 metadata.xml 303
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD5Suh2+ySkm8kpY0RAkYnAKCsFGnRs2IQkFMkYMZRdNsImZMtHACgwY0+
-gf5NWsdgz/KG6WLcwVOaGl4=
-=zD4G
+iD8DBQFEHMKrBtvusYtCZMsRAvU9AJ9xhRFgEapZXinCInmbJO3uQuDboACgi6/3
+9x/CnV6ZbvEoTDq7BsAZco8=
+=Wfj9
 -----END PGP SIGNATURE-----
