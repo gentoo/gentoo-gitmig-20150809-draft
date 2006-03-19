@@ -1,0 +1,31 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.18.ebuild,v 1.1 2006/03/19 00:54:39 mcummings Exp $
+
+inherit perl-module
+
+DESCRIPTION="Handy web browsing in a Perl object"
+SRC_URI="mirror://cpan/authors/id/P/PE/PETDANCE/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~petdance/${P}/"
+IUSE="test"
+SLOT="0"
+LICENSE="|| ( Artistic GPL-2 )"
+#KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~sparc ~x86"
+
+SRC_TEST="do"
+
+# configure to run the local tests, but not the ones which access the Internet
+myconf="--local --mech-dump --nolive"
+
+RDEPEND="dev-perl/IO-Socket-SSL
+	>=dev-perl/libwww-perl-5.76
+	>=dev-perl/URI-1.25
+	>=dev-perl/HTML-Parser-3.34
+	dev-perl/Test-LongString
+	test? ( dev-perl/Test-Pod
+	dev-perl/Test-Taint
+	dev-perl/Test-Warn
+	dev-perl/Test-Memory-Cycle )"
+
+DEPEND="${RDEPEND}"
