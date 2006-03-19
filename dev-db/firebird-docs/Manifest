@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9482252128c13057daef162f1a0c4efe ChangeLog 1230
 RMD160 eb9cff09895d067eee5a53ea5dc40cbf8c5ae131 ChangeLog 1230
 SHA256 6fbb3b32e7da53f642dffcb1eaf289448708b7a1bd572103e4bd3a6bb6d2809c ChangeLog 1230
@@ -7,3 +10,10 @@ SHA256 2699dd0599d0542d498c56caf10f40fc0b8f149ddee91c1ef7f54d839dba2c8e files/di
 MD5 9c8f6ecc1b17203284954490a26591ab firebird-docs-1.0.ebuild 896
 RMD160 4298a9d5e5df062a57dd25a578824f891713c1cb firebird-docs-1.0.ebuild 896
 SHA256 667278e8bbce580f2a2fd5cc0eabbae102419af37dd05ed124bdd5fa94aebb05 firebird-docs-1.0.ebuild 896
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHa20CRZPokWLroQRAprRAKCTBYNHmH7J8CEYFsfqgLH7gbNnbwCgw5jN
+d5kaWweSoMs7MNYqJJjVBq4=
+=fztO
+-----END PGP SIGNATURE-----
