@@ -1,15 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e2941df399e05013ce3863f9f18b0342 ChangeLog 586
+MD5 acf6a98e00248406e6ebdbd451c4d31d ChangeLog 706
+RMD160 69a3d35f29ac6a1093a7d6e915700aab40d9b79a ChangeLog 706
+SHA256 f5c156d690442da1612f24cffada7faf27dbd98650b0588f5873599bba810427 ChangeLog 706
 MD5 806efa2abfcee7b241033d301df0e080 files/digest-qpxtool-0.4.2 65
+RMD160 56b19fbda154d1ca453208492ed6781ad9b86669 files/digest-qpxtool-0.4.2 65
+SHA256 0cca8a137fbde5d4a5e75638afa2cc17bd108072332990ce111bce7b67d7274a files/digest-qpxtool-0.4.2 65
 MD5 1abd253b0fcfbc7a12c5c8d4eb9d00b9 files/digest-qpxtool-0.4.3 65
+RMD160 8cdd97869fb58624ead91eb027e6d862ca01cf85 files/digest-qpxtool-0.4.3 65
+SHA256 f5f79918e4eb2fd478d7970310b73f407970d8524fb94e4a58d8c043747782f6 files/digest-qpxtool-0.4.3 65
+MD5 7ad4e57f2827868f38a9b9292010bc1a files/digest-qpxtool-0.5.0 244
+RMD160 c3d39219217b34ac67eac19681a5c20ede996198 files/digest-qpxtool-0.5.0 244
+SHA256 63b30a9142c4ad0006f12214ab152aae31abfa2af2141131a1343c27ee9f08fe files/digest-qpxtool-0.5.0 244
 MD5 b32afa54b2ba40f3c2fb8faa745b0464 qpxtool-0.4.2.ebuild 760
+RMD160 317e6a0b0b824c8b619721135a8fee1bfd5a45a9 qpxtool-0.4.2.ebuild 760
+SHA256 72872dee54a3ba4933a96afc75bef542fbc62a6c44fa22be7b56c994ff1df9be qpxtool-0.4.2.ebuild 760
 MD5 2225c0eac6bd78f468305a7e620787d1 qpxtool-0.4.3.ebuild 760
+RMD160 9ff18ff6029bce7c5b4a9061e9fd90f23011beeb qpxtool-0.4.3.ebuild 760
+SHA256 26ebc99557124de640e7dfcd07612ed0021165fecb45144f447f60f4e115ed0e qpxtool-0.4.3.ebuild 760
+MD5 9610d897bd7f49e6e469c64678a242c3 qpxtool-0.5.0.ebuild 760
+RMD160 1bd8259d9a0ac397113a62a630900cc6cd4eaf76 qpxtool-0.5.0.ebuild 760
+SHA256 d058a29683288a7bfd72e97383a7dab2552e1d7439b2f36aa39ea01fc592e3ce qpxtool-0.5.0.ebuild 760
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD2WGh2+ySkm8kpY0RAomJAKCb9P3Is0det1tY6GCcB41c8Jcn7ACggfTW
-y8GKcprtj/FtUNmJf8aoFUk=
-=llkb
+iD8DBQFEHdSO2+ySkm8kpY0RAuJ1AJ0cxLWwhpFjsxWV8bY3qEUW7+/NiQCeO2NZ
+9/q+K+pOUjiE6NdZRFV+MPA=
+=rkMN
 -----END PGP SIGNATURE-----
