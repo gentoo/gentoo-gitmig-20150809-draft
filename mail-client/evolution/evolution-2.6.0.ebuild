@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.0.ebuild,v 1.1 2006/03/18 22:42:56 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.0.ebuild,v 1.2 2006/03/19 01:39:56 allanonjl Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -134,7 +134,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${P}.tar.bz2
-	unpack ${PN}-2.5.5.1-bf-junk.tar.bz2
+	use bogofilter && unpack ${PN}-2.5.5.1-bf-junk.tar.bz2
 	cd "${S}"
 
 	gnome2_omf_fix help/omf.make
