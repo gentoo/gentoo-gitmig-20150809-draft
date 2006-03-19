@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.43 2006/03/18 11:11:10 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.44 2006/03/19 21:08:39 dertobi123 Exp $
+
+  19 Mar 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  wordpress-2.0.2.ebuild:
+  ppc stable, bug #125693
 
   18 Mar 2006; Danny van Dyk <kugelfang@gentoo.org> wordpress-2.0.1.ebuild,
   wordpress-2.0.2.ebuild:

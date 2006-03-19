@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d27cc272fc2d232b1e2155fb66d9bd1c ChangeLog 8243
-RMD160 1ac657c730fd823a693d58fefa959fb90a10333a ChangeLog 8243
-SHA256 035976eeca7d4bed636e3799dbc7904b6d82d2afbd75ab11e145f0890191980d ChangeLog 8243
+MD5 f85de703ca2e57f91900b389da420eab ChangeLog 8353
+RMD160 0c9c098ca342b15fdade32614866d6d6186fb527 ChangeLog 8353
+SHA256 e70910b6d7b1ddf00e6e6aed68b198946a68b765e7134faaac5b915269c2b9f8 ChangeLog 8353
 MD5 e7fcb7479c073a03c3cea877b8cdf74a files/digest-wordpress-2.0.1 247
 RMD160 45d78d66946004769be2bf9f8ff27fd538108994 files/digest-wordpress-2.0.1 247
 SHA256 5fb6b31cff16d7838a3f55380ce3805e0a20f5cd38797431a28e1a51b6e345dd files/digest-wordpress-2.0.1 247
-MD5 f411ac93a01a59c439105c12281da2e3 files/digest-wordpress-2.0.2 247
-RMD160 941a9fef2a1eedd22a8d204bab610f03ffcc9c1e files/digest-wordpress-2.0.2 247
-SHA256 3fa44d745233e7139222d57ad3bac835d97c5b3cdf2593cc408e517af2724be4 files/digest-wordpress-2.0.2 247
+MD5 1dcbc650ecd413b3500896e4da66409d files/digest-wordpress-2.0.2 247
+RMD160 eea751b1471cb5dd95522b31ed617c859e138c0c files/digest-wordpress-2.0.2 247
+SHA256 50d3fa17ede14b7c0a5a79ac66dbdcf998eff16875a2fb726ca6e025df8b712f files/digest-wordpress-2.0.2 247
 MD5 f816ff62dcd7cadf0fae9384ab9618e5 files/dummy-templates.php 269
 RMD160 7f1362f12b8c73ac8a371e5b00b7d31e7bc36438 files/dummy-templates.php 269
 SHA256 3f7a088aa968469652690f47a2d598bd35e8f87e741f322fcb2d5063c8c88e48 files/dummy-templates.php 269
@@ -19,13 +16,6 @@ SHA256 84d416249723165c3d38594876a05ec769d0f090043030f88570d129f0199639 metadata
 MD5 4e1f470f660e35df9056b0d86e028ee3 wordpress-2.0.1.ebuild 2982
 RMD160 17f3a7a72cc9076cde171a2f60e9d603efa2ffa2 wordpress-2.0.1.ebuild 2982
 SHA256 ddcf3309a5dc386e0de3deb0ed44cfd2543ea3e2195f4bbd37e341a003de99a6 wordpress-2.0.1.ebuild 2982
-MD5 b618d59622c3eb9ea8f9b52e8454149d wordpress-2.0.2.ebuild 2986
-RMD160 f83b5c3282f5125c64bed23cb5a6ddc7c10a932e wordpress-2.0.2.ebuild 2986
-SHA256 a7318d7b6d1e9b630b94cf42ca3bc02401258e0c98446445891fcccbe2306998 wordpress-2.0.2.ebuild 2986
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEG/aO5mJXAu5GbtIRAh68AJ4vdORJUWWGdEtXqnaGXCCwO7N3lgCdHzvF
-FIdwYzyetxk8cz083+oC9e4=
-=XKbG
------END PGP SIGNATURE-----
+MD5 42191f30e378256a61785d1e3c05d846 wordpress-2.0.2.ebuild 2986
+RMD160 d936cf43de6605479ee6849f6f1383513fa876bb wordpress-2.0.2.ebuild 2986
+SHA256 3cf3c37602c2b003358c70e2eaeb8e1dddf1681bd9509712338fe42696d109ba wordpress-2.0.2.ebuild 2986
