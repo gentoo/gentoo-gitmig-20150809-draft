@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.48 2006/03/19 21:30:49 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.49 2006/03/19 21:37:56 metalgod Exp $
+
+  19 Mar 2006; Luis Medinas <metalgod@gentoo.org> bison-2.1.ebuild:
+  Stable on amd64. Bug #126364.
 
   19 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> bison-2.1.ebuild:
   Stable on alpha wrt bug #126364
