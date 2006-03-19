@@ -1,6 +1,28 @@
-MD5 4b5f7723d3faf42bd56045b7c22bad4d ChangeLog 1293
-MD5 a47d2c492814102698b63e8b424125d4 NaturalDocs-1.22-r1.ebuild 1566
-MD5 43f824b15d5ac052a577b1df90f77a79 NaturalDocs-1.35.ebuild 1013
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dbcf6bdf2a392430daa5d50e740215c0 ChangeLog 1429
+RMD160 3a7a600cb999cd874ded7befbb926eb527eae551 ChangeLog 1429
+SHA256 64c4653dc064a0438bfd2a59619861fa19e259943505cea0dc48cb58a2c8c6cb ChangeLog 1429
+MD5 473036ea77c983b0635a9671af142365 NaturalDocs-1.22-r1.ebuild 1581
+RMD160 dbb39b1451d5b89943533d70fb4ad66f8aa171dd NaturalDocs-1.22-r1.ebuild 1581
+SHA256 74e3647168e491523c8143cfcd105a4839e192ca6bdda17fe4d3a406d68acc49 NaturalDocs-1.22-r1.ebuild 1581
+MD5 bacb6796cf666ec1a254e865bcbf9f2d NaturalDocs-1.35.ebuild 1030
+RMD160 18f3b24a953a2915fa2bdc9ce56f1f2ad4daee48 NaturalDocs-1.35.ebuild 1030
+SHA256 4c152f11f12e41af4b9a1eafe99f6f22c66747c7a7e762fc5d5c6aa52c290040 NaturalDocs-1.35.ebuild 1030
 MD5 ba8d02225abe2fef772ee5f7eff2cbf1 files/digest-NaturalDocs-1.22-r1 137
+RMD160 bd3fe5aff4c8655ed8e5fbf7bfa227323d447211 files/digest-NaturalDocs-1.22-r1 137
+SHA256 d734bba8939f767010b1578ccede24c6ab60e2b2a470c04f6da808628e7135c9 files/digest-NaturalDocs-1.22-r1 137
 MD5 baedc9d767d593e75d9c375fe524d6e9 files/digest-NaturalDocs-1.35 65
+RMD160 ce547f9978d9850d0cf8527030c7e10c4f142df1 files/digest-NaturalDocs-1.35 65
+SHA256 1d66c03e992cf6aa14e929fd63fc4c2b33653310a3f0699216beae6c81f8bc80 files/digest-NaturalDocs-1.35 65
 MD5 0a1c85907143b1e0cb3a1cfbab12c5f2 metadata.xml 652
+RMD160 cb18b69ea4c5d35f9714d06b30ca82e8a435c40b metadata.xml 652
+SHA256 9b7dec6c9f2f01c77ecbc3a09dc79a818d0ba59e70bc75ad669a2c57e595354c metadata.xml 652
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHap4CRZPokWLroQRAiz0AJ9zzEZnBKLd5RNV5/mR5PkYC4TMJwCgyh/N
+7IHyrwwzKOlKNP8Kp2/VsI4=
+=dRHp
+-----END PGP SIGNATURE-----
