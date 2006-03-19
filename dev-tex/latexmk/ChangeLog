@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.3 2006/03/09 12:41:55 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.4 2006/03/19 23:54:29 halcy0n Exp $
+
+  19 Mar 2006; Mark Loeser <halcy0n@gentoo.org> latexmk-307a.ebuild:
+  Add DEPEND on app-arch/unzip
 
   09 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org> latexmk-307a.ebuild:
   Removed INSTALL from dodoc, found by QA script.

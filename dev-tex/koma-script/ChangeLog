@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/koma-script
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.15 2006/03/09 12:51:25 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.16 2006/03/19 23:53:37 halcy0n Exp $
+
+  19 Mar 2006; Mark Loeser <halcy0n@gentoo.org> koma-script-20051125.ebuild:
+  Add DEPEND on app-arch/unzip
 
   06 Feb 2006; Alexandre Buisse <nattfodd@gentoo.org>
   koma-script-20040616.ebuild, koma-script-20040824.ebuild,
