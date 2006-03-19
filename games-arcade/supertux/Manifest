@@ -1,4 +1,25 @@
-MD5 dd0eccc046471abd1ca13f41d74626e4 ChangeLog 2916
-MD5 0ef318eb7b89ec52a41c86f014371bed files/digest-supertux-0.1.3 68
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e4511154dc75b71b65a10a2f6a8cc97e ChangeLog 3119
+RMD160 c1a11b1c7cd62c5e0d683d0ff79cf11d78f7040c ChangeLog 3119
+SHA256 508598e7917def5ee8cbe4290bd3e3031607bba0fcf84b1ee37ee91c3631407f ChangeLog 3119
+MD5 2a48f3aa09cebd0d1a008ab716f0be71 files/digest-supertux-0.1.3 250
+RMD160 c1d3ec801852bae6c78258cf07eabd412a996304 files/digest-supertux-0.1.3 250
+SHA256 da0f112477d84d1d085abf03694ca48f1289fa3935571e34a399f4a181df0d8f files/digest-supertux-0.1.3 250
+MD5 3fa7b0e4ce0711d98835ac73da9050c1 files/supertux-0.1.3-gcc41.patch 459
+RMD160 561fc1e8c69d0dde9124634304893e908485f014 files/supertux-0.1.3-gcc41.patch 459
+SHA256 b4b6c6bc888dccece3db323abeb182091e686c96dd959fce545030a887c88ff9 files/supertux-0.1.3-gcc41.patch 459
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 1de61bcea191de62eb0e44f5da54837f supertux-0.1.3.ebuild 1188
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 3e01f29cac6902a75a01dafb2ff1e2ec supertux-0.1.3.ebuild 1259
+RMD160 e716f53f705b4aea78c9f65064a4e4b13425901a supertux-0.1.3.ebuild 1259
+SHA256 c6a95a142c9f7bbedcfad56eb4449d7eab64492f964cafb70e6fa3fdffb5efc9 supertux-0.1.3.ebuild 1259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHbalCRZPokWLroQRAt0HAJwMwDIAfvLuXRJUuVIf/3dR68+bgACfU4hO
+l7nVDksncvOwQ1Sh51gahAY=
+=6kGj
+-----END PGP SIGNATURE-----
