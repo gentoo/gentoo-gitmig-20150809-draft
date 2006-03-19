@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.14.0.ebuild,v 1.1 2006/03/16 18:21:32 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.14.0.ebuild,v 1.2 2006/03/19 00:20:53 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -33,8 +33,7 @@ RDEPEND=">=gnome-base/libbonobo-2.3.1
 			!gnome-extra/gnome-vfs-sftp ) )
 	hal? (
 		>=sys-apps/hal-0.5.7
-		>=sys-apps/dbus-0.32
-		>=gnome-base/gnome-mount-0.4 )
+		>=sys-apps/dbus-0.32 )
 	avahi? ( >=net-dns/avahi-0.6 )"
 
 # ssl/gnutls USE deps : if both are enabled choose openssl
@@ -57,10 +56,6 @@ pkg_setup() {
 		$(use_enable ipv6)        \
 		$(use_enable hal)         \
 		$(use_enable avahi)"
-
-	if use hal; then
-		G2CONF="${G2CONF} --enable-gnome-mount"
-	fi
 
 	# this works because of the order of conifgure parsing
 	# so should always be behind the use_enable options
