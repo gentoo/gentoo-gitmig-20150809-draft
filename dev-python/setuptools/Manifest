@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 da7416fe00fc417c25bcf2af53c8c45c ChangeLog 1432
-RMD160 6293e4eac2c4672d02c8e8dd7a94a3fea7f93f4e ChangeLog 1432
-SHA256 60c17855c97705202be757bdeb605c5097a64bbebaa0b8d25de270c1caa1ec1a ChangeLog 1432
+MD5 84b9c0c74a6b4f2514a9bf5a5a84e6da ChangeLog 1574
+RMD160 70e5e8fce7337afd2deeb26a8aefa2e3f3ce0b14 ChangeLog 1574
+SHA256 1161d4633019b6238c1401871f6bc5d9ef499c731949c03acab3dedbd220fe01 ChangeLog 1574
 MD5 af51b43b664067296d6426474600b007 files/digest-setuptools-0.6_alpha10 244
 RMD160 e157a7898552490e3a88e340d5047382355e28b0 files/digest-setuptools-0.6_alpha10 244
 SHA256 6bb8b7246e7d027b2a5dc7e82b318cc1dc18b9a93cd96fde805dc5d1b660e058 files/digest-setuptools-0.6_alpha10 244
@@ -13,16 +10,9 @@ SHA256 1ec4bbc7ea605e272c71a1778b45f2630e85bc9c35535839bf56484b153c2b60 files/di
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
 RMD160 e730f96ab97c5be577a6d6d05f04990374a0dffb metadata.xml 160
 SHA256 6cd954a9de2307c57d32b25fa3599dee2908a4ddc6a98594f593d53577307a3a metadata.xml 160
-MD5 8fb273e001df7460fb131cc1025c761a setuptools-0.6_alpha10.ebuild 1096
-RMD160 8e5779c2aa15d99b954c1f835ee9092967ee1e01 setuptools-0.6_alpha10.ebuild 1096
-SHA256 2ba97be67137bd7a391c6398cf06537cd3eafc67b4039a6e9cfc02cdaf08ec39 setuptools-0.6_alpha10.ebuild 1096
-MD5 8008d05a8231ff0bfa5c3d5ee723b900 setuptools-0.6_alpha9.ebuild 1080
-RMD160 c06489eb525487972161ad498e8dd95c24fd8781 setuptools-0.6_alpha9.ebuild 1080
-SHA256 4bf696a95284e1851bc75b6942cda673d168a8956afaf78ccc94c2203f651bbc setuptools-0.6_alpha9.ebuild 1080
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEOeNJrHF4yAQTrARApqNAJ9LWjpurQkloHCoxCqXINXliJazrQCeOTro
-ywagFoniLbomwMVaj4VBTvk=
-=/5ic
------END PGP SIGNATURE-----
+MD5 9fbe517530a3828b58ce4eb8ad2a2ccb setuptools-0.6_alpha10.ebuild 1118
+RMD160 068ceb27b8658910c8b14ad2f43c0082de372bf0 setuptools-0.6_alpha10.ebuild 1118
+SHA256 092389bab91445cd730346012dd9d2129a55244eff93f71cb7fad658742edfad setuptools-0.6_alpha10.ebuild 1118
+MD5 615353a5ec937a70a15349113bc1edc9 setuptools-0.6_alpha9.ebuild 1104
+RMD160 05ced7298230bb8014642b2a3de2a54db827fd6a setuptools-0.6_alpha9.ebuild 1104
+SHA256 82f34ca091934a5fdf5366b2df6328623d90b7899e84fa1b64e07790ec5f890c setuptools-0.6_alpha9.ebuild 1104
