@@ -1,0 +1,11 @@
+--- lib/Sub/Uplevel.pm.orig	2006-03-18 19:33:47.000000000 -0500
++++ lib/Sub/Uplevel.pm	2006-03-18 19:35:03.000000000 -0500
+@@ -120,7 +120,7 @@ before or after Sub::Uplevel::uplevel().
+         # Yes, we need a C style for loop here since $height changes
+         for( my $up = 1;  $up <= $height + 1;  $up++ ) {
+             my @caller = CORE::caller($up);
+-            if( $caller[0] eq __PACKAGE__ ) {
++		if( defined $caller[0] && $caller[0] eq __PACKAGE__ ) {
+                 $height++;
+                 $height += $Up_Frames unless $saw_uplevel;
+                 $saw_uplevel = 1;
