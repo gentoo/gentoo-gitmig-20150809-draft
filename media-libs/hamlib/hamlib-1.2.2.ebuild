@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.2.ebuild,v 1.4 2005/01/11 01:24:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.2.ebuild,v 1.5 2006/03/19 23:03:07 joshuabaergen Exp $
 
 inherit eutils
 
@@ -14,7 +14,6 @@ KEYWORDS="x86 ~ppc alpha"
 IUSE="doc gd python tcltk X"
 
 RDEPEND="virtual/libc
-	X? ( virtual/x11 )
 	gd? ( media-libs/gd )
 	python? ( dev-lang/python )
 	tcltk? ( dev-lang/tk )
