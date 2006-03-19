@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/Tk_Theme
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/Tk_Theme/ChangeLog,v 1.6 2004/06/25 02:10:50 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/Tk_Theme/ChangeLog,v 1.7 2006/03/19 00:06:25 joshuabaergen Exp $
+
+  19 Mar 2006; Joshua Baergen <joshuabaergen@gentoo.org> Tk_Theme-23.ebuild:
+  Add modular X dependencies.
 
   04 Apr 2004; Chris Aniszczyk <zx@gentoo.org> Tk_Theme-23.ebuild,
   metadata.xml:
