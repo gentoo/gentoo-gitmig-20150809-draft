@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ee4f9ff8ee0f470f6e5af5b15210886d ChangeLog 635
 RMD160 fec733e371fb059029579a1d99443717eebaac8f ChangeLog 635
 SHA256 0bf979d99c5aadd0f2a848603fc73ebe5b8110d8f550effaca9e975bf27a1b79 ChangeLog 635
@@ -16,3 +19,10 @@ SHA256 1efb463db455209b05043c70bbf7fc3b94388ef4cf4f386881717362b6ce014a tomsfast
 MD5 6a78be633fcd982b22efe06b21bded4e tomsfastmath-0.05.ebuild 735
 RMD160 bb70bca99e2be7e5a04b8578b891fd721014a2a3 tomsfastmath-0.05.ebuild 735
 SHA256 15cc3d6e63b31b573f2590cffabe221e11116dc900a35c0f906d6b42ce522570 tomsfastmath-0.05.ebuild 735
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHdyPCRZPokWLroQRAjgFAKCK2qFR/o3SrPH7Zfs24IKj8QwtWwCfXnYW
+eKdKVAJaazy8Ypa8jc7iFzk=
+=8iPq
+-----END PGP SIGNATURE-----
