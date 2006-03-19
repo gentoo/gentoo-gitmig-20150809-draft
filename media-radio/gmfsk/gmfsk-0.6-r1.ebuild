@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/gmfsk/gmfsk-0.6-r1.ebuild,v 1.3 2005/08/10 06:17:14 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/gmfsk/gmfsk-0.6-r1.ebuild,v 1.4 2006/03/19 22:58:21 joshuabaergen Exp $
 
 inherit eutils gnome2
 
@@ -14,7 +14,6 @@ KEYWORDS="x86 ~ppc ~amd64"
 IUSE="doc"
 
 RDEPEND="virtual/libc
-	virtual/x11
 	gnome-base/gnome-libs
 	>=gnome-base/libgnomeui-2.0
 	gnome-extra/yelp

@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 65dbf927ad917c6dbfdff95290ffb30d ChangeLog 912
+MD5 0e5d8346f5639a2f7c6b5ffab1da04ea ChangeLog 1054
+RMD160 b0d4b7ec165955c5c54d06d6a1ddc77f4aaeaac9 ChangeLog 1054
+SHA256 11c41a2bb42dad0111ce6fb7adcd0ee720674c90e804fc9fe83a1a99bc33983c ChangeLog 1054
 MD5 3b2985c7057b5000b272a85ad2fe5a77 files/digest-gmfsk-0.6 61
+RMD160 e72d7b5d3ed457b26c65630f8015d2aded6d1261 files/digest-gmfsk-0.6 61
+SHA256 12f44117b2b2dcfbe34507ef8504e3594ea7e7558addc66986a6929dcf19ad7d files/digest-gmfsk-0.6 61
 MD5 3b2985c7057b5000b272a85ad2fe5a77 files/digest-gmfsk-0.6-r1 61
+RMD160 e72d7b5d3ed457b26c65630f8015d2aded6d1261 files/digest-gmfsk-0.6-r1 61
+SHA256 12f44117b2b2dcfbe34507ef8504e3594ea7e7558addc66986a6929dcf19ad7d files/digest-gmfsk-0.6-r1 61
 MD5 6f6f711166a2d339c81540d1ef9954af files/gmfsk-patch-mt63_dsp.h 800
-MD5 5298f11cf6f4925cab324d5f1b6cdcbb gmfsk-0.6-r1.ebuild 955
-MD5 99f43feef7b504ee834ec897ce0e74e0 gmfsk-0.6.ebuild 829
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDdj2cKf2g/qXtneoRAl8/AJwPl/2xYA8eOx/GAj64Tzbx901ZswCeIFAi
-hkl1nd1JxuYoHZLwqW7DuQQ=
-=vKSL
------END PGP SIGNATURE-----
+RMD160 11a6b86e129f4b891002ed6459869940d98b43fb files/gmfsk-patch-mt63_dsp.h 800
+SHA256 45c613115b5ac843ae8eab6f64c18a00ea396155a8b3f16f5d6fd1e09d22fe78 files/gmfsk-patch-mt63_dsp.h 800
+MD5 ac7bde34b8aef4a264026aa67cea1c14 gmfsk-0.6-r1.ebuild 947
+RMD160 7249edf1307c03fb12bfb8164ee5f369c8b717b4 gmfsk-0.6-r1.ebuild 947
+SHA256 0a00a341aefae71198a9dd684ca86c0dc30f05a3c098aef717832227cd8fe2f3 gmfsk-0.6-r1.ebuild 947
+MD5 697e7116cb19ac48236e89e1f0d7297c gmfsk-0.6.ebuild 821
+RMD160 5be47ffce8a4e11ade99016a2009a0595dfb5b9b gmfsk-0.6.ebuild 821
+SHA256 4dc40c4c30646e349c12af63565db5e581b5ca40bc3d39b450dc719ff7b62151 gmfsk-0.6.ebuild 821
