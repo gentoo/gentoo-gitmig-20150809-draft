@@ -1,20 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 10767a4fc679685d49ae17cf44ba515b modutils-2.4.27.ebuild 1035
 MD5 f9c1fc6910a58e9d13b7ba8c657da022 ChangeLog 7847
-MD5 958a439e80de284a2aace67567bdffc8 modutils-2.4.27-r1.ebuild 1084
-MD5 5428d53f18b5fac287741b23634d84dc files/modutils-2.4.27-alias.patch 2246
-MD5 27a62130de1c51fc678efc0e9ad67ddd files/modutils-2.4.27-flex.patch 805
-MD5 4f6eb067ab56884adab12c53346dc793 files/modutils-2.4.27-no-nested-function.patch 1422
-MD5 8ecc5aa24faa96fe32a15688f3e023ac files/modutils-2.4.27-gcc.patch 6963
+RMD160 68cb222922aad19220c8e65ceeea9dd499a442a3 ChangeLog 7847
+SHA256 87ca4e2c0db2b0fbb8f81f154bf746c47c73b0e647f20e0b085eb862298c84bc ChangeLog 7847
 MD5 123430bcca454dfee74acef6f3525a17 files/digest-modutils-2.4.27 68
+RMD160 6c330c4fd747f3f2bee7800981a7be8a4014ebe5 files/digest-modutils-2.4.27 68
+SHA256 35a5cd3852b9ff4e5536a72966516f963b583e1c1f508a5b3bb0ce56edc025ec files/digest-modutils-2.4.27 68
 MD5 123430bcca454dfee74acef6f3525a17 files/digest-modutils-2.4.27-r1 68
+RMD160 6c330c4fd747f3f2bee7800981a7be8a4014ebe5 files/digest-modutils-2.4.27-r1 68
+SHA256 35a5cd3852b9ff4e5536a72966516f963b583e1c1f508a5b3bb0ce56edc025ec files/digest-modutils-2.4.27-r1 68
+MD5 5428d53f18b5fac287741b23634d84dc files/modutils-2.4.27-alias.patch 2246
+RMD160 bcf4fffbecae76e5b14b05c9003ba4f0cf2675ff files/modutils-2.4.27-alias.patch 2246
+SHA256 453e3ab982088e2e85164e63b4944af58cd01c2b2d45d75fdcda6649a339878f files/modutils-2.4.27-alias.patch 2246
+MD5 27a62130de1c51fc678efc0e9ad67ddd files/modutils-2.4.27-flex.patch 805
+RMD160 aa0806e61e5287a5ce821bce66cbfa028e50576b files/modutils-2.4.27-flex.patch 805
+SHA256 dbe0c3207751157e7b104d66bdfeea280343ceabe856dc5d51849c206fdccad9 files/modutils-2.4.27-flex.patch 805
+MD5 8ecc5aa24faa96fe32a15688f3e023ac files/modutils-2.4.27-gcc.patch 6963
+RMD160 6234dbc09c93da469b6e84761dbc883e2d571cf3 files/modutils-2.4.27-gcc.patch 6963
+SHA256 48af5c56a1e6e616278b8ee16dd6e5a5df42fdfc852acf6bc76287f1dc33f2d4 files/modutils-2.4.27-gcc.patch 6963
+MD5 4f6eb067ab56884adab12c53346dc793 files/modutils-2.4.27-no-nested-function.patch 1422
+RMD160 6c34f6ff25019884495c21af525e88a63e449b3c files/modutils-2.4.27-no-nested-function.patch 1422
+SHA256 3e9961a7c9411e8c01eb48d9053d7901ec7a90ee0e070e85bd766385f36d563d files/modutils-2.4.27-no-nested-function.patch 1422
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 8871fcc6b10ffa76910eb862535ccd75 modutils-2.4.27-r1.ebuild 1102
+RMD160 94652f29ee698a5e57577911955f477744a21b32 modutils-2.4.27-r1.ebuild 1102
+SHA256 56cf4a392f04f8d87360d473394c17da35b5904617b095ce958817bbfb8417e1 modutils-2.4.27-r1.ebuild 1102
+MD5 10767a4fc679685d49ae17cf44ba515b modutils-2.4.27.ebuild 1035
+RMD160 2aa6308a81f09ba6641b1eb497171acd7b8d5404 modutils-2.4.27.ebuild 1035
+SHA256 7e5ec9039cd00f116b25f36a8cc1249533e262bc564565bda745d0b80320057c modutils-2.4.27.ebuild 1035
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDP3rUgIKl8Uu19MoRAuZcAJ0V8yZwGIWu4JIj2UC5VEhX68zFYACfQYdp
-YV/Xsq6ErMWxFSxhWMdn8SU=
-=OEbf
+iD8DBQFEHRIj2+ySkm8kpY0RArjrAKCdNAleaFvoeQFZEfU5p9P5QPVXLwCeNGVa
+0XbI9uv1NrURf9CA/So7z4w=
+=1GKz
 -----END PGP SIGNATURE-----
