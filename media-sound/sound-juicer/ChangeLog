@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.70 2006/03/16 20:05:52 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.71 2006/03/19 17:55:44 foser Exp $
+
+  19 Mar 2006; Marinus Schraal <foser@gentoo.org> sound-juicer-2.14.0.ebuild :
+  Correct nautilus-cd-burner dep, also reported as (#126770)
 
 *sound-juicer-2.14.0 (16 Mar 2006)
 
