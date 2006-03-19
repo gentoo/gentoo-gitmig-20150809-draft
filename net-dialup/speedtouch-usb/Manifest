@@ -1,16 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 665646ba2a935b9394c0b9f78a79e2a6 ChangeLog 484
-MD5 9ee871b46e9d9efa35efb70866f84ddf files/README 9905
+MD5 aa256c95d68159d9113032f014ffa86e ChangeLog 721
+MD5 db58c9b8e5fb85bd60a9d09c77f21e95 files/README 9861
 MD5 455d21a7ea0d002dcd3cb16b8ac4c16d files/digest-speedtouch-usb-3.0.1.2 76
-MD5 a20d50e68b46e8c5893c2a38606f3e11 files/speedtch.usermap 389
 MD5 82c09fc4e58b4a48f4730afef332413c metadata.xml 301
-MD5 56308fe2c4e4eb6149ec49719c885ea2 speedtouch-usb-3.0.1.2.ebuild 4402
+MD5 282326a62fdd14e9e4a5fb1ab50f5f86 speedtouch-usb-3.0.1.2.ebuild 4056
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEHGlcjG8pv1lIUX4RAonEAJ4hibLHcBapv4Imu2aok2ujPcNrJwCfRF9T
-JEj1tmqmt8uvJ9OTm+zChFU=
-=p4Ue
+iD8DBQFEHXjgjG8pv1lIUX4RAn94AJ94eHtsAXD6QZcac9gbiM3ugtHKGQCgkEgH
+BcxuWdt4bINCtWLuo7kpGwk=
+=rMDw
 -----END PGP SIGNATURE-----

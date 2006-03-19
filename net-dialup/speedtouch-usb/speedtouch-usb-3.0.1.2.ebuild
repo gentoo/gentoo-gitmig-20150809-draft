@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/speedtouch-usb-3.0.1.2.ebuild,v 1.1 2006/03/18 20:10:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/speedtouch-usb-3.0.1.2.ebuild,v 1.2 2006/03/19 15:29:18 mrness Exp $
 
 inherit eutils linux-info
 
@@ -14,14 +14,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-# udev replaces hotplug, as mentioned at 
-# http://www.linux-usb.org/SpeedTouch/firmware/firmware.html
-# hotplug only needs to be *installed*, to create /etc/hotplug/usb/ - it does
-# not need to be running.
-
 RDEPEND=">=net-dialup/ppp-2.4.3-r11
-	>=sys-apps/hotplug-20040923-r1
-	>=sys-fs/udev-079-r1
+	>=sys-fs/udev-086
 	!net-dialup/speedtouch"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
@@ -38,8 +32,8 @@ pkg_setup() {
 	fi
 
 	if ! has_version '>=sys-apps/baselayout-1.12.0_pre16' ; then
-		ewarn "The best way of using speedtouch driver is through pppd net module of the"
-		ewarn ">=sys-apps/baselayout-1.12.0_pre16 package, which is also the only"
+		ewarn "The best way of using this driver is through the pppd net module of"
+		ewarn ">=sys-apps/baselayout-1.12.0_pre16, which is also the only"
 		ewarn "documented mode of using ${CATEGORY}/${PN}."
 		ewarn "Please install baselayout-1.12.0_pre16 or else you will be on your own!"
 		ebeep
@@ -83,11 +77,7 @@ src_install() {
 		ln -sfn speedtch-${stub}${n}.bin.4 speedtch-${n}.bin.3
 	done
 
-	insinto /etc/hotplug/usb
-	insopts -m 644
-	doins "${FILESDIR}/speedtch.usermap" || die "doins usermap failed"
-
-	# The documentation necessary to complete the setup
+	# Documentation necessary to complete the setup
 	dodoc "${FILESDIR}/README" || die "dodoc failed"
 }
 
@@ -95,13 +85,13 @@ pkg_postinst() {
 	[[ -e /etc/hotplug/usb.usermap ]] && egrep -q " 0x06[bB]9 +0x4061 " /etc/hotplug/usb.usermap && \
 		ewarn "Please remove the SpeedTouch line from /etc/hotplug/usb.usermap"
 
-	#Check kernel configuration
-	CONFIG_CHECK="~FW_LOADER ~NET ~PACKET ~ATM ~NETDEVICES \
-		~PPP ~PPPOATM ~ATM_BR2684 ~USB_DEVICEFS ~USB_ATM ~USB_SPEEDTOUCH"
+	# Check kernel configuration
+	CONFIG_CHECK="~FW_LOADER ~NET ~PACKET ~ATM ~NETDEVICES ~USB_DEVICEFS ~USB_ATM ~USB_SPEEDTOUCH \
+		~PPP ~PPPOATM ~PPPOE ~ATM_BR2684"
 	check_extra_config
 	einfo "Note: All the above kernel configurations are required except the following:"
-	einfo "   - CONFIG_ATM_BR2684 is needed only for PPPoE links, while"
-	einfo "   - CONFIG_PPPOATM is needed only for PPPoA links."
+	einfo "   - CONFIG_PPPOATM is needed only for PPPoA links, while"
+	einfo "   - CONFIG_PPPOE and CONFIG_ATM_BR2684 are needed only for PPPoE links."
 	echo
 
 	# Check user space for PPPoA support
