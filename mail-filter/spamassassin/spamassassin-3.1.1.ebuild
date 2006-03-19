@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.1.ebuild,v 1.3 2006/03/18 19:56:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.1.ebuild,v 1.4 2006/03/19 22:22:17 mcummings Exp $
 
 inherit perl-module
 
@@ -228,7 +228,7 @@ pkg_postinst() {
 	if has_version '>=dev-lang/perl-5.8.8'; then
 		ewarn "Perl 5.8 now uses Unicode internally by default, which causes trouble for"
 		ewarn "SpamAssassin (and almost all other reasonably complex pieces of perl"
-		ewarn" code!)."
+		ewarn "code!)."
 		echo ""
 		ewarn "We've worked around this in most places, as far as we know, but there may"
 		ewarn "still be some issues.  In addition, there is a speed hit, which it would"
