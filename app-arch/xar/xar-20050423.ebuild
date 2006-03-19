@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/xar-20050423.ebuild,v 1.2 2005/06/28 18:24:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/xar-20050423.ebuild,v 1.3 2006/03/19 18:18:12 flameeyes Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="The XAR project aims to provide an easily extensible archive format."
 HOMEPAGE="http://www.opendarwin.org/projects/xar/"
@@ -23,6 +23,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-amd64.patch
+	epatch "${FILESDIR}/${P}-ldflags.patch"
+
+	eautoreconf
 }
 
 src_compile() {
@@ -35,7 +38,7 @@ src_compile() {
 	unset SYMLINK_LIB
 
 	econf ${myconf} || die
-	emake || die
+	emake CFLAGS_OPTIMIZE="${CFLAGS}" LDFLAGS_OPTIMIZE="${LDFLAGS}" || die
 }
 
 src_install() {
