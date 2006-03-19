@@ -1,12 +1,22 @@
-MD5 e1c9926b386a8ac52782d89b2f6a277c ChangeLog 543
-RMD160 d16efc1871803ae198e9e11428fde4e16c789415 ChangeLog 543
-SHA256 48f27890e491e536e3380cbf69d00b9d873c11e66c3362f77b5cb463ad229852 ChangeLog 543
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e45ca95f9fe363437a548bc042009640 ChangeLog 655
+RMD160 a62f246535d61e569e435b72f8b5d59af95abbce ChangeLog 655
+SHA256 f263eb3b4fd9a376616ed4e6883750b81c1100380c774d0df91a9a607a0e32dd ChangeLog 655
 MD5 9be7efb5fc7bd4e20e6201e38a1b3347 files/digest-gnome-python-desktop-2.14.0 286
 RMD160 7457e0d5425ab3a1d2732e9f7cb2d08f9f1a2778 files/digest-gnome-python-desktop-2.14.0 286
 SHA256 08eec625aa03a8f3457e64050be9a2edfd14f9ccefe82f0c4e25edabac83ce68 files/digest-gnome-python-desktop-2.14.0 286
-MD5 43f07ee6b6ca8998a0b9a36c324af524 gnome-python-desktop-2.14.0.ebuild 1361
-RMD160 76be4fb46dbe5c4d974743454b6cda2b62e64618 gnome-python-desktop-2.14.0.ebuild 1361
-SHA256 c0b78d3e355ce0fe40d0205faca5c4fa6744322a57f336549a2b493bbeea16bf gnome-python-desktop-2.14.0.ebuild 1361
+MD5 b62c129368e4bf6e598bdbc3d6596f55 gnome-python-desktop-2.14.0.ebuild 1367
+RMD160 f269085b39dfd1bcf5941aeb665cd6b06d83dd9f gnome-python-desktop-2.14.0.ebuild 1367
+SHA256 5e44a5e746b0502039523f047f10272d9c8a59789dc6ecf6b6ad27aa3d46cd2d gnome-python-desktop-2.14.0.ebuild 1367
 MD5 8b0560553235cfd96801898935f8ff94 metadata.xml 159
 RMD160 4aba844314249b872aefa0ef14d652f127e6334f metadata.xml 159
 SHA256 d6e10a30ac9423eb5a9ba4e7b2a76322683f40b2fb428d2f310dcdbd1cfde235 metadata.xml 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHalQwUpWvClEHQoRAu/FAJ9l0Mbzb7pclpGipvTV85p3p33ISQCeOJqb
+S4LxYtAwscJs3QHa+uQ1dZg=
+=Y9Ju
+-----END PGP SIGNATURE-----
