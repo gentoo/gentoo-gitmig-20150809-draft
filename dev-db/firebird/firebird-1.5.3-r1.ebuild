@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.3-r1.ebuild,v 1.2 2006/02/11 22:12:32 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.3-r1.ebuild,v 1.3 2006/03/19 19:12:30 halcy0n Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,10 +18,12 @@ KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
 IUSE="xinetd doc"
 RESTRICT="nouserpriv"
 
-DEPEND="virtual/libc
-	xinetd? ( virtual/inetd )"
+RDEPEND="xinetd? ( virtual/inetd )"
+DEPEND="${RDEPEND}
+	doc? ( app-arch/unzip )"
 
-S=${WORKDIR}/${MY_P}
+
+S="${WORKDIR}"/${MY_P}
 
 pkg_setup() {
 	enewgroup firebird 450

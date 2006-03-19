@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-10.1.0.4.ebuild,v 1.2 2006/01/21 16:15:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-10.1.0.4.ebuild,v 1.3 2006/03/19 19:18:02 halcy0n Exp $
 
 inherit eutils
 
@@ -17,7 +17,9 @@ KEYWORDS="~x86"
 RESTRICT="fetch"
 IUSE=""
 
-DEPEND=">=dev-db/oracle-instantclient-basic-${PV}"
+RDEPEND=">=dev-db/oracle-instantclient-basic-${PV}"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 pkg_nofetch() {
 	eerror "Please go to:"
