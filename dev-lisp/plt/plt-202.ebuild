@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/plt/plt-202.ebuild,v 1.13 2006/01/28 13:24:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/plt/plt-202.ebuild,v 1.14 2006/03/19 23:19:07 joshuabaergen Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="LGPL-2.1"
 IUSE=""
 
 DEPEND="virtual/libc
-	virtual/x11
+	|| ( x11-libs/libXaw virtual/x11 )
 	sys-devel/gcc
 	sys-devel/binutils"
 
