@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.3 2006/03/07 10:37:16 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.4 2006/03/19 17:14:25 foser Exp $
 
 #
 # Original Author: Saleem Abdulrasool <compnerd@gentoo.org>
@@ -42,7 +42,7 @@ gst-plugins-bad_src_unpack() {
 
 	# Remove generation of any other Makefiles except the plugin's Makefile
 	if [[ -d "${S}/sys/${GST_PLUGINS_BUILD_DIR}" ]] ; then
-		makefiles="Makefile sys/Makefile sys/${GST_PLUINGS_BUILD_DIR}/Makefile"
+		makefiles="Makefile sys/Makefile sys/${GST_PLUGINS_BUILD_DIR}/Makefile"
 	elif [[ -d "${S}/ext/${GST_PLUGINS_BUILD_DIR}" ]] ; then
 		makefiles="Makefile ext/Makefile ext/${GST_PLUGINS_BUILD_DIR}/Makefile"
 	fi
@@ -64,7 +64,7 @@ gst-plugins-bad_src_configure() {
 		gst_conf="${gst_conf} --disable-${plugin}"
 	done
 
-	for plugin in ${GST_PLUINGS_BUILD} ; do
+	for plugin in ${GST_PLUGINS_BUILD} ; do
 		gst_conf="${gst_conf} --enable-${plugin}"
 	done
 
