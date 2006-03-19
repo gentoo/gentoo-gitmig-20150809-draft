@@ -1,12 +1,8 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/virtuals,v 1.14 2006/03/01 18:24:34 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/virtuals,v 1.15 2006/03/19 22:42:53 ferdy Exp $
 
 virtual/alsa				sys-kernel/vanilla-sources
 virtual/bootloader			sys-boot/aboot
 virtual/jre				dev-java/compaq-jre
 virtual/jdk				dev-java/compaq-jdk
-
-# base/virtuals changed to app-admin/gamin for this, which isn't yet
-# stable on alpha. Use fam instead.
-virtual/fam				app-admin/fam
