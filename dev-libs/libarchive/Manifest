@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 54dea051f1c0c14d3d2aefd9c7b6d973 ChangeLog 3852
-RMD160 a3edacf35cb9598372dc15bd180dc31f46d78492 ChangeLog 3852
-SHA256 32441892d2c80a57ff6c2d5d7182566387ad6945a4ca2026d0329b412e36ade7 ChangeLog 3852
+MD5 a47e6068a3c5b71e269c97a7ff3d9872 ChangeLog 4043
+RMD160 82f3cfd0d44f84eda455dae29183e7905c962b97 ChangeLog 4043
+SHA256 b4ebbf960af003b666055dd48d60bf30074743d928bd0f77c6ca8bb2b684e2fb ChangeLog 4043
 MD5 7050cbd8598ed396d741592975d848ce files/digest-libarchive-1.02.027 71
 RMD160 a3c306984f55dcbf81592b162845434b4b1e74ed files/digest-libarchive-1.02.027 71
 SHA256 b7d2b3eb7ec8568dc7bca690d2075993c8c1e2c0b36a804a55b3e7b6625e2092 files/digest-libarchive-1.02.027 71
@@ -16,22 +16,22 @@ SHA256 57b96045015380d4a3fda323785d67e443cebbf7a80b77e17e2a128d795174a1 files/di
 MD5 7fe214e0de0090f3344a9e4a1792a5b3 files/libarchive-1.02.027-osx.patch 609
 RMD160 4f6b1be16e50a5fc8302e90b6e153bd15df1e5f0 files/libarchive-1.02.027-osx.patch 609
 SHA256 e959d8434f8024a982d7806021373dac5a48cb27e95096c2e0902070394358b7 files/libarchive-1.02.027-osx.patch 609
-MD5 6530e11ad3afae081d8c1cd12c6fdd39 libarchive-1.02.027.ebuild 691
-RMD160 4a4456d0257d6dcb55a65338f8d33a972c2051d8 libarchive-1.02.027.ebuild 691
-SHA256 cf78aef7249b220caf55eef82d39cad096a3a800daeae12831a523d5148bf64e libarchive-1.02.027.ebuild 691
-MD5 9243a97026a2a3c8764813919cbaaa2e libarchive-1.2.37.ebuild 865
-RMD160 21b7cdc8a7344421a7e6627a457813a5a19c7dab libarchive-1.2.37.ebuild 865
-SHA256 3367d185ba109490aefe5d63fb22f1882ef0a0dcca73e4dc58ab1be40f5c50b5 libarchive-1.2.37.ebuild 865
-MD5 8e3291db113ba9e856fc63e8cc5db1aa libarchive-1.2.38.ebuild 865
-RMD160 c199d0afad5d8b21867f5f5c60fb00c44a7bc0e0 libarchive-1.2.38.ebuild 865
-SHA256 cf138eca8034d6365a2a7bd392610b18c0b64f2ca7c5b6635f446bbb53044f05 libarchive-1.2.38.ebuild 865
+MD5 3102472df6e9f464329cc9d42e8bd1b8 libarchive-1.02.027.ebuild 718
+RMD160 a1eff4dd14beba1892c7c2e793d2fd860e09bbc8 libarchive-1.02.027.ebuild 718
+SHA256 e2fcfd11cfec8bb48d3a80fe09f2945553dae33efe814fa87fd98405dafba0ce libarchive-1.02.027.ebuild 718
+MD5 02bc3e69447459f2fc8389b3176e04ee libarchive-1.2.37.ebuild 892
+RMD160 a47bd8ebb93fd256437407c9a3c4d604fc34e709 libarchive-1.2.37.ebuild 892
+SHA256 5afd12f26200815922a09b09d8ee2c9d649e527aa1f0b1523354c8abb34f26ef libarchive-1.2.37.ebuild 892
+MD5 8cfdb22a6cdd655428d33a032caa03a3 libarchive-1.2.38.ebuild 892
+RMD160 ba65e08c99a7f8d3399fa92ff73bc7b9f14e3a9b libarchive-1.2.38.ebuild 892
+SHA256 3eda752b779a56d6457e5e158d08cc24bedde6b98127fa23ee8785812ff1be5f libarchive-1.2.38.ebuild 892
 MD5 985eb3e6f7fb60fd3651ba1cae41c609 metadata.xml 464
 RMD160 5e31e8d91e6026cb4ee77487a66557658323831b metadata.xml 464
 SHA256 45e3de2ff231b02869a60bade6c03f32e9a8c5a34a79199dcdbbfaf17f7106f4 metadata.xml 464
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD9wIzAiZjviIA2XgRAhb1AJ4y07UKAPLYzpWkXTi+qwBGxbtZcACg3gCu
-RzBY3lMDVK5kvdkRBzRTqxE=
-=BHN4
+iD8DBQFEHcbkAiZjviIA2XgRAnnmAJ9LKtihCeGdXlZNNB75eyqOuiG/ZgCg7hP2
+zVlVEyZFNucfF9A/1f+xjyQ=
+=qBZc
 -----END PGP SIGNATURE-----

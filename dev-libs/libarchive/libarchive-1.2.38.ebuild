@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/libarchive-1.2.38.ebuild,v 1.1 2006/02/18 11:16:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/libarchive-1.2.38.ebuild,v 1.2 2006/03/19 21:02:15 flameeyes Exp $
 
 inherit eutils libtool
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc-macos ~x86"
 IUSE=""
 
 RDEPEND="app-arch/bzip2
-	sys-libs/zlib"
+	sys-libs/zlib
+	!>=app-arch/bsdtar-1.2.51"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
