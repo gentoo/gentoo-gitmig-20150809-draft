@@ -1,55 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7e134bbe760cad222aadd6bab1348efb ChangeLog 22657
-RMD160 180b2c41cf6376148e05dc4be38b8552dae8ac36 ChangeLog 22657
-SHA256 c25b2917628c533a77b69c6bc40200d22b26981b0319e0400cf62f90b504d021 ChangeLog 22657
+MD5 c6071585e0650645329efc805b4a706e ChangeLog 22794
 MD5 ab6e8b5ecc163d415aebb7d2c42238a3 files/config.default.php-2.7.0.patch 5533
-RMD160 4b043b198dc517846e5282d0574c9a05eb6906a3 files/config.default.php-2.7.0.patch 5533
-SHA256 5956d96dd9ba02107a46302703df458cf45a495ff175d5e64b0154d9e815b7a3 files/config.default.php-2.7.0.patch 5533
 MD5 9dc203a856638d41f9992d0e54f8c8f8 files/config.default.php-2.8.0.patch 5553
-RMD160 60869c33523751098a98a067fee3482c2c26795a files/config.default.php-2.8.0.patch 5553
-SHA256 78ab8d8910101accd03f8820210feb49a997571e66156d86255dc8fafebf16ce files/config.default.php-2.8.0.patch 5553
 MD5 1d85eb9be97d60027aaf8510dfa9f6d5 files/digest-phpmyadmin-2.7.0_p1 268
-RMD160 46a38163b7c59314e872794f64aa6e2f9aff061c files/digest-phpmyadmin-2.7.0_p1 268
-SHA256 fcb7855b1d5625530e11d71b2594ef631850ab163312d19fc98f55da39d1ba68 files/digest-phpmyadmin-2.7.0_p1 268
 MD5 3b6a4be3903f9737aaeed4cb2d1cd441 files/digest-phpmyadmin-2.7.0_p2 268
-RMD160 1240eee2470b5146d93d24ddd116c31b6ea87f04 files/digest-phpmyadmin-2.7.0_p2 268
-SHA256 f6ac671a9db61a92e56b5f543d1f59958f4beb8fb911137e8a1d0b6c9e774e28 files/digest-phpmyadmin-2.7.0_p2 268
 MD5 8851528c551e62b6ae108470c224a2c4 files/digest-phpmyadmin-2.8.0 256
-RMD160 7379cd8c1fa426ebcca70ccc743ba600fba55e61 files/digest-phpmyadmin-2.8.0 256
-SHA256 a2090ef463dbcbbbe7f121c3e7b93778841008661275505819a3b0320b09259d files/digest-phpmyadmin-2.8.0 256
+MD5 ff631f6d886bb14c787630b268f96e47 files/digest-phpmyadmin-2.8.0.2 72
 MD5 1a6c1907f5c2327b00453d7675c13178 files/mysql-setup.sql.in-2.5.6 3231
-RMD160 7b462640601d77d01c8f11322cb2cb84ce8e79a6 files/mysql-setup.sql.in-2.5.6 3231
-SHA256 482ada180bcaf41fa4dc103edae4a78a55f3ced1fb2becc12124b914db1dcbfe files/mysql-setup.sql.in-2.5.6 3231
 MD5 7cb4e3d6a35ebf8041ea3d2abaac8c28 files/postinstall-en-2.8.0.txt 728
-RMD160 3b8143e570d157259b6b84d0edc968b1f6431880 files/postinstall-en-2.8.0.txt 728
-SHA256 153fa7b02cc6f8d33c4568484e2e6814dd82202de4037b67a85648fcc9dc8755 files/postinstall-en-2.8.0.txt 728
 MD5 465c40880998c64b5cbe5fd686b62240 files/postinstall-en.txt 591
-RMD160 77ef47191d81687c67ca05b142a217643bd27964 files/postinstall-en.txt 591
-SHA256 8f17a152a9d8d0472edc3238c7e27c472cb261c367eb86619869a8e9a2a175e7 files/postinstall-en.txt 591
 MD5 03e1c16e02d105f6fcfb56c1bf734f6e files/reconfig-2.7 319
-RMD160 c865d236bf1af7846ae4a572df35385d09985f50 files/reconfig-2.7 319
-SHA256 4f1d68f5107184bd3c3947fe4f27d25f11d0da816c143d313ec20e80b75bc2b1 files/reconfig-2.7 319
 MD5 cf0af0543cb29eb88163220df6f14669 files/reconfig-2.8 329
-RMD160 993162aa564ab7d37c7f32db439518c5cab9ace5 files/reconfig-2.8 329
-SHA256 526f7efb31adde131ffaff0271ea12693315c2d4e8a1f96ae4af6947815d6612 files/reconfig-2.8 329
 MD5 7b6e6cf3eaafa0480ab619fadfb37e2e metadata.xml 162
-RMD160 0b015f5ff17c4d8e7aee826d48b326cc19b1fed4 metadata.xml 162
-SHA256 84ff2fc6c9a4af1b9dbe32aa81ab84c2958bc1bd65a9977686df2dcab6e420d0 metadata.xml 162
 MD5 ed2bb53f46dfc48ddbc758d5dc07fdc6 phpmyadmin-2.7.0_p1.ebuild 2097
-RMD160 8e2e90f93ffcafadc9967b21926e0485f824b320 phpmyadmin-2.7.0_p1.ebuild 2097
-SHA256 41ba3ada95fcc36ca59ced583668d2189bd7c4b7ef0b8a52e3626a24687657de phpmyadmin-2.7.0_p1.ebuild 2097
 MD5 a24be197d7a2a4d85249218fda511daf phpmyadmin-2.7.0_p2.ebuild 2103
-RMD160 bfb3d4fb85fdd3733f5f32504bf2b36d8f713f2b phpmyadmin-2.7.0_p2.ebuild 2103
-SHA256 a5229fde41f51b5c0c820fc603b5123f8bd2e049d403e0f2f2d71822426d0a01 phpmyadmin-2.7.0_p2.ebuild 2103
+MD5 015e68f120f91e52fad4e4191b1a8be0 phpmyadmin-2.8.0.2.ebuild 2386
 MD5 790a058ebffcf1b4b23b4829cabc6e99 phpmyadmin-2.8.0.ebuild 2381
-RMD160 51b185a9db4d2074850b24695e1bb8ae9599ec51 phpmyadmin-2.8.0.ebuild 2381
-SHA256 38415bb40a2ad57f1dcc3181d0cddcc99133c2c440304b109590edf402e46155 phpmyadmin-2.8.0.ebuild 2381
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEGEaXEzitwsaoONoRAqaJAKCBuQj1y1gvwDT7YSoaS69Ek1I1+gCfeWmZ
-p2lEmfCWkGR0ulRWWGY3QRA=
-=MiUf
------END PGP SIGNATURE-----
