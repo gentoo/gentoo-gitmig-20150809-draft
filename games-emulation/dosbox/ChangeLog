@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dosbox
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.20 2005/07/11 16:25:51 mr_bones_ Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.21 2006/03/19 11:22:49 eradicator Exp $
+
+  19 Mar 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/0.63-gcc41.patch, dosbox-0.63.ebuild:
+  Fixed compilation with gcc4 and on amd64.  Closes bug #114949.
 
   11 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org> dosbox-0.63.ebuild:
   amd64 patch is unconditional upstream so apply it for everyone.

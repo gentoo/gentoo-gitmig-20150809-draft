@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.63.ebuild,v 1.4 2005/07/11 16:25:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.63.ebuild,v 1.5 2006/03/19 11:22:49 eradicator Exp $
 
 inherit eutils games
 
@@ -27,6 +27,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PV}-64bit.patch
+	epatch "${FILESDIR}"/${PV}-gcc41.patch
 }
 
 src_compile() {

@@ -1,0 +1,43 @@
+diff -Naurp dosbox-0.63.orig/include/programs.h dosbox-0.63/include/programs.h
+--- dosbox-0.63.orig/include/programs.h	2004-08-04 02:12:51.000000000 -0700
++++ dosbox-0.63/include/programs.h	2006-03-19 03:09:29.000000000 -0800
+@@ -40,7 +40,7 @@ public:
+ 	CommandLine * cmd;
+ 	DOS_PSP * psp;
+ 	virtual void Run(void)=0;
+-	bool Program::GetEnvStr(const char * entry,std::string & result);
++	bool GetEnvStr(const char * entry,std::string & result);
+ 	bool GetEnvNum(Bitu num,std::string & result);
+ 	Bitu GetEnvCount(void);
+ 	bool SetEnv(const char * entry,const char * new_string);
+diff -Naurp dosbox-0.63.orig/src/dos/drive_cache.cpp dosbox-0.63/src/dos/drive_cache.cpp
+--- dosbox-0.63.orig/src/dos/drive_cache.cpp	2004-11-13 04:08:43.000000000 -0800
++++ dosbox-0.63/src/dos/drive_cache.cpp	2006-03-19 03:13:30.000000000 -0800
+@@ -317,12 +317,12 @@ int DOS_Drive_Cache::CompareShortname(co
+ {
+ 	char* cpos = strchr(shortName,'~');
+ 	if (cpos) {
+-		Bits compareCount1	= (int)cpos - (int)shortName;
++		Bits compareCount1	= cpos - shortName;
+ 		char* endPos		= strchr(cpos,'.');
+-		Bitu numberSize		= endPos ? int(endPos)-int(cpos) : strlen(cpos);
++		Bitu numberSize		= endPos ? endPos - cpos : strlen(cpos);
+ 		
+ 		char* lpos			= strchr(compareName,'.');
+-		Bits compareCount2	= lpos ? int(lpos)-int(compareName) : strlen(compareName);
++		Bits compareCount2	= lpos ? lpos - compareName : strlen(compareName);
+ 		if (compareCount2>8) compareCount2 = 8;
+ 
+ 		compareCount2 -= numberSize;
+diff -Naurp dosbox-0.63.orig/src/gui/midi_alsa.h dosbox-0.63/src/gui/midi_alsa.h
+--- dosbox-0.63.orig/src/gui/midi_alsa.h	2004-08-04 02:12:54.000000000 -0700
++++ dosbox-0.63/src/gui/midi_alsa.h	2006-03-19 03:14:59.000000000 -0800
+@@ -112,7 +112,7 @@ public:
+ 			}
+ 			break;
+ 		default:
+-			LOG(LOG_MISC,LOG_WARN)("ALSA:Unknown Command: %08x", (int)msg);
++			LOG(LOG_MISC,LOG_WARN)("ALSA:Unknown Command: %08x", (const char *)msg);
+ 			send_event(1);
+ 			break;
+ 		}
