@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-1.13.ebuild,v 1.2 2006/02/16 22:32:43 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-1.13.ebuild,v 1.3 2006/03/19 11:22:36 nelchael Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/adodb/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc x86"
 IUSE="mysql postgres"
 
 RDEPEND=">=dev-lang/python-2.3
