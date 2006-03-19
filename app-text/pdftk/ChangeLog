@@ -1,6 +1,12 @@
 # ChangeLog for app-text/pdftk
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.16 2005/04/24 11:42:09 hansmi Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.17 2006/03/19 23:11:42 ehmsen Exp $
+
+  19 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  +files/pdftk-1.12-gcc-4-compilation.patch, pdftk-1.12.ebuild:
+  Fixed incorrect einfo about java compilers, bug #125194.
+  Added patch to fix compilation with gcc-4,
+  thanks to Luca Merolla <luca.merolla@tiscalinet.it>, bug #126735.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pdftk-1.12.ebuild:
   Stable on ppc.

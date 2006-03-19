@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.12.ebuild,v 1.7 2005/04/24 11:42:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.12.ebuild,v 1.8 2006/03/19 23:11:42 ehmsen Exp $
+
+inherit eutils
 
 DESCRIPTION="A tool for manipulating PDF documents"
 HOMEPAGE="http://www.accesspdf.com/pdftk"
@@ -16,7 +18,7 @@ S=${WORKDIR}/${P}/${PN}
 pkg_setup() {
 	if [ -z "$(which gcj 2>/dev/null)" ]; then
 		eerror "It seems that your system doesn't provides a Java compiler."
-		eerror "Re-emerge sys-devel/gcc with \"java\" and \"gcj\" enabled."
+		eerror "Re-emerge sys-devel/gcc with \"gcj\" enabled."
 		die "gcj not found."
 	fi
 }
@@ -27,6 +29,8 @@ src_unpack() {
 	mv ${S}/Makefile.Generic ${T}/Makefile.Generic.orig
 	sed 's:-O2:\$(CFLAGS):g' \
 		< ${T}/Makefile.Generic.orig > ${S}/Makefile.Generic
+	# Fix gcc-4 compilation, bug #126735.
+	epatch "${FILESDIR}/${P}-gcc-4-compilation.patch" || die
 }
 
 src_compile() {
