@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wxactivex/wxactivex-1.0.ebuild,v 1.1 2005/05/19 01:42:36 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wxactivex/wxactivex-1.0.ebuild,v 1.2 2006/03/19 22:38:05 halcy0n Exp $
 
 inherit eutils
 
@@ -12,8 +12,10 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 LICENSE="BSD"
-DEPEND=">=dev-libs/wx-xmingw-2.4.2"
-S=${WORKDIR}
+RDEPEND=">=dev-libs/wx-xmingw-2.4.2"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
