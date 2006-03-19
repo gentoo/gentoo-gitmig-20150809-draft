@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.ebuild,v 1.1 2006/03/19 02:31:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.ebuild,v 1.2 2006/03/19 14:38:28 cardoe Exp $
 
-inherit eutils linux-info debug autotools
+inherit eutils linux-info debug
 
 DESCRIPTION="Hardware Abstraction Layer"
 HOMEPAGE="http://www.freedesktop.org/Software/hal"
@@ -111,7 +111,6 @@ src_unpack() {
 
 	# allow plugdev group people to mount
 	epatch "${FILESDIR}"/${PN}-0.5.7-plugdev-allow-send.patch
-	eautoreconf
 }
 
 src_compile() {
@@ -139,7 +138,7 @@ src_install() {
 
 	# hal umount for unclean unmounts
 	exeinto /usr/libexec
-	doexec "${FILESDIR}"/hal-unmount.dev hal-unmount.sh
+	doexe "${FILESDIR}"/hal-unmount.dev hal-unmount.sh
 
 	# initscript
 	newinitd "${FILESDIR}"/0.5-hald.rc hald
