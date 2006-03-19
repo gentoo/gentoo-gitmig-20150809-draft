@@ -1,25 +1,45 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 09f7fd92798972f835690ec0db7c3276 ChangeLog 12060
-MD5 9e65faa589b6fc7105f3ee3b35cc8c71 aspell-0.50.5-r4.ebuild 1895
+MD5 772e7ba6e66624896317ad885c6414c3 ChangeLog 12147
+RMD160 0ec6f091362f09dab3f258ee290bad612313ccf3 ChangeLog 12147
+SHA256 9236015e70aae75d5e8e50df411618efdb7b31c7d13999e66b57050630cc040b ChangeLog 12147
+MD5 363b7bd06a8f3dead95475a7cb50fae2 aspell-0.50.5-r4.ebuild 1955
+RMD160 6ccd12b48527aa3fe5cddcd80a07ffd0cd1289aa aspell-0.50.5-r4.ebuild 1955
+SHA256 78ef20fadab4354dfcf697612279ac2738f3b1db24315854f8eff796c4cfb13c aspell-0.50.5-r4.ebuild 1955
 MD5 e67f599d5793e4b71209409651b42464 aspell-0.60.3.ebuild 1835
+RMD160 ab543eea853ee615b89e73fbf52f1751b4ee68b8 aspell-0.60.3.ebuild 1835
+SHA256 0af7133bf797ea755653cfdfa08ba767929d56a2bd90f7426c0a4448a3e45e96 aspell-0.60.3.ebuild 1835
 MD5 ff593dec5d007f34f4d0b338312c0c26 aspell-0.60.4.ebuild 1890
+RMD160 a7bf40ce373f389a6da96ec83acc6c8badb3a7fc aspell-0.60.4.ebuild 1890
+SHA256 e917be669cc4f8552d511f12d8842151012f96121afbb01d8470231ea9940cb7 aspell-0.60.4.ebuild 1890
 MD5 4fa550930c5e5fb38177ac9f77619891 files/01-gcc3.3-assert.patch 309
+RMD160 0e0ed6a1a644301454f900fd3607ceec190fd0c4 files/01-gcc3.3-assert.patch 309
+SHA256 77f3186d542410c0cd6ee6de465ed70ab5a1802ea24fd872610c637b067c9d24 files/01-gcc3.3-assert.patch 309
 MD5 f956a4b48687a0823d0d5d7608b567e9 files/02-gcc3.3-constcast.patch 453
+RMD160 e8a56c6de399970cce018f5f01185cd8adf3bef5 files/02-gcc3.3-constcast.patch 453
+SHA256 4af351a518e00efd63b7795a63150304b3328b9df4f71de2a3c7a757c18d88e7 files/02-gcc3.3-constcast.patch 453
 MD5 d2091b79a60b395e1ce3c496b7e3d45a files/aspell-0.50.5-charcount.patch 2264
+RMD160 75e80538b3007e9d10d69a682e62990fd2e25676 files/aspell-0.50.5-charcount.patch 2264
+SHA256 8b8dff47288fbd3c4983a354215b000262e4d8aa803421313730c80a62cf87ec files/aspell-0.50.5-charcount.patch 2264
 MD5 fb277ca79b2dcd2aa6a842c8b8ad59e4 files/aspell-0.60.3-templateinstantiations.patch 274
+RMD160 e84029e2b8c63e75421aecfc15fd30ec5d893419 files/aspell-0.60.3-templateinstantiations.patch 274
+SHA256 71ec6d58f4e5e629d82869bc7c8c3eb63663aedf1be3c38f87ab872835f90f2a files/aspell-0.60.3-templateinstantiations.patch 274
 MD5 1330ba856f163b4140b57109f0b763d8 files/aspell-0.60.4-gcc-4.1-fix.patch 429
+RMD160 9796c521c88d9ce9c93fa6df08bf2107725507ac files/aspell-0.60.4-gcc-4.1-fix.patch 429
+SHA256 8ab4c87ba3f4bf54767f1d4b685690bbb7b8e2252101ff1bf1b836ac4a62b834 files/aspell-0.60.4-gcc-4.1-fix.patch 429
 MD5 02560c627d075d243720f1067bf45bcf files/aspell-buffer-fix.patch 1556
+RMD160 2760cfd2c1884e2448c5557a705c92d3bdb99815 files/aspell-buffer-fix.patch 1556
+SHA256 ede54c28a1591be645288bb7c5d31539ba20e8628841745c8eeafd9ea185f7a7 files/aspell-buffer-fix.patch 1556
 MD5 ec7c300a1661ae94b55736f74a045bab files/aspell-quotechar-fix.patch 473
-MD5 1b5d84b6b88a3dfe388ad2e4b1f48155 files/digest-aspell-0.50.5-r4 66
+RMD160 200f38438108555bfdc67c68008bced0c3a6b779 files/aspell-quotechar-fix.patch 473
+SHA256 3b5bc1a87613b396b080fb5a13003ac58b9fb443a8d2dc4eb2e03851ddad3a6d files/aspell-quotechar-fix.patch 473
+MD5 6ac62e46f8d968c782d51d0dcce7aa88 files/digest-aspell-0.50.5-r4 244
+RMD160 4aa6aed1ce78df28f3c50eda7080b01effcc9e5f files/digest-aspell-0.50.5-r4 244
+SHA256 0dddbdd293f12296619ab96259dddf175dc0a6314a010b43cab8ac005ee78970 files/digest-aspell-0.50.5-r4 244
 MD5 1b48dc4c225359e25d93946c0f313adb files/digest-aspell-0.60.3 66
+RMD160 ef3ae2b1091b54b74df3c6a03eefd2ef7625c5e6 files/digest-aspell-0.60.3 66
+SHA256 2519c9dc748ca48f8dbd861e55f49c08d1099b1661d62aaf77f419828ecf2de5 files/digest-aspell-0.60.3 66
 MD5 3fa02bca76a99a620612aa0b52c14f41 files/digest-aspell-0.60.4 66
+RMD160 e37979d9cf717db0fad2bed9f0e2c2869e5ddaa1 files/digest-aspell-0.60.4 66
+SHA256 e009091e35b9d005566a7aec173bfc84affbc8f40cf66753ee3558871550a9c2 files/digest-aspell-0.60.4 66
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzEwa2+ySkm8kpY0RArA7AJ41naRTG5WYz8cxKsflHV9jzY6WCACgwLFc
-aG6rl20T7zOBG6H0Awe4mTA=
-=tHFw
------END PGP SIGNATURE-----
+RMD160 853d3c463af1132de9d434e4bdca16fd81a21eb0 metadata.xml 162
+SHA256 9629e7723cb4708c1910c25510cd14da2729d34eed4ebfc1563df4a1ed5e1b22 metadata.xml 162
