@@ -1,20 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 46a5d6a09f748ea286a4bf2abbc4811e ChangeLog 2604
-MD5 640585b53e3c5c0e02f6edbe3e32ab18 files/digest-gcombust-0.1.52 67
-MD5 83d876f765b3b24ad3a8e1215e072946 files/digest-gcombust-0.1.53 67
-MD5 ab6942c39b304f056d9152604d58250d files/digest-gcombust-0.1.54 67
+MD5 f143f75aabf976b0d75782673ae80a1e ChangeLog 2904
+RMD160 91e8ce8cd9332b96b742dfef67eb76230ac7bf33 ChangeLog 2904
+SHA256 6a6c08fbddd7c4a10431561e6798b9b841ada3146dc27d5303b76f3a9daaa2c5 ChangeLog 2904
 MD5 984f834bc69c82ea39efa9884c0ba85d files/digest-gcombust-0.1.55 67
-MD5 b73c13d87d1adcd44d14174565b2b1fd gcombust-0.1.52.ebuild 937
-MD5 906bdb5b053075047d7d6e341a795b33 gcombust-0.1.53.ebuild 936
-MD5 f26ca6b5616d0bc0d13ef3acc329604d gcombust-0.1.54.ebuild 943
+RMD160 ac45f5c896f3ed95461cfb77905883d63c75df2f files/digest-gcombust-0.1.55 67
+SHA256 d8734bdaa2063696689a641cb64b5af08421f49d3c24861e531d584c66d46539 files/digest-gcombust-0.1.55 67
+MD5 d47d8acbafdb2ab1663bb3c11bfb15bc files/digest-gcombust-0.1.55-r1 247
+RMD160 d66fae7381f5337bc8fa402958097f8f1e95f968 files/digest-gcombust-0.1.55-r1 247
+SHA256 a8b0ff045b1f23a9090a61bce2c15c99ac5506d250509ee59519c8f66e9552fc files/digest-gcombust-0.1.55-r1 247
+MD5 5b5f6fe10f474d5b59c41660a744cf32 files/gcombust-0.1.55-gcc41.patch 1105
+RMD160 3a490923c2b55bce42ceeff23af6e1f161b39679 files/gcombust-0.1.55-gcc41.patch 1105
+SHA256 0052361bb21692a021d489dcba4b849aafb65eadd2a2b57be266d2ea55fc57c1 files/gcombust-0.1.55-gcc41.patch 1105
+MD5 694b6631434ada6711fc4b04828b5243 gcombust-0.1.55-r1.ebuild 1114
+RMD160 3dfb7c60b2169e8a6f890053257d89e8a264c46b gcombust-0.1.55-r1.ebuild 1114
+SHA256 fcb3e69871faed2766d24fdf1110b9f0c73a8fce6c3f48f4868b6b2e2a0512f9 gcombust-0.1.55-r1.ebuild 1114
 MD5 939dbc356faefc298bc517d1ef1c36a0 gcombust-0.1.55.ebuild 1050
+RMD160 799ef05415759ebc9eb8f54cca2b5a0cac1b7d94 gcombust-0.1.55.ebuild 1050
+SHA256 a1c0c5b11e54643e1b65b490494df25fc6aa4e28ad8e0b6e6c5f2a14599a26c2 gcombust-0.1.55.ebuild 1050
 MD5 4ce63071510202110ebc72dd9ee3924e metadata.xml 214
+RMD160 4120d9f1b831e1e14b793d69fcac8404e240747f metadata.xml 214
+SHA256 f246585065033926d43d6fb617cf1c19cca0dd470c7efa44cbf957a9fa9e07b7 metadata.xml 214
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDs1j+wUpWvClEHQoRAkBvAJ9jQtaa8a0fdq8tiH3mK85fj5G1YwCfdegs
-s8pfFN9pnPeYgkUr41zs+YY=
-=fiKo
+iD8DBQFEHLluwUpWvClEHQoRAsocAJ9u3NGUYVmAcZ6eBQU/Dtruif+vngCdHMyO
+IrgAQcfNfbwTP0yMap/GbI8=
+=ulB6
 -----END PGP SIGNATURE-----

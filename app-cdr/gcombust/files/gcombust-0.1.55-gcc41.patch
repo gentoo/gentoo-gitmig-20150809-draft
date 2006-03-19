@@ -1,0 +1,24 @@
+diff -urN ../tmp-orig/gcombust-0.1.55/src/optimize_usage.c ./src/optimize_usage.c
+--- ../tmp-orig/gcombust-0.1.55/src/optimize_usage.c	2003-06-30 15:07:27.000000000 +0200
++++ ./src/optimize_usage.c	2004-12-20 16:29:48.012513000 +0100
+@@ -31,7 +31,7 @@
+ #include "locks.h"
+ #include "globals.h"
+ 
+-static GtkWidget *opt_try_harder;
++GtkWidget *opt_try_harder;
+ 
+ static GtkWidget *cdsize_option_menu, *cdsize_selected_label, *cdsector_selected_label;
+ static GtkWidget *used_size_label, *used_sectors_label, *wasted_size_label, *wasted_sectors_label;
+diff -urN ../tmp-orig/gcombust-0.1.55/src/rip_audio.c ./src/rip_audio.c
+--- ../tmp-orig/gcombust-0.1.55/src/rip_audio.c	2002-02-16 21:00:52.000000000 +0100
++++ ./src/rip_audio.c	2004-12-20 16:30:05.285887048 +0100
+@@ -41,7 +41,7 @@
+ char *cdda2wav_path = NULL, *cdda_device_path;
+ char *def_rip_path = NULL;
+ char *cdparanoia_path = NULL, *cdpara_device_path;
+-static GtkWidget *rip_path_entry;
++GtkWidget *rip_path_entry;
+ 
+ static GtkWidget *rip_win = NULL, *p_win;
+ static GtkWidget *autoscroll_cdda2wav_text, *cdda2wav_text, *cdda2wav_text_scrollbar;

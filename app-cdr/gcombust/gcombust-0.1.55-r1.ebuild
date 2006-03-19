@@ -1,19 +1,33 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.52.ebuild,v 1.15 2005/01/01 12:13:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.55-r1.ebuild,v 1.1 2006/03/19 01:52:31 metalgod Exp $
 
-DESCRIPTION="A GUI for mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen"
+inherit eutils gnuconfig
+
+DESCRIPTION="A GUI for mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen."
 HOMEPAGE="http://www.abo.fi/~jmunsin/gcombust/"
 SRC_URI="http://www.abo.fi/~jmunsin/gcombust/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="nls"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	nls? ( sys-devel/gettext )"
-RDEPEND="app-cdr/cdrtools"
+RDEPEND="${DEPEND}
+	app-cdr/cdrtools"
+
+src_unpack() {
+	if [ "${A}" != "" ]; then
+		unpack ${A}
+	fi
+	gnuconfig_update
+
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-gcc41.patch
+}
 
 src_compile() {
 	local myconf
