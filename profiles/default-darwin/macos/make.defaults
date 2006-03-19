@@ -5,5 +5,5 @@
 
 ARCH="ppc"
 ACCEPT_KEYWORDS="ppc-macos"
-USE="opengl ppc-macos"
+USE="opengl ffcall ppc-macos"
 
