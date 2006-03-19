@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 294a5c16e1834d200f545e421fff7d95 ChangeLog 41859
-RMD160 49d649a582ba336826f908dbd058977568d863a0 ChangeLog 41859
-SHA256 b9cd205d89b8c5325c3dda5413754d51963644e252d4fd70baf2dc3b27a4e6a8 ChangeLog 41859
+MD5 4d504268efb18c79295a40547b079966 ChangeLog 42026
+RMD160 d22931495510622a8631a97adb193dabc26ff202 ChangeLog 42026
+SHA256 18e650b8cfc37cadc360c9a21e62f4597a81fa2af10f64aa80f0c7908f19b871 ChangeLog 42026
 MD5 328c58524dbe1f58eea781194cc7de94 files/1.5/mozilla-firefox-1.5-history.patch 2376
 RMD160 2e6a58c257c5a1455c9440b5d1f3829a2149c970 files/1.5/mozilla-firefox-1.5-history.patch 2376
 SHA256 bad2ff1c2534fb55851fb43bbb1a123511e828eca52e88589f8fbdad42e6a6ef files/1.5/mozilla-firefox-1.5-history.patch 2376
@@ -25,6 +22,9 @@ SHA256 30f2e95fb485ef6858d6390b8c921cd368c67a6e65b41a1f818dd4809f4c9e55 files/di
 MD5 a2e289f86fe1fe99fa499e20f921f252 files/digest-mozilla-firefox-1.5.0.1-r2 8075
 RMD160 1f6a5b75450b269ca95b7bf323b859c1005f9801 files/digest-mozilla-firefox-1.5.0.1-r2 8075
 SHA256 fe47019329dc41d4287da0a08176d62513bf7f96647b952c78c45a96b1e3cac3 files/digest-mozilla-firefox-1.5.0.1-r2 8075
+MD5 96c54e981c10bfae741965d082f73cbe files/digest-mozilla-firefox-1.5.0.1-r3 8075
+RMD160 f4e9b7c1951026f93ac1606dd3491317bf8e6dc0 files/digest-mozilla-firefox-1.5.0.1-r3 8075
+SHA256 775dabd5fe06cf5ae8632ee98c9d7726e2194e2d4cc55a1c54b6c7aff3561ef1 files/digest-mozilla-firefox-1.5.0.1-r3 8075
 MD5 6a7a2240dc5864e7f8ee444e34e84461 files/firefox.1 2538
 RMD160 4564007d7d5345e9ab09c941015e3cdb78913835 files/firefox.1 2538
 SHA256 3483439a73c74b818bdde98c15223b6d3fcfe78e3ad974fb35f197cf3ad614e7 files/firefox.1 2538
@@ -58,10 +58,6 @@ SHA256 3d63df219c0119abd3a835bb8cf7bf55b250b428e8647628b82fc4145e8780b6 mozilla-
 MD5 a2dbd8316207710165cfde34be8efae0 mozilla-firefox-1.5.0.1-r2.ebuild 8660
 RMD160 8075fa4d9a76c7d4cbf4617b19802b3decb22682 mozilla-firefox-1.5.0.1-r2.ebuild 8660
 SHA256 bdcc6bbbca462928df2252f5cbadd053a27371c1c8097c80b614da681d6d39ad mozilla-firefox-1.5.0.1-r2.ebuild 8660
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBufLJrHF4yAQTrARApOZAKC2+LNL/99Ck7pOyn9lAIKMSlOvbwCcCjAX
-uENrs11TZty1d999QLwO7vM=
-=lYCr
------END PGP SIGNATURE-----
+MD5 112b1fcae2b35fbfc345823766065b65 mozilla-firefox-1.5.0.1-r3.ebuild 8659
+RMD160 a972f66914113ee06e644a4126aa09e5a7f287eb mozilla-firefox-1.5.0.1-r3.ebuild 8659
+SHA256 206c2bcc8d9a48b5cb111458529dc30ee22ef658f187b2c6064b3d0d7514d1a9 mozilla-firefox-1.5.0.1-r3.ebuild 8659
