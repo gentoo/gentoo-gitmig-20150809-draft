@@ -1,9 +1,12 @@
-MD5 a38d22f7c57a19aa7cfc6333997e8231 ChangeLog 729
-RMD160 086e501ffcea4bc633f1b8d5aa2be47ab6ccb7eb ChangeLog 729
-SHA256 6bd434ed613c8c6615cb0188e89ea7a1ad5fad9ac2725716c12fbc86d4bbf62c ChangeLog 729
-MD5 3c92672a8d2f850d66ff6435a399e422 deskbar-applet-2.14.0.1.ebuild 1086
-RMD160 8979b9c0e75f5209becd21e5cd700a61cc080399 deskbar-applet-2.14.0.1.ebuild 1086
-SHA256 b101743d14247a243a7729a6b5939d34c077c2027138b4e97eba2c3d4aed93b1 deskbar-applet-2.14.0.1.ebuild 1086
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2b89c32c5b08e2b423b25903110373de ChangeLog 901
+RMD160 5a59956672cae3290474d9c3e7e25aa34d8e49cf ChangeLog 901
+SHA256 4ebdeb0c6271407d9c33c87ebbbfe6239d76ce2f167c4bed8b5a4146c52878de ChangeLog 901
+MD5 64c84edf6cb0cc5ff78975d727916238 deskbar-applet-2.14.0.1.ebuild 1083
+RMD160 90b70d08b0dd4bb0abca158f55ea9beaf90adb77 deskbar-applet-2.14.0.1.ebuild 1083
+SHA256 46fa57581cca156ffa4952008cf5ce764443d4608964c8f4de6f9b1d78ddf2c3 deskbar-applet-2.14.0.1.ebuild 1083
 MD5 8e8fdbd5aa2d0ab8bf18c380813c4ab0 files/deskbar-applet-2.13.91-multilib.patch 3380
 RMD160 79216ae3fdd67cc68d04453b612cbb5339bb2582 files/deskbar-applet-2.13.91-multilib.patch 3380
 SHA256 28e4c47803164b6f01ab7092812b03ab3d7360900b76e4ddb0e680f403453702 files/deskbar-applet-2.13.91-multilib.patch 3380
@@ -13,3 +16,10 @@ SHA256 19da15f6e353eca8fd4cbf378f0769643494d365ee8f8c4d7f7ac9cd102e6568 files/di
 MD5 c96fe9e3f7052e7e1e929b940d8bb263 metadata.xml 413
 RMD160 b43b823b1de922a86e22ab10f0f11954f51cebaa metadata.xml 413
 SHA256 1388b8a4eeeec86628d3669c5fa22e9491e2ce21b8b76ad43a6b5b6b6c9fa6e2 metadata.xml 413
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHXcsBtvusYtCZMsRAt9dAJ4gG/5+DqGVffrRKFkLxRKnVUb6WQCfXAas
+nIvOWxQSmCbqTvUWS52UbL8=
+=Z0V4
+-----END PGP SIGNATURE-----
