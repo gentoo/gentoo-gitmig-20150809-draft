@@ -10,9 +10,9 @@ SHA256 e05d6a7d11190b34e71ef365adaa5f3c306c54d070d933291863d3acbab58d1b epiphany
 MD5 e7c616376050b81a4481fb1c2a499543 epiphany-extensions-1.8.1.ebuild 2144
 RMD160 9664d1a876451dc32e04b15167918b741ffbfd0d epiphany-extensions-1.8.1.ebuild 2144
 SHA256 c57a0c0e34ace24bbc557d4f1d03b8bf942606e90f9a8afaf4852e8323110bb7 epiphany-extensions-1.8.1.ebuild 2144
-MD5 f3c1106c8108ef2086941fcafeb59dc7 epiphany-extensions-2.14.0.1.ebuild 1979
-RMD160 c6bfc1dbd27e8d91c193d405b851ce7f8cbdfca2 epiphany-extensions-2.14.0.1.ebuild 1979
-SHA256 a1f207ead1a1cb3492f60726fd32b76198bd6dd20c9302a219dc14c223f3f2d8 epiphany-extensions-2.14.0.1.ebuild 1979
+MD5 95036cc9d52fc430332850ee0c64ae60 epiphany-extensions-2.14.0.1.ebuild 2005
+RMD160 f5ba83fb67b7c6428449f4edff5ab54144365ccb epiphany-extensions-2.14.0.1.ebuild 2005
+SHA256 9511a2c674ec135f960d436b5f5cabc352147d7a18c67b66c12d35191f543cce epiphany-extensions-2.14.0.1.ebuild 2005
 MD5 707f7a46f60ea0b7cf60bda490cdbf9e files/digest-epiphany-extensions-1.6.0 78
 RMD160 475c872ee34c13d028a53ffe95c2ab0674040157 files/digest-epiphany-extensions-1.6.0 78
 SHA256 d6f2963411e327b34e7be4229684ac073ad6a24232a4bc40fc8da6b6cfad6036 files/digest-epiphany-extensions-1.6.0 78
