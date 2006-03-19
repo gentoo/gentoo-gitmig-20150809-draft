@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kiso
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.28 2006/03/04 06:01:37 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.29 2006/03/19 21:41:17 metalgod Exp $
+
+  19 Mar 2006; Luis Medinas <metalgod@gentoo.org> kiso-0.8.3.ebuild:
+  Stable on amd64. Bug #124068.
 
   04 Mar 2006; Chris White <chriswhite@gentoo.org> kiso-0.8.3.ebuild:
   x86 stable for bug #124068.
