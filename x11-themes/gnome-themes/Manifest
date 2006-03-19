@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3447a0d7e6c243b2d72f9781490bc8a7 ChangeLog 14901
+MD5 30944edca9a5bc4fd85656ffe642a880 ChangeLog 14998
 MD5 4b0e6d1d01dbc931144e227f599f63de files/digest-gnome-themes-2.10.0 73
 MD5 569c1a7b6f5f7b22f3cd324eace70ec8 files/digest-gnome-themes-2.10.2 73
 MD5 e0786e4199c35c46375b932318360ed0 files/digest-gnome-themes-2.12.1 73
@@ -10,13 +7,6 @@ MD5 e7476610a823567a11b7da6adaaf593d files/digest-gnome-themes-2.14.0 265
 MD5 e1c49ff37c594aac6041439c4333eff9 gnome-themes-2.10.0.ebuild 1379
 MD5 195ef943d847e6ebd9958d34016d74cc gnome-themes-2.10.2.ebuild 736
 MD5 55ffa7813d39cf80931508c497fec946 gnome-themes-2.12.1.ebuild 719
-MD5 53d6890410b1f0f4b5fabe9c2cff7dac gnome-themes-2.12.3.ebuild 720
+MD5 94575da61b330771657a3990165fa458 gnome-themes-2.12.3.ebuild 720
 MD5 395e305d4813666be9943b97ea9659f9 gnome-themes-2.14.0.ebuild 733
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHIr1oGcCqvCmTSIRAu6zAKDHIy/n7+b2JwI+MRxxA8h5vnhKtACdGE0+
-NW0ciTJKJCT4WbRZvacJNB8=
-=9UKC
------END PGP SIGNATURE-----
