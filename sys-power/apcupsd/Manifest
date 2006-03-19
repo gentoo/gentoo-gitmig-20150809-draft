@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b23c22a1e82966ae5ff62957c67fba09 ChangeLog 12552
-RMD160 08cb381ad5632042dae302060ee947980ce91d2f ChangeLog 12552
-SHA256 5109c032296f82ac5d3801c979ef5c11d6627afda419958e664f8d0c7a19f521 ChangeLog 12552
+MD5 80ea698f906abe22b0d4c96691dfa18a ChangeLog 12901
+RMD160 98b07029d7a534f232921145be7dfed8f0079105 ChangeLog 12901
+SHA256 8f7e21359e92d036f41e0075e0385a34b6036e1f48975c43fd9c7ad3d2a0080f ChangeLog 12901
 MD5 90addc3e3ec4f77230cd7f491e1da84a apcupsd-3.10.15-r1.ebuild 2421
 RMD160 9d05503d24274a114ad4e213b11db8363cff0d0f apcupsd-3.10.15-r1.ebuild 2421
 SHA256 3292605ea68c9fff0174dff15d8a11b8cca49b817e8e689a1949233ee5d74b7b apcupsd-3.10.15-r1.ebuild 2421
@@ -19,6 +19,9 @@ SHA256 552711e51eddebe17358abe62e6939bc785eb54bd27a0d28910d4b17d25b84f8 apcupsd-
 MD5 379cc7a11341db7b6186cb42376596c7 apcupsd-3.10.18-r2.ebuild 3172
 RMD160 7aa3bb8eedeb783fe7112c9099743c170c088ebf apcupsd-3.10.18-r2.ebuild 3172
 SHA256 42c944661a74a7fe566c0e9c3d24f0e7dc10d562f5eea60faa7046b01092cead apcupsd-3.10.18-r2.ebuild 3172
+MD5 1d5065e3f38789c2b8bb156a3035b95e apcupsd-3.12.2.ebuild 3177
+RMD160 c6755d4cf1c95119af4fcaebb2c22e8fad6add2b apcupsd-3.12.2.ebuild 3177
+SHA256 66be1a01eaea96c497d9b77201f6df1869acd8b1aa0052f491b7a7fb60b645c3 apcupsd-3.12.2.ebuild 3177
 MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.15/apache.conf 157
 RMD160 3cbd37e49916ee5bf6cfc21d3734430e0bff9f8c files/3.10.15/apache.conf 157
 SHA256 c56dea432abd46f89365780f76928bebaf7e2f72b58a24915da530e535e71b4a files/3.10.15/apache.conf 157
@@ -58,6 +61,18 @@ SHA256 230e8e436fffef7c2bac52dfe522a160fdf6c27f1a15215ba8acdc2c73665e78 files/3.
 MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.18/smtp.patch 2663
 RMD160 12ca2247aca7a5ce0d80297ac9b5d52eb68903f2 files/3.10.18/smtp.patch 2663
 SHA256 8e3e11f7e2bb3cc1486dfc2344df6f696913745bc64782f278c002bc32345025 files/3.10.18/smtp.patch 2663
+MD5 27ad4b6b56ea3aef2a89dded4c19b656 files/3.12.2/apache.conf 163
+RMD160 ae405a6eee544297ca91815f11c8d2c8efc47d51 files/3.12.2/apache.conf 163
+SHA256 b553fc359bf4d38b41a366818a007b333760b05d2e575be38001a45983234468 files/3.12.2/apache.conf 163
+MD5 6a1676805ed61125420c59cc4e735c00 files/3.12.2/apcupsd-lighttpd.conf 622
+RMD160 dfc6bbaa7734fbb0100c312ee67b5595fea935db files/3.12.2/apcupsd-lighttpd.conf 622
+SHA256 aac28b428150f43b3f7d55eeebab2006faaf7c25f1ad38d73e0e3bbb996f239f files/3.12.2/apcupsd-lighttpd.conf 622
+MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.12.2/apcupsd.in.patch 315
+RMD160 65ad8ff91d1280cdfc817aa15428dc3f3ecff250 files/3.12.2/apcupsd.in.patch 315
+SHA256 230e8e436fffef7c2bac52dfe522a160fdf6c27f1a15215ba8acdc2c73665e78 files/3.12.2/apcupsd.in.patch 315
+MD5 ceb8a56c8234598dad868dcf3b366e9f files/3.12.2/etc.patch 3710
+RMD160 c20497fd4f137cfecb3962610bfcc2c57f62c890 files/3.12.2/etc.patch 3710
+SHA256 046cca492d0ff932c9c5b5cf2e36d48d5cdb8a0a6cbac19791d3be72ba92813f files/3.12.2/etc.patch 3710
 MD5 ec48a12c6d8b56aeffbeaa629f8835ad files/digest-apcupsd-3.10.15-r1 68
 RMD160 79901903c95f0bd33e14c418dc167fae5ddc6291 files/digest-apcupsd-3.10.15-r1 68
 SHA256 3d9e69340922e6fd02ffff17797ad29086d6c8668182d5eeff207e84e726423c files/digest-apcupsd-3.10.15-r1 68
@@ -73,13 +88,16 @@ SHA256 45730367d24563d1f23754b2c2ec072644958cef6b6f388ac846a33f92ad8542 files/di
 MD5 0477fe3f08b01a504eb26e6763f3982e files/digest-apcupsd-3.10.18-r2 68
 RMD160 19709a98d22fc81fb92e2965aabf7063af172e9f files/digest-apcupsd-3.10.18-r2 68
 SHA256 45730367d24563d1f23754b2c2ec072644958cef6b6f388ac846a33f92ad8542 files/digest-apcupsd-3.10.18-r2 68
+MD5 06d14a07f56b8e37942a35aca6775fb7 files/digest-apcupsd-3.12.2 247
+RMD160 a7659388f720f0d6baf34de057fcc2046e8b1ea9 files/digest-apcupsd-3.12.2 247
+SHA256 d5a28f7712874ee6af744bead8a58cbf5a74d9816070a924905badaf2a4a6649 files/digest-apcupsd-3.12.2 247
 MD5 27ae5add10fc42e77804f1ecd768df87 metadata.xml 226
 RMD160 e0ca1098a8ced8b212c797e8d3343fed766ba485 metadata.xml 226
 SHA256 ab1d24920d852e21a852c10c1ec15d5d0cfe91752a67e9eca902177081d6e1c2 metadata.xml 226
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFED3FSAiZjviIA2XgRAiM0AKCXCAMCz/c3FzqcX0oDW8JWIDaMpACeKI5P
-iksWgqBOjDacrIQhYsWPNFE=
-=Ch3o
+iD8DBQFEHeANKtJO8LeSoosRApBcAJ9INlhR6/Mgd5S4OX+oSDXPf25UMwCgoFPS
+Dm/9RBzJHRNaqrLATxm/7+Y=
+=ncD6
 -----END PGP SIGNATURE-----
