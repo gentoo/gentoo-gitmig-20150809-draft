@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2af782a8ed1544382284c572afd54663 ChangeLog 585
-MD5 f61c69fc2b5a63d7ea48cfbded4c661c cbtracker-1.0b.ebuild 703
+MD5 95776b47d1bcb979db8eae5d5b7b87d3 ChangeLog 705
+RMD160 7332be405dd5a60323c45de45eda2266a34c29a4 ChangeLog 705
+SHA256 c6a82b4f0b79d10f372a16da49c833f6bce9f5bfa0a0e2a1caf6f25808259992 ChangeLog 705
+MD5 85d60db86285312030098673bdf30b0b cbtracker-1.0b.ebuild 728
+RMD160 1b0633baa7d1434d7a276be0df23eccd89bfeac8 cbtracker-1.0b.ebuild 728
+SHA256 040124c9c405fc09478ea1caeb69a3b3fee0fdbcb7b754fc53de1af571b63e3a cbtracker-1.0b.ebuild 728
 MD5 9bfe88b5fa3f3596ec8776300f9df9fb files/digest-cbtracker-1.0b 67
+RMD160 5e169f780466c8f5253af9e3f11e9a9d2a2b8715 files/digest-cbtracker-1.0b 67
+SHA256 df5ea7425efd32b2090dd801ce151e3c4cb65772ee0e5904ceaac8ba8ae07023 files/digest-cbtracker-1.0b 67
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwpNJugEuf3OQ0akRAmSwAKCJy00gJAFM4B+1sfxkBOaMJMRCXgCfbm8L
-ZbiF5zi9Dy30FSkFfi4CAwg=
-=L3qg
------END PGP SIGNATURE-----
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
