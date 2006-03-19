@@ -1,6 +1,28 @@
-MD5 59cce0acca8f1976e06f5c8e029e1132 ChangeLog 633
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3f5c6d66cad937e0cf98576f1dd40ab0 ChangeLog 734
+RMD160 ecd5e77af71f9a39869ab8bbcb7d8ad772c1f656 ChangeLog 734
+SHA256 8de76b8bf3dd0f4c278d5aa1ad46c0681cf41b5868854289e6907c6cc0c0c7b4 ChangeLog 734
 MD5 48794b5a58ecddbbc0ffce1ed73393e8 files/digest-utidylib-0.2 60
+RMD160 b6bc4b553ce1969a05f3d2ffd85804d8d778d2c7 files/digest-utidylib-0.2 60
+SHA256 28e3d13b58f9c0c1cd9e4df5c2d8c608f12ec07168a36487af97feeb59c6fc09 files/digest-utidylib-0.2 60
 MD5 7249f3b046946a3f88bb2cd22f55b380 files/utidylib-0.2-no-docs-in-site-packages.patch 475
+RMD160 e2806dc81b3537821cb83c09aefec81df5c27e43 files/utidylib-0.2-no-docs-in-site-packages.patch 475
+SHA256 c833649b3ea32c48526b5cf819606ebf5edd98e42c299169e91397e72b4e35bf files/utidylib-0.2-no-docs-in-site-packages.patch 475
 MD5 bffb3127ccf1eb531a55550b17b91a1e files/utidylib-0.2-tests-twisted-2.1-compat.patch 437
+RMD160 d2e767fc76feb44f32d127fd7218a02cd329130c files/utidylib-0.2-tests-twisted-2.1-compat.patch 437
+SHA256 9e0657e7a2e799ff80c6b0236ac655aac5f9853104e422fd52dc73f75507cca5 files/utidylib-0.2-tests-twisted-2.1-compat.patch 437
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 3386dadbbab2c562fe7ffc229ca7ec6c utidylib-0.2.ebuild 1057
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
+SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
+MD5 8e74dca6ec85e28e55ce101815011dda utidylib-0.2.ebuild 1073
+RMD160 58ead7ccc693913742d9cf24aa8417282588c3c7 utidylib-0.2.ebuild 1073
+SHA256 7dc070ade1f89ca0b7bf6c84ea4b4822d473f80f7138db14505285cb9ac9c626 utidylib-0.2.ebuild 1073
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHe5xCRZPokWLroQRAtWeAKC1BNPrEX+URow9XXlND70ySsbWywCg1/Gp
+Ps5Ug+e3QAZR+5qy0JtkItw=
+=s4ws
+-----END PGP SIGNATURE-----
