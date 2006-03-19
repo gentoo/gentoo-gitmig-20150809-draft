@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6f49cee2d58ae4c4e90265af60d10243 ChangeLog 7551
+MD5 f74f0b34272f0ae80a97c25b2fbe42df ChangeLog 7648
 MD5 1029a121e1d0f339918f5dc9f0048c98 files/digest-libgail-gnome-1.1.1 72
 MD5 378c77324b6d851b36705d671f051851 files/digest-libgail-gnome-1.1.2 262
 MD5 abb18458fc6ee65b748d62dda1c3d762 files/digest-libgail-gnome-1.1.3 72
 MD5 1341715199eb9a74259c70fa97f409bd libgail-gnome-1.1.1.ebuild 784
 MD5 8e51908a215e87a52b51add9c5c2448c libgail-gnome-1.1.2.ebuild 745
-MD5 6ddde286933ae254dfaff70e51e34acc libgail-gnome-1.1.3.ebuild 748
+MD5 65e25c978177725776217135c9b98e87 libgail-gnome-1.1.3.ebuild 748
 MD5 72e62f4df8c037e6ea57309ac6d81d77 metadata.xml 174
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHJCAoGcCqvCmTSIRAhAGAKDaygBXrMrd4uVf4u6Jh+gCUH/CLgCfesW1
-wJ3Qw7jD1ovL/RV/q54txcQ=
-=/vIR
------END PGP SIGNATURE-----
