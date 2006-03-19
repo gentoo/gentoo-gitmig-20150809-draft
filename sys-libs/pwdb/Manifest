@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5fa365c93357aa6f18ea6da27008b69c ChangeLog 4168
-RMD160 433cfe6d1947342bf867891f6b32df7d036ee1b2 ChangeLog 4168
-SHA256 03ede818b16dfe191129c9ada357ed53cf30a80e1dd64ff62fb50da1989bf6b4 ChangeLog 4168
+MD5 e4aed581efccc5755397d72e39c7e998 ChangeLog 4300
+RMD160 c03c3aef1c2c8a6dbe406a92c586f3a9ae38b615 ChangeLog 4300
+SHA256 5c18eb9ffeca2db2ac3c66da846791f5a38c8e07a6e13f541b262aa06bae4c3f ChangeLog 4300
 MD5 8cc9a65a57937cd962ff641cf94e40c3 files/digest-pwdb-0.62 61
 RMD160 f3a6ef473aa4233e0164005791ca6a76830f0062 files/digest-pwdb-0.62 61
 SHA256 9a4a42ea7f7deb2951893d7c01e7f3dcbd8416b83970eb707776ba0e901ebd21 files/digest-pwdb-0.62 61
 MD5 0d0c7a6216f5cf079472dfe36ea9d71c files/passwd 143
 RMD160 ca859f48fde633c29a22f226ba01b4921c1463a1 files/passwd 143
 SHA256 9cecaf4de9eaf61cf42c28bf1e63295a58e59e0ca0abb8fb7eaf6327201ce604 files/passwd 143
-MD5 3ad2336f28a4adf24f2f11c4a76c396f files/pwdb-0.62-build.patch 370
-RMD160 4781af3f4c9602ae7322943341290205d8cbb7a1 files/pwdb-0.62-build.patch 370
-SHA256 c820212837baa2fb9a78d45c160b6adf3f314f32d915448125634b01b0f78219 files/pwdb-0.62-build.patch 370
+MD5 44d26e602841b19baa6cfad9256c1c55 files/pwdb-0.62-build.patch 1379
+RMD160 206578cd3337f70bb0740c2563147d6e5f8fc0b1 files/pwdb-0.62-build.patch 1379
+SHA256 284d2d301fe7ef7d0aa0ce5d1726abf9e9395a0a9f653e67f78215c38b246fdf files/pwdb-0.62-build.patch 1379
 MD5 abb34f8a3c5a8dc43aed5a7a4eb92488 files/pwdb-0.62-selinux.patch 10480
 RMD160 44e6948bdd29c5febc0ad34e488d62912c64e07d files/pwdb-0.62-selinux.patch 10480
 SHA256 ab12a8d6ee52c98281e3e7f2d2eab1c95f1e4fddf3a22e3b97ec054eda7a38e4 files/pwdb-0.62-selinux.patch 10480
@@ -26,9 +26,9 @@ MD5 293229f59de61f0bc36c4e39a6bab89d pwdb-0.62.ebuild 1684
 RMD160 9e7913dc143757b2f920a2b1868c28c79be561e3 pwdb-0.62.ebuild 1684
 SHA256 ea399bb1dd1ed35de0ddbf3e42944965fecc3862c7d74175c577263104fb2e58 pwdb-0.62.ebuild 1684
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD766T2+ySkm8kpY0RAp+jAJ9xMfQuBrHYhJepgxXKgucYgQY+CACffgvh
-CLj5NgFfGySOPUdiFsyXjqM=
-=g4oJ
+iD8DBQFEHRDp2+ySkm8kpY0RArGAAJ9JfSqEHNrChP0VNpnC6MmZB3GypQCdEIzK
+AoLmRTqYiY/FxkVAyZa6ouc=
+=LusS
 -----END PGP SIGNATURE-----

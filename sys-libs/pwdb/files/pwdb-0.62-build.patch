@@ -1,3 +1,9 @@
+ - drop ldconfig junk
+ - add missing headers
+ - add missing comma to supp_entry
+
+http://bugs.gentoo.org/126695
+
 --- libpwdb/Makefile
 +++ libpwdb/Makefile
 @@ -69,7 +69,7 @@
@@ -9,3 +15,44 @@
  	ln -sf $(LIBFILENAME) $(LIBDIR)/$(LIBDYNAME)
  	$(INSTALL) -m 644 $(LIBSTATIC) $(LIBDIR)
  
+--- libpwdb/posix/pwd.c
++++ libpwdb/posix/pwd.c
+@@ -7,6 +7,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <string.h>
+ 
+ #define PWDB_HARD_CORE 1
+ #include <pwdb/pwdb_public.h>
+--- libpwdb/posix/undefined.c
++++ libpwdb/posix/undefined.c
+@@ -5,6 +5,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ #define PWDB_HARD_CORE 1
+ #include <pwdb/pwdb_public.h>
+--- libpwdb/pwdb/pwdb_helper.c
++++ libpwdb/pwdb/pwdb_helper.c
+@@ -18,6 +18,7 @@
+  *
+  */
+ 
++#include <string.h>
+ #include "pwdb_public.h"
+ #include "pwdb_module.h"
+ 
+--- libpwdb/pwdb/interface/shadow/group.c
++++ libpwdb/pwdb/interface/shadow/group.c
+@@ -533,7 +533,7 @@
+ 
+     static const char *supp_entry[] = {
+     "group", "passwd",
+-    "users", "admins"       /* these are from /etc/group */
++    "users", "admins",      /* these are from /etc/group */
+     "groups",               /* these are serviced by requests */
+     NULL
+     };
