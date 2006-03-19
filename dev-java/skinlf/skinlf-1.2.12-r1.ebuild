@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/skinlf-1.2.12-r1.ebuild,v 1.2 2006/02/01 14:28:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/skinlf-1.2.12-r1.ebuild,v 1.3 2006/03/19 22:19:32 halcy0n Exp $
 
 inherit java-pkg eutils
 
@@ -23,6 +23,7 @@ RDEPEND=">=virtual/jre-1.3
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-core-1.5.4
 	dev-java/ant-tasks
+	app-arch/unzip
 	source? ( app-arch/zip )"
 
 src_unpack() {

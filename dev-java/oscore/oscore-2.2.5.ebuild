@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oscore/oscore-2.2.5.ebuild,v 1.2 2006/01/22 15:00:20 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscore/oscore-2.2.5.ebuild,v 1.3 2006/03/19 22:18:06 halcy0n Exp $
 
 inherit java-pkg eutils
 
@@ -26,6 +26,7 @@ LIB_DEPS="
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-core-1.6
 	>=dev-java/ant-tasks-1.6
+	app-arch/unzip
 	${LIB_DEPS}"
 RDEPEND=">=virtual/jre-1.4
 	${LIB_DEPS}"
