@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.3.ebuild,v 1.8 2006/02/21 23:55:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.3.ebuild,v 1.9 2006/03/19 08:42:07 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,6 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
 	# Make sure we link with glibc at all times
 	epatch "${FILESDIR}"/${PN}-1.2.1-glibc.patch
@@ -32,6 +31,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.2.1-fPIC.patch
 	# generate DT_SONAME on BSD hosts #123571
 	epatch "${FILESDIR}"/${PN}-1.2.3-bsd-soname.patch
+	# respect LDFLAGS #126718
+	epatch "${FILESDIR}"/${PN}-1.2.3-LDFLAGS.patch
+	sed -i -e '/ldconfig/d' Makefile.in
 }
 
 src_compile() {

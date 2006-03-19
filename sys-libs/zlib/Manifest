@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2b69d6ca8cbe37bae0d10b5f36a1e22d ChangeLog 8140
-RMD160 518131854f8f97f80bb3583fe9e7a7c69d6024bb ChangeLog 8140
-SHA256 5b8f900572a81d05406f61bb2eab9d4c3fac979ea99d04525ef84e26b506baad ChangeLog 8140
+MD5 640c650ddee40eaa6d162a86604431c7 ChangeLog 8322
+RMD160 0b6ba062a09198f5d473cdd0c8341174cf6802fb ChangeLog 8322
+SHA256 e7d76d3b679cc90ef5ab8360568561c75606a7cc0fd907affc3f236c9d8acbb5 ChangeLog 8322
 MD5 8040cf924143b9328aa2d584222e0f51 files/digest-zlib-1.2.3 63
 RMD160 515fb7d5eee65e627fdb6d7b691e64dacdac3d19 files/digest-zlib-1.2.3 63
 SHA256 54adede70a500f2de5da32dbca0821b4c236e44b14a509f732243ce3e9d4a073 files/digest-zlib-1.2.3 63
@@ -22,19 +22,22 @@ SHA256 32711cf3faf25ff537c8a56be3ddcf1e4721de522c7966a3c5789e00d8fba0c7 files/zl
 MD5 40634a4cbdcd9c795cfc34473c76038c files/zlib-1.2.2-mapfile.patch 2139
 RMD160 26baa2b43dbd78e8bac24c486c1e35d84f437c73 files/zlib-1.2.2-mapfile.patch 2139
 SHA256 c1892dcb6e13e21dbde64774efa1f0df24096cc446d119fb239f3c0b34a2c713 files/zlib-1.2.2-mapfile.patch 2139
+MD5 a8f6ed785f959eca9d9eef7a34b9e602 files/zlib-1.2.3-LDFLAGS.patch 900
+RMD160 2e48eaa40b05e5fd5087387c982b129b43c86e2c files/zlib-1.2.3-LDFLAGS.patch 900
+SHA256 6a6634eaaa2573b29784088d89d01bd423c531169aeaac06c82cb9ed8bbe82b6 files/zlib-1.2.3-LDFLAGS.patch 900
 MD5 452712d79f04504a2b60e3e7e8e672f6 files/zlib-1.2.3-bsd-soname.patch 477
 RMD160 535dde5e81a74927ae4bc454f84f774e1fc433d6 files/zlib-1.2.3-bsd-soname.patch 477
 SHA256 79cc401b51c80f3a084cc4ffba8c8b1cbe4d9b101f6f02350e677af49785089c files/zlib-1.2.3-bsd-soname.patch 477
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
-MD5 e0f54db7fda30a38c81ed51aaa0abc88 zlib-1.2.3.ebuild 1873
-RMD160 2b7f68c165827554c81c6de8007bad6a8a13da64 zlib-1.2.3.ebuild 1873
-SHA256 8d977d340c3aeb16b637f874400bfb3d9790d1d25790a2f5c19fc033904be084 zlib-1.2.3.ebuild 1873
+MD5 e5f569f648f8f5f6fc53f2ca21ae3a0e zlib-1.2.3.ebuild 1984
+RMD160 da00dce2d58414800e9f529887217b05ab32d8d4 zlib-1.2.3.ebuild 1984
+SHA256 7369e43f5b2aa139c921b28c6128e7e67d6534d7f133a9b272c14b00d87730a1 zlib-1.2.3.ebuild 1984
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDDZZAiZjviIA2XgRAjZHAJoCuRuNTMnKaIpCgdpYZidN1yUj5QCfepW/
-K3TQjbYzQNQNHue8OBYJD+g=
-=pPln
+iD8DBQFEHRl/2+ySkm8kpY0RAi0sAJ4xeRigjDULD/iGtkP8xok1yPXlwgCfY4+s
+Kd0ptoVfzakkL9wvY7Oq4L8=
+=/WQW
 -----END PGP SIGNATURE-----
