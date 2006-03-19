@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20051002.ebuild,v 1.1 2006/01/26 14:26:10 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20051002.ebuild,v 1.2 2006/03/19 23:56:32 halcy0n Exp $
 
 DESCRIPTION="A typographically beautiful Glk library"
 HOMEPAGE="http://ghostscript.com/~tor/software/gargoyle/"
@@ -18,7 +18,8 @@ RDEPEND=">=media-libs/freetype-2.1.9-r1
 	>=media-libs/fmod-3.74"
 
 DEPEND="${RDEPEND}
-	>=dev-util/jam-2.5-r3"
+	>=dev-util/jam-2.5-r3
+	app-arch/unzip"
 
 src_compile()
 {
