@@ -1,19 +1,22 @@
-Joerg Bornkessel <hd_brummy@gentoo.org> (18 Mar 2006)
+Joerg Bornkessel <hd_brummy@gentoo.org>
+Version 2 ( 19 Mar 2006 )
 
 diff -Naur weatherng-0.0.8-pre2.orig/examples/weatherng.sh weatherng-0.0.8-pre2/examples/weatherng.sh
---- weatherng-0.0.8-pre2.orig/examples/weatherng.sh	2006-03-17 22:49:10.677193500 +0100
-+++ weatherng-0.0.8-pre2/examples/weatherng.sh	2006-03-17 22:49:28.606314000 +0100
-@@ -8,6 +8,9 @@
+--- weatherng-0.0.8-pre2.orig/examples/weatherng.sh	2006-03-19 18:35:48.897789250 +0100
++++ weatherng-0.0.8-pre2/examples/weatherng.sh	2006-03-19 18:46:43.290686250 +0100
+@@ -8,6 +8,11 @@
  # To use this examples of urls , you must have the permission of owner to download and
  # use them. Otherwise you must change the URLs. See README or README.DE.
  
 +source /etc/conf.d/vdr.weatherng
++
++SCRIPT_API=2
 +source /usr/lib/vdr/rcscript/plugin-weatherng.sh
 +
  # Change SETUPDIR if you need.
  SETUPDIR=/etc/vdr
  
-@@ -16,11 +19,11 @@
+@@ -16,11 +21,11 @@
  case "${LANGUAGE[2]}" in
  	1) MESG='Download abgeschlossen und Radarmaps aktualisiert'
  	   URLS=(\
@@ -30,7 +33,7 @@ diff -Naur weatherng-0.0.8-pre2.orig/examples/weatherng.sh weatherng-0.0.8-pre2/
  		)
  	;;
  	7) MESG='Téléchargement des données Météo OK'
-@@ -53,7 +56,7 @@
+@@ -53,7 +58,7 @@
  esac
  
  for i in $(seq 0 10) ; do
@@ -39,7 +42,7 @@ diff -Naur weatherng-0.0.8-pre2.orig/examples/weatherng.sh weatherng-0.0.8-pre2/
  done
  
  # Dont change or uncomment this and the following 5 lines. ;)
-@@ -63,8 +66,8 @@
+@@ -63,8 +68,8 @@
  # Example for Herne,Germany [GMXX0057]with a permission from The weather channel:
  # e.g :  wget -t 4 -T 20 "http://xoap.weather.com/weather/local/GMXX0057?cc=*&unit=m&dayf=10&prod=xoap&par=1004124588&key=079f24145f208494" -O "$SETUPDIR/plugins/weatherng/data1.xml"
  
