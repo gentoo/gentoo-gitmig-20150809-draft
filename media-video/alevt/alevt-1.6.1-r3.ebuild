@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.1-r3.ebuild,v 1.1 2005/12/20 13:00:46 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.1-r3.ebuild,v 1.2 2006/03/19 18:40:25 flameeyes Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Teletext viewer for X11"
 HOMEPAGE="http://www.goron.de/~froese/"
@@ -24,14 +24,16 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/${P}-gcc4.patch
-	epatch ${DISTDIR}/${PN}-dvb.patch
-	epatch ${FILESDIR}/${P}-v4l2.patch
+	epatch "${FILESDIR}/${P}-gentoo.diff"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
+	epatch "${DISTDIR}/${PN}-dvb.patch"
+	epatch "${FILESDIR}/${P}-v4l2.patch"
+	epatch "${FILESDIR}/${P}-respectflags.patch"
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" OPT="${CFLAGS}" || die
+	append-flags -fno-strict-aliasing
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {

@@ -1,20 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 404eec6ede95b10ae789e5ca0bb155e0 ChangeLog 3560
+MD5 83cfae8c3aca5557fcd0dac2e22d8728 ChangeLog 3776
+RMD160 1846892128c388d8fe7b42712904935ee4d1c2f3 ChangeLog 3776
+SHA256 f7a8b25ddfa873381d78a93d5a037c6aaaf3f2860660450fe028dbd99545d384 ChangeLog 3776
 MD5 71800b30685d4cede4910d9706b0b9a4 alevt-1.6.1-r1.ebuild 1176
-MD5 5b46f8d09a55bd6ade5473eb92fce306 alevt-1.6.1-r3.ebuild 1292
-MD5 9b2908a22bc1aeee2713dd6447f077e4 files/alevt-1.6.0-gentoo.diff 1430
+RMD160 d6beadb8ed61200683075c4f1ec42c61645f14ba alevt-1.6.1-r1.ebuild 1176
+SHA256 7ccc17817010970308566a14a91ac5ac6a63f17ddbf9bff2699f2f604b6cb4dd alevt-1.6.1-r1.ebuild 1176
+MD5 75d7394e531fc547b9025282608bd7fd alevt-1.6.1-r3.ebuild 1379
+RMD160 3b347df6d3aac46c49db56f74e968d304c785dac alevt-1.6.1-r3.ebuild 1379
+SHA256 a7c0e8be4e1426528282e48432a5d19c654c2906f7ad36157e59e0c60a7e4579 alevt-1.6.1-r3.ebuild 1379
 MD5 1386e3fc0925198ef09da46956f42d0d files/alevt-1.6.1-gcc4.patch 658
+RMD160 c642d3c9282fe94854ad33d8f261c892ab2fb1f4 files/alevt-1.6.1-gcc4.patch 658
+SHA256 32cda1f82cc7e844842bf1803b2f79a03dc8ba0d2ef4a929f59dc3aaa186e175 files/alevt-1.6.1-gcc4.patch 658
 MD5 8c88e060926481334f381229aa9c85c5 files/alevt-1.6.1-gentoo.diff 734
+RMD160 3686fc92095ccb8a00d9714aca7a130956ae9e8f files/alevt-1.6.1-gentoo.diff 734
+SHA256 f6ea36b1856241077db6379488aae9e4a33a5f3d089204b64fb50319bdcce73a files/alevt-1.6.1-gentoo.diff 734
+MD5 48069231ca99271111defeaa99eb6cbf files/alevt-1.6.1-respectflags.patch 1393
+RMD160 331c947593704211f278d6e401a0b3e2b2556617 files/alevt-1.6.1-respectflags.patch 1393
+SHA256 34c0df3e80a5bf04f4d9127d3487f9de92bbfca3037cedd52214d1df2d94afce files/alevt-1.6.1-respectflags.patch 1393
 MD5 4efa79ac8fff061235d1298475fad40d files/alevt-1.6.1-v4l2.patch 1328
+RMD160 0307eaa492a955f0c1acd4252316b15545d6d859 files/alevt-1.6.1-v4l2.patch 1328
+SHA256 eb1ffed392f1b91e84d39fd9f3d9dc6312c900e988336583bd0a1c83b471b902 files/alevt-1.6.1-v4l2.patch 1328
 MD5 009c3ba83c0f16b20b2066f15fbe295e files/digest-alevt-1.6.1-r1 122
+RMD160 a18f3979e3e2bc2a797fc57ffb86ab6469a91cc5 files/digest-alevt-1.6.1-r1 122
+SHA256 89e1df152537636210e82844ce11c653ce06613361cce626fa60a8049761deb8 files/digest-alevt-1.6.1-r1 122
 MD5 009c3ba83c0f16b20b2066f15fbe295e files/digest-alevt-1.6.1-r3 122
+RMD160 a18f3979e3e2bc2a797fc57ffb86ab6469a91cc5 files/digest-alevt-1.6.1-r3 122
+SHA256 89e1df152537636210e82844ce11c653ce06613361cce626fa60a8049761deb8 files/digest-alevt-1.6.1-r3 122
 MD5 20e2255501865de5b568424821abf69d metadata.xml 161
+RMD160 fee76f69ba822cd04301c58fa0c26ecaf8cc8fb9 metadata.xml 161
+SHA256 82d33b3ca60662bc745d30d53bb20d04ea588d5aae556ed16efcacdcc37fd4bd metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDytRoAiZjviIA2XgRAqHJAJ91x4PhvVbxE2ivhooR8iu6a8AOywCglAFN
-Sa0WusFzC70GkO08gj2t7mI=
-=eYus
+iD8DBQFEHaWmAiZjviIA2XgRAgtPAKCV/ba/5uYJM7aVIba/1sk26kb0mwCfSfvj
+YE8/jTxzLdPJC4YBsm73DQ4=
+=Yc00
 -----END PGP SIGNATURE-----
