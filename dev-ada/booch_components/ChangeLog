@@ -1,6 +1,10 @@
 # ChangeLog for dev-ada/booch_components
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.4 2005/12/16 11:05:40 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.5 2006/03/19 19:07:10 halcy0n Exp $
+
+  19 Mar 2006; Mark Loeser <halcy0n@gentoo.org>
+  booch_components-20030815.ebuild:
+  Add DEPEND on app-arch/unzip
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   booch_components-20030815.ebuild:

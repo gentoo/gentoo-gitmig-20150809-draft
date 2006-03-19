@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/charles/charles-20030813.ebuild,v 1.4 2005/01/01 17:24:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/charles/charles-20030813.ebuild,v 1.5 2006/03/19 19:09:36 halcy0n Exp $
 
 IUSE=""
 
@@ -18,7 +18,9 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 SLOT="0"
 
-DEPEND=">=dev-lang/gnat-3.14p"
+RDEPEND=">=dev-lang/gnat-3.14p"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 src_unpack() {
 	mkdir -p ${S}
