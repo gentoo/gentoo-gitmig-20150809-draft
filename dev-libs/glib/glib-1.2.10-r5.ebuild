@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.44 2005/09/08 01:13:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.45 2006/03/19 20:16:27 truedfx Exp $
 
-inherit libtool flag-o-matic eutils
+inherit libtool flag-o-matic eutils portability
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
@@ -27,7 +27,7 @@ src_unpack() {
 
 	elibtoolize
 	use ppc64 && use hardened && replace-flags -O[2-3] -O1
-	use elibc_FreeBSD || append-ldflags -ldl
+	append-ldflags $(dlopen_lib)
 }
 
 src_compile() {
