@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.12 2006/02/20 18:32:20 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.13 2006/03/19 02:09:47 chutzpah Exp $
+
+*drscheme-209-r1 (18 Mar 2006)
+
+  18 Mar 2006; Patrick McLean <chutzpah@gentoo.org> +drscheme-209-r1.ebuild:
+  Revision bump, fix up sed'ing of wrapper scripts so it actually works.
 
   20 Feb 2006; Patrick McLean <chutzpah@gentoo.org> drscheme-301-r1.ebuild:
   Fixed type in a sed expression that was changing the paths in the wrapper
