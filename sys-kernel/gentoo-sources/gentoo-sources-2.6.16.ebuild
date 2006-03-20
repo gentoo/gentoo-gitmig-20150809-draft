@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.16.ebuild,v 1.1 2006/03/20 19:26:13 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.16.ebuild,v 1.2 2006/03/20 21:59:07 dsd Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -19,7 +19,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}"
 pkg_setup() {
 	if use sparc; then
 		# hme lockup hack on ultra1
-		use ultra1 || UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1399_sparc-U1-hme-lockup.patch"
+		use ultra1 || UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1705_sparc-U1-hme-lockup.patch"
 	fi
 }
 
