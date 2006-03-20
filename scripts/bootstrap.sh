@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.80 2006/01/27 00:28:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.81 2006/03/20 19:22:21 wolf31o2 Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -47,7 +47,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.80 2006/01/27 00:28:31 wolf31o2 Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.81 2006/03/20 19:22:21 wolf31o2 Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -205,7 +205,6 @@ if [[ -n $(sed -n '/^[ 	]*#/d;/^[ 	]*$/d;p' /etc/portage/package.use 2>/dev/null
 	ewarn "flags you wish to apply to say gcc or glibc, you should hit CTRL+C"
 	ewarn "now, export them in your environment (see below), and then restart."
 	ewarn " # export USE='some flags i want'"
-	read
 fi
 
 # gettext should only be needed when used with nls
