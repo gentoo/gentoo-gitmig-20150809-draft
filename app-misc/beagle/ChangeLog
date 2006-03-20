@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.16 2006/03/18 16:00:55 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.17 2006/03/20 00:38:48 metalgod Exp $
+
+  20 Mar 2006; Luis Medinas <metalgod@gentoo.org> beagle-0.2.2.1.ebuild,
+  beagle-0.2.3.ebuild:
+  Added ~amd64 keyword. Closes bug #111904.
 
 *beagle-0.2.3 (18 Mar 2006)
 

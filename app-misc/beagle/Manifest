@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b58eb6df0de1102c2a8a0a69f58fa8d0 ChangeLog 2836
-RMD160 e51d8d35e5ee29696def83ce79175ec18991bb4f ChangeLog 2836
-SHA256 1f32b77a87157e0dd0ba21ead8e2f804866c9cb188ef0bc2c97cebf9079b55df ChangeLog 2836
+MD5 884a8a68a80018e4d1a2f9fcc0b70c68 ChangeLog 2977
+RMD160 0485617fc9d4ff8056f804153eeeab80378338a2 ChangeLog 2977
+SHA256 4231b6bdacb19c6c95d81876a9782db55d36891ffda142cee21afed37b1fafdc ChangeLog 2977
 MD5 76fc6dcf5b9e19be1671056ac3189cff beagle-0.1.1.ebuild 3099
 RMD160 e20c0140e36bf8b375778dcbabc1a396ef1fbd20 beagle-0.1.1.ebuild 3099
 SHA256 59f5f3fae250a173f6967340a0786b989ddacc7656d9ba89ca8a7a831cec3a97 beagle-0.1.1.ebuild 3099
@@ -16,12 +16,12 @@ SHA256 58e4355e6657fa00918c6141245cf0a6fd3b646c636695cb0d1de98e2c39ff66 beagle-0
 MD5 a4d0d4e12a5c95d16915000787ccfdcd beagle-0.2.1.ebuild 3247
 RMD160 2bd710fc39b2aea2ca06bd733c49389218add166 beagle-0.2.1.ebuild 3247
 SHA256 58de87b2c7df8b6f2007f7588c4ec8719348cdfb4f8110449b59e9ea12e03b30 beagle-0.2.1.ebuild 3247
-MD5 df9f01c6b183c8ac425c16d56f221629 beagle-0.2.2.1.ebuild 3079
-RMD160 a176cb05ee88f1cfc3ee6f3d92c871606a44708b beagle-0.2.2.1.ebuild 3079
-SHA256 4101ab6337e8fe8088d397f5a0797c9bcfb20b85a7da0b73b64deefe85d81296 beagle-0.2.2.1.ebuild 3079
-MD5 da9f861256226b91b05eeae8316b8a6c beagle-0.2.3.ebuild 3077
-RMD160 d5194a628e74a5d0ce0a0ef152b288cbbc6f7d51 beagle-0.2.3.ebuild 3077
-SHA256 379913c22c0f2a5b1a767713933d8c8853cf202b035169e30b3f06b472b40e1a beagle-0.2.3.ebuild 3077
+MD5 cbd89216b337dfdc8efe2bbd33acbaf9 beagle-0.2.2.1.ebuild 3086
+RMD160 a4d73ea53842afffc4b4a2aa34fcbc2c8f0bd4e3 beagle-0.2.2.1.ebuild 3086
+SHA256 e7357c38cf92ca8f513bf0e74dfbe9804311fcde55f325e24943b54cfbf89972 beagle-0.2.2.1.ebuild 3086
+MD5 beaca31ae71c3d91e61af937d837367b beagle-0.2.3.ebuild 3084
+RMD160 dda9a980eab5ff033447225d3799fc106a98e812 beagle-0.2.3.ebuild 3084
+SHA256 e22f4484d8fcb9447b5fb3cfaef8cc1902052ae8bf896fc25e08b288d9790be8 beagle-0.2.3.ebuild 3084
 MD5 3375984ea7d16737cd465bae6ed3d928 files/beagle-0.1.1-null-task-source.patch 1347
 RMD160 d2e0b12ee591f6220f1da99836b5929f96b5c66f files/beagle-0.1.1-null-task-source.patch 1347
 SHA256 e8d6d80877056598c3e784a9ee998f0efc932b73bd0ae83342bcde83d60281be files/beagle-0.1.1-null-task-source.patch 1347
@@ -58,7 +58,7 @@ SHA256 1a2e1ce6af1bd26a8f0a16c348c39be963f09c5c4986b66c3622f32c4e4f367e metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEHC62wUpWvClEHQoRAk3vAJ9PiLWAbxk3LvJaHkr8hggMSmZO7gCfZ3nu
-qzcDSURTw/SjhoikAKZItTM=
-=2f1+
+iD8DBQFEHfmVwUpWvClEHQoRAuQzAJ9djYJbs1om7H6JsS3PtoXbw9PZUwCgir6s
+uS20srVosYPHSnaxc1G4lGc=
+=plql
 -----END PGP SIGNATURE-----
