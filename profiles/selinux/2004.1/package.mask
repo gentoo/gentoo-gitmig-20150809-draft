@@ -1,0 +1,5 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/package.mask,v 1.1 2006/03/20 03:49:51 pebenito Exp $
+
+# Chris PeBenito <pebenito@gentoo.org> (19 Mar 2006)
+# Requires a new profile
+>=sec-policy/selinux-base-policy-20060101
