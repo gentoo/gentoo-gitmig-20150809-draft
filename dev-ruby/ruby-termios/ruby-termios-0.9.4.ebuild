@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ruby-termios-0.9.4.ebuild,v 1.12 2006/01/31 19:56:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ruby-termios-0.9.4.ebuild,v 1.13 2006/03/20 12:23:05 caleb Exp $
 
 inherit ruby
 
@@ -20,7 +20,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR=${D} install || die
 	dodoc ChangeLog README termios.rd
 	docinto examples
 	dodoc examples/*
