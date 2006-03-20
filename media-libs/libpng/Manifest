@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7ba5a0561ae95b3894b001eee14263ef ChangeLog 11600
+MD5 e2edbd5cef169c53d63af716bc88a20e ChangeLog 11712
 MD5 3338fff0166374e14ae138e6a1f4cd21 files/1.2.7-gentoo.diff 464
 MD5 cfc3cad1942561090fafce6a25a23bf0 files/digest-libpng-1.2.8 127
 MD5 cfc3cad1942561090fafce6a25a23bf0 files/digest-libpng-1.2.8-r1 127
 MD5 c13ed05aceb450c805e01fd39d16ae45 files/libpng-1.2.8-build.patch 3845
 MD5 029ec280f20678b76004c1a0a0270111 files/libpng-1.2.8-strnlen.patch 580
 MD5 7443cfcd027ad293e56ec7bed76ee21c files/macos.patch 589
-MD5 f5afb4f87b106679911e8235df970601 libpng-1.2.8-r1.ebuild 1836
+MD5 cc865a0f089db1ac14a0440c58a1229c libpng-1.2.8-r1.ebuild 1832
 MD5 a6a8b653764ecf6efa311404db62388e libpng-1.2.8.ebuild 1818
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEHraEKRy60XGEcJIRAvGKAJ9lOXx2aFFb62jyjos0z+ipvZ4eVACfSSJt
-KCohasErUT8KxCtgp0R+m0g=
-=GK21
+iD8DBQFEHrhNViELBEf1JB0RAtFoAJ96F2ajUuM2tN7SyNfmeSHGRC35rwCfcm6t
+kJhJsEMeuGR9jjOTq3ojJJg=
+=wuv+
 -----END PGP SIGNATURE-----
