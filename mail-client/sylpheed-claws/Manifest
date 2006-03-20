@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 38a89972eaa958b30f79fa71a3152294 ChangeLog 28605
 MD5 743b9535636a8b39507545bc03a1a265 files/digest-sylpheed-claws-1.0.5-r1 74
 MD5 a1eac34c9f5178a960a23b5cb711365a files/digest-sylpheed-claws-2.0.0 268
@@ -6,3 +9,10 @@ MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
 MD5 82e806ed62f0596fb7bef493d225712f metadata.xml 269
 MD5 74abb664d838528a042d54de2945ebdc sylpheed-claws-1.0.5-r1.ebuild 3894
 MD5 fc470d6fd52baadafe5f497211b82a3b sylpheed-claws-2.0.0.ebuild 4312
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEHusFKRy60XGEcJIRAmkBAJ9dP22eS2MXyFi26i+fcg2Ynfb+6gCaA+ex
+lmtR+E2nOihCxVpu+tqwg0I=
+=e5Xs
+-----END PGP SIGNATURE-----
