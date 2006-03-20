@@ -1,9 +1,19 @@
-MD5 d59d1e79e6799c169510c3c8ddee6e17 ChangeLog 9021
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f67b169ae27b37dba739ca96112b888f ChangeLog 9126
 MD5 7f2d4df6d519e58f7265fcdb0e178bc3 files/Fl_Help_View.cxx.patch 259
 MD5 0f2b23320afa028fef27ee82c74172d0 files/digest-fltk-1.1.6 259
 MD5 157398f795a1a797a45d55c877447473 files/digest-fltk-1.1.7 71
 MD5 29c93504c8cba00eee5622ecbf61f134 files/libs-1.6.diff 960
 MD5 29c93504c8cba00eee5622ecbf61f134 files/libs-1.7.diff 960
 MD5 1671ed5980f575b734a98cd77284d4db fltk-1.1.6.ebuild 2604
-MD5 4b0d3f9a7847672cde0a9227386e17da fltk-1.1.7.ebuild 2467
+MD5 691da95b9a205a60a20a13c578bd86ff fltk-1.1.7.ebuild 2467
 MD5 aeb16984ffc07732d37c5974c14f28de metadata.xml 314
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEHsqVKRy60XGEcJIRAm93AKCHcZPWfLAszUAL+cYIz9UVr8VzTgCfUHTE
+XDKXrDYcdiEF7OLnnnhCQsk=
+=PvJe
+-----END PGP SIGNATURE-----
