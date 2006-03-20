@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.15 2006/02/07 20:42:51 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.16 2006/03/20 18:28:01 seemant Exp $
+
+*libdc1394-2.0.0_pre6 (20 Mar 2006)
+
+  20 Mar 2006; Seemant Kulleen <seemant@gentoo.org>
+  +files/libdc1394-2.0.0_pre6-grab_partial_image.diff,
+  +files/libdc1394-2.0.0_pre6-vendor_avt.diff, -libdc1394-2.0.0_pre5.ebuild,
+  +libdc1394-2.0.0_pre6.ebuild:
+  version bump to latest release from upstream, with many fixes. API continues
+  to stabilise -- please check apps that you've compiled against pre5 and
+  before, they will need porting
 
 *libdc1394-2.0.0_pre5-r1 (07 Feb 2006)
 

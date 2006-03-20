@@ -1,24 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5c70fa9823a9708e5d87f8f045494ca2 ChangeLog 4170
-RMD160 d96eaddeb32316e8e0661116909d400e50d0c520 ChangeLog 4170
-SHA256 cb5bb486346c83703a048cd537b97c626135bd880d71ec90eb40860fd9a248fe ChangeLog 4170
+MD5 aeeb7979f9ca74da240fb60492589b01 ChangeLog 4614
+RMD160 9a169f31301a26b703e01c18db1401d255e30632 ChangeLog 4614
+SHA256 7ec983b111b21abd1bcc278f5e48d5bc6cfd8ff44eece73a139d0b83890edfb7 ChangeLog 4614
 MD5 4dc3c8ed8159eaa65e146db1bafdd4e1 files/digest-libdc1394-1.0.0 247
 RMD160 c9d5003f5f9fd0e018a11670fbd43c07886e7bc5 files/digest-libdc1394-1.0.0 247
 SHA256 df91ff7ccd095fdde4f05b4dd04565966d8b9aa91d1e34cdad5f59368c97952e files/digest-libdc1394-1.0.0 247
 MD5 d24f1e449aa173fce2d9f93ae627131d files/digest-libdc1394-2.0.0_pre4 155
 RMD160 80dfe71517faeebc6c669c617ec7459051ab5140 files/digest-libdc1394-2.0.0_pre4 155
 SHA256 c598e05c6890dbf15010731d7da40f7e24be26227305fd0ce7be63b8dcc53971 files/digest-libdc1394-2.0.0_pre4 155
-MD5 cd66fb3acf276ebb4ea4d625dc1b1548 files/digest-libdc1394-2.0.0_pre5 262
-RMD160 068a75726baef6f610461c0939596b2cba0a94c0 files/digest-libdc1394-2.0.0_pre5 262
-SHA256 c28f14a853cdaa2306f57e033df5e288a6dacab5e09d2208eb41cebab6320072 files/digest-libdc1394-2.0.0_pre5 262
 MD5 cd66fb3acf276ebb4ea4d625dc1b1548 files/digest-libdc1394-2.0.0_pre5-r1 262
 RMD160 068a75726baef6f610461c0939596b2cba0a94c0 files/digest-libdc1394-2.0.0_pre5-r1 262
 SHA256 c28f14a853cdaa2306f57e033df5e288a6dacab5e09d2208eb41cebab6320072 files/digest-libdc1394-2.0.0_pre5-r1 262
+MD5 73fbb7efabe64fef5c21ae70611aafe8 files/digest-libdc1394-2.0.0_pre6 262
+RMD160 8466a448ed539bd425b2517d8ca72961160387a9 files/digest-libdc1394-2.0.0_pre6 262
+SHA256 873374eb027e671ff4f57dd2090cc82f3395eb8d85ac864cda9a7cac11bcb43f files/digest-libdc1394-2.0.0_pre6 262
 MD5 a52999e1811677c31441092df95a9e88 files/libdc1394-2.0.0_pre5-update-iso_channel.patch 403
 RMD160 f2a3061f74f918ca05d7e13119a481c4f4dc5930 files/libdc1394-2.0.0_pre5-update-iso_channel.patch 403
 SHA256 ba47f1266114500c9ad98a3da111ee4a2e6b16b330a40e43d9a8e3f5782fed0d files/libdc1394-2.0.0_pre5-update-iso_channel.patch 403
+MD5 db738e79160ae03ef02e80a85a3d8f20 files/libdc1394-2.0.0_pre6-grab_partial_image.diff 630
+RMD160 ef6f5259b90a6ab16c4cdfaaae79eea3328555c5 files/libdc1394-2.0.0_pre6-grab_partial_image.diff 630
+SHA256 a210ba1f32a7aa2abdb3fbc0664f63d2a8db06519be1f48bfaa88a33e0868ca3 files/libdc1394-2.0.0_pre6-grab_partial_image.diff 630
+MD5 a3b3daa742617bb4204283e1cd338b05 files/libdc1394-2.0.0_pre6-vendor_avt.diff 680
+RMD160 a35870ffd232a0662d98fa2d05cb17a753305454 files/libdc1394-2.0.0_pre6-vendor_avt.diff 680
+SHA256 4a6e13e1012484c702bb4ebd283e28a19e0749aa7cd54b05afdeeb908b434c96 files/libdc1394-2.0.0_pre6-vendor_avt.diff 680
 MD5 878ff31cebe2ccca989bb8e60ef5e0b6 files/nox11-2.patch 3221
 RMD160 dcca897e8f8417f6b063b52a7e2b9f8c5907790c files/nox11-2.patch 3221
 SHA256 a4b901e465cbd4aa900419b4364780dfa2ec736401dd3aec73a52ea5b1272d89 files/nox11-2.patch 3221
@@ -34,16 +37,9 @@ SHA256 ed1d07cb5f2b0e22068e3ef1d14ca895de5d7c964d93969bc13038ce5ddafd54 libdc139
 MD5 28bb89aed262c6707dd00289ce6a3adb libdc1394-2.0.0_pre5-r1.ebuild 1019
 RMD160 75b91e05ebdb1d071552114f755190d36a9a0153 libdc1394-2.0.0_pre5-r1.ebuild 1019
 SHA256 ff89089412abb749c49d6f21c4eabce97953ed84e3c91bc2fd6f1a1cedf8b510 libdc1394-2.0.0_pre5-r1.ebuild 1019
-MD5 852e6c3269ca14543223a0246755e067 libdc1394-2.0.0_pre5.ebuild 906
-RMD160 163f8c26dbf8c37353fdb3f11992543e040fa77b libdc1394-2.0.0_pre5.ebuild 906
-SHA256 5f0f3741906a95aab64a062a424361f8fc530f9be7ba2fe260a96aaf1452c121 libdc1394-2.0.0_pre5.ebuild 906
+MD5 306288ecf7069f0d7c144edd4eb7f395 libdc1394-2.0.0_pre6.ebuild 1060
+RMD160 cea4d00cc50d925ca27159b41b284da358e5a201 libdc1394-2.0.0_pre6.ebuild 1060
+SHA256 bcd145dbfc444a8d67f937802ecdc59e35dac2411e7ce7e9ea76f4a15f060b21 libdc1394-2.0.0_pre6.ebuild 1060
 MD5 8c508b7fe8782ef51c759979f02e6110 metadata.xml 254
 RMD160 e443fb2011869d9fa797e4d71e336cac9b91a57c metadata.xml 254
 SHA256 10f669506638ebd14d588da05f936dd27b3ffcc7a69e6063cbd77f6439edea0c metadata.xml 254
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6QckTOXg++0VvJQRAl40AKDGsmwZhzvLIUpiFPjYPv3pgdn+/wCgs396
-4Yxd0T29r+ba6dcHslOR/VI=
-=nSg4
------END PGP SIGNATURE-----
