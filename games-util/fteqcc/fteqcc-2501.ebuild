@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/fteqcc/fteqcc-2501.ebuild,v 1.1 2005/11/05 04:51:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/fteqcc/fteqcc-2501.ebuild,v 1.2 2006/03/20 00:08:39 halcy0n Exp $
 
 inherit eutils
 
@@ -13,9 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="app-arch/unzip"
+RDEPEND=""
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
