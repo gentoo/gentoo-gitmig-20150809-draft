@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/vdr-skinsoppalusikka-0.0.4.ebuild,v 1.2 2006/03/19 16:09:46 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/vdr-skinsoppalusikka-0.0.4.ebuild,v 1.3 2006/03/20 19:02:54 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -18,7 +18,7 @@ DEPEND=">=media-video/vdr-1.3.27"
 
 S=${WORKDIR}/skinsoppalusikka-${PV}
 
-PATCHES="${DISTDIR}/${VDRPLUGIN}-${PV}-german.diff"
+PATCHES="${DISTDIR}/${VDRPLUGIN}-${PV}-german.diff ${FILESDIR}/${PN}-amd64.diff"
 
 src_unpack() {
 	vdr-plugin_src_unpack

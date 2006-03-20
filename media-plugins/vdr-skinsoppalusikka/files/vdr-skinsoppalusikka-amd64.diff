@@ -1,0 +1,19 @@
+20 Mar 2006; fix compile problems on amd64
+ReneGart M.Guenther <renegart@gmx.de>
+Joerg Bornkessel <hd_brummy@gentoo.org> 
+diff -Naur skinsoppalusikka-0.0.5.orig/tools.c skinsoppalusikka-0.0.5/tools.c
+--- skinsoppalusikka-0.0.5.orig/tools.c	2006-03-20 18:09:57.789137000 +0100
++++ skinsoppalusikka-0.0.5/tools.c	2006-03-20 18:32:32.753817000 +0100
+@@ -26,10 +26,10 @@
+ char *strncatrealloc(char *dest, const char *src, unsigned int len)
+ {
+   if (src) {
+-     int l = strlen(dest) + min(strlen(src), len) + 1;
++     size_t l = strlen(dest) + min(strlen(src), (size_t) len) + 1;
+      dest = (char *)realloc(dest, l);
+      if (dest)
+-        strncat(dest, src, min(strlen(src), len));
++        strncat(dest, src, min(strlen(src), (size_t) len));
+      else
+         esyslog("ERROR: out of memory!");
+   }
