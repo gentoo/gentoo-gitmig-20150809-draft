@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblo/liblo-0.23.ebuild,v 1.1 2006/02/05 02:27:08 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblo/liblo-0.23.ebuild,v 1.2 2006/03/20 19:05:35 kito Exp $
 
 IUSE="doc"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://plugin.org.uk/liblo/"
 SRC_URI="http://www.ecs.soton.ac.uk/~njh/liblo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~ppc-macos"
+KEYWORDS="~x86 ~amd64 ppc ppc-macos"
 
 DEPEND="dev-util/pkgconfig
 		doc? ( app-doc/doxygen )"
