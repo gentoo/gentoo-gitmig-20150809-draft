@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.136 2006/03/12 21:08:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.137 2006/03/20 15:42:09 mrness Exp $
+
+*ppp-2.4.3-r12 (20 Mar 2006)
+
+  20 Mar 2006; Alin Nastac <mrness@gentoo.org> files/ip-down.baselayout,
+  files/ip-up.baselayout, -ppp-2.4.3-r11.ebuild, +ppp-2.4.3-r12.ebuild:
+  Change the baselayout-1.12 compatible ip-up/ip-down scripts, at uberlord
+  request.
 
   12 Mar 2006; Alin Nastac <mrness@gentoo.org> -ppp-2.4.3-r10.ebuild,
   ppp-2.4.3-r11.ebuild:

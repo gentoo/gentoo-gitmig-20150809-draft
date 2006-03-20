@@ -11,28 +11,30 @@
 # $5 = remote-IP-address
 # $6 = ipparam
 
-#Support for the new Gentoo baselayout
-[ -f /sbin/functions.sh ] && source /sbin/functions.sh
-if [ -x "${svclib}/net.modules.d/helpers.d/pppd-wrapper" ] &&
-   [ -x "/etc/init.d/net.$1" ] ; then
+if [ "$USEPEERDNS" ]; then
+	if [ -x /sbin/resolvconf ]; then
+		resolvconf -d "$1"
+	else
+		# taken from debian's 0000usepeerdns
+		# follow any symlink to find the real file
+		REALRESOLVCONF=$(readlink --canonicalize /etc/resolv.conf)
 
-	${svclib}/net.modules.d/helpers.d/pppd-wrapper down $1
+		if [ "$REALRESOLVCONF" != "/etc/ppp/resolv.conf" ]; then
 
-elif [ "$USEPEERDNS" ]; then
+			# if an old resolv.conf file exists, restore it
+			if [ -e $REALRESOLVCONF.pppd-backup ]; then
+				mv $REALRESOLVCONF.pppd-backup $REALRESOLVCONF
+			fi
 
-	# taken from debian's 0000usepeerdns
-	# follow any symlink to find the real file
-	REALRESOLVCONF=$(readlink --canonicalize /etc/resolv.conf)
-
-	if [ "$REALRESOLVCONF" != "/etc/ppp/resolv.conf" ]; then
-
-		# if an old resolv.conf file exists, restore it
-		if [ -e $REALRESOLVCONF.pppd-backup ]; then
-			mv $REALRESOLVCONF.pppd-backup $REALRESOLVCONF
 		fi
-
 	fi
+fi
 
+if [ -x /etc/init.d/net.$1 ]; then
+	if /etc/init.d/net.$1 --quiet --status ; then
+		export IN_BACKGROUND="true"
+		/etc/init.d/net.$1 --quiet stop
+	fi
 fi
 
 [ -f /etc/ppp/ip-down.local ] && . /etc/ppp/ip-down.local "$@"
