@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1861be40f1fa7966208f907386e81b6c ChangeLog 1426
 RMD160 df21e283b265eedb640bb76b75ef4fba91cd12b9 ChangeLog 1426
 SHA256 f9d75ddfe3f69a982d50ccfebe5b22009cef9745ef15d1740774ca7b44206d6f ChangeLog 1426
@@ -25,3 +28,10 @@ SHA256 c6f573b8174c383ed15670657a99c8c1fc9c4a98c3fded394d64168cbb0e179e mono-too
 MD5 6c5a33d97f8fdd2b0b0b8c5e2bddedd0 mono-tools-1.1.9.ebuild 800
 RMD160 d66374e6f274a0f3a861458898e7b0931c28dea7 mono-tools-1.1.9.ebuild 800
 SHA256 bc8ea583518e0027552bb91d7aecd8c6850711e5487d7fc0be650a50c5422e7a mono-tools-1.1.9.ebuild 800
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHfgpwUpWvClEHQoRAreqAJ4koBVrwgOd9461fvpcaF+EwEKWHQCfU9Oi
+fvXXoeq+MjeK1saTNqtnfj4=
+=uVrw
+-----END PGP SIGNATURE-----
