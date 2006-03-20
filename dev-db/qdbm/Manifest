@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b04603267ee8fc5dbe2d4d4dc0452842 ChangeLog 6408
+MD5 82f4c0d858a7fa3351cdfe6492310edc ChangeLog 6497
 MD5 c43f02bd9ab5d91d1db4789f70d6b3cd files/digest-qdbm-1.8.31 63
 MD5 83382b2a04b7b2532ac3246aa49a982f files/digest-qdbm-1.8.33-r2 63
 MD5 a1c233a01ba5b6922a06c451b3c2992b files/digest-qdbm-1.8.35 63
@@ -9,11 +6,4 @@ MD5 481bf1a867128b4b4f9b9f1949b40d66 files/qdbm-runpath.diff 1344
 MD5 c9f54ac0eadf3d14a44e5dc692f0df73 metadata.xml 230
 MD5 35939dae282498c83fdfdd9316003774 qdbm-1.8.31.ebuild 1209
 MD5 d6d8bf5d72668b8a77a61d9c44a543f0 qdbm-1.8.33-r2.ebuild 1304
-MD5 5a0c470b8a3f53d1926d29b2d4792991 qdbm-1.8.35.ebuild 1314
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDuwjy2+ySkm8kpY0RAumeAKDB4Ez3iMyxrVt3JsQ3BETQFgw6pACeNAtY
-RjZPb6oBhK8Yu/MRj2PvMfo=
-=/4Vv
------END PGP SIGNATURE-----
+MD5 d970f74d49507930932482f8637f40b5 qdbm-1.8.35.ebuild 1313
