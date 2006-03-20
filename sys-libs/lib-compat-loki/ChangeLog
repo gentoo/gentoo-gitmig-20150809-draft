@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/lib-compat-loki
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat-loki/ChangeLog,v 1.3 2006/01/16 04:09:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat-loki/ChangeLog,v 1.4 2006/03/20 21:45:16 wolf31o2 Exp $
+
+  20 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  lib-compat-loki-0.2.ebuild:
+  Marking stable on amd64 for games-action/descent3 stabilization.
 
   16 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   lib-compat-loki-0.2.ebuild:
