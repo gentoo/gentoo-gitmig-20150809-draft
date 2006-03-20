@@ -1,6 +1,16 @@
-MD5 ec3b547f102bcc42985359aba1069bd0 ChangeLog 1596
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cdd9cc3fb908b537fe53f1b3e6855c66 ChangeLog 1688
 MD5 77dad1200a91c12958bc01f9870ec63c files/digest-iptstate-1.3 63
 MD5 72fdbf15ab86485724c1d3b46d7e30c2 files/digest-iptstate-1.4 64
 MD5 4ec3ac90092d3472de9cb8fc4965aa7f iptstate-1.3.ebuild 684
-MD5 63760d3f826c20610cfd716cb35f0b10 iptstate-1.4.ebuild 696
+MD5 337a1bbf0e7e4f36de6e8bb2f18e604f iptstate-1.4.ebuild 693
 MD5 0078da5477b6243403ca4a01592d8266 metadata.xml 270
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEHwaPKRy60XGEcJIRAqs3AKCy1swflOV5Ge+JVPbkttuxscb+9gCfdI0X
++moYeYkBxgPJmiEBwiB12uU=
+=J+f3
+-----END PGP SIGNATURE-----
