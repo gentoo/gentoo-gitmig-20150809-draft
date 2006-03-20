@@ -1,25 +1,55 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 43e01d9fd522a76e9cdc17873cb75893 ChangeLog 7785
+MD5 153c6c3786ebf297c7b86f99f5ea98d0 ChangeLog 7908
+RMD160 c75e42158ccfc303399ec6900f25dd21c9e44ae0 ChangeLog 7908
+SHA256 78a4f952319c52cf2d94317e4687b1d85f83722ff61696cd065ce18928d01ab8 ChangeLog 7908
 MD5 a8859052e282ebc02dafdb66abf24dec bzip2-1.0.3-r5.ebuild 2220
-MD5 4e367699840329fb61804baba984b553 bzip2-1.0.3-r6.ebuild 2325
+RMD160 7f3a8e66079eb79ba56b7bb0297f4d972f5afc52 bzip2-1.0.3-r5.ebuild 2220
+SHA256 edb05fcb75ce487ad0699eba566b35957fe470476db25bd88b07005dc5d2c54b bzip2-1.0.3-r5.ebuild 2220
+MD5 996a3f550997b9b6cac4731d4ab42340 bzip2-1.0.3-r6.ebuild 2350
+RMD160 62e8350a1bea2a5e2bcc841a1047f464e9e4bb0b bzip2-1.0.3-r6.ebuild 2350
+SHA256 13f6b9efa49527fbb5b7e3e77c3b9a2ef4fe0c9fad7378c6b38adf110f328b3c bzip2-1.0.3-r6.ebuild 2350
 MD5 cc73bebefba3a38c58fc49b49d7d25a7 files/bzip2-1.0.2-NULL-ptr-check.patch 838
+RMD160 fb3131d6770357f9515c4fe7862fb83846ead484 files/bzip2-1.0.2-NULL-ptr-check.patch 838
+SHA256 68b3fb53c688499c79b0fc4d1d69903bfeb599f4ad852d50f5643a1e26d26e3e files/bzip2-1.0.2-NULL-ptr-check.patch 838
 MD5 dbeea89d55ec8759ef24434afc2316ab files/bzip2-1.0.2-bzgrep.patch 626
+RMD160 4e9a2d4ff8d6954fb3b81e048c2dce14019d89f4 files/bzip2-1.0.2-bzgrep.patch 626
+SHA256 17db9eb083bcca2b31b000d209fbde9707d0ef3a22e9ba0bbc836e67d9dafc0e files/bzip2-1.0.2-bzgrep.patch 626
 MD5 a0833247f0c02ccb65cceb33ea521457 files/bzip2-1.0.2-chmod.patch 2780
+RMD160 24997a18f8bcce8a273c9610a72de612c7d5a29a files/bzip2-1.0.2-chmod.patch 2780
+SHA256 68d77b0cf362d7ef19a5c546de1e821abf682bde7a7b5095c4299cbf37c45acb files/bzip2-1.0.2-chmod.patch 2780
 MD5 5f7a98f0aaaed6554126d30e28383ee0 files/bzip2-1.0.2-progress.patch 6141
+RMD160 213842d0d7742dce4c1d938b79134b9e910bc8ec files/bzip2-1.0.2-progress.patch 6141
+SHA256 a76f6d082a1a1fef2eff111177d7c7568e1d457fb2b98cde71bbbe6ea1c7c787 files/bzip2-1.0.2-progress.patch 6141
 MD5 ac08797208ed37631f0f375860b7a027 files/bzip2-1.0.3-makefile-CFLAGS.patch 412
+RMD160 bfaa7213cc80066bcfe92bd7e5f65640dfa16a7c files/bzip2-1.0.3-makefile-CFLAGS.patch 412
+SHA256 336b9b0150282b765555cc5aab91b7ecef6cadcf9b35ad81e5fef7341ecdc21f files/bzip2-1.0.3-makefile-CFLAGS.patch 412
 MD5 229d3efda4fa04ec02e72883bf783b08 files/bzip2-1.0.3-makefile-LDFLAGS.patch 482
+RMD160 ec746e52242f687650f577d559abfe757147fb1b files/bzip2-1.0.3-makefile-LDFLAGS.patch 482
+SHA256 80638fd8eb1e5587a6a5243f7d20cad1f09d409f3d1f181aa7daf2f27fe5f481 files/bzip2-1.0.3-makefile-LDFLAGS.patch 482
 MD5 55623d1117616943ca093e67c20e8ae1 files/bzip2-1.0.3-no-test.patch 161
+RMD160 8611ae7d6fe578e7fd24585e158c10468caca2f1 files/bzip2-1.0.3-no-test.patch 161
+SHA256 806dcb0f9f46a2b0b3ef04212405708198a25e281617e27a44c565948c159a49 files/bzip2-1.0.3-no-test.patch 161
 MD5 d1cf85cb43e35c9ecba9954295318ab8 files/bzip2-1.0.3-saneso.patch 323
+RMD160 d240f6d8d23f0584ee4bb4171935897a18f0c09e files/bzip2-1.0.3-saneso.patch 323
+SHA256 4b016b5831f6102bdd1f9d766609ee287f952a749d72f70e408fcc0adfd614c1 files/bzip2-1.0.3-saneso.patch 323
 MD5 613ebf0fa8c5fd2ed2973ffe0d727e2a files/bzip2-1.0.3-shared-largefile-support.patch 404
+RMD160 b8720c32af7133135bc81ef3e9b1b906ef6b6d44 files/bzip2-1.0.3-shared-largefile-support.patch 404
+SHA256 a253e534237980430bd5a5eb2d6f142c0b6ec2be644bc827126548a479dcfd85 files/bzip2-1.0.3-shared-largefile-support.patch 404
 MD5 f413035bf75710d87670f302692e1233 files/digest-bzip2-1.0.3-r5 63
+RMD160 a97b15b14f13e5ccb2cbea59393c72fd0db89686 files/digest-bzip2-1.0.3-r5 63
+SHA256 2044dd5d2b881f3f79d9ff9aa104ebe12674f2dc43c2d20da52eb356283ad76d files/digest-bzip2-1.0.3-r5 63
 MD5 f413035bf75710d87670f302692e1233 files/digest-bzip2-1.0.3-r6 63
+RMD160 a97b15b14f13e5ccb2cbea59393c72fd0db89686 files/digest-bzip2-1.0.3-r6 63
+SHA256 2044dd5d2b881f3f79d9ff9aa104ebe12674f2dc43c2d20da52eb356283ad76d files/digest-bzip2-1.0.3-r6 63
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEHqWKViELBEf1JB0RAgofAJ9Rc9q4FXSIwL9QbO+wcmyWHE0+MQCfe9aR
-EG/cC1qzdltnX63lvYhnsKA=
-=Psaf
+iD8DBQFEHq7oAiZjviIA2XgRApzAAKC7wuZdJpSbpWmjsgEBu9r4sn0oKQCdGEOQ
+HahU6d5XYSCu0TUZPsrh+EU=
+=kQ9G
 -----END PGP SIGNATURE-----
