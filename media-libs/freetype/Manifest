@@ -1,14 +1,52 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0137513c803ccdff538ea938a4ef5c9b ChangeLog 11396
+RMD160 3b5fe963424eee70178b4fb6b5074cddc3ac26f1 ChangeLog 11396
+SHA256 1cada4330d74f5d83e6f198c151eace3ad0df373eeff5214cfde432bdcd779ed ChangeLog 11396
 MD5 10bd432787c1a182edece351dbf82809 files/config.mk 1240
+RMD160 4cd624996babb0a9a772c09fa9f5377209a8caf9 files/config.mk 1240
+SHA256 671fa47806f929e45b8f06368ae56b29600dae3cc376942215ed6588cc733e7f files/config.mk 1240
 MD5 d42207bb27a2046e454b706339adaa25 files/digest-freetype-1.3.1-r4 136
+RMD160 392e2d4b2ef19c99f1ecb927adbbd1e5304f3976 files/digest-freetype-1.3.1-r4 136
+SHA256 5ed481c875ac4fe3bdde983323429141ce78eeaeeb780dd36c42e1413ea6f876 files/digest-freetype-1.3.1-r4 136
 MD5 d42207bb27a2046e454b706339adaa25 files/digest-freetype-1.3.1-r5 136
+RMD160 392e2d4b2ef19c99f1ecb927adbbd1e5304f3976 files/digest-freetype-1.3.1-r5 136
+SHA256 5ed481c875ac4fe3bdde983323429141ce78eeaeeb780dd36c42e1413ea6f876 files/digest-freetype-1.3.1-r5 136
 MD5 f9a58f527647abffba59f1db219693a4 files/digest-freetype-2.1.10 141
+RMD160 d0720f802e2eb059872fc2d7eecab02500e4d423 files/digest-freetype-2.1.10 141
+SHA256 c00aab2cbfb4ed2526140994d1cb7b353d1fa85689b19f526a73fa69a6a3022b files/digest-freetype-2.1.10 141
 MD5 29bbc2c883bf52623f42dd235cd23fd6 files/digest-freetype-2.1.9-r1 132
+RMD160 ad5eab81b5f46247bb2ac8997f09326570f58e2b files/digest-freetype-2.1.9-r1 132
+SHA256 87620ff697ccb8543e0d369bf1bb00fa25e0922d081140f2536109794346f594 files/digest-freetype-2.1.9-r1 132
 MD5 51968a6fff68a83653c7281147312e77 files/freetype-1.3.1-malloc.patch 772
+RMD160 93e57de9f466d159e3eeb80befc9ef216650ad24 files/freetype-1.3.1-malloc.patch 772
+SHA256 8d3a125d9fc4f28040d74d5e6267b56a295fbe11727db003c9c3a1a61f68a7f1 files/freetype-1.3.1-malloc.patch 772
 MD5 f96e5959658f100cb8d1af8a197b8c45 files/freetype-2.1.10-internal_header.patch 667
+RMD160 c1959d97a8588e8efec6cfc5dde79ac5ff6552ef files/freetype-2.1.10-internal_header.patch 667
+SHA256 da72ae11e658332a0e22bc0fd69c9d0c89d61dcbd376243b6dface7b33b8d239 files/freetype-2.1.10-internal_header.patch 667
 MD5 6c404648e3cb8f86b329f7dac5d70cc8 files/freetype-2.1.9-fix_bci.patch 643
-MD5 83c03cdedf5536372bcc63f4c747ff35 freetype-1.3.1-r4.ebuild 3091
-MD5 49769e5e0f8f1f2d4ff5e8aa103cfe0f freetype-1.3.1-r5.ebuild 3191
-MD5 86b12a7a70a9bc33ce24198144f753fc freetype-2.1.10.ebuild 1810
-MD5 be70a34545fbf083a16aedca4c1c1c43 freetype-2.1.9-r1.ebuild 2160
+RMD160 cf09457bc1f385b04f5013ed568886f854c33847 files/freetype-2.1.9-fix_bci.patch 643
+SHA256 401d6db5446f80d086a6dbc89c8e7578d1e84a4fec8a691513f4a47447616b73 files/freetype-2.1.9-fix_bci.patch 643
+MD5 11bad807109dac4e9208fdab1a127b14 freetype-1.3.1-r4.ebuild 3094
+RMD160 a4b68a9763f0603dc4c3d869ef2a8364126ca9d2 freetype-1.3.1-r4.ebuild 3094
+SHA256 6a01c432a23f9c787f2b300dc336d7b2f6251b7178c7ec9d8f91b86001968a75 freetype-1.3.1-r4.ebuild 3094
+MD5 4eaf61511f2b2c2520aeffadbe33b182 freetype-1.3.1-r5.ebuild 3198
+RMD160 ad1fd38646ca2f925f4abb847aa1efc2435fe7f3 freetype-1.3.1-r5.ebuild 3198
+SHA256 2553b7aa7c483faaaab77596203cdbdd5acb55fd35bf3f2dc5552162e15132b4 freetype-1.3.1-r5.ebuild 3198
+MD5 2c9b8ca495cb4d63278beff9af08c912 freetype-2.1.10.ebuild 1816
+RMD160 7eb67eac1f035f3b7f38be9692b28cbea967f436 freetype-2.1.10.ebuild 1816
+SHA256 ab972aded7a2d4b541e6942bfcf8c6673d71d843fa093de5ad80dced2989a0a0 freetype-2.1.10.ebuild 1816
+MD5 aac984a0110e9a108eb4c71c1a45f2bd freetype-2.1.9-r1.ebuild 2165
+RMD160 22194b4b0e4d04583cd2439cb503246532017b61 freetype-2.1.9-r1.ebuild 2165
+SHA256 f34b322d58f30f88985a4f92bc9e11476b8c3d3c61be9c3f37f89c5d8edb2394 freetype-2.1.9-r1.ebuild 2165
 MD5 68a04e23ccfb7971cff8ce012aee659c metadata.xml 221
+RMD160 71f7378b604618cc82dd25cf498259ca9e971437 metadata.xml 221
+SHA256 f5caf0a487300525ba716466e1fffb0d9ab526e3c6477d61db48f7e7d84612d0 metadata.xml 221
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHhrX2+ySkm8kpY0RAlVbAKC6TBYqf0C9jAPy/QXf97Sq9e6TwACeMdYM
+lW6Z5Admh9TElfD/Tpyn2sg=
+=twTu
+-----END PGP SIGNATURE-----
