@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.2 2006/02/28 19:30:36 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.3 2006/03/20 00:23:16 anarchy Exp $
+
+  20 Mar 2006; Jory A. Pratt <anarchy@gentoo.org> seamonkey-1.0.ebuild:
+  revision to patchset for glibc-2.4 wrt bug#125832
 
   28 Feb 2006; Rene Nussbaumer <killerfox@gentoo.org> seamonkey-1.0.ebuild:
   Added to ~ppc.
