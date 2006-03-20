@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.27 2006/02/05 20:47:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.28 2006/03/20 15:01:59 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -183,7 +183,7 @@ function subversion_svn_fetch() {
 	# export to the ${WORKDIR}
 	# for the time being, we use `cp -R` instead of `svn export` due to
 	# a bug in svn export handling.  see http://bugs.gentoo.org/119236
-	#svn export "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${S}" || die "${ESVN}: can't export to ${S}."
+	#svn export "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${S}" || die "${ESVN}: can't exportto ${S}."
 	cp -pPR "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${S}" || die "${ESVN}: can't copy to ${S}."
 	find "${S}" -name .svn -print0 | xargs -0 rm -rf {} \;
 	einfo "   exported to: ${S}"
@@ -242,10 +242,6 @@ function subversion_bootstrap() {
 ## -- subversion_src_unpack() ------------------------------------------------ #
 
 function subversion_src_unpack() {
-
-	if [ -n "${A}" ]; then
-		unpack ${A}
-	fi
 
 	subversion_svn_fetch || die "${ESVN}: unknown problem in subversion_svn_fetch()."
 	subversion_bootstrap || die "${ESVN}: unknown problem in subversion_bootstrap()."
