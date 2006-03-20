@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-gollem
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/ChangeLog,v 1.3 2006/03/20 21:09:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/ChangeLog,v 1.4 2006/03/20 22:03:43 gustavoz Exp $
+
+  20 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  horde-gollem-1.0.2.ebuild:
+  Stable on sparc wrt security #126435
 
 *horde-gollem-1.0.2 (20 Mar 2006)
 

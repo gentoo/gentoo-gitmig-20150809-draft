@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-chora
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.6 2005/10/14 00:42:37 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.7 2006/03/20 22:02:45 gustavoz Exp $
+
+  20 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  horde-chora-2.0.1.ebuild:
+  Stable on sparc wrt security #126435
 
 *horde-chora-2.0.1 (14 Oct 2005)
 
