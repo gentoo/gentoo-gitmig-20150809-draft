@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.3.2.ebuild,v 1.2 2005/12/29 01:17:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.3.2.ebuild,v 1.3 2006/03/20 02:49:17 vapier Exp $
 
 inherit eutils
 
@@ -10,16 +10,15 @@ SRC_URI="http://fontconfig.org/release/${P}.tar.gz"
 
 LICENSE="fontconfig"
 SLOT="1.0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=media-libs/freetype-2.1.4
 	>=dev-libs/expat-1.95.3"
 
 src_unpack() {
-
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	local PPREFIX="${FILESDIR}/patch/${PN}"
 
@@ -27,11 +26,9 @@ src_unpack() {
 	epatch ${PPREFIX}-2.2-local_fontdir-r1.patch
 
 	epunt_cxx #74077
-
 }
 
 src_compile() {
-
 	[ "${ARCH}" == "alpha" -a "${CC}" == "ccc" ] && \
 		die "Dont compile fontconfig with ccc, it doesnt work very well"
 
@@ -46,12 +43,10 @@ src_compile() {
 	sed -i "s:fc-cache/fc-cache -f -v:sleep 0:" Makefile
 
 	emake -j1 || die
-
 }
 
 src_install() {
-
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	insinto /etc/fonts
 	doins ${S}/fonts.conf
@@ -63,11 +58,9 @@ src_install() {
 	newman fc-list/fc-list.man fc-list.1
 	newman src/fontconfig.man fontconfig.3
 	dodoc AUTHORS ChangeLog NEWS README
-
 }
 
 pkg_postinst() {
-
 	# Changes should be made to /etc/fonts/local.conf, and as we had
 	# too much problems with broken fonts.conf, we force update it ...
 	# <azarah@gentoo.org> (11 Dec 2002)
@@ -82,5 +75,4 @@ pkg_postinst() {
 		einfo "Creating font cache..."
 		/usr/bin/fc-cache -f
 	fi
-
 }
