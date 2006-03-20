@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bless
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.1 2006/02/15 08:34:06 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.2 2006/03/20 00:42:02 metalgod Exp $
+
+  20 Mar 2006; Luis Medinas <metalgod@gentoo.org> bless-0.4.0.ebuild:
+  Added ~amd64 keyword. Closes bug #122938.
 
 *bless-0.4.0 (15 Feb 2006)
 
