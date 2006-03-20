@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.23.ebuild,v 1.9 2005/11/22 19:38:21 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.23.ebuild,v 1.10 2006/03/20 19:01:32 wolf31o2 Exp $
 
 inherit eutils
 
@@ -39,6 +39,6 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR="${D}" || die "Install failed"
-	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README THANKS TODO
+	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 	dodoc doc/{API,FAQ,FAT,USER.jp}
 }
