@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.1 2006/03/17 21:16:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.2 2006/03/20 19:40:22 wolf31o2 Exp $
 
 inherit eutils multilib games
 
 MY_P="${PN}-lnxpatch${PV}-2.tar.bz2"
-DESCRIPTION="Unreal Tournament 2004 - Editor's Choice Edition"
+DESCRIPTION="Unreal Tournament 2004 - Editor's Choice Edition plus Mega Pack"
 HOMEPAGE="http://www.unrealtournament2004.com/"
 SRC_URI="mirror://3dgamers/unrealtourn2k4/${MY_P}
 	http://speculum.twistedgamer.com/pub/0day.icculus.org/${PN}/${MY_P}
