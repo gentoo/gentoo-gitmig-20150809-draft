@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.44.ebuild,v 1.2 2006/03/15 10:43:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.44.ebuild,v 1.3 2006/03/20 16:01:20 hd_brummy Exp $
 
 inherit eutils flag-o-matic
 
@@ -28,8 +28,6 @@ RDEPEND="${DEPEND}
 	dev-lang/perl
 	media-tv/vdrplugin-rebuild
 	>=media-tv/gentoo-vdr-scripts-0.2.3"
-
-PDEPEND="setup-plugin? ( >=media-plugins/vdr-setup-0.3.1 )"
 
 # Relevant Pathes for vdr on gentoo
 DVB_DIR=/usr/include
@@ -221,5 +219,11 @@ pkg_postinst() {
 		ewarn "vfat is now set with VFAT_FILENAMES."
 		ewarn "lirc/rcu are now set with IR_CTRL."
 		ebeep
+	fi
+
+	if use setup-plugin; then
+		echo
+		eerror "It is very importend to emerge media-plugins/vdr-setup now"
+		eerror "and you have to activated it in /etc/conf.de/vdr PLUGINS=\"\""
 	fi
 }

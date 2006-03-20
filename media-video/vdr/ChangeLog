@@ -1,9 +1,19 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.52 2006/03/15 10:43:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.53 2006/03/20 16:01:20 hd_brummy Exp $
+
+  20 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.3.44.ebuild:
+  removed PDEPEND for vdr-setup Plugin; added info how it's to handle it, to
+  use the vdr-setup plugin
 
   15 Mar 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-1.3.44.ebuild:
   added debug use-flag
+
+*vdr-1.3.44 (13 Mar 2006)
+
+  13 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-1.3.44.ebuild:
+  version bump
 
 *vdr-1.3.41-r2 (10 Mar 2006)
 
