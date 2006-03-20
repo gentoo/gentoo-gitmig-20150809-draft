@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 247bd718eb232df6adbe765385b74038 ChangeLog 661
+MD5 65cf7a14720865be84b3a5d8c6790f60 ChangeLog 758
+RMD160 ccdace6c32dde1ef709d3b35766c7a6cb7b513d1 ChangeLog 758
+SHA256 5b9bd3acc389706a1e729cbf13b697e70705b5348ea84ee80a6a9be0fd60a3f8 ChangeLog 758
 MD5 7ca300103ab322a01edbc65bd9dc46da files/digest-yaggui-0.9 63
+RMD160 511bc55b8a0b34c92310e55c54476a2afde5a41f files/digest-yaggui-0.9 63
+SHA256 019a7d9fe47492456c40f0724ffa797af6b3105c708c8750117c71e5f9d336d6 files/digest-yaggui-0.9 63
 MD5 44d8be3f2e56dd37d0a56809cada80ed files/yaggui.sh 610
+RMD160 83796ea5bcc48f4ae004efc8adeaa236e4ed4646 files/yaggui.sh 610
+SHA256 b7f3008dc2b5b4ac887e74312189de08eda10cc8740aa4b216d3258ca85dc72d files/yaggui.sh 610
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 1f3801d28357a412fe75507d0a13a2b2 yaggui-0.9.ebuild 675
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD0Wxgub4+zaPCR/oRAneGAKCZF/mb1hNR+JjFU9B51zuuC6n8wgCgp8pO
-iNiHeIe4vIc7rbf6rX42Jm0=
-=yptB
------END PGP SIGNATURE-----
+RMD160 828887200387b28c37fc97111fc6bc3a0a2fcccd metadata.xml 160
+SHA256 fe06593409e7f28665c032001005e94cb650299711a0af7f1a558bdb56c4004f metadata.xml 160
+MD5 64155e6be22adedb187dd3539e71b9ff yaggui-0.9.ebuild 689
+RMD160 bd57c12174357e06e2853f2939d7291f8a82cfde yaggui-0.9.ebuild 689
+SHA256 085698661ebad60f0f5eb846b638b6793fcba275bef49efad8a6a59a68bfeea1 yaggui-0.9.ebuild 689
