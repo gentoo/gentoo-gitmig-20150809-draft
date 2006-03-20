@@ -1,18 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c3d428595060d479b8d8270b0e289ba ChangeLog 943
-MD5 aeab225fec61555d5b4bb96f2f9f9921 libnss-pgsql-1.0.0.ebuild 1383
-MD5 523db200ceaf85a5bf8aa43844f878ec libnss-pgsql-1.3.ebuild 1388
-MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
+MD5 ff9022f9d90622421bc695828fb31816 ChangeLog 1174
+RMD160 218d7508c69c74daf5165103cce1cd8bcf0efe29 ChangeLog 1174
+SHA256 5e21e065b650ffacc6b4542502247bd92618f85f793b6bdab13a4bf4542ac0a0 ChangeLog 1174
 MD5 9d469fca29b34e6f7bcf3b41674f3c42 files/digest-libnss-pgsql-1.0.0 70
+RMD160 bda4dafa06ecac7aa8eb9ac7c48a9f7b3ec05553 files/digest-libnss-pgsql-1.0.0 70
+SHA256 35ebcebb9858d369964944c7fea221839a624af7e201388cc80f680c62a12508 files/digest-libnss-pgsql-1.0.0 70
 MD5 8ed8398d0e5e0a1cc37f08226043d0ca files/digest-libnss-pgsql-1.3 73
+RMD160 06860cc8dd85b059a959dada8a51f1e11d4f4217 files/digest-libnss-pgsql-1.3 73
+SHA256 d78614d222f15a1d3593f8f712d583342eeca347451c6da824ace123fbe2d236 files/digest-libnss-pgsql-1.3 73
+MD5 8781a17800cb91018411055a8331002c files/digest-libnss-pgsql-1.4.0 67
+RMD160 5885a2732b2de989a293017cbe3fdf09e7262bfb files/digest-libnss-pgsql-1.4.0 67
+SHA256 d3e1885912ee3db0a17f2581f8eec2c68411b14db72c33fb73f8218677bb3bd7 files/digest-libnss-pgsql-1.4.0 67
 MD5 457b30ca5af70af48cc75dbf41225a52 files/libnss-pgsql-1.3-gentoo.patch 398
+RMD160 7c9fc36d60c97b01c578679a34aefaf54685679b files/libnss-pgsql-1.3-gentoo.patch 398
+SHA256 f1fe4d7fd5d717569c4d6d228f48b2de4da9b4931e1774d68f81ef25d1c0f8ad files/libnss-pgsql-1.3-gentoo.patch 398
+MD5 829b50543372c3f6cdf48b139c958f2a files/libnss-pgsql-1.4.0-gentoo.patch 398
+RMD160 fa9d1d6909141f6b4eaf119ca143b934eb64ca98 files/libnss-pgsql-1.4.0-gentoo.patch 398
+SHA256 9c6d4f5cc7f0006ab8045a501ab07321bd4e873d278f517919f12381423cc7ae files/libnss-pgsql-1.4.0-gentoo.patch 398
 MD5 f4cf9036a52e45d2a0aa66c50a691d9f files/postgres-and-glibc.patch 1289
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFCxw5Gj5H05b2HAEkRAjChAJdPb7E901bct04zZZQfjA3qvxjGAJ9hAKL8
-GvqVjijDo2A7OfrxuiNdDQ==
-=cZHf
------END PGP SIGNATURE-----
+RMD160 0920ba8cee8ff45e4d3dff7967e936e75f7bc907 files/postgres-and-glibc.patch 1289
+SHA256 78fa23f858ad284b8d721c38deb7da79dcefec094ec9772494a289f885c5d087 files/postgres-and-glibc.patch 1289
+MD5 aeab225fec61555d5b4bb96f2f9f9921 libnss-pgsql-1.0.0.ebuild 1383
+RMD160 194acd3bc4dacfb829edea80f51f1b711f60201f libnss-pgsql-1.0.0.ebuild 1383
+SHA256 0864f637734d8661c5bb5c91e6c2053cc5bc28363463004e3f36a0bdb6f38a9f libnss-pgsql-1.0.0.ebuild 1383
+MD5 523db200ceaf85a5bf8aa43844f878ec libnss-pgsql-1.3.ebuild 1388
+RMD160 336352f206b12dbc81aaf9399f4b730230246ed6 libnss-pgsql-1.3.ebuild 1388
+SHA256 b55dfeb071548e97792a389b46fcc1eeac1f99cdfddd09371fcacc9b32782aff libnss-pgsql-1.3.ebuild 1388
+MD5 cf3566b4b857a86d09e9e0951a3a32e8 libnss-pgsql-1.4.0.ebuild 1427
+RMD160 fb320f99d07a501e492212b948f85e033421d0b9 libnss-pgsql-1.4.0.ebuild 1427
+SHA256 38ffcf7034c98e4c663c5689f8f2706bfad839814130417d9065bf46e0d695f9 libnss-pgsql-1.4.0.ebuild 1427
+MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
+RMD160 70bbda1c1e8316a09d467334131898ae833a3205 metadata.xml 163
+SHA256 f0699a4c3ad24cc38836c2d4a1ba03e4e403a9a5364b51df405db02014005891 metadata.xml 163
