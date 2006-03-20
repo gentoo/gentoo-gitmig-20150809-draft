@@ -1,0 +1,26 @@
+Index: cdparanoia-III-alpha9.8/interface/Makefile.in
+===================================================================
+--- cdparanoia-III-alpha9.8.orig/interface/Makefile.in
++++ cdparanoia-III-alpha9.8/interface/Makefile.in
+@@ -46,7 +46,7 @@ libcdda_interface.a: 	$(OFILES)	
+ 	$(RANLIB) libcdda_interface.a
+ 
+ libcdda_interface.so: 	$(OFILES)	
+-	$(CC) -fpic -shared -o libcdda_interface.so.0.$(VERSION) -Wl,-soname -Wl,libcdda_interface.so.0 $(OFILES) -lm
++	$(CC) $(LDFLAGS) -fpic -shared -o libcdda_interface.so.0.$(VERSION) -Wl,-soname -Wl,libcdda_interface.so.0 $(OFILES) -lm
+ 	[ -e libcdda_interface.so.0 ] || ln -s libcdda_interface.so.0.$(VERSION) libcdda_interface.so.0
+ 	[ -e libcdda_interface.so ] || ln -s libcdda_interface.so.0.$(VERSION) libcdda_interface.so
+ 
+Index: cdparanoia-III-alpha9.8/paranoia/Makefile.in
+===================================================================
+--- cdparanoia-III-alpha9.8.orig/paranoia/Makefile.in
++++ cdparanoia-III-alpha9.8/paranoia/Makefile.in
+@@ -44,7 +44,7 @@ libcdda_paranoia.a: 	$(OFILES)	
+ 	$(RANLIB) libcdda_paranoia.a
+ 
+ libcdda_paranoia.so: 	$(OFILES)	
+-	$(CC) -fpic -shared -o libcdda_paranoia.so.0.$(VERSION) -Wl,-soname -Wl,libcdda_paranoia.so.0 $(OFILES) -L ../interface -lcdda_interface
++	$(CC) $(LDFLAGS) -fpic -shared -o libcdda_paranoia.so.0.$(VERSION) -Wl,-soname -Wl,libcdda_paranoia.so.0 $(OFILES) -L ../interface -lcdda_interface
+ 	[ -e libcdda_paranoia.so.0 ] || ln -s libcdda_paranoia.so.0.$(VERSION) libcdda_paranoia.so.0
+ 	[ -e libcdda_paranoia.so ] || ln -s libcdda_paranoia.so.0.$(VERSION) libcdda_paranoia.so
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r3.ebuild,v 1.3 2006/03/07 13:42:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r3.ebuild,v 1.4 2006/03/20 16:41:57 flameeyes Exp $
 
 inherit eutils flag-o-matic gnuconfig linux-info
 
@@ -35,6 +35,7 @@ src_unpack() {
 	# Apply Red Hat's SG_IO patches see bug #118189 for more info
 	kernel_is ge 2 6 15 && EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" epatch
 
+	epatch "${FILESDIR}/${P}-respectflags.patch"
 	# Let portage handle the stripping of binaries
 	sed -i -e "/strip cdparanoia/d" Makefile.in
 
