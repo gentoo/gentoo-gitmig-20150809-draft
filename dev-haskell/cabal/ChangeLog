@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.11 2006/03/13 11:32:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.12 2006/03/20 17:54:27 nixnut Exp $
+
+  20 Mar 2006; <nixnut@gentoo.org> cabal-1.1.3-r1.ebuild:
+  Stable on ppc. Bug #126134
 
   13 Mar 2006; Jeroen Roovers <jer@gentoo.org> cabal-1.1.3-r1.ebuild:
   Marked ~hppa (bug #125389).
