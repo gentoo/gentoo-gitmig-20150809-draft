@@ -1,0 +1,156 @@
+diff -ru /tmp/client/scripts/bsdos client/scripts/bsdos
+--- /tmp/client/scripts/bsdos	2006-03-18 14:47:59.393686000 +0000
++++ client/scripts/bsdos	2006-03-18 14:59:18.000000000 +0000
+@@ -132,7 +132,7 @@
+ 					$new_broadcast_arg $medium"
+     route add $new_ip_address 127.1 >/dev/null 2>&1
+     for router in $new_routers; do
+-      route add default $router >/dev/null 2>&1
++      route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
+     done
+     if [ "$new_static_routes" != "" ]; then
+       set $new_static_routes
+@@ -198,7 +198,7 @@
+       fi
+       route add $new_ip_address 127.1 >/dev/null 2>&1
+       for router in $new_routers; do
+-	route add default $router >/dev/null 2>&1
++	route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
+       done
+       set $new_static_routes
+       while [ $# -gt 1 ]; do
+diff -ru /tmp/client/scripts/freebsd client/scripts/freebsd
+--- /tmp/client/scripts/freebsd	2006-03-18 14:47:59.393686000 +0000
++++ client/scripts/freebsd	2006-03-18 15:00:48.000000000 +0000
+@@ -162,7 +162,7 @@
+     fi
+     route add $new_ip_address 127.1 >/dev/null 2>&1
+     for router in $new_routers; do
+-      route add default $router >/dev/null 2>&1
++      route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
+     done
+     if [ -n "$new_static_routes" ]; then
+       $LOGGER "New Static Routes: $new_static_routes"
+@@ -233,7 +233,7 @@
+       fi
+       route add $new_ip_address 127.1 >/dev/null 2>&1
+       for router in $new_routers; do
+-	route add default $router >/dev/null 2>&1
++	route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
+       done
+       set -- $new_static_routes
+       while [ $# -gt 1 ]; do
+diff -ru /tmp/client/scripts/linux client/scripts/linux
+--- /tmp/client/scripts/linux	2006-03-18 14:47:59.393686000 +0000
++++ client/scripts/linux	2006-03-18 14:56:43.000000000 +0000
+@@ -140,13 +140,11 @@
+   if [ x$old_ip_address != x ] && [ x$alias_ip_address != x ] && \
+ 		[ x$alias_ip_address != x$old_ip_address ]; then
+     # Possible new alias. Remove old alias.
+-    ifconfig $interface:0- inet 0
++    ifconfig $interface:0- inet 0.0.0.0
+   fi
+   if [ x$old_ip_address != x ] && [ x$old_ip_address != x$new_ip_address ]; then
+-    # IP address changed. Bringing down the interface will delete all routes,
+-    # and clear the ARP cache.
+-    ifconfig $interface inet 0 down
+-
++    # IP address changed - set existing to 0. 
++    ifconfig $interface inet 0.0.0.0
+   fi
+   if [ x$old_ip_address = x ] || [ x$old_ip_address != x$new_ip_address ] || \
+      [ x$reason = xBOUND ] || [ x$reason = xREBOOT ]; then
+@@ -159,14 +157,14 @@
+       route add -net $new_network_number $new_subnet_arg dev $interface
+     fi
+     for router in $new_routers; do
+-      route add default gw $router
++      route add default gw $router ${IF_METRIC:+metric $IF_METRIC} dev $interface
+     done
+   fi
+   if [ x$new_ip_address != x$alias_ip_address ] && [ x$alias_ip_address != x ];
+    then
+     ifconfig $interface:0- inet 0
+     ifconfig $interface:0 inet $alias_ip_address $alias_subnet_arg
+-    route add -host $alias_ip_address $interface:0
++    route add -host $alias_ip_address dev $interface:0
+   fi
+   make_resolv_conf
+   exit_with_hooks 0
+@@ -179,12 +177,12 @@
+     ifconfig $interface:0- inet 0
+   fi
+   if [ x$old_ip_address != x ]; then
+-    # Shut down interface, which will delete routes and clear arp cache.
+-    ifconfig $interface inet 0 down
++    # Remove old address
++    ifconfig $interface inet 0.0.0.0
+   fi
+   if [ x$alias_ip_address != x ]; then
+     ifconfig $interface:0 inet $alias_ip_address $alias_subnet_arg
+-    route add -host $alias_ip_address $interface:0
++    route add -host $alias_ip_address dev $interface:0
+   fi
+   exit_with_hooks 0
+ fi
+@@ -205,15 +203,15 @@
+     fi
+     if [ $relmajor -lt 2 ] || \
+ 		( [ $relmajor -eq 2 ] && [ $relminor -eq 0 ] ); then
+-      route add -net $new_network_number
++      route add -net $new_network_number dev $interface
+     fi
+     for router in $new_routers; do
+-      route add default gw $router
++      route add default gw $router ${IF_METRIC:+metric $IF_METRIC} dev $interface
+     done
+     make_resolv_conf
+     exit_with_hooks 0
+   fi
+-  ifconfig $interface inet 0 down
++  ifconfig $interface inet 0.0.0.0 
+   exit_with_hooks 1
+ fi
+ 
+diff -ru /tmp/client/scripts/netbsd client/scripts/netbsd
+--- /tmp/client/scripts/netbsd	2006-03-18 14:47:59.393686000 +0000
++++ client/scripts/netbsd	2006-03-18 15:02:29.000000000 +0000
+@@ -132,7 +132,7 @@
+ 					$new_broadcast_arg $medium"
+     route add $new_ip_address 127.1 >/dev/null 2>&1
+     for router in $new_routers; do
+-      route add default $router >/dev/null 2>&1
++      route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
+     done
+     if [ "$new_static_routes" != "" ]; then
+       set $new_static_routes
+@@ -198,7 +198,7 @@
+       fi
+       route add $new_ip_address 127.1 >/dev/null 2>&1
+       for router in $new_routers; do
+-	route add default $router >/dev/null 2>&1
++	route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
+       done
+       set $new_static_routes
+       while [ $# -gt 1 ]; do
+diff -ru /tmp/client/scripts/openbsd client/scripts/openbsd
+--- /tmp/client/scripts/openbsd	2006-03-18 14:47:59.393686000 +0000
++++ client/scripts/openbsd	2006-03-18 15:04:24.000000000 +0000
+@@ -132,7 +132,7 @@
+ 					$new_broadcast_arg $medium"
+     route add $new_ip_address 127.1 >/dev/null 2>&1
+     for router in $new_routers; do
+-      route add default $router >/dev/null 2>&1
++       route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
+     done
+     if [ "$new_static_routes" != "" ]; then
+       set $new_static_routes
+@@ -198,7 +198,7 @@
+       fi
+       route add $new_ip_address 127.1 >/dev/null 2>&1
+       for router in $new_routers; do
+-	route add default $router >/dev/null 2>&1
++	route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
+       done
+       set $new_static_routes
+       while [ $# -gt 1 ]; do
