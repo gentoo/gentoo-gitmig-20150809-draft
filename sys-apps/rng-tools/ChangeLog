@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.12 2006/02/08 23:16:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.13 2006/03/20 09:33:00 nelchael Exp $
+
+*rng-tools-2 (20 Mar 2006)
+
+  20 Mar 2006; Krzysiek Pawlik <nelchael@gentoo.org> +files/2/rngd-conf,
+  +files/2/rngd, metadata.xml, -rng-tools-1.0.ebuild, +rng-tools-2.ebuild:
+  Added myself as maintainer, version bump and better init.d/conf.d scripts
+  (see bug #126852).
 
   08 Feb 2006; Aron Griffis <agriffis@gentoo.org> rng-tools-1.1.ebuild:
   Mark 1.1 stable on alpha
