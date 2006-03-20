@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1ce3e7398ffcdbd6f40865df26bb8903 ChangeLog 4194
-RMD160 dffabdfe5ba3cd7119db99214aa7fe42254f5d33 ChangeLog 4194
-SHA256 316b17e02093de54ad5de1cf2c6b4d15c66fa529ce6fa34de9bbf89810ae298c ChangeLog 4194
+MD5 f10350cc17de8e2af8f9282124590f10 ChangeLog 4312
 MD5 30858165271c5a478adad508885c92c0 files/digest-horde-imp-3.2.8 62
-RMD160 2a4f4004af911ed8f391a31fdd3bf436ce643778 files/digest-horde-imp-3.2.8 62
-SHA256 da3445c0a69324a75077c06f261e0b8c3608969169037e3bfc9bea5b931dd15a files/digest-horde-imp-3.2.8 62
 MD5 97425b6d30965775a0d1982df040c49b files/digest-horde-imp-4.0.4 65
-RMD160 cb330d8f854fa89771627a9e4ae7271d52aee902 files/digest-horde-imp-4.0.4 65
-SHA256 7b4af86f8a660d8300ab73f1da7ebdd0ae0f5f03e45d68e83d05cd70020d1f98 files/digest-horde-imp-4.0.4 65
 MD5 0a4c51c9d4272abcb9d352c5bd1e3da7 files/digest-horde-imp-4.1 235
-RMD160 df6551708bc417d7cd534d2339f28151afb31518 files/digest-horde-imp-4.1 235
-SHA256 53577708d2c29d5a76c5d6eeccc6e2bf52c7687a64e7cac68656a475c8a94c67 files/digest-horde-imp-4.1 235
 MD5 0769a91faa3fbaf0814b695daf190448 horde-imp-3.2.8.ebuild 423
-RMD160 f82ead11dd6fdf63b564b5b307bcb180cecd15ee horde-imp-3.2.8.ebuild 423
-SHA256 c6d94a428541b08a2b06f6921210cd5cc8a0dd943d1978104b538e79d49e98f1 horde-imp-3.2.8.ebuild 423
 MD5 c5cf5a1e0ce3b47a6add80e73029911a horde-imp-4.0.4.ebuild 441
-RMD160 6066f8eb18d2160f5ec6887b926bbd3542637f3d horde-imp-4.0.4.ebuild 441
-SHA256 63af8728c0ab4a68dbcf7edba066404e281dce7daad998b34798b9ae8229eb41 horde-imp-4.0.4.ebuild 441
-MD5 d95a6ea748de5a7e75ebf4cded369735 horde-imp-4.1.ebuild 439
-RMD160 9e1f686f470ce63ec26cf3723c61721fe5b25477 horde-imp-4.1.ebuild 439
-SHA256 dd6550ed21488fe5c73f8261a361c8d6d80dcb1d85f85107922aba94a0c11507 horde-imp-4.1.ebuild 439
+MD5 09cb5cfb35b43f3f8e489a57d57561e8 horde-imp-4.1.ebuild 440
 MD5 df7b9cb8aaba349bce3d45e694e2f7a1 metadata.xml 375
-RMD160 069b38c88432b439f854e798485f2241a4bf6901 metadata.xml 375
-SHA256 4bcc4074da5279a3ba54b4c3915bcba73ab7cdf585dc52c308e740da1e021f9b metadata.xml 375
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEELvI2+ySkm8kpY0RApLGAKCrhgMbKTASirBYrKxc+YTr9PymRwCfYBdi
-h/37HXHHwSuA0pzEIXCvEA0=
-=IY94
------END PGP SIGNATURE-----

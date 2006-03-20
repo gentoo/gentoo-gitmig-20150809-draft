@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9846222aa62b1c49390b37667c76392a ChangeLog 2142
-RMD160 15859ff50c9f3c46c40080c9e89b7714e964d408 ChangeLog 2142
-SHA256 e06f93b2322a932ea20e80aa35f2b53d80e34afc31349b3acd5bd0ad37c06d66 ChangeLog 2142
+MD5 9fc2c06be23afd540a27960d3f18c058 ChangeLog 2264
 MD5 3308ae704f3012264a5e59587930c0b8 files/digest-horde-mnemo-1.1.4 63
-RMD160 f4c656361ba77a1643e160b2d2219c1792825429 files/digest-horde-mnemo-1.1.4 63
-SHA256 642120c27d318e16411821521a699a1b7e263df8802b9d10c53f3b4fcf18271f files/digest-horde-mnemo-1.1.4 63
 MD5 ebee1c7f8e7be96a271703bbec17eaf3 files/digest-horde-mnemo-2.0.3 66
-RMD160 be203c25089021c3ff40fdf2be9f99ebd5d44478 files/digest-horde-mnemo-2.0.3 66
-SHA256 786356e00f15cc5658d986ab65f7ff9a50a18b8bb2e90a7c3a5b49fa08866def files/digest-horde-mnemo-2.0.3 66
 MD5 0268ec51352394a068755349819b5e5a files/digest-horde-mnemo-2.1 238
-RMD160 a9eb13a4db139d6d5fa8c095c67b385e2858ff95 files/digest-horde-mnemo-2.1 238
-SHA256 98dc1a516600f0bb028178d276019dc58a45fe182e60787f258f682a3c319ba2 files/digest-horde-mnemo-2.1 238
 MD5 6cad54738ea2ced39092787a784f7107 horde-mnemo-1.1.4.ebuild 425
-RMD160 faba41aa55d9953d0b11cebb02889d64175fda40 horde-mnemo-1.1.4.ebuild 425
-SHA256 2071b1c56dbcfd5d18f84735025aab6904d17580bc19c207f504fbc8e0fc0c70 horde-mnemo-1.1.4.ebuild 425
 MD5 38996ab402be2ad944058bdedd8a46ed horde-mnemo-2.0.3.ebuild 450
-RMD160 c83a79e0017e7296e6241675cbc6c36bab28afe1 horde-mnemo-2.0.3.ebuild 450
-SHA256 3a70675a6ee707f5fbddac20b95b1e0c00307930c72a2162c99cecceee1833bc horde-mnemo-2.0.3.ebuild 450
-MD5 a4418967b48cfba45de38c8a742d153c horde-mnemo-2.1.ebuild 448
-RMD160 d20364785ff80acd088851a59402665e5664c4e4 horde-mnemo-2.1.ebuild 448
-SHA256 d0ae09fb27e2ba235e982afcce6b1814a71669d3921fe235a2b583dcd325340f horde-mnemo-2.1.ebuild 448
+MD5 182e6306900db03c0d3a0e5e8bdb46a2 horde-mnemo-2.1.ebuild 449
 MD5 c14b95659ea882d1d9a416001fc1463e metadata.xml 284
-RMD160 6f98a9bb22ee1710ef6c3397c1703d26b5c77a8d metadata.xml 284
-SHA256 ca58dde997ee23f595c0ba3c8545eda61220ec6263a72221c264448d0f9f6fe1 metadata.xml 284
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEELxm2+ySkm8kpY0RAp6TAKDCVDuF9xd/V/Mr3mlcBPjjcBPyNgCgg/QX
-7fcNyQ4CRxGNFp+3fZy+yrc=
-=vcFb
------END PGP SIGNATURE-----
