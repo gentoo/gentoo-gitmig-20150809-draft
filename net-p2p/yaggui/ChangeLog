@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/yaggui
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/yaggui/ChangeLog,v 1.4 2006/01/20 22:02:16 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/yaggui/ChangeLog,v 1.5 2006/03/20 00:15:00 halcy0n Exp $
+
+  20 Mar 2006; Mark Loeser <halcy0n@gentoo.org> yaggui-0.9.ebuild:
+  Add DEPEND on app-arch/unzip
 
   20 Jan 2006; Karol Wojtaszek <sekretarz@gentoo.org> yaggui-0.9.ebuild:
   There's no need to have virtual/x11 dep because it's forced by jdk

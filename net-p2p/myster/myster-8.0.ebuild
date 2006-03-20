@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/myster/myster-8.0.ebuild,v 1.5 2004/07/31 02:28:01 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/myster/myster-8.0.ebuild,v 1.6 2006/03/20 00:14:06 halcy0n Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-DEPEND=">=virtual/jdk-1.4"
+DEPEND=">=virtual/jdk-1.4
+	app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
