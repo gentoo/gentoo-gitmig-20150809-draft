@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.14.0.ebuild,v 1.1 2006/03/19 03:11:44 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.14.0.ebuild,v 1.2 2006/03/20 00:46:40 allanonjl Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -93,7 +93,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/gnome-applets-2.14.0
 	>=gnome-base/gnome-panel-2.14.0
 	>=gnome-base/gnome-menus-2.13.5
-	>=x11-themes/gnome-icon-theme-2.14.1
+	>=x11-themes/gnome-icon-theme-2.14.2
 	>=x11-themes/gnome-themes-2.14.0
 	>=gnome-extra/deskbar-applet-2.14.0.1
 
