@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66-r1.ebuild,v 1.10 2006/01/12 13:51:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66-r1.ebuild,v 1.11 2006/03/20 00:07:29 halcy0n Exp $
 
 inherit eutils games
 
@@ -61,6 +61,7 @@ RDEPEND="games-rpg/nwn-data
 		app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-compat
 		app-emulation/emul-linux-x86-xlibs )"
+DEPEND="app-arch/unzip"
 
 S="${WORKDIR}/nwn"
 
