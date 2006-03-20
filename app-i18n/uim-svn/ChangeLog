@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/uim-svn
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.19 2006/02/10 20:33:54 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.20 2006/03/20 14:52:50 hattya Exp $
+
+*uim-svn-20060320 (20 Mar 2006)
+
+  20 Mar 2006; Akinori Hattori <hattya@gentoo.org> +files/50uim-gentoo.el,
+  -uim-svn-20050505.ebuild, +uim-svn-20060320.ebuild:
+  switch to http://anonsvn.freedesktop.org/svn/uim/trunk and enable emacs
+  binding.
 
   10 Feb 2006; Alastair Tse <liquidx@gentoo.org> uim-svn-20050505.ebuild:
   modular-x-ified.
