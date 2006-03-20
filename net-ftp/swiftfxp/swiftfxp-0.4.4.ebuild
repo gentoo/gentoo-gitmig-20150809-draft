@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/swiftfxp/swiftfxp-0.4.4.ebuild,v 1.2 2006/03/03 18:13:44 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/swiftfxp/swiftfxp-0.4.4.ebuild,v 1.3 2006/03/20 00:12:19 halcy0n Exp $
 
 inherit eutils
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 
-DEPEND="=x11-libs/gtk+-1*"
+RDEPEND="=x11-libs/gtk+-1*"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}/SwiftFXP-${PV}
 

@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 41f0ac6c78338e20f30271917c3c8d29 ChangeLog 411
-RMD160 1de4c04f249e750d47170d8147453c0c3459b585 ChangeLog 411
-SHA256 c992d1e8ab1327d66e7be932fa7a3007874f9da8288f799e21d3871282d48684 ChangeLog 411
+MD5 ed93f3ae438ce8236fb1bcf17841b852 ChangeLog 517
+RMD160 249a7fc7e02272f22a6e7dc1ff42c8ca59dd6dbd ChangeLog 517
+SHA256 f786dc23a148607e4f4f9e621a77b4ec5df5c5a2ce549ea209f7f65a735c1c38 ChangeLog 517
 MD5 e27f8098d95ef36dd7bde34b75ce56b5 files/digest-swiftfxp-0.4.4 62
 RMD160 af857f358ef332e6a7d8319388229685a57ddb68 files/digest-swiftfxp-0.4.4 62
 SHA256 9998008618a88fbb3c9df8f2d4fdbbd553d01a4cc987ad9ecf95aa2cc2e8e642 files/digest-swiftfxp-0.4.4 62
 MD5 78ab80bde7035b5fdaebfa422280fde3 files/swiftfxp-0.4.4-build.patch 475
 RMD160 7a6efcbbdd76fa9095bc532c0b166618f498a815 files/swiftfxp-0.4.4-build.patch 475
 SHA256 973c0eae894d588abff15c7dbabdaff0bfbaf5f4faab334239dc3dc3e31f95a9 files/swiftfxp-0.4.4-build.patch 475
-MD5 77a3f62ae31396fe82df2db64902d022 swiftfxp-0.4.4.ebuild 689
-RMD160 3ec485c1f14790d856e28e0249e56cb10fb763a0 swiftfxp-0.4.4.ebuild 689
-SHA256 bdd38ec6241b28870662a34a3e94e9d90d5c9b00cadc5db8dd9dfec5df40c1bf swiftfxp-0.4.4.ebuild 689
+MD5 5adedd9ea7748649b8203ca1be9aa065 swiftfxp-0.4.4.ebuild 729
+RMD160 c1d8c72fe654fae34a85c42791aa28aff27c8a88 swiftfxp-0.4.4.ebuild 729
+SHA256 8b400c9c70e1ac81b64a6b6e6762eeaf009bdefccc0f791e71a78469a063920d swiftfxp-0.4.4.ebuild 729
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFECIdPMXMsRNMHhmARAqD9AKDv3vWaThtYm1a6dd2WYac3/HQh5wCdEmbq
-FAVr3wo34oVLjbVd93imxsI=
-=G/mw
+iD8DBQFEHfNuCRZPokWLroQRAqhzAJ9tpyCfLKOw+Wkd7G33j2UnJf48HgCeLj7A
+fHSlhDLjsirRDGGtbh9XXsM=
+=mV/Z
 -----END PGP SIGNATURE-----
