@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muine
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.29 2006/02/09 04:53:01 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.30 2006/03/20 00:35:50 metalgod Exp $
+
+  20 Mar 2006; Luis Medinas <metalgod@gentoo.org> muine-0.8.4.ebuild:
+  Added ~amd64 keyword. Closes bug #83756.
 
   09 Feb 2006; Peter Johanson <latexer@gentoo.org> muine-0.8.4.ebuild:
   Add monodoc and gnome-common missing deps.
