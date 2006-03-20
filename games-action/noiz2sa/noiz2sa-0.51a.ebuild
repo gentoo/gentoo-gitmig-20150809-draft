@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/noiz2sa-0.51a.ebuild,v 1.3 2005/06/17 08:40:56 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/noiz2sa-0.51a.ebuild,v 1.4 2006/03/20 20:12:10 wolf31o2 Exp $
 
 inherit games
 
@@ -45,4 +45,13 @@ src_install(){
 	touch "${D}${GAMES_STATEDIR}/${PN}.prf"
 	fperms 660 "${GAMES_STATEDIR}/${PN}.prf"
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	if ! built_with_use media-libs/sdl-mixer vorbis ; then
+		einfo "Noiz2a will not have sound if sdl-mixer"
+		einfo "is built with USE=-vorbis"
+		einfo "Please emerge sdl-mixer with USE=vorbis"
+		einfo "if you want vorbis sound support"
+	fi
 }
