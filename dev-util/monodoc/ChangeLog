@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.46 2006/03/16 08:12:20 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.47 2006/03/20 00:29:57 metalgod Exp $
+
+  20 Mar 2006; Luis Medinas <metalgod@gentoo.org> monodoc-1.1.13.ebuild:
+  Stable on amd64. Bug #126119.
 
   16 Mar 2006; Peter Johanson <latexer@gentoo.org> monodoc-1.1.9.ebuild,
   monodoc-1.1.10.ebuild, monodoc-1.1.13.ebuild:
