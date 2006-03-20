@@ -1,0 +1,38 @@
+--- directfb_mode.c	2006-03-20 08:38:39.000000000 +0100
++++ directfb_mode.c.new	2006-03-20 08:37:57.000000000 +0100
+@@ -216,7 +216,9 @@
+ 	 * so we are not being nice to it any more!
+ 	 *
+ 	 * DIE, you BASTARD, DIE!
+-	 * And do it the HARD WAY!
++	 *
++	 * Seriously, this way DirectFB takes care of deallocating
++	 * all stuff, and is much quicker at the job than us...
+ 	 */
+ 
+ /*   /\* destroy all labels *\/ */
+@@ -262,17 +264,19 @@
+ /*   if (font_normal)  font_normal->Release  (font_normal); */
+ /*   if (font_large)   font_large->Release   (font_large); */
+ 
+-/* 	/\* core DirectFB stuff *\/ */
+-/*   if (primary) primary->Release (primary); */
+-/*   if (events)  events->Release  (events); */
+-/*   if (layer)   layer->Release   (layer); */
++	/* core DirectFB stuff */
++  if (primary) primary->Release (primary);
++  if (events)  events->Release  (events);
++  if (layer)   layer->Release   (layer);
++
+ /*   while (devices) */
+ /* 	{ */
+ /* 		DeviceInfo *next = devices->next; */
+ /* 		free (devices); */
+ /* 		devices = next; */
+ /* 	} */
+-/* 	if (dfb) dfb->Release (dfb); */
++
++	if (dfb) dfb->Release (dfb);
+ }
+ 
+ void DirectFB_Error()

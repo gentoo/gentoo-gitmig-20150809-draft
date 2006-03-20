@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.27 2006/03/16 09:57:30 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.28 2006/03/20 07:54:01 s4t4n Exp $
+
+*qingy-0.7.3-r1 (20 Mar 2006)
+
+  20 March 2006; Michele Noberasco <s4t4n@gentoo.org> qingy-0.7.3-r1.ebuild:
+  Revision bump, with patch to fix DirecTFB mode shutdown. Closes bug #123656.
+  Original patch submitted by Masse Nicolas...
+  qingy-0.7.3.ebuild:
+  Removed previous revision.
 
 *qingy-0.7.3 (16 Mar 2006)
 
