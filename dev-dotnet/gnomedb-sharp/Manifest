@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7388eec18b77c325a86e996de6d22790 ChangeLog 3245
+MD5 361c3809f5e8e430b11441e9a4bfba92 ChangeLog 3348
+RMD160 5c5e26b1a8030fe5c233275d1ab75be99ab36bf8 ChangeLog 3348
+SHA256 1d1c87c8539f1828fa64742d2af0dd8415d8c416cfa3131d592ceeab8327fc0b ChangeLog 3348
 MD5 302dbc192d1c69a0ba956625d73ef2c2 files/digest-gnomedb-sharp-1.0.10 149
+RMD160 07caac8c2b19da609c7cf0bb3cfaf3c39c657658 files/digest-gnomedb-sharp-1.0.10 149
+SHA256 d65dc9b73014342c6ce1f52aaf0fb3aa9c3e027dd1446668ee70aa02f27f1598 files/digest-gnomedb-sharp-1.0.10 149
 MD5 fef3bd202b3f48969673897302f3be4c files/digest-gnomedb-sharp-1.0.8 147
+RMD160 ad6a555d414b6e24fb0c773e041ea80b5d77745e files/digest-gnomedb-sharp-1.0.8 147
+SHA256 922e1af27e66a616da6fa06cfb111ae70e588304abd1bb6d1338804022c2ed5f files/digest-gnomedb-sharp-1.0.8 147
 MD5 fef3bd202b3f48969673897302f3be4c files/digest-gnomedb-sharp-1.0.8-r1 147
-MD5 7839981c4dbdf8f3ee6e24c1a6133b53 gnomedb-sharp-1.0.10.ebuild 534
+RMD160 ad6a555d414b6e24fb0c773e041ea80b5d77745e files/digest-gnomedb-sharp-1.0.8-r1 147
+SHA256 922e1af27e66a616da6fa06cfb111ae70e588304abd1bb6d1338804022c2ed5f files/digest-gnomedb-sharp-1.0.8-r1 147
+MD5 1a2ca45dfdf4ed31ed30074d2e81ae10 gnomedb-sharp-1.0.10.ebuild 535
+RMD160 36acfc6e04223542fdceba8bc73d07dd6ed5c85c gnomedb-sharp-1.0.10.ebuild 535
+SHA256 6d05400a3fdf1939729d47b0387823df3bb6dd45931f5188e5bca55bca0d9143 gnomedb-sharp-1.0.10.ebuild 535
 MD5 faae62959d74227edfe833f2b4821dde gnomedb-sharp-1.0.8-r1.ebuild 531
+RMD160 5078e6f890e24f0882c4a6dce4f9946493af02a8 gnomedb-sharp-1.0.8-r1.ebuild 531
+SHA256 85f39642ee7ad2c952b9ab486e2021ad0c203d762867d31f6bc17ee3909c0ca9 gnomedb-sharp-1.0.8-r1.ebuild 531
 MD5 9d1c7952b89128c9a133f5eea0cb70ab gnomedb-sharp-1.0.8.ebuild 533
+RMD160 4d8870b5b9ed81e462be2c3b799482ff4eaafdc2 gnomedb-sharp-1.0.8.ebuild 533
+SHA256 4baef3f415d4d2b0181c3a1f914e6cc2d40fd8c4c2c5f6bc60d908391f801272 gnomedb-sharp-1.0.8.ebuild 533
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDUZ4XcsIHjyDViGQRAq4jAJ9cwyHTHN9AVVnB9YHI7eRw1wAFyQCfa8Bf
-7q+NSBBbqHFZmYgjYN9d6nE=
-=Bu7n
------END PGP SIGNATURE-----
+RMD160 aafa4baf96cfa37bca8b5af9961b253e8d54deeb metadata.xml 222
+SHA256 2291d7f74fb8845472f5527edd49d2004d0626025dfc6622cbe6a8fe22dc846d metadata.xml 222

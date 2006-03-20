@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 23f3816a5b7336876cbe317d4862b5fd ChangeLog 3308
+MD5 7b40d6a3dcf452cad11ce21a76ea7031 ChangeLog 3405
+RMD160 8d042012a84e6acbe6c95d107ff7de6b56c2cc25 ChangeLog 3405
+SHA256 87161a04717712c8851aabc4985adbce1eb4dad0edbea765c034221a4f54e0b1 ChangeLog 3405
 MD5 302dbc192d1c69a0ba956625d73ef2c2 files/digest-gda-sharp-1.0.10 149
+RMD160 07caac8c2b19da609c7cf0bb3cfaf3c39c657658 files/digest-gda-sharp-1.0.10 149
+SHA256 d65dc9b73014342c6ce1f52aaf0fb3aa9c3e027dd1446668ee70aa02f27f1598 files/digest-gda-sharp-1.0.10 149
 MD5 fef3bd202b3f48969673897302f3be4c files/digest-gda-sharp-1.0.8 147
+RMD160 ad6a555d414b6e24fb0c773e041ea80b5d77745e files/digest-gda-sharp-1.0.8 147
+SHA256 922e1af27e66a616da6fa06cfb111ae70e588304abd1bb6d1338804022c2ed5f files/digest-gda-sharp-1.0.8 147
 MD5 fef3bd202b3f48969673897302f3be4c files/digest-gda-sharp-1.0.8-r1 147
-MD5 ca57707ce64abbec7484cb07c3c49ad5 gda-sharp-1.0.10.ebuild 379
+RMD160 ad6a555d414b6e24fb0c773e041ea80b5d77745e files/digest-gda-sharp-1.0.8-r1 147
+SHA256 922e1af27e66a616da6fa06cfb111ae70e588304abd1bb6d1338804022c2ed5f files/digest-gda-sharp-1.0.8-r1 147
+MD5 f21da9004fcc4084de959fe54ed29127 gda-sharp-1.0.10.ebuild 380
+RMD160 565ac9338823c5fd9a721cb57b007c797c969a1f gda-sharp-1.0.10.ebuild 380
+SHA256 153af9300cdd4cae66d6a53f91fc3796aa827eb85c7b88337d4999732df411f9 gda-sharp-1.0.10.ebuild 380
 MD5 869b430759ccd1781e5ad0945f169ce9 gda-sharp-1.0.8-r1.ebuild 375
+RMD160 75e07b203f71c18f18629b20ac0adb6870647378 gda-sharp-1.0.8-r1.ebuild 375
+SHA256 726b27701f648faea96780e4d84d3c1ae3e1b785b8325bbdd34cfbab8d7f69f6 gda-sharp-1.0.8-r1.ebuild 375
 MD5 4d898b4832144dd2a3ec4ba7818c107d gda-sharp-1.0.8.ebuild 377
+RMD160 ba8d33767d20ec823441f8a4cee3076b1b3f0b52 gda-sharp-1.0.8.ebuild 377
+SHA256 555bc07a5e1291ed23f4d1de298b8a14e6ae2d1072b681fbe77d862a5df17a4c gda-sharp-1.0.8.ebuild 377
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDUZ2LcsIHjyDViGQRAgngAKC/L/cmcOsAVVfV7OSrZfKqkxJm+wCfWgtf
-GNknZcvf2k4/7hy86Iy7YAA=
-=7OUE
------END PGP SIGNATURE-----
+RMD160 aafa4baf96cfa37bca8b5af9961b253e8d54deeb metadata.xml 222
+SHA256 2291d7f74fb8845472f5527edd49d2004d0626025dfc6622cbe6a8fe22dc846d metadata.xml 222
