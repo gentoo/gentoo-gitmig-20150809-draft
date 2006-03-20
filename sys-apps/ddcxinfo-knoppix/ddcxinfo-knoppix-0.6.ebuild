@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ddcxinfo-knoppix/ddcxinfo-knoppix-0.6.ebuild,v 1.6 2005/03/16 21:07:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ddcxinfo-knoppix/ddcxinfo-knoppix-0.6.ebuild,v 1.7 2006/03/20 18:42:28 wolf31o2 Exp $
 
 IUSE=""
 
@@ -23,6 +23,6 @@ src_compile() {
 src_install() {
 	exeinto /usr/sbin
 	doexe ddcxinfo-knoppix ddcprobe
-	dodoc debian/changelog debian/control debian/copyright README COPYING
+	dodoc debian/changelog debian/control debian/copyright README
 	doman debian/ddcxinfo-knoppix.1
 }
