@@ -1,14 +1,52 @@
-MD5 d9c940bd5c4e8e1ada05276ee3235976 ChangeLog 2652
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2780345f60ae3bbdbdc855dd6cb5c30d ChangeLog 2765
+RMD160 8ad35e9fcbf922a711b00a8b8c42bb725b32f961 ChangeLog 2765
+SHA256 6f6f155fc7ce291b5d9e6c1f39a86823cdfa7c40b9fb6a4f651762d3ccb9ed2c ChangeLog 2765
 MD5 fdea17e0aacddb03bad55d1385dae4a3 files/digest-libnss-mysql-1.0 68
+RMD160 c255d32b50d09592cc1e8497de5e0eb5de213445 files/digest-libnss-mysql-1.0 68
+SHA256 2428b37eff291040a05b66c34e1e91081f0785ba1b07092c722c979c9eed5474 files/digest-libnss-mysql-1.0 68
 MD5 708a038dd77acc75434ef08150671791 files/digest-libnss-mysql-1.1 68
+RMD160 581953fa80f3b1e958b03fa15d61c84d1057a210 files/digest-libnss-mysql-1.1 68
+SHA256 5133ed0aeeb7fd5e0f50e59457407453a8865173f28ee5e9adfab1d89c75b74f files/digest-libnss-mysql-1.1 68
 MD5 95f8660c6a5455dab538afb3289a5ab2 files/digest-libnss-mysql-1.2 68
+RMD160 6595e1a28c3112a716c937ab894c496fb05f0067 files/digest-libnss-mysql-1.2 68
+SHA256 246c7aa2c0590a40a3dad3296329f44e2a0d96c252badd090dc6e34e10e9262e files/digest-libnss-mysql-1.2 68
 MD5 2726a7b1db76aa70e51af7b1e17420a8 files/digest-libnss-mysql-1.3 68
+RMD160 405febe4019326f73e3087906ae50f4f422935dc files/digest-libnss-mysql-1.3 68
+SHA256 fdef7497ebf8cd99c6961ee46a06db56c871b8d3ee4c67fc8b300baf367d4b30 files/digest-libnss-mysql-1.3 68
 MD5 e1e9aee07e37433732e04a46ac3b84d0 files/digest-libnss-mysql-1.4 68
+RMD160 14e5b17ec60bb9a2fe128d1c14bbeaee6825bbd8 files/digest-libnss-mysql-1.4 68
+SHA256 5a648cc51104656a343d0434b1c24655e609dcc542fb86ea639ccabd8c41a6ea files/digest-libnss-mysql-1.4 68
 MD5 fe1c1e8affa2d8b8cf6fd201c7d56938 files/digest-libnss-mysql-1.5 68
+RMD160 34429b0cbcf9b33c3763e82dd20cd7b21c08613f files/digest-libnss-mysql-1.5 68
+SHA256 40d059614dae4c7928486378be143ab768e1af7ed931126ba8bd077a79b4cc0a files/digest-libnss-mysql-1.5 68
 MD5 bdb32d9f4fed9cfd1c7a587f262aa722 libnss-mysql-1.0.ebuild 760
+RMD160 eccfc08f4bd5ef1fea0de659d6aa6faf514200bf libnss-mysql-1.0.ebuild 760
+SHA256 417566641e70b68819f3b19331fecb98f18f46f855046fca5bbaf21ec8d430fe libnss-mysql-1.0.ebuild 760
 MD5 0846ddbde54ee3e4c289a28aee2f1efe libnss-mysql-1.1.ebuild 760
+RMD160 6b9f7243b4f725609d8feff303316590cd3fe9ed libnss-mysql-1.1.ebuild 760
+SHA256 e92c4b61ea2fe215906896ca3f453ff5cbb4c8a8d8fb756d4ea5021f530769a5 libnss-mysql-1.1.ebuild 760
 MD5 e903a35bff96bf7ea72f95ac88e55651 libnss-mysql-1.2.ebuild 764
+RMD160 7a302b9c7b719cf290b8d03e8b38684e43bdaf28 libnss-mysql-1.2.ebuild 764
+SHA256 bb2d78d4c7c2c32927bb929226c4f20b9f33b8c4a2e3265dec01b63a863dc36f libnss-mysql-1.2.ebuild 764
 MD5 21f53eecbb13ae199360a42109858bf6 libnss-mysql-1.3.ebuild 962
+RMD160 aa34570518d71bc367b7d25a711438339ce425fe libnss-mysql-1.3.ebuild 962
+SHA256 78c6190e6db766886b885f51e47507c30489289264dad9c8c2e41c2a4aa3a64f libnss-mysql-1.3.ebuild 962
 MD5 35918e88b4c842f3e87824b94b9a3e1e libnss-mysql-1.4.ebuild 965
-MD5 93b1090a1be62db8485f5c2a3900776d libnss-mysql-1.5.ebuild 976
+RMD160 5d1e94155b1fb1187e24d620bd6b9bb381243328 libnss-mysql-1.4.ebuild 965
+SHA256 0684af8fb1321121510a16b53de3c34e39055dea84166f5fde72368e482164d1 libnss-mysql-1.4.ebuild 965
+MD5 1acbf7e5b2056ed904ae80807a058aef libnss-mysql-1.5.ebuild 1006
+RMD160 bee62ffa372080edb7e533e99513a8f54b864fb7 libnss-mysql-1.5.ebuild 1006
+SHA256 6acd0aa7ea4e5853b958a32cc22e4fa14bcab8f34dc994f1b24aa8f7c10eb077 libnss-mysql-1.5.ebuild 1006
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEH0Czr2QksT29OyARAscTAJ9dZbsUdzdH0l7YbFLNtKAxnoV4XgCfdx1q
+sOx2BWh5ciLBeiY5JLYF9dM=
+=0Z4q
+-----END PGP SIGNATURE-----
