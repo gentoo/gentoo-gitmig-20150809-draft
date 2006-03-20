@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20051119.ebuild,v 1.1 2005/12/06 13:07:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20051119.ebuild,v 1.2 2006/03/20 22:07:29 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -100,7 +100,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dogamesbin alephone.sh || die "failed to install wrapper"
-	dodoc AUTHORS README COPYING docs/Cheat_Codes
+	dodoc AUTHORS README docs/Cheat_Codes
 	dohtml docs/MML.html
 	doicon alephone.png
 	prepgamesdirs
