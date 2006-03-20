@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.15-r4.ebuild,v 1.7 2006/01/25 09:29:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.9.0.ebuild,v 1.1 2006/03/20 18:01:33 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -36,8 +36,8 @@ IUSE="3dfx bitmap-fonts cjk debug doc font-server insecure-drivers ipv6 minimal
 	nls nocxx opengl pam sdk static truetype-fonts type1-fonts uclibc xprint xv"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
-FILES_VER="0.1.1"
-PATCH_VER="0.1.6"
+FILES_VER="0.1"
+PATCH_VER="0.1.1"
 XCUR_VER="0.3.1"
 XFSFT_ENC_VER="0.1"
 
@@ -60,17 +60,7 @@ SRC_URI="!minimal? ( mirror://gentoo/eurofonts-X11.tar.bz2 )
 	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
 	${GENTOO_FILES}
 	${X_PATCHES}
-	http://xorg.freedesktop.org/snapshots/${P}.tar.bz2"
-#	http://xorg.freedesktop.org/X11R${PV}/src-single/X11R${PV}-src.tar.bz2"
-#	http://xorg.freedesktop.org/X11R${PV}/src/X11R${PV}-src1.tar.gz
-#	http://xorg.freedesktop.org/X11R${PV}/src//X11R${PV}-src2.tar.gz
-#	http://xorg.freedesktop.org/X11R${PV}/src//X11R${PV}-src3.tar.gz
-#	http://xorg.freedesktop.org/X11R${PV}/src//X11R${PV}-src4.tar.gz
-#	http://xorg.freedesktop.org/X11R${PV}/src//X11R${PV}-src5.tar.gz
-#	doc? (
-#		http://xorg.freedesktop.org/X11R${PV}/src//X11R${PV}-src6.tar.gz
-#		http://xorg.freedesktop.org/X11R${PV}/src//X11R${PV}-src7.tar.gz
-#	)"
+	http://xorg.freedesktop.org/releases/X11R${PV}/src-single/X11R${PV}-src.tar.bz2"
 
 LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 	bigelow-holmes-urw-gmbh-luxi christopher-g-demetriou national-semiconductor
@@ -443,16 +433,8 @@ setup_multilib() {
 unpack_all() {
 	# Unpack source and patches
 	ebegin "Unpacking ${PV} source"
-		unpack ${P}.tar.bz2 > /dev/null
-#		unpack X11R${PV}-src.tar.bz2 > /dev/null
-#		unpack X11R${PV}-src{1,2,3,4,5}.tar.gz > /dev/null
+		unpack X11R${PV}-src.tar.bz2 > /dev/null
 	eend 0
-
-#	if use doc; then
-#		ebegin "Unpacking documentation"
-#			unpack X11R${PV}-src{6,7}.tar.gz > /dev/null
-#		eend 0
-#	fi
 
 	ebegin "Unpacking Gentoo files and patches"
 		unpack ${P}-files-${FILES_VER}.tar.bz2 > /dev/null
