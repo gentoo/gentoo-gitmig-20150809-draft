@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>mr_bones@gentoo.org</email>
+  <email>mr_bones_@gentoo.org</email>
 </maintainer>
 <longdescription>A program that monitors hosts for changes with detailed logs ofthe changes.</longdescription>
 </pkgmetadata>
