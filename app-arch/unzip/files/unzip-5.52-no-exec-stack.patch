@@ -9,5 +9,5 @@ stack marking in the final shared library.  That's bad, mmmkay.
  #endif /* !USE_ZLIB */
 +
 +#ifdef __ELF__
-+.section .note.GNU-stack,"",@progbits
++.section .note.GNU-stack,"",%progbits
 +#endif
