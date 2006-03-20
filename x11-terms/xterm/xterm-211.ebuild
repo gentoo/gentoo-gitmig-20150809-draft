@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-208.ebuild,v 1.2 2006/02/10 14:50:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-211.ebuild,v 1.1 2006/03/20 03:54:21 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -97,11 +97,4 @@ src_install() {
 	echo "*allowWindowOps: 	false" >> ${D}/${DEFAULTS_DIR}/XTerm
 	echo "*allowWindowOps: 	false" >> ${D}/${DEFAULTS_DIR}/UXTerm
 
-}
-
-pkg_preinst() {
-	# Prevent the terminfo files from being removed.  These collide with ncurses
-	# provided terminfo files.  So, now no more package collisions, yay!
-	touch ${ROOT}/usr/share/terminfo/v/vs100
-	touch ${ROOT}/usr/share/terminfo/x/x*
 }
