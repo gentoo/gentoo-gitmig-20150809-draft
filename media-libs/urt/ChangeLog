@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/urt
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.23 2005/12/11 23:12:33 spyderous Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.24 2006/03/20 02:39:43 vapier Exp $
+
+  20 Mar 2006; Mike Frysinger <vapier@gentoo.org>
+  files/urt-3.1b-build-fixes.patch:
+  Patch by Diego Pettenò to respect user LDFLAGS #126872.
 
   11 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; urt-3.1b-r1.ebuild:
   Add modular X dependencies.
