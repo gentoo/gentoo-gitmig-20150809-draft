@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.32 2006/03/03 01:46:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.33 2006/03/20 00:09:56 metalgod Exp $
 
 # UNKNOWN - SECTION
 
@@ -45,12 +45,6 @@ asm
 # dev-util/xdelta doesn't work as expected by this use flag, it can only use
 # xdelta-files made on a 64bit system
 kdexdeltas
-
-# 2005/01/12 - Benjamin Schindler <config@gentoo.org>
-# Optional mono support will never work until we have a stable mono compiler
-# Update: 2005/05/15 - Tom Martin <slarti@gentoo.org>
-# Will work with mono 1.1.6, waiting on that to be stabilised.
-mono
 
 # WON'T BUILD - SECTION
 
