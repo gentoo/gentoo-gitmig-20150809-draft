@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 049852e867db67861e8e8c5c98b37f5c ChangeLog 5286
+MD5 bdd92fbfaeec4b535e8c7e840b253273 ChangeLog 5370
+RMD160 f0ef8d5524f1b160aacb9acf82c8bd81bf5438ac ChangeLog 5370
+SHA256 b2909f72f241e7ecb405fa2233a8d5fe371cbdc56522044d57d085a6abc69fe7 ChangeLog 5370
 MD5 215fe0afc74ecf02f4614b6be1122753 files/digest-mime-types-2 63
+RMD160 cf1ded9d56163bffe24332563c27d7821bac70ad files/digest-mime-types-2 63
+SHA256 745c9e5f09ed376331f4e3c30f67928c0d778d409624f78bef41690912c7cf52 files/digest-mime-types-2 63
 MD5 c92d6d001f3ea5c1deb593b177666734 files/digest-mime-types-3 63
+RMD160 7a1b363ac4f012a7ed26073f62b0c0c501e8c72c files/digest-mime-types-3 63
+SHA256 6ba381ee02a30037f5dee7a4e2643a00c1d2f2492d9ac4776ccc328c43caa927 files/digest-mime-types-3 63
 MD5 ca194125240fb65d630d91f76e4f4446 files/digest-mime-types-4 63
+RMD160 fdbedea05253fc10104c506c6daa45b87798d071 files/digest-mime-types-4 63
+SHA256 ea004bb2b0caee2f29e86dd8df564a1ed012da449467ea6f627caf29fe9ec913 files/digest-mime-types-4 63
 MD5 b1645a493e6eec028124afac650eb716 files/digest-mime-types-5 63
+RMD160 6bab4238c08762e2b2c6ecdbecd947cef7fb0de3 files/digest-mime-types-5 63
+SHA256 2d7136eaca789ca07d1469742967dd6969226e61c9d7f8a045d01385672fa06f files/digest-mime-types-5 63
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
+SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
 MD5 54b8a32cac8aba97eeeaea38e30c1682 mime-types-2.ebuild 531
+RMD160 049752c86771d92679e06edc3c6c6812e3973917 mime-types-2.ebuild 531
+SHA256 453f9a5015687973c501e032d33ecaf3599470bf77510eed2e067d7351d0811f mime-types-2.ebuild 531
 MD5 001f93febced05398ea71b4d17601ee2 mime-types-3.ebuild 540
+RMD160 fe6796953a86d2439d86b8a557b4ab522e24ce71 mime-types-3.ebuild 540
+SHA256 acc34d3c46ac31d5d0728b572eee0c96b355e4ad0c3a1f840561e2fe98e05806 mime-types-3.ebuild 540
 MD5 08400d10cb3831e8ba9a2799435662ef mime-types-4.ebuild 536
-MD5 b83be0e9d6867a6f7b644540865287d0 mime-types-5.ebuild 540
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHbmBViELBEf1JB0RAuleAJ9gV3Im/kL8AI+dXDvd6vbsdiZ8cwCfTGu4
-YHAUug3+pyCAyBJ6GNZODmA=
-=3p82
------END PGP SIGNATURE-----
+RMD160 0725b4cd58767c07c8335d713f36a87f86249fe4 mime-types-4.ebuild 536
+SHA256 c2b833d8b4ee9e8176f1cf0defb7157144fc47320fb840225d4b923ca5d98b7c mime-types-4.ebuild 536
+MD5 b5fb990c074908f50e406c518dd7b685 mime-types-5.ebuild 539
+RMD160 74f6dff9b862cf6725d38cce50938fab84801d8b mime-types-5.ebuild 539
+SHA256 57fd00bb068bfbfb6639fb53c674369fc8205f8f195b626d41efb8206230638d mime-types-5.ebuild 539
