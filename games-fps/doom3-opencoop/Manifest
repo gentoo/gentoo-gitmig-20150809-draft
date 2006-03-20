@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eb864e1e9e3ceecd32523444811b81ad ChangeLog 351
-MD5 d4ec2ea8c1bce0958ac2883f569bac5d doom3-opencoop-1.0.ebuild 739
+MD5 eb0573583c1168e2d50a754d9420cc5b ChangeLog 459
+RMD160 bb966168a6fb9f3e2ef9110239ed6f3425032a93 ChangeLog 459
+SHA256 e5e90bb5f7e1da75c556aee05e8e327a58b946cccd9ecf932987c9c671af637c ChangeLog 459
+MD5 79e16ac8e9c5ecb97ae6e5edc9b1c2f5 doom3-opencoop-1.0.ebuild 779
+RMD160 1d92b497ef8a890783581b53413cea45d1eba252 doom3-opencoop-1.0.ebuild 779
+SHA256 c893237e5b0794ca36d50b1a7c1ecffba9b089a2153ba45c6aaa77bff79c6f25 doom3-opencoop-1.0.ebuild 779
 MD5 474d86f11aefb9a7e812cdcf4c6aea85 files/digest-doom3-opencoop-1.0 63
+RMD160 7db2e55c9f8d8cb9e44cbc2172e15c4ed917968e files/digest-doom3-opencoop-1.0 63
+SHA256 1708b20a21716cda7c19d8a514462e9424e9e82c6812bc1f2e1146b262206e0f files/digest-doom3-opencoop-1.0 63
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDgrcogIKl8Uu19MoRAuCmAJ0aXK9++4Q1gGWPEidlDYexf7VNHACfeann
-ecR+7W59hM5ZqjcFNs+HlDQ=
-=io2E
------END PGP SIGNATURE-----
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158

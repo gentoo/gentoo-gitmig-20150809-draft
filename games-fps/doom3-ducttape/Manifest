@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9483aec2d8a3193b6ec28cc4f8bd6de1 ChangeLog 575
-MD5 1a817bd104ed0dd6306e51ddf4702016 doom3-ducttape-0006.ebuild 747
+MD5 898b54ef68a57e7ebccb8c340af655c6 ChangeLog 682
+RMD160 3f21fd7021d178ee6178add51a10e70697ae0b92 ChangeLog 682
+SHA256 da23ce833a5c91249de1e13fda4890992a97be3c4ac28498238be284d0b3edf6 ChangeLog 682
+MD5 ce6b532e9880a4c8be342aa1d5ad58c6 doom3-ducttape-0006.ebuild 787
+RMD160 39a4151b0493449d6880c1d82a999aaa82cde8ef doom3-ducttape-0006.ebuild 787
+SHA256 53b2ecc95e7e159f1e257faf3b69986d68fa79c85a3a4c04e6ea195443b3ca66 doom3-ducttape-0006.ebuild 787
 MD5 8eece47e913a31cff1e158cb4c9db32b files/digest-doom3-ducttape-0006 60
+RMD160 6191f36c673b99b78ccfb8b40c34e2cf2ea58ecc files/digest-doom3-ducttape-0006 60
+SHA256 c54ed5b00c3bd5b0dc0d8bceba64a38f94364b54160c9481a4c1fb9349136fe7 files/digest-doom3-ducttape-0006 60
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDgrYegIKl8Uu19MoRAs2mAJ9BVwSx6q2/jQWPm7O4FsWEF8PoKACfZfOk
-q0bbWij7VwJguqnIhEjZLIg=
-=0E5k
------END PGP SIGNATURE-----
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
