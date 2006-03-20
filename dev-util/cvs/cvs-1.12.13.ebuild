@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.13.ebuild,v 1.2 2006/03/01 19:50:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.13.ebuild,v 1.3 2006/03/20 17:54:42 pylon Exp $
 
 inherit eutils pam
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
-IUSE="crypt doc emacs kerberos pam"
+IUSE="crypt doc emacs kerberos nls pam server"
 
 DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.4
@@ -34,9 +34,11 @@ src_compile() {
 	econf \
 		--with-external-zlib \
 		--with-tmpdir=/tmp \
-		--disable-nls \
-		`use_enable crypt encryption` \
-		`use_enable pam` \
+		$(use_enable crypt encryption) \
+		$(use_with kerberos gssapi) \
+		$(use_enable nls) \
+		$(use_enable pam) \
+		$(use_enable server) \
 		|| die
 	emake || die "emake failed"
 }
