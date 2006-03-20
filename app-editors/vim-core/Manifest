@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d2d5b9cf795e9cc219eb87b6350e82b2 ChangeLog 28179
 RMD160 f7c82a6b0d4621e149540cfaf915a2b5d87dfb20 ChangeLog 28179
 SHA256 477ff8c4ccde57a767830aa4896a07137d95afcfca1a24a470145664c03b2fe4 ChangeLog 28179
@@ -13,6 +10,9 @@ SHA256 9db7914ba780c7188fbfe1014a56668905f1d2035191d41eb46b36da1bb2c257 files/di
 MD5 bd8265bd1db1b6618587ab372b0cca0f files/digest-vim-core-7.0_alpha20060306 578
 RMD160 536ea8f1d20897c7c0cdb8cc25c2f72b00dc67ea files/digest-vim-core-7.0_alpha20060306 578
 SHA256 b9623daa69077c32c976265133f9d5018dece36cacdcf1fa4cc7c680222061ca files/digest-vim-core-7.0_alpha20060306 578
+MD5 a6607e3b9101790ba7897afda2e6694e files/digest-vim-core-7.0_alpha20060320 578
+RMD160 c2d589e63db420d5b6b53f426dc6f9f8380e1edc files/digest-vim-core-7.0_alpha20060320 578
+SHA256 6e1479bce894d65f9a15d5141d9605e0660f67416951142272da7ccf84528f5d files/digest-vim-core-7.0_alpha20060320 578
 MD5 c2d0302eae7fc80b2a1cb38ddab9d3d3 files/rphillips-invalcolorpatch.diff 722
 RMD160 3051c7877483b00ff6bb43c9136bbb4b784c5f3d files/rphillips-invalcolorpatch.diff 722
 SHA256 6678f6dd8b84d9b2c2454b346eb1febb17548f3e17b9f33ca6fc877a250660a1 files/rphillips-invalcolorpatch.diff 722
@@ -40,10 +40,6 @@ SHA256 716ae195220142d15e969dcfeb67171c2dde9d374fa9fae542b7bf1afaa7e346 vim-core
 MD5 0ab66a38940477d1f7add0898160ce58 vim-core-7.0_alpha20060306.ebuild 766
 RMD160 6c820c573285ee4d144b3c9251f5f2ee8586bf8f vim-core-7.0_alpha20060306.ebuild 766
 SHA256 e28a72f2201a53369a05522dbb4869264fb469b89fc2f2b45db5aff05ac222c3 vim-core-7.0_alpha20060306.ebuild 766
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEC5L1LLFUmVNQ7rkRAjh4AKCiadN45CjNzUCEccBf2Pqcp5rPwQCfRd5R
-5sqOy4TSHwra+8vS73tnvCY=
-=a2gc
------END PGP SIGNATURE-----
+MD5 0ab66a38940477d1f7add0898160ce58 vim-core-7.0_alpha20060320.ebuild 766
+RMD160 6c820c573285ee4d144b3c9251f5f2ee8586bf8f vim-core-7.0_alpha20060320.ebuild 766
+SHA256 e28a72f2201a53369a05522dbb4869264fb469b89fc2f2b45db5aff05ac222c3 vim-core-7.0_alpha20060320.ebuild 766
