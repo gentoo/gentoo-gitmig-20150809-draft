@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/dvdshrink
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/ChangeLog,v 1.1 2006/03/20 01:56:11 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/ChangeLog,v 1.2 2006/03/20 08:36:57 antarus Exp $
+
+  20 Mar 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-dvdshrink-2.6.1, +Manifest:
+  Fixing digest, thanks to Swegener for reporting.
 
 *dvdshrink-2.6.1 (19 Mar 2006)
 
