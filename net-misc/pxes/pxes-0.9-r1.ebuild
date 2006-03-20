@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.9-r1.ebuild,v 1.4 2005/11/28 13:13:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.9-r1.ebuild,v 1.5 2006/03/20 21:12:27 wolf31o2 Exp $
 
 inherit eutils perl-app
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://pxes.sourceforge.net"
 SRC_URI="mirror://sourceforge/pxes/${PN}-base-i586-${MY_PV}.tar.gz
 	mirror://sourceforge/pxes/pxesconfig-${MY_PV}.tar.gz"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 
 SLOT="0"
 LICENSE="GPL-2"
