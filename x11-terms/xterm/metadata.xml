@@ -3,7 +3,14 @@
 <pkgmetadata>
 <herd>X11</herd>
 <maintainer>
-  <email>seemant@gentoo.org</email>
+	<email>exg@gentoo.org</email>
+	<name>Emanuele Giaquinta</name>
+	<description>Primary maintainer</description>
+</maintainer>
+<maintainer>
+  	<email>seemant@gentoo.org</email>
+	<name>Seemant Kulleen</name>
+	<description>Backup maintainer</description>
 </maintainer>
 <longdescription>Default terminal for X-windows servers.</longdescription>
 </pkgmetadata>
