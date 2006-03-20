@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.16.ebuild,v 1.10 2005/11/24 19:56:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.16.ebuild,v 1.11 2006/03/20 22:10:35 chtekk Exp $
 
-inherit eutils
+inherit eutils depend.php
 
 RESTRICT="test"
 
@@ -23,7 +23,7 @@ RDEPEND="app-arch/bzip2
 		mysql? ( >=dev-db/mysql-4.0.0 )
 		ssl? ( >=dev-libs/openssl-0.9.7 )
 		php? (
-			>=dev-php/php-cgi-4.3.0
+			virtual/httpd-php
 			!net-www/spawn-fcgi
 		)"
 
@@ -33,6 +33,8 @@ LOG_DIR="/var/log/lighttpd/"
 pkg_setup() {
 	enewgroup lighttpd
 	enewuser lighttpd -1 -1 "${LIGHTTPD_DIR}" lighttpd
+
+	use php && require_php_with_use cgi
 }
 
 src_unpack() {

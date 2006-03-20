@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3505001acf1f6394dbde9b986351ad90 ChangeLog 19026
-RMD160 f8bf6b1b833b4d4651972da18760368da6339ce9 ChangeLog 19026
-SHA256 d8b2a36163a2c53d52d9d3ea21b3aad906adb43eab82a629fbd0b8055891a5a9 ChangeLog 19026
+MD5 0908b78093f4b2cf549f08de6197dd6b ChangeLog 19139
+RMD160 65dde0014e0feb5d173c712961953994be7abc62 ChangeLog 19139
+SHA256 3f2a36cc3f6cd1828b5fb3f96fc02e875cd10047df1cce0bea72bab2c9679044 ChangeLog 19139
 MD5 24669453e8f69faf4212dfa43e90e3dd files/1.4.10/01_all_r990_mod_cgi_dont_reset_physical_path.diff 517
 RMD160 b0e9a693102fb2ea4e6cf750cd4559f9c25a7834 files/1.4.10/01_all_r990_mod_cgi_dont_reset_physical_path.diff 517
 SHA256 9f3d49f04b3b8423b06f0ddf35cce855c2187d3f0a84f22479aa5df871901144 files/1.4.10/01_all_r990_mod_cgi_dont_reset_physical_path.diff 517
@@ -112,9 +109,9 @@ SHA256 ad2582f8b05523a13c147d57b948e58ba31758cd8af0a45cbf39964ac094a2f6 files/sp
 MD5 49ded22216ffc6092d1a1e04a6e420c1 lighttpd-1.3.13-r3.ebuild 2607
 RMD160 a6e0d913e94cf2ee41c22826a92d0b38c87c319e lighttpd-1.3.13-r3.ebuild 2607
 SHA256 d2d37a8b2a2f7441fdb4975154cd4d0c37e561db26811709160ea155e564cbe7 lighttpd-1.3.13-r3.ebuild 2607
-MD5 21c52e6883435f851e46d8e229eb46ad lighttpd-1.3.16.ebuild 2545
-RMD160 b38563e9ea9caec25d88476cf00b4915e34cb8f7 lighttpd-1.3.16.ebuild 2545
-SHA256 bc56e550b1a3691f8c3a3b4f788455317f772ab540bd2017ff48cbed9d1df14d lighttpd-1.3.16.ebuild 2545
+MD5 0df89754aec138ad20821ef93c45833b lighttpd-1.3.16.ebuild 2589
+RMD160 3ff48e9342813af77cc82ff0c6b4dad51dc6ab2e lighttpd-1.3.16.ebuild 2589
+SHA256 1e35432b058eb98b7344d34bcef5272a85ba761afb7d9d10fdf57ec56a03a9b4 lighttpd-1.3.16.ebuild 2589
 MD5 f0bd55fb767f5cf9ddc141a622ebd45b lighttpd-1.4.10-r1.ebuild 4993
 RMD160 962db19a2f694107adc9ed5f448f2c2c4b60cd51 lighttpd-1.4.10-r1.ebuild 4993
 SHA256 d567ed42dc3b3464ca1a8ff0e62d2e0147185aa53ef2319e47808be9e25b7707 lighttpd-1.4.10-r1.ebuild 4993
@@ -127,10 +124,3 @@ SHA256 959cce5be5a7c371e76b7193d63f9431f384336fa381a7021b90d40c56dfac41 lighttpd
 MD5 6a9d4814404d8d51327e5b8306ee3d7e metadata.xml 726
 RMD160 a4e58899dbe2a328fe699a564a67666809b385fc metadata.xml 726
 SHA256 c99edd41b36c5354a29c2fa2e37fccd83568d306d1531f0ce7bbaebf703f2a56 metadata.xml 726
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBzhaEZCkKN40op4RAmPuAJ4oHZ6dTg8weJ/itiNG5huJfFu4kACfeoZt
-Sh6IsQ9wPtFVoINnxGwg6lI=
-=fi78
------END PGP SIGNATURE-----

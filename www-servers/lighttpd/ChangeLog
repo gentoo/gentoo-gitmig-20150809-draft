@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.61 2006/03/02 18:19:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.62 2006/03/20 22:10:33 chtekk Exp $
+
+  20 Mar 2006; Luca Longinotti <chtekk@gentoo.org> lighttpd-1.3.16.ebuild:
+  Fix bug #121653 on stable releases.
 
   02 Mar 2006; Aaron Walker <ka0ttic@gentoo.org> lighttpd-1.4.10-r1.ebuild:
   Add sed to fix typo in mod_cml docs for bug 124590.
