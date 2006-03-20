@@ -1,28 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 15ffc780a4b60f471a6fd30d9d9ffdd2 ChangeLog 1410
-RMD160 a754a10f511ca8be95b6b191e46b35abf41f6a4c ChangeLog 1410
-SHA256 b6b6122bbe91b2657d5e516aa6531aee40be4292d075523ff7eea0233b25b38b ChangeLog 1410
+MD5 f0b21dd8e06daa0bc2d2429d398c2267 ChangeLog 1560
 MD5 f66eabf6e140aef8962a75cf06d15df0 files/digest-libmp4v2-1.4.1 66
-RMD160 d98012e2e2e0093e740a3aafad87800306ce3946 files/digest-libmp4v2-1.4.1 66
-SHA256 2df79bfb440f5a39465171237843e13d6fe713c32bed32c0401dc69078dd06f3 files/digest-libmp4v2-1.4.1 66
 MD5 22a76c68f55b131dfc602a61ededb699 files/mpeg4ip-1.4.1-disable-faac-test.patch 1149
-RMD160 fabfac7262e34ad8ba0aea08938fa61ca9f2c389 files/mpeg4ip-1.4.1-disable-faac-test.patch 1149
-SHA256 cbe9093e82530731e4dc53973c62e3879b7297199f52f25b7d0317cfe4c0d2ba files/mpeg4ip-1.4.1-disable-faac-test.patch 1149
 MD5 1482d9be9ab5b360c7fbf51e0e3c8213 files/mpeg4ip-1.4.1-disable-sdl-test.patch 519
-RMD160 adef6836605dee8767a014b15f7b17be37c58ded files/mpeg4ip-1.4.1-disable-sdl-test.patch 519
-SHA256 cba909c595de6b2534bec0be922a2bf43b4a52b8beebaefc9969d627c2da78b0 files/mpeg4ip-1.4.1-disable-sdl-test.patch 519
-MD5 99763082b0a6e463e807ceb2feaaed1a libmp4v2-1.4.1.ebuild 2074
-RMD160 379eae8602ab76cba9ca43ec8edcd5a8acb0fa13 libmp4v2-1.4.1.ebuild 2074
-SHA256 a91db69ec37acd31f4fefd83984c0d4c9df80e02878fa80cb877e2be6a87de83 libmp4v2-1.4.1.ebuild 2074
+MD5 14502a0fa79187f51091c4de53c4f94c libmp4v2-1.4.1.ebuild 2078
 MD5 3e22c883db32384466af4a4db61aca02 metadata.xml 222
-RMD160 d342873a7670ee948b23c02e32d664c61890147b metadata.xml 222
-SHA256 84d779e4bddf172bed193cce4cafad208ba62317ae9bfc7b26b64e02451496ee metadata.xml 222
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEEd8nJrHF4yAQTrARAhkQAJ9lML9K9xHrwmUFJvlyuSIy1v9GzwCeLfgx
-wKbhkhskSr3mrQ4lN8bdTFU=
-=2Xtu
+iD8DBQFEHuiXViELBEf1JB0RAi7ZAJ0RtQxPqV1nypMHOReapZrS+paogwCfSH55
+5qz0Vq7d7x3w/Xsdsp50PvY=
+=dTUf
 -----END PGP SIGNATURE-----
