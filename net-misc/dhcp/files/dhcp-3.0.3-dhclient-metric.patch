@@ -1,49 +1,76 @@
-diff -ru /tmp/client/scripts/bsdos client/scripts/bsdos
---- /tmp/client/scripts/bsdos	2006-03-18 14:47:59.393686000 +0000
-+++ client/scripts/bsdos	2006-03-18 14:59:18.000000000 +0000
-@@ -132,7 +132,7 @@
+--- client/scripts/bsdos
++++ client/scripts/bsdos
+@@ -68,6 +68,9 @@
+ if [ x$alias_subnet_mask != x ]; then
+   alias_subnet_arg="netmask $alias_subnet_mask"
+ fi
++if [ x$IF_METRIC != x ]; then
++  metric="metric $IF_METRIC"
++fi
+ 
+ if [ x$reason = xMEDIUM ]; then
+   eval "ifconfig $interface $medium"
+@@ -128,7 +128,7 @@
  					$new_broadcast_arg $medium"
      route add $new_ip_address 127.1 >/dev/null 2>&1
      for router in $new_routers; do
 -      route add default $router >/dev/null 2>&1
-+      route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
++      route add default $router $metric dev $interface >/dev/null 2>&1
      done
      if [ "$new_static_routes" != "" ]; then
        set $new_static_routes
-@@ -198,7 +198,7 @@
+@@ -194,7 +194,7 @@
        fi
        route add $new_ip_address 127.1 >/dev/null 2>&1
        for router in $new_routers; do
 -	route add default $router >/dev/null 2>&1
-+	route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
++	route add default $router $metric dev $interface >/dev/null 2>&1
        done
        set $new_static_routes
        while [ $# -gt 1 ]; do
-diff -ru /tmp/client/scripts/freebsd client/scripts/freebsd
---- /tmp/client/scripts/freebsd	2006-03-18 14:47:59.393686000 +0000
-+++ client/scripts/freebsd	2006-03-18 15:00:48.000000000 +0000
-@@ -162,7 +162,7 @@
+--- client/scripts/freebsd
++++ client/scripts/freebsd
+@@ -92,6 +92,9 @@
+ if [ x$alias_subnet_mask != x ]; then
+   alias_subnet_arg="netmask $alias_subnet_mask"
+ fi
++if [ x$IF_METRIC != x ]; then
++  metric="metric $IF_METRIC"
++fi
+ 
+ if [ x$reason = xMEDIUM ]; then
+   eval "ifconfig $interface $medium"
+@@ -158,7 +158,7 @@
      fi
      route add $new_ip_address 127.1 >/dev/null 2>&1
      for router in $new_routers; do
 -      route add default $router >/dev/null 2>&1
-+      route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
++      route add default $router $metric dev $interface >/dev/null 2>&1
      done
      if [ -n "$new_static_routes" ]; then
        $LOGGER "New Static Routes: $new_static_routes"
-@@ -233,7 +233,7 @@
+@@ -229,7 +229,7 @@
        fi
        route add $new_ip_address 127.1 >/dev/null 2>&1
        for router in $new_routers; do
 -	route add default $router >/dev/null 2>&1
-+	route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
++	route add default $router $metric dev $interface >/dev/null 2>&1
        done
        set -- $new_static_routes
        while [ $# -gt 1 ]; do
-diff -ru /tmp/client/scripts/linux client/scripts/linux
---- /tmp/client/scripts/linux	2006-03-18 14:47:59.393686000 +0000
-+++ client/scripts/linux	2006-03-18 14:56:43.000000000 +0000
-@@ -140,13 +140,11 @@
+--- client/scripts/linux
++++ client/scripts/linux
+@@ -91,6 +91,9 @@
+ if [ x$alias_subnet_mask != x ]; then
+   alias_subnet_arg="netmask $alias_subnet_mask"
+ fi
++if [ x$IF_METRIC != x ]; then
++  metric="metric $IF_METRIC"
++fi
+ 
+ if [ x$reason = xMEDIUM ]; then
+   # Linux doesn't do mediums (ok, ok, media).
+@@ -136,13 +136,11 @@
    if [ x$old_ip_address != x ] && [ x$alias_ip_address != x ] && \
  		[ x$alias_ip_address != x$old_ip_address ]; then
      # Possible new alias. Remove old alias.
@@ -60,12 +87,12 @@ diff -ru /tmp/client/scripts/linux client/scripts/linux
    fi
    if [ x$old_ip_address = x ] || [ x$old_ip_address != x$new_ip_address ] || \
       [ x$reason = xBOUND ] || [ x$reason = xREBOOT ]; then
-@@ -159,14 +157,14 @@
+@@ -155,14 +153,14 @@
        route add -net $new_network_number $new_subnet_arg dev $interface
      fi
      for router in $new_routers; do
 -      route add default gw $router
-+      route add default gw $router ${IF_METRIC:+metric $IF_METRIC} dev $interface
++      route add default gw $router $metric dev $interface
      done
    fi
    if [ x$new_ip_address != x$alias_ip_address ] && [ x$alias_ip_address != x ];
@@ -77,7 +104,7 @@ diff -ru /tmp/client/scripts/linux client/scripts/linux
    fi
    make_resolv_conf
    exit_with_hooks 0
-@@ -179,12 +177,12 @@
+@@ -175,12 +173,12 @@
      ifconfig $interface:0- inet 0
    fi
    if [ x$old_ip_address != x ]; then
@@ -93,7 +120,7 @@ diff -ru /tmp/client/scripts/linux client/scripts/linux
    fi
    exit_with_hooks 0
  fi
-@@ -205,15 +203,15 @@
+@@ -201,15 +199,15 @@
      fi
      if [ $relmajor -lt 2 ] || \
  		( [ $relmajor -eq 2 ] && [ $relminor -eq 0 ] ); then
@@ -102,7 +129,7 @@ diff -ru /tmp/client/scripts/linux client/scripts/linux
      fi
      for router in $new_routers; do
 -      route add default gw $router
-+      route add default gw $router ${IF_METRIC:+metric $IF_METRIC} dev $interface
++      route add default gw $router $metric dev $interface
      done
      make_resolv_conf
      exit_with_hooks 0
@@ -112,45 +139,63 @@ diff -ru /tmp/client/scripts/linux client/scripts/linux
    exit_with_hooks 1
  fi
  
-diff -ru /tmp/client/scripts/netbsd client/scripts/netbsd
---- /tmp/client/scripts/netbsd	2006-03-18 14:47:59.393686000 +0000
-+++ client/scripts/netbsd	2006-03-18 15:02:29.000000000 +0000
-@@ -132,7 +132,7 @@
+--- client/scripts/netbsd
++++ client/scripts/netbsd
+@@ -68,6 +68,9 @@
+ if [ x$alias_subnet_mask != x ]; then
+   alias_subnet_arg="netmask $alias_subnet_mask"
+ fi
++if [ x$IF_METRIC != x ]; then
++  metric="metric $IF_METRIC"
++fi
+ 
+ if [ x$reason = xMEDIUM ]; then
+   eval "ifconfig $interface $medium"
+@@ -128,7 +128,7 @@
  					$new_broadcast_arg $medium"
      route add $new_ip_address 127.1 >/dev/null 2>&1
      for router in $new_routers; do
 -      route add default $router >/dev/null 2>&1
-+      route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
++      route add default $router $metric dev $interface >/dev/null 2>&1
      done
      if [ "$new_static_routes" != "" ]; then
        set $new_static_routes
-@@ -198,7 +198,7 @@
+@@ -194,7 +194,7 @@
        fi
        route add $new_ip_address 127.1 >/dev/null 2>&1
        for router in $new_routers; do
 -	route add default $router >/dev/null 2>&1
-+	route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
++	route add default $router $metric dev $interface >/dev/null 2>&1
        done
        set $new_static_routes
        while [ $# -gt 1 ]; do
-diff -ru /tmp/client/scripts/openbsd client/scripts/openbsd
---- /tmp/client/scripts/openbsd	2006-03-18 14:47:59.393686000 +0000
-+++ client/scripts/openbsd	2006-03-18 15:04:24.000000000 +0000
-@@ -132,7 +132,7 @@
+--- client/scripts/openbsd
++++ client/scripts/openbsd
+@@ -68,6 +68,9 @@
+ if [ x$alias_subnet_mask != x ]; then
+   alias_subnet_arg="netmask $alias_subnet_mask"
+ fi
++if [ x$IF_METRIC != x ]; then
++  metric="metric $IF_METRIC"
++fi
+ 
+ if [ x$reason = xMEDIUM ]; then
+   eval "ifconfig $interface $medium"
+@@ -128,7 +128,7 @@
  					$new_broadcast_arg $medium"
      route add $new_ip_address 127.1 >/dev/null 2>&1
      for router in $new_routers; do
 -      route add default $router >/dev/null 2>&1
-+       route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
++       route add default $router $metric dev $interface >/dev/null 2>&1
      done
      if [ "$new_static_routes" != "" ]; then
        set $new_static_routes
-@@ -198,7 +198,7 @@
+@@ -194,7 +194,7 @@
        fi
        route add $new_ip_address 127.1 >/dev/null 2>&1
        for router in $new_routers; do
 -	route add default $router >/dev/null 2>&1
-+	route add default $router ${IF_METRIC:+metric $IF_METRIC} dev $interface >/dev/null 2>&1
++	route add default $router $metric dev $interface >/dev/null 2>&1
        done
        set $new_static_routes
        while [ $# -gt 1 ]; do
