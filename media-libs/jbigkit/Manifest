@@ -13,9 +13,9 @@ SHA256 db5e33e2cc7c9d871b765fcc83258483094c9aa2d0f7e78bf4a32f8e02b7e294 files/di
 MD5 d1b93d8aefb118f3259cc9ac2a55239e files/digest-jbigkit-1.6-r1 63
 RMD160 00ebddbc9f54652733d227f99628df720001c2ab files/digest-jbigkit-1.6-r1 63
 SHA256 db5e33e2cc7c9d871b765fcc83258483094c9aa2d0f7e78bf4a32f8e02b7e294 files/digest-jbigkit-1.6-r1 63
-MD5 b5fa036877461225b796e1bab1fb2179 files/jbigkit-1.6-build.patch 284
-RMD160 e2d0fac2a60dbc17222a9f1c0a45e9ff4e2954e1 files/jbigkit-1.6-build.patch 284
-SHA256 584fb66a8f9caad98c66b52fd0ff48f16273bdd6c70cbb58bb2afc331f48e099 files/jbigkit-1.6-build.patch 284
+MD5 622da564622a97de6f743b5ada89b62f files/jbigkit-1.6-build.patch 852
+RMD160 f8df305b083d2bde5446849e1090b31452df4ed5 files/jbigkit-1.6-build.patch 852
+SHA256 e59fdb3929968504fcafde8ffe4adec07b96ae76d17569331f18da5bc34ee00a files/jbigkit-1.6-build.patch 852
 MD5 70021e4d1632a1277102944be46039d7 files/jbigkit-1.6-respect-make.patch 916
 RMD160 1aaaae78f8891fafe9e3d6722b07445c6a174331 files/jbigkit-1.6-respect-make.patch 916
 SHA256 b1b8e46d885590d633fc0b8181d331a15cabfb6bb2fac13dac9b47bd7a949f53 files/jbigkit-1.6-respect-make.patch 916
@@ -25,9 +25,9 @@ SHA256 e9b7b5b3fa0372a1737ede38007441e182f07e5860f7d68496424b419339e178 files/jb
 MD5 b52cd5b7a608a7b01a35446df4b6e322 jbigkit-1.4.ebuild 1114
 RMD160 5261e2e4d52bb14330b22ab3a1ae175f960fed70 jbigkit-1.4.ebuild 1114
 SHA256 f5c62c73c048968e90130f4b603d56cfc725ad18c0225790c391362ab6383bcd jbigkit-1.4.ebuild 1114
-MD5 af8960302cee017f1be7c339f1390edc jbigkit-1.6-r1.ebuild 1299
-RMD160 888344794bb933c9a7c71ffa80e6f7cc3968fd77 jbigkit-1.6-r1.ebuild 1299
-SHA256 f30c074f49cbc4f3db1c07fcda60457e451c2ea6be31e38bba04ab88fc065e28 jbigkit-1.6-r1.ebuild 1299
+MD5 7b94d1364dc05f7124b52c67f626e264 jbigkit-1.6-r1.ebuild 1302
+RMD160 9bb21b7ac74934820dd82f168a5889a092fdf61a jbigkit-1.6-r1.ebuild 1302
+SHA256 df7a75fca41cc501c22446a496508182e79e77206f491f9e498ea7087617f566 jbigkit-1.6-r1.ebuild 1302
 MD5 4e84e1e79ca429311ce5af75fb72c3c5 jbigkit-1.6.ebuild 1016
 RMD160 673a41060ad0e6c6b8418a5f9556b2db85680b13 jbigkit-1.6.ebuild 1016
 SHA256 ac654b82443da02d59519b41284f7981308100f20e3ca9b8fc684978e5f69fc8 jbigkit-1.6.ebuild 1016
@@ -35,9 +35,9 @@ MD5 270892f2a471dfc596c6d77066286730 metadata.xml 510
 RMD160 2bd864aa5e2d103a298c203a323b31ae72499f5f metadata.xml 510
 SHA256 af4ade5ef82f07702d0f0c56e1aa17f5dbcea99b055bef6558c363bc032817e1 metadata.xml 510
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD6QT9JrHF4yAQTrARAsPFAKDLHuUCBrBleHk6CgnxLhdsvs/6bwCdE7iy
-nzfpSsrXMSBijQqJyQvOKAk=
-=B9b1
+iD8DBQFEHhpT2+ySkm8kpY0RAojjAJ9URFsKgl2FQX2095bqmhJHshWgZQCfTcJa
+AHu7Yo7KabAQHp0DnA2MvSU=
+=JOG9
 -----END PGP SIGNATURE-----
