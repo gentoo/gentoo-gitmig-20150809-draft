@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/db4o
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/db4o/ChangeLog,v 1.3 2005/12/19 06:09:42 latexer Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/db4o/ChangeLog,v 1.4 2006/03/20 00:47:46 metalgod Exp $
+
+  20 Mar 2006; Luis Medinas <metalgod@gentoo.org> db4o-5.0.ebuild:
+  Added ~amd64 keyword. Closes bug #124194.
 
   19 Dec 2005; Peter Johanson <latexer@gentoo.org> db4o-5.0.ebuild:
   Forgot to add the patch, then found the patch was big enough to put on
