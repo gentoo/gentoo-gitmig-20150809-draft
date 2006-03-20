@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.1.ebuild,v 1.4 2006/03/19 22:22:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.1.ebuild,v 1.5 2006/03/20 14:57:11 mcummings Exp $
 
 inherit perl-module
 
@@ -12,9 +12,8 @@ SRC_URI="mirror://apache/spamassassin/source/${MY_P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~mips"
-KEYWORDS="~ppc64 ~sparc ~x86"
-IUSE="berkdb qmail ssl doc ldap mysql postgres sqlite spf tools dcc pyzor razor extramodules ipv6"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="berkdb qmail ssl doc ldap mysql postgres sqlite tools ipv6"
 
 DEPEND=">=dev-lang/perl-5.8.2-r1
 	virtual/perl-MIME-Base64
@@ -48,24 +47,7 @@ DEPEND=">=dev-lang/perl-5.8.2-r1
 		dev-perl/DBI
 		dev-perl/DBD-SQLite
 	)
-	spf? (
-		dev-perl/Mail-SPF-Query
-	)
 
-	pyzor? (
-		dev-python/pyzor
-	)
-	razor? (
-		mail-filter/razor
-	)
-	dcc? (
-		mail-filter/dcc
-	)
-	extramodules? (
-		dev-perl/IP-Country
-		dev-perl/Net-Ident
-		dev-perl/Mail-DomainKeys
-	)
 	ipv6? (
 		dev-perl/IO-Socket-INET6
 	)"
@@ -213,6 +195,7 @@ pkg_postinst() {
 		einfo "  /usr/share/doc/${PF}/UPGRADE.gz"
 		einfo
 	fi
+
 	ewarn
 	ewarn "spamd is not designed to listen to an untrusted network"
 	ewarn "and is vulnerable to DoS attacks (and eternal doom) if"
@@ -242,4 +225,22 @@ pkg_postinst() {
 		ewarn "Notably, the LANG setting must not include \"utf8\".   However, some folks"
 		ewarn "have reported that this makes no difference. ;)"
 	fi
+	einfo
+	if ! has_version 'dev-perl/Mail-SPF-QUery'; then
+		einfo "For spf support, please emerge dev-perl/Mail-SPF-Query"
+	fi
+	if ! has_version 'mail-filter/dcc'; then
+		einfo "For dcc support, please emerge mail-filter/dcc"
+	fi
+	if ! has_version 'dev-python/pyzor'; then
+		einfo "For pyzor support, please emerge dev-python/pyzor"
+	fi
+	if ! has_version 'mail-filter/razor'; then
+		einfo "For razor support, please emerge mail-filter/razor"
+	fi
+	einfo
+	einfo "For addtional functionality, you may wish to emerge:"
+	einfo "dev-perl/IP-Country       dev-perl/Net-Ident "
+	einfo "dev-perl/Mail-DomainKeys"
+
 }
