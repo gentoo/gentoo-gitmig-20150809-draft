@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.5 2006/02/17 22:18:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.6 2006/03/20 14:57:41 george Exp $
 
 # ATTN!
 # set HOMEPAGE and LICENSE in appropriate ebuild, as we have
@@ -343,10 +343,18 @@ gnatbuild_src_compile() {
 		fi
 
 		export CC="${GNATBOOT}/bin/gnatgcc"
+		export INCLUDE_DIR="${GNATLIB}/include"
+		export LIB_DIR="${GNATLIB}"
+		export LDFLAGS="-L${GNATLIB}"
+
+		# additional vars from gnuada and elsewhere
+		export LD_RUN_PATH="${LIBPATH}"
+		export LIBRARY_PATH="${GNATLIB}"
+		export LD_LIBRARY_PATH="${GNATLIB}"
+		export COMPILER_PATH="${GNATBOOT}/bin/"
 
 		export ADA_OBJECTS_PATH="${GNATLIB}/adalib"
 		export ADA_INCLUDE_PATH="${GNATLIB}/adainclude"
-		export LDFLAGS="-L${GNATLIB}"
 
 #		if [ "2.8.1" == ${GCCVER} ]; then
 #			export BINUTILS_ROOT="${GNATBOOT}"
