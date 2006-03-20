@@ -1,27 +1,19 @@
-MD5 262f7bfd04e26ae3003eb0fa8804a7f5 ChangeLog 2976
-RMD160 be451590ad2bc9567d2775d52d815954cee5b859 ChangeLog 2976
-SHA256 4add82c7d4957ac1bc2a3afbfcc81ad6f5b0dd36b5b38f97b859d802e9705797 ChangeLog 2976
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 99c1a749d03d4065bf20ca4fd7e643f8 ChangeLog 3074
 MD5 e84517c77095652edc87803d423092d1 files/digest-wmbiff-0.4.25 65
-RMD160 261860259f2e988090b7a506d45970032e78a8d5 files/digest-wmbiff-0.4.25 65
-SHA256 5754b16e429f29f4af43b88236a97bfbf3f17d777152c44cbdca1b90ac491ce5 files/digest-wmbiff-0.4.25 65
 MD5 e84517c77095652edc87803d423092d1 files/digest-wmbiff-0.4.25-r1 65
-RMD160 261860259f2e988090b7a506d45970032e78a8d5 files/digest-wmbiff-0.4.25-r1 65
-SHA256 5754b16e429f29f4af43b88236a97bfbf3f17d777152c44cbdca1b90ac491ce5 files/digest-wmbiff-0.4.25-r1 65
 MD5 33fc3fc5744cda7b17ed74a9724e9e69 files/digest-wmbiff-0.4.27 65
-RMD160 2354ac1d9ce238d26717c06181f245f083bf19ed files/digest-wmbiff-0.4.27 65
-SHA256 752df48bd20b032db0b046b8fad41a943588d9ef7b1ac7f0d5606be035551691 files/digest-wmbiff-0.4.27 65
 MD5 988ba1c28ca012c99a062db781ef997c files/wmbiff-0.4.25-crypto-api-fix.patch 646
-RMD160 6ff79d644b0cfcc3f1e8c65b583f0b7f226eede1 files/wmbiff-0.4.25-crypto-api-fix.patch 646
-SHA256 18c3f69b491329a58f5c9de6f74e859f9496a831cd31e3342ce246599d1c27dd files/wmbiff-0.4.25-crypto-api-fix.patch 646
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-RMD160 a554e96dc33b1fb4b3518f27a21bf3f59dc21b1c metadata.xml 165
-SHA256 c2f8a0b30c83dba56f0c36a4ba1cb002621ae58dfc13fae94b9db6eb67fb9f1b metadata.xml 165
 MD5 9b924d279c63260e423645afd6c3538a wmbiff-0.4.25-r1.ebuild 1176
-RMD160 23b458b1092656649590fbdc4025715bc130b7f7 wmbiff-0.4.25-r1.ebuild 1176
-SHA256 d442be6187557112c7faab4f3b248bdd3c9731e4ab7c2ae27477a6694dccdc08 wmbiff-0.4.25-r1.ebuild 1176
 MD5 a3b165b4385a5b50ab5168a6ab8f9ca2 wmbiff-0.4.25.ebuild 988
-RMD160 2b447798a18f90bdc8fbe1d200dd5867004e9176 wmbiff-0.4.25.ebuild 988
-SHA256 edec4cdc962c59398493ee6a96c3d3a4f555c3f247d0465df858f59642faac67 wmbiff-0.4.25.ebuild 988
-MD5 ef6d6892e6032d9a0fa4f44c3b4ccc1d wmbiff-0.4.27.ebuild 986
-RMD160 6c4bc04c4521a6eaed8a0859b37cf3ea0e86d117 wmbiff-0.4.27.ebuild 986
-SHA256 ac808e3b359bed4e9430a764e4e9b2c70011be2398db16bd8b6af2411ab3c2fb wmbiff-0.4.27.ebuild 986
+MD5 1ec087f4f8eaca565774d7b87172f646 wmbiff-0.4.27.ebuild 988
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEHwYPKRy60XGEcJIRAgvBAJ9S1ZvSWtpF86kfj3101mHEeSo7EQCgma8X
+ioBbUWrtUnL3ihSXylhmRG0=
+=yi2d
+-----END PGP SIGNATURE-----
