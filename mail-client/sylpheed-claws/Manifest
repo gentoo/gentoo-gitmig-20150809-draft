@@ -1,24 +1,18 @@
-MD5 5d56ece0f7d1ff60dcf52708ea9b44f2 ChangeLog 28362
-RMD160 c59f160111b09089b7034048eaf524e0a0e0915b ChangeLog 28362
-SHA256 3d4c5c5e970a4cfae65f064edab8d48897a2c1ab0757e442e64a636dcda6b342 ChangeLog 28362
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 546a28a8a63c81cf3465355094a6176a ChangeLog 28486
 MD5 743b9535636a8b39507545bc03a1a265 files/digest-sylpheed-claws-1.0.5-r1 74
-RMD160 aed84236d73b895518895054812bfd39bd86fff7 files/digest-sylpheed-claws-1.0.5-r1 74
-SHA256 e7ab28101efda1f2cbce138132a0ac72293d2db455405e595dae1167564b9045 files/digest-sylpheed-claws-1.0.5-r1 74
 MD5 a1eac34c9f5178a960a23b5cb711365a files/digest-sylpheed-claws-2.0.0 268
-RMD160 adcbd602816cd020626fa5ca6f56ed663b50bd48 files/digest-sylpheed-claws-2.0.0 268
-SHA256 05805ff28a06f60706cc6ca703f70e9edcd1768dc2b134b48e1d3d664d844fa7 files/digest-sylpheed-claws-2.0.0 268
 MD5 06d23c04b3d6ddfb1431c22ecc5b28f6 files/ldif-buffer-overflow-fix.diff 5007
-RMD160 1354a6bd2687430b628b78aaf43f5c793d2f0704 files/ldif-buffer-overflow-fix.diff 5007
-SHA256 f820856aac43571b048bf83607499a08e9a4792264c04178c9735e5c1a45fedd files/ldif-buffer-overflow-fix.diff 5007
 MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
-RMD160 39a51a4d654759b15d1644a79fb6e8921130df3c files/procmime.patch 977
-SHA256 6b70df7ea239873c09cd26ce57b29f8990e6d66c8dbe65e97bf6d69fa9cd0a56 files/procmime.patch 977
 MD5 82e806ed62f0596fb7bef493d225712f metadata.xml 269
-RMD160 39d775de55f9963f8946feaf088aa0324770bacb metadata.xml 269
-SHA256 3787959f4a775b1e787b35ff8380949d8f68bd67b81c2cf5a748733c9740cb94 metadata.xml 269
 MD5 74abb664d838528a042d54de2945ebdc sylpheed-claws-1.0.5-r1.ebuild 3894
-RMD160 94d6e87bebd4c7199bb47260836a40f8cd016187 sylpheed-claws-1.0.5-r1.ebuild 3894
-SHA256 507c50c75a8ccc4f1eaf11f58407573f81786d56190394fdb6420af248e0c825 sylpheed-claws-1.0.5-r1.ebuild 3894
-MD5 b0ceba9d2a2da141b717a02fa63eaa13 sylpheed-claws-2.0.0.ebuild 4301
-RMD160 7fcef8b8ee4f419f5e4567edde1956031d528952 sylpheed-claws-2.0.0.ebuild 4301
-SHA256 a29556b330c822347a4d8842d82127a117ba8a9c5e98e3cc9b67a3014225ea51 sylpheed-claws-2.0.0.ebuild 4301
+MD5 e97a47bb1267e3692d4cf0342b46cd94 sylpheed-claws-2.0.0.ebuild 4310
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHuJ0ViELBEf1JB0RAuUgAJ43FINostHuH2We1nZt/nzmz76BDgCZAbld
+gKshnhpqt5EvOeabT42vK8Y=
+=xFwt
+-----END PGP SIGNATURE-----
