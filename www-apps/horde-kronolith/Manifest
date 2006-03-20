@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 98b34b0abf84a9bf01a7dd56b8f832da ChangeLog 3663
-RMD160 b62a760b7e536576d8199eb5fc89430d7aa3365e ChangeLog 3663
-SHA256 d6e2d4cd2aaeb815fec5474ce8c340189345968aeb9f09ccdec6eb3092927d30 ChangeLog 3663
+MD5 e2448cbdd5751596ec785cfe21a3c3a2 ChangeLog 3894
 MD5 c3d3a41e728426654d970b9531d841fc files/digest-horde-kronolith-1.1.4 67
-RMD160 903ce1b7e1e14e1b63b6ae1124eeaeadc0a76103 files/digest-horde-kronolith-1.1.4 67
-SHA256 dad402a8b2057cee067114333ef29e06b923b2975527bb174364afd6a76a65d5 files/digest-horde-kronolith-1.1.4 67
 MD5 5c464cc7ee4dee9fbe4815a3ce3d8454 files/digest-horde-kronolith-2.0.6 71
-RMD160 eadb98c839ef2349cf2cea3d33809dda00632b77 files/digest-horde-kronolith-2.0.6 71
-SHA256 29cc93ffa9a56a3ba95d8bdd18dcfb066d536ea8f4f5652c199ed7217ebf9901 files/digest-horde-kronolith-2.0.6 71
 MD5 366fad1e4f3b6d8b086ca5b711433d75 files/digest-horde-kronolith-2.1 253
-RMD160 94d6972788f841a1b2ef685c752eeaf4a6ce8942 files/digest-horde-kronolith-2.1 253
-SHA256 620dc9cfd6b3ec37bb34af9c912940674247596ed2236b98dbf3921f01e8629f files/digest-horde-kronolith-2.1 253
 MD5 d2c39d934e4acf12cfb67b4bc285c485 horde-kronolith-1.1.4.ebuild 445
-RMD160 880f76a7e04d1080e401315b8275d33a51ac9903 horde-kronolith-1.1.4.ebuild 445
-SHA256 e47dd6062ca8101c14cc06e2a725d6eb29dbd0e54015c2cb7f6a82c56887dc2a horde-kronolith-1.1.4.ebuild 445
 MD5 3c01b6a0e922e77c862aa49925c665ab horde-kronolith-2.0.6.ebuild 470
-RMD160 22f32dbeaa21d04f407bac2d109dc39512b0d7d5 horde-kronolith-2.0.6.ebuild 470
-SHA256 3e1733ec85b0c23095e989118eded4a52d96ae74af76ee57f8c7863b625ff621 horde-kronolith-2.0.6.ebuild 470
-MD5 005b622be6e6ebbb73f68b6647df1828 horde-kronolith-2.1.ebuild 468
-RMD160 4fda99333ebb805092988c9c4898830c6006336f horde-kronolith-2.1.ebuild 468
-SHA256 6b665ce1d8d4eb698daca7e6ff0df72a230fd251ac8882883a0ca24f9a500bec horde-kronolith-2.1.ebuild 468
+MD5 50a16624132fa682e7ea4c4b540239f0 horde-kronolith-2.1.ebuild 469
 MD5 852eb8fe9390c47a540b8e248d128632 metadata.xml 1230
-RMD160 cda323aab3ebba01664db8593135b390519780c3 metadata.xml 1230
-SHA256 ec129fd5c4b1df04d6faa0ff9d685635ca74fecb3f9d28da13f35d09467e3721 metadata.xml 1230
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEELw02+ySkm8kpY0RAifiAJ4tGWyeKyi4ZEVQZ4xJcNCshsUuBwCePNgy
-jXmeIkuqd17B3otCcQouSOo=
-=COnH
------END PGP SIGNATURE-----

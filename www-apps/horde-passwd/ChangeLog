@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-passwd
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.5 2005/10/14 00:40:05 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.6 2006/03/20 22:10:52 gustavoz Exp $
+
+  20 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  horde-passwd-3.0.ebuild:
+  Stable on sparc wrt security #126435
 
 *horde-passwd-3.0 (14 Oct 2005)
 
