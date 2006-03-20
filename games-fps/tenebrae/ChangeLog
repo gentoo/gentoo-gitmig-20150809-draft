@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/tenebrae
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/ChangeLog,v 1.6 2005/09/26 18:05:56 wolf31o2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/ChangeLog,v 1.7 2006/03/20 23:00:31 tupone Exp $
+
+  20 Mar 2006; <Tupone@gentoo.org> tenebrae-1.04.ebuild:
+  Modular X dependency fix, bug #123115 by P. Nienaber. Thanks UncleOwen
 
   26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> tenebrae-1.04.ebuild:
   Making games last on inherit line.

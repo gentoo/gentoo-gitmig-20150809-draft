@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.9 2005/11/05 22:45:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.10 2006/03/20 23:00:31 tupone Exp $
 
 #ECVS_SERVER="cvs.tenebrae.sourceforge.net:/cvsroot/tenebrae"
 #ECVS_MODULE="tenebrae_0"
@@ -18,11 +18,25 @@ KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
-	virtual/x11
+	virtual/glu
 	media-libs/libpng
-	sys-libs/zlib"
+	|| (
+		(
+			x11-libs/libXxf86vm
+			x11-libs/libXxf86dga
+		)
+		virtual/x11
+	)"
 #	sdl? ( media-libs/libsdl )"
 DEPEND="${RDEPEND}
+	|| (
+		(
+			x11-proto/xextproto
+			x11-proto/xf86dgaproto
+			x11-proto/xf86vidmodeproto
+		)
+		virtual/x11
+	)
 	app-arch/unzip"
 
 S=${WORKDIR}
