@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.7.ebuild,v 1.2 2006/01/05 11:42:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.7.ebuild,v 1.3 2006/03/20 21:17:13 genstef Exp $
 
 inherit eutils
 
 DESCRIPTION="Captive uses binary Windows drivers for full NTFS r/w access."
 HOMEPAGE="http://www.jankratochvil.net/project/captive/"
-SRC_URI="http://www.jankratochvil.net/priv/captive/${P}cvs.tar.gz"
+SRC_URI="http://www.jankratochvil.net/project/captive/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,7 +16,6 @@ IUSE="debug gtk readline"
 
 RDEPEND="sys-libs/zlib
 	>=sys-fs/fuse-2.4
-	sys-fs/ntfsprogs
 	readline? ( sys-libs/readline )
 	>=dev-libs/openssl-0.9.7c
 	>=dev-libs/libxml2-2.4.29
@@ -26,16 +25,17 @@ RDEPEND="sys-libs/zlib
 	gnome-base/gnome-vfs
 	dev-libs/popt
 	dev-libs/glib
-	gtk? ( dev-libs/atk
-	gnome-base/libbonoboui
-	gnome-base/libgnomeui
-	media-libs/libpng
-	>x11-libs/gtk+-2.2
-	x11-libs/pango )"
+	gtk? (
+		dev-libs/atk
+		sys-fs/ntfsprogs
+		gnome-base/libbonoboui
+		gnome-base/libgnomeui
+		media-libs/libpng
+		>x11-libs/gtk+-2.2
+		x11-libs/pango
+	)"
 
 DEPEND="${RDEPEND}"
-
-S=${WORKDIR}/${P}cvs
 
 pkg_setup() {
 	einfo "Adding captive user and group"
