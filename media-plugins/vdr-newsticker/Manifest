@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e3afd2d7890e42ebf577a59f8c539433 ChangeLog 411
+RMD160 1c1f07e8cc5aa720cdb0a35a68ec136aab322ff3 ChangeLog 411
+SHA256 ecd2536f8919769257a48e8cc400a510b587b716492013ffa98c78f1a20085db ChangeLog 411
+MD5 272e80264827a212d393f745a2d29a32 files/digest-vdr-newsticker-0.0.4 259
+RMD160 1a31e4b63f4f49cd1ec75a4ab13a1b73810b3826 files/digest-vdr-newsticker-0.0.4 259
+SHA256 713495c0b36db6accf35a757397430166aecbaebf0df30074851df0f794dd71e files/digest-vdr-newsticker-0.0.4 259
+MD5 b1c008dd718af90b25565679827cea26 files/rc-addon.sh 205
+RMD160 48ae915f97bf99e0016a8de17a1989e22fb01e57 files/rc-addon.sh 205
+SHA256 37759df19c20a4d1af6ad1a1b3e02c7c31312a91425a40880655f3d301c1abb1 files/rc-addon.sh 205
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 90991996b689df9c4447d47a4053ffd1 vdr-newsticker-0.0.4.ebuild 629
+RMD160 82f9c3dd6dbebd08f89787a96d2cabe349a5570a vdr-newsticker-0.0.4.ebuild 629
+SHA256 5e6ba0592420b558d82f22c04ca57d9fdbc67d9e6af1ee9ad11883ddca50bf1b vdr-newsticker-0.0.4.ebuild 629
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHuBlZfSl1Kp5KmoRAo0eAKDvYfD4i/uEwkqwJnvDTEgNNelyxACg0Uw+
+la7eIhvaFmN9xRmmriVzLDI=
+=d6Aq
+-----END PGP SIGNATURE-----
