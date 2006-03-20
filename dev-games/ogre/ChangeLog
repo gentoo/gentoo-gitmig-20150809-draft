@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.24 2006/03/11 01:13:04 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.25 2006/03/20 22:25:47 tupone Exp $
+
+*ogre-1.0.7 (20 Mar 2006)
+
+  20 Mar 2006; <Tupone@gentoo.org> +files/ogre-1.0.7-gcc34.patch,
+  +files/ogre-1.0.7-gcc41.patch, +ogre-1.0.7.ebuild:
+  Version bump #122920 by Patrick Zimmerman.
 
   11 Mar 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/ogre-1.0.6-gcc41.patch, ogre-1.0.6.ebuild:
