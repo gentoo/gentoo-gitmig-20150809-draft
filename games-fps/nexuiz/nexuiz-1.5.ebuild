@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-1.5.ebuild,v 1.2 2006/03/17 20:07:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-1.5.ebuild,v 1.3 2006/03/20 20:06:02 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -47,11 +47,21 @@ S=${WORKDIR}/${MY_PN}/darkplaces
 dir=${GAMES_DATADIR}/${PN}
 exe=${PN}
 
+default_client() {
+	if use opengl || $( ! use dedicated && ! use sdl )
+	then
+		# Build default client
+		return 0
+	fi
+	return 1
+}
+
 pkg_setup() {
-	if ! use dedicated && ! use sdl && ! use opengl
+	if default_client && ! use opengl
 	then
 		einfo "Defaulting to OpenGL client"
 	fi
+
 	games_pkg_setup
 }
 
@@ -69,7 +79,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if use opengl
+	if default_client
 	then
 		emake cl-release \
 			CFLAGS_RELEASE="" OPTIM_RELEASE="" \
@@ -92,29 +102,18 @@ src_compile() {
 			CFLAGS_COMMON="${CFLAGS}" \
 			|| die "emake dedicated failed"
 	fi
-
-	if ! use dedicated && ! use sdl && ! use opengl
-	then
-		emake cl-release \
-			CFLAGS_RELEASE="" OPTIM_RELEASE="" \
-			CFLAGS_COMMON="${CFLAGS}" \
-			|| die "emake cl-release failed"
-	fi
 }
 
 src_install() {
 	insinto "${dir}"
 	exeinto "${dir}"
 
-	if use opengl || use sdl
-	then
-		newicon darkplaces72x72.png ${PN}.png
-	elif ! use dedicated && ! use sdl && ! use opengl
+	if default_client || use sdl
 	then
 		newicon darkplaces72x72.png ${PN}.png
 	fi
 
-	if use opengl
+	if default_client
 	then
 		newexe darkplaces-glx ${exe} || die "newexe glx failed"
 		games_make_wrapper ${PN} ./${exe} "${dir}"
@@ -132,13 +131,6 @@ src_install() {
 	then
 		newexe darkplaces-dedicated ${PN}-ded || die "newexe ded failed"
 		games_make_wrapper ${PN}-ded ./${PN}-ded "${dir}"
-	fi
-
-	if ! use dedicated && ! use sdl && ! use opengl
-	then
-		newexe darkplaces-glx ${exe} || die "newexe glx failed"
-		games_make_wrapper ${PN} ./${exe} "${dir}"
-		make_desktop_entry ${PN} Nexuiz ${PN}.png
 	fi
 
 	cd "${WORKDIR}/${MY_PN}"
