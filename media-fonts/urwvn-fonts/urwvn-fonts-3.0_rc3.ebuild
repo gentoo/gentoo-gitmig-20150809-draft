@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/urwvn-fonts-3.0_rc3.ebuild,v 1.2 2006/01/10 18:45:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/urwvn-fonts-3.0_rc3.ebuild,v 1.3 2006/03/20 00:11:00 halcy0n Exp $
 
 inherit font
 
@@ -18,3 +18,5 @@ IUSE=""
 S=${WORKDIR}
 FONT_SUFFIX="ttf"
 FONT_S=${S}
+
+DEPEND="app-arch/unzip"

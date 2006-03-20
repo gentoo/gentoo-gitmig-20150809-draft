@@ -1,6 +1,28 @@
-MD5 7026cf02a90eb480a7a9afafac411f2b ChangeLog 1053
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bc095f13c1531f3f784c778fa9e1a777 ChangeLog 1162
+RMD160 414186d73a42a283797942d2f0769a59e254faf9 ChangeLog 1162
+SHA256 6bbc4e88fbb8f08bc2b5ea02c7d62c7a7817b1f69e24bac8bd52ce7119e0353b ChangeLog 1162
 MD5 a5a25439da2fa20c5aaedbc739806442 files/digest-urwvn-fonts-2.0 69
+RMD160 382cc96c3596cf5192c9a17a0f0fbb93fb159ded files/digest-urwvn-fonts-2.0 69
+SHA256 3cf0a8b44c628c20fa053899e283bb894b88731a90fe2af34c784d2999e55c00 files/digest-urwvn-fonts-2.0 69
 MD5 ce77cb948558b4f3a06ef84e64bf1a50 files/digest-urwvn-fonts-3.0_rc3 66
+RMD160 2f634577c7936d2aa8993cb296dd07c3b84837c4 files/digest-urwvn-fonts-3.0_rc3 66
+SHA256 ccab90ee13d15d731ab124c4c36c31c2e5ace63e69d5ec181a857ca916b99a20 files/digest-urwvn-fonts-3.0_rc3 66
 MD5 af8a5f3513b51e256b3c6b5b5e6754f1 metadata.xml 217
+RMD160 fd723bd2bb1b848b1f087596e85a77c65a0d510c metadata.xml 217
+SHA256 d0bede3d3ee1ff0c249d3fe61ba7d94cf5f5dc49e8b99ac09f9b058b2bae5824 metadata.xml 217
 MD5 f7b8d55d58adebb8484ee47dbdb718ba urwvn-fonts-2.0.ebuild 588
-MD5 586fc05f6e49a4a29be48bfb69926721 urwvn-fonts-3.0_rc3.ebuild 599
+RMD160 4f0b1d2bceaf58b3bdde46bf8c2307a79847e96e urwvn-fonts-2.0.ebuild 588
+SHA256 c43a24c642c86f490339b4d1fff2d01fa9e4aef10053dd7b732081830653424e urwvn-fonts-2.0.ebuild 588
+MD5 f46b6d587de3139876f81c152733a04f urwvn-fonts-3.0_rc3.ebuild 625
+RMD160 132984c46813355b79ac471cd65724c35325ec62 urwvn-fonts-3.0_rc3.ebuild 625
+SHA256 f156ecaed8bfa57750bfe628940b20e5b6745749f180878fccf52b43fb170ba7 urwvn-fonts-3.0_rc3.ebuild 625
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHfMoCRZPokWLroQRAnPDAKCI79U2zPMXb4l19fhzSpSDwHceQQCgpFa8
+Itd1p0UWFXYRwi2lUUlWko0=
+=Jx5J
+-----END PGP SIGNATURE-----
