@@ -1,0 +1,12 @@
+# ChangeLog for media-plugins/vdr-tvonscreen
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvonscreen/ChangeLog,v 1.1 2006/03/20 16:49:45 zzam Exp $
+
+*vdr-tvonscreen-0.7.1 (20 Mar 2006)
+
+  20 Mar 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-tvonscreen-0.7.1-includes.diff,
+  +files/vdr-tvonscreen-0.7.1.diff, +metadata.xml,
+  +vdr-tvonscreen-0.7.1.ebuild:
+  Imported from gentoo.de
+

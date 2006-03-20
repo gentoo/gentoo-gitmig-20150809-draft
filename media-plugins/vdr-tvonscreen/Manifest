@@ -1,0 +1,28 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 931846e19b5ea86d8cbbd8c651d0aabd ChangeLog 472
+RMD160 06a844c691617fcf58b2787b151af8e49f54cdc2 ChangeLog 472
+SHA256 2dfc42bce72040df5fae527b78307dbfc353abbd7c175fba2ccc91d40683d822 ChangeLog 472
+MD5 b5e84c2d2347cfb30c81a21765005f7f files/digest-vdr-tvonscreen-0.7.1 262
+RMD160 a0905d422462dfad7640e9b28dcdea3049a2e637 files/digest-vdr-tvonscreen-0.7.1 262
+SHA256 b1e9350b7f15623d84391913e4caab16e1a6452b15182c1281ec93d84f567a65 files/digest-vdr-tvonscreen-0.7.1 262
+MD5 79de2334a62f4f8d9b2b484b3c3295f3 files/vdr-tvonscreen-0.7.1-includes.diff 364
+RMD160 855da04b87d6fd75c00b50a206961df63187bd45 files/vdr-tvonscreen-0.7.1-includes.diff 364
+SHA256 d9678372759402b1986e12373aaf6b979efbe9fe3c27f4b82cc05f256df13e45 files/vdr-tvonscreen-0.7.1-includes.diff 364
+MD5 39b7a3292a08b582b776a023f79631b3 files/vdr-tvonscreen-0.7.1.diff 6109
+RMD160 fae9eafbfd84bff00abd707de6d6ee9aa3e9e6e1 files/vdr-tvonscreen-0.7.1.diff 6109
+SHA256 f080f326fb530acbc54d859f4757471c0ed4d43881a8b75ea66c185c774335ce files/vdr-tvonscreen-0.7.1.diff 6109
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 bfc79505a2a5166d8455300ec90ea9ff vdr-tvonscreen-0.7.1.ebuild 568
+RMD160 f2acecf7bbc8eab243ac6ccba8f2de2df48ac92f vdr-tvonscreen-0.7.1.ebuild 568
+SHA256 6369671c15a709a23b52eda65bda0202370633c4e39636c7560c5746abaca3e5 vdr-tvonscreen-0.7.1.ebuild 568
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHt1BZfSl1Kp5KmoRAjq3AJ93HxB64sgBQrHijafELO3tq8G6TQCeLVLM
+Zsx2tMwxekr4vHZRsePekcM=
+=lzGl
+-----END PGP SIGNATURE-----
