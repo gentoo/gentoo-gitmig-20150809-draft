@@ -22,9 +22,9 @@ SHA256 30f2e95fb485ef6858d6390b8c921cd368c67a6e65b41a1f818dd4809f4c9e55 files/di
 MD5 a2e289f86fe1fe99fa499e20f921f252 files/digest-mozilla-firefox-1.5.0.1-r2 8075
 RMD160 1f6a5b75450b269ca95b7bf323b859c1005f9801 files/digest-mozilla-firefox-1.5.0.1-r2 8075
 SHA256 fe47019329dc41d4287da0a08176d62513bf7f96647b952c78c45a96b1e3cac3 files/digest-mozilla-firefox-1.5.0.1-r2 8075
-MD5 96c54e981c10bfae741965d082f73cbe files/digest-mozilla-firefox-1.5.0.1-r3 8075
-RMD160 f4e9b7c1951026f93ac1606dd3491317bf8e6dc0 files/digest-mozilla-firefox-1.5.0.1-r3 8075
-SHA256 775dabd5fe06cf5ae8632ee98c9d7726e2194e2d4cc55a1c54b6c7aff3561ef1 files/digest-mozilla-firefox-1.5.0.1-r3 8075
+MD5 2eb764d26c64af3e9925957c1472bbf2 files/digest-mozilla-firefox-1.5.0.1-r3 8075
+RMD160 87b34063b980be1d73afcfcba6e51ad5c31a0690 files/digest-mozilla-firefox-1.5.0.1-r3 8075
+SHA256 33ecb23c12444f869aad9c4780942be6c9e24ffbe0fc65aed8bef0075fb8040f files/digest-mozilla-firefox-1.5.0.1-r3 8075
 MD5 6a7a2240dc5864e7f8ee444e34e84461 files/firefox.1 2538
 RMD160 4564007d7d5345e9ab09c941015e3cdb78913835 files/firefox.1 2538
 SHA256 3483439a73c74b818bdde98c15223b6d3fcfe78e3ad974fb35f197cf3ad614e7 files/firefox.1 2538
@@ -58,6 +58,6 @@ SHA256 3d63df219c0119abd3a835bb8cf7bf55b250b428e8647628b82fc4145e8780b6 mozilla-
 MD5 a2dbd8316207710165cfde34be8efae0 mozilla-firefox-1.5.0.1-r2.ebuild 8660
 RMD160 8075fa4d9a76c7d4cbf4617b19802b3decb22682 mozilla-firefox-1.5.0.1-r2.ebuild 8660
 SHA256 bdcc6bbbca462928df2252f5cbadd053a27371c1c8097c80b614da681d6d39ad mozilla-firefox-1.5.0.1-r2.ebuild 8660
-MD5 112b1fcae2b35fbfc345823766065b65 mozilla-firefox-1.5.0.1-r3.ebuild 8659
-RMD160 a972f66914113ee06e644a4126aa09e5a7f287eb mozilla-firefox-1.5.0.1-r3.ebuild 8659
-SHA256 206c2bcc8d9a48b5cb111458529dc30ee22ef658f187b2c6064b3d0d7514d1a9 mozilla-firefox-1.5.0.1-r3.ebuild 8659
+MD5 78c507e32efb5360d380eba23d87d3da mozilla-firefox-1.5.0.1-r3.ebuild 8709
+RMD160 942dc502dc3f44e01d1b9385791aeaed27d7bc2b mozilla-firefox-1.5.0.1-r3.ebuild 8709
+SHA256 31c68ab549386ea431c5335440feccc90b0eb7c6c56493e7f806cfef45ef4c37 mozilla-firefox-1.5.0.1-r3.ebuild 8709

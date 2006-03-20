@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1-r3.ebuild,v 1.1 2006/03/19 02:24:02 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1-r3.ebuild,v 1.2 2006/03/20 15:56:26 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -88,7 +88,9 @@ src_unpack() {
 			${S}/security/coreconf/arch.mk
 	fi
 
-	eautoreconf || die "failed  running eautoreconf"
+	WANT_AUTOCONF="2.13" \
+		WANT_AUTOMAKE="2.13" \
+		eautoreconf || die "failed  running eautoreconf"
 }
 
 src_compile() {
