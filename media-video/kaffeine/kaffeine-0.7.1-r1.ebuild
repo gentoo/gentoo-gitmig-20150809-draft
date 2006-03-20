@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.7.1-r1.ebuild,v 1.2 2006/01/11 22:45:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.7.1-r1.ebuild,v 1.3 2006/03/20 00:26:58 flameeyes Exp $
 
 inherit eutils kde
 
@@ -28,7 +28,8 @@ DEPEND="${RDEPEND}
 # the dependency on xorg-x11 is meant to avoid bug #59746
 
 PATCHES="${FILESDIR}/${P}-systemproto.patch
-	${FILESDIR}/${P}-xinerama.patch"
+	${FILESDIR}/${P}-xinerama.patch
+	${FILESDIR}/${P}-respectflags.patch"
 
 need-kde 3.2
 
