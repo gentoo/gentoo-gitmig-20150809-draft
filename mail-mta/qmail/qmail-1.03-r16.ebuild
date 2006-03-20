@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.51 2006/02/19 23:59:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.52 2006/03/20 21:39:30 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -362,6 +362,9 @@ src_install() {
 	sendmail tcp-env qreceipt qsmhook qbiff forward preline \
 	condredirect bouncesaying except maildirmake maildir2mbox \
 	maildirwatch qail elq pinq config-fast qmail-newbrt
+
+	# Don't install this one, it's provided by ucspi-tcp, bug #127005
+	rm tcp-environ.5
 
 	into /usr
 	einfo "Installing manpages"
