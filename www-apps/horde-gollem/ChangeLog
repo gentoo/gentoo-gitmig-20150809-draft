@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/horde-gollem
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/ChangeLog,v 1.2 2005/12/12 01:30:38 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/ChangeLog,v 1.3 2006/03/20 21:09:47 gustavoz Exp $
+
+*horde-gollem-1.0.2 (20 Mar 2006)
+
+  20 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  +horde-gollem-1.0.2.ebuild:
+  Revbump to properly work with horde 3.1 wrt #126435
 
 *horde-gollem-1.0.1 (12 Dec 2005)
 
