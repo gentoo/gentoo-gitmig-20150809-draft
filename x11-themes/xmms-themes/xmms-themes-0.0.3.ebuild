@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.3.ebuild,v 1.15 2006/03/08 19:24:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.3.ebuild,v 1.16 2006/03/20 00:17:31 halcy0n Exp $
 
 IUSE=""
 
@@ -105,7 +105,7 @@ SLOT="0"
 LICENSE="freedist"
 KEYWORDS="alpha amd64 ~hppa ia64 ppc sparc x86"
 
-DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND="media-sound/xmms"
 
 src_unpack() {
