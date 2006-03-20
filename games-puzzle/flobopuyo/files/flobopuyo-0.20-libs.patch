@@ -1,0 +1,43 @@
+Index: flobopuyo-0.20/Makefile
+===================================================================
+--- flobopuyo-0.20.orig/Makefile
++++ flobopuyo-0.20/Makefile
+@@ -49,7 +49,8 @@ LDFLAGS=
+ 
+ ifneq ($(PLATFORM), $(CYGWIN_VERSION))
+ CFLAGS:=$(CFLAGS) `$(SDL_CONFIG) --cflags` -I/sw/include
+-LDFLAGS:=$(LDFLAGS) `$(SDL_CONFIG) --cflags --libs`
++LDFLAGS:=$(LDFLAGS)
++LIBS:=$(LIBS) `$(SDL_CONFIG) --cflags --libs`
+ endif
+ 
+ HFILES= HiScores.h IosException.h IosImgProcess.h IosVector.h PuyoCommander.h\
+@@ -78,7 +79,8 @@ endif
+ # Win32
+ ifeq ($(PLATFORM), $(CYGWIN_VERSION))
+ CFLAGS:=$(CFLAGS) -mno-cygwin -mwindows -DWIN32 -DYY_NEVER_INTERACTIVE=1 -I$(WINSDLINCLUDE) 
+-LDFLAGS:=$(LDFLAGS) -L$(WINSDLDEVLIBS) -lmingw32 -ljpeg -lzlib -lpng1 -lSDL_image -lSDL_mixer -lSDL -lSDLmain 
++LDFLAGS:=$(LDFLAGS) -L$(WINSDLDEVLIBS)
++LIBS:=$(LIBS) -lmingw32 -ljpeg -lzlib -lpng1 -lSDL_image -lSDL_mixer -lSDL -lSDLmain 
+ endif
+ 
+ ifeq ($(ENABLE_AUDIO), true)
+@@ -90,7 +92,8 @@ ifeq ($(ENABLE_OPENGL), true)
+ CFLAGS:=$(CFLAGS) -DHAVE_OPENGL=1
+ OBJFILES:=$(OBJFILES) glSDL.o
+ ifeq ($(PLATFORM), Linux)
+-LDFLAGS:=$(LDFLAGS) -lGL
++LDFLAGS:=$(LDFLAGS)
++LIBS:=$(LIBS) -lGL
+ endif
+ endif
+ 
+@@ -110,7 +113,7 @@ CXXFLAGS=${CFLAGS}
+ all: prelude flobopuyo
+ 
+ flobopuyo: ${OBJFILES}
+-	@echo "[flobopuyo]" && g++ $(CFLAGS) $(LDFLAGS) -o flobopuyo -lSDL_mixer -lSDL_image ${OBJFILES}
++	@echo "[flobopuyo]" && $(CXX) $(CFLAGS) $(LDFLAGS) $(OBJFILES) -o flobopuyo $(LIBS) -lSDL_mixer -lSDL_image
+ 	@echo "--------------------------------------"
+ 	@echo " Compilation finished"
+ 	@[ "x`cat WARNINGS | wc -l`" != "x0" ] && echo -e "--------------------------------------\n There have been some warnings:\n" && cat WARNINGS && rm -f WARNINGS && echo "--------------------------------------" || true
