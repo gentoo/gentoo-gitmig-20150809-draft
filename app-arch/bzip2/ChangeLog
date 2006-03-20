@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.38 2006/03/20 13:32:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.39 2006/03/20 13:59:45 gustavoz Exp $
+
+  20 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> bzip2-1.0.3-r6.ebuild:
+  Stable on sparc wrt #126891
 
   20 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> bzip2-1.0.3-r6.ebuild:
   Make also bzip2recover respect LDFLAGS.
