@@ -1,6 +1,13 @@
 # ChangeLog for media-video/coriander
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/ChangeLog,v 1.4 2005/11/03 16:12:50 seemant Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/ChangeLog,v 1.5 2006/03/20 18:30:00 seemant Exp $
+
+*coriander-2.0.0_pre5 (20 Mar 2006)
+
+  20 Mar 2006; Seemant Kulleen <seemant@gentoo.org>
+  +coriander-2.0.0_pre5.ebuild:
+  version bump to latest upstream release and will only work with the pre6
+  series from libdc1394
 
 *coriander-2.0.0_pre4 (03 Nov 2005)
 
