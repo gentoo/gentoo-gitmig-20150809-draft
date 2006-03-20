@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.3.0.ebuild,v 1.4 2006/03/16 18:51:38 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.3.0.ebuild,v 1.5 2006/03/20 15:59:43 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module
 
@@ -112,6 +112,9 @@ src_compile() {
 		--with-apr-util=/usr \
 		--disable-experimental-libtool \
 		--disable-mod-activation || die "econf failed"
+
+	# Respect the user LDFLAGS
+	export EXTRA_LDFLAGS="${LDFLAGS}"
 
 	# Build subversion, but do it in a way that is safe for parallel builds.
 	# Also apparently the included apr has a libtool that doesn't like -L flags.
