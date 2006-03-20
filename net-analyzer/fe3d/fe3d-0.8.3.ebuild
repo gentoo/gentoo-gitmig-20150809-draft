@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.8.3.ebuild,v 1.2 2006/02/25 23:56:51 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.8.3.ebuild,v 1.3 2006/03/20 00:13:19 halcy0n Exp $
 
 inherit versionator
 
@@ -15,10 +15,12 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl
 	media-libs/sdl-ttf
 	media-libs/libpng
 	>=dev-libs/xerces-c-2.5.0"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}/${PN}"
 
