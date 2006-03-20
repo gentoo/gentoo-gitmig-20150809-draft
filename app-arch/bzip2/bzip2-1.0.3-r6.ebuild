@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.3-r6.ebuild,v 1.1 2006/02/06 23:20:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.3-r6.ebuild,v 1.2 2006/03/20 03:25:13 vapier Exp $
 
 inherit eutils multilib toolchain-funcs flag-o-matic
 
@@ -26,6 +26,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.0.2-progress.patch
 	epatch "${FILESDIR}"/${PN}-1.0.2-chmod.patch
 	epatch "${FILESDIR}"/${P}-no-test.patch
+	epatch "${FILESDIR}"/${P}-makefile-LDFLAGS.patch #126826
 	sed -i -e 's:\$(PREFIX)/man:\$(PREFIX)/share/man:g' Makefile || die "sed manpath"
 
 	# - Generate symlinks instead of hardlinks
