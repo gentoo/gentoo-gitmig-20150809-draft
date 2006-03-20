@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.24 2006/03/17 22:38:04 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.25 2006/03/20 03:12:45 seemant Exp $
+
+  20 Mar 2006; Seemant Kulleen <seemant@gentoo.org>
+  gnome-python-extras-2.14.0.ebuild:
+  disabling make check for now
 
 *gnome-python-extras-2.14.0 (17 Mar 2006)
 
