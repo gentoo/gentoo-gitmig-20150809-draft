@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.66 2006/03/20 14:13:12 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.67 2006/03/20 14:21:30 hattya Exp $
+
+*anthy-7500 (20 Mar 2006)
+
+  20 Mar 2006; Akinori Hattori <hattya@gentoo.org> +anthy-7500.ebuild:
+  new upstream release.
 
   20 Mar 2006; Akinori Hattori <hattya@gentoo.org> anthy-7100b-r1.ebuild:
   stable on x86.
