@@ -1,0 +1,12 @@
+--- yelp-2.14.0/src/Makefile.am	2006-01-19 14:01:20.000000000 -0500
++++ yelp-2.14.0.new/src/Makefile.am	2006-03-20 09:33:06.000000000 -0500
+@@ -68,7 +68,8 @@
+ 	uriloader	\
+ 	content		\
+ 	gfx		\
+-	necko
++	necko		\
++	nspr
+ 
+ yelp_CPPFLAGS =									\
+ 	-I$(top_srcdir)								\
