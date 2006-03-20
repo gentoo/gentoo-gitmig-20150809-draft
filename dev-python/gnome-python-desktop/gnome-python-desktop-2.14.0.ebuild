@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.14.0.ebuild,v 1.3 2006/03/19 18:56:18 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.14.0.ebuild,v 1.4 2006/03/20 03:27:15 seemant Exp $
 
 inherit distutils gnome2 python
 
@@ -34,6 +34,10 @@ RDEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.7"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL MAINTAINERS NEWS README"
+
+src_test() {
+	einfo "skipping tests for now"
+}
 
 src_install() {
 	gnome2_src_install
