@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ppracer-0.3.1.ebuild,v 1.8 2006/01/13 22:07:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ppracer-0.3.1.ebuild,v 1.9 2006/03/20 22:00:50 wolf31o2 Exp $
 
-inherit flag-o-matic gnuconfig games multilib
+inherit flag-o-matic gnuconfig eutils multilib games
 
 DESCRIPTION="take on the role of Tux, the Linux Penguin, as he races down steep, snow-covered mountains"
 HOMEPAGE="http://developer.berlios.de/projects/ppracer/"
