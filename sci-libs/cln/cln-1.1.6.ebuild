@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.1.6.ebuild,v 1.2 2005/05/15 19:05:14 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.1.6.ebuild,v 1.3 2006/03/20 15:31:57 markusle Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -21,6 +21,9 @@ DEPEND="dev-libs/gmp"
 src_compile() {
 	# at least with gcc 2.95 and 3.1, cln won't like -O3 flag...
 	replace-flags -O[3..9] -O2
+
+	# backported from cln-1.1.10 ebuild; see bug 112741
+	replace-flags -Os -O2
 
 	# and with gcc 2.95.3, it doesn't like funroll-loops as well...
 	if [ "$( gcc-fullversion )" == "2.95.3" ]; then
