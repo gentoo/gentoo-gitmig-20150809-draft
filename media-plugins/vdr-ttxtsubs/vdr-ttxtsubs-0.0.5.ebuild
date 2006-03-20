@@ -1,8 +1,10 @@
 # Copyright 2004-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ttxtsubs/vdr-ttxtsubs-0.0.5.ebuild,v 1.2 2006/03/05 11:34:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ttxtsubs/vdr-ttxtsubs-0.0.5.ebuild,v 1.3 2006/03/20 15:32:26 zzam Exp $
 
 inherit vdr-plugin eutils
+
+IUSE=""
 
 PATCHNAME=${P}-directors-cut
 
@@ -12,7 +14,7 @@ SRC_URI="ftp://ftp.nada.kth.se/pub/home/ragge/vdr/${P}.tgz
 		http://www.saunalahti.fi/~rahrenbe/vdr/patches/${PATCHNAME}.diff.gz
 		mirror://vdrfiles/${PN}/${P}.tgz
 		mirror://vdrfiles/${PN}/${PATCHNAME}.diff.gz"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
 
