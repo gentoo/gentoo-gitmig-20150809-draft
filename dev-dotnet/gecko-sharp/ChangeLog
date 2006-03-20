@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gecko-sharp
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.38 2005/11/14 15:38:32 herbs Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.39 2006/03/20 00:27:49 metalgod Exp $
+
+  20 Mar 2006; Luis Medinas <metalgod@gentoo.org> gecko-sharp-0.6.ebuild:
+  Stable on amd64.
 
   14 Nov 2005; Herbie Hopkins <herbs@gentoo.org> gecko-sharp-0.6.ebuild:
   Add inherit multilib
