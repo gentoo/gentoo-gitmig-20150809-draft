@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.41 2006/03/06 16:23:03 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.42 2006/03/20 16:09:33 lisa Exp $
+
+*ccache-2.4-r1 (20 Mar 2006)
+
+  20 Mar 2006; Lisa Seelye <lisa@gentoo.org>
+  +files/ccache-2.4-respectflags.patch, +ccache-2.4-r1.ebuild:
+  ccache-2.4-respectflags.patch from bug #126875 to respect  user defined LDFLAGS
 
   06 Mar 2006; Lisa Seelye <lisa@gentoo.org> ccache-2.2.ebuild,
   ccache-2.3.ebuild, ccache-2.4.ebuild:
