@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c2d6c5026c4c45e186e3151e64ca6cdc ChangeLog 992
 RMD160 bd85dd9e7d6054e063f72234e389da9bc92759b7 ChangeLog 992
 SHA256 935147af09a4cfb947de0c272f25423d43fbfe59fb3c8aeef9242143cbba6575 ChangeLog 992
@@ -10,3 +13,10 @@ SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata
 MD5 033cd53e9d56279c18ecbf0081aab3d7 vdr-streamdev-server-0.3.3_pre20051219.ebuild 1057
 RMD160 d10a7b3ba5c23d564dd42c50e227e33ecda06297 vdr-streamdev-server-0.3.3_pre20051219.ebuild 1057
 SHA256 9adcaf597ebbc6a305ba76ec467d85d6b29689dab92e82e5766e552a537a76d4 vdr-streamdev-server-0.3.3_pre20051219.ebuild 1057
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEHtOlZfSl1Kp5KmoRAhorAJ4n197Dtvhgb8LoiKWnyGUiT6/45gCg3PyE
+BWuTP8QLCelwrwxgL9kyqhk=
+=79ee
+-----END PGP SIGNATURE-----
