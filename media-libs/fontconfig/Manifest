@@ -1,22 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8ccb1a52a25319624fc8ce190ed4d96e ChangeLog 9549
+RMD160 791edc8a5154b93c65ad7751228f4c27c08f3b40 ChangeLog 9549
+SHA256 aa2dedf05b80f0a6b3a97e2a479aa196ccc7296b00e3d03890e347f2f4391a7c ChangeLog 9549
 MD5 d2b7ff87a89e51efb73ac1aaaa9a4957 files/digest-fontconfig-2.2.2 68
+RMD160 6ecec0aa3a722127b078f69c873677cc695bbadd files/digest-fontconfig-2.2.2 68
+SHA256 29107d3474bd814e27a8b065e772d6373ced9477657207b14683b4a6c4127619 files/digest-fontconfig-2.2.2 68
 MD5 343e067196a814af79985df16682b8ab files/digest-fontconfig-2.2.3 68
+RMD160 b78d092616492734a3cf084c9f12ae7d24f9370b files/digest-fontconfig-2.2.3 68
+SHA256 6279d05d4c738283365c60a3a551157a8237d2423c12b9c087a621900273025c files/digest-fontconfig-2.2.3 68
 MD5 10083207a4ef051d20d11e0838bdae94 files/digest-fontconfig-2.3.2 68
+RMD160 b7b2cd4916c2b16464ef99b60f694b2d183e3194 files/digest-fontconfig-2.3.2 68
+SHA256 bcf0550be26b78c15d8112b91ac08ec11e0645db20bd4acf0e6896039b66aeea files/digest-fontconfig-2.3.2 68
 MD5 37e60cdff43bf3f04e9db8931e0d1f47 files/patch/fontconfig-2.1-slighthint.patch 2171
+RMD160 58ce193f26b0b14ae5da950a1dbfbadf733577b9 files/patch/fontconfig-2.1-slighthint.patch 2171
+SHA256 d356ed4533d1d21c8d326fb183199c1d554888a5a8dd1e4883c931bcb0b84dc4 files/patch/fontconfig-2.1-slighthint.patch 2171
 MD5 1636083efd15746d8f194aff41aa6e02 files/patch/fontconfig-2.2-blacklist.patch 1216
+RMD160 9603cd0241b4204bbc22305b8d4d03753c875937 files/patch/fontconfig-2.2-blacklist.patch 1216
+SHA256 e63b6663bb65ba054aa56f553db466d8a89b5a5937c8c03524be9205707ef019 files/patch/fontconfig-2.2-blacklist.patch 1216
 MD5 4b5453071b61ecef4bb530b0bca695e1 files/patch/fontconfig-2.2-local_fontdir-r1.patch 487
+RMD160 b458422ed36d28471eeb7054595815630984e87a files/patch/fontconfig-2.2-local_fontdir-r1.patch 487
+SHA256 c4d47bf4d6f2f11612f0de54375ee45099a7c8c4b9ccfe9a1aaf0ba0bf6b7fe8 files/patch/fontconfig-2.2-local_fontdir-r1.patch 487
 MD5 4d77167b56a7dff0d7c7b5b8168b85ba files/patch/fontconfig-2.2-remove_subpixel_test.patch 441
+RMD160 00b5baf29ab14998111c751c45c49f68d4bb323f files/patch/fontconfig-2.2-remove_subpixel_test.patch 441
+SHA256 efa79cf65ccbfe2255fddb3ba2fd38dcb38fca6768821daf38f7928f6bc3694d files/patch/fontconfig-2.2-remove_subpixel_test.patch 441
 MD5 6f36d026d3722add6b265c408667c502 fontconfig-2.2.2.ebuild 2697
-MD5 51ec8bc79ae06d9c87c59006be0b4136 fontconfig-2.2.3.ebuild 2747
-MD5 d964d025ea30311b8831536e7533707d fontconfig-2.3.2.ebuild 2133
+RMD160 f63ca3379cf7d92e5271c0664cb05b024279ef9a fontconfig-2.2.2.ebuild 2697
+SHA256 64bd58e2373b6f15e887b191d3ba2f91fd9c8dfc9c22983c3c4601ab3d9a43de fontconfig-2.2.2.ebuild 2697
+MD5 7fe2a6a842745d66817206e354bc47d8 fontconfig-2.2.3.ebuild 2752
+RMD160 b3cdaddad6fc7b8e50fee6e987a804d2f66dee9b fontconfig-2.2.3.ebuild 2752
+SHA256 3fbb8735612c0fc1fbc95732a22acf393f047e022de124775efd06f98b257f35 fontconfig-2.2.3.ebuild 2752
+MD5 b809568b316d96619a6b2616c47e0ca8 fontconfig-2.3.2.ebuild 2135
+RMD160 918a2b12a82b846a0b2b78dc6f2f015b48428806 fontconfig-2.3.2.ebuild 2135
+SHA256 46861740ac7ad14ac0e8608bc432cae46fcca96632bc84efcaaeefc90dbe714e fontconfig-2.3.2.ebuild 2135
 MD5 ae7171ca850597a2455b8b10c72a8de1 metadata.xml 419
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDszlY2+ySkm8kpY0RAp69AJ94Tu8/ZadTu0rjd6rMxmvt/yavNQCeL/ZF
-CArVmjb4vXgINGMXzdtawiw=
-=O5S9
------END PGP SIGNATURE-----
+RMD160 898b8233ab233060d8137dadf28c291b83a65500 metadata.xml 419
+SHA256 859faa6fc0c008e92a6432f0fd50a760170d724b15997e557d5d73088277c4db metadata.xml 419

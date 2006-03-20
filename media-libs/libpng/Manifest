@@ -22,9 +22,9 @@ SHA256 1b44de20e24aebaf27623d0948b9d6cc7d60109315d0bc22f072cf55953ad304 files/li
 MD5 7443cfcd027ad293e56ec7bed76ee21c files/macos.patch 589
 RMD160 657686efc13a74dbf7247a5a00e5a351185e3a1a files/macos.patch 589
 SHA256 078a1410fdaea45d238eedb46500d49dae301f051f3d01db0550e718b20eed5d files/macos.patch 589
-MD5 738b6bb5594b020c0841918279609033 libpng-1.2.8-r1.ebuild 1842
-RMD160 1946a6560a8789db36bdc279aaff3502ca3d1a1c libpng-1.2.8-r1.ebuild 1842
-SHA256 d16617d1c7718054307dc44cb1b1ef7f45fb7f21d24233ed417d8eecc7b433ee libpng-1.2.8-r1.ebuild 1842
+MD5 4ac1936eb6405fe2bfddc578965ab071 libpng-1.2.8-r1.ebuild 1836
+RMD160 226da189c4f57c33028f227c9298a69c2f09524c libpng-1.2.8-r1.ebuild 1836
+SHA256 5ee730957b61c50b3aa5938bbf0eada02f6caaaafa00925e7b71fbc4c17ab7eb libpng-1.2.8-r1.ebuild 1836
 MD5 a6a8b653764ecf6efa311404db62388e libpng-1.2.8.ebuild 1818
 RMD160 d52fa31b3d68cab5d998e66bd48b440824b626fd libpng-1.2.8.ebuild 1818
 SHA256 ac11e228c265207ea91008bdeecb0bf341392704a5ba53a67f1b7a1c779e9584 libpng-1.2.8.ebuild 1818
@@ -34,7 +34,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEHhay2+ySkm8kpY0RAtpyAKCydRxiPgKpa94rCRuQ1qz4+lFIfQCdGAhq
-dttduWl5EwrhpGv+BIZgWaI=
-=kq8S
+iD8DBQFEHhdJ2+ySkm8kpY0RAvihAJ0Tm6cxPx1ZFmlECCcuattV0NtrPwCfWnA5
+viWOIndMhfxKxMSnn9IITvM=
+=Qz6v
 -----END PGP SIGNATURE-----
