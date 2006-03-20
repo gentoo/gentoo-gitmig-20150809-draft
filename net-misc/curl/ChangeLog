@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.67 2006/03/01 11:49:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.68 2006/03/20 15:18:22 solar Exp $
+
+*curl-7.15.3 (20 Mar 2006)
+*curl-7.15.1-r1 (20 Mar 2006)
+
+  20 Mar 2006; <solar@gentoo.org> +files/curl-7.15-libtftp.patch,
+  -curl-7.13.1.ebuild, -curl-7.13.2.ebuild, -curl-7.15.0.ebuild,
+  +curl-7.15.1-r1.ebuild, -curl-7.15.2.ebuild, +curl-7.15.3.ebuild:
+  - security bump for tftp vuln. CVE-2006-1061 - bug #125766
 
 *curl-7.15.2 (01 Mar 2006)
 

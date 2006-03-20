@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.0.ebuild,v 1.18 2005/11/20 00:45:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.1-r1.ebuild,v 1.1 2006/03/20 15:18:23 solar Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -12,9 +12,7 @@ SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
 
 LICENSE="MIT X11"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 s390 sparc x86"
-# Original keywords (net-dns/c-ares needs to be keyworded!)
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc-macos ~ppc64 ~s390 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc-macos ppc64 ~s390 ~sh sparc x86"
 IUSE="ssl ipv6 ldap ares gnutls idn kerberos krb4 test"
 
 RDEPEND="gnutls? ( net-libs/gnutls )
@@ -34,8 +32,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-versionnumber.patch
-	epunt_cxx
+	cd ${S}
+	epatch "${FILESDIR}"/curl-7.15-libtftp.patch
 }
 
 src_compile() {
@@ -86,8 +84,8 @@ src_install() {
 	insinto /usr/share/aclocal
 	doins docs/libcurl/libcurl.m4
 
-	insinto /usr/lib/pkgconfig
-	doins libcurl.pc
+	#insinto /usr/lib/pkgconfig
+	#doins libcurl.pc
 
 	dodoc CHANGES README
 	dodoc docs/FEATURES docs/INTERNALS docs/LIBCURL
