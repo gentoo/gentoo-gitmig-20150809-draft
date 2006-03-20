@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-bonuspack-mega
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-mega/ChangeLog,v 1.3 2006/03/17 21:16:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-mega/ChangeLog,v 1.4 2006/03/20 19:31:49 wolf31o2 Exp $
+
+  20 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -ut2004-bonuspack-mega-1.ebuild, ut2004-bonuspack-mega-1-r1.ebuild:
+  Changed DESCRIPTION to remove redundant 'pack' and cleaning up older ebuilds.
 
   17 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   +ut2004-bonuspack-mega-1-r1.ebuild:

@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-mega/ut2004-bonuspack-mega-1-r1.ebuild,v 1.1 2006/03/17 21:16:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-mega/ut2004-bonuspack-mega-1-r1.ebuild,v 1.2 2006/03/20 19:31:49 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
 MY_P="ut2004megapack-linux.tar.bz2"
 MY_PN="Megapack"
 
-DESCRIPTION="Unreal Tournament 2004 - Megapack bonus pack"
+DESCRIPTION="Unreal Tournament 2004 - Mega bonus pack"
 HOMEPAGE="http://www.unrealtournament2004.com/"
 SRC_URI="mirror://3dgamers/unrealtourn2k4/Missions/${MY_P}
 	http://0day.icculus.org/ut2004/${MY_P}
@@ -16,7 +16,7 @@ SRC_URI="mirror://3dgamers/unrealtourn2k4/Missions/${MY_P}
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 RESTRICT="nostrip nomirror"
 IUSE=""
 
