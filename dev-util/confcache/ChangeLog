@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/confcache
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confcache/ChangeLog,v 1.9 2006/03/13 10:06:37 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confcache/ChangeLog,v 1.10 2006/03/20 13:57:23 flameeyes Exp $
+
+*confcache-0.4.2-r1 (20 Mar 2006)
+
+  20 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/confcache-0.4.2-argquoting.patch, metadata.xml,
+  confcache-0.4.2.ebuild, +confcache-0.4.2-r1.ebuild:
+  Add patch to quote ./configure arguments fixing bug #126898 (hopefully).
+  Also update HOMEPAGE and SRC_URI with current ferringb's home.
 
   13 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> confcache-0.4.2.ebuild:
   Add ~alpha keyword
