@@ -1,51 +1,59 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r7.ebuild,v 1.2 2006/03/20 19:37:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.3.19414-r1.ebuild,v 1.1 2006/03/20 19:37:54 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
-# to download VM Ware.  The agreeing to a licence is part of the configure step
+# to download VMWare. The agreeing to a licence is part of the configure step
 # which the user must run manually.
 
-inherit toolchain-funcs eutils
+inherit eutils
 
 S=${WORKDIR}/vmware-distrib
-ANY_ANY="vmware-any-any-update96"
-NP="VMware-workstation-3.2.1-2242"
+ANY_ANY="vmware-any-any-update98"
+NP="VMware-workstation-4.5.3-19414"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
-SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
-	http://www.vmware.com/download1/software/${NP}.tar.gz
-	ftp://download1.vmware.com/pub/software/${NP}.tar.gz
-	http://vmware-chil.www.conxion.com/software/${NP}.tar.gz
-	http://vmware-heva.www.conxion.com/software/${NP}.tar.gz
-	http://vmware.wespe.de/software/${NP}.tar.gz
-	ftp://vmware.wespe.de/pub/software/${NP}.tar.gz
+SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
+	http://download3.vmware.com/software/wkst/${NP}.tar.gz
+	http://download.vmware.com/htdocs/software/wkst/${NP}.tar.gz
+	http://www.vmware.com/download1/software/wkst/${NP}.tar.gz
+	ftp://download1.vmware.com/pub/software/wkst/${NP}.tar.gz
+	http://vmware-chil.www.conxion.com/software/wkst/${NP}.tar.gz
+	http://vmware-heva.www.conxion.com/software/wkst/${NP}.tar.gz
+	http://vmware.wespe.de/software/wkst/${NP}.tar.gz
+	ftp://vmware.wespe.de/pub/software/wkst/${NP}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
-	http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz
+	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
 	mirror://gentoo/vmware.png"
 
 LICENSE="vmware"
-SLOT="0"
-KEYWORDS="-* x86"
 IUSE=""
+SLOT="0"
+KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="nostrip"
 
-DEPEND=">=dev-lang/perl-5
-	virtual/os-headers"
+DEPEND="virtual/os-headers"
 
+# vmware-workstation should not use virtual/libc as this is a
+# precompiled binary package thats linked to glibc.
 RDEPEND="sys-libs/glibc
-	|| (
-		(
-			x11-libs/libXrandr
-			x11-libs/libXcursor
-			x11-libs/libXinerama
-			x11-libs/libXi )
-		virtual/x11 )
-	virtual/xft
+	amd64? (
+		app-emulation/emul-linux-x86-gtklibs )
+	x86? (
+		|| (
+			(
+				x11-libs/libXrandr
+				x11-libs/libXcursor
+				x11-libs/libXinerama
+				x11-libs/libXi )
+			virtual/x11 )
+		virtual/xft )
+	>=dev-lang/perl-5
 	!app-emulation/vmware-player
-	media-libs/gdk-pixbuf"
+	sys-apps/pciutils"
+#	>=sys-apps/baselayout-1.11.14"
 
 dir=/opt/vmware/workstation
 Ddir=${D}/${dir}
@@ -57,42 +65,35 @@ pkg_setup() {
 }
 
 src_unpack() {
-	check_KV
 	unpack ${NP}.tar.gz
-	if [ "${KV:0:3}" == "2.6" ] || [ "${KV:0:3}" == "2.5" ] ; then
-		unpack ${ANY_ANY}.tar.gz
-		mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
-	fi
-}
-
-src_compile() {
-	has_version '<sys-libs/glibc-2.3.2' \
-		&& GLIBC_232=0 \
-		|| GLIBC_232=1
-
-	if [ ${GLIBC_232} -eq 1 ] ; then
-		$(tc-getCC) -W -Wall -shared -o vmware-glibc-2.3.2-compat.so \
-			${FILESDIR}/${PV}/vmware-glibc-2.3.2-compat.c \
-			|| die "could not make module"
-	else
-		return 0
-	fi
+	cd ${S}
+	# Patch to resolve problems with VMware finding its distributed libraries.
+	# Patch submitted to bug #59035 by Georgi Georgiev <chutz@gg3.net>
+	epatch ${FILESDIR}/${P}-librarypath.patch
+	unpack ${ANY_ANY}.tar.gz
+	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
+	cd ${S}/${ANY_ANY}
+	chmod 755 ../lib/bin/vmware ../bin/vmnet-bridge ../lib/bin/vmware-vmx ../lib/bin-debug/vmware-vmx
+	# vmware any96 still doesn't patch the vmware binary
+	#./update vmware ../lib/bin/vmware || die
+	./update bridge ../bin/vmnet-bridge || die
+	./update vmx ../lib/bin/vmware-vmx || die
+	./update vmxdebug ../lib/bin-debug/vmware-vmx || die
 }
 
 src_install() {
-	# lets make gcc happy regardless of what version we're using
-	epatch ${FILESDIR}/${PV}/vmware-config.pl-gcc-generalized.patch
-
 	dodir ${dir}/bin
 	cp -pPR bin/* ${Ddir}/bin
 
-	dodir ${Ddir}/lib
-	cp -pPR lib/* ${Ddir}/lib
+	dodir ${dir}/lib
+	cp -dr lib/* ${Ddir}/lib
 	# Since with Gentoo we compile everthing it doesn't make sense to keep
 	# the precompiled modules arround. Saves about 4 megs of disk space too.
 	rm -rf ${Ddir}/lib/modules/binary
-	# We also remove libgdk_pixbuf stuff, to resolve bug #81344.
-	rm -rf ${Ddir}/lib/lib/libgdk_pixbuf.so.2
+	# We also remove the rpath libgdk_pixbuf stuff, to resolve bug #81344.
+	perl -pi -e 's#/tmp/rrdharan/out#/opt/vmware/null/#sg' \
+		${Ddir}/lib/lib/libgdk_pixbuf.so.2/lib{gdk_pixbuf.so.2,pixbufloader-{xpm,png}.so.1.0.0} \
+		|| die "Removing rpath"
 	# We set vmware-vmx and vmware-ping suid
 	chmod u+s ${Ddir}/bin/vmware-ping
 	chmod u+s ${Ddir}/lib/bin/vmware-vmx
@@ -106,10 +107,10 @@ src_install() {
 	doman ${S}/man/man1/vmware.1.gz || die "doman"
 
 	# vmware service loader
-	newinitd ${FILESDIR}/${PV}/vmware vmware || die "newinitd"
+	newinitd ${FILESDIR}/vmware.rc vmware || die "newinitd"
 
 	# vmware enviroment
-	doenvd ${FILESDIR}/${PV}/90vmware-workstation || die "doenvd"
+	doenvd ${FILESDIR}/90vmware-workstation || die "doenvd"
 
 	dodir /etc/vmware/
 	cp -pPR etc/* ${D}/etc/vmware/
@@ -122,7 +123,7 @@ src_install() {
 	dodir /etc/vmware/init.d/rc4.d
 	dodir /etc/vmware/init.d/rc5.d
 	dodir /etc/vmware/init.d/rc6.d
-	cp -pPR installer/services.sh ${D}/etc/vmware/init.d/vmware
+	cp -pPR installer/services.sh ${D}/etc/vmware/init.d/vmware || die
 	dosed 's/mknod -m 600/mknod -m 660/' /etc/vmware/init.d/vmware || die
 	dosed '/c 119 "$vHubNr"/ a\
 		chown root:vmware /dev/vmnet*\
@@ -139,6 +140,9 @@ src_install() {
 	doicon ${DISTDIR}/vmware.png || die
 
 	make_desktop_entry vmware "VMWare Workstation" vmware.png
+
+	dodir /usr/bin
+	dosym ${dir}/bin/vmware /usr/bin/vmware
 
 	# this removes the user/group warnings
 	chown -R root:0 ${D} || die
@@ -165,19 +169,6 @@ src_install() {
 	echo "answer RUN_CONFIGURATOR no" >> ${locations}
 	echo "answer INITDIR /etc/vmware/init.d" >> ${locations}
 	echo "answer INITSCRIPTSDIR /etc/vmware/init.d" >> ${locations}
-
-	if [ ${GLIBC_232} -eq 1 ] ; then
-		dolib.so vmware-glibc-2.3.2-compat.so
-		cd ${Ddir}/lib/bin
-		mv vmware-ui{,.bin}
-		mv vmware-mks{,.bin}
-		echo '#!/bin/sh' > vmware-ui
-		echo 'LD_PRELOAD=vmware-glibc-2.3.2-compat.so exec "$0.bin" "$@"' >> vmware-ui
-		chmod a+x vmware-ui
-		cp vmware-{ui,mks}
-	else
-		return 0
-	fi
 }
 
 pkg_preinst() {
@@ -213,6 +204,11 @@ pkg_preinst() {
 	done
 }
 
+pkg_config() {
+	einfo "Running ${dir}/bin/vmware-config.pl"
+	${dir}/bin/vmware-config.pl
+}
+
 pkg_postinst() {
 	# This is to fix the problem where the not_configured file doesn't get
 	# removed when the configuration is run. This doesn't remove the file
@@ -226,10 +222,13 @@ pkg_postinst() {
 	done
 
 	einfo
-	einfo "You need to run ${dir}/bin/vmware-config.pl to complete the install."
-	einfo
+	einfo "You need to run ${dir}/bin/vmware-config.pl"
+	einfo "to complete the install."
+	echo
 	einfo "For VMware Add-Ons just visit"
 	einfo "http://www.vmware.com/download/downloadaddons.html"
+	einfo
+	einfo "After configuring, type 'vmware' to launch"
 	einfo
 	einfo "Also note that when you reboot you should run:"
 	einfo "/etc/init.d/vmware start"
