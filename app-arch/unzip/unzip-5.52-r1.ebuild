@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.52-r1.ebuild,v 1.5 2006/02/15 05:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.52-r1.ebuild,v 1.6 2006/03/20 03:37:00 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -19,13 +19,15 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-no-exec-stack.patch
-	append-lfs-flags #104315
 	sed -i \
-		-e "s:-O3:${CFLAGS}:" \
+		-e 's:-O3:$(CFLAGS):' \
+		-e 's:-O :$(CFLAGS) :' \
 		-e "s:CC=gcc :CC=$(tc-getCC) :" \
 		-e "s:LD=gcc :LD=$(tc-getCC) :" \
-		-e "s:-O :${CFLAGS} :" \
-		-e "s:LF2 = -s:LF2 = :" \
+		-e 's:LF2 = -s:LF2 = :' \
+		-e 's:LF = :LF = $(LDFLAGS) :' \
+		-e 's:SL = :SL = $(LDFLAGS) :' \
+		-e 's:FL = :FL = $(LDFLAGS) :' \
 		unix/Makefile \
 		|| die "sed unix/Makefile failed"
 }
@@ -41,6 +43,7 @@ src_compile() {
 		*-darwin*)    TARGET=macosx ;;
 		*)            die "Unknown target, you suck" ;;
 	esac
+	append-lfs-flags #104315
 	emake -f unix/Makefile ${TARGET} || die "emake failed"
 }
 
