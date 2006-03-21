@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7131145d053829a2a868340645049cd9 ChangeLog 3196
+RMD160 68abed4fc736ead01b1fba467c69e8e5ca63e979 ChangeLog 3196
+SHA256 923d0aad24f4ee9e8267124d42ee91719711a2600048b82bfea62a60b1cecf97 ChangeLog 3196
 MD5 f2c6fce376b1b43840245b32f1ba23d6 files/digest-opensp-1.5.1 65
+RMD160 fd4eea52dce3202d405403f48d5606b153ef694f files/digest-opensp-1.5.1 65
+SHA256 52a541d58ec3997535604781b5ff6c54bc0fa6ff57caef49725d74a0fec1d6e1 files/digest-opensp-1.5.1 65
 MD5 28c4615619978171db28bf0060eb6dc7 files/opensp-1.5-gcc34.patch 263
+RMD160 4c22af53f8b28df8244cf6bb3831900fe6408358 files/opensp-1.5-gcc34.patch 263
+SHA256 679aa70752d48a6bd0d2ff32c8e4c7153f2ce6e50a43cdffe9a3f4bf23e68264 files/opensp-1.5-gcc34.patch 263
 MD5 05bc78ac9871b98e47ea4bb537bb516e files/opensp-1.5.1-gcc41.patch 656
+RMD160 09123cede89ce24b2a28f2863ada653b48238feb files/opensp-1.5.1-gcc41.patch 656
+SHA256 7a03c5a9c821af9548c370e94886915fa37a7f6a33447072bd8dcd9c7d4a548a files/opensp-1.5.1-gcc41.patch 656
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 ceb47ce337ddcd752c4e300d601c287a opensp-1.5.1.ebuild 1911
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDi07Ir2QksT29OyARAoCQAJ9qeJ0kcsk7VzNMuYBmrP63G/WB9wCePVSz
-T2YXVm9bRU+Yan1REeJiY68=
-=rOGp
------END PGP SIGNATURE-----
+RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
+SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
+MD5 724ec17feef469a7e2e5f282ef349aac opensp-1.5.1.ebuild 1922
+RMD160 ed61aad8a6e1f9e8e40a21178907dbafe72453ed opensp-1.5.1.ebuild 1922
+SHA256 d123da71d78d68f330b8418b0a59e669e0bb8857d89554fad87e0b04d1a654df opensp-1.5.1.ebuild 1922
