@@ -1,6 +1,28 @@
-MD5 d92a5aefb4dc6fcfda88c46fa8f2c053 libassuan-0.6.9.ebuild 644
-MD5 d0ea062119f514bc04274b9a0a35cd26 libassuan-0.6.10.ebuild 650
-MD5 238189d489499845c08ab1d4e7acbf9b ChangeLog 2511
-MD5 b1a4c3f100342f9335a6974737f5e5ec metadata.xml 872
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f6f14ae983cb68308acd02c000b0eab2 ChangeLog 2614
+RMD160 f38d95c2b29a0b1f248d3c7080ed87b55f507720 ChangeLog 2614
+SHA256 21f639e023e865b1d7af412df98c6dced67cae9a101dbd9941437e7b421942d5 ChangeLog 2614
 MD5 c821d962fcc031a8a7a1bcc14c3f6e10 files/digest-libassuan-0.6.10 68
+RMD160 834c2042fd6dedfe79a4c1de030560f0e5656802 files/digest-libassuan-0.6.10 68
+SHA256 b0e04f5dd7716f94c68afd39ee768ebb2185d9f7be4826e6ea7c84de31a74c1a files/digest-libassuan-0.6.10 68
 MD5 47b669d380236521b14ebaa0a9972533 files/digest-libassuan-0.6.9 67
+RMD160 e2ce84f800adbd67bdc78e6746372db2eb441eeb files/digest-libassuan-0.6.9 67
+SHA256 ec5a43a847b6eb338ed40d8bf85be65d4a3464f0a646d8bcaf6e4d986f62e03b files/digest-libassuan-0.6.9 67
+MD5 642d4c6d9550196ddf1e33dee328cf4a libassuan-0.6.10.ebuild 647
+RMD160 1727981dc46134deb1a92b743cc205e4eeff6cd9 libassuan-0.6.10.ebuild 647
+SHA256 17f7c79f5e34d11f88a8600ace403de8562b7fda9bf1aae615982284d0265ca6 libassuan-0.6.10.ebuild 647
+MD5 d92a5aefb4dc6fcfda88c46fa8f2c053 libassuan-0.6.9.ebuild 644
+RMD160 f77b91b06e5306968898295d18a0434f20d59a2d libassuan-0.6.9.ebuild 644
+SHA256 958706c3a6f16fd0383fa68ec933f894a7597ddec86bb5192476a10b7a31fad4 libassuan-0.6.9.ebuild 644
+MD5 b1a4c3f100342f9335a6974737f5e5ec metadata.xml 872
+RMD160 dffdce0e3d1c8187a4f7147d9ba9e57c1097ac57 metadata.xml 872
+SHA256 8658660839bed26e135e894b9529f389bf34d7706d74b5562234030a7adbe3c1 metadata.xml 872
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEH4B6JrHF4yAQTrARAoa1AJ0fnTnuU+fdWFkZmwvI0i+KP9nELACgzw31
+Z/6Pk4CpCd+6rRB5n4ygztE=
+=SfrJ
+-----END PGP SIGNATURE-----
