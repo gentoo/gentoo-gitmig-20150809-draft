@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.8 2006/03/21 15:51:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.9 2006/03/21 16:23:18 flameeyes Exp $
+
+*k9copy-1.0.4_beta2 (21 Mar 2006)
+
+  21 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +k9copy-1.0.4_beta2.ebuild:
+  Add latest beta version.
 
   21 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/k9copy-1.0.2-switch.patch, -k9copy-1.0.1b.ebuild,
