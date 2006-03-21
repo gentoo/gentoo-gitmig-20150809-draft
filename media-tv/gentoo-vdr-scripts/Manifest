@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9df4391662967ae5335c6274b22b9681 ChangeLog 9336
-RMD160 d6571d3249d3912632c6969dd65070b6fc61156f ChangeLog 9336
-SHA256 a3a5b26e18a2b8598b99f237afa89691b3d86b926797fa41fbffde324d10ee91 ChangeLog 9336
+MD5 ec97d409450d29079c67804f7b95fc01 ChangeLog 9485
+RMD160 54ee755bb7fd3b82b5d913b5630d1c405842b42d ChangeLog 9485
+SHA256 949b1bcd3a91ad7140451d9d4455268a53a84213d0ff29caf01ce46e7f437f2c ChangeLog 9485
 MD5 fa1f6ce69e8ecaf989509674ffa0ce00 files/digest-gentoo-vdr-scripts-0.2.2-r1 262
 RMD160 54252ac78215ccc47966955b3c87474c2cb3feb4 files/digest-gentoo-vdr-scripts-0.2.2-r1 262
 SHA256 bd1595a4fe85c584f3c8a10157a4876943a7c98fd966bf28f5ec91bbbb0a527c files/digest-gentoo-vdr-scripts-0.2.2-r1 262
@@ -13,6 +13,9 @@ SHA256 864fd0be170e089c02da9200bb5299d651a9938d24e3c048d984c61fd3cf57e6 files/di
 MD5 0ce9544712897d79a02b8ce7ff7859a7 files/digest-gentoo-vdr-scripts-0.2.4 262
 RMD160 470b8c6b7ffd409595905510024a7c8eb3e0c041 files/digest-gentoo-vdr-scripts-0.2.4 262
 SHA256 f0c9dcf2fcdc9de00cde11f0f3b8bd05f51af31c80195e8adc1ed8524a54b575 files/digest-gentoo-vdr-scripts-0.2.4 262
+MD5 80aa44359af42df1b2e8414b9f168351 files/digest-gentoo-vdr-scripts-0.3.0 274
+RMD160 086d4980929a03b2f3ef8c89e24742c406be47b5 files/digest-gentoo-vdr-scripts-0.3.0 274
+SHA256 ccb048ac0f420c0d04fa48339d72eefd1795af0620c75903948f380a9666de46 files/digest-gentoo-vdr-scripts-0.3.0 274
 MD5 2c0ddf52666cbc805eae30989a76847c files/gentoo-vdr-scripts-0.2.2-config-comment-irctrl.patch 933
 RMD160 bc1b4dc47200e3195af0d163dd4ece3cc563bc9a files/gentoo-vdr-scripts-0.2.2-config-comment-irctrl.patch 933
 SHA256 432002c03faf23aa4306fe1887c2c491b5d568f191d66d86d344eca34d00992d files/gentoo-vdr-scripts-0.2.2-config-comment-irctrl.patch 933
@@ -34,13 +37,16 @@ SHA256 08592ca39aa0157f9a6668a84627fc8c9ead5b5f72fb36371e9dc26d439500e1 gentoo-v
 MD5 2258dd86970e500ecc22acb0e4c9b478 gentoo-vdr-scripts-0.2.4.ebuild 2640
 RMD160 c09afe78f0f935a2e29243e5603b2e86a236cd89 gentoo-vdr-scripts-0.2.4.ebuild 2640
 SHA256 9b4155703a00af75c85f884bb8a8e0150769704c49951f3dd7295cb8648bd913 gentoo-vdr-scripts-0.2.4.ebuild 2640
+MD5 51fa20c231aebee4808afa40a7e85328 gentoo-vdr-scripts-0.3.0.ebuild 2644
+RMD160 6733f3a2e18b0be13453cf9b592e0be52ee07635 gentoo-vdr-scripts-0.3.0.ebuild 2644
+SHA256 848265ccf7054e022be70c781e8a2970fc685e58e9e0898db95b64f80f844351 gentoo-vdr-scripts-0.3.0.ebuild 2644
 MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
 RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 metadata.xml 259
 SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata.xml 259
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEHtJ5ZfSl1Kp5KmoRAh6DAKDLZItQ5FEEa5rXyMNq9h3zsJ2UvQCeMOYi
-2SSFclR1pSCkWdJ97Jz2WFE=
-=whLM
+iD8DBQFEIG15ZfSl1Kp5KmoRAnQ7AJ9ZOaP/rQ7bXNFfHzdF0gJSH4yIPQCgjFCY
+Yf2k4DMp8+4kXVUUSZCao88=
+=3hy1
 -----END PGP SIGNATURE-----
