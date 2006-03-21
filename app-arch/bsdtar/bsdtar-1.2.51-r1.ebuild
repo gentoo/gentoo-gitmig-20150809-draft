@@ -1,38 +1,54 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.2.51.ebuild,v 1.1 2006/03/19 20:58:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.2.51-r1.ebuild,v 1.1 2006/03/21 20:05:45 flameeyes Exp $
 
-inherit eutils flag-o-matic libtool
+inherit eutils autotools
+
+MY_P="libarchive-${PV}"
 
 DESCRIPTION="BSD tar command"
 HOMEPAGE="http://people.freebsd.org/~kientzle/libarchive/"
-SRC_URI="http://people.freebsd.org/~kientzle/libarchive/src/libarchive-${PV}.tar.gz"
+SRC_URI="http://people.freebsd.org/~kientzle/libarchive/src/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc-macos ~x86"
-IUSE="build static"
+IUSE="build static acl xattr"
 
-RDEPEND="!dev-libs/libarchive"
+RDEPEND="!dev-libs/libarchive
+	kernel_linux? (
+		acl? ( sys-apps/acl )
+		xattr? ( sys-apps/attr )
+		)"
 DEPEND="kernel_linux? ( sys-fs/e2fsprogs
 	virtual/os-headers )"
 
-S="${WORKDIR}/libarchive-${PV}"
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	elibtoolize
+	epatch "${FILESDIR}/${MY_P}-linking.patch"
+	epatch "${FILESDIR}/${MY_P}-acl.patch"
+
+	eautoreconf
 	epunt_cxx
 }
 
 src_compile() {
-	if ! use userland_Darwin; then
-		( use static || use build ) && append-ldflags -static
+	local myconf
+
+	if ! use userland_Darwin && ( use static || use build ); then
+		myconf="${myconf} --enable-static-bsdtar"
+	else
+		myconf="${myconf} --disable-static-bsdtar"
 	fi
 
-	econf --bindir=/bin || die "econf failed"
+	econf --bindir=/bin \
+		$(use_enable acl) \
+		$(use_enable xattr) \
+		${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 

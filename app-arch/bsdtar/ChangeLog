@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/bsdtar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.21 2006/03/19 20:58:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.22 2006/03/21 20:05:45 flameeyes Exp $
+
+*bsdtar-1.2.51-r1 (21 Mar 2006)
+
+  21 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libarchive-1.2.51-acl.patch,
+  +files/libarchive-1.2.51-linking.patch, -bsdtar-1.2.51.ebuild,
+  +bsdtar-1.2.51-r1.ebuild:
+  Add patches to make acl and attr optional, plus link bsdtar non statically.
 
 *bsdtar-1.2.51 (19 Mar 2006)
 
