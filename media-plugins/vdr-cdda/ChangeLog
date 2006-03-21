@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-cdda
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdda/ChangeLog,v 1.3 2006/03/09 17:50:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdda/ChangeLog,v 1.4 2006/03/21 14:22:04 hd_brummy Exp $
+
+  21 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -files/vdr-cdda-0.1.0-fix-segv.diff, +files/vdr-cdda-0.1.0.patch,
+  vdr-cdda-0.1.0.ebuild:
+  added new patch; included fix problems on cStatus, reported, fixed by L.Muresan
 
   09 Mar 2006; Matthias Schwarzott <zzam@gentoo.org>
   +files/vdr-cdda-0.1.0-fix-segv.diff, vdr-cdda-0.1.0.ebuild:

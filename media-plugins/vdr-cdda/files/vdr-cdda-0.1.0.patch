@@ -1,0 +1,41 @@
+Lucian Muresan <lucianm@users.sourceforge.net> ( 21 Mar 2006 )
+modified in cStatus::MsgReplaying
+diff -u cdda-0.1.0.org/audio_player.c cdda-0.1.0/audio_player.c
+--- cdda-0.1.0.org/audio_player.c	2006-03-09 09:26:16.000000000 +0100
++++ cdda-0.1.0/audio_player.c	2006-03-09 09:26:35.000000000 +0100
+@@ -368,7 +368,11 @@
+ }
+ 
+ cAudioControl::~cAudioControl() {
++#if VDRVERSNUM >= 10338
++  cStatus::MsgReplaying(this, "cdda", NULL, false);
++#else
+   cStatus::MsgReplaying(this, NULL);
++#endif
+   free(mp_replayDescription);
+ 
+   delete player;
+@@ -469,7 +473,11 @@
+     mp_replayDescription = p_str;
+     p_str = NULL;
+ 
++#if VDRVERSNUM >= 10338
++    cStatus::MsgReplaying(this, mp_replayDescription, NULL, true);
++#else
+     cStatus::MsgReplaying(this, mp_replayDescription);
++#endif
+   } else
+     free(p_str);
+ 
+diff -u cdda-0.1.0.org/cdda_menu.h cdda-0.1.0/cdda_menu.h
+--- cdda-0.1.0.org/cdda_menu.h	2006-03-09 09:26:16.000000000 +0100
++++ cdda-0.1.0/cdda_menu.h	2006-03-09 09:27:43.000000000 +0100
+@@ -60,7 +60,7 @@
+     char *mp_newCddbServerFqdn;
+     int m_newCddbServerPort;
+     int m_newInfoView;
+-    const char *m_cddbPrioTxt[3];
++    const char *m_cddbPrioTxt[4];
+   protected:
+     void Store(void);
+   public:
