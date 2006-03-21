@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.1.ebuild,v 1.23 2005/06/24 02:15:52 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.1.ebuild,v 1.24 2006/03/21 03:00:12 vapier Exp $
 
 inherit gnome.org
 
@@ -10,7 +10,7 @@ IUSE="debug"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ia64 amd64 x86 ppc sparc alpha hppa mips ppc64"
+KEYWORDS="alpha amd64 hppa ia64 m68k mips ppc ppc64 sh sparc x86"
 
 RDEPEND=">=app-text/openjade-1.3.1
 	~app-text/docbook-xml-dtd-4.1.2
