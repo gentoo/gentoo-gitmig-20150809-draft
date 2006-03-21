@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-211.ebuild,v 1.3 2006/03/21 15:29:04 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-211.ebuild,v 1.4 2006/03/21 21:24:06 exg Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,6 +45,12 @@ src_compile() {
 
 	filter-flags "-fstack-protector"
 
+	local myconf=""
+
+	if has_version ">=x11-base/xorg-x11-7.0.0_rc1"; then
+		myconf="--disable-narrowproto"
+	fi
+
 	econf \
 		--libdir=/etc \
 		--with-x \
@@ -52,7 +58,6 @@ src_compile() {
 		--disable-setuid \
 		--disable-full-tgetent \
 		--disable-imake \
-		--enable-narrowproto \
 		--enable-ansi-color \
 		--enable-88-color \
 		--enable-256-color \
@@ -71,6 +76,7 @@ src_compile() {
 		`use_enable truetype freetype` \
 		`use_enable unicode luit` `use_enable unicode mini-luit` \
 		`use_with Xaw3d` \
+		${myconf} \
 		|| die
 
 	emake || die "failed to compile xterm"
