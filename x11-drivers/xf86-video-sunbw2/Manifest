@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1bf05477f69580ee3c6aad1804306e3e ChangeLog 2018
-RMD160 b97f51ea0698eb41b1823e2d07bbbe6a42a27a0e ChangeLog 2018
-SHA256 599c4dd7263436000b5ad4ed3ac10091b1dd2d9dd6de3128fa5311adc3f34e7c ChangeLog 2018
+MD5 7b86d9f94f61eae2e53c3b5b6d2b449d ChangeLog 2178
+RMD160 1eaa5d2acf154ea8f4db7dca1e9fdab68c8e6b7a ChangeLog 2178
+SHA256 27a51abce740eec9667bd6d28a2633dd7f9c8c46c321ce79f300f7f2b0161dc5 ChangeLog 2178
 MD5 ece1a87786e172843bb6a1deb8a95384 files/digest-xf86-video-sunbw2-1.0.0.5 148
 RMD160 8815e445fcd655dbdff08bfff2a243e11f5752e9 files/digest-xf86-video-sunbw2-1.0.0.5 148
 SHA256 fe489a6ba578773e2c137f44d0cf09464d3845e1615e5a61558bf4b44d88dfec files/digest-xf86-video-sunbw2-1.0.0.5 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 f70ed6ff768faff06293693f2a20a364 xf86-video-sunbw2-1.0.0.5.ebuild 495
-RMD160 aa337d55ceca8866cedf3026c27a7151e3e56473 xf86-video-sunbw2-1.0.0.5.ebuild 495
-SHA256 b4669b32a76a1b155a8d205595f17385cd08a0555499bb7a155c8cef55d665c1 xf86-video-sunbw2-1.0.0.5.ebuild 495
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4ks7wUpWvClEHQoRAmfRAJ4nPTEtDufhZjoNFiId1JZAH6fk8ACbBg2v
-vuXbbO8EOAHbOWRpg2H5wqA=
-=VBpU
------END PGP SIGNATURE-----
+MD5 a042f65ff5850f292c64a759682e6426 xf86-video-sunbw2-1.0.0.5.ebuild 500
+RMD160 b40df515c1b422f70dc3103da3ca27f8b280597b xf86-video-sunbw2-1.0.0.5.ebuild 500
+SHA256 d62d9f4393eba544edc52ae13cffd2f344c3d81f45078ab67ced3382589bf8a9 xf86-video-sunbw2-1.0.0.5.ebuild 500

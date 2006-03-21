@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fcafdbc34eea9563a90ab76f09a4eb5c ChangeLog 2125
-RMD160 cb0dd10a155d52463134a0107a6da56de7c3f2a3 ChangeLog 2125
-SHA256 19015563c60c1d6cd0284211645c7a004b984311cbdb10e78cdcb9c512c9a0ac ChangeLog 2125
+MD5 8a1f9afff2ca84bf88df16626b1e60d9 ChangeLog 2285
+RMD160 17c499c8bbcea0c461e28a44c1724e7f87875dd8 ChangeLog 2285
+SHA256 592c71d60658ce26fe04a2643c731cc861c27b4cac37ef38fe5da2488045fa47 ChangeLog 2285
 MD5 ffe34d2945ee2793870ebe9089ab6dfe files/digest-xf86-video-sunffb-1.0.1.3 148
 RMD160 a006e7df4c59e751596a5b79ca4ce5e25570ae1f files/digest-xf86-video-sunffb-1.0.1.3 148
 SHA256 e31b1bbd6239f7b5da5b7a45d6e8b629126e0eb2f12e154805b83332e3b9d7b3 files/digest-xf86-video-sunffb-1.0.1.3 148
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 922a9f830c7dc971e652a5a753233930 xf86-video-sunffb-1.0.1.3.ebuild 800
-RMD160 68e8defa81952e272e8b1f6bd130464d2380840f xf86-video-sunffb-1.0.1.3.ebuild 800
-SHA256 5a21ec99bf4d64e50151bddea411c59d527ad17954506226fac02d3063f1a4bc xf86-video-sunffb-1.0.1.3.ebuild 800
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4kxWwUpWvClEHQoRAm7PAJ9DmePhPbN4dGoRffBmVv+qFpjeBQCcDpGv
-S3mdZLtBzpZXlokg61IjQUo=
-=I/PK
------END PGP SIGNATURE-----
+MD5 e22b050e2590f1fc42a66af6b43fecf9 xf86-video-sunffb-1.0.1.3.ebuild 805
+RMD160 5c2f7d9f811e8c687eb2c7370e682aa65663ac21 xf86-video-sunffb-1.0.1.3.ebuild 805
+SHA256 a16db7007b117ee09f8ac4e15140904204afbd9090f653ccdfc2ee92653793d6 xf86-video-sunffb-1.0.1.3.ebuild 805
