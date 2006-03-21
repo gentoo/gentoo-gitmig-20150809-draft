@@ -1,0 +1,13 @@
+Index: ffmpeg-0.4.9-p20051216/configure
+===================================================================
+--- ffmpeg-0.4.9-p20051216.orig/configure
++++ ffmpeg-0.4.9-p20051216/configure
+@@ -987,7 +987,7 @@ int main( void ) { return (lrintf(3.999f
+ EOF
+ 
+ have_lrintf="no"
+-if $cc $CFLAGS $LDFLAGS $extralibs -o $TMPE $TMPC 2> /dev/null ; then
++if $cc $CFLAGS $LDFLAGS -o $TMPE $TMPC $extralibs 2> /dev/null ; then
+   have_lrintf="yes"
+   # allanc@chickenandporn.com: cannot execute cross-compiled
+   # code on the host.  Only execute if not cross-compiling.

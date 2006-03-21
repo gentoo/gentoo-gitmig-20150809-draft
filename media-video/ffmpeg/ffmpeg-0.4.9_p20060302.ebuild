@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060302.ebuild,v 1.8 2006/03/08 23:55:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060302.ebuild,v 1.9 2006/03/21 15:10:10 flameeyes Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -72,6 +72,7 @@ src_unpack() {
 	sed -i s:\#define\ HAVE_X11:\#define\ HAVE_LINUX: ffplay.c
 
 	epatch ${FILESDIR}/ffmpeg-unknown-options.patch
+	epatch "${FILESDIR}/${PN}-0.4.9_p20051216-asneeded-configure.patch"
 
 	# ffmpeg doesn'g use libtool, so the condition for PIC code
 	# is __PIC__, not PIC.
@@ -144,10 +145,12 @@ src_compile() {
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--enable-static --disable-shared \
+		"--cc=$(tc-getCC)" \
+		"--extra-ldflags=${LDFLAGS}" \
 		${myconf} || die "static failed"
 
 
-	emake CC="$(tc-getCC)" || die "static failed"
+	emake || die "static failed"
 
 	# Specific workarounds for too-few-registers arch...
 	if [[ $(tc-arch) == "x86" ]]; then
@@ -170,9 +173,11 @@ src_compile() {
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--disable-static --enable-shared \
+		"--cc=$(tc-getCC)" \
+		"--extra-ldflags=${LDFLAGS}" \
 		${myconf} || die "shared failed"
 
-	emake CC="$(tc-getCC)" || die "shared failed"
+	emake || die "shared failed"
 }
 
 src_install() {
