@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5116 2006/03/21 18:46:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5117 2006/03/21 20:25:34 eradicator Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jeremy Huddleston <eradicator@gentoo.org> (21 Mar 2006)
+# Development version of squirrelmail
+>=mail-client/squirrelmail-1.5
 
 # Dan Armak <danarmak@gentoo.org> (21 Mar 2006)
 # Masked KDE 3.5.2 ebuilds. Note that 3.5.2 is not released upstream at time of writing -
