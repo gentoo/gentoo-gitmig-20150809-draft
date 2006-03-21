@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.14.0.ebuild,v 1.2 2006/03/20 03:12:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.14.0.ebuild,v 1.3 2006/03/21 01:58:31 compnerd Exp $
 
-inherit eutils gnome2 python
+inherit eutils gnome2 python virtualx
 
 DESCRIPTION="GNOME 2 Bindings for Python"
 HOMEPAGE="http://www.pygtk.org"
@@ -42,7 +42,7 @@ src_compile() {
 }
 
 src_test() {
-	einfo "disabling for now"
+	Xmake check || die "tests failed"
 }
 
 src_install() {
