@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11.ebuild,v 1.4 2006/02/02 16:23:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11.ebuild,v 1.5 2006/03/21 19:29:10 spyderous Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -24,18 +24,33 @@ PROVIDE="virtual/blas"
 
 S="${WORKDIR}/ATLAS"
 RPATH="${DESTTREE}/$(get_libdir)/blas"
-FORTRAN="g77"
+FORTRAN="g77 gfortran"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
 	epatch "${FILESDIR}"/unbuffered.patch
+	epatch "${FILESDIR}"/${PV}-allow-any-gcc-version.patch
 	epatch "${DISTDIR}"/atlas3.6.0-shared-libs.1.patch.bz2
 	sed -i \
 		-e "s:ASM:ASM VOLATILE:" \
 		include/contrib/camm_dpa.h \
 		|| die "sed failed to fix clobbering"
+
+	sed -i \
+		-e "s:\(\t./xconfig\):\1 -m $(tc-getCC) -c $(tc-getCC) -f ${FORTRANC}:g" \
+		${S}/Makefile \
+		|| die "Failed to fix compilers"
+
+	if [[ $(gcc-major-version) -ge 4 ]]; then
+		einfo "Updating Makefiles for gcc-4"
+		sed -i \
+			-e "s:g2c:gfortran:g" \
+			${S}/Make.top \
+			${S}/makes/Make.lib \
+			|| die "Failed to update for gcc-4"
+	fi
 
 	cp "${FILESDIR}"/war "${S}"
 	chmod a+x "${S}"/war
