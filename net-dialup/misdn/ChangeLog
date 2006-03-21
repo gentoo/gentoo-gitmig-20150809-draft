@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/misdn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.8 2006/02/28 00:12:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.9 2006/03/21 20:47:39 genstef Exp $
+
+*misdn-20060321 (21 Mar 2006)
+
+  21 Mar 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/module-param.diff, +files/packed.diff, -misdn-20050409.ebuild,
+  -misdn-20050508.ebuild, -misdn-20050514.ebuild, -misdn-20050519.ebuild,
+  -misdn-20051228.ebuild, -misdn-20060222.ebuild, +misdn-20060321.ebuild:
+  version bump, mqueue has been merged back into head, remove old ebuilds
 
 *misdn-20060222 (28 Feb 2006)
 
