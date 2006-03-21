@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.524 2006/03/20 18:01:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.525 2006/03/21 00:47:50 spyderous Exp $
+
+  21 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-7.0-r1.ebuild:
+  Remove most unneeded video drivers on sparc.
 
 *xorg-x11-6.9.0 (20 Mar 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.13 2006/03/02 03:39:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.14 2006/03/21 00:47:50 spyderous Exp $
 
 inherit eutils
 
@@ -382,21 +382,9 @@ RDEPEND="${RDEPEND}
 					x11-drivers/xf86-video-trident
 					x11-drivers/xf86-video-vga
 					x11-drivers/xf86-video-voodoo )
-				sparc? ( x11-drivers/xf86-video-apm
-					x11-drivers/xf86-video-ark
-					x11-drivers/xf86-video-chips
-					x11-drivers/xf86-video-cirrus
+				sparc? (
 					x11-drivers/xf86-video-glint
-					x11-drivers/xf86-video-i128
-					x11-drivers/xf86-video-i740
-					x11-drivers/xf86-video-i810
-					x11-drivers/xf86-video-imstt
-					x11-drivers/xf86-video-neomagic
-					x11-drivers/xf86-video-newport
-					x11-drivers/xf86-video-rendition
-					x11-drivers/xf86-video-s3virge
 					x11-drivers/xf86-video-savage
-					x11-drivers/xf86-video-siliconmotion
 					x11-drivers/xf86-video-sunbw2
 					x11-drivers/xf86-video-suncg14
 					x11-drivers/xf86-video-suncg3
@@ -405,8 +393,6 @@ RDEPEND="${RDEPEND}
 					x11-drivers/xf86-video-sunleo
 					x11-drivers/xf86-video-suntcx
 					x11-drivers/xf86-video-tdfx
-					x11-drivers/xf86-video-tga
-					x11-drivers/xf86-video-trident
 					x11-drivers/xf86-video-vesa
 					x11-drivers/xf86-video-vga
 					x11-drivers/xf86-video-voodoo )
