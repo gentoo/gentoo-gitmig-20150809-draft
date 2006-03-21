@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.23.7.ebuild,v 1.3 2006/03/21 01:05:35 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.23.7.ebuild,v 1.4 2006/03/21 15:17:03 anarchy Exp $
 
 IUSE="opengl"
 
@@ -129,6 +129,7 @@ src_unpack() {
 	# remove intermodule calls for 2.6.16
 	if kernel_is 2 6 16; then
 		epatch ${FILESDIR}/${PN}-8.22.5-intermodule.patch
+		epatch "${FILESDIR}/${P}-noiommu.patch"
 	fi
 }
 
