@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.15.ebuild,v 1.9 2005/11/11 23:00:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.15.ebuild,v 1.10 2006/03/21 02:52:36 vapier Exp $
 
 inherit libtool gnome.org eutils python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.xmlsoft.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="crypt debug python static"
 
 DEPEND=">=dev-libs/libxml2-2.6.17
@@ -17,7 +17,7 @@ DEPEND=">=dev-libs/libxml2-2.6.17
 	python? ( dev-lang/python )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# we still require the 1.1.8 patch for the .m4 file, to add
@@ -58,6 +58,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
-
-	dodoc AUTHORS ChangeLog Copyright FEATURES NEWS README TODO
+	dodoc AUTHORS ChangeLog FEATURES NEWS README TODO
 }

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d2ca9bb53b30ab4b26a5aff19f86e51f ChangeLog 15270
 RMD160 99c5722fb02649340bdcbc3a180b9d8ed548908a ChangeLog 15270
 SHA256 f05004de4712edbd25bf4aba3488b7201925e394ff098b7d8ffc070fb67dce92 ChangeLog 15270
@@ -7,9 +10,16 @@ SHA256 5044e560aeaef16387ac3d2fbb845893aca87dd3a7e949f07f2bcc98ad9f62af files/di
 MD5 a772cd7aafe8f9e0fd59de02b2ea2e85 files/libxslt.m4-libxslt-1.1.8.patch 1292
 RMD160 0dcd21978aa0102784df670f2c9835da227f42c8 files/libxslt.m4-libxslt-1.1.8.patch 1292
 SHA256 0da59fb6cb50bf30e8ac79644df90394707ac07e60337aa3c0e53986781e9e0d files/libxslt.m4-libxslt-1.1.8.patch 1292
-MD5 62f06e51ad9a7258fd579af6f6ec129b libxslt-1.1.15.ebuild 1756
-RMD160 52c3dda3aa7edc57742663f6f6fe269843643962 libxslt-1.1.15.ebuild 1756
-SHA256 da53142ba50787ac14d4bc77f44d45f02e41c0cd3be7b235f674f090c7e9b094 libxslt-1.1.15.ebuild 1756
+MD5 8d0a9caf015cb42e81bb61f26389f555 libxslt-1.1.15.ebuild 1749
+RMD160 8ad9e5bdf8f483eecf86176067cf1da8cafc0ded libxslt-1.1.15.ebuild 1749
+SHA256 42c7dc5790bd7ba32741cd2b810c0b00d8d1b2ddf80fa0fa34d1bcb83f067931 libxslt-1.1.15.ebuild 1749
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEH2qg2+ySkm8kpY0RAt53AJ9JJSUyG94WwIgzaeQFH5ASYgCzNQCcDDtk
+h3P/knbpVR2LyYykxBVbauY=
+=GybH
+-----END PGP SIGNATURE-----
