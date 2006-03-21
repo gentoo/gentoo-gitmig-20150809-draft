@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1799 2006/03/21 22:32:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1800 2006/03/21 22:52:12 jokey Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -895,6 +895,7 @@ net-analyzer/echoping:priority - enable socket priority support.
 net-analyzer/echoping:smtp - enable supprt for SMTP protocol.
 net-analyzer/echoping:tos - enable support for TOS (TYpe Of Service).
 net-analyzer/fprobe:messages - enable console messages
+net-analyzer/iptraf:suid - Allow app to be run with suid root
 net-analyzer/nagios-core:noweb - disable web interface
 net-analyzer/nagios-nrpe:command-args - allow clients to specify command arguments
 net-analyzer/nagios-plugins:nagios-dns - installs deps for dns monitoring
