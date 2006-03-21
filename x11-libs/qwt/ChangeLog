@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.27 2006/01/18 22:50:34 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.28 2006/03/21 13:29:59 caleb Exp $
+
+*qwt-5.20060130 (21 Mar 2006)
+
+  21 Mar 2006; Caleb Tennis <caleb@gentoo.org> +qwt-5.20060130.ebuild:
+  Adding a SLOTted qwt-5 snapshot that is Qt4 dependent
 
   18 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> qwt-4.2.0-r1.ebuild:
   Stable on amd64.
