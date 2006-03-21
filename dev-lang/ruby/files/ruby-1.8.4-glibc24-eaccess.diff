@@ -1,0 +1,73 @@
+diff -ur ruby-1.8.4/configure.in ruby-1.8.4-glibc24-eaccess/configure.in
+--- ruby-1.8.4/configure.in	2005-11-24 07:07:18.000000000 -0500
++++ ruby-1.8.4-glibc24-eaccess/configure.in	2006-03-19 20:37:19.000000000 -0500
+@@ -437,7 +437,7 @@
+ AC_REPLACE_FUNCS(dup2 memmove strcasecmp strncasecmp strerror strftime\
+ 		 strchr strstr strtoul crypt flock vsnprintf\
+ 		 isnan finite isinf hypot acosh erf)
+-AC_CHECK_FUNCS(fmod killpg wait4 waitpid syscall chroot fsync getcwd\
++AC_CHECK_FUNCS(fmod killpg wait4 waitpid syscall chroot fsync getcwd eaccess\
+ 	      truncate chsize times utimes fcntl lockf lstat symlink link\
+ 	      readlink setitimer setruid seteuid setreuid setresuid\
+ 	      setproctitle setrgid setegid setregid setresgid issetugid pause\
+Only in ruby-1.8.4-glibc24-eaccess/: configure.in~
+diff -ur ruby-1.8.4/dln.c ruby-1.8.4-glibc24-eaccess/dln.c
+--- ruby-1.8.4/dln.c	2005-11-26 06:01:01.000000000 -0500
++++ ruby-1.8.4-glibc24-eaccess/dln.c	2006-03-19 20:39:19.000000000 -0500
+@@ -89,7 +89,7 @@
+ # include <image.h>
+ #endif
+ 
+-int eaccess();
++int eaccess(const char *, int);
+ 
+ #ifndef NO_DLN_LOAD
+ 
+Only in ruby-1.8.4-glibc24-eaccess/: dln.c~
+diff -ur ruby-1.8.4/file.c ruby-1.8.4-glibc24-eaccess/file.c
+--- ruby-1.8.4/file.c	2005-12-21 04:20:15.000000000 -0500
++++ ruby-1.8.4-glibc24-eaccess/file.c	2006-03-19 20:40:27.000000000 -0500
+@@ -849,6 +849,7 @@
+ #  define S_IXUGO		(S_IXUSR | S_IXGRP | S_IXOTH)
+ #endif
+ 
++#ifndef HAVE_EACCESS
+ int
+ eaccess(path, mode)
+      const char *path;
+@@ -887,6 +888,7 @@
+     return access(path, mode);
+ #endif
+ }
++#endif
+ 
+ 
+ /*
+Only in ruby-1.8.4-glibc24-eaccess/: file.c~
+diff -ur ruby-1.8.4/intern.h ruby-1.8.4-glibc24-eaccess/intern.h
+--- ruby-1.8.4/intern.h	2005-11-22 21:06:00.000000000 -0500
++++ ruby-1.8.4-glibc24-eaccess/intern.h	2006-03-19 20:37:49.000000000 -0500
+@@ -221,7 +221,6 @@
+ void rb_thread_atfork _((void));
+ VALUE rb_funcall_rescue __((VALUE, ID, int, ...));
+ /* file.c */
+-int eaccess _((const char*, int));
+ VALUE rb_file_s_expand_path _((int, VALUE *));
+ VALUE rb_file_expand_path _((VALUE, VALUE));
+ void rb_file_const _((const char*, VALUE));
+Only in ruby-1.8.4-glibc24-eaccess/: intern.h~
+diff -ur ruby-1.8.4/missing.h ruby-1.8.4-glibc24-eaccess/missing.h
+--- ruby-1.8.4/missing.h	2005-06-12 12:58:41.000000000 -0400
++++ ruby-1.8.4-glibc24-eaccess/missing.h	2006-03-19 20:38:24.000000000 -0500
+@@ -39,6 +39,10 @@
+ extern int dup2 _((int, int));
+ #endif
+ 
++#ifndef HAVE_EACCESS
++extern int eaccess(const char*, int);
++#endif
++
+ #ifndef HAVE_FINITE
+ extern int finite _((double));
+ #endif
+Only in ruby-1.8.4-glibc24-eaccess/: missing.h~
