@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.27 2006/03/12 21:14:07 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.28 2006/03/21 21:07:42 pauldv Exp $
+
+  21 Mar 2006; Paul de Vrieze <pauldv@gentoo.org>
+  device-mapper-1.02.03.ebuild:
+  Make the selinux conditional dependency explicit, and use use_enable (bug 
+  #127089)
 
   12 Mar 2006; Luis Medinas <metalgod@gentoo.org>
   device-mapper-1.02.02.ebuild:

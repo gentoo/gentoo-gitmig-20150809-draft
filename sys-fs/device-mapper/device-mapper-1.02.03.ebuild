@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.03.ebuild,v 1.1 2006/03/05 03:50:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.03.ebuild,v 1.2 2006/03/21 21:07:42 pauldv Exp $
 
 inherit eutils multilib
 
@@ -11,14 +11,14 @@ SRC_URI="ftp://sources.redhat.com/pub/dm/${PN}.${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE=""
+IUSE="selinux"
 
-DEPEND=""
+DEPEND="selinux? ( sys-libs/libselinux )"
 
 S=${WORKDIR}/${PN}.${PV}
 
 src_compile() {
-	econf --sbindir=/sbin || die "econf failed"
+	econf --sbindir=/sbin $(use_enable selinux) || die "econf failed"
 	emake || die "compile problem"
 }
 
