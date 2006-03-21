@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.47 2006/03/09 20:39:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.48 2006/03/21 00:31:11 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -319,6 +319,12 @@ x-modular_src_install() {
 		find ${D}/usr/lib/xorg/modules -name '*.la' \
 			| xargs rm -f
 	fi
+
+	# Don't install overlapping fonts.* files
+	# Generate them instead when possible
+	if [[ -n "${FONT}" ]]; then
+		remove_font_metadata
+	fi
 }
 
 x-modular_pkg_preinst() {
@@ -385,6 +391,18 @@ setup_fonts() {
 	create_fonts_dir
 	fix_font_permissions
 	create_font_cache
+}
+
+remove_font_metadata() {
+	local DIR
+	for DIR in ${FONT_DIR}; do
+		if [[ "${DIR}" != "Speedo" ]] && \
+			[[ "${DIR}" != "CID" ]] ; then
+			# Delete font metadata files
+			# fonts.scale, fonts.dir, fonts.cache-1
+			rm -f ${D}/usr/share/fonts/${DIR}/fonts.{scale,dir,cache-1}
+		fi
+	done
 }
 
 discover_font_dirs() {
