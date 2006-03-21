@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r1.ebuild,v 1.3 2006/01/10 22:55:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r1.ebuild,v 1.4 2006/03/21 14:57:28 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -16,6 +16,7 @@ IUSE=""
 
 RDEPEND="virtual/opengl
 	x86? (
+		=virtual/libstdc++-3.3
 		|| (
 			(
 				x11-libs/libX11
