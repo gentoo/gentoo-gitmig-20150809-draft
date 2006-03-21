@@ -52,16 +52,16 @@ SHA256 07334835850f3d159007f5020bbc6dd0727df12ce1f6f9fe9966041708d8eb09 glib-2.8
 MD5 eeb9bd7e6d8215bc9bd7bbcd50d3d6c0 glib-2.8.5.ebuild 1687
 RMD160 0bccf02181a3545958019450205de0bb182656c0 glib-2.8.5.ebuild 1687
 SHA256 5907cb6ba62b13bdb7656f5adc4a8d1dab69abe2f17e9efd0b316cfa1d64848a glib-2.8.5.ebuild 1687
-MD5 f72c9a2dd10df36b8202389c40a3fac8 glib-2.8.6.ebuild 1701
-RMD160 b126de85c4be8931176cac6bf8bf75f27594ece5 glib-2.8.6.ebuild 1701
-SHA256 f06e098d48187c1df6e82a3278dc1d935bb2d3291d2af1afd1d50fc2193bb642 glib-2.8.6.ebuild 1701
+MD5 fa440462afc0fca2c941abf6dd406b0b glib-2.8.6.ebuild 1701
+RMD160 9031c4cfeefd14c87b68400c502f7af1f2dba876 glib-2.8.6.ebuild 1701
+SHA256 eb91f2c103dbf332aeecd0dbfa6b4af222402f52b2397ca3a8c39d1b80a2be12 glib-2.8.6.ebuild 1701
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (NetBSD)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEH05ywnQyISwouHwRAm8nAJwLFzqw2JQ1dipivPscSrtG8yMniQCgu0ij
-B3cGgJBjfmBwlx8G0YNtIxc=
-=EbCK
+iD8DBQFEH2yc2+ySkm8kpY0RAnYOAJ0RuT4ivRvCsNRWMOq2Pj3t3s5oOACffUrv
+BRXHsu7mC4YAkj40/vjlcvw=
+=QSUS
 -----END PGP SIGNATURE-----
