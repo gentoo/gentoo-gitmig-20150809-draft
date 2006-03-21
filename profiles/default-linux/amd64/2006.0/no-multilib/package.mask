@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.10 2006/03/21 19:03:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.11 2006/03/21 20:12:39 wolf31o2 Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -116,6 +116,7 @@ games-strategy/majesty-demo
 mail-client/ciphire-mail
 mail-client/mozilla-thunderbird-bin
 media-fonts/acroread-asianfonts
+media-gfx/grender
 media-gfx/maya
 media-libs/win32codecs
 media-sound/peercast
