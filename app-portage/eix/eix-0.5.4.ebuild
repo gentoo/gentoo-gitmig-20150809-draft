@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.4.ebuild,v 1.1 2006/03/20 12:22:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.4.ebuild,v 1.2 2006/03/21 21:10:44 genstef Exp $
 
 inherit eutils
 
@@ -14,6 +14,12 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="sys-apps/portage"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-proper-template-usage.patch
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
