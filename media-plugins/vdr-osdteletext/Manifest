@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ec3716fd503efef7dff97b96fe0b9898 ChangeLog 459
+MD5 56007652a1c659116f9557e1831b048a files/confd 954
+MD5 30c5f471ee72e679f0c7b926b03235fe files/digest-vdr-osdteletext-0.5.1 69
+MD5 13a9c81e7ee277365fe303f91d21ec36 files/rc-addon.sh 1054
+MD5 4dfbefd9d8f7e50f3f61fb3d66cb7204 metadata.xml 532
+MD5 3c9bf4b93ce69ba4aa8519f5f3fde2b8 vdr-osdteletext-0.5.1.ebuild 778
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEH0codn07HTTCgIoRAhthAKCUWP6B84UGfZfbZWxED+xUvqxovQCdFZOx
+o0mYHjt0VfMV5d2FQMwTwuU=
+=/v1c
+-----END PGP SIGNATURE-----
