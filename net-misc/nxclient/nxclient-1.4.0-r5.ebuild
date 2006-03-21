@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.4.0-r5.ebuild,v 1.1 2005/05/23 18:51:27 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.4.0-r5.ebuild,v 1.2 2006/03/21 20:37:04 agriffis Exp $
 
 inherit rpm
 
@@ -19,7 +19,6 @@ SRC_URI="http://www.nomachine.com/download/nxclient/1.4.0/RedHat-9.0/${PN}-${MY_
 DEPEND=">=media-libs/jpeg-6b-r3
 	>=sys-libs/glibc-2.3.2-r1
 	>=sys-libs/zlib-1.1.4-r1
-	virtual/x11
 	>=dev-libs/expat-1.95.6-r1
 	>=media-libs/fontconfig-2.2.0-r2
 	>=media-libs/freetype-2.1.4
@@ -28,7 +27,12 @@ DEPEND=">=media-libs/jpeg-6b-r3
 	=net-misc/nx-x11-1.4*
 	=net-misc/nxproxy-1.4*
 	net-analyzer/gnu-netcat
-	=net-misc/nxssh-1.4*"
+	=net-misc/nxssh-1.4*
+	|| ( (	x11-libs/libX11
+			x11-libs/libXext
+		)
+		virtual/x11
+	)"
 
 S="${WORKDIR}"
 

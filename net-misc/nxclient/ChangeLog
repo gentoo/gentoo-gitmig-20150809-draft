@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.26 2006/03/05 15:22:38 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.27 2006/03/21 20:37:04 agriffis Exp $
+
+  21 Mar 2006; Aron Griffis <agriffis@gentoo.org> nxclient-1.4.0-r5.ebuild,
+  -nxclient-1.5.0.ebuild, -nxclient-1.5.0-r1.ebuild,
+  nxclient-1.5.0-r2.ebuild:
+  Add modular X deps, remove older 1.5.0 ebuilds
 
   05 Mar 2006; Stuart Herbert <stuart@gentoo.org> nxclient-1.5.0-r2.ebuild:
   Added missing lib-compat DEP; see bug #115574

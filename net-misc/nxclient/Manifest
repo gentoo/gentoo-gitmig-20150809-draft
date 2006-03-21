@@ -1,12 +1,34 @@
-MD5 7710a49292c8b0456a4bcc54213009e6 ChangeLog 4125
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2cd1fcff81beb7379e677b5c095e4a29 ChangeLog 4334
+RMD160 a2a61716517fc615a65cdf4b27649f107feb641b ChangeLog 4334
+SHA256 db203a0a5750936fca53cc1a74dda405542f970f1e14ecb95e8706999dcec3c8 ChangeLog 4334
 MD5 a2e15c37686ddad8dd3854b2b9b70700 files/1.3.0/50nxclient 57
+RMD160 a0e6eb6022859da08876263d60ab80ebfa58525a files/1.3.0/50nxclient 57
+SHA256 ebf64a790519261542ca7210f17a3b0f668ce79f5486cdd515ba499560410c02 files/1.3.0/50nxclient 57
 MD5 f44884663100850b12e1fdb12b55645b files/1.5.0/50nxclient 38
+RMD160 6d29978719f6b46dfa07f9ebcc8c04c9c5a48fbf files/1.5.0/50nxclient 38
+SHA256 e90d501d1600a5cd811e6da1a2a1ffdecaa4dfbeb58df3352313ac1100bc9f28 files/1.5.0/50nxclient 38
 MD5 6532e2cbed5e3c88e36520dc46b1be4b files/digest-nxclient-1.4.0-r5 71
-MD5 f88ec7c11f1f61ad0c0c390e5325e8d5 files/digest-nxclient-1.5.0 149
-MD5 3b564ade1d67ddea768e937fa379c857 files/digest-nxclient-1.5.0-r1 149
+RMD160 9d61e0a9112df802ea66f7a48f2148c17b42cec7 files/digest-nxclient-1.4.0-r5 71
+SHA256 81db6b132b8d9207677faa33916c8afa3be3eebc23b8bd40eb26fb6b6240f2b0 files/digest-nxclient-1.4.0-r5 71
 MD5 142a71ee05218b6014d4d8872bc9cd7e files/digest-nxclient-1.5.0-r2 73
+RMD160 54c1c36eada0e5b52d6b7a195e201150272af928 files/digest-nxclient-1.5.0-r2 73
+SHA256 6102246c13cd6e58ddc17a005f40f54159d067d651101635f2734d9b62a1f1b9 files/digest-nxclient-1.5.0-r2 73
 MD5 c1c67a77261d3b3fede94b41a9d0ce1e metadata.xml 455
-MD5 4429f22294184b7381a98271588fc29b nxclient-1.4.0-r5.ebuild 1648
-MD5 79c0f4b4ba001e5eb9d0f7dc41ad5085 nxclient-1.5.0-r1.ebuild 2195
-MD5 598e31070c7b9fd59bcf5e6f0915d6a9 nxclient-1.5.0-r2.ebuild 2241
-MD5 ceb7fb63bb0069577d0bf90e30241ab1 nxclient-1.5.0.ebuild 2192
+RMD160 4be2c66d765fbe16df201f981c76f0c10265b921 metadata.xml 455
+SHA256 f1b98d76aa41c8483716a7ec1b48a7c70a943edfc07ae39bac23d95bd5ce27cd metadata.xml 455
+MD5 50aec3b613c8f24cd291f2a645bd089e nxclient-1.4.0-r5.ebuild 1702
+RMD160 a3941b63fbb8254e2c302ddd2fbfac4c527813fe nxclient-1.4.0-r5.ebuild 1702
+SHA256 7ac7ef17c202055b38bd3e1287b65b64a9c81d54190bf9a633fcb49b41236d07 nxclient-1.4.0-r5.ebuild 1702
+MD5 f0e6e7745483a6c3cbcb373819f84258 nxclient-1.5.0-r2.ebuild 2336
+RMD160 46d7680de235f3e534f94fbacdaac7ff73e3e65f nxclient-1.5.0-r2.ebuild 2336
+SHA256 a6300f437f542d002078eeec0aeada6ac44dcc2c43d1ebbd4fb7f2f3ae64206f nxclient-1.5.0-r2.ebuild 2336
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEIGP7JrHF4yAQTrARAgKoAKDKV28oy/u9qHpb6H9hfleHPtEZDwCgsDuL
+OQutfnxeNlz7+If/rDv3kHE=
+=fIjZ
+-----END PGP SIGNATURE-----
