@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.4 2005/08/11 12:04:08 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.5 2006/03/21 22:41:15 mr_bones_ Exp $
 
 inherit games
 
@@ -45,4 +45,14 @@ src_install() {
 	cp -r ../rr_share/* "${D}/${GAMES_DATADIR}/${MY_PN}" || die "cp failed"
 	dodoc ../readme*
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	if ! built_with_use media-libs/sdl-mixer vorbis ; then
+		einfo "${PN} will not have sound since sdl-mixer"
+		einfo "is built with USE=-vorbis"
+		einfo "Please emerge sdl-mixer with USE=vorbis"
+		einfo "if you want sound support"
+	fi
 }
