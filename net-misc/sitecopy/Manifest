@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7713cf3a12b2bde9ee4b1eada3e33abb ChangeLog 5632
-RMD160 247056f3aee366e3a272b2d109ce590e115a3a2f ChangeLog 5632
-SHA256 2b1e01f94be7dbe2ed521d21737c6c3e154f508ff5b0657da69d42b727dabeeb ChangeLog 5632
+MD5 333b051659a770c17efa61f52d804c42 ChangeLog 5791
+RMD160 75a2672e8eb671bdaf90d7416428df80c4f4e1c1 ChangeLog 5791
+SHA256 4bd694b9b193e14c3c82e3de2b148f2b5cacc6a3e7390ebbfcc40827ae0690a2 ChangeLog 5791
 MD5 fdd1c7334ee674439936fa8eed17cfcc files/digest-sitecopy-0.15.1 67
 RMD160 367d37a7eddd6d621025df9f2bcd34e0d842f8eb files/digest-sitecopy-0.15.1 67
 SHA256 70c9f72899b8a40aeb39ec53316ae6d172cf042842b9e152ccc41f136954fe76 files/digest-sitecopy-0.15.1 67
 MD5 a9f8ec12aecca50ec49648f0a8c2829f files/digest-sitecopy-0.16.0 67
 RMD160 191b173a3b45333041542718468bd6645529e489 files/digest-sitecopy-0.16.0 67
 SHA256 ae3e66f0070af693c74c645b72072daef22d1587e88b797c77a123b4f3a8f85a files/digest-sitecopy-0.16.0 67
-MD5 7709cac248b7575145338597dd8ddfa4 files/digest-sitecopy-0.16.3 67
-RMD160 346aad76e8b2a210c0154e6519d4b54cf83957b6 files/digest-sitecopy-0.16.3 67
-SHA256 5895c253532e3fec4e32a9b250444a7857974a526167ed304e4604dfb6c528be files/digest-sitecopy-0.16.3 67
+MD5 f4be1dbc4914729b6a8ee299a2e5a6ba files/digest-sitecopy-0.16.3 247
+RMD160 c13a57223470748099142d94cabd0080b67b2d7d files/digest-sitecopy-0.16.3 247
+SHA256 790044e1b97c6596ee54d928142d4b74d4a728f5fe74fc2f689a4bee9d96ff41 files/digest-sitecopy-0.16.3 247
 MD5 9d2f1b627c2e64ada7b81ea3fa5ee51d files/sitecopy-0.14.1-nls.patch 598
 RMD160 c543959c4da035dd3a22a6a7c2d5cbd652f71794 files/sitecopy-0.14.1-nls.patch 598
 SHA256 20ca3a15c0ffe5e106ab3a24ae2560f128ed3ca5dc9f9b0f92a148f4a90f8a4f files/sitecopy-0.14.1-nls.patch 598
@@ -28,13 +28,13 @@ SHA256 595dbc9aefdde59a39f2e3ab46f5c4fb1df59dc2606ca08cff20eb8fa21bb5fd sitecopy
 MD5 4d3fdc52f45cc2f73fa3b34d9a7c3345 sitecopy-0.16.0.ebuild 2500
 RMD160 3141731302fef9fc27b98b1e8ef56ba7ae5711a8 sitecopy-0.16.0.ebuild 2500
 SHA256 f4dcabb035a1b3cd1b07c30c8a08489b8589270d3368ee60d919db30646ecd42 sitecopy-0.16.0.ebuild 2500
-MD5 dcf90a40371ec6345fe67d84b1fe545e sitecopy-0.16.3.ebuild 2503
-RMD160 f4f2e2297e6bb8e7beba30244308126d88b0b1f3 sitecopy-0.16.3.ebuild 2503
-SHA256 5608103a4a42a6243efb46e76446bbfc26e5811c47c80fda38254a261aedf82c sitecopy-0.16.3.ebuild 2503
+MD5 a8ad888935032b1df5716feda247f700 sitecopy-0.16.3.ebuild 2465
+RMD160 22bfb6dd9b493afdb313f115f4c75a918e64ec9b sitecopy-0.16.3.ebuild 2465
+SHA256 46b83dd639fbf7b716fe970136eaf9412b2aaa69e63763a3575d8895b9b85c29 sitecopy-0.16.3.ebuild 2465
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEFlXnFdQwWVoAgN4RAlsIAJ40Ky3oYguRSXBKEdg4USskTZiyOACfagpA
-qtGnb2aos4oqAyA0pq+9N+A=
-=uw2N
+iD8DBQFEH0b32iXjgNjfe5sRAg3YAJ0WYYy71qBOFv5WiQXbG4HO3z1PUACgwsuo
+hCyB/6/acsROgDLSYl/VTqc=
+=v5TB
 -----END PGP SIGNATURE-----

@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.3.ebuild,v 1.1 2006/03/14 05:34:12 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.3.ebuild,v 1.2 2006/03/21 00:22:36 exg Exp $
 
 inherit eutils toolchain-funcs
 
-IUSE="expat gssapi nls rsh ssl webdav xml2 zlib"
+IUSE="expat nls rsh ssl webdav xml zlib"
 
 DESCRIPTION="sitecopy is for easily maintaining remote web sites"
 SRC_URI="http://www.lyra.org/${PN}/${P}.tar.gz"
@@ -39,9 +39,9 @@ pkg_setup() {
 		built_with_use net-misc/neon expat || die "neon needs expat support"
 	fi
 
-	if use xml2 ; then
+	if use xml ; then
 		built_with_use net-misc/neon expat && die "neon needs expat support disabled for
-		xml2 support to be enabled"
+		libxml2 support to be enabled"
 	fi
 }
 
@@ -65,11 +65,10 @@ src_compile() {
 
 	econf ${myconf} \
 			$(use_enable webdav) \
-			$(use_with gssapi) \
 			$(use_enable nls) \
 			$(use_enable rsh) \
 			$(use_with expat) \
-			$(use_with xml2 libxml2 ) \
+			$(use_with xml libxml2 ) \
 			|| die "configuration failed"
 
 	#		$(use_with socks) \
