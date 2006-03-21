@@ -1,33 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f68a6138494352627b6bb5e9a0af33e1 ChangeLog 1387
-RMD160 5913deb12de171819ace54a04cd9ca3deb00f410 ChangeLog 1387
-SHA256 53f9b372237c616f26ffff77bbff57cc0b0894f872f9ac159aaa60874e67b5d2 ChangeLog 1387
-MD5 8d91a1317c69a55813fb907b7055ff24 files/digest-k9copy-1.0.1b 65
-RMD160 eb44aeb512fc6d8c719744463cf2805255d65b25 files/digest-k9copy-1.0.1b 65
-SHA256 e82c9cecf43aee6a4a227aabb4219d00609577b6b39288a23782fed985074eaf files/digest-k9copy-1.0.1b 65
-MD5 5a5d88aa77c8af2303e4ddecd903ac2e files/digest-k9copy-1.0.2 65
-RMD160 881990aa4ce52d333ecb16520138bfe16f8e96ca files/digest-k9copy-1.0.2 65
-SHA256 d64ab84e366187038a401efa7516b920526c383b9d712b70d1c4c8bad4cc3539 files/digest-k9copy-1.0.2 65
-MD5 5a5d88aa77c8af2303e4ddecd903ac2e files/digest-k9copy-1.0.2-r1 65
-RMD160 881990aa4ce52d333ecb16520138bfe16f8e96ca files/digest-k9copy-1.0.2-r1 65
-SHA256 d64ab84e366187038a401efa7516b920526c383b9d712b70d1c4c8bad4cc3539 files/digest-k9copy-1.0.2-r1 65
+MD5 2297a6e9037c8ee674b13ece366cabb9 ChangeLog 1570
+RMD160 0dab7438a97fc20c94d9a51cd5b1a4ff90f8e5cd ChangeLog 1570
+SHA256 44fec5cf4aafe6604dd290001fd9651bf753117b4a5b369b7de6e8ab557813e8 ChangeLog 1570
 MD5 f061117d94091e16e5edfc83b78d57d6 files/digest-k9copy-1.0.3b 244
 RMD160 e80f5f9556d0ac9895dfd1147277c3f899d39d62 files/digest-k9copy-1.0.3b 244
 SHA256 6b0a937730b055317bbabf13abf270d73e09cd920a7f156e797583199e31187d files/digest-k9copy-1.0.3b 244
-MD5 9d9c310c683094498467072262d3101f files/k9copy-1.0.2-switch.patch 1017
-RMD160 62d03d46f7c03edc245780c7598f646e3743b250 files/k9copy-1.0.2-switch.patch 1017
-SHA256 6ba2ea0a50d8212eb66dde862db6b940a5203eb976dd04e81d5a85f4c24d401f files/k9copy-1.0.2-switch.patch 1017
-MD5 7cde9ae55ea57203bab94249fc99142f k9copy-1.0.1b.ebuild 612
-RMD160 60906b716b207dc943665260acfebf2467baccc8 k9copy-1.0.1b.ebuild 612
-SHA256 43b22aef5195e32ec7f66e6d5d22f13781dc2da3c246ea415d6c3a3d4ebde6de k9copy-1.0.1b.ebuild 612
-MD5 d411f67632d73f4bc19ff9ba81770ce3 k9copy-1.0.2-r1.ebuild 728
-RMD160 cd41311467000c6d445cee9ebe59ba39f09725cc k9copy-1.0.2-r1.ebuild 728
-SHA256 7af61d62e9a2a3d3c8901eebb9e863fe92d5fbc4bb31240fb3d96ed4d2ce9953 k9copy-1.0.2-r1.ebuild 728
-MD5 bc0438d3d39857356c8c2a652decfbae k9copy-1.0.2.ebuild 639
-RMD160 2cbc62ae4a726bbd4fd162bcb56c907c4858a5f1 k9copy-1.0.2.ebuild 639
-SHA256 31c319e07475afc5b5448af088e9185b9a62b58bd8a2525f28bba04157df822b k9copy-1.0.2.ebuild 639
 MD5 41f90176e45ceb3be0aceadad0dc3964 k9copy-1.0.3b.ebuild 644
 RMD160 f8ffb091101e9848d78934dbcc4dcedee94a95d6 k9copy-1.0.3b.ebuild 644
 SHA256 c6adf75313fea7943658a675263bd9a5f1ad1dc87cecf1697cb5b35c5cee87bd k9copy-1.0.3b.ebuild 644
@@ -37,7 +16,7 @@ SHA256 ee81a2309bd9eae88d896b77f0d87adbb941cf18f82eea08c025eb583ac6043d metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEIB6sAiZjviIA2XgRArFnAJ4wNN0//O6nYNhtj55oxyd4HgBeIgCZAZ6c
-evCmNvOzDbxZbeZqxdx0dh8=
-=HUYS
+iD8DBQFEICCMAiZjviIA2XgRApzYAKCMOBu39j/BJO98UoIS+FNcKxjX0gCgttG7
+izGAK92nNsMomQ1yBOvOYSk=
+=tOx8
 -----END PGP SIGNATURE-----

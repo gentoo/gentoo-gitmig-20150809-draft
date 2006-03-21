@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.7 2006/03/21 15:42:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.8 2006/03/21 15:51:05 flameeyes Exp $
+
+  21 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/k9copy-1.0.2-switch.patch, -k9copy-1.0.1b.ebuild,
+  -k9copy-1.0.2.ebuild, -k9copy-1.0.2-r1.ebuild:
+  Drop old versions.
 
   21 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Takeover of k9copy from media-optical herd to video and kde herds.
