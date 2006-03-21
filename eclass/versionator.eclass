@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.9 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.10 2006/03/21 00:49:54 kugelfang Exp $
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
 #
@@ -16,15 +16,17 @@
 #
 # Full list of user usable functions provided by this eclass (see the functions
 # themselves for documentation):
-#     get_all_version_components      ver_str
-#     get_version_components          ver_str
-#     get_major_version               ver_str
-#     get_version_component_range     range     ver_str
-#     get_after_major_version         ver_str
-#     replace_version_separator       index     newvalue   ver_str
-#     replace_all_version_separators  newvalue  ver_str
-#     delete_version_separator        index ver_str
-#     delete_all_version_separators   ver_str
+#     get_all_version_components          ver_str
+#     get_version_components              ver_str
+#     get_major_version                   ver_str
+#     get_version_component_range         range     ver_str
+#     get_after_major_version             ver_str
+#     replace_version_separator           index     newvalue   ver_str
+#     replace_all_version_separators      newvalue  ver_str
+#     delete_version_separator            index ver_str
+#     delete_all_version_separators       ver_str
+#     get_version_component_count         ver_str
+#     get_last_version_component_index    ver_str
 #
 # Rather than being a number, the index parameter can be a separator character
 # such as '-', '.' or '_'. In this case, the first separator of this kind is
@@ -33,7 +35,6 @@
 # There's also:
 #     version_is_at_least             want      have
 # which may be buggy, so use with caution.
-
 
 shopt -s extglob
 
@@ -212,6 +213,25 @@ delete_version_separator() {
 #     1b.2.3        -> 1b23
 delete_all_version_separators() {
 	replace_all_version_separators "" "${1}"
+}
+
+# How many version components are there in $1 (defaults to $PV)?
+#     1.0.1       ->  3
+#     3.0c-r1     ->  4
+#
+get_version_component_count() {
+	local a
+	a=( $(get_version_components "${1:-${PV}}" ) )
+	echo ${#a[@]}
+}
+
+# What is the index of the last version component in $1 (defaults to $PV)?
+# Equivalent to get_version_component_count - 1.
+#     1.0.1       ->  3
+#     3.0c-r1     ->  4
+#
+get_last_version_component_index() {
+	echo $(( $(get_version_component_count "${1:-${PV}}" ) - 1 ))
 }
 
 # Is $2 (defaults to $PVR) at least version $1? Intended for use in eclasses
