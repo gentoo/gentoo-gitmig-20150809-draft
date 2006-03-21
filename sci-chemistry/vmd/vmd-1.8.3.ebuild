@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.3.ebuild,v 1.1 2006/02/10 15:33:08 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.3.ebuild,v 1.2 2006/03/21 08:37:58 spyderous Exp $
 
 inherit eutils toolchain-funcs python
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ks.uiuc.edu/Research/vmd/"
 SRC_URI="${P}.src.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="hardened"
 
 RESTRICT="fetch"
@@ -87,6 +87,10 @@ src_unpack() {
 		-e "s:gentoo-python-link:${PY}:" \
 		-i configure || die "failed setting up python"
 
+	sed -e "s:LINUXPPC:LINUX:g" \
+		-e "s:LINUXALPHA:LINUX:g" \
+		-e "s:LINUXAMD64:LINUX:g" \
+		-i ${S}/bin/vmd || die "failed setting up vmd wrapper script"
 
 	local myconfig="LINUX OPENGL FLTK TK TCL PTHREADS PYTHON"
 
