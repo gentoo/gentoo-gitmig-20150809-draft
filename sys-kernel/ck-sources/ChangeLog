@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.135 2006/03/14 07:51:48 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.136 2006/03/21 08:03:28 marineam Exp $
+
+*ck-sources-2.6.16_p1 (21 Mar 2006)
+
+  21 Mar 2006; Michael Marineau <marineam@gentoo.org>
+  +ck-sources-2.6.16_p1.ebuild:
+  New version, includes improved swap prefetching but removes dynticks
 
 *ck-sources-2.6.15_p7 (14 Mar 2006)
 
