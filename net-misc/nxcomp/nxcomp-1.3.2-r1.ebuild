@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.3.2-r1.ebuild,v 1.3 2005/01/02 10:19:41 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.3.2-r1.ebuild,v 1.4 2006/03/21 18:42:28 agriffis Exp $
 
 MY_P="${PN}-1.3.2-4"
 DESCRIPTION="X11 protocol compression library"
@@ -10,15 +10,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
-DEPEND=">=media-libs/jpeg-6b-r3
->=media-libs/libpng-1.2.5-r4
->=sys-devel/gcc-3.2.3-r2
->=sys-libs/glibc-2.3.2-r3
->=sys-libs/zlib-1.1.4-r2
-virtual/x11"
-
-# Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
-#RDEPEND=""
+RDEPEND=">=media-libs/jpeg-6b-r3
+	>=media-libs/libpng-1.2.5-r4
+	>=sys-libs/glibc-2.3.2-r3
+	>=sys-libs/zlib-1.1.4-r2
+	|| ( x11-libs/libXt virtual/x11 )"
+DEPEND="${RDEPEND}
+	>=sys-devel/gcc-3.2.3-r2
+	|| ( x11-proto/xproto virtual/x11 )"
 
 S=${WORKDIR}/${PN}
 

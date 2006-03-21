@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.5.0-r1.ebuild,v 1.2 2006/03/05 14:29:13 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.5.0-r1.ebuild,v 1.3 2006/03/21 18:42:28 agriffis Exp $
 
 inherit eutils multilib
 
@@ -14,11 +14,14 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 SRC_URI="http://web04.nomachine.com/download/1.5.0/sources/$P-80.tar.gz"
 
-DEPEND="media-libs/jpeg
+RDEPEND="media-libs/jpeg
 	media-libs/libpng
 	virtual/libc
 	sys-libs/zlib
-	virtual/x11"
+	|| ( x11-libs/libXt virtual/x11 )"
+
+DEPEND="${RDEPEND}
+	|| ( x11-proto/xproto virtual/x11 )"
 
 S=${WORKDIR}/${PN}
 
