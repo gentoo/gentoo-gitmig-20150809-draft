@@ -1,12 +1,22 @@
-MD5 4fa39e7c691e2df4dd24424748620c6a ChangeLog 2170
-RMD160 a8c89b2e717506aab9ce90507cd81684da6111f8 ChangeLog 2170
-SHA256 2119f9fd6a7a349f580913b54f8001b5c79310cb759eaed6403372866fc6fa13 ChangeLog 2170
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f150541ffc7928fa173ad55fa695913b ChangeLog 2280
+RMD160 9768db592964eec549949b508c08bffc4e62f9cd ChangeLog 2280
+SHA256 f6af1e1f152bab3d5313f0eb04b67faed37fd2a5e52ead9283c8daca7ee2f832 ChangeLog 2280
 MD5 e53db1279a0a21a35ebcd1ab475cf07a files/digest-libXprintUtil-1.0.1 72
 RMD160 1dbcce9c4a50c5d3cd53855a37bc58b8d121da39 files/digest-libXprintUtil-1.0.1 72
 SHA256 2afe52c8ef74ff801ce6a6eeb7b56e15cfff831f345278e5f64f0e11475cfabc files/digest-libXprintUtil-1.0.1 72
-MD5 c1d5533fa860db9b3432a4898e8c7e5c libXprintUtil-1.0.1.ebuild 611
-RMD160 c47c2ddb90a76a78a9240c7cd7d94a3ee61b8ee7 libXprintUtil-1.0.1.ebuild 611
-SHA256 28bb8cc1e328a7a8ecb7ffb7302a7943ff66177abca0147c00e43952b2199dea libXprintUtil-1.0.1.ebuild 611
+MD5 002c14d1c3a47667f791499c72729135 libXprintUtil-1.0.1.ebuild 618
+RMD160 dd7ebb51ea24b941074e9a56f693dab8b7ae8759 libXprintUtil-1.0.1.ebuild 618
+SHA256 fd7d14a4344367e1ef613cc7a2dfe17beec1bb3e14b2f404797d3c3916f4d774 libXprintUtil-1.0.1.ebuild 618
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFEIFqnJrHF4yAQTrARArqEAKCxXuujfHFXmzzJzQZpvPzbU1dlKQCgxr62
+X7HrsguCY43ZgxDl8blFfDQ=
+=LWmu
+-----END PGP SIGNATURE-----
