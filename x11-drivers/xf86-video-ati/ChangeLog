@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.21 2006/02/23 21:52:23 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.22 2006/03/21 22:53:10 lu_zero Exp $
+
+  21 Mar 2006; Luca Barbato <lu_zero@gentoo.org>
+  +files/xf86-video-ati-6.5.7.3-hangup-ppc.patch,
+  xf86-video-ati-6.5.7.3.ebuild:
+  Fixed hangup on new Apple PowerBook (rev 5,6 and 5,8), thanks to the people
+  in #mklinux for pointing it (and the ubuntu's mantainer)
 
   23 Feb 2006; Stefaan De Roeck <stefaan@gentoo.org>
   xf86-video-ati-6.5.7.3.ebuild:

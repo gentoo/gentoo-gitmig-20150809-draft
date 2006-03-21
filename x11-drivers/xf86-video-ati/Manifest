@@ -1,22 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 de5b94340049e50b776235633175b508 ChangeLog 3390
-RMD160 4cd2ce1d5a145af949e6685f7747e557f3bfc4ab ChangeLog 3390
-SHA256 19e3526dccbdb258146e7e505528e7da5429d3591334fedd629255dbecc5f1bd ChangeLog 3390
+MD5 30e763ce60f3d58ab13bbd8dd5dc33b8 ChangeLog 3660
+RMD160 2ff74a670bbf846b0f88d717d8827c794be314c7 ChangeLog 3660
+SHA256 ec35bd2b4f10a3f8ceef54ea2e820f97da06f21da08fb65ef62231beff4301ca ChangeLog 3660
 MD5 d1f369a44c9f9eb25ac6ae8f05bf11c4 files/digest-xf86-video-ati-6.5.7.3 331
 RMD160 37aa297f0980fecaa86112551924875d395613b3 files/digest-xf86-video-ati-6.5.7.3 331
 SHA256 cbdb12ea8adca7bb493054a1b67c28192f8ac076f5d1cefe0acfbddd7e5d54dc files/digest-xf86-video-ati-6.5.7.3 331
+MD5 f2eaf0713b34e9ca2bd0abdce756d50e files/xf86-video-ati-6.5.7.3-hangup-ppc.patch 12572
+RMD160 1a87228c3b9be623b7af32c394fce68b4636f28b files/xf86-video-ati-6.5.7.3-hangup-ppc.patch 12572
+SHA256 780b2551ded8b2ea780bc83dcff9b8bd9330f7417bf1c4b98fefe1d5839e68e0 files/xf86-video-ati-6.5.7.3-hangup-ppc.patch 12572
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 e81d0b3fdbafb636a6e7f18878393867 xf86-video-ati-6.5.7.3.ebuild 872
-RMD160 170a7894cd447dca686a002965de9b128a9b8e20 xf86-video-ati-6.5.7.3.ebuild 872
-SHA256 705835f42861a275fea97119fd823d487cc21147f04787c719c845f5681d6434 xf86-video-ati-6.5.7.3.ebuild 872
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6bE2+ySkm8kpY0RAqhjAJ9ubnrQ3fQq1AMJk4hwSEtlFtUddgCeJ0cm
-x6AaIF9Y4eVXh7kixyzut5E=
-=p4eJ
------END PGP SIGNATURE-----
+MD5 9757056c3b6f9b6b360e13b911ea9e3e xf86-video-ati-6.5.7.3.ebuild 917
+RMD160 62dfa567340fa6e74199ea04a5f91dac6deb0ffb xf86-video-ati-6.5.7.3.ebuild 917
+SHA256 f84ce1ef0729f02f4d1a4efc2e46744b6e1937279499cd8849c2ddfb4df9a1b2 xf86-video-ati-6.5.7.3.ebuild 917
