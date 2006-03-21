@@ -5,7 +5,7 @@
    alias_subnet_arg="netmask $alias_subnet_mask"
  fi
 +if [ x$IF_METRIC != x ]; then
-+  metric="metric $IF_METRIC"
++  metric_arg="metric $IF_METRIC"
 +fi
  
  if [ x$reason = xMEDIUM ]; then
@@ -15,7 +15,7 @@
      route add $new_ip_address 127.1 >/dev/null 2>&1
      for router in $new_routers; do
 -      route add default $router >/dev/null 2>&1
-+      route add default $router $metric dev $interface >/dev/null 2>&1
++      route add default $router $metric_arg dev $interface >/dev/null 2>&1
      done
      if [ "$new_static_routes" != "" ]; then
        set $new_static_routes
@@ -24,7 +24,7 @@
        route add $new_ip_address 127.1 >/dev/null 2>&1
        for router in $new_routers; do
 -	route add default $router >/dev/null 2>&1
-+	route add default $router $metric dev $interface >/dev/null 2>&1
++	route add default $router $metric_arg dev $interface >/dev/null 2>&1
        done
        set $new_static_routes
        while [ $# -gt 1 ]; do
@@ -35,7 +35,7 @@
    alias_subnet_arg="netmask $alias_subnet_mask"
  fi
 +if [ x$IF_METRIC != x ]; then
-+  metric="metric $IF_METRIC"
++  metric_arg="metric $IF_METRIC"
 +fi
  
  if [ x$reason = xMEDIUM ]; then
@@ -45,7 +45,7 @@
      route add $new_ip_address 127.1 >/dev/null 2>&1
      for router in $new_routers; do
 -      route add default $router >/dev/null 2>&1
-+      route add default $router $metric dev $interface >/dev/null 2>&1
++      route add default $router $metric_arg dev $interface >/dev/null 2>&1
      done
      if [ -n "$new_static_routes" ]; then
        $LOGGER "New Static Routes: $new_static_routes"
@@ -54,7 +54,7 @@
        route add $new_ip_address 127.1 >/dev/null 2>&1
        for router in $new_routers; do
 -	route add default $router >/dev/null 2>&1
-+	route add default $router $metric dev $interface >/dev/null 2>&1
++	route add default $router $metric_arg dev $interface >/dev/null 2>&1
        done
        set -- $new_static_routes
        while [ $# -gt 1 ]; do
@@ -65,7 +65,7 @@
    alias_subnet_arg="netmask $alias_subnet_mask"
  fi
 +if [ x$IF_METRIC != x ]; then
-+  metric="metric $IF_METRIC"
++  metric_arg="metric $IF_METRIC"
 +fi
  
  if [ x$reason = xMEDIUM ]; then
@@ -92,7 +92,7 @@
      fi
      for router in $new_routers; do
 -      route add default gw $router
-+      route add default gw $router $metric dev $interface
++      route add default gw $router $metric_arg dev $interface
      done
    fi
    if [ x$new_ip_address != x$alias_ip_address ] && [ x$alias_ip_address != x ];
@@ -129,7 +129,7 @@
      fi
      for router in $new_routers; do
 -      route add default gw $router
-+      route add default gw $router $metric dev $interface
++      route add default gw $router $metric_arg dev $interface
      done
      make_resolv_conf
      exit_with_hooks 0
@@ -146,7 +146,7 @@
    alias_subnet_arg="netmask $alias_subnet_mask"
  fi
 +if [ x$IF_METRIC != x ]; then
-+  metric="metric $IF_METRIC"
++  metric_arg="metric $IF_METRIC"
 +fi
  
  if [ x$reason = xMEDIUM ]; then
@@ -156,7 +156,7 @@
      route add $new_ip_address 127.1 >/dev/null 2>&1
      for router in $new_routers; do
 -      route add default $router >/dev/null 2>&1
-+      route add default $router $metric dev $interface >/dev/null 2>&1
++      route add default $router $metric_arg dev $interface >/dev/null 2>&1
      done
      if [ "$new_static_routes" != "" ]; then
        set $new_static_routes
@@ -165,7 +165,7 @@
        route add $new_ip_address 127.1 >/dev/null 2>&1
        for router in $new_routers; do
 -	route add default $router >/dev/null 2>&1
-+	route add default $router $metric dev $interface >/dev/null 2>&1
++	route add default $router $metric_arg dev $interface >/dev/null 2>&1
        done
        set $new_static_routes
        while [ $# -gt 1 ]; do
@@ -176,7 +176,7 @@
    alias_subnet_arg="netmask $alias_subnet_mask"
  fi
 +if [ x$IF_METRIC != x ]; then
-+  metric="metric $IF_METRIC"
++  metric_arg="metric $IF_METRIC"
 +fi
  
  if [ x$reason = xMEDIUM ]; then
@@ -186,7 +186,7 @@
      route add $new_ip_address 127.1 >/dev/null 2>&1
      for router in $new_routers; do
 -      route add default $router >/dev/null 2>&1
-+       route add default $router $metric dev $interface >/dev/null 2>&1
++       route add default $router $metric_arg dev $interface >/dev/null 2>&1
      done
      if [ "$new_static_routes" != "" ]; then
        set $new_static_routes
@@ -195,7 +195,7 @@
        route add $new_ip_address 127.1 >/dev/null 2>&1
        for router in $new_routers; do
 -	route add default $router >/dev/null 2>&1
-+	route add default $router $metric dev $interface >/dev/null 2>&1
++	route add default $router $metric_arg dev $interface >/dev/null 2>&1
        done
        set $new_static_routes
        while [ $# -gt 1 ]; do

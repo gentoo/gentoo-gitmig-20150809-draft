@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta3-r1.ebuild,v 1.1 2006/03/20 12:42:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta3-r1.ebuild,v 1.2 2006/03/21 12:11:05 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -40,6 +40,10 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-metric.patch"
 	# resolvconf support in dhclient-script
 	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-resolvconf.patch"
+	# Fix setting hostnames on Linux
+	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-hostname.patch"
+	# Allow mtu settings
+	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-mtu.patch"
 	# Quiet the isc blurb
 	epatch "${FILESDIR}/${PN}-3.0.3-no_isc_blurb.patch"
 	# Enable dhclient to get extra configuration from stdin

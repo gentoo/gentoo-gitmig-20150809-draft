@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6995a8889df77e61e8f940037bce037b ChangeLog 14563
-RMD160 f81982694e94a0189e704493948b2ba6f18c187d ChangeLog 14563
-SHA256 7a889d181cda446db966647ce9c3b9e3cdc941765125ba8b97f90593516b3803 ChangeLog 14563
+MD5 2d9285ded701f38fcd6abaee4c89853e ChangeLog 14963
+RMD160 095c247e02087f67a14a72408f639b38c0e248ab ChangeLog 14963
+SHA256 4123f50381e651374ab58a2fdad5f259fa5c9a9a720bc59d8e7f4065a8f9eded ChangeLog 14963
 MD5 b268712b328548de32d5db06619787a8 dhcp-3.0.3-r4.ebuild 4062
 RMD160 310de76cfa0feff02e9620ed113e5c2647b3b8c8 dhcp-3.0.3-r4.ebuild 4062
 SHA256 a2083988469dbf8795387c94da9cff44b8f2dadf89048b32f261954dae3a434a dhcp-3.0.3-r4.ebuild 4062
-MD5 8799e0d479a3127605304b99912da028 dhcp-3.0.3-r6.ebuild 5675
-RMD160 f54b9a6305f6b566790d792e58f601d1893f7a1e dhcp-3.0.3-r6.ebuild 5675
-SHA256 67b77ca5cdadf1b2291af64da672dd5e29c6d16f97f6b91e1d01e052fc63a55d dhcp-3.0.3-r6.ebuild 5675
-MD5 6f42e349884f29b20a11aa2eed68c5ce dhcp-3.0.4_beta3-r1.ebuild 5687
-RMD160 4e4aba6a6d3ba88660e7135dcd103189998b6116 dhcp-3.0.4_beta3-r1.ebuild 5687
-SHA256 badcee0d688ce9db44c5edf6273b6835bf2f73f1064cd32f837cb2dbe0ad6058 dhcp-3.0.4_beta3-r1.ebuild 5687
+MD5 962e9baa36c353a31df9593bb345545d dhcp-3.0.3-r6.ebuild 5916
+RMD160 f694f318c0e41a45fdb88249fad30da75917f857 dhcp-3.0.3-r6.ebuild 5916
+SHA256 311a8149388744725519e332baa1d17a26a75a9c694a54d8204089b50331d360 dhcp-3.0.3-r6.ebuild 5916
+MD5 6ae98b909514c5ec3fa3822d2db9ea0c dhcp-3.0.4_beta3-r1.ebuild 5854
+RMD160 1f2fa7e50e19a9e11182b6e851a58d4d6d3b044d dhcp-3.0.4_beta3-r1.ebuild 5854
+SHA256 0c7a4d25e6eae28dd59f54e5d24af140d2fef2833829cc9162c86a0b67bd95e1 dhcp-3.0.4_beta3-r1.ebuild 5854
 MD5 d909d81a4d4ea39ddfc9898d33488c73 files/dhcp-3.0-fix-perms.patch 485
 RMD160 3857270dffed5feee95609aeb37d0c9ef8844945 files/dhcp-3.0-fix-perms.patch 485
 SHA256 a805a60b36e148886887aebb797e80f642386b3e55ef4a0b5132f96a2877e018 files/dhcp-3.0-fix-perms.patch 485
@@ -22,9 +22,15 @@ SHA256 a8db9eb98397a9c1b3a0de07fc107c39dc4f6a4a331d404fc6fcc4a8dbc7aeae files/dh
 MD5 d0f61288e81ce020573f3f6965af8489 files/dhcp-3.0.2-gmake.patch 1872
 RMD160 d2d41c0a7e002103d68605d2492bfe716bb2889e files/dhcp-3.0.2-gmake.patch 1872
 SHA256 b2bbfc1d1f5b4d03ff3f53b3974ec32731e5f626de8f8d127328591e4c721215 files/dhcp-3.0.2-gmake.patch 1872
-MD5 1291615bd274332f7aa69504604609fe files/dhcp-3.0.3-dhclient-metric.patch 6506
-RMD160 b3016c843978dc37ed4ce4ed0f5f560f06e32e50 files/dhcp-3.0.3-dhclient-metric.patch 6506
-SHA256 6e0892dae510662c1c59f9b7c235ee8d16a66310f663ac0cdd780ac6e8f73c35 files/dhcp-3.0.3-dhclient-metric.patch 6506
+MD5 3b6c17bf8f6a7a0f1c94c01fd792ef42 files/dhcp-3.0.3-dhclient-hostname.patch 1046
+RMD160 ffedf6a9b77f1611817b08205cbf1e83ee6f8f5e files/dhcp-3.0.3-dhclient-hostname.patch 1046
+SHA256 4a2e48efbb569b66f834b3786aafd6ecec559083cc61de51305577c169032aa4 files/dhcp-3.0.3-dhclient-hostname.patch 1046
+MD5 a69b724bebeef3eac81a55a7eec0b009 files/dhcp-3.0.3-dhclient-metric.patch 6566
+RMD160 3e2ada92dafac90f8b9f40410b9f456dc5df5cbf files/dhcp-3.0.3-dhclient-metric.patch 6566
+SHA256 64fcf085b6f5a340ca5be50315e5458916eceac15affb115c8ec7d146330e91a files/dhcp-3.0.3-dhclient-metric.patch 6566
+MD5 0a677f9881e593716755bdd0238a5d1e files/dhcp-3.0.3-dhclient-mtu.patch 6469
+RMD160 8d18d120d8514cb9b4d000ebb767a60e57091c42 files/dhcp-3.0.3-dhclient-mtu.patch 6469
+SHA256 ad887de2ace0e4aea321ddc262b467a0c810b8b6a34d3e1cad30906a2840600a files/dhcp-3.0.3-dhclient-mtu.patch 6469
 MD5 0c9596d1fbd7ce8c71d4dc76f0553f6c files/dhcp-3.0.3-dhclient-ntp.patch 5340
 RMD160 7f72e52af2a6e9d646655020e512133af1e13bf0 files/dhcp-3.0.3-dhclient-ntp.patch 5340
 SHA256 768fb750df7c888194231a3090b0c1929cbd51490d3e9ff5515e0a0cbb776f55 files/dhcp-3.0.3-dhclient-ntp.patch 5340
@@ -79,7 +85,7 @@ SHA256 456ab9c26235fa4c1eda6b53b163e901869d5f64ba442b30db1fe86c57fe56af metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEH9VHEbVyYKaZ/NERAg6RAJwPlfnGNP6lY5h6s37iyISoRWYmIwCeJHaO
-CQrNHMKjrmXA7CFTIuombLM=
-=Kp2w
+iD8DBQFEH+16EbVyYKaZ/NERAmE9AJ9VBua0BdQQZVlpr/wNenrbknR5wQCgkeaM
+gOasBIUjkVCCoSBV7BkODo4=
+=9M+e
 -----END PGP SIGNATURE-----
