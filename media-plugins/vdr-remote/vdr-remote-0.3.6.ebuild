@@ -1,6 +1,6 @@
 # Copyright 2003-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remote/vdr-remote-0.3.6.ebuild,v 1.2 2006/03/05 11:33:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remote/vdr-remote-0.3.6.ebuild,v 1.3 2006/03/21 14:12:01 zzam Exp $
 
 IUSE=""
 
@@ -13,5 +13,5 @@ KEYWORDS="~x86 ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND=">=media-video/vdr-1.3.6"
+DEPEND=">=media-video/vdr-1.2.6"
 
