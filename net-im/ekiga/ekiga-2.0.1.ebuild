@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.1.ebuild,v 1.1 2006/03/20 23:45:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.1.ebuild,v 1.2 2006/03/21 21:33:12 genstef Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -40,15 +40,19 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.20
 	gnome? ( app-text/scrollkeeper )"
 
+pkg_setup() {
+	if ! built_with_use dev-libs/pwlib ldap; then
+		einfo "You need to build dev-libs/pwlib with USE=ldap enabled."
+		die "Pwlib w/o ldap-support detected."
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
 	# Fix configure to install schemafile into the proper directory
 	epatch ${FILESDIR}/${PN}-1.99.0-configure.patch
-
-	# Relax dbus version check and fix installation of service file
-#	epatch ${FILESDIR}/${PN}-1.99.0-dbus.diff
 }
 
 src_compile() {
@@ -87,7 +91,6 @@ src_compile() {
 }
 
 src_install() {
-
 	if use gnome; then
 		gnome2_src_install
 	else
@@ -95,17 +98,6 @@ src_install() {
 		rm -rf ${D}/usr/lib/bonobo
 
 		dodoc AUTHORS ChangeLog COPYING README INSTALL NEWS FAQ TODO
-	fi
-}
-
-pkg_postinst() {
-
-	if use gnome; then
-		gnome2_pkg_postinst
-		# we need to fix the GConf permissions, see bug #59764
-		# <obz@gentoo.org>
-		einfo "Fixing GConf permissions for gnomemeeting"
-		gnomemeeting-config-tool --fix-permissions
 	fi
 }
 
