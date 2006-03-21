@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.28 2006/03/13 02:24:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.29 2006/03/21 01:01:10 anarchy Exp $
+
+  21 Mar 2006; Jory A. Pratt <anarchy@gentoo.org> ati-drivers-8.23.7.ebuild:
+  fixed patch for 2.6.16 wrt #126151
 
 *ati-drivers-8.23.7 (13 Mar 2006)
 
