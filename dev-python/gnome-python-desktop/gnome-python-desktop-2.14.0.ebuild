@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.14.0.ebuild,v 1.4 2006/03/20 03:27:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.14.0.ebuild,v 1.5 2006/03/21 01:54:55 compnerd Exp $
 
-inherit distutils gnome2 python
+inherit distutils gnome2 python virtualx
 
 DESCRIPTION="provides python interfacing modules for some GNOME desktop
 libraries"
@@ -36,7 +36,7 @@ RDEPEND="${RDEPEND}
 DOCS="AUTHORS COPYING* ChangeLog INSTALL MAINTAINERS NEWS README"
 
 src_test() {
-	einfo "skipping tests for now"
+	Xmake check || die "tests failed"
 }
 
 src_install() {
