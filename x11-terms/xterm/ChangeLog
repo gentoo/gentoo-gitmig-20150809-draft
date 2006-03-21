@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.128 2006/03/21 14:22:59 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.129 2006/03/21 15:29:04 exg Exp $
+
+  21 Mar 2006; Emanuele Giaquinta <exg@gentoo.org> xterm-211.ebuild:
+  Enable NARROW proto to fix scrollbar breakage on modular X, bug #115037.
 
   21 Mar 2006; Emanuele Giaquinta <exg@gentoo.org> xterm-211.ebuild:
   Fixed sed for modular X, bug #126110.

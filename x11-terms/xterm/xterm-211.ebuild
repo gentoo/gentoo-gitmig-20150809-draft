@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-211.ebuild,v 1.2 2006/03/21 14:22:59 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-211.ebuild,v 1.3 2006/03/21 15:29:04 exg Exp $
 
 inherit eutils flag-o-matic
 
@@ -52,7 +52,7 @@ src_compile() {
 		--disable-setuid \
 		--disable-full-tgetent \
 		--disable-imake \
-		--disable-narrowproto \
+		--enable-narrowproto \
 		--enable-ansi-color \
 		--enable-88-color \
 		--enable-256-color \
