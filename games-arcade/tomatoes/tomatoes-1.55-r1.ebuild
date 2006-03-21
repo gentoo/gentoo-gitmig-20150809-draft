@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r1.ebuild,v 1.1 2006/02/14 23:14:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r1.ebuild,v 1.2 2006/03/21 06:28:21 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tomatoes/tomatoes-linux-src-${PV}.tar.bz2
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="virtual/opengl
