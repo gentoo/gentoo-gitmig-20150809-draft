@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.45 2006/03/20 03:34:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.46 2006/03/21 04:33:09 tsunam Exp $
+
+  21 Mar 2006; Joshua Jackson <tsunam@gentoo.org> wordpress-2.0.2.ebuild:
+  Stable on x86; security bug #125693
 
   20 Mar 2006; Jason Wever <weeve@gentoo.org> wordpress-2.0.2.ebuild:
   Stable on SPARC wrt bug #125693.
