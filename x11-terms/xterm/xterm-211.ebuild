@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-211.ebuild,v 1.1 2006/03/20 03:54:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-211.ebuild,v 1.2 2006/03/21 14:22:59 exg Exp $
 
 inherit eutils flag-o-matic
 
@@ -91,7 +91,7 @@ src_install() {
 	fperms 0755 /usr/bin/xterm
 
 	# restore the navy blue
-	sed -i "s:blue2$:blue:" ${D}/etc/X11/app-defaults/XTerm-color
+	sed -i "s:blue2$:blue:" ${D}${DEFAULTS_DIR}/XTerm-color
 
 	# Fix for bug #91453 at Thomas Dickey's suggestion:
 	echo "*allowWindowOps: 	false" >> ${D}/${DEFAULTS_DIR}/XTerm
