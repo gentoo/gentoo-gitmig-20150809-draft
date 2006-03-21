@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.9 2006/03/16 20:37:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.10 2006/03/21 19:03:04 wolf31o2 Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -45,8 +45,8 @@ app-emulation/winex
 app-emulation/winex-cvs
 app-emulation/winex-transgaming
 app-text/acroread
-dev-java/blackdown-jdk
-dev-java/blackdown-jre
+<dev-java/blackdown-jdk-1.4.2
+<dev-java/blackdown-jre-1.4.2
 games-action/descent3
 games-action/lugaru-demo
 games-action/mutantstorm-demo
