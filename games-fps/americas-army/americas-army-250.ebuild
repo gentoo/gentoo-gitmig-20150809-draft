@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.6 2006/02/11 19:28:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.7 2006/03/21 14:50:51 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -39,6 +39,7 @@ RDEPEND="sys-libs/glibc
 				virtual/x11 ) ) )
 	amd64? (
 			app-emulation/emul-linux-x86-compat )
+	x86? ( virtual/libstdc++ )
 	dedicated? (
 		app-misc/screen )"
 
