@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 64a8777b97eae6bdf96af21e5b647d82 ChangeLog 23973
 RMD160 f53508119d7a2322bdd01c586402e5cb60cdc33a ChangeLog 23973
 SHA256 67e628b76233ab9a9dfea975ebfceb4a4116b875b79adf14381a515a7564d7e4 ChangeLog 23973
@@ -16,3 +19,10 @@ SHA256 1a281ed1ce771661ae909ecfe5de3e83e8fe5be6b93ed1ebc07b59227301cc25 xine-lib
 MD5 d468219f05aad3fb7f36e67beb6b1bba xine-lib-1.1.1-r4.ebuild 7633
 RMD160 25ab48bff1bb2a2b3a31447b5825a19383f4ac1c xine-lib-1.1.1-r4.ebuild 7633
 SHA256 8350fcbb3d782685176f654f93bc3b9a62acca1230c63ef01d5abc384d38af10 xine-lib-1.1.1-r4.ebuild 7633
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEIBOlAiZjviIA2XgRAuxQAJwLHzrECSk/2Tk75STmDy4kAVk6ggCePaa6
+tNqiiGfhsxbDsZr+mfcoc0U=
+=QSuw
+-----END PGP SIGNATURE-----
