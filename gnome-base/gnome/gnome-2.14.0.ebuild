@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.14.0.ebuild,v 1.2 2006/03/20 00:46:40 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.14.0.ebuild,v 1.3 2006/03/21 15:08:54 foser Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -17,7 +17,7 @@ SLOT="2.0"
 # double check none of the deps are still masked !
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 
-IUSE="accessibility cdr dvdr hal alsa oss esd"
+IUSE="accessibility cdr dvdr hal"
 
 S=${WORKDIR}
 
@@ -66,11 +66,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/nautilus-2.14.0
 
 	>=media-libs/gstreamer-0.10.4
-	>=media-libs/gst-plugins-base-0.10.4
+	>=media-libs/gst-plugins-base-0.10.4-r1
 	>=media-libs/gst-plugins-good-0.10.2
-	alsa? ( >=media-plugins/gst-plugins-alsa-0.10.4 )
-	oss? ( >=media-plugins/gst-plugins-oss-0.10.2 )
-	esd? ( >=media-plugins/gst-plugins-esd-0.10.2 )
 	>=gnome-extra/gnome-media-2.14.0
 	>=media-sound/sound-juicer-2.14.0
 	>=media-video/totem-1.4.0
