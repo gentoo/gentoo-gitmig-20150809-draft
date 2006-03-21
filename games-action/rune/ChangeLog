@@ -1,6 +1,10 @@
 # ChangeLog for games-action/rune
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/ChangeLog,v 1.6 2006/03/21 14:57:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/ChangeLog,v 1.7 2006/03/21 14:59:13 wolf31o2 Exp $
+
+  21 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> rune-1.07-r1.ebuild:
+  Marking stable on amd64/x86 as there have been no bug reports in 4 months
+  and the game works perfectly for me on both of these platforms.
 
   21 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> rune-1.07-r1.ebuild:
   Added =virtual/libstdc++-3.3 as this game is based off the unreal engine and
