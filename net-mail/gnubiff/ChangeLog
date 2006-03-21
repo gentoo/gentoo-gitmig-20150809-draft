@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/gnubiff
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.9 2006/01/30 17:25:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.10 2006/03/21 11:31:58 dsd Exp $
+
+  21 Mar 2006; Daniel Drake <dsd@gentoo.org> gnubiff-2.1.3.ebuild,
+  gnubiff-2.1.9.ebuild:
+  Depend on virtual/fam
 
 *gnubiff-2.1.9 (30 Jan 2006)
 

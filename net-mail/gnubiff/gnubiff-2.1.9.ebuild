@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.1.9.ebuild,v 1.1 2006/01/30 17:25:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.1.9.ebuild,v 1.2 2006/03/21 11:31:58 dsd Exp $
 
 inherit eutils
 
@@ -16,8 +16,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	>=gnome-base/libglade-2.3
 	gnome? ( >=gnome-base/libgnome-2.2
 		>=gnome-base/libgnomeui-2.2 )
-	fam? ( app-admin/fam )
-	!fam? ( app-admin/gamin )"
+	virtual/fam"
 
 DEPEND="${RDEPEND}
 	gnome? ( dev-util/pkgconfig )"
