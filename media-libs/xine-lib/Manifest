@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a654109963424729bd72215dfda69e0 ChangeLog 23847
-RMD160 3b8fb8ee488906df773267a77268eb075a0cea59 ChangeLog 23847
-SHA256 fac0a7fa2bdc3daa573b0e20f51d24d31ecef60b7e336d7d6086be0b04ecf7cc ChangeLog 23847
+MD5 64a8777b97eae6bdf96af21e5b647d82 ChangeLog 23973
+RMD160 f53508119d7a2322bdd01c586402e5cb60cdc33a ChangeLog 23973
+SHA256 67e628b76233ab9a9dfea975ebfceb4a4116b875b79adf14381a515a7564d7e4 ChangeLog 23973
 MD5 4a70a1198dbbc1b64b20071aacdee503 files/digest-xine-lib-1.1.1-r3 138
 RMD160 58a9ed42c2a8800b52a54810e73472fad33f23d2 files/digest-xine-lib-1.1.1-r3 138
 SHA256 c7e3bb0f349b3ce5f05541400a85c74ad5c66107d357719146061c344ae98e88 files/digest-xine-lib-1.1.1-r3 138
-MD5 4a70a1198dbbc1b64b20071aacdee503 files/digest-xine-lib-1.1.1-r4 138
-RMD160 58a9ed42c2a8800b52a54810e73472fad33f23d2 files/digest-xine-lib-1.1.1-r4 138
-SHA256 c7e3bb0f349b3ce5f05541400a85c74ad5c66107d357719146061c344ae98e88 files/digest-xine-lib-1.1.1-r4 138
+MD5 3d985ce5f6ce493370ce45148ddc716f files/digest-xine-lib-1.1.1-r4 506
+RMD160 a7ce05914fd8e1c3ca055308778a5599eecff839 files/digest-xine-lib-1.1.1-r4 506
+SHA256 5396a29885361d99f3148cd9780c90816b6f5ef35b96a1c4ec3dc96ad424b137 files/digest-xine-lib-1.1.1-r4 506
 MD5 40462be9f1caff6326630fc3b93e7105 metadata.xml 330
 RMD160 19830d3a2049c3ad75c580173d0436d7ec9dc8f2 metadata.xml 330
 SHA256 b36ce82ff9c321a5ed63eded0c3a191e78752cd38220b86bd8639a0d70ac9d92 metadata.xml 330
 MD5 578712f99de216da48aefcc69567dcf1 xine-lib-1.1.1-r3.ebuild 7232
 RMD160 6a7024dedd3646e054cbe2731af58eed8013e9bd xine-lib-1.1.1-r3.ebuild 7232
 SHA256 1a281ed1ce771661ae909ecfe5de3e83e8fe5be6b93ed1ebc07b59227301cc25 xine-lib-1.1.1-r3.ebuild 7232
-MD5 e3bfd3666fcce4f0d0171c9d5ebef13a xine-lib-1.1.1-r4.ebuild 7632
-RMD160 7dda3eb948b6338833613845e739aa82c238ca75 xine-lib-1.1.1-r4.ebuild 7632
-SHA256 5d19a69a955ff4998934bda28cc05f08ee2c30f5e51870ea1757de2e2a541425 xine-lib-1.1.1-r4.ebuild 7632
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD662JAiZjviIA2XgRAkt+AKCEdgjo7UqWLPlgCl8Y5O2rv62n9gCeNz3D
-8zqFKoZI+4JAQvf/x5WcXWg=
-=kW0u
------END PGP SIGNATURE-----
+MD5 d468219f05aad3fb7f36e67beb6b1bba xine-lib-1.1.1-r4.ebuild 7633
+RMD160 25ab48bff1bb2a2b3a31447b5825a19383f4ac1c xine-lib-1.1.1-r4.ebuild 7633
+SHA256 8350fcbb3d782685176f654f93bc3b9a62acca1230c63ef01d5abc384d38af10 xine-lib-1.1.1-r4.ebuild 7633
