@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.9.ebuild,v 1.13 2006/02/26 18:20:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.9.ebuild,v 1.14 2006/03/21 22:01:53 agriffis Exp $
 
 inherit eutils multilib
 
@@ -34,6 +34,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-8.4.6-multilib.patch
+
+	# bug 117744
+	sed -i -e "s/relid'/relid/" "${S}"/unix/{configure,tcl.m4} || die
+
 	local d
 	for d in */configure ; do
 		cd "${S}"/${d%%/*}

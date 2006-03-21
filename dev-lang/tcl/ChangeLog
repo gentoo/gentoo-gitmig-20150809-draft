@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.64 2006/03/03 16:09:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.65 2006/03/21 22:01:53 agriffis Exp $
+
+  21 Mar 2006; Aron Griffis <agriffis@gentoo.org> tcl-8.4.9.ebuild:
+  Port bash-3 fix from tcl-8.3.4.ebuild to tcl-8.4.9.ebuild #117744
 
 *tcl-8.4.12 (03 Mar 2006)
 

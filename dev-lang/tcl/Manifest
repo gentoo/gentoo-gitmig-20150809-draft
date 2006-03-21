@@ -1,13 +1,49 @@
-MD5 2edb6166e6281cec5818591518c7cbcf ChangeLog 8114
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 febc94c3120634b4fa9708c46d71899d ChangeLog 8253
+RMD160 9a597965667c7f2b477dac901ac4c0abf9ba1ec0 ChangeLog 8253
+SHA256 1160bf2a3b2e5431a16b46379b0c3a2e0735a5dc70c1e3db5d7d2b2790eaa6c4 ChangeLog 8253
 MD5 d8691f60be4023222834ccdf6ee6d498 files/digest-tcl-8.3.4 61
+RMD160 d7783bf855c30ab4f8c859a2f0861a0795378793 files/digest-tcl-8.3.4 61
+SHA256 9f8cf5e079fa774f1993eaa0ab6f1b4ed31ede521b692b99027c565f6cf60590 files/digest-tcl-8.3.4 61
 MD5 3750ae675c54bcfb446406014a177605 files/digest-tcl-8.4.11-r1 66
+RMD160 89fc4fb50ef8dd6df9ccea029f542931908dd155 files/digest-tcl-8.4.11-r1 66
+SHA256 21fa5e904491d3c992de7084b6a075b60442d634c040fc9fba9224ec4ba4f2e7 files/digest-tcl-8.4.11-r1 66
 MD5 c8aa611da8e9cc0f331fde445f8ea43f files/digest-tcl-8.4.12 66
+RMD160 31d02c0d7575322ccf44df0189f384239de0161b files/digest-tcl-8.4.12 66
+SHA256 f5cd69a7cd9d2c6bfd4aa1f6f67b776cd6c2fa32d2f241cb8c044b327b20ff36 files/digest-tcl-8.4.12 66
 MD5 9c5852717da8c531e22dda3dd4ade696 files/digest-tcl-8.4.9 65
+RMD160 25ec977a6ad20137a8ad5ac5b24f77a07c2bdee5 files/digest-tcl-8.4.9 65
+SHA256 a2f0a01e224bdb5c6313edc2a349c3133d9f43e4f5fa8a02ca7e1450360c959e files/digest-tcl-8.4.9 65
 MD5 23a4b408a4ea393df1da149ed8cb4d4c files/tcl-8.4.11-multilib.patch 1808
+RMD160 fb26bcbc63a3fb79dc2793af35f64b4dc189fe24 files/tcl-8.4.11-multilib.patch 1808
+SHA256 4925265d9fc72077d94ac23420671a4a0403cb0bad1be1dcc5d945e7bef5629a files/tcl-8.4.11-multilib.patch 1808
 MD5 1209abd340cad17f50f87c58f1c0f9f5 files/tcl-8.4.6-multilib.patch 1070
+RMD160 c30e4d1258672d401f6ec501102294e32519e6f0 files/tcl-8.4.6-multilib.patch 1070
+SHA256 6d7bc5c416ccff91cd1e05a4d154c5864b3bf23b04dc45a308964eb477ad7778 files/tcl-8.4.6-multilib.patch 1070
 MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/tcl-configure-LANG.patch 1686
+RMD160 4ff8355af81705058fd411910dfae94887bcd884 files/tcl-configure-LANG.patch 1686
+SHA256 dc9386b88eac48c282d63d0be7e7be81d4a0a08035a8b97138a61133e057bcea files/tcl-configure-LANG.patch 1686
 MD5 72be7b18671e9312d64a3fb833dceecd metadata.xml 264
+RMD160 6318855997b3e957f4ad5c59677534993e352c34 metadata.xml 264
+SHA256 01ce19dabf2e53a73d86e4b16f653c6cd2b6c9aca1b79ec095f353315c8b84ee metadata.xml 264
 MD5 298311384d5fa55d9baeb0da21211103 tcl-8.3.4.ebuild 2537
+RMD160 bca3c45ffb215855bd996ce009b58435a26e9b4c tcl-8.3.4.ebuild 2537
+SHA256 c471e2d1fcf06f7ba2f20a5d8a4bfbdd5811cf3cb0b74ab31b1d3f21b0029a41 tcl-8.3.4.ebuild 2537
 MD5 0b8378f196b89bb5d3fce63d5dd6b21e tcl-8.4.11-r1.ebuild 3503
+RMD160 1125cacfafa81770a9e94f9eb8adcc462cc8e5f3 tcl-8.4.11-r1.ebuild 3503
+SHA256 be667217d3a027f3655a32a1b151900546073918c679ba981c1295bc82e922ee tcl-8.4.11-r1.ebuild 3503
 MD5 f1cb92ce0a3c5533117336aad7c49fdc tcl-8.4.12.ebuild 3508
-MD5 41ad4c4ba298af4bc2e184f2d6d37d60 tcl-8.4.9.ebuild 3422
+RMD160 731c75bf59d2af087d9549da2d4a2d71799ac1b5 tcl-8.4.12.ebuild 3508
+SHA256 98deb8cc7a9b20a836f8a98835ee8576e20de013e683e4594c8ea1b29617732b tcl-8.4.12.ebuild 3508
+MD5 9255cb1091c3e46a8cf537d286ade323 tcl-8.4.9.ebuild 3508
+RMD160 3511145754d089bde2e227f0a0eb0c0474d586e4 tcl-8.4.9.ebuild 3508
+SHA256 c8bf787513de1b0d564f86da67ca9555ca1866c34c5b7a6144d59df60749de74 tcl-8.4.9.ebuild 3508
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEIHfcJrHF4yAQTrARAs0BAKC8mhNnDidXVa2ot72+ehl5Lvh6JACgh6kR
+qXvWJUZZDDPlkciFIa1zeh0=
+=44/4
+-----END PGP SIGNATURE-----
