@@ -1,0 +1,30 @@
+diff -urN ./iptraf-2.7.0.orig/src/othptab.c ./iptraf-2.7.0/src/othptab.c
+--- ./iptraf-2.7.0.orig/src/othptab.c	2006-03-21 23:13:42.000000000 +0100
++++ ./iptraf-2.7.0/src/othptab.c	2006-03-21 23:18:58.000000000 +0100
+@@ -595,8 +595,8 @@
+                case ICMP6_DST_UNREACH_ADMIN:
+                    strcpy(additional, "admin");
+                    break;
+-               case ICMP6_DST_UNREACH_NOTNEIGHBOR:
+-                   strcpy(additional, "not neigh");
++               case ICMP6_DST_UNREACH_BEYONDSCOPE:
++                   strcpy(additional, "beyondscope");
+                    break;
+                case ICMP6_DST_UNREACH_ADDR:
+                    strcpy(additional, "unreach addr");
+@@ -627,15 +627,6 @@
+            case ND_ROUTER_ADVERT:
+                strcpy(description, "router adv");
+                break;
+-           case ICMP6_MEMBERSHIP_QUERY:
+-               strcpy(description, "mbrship query");
+-               break;
+-           case ICMP6_MEMBERSHIP_REPORT:
+-               strcpy(description, "mbrship report");
+-               break;
+-           case ICMP6_MEMBERSHIP_REDUCTION:
+-               strcpy(description, "mbrship reduc");
+-               break;
+            case ND_NEIGHBOR_SOLICIT:
+                strcpy(description, "neigh sol");
+                break;
