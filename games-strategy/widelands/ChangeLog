@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.9 2006/02/26 06:44:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.10 2006/03/21 21:57:17 jokey Exp $
+
+*widelands-0.0.9.5-r1 (21 Mar 2006)
+
+  21 Mar 2006; Markus Ullmann <jokey@gentoo.org>
+  +widelands-0.0.9.5-r1.ebuild:
+  Added locale support wrt bug #126874
 
   26 Feb 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/widelands-0.0.9.5-gcc41.patch, widelands-0.0.9.5.ebuild:
