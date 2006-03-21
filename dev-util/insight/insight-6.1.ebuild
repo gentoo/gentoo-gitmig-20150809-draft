@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.1.ebuild,v 1.12 2006/01/05 07:34:25 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.1.ebuild,v 1.13 2006/03/21 22:21:07 agriffis Exp $
 
 inherit eutils
 
@@ -21,15 +21,13 @@ SRC_URI="ftp://sources.redhat.com/pub/gdb/releases/${P}.tar.bz2"
 
 INSIGHTDIR="/opt/insight"
 
-disabled_src_unpack() {
-
+src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/insight-6.1-jimb-copy-section-addr-info.patch
+	sed -i -e "s/relid'/relid/" {tcl,tk}/unix/configure
 }
 
 src_compile() {
-
 	local myconf
 	use nls || myconf="--disable-nls"
 
@@ -38,11 +36,9 @@ src_compile() {
 		--infodir="${D}${INSIGHTDIR}/share/info"	\
 		${myconf} || die
 	emake || die
-
 }
 
 src_install () {
-
 	make \
 		prefix="${D}${INSIGHTDIR}" \
 		mandir="${D}${INSIGHTDIR}/share/man" \
@@ -50,5 +46,4 @@ src_install () {
 		install || die
 	insinto /etc/env.d
 	doins "${FILESDIR}/99insight"
-
 }

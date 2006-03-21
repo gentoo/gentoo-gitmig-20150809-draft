@@ -1,9 +1,14 @@
 # ChangeLog for dev-util/insight
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.26 2006/01/14 17:11:07 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.27 2006/03/21 22:21:05 agriffis Exp $
+
+  21 Mar 2006; Aron Griffis <agriffis@gentoo.org> insight-6.1.ebuild,
+  insight-6.4.ebuild:
+  Apply bash-3 fix to both tcl and tk trees in both versions of this package
+  #118985
 
   14 Jan 2006; Olivier Crête <tester@gentoo.org> insight-6.4.ebuild:
-  Fix configurewith bash 3.1, bug #118985
+  Fix configure with bash 3.1, bug #118985
 
   05 Jan 2006; Olivier Crête <tester@gentoo.org> insight-6.1.ebuild,
   insight-6.4.ebuild:

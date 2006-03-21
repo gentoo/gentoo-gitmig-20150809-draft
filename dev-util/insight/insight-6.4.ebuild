@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.4.ebuild,v 1.5 2006/01/14 17:11:07 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.4.ebuild,v 1.6 2006/03/21 22:21:07 agriffis Exp $
 
 inherit eutils
 
@@ -15,7 +15,6 @@ DEPEND="|| ( ( x11-libs/libXt x11-libs/libX11 ) virtual/x11 )
 RDEPEND="sys-libs/ncurses
 	|| ( x11-libs/libX11 virtual/x11 )"
 
-
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
 SRC_URI="ftp://sources.redhat.com/pub/${PN}/releases/${P}.tar.bz2"
@@ -24,14 +23,11 @@ INSIGHTDIR="/opt/insight"
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
-	sed -i -e "s/relid'/relid/" tcl/unix/configure
+	sed -i -e "s/relid'/relid/" {tcl,tk}/unix/configure
 }
 
-
 src_compile() {
-
 	local myconf
 	myconf="$(use_enable nls)"
 
@@ -40,11 +36,9 @@ src_compile() {
 		--infodir="${D}${INSIGHTDIR}/share/info"	\
 		${myconf} || die
 	emake || die
-
 }
 
 src_install () {
-
 	make \
 		prefix="${D}${INSIGHTDIR}" \
 		mandir="${D}${INSIGHTDIR}/share/man" \
@@ -52,5 +46,4 @@ src_install () {
 		install || die
 	insinto /etc/env.d
 	doins "${FILESDIR}/99insight"
-
 }
