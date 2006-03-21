@@ -1,0 +1,2 @@
+# Completely broken on alpha. See bug #116610
+dev-libs/aterm
