@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.2 2006/03/20 19:40:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.3 2006/03/21 14:53:04 wolf31o2 Exp $
 
 inherit eutils multilib games
 
@@ -24,9 +24,7 @@ RDEPEND=">=games-fps/ut2004-data-3186-r2
 	>=games-fps/ut2004-bonuspack-mega-1-r1
 	opengl? (
 		virtual/opengl )
-	|| (
-		sys-libs/libstdc++-v3
-		=sys-devel/gcc-3.3* )
+	virtual/libstdc++
 	|| (
 		(
 			x11-libs/libXext

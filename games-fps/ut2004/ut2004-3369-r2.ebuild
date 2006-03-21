@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r2.ebuild,v 1.4 2006/03/14 23:18:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r2.ebuild,v 1.5 2006/03/21 14:53:04 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -17,17 +17,13 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 # The executable pages are required.
 RESTRICT="nostrip nomirror stricter"
-IUSE="opengl dedicated"
+IUSE="opengl"
 
 RDEPEND="games-fps/ut2004-data
 	games-fps/ut2004-bonuspack-ece
 	opengl? (
 		virtual/opengl )
-	dedicated? (
-		app-misc/screen )
-	|| (
-		sys-libs/libstdc++-v3
-		=sys-devel/gcc-3.3* )
+	virtual/libstdc++
 	|| (
 		(
 			x11-libs/libXext
