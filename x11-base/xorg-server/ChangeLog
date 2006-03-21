@@ -1,6 +1,20 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.88 2006/02/19 03:54:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.89 2006/03/21 06:16:26 spyderous Exp $
+
+*xorg-server-1.0.2 (21 Mar 2006)
+
+  21 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  -files/xorg-server-1.0.1-64bit-fix-have-dix-config.patch,
+  -files/xorg-server-1.0.1-64bit-fix-indirect-vertex-array.patch,
+  -files/xorg-server-1.0.1-Sbus.patch,
+  -files/xorg-server-1.0.1-amd64-fix-for-glx.patch,
+  -files/xorg-server-1.0.1-backtrace.patch,
+  +files/xorg-server-1.0.2-Sbus.patch,
+  +files/xorg-server-1.0.2-sparc64-cfbrrop-fix.patch,
+  -xorg-server-1.0.1-r4.ebuild, +xorg-server-1.0.2.ebuild:
+  (#125803) Fix local root vulnerability present in 6.8.99.x and newer. This
+  does NOT affect 6.8.2.
 
 *xorg-server-1.0.1-r4 (19 Feb 2006)
 
