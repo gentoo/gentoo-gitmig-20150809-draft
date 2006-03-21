@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11.ebuild,v 1.1 2006/01/11 16:13:37 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11.ebuild,v 1.2 2006/03/21 19:32:31 spyderous Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -31,7 +31,7 @@ RDEPEND="virtual/libc
 
 PROVIDE="virtual/lapack"
 
-FORTRAN="g77 ifc"
+FORTRAN="g77 gfortran ifc"
 
 S="${WORKDIR}/ATLAS"
 S_LAPACK="${WORKDIR}/LAPACK"
@@ -65,11 +65,27 @@ src_unpack() {
 
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}"/unbuffered.patch
+	epatch "${FILESDIR}"/${PV}-allow-any-gcc-version.patch
 	epatch "${DISTDIR}"/atlas3.6.0-shared-libs.1.patch.bz2
 	epatch "${DISTDIR}"/lapack-20020531-20021004.patch.bz2
 	epatch "${DISTDIR}"/lapack-gentoo.patch
 	cp "${FILESDIR}"/war "${S}"
 	chmod a+x "${S}"/war
+
+	einfo "Making ${PN} respect compiler settings"
+	sed -i \
+		-e "s:\(\t./xconfig\):\1 -m $(tc-getCC) -c $(tc-getCC) -f ${FORTRANC}:g" \
+		${S}/Makefile \
+		|| die "Failed to fix compilers"
+
+	if [[ $(gcc-major-version) -ge 4 ]]; then
+		einfo "Updating Makefiles for gcc-4"
+		sed -i \
+			-e "s:g2c:gfortran:g" \
+			${S}/Make.top \
+			${S}/makes/Make.lib \
+			|| die "Failed to update for gcc-4"
+	fi
 }
 
 atlas_fail() {
@@ -94,26 +110,27 @@ src_compile() {
 	TMPSTR=$(ls Make.Linux*)
 	ATLAS_ARCH=${TMPSTR#'Make.'}
 
-	CC="libtool --mode=compile --tag=CC $(tc-getCC) -I/usr/include/atlas"
+	GENTOO_CC="libtool --mode=compile --tag=CC $(tc-getCC) -I/usr/include/atlas"
 
 	cd "${S}"/src/lapack/${ATLAS_ARCH}
-	make lib CC="${CC}" || die
+	make lib CC="${GENTOO_CC}" \
+		|| die "Failed to make lib in ${S}/src/lapack/${ATLAS_ARCH}"
 
 	cd "${S}"/interfaces/lapack/C/src/${ATLAS_ARCH}
-	make lib CC="${CC}" || die
+	make lib CC="${GENTOO_CC}" \
+		|| die "Failed to make lib in ${S}/interfaces/lapack/C/src/${ATLAS_ARCH}"
 
 	cd "${S}"/interfaces/lapack/F77/src/${ATLAS_ARCH}
 
-	make lib CC="${CC}" F77="libtool --mode=compile --tag=F77 g77" || die
+	make lib CC="${GENTOO_CC}" F77="libtool --mode=compile --tag=F77 ${FORTRANC}" \
+		|| die "Failed to make lib in ${S}/interfaces/lapack/F77/src/${ATLAS_ARCH}"
 
 	cd "${S_LAPACK}"
 	if use ifc; then
-		FC="ifc"
 		FFLAGS="${IFCFLAGS}"
 		NOOPT="-O0" # Do NOT change this. It is applied to two files with
 					# routines to determine machine constants.
 	else
-		FC="g77"
 		# g77 hates opts, esp. machine-specific
 		ALLOWED_FLAGS="-O -O1 -O2 -fstack-protector -fno-unit-at-a-time \
 						-pipe -g -Wall"
@@ -121,23 +138,36 @@ src_compile() {
 		FFLAGS="${CFLAGS}"
 		NOOPT=""
 	fi
-	make lapacklib FORTRAN="libtool --mode=compile --tag=F77 ${FC}" OPTS="${FFLAGS}" \
-		NOOPT="${NOOPT}" || die
+	make lapacklib FORTRAN="libtool --mode=compile --tag=F77 ${FORTRANC}" OPTS="${FFLAGS}" \
+		NOOPT="${NOOPT}" || die "Failed to make lapacklib"
 
 	cd "${S_LAPACK}"/SRC
+	einfo "Copying liblapack.a/*.o to ${S_LAPACK}/SRC"
 	cp -sf "${S}"/gentoo/liblapack.a/*.o .
+	einfo "Copying liblapack.a/*.lo to ${S_LAPACK}/SRC"
 	cp -sf "${S}"/gentoo/liblapack.a/*.lo .
+	einfo "Copying liblapack.a/.libs/*.o to ${S_LAPACK}/SRC"
 	cp -sf "${S}"/gentoo/liblapack.a/.libs/*.o .libs/
 
+	local FORTRANLIB
+	if [[ $(gcc-major-version) -ge 4 ]]; then
+		FORTRANLIB="-lgfortran"
+	else
+		FORTRANLIB="-lg2c"
+	fi
+	einfo "Fortran library is ${FORTRANLIB}"
+
 	if use ifc; then
-		ifc ${FFLAGS} -shared .libs/*.o -Wl,-soname -Wl,liblapack.so.0 \
+		${FORTRANC} ${FFLAGS} -shared .libs/*.o -Wl,-soname -Wl,liblapack.so.0 \
 			-o liblapack.so.0.0.0 -lblas -lcblas -latlas \
-			-L$(gcc-config -L) -lg2c || die
-		ar cru liblapack.a *.o || die
-		ranlib liblapack.a || die
+			-L$(gcc-config -L) ${FORTRANLIB} \
+			|| die "Failed to create liblapack.so.0.0.0"
+		ar cru liblapack.a *.o || die "Failed to create liblapack.a"
+		ranlib liblapack.a || die "Failed to prepare liblapack.a"
 	else
 		libtool --mode=link --tag=CC $(tc-getCC) -o liblapack.la *.lo \
-			-rpath "${RPATH}" -lblas -lcblas -latlas -lg2c || die
+			-rpath "${RPATH}" -lblas -lcblas -latlas ${FORTRANLIB} \
+			|| die "Failed to create liblapack.la"
 	fi
 }
 
