@@ -1,31 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cc78ed5fce47e4dd2204a366fe9a92bd ChangeLog 4765
-RMD160 386dbd5fc7835d5c19ffa93e09bb3013e70ec42c ChangeLog 4765
-SHA256 fe319d7d1460ab5885e34fa57b6bfa4e00bbbda9ae7610eb66c3aaf623001a70 ChangeLog 4765
+MD5 1b38a9b876ea3032646e113936d06259 ChangeLog 4872
 MD5 6c35081e22594c96591797459c28da01 files/digest-haddock-0.6-r3 67
-RMD160 7c14f3696d147aa9e82e478c955b4cd9ee22f9ef files/digest-haddock-0.6-r3 67
-SHA256 1917b3b061798fa28f745ce9ed6b2e615e56efeb4b19968ecf7c097d06efa359 files/digest-haddock-0.6-r3 67
 MD5 574da10760a87f23fa635f37265b7c0c files/digest-haddock-0.7 67
-RMD160 f3362832bf1c698d4314b512ab70df07b01ad6fc files/digest-haddock-0.7 67
-SHA256 3076af5e9692ea8a1695a2e3647ebac9cacd8662ffff580c4d05c096260ec510 files/digest-haddock-0.7 67
 MD5 bd211a7c5442dadeee6975dbb15f2e45 files/haddock-0.6-gcc3.4.patch 1967
-RMD160 dc471269e499640c2cc5089fd850cc615ecdac1d files/haddock-0.6-gcc3.4.patch 1967
-SHA256 6911e8ace7522a3c3ededfd8ac0c0a01863afa312d8a690bd9aa269851546671 files/haddock-0.6-gcc3.4.patch 1967
 MD5 c1dc72fd2a7923d460c09e6ff273f5d0 haddock-0.6-r3.ebuild 2895
-RMD160 268e8772355e50aec7a62d4dcc454cad155228e4 haddock-0.6-r3.ebuild 2895
-SHA256 d539e42529af3c56bb4e3a46bf075f776e47ac023ab4ec1417d4fa77eb42853a haddock-0.6-r3.ebuild 2895
-MD5 4ae2275eb175a43ad9e9216d9bb6414d haddock-0.7.ebuild 2545
-RMD160 c9e67950181c5b1d36c9c77001555b77cb2b023a haddock-0.7.ebuild 2545
-SHA256 07b3c70bd5cc536c995a15f06b7c2e65ba201ac783ead2cf62e24a0e6722a701 haddock-0.7.ebuild 2545
+MD5 a87542d2f6b96aa4a2c17a0c68bc31bc haddock-0.7.ebuild 2546
 MD5 c694674dcbef799cd4fdb6914683ebff metadata.xml 223
-RMD160 7783e6057effb8b8f0b79cffe8b557b32c633839 metadata.xml 223
-SHA256 1d00c8be162a6cb87b3de440b3e63e10b39c12d56e8fbfe592e75aed872b2508 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHu0QoFw4q70f3SsRAh6zAKCIryejAyR9QWWc88JA1R6AicXZrACg16nL
-4Lwpm6BYc54isz/OGW1ID8c=
-=RFou
------END PGP SIGNATURE-----
