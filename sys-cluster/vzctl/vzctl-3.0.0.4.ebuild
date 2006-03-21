@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.0.2-r1.ebuild,v 1.1 2006/03/01 14:58:46 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.0.4.ebuild,v 1.1 2006/03/21 12:43:11 hollow Exp $
 
 inherit eutils toolchain-funcs versionator linux-info
 
@@ -49,8 +49,6 @@ src_unpack() {
 
 	epatch "${WORKDIR}"/patches/vzctl-3.0.0.2-gentoo_conf_d.patch
 	epatch "${WORKDIR}"/patches/vzctl-3.0.0.2-gentoo_etc_vz.patch
-	epatch "${WORKDIR}"/patches/vzctl-3.0.0.2-create_param2.patch
-	epatch "${WORKDIR}"/patches/vzctl-3.0.0.2-put_param3.patch
 
 	# fix hardcoded lib paths
 	use amd64 && epatch "${WORKDIR}"/patches/vzctl-3.0.0.2-amd64.patch
