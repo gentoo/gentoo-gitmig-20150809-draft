@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r6.ebuild,v 1.3 2006/03/21 13:12:02 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r6.ebuild,v 1.4 2006/03/21 19:26:35 flameeyes Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="static selinux"
 
 RDEPEND="selinux? ( sec-policy/selinux-dhcp )
-	sys-apps/net-tools"
+	kernel_linux? ( sys-apps/net-tools )"
 DEPEND="selinux? ( sec-policy/selinux-dhcp )
 	>=sys-apps/sed-4"
 
@@ -50,7 +50,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-stdin-conf.patch"
 
 	# General fixes which will probably be accepted upstream eventually
-	# Fix token ring compiling, #102473 
+	# Fix token ring compiling, #102473
 	epatch "${FILESDIR}/${P}-tr.patch"
 	# Install libdst, #75544
 	epatch "${FILESDIR}/${PN}-3.0.3-libdst.patch"
@@ -82,7 +82,7 @@ src_unpack() {
 		fi
 	fi
 
-	# Now remove the non-english docs so there are no errors later 
+	# Now remove the non-english docs so there are no errors later
 	[[ -d doc/ja_JP.eucJP ]] && rm -rf doc/ja_JP.eucJP
 }
 
