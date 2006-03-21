@@ -1,31 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3da73c1c6dc3e9036a4567deeadd11fc ChangeLog 6643
-RMD160 bcaa0f3c1e8d72d3036cd49e905fb2b1b1dc6eff ChangeLog 6643
-SHA256 cbb4c66f0c2c8a25b77f4066fc4d78b73b07b97caf3e7c42ef408af232e7db12 ChangeLog 6643
-MD5 804024cafffd7bd22776c8e14457a193 files/digest-man-pages-2.24 250
-RMD160 f870e64d1243f0562a68b14635b17161f3532a60 files/digest-man-pages-2.24 250
-SHA256 58a645ceea25ea919c869733d5cb961fa1a6ee9ab4fd5e761f86dd6eed23dedb files/digest-man-pages-2.24 250
+MD5 2bb828c157a4f2b3d6840bd16f1c92c6 ChangeLog 6765
+RMD160 9a1c95e6e5db67702e29a09f395ff5026e1ef31f ChangeLog 6765
+SHA256 c3affd907f024a41eee4a7dc1d66ec97c9202f2f0bdf16024e4630d5c0f33ac4 ChangeLog 6765
 MD5 4e63c9c1e9f62601b221f025ac0f3e00 files/digest-man-pages-2.25 250
 RMD160 7707cbc5b60aa0e91a53d0458b747178a5312c03 files/digest-man-pages-2.25 250
 SHA256 e0129e603007b3bfa53050d55fc59a04dac22d2c3a621dff935ae1d2ca02db91 files/digest-man-pages-2.25 250
+MD5 f4f6e2bb9fa5f394fb14d151d5544465 files/digest-man-pages-2.26 250
+RMD160 3db04a5c4919ab2b0e974442e376d83d0ccbbe11 files/digest-man-pages-2.26 250
+SHA256 9b71b51f7ab94ab002c77a4d17018e0e7b50512ead2f484a05640fa1d3dfa68d files/digest-man-pages-2.26 250
 MD5 078cd80352b7ac508adeda912eba0cc9 files/man-pages-2.08-updates.patch 351
 RMD160 090c1d31d4589fa19f8cb7e287a84f4f18e612e1 files/man-pages-2.08-updates.patch 351
 SHA256 c1302276b420acf3d9447cb3436ee2b70567b92917d7cf912c59f622086d1e37 files/man-pages-2.08-updates.patch 351
-MD5 6177ae78a8c7407fc62ef500f9ddfe79 man-pages-2.24.ebuild 1425
-RMD160 3f0e55918a02b7d062d9527541614e54f3bb7b5c man-pages-2.24.ebuild 1425
-SHA256 6eeda29cf038e128426e82a2304eb1db2e9701d9eb2e964afc33618435b3b8de man-pages-2.24.ebuild 1425
-MD5 9c5d05d9b3245fbaae0891769f13af38 man-pages-2.25.ebuild 1438
-RMD160 ddbc95fa7061293d62bdf5599ac7067f97d6b574 man-pages-2.25.ebuild 1438
-SHA256 2738e5756988f9ff076378d79a339885aaf764718a555769bf0eb1ff42a202c8 man-pages-2.25.ebuild 1438
+MD5 13976e7f2debc5b5f55acb3e85a263b4 man-pages-2.25.ebuild 1425
+RMD160 54bdf70f224e4a88e0b827708b56485a5223130e man-pages-2.25.ebuild 1425
+SHA256 c38db4898389c8115e26a65b0b5773faa6e320d37e79568e1e7be848071c453e man-pages-2.25.ebuild 1425
+MD5 960dace20002aa6e7de078b424c61e83 man-pages-2.26.ebuild 1438
+RMD160 960fbff8478aa0673f0961bbbc998e0b48961fcd man-pages-2.26.ebuild 1438
+SHA256 b0f3fb1b85dcd5e204d9dad5913fc667705f00060aefef472f5d374bd42c018a man-pages-2.26.ebuild 1438
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEB6Ws2+ySkm8kpY0RAuRYAJ97A4r6HDnXXNqmyn1BTmAnu/zGsACgv7Mw
-+MqmTcZXVUYHHYaE6bLZsUk=
-=g9iW
+iD8DBQFEH1Bv2+ySkm8kpY0RAmzcAJ9YiopdutZLhHmc8WkvXQUYJtU4wgCdFcLX
+jVMExZbb4eGH+ibBD4+kCgY=
+=IqNn
 -----END PGP SIGNATURE-----
