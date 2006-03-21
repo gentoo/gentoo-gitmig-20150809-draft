@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/gprolog
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.8 2005/10/30 21:31:38 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.9 2006/03/21 08:28:26 keri Exp $
+
+*gprolog-1.2.19 (21 Mar 2006)
+
+  21 Mar 2006; Keri Harris <keri@gentoo.org>
+  +files/gprolog-1.2.19-CFLAGS.patch, +files/gprolog-1.2.19-bootstrap.patch,
+  +files/gprolog-1.2.19-gcc4.patch, +files/gprolog-1.2.19-noexecstack.patch,
+  +files/gprolog-1.2.19-test.patch, +gprolog-1.2.19.ebuild:
+  Version bump. Closes #116843
 
   30 Oct 2005; Fabian Groffen <grobian@gentoo.org>
   +files/gprolog-1.2.16-gcc4.patch, gprolog-1.2.16.ebuild:
