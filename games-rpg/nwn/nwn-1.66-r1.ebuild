@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66-r1.ebuild,v 1.11 2006/03/20 00:07:29 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66-r1.ebuild,v 1.12 2006/03/21 15:17:43 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -49,9 +49,7 @@ RDEPEND="games-rpg/nwn-data
 	virtual/opengl
 	>=media-libs/libsdl-1.2.5
 	x86? (
-		|| (
-			=sys-devel/gcc-3.3*
-			sys-libs/libstdc++-v3 )
+		=virtual/libstdc++-3.3
 		|| (
 			(
 				x11-libs/libXext
