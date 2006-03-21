@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a-r1.ebuild,v 1.4 2006/03/15 01:01:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a-r1.ebuild,v 1.5 2006/03/21 15:54:55 flameeyes Exp $
 
-inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
+inherit eutils wxwidgets nsplugins multilib autotools toolchain-funcs
 
 MY_P="${P/_beta/-test}"
 
-PATCHLEVEL="15"
+PATCHLEVEL="16"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 
@@ -109,8 +109,6 @@ pkg_setup() {
 	if use wxwindows; then
 		WX_GTK_VER="2.6"
 		need-wxwidgets unicode || die "You need to install wxGTK with unicode support."
-		# Does not play fine with --as-needed...
-		filter-ldflags -Wl,--as-needed --as-needed
 	fi
 
 	if use skins && ! use truetype; then
