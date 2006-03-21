@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12_beta1.ebuild,v 1.1 2006/03/12 22:35:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12_beta2.ebuild,v 1.1 2006/03/21 11:59:59 flameeyes Exp $
 
 inherit kde eutils
 
@@ -61,8 +61,8 @@ src_compile() {
 	# Maybe we can enable it in the future.
 	# The nowlistening plugin has xmms support.
 	local myconf="$(use_enable sametime sametime-plugin)
-	              $(use_with xmms) --without-external-libgadu
-	              $(use_with xscreensaver)"
+		$(use_with xmms) --without-external-libgadu
+		$(use_with xscreensaver)"
 
 	kde_src_compile
 }
