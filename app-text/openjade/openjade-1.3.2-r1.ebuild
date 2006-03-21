@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.30 2006/03/16 14:26:25 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.31 2006/03/21 02:58:59 vapier Exp $
 
-inherit libtool sgml-catalog eutils flag-o-matic gnuconfig multilib
+inherit libtool sgml-catalog eutils flag-o-matic multilib
 
 DESCRIPTION="Jade is an implementation of DSSSL - an ISO standard for formatting SGML and XML documents"
 HOMEPAGE="http://openjade.sourceforge.net"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/openjade/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="app-text/sgml-common
@@ -20,12 +20,8 @@ DEPEND="dev-lang/perl
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	einfo "Patching msggen.pl for perl-5.6.*"
-	epatch ${FILESDIR}/${P}-msggen.pl.patch
-
-	# Needed for mips and probably others
-	gnuconfig_update
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-msggen.pl.patch
 }
 
 src_compile() {

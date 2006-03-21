@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.1.ebuild,v 1.12 2005/11/28 18:38:37 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.1.ebuild,v 1.13 2006/03/21 02:58:56 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/openjade/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
@@ -28,7 +28,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-1.5-gcc34.patch
-	epatch ${FILESDIR}/opensp-1.5.1-gcc41.patch
+	epatch "${FILESDIR}"/opensp-1.5.1-gcc41.patch
 }
 
 src_compile() {
