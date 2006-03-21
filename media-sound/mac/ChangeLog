@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/mac
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/ChangeLog,v 1.3 2006/03/21 16:13:03 sbriesen Exp $
+
+*mac-3.99.4.4 (21 Mar 2006)
+
+  21 Mar 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/mac-3.99-u4-b4-nxstack.diff, +metadata.xml, +mac-3.99.4.4.ebuild:
+  initial commit.
+
