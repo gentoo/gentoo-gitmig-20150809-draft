@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.14 2006/03/21 00:47:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.15 2006/03/21 20:00:15 spyderous Exp $
 
 inherit eutils
 
@@ -282,7 +282,6 @@ RDEPEND="${RDEPEND}
 				!hppa? (
 					x11-drivers/xf86-video-ati
 					x11-drivers/xf86-video-mga
-					x11-drivers/xf86-video-nv
 
 					x11-drivers/xf86-video-sisusb
 					x11-drivers/xf86-video-v4l )
@@ -291,6 +290,7 @@ RDEPEND="${RDEPEND}
 
 				alpha? ( x11-drivers/xf86-video-cirrus
 					x11-drivers/xf86-video-glint
+					x11-drivers/xf86-video-nv
 					x11-drivers/xf86-video-rendition
 					x11-drivers/xf86-video-s3
 					x11-drivers/xf86-video-s3virge
@@ -309,6 +309,7 @@ RDEPEND="${RDEPEND}
 					x11-drivers/xf86-video-i128
 					x11-drivers/xf86-video-i810
 					x11-drivers/xf86-video-neomagic
+					x11-drivers/xf86-video-nv
 					x11-drivers/xf86-video-rendition
 					x11-drivers/xf86-video-s3
 					x11-drivers/xf86-video-s3virge
@@ -326,6 +327,7 @@ RDEPEND="${RDEPEND}
 					x11-drivers/xf86-video-voodoo )
 				arm? ( x11-drivers/xf86-video-chips
 					x11-drivers/xf86-video-glint
+					x11-drivers/xf86-video-nv
 					x11-drivers/xf86-video-s3
 					x11-drivers/xf86-video-s3virge
 					x11-drivers/xf86-video-savage
@@ -346,6 +348,7 @@ RDEPEND="${RDEPEND}
 					x11-drivers/xf86-video-imstt
 					x11-drivers/xf86-video-neomagic
 					x11-drivers/xf86-video-newport
+					x11-drivers/xf86-video-nv
 					x11-drivers/xf86-video-rendition
 					x11-drivers/xf86-video-s3
 					x11-drivers/xf86-video-s3virge
@@ -364,6 +367,7 @@ RDEPEND="${RDEPEND}
 					x11-drivers/xf86-video-cirrus
 					x11-drivers/xf86-video-glint
 					x11-drivers/xf86-video-newport
+					x11-drivers/xf86-video-nv
 					x11-drivers/xf86-video-s3
 					x11-drivers/xf86-video-s3virge
 					x11-drivers/xf86-video-savage
@@ -374,6 +378,7 @@ RDEPEND="${RDEPEND}
 				ppc? ( x11-drivers/xf86-video-chips
 					x11-drivers/xf86-video-glint
 					x11-drivers/xf86-video-imstt
+					x11-drivers/xf86-video-nv
 					x11-drivers/xf86-video-s3
 					x11-drivers/xf86-video-s3virge
 					x11-drivers/xf86-video-savage
@@ -382,6 +387,7 @@ RDEPEND="${RDEPEND}
 					x11-drivers/xf86-video-trident
 					x11-drivers/xf86-video-vga
 					x11-drivers/xf86-video-voodoo )
+				ppc64? ( x11-drivers/xf86-video-nv )
 				sparc? (
 					x11-drivers/xf86-video-glint
 					x11-drivers/xf86-video-savage
@@ -409,6 +415,7 @@ RDEPEND="${RDEPEND}
 					x11-drivers/xf86-video-neomagic
 					x11-drivers/xf86-video-newport
 					x11-drivers/xf86-video-nsc
+					x11-drivers/xf86-video-nv
 					x11-drivers/xf86-video-rendition
 					x11-drivers/xf86-video-s3
 					x11-drivers/xf86-video-s3virge
