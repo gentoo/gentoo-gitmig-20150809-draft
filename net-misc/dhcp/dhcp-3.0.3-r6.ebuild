@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r6.ebuild,v 1.2 2006/03/21 12:11:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r6.ebuild,v 1.3 2006/03/21 13:12:02 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -66,6 +66,7 @@ src_unpack() {
 
 	# Change the hook script locations of the scripts
 	sed -i -e 's,/etc/dhclient-exit-hooks,/etc/dhcp/dhclient-exit-hooks,g' \
+		-e 's,/etc/dhclient-enter-hooks,/etc/dhcp/dhclient-enter-hooks,g' \
 		client/scripts/*
 
 	# Remove these options from the sample config
