@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/vendetta-online-bin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-online-bin/ChangeLog,v 1.2 2005/09/06 21:04:43 herbs Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-online-bin/ChangeLog,v 1.3 2006/03/22 18:07:35 mr_bones_ Exp $
+
+  22 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  vendetta-online-bin-1.ebuild:
+  X is implicit
 
   06 Sep 2005; Herbie Hopkins <herbs@gentoo.org>
   vendetta-online-bin-1.ebuild:
