@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kverbos
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kverbos/ChangeLog,v 1.31 2006/01/22 22:53:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kverbos/ChangeLog,v 1.32 2006/03/22 20:15:41 danarmak Exp $
+
+*kverbos-3.5.2 (22 Mar 2006)
+
+  22 Mar 2006; Dan Armak <danarmak@gentoo.org> +kverbos-3.5.2.ebuild:
+  KDE 3.5.2. Not yet released upstream, and so package.masked for now.
 
 *kverbos-3.5.1 (23 Jan 2006)
 

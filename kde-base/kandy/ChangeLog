@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kandy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kandy/ChangeLog,v 1.36 2006/01/22 22:52:51 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kandy/ChangeLog,v 1.37 2006/03/22 20:14:54 danarmak Exp $
+
+*kandy-3.5.2 (22 Mar 2006)
+
+  22 Mar 2006; Dan Armak <danarmak@gentoo.org> +kandy-3.5.2.ebuild:
+  KDE 3.5.2. Not yet released upstream, and so package.masked for now.
 
 *kandy-3.5.1 (23 Jan 2006)
 

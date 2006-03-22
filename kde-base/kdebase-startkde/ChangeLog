@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.41 2006/01/30 00:49:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.42 2006/03/22 20:15:00 danarmak Exp $
+
+*kdebase-startkde-3.5.2 (22 Mar 2006)
+
+  22 Mar 2006; Dan Armak <danarmak@gentoo.org> +kdebase-startkde-3.5.2.ebuild:
+  KDE 3.5.2. Not yet released upstream, and so package.masked for now.
 
   30 Jan 2006; Diego Pettenò <flameeyes@gentoo.org>
   kdebase-startkde-3.4.1.ebuild, kdebase-startkde-3.4.2.ebuild,

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.203 2006/02/07 17:25:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.204 2006/03/22 20:14:53 danarmak Exp $
+
+*arts-3.5.2 (22 Mar 2006)
+
+  22 Mar 2006; Dan Armak <danarmak@gentoo.org> +arts-3.5.2.ebuild:
+  KDE 3.5.2. Not yet released upstream, and so package.masked for now.
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> arts-3.4.3.ebuild:
   Mark 3.4.3 stable on ia64

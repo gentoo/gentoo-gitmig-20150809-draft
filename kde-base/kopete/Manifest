@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4727300136c6c22d3ab9341bb8b1f684 ChangeLog 7087
-RMD160 5dcdeaf49d10b9df06e4fafd2b289b8b656cf899 ChangeLog 7087
-SHA256 e51f75902b6ff4273f70e7089e5e921c9202f42dd320a9af7a5bf3ea14806d3c ChangeLog 7087
+MD5 7da228f27aa6c3fd7741aedbfcbe0369 ChangeLog 7257
+RMD160 99382277fd1a173e78ddd958cbcaaf4261437bd9 ChangeLog 7257
+SHA256 484f62ad04a3546d142ab74366cb8e61e4b89efa43385f72b7b8c1b6532a150f ChangeLog 7257
 MD5 100ba684bf2f7b3bd7061b488264a21d files/configure-fix-kdenetwork-gadu.patch 2626
 RMD160 e348401fcbe734b2e0d5ba767a3f64b31abf31dc files/configure-fix-kdenetwork-gadu.patch 2626
 SHA256 b71d184ff9c44bfeb2f8e90e75145ae5c77ff5a5f23165eca3c538374d40ef3b files/configure-fix-kdenetwork-gadu.patch 2626
@@ -31,6 +28,9 @@ SHA256 bafa5962d219caa3bff5e7d29a5370f04638bb698052ab29ece6ff03bea6e66c files/di
 MD5 ffaca36bfbd76fcaf0bff81fc18abbb5 files/digest-kopete-3.5.1-r1 256
 RMD160 25ce9154ed2cd689026bea70bb3df69de5995986 files/digest-kopete-3.5.1-r1 256
 SHA256 637f95bb86f559d4234523dedd762f0e9292d34b2918240e331e4d47159d59a8 files/digest-kopete-3.5.1-r1 256
+MD5 490109d9cea36a78cfcb0fbd933c7661 files/digest-kopete-3.5.2 256
+RMD160 2e2c4d19f1af34887fbebf30e14bd3a0cffc7cdd files/digest-kopete-3.5.2 256
+SHA256 62e96a8a0d7a0612c90f34910550fd8cc4fa7dba4d787baafbf765e03edc995b files/digest-kopete-3.5.2 256
 MD5 2db2170b384350ce6c05cd23c0bb21c7 files/disable-meanwhile.diff 351
 RMD160 e97ecb2f463f98a14857352647800d6402629146 files/disable-meanwhile.diff 351
 SHA256 4331c4edfe1e81ad1372dee39940e2fb12bf35b12dc298ebe5b8fb435ad35434 files/disable-meanwhile.diff 351
@@ -58,13 +58,9 @@ SHA256 7d8c5e6a91b5a069736817771c423a3e194c6fce8b6e50751db5c9c59387810f kopete-3
 MD5 1867e76514d764fcaa25db263d3dff65 kopete-3.5.1.ebuild 999
 RMD160 3392e00fd5c9b61167c200ce9c90ac2ca611fb26 kopete-3.5.1.ebuild 999
 SHA256 a288a6b2b6109a5e9ca196a44a0d748ee265bdf987a1f75ce0d3b9c27f2ecf77 kopete-3.5.1.ebuild 999
+MD5 4abea9d58e10b0c356620d1440a4eaf8 kopete-3.5.2.ebuild 1486
+RMD160 5dec7bb9c8a550f21600dd60bd72df4c30f595ba kopete-3.5.2.ebuild 1486
+SHA256 5f118a6c6aff14bbbb6425848e6e0b627b015e11daee089feb54213b58c646c2 kopete-3.5.2.ebuild 1486
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDdvgAiZjviIA2XgRAuJKAJ4gEAYIPCpcGMWmI0pXe30yEv3FQwCdEANS
-XeguWHnOq+U/ge9XWMfcpT8=
-=if+l
------END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.84 2006/03/05 19:25:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.85 2006/03/22 20:15:36 danarmak Exp $
+
+*kpdf-3.5.2 (22 Mar 2006)
+
+  22 Mar 2006; Dan Armak <danarmak@gentoo.org> +kpdf-3.5.2.ebuild:
+  KDE 3.5.2. Not yet released upstream, and so package.masked for now.
 
   05 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> kpdf-3.5.1-r2.ebuild:
   Now add the right patch for use poppler 0.5.1 with kpdf.

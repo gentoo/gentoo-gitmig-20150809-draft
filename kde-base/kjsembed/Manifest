@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0fed1554201eb65daca539656e52e760 ChangeLog 5632
-RMD160 73a9c30c8714fba9ee084d5ff5b4cafcb10c3e9a ChangeLog 5632
-SHA256 245ad7607e92395f7cdef5258ebdb36ad5faa7a600aed3a54f18fb763dcb6ce0 ChangeLog 5632
+MD5 7f41fbfa0ce97dc697b62fae8127f85c ChangeLog 5806
+RMD160 5b5ce49caf5691274e0b6bab1062ade28104d716 ChangeLog 5806
+SHA256 232416b7631502e65400e230651599ac20e1df79dfbb36bce51296cd28e927e4 ChangeLog 5806
 MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-kjsembed-3.3.1 71
 RMD160 e6de37af9c285c1e29930bc6248857ce441a1c57 files/digest-kjsembed-3.3.1 71
 SHA256 b03d4ca02205838c3caed3fb3b0be04f08c97b15a6e68319c610c77b2a482ec9 files/digest-kjsembed-3.3.1 71
@@ -22,6 +19,9 @@ SHA256 e404e4cbf9b2af3d8127502c55c627cb3f2f27b3445ea3dac5ac2d5ad382bed2 files/di
 MD5 b69f3c49fefcbf110106dcbd71022f91 files/digest-kjsembed-3.5.1 71
 RMD160 8381d7a482d1d23ed1ecac44b2ec8dcc09ed0b65 files/digest-kjsembed-3.5.1 71
 SHA256 f35e2973fd8b65c4e02758066e23e4e81c744c5955cd3be6d53354cd5d369a9d files/digest-kjsembed-3.5.1 71
+MD5 4dffb3829fa1338d0c7213b9584b3981 files/digest-kjsembed-3.5.2 259
+RMD160 7180a741592834c078039c8bf2fd0090ef02ed32 files/digest-kjsembed-3.5.2 259
+SHA256 0ed7df165eb81c40fc0d314443c341edac8d4c000ddddad7229f8386696555ac files/digest-kjsembed-3.5.2 259
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 RMD160 6df47b78e158fb7e38a49c30627421186d83e3da files/no-gtk-glib-check.diff 949
 SHA256 f2721c8a1567ab9e259e216372a6552f8910fd33bc82390d8556aff00b0ba8df files/no-gtk-glib-check.diff 949
@@ -43,13 +43,9 @@ SHA256 b8071c4520b1d2ed341e972319497467c1e8e537477a199cac8fc6dcdfd4a2d6 kjsembed
 MD5 7d165b86447dd937ce9fa598610a5981 kjsembed-3.5.1.ebuild 623
 RMD160 8ffa31fd46bfac380344fa9a887eb18af2509e0f kjsembed-3.5.1.ebuild 623
 SHA256 b9067f68b92a0603d9c7fd5362c230bfea38dc512fa8b988bdc563741a0459ab kjsembed-3.5.1.ebuild 623
+MD5 f0b176d07db3d430ec1f27f7528dedd9 kjsembed-3.5.2.ebuild 623
+RMD160 7905b01c2ae6e0744c8b3110a1e65f977a6aab48 kjsembed-3.5.2.ebuild 623
+SHA256 55e7eb4a81f0a8e0d37ab014c0d0b3d5d6688b9724cf96fa738f42409c9f0325 kjsembed-3.5.2.ebuild 623
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBubsJrHF4yAQTrARApA7AJ4lQlIgCK0CMcOZKQCYiRMHAIa4pgCfWa/K
-4vZX2lZEDhwXW2TUqiD+p0k=
-=BctJ
------END PGP SIGNATURE-----

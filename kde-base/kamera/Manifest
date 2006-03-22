@@ -1,20 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7b1d7261fd2ffcd00dc18476da61487d ChangeLog 4375
+MD5 f601b01c8693bd4b8d20fea5b18dbf89 ChangeLog 4545
+RMD160 f42ed441dce4538b1bb4b41e9b68b0eb59caecaf ChangeLog 4545
+SHA256 276221fec96e367dc84622f67f8218a6e0e2866e04e68720eb4cb3b1a6443b92 ChangeLog 4545
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kamera-3.4.1 221
+RMD160 ce80baa4c1806e9aacce02a4860a401e0ed7408f files/digest-kamera-3.4.1 221
+SHA256 a5c43c1dc911a886d673620d40b300bcc9d5847fd0c55deaa7fa4fbc3b435c71 files/digest-kamera-3.4.1 221
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kamera-3.4.3 71
+RMD160 ffd5641d032574a27bee5145d077046b4b16b929 files/digest-kamera-3.4.3 71
+SHA256 855a1a4a8a0ad7e737acc281482598e137f230dfb23b434b6d773a00a165a2ad files/digest-kamera-3.4.3 71
 MD5 0459ac16349d79da6246392e2454796b files/digest-kamera-3.5.0 71
+RMD160 e1fce0a4770ec5c23d4bea00d20f51386a378782 files/digest-kamera-3.5.0 71
+SHA256 556dde324334f05490e579205a17fcea38c0cc898dacb99bf0cb7cc8e0cc3041 files/digest-kamera-3.5.0 71
 MD5 caced8d9ad43d51ee9d60fa05a53ed52 files/digest-kamera-3.5.1 71
+RMD160 56996a7e7e46b1511adf94f0de9f5a6c5c8c2b2a files/digest-kamera-3.5.1 71
+SHA256 a09f9dc50f9ce50cd9793223c6e7bde8efbd3ccb79e11470c484a91746347df3 files/digest-kamera-3.5.1 71
+MD5 64d3a195496428cb92d68de29ebf0fa0 files/digest-kamera-3.5.2 259
+RMD160 2a4a7d812c7c571f5c5a8e4d4b8c8eb4fe7f52ae files/digest-kamera-3.5.2 259
+SHA256 087152d6d869b8938c16752f1b5571e63dc1db0fa19f2e8913c00e77cebe3970 files/digest-kamera-3.5.2 259
 MD5 68977660dd1556aa966ead0f31c20529 kamera-3.4.1.ebuild 429
+RMD160 81fac5834499564e854305064d452ac52d831340 kamera-3.4.1.ebuild 429
+SHA256 9b5a4d8ac97bf873f6c3dc5a4712435b139fdd0870cfb789428e471affaff84b kamera-3.4.1.ebuild 429
 MD5 09332bd7cbae40764bc2f20f8795abb1 kamera-3.4.3.ebuild 427
+RMD160 65fd8c62bee632e8cb82be87f1f16a892454691f kamera-3.4.3.ebuild 427
+SHA256 4e8df48c56ef247c7b350e99c9f01350f791f05b1abb652babeb6747b4576761 kamera-3.4.3.ebuild 427
 MD5 a3367bd2aa9b0444feb7f6483d8e6b1a kamera-3.5.0.ebuild 432
+RMD160 01dcdf3355c090c28e5dbd20a695ac1652a8a64c kamera-3.5.0.ebuild 432
+SHA256 88f861d1159c91613b4592b9a10aa1e01c4b00f79429a9387197e84fafeea5f6 kamera-3.5.0.ebuild 432
 MD5 9c38ac072b702278a068d4b77583d891 kamera-3.5.1.ebuild 440
+RMD160 45ea4ca2bd5da05577c990499c2d4d2ce8c842bf kamera-3.5.1.ebuild 440
+SHA256 63ac499385d6c858445d72ce8b392b7dcee7be7c43da5f0521b18669e2d918d1 kamera-3.5.1.ebuild 440
+MD5 9c38ac072b702278a068d4b77583d891 kamera-3.5.2.ebuild 440
+RMD160 45ea4ca2bd5da05577c990499c2d4d2ce8c842bf kamera-3.5.2.ebuild 440
+SHA256 63ac499385d6c858445d72ce8b392b7dcee7be7c43da5f0521b18669e2d918d1 kamera-3.5.2.ebuild 440
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEIaeeViELBEf1JB0RApzoAJ40L/JAlGfjSTOcAfeZ40cJzvVE/QCghV8G
-drVBR4bb8xphMppXPSZEULU=
-=wE4Q
------END PGP SIGNATURE-----
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156

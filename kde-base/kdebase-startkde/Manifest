@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9030d0992379cb58938889062198d64c ChangeLog 6473
-RMD160 a75a1b1a09afbf72096cec6c8803fc03e2d9a3c3 ChangeLog 6473
-SHA256 8b3737b84a3800dfeaca3ad20960b66cee5684915d7505ac199301e64160cfe9 ChangeLog 6473
+MD5 43f46f6eae9fb49e744f907444a2d0d5 ChangeLog 6663
+RMD160 24272a054599d71e249230ebaaffab634472186a ChangeLog 6663
+SHA256 10800528f684b0fa468f845bd5e33e6d296ce947456390e4b0e02963910f9e03 ChangeLog 6663
 MD5 38116c7e3963674ec4a3c0948904ec3b files/agent-shutdown.sh 320
 RMD160 aca937be56a69b274c0756eca91456e00a91442b files/agent-shutdown.sh 320
 SHA256 1e53f9fc9155b38d8bb0ac36c8564898dbabc33f9ecaca933216a0ace4e30b33 files/agent-shutdown.sh 320
@@ -25,6 +22,9 @@ SHA256 2aa9daeb1aa26a4ddbc37c210bcd1cde8dbaa15d45bfd5f58d45ac26f7d36aea files/di
 MD5 340e546ce7b64129122115c8301d915e files/digest-kdebase-startkde-3.5.1 142
 RMD160 8fcd5454724efcf07804b2296a098343733bc198 files/digest-kdebase-startkde-3.5.1 142
 SHA256 55dfdfa182c6a8f9b39a15a5d897313cef65aa4369630e588f8410aab6970627 files/digest-kdebase-startkde-3.5.1 142
+MD5 c394a5050794638636403870c68ca58b files/digest-kdebase-startkde-3.5.2 518
+RMD160 bbac942550e1e2b96467a37780f4bcb29bdbdfe7 files/digest-kdebase-startkde-3.5.2 518
+SHA256 449890ab3d599d2cab0871ca61449d5473fc561a9350c6febd205353c02b306b files/digest-kdebase-startkde-3.5.2 518
 MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.1-gentoo.patch 1284
 RMD160 ed121f7b31d54262af7fd85995bb2a258c9e2590 files/kdebase-startkde-3.4.1-gentoo.patch 1284
 SHA256 047293bb0cdcaf19ec21fb8381c304306a4753023f8e7c82ede8fabab862cc48 files/kdebase-startkde-3.4.1-gentoo.patch 1284
@@ -46,13 +46,9 @@ SHA256 f4aa5ed0af38e766b90f849495bfafeabb00baa6751c8c5d60887dc47d20e659 kdebase-
 MD5 60bdc83c903c01f9c3720b5fab2092ca kdebase-startkde-3.5.1.ebuild 2493
 RMD160 53d75fec5a54a124c6e5901ea764ae37a2f55dfd kdebase-startkde-3.5.1.ebuild 2493
 SHA256 62081d87653c64cb03a9fda21d6af1219237407d325c0a9c356c2517627e081b kdebase-startkde-3.5.1.ebuild 2493
+MD5 60bdc83c903c01f9c3720b5fab2092ca kdebase-startkde-3.5.2.ebuild 2493
+RMD160 53d75fec5a54a124c6e5901ea764ae37a2f55dfd kdebase-startkde-3.5.2.ebuild 2493
+SHA256 62081d87653c64cb03a9fda21d6af1219237407d325c0a9c356c2517627e081b kdebase-startkde-3.5.2.ebuild 2493
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD3WMBAiZjviIA2XgRAuCVAKDd6TmO9oPy9e6JdqyVNIr2D+7wVACbBeXM
-yiGDC8l3JBgO5H4oSzmWUJo=
-=a3/p
------END PGP SIGNATURE-----
