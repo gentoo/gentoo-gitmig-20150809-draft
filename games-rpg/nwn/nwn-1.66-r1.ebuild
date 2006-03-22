@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66-r1.ebuild,v 1.12 2006/03/21 15:17:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66-r1.ebuild,v 1.13 2006/03/22 15:19:05 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -69,7 +69,6 @@ Ddir="${D}/${dir}"
 
 die_from_busted_nwn-data() {
 	local use=$*
-	echo "DEBUG: $use"
 	ewarn "You must emerge games-rpg/nwn-data with USE=$use.  You can fix this"
 	ewarn "by doing the following:"
 	echo
