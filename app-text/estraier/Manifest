@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f2eb423a258267af01551ad2772d01c7 ChangeLog 3834
+MD5 04fa07d1088f2471b66391d4d26530aa ChangeLog 3930
+RMD160 b65fd1e9b01f4a70b77d6ed17ab58083ca884289 ChangeLog 3930
+SHA256 d5e25d0d6275bdcede54fa2ec669737679ca6c6acba94bfa6b3b83f42e9dc530 ChangeLog 3930
 MD5 9b1e2ddd41716c8ecd2ff668388d1a7a estraier-1.2.25.ebuild 1198
+RMD160 f6bfb8da5032b7adf518c006fa0140090153fd88 estraier-1.2.25.ebuild 1198
+SHA256 71f34458d2a67fffd6e1453dbecd5aa91e7fec3ff2a2c7b657231e645289fd16 estraier-1.2.25.ebuild 1198
 MD5 34e1df8a8427e5d236f64bdcd752c5c8 estraier-1.2.26.ebuild 1199
-MD5 b221fbf53e772b23caeaa6af4398dca0 estraier-1.2.28.ebuild 1186
+RMD160 f66b2faadcc02a1e06a1bea48365455ace60238a estraier-1.2.26.ebuild 1199
+SHA256 18d01cbc380970ccdc87326432913620913701037c41fee1b0b7f99cb24cdca7 estraier-1.2.26.ebuild 1199
+MD5 ff7ec38a3caf75feb4ae80e207fa4bed estraier-1.2.28.ebuild 1183
+RMD160 5b898b80ac728dd3322a3e4bc08a81509061fd92 estraier-1.2.28.ebuild 1183
+SHA256 3ddf43bd6a6c362720e7e72c5b2245a452f4bae129bd310c7ea13dd5ebb2c2bb estraier-1.2.28.ebuild 1183
 MD5 80de95406a28a1db3f1ee26c4269ffc9 estraier-1.2.29.ebuild 1192
+RMD160 c484f2c8cf9a58f9fcfa9c36eabf99a3aab83205 estraier-1.2.29.ebuild 1192
+SHA256 076ea195d01897b88cc45cbd19bdc5e7bc594f1f7c676b50440828c1138f0b51 estraier-1.2.29.ebuild 1192
 MD5 bdc6b57b44fc352b7ad5a2f2f01d1194 files/digest-estraier-1.2.25 67
+RMD160 105047415829117c80ce065a89e4346ef3e97804 files/digest-estraier-1.2.25 67
+SHA256 b46402f3ebd9598af1d5159b9f6cdf18c555a30203268d4834e832659f3afcd7 files/digest-estraier-1.2.25 67
 MD5 e77f08565b31d29873c3b51a76ff5b7d files/digest-estraier-1.2.26 67
+RMD160 e70e700c0909e997156b91cbab27c74e94129ba6 files/digest-estraier-1.2.26 67
+SHA256 b8c8be4d9727c957cebb1c6a72577149385bcf5450709b89aaaaf377426dc240 files/digest-estraier-1.2.26 67
 MD5 8e9b8eb46bc06fb5b2dcac6196e88c41 files/digest-estraier-1.2.28 67
+RMD160 de564027d932fee978e9bef44a807b48a3dd4c01 files/digest-estraier-1.2.28 67
+SHA256 b9d6cb530261851adc45fe245b40f2807dab5c5c50c2c2846fbfc3f48bad5465 files/digest-estraier-1.2.28 67
 MD5 7ef5ad5eec172397e5521f30a2347e83 files/digest-estraier-1.2.29 67
+RMD160 5d0fbfe2ad20b779ec368945425400cebd8bd873 files/digest-estraier-1.2.29 67
+SHA256 76ae6e6b169c28cdcaa666f64256232c8bbc4fdafdcc4dbe0edf9351cf81c377 files/digest-estraier-1.2.29 67
 MD5 382a25f7a6abf0020285f37f74158690 metadata.xml 226
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEHwRgKRy60XGEcJIRApRpAJ4gO4hc2OlvX6V7tevtBc5CbFs45wCcDobR
-KTuzyzefQn+/TvdGXAfNGCE=
-=00pU
------END PGP SIGNATURE-----
+RMD160 19d90fb44483e26b860cda1cc3ad46e3e89b6909 metadata.xml 226
+SHA256 c16f962dbb1340e378c4775fd9fa31af8cac92ab8c524988a697af52dc803fdf metadata.xml 226
