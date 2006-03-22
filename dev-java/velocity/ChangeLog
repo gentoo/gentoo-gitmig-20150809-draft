@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/velocity
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.21 2006/02/09 00:58:59 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.22 2006/03/22 06:32:55 wormo Exp $
+
+  21 Mar 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  velocity-1.4-r3.ebuild:
+  mark ~ppc (needed for bug #122191)
 
   09 Feb 2006; Joshua Nichols <nichoj@gentoo.org> -velocity-1.4-r1.ebuild,
   -velocity-1.4-r2.ebuild:

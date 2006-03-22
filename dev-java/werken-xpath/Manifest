@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 28b4f1888353c32535a6f6a092467ec8 ChangeLog 869
-RMD160 89d96c19fc2fda0bddc51baae39c09e3daf65afa ChangeLog 869
-SHA256 78c34533f45126af04ed50276c0fc7f395af2e9a18186045d31ae8518fdac033 ChangeLog 869
-MD5 e91fcdc732f1948b50267af96892a16c files/digest-werken-xpath-0.9.4_beta 286
-RMD160 d65a0aaa16fa3b7d313dcbc9db6b56e885907ce6 files/digest-werken-xpath-0.9.4_beta 286
-SHA256 b4722775395d1474595d0229054dba8adbd711c05d424e4fe00fe0b8128daa91 files/digest-werken-xpath-0.9.4_beta 286
+MD5 78da4f7f73f91c6bd92eedf1fbefaab6 files/digest-werken-xpath-0.9.4_beta 80
 MD5 4185b96fdb3a49d1eb6cdb93057e440b files/werken-xpath-0.9.4_beta-gentoo.patch 1313
-RMD160 887e882cf7a29c6acf4295380810a18446eb93eb files/werken-xpath-0.9.4_beta-gentoo.patch 1313
-SHA256 588fef298eda7cddb53ec9a29bc996200e79887dd7024edbb72438a330fccea3 files/werken-xpath-0.9.4_beta-gentoo.patch 1313
 MD5 28584ccbd78d4037e8b242d825e03f33 files/werken-xpath-0.9.4_beta-jpp-compile.patch 1189
-RMD160 3205c19ce085985223e37714313dfe1d1d647fb8 files/werken-xpath-0.9.4_beta-jpp-compile.patch 1189
-SHA256 8ccdde529f4b236ecd6793f3baf80e99d057eec4fad97bb130c9ba1ab3444d0b files/werken-xpath-0.9.4_beta-jpp-compile.patch 1189
 MD5 e2a3cd20c9fb62710b171d6b9e179061 files/werken-xpath-0.9.4_beta-jpp-jdom.patch 3606
-RMD160 6878d48ea08bac66b6e579eeb845f2c7fd62ff48 files/werken-xpath-0.9.4_beta-jpp-jdom.patch 3606
-SHA256 4c8301b7fa31a8c999b3021c46526045f12e178b8bad230fbcd3b00cc5cd98b7 files/werken-xpath-0.9.4_beta-jpp-jdom.patch 3606
 MD5 72e762a216369d14fcf180a0229e03a5 files/werken-xpath-0.9.4_beta-jpp-tests.patch 353
-RMD160 72f38c0930ada0363d206fa7b32db1f6d9f1d0d9 files/werken-xpath-0.9.4_beta-jpp-tests.patch 353
-SHA256 79297e31ea4b45ecdaa67df4bb8816b8dd416bc577c1f5406008954cab5e327c files/werken-xpath-0.9.4_beta-jpp-tests.patch 353
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
-SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
-MD5 e23fb89e1520ecd4d79502dc74d83c02 werken-xpath-0.9.4_beta.ebuild 1898
-RMD160 d28cbf18e29c08acde0b6b81da81eff231cdd090 werken-xpath-0.9.4_beta.ebuild 1898
-SHA256 dfe6d0c978000e7a69b9b6215fcbc28fb42b4d68078d4395f1625a2fede7426a werken-xpath-0.9.4_beta.ebuild 1898
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6os0ndWRXhKOboURAiJVAKCyuCEPvgotLJ3gp/QHfaL0kWCYEwCgnPfj
-LM5BQKaujnbJmCo6gEFCAks=
-=Haem
------END PGP SIGNATURE-----
+MD5 e8346f903642769d080d7aa86d005b0e werken-xpath-0.9.4_beta.ebuild 1903

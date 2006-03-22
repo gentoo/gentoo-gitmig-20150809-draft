@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta.ebuild,v 1.3 2006/02/09 00:21:59 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta.ebuild,v 1.4 2006/03/22 06:29:58 wormo Exp $
 
 inherit java-pkg eutils versionator
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${MY_P}-src.tar.gz"
 
 LICENSE="werken.xpath"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4
