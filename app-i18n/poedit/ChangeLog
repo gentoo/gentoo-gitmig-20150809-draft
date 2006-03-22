@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/poedit
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.23 2005/10/11 20:33:54 pythonhead Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.24 2006/03/22 22:11:49 gustavoz Exp $
+
+  22 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> poedit-1.3.4.ebuild:
+  ~hppa blessing
 
 *poedit-1.3.4 (11 Oct 2005)
 *poedit-1.3.3 (11 Oct 2005)
