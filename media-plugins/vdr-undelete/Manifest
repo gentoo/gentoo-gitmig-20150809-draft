@@ -1,28 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 130aa3bbe20989668b4fb778abb9b2f4 ChangeLog 771
 RMD160 695897e7b37bea472dc993d43685f2c223772242 ChangeLog 771
 SHA256 2d00b575b575b7f7deb47e51d2b69c761c8a06cf7c14971ae28925a07abff2b6 ChangeLog 771
-MD5 692913c598f954ec8f8e8a678f705aec files/digest-vdr-undelete-0.0.5 66
-RMD160 66be9dc19f57cdaa6b997025408f37fb28645d36 files/digest-vdr-undelete-0.0.5 66
-SHA256 9d1f8330968973ce779acb00244b7df37e3f3122b7493219cdda4f92b70db79a files/digest-vdr-undelete-0.0.5 66
+MD5 4417cf9da760aaa9483ad9f58e9c3e3a files/digest-vdr-undelete-0.0.5 244
+RMD160 fb772db8862fddc55b709b7b8a76fe023f264f59 files/digest-vdr-undelete-0.0.5 244
+SHA256 03e67217c78711805867f8e89718f110526a9ff93f498d0864cbcd3d2edb58cc files/digest-vdr-undelete-0.0.5 244
 MD5 99d1253916fa18a81e88cf03970b3ce0 files/digest-vdr-undelete-0.0.6 244
 RMD160 dd9fbce4c2c344c845fd662c9e910f95d14181ca files/digest-vdr-undelete-0.0.6 244
 SHA256 e896ac9ef957bcee78657e3c0beea13a4f14f9feb47112a205d74f1a34dedace files/digest-vdr-undelete-0.0.6 244
+MD5 99d1253916fa18a81e88cf03970b3ce0 files/digest-vdr-undelete-0.0.6-r1 244
+RMD160 dd9fbce4c2c344c845fd662c9e910f95d14181ca files/digest-vdr-undelete-0.0.6-r1 244
+SHA256 e896ac9ef957bcee78657e3c0beea13a4f14f9feb47112a205d74f1a34dedace files/digest-vdr-undelete-0.0.6-r1 244
+MD5 55e3ac43e7a758e53c79d68b64924f74 files/undelete-0.0.6-info.diff 1292
+RMD160 ed54b817ec39adffeef5bbc478f0467488a08096 files/undelete-0.0.6-info.diff 1292
+SHA256 eb5f86a3800acfe546469d5cce5bb99cedf49855387d3b4212cda846b92ab5f8 files/undelete-0.0.6-info.diff 1292
 MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
 RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 metadata.xml 259
 SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata.xml 259
 MD5 939b470a31bde851be84b627fbd71a77 vdr-undelete-0.0.5.ebuild 501
 RMD160 9f71d381dd9457677a6b72f7b1dc01844b7369f7 vdr-undelete-0.0.5.ebuild 501
 SHA256 85ebec1b9a7aa19f3450bf24fffeda3bfc4e472f0ffa33c510d62f10f96f5019 vdr-undelete-0.0.5.ebuild 501
+MD5 2432f0ff61770095336be550b503e349 vdr-undelete-0.0.6-r1.ebuild 545
+RMD160 e56843f0a9990de6ccb650a08bca5272e1ca3a7d vdr-undelete-0.0.6-r1.ebuild 545
+SHA256 e4be9fac232b20ba39764eafd4509afe6ab52795946ec452266ef0a235509dac vdr-undelete-0.0.6-r1.ebuild 545
 MD5 cab68e8600cb96bf419d09a0bd31590f vdr-undelete-0.0.6.ebuild 500
 RMD160 7478554f074e3c3dfed2b845bdde830d63ec0045 vdr-undelete-0.0.6.ebuild 500
 SHA256 a512c5c907a52e7ce87f6489eaa18df2a61f693b1ed255329877d8a1758b22a7 vdr-undelete-0.0.6.ebuild 500
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEGJU1ZfSl1Kp5KmoRAoJrAKCUwAzAaDUc80fe9Wb/NLNrKulLywCeJ+MV
-lS0EJYA75mzGWE2D+LK42nQ=
-=thNS
------END PGP SIGNATURE-----
