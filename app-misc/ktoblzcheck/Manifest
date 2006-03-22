@@ -1,9 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 41ccdc62368e28cd0c3547b1dc2b2ec6 ChangeLog 3633
-RMD160 040e475f143cf73285fa828cf7aa18229b3f8e4b ChangeLog 3633
-SHA256 6417c3822e329f362accd739aa1e06519510d8806e5050e13dd26633cfe61633 ChangeLog 3633
+MD5 3c6c2f984efeaa5123d9adb66f5e773d ChangeLog 3752
+RMD160 ba43e246dba19230ab8710fe0389f91211a15ee4 ChangeLog 3752
+SHA256 81de8436682c8fe527bafdf9aec50edb11bc73665dbc88a2bd153f1f41c2331b ChangeLog 3752
+MD5 c572d9cdef093dac520033f1b0ad2db1 files/digest-ktoblzcheck-1.10 250
+RMD160 b19777b22d5e1b7f5def4259ba18078ae88b0808 files/digest-ktoblzcheck-1.10 250
+SHA256 d8f0c02537b2dd15ef3820468727a7e6c3f0f96119ced9006ef0ab1aad6ef406 files/digest-ktoblzcheck-1.10 250
 MD5 7cbeecef2ba27e6185335d102bd5297a files/digest-ktoblzcheck-1.7 67
 RMD160 351fdbab217d668dd861379bdbbe12dd53c37af1 files/digest-ktoblzcheck-1.7 67
 SHA256 d13443aa1cee3a582d61f384137cb1a11c1db1b01052f48992c0e58d3037d780 files/digest-ktoblzcheck-1.7 67
@@ -16,6 +19,9 @@ SHA256 d81257a119ba45587e34d146647fe2ca6b29ffafc590adfa48807756d15694c9 files/di
 MD5 6b6ea9d7b2f67f64ddf9027077b1f3ed files/ktoblzcheck-1.8-gcc41.patch 649
 RMD160 235c2f197626eed2328e2f9e4b58f671e22d0498 files/ktoblzcheck-1.8-gcc41.patch 649
 SHA256 14f3a4ab22a6b99d2cd687e60d2d18af5ca5e81dce30881dde1720513e7a8784 files/ktoblzcheck-1.8-gcc41.patch 649
+MD5 ec83f71342bc1c6f9b8170b06488815e ktoblzcheck-1.10.ebuild 738
+RMD160 434c368629787775aa9a0e5f80bf6198ab6c6b43 ktoblzcheck-1.10.ebuild 738
+SHA256 89316746db27f71c28357d7093a2df2d41dd235aa4ff4257b6f78e66fd5c1ae4 ktoblzcheck-1.10.ebuild 738
 MD5 19ce50f3e0ff3dba849f890f766617ff ktoblzcheck-1.7.ebuild 671
 RMD160 8f69e26990c7a6d231ac74b86761e600ec277de6 ktoblzcheck-1.7.ebuild 671
 SHA256 1531da2075e7b165ca1108b79546f950ceb4787cb6192561e3b3d25e1d137ef7 ktoblzcheck-1.7.ebuild 671
@@ -29,9 +35,9 @@ MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 RMD160 5b59fc85d3bafae0872cf691e5f032bac39ba539 metadata.xml 310
 SHA256 39e1273dd60bd3ceb460e9366a648c8fa21db1c292df4573e69f41cf6c84f6fc metadata.xml 310
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD5uoDJrHF4yAQTrARAhgvAKC38qNv1TbBs7AZAwDXPmrExwpHUQCdHbz5
-6WblMqMDj6dBz0Apcej4fNQ=
-=C9RF
+iD8DBQFEIXkUr2QksT29OyARAk4wAJ95IrZrHSx31jKP7Bz46lp31lpOMQCgmdlm
+0KA9sbrnvbIidPCfmZ5fIww=
+=qiLJ
 -----END PGP SIGNATURE-----
