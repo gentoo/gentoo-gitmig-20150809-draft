@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 05a58e7b1acf0b8bf91f3fa630a09f01 ChangeLog 3451
-RMD160 a6e652e1a610aae27aa77a350bdd732822a736f2 ChangeLog 3451
-SHA256 b2e1e52ad03e6dec0b83759dc91b31bce4525642fe44d8e846961ff7ef697c94 ChangeLog 3451
+MD5 e9a62d22c7740c0cece09ab780a52261 ChangeLog 3578
+RMD160 27369c9ce060f75fa9cd5018452a2fd6fb5abeca ChangeLog 3578
+SHA256 885ca003db0557c233fd6fe8252239669d64d4c7828b904e75135d0e702acf95 ChangeLog 3578
 MD5 b997821b167ea3f1a883c26b7a4823db aqbanking-1.6.0_beta.ebuild 1616
 RMD160 21ee7159a34c43128e40213a53f890d94c171dbe aqbanking-1.6.0_beta.ebuild 1616
 SHA256 edcfe914912c2b5687b890381cb0f0fe5dad1a54e0548e977705a554278c4ebc aqbanking-1.6.0_beta.ebuild 1616
@@ -22,6 +22,9 @@ SHA256 3fbbb42cec32c90e56264c7616c1547e48c57c387882a47a25058033b7aaf75a aqbankin
 MD5 3a5aea283eff5fb2d2d7aa74d4ba7552 aqbanking-1.9.6_beta.ebuild 1671
 RMD160 e6c8161a8b8b2fd5795fecf2ec10732c61d149f5 aqbanking-1.9.6_beta.ebuild 1671
 SHA256 c36a6b852490a547b337ab21d64e1df5b6dc73e7b73448df73f8ca9213c02de8 aqbanking-1.9.6_beta.ebuild 1671
+MD5 6d6786c2bbbae9c04e91e66175c2a615 aqbanking-1.9.9_beta.ebuild 1658
+RMD160 64505843733a363a411ac326d022353aeaa5e3fa aqbanking-1.9.9_beta.ebuild 1658
+SHA256 72330cc76326898836ce81f386ca82b045d53caf08b86b9792a35398a358d1a9 aqbanking-1.9.9_beta.ebuild 1658
 MD5 ff9a0f1595c29d0edd0398dcceafaa63 files/digest-aqbanking-1.6.0_beta 72
 RMD160 dd13b2e35aeb991aa80b29c26d5ba4d4c9457466 files/digest-aqbanking-1.6.0_beta 72
 SHA256 39de220b34be4751e06f830a884d1e54c0c122df19068a7fc0f8ce7e68e16537 files/digest-aqbanking-1.6.0_beta 72
@@ -40,13 +43,16 @@ SHA256 23f1782c53861867321174ca70eac2f8203477ed0888ae37efb896d0c33349f3 files/di
 MD5 bc081805609a6eff73220c5f46ddf616 files/digest-aqbanking-1.9.6_beta 262
 RMD160 0d926e6e864508fa1af62370a12849e8ff0f94cc files/digest-aqbanking-1.9.6_beta 262
 SHA256 08c61c1e014afab3880900b1f0284b6fe1329d16fa1520998d1b00d7b133dfbd files/digest-aqbanking-1.9.6_beta 262
+MD5 56a4613f200ed635ed462d893f64a0b3 files/digest-aqbanking-1.9.9_beta 262
+RMD160 f68113063960d20bcd83dee8d4eadfb2d0b3fca5 files/digest-aqbanking-1.9.9_beta 262
+SHA256 0e625ad0ee9827ec69f129e332041e565966c5e14a0217a851dea6766a2aed26 files/digest-aqbanking-1.9.9_beta 262
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 RMD160 3b01d5dab901ee93217f72b711954d3cccbb1717 metadata.xml 217
 SHA256 2f5dfc1eb79d2d9ee02663da6e1449f499c3a37b7f4cc2391e18d7789a314669 metadata.xml 217
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD4DBQFD56K3JrHF4yAQTrARAo/EAKCVzwN3T+6F4VscC7ujVk5DHLMVOQCWNTSq
-aGTPOEw7WdDgH6l0c/UqlQ==
-=MPyp
+iD8DBQFEIXowr2QksT29OyARAjo7AJ9joh5N38GOD5nq1+tgPp+Pa6SRYQCfbole
+G5iLnF+KLcAoBfyifwjeLkU=
+=fz03
 -----END PGP SIGNATURE-----
