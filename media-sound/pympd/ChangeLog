@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pympd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.8 2006/03/18 20:04:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.9 2006/03/22 10:54:37 ticho Exp $
+
+*pympd-0.06.1 (22 Mar 2006)
+
+  22 Mar 2006; <ticho@gentoo.org> +pympd-0.06.1.ebuild:
+  Version bump.
 
   18 Mar 2006; <ticho@gentoo.org> -pympd-0.05.ebuild, -pympd-0.05.2.ebuild,
   pympd-0.06.ebuild:
