@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.85 2006/03/21 19:26:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.86 2006/03/22 17:49:30 uberlord Exp $
+
+  22 Mar 2006; Roy Marples <uberlord@gentoo.org>
+  files/dhcp-3.0.3-dhclient-hostname.patch,
+  files/dhcp-3.0.3-dhclient-metric.patch,
+  files/dhcp-3.0.3-dhclient-mtu.patch, files/dhcp-3.0.3-dhclient-ntp.patch,
+  files/dhcp-3.0.3-dhclient-resolvconf.patch, dhcp-3.0.3-r6.ebuild,
+  dhcp-3.0.4_beta3-r1.ebuild:
+  Tweaked patchset to apply cleanly.
+  Support PEER_DNS and PEER_NTP options.
 
   21 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> dhcp-3.0.3-r6.ebuild,
   dhcp-3.0.4_beta3-r1.ebuild:

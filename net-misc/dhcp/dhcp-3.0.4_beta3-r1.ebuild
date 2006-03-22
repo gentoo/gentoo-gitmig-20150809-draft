@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta3-r1.ebuild,v 1.4 2006/03/21 19:26:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta3-r1.ebuild,v 1.5 2006/03/22 17:49:30 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -35,11 +35,11 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-3.0-fix-perms.patch"
 	# Enable dhclient to equery NTP servers
 	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-ntp.patch"
+	# resolvconf support in dhclient-script
+	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-resolvconf.patch"
 	# Allow dhclient to use IF_METRIC to set route metrics
 	# Also, stop doing ifconfig down on Linux as that kills wpa_supplicant
 	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-metric.patch"
-	# resolvconf support in dhclient-script
-	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-resolvconf.patch"
 	# Fix setting hostnames on Linux
 	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-hostname.patch"
 	# Allow mtu settings

@@ -1,18 +1,6 @@
-diff -ru /tmp/client/scripts/bsdos client/scripts/bsdos
---- /tmp/client/scripts/bsdos	2006-03-21 10:54:43.311983617 +0000
-+++ client/scripts/bsdos	2006-03-21 10:55:46.000000000 +0000
-@@ -106,6 +106,7 @@
-    [ x$reason = xREBIND ] || [ x$reason = xREBOOT ]; then
-   current_hostname=`hostname`
-   if [ x$current_hostname = x ] || \
-+     [ x$current_hostname = "x(none)" ] || \
-      [ x$current_hostname = x$old_host_name ]; then
-     if [ x$current_hostname = x ] || \
-        [ x$new_host_name != x$old_host_name ]; then
-diff -ru /tmp/client/scripts/linux client/scripts/linux
---- /tmp/client/scripts/linux	2006-03-21 10:54:43.295982093 +0000
-+++ client/scripts/linux	2006-03-21 10:54:58.000000000 +0000
-@@ -137,6 +137,7 @@
+--- client/scripts/linux
++++ client/scripts/linux
+@@ -141,6 +141,7 @@
     [ x$reason = xREBIND ] || [ x$reason = xREBOOT ]; then
    current_hostname=`hostname`
    if [ x$current_hostname = x ] || \
