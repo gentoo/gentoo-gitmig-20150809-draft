@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6.ebuild,v 1.5 2005/12/06 14:40:15 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6.ebuild,v 1.6 2006/03/22 19:45:58 eradicator Exp $
 
 inherit webapp eutils flag-o-matic
 
@@ -19,6 +19,13 @@ DEPEND="${RDEPEND}"
 
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc4.patch
+}
 
 src_compile() {
 	./configure \
