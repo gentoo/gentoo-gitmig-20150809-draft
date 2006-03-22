@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 160fb929274bbfda1de4f3bec85d5dbb ChangeLog 59616
-RMD160 ffc5f16c8b80ac3e301aec6e4e38de08ba11d541 ChangeLog 59616
-SHA256 9b62abf997cc962e1aaf5154fc4da0bd78b60c2d316c59bfbc4e27c507c4e39f ChangeLog 59616
+MD5 8df72083cfca2d08765225c5f09a0042 ChangeLog 59750
+RMD160 16b71143044c283e35e10354b8c2b4c3956c230f ChangeLog 59750
+SHA256 f712f213026b93769193d2f4523ef882ec2add5ed0d9e0d09cc4a4eb4686393b ChangeLog 59750
 MD5 0361b484cca5df06a9d3a66e1d18d733 files/digest-gentoo-sources-2.4.31-r1 144
 RMD160 3ca6fa1dec4e74e44dd9a11192e1c87404474bee files/digest-gentoo-sources-2.4.31-r1 144
 SHA256 c857c13a71e7b9337aa7882f0f1df971590343d862fc9c0aeb5c4f9483312aad files/digest-gentoo-sources-2.4.31-r1 144
@@ -43,16 +40,9 @@ SHA256 3226b59edce62cf2b9adaf85bb74eaec80889aa425a3c23ce393a8be6471bdaf gentoo-s
 MD5 7dd0d457a0501243a2628add9176ca7a gentoo-sources-2.6.15-r7.ebuild 1242
 RMD160 3c3baa716b8eab91c20005dcfa0beb4351f92aaa gentoo-sources-2.6.15-r7.ebuild 1242
 SHA256 687b65743717e2297a3807b1de626adec49fcbec2fb17af1ff9f4e716941d21a gentoo-sources-2.6.15-r7.ebuild 1242
-MD5 047ee0a78d5ad950ae147a042a1b41af gentoo-sources-2.6.16.ebuild 1195
-RMD160 b7c82ecfc1e8d68cc078023378aa8ef8cfe6d7ee gentoo-sources-2.6.16.ebuild 1195
-SHA256 41548e3dda54be0963aff1f6b8e4e98a94379b906abb8a1b39affb20a712ae17 gentoo-sources-2.6.16.ebuild 1195
+MD5 9f0223e05e40ae533516ce42c995e5e7 gentoo-sources-2.6.16.ebuild 1205
+RMD160 c93dd71e6403763f8ef6bcc362f2d6ca13c34170 gentoo-sources-2.6.16.ebuild 1205
+SHA256 e62835aac7fe7454525b837a748ee77a0c1a34d28cff79e545694a52a49bbe74 gentoo-sources-2.6.16.ebuild 1205
 MD5 410c3afeb274354a7ce68257edc18012 metadata.xml 283
 RMD160 fa426498783bbc55b5e1ace3dced6ed35ab83c83 metadata.xml 283
 SHA256 16eda12305d2f4dba1a5650d79f49204d23c82de0d9883424dc74b3d372e45e2 metadata.xml 283
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHyfvTOXg++0VvJQRAkSDAJ4kwxN/xo2yNYPh+tGuSNoamatpnwCgsHt4
-M/XvwbIdb/W4McGDZqd8qCM=
-=4NyB
------END PGP SIGNATURE-----
