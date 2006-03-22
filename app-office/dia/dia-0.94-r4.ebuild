@@ -1,12 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r4.ebuild,v 1.2 2006/02/17 00:14:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r4.ebuild,v 1.3 2006/03/22 20:53:06 foser Exp $
 
 inherit eutils gnome2 libtool
 
 DESCRIPTION="Diagram/flowchart creation program"
 HOMEPAGE="http://www.gnome.org/projects/dia/"
 LICENSE="GPL-2"
+
+SRC_URI="${SRC_URI}
+	mirrors://gentoo/${P}-sheets-png.tar.bz2"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
@@ -51,7 +54,7 @@ src_unpack() {
 
 	# Install png's instead of xpm's, (bug #103401) and upstream.
 	epatch ${FILESDIR}/${P}-png.patch
-	tar jxf ${FILESDIR}/${P}-sheets-png.tar.bz2
+	cp -r ${WORKDIR}/sheets/* ${S}/sheets
 	aclocal  || die "Aclocal failed"
 	automake || die "Automake failed"
 
