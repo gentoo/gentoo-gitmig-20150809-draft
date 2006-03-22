@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.68 2006/03/20 18:12:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.69 2006/03/22 21:12:02 hansmi Exp $
+
+  22 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> anthy-7100b-r1.ebuild:
+  Stable on ppc.
 
   20 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> anthy-7100b-r1.ebuild:
   Stable on sparc
