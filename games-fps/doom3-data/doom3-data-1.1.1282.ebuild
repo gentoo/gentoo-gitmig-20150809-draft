@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-data/doom3-data-1.1.1282.ebuild,v 1.4 2005/12/30 15:53:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-data/doom3-data-1.1.1282.ebuild,v 1.5 2006/03/22 15:12:04 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI=""
 LICENSE="DOOM3"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
-IUSE=""
+IUSE="roe"
 RESTRICT="nostrip"
 
 DEPEND="app-arch/bzip2
@@ -45,8 +45,11 @@ src_install() {
 	einfo "Copying files from Disk 3..."
 	doins ${CDROM_ROOT}/Setup/Data/base/pak00{3,4}.pk4 \
 		|| die "copying pak003 and pak004"
-	dodir ${dir}/d3xp
-	cp ${Ddir}/base/pak000.pk4 ${Ddir}/d3xp
+	if use roe
+	then
+		dodir ${dir}/d3xp
+		cp ${Ddir}/base/pak000.pk4 ${Ddir}/d3xp
+	fi
 
 	find ${Ddir} -exec touch '{}' \;
 
