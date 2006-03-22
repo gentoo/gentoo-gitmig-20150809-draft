@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20051101.ebuild,v 1.1 2005/11/06 13:58:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20051101.ebuild,v 1.2 2006/03/22 20:46:52 genstef Exp $
 
 inherit eutils linux-mod multilib
 
@@ -50,6 +50,8 @@ src_unpack() {
 	sed -i "s: -O::" ${S}/modem/Makefile
 	sed -i "s:LFLAGS:LDFLAGS:" ${S}/modem/Makefile
 	sed -i "s/^slmodemd: -lasound$//" ${S}/modem/Makefile
+	cd drivers
+	sed -i "s:.*=[ \t]*THIS_MODULE.*::" st7554.c amrmo_init.c old_st7554.c
 }
 
 src_compile() {
