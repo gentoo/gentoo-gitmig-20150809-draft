@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d1498a330c77301f596ea08453d05b0f ChangeLog 1717
-RMD160 ef95366a0e77f6a3a76d2dd4f4be141bcc68cc64 ChangeLog 1717
-SHA256 fe25faacf71ae268f80a34af46ec17d6155a4472367d78f272a14c4f705517fd ChangeLog 1717
-MD5 c44d19fc54169f19480eb023db00abd3 files/digest-fixesproto-3.0.2 250
-RMD160 04d685290351555127408cd0e1748c765c8a8dcf files/digest-fixesproto-3.0.2 250
-SHA256 46d583ed336471b0aedc642efa3b749a59ccc16a4dbd9a1a55f271fd11b7edc1 files/digest-fixesproto-3.0.2 250
-MD5 71cb26f55c12e0e2736a5b06354ae689 fixesproto-3.0.2.ebuild 468
-RMD160 80a325b21ba235629efafabb6cadcbcf8bb31e18 fixesproto-3.0.2.ebuild 468
-SHA256 0d197599c763f0b7ded8e9f36a62ccf12b0c01180b1510b0e1e8893b143345f4 fixesproto-3.0.2.ebuild 468
+MD5 599cb1790023c455f9ed30d32550fb55 ChangeLog 1865
+RMD160 252282ea96de7568422fbc32ed4685d41bb983f6 ChangeLog 1865
+SHA256 3c5ee7479ce281e7015e93df339cfce7ce59edbf72f3ac6d60ec9640f3abd779 ChangeLog 1865
+MD5 8a11ad264559e8d1211f62b2dac729be files/digest-fixesproto-4.0 244
+RMD160 0908f8d121766d37543299d9bf89b608df041c40 files/digest-fixesproto-4.0 244
+SHA256 9d4adebd598eac9e2384b1ca994cb0543e34d98ebc333b350d2075e4da5219a5 files/digest-fixesproto-4.0 244
+MD5 4eb7ef179328384664e8fdde49995cd8 fixesproto-4.0.ebuild 467
+RMD160 2ba6e01de718f3fb203faf2c6e18a995bbe612f5 fixesproto-4.0.ebuild 467
+SHA256 d099dcd8baac376518d0f0b9b023af105e07b2f0c33ffbbe018f7ad05c1cee1c fixesproto-4.0.ebuild 467
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEED3gJrHF4yAQTrARArOCAKDEq6XcTkWD8jJmvwovk92yknN8wACeMA+8
-7vjNc9p/P9hEAKAk8SSUtl4=
-=aLGe
------END PGP SIGNATURE-----
