@@ -1,27 +1,28 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r2.ebuild,v 1.1 2006/03/04 15:22:20 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r2.ebuild,v 1.2 2006/03/22 03:25:05 tester Exp $
 
 inherit eutils
 
 S="${WORKDIR}/jabberd-${PV}"
 DESCRIPTION="Open Source Jabber Server"
 HOMEPAGE="http://www.jabber.org"
-SRC_URI="http://download.jabberd.org/jabberd14/${P}.tar.gz
-	ldap? ( http://www.jabberstudio.org/files/xdb_ldap/xdb_ldap-1.0.tar.gz )"
+SRC_URI="http://download.jabberd.org/jabberd14/${P}.tar.gz"
+#	ldap? ( http://www.jabberstudio.org/files/xdb_ldap/xdb_ldap-1.0.tar.gz )"
 
 SLOT="0"
 LICENSE="GPL-2"
 ## Arches removed due to dependencie on jabber-base
 KEYWORDS="~amd64 ~x86"
-IUSE="ssl ldap ipv6 msn oscar yahoo icq mysql postgres"
+IUSE="ssl ipv6 msn oscar yahoo icq mysql postgres" #ldap
+
 
 DEPEND="!net-im/jabber-server
 	net-im/jabber-base
 	>=dev-libs/pth-1.4.0
 	dev-libs/expat
-	ssl? ( >=dev-libs/openssl-0.9.6i )
-	ldap? ( =net-nds/openldap-2* )"
+	ssl? ( >=dev-libs/openssl-0.9.6i )"
+#	ldap? ( =net-nds/openldap-2* )"
 
 PDEPEND="msn? ( net-im/pymsn-t )
 		 oscar? ( net-im/aim-transport )
@@ -30,12 +31,8 @@ PDEPEND="msn? ( net-im/pymsn-t )
 
 pkg_setup() {
 
-	if use ldap ; then
-		ewarn "This is a test release and LDAP was been disabled"
-		ewarn "USE='-ldap' and try again"
-		die
-	fi
-
+	ewarn "This is a test release and LDAP has been disabled for everyone"
+	
 	if use ipv6 ; then
 		ewarn "You are about to build with ipv6 support, if your system is not using ipv6"
 		ewarn "do control-c now and emerge with \"USE=-ipv6\" or add it to /etc/portage/package.use "
