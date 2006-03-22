@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.58 2006/03/13 15:00:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.59 2006/03/22 22:08:41 hansmi Exp $
+
+  22 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> mgetty-1.1.34.ebuild:
+  Stable on ppc.
 
   13 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> mgetty-1.1.34.ebuild:
   Stable on sparc

@@ -1,24 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b39eba80ed94d8935bd0c173ec5e4b98 ChangeLog 10293
+MD5 4835d33423f7074ff8024e0852670ec7 ChangeLog 10384
+RMD160 a3eeaf5a6ce4f83695a10e883f867c4b5ceffb16 ChangeLog 10384
+SHA256 f51272753d8146631749bf56b0b6c7ca99cfc9948b4321f652440f31261dd913 ChangeLog 10384
 MD5 d455684124113e2349a9c674b55b493e files/digest-rp-pppoe-3.5-r11 125
+RMD160 e50b7833650e0463488c7689a8cf332f18c1419e files/digest-rp-pppoe-3.5-r11 125
+SHA256 8c2d8f898ee24206b9418136db86831bdbcae405c698d4769d9332d1ecd46b99 files/digest-rp-pppoe-3.5-r11 125
 MD5 25bde10ecb7d85440305687fcb0be656 files/digest-rp-pppoe-3.7 125
+RMD160 9f79459037b4eba6d4c552ebd9ffd9532a25d1d2 files/digest-rp-pppoe-3.7 125
+SHA256 3c9e0678d68da329bc3da2859a23e755bde09fd7826c69b1788cf4b55e04893a files/digest-rp-pppoe-3.7 125
 MD5 3ec97394e888b357e2c6020b3ab0155c files/rp-pppoe-3.5-dsa-557.patch 5581
+RMD160 282029c6428d276419bf7088ae5ef9562625549f files/rp-pppoe-3.5-dsa-557.patch 5581
+SHA256 13c0324b84d17a41409f0d530cec85f0ae6ed2f72fba9fc2ca732babb4484d8a files/rp-pppoe-3.5-dsa-557.patch 5581
 MD5 4e9fa8d65d286e5e37e953e7c822c70e files/rp-pppoe-3.5-gentoo-netscripts.patch 5180
+RMD160 5dd98dddb75a3464633f1335b1be8691dca26443 files/rp-pppoe-3.5-gentoo-netscripts.patch 5180
+SHA256 60ef54dbb18d285faa6104f782fea318d2e42d6385352697bf89b74c23942d1b files/rp-pppoe-3.5-gentoo-netscripts.patch 5180
 MD5 d6678e5d124fa519195709326558af27 files/rp-pppoe-3.5-on-demand-with-plugin.patch 1058
+RMD160 dfa230ac0b7d6d50eb92ff1dd820780254219eef files/rp-pppoe-3.5-on-demand-with-plugin.patch 1058
+SHA256 f817e9afa1b571f8b2c87ea2598f8eba5e3a3df040951888134550fe306c5a46 files/rp-pppoe-3.5-on-demand-with-plugin.patch 1058
 MD5 fa756506d5f5af4fbd15dac93d9a1e69 files/rp-pppoe-3.5-username-charset.patch 1991
+RMD160 4fdad76eccedf01ca83b61da0a60661021d2e1b1 files/rp-pppoe-3.5-username-charset.patch 1991
+SHA256 2d4103aa289a3215277afe51f90b73e404808b69dcbf3f65c37781bf7cfff058 files/rp-pppoe-3.5-username-charset.patch 1991
 MD5 1136fc6ab8a39846868abeecc59addfc files/rp-pppoe-3.7-gentoo-netscripts.patch 5218
+RMD160 65f79efbf018d2deb98345041d4c7fdf39df5fba files/rp-pppoe-3.7-gentoo-netscripts.patch 5218
+SHA256 22e1dc000286a3d22c42163c85b49bbf7e9fb154aaf4becabb7b42dd777403c3 files/rp-pppoe-3.7-gentoo-netscripts.patch 5218
 MD5 10c9907b8295cb2bde533dc839be54dd files/rp-pppoe-3.7-on-demand-with-plugin.patch 1062
+RMD160 18f124f6c794e7c93c6b0da13658aaf41df9d5ab files/rp-pppoe-3.7-on-demand-with-plugin.patch 1062
+SHA256 58e0802f67e190a30ffaf2e791a0a2b4dfa68151b105b3c8e852ea80d2973b63 files/rp-pppoe-3.7-on-demand-with-plugin.patch 1062
 MD5 d33f0962a5a8171533812f5701181421 files/rp-pppoe-3.7-plugin-options.patch 554
+RMD160 a8dc4289950889713c93a3999124f78c1a343bc9 files/rp-pppoe-3.7-plugin-options.patch 554
+SHA256 43af25e72723d569a7b9f6684aa1f62816af538d7aec2797bcb36d73add1d37c files/rp-pppoe-3.7-plugin-options.patch 554
 MD5 161308d48042efd0ade491fd5429e4bc files/rp-pppoe-3.7-username-charset.patch 1946
+RMD160 347798d851b13f1e01f12805cb7f996d8c7c7310 files/rp-pppoe-3.7-username-charset.patch 1946
+SHA256 641bffa798cdf97942e8f9794b87ed3c53d67994533670a501c0a8dd14a9b7e1 files/rp-pppoe-3.7-username-charset.patch 1946
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+RMD160 df94c60cc0bb7abe5913b464a33966b142b2fe1e metadata.xml 163
+SHA256 1137a0fd866641cf719b0c2e9e77ca9fa4541a42f2cc851fe4659cf2677acca3 metadata.xml 163
 MD5 d728978d28ed0d7042bac5857e5f62ff rp-pppoe-3.5-r11.ebuild 2404
-MD5 9342aa094575b8fab750e823f40cdfad rp-pppoe-3.7.ebuild 2554
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEHwBeKRy60XGEcJIRAsupAKCF1a1wh6ZNUtapPfrsRVZ1TNBfggCeKQZt
-6P39GNjNiWfcG6Y9IcET23o=
-=4ifQ
------END PGP SIGNATURE-----
+RMD160 778fbfc594e0d96f5e60016161abdd0188a4f9c4 rp-pppoe-3.5-r11.ebuild 2404
+SHA256 6b8a34f44463f4501fd1f7c3ff26516ab012960b100e1982034bfd6e32e6e070 rp-pppoe-3.5-r11.ebuild 2404
+MD5 4e442b7225e1668bea7e5e7ca42b2b78 rp-pppoe-3.7.ebuild 2551
+RMD160 cf4b262c8b19af6cc43ca8d24330a3b3d95164e8 rp-pppoe-3.7.ebuild 2551
+SHA256 1dc7df92fecf90772f9c9500f3e6db693fc442c89cc1ce7a14a8e24d89626acf rp-pppoe-3.7.ebuild 2551
