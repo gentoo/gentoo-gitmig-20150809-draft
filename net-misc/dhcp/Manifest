@@ -22,15 +22,15 @@ SHA256 a8db9eb98397a9c1b3a0de07fc107c39dc4f6a4a331d404fc6fcc4a8dbc7aeae files/dh
 MD5 d0f61288e81ce020573f3f6965af8489 files/dhcp-3.0.2-gmake.patch 1872
 RMD160 d2d41c0a7e002103d68605d2492bfe716bb2889e files/dhcp-3.0.2-gmake.patch 1872
 SHA256 b2bbfc1d1f5b4d03ff3f53b3974ec32731e5f626de8f8d127328591e4c721215 files/dhcp-3.0.2-gmake.patch 1872
-MD5 dbd178c799c96e5b9720f09079cf74f9 files/dhcp-3.0.3-dhclient-hostname.patch 390
-RMD160 426f6e8f1bab18f1c870c50acaed2efe2cb9330e files/dhcp-3.0.3-dhclient-hostname.patch 390
-SHA256 fd7f234ffe55a0a701a490e5632e64c5b0091ad83a7b64178d0da0039d3ed914 files/dhcp-3.0.3-dhclient-hostname.patch 390
+MD5 3be3d51148b295a0ab4ccd474777e776 files/dhcp-3.0.3-dhclient-hostname.patch 437
+RMD160 c87eef3dc303ec71222f524bbf7ed26f26cfaba1 files/dhcp-3.0.3-dhclient-hostname.patch 437
+SHA256 bbad970318815a1c9d92542b71f29ba4b873866cc37ac1560926108355cf92e7 files/dhcp-3.0.3-dhclient-hostname.patch 437
 MD5 ce6d16f53a6f0308c57e12f541450170 files/dhcp-3.0.3-dhclient-metric.patch 6568
 RMD160 15ab7cfb108aabb2c170e9cb796ed310675bf198 files/dhcp-3.0.3-dhclient-metric.patch 6568
 SHA256 1a2887e6f644bb3e9ab5bf35631f0ebb71300fe66405db5454c0a193aa20299b files/dhcp-3.0.3-dhclient-metric.patch 6568
-MD5 ff7ec994964b5a0b8f0c03b86eedbe22 files/dhcp-3.0.3-dhclient-mtu.patch 6471
-RMD160 7ff0e447976f652e765de10ec74012b19cb35961 files/dhcp-3.0.3-dhclient-mtu.patch 6471
-SHA256 44bd303721baa85f582530689b10d6615a467bf5e992cc48bc9c33aa7d962415 files/dhcp-3.0.3-dhclient-mtu.patch 6471
+MD5 962250f2eed048d031df04c93e851fed files/dhcp-3.0.3-dhclient-mtu.patch 6471
+RMD160 271f437a115301258352d64c82bdb4ee2b612c8a files/dhcp-3.0.3-dhclient-mtu.patch 6471
+SHA256 772baa7ed412396d817a283d2150cc96b9a613db94fee5a866508a57d99c379a files/dhcp-3.0.3-dhclient-mtu.patch 6471
 MD5 3eab8a40f0a84d3b2d9d406fa4b687c0 files/dhcp-3.0.3-dhclient-ntp.patch 5868
 RMD160 41522438308fc8b82dc298752192d1c77b4c26aa files/dhcp-3.0.3-dhclient-ntp.patch 5868
 SHA256 751fdfa0b36eab386f4029284d61c0c2b41b3135878738caa02e512999f2ca65 files/dhcp-3.0.3-dhclient-ntp.patch 5868
@@ -85,7 +85,7 @@ SHA256 456ab9c26235fa4c1eda6b53b163e901869d5f64ba442b30db1fe86c57fe56af metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEIY5IEbVyYKaZ/NERAniMAKCD38J7kp8Djjx4JRsV75DQmy00lQCgi7UA
-A8hNXqp3ctuZv+74bJRuzZk=
-=YSD6
+iD8DBQFEIcA+EbVyYKaZ/NERAvENAJ99E1f85vFgaUW+uuR8e2KRn/VTgQCfaKim
+Vckq5NHOEFnG5SrN3VCm3kg=
+=LPII
 -----END PGP SIGNATURE-----

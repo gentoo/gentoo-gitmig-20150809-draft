@@ -1,10 +1,13 @@
---- client/scripts/linux
-+++ client/scripts/linux
-@@ -141,6 +141,7 @@
+--- client/scripts/linux 
++++ client/scripts/linux 
+@@ -141,9 +141,8 @@
     [ x$reason = xREBIND ] || [ x$reason = xREBOOT ]; then
    current_hostname=`hostname`
    if [ x$current_hostname = x ] || \
 +     [ x$current_hostname = "x(none)" ] || \
       [ x$current_hostname = x$old_host_name ]; then
-     if [ x$current_hostname = x ] || \
-        [ x$new_host_name != x$old_host_name ]; then
+-    if [ x$current_hostname = x ] || \
+-       [ x$new_host_name != x$old_host_name ]; then
+       hostname $new_host_name
+     fi
+   fi

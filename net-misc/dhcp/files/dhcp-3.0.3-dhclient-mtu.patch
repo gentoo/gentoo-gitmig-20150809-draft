@@ -70,7 +70,7 @@
  if [ x$IF_METRIC != x ]; then
    metric_arg="metric $IF_METRIC"
  fi
-@@ -162,7 +165,7 @@
+@@ -160,7 +163,7 @@
       [ x$reason = xBOUND ] || [ x$reason = xREBOOT ]; then
  
      ifconfig $interface inet $new_ip_address $new_subnet_arg \
@@ -79,7 +79,7 @@
      # Add a network route to the computed network address.
      if [ $relmajor -lt 2 ] || \
  		( [ $relmajor -eq 2 ] && [ $relminor -eq 0 ] ); then
-@@ -204,7 +207,7 @@
+@@ -202,7 +205,7 @@
      ifconfig $interface:0- inet 0
    fi
    ifconfig $interface inet $new_ip_address $new_subnet_arg \
