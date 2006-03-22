@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7e7edbd742ddede10c575c5c9037ee96 ChangeLog 2657
-RMD160 7786d0f4050519ebd4bcc8016dded0f6a4c403e4 ChangeLog 2657
-SHA256 616c5bf1d039aa105c58ecff310775a48945beb58ea581c01c9705965ba51e9e ChangeLog 2657
+MD5 1e7d2c4df83a34af3bf0cd118de41a7e ChangeLog 2856
+RMD160 db9ac9986455be6c5cbc0ceaf1cdb10116eaf28b ChangeLog 2856
+SHA256 77d1d0941f45021cba55edf179aa4cd20e10e9f8c570a0b3d9fbc9611ef4494d ChangeLog 2856
 MD5 fa54024de1127aafdc2f95251c0c008d files/digest-libfontenc-1.0.1 253
 RMD160 05471a22450f42a40fc0420656c398fdb975cdbe files/digest-libfontenc-1.0.1 253
 SHA256 a4ccefcc1e76c3ccd82911010f3adacdccb06336658e7f4bf3a8c4e984106699 files/digest-libfontenc-1.0.1 253
-MD5 2aa3dc477e8420cffe750123fe7e97b1 libfontenc-1.0.1.ebuild 547
-RMD160 c2941589ef88dedb90e727e96b6c3421b878e987 libfontenc-1.0.1.ebuild 547
-SHA256 20427f814c740423ab55a49c1580e5a6f8ed6eeba8de3b39bc150344bf52a870 libfontenc-1.0.1.ebuild 547
+MD5 249cc66d250ed7c239d4aeb6057b09a9 libfontenc-1.0.1.ebuild 554
+RMD160 cf0d424ea65c133abb4d9ce42eaf2e99a360c32d libfontenc-1.0.1.ebuild 554
+SHA256 eb18077b7a6a92f2bd1f36bf88919c8b6c5f777fe01106103c970ec4fc98e195 libfontenc-1.0.1.ebuild 554
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEDiDJrHF4yAQTrARAjh2AKC7xVUhg7aiTVQth3fUgjS766g39gCgmvv6
-0Atm9x9oEq7JGrLN/xMgUE4=
-=o9VF
------END PGP SIGNATURE-----
