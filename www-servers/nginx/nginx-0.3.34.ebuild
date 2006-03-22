@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.3.33.ebuild,v 1.1 2006/03/16 10:39:29 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.3.34.ebuild,v 1.1 2006/03/22 19:40:26 voxus Exp $
 
 inherit eutils
 
@@ -62,7 +62,7 @@ src_install() {
 	doinitd ${FILESDIR}/nginx
 
 	rm conf/nginx.conf
-	cp ${FILESDIR}/nginx.conf-r1 ${T}/nginx.conf
+	cp ${FILESDIR}/nginx.conf-r2 ${T}/nginx.conf
 
 	dodir /etc/${PN}
 	insinto /etc/${PN}
