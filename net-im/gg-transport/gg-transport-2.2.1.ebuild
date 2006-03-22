@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/gg-transport-2.2.1.ebuild,v 1.2 2005/11/18 16:09:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gg-transport/gg-transport-2.2.1.ebuild,v 1.3 2006/03/22 17:20:54 hanno Exp $
 
-DESCRIPTION="GG transport for Jabber"
+DESCRIPTION="Gadu-Gadu transport for Jabber"
 HOMEPAGE="http://jabberstudio.org/projects/jabber-gg-transport/project/view.php"
 SRC_URI="http://files.jabberstudio.org/jabber-gg-transport/jabber-gg-transport-${PV}.tar.gz"
 
