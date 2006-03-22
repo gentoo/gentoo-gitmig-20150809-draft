@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/amyedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/ChangeLog,v 1.9 2006/03/20 17:01:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/ChangeLog,v 1.10 2006/03/22 01:37:59 deltacow Exp $
+
+  22 Mar 2006; Scott Stoddard <deltacow@gentoo.org> amyedit-1.0.ebuild:
+  Added ~amd64 wrt bug #126261.
 
   20 Mar 2006; <nixnut@gentoo.org> amyedit-1.0.ebuild:
   Added ~ppc. Bug #126261
