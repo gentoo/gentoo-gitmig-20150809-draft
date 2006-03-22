@@ -1,6 +1,10 @@
 # ChangeLog for games-action/bzflag
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.21 2006/03/19 23:49:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.22 2006/03/22 14:41:01 wolf31o2 Exp $
+
+  22 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  bzflag-2.0.4.20050930-r1.ebuild:
+  Marking stable on x86 for bug #125647.
 
   19 Mar 2006; <Tupone@gentoo.org> -bzflag-2.0.0.20050117.ebuild,
   -bzflag-2.0.2.20050318.ebuild, -bzflag-2.0.4.20050930.ebuild:
