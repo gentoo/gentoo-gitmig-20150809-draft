@@ -1,22 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c44307d19c5c80bc828048ac1d343c8e Apache-Test-1.03.ebuild 765
 MD5 7181e228e50923f791bd6725c87b932f Apache-Test-1.15.ebuild 774
-MD5 9b9c5fda603f85f91ea8d93f60e86b8a Apache-Test-1.26.ebuild 820
+RMD160 eec4f1f3a9e22a107efd59e03523b0ea48b6c6a9 Apache-Test-1.15.ebuild 774
+SHA256 3e3e63879325cd517ef9bafcc842ea322653e5ede0f6d075333fb849ae9fc17a Apache-Test-1.15.ebuild 774
 MD5 2ea36cf8ffce7cd6e9e6a1b218c22eb5 Apache-Test-1.22.ebuild 784
-MD5 540190a44925f0e63770ec18ea1275c8 metadata.xml 482
-MD5 f1406bb4d91c727fc7f0f1b42b790750 ChangeLog 4254
+RMD160 cdc88dec6b5e073b597633c69006133e10d7dc82 Apache-Test-1.22.ebuild 784
+SHA256 32f7f93539b0f3c32b40d2c4fb6cf80ec0c9c171b4f0a1798eb05858ada91226 Apache-Test-1.22.ebuild 784
 MD5 72ff06339c78b181739f607ec799c670 Apache-Test-1.23.ebuild 781
-MD5 d0fa04c04f6faa72c31e9616b6e8770c files/digest-Apache-Test-1.26 68
-MD5 2283477345e9f82053c0430dec28b16e files/digest-Apache-Test-1.22 68
+RMD160 3c79c2a967cb7d5cdd1ed37be8d07241b53dde73 Apache-Test-1.23.ebuild 781
+SHA256 ad61f4a4d6d6dc989a380b00467cd2e14ac498346ef9b326fc2320a4ab033a76 Apache-Test-1.23.ebuild 781
+MD5 9b9c5fda603f85f91ea8d93f60e86b8a Apache-Test-1.26.ebuild 820
+RMD160 cf7a8410e01869b75024484a541a6d486c3c2444 Apache-Test-1.26.ebuild 820
+SHA256 768a1cb5d1d71150504c324fd7058420e62db1e6875ea39e5d3b066d33149c8b Apache-Test-1.26.ebuild 820
+MD5 fd44b1d212c6b9d2e889dcf0d30ac8fd Apache-Test-1.28.ebuild 820
+RMD160 551436201330311217ff384ab5f754004612b973 Apache-Test-1.28.ebuild 820
+SHA256 3750350c2530ac2f1c5799cdca8ade11111a232af36df30292edc648eab432e4 Apache-Test-1.28.ebuild 820
+MD5 d59f3928f5a411da339340b3877daefc ChangeLog 4418
+RMD160 7e296268a53830da1e83e6431875cc86448fdb72 ChangeLog 4418
+SHA256 fb25b7069b7716f16f5e92df7fd88c3ac2f2381fa7ebbda1a3b801fd1a8ba3fb ChangeLog 4418
 MD5 f63ddebaf06de3d9772484b7636bc8a7 files/digest-Apache-Test-1.15 68
-MD5 6a84fba1190e8a3bbf4bcf1f5d143121 files/digest-Apache-Test-1.03 67
+RMD160 6a1d89174d424eddeaa81881ed47f5d73dcf80b8 files/digest-Apache-Test-1.15 68
+SHA256 5a887b042bd715e482fde241f59a79ef4193f22c99c284247fb8bd97232c8b2c files/digest-Apache-Test-1.15 68
+MD5 2283477345e9f82053c0430dec28b16e files/digest-Apache-Test-1.22 68
+RMD160 8886f53203aaedd638fa01bde421b2ba6fd9c7a4 files/digest-Apache-Test-1.22 68
+SHA256 222e88048b65dadd123f55c470b8873e91b3c07feafb3283dcbb5efd40ec3c21 files/digest-Apache-Test-1.22 68
 MD5 6ea272a71ab8ac04028b394d8c026fee files/digest-Apache-Test-1.23 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDkWFjFdQwWVoAgN4RAjeVAJ9G1XBVPq+noWvdEPmVPHbmG+RIvQCg0ze7
-sejMGaXSPB/YKRZPz2eY+YY=
-=UP82
------END PGP SIGNATURE-----
+RMD160 e3326445276d6b1b0a9f12c037d3ba0aa4493347 files/digest-Apache-Test-1.23 68
+SHA256 eff5116ac4bf46e5a48474d855e2a10d91859398519f41c11431a4be95bb7ac0 files/digest-Apache-Test-1.23 68
+MD5 d0fa04c04f6faa72c31e9616b6e8770c files/digest-Apache-Test-1.26 68
+RMD160 65578b69090e1ff84be2f0094e9054cc8b75404e files/digest-Apache-Test-1.26 68
+SHA256 fdd59eec0616a547b5c00b0f785c5d847e0049a26cbd2b9a80b18a76be995fb3 files/digest-Apache-Test-1.26 68
+MD5 1441abea7845dc95433f7cdcb7cf97a4 files/digest-Apache-Test-1.28 68
+RMD160 55d1fdb1f9d4357b2d99195b11c8c0e6256cd92e files/digest-Apache-Test-1.28 68
+SHA256 15cdc5f9abf7953c75154678c3713a5b77621c362bbee8a17df13a47934b1d38 files/digest-Apache-Test-1.28 68
+MD5 540190a44925f0e63770ec18ea1275c8 metadata.xml 482
+RMD160 584234837a3612b93277762a3f200f7358b14424 metadata.xml 482
+SHA256 10b5724dc3914abc05cf57352955cdcb64a884c41f6c33db56291033d131bef3 metadata.xml 482
