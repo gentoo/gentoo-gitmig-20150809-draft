@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5120 2006/03/22 18:39:49 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5121 2006/03/22 22:23:07 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -28,6 +28,7 @@ games-arcade/xkobo
 # Tavis Ormandy <taviso@gentoo.org> (21 Mar 2006)
 # masked pending unresolved security issues #125902
 games-roguelike/nethack
+games-util/hearse
 
 # Jeremy Huddleston <eradicator@gentoo.org> (21 Mar 2006)
 # Development version of squirrelmail
