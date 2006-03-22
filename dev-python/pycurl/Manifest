@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6bcef66d132bdabecb909b6a4d61f290 ChangeLog 4140
-RMD160 2ac191bc5c1a1aaacc70d4fbac515925c253f4e2 ChangeLog 4140
-SHA256 8dec680c199769b2a810676dabfaf6d51923d01e57fe7dfe15ef933c0d542080 ChangeLog 4140
-MD5 d88bfd11107d1df30445377db73ca867 files/digest-pycurl-7.13.1 64
-RMD160 d92d141c2d04faaf24947f43e883d9e0d726ecf6 files/digest-pycurl-7.13.1 64
-SHA256 c0bc290152c13f505ced38d4e9d01683e63652240bfcba8d725519ae64d3cf55 files/digest-pycurl-7.13.1 64
+MD5 f3218283a62f0da94b7993a9e0634c84 ChangeLog 4379
+RMD160 5d2b16836dd8ff9ffa89ccc65097a46344786fc2 ChangeLog 4379
+SHA256 9fb1f11a4f0abf0d2e9f106ded2fdfea9ed371213b4ed3287775cfc47c312b8d ChangeLog 4379
+MD5 071b802dac43cffec58204e1d999a1c9 files/digest-pycurl-7.13.1 238
+RMD160 47919e31ae7b42ea1af16f6fae6f13fa7e824582 files/digest-pycurl-7.13.1 238
+SHA256 28dba687b8a380d00737b6ed53cbe8742945567ba5291144e5859412a36f52f2 files/digest-pycurl-7.13.1 238
 MD5 fa269820c9c11f6b2b632cb56f364902 files/digest-pycurl-7.13.2 64
 RMD160 d1c2a64f1ffad8807cdbef9022a0a0b9fb5ec5ea files/digest-pycurl-7.13.2 64
 SHA256 2a3d380a6baae46d0eeb4e2e3b4197dc13b9bc58a8b554352a09095b9b0c072b files/digest-pycurl-7.13.2 64
@@ -25,9 +25,9 @@ SHA256 7238babefb6d4e04e4fd23929c4402a0748e86bc83c8bc4d05ea9b6d96bae1cc files/di
 MD5 ae19944fd653d7c2e0533f23da33e327 metadata.xml 826
 RMD160 41f5a5d9c8ca00c1ec94fabccdc1a64df9a0adcb metadata.xml 826
 SHA256 fdc8c57902acabf11f4b07cd9ac36960db5c41d8f9e94e238cf9e40903a51dad metadata.xml 826
-MD5 cd0919219f2ab75e27ef378fb071a269 pycurl-7.13.1.ebuild 809
-RMD160 bb032b31ad9922b3187bd399d126186e0a713097 pycurl-7.13.1.ebuild 809
-SHA256 1a3dea02189d486bf2856769892592c0a8af17199ecbcbec49e7eca8eecc27f0 pycurl-7.13.1.ebuild 809
+MD5 9664336691a3a3b26cdb03cb4aa9e138 pycurl-7.13.1.ebuild 809
+RMD160 04440d249b56605b0736a626b92fb91875589a44 pycurl-7.13.1.ebuild 809
+SHA256 dedae586b12582d80329fc7f25abcdbe1e4c11be398d73863ceca5d184fb26c7 pycurl-7.13.1.ebuild 809
 MD5 ec703331188617d5a9b252faae390df2 pycurl-7.13.2.ebuild 809
 RMD160 961b643138e2ce79533123a974dcd3ea31d1ae32 pycurl-7.13.2.ebuild 809
 SHA256 d1ce394894507fe37741bf66b1bb1d8b7ab31e0a79a7cad1fd4b2bcfd29cf9b8 pycurl-7.13.2.ebuild 809
@@ -44,9 +44,9 @@ MD5 86404e255f9b300ce0a5ea2ceee92cf1 pycurl-7.15.2.ebuild 812
 RMD160 1923d2f68c5e2a5dd221d07fa23e9be60a487cbc pycurl-7.15.2.ebuild 812
 SHA256 2c453d5e060149aca6f58de362fdd7e9915c63aa48714bdff996045063461505 pycurl-7.15.2.ebuild 812
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDY6b2jLqHNfbg2URAqs6AJ4zjCHaZcKwI3/8pPCHQr9d3tSsPgCfQy+1
-ef6klGPGPdQmynmR0bkNIkA=
-=1rpr
+iD8DBQFEIK+qW78445TWHXcRAh3oAJ4sUcwy8aOHDLWS5Y1aWwSseLVDuACdGPws
+KVOLq6/J2tz4JvrvH/ef3fc=
+=FMFa
 -----END PGP SIGNATURE-----
