@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/cdecl-2.5-r1.ebuild,v 1.8 2006/02/15 08:20:07 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/cdecl-2.5-r1.ebuild,v 1.9 2006/03/22 08:32:45 phosphan Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ SLOT="0"
 DEPEND=">=sys-apps/sed-4
 		dev-util/yacc
 		readline? ( sys-libs/ncurses
-		sys-libs/readline )"
+		sys-libs/readline )
+		!<dev-util/cutils-1.6-r2"
 
 IUSE="readline"
 
