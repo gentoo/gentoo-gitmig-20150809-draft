@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-0.9.13.ebuild,v 1.1 2006/03/15 00:00:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-0.9.13.ebuild,v 1.2 2006/03/22 04:23:42 vapier Exp $
 
 DESCRIPTION="Gentoo Cross-toolchain generator"
 HOMEPAGE="http://www.gentoo.org/"
@@ -11,8 +11,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-RDEPEND="!app-admin/eselect-compiler
-	<sys-devel/gcc-config-2
+RDEPEND="!>=sys-devel/gcc-config-2
 	sys-apps/portage
 	app-shells/bash
 	sys-apps/coreutils"
