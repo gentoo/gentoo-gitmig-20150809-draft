@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/exscalibar-1.0.4.ebuild,v 1.4 2006/02/20 00:15:18 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/exscalibar-1.0.4.ebuild,v 1.5 2006/03/22 16:46:01 hanno Exp $
 
 inherit eutils qt3
 
@@ -11,9 +11,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="sndfile mp3 vorbis fftw jack alsa doc"
+IUSE="mp3 vorbis fftw jack alsa doc"
 DEPEND="$(qt_min_version 3.2)
-	sndfile? ( >=media-libs/libsndfile-1.0.0 )
+	>=media-libs/libsndfile-1.0.0
 	mp3? ( >=media-libs/libmad-0.15 )
 	vorbis? ( >=media-libs/libvorbis-1.0.0 )
 	fftw? ( >=sci-libs/fftw-3.0.0 )
@@ -31,7 +31,7 @@ src_unpack() {
 src_compile () {
 	export PATH="${QTDIR}/bin:${PATH}"
 
-	use sndfile || export DISABLE_SNDFILE=1
+	export DISABLE_SNDFILE=1
 	use mp3     || export DISABLE_MAD=1
 	use vorbis  || export DISABLE_VORBISFILE=1
 	use fftw    || export DISABLE_FFTW3=1
