@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.50 2006/01/18 10:51:05 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.51 2006/03/22 18:45:00 lcars Exp $
+
+*sendmail-8.13.6 (22 Mar 2006)
+
+  22 Mar 2006; Andrea Barisani <lcars@gentoo.org> +sendmail-8.13.6.ebuild:
+  Version bump, security fix related to bug #125623.
 
   18 Jan 2006; Andrea Barisani <lcars@gentoo.org>
   -files/sendmail-8.12.2-makemapman.patch,
