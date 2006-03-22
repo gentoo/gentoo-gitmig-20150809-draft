@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unshield
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unshield/ChangeLog,v 1.9 2006/01/11 06:24:28 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unshield/ChangeLog,v 1.10 2006/03/22 04:30:38 wolf31o2 Exp $
+
+  22 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> unshield-0.2.ebuild:
+  Added ~amd64 to unshield 0.2 as it is the version required to unpack
+  BioWare-packed files for games-rpg/nwn-data which allows me to add support
+  for more CD sets to the ebuild.
 
 *unshield-0.5 (11 Jan 2006)
 

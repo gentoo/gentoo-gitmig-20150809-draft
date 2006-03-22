@@ -1,19 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 04344584e943ab652b6c108d30b0f6ed ChangeLog 1053
+MD5 28558221a150cba824ab12a038f6a95b ChangeLog 1310
+RMD160 c247c1c337128de250c26c9f7574db1f2612a786 ChangeLog 1310
+SHA256 abd9edf7a32f9f819d6bd8c5957a9c53312d225c982c9dba9c9ff7397cb828e9 ChangeLog 1310
 MD5 2931b9ac6f33b6ea4501b2bbf73b6081 files/digest-unshield-0.2 64
+RMD160 c705357945422fff879b9314ef9f858808b93b14 files/digest-unshield-0.2 64
+SHA256 b34a9732c34ec71f1c74b1a46221c56e42fa6b1d498299e89bd99fe5ad4b1d75 files/digest-unshield-0.2 64
 MD5 691824e8b834caba40e95f0bb3d67ee4 files/digest-unshield-0.4 64
+RMD160 1178364f06b807833779fad91c7927a3196ecc5a files/digest-unshield-0.4 64
+SHA256 1854bd0bf478a2044c580eb1c7fdf9f19d22e186d32d3d3727fda82848b8ad17 files/digest-unshield-0.4 64
 MD5 90bee39d3ac08b3cc57d6839d5b55ba2 files/digest-unshield-0.5 64
+RMD160 20ad4bfbe31b5e5964f0adab4705b7f0607d1bdb files/digest-unshield-0.5 64
+SHA256 5ea2b6ba2fd5fcc0dfaf4f7154aa864fe4efac3c4cde422161d18de49458c2b7 files/digest-unshield-0.5 64
 MD5 7cb6ba62d0a279c13813ec18a9e8c7e8 files/unshield-gcc-3.4.patch 410
+RMD160 6cced0f8206194c262e198e923d16ae4dac0edee files/unshield-gcc-3.4.patch 410
+SHA256 a7ba2305068ecc96b11c4c9203f1b277ef507b2cd470f0add702e770230a7329 files/unshield-gcc-3.4.patch 410
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
-MD5 06f45ea87e6e5c9bd9c9131af2ae7a25 unshield-0.2.ebuild 517
+RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
+SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
+MD5 1f340a7ec68deea361df9024335aa032 unshield-0.2.ebuild 524
+RMD160 5300047c4a923ce3318b4d49118e765caaf5b20e unshield-0.2.ebuild 524
+SHA256 83d866ebea72eb63c676238a63f954912de5640b24c6435e6c3760e03dc61b95 unshield-0.2.ebuild 524
 MD5 eaffa575a2bd54aedc34891fbe8ba381 unshield-0.4.ebuild 637
+RMD160 db9206419814c97b7bbf1fb6cbf4781eaa87bfc4 unshield-0.4.ebuild 637
+SHA256 cc1741099821053911b27834390e7e46e8c188d81021bab0946ea188cfff0430 unshield-0.4.ebuild 637
 MD5 9f63af1a50beceb26385a189ff3c55da unshield-0.5.ebuild 554
+RMD160 78a56fcc922bb41d3e94522c8db4ad009f35985f unshield-0.5.ebuild 554
+SHA256 3633f9d07536662bca1e3d210388d5fd6712d727430c7165acb7a80d01f1d0fb unshield-0.5.ebuild 554
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDxRrkFdQwWVoAgN4RApvLAJ9g7q/8fyViljpWH7+6Gqijc5VqTACeOb7p
-WSo8JH0TqdrtEjWY56nP8CQ=
-=IJCA
+iD8DBQFEINKpkT4lNIS36YERAuuOAJ9uNSekP4pTcSMe2JUn9hGMh6+jiACgj6l3
+KNj7f7QZfLkB/9AygvtefPk=
+=K5ha
 -----END PGP SIGNATURE-----
