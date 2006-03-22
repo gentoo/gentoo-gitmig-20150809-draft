@@ -1,6 +1,7 @@
 MD5 840b6d8c51bb887a7dcb19ccd2a97fa9 ChangeLog 822
 MD5 c2f74101a06866a427bbdfbb90ff1067 files/digest-logitech-applet-0.4_pre1 75
 MD5 c2f74101a06866a427bbdfbb90ff1067 files/digest-logitech-applet-0.4_pre1-r1 75
+MD5 f36758aa14f1b909d8fd2c3d5a717f1e files/logitech_applet-mx518.patch 5721
 MD5 709badbcc9a34d9a2b522fe8d373840d logitech-applet-0.4_pre1-r1.ebuild 835
 MD5 ee107c395996d11afbf986a2ab83cfad logitech-applet-0.4_pre1.ebuild 703
 MD5 d11ad4b39fa439e887f9ea957edca937 metadata.xml 339
