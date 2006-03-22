@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d50ae2644cdad08cb9d431a65b69437e ChangeLog 1783
 RMD160 ff05a9de5f0ed8e4adbeb0bdf5eb2ecc4dc8a2ed ChangeLog 1783
 SHA256 8a037769ba6cccafe00a2dd0812a140532fe1b8c94a76c12fb2bcb54c753c329 ChangeLog 1783
-MD5 19c059e7a0f9594fd6b86b22c984310d compositeproto-0.2.2.ebuild 480
-RMD160 d2d9713358d3e5f2fe11942fb0f15e35d8e6d2af compositeproto-0.2.2.ebuild 480
-SHA256 61c4bfa8812366b2a769c58d7d0f6f4782501f0d2f1614c1de8ea9b650eaa4d9 compositeproto-0.2.2.ebuild 480
-MD5 d988bb316ab9744d06b90fcd2f80bc82 files/digest-compositeproto-0.2.2 262
-RMD160 4d6a27036cebcdef820880164a021a90de0e3984 files/digest-compositeproto-0.2.2 262
-SHA256 97ace1aa114e41dcae9272f9238b7e7cd51210a74950a00c175b3305a65faf3a files/digest-compositeproto-0.2.2 262
+MD5 68c16e0b352eb5bb0f3a34ca5641936d compositeproto-0.3.ebuild 479
+RMD160 d5f4349d8cd071fd2f2ae73e106f3f799b5a5170 compositeproto-0.3.ebuild 479
+SHA256 c0ad783d28cc11e9eb0a113415681e236fc8893e6029625d4acbb316a18ac9b0 compositeproto-0.3.ebuild 479
+MD5 dc2dbe1b1e5071875741f83f97a3ebd3 files/digest-compositeproto-0.3 256
+RMD160 bd11eb33a0fdc177b2837aa156bec7ab78ba3fcd files/digest-compositeproto-0.3 256
+SHA256 b782b792dfbc0a4cdd66f551953d62208d4ca5a3aae8c170fafbd34d3a0b2131 files/digest-compositeproto-0.3 256
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEED1/JrHF4yAQTrARAmoMAJ0Qz9Wlh5XEOTQJ4EbntNCMU7hUwgCdHmeI
-bZg3ht5FEl/HYu4uCK7S0Mw=
-=Rjq0
------END PGP SIGNATURE-----
