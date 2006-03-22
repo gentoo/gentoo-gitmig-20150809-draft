@@ -1,18 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 044765e8e5db6eb80bd040db5b243324 crack-attack-1.1.14-r1.ebuild 1090
-MD5 76fa9a8595083b588e3286eff81f0e54 crack-attack-1.1.13-r1.ebuild 1059
 MD5 4e60221e80a4367621e605f26484fe44 ChangeLog 3946
-MD5 2ef172abd49ee1d3bd0118a0e9b70bb7 files/digest-crack-attack-1.1.14-r1 72
-MD5 e1896e7a256b159004daf7af3add7f55 files/digest-crack-attack-1.1.13-r1 72
+RMD160 b1e940e545c0196556b7f9cb26f701fc573f32fd ChangeLog 3946
+SHA256 5b2011f8924f7bbb8ba3ede9a5c19df547617f4f9c277e6484af5ef333dc5a5f ChangeLog 3946
+MD5 044765e8e5db6eb80bd040db5b243324 crack-attack-1.1.14-r1.ebuild 1090
+RMD160 dac738654e0be9a96968dcb17c9048da4763fbbf crack-attack-1.1.14-r1.ebuild 1090
+SHA256 a7631d8d874a47da282acf6cf1230304f76dfdd6af7be383478aec8bde41e5da crack-attack-1.1.14-r1.ebuild 1090
 MD5 94b199213accdd30331358dd3c894a57 files/crack-attack-1.1.14-glut.patch 381
-MD5 d6baf270eeb75bd3d6ee272f6c1103a6 files/crack-attack-1.1.13-binpaths.patch 2669
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzGHYgIKl8Uu19MoRAgIzAJ0UJU50SDSDKoXIfvDzd6WVawn4EACcDYd5
-/monSesw8UI/o2YfE//YB9k=
-=bXrv
------END PGP SIGNATURE-----
+RMD160 493031a5dafbc3897b65264360a70c0c55feefc9 files/crack-attack-1.1.14-glut.patch 381
+SHA256 fd17b93daa0aef9c53203d550a11675f0501578f33fa9f9777d2971ac6b2c89c files/crack-attack-1.1.14-glut.patch 381
+MD5 2ef172abd49ee1d3bd0118a0e9b70bb7 files/digest-crack-attack-1.1.14-r1 72
+RMD160 ace92bc3d973cde05df7f00537145286d684ca1d files/digest-crack-attack-1.1.14-r1 72
+SHA256 dd63d68200f8c1ea270c4cd4fa5d68b1f0216450345e747d82df2f0147409a26 files/digest-crack-attack-1.1.14-r1 72
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
