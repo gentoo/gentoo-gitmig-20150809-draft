@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.8.ebuild,v 1.1 2006/03/20 07:29:34 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.8.ebuild,v 1.2 2006/03/22 02:08:20 mr_bones_ Exp $
 
 inherit eutils distutils
 
@@ -21,7 +21,7 @@ DOCS="announce.txt changelog.txt"
 
 src_install() {
 	distutils_src_install
-	
+
 	if use doc ; then
 		insinto /usr/share/doc/${PF}/tutorial
 		doins tutorial/*
