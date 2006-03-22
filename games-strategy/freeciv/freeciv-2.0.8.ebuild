@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.8.ebuild,v 1.6 2006/03/12 15:53:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.8.ebuild,v 1.7 2006/03/22 22:35:48 tupone Exp $
 
 inherit games
 
@@ -94,6 +94,17 @@ src_unpack() {
 		configure \
 		|| die "sed failed"
 
+	# change .desktop icon to the freeciv icon rather than the gnome globe
+	sed -i \
+		-e 's:^\(Icon=\).*:\1freeciv.png:' \
+		bootstrap/freeciv.desktop.in \
+		|| die "sed failed"
+
+	# change .desktop category so it is not gnome specific
+	sed -i \
+		-e 's:^\(Categories=GNOME;Application;Game;Strategy;\):Categories=Application;Game;StrategyGame;:' \
+		bootstrap/freeciv.desktop.in \
+		|| die "sed failed"
 	# install the .desktop in /usr/share/applications
 	sed -i \
 		-e 's:^\(desktopfiledir = \).*:\1/usr/share/applications:' \
@@ -167,6 +178,8 @@ src_install() {
 
 	dodoc ChangeLog NEWS \
 		doc/{BUGS,CodingStyle,HACKING,HOWTOPLAY,PEOPLE,README*,TODO}
+
+	doicon "${FILESDIR}/${PN}.png"
 
 	prepgamesdirs
 }
