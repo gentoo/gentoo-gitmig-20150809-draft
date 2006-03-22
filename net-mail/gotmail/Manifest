@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 89a41d91edc7c351f54caf8349bfe16d ChangeLog 5976
+MD5 71bb21e9d540e3c6e64a0bdc7a8d7ef9 ChangeLog 6072
+RMD160 83a42c8cdbfd00643877e602118adf8d0d78572f ChangeLog 6072
+SHA256 b837bd8eb4c36253ad355798c5c4ae0ebeb069ff2c2295235d47cc060fe1c363 ChangeLog 6072
 MD5 ff4bb8711dc1b675b9de386442c28c07 files/digest-gotmail-0.8.4 64
+RMD160 b9f49a772e1d080b225350957928e8b2b5eb3762 files/digest-gotmail-0.8.4 64
+SHA256 04707ecfac4c47970e5c5521ff5b8b497adec74c166a2380d4e340a6c554e6f3 files/digest-gotmail-0.8.4 64
 MD5 e267860b4afa4c4e4e67e90e6aaf39ac files/digest-gotmail-0.8.7.1 66
+RMD160 3060d96c744631361d928d36e482c7564aa8be42 files/digest-gotmail-0.8.7.1 66
+SHA256 90fd3c9d6914acd7e91d59c2f244e3e8faf4f1d60727a6b5ac7f591736353c46 files/digest-gotmail-0.8.7.1 66
 MD5 1c13d0cfe0a7fc30feac740c3bf2c6ed files/digest-gotmail-0.8.8 238
+RMD160 ed8f08738dfc9ea3912c1084d22eccb664dc366e files/digest-gotmail-0.8.8 238
+SHA256 55dfa6cbb84d49258688016b3969d45525bbcfe6c6aeef8e6a661f052f370628 files/digest-gotmail-0.8.8 238
 MD5 20334abbe8b9b9bcc3febafed8ea12e7 gotmail-0.8.4.ebuild 672
-MD5 b76370f11ad8ff894d04c1e4261d252b gotmail-0.8.7.1.ebuild 699
+RMD160 423108ea4c3a30347067cb5d747b1c4b9a8a49fa gotmail-0.8.4.ebuild 672
+SHA256 b6b498b3f4b2014cf09a5bce9be4f397da2456d80a73aabe5e23952005b7eee1 gotmail-0.8.4.ebuild 672
+MD5 eb9e8f2c897752ef7e323c65ee0cd396 gotmail-0.8.7.1.ebuild 696
+RMD160 66ed2ed5275cfbe32af3dfc1f965d33ff10da0e5 gotmail-0.8.7.1.ebuild 696
+SHA256 7507f9d9692b65f85401760b6caccaded5da8eca3139c6afb003a876ab4fbc71 gotmail-0.8.7.1.ebuild 696
 MD5 e0b325c120dd68dfe86e7a23c8427975 gotmail-0.8.8.ebuild 697
+RMD160 048f04dd47d04a6f83ee779dbd199c242b8761b0 gotmail-0.8.8.ebuild 697
+SHA256 db419a0f56b1c74b0823408a628eef08d08d5578c1cdf6c67d7e96503b9d6651 gotmail-0.8.8.ebuild 697
 MD5 61e0d05b1306513aede2838fa81b05b5 metadata.xml 225
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEHvMiKRy60XGEcJIRAnISAKCoWkErXkJH8eziGe42M01MkOKs2gCdFyIa
-WDHbM06M86lauee5OrnbNSg=
-=B6Bd
------END PGP SIGNATURE-----
+RMD160 ac3483d68e92cb16beee7988f212b78ba94bb6af metadata.xml 225
+SHA256 b745d82a37a83bc996e64dc2579616898317e0192e05047ec68b93a59ffdaa95 metadata.xml 225
