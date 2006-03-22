@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/cutils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.12 2005/07/29 23:39:02 dragonheart Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.13 2006/03/22 08:28:17 phosphan Exp $
+
+*cutils-1.6-r2 (22 Mar 2006)
+
+  22 Mar 2006; Patrick Kursawe <phosphan@gentoo.org>
+  +files/cutils-1.6-r1-gentoo.diff, cutils-1.6-r1.ebuild,
+  +cutils-1.6-r2.ebuild:
+  Moving cdecl to cutils-cdecl because it conflicts with the more feature-rich
+  cdecl from the dev-util/cdecl package. See bug #127076.
+  Adding blocking dependency to the old version.
 
   29 Jul 2005; Daniel Black <dragonheart@gentoo.org> -cutils-1.6.ebuild,
   cutils-1.6-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/cutils-1.6-r1.ebuild,v 1.10 2006/03/22 08:28:17 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/cutils-1.6-r2.ebuild,v 1.1 2006/03/22 08:28:17 phosphan Exp $
 
 inherit eutils
 
@@ -10,16 +10,22 @@ SRC_URI="http://www.sigala.it/sandro/files/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 
-DEPEND="virtual/libc"
-RDEPEND="${DEPEND}
-	!dev-util/cdecl"
+RDEPEND="virtual/libc"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack  ${A}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-r1-gentoo.diff
+	cd ${S}/src/cdecl
+	mv cdecl.1 cutils-cdecl.1
+	for file in ${S}/doc/*; do
+		sed -e 's/cdecl/cutils-cdecl/g' -i ${file}
+	done
+	sed -e 's/Xr cdecl/Xr cutils-cdecl/' -i ${S}/src/cundecl/cundecl.1
 }
 
 src_compile() {
@@ -36,4 +42,8 @@ src_install () {
 	make DESTDIR=${D} install || die
 
 	dodoc COPYRIGHT CREDITS HISTORY INSTALL NEWS README
+}
+
+pkg_postinst () {
+	einfo "cdecl was installed as cutils-cdecl because of a naming conflict with dev-util/cdecl"
 }

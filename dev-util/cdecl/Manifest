@@ -1,5 +1,5 @@
-MD5 56d2261cc542b1d2153781f31b427630 ChangeLog 883
-MD5 f5d8290629790c1802c59109ae383978 cdecl-2.5-r1.ebuild 945
+MD5 9861cce464ab170b0b477ec8db6c46b5 ChangeLog 1039
+MD5 03f71454e86fa9b3600a244ddc4a3efc cdecl-2.5-r1.ebuild 972
 MD5 4cfcbfaea827c2ce9f6c5ebd297a64df files/cdecl-2.5.patch 736
 MD5 78064d7ba6746c4ca40c6078594dd9fb files/digest-cdecl-2.5-r1 60
 MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
