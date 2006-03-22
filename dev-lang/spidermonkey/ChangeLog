@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.21 2006/03/19 11:20:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.22 2006/03/22 21:18:59 hansmi Exp $
+
+  22 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
+  spidermonkey-1.5-r1.ebuild:
+  Stable on ppc.
 
   19 Mar 2006; Markus Rothe <corsair@gentoo.org> spidermonkey-1.5-r1.ebuild:
   Stable on ppc64
