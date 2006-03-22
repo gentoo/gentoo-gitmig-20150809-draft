@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.24 2006/01/27 20:08:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.25 2006/03/22 13:20:02 caleb Exp $
+
+*activesupport-1.2.5.4008 (22 Mar 2006)
+
+  22 Mar 2006; Caleb Tennis <caleb@gentoo.org>
+  -files/clean_logger-format_message-fix.patch,
+  -activesupport-1.1.1-r2.ebuild, +activesupport-1.2.5.4008.ebuild:
+  New 1.1 release candidate, slotted to install alongside existing rails
 
   27 Jan 2006; Michael Hanselmann <hansmi@gentoo.org>
   activesupport-1.2.5.ebuild:
