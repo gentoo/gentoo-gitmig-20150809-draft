@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.48 2006/03/21 00:31:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.49 2006/03/22 20:19:24 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -93,6 +93,7 @@ fi
 
 # If we're a font package, but not the font.alias one
 if [[ "${PN/#font-}" != "${PN}" ]] \
+	&& [[ "${CATEGORY}" = "media-fonts" ]] \
 	&& [[ "${PN}" != "font-alias" ]] \
 	&& [[ "${PN}" != "font-util" ]]; then
 	# Activate font code in the rest of the eclass
