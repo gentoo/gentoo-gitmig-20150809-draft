@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b4bc0590ab2518871fc88f697e96d42c ChangeLog 2008
+MD5 de9be3c715d4b3b3e5958a22ba577093 ChangeLog 2119
 MD5 bb3da86e7044eec3a044df0e7b9a0eec files/digest-pbzip2-0.8 61
 MD5 270f8c018aad33a0eb5b6af09a01d21a files/digest-pbzip2-0.9.5 63
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 MD5 101f6a64cb0582b601970ffe5ff64ffc pbzip2-0.8.ebuild 712
-MD5 c296125df19d07bd3826c43ae3b6986b pbzip2-0.9.5.ebuild 1103
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEIDrZViELBEf1JB0RAsjoAJ4gsCB0CdVurn57zTACob/zZK0/+ACeI+lv
-pblniZU4FPVNJmbrX38DxBw=
-=GbTa
------END PGP SIGNATURE-----
+MD5 96b34f9647789c68d3348de169c7aba2 pbzip2-0.9.5.ebuild 1105
