@@ -1,37 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dac8e7505742729136d7711b54491958 ChangeLog 2314
-RMD160 a75b2f3d5b74218ec28c7dd61c891e6f47a578a4 ChangeLog 2314
-SHA256 964d1ea8789e3f1d8d1c13a919537f708d09c006e8aab58d3884cecb1716f299 ChangeLog 2314
+MD5 374006ffa14e51b0e9b40212615f44f6 ChangeLog 2424
 MD5 6d6f9189f4ecffc98c1b539a0b647cc3 files/digest-xdoclet-1.2.1 139
-RMD160 4ec4299f6d3d75918995fb1d7df8484538ac918c files/digest-xdoclet-1.2.1 139
-SHA256 5564fe4cab7c8251dc4dc10e33f10513673cb3de66bef31afc441f34d1990aa1 files/digest-xdoclet-1.2.1 139
 MD5 5a7e75c3d62a58edfa3c2416acfbb69a files/digest-xdoclet-1.2.2 67
-RMD160 0ef306515ed9c75a4c644b74c1025c9b020d602b files/digest-xdoclet-1.2.2 67
-SHA256 4a996fabf7aac16eaca36264fc31e64a9c9080c866b2f5d63ede714d101da628 files/digest-xdoclet-1.2.2 67
 MD5 36b04e593588b126ef0e905e4ead4fcf files/xdoclet-1.2.2-buildfile.patch 2518
-RMD160 f63fa52f5728c2701b38ced31b883405693e08d4 files/xdoclet-1.2.2-buildfile.patch 2518
-SHA256 87e2c77a325d50683bd341b75c89518123178e9960385bab540c8cee3facd51d files/xdoclet-1.2.2-buildfile.patch 2518
 MD5 0c3cfa2caf87830c10fb14bc83840c98 files/xdoclet-1.2.2-interface.patch 10893
-RMD160 e7255548b64e4dc2248bd8d80b55a416c572244a files/xdoclet-1.2.2-interface.patch 10893
-SHA256 29bed1be7a293586da850e4e8800c16834bb8960560b544c5adb24dc854bb95e files/xdoclet-1.2.2-interface.patch 10893
 MD5 d75eedba572b2088b2ac96c09ee5661b files/xdoclet-modules_common_ent.patch 369
-RMD160 8a78eacda6c6837617f885db0d65a63724113ebc files/xdoclet-modules_common_ent.patch 369
-SHA256 0283536e3d8b386b798b3c409169b5e60ecb04f884bb17a3508b8dd2fc572c02 files/xdoclet-modules_common_ent.patch 369
 MD5 2f0b8cbc0e0adf36b678725712a3e3b7 metadata.xml 511
-RMD160 9949aa2b27a30f5789fca5df4b8890e15370f119 metadata.xml 511
-SHA256 19e82088da5d5f42c2ae94fd65a787a66004fda31cc5333908d3a520111e3614 metadata.xml 511
-MD5 23eedf023b42c74cebfac4887dbc1231 xdoclet-1.2.1.ebuild 1476
-RMD160 48d1c3e0be292614be6a54e3c9d65bae01f74c48 xdoclet-1.2.1.ebuild 1476
-SHA256 77532f2e59728724c616fab57d660b465fa8a323159985b8cccb3bc384528edb xdoclet-1.2.1.ebuild 1476
-MD5 3a6408b38cb2505d891836018e343b57 xdoclet-1.2.2.ebuild 1705
-RMD160 50a36099c5f21120e25ba959c2930a00c12e628e xdoclet-1.2.2.ebuild 1705
-SHA256 177c0193a0aa3d1504068e01753ccb7f67b525d29a6fb1de959bdc52dc5190a4 xdoclet-1.2.2.ebuild 1705
+MD5 810f0b50cbc704f43b5b0f9b4da71270 xdoclet-1.2.1.ebuild 1477
+MD5 9f19245098137ba73c57672c156fb23e xdoclet-1.2.2.ebuild 1709
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFD6o/qndWRXhKOboURAnCGAJ4uBGXzAqHUMbAGVY0YWPuwHIeiywCdGszf
-9gFveMG7ivtRHGuegdUtADk=
-=g318
+iD8DBQFEIO+N/NoSW7FuNV8RAk8oAKCXG9NIjFPO1NC73OBGuCqdf3PAHgCeKJj0
+Ie42SuZXzdZrYo89tUavLz0=
+=ZfCV
 -----END PGP SIGNATURE-----

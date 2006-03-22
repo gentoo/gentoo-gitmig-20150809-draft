@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xdoclet
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.16 2006/02/09 00:35:49 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.17 2006/03/22 06:58:58 wormo Exp $
+
+  21 Mar 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  xdoclet-1.2.2.ebuild:
+  mark ~ppc (bug #122191)
 
   09 Feb 2006; Joshua Nichols <nichoj@gentoo.org> xdoclet-1.2.2.ebuild:
   Stable on amd64.

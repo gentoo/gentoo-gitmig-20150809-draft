@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.2.ebuild,v 1.7 2006/02/09 00:35:49 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.2.ebuild,v 1.8 2006/03/22 06:58:58 wormo Exp $
 
 inherit java-pkg eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://xdoclet.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV}.tgz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="jikes source"
 
 RDEPEND=">=virtual/jre-1.3
