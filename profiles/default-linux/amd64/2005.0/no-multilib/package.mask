@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.27 2006/03/16 20:38:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.28 2006/03/22 03:07:44 wolf31o2 Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -45,8 +45,8 @@ app-emulation/winex
 app-emulation/winex-cvs
 app-emulation/winex-transgaming
 app-text/acroread
-dev-java/blackdown-jdk
-dev-java/blackdown-jre
+<dev-java/blackdown-jdk-1.4.2
+<dev-java/blackdown-jre-1.4.2
 games-action/descent3
 games-action/lugaru-demo
 games-action/mutantstorm-demo
@@ -62,9 +62,13 @@ games-emulation/snes9express
 games-emulation/snes9x
 games-emulation/zsnes
 games-fps/americas-army
+games-fps/doom3-cdoom
+games-fps/doom3-chextrek
 games-fps/doom3-data
 games-fps/doom3-demo
 games-fps/doom3-ducttape
+games-fps/doom3-hellcampaign
+games-fps/doom3-inhell
 games-fps/doom3-lms
 games-fps/doom3-opencoop
 games-fps/doom3
@@ -116,6 +120,7 @@ games-strategy/majesty-demo
 mail-client/ciphire-mail
 mail-client/mozilla-thunderbird-bin
 media-fonts/acroread-asianfonts
+media-gfx/grender
 media-gfx/maya
 media-libs/win32codecs
 media-sound/peercast
