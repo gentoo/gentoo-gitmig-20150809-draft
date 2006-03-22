@@ -1,6 +1,13 @@
 # ChangeLog for dev-scheme/scheme48
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/ChangeLog,v 1.1 2005/09/06 21:46:17 araujo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/ChangeLog,v 1.2 2006/03/22 06:04:55 mkennedy Exp $
+
+*scheme48-1.3-r1 (22 Mar 2006)
+
+  22 Mar 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +scheme48-1.3-r1.ebuild:
+  Rewrite lib paths in src_unpack(); Resolves Bug #127105; Use multilib
+  instead of hardcoding /usr/lib.
 
 *scheme48-1.3 (06 Sep 2005)
 
