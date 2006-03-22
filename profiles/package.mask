@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5119 2006/03/22 00:20:35 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5120 2006/03/22 18:39:49 lcars Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1188,10 +1188,6 @@ games-rpg/nwn-data
 # Causes problems with several packages. See bug # 99243 and bug # 102301.
 =dev-util/scons-0.96.90
 
-# Andrea Barisani <lcars@gentoo.org> (17 Sep 2005)
-# Waiting for mailer-config stuff
->=mail-mta/sendmail-8.13.4-r1
-
 # Bryan Østergaard <kloeri@gentoo.org> (12 Sep 2005)
 # Masked for security reasons, bug 103524
 dev-python/py2play
@@ -1723,6 +1719,7 @@ net-mail/mailer-config
 =mail-mta/postfix-2.2.8-r1
 =mail-mta/postfix-2.2.9-r1
 =mail-mta/sendmail-8.13.4-r1
+=mail-mta/sendmail-8.13.5
 =mail-mta/exim-4.50-r999
 
 # Rob Cakebread <pythonhead@gentoo.org> (22 Apr 2005)
