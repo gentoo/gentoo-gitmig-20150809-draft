@@ -1,28 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b6b0c141b8db600b1e13a87e47cfd6d0 ChangeLog 5503
-RMD160 7d9a85c5d4fac94c1631ec14fbccc87bf05dd26c ChangeLog 5503
-SHA256 a68ef545fc9b52d9a5819ecaca6a0db255d47b2f7b6b9d97f9aa43591c347ccb ChangeLog 5503
-MD5 3911af1e672b2181ff29d4b9a81e7621 files/digest-python-selinux-2.16-r1 259
-RMD160 27bfd641c815c61b57e504f34fcd0314469f8aa8 files/digest-python-selinux-2.16-r1 259
-SHA256 74ac731266bc8f44ef94fc8ed7fcd1cb21f26cce5ad40b715778e5fd6a5a18d9 files/digest-python-selinux-2.16-r1 259
+MD5 da7e968f421449cdf3a54f416a35e11d ChangeLog 5658
+RMD160 186fb8d07eb6af9928cd0a130a9fe883be31b81f ChangeLog 5658
+SHA256 fb57bb6aa5f817fd0b2d0d3858d36e744571bfbf13558c3a9478478e11e76c6a ChangeLog 5658
 MD5 d8da3d2d5802ab48d134b80e36b2f00e files/digest-python-selinux-2.16-r2 265
 RMD160 31c143a6df37b7db465fbf43721623eb9691de29 files/digest-python-selinux-2.16-r2 265
 SHA256 198f9b1a05104cf73519587073e3ef8ef4f69dffb799cbb395b6cdfcba246c45 files/digest-python-selinux-2.16-r2 265
 MD5 c998c579cfc08c6860f78304a67cfce9 metadata.xml 525
 RMD160 adb5c1cbbecac4a5076cfe1622344dbf29967aa5 metadata.xml 525
 SHA256 2ddd57267552f0bc13a0db709e6cf03d89c20d5320ab3cbdb5ffa7abb6c9d2be metadata.xml 525
-MD5 1fd84c8c2015d530c696a9c30a41c973 python-selinux-2.16-r1.ebuild 672
-RMD160 d98c6eb4c230178764d8f0d58035473c42358330 python-selinux-2.16-r1.ebuild 672
-SHA256 39230c028a4dfa52015b0e3ef218658015df2d6fb1b44e87e1875e43d89cfdc9 python-selinux-2.16-r1.ebuild 672
-MD5 e403cbab310b72c98f381d0bdecf0d67 python-selinux-2.16-r2.ebuild 688
-RMD160 3463b35efe4548c7cc96ce3ab37be4cfe2870202 python-selinux-2.16-r2.ebuild 688
-SHA256 23525e0dd22e3bb1309846d3c0a1b77051a676ffbd33cdf8822a5d6dd96822a1 python-selinux-2.16-r2.ebuild 688
+MD5 23dd9ac16f5e4cba3a808e5d77626411 python-selinux-2.16-r2.ebuild 682
+RMD160 b6bf228d814300f369af113f5c7e291cf5380911 python-selinux-2.16-r2.ebuild 682
+SHA256 801f91c606059b8c403f726f04aec0f59427abf4ac850a38b70bef421d442817 python-selinux-2.16-r2.ebuild 682
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEAlUaJ+ChZlpDtAoRAjNRAJ4h7j1BTUZDQ6ccSOqDsjQE3A56hgCgmVaD
-TaSimcebzsHdn8/sB4nYtlM=
-=wxyU
+iD8DBQFEIdSYJ+ChZlpDtAoRAvouAJ96glnbUB+BQI2Ybvn64VKytxjZRACfTlue
+E36i8QTej5Xe9Miqy0uWqe4=
+=zi+b
 -----END PGP SIGNATURE-----
