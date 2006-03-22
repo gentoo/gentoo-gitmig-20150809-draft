@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r1.ebuild,v 1.5 2006/03/13 03:19:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r1.ebuild,v 1.6 2006/03/22 21:42:07 hansmi Exp $
 
 inherit eutils games flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/vba/VisualBoyAdvance-src-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="mmx gtk"
 
 RDEPEND="media-libs/libpng
