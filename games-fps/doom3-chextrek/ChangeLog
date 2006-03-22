@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/doom3-chextrek
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/ChangeLog,v 1.1 2006/03/22 03:06:16 wolf31o2 Exp $
+
+*doom3-chextrek-0.5_beta (22 Mar 2006)
+
+  22 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +doom3-chextrek-0.5_beta.ebuild:
+  Initial import. Ebuild by Paul Bredbury <brebs@sent.com>. Closing bug
+  #121719.
+
