@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lltag
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/ChangeLog,v 1.3 2006/03/13 07:07:55 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/ChangeLog,v 1.4 2006/03/22 13:11:49 nattfodd Exp $
+
+  22 Mar 2006; Alexandre Buisse <nattfodd@gentoo.org> lltag-0.10.ebuild:
+  Updated description and removed COPYING in dodoc
 
   13 Mar 2006; Joshua Jackson <tsunam@gentoo.org> lltag-0.10.ebuild:
   Stable on x86; bug #125566

@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/lltag-0.10.ebuild,v 1.2 2006/03/13 07:07:55 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/lltag-0.10.ebuild,v 1.3 2006/03/22 13:11:50 nattfodd Exp $
 
-DESCRIPTION="Automatic command-line mp3/ogg file tagger"
+DESCRIPTION="Automatic command-line mp3/ogg/flac file tagger and renamer"
 HOMEPAGE="http://home.gna.org/lltag"
 SRC_URI="http://download.gna.org/lltag/${P}.tar.bz2"
 
@@ -25,5 +25,5 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}/" PREFIX=/usr SYSCONFDIR=/etc MANDIR=/usr/share/man \
 	install || die "Failed to install"
-	dodoc COPYING Changes
+	dodoc Changes
 }
