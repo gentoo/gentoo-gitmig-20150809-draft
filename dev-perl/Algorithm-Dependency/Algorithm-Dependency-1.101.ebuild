@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Dependency/Algorithm-Dependency-1.101.ebuild,v 1.11 2006/02/13 10:36:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Dependency/Algorithm-Dependency-1.101.ebuild,v 1.12 2006/03/22 20:44:48 chriswhite Exp $
 
 inherit perl-module
 
 DESCRIPTION="Toolkit for implementing dependency systems"
-HOMEPAGE="http://search.cpan.org/search?module=${PN}"
+HOMEPAGE="http://search.cpan.org/search?module=Algorithm-Dependency"
 SRC_URI="mirror://cpan/authors/id/A/AD/ADAMK/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"
