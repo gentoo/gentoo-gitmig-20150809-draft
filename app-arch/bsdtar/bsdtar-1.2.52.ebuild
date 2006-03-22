@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.2.51-r1.ebuild,v 1.1 2006/03/21 20:05:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.2.52.ebuild,v 1.1 2006/03/22 18:56:23 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -29,8 +29,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch "${FILESDIR}/${MY_P}-linking.patch"
-	epatch "${FILESDIR}/${MY_P}-acl.patch"
+	epatch "${FILESDIR}/libarchive-1.2.51-linking.patch"
+	epatch "${FILESDIR}/libarchive-1.2.51-acl.patch"
 
 	eautoreconf
 	epunt_cxx
