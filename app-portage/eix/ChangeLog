@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.74 2006/03/22 11:10:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.75 2006/03/22 14:12:07 genstef Exp $
+
+  22 Mar 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/eix-bug127184.patch, eix-0.5.5.ebuild:
+  Add patch for bug 127184
 
 *eix-0.5.5 (22 Mar 2006)
 

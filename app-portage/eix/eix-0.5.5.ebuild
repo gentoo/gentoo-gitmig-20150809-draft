@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.5.ebuild,v 1.1 2006/03/22 11:10:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.5.ebuild,v 1.2 2006/03/22 14:12:08 genstef Exp $
+
+inherit eutils
 
 DESCRIPTION="Small utility for searching ebuilds with indexing for fast results"
 HOMEPAGE="http://dev.croup.de/proj/eix"
@@ -12,6 +14,12 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="sys-apps/portage"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/eix-bug127184.patch
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
