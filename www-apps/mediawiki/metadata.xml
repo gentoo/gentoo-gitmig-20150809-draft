@@ -5,4 +5,10 @@
 	<maintainer>
 		<email>trapni@gentoo.org</email>
 	</maintainer>
+	<maintainer>
+		<email>tchiwam@gentoo.org</email>
+		<name>Philippe Trottier</name>
+		<description>ppc arch</description>
+    </maintainer>
 </pkgmetadata>
+
