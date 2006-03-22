@@ -1,6 +1,6 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.92 2006/03/18 12:49:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.93 2006/03/22 05:57:43 cardoe Exp $
 
   18 Mar 2006; Matthias Schwarzott <zzam@gentoo.org>
   mythtv-0.18.1-r1.ebuild, mythtv-0.19_p9163.ebuild,
@@ -10,6 +10,10 @@
   16 Mar 2006; Herbie Hopkins <herbs@gentoo.org>
   +files/mythtv-0.19-libdir.patch, mythtv-0.19_p9163-r1.ebuild:
   Add patch to solve multilib-strict issues, bug 126144 (also in upstream svn)
+
+  14 Mar 2006; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-0.19_p9163-r1.ebuild:
+  Marking stable on ppc and x86
 
   10 Mar 2006; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.19_p9163-r1.ebuild:
