@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r4.ebuild,v 1.5 2006/03/15 22:24:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r4.ebuild,v 1.6 2006/03/22 21:52:01 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -46,10 +46,8 @@ pkg_setup() {
 	games_pkg_setup
 	if use cdinstall
 	then
-		if [ ! built_with_use games-fps/quake3-data cdinstall ]
-		then
-			die "You must install quake3-data with USE=cdinstall to get the required data."
-		fi
+		built_with_use games-fps/quake3-data cdinstall \
+			|| die "You must install quake3-data with USE=cdinstall to get the required data."
 	fi
 }
 
@@ -63,6 +61,9 @@ src_install() {
 		for pk3 in baseq3/*.pk3 missionpack/*.pk3 ; do
 			dosym ${GAMES_DATADIR}/quake3/${pk3} ${dir}/${pk3}
 		done
+		dosym ${GAMES_DATADIR}/quake3/pak0.pk3 ${dir}/baseq3/pak0.pk3
+		dosym ${GAMES_DATADIR}/quake3/missionpack/pak0.pk3 \
+			${dir}/missionpack/pak0.pk3
 	else
 		insinto ${dir}/baseq3
 		doins baseq3/*.pk3 || die "ins baseq3"
@@ -75,13 +76,16 @@ src_install() {
 
 	exeinto ${dir}
 	insinto ${dir}
-	doexe bin/Linux/x86/{quake3.x86,q3ded} || die "doexe"
+	doexe bin/Linux/x86/quake3.x86 || die "doexe"
 	doins quake3.xpm README* Q3A_EULA.txt
 	games_make_wrapper quake3-bin ./quake3.x86 "${dir}" "${dir}"
-	games_make_wrapper q3ded-bin ./q3ded "${dir}" "${dir}"
-
-	newinitd "${FILESDIR}"/q3ded.rc q3ded
-	newconfd "${FILESDIR}"/q3ded.conf.d q3ded
+	if use dedicated
+	then
+		doexe bin/Linux/x86/q3ded || die "doexe q3ded"
+		games_make_wrapper q3ded-bin ./q3ded "${dir}" "${dir}"
+		newinitd "${FILESDIR}"/q3ded.rc q3ded
+		newconfd "${FILESDIR}"/q3ded.conf.d q3ded
+	fi
 	newicon quake3.xpm quake3-bin.xpm
 
 	prepgamesdirs
@@ -93,8 +97,8 @@ pkg_postinst() {
 	echo
 	ewarn "There are two possible security bugs in this package, both causing a"
 	ewarn "denial of service. One affects the game when running a server, the"
-	ewarn "other when running as a client. For more information, please see bug"
-	ewarn "#82149."
+	ewarn "other when running as a client."
+	ewarn "For more information, please see bug #82149."
 	if ! use cdinstall ; then
 		echo
 		einfo "You need to copy pak0.pk3 from your Quake3 CD into ${dir}/baseq3."
