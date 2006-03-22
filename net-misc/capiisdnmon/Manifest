@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e3b5ab26fcce5782b78ac635461065ca capiisdnmon-0.42-r1.ebuild 933
-MD5 3a75b96d72db83706b5f2779ab702de6 ChangeLog 807
-MD5 c8cf0d31d953401f2f89982d770a0c98 metadata.xml 253
+MD5 f4c27b93ef519a23f28c6c344293f74e ChangeLog 936
+RMD160 833623e8fad006c1cb2c4b165802ce6d7dc23e39 ChangeLog 936
+SHA256 7812f2fb21395de2cd1d1be64d3736f5b0539d0be60e7d174bc983d632358bfa ChangeLog 936
+MD5 d5db31268cbd6f1a06967148396424da capiisdnmon-0.42-r1.ebuild 1021
+RMD160 e1f54f1df7cbb1d3d0661973f8abb914ddb068a9 capiisdnmon-0.42-r1.ebuild 1021
+SHA256 b8b76959150752f4f7301371de170989a57c5384287ed3e5993b47dacf7c0522 capiisdnmon-0.42-r1.ebuild 1021
 MD5 b8b732a1363522e6bc85adc6cda09066 files/capiisdnmon-0.42-capiv3.patch 776
+RMD160 a01f1ce1c87edc389523db2e37d37421359431e3 files/capiisdnmon-0.42-capiv3.patch 776
+SHA256 84e4c2917faa0ebf3a96677b8bc7df710b8c56a578e2f0780f4c9a041e4fbe51 files/capiisdnmon-0.42-capiv3.patch 776
 MD5 324b3abc4eb33f3854006ea47554c115 files/digest-capiisdnmon-0.42-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDH9BrNSP4Vda7IdsRAig+AJ45fgpai4a3ncS1WCfcx4jSrTZoYQCcDQeb
-X3C9sfMN9NV5+enh+/qE/ck=
-=D3Rg
------END PGP SIGNATURE-----
+RMD160 44f302e647ab96160f47737932cc970b0e87554f files/digest-capiisdnmon-0.42-r1 67
+SHA256 612720f388724ca2c019fa1867235f34d0b08f75cea9ad0032c5fd28b221d6d2 files/digest-capiisdnmon-0.42-r1 67
+MD5 c8cf0d31d953401f2f89982d770a0c98 metadata.xml 253
+RMD160 a6b19263fabad564c2fa913f1f592d95601822ed metadata.xml 253
+SHA256 19cc8d3626f1d92c634ab9e8133fe86891d5a708115223139bf14ca71c6ce026 metadata.xml 253
