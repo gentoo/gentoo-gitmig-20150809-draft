@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7391dc4d862456ff5085d0f20964a78e ChangeLog 3836
 RMD160 74c8b222b00cff6e56d5562c58613e899aaadf7e ChangeLog 3836
 SHA256 7fda5b95da36d791f34a755b3e7c2db5a2f05f058a1af94647c9fe2e90c4e89a ChangeLog 3836
@@ -13,16 +10,9 @@ SHA256 8e45028302905bbaac9162413455f1c7ccd116a0e1739b405a3943760dbf44b3 files/di
 MD5 ebba42112e29a2df31ce9c9d8d05c750 kdeaddons-kfile-plugins-3.4.1.ebuild 527
 RMD160 8e1a349b2e927d7dc9642fdec4829c5bf36a625e kdeaddons-kfile-plugins-3.4.1.ebuild 527
 SHA256 d27849d625784e89ed6bb4860264e6b77118d82c257be6d928c710c692142a76 kdeaddons-kfile-plugins-3.4.1.ebuild 527
-MD5 24874bd95b1e98f5160594976c6d650a kdeaddons-kfile-plugins-3.5.0.ebuild 619
-RMD160 517269fadb7e2ac1b31f1de4e54b56d18326ac14 kdeaddons-kfile-plugins-3.5.0.ebuild 619
-SHA256 87c4a6a7479ad4c5c219154db1422bc99c843e3a7407f8f2e15da0f45d695d84 kdeaddons-kfile-plugins-3.5.0.ebuild 619
+MD5 68c3f8c707b509de993e22c320082b77 kdeaddons-kfile-plugins-3.5.0.ebuild 618
+RMD160 85849da39d1c4a235323f04b240ee739246d5ccd kdeaddons-kfile-plugins-3.5.0.ebuild 618
+SHA256 990b1cd79d2846e818a8e52c7990c615aedb9158e378e1cc8ded88653ccb8a47 kdeaddons-kfile-plugins-3.5.0.ebuild 618
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8xE+AiZjviIA2XgRAoOvAJ9MFQpOsb9LgDZUsEDy2eAs35Ln6gCg5c/I
-tK0gnGutOHKksx7aF+PLiw4=
-=GHK2
------END PGP SIGNATURE-----
