@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.9.ebuild,v 1.2 2006/03/21 19:44:56 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.9.ebuild,v 1.3 2006/03/22 01:37:49 metalgod Exp $
 
 inherit eutils gnome2 mono
 
@@ -20,7 +20,9 @@ RDEPEND=">=dev-lang/mono-1.1.13
 	>=dev-dotnet/gnomevfs-sharp-2.8.0
 	>=dev-dotnet/gconf-sharp-2.8.0
 	>=media-libs/gstreamer-0.10.0
+	>=media-libs/gst-plugins-base-0.10.0
 	>=media-libs/gst-plugins-good-0.10.0
+	>=media-libs/gst-plugins-ugly-0.10.0
 	>=media-plugins/gst-plugins-alsa-0.10.0
 	>=media-plugins/gst-plugins-gnomevfs-0.10.0
 	>=media-plugins/gst-plugins-gconf-0.10.0
