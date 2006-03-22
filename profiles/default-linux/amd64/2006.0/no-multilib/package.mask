@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.11 2006/03/21 20:12:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.12 2006/03/22 03:06:47 wolf31o2 Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -62,9 +62,13 @@ games-emulation/snes9express
 games-emulation/snes9x
 games-emulation/zsnes
 games-fps/americas-army
+games-fps/doom3-cdoom
+games-fps/doom3-chextrek
 games-fps/doom3-data
 games-fps/doom3-demo
 games-fps/doom3-ducttape
+games-fps/doom3-hellcampaign
+games-fps/doom3-inhell
 games-fps/doom3-lms
 games-fps/doom3-opencoop
 games-fps/doom3
