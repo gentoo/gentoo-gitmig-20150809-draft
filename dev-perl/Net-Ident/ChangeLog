@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Ident
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.6 2006/03/18 17:11:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.7 2006/03/22 20:16:29 flameeyes Exp $
+
+  22 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> Net-Ident-1.20.ebuild:
+  Add to ~amd64.
 
   18 Mar 2006; Markus Rothe <corsair@gentoo.org> Net-Ident-1.20.ebuild:
   Added ~ppc64; bug #126673
