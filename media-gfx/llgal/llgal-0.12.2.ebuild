@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.12.2.ebuild,v 1.1 2006/03/08 13:53:53 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.12.2.ebuild,v 1.2 2006/03/22 13:17:50 nattfodd Exp $
 
-DESCRIPTION="Online gallery generator"
+DESCRIPTION="Command-line online gallery generator"
 HOMEPAGE="http://home.gna.org/llgal"
 SRC_URI="http://download.gna.org/llgal/${P}.tar.bz2"
 
