@@ -1,5 +1,5 @@
-MD5 a7f0a3f9c8763cf1e2a759e902507bbd ChangeLog 3074
+MD5 2c5aac526b13677345b6b9c973766857 ChangeLog 3197
 MD5 ebc2b845ee1e201a404b4eceb168952a files/digest-velocity-1.4-r3 65
 MD5 1b739fb0994afdb5b18dc46f157211f7 files/velocity-1.4-versioned_jar.patch 2237
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 16c87d98905ca68933c7810b6b723c27 velocity-1.4-r3.ebuild 1966
+MD5 c910036cb82b6f19b0566b42fc777f82 velocity-1.4-r3.ebuild 1965
