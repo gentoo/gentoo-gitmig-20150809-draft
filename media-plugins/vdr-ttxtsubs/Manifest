@@ -1,22 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bb95f362a03f36c0c7b277fc4504d6f4 ChangeLog 599
-RMD160 9cb5df2bee0d218516bc2fd98c8d5644516243d8 ChangeLog 599
-SHA256 bd662e42abd029878fb27e15907c695ed9849baa63ffd92a932b4104dcb1d2e6 ChangeLog 599
+MD5 74f052807448f219b8aa472a038a8a8f ChangeLog 760
+RMD160 d3d947430db9bcac07a87c08e0b3097185e1ed97 ChangeLog 760
+SHA256 ecad97cf0cf1bcce03d618c03d9ee7a6a8b080c8fbd204aa59cb4398d634e7dc ChangeLog 760
 MD5 299f2a0f6ab8cb3b4be5dc6976435bc8 files/digest-vdr-ttxtsubs-0.0.5 542
 RMD160 8afbe1c2f0880864120b62fd66884a670712e05f files/digest-vdr-ttxtsubs-0.0.5 542
 SHA256 b901704a6d1d4d5ed015147ffe855a0f1659a611f48955ac0bfe0359ae92fd81 files/digest-vdr-ttxtsubs-0.0.5 542
+MD5 020eba71f8f1375c21bc9cd65e309dc0 files/digest-vdr-ttxtsubs-0.0.5p 551
+RMD160 dfbc406db1b4a7713ee496f952650be2a8f5a73d files/digest-vdr-ttxtsubs-0.0.5p 551
+SHA256 642673e247830829a62b5712918eb46dad9954660f75495446dafe7426cc04ca files/digest-vdr-ttxtsubs-0.0.5p 551
 MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
 RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
 SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
 MD5 fd37399fbcb38abb33b02c563cb3b5fe vdr-ttxtsubs-0.0.5.ebuild 1056
 RMD160 dce6cd2817f7d745790b4835cf4e1e86fbdc01cc vdr-ttxtsubs-0.0.5.ebuild 1056
 SHA256 a88dfda17a7214b07bea649235425b190914d76a74b90533096ed60b7f4295c2 vdr-ttxtsubs-0.0.5.ebuild 1056
+MD5 41da8184d71419b49a0d8f338e62dff5 vdr-ttxtsubs-0.0.5p.ebuild 1070
+RMD160 0c381e6e9140aa53e15095376c89f5fb6cb76804 vdr-ttxtsubs-0.0.5p.ebuild 1070
+SHA256 834526c1f5d5469cf00f41f857e375be3a7efa42cff97f3c7f8ca408d5802f60 vdr-ttxtsubs-0.0.5p.ebuild 1070
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEHssjZfSl1Kp5KmoRAl4WAKCAHG7TtbohjqqqZHWVV9EHXl6lBACfY9Bk
-3pyjzhK8niUs3xKXlKT94rk=
-=uRn4
+iD8DBQFEISEOZfSl1Kp5KmoRAv+CAJ0Q+x7QhzmWW+puD6yNVqbj8/15lACg2AiT
+UttUmY9busLHY0hNZFQ/gl8=
+=IhyW
 -----END PGP SIGNATURE-----
