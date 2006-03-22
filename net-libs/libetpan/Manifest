@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1dfbaff661b56225de82639d3224e10f ChangeLog 2694
+MD5 ca5217c2b6edcb0bdd31f7e7443523b2 ChangeLog 2786
+RMD160 798e23097cfc45044b06f024e6227bf5409ba458 ChangeLog 2786
+SHA256 617a7e9b220f77dcee5011cd5331c432f72759a974285565770d38af0aff687d ChangeLog 2786
 MD5 a981f8bcdc65aea1c67d4f038fb8cdff files/digest-libetpan-0.42 65
+RMD160 0f63bb3de2a43c8bc1f95f288086fc63c7ccbf9f files/digest-libetpan-0.42 65
+SHA256 84c1f896af26fbbcea76f97df4ec7ecfdfff5ff3d329f377175cc3df81ee2f74 files/digest-libetpan-0.42 65
 MD5 edf5c5f8a2981e728a6766fd17c52375 files/digest-libetpan-0.43 244
-MD5 cd5266117ab019431c8149d1295d27a3 libetpan-0.42.ebuild 1139
+RMD160 dd47f254721a553ce63864b8aeed7ccc02e64ba9 files/digest-libetpan-0.43 244
+SHA256 cd0c5ec10d211b790f46dcb1463d4ac7ff03ba343de507a0a45344c36a33cb5f files/digest-libetpan-0.43 244
+MD5 00efba5619527ed2bc82add1da22adf2 libetpan-0.42.ebuild 1136
+RMD160 b37260482aa70ca91543e65221a7d00110349096 libetpan-0.42.ebuild 1136
+SHA256 9eee820827ad73fc2578c1cf0cb79b46282b276db8916669fc3e9149a12bb2f8 libetpan-0.42.ebuild 1136
 MD5 5ee6ae870754cc9121ff61ad98168970 libetpan-0.43.ebuild 1211
+RMD160 dacbf98e58b4e746c3e0625d060fbf79345b5e95 libetpan-0.43.ebuild 1211
+SHA256 f8fd9aae15264ff7e2227410e342e4b06d6d9e4cd6882c9eb35c6fd6af969a7a libetpan-0.43.ebuild 1211
 MD5 509fe3ad1d5f4dfbeab7ff814984a262 metadata.xml 612
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEHupCKRy60XGEcJIRAltxAKCcKNA6L8+Xy9wPM6cqE+t4viLTJACfe7ZU
-03cs1Fu1KorPo2aZMONTDZ4=
-=fxTt
------END PGP SIGNATURE-----
+RMD160 8f6d53edf733661ebab8f1648d2fd4791e132ab9 metadata.xml 612
+SHA256 77cc13e9465f67ca7f9df424a0ef7dabb57deef39585eacc8bf1f66132f52044 metadata.xml 612
