@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/version
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/ChangeLog,v 1.6 2006/01/30 17:27:32 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/ChangeLog,v 1.7 2006/03/22 23:11:58 mcummings Exp $
+
+  22 Mar 2006; Michael Cummings <mcummings@gentoo.org> -version-0.50.ebuild,
+  -version-0.52.ebuild, version-0.53.ebuild:
+  Marking stable sparc, x86, cleaning out old copies
 
   30 Jan 2006; Aaron Kulbe <superlag@gentoo.org> version-0.53.ebuild:
   Marked ~amd64 for bug #116301.
