@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 42e26918615b527b7b8c0f44095a1921 ChangeLog 1098
-MD5 adfb52559de4b938e1939818e3b038a0 anaglyph-stereo-quake-130100-r1.ebuild 1463
+MD5 94521a8c765a80067ee9749e2275ff12 ChangeLog 1214
+RMD160 342ae9bf1a9d3094c91482d5caead7af6dcff445 ChangeLog 1214
+SHA256 0125e6df2e4052d7f52d76a10b48a4584f194ef4dae992fd711c38ceebc04023 ChangeLog 1214
+MD5 15a334029c580a7e1b4f18a2f189e149 anaglyph-stereo-quake-130100-r1.ebuild 1690
+RMD160 424d793ee5c448396edc57cce7d3b40ac7427a05 anaglyph-stereo-quake-130100-r1.ebuild 1690
+SHA256 e1213bfc0e75a720ef423f1f54bc00214fe865085e458acdf62bbfde2d3ab2cf anaglyph-stereo-quake-130100-r1.ebuild 1690
 MD5 046439ba03755b96972e0835d58386dc files/anaglyph-stereo-quake-130100-amd64.patch 262
+RMD160 1144bd2c00f2a0ca634deacb2fdf831f7e2c7b59 files/anaglyph-stereo-quake-130100-amd64.patch 262
+SHA256 ad7c7db4f14c6dccc91197b09776dca181257133893e8860fb99ee32ba4c7264 files/anaglyph-stereo-quake-130100-amd64.patch 262
 MD5 285ecebade8c014a499f23ffe68da975 files/digest-anaglyph-stereo-quake-130100-r1 155
+RMD160 7b6aa147d1c6c4b7c5f2ffbbf52c27d29802715d files/digest-anaglyph-stereo-quake-130100-r1 155
+SHA256 efbccf1e5ae7f226ec8dece4139015debfc03f3b45fb573cf464af100938d453 files/digest-anaglyph-stereo-quake-130100-r1 155
 MD5 2cdc759b378cdf4dea66f3d85e1e0263 files/fix-sys_printf.patch 271
+RMD160 6a1249fa4b4b089bb1fbdd510615b5f38c474442 files/fix-sys_printf.patch 271
+SHA256 0dea690fe54d900470e858e6ce06c84b0a637a0b74459007394011513b291faf files/fix-sys_printf.patch 271
 MD5 41c0380996274c19f292758da6dc66cd files/gentoo-paths.patch 1005
+RMD160 5d1daff1378dfe132746eb0a91176032b0a155da files/gentoo-paths.patch 1005
+SHA256 8eef2da29ec92f33bfab0973f68de14c8b23d7e1783da9409129a406f862cc08 files/gentoo-paths.patch 1005
 MD5 c1ebbdc10cf08c7d223e07c0f8cb288b files/makefile-cflags.patch 721
+RMD160 17acd244c44eeaf5e8e9e61cb2fe50ab8c5dc539 files/makefile-cflags.patch 721
+SHA256 34a0c94573a8c603d72056e9c391c16e7f1ee8c37e89bb197d89452235b3c5b3 files/makefile-cflags.patch 721
 MD5 7262313d61aa23feac532c98f818ddf5 files/makefile-onlyglx.patch 464
+RMD160 497cad7a1c0d8907ea5b20fe0846f5068f8bf86d files/makefile-onlyglx.patch 464
+SHA256 031e7d49b14e04f128365d1e6c6177033860ffc09333eacf07fd7345be533649 files/makefile-onlyglx.patch 464
 MD5 a4c6edf40c5ddec35cc9cc9b5e408482 files/makefile-path-fixes.patch 928
+RMD160 5f02be68c078016e1add888b05126fedc28ca127 files/makefile-path-fixes.patch 928
+SHA256 c42f9c28af9805fc948e75a785727d597742177e4c0c1f7fa2982ea08aed9d26 files/makefile-path-fixes.patch 928
 MD5 4609964e62cdec31ee47cebf59f8fde4 files/stupid-dosformat.patch 749
+RMD160 7ef74540cf51e635a9e9794fde359a333f7ce8a5 files/stupid-dosformat.patch 749
+SHA256 4e0f5b0efd19cf34509b60cdb59157d92bce0733235269da758d6575196808b6 files/stupid-dosformat.patch 749
 MD5 6424c6f1d79eef29759728085572f308 metadata.xml 1253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDbTOdgIKl8Uu19MoRAokaAJ4ntMp7jwfM/zzPNPxZ4lRe8+i7/wCfYJf6
-HBQ73rrIRhNHKWSUcUVcaB0=
-=+DTQ
------END PGP SIGNATURE-----
+RMD160 f82de1adf0df425ca34881500eb83f06c3b68417 metadata.xml 1253
+SHA256 8cfa33a5bf75cb68fabeddff7e0ac88a7091f24991bcbfb5cf5738c493e2f0ef metadata.xml 1253

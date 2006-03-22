@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/anaglyph-stereo-quake/anaglyph-stereo-quake-130100-r1.ebuild,v 1.11 2005/11/05 22:33:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/anaglyph-stereo-quake/anaglyph-stereo-quake-130100-r1.ebuild,v 1.12 2006/03/22 18:03:01 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -14,10 +14,21 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="virtual/x11
-	virtual/opengl
+RDEPEND="virtual/opengl
+	|| ( (
+			x11-libs/libXxf86dga
+			x11-libs/libXext
+			x11-libs/libX11
+			x11-libs/libXxf86vm )
+		virtual/x11 )
 	media-libs/libsdl"
 DEPEND="${RDEPEND}
+	|| ( (
+			x11-proto/xf86dgaproto
+			x11-proto/xextproto
+			x11-proto/xf86vidmodeproto
+			x11-proto/xproto )
+		virtual/x11 )
 	app-arch/unzip"
 
 S=${WORKDIR}/WinQuake

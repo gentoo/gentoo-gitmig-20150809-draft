@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a789fd7ad5edd0dc7117df3a013017f6 vendetta-online-bin-1.ebuild 1214
-MD5 5e144c556889a27fda162cf8be68caa1 ChangeLog 548
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 48d90185bdd0e1d7c990544e42a2bda5 ChangeLog 656
+RMD160 393c841485e4d6dbe0bfb06eb6a5d9df85aacc04 ChangeLog 656
+SHA256 7fcfc88ce4c04742abbd86b7535d198b260119728babce8c85ba324a4ea1fb67 ChangeLog 656
 MD5 b3144657c0fb9cb7a584260cd6538df6 files/digest-vendetta-online-bin-1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHgR52G5bA0cA/ScRAmS9AJ0fbjspMoL2hGA0NlRCVcIgvFe+RgCcDFLp
-32K7yhzEVyq4JJuTJ3+sHl0=
-=GAH6
------END PGP SIGNATURE-----
+RMD160 67c6bcd896b4d1074afbe74d7f7b0176bab1e833 files/digest-vendetta-online-bin-1 75
+SHA256 5b61a3c035e9173b7b053ba6941eba16585d2be5c5ea13fcdcdcf22380e61605 files/digest-vendetta-online-bin-1 75
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 88d5f6368a20e13f10668c3190b23bf7 vendetta-online-bin-1.ebuild 1205
+RMD160 88ca3957b7a13b56cdb37f51c11d0514cea53efc vendetta-online-bin-1.ebuild 1205
+SHA256 655e2207ace5fe4ed2f4fa3dab3c10505a7f8da220aa0e149b5bab3bfda20427 vendetta-online-bin-1.ebuild 1205
