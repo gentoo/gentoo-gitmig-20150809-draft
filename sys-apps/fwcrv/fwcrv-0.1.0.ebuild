@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwcrv/fwcrv-0.1.0.ebuild,v 1.2 2005/09/26 04:34:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwcrv/fwcrv-0.1.0.ebuild,v 1.3 2006/03/22 11:22:19 lu_zero Exp $
 
 inherit eutils
 
@@ -9,9 +9,15 @@ HOMEPAGE="http://www.hugovil.com/en/fwcrv/"
 SRC_URI="http://www.hugovil.com/repository/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND="sys-libs/libraw1394"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-endian.patch
+}
 
 src_compile() {
 	econf || die "econf failed"
