@@ -1,6 +1,6 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.28 2006/03/18 17:04:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.29 2006/03/22 12:46:18 george Exp $
 
   18 Mar 2006; Markus Rothe <corsair@gentoo.org> pari-2.1.7-r1.ebuild:
   Added ~ppc64; bug #126528
@@ -32,7 +32,7 @@
 
 *pari-2.1.7 (09 Nov 2005)
 
-  09 Nov 2005; <gerr@gentoo.org> +pari-2.1.7.ebuild:
+  09 Nov 2005; <george@gentoo.org> +pari-2.1.7.ebuild:
   new version (#110772), the patch to sources seems no longer necessary, 
   as the corresponding upstream bug said "it's in cvs" for previous version (and it tests fine).
 
