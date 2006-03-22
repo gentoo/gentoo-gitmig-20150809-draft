@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r2.ebuild,v 1.2 2006/03/22 03:25:05 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r2.ebuild,v 1.3 2006/03/22 17:13:26 mr_bones_ Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ PDEPEND="msn? ( net-im/pymsn-t )
 pkg_setup() {
 
 	ewarn "This is a test release and LDAP has been disabled for everyone"
-	
+
 	if use ipv6 ; then
 		ewarn "You are about to build with ipv6 support, if your system is not using ipv6"
 		ewarn "do control-c now and emerge with \"USE=-ipv6\" or add it to /etc/portage/package.use "
