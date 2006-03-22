@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.23 2006/02/12 21:53:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.24 2006/03/22 03:27:26 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,8 +21,6 @@ src_unpack () {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
-	# Uses gcc as linker needed for hppa, but good idea in general.
-	epatch "${FILESDIR}"/${P}-use-gcc-as-linker.patch
 
 	use selinux && epatch "${FILESDIR}"/${P}-selinux.patch
 

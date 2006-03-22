@@ -1,11 +1,23 @@
  - drop ldconfig junk
+
+http://bugs.gentoo.org/126977
+ - respect user LDFLAGS
+
+http://bugs.gentoo.org/126695
  - add missing headers
  - add missing comma to supp_entry
 
-http://bugs.gentoo.org/126695
-
 --- libpwdb/Makefile
 +++ libpwdb/Makefile
+@@ -50,7 +50,7 @@
+ 
+ 
+ $(LIBDYNAME): $(LIBOBJ)
+-	$(LD) -soname $(LIBSONAME) -x -shared -o $(LIBFILENAME) $(LIBOBJ) -lcrypt -lnsl -lc
++	$(CC) $(LDFLAGS) -shared -Wl,-soname -Wl,$(LIBSONAME) -Wl,-x -o $(LIBFILENAME) $(LIBOBJ)  -lcrypt -lnsl -lc
+ 	@ln -sf $(LIBFILENAME) $@
+ 
+ $(LIBSTATIC): $(LIBOBJ)
 @@ -69,7 +69,7 @@
  	$(INSTALL) -m 644 radius.h $(INCLUDED)/radius.h
  	$(INSTALL) -m 644 _pwdb_macros.h $(INCLUDED)/_pwdb_macros.h
