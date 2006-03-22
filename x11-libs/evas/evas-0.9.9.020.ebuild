@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-0.9.9.020.ebuild,v 1.1 2005/11/22 05:53:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-0.9.9.020.ebuild,v 1.2 2006/03/22 04:07:00 vapier Exp $
 
 inherit enlightenment
 
@@ -8,7 +8,7 @@ DESCRIPTION="hardware-accelerated canvas API"
 
 IUSE="X directfb fbcon jpeg mmx opengl png sse cairo"
 
-DEPEND="virtual/x11
+RDEPEND="X? ( || ( x11-libs/libXrender virtual/x11 ) )
 	>=media-libs/imlib2-1.2.0
 	>=dev-libs/eet-0.9.9
 	>=dev-db/edb-1.0.5
@@ -17,6 +17,11 @@ DEPEND="virtual/x11
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )
 	cairo? ( >=x11-libs/cairo-0.2.0 )
 	dev-util/pkgconfig"
+#	X? ( xcb-util )
+DEPEND="${RDEPEND}
+	X? ( || ( (	x11-proto/xextproto
+			x11-proto/xproto )
+			virtual/x11 ) )"
 
 src_compile() {
 	# other *very* fun options:
