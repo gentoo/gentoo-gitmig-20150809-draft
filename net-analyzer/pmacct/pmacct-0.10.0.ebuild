@@ -1,12 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.10.0_rc2.ebuild,v 1.2 2006/02/15 23:48:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.10.0.ebuild,v 1.1 2006/03/22 21:15:23 vanquirius Exp $
 
-MY_P="${P%_*}"
-S="${WORKDIR}/${MY_P}"
 DESCRIPTION="A network tool to gather ip traffic informations"
 HOMEPAGE="http://www.ba.cnr.it/~paolo/pmacct/"
-SRC_URI="http://www.ba.cnr.it/~paolo/pmacct/${P/_}.tar.gz"
+SRC_URI="http://www.ba.cnr.it/~paolo/pmacct/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
