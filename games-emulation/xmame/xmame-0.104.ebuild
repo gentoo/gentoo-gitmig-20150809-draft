@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.104.ebuild,v 1.1 2006/02/22 22:16:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.104.ebuild,v 1.2 2006/03/23 03:19:31 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -172,7 +172,8 @@ src_compile() {
 }
 
 src_install() {
-	local disp=0
+	local disp=0, f
+	local utils="chdman imgtool dat2html"
 
 	sed -i \
 		-e "s:^PREFIX.*:PREFIX=${D}/usr:" \
@@ -199,13 +200,17 @@ src_install() {
 		make DISPLAY_METHOD=x11 install || die "install failed (x11)"
 	fi
 	exeinto "${GAMES_LIBDIR}/${PN}"
-	doexe chdman || die "doexe failed"
+	for f in $utils
+	do
+		doexe $f || die "doexe failed"
+		rm -f "${D}${GAMES_BINDIR}"/$f 2> /dev/null
+	done
 	if [[ ${PN} == "xmame" ]] ; then
 		doexe xml2info || die "doexe failed"
 	fi
 
-	dodir "${GAMES_DATADIR}/${PN}"
-	cp -r ctrlr "${D}/${GAMES_DATADIR}/${PN}/" || die "cp failed"
+	insinto "${GAMES_DATADIR}/${PN}"
+	doins -r ctrlr || die "doins failed"
 	dodoc doc/{changes.*,*.txt,mame/*,${TARGET}rc.dist} README todo \
 		|| die "dodoc failed"
 	dohtml -r doc/* || die "dohtml failed"
@@ -232,4 +237,6 @@ pkg_postinst() {
 	useq sdl    && einfo " ${TARGET}.SDL"
 	#useq ggi    && einfo " ${TARGET}.ggi"
 	useq svga   && einfo " ${TARGET}.svgalib"
+
+	einfo "Helper utilities are located in ${GAMES_LIBDIR}/${PN}."
 }
