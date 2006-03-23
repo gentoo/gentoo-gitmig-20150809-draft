@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.252 2006/03/18 18:38:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.253 2006/03/23 23:02:07 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1995,7 +1995,9 @@ should_we_gcc_config() {
 	use build && return 0
 
 	# if the current config is invalid, we definitely want a new one
-	local curr_config=$(env -i gcc-config -c ${CTARGET} 2>&1) || return 0
+	# Note: due to bash quirkiness, the following must not be 1 line
+	local curr_config
+	curr_config=$(env -i gcc-config -c ${CTARGET} 2>&1) || return 0
 
 	# if the previously selected config has the same major.minor (branch) as
 	# the version we are installing, then it will probably be uninstalled
@@ -2071,7 +2073,9 @@ should_we_eselect_compiler() {
 	use build && return 0
 
 	# if the current config is invalid, we definitely want a new one
-	local curr_config=$(env -i eselect compiler show ${CTARGET} 2>&1) || return 0
+	# Note: due to bash quirkiness, the following must not be 1 line
+	local curr_config
+	curr_config=$(env -i eselect compiler show ${CTARGET} 2>&1) || return 0
 	[[ -z ${curr_config} || ${curr_config} == "(none)" ]] && return 0
 
 	# if the previously selected config has the same major.minor (branch) as
