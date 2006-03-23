@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0fa1711c05827cfc1f1952ee68eae017 ChangeLog 3295
 MD5 b8ef37a0c2afb0f5505932411db81db5 files/digest-gst-plugins-speex-0.10.0 76
 MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-speex-0.10.1 76
@@ -16,3 +19,10 @@ MD5 9a432573b244fd34c6ec151a5c2c9e95 gst-plugins-speex-0.8.12.ebuild 466
 MD5 8e0d47602ac2c79cbfe00673d898c34f gst-plugins-speex-0.8.8.ebuild 462
 MD5 5952012114468dd78c4396391c2520e3 gst-plugins-speex-0.8.9.ebuild 466
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEIvLSKRy60XGEcJIRAgvjAJ97okTo+2fXZbVO9nGTET+Wsgq8yQCfUH1u
+2/NjP/HlXmWOlEkJUF3rV0A=
+=G4L2
+-----END PGP SIGNATURE-----
