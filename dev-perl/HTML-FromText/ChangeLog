@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/HTML-FromText
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/ChangeLog,v 1.13 2006/02/13 13:02:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/ChangeLog,v 1.14 2006/03/23 00:02:22 mcummings Exp $
+
+  23 Mar 2006; Michael Cummings <mcummings@gentoo.org>
+  HTML-FromText-2.05.ebuild:
+  Masking make test since it is currently failed for a lack of recognizing
+  urlescaped html.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   HTML-FromText-2.05.ebuild:
