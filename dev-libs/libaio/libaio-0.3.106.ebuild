@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.106.ebuild,v 1.4 2006/03/23 18:16:34 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.106.ebuild,v 1.5 2006/03/23 23:13:11 vapier Exp $
 
 inherit eutils multilib
 
@@ -28,4 +28,7 @@ src_install() {
 	make prefix="${D}"/usr install || die
 	doman man/*
 	dodoc ChangeLog TODO
+
+	# remove stuff provided by man-pages now
+	rm "${D}"/usr/share/man/man3/aio_{cancel,error,fsync,read,return,suspend,write}.*
 }
