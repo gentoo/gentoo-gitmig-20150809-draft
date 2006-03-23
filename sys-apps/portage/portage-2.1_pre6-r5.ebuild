@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre6-r5.ebuild,v 1.1 2006/03/20 09:22:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre6-r5.ebuild,v 1.2 2006/03/23 03:27:23 zmedico Exp $
 
 inherit toolchain-funcs
 
@@ -58,7 +58,7 @@ src_compile() {
 	python -O -c "import compileall; compileall.compile_dir('${S}/pym')"
 
 	cd "${S}"/src
-	$(tc-getCC) ${CFLAGS} -o tbz2tool tbz2tool.c
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o tbz2tool tbz2tool.c || die "Failed to build tbz2tool"
 
 	if ! use userland_Darwin; then
 		cd "${S}"/src/python-missingos
