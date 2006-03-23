@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/tuxnes/tuxnes-0.75.ebuild,v 1.7 2006/02/11 04:21:22 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/tuxnes/tuxnes-0.75.ebuild,v 1.8 2006/03/23 20:42:41 mr_bones_ Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils games
 
 DESCRIPTION="emulator for the 8-bit Nintendo Entertainment System"
 HOMEPAGE="http://tuxnes.sourceforge.net/"
@@ -13,36 +13,46 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="X ggi"
 
-RDEPEND=">=media-libs/netpbm-9.12
-	X? ( || ( ( x11-libs/libSM
-				x11-libs/libXpm )
+RDEPEND="sys-libs/zlib
+	X? ( || (
+			(
+				x11-libs/libXext
+				x11-libs/libICE
+				x11-libs/libX11
+				x11-libs/libXpm
+				x11-libs/libSM )
 			virtual/x11 ) )
 	ggi? ( >=media-libs/libggi-2.0.1 )"
 DEPEND="${RDEPEND}
-	X? ( || ( x11-proto/xextproto virtual/x11 ) )"
+	X? ( || (
+			(
+				x11-proto/xextproto
+				x11-proto/xproto )
+			virtual/x11 ) )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-configure.in.patch
-	epatch "${FILESDIR}"/${P}-gcc34.patch
+	epatch \
+		"${FILESDIR}"/${P}-configure.in.patch \
+		"${FILESDIR}"/${P}-gcc34.patch
 	export WANT_AUTOCONF=2.5
 	aclocal && automake && autoconf || die "autoconf failed"
 }
 
 src_compile() {
 	replace-flags "-O?" "-O"
-	econf \
+	egamesconf \
 		--without-w \
 		$(use_with ggi) \
 		$(use_with X x) \
 		|| die
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
-	insinto /usr/share/pixmaps
-	doins tuxnes.xpm tuxnes2.xpm
+	make DESTDIR="${D}" install || die "make install failed"
+	doicon tuxnes.xpm tuxnes2.xpm
 	dodoc AUTHORS BUGS ChangeLog CHANGES NEWS README THANKS
+	prepgamesdirs
 }
