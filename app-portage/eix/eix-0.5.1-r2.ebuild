@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.1-r2.ebuild,v 1.5 2006/03/23 00:43:34 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.1-r2.ebuild,v 1.6 2006/03/23 19:19:40 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://stovokor.unfoog.de/pub/eix/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ~ppc-macos ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="sys-apps/portage"
