@@ -1,0 +1,55 @@
+Index: xorg/hw/xfree86/utils/xorgconfig/cards.c
+===================================================================
+RCS file: /cvs/xorg/xserver/xorg/hw/xfree86/utils/xorgconfig/cards.c,v
+retrieving revision 1.4
+diff -u -b -B -r1.4 cards.c
+--- xorg/hw/xfree86/utils/xorgconfig/cards.c	1 Jul 2005 22:43:35 -0000	1.4
++++ xorg/hw/xfree86/utils/xorgconfig/cards.c	23 Mar 2006 07:42:26 -0000
+@@ -19,7 +19,7 @@
+ 
+ /* Some vars to make path names in texts more flexible. */
+ #ifndef PROJECTROOT
+-# define PROJECTROOT		"/usr/X11R6"
++# define PROJECTROOT		"/usr"
+ #endif
+ #define TREEROOT		PROJECTROOT
+ #define TREEROOTLX		TREEROOT "/lib/X11"
+Index: xorg/hw/xfree86/utils/xorgconfig/xorgconfig.c
+===================================================================
+RCS file: /cvs/xorg/xserver/xorg/hw/xfree86/utils/xorgconfig/xorgconfig.c,v
+retrieving revision 1.19
+diff -u -b -B -r1.19 xorgconfig.c
+--- xorg/hw/xfree86/utils/xorgconfig/xorgconfig.c	8 Nov 2005 06:33:30 -0000	1.19
++++ xorg/hw/xfree86/utils/xorgconfig/xorgconfig.c	23 Mar 2006 07:42:28 -0000
+@@ -157,11 +157,12 @@
+  * may be more irritated than Unix users
+  */
+ #ifndef PROJECTROOT
+-#define PROJECTROOT		"/usr/X11R6"
++#define PROJECTROOT		"/usr"
+ #endif
+ #define TREEROOT		PROJECTROOT
+ #define TREEROOTLX		TREEROOT "/lib/X11"
+ #define TREEROOTCFG		TREEROOT "/etc/X11"
++#define TREEROOTSHARE		TREEROOT "/share/X11"
+ #ifdef XDOCDIR
+ # define TREEROOTDOC		XDOCDIR
+ #else
+@@ -495,7 +496,7 @@
+ #elif defined(__FreeBSD__)
+ # define DEF_MOUSEDEV "/dev/sysmouse";
+ #else
+-# define DEF_MOUSEDEV "/dev/mouse";
++# define DEF_MOUSEDEV "/dev/input/mice";
+ #endif
+ 
+ #ifndef __UNIXOS2__
+@@ -1970,7 +1971,7 @@
+ "# file minus the extension (like \".txt\" or \".db\").  There is normally\n"
+ "# no need to change the default.\n"
+ "\n"
+-"    RgbPath	\"" TREEROOTLX "/rgb\"\n"
++"#    RgbPath	\"" TREEROOTSHARE "/rgb\"\n"
+ "\n"
+ "# Multiple FontPath entries are allowed (which are concatenated together),\n"
+ "# as well as specifying multiple comma-separated entries in one FontPath\n"
