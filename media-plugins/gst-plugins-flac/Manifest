@@ -1,4 +1,7 @@
-MD5 791a82f4355f70b7c47d288bcd25b237 ChangeLog 7069
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e6e7d44ad7222a3ebaa9fdec2aee1c75 ChangeLog 7178
 MD5 b8ef37a0c2afb0f5505932411db81db5 files/digest-gst-plugins-flac-0.10.0 76
 MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-flac-0.10.1 76
 MD5 fe9a62d6f739f7cfd223099d201d8834 files/digest-gst-plugins-flac-0.10.2 274
@@ -9,10 +12,17 @@ MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-flac-0.8.8 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-flac-0.8.9 71
 MD5 aec3c15a084bf7c16dccdcc9f8cafb34 gst-plugins-flac-0.10.0.ebuild 336
 MD5 ceac08079ca541018b1c549456402a94 gst-plugins-flac-0.10.1.ebuild 337
-MD5 cfba8a819bfab88ce9b3a0bb03ff4917 gst-plugins-flac-0.10.2.ebuild 343
+MD5 4b9eb8925b8a985ccd46e67687c924b9 gst-plugins-flac-0.10.2.ebuild 351
 MD5 f7c9bb8f865389eec82fb50693062ffe gst-plugins-flac-0.8.10.ebuild 371
 MD5 f278508ded1e47721a188f2e5c619dfd gst-plugins-flac-0.8.11.ebuild 373
 MD5 6c26a386589e05e93a64ffedb0f38cdc gst-plugins-flac-0.8.12.ebuild 380
 MD5 5b885863069276abb80da1463a3503ee gst-plugins-flac-0.8.8.ebuild 369
 MD5 decd926997ab22bc8b0b0066bb95c01e gst-plugins-flac-0.8.9.ebuild 379
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEIwC4KRy60XGEcJIRAvILAJ9IzkrauWbCZuN9xcGU/pxnvo5PjACgkB8w
+a4MJ/g3aVM4JJ7YhjmTmKQo=
+=/RWO
+-----END PGP SIGNATURE-----
