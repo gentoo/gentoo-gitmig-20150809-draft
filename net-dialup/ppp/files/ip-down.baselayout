@@ -31,7 +31,7 @@ if [ "$USEPEERDNS" ]; then
 fi
 
 if [ -x /etc/init.d/net.$1 ]; then
-	if /etc/init.d/net.$1 --quiet --status ; then
+	if /etc/init.d/net.$1 --quiet status ; then
 		export IN_BACKGROUND="true"
 		/etc/init.d/net.$1 --quiet stop
 	fi

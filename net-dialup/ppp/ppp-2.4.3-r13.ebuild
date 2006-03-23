@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r12.ebuild,v 1.1 2006/03/20 15:42:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r13.ebuild,v 1.1 2006/03/23 22:17:13 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
