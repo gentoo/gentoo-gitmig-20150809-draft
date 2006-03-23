@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 734286c663efa641cb141997a87cfdbc ChangeLog 1637
+MD5 55bec41c340487e1ac755f5c7022776e cproto-4.6-r1.ebuild 698
 MD5 aaecba8afb3f8507b02f053b5598e0bd cproto-4.6.ebuild 693
-MD5 5d1dfb087d230a8045ae2e52524e1074 cproto-4.6-r1.ebuild 693
-MD5 bd6efb60344993477ac953320e2b5eff ChangeLog 1504
-MD5 7697a7cacbdf87628dfeae27bb4dd163 files/digest-cproto-4.6 62
 MD5 10bb14145eaff685443420d8f3d512ab files/4.6-YYSTYPE.patch 349
 MD5 d765e837084055cec0ef65e3f765a728 files/cproto-4.6-mkstemp.patch 1077
+MD5 7697a7cacbdf87628dfeae27bb4dd163 files/digest-cproto-4.6 62
 MD5 7697a7cacbdf87628dfeae27bb4dd163 files/digest-cproto-4.6-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEIwxeViELBEf1JB0RAt1DAJ9wqBdUxy42q8sk4BuSOyzsjJ7BQACgguUQ
+euIlCLvfP8KW8fcCxcXhJ9c=
+=BIpa
+-----END PGP SIGNATURE-----
