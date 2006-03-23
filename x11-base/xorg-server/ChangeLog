@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.90 2006/03/23 08:17:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.91 2006/03/23 08:33:45 spyderous Exp $
+
+  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-1.0.2.ebuild:
+  Depends on media-fonts/font-adobe-75dpi for xorgcfg.
 
   23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
   +files/1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch,
