@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ba8bcbbf7a7a8ed4ee380ae77972b947 ChangeLog 3223
-RMD160 f5d6a8c22724024f2c9b4c4d46ad0d29c6221a3e ChangeLog 3223
-SHA256 4b37b9269ccfa157e8717439b124e80a3f30fc4219aba3019c077e6406287e78 ChangeLog 3223
+MD5 4e5f6685dfcdad3a35e862d33aea2036 ChangeLog 3377
+RMD160 1df3c927e938b543d58c2b62c3cc9dfb897244a2 ChangeLog 3377
+SHA256 b0726c7f514190d69f11abcc3944db1d5fbc963ec3ce4613fcdfaaac09efb954 ChangeLog 3377
 MD5 13dfd0e0ce07b13f410914df34b4b45f files/digest-kochi-substitute-20030809 79
 RMD160 d9a237a8d17b8e5131dac3c0bc243ac7d58bd2b5 files/digest-kochi-substitute-20030809 79
 SHA256 fc063bd9ce11a72294cf82cc77bd02537ec4ed68d5fce072a29dc81880eed536 files/digest-kochi-substitute-20030809 79
@@ -13,22 +10,15 @@ SHA256 fc063bd9ce11a72294cf82cc77bd02537ec4ed68d5fce072a29dc81880eed536 files/di
 MD5 13dfd0e0ce07b13f410914df34b4b45f files/digest-kochi-substitute-20030809-r3 79
 RMD160 d9a237a8d17b8e5131dac3c0bc243ac7d58bd2b5 files/digest-kochi-substitute-20030809-r3 79
 SHA256 fc063bd9ce11a72294cf82cc77bd02537ec4ed68d5fce072a29dc81880eed536 files/digest-kochi-substitute-20030809-r3 79
-MD5 427fb835eff1a0a3681ace193512a885 kochi-substitute-20030809-r2.ebuild 1315
-RMD160 9e8a91267105d88f1548b944166dc65bf7cd15ee kochi-substitute-20030809-r2.ebuild 1315
-SHA256 7ffc873ce4c6a5d144b502db41d8b98b295b71d0595796c22140621522e56df7 kochi-substitute-20030809-r2.ebuild 1315
+MD5 267967458e75adb6736f4bb86e5f0338 kochi-substitute-20030809-r2.ebuild 1406
+RMD160 2df8549b417cb0ff6363a35eb9f17e87d0328596 kochi-substitute-20030809-r2.ebuild 1406
+SHA256 1a3802547fefdd8919b2abf621fda204440e2dcb9c7fa8e85607c4852f2ad3fc kochi-substitute-20030809-r2.ebuild 1406
 MD5 7636c601e3344587c0c04a61b2618e48 kochi-substitute-20030809-r3.ebuild 794
 RMD160 dc22753e41b0df4f24f558920c5b7035ffa9ff1d kochi-substitute-20030809-r3.ebuild 794
 SHA256 7c6de231d58bf85e7d6d8aeccdf380d665a2ee4c842a9748a4e403f48ab6a5e2 kochi-substitute-20030809-r3.ebuild 794
-MD5 8af1d0afad1256bfe017f01b7ad1b980 kochi-substitute-20030809.ebuild 1889
-RMD160 0cb1d563668cb7752fc4318b6870f10030a6124c kochi-substitute-20030809.ebuild 1889
-SHA256 b80a67f23c88bee31ee4f4fdb417085dc343bdf4e6acd2ad2d480579743f484b kochi-substitute-20030809.ebuild 1889
+MD5 d75cd4830788034fc48b4babf1412540 kochi-substitute-20030809.ebuild 1976
+RMD160 3c103ae145793635d0fd6463093c88dbb4df0efb kochi-substitute-20030809.ebuild 1976
+SHA256 556c510c0f014b7d96bbd6823cb2ea8e17b835df9df140505ceb81898c4098a7 kochi-substitute-20030809.ebuild 1976
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 RMD160 e22fbca96af27631c4910bc93f69d81280ddd96e metadata.xml 175
 SHA256 0dc53674ee3ca2348bedd390f639dac96f537cce8cd0c550c13917de7b61f2e8 metadata.xml 175
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEH2m92+ySkm8kpY0RAjmCAJ4iMr2BygeXn2Wr2moO/3AZ8hbKvACfYrSQ
-s+lm6mf/XWzk4aREq/DXrtA=
-=DazL
------END PGP SIGNATURE-----
