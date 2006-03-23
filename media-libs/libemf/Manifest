@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 c9caeec31c9b9b8ace0440c32b1664aa ChangeLog 1863
+MD5 5dd26ee62faddde9ae039b314d8e0850 files/digest-libemf-1.0 62
+MD5 28051fcd17d265c7ef469df6e9255cbd files/digest-libemf-1.0.3 64
+MD5 da0b56d85ef634877fc9be4d56503463 files/libEMF-1.0-amd64.patch 2362
+MD5 3b1d4fe080501e571622229464654b95 files/libEMF-1.0-gcc3.patch 2429
+MD5 ec7d077987ca4199d3bbd9870827b7c4 libemf-1.0.3.ebuild 715
 MD5 d80621c5abfdb14176edcab1ad6bc50e libemf-1.0.ebuild 842
 MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
-MD5 e6add0fc40e8ae05e7e23872328c6dff ChangeLog 1668
-MD5 da0b56d85ef634877fc9be4d56503463 files/libEMF-1.0-amd64.patch 2362
-MD5 5dd26ee62faddde9ae039b314d8e0850 files/digest-libemf-1.0 62
-MD5 3b1d4fe080501e571622229464654b95 files/libEMF-1.0-gcc3.patch 2429
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCuZXLKRy60XGEcJIRAoHiAKCMxIYBpawqvU72ZFhJhYSI2HB2fQCfcqPy
-OGAINuEg5dgTJ+UVavNElRc=
-=AyYf
------END PGP SIGNATURE-----
