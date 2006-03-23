@@ -1,6 +1,16 @@
 # ChangeLog for app-text/dgs
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.21 2005/09/15 19:36:57 swegener Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.22 2006/03/23 08:54:21 spyderous Exp $
+
+*dgs-0.5.10-r1 (23 Mar 2006)
+
+  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/dgs-0.5.10-gs-time_.h-gentoo.diff,
+  +files/0.5.10-workaround-include-in-comments.patch,
+  +files/dgs-0.5.10-gcc-3.4.diff, +files/dgs-0.5.10-tcpd-gentoo.diff,
+  +dgs-0.5.10-r1.ebuild, -dgs-1234.ebuild:
+  (#118687) Re-add dgs to the tree, because X.Org 7 no longer provides
+  client-side DPS utilities but things in the tree depend on them.
 
   15 Sep 2005; Sven Wegener <swegener@gentoo.org> ChangeLog:
   Added missing ChangeLog
