@@ -7,9 +7,9 @@ SHA256 4b9d8aa3fcf35ae3c6ee2f7515d9eb1f964261cca0d278bdd433af3092de5989 files/di
 MD5 4f3ec780308ff2da4f83339d8168ad0b files/nautilus-sendto-0.5-configure-options.patch 2624
 RMD160 75b221db835608848d48e959b806aacc421b11ba files/nautilus-sendto-0.5-configure-options.patch 2624
 SHA256 2e60773e10c830bcb81c0f98f4c4c083893324c0dc84466974e0b04d44654fa5 files/nautilus-sendto-0.5-configure-options.patch 2624
-MD5 7058c3aae72cb72453f67a1d1f41d0a6 metadata.xml 304
-RMD160 6c356cf2024baa36b7462ea705b7e2b6603d906c metadata.xml 304
-SHA256 33f6aac6054f2a663a6349e206078025c47ad599ea45fabcde0a3a327a64d0d2 metadata.xml 304
+MD5 def57195a8a8fbc9ff84bded4f4c6772 metadata.xml 311
+RMD160 868d0eab62db916aa47b7f440a3f4efecc6163b1 metadata.xml 311
+SHA256 e886def03bdeeea8096ba31325c33f065ebfd912365eab5723412e1be31d9fbe metadata.xml 311
 MD5 2b4f725f56e53b2412f96d39a0c93dd5 nautilus-sendto-0.5.ebuild 1449
 RMD160 35e7f1d1ccdf939f7041a0fa3fb4b029d1a4a8b3 nautilus-sendto-0.5.ebuild 1449
 SHA256 1d1e6e6de19883e60076c3f97f5859316570ca552c8e0e96f819075e45730db5 nautilus-sendto-0.5.ebuild 1449
