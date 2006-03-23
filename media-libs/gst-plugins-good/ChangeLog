@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-good
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.5 2006/03/16 23:25:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.6 2006/03/23 18:26:52 gustavoz Exp $
+
+  23 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gst-plugins-good-0.10.2.ebuild:
+  Keyworded ~sparc wrt #125232
 
   16 Mar 2006; Markus Rothe <corsair@gentoo.org>
   gst-plugins-good-0.10.2.ebuild:
