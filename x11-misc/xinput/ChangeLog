@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xinput
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xinput/ChangeLog,v 1.6 2006/01/21 17:37:01 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xinput/ChangeLog,v 1.7 2006/03/23 22:16:15 nelchael Exp $
+
+  23 Mar 2006; Krzysiek Pawlik <nelchael@gentoo.org> xinput-1.2.ebuild:
+  Added missing rman DEPEND, fixes bug #127360.
 
   21 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> xinput-1.2.ebuild:
   Fixed DEPEND for modular X.
