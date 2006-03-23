@@ -53,7 +53,7 @@
 -      done
 -      changequote([, ])
 -   fi
-+   PY_DEPS="$PY_DEPS `python-config --libs`"
++   PY_DEPS="$PY_DEPS `python-config --libs` -lutil"
  
     case $target in
         *-sun-solaris*)
