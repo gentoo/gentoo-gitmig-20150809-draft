@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.204 2006/03/22 20:14:53 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.205 2006/03/23 01:47:42 flameeyes Exp $
+
+  23 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> arts-3.5.2.ebuild:
+  Fix MY_PV to 1.5.2 instead of 1.5.1.
 
 *arts-3.5.2 (22 Mar 2006)
 
