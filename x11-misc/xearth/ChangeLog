@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xearth
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/ChangeLog,v 1.11 2006/03/04 21:58:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/ChangeLog,v 1.12 2006/03/23 20:53:56 ferdy Exp $
+
+  23 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> xearth-1.1.ebuild:
+  Add ~alpha. Tested by Thomas Cort <tcort@cs.ubishops.ca>
 
   04 Mar 2006; Krzysiek Pawlik <nelchael@gentoo.org> xearth-1.1.ebuild:
   Added missing rman to DEPEND.
