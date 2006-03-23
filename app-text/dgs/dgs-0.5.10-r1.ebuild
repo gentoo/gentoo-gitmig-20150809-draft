@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.33 2006/03/23 09:04:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.34 2006/03/23 18:51:41 spyderous Exp $
 
 inherit gnuconfig eutils
 
@@ -33,7 +33,7 @@ src_unpack() {
 src_compile() {
 	WANT_AUTOCONF=2.1 autoconf
 	econf --with-x $(use_enable tcpd) || die "econf failed"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {

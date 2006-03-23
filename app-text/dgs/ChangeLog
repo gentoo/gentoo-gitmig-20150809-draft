@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dgs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.24 2006/03/23 09:04:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.25 2006/03/23 18:51:40 spyderous Exp $
+
+  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>; dgs-0.5.10-r1.ebuild:
+  (#127342) Doesn't build in parallel, found by Erik Zeek.
 
   23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>; dgs-0.5.10-r1.ebuild:
   Block on monolithic xorg, they install the same files.
