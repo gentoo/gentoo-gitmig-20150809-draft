@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/cronyx-fonts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cronyx-fonts/ChangeLog,v 1.9 2006/01/11 21:28:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cronyx-fonts/ChangeLog,v 1.10 2006/03/23 20:51:29 spyderous Exp $
+
+  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  cronyx-fonts-2.3.1-r1.ebuild:
+  Port to modular X.
 
 *cronyx-fonts-2.3.1-r2 (11 Jan 2006)
 
