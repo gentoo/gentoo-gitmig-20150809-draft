@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d9645b510d43b787b2dd9c582242a90c ChangeLog 4198
+MD5 7efb704584544ec7ccdb641a2612788a ChangeLog 4301
+RMD160 66fd20318ba67d7ee05137d6933faad158a2eb8d ChangeLog 4301
+SHA256 8130cabaed9b1d281f82eaa81bf29208e76aad10f1a923dfe731accf61c95e06 ChangeLog 4301
 MD5 c3906a462f3e92f442550ed7884c79d7 Class-MethodMaker-1.11.ebuild 538
+RMD160 061cb391a2dc0f375bb40b4a270e8595fd820246 Class-MethodMaker-1.11.ebuild 538
+SHA256 60fb0102c01215a53ba818d0c80cd021cc0682b8d6e4e37cc56d40544ec2f62d Class-MethodMaker-1.11.ebuild 538
 MD5 74446d14a6f3dfd8abf059c0e2c894fc Class-MethodMaker-2.07-r2.ebuild 582
-MD5 214f18eb9059a69baaa8814a553cc99b Class-MethodMaker-2.08.ebuild 581
+RMD160 13eacdeca449d5865171e2fff25cbab43c1aca6a Class-MethodMaker-2.07-r2.ebuild 582
+SHA256 2d63ccf169945844f640fa0f7739cfac3514d85fd2c309d3aebda4b2e150d320 Class-MethodMaker-2.07-r2.ebuild 582
+MD5 1f53fd5a2cf170cac750542c7459b230 Class-MethodMaker-2.08.ebuild 578
+RMD160 f928d02fd0eddf78adf533dffa577c39d91bdc15 Class-MethodMaker-2.08.ebuild 578
+SHA256 1c4943514c66cced3aae2fa651deb64b0014f75ddd87f21b444a3bee9a3717ca Class-MethodMaker-2.08.ebuild 578
 MD5 a2a1bcd1e4774ec6755462b1bc3795c2 files/digest-Class-MethodMaker-1.11 73
+RMD160 141214f68f0072e6e48e7d81322d4ef3ea108446 files/digest-Class-MethodMaker-1.11 73
+SHA256 2048b0e113c9a2bdefd62ea49d3d55e76ec4d424cf1352deedcc1a785406f601 files/digest-Class-MethodMaker-1.11 73
 MD5 8e850cd4da47af44dddb828b7d3f430e files/digest-Class-MethodMaker-2.07-r2 73
+RMD160 ec3f9e48f8d438fbd9a6bf2f65154b77ac826972 files/digest-Class-MethodMaker-2.07-r2 73
+SHA256 dcab978c8e2cdb82a3b3242a69f6385b4faf9cd3cfb90441ef28d96eaa8b451d files/digest-Class-MethodMaker-2.07-r2 73
 MD5 faac721ba7ae377efae09a80c8746dce files/digest-Class-MethodMaker-2.08 265
+RMD160 7a88132a3bd1b060b9579b84cec243e07b03a750 files/digest-Class-MethodMaker-2.08 265
+SHA256 a65694ea44bbaa762df4d0cc501ddd5c80eb34c9f0117ca80f05382f5c1a7f16 files/digest-Class-MethodMaker-2.08 265
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEItrGKRy60XGEcJIRAiJHAJoCUy8SMtgpXI1o6o/pq2Y92CBc3ACfenpe
-nWpD3Boiywq8/FlxxE4NI5U=
-=n8bh
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
