@@ -1,6 +1,11 @@
 # ChangeLog for games-board/megamek
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/ChangeLog,v 1.3 2006/01/08 17:38:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/ChangeLog,v 1.4 2006/03/23 21:39:38 tupone Exp $
+
+*megamek-0.30.9 (23 Mar 2006)
+
+  23 Mar 2006; <Tupone@gentoo.org> +megamek-0.30.9.ebuild:
+  Version bump and ~amd64, bug #126495 by Vladimir Linek
 
 *megamek-0.30.6 (08 Jan 2006)
 
