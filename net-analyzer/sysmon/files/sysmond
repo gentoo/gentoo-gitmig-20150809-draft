@@ -1,0 +1,35 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sysmon/files/sysmond,v 1.1 2006/03/23 19:21:54 kingtaco Exp $
+
+opts="${opts} reload"
+
+checkconfig() {
+	if [ ! -f "/etc/sysmon.conf" ] ; then
+		eerror "You should setup your /etc/sysmon.conf file!"
+		eerror "See the sysmon.conf(5) manpage."
+		return 1
+	fi
+	return 0
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Starting SysMon daemon"
+	/usr/bin/sysmond -q &>/dev/null
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping SysMon daemon"
+	/usr/bin/sysmond -q stop &>/dev/null
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading SysMon configuration"
+	/usr/bin/sysmond -q reload &>/dev/null
+	eend $?
+}

@@ -1,0 +1,34 @@
+diff -ur sysmon-0.92.old/autoconf/Makefile.in sysmon-0.92/autoconf/Makefile.in
+--- sysmon-0.92.old/autoconf/Makefile.in	2003-11-05 21:41:31.000000000 -0600
++++ sysmon-0.92/autoconf/Makefile.in	2005-05-25 14:54:09.000000000 -0500
+@@ -56,11 +56,7 @@
+ install:	all
+ 	@echo "installing into @bindir@"
+ 	-mkdir -p @bindir@
+-	-mv @bindir@/sysmond @bindir@/sysmond.old
+-	-mv @bindir@/sysmon @bindir@/sysmon.old
+-	cp sysmon sysmond @bindir@
+-	@echo "creating directory @sysconfdir@"
+-	-mkdir -p @sysconfdir@
++	cp sysmon sysmond ${DESTDIR}/@bindir@
+ 
+ strip:
+ 	-strip @PROGS@
+diff -ur sysmon-0.92.old/src/snmp.c sysmon-0.92/src/snmp.c
+--- sysmon-0.92.old/src/snmp.c	2003-12-16 11:33:44.000000000 -0600
++++ sysmon-0.92/src/snmp.c	2005-05-25 13:29:40.000000000 -0500
+@@ -5,6 +5,8 @@
+ /* SNMP specific includes */
+ #ifdef ENABLE_SNMP
+ 
++#define NETSNMP_NO_INLINE
++
+ #ifdef HAVE_UCD_SNMP_VERSION_H
+ #include <ucd-snmp/ucd-snmp-config.h>
+ #include <ucd-snmp/ucd-snmp-includes.h>
+@@ -13,7 +15,6 @@
+ #ifdef HAVE_NET_SNMP_VERSION_H
+ #include <net-snmp/net-snmp-config.h>
+ #include <net-snmp/net-snmp-includes.h>
+-#include <net-snmp/library/snmp_client.h>
+ #endif
