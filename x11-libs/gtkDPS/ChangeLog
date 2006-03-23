@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkDPS
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.25 2006/03/23 09:02:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.26 2006/03/23 09:04:35 spyderous Exp $
+
+  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  gtkDPS-0.3.3-r1.ebuild, gtkDPS-0.3.4.ebuild:
+  Fix deps for monolithic X.
 
   23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
   gtkDPS-0.3.3-r1.ebuild, gtkDPS-0.3.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.21 2006/03/23 09:02:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.22 2006/03/23 09:04:35 spyderous Exp $
 
 inherit eutils multilib
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="nls"
 
 DEPEND="=x11-libs/gtk+-1.2*
-	app-text/dgs
+	|| ( app-text/dgs <x11-base/xorg-x11-7 )
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
