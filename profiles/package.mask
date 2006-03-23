@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5125 2006/03/23 17:17:39 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5126 2006/03/23 18:39:36 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Saleem Abdulrasool <compnerd@gentoo.org> (23 Mar 2006)
+# Masked, waiting for GNOME 2.14
+>=gnome-extra/nautilus-sendto-0.5
 
 # Tavis Ormandy <taviso@gentoo.org> (21 Mar 2006)
 # masked pending unresolved security issues #127319
