@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-05272005.3-r1.ebuild,v 1.1 2005/12/04 17:00:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060222.2.ebuild,v 1.1 2006/03/23 15:02:36 markusle Exp $
 
-inherit eutils toolchain-funcs fortran
+inherit eutils toolchain-funcs fortran flag-o-matic
 
 DESCRIPTION="A powerful quantum chemistry package"
 LICENSE="gamess"
@@ -27,7 +27,7 @@ RDEPEND="app-shells/tcsh
 S="${WORKDIR}/${PN}"
 
 GAMESS_DOWNLOAD="http://www.msg.ameslab.gov/GAMESS/License_Agreement.html"
-GAMESS_VERSION="27 JUN 2005 (R3)"
+GAMESS_VERSION="22 FEB 2006 (R2)"
 
 
 pkg_nofetch() {
@@ -46,7 +46,7 @@ pkg_setup() {
 	if use ifc; then
 		need_fortran ifc
 	else
-		need_fortran g77
+		need_fortran gfortran g77
 	fi
 
 	# blas and ifc don't go together
@@ -59,19 +59,33 @@ src_unpack() {
 	unpack ${A}
 
 	# apply LINUX-arch patches to gamess makesfiles
-	epatch "${FILESDIR}"/comp-gentoo.patch
-	epatch "${FILESDIR}"/compall-gentoo.patch
-	epatch "${FILESDIR}"/lked-gentoo.patch
+	epatch "${FILESDIR}"/comp-lked-20060222.2.patch
 	epatch "${FILESDIR}"/ddi-use-ssh-gentoo.patch
-	epatch "${FILESDIR}"/compddi-gentoo.patch
-	epatch "${FILESDIR}"/rungms-gentoo.1.patch
-	epatch "${FILESDIR}"/runall-gentoo.1.patch
+	epatch "${FILESDIR}"/rungms-runall-20060222.2.patch
 
 	# for hardened-gcc let't turn off ssp, since it breakes
 	# a few routines
 	cd "${S}"
-	if use hardened && [[ $(tc-getF77) = f77 ]]; then
+	if use hardened && ([[ ${FORTRANC} = g77 ]]); then
 		FFLAGS="${FFLAGS} -fno-stack-protector-all"
+	fi
+
+	# some fixes for gfortan; 
+	# also append -w otherwise we get flooded with Hollerith 
+	# constant warnings
+	if [[ ${FORTRANC} == gfortran ]]; then
+		FFLAGS="${FFLAGS} -w"
+
+		sed -e "s|-fno-move-all-movables|-w|g" \
+			-e "s|*F2C|*F77|g" \
+			-e "s|-Wno-globals -fno-globals||g" \
+			-i comp || die "Failed removing compile flags"
+
+		# need to use _gfortran_ namespace
+		sed -e "s|iargc_|_gfortran_iargc|g" \
+			-e "s|getarg_|_gfortran_getarg_i4|g" \
+			-i ddi/src/ddi_fortran.c || \
+			die "Failed to fix gfortran namespace in ddi_fortran.c"
 	fi
 
 	# greate proper activate sourcefile 
@@ -91,11 +105,11 @@ src_unpack() {
 		sed -e "s/-malign-double -fautomatic /-cm -w \$MODULE.f/" \
 			-e "s/-Wno-globals -fno-globals \$MODULE.f//" \
 			-e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS} -quiet'/" \
-		    -e "s/gentoo-g77/$(tc-getF77)/" \
+		    -e "s/gentoo-g77/${FORTANC}/" \
 			-i comp || die "Failed setting up comp script"
 	else
 		sed -e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS}'/" \
-		   	-e "s/gentoo-g77/$(tc-getF77)/" \
+		   	-e "s/gentoo-g77/${FORTRANC}/" \
 			-i comp || die "Failed setting up comp script"
 	fi
 
@@ -107,11 +121,11 @@ src_unpack() {
 
 	# fix up GAMESS' linker script;
 	if use ifc; then
-		sed -e "s/gentoo-LDR='g77'/LDR='$(tc-getF77)'/" \
+		sed -e "s/gentoo-LDR='g77'/LDR='${FORTRANC}'/" \
 		   	-e "s/gentoo-LDOPTS=' '/LDOPTS='${LDFLAGS}'/" \
 			-i lked || die "Failed setting up lked script"
 	else
-		sed -e "s/gentoo-LDR='g77'/LDR='$(tc-getF77)'/" \
+		sed -e "s/gentoo-LDR='g77'/LDR='${FORTRANC}'/" \
 			-e "s/gentoo-LDOPTS=' '/LDOPTS='${LDFLAGS}'/" \
 			-i lked || die "Failed patching lked script"
 	fi
@@ -120,9 +134,9 @@ src_unpack() {
 	sed -e "s/gentoo-CC = 'gcc'/CC = '$(tc-getCC)'/" \
 		-i ddi/compddi || die "Failed setting up compddi script"
 
-	# for ifc we have to fix the number of underscores of fortran
-	# symbols, otherwise the linker will barf
-	if use ifc; then
+	# for ifc/gcc-4.x we have to fix the number of underscores of 
+	# fortran symbols, otherwise the linker will barf
+	if use ifc || [[ $(gcc-major-version) -ge 4 ]]; then
 		sed -e "s/gentoo-F77_OPTS = '-DINT_SIZE=int -D_UNDERSCORES=2/F77_OPTS = '-DINT_SIZE=int -D_UNDERSCORES=1/" \
 			-i ddi/compddi || die "Failed fixing underscores in compddi"
 	else
@@ -134,7 +148,8 @@ src_unpack() {
 src_compile() {
 	# build actvte
 	cd "${S}"/tools
-	$(tc-getF77) -o actvte.x actvte.f || die "Failed to compile actvte.x"
+	${FORTRANC} -o actvte.x actvte.f || \
+		die "Failed to compile actvte.x"
 
 	# for hardened (PAX) users and ifc we need to turn
 	# MPROTECT off
@@ -193,18 +208,25 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	ewarn "Before you use GAMESS for any serious work you HAVE"
-	ewarn "to run the supplied test files located in"
-	ewarn "/usr/share/gamess/tests and check them thoroughly."
-	ewarn "Otherwise all scientific publications resulting from"
-	ewarn "your GAMESS runs should be immediately rejected :)"
-	ewarn "To do so copy the content of /usr/share/gamess/tests"
-	ewarn "to some temporary location and execute './runall'. "
-	ewarn "Please consult TEST.DOC and the other docs!"
-	ewarn "NOTE: Due to a g77 implementation issue the TDHF code"
-	ewarn "      currently does not work and exam39 will, therefore,"
-	ewarn "      not run properly. Please watch bug #114367 "
-	ewarn "      for this issue!"
+	einfo "Before you use GAMESS for any serious work you HAVE"
+	einfo "to run the supplied test files located in"
+	einfo "/usr/share/gamess/tests and check them thoroughly."
+	einfo "Otherwise all scientific publications resulting from"
+	einfo "your GAMESS runs should be immediately rejected :)"
+	einfo "To do so copy the content of /usr/share/gamess/tests"
+	einfo "to some temporary location and execute './runall'. "
+	einfo "Please consult TEST.DOC and the other docs!"
+
+	if [[ ${FORTRANC} == gfortran ]]; then
+		echo
+		ewarn "If you are using gcc-4.0.x, then due to a gfortran "
+		ewarn "implementation issue the TDHF code currently does not"
+		ewarn "work and exam39 will, therefore, fail."
+		ewarn "If you are using gcc-4.1.x, the resulting binaries "
+		ewarn "will likely not run properly. We strongly recommend"
+		ewarn "to stick with gcc-3.x or gcc-4.0.x until these issues"
+		ewarn "have been addressed."
+	fi
 
 	if use ifc; then
 		echo

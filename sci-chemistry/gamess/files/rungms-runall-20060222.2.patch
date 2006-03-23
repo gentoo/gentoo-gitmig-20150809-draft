@@ -1,11 +1,24 @@
---- gamess/rungms	2005-11-10 22:03:42.000000000 +0000
-+++ gamess-new//rungms	2005-12-02 18:47:25.000000000 +0000
+diff -Naur gamess-old/runall gamess/runall
+--- gamess-old/runall	2006-03-09 16:36:21.000000000 -0600
++++ gamess/runall	2006-03-21 22:32:27.000000000 -0600
+@@ -10,7 +10,7 @@
+ #  Edit this file to set the base path to GAMESS, and execute it to be
+ #  sure all the jobs TERMINATED NORMALLY, and got correct numbers too.
+ #
+-chdir /u1/mike/gamess
++#chdir /u1/mike/gamess/
+ set VERNO=00
+ #
+ foreach NUM ( 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 \
+diff -Naur gamess-old/rungms gamess/rungms
+--- gamess-old/rungms	2005-12-28 15:31:05.000000000 -0600
++++ gamess/rungms	2006-03-21 22:33:07.000000000 -0600
 @@ -54,7 +54,7 @@
  #       of using LoadLeveler via a "llgms" front end in ~/gamess/misc.
  #
  set TARGET=sockets
 -set SCR=/scr/$USER
-+set SCR=./
++set SCR=`pwd`
  #
  set JOB=$1      # name of the input file xxx.inp, give only the xxx part
  set VERNO=$2    # revision number of the executable created by 'lked' step

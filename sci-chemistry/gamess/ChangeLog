@@ -1,6 +1,19 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.8 2006/02/08 21:54:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.9 2006/03/23 15:02:36 markusle Exp $
+
+*gamess-20060222.2 (22 Mar 2006)
+
+  22 Mar 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/comp-lked-20060222.2.patch, +files/rungms-runall-20060222.2.patch,
+  -files/comp-gentoo.1.patch, -files/runall-gentoo.patch,
+  -files/rungms-gentoo.patch, -gamess-05272005.3.ebuild,
+  -gamess-05272005.3-r1.ebuild, -gamess-05272005.3-r2.ebuild,
+  +gamess-20060222.2.ebuild:
+  Version bump and changed the ebuild naming convention to start with 
+  the year since otherwise portage can't properly keep track of 
+  updates. Also removed obsolete ebuilds/patches. gcc-4.1 currently
+  generates bad binaries even with very conservative compile flags.
 
   08 Feb 2006; Markus Dittrich <markusle@gentoo.org>
   gamess-05272005.5.ebuild:
