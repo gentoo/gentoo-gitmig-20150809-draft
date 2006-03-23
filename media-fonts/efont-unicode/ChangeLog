@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/efont-unicode
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/ChangeLog,v 1.14 2006/01/12 03:45:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/ChangeLog,v 1.15 2006/03/23 20:54:18 spyderous Exp $
+
+  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  -efont-unicode-0.4.1.ebuild, efont-unicode-0.4.2.ebuild:
+  Port to modular X, remove old ebuild.
 
   12 Jan 2006; Robin H. Johnson <robbat2@gentoo.org>
   efont-unicode-0.4.2-r1.ebuild:
