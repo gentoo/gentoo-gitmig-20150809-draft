@@ -10,30 +10,6 @@ SHA256 dbe8db19d03b39ad2b7f9f6dfcd24c615a14886b3fe6d5ce4dd88bac27c0e225 files/05
 MD5 bb9cb80f927bcc2b9e0f512d8a200e18 files/2.0.51.22-fixes.patch 10579
 RMD160 aecbf663449b7b6c5fc8f4f343c30c1de7515fb3 files/2.0.51.22-fixes.patch 10579
 SHA256 a6ae22f6513e9c5160204d9ba2ca8bab00091a88089139ff64bee68aaf63a95c files/2.0.51.22-fixes.patch 10579
-MD5 b521971700cd2a96cf1b2d5ccbcb3483 files/2.1_pre5/1000_r2763_fixpackages_features.patch 238
-RMD160 0e1c4807fc7c1cb88d221586e7d5e5b0bd9498a9 files/2.1_pre5/1000_r2763_fixpackages_features.patch 238
-SHA256 aa859a7008d893861b449745a0b37a719dfe6ad7974fafa01608435379d0b864 files/2.1_pre5/1000_r2763_fixpackages_features.patch 238
-MD5 708990e216332c66ab18535802abd98c files/2.1_pre5/1010_r2764_emergelog_genlop.patch 575
-RMD160 9e954dda6c7e1a87b29e6c5695151ea96da5a328 files/2.1_pre5/1010_r2764_emergelog_genlop.patch 575
-SHA256 441c2f40044c4dfc90c6971c9d68ab2ec062ebbe37b935cd6d167a9b4fab51e7 files/2.1_pre5/1010_r2764_emergelog_genlop.patch 575
-MD5 76114c0ae60af1b0ad2fa3b16625dcaa files/2.1_pre5/1020_r2800_bug_124203_clean_phase_sanity.patch 398
-RMD160 d11994c0e501e2591127d7728506039fd48e75ad files/2.1_pre5/1020_r2800_bug_124203_clean_phase_sanity.patch 398
-SHA256 a7245038f9dc0fd0fa48d16f3984389da2a321c773b4e32fcf71fa64f7d242dc files/2.1_pre5/1020_r2800_bug_124203_clean_phase_sanity.patch 398
-MD5 2cb5a3738011c3e76db406d104b26469 files/2.1_pre5/1030_r2790_bug_124140_portage_locks_hardlink.patch 444
-RMD160 7ee7c82c9cba9345892063fb74edaed68e4d6c0c files/2.1_pre5/1030_r2790_bug_124140_portage_locks_hardlink.patch 444
-SHA256 d934f43e3c598494b648624584dd8ae540836fab258ea01c4aea1281ce967887 files/2.1_pre5/1030_r2790_bug_124140_portage_locks_hardlink.patch 444
-MD5 ca228fd976bf237da71e048ffcaef0c7 files/2.1_pre5/1040_r2804_bug_124568_dobin_wheel.patch 924
-RMD160 3aa471e8ac8ad9397b598ab01c05fe1a20246812 files/2.1_pre5/1040_r2804_bug_124568_dobin_wheel.patch 924
-SHA256 15152e70ab862849749f64a54eea8bc3ab45ceb46aba9742f255c0101872dd17 files/2.1_pre5/1040_r2804_bug_124568_dobin_wheel.patch 924
-MD5 8279193615d35ccb8d8496f2fcbb58bb files/2.1_pre5/1050_r2805_bug_124621_webrsync_niceness.patch 875
-RMD160 776c2812dc6536e54d133904a760faa038a65acc files/2.1_pre5/1050_r2805_bug_124621_webrsync_niceness.patch 875
-SHA256 cd12a5e31772411563894bf174cef7e49965dbb2c3dc58321441995e26ea4820 files/2.1_pre5/1050_r2805_bug_124621_webrsync_niceness.patch 875
-MD5 d3f491aba0c765a9f06f473d92262789 files/2.1_pre5/1060_r2812_bug_124471_worldfile_ROOT.patch 1762
-RMD160 a4c7695a5298c819b24f75fe9821d585ff5e5347 files/2.1_pre5/1060_r2812_bug_124471_worldfile_ROOT.patch 1762
-SHA256 3ad39a43bef0fa94b5fd3ffd2173c8b076ffbd3179e9c15c9844fdaddeaa6aed files/2.1_pre5/1060_r2812_bug_124471_worldfile_ROOT.patch 1762
-MD5 b0f0aee3708359245752289af4a8923b files/2.1_pre5/version_bump_2.1_pre5-r4.patch 378
-RMD160 3e96116e5c06994417fc3dfa2fd344676f8f7a53 files/2.1_pre5/version_bump_2.1_pre5-r4.patch 378
-SHA256 5619c164def7cd20db802ca878714669fe258ac285a219e24068f378f8e70d98 files/2.1_pre5/version_bump_2.1_pre5-r4.patch 378
 MD5 43e6f0038bd9660c6df8c3b6019b33d8 files/2.1_pre6/1000_r2849_quiet_spinner.patch 553
 RMD160 9f83e5d105348dcab20d37212e83422be4b4b86d files/2.1_pre6/1000_r2849_quiet_spinner.patch 553
 SHA256 7277668d65bb47fa5d82f7b9e098378872ff6c8b67b3caa2298324d242952d17 files/2.1_pre6/1000_r2849_quiet_spinner.patch 553
@@ -100,9 +76,6 @@ SHA256 d12b5844039163fd2cb532560d0e82ef7c4b860ea3ef02e0616b34264be13299 files/di
 MD5 2e597ebca5c4c3f101022a5a35d091c7 files/digest-portage-2.1_pre3-r1 253
 RMD160 c0cf87ab1669aea8b35951f9ded0a477377f0265 files/digest-portage-2.1_pre3-r1 253
 SHA256 31fbf92704c8c3836a781144c1fe6c1a5d7a81e14fa79973821df688baf3f63d files/digest-portage-2.1_pre3-r1 253
-MD5 0ad32101e0f506d39355653da01063db files/digest-portage-2.1_pre5-r4 253
-RMD160 0fda55221331fa51f8a16e2dc1dbe917d6029f08 files/digest-portage-2.1_pre5-r4 253
-SHA256 d35accf261e03854d47f27e0b03e01bbad0768a0d0fcc8e1a7f0934af6e4b3a0 files/digest-portage-2.1_pre5-r4 253
 MD5 3fb2faffeb73793f7928e07619991317 files/digest-portage-2.1_pre6-r6 253
 RMD160 db4da0bfd99ef42a13051e4089009e9ad3c316c2 files/digest-portage-2.1_pre6-r6 253
 SHA256 bf94181b86808452bb19e43fe4d58aeeb6736924e7bd453f38c0f166b227957c files/digest-portage-2.1_pre6-r6 253
@@ -124,16 +97,13 @@ SHA256 12bd64c40cfb73bbf504a314688437b2b94f18b37a3d8944f28e315291ce191c portage-
 MD5 908c5af92ff8ea543ed011aefd0832ea portage-2.1_pre3-r1.ebuild 4715
 RMD160 e73644193a07d9957562ea6442b4e7759d8c35a8 portage-2.1_pre3-r1.ebuild 4715
 SHA256 6f7f1500f7a6ab4a7d651a7dbe44695995fdd2a37e4c6826d5eb9de5749b458a portage-2.1_pre3-r1.ebuild 4715
-MD5 f1758097241d74ff2fbfecea1e831732 portage-2.1_pre5-r4.ebuild 5072
-RMD160 381f37b7fc7c2fd218fff4375f9f7672e4c69d10 portage-2.1_pre5-r4.ebuild 5072
-SHA256 f21564ed3d7f7ac1822464e8bc21d1f69cefe418582fba1ba6f146841899e99c portage-2.1_pre5-r4.ebuild 5072
 MD5 5296b2ec9f9abee2364631d8346bfb6e portage-2.1_pre6-r6.ebuild 5774
 RMD160 0d59861f5af0e3d87a9b14b443cebe179a630457 portage-2.1_pre6-r6.ebuild 5774
 SHA256 35fa1b8057eb5d6a52a0db89e287e8a7549b2615cd6552887a1b695f68dd173d portage-2.1_pre6-r6.ebuild 5774
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEInK8/ejvha5XGaMRAg0LAKDVtVpYGEcBHyexX7eTSzyl5aIG2QCfSctm
-Dea1QosQ8jUHxXIBJyaiFBo=
-=V/Po
+iD8DBQFEIx3s/ejvha5XGaMRAlHbAJ9+b6ASOAIzhhgS+FksO8i8Fii6owCfbtdS
+R0dF7VmBIJa4gW9NW+fmkIE=
+=bZXw
 -----END PGP SIGNATURE-----
