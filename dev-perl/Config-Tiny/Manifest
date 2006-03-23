@@ -1,40 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 326d70f030bfc4e8681b5025ffcd57e2 ChangeLog 3295
-RMD160 19ebe924dec98c75d78791daf1d85d6dbff8de71 ChangeLog 3295
-SHA256 ebfc97a8358da9929cf820921e4cf22c3aaa63a7fd275ab2ec4001a814d3f79c ChangeLog 3295
+MD5 5830e22e2899cc6bc772e619b3b4f565 ChangeLog 3393
 MD5 690b0ece2d4f69dcb49f1b5ac55968b4 Config-Tiny-1.ebuild 592
-RMD160 c8ee6afb90222c825298199241f6d79fcf0c931f Config-Tiny-1.ebuild 592
-SHA256 de10ec7f144ad43ef2dde96dcd061fb755a34b47204db3da44920f3dc3f34525 Config-Tiny-1.ebuild 592
 MD5 10bc9935e79aa2ef7a80a558845ca53f Config-Tiny-2.01.ebuild 590
-RMD160 4a581f3fc8f1e37955e598cf1b5931f5b5d3aadc Config-Tiny-2.01.ebuild 590
-SHA256 3b8f240d9a482f7dd5026edc63878602c8be86d02c51ec58a3e054df1bd34e85 Config-Tiny-2.01.ebuild 590
 MD5 d850ec209009e0d74af38addc800a3e3 Config-Tiny-2.02.ebuild 588
-RMD160 6dda329abcb625e9fb28dd7a62bc819863d6d2c0 Config-Tiny-2.02.ebuild 588
-SHA256 db52ea080983bdaa567c6b54a53d7133ab9433e43f34a3ab96a172d89126a369 Config-Tiny-2.02.ebuild 588
-MD5 1fc208775dd2e9ec71affd82acf6af46 Config-Tiny-2.04.ebuild 594
-RMD160 e7ac78bfecf71c4dcef809f304f106b75236d9ea Config-Tiny-2.04.ebuild 594
-SHA256 eeffdec5759cf56d94ceee8d4c2e72561d741cbac459475fa2ee6b134c7c7414 Config-Tiny-2.04.ebuild 594
+MD5 109ebe14fe1d61f3b1c518ae34b6fa69 Config-Tiny-2.04.ebuild 592
 MD5 75fd11ceb68441fd9a89bf8481d4d790 files/digest-Config-Tiny-1 64
-RMD160 78bcd5a5e9d25ce92d0a9a4f6f36221cb9213dc9 files/digest-Config-Tiny-1 64
-SHA256 1dc4750a1d513fdd902be846a7f7b8959262e989799025e3bf8aa0aecc50bab1 files/digest-Config-Tiny-1 64
 MD5 b420c127159664e2d97ea0628076ed80 files/digest-Config-Tiny-2.01 67
-RMD160 33eb8b68369512cedc795a584bf89ef917ed6989 files/digest-Config-Tiny-2.01 67
-SHA256 0032f30cc645ee4713313cf189219cd62df8adac605b618b72b56e967aa3f3e1 files/digest-Config-Tiny-2.01 67
 MD5 5ea9cef53f2418acb143bcc449d83741 files/digest-Config-Tiny-2.02 67
-RMD160 a711a030726d557e599801129dca6cc1600de3c0 files/digest-Config-Tiny-2.02 67
-SHA256 dc4b68f86c4876d9d392d4c8ad328028197d9bec69e2fef7f5ba78ac101a11ab files/digest-Config-Tiny-2.02 67
 MD5 de61aed232cb06cd7503fbb7226c80a8 files/digest-Config-Tiny-2.04 67
-RMD160 68f555c9e7c03cf5a6c4520efedb1a5bac2d03b7 files/digest-Config-Tiny-2.04 67
-SHA256 6e9f6482870af3dd6439a47fa3459ce67dd8c29aed1a2321d4536d4c15a97918 files/digest-Config-Tiny-2.04 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEIelftG5z4I8BtQoRArXgAJ9lB6XX717a20iVW3DIWk7/8lQv/QCeMz8f
-jhzajCAfa+pYmcoW4QhF2Cs=
-=o9dG
------END PGP SIGNATURE-----
