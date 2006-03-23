@@ -1,6 +1,13 @@
 # ChangeLog for games-simulation/simutrans
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.14 2005/10/13 20:30:42 mr_bones_ Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.15 2006/03/23 19:34:05 wolf31o2 Exp $
+
+*simutrans-0.88.5 (23 Mar 2006)
+
+  23 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +simutrans-0.88.5.ebuild:
+  Version bump to 0.88.5 and closing bug #125548. Thanks to Michael Schulz
+  <michaik@web.de> for the updated ebuild.
 
   13 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org>
   -simutrans-0.84.8.4.ebuild, -simutrans-0.84.16.2.ebuild:
