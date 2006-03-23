@@ -1,22 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b556177293690ceef23185234a2e5550 ChangeLog 1663
-RMD160 9383a9c2814b39882f34eb57bdd03c287b332a10 ChangeLog 1663
-SHA256 12482af09fe51b158521e0242e29b19138c8b6355e52a5f3a2224ca747723bd2 ChangeLog 1663
-MD5 4f001336d3586f17a77a5573aa9c0e04 files/digest-xkeyboard-config-0.7-r1 265
-RMD160 6b0855607630af9b09be007db4c6f190dd527a4a files/digest-xkeyboard-config-0.7-r1 265
-SHA256 255a2147fb168a17ca6a92818b46de8853577886e617b42e2df4fc8d1f64c53f files/digest-xkeyboard-config-0.7-r1 265
+MD5 fbb347289bd62e1ffcd05a7a845bedae ChangeLog 1921
+RMD160 675d9e6c264b1259c24b2ae9f59ba03bd4659d79 ChangeLog 1921
+SHA256 cecf3b2b3d921ce83187738143d336784bd434deaeb713e802719b73b331704c ChangeLog 1921
+MD5 9556c7c19ebd95071e3ea0002966918a files/0.7-fix-scroll-lock.patch 910
+RMD160 819048e5bab37bc7ea34c85188d902a5d9763e35 files/0.7-fix-scroll-lock.patch 910
+SHA256 2d553282be87b76adbd91ea31684810e3263f1b31eb7ca5a9da07bb8fe2e3c6a files/0.7-fix-scroll-lock.patch 910
+MD5 4f001336d3586f17a77a5573aa9c0e04 files/digest-xkeyboard-config-0.7-r2 265
+RMD160 6b0855607630af9b09be007db4c6f190dd527a4a files/digest-xkeyboard-config-0.7-r2 265
+SHA256 255a2147fb168a17ca6a92818b46de8853577886e617b42e2df4fc8d1f64c53f files/digest-xkeyboard-config-0.7-r2 265
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 419f1b7d1d42b7460243a893f40967e9 xkeyboard-config-0.7-r1.ebuild 992
-RMD160 21d450719da4f32c798931c7b0a44a2724aedf9b xkeyboard-config-0.7-r1.ebuild 992
-SHA256 4d9615617898ea75fb7e69c437c72f24f504f77b23b88cd5687fbcb6000373cc xkeyboard-config-0.7-r1.ebuild 992
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEDsHJrHF4yAQTrARAsoHAJ94stSlteuo6BOdNb5UNoGXThsz9wCgkIUv
-JoYEPUd+4oqdm4qx77VtRqI=
-=EQUg
------END PGP SIGNATURE-----
+MD5 6c2848316a324db32ccf7f047b6980a2 xkeyboard-config-0.7-r2.ebuild 1097
+RMD160 6af015359355864e20a124de51b731d54763ff13 xkeyboard-config-0.7-r2.ebuild 1097
+SHA256 50177070ad1c1e79018674f5326e5513690c6a24b79d076a6e15b6a672b4ee78 xkeyboard-config-0.7-r2.ebuild 1097
