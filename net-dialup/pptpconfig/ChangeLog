@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/pptpconfig
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/ChangeLog,v 1.8 2006/03/16 20:02:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/ChangeLog,v 1.9 2006/03/23 23:01:12 mrness Exp $
+
+  23 Mar 2006; Alin Nastac <mrness@gentoo.org> pptpconfig-20060222.ebuild:
+  Check if php was build with the required USE flags (#127062).
 
 *pptpconfig-20060222 (16 Mar 2006)
 
