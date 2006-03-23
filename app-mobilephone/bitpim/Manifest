@@ -1,22 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3530e38f26c40d6bb6e301ef15b02399 ChangeLog 1723
-MD5 aa42f5905e2c657512ba5b3efd9f6987 bitpim-0.7.33.ebuild 747
-MD5 80b60cd4a456eca5830c762a7a64973c bitpim-0.7.34.ebuild 748
-MD5 b5eb3622162aeeec834d3b972c12522f bitpim-0.8.04.ebuild 849
-MD5 6a6d344bf6e070859ad8aeda3589d510 bitpim-0.8.07.ebuild 864
-MD5 b8c894817739bd0b83ac2699d5cfb3c6 bitpim-0.8.08.ebuild 865
-MD5 b85ac1cda822a8d92521c1a4ef88f7b4 files/digest-bitpim-0.7.33 71
-MD5 b8b665f807f5a22fd495ace7b8080036 files/digest-bitpim-0.7.34 71
-MD5 86f1f1b35aa99d3a607f03d8053c4834 files/digest-bitpim-0.8.04 71
+MD5 000721a1e8ba856bd489d3e5713e6509 ChangeLog 1987
+MD5 17f43ba780ac1c3f6c9fc56c78e0ac3c bitpim-0.8.07.ebuild 887
+MD5 988001e6838973894fa89082d8bc8b01 bitpim-0.8.08.ebuild 887
 MD5 346ebc8ddd528ad678d42a777c8471f9 files/digest-bitpim-0.8.07 71
 MD5 0a0ef0672d7c7ddda19e132a49ca1a71 files/digest-bitpim-0.8.08 71
 MD5 b05575cd16c40945a62bcfee6f1fce07 metadata.xml 493
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEAE+ujG8pv1lIUX4RAqYzAJsF8yADy6snGTYfg/xsLcZyoioIbACfVoSG
-i3VZXeSQ1fiRJc8gKsURRqo=
-=c7Q7
+iD8DBQFEIzYAjG8pv1lIUX4RAnfaAJ97E4v6cc6RSqOaFDe0AMTP8sZEcQCaAxI4
+dTvFIoIsR5Vt4cX9JTXi43A=
+=PC23
 -----END PGP SIGNATURE-----

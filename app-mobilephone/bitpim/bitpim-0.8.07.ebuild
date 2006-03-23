@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.8.07.ebuild,v 1.5 2006/02/25 12:37:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.8.07.ebuild,v 1.6 2006/03/23 23:57:34 mrness Exp $
 
 inherit eutils rpm
 
@@ -16,6 +16,7 @@ IUSE=""
 RESTRICT="nostrip"
 
 RDEPEND="=virtual/libstdc++-3.3
+	=x11-libs/gtk+-2.8.8*
 	amd64? ( app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-compat )"
 
