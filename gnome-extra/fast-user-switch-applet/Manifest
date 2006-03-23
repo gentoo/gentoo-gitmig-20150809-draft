@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e58d0f434a668cb5878254fd128a485e ChangeLog 541
 MD5 c5358e2caad3a7ea9b2fc70097e9a1d2 fast-user-switch-applet-2.14.0.ebuild 1295
 MD5 cc3c1a7a6f3661189a2f3ec08e453327 files/digest-fast-user-switch-applet-2.14.0 295
 MD5 8b0560553235cfd96801898935f8ff94 metadata.xml 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEIvQuKRy60XGEcJIRAj5cAKCZdaw0I0PMOYLEeUF3SV4mh9C8FQCfZoAW
+4Dzpzyvqrpnlm54JfSuLzow=
+=h8H+
+-----END PGP SIGNATURE-----
