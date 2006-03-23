@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.6.1_alpha.ebuild,v 1.1 2006/03/06 18:07:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.6.1_alpha.ebuild,v 1.2 2006/03/23 06:02:43 mrness Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="clamav kaspersky debug ntlm pcre"
 
 DEPEND="!net-proxy/dansguardian-dgav
-	pcre? ( dev-libs/libpcre )
+	pcre? ( >=dev-libs/libpcre-6.0 )
 	clamav? ( app-antivirus/clamav )"
 
 S=${WORKDIR}/${MY_P}

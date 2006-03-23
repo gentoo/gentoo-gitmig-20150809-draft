@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.16 2006/03/06 18:07:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.17 2006/03/23 06:02:43 mrness Exp $
+
+  23 Mar 2006; Alin Nastac <mrness@gentoo.org>
+  dansguardian-2.9.6.1_alpha.ebuild:
+  Fix libpcre dependency (#127209).
 
 *dansguardian-2.9.6.1_alpha (06 Mar 2006)
 
