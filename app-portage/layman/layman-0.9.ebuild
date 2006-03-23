@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-0.9.ebuild,v 1.1 2006/03/12 17:26:31 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-0.9.ebuild,v 1.2 2006/03/23 21:05:37 ferdy Exp $
 
 inherit eutils distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~wrobel/layman/${PF}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~alpha ~x86"
 IUSE=""
 S=${WORKDIR}/${PF}
 
