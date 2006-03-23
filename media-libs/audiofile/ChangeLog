@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.38 2006/03/23 09:45:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.39 2006/03/23 09:48:31 flameeyes Exp $
+
+  23 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -audiofile-0.2.3-r1.ebuild, -audiofile-0.2.4.ebuild,
+  -audiofile-0.2.5.ebuild, -audiofile-0.2.6.ebuild:
+  Drop old versions.
 
 *audiofile-0.2.6-r2 (23 Mar 2006)
 

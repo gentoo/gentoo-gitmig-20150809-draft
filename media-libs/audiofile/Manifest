@@ -1,45 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 647cf8c8d0e2f357dc16531943d9530d ChangeLog 4754
-RMD160 a69ad67f7147e542301aec7cdeb0c501ed2a9f2e ChangeLog 4754
-SHA256 7d379fc31b21b654688bc76b12584cc1d22e0b3ed958ade31c140c3304449d9d ChangeLog 4754
-MD5 88ec4b8397907182504a73f2cdfc22ed audiofile-0.2.3-r1.ebuild 759
-RMD160 094c3602d97c3dc3497dcf09477dd7a0461192bc audiofile-0.2.3-r1.ebuild 759
-SHA256 1aefbafb8252c4de0b565732a594db41a5819aabfbbe195f796ee35e9d0069dd audiofile-0.2.3-r1.ebuild 759
-MD5 9c4292285afd4d6f71ab72895210a41a audiofile-0.2.4.ebuild 813
-RMD160 643ca2f34e6a78e3a1c206db30374477a3f5395e audiofile-0.2.4.ebuild 813
-SHA256 c6ba297bb427ccf5ef4c7117f55ab6baf236b5ed34f637db82307dc9f3abe09f audiofile-0.2.4.ebuild 813
-MD5 411f5ac97f189db7b07853db9349c612 audiofile-0.2.5.ebuild 813
-RMD160 64b31b7d7c9784a2cb5386f5bc0e6c726a68be74 audiofile-0.2.5.ebuild 813
-SHA256 3847d865e90d18348b64362dba1af593b1e37add2f414f41670abae6934869d2 audiofile-0.2.5.ebuild 813
+MD5 d093ef857e9a1d6ab41471bf1a60f757 ChangeLog 4936
+RMD160 3b129fe1704ebfb992272dd41bd1fce7544ec19b ChangeLog 4936
+SHA256 2af85adcdb54f6957a10ebbd539d204b0d8af7c5dd3cd8e4bdd6385ff50ce9f1 ChangeLog 4936
 MD5 2489ec77acaeae6361af8811fc31f38f audiofile-0.2.6-r1.ebuild 879
 RMD160 e5c47e79d2878101f5e7628bd9475ef16f6ecf6c audiofile-0.2.6-r1.ebuild 879
 SHA256 00e3217b9f9873274bd1a4ab69105930c9c25661729e3871d49b13cebe55eb7e audiofile-0.2.6-r1.ebuild 879
 MD5 f3e9e2264349cbb7e0dc89fb41e46d86 audiofile-0.2.6-r2.ebuild 935
 RMD160 a17aae7784248d70b02565778b278c3d07e470b4 audiofile-0.2.6-r2.ebuild 935
 SHA256 ec3a979f15bdfab55dab7fcbc0d861b7395e80ee17f12a4214afc4237cec6a29 audiofile-0.2.6-r2.ebuild 935
-MD5 2b2ff0144d0d4cac699f9c24bfd3f933 audiofile-0.2.6.ebuild 761
-RMD160 7358e2b6da1510019be306d5ae36f12fb1569c50 audiofile-0.2.6.ebuild 761
-SHA256 dd41bd4579428ec05c1e01716987027334e61e39c5e3e3b15c6abe34517fc301 audiofile-0.2.6.ebuild 761
 MD5 a9f80077df4cbb634b38f27805e377c8 files/audiofile-0.2.6-constantise.patch 11783
 RMD160 7477baadd07b8e0b9ffad8f1274062626eb3310a files/audiofile-0.2.6-constantise.patch 11783
 SHA256 1c71b33ae0756a56e94f42996e01991fa2b9147d9b21f7ae706df9546a3bc7a4 files/audiofile-0.2.6-constantise.patch 11783
 MD5 9d76ce996f4c8a8efa8854b6836bcc93 files/audiofile-0.2.6-m4.patch 273
 RMD160 c9b99a3b3d7c5e9a62d3aec0cfa7ea6e7b3932f5 files/audiofile-0.2.6-m4.patch 273
 SHA256 4e92a0e146dd4340c7e68e9f0bf301a4ee5c485d2d13cc3d2796b08c112ca74f files/audiofile-0.2.6-m4.patch 273
-MD5 970090dcbe2b745a5b3940fdae30e6be files/digest-audiofile-0.2.3-r1 67
-RMD160 66e70398c1dd4d82cd1391a71b0097bf930e2893 files/digest-audiofile-0.2.3-r1 67
-SHA256 2365a1b3c932d3d8b712ca2ca51e7631bf923a577cf512ac281d5d06b93d60aa files/digest-audiofile-0.2.3-r1 67
-MD5 229f6edb9a272909dd6c3f847c52c89f files/digest-audiofile-0.2.4 67
-RMD160 d72fcf613b1ce0b3b6c54c0542faf00e6afde0c0 files/digest-audiofile-0.2.4 67
-SHA256 dee05ebc52c8ea4a9403ae70d18c9d23065d178e5c0251ef4a52c6090a5e62e3 files/digest-audiofile-0.2.4 67
-MD5 bd21c46ede9b8210a6706ceda2b44659 files/digest-audiofile-0.2.5 67
-RMD160 33ac6dc1b93cd30427e67bad1f5bbf86f785b171 files/digest-audiofile-0.2.5 67
-SHA256 c7059aeff028941587fa8d507a937d3465593671819baad4e74d0aa802de5cb2 files/digest-audiofile-0.2.5 67
-MD5 614e3fa2ecce47cc2b638aee1d145dba files/digest-audiofile-0.2.6 67
-RMD160 a6ea2e97c5fb919ea2a06333d15fee8d2c9fa3e6 files/digest-audiofile-0.2.6 67
-SHA256 f9b1d5e77970ed217cb78537cdbb075a321c3a6d10f0b6187dfaaf1ddc20a90b files/digest-audiofile-0.2.6 67
 MD5 614e3fa2ecce47cc2b638aee1d145dba files/digest-audiofile-0.2.6-r1 67
 RMD160 a6ea2e97c5fb919ea2a06333d15fee8d2c9fa3e6 files/digest-audiofile-0.2.6-r1 67
 SHA256 f9b1d5e77970ed217cb78537cdbb075a321c3a6d10f0b6187dfaaf1ddc20a90b files/digest-audiofile-0.2.6-r1 67
@@ -55,7 +31,7 @@ SHA256 dfb196addaf8aa212436c53c3d47cda0d10c2850c59fa2dcb7554dfa10190af2 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEIm5PAiZjviIA2XgRAlPDAJ41JPad2WYHoI5Dc6zrRHiuyjNeMACg0xe1
-wZWj6GdAhhz10G4q73MqeTI=
-=vIDn
+iD8DBQFEIm79AiZjviIA2XgRAoXgAKDxzNJG42czIWwixW6NaT3A8FJ87gCgm8aK
+d3km9P0/Fuf2gXOauu/8LEs=
+=KHDC
 -----END PGP SIGNATURE-----
