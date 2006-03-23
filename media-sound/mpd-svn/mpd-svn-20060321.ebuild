@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20060321.ebuild,v 1.1 2006/03/21 23:50:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20060321.ebuild,v 1.2 2006/03/23 01:52:53 ticho Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="aac alsa ao audiofile flac icecast ipv6 mad mikmod mp3 musepack vorbis oss unicode"
+IUSE="aac alsa ao audiofile flac icecast ipv6 mad mikmod mp3 musepack oss unicode vorbis"
 
 DEPEND="dev-util/gperf
 	!media-sound/mpd
@@ -31,14 +31,11 @@ DEPEND="dev-util/gperf
 
 upgrade_warning() {
 	echo
-	ewarn "This package now correctly uses 'vorbis' USE flag, instead of 'ogg'."
-	ewarn "See http://bugs.gentoo.org/show_bug.cgi?id=101877 for details."
-	echo
 	ewarn "Home directory of user mpd, as well as default locations in mpd.conf have"
 	ewarn "been changed to /var/lib/mpd, please bear that in mind while updating"
 	ewarn "your mpd.conf file."
 	echo
-	epause 7
+	epause 5
 }
 
 pkg_setup() {
@@ -62,6 +59,7 @@ src_compile() {
 		$(use_enable audiofile audiofiletest) \
 		$(use_enable flac libFLACtest) \
 		$(use_enable flac) \
+		$(use_enable flac oggflac) \
 		$(use_enable icecast shout) \
 		$(use_enable ipv6) \
 		$(use_enable !mad mpd-mad) \
@@ -69,8 +67,7 @@ src_compile() {
 		$(use_enable mikmod libmikmodtest) \
 		$(use_enable mikmod mod) \
 		$(use_enable musepack mpc) \
-		$(use_enable vorbis ogg) \
-		$(use_enable vorbis oggtest) \
+		$(use_enable vorbis oggvorbis) \
 		$(use_enable vorbis vorbistest) \
 		|| die "could not configure"
 
@@ -123,21 +120,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	einfo "The default config now binds the daemon strictly to localhost,"
-	einfo "rather than to all available IPs."
-	echo
-	if ! use ao ; then
-		ewarn "As you're not using libao for audio output, you need to"
-		ewarn "adjust audio_output sections in /etc/mpd.conf to use"
-		ewarn "ALSA or OSS. See"
-		ewarn "/usr/share/doc/${PF}/mpdconf.example.gz."
-		echo
-	fi
+	upgrade_warning
 	einfo "Please make sure that MPD's pid_file is set to /var/run/mpd/mpd.pid."
 	echo
 	ewarn "Note that this is just a development version of Music Player Daemon,"
 	ewarn "so if you want to report any bug to MPD developers, please state this fact in"
 	ewarn "your bug report, as well as the fact that you used a ${P} Gentoo ebuild."
-	upgrade_warning
 }
