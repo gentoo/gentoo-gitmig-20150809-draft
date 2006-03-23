@@ -1,34 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fd5717181cf2dab9ce3180d73b366b48 ChangeLog 3399
-RMD160 76d36a9f26d55275ffd158c9501ce38fc2636f2f ChangeLog 3399
-SHA256 aa423e9366c3c3f15ca3b071c7090811643887ec138ca95e79e0e7ac5199f779 ChangeLog 3399
-MD5 4947283654d41020eab4a9f93cb65c3e arphicfonts-0.1-r1.ebuild 2767
-RMD160 7170a938ed2ee13d86d9c651af60c0145e6368a7 arphicfonts-0.1-r1.ebuild 2767
-SHA256 f81f5e78c48cb5703627df76b56c54e00f059eb9ff62eb8de8d46c9d3c41101b arphicfonts-0.1-r1.ebuild 2767
+MD5 7a90a6cf61bf709cf61abe7fe93dbfb6 ChangeLog 3608
+RMD160 accce73ba3c89bb75a389eb56baad8e4e2c38ded ChangeLog 3608
+SHA256 836b7702324e1dfcde5dabdf32f6e529e83a8c2d4dc7e299b670820f1b62cf3a ChangeLog 3608
 MD5 a6e6ccc1906d30902abf7ffa3c58f81f arphicfonts-0.1-r2.ebuild 772
 RMD160 adea15b7a3467950858e4084a3749f76205f47c9 arphicfonts-0.1-r2.ebuild 772
 SHA256 7468cd7ab1f2e93ec37fa345d7038ccfe73057ca4b24c45972f5cf7b49da7906 arphicfonts-0.1-r2.ebuild 772
-MD5 8092f72476c54669d231fa1e36c4272d files/CN-fonts.scale 316
-RMD160 4dcc322f35f9afa274cb3f0650c9bf2a46fa3e43 files/CN-fonts.scale 316
-SHA256 ed4e5b3db8279297627b6c06f0a1ef6c69847ede26164d37560a8de17cd42eef files/CN-fonts.scale 316
-MD5 3bd7bba2b62aba255babce12594cbdd8 files/TW-fonts.scale 945
-RMD160 ad23ba351c639baa5e8393e6571b002b38181c3e files/TW-fonts.scale 945
-SHA256 f7ed537a56c36a36e308d4aeb73ced8d399e83238f335a416ba788154cb8479c files/TW-fonts.scale 945
-MD5 2fe8346e604f4ae761d1a8cbb551f6c7 files/digest-arphicfonts-0.1-r1 244
-RMD160 796ce17f9533fc5bf833018ecb96864aa0e0a2c6 files/digest-arphicfonts-0.1-r1 244
-SHA256 4680375dc64aaf1109d7d03ecd07adbe52dfc6bd0b42b76ee53b6166f3c59b41 files/digest-arphicfonts-0.1-r1 244
 MD5 2fe8346e604f4ae761d1a8cbb551f6c7 files/digest-arphicfonts-0.1-r2 244
 RMD160 796ce17f9533fc5bf833018ecb96864aa0e0a2c6 files/digest-arphicfonts-0.1-r2 244
 SHA256 4680375dc64aaf1109d7d03ecd07adbe52dfc6bd0b42b76ee53b6166f3c59b41 files/digest-arphicfonts-0.1-r2 244
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 RMD160 e22fbca96af27631c4910bc93f69d81280ddd96e metadata.xml 175
 SHA256 0dc53674ee3ca2348bedd390f639dac96f537cce8cd0c550c13917de7b61f2e8 metadata.xml 175
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHh342+ySkm8kpY0RAvOTAJ4q/4EKhz5mF4ZBh25CKKOjg+fvkQCfaglg
-5l5CEXdwghZ5hkVxsGv8r8k=
-=fY8P
------END PGP SIGNATURE-----
