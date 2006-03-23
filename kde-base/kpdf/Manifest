@@ -1,6 +1,9 @@
-MD5 b081781165723922aa09eeacf4c180f1 ChangeLog 11424
-RMD160 b75946454c6a4d3af0f985d1b31854041b42956c ChangeLog 11424
-SHA256 f4ce7f659033ad81072e92d3fb63de57dc324ffaeefcb940f8a8a3c8b6f5cab7 ChangeLog 11424
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c6f23f9efef3b114e6d5003f0a20f502 ChangeLog 11535
+RMD160 484baa1cc3b5de1b01a22c08407ce89fa66cd124 ChangeLog 11535
+SHA256 45ae87cab677b4450bd0f0cec48de3b62d784f6682ef919fc1c30b24826d6799 ChangeLog 11535
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1 221
 RMD160 ce80baa4c1806e9aacce02a4860a401e0ed7408f files/digest-kpdf-3.4.1 221
 SHA256 a5c43c1dc911a886d673620d40b300bcc9d5847fd0c55deaa7fa4fbc3b435c71 files/digest-kpdf-3.4.1 221
@@ -49,9 +52,9 @@ SHA256 a09f9dc50f9ce50cd9793223c6e7bde8efbd3ccb79e11470c484a91746347df3 files/di
 MD5 e0d0c50cee8e40212fc24a50a13a7f17 files/digest-kpdf-3.5.1-r2 813
 RMD160 1e1ec4123d21ed4bbb6bb91574024da513771269 files/digest-kpdf-3.5.1-r2 813
 SHA256 2bca43de8c2173c91a2b8505ce03bd64df1eea8815b9535d4690bf02d0377e53 files/digest-kpdf-3.5.1-r2 813
-MD5 64d3a195496428cb92d68de29ebf0fa0 files/digest-kpdf-3.5.2 259
-RMD160 2a4a7d812c7c571f5c5a8e4d4b8c8eb4fe7f52ae files/digest-kpdf-3.5.2 259
-SHA256 087152d6d869b8938c16752f1b5571e63dc1db0fa19f2e8913c00e77cebe3970 files/digest-kpdf-3.5.2 259
+MD5 4cd21cf1dda4d6e4a1d233b8f74d8240 files/digest-kpdf-3.5.2 518
+RMD160 d169f1b95af3ba919f5d5c20d6cd668ca77c8186 files/digest-kpdf-3.5.2 518
+SHA256 ced659c452eeeeb3057e56d16de64c5896102f6d87c8d18d30bfdcee0316e734 files/digest-kpdf-3.5.2 518
 MD5 653bd55a1e87c51731d0b0512051774e files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
 RMD160 0a28706eebe96636d063ecfc2960dfe01666ec43 files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
 SHA256 97c82623aca3131364e2d66b02b95a7ca2c5b6eacd17c4d15ea5a9890049b536 files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
@@ -130,9 +133,16 @@ SHA256 e3437659671a1b33b1158312d96b7cec082ad4cba2d8b8240dc5acc969efd805 kpdf-3.5
 MD5 b71520405927b5861fa74ecca94abc04 kpdf-3.5.1.ebuild 993
 RMD160 9e25987ff1d37e5698d3481c2e1d0df7aeac7987 kpdf-3.5.1.ebuild 993
 SHA256 95f38c1f1202e356473e9cddf642462ca7e57ab99bf41e88a5473d6d6f5e28ac kpdf-3.5.1.ebuild 993
-MD5 af0a7a28ef26f23fde292f2ec0df192b kpdf-3.5.2.ebuild 1369
-RMD160 972da20319768af499e4120b1c249b064119c5fb kpdf-3.5.2.ebuild 1369
-SHA256 d94f4ff80a8e2cc213279043cf5130ee240a9442a115f204d4f3bae0677781c0 kpdf-3.5.2.ebuild 1369
+MD5 fb965408f64474cb1945924880886b52 kpdf-3.5.2.ebuild 1085
+RMD160 182c5cf62880e86e51abe34c5ce79cc306c1e476 kpdf-3.5.2.ebuild 1085
+SHA256 6119c2c1f959bd51f70ac7c9c15754294adaf1ebb552e1be08dc0b9e3712f741 kpdf-3.5.2.ebuild 1085
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEIfibAiZjviIA2XgRArymAJ42fA357lWK95SeGmLXtlLHkupvdgCeK8Wp
+85suyDcHzhlKbojiNJjU4V4=
+=gAFA
+-----END PGP SIGNATURE-----
