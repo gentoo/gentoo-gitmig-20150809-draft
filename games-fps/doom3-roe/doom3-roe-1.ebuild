@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.1 2006/03/23 00:56:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.2 2006/03/23 01:00:28 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -14,8 +14,7 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 RESTRICT="nostrip"
 
-DEPEND=""
-RDEPEND="games-fps/doom3"
+RDEPEND=">=games-fps/doom3-1.3.1302-r2"
 
 S=${WORKDIR}
 

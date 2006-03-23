@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doom3-roe
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/ChangeLog,v 1.1 2006/03/23 00:56:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/ChangeLog,v 1.2 2006/03/23 01:00:28 wolf31o2 Exp $
+
+  23 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> doom3-roe-1.ebuild:
+  Added specific version check on games-fps/doom3 so we don't hit
+  collision-protect.
 
 *doom3-roe-1 (23 Mar 2006)
 
