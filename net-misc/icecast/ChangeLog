@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/icecast
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.53 2005/12/16 20:54:31 chainsaw Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.54 2006/03/23 06:05:28 cardoe Exp $
+
+*icecast-2.3.1-r1 (23 Mar 2006)
+
+  23 Mar 2006; Doug Goldstein <cardoe@gentoo.org> +files/icecast.xml,
+  +icecast-2.3.1-r1.ebuild:
+  Updated default config to actually work rather then silently die because of
+  bad log directory. Created log directory and icecast user to run as. Updated
+  with chutzpah's permission.
 
 *icecast-2.3.1 (16 Dec 2005)
 
