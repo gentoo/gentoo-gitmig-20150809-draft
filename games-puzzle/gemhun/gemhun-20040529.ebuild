@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/gemhun-20040529.ebuild,v 1.1 2006/03/06 20:22:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/gemhun-20040529.ebuild,v 1.2 2006/03/23 05:16:48 mr_bones_ Exp $
 
 inherit eutils autotools games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gemhun/GemHunters-src-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND="dev-games/kyra
@@ -22,7 +22,7 @@ DEPEND="dev-games/kyra
 	media-libs/sdl-net
 	media-libs/libpng"
 
-S="${WORKDIR}/GemHunters-${PV}"
+S=${WORKDIR}/GemHunters-${PV}
 
 src_unpack() {
 	unpack ${A}
@@ -35,10 +35,10 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Install failed"
+	make DESTDIR="${D}" install || die "Install failed"
 	dodoc AUTHORS ChangeLog README README.Install TODO
-	cp -r ../fairylands "${D}${GAMES_DATADIR}/GemHunters/pax/"
-	cp -r ../stars_in_the_night "${D}${GAMES_DATADIR}/GemHunters/pax/"
+	insinto "${GAMES_DATADIR}/GemHunters/pax/"
+	doins -r ../fairylands ../stars_in_the_night || die "doins failed"
 	doicon pixmaps/${PN}.png
 	make_desktop_entry ${PN} "GemHunter" ${PN}.xpm
 	prepgamesdirs
