@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p11.ebuild,v 1.4 2006/03/14 02:27:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p11.ebuild,v 1.5 2006/03/23 23:07:21 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -78,8 +78,6 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}"/${PN}-3.0-configs.patch
-
-	sed -i 's:-lcurses:-lncurses:' configure || die "sed configure"
 }
 
 src_compile() {
@@ -101,7 +99,6 @@ src_compile() {
 
 	# Force linking with system curses ... the bundled termcap lib
 	# sucks bad compared to ncurses
-	export bash_cv_termcap_lib=libcurses
 	myconf="${myconf} --with-curses"
 
 	econf \

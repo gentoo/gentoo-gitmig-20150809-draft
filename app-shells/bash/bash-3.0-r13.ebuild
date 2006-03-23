@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r13.ebuild,v 1.3 2006/03/08 01:21:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r13.ebuild,v 1.4 2006/03/23 23:07:21 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -83,8 +83,6 @@ src_unpack() {
 	# Add strnlen function for non-glibc systems, as one of Fedora's patches
 	# requires it.
 	epatch "${FILESDIR}"/${P}-strnlen.patch
-
-	sed -i 's:-lcurses:-lncurses:' configure || die "sed configure"
 }
 
 src_compile() {
@@ -105,21 +103,15 @@ src_compile() {
 	#use static && export LDFLAGS="${LDFLAGS} -static"
 	use nls || myconf="${myconf} --disable-nls"
 
-	echo 'int main(){}' > "${T}"/term-test.c
-	if ! $(tc-getCC) -static -lncurses "${T}"/term-test.c 2> /dev/null ; then
-		export bash_cv_termcap_lib=gnutermcap
-	else
-		export bash_cv_termcap_lib=libcurses
-		myconf="${myconf} --with-curses"
-	fi
+	# Force linking with system curses ... the bundled termcap lib
+	# sucks bad compared to ncurses
+	myconf="${myconf} --with-curses"
 
 	econf \
 		$(use_with afs) \
 		--disable-profiling \
 		--without-gnu-malloc \
 		${myconf} || die
-	# Make sure we always link statically with ncurses
-	sed -i "/^TERMCAP_LIB/s:-lncurses:-Wl,-Bstatic -lncurses -Wl,-Bdynamic:" Makefile || die "sed failed"
 	emake -j1 || die "make failed"  # see bug 102426
 }
 
