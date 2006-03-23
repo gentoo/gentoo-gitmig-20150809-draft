@@ -1,19 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 88871b0bd0c603c58cf7c384361b097c ChangeLog 2324
-MD5 dd391aa944ad99dab49403955383ea5a artwiz-fonts-2.4-r1.ebuild 1467
+MD5 cce0c1216e0147f6f4783ded1b6ace97 ChangeLog 2458
+RMD160 d7fe42e879de8e2dd81856e229a8adec69d7fb1d ChangeLog 2458
+SHA256 7031ef3e77d9ce57d28d4c30b43bd3cd1d2848e46dd068c381bcf53eea47a0f5 ChangeLog 2458
+MD5 37af5596456f15cbbcd8288faabec1d9 artwiz-fonts-2.4-r1.ebuild 1519
+RMD160 e6e63ecb65b663c545be1ce864bd36ee765a52e4 artwiz-fonts-2.4-r1.ebuild 1519
+SHA256 07a9163fd497624aafdaeabda4799a8a9ed0f6ca2d60eb9e7b08b2eb30a83bc9 artwiz-fonts-2.4-r1.ebuild 1519
 MD5 5a7e01cbb2a541aedf33774491139c6b artwiz-fonts-2.4-r2.ebuild 1502
+RMD160 57c61d5d15f6bd767a4a9c9d8f05576f439a5bae artwiz-fonts-2.4-r2.ebuild 1502
+SHA256 99fa41dc8b05bace68bdf289d5a37197953dc038dcfd80fb1fc1a11783805b09 artwiz-fonts-2.4-r2.ebuild 1502
 MD5 f6f1125760be20fb760fc3b053646f7a artwiz-fonts-2.4-r3.ebuild 1184
-MD5 6bcd7b2b59fa9fc515b68a781941239a artwiz-fonts-2.4.ebuild 1317
+RMD160 43d394eccb8da3a417a24280038e405b6b211bc6 artwiz-fonts-2.4-r3.ebuild 1184
+SHA256 077088308a577782f13233f03af03589fbb120635a7f63994ed162047f565328 artwiz-fonts-2.4-r3.ebuild 1184
+MD5 7354bdf54c357b0ce5af12121706dcb7 artwiz-fonts-2.4.ebuild 1369
+RMD160 3d3323ce60d87a2cd36efd75c9da9307518a5b50 artwiz-fonts-2.4.ebuild 1369
+SHA256 f97930d76981883e33d63b05cf9f6eb6e1f4a9fa735c2fb47663f2a1e78eab42 artwiz-fonts-2.4.ebuild 1369
 MD5 a7f07fa24970169b9a931592e6840eee files/digest-artwiz-fonts-2.4 68
+RMD160 3925a5c2d84b6d7883607fd71747286113e0dc03 files/digest-artwiz-fonts-2.4 68
+SHA256 ac189f594426fa306e94d0c680dd2c3f5e1cbbe2448a7ccdedf7239d4ba37dce files/digest-artwiz-fonts-2.4 68
 MD5 a7f07fa24970169b9a931592e6840eee files/digest-artwiz-fonts-2.4-r1 68
+RMD160 3925a5c2d84b6d7883607fd71747286113e0dc03 files/digest-artwiz-fonts-2.4-r1 68
+SHA256 ac189f594426fa306e94d0c680dd2c3f5e1cbbe2448a7ccdedf7239d4ba37dce files/digest-artwiz-fonts-2.4-r1 68
 MD5 a7f07fa24970169b9a931592e6840eee files/digest-artwiz-fonts-2.4-r2 68
+RMD160 3925a5c2d84b6d7883607fd71747286113e0dc03 files/digest-artwiz-fonts-2.4-r2 68
+SHA256 ac189f594426fa306e94d0c680dd2c3f5e1cbbe2448a7ccdedf7239d4ba37dce files/digest-artwiz-fonts-2.4-r2 68
 MD5 a7f07fa24970169b9a931592e6840eee files/digest-artwiz-fonts-2.4-r3 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxgfjI1lqEGTUzyQRAhpmAJ99+AnkU09axD9bxUetBjsGeIxnYgCeKrE0
-EgjIaX9dviS8W/aYXbY+iio=
-=l9md
------END PGP SIGNATURE-----
+RMD160 3925a5c2d84b6d7883607fd71747286113e0dc03 files/digest-artwiz-fonts-2.4-r3 68
+SHA256 ac189f594426fa306e94d0c680dd2c3f5e1cbbe2448a7ccdedf7239d4ba37dce files/digest-artwiz-fonts-2.4-r3 68
