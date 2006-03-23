@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.32 2006/03/23 08:54:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.33 2006/03/23 09:04:39 spyderous Exp $
 
 inherit gnuconfig eutils
 
@@ -11,7 +11,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha amd64 hppa mips ppc64 ia64"
 IUSE="tcpd"
-RDEPEND="=dev-libs/glib-1.2*"
+RDEPEND="=dev-libs/glib-1.2*
+	!<x11-base/xorg-x11-7"
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	sys-devel/autoconf
