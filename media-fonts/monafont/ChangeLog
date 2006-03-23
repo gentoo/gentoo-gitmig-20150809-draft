@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/monafont
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.20 2006/01/11 21:48:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.21 2006/03/23 21:04:19 spyderous Exp $
+
+  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  monafont-2.90-r1.ebuild:
+  Port to modular X.
 
 *monafont-2.90-r2 (11 Jan 2006)
 

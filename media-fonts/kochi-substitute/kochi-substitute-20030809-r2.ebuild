@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/kochi-substitute-20030809-r2.ebuild,v 1.4 2004/10/05 03:23:11 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/kochi-substitute-20030809-r2.ebuild,v 1.5 2006/03/23 21:00:40 spyderous Exp $
 
 IUSE="X"
 
@@ -14,7 +14,13 @@ SLOT="0"
 KEYWORDS="~ia64 ~x86 ~alpha ~sparc ~ppc ~hppa ~amd64 ~mips ppc64"
 
 DEPEND="virtual/libc
-	X? ( virtual/x11 )"
+	X? ( || ( ( x11-apps/mkfontdir
+				x11-apps/ttmkfdir
+				media-libs/fontconfig
+			)
+			virtual/x11
+		)
+	)"
 
 S=${WORKDIR}/${PN}-${PV:0:8}
 FONTPATH="/usr/share/fonts/${PN}"

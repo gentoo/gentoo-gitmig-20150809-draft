@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/jisx0213-fonts-20040425.ebuild,v 1.2 2005/07/15 17:10:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/jisx0213-fonts-20040425.ebuild,v 1.3 2006/03/23 20:56:55 spyderous Exp $
 
-IUSE="X"
+IUSE=""
 
 DESCRIPTION="Japanese fixed fonts that cover JIS0213 charset"
 
@@ -27,8 +27,11 @@ SLOT="0"
 
 KEYWORDS="alpha amd64 ppc ~sparc x86"
 
-DEPEND="virtual/x11"
-RDEPEND="X? ( virtual/x11 )"
+DEPEND="|| ( ( x11-apps/bdftopcf
+			x11-apps/mkfontdir
+		)
+		virtual/x11
+	)"
 
 S=${WORKDIR}
 FONTDIR="/usr/share/fonts/jisx0213"

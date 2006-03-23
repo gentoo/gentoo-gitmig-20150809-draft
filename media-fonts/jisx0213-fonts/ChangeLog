@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/jisx0213-fonts
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/ChangeLog,v 1.8 2006/01/12 04:43:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/ChangeLog,v 1.9 2006/03/23 20:56:55 spyderous Exp $
+
+  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  jisx0213-fonts-20040425.ebuild:
+  Port to modular X.
 
 *jisx0213-fonts-20040425-r2 (12 Jan 2006)
 

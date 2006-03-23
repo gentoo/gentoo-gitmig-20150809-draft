@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/vc-fonts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/ChangeLog,v 1.8 2006/01/11 21:04:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/ChangeLog,v 1.9 2006/03/23 21:15:30 spyderous Exp $
+
+  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  vc-fonts-20020207.ebuild:
+  Port to modular X.
 
 *vc-fonts-20020207-r1 (11 Jan 2006)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/shinonome/shinonome-0.9.10.ebuild,v 1.8 2005/07/15 17:14:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/shinonome/shinonome-0.9.10.ebuild,v 1.9 2006/03/23 21:11:04 spyderous Exp $
 
 IUSE=""
 
@@ -13,7 +13,11 @@ SLOT=0
 KEYWORDS="alpha amd64 ppc sparc x86"
 
 DEPEND="virtual/libc
-	virtual/x11
+	|| ( ( x11-apps/bdftopcf
+			x11-apps/mkfontdir
+		)
+		virtual/x11
+	)
 	dev-lang/perl
 	sys-apps/gawk"
 RDEPEND=""
