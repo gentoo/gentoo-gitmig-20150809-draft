@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.4.10.ebuild,v 1.2 2006/02/04 00:00:12 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.4.10.ebuild,v 1.3 2006/03/23 21:40:18 plasmaroo Exp $
 
 DESCRIPTION="Circuit drawing and schematic capture program."
 SRC_URI="http://opencircuitdesign.com/xcircuit/archive/${P}.tgz"
@@ -18,8 +18,7 @@ DEPEND="virtual/ghostscript
 	)"
 
 src_compile() {
-
-	sed -e '693s:LDFLAGS="":LDFLAGS="-L/usr/X11R6/lib":;694i      LIBS="${LIBS} ${LIB_SPECS}"' -i configure.in
+	sed -i -e '693s:LDFLAGS="":LDFLAGS="-L/usr/X11R6/lib":;694i      LIBS="${LIBS} ${LIB_SPECS}"' configure.in
 	aclocal && autoconf || die "Could not recreate configuration files!"
 
 	if use tcltk; then
@@ -35,15 +34,15 @@ src_compile() {
 		make tcl || die
 	fi
 	make || die
-
 }
 
 src_install () {
-
 	emake DESTDIR=${D} install || die "Installation failed"
 	if use tcltk; then
 		emake DESTDIR=${D} install-tcl || die "Installation failed"
 	fi
 	dodoc COPYRIGHT README*
 
+	doman ${D}/usr/lib/xcircuit-3.4/man/xcircuit.1
+	rm ${D}/usr/lib/xcircuit-3.4/man -rf
 }

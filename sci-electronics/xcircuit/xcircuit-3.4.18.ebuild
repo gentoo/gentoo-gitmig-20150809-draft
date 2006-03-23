@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.4.18.ebuild,v 1.2 2006/03/10 23:49:34 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.4.18.ebuild,v 1.3 2006/03/23 21:40:18 plasmaroo Exp $
 
 DESCRIPTION="Circuit drawing and schematic capture program."
 SRC_URI="http://opencircuitdesign.com/xcircuit/archive/${P}.tgz"
@@ -29,4 +29,7 @@ src_install () {
 		emake DESTDIR=${D} install-tcl || die "Installation failed"
 	fi
 	dodoc COPYRIGHT README*
+
+	doman ${D}/usr/lib/xcircuit-3.4/man/xcircuit.1
+	rm ${D}/usr/lib/xcircuit-3.4/man -rf
 }
