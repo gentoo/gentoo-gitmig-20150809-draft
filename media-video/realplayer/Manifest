@@ -1,15 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 235f80bcbd6e73997daed48729db130d ChangeLog 7550
+MD5 3e410a5259a81e7499b05813e8369750 ChangeLog 7683
+RMD160 53cfc0c8dcfef47a5ea1768193ef2dc7eb7beba0 ChangeLog 7683
+SHA256 f7f2e6a61dd739d098d3ebac88754a708fb24bb92689b49d9cac791eef5e2b28 ChangeLog 7683
 MD5 5770afeac4496095cec26d13745be3b4 files/10realplayer 48
+RMD160 3767177e4ec9397e8f9967056d77c194bca823db files/10realplayer 48
+SHA256 3b82bcfc249ae8bed6141deff5d5902076020ffcf03a31f819e3403e454e28a4 files/10realplayer 48
 MD5 fe07b99482f4666466b84e33f7dcb94f files/digest-realplayer-10.0.6 85
+RMD160 7565595664ff7e8183be01bd3e634ce76dd023ef files/digest-realplayer-10.0.6 85
+SHA256 69fe1550149395f60e514969700740ca5200e379e616bd542e1ed754eb6c576c files/digest-realplayer-10.0.6 85
+MD5 9ffc46e572fa2887a7a7ca14d4492b1d files/digest-realplayer-10.0.7 301
+RMD160 a2e9aec8ffc79ff4424d0071b7fc3076ee80f10c files/digest-realplayer-10.0.7 301
+SHA256 7308ee3d6edc726719a4226f0031bcffec7b0a73f47397fbd64ee290ec544a23 files/digest-realplayer-10.0.7 301
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
+SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
 MD5 1ca8d0c2b8d96b34153677b9f1c17561 realplayer-10.0.6.ebuild 1982
+RMD160 daf553a8b79911bed10e771c5524addacde74ad8 realplayer-10.0.6.ebuild 1982
+SHA256 eff71bc2d79168204282380aa1628f345c2b4682912e8647976057900d5b9f3b realplayer-10.0.6.ebuild 1982
+MD5 870138d4f640210d8f8fc89c421ba122 realplayer-10.0.7.ebuild 2005
+RMD160 86d7b17a45dd0e5a543be64e5285cacc87e02aab realplayer-10.0.7.ebuild 2005
+SHA256 06663f6e597a885c074398c90748cfa7c6e161746910ba70907ddef10795739e realplayer-10.0.7.ebuild 2005
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDgG9UAiZjviIA2XgRAuMjAJ0bIXPcXqHUEFvrA/U+AfeioFjGhgCg4TkN
-7j4c1v25/G8dn0I02s0F1iE=
-=mX90
+iD8DBQFEIxiMAiZjviIA2XgRAoseAKDiOzb5+RNfkeGvedaeBz/HnpolZQCgzXfI
+KecPg4k7CMrPO4SMHiZbbgQ=
+=Ni4J
 -----END PGP SIGNATURE-----
