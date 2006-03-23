@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r11.ebuild,v 1.9 2006/03/08 01:21:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r11.ebuild,v 1.10 2006/03/23 05:11:36 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -25,29 +25,29 @@ RDEPEND=""
 src_unpack() {
 	unpack ${P}.tar.gz
 
-	cd ${S}
-	epatch ${DISTDIR}/${P}-gentoo.diff.bz2
+	cd "${S}"
+	epatch "${DISTDIR}"/${P}-gentoo.diff.bz2
 
 	for x in ${PLEVEL//x}
 	do
-		epatch ${DISTDIR}/${PN}${PV/\.}-${x}
+		epatch "${DISTDIR}"/${PN}${PV/\.}-${x}
 	done
 
 	# Remove autoconf dependency
 	sed -i -e "/&& autoconf/d" Makefile.in
 
 	# Readline is slow with multibyte locale, bug #19762
-	epatch ${FILESDIR}/${P}-multibyte-locale.patch
+	epatch "${FILESDIR}"/${P}-multibyte-locale.patch
 	# Segfault on empty herestring
-	epatch ${FILESDIR}/${P}-empty-herestring.patch
+	epatch "${FILESDIR}"/${P}-empty-herestring.patch
 	# Fix broken rbash functionality
-	epatch ${FILESDIR}/${P}-rbash.patch
+	epatch "${FILESDIR}"/${P}-rbash.patch
 	# Fix parallel make, bug #41002.
-	epatch ${FILESDIR}/${P}-parallel-build.patch
+	epatch "${FILESDIR}"/${P}-parallel-build.patch
 	# Fix using bash with post-20040808 glibc ebuilds (from fedora)
-	epatch ${FILESDIR}/${P}-jobs.patch
+	epatch "${FILESDIR}"/${P}-jobs.patch
 	# Fix bash call to setlocale #64266
-	epatch ${FILESDIR}/${P}-setlocale.patch
+	epatch "${FILESDIR}"/${P}-setlocale.patch
 
 	# Enable SSH_SOURCE_BASHRC (#24762)
 	echo '#define SSH_SOURCE_BASHRC' >> config-top.h
@@ -86,20 +86,15 @@ src_compile() {
 	#use static && export LDFLAGS="${LDFLAGS} -static"
 	use nls || myconf="${myconf} --disable-nls"
 
-	echo 'int main(){}' > ${T}/term-test.c
-	if ! $(tc-getCC) -static -lncurses ${T}/term-test.c 2> /dev/null ; then
-		export bash_cv_termcap_lib=gnutermcap
-	else
-		export bash_cv_termcap_lib=libcurses
-		myconf="${myconf} --with-curses"
-	fi
+	# Force linking with system curses ... the bundled termcap lib
+	# sucks bad compared to ncurses
+	export bash_cv_termcap_lib=libcurses
+	myconf="${myconf} --with-curses"
 
 	econf \
 		--disable-profiling \
 		--without-gnu-malloc \
 		${myconf} || die
-	# Make sure we always link statically with ncurses
-	sed -i "/^TERMCAP_LIB/s:-lncurses:-Wl,-Bstatic -lncurses -Wl,-Bdynamic:" Makefile || die "sed failed"
 	emake || die "make failed"
 }
 
@@ -114,7 +109,7 @@ src_install() {
 	use minimal && rm -f ${D}/usr/bin/bashbug ${D}/usr/share/man*/bashbug*
 
 	insinto /etc/bash
-	doins ${FILESDIR}/bashrc
+	doins "${FILESDIR}"/bashrc
 
 	if use build; then
 		rm -rf ${D}/usr
