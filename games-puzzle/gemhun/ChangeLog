@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/gemhun
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/ChangeLog,v 1.6 2006/03/23 05:16:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/ChangeLog,v 1.7 2006/03/23 19:47:43 hansmi Exp $
+
+  23 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
+  gemhun-20040529.ebuild:
+  Stable on ppc.
 
   23 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org>
   gemhun-20040529.ebuild:
