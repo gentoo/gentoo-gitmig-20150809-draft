@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom-data/doom-data-1.ebuild,v 1.8 2005/05/14 02:04:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom-data/doom-data-1.ebuild,v 1.9 2006/03/23 08:00:08 mr_bones_ Exp $
 
 inherit games
 
@@ -18,7 +18,7 @@ DEPEND="!games-fps/freedoom"
 S=${WORKDIR}
 
 src_install() {
-	insinto ${GAMES_DATADIR}/doom-data
+	insinto "${GAMES_DATADIR}"/doom-data
 	doins *.wad || die
 	prepgamesdirs
 }
