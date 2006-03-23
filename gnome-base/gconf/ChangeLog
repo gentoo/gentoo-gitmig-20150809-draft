@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.143 2006/03/18 19:25:50 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.144 2006/03/23 18:31:32 compnerd Exp $
+
+  23 Mar 2006; Saleem Abdulrasool <compnerd@gentoo.org> gconf-2.14.0.ebuild:
+  Fixing the glib dep as per the configure.in. Thanks to phreak for pointing
+  this out.  Fixing GTK+ dep (bug #126820).
 
 *gconf-2.14.0 (18 Mar 2006)
 
