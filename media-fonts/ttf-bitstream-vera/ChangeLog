@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ttf-bitstream-vera
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ChangeLog,v 1.17 2005/09/16 16:32:42 dang Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ChangeLog,v 1.18 2006/03/23 20:40:33 spyderous Exp $
+
+  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  -ttf-bitstream-vera-1.10-r2.ebuild:
+  Get rid of ebuild unported to modular X, it's breaking category-level commits.
 
   16 Sep 2005; <dang@gentoo.org> ttf-bitstream-vera-1.10-r3.ebuild:
   Marked stable on amd64

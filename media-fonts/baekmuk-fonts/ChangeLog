@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/baekmuk-fonts
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.23 2006/01/12 06:34:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.24 2006/03/23 20:48:25 spyderous Exp $
+
+  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  -baekmuk-fonts-2.1-r1.ebuild:
+  Get rid of ebuild unported to modular X, it's breaking category-level commits.
 
 *baekmuk-fonts-2.2-r1 (12 Jan 2006)
 

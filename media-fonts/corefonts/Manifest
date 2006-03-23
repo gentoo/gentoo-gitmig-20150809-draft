@@ -1,18 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 e81e0733ba085602c2779ea965abf82f ChangeLog 2771
+RMD160 79dd11c81108236020c008ff65dcabe730ddfd0c ChangeLog 2771
+SHA256 a30b909e03c70763786110b6b998fa4223f6dd5ab79696732025f78881ac7a50 ChangeLog 2771
 MD5 257e5311f8e4943b82b9eadda15f66f8 corefonts-1-r2.ebuild 1224
-MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
-MD5 d8175d454aeee743f1d82915f7c0dff8 corefonts-1.ebuild 1204
-MD5 0b9a9f00da7498f297553a1823d964a4 corefonts-1-r1.ebuild 2025
-MD5 9eca73736d6acd56c960a91bd90c4a51 ChangeLog 2590
-MD5 8c75d66eb050c05f2fc1ae13fb722722 files/digest-corefonts-1-r1 624
+RMD160 0f7b7ab9c6624a811d91c507a33f7b6308c3257e corefonts-1-r2.ebuild 1224
+SHA256 df5a189044fa57a994bfbbfae0790ba906d379641d75ecf2312999ef50263fc3 corefonts-1-r2.ebuild 1224
 MD5 8c75d66eb050c05f2fc1ae13fb722722 files/digest-corefonts-1-r2 624
-MD5 8c75d66eb050c05f2fc1ae13fb722722 files/digest-corefonts-1 624
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDCmmjgIKl8Uu19MoRAuzKAJ9i3O8OeiYclEBvrFweJjN6r/VbqwCfaoQc
-8PaQoST4RTAL8hAJzQBfiTU=
-=NdGv
------END PGP SIGNATURE-----
+RMD160 aac2826fc70909b77826eb973ede841bad484a15 files/digest-corefonts-1-r2 624
+SHA256 22ec553669a818de83637d748a508fc6656e15a31b149dae9b79cc6b1fe4a518 files/digest-corefonts-1-r2 624
+MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+RMD160 e563fdca0707ee5927deab77f2e5ef79816384ca metadata.xml 158
+SHA256 9a8722fb0b5a1992b3942e85f23df4e08f10cabc2d783ca887479abe115b3ea8 metadata.xml 158
