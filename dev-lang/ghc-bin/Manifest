@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0e4c9ad1f34bd275f35d5a555d842f6a ChangeLog 7251
+MD5 c4cb279385a846f5197b30e6a41422a8 ChangeLog 7384
 MD5 a82ba08a8abb4ae38bcc8d467c665e7b files/10ghc 40
 MD5 aeec673d67613d60a91b5d8d3a11b184 files/digest-ghc-bin-6.2.2-r1 218
 MD5 3919aa4d517b8bc37bc59b8e7dc4a334 files/digest-ghc-bin-6.4 356
-MD5 63892ec148f4ffa7ed8436e18dac1f44 files/digest-ghc-bin-6.4.1 1798
+MD5 83488d2213f2b8e9a99161f03490f759 files/digest-ghc-bin-6.4.1 492
 MD5 e7ba0887c43fd8333a4d1bd92c184244 files/ghc-updater 9045
 MD5 d4c41357e843c4af8ce3e6a4c1596627 ghc-bin-6.2.2-r1.ebuild 1032
-MD5 ab6f8990359c3de9ea13bfcf03e11e13 ghc-bin-6.4.1.ebuild 3277
+MD5 78af58acea9182c845d902df7febc75c ghc-bin-6.4.1.ebuild 3277
 MD5 9e5e3b68f1863c338a231811b31c00f1 ghc-bin-6.4.ebuild 1137
 MD5 c694674dcbef799cd4fdb6914683ebff metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEIDD+KRy60XGEcJIRAvuTAJ0U+Z/UdVor2sxZ2qUl34FViI6sIACfQFw2
-Czfhz17ej27fDffZA7w2I7c=
-=I1D5
+iD8DBQFEIwi8FdQwWVoAgN4RAuoyAKCU9sAedSdRO3MGYJX7Js1i4I2glwCg76Hj
++Wek4LQ0BnIvux/Z6pmWQZU=
+=dBoF
 -----END PGP SIGNATURE-----

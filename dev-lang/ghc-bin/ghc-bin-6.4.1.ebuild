@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.12 2006/03/21 16:59:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1.ebuild,v 1.13 2006/03/23 20:44:37 chriswhite Exp $
 
 inherit base multilib ghc-package
 
@@ -16,7 +16,7 @@ SRC_URI="x86?  ( mirror://gentoo/${P}-x86.tbz2 )
 		 ppc64? ( mirror://gentoo/${P}-ppc64.tbz2 )"
 
 LICENSE="as-is"
-KEYWORDS="~alpha ~amd64 ~hppa ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ppc ~ppc64 sparc x86"
 SLOT="0"
 IUSE="" # use the non-binary version if you want to have more choice
 
