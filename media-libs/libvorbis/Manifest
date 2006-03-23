@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7c2b1f741b8fb2441ea54fefea15d0f0 ChangeLog 8548
+MD5 c075cd3260ff80ad7b2db351150c56c7 ChangeLog 8662
+RMD160 da9e37da8161d8f33abe2b3b6b82bbff4299e542 ChangeLog 8662
+SHA256 a93990573b16c13b01456a736e330ce05cf0bf68c6c492dc158aab19c273153a ChangeLog 8662
 MD5 fa4a831d30804a9840476e2e65c42241 files/digest-libvorbis-1.0.1-r2 68
+RMD160 e79a59771961439a3175a67882a75eb97abbc4a9 files/digest-libvorbis-1.0.1-r2 68
+SHA256 d222f57fdd4e555892bf6f1381de7434f3c562d1625140767e35730d6ee5397c files/digest-libvorbis-1.0.1-r2 68
 MD5 55835dd2e7b0020ab52064c9f7dc4ff8 files/digest-libvorbis-1.1.0 136
+RMD160 de6c93cec56136942cb17cc8b3c1363a55d8af7c files/digest-libvorbis-1.1.0 136
+SHA256 3d84fe89374f815bff4144517ee3e69e0c253d50157eccd2b3a4267d41a138d8 files/digest-libvorbis-1.1.0 136
 MD5 52caf7763a1d3f220948d9135c53f5e5 files/digest-libvorbis-1.1.1 68
-MD5 f3f8f9a5fe2f9e1ca10aa505edeeb4e2 files/digest-libvorbis-1.1.2 68
+RMD160 22826287ea5fbcc23a267ac5a27600bd125e0791 files/digest-libvorbis-1.1.1 68
+SHA256 188bde2a52be8dc8313109d06991e67ac6484647e503f7ae82e420058c9d5055 files/digest-libvorbis-1.1.1 68
+MD5 b2c2de64723ab3bb1585e8f72d9fb73d files/digest-libvorbis-1.1.2 533
+RMD160 80b1a31defb55a6a49b8786e46d71fa8e43892e2 files/digest-libvorbis-1.1.2 533
+SHA256 b48758a485c5ee43eb83d87a26f1455ac914ad11ec510f44222d08f13b4bb18a files/digest-libvorbis-1.1.2 533
 MD5 25a931049bc6c2f70e638da6aee48f35 libvorbis-1.0.1-r2.ebuild 2379
+RMD160 2293440e855023b3d14971265d82fb955b57f771 libvorbis-1.0.1-r2.ebuild 2379
+SHA256 dc54b920dfbf3af718f76187dcd661e1d51ebae34a258f2987ee5f7e2ee2e543 libvorbis-1.0.1-r2.ebuild 2379
 MD5 d20b7288fd98e77267c5600abdf5ac76 libvorbis-1.1.0.ebuild 2616
+RMD160 ee493a4643924081b588f99a5e0a8afa8de365ac libvorbis-1.1.0.ebuild 2616
+SHA256 8ea99b744988698692c6bcc02f4721a78006e63911be7cd80206c7895d6ccf01 libvorbis-1.1.0.ebuild 2616
 MD5 1d9944b876b9f20c3e5a31c9593d306a libvorbis-1.1.1.ebuild 2510
-MD5 3c9a076aeece06cb90feea7f7f33e36b libvorbis-1.1.2.ebuild 2491
+RMD160 7318f427bf2c6a8e432130fe228ee661dce9ae4f libvorbis-1.1.1.ebuild 2510
+SHA256 6e0bcf71264ff784c704c745c013686f3bece627691de12738443e99bdca7717 libvorbis-1.1.1.ebuild 2510
+MD5 d03fd841bdb7c2e0d7e31ce56e54f78c libvorbis-1.1.2.ebuild 2615
+RMD160 ae1ba194d0142b821a269adad9d9751e8e75e295 libvorbis-1.1.2.ebuild 2615
+SHA256 46bb39dbe8b1689e853f0d5ee0707476ce32e58f05ee240470fa62e9c75bc66a libvorbis-1.1.2.ebuild 2615
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDwwvgwUpWvClEHQoRAtkIAJ9keefo1mypJxb2w8AMkcrDvwDJxACfS+qT
-XtuAjvHgJLIdm/s4+xP6UUo=
-=gNwA
------END PGP SIGNATURE-----
+RMD160 68406e733c1a9f26b7ab37e79ab53b3f59305b3a metadata.xml 252
+SHA256 5ab00710d822d203a1a38e1b6a9754137de4fe2cf5c4e79470419ed3f3927450 metadata.xml 252
