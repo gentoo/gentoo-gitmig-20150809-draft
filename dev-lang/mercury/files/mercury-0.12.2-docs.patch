@@ -1,0 +1,20 @@
+--- mercury-compiler-0.12.2.orig/doc/Mmakefile	2005-08-17 03:57:40.000000000 +1200
++++ mercury-compiler-0.12.2/doc/Mmakefile	2006-03-12 18:41:32.000000000 +1300
+@@ -120,7 +120,7 @@
+ 	# formatted versions of the man pages.
+ 	# But it might make sense to add them.
+ .PHONY: all
+-all: $(INFOPAGES) $(DVI) $(HTML) manpages $(MDB_DOC) 
++all: $(INFOPAGES) $(HTML) manpages $(MDB_DOC) 
+ #all: ps pdf text formatted_manpages
+ 
+ #-----------------------------------------------------------------------------#
+@@ -327,7 +327,7 @@
+ 	# versions of the documentation.  If they are added they should
+ 	# be installed here.
+ .PHONY: install
+-install: install_info install_html install_dvi install_manpages \
++install: install_info install_html install_manpages \
+ 	install_mdb_doc
+ 	# install_text install_ps
+ 
