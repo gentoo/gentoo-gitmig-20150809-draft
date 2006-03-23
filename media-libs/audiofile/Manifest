@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 59ca7531c7e6a64d6fa53a81d9855245 ChangeLog 4536
-RMD160 7a86ad37aaf241b424552de1e9df6db91c5837c8 ChangeLog 4536
-SHA256 f0005526ad9f06e511f2246d54c303cb40fe452421bc5272867687edbf3b5776 ChangeLog 4536
+MD5 647cf8c8d0e2f357dc16531943d9530d ChangeLog 4754
+RMD160 a69ad67f7147e542301aec7cdeb0c501ed2a9f2e ChangeLog 4754
+SHA256 7d379fc31b21b654688bc76b12584cc1d22e0b3ed958ade31c140c3304449d9d ChangeLog 4754
 MD5 88ec4b8397907182504a73f2cdfc22ed audiofile-0.2.3-r1.ebuild 759
 RMD160 094c3602d97c3dc3497dcf09477dd7a0461192bc audiofile-0.2.3-r1.ebuild 759
 SHA256 1aefbafb8252c4de0b565732a594db41a5819aabfbbe195f796ee35e9d0069dd audiofile-0.2.3-r1.ebuild 759
@@ -16,9 +16,15 @@ SHA256 3847d865e90d18348b64362dba1af593b1e37add2f414f41670abae6934869d2 audiofil
 MD5 2489ec77acaeae6361af8811fc31f38f audiofile-0.2.6-r1.ebuild 879
 RMD160 e5c47e79d2878101f5e7628bd9475ef16f6ecf6c audiofile-0.2.6-r1.ebuild 879
 SHA256 00e3217b9f9873274bd1a4ab69105930c9c25661729e3871d49b13cebe55eb7e audiofile-0.2.6-r1.ebuild 879
+MD5 f3e9e2264349cbb7e0dc89fb41e46d86 audiofile-0.2.6-r2.ebuild 935
+RMD160 a17aae7784248d70b02565778b278c3d07e470b4 audiofile-0.2.6-r2.ebuild 935
+SHA256 ec3a979f15bdfab55dab7fcbc0d861b7395e80ee17f12a4214afc4237cec6a29 audiofile-0.2.6-r2.ebuild 935
 MD5 2b2ff0144d0d4cac699f9c24bfd3f933 audiofile-0.2.6.ebuild 761
 RMD160 7358e2b6da1510019be306d5ae36f12fb1569c50 audiofile-0.2.6.ebuild 761
 SHA256 dd41bd4579428ec05c1e01716987027334e61e39c5e3e3b15c6abe34517fc301 audiofile-0.2.6.ebuild 761
+MD5 a9f80077df4cbb634b38f27805e377c8 files/audiofile-0.2.6-constantise.patch 11783
+RMD160 7477baadd07b8e0b9ffad8f1274062626eb3310a files/audiofile-0.2.6-constantise.patch 11783
+SHA256 1c71b33ae0756a56e94f42996e01991fa2b9147d9b21f7ae706df9546a3bc7a4 files/audiofile-0.2.6-constantise.patch 11783
 MD5 9d76ce996f4c8a8efa8854b6836bcc93 files/audiofile-0.2.6-m4.patch 273
 RMD160 c9b99a3b3d7c5e9a62d3aec0cfa7ea6e7b3932f5 files/audiofile-0.2.6-m4.patch 273
 SHA256 4e92a0e146dd4340c7e68e9f0bf301a4ee5c485d2d13cc3d2796b08c112ca74f files/audiofile-0.2.6-m4.patch 273
@@ -37,6 +43,9 @@ SHA256 f9b1d5e77970ed217cb78537cdbb075a321c3a6d10f0b6187dfaaf1ddc20a90b files/di
 MD5 614e3fa2ecce47cc2b638aee1d145dba files/digest-audiofile-0.2.6-r1 67
 RMD160 a6ea2e97c5fb919ea2a06333d15fee8d2c9fa3e6 files/digest-audiofile-0.2.6-r1 67
 SHA256 f9b1d5e77970ed217cb78537cdbb075a321c3a6d10f0b6187dfaaf1ddc20a90b files/digest-audiofile-0.2.6-r1 67
+MD5 4105d3728b33a7f3cd97f5fc624d8eac files/digest-audiofile-0.2.6-r2 247
+RMD160 8f06d81fe8cd82a97e65815187a7cf71d41c2f91 files/digest-audiofile-0.2.6-r2 247
+SHA256 cf9132cf2b223722cc92e520d50d8caa1079bf61808600ae770029f2c527c13a files/digest-audiofile-0.2.6-r2 247
 MD5 6be24f4f613faf959f406fcbe756324e files/sfconvert-eradicator.patch 4345
 RMD160 eda6048771abb9565516e5d8429644d71de7d0c8 files/sfconvert-eradicator.patch 4345
 SHA256 02193e1db0d0d9ee0c299dbb6f0225d92a2103c84f385017f0596c783452c402 files/sfconvert-eradicator.patch 4345
@@ -44,9 +53,9 @@ MD5 b263ff7675308d90b75a170acae3f5ff metadata.xml 177
 RMD160 c4ff678488aa3bd8f3e5e4cf6e52a56caba3dad9 metadata.xml 177
 SHA256 dfb196addaf8aa212436c53c3d47cda0d10c2850c59fa2dcb7554dfa10190af2 metadata.xml 177
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDEUPAiZjviIA2XgRAkstAJ9FHmqfds+ALy4IRRQmYic+a8TFXgCdE1ms
-BIOccpdYTu4s+un7PuHIvpA=
-=WeOj
+iD8DBQFEIm5PAiZjviIA2XgRAlPDAJ41JPad2WYHoI5Dc6zrRHiuyjNeMACg0xe1
+wZWj6GdAhhz10G4q73MqeTI=
+=vIDn
 -----END PGP SIGNATURE-----
