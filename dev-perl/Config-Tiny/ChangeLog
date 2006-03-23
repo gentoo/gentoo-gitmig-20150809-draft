@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Config-Tiny
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/ChangeLog,v 1.28 2006/02/13 10:58:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/ChangeLog,v 1.29 2006/03/23 00:18:52 mcummings Exp $
+
+  23 Mar 2006; Michael Cummings <mcummings@gentoo.org>
+  Config-Tiny-2.04.ebuild:
+  Unmasking sparc and x86
 
   13 Feb 2006; <mcumming@gentoo.org> Config-Tiny-1.ebuild,
   Config-Tiny-2.01.ebuild, Config-Tiny-2.02.ebuild, Config-Tiny-2.04.ebuild:

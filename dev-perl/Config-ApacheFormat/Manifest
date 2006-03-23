@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 832ad7a6f9721ae346a42a29502df4bb ChangeLog 956
 RMD160 f6f42a75ee280ba8a2f8eacff761947d956b1a73 ChangeLog 956
 SHA256 64a03b9e125eaa0a8faad642bc6cdd304713bbad7c312a6dcda6598a87768876 ChangeLog 956
-MD5 6baa7167576c052e7a638c13bd382635 Config-ApacheFormat-1.2.ebuild 686
-RMD160 e5de22cb0acfc53025ed6fb04b1478ba4b1ac028 Config-ApacheFormat-1.2.ebuild 686
-SHA256 d66c659f5d34390f83701c9f62ce5a7b5524ec5b0088a4d1abdead19e5c4f91b Config-ApacheFormat-1.2.ebuild 686
-MD5 264b8643c3c696651ffebb539ac2b70f files/digest-Config-ApacheFormat-1.2 74
-RMD160 659f1e6630890b7400a9ec058c76af2b21cae3f3 files/digest-Config-ApacheFormat-1.2 74
-SHA256 6451ed3ce73126f661c1c4b546adaf355520b67483d8b564ad3298c085d369b8 files/digest-Config-ApacheFormat-1.2 74
+MD5 fcf7a290c362d67ead43e994d50e1ad8 Config-ApacheFormat-1.2.ebuild 684
+RMD160 cae1a4f3472aadf664fbd013a8676ef61961eb70 Config-ApacheFormat-1.2.ebuild 684
+SHA256 f19424831f6a2c305f7fbcb34c2a60a65c1f45229b583c51f883aeb27b8c29b5 Config-ApacheFormat-1.2.ebuild 684
+MD5 2b87e0c46531ff45a8deddad1a85681b files/digest-Config-ApacheFormat-1.2 268
+RMD160 d73e6225e382d23c2898d8d60b3c115c63c3981d files/digest-Config-ApacheFormat-1.2 268
+SHA256 a25c81ba1c508dcacc8d2fbce0920d8f99f959cd2105d99df40f32d23e3afefc files/digest-Config-ApacheFormat-1.2 268
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8GYztG5z4I8BtQoRApe5AJ4uqGPlIvALIax46lZJgiOQmyfwkgCfRV3q
-1u7BxPwOslfGhRU+Nm0FYRg=
-=k2K4
------END PGP SIGNATURE-----
