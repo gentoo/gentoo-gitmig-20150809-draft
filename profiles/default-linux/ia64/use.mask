@@ -79,8 +79,6 @@ pike
 
 timidity
 
-firebird
-
 # emacs segfaults during build
 xemacs
 
@@ -88,3 +86,6 @@ xemacs
 # Modular X: mask for architectures on which they aren't available
 video_cards_nsc
 video_cards_newport
+
+# dev-db/firebird-1.5.x entirely lacks ia64 support
+firebird
