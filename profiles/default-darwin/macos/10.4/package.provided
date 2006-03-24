@@ -55,6 +55,7 @@ mail-mta/postfix-2.0.8
 media-gfx/gimp-print-5.0.0_beta2
 media-libs/fontconfig-1.0.1
 media-libs/freetype-2.1.1
+media-libs/glut-3.7
 net-analyzer/net_snmp-5.0.8
 net-analyzer/netcat-110
 net-analyzer/netinfo-324
