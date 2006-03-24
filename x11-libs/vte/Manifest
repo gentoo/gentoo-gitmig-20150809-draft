@@ -2,7 +2,7 @@ MD5 d4b2967a9da0f804d1dd6985249d8aec ChangeLog 13804
 MD5 41b41aaa36ba84805514d34f2d9b491f files/digest-vte-0.11.13-r2 64
 MD5 71c3b1aad083c8366c3501d857d9b622 files/digest-vte-0.11.16-r1 64
 MD5 40760af0a48b104d3ac748c00bbbc0d6 files/digest-vte-0.11.17 64
-MD5 0b831e62e4aff62fc94a6e001531da80 files/digest-vte-0.11.18 238
+MD5 77b5db632db856e1cb6c0095ac817a5f files/digest-vte-0.11.18 64
 MD5 479a2fa414f97d51d41c5118418d12d8 files/digest-vte-0.12.0 235
 MD5 f8d6220ac03de9b337c4b0ec5243f55f files/vte-0.11.13-memory_fix.patch 7661
 MD5 3d000a15f9aa0f3c44eb22175d54c314 files/vte-0.11.16-pkgconfig_libs_fix.patch 564
@@ -13,5 +13,5 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 7dd7c2b3c82a64d42c27385b8a5fd21e vte-0.11.13-r2.ebuild 1403
 MD5 4ad8d90fe29fd65d0789a535d0a5eb4f vte-0.11.16-r1.ebuild 1347
 MD5 7737f72cd3e8550e451a4106b0c7b18a vte-0.11.17.ebuild 1272
-MD5 c8ed8b5b032dfc67a5c433f45423e860 vte-0.11.18.ebuild 1287
+MD5 ee9311db0ea1c8f0ac028d0266bb9006 vte-0.11.18.ebuild 1286
 MD5 267cd7c92624346bef68e6c64dd27441 vte-0.12.0.ebuild 1298
