@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-ftb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ftb/ChangeLog,v 1.6 2006/01/16 18:09:10 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ftb/ChangeLog,v 1.7 2006/03/24 21:13:17 agriffis Exp $
+
+  24 Mar 2006; Aron Griffis <agriffis@gentoo.org> desklet-ftb-0.3.2.ebuild:
+  Mark 0.3.2 ~ia64
 
   16 Jan 2006; Joe Sapp <nixphoeni@gentoo.org> desklet-ftb-0.3.2.ebuild:
   Updated HOMEPAGE and SRC_URI to reflect new gDesklets website
