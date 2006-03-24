@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.8.ebuild,v 1.18 2006/03/24 12:36:26 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.0.0.ebuild,v 1.1 2006/03/24 12:36:26 exg Exp $
 
 inherit libtool multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/expat/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 ppc-macos s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="test"
 
 DEPEND="test? ( >=dev-libs/check-0.8 )"
@@ -32,8 +32,7 @@ src_test() {
 }
 
 src_install() {
-	einstall man1dir="${D}/usr/share/man/man1" || die "einstall failed"
-	dosed /usr/$(get_libdir)/libexpat.la #81568
+	make install DESTDIR="${D}" || die
 	dodoc Changes README
 	dohtml doc/*
 }
