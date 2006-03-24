@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7245b2ae1fce9c11003ed94ae5fc6bdc ChangeLog 558
-RMD160 d2494df492345fce1eec1d8e20ef68c36e868323 ChangeLog 558
-SHA256 9d1b82e0ae334ecaf09d53b2f2cf7a6dab62d2656a630e1f3c3c2d1e71e5263f ChangeLog 558
+MD5 ac1e262353e7a37158182231d52b0a4f ChangeLog 705
+RMD160 3afc51a7d500ed9910de9de53b4a33e01ba876fe ChangeLog 705
+SHA256 8e58dd601ddba01b7961d8e524bae6cad46fb71aee41b8edb2ac1be2432607f4 ChangeLog 705
 MD5 c3afc69f917a783ebd53cf2de38065dc files/09nvidia 61
 RMD160 b69c3282ba6195112e312fe34bdcb12544aef8ca files/09nvidia 61
 SHA256 14702d6726cc9f0ad832a3cc90059999eb956f9e3a35397cb63cfa6347b33e39 files/09nvidia 61
@@ -40,15 +37,9 @@ SHA256 ac79d4eaa41badaf82e4e69992d43f4fc4f5eb0732b0a0e6ee2debef268a4390 files/di
 MD5 ef2c4ecedb45b67d79b43ffe58c660cf files/digest-nvidia-glx-1.0.7667-r1 163
 RMD160 e457d68cee6a21f60fcc284f9c4b4cb66690db3b files/digest-nvidia-glx-1.0.7667-r1 163
 SHA256 2520add3990135d6070fb5554ee38a6681d3085ebf44975aa023e47ad133bb51 files/digest-nvidia-glx-1.0.7667-r1 163
-MD5 b23efa632026470bcf33c50fdef740ae files/digest-nvidia-glx-1.0.7676-r1 243
-RMD160 991e823c5599b848814af6f1e1be483f67a0317b files/digest-nvidia-glx-1.0.7676-r1 243
-SHA256 b218042f54532bda751c8a8a47a52d623815bae9926017860f36be1e0f9c4f45 files/digest-nvidia-glx-1.0.7676-r1 243
 MD5 b23efa632026470bcf33c50fdef740ae files/digest-nvidia-glx-1.0.7676-r2 243
 RMD160 991e823c5599b848814af6f1e1be483f67a0317b files/digest-nvidia-glx-1.0.7676-r2 243
 SHA256 b218042f54532bda751c8a8a47a52d623815bae9926017860f36be1e0f9c4f45 files/digest-nvidia-glx-1.0.7676-r2 243
-MD5 eafb3ff0c01e832a5a4abc80f9e7eec7 files/digest-nvidia-glx-1.0.8174 164
-RMD160 b1e70e85fb101f2543e42aa0576b75ddfcf35e6b files/digest-nvidia-glx-1.0.8174 164
-SHA256 b5db007553592412480e0943a92e3810fb1425dde9281804bf3f4e08e10de583 files/digest-nvidia-glx-1.0.8174 164
 MD5 eafb3ff0c01e832a5a4abc80f9e7eec7 files/digest-nvidia-glx-1.0.8174-r1 164
 RMD160 b1e70e85fb101f2543e42aa0576b75ddfcf35e6b files/digest-nvidia-glx-1.0.8174-r1 164
 SHA256 b5db007553592412480e0943a92e3810fb1425dde9281804bf3f4e08e10de583 files/digest-nvidia-glx-1.0.8174-r1 164
@@ -76,25 +67,12 @@ SHA256 4549469ac586b031d3e88ab71f37403412fc86fb5f994f2653463e9745e6c05e nvidia-g
 MD5 a1755dd26fa5a4385585393fdd289085 nvidia-glx-1.0.7667-r1.ebuild 8439
 RMD160 2c04e61565929454c5fc886a3aab24b743c0a625 nvidia-glx-1.0.7667-r1.ebuild 8439
 SHA256 bf041bd1e6d01cc1c8172120c230f856441f72ad9afa8cc20b007ca5fcb80378 nvidia-glx-1.0.7667-r1.ebuild 8439
-MD5 c5510d0f03c651b7239a15519dc7333f nvidia-glx-1.0.7676-r1.ebuild 9198
-RMD160 003ebea4c0c16bd6f7623ab777af913d21c1b090 nvidia-glx-1.0.7676-r1.ebuild 9198
-SHA256 8188760608fbbece84648bb346397b5b30b365f273ddb1f053adb72405f1306b nvidia-glx-1.0.7676-r1.ebuild 9198
 MD5 4e23f0df215096becb57dfdf0a4cd0ac nvidia-glx-1.0.7676-r2.ebuild 9284
 RMD160 8d72eb094bf4e386acad18de332290b362cb027f nvidia-glx-1.0.7676-r2.ebuild 9284
 SHA256 82f6cddee336cd44f95c5e3efd9cc2784424e807fb064bbf08f65009c2aed9a3 nvidia-glx-1.0.7676-r2.ebuild 9284
 MD5 e9f4638756a3f409bc85bb6ec7ebf055 nvidia-glx-1.0.8174-r1.ebuild 9402
 RMD160 2a904375b77b736856892b76523c96d0fd6b994b nvidia-glx-1.0.8174-r1.ebuild 9402
 SHA256 70ead2c869d7b322d3bd0f30c74614ed78080658777e36c27fa541e4425fec0b nvidia-glx-1.0.8174-r1.ebuild 9402
-MD5 a3068da8b2b571c2adc7d301c7841d91 nvidia-glx-1.0.8174.ebuild 9287
-RMD160 67ede257056fd764b80b61bc3496145804680909 nvidia-glx-1.0.8174.ebuild 9287
-SHA256 457fb64521841d536c13b644929c6d324dc4af53c203db2323a128f0cd63d12d nvidia-glx-1.0.8174.ebuild 9287
 MD5 a81ecc63754ab2b656b7d41af2caa3b7 nvidia-glx-1.0.8178.ebuild 8529
 RMD160 5656183c965e318996bf9a1df29c5911419ab9d6 nvidia-glx-1.0.8178.ebuild 8529
 SHA256 dba91bd1816c945905dd8c94fdd5b1ae4ed2d4ddd9d3102a3ea9671d5eefcd80 nvidia-glx-1.0.8178.ebuild 8529
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEJFYBOpjtAl+gMRURAm9QAJ47aIBsj5mozaROK6eeL7kaaoWSGwCgtjP1
-L9imAHyDjP8Zaf1aHsZqHEM=
-=FtP7
------END PGP SIGNATURE-----
