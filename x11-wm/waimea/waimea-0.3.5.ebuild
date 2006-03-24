@@ -1,10 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.3.5.ebuild,v 1.11 2004/07/15 01:16:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.3.5.ebuild,v 1.12 2006/03/24 13:11:13 usata Exp $
 
 DESCRIPTION="Window manager based on BlackBox"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-HOMEPAGE="http://waimea.sf.net/"
+HOMEPAGE="http://waimea.sourceforge.net/
+	http://www.freedesktop.org/wiki/Software/waimea"
 
 LICENSE="GPL-2"
 SLOT="0"

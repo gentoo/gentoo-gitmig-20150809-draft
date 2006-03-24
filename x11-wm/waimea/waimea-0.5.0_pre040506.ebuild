@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.9 2005/05/05 02:47:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.10 2006/03/24 13:11:13 usata Exp $
 
 inherit eutils
 
@@ -10,7 +10,8 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Window manager based on BlackBox"
 # Temporary URL until SF's CVS is back online
 SRC_URI="http://www.cs.umu.se/~c99drn/waimea/${P/_pre/-}.tar.gz"
-HOMEPAGE="http://www.waimea.org/"
+HOMEPAGE="http://waimea.sourceforge.net/
+	http://www.freedesktop.org/wiki/Software/waimea"
 
 LICENSE="GPL-2"
 SLOT="0"
