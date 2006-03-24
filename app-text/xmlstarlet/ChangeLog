@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xmlstarlet
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.8 2005/06/02 06:27:36 wormo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.9 2006/03/24 12:19:53 usata Exp $
+
+  24 Mar 2006; Mamoru KOMACHI <usata@gentoo.org> xmlstarlet-1.0.0.ebuild,
+  xmlstarlet-1.0.1.ebuild:
+  Fixed compile error with recent libxml and libxslt. Thanks to Sam Jacobson
+  <sam@eversoft.co.nz>. This closes bug #106259.
 
   02 Jun 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   xmlstarlet-1.0.1.ebuild:

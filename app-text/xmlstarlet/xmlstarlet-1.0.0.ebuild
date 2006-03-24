@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.0.ebuild,v 1.2 2005/03/22 07:37:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.0.ebuild,v 1.3 2006/03/24 12:19:53 usata Exp $
 
 inherit flag-o-matic
 
@@ -22,7 +22,9 @@ DEPEND=">=dev-libs/libxml2-2.6.12
 
 src_compile() {
 	append-ldflags -lgcrypt
-	econf || die
+	local xsltlibs="-lxslt -lexslt"
+	local xmllibs="-lxml2"
+	LIBXSLT_LIBS="${xsltlibs}" LIBXML_LIBS="${xmllibs}" econf || die
 	emake || die
 }
 
