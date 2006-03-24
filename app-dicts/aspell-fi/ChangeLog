@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-fi
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fi/ChangeLog,v 1.1 2005/07/05 01:21:41 arj Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fi/ChangeLog,v 1.2 2006/03/24 20:55:09 betelgeuse Exp $
+
+  24 Mar 2006; Petteri Räty <betelgeuse@gentoo.org> aspell-fi-0.7.0.ebuild:
+  Corrected Finish to Finnish in DESCRIPTION. Fixes bug #116891.
 
 *aspell-fi-0.7.0 (05 Jul 2004)
 
