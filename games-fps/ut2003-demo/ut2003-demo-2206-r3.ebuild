@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.14 2006/01/10 16:00:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.15 2006/03/24 22:21:46 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -99,6 +99,7 @@ EOT
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "To play the demo run:"
 	einfo " ut2003-demo"
 	echo
@@ -113,6 +114,4 @@ pkg_postinst() {
 	ewarn "~/.ut2003demo/System/UT2003.ini file and add a line that says"
 	ewarn "AccessControlClass=crashfix.iaccesscontrolini to your"
 	ewarn "[Engine.GameInfo] section to close a security issue."
-
-	games_pkg_postinst
 }

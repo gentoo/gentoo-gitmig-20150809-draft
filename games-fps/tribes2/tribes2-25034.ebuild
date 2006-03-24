@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.10 2005/10/21 17:42:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.11 2006/03/24 22:17:51 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -59,17 +59,15 @@ src_install() {
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find ${Ddir} -exec touch '{}' \;
 
-	games_make_wrapper t2launch ./t2launch "${dir}" "${dir}"
-
 	newicon ${CDROM_ROOT}/icon.xpm tribes2.xpm
+	games_make_wrapper t2launch ./t2launch "${dir}" "${dir}"
+	make_desktop_entry t2launch "Tribes 2" tribes2.xpm
 
 	prepgamesdirs
-	make_desktop_entry t2launch "Tribes 2" tribes2.xpm
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "To play the game run:"
 	einfo " t2launch"
-
-	games_pkg_postinst
 }
