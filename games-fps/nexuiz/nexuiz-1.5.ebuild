@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-1.5.ebuild,v 1.3 2006/03/20 20:06:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-1.5.ebuild,v 1.4 2006/03/24 22:08:53 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -143,8 +143,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "For sound problems, read:"
 	einfo "   http://www.alientrap.org/forum/viewtopic.php?t=72"
-
-	games_pkg_postinst
 }
