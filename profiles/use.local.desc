@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1806 2006/03/24 06:25:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1807 2006/03/24 15:44:57 rl03 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1420,7 +1420,11 @@ www-apps/dspam-web:maildrop - Build with delivery options for maildrop
 www-apps/dspam-web:neural - Build neural support for dspam
 www-apps/dspam-web:procmail - Build procmail filter support
 www-apps/dspam-web:virtual-users  - Build with virtual-users support
+www-apps/gallery:dcraw - Add dcraw support
+www-apps/gallery:graphicsmagick - Add graphicsmagick support
 www-apps/gallery:netpbm - Add NetPBM support
+www-apps/gallery:unzip - Add unzip support for the archive upload module
+www-apps/gallery:zip - Add zip support for the zip download module
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/lxr:cvs - Adds support for indexing CVS
 www-apps/lxr:freetext - Adds support for freetext search using swish-e
