@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/kwlaninfo
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwlaninfo/ChangeLog,v 1.1 2006/03/24 13:23:53 caleb Exp $
+
+*kwlaninfo-0.9.4 (24 Mar 2006)
+
+  24 Mar 2006; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
+  +kwlaninfo-0.9.4.ebuild:
+  Adding from bug #127371
+
