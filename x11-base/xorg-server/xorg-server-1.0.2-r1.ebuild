@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.2-r1.ebuild,v 1.1 2006/03/24 01:17:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.2-r1.ebuild,v 1.2 2006/03/24 09:47:56 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -65,7 +65,7 @@ RDEPEND="x11-libs/libXfont
 DEPEND="${RDEPEND}
 	x11-proto/randrproto
 	x11-proto/renderproto
-	x11-proto/fixesproto
+	>=x11-proto/fixesproto-4
 	x11-proto/damageproto
 	x11-proto/xextproto
 	x11-proto/xproto
@@ -74,7 +74,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xf86rushproto
 	x11-proto/xf86vidmodeproto
 	x11-proto/xf86bigfontproto
-	x11-proto/compositeproto
+	>=x11-proto/compositeproto-0.3
 	x11-proto/recordproto
 	x11-proto/resourceproto
 	x11-proto/videoproto
