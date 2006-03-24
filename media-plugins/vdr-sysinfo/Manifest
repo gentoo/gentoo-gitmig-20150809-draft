@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2ed3c4051b89a27f29772d17495a7f1a ChangeLog 388
+RMD160 82005dbd3d6847db245e470fe03c81eb7f8fa740 ChangeLog 388
+SHA256 e19d7bb389f95ec4d2edb7d36835ea6e171135f2ca734a15db31e1a14acebf5d ChangeLog 388
+MD5 46f39cc2dbf69a20f4db3e410e7722f6 files/digest-vdr-sysinfo-0.0.4a 244
+RMD160 b96844bb5167b346b370c66580f84a371e0f1ffa files/digest-vdr-sysinfo-0.0.4a 244
+SHA256 d5ba35722a9209c8b937a87979ffb69e6f7f83532597b9e41828d62433e8bc7e files/digest-vdr-sysinfo-0.0.4a 244
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 3aa79ae4d4c330309ba3024ed39d388a vdr-sysinfo-0.0.4a.ebuild 810
+RMD160 06d31bbb114f4b5e3db117e01675a6c725b5fc46 vdr-sysinfo-0.0.4a.ebuild 810
+SHA256 064a33a491f779be2e2b53c91a890d71358cca071a36acffe97452ec989cc721 vdr-sysinfo-0.0.4a.ebuild 810
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEI9ttZfSl1Kp5KmoRAgjbAKC+lgITgYRFZFYbqN9jyE6AgeFMZgCfXn8+
+Px5l+g42tYf2inby+Xp80lI=
+=+Kp6
+-----END PGP SIGNATURE-----
