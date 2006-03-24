@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.16 2006/03/18 18:38:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.17 2006/03/24 23:05:49 chtekk Exp $
 #
 # ########################################################################
 #
@@ -20,9 +20,9 @@
 # ========================================================================
 
 CONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob frontbase hyperwave-api informix interbase mnogosearch msql oci8 oracle7 ovrimos pfpro sapdb solid sybase sybase-ct"
-EBUILD_SUPPORTS_SHAREDEXT=1
+EBUILD_SUPPORTS_SHAREDEXT="1"
 
-inherit flag-o-matic eutils confutils libtool php-common-r1
+inherit flag-o-matic eutils phpconfutils libtool php-common-r1
 
 # set MY_PHP_P in the ebuild
 
@@ -39,29 +39,39 @@ if [[ "${PHP_PACKAGE}" == 1 ]] ; then
 	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl curlwrappers db2 dba dbase dbmaker debug doc empress empress-bcs esoob exif frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-external kerberos ldap libedit mcve memlimit mhash ming mnogosearch msql mssql mysql mysqli ncurses nls oci8 oci8-instant-client odbc oracle7 ovrimos pcntl pcre pdo-external pfpro pic posix postgres qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xml xmlrpc xpm xsl yaz zip zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl curlwrappers db2 dbase dbmaker debug doc empress empress-bcs esoob exif frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-external kerberos ldap libedit mcve memlimit mhash ming mnogosearch msql mssql mysql mysqli ncurses nls oci8 oci8-instant-client odbc oracle7 ovrimos pcntl pcre pdo-external pfpro pic posix postgres qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tokenizer truetype wddx xml xmlrpc xpm xsl yaz zip zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="${DEPEND}
 	!dev-php/php
 	!dev-php/php-cgi
 	!dev-php/mod_php
+	adabas? ( >=dev-db/unixODBC-1.8.13 )
 	berkdb? ( =sys-libs/db-4* )
+	birdstep? ( >=dev-db/unixODBC-1.8.13 )
 	bzip2? ( app-arch/bzip2 )
 	cdb? ( dev-db/cdb )
+	cjk? ( !gd? ( !gd-external? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib ) ) )
 	crypt? ( >=dev-libs/libmcrypt-2.4 )
 	curl? ( >=net-misc/curl-7.10.5 )
+	db2? ( >=dev-db/unixODBC-1.8.13 )
+	dbmaker? ( >=dev-db/unixODBC-1.8.13 )
+	empress? ( >=dev-db/unixODBC-1.8.13 )
+	empress-bcs? ( >=dev-db/unixODBC-1.8.13 )
+	esoob? ( >=dev-db/unixODBC-1.8.13 )
+	exif? ( !gd? ( !gd-external? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib ) ) )
 	fdftk? ( app-text/fdftk )
 	firebird? ( dev-db/firebird )
-	gd? ( >=media-libs/jpeg-6b media-libs/libpng )
+	gd? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib )
 	gd-external? ( media-libs/gd )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gmp? ( dev-libs/gmp )
 	imap? ( virtual/imap-c-client )
-	iodbc? ( dev-db/libiodbc )
+	iodbc? ( dev-db/libiodbc >=dev-db/unixODBC-1.8.13 )
 	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	libedit? ( dev-libs/libedit )
+	mcve? ( >=dev-libs/openssl-0.9.7 )
 	mhash? ( app-crypt/mhash )
 	ming? ( media-libs/ming )
 	mssql? ( dev-db/freetds )
@@ -75,21 +85,22 @@ DEPEND="${DEPEND}
 	qdbm? ( dev-db/qdbm )
 	readline? ( sys-libs/readline )
 	recode? ( app-text/recode )
-	sasl? ( dev-libs/cyrus-sasl )
+	sapdb? ( >=dev-db/unixODBC-1.8.13 )
+	sasl? ( dev-libs/cyrus-sasl >=net-nds/openldap-1.2.11 )
 	sharedmem? ( dev-libs/mm )
 	simplexml? ( >=dev-libs/libxml2-2.6.8 )
 	snmp? ( >=net-analyzer/net-snmp-5.2 )
 	soap? ( >=dev-libs/libxml2-2.6.8 )
+	solid? ( >=dev-db/unixODBC-1.8.13 )
 	spell? ( >=app-text/aspell-0.50 )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	sybase? ( dev-db/freetds )
 	tidy? ( app-text/htmltidy )
-	tiff? ( media-libs/tiff )
-	truetype? ( =media-libs/freetype-2* >=media-libs/t1lib-5.0.0 )
+	truetype? ( =media-libs/freetype-2* >=media-libs/t1lib-5.0.0 !gd? ( !gd-external? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib ) ) )
 	wddx? ( >=dev-libs/libxml2-2.6.8 )
 	xml? ( >=dev-libs/libxml2-2.6.8 )
 	xmlrpc? ( >=dev-libs/libxml2-2.6.8 )
-	xpm? ( || ( x11-libs/libXpm virtual/x11 ) )
+	xpm? ( || ( x11-libs/libXpm virtual/x11 ) >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib )
 	xsl? ( dev-libs/libxslt >=dev-libs/libxml2-2.6.8 )
 	zlib? ( sys-libs/zlib )
 	virtual/mta"
@@ -135,91 +146,56 @@ EXPORT_FUNCTIONS pkg_setup src_compile src_install src_unpack pkg_postinst
 # INTERNAL FUNCTIONS
 # ========================================================================
 
-php5_0-sapi_check_awkward_uses() {
-	# ------------------------------------
-	# Rules for things unexpectedly broken
-	# go below here
-	#
-	# These rules override the "normal"
-	# rules listed later on
-	# ------------------------------------
+php5_0-sapi_check_use_flags() {
+	PHPCONFUTILS_AUTO_USE=""
 
-	# No special rules at the moment
+	# Multiple USE dependencies
+	phpconfutils_use_depend_any "truetype" "gd" "gd" "gd-external"
+	phpconfutils_use_depend_any "cjk" "gd" "gd" "gd-external"
+	phpconfutils_use_depend_any "exif" "gd" "gd" "gd-external"
 
-	# ------------------------------------
-	# Normal rules go below here
-	# ------------------------------------
+	# Simple USE dependencies
+	phpconfutils_use_depend_all	"xpm"				"gd"
+	phpconfutils_use_depend_all	"gd"				"zlib"
+	phpconfutils_use_depend_all	"simplexml"			"xml"
+	phpconfutils_use_depend_all	"soap"				"xml"
+	phpconfutils_use_depend_all	"wddx"				"xml"
+	phpconfutils_use_depend_all	"xmlrpc"			"xml"
+	phpconfutils_use_depend_all	"xsl"				"xml"
+	phpconfutils_use_depend_all "java-external"		"session"
+	phpconfutils_use_depend_all	"sasl"				"ldap"
+	phpconfutils_use_depend_all	"mcve"				"ssl"
+	phpconfutils_use_depend_all	"adabas"			"odbc"
+	phpconfutils_use_depend_all	"birdstep"			"odbc"
+	phpconfutils_use_depend_all	"dbmaker"			"odbc"
+	phpconfutils_use_depend_all	"empress-bcs"		"odbc" "empress"
+	phpconfutils_use_depend_all	"empress"			"odbc"
+	phpconfutils_use_depend_all	"esoob"				"odbc"
+	phpconfutils_use_depend_all	"db2"				"odbc"
+	phpconfutils_use_depend_all	"iodbc"				"odbc"
+	phpconfutils_use_depend_all	"sapdb"				"odbc"
+	phpconfutils_use_depend_all	"solid"				"odbc"
 
-	# A variety of extensions need DBA
-	confutils_use_depend_all "berkdb"	"dba"
-	confutils_use_depend_all "cdb"		"dba"
-	confutils_use_depend_all "flatfile"	"dba"
-	confutils_use_depend_all "gdbm"		"dba"
-	confutils_use_depend_all "inifile"	"dba"
-	confutils_use_depend_all "qdbm"		"dba"
-
-	# EXIF only gets built if we support a file format that uses it
-	confutils_use_depend_any "exif" "gd" "gd-external" "tiff"
-
-	# support for the GD graphics library
-	confutils_use_conflict "gd" "gd-external"
-	confutils_use_depend_any "truetype" "gd" "gd-external"
-	confutils_use_depend_any "cjk"	"gd" "gd-external"
-	confutils_use_depend_all "tiff"	"gd"
-	confutils_use_depend_all "xpm"	"gd"
-	confutils_use_depend_all "gd"	"zlib"
-
-	# XML related extensions
-	confutils_use_depend_all "soap"	"xml"
-	confutils_use_depend_all "simplexml"	"xml"
-	confutils_use_depend_all "xmlrpc"	"xml"
-	confutils_use_depend_all "xsl"	"xml"
-	confutils_use_depend_all "wddx"	"xml"
+	# Direct USE conflicts
+	phpconfutils_use_conflict "gd" "gd-external"
+	phpconfutils_use_conflict "oci8" "oci8-instant-client"
+	phpconfutils_use_conflict "qdbm" "gdbm"
+	phpconfutils_use_conflict "readline" "libedit"
+	phpconfutils_use_conflict "recode" "mysql" "imap" "yaz"
+	phpconfutils_use_conflict "sharedmem" "threads"
 
 	# IMAP support
 	php_check_imap
-
-	# Java-external support
-	confutils_use_depend_all "java-external" "session"
 
 	# Mail support
 	php_check_mta
 
 	# Oracle support
-	confutils_use_conflict "oci8" "oci8-instant-client"
 	php_check_oracle_all
 
-	# LDAP-sasl support
-	confutils_use_depend_all "sasl" "ldap"
+	phpconfutils_warn_about_external_deps
 
-	# MCVE needs OpenSSL
-	confutils_use_depend_all "mcve" "ssl"
-
-	# ODBC support
-	confutils_use_depend_all "adabas"		"odbc"
-	confutils_use_depend_all "birdstep"		"odbc"
-	confutils_use_depend_all "dbmaker"		"odbc"
-	confutils_use_depend_all "empress"		"odbc"
-	confutils_use_depend_all "empress-bcs"	"odbc" "empress"
-	confutils_use_depend_all "esoob"		"odbc"
-	confutils_use_depend_all "db2"			"odbc"
-	confutils_use_depend_all "iodbc"		"odbc"
-	confutils_use_depend_all "sapdb"		"odbc"
-	confutils_use_depend_all "solid"		"odbc"
-
-	# QDBM doesn't play nicely with GDBM
-	confutils_use_conflict "qdbm" "gdbm"
-
-	# Readline and libedit do the same thing; you can't have both
-	confutils_use_conflict "readline" "libedit"
-
-	# Recode is not liked
-	confutils_use_conflict "recode" "mysql" "imap" "yaz"
-
-	# the MM extension isn't thread-safe
-	confutils_use_conflict "sharedmem" "threads"
-
-	confutils_warn_about_missing_deps
+	export PHPCONFUTILS_AUTO_USE="${PHPCONFUTILS_AUTO_USE}"
 }
 
 php5_0-sapi_set_php_ini_dir() {
@@ -264,7 +240,7 @@ php5_0-sapi_install_ini() {
 php5_0-sapi_pkg_setup() {
 	# let's do all the USE flag testing before we do anything else
 	# this way saves a lot of time
-	php5_0-sapi_check_awkward_uses
+	php5_0-sapi_check_use_flags
 }
 
 php5_0-sapi_src_unpack() {
@@ -353,111 +329,110 @@ php5_0-sapi_src_compile() {
 	php5_0-sapi_set_php_ini_dir
 
 	cd "${S}"
-	confutils_init
+	phpconfutils_init
 
 	my_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR} --with-config-file-scan-dir=${PHP_EXT_INI_DIR_ACTIVE} --without-pear"
 
-	#							extension		USE flag		shared support?
-	enable_extension_enable		"bcmath"		"bcmath"		1
-	enable_extension_with		"bz2"			"bzip2"			1
-	enable_extension_enable		"calendar"		"calendar"		1
-	enable_extension_disable	"ctype"			"ctype"			0
-	enable_extension_with		"curl"			"curl"			1
-	enable_extension_with		"curlwrappers"	"curlwrappers"	1
-	enable_extension_enable		"dbase"			"dbase"			1
-	enable_extension_disable	"dom"			"xml"			0
-	enable_extension_enable		"exif"			"exif"			1
-	enable_extension_with		"fbsql"			"frontbase"		1
-	enable_extension_with		"fdftk"			"fdftk"			1 "/opt/fdftk-6.0"
-	enable_extension_enable		"filepro"		"filepro"		1
-	enable_extension_enable		"ftp"			"ftp"			1
-	enable_extension_with		"gettext"		"nls"			1
-	enable_extension_with		"gmp"			"gmp"			1
-	enable_extension_with		"hwapi"			"hyperwave-api"	1
-	enable_extension_without	"iconv"			"iconv"			0
-	enable_extension_with		"informix"		"informix"		1
-	enable_extension_disable	"ipv6"			"ipv6"			0
-	# ircg extension not supported on Gentoo at this time
-	enable_extension_with		"kerberos"		"kerberos"		0 "/usr"
-	enable_extension_disable	"libxml"		"xml"			0
-	enable_extension_enable		"mbstring"		"nls"			1
-	enable_extension_with		"mcrypt"		"crypt"			1
-	enable_extension_enable		"memory-limit"	"memlimit"		0
-	enable_extension_with		"mhash"			"mhash"			1
-	enable_extension_with		"ming"			"ming"			1
-	enable_extension_with		"mnogosearch"	"mnogosearch"	1
-	enable_extension_with		"msql"			"msql"			1
-	enable_extension_with		"mssql"			"mssql"			1
-	enable_extension_with		"ncurses"		"ncurses"		1
-	enable_extension_with		"oci8"			"oci8"			1
-	enable_extension_with		"oci8-instant-client"	"oci8-instant-client"	1
-	enable_extension_with		"oracle"		"oracle7"		1
-	enable_extension_with		"openssl"		"ssl"			0
-	enable_extension_with		"openssl-dir"	"ssl"			0 "/usr"
-	enable_extension_with		"ovrimos"		"ovrimos"		1
-	enable_extension_enable		"pcntl" 		"pcntl" 		1
-	enable_extension_without	"pcre-regex"	"pcre"			0
-	enable_extension_with		"pfpro"			"pfpro"			1
-	enable_extension_with		"pgsql"			"postgres"		1
-	enable_extension_disable	"posix"			"posix"			1
-	enable_extension_with		"pspell"		"spell"			1
-	enable_extension_with		"recode"		"recode"		1
-	enable_extension_disable	"simplexml"		"simplexml"		1
-	enable_extension_enable		"shmop"			"sharedmem"		0
-	enable_extension_with		"snmp"			"snmp"			1
-	enable_extension_enable		"soap"			"soap"			1
-	enable_extension_enable		"sockets"		"sockets"		1
-	enable_extension_disable	"spl"			"spl"			1
-	enable_extension_with		"sybase"		"sybase"		1
-	enable_extension_with		"sybase-ct"		"sybase-ct"		1
-	enable_extension_enable		"sysvmsg"		"sysvipc"		1
-	enable_extension_enable		"sysvsem"		"sysvipc"		1
-	enable_extension_enable		"sysvshm"		"sysvipc"		1
-	enable_extension_with		"tidy"			"tidy"			1
-	enable_extension_disable	"tokenizer"		"tokenizer"		1
-	enable_extension_enable		"wddx"			"wddx"			1
-	enable_extension_disable	"xml"			"xml"			0
-	enable_extension_with		"xmlrpc"		"xmlrpc"		1
-	enable_extension_with		"xsl"			"xsl"			1
-	enable_extension_with		"zlib"			"zlib"			1
-	enable_extension_enable		"debug"			"debug"			0
+	#								extension		USE flag		shared support?
+	phpconfutils_extension_enable	"bcmath"		"bcmath"		1
+	phpconfutils_extension_with		"bz2"			"bzip2"			1
+	phpconfutils_extension_enable	"calendar"		"calendar"		1
+	phpconfutils_extension_disable	"ctype"			"ctype"			0
+	phpconfutils_extension_with		"curl"			"curl"			1
+	phpconfutils_extension_with		"curlwrappers"	"curlwrappers"	1
+	phpconfutils_extension_enable	"dbase"			"dbase"			1
+	phpconfutils_extension_disable	"dom"			"xml"			0
+	phpconfutils_extension_enable	"exif"			"exif"			1
+	phpconfutils_extension_with		"fbsql"			"frontbase"		1
+	phpconfutils_extension_with		"fdftk"			"fdftk"			1 "/opt/fdftk-6.0"
+	phpconfutils_extension_enable	"filepro"		"filepro"		1
+	phpconfutils_extension_enable	"ftp"			"ftp"			1
+	phpconfutils_extension_with		"gettext"		"nls"			1
+	phpconfutils_extension_with		"gmp"			"gmp"			1
+	phpconfutils_extension_with		"hwapi"			"hyperwave-api"	1
+	phpconfutils_extension_without	"iconv"			"iconv"			0
+	phpconfutils_extension_with		"informix"		"informix"		1
+	phpconfutils_extension_disable	"ipv6"			"ipv6"			0
+	phpconfutils_extension_with		"kerberos"		"kerberos"		0 "/usr"
+	phpconfutils_extension_disable	"libxml"		"xml"			0
+	phpconfutils_extension_enable	"mbstring"		"nls"			1
+	phpconfutils_extension_with		"mcrypt"		"crypt"			1
+	phpconfutils_extension_enable	"memory-limit"	"memlimit"		0
+	phpconfutils_extension_with		"mhash"			"mhash"			1
+	phpconfutils_extension_with		"ming"			"ming"			1
+	phpconfutils_extension_with		"mnogosearch"	"mnogosearch"	1
+	phpconfutils_extension_with		"msql"			"msql"			1
+	phpconfutils_extension_with		"mssql"			"mssql"			1
+	phpconfutils_extension_with		"ncurses"		"ncurses"		1
+	phpconfutils_extension_with		"oci8"			"oci8"			1
+	phpconfutils_extension_with		"oci8-instant-client"	"oci8-instant-client"	1
+	phpconfutils_extension_with		"oracle"		"oracle7"		1
+	phpconfutils_extension_with		"openssl"		"ssl"			0
+	phpconfutils_extension_with		"openssl-dir"	"ssl"			0 "/usr"
+	phpconfutils_extension_with		"ovrimos"		"ovrimos"		1
+	phpconfutils_extension_enable	"pcntl" 		"pcntl" 		1
+	phpconfutils_extension_without	"pcre-regex"	"pcre"			0
+	phpconfutils_extension_with		"pfpro"			"pfpro"			1
+	phpconfutils_extension_with		"pgsql"			"postgres"		1
+	phpconfutils_extension_disable	"posix"			"posix"			1
+	phpconfutils_extension_with		"pspell"		"spell"			1
+	phpconfutils_extension_with		"recode"		"recode"		1
+	phpconfutils_extension_disable	"simplexml"		"simplexml"		1
+	phpconfutils_extension_enable	"shmop"			"sharedmem"		0
+	phpconfutils_extension_with		"snmp"			"snmp"			1
+	phpconfutils_extension_enable	"soap"			"soap"			1
+	phpconfutils_extension_enable	"sockets"		"sockets"		1
+	phpconfutils_extension_disable	"spl"			"spl"			1
+	phpconfutils_extension_with		"sybase"		"sybase"		1
+	phpconfutils_extension_with		"sybase-ct"		"sybase-ct"		1
+	phpconfutils_extension_enable	"sysvmsg"		"sysvipc"		1
+	phpconfutils_extension_enable	"sysvsem"		"sysvipc"		1
+	phpconfutils_extension_enable	"sysvshm"		"sysvipc"		1
+	phpconfutils_extension_with		"tidy"			"tidy"			1
+	phpconfutils_extension_disable	"tokenizer"		"tokenizer"		1
+	phpconfutils_extension_enable	"wddx"			"wddx"			1
+	phpconfutils_extension_disable	"xml"			"xml"			0
+	phpconfutils_extension_with		"xmlrpc"		"xmlrpc"		1
+	phpconfutils_extension_with		"xsl"			"xsl"			1
+	phpconfutils_extension_with		"zlib"			"zlib"			1
+	phpconfutils_extension_enable	"debug"			"debug"			0
 
 	# DBA support
-	enable_extension_enable		"dba"		"dba"		1
-
-	if useq dba ; then
-		enable_extension_with "cdb"			"cdb"		1
-		enable_extension_with "db4"			"berkdb"	1
-		enable_extension_with "flatfile"	"flatfile"	1
-		enable_extension_with "gdbm"		"gdbm"		1
-		enable_extension_with "inifile"		"inifile"	1
-		enable_extension_with "qdbm"		"qdbm"		1
+	if useq cdb || useq berkdb || useq flatfile || useq gdbm || useq inifile || useq qdbm ; then
+		my_conf="${my_conf} --enable-dba${shared}"
 	fi
 
+	# DBA drivers support
+	phpconfutils_extension_with "cdb"		"cdb"		1
+	phpconfutils_extension_with "db4"		"berkdb"	1
+	phpconfutils_extension_with "flatfile"	"flatfile"	1
+	phpconfutils_extension_with "gdbm"		"gdbm"		1
+	phpconfutils_extension_with "inifile"	"inifile"	1
+	phpconfutils_extension_with "qdbm"		"qdbm"		1
+
 	# Support for the GD graphics library
-	if useq gd-external ; then
-		enable_extension_with	"freetype-dir"	"truetype"		0 "/usr"
-		enable_extension_with	"t1lib"			"truetype"		0 "/usr"
-		enable_extension_enable	"gd-jis-conv"	"cjk" 			0
-		enable_extension_enable	"gd-native-ttf"	"truetype"		0
-		enable_extension_with 	"gd" 			"gd-external"	1 "/usr"
+	if useq gd-external || phpconfutils_usecheck gd-external ; then
+		phpconfutils_extension_with		"freetype-dir"	"truetype"		0 "/usr"
+		phpconfutils_extension_with		"t1lib"			"truetype"		0 "/usr"
+		phpconfutils_extension_enable	"gd-jis-conv"	"cjk" 			0
+		phpconfutils_extension_enable	"gd-native-ttf"	"truetype"		0
+		phpconfutils_extension_with 	"gd" 			"gd-external"	1 "/usr"
 	else
-		enable_extension_with	"freetype-dir"	"truetype"		0 "/usr"
-		enable_extension_with	"t1lib"			"truetype"		0 "/usr"
-		enable_extension_enable	"gd-jis-conv"	"cjk"			0
-		enable_extension_enable	"gd-native-ttf"	"truetype"		0
-		enable_extension_with	"jpeg-dir"		"gd"			0 "/usr"
-		enable_extension_with 	"png-dir" 		"gd" 			0 "/usr"
-		enable_extension_with 	"tiff-dir" 		"tiff" 			0 "/usr"
-		enable_extension_with 	"xpm-dir" 		"xpm" 			0 "/usr/X11R6"
+		phpconfutils_extension_with		"freetype-dir"	"truetype"		0 "/usr"
+		phpconfutils_extension_with		"t1lib"			"truetype"		0 "/usr"
+		phpconfutils_extension_enable	"gd-jis-conv"	"cjk"			0
+		phpconfutils_extension_enable	"gd-native-ttf"	"truetype"		0
+		phpconfutils_extension_with		"jpeg-dir"		"gd"			0 "/usr"
+		phpconfutils_extension_with 	"png-dir" 		"gd" 			0 "/usr"
+		phpconfutils_extension_with 	"xpm-dir" 		"xpm" 			0 "/usr/X11R6"
 		# enable gd last, so configure can pick up the previous settings
-		enable_extension_with 	"gd" 			"gd" 			0
+		phpconfutils_extension_with 	"gd" 			"gd" 			0
 	fi
 
 	# IMAP support
-	if useq imap ; then
-		enable_extension_with	"imap"			"imap"			1
-		enable_extension_with	"imap-ssl"		"ssl"			0
+	if useq imap || phpconfutils_usecheck imap ; then
+		phpconfutils_extension_with		"imap"			"imap"			1
+		phpconfutils_extension_with		"imap-ssl"		"ssl"			0
 	fi
 
 	# Interbase support
@@ -466,55 +441,55 @@ php5_0-sapi_src_compile() {
 	fi
 
 	# LDAP support
-	if useq ldap ; then
-		enable_extension_with	"ldap"			"ldap"			1
-		enable_extension_with	"ldap-sasl"		"sasl"			0
+	if useq ldap || phpconfutils_usecheck ldap ; then
+		phpconfutils_extension_with		"ldap"			"ldap"			1
+		phpconfutils_extension_with		"ldap-sasl"		"sasl"			0
 	fi
 
 	# MySQL support
 	if useq mysql ; then
-		enable_extension_with	"mysql"			"mysql"			1 "/usr/lib/mysql"
-		enable_extension_with	"mysql-sock"	"mysql"			0 "/var/run/mysqld/mysqld.sock"
+		phpconfutils_extension_with		"mysql"			"mysql"			1 "/usr/lib/mysql"
+		phpconfutils_extension_with		"mysql-sock"	"mysql"			0 "/var/run/mysqld/mysqld.sock"
 	fi
 
 	# MySQLi support
-	enable_extension_with		"mysqli"		"mysqli"		1 "/usr/bin/mysql_config"
+	phpconfutils_extension_with			"mysqli"		"mysqli"		1 "/usr/bin/mysql_config"
 
 	# ODBC support
-	if useq odbc ; then
-		enable_extension_with		"unixODBC"		"odbc"			1 "/usr"
+	if useq odbc || phpconfutils_usecheck odbc ; then
+		phpconfutils_extension_with		"unixODBC"		"odbc"			1 "/usr"
 
-		enable_extension_with		"adabas"		"adabas"		1
-		enable_extension_with		"birdstep"		"birdstep"		1
-		enable_extension_with		"dbmaker"		"dbmaker"		1
-		enable_extension_with		"empress"		"empress"		1
-		if useq empress ; then
-			enable_extension_with	"empress-bcs"	"empress-bcs"	0
+		phpconfutils_extension_with		"adabas"		"adabas"		1
+		phpconfutils_extension_with		"birdstep"		"birdstep"		1
+		phpconfutils_extension_with		"dbmaker"		"dbmaker"		1
+		phpconfutils_extension_with		"empress"		"empress"		1
+		if useq empress || phpconfutils_usecheck empress ; then
+			phpconfutils_extension_with	"empress-bcs"	"empress-bcs"	0
 		fi
-		enable_extension_with		"esoob"			"esoob"			1
-		enable_extension_with		"ibm-db2"		"db2"			1
-		enable_extension_with		"iodbc"			"iodbc"			1 "/usr"
-		enable_extension_with		"sapdb"			"sapdb"			1
-		enable_extension_with		"solid"			"solid"			1
+		phpconfutils_extension_with		"esoob"			"esoob"			1
+		phpconfutils_extension_with		"ibm-db2"		"db2"			1
+		phpconfutils_extension_with		"iodbc"			"iodbc"			1 "/usr"
+		phpconfutils_extension_with		"sapdb"			"sapdb"			1
+		phpconfutils_extension_with		"solid"			"solid"			1
 	fi
 
 	# readline/libedit support
-	# you can use readline or libedit, but you can't use both
-	enable_extension_with		"readline"		"readline"		0
-	enable_extension_with		"libedit"		"libedit"		1
+	# You can use readline or libedit, but you can't use both
+	phpconfutils_extension_with			"readline"		"readline"		0
+	phpconfutils_extension_with			"libedit"		"libedit"		0
 
 	# Session support
-	if ! useq session ; then
-		enable_extension_disable	"session"	"session"		1
+	if ! useq session && ! phpconfutils_usecheck session ; then
+		phpconfutils_extension_disable	"session"		"session"		1
 	else
-		enable_extension_with		"mm"		"sharedmem"		0
+		phpconfutils_extension_with		"mm"			"sharedmem"		0
 	fi
 
 	# Sqlite support
-	if ! useq sqlite ; then
-		enable_extension_without	"sqlite"		"sqlite"	0
+	if ! useq sqlite && ! phpconfutils_usecheck sqlite ; then
+		phpconfutils_extension_without	"sqlite"		"sqlite"		0
 	else
-		enable_extension_enable		"sqlite-utf8"	"nls"		0
+		phpconfutils_extension_enable	"sqlite-utf8"	"nls"			0
 	fi
 
 	# Fix ELF-related problems
@@ -553,7 +528,7 @@ php5_0-sapi_src_install() {
 	make INSTALL_ROOT="${D}" ${PHP_INSTALLTARGETS} || die "install failed"
 
 	# Install missing header files
-	if useq nls ; then
+	if useq nls || phpconfutils_usecheck nls ; then
 		dodir ${destdir}/include/php/ext/mbstring/libmbfl/mbfl
 		insinto ${destdir}/include/php/ext/mbstring/libmbfl/mbfl
 		for x in mbfilter.h mbfl_consts.h mbfl_encoding.h mbfl_language.h mbfl_string.h mbfl_convert.h mbfl_ident.h mbfl_memory_device.h mbfl_allocators.h mbfl_defs.h mbfl_filter_output.h mbfilter_pass.h mbfilter_wchar.h mbfilter_8bit.h ; do
@@ -576,6 +551,9 @@ php5_0-sapi_src_install() {
 	# Set the include path to point to where we want to find PEAR packages
 	einfo "Setting correct include_path"
 	sed -e 's|^;include_path = ".:/php/includes".*|include_path = ".:/usr/share/php5:/usr/share/php"|' -i ${phpinisrc}
+
+	# Generate the USE file for PHP
+	phpconfutils_generate_usefile
 
 	# Create the directory where we'll put php5-only php scripts
 	keepdir /usr/share/php5

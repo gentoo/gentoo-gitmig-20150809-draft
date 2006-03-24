@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-common-r1.eclass,v 1.5 2006/01/04 09:22:48 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-common-r1.eclass,v 1.6 2006/03/24 23:05:49 chtekk Exp $
 
 # ########################################################################
 #
@@ -13,8 +13,7 @@
 #				Based on robbat2's work on the php4 sapi eclass
 #				Based on stuart's work on the php5 sapi eclass
 #
-# Maintainer:
-#				php-bugs@gentoo.org
+# Maintained by the PHP Herd <php-bugs@gentoo.org>
 #
 # ########################################################################
 
@@ -23,15 +22,15 @@
 # ########################################################################
 
 php_check_cflags() {
-	# filter the following from C[XX]FLAGS regardless, as apache won't be
-	# supporting LFS until 2.2 is released and in the tree.  Fixes bug #24373.
+	# Filter the following from C[XX]FLAGS regardless, as apache won't be
+	# supporting LFS until 2.2 is released and in the tree. Fixes bug #24373.
 	filter-flags "-D_FILE_OFFSET_BITS=64"
 	filter-flags "-D_FILE_OFFSET_BITS=32"
 	filter-flags "-D_LARGEFILE_SOURCE=1"
 	filter-flags "-D_LARGEFILE_SOURCE"
 
-	#fixes bug #14067
-	# changed order to run it in reverse for bug #32022 and #12021
+	# Fixes bug #14067.
+	# Changed order to run it in reverse for bug #32022 and #12021.
 	replace-flags "-march=k6-3" "-march=i586"
 	replace-flags "-march=k6-2" "-march=i586"
 	replace-flags "-march=k6" "-march=i586"
@@ -42,16 +41,23 @@ php_check_cflags() {
 # ########################################################################
 
 php_check_imap() {
-	if ! useq imap ; then
+	if ! useq "imap" && ! phpconfutils_usecheck "imap" ; then
 		return
 	fi
 
-	if useq ssl ; then
+	if useq "ssl" || phpconfutils_usecheck "ssl" ; then
 		if ! built_with_use virtual/imap-c-client ssl ; then
 			eerror
-			eerror "IMAP+SSL requested, but your IMAP libraries are built without SSL!"
+			eerror "IMAP with SSL requested, but your IMAP C-Client libraries are built without SSL!"
 			eerror
-			die "Please recompile IMAP libraries w/ SSL support enabled"
+			die "Please recompile the IMAP C-Client libraries with SSL support enabled"
+		fi
+	else
+		if built_with_use virtual/imap-c-client ssl ; then
+			eerror
+			eerror "IMAP without SSL requested, but your IMAP C-Client libraries are built with SSL!"
+			eerror
+			die "Please recompile the IMAP C-Client libraries with SSL support disabled"
 		fi
 	fi
 }
@@ -64,13 +70,13 @@ php_check_imap() {
 # ########################################################################
 
 php_check_java() {
-	if ! useq java-internal ; then
-		return 1
+	if ! useq "java-internal" && ! phpconfutils_usecheck "java-internal" ; then
+		return
 	fi
 
 	JDKHOME="`java-config --jdk-home`"
-	NOJDKERROR="You need to use java-config to set your JVM to a JDK!"
-	if [ -z "${JDKHOME}" ] || [ ! -d "${JDKHOME}" ]; then
+	NOJDKERROR="You need to use the 'java-config' utility to set your JVM to a JDK!"
+	if [[ -z "${JDKHOME}" ]] || [[ ! -d "${JDKHOME}" ]] ; then
 		eerror "${NOJDKERROR}"
 		die "${NOJDKERROR}"
 	fi
@@ -85,10 +91,10 @@ php_check_java() {
 		eerror "To build PHP without Java support, please re-run this emerge"
 		eerror "and place the line:"
 		eerror "  USE='-java-internal'"
-		eerror "in front of your emerge command; e.g."
+		eerror "in front of your emerge command, for example:"
 		eerror "  USE='-java-internal' emerge =dev-lang/php-4*"
 		eerror
-		eerror "or edit your USE flags in /etc/make.conf"
+		eerror "or edit your USE flags in /etc/make.conf."
 		die "Kaffe JVM not supported"
 	fi
 
@@ -97,36 +103,36 @@ php_check_java() {
 	case "${JDKVER}" in
 		1.4.*) ;;
 		1.5.*) ewarn "Java 1.5 is NOT supported at this time, and might not work." ;;
-		*) eerror "A Java 1.4 JDK is required for Java support in PHP." ; die ;;
+		*) eerror "A Java 1.4 JDK is recommended for Java support in PHP." ; die ;;
 	esac
 }
 
 php_install_java() {
-	if ! useq java-internal ; then
-		return 1
+	if ! useq "java-internal" && ! phpconfutils_usecheck "java-internal" ; then
+		return
 	fi
 
-	# we put these into /usr/lib so that they cannot conflict with
+	# We put these into /usr/lib so that they cannot conflict with
 	# other versions of PHP (e.g. PHP 4 & PHP 5)
-	insinto ${PHPEXTDIR}
+	insinto "${PHPEXTDIR}"
 	einfo "Installing JAR for PHP"
-	doins ext/java/php_java.jar
+	doins "ext/java/php_java.jar"
 
 	einfo "Installing Java test page"
-	newins ext/java/except.php java-test.php
+	newins "ext/java/except.php" "java-test.php"
 
 	einfo "Installing Java extension for PHP"
-	doins modules/java.so
+	doins "modules/java.so"
 
-	dosym ${PHPEXTDIR}/java.so ${PHPEXTDIR}/libphp_java.so
+	dosym "${PHPEXTDIR}/java.so" "${PHPEXTDIR}/libphp_java.so"
 }
 
 php_install_java_inifile() {
-	if ! useq java-internal ; then
-		return 1
+	if ! useq "java-internal" && ! phpconfutils_usecheck "java-internal" ; then
+		return
 	fi
 
-	JAVA_LIBRARY="`grep -- '-DJAVALIB' Makefile | sed -e 's,.\+-DJAVALIB=\"\([^"]*\)\".*$,\1,g;'| sort | uniq `"
+	JAVA_LIBRARY="`grep -- '-DJAVALIB' Makefile | sed -e 's,.\+-DJAVALIB=\"\([^"]*\)\".*$,\1,g;' | sort -u`"
 
 	echo "extension = java.so" >> "${D}/${PHP_EXT_INI_DIR}/java.ini"
 	echo "java.library = ${JAVA_LIBRARY}" >> "${D}/${PHP_EXT_INI_DIR}/java.ini"
@@ -141,7 +147,15 @@ php_install_java_inifile() {
 # ########################################################################
 
 php_check_mta() {
-	[ -x "${ROOT}/usr/sbin/sendmail" ] || die "You need a virtual/mta that provides /usr/sbin/sendmail!"
+	if ! [[ -x "${ROOT}/usr/sbin/sendmail" ]] ; then
+		ewarn
+		ewarn "You need a virtual/mta that provides a sendmail compatible binary!"
+		ewarn "All major MTAs provide this, and it's usually some symlink created"
+		ewarn "as '${ROOT}/usr/sbin/sendmail*'. You should also be able to use other"
+		ewarn "MTAs directly, but you'll have to edit the sendmail_path directive"
+		ewarn "in your php.ini for this to work."
+		ewarn
+	fi
 }
 
 # ########################################################################
@@ -149,33 +163,43 @@ php_check_mta() {
 # ########################################################################
 
 php_check_oracle_all() {
-	if useq oci8 && [ -z "${ORACLE_HOME}" ]; then
+	if useq "oci8" && [[ -z "${ORACLE_HOME}" ]] ; then
 		eerror
-		eerror "You must have the ORACLE_HOME variable in your environment!"
+		eerror "You must have the ORACLE_HOME variable set in your environment to"
+		eerror "compile the Oracle extension."
 		eerror
 		die "Oracle configuration incorrect; user error"
 	fi
 
-	if useq oci8 || useq oracle7 ; then
+	if useq "oci8" || useq "oracle7" ; then
 		if has_version 'dev-db/oracle-instantclient-basic' ; then
+			ewarn
 			ewarn "Please ensure you have a full install of the Oracle client."
-			ewarn "dev-db/oracle-instantclient* is NOT sufficient."
+			ewarn "'dev-db/oracle-instantclient-basic' is NOT sufficient."
+			ewarn "Please enable the 'oci8-instant-client' USE flag instead, if you"
+			ewarn "want to use 'dev-db/oracle-instantclient-basic' as Oracle client."
+			ewarn
 		fi
 	fi
 }
 
 php_check_oracle_8() {
-	if useq oci8 && [ -z "${ORACLE_HOME}" ]; then
+	if useq "oci8" && [[ -z "${ORACLE_HOME}" ]] ; then
 		eerror
-		eerror "You must have the ORACLE_HOME variable in your environment!"
+		eerror "You must have the ORACLE_HOME variable set in your environment to"
+		eerror "compile the Oracle extension."
 		eerror
 		die "Oracle configuration incorrect; user error"
 	fi
 
-	if useq oci8 ; then
+	if useq "oci8" ; then
 		if has_version 'dev-db/oracle-instantclient-basic' ; then
+			ewarn
 			ewarn "Please ensure you have a full install of the Oracle client."
-			ewarn "dev-db/oracle-instantclient* is NOT sufficient."
+			ewarn "'dev-db/oracle-instantclient-basic' is NOT sufficient."
+			ewarn "Please enable the 'oci8-instant-client' USE flag instead, if you"
+			ewarn "want to use 'dev-db/oracle-instantclient-basic' as Oracle client."
+			ewarn
 		fi
 	fi
 }
