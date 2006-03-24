@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.4-r1.ebuild,v 1.11 2005/03/19 05:53:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.4-r1.ebuild,v 1.12 2006/03/24 19:50:34 agriffis Exp $
 
 inherit eutils
 
@@ -16,8 +16,11 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-apps/portage-2.0.47-r10
-	virtual/x11
-	=dev-lang/tcl-${PV}*"
+	=dev-lang/tcl-${PV}*
+	|| (
+		( x11-libs/libXt x11-proto/xproto )
+		virtual/x11
+	)"
 
 S=${WORKDIR}/${PN}${PV}
 

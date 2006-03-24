@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.67 2006/03/03 16:15:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.68 2006/03/24 19:50:33 agriffis Exp $
+
+  24 Mar 2006; Aron Griffis <agriffis@gentoo.org> tk-8.3.4-r1.ebuild,
+  tk-8.4.9.ebuild:
+  Copy bash-3 fix from tk-8.4.11-r1.ebuild to tk-8.4.9.ebuild #117982. Port
+  tk-8.3.4-r1 to modular X
 
 *tk-8.4.12 (03 Mar 2006)
 

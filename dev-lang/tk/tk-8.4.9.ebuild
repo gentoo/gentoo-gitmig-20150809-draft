@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.9.ebuild,v 1.14 2006/02/26 19:30:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.9.ebuild,v 1.15 2006/03/24 19:50:34 agriffis Exp $
 
 inherit eutils
 
@@ -42,6 +42,10 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/remove-control-v-${PV}.diff || die
 	epatch ${FILESDIR}/${P}-man.patch || die
+
+	# bug 117982
+	sed -i -e "s/relid'/relid/" "${S}"/unix/{configure,tcl.m4} || die
+
 	local d
 	for d in */configure ; do
 		cd "${S}"/${d%%/*}
