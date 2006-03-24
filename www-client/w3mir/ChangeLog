@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3mir
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/ChangeLog,v 1.6 2006/03/24 06:59:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/ChangeLog,v 1.7 2006/03/24 14:13:00 ferdy Exp $
+
+  24 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> w3mir-1.0.10-r1.ebuild:
+  Stable on alpha wrt bug #115183. Tested by Thomas Cort <tcort@cs.ubishops.ca>
 
 *w3mir-1.0.10-r1 (24 Mar 2006)
 
