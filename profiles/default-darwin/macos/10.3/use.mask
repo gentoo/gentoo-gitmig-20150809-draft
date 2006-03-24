@@ -38,3 +38,6 @@ physfs
 
 # libfpx doesn't compile, see bug #103269
 fpx
+
+# pike doesn't link for some reason #109649
+pike

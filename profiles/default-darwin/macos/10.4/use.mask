@@ -46,3 +46,6 @@ gnutls
 
 # libprelude depends on gnutls which is h0rkened for now
 prelude
+
+# pike doesn't link for some reason #109649
+pike
