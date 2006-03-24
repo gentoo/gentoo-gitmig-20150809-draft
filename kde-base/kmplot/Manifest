@@ -1,4 +1,4 @@
-MD5 39cef18ba4c1386fdd8bb2eec99e8c91 ChangeLog 4512
+MD5 099a0ab2d8a90511a467ddbddbfd3938 ChangeLog 4612
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kmplot-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kmplot-3.4.2 282
 MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-kmplot-3.4.3 67
@@ -7,7 +7,7 @@ MD5 f189373524a470a1665a94fe8ba1f935 files/digest-kmplot-3.5.1 67
 MD5 ff544adf35a1e206ccc834b16497445e files/digest-kmplot-3.5.2 247
 MD5 065052692eb7e59f51e63fd0a3f69ff3 kmplot-3.4.1.ebuild 399
 MD5 fda73ec9cd11ff1b3a8c94c2f57ab4c2 kmplot-3.4.2.ebuild 412
-MD5 880007140fb19dfc0f618ac24f36a463 kmplot-3.4.3.ebuild 411
+MD5 fd53a162523e2a80ae48c3abb8b8fc0c kmplot-3.4.3.ebuild 413
 MD5 fe0e38842a62dfbc8375fa4fb94e8a55 kmplot-3.5.0.ebuild 413
 MD5 8b4354d0cd87a4a2010ff9ddaf1c2025 kmplot-3.5.1.ebuild 414
 MD5 c3929c6735002a687e47922c9e87fac8 kmplot-3.5.2.ebuild 414

@@ -1,4 +1,4 @@
-MD5 5cc4ed1351c6aaefa73946af32e76b14 ChangeLog 4665
+MD5 43c7065a3760a1c000f80b4b039a3eeb ChangeLog 4768
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kwordquiz-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kwordquiz-3.4.2 282
 MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-kwordquiz-3.4.3 67
@@ -7,7 +7,7 @@ MD5 f189373524a470a1665a94fe8ba1f935 files/digest-kwordquiz-3.5.1 67
 MD5 ff544adf35a1e206ccc834b16497445e files/digest-kwordquiz-3.5.2 247
 MD5 420f797ecebd62921d1fc3239fddd387 kwordquiz-3.4.1.ebuild 426
 MD5 052e332e72e01ef863e047e6d6dfe959 kwordquiz-3.4.2.ebuild 439
-MD5 4c7efc0dc72e263e842143167f17cf7d kwordquiz-3.4.3.ebuild 438
+MD5 13b890e6c17f3ac948082c437615654f kwordquiz-3.4.3.ebuild 440
 MD5 cb05ab580e8e194fe8fc02c6cd6591c4 kwordquiz-3.5.0.ebuild 440
 MD5 ac9802e8b36febdbe0ad4e88ce3afac9 kwordquiz-3.5.1.ebuild 441
 MD5 f05d2ec1bd94e440c5a587a2c0ef28a9 kwordquiz-3.5.2.ebuild 441
