@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha510.ebuild,v 1.2 2006/01/22 02:53:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha510.ebuild,v 1.3 2006/03/24 20:01:36 wolf31o2 Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -87,8 +87,8 @@ src_install() {
 	dodoc README.*
 
 	if use opengl ; then
-		doicon quake3.xpm
-		make_desktop_entry quake3 "Quake III Arena" quake3.xpm
+		doicon quake3.png
+		make_desktop_entry quake3 "Quake III Arena"
 	fi
 
 	cd ../../build/release*
