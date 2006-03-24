@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c172aeca43167b0bcf45ef4d469f1c69 ChangeLog 351
-MD5 e6ce68b1b0cdb8d39f5cb8d2b91939ea ggz-kde-client-0.0.9.ebuild 514
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 1067df5220b240fcd4c7fb6136ca8828 ChangeLog 619
+RMD160 5a679a5f8316d28678d53d708cc003e5862784a0 ChangeLog 619
+SHA256 54b53f37b3d20d0e34f47020131a3df1f71018ce293a45bd583eebe254caea02 ChangeLog 619
 MD5 da3138f2189b9c33542c9aa511ef4fec files/digest-ggz-kde-client-0.0.9 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBz1koroRuSHgZdywRAqBIAJ9+ZvX18bu7GLTMVTaGfPA/JUJMMQCfRXOR
-djztxfCM8KI/ykw0Oiw7i8c=
-=6Utc
------END PGP SIGNATURE-----
+RMD160 831039567b1f9387ee87d195bc80c53139ef8eed files/digest-ggz-kde-client-0.0.9 73
+SHA256 c01c0d7e77a7e480b20f968bfcacae26491989ff699995620c4ce99e839ff98d files/digest-ggz-kde-client-0.0.9 73
+MD5 b3c79a7addf2f5ca7fe2836b3af3b7b2 ggz-kde-client-0.0.9.ebuild 591
+RMD160 ca1779cfcc4b14b40fd344735a1b81e495c60b7d ggz-kde-client-0.0.9.ebuild 591
+SHA256 043b778e422fef3bc00d89e8a748096167df09d5c33474ae449883c63d4784fc ggz-kde-client-0.0.9.ebuild 591
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158

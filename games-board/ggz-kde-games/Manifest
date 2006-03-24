@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3a7a6188f26285efb36a71ea63c0a22 ChangeLog 349
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 30a3e2b0b8d1ba44f6aaff81ac78a430 ggz-kde-games-0.0.9.ebuild 577
+MD5 f6d037d35e4ac57c7c7c2dd08ec654f4 ChangeLog 483
+RMD160 bb589255c222ddf1097d4c1649307b7e77d4b90d ChangeLog 483
+SHA256 1505f508c98a7ad211c7d7f8c3c2c9960ee605d67d197da2252e9e0721804996 ChangeLog 483
 MD5 230107ab0c2b276b464dd2759cc877b9 files/digest-ggz-kde-games-0.0.9 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBz1mfroRuSHgZdywRAudJAJwIF6gB5j+wqpVKFyvVU2bKnjqVHgCdF6Vf
-IK9f1kb529OvSX61yueP36c=
-=tF4Y
------END PGP SIGNATURE-----
+RMD160 4e90f425819ced51f770a3f2f6e6387a66d1fd90 files/digest-ggz-kde-games-0.0.9 72
+SHA256 fb5aff9045fe26c9881dd4d187f1a9826343fcbe3b74a31819b0ca796a89f325 files/digest-ggz-kde-games-0.0.9 72
+MD5 e4be6bd256974c64427e9fbc33ddb489 ggz-kde-games-0.0.9.ebuild 653
+RMD160 8c501f55b0c5197aea3439d5545f50c1b8b602d4 ggz-kde-games-0.0.9.ebuild 653
+SHA256 909b7fd932347585d03c95c80db75d78211109dc7b82dc1ec036c3cef699fc60 ggz-kde-games-0.0.9.ebuild 653
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
