@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.83.1.ebuild,v 1.6 2005/05/30 18:39:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.83.1.ebuild,v 1.7 2006/03/24 21:44:57 wolf31o2 Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -12,22 +12,40 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 
 LICENSE="xmame"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts joystick net"
 
 RDEPEND="sys-libs/zlib
-	sdl? ( >=media-libs/libsdl-1.2.0 )
 	alsa? ( media-libs/alsa-lib )
-	xv? ( virtual/x11 )
-	dga? ( virtual/x11 )
-	X? ( virtual/x11 )
+	arts? ( kde-base/arts )
+	dga? ( || ( ( x11-libs/libXxf86dga
+				x11-libs/libXxf86vm
+			)
+			virtual/x11
+		)
+	)
 	esd? ( >=media-sound/esound-0.2.29 )
-	svga? ( media-libs/svgalib )
+	expat? ( dev-libs/expat )
 	ggi? ( media-libs/libggi )
-	arts? ( kde-base/arts )"
+	lirc? ( app-misc/lirc )
+	opengl? (
+		virtual/opengl
+		virtual/glu )
+	sdl? ( >=media-libs/libsdl-1.2.0 )
+	svga? ( media-libs/svgalib )
+	xinerama? ( || ( x11-libs/libXinerama virtual/x11 ) )
+	xv? ( || ( x11-libs/libXv virtual/x11 ) )
+	X? ( || ( x11-libs/libXext virtual/x11 ) )"
 DEPEND="${RDEPEND}
-	x86? ( dev-lang/nasm )
-	>=sys-apps/sed-4"
+	dga? ( || ( ( x11-proto/xf86dgaproto
+				x11-proto/xf86vidmodeproto
+			)
+			virtual/x11
+		)
+	)
+	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
+	xv? ( || ( x11-proto/videoproto virtual/x11 ) )
+	x86? ( dev-lang/nasm )"
 # Icc sucks. bug #41342
 #	icc? ( dev-lang/icc )
 
