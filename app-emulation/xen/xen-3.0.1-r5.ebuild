@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.1-r5.ebuild,v 1.1 2006/03/24 23:51:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.1-r5.ebuild,v 1.2 2006/03/24 23:58:42 agriffis Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -63,7 +63,7 @@ src_install() {
 		|| die "install failed"
 
 	# for upstream change tracking
-	if [[ -n ${XEN_UNSTABLE} ]]; then 
+	if [[ -n ${XEN_UNSTABLE} ]]; then
 		dodoc ${S}/XEN-VERSION
 	fi
 }

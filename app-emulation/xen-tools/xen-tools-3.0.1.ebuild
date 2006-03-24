@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.1.ebuild,v 1.1 2006/03/24 23:55:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.1.ebuild,v 1.2 2006/03/24 23:57:52 agriffis Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -99,7 +99,7 @@ src_install() {
 	keepdir /var/run/xenstored /var/lib/xenstored /var/xen/dump
 
 	# for upstream change tracking
-	if [[ -n ${XEN_UNSTABLE} ]]; then 
+	if [[ -n ${XEN_UNSTABLE} ]]; then
 		dodoc ${S}/XEN-VERSION
 	fi
 }
