@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.5-r3.ebuild,v 1.2 2005/11/30 06:21:22 hadfield Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.5-r3.ebuild,v 1.3 2006/03/24 04:03:54 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://lynx.isc.org/${MY_P}/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
 IUSE="bzip2 cjk ipv6 nls ssl"
 
 DEPEND="sys-libs/ncurses

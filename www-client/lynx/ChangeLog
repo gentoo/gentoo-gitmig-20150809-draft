@@ -1,6 +1,9 @@
 # ChangeLog for www-client/lynx
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.23 2006/02/09 22:02:11 tove Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.24 2006/03/24 04:03:54 agriffis Exp $
+
+  24 Mar 2006; Aron Griffis <agriffis@gentoo.org> lynx-2.8.5-r3.ebuild:
+  Mark 2.8.5-r3 stable on ia64
 
   30 Nov 2005; Scott Hadfield <hadfield@gentoo.org>
   files/lynx-2.8.5-tab_to.patch
