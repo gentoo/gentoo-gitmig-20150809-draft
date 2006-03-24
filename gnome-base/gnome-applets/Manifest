@@ -1,4 +1,4 @@
-MD5 5fdec98f11930d7756aa7244aebb8837 ChangeLog 22175
+MD5 41bff74d134827eb419149c809d2b838 ChangeLog 22363
 MD5 e8861003d9c73bcf26b9df775ec65fbe files/digest-gnome-applets-1.4.0.5 75
 MD5 fa49e6f2df38c7035ec9671ffbc030de files/digest-gnome-applets-2.10.1 74
 MD5 94a972f1942603b7060203bcddeab736 files/digest-gnome-applets-2.12.1 74
@@ -10,7 +10,7 @@ MD5 f33bff9e1053cd972801460796f68021 files/digest-gnome-applets-2.14.0 268
 MD5 ebcb8c6d8a9406b441de3e591d350960 files/gnome-applets-2.10.1-fbsd.patch 1494
 MD5 f7ba655004c33f5a85ce78bba4b818f4 files/gnome-applets-2.12.1-hal-switch.patch 772
 MD5 ed5d90f4b6499259a6bb64d87171272c files/gnome-applets-2.12.1-volume-mute.patch 2310
-MD5 1caa0716b2c2c87eab59f2c8e31e67aa gnome-applets-1.4.0.5.ebuild 1074
+MD5 5d5b1d36eecb057b0d66e27dd094e71d gnome-applets-1.4.0.5.ebuild 1067
 MD5 2c78a217349e3f1081e3f9cd1156ae52 gnome-applets-2.10.1.ebuild 1739
 MD5 dada78b18d297504203e202105c7cd0d gnome-applets-2.12.1-r1.ebuild 1966
 MD5 14ff2fd5ec1b5caa0bf3d63d23c2a6c8 gnome-applets-2.12.1-r2.ebuild 2105
