@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 423143a1858c956ffc95825240f83a17 ruby-glib2-0.12.0.ebuild 701
-MD5 b12e3ca6fe776e0e6f2d4743a541dfb2 ruby-glib2-0.14.1.ebuild 407
-MD5 c750f48803d435994b9eefd0599c8cf4 ruby-glib2-0.10.1.ebuild 444
-MD5 939c67e6abf7b9504c26bc276048e16d ChangeLog 3698
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 ef83f52422547352c20c11ecd712ef18 ruby-glib2-0.11.0.ebuild 703
+MD5 bf86f27263a0ac4155414acd1c5066b8 ChangeLog 3780
+RMD160 3dfbf97db703f055bd0d6e0cf3c0485df8a69d13 ChangeLog 3780
+SHA256 f102a0fe33cc9a04fd74ed1e2e097b20435401fe64a0e1aa8faee6370ae7f73b ChangeLog 3780
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-glib2-0.10.1 74
+RMD160 e49431d5695263dd310dd5e20efa18d8684d4906 files/digest-ruby-glib2-0.10.1 74
+SHA256 d657f9a43ed60a35bee960b104511f1d24fcb74261ef4d9ec8a9af8fd76509ce files/digest-ruby-glib2-0.10.1 74
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-glib2-0.11.0 75
+RMD160 ceed4b0d8e2039b162364aca59dad7e9339770c8 files/digest-ruby-glib2-0.11.0 75
+SHA256 c6fd0fc0e6d59329556416a92126ce1c59ec5fde901ce22db41c04abe570ed9a files/digest-ruby-glib2-0.11.0 75
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-glib2-0.12.0 75
+RMD160 d1d4ddeb5b6a813439b2f32ffa151e166d3dc79e files/digest-ruby-glib2-0.12.0 75
+SHA256 aebae7843fb099292f727e51dec0e144e8635b971729e3383f07038b0351afd0 files/digest-ruby-glib2-0.12.0 75
 MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-glib2-0.14.1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDebfgZgSmR+etHJoRAv5ZAJ4rzmzaV8buotOuiLXGiA5gqaBC/ACfXiw5
-ZoJqxWGGdTyJbciLwZjMuQk=
-=xK6U
------END PGP SIGNATURE-----
+RMD160 78c250bf80fdc18262e8ee04a030aae9157a45fd files/digest-ruby-glib2-0.14.1 75
+SHA256 0ca308d4b2ac8e367873d30133ec61d5592222d3c44a1c676bbd084926b59583 files/digest-ruby-glib2-0.14.1 75
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
+SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
+MD5 c750f48803d435994b9eefd0599c8cf4 ruby-glib2-0.10.1.ebuild 444
+RMD160 9dc4738be6e219c844fc522d0ea0673ce9b7f6ca ruby-glib2-0.10.1.ebuild 444
+SHA256 cb89bead348a0eb95435c585d1772fda19b4a404040069a1a197746ba1cc5ba1 ruby-glib2-0.10.1.ebuild 444
+MD5 ef83f52422547352c20c11ecd712ef18 ruby-glib2-0.11.0.ebuild 703
+RMD160 f0288684a5d1acc3d7fd061d07ad756061f5a48d ruby-glib2-0.11.0.ebuild 703
+SHA256 a3af9962f87949130ca793ddba62665ef0e08a88c9ab74a5e8990f96ab95471e ruby-glib2-0.11.0.ebuild 703
+MD5 423143a1858c956ffc95825240f83a17 ruby-glib2-0.12.0.ebuild 701
+RMD160 d25bae3bba515be7177089717e2a0639fd66e530 ruby-glib2-0.12.0.ebuild 701
+SHA256 e7bc380af04a0f9133a9ac05092a0b9af0174373acedb0f3dd2876eab85c6343 ruby-glib2-0.12.0.ebuild 701
+MD5 faa4bd56c12346e888c108464b89222d ruby-glib2-0.14.1.ebuild 401
+RMD160 54ce1758c5207f1776af231f19802bc5dca537bc ruby-glib2-0.14.1.ebuild 401
+SHA256 c2de3fef8235a0ec5060d9309c0e2d594a4f016360a30b87a47180fe533c8313 ruby-glib2-0.14.1.ebuild 401
