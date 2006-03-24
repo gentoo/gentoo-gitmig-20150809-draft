@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 2ed9f5b51fdbd06e6ebca139b3068076 pysol-4.82.ebuild 1009
-MD5 03d647a87b01e25cc791f288985cfe10 pysol-4.82-r1.ebuild 1323
-MD5 cc92bbc17e8d3cf9c712ec0f3d8de975 ChangeLog 1378
-MD5 1ea7842520bd2765105663127826d162 files/digest-pysol-4.82-r1 131
-MD5 3f8caa1bf12625ec007855239ce99176 files/pysol-4.82-sound-ok.patch 635
+MD5 22e1a96ebb00d46c70a8616bda0bad62 ChangeLog 1499
+RMD160 e7513e773df292a2617de398706735b953385f51 ChangeLog 1499
+SHA256 7c772daa0f6d329c188c0acadeae6e95ab12eb8e5ad9e3a4bbde6e11826acd8f ChangeLog 1499
 MD5 64d3e8b76a0ed236cf4a0fdb4a3e4b50 files/digest-pysol-4.82 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHLXRgIKl8Uu19MoRAswoAJ4pwTLccZdePKKPSdwkPABwSSexDQCfYqU2
-S56iUaQmoMVSteVB7yJitf0=
-=C/+K
------END PGP SIGNATURE-----
+RMD160 86aba886dde27471857e4ca281d8dd55184d6acb files/digest-pysol-4.82 64
+SHA256 3ff74fcba1cd1b32ecc95c1ce324f910cebad8f9627d9412505960ec63c8bd4c files/digest-pysol-4.82 64
+MD5 1ea7842520bd2765105663127826d162 files/digest-pysol-4.82-r1 131
+RMD160 dda0e9df73b9e20b9f68a5aa0ef0d1ab8f783678 files/digest-pysol-4.82-r1 131
+SHA256 4c922ca40829a99e30d170daffb1ddbe9c8a82ecbc68790bd50a23463cfa2512 files/digest-pysol-4.82-r1 131
+MD5 3f8caa1bf12625ec007855239ce99176 files/pysol-4.82-sound-ok.patch 635
+RMD160 e3a43fce0433b59d335d2c1f8be35df57d488515 files/pysol-4.82-sound-ok.patch 635
+SHA256 ac4b0898cc3dc9f6fcf98f29409b2e68c5f4b2e58ebe75f3ceb8542556bd44f4 files/pysol-4.82-sound-ok.patch 635
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 95e2802a487420f1a49d26be59b11212 pysol-4.82-r1.ebuild 1325
+RMD160 c07bd451eb9c989d5ba10144caeb8eb6bbd93d1c pysol-4.82-r1.ebuild 1325
+SHA256 97cb1f8083e3ce413c65cbe227922add79b282f6dea37014089574d7b6efacdd pysol-4.82-r1.ebuild 1325
+MD5 2ed9f5b51fdbd06e6ebca139b3068076 pysol-4.82.ebuild 1009
+RMD160 abbfc241a8f85a04f09c98ee98311a4e62debaa1 pysol-4.82.ebuild 1009
+SHA256 b12364de89fa483b27fa5a24f6da462fa07eed37333ade79656b0416b1695404 pysol-4.82.ebuild 1009

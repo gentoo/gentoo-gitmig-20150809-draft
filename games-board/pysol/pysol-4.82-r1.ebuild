@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r1.ebuild,v 1.5 2005/09/05 21:16:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r1.ebuild,v 1.6 2006/03/24 21:33:16 wolf31o2 Exp $
 
-inherit games python eutils
+inherit eutils python games
 
 DESCRIPTION="An exciting collection of more than 200 solitaire card games"
 HOMEPAGE="http://www.pysol.org/"
