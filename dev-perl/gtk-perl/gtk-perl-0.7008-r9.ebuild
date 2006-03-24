@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r9.ebuild,v 1.12 2005/03/06 15:36:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r9.ebuild,v 1.13 2006/03/24 19:10:32 agriffis Exp $
 
 inherit perl-module eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.perl.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa"
+KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE="gnome"
 
 DEPEND="${DEPEND}
