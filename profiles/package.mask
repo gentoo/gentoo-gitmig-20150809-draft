@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5127 2006/03/24 13:26:06 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5128 2006/03/24 15:02:13 exg Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1729,3 +1729,6 @@ dev-db/mergeant
 >=x11-misc/matchbox-panel-manager-0.1
 >=x11-themes/matchbox-themes-extra-0.3
 
+# Emanuele Giaquinta exg@gentoo.org (24 Mar 2006)
+# ABI change
+=dev-libs/expat-2.0.0
