@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/doom3-chextrek-0.5_beta.ebuild,v 1.1 2006/03/22 03:06:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/doom3-chextrek-0.5_beta.ebuild,v 1.2 2006/03/24 21:52:07 wolf31o2 Exp $
 
 inherit versionator games
 
@@ -37,8 +37,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "Press 'E' to open doors in the game."
 	einfo "Press 'M' to toggle the map."
-
-	games_pkg_postinst
 }
