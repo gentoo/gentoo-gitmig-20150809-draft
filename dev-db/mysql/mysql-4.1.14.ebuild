@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.33 2006/03/10 19:53:03 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.34 2006/03/24 16:03:07 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -345,7 +345,6 @@ src_compile() {
 		--enable-thread-safe-client \
 		--with-comment="Gentoo Linux ${PF}" \
 		--with-unix-socket-path=/var/run/mysqld/mysqld.sock \
-		--with-zlib-dir=/usr \
 		--with-lib-ccflags="-fPIC" \
 		${myconf} || die "bad ./configure"
 
