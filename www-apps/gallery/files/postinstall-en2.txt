@@ -14,7 +14,7 @@ For new installations:
 
 3. Now browse to http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/install
 
-NOTE: The installer will complain that FfmpegToolkit.class has been modified.
+NOTE: The installer may complain that FfmpegToolkit.class has been modified.
 This is normal, as we patch it to fix a bug with newer versions of ffmpeg.
 
 For upgrades:
