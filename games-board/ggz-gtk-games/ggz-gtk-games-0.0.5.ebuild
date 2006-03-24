@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ggz-gtk-games-0.0.5.ebuild,v 1.6 2004/06/24 22:16:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ggz-gtk-games-0.0.5.ebuild,v 1.7 2006/03/24 16:30:07 wolf31o2 Exp $
 
 DESCRIPTION="These are the gtk versions of the games made by GGZ Gaming Zone"
 HOMEPAGE="http://ggz.sourceforge.net/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-DEPEND="=games-board/ggz-gtk-client-0.0.5"
+DEPEND="~games-board/ggz-gtk-client-0.0.5"
 
 src_compile() {
 	econf || die "econf failed"
