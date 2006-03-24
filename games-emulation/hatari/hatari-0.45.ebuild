@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-0.45.ebuild,v 1.6 2004/06/24 22:29:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-0.45.ebuild,v 1.7 2006/03/24 21:36:14 wolf31o2 Exp $
 
 inherit games
 
@@ -16,8 +16,6 @@ IUSE=""
 RDEPEND="games-emulation/emutos
 	media-libs/libsdl
 	sys-libs/zlib"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
