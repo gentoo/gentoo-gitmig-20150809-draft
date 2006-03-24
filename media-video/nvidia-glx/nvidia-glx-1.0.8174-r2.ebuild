@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8174-r1.ebuild,v 1.3 2006/03/03 23:52:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8174-r2.ebuild,v 1.1 2006/03/24 21:39:28 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -232,10 +232,10 @@ src_install-libs() {
 			doexe ${drvdir}/nvidia_drv.o
 	fi
 
-	insinto ${X11_LIB_DIR}
+	insinto /usr/${inslibdir}
 	[[ -f ${libdir}/libXvMCNVIDIA.a ]] && \
 		doins ${libdir}/libXvMCNVIDIA.a
-	exeinto ${X11_LIB_DIR}
+	exeinto /usr/${inslibdir}
 	[[ -f ${libdir}/libXvMCNVIDIA.so.${PV} ]] && \
 		doexe ${libdir}/libXvMCNVIDIA.so.${PV}
 

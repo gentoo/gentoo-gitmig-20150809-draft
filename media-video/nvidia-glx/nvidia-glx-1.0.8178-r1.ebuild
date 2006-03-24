@@ -1,30 +1,30 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7676-r2.ebuild,v 1.5 2006/03/03 23:52:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8178-r1.ebuild,v 1.1 2006/03/24 21:39:28 eradicator Exp $
 
 inherit eutils multilib versionator
 
-X86_PKG_V="pkg0"
+X86_PKG_V="pkg1"
 AMD64_PKG_V="pkg2"
 NV_V="${PV/1.0./1.0-}"
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
 AMD64_NV_PACKAGE="NVIDIA-Linux-x86_64-${NV_V}"
-X86_FBSD_NV_PACKAGE="NVIDIA-FreeBSD-x86-${NV_V}"
+#X86_FBSD_NV_PACKAGE="NVIDIA-FreeBSD-x86-${NV_V}"
 
 DESCRIPTION="NVIDIA X11 driver and GLX libraries"
 HOMEPAGE="http://www.nvidia.com/"
 SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PACKAGE}-${X86_PKG_V}.run )
-	 amd64? ( http://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${AMD64_NV_PACKAGE}-${AMD64_PKG_V}.run )
-	 x86-fbsd? ( http://download.nvidia.com/freebsd/${NV_V}/${X86_FBSD_NV_PACKAGE}.tar.gz )"
+	 amd64? ( http://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${AMD64_NV_PACKAGE}-${AMD64_PKG_V}.run )"
+#	 x86-fbsd? ( http://download.nvidia.com/freebsd/${NV_V}/${X86_FBSD_NV_PACKAGE}.tar.gz )"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE="dlloader"
 RESTRICT="nostrip multilib-pkg-force"
 
-RDEPEND="|| ( virtual/x11 >=x11-base/xorg-server-0.99.1-r7 )
-	 || ( virtual/x11 media-libs/mesa )
+RDEPEND="|| ( >=x11-base/xorg-server-0.99.1-r7 virtual/x11 )
+	 || ( media-libs/mesa virtual/x11 )
 	 app-admin/eselect-opengl
 	 kernel_linux? ( ~media-video/nvidia-kernel-${PV} )
 	 !app-emulation/emul-linux-x86-nvidia"
@@ -41,9 +41,9 @@ if use x86; then
 elif use amd64; then
 	PKG_V="-${AMD64_PKG_V}"
 	NV_PACKAGE="${AMD64_NV_PACKAGE}"
-elif use x86-fbsd; then
-	PKG_V=""
-	NV_PACKAGE="${X86_FBSD_NV_PACKAGE}"
+#elif use x86-fbsd; then
+#	PKG_V=""
+#	NV_PACKAGE="${X86_FBSD_NV_PACKAGE}"
 fi
 
 S="${WORKDIR}/${NV_PACKAGE}${PKG_V}"
@@ -51,16 +51,7 @@ S="${WORKDIR}/${NV_PACKAGE}${PKG_V}"
 # On BSD userland it wants real make command
 MAKE="make"
 
-check_xfree() {
-	# This isn't necessary, true. But its about time people got the idea.
-	if has_version "x11-base/xfree"; then
-		eerror "Support for x11-base/xfree is deprecated. Upgrade to x11-base/xorg-x11."
-	fi
-}
-
 pkg_setup() {
-	check_xfree
-
 	if use amd64 && has_multilib_profile && [ "${DEFAULT_ABI}" != "amd64" ]; then
 		eerror "This ebuild doesn't currently support changing your default abi."
 		die "Unexpected \${DEFAULT_ABI} = ${DEFAULT_ABI}"
@@ -89,12 +80,6 @@ src_unpack() {
 	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
 	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-glheader.patch
-
-	# Closing bug #37517 by letting virtual/x11 provide system wide glext.h
-	# 16 July 2004, opengl-update is now supplying glext.h for system wide
-	# compatibility, so we still need to remove this.
-	# 7 November 2004, Keeping this around for 6629 to see what happens.
-	#rm -f usr/include/GL/glext.h
 }
 
 src_install() {
@@ -121,8 +106,10 @@ src_install() {
 
 	if ! use x86-fbsd; then
 		# Docs, remove nvidia-settings as provided by media-video/nvidia-settings
-		rm -f usr/share/doc/nvidia-settings*
-		dodoc usr/share/doc/*
+		newdoc usr/share/doc/README.txt README
+		dodoc usr/share/doc/Copyrights usr/share/doc/NVIDIA_Changelog
+		dodoc usr/share/doc/XF86Config.sample
+		dohtml usr/share/doc/html/*
 	else
 		dodoc doc/README doc/README.Linux doc/XF86Config.sample
 	fi
@@ -230,10 +217,10 @@ src_install-libs() {
 			doexe ${drvdir}/nvidia_drv.o
 	fi
 
-	insinto ${X11_LIB_DIR}
+	insinto /usr/${inslibdir}
 	[[ -f ${libdir}/libXvMCNVIDIA.a ]] && \
 		doins ${libdir}/libXvMCNVIDIA.a
-	exeinto ${X11_LIB_DIR}
+	exeinto /usr/${inslibdir}
 	[[ -f ${libdir}/libXvMCNVIDIA.so.${PV} ]] && \
 		doexe ${libdir}/libXvMCNVIDIA.so.${PV}
 
@@ -259,17 +246,6 @@ pkg_preinst() {
 		done
 	fi
 
-	# The X module
-	# Since we moved away from libs in /usr/X11R6 need to check this
-	if has_version "<x11-base/xorg-x11-6.8.0-r4" || \
-	   has_version "x11-base/xfree86" ; then
-		mkdir -p ${NV_D}/usr/X11R6
-		for dir in lib lib32 lib64 ; do
-			[[ -d ${NV_D}/usr/${dir} ]] && mv ${NV_D}/usr/${dir} ${NV_D}/usr/X11R6
-		done
-	fi
-
-
 	# Clean the dinamic libGL stuff's home to ensure
 	# we dont have stale libs floating around
 	if [[ -d ${ROOT}/usr/lib/opengl/nvidia ]] ; then
@@ -283,7 +259,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	#switch to the nvidia implementation
-	eselect opengl set --use-old nvidia
+	eselect opengl set nvidia
 
 	echo
 	einfo "To use the Nvidia GLX, run \"eselect opengl set nvidia\""
@@ -328,5 +304,5 @@ want_tls() {
 }
 
 pkg_postrm() {
-	eselect opengl set --use-old xorg-x11
+	eselect opengl set xorg-x11
 }
