@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstars
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.38 2006/03/22 20:15:38 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.39 2006/03/24 22:53:05 agriffis Exp $
+
+  24 Mar 2006; Aron Griffis <agriffis@gentoo.org> kstars-3.4.3.ebuild:
+  Mark 3.4.3 stable on ia64
 
 *kstars-3.5.2 (22 Mar 2006)
 
