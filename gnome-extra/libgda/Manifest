@@ -1,70 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b62157f2e7d21f281de31b7e34e06b15 ChangeLog 13219
-RMD160 fd88fb7ae05ca4aeaa956a2cde9f8b3491c24092 ChangeLog 13219
-SHA256 70cb2ba5430dd37f6b8539e53e86470b9d5143766d2170d11a2d3400ee4a2dce ChangeLog 13219
+MD5 f24d69170e887d2a17dd5a57ee835da3 ChangeLog 13319
 MD5 e92331f7677fcfc3e82541f08676bb32 files/digest-libgda-0.2.96-r2 66
-RMD160 d555d5b2a4f406b1550d6d8b397dbeb06c84cb84 files/digest-libgda-0.2.96-r2 66
-SHA256 f6bbd94735dd5140d78c7055fdd35b71f4bc79ade9e1d54486f9d8335bc5dc8c files/digest-libgda-0.2.96-r2 66
 MD5 c15d8674b02051d6c9af76a12258ab8b files/digest-libgda-1.0.4 66
-RMD160 cfaf28747302afeb9b458ec7063457100cad8e22 files/digest-libgda-1.0.4 66
-SHA256 48f5a1cefea3b10676acbe0d9ae133cc69579b0c1fff8d0c1c4618410224dbc5 files/digest-libgda-1.0.4 66
 MD5 ef67c275e1a496a0f75f76369994c248 files/digest-libgda-1.2.2-r1 66
-RMD160 0b178e11c309c672a120afb36f6c4866aac66317 files/digest-libgda-1.2.2-r1 66
-SHA256 aa84c5e5b42a9b36925a99199f8072a3e626dfcd66a5db2997b6905c63c77eae files/digest-libgda-1.2.2-r1 66
-MD5 0585ea86d6d935b35b23b5b574db7c87 files/digest-libgda-1.2.3 244
-RMD160 9fc9ec61243574b939d96986ec33522214d63c01 files/digest-libgda-1.2.3 244
-SHA256 f0c3c9e2af594dd3621ac1914aec3c9695204b2d2bf0ce035931fd31cac4c9f2 files/digest-libgda-1.2.3 244
+MD5 54f4be13cca3cd9756c499a92ce5fc0b files/digest-libgda-1.2.3 66
 MD5 552028d2c6006f11a013b81e4e3fc56c files/libgda-0.2.96-gcc3.4.patch 607
-RMD160 ac7d328579e04fcd9e4e057d31bbd86542e73ee7 files/libgda-0.2.96-gcc3.4.patch 607
-SHA256 7610b824c4e22c6f9d2b4441a04a01e41d94f6f663cbd8efe1da3dd86dbd1e30 files/libgda-0.2.96-gcc3.4.patch 607
 MD5 b25e6e812f6a42246239fb79f338c09e files/libgda-0.2.96-gentoo.patch 3345
-RMD160 ee298fea8438f7a8e30932100c1f80c116dbdbb8 files/libgda-0.2.96-gentoo.patch 3345
-SHA256 487e54652be309b0af41f71466b3e24cacda1b50079eed9b2d615a97debbd166 files/libgda-0.2.96-gentoo.patch 3345
 MD5 89d5a7588e21826826be8ecb11218b94 files/libgda-1.0.2-freetds_fix.patch 1338
-RMD160 62f2dc9b951f8456d5c034e69abc9c3c21b2e46a files/libgda-1.0.2-freetds_fix.patch 1338
-SHA256 22455fe285d8a14ea52671bcaaba3fa1a8f77f3ec5ca55b19a7f05413411df79 files/libgda-1.0.2-freetds_fix.patch 1338
 MD5 f2110a1cc61b61b9f52a346427e19874 files/libgda-1.0.3-gcc3.4.patch 4236
-RMD160 e53f3e9643b8539f26263c86b20e8891779f5f34 files/libgda-1.0.3-gcc3.4.patch 4236
-SHA256 66bbbc316defc5d4fdb956dc60fe2b77713766310c7d8b7521b7f7000a77e3df files/libgda-1.0.3-gcc3.4.patch 4236
 MD5 a3ad0589779cdb39f897e554dd9862fb files/libgda-1.0.3-gtkdoc_fixes.patch 15598
-RMD160 53981751943f3df42d1f310d35cfc3837698980f files/libgda-1.0.3-gtkdoc_fixes.patch 15598
-SHA256 e8968d8fb4680d67361fd5a617f738426bfaea7bddd92c32472e7b6a9926542c files/libgda-1.0.3-gtkdoc_fixes.patch 15598
 MD5 b87a0e5fdf7e23d29ee4452e694140c4 files/libgda-1.0.4-firebird-provider.patch 1055
-RMD160 64cf3ed4f37a4060da606c3ecb27f38ed9c80cbb files/libgda-1.0.4-firebird-provider.patch 1055
-SHA256 cdf37a75ba776ab4a523b60e862a9fa03f150c1afd2347348653697390be4a2f files/libgda-1.0.4-firebird-provider.patch 1055
 MD5 42fbab3bc532505fcd7e85aafb9c5a41 files/libgda-1.0.4-freetds-0.6x.patch 482
-RMD160 aaf333f6e0559ad3a4df5d8efae777acecd60cb7 files/libgda-1.0.4-freetds-0.6x.patch 482
-SHA256 be352ea4f0a7269ad039bb5118426cc7457cbc8bf137d540232e0eeadb690eef files/libgda-1.0.4-freetds-0.6x.patch 482
 MD5 b8d3b0cae4aa507dd9c6cecee8d30067 files/libgda-1.2-syslog_format_fix.patch 630
-RMD160 14a597939d54abb23ebbf65da4b3119dee7cf23e files/libgda-1.2-syslog_format_fix.patch 630
-SHA256 2119d27d1dfa955c5d95cbc58c02b4c947db15fb819b97ce1b0674b0c0930002 files/libgda-1.2-syslog_format_fix.patch 630
 MD5 b4dee0ec0bc3b4333c572810d035c68f files/libgda-1.2.1-mdb_fix.patch 617
-RMD160 d0834957fedc6875a02b5c4d07ea23151aa48344 files/libgda-1.2.1-mdb_fix.patch 617
-SHA256 d2c35139c43c570685f99c69aff2832f8db930b04c3991c7f0f91d6b0bc1be32 files/libgda-1.2.1-mdb_fix.patch 617
 MD5 c95ffd3e34df767ced0741bb1ba184e2 files/libgda-1.2.2-freetds_fixes.patch 1771
-RMD160 dda830caeb7c609a7a23453ef5f540c1586e3767 files/libgda-1.2.2-freetds_fixes.patch 1771
-SHA256 b69939f99e820918d9631cacaec2eb7b0abaf1bf11bff4d51198906f3c8b27f2 files/libgda-1.2.2-freetds_fixes.patch 1771
 MD5 efe942efcc3bbe2a6ae347a7e6808a57 libgda-0.2.96-r2.ebuild 3487
-RMD160 4ffa3eda4b0b7a06e4cfd7f7e14c68ab4894216b libgda-0.2.96-r2.ebuild 3487
-SHA256 5c96615081c4da021f868707c54c651457b59a2a59aa466d20c5a6379ea510db libgda-0.2.96-r2.ebuild 3487
 MD5 bd149dbad4eeac269f4e8b27e06507c5 libgda-1.0.4.ebuild 2937
-RMD160 ee5a1e721d1c212cbb2793ed4403eb29c3dadb68 libgda-1.0.4.ebuild 2937
-SHA256 c9d684e1dc68adcc4eade20c67ef3c558d83f5d07e34e5b652b72e7354b0dc1f libgda-1.0.4.ebuild 2937
 MD5 3a955c39d43b49a850a20873b50cccd5 libgda-1.2.2-r1.ebuild 2254
-RMD160 e32f7f96fca843f17fac94600af7a3edce2ceb14 libgda-1.2.2-r1.ebuild 2254
-SHA256 1695724cd483582f547e1da79845a6e9d6020ae4c2f50c5c90a29da177d83b1d libgda-1.2.2-r1.ebuild 2254
-MD5 27f7d9510300a725e20c349e77383d0e libgda-1.2.3.ebuild 2000
-RMD160 3efe8c8ac6de43239534cfe50d1675c3529954b6 libgda-1.2.3.ebuild 2000
-SHA256 de71d088b6916fa1a7e0ee1f6dc6a5a3f251b53b3cc557993ff62204e6f1153c libgda-1.2.3.ebuild 2000
+MD5 80edd7bfe252cb41217739d6447f20e3 libgda-1.2.3.ebuild 1999
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD+zBxJrHF4yAQTrARAo+pAKCHhNnB5pGDbomc/8GfnUik/r0F4QCff+Vi
-ilVyKtJD1adeBv2nikAqZOI=
-=IlE0
------END PGP SIGNATURE-----
