@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20.ebuild,v 1.4 2006/03/12 15:24:18 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20.ebuild,v 1.5 2006/03/24 18:54:44 caleb Exp $
 
 inherit eutils gnuconfig db flag-o-matic
 
@@ -30,7 +30,8 @@ KEYWORDS="~amd64 ~ia64 ~m68k ~ppc ~sparc ~x86"
 IUSE="tcltk java doc nocxx bootstrap"
 
 DEPEND="tcltk? ( >=dev-lang/tcl-8.4 )
-	java? ( virtual/jdk )"
+	java? ( virtual/jdk )
+	>=sys-devel/binutils-2.16.1"
 RDEPEND="tcltk? ( dev-lang/tcl )
 	java? ( virtual/jre )"
 
