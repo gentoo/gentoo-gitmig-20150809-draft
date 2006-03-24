@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/font-bh-ttf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.17 2006/02/26 12:54:18 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.18 2006/03/24 03:52:51 spyderous Exp $
+
+  24 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  font-bh-ttf-1.0.0.ebuild:
+  (#127306) Digests changed between release candidates and final release for
+  the same tarballs.
 
   26 Feb 2006; Stefaan De Roeck <stefaan@gentoo.org>
   font-bh-ttf-1.0.0.ebuild:
