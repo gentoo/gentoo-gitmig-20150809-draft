@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/nvemftp/nvemftp-0.1.3.ebuild,v 1.4 2004/11/18 00:15:21 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/nvemftp/nvemftp-0.1.3.ebuild,v 1.5 2006/03/24 13:33:39 caleb Exp $
 
 inherit kde
 
@@ -16,6 +16,7 @@ IUSE=""
 need-qt 3
 
 src_compile() {
+	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake nvemftp.pro
 	emake || die
 }
 
