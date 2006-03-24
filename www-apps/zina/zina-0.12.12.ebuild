@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/zina/zina-0.12.10.ebuild,v 1.1 2006/01/11 09:11:13 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/zina/zina-0.12.12.ebuild,v 1.1 2006/03/24 07:39:26 wrobel Exp $
 
 inherit webapp
 
