@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.9 2006/03/21 08:28:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.10 2006/03/24 07:44:39 keri Exp $
+
+  24 Mar 2006; Keri Harris <keri@gentoo.org> gprolog-1.2.19.ebuild:
+  Updated install paths to respect ${PF}. Thanks to TGL in bug #127299.
 
 *gprolog-1.2.19 (21 Mar 2006)
 

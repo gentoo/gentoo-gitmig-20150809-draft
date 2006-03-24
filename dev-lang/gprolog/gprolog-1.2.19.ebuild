@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.2.19.ebuild,v 1.1 2006/03/21 08:28:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.2.19.ebuild,v 1.2 2006/03/24 07:44:39 keri Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -49,6 +49,9 @@ src_compile() {
 		${myconf} \
 		--with-c-flags="${CFLAGS}" \
 		--with-install-dir="${D}"/usr \
+		--with-doc-dir="${D}"/usr/share/doc/${PF} \
+		--with-html-dir="${D}"/usr/share/doc/${PF}/html \
+		--with-examples-dir="${D}"/usr/share/doc/${PF}/examples \
 		|| die "econf failed"
 
 	emake -j1 || die "emake failed"
@@ -58,12 +61,9 @@ src_install() {
 	make install-system || die "make install-system failed"
 
 	if use doc; then
-		make DOC_DIR=/"${D}"/usr/share/doc/"${P}" \
-			install-doc || die "make install-doc failed"
-		make HTML_DIR="${D}"/usr/share/doc/"${P}"/html \
-			 install-html || die "make install-html failed"
-		make EXAMPLES_DIR="${D}"/usr/share/"${P}"/examples \
-			install-examples || die "make install-examples failed"
+		make install-doc || die "make install-doc failed"
+		make install-html || die "make install-html failed"
+		make install-examples || die "make install-examples failed"
 	fi
 
 	cd ${S}/..
