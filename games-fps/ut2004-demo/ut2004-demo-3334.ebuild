@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.10 2006/01/10 16:01:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.11 2006/03/24 22:28:35 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -63,12 +63,13 @@ src_install() {
 
 	dodir
 	games_make_wrapper ut2004-demo ./ut2004-demo "${dir}" "${dir}"
+	make_desktop_entry ut2004-demo "UT2004 Demo" ut2004-demo.xpm
 
 	prepgamesdirs
-	make_desktop_entry ut2004-demo "UT2004 Demo" ut2004-demo.xpm
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo
 	einfo "For Text To Speech:"
 	einfo "   1) emerge festival speechd"
@@ -84,5 +85,4 @@ pkg_postinst() {
 	einfo
 	einfo "You should hear something that sounds like 'This is a test.'"
 	einfo
-	games_pkg_postinst
 }
