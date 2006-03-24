@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ucblogo
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ChangeLog,v 1.2 2005/11/20 06:42:47 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ChangeLog,v 1.3 2006/03/24 00:12:51 vapier Exp $
+
+  24 Mar 2006; Mike Frysinger <vapier@gentoo.org>
+  files/ucblogo-5.5-destdir.patch, ucblogo-5.5.ebuild:
+  Fix by Lukasz Demianiuk to add support for DESTDIR to emacs dir #127354.
 
   20 Nov 2005; Mike Frysinger <vapier@gentoo.org>
   +files/ucblogo-5.5-dont-require-tetex.patch, ucblogo-5.5.ebuild:
