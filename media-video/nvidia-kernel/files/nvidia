@@ -14,3 +14,8 @@ alias /dev/nvidiactl char-major-195
 #
 #options nvidia NVreg_EnableAGPSBA=1 NVreg_EnableAGPFW=1
 
+# If you have a mobile chip, you may need to enable this option
+# if you have hard lockups when starting X.
+#
+# See: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=343186
+#option nvidia NVreg_Mobile=1

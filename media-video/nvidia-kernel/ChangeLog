@@ -1,6 +1,9 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.134 2006/03/24 20:32:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.135 2006/03/24 21:45:56 eradicator Exp $
+
+  24 Mar 2006; Jeremy Huddleston <eradicator@gentoo.org> files/nvidia:
+  Added note about NVreg_Mobile.  This closes bug #122295.
 
   24 Mar 2006; Jeremy Huddleston <eradicator@gentoo.org>
   -nvidia-kernel-1.0.6629-r4.ebuild, -nvidia-kernel-1.0.7174.ebuild,
