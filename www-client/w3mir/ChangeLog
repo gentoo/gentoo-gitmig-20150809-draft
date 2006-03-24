@@ -1,6 +1,13 @@
 # ChangeLog for www-client/w3mir
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/ChangeLog,v 1.5 2006/02/13 15:23:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/ChangeLog,v 1.6 2006/03/24 06:59:45 flameeyes Exp $
+
+*w3mir-1.0.10-r1 (24 Mar 2006)
+
+  24 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/w3mir-1.0.10-cwd.diff, +w3mir-1.0.10-r1.ebuild:
+  Add patch to fix mirroring to /, thanks to Patric Mueller for the patch (bug
+  #115183). Add ~amd64.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org> w3mir-1.0.10.ebuild:
   Virtuals for perl-core
