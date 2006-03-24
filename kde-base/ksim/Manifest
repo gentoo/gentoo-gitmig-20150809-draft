@@ -1,4 +1,4 @@
-MD5 004db636d4cabd417ff0f5b11f12007a ChangeLog 4821
+MD5 e129e41f0e50ee6b3cae01c0fbe29faa ChangeLog 4919
 MD5 8716488f71c42fb9ee3fbd1b310fc91e files/configure-fix-kdeutils-snmp.patch 1445
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-ksim-3.4.1 212
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-ksim-3.4.2 288
@@ -8,7 +8,7 @@ MD5 34b52102c89fb28f61eafe4d7560ef7a files/digest-ksim-3.5.1 68
 MD5 215488123a318281ac9687845ce3f247 files/digest-ksim-3.5.2 250
 MD5 5b77b9bf0a913ec870c7b924b788f4c8 ksim-3.4.1.ebuild 430
 MD5 e1b7bc8b8f596aa3b2da3dc9e2045627 ksim-3.4.2.ebuild 530
-MD5 a6656aadca275eda9eb97ea0fc7bdd03 ksim-3.4.3.ebuild 529
+MD5 3dfaa3905f8e52f10ab554bde1423a82 ksim-3.4.3.ebuild 531
 MD5 b10ef1ff17923bbe2ec8fb021f18e086 ksim-3.5.0.ebuild 477
 MD5 289c9d939cd91506c20d513d07e1ebaa ksim-3.5.1.ebuild 478
 MD5 94c65aacf97cda0c75fa72521b6967ab ksim-3.5.2.ebuild 478

@@ -1,4 +1,4 @@
-MD5 85ed250e7d752c27442433c0d15c57a0 ChangeLog 4813
+MD5 fd3734925e1d3197d3b42460fa0e0672 ChangeLog 4923
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kwalletmanager-3.4.1 212
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-kwalletmanager-3.4.2 288
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kwalletmanager-3.4.3 68
@@ -7,7 +7,7 @@ MD5 34b52102c89fb28f61eafe4d7560ef7a files/digest-kwalletmanager-3.5.1 68
 MD5 215488123a318281ac9687845ce3f247 files/digest-kwalletmanager-3.5.2 250
 MD5 08d9da04ac9ad3511ff31ec0478cbd94 kwalletmanager-3.4.1.ebuild 419
 MD5 9239e1a3c3a8e8be42dd2570fa95daa3 kwalletmanager-3.4.2.ebuild 432
-MD5 cf97366bd8922943a7bc4308c4c938a2 kwalletmanager-3.4.3.ebuild 432
+MD5 4be5f2eb732b131ebbc9c3c7885f08a8 kwalletmanager-3.4.3.ebuild 434
 MD5 265f5d50733f4a7b08c15c33efc50131 kwalletmanager-3.5.0.ebuild 433
 MD5 aac5ec11bcdec1f5d08aa58eb2f22a69 kwalletmanager-3.5.1.ebuild 434
 MD5 7c61a6841a44ee418fa71e42f09defb2 kwalletmanager-3.5.2.ebuild 434
