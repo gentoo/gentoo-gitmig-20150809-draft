@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/vserver-sources
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.91 2006/03/20 18:03:05 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.92 2006/03/24 14:30:07 phreak Exp $
+
+*vserver-sources-2.1.1_rc14 (24 Mar 2006)
+*vserver-sources-2.0.2_rc14 (24 Mar 2006)
+
+  24 Mar 2006; Christian Heim <phreak@gentoo.org>
+  -vserver-sources-2.0.2_rc13.ebuild, +vserver-sources-2.0.2_rc14.ebuild,
+  -vserver-sources-2.1.1_rc13.ebuild, +vserver-sources-2.1.1_rc14.ebuild:
+  Version bump from upstream
 
 *vserver-sources-2.1.1_rc13-r1 (20 Mar 2006)
 *vserver-sources-2.0.2_rc13-r1 (20 Mar 2006)
