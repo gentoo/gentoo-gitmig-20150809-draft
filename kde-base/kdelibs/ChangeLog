@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.309 2006/03/24 12:33:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.310 2006/03/24 13:27:52 flameeyes Exp $
+
+  24 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdelibs-3.5.1-r1.ebuild:
+  Backport to 3.5.1-r1 the xorg7 fix.
 
   24 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/kdelibs-3.5.2-xorg7-rgbtxt.patch, kdelibs-3.5.2.ebuild:
