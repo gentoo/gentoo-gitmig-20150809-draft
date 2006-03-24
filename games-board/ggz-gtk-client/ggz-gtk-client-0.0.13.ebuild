@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ggz-gtk-client-0.0.13.ebuild,v 1.1 2006/03/24 16:40:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ggz-gtk-client-0.0.13.ebuild,v 1.2 2006/03/24 17:14:45 wolf31o2 Exp $
 
 inherit games
 
@@ -30,6 +30,8 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog NEWS QuickStart.GGZ README* TODO
+	domenu ${D}/usr/share/games/applications/ggz-gtk.desktop
+	rm -rf ${D}/usr/share/games
 	prepgamesdirs
 }
 
