@@ -1,6 +1,9 @@
-MD5 08fb6a6d61020d15c803080cb7995971 ChangeLog 13153
-RMD160 a00148037b0d484bbde817fa18af62e8e5cf7cb2 ChangeLog 13153
-SHA256 67b79dafd78e8742db4cc62baf77f1a3fcc4d05bb58c20d9b63b41d18d758e4b ChangeLog 13153
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0282c2ea2b14d60db509e9ad9c27d459 ChangeLog 13376
+RMD160 70327e87c94d4475fb138f4dae3985bfd52f7a32 ChangeLog 13376
+SHA256 448a0286ff795f134d3eacb65e753374837a316c8d803efab73f74cf2350ce6c ChangeLog 13376
 MD5 2befa2e3e59e9bc6a3bfa4455f7789ea automake-1.4_p6.ebuild 1872
 RMD160 1e22c2710b818f8828d3697010d527e292e60dad automake-1.4_p6.ebuild 1872
 SHA256 243ac13986138a9ea9fd84f29822657e52e46dca029c810fa5348d88ddcab160 automake-1.4_p6.ebuild 1872
@@ -19,6 +22,9 @@ SHA256 99c9c1a883650cddd8d438a34e9c14611ac3ce4cfcc926a00b27b6a083ba39f1 automake
 MD5 4c1c851b62ab7495d6595ee24a0760ac automake-1.9.6-r1.ebuild 1570
 RMD160 e44646fe76bb3a649d650839fb9ce15d0fe35635 automake-1.9.6-r1.ebuild 1570
 SHA256 dd9036f2ca4183b878a700fabac37f891519c932ca052409d0d31388d866ea51 automake-1.9.6-r1.ebuild 1570
+MD5 5e9cf20f33d399890ed5a112a0ca0f73 automake-1.9.6-r2.ebuild 1637
+RMD160 f9f18fedb7ab9737ee9d3c55545f44f49b10dc9a automake-1.9.6-r2.ebuild 1637
+SHA256 46a816d18982200ab2fbcf607a2a750056b602e7d06b3ad6f4fe46a40f498541 automake-1.9.6-r2.ebuild 1637
 MD5 b04899a3860b0623bd45c705258ceabd files/automake-1.4-ansi2knr-stdlib.patch 249
 RMD160 f17983551ea326df6dc03f8389c02df3670eb475 files/automake-1.4-ansi2knr-stdlib.patch 249
 SHA256 8a29de01493b888f392388a0cffc0e4e2c0f4d81bc2ff34a4b65d27fab804210 files/automake-1.4-ansi2knr-stdlib.patch 249
@@ -49,6 +55,9 @@ SHA256 305979b9a07496352bfc6cc2177bf7aa1587ef1d0dcbbab1de7a56cb9d0ac539 files/au
 MD5 4c0ad89956f0b70972c19a60c65f9275 files/automake-1.9.3-infopage-namechange.patch 1109
 RMD160 f717f10b98485d39dd86d1f3457b68331d221770 files/automake-1.9.3-infopage-namechange.patch 1109
 SHA256 4447442210ac8d1f516b30c0e13c222c9ff161db5143c7a775fc1f18df75992f files/automake-1.9.3-infopage-namechange.patch 1109
+MD5 3099ade0063f414271664a3909abac9e files/automake-1.9.6-ignore-comments.patch 614
+RMD160 2d9ca9b4de82171370edd6843b4a3c2b9c073b4c files/automake-1.9.6-ignore-comments.patch 614
+SHA256 28b80f088b53a72935f15c7d845919f474224ece83847d7b3bae5f2236fe30fe files/automake-1.9.6-ignore-comments.patch 614
 MD5 41bfebb78fd15ed76ef2ae3a7d76d726 files/automake-1.9.6-include-dir-prefix.patch 1106
 RMD160 1a440ea039e4b71a44caaae7cb790e6b5e859820 files/automake-1.9.6-include-dir-prefix.patch 1106
 SHA256 01d85d830875aa05eec4ad209033473f3f8603f66781fdd9fd9b3cbb07ecbbd2 files/automake-1.9.6-include-dir-prefix.patch 1106
@@ -73,6 +82,16 @@ SHA256 566b0af138505a779e4152887e8290fbb88f3af0c45a28fe4f3831d432cd93ad files/di
 MD5 a1b9c06cc3ba7ac88f3b870f51d35758 files/digest-automake-1.9.6-r1 67
 RMD160 e4e42f5f87fc5b27afad24601c1ae7ca8d190576 files/digest-automake-1.9.6-r1 67
 SHA256 19461c465e48ae076932d5e1a9844bb7bba99f6220cbf75dbf80e7b46364c38d files/digest-automake-1.9.6-r1 67
+MD5 a1b9c06cc3ba7ac88f3b870f51d35758 files/digest-automake-1.9.6-r2 67
+RMD160 e4e42f5f87fc5b27afad24601c1ae7ca8d190576 files/digest-automake-1.9.6-r2 67
+SHA256 19461c465e48ae076932d5e1a9844bb7bba99f6220cbf75dbf80e7b46364c38d files/digest-automake-1.9.6-r2 67
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEIzkG2+ySkm8kpY0RAhpkAJ0RjqUjKqvXU01j/rXB32i1uZTmfgCgu4w2
+GoBIdB7IDDIrB68IJA1BAno=
+=hGf2
+-----END PGP SIGNATURE-----
