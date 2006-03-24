@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.7 2006/01/05 22:13:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.8 2006/03/24 22:24:00 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -36,12 +36,12 @@ src_install() {
 	insinto ${dir}
 
 	games_make_wrapper ut2003 ./ut2003 "${dir}" "${dir}"
+	make_desktop_entry ut2003 "Unreal Tournament 2003" ut2003.xpm
 
 	# this brings our install up to the newest version
 	cp -r ${S}/ut2003-lnx-2225/* ${Ddir} || die
 
 	prepgamesdirs
-	make_desktop_entry ut2003 "Unreal Tournament 2003" ut2003.xpm
 }
 
 pkg_postinst() {
