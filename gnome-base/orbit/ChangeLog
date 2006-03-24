@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/orbit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.64 2006/03/19 12:00:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.65 2006/03/24 16:23:46 agriffis Exp $
+
+  22 Mar 2006; Aron Griffis <agriffis@gentoo.org> orbit-0.5.17-r1.ebuild,
+  orbit-2.12.5.ebuild:
+  Mark 0.5.17-r1 stable on ia64 #117606.  Also mark 2.12.5 stable on ia64
 
   19 Mar 2006; Markus Rothe <corsair@gentoo.org> orbit-2.12.5.ebuild:
   Stable on ppc64
