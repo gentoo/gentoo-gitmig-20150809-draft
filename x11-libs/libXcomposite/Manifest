@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 da8cab88b02c498c93e9334fcdb34df0 ChangeLog 2199
-RMD160 1aacc69313e5abd5bd6acc5cc9e4ac4d9009772a ChangeLog 2199
-SHA256 266db80c68cb1993b0464ceedd23fccab039ef352e63226dde94a67857f9f58e ChangeLog 2199
-MD5 50853daa20b767003fcdf6e02668ddd1 files/digest-libXcomposite-0.2.2.2 74
-RMD160 bd23fba242867621177800b3f5519e6bdbb7ced4 files/digest-libXcomposite-0.2.2.2 74
-SHA256 04c46d7f96314dc55f53d2b696cfeb6877d5796399a0778f63695b09f5e9cf9b files/digest-libXcomposite-0.2.2.2 74
-MD5 c283422e98bf38c67dc0c25414533e1b libXcomposite-0.2.2.2.ebuild 672
-RMD160 7aaf6381e20b874f6cf44c65027969ef08a20352 libXcomposite-0.2.2.2.ebuild 672
-SHA256 ce8692e4b90ee70ff227dcfa732fc75a7dd275bbc040cc0d9b3cfe0f608bfce7 libXcomposite-0.2.2.2.ebuild 672
+MD5 2762606a82d26c5c54d2c01860dd31ae ChangeLog 2387
+RMD160 a386eab919c70a3732a26d146e3a6522e1d2b989 ChangeLog 2387
+SHA256 caed76147c63237c0763e5c030a622e4696c65c5c63fdf3703528a1edd44d2b6 ChangeLog 2387
+MD5 528f3cacce07744682b15c59fdfdedcf files/digest-libXcomposite-0.2.2.2 268
+RMD160 bb7875c8a54083c67c2f1b5cc3da62cdb839dcf1 files/digest-libXcomposite-0.2.2.2 268
+SHA256 d453b283733ebda67bf53ab98e81d70e10487b319898d30abb5f0dcf4da40b97 files/digest-libXcomposite-0.2.2.2 268
+MD5 6364070635b967264cfe175df22c0bef libXcomposite-0.2.2.2.ebuild 693
+RMD160 39932f62696f25d5441de8db4e025fe5f13b7f59 libXcomposite-0.2.2.2.ebuild 693
+SHA256 3211d3b1122c8d7b1f0e82469f2bc30612945ecbd24558a1b8b79321c1514b88 libXcomposite-0.2.2.2.ebuild 693
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBlNY2+ySkm8kpY0RAqmBAJ41qCM/8J4RvioziSW5wKMxCBtUNACbBCzu
-vx+l3TVHEK16PL1eQHRqhWM=
-=0OL5
------END PGP SIGNATURE-----

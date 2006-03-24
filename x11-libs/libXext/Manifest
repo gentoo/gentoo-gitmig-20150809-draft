@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c32b81f06404720cc07b3fbb40460b1b ChangeLog 2262
-RMD160 3729ca3b718eccce4b051ac3bc5ce41b31f5431b ChangeLog 2262
-SHA256 ca79f6aafabc3262dfed42e8edc80992a5c4f2481aadeb5ef19f8325e8fcf8a0 ChangeLog 2262
-MD5 4c2ed0d22b8fbf976855e7d6549d7d36 files/digest-libXext-1.0.0-r1 244
-RMD160 695a0cdfd03075080cafabc55c2bc817562738a1 files/digest-libXext-1.0.0-r1 244
-SHA256 e5e4a8acfe5582ab9c0aa683677530a8d3e4585bfc69bed83b06adac320c8507 files/digest-libXext-1.0.0-r1 244
+MD5 69d18eb5d8c2a16407b086fe341ea4ea ChangeLog 2444
+RMD160 812176b3d8862539a8665bbe1dee78654bb8b1d2 ChangeLog 2444
+SHA256 512a01a9bd435465e7dcf22df088cd66c4c18443685d51e43705acbc6de9645b ChangeLog 2444
+MD5 2dae9efa4b208714f3211ec41893b0d7 files/digest-libXext-1.0.0-r1 244
+RMD160 c28f59e389000c9d1b569dca87a10b5f21b03ff0 files/digest-libXext-1.0.0-r1 244
+SHA256 4c960842d06e21e963619060ef1244f5bac67eb5ab28b3b6abe8caae693e16ae files/digest-libXext-1.0.0-r1 244
 MD5 68769b5f5ffd78e38ebd2c58e4653649 files/fix_shadow_manpages.patch 963
 RMD160 eeaf67384683f8ad6a216c46dda6c6b008e64930 files/fix_shadow_manpages.patch 963
 SHA256 05b5baecb158c1710782ee89c7203455d23c6184b193e80771706d6e19f58987 files/fix_shadow_manpages.patch 963
-MD5 b5f1c0ba7bf894ee62f0590cc3f48100 libXext-1.0.0-r1.ebuild 668
-RMD160 5ef62f4b05f278a3233ffe9dac58e19031e0e844 libXext-1.0.0-r1.ebuild 668
-SHA256 aba94426848fd82a98cd8a23f7705a63e3fac220c6b617bc323029cded8be61f libXext-1.0.0-r1.ebuild 668
+MD5 8904a2e5f6b03ef125e689abe1312ddb libXext-1.0.0-r1.ebuild 687
+RMD160 93ad7b6cfc85b42860500714e7d254bbeeedf2fd libXext-1.0.0-r1.ebuild 687
+SHA256 d7562ac2ef09a33ecf1466c205e8509587d07fdc2987d9f3f8e8e8f723e1411c libXext-1.0.0-r1.ebuild 687
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEDkdJrHF4yAQTrARAridAJwLZHZ6cyWtUpZ/0aHwZVVw05hHGACfTxHL
-160J+GkBfpdmj6+kd2hj5ug=
-=hDaT
------END PGP SIGNATURE-----

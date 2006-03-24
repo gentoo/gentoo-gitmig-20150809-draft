@@ -1,28 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4f25fcfec6b8b2dd15468825de0c17ec ChangeLog 3387
-RMD160 05d65ea55653a7c6b9ea2062a39ad080d9b64ab3 ChangeLog 3387
-SHA256 c7b0c77d6b1e70829eef524dc8375c77712bebd027084d0abfb58b917cd70691 ChangeLog 3387
-MD5 eb5f3b1123623c5ac72e0e9afdd84aaa files/digest-libXcursor-1.1.5.2 71
-RMD160 d4e99633f50f1680bf2059f6bcca35e100e0909d files/digest-libXcursor-1.1.5.2 71
-SHA256 9825cd492ada111da6aae0b9d373e566c221da26bdd584a677b3f9123561f8e2 files/digest-libXcursor-1.1.5.2 71
-MD5 83c5cf89fefb1114748bb2831d119aed files/digest-libXcursor-1.1.5.2-r1 259
-RMD160 79209c8a70a1f04bd7243805ffbde6f648bab374 files/digest-libXcursor-1.1.5.2-r1 259
-SHA256 5b47b4a508c79c150a8d6d8b365c4b4e427e48592400dd7faf94f4b7866178f6 files/digest-libXcursor-1.1.5.2-r1 259
-MD5 4a618e8c5ce8af6d600c94aea496e22a libXcursor-1.1.5.2-r1.ebuild 861
-RMD160 2df08042aec28c61aad0715200a60b6538857782 libXcursor-1.1.5.2-r1.ebuild 861
-SHA256 10b8d7057a2f04b10e79b6ed79e2f4f7f0056d4ef994ee711e92526be697f445 libXcursor-1.1.5.2-r1.ebuild 861
-MD5 d778c1f61f34720a57e50fdba2c59a6a libXcursor-1.1.5.2.ebuild 723
-RMD160 8db98f61c108f1d8fe248c26eb3825243ce571fa libXcursor-1.1.5.2.ebuild 723
-SHA256 43cda5ee2e2d47c473655e19336383ab9baf3b403ce3f5b4af96bfc6b5ec4607 libXcursor-1.1.5.2.ebuild 723
+MD5 4bc9184d8d8968d92c82895e96811ca9 ChangeLog 3621
+RMD160 cb9adc6a805c31fad5abc34b5049fd0bdd6f3a18 ChangeLog 3621
+SHA256 977a11b6e803aecbf69e60e48fa5d48ba8955cdaad34d15e831f5d7d334481dd ChangeLog 3621
+MD5 cb08c33c5890ce6c9a1be08d51ccef53 files/digest-libXcursor-1.1.5.2-r1 259
+RMD160 04ae8b5072a075e438a77e623350c36caa67496d files/digest-libXcursor-1.1.5.2-r1 259
+SHA256 c576d626e91521256780de6a58b5fea4d8a78b579454a154c1b260e9a4b0a15c files/digest-libXcursor-1.1.5.2-r1 259
+MD5 2c7c7015f6e5647936f64f7e1e92b7c0 libXcursor-1.1.5.2-r1.ebuild 880
+RMD160 1a7b789d6bfe2e8db17668f37916d98f4556d90c libXcursor-1.1.5.2-r1.ebuild 880
+SHA256 7de5b344def13ac4e98c639596e07e5f71946787b24600ced2bf9d5d85ce4126 libXcursor-1.1.5.2-r1.ebuild 880
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEDcBJrHF4yAQTrARAou/AJ93r0YEcBFS/aF/5F2s8N2/qNm67gCgy78J
-YhgzDjuMpO9ZJ/3dxAzXZ/A=
-=fw3G
------END PGP SIGNATURE-----

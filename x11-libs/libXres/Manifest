@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bdf36d82c6130c8e4d65f52878bf5e10 ChangeLog 2305
-RMD160 5da0c6576deae846a3aa442560f8eb6a4521fdaa ChangeLog 2305
-SHA256 4bee002820ecea5a140d2dfba2055daa18725b23254d3d6f7d976d0004f3ce3e ChangeLog 2305
-MD5 7dc0e2e6fd4e345aaa3db9c7ce7a4456 files/digest-libXres-1.0.0-r1 244
-RMD160 f1fc51648a88b9a69c625a8b7adb0c44386fa719 files/digest-libXres-1.0.0-r1 244
-SHA256 b960615aaa265a2fb3b269e06dcfd3dfc63085c21ac9a736284efdd393629e8c files/digest-libXres-1.0.0-r1 244
+MD5 e064049142990d1ac845dafc47d1c2fa ChangeLog 2482
+RMD160 d5b55e22c4b9422e5c48acd069e329766dded0bf ChangeLog 2482
+SHA256 c51de77af1197aa7f1d7cd7b8f7b8f1dd2246f81328a27d220ebe7a25792678a ChangeLog 2482
+MD5 89aef5c085665b391876401a6b012a6b files/digest-libXres-1.0.0-r1 244
+RMD160 3aeae3dec5f61cd50d698e33f33c2dabf70a1a06 files/digest-libXres-1.0.0-r1 244
+SHA256 e30420d24a242a3b5b7b79541f4cd1287eb73bf48475a1fc98a9538837216691 files/digest-libXres-1.0.0-r1 244
 MD5 05783335da3a31f0ca09b69e2454ea0a files/fix_shadow_manpages.patch 542
 RMD160 779835bda2d3c71482396f8e7b00752f10d1585d files/fix_shadow_manpages.patch 542
 SHA256 28fecb16ba8e60bc8280b8769f314c2c1491db7a7b39a8b1bc398447c31997f6 files/fix_shadow_manpages.patch 542
-MD5 9368559943df9836a20b6798c18d2b19 libXres-1.0.0-r1.ebuild 688
-RMD160 9225c89a226b2dcc761a80e91f19654f4304ff98 libXres-1.0.0-r1.ebuild 688
-SHA256 47caa31af452a6bb36138694fbfedda0f5973bbd6087be378e6af6da2929dc1d libXres-1.0.0-r1.ebuild 688
+MD5 cc8a76c274d64d15e387a6eb450fce7c libXres-1.0.0-r1.ebuild 709
+RMD160 a782425175409d6bc6cd05509c3db1ec9bd1d9c3 libXres-1.0.0-r1.ebuild 709
+SHA256 e96f4be074b3921f7726cfb6dfbcf8518ece85f74d9f79735879ff5fc1400881 libXres-1.0.0-r1.ebuild 709
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBlF/2+ySkm8kpY0RAtgTAJ4r8f53uKPnY5iWzTAftizdCoGSaQCbBd2P
-uf0vPJrqIyKJm79JCsw1OiY=
-=2+OQ
------END PGP SIGNATURE-----
