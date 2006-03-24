@@ -1,6 +1,12 @@
 # ChangeLog for games-board/ggz-gtk-games
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ChangeLog,v 1.10 2006/03/24 16:30:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ChangeLog,v 1.11 2006/03/24 16:42:24 wolf31o2 Exp $
+
+*ggz-gtk-games-0.0.13 (24 Mar 2006)
+
+  24 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +ggz-gtk-games-0.0.13.ebuild:
+  Version bumped to 0.0.13 and closing bug #94367.
 
   24 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ggz-gtk-games-0.0.5.ebuild, ggz-gtk-games-0.0.9.ebuild:
