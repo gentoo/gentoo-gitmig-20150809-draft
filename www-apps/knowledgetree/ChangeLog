@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/knowledgetree
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/ChangeLog,v 1.3 2006/03/04 09:27:50 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/ChangeLog,v 1.4 2006/03/24 06:47:50 wrobel Exp $
+
+*knowledgetree-3.0.1 (24 Mar 2006)
+
+  24 Mar 2006; <wrobel@gentoo.org> -files/config-hook-3.0.0.sh,
+  -files/postinstall-en-3.0.0.txt, -files/postupgrade-en-3.0.0.txt,
+  +files/config-hook-3.0.1.sh, +files/postinstall-en-3.0.1.txt,
+  +files/postupgrade-en-3.0.1.txt, -knowledgetree-3.0.0.ebuild,
+  +knowledgetree-3.0.1.ebuild:
+  Added knowledgetree-3.0.1 to the tree, remover 3.0.0
 
 *knowledgetree-3.0.0 (04 Mar 2006)
 

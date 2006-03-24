@@ -1,0 +1,19 @@
+------------------------------------------------------------------------
+UPGRADE
+
+If you are upgrading from knowledgetree-2.* and had customizations in
+your environment.php you will need to transfer these to the new
+config.ini which now holds all configuration values.
+
+YOU ARE ADVISED TO BACKUP YOUR OLD DATABASE BEFORE UPGRADING!!! 
+
+Now go to http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/setup/upgrade.php 
+and press the "upgrade" button.
+
+------------------------------------------------------------------------
+!!! PHP4 !!!
+
+This is still a php4 application. Do not try to run it under php5. It
+will fail!
+------------------------------------------------------------------------
+

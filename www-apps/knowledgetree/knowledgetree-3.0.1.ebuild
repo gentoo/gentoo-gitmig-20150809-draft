@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/knowledgetree-3.0.0.ebuild,v 1.1 2006/03/04 09:27:50 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/knowledgetree-3.0.1.ebuild,v 1.1 2006/03/24 06:47:50 wrobel Exp $
 
 inherit webapp
 
@@ -63,11 +63,11 @@ src_install() {
 	webapp_sqlscript postgres sql/pgsql/install/tables.sql
 	webapp_sqlscript postgres sql/pgsql/install/functions.sql
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en-3.0.0.txt
-	webapp_postupgrade_txt en ${FILESDIR}/postupgrade-en-3.0.0.txt
+	webapp_postinst_txt en ${FILESDIR}/postinstall-en-${PV}.txt
+	webapp_postupgrade_txt en ${FILESDIR}/postupgrade-en-${PV}.txt
 
 	## Fix for the root folder
-	webapp_hook_script ${FILESDIR}/config-hook-3.0.0.sh
+	webapp_hook_script ${FILESDIR}/config-hook-${PV}.sh
 
 	webapp_src_install
 }
