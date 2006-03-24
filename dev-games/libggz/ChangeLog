@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/libggz
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.10 2006/03/24 16:32:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.11 2006/03/24 16:36:05 wolf31o2 Exp $
+
+*libggz-0.0.13 (24 Mar 2006)
+
+  24 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> +libggz-0.0.13.ebuild:
+  Version bumped to 0.0.13 and closing bug #94362.
 
   24 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> libggz-0.0.9.ebuild:
   Added ibiblio mirror and closing bug #87288.
