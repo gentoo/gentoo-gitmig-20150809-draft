@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 29b1355e94d3ac507198ebaad61734d9 ChangeLog 1723
+MD5 eb6b4e414e93d1c43b247adaf5cd9141 ChangeLog 1834
 MD5 cbec0db31276274f6101a9ab9cc625b3 files/digest-nepenthes-0.1.5 68
 MD5 a3518804809a33a52a1511ddcfafda88 files/digest-nepenthes-0.1.6 68
 MD5 9f779f5117afae2b26f1e4fbff55ff4b files/nepenthes.confd 123
 MD5 1c20696c1b6d548688b9a9db60ad74c8 files/nepenthes.initd 538
 MD5 121e52302b508d741d68a51265135609 metadata.xml 387
-MD5 7e0d4815ef30ba572e78bae886ccdfdf nepenthes-0.1.5.ebuild 2180
-MD5 c9a09e4964e9fcd65df3f1cc34094aaf nepenthes-0.1.6.ebuild 2180
+MD5 2981cd0aba9503f8e53e7a02025a3784 nepenthes-0.1.5.ebuild 2178
+MD5 51c5ad6327d9c42913f7f8cdacf07a78 nepenthes-0.1.6.ebuild 2183
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFDy/aVGSBEIeh4AEYRAmdRAJ0Ua9IhorzMKBO0nYAAgqK4HsiIHACghOgd
-P2kO4jmZRxI16MiAgezUeSI=
-=1ANT
+iD8DBQFEIz0D/NoSW7FuNV8RAo0fAJ4xO1JH/muO/Ld3Zw9WXLSIK5Hn6gCgnyQq
+v0BwlLuV1UXEbWZArtCFXhg=
+=XwdI
 -----END PGP SIGNATURE-----

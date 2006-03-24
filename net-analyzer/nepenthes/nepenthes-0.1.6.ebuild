@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.6.ebuild,v 1.1 2006/01/16 19:39:23 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.6.ebuild,v 1.2 2006/03/24 00:54:09 wormo Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="selinux"
 
 DEPEND="net-misc/curl
