@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 9ea139d91acbd66fc8e24cb1c4cd1fed ChangeLog 13161
 RMD160 d6776d46aadcdb2906ad24dd969e1b22c013d945 ChangeLog 13161
 SHA256 d646043ed3eb9f8e4905ee57f063785f99509ef9df7dcf8b9fec262b0d65a727 ChangeLog 13161
@@ -10,19 +7,18 @@ SHA256 c093e49f753d6ed4328c720845f32cba073c14d8ee60ee9e35dad2c7ae685aa5 alsa-too
 MD5 f62323f1c1d348c051845fdbba956978 alsa-tools-1.0.11_rc3.ebuild 2416
 RMD160 cd0a98b99e4cbde1e4697123b6e1e518534eba92 alsa-tools-1.0.11_rc3.ebuild 2416
 SHA256 c133ceba01551d79517319daca49efa04a093aba7b2fd10353d7cef890219575 alsa-tools-1.0.11_rc3.ebuild 2416
+MD5 f62323f1c1d348c051845fdbba956978 alsa-tools-1.0.11_rc4.ebuild 2416
+RMD160 cd0a98b99e4cbde1e4697123b6e1e518534eba92 alsa-tools-1.0.11_rc4.ebuild 2416
+SHA256 c133ceba01551d79517319daca49efa04a093aba7b2fd10353d7cef890219575 alsa-tools-1.0.11_rc4.ebuild 2416
 MD5 f679ba128fdc2882d1f7197dbc2a04d8 files/digest-alsa-tools-1.0.10 71
 RMD160 dcbf501cb7a97b61e50444fa5c6935e292245851 files/digest-alsa-tools-1.0.10 71
 SHA256 5168d7bf0b826864d5a76c634119923a4f5d25d87d29e2dd56898de913c5ece6 files/digest-alsa-tools-1.0.10 71
 MD5 ba78dbc28c6cbbd05f7c519455c36577 files/digest-alsa-tools-1.0.11_rc3 268
 RMD160 7e80dfc41c64ed15f072ef998ed793cb86136a70 files/digest-alsa-tools-1.0.11_rc3 268
 SHA256 074fdaa6dbad994d4811f6c92efda6f257595035813009d65fa8fe0c779c2a02 files/digest-alsa-tools-1.0.11_rc3 268
+MD5 c899d7d0fa38ece5ece9ed1e3c607223 files/digest-alsa-tools-1.0.11_rc4 268
+RMD160 7b40cf63f2a1768e8eca1427894352d9383f6c2d files/digest-alsa-tools-1.0.11_rc4 268
+SHA256 fec0d3edb42a50cf249bd68d962b15e01d56b55b946248ffefe9f96f1416eff4 files/digest-alsa-tools-1.0.11_rc4 268
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4dOIAiZjviIA2XgRAsv0AJsFle6UCZI4F5BNdSB/XA9puLVwFwCgigrJ
-BnP7IrrH1gP27x9OKexIs9o=
-=gI1r
------END PGP SIGNATURE-----
