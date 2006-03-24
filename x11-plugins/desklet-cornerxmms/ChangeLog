@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-cornerxmms
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cornerxmms/ChangeLog,v 1.10 2006/01/16 17:49:46 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cornerxmms/ChangeLog,v 1.11 2006/03/24 21:04:49 agriffis Exp $
+
+  24 Mar 2006; Aron Griffis <agriffis@gentoo.org>
+  desklet-cornerxmms-0.1.0.ebuild:
+  Mark 0.1.0 ~ia64
 
   16 Jan 2006; Joe Sapp <nixphoeni@gentoo.org>
   desklet-cornerxmms-0.1.0.ebuild:
