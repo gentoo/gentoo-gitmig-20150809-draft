@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.30.ebuild,v 1.1 2006/03/18 14:57:38 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.30-r1.ebuild,v 1.1 2006/03/24 04:18:12 pebenito Exp $
 
 IUSE=""
 
@@ -22,6 +22,7 @@ DEPEND="=sys-libs/libsemanage-${SEMNG_VER}*
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/checkpolicy-1.30.1.diff
 }
 
 src_compile() {
