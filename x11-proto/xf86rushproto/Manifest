@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cb38f042d0fd968a01f605dae6e68f3b ChangeLog 1763
-RMD160 0e8d9ccea155654902e596ea4419e6fbb162317c ChangeLog 1763
-SHA256 d0ecb69cfeee40e90bce359724f3ff4c2240d6e0b486382c2d0f983ec8a3a7ea ChangeLog 1763
-MD5 4ea33b3b4a53c39d35335c283b8d9378 files/digest-xf86rushproto-1.1.2 259
-RMD160 3516a45aca28b6fe39df787e289242d17fbd0260 files/digest-xf86rushproto-1.1.2 259
-SHA256 5eaabcde95963dcee09ec96a6439f9696d27f44b2f0463e4eec12cee353be4d4 files/digest-xf86rushproto-1.1.2 259
+MD5 978e823815769b4f77d741de68336959 ChangeLog 1948
+RMD160 9c02f7521b2bd0ddb722bf309d51c82add86a62e ChangeLog 1948
+SHA256 926a3ee1f5d2b97b1f31ddcc960938c78e733e1f75f614e9deb6e01174a97924 ChangeLog 1948
+MD5 02edf9d8499f0023ff7333dafa67a240 files/digest-xf86rushproto-1.1.2 259
+RMD160 a857f938519a1085bfd8fda26e8fd9f17bd5542d files/digest-xf86rushproto-1.1.2 259
+SHA256 5e39f0a07788cf655fe83f746ddb797942200b910bee9edbe2bfee13ac195452 files/digest-xf86rushproto-1.1.2 259
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 fc7b35e67eccbdaff1abbf222e0be614 xf86rushproto-1.1.2.ebuild 477
-RMD160 2f2625fe462b15ad13687b60a268c07ece5c0be8 xf86rushproto-1.1.2.ebuild 477
-SHA256 53c62d356b7aee3fcbcb4001d1c74d86f9c232f1625b26c92e56892e10338f28 xf86rushproto-1.1.2.ebuild 477
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEDxxJrHF4yAQTrARAjzjAJwMAW44ekJbcCXbJBu0wYnZ2D1fRgCfQCGa
-sL2Lpz1lAuq05MqZkZgbbeM=
-=vpHw
------END PGP SIGNATURE-----
+MD5 c325b20186ca4d5581ee3aee4e08f6fa xf86rushproto-1.1.2.ebuild 496
+RMD160 6b6eb0cf6b0ad3e8c7a925066f78ea81dca0df8f xf86rushproto-1.1.2.ebuild 496
+SHA256 e7724fd0a8eea5505c5edb021355a1196a4c4203cc1f6e868f8ae83f0f58aa23 xf86rushproto-1.1.2.ebuild 496

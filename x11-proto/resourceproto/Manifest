@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2a4ba7100c42a63ef80662863b7c24d5 ChangeLog 1763
-RMD160 3f264940c81316d0c99279229264952700cdcd15 ChangeLog 1763
-SHA256 98b18b24bbdce79e7dcb06ca2c0b13764b045141ffff94bd8d6f73e7fd1af792 ChangeLog 1763
-MD5 38b4b01f51dc65a85f7ad37a53fc5ffb files/digest-resourceproto-1.0.2 259
-RMD160 39e35758b5163cfdf1a050b59b95be6564e5d7cb files/digest-resourceproto-1.0.2 259
-SHA256 be862f95df1d59039930bbbb396a5f867d5874a93cf1fd2ff9bc5b86e4038469 files/digest-resourceproto-1.0.2 259
+MD5 a7f6f0b136fa08ff5fcceb7615387072 ChangeLog 1948
+RMD160 44eb25ddee61ec6997113580e23947aa93daedd5 ChangeLog 1948
+SHA256 70350b319cd8adc3f72642e4d96e9a185aae761cd2ede8ff155aa24e3a762cb2 ChangeLog 1948
+MD5 f14a3620676fda88dc87abc316ccaa76 files/digest-resourceproto-1.0.2 259
+RMD160 6e4db6d6aac70e81b668a010c1c56b472b4ae11f files/digest-resourceproto-1.0.2 259
+SHA256 14629b71fed8bac6982c3cf2faf88a7bd7d94ffa079c58a2c8b9081c1af36603 files/digest-resourceproto-1.0.2 259
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 95079566e7e2fb37870b987396a5130d resourceproto-1.0.2.ebuild 477
-RMD160 c3e1db61e24b3ee213c41932e04275ba755710a1 resourceproto-1.0.2.ebuild 477
-SHA256 46d04777701d0a5f49c68470e0db307970d93477fa3d6eefa017e6c31943c123 resourceproto-1.0.2.ebuild 477
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEDyRJrHF4yAQTrARAv/oAKDR4j6UbN+SpvDBGk9oIuIzACeQgACfQgut
-FtsxFs3WLd8Eo0XnEUHwyE8=
-=mHLT
------END PGP SIGNATURE-----
+MD5 c0a7abafb4ed67354db897c5bf5d7c3f resourceproto-1.0.2.ebuild 496
+RMD160 0e17b400a3c423a7d79610f3d589a91f28c76890 resourceproto-1.0.2.ebuild 496
+SHA256 e91185884083436dbf361aaa32a0bc2e33cf4a73f3ee601baf48d5080ed073ec resourceproto-1.0.2.ebuild 496

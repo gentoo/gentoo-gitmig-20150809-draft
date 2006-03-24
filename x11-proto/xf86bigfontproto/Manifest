@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6e72eb22b1b3385c2ead635304e861b7 ChangeLog 1837
-RMD160 da08f046120b761be33855e0218f90fc84ec2166 ChangeLog 1837
-SHA256 d4af587cd143869853437c94ba80f7da35e35c9561e21f410bb80f9f56c6dfb0 ChangeLog 1837
-MD5 47130fffeb9a3b4697aa5073683fad7a files/digest-xf86bigfontproto-1.1.2 268
-RMD160 689b1dd4fd7a770fd41f0acc531635faafa8d63d files/digest-xf86bigfontproto-1.1.2 268
-SHA256 07fa6acf832c8d202f9b8d862727d12054925f5bb92542ab4f66840ba4e25a34 files/digest-xf86bigfontproto-1.1.2 268
+MD5 f3716d9b9efca50dd32a3a339698a33a ChangeLog 2025
+RMD160 995c6d44bf83b3bdadda3339604633c0fb945886 ChangeLog 2025
+SHA256 b0e6292b3e0d44e4f616ae709b9a0febf1207a4e6db0d11d8c45ab4da1d7a8d1 ChangeLog 2025
+MD5 534d90e1941172f24b4eb2f94442434d files/digest-xf86bigfontproto-1.1.2 268
+RMD160 bf06a048e00e1f571856a638de26eb9bbc2318a9 files/digest-xf86bigfontproto-1.1.2 268
+SHA256 7fccf3b4147773df21e1a8be1cf530d3eec60c2f087e74d05817b9948187be04 files/digest-xf86bigfontproto-1.1.2 268
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 4800e33734364503d55a7587a5461407 xf86bigfontproto-1.1.2.ebuild 487
-RMD160 e5cb2f0bb8fdee9abc210763d4409380df054a63 xf86bigfontproto-1.1.2.ebuild 487
-SHA256 0ef6c619a566689355c0cb98b3216a4ba627d2af78a73d32a4e04c638a932cbe xf86bigfontproto-1.1.2.ebuild 487
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEED0YJrHF4yAQTrARAtyjAJoCw9M5zWWUFYvOupiydlnoCibFdQCdEOv1
-TU/G4akg/nXTeylgg8bgODM=
-=juMp
------END PGP SIGNATURE-----
+MD5 c3cd706c46be5f0d09e946b222c874af xf86bigfontproto-1.1.2.ebuild 506
+RMD160 6f0111311dca5a2d5a7374d2c1011c4cbb6abe47 xf86bigfontproto-1.1.2.ebuild 506
+SHA256 eaeacdf322d8e582ea648eb08fe2e7d9b00cd78d8cb0f188f429a830a2ea2760 xf86bigfontproto-1.1.2.ebuild 506

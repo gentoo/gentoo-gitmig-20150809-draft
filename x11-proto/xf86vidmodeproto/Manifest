@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 77f77e128603ca4900d4a358a21e502b ChangeLog 1825
-RMD160 7b097af44a80c4bbc92ad23d77a990087304388a ChangeLog 1825
-SHA256 bcdbffcf92438cc620579884a4876e252a664ad057681e51e941f0b1d60c2130 ChangeLog 1825
-MD5 aea954684bd996462695f498080620b6 files/digest-xf86vidmodeproto-2.2.2 268
-RMD160 3273bfcbc7bdbbeb2e4156fe36775ac0c65fbac8 files/digest-xf86vidmodeproto-2.2.2 268
-SHA256 495fbf3d7250aafd7c85de3784b5e2c8c79eac8ce346e88990d231b5dda08ecb files/digest-xf86vidmodeproto-2.2.2 268
+MD5 eb6bd70f26dd3859c30c4c2c3fcd0232 ChangeLog 2013
+RMD160 22900da0fe6b9128400ac861b4961ca7ba704331 ChangeLog 2013
+SHA256 fecdb46ceb19540fbcf653aa23e2f7ba6bf9cd1663c3423f360b81f59a84b74c ChangeLog 2013
+MD5 2642114f9a24f6759a26c307a02d5f13 files/digest-xf86vidmodeproto-2.2.2 268
+RMD160 c551c7833f7d1b5842fd4f757d002d2afa8c15dc files/digest-xf86vidmodeproto-2.2.2 268
+SHA256 f202c333a18b7252b13b7fc252623de6d26a41548eb97c24c2622db638c090b1 files/digest-xf86vidmodeproto-2.2.2 268
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 0b79c627e7e5b8ed59468b77e13c63fd xf86vidmodeproto-2.2.2.ebuild 487
-RMD160 6fb9853ea5799846e67d54f1ac6282dde2845706 xf86vidmodeproto-2.2.2.ebuild 487
-SHA256 241e4b58f8fb28789523b6afdcfaeb0f8c4b57792a63d809240cf579031dca6b xf86vidmodeproto-2.2.2.ebuild 487
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEDyxJrHF4yAQTrARAtvlAKClDBELgFgdb5jqo4dbrH45EF43eACfRzM1
-a+n1cby1cf8xtEFlntSMx4U=
-=HI/x
------END PGP SIGNATURE-----
+MD5 e0f39d935bad88af7cfcf3dd2abcd9f0 xf86vidmodeproto-2.2.2.ebuild 506
+RMD160 1249b51d18694cc7405d8f856f56dd41b0ec3dc4 xf86vidmodeproto-2.2.2.ebuild 506
+SHA256 95655852713f84330cdab3ea3a3d2a7034a9fe01e87f704527dc2d9934a7809c xf86vidmodeproto-2.2.2.ebuild 506

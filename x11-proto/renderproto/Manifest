@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cd7c933b021d195628ad711970861203 ChangeLog 1723
-RMD160 35403353c44b7f2fd39f83866585520ef7a84dd3 ChangeLog 1723
-SHA256 7587d448e59c43317973a3d8280bd7d85e9005a3b170b455ad5663c9cf22aebf ChangeLog 1723
-MD5 bc1bac0f728d24cca49fdbc32dcd3614 files/digest-renderproto-0.9.2 253
-RMD160 802669fe081af5a04556151e9e856fabfe9189ef files/digest-renderproto-0.9.2 253
-SHA256 68f4ab5d8f35bb7fbd1b6b6a64077e2bac1099fa5576f5f48a185ca811477814 files/digest-renderproto-0.9.2 253
+MD5 bd53cf7b29ba4eee32f6042e2e84b388 ChangeLog 1906
+RMD160 826f341cf88c4ef779d2d561ce48f09f08a3dbe8 ChangeLog 1906
+SHA256 ce2286dbd40e81a6bfee0bb8d241138d97490583e1f4a71294ccca61b081df3a ChangeLog 1906
+MD5 b0454ec5fde4f62b176f6ebef8c3568f files/digest-renderproto-0.9.2 253
+RMD160 bb302770cffa30eb7eede9bbf58f55d14f3e1a2c files/digest-renderproto-0.9.2 253
+SHA256 3d71cfff851f682b8c1280ae2c4d77708ab9390af2482046263078b19fedfcf8 files/digest-renderproto-0.9.2 253
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 6f38de625d379a8c0e9c8b74cb0431d0 renderproto-0.9.2.ebuild 471
-RMD160 0f0718641158e4542e3a7cd58f2d70adf5b0e568 renderproto-0.9.2.ebuild 471
-SHA256 d538e0f657fd75e79b9455af89c8ec0451835a3b61e1dbbc0eab55534f19c804 renderproto-0.9.2.ebuild 471
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEDtOJrHF4yAQTrARAok8AJ9zlYTufesrSZZ0mnUVwgH5QQO7QQCfSh+c
-U87FudfziVmEMmnnVgnw+T8=
-=cMQ2
------END PGP SIGNATURE-----
+MD5 7ca299161e6044d28ca915f9f77b6ac0 renderproto-0.9.2.ebuild 490
+RMD160 2c2214b03b3017e7042f62fff6baaef3a86cd702 renderproto-0.9.2.ebuild 490
+SHA256 44611d5975268d24634678af6592056918834f92286a0a9f697bff92a4aaadad renderproto-0.9.2.ebuild 490
