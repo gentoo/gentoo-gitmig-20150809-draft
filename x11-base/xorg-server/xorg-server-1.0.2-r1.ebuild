@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.2.ebuild,v 1.3 2006/03/23 08:33:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.2-r1.ebuild,v 1.1 2006/03/24 01:17:14 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -18,10 +18,12 @@ MESA_SRC_P="${MESA_PN}Lib-${MESA_PV}"
 PATCHES="${FILESDIR}/${P}-Sbus.patch
 	${FILESDIR}/${P}-sparc64-cfbrrop-fix.patch
 	${FILESDIR}/${PV}-try-to-fix-xorgcfg.patch
-	${FILESDIR}/${PV}-fix-xorgconfig-rgbpath-and-mouse.patch"
+	${FILESDIR}/${PV}-fix-xorgconfig-rgbpath-and-mouse.patch
+	${DISTDIR}/${PV}-overlay-window.patch.bz2"
 
 SRC_URI="${SRC_URI}
-	mirror://sourceforge/mesa3d/${MESA_SRC_P}.tar.bz2"
+	mirror://sourceforge/mesa3d/${MESA_SRC_P}.tar.bz2
+	http://dev.gentoo.org/~spyderous/xorg-x11/1.0.2/1.0.2-overlay-window.patch.bz2"
 DESCRIPTION="X.Org X servers"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="dri ipv6 minimal xprint"
@@ -37,7 +39,6 @@ RDEPEND="x11-libs/libXfont
 	x11-libs/libXi
 	media-libs/freetype
 	>=media-libs/mesa-6
-	media-fonts/font-adobe-75dpi
 	media-fonts/font-misc-misc
 	media-fonts/font-cursor-misc
 	x11-misc/xbitmaps

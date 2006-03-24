@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.91 2006/03/23 08:33:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.92 2006/03/24 01:17:14 spyderous Exp $
+
+*xorg-server-1.0.2-r1 (24 Mar 2006)
+
+  24 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  -xorg-server-1.0.2.ebuild, +xorg-server-1.0.2-r1.ebuild:
+  (#127333) Fix crashing of pretty much all gtk+-2 apps. We had the
+  client-side updates to composite and fixes extensions, but we didn't let the
+  server know about them, which resulted in lots of BadRequests.
 
   23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-server-1.0.2.ebuild:
