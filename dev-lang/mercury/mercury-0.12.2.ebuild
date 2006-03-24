@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2.ebuild,v 1.1 2006/03/23 09:13:41 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2.ebuild,v 1.2 2006/03/24 20:34:14 keri Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_install() {
 		INSTALL_PREFIX="${D}"/usr \
 		INSTALL_MAN_DIR="${D}"/usr/share/man \
 		INSTALL_INFO_DIR="${D}"/usr/share/info \
-		INSTALL_HTML_DIR="${D}"/usr/share/doc/${P}/html \
+		INSTALL_HTML_DIR="${D}"/usr/share/doc/${PF}/html \
 		install || die "make install failed"
 
 	dodoc BUGS HISTORY LIMITATIONS NEWS README README.Java README.Linux README.Linux-Alpha README.Linux-m68k README.Linux-PPC RELEASE_NOTES TODO VERSION WORK_IN_PROGRESS
