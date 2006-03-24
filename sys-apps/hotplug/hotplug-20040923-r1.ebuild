@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20040923-r1.ebuild,v 1.3 2006/03/05 22:20:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20040923-r1.ebuild,v 1.4 2006/03/24 04:55:53 robbat2 Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-ifrename.patch
+	epatch "${FILESDIR}"/${P}-scsi-agent-timeout.patch
 }
 
 src_install() {

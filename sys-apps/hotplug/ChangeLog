@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hotplug
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.65 2005/07/19 18:34:28 brix Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.66 2006/03/24 04:55:53 robbat2 Exp $
+
+  24 Mar 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/hotplug-20040923-scsi-agent-timeout.patch,
+  hotplug-20040923-r1.ebuild:
+  Bug #126249, patch against scsi.agent. Affected hardware is very rare, not
+  bumping revision.
 
 *hotplug-20040923-r1 (19 Jul 2005)
 
