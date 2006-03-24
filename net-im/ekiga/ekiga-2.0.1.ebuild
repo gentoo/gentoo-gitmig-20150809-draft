@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.1.ebuild,v 1.2 2006/03/21 21:33:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.1.ebuild,v 1.3 2006/03/24 22:10:11 genstef Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -21,7 +21,7 @@ RDEPEND="~dev-libs/pwlib-1.10.0
 	>=dev-libs/libxml2-2.6.1
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	sdl? ( >=media-libs/libsdl-1.2.4 )
-	dbus? ( >=sys-apps/dbus-0.22 )
+	dbus? ( >=sys-apps/dbus-0.61 )
 	avahi? ( net-dns/avahi )
 	gnome? ( >=gnome-base/libbonoboui-2.2.0
 		>=gnome-base/libbonobo-2.2.0
@@ -98,6 +98,16 @@ src_install() {
 		rm -rf ${D}/usr/lib/bonobo
 
 		dodoc AUTHORS ChangeLog COPYING README INSTALL NEWS FAQ TODO
+	fi
+}
+
+pkg_postinst() {
+	if use gnome; then
+		gnome2_pkg_postinst
+		# we need to fix the GConf permissions, see bug #59764
+		# <obz@gentoo.org>
+		einfo "Fixing GConf permissions for ekiga"
+		ekiga-config-tool --fix-permissions
 	fi
 }
 
