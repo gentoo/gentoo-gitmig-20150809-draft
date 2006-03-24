@@ -1,9 +1,14 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.53 2006/03/22 09:07:25 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.54 2006/03/24 19:37:12 agriffis Exp $
+
+*lvm2-2.02.02 (24 Mar 2006)
+
+  24 Mar 2006; Aron Griffis <agriffis@gentoo.org> +lvm2-2.02.02.ebuild:
+  Bump to 2.02.02 (from 2.02.01). #120511
 
   22 Mar 2006; Paul de Vrieze <pauldv@gentoo.org> lvm2-2.02.01.ebuild:
-  Make the install fail if the start and stop scripts can be installed. When
+  Make the install fail if the start and stop scripts can't be installed. When
   these scripts are not installed, the volumes are not activated at boot,
   bumping into maintainer mode.
 
