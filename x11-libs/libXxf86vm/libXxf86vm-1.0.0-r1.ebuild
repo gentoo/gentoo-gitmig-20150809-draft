@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86vm/libXxf86vm-1.0.0-r1.ebuild,v 1.2 2006/03/02 01:59:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86vm/libXxf86vm-1.0.0-r1.ebuild,v 1.3 2006/03/24 04:09:40 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -8,6 +8,7 @@ SNAPSHOT="yes"
 inherit x-modular
 
 DESCRIPTION="X.Org Xxf86vm library"
+RESTRICT="mirror"
 #HOMEPAGE="http://foo.bar.com/"
 #SRC_URI="ftp://foo.bar.com/${P}.tar.bz2"
 #LICENSE=""

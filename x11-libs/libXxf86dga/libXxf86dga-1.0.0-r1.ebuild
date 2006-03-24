@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/libXxf86dga-1.0.0-r1.ebuild,v 1.3 2006/03/06 16:23:10 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/libXxf86dga-1.0.0-r1.ebuild,v 1.4 2006/03/24 04:09:11 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -8,6 +8,7 @@ SNAPSHOT="yes"
 inherit x-modular
 
 DESCRIPTION="X.Org Xxf86dga library"
+RESTRICT="mirror"
 #HOMEPAGE="http://foo.bar.com/"
 #SRC_URI="ftp://foo.bar.com/${P}.tar.bz2"
 #LICENSE=""

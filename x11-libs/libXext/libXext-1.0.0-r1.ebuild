@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/libXext-1.0.0-r1.ebuild,v 1.2 2006/03/09 14:17:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/libXext-1.0.0-r1.ebuild,v 1.3 2006/03/24 04:07:44 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -8,6 +8,7 @@ SNAPSHOT="yes"
 inherit x-modular
 
 DESCRIPTION="X.Org Xext library"
+RESTRICT="mirror"
 #HOMEPAGE="http://foo.bar.com/"
 #SRC_URI="ftp://foo.bar.com/${P}.tar.bz2"
 #LICENSE=""
