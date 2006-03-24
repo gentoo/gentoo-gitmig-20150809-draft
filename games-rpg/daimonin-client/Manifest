@@ -1,12 +1,15 @@
-MD5 029566e7d74887816a512b172d0dc600 ChangeLog 2353
-RMD160 71253b5377b64ba3fe300b316321ade6a4ff7058 ChangeLog 2353
-SHA256 7d0cf52e6272ccc9de8ddb524b6f6e1e55c2656c0b8e2ba702e49033c26d27bc ChangeLog 2353
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cde91ce6fa96fa7a6f328d59ce34ec67 ChangeLog 2591
+RMD160 ecf4335800daf1c080b7e50153d2402e27e54b7c ChangeLog 2591
+SHA256 2ba61a14cae773d32a7cd3fc5b332f99d219ba0e1b70640fc62979a05a252cd9 ChangeLog 2591
 MD5 804b258e6fe9926ac45b13368e55d3ba daimonin-client-0.95b-r2.ebuild 1160
 RMD160 91b67a7c643d72d48eea65761d31c5b377d13172 daimonin-client-0.95b-r2.ebuild 1160
 SHA256 f53d365326b6580e41b3264c59aabbbda6ba00dbe1c7066e15c1817cff0040ea daimonin-client-0.95b-r2.ebuild 1160
-MD5 b67ae37e4224563045ce870f8366435f daimonin-client-0.96.6_beta3.ebuild 1488
-RMD160 c22a27e59eda08449adb604bc8a7731a61a43dc0 daimonin-client-0.96.6_beta3.ebuild 1488
-SHA256 8a38189cb7c5459a4fdeb54ee2c0d757b4aa6236d340799126a9188a4ff10d13 daimonin-client-0.96.6_beta3.ebuild 1488
+MD5 256685210cfd42f5c926b73c2c69fca0 daimonin-client-0.96.6_beta3.ebuild 1631
+RMD160 eddc2abbeae6f93d4d4f2a2c94c40430f80b8796 daimonin-client-0.96.6_beta3.ebuild 1631
+SHA256 243553a70a62edad76f7ec15f5b7ca2a28734f2b1a4266cb98ffa928114206dd daimonin-client-0.96.6_beta3.ebuild 1631
 MD5 f0fea0494c9b50a88620443df60a150e files/0.95b-gcc3.patch 1664
 RMD160 22406cd9099cab6c178d51c003f1de9d2ef49499 files/0.95b-gcc3.patch 1664
 SHA256 6cb074342051667d0e6144526f6a7df0e589777fff643a59d87321b60b29d3d6 files/0.95b-gcc3.patch 1664
@@ -22,12 +25,22 @@ SHA256 534d2a5c40c2384d69d839b6d068a5a470a46fc14c8c7790157efbe28ad1331b files/0.
 MD5 8a41290909b2aa9cf1835f6aac36c738 files/0.96a_beta2-gentoo-paths.patch 3172
 RMD160 754eb5a9759ec2907847fc5ebd1f29bab24a93fd files/0.96a_beta2-gentoo-paths.patch 3172
 SHA256 534d2a5c40c2384d69d839b6d068a5a470a46fc14c8c7790157efbe28ad1331b files/0.96a_beta2-gentoo-paths.patch 3172
+MD5 7f2510d3c8a639a495b06c05e3a072f9 files/daimonin-client-0.96.6_beta3-64bits.patch 901
+RMD160 84e96c6864dd2a485e5b415524ffb434855d92ae files/daimonin-client-0.96.6_beta3-64bits.patch 901
+SHA256 89c40ec9dfef6498feda2665a9b4566063bd4fa7590fe7bf35a68e5f59489fbf files/daimonin-client-0.96.6_beta3-64bits.patch 901
 MD5 b7f58f6b5220a09dedb532eb977bd227 files/digest-daimonin-client-0.95b-r2 69
 RMD160 be1486eec22cf1becb243367f52ba1d631e72608 files/digest-daimonin-client-0.95b-r2 69
 SHA256 30efa39dd0e23467044366c364fa102ea87d78c4bc120bf6bf725c2498e6de09 files/digest-daimonin-client-0.95b-r2 69
-MD5 5ac5c8e1d72348115409654af5ab3584 files/digest-daimonin-client-0.96.6_beta3 77
-RMD160 901d1776cfd02b7e8ce0b39c0d3d658c2c2b609a files/digest-daimonin-client-0.96.6_beta3 77
-SHA256 2afcde0cb9f37eeb7033005fd833a3cc0ff11a91bff316feed3c75c9026ba44d files/digest-daimonin-client-0.96.6_beta3 77
+MD5 3f4cf988933206552386a7031d142214 files/digest-daimonin-client-0.96.6_beta3 277
+RMD160 461d29bfeccbd699be492ac36b72535008aba59e files/digest-daimonin-client-0.96.6_beta3 277
+SHA256 94a56194f41de4677a4da190dfbaf1996a229c9e470c55937a66e3a75c714487 files/digest-daimonin-client-0.96.6_beta3 277
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEJEI62CTtIKiFlQIRAl9zAKCJPjQpI2br+1ohcSRb05Zk/i7CKwCgt0Gn
+q9Ou3dMA2tl0qo8c+4aSBB4=
+=W/CV
+-----END PGP SIGNATURE-----

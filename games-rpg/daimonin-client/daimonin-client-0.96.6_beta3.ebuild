@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/daimonin-client-0.96.6_beta3.ebuild,v 1.4 2006/03/13 21:18:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/daimonin-client-0.96.6_beta3.ebuild,v 1.5 2006/03/24 19:02:00 tupone Exp $
 
 inherit eutils flag-o-matic games
 
@@ -24,7 +24,8 @@ S=${WORKDIR}/daimonin/client
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-gentoo-paths.patch"
+	epatch "${FILESDIR}/${PV}-gentoo-paths.patch" \
+		"${FILESDIR}/${P}"-64bits.patch
 	chmod a+x make/linux/configure
 }
 
@@ -32,6 +33,10 @@ src_compile() {
 	append-flags \
 		-DGENTOO_DATADIR="'\"${GAMES_DATADIR}/${PN}\"'" \
 		-DGENTOO_STATEDIR="'\"${GAMES_STATEDIR}/${PN}\"'"
+	# Bug #91950 - compiler optimization is bad for the game on amd64
+	if use amd64; then
+		append-flags -O0
+	fi
 
 	cd make/linux
 	egamesconf || die
