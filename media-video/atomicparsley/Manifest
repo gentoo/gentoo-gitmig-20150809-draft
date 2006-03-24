@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bcf0ec55b5259e5c91bc714b8096427c ChangeLog 303
+RMD160 7e1270b30eefd6f3fe9813df72e4df6b40d745a2 ChangeLog 303
+SHA256 4999739d976044f4e13b5e943fc229c2cad679af52e1692e544515ccef7823e5 ChangeLog 303
+MD5 6a0cfd4db63d73c64ac9dd0fb6f706b3 atomicparsley-0.8.4.ebuild 708
+RMD160 f71e87f7efd30ec8895b87edda7a62c58002f2b5 atomicparsley-0.8.4.ebuild 708
+SHA256 864378e9abc612e9730c3d4fb442970d73c3f47c54f91f769a5fc9a79a9a7ec1 atomicparsley-0.8.4.ebuild 708
+MD5 bcd893aae65b053b582e6c920d04b2fc files/digest-atomicparsley-0.8.4 268
+RMD160 d89319a7ecc2b1c2255ebe3f6fcd882d2eb6d388 files/digest-atomicparsley-0.8.4 268
+SHA256 f9b870ad666d83dbc5d04257cabf90cfa6102b63fd971b6bd17fc8da8d33d817 files/digest-atomicparsley-0.8.4 268
+MD5 2a2cd20628bd70efb15b9f4df56ff9a1 metadata.xml 226
+RMD160 6602fff7f5ea72406b6eb951fb6a31ff8e16cc51 metadata.xml 226
+SHA256 42f89d3b59fdea7612dc4f081d404cfcef59f82aa0d905268532d8034812a374 metadata.xml 226
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEJDnz0K3RJaeXx6cRAklbAKDclfV8eeUKrPZh0yz22sB5qjXyEQCgub5T
+koTXJ4iid2OuBjsmA0skWVk=
+=KYOU
+-----END PGP SIGNATURE-----
