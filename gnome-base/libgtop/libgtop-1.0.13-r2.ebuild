@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-1.0.13-r2.ebuild,v 1.23 2005/12/03 20:08:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-1.0.13-r2.ebuild,v 1.24 2006/03/24 17:24:38 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.0/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 hppa ~ia64 ppc sparc x86"
+KEYWORDS="~amd64 hppa ia64 ppc sparc x86"
 
 RDEPEND=">=sys-devel/bc-1.06
 	>=sys-libs/readline-4.1
