@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ut2004-bonuspack-ece-1-r1.ebuild,v 1.1 2006/03/14 22:58:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ut2004-bonuspack-ece-1-r1.ebuild,v 1.2 2006/03/24 22:27:06 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
@@ -81,8 +81,4 @@ src_install() {
 
 		prepgamesdirs
 	fi
-}
-
-pkg_postinst() {
-	games_pkg_postinst
 }
