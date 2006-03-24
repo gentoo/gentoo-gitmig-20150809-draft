@@ -1,34 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 20172c8288ade0398729076751db48ea ChangeLog 2807
-RMD160 8a617d4e68bbd6447bd2f04547a9471ce7020fca ChangeLog 2807
-SHA256 9d69ac7273ef91fad9f4a574d00c8a01e46398c12d2f55c6cf45f2c2f064d231 ChangeLog 2807
+MD5 da45ec90493ffce383a82d0ed38249d1 ChangeLog 3004
 MD5 f0b6ef73c257acea57b05a10e0019fc2 files/digest-pcmciautils-010 67
-RMD160 2db6ff44cefd15b96ad050cb5852a1daab9d3371 files/digest-pcmciautils-010 67
-SHA256 97f8bfb549d5a67b240232a6e2c724aaa3483b9e83dba1b70ddb66dc98493ccc files/digest-pcmciautils-010 67
 MD5 c4cd2ddab2c4cdfcb454995185f927d3 files/digest-pcmciautils-011 67
-RMD160 a77c72b9fe2ccc1061feeed254c06f33d756a4ec files/digest-pcmciautils-011 67
-SHA256 2743fb99ff43a776fda611cf19351589a127e2ff3b0358c0a1b10800f54a0d5f files/digest-pcmciautils-011 67
 MD5 e61be18a09805cd66618da8fb7ce7f52 files/digest-pcmciautils-012 67
-RMD160 a28e4f67d5344d8079b6a4ee60dc9d2b29b9f8e0 files/digest-pcmciautils-012 67
-SHA256 d2b06ab5d474956e75ecc7370a58ec2007d1f9ea265af30ca850847ac2894d97 files/digest-pcmciautils-012 67
+MD5 7bc55616a05befe15cf8e86ed05fc57e files/pcmciautils-012-pccardctl-uclibc.patch 251
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
-RMD160 e6f6333d659d443f0290a257c2b23772ab1cf526 metadata.xml 255
-SHA256 255c7b73ddde5e979b6b53de0f9f5b858e22e602e0495f484b2a33cd2987edf9 metadata.xml 255
 MD5 c4ef57a636ce47082452f47f164174e5 pcmciautils-010.ebuild 2199
-RMD160 8517713e59ddb1fede2b02b4f4b5013b2e4fa2b0 pcmciautils-010.ebuild 2199
-SHA256 dcd9a2c2a88a13556804d998dd34a9b852e4d10d9b4b3e75ffd08cd5ada76308 pcmciautils-010.ebuild 2199
 MD5 21e277d920e9e5078e820311b92d23c6 pcmciautils-011.ebuild 2096
-RMD160 3379c2360d1992cedf8e6f0237ac5d836526f341 pcmciautils-011.ebuild 2096
-SHA256 51bbb0bb640e0a61d1f837a0ab9b9c954770e81023f3eb2f7b25b517201a3825 pcmciautils-011.ebuild 2096
-MD5 981bcfbdd31417a8fbc90fa83aaa250d pcmciautils-012.ebuild 2205
-RMD160 d429ed751f349689dafc0bdc4f35913c4e8284af pcmciautils-012.ebuild 2205
-SHA256 898dd79335d4054a70c8147971acbf0a1fd92fb503ae95e8ffbcbbd587a8da92 pcmciautils-012.ebuild 2205
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6OR2+ySkm8kpY0RAicyAJ0WJqr1Za4QIIBZXzHMppe0sDi0zACbBCca
-S0Zd5khr/imfx0uaKJUAK8w=
-=NLz7
------END PGP SIGNATURE-----
+MD5 d2d84c0d80f36863623b6375539d0664 pcmciautils-012.ebuild 2268

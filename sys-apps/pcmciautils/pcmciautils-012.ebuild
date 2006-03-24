@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-012.ebuild,v 1.6 2006/03/03 02:01:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-012.ebuild,v 1.7 2006/03/24 16:31:25 brix Exp $
 
-inherit toolchain-funcs linux-info
+inherit eutils toolchain-funcs linux-info
 
 DESCRIPTION="PCMCIA userspace utilities for Linux kernel 2.6.13 and beyond"
 
@@ -39,6 +39,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-pccardctl-uclibc.patch
 
 	sed -i \
 		-e "s:^\(KERNEL_DIR\) = .*:\1 = ${KV_DIR}:" \
