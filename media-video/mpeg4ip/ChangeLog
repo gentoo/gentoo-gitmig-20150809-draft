@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpeg4ip
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.31 2005/12/20 15:00:33 tester Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.32 2006/03/24 06:06:48 wormo Exp $
+
+  23 Mar 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  mpeg4ip-1.4.1.ebuild:
+  mark ~ppc (Bug #124693)
 
   20 Dec 2005; Olivier Crête <tester@gentoo.org>
   +files/mpeg4ip-1.4.1-disable-faac-test.patch, mpeg4ip-1.4.1.ebuild:

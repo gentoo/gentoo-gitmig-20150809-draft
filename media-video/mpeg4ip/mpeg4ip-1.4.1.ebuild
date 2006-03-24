@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1.ebuild,v 1.6 2005/12/20 15:00:33 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1.ebuild,v 1.7 2006/03/24 06:06:48 wormo Exp $
 
 inherit eutils multilib
 
@@ -14,7 +14,7 @@ LICENSE="MPL-1.1 LGPL-2 GPL-2 LGPL-2.1 BSD UCL MPEG4"
 
 SLOT="0"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 IUSE="ipv6 mmx v4l2 xvid nas alsa esd arts ffmpeg a52 mpeg2 lame aac id3 player mp4live x264"
 

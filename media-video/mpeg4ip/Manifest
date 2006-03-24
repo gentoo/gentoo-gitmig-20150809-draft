@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1b1b7046bccf0f835f8e3c5b68063d8e metadata.xml 255
-MD5 8853be980864ab423fdcffb77dc5f7e7 ChangeLog 5456
-MD5 9247c2fd94ec4409a4db8f2413f23a11 mpeg4ip-1.4.1.ebuild 3411
-MD5 5f7b147dc4e5cedf5c1cfcba032ff098 mpeg4ip-1.1.ebuild 1790
-MD5 22a76c68f55b131dfc602a61ededb699 files/mpeg4ip-1.4.1-disable-faac-test.patch 1149
-MD5 f66eabf6e140aef8962a75cf06d15df0 files/digest-mpeg4ip-1.4.1 66
-MD5 75ef8fbc1d49d5a13a8f6ece3b8fff78 files/mpeg4ip-1.4.1-gcc41.patch 5332
-MD5 47b75e71dec24165d7bcf3a5b55d785d files/mpeg4ip-1.1-gentoo-fixes.patch 844
+MD5 177b8156b308f1fc1b8c2d5018468191 ChangeLog 5566
 MD5 bf208b3fef7857814d19fd17e38cbd66 files/digest-mpeg4ip-1.1 64
+MD5 f66eabf6e140aef8962a75cf06d15df0 files/digest-mpeg4ip-1.4.1 66
 MD5 e4ff7ab91be9fcfe456f8c9d9d5050ce files/mpeg4ip-1.1-gcc3.4.patch 8110
+MD5 47b75e71dec24165d7bcf3a5b55d785d files/mpeg4ip-1.1-gentoo-fixes.patch 844
+MD5 22a76c68f55b131dfc602a61ededb699 files/mpeg4ip-1.4.1-disable-faac-test.patch 1149
+MD5 75ef8fbc1d49d5a13a8f6ece3b8fff78 files/mpeg4ip-1.4.1-gcc41.patch 5332
+MD5 1b1b7046bccf0f835f8e3c5b68063d8e metadata.xml 255
+MD5 cfeb9a1214e667f72da42c40baf9fa32 mpeg4ip-1.1.ebuild 1789
+MD5 48a443d6bc429e34baaccab0c625b8c1 mpeg4ip-1.4.1.ebuild 3415
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFDqByfmOfEJZHYOKcRAi8bAKCjl3VqSWWym6cG1/ozxjWkgPHAMgCg4rsl
-P/PuT4bTkPPpJOKOVHut9lM=
-=rTrE
+iD8DBQFEI4ZH/NoSW7FuNV8RAvKrAKDQuWcEavc7kSLUQQk0YIjNiAA8PACgy00m
+bIEDBS+Ane7g+07mXhZ9NPk=
+=dZyE
 -----END PGP SIGNATURE-----
