@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5748dd1fcec064bba674c380ebe0413d ChangeLog 607
 MD5 f0a08f2bb47564f1460fcdd326d2dd2b files/digest-fluidsynth-dssi-0.9.1 73
 MD5 021934d6da0f32df9528b96b1fd73df8 fluidsynth-dssi-0.9.1.ebuild 666
 MD5 46a390b7ebca59519b2906976eb4c712 metadata.xml 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFEJHQX/NoSW7FuNV8RAi7wAJ4w97eR0y4mYlJF7M6K/7lMZIFmYQCeKd3M
+xl28mHo0sgUJEyeDaDfEgO0=
+=p/fV
+-----END PGP SIGNATURE-----
