@@ -1,27 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7cb1459a0f4fb5f6d26db6dfd9957807 ChangeLog 18414
-RMD160 1520796d72be2f7b7630f644771f8542bbfd2a88 ChangeLog 18414
-SHA256 11b19acaf50ae6165ed8b8eb4fc12348486fbd59b8e30c48f091a9267b4b7d2c ChangeLog 18414
-MD5 028492a70fa9f5eef1d4e5fb1993214e files/70_mod_php.conf-apache1 457
-RMD160 cba11929fc8fce91753b89fd468362fc24a4c42a files/70_mod_php.conf-apache1 457
-SHA256 b8f860a576b78ab9636ff551c56509ca52a9204d127452625e23c88b32ef4806 files/70_mod_php.conf-apache1 457
+MD5 a4c36655ccfcd23086e9afc7451536d5 ChangeLog 18873
+RMD160 328453b6a42e9bd13f9e2faac041dfd316fb32bf ChangeLog 18873
+SHA256 7af71e42caeae5251d59490f2553cd1026c3a03d7c68ebd45695c0ae3f595c8d ChangeLog 18873
+MD5 6171c7aa95f69b8a54b0f29bd1056d2b files/70_mod_php.conf-apache1 454
+RMD160 869b5c225782690889bdfa5227a8f46c33ac71d3 files/70_mod_php.conf-apache1 454
+SHA256 9e6227e508f0c297f48c667e2135c7692f7943b3d0cd2ffdbdcca0bad5220343 files/70_mod_php.conf-apache1 454
 MD5 4a84c92760a7758b6446a62cabb8beed files/70_mod_php.conf-apache2 458
 RMD160 d2de515f92639d817a67c3a44db3e3dff4864974 files/70_mod_php.conf-apache2 458
 SHA256 06e3046fa7352eb2349967382bff711c01f6600688b8f49569ceacf2a31b130a files/70_mod_php.conf-apache2 458
-MD5 89eebb502d9fe877f974543630df8d44 files/70_mod_php5.conf-apache1 497
-RMD160 8906581f5f6698aed33b7710042936f7904df197 files/70_mod_php5.conf-apache1 497
-SHA256 2ae3f97a49e86b079d7b6d48e5fde0d3d18841c78a9373fa24500f31f52110e6 files/70_mod_php5.conf-apache1 497
-MD5 6d7e37faeb0e0ce557bae6a76888b261 files/70_mod_php5.conf-apache2 498
-RMD160 60b32c16c251db9685bba23d82bf8e749a1d0223 files/70_mod_php5.conf-apache2 498
-SHA256 08db825992b8f62e03a6e9f54db1b7947b615655cda915dc00b901a479585a02 files/70_mod_php5.conf-apache2 498
+MD5 acdac68b3a1afd99aaf37e818bc921e3 files/70_mod_php5.conf-apache1 494
+RMD160 52b3137709eaa38a5a024d8d76f9970ca49b5485 files/70_mod_php5.conf-apache1 494
+SHA256 d6755b60c2d22b315e3affe501a5c4883180736d3b46839b89334a1123ecfe52 files/70_mod_php5.conf-apache1 494
+MD5 acdac68b3a1afd99aaf37e818bc921e3 files/70_mod_php5.conf-apache2 494
+RMD160 52b3137709eaa38a5a024d8d76f9970ca49b5485 files/70_mod_php5.conf-apache2 494
+SHA256 d6755b60c2d22b315e3affe501a5c4883180736d3b46839b89334a1123ecfe52 files/70_mod_php5.conf-apache2 494
 MD5 7ac3f86eb868abf5bcb23a3a758d82dc files/digest-php-4.3.11-r5 1093
 RMD160 4de7599dea4b17a9eaee8987512ca0d2ed596c69 files/digest-php-4.3.11-r5 1093
 SHA256 9476ccfbeb934abc7dc1973013e0dc5f185246168dbd6d668c88eb6bb5365494 files/digest-php-4.3.11-r5 1093
-MD5 0dfd3cbffff685c6a22926dce7bcbe2a files/digest-php-4.4.1-r3 807
-RMD160 c8d3f8c721620a4b1dddcb5fdd58b2348644276d files/digest-php-4.4.1-r3 807
-SHA256 0cea1ba92bd0f4426e9f2cf6450c9e9ff380ea38cde09d2d6e2ba180b47e0713 files/digest-php-4.4.1-r3 807
 MD5 a7ac0298702473c115fd1bd2410f0152 files/digest-php-4.4.2 807
 RMD160 e0111c53e805340c3b9e4243edd537652a2b2b9d files/digest-php-4.4.2 807
 SHA256 c6eaf4c85fa86b3254f0f61c8127956d0b8ab0c8d6292ae9cab3ebbc03f832b3 files/digest-php-4.4.2 807
@@ -34,25 +28,15 @@ SHA256 c5796a8c5be891a50b66433f00df75607a22c5155bfae2527f657cc870f433e4 files/di
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a metadata.xml 157
 SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 metadata.xml 157
-MD5 08faf252d954004ef58b7d8ab251e26a php-4.3.11-r5.ebuild 8568
-RMD160 2e8f485904f50fa07d73a31b5628aebb0246425f php-4.3.11-r5.ebuild 8568
-SHA256 28cfee0e2c2d276c031e08bca43ab260ac8cbbe9df7b90a7fdaaeb5e702c187c php-4.3.11-r5.ebuild 8568
-MD5 3d71ed11d45be6af5fbbe24f916d5a53 php-4.4.1-r3.ebuild 7853
-RMD160 514bd3d0a833d45c3727bd64f8ad5c73333601c0 php-4.4.1-r3.ebuild 7853
-SHA256 4a8f663ddada066e3348f173e86cc8584fe4c78c8c09af210a0080ff78e42814 php-4.4.1-r3.ebuild 7853
-MD5 2b044f30de37eecdcf84774e5fa0a62b php-4.4.2.ebuild 7849
-RMD160 029d531c53d5a0acee21e3ea42582428d9cacb7a php-4.4.2.ebuild 7849
-SHA256 eed9d5e88dc4dbf7881efefad30d759aabdc71872515f85ec2cd6aa21a0bc571 php-4.4.2.ebuild 7849
-MD5 d1b5299df3e797cc883b95970a47b22c php-5.0.5-r5.ebuild 4678
-RMD160 5997eca0ee7809c92d13f464f50326f30888eec5 php-5.0.5-r5.ebuild 4678
-SHA256 9dc9b9f4f2334a0a662f934f3ab6e1592d8f0fafda2f7abdeb6a60d8b1086019 php-5.0.5-r5.ebuild 4678
-MD5 9d7ef36e7eaf8ed3f52bf7817a9bdd0c php-5.1.2.ebuild 7857
-RMD160 7ede746ee5cdf22d905820bd04b1db75a8c22ca3 php-5.1.2.ebuild 7857
-SHA256 e8d93d2a234abedb9c046271cf26a10a5b7810f7fcfa1576d28d72697b173a80 php-5.1.2.ebuild 7857
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHPth2+ySkm8kpY0RAtm6AKC3TSqS0RduozCJLGGApDHPT+64oACgiPVy
-zrNqIyqanALvOUCqzNIUH2E=
-=z6Ds
------END PGP SIGNATURE-----
+MD5 8d639a24545e5cec6bbb0855461cba4e php-4.3.11-r5.ebuild 8596
+RMD160 e884c2a76818ba099bc01813533a799ebbcda055 php-4.3.11-r5.ebuild 8596
+SHA256 eb3bfd2a2bee65e92968219ae08565a6177f8d17b7f65edb6197f66d6725cc09 php-4.3.11-r5.ebuild 8596
+MD5 23ab9184edeac381bab4e607dc87c913 php-4.4.2.ebuild 7877
+RMD160 33cb6ac393af6a647c61ba3874944296f7b08004 php-4.4.2.ebuild 7877
+SHA256 3d60fd1a5c6ba285b56682e242933bf800f473880ee889a00b069930b7d818cf php-4.4.2.ebuild 7877
+MD5 071fdedf08f25a01dac858c60512a7e6 php-5.0.5-r5.ebuild 4693
+RMD160 37277caf9a703194491db55b2a935f8da035a238 php-5.0.5-r5.ebuild 4693
+SHA256 3cb3df6f867552d0ea91e58bf14ec78b22970b8392d9279a8e967115f388641c php-5.0.5-r5.ebuild 4693
+MD5 90339398d6e2e0fd30a76454b216334c php-5.1.2.ebuild 7885
+RMD160 ba6a5c308dd8910c3fdecdee7fee59eeb7b652bd php-5.1.2.ebuild 7885
+SHA256 415407baa44e53a78493230f0432ca15dd26b0b1ebdc3baf708ebe846479331b php-5.1.2.ebuild 7885

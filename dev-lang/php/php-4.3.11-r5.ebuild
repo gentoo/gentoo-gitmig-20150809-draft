@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.3.11-r5.ebuild,v 1.9 2006/03/12 13:25:34 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.3.11-r5.ebuild,v 1.10 2006/03/24 23:04:27 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~alpha arm ia64 ~ppc s390 sh sparc x86"
@@ -43,7 +43,7 @@ SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-pcrelib-new-secpatch.tar.bz2
 pkg_setup() {
 	# make sure the user has specified a SAPI
 	einfo "Determining SAPI(s) to build"
-	confutils_require_any "  Enabled  SAPI:" "  Disabled SAPI:" cli cgi apache apache2
+	phpconfutils_require_any "  Enabled  SAPI:" "  Disabled SAPI:" cli cgi apache apache2
 
 	if useq apache2 ; then
 		if [[ "${APACHE_VERSION}" != "0" ]] ; then
@@ -157,8 +157,8 @@ src_compile_fastbuild() {
 
 	if [[ ${build_cgi} = 1 ]] ; then
 		my_conf="${my_conf} --enable-cgi --enable-fastcgi"
-		enable_extension_enable "discard-path" "discard-path" 0
-		enable_extension_enable "force-cgi-redirect" "force-cgi-redirect" 0
+		phpconfutils_extension_enable "discard-path" "discard-path" 0
+		phpconfutils_extension_enable "force-cgi-redirect" "force-cgi-redirect" 0
 	else
 		my_conf="${my_conf} --disable-cgi"
 	fi
@@ -235,8 +235,8 @@ src_compile_normal() {
 				;;
 			cgi)
 				my_conf="--disable-cli --enable-cgi --enable-fastcgi"
-				enable_extension_enable "discard-path" "discard-path" 0
-				enable_extension_enable "force-cgi-redirect" "force-cgi-redirect" 0
+				phpconfutils_extension_enable "discard-path" "discard-path" 0
+				phpconfutils_extension_enable "force-cgi-redirect" "force-cgi-redirect" 0
 				php4_4-sapi_src_compile
 				cp sapi/cgi/php php-cgi
 				;;

@@ -1,7 +1,7 @@
 <IfDefine PHP4>
 
 	# Load the module first
-	<IfModule !sapi_apache.c>
+	<IfModule !mod_php4.c>
 		LoadModule php4_module    modules/libphp4.so
 	</IfModule>
 
