@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 226204fba023be21e18d643e4dc20631 ChangeLog 506
-RMD160 f4df6d77057e61219de410f681557a159bc4a859 ChangeLog 506
-SHA256 d6688c5cf851bd68bc51ef809ec9148357a3689ebbb9388c1cdee3374f5386e9 ChangeLog 506
+MD5 5748dd1fcec064bba674c380ebe0413d ChangeLog 607
 MD5 f0a08f2bb47564f1460fcdd326d2dd2b files/digest-fluidsynth-dssi-0.9.1 73
-RMD160 1f87b396e2cff562020e9c1a7920fb4b80e7e1e1 files/digest-fluidsynth-dssi-0.9.1 73
-SHA256 e3bf7fc5ff036fda8027eaad161a0b072bf4bd0bcb02fcca939ac5e251e76ec3 files/digest-fluidsynth-dssi-0.9.1 73
-MD5 ed1a3b820a94c61f0fda9141e16be213 fluidsynth-dssi-0.9.1.ebuild 665
-RMD160 b746c8086d8e65b23664cb9680e2975495661241 fluidsynth-dssi-0.9.1.ebuild 665
-SHA256 3f5b047622ec05c34af8f87ccf49adb579f661ae2b177040a6f1d1b79f22c9b5 fluidsynth-dssi-0.9.1.ebuild 665
+MD5 021934d6da0f32df9528b96b1fd73df8 fluidsynth-dssi-0.9.1.ebuild 666
 MD5 46a390b7ebca59519b2906976eb4c712 metadata.xml 159
-RMD160 7de82f3b6f859e6482fc1fff7244c90cec80f394 metadata.xml 159
-SHA256 9bb575bfe4faa90e5e20978ca698d5abebb928ab0b5e4c81ff9ef5778c1284aa metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDEXrAiZjviIA2XgRAgyNAJ0d8JfAiQtExHLOCw1/1p/LWG82ywCgm8ws
-jC79vqVyyC+f5wkZ2HXWQbE=
-=GfNw
------END PGP SIGNATURE-----
