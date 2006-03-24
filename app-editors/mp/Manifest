@@ -1,4 +1,7 @@
-MD5 51c7ceb78425a8ce840dd567d3809cc1 ChangeLog 6054
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 500ffdf24b1c30d3de399cdbd762de67 ChangeLog 6160
 MD5 0bc70f6cef8183401387b78185cb0682 files/digest-mp-3.3.12 61
 MD5 0bc70f6cef8183401387b78185cb0682 files/digest-mp-3.3.12-r1 61
 MD5 a3eed5e928a918715c8e92adea33279a files/digest-mp-3.3.14 61
@@ -9,9 +12,16 @@ MD5 82dd8f227fdd5b56584b2adf5242a53b files/gentoo-synh-mp.patch-3.2.11 2027
 MD5 f58c1b9239be39f8724f3a172f67c465 files/mp-3.3.9-fix-builtin-regex-warnings.diff 1353
 MD5 9ba478d874ba2172b5e7a75d56748d41 files/regex-warnings.patch 2120
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 62003cdd33546404251ec486b56a1a26 mp-3.3.12-r1.ebuild 1298
-MD5 b7e83987d6e55c189819f98dad5c11f8 mp-3.3.12.ebuild 1386
-MD5 9b01ea518198f9497b54763c5d8635ce mp-3.3.14-r1.ebuild 1513
-MD5 0019625b631e2ae00d973de13726302b mp-3.3.14.ebuild 1622
-MD5 df54a368c1ae38a9f4283d5fdbe906fc mp-3.3.16.ebuild 1532
-MD5 e453fdd04a131eff56c2286b9c6fed11 mp-3.3.17.ebuild 1546
+MD5 48c29dfcee3b5475d1bc522b7f25493a mp-3.3.12-r1.ebuild 1295
+MD5 2701cd04beefe73b461535a36874e102 mp-3.3.12.ebuild 1384
+MD5 0258e7f3665ea496aba4b2bdcc521bee mp-3.3.14-r1.ebuild 1510
+MD5 fb049d18362477f4b796143c0853f897 mp-3.3.14.ebuild 1620
+MD5 2d266c576a6a7cda8672f4d48c0175ae mp-3.3.16.ebuild 1529
+MD5 a9f0b5a8899b7c19ac9f246f5c585cd6 mp-3.3.17.ebuild 1542
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFEI5aw/NoSW7FuNV8RAt3ZAKC+0gxAJ5C9sfOQHtRC75aoP3yjdgCffl4x
+uxReLAZ6/+iyBPUggdVop58=
+=Iqf1
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.17.ebuild,v 1.1 2006/01/13 05:46:52 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.17.ebuild,v 1.2 2006/03/24 07:16:47 wormo Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.triptico.com/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE="gtk ncurses nls pcre"
 
 RDEPEND="virtual/libc

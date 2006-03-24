@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.50 2006/01/13 05:46:52 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.51 2006/03/24 07:16:47 wormo Exp $
+
+  23 Mar 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> mp-3.3.17.ebuild:
+  stable on ppc (Bug #127217)
 
 *mp-3.3.17 (13 Jan 2006)
 
