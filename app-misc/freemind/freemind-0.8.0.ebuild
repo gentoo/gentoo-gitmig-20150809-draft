@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0.ebuild,v 1.1 2006/01/11 05:57:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0.ebuild,v 1.2 2006/03/24 08:27:37 lu_zero Exp $
 
 inherit java-pkg eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://freemind.sf.net"
 SRC_URI="mirror://sourceforge/freemind/${PN}-src-${MY_PV/rc2/RC2}.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
