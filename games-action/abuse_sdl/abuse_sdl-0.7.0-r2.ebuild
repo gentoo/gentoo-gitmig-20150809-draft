@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r2.ebuild,v 1.8 2006/01/28 21:19:10 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r2.ebuild,v 1.9 2006/03/24 21:19:52 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -58,7 +58,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "NOTE: If you had previous version of abuse installed"
 	einfo "you may need to remove ~/.abuse for the game to work correctly."
-	games_pkg_postinst
 }

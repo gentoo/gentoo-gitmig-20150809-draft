@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.11 2005/10/21 17:26:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.12 2006/03/24 21:19:11 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -65,20 +65,19 @@ src_install() {
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find ${Ddir} -exec touch '{}' \;
 
-	games_make_wrapper hg2 ./hg2 "${dir}" "${dir}"
 	newicon ${CDROM_ROOT}/icon.xpm hg2.xpm
+	games_make_wrapper hg2 ./hg2 "${dir}" "${dir}"
+	make_desktop_entry hg2 "Heavy Gear II" hg2.xpm
 
 	prepgamesdirs
-	make_desktop_entry hg2 "Heavy Gear II" hg2.xpm
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	if ! use videos ; then
 		einfo "You will need to mount the Heavy Gear II CD to see the cut-scene videos."
 		echo
 	fi
 	einfo "To play the game run:"
 	einfo " hg2"
-
-	games_pkg_postinst
 }
