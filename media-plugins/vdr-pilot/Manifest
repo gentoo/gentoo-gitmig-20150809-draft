@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5a664328dbea5602c169ad355de21734 ChangeLog 418
+RMD160 04040dec5615daecabbe34c27df669a8530b390c ChangeLog 418
+SHA256 4ee8fb9b23a3e52b67e9be53c948fcab42d0cd0efba97fb3671fa3189a6b3402 ChangeLog 418
+MD5 07193cb00b9b1b2d6a4ffe8398996712 files/digest-vdr-pilot-0.0.8 235
+RMD160 278263303e3cbf0b08eefc190febe908ddce1a55 files/digest-vdr-pilot-0.0.8 235
+SHA256 52b79a9bf1500f6ce8bfb3dd06b4ebe0bb9d01cade23da91413cb26468719ac1 files/digest-vdr-pilot-0.0.8 235
+MD5 c6f3ebd6f201df5463915b1336e11cd5 files/vdr-pilot-0.0.8-includes.diff 349
+RMD160 4c49241ebf6fc1202ead7fbaf8642b781fb514c2 files/vdr-pilot-0.0.8-includes.diff 349
+SHA256 073b2046bf4ecfda1d6a01592c8cf946ba4c4f4cdc7c73ef078a12bd5e42a792 files/vdr-pilot-0.0.8-includes.diff 349
+MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 255f81b85afd2742c938f06b2ea49835 vdr-pilot-0.0.8.ebuild 559
+RMD160 89bc38bc39f0310d9b10ee92103741d3d05bbdc7 vdr-pilot-0.0.8.ebuild 559
+SHA256 6e8ad0d8d7d33f03d857f5b7428d7716903d8b7c0cec010a9d477ab06aa425a9 vdr-pilot-0.0.8.ebuild 559
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEI9UeZfSl1Kp5KmoRApqxAJ0e0HwVro9JgCWwL2DTWf31Z8aTlACfVz8O
+QSPa/U4MBOnzBd06xv6Ap08=
+=LtA6
+-----END PGP SIGNATURE-----
