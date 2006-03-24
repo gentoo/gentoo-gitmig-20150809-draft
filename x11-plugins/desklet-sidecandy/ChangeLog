@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-sidecandy
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sidecandy/ChangeLog,v 1.4 2005/09/21 22:42:09 hparker Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sidecandy/ChangeLog,v 1.5 2006/03/24 23:12:56 agriffis Exp $
+
+  24 Mar 2006; Aron Griffis <agriffis@gentoo.org>
+  desklet-sidecandy-0.10.ebuild:
+  Mark 0.10 ~ia64
 
   21 Sep 2005; Homer Parker <hparker@gentoo.org>
   desklet-sidecandy-0.10.ebuild:
