@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.86 2006/03/23 01:23:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.87 2006/03/24 12:31:25 agriffis Exp $
+
+  24 Mar 2006; Aron Griffis <agriffis@gentoo.org> kpdf-3.4.3-r4.ebuild,
+  kpdf-3.5.0.ebuild, kpdf-3.5.0-r2.ebuild, kpdf-3.5.0-r3.ebuild,
+  kpdf-3.5.1.ebuild, kpdf-3.5.1-r1.ebuild, kpdf-3.5.1-r2.ebuild,
+  kpdf-3.5.2.ebuild:
+  Mark 3.4.3-r4 stable on ia64, mark 3.5.2 3.5.1-r2 3.5.1-r1 3.5.1 3.5.0-r3
+  3.5.0-r2 3.5.0 ~ia64
 
   23 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> kpdf-3.5.2.ebuild:
   Add new patch for poppler support.
