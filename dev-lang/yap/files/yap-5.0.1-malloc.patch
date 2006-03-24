@@ -1,0 +1,11 @@
+--- Yap-5.0.1.orig/C/exec.c	2005-10-18 04:21:54.000000000 +1300
++++ Yap-5.0.1/C/exec.c	2006-02-23 22:32:20.000000000 +1300
+@@ -1362,7 +1362,7 @@
+   READ_LOCK(ppe->PRWLock);
+   CodeAdr = ppe->CodeOfPred;
+   READ_UNLOCK(ppe->PRWLock);
+-#if !USE_MALLOC
++#if !USE_SYSTEM_MALLOC
+   if (Yap_TrailTop - HeapTop < 2048) {
+     Yap_PrologMode = BootMode;
+     Yap_Error(OUT_OF_TRAIL_ERROR,TermNil,

@@ -1,0 +1,16 @@
+diff -ur Yap-5.0.1.orig/H/Yap.h Yap-5.0.1/H/Yap.h
+--- Yap-5.0.1.orig/H/Yap.h	2005-10-18 06:55:22.000000000 +1300
++++ Yap-5.0.1/H/Yap.h	2006-02-21 21:22:18.000000000 +1300
+@@ -53,12 +53,6 @@
+ #undef TRAILING_REQUIRES_BRANCH
+ #endif /* YAPOR || TABLING */
+ 
+-#if ANALYST
+-#ifdef USE_THREADED_CODE
+-#undef USE_THREADED_CODE
+-#endif
+-#endif
+-
+ #ifdef  COROUTINING
+ #ifndef TERM_EXTENSIONS
+ #define TERM_EXTENSIONS 1

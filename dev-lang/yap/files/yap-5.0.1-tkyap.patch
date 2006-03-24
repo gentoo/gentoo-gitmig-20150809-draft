@@ -1,0 +1,44 @@
+--- Yap-5.0.1.orig/misc/tkyap	2005-08-22 23:09:14.000000000 +1200
++++ Yap-5.0.1/misc/tkyap	2006-02-25 13:41:53.000000000 +1300
+@@ -30,19 +30,10 @@
+ #option add "*message*Font" $TextFont
+ #option add "*list*Font" $TextFont
+ 
+-if {[file exists /vmlinuz]} {
+-   set  TextFont "*6x10*"
+-   if {[file exists /home/luis/Yap94/linux]} {
+-	set homeyap /home/luis/Yap94/linux
+-   } else {
+-	set homeyap .
+-   }
+-   set PrologCommand "$homeyap/yap $homeyap/startup -c localhost $service $YapOptions"
+-   set SolarisBug 0
+-} else {
+-   set PrologCommand "ny -h8000 -s1000"
+-   set SolarisBug 1
+-}
++set  TextFont "*6x10*"
++
++set PrologCommand "yap -c localhost $service $YapOptions"
++set SolarisBug 0
+ 
+ 
+ 
+@@ -122,7 +113,7 @@
+ menubutton .menu.exec -text "Execution" -menu .menu.exec.m -underline 0
+ menu .menu.exec.m
+ .menu.exec.m add command -label "Interrupt" \
+-	-command {global tcl_mode; set tcl_mode 0; exec kill SIGINT $pid}
++	-command {global tcl_mode; set tcl_mode 0; exec kill -SIGINT $pid}
+ .menu.exec.m add separator
+ .menu.exec.m add command -label "Statistics" -command {YapStats}
+ 
+@@ -181,7 +172,7 @@
+ bind .frame.text <Control-Key-c> {
+    set tcl_mode 0
+    .frame.text yview -pickplace end
+-   exec kill SIGINT $pid
++   exec kill -SIGINT $pid
+ }
+ 
+ 

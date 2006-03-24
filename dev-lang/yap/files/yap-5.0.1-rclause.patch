@@ -1,0 +1,33 @@
+--- Yap-5.0.1/H/rclause.h	2005-08-22 23:09:14.000000000 +1200
++++ cvs/yap/H/rclause.h	2006-02-18 23:21:36.000000000 +1300
+@@ -180,6 +187,7 @@
+     case _retry3:
+     case _retry4:
+     case _p_eq:
++    case _p_dif:
+       pc->u.l.l = PtoOpAdjust(pc->u.l.l);
+       pc = NEXTOP(pc,l);
+       break;
+@@ -220,7 +228,6 @@
+     case _undef_p:
+     case _spy_pred:
+     case _p_equal:
+-    case _p_dif:
+     case _p_functor:
+     case _enter_a_profiling:
+     case _count_a_call:
+@@ -773,10 +783,10 @@
+       /* instructions type xllll */
+     case _switch_list_nl:
+       pc->u.ollll.pop = Yap_opcode(Yap_op_from_opcode(pc->u.ollll.pop));
+-      pc->u.ollll.l1 = PtoOpAdjust(pc->u.llll.l1);
+-      pc->u.ollll.l2 = PtoOpAdjust(pc->u.llll.l2);
+-      pc->u.ollll.l3 = PtoOpAdjust(pc->u.llll.l3);
+-      pc->u.ollll.l4 = PtoOpAdjust(pc->u.llll.l4);
++      pc->u.ollll.l1 = PtoOpAdjust(pc->u.ollll.l1);
++      pc->u.ollll.l2 = PtoOpAdjust(pc->u.ollll.l2);
++      pc->u.ollll.l3 = PtoOpAdjust(pc->u.ollll.l3);
++      pc->u.ollll.l4 = PtoOpAdjust(pc->u.ollll.l4);
+       pc = NEXTOP(pc,ollll);
+       break;
+       /* instructions type xllll */
