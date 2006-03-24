@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gdchart
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdchart/ChangeLog,v 1.7 2006/01/12 17:57:51 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdchart/ChangeLog,v 1.8 2006/03/24 12:58:01 caleb Exp $
+
+*ruby-gdchart-1.0.0 (24 Mar 2006)
+
+  24 Mar 2006; Caleb Tennis <caleb@gentoo.org> +ruby-gdchart-1.0.0.ebuild:
+  adding 1.0.0, from bug #62497
 
   12 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
   +files/ruby-gdchart-0.0.9_beta-gcc41.patch,
