@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.308 2006/03/22 20:15:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.309 2006/03/24 12:33:59 flameeyes Exp $
+
+  24 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kdelibs-3.5.2-xorg7-rgbtxt.patch, kdelibs-3.5.2.ebuild:
+  Fix on X.Org 7.0 by creating and passing a --with-rgbfile parameter with the
+  path to the rgb.txt file on modular setup.
 
 *kdelibs-3.5.2 (22 Mar 2006)
 

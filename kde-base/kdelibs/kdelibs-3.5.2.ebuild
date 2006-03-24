@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2.ebuild,v 1.1 2006/03/22 20:15:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2.ebuild,v 1.2 2006/03/24 12:33:59 flameeyes Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -46,8 +46,12 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig"
 
+RDEPEND="${RDEPEND}
+	|| ( x11-apps/rgb virtual/x11 )"
+
 PATCHES="${FILESDIR}/${PN}-3.5.0-bindnow.patch
-	${FILESDIR}/${PN}-3.5.0-kicker-crash.patch"
+	${FILESDIR}/${PN}-3.5.0-kicker-crash.patch
+	${FILESDIR}/${P}-xorg7-rgbtxt.patch"
 
 src_compile() {
 	# hspell is disabled because it requires version 0.9 of hspell that
@@ -68,6 +72,10 @@ src_compile() {
 		myconf="${myconf} --with-aspell"
 	else
 		myconf="${myconf} --without-aspell"
+	fi
+
+	if has_version x11-apps/rgb; then
+		myconf="${myconf} --with-rgbfile=/usr/share/X11/rgb.txt"
 	fi
 
 	myconf="${myconf} --disable-fast-malloc"
