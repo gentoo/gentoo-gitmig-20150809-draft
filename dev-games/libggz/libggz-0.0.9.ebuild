@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/libggz-0.0.9.ebuild,v 1.3 2006/01/21 05:48:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/libggz-0.0.9.ebuild,v 1.4 2006/03/24 16:32:07 wolf31o2 Exp $
 
 inherit eutils
 
 DESCRIPTION="The GGZ library, used by GGZ Gaming Zone"
 HOMEPAGE="http://www.ggzgamingzone.org/"
-SRC_URI="ftp://ftp.ggzgamingzone.org/pub/ggz/${PV}/${P}.tar.gz"
+SRC_URI="ftp://ftp.ggzgamingzone.org/pub/ggz/${PV}/${P}.tar.gz
+	http://mirrors.ibiblio.org/pub/mirrors/ggzgamingzone/ggz/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
