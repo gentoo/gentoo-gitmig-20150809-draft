@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.30.ebuild,v 1.1 2006/02/23 23:29:00 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.30.ebuild,v 1.2 2006/03/24 15:52:01 brix Exp $
 
 inherit fixheadtails linux-info
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.xs4all.nl/~bsamwel/laptop_mode/tools/downloads/${MY_P}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE="acpi apm"
 
