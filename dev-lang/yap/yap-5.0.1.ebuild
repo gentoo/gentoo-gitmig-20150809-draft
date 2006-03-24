@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.0.1.ebuild,v 1.1 2006/03/24 09:09:30 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.0.1.ebuild,v 1.2 2006/03/24 20:55:27 keri Exp $
 
 inherit autotools eutils
 
@@ -75,5 +75,6 @@ src_install() {
 		dodoc docs/yap.html
 	fi
 
+	doinfo docs/*.info*
 	dodoc changes4.3.html INSTALL README
 }
