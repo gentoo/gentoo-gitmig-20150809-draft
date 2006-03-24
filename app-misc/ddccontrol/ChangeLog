@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/ddccontrol
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.8 2006/02/27 00:17:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.9 2006/03/24 04:22:42 robbat2 Exp $
+
+*ddccontrol-0.4.1 (24 Mar 2006)
+
+  24 Mar 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +ddccontrol-0.4.1.ebuild:
+  Version bump, bug #126882.
 
 *ddccontrol-0.3-r2 (27 Feb 2006)
 
