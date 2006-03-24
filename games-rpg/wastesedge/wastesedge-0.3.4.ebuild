@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.4.ebuild,v 1.2 2005/09/06 12:59:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.4.ebuild,v 1.3 2006/03/24 00:12:47 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -14,13 +14,10 @@ KEYWORDS="~amd64 ppc x86"
 IUSE="vorbis doc nls"
 RESTRICT="nouserpriv"
 
-DEPEND="virtual/x11
-	>=media-libs/libsdl-1.1.6
-	>=dev-lang/python-2.0
-	vorbis? ( >=media-libs/libvorbis-1.0
-		>=media-libs/libogg-1.0 )
-	doc? ( >=app-doc/doxygen-1.2 )
+REPEND=">=dev-lang/python-2.0
 	>=games-rpg/adonthell-${PV}"
+DEPEND="${RDEPEND}
+	doc? ( >=app-doc/doxygen-1.2 )"
 
 src_compile(){
 	egamesconf \
