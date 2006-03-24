@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.12.0.ebuild,v 1.7 2006/01/28 11:55:59 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.12.0.ebuild,v 1.8 2006/03/24 12:30:14 agriffis Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gtkmm.sourceforge.net/"
 
 IUSE=""
 LICENSE="LGPL-2.1"
-KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="amd64 hppa ~ia64 ppc ppc64 sparc x86"
 SLOT="1.1"
 
 RDEPEND=">=gnome-base/gnome-vfs-2.6
