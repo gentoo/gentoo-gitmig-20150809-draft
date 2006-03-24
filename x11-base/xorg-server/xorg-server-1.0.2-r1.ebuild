@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.2-r1.ebuild,v 1.3 2006/03/24 18:31:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.2-r1.ebuild,v 1.4 2006/03/24 18:45:00 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -126,6 +126,8 @@ src_install() {
 	x-modular_src_install
 
 	dynamic_libgl_install
+
+	use xprint && xprint_src_install
 }
 
 pkg_postinst() {
@@ -160,4 +162,27 @@ switch_opengl_implem() {
 		# OpenGL interface ...
 		echo
 		eselect opengl set --use-old ${OPENGL_DIR}
+}
+
+xprint_src_install() {
+	# RH-style init script, we provide a wrapper
+	exeinto /usr/$(get_libdir)/misc
+	# Actually a shell script, someone messed up
+	newexe ${S}/Xprint/etc/init.d/xprint.cpp xprint
+	sed -e 's/XCOMM/#/' -i ${D}/usr/$(get_libdir)/misc/xprint
+	# Install the wrapper
+	newinitd ${FILESDIR}/xprint.init xprint
+	# Install profile scripts
+	insinto /etc/profile.d
+	doins ${S}/Xprint/etc/profile.d/xprint*
+	insinto /etc/X11/xinit/xinitrc.d
+	newins ${S}/Xprint/etc/Xsession.d/cde_xsessiond_xprint.sh \
+		92xprint-xpserverlist.sh
+	# Patch profile scripts
+	sed -e "s:/bin/sh.*get_xpserverlist:/usr/$(get_libdir)/misc/xprint \
+		get_xpserverlist:g" -i ${D}/etc/profile.d/xprint* \
+		${D}/etc/X11/xinit/xinitrc.d/92xprint-xpserverlist.sh
+	# Move profile scripts, we can't touch /etc/profile.d/ in Gentoo
+	dodoc ${D}/etc/profile.d/xprint*
+	rm -f ${D}/etc/profile.d/xprint*
 }
