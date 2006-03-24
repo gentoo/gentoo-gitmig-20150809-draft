@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1-r1.ebuild,v 1.11 2005/12/10 03:22:29 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1-r1.ebuild,v 1.12 2006/03/24 17:36:37 agriffis Exp $
 
 inherit eutils kernel-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.linuxtv.org"
 SRC_URI="http://www.linuxtv.org/download/dvb/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc x86"
+KEYWORDS="alpha amd64 ppc x86"
 IUSE=""
 DEPEND="virtual/linux-sources"
 #RDEPEND=""
