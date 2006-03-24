@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.2.ebuild,v 1.1 2006/03/22 20:15:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.2.ebuild,v 1.2 2006/03/24 23:04:58 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -41,6 +41,8 @@ src_compile() {
 	else
 		myconf="${myconf} --with-pam=no --with-shadow"
 	fi
+
+	export USER_LDFLAGS="${LDFLAGS}"
 
 	kde-meta_src_compile myconf configure
 	kde_remove_flag kdm/kfrontend -fomit-frame-pointer
