@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Auth
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/ChangeLog,v 1.24 2006/03/09 21:44:20 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/ChangeLog,v 1.25 2006/03/24 16:00:16 agriffis Exp $
+
+  24 Mar 2006; Aron Griffis <agriffis@gentoo.org> PEAR-Auth-1.2.4.ebuild:
+  Mark 1.2.4 stable on ia64
 
   09 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> PEAR-Auth-1.2.4.ebuild:
   Stable on alpha wrt security bug #123832
