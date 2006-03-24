@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/angrydd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/ChangeLog,v 1.1 2006/03/08 04:17:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/ChangeLog,v 1.2 2006/03/24 14:20:47 wolf31o2 Exp $
+
+  24 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> angrydd-1.0.1.ebuild:
+  Added ~amd64 for bug #125575.
 
 *angrydd-1.0.1 (08 Mar 2006)
 
