@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.2 2006/03/23 01:00:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.3 2006/03/24 22:04:44 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -36,11 +36,15 @@ src_install() {
 
 	find ${Ddir} -exec touch '{}' \;
 
+	games_make_wrapper ${PN} "doom3 +set fs_game d3xp"
+	make_desktop_entry ${PN} "Doom III - Resurrection of Evil" doom3.png
+
 	prepgamesdirs
 }
 
 pkg_postinst() {
 	games_pkg_postinst
+
 	einfo "This is just the data portion of the game.  You will need to emerge"
 	einfo "games-fps/doom3 to play the game."
 	echo
