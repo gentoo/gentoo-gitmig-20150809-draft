@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.4-r1.ebuild,v 1.2 2006/03/23 18:25:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.4-r1.ebuild,v 1.3 2006/03/24 10:53:57 zaheerm Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins-base gst-plugins10 gnome2 eutils flag-o-matic libtool
@@ -31,6 +31,8 @@ PDEPEND="oss? ( >=media-plugins/gst-plugins-oss-0.10 )
 src_unpack() {
 
 	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-typefindfunctions-m4v-NULL-terminator.diff
 }
 
 src_compile() {

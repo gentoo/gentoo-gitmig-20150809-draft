@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.13 2006/03/23 18:25:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.14 2006/03/24 10:53:56 zaheerm Exp $
+
+  24 Mar 2006; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/gst-plugins-base-0.10.4-typefindfunctions-m4v-NULL-terminator.diff,
+  gst-plugins-base-0.10.4-r1.ebuild:
+  fix typefind m4v null for ppc
 
   23 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   gst-plugins-base-0.10.4-r1.ebuild:
