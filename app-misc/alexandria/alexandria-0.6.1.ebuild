@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.1.ebuild,v 1.2 2006/02/01 12:57:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.1.ebuild,v 1.3 2006/03/24 12:46:18 caleb Exp $
 
 inherit ruby gnome2 eutils
 
@@ -20,7 +20,7 @@ DOCS="AUTHORS COPYING ChangeLog HACKING NEWS README TODO"
 
 RDEPEND=">=dev-lang/ruby-1.8.0
 	>=dev-ruby/ruby-gettext-0.6.1
-	>=dev-ruby/ruby-gnome2-0.12.0
+	>=dev-ruby/ruby-gnome2-0.14.0
 	>=dev-ruby/ruby-libglade2-0.12.0
 	>=dev-ruby/ruby-gconf2-0.12.0
 	>=dev-ruby/ruby-gdkpixbuf2-0.12.0

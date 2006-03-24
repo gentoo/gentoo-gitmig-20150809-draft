@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.16 2006/02/01 12:57:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.17 2006/03/24 12:46:18 caleb Exp $
+
+  24 Mar 2006; Caleb Tennis <caleb@gentoo.org> alexandria-0.6.1.ebuild:
+  Change dep to ruby-gnome2 0.14.1, per bug #127178
 
   01 Feb 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   alexandria-0.6.1.ebuild:
