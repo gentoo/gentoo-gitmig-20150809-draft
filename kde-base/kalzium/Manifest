@@ -1,4 +1,4 @@
-MD5 ae4e4fcc9818b7f21663706732e5c39e ChangeLog 4953
+MD5 efa6696cbab14c7ede8c4e2676877f85 ChangeLog 5054
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kalzium-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kalzium-3.4.2 282
 MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-kalzium-3.4.3 67
@@ -7,7 +7,7 @@ MD5 f189373524a470a1665a94fe8ba1f935 files/digest-kalzium-3.5.1 67
 MD5 ff544adf35a1e206ccc834b16497445e files/digest-kalzium-3.5.2 247
 MD5 af3397486a2e6c6c376f64311a06fc6e kalzium-3.4.1.ebuild 569
 MD5 b271de29aa1af888a552164019995d4c kalzium-3.4.2.ebuild 582
-MD5 cd6f1a7ca0901bc32dc54069b8b389c6 kalzium-3.4.3.ebuild 620
+MD5 ba4996fdec72590e84978fbbda40d4ea kalzium-3.4.3.ebuild 622
 MD5 86b687f12a0718162f875425bb2bc130 kalzium-3.5.0.ebuild 713
 MD5 5ba5e28ee76572ebe543c65b0d8a9cfe kalzium-3.5.1.ebuild 714
 MD5 37e1b9a14df00ee8258dd86f26fd795b kalzium-3.5.2.ebuild 714
