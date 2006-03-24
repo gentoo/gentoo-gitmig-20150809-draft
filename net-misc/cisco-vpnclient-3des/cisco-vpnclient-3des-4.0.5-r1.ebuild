@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.5.ebuild,v 1.9 2005/11/20 17:58:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.5-r1.ebuild,v 1.1 2006/03/24 15:11:21 wolf31o2 Exp $
 
 inherit eutils linux-info
 
@@ -36,6 +36,11 @@ src_unpack() {
 	# Patch to allow use of alternate CC.  Patch submitted to bug #33488 by
 	# Jesse Becker <jbecker@speakeasy.net>
 	epatch ${FILESDIR}/driver_build_CC.patch
+	#Fix problems with the linux >=2.6.14 kernel.
+	if kernel_is 2 6 && [ ${KV_PATCH} -ge 14 ]
+	then
+		epatch ${FILESDIR}/${PV}-2.6.14.patch
+	fi
 }
 
 src_compile () {
