@@ -1,24 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e19e0cb5ae14c2b8a1edd52a456156bd ChangeLog 5951
+MD5 8ba14f941464a9ad983abb64479c6ecb ChangeLog 6056
+RMD160 04f7fb84f3301830e4ff92c481236c1f7fb43cba ChangeLog 6056
+SHA256 203ba8d2e6918300d6c9b304754e62faf6fd74ac26ada0adf02b307bf439dadb ChangeLog 6056
 MD5 c411f9f7919161492f9a879b4011fe03 files/2.0.1-gcc3.4-after-cvs.patch 2679
+RMD160 6b964aee7746944bc70b426acf82b839adedf570 files/2.0.1-gcc3.4-after-cvs.patch 2679
+SHA256 d177602a76ee5ac64f6f6c2993fb965a8e7935055c8c4067deed4ee86c1cdd20 files/2.0.1-gcc3.4-after-cvs.patch 2679
 MD5 4e3e036401274ab4b34a7ea14bece6be files/2.0.1-gcc3.4-to-cvs.patch 1584
+RMD160 4b7e217f6a7b08973831d0b7c3a4271f92069c36 files/2.0.1-gcc3.4-to-cvs.patch 1584
+SHA256 1c3e6408779fd14a407009671d78290a3af2dc119fd8c6d82e8ca356a7d0f736 files/2.0.1-gcc3.4-to-cvs.patch 1584
 MD5 503f4b94ee2876c2eb123fb633749c34 files/digest-libgnomecanvasmm-2.0.1 74
+RMD160 f48c7b8e9729c2c5360a5dd106f7cab68a89d904 files/digest-libgnomecanvasmm-2.0.1 74
+SHA256 715f2ecc3a90bee1572374042b28a28905cca685eeafe201a0cb689d6f8d4327 files/digest-libgnomecanvasmm-2.0.1 74
 MD5 9b0880de0188374d871ae43567232719 files/digest-libgnomecanvasmm-2.10.0 76
+RMD160 0b0082f5e44f50f4a5434449a4a2487da1c92fe3 files/digest-libgnomecanvasmm-2.10.0 76
+SHA256 261fd041ea49de24fe818fc166912974d6fbe275e16b3912bd64d9de9538cb41 files/digest-libgnomecanvasmm-2.10.0 76
 MD5 529ae63742a9c39c57e9a9ea661f854e files/digest-libgnomecanvasmm-2.11.1 76
+RMD160 77e435b10e2393d268d9a5400210f6c1b3538888 files/digest-libgnomecanvasmm-2.11.1 76
+SHA256 a4400aafce6cb8e2b5991feab0b24dc139a6c96d5256d79562f1b6508fc453ec files/digest-libgnomecanvasmm-2.11.1 76
 MD5 22c0b211648c6e71ad2fd210eddf7842 files/digest-libgnomecanvasmm-2.12.0 76
+RMD160 ce9577f968e7bbd6b6137f4c4a2ba3108d768ab7 files/digest-libgnomecanvasmm-2.12.0 76
+SHA256 288c991df56fd10535b087b42bb460443bc79e1be83387bf33d22b39e3a6f1bf files/digest-libgnomecanvasmm-2.12.0 76
 MD5 9d1a7838537ec9856edb6298891255e0 files/digest-libgnomecanvasmm-2.6.1 75
+RMD160 f7ecaaec0e9ff85ae9c455ce850f20aa500cbe10 files/digest-libgnomecanvasmm-2.6.1 75
+SHA256 975dc6cc551b173f2fc1195e82b3fb6b595414256acbeacac44f95a16466cfd3 files/digest-libgnomecanvasmm-2.6.1 75
 MD5 c5b851cbe90d662fc88cc38ede7f73f7 libgnomecanvasmm-2.0.1.ebuild 934
+RMD160 8b68440dc04c398e78c6e333aa59abc4a9ffa568 libgnomecanvasmm-2.0.1.ebuild 934
+SHA256 a3d6f3b20ff67fdf3a011fb6940facb7e2235ac20fb952baf61cca682f45639b libgnomecanvasmm-2.0.1.ebuild 934
 MD5 6b730c2bd5f7a904f337ade006e7faf6 libgnomecanvasmm-2.10.0.ebuild 998
+RMD160 109ff1c1bd7e4015e2c0a6ebfa6cba7c0fdc2aec libgnomecanvasmm-2.10.0.ebuild 998
+SHA256 dcaad3d5d5b5090c3bc0ab299fc78b6a164b65bf49d80c0daaed5534de245ef2 libgnomecanvasmm-2.10.0.ebuild 998
 MD5 567fa9e4d2e691d1e72633ca7a3ee001 libgnomecanvasmm-2.11.1.ebuild 998
-MD5 6cb2627a6806e8ba7d6e0a389bdd77c9 libgnomecanvasmm-2.12.0.ebuild 993
+RMD160 32aadd40e4927be4a525ec1067f37a92e30de10b libgnomecanvasmm-2.11.1.ebuild 998
+SHA256 af2f8903530cb004f4d43557584ab181cb81ec895da5b951b2918a56a6eba139 libgnomecanvasmm-2.11.1.ebuild 998
+MD5 5b5f171b236e40bf5a10688fe2acd959 libgnomecanvasmm-2.12.0.ebuild 999
+RMD160 68e54da648e8dc6f78fd6aa180c36a78dfda5517 libgnomecanvasmm-2.12.0.ebuild 999
+SHA256 494705f37f3aad8add8323689e6d2397a96ad9aadf0edc8efe388c0ead5f167b libgnomecanvasmm-2.12.0.ebuild 999
 MD5 360aaed96126e7bef295c688cfb75c5b libgnomecanvasmm-2.6.1.ebuild 962
+RMD160 b3adc8484db25bc5ff69ca80ef1f22d08ffa80fb libgnomecanvasmm-2.6.1.ebuild 962
+SHA256 d515f8dea73e3bc90a4bc3c6fa7e361834b606b87300e559f5154044947c09ae libgnomecanvasmm-2.6.1.ebuild 962
 MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEF06aKRy60XGEcJIRArk+AKCIOUU0uFpVFjXgXvR0Qcjy0oZpXgCgggMc
-TL8pUBf35OxeglwempDcpKY=
-=oiQs
------END PGP SIGNATURE-----
+RMD160 1988530f97a742d78d3f3e99d15625f8a674260a metadata.xml 161
+SHA256 00ba82c241ad7007fe861877db3ae5aeaa967e05f0a6478e6ba9eb60ba31a3b6 metadata.xml 161

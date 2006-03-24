@@ -1,25 +1,45 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 47950702ff393e5ee919d712293d3b6b ChangeLog 5415
+MD5 1099e689d38006686e0308e5946741f2 ChangeLog 5512
+RMD160 f3168a603511989a40d6f7e003de3dd610e351f5 ChangeLog 5512
+SHA256 9b85c6095bfffce05d6ac6aa65b2f50f49b894356e2334d7b2b6c39fedffbb83 ChangeLog 5512
 MD5 24c2db8638fe53dba09a9a20ca0844e9 files/digest-libgnomemm-2.0.0-r1 68
+RMD160 7129f936faa4f4e44a39d666aef06d3c5d2fe41e files/digest-libgnomemm-2.0.0-r1 68
+SHA256 e042f6d5c4f6e0b86422c502e391f72033451dbedc04080af68df0d526f9c6c1 files/digest-libgnomemm-2.0.0-r1 68
 MD5 18cc8e18bd644eca9920325ea0147cd7 files/digest-libgnomemm-2.0.1 69
+RMD160 bd3922429dff1210ee7eb601bef448ff4cf294c9 files/digest-libgnomemm-2.0.1 69
+SHA256 5fdae1befc935a5ff386e8c63e387bbbb63b33a6b6013399e14f99cc006618fd files/digest-libgnomemm-2.0.1 69
 MD5 7cd607992587f719817cfeb3b59ea70e files/digest-libgnomemm-2.10.0 70
+RMD160 9ef28b5d5c58df24346c053813c4626796d3cb95 files/digest-libgnomemm-2.10.0 70
+SHA256 06533724e0a5f01e666b9c91a9a800d382a20444a27d4cfb6d9a3751778399b0 files/digest-libgnomemm-2.10.0 70
 MD5 ba52478a173695ee09dd14652a5f5159 files/digest-libgnomemm-2.12.0 70
+RMD160 6cf2a3f835216b8c28de4eb757e83be01b49fa17 files/digest-libgnomemm-2.12.0 70
+SHA256 bf273444896991f0c5809b7b8902a15ac37b880ed910798108232ed60c84fde8 files/digest-libgnomemm-2.12.0 70
 MD5 df5dd9f1cf43aa26c38f63e2b54fe525 files/digest-libgnomemm-2.12.2 70
+RMD160 7af5789314bebaa85ad043ddee2f52b7b6194f2e files/digest-libgnomemm-2.12.2 70
+SHA256 89baf57c0f6a03407015515da581c892ea8462d1f3cc09c880c6508a325c9a8a files/digest-libgnomemm-2.12.2 70
 MD5 a4d6f8f16b66a52e759a36889b37a078 files/digest-libgnomemm-2.6.0 69
+RMD160 94937c95c529be2a06a5081d5ebd748ad82b2f95 files/digest-libgnomemm-2.6.0 69
+SHA256 e5b0494b6a7edcf413acca1f072ad3b01da837b020b068e4162fc3432c9efd6c files/digest-libgnomemm-2.6.0 69
 MD5 2d32d65a8f8c930689fc0c23f769946e files/libgnomemm-2.0.0-pkgconfig.patch 1083
+RMD160 fe4f23b20c563acbad261c5666aaf4abf97854ab files/libgnomemm-2.0.0-pkgconfig.patch 1083
+SHA256 6f52e0461633585bd1a4b22e94650455c7fd4d39a1c9d0b01b2ffaa70f65ea0a files/libgnomemm-2.0.0-pkgconfig.patch 1083
 MD5 c4d899e2094ca55aed3d61b4ae4f0029 libgnomemm-2.0.0-r1.ebuild 740
+RMD160 435d07694ea5a2a27850980456dc36fd57e2e9e9 libgnomemm-2.0.0-r1.ebuild 740
+SHA256 c47afe0c4a0277916997d68f6a095ea7c7e10b8d8a297daf0651e10fdb74405c libgnomemm-2.0.0-r1.ebuild 740
 MD5 37ba655bb9aa3a198b5ab1f8105dd324 libgnomemm-2.0.1.ebuild 766
+RMD160 79bb0337b0143f843a0c12f4ace59915bb5a9e04 libgnomemm-2.0.1.ebuild 766
+SHA256 cc4af31d71ef4290b8203e469e4bf848a3f1c5461161ac9fbfcb02eed4798a39 libgnomemm-2.0.1.ebuild 766
 MD5 6eea164bd8d15989120df0793274c736 libgnomemm-2.10.0.ebuild 724
+RMD160 552804ce5dd9ed4286df1dfea772cb9e3b2eebed libgnomemm-2.10.0.ebuild 724
+SHA256 70e76645c7c00d812720af19bbec5295d9d82190bb6b98ed80521238d5da25ac libgnomemm-2.10.0.ebuild 724
 MD5 38726f388bf61f057649bff77ab91042 libgnomemm-2.12.0.ebuild 720
-MD5 1aeef13648a4c36c8b75e23710ffdbe0 libgnomemm-2.12.2.ebuild 727
+RMD160 d742ae476fbdbb3cc097c1e295ed1f938862c90c libgnomemm-2.12.0.ebuild 720
+SHA256 66cc34e87b646c39665e659976673776ae4466f0825f6e19aa93e79aa121a5f0 libgnomemm-2.12.0.ebuild 720
+MD5 26dc599539be2016be881ba8a64b3f6d libgnomemm-2.12.2.ebuild 732
+RMD160 1fbf3369071ee50745fd7f56eb2cf2e87d4f9cdd libgnomemm-2.12.2.ebuild 732
+SHA256 bbc965861ce289b9685ac34f45b68841e5e2c32f6e156c376b795fc3436adb0d libgnomemm-2.12.2.ebuild 732
 MD5 51f2f13af678a1ce0be33da352ba66c6 libgnomemm-2.6.0.ebuild 718
+RMD160 fe3ab6086b444af3ea83f6bd244812b8fc131fcd libgnomemm-2.6.0.ebuild 718
+SHA256 75fe8ca1cd7d09105c335e6206a219fef5574b97bf3c4d7ef7b9aed7d422b94f libgnomemm-2.6.0.ebuild 718
 MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEF07cKRy60XGEcJIRAnnqAJ9ORg8ci8jielRm0QdSKcIiuEjgUwCeJfwi
-UGTKFUR+RWgISm1Kp6m2Bgo=
-=WzIU
------END PGP SIGNATURE-----
+RMD160 1988530f97a742d78d3f3e99d15625f8a674260a metadata.xml 161
+SHA256 00ba82c241ad7007fe861877db3ae5aeaa967e05f0a6478e6ba9eb60ba31a3b6 metadata.xml 161
