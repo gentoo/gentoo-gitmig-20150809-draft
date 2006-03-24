@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.3b-r4.ebuild,v 1.10 2005/11/20 17:58:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.3b-r4.ebuild,v 1.11 2006/03/24 18:09:23 wolf31o2 Exp $
 
 inherit eutils linux-info
 
@@ -49,7 +49,7 @@ src_unpack() {
 
 src_compile () {
 	unset ARCH
-	sh ./driver_build.sh /lib/modules/${KV}/build
+	sh ./driver_build.sh ${KV_DIR}
 	[ ! -f ./cisco_ipsec ] && die "Failed to make module 'cisco_ipsec'"
 	sed -i "s#@VPNBINDIR@#/usr/bin#" vpnclient_init
 	sed -i "s#@VPNBINDIR@#/usr/bin#" vpnclient.ini.in
