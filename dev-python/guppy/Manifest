@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 37d12536cdbf6fa561c91974520ee208 ChangeLog 373
+RMD160 5efb74f44e7cc292ad738713e39a3dc0b4f48be5 ChangeLog 373
+SHA256 8092398334c7c255ac9c8e240d28a26976826e891e6ff6f1aeb9aafe82326969 ChangeLog 373
+MD5 5756c030daf1237a8cec610dd4440aa0 files/digest-guppy-0.1.3 235
+RMD160 0687fc419805c4620077eb6ef24198d6763afd07 files/digest-guppy-0.1.3 235
+SHA256 b3337e46ff4d603c33061b2de96f41a2869e18f163d16a4be0fc2b56ecc35bfc files/digest-guppy-0.1.3 235
+MD5 6c27b0acbc4602a5c4c1aab622b9be0f files/guppy-0.1.3-skip-tests.patch 685
+RMD160 2ae1581257e3486e0fd94db12cbe6e3f3bcca28d files/guppy-0.1.3-skip-tests.patch 685
+SHA256 af22a91cad5bf481f3161dde1086a1e3ec9d9109f053eb4fac15163567a9160f files/guppy-0.1.3-skip-tests.patch 685
+MD5 25d57c0bb4e4e7562c3c5150196648af guppy-0.1.3.ebuild 867
+RMD160 f3de481616417e9b258d5a5ee785774bb24d1bfb guppy-0.1.3.ebuild 867
+SHA256 60634e01ba2e97d770b393cbe415d12a53ea2c93b401861c7139f4f651bbb8ec guppy-0.1.3.ebuild 867
+MD5 5dacebacbf44fdf47ffb9d0812c32cba metadata.xml 535
+RMD160 70d97a72b037bb75bff3c13722fdb48b39e037c7 metadata.xml 535
+SHA256 9034575cb8ec581c79c145c68d16ed3d089ceefebe2b2a3f8b0cadf8fbf6ef46 metadata.xml 535
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEJCGGW78445TWHXcRAgYjAJ9fiAKc9lSgapAlwx/lMhpM0nmW5QCfWfQ7
+tb8V1igLohCFjCcXn7+SKlU=
+=HK4/
+-----END PGP SIGNATURE-----
