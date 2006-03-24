@@ -1,11 +1,49 @@
-MD5 d0e96e1ad4c269e66fa58e4f0f8403a4 ChangeLog 4877
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 367ce3d75df7b2ba0d8ee326a7f0dcd6 ChangeLog 5310
+RMD160 bfcfc98ba4b6fcbdb19102a53a951f67ea2c57cf ChangeLog 5310
+SHA256 cdd64aaa1b6b721871ae40e35eef5c07f476a3af2819962cd7aa535b6de551d9 ChangeLog 5310
 MD5 7934c87d6994825fb9e8ff09a531d0ae files/digest-xen-3.0.1-r4 63
-MD5 5ace6b215eeb362c499e447966c429d0 files/digest-xen-9029-r2 71
+RMD160 897e07562d499a7ac4f74f324031738527ae38e2 files/digest-xen-3.0.1-r4 63
+SHA256 b503a88ad3b4457384161967969c3d341ab7f3b09bf0925e925270650fb8d378 files/digest-xen-3.0.1-r4 63
+MD5 f286994bc4b6be508d4a9e943b44794b files/digest-xen-3.0.1-r5 235
+RMD160 77a42023b130ceef29f79a0c28742a7e8731eadf files/digest-xen-3.0.1-r5 235
+SHA256 2bdbb205f6f9f9ed4a9a06093a63768214a9d14df48cf32e0f10c2cbfbfb8098 files/digest-xen-3.0.1-r5 235
+MD5 2ddf0133ffa840ddb0ff85770d2a8770 files/digest-xen-3.0.1_p9029 259
+RMD160 79c9eaf49563f42eea950aea8597fa1cc309786e files/digest-xen-3.0.1_p9029 259
+SHA256 a035a6a1cd2752da07db13617674322479f049833240b801f7ad828ddab38557 files/digest-xen-3.0.1_p9029 259
 MD5 cbd69f44ee0f0649253e7ab4af11d909 files/gentoo-makefile-targets 118
+RMD160 0ffa087d15a57377b5a32356bdb4f264e4f04f01 files/gentoo-makefile-targets 118
+SHA256 21f04a03aeeba9862740669f77b846f1c4745e6d1e070e582fb9312b364f2df9 files/gentoo-makefile-targets 118
 MD5 16d372298e94a8eef72c1943b1ed5561 files/xend-conf 347
+RMD160 8cc17df2b744342f728f933dea16f61295d52ad0 files/xend-conf 347
+SHA256 3a3f6c87fd4bda91ec944ec7d81e3240e3669f7a089280c5c27385b7062a37ae files/xend-conf 347
 MD5 b16cb40a29cb947b2a9b76cc8f9f3894 files/xend-init 844
+RMD160 9d95e22738333da4767c8aa5a53fd993ef79c977 files/xend-init 844
+SHA256 9f6c5f5e3ca65599cccf2058399a2723b1fdf1d58d572e93ba1303c9915ae6f3 files/xend-init 844
 MD5 11ef318e35fcfed12931f182fc01955a files/xendomains-conf 180
+RMD160 17f791a0369e9e1f1cbd15c7513a4ca14d3f5f18 files/xendomains-conf 180
+SHA256 78427be48c93ec744206df4dcafaedb584dee8a200efbbc54cba432d96cf0ca3 files/xendomains-conf 180
 MD5 a3c0c26c30ce1271b439661b68ca9e74 files/xendomains-init 1671
+RMD160 e2dbb7b4da5ff8be60532e5a393988f47f28c036 files/xendomains-init 1671
+SHA256 19aac7da0ba103ae800ed10b7d151912b3a9476edf63c3651073a197ea291e49 files/xendomains-init 1671
 MD5 23ec60d5040f966fda250a47d8903428 metadata.xml 252
+RMD160 b29f688b9ee017b00ff5a8a6a71edc39087c93ad metadata.xml 252
+SHA256 3482ccebd39bcc165316fdbcc79ad9f01922ce91798a7d83455e884e696ac658 metadata.xml 252
 MD5 d250b02a29030b2e3ed193ba5109865a xen-3.0.1-r4.ebuild 3005
-MD5 93d94d3fdc8f6d30fc7d4a8c1a49d389 xen-9029-r2.ebuild 3239
+RMD160 9227ddd18faa2ba6ef7130a7121a29ececbacadc xen-3.0.1-r4.ebuild 3005
+SHA256 dcff71432cc2bca2bd85e71c28c59f087184f876862fd2b069828ad3984f5376 xen-3.0.1-r4.ebuild 3005
+MD5 027268f07bd26938772f0aeff8b63fd6 xen-3.0.1-r5.ebuild 2515
+RMD160 e05e1641ea0806b6595787fded6c8b408c97dcf1 xen-3.0.1-r5.ebuild 2515
+SHA256 474b0bab8e03050e0ba35150150c34f2ca872f02ba5b6ee5cf60f4d0e7705807 xen-3.0.1-r5.ebuild 2515
+MD5 8e1b7ff0cd5400347d17a29449b74aee xen-3.0.1_p9029.ebuild 2518
+RMD160 156ea6a0faf23038298b8fb73ccd73cb9b0d0caa xen-3.0.1_p9029.ebuild 2518
+SHA256 79a16b24d2376aa5a3234aa5d0d9095d591b01f84e3ed03b5341edf35949399e xen-3.0.1_p9029.ebuild 2518
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEJIXxJrHF4yAQTrARAuE6AJwK+bTOOgjvsogX5/dHqEvzV0dNuQCbB0m5
+GM6TiAjmrGF+D4Yr8ZmXATM=
+=E3jj
+-----END PGP SIGNATURE-----
