@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5126 2006/03/23 18:39:36 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5127 2006/03/24 13:26:06 caleb Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1010,10 +1010,6 @@ games-emulation/game-launcher
 # Chris Gianelloni <wolf31o2@gentoo.org> (02 Dec 2005)
 # Masked because it is completely broken
 =dev-util/catalyst-2.0_rc3
-
-# Diego Pettenò <flameeyes@gentoo.org> (02 Dec 2005)
-# Masked because of bug #105378
-net-wireless/kwirelessmonitor
 
 # Diego Pettenò <flameeyes@gentoo.org> (02 Dec 2005)
 # API/ABI changes, breaks at least latest amaroK.
