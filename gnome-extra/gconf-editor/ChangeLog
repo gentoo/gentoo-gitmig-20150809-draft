@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.76 2006/03/13 22:40:53 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.77 2006/03/25 19:19:28 joem Exp $
+
+  25 Mar 2006; Joe McCann <joem@gentoo.org>
+  +files/gconf-editor-2.14.0-mem_corrupt.patch, gconf-editor-2.14.0.ebuild:
+  add patch from upstream to fix mem corrupt, closes bug 127213
 
 *gconf-editor-2.14.0 (13 Mar 2006)
 

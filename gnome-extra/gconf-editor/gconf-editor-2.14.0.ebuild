@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/gconf-editor-2.14.0.ebuild,v 1.1 2006/03/13 22:40:53 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/gconf-editor-2.14.0.ebuild,v 1.2 2006/03/25 19:19:28 joem Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="An editor to the GNOME 2 config system"
 HOMEPAGE="http://www.gnome.org/"
@@ -24,4 +24,9 @@ DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-USE_DESTDIR="1"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-mem_corrupt.patch
+}

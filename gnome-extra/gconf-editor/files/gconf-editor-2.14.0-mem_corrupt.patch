@@ -1,0 +1,41 @@
+Index: src/gconf-editor-window.c
+===================================================================
+RCS file: /cvs/gnome/gconf-editor/src/gconf-editor-window.c,v
+retrieving revision 1.93
+diff -u -p -r1.93 gconf-editor-window.c
+--- src/gconf-editor-window.c	30 Jan 2006 06:15:01 -0000	1.93
++++ src/gconf-editor-window.c	17 Mar 2006 14:57:51 -0000
+@@ -950,7 +950,7 @@ gconf_editor_gconf_value_changed (GConfC
+ 		gconf_add_recent_key (window, key);
+ 	}
+ 
+-	g_free (value);
++	gconf_value_free (value);
+ 	g_free (key);
+ 	gtk_tree_path_free (path);
+ }
+Index: src/gconf-list-model.c
+===================================================================
+RCS file: /cvs/gnome/gconf-editor/src/gconf-list-model.c,v
+retrieving revision 1.16
+diff -u -p -r1.16 gconf-list-model.c
+--- src/gconf-list-model.c	10 Feb 2005 11:19:13 -0000	1.16
++++ src/gconf-list-model.c	17 Mar 2006 14:57:51 -0000
+@@ -83,7 +83,6 @@ gconf_list_model_notify_func (GConfClien
+ 		path = gtk_tree_model_get_path (GTK_TREE_MODEL (list_model), &iter);
+ 		gtk_tree_model_row_inserted (GTK_TREE_MODEL (list_model), path, &iter);
+ 		gtk_tree_path_free (path);
+-
+ 	}
+ 	else {
+ 		list_model->stamp++;
+@@ -106,6 +105,8 @@ gconf_list_model_notify_func (GConfClien
+ 			list_model->length--;
+ 			g_hash_table_remove (list_model->key_hash, key);
+ 		}
++
++		gtk_tree_path_free (path);
+ 	}
+ }
+ 
+
