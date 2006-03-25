@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-apps/terminal
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.10 2005/03/17 21:06:20 fafhrd Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.11 2006/03/25 23:02:30 grobian Exp $
+
+*terminal-0.9.5_pre20060324 (25 Mar 2006)
+
+  25 Mar 2006; Fabian Groffen <grobian@gentoo.org>
+  -terminal-0.9.5_pre20050110.ebuild, terminal-0.9.5_pre20050315.ebuild,
+  +terminal-0.9.5_pre20060324.ebuild:
+  Removed old CVS ebuild, fixed and bumped
 
 *terminal-0.9.5_pre20050315 (17 Mar 2005)
 
