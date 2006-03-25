@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.47 2006/03/07 11:18:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.48 2006/03/25 02:08:24 flameeyes Exp $
+
+*libsndfile-1.0.15 (25 Mar 2006)
+
+  25 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libsndfile-1.0.15-ac-arg-fixes.patch, +libsndfile-1.0.15.ebuild:
+  Version bump with path to fix configure's AC_ARG_ENABLE handling. Thanks to
+  Richard Ash for reporting in bug #127307.
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   libsndfile-1.0.5.ebuild, libsndfile-1.0.9.ebuild,
