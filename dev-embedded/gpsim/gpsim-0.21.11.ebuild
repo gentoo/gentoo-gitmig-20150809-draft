@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.11.ebuild,v 1.2 2006/03/25 21:10:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.11.ebuild,v 1.3 2006/03/25 21:21:54 flameeyes Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 DESCRIPTION="A simulator for the Microchip PIC microcontrollers"
 HOMEPAGE="http://www.dattalo.com/gnupic/gpsim.html"
@@ -38,6 +38,8 @@ src_unpack() {
 	for i in ${S}/src/Makefile.{in,am} ; do
 		sed -i.orig -e '/^libgpsim_la_LDFLAGS/s,$, -lpthread,g' $i
 	done
+
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 }
 
 src_compile() {
