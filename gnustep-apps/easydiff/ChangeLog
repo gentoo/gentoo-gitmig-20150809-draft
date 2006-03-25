@@ -1,6 +1,15 @@
 # ChangeLog for gnustep-apps/easydiff
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.10 2005/03/17 21:00:52 fafhrd Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.11 2006/03/25 17:45:59 grobian Exp $
+
+*easydiff-0.3.1_pre20050614 (25 Mar 2006)
+*easydiff-0.3.1_pre20050312-r1 (25 Mar 2006)
+
+  25 Mar 2006; Fabian Groffen <grobian@gentoo.org>
+  -easydiff-0.3.1_pre20041203.ebuild, -easydiff-0.3.1_pre20050106.ebuild,
+  -easydiff-0.3.1_pre20050312.ebuild, +easydiff-0.3.1_pre20050312-r1.ebuild,
+  +easydiff-0.3.1_pre20050614.ebuild:
+  Removed non-working CVS ebuilds, added new SVN ebuilds (including bump)
 
 *easydiff-0.3.1_pre20050312 (17 Mar 2005)
 
