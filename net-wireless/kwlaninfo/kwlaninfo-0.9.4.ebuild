@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Technologies, Inc.
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwlaninfo/kwlaninfo-0.9.4.ebuild,v 1.1 2006/03/24 13:23:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwlaninfo/kwlaninfo-0.9.4.ebuild,v 1.2 2006/03/25 05:25:21 mr_bones_ Exp $
 
 inherit kde
 
