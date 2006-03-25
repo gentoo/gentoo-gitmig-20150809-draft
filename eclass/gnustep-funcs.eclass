@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.10 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.11 2006/03/25 16:19:44 grobian Exp $
 
 inherit toolchain-funcs eutils
 
@@ -97,17 +97,18 @@ egnustep_env() {
 		echo ${__GS_USER_ROOT_SUFFIX//\//XXX_SED_FSLASH} > ${TMP}/sed.gs_user_root_suffix
 
 		# Set up common env vars for make operations
-		__GS_MAKE_EVAL="HOME=\${TMP} \
-			GNUSTEP_USER_ROOT=\${TMP} \
-			GNUSTEP_DEFAULTS_ROOT=\${TMP}/\${__GS_USER_ROOT_SUFFIX} \
-			INSTALL_ROOT_DIR=\${D} \
-			GNUSTEP_INSTALLATION_DIR=\${D}/\$(egnustep_install_domain)
-			GNUSTEP_MAKEFILES=\${GNUSTEP_SYSTEM_ROOT}/Library/Makefiles \
-			GNUSTEP_NETWORK_ROOT=\${GNUSTEP_NETWORK_ROOT} \
-			GNUSTEP_LOCAL_ROOT=\${GNUSTEP_LOCAL_ROOT} \
-			GNUSTEP_SYSTEM_ROOT=\${GNUSTEP_SYSTEM_ROOT} \
+		__GS_MAKE_EVAL=" \
+			HOME=\"\${T}\" \
+			GNUSTEP_USER_ROOT=\"\${T}\" \
+			GNUSTEP_DEFAULTS_ROOT=\"\${T}/\${__GS_USER_ROOT_SUFFIX}\" \
+			INSTALL_ROOT_DIR=\"\${D}\" \
+			GNUSTEP_INSTALLATION_DIR=\"\${D}/\$(egnustep_install_domain)\" \
+			GNUSTEP_MAKEFILES=\"\${GNUSTEP_SYSTEM_ROOT}\"/Library/Makefiles \
+			GNUSTEP_NETWORK_ROOT=\"\${GNUSTEP_NETWORK_ROOT}\" \
+			GNUSTEP_LOCAL_ROOT=\"\${GNUSTEP_LOCAL_ROOT}\" \
+			GNUSTEP_SYSTEM_ROOT=\"\${GNUSTEP_SYSTEM_ROOT}\" \
 			TAR_OPTIONS=\"\${TAR_OPTIONS} --no-same-owner\" \
-			-j1"
+			-j1" # this is dirty!
 	else
 		die "gnustep-make not installed!"
 	fi
