@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.34 2006/03/17 01:27:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.35 2006/03/25 04:02:29 josejx Exp $
+
+  25 Mar 2006; Joseph Jezak <josejx@gentoo.org> libggi-2.1.1.ebuild:
+  Marked ppc stable for bug #97944.
 
   17 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> libggi-2.0.1-r1.ebuild:
   Backport modular x dependencies to stable version.
