@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7e18ad9a026e72da05368010a485714c ChangeLog 565
+RMD160 ddc164f0d1750bb27a48fac9ff099ea6db9dbb74 ChangeLog 565
+SHA256 3ba8e0f63784db8ac6ad1596481dcbd4ad008592cde908fb0c4c9ff5aff48883 ChangeLog 565
 MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-x-0.10.4 277
-MD5 b1b2194a9750fdbf0d85d1da548f2de7 gst-plugins-x-0.10.4.ebuild 557
+RMD160 bee1889727ca635912779fbcac2958f0ceba48b0 files/digest-gst-plugins-x-0.10.4 277
+SHA256 f47f4fd7829d14012ef690db4a45f568549f7a5015a00bd9ba03a41f3584e654 files/digest-gst-plugins-x-0.10.4 277
+MD5 204f75b9c0ed12f050d9ff5be51e7209 gst-plugins-x-0.10.4.ebuild 563
+RMD160 977a1a9cd5c8bdcf4280ce58dbae0accfa0f977e gst-plugins-x-0.10.4.ebuild 563
+SHA256 a507db3c84a467f5ee863f99b2f41fdcf37098c3a32c99c8ea7486fefd7a9ef2 gst-plugins-x-0.10.4.ebuild 563
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEIudiKRy60XGEcJIRAuqnAJ9uYR3ZZxLsmgEUkPEHZn4AJsdnkACggrV2
-IampR2/hSlFyrOVnmAiWlSE=
-=WDne
------END PGP SIGNATURE-----
+RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
+SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1 metadata.xml 162
