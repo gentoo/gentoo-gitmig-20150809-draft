@@ -1,4 +1,4 @@
-MD5 6a4158027d7edf7650ed777165cfc134 ChangeLog 4832
+MD5 a47720ae28c22cd8ad7308a9efcf6cb5 ChangeLog 4974
 MD5 a2245fb5959a678c53a78647758df109 files/digest-knoda-0.7.1 64
 MD5 a9b1117eec883735adb0e1265fc0deca files/digest-knoda-0.7.4 65
 MD5 a9b1117eec883735adb0e1265fc0deca files/digest-knoda-0.7.4-r1 65
@@ -8,5 +8,5 @@ MD5 2bafad05024cb02600c6e2eb3de8c350 files/knoda-0.7.4-makefile.patch 3045
 MD5 6ccc05f7120be903fa688fd4b56ca7de knoda-0.7.1.ebuild 593
 MD5 48ebe6495e8605292bce905b4ec09d36 knoda-0.7.4-r1.ebuild 682
 MD5 b1b6e6e28352e481af45ba03f3803cf3 knoda-0.7.4.ebuild 554
-MD5 9504174761eb2bfe42f4f3704203d16f knoda-0.8.1_alpha3.ebuild 559
+MD5 752b3ef9343d353b64552efe1895cf2c knoda-0.8.1_alpha3.ebuild 562
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
