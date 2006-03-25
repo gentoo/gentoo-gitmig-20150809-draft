@@ -1,0 +1,34 @@
+Index: ktechlab-0.1.3/src/canvasview.h
+===================================================================
+--- ktechlab-0.1.3.orig/src/canvasview.h
++++ ktechlab-0.1.3/src/canvasview.h
+@@ -20,6 +20,7 @@
+ 
+ class Canvas;
+ class CanvasCorner;
++class CanvasEditor;
+ class CanvasItem;
+ class CanvasItemGroup;
+ class CanvasTip;
+@@ -581,7 +582,7 @@ protected:
+ 	/**
+ 	 * Set to true to remove buttons and grid and so on from the canvas, set false to put them back
+ 	 */
+-	void CanvasView::setSVGExport( bool svgExport );
++	void setSVGExport( bool svgExport );
+ 	/**
+ 	 * Creates a new NodeGroup to control the node, if there does not already
+ 	 * exist a NodeGroup containing the given node. The associated nodes will
+Index: ktechlab-0.1.3/src/itemlibrary.h
+===================================================================
+--- ktechlab-0.1.3.orig/src/itemlibrary.h
++++ ktechlab-0.1.3/src/itemlibrary.h
+@@ -17,6 +17,8 @@
+ #include <qimage.h>
+ #include <map>
+ 
++class ItemLibrary;
++
+ inline ItemLibrary* itemLibrary();
+ typedef std::map< QString, QImage > ImageMap;
+ 

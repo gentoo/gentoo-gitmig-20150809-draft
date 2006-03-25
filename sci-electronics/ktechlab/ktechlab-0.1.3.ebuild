@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ktechlab-0.1.3.ebuild,v 1.2 2006/02/20 09:35:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ktechlab-0.1.3.ebuild,v 1.3 2006/03/25 21:28:34 flameeyes Exp $
 
 inherit kde
 
@@ -19,3 +19,6 @@ DEPEND=">=dev-embedded/gpsim-0.21"
 need-kde 3.2
 
 UNSERMAKE=""
+
+PATCHES="${FILESDIR}/${P}-gcc41.patch"
+
