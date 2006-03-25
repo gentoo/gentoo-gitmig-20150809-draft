@@ -1,21 +1,21 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vmnet/vmnet-0.4.ebuild,v 1.8 2005/03/01 22:34:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vmnet/vmnet-0.4.ebuild,v 1.9 2006/03/25 19:39:08 robbat2 Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
-DESCRIPTION="A simple virtual networking program"
-HOMEPAGE="ftp://ftp.xos.nl/pub/linux/${PN}/"
+DESCRIPTION="A simple virtual networking program - SLIP over stdin/out"
+HOMEPAGE="ftp://ftp.xos.nl/pub/linux/vmnet/"
 # The main site is often down
 # So this might be better but it's a different filename
 # http://ftp.debian.org/debian/pool/main/${PN:0:1}/${PN}/${P/-/_}.orig.tar.gz
 # We use the debian patch anyway
 SRC_URI="ftp://ftp.xos.nl/pub/linux/${PN}/${P}.tar.gz
-	mirror://debian/pool/main/${PN:0:1}/${PN}/${P/-/_}-1.diff.gz"
+		mirror://debian/pool/main/${PN:0:1}/${PN}/${P/-/_}-1.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="sys-apps/net-tools"
@@ -26,6 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
+	append-ldflags -Wl,-z,now
 	emake || die "Emake failed"
 }
 
