@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/screem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.3 2006/02/24 00:29:28 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.4 2006/03/25 13:24:43 allanonjl Exp $
+
+  25 Mar 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -screem-0.6.2.ebuild, -screem-0.8.1.ebuild, -screem-0.14.1.ebuild,
+  -screem-0.14.3.ebuild, screem-0.16.0.ebuild, screem-0.16.1.ebuild:
+  remove deprecation cflags, #127486.  prune old ebuilds.
 
   24 Feb 2006; John N. Laliberte <allanonjl@gentoo.org> screem-0.6.2.ebuild,
   screem-0.8.1.ebuild, screem-0.14.1.ebuild, screem-0.14.3.ebuild,

@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.1.ebuild,v 1.2 2006/02/24 00:29:28 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.1.ebuild,v 1.3 2006/03/25 13:24:43 allanonjl Exp $
 
-inherit gnome2
+inherit gnome2 autotools
 
 DESCRIPTION="SCREEM is an integrated environment of the creation and maintenance of websites and pages"
 HOMEPAGE="http://www.screem.org/"
@@ -62,6 +62,11 @@ src_unpack()
 	cd ${S}
 
 	gnome2_omf_fix docs/*/Makefile.in docs/omf.make
+
+	# remove deprecation #127486
+	sed -i -e 's:$DEPRECATION_FLAGS ::' configure.ac
+
+	eautoreconf
 }
 
 pkg_postinst() {
