@@ -1,0 +1,233 @@
+=== modified file 'bin/emerge'
+--- bin/emerge	
++++ bin/emerge	
+@@ -2127,9 +2127,9 @@
+ 	syslist = []
+ 	for x in realsyslist:
+ 		mycp = portage.dep_getkey(x)
+-		if mycp in portage.settings.virtuals:
++		if mycp in portage.settings.getvirtuals():
+ 			providers = []
+-			for provider in portage.settings.virtuals[mycp]:
++			for provider in portage.settings.getvirtuals()[mycp]:
+ 				if portage.db[portage.root]["vartree"].dbapi.match(provider):
+ 					providers.append(provider)
+ 			if len(providers) == 1:
+
+=== modified file 'bin/repoman'
+--- bin/repoman	
++++ bin/repoman	
+@@ -1115,7 +1115,7 @@
+ 	
+ 				for myprovide in myaux["PROVIDE"].split():
+ 					prov_cp = portage.dep_getkey(myprovide)
+-					if prov_cp not in dep_settings.virtuals:
++					if prov_cp not in dep_settings.getvirtuals():
+ 						stats["virtual.unavailable"]+=1
+ 						fails["virtual.unavailable"].append(x+"/"+y+".ebuild: "+keyword+"("+prof[0]+") "+prov_cp)
+ 
+
+=== modified file 'pym/portage.py'
+--- pym/portage.py	
++++ pym/portage.py	
+@@ -880,6 +880,8 @@
+ 		self.modifiedkeys = []
+ 
+ 		self.virtuals = {}
++		self.virts_p = {}
++		self.dirVirtuals = None
+ 		self.v_count  = 0
+ 
+ 		# Virtuals obtained from the vartree
+@@ -1141,9 +1143,6 @@
+ 			archlist = stack_lists(archlist, incremental=1)
+ 			self.configdict["conf"]["PORTAGE_ARCHLIST"] = " ".join(archlist)
+ 
+-			# get virtuals -- needs categories
+-			self.loadVirtuals('/')
+-
+ 			#package.mask
+ 			pkgmasklines = [grabfile_package(os.path.join(x, "package.mask")) for x in self.profiles]
+ 			for l in locations:
+@@ -1184,7 +1183,8 @@
+ 		if not useorder:
+ 			# reasonable defaults; this is important as without USE_ORDER,
+ 			# USE will always be "" (nothing set)!
+-			useorder="env:pkg:conf:auto:defaults"
++			useorder = "env:pkg:conf:defaults"
++			self.backupenv["USE_ORDER"] = useorder
+ 		useordersplit=useorder.split(":")
+ 
+ 		self.uvlist=[]
+@@ -1258,7 +1258,9 @@
+ 			self.setcpv(mycpv)
+ 
+ 	def loadVirtuals(self,root):
+-		self.virtuals = self.getvirtuals(root)
++		"""Not currently used by portage."""
++		writemsg("DEPRECATED: portage.config.loadVirtuals\n")
++		self.getvirtuals(root)
+ 
+ 	def load_best_module(self,property_string):
+ 		best_mod = best_from_dict(property_string,self.modules,self.module_priority)
+@@ -1346,6 +1348,8 @@
+ 		self.reset(keeping_pkg=1,use_cache=use_cache)
+ 
+ 	def setinst(self,mycpv,mydbapi):
++		if len(self.virtuals) == 0:
++			self.getvirtuals()
+ 		# Grab the virtuals this package provides and add them into the tree virtuals.
+ 		provides = mydbapi.aux_get(mycpv, ["PROVIDE"])[0]
+ 		if isinstance(mydbapi, portdbapi):
+@@ -1384,7 +1388,7 @@
+ 			if mykey=="USE":
+ 				mydbs=self.uvlist
+ 				# XXX Global usage of db... Needs to go away somehow.
+-				if db.has_key(root) and db[root].has_key("vartree"):
++				if "auto" in self["USE_ORDER"].split(":") and db.has_key(root) and db[root].has_key("vartree"):
+ 					self.configdict["auto"]["USE"]=autouse(db[root]["vartree"],use_cache=use_cache)
+ 				else:
+ 					self.configdict["auto"]["USE"]=""
+@@ -1450,7 +1454,20 @@
+ 
+ 		self.already_in_regenerate = 0
+ 
+-	def getvirtuals(self, myroot):
++	def get_virts_p(self, myroot):
++		if self.virts_p:
++			return self.virts_p
++		virts = self.getvirtuals(myroot)
++		if virts:
++			myvkeys = virts.keys()
++			for x in myvkeys:
++				vkeysplit = x.split("/")
++				if not self.virts_p.has_key(vkeysplit[1]):
++					self.virts_p[vkeysplit[1]] = virts[x]
++		return self.virts_p
++
++	def getvirtuals(self, myroot="/"):
++		#XXX: due to caching, myroot is ignored on all but the first call
+ 		if self.virtuals:
+ 			return self.virtuals
+ 
+@@ -1504,7 +1521,8 @@
+ 			# Reduce the provides into a list by CP.
+ 			self.treeVirtuals = map_dictlist_vals(getCPFromCPV,temp_vartree.get_all_provides())
+ 
+-		return self.__getvirtuals_compile()
++		self.virtuals = self.__getvirtuals_compile()
++		return self.virtuals
+ 
+ 	def __getvirtuals_compile(self):
+ 		"""Actually generate the virtuals we have collected.
+@@ -3152,16 +3170,17 @@
+ 			newsplit.append(dep_virtual(x, mysettings))
+ 		else:
+ 			mykey=dep_getkey(x)
+-			if mysettings.virtuals.has_key(mykey):
+-				if len(mysettings.virtuals[mykey])==1:
+-					a=string.replace(x, mykey, mysettings.virtuals[mykey][0])
++			myvirtuals = mysettings.getvirtuals()
++			if myvirtuals.has_key(mykey):
++				if len(myvirtuals[mykey]) == 1:
++					a = string.replace(x, mykey, myvirtuals[mykey][0])
+ 				else:
+ 					if x[0]=="!":
+ 						# blocker needs "and" not "or(||)".
+ 						a=[]
+ 					else:
+ 						a=['||']
+-					for y in mysettings.virtuals[mykey]:
++					for y in myvirtuals[mykey]:
+ 						a.append(string.replace(x, mykey, y))
+ 				newsplit.append(a)
+ 			else:
+@@ -3469,6 +3488,9 @@
+ 
+ def key_expand(mykey,mydb=None,use_cache=1):
+ 	mysplit=mykey.split("/")
++	global settings
++	virts = settings.getvirtuals("/")
++	virts_p = settings.get_virts_p("/")
+ 	if len(mysplit)==1:
+ 		if mydb and type(mydb)==types.InstanceType:
+ 			for x in settings.categories:
+@@ -3490,6 +3512,9 @@
+ 	are no installed/available candidates."""
+ 	myslash=mycpv.split("/")
+ 	mysplit=pkgsplit(myslash[-1])
++	global settings
++	virts = settings.getvirtuals("/")
++	virts_p = settings.get_virts_p("/")
+ 	if len(myslash)>2:
+ 		# this is illegal case.
+ 		mysplit=[]
+@@ -6612,20 +6637,29 @@
+ 	return settings.getvirtuals(myroot)
+ 
+ def do_vartree(mysettings):
+-	global virts,virts_p
+-	virts=mysettings.getvirtuals("/")
+-	virts_p={}
+-
+-	if virts:
+-		myvkeys=virts.keys()
+-		for x in myvkeys:
+-			vkeysplit=x.split("/")
+-			if not virts_p.has_key(vkeysplit[1]):
+-				virts_p[vkeysplit[1]]=virts[x]
+-	db["/"]={"virtuals":virts,"vartree":vartree("/",virts)}
++	class LazyVirtualsDict(dict):
++		def __init__(self, myroot):
++			super(LazyVirtualsDict, self).__init__()
++			self.myroot = myroot
++			self["virtuals"] = None
++		def __getitem__(self, key):
++			if "virtuals" == key:
++				if "virtuals" in self:
++					virtuals = super(LazyVirtualsDict, self).__getitem__("virtuals")
++					if virtuals is not None:
++						return virtuals
++					else:
++						global settings
++						virtuals = settings.getvirtuals(self.myroot)
++						self["virtuals"] = virtuals
++						return virtuals
++			return super(LazyVirtualsDict, self).__getitem__(key)
++	global db, root
++	db["/"] = LazyVirtualsDict("/")
++	db["/"]["vartree"] = vartree("/")
+ 	if root!="/":
+-		virts=mysettings.getvirtuals(root)
+-		db[root]={"virtuals":virts,"vartree":vartree(root,virts)}
++		db[root] = LazyVirtualsDict(root)
++		db[root]["vartree"] = vartree(root)
+ 	#We need to create the vartree first, then load our settings, and then set up our other trees
+ 
+ usedefaults=settings.use_defs
+@@ -6891,7 +6925,7 @@
+ 					writemsg("%s\n" % msg)
+ 		update_config_files(myupd)
+ 
+-		db["/"]["bintree"] = binarytree("/", settings["PKGDIR"], virts)
++		db["/"]["bintree"] = binarytree("/", settings["PKGDIR"], settings.getvirtuals("/"))
+ 		for update_cmd in myupd:
+ 			if update_cmd[0] == "move":
+ 				db["/"]["vartree"].dbapi.move_ent(update_cmd)
+@@ -6938,11 +6972,11 @@
+ 		global_updates()
+ 
+ #continue setting up other trees
+-db["/"]["porttree"]=portagetree("/",virts)
+-db["/"]["bintree"]=binarytree("/",settings["PKGDIR"],virts)
++db["/"]["porttree"] = portagetree("/")
++db["/"]["bintree"] = binarytree("/", settings["PKGDIR"])
+ if root!="/":
+-	db[root]["porttree"]=portagetree(root,virts)
+-	db[root]["bintree"]=binarytree(root,settings["PKGDIR"],virts)
++	db[root]["porttree"] = portagetree(root)
++	db[root]["bintree"] = binarytree(root, settings["PKGDIR"])
+ 
+ profileroots = [settings["PORTDIR"]+"/profiles/"]
+ for x in settings["PORTDIR_OVERLAY"].split():
+
