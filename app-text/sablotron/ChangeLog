@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sablotron
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.45 2006/02/06 19:36:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.46 2006/03/25 13:15:07 caleb Exp $
+
+*sablotron-1.0.1-r1 (25 Mar 2006)
+
+  25 Mar 2006; Caleb Tennis <caleb@gentoo.org> +sablotron-1.0.1-r1.ebuild:
+  Add -shared-libgcc option from bug #106667
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> sablotron-1.0.1.ebuild:
   stable on amd64
