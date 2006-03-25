@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-1.1.1-r1.ebuild,v 1.1 2006/03/24 16:38:33 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-1.1.1-r1.ebuild,v 1.2 2006/03/25 19:17:23 brix Exp $
 
 inherit eutils linux-mod
 
@@ -13,7 +13,8 @@ FW_VERSION="3.0"
 
 DESCRIPTION="Driver for the Intel PRO/Wireless 2200BG/2915ABG miniPCI and 2225BG PCI adapters"
 HOMEPAGE="http://ipw2200.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz
+		mirror://gentoo/${P}-rtap_iface.patch.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -64,7 +65,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-diversity.patch
 	epatch ${FILESDIR}/${P}-fw_endian.patch
-	epatch ${FILESDIR}/${P}-rtap_iface.patch
+	epatch ${WORKDIR}/${P}-rtap_iface.patch
 
 	use debug && debug="y"
 	sed -i -e "s:^\(CONFIG_IPW2200_DEBUG\)=.*:\1=${debug}:" ${S}/Makefile

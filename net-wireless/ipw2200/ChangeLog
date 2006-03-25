@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ipw2200
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.62 2006/03/24 16:38:33 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.63 2006/03/25 19:17:23 brix Exp $
+
+  25 Mar 2006; Henrik Brix Andersen <brix@gentoo.org>
+  -files/ipw2200-1.1.1-rtap_iface.patch, ipw2200-1.1.1-r1.ebuild:
+  Move large patch to mirrors, thanks to Halcy0n in bug #123634.
 
 *ipw2200-1.1.1-r1 (24 Mar 2006)
 
