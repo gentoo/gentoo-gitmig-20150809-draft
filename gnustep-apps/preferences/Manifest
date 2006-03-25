@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 590e42bc10e1db0c45242756a9fed878 ChangeLog 1814
+MD5 2ab6df7203892d09663d41b40c84eb12 ChangeLog 2111
+RMD160 69787db4f2d0af7a50be401dc45c252fd4927fe7 ChangeLog 2111
+SHA256 3e43db50c589924f67527c993f46e829ce5b2c13cf74ccfd0615eadcb7090a4b ChangeLog 2111
 MD5 cd4414200232647c1f3402bbc6ec2e5d files/Preferences-nocreate-extra-dirs.patch 834
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-preferences-1.3.0_pre20050110 0
+RMD160 48fb4865faf37094377de9a5f0e41f35e4fb71f7 files/Preferences-nocreate-extra-dirs.patch 834
+SHA256 13660d5203e91d4f722f734667697782d99f58e3f9d9034408fc37e7b77804fa files/Preferences-nocreate-extra-dirs.patch 834
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-preferences-1.3.0_pre20050315 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-preferences-1.3.0_pre20050315 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-preferences-1.3.0_pre20050315 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-preferences-1.3.0_pre20060324 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-preferences-1.3.0_pre20060324 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-preferences-1.3.0_pre20060324 0
 MD5 205bf7503c7223e7915354f26ba3ecf3 metadata.xml 250
-MD5 e859b08755d15d8029e521b96955b394 preferences-1.3.0_pre20050110.ebuild 1029
-MD5 4d5ec7194a4d9d4e99ba2484298eb6eb preferences-1.3.0_pre20050315.ebuild 1029
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDhSkI1lqEGTUzyQRArm/AJ4gObPA/b7X40+hiNFcQZYDM5xi0gCfS5W5
-oRLzmea4uPinna1vnQq3X6s=
-=0Lqk
------END PGP SIGNATURE-----
+RMD160 1e810b97cf4a0aa8eb23f0db01a96b07597f00f0 metadata.xml 250
+SHA256 e89d5a930413b1bf0e0a7b4e25cd119b59815acf3ac65a87d8cfef9db357b1a8 metadata.xml 250
+MD5 50aaa05631259f10f4e02683e7465f7b preferences-1.3.0_pre20050315.ebuild 1067
+RMD160 30b5c6ff926a4969639627f01038410c04a1c27f preferences-1.3.0_pre20050315.ebuild 1067
+SHA256 a5c61a147cd9029c2e09a90d8efa95705173d100cab0a8c54d09626bd649cc25 preferences-1.3.0_pre20050315.ebuild 1067
+MD5 acf5e522d9ab50c2f117d1ce0da55c55 preferences-1.3.0_pre20060324.ebuild 1067
+RMD160 5546da5020892f9d38824c3e686a81a57cf3c310 preferences-1.3.0_pre20060324.ebuild 1067
+SHA256 67199975aecb7951379cf9b7ce1cd617be30d94810852c34ace5bf37f0564d5a preferences-1.3.0_pre20060324.ebuild 1067
