@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r17.ebuild,v 1.3 2006/03/25 21:24:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r17.ebuild,v 1.4 2006/03/25 21:27:37 swegener Exp $
 
 IUSE="aliaschain cnamefix doc fwdzone ipv6 \
 	multipleip roundrobin semanticfix static selinux \
@@ -118,7 +118,7 @@ src_compile() {
 		echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 		echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 		echo "/usr" > conf-home
-		MAKEOPTS="${MAKEOPTS} -j1" emake dnstrace || die "emake failed"
+		emake -j1 dnstrace || die "emake failed"
 	fi
 }
 
