@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.201 2006/03/25 10:35:47 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.202 2006/03/25 12:08:43 blubb Exp $
+
+  25 Mar 2006; Simon Stelling <blubb@gentoo.org>
+  alsa-driver-1.0.11_rc4.ebuild:
+  improve KERNEL_ABI patch
 
   25 Mar 2006; Simon Stelling <blubb@gentoo.org>
   alsa-driver-1.0.11_rc4.ebuild:

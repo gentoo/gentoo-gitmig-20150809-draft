@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.11_rc4.ebuild,v 1.2 2006/03/25 10:35:47 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.11_rc4.ebuild,v 1.3 2006/03/25 12:08:43 blubb Exp $
 
 inherit linux-mod flag-o-matic eutils multilib
 
@@ -63,8 +63,6 @@ pkg_setup() {
 		export CBUILD=${CBUILD-${CHOST}}
 		export CHOST="sparc64-unknown-linux-gnu"
 	fi
-
-	ABI=${KERNEL_ABI}
 }
 
 src_unpack() {
@@ -79,6 +77,8 @@ src_unpack() {
 }
 
 src_compile() {
+	local myABI=${ABI:-${DEFAULT_ABI}}
+
 	# Should fix bug #46901
 	is-flag "-malign-double" && filter-flags "-fomit-frame-pointer"
 	append-flags "-I${KV_DIR}/arch/$(tc-arch-kernel)/include"
@@ -94,9 +94,11 @@ src_compile() {
 	# linux-mod_src_compile doesn't work well with alsa
 
 	ARCH=$(tc-arch-kernel)
+	ABI=${KERNEL_ABI}
 	# -j1 : see bug #71028
 	emake -j1 HOSTCC=$(tc-getBUILD_CC) CC=$(tc-getCC) || die "Make Failed"
 	ARCH=$(tc-arch)
+	ABI=${myABI}
 
 	if use doc;
 	then
