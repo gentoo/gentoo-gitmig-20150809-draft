@@ -1,4 +1,4 @@
-MD5 dc24e6916fb7d5714e74fd2f88c31196 ChangeLog 4247
+MD5 6ce7b5e838db94697282186024d95c26 ChangeLog 4345
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kolf-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kolf-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kolf-3.4.3 68
@@ -7,7 +7,7 @@ MD5 23693adb4d93b662b3f08d2c2d8b7092 files/digest-kolf-3.5.1 69
 MD5 ed93d0050d30937bce3f66dc86656e76 files/digest-kolf-3.5.2 253
 MD5 f13e44dee96fae9fdd48e09da2c6eacf kolf-3.4.1.ebuild 681
 MD5 657d6fcf1aee7725dc6310fde11f13a5 kolf-3.4.2.ebuild 694
-MD5 f45dbe4e7093d7af3f68b71cc5f916f7 kolf-3.4.3.ebuild 693
+MD5 5a7bbda2cf29d7de5a2ce329884b87eb kolf-3.4.3.ebuild 695
 MD5 17adaee044ee89d22f2fb66b38d11908 kolf-3.5.0.ebuild 658
 MD5 d27964f3c56dc1a56e3fa575d1ca516c kolf-3.5.1.ebuild 659
 MD5 d07dbd35fad2ab5150c57655713daffb kolf-3.5.2.ebuild 661
