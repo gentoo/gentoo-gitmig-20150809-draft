@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/apg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.16 2005/08/03 18:41:51 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.17 2006/03/25 23:38:05 voxus Exp $
+
+*apg-2.3.0b-r2 (26 Mar 2006)
+
+  26 Mar 2006; Konstantin Arkhipov <voxus@gentoo.org> +apg-2.3.0b-r2.ebuild,
+  +files/apg-glibc-2.4.patch:
+  Closing bug #126995.
 
   03 Aug 2005; Konstantin Arkhipov <voxus@gentoo.org> -apg-2.3.0b.ebuild:
   Cleanup.
