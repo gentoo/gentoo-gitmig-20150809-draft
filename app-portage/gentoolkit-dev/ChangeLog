@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoolkit-dev
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.30 2005/08/24 22:39:06 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.31 2006/03/25 05:27:37 agriffis Exp $
+
+*gentoolkit-dev-0.2.6 (25 Mar 2006)
+
+  25 Mar 2006; Aron Griffis <agriffis@gentoo.org>
+  +gentoolkit-dev-0.2.6.ebuild:
+  Update eviewcvs for sources.gentoo.org; make it work with subversion too
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   -gentoolkit-dev-0.2.3.ebuild, -gentoolkit-dev-0.2.4.ebuild,

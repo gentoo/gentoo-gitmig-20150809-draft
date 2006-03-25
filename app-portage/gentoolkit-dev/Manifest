@@ -1,4 +1,28 @@
-MD5 09e7c42c935b96bc546a0c81938a6b95 ChangeLog 4288
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 793657ea3fa4fd96a285fce08bd05f26 ChangeLog 4483
+RMD160 13a385c373ab10a223d9e75ac3283589fa083b9e ChangeLog 4483
+SHA256 c11d731d3e1b1b7243c7cb4eeacd628c7fc10f95c7c92a68e5664964e90b29f0 ChangeLog 4483
 MD5 165734ade98f4d07a027f65c1d8f75b7 files/digest-gentoolkit-dev-0.2.5 71
+RMD160 bb9223292d6d7f0a55f109b6ef52338aaa728dfa files/digest-gentoolkit-dev-0.2.5 71
+SHA256 149f90ff36c9b721bf9667b213df1549b13d7f0ee92f15d09a0f591d15213916 files/digest-gentoolkit-dev-0.2.5 71
+MD5 f4b8016cb4332ade869ef570e351e125 files/digest-gentoolkit-dev-0.2.6 259
+RMD160 69c9c2a2593c4480afb80aec8fa5ff53d61e870c files/digest-gentoolkit-dev-0.2.6 259
+SHA256 09c03b8ecaf0f5936cfa25ce0bb38b84ee51c7b3cd458b9da7621ce3379e1be8 files/digest-gentoolkit-dev-0.2.6 259
 MD5 9ec95b9ca5418770e2bdc84b74ca884f gentoolkit-dev-0.2.5.ebuild 714
+RMD160 4be3dce02e1f0868b056bcfda8b7e91abcaf268f gentoolkit-dev-0.2.5.ebuild 714
+SHA256 a205b461fe0d447d580b4f147e3b42fa9e6828f9aea7c02ce2a68708cbaec88d gentoolkit-dev-0.2.5.ebuild 714
+MD5 d3f83dc5779f1d5c22589d0f1548209d gentoolkit-dev-0.2.6.ebuild 730
+RMD160 842f53295e6faf4c802f7a006e3341a0e94c95c4 gentoolkit-dev-0.2.6.ebuild 730
+SHA256 0c41fdf6d45583e3252f33d453737e09251e332b37aaac2f5a1ac86f6548b616 gentoolkit-dev-0.2.6.ebuild 730
 MD5 5f551d730b5b9029b8ca6caa63bcea04 metadata.xml 282
+RMD160 0eb345cd4d45d200be98d46ef58d9c7d984d0fea metadata.xml 282
+SHA256 bbc59170a0b8682ed3a03f67bafc63610875532ab87b33a3ad2695482624f5a8 metadata.xml 282
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEJNTTJrHF4yAQTrARAjyQAJ9qgF1i96d7y/vAsWHEMNmQjaqvfwCeMECi
+bIVwikPw5SSRb5MEV6YgxjU=
+=hdj8
+-----END PGP SIGNATURE-----
