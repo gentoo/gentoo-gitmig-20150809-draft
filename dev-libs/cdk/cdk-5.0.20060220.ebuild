@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20060220.ebuild,v 1.1 2006/02/23 14:57:43 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20060220.ebuild,v 1.2 2006/03/25 06:37:26 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -20,9 +20,6 @@ DEPEND=">=sys-libs/ncurses-5.2
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	# libcdk.a is linked into a shared object in licq
-	append-flags -fPIC
-
 	econf \
 		--with-ncurses --with-libtool \
 		|| die
