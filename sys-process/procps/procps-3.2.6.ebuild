@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.6.ebuild,v 1.8 2006/03/10 20:09:44 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.6.ebuild,v 1.9 2006/03/25 12:52:28 blubb Exp $
 
-inherit flag-o-matic eutils toolchain-funcs
+inherit flag-o-matic eutils toolchain-funcs multilib
 
 DESCRIPTION="Standard informational utilities and process-handling tools"
 HOMEPAGE="http://procps.sourceforge.net/"
@@ -14,6 +14,11 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="n32"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
+
+pkg_setup() {
+	#124772
+	ABI=${KERNEL_ABI}
+}
 
 src_unpack() {
 	unpack ${A}
