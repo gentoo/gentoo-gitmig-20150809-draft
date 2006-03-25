@@ -1,4 +1,34 @@
-MD5 7561f08683fb3a9a1cc12dea88d4afa0 ChangeLog 388
-MD5 4de6f6b48aa8b039815fe85da3f1234a gbuffy-0.2.6.ebuild 948
-MD5 d63336743d9d619c6136df13bbf1e01f metadata.xml 225
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9945f0ce5b6585768d38e3af5ad6664e ChangeLog 742
+RMD160 33429ce159947a41a64d7eced72227937d4c500f ChangeLog 742
+SHA256 988f562cae6da078fbdb865ae1079da5066b933b6fd2bf45487785039838cf29 ChangeLog 742
 MD5 f0146dde50719d5b824f9c71540f4402 files/digest-gbuffy-0.2.6 63
+RMD160 69d7ead447abae23baeb2bfeec53150dc7ff7852 files/digest-gbuffy-0.2.6 63
+SHA256 acd579f4fb001a42e432c3524c14715964420e3153a5a36f62b99b66c1d316b1 files/digest-gbuffy-0.2.6 63
+MD5 2724b5b7339ccb38fe9c3b54d91d1c65 files/digest-gbuffy-0.2.6-r1 235
+RMD160 0933b9a23e08e5f0ef73f1810531d12a378e7db8 files/digest-gbuffy-0.2.6-r1 235
+SHA256 d0eb72bf0a1cb5c50b7dd5dba1ca61e98957ad53f7b94d82b9d1853fe4f84c4a files/digest-gbuffy-0.2.6-r1 235
+MD5 2af9e0bd5c888f5ccdf27603fa1e89f3 files/gbuffy-1.patch 883
+RMD160 de227873e5af2f52a071f5ba129de5daa8a97d22 files/gbuffy-1.patch 883
+SHA256 0c805080cafe6a8f5c6019b4446ce9ab5c6d7c8c4bdd6ed410dfa9506548f621 files/gbuffy-1.patch 883
+MD5 41f153dea74651b47427838e81d259f7 files/gbuffy-search-3.patch 3016
+RMD160 568c932e97bb2e23eb75cb53356f579eb4d1f950 files/gbuffy-search-3.patch 3016
+SHA256 8e1db320f60e42695985495ec43897bb5e8fe1d9c7e446ae9776b8c3549656f5 files/gbuffy-search-3.patch 3016
+MD5 376bfdeca0ee9f2edb94fee38541fc17 gbuffy-0.2.6-r1.ebuild 1049
+RMD160 5a7400aa26a776a1228bee6c94952bf0dada2a15 gbuffy-0.2.6-r1.ebuild 1049
+SHA256 3faa660db31ff286ba4bd566398c062df62995e04ec68665dea940a525a429e6 gbuffy-0.2.6-r1.ebuild 1049
+MD5 45c5cfc5654ee97cbb054e08c226f9b6 gbuffy-0.2.6.ebuild 929
+RMD160 cc8d675970e91112794bcf3ca2a83b24a57d46fe gbuffy-0.2.6.ebuild 929
+SHA256 4937b25f24ea8481916fdb4b426635cca4b264cc419d66b319733a9ea070f1ea gbuffy-0.2.6.ebuild 929
+MD5 d63336743d9d619c6136df13bbf1e01f metadata.xml 225
+RMD160 b0b2bb07e5fcc6e20b786f6704f2535996b0dcab metadata.xml 225
+SHA256 4281b8450548cd4295d0d76f760a0c3c3c11e85ea2fd881d84b9fbb12d5ca72c metadata.xml 225
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEJOESJrHF4yAQTrARAp0bAJ45iutJCDxnve9homSHSae1y9vlcACggYm3
+7ImUDRC8W8MP8tSYQusBVNE=
+=73Df
+-----END PGP SIGNATURE-----

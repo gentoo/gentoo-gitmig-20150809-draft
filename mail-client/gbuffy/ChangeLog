@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/gbuffy
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/gbuffy/ChangeLog,v 1.1 2004/11/02 16:00:07 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/gbuffy/ChangeLog,v 1.2 2006/03/25 06:19:52 agriffis Exp $
+
+*gbuffy-0.2.6-r1 (25 Mar 2006)
+
+  25 Mar 2006; Aron Griffis <agriffis@gentoo.org> +files/gbuffy-1.patch,
+  +files/gbuffy-search-3.patch, gbuffy-0.2.6.ebuild,
+  +gbuffy-0.2.6-r1.ebuild:
+  Add patches from the new maintainer, Phil Pennock #125132.  Yank ~alpha and
+  ~ia64 since this depends on gnome-applets-1 which isn't available on those
+  platforms.
 
 *gbuffy-0.2.6 (02 Nov 2004)
 
