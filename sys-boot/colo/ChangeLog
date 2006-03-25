@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/colo
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.15 2005/12/07 07:33:43 redhatter Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.16 2006/03/25 15:57:58 redhatter Exp $
+
+*colo-1.21 (25 Mar 2006)
+
+  25 Mar 2006; Stuart Longland <redhatter@gentoo.org> +colo-1.21.ebuild:
+  Removed old 1.16 ebuild.  Added 1.21 as new unstable release.
 
   07 Dec 2005; Stuart Longland <redhatter@gentoo.org>
   -files/colo-linker-overlap-fix.patch, +files/menu.colo,
