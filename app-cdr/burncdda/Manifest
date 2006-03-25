@@ -1,18 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 9caceb7ed38d1a64d0040b61d9322e0b ChangeLog 1960
+RMD160 774ec4c546caecdb13cdc40ff5a3d1b48c85cef0 ChangeLog 1960
+SHA256 75c53210bc45e1a880cb0e4db0c5174e4138b60aca104c52266204b318dcd35b ChangeLog 1960
 MD5 041e5578fc5d01a545c8ad32ac6d1803 burncdda-1.1.2.ebuild 794
+RMD160 ac8d93396485c56c8e173c472069434c9a37559f burncdda-1.1.2.ebuild 794
+SHA256 3a8cec9ed0da2b43a2f0619d1dc0d13fac960df0afbf3a02ae59bc744ab02721 burncdda-1.1.2.ebuild 794
 MD5 d3c01ec919578eebb272820ddf1ec791 burncdda-1.3.8.ebuild 818
+RMD160 0aec505089bea12eedd34770a2426227ddbb44e3 burncdda-1.3.8.ebuild 818
+SHA256 e052fb4c856a92928f28a03fb02ef26ef4ffb211e349898c9c26c6d77fdbc189 burncdda-1.3.8.ebuild 818
 MD5 069fd56bf1434eec6db4b2897ba2ae0c burncdda-1.4.1.ebuild 818
+RMD160 d902f99f506c005793b5962ccfc0e29cebc7bd6f burncdda-1.4.1.ebuild 818
+SHA256 64e6a106a84d5b370105ed2447d9a329bb58684630a1a5385c40e2d09f2d312e burncdda-1.4.1.ebuild 818
+MD5 7a1a487efb4dbf4093bd04003dac51dd burncdda-1.4.2.ebuild 818
+RMD160 6c3c19008d5de2bf3f95a2b774265f81288e7916 burncdda-1.4.2.ebuild 818
+SHA256 7976dc7f86eaeb09d7573567564e0741405b421d34bdb64c775536bb9393c76c burncdda-1.4.2.ebuild 818
 MD5 4bad93941940c78bd2d3e8ec67247827 files/digest-burncdda-1.1.2 65
+RMD160 a6e1afa7bfc3783937eb98406ed44da2460f6861 files/digest-burncdda-1.1.2 65
+SHA256 4b162d8f3838cfeb610fee36810950af35257cf4d97dcf968d8fcf86ae5b1bd1 files/digest-burncdda-1.1.2 65
 MD5 cd63f93d755d9238f3a555676846e455 files/digest-burncdda-1.3.8 65
+RMD160 a1084b008785532946abc839b000d2c0644d4d57 files/digest-burncdda-1.3.8 65
+SHA256 cadaa050fa74af6b28ca8604a43f0875d037d32344d0c1347a01814b24c9e48a files/digest-burncdda-1.3.8 65
 MD5 104389650043b5f5fd105e3037e640a8 files/digest-burncdda-1.4.1 65
+RMD160 6f285f77860cfb7d3af08ca15ed661b2ed915959 files/digest-burncdda-1.4.1 65
+SHA256 b1e92f6b3a8322242c3d8ba82073b6bcedbe024b5461fb3b5d7fc552a2bce13e files/digest-burncdda-1.4.1 65
+MD5 3c847247dc3fa4002cd214fe5071172a files/digest-burncdda-1.4.2 241
+RMD160 77e4ae035c2dd137f2f2929c25d27c9ac053241d files/digest-burncdda-1.4.2 241
+SHA256 693a7f1d4e5d34c982022f6553dc16ff7afe64d748defcd1a8592bcaa91d68f1 files/digest-burncdda-1.4.2 241
 MD5 68bebd6ef39a5ab5cee757f52450d294 metadata.xml 527
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDf4SQwUpWvClEHQoRAnRiAJ9Td++UzdtX7odtW0BvPpgBqLhS0wCeMtLK
-UtzSR2Ps1Y2F+svyrkvskL0=
-=RwmS
------END PGP SIGNATURE-----
+RMD160 b09b9fc91958cf067e8e9d3f964d3cf8bd9d2cd7 metadata.xml 527
+SHA256 62f1e3a5141a6798e9cef7dd673372a07862fb793458aa86194b58813b15b7cb metadata.xml 527
