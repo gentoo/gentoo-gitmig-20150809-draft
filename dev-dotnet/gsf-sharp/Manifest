@@ -1,31 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 115daa5988c535ed6f969b400475d2f2 ChangeLog 823
-RMD160 12238700ee3b6f3f319359c797c137a2638e1b9f ChangeLog 823
-SHA256 cad185be51b4ee6bcb37856b0ef3934c86535b1f247eaef442854e366037b782 ChangeLog 823
+MD5 041ac76e4b7c7fb0d87191220bfaeb88 ChangeLog 952
 MD5 3906a28a3dc1436e1b6b5dbdb2edd130 files/digest-gsf-sharp-0.6 65
-RMD160 16db7c73dcc7f59470d792fad2986c46b8896405 files/digest-gsf-sharp-0.6 65
-SHA256 2aa71fa7c2ff0e57a777e97c3150a4ff8de12a2c9b9131ae29aef9eacc50fe55 files/digest-gsf-sharp-0.6 65
 MD5 40bf819ef0659755fdb5fe700063ef2d files/digest-gsf-sharp-0.7 65
-RMD160 b166889d710c92f065e22ccf05eb5091855282d4 files/digest-gsf-sharp-0.7 65
-SHA256 4491ec520b80ae6373327b6683e20d27191925d93c34e24496262fe9358e9dae files/digest-gsf-sharp-0.7 65
 MD5 e031f398fd247ee39bef0fe2d64f2736 files/gsf-sharp-0.7-no-libgsf-gnome-dep.patch 483
-RMD160 38bfdf14e1d5d3dc307026bde565032799693320 files/gsf-sharp-0.7-no-libgsf-gnome-dep.patch 483
-SHA256 3718a4f1906cb982ff24ab0eafe7f53f6df40a01e9a868821a3b22be30d343fd files/gsf-sharp-0.7-no-libgsf-gnome-dep.patch 483
-MD5 7a64f80fd2c5b046d622f8114ade3325 gsf-sharp-0.6.ebuild 593
-RMD160 3722a549354389398c4f9c20a3afeaf02026cdcc gsf-sharp-0.6.ebuild 593
-SHA256 90c4b5e5dab8154cb1f5b685a5b150594e5b49c410d6804328fbd7baf118cf12 gsf-sharp-0.6.ebuild 593
-MD5 0af5059262d1b699eea8a0b5a55d15cc gsf-sharp-0.7.ebuild 803
-RMD160 a684fb4f562918527397fe79a40d4bf231e1b9a9 gsf-sharp-0.7.ebuild 803
-SHA256 9172d3897fd38f13937e7ac69012b09ee7cb5bb9d111d388010982fc21310e02 gsf-sharp-0.7.ebuild 803
+MD5 a31abad42ce8d31be34de8a199a52cd2 gsf-sharp-0.6.ebuild 596
+MD5 ed1ac9aa1612dcd8b577f5bd56f549ca gsf-sharp-0.7.ebuild 811
 MD5 41c8c61dcf74c45eb359a4a41958abb3 metadata.xml 308
-RMD160 6070e5bc9d8a4e0983004f0e24da1de81f52d2c4 metadata.xml 308
-SHA256 d4e9c60cc0ce735082c4f3cb0837a68a34a51d6bfc38dc2b2bd2ce044e7c7259 metadata.xml 308
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBu9cTOXg++0VvJQRAoDbAJ0fH65S4ClbeAckPVH9IPMF3QywhgCgzXcb
-pdMgNuG0S8J9msQsX8wFK0k=
-=t2UT
------END PGP SIGNATURE-----
