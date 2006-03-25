@@ -1,14 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.20050606.ebuild,v 1.4 2006/03/25 18:46:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.20060424.ebuild,v 1.1 2006/03/25 18:46:55 grobian Exp $
 
 inherit gnustep
 
-S=${WORKDIR}/${P/gnum/GNUM}
+S=${WORKDIR}/${PN/gnum/GNUM}
 
 DESCRIPTION="A fully featured mail application for GNUstep"
 HOMEPAGE="http://www.collaboration-world.com/gnumail/"
-SRC_URI="mirror://gentoo/${P/gnum/GNUM}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
