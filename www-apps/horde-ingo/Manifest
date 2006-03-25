@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7fa1af8e3cc8d69cc3c9d766ee0478cc ChangeLog 895
+MD5 f76b2e382a34875af9cd16c68d58390e ChangeLog 1002
 MD5 3a43843bc3183485e5dcd09069461cad files/digest-horde-ingo-1.0.2 65
 MD5 6ad8af09444817f17462e2fe21a17025 files/digest-horde-ingo-1.1 235
 MD5 2b269e148e3706ae4de4888249ad8b95 horde-ingo-1.0.2.ebuild 428
-MD5 4d057e8442b5abc0e7a3ef61ffb732b0 horde-ingo-1.1.ebuild 427
+MD5 eaa05edf461be1ec72ea1f4fd0b01825 horde-ingo-1.1.ebuild 424
 MD5 e1bc808ac21e8a6f97dbaffbcf3c642d metadata.xml 298
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEHyc1KRy60XGEcJIRAo+XAJ4o1axZNtXku2GDJTwLsVmLoy4E9wCfadbB
-u4DKJFuO5A0fKXBHue+hRGs=
-=spBz
------END PGP SIGNATURE-----
