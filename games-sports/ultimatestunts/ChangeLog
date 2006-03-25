@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/ultimatestunts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.2 2006/01/17 03:17:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.3 2006/03/25 01:03:37 tupone Exp $
+
+  25 Mar 2006; <Tupone@gentoo.org> +files/ultimatestunts-0.6.1-64bits.patch,
+  ultimatestunts-0.6.1.ebuild:
+  fix for amd64, bug #119263 by playmiac
 
 *ultimatestunts-0.6.1 (17 Jan 2006)
 

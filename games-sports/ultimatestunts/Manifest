@@ -1,6 +1,31 @@
-MD5 d911e64cc10ebf3f8fd33dbc3d378cdd ChangeLog 811
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 33985669209c74e6db25a5fb584239d2 ChangeLog 959
+RMD160 46f38b19820461684451aa80458bcee59572b5fd ChangeLog 959
+SHA256 9b41835cf7a82ce5884810d6c839defa50d77a2cb186e2424d7c6a0812c86670 ChangeLog 959
 MD5 d9236b34ac3992d32c4bdb2accd05b5a files/digest-ultimatestunts-0.6.0 81
-MD5 c98847552078de0aa2e4822446b9547e files/digest-ultimatestunts-0.6.1 81
+RMD160 b93bce54930f5853d599f03dbcde26e3a5d8e866 files/digest-ultimatestunts-0.6.0 81
+SHA256 87af3d2f54f689308c8c721624c5f6a8d3c9379efd65b6d93fd535509ae236cc files/digest-ultimatestunts-0.6.0 81
+MD5 c2eaab7aee73be6cf1dcf5abc0c1738e files/digest-ultimatestunts-0.6.1 289
+RMD160 81f6791af20eb39423c1b6dc16c36acaafee9075 files/digest-ultimatestunts-0.6.1 289
+SHA256 0fdb950d0d96f2474d5c64453e07b0af33719300beae42c2dbc14f0147103e4a files/digest-ultimatestunts-0.6.1 289
+MD5 5c17cd6b82de4a6dcd1c83415a2fa05e files/ultimatestunts-0.6.1-64bits.patch 447
+RMD160 1a9733e7cfe39dc40f1364b2d0346b7e50aaaf47 files/ultimatestunts-0.6.1-64bits.patch 447
+SHA256 95e854737e6c3b567db6b87740b07e6b9659a33ceb9fd574b45185ad56083c02 files/ultimatestunts-0.6.1-64bits.patch 447
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 MD5 a146b6cb9e61338a121a326d7724364f ultimatestunts-0.6.0.ebuild 1244
-MD5 b85f7b6e97e7f997d404dbb93fe4df61 ultimatestunts-0.6.1.ebuild 1244
+RMD160 b22d2b372063598d75eae8a8add3fff7fc7932dd ultimatestunts-0.6.0.ebuild 1244
+SHA256 73f9a0d006f928fcb3f08d6ca6e5ebbb546da6d5b35bc1f684ca4e64a9ad1544 ultimatestunts-0.6.0.ebuild 1244
+MD5 3e47e4e99c8465c80d978feaaac9076c ultimatestunts-0.6.1.ebuild 1282
+RMD160 04af6bdf84600d523bfc232c9dda825db3bacea2 ultimatestunts-0.6.1.ebuild 1282
+SHA256 07411ccf8130fce60194aec97d35fcfaff9be4e5265d7baf07395991e738a2e5 ultimatestunts-0.6.1.ebuild 1282
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEJJb72CTtIKiFlQIRAriNAJkB3JM/GlORd47Zwn06E7rpurT5cACeOL4g
+/jbgYJSr8JolfhnfJuKtIuQ=
+=hzxV
+-----END PGP SIGNATURE-----
