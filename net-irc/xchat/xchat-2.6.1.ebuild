@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.1.ebuild,v 1.3 2006/02/19 16:43:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.1.ebuild,v 1.4 2006/03/25 20:07:20 swegener Exp $
 
 inherit eutils versionator gnome2
 
@@ -42,6 +42,8 @@ src_unpack() {
 		sed -i -e 's:${prefix}/lib/xchat:${libdir}/xchat:' \
 			"${S}"/configure{,.in} || die
 	fi
+
+	epatch "${FILESDIR}"/2.6.1-fe-text.patch
 }
 
 src_compile() {
