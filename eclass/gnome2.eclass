@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.65 2006/03/18 18:38:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.66 2006/03/25 12:46:04 allanonjl Exp $
 
 # GNOME 2 ECLASS
 inherit libtool gnome.org debug fdo-mime eutils
@@ -66,7 +66,7 @@ gnome2_src_install() {
 
 	debug-print "You are testing with DESTDIR by default - AllanonJL"
 	if [[ -z "${USE_EINSTALL}" || "${USE_EINSTALL}" = "0" ]]; then
-		make DESTDIR=${D} "$@" install || die "install failed"
+		make DESTDIR=${D} "scrollkeeper_localstate_dir=${D}${SCROLLKEEPER_DIR} " "$@" install || die "install failed"
 	else
 		einstall "scrollkeeper_localstate_dir=${D}${SCROLLKEEPER_DIR} " "$@" || die "einstall failed"
 	fi
