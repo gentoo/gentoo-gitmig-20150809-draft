@@ -1,18 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 12c9146b5ff3a59d3e9401ed8c453b96 ChangeLog 34550
-RMD160 df5fa9df040bdb010ae84cb54fa32beb01aac357 ChangeLog 34550
-SHA256 f2c35888eb2a268f857878b928bd1281d51a93badb58b6abf814fc620fbf22db ChangeLog 34550
+MD5 fb35cc25edaad041b500f41cbefe4661 ChangeLog 34665
+RMD160 35995832395871c0cafe4ee63c6bdd858a9d35c9 ChangeLog 34665
+SHA256 39f61224ef4543f06bdde6e0a852a62bbddd38d81b0b0284ac701d7fc50a611f ChangeLog 34665
 MD5 9916e84eeec916e6f6ec0f3aeffccb6a alsa-driver-1.0.10-r2.ebuild 4791
 RMD160 4940a1d64edb487b93b0d29f48d937fa2563c3cc alsa-driver-1.0.10-r2.ebuild 4791
 SHA256 ed09529fa8e9c98adc6dc3671ca6e61e79fb40095fd62fb0e06177ed20bf0ca7 alsa-driver-1.0.10-r2.ebuild 4791
 MD5 92b347c5f047c41ce94593621464e00b alsa-driver-1.0.11_rc3.ebuild 4683
 RMD160 e3b23ab4972fc2e84ff06f9408b7a510ffebd24f alsa-driver-1.0.11_rc3.ebuild 4683
 SHA256 bf5ede710428f340a046aca1e8448e0c0363ac25346323d3d5ac3338de4cd09e alsa-driver-1.0.11_rc3.ebuild 4683
-MD5 f9b676c15fb1d5e3f8f7296f0bbd2476 alsa-driver-1.0.11_rc4.ebuild 4683
-RMD160 e85820f6d2f7afb201c66beb7ac39daa71c12a00 alsa-driver-1.0.11_rc4.ebuild 4683
-SHA256 2edaaf0d73d9f31d7ebdf9d30bd4382bed54bd39c95d0556fbbb8cd6bbe6b82a alsa-driver-1.0.11_rc4.ebuild 4683
+MD5 37ae2485d780fa691aa6b8cd5154dbe4 alsa-driver-1.0.11_rc4.ebuild 4708
+RMD160 c07026f6330fa190e6b0e22db3bafa72c433b61f alsa-driver-1.0.11_rc4.ebuild 4708
+SHA256 1a80ebfbe18f85a4e114e9b18aa28af8c0a96fccb53f785bd1e26dd54d133af7 alsa-driver-1.0.11_rc4.ebuild 4708
 MD5 075d7776dfb62176431e206a9cd5fc84 files/alsa-driver-1.0.10-gfp-flags.patch 955
 RMD160 ed4d383d6608110c5c3a7ebef2a0fc636ea77d82 files/alsa-driver-1.0.10-gfp-flags.patch 955
 SHA256 f7976e121aad036e11550212b26f2d4568cc688687e950bcdc14ef5932f3eb66 files/alsa-driver-1.0.10-gfp-flags.patch 955
@@ -34,10 +31,3 @@ SHA256 a2d1c5b0dff007ee76f6ad487d5938bb3a82ef3657c66615db07e4b4a4aa9efa files/di
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEI/m7AiZjviIA2XgRAsISAKCZ/GQAcYrSi8UqFVrDM0IHcbxvjQCgpekV
-f7jg7hobDsV+hSPNRz24y/E=
-=L6NI
------END PGP SIGNATURE-----

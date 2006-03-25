@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.11_rc4.ebuild,v 1.1 2006/03/24 13:53:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.11_rc4.ebuild,v 1.2 2006/03/25 10:35:47 blubb Exp $
 
-inherit linux-mod flag-o-matic eutils
+inherit linux-mod flag-o-matic eutils multilib
 
 MY_P="${P/_rc/rc}"
 S="${WORKDIR}/${MY_P}"
@@ -63,6 +63,8 @@ pkg_setup() {
 		export CBUILD=${CBUILD-${CHOST}}
 		export CHOST="sparc64-unknown-linux-gnu"
 	fi
+
+	ABI=${KERNEL_ABI}
 }
 
 src_unpack() {
