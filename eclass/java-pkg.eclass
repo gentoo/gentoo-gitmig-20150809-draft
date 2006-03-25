@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.32 2005/12/06 20:10:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.33 2006/03/25 16:43:09 betelgeuse Exp $
+
+#echo "sourcing java-pkg"
 
 pkglistpath="${T}/java-pkg-list"
 
@@ -353,8 +355,9 @@ java-pkg_dosrc() {
 	local files
 	local startdir=$(pwd)
 	for x in ${@}; do
+		echo $x
 		cd $(dirname ${x})
-		zip -q -r ${T}/${PN}-src.zip $(basename ${x}) -i '*.java'
+		zip -qq -r ${T}/${PN}-src.zip $(basename ${x}) -i '*.java'
 		local res=$?
 		if [[ ${res} != 12 && ${res} != 0 ]]; then
 			die "zip failed"
@@ -366,4 +369,31 @@ java-pkg_dosrc() {
 	dodir ${target}
 	install ${INSOPTIONS} "${T}/${PN}-src.zip" "${D}${target}" \
 		|| die "failed to install sources"
+}
+
+_copy() {
+	local dest=${2}
+	local toinstall=${1}
+	
+	if [[ -d "${toinstall}" ]]; then
+		pushd "${toinstall}" > /dev/null
+		_copy
+		popd > /dev/null
+	else
+		cp "${toinstall}" "${D}${destroot}" || die ${error}
+	fi	
+}
+
+java-pkg_doexamples() {
+	debug-print-function ${FUNCNAME} $*
+	[[ $# -lt 1 ]] && die "${FUNCNAME}: at least one argument needed"
+	
+	local destroot="/usr/share/doc/${PF}/examples"
+	dodir ${destroot}
+
+	local error="${FUNCNAME}: Failed to install examples"
+
+	for toinstall in "${@}"; do
+		echo ${toinstall}
+	done
 }

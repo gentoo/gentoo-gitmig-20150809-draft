@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.60 2006/03/03 21:04:58 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.61 2006/03/25 16:43:09 betelgeuse Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -78,8 +78,12 @@
 #						the full path to any associated
 #						documents for $modulename
 
+# The order of these is important as both of linux-info and eutils contain
+# set_arch_to_kernel and set_arch_to_portage functions and the ones in eutils
+# are deprecated in favor of the ones in linux-info.
+# See http://bugs.gentoo.org/show_bug.cgi?id=127506
 
-inherit linux-info eutils
+inherit eutils linux-info
 EXPORT_FUNCTIONS pkg_setup pkg_postinst src_install src_compile pkg_postrm
 
 IUSE="" # don't put pcmcia here, rather in the ebuilds that actually support pcmcia
