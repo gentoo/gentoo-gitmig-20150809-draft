@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/advancemenu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.22 2006/02/15 00:15:57 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.23 2006/03/25 05:21:17 mr_bones_ Exp $
+
+*advancemenu-2.4.13 (25 Mar 2006)
+
+  25 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/advancemenu-2.4.13-alsa-pkg-config.patch,
+  +files/advancemenu-2.4.13-gcc4.patch, +advancemenu-2.4.13.ebuild:
+  version bump - patch from Karol Szumski via bug #120712 included
 
   15 Feb 2006; Luis Medinas <metalgod@gentoo.org> advancemenu-2.4.12.ebuild:
   Added ~amd64 keyword.
