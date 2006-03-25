@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/gsf-sharp-0.7.ebuild,v 1.2 2006/03/02 13:05:54 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/gsf-sharp-0.7.ebuild,v 1.3 2006/03/25 03:31:08 josejx Exp $
 
 inherit eutils mono autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://primates.ximian.com/~joe/${P}.tar.gz"
 LICENSE="LGPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND="dev-lang/mono
 	>=gnome-extra/libgsf-1.13

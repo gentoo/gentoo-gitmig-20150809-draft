@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gsf-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/ChangeLog,v 1.4 2006/03/02 13:05:54 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/ChangeLog,v 1.5 2006/03/25 03:31:08 josejx Exp $
+
+  25 Mar 2006; Joseph Jezak <josejx@gentoo.org> gsf-sharp-0.6.ebuild,
+  gsf-sharp-0.7.ebuild:
+  Marked ~ppc for bug #123847.
 
   02 Mar 2006; Daniel Drake <dsd@gentoo.org> gsf-sharp-0.7.ebuild:
   -m Really fix the libgsf-gnome thing thanks to Gabe Berke-Williams in bug
