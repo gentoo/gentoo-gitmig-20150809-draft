@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klinkstatus
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.36 2006/03/22 20:15:21 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.37 2006/03/25 06:59:12 agriffis Exp $
+
+  25 Mar 2006; Aron Griffis <agriffis@gentoo.org> klinkstatus-3.4.3.ebuild:
+  Mark 3.4.3 stable on ia64
 
 *klinkstatus-3.5.2 (22 Mar 2006)
 
