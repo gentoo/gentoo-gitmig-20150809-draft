@@ -1,0 +1,11 @@
+--- qp7.0.orig/src/Makefile.in	2005-11-27 12:44:23.000000000 +1300
++++ qp7.0/src/Makefile.in	2006-01-30 22:10:21.000000000 +1300
+@@ -40,7 +40,7 @@
+ 
+ export DEBUGGING=
+ 
+-export CXXFLAGS = @GCC_ALIAS_FLAG@ -Wall -D_GNU_SOURCE=1 $(OPTIMISATION) $(DEBUGGING) -I@ICMHOME@/include @GCCINCLUDES@ -Wno-uninitialized
++export QPCXXFLAGS = @GCC_ALIAS_FLAG@ -Wall -D_GNU_SOURCE=1 $(CXXFLAGS) $(DEBUGGING) -I@ICMHOME@/include @GCCINCLUDES@ -Wno-uninitialized
+ export QACXXFLAGS = -Wall -D_GNU_SOURCE=1 $(DEBUGGING) -I@ICMHOME@/include @GCCINCLUDES@ -Wno-uninitialized
+ 
+ .PHONY: all

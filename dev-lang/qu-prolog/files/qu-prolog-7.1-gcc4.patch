@@ -1,0 +1,56 @@
+--- qp7.1.orig/src/bind.h	2005-11-27 12:43:57.000000000 +1300
++++ qp7.1/src/bind.h	2006-02-04 13:34:58.000000000 +1300
+@@ -113,7 +113,7 @@
+ //
+ // Update and trail an implicit parameter entry
+ //
+-inline void Thread::updateAndTrailIP(heapobject* ptr, Object* value,
++inline void updateAndTrailIP(heapobject* ptr, Object* value,
+                                      u_int offset = 0)
+ {
+   assert(ptr != NULL);
+--- qp7.1.orig/src/unify.h	2005-11-27 12:43:58.000000000 +1300
++++ qp7.1/src/unify.h	2006-02-04 13:35:22.000000000 +1300
+@@ -180,7 +180,7 @@
+ //
+ // Unify object variables.
+ //
+-bool Thread::unifyObjectVariables(PrologValue& objectVariable1,
++bool unifyObjectVariables(PrologValue& objectVariable1,
+ 				  PrologValue& objectVariable2);
+ 
+ //
+--- qp7.1.orig/src/xqp/interact.h	2004-05-16 16:27:54.000000000 +1200
++++ qp7.1/src/xqp/interact.h	2006-02-04 19:33:22.000000000 +1300
+@@ -23,7 +23,7 @@
+ #include <qwidget.h>
+ #include <qtextedit.h>
+ #include <qstring.h>
+-#include <fstream.h>
++#include <fstream>
+ #include <qaccel.h>
+ #include <qregexp.h>
+ #include <qsocketnotifier.h>
+--- qp7.1.orig/src/xqp/main.cc	2004-05-25 14:14:30.000000000 +1200
++++ qp7.1/src/xqp/main.cc	2006-02-04 19:45:03.000000000 +1300
+@@ -19,9 +19,9 @@
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <unistd.h>
+-#include <fstream.h>
++#include <fstream>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
+@@ -31,6 +31,8 @@
+ #include "xqp.h"
+ 
+ 
++using namespace std;
++
+ // Create 2 sockets for unidirectional communication to and from qp
+ int socket_main_to_qp[2], socket_qp_to_main[2];
+ 
