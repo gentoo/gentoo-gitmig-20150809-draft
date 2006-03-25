@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/camera/camera-0.8.ebuild,v 1.2 2005/08/25 18:57:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/camera/camera-0.8.ebuild,v 1.3 2006/03/25 16:41:47 grobian Exp $
 
 inherit gnustep
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.gna.org/gsimageapps/${P/c/C}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~x86"
 
 IUSE=""
 DEPEND="${GS_DEPEND}
