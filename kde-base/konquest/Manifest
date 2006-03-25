@@ -1,4 +1,4 @@
-MD5 67e89efcff9e37c6378248342fb596c7 ChangeLog 4610
+MD5 4ff9298f99a0428b896f1fd267e8574f ChangeLog 4712
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-konquest-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-konquest-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-konquest-3.4.3 68
@@ -7,7 +7,7 @@ MD5 23693adb4d93b662b3f08d2c2d8b7092 files/digest-konquest-3.5.1 69
 MD5 ed93d0050d30937bce3f66dc86656e76 files/digest-konquest-3.5.2 253
 MD5 8a1f33094b2d436757e9b3f61f27c6b2 konquest-3.4.1.ebuild 541
 MD5 a70d650c93c978fe7aca90c2294b3e25 konquest-3.4.2.ebuild 554
-MD5 ee39df84bb2806a4b788d247fcd9a54b konquest-3.4.3.ebuild 553
+MD5 d146ef2a3f4af004f939ec2399cd5699 konquest-3.4.3.ebuild 555
 MD5 09576766e28acd779123cc9ec8792911 konquest-3.5.0.ebuild 518
 MD5 1ea6593ee975feddca14fea5cdb30837 konquest-3.5.1.ebuild 519
 MD5 b817fdb40aaf01293d0e7480f344aa02 konquest-3.5.2.ebuild 521
