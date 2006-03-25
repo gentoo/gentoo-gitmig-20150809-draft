@@ -1,6 +1,16 @@
 # ChangeLog for gnustep-base/gnustep-env
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.21 2006/01/15 11:49:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.22 2006/03/25 15:48:19 grobian Exp $
+
+*gnustep-env-0.1.7 (25 Mar 2006)
+
+  25 Mar 2006; Fabian Groffen <grobian@gentoo.org> -files/gnustep.env-0.1.4,
+  -files/gnustep.runscript-0.1.4, -files/gnustep.env-0.1.5,
+  -files/gnustep.runscript-0.1.5, +files/gnustep.env-0.1.7,
+  +files/gnustep.runscript-0.1.7, -gnustep-env-0.1.4.ebuild,
+  -gnustep-env-0.1.5.ebuild, +gnustep-env-0.1.7.ebuild:
+  Remove ebuilds that refer to ebuilds no longer in portage. Add 1.7 which
+  should pull in latest versions.
 
   15 Jan 2006; Simon Stelling <blubb@gentoo.org>
   gnustep-env-0.1.6-r1.ebuild:

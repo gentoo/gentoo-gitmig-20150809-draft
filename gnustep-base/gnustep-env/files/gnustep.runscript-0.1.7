@@ -14,36 +14,38 @@ fi
 . ${GNUSTEP_SYSTEM_ROOT}/Library/Makefiles/GNUstep.sh
 
 start() {
-	ebegin "Starting gnustep daemons..."
+#	ebegin "Starting gnustep daemons"
 
-	ebegin "\tgdomap "
+	ebegin "Starting gdomap "
 	GNUSTEP_USER_ROOT=/var/run/GNUstep \
 		GNUSTEP_DEFAULTS_ROOT=/var/run/GNUstep \
 		gdomap
-	ebegin "\tgdnc "
+	eend $?
+	ebegin "Starting gdnc "
 	GNUSTEP_USER_ROOT=/var/run/GNUstep \
 		GNUSTEP_DEFAULTS_ROOT=/var/run/GNUstep \
-		gdnc
+		gdnc &
+	eend $?
 #	ebegin "\tgnustep_sndd"
 #	GNUSTEP_USER_ROOT=/var/run/GNUstep \
 #	GNUSTEP_DEFAULTS_ROOT=/var/run/GNUstep \
 #		/gnustep_sndd
-
-	eend $?
+#	eend $?
 }
 
 stop() {
-	ebegin "Stopping gnustep daemons..."
+#	ebegin "Stopping gnustep daemons"
 
-	ebegin "\tgdomap "
+	ebegin "Stopping gdomap "
 	killall gdomap
+	eend $?
 	
-	ebegin "\tgdnc "
+	ebegin "Stopping gdnc "
 	killall gdnc
+	eend $?
 
 #	ebegin "\tgnustep_sndd"
 #	killall gnustep_sndd
-
-	eend $?
+#	eend $?
 }
 
