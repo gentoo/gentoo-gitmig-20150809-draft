@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.48 2006/03/25 02:08:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.49 2006/03/25 19:16:53 flameeyes Exp $
+
+*libsndfile-1.0.15-r1 (25 Mar 2006)
+
+  25 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -libsndfile-1.0.15.ebuild, +libsndfile-1.0.15-r1.ebuild:
+  Revision bump to avoid filtering -O2 and replacing it with -O0 during
+  configure run, or stuff breaks. See bug #127518.
 
 *libsndfile-1.0.15 (25 Mar 2006)
 
