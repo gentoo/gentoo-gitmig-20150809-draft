@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.32 2006/03/22 20:15:40 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.33 2006/03/25 16:13:15 agriffis Exp $
+
+  25 Mar 2006; Aron Griffis <agriffis@gentoo.org> ktux-3.4.2.ebuild:
+  Mark 3.4.2 stable on ia64
 
 *ktux-3.5.2 (22 Mar 2006)
 
