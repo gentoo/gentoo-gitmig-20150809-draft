@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/crystal-0.9.8.ebuild,v 1.1 2006/01/15 15:57:31 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/crystal-0.9.8.ebuild,v 1.2 2006/03/25 23:58:06 voxus Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.saschahlusiak.de/linux/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="~x86 ~ppc amd64 ~sparc"
 IUSE=""
 
 DEPEND="|| ( kde-base/kwin kde-base/kdebase )"
