@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xclip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.12 2006/01/24 10:07:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.13 2006/03/25 03:14:31 agriffis Exp $
+
+*xclip-0.08-r1 (25 Mar 2006)
+
+  25 Mar 2006; Aron Griffis <agriffis@gentoo.org> xclip-0.08.ebuild,
+  +xclip-0.08-r1.ebuild:
+  Install man-page correctly so it's gzipped.  Don't install bogus html doc
 
   24 Jan 2006; Torsten Veller <tove@gentoo.org> metadata.xml,
   xclip-0.08.ebuild:

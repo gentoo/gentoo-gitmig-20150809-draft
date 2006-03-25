@@ -1,14 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 17eb0486d3649f9185e9fe9acac28b87 ChangeLog 1929
+MD5 7b1fa3384bd34196bed1b74dc57785cf ChangeLog 2134
+RMD160 ad8d3397841527746efc6bab310b7321977a64a8 ChangeLog 2134
+SHA256 02dd72d771452376f64c33cda9f326f828a3e1839ba8a6c34f08209e2c090fb0 ChangeLog 2134
 MD5 031385d1f0ed3f1468b40c9e8da41049 files/digest-xclip-0.08 61
+RMD160 bcb537fef06fde937bd03c799197bed94a07f727 files/digest-xclip-0.08 61
+SHA256 e82d262422f3ba55c17b878f8933596b29314a20cd0750afa83c956de6cf52bd files/digest-xclip-0.08 61
+MD5 e528abef1d80a565fd6c8d54829acbc9 files/digest-xclip-0.08-r1 229
+RMD160 4e6a5c7923b3bccf6c4b78f689ef3ad20b0238e8 files/digest-xclip-0.08-r1 229
+SHA256 3181decea210b391836bb35af4766aa0d472eee95058bdcf6eeb4d04c2c6cdbc files/digest-xclip-0.08-r1 229
 MD5 9ba3ceca3ae81ec759fbb9a277c0e45c metadata.xml 165
-MD5 3ea067b3f37b2b260945b9d111728d5c xclip-0.08.ebuild 904
+RMD160 4ebc1c537fcebcb28586a47c958a7d0237f3bbcc metadata.xml 165
+SHA256 d7da9ed29b7afb87ac00580d48a49d248f89c92269e9a7791782dc72f4490aec metadata.xml 165
+MD5 fe03ac7ba342bbdc7102fa9a6f997aff xclip-0.08-r1.ebuild 1046
+RMD160 ae81cb305c302e83e567a2f5d0ce191b2dd8f423 xclip-0.08-r1.ebuild 1046
+SHA256 8c5cec86884afdda03521867ecafdaf02583ffee23c932bb756ab9afb35d4f3e xclip-0.08-r1.ebuild 1046
+MD5 454fcf22f212fadabfd4d51e54789a80 xclip-0.08.ebuild 1039
+RMD160 97ec64ee79c61a3c305664ed9d0f067156d5cf31 xclip-0.08.ebuild 1039
+SHA256 c09204b0fa7110806179b39bb1a0b0ff26ef809905d72c89b65b7a3d68804992 xclip-0.08.ebuild 1039
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD1fxhV3J2n04EauwRAkF9AJ9zY3zLj8mlbMyCpbwqqwIqBCMziwCfQXtw
-eBigHyQhHexGhEn6J1CFkbE=
-=ynB9
+iD8DBQFEJLWiJrHF4yAQTrARArbbAKDRLGnGZmcra+/2kIvdIAxUTmw1UgCg0a0k
+xivPVrmtr3pDyLYQykshWhU=
+=WqcN
 -----END PGP SIGNATURE-----
