@@ -1,4 +1,4 @@
-MD5 b0aa8f712bc0121e54377ccc2c755129 ChangeLog 4512
+MD5 3eb2fdb3e4b62e7e750d06c9643a420b ChangeLog 4612
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kmines-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kmines-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kmines-3.4.3 68
@@ -7,7 +7,7 @@ MD5 23693adb4d93b662b3f08d2c2d8b7092 files/digest-kmines-3.5.1 69
 MD5 ed93d0050d30937bce3f66dc86656e76 files/digest-kmines-3.5.2 253
 MD5 883a4eef046f00a1b42a692e9a97aa44 kmines-3.4.1.ebuild 551
 MD5 937699e6622a4e1f1f41a2c308825a81 kmines-3.4.2.ebuild 564
-MD5 568158d627481c0dd671fda57e71e45d kmines-3.4.3.ebuild 563
+MD5 09f30436f814aa7d38caa44d69878d2b kmines-3.4.3.ebuild 565
 MD5 dea88ab9768a77b916c318fb42780532 kmines-3.5.0.ebuild 526
 MD5 a3bb5708af08a11404a315dcad37ec1f kmines-3.5.1.ebuild 527
 MD5 aff0160e7829eb20918597e18e180682 kmines-3.5.2.ebuild 529

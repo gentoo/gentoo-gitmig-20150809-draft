@@ -1,4 +1,4 @@
-MD5 cebf6830c5d3cfae37426b3b7e8d8ee2 ChangeLog 4512
+MD5 4c2506febee9349c9e8acf08d13c3a07 ChangeLog 4612
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-ksnake-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-ksnake-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-ksnake-3.4.3 68
@@ -7,7 +7,7 @@ MD5 23693adb4d93b662b3f08d2c2d8b7092 files/digest-ksnake-3.5.1 69
 MD5 ed93d0050d30937bce3f66dc86656e76 files/digest-ksnake-3.5.2 253
 MD5 68f96d777aa7827ad6ea7ebf32b97482 ksnake-3.4.1.ebuild 530
 MD5 603b241fb939e022a4dd07a86aa5130d ksnake-3.4.2.ebuild 543
-MD5 229ce5c2df55523036d59259210da5f9 ksnake-3.4.3.ebuild 542
+MD5 b5f9b07a8f455aba9488da190b51efc5 ksnake-3.4.3.ebuild 544
 MD5 321cc5cffd135d4e0fa9bdfe046ec3e5 ksnake-3.5.0.ebuild 507
 MD5 0a5e8f66778b54fc11ede31d5a180b15 ksnake-3.5.1.ebuild 508
 MD5 b4c18d7b56c118b8f526846148ce20de ksnake-3.5.2.ebuild 510
