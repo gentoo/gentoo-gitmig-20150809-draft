@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.78 2006/03/25 01:37:13 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.79 2006/03/25 04:19:49 josejx Exp $
+
+  25 Mar 2006; Joseph Jezak <josejx@gentoo.org> busybox-1.1.0.ebuild:
+  Marked ppc stable for bug #127377.
 
   25 Mar 2006; Luis Medinas <metalgod@gentoo.org> busybox-1.1.0.ebuild:
   Stable on amd64. See bug #127377.
