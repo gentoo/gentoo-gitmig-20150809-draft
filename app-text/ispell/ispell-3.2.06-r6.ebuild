@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r6.ebuild,v 1.15 2006/02/23 20:15:03 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r6.ebuild,v 1.16 2006/03/25 06:38:14 grobian Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://fmg-www.cs.ucla.edu/geoff/tars/${P}.tar.gz
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc ppc alpha mips hppa amd64 ~ppc-macos"
+KEYWORDS="alpha amd64 hppa mips ppc ppc-macos sparc x86"
 IUSE=""
 
 DEPEND="sys-apps/sed
