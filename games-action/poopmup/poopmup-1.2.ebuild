@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.11 2006/01/28 21:19:10 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.12 2006/03/25 01:50:15 mr_bones_ Exp $
 
 inherit toolchain-funcs games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/glut
@@ -26,25 +26,28 @@ src_unpack() {
 	cd ${S}
 	sed -i \
 		-e "s:textures/:${GAMES_DATADIR}/${PN}/:" \
-		includes/textureLoader.h || die
+		includes/textureLoader.h || die "sed failed"
 	sed -i \
 		-e "s:config/:${GAMES_SYSCONFDIR}/:" \
-		myConfig.h || die
+		myConfig.h || die "sed failed"
+	sed -i \
+		-e '/clear/d' \
+		Makefile || die "sed failed" # bug #120907
 	rm -rf $(find -name CVS)
 }
 
 src_compile() {
-	emake CC="$(tc-getCXX) ${CFLAGS}" || die
+	emake CC="$(tc-getCXX) ${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	newgamesbin poopmup.o poopmup || die
+	newgamesbin poopmup.o poopmup || die "newgamesbin failed"
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins textures/*
+	doins textures/* || die "doins failed"
 
 	insinto "${GAMES_SYSCONFDIR}"
-	doins config/*
+	doins config/* || die "doins failed"
 
 	dodoc README docs/*.doc
 	dohtml docs/userman.htm
