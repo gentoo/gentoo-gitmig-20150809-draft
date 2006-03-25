@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.7.7.ebuild,v 1.1 2006/03/04 00:03:04 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.7.8.ebuild,v 1.1 2006/03/25 13:34:53 kloeri Exp $
 
 inherit bash-completion
 
