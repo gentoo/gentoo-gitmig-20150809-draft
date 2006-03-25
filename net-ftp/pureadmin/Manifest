@@ -1,18 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 410e8cbf35e8ba297ff5c4cad56e37ed pureadmin-0.1.11.ebuild 1452
-MD5 d64cf70fae92ac76c443557cd0a12df2 pureadmin-0.2.2.ebuild 1310
-MD5 02aff17b9bd325da310c2f92772bd940 pureadmin-0.1.10.ebuild 1447
-MD5 8017ac261df42c9f8c850ee4ca584136 ChangeLog 1162
-MD5 0c3c3bfe13b2bc8bbd31bb3754f330b1 metadata.xml 331
-MD5 be1c1c77d4ffc790654176a4eabe1e8d files/digest-pureadmin-0.1.10 68
-MD5 eb252f7f2582e68e667dc969c5bfe5d8 files/digest-pureadmin-0.1.11 68
+MD5 d3f209c043cac57c9ac7967df3a9e3d8 ChangeLog 1280
 MD5 d2555c260ca574d57c4d14dbbf4f29d4 files/digest-pureadmin-0.2.2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHiyK8zY1VwezZiERAkaKAJ98EEUTXX8A72Z+geaChl0Lcv7Y8ACfdaCK
-yRO4PaFnQjZ7guSI8Xt8yGw=
-=6cvN
------END PGP SIGNATURE-----
+MD5 0c3c3bfe13b2bc8bbd31bb3754f330b1 metadata.xml 331
+MD5 d64cf70fae92ac76c443557cd0a12df2 pureadmin-0.2.2.ebuild 1310

@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pureadmin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.7 2005/09/06 22:39:09 humpback Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.8 2006/03/25 13:34:35 caleb Exp $
+
+  25 Mar 2006; Caleb Tennis <caleb@gentoo.org> -pureadmin-0.1.10.ebuild,
+  -pureadmin-0.1.11.ebuild:
+  remove old files
 
 *pureadmin-0.2.2 (06 Sep 2005)
 
