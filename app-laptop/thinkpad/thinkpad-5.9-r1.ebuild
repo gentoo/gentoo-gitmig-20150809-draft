@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/thinkpad-5.9.ebuild,v 1.1 2006/02/18 13:20:14 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/thinkpad-5.9-r1.ebuild,v 1.1 2006/03/25 11:57:08 steev Exp $
 
 inherit eutils linux-mod
 
@@ -40,6 +40,14 @@ pkg_setup() {
 				rtcmosram(thinkpad:${S}/${KV_MAJOR}.${KV_MINOR}/drivers)"
 
 	linux-mod_pkg_setup
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}"/${PN}-5.9-remove-thinkpadapm-argument.patch
+	epatch "${FILESDIR}"/${PN}-5.9-remove-inter_module.patch
 }
 
 src_install() {

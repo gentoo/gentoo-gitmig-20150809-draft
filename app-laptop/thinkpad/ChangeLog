@@ -1,6 +1,15 @@
 # ChangeLog for app-laptop/thinkpad
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.13 2006/02/18 13:20:14 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.14 2006/03/25 11:57:08 steev Exp $
+
+*thinkpad-5.9-r1 (25 Mar 2006)
+
+  25 Mar 2006; Steev Klimaszewski <steev@gentoo.org>
+  +files/thinkpad-5.9-remove-inter_module.patch,
+  +files/thinkpad-5.9-remove-thinkpadapm-argument.patch,
+  -thinkpad-5.9.ebuild, +thinkpad-5.9-r1.ebuild:
+  Revision bump of thinkpad, with patches from TGL <degrenier@easyconnect.fr> to
+  allow compilation with kernel 2.6.16. Closes bug #127453
 
 *thinkpad-5.9 (18 Feb 2006)
 
