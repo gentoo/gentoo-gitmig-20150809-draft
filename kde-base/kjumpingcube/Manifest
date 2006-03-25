@@ -1,4 +1,4 @@
-MD5 d98efa884f4dc884bed67c31275f6ed0 ChangeLog 4822
+MD5 68f3f04957a4185da0c0314862045972 ChangeLog 4928
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kjumpingcube-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kjumpingcube-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kjumpingcube-3.4.3 68
@@ -7,7 +7,7 @@ MD5 23693adb4d93b662b3f08d2c2d8b7092 files/digest-kjumpingcube-3.5.1 69
 MD5 ed93d0050d30937bce3f66dc86656e76 files/digest-kjumpingcube-3.5.2 253
 MD5 73bbdcb6a9357fbcc65f6d010c1a7f6b kjumpingcube-3.4.1.ebuild 559
 MD5 ab746a29763e566c9cb829647cddb154 kjumpingcube-3.4.2.ebuild 572
-MD5 151e293dd85723e59c1e3ddecee52e37 kjumpingcube-3.4.3.ebuild 571
+MD5 2272c0b943bd435b4d29b0f6e003e8cb kjumpingcube-3.4.3.ebuild 573
 MD5 10373e9b0c3de82a3db835b51a6c3798 kjumpingcube-3.5.0.ebuild 536
 MD5 e3c5b226ddc6c1daca493cb0905b4d82 kjumpingcube-3.5.1.ebuild 537
 MD5 542afda171b501f04f280e488b537304 kjumpingcube-3.5.2.ebuild 539
