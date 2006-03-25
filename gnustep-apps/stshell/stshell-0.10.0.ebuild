@@ -1,18 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stshell/stshell-0.8.3_pre20050312.ebuild,v 1.3 2006/03/25 22:48:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stshell/stshell-0.10.0.ebuild,v 1.1 2006/03/25 22:48:02 grobian Exp $
 
-inherit gnustep subversion
-
-ESVN_OPTIONS="-r{${PV/*_pre}}"
-ESVN_REPO_URI="http://svn.gna.org/svn/gnustep/libs/steptalk/trunk/Examples/Shell"
-ESVN_STORE_DIR="${DISTDIR}/svn-src/svn.gna.org-gnustep/libs/steptalk/trunk"
-ESVN_PROJECT=Examples
+inherit gnustep
 
 DESCRIPTION="An interactive shell for StepTalk"
 HOMEPAGE="http://www.gnustep.org/experience/StepTalk.html"
+SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/libs/${P/stshell/StepTalk}.tar.gz"
 
-KEYWORDS="~x86 ~ppc"
+# steptalk doesn't compile!
+KEYWORDS="-*"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
@@ -21,5 +18,6 @@ DEPEND="${GS_DEPEND}
 	=gnustep-libs/steptalk-${PV}*"
 RDEPEND="${GS_RDEPEND}
 	=gnustep-libs/steptalk-${PV}*"
+S="${WORKDIR}/StepTalk/Examples/Shell"
 
 egnustep_install_domain "System"
