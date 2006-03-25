@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.7.ebuild,v 1.3 2006/03/20 21:17:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.7-r1.ebuild,v 1.1 2006/03/25 19:50:00 genstef Exp $
 
 inherit eutils
 
