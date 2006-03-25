@@ -1,6 +1,17 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.64 2006/03/25 05:48:05 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.65 2006/03/25 20:00:56 morfic Exp $
+
+*dvdrip-0.97.6-r1 (25 Mar 2006)
+*dvdrip-0.52.7-r1 (25 Mar 2006)
+
+  25 Mar 2006; Daniel Goller <morfic@gentoo.org>
+  -files/dvdrip-0.97.5-fix_nptl_workaround.patch,
+  -files/dvdrip-0.97.6-fix_nptl_workaround.patch,
+  +files/dvdrip-fix_nptl_workaround.patch, -dvdrip-0.52.3.ebuild,
+  -dvdrip-0.52.3-r1.ebuild, -dvdrip-0.52.5.ebuild, -dvdrip-0.52.6.ebuild,
+  +dvdrip-0.52.7-r1.ebuild, -dvdrip-0.97.6.ebuild, +dvdrip-0.97.6-r1.ebuild:
+  Cleanup old ebuilds, add 0.52.7-r1 and 0.97.6-r1 to always include fping
 
   25 Mar 2006; Daniel Goller <morfic@gentoo.org> dvdrip-0.52.7.ebuild:
   Stable on ppc and amd64
