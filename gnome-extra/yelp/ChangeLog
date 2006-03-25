@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/yelp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.109 2006/03/20 14:51:40 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.110 2006/03/25 16:40:05 allanonjl Exp $
+
+  25 Mar 2006; <allanon@gentoo.org> yelp-2.14.0.ebuild:
+  preserve old macros so we dont lose GNOME_COMMON_INIT and friends. fixes
 
   20 Mar 2006; John N. Laliberte <allanonjl@gentoo.org>
   +files/yelp-2.14.0-mozilla-include-fix.patch, yelp-2.14.0.ebuild:

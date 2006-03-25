@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.14.0.ebuild,v 1.2 2006/03/20 14:51:40 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.14.0.ebuild,v 1.3 2006/03/25 16:40:06 allanonjl Exp $
 
 inherit eutils gnome2 autotools
 
@@ -56,6 +56,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PN}-2.14.0-mozilla-include-fix.patch
 
+	mv aclocal.m4 old_macros.m4
 	AT_M4DIR="m4 ." \
 	eautoreconf
 }
