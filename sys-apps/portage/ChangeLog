@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.96 2006/03/23 10:04:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.97 2006/03/25 04:08:37 zmedico Exp $
+
+*portage-2.1_pre6-r7 (25 Mar 2006)
+
+  25 Mar 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre6-r7.ebuild,
+  +files/2.1_pre6/1170_r2986_bug_127374_selinux_labels.patch:
+  Regression fix for bug #127374 and improved package phase efficiency.
 
 *portage-2.1_pre6-r6 (23 Mar 2006)
 

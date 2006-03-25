@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre6-r6.ebuild,v 1.1 2006/03/23 10:04:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre6-r7.ebuild,v 1.1 2006/03/25 04:08:38 zmedico Exp $
 
 inherit toolchain-funcs
 
@@ -47,7 +47,8 @@ src_unpack() {
 		1130_r2942_inst_uid_gid_defaults.patch
 		1140_r2963_bug_126711_sandbox.patch
 		1150_r2974_bug_126442.patch
-		1160_r2979_python_trace.patch"
+		1160_r2979_python_trace.patch
+		1170_r2986_bug_127374_selinux_labels.patch"
 	for patch_name in ${my_patches}; do
 		einfo "Applying ${patch_name} ..."
 		patch -p0 --no-backup-if-mismatch < "${FILESDIR}"/${PV}/${patch_name} >/dev/null || die "Failed to apply patch"
