@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.7.ebuild,v 1.1 2006/03/25 04:11:06 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.7.ebuild,v 1.2 2006/03/25 05:48:05 morfic Exp $
 
 inherit perl-module eutils flag-o-matic
 
@@ -17,8 +17,7 @@ SRC_URI="http://www.exit1.org/${PN}/${MY_URL}/${MY_P}.tar.gz"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-# ~ppc needs subtitleripper
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 amd64 ppc"
 IUSE="cdr gnome xvid rar mplayer ogg fping subtitles"
 
 DEPEND="gnome? ( gnome-extra/gtkhtml )
