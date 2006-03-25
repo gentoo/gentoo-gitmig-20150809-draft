@@ -1,26 +1,24 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.11.ebuild,v 1.9 2006/01/09 11:51:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.13.ebuild,v 1.1 2006/03/25 08:39:31 mrness Exp $
 
-inherit eutils pam toolchain-funcs
+inherit eutils pam toolchain-funcs flag-o-matic
 
 #lame archive versioning scheme..
-S_PV=${PV%.*}
-S_PL=${PV##*.}
-S_PL=${S_PL/_rc/-RC}
-S_PP=${PN}-${S_PV}.STABLE${S_PL}
-PATCH_VERSION="20051019"
+S_PV="${PV%.*}"
+S_PL="${PV##*.}"
+S_PL="${S_PL/_rc/-RC}"
+S_PP="${PN}-${S_PV}.STABLE${S_PL}"
+PATCH_VERSION="20060325"
 
 DESCRIPTION="A caching web proxy, with advanced features"
 HOMEPAGE="http://www.squid-cache.org/"
 SRC_URI="http://www.squid-cache.org/Versions/v2/${S_PV}/${S_PP}.tar.gz
 	mirror://gentoo/${S_PP}-patches-${PATCH_VERSION}.tar.gz"
 
-S=${WORKDIR}/${S_PP}
-
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="pam ldap ssl sasl snmp debug selinux underscores logrotate customlog zero-penalty-hit follow-xff"
 
 RDEPEND="pam? ( virtual/pam )
@@ -31,6 +29,8 @@ RDEPEND="pam? ( virtual/pam )
 	!mips? ( logrotate? ( app-admin/logrotate ) )"
 DEPEND="${RDEPEND} dev-lang/perl"
 
+S="${WORKDIR}/${S_PP}"
+
 pkg_setup() {
 	enewgroup squid 31
 	enewuser squid 31 -1 /var/cache/squid squid
@@ -38,21 +38,21 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
-	cd ${S} || die "dir ${S} not found"
+	cd "${S}" || die "dir ${S} not found"
 
 	# Do bulk patching from squids bug fix list as well as our patches
-	use customlog || rm ${WORKDIR}/patch/9*customlog*
-	use zero-penalty-hit || rm ${WORKDIR}/patch/9*ToS_Hit*
-	use follow-xff || rm ${WORKDIR}/patch/9*follow_xff*
+	use customlog || rm "${WORKDIR}"/patch/9*customlog*
+	use zero-penalty-hit || rm "${WORKDIR}"/patch/9*ToS_Hit*
+	use follow-xff || rm "${WORKDIR}"/patch/9*follow_xff*
 	EPATCH_SUFFIX="patch"
-	epatch ${WORKDIR}/patch
+	epatch "${WORKDIR}/patch"
 
 	#hmm #10865
 	sed -i -e 's%^\(LINK =.*\)\(-o.*\)%\1\$(XTRA_LIBS) \2%' \
 		helpers/external_acl/ldap_group/Makefile.in
 
 	#disable lazy bindings on (some at least) suided basic auth programs
-	sed -i -e 's:_LDFLAGS[ ]*=:_LDFLAGS = -Wl,-z,now:' \
+	sed -i -e 's:_LDFLAGS[ ]*=:_LDFLAGS = '$(bindnow-flags)':' \
 		helpers/basic_auth/*/Makefile.in
 
 	if ! use debug ; then
@@ -111,8 +111,8 @@ src_compile() {
 		--enable-auth="basic,digest,ntlm" \
 		--enable-removal-policies="lru,heap" \
 		--enable-digest-auth-helpers="password" \
-		--enable-basic-auth-helpers=${basic_modules} \
-		--enable-external-acl-helpers=${ext_helpers} \
+		--enable-basic-auth-helpers="${basic_modules}" \
+		--enable-external-acl-helpers="${ext_helpers}" \
 		--enable-ntlm-auth-helpers="SMB,fakeauth,no_check,winbind" \
 		--enable-linux-netfilter \
 		--enable-ident-lookups \
@@ -144,7 +144,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "make install failed"
 
 	#--enable-icmp
 	#make -C src install-pinger libexecdir=${D}/usr/lib/squid || die
@@ -152,13 +152,13 @@ src_install() {
 	#chmod 4750 ${D}/usr/lib/squid/pinger
 
 	#need suid root for looking into /etc/shadow
-	chown root:squid ${D}/usr/lib/squid/ncsa_auth
-	chown root:squid ${D}/usr/lib/squid/pam_auth
-	chmod 4750 ${D}/usr/lib/squid/ncsa_auth
-	chmod 4750 ${D}/usr/lib/squid/pam_auth
+	fowners root:squid /usr/lib/squid/ncsa_auth
+	fowners root:squid /usr/lib/squid/pam_auth
+	fperms 4750 /usr/lib/squid/ncsa_auth
+	fperms 4750 /usr/lib/squid/pam_auth
 
 	#some clean ups
-	rm -f ${D}/usr/bin/Run*
+	rm -f "${D}"/usr/bin/Run*
 
 	#simply switch this symlink to choose the desired language..
 	dosym /usr/lib/squid/errors/English /etc/squid/errors
@@ -183,9 +183,9 @@ src_install() {
 		newexe "${FILESDIR}/squid.cron" squid.cron
 	fi
 
-	rm -rf ${D}/var
+	rm -rf "${D}"/var
 	diropts -m0755 -o squid -g squid
-	dodir /var/cache/squid /var/log/squid
+	keepdir /var/cache/squid /var/log/squid
 }
 
 pkg_preinst() {
@@ -202,5 +202,10 @@ pkg_postinst() {
 	einfo "/var/cache/samba/winbindd_privileged group to the same one you use"
 	einfo "in the cache_effective_group option on your squid.conf:"
 	einfo "    chgrp squid /var/cache/samba/winbindd_privileged"
+	echo
+	ewarn "Be careful what type of cache_dir you select!"
+	ewarn "   'diskd' is optimized for high levels of traffic, but it might seem slow"
+	ewarn "when there isn't sufficient traffic to keep squid reasonably busy."
+	ewarn "   If your traffic level is low to moderate, use 'aufs' or 'ufs'."
 	echo
 }
