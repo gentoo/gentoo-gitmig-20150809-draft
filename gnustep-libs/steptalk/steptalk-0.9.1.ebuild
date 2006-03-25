@@ -1,23 +1,22 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.8.3_pre20050312.ebuild,v 1.3 2006/03/25 22:32:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.9.1.ebuild,v 1.1 2006/03/25 22:32:38 grobian Exp $
 
-inherit gnustep subversion
-
-ESVN_OPTIONS="-r{${PV/*_pre}}"
-ESVN_REPO_URI="http://svn.gna.org/svn/gnustep/libs/${PN}/trunk"
-ESVN_STORE_DIR="${DISTDIR}/svn-src/svn.gna.org-gnustep/libs"
+inherit gnustep
 
 DESCRIPTION="StepTalk is the official GNUstep scripting framework."
 HOMEPAGE="http://www.gnustep.org/experience/StepTalk.html"
+SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/libs/${P/steptalk/StepTalk}.tar.gz"
 
-KEYWORDS="~x86 ~ppc"
+# it doesn' compile!  ~ppc ~x86
+KEYWORDS="-*"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
 IUSE="doc"
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}"
+S="${WORKDIR}/${P/steptalk/StepTalk}"
 
 egnustep_install_domain "System"
 
