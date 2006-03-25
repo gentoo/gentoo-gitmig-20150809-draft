@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/w3mir-1.0.10-r1.ebuild,v 1.3 2006/03/24 18:59:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/w3mir-1.0.10-r1.ebuild,v 1.4 2006/03/25 04:11:29 josejx Exp $
 
 inherit perl-app eutils
 
@@ -11,7 +11,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha ~amd64 ~ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 ppc ~sparc x86"
 
 DEPEND="${DEPEND}
 	>=dev-perl/URI-1.0.9
