@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5134 2006/03/25 12:37:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5135 2006/03/25 14:20:16 lu_zero Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -868,10 +868,6 @@ dev-tex/mpm
 # masked due to bad dependencies and possible TEXTREL
 =net-libs/gnutls-1.2.9-r1
 =net-libs/gnutls-1.2.10-r1
-
-# Luca Barbato <lu_zero@gentoo.org> (02 Jan 2006)
-# masked for testing
-=media-video/mplayer-1.0.20060102
 
 # <plasmaroo@gentoo.org> (30 Dec 2005)
 # Lots of outstanding security bugs, no updates from upstream yet.
