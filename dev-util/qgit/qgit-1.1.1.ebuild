@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-1.1.1.ebuild,v 1.1 2006/03/23 08:07:43 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-1.1.1.ebuild,v 1.2 2006/03/25 19:35:04 ferdy Exp $
+
+inherit qt3
 
 MY_PV=${PV//_/}
 MY_P=${PN}-${MY_PV}

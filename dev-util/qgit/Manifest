@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eebc310913e3d34ead34dadf56875272 ChangeLog 857
+MD5 8ac9439928be66dcc20893dd1699d6fa ChangeLog 1030
 MD5 ff77e2c8a132a5843441acfe8954e95c files/digest-qgit-0.96.1 64
 MD5 49bad87a4ce4d1e327bf0e8bf4e04f3e files/digest-qgit-0.97.1 64
 MD5 fbcd4d689375b05eae34541d1e409ba4 files/digest-qgit-1.1.1 63
 MD5 c2a7223a6caa6908d13db012ce74b388 metadata.xml 255
 MD5 5a6e1be3f413934b23593a42a457ae7f qgit-0.96.1.ebuild 801
 MD5 91400af6b074e7c80db509bc6588a83b qgit-0.97.1.ebuild 800
-MD5 92aa34c8804cabcab6282dd703fe4b5d qgit-1.1.1.ebuild 678
+MD5 33152eba2576833ad8de3a5df41d1b5a qgit-1.1.1.ebuild 691
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEIldhViELBEf1JB0RAod8AJwIlEAJPzfjPTh7SO3yAjZYc3Uq0ACbB4NS
-Psva1QLqcvV+IDRSTadmyiw=
-=w7FH
+iD8DBQFEJZt/ViELBEf1JB0RAhvyAJ4tya4kldJ+HDIhRQMkidna2khGfQCfYKEk
+CToj1vLvZ8yWNSLxmTzpyGI=
+=0urN
 -----END PGP SIGNATURE-----
