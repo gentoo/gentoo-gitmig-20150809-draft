@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-apps/textedit
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/ChangeLog,v 1.7 2005/03/17 21:07:04 fafhrd Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/ChangeLog,v 1.8 2006/03/25 23:09:18 grobian Exp $
+
+*textedit-0.95_pre20060324 (25 Mar 2006)
+
+  25 Mar 2006; Fabian Groffen <grobian@gentoo.org>
+  -textedit-0.95_pre20050110.ebuild, textedit-0.95_pre20050315.ebuild,
+  +textedit-0.95_pre20060324.ebuild:
+  Removed old CVS ebuild, fixed and bumped
 
 *textedit-0.95_pre20050315 (17 Mar 2005)
 
