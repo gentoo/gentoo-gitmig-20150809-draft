@@ -1,4 +1,4 @@
-MD5 ecc963ac359f42fd5c3cecbe24b47306 ChangeLog 5638
+MD5 f01e0d7314269ae3ddd5d40219d0b1fc ChangeLog 5753
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-klaptopdaemon-3.4.1 212
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-klaptopdaemon-3.4.2 288
 MD5 7693585dde083d1c2cc205db10692163 files/digest-klaptopdaemon-3.4.3 68
@@ -9,7 +9,7 @@ MD5 215488123a318281ac9687845ce3f247 files/digest-klaptopdaemon-3.5.2 250
 MD5 0ebe4d00a1fd5845db2172027d12f531 files/kdeutils-3.4.3-klaptopdaemon.patch 1895
 MD5 0320d9f781bb671bfdff8e5f0109af90 klaptopdaemon-3.4.1.ebuild 441
 MD5 ea3bc9741dfa723bfb69fc5a2dcc55a1 klaptopdaemon-3.4.2.ebuild 454
-MD5 0a66d2babdcb16138b51eb70fb859d80 klaptopdaemon-3.4.3-r1.ebuild 561
+MD5 66dd338d4e0b876f056c9d4575ec5bd6 klaptopdaemon-3.4.3-r1.ebuild 563
 MD5 9feddbacae796c4cdcf24de62ba31573 klaptopdaemon-3.4.3.ebuild 456
 MD5 8486e1769935c5564a8ea5e5adedc72e klaptopdaemon-3.5.0.ebuild 560
 MD5 b17352f0f2e9eff1cfc8d7936823297a klaptopdaemon-3.5.1.ebuild 738
