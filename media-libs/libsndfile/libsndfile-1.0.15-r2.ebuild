@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.15-r1.ebuild,v 1.1 2006/03/25 19:16:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.15-r2.ebuild,v 1.1 2006/03/25 21:27:05 flameeyes Exp $
 
 inherit eutils libtool autotools
 
@@ -35,7 +35,6 @@ src_compile() {
 		$(use_enable flac) \
 		$(use_enable alsa) \
 		--disable-werror \
-		--disable-gcc-opt \
 		--disable-gcc-pipe \
 		--disable-dependency-tracking \
 		|| die "econf failed"
