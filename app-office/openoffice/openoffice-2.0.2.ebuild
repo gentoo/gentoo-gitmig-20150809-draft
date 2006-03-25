@@ -1,14 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2.ebuild,v 1.4 2006/03/16 21:29:08 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2.ebuild,v 1.5 2006/03/25 18:22:29 suka Exp $
 
-inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
+inherit eutils fdo-mime flag-o-matic kde-functions mono toolchain-funcs
 
-IUSE="binfilter cairo eds firefox gnome gtk java kde ldap mozilla xml2"
+IUSE="binfilter cairo eds firefox gnome gtk java kde ldap mono mozilla xml2"
 
+MY_PV="${PV}.2"
 PATCHLEVEL="OOB680"
 SRC="OOO_2_0_2"
-S="${WORKDIR}/ooo-build-${PV}"
+S="${WORKDIR}/ooo-build-${MY_PV}"
 CONFFILE="${S}/distro-configs/Gentoo.conf.in"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
 
@@ -16,8 +17,10 @@ SRC_URI="http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-core.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-system.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-lang.tar.bz2
 	binfilter? ( http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-binfilter.tar.bz2 )
-	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${PV}.tar.gz
-	http://go-ooo.org/packages/libwpd/libwpd-0.8.3.tar.gz
+	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${MY_PV}.tar.gz
+	http://go-oo.org/packages/libwpd/libwpd-0.8.3.tar.gz
+	mono? ( http://go-oo.org/packages/SRC680/cli_types.dll
+		http://go-oo.org/packages/SRC680/cli_types_bridgetest.dll )
 	http://go-oo.org/packages/SRC680/extras-2.tar.bz2
 	http://go-oo.org/packages/SRC680/hunspell_UNO_1.1.tar.gz
 	http://go-oo.org/packages/xt/xt-20051206-src-only.zip"
@@ -88,6 +91,7 @@ DEPEND="${RDEPEND}
 	!java? ( dev-libs/libxslt
 		>=dev-libs/libxml2-2.0 )
 	ldap? ( net-nds/openldap )
+	mono? ( >=dev-lang/mono-1.1.6 )
 	xml2? ( >=dev-libs/libxml2-2.0 )"
 
 PROVIDE="virtual/ooo"
@@ -137,12 +141,11 @@ pkg_setup() {
 
 src_unpack() {
 
-	unpack ooo-build-${PV}.tar.gz
+	unpack ooo-build-${MY_PV}.tar.gz
 
 	#Some fixes for our patchset
 	cd ${S}
-	epatch ${FILESDIR}/${PV}/removecrystalcheck.diff
-	cp -vf ${FILESDIR}/${PV}/use-system-xt.diff patches/src680
+	epatch ${FILESDIR}/${PV}/pythonfix.diff
 
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
@@ -211,8 +214,8 @@ src_compile() {
 		`use_enable cairo` \
 		`use_with cairo system-cairo` \
 		`use_enable gnome quickstart` \
+		`use_enable mono` \
 		--disable-access \
-		--disable-mono \
 		--disable-post-install-scripts \
 		--enable-hunspell \
 		--with-system-hunspell \

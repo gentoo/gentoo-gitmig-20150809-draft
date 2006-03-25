@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.199 2006/03/17 16:32:35 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.200 2006/03/25 18:22:29 suka Exp $
+
+  25 Mar 2006; Andreas Proschofsky <suka@gentoo.org>
+  +files/2.0.2/pythonfix.diff, -files/2.0.2/removecrystalcheck.diff,
+  -files/2.0.2/use-system-xt.diff, openoffice-2.0.2.ebuild:
+  Update to newer patchset, which contains some fixes. Also fix Python
+  scripting and add the mono-bridge
 
 *openoffice-2.0.1-r1 (17 Mar 2006)
 
