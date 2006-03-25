@@ -1,4 +1,6 @@
-MD5 079ce7d14d9ee0c530c6b89779046fe7 ChangeLog 370
+MD5 ae4d95c5929c97a39c8189aaada46b93 ChangeLog 480
 MD5 7ba6403025abd291f23f92f8cb0615a3 files/digest-librvp-0.4 62
+MD5 7b090f85ad00616da324334fce413bc1 files/digest-librvp-0.7 62
 MD5 c1310b09a5ebe1998b16eaf94aaa7a31 librvp-0.4.ebuild 644
+MD5 8bc802758c75fd9b07f1a648e6cf5b72 librvp-0.7.ebuild 644
 MD5 b48dde997da291581e39233da164b638 metadata.xml 475
