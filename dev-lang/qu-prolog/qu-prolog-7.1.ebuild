@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.1.ebuild,v 1.1 2006/03/25 02:04:10 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.1.ebuild,v 1.2 2006/03/25 02:25:13 keri Exp $
 
 inherit eutils flag-o-matic kde-functions
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.itee.uq.edu.au/~pjr/HomePages/QPFiles/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="doc qt threads"
 
 DEPEND="virtual/libc"
