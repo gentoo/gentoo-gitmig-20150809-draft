@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.141 2006/01/23 21:28:12 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.142 2006/03/25 20:22:23 genstef Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -322,7 +322,7 @@ END
 	fi
 
 	# Try to avoid sandbox problems. Bug #114475.
-	if [[ $(get_major_version ) -ge 7 ]] ; then
+	if [[ $(get_major_version ) -ge 7 ]] && [[ -d "${S}/src/po" ]] ; then
 		sed -i -e \
 			'/-S check.vim/s,..VIM.,ln -s $(VIM) testvim \; ./testvim -X,' \
 			"${S}/src/po/Makefile"
@@ -489,6 +489,11 @@ vim_src_compile() {
 			|| myconf="${myconf} --disable-selinux"
 	fi
 
+	# Let Portage do the stripping. Some people like that.
+	if version_is_at_least "7.0_beta" ; then
+		export ac_cv_prog_STRIP="$(which true ) faking strip"
+	fi
+
 	myconf="${myconf} --with-modified-by=Gentoo-${PVR}"
 	econf ${myconf} || die "vim configure failed"
 
@@ -499,14 +504,7 @@ vim_src_compile() {
 		emake tools || die "emake tools failed"
 		rm -f src/vim
 	else
-		if [[ $(get_major_version ) -ge 7 ]] ; then
-			# parallel make temporarily b0rked -- ciaranm, 20051127
-			our_makeopts="-j1"
-		else
-			our_makeopts=""
-		fi
-
-		if ! emake ${our_makeopts} ; then
+		if ! emake ; then
 			eerror "If the above messages seem to be talking about perl"
 			eerror "and undefined references, please try re-emerging both"
 			eerror "perl and libperl with the same USE flags. For more"
@@ -581,8 +579,7 @@ vim_src_install() {
 		# These files might have slight security issues, so we won't
 		# install them. See bug #77841. We don't mind if these don't
 		# exist.
-		rm ${D}/usr/share/vim/vim${VIM_VERSION/.}/tools/{vimspell.sh,tcltags} \
-			|| true
+		rm ${D}/usr/share/vim/vim${VIM_VERSION/.}/tools/{vimspell.sh,tcltags}
 
 	elif [[ "${MY_PN}" == "gvim" ]] ; then
 		dobin src/gvim
@@ -692,11 +689,7 @@ vim_pkg_postinst() {
 			einfo "gvim has now a seperate ebuild, 'emerge gvim' will install gvim"
 		fi
 	else
-		if [[ "${MY_PN}" == "gvim" ]] ; then
-			echo
-			# TODO: once we have all the GUIs working, display a message
-			# explaining them.
-		elif [[ "${MY_PN}" == "vim" ]] ; then
+		if [[ "${MY_PN}" == "vim" ]] ; then
 			echo
 			einfo "To install a GUI version of vim, use the app-editors/gvim"
 			einfo "package."
@@ -804,3 +797,4 @@ vim_src_test() {
 	make VIMPROG=${testprog} nongui \
 		|| die "At least one test failed"
 }
+
