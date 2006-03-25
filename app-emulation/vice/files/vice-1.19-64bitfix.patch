@@ -1,0 +1,39 @@
+--- vice-1.18/src/gfxoutputdrv/ffmpeg/common.h.unpatched	2005-12-25 11:57:38.000000000 +0100
++++ vice-1.18/src/gfxoutputdrv/ffmpeg/common.h	2005-12-25 12:01:47.000000000 +0100
+@@ -18,6 +18,10 @@
+ //#define A32_BITSTREAM_READER
+ #define LIBMPEG2_BITSTREAM_READER_HACK //add BERO
+ 
++#if defined(WIN32) && !defined(__MINGW32__) && !defined(__CYGWIN__) && !defined(EMULATE_INTTYPES)
++#    define EMULATE_INTTYPES
++#endif
++
+ #ifndef M_PI
+ #define M_PI    3.14159265358979323846
+ #endif
+@@ -93,7 +97,6 @@
+ #endif
+ #endif
+ 
+-#define EMULATE_INTTYPES
+ #ifndef EMULATE_INTTYPES
+ #   include <inttypes.h>
+ #else
+@@ -255,7 +258,7 @@
+ 
+ extern const uint32_t inverse[256];
+ 
+-#ifdef ARCH_X86
++#if defined(ARCH_X86) || defined(ARCH_X86_64)
+ #    define FASTDIV(a,b) \
+     ({\
+         int ret,dmy;\
+@@ -1219,7 +1222,7 @@
+ #define MKBETAG(a,b,c,d) (d | (c << 8) | (b << 16) | (a << 24))
+ 
+ 
+-#ifdef ARCH_X86
++#if defined(ARCH_X86) || defined(ARCH_X86_64)
+ #define MASK_ABS(mask, level)\
+             asm volatile(\
+ 		"cdq			\n\t"\

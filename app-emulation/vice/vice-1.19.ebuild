@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.19.ebuild,v 1.6 2006/03/17 14:47:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.19.ebuild,v 1.7 2006/03/25 11:14:39 tupone Exp $
 
 inherit eutils games
 
@@ -61,6 +61,12 @@ DEPEND="${RDEPEND}
 			x11-proto/xf86dgaproto
 			x11-proto/videoproto )
 		virtual/x11 )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}"-64bitfix.patch
+}
 
 src_compile() {
 	egamesconf \
