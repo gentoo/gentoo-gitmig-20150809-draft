@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libintl-perl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.12 2006/03/15 16:51:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.13 2006/03/25 05:44:38 morfic Exp $
+
+  25 Mar 2006; Daniel Goller <morfic@gentoo.org> libintl-perl-1.11.ebuild:
+  Stable on ppc
 
   15 Mar 2006; Markus Rothe <corsair@gentoo.org> libintl-perl-1.11.ebuild:
   Added ~ppc64
