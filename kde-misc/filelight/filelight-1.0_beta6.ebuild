@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.0_beta6.ebuild,v 1.4 2005/06/25 15:26:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.0_beta6.ebuild,v 1.5 2006/03/25 03:13:46 flameeyes Exp $
 
 inherit kde eutils
 
@@ -23,4 +23,6 @@ src_unpack() {
 
 	# Unconditionally use -fPIC for libs (#55238)
 	epatch ${FILESDIR}/${P}-pic.patch
+
+	rm -f ${S}/configure
 }

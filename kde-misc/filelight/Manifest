@@ -1,15 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6e096bd66735777c0d2e22100fc875e5 ChangeLog 3113
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 7c4b93a7aa9388fb186259ec6a50f6d8 filelight-1.0_beta6.ebuild 683
+MD5 b9711b7450de2a71476469d80aef623e ChangeLog 3284
+RMD160 49a7fdf3885b75c88c0ebb8ae2e11cab4cce064f ChangeLog 3284
+SHA256 f0b76f495f4c8927882441e4b394089149fae9d169fe1fe89f0b4eaf7d9e31cd ChangeLog 3284
+MD5 9a89d62565dafab8a5bc4318c1896b3e filelight-1.0_beta6.ebuild 708
+RMD160 5dfc692d45b06f8933d3da87bbb6cca9a2f5dea0 filelight-1.0_beta6.ebuild 708
+SHA256 8216c8389447e91dc27d7907c8ebfcabef4326b922b1c43ecb8e8895f61230c7 filelight-1.0_beta6.ebuild 708
 MD5 7ef6c74df9f1f4873b4647add19f5152 files/digest-filelight-1.0_beta6 72
+RMD160 b6bc53fbc1b970aebe77c34b1388d450c0212cad files/digest-filelight-1.0_beta6 72
+SHA256 798b35af3720e436b61bd83a9b9a87bc1ab7b9ac74916b6b30a25e6813e03dae files/digest-filelight-1.0_beta6 72
 MD5 681713bf05f8bbf1693fa8728cc22861 files/filelight-1.0_beta6-pic.patch 1025
+RMD160 9e8a90c7e6446447b0b288730d1e66bc75052a5a files/filelight-1.0_beta6-pic.patch 1025
+SHA256 00c280807f4d25c0a70fa56739802cf87ed7deb56d398e456fdfb19281f7dc75 files/filelight-1.0_beta6-pic.patch 1025
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFCvXfHBXaUFmZvwyMRAu/SAJsFHoXLBmkxoZzdeToRgofsijabNwCgjTrB
-r/fdx7dbqd/Isb8h6KdlN2E=
-=qojh
+iD4DBQFEJLUHAiZjviIA2XgRArfQAKDvRFg2SeVD7zpiDQBrrHI55ph2zgCYnx+d
+0UKMh15nzRoxHPPX3nIPUg==
+=BlB1
 -----END PGP SIGNATURE-----

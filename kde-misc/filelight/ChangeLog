@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/filelight
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.9 2005/06/25 15:26:42 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.10 2006/03/25 03:13:45 flameeyes Exp $
+
+  25 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  filelight-1.0_beta6.ebuild:
+  Remove configure to force autotools rebuild (the pic patch changes
+  Makefile.am).
 
   25 Jun 2005; Aron Griffis <agriffis@gentoo.org>
   filelight-1.0_beta6.ebuild:
