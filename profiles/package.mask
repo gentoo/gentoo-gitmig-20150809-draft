@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5136 2006/03/25 15:11:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5137 2006/03/25 15:32:23 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -848,11 +848,6 @@ dev-tex/mpm
 >=net-mail/cyrus-imapd-2.3
 >=net-mail/cyrus-imap-admin-2.3
 
-# Brian Harring <ferringb@gentoo.org>
-# Masking following packages due to ungif removal- bug 118386
-# mainly masked due to broken dep, waiting for maintainer comments.
-<gnustep-base/gnustep-back-art-0.9.5
-
 # John N. Laliberte <allanonjl@gentoo.org> (08 Jan 2006)
 # mask until ia64 tests libgda
 >=dev-python/gnome-python-extras-2.12.1
@@ -1257,8 +1252,6 @@ net-misc/powerd
 
 # Armando Di Cianno <fafhrd@gentoo.org> (23 Jul 2005)
 # Masked until upgrade path is established
-=gnustep-base/gnustep-back-art-0.10.0
-=gnustep-base/gnustep-back-xlib-0.10.0
 =gnustep-base/gnustep-env-0.1.7
 
 # <grobian@gentoo.org> (25 Mar 2006)
@@ -1357,12 +1350,6 @@ media-video/dirac
 # Thierry Carrez <koon@gentoo.org> (08 Jun 2005)
 # Masked by request of the security team. bug 94473
 net-im/everybuddy
-
-# Armando Di Cianno <fafhrd@gentoo.org> (06 Jun 2005)
-# Masking ebuilds that are incorrectly newer, but still ~arch key'd anyway;
-# saving for a rainy day
-=gnustep-base/gnustep-back-xlib-0.9.5_pre20050312
-=gnustep-base/gnustep-back-art-0.9.5_pre20050312
 
 # Elfyn McBratney <beu@gentoo.org> (06 Jun 2005)
 # 9/10 times, it'll work, the other time it'll either segfault,
