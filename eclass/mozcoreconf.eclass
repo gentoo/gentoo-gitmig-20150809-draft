@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.6 2006/02/27 03:22:01 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.7 2006/03/25 16:42:04 anarchy Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
@@ -190,6 +190,14 @@ mozconfig_init() {
 makemake() {
 	typeset m topdir
 	for m in $(find . -name Makefile.in); do
+		topdir=$(echo "$m" | sed -r 's:[^/]+:..:g')
+		sed -e "s:@srcdir@:.:g" -e "s:@top_srcdir@:${topdir}:g" \
+			< ${m} > ${m%.in} || die "sed ${m} failed"
+	done
+}
+
+makemake2() {
+	for m in $(find ../ -name Makefile.in); do
 		topdir=$(echo "$m" | sed -r 's:[^/]+:..:g')
 		sed -e "s:@srcdir@:.:g" -e "s:@top_srcdir@:${topdir}:g" \
 			< ${m} > ${m%.in} || die "sed ${m} failed"
