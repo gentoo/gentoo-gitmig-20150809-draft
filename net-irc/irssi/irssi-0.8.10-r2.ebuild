@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10-r2.ebuild,v 1.3 2006/03/18 19:01:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10-r2.ebuild,v 1.4 2006/03/25 19:20:41 swegener Exp $
 
 inherit perl-app eutils flag-o-matic
 
@@ -34,7 +34,7 @@ src_compile() {
 		$(use_with perl) \
 		$(use_enable ipv6) \
 		$(use_with socks5 socks) \
-		${myconf} || die "econf failed"
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
