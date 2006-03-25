@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.6.ebuild,v 1.3 2006/02/15 06:21:47 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.6.ebuild,v 1.4 2006/03/25 03:36:19 morfic Exp $
 
 inherit perl-module eutils flag-o-matic
 
@@ -29,7 +29,7 @@ DEPEND="gnome? ( gnome-extra/gtkhtml )
 	xvid? ( media-video/xvid4conf )
 	rar? ( app-arch/rar )
 	mplayer? ( media-video/mplayer )
-	=media-video/transcode-0.6.14*
+	>=media-video/transcode-0.6.14*
 	>=media-gfx/imagemagick-5.5.3
 	dev-perl/gtk-perl
 	perl-core/Storable
@@ -42,7 +42,12 @@ RDEPEND="${DEPEND}
 	dev-perl/libintl-perl"
 
 pkg_setup() {
-	built_with_use media-video/transcode dvdread || die "transcode needs dvdread support builtin.  Please re-emerge transcode with the dvdread USE flag."
+	built_with_use media-video/transcode dvdread \
+		|| die "transcode needs dvdread support builtin.  Please re-emerge transcode with the dvdread USE flag."
+
+	built_with_use media-video/transcode extrafilters \
+		&& die  "Please remerge transcode with -extrafilters in USE=, " \
+				"you have filters installed not compatible with dvdrip."
 }
 
 src_unpack() {
@@ -57,4 +62,5 @@ src_install() {
 	make_desktop_entry dvdrip dvd::rip dvdrip.xpm Video
 
 	perl-module_src_install
+	! fping? && rm ${D}/usr/bin/dvdrip-master
 }

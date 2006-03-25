@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.61 2006/03/15 16:56:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.62 2006/03/25 03:36:19 morfic Exp $
+
+  25 Mar 2006; Daniel Goller <morfic@gentoo.org> dvdrip-0.52.6.ebuild,
+  dvdrip-0.97.6.ebuild:
+  we shouldn't install dvdrip-master if we do not ask for fping
 
   15 Mar 2006; Markus Rothe <corsair@gentoo.org> dvdrip-0.97.6.ebuild:
   Added ~ppc64; bug #126189
