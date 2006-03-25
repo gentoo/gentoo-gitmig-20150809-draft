@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.11.ebuild,v 1.1 2006/03/25 06:12:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.11.ebuild,v 1.2 2006/03/25 21:10:19 swegener Exp $
 
 inherit gnuconfig
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="gtk doc"
-DEPEND="gtk? ( >=x11-libs/gtk+extra-2* )
+DEPEND="gtk? ( >=x11-libs/gtk+extra-2 )
 	=dev-libs/glib-1.2*
 	>=sys-libs/readline-2.0
 	sys-devel/flex"
