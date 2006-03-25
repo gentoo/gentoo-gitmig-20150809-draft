@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/dvdrtools-0.3.0-r1.ebuild,v 1.2 2006/02/23 21:28:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/dvdrtools-0.3.0-r1.ebuild,v 1.3 2006/03/25 18:12:58 metalgod Exp $
 
 inherit eutils gnuconfig
 
@@ -35,14 +35,7 @@ src_install() {
 
 	make DESTDIR=${D} install || die "make install failed"
 
-	#dobin cdda2wav/cdda2wav
-	#dobin cdrecord/dvdrecord
-	#dobin mkisofs/mkisofs
-	#dobin readcd/readcd
 	dosym /usr/bin/dvdrecord /usr/bin/cdrecord
-
-	#cd mkisofs/diag
-	#dobin devdump isodump isoinfo isovfy
 
 	cd ${S}
 	insinto /etc/default
@@ -61,8 +54,4 @@ src_install() {
 	dodoc COPYING AUTHORS ChangeLog NEWS README
 	doman */*.1
 	doman */*.8
-
-	#cd ${S}/doc
-	#docinto print
-	#dodoc *.ps
 }
