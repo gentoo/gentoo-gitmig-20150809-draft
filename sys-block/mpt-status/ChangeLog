@@ -1,0 +1,11 @@
+# ChangeLog for sys-block/mpt-status
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/ChangeLog,v 1.1 2006/03/25 19:06:36 nelchael Exp $
+
+*mpt-status-1.1.6 (25 Mar 2006)
+
+  25 Mar 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/mpt-status-1.1.6-gentoo.patch, +metadata.xml,
+  +mpt-status-1.1.6.ebuild:
+  Initial version, requested in bug #125143.
+

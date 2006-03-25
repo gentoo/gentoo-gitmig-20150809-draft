@@ -1,0 +1,40 @@
+diff -Nru mpt-status-1.1.6.original/Makefile mpt-status-1.1.6/Makefile
+--- mpt-status-1.1.6.original/Makefile	2006-03-25 18:58:40.000000000 +0100
++++ mpt-status-1.1.6/Makefile	2006-03-25 19:19:06.000000000 +0100
+@@ -1,33 +1,18 @@
+ PROG		:= mpt-status
+ KERNEL_PATH	:= /usr/src/linux
+ PREFIX		:= /usr
+-CFLAGS		:= -I${KERNEL_PATH}/drivers/message/fusion -Iincl -Wall -W -O2
++CFLAGS		:= -I../linux-sources/drivers/message/fusion -Iincl -Wall -W $(CFLAGS)
+ DFLAGS		:=
+-LDFLAGS		:=
++LDFLAGS		:= $(LDFLAGS)
+ DESTDIR		:=
+ CC		:= gcc
+ INSTALL		:= install
+-ARCH		:= $(shell uname -m)
+-REDHAT		:= $(shell if [ -e /etc/redhat-release ]; \
+-				then echo "true"; else echo "false"; fi)
+-
+-ifeq "${REDHAT}" "true"
+-	DFLAGS	:= ${FLAGS} -DREDHAT
+-endif
+-ifeq "${ARCH}" "sparc64"
+-	CFLAGS	:= -I${KERNEL_PATH}/drivers/message/fusion -Iincl -Wall -W -O2 \
+-		   -m64 -pipe -mcpu=ultrasparc -mcmodel=medlow
+-endif
+-# This part is for the 1.2.0 version of mpt-status
+-#ifeq "${ARCH}" "x86_64"
+-#	CFLAGS	:= -I${KERNEL_PATH}/drivers/message/fusion -Iincl -Wall -W -O2 \
+-#		   -m64
+-#endif
+ 
+ ${PROG}: ${PROG}.c ${PROG}.h
+ 	${CC} ${DFLAGS} ${CFLAGS} -o $@ $< ${LDFLAGS}
+ 
+ install: ${PROG}
++	${INSTALL} -d ${DESTDIR}${PREFIX}/sbin/
+ 	${INSTALL} -s -o root -g root -m 0500 $< ${DESTDIR}${PREFIX}/sbin
+ 
+ uninstall:
