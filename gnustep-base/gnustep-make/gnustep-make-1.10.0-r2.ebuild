@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.0-r2.ebuild,v 1.6 2006/03/19 12:37:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.0-r2.ebuild,v 1.7 2006/03/25 12:09:30 grobian Exp $
 
 inherit gnustep
 
@@ -12,7 +12,8 @@ KEYWORDS="ppc x86 amd64 ~ppc64 sparc ~alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
-IUSE="debug doc layout-from-conf-file layout-osx-like non-flattened verbose"
+# doc is broken
+IUSE="debug layout-from-conf-file layout-osx-like non-flattened verbose"
 DEPEND="${GNUSTEP_CORE_DEPEND}
 	>=sys-devel/make-3.75"
 RDEPEND="${DEPEND}
@@ -162,12 +163,12 @@ src_install() {
 		die "no Makefile found"
 	fi
 
-	if use doc ; then
-		cd Documentation
-		eval emake ${make_eval} all || die "doc make has failed"
-		eval emake ${make_eval} install || die "doc install has failed"
-		cd ..
-	fi
+#	if use doc ; then
+#		cd Documentation
+#		eval emake ${make_eval} all || die "doc make has failed"
+#		eval emake ${make_eval} install || die "doc install has failed"
+#		cd ..
+#	fi
 
 	dodir /etc/conf.d
 	echo "GNUSTEP_SYSTEM_ROOT=$(egnustep_system_root)" > ${D}/etc/conf.d/gnustep.env
