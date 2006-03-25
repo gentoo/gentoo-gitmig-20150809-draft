@@ -1,4 +1,4 @@
-MD5 2d0a2f911b94f0f5a0c85c2da2392688 ChangeLog 4806
+MD5 47748ef12ec84a56d0e5889e24241f8a ChangeLog 4908
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kweather-3.4.1 208
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kweather-3.4.1-r1 208
 MD5 51760bf43f61d4083bb13b322559c21f files/digest-kweather-3.4.2 282
@@ -10,7 +10,7 @@ MD5 dc4e14a043c6a61fbfa9e149a285fef8 files/kweather-3.4.1-fix-icon-size.diff 534
 MD5 3c5cb569b353184571fde5e93fb7c2b1 kweather-3.4.1-r1.ebuild 451
 MD5 ded899b7f4c97daf259ac5ab7f26eed7 kweather-3.4.1.ebuild 400
 MD5 41146ed745d8b48aa9e9d7f77557d3bc kweather-3.4.2.ebuild 406
-MD5 11dfd1e59c80243a55ba993b77415365 kweather-3.4.3.ebuild 405
+MD5 f2250be882834280a5613210ae1dd725 kweather-3.4.3.ebuild 407
 MD5 ec9bc833ccd9acc99708f68f8d1d0bab kweather-3.5.0.ebuild 407
 MD5 1353b4e419b1bc0ff43089438e7f3615 kweather-3.5.1.ebuild 408
 MD5 19889347ba14ab3176ca0058405178dc kweather-3.5.2.ebuild 408

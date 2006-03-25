@@ -1,4 +1,4 @@
-MD5 a54aa00e4ac5adacfcae3c142f5c9f5b ChangeLog 5043
+MD5 2c4ab50ae7bfec69af3e5b179aeddfde ChangeLog 5148
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kworldwatch-3.4.1 208
 MD5 51760bf43f61d4083bb13b322559c21f files/digest-kworldwatch-3.4.2 282
 MD5 4792409083f3033f880840748c1ec31a files/digest-kworldwatch-3.4.3 67
@@ -7,7 +7,7 @@ MD5 a68df6eb11c6d1e6f0fbff6676b5fd82 files/digest-kworldwatch-3.5.1 67
 MD5 5f983b3253b834c3d5edfb6f38357af0 files/digest-kworldwatch-3.5.2 247
 MD5 d72f0fe6eee3a7e82aeb6ac4f1bdc157 kworldwatch-3.4.1.ebuild 518
 MD5 e29100203047ae02c86e0776950b0097 kworldwatch-3.4.2.ebuild 531
-MD5 b4573f9f008f7fc67be9d1f88b12ac7e kworldwatch-3.4.3.ebuild 530
+MD5 2f98e021da9964ecc024dcfe7ce6265b kworldwatch-3.4.3.ebuild 532
 MD5 b9c2bf8065c522e589b3ec12d337e3cf kworldwatch-3.5.0.ebuild 532
 MD5 84c799175194ca2c7153657981fa5d20 kworldwatch-3.5.1.ebuild 533
 MD5 ea6bf4167888ae1dd201140195f3d8a3 kworldwatch-3.5.2.ebuild 533
