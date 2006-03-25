@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.0.1.ebuild,v 1.2 2006/02/14 19:36:11 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.0.1-r1.ebuild,v 1.1 2006/03/25 16:01:43 rl03 Exp $
 
 inherit webapp eutils versionator
 
@@ -36,6 +36,9 @@ RDEPEND=">=dev-lang/perl-5.8
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/CVE-2006-1386.patch
+
 	mv ${S}/bin/LocalLib.cfg.txt ${S}/bin/LocalLib.cfg
 	mv ${S}/lib/LocalSite.cfg.txt ${S}/lib/LocalSite.cfg
 	# change web user to apache

@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/twiki
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.23 2006/02/14 19:36:11 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.24 2006/03/25 16:01:43 rl03 Exp $
+
+*twiki-4.0.1-r1 (25 Mar 2006)
+
+  25 Mar 2006; Renat Lumpau <rl03@gentoo.org> +files/CVE-2006-1386.patch,
+  -twiki-4.0.1.ebuild, +twiki-4.0.1-r1.ebuild:
+  Patch for CVE-2006-1386
 
   14 Feb 2006; Renat Lumpau <rl03@gentoo.org> twiki-4.0.1.ebuild:
   Bring back virtuals
