@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.7.ebuild,v 1.1 2006/03/25 15:48:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.7.ebuild,v 1.2 2006/03/25 16:16:15 grobian Exp $
 
 inherit gnustep
 
@@ -13,8 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 IUSE=""
-DEPEND=">=gnustep-base/gnustep-make-1.10.0
-	>=gnustep-base/gnustep-base-1.10.2
+DEPEND=">=gnustep-base/gnustep-make-1.10
+	>=gnustep-base/gnustep-base-1.10
 	>=gnustep-base/gnustep-gui-0.9.5
 	virtual/gnustep-back"
 #RDEPEND="${GS_RDEPEND}"
