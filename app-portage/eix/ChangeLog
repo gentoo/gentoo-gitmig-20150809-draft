@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.80 2006/03/24 11:58:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.81 2006/03/25 07:08:33 grobian Exp $
+
+  25 Mar 2006; Fabian Groffen <grobian@gentoo.org> eix-0.5.1-r2.ebuild:
+  Marked ppc-macos stable (bug #114628)
 
   24 Mar 2006; Aron Griffis <agriffis@gentoo.org> eix-0.5.1-r2.ebuild:
   Mark 0.5.1-r2 stable on ia64
