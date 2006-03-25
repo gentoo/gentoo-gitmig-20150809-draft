@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/horde-mnemo-2.1.ebuild,v 1.2 2006/03/20 22:09:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/horde-mnemo-2.1.ebuild,v 1.3 2006/03/25 06:18:58 josejx Exp $
 
 HORDE_PHP_FEATURES="-o mysql mysqli odbc postgres ldap"
 HORDE_MAJ="-h3"
@@ -8,7 +8,7 @@ inherit horde
 
 DESCRIPTION="Mnemo is the Horde note manager"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc sparc ~x86"
 
 DEPEND=""
 RDEPEND=">=www-apps/horde-3"
