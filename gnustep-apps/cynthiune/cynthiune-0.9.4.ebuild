@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.4.ebuild,v 1.5 2006/03/25 16:51:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.4.ebuild,v 1.6 2006/03/25 16:51:46 grobian Exp $
 
 inherit gnustep
 
 S=${WORKDIR}/${P/c/C}
 
 DESCRIPTION="Free software and romantic music player for GNUstep."
-# 25 Mar 2005: upstream appears to be dead!
+# 25 Mar 2006: upstream appears to be dead!
 HOMEPAGE="http://organact.mine.nu/~wolfgang/cynthiune"
 SRC_URI="http://organact.mine.nu/~wolfgang/cynthiune/${P/c/C}.tar.gz"
 
