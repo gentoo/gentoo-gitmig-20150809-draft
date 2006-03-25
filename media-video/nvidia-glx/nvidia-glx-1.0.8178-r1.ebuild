@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8178-r1.ebuild,v 1.1 2006/03/24 21:39:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8178-r1.ebuild,v 1.2 2006/03/25 05:17:50 augustus Exp $
 
 inherit eutils multilib versionator
 
@@ -259,7 +259,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	#switch to the nvidia implementation
-	eselect opengl set nvidia
+	eselect opengl set --use-old nvidia
 
 	echo
 	einfo "To use the Nvidia GLX, run \"eselect opengl set nvidia\""
@@ -304,5 +304,5 @@ want_tls() {
 }
 
 pkg_postrm() {
-	eselect opengl set xorg-x11
+	eselect opengl set --use-old xorg-x11
 }

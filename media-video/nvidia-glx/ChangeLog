@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.114 2006/03/24 21:39:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.115 2006/03/25 05:17:50 augustus Exp $
+
+  25 Mar 2006; Kristopher Kersey <augustus@gentoo.org>
+  nvidia-glx-1.0.8178-r1.ebuild:
+  Fixed xorg-x11 OpenGL switch over during upgrade. Bug #127489.
 
 *nvidia-glx-1.0.8178-r1 (24 Mar 2006)
 *nvidia-glx-1.0.8174-r2 (24 Mar 2006)
