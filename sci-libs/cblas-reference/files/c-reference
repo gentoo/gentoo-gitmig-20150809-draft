@@ -1,0 +1,14 @@
+CFLAGS="-I/usr/include/cblas-reference"
+CLIBS="-L/usr/$(get_libdir)/blas/cblas-reference -lcblas"
+ 
+setup() {
+MY_LIBDIR="$(get_libdir)"
+einfo "/usr/${MY_LIBDIR}/libcblas.so -> cblas-reference/libcblas.so"
+ln -sf blas/cblas-reference/libcblas.so /usr/${MY_LIBDIR}/libcblas.so
+
+einfo "/usr/${MY_LIBDIR}/libcblas.so.0 -> cblas-reference/libcblas.so.0"
+ln -sf blas/cblas-reference/libcblas.so.0 /usr/${MY_LIBDIR}/libcblas.so.0
+ 
+einfo "/usr/${MY_LIBDIR}/libcblas.a -> cblas-reference/libcblas.a"
+ln -sf blas/cblas-reference/libcblas.a /usr/${MY_LIBDIR}/libcblas.a
+}
