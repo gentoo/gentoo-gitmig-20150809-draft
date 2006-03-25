@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.173 2006/03/18 00:04:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.174 2006/03/25 19:37:48 danarmak Exp $
+
+*kdeedu-3.5.2 (25 Mar 2006)
+
+  25 Mar 2006; Dan Armak <danarmak@gentoo.org> +kdeedu-3.5.2.ebuild:
+  KDE 3.5.2. Not yet released upstream, and so package.masked for now.
 
   18 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> kdeedu-3.5.1.ebuild:
   ~hppa lovin

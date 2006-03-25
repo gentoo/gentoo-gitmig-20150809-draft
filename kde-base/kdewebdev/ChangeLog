@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.95 2006/03/10 04:57:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.96 2006/03/25 19:54:29 danarmak Exp $
+
+*kdewebdev-3.5.2 (25 Mar 2006)
+
+  25 Mar 2006; Dan Armak <danarmak@gentoo.org> +kdewebdev-3.5.2.ebuild:
+  KDE 3.5.2. Not yet released upstream, and so package.masked for now.
 
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org> kdewebdev-3.4.3-r1.ebuild:
   Mark 3.4.3-r1 stable on ia64
