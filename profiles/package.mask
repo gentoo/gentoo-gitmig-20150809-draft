@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5135 2006/03/25 14:20:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5136 2006/03/25 15:11:33 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1260,6 +1260,16 @@ net-misc/powerd
 =gnustep-base/gnustep-back-art-0.10.0
 =gnustep-base/gnustep-back-xlib-0.10.0
 =gnustep-base/gnustep-env-0.1.7
+
+# <grobian@gentoo.org> (25 Mar 2006)
+# Masked because it results in sandbox errors for other GNUstep apps
+# that build on it.  Exact cause unknown, but it seems to be related to
+# gnustep-base library that wants to create $user/GNUstep/Library folder
+# whenever an app is being run.  During installation for instance
+# plmerge is being run, which then makes a sandbox violation because it
+# attempts to create /root/GNUstep.  Setting the HOME env doesn't seem
+# to change the location (/root) at all.
+=gnustep-base/gnustep-base-1.12.0
 
 # <ka0ttic@gentoo.org> (21 Jul 2005)
 # Masked for testing.
