@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5129 2006/03/25 03:00:53 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5130 2006/03/25 09:02:10 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -848,7 +848,6 @@ dev-tex/mpm
 # Brian Harring <ferringb@gentoo.org>
 # Masking following packages due to ungif removal- bug 118386
 # mainly masked due to broken dep, waiting for maintainer comments.
-<gnustep-base/gnustep-gui-0.9.4-r2
 <gnustep-base/gnustep-back-art-0.9.5
 
 # John N. Laliberte <allanonjl@gentoo.org> (08 Jan 2006)
@@ -1271,7 +1270,6 @@ net-misc/powerd
 
 # Armando Di Cianno <fafhrd@gentoo.org> (23 Jul 2005)
 # Masked until upgrade path is established
-=gnustep-base/gnustep-gui-0.10.0
 =gnustep-base/gnustep-back-art-0.10.0
 =gnustep-base/gnustep-back-xlib-0.10.0
 =gnustep-base/gnustep-env-0.1.7
@@ -1366,7 +1364,6 @@ net-im/everybuddy
 # Armando Di Cianno <fafhrd@gentoo.org> (06 Jun 2005)
 # Masking ebuilds that are incorrectly newer, but still ~arch key'd anyway;
 # saving for a rainy day
-=gnustep-base/gnustep-gui-0.9.5_pre20050312-r1
 =gnustep-base/gnustep-back-xlib-0.9.5_pre20050312
 =gnustep-base/gnustep-back-art-0.9.5_pre20050312
 
