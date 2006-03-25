@@ -1,28 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 96d69e5b6faafadcabcb39edb0309ca5 ChangeLog 1716
-RMD160 4b94703032870dcc42f3cacb45d11fe53bfed173 ChangeLog 1716
-SHA256 b55e841be635b4c2c092441556ac6107f08cd6c3b6ac0af79c6c470718decaa0 ChangeLog 1716
+MD5 83e8451bb07462c92594ccb7130f2321 ChangeLog 1852
+RMD160 fd0ed8e88d05acd6c3dad0764200569df7342a6d ChangeLog 1852
+SHA256 7278b4b5e7064e42b33b10c6d693cdabb93694de8cca6ac8a644224fb3d0583f ChangeLog 1852
 MD5 f061117d94091e16e5edfc83b78d57d6 files/digest-k9copy-1.0.3b 244
 RMD160 e80f5f9556d0ac9895dfd1147277c3f899d39d62 files/digest-k9copy-1.0.3b 244
 SHA256 6b0a937730b055317bbabf13abf270d73e09cd920a7f156e797583199e31187d files/digest-k9copy-1.0.3b 244
 MD5 b6d44f3192f48d82ec2d86b04ddbbe45 files/digest-k9copy-1.0.4_beta2 259
 RMD160 672fbc29504aa2e036ffa9b52982cadefaf9631e files/digest-k9copy-1.0.4_beta2 259
 SHA256 06a0d70a6aef1730fb8733ee9357256260579136435975ec5b1a3a459fc5a440 files/digest-k9copy-1.0.4_beta2 259
+MD5 99bf73a4c0f1dad209a48f0acb5dd425 files/digest-k9copy-1.0.4_beta3 259
+RMD160 c12014febbaf99f9c4904aeef117685a4dd67a2a files/digest-k9copy-1.0.4_beta3 259
+SHA256 a5eb643793862eaaa1b99d521cc1def0f70a1ea876f6e280a517f3506a3046c4 files/digest-k9copy-1.0.4_beta3 259
 MD5 41f90176e45ceb3be0aceadad0dc3964 k9copy-1.0.3b.ebuild 644
 RMD160 f8ffb091101e9848d78934dbcc4dcedee94a95d6 k9copy-1.0.3b.ebuild 644
 SHA256 c6adf75313fea7943658a675263bd9a5f1ad1dc87cecf1697cb5b35c5cee87bd k9copy-1.0.3b.ebuild 644
 MD5 b7b6c2720fa7b09c1fbdf6f3c3dfd8b1 k9copy-1.0.4_beta2.ebuild 860
 RMD160 cf322971e78fbd7647184fcc7256c110d889c40c k9copy-1.0.4_beta2.ebuild 860
 SHA256 6228e5b37c29082f1c9ff6ff9add7ed2c8aa3f31f2021ca3b9c481fa7440a1a4 k9copy-1.0.4_beta2.ebuild 860
+MD5 55a16bcbe68ed71396e630d465f9c047 k9copy-1.0.4_beta3.ebuild 860
+RMD160 b518100ddd505ddd2d37128c15ef57b4944bae88 k9copy-1.0.4_beta3.ebuild 860
+SHA256 46153e8a59231dfb510e419f4f6e597c228a6bfd84a537b1cfbb8366f1695779 k9copy-1.0.4_beta3.ebuild 860
 MD5 f252d0d8aaea067fe6be5e09527ab18e metadata.xml 175
 RMD160 4e4c9dfa9b5102163a4f7b231f95672bd2266c0d metadata.xml 175
 SHA256 ee81a2309bd9eae88d896b77f0d87adbb941cf18f82eea08c025eb583ac6043d metadata.xml 175
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEICgcAiZjviIA2XgRAsy4AJ0RKrRLN3mvTohg0igOkHbm1chRDACghD3Z
-XOWt9O07Yqnrbn1z8t3F/NA=
-=NGTD
+iD8DBQFEJLMjAiZjviIA2XgRAlTaAKCYahjhGXWYwUGtrp24hSg9/6YoFgCfQEIB
+WTiPBPlkGbj9TkamumzZxqY=
+=QJEN
 -----END PGP SIGNATURE-----
