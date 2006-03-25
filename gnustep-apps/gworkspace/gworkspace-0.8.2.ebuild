@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.7.0.ebuild,v 1.3 2006/01/22 18:41:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.8.2.ebuild,v 1.1 2006/03/25 19:39:23 grobian Exp $
 
 inherit gnustep
 
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/${P/gw/GW}
 
-DESCRIPTION="A workspace manager for GNUstep."
+DESCRIPTION="A workspace manager for GNUstep"
 HOMEPAGE="http://www.gnustep.it/enrico/gworkspace/"
 SRC_URI="http://www.gnustep.it/enrico/gworkspace/${P}.tar.gz"
 
@@ -19,7 +19,10 @@ DEPEND="${GS_DEPEND}
 	pdf? ( gnustep-libs/pdfkit )
 	!gnustep-apps/desktop
 	!gnustep-apps/recycler"
-RDEPEND="${GS_RDEPEND}"
+RDEPEND="${GS_RDEPEND}
+	pdf? ( gnustep-libs/pdfkit )
+	!gnustep-apps/desktop
+	!gnustep-apps/recycler"
 
 egnustep_install_domain "System"
 

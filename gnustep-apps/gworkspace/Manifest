@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f790939c5eda43c9cfe5af21b05b00ce ChangeLog 4472
-RMD160 90b0f3918cbabd3b6be9eb74853d1d34d20653ca ChangeLog 4472
-SHA256 95b9cf41a0461fc40b4a699906b00955ac4ac6ae17b22a15cea401bbe5772a59 ChangeLog 4472
-MD5 341828835de325e6f8e44726b9b5e9bf files/digest-gworkspace-0.7.0 69
-RMD160 f5e6e8500e4ec9a3b5b97ab9194117258dd46bcf files/digest-gworkspace-0.7.0 69
-SHA256 237a23f7f21567c21d5821d96aa9508bd1a80ea1e8cd33b76c510c167564c384 files/digest-gworkspace-0.7.0 69
+MD5 9f4a2e191df273ffe7bb02b93e1d44f2 ChangeLog 4646
+RMD160 4d47454db9d47b3e2e46943207bc4f467dfe147d ChangeLog 4646
+SHA256 7a27fd13882b911ea233e99553f176f7ca087d8b154c6a7161e7c65872acb4b2 ChangeLog 4646
 MD5 0f2b6d5ad90e11612f0cbbf2a1e2e9dc files/digest-gworkspace-0.7.1 69
 RMD160 b1807a3650c4b6e93c3a61b097463fadcd24a6b5 files/digest-gworkspace-0.7.1 69
 SHA256 b3676ae1a988b124589ce085478ee069718c700db2ab57f40431d8381e37143c files/digest-gworkspace-0.7.1 69
+MD5 1a556118e8211d8cb4c3584b694e3a38 files/digest-gworkspace-0.8.2 253
+RMD160 d31fc7dbb8955eb5a2d4fdde8b158bf2b768e14f files/digest-gworkspace-0.8.2 253
+SHA256 939d247f93a62adf1d20b78b6c5e3139afb4f29f00d4132d710d61323c30e2e2 files/digest-gworkspace-0.8.2 253
 MD5 660807348555935d3d149797044803b3 files/seperate-desktop-recycler.patch 316
 RMD160 6dbd5313242c4c5fb736710136850b1c0aad9bcb files/seperate-desktop-recycler.patch 316
 SHA256 df3bee5277f8d6b8d6006f4051ad8242a99fd3383e5b817fe0013a1b57fa1474 files/seperate-desktop-recycler.patch 316
-MD5 4669fa9e4c9bd1bb4af9bd6afb11ae19 gworkspace-0.7.0.ebuild 728
-RMD160 6d2ac82ad4bc03d411827006bb36e6ac0a0943a4 gworkspace-0.7.0.ebuild 728
-SHA256 63f7cfa6146a0853da5ac75e5d1f387cd6b69b51c03164bf4915e8bbe0232405 gworkspace-0.7.0.ebuild 728
 MD5 2fa0d0ec00bbb8f37432da78810f2a72 gworkspace-0.7.1.ebuild 809
 RMD160 9ca66e12234a918cab1128c31d3a16c66c66a7b0 gworkspace-0.7.1.ebuild 809
 SHA256 063253760193727be6fb63a2a311236c522c13e00e630da8d77a453c7ba77bf2 gworkspace-0.7.1.ebuild 809
+MD5 0a33e4891ba77f9e5cbcc7cd53c2b36c gworkspace-0.8.2.ebuild 810
+RMD160 743f112dfaff92eee47f930ebf83de756af7cad4 gworkspace-0.8.2.ebuild 810
+SHA256 710c9eefcebeb5ffcc302924e6611336b0d1ce4746935cafd23831d27ae14649 gworkspace-0.8.2.ebuild 810
 MD5 144bf372071e2a59ced95e82e91531bd metadata.xml 391
 RMD160 902157d53596d3f5938e2dd0a6ffa068233f77d3 metadata.xml 391
 SHA256 406c4ee08f8ef51e0f9d7a826c3024b8e080094ae4c7e9df093f91355609365a metadata.xml 391
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0+FH6J2i8a8J4okRAqWiAJ9lv1KRYrCnDD18xGpn4ys1DY90vgCg2CeG
-JEM3YQVKZVct9qr+LUm6gXo=
-=Ygan
------END PGP SIGNATURE-----
