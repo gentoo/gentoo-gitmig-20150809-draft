@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.6.ebuild,v 1.5 2006/03/25 04:11:06 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.7.ebuild,v 1.1 2006/03/25 04:11:06 morfic Exp $
 
 inherit perl-module eutils flag-o-matic
 
