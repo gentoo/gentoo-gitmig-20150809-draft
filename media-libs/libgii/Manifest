@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 21dd24a57eb7655f1d89e7002c396f58 ChangeLog 2506
+MD5 2ac5f0628250e5bc2466b251415df399 ChangeLog 2612
 MD5 fdf3bfd43030906b7ee6b8c918575f0d files/digest-libgii-0.8.1 65
 MD5 376051220c890effb2b6679a25bd6ea1 files/digest-libgii-0.9.0 68
 MD5 887768231d487e1a3221af502844af42 files/libgii-0.9.0-gcc34.patch 314
 MD5 87872067beb306c082b41bfb0d3b6163 files/libgii-0.9.0-linux26-headers.patch 419
 MD5 3547639e381b37fef548f22dca2bd248 files/libgii-linux-headers-2.6.patch 1478
 MD5 6bba0a8c046c455f1e2dcb94b00d8ff8 libgii-0.8.1.ebuild 1010
-MD5 27786cc3550d5a3eb4ec89903908f9ab libgii-0.9.0.ebuild 1239
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDtnN82+ySkm8kpY0RAsoaAJ4kJD3BJADJa5XXvvH94rNT1Hi/7ACeIk0u
-gTWyeiqRcL3PBqBlPzQAT9k=
-=GgBx
------END PGP SIGNATURE-----
+MD5 7b9c9a94568a6822326bfb485932fd74 libgii-0.9.0.ebuild 1238
