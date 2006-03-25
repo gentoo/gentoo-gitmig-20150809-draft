@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5131 2006/03/25 09:34:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5132 2006/03/25 10:15:48 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -403,10 +403,6 @@ games-roguelike/noegnud-nethack
 # This is masked until a supporting kernel sources is released.
 >=sys-fs/squashfs-tools-3.0
 
-# Stefan Schweizer <genstef@gentoo.org> (16 Mar 2006)
-# Only compiles with gcc-4.1.0
-=app-portage/eix-0.5.3
-
 # Joerg Bornkessel <hd_brummy@gentoo.org> (15 Mar 2006)
 # Masked for testing
 =media-plugins/vdr-admin-0.4.0
@@ -460,7 +456,6 @@ gnome-base/gnome-mount
 >=app-accessibility/dasher-3.99
 >=gnome-extra/deskbar-applet-2.13
 >=gnome-base/eel-2.13
->=net-im/ekiga-1.99
 >=media-gfx/eog-2.13
 >=www-client/epiphany-1.9
 # do not forget about -extensions.
@@ -873,12 +868,6 @@ dev-tex/mpm
 # Luca Barbato <lu_zero@gentoo.org> (02 Jan 2006)
 # masked for testing
 =media-video/mplayer-1.0.20060102
-
-# Stefan Schweizer <genstef@gentoo.org> (01 Jan 2006)
-# misdn mqueue branch - experimental but with udev support
->=net-dialup/misdn-20051228
-net-dialup/misdnuser
-net-misc/asterisk-chan_misdn
 
 # <plasmaroo@gentoo.org> (30 Dec 2005)
 # Lots of outstanding security bugs, no updates from upstream yet.
