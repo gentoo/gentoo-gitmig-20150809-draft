@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5132 2006/03/25 10:15:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5133 2006/03/25 12:17:27 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -971,12 +971,6 @@ dev-libs/luabind
 # Roy Marples <uberlord@gentoo.org> (09 Dec 2005)
 # Masked for testing
 =net-misc/dhcp-3.0.4_beta*
-
-# Markus Dittrich <markusle@gentoo.org> (07 Dec 2005)
-# This revision has the TDHF code enabled; need to
-# wait for g77 fix to propagate into new gcc patch set
-# before unmasking this version (see bug #114367)
-=sci-chemistry/gamess-05272005.3-r2
 
 # Francesco Riosa <vivo@gentoo.org> (07 Dec 2005)
 >=dev-db/mysql-5.1
