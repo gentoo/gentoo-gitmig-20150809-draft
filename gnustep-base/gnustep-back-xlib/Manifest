@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5b7a0629c95e63b97299eae1d03f1d28 ChangeLog 4033
+MD5 ed1644660235d3f3b565e5d3788493c8 ChangeLog 4366
+RMD160 022e6c39637bb1660c5bcd4b1d7e4551cc344512 ChangeLog 4366
+SHA256 99a8c679f1aa53df27f30fae4185323b59b7327f896e7ef9a7cfa84ecf390d17 ChangeLog 4366
 MD5 14c86d6ff5e83af36ad3d54266af5c99 files/config-gnustep-back-xlib.sh 181
+RMD160 86c68bda088d52313c3a8f5af166edb7ba84298a files/config-gnustep-back-xlib.sh 181
+SHA256 67ff4a0404740dbc2ffc455f8c93b9f930e48ce83856e1f26e3cdcd3901fef85 files/config-gnustep-back-xlib.sh 181
+MD5 582a16a1582efe47a9e23cb9dc269556 files/digest-gnustep-back-xlib-0.10.3 259
+RMD160 b83787add083beda399da222775f946cca8081f9 files/digest-gnustep-back-xlib-0.10.3 259
+SHA256 aa9fa1dae32ce5b0f9599cf2b89534575e5d6dece4741962ad1d7a39269e9c16 files/digest-gnustep-back-xlib-0.10.3 259
 MD5 886a210bb5db57775f15aa3261c8e632 files/digest-gnustep-back-xlib-0.9.5 70
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-back-xlib-0.9.5_pre20050312 0
+RMD160 894f4f9f353299e25504df6e55d94e139e608381 files/digest-gnustep-back-xlib-0.9.5 70
+SHA256 4bd3a758264791192ad1129eae6760c3a140b36e04c695082f7aa24e4db7f49e files/digest-gnustep-back-xlib-0.9.5 70
 MD5 7973182788a4d8c751e2516cf8733ba6 files/digest-gnustep-back-xlib-0.9.6 70
+RMD160 8294229fd9745a19b57ed784c88c4ac050154ebe files/digest-gnustep-back-xlib-0.9.6 70
+SHA256 2369387b9012928198daa88820223ce1d5de8174cbd0892fe7d93a4e16c602c5 files/digest-gnustep-back-xlib-0.9.6 70
+MD5 44ed3a91370309c8cd7c2463392fec1e files/font-make-fix.patch-0.10.3 384
+RMD160 2bdf5cfab58f275976964411faff660e1260a7ab files/font-make-fix.patch-0.10.3 384
+SHA256 e85101e000f2ea78077acc9aaf55dc4a4849937dd7596e25620b5524f069782d files/font-make-fix.patch-0.10.3 384
 MD5 e80f67b11659da59c1aeb0d995a8cf4c files/font-make-fix.patch-0.9.5 737
-MD5 f9dd4c1b68af4bef2e272d82202323ea files/font-make-fix.patch-0.9.5_pre20050312 501
+RMD160 720ef4e5c77fc53a555b40c78620ea8c28b2f188 files/font-make-fix.patch-0.9.5 737
+SHA256 cab84c89d2cb0416ed17f1737faf425f5c1c356454bd6e5b5417c471a0ae9255 files/font-make-fix.patch-0.9.5 737
+MD5 623770a47666cda539b38afd059d9cef gnustep-back-xlib-0.10.3.ebuild 1512
+RMD160 95ef060a007fb1d3e48dc8740dcc34ff96a79af4 gnustep-back-xlib-0.10.3.ebuild 1512
+SHA256 bda095f54ad788f749109357e1317849153a350076176c502577b10ee4629357 gnustep-back-xlib-0.10.3.ebuild 1512
 MD5 d862869f8b422dc78bdbd3fbde701db8 gnustep-back-xlib-0.9.5.ebuild 1229
-MD5 8b97b14ec925e2a4b4d6745ad221f898 gnustep-back-xlib-0.9.5_pre20050312.ebuild 1356
+RMD160 759b4e4a70a3d783f67192117dce89cec660be43 gnustep-back-xlib-0.9.5.ebuild 1229
+SHA256 1ef464b32c45440be5e0f56dacba875da273f2edafa157032a450ebe508a7771 gnustep-back-xlib-0.9.5.ebuild 1229
 MD5 e66fe0da752b2026ca12ca178aba35ae gnustep-back-xlib-0.9.6.ebuild 1230
+RMD160 7ef4120cf59c120eba07e3385a44bc0175e27a3f gnustep-back-xlib-0.9.6.ebuild 1230
+SHA256 de85049fccc2437898164bc319d187161fe2db61364c93c0bd19bf2a77b2121a gnustep-back-xlib-0.9.6.ebuild 1230
 MD5 ef356714ab02a84c6e88fe3720749aea metadata.xml 1022
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2S0HI1lqEGTUzyQRAtljAJ0cVIdIXpN7h5mL5HMahrrWbzHyMwCfbiyI
-e5zBtPax19bFVWVAm5C8qqM=
-=rcoC
------END PGP SIGNATURE-----
+RMD160 f7bd2ab3e85bf0ae375a7ffdbace1dbb4ce558f0 metadata.xml 1022
+SHA256 d95f5c1f026627ec21426af5301436d72b16cec631a7c35fc8b3e4399a621b82 metadata.xml 1022

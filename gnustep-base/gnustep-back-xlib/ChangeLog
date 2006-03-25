@@ -1,6 +1,15 @@
 # ChangeLog for gnustep-base/gnustep-back-xlib
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.16 2005/06/06 18:23:57 fafhrd Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.17 2006/03/25 15:20:19 grobian Exp $
+
+*gnustep-back-xlib-0.10.3 (25 Mar 2006)
+
+  25 Mar 2006; Fabian Groffen <grobian@gentoo.org>
+  -files/font-make-fix.patch-0.9.5_pre20050312,
+  +files/font-make-fix.patch-0.10.3,
+  -gnustep-back-xlib-0.9.5_pre20050312.ebuild,
+  +gnustep-back-xlib-0.10.3.ebuild:
+  Removing ald and masked files, bumping version, ported to modular X.
 
   06 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org>
   -gnustep-back-xlib-0.9.4.ebuild:
