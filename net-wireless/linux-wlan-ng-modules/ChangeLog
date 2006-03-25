@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/linux-wlan-ng-modules
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/ChangeLog,v 1.7 2006/02/12 19:58:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/ChangeLog,v 1.8 2006/03/25 08:16:04 betelgeuse Exp $
+
+  25 Mar 2006; Petteri Räty <betelgeuse@gentoo.org>
+  +files/linux-wlan-ng-0.2.3-kernel-2.6.16.patch,
+  linux-wlan-ng-modules-0.2.3.ebuild:
+  Added a patch for Linux 2.6.16.
 
   12 Feb 2006; Petteri Räty <betelgeuse@gentoo.org>
   -files/linux-wlan-ng-0.2.2-module_param.patch,

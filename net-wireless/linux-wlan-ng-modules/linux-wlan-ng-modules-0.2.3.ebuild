@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/linux-wlan-ng-modules-0.2.3.ebuild,v 1.2 2005/12/31 09:57:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/linux-wlan-ng-modules-0.2.3.ebuild,v 1.3 2006/03/25 08:16:05 betelgeuse Exp $
 
 inherit eutils linux-mod
 
@@ -77,6 +77,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${MY_P}-module_param.patch
+	epatch ${FILESDIR}/${MY_P}-kernel-2.6.16.patch
 
 	cp ${S}/config.in ${config}
 
