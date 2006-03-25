@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r17.ebuild,v 1.2 2006/03/12 16:03:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r17.ebuild,v 1.3 2006/03/25 21:24:50 swegener Exp $
 
 IUSE="aliaschain cnamefix doc fwdzone ipv6 \
 	multipleip roundrobin semanticfix static selinux \
@@ -107,7 +107,7 @@ src_compile() {
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "/usr" > conf-home
-	MAKEOPTS="${MAKEOPTS} -j1" emake || die "emake failed"
+	emake -j1 || die "emake failed"
 
 	# If djbdns is compiled with ipv6 support it breaks dnstrace.
 	# Therefore we must compile dnstrace separately without ipv6
