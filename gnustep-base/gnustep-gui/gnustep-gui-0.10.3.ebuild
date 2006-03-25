@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.10.3.ebuild,v 1.1 2006/03/25 08:57:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.10.3.ebuild,v 1.2 2006/03/25 19:37:18 grobian Exp $
 
 inherit gnustep
 
@@ -16,8 +16,8 @@ LICENSE="LGPL-2.1"
 # doc has sandbox violations
 IUSE="cups gif gsnd jpeg png"
 DEPEND="${GNUSTEP_CORE_DEPEND}
-	>=gnustep-base/gnustep-make-1.12.0
-	>=gnustep-base/gnustep-base-1.12.0
+	>=gnustep-base/gnustep-make-1.10
+	>=gnustep-base/gnustep-base-1.10
 	|| (
 		( x11-libs/libXt )
 		virtual/x11
