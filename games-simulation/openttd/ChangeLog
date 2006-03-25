@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/openttd
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.16 2005/08/31 22:24:46 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.17 2006/03/25 23:25:20 pylon Exp $
+
+*openttd-0.4.6 (25 Mar 2006)
+
+  25 Mar 2006; Lars Weiler <pylon@gentoo.org> +openttd-0.4.6.ebuild:
+  With permission of the maintainer ebuild from bug #121532 added.
 
 *openttd-0.4.0.1-r1 (31 Aug 2005)
 

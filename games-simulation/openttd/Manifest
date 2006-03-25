@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7efefbbe81a05cbc5d4e96203f047fda metadata.xml 245
-MD5 44e37a7863de4415a5b4506e41cac6cc openttd-0.4.0.1-r1.ebuild 4349
-MD5 f30148c9a866518fbe2a3ff864bf52eb ChangeLog 2926
+MD5 5cbfd38f0b113625e021adccdf540b6e ChangeLog 3092
+RMD160 ab0f1b2cd13237c82fdf87476bb9fd29804a9e6d ChangeLog 3092
+SHA256 b991487cf64f8056688adc329a99d8b428af0cc363b68f21cb24d6b8a216104e ChangeLog 3092
 MD5 58b6f8b5a58925f558524fcb4c2711fc files/digest-openttd-0.4.0.1-r1 75
+RMD160 8e24c352f50e87baa00dba9fc9d39f920f8864f3 files/digest-openttd-0.4.0.1-r1 75
+SHA256 c0add6a15064c39308b64eabdf2b03e893a4e21d3b71d184904b02d8baca0dbc files/digest-openttd-0.4.0.1-r1 75
+MD5 ef1a0ddb777ddab13946e801fd189a52 files/digest-openttd-0.4.6 268
+RMD160 a147a8851e0d7fea3bc68ea68258aa02968cdf25 files/digest-openttd-0.4.6 268
+SHA256 96d52977d2b212cc09e4669cda5d585d42964a037980527d35a2d46a3a763436 files/digest-openttd-0.4.6 268
 MD5 43ec527a9d656d58d852c2a828458840 files/openttd-0.4.0.1-buffer-checks.patch 6632
+RMD160 444629d2d4b33e7eac3ed962f43d8f0dee23d149 files/openttd-0.4.0.1-buffer-checks.patch 6632
+SHA256 809f28bc4233641312e07c4305a3d6f15e3a609d420fca66d4aadcf68fbd65c8 files/openttd-0.4.0.1-buffer-checks.patch 6632
 MD5 a169eb5c8572ee01be52c4accf2608a2 files/openttd.initd 529
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDFi5GgIKl8Uu19MoRAoucAJ4iMs3Pvt6AbH3Skp5gnb8NQBnXbQCfWpef
-zmYPIP4odss96btzEoFe67U=
-=O99E
------END PGP SIGNATURE-----
+RMD160 ff9fdf7a787ae3d08ec4dbef1b1b37eee12d1ccd files/openttd.initd 529
+SHA256 a16e5c64a073d0b7e7092bb906b7f064414870a8607bebce16b4b08cff7f4112 files/openttd.initd 529
+MD5 7efefbbe81a05cbc5d4e96203f047fda metadata.xml 245
+RMD160 092488417a4ecd8286f803d499d3ee5efc121c56 metadata.xml 245
+SHA256 af1085b55f2132ed23fffa8e738e32260c4d32b4211739bc3f6f8d436af87199 metadata.xml 245
+MD5 44e37a7863de4415a5b4506e41cac6cc openttd-0.4.0.1-r1.ebuild 4349
+RMD160 c7135e693ebe3910137e038be68b5701daacee82 openttd-0.4.0.1-r1.ebuild 4349
+SHA256 f614b93eebc09e2966f6f99bc722d363e8a24226b31d1107ac14c5f3d4a0ac66 openttd-0.4.0.1-r1.ebuild 4349
+MD5 f7ecb7450bd69672cdf3eae646e7fe4b openttd-0.4.6.ebuild 4271
+RMD160 f068b9b2d3c887cc6c7b64c1dd7d2bfcde32d4a7 openttd-0.4.6.ebuild 4271
+SHA256 69b5832b0bc4276e864b3e76789cd6a72315d77659ff054aaee384b542664982 openttd-0.4.6.ebuild 4271
