@@ -1,14 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c3aedbfe00ee1a825a9d5760b4b4271e metadata.xml 316
-MD5 178701eb1ece3937618adfa48f8388a9 ChangeLog 2524
-MD5 131b60c69a3bbbdb61facd005cdd1df7 submount-0.9-r2.ebuild 1421
+MD5 b862b0d0a2049e3b476be353f90de8ad ChangeLog 2704
+RMD160 2e472168bdd7b9c06105f52c80a0203120d3b9db ChangeLog 2704
+SHA256 b038aa83d910735cdc0d345357898442b6bb43b401b11025bdb9bac935e8fe78 ChangeLog 2704
 MD5 f8a7a9ce45e2bebda73720c85f3307be files/digest-submount-0.9-r2 130
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDVPPmJrHF4yAQTrARAt7iAJ0UcSyPRpO07ApFzJurEjZdWoAY9QCguMIw
-qH0S1yeb2d1PDFuWMbS5BzQ=
-=QipX
------END PGP SIGNATURE-----
+RMD160 d5f02570095f59dbdc94a3e58eb496b08b785929 files/digest-submount-0.9-r2 130
+SHA256 a4a233a305349e466d99dd16fde5ff4fd43e571e6834101b8940d0a2179e3a48 files/digest-submount-0.9-r2 130
+MD5 ef98bc688f9dee82aae9db84f21542bd files/submount-0.9-sem2mutex.patch 1164
+RMD160 4af8161dc6eb5317e1f14845e506c9976e3e65bc files/submount-0.9-sem2mutex.patch 1164
+SHA256 ef4a24d39c95e0e6d474ebc9bce9741a9b3edc446e5d3ea9ba2874865955fd78 files/submount-0.9-sem2mutex.patch 1164
+MD5 c3aedbfe00ee1a825a9d5760b4b4271e metadata.xml 316
+RMD160 86959ebc67df5cee64e1e38ec6cfea594758f159 metadata.xml 316
+SHA256 8a664f34fa277b8d1fac76a63d41f63a0e6e8413d20962435c4990ff0f8a8f9f metadata.xml 316
+MD5 231dc5e22fa842f04374466774b0468b submount-0.9-r2.ebuild 1496
+RMD160 0c8bdbe5fa3620b02ec1c7ce8f7bc96dd1258f66 submount-0.9-r2.ebuild 1496
+SHA256 c34f68dadf005c293bd3b27cc1325eacc79eb50a61ec3ff9bc873c744508644a submount-0.9-r2.ebuild 1496

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/submount
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.18 2005/10/18 13:08:33 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.19 2006/03/25 13:49:49 dsd Exp $
+
+  25 Mar 2006; Daniel Drake <dsd@gentoo.org>
+  +files/submount-0.9-sem2mutex.patch, submount-0.9-r2.ebuild:
+  sem2mutex compile fix for 2.6.16, thanks to Patrizio Bassi in bug #119538
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org> submount-0.9-r2.ebuild:
   Mark 0.9-r2 stable on alpha

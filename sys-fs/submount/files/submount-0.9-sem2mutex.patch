@@ -1,0 +1,42 @@
+--- submount-0.9/subfs-0.9/subfs.c.orig	2006-03-22 10:06:33.000000000 +0100
++++ submount-0.9/subfs-0.9/subfs.c	2006-03-22 10:08:11.000000000 +0100
+@@ -25,6 +25,7 @@
+ #include <asm/signal.h>
+ #include <linux/signal.h>
+ #include <linux/sched.h>
++#include <linux/version.h>
+ 
+ #include "subfs.h"
+ 
+@@ -221,14 +222,30 @@
+ 	struct vfsmount *child;
+ 
+ 	/* This is ugly, but prevents a lockup during mount. */
++
++#if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,15)
++	mutex_unlock(&dir->i_mutex);
++#else
+ 	up(&dir->i_sem);
++#endif
++
+ 	if (down_interruptible(&sfs_mnt->sem)) {
+-		down(&dir->i_sem);/*put the dir sem back down if interrupted*/
++
++# if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,15)
++		mutex_lock(&dir->i_mutex); /*put the dir sem back down if interrupted*/
++#else
++		down(&dir->i_sem); /*put the dir sem back down if interrupted*/
++#endif
+ 		return ERR_PTR(-ERESTARTSYS);
+ 	}
+ 	child = get_child_mount(sfs_mnt);
+ 	up(&sfs_mnt->sem);
++
++#if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,15)
++	mutex_lock(&dir->i_mutex); /*put the dir sem back down if interrupted*/
++#else
+ 	down(&dir->i_sem);
++#endif
+ 	if (IS_ERR(child))
+ 		return (void *) child;
+ 	subfs_send_signal();
