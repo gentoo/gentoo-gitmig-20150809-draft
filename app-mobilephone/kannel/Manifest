@@ -1,17 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 46e07d5fc3939036bccefba3c8ab4a1c ChangeLog 803
-MD5 8e6557d777542beebd0e35c01bdc156c metadata.xml 389
-MD5 b66c40044356888f58a83e491406a6fc kannel-1.4.0.ebuild 2264
+MD5 6de3b0e5cffd0eb81f3ed25b0ebbc829 ChangeLog 1047
 MD5 a7c05f05df99dd759d119b393cbe59e0 files/digest-kannel-1.4.0 66
+MD5 a7c05f05df99dd759d119b393cbe59e0 files/digest-kannel-1.4.0-r1 66
+MD5 0f567adfb816974f954e319e21b24893 files/kannel-1.4.0-custom-wap-ports.patch 13297
+MD5 600c73cb97d9ffdce59537ee94229ee7 files/kannel-1.4.0-mysql-list.patch 7291
 MD5 b77f55cded4c364d155c302e81eb07c6 files/kannel-confd 366
 MD5 0b79d37344165b8743061f68a18959ce files/kannel-initd 1529
-MD5 600c73cb97d9ffdce59537ee94229ee7 files/kannel-1.4.0-mysql-list.patch 7291
+MD5 d4dddefe4665121700b76b846b3fbf10 kannel-1.4.0-r1.ebuild 2332
+MD5 b66c40044356888f58a83e491406a6fc kannel-1.4.0.ebuild 2264
+MD5 8e6557d777542beebd0e35c01bdc156c metadata.xml 389
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDlg3oNSP4Vda7IdsRAm7jAJ9KPYMfLUCu1EjzPagyA2+QBcb5hgCfX0nK
-t0hDeA+KiPVnf1BgLslXJps=
-=cA+E
+iD8DBQFEJQ1xjG8pv1lIUX4RAoXpAJ9f75G8cqSxqtZCtImrpKKx1VbPkgCglZdv
+blLTGys1fCKrVNlKjU4Ejss=
+=aCAu
 -----END PGP SIGNATURE-----
