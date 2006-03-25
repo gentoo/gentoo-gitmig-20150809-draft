@@ -1,11 +1,11 @@
 # ChangeLog for gnustep-libs/prefsmodule
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/prefsmodule/ChangeLog,v 1.8 2006/03/25 19:53:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/prefsmodule/ChangeLog,v 1.9 2006/03/25 19:55:39 grobian Exp $
 
   25 Mar 2006; Fabian Groffen <grobian@gentoo.org>
   -prefsmodule-1.1.1_pre20050110.ebuild,
   prefsmodule-1.1.1_pre20050315.ebuild:
-  Removed old ebuild and ported latest to nongnu CVS server
+  Removed old ebuild and ported latest to nongnu CVS server.  Version bump.
 
 *prefsmodule-1.1.1_pre20050315 (17 Mar 2005)
 
