@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-1.5.ebuild,v 1.1 2006/03/24 13:44:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-1.5.ebuild,v 1.2 2006/03/25 05:17:46 mr_bones_ Exp $
 
 inherit autotools eutils
 
@@ -15,31 +15,31 @@ LICENSE="GPL-2"
 KEYWORDS="~hppa ~ppc ~x86"
 
 RDEPEND="|| ( (
-                xpm? ( x11-libs/libXpm )
-                truetype? ( x11-libs/libXft )
-                xinerama? ( x11-libs/libXinerama )
-                x11-libs/libXext
-                x11-libs/libXrender
-                x11-libs/libXau
-                x11-libs/libXdmcp
-			  )
-			  (
-			    virtual/x11
-			    truetype? ( virtual/xft )
-			  )
-		    )
+				xpm? ( x11-libs/libXpm )
+				truetype? ( x11-libs/libXft )
+				xinerama? ( x11-libs/libXinerama )
+				x11-libs/libXext
+				x11-libs/libXrender
+				x11-libs/libXau
+				x11-libs/libXdmcp
+				)
+				(
+				virtual/x11
+				truetype? ( virtual/xft )
+				)
+			)
 		png? ( media-libs/libpng )
-        bidi? ( dev-libs/fribidi )
-        dev-libs/expat"
+		bidi? ( dev-libs/fribidi )
+		dev-libs/expat"
 
 DEPEND="${RDEPEND}
-        || ( (
-               x11-proto/xproto
-               x11-proto/xextproto
-               xinerama? ( x11-proto/xineramaproto )
-             )
-             virtual/x11
-           )"
+		|| ( (
+				x11-proto/xproto
+				x11-proto/xextproto
+				xinerama? ( x11-proto/xineramaproto )
+			)
+			virtual/x11
+			)"
 
 src_compile() {
 	epatch "${FILESDIR}/${P}-configure.in.patch"
@@ -52,7 +52,7 @@ src_compile() {
 		$(use_enable xpm) \
 		$(use_enable bidi fribidi) \
 		--enable-shape --enable-xrender || die "configure failed"
-	
+
 	 emake -j1 || die "make failed"
 }
 
