@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/primateplunge
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/ChangeLog,v 1.1 2006/03/25 09:44:27 genstef Exp $
+
+*primateplunge-1.1 (25 Mar 2006)
+
+  25 Mar 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +primateplunge-1.1.ebuild:
+  New ebuild by myself
+
