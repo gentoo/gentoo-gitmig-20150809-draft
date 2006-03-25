@@ -1,6 +1,9 @@
-MD5 a128a24b7e1e737c1afdab1ecaf8e884 ChangeLog 4786
-RMD160 87db189b3b71fe84455142026beb3887a7bc5c34 ChangeLog 4786
-SHA256 70042be9db7562f98fab9d6f4e7f841f3eb9dcd49cd8e2772724fde21f8ebc57 ChangeLog 4786
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1055aa80ed11b40fc46e5e8a06a4ae62 ChangeLog 4908
+RMD160 6230cd9ac826f2e621ef736ae3d5976fab08500e ChangeLog 4908
+SHA256 efbad9f99f1f320e67881ac893488cb7792bc2f33f057fb6faae38608046a332 ChangeLog 4908
 MD5 bc94057d9203dc8c6a01efb2172f5a15 files/digest-root-tail-1.1 64
 RMD160 5c8cdc4ab4e20ea36f5213205bacf56ce62e5538 files/digest-root-tail-1.1 64
 SHA256 19fca7cd13f9d5afab7e54be7a116e82cf17edcedd80e69b2c0047e7f5b81dca files/digest-root-tail-1.1 64
@@ -22,6 +25,13 @@ SHA256 1b714f4a8debbaf64bcf4d8631165fd73eca0224f26090ec04bbc3ef834ab869 root-tai
 MD5 6d42b7b66a2c917f167fbade9f27f74d root-tail-1.2-r1.ebuild 887
 RMD160 a9b258b2d5cf315ed087cd13f3a24c575bea50b6 root-tail-1.2-r1.ebuild 887
 SHA256 a98810b492feddfe99a7e27fb15717346256207ec1b5a164574c67de0dd5307e root-tail-1.2-r1.ebuild 887
-MD5 968beb92e0eacc031e7506371335ffdb root-tail-1.2-r2.ebuild 1046
-RMD160 89e9610b4d4f029521c1e4b2dd53fe4c24ecb80b root-tail-1.2-r2.ebuild 1046
-SHA256 2e9e67f245b9a6ed84b3884bbd13f004a47de3c1e29cca8468dc88b2ab66716a root-tail-1.2-r2.ebuild 1046
+MD5 0ec94125bcb4be0189485809f5f7f3ef root-tail-1.2-r2.ebuild 1050
+RMD160 e987e1c0291f013b9093c212b1ae517e6817df45 root-tail-1.2-r2.ebuild 1050
+SHA256 d461b627df7a00487a48f95985d710f9dbd842918bc975b0d56b9d31f5fe2bee root-tail-1.2-r2.ebuild 1050
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEJWoCugEuf3OQ0akRAjqfAKCCTl8LNv5eAyCj8KjQlsAODpAWpgCgnqUC
+U+zYwLnVbCY2D2Ao/w1N90M=
+=d6Az
+-----END PGP SIGNATURE-----
