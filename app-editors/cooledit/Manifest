@@ -1,19 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 61870fa17c996e654b2fafd973f70ea9 ChangeLog 1920
-MD5 1fc953bca00642892e35d2a286a90fc5 cooledit-3.17.12.ebuild 859
+MD5 cbe34b5b6937e532ab584c3bb9040271 ChangeLog 2039
+RMD160 cf54e02f4e1c45b3abdec1a995767b1d5dfed3d9 ChangeLog 2039
+SHA256 1f81496926ac0dca5de9f551edb6f161e3f44ee0ce407cd0b374af9fce7120c6 ChangeLog 2039
+MD5 9ea1c592b249237f1da186b145ea9cfe cooledit-3.17.12.ebuild 860
+RMD160 c199417cc83a9a711ed183dd03d5fb9eb4c46a65 cooledit-3.17.12.ebuild 860
+SHA256 37af61eaffa777a8e316c967df177b9dd546f9abc3f39a1a5415b37f5fd98afc cooledit-3.17.12.ebuild 860
 MD5 a7024058e24947fd65d123dfe7a09266 cooledit-3.17.17.ebuild 966
+RMD160 9623f8e26f525548d2ec9c970ed731785094ea1c cooledit-3.17.17.ebuild 966
+SHA256 441ec7b8db481afafb1420c5f6b5f172b0632e1fb98b94baba6f0518bbe0b08e cooledit-3.17.17.ebuild 966
 MD5 400d5459b833aab4d89faf3b38665e66 cooledit-3.17.7.ebuild 807
+RMD160 7943acee012c5dbe4415ae41ab3012acaeb4688c cooledit-3.17.7.ebuild 807
+SHA256 1461a207e220d1e4a56478c5dbf57b2da1a2e14d86b77b69031d712cce289246 cooledit-3.17.7.ebuild 807
 MD5 405494936861099e988270d5e6ed7582 files/cooledit-3.17.17-gcc4.patch 682
-MD5 f1bdf7075843ece5a84088b337e30c9b files/digest-cooledit-3.17.12 69
+RMD160 24e5519666b45a2a23c91cc62f2cf57af8c09303 files/cooledit-3.17.17-gcc4.patch 682
+SHA256 e8ef6bf8d3ef355b7f560b35595e149258c1d7a51c13c66b1f37e7ff1751c48a files/cooledit-3.17.17-gcc4.patch 682
+MD5 fc2f69d118240cdd73638546b6838dba files/digest-cooledit-3.17.12 253
+RMD160 0ba322b70b4ecca38ec2525ccc48160964a7fd94 files/digest-cooledit-3.17.12 253
+SHA256 c625648f5961dd9ebd8a51d1aec50e03aaa1c0fd0c1b4dc8ab6294e72afeb408 files/digest-cooledit-3.17.12 253
 MD5 4d9540499e4d23e0b1ba3a917d13efd0 files/digest-cooledit-3.17.17 253
+RMD160 eee17bf8b3cf1ce48e3aa19d24452416a93ff8d0 files/digest-cooledit-3.17.17 253
+SHA256 f74048026f48e14dfca7315138e47c92c402e54de74e05ead3472da3ebf47601 files/digest-cooledit-3.17.17 253
 MD5 cd0766c29eb3b2519e2104cbdfb99772 files/digest-cooledit-3.17.7 68
+RMD160 26b27efe58ab418f495ee684d18e509184021d49 files/digest-cooledit-3.17.7 68
+SHA256 3de81f54e7b594f4e3ad4efb7f29c529a8a7f4b1915dc3429e2bb54b2203de0c files/digest-cooledit-3.17.7 68
 MD5 50117cfdeb267d9181cf9cacac87d8a6 metadata.xml 256
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFEIuno/NoSW7FuNV8RApkoAKC8oC6y58p9NBTouJNAJCqX0dXWvQCg2qj+
-5JHmas7y8bKxbWwsvYlSua4=
-=k2st
------END PGP SIGNATURE-----
+RMD160 f564038fc21efdd3b5ee03d1de546221990ef183 metadata.xml 256
+SHA256 4c0605b0c821709464eafa37874903cd8181aae4503efa5b9d14f6a3974dfd1c metadata.xml 256
