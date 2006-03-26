@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.12.0.ebuild,v 1.1 2006/03/19 12:37:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.12.0-r1.ebuild,v 1.1 2006/03/26 07:55:25 grobian Exp $
 
 inherit gnustep
 
@@ -115,12 +115,6 @@ pkg_setup() {
 #	fi
 }
 
-src_unpack() {
-	unpack ${A}
-#	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/make-user-defaults.patch-${PV}
-#	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/GNUstep-reset.sh.patch
-}
-
 src_compile() {
 	cd ${S}
 
@@ -129,12 +123,13 @@ src_compile() {
 	#  by econf
 	local myconf
 	myconf="--prefix=`egnustep_prefix`"
-	use non-flattened && myconf="$myconf --disable-flattened"
+	use non-flattened && myconf="$myconf --disable-flattened --enable-multi-platform"
 	myconf="$myconf --with-tar=/bin/tar"
 	myconf="$myconf --with-local-root=`egnustep_local_root`"
 	myconf="$myconf --with-network-root=`egnustep_network_root`"
 	myconf="$myconf --with-user-root=`egnustep_user_root`"
 	myconf="$myconf --enable-strip-makefiles"
+	myconf="$myconf --disable-importing-config-file"
 	econf $myconf || die "configure failed"
 
 	egnustep_make
@@ -143,28 +138,30 @@ src_compile() {
 src_install() {
 	. ${S}/GNUstep.sh
 
-	if [ -f ./[mM]akefile -o -f ./GNUmakefile ] ; then
-		local make_eval="\
-			special_prefix=\"\${D}\$(egnustep_system_root)\" \
-			makedir=\${D}\$(egnustep_system_root)/Library/Makefiles \
-			GNUSTEP_USER_ROOT=\${TMP} \
-			-j1"
+	local make_eval=" \
+		special_prefix=\"\${D}\$(egnustep_system_root)\" \
+		makedir=\${D}\$(egnustep_system_root)/Library/Makefiles \
+		GNUSTEP_USER_ROOT=\${T} \
+		GNUSTEP_INSTALLATION_DIR=\${D}\$(egnustep_system_root) \
+		-j1"
 
-		if use debug ; then
-			make_eval="${make_eval} debug=yes"
-		fi
-		if use verbose ; then
-			make_eval="${make_eval} verbose=yes"
-		fi
-		eval make ${make_eval} install || die "install has failed"
-	else
-		die "no Makefile found"
+	local docinstall="GNUSTEP_INSTALLATION_DIR=${D}$(egnustep_system_root)"
+
+	if use debug ; then
+		make_eval="${make_eval} debug=yes"
+	fi
+	if use verbose ; then
+		make_eval="${make_eval} verbose=yes"
 	fi
 
+	eval make ${make_eval} special_prefix=${D} install \
+		|| die "install has failed"
+
+# building documentation is broken
 #	if use doc ; then
 #		cd Documentation
-#		eval emake ${make_eval} all || die "doc make has failed"
-#		eval emake ${make_eval} install || die "doc install has failed"
+#		emake ${make_eval} all || die "doc make has failed"
+#		make ${make_eval} ${docinstall} install || die "doc install has failed"
 #		cd ..
 #	fi
 
@@ -173,5 +170,12 @@ src_install() {
 	echo "GNUSTEP_LOCAL_ROOT=$(egnustep_local_root)" >> ${D}/etc/conf.d/gnustep.env
 	echo "GNUSTEP_NETWORK_ROOT=$(egnustep_network_root)" >> ${D}/etc/conf.d/gnustep.env
 	echo "GNUSTEP_USER_ROOT='$(egnustep_user_root)'" >> ${D}/etc/conf.d/gnustep.env
+
+	insinto /etc/GNUstep
+	doins ${S}/GNUstep.conf
+
+	exeinto /etc/profile.d
+	doexe ${FILESDIR}/gnustep.sh
+	doexe ${FILESDIR}/gnustep.csh
 }
 
