@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.61 2006/03/25 16:43:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.62 2006/03/26 17:47:19 blubb Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -83,7 +83,7 @@
 # are deprecated in favor of the ones in linux-info.
 # See http://bugs.gentoo.org/show_bug.cgi?id=127506
 
-inherit eutils linux-info
+inherit eutils linux-info multilib
 EXPORT_FUNCTIONS pkg_setup pkg_postinst src_install src_compile pkg_postrm
 
 IUSE="" # don't put pcmcia here, rather in the ebuilds that actually support pcmcia
@@ -473,8 +473,9 @@ linux-mod_pkg_setup() {
 }
 
 linux-mod_src_compile() {
-	local modulename libdir srcdir objdir i n myARCH="${ARCH}"
+	local modulename libdir srcdir objdir i n myARCH="${ARCH}" myABI="${ABI}"
 	ARCH="$(tc-arch-kernel)"
+	ABI="${KERNEL_ABI}"
 
 	BUILD_TARGETS=${BUILD_TARGETS:-clean module}
 
@@ -513,6 +514,7 @@ linux-mod_src_compile() {
 	done
 
 	ARCH="${myARCH}"
+	ABI="${myABI}"
 }
 
 linux-mod_src_install() {
