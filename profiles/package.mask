@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5138 2006/03/25 16:12:15 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5139 2006/03/26 00:23:49 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -957,6 +957,8 @@ media-video/avifile
 >=net-misc/asterisk-1.2.0
 >=net-libs/libpri-1.2.0
 >=net-misc/zaptel-1.2.0
+# masked because of asterisk-1.2 mask:
+net-misc/asterisk-chan_misdn
 
 # Ryan Phillips <rphillips@gentoo.org> (12 Dec 2005)
 # Luabind doesn't compile with the latest stable boost, and no updates
