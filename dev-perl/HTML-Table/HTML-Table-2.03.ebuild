@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Table/HTML-Table-2.03.ebuild,v 1.1 2006/01/13 14:39:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Table/HTML-Table-2.03.ebuild,v 1.2 2006/03/26 15:43:12 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/A/AJ/AJPEACOCK/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"

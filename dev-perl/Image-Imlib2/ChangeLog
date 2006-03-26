@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Image-Imlib2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/ChangeLog,v 1.10 2006/01/13 14:47:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/ChangeLog,v 1.11 2006/03/26 15:46:41 mcummings Exp $
+
+  26 Mar 2006; Michael Cummings <mcummings@gentoo.org>
+  Image-Imlib2-1.07.ebuild:
+  Marking stable sparc and x86
 
 *Image-Imlib2-1.07 (13 Jan 2006)
 
