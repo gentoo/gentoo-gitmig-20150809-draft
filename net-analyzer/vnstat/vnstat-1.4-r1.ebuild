@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4-r1.ebuild,v 1.2 2005/12/03 19:22:32 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4-r1.ebuild,v 1.3 2006/03/26 23:24:12 jokey Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Console-based network traffic monitor that keeps statistics of network usage"
 HOMEPAGE="http://humdi.net/vnstat/"
@@ -19,10 +19,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-long_iface_name.patch
+	sed -i \
+		-e "s:^\(CFLAGS = \).*$:\1${CFLAGS}:" \
+		-e "s:^\(CC = \).*$:\1$(tc-getCC):" \
+		src/Makefile || die "sed failed"
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" || die
+	emake || die
 }
 
 src_install() {
@@ -30,12 +34,13 @@ src_install() {
 
 	dobin src/vnstat || die
 	exeinto /etc/cron.hourly
-	doexe "${FILESDIR}"/vnstat.cron vnstat
+	newexe ${FILESDIR}/vnstat.cron vnstat
 	doman man/vnstat.1
 
 	newdoc pppd/vnstat_ip-down ip-down.example
 	newdoc pppd/vnstat_ip-up ip-up.example
-	dodoc CHANGES INSTALL README UPGRADE FAQ
+	dodoc CHANGES README UPGRADE FAQ
+	newdoc INSTALL README.setup
 }
 
 pkg_postinst() {

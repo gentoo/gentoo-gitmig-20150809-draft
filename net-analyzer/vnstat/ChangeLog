@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/vnstat
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.11 2005/12/03 19:22:32 tgall Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.12 2006/03/26 23:24:11 jokey Exp $
+
+  26 Mar 2006; Markus Ullmann <jokey@gentoo.org> vnstat-1.4.ebuild,
+  vnstat-1.4-r1.ebuild:
+  Respecting user CFLAGS and allow cross-compile, thanks to Josu Lopez
+  Fernandez <zamorate@zamorate.net> wrt bug #127013
 
   03 Dec 2005; Tom Gall <tgall@gentoo.org> vnstat-1.4-r1.ebuild:
   stable on ppc64
