@@ -1,4 +1,31 @@
-MD5 d9fc9896f4e8e0999df34cffdbf68d3b ChangeLog 408
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a8a8b575d2abec6ece00c0500f480d94 ChangeLog 614
+RMD160 97b451f3febbef0d231b56419d52837b54837cb1 ChangeLog 614
+SHA256 824de2cc4259e5746e44637a92ce1d58a2a0c74676475c653ca732164ac3f348 ChangeLog 614
 MD5 c06d0ba97e330e46424cd4ead8bc46d6 files/digest-mplayer-sh-0.8.6-r1 66
+RMD160 3c5395a7e18f5ef2ac395d4593fff17b4b00c066 files/digest-mplayer-sh-0.8.6-r1 66
+SHA256 800d0467daf25747a0b08a5e6a1d8c74332058e86b865a4d233be7e45ce008c6 files/digest-mplayer-sh-0.8.6-r1 66
+MD5 adfff0d2d40fc305f16cebce29ca5978 files/digest-mplayer-sh-0.8.6-r2 244
+RMD160 b2f7e103e1d59e7304ad053dfb557c634b39cead files/digest-mplayer-sh-0.8.6-r2 244
+SHA256 3165a4ff4bc197c62409a8bb16ed76168b13eb3fb18ddb0d09ae2fbfea79d647 files/digest-mplayer-sh-0.8.6-r2 244
+MD5 262049fb406cde17f4947b3fb2c2b86e files/mplayer-sh-0.8.6-parameter-aid.diff 3541
+RMD160 8f19e51557ea0779d56fcde5cf0f2fdac0cd521c files/mplayer-sh-0.8.6-parameter-aid.diff 3541
+SHA256 b63f1c0220b2a2fce8ad5a81767a756bfa91aca769c3a943058cbbf023f56dc5 files/mplayer-sh-0.8.6-parameter-aid.diff 3541
 MD5 877a7f594a277abff9b23dd40d8434bb metadata.xml 364
+RMD160 a646a36caa9dca40a1fdb4c94393e42b1c747c9e metadata.xml 364
+SHA256 b5850390a83c624957b2d10c1fe89bca9f70a8c00e5cb5bdb7a77609c25d1692 metadata.xml 364
 MD5 9937434dcf316d06a71f47db09573bf4 mplayer-sh-0.8.6-r1.ebuild 1119
+RMD160 2aaeb8a2330f7ffba6ee2920edeb628745aa7309 mplayer-sh-0.8.6-r1.ebuild 1119
+SHA256 4b67b05983b458da7f575972dbf42d7e86fad45277feaf9d2fb0da077fdc4dc4 mplayer-sh-0.8.6-r1.ebuild 1119
+MD5 18198b676cd991f0ead30af783cd5c94 mplayer-sh-0.8.6-r2.ebuild 1111
+RMD160 01f8fa1037b8edd62478244f3aaed4a7c1c25543 mplayer-sh-0.8.6-r2.ebuild 1111
+SHA256 279308e22fc8182241f0147ea36084476db0b2d786e50f5630cc3bc1c12157f5 mplayer-sh-0.8.6-r2.ebuild 1111
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEJw5cZfSl1Kp5KmoRAoZpAJ0cdOmKy/R/4GF757aO5MLvbXd06gCeJLxy
+uTa5GA8lmxWisGqbPE+w6iM=
+=d9o5
+-----END PGP SIGNATURE-----

@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer-sh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/ChangeLog,v 1.1 2006/01/08 21:35:14 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/ChangeLog,v 1.2 2006/03/26 21:57:13 zzam Exp $
+
+*mplayer-sh-0.8.6-r2 (26 Mar 2006)
+
+  26 Mar 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/mplayer-sh-0.8.6-parameter-aid.diff, +mplayer-sh-0.8.6-r2.ebuild:
+  Added patch for selection of audio-language
 
 *mplayer-sh-0.8.6-r1 (08 Jan 2006)
 
