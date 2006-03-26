@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e92126511e68e31b1ec5f55517fbda1d ChangeLog 2162
+MD5 f4e0e7de3ea6029a8bbdc57d44aa9d34 ChangeLog 2276
+RMD160 8e9530fc8f74f06e47397c5782d9625118fe683a ChangeLog 2276
+SHA256 e749c5b189f078da72c7a78c91d40a414f5c5ed28d4ce9e745623143bf47ef8a ChangeLog 2276
 MD5 c879383537659d74f314eebc2452e349 files/digest-log-dispatch-2.10 68
-MD5 f1f008c3927ca40a2d92221cd688d90d files/digest-log-dispatch-2.11 68
+RMD160 74b4eeaca74b382418e7b49c4abfbe36d63e7885 files/digest-log-dispatch-2.10 68
+SHA256 041936c53ef14bfbbb0baa7d23f6d4c65629ed965b0efd6e143a4af52eac021d files/digest-log-dispatch-2.10 68
+MD5 d6d9c6cb8c56b6358e84b0cb4f95176a files/digest-log-dispatch-2.11 250
+RMD160 4803b2668be3f8a2770d7bc85701a444b5cf27b5 files/digest-log-dispatch-2.11 250
+SHA256 cfea8ee93ed80c1d244e7502009b7cf0cb9b83a93b27a0c26a16fc1b45ff169b files/digest-log-dispatch-2.11 250
 MD5 5047a387b6709d84f9ac2a81a8949182 log-dispatch-2.10.ebuild 669
-MD5 3e1803598ae941768f17cc3560bb7dd7 log-dispatch-2.11.ebuild 672
+RMD160 0b8909bdd962ca1976712afed23409524c2bb85a log-dispatch-2.10.ebuild 669
+SHA256 d7cb6a24e08b3eed91140924e605cea9bb730e51f030848772fbccef71344004 log-dispatch-2.10.ebuild 669
+MD5 093ca0ce2dc4b4ad950e74fb580f6f07 log-dispatch-2.11.ebuild 670
+RMD160 8166889283d538bbc16f1d33156403963c254cb8 log-dispatch-2.11.ebuild 670
+SHA256 552e5fddd13c480a841e8c0415464e7d706843f0bfbf0775578ef5936d367c52 log-dispatch-2.11.ebuild 670
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEIw22FdQwWVoAgN4RAoV7AJ97HxDpemHn8lHaGBtbQpuceIM0dgCglUla
-IkuZOzQ3Q1wpZDBQDLpuD/E=
-=DN+v
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
