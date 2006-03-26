@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkmime
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmime/ChangeLog,v 1.25 2006/01/22 22:53:09 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmime/ChangeLog,v 1.26 2006/03/26 17:47:06 agriffis Exp $
+
+  26 Mar 2006; Aron Griffis <agriffis@gentoo.org> libkmime-3.4.1.ebuild:
+  Mark 3.4.1 stable on ia64
 
 *libkmime-3.5.1 (23 Jan 2006)
 
