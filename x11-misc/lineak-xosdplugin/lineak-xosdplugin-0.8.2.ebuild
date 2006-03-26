@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/lineak-xosdplugin-0.8.2.ebuild,v 1.2 2005/11/02 19:56:28 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/lineak-xosdplugin-0.8.2.ebuild,v 1.3 2006/03/26 00:34:14 genstef Exp $
 
 inherit eutils
 
@@ -17,12 +17,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-RDEPEND="virtual/x11
-		>x11-misc/lineakd-0.8
+RDEPEND="=x11-misc/lineakd-${PV}*
 		x11-libs/xosd"
-DEPEND="${RDEPEND}
-		>=sys-devel/automake-1.7
-		>=sys-devel/autoconf-2.53"
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	epatch ${FILESDIR}/do-not-depend-on-kde.patch
