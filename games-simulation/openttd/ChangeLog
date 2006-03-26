@@ -1,6 +1,14 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.17 2006/03/25 23:25:20 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.18 2006/03/26 22:15:58 pylon Exp $
+
+*openttd-0.4.7 (26 Mar 2006)
+
+  26 Mar 2006; Lars Weiler <pylon@gentoo.org> +openttd-0.4.7.ebuild:
+  Hotfix release for 0.4.6; bug #127663.  The scenarios are also back now, but
+  they will be installed with the scenario USE-flag only (not everybody wants
+  to download the 4.7MB).  Thanks to Luca Spiller who found the
+  scenario-package.
 
 *openttd-0.4.6 (25 Mar 2006)
 
