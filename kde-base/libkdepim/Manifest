@@ -1,4 +1,4 @@
-MD5 712b23581eca0fa31a55761e381b1e3a ChangeLog 4887
+MD5 7f2515e3b96f61bda30570b0bebbd5fc ChangeLog 4990
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkdepim-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-libkdepim-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-libkdepim-3.4.3 67
@@ -7,7 +7,7 @@ MD5 4505de7bf9eafb017c93b041e2fe4f2d files/digest-libkdepim-3.5.1 67
 MD5 4b77483fe398773d23a75714c3dd6223 files/digest-libkdepim-3.5.2 247
 MD5 3d81dacf5ddb8f4838c35595882d4376 libkdepim-3.4.1.ebuild 551
 MD5 19370076a7e24292cd8a17415d568838 libkdepim-3.4.2.ebuild 555
-MD5 37d27c91c844b7184b27e5a032c01a14 libkdepim-3.4.3.ebuild 554
+MD5 362bf7d1932bb9fbc7c1fd5b5ef5351e libkdepim-3.4.3.ebuild 556
 MD5 50b9d42b0de21ac03e18e85a230eb5dc libkdepim-3.5.0.ebuild 523
 MD5 70d5dcc207463a81b58a6d2a0fbc7d42 libkdepim-3.5.1.ebuild 524
 MD5 36864e32b76db7bbc96adfa06635d0d6 libkdepim-3.5.2.ebuild 524
