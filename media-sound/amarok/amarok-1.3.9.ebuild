@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.9.ebuild,v 1.1 2006/03/26 19:17:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.9.ebuild,v 1.2 2006/03/26 22:58:07 flameeyes Exp $
 
 LANGS="af az be bg bn br ca cs cy da de el en_GB eo es et eu fi fr ga gl he hi
 hr hu id is it ja km ko ku lo lt nb nds nl nn pa pl pt pt_BR ro ru se sl sq sr
 sr@Latn ss sv ta tg th tr uk uz zh_CN zh_TW"
-LANGS_DOC="da de es et fr it nl pl pt pt_BR ru sv"
+LANGS_DOC="da de es et fr it nl pt pt_BR ru sv"
 
 USE_KEG_PACKAGING=1
 
@@ -71,6 +71,12 @@ pkg_setup() {
 	kde_pkg_setup
 
 	append-flags -fno-inline
+}
+
+src_unpack() {
+	kde_src_unpack
+
+	rm -rf ${S}/configure ${S}/doc/pl
 }
 
 src_compile() {
