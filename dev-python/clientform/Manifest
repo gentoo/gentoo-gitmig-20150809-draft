@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ed6a4d4f64775947978158fc77f36702 ChangeLog 1405
-MD5 aff5ab0af4a5993a881a2f4e84099521 clientform-0.1.17.ebuild 669
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 c873597e3f1261b68051267374afcdcf ChangeLog 1592
+RMD160 c8c9024b644dfbbc45bbabf9a0f19e3b8d115456 ChangeLog 1592
+SHA256 008fa539174c86c61564c8ec9d0a474a615ed7a2a3ba337a7bfd56fac2c2deaa ChangeLog 1592
 MD5 927e9d346dce0f6ddddc852607bb707e clientform-0.1.16.ebuild 668
-MD5 eb46ecba9f3f211d1febcd4dfb1ea06d files/digest-clientform-0.1.17 68
+RMD160 c1af85cf9e33ce931c6c2f92d1070350b100fe24 clientform-0.1.16.ebuild 668
+SHA256 fbc607bdee264b768a2deefd239445cc630f07285cecce5febe9847e50fe17cb clientform-0.1.16.ebuild 668
+MD5 aff5ab0af4a5993a881a2f4e84099521 clientform-0.1.17.ebuild 669
+RMD160 1c02eb3f6abc999fa7d359ce59a9e80ce921cb93 clientform-0.1.17.ebuild 669
+SHA256 1514416d19b28d7bcb1c8069681877ce28071f64a3fb0b9243c28639a0d6c4da clientform-0.1.17.ebuild 669
+MD5 3f0fb6e34b972ae60a1788c14e578912 clientform-0.2.2.ebuild 880
+RMD160 818822260c2ffcda17b3d5be7e87f167538d6459 clientform-0.2.2.ebuild 880
+SHA256 bbaf8a052d4e5e9fdfc488317e5b35a4f1f52427224bb035deb9c7d234c96f3c clientform-0.2.2.ebuild 880
 MD5 11058f952c00365c9b21fdb3ea27356d files/digest-clientform-0.1.16 68
+RMD160 ca958e4312e0774fdbc9d27e7426f2ebbcd8f731 files/digest-clientform-0.1.16 68
+SHA256 41c1a1322ea05d3a91574ec1351ec8cd8e78e9813fde3631a474b86c3823b03e files/digest-clientform-0.1.16 68
+MD5 eb46ecba9f3f211d1febcd4dfb1ea06d files/digest-clientform-0.1.17 68
+RMD160 5fc89f24ad6f8f83f727bbcc5c87414776db6e5d files/digest-clientform-0.1.17 68
+SHA256 48fa484f718f942dce9f4de32cfe57494a4bd36c09b4d90e7bcf7080166c4916 files/digest-clientform-0.1.17 68
+MD5 4344e72a6d92e4cabf411e2a70bdd952 files/digest-clientform-0.2.2 247
+RMD160 7d4b28794408853c6fe2591a0d3b526d2a9b84ae files/digest-clientform-0.2.2 247
+SHA256 bf6c32ce83871826641901a0ad74a2d76660030aa33cfd1f67effc4f4655f1f7 files/digest-clientform-0.2.2 247
+MD5 a1ac5bc7d6bc6faedd523bb3c99cfb14 metadata.xml 494
+RMD160 57ee2aae13ed646023d5b4e1bc07f1ec32acf01f metadata.xml 494
+SHA256 c71237617b311fa21e09ebe036f43e77b0f15e18e8a5a4b7177b422ea7a9a0e1 metadata.xml 494
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.15 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFB/x7Bz2gxt1z4IGYRAisPAJ9M6VN+sgsXTZA3uLLVSH/aJ5NsewCfaKdy
-3SYz1bPONzGBASzu7H1Wf/s=
-=VPkh
+iD8DBQFEJwpe2jLqHNfbg2URAtYXAKCkIkXmDi3nQvUDup+oWAdsiLo8HACg0NFD
+9GpBZIMDUVH/YASVZ3LRwaY=
+=26xJ
 -----END PGP SIGNATURE-----
