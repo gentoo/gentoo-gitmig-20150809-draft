@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.9 2006/03/24 20:23:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.10 2006/03/26 18:52:55 hansmi Exp $
+
+  26 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
+  eselect-opengl-1.0.3.ebuild:
+  Stable on hppa, ppc.
 
   24 Mar 2006; Jeremy Huddleston <eradicator@gentoo.org>
   eselect-opengl-1.0.3.ebuild:
