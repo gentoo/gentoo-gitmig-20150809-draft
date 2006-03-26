@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 63d0e417000dae5b58c5cabc0c1e54d4 ChangeLog 454
 RMD160 ae761aecdbd4b74ee5fd9b2a7470bd1a9b65f816 ChangeLog 454
 SHA256 18721ed5fca7dff7f71b2e42b14001c2c9a12e5400cf3171d7d10d1f7594d479 ChangeLog 454
@@ -16,3 +19,10 @@ SHA256 f29895f3e2a9d2b16422f9eb9d1377de3ab82bd1acc08f0505030678b7ff48a9 metadata
 MD5 3c9bf4b93ce69ba4aa8519f5f3fde2b8 vdr-osdteletext-0.5.1.ebuild 778
 RMD160 33e8cdd7bfa2495fdcdbebecdb14a2754a97918a vdr-osdteletext-0.5.1.ebuild 778
 SHA256 4e9d40cc1347c2d652303d39904894591848b156bb0e59dc36d3adbc84ca4d5a vdr-osdteletext-0.5.1.ebuild 778
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEJvVPI1lqEGTUzyQRAq8GAJwIAPh80rgUYWoSYg7Eo6Q+abW1sgCeNYzs
+2KFhRms++nJVe0iaN+vWQ6E=
+=fzDW
+-----END PGP SIGNATURE-----
