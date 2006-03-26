@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.8.2.ebuild,v 1.6 2006/03/26 00:23:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0_pre1.ebuild,v 1.1 2006/03/26 00:23:20 genstef Exp $
 
-IUSE=""
-MY_PV=${PV/_/}
-MY_P=${PN}-${MY_PV}
+inherit eutils
+
+MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Linux support for Easy Access and Internet Keyboards features X11 support"
@@ -13,23 +13,32 @@ SRC_URI="mirror://sourceforge/lineak/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+IUSE=""
+KEYWORDS="~amd64 ~ppc ~x86"
 
-DEPEND="|| ( (
+RDEPEND="|| ( (
+			x11-libs/libICE
+			x11-libs/libSM
+			x11-libs/libX11
+			x11-libs/libXext )
+		virtual/x11 )"
+DEPEND="${RDEPEND}
+		|| ( (
 			x11-libs/libxkbfile
 			x11-libs/libXt
 			x11-proto/xextproto
 			x11-proto/xproto )
 		virtual/x11 )"
 
-
 src_compile() {
-	econf --with-x || die
-	emake || die
+	econf --with-x || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install () {
-	make DESTDIR=${D} lineakddocdir=/usr/share/doc/${P} install || die
+	sed -i 's:$(DESTDIR)${DESTDIR}:$(DESTDIR):' lineakd/Makefile
+
+	make DESTDIR=${D} install || die "make install failed"
 	dodoc AUTHORS README TODO
 	keepdir /usr/lib/lineakd/plugins
 
