@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2.ebuild,v 1.1 2006/03/25 19:31:02 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2.ebuild,v 1.2 2006/03/26 18:40:37 danarmak Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -75,10 +75,7 @@ DEPEND="${DEPEND}
 		) virtual/x11 )
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/kxkb3.5.1.xx_XX_layouts.patch
-	${FILESDIR}/kdebase-3.5.1-kicker.patch
-	${FILESDIR}/konsole-3.5.1-detach-send2all.patch
-	${FILESDIR}/kwin-3.5.1-systray.patch"
+PATCHES="${FILESDIR}/konsole-3.5.1-detach-send2all.patch"
 
 src_unpack() {
 	kde_src_unpack

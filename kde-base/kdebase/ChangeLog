@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.266 2006/03/25 19:31:02 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.267 2006/03/26 18:40:37 danarmak Exp $
+
+  26 Mar 2006; Dan Armak <danarmak@gentoo.org> kdebase-3.5.2.ebuild:
+  Remove patches from 3.5.1 which are no longer necessary in 3.5.2.
 
 *kdebase-3.5.2 (25 Mar 2006)
 
