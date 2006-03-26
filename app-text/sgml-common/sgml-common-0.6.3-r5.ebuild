@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.32 2006/03/26 13:56:30 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r5.ebuild,v 1.1 2006/03/26 13:56:30 nattfodd Exp $
+
+inherit autotools eutils
 
 DESCRIPTION="Base ISO character entities and utilities for SGML"
 HOMEPAGE="http://www.iso.ch/cate/3524030.html"
@@ -8,10 +10,11 @@ SRC_URI="mirror://kde/devel/docbook/SOURCES/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64
+~s390 ~sh ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=sys-devel/automake-1.6"
+DEPEND=""
 RDEPEND=""
 
 src_unpack() {
@@ -19,8 +22,9 @@ src_unpack() {
 	# We use a hacked version of install-catalog that supports the ROOT
 	# variable, and puts quotes around the CATALOG files.
 	cp "${FILESDIR}/${P}-install-catalog.in" "${S}/bin/install-catalog.in"
-	cd "${S}"
-	automake -a
+	cd ${S}
+	epatch ${FILESDIR}/${P}-configure.in.patch
+	eautoreconf
 }
 
 src_install() {

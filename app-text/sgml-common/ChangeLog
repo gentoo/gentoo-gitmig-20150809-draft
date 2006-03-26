@@ -1,6 +1,16 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.32 2006/01/14 14:02:33 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.33 2006/03/26 13:56:30 nattfodd Exp $
+
+*sgml-common-0.6.3-r5 (26 Mar 2006)
+
+  26 Mar 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  +files/sgml-common-0.6.3-configure.in.patch,
+  +files/sgml-common-0.6.3-install-catalog.in,
+  -files/sgml-common-0.6.3-r4-install-catalog.in,
+  sgml-common-0.6.3-r4.ebuild, +sgml-common-0.6.3-r5.ebuild:
+  Install doc in /usr/share/doc instead of /usr/doc. Thanks to Andrew
+  Kirilenko for the report and Christan Heim for the patch.
 
   14 Jan 2006; Leonardo Boshell <leonardop@gentoo.org>
   files/sgml-common-0.6.3-r4-install-catalog.in,

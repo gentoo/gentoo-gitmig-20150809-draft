@@ -1,25 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2bd03283da58b3dba8109de1ce946ef4 ChangeLog 4588
-RMD160 41500bb71a0ef524a274959f8acb3efde4ca46b8 ChangeLog 4588
-SHA256 336185fc1195e02b634b88c91a4cc4c188c5fb737a77aeb25c1a62060421d5c7 ChangeLog 4588
-MD5 80a892383a2ec3e9e4b4efe8868b6db0 files/digest-sgml-common-0.6.3-r4 65
-RMD160 a2d24506806f0cc98aaf012a965224e57cc461eb files/digest-sgml-common-0.6.3-r4 65
-SHA256 0f9202c362d354b643a5a46d39a471ca5021c96d3aa3fc5d7f9b69970d91081f files/digest-sgml-common-0.6.3-r4 65
-MD5 d54c8e50cf0f9e8fc72433ca67cd848a files/sgml-common-0.6.3-r4-install-catalog.in 4917
-RMD160 f4c330fbea31c09201f5c75cbf6e85e894327ebd files/sgml-common-0.6.3-r4-install-catalog.in 4917
-SHA256 71db2836b286741b853897d040c22b9e632097c0039be32dc98fd0a83297b654 files/sgml-common-0.6.3-r4-install-catalog.in 4917
+MD5 ef9e97e7e8586f6cebe215c2520c8992 ChangeLog 5014
+RMD160 c1f5119490085321948d55a236fbf5ccae0adbc4 ChangeLog 5014
+SHA256 4419784da4831c2950df67009dc9694cadf120308a578a26f434848db4a63307 ChangeLog 5014
+MD5 ed80d3150b7151b2db464cac2220e87b files/digest-sgml-common-0.6.3-r4 241
+RMD160 31bebdffb57759155f94d90653e17956f8e30654 files/digest-sgml-common-0.6.3-r4 241
+SHA256 32c78d10e852b45bba816c390d7ed87d87754ca91cad13a2946f717a6c22daca files/digest-sgml-common-0.6.3-r4 241
+MD5 ed80d3150b7151b2db464cac2220e87b files/digest-sgml-common-0.6.3-r5 241
+RMD160 31bebdffb57759155f94d90653e17956f8e30654 files/digest-sgml-common-0.6.3-r5 241
+SHA256 32c78d10e852b45bba816c390d7ed87d87754ca91cad13a2946f717a6c22daca files/digest-sgml-common-0.6.3-r5 241
+MD5 9518ad388371b562c9376c868e64a44f files/sgml-common-0.6.3-configure.in.patch 360
+RMD160 03454741e40ff5436d58e2379ee9b8a8da8b5986 files/sgml-common-0.6.3-configure.in.patch 360
+SHA256 c1377215a0a92526cfa476dff941d00a713d156667ce37c39bf3f0fa02b71ad4 files/sgml-common-0.6.3-configure.in.patch 360
+MD5 d54c8e50cf0f9e8fc72433ca67cd848a files/sgml-common-0.6.3-install-catalog.in 4917
+RMD160 f4c330fbea31c09201f5c75cbf6e85e894327ebd files/sgml-common-0.6.3-install-catalog.in 4917
+SHA256 71db2836b286741b853897d040c22b9e632097c0039be32dc98fd0a83297b654 files/sgml-common-0.6.3-install-catalog.in 4917
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
-MD5 85fd418ceb1e460cb17a5d2ebfd86795 sgml-common-0.6.3-r4.ebuild 1996
-RMD160 d8971caaa61ae91791790af0ba32b61e50b09b5b sgml-common-0.6.3-r4.ebuild 1996
-SHA256 b8d5d214bc61a5e9c5879b775478f686852401914ef7983b092b8aa487d1efc8 sgml-common-0.6.3-r4.ebuild 1996
+MD5 7991f940485ba5e1687d7e42c121bb29 sgml-common-0.6.3-r4.ebuild 1997
+RMD160 a0b67262bb01dfff67c35e45ee6d341b3ca706db sgml-common-0.6.3-r4.ebuild 1997
+SHA256 08553153140a8cd48399433ec9955fcee77c14a4ef2fb9556251b857c5afbb57 sgml-common-0.6.3-r4.ebuild 1997
+MD5 85622dcd83f9dff50088734a36cd9ca7 sgml-common-0.6.3-r5.ebuild 2054
+RMD160 cd4c6e21d59c0b64c6aa1d3f3bfd573fd1e92938 sgml-common-0.6.3-r5.ebuild 2054
+SHA256 429d4017e387f327e86b5f97af8e27e7ca9c195f713a66fe164cc2aa5d9b60ea sgml-common-0.6.3-r5.ebuild 2054
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEH2pt2+ySkm8kpY0RAqCcAJ9D92cOhtdsG5Tq2wuVLNlPUlQrqgCfaFFR
-xVcVApFdEpGUEwIboZ7KDVo=
-=ELDL
+iD8DBQFEJqvqwx9vvAARv2sRAuoXAJwJMSfpeEDx0VWO2MjylBnlTLEC4ACdFG8J
+b/KJ8vD57Rzz/CsZIby60Gk=
+=nOub
 -----END PGP SIGNATURE-----
