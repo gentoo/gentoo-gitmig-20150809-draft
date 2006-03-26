@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.16 2006/03/23 10:06:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.17 2006/03/26 20:03:49 joshuabaergen Exp $
 
 inherit eutils
 
@@ -226,6 +226,7 @@ RDEPEND="${RDEPEND}
 				)
 			)
 		)
+	input_devices_synaptics? ( >=x11-drivers/synaptics-0.14.4-r2 )
 	|| (
 			(
 				video_cards_apm? ( x11-drivers/xf86-video-apm )
