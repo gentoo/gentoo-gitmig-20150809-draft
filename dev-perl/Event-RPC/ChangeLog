@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Event-RPC
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/ChangeLog,v 1.7 2006/03/15 16:41:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/ChangeLog,v 1.8 2006/03/26 15:21:41 mcummings Exp $
+
+  26 Mar 2006; Michael Cummings <mcummings@gentoo.org>
+  Event-RPC-0.88.ebuild:
+  60+ days, marking stable for sparc and x86
 
   15 Mar 2006; Markus Rothe <corsair@gentoo.org> Event-RPC-0.88.ebuild:
   Added ~ppc64; bug #126187
