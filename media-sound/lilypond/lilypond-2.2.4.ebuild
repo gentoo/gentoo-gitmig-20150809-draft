@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.2.4.ebuild,v 1.5 2006/02/27 20:30:24 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.2.4.ebuild,v 1.6 2006/03/26 21:51:40 agriffis Exp $
 
 inherit versionator
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/flex-2.5.4a-r5
 	>=sys-devel/gcc-3.1-r8
 	>=sys-devel/make-3.80
-	>=app-text/mftrace-1.0.27
+	=app-text/mftrace-1.0*
 	sys-devel/bison !=sys-devel/bison-1.75
 	doc? ( media-gfx/imagemagick
 		>=media-libs/netpbm-9.12-r4 )"
@@ -49,7 +49,7 @@ src_compile() {
 	addwrite /usr/share/texmf/ls-R
 
 	econf --build=${CHOST} || die "econf failed"
-	emake || die "emake failed"
+	LC_ALL=C emake || die "emake failed"
 
 	if use doc; then
 		make web || die "make web failed"

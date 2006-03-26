@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.4.2.ebuild,v 1.3 2006/02/27 20:30:24 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.4.2.ebuild,v 1.4 2006/03/26 21:51:40 agriffis Exp $
 
 inherit versionator
 
@@ -50,7 +50,7 @@ src_compile() {
 	addwrite /usr/share/texmf/ls-R
 
 	econf --build=${CHOST} || die "econf failed"
-	emake || die "emake failed"
+	LC_ALL=C emake || die "emake failed"
 
 	if use doc; then
 		make web || die "make web failed"

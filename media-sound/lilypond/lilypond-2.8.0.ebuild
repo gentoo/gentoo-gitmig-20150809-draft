@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.8.0.ebuild,v 1.1 2006/03/26 04:41:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.8.0.ebuild,v 1.2 2006/03/26 21:51:40 agriffis Exp $
 
 inherit versionator
 
@@ -44,7 +44,7 @@ src_compile() {
 		$(use_enable profile profiling) \
 		--with-ncsb-dir=/usr/share/fonts/default/ghostscript \
 		|| die "econf failed"
-	emake || die "emake failed"
+	LC_ALL=C emake || die "emake failed"
 }
 
 src_install () {
