@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/prewikka
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.15 2006/02/16 03:14:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.16 2006/03/26 23:56:20 jokey Exp $
+
+*prewikka-0.9.3-r1 (26 Mar 2006)
+
+  26 Mar 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/prewikka.conf-sample, +prewikka-0.9.3-r1.ebuild:
+  Adding sample config, thanks to Eric Brown <bigwhitecow@hotmail.com> wrt bug
+  #126986
 
   16 Feb 2006; Jason Wever <weeve@gentoo.org> prewikka-0.9.3.ebuild:
   Stable on SPARC.
