@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 801831950448503857e8989afa83ce4a ChangeLog 2105
+MD5 97439a12c5d679e9323efea8ee8d0179 ChangeLog 2261
 MD5 5612ff2f947bd106fbfded0f885af0d7 files/digest-scmxx-0.8.2 64
+MD5 7e078b036df64de2031868bb7f41ee5b files/digest-scmxx-0.9.0 64
 MD5 8e1fd49c29f85eea8da87d6e7de450c6 metadata.xml 165
 MD5 b973fd60b077cd951a33dbd26d6a5921 scmxx-0.8.2.ebuild 645
+MD5 2c3e4512c271f8c1c3989c00daf373be scmxx-0.9.0.ebuild 732
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEAHicjG8pv1lIUX4RAiNnAKCj3JQhNaaBE9MRbzEvyOCQ7XtpJACg6Cpd
-uEdnos3ssITGqAWzes14mSk=
-=8pKE
+iD8DBQFEJvH1jG8pv1lIUX4RAt4LAJ9+oPRIV7ulE46ghPun4d3W1oeZZACguA16
+VuaB8HcI2WKEALlfan+nZaI=
+=R/xK
 -----END PGP SIGNATURE-----
