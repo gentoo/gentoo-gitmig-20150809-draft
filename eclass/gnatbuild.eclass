@@ -1,18 +1,19 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.6 2006/03/20 14:57:41 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.7 2006/03/26 16:49:43 george Exp $
 
 # ATTN!
 # set HOMEPAGE and LICENSE in appropriate ebuild, as we have
 # gnat developed at two locations now.
 
-inherit versionator toolchain-funcs flag-o-matic multilib
+inherit eutils versionator toolchain-funcs flag-o-matic multilib libtool fixheadtails gnuconfig
 
 EXPORT_FUNCTIONS pkg_setup pkg_postinst pkg_prerm src_unpack src_compile src_install
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
-IUSE="nls multilib"
+IUSE="nls"
+# multilib is supported via profiles now, multilib usevar is deprecated
 
 RDEPEND="app-admin/eselect-gnat"
 
@@ -77,6 +78,10 @@ is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
 }
 
+# Bootstrap CTARGET and SLOT logic. For now BOOT_TARGET=CHOST is "guaranteed" by
+# profiles, so mostly watch out for the right SLOT used in the bootstrap.
+BOOT_TARGET=${CTARGET}
+BOOT_SLOT=${SLOT}
 
 # set our install locations
 PREFIX=${GNATBUILD_PREFIX:-/usr} # not sure we need this hook, but may be..
@@ -135,6 +140,13 @@ is_multilib() {
 
 # adapted from toolchain,
 # left only basic multilib functionality and cut off mips stuff
+
+create_specs_file() {
+	einfo "Creating a vanilla gcc specs file"
+	"${WORKDIR}"/build/gcc/xgcc -dumpspecs > "${WORKDIR}"/build/vanilla.specs
+}
+
+
 create_gnat_env_entry() {
 	dodir /etc/env.d/gnat
 	local gnat_envd_base="/etc/env.d/gnat/${CTARGET}-${PN}-${SLOT}"
@@ -227,6 +239,36 @@ do_gnat_config() {
 	einfo "tool as gnatgcov."
 }
 
+
+# Taken straight from the toolchain.eclass. Only removed the "obsolete hunk"
+#
+# The purpose of this DISGUSTING gcc multilib hack is to allow 64bit libs
+# to live in lib instead of lib64 where they belong, with 32bit libraries
+# in lib32. This hack has been around since the beginning of the amd64 port,
+# and we're only now starting to fix everything that's broken. Eventually
+# this should go away.
+#
+# Travis Tilley <lv@gentoo.org> (03 Sep 2004)
+#
+disgusting_gcc_multilib_HACK() {
+	local config
+	local libdirs
+	case $(tc-arch) in
+		amd64)
+			config="i386/t-linux64"
+			libdirs="../$(get_abi_LIBDIR amd64) ../$(get_abi_LIBDIR x86)" \
+		;;
+		ppc64)
+			config="rs6000/t-linux64"
+			libdirs="../$(get_abi_LIBDIR ppc64) ../$(get_abi_LIBDIR ppc)" \
+		;;
+	esac
+
+	einfo "updating multilib directories to be: ${libdirs}"
+	sed -i -e "s:^MULTILIB_OSDIRNAMES.*:MULTILIB_OSDIRNAMES = ${libdirs}:" ${S}/gcc/config/${config}
+}
+
+
 #---->> pkg_* <<----
 gnatbuild_pkg_setup() {
 	debug-print-function ${FUNCNAME} $@
@@ -234,9 +276,6 @@ gnatbuild_pkg_setup() {
 	# Setup variables which would normally be in the profile
 	if is_crosscompile ; then
 		multilib_env ${CTARGET}
-		if ! use multilib ; then
-			MULTILIB_ABIS=${DEFAULT_ABI}
-		fi
 	fi
 
 	# we dont want to use the installed compiler's specs to build gnat!
@@ -285,6 +324,32 @@ gnatbuild_src_unpack() {
 	case $1 in
 		base_unpack)
 			unpack ${A}
+
+			cd ${S}
+			# patching gcc sources, following the toolchain
+			EPATCH_MULTI_MSG="Applying Gentoo patches ..." \
+				epatch "${FILESDIR}"/patches/*.patch
+			# Replacing obsolete head/tail with POSIX compliant ones
+			ht_fix_file */configure
+
+			if ! is_crosscompile && is_multilib && \
+				[[ ( $(tc-arch) == "amd64" || $(tc-arch) == "ppc64" ) && -z ${SKIP_MULTILIB_HACK} ]] ; then
+					disgusting_gcc_multilib_HACK || die "multilib hack failed"
+			fi
+
+			# Fixup libtool to correctly generate .la files with portage
+			cd "${S}"
+			elibtoolize --portage --shallow --no-uclibc
+
+			gnuconfig_update
+			# update configure files
+			einfo "Fixing misc issues in configure files"
+			for f in $(grep -l 'autoconf version 2.13' $(find "${S}" -name configure)) ; do
+				ebegin "  Updating ${f}"
+				patch "${f}" "${FILESDIR}"/gcc-configure-LANG.patch >& "${T}"/configure-patch.log \
+					|| eerror "Please file a bug about this"
+				eend $?
+			done
 		;;
 
 		common_prep)
@@ -301,9 +366,11 @@ gnatbuild_src_unpack() {
 			for i in `find ada/ -name '*.ad[sb]'`; do \
 				sed -i -e "s/\"gcc\"/\"gnatgcc\"/g" ${i}; \
 			done
-			# add -fPIC flag to shared libs
-			cd ada
-			patch Make-lang.in < ${FILESDIR}/gnat-Make-lang.in.patch
+			# add -fPIC flag to shared libs for 3.4* backend
+			if [ "3.4" == "${GCCBRANCH}" ] ; then
+				cd ada
+				epatch ${FILESDIR}/gnat-Make-lang.in.patch
+			fi
 
 			mkdir -p "${GNATBUILD}"
 		;;
@@ -337,9 +404,12 @@ gnatbuild_src_compile() {
 		# Set some paths to our bootstrap compiler.
 		export PATH="${GNATBOOT}/bin:${PATH}"
 		if [ "${PN_GnatPro}-3.15p" == "${P}" ]; then
-			GNATLIB="${GNATBOOT}/lib/gcc-lib/${CTARGET}/${SLOT}"
+			GNATLIB="${GNATBOOT}/lib/gcc-lib/${BOOT_TARGET}/${BOOT_SLOT}"
 		else
-			GNATLIB="${GNATBOOT}/lib/gnatgcc/${CTARGET}/${SLOT}"
+			# !ATTN! the *installed* compilers have ${PN} as part of their
+			# LIBPATH, while the *bootstrap* uses hardset "gnatgcc" in theirs
+			# (which is referenced as GNATLIB below)
+			GNATLIB="${GNATBOOT}/lib/gnatgcc/${BOOT_TARGET}/${BOOT_SLOT}"
 		fi
 
 		export CC="${GNATBOOT}/bin/gnatgcc"
@@ -351,7 +421,7 @@ gnatbuild_src_compile() {
 		export LD_RUN_PATH="${LIBPATH}"
 		export LIBRARY_PATH="${GNATLIB}"
 		export LD_LIBRARY_PATH="${GNATLIB}"
-		export COMPILER_PATH="${GNATBOOT}/bin/"
+#		export COMPILER_PATH="${GNATBOOT}/bin/"
 
 		export ADA_OBJECTS_PATH="${GNATLIB}/adalib"
 		export ADA_INCLUDE_PATH="${GNATLIB}/adainclude"
@@ -360,7 +430,10 @@ gnatbuild_src_compile() {
 #			export BINUTILS_ROOT="${GNATBOOT}"
 #		fi
 
-		#einfo "CC=${CC},  ADA_INCLUDE_PATH=${ADA_INCLUDE_PATH},	LDFLAGS=${LDFLAGS}"
+#		einfo "CC=${CC},  
+#			ADA_INCLUDE_PATH=${ADA_INCLUDE_PATH},
+#			LDFLAGS=${LDFLAGS},  
+#			PATH=${PATH}"
 
 		while [ "$1" ]; do
 		case $1 in
@@ -390,6 +463,8 @@ gnatbuild_src_compile() {
 					--disable-werror \
 					--disable-libunwind-exceptions"
 
+				einfo "confgcc=${confgcc}"
+
 				cd "${GNATBUILD}"
 				CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" "${S}"/configure \
 					--prefix=${PREFIX} \
@@ -407,7 +482,6 @@ gnatbuild_src_compile() {
 					--enable-threads=posix \
 					--enable-shared \
 					--with-system-zlib \
-					--disable-nls \
 					${confgcc} || die "configure failed"
 			;;
 
@@ -429,7 +503,7 @@ gnatbuild_src_compile() {
 				debug-print-section bootstrap
 				# and, finally, the build itself
 				cd "${GNATBUILD}"
-				emake bootstrap || die "bootstrap failed"
+				emake -j1 bootstrap || die "bootstrap failed"
 			;;
 
 			gnatlib_and_tools)
@@ -483,45 +557,64 @@ gnatbuild_src_install() {
 		done
 
 
-		# Install gnatgcc, tools and native threads library
+		# The install itself. Straight make DESTDIR=${D} install causes access 
+		# violation (unlink of gprmake). A siple workaround for now.
 		cd "${GNATBUILD}"
-		if [ "${PN_GnatGpl}-3.4.5.1" != "${P}" ]; then # this one is strange
-			make DESTDIR=${D} install || die
-			#make a convenience info link
-			dosym ${DATAPATH}/info/gnat_ugn_unw.info ${DATAPATH}/info/gnat.info
-		fi
+		make DESTDIR=${D} bindir="${D}${BINPATH}"  install || die
+		mv "${D}${D}${PREFIX}/${CTARGET}" "${D}${PREFIX}"
+		rm -rf "${D}var"
+
+		#make a convenience info link
+		dosym ${DATAPATH}/info/gnat_ugn_unw.info ${DATAPATH}/info/gnat.info
 		;;
 
 	move_libs)
 		debug-print-section move_libs
+
+		# first we need to remove some stuff to make moving easier
+		rm -rf "${D}${LIBPATH}"/{32,include,libiberty.a}
 		# gcc insists on installing libs in its own place
 		mv "${D}${LIBPATH}/gcc/${CTARGET}/${GCCRELEASE}"/* "${D}${LIBPATH}"
-		if [ "${ARCH}" == "amd64" ]; then
-			# ATTN! this may in fact be related to multilib, rather than amd64
-			mv "${D}${LIBPATH}"/../lib64/libgcc_s* "${D}${LIBPATH}"
-			mv "${D}${LIBPATH}"/../lib/libgcc_s* "${D}${LIBPATH}"/32/
-		fi
 		mv "${D}${LIBEXECPATH}/gcc/${CTARGET}/${GCCRELEASE}"/* "${D}${LIBEXECPATH}"
 
-		# set the rts libs
-		cd "${D}${LIBPATH}"
-		mkdir rts-native
-		mv adalib adainclude rts-native
-		ln -s rts-native/adalib adalib
-		ln -s rts-native/adainclude adainclude
+		# libgcc_s  and, with gcc>=4.0, other libs get installed in multilib specific locations by gcc
+		# we pull everything together to simplify working environment
+		if has_multilib_profile ; then
+			case $(tc-arch) in
+				amd64)
+					mv "${D}${LIBPATH}"/../$(get_abi_LIBDIR amd64)/* "${D}${LIBPATH}"
+					mv "${D}${LIBPATH}"/../$(get_abi_LIBDIR x86)/* "${D}${LIBPATH}"/32
+				;;
+				ppc64)
+					# not supported yet, will have to be adjusted when we
+					# actually build gnat for that arch
+				;;
+			esac
+		fi
 
-		# force gnatgcc to use its own specs - when installed it reads specs
+		# force gnatgcc to use its own specs - versions prior to 4.x read specs
 		# from system gcc location. Do the simple wrapper trick for now
 		# !ATTN! change this if eselect-gnat starts to follow eselect-compiler
-		cd "${D}${BINPATH}"
-		mv gnatgcc gnatgcc_2wrap
-		cat > gnatgcc << EOF
+		if [[ ${GNATMAJOR} < 4 ]] ; then
+			# gcc 4.1 uses builtin specs. What about 4.0?
+			cd "${D}${BINPATH}"
+			mv gnatgcc gnatgcc_2wrap
+			cat > gnatgcc << EOF
 #! /bin/bash
-# wrapper to cause gnatgcc read appropriate specs
+# wrapper to cause gnatgcc read appropriate specs and search for the right .h
+# files (in case no matching gcc is installed)
 BINDIR=\$(dirname \$0)
-\${BINDIR}/gnatgcc_2wrap -specs="${LIBPATH}/specs" \$@
+# The paths in the next line have to be absolute, as gnatgcc may be called from
+# any location
+\${BINDIR}/gnatgcc_2wrap -specs="${LIBPATH}/specs" -I"${LIBPATH}/include" \$@
 EOF
-		chmod a+x gnatgcc
+			chmod a+x gnatgcc
+		fi
+
+		# earlier gnat's generate some Makefile's at generic location, need to
+		# move to avoid collisions
+		[ -f "${D}${PREFIX}"/share/gnat/Makefile.generic ] &&
+			mv "${D}${PREFIX}"/share/gnat/Makefile.* "${D}${DATAPATH}"
 
 		# use gid of 0 because some stupid ports don't have
 		# the group 'root' set to gid 0 (toolchain.eclass)
@@ -531,13 +624,8 @@ EOF
 	cleanup)
 		debug-print-section cleanup
 
-		rm -rf "${D}${LIBPATH}"/../li{b,b64}
-		rm -rf "${D}${LIBPATH}/gcc"
-		rm -rf "${D}${LIBEXECPATH}/gcc"
-		rm -f "${D}${LIBPATH}"/libiberty.a # this one comes with binutils
-		rmdir "${D}${LIBPATH}"/include/    # should be empty
-
-		rm -rf "${D}${LIBEXECPATH}"/install-tools/
+		rm -rf "${D}${LIBPATH}"/{gcc,install-tools,../lib{32,64}}
+		rm -rf "${D}${LIBEXECPATH}"/{gcc,install-tools}
 
 		# this one is installed by gcc and is a duplicate even here anyway
 		rm -f "${D}${BINPATH}/${CTARGET}-gcc-${GCCRELEASE}"
