@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.26 2006/03/13 21:28:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.27 2006/03/26 14:19:04 mcummings Exp $
+
+  26 Mar 2006; Michael Cummings <mcummings@gentoo.org>
+  DBD-SQLite-1.11.ebuild:
+  60+ days, marking stable for sparc and x86
 
   13 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   DBD-SQLite-1.09.ebuild, DBD-SQLite-1.11.ebuild:
