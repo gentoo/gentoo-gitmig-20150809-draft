@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.104.ebuild,v 1.1 2006/03/23 03:16:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.104.ebuild,v 1.2 2006/03/26 08:42:47 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -173,7 +173,7 @@ src_compile() {
 
 src_install() {
 	local disp=0, f
-	local utils="chdman imgtool dat2html"
+	local utils="chdman imgtool dat2html romcmp xml2info"
 
 	sed -i \
 		-e "s:^PREFIX.*:PREFIX=${D}/usr:" \
@@ -202,12 +202,11 @@ src_install() {
 	exeinto "${GAMES_LIBDIR}/${PN}"
 	for f in $utils
 	do
-		doexe $f || die "doexe failed"
-		rm -f "${D}${GAMES_BINDIR}"/$f 2> /dev/null
+		if [[ -f "${D}${GAMES_BINDIR}"/$f ]] ; then
+			doexe $f || die "doexe failed"
+			rm -f "${D}${GAMES_BINDIR}"/$f 2> /dev/null
+		fi
 	done
-	if [[ ${PN} == "xmame" ]] ; then
-		doexe xml2info || die "doexe failed"
-	fi
 
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r ctrlr || die "doins failed"
