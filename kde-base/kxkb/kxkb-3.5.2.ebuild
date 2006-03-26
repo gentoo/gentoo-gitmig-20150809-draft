@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.2.ebuild,v 1.2 2006/03/23 08:46:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.2.ebuild,v 1.3 2006/03/26 14:17:06 carlo Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -10,7 +10,7 @@ inherit kde-meta eutils
 SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-3.5.0-patches-1.tar.bz2"
 
-DESCRIPTION="Kicker applet for management of X keymaps"
+DESCRIPTION="Kxkb is a KControl module and frontend for X11 keyboard extension, allowing the user to configure and switch between keyboard mappings."
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
