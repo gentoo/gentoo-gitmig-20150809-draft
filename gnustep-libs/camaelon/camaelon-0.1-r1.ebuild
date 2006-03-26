@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/camaelon-0.1-r1.ebuild,v 1.2 2005/08/25 19:03:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/camaelon-0.1-r1.ebuild,v 1.3 2006/03/26 10:49:57 grobian Exp $
 
 inherit gnustep
 
