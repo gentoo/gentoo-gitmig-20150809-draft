@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.7 2006/03/26 16:49:43 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.8 2006/03/26 17:17:13 george Exp $
 
 # ATTN!
 # set HOMEPAGE and LICENSE in appropriate ebuild, as we have
@@ -463,7 +463,7 @@ gnatbuild_src_compile() {
 					--disable-werror \
 					--disable-libunwind-exceptions"
 
-				einfo "confgcc=${confgcc}"
+#				einfo "confgcc=${confgcc}"
 
 				cd "${GNATBUILD}"
 				CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" "${S}"/configure \
@@ -503,7 +503,7 @@ gnatbuild_src_compile() {
 				debug-print-section bootstrap
 				# and, finally, the build itself
 				cd "${GNATBUILD}"
-				emake -j1 bootstrap || die "bootstrap failed"
+				emake bootstrap || die "bootstrap failed"
 			;;
 
 			gnatlib_and_tools)
