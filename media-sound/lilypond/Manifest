@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2e8e7f3773cb2bf7c8cdcbec8b9531ff ChangeLog 6147
-RMD160 ff195db555fdaff23dfb76818c2c6b8e449ed3b0 ChangeLog 6147
-SHA256 339f8e34871048a5c25adac1dce22a91e196f2f85221b2b58c528a05dcac110f ChangeLog 6147
+MD5 62f04904f48426efb04820212c5a8fb2 ChangeLog 6277
+RMD160 eeaa009e571e9e9d72e6f13705c6883aa54afc94 ChangeLog 6277
+SHA256 480d07c9df15418ca25f785838b7a5f01d5bde3f470bb21520bc06bec962ab51 ChangeLog 6277
 MD5 0c696acd218d39a22a32db326ac9d5b0 files/digest-lilypond-2.0.3 67
 RMD160 8908bebb00cb94d82ff136164804e09f46466a96 files/digest-lilypond-2.0.3 67
 SHA256 3bb477acdffe3703ffefba9d7e27b0d59061b4bd19847bb1ab55152584b2d621 files/digest-lilypond-2.0.3 67
@@ -19,6 +19,9 @@ SHA256 e2daf38c4a90c0268dc7daf0344f9668334937642560f8570efae1dd9d2102cb files/di
 MD5 16a923371e2af6d883c782b974b6d32f files/digest-lilypond-2.5.2 67
 RMD160 d17185ff66854599e93382256fea370a21658532 files/digest-lilypond-2.5.2 67
 SHA256 c8d22e5f863b43e3ecc155d2bdc13654206c508ef58c93d61e277b09180ad975 files/digest-lilypond-2.5.2 67
+MD5 a0fdbded6e8885f4420394065b04ded4 files/digest-lilypond-2.8.0 548
+RMD160 05d7b40c3401a9406cd582b11f9b73fe19b1f259 files/digest-lilypond-2.8.0 548
+SHA256 b816c1638e7d39363f3be6dcf0d74ad81b06024b23f2a76ff67e8d0a2274c7d8 files/digest-lilypond-2.8.0 548
 MD5 d3708d2873d08b1272e434098fd1ad85 files/lilypond-2.0.0-coreutils-compat.patch 5638
 RMD160 0f6620c39939013ec2460728881bbe0d2edc60f2 files/lilypond-2.0.0-coreutils-compat.patch 5638
 SHA256 b40f47a164a9f29ed0d98a4ddac91293ec3347044c97042726f96b361417749c files/lilypond-2.0.0-coreutils-compat.patch 5638
@@ -37,13 +40,16 @@ SHA256 aedffb79bbb44f585b8a5eba20e7dfaca3bab8e2eef5d1f0b10ef663c0865ef1 lilypond
 MD5 93f973a74f023966bbbb3fdbf0c63713 lilypond-2.5.2.ebuild 3216
 RMD160 2e6f98a4afb30f83fb0e0ed154b01ae6ac09c65d lilypond-2.5.2.ebuild 3216
 SHA256 ee3ac7b2484f9d9fd9dbf73f1576ac7564c3173c8776202345ad6ebb053d77b3 lilypond-2.5.2.ebuild 3216
+MD5 5c21d32b5b3519745ccf7b632fd0c23d lilypond-2.8.0.ebuild 2064
+RMD160 ac124e82eec082e2560206a50c2077f1ed18d8fb lilypond-2.8.0.ebuild 2064
+SHA256 a425aba6155f30fb34faebf2a43e07593ae167d7bf85c88da18ff76198aee75e lilypond-2.8.0.ebuild 2064
 MD5 50117cfdeb267d9181cf9cacac87d8a6 metadata.xml 256
 RMD160 f564038fc21efdd3b5ee03d1de546221990ef183 metadata.xml 256
 SHA256 4c0605b0c821709464eafa37874903cd8181aae4503efa5b9d14f6a3974dfd1c metadata.xml 256
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFEA2FsLLFUmVNQ7rkRAmcXAJ9cW226J9BA1NU9xP1f2iY9tLyGSgCgrK35
-MivBRbU3tE6VRp23TUWLuz0=
-=ZNAt
+iD8DBQFEJhtuJrHF4yAQTrARAuHrAKCdQWapRk23CNx1kVNmkcqp3xyVcQCghCDJ
+S6p2ycmDVVHLU4X5xLNI9KU=
+=4eWQ
 -----END PGP SIGNATURE-----
