@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dcdf5317d7cfd7a9edff76841e02c1a0 ChangeLog 4726
-RMD160 027940bac4febad9143bbb02ddd8389d0af6811d ChangeLog 4726
-SHA256 e39bd66c2563e274de59a495a9554bcf2c6ea4ef00f5f46e82b1f0df82f3897a ChangeLog 4726
+MD5 9a2b15f9a50528d5a470752877a4ba82 ChangeLog 4850
+RMD160 9be2b8a5c8ff3bf80abc638fe1d5b6a497331777 ChangeLog 4850
+SHA256 df017b7a32e16f944b5895971ed4bc2830870f353a76ac6040238c8a76f9f9f0 ChangeLog 4850
 MD5 0dd97ad441e61b3374622f7fe4372cb0 files/chipcardd 498
 RMD160 09f8f3bad90b93fd1554139cde66fc326a158fa5 files/chipcardd 498
 SHA256 e9d2460f4d29d36bdb2f50a9a237a52ad547ad6f470beab9f519cf1ace635624 files/chipcardd 498
@@ -28,6 +25,9 @@ SHA256 512794b68b3be020e339d1737dc1c3c4bddd670fecfcfa0fe5cf8807558c4c1c files/di
 MD5 3bb9cf11c080cca90c6d3ff6d2202893 files/digest-libchipcard-2.1.2 259
 RMD160 e1a570806d974bc95b79edee07b62301708a7a0f files/digest-libchipcard-2.1.2 259
 SHA256 777bd9a7b7808720e690d2b5d759909a02515579caa37a6c757da9892d943e49 files/digest-libchipcard-2.1.2 259
+MD5 9a77f408b2d7d2f1eb7bf26d6bc57bcd files/digest-libchipcard-2.1.3 259
+RMD160 c08b72c76c5951014a628c0ab70bf72758d464c6 files/digest-libchipcard-2.1.3 259
+SHA256 89eac11c4f4c8887581051b56c20fa6085db963178942713f04ed8c7966d871f files/digest-libchipcard-2.1.3 259
 MD5 67421dc98d1b41fc9f4ea296c2714e49 libchipcard-0.9.1-r1.ebuild 1022
 RMD160 ce8e69331053e33078e877302e440ddec3eb26b0 libchipcard-0.9.1-r1.ebuild 1022
 SHA256 8eed37409c47c922dc6dff00bc655d6b70774f3758fb7be12ca09c80d3a6c6ab libchipcard-0.9.1-r1.ebuild 1022
@@ -46,13 +46,9 @@ SHA256 490114e7eeac4dfca9d7267279b967078daaaa07bb9fd80738f981c3d60f6b7c libchipc
 MD5 569f9ad8b28837e464b03f49556d841b libchipcard-2.1.2.ebuild 1389
 RMD160 b419d893e269cbfc633b7d44d161916f3d95659b libchipcard-2.1.2.ebuild 1389
 SHA256 aa57fc2daa7390336e7cd1587f332c510031e24ce3d4d0c73ad37f342dc026d8 libchipcard-2.1.2.ebuild 1389
+MD5 287664ff69ed314b937665383f703516 libchipcard-2.1.3.ebuild 1428
+RMD160 052428fe5ea12ed3701128b53209d8b8c1a10c66 libchipcard-2.1.3.ebuild 1428
+SHA256 8953aa44504edcfc473d7a3d2facb210bc04edadb996cdf15712f5c4f242ac83 libchipcard-2.1.3.ebuild 1428
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 RMD160 3b01d5dab901ee93217f72b711954d3cccbb1717 metadata.xml 217
 SHA256 2f5dfc1eb79d2d9ee02663da6e1449f499c3a37b7f4cc2391e18d7789a314669 metadata.xml 217
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEIXmkr2QksT29OyARAvlhAKCC4rdsTlpeiyZqbv1eSOP5VGwKkwCeISgb
-UpsP4yXGzapC0x+9H0WsBWQ=
-=WDH0
------END PGP SIGNATURE-----
