@@ -1,23 +1,17 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/gsweb-1.1.1_pre20050312.ebuild,v 1.2 2005/08/25 19:03:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/gsweb-1.2.0_pre20060324.ebuild,v 1.1 2006/03/26 11:45:57 grobian Exp $
 
-ECVS_CVS_COMMAND="cvs -q"
-ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
-ECVS_USER="anoncvs"
-ECVS_AUTH="ext"
-ECVS_MODULE="gnustep/dev-libs/${PN}"
-ECVS_CO_OPTS="-P -D ${PV/*_pre}"
-ECVS_UP_OPTS="-dP -D ${PV/*_pre}"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/savannah.gnu.org-gnustep"
-inherit gnustep cvs eutils depend.apache
+inherit gnustep eutils subversion depend.apache
 
-S=${WORKDIR}/${ECVS_MODULE}
+ESVN_OPTIONS="-r{${PV/*_pre}}"
+ESVN_REPO_URI="http://svn.gna.org/svn/gnustep/libs/${PN}/trunk"
+ESVN_STORE_DIR="${DISTDIR}/svn-src/svn.gna.org-gnustep/libs"
 
-DESCRIPTION="GNUstepWeb is a library which was designed to be compatible with WebObjects 4.x (developed by NeXT (now Apple) Inc.)."
-HOMEPAGE="http://www.gnustep.org"
+DESCRIPTION="GNUstepWeb: a library compatible with WebObjects 4.x"
+HOMEPAGE="http://www.gnustep.org/"
 
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~x86"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
@@ -32,12 +26,6 @@ need_apache2
 IUSE=""
 
 egnustep_install_domain "System"
-
-src_unpack() {
-	cvs_src_unpack ${A}
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PV}-build-fixes.patch
-	cd ${S}
-}
 
 src_compile() {
 	cd ${S}
