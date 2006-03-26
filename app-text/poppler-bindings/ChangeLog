@@ -1,6 +1,11 @@
 # ChangeLog for app-text/poppler-bindings
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.23 2006/03/25 09:58:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.24 2006/03/26 19:17:11 genstef Exp $
+
+  26 Mar 2006; Stefan Schweizer <genstef@gentoo.org>
+  poppler-bindings-0.5.0.ebuild, poppler-bindings-0.5.1.ebuild:
+  change to ~poppler-$PV, thanks to Peter Wendrich <pwsoft@syntiac.com> in bug
+  127653
 
   25 Mar 2006; Stefan Schweizer <genstef@gentoo.org>
   -files/poppler-0.4.1-cairo-ft.patch, -files/poppler-0.4.3-bindings.patch,
