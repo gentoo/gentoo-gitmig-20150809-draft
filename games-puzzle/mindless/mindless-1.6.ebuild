@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.6.ebuild,v 1.3 2005/07/23 22:01:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.6.ebuild,v 1.4 2006/03/26 22:55:58 mr_bones_ Exp $
 
 inherit games
 
@@ -16,7 +16,8 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 RESTRICT="mirror" # for the card database
 
-RDEPEND=">=x11-libs/gtk+-2"
+RDEPEND=">=x11-libs/gtk+-2
+	|| ( media-fonts/font-schumacher-misc virtual/x11 )"
 DEPEND="${RDEPEND}
 	gnome-base/librsvg
 	dev-util/pkgconfig"
