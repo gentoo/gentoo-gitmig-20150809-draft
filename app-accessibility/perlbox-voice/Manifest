@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0f664adb4634f44266b123f9a606af0a ChangeLog 577
-RMD160 029c75f78ac6d49f44d8696a04488377edd88273 ChangeLog 577
-SHA256 37eb9f4feb919008392549e82a9415dbbffedcb995bf24f032adde7cfa0a6997 ChangeLog 577
-MD5 b5384a4fce4a4e3f4521dafdc68dda73 files/digest-perlbox-voice-0.09 75
-RMD160 d2c5705b818e0bd3a2eb289684b1abba758bca81 files/digest-perlbox-voice-0.09 75
-SHA256 36240dc3673efe84fb2f2c5c4222fe84e2d1bda9acca194364dd3f2443a8bea8 files/digest-perlbox-voice-0.09 75
+MD5 8275d75b24d0f6abd4a83adfec92c523 ChangeLog 838
+RMD160 9179f4cf5c8faacd6244d5bb59c07d4d512c3a31 ChangeLog 838
+SHA256 20bc7603868d4264e426d6cc374c05cdb7d8a10cb692b09de1a8fe2706eafb2b ChangeLog 838
+MD5 96930a75cdbe81abbd4368c0db5147f4 files/digest-perlbox-voice-0.09-r1 271
+RMD160 b5c489774e70a1bbe56872dffd12016b734db08b files/digest-perlbox-voice-0.09-r1 271
+SHA256 f212f44b0b16d4ed5a7aa3b9a9b5a3d3569837fba0fc6f70edb0931105409e9b files/digest-perlbox-voice-0.09-r1 271
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
-MD5 266f62747b2d0d5e93ef6d43024b527a perlbox-voice-0.09.ebuild 684
-RMD160 2170e03da54038f143a587b1ad4c08768543addc perlbox-voice-0.09.ebuild 684
-SHA256 09d317096c20dc891f9309aa17291ce8f22cc08a079636e44dfa4960c23118f9 perlbox-voice-0.09.ebuild 684
+MD5 3831cd611b7cbf9afe89501f7704fe73 perlbox-voice-0.09-r1.ebuild 687
+RMD160 470d19e9a036dd921a6643e35a6fc79f61dd155d perlbox-voice-0.09-r1.ebuild 687
+SHA256 b1043ff242174db83f1cd2df21c774cc3413da313363341045096ef3f21c0a7d perlbox-voice-0.09-r1.ebuild 687
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFEEcY0tG5z4I8BtQoRAt6BAJ4ggLWh01v9taLrMoslC7nsfECsVwCeLKK6
-GsFwx0zr/BK7piU0dgwKqMk=
-=+Vze
+iD8DBQFEJpOZtG5z4I8BtQoRAoawAJ4jwdIgwcHG3Gggy5b//z40bdYI6QCeIGkg
+uREvYqY+BTy/+uxA1tKglHc=
+=Zadx
 -----END PGP SIGNATURE-----

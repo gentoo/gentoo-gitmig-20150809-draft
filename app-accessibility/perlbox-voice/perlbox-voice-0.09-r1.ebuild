@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/perlbox-voice-0.09.ebuild,v 1.2 2006/03/10 18:32:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/perlbox-voice-0.09-r1.ebuild,v 1.1 2006/03/26 13:14:23 mcummings Exp $
 
 IUSE=""
 
@@ -26,6 +26,6 @@ DEPEND=""
 
 
 src_install() {
-	tar -C ${D} xvf perlbox-voice.ss
+	tar xvf perlbox-voice.ss -C ${D}
 	dodoc README
 }
