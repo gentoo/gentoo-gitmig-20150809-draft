@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/pptpd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.20 2006/03/10 13:47:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.21 2006/03/26 09:13:06 mrness Exp $
+
+*pptpd-1.3.1 (26 Mar 2006)
+
+  26 Mar 2006; Alin Nastac <mrness@gentoo.org>
+  +files/pptpd-1.3.1-gentoo.patch, +pptpd-1.3.1.ebuild:
+  Version bump. Fix syslog flood with messages like "GRE: accepting packet"
+  (#127388).
 
 *pptpd-1.3.0 (10 Mar 2006)
 
