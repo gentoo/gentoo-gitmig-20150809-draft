@@ -1,4 +1,4 @@
-MD5 e303c84afd3da871b044f809059543b4 ChangeLog 4503
+MD5 d5203867a560e88f063b46f3375b4196 ChangeLog 4601
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kscd-3.4.1 227
 MD5 453075362e3201c7f44fea430afec5d5 files/digest-kscd-3.4.2 308
 MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kscd-3.4.3 73
@@ -7,7 +7,7 @@ MD5 f7bf563f8c0291854194ea855b77a18d files/digest-kscd-3.5.1 73
 MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-kscd-3.5.2 265
 MD5 72c275ff2754709d9f0e881e9b56be4b kscd-3.4.1.ebuild 788
 MD5 f115f59e19ffa459280e50059a1fac34 kscd-3.4.2.ebuild 801
-MD5 7b4e48d209bb73fb216010b431734e77 kscd-3.4.3.ebuild 800
+MD5 f3add9feafb691638168ad18598f86c1 kscd-3.4.3.ebuild 802
 MD5 b605daa3e33d370f942c977873e0aeda kscd-3.5.0.ebuild 766
 MD5 0357e57f5e5014a275a571f64504c7bf kscd-3.5.1.ebuild 767
 MD5 f9b24a82e91b3cc0f04507bcc955bceb kscd-3.5.2.ebuild 767
