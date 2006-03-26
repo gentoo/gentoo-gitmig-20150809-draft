@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-Size-Report
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size-Report/ChangeLog,v 1.2 2006/02/13 11:13:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size-Report/ChangeLog,v 1.3 2006/03/26 14:29:07 mcummings Exp $
+
+  26 Mar 2006; Michael Cummings <mcummings@gentoo.org>
+  Devel-Size-Report-0.10.ebuild:
+  60+ days, marking stable sparc x86
 
   13 Feb 2006; <mcumming@gentoo.org> Devel-Size-Report-0.10.ebuild:
   Virtual for perl-core dep

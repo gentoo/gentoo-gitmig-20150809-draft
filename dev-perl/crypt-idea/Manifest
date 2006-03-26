@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ebd9307d213c34f6126291cf58f86c88 ChangeLog 1652
+RMD160 36ea5eec412479a1b408aa78c002928d529fa96f ChangeLog 1652
+SHA256 e25bd3bc3c0da87ea31fcad5a8bede10c726d44d8270d7cfe5b628084c7719e1 ChangeLog 1652
 MD5 f39bf6585f442416681918d60fda2574 crypt-idea-1.02.ebuild 590
-MD5 bf6f98447a8ebfbe6cd7244a72174683 crypt-idea-1.06.ebuild 602
+RMD160 4c1939c979ee4e7a11bdfb27c4713b72fb774350 crypt-idea-1.02.ebuild 590
+SHA256 f9c2f952b39f6a6f235b26d254cec4d9713021190e3b568a7f37f10d0cf4fd79 crypt-idea-1.02.ebuild 590
+MD5 c374683344b7b5b347810355d7e0436a crypt-idea-1.06.ebuild 600
+RMD160 ef1eef5d3e4d21097ee8e1b69e2e354f444f311e crypt-idea-1.06.ebuild 600
+SHA256 a4c8cd0a2ffc69b47af412711c1a83849d934b15374873e2cd897e87e2025197 crypt-idea-1.06.ebuild 600
 MD5 688706e9b493b5517ce6995745f8006b files/digest-crypt-idea-1.02 65
-MD5 11c604c0bbb259bb66d34245ead9088e files/digest-crypt-idea-1.06 65
+RMD160 149925be1b8564d3ff6fb11014c8d6d043c07fed files/digest-crypt-idea-1.02 65
+SHA256 223a6ae59f033ea5a14122c8f10b3ae2172c54fc15e6ab3413d4f2b05b7bb97a files/digest-crypt-idea-1.02 65
+MD5 08129d8b7bd6fb55a6d9bef2e85c1ac2 files/digest-crypt-idea-1.06 241
+RMD160 69fe8d775941884b7d1be9c7e6f42d64d4130449 files/digest-crypt-idea-1.06 241
+SHA256 cfb4aa997ec47801813a9c6a763aaa81c8475f4fd336c6369d6a6181132ddefb files/digest-crypt-idea-1.06 241
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDx68UtG5z4I8BtQoRAgzHAJ97+gp6BiurLnDoPebQkPIf1qLcagCeIgrf
-ZsMzowLriTbZevnAbhZElT4=
-=FiUv
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
