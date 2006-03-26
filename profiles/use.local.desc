@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1811 2006/03/26 01:14:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1812 2006/03/26 09:43:00 robbat2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -592,6 +592,7 @@ mail-filter/bogofilter:gsl - Use the GNU scientific library for calculations
 mail-filter/bsfilter:mecab - Adds support for mecab
 mail-filter/clamassassin:clamd - Use the ClamAV daemon for virus checking.
 mail-filter/clamassassin:subject-rewrite - Adds support for subject rewriting.
+mail-filter/dcc:rrdtool - Enable rrdtool interface scripts
 mail-filter/dspam:cyrus - Build delivery options for cyrus-imapd
 mail-filter/dspam:exim - Build with delivery options for exim
 mail-filter/dspam:large-domain - Builds for large domain rather than for domain scale
