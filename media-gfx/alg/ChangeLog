@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/alg
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/alg/ChangeLog,v 1.1 2006/03/26 00:14:08 nattfodd Exp $
+
+*alg-0.0.1 (26 Mar 2006)
+
+  26 Mar 2006; Alexandre Buisse <nattfodd@gentoo.org> +metadata.xml,
+  +alg-0.0.1.ebuild:
+  Initial import. I am upstream and will obviously act up as maintainer.
+
