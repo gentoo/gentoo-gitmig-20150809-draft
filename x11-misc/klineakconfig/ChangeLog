@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/klineakconfig
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/klineakconfig/ChangeLog,v 1.1 2006/03/26 00:31:34 genstef Exp $
+
+*klineakconfig-0.9.0_pre2 (26 Mar 2006)
+
+  26 Mar 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +klineakconfig-0.9.0_pre2.ebuild:
+  New ebuild, bug 15326
+
