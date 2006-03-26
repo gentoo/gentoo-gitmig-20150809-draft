@@ -1,14 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 af1a1ea7431cfc32b19fa0c47abde5bb ChangeLog 522
+MD5 497c3c587f25a039aeb1e1266a1f8476 ChangeLog 630
+RMD160 99a1ac2a38ddcad06509823ed2f812a1dc0cce7a ChangeLog 630
+SHA256 9814c86459597f605f0ff7166b04a62c4bc70802d69e75a26323d343ecfcd41f ChangeLog 630
 MD5 2c5cdb1470350b02a113e540d3f35bd6 files/digest-libmms-0.1 62
+RMD160 1497436c78b2a10c72af1733418246d10f496368 files/digest-libmms-0.1 62
+SHA256 5da8544a36f0f802a7069fd7d825d56deec88df6b3afc826fd99209c9f25a0f5 files/digest-libmms-0.1 62
+MD5 ea71fd5a706a7837237ce138299cb95d files/digest-libmms-0.2 232
+RMD160 0dc81fa915ef093fa72b4745a15faac4a80bf50a files/digest-libmms-0.2 232
+SHA256 2623e64d0ad1a361be78a5254868093d06e33748bc0275c9f7a66216ee3178da files/digest-libmms-0.2 232
 MD5 2212cc14c348bdad98ef338b15f853a2 libmms-0.1.ebuild 695
+RMD160 28e409faada2f53e2da5e99e277bfdcc2a9054ad libmms-0.1.ebuild 695
+SHA256 1ca6eba24d83d52b510d8d0610eb6c6ebfcd309cca2451fa7aef5b1cda7dae69 libmms-0.1.ebuild 695
+MD5 cce4a4e54cf8b1d60c6705d07b5a857e libmms-0.2.ebuild 691
+RMD160 7d4004a2d2a3a65b8674b3eae1efa6d07559e519 libmms-0.2.ebuild 691
+SHA256 9eac5a2d496ec2bea9056e9ea0ca3bef0a801687210c41df29bdc57e946f3849 libmms-0.2.ebuild 691
 MD5 ee8187af1037122f09238b1622b8ed52 metadata.xml 219
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDbyBsj5H05b2HAEkRAlwqAKCSJW/FZdTXfSOmlffPiWszVg1lwACfV1tW
-8JaN1xbjVoM94Kd+PK6RFC4=
-=lfo7
------END PGP SIGNATURE-----
+RMD160 3c14311697b915c6a273082bd7cba08447e6b45c metadata.xml 219
+SHA256 afd40aa6637498b842ffcd2e01ac9afffab8ad2ab6b80ea0010d2ec1969a55c9 metadata.xml 219

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmms
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.2 2005/11/07 09:37:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.3 2006/03/26 15:40:58 foser Exp $
+
+*libmms-0.2 (26 Mar 2006)
+
+  26 Mar 2006; Marinus Schraal <foser@gentoo.org> libmms-0.2.ebuild :
+  New release
 
   07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> libmms-0.1.ebuild:
   Remove COPYING.LIB from dodoc.
