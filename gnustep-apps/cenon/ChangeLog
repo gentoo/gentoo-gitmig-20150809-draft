@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/cenon
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.1 2006/03/26 13:39:21 grobian Exp $
+
+*cenon-3.80 (26 Mar 2006)
+
+  26 Mar 2006; Fabian Groffen <grobian@gentoo.org> +metadata.xml,
+  +cenon-3.80.ebuild:
+  Initial commit.  Ebuild based on original from Armando Di Cianno (bug #54791)
+
