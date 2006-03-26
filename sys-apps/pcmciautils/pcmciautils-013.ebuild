@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-010.ebuild,v 1.5 2006/01/19 17:40:39 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-013.ebuild,v 1.1 2006/03/26 13:26:34 brix Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -11,9 +11,9 @@ SRC_URI="mirror://kernel/linux/utils/kernel/pcmcia/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~sh ~x86"
 
-IUSE="debug staticsocket udev"
+IUSE="debug static staticsocket udev"
 RDEPEND=">=sys-fs/sysfsutils-1.2.0-r1
 		>=sys-apps/module-init-tools-3.2_pre4
 		udev? ( >=sys-fs/udev-068 )
@@ -42,22 +42,26 @@ src_unpack() {
 
 	sed -i \
 		-e "s:^\(KERNEL_DIR\) = .*:\1 = ${KV_DIR}:" \
-		-e "s:^\(V\)=false:\1=true:" \
+		-e "s:^\(V\) = false:\1 = true:" \
 		-e "s:^\(CFLAGS \:=.*\):\1 ${CFLAGS}:" \
-		${S}/Makefile
+		${S}/Makefile || die
 
 	if use debug; then
-		sed -i -e "s:^\(DEBUG\) = .*:\1 = true:" ${S}/Makefile
+		sed -i -e "s:^\(DEBUG\) = .*:\1 = true:" ${S}/Makefile || die
+	fi
+
+	if use static; then
+		sed -i -e "s:^\(STATIC\) = .*:\1 = true:" ${S}/Makefile || die
 	fi
 
 	if use staticsocket; then
-		sed -i -e "s:^\(STARTUP\) = .*:\1 = false:" ${S}/Makefile
+		sed -i -e "s:^\(STARTUP\) = .*:\1 = false:" ${S}/Makefile || die
 	fi
 
 	if use udev; then
-		sed -i -e "s:^\(UDEV\) = .*:\1 = true:" ${S}/Makefile
+		sed -i -e "s:^\(UDEV\) = .*:\1 = true:" ${S}/Makefile || die
 	else
-		sed -i -e "s:^\(UDEV\) = .*:\1 = false:" ${S}/Makefile
+		sed -i -e "s:^\(UDEV\) = .*:\1 = false:" ${S}/Makefile || die
 	fi
 }
 
@@ -68,19 +72,15 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
+
+	dodoc doc/*.txt
 }
 
 pkg_postinst() {
-	einfo
-	einfo "A mini-HOWTO for using pcmciautils can be found at:"
-	einfo "http://www.kernel.org/pub/linux/utils/kernel/pcmcia/howto.html"
 	ewarn
-	ewarn "If you relied on pcmcia-cs to automatically load the"
-	ewarn "appropriate PCMCIA-related modules upon boot, you need"
-	ewarn "to add "
-	ewarn "		pcmcia"
-	ewarn "and the PCMCIA socket driver you need for this system"
-	ewarn "(yenta-socket, i82092, i82365, ...) to"
-	ewarn "/etc/modules.autoload.d/kernel-2.6"
+	ewarn "If you relied on pcmcia-cs to automatically load the appropriate"
+	ewarn "PCMCIA-related modules upon boot, you need to add 'pcmcia' and the"
+	ewarn "PCMCIA socket driver you need for this system (yenta-socket,"
+	ewarn "i82092, i82365, ...) to /etc/modules.autoload.d/kernel-2.6"
 	ewarn
 }
