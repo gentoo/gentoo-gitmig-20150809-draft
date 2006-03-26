@@ -1,27 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c46144c54d26723d8af363d2a5e30e4e ChangeLog 4278
+MD5 fb335803db771a29fc707a9e146cc1ff ChangeLog 4644
+RMD160 19965c333c5be18c1c7da33f62f64d8b1776ecc4 ChangeLog 4644
+SHA256 0ed304256c34b213afa0cf1da2b3023d485548e75b903ac192f52dc735b028fc ChangeLog 4644
 MD5 7b663d58e12a086e30f6eb8e5cf965d3 files/digest-ivman-0.5_pre2 67
-MD5 a561344e43c3fcfab148515b471ecd5a files/digest-ivman-0.5_pre3 67
-MD5 4aac9f5d6f83eeda363d051c89933adf files/digest-ivman-0.6.4 64
-MD5 bc91a3cd4a282da93547f727c80d20b6 files/digest-ivman-0.6.5 64
-MD5 6afe4349611729cde7fbf79486132a4b files/digest-ivman-0.6.6 64
+RMD160 18efaebae36f98af8a2ef4ce84da489a790adce6 files/digest-ivman-0.5_pre2 67
+SHA256 2222122d4e4710a18cae834b26413054d07d7eed72f421478a6927f871307d2e files/digest-ivman-0.5_pre2 67
+MD5 4afb532445f1fdc6a26491fe147d1802 files/digest-ivman-0.6.10 241
+RMD160 c97369f752547af866e6a16dbe7e3a85e3bc6553 files/digest-ivman-0.6.10 241
+SHA256 f7c4039e06f14441c48a0359a58e413270a68cedc243cd1a386162db5019c9c0 files/digest-ivman-0.6.10 241
 MD5 6e38e08e1620dcdfcb514c81810f2609 files/digest-ivman-0.6.8 64
-MD5 d780421ff561890ba4fafa37bbc11530 files/digest-ivman-0.6.9 238
+RMD160 59ff8055e424bd59fbbab08d761c46a1423624f8 files/digest-ivman-0.6.8 64
+SHA256 ae0e0ba5efa0fbd7443ded0646e8c06b29e6f15706ae12c85376a4b1fe2427a1 files/digest-ivman-0.6.8 64
 MD5 f1e67af6cdf8b51ac4c5cd5e8e7ec298 files/ivman-0.3.init 524
+RMD160 b52e42d21994339186cad00fe5e3bf486d7cd6b0 files/ivman-0.3.init 524
+SHA256 664dab391a0068bfc2c1eb84405b7c41d3111f6a9aa9f891f5531a01775bbb0e files/ivman-0.3.init 524
 MD5 7a702903471226e8942d6d9c8dfdcba5 ivman-0.5_pre2.ebuild 1309
-MD5 217682a6813a0a28a1a7be4b3b6adc54 ivman-0.5_pre3.ebuild 1310
-MD5 0a279ef04950ef7acd46341ecb0b0d7d ivman-0.6.4.ebuild 2581
-MD5 b233402a9b0c06809675c49c7290c8b8 ivman-0.6.5.ebuild 2601
-MD5 3688ac929410b2952685a389f1753ec8 ivman-0.6.6.ebuild 2601
-MD5 c584e75881114f2716d58c66fb86c5ca ivman-0.6.8.ebuild 2308
-MD5 d5089618d20a3b54d68adc3a3a21c7f6 ivman-0.6.9.ebuild 2310
+RMD160 8f4d55ff750c80713de525400786f3e6fec2a34c ivman-0.5_pre2.ebuild 1309
+SHA256 db339a00918347873f4dc8789a7698b872834131e55b743de8bb5c56af3e3e3c ivman-0.5_pre2.ebuild 1309
+MD5 1ec3e9eb72d90ea0aafed2ebf5536167 ivman-0.6.10.ebuild 2316
+RMD160 b63ae99efd58be0cfbea92be892951734578250f ivman-0.6.10.ebuild 2316
+SHA256 78d19704889af77cc6501fdaa6e5ab03de4a07710312ff0ff1d4c26509c4cc6c ivman-0.6.10.ebuild 2316
+MD5 260d296207ac1530d3bbdc83f826bdd8 ivman-0.6.8.ebuild 2306
+RMD160 beeac5e77e1a0d294415c79d4875669e639ae509 ivman-0.6.8.ebuild 2306
+SHA256 6b374de6ec278797bf5736f584c02ba23ebd24cfc1131eb09e5078783fec005e ivman-0.6.8.ebuild 2306
 MD5 94ae54dc83c1b4b61c9edccab725465b metadata.xml 265
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD8f3vKRy60XGEcJIRArwFAJwM5Zzi/BK1rZk/ia9iSXbt9ZqgiQCfRc60
-2PE0yw8T8zKg8Vs/uXUFXZk=
-=Eenq
------END PGP SIGNATURE-----
+RMD160 cce40429efbd2ff82afd327bff5f4ce00113a95e metadata.xml 265
+SHA256 0604c2f6367ee90ad73019023d1b5320d978f316d3cdaa6f42ffb0d45076d785 metadata.xml 265

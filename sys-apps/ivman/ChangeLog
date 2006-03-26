@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.28 2006/02/14 15:57:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.29 2006/03/26 00:46:17 genstef Exp $
+
+*ivman-0.6.10 (26 Mar 2006)
+
+  26 Mar 2006; Stefan Schweizer <genstef@gentoo.org> -ivman-0.5_pre3.ebuild,
+  -ivman-0.6.4.ebuild, -ivman-0.6.5.ebuild, -ivman-0.6.6.ebuild,
+  ivman-0.6.8.ebuild, -ivman-0.6.9.ebuild, +ivman-0.6.10.ebuild:
+  version bump thanks to Matt Hamilton <hamilton.matthew@gmail.com> in bug
+  126488, also fix enewuser in src_compile, bug 124680
 
   14 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org> ivman-0.6.8.ebuild:
   Stable on sparc wrt #120582

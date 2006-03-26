@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.8.ebuild,v 1.5 2006/02/14 15:57:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.8.ebuild,v 1.6 2006/03/26 00:46:17 genstef Exp $
 
 inherit eutils
 
@@ -32,16 +32,15 @@ src_install() {
 
 	exeinto /etc/init.d/
 	newexe ${FILESDIR}/ivman-0.3.init ivman
+}
 
+pkg_postinst() {
 	# Ivman can now run as a non-root user :-)  Create a dedicated user account,
 	# so users can add rules to /etc/sudoers for programs Ivman wants to
 	# execute...
 	# The group here is intended to be the one needed to use pmount, but Ivman
 	# will still work as long as the group in IvmConfigBase.xml is correct.
 	enewuser ivman -1 -1 /dev/null plugdev || die "Problem adding ivman user"
-}
-
-pkg_postinst() {
 
 	if has_version "<sys-apps/hal-0.5.0"; then
 		einfo "Ivman was built against HAL 0.4.x.  If you later upgrade to HAL 0.5,"
