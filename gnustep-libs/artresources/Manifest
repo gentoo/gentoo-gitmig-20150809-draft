@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 04bbad560c0a77812831808eeb6665cc ChangeLog 1488
-MD5 0bf40ee599f2b30525d64cdaa26ba953 artresources-0.1.2.ebuild 973
+RMD160 3b0f0c4703eb2eb6cd02300bfe7bf66fb7a5fdd8 ChangeLog 1488
+SHA256 3901a7e45080330360625fb5f862bab908bda72ab0d0d9733ec9f1f79bd51baa ChangeLog 1488
+MD5 fad8ab546ce7f2e713bdf19897337453 artresources-0.1.2.ebuild 1018
+RMD160 98ad2a72aa366e74aa566d52b7a095663088ada7 artresources-0.1.2.ebuild 1018
+SHA256 c2763cf39fcc61953f46df1fe86899cf369b4a0d2552a5d8fc3d9f28344e34e4 artresources-0.1.2.ebuild 1018
 MD5 892e005cc3738915896d6e46fa79472b files/config-artresources.sh 560
-MD5 74c55a275f831cb2ad466f69d0bc6c1a files/digest-artresources-0.1.2 72
+RMD160 a3facf8ae1961485048349e375322c56ada1fb82 files/config-artresources.sh 560
+SHA256 baf099770eb3f5eb1e1214872efce0028e8dec115989349fc3864b5f3a89c888 files/config-artresources.sh 560
+MD5 3fcf9b934feccf83117f671affe87b6d files/digest-artresources-0.1.2 262
+RMD160 2ab6f052efe241dcd79e4ed94ad4788f7a3ed232 files/digest-artresources-0.1.2 262
+SHA256 13297107116508056ef058f69859237f44b6fa5108e544368247ce563b2de026 files/digest-artresources-0.1.2 262
 MD5 9549997fe7562b1be89b5e4f4e1846da metadata.xml 343
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoqK8AiZjviIA2XgRAlyqAKDBp7pDvYUDyCPsNOsNzkrBKQ5RUgCg0mCE
-sv4aefYFItCPNLygolv4xVQ=
-=1EsL
------END PGP SIGNATURE-----
+RMD160 17f18097e88a4ca3d1df362de71a2685a965c2a3 metadata.xml 343
+SHA256 1c6d468f6efb25f126ed7cbc6979584adf71f690441ec45fcd011085d2824212 metadata.xml 343
