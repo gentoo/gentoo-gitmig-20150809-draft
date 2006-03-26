@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Inline-Java
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Java/ChangeLog,v 1.3 2006/02/13 13:08:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Java/ChangeLog,v 1.4 2006/03/26 15:48:28 mcummings Exp $
+
+  26 Mar 2006; Michael Cummings <mcummings@gentoo.org>
+  -Inline-Java-0.49.ebuild, Inline-Java-0.50.ebuild:
+  Marking stable x86
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   Inline-Java-0.50.ebuild:
