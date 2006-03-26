@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/online-bookmarks/online-bookmarks-0.6.4b.ebuild,v 1.1 2006/02/21 22:28:51 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/online-bookmarks/online-bookmarks-0.6.6.ebuild,v 1.1 2006/03/26 16:39:22 rl03 Exp $
 
-inherit webapp
+inherit webapp depend.php
 
 S=${WORKDIR}/${PN}
 
@@ -21,6 +21,11 @@ RDEPEND=">=virtual/httpd-php-4.3.0
 	dev-php/PEAR-DB
 "
 
+src_unpack() {
+	unpack ${A}
+	require_php_with_use mysql
+}
+
 src_compile() {
 	einfo "Nothing to compile"
 }
@@ -32,8 +37,7 @@ src_install() {
 
 	cp -R * "${D}/${MY_HTDOCSDIR}"
 
-	webapp_configfile "${MY_HTDOCSDIR}/config/config.php"
-	webapp_configfile "${MY_HTDOCSDIR}/config/connect.php"
+	webapp_configfile "${MY_HTDOCSDIR}/authentication.php"
 
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
 	webapp_src_install

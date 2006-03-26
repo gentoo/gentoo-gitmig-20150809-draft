@@ -1,31 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 93f401fc273f1be63a20e3d91c0355ec ChangeLog 1931
-RMD160 e4ad58205db440a7c8cddcfb00c36e16a5055d62 ChangeLog 1931
-SHA256 b1e79d95888b8f49466fefb1d71010007e4368e8477697be82450d2ab6896431 ChangeLog 1931
+MD5 44970f3bf6a50a612fb1ac6b23245cbd ChangeLog 2125
+RMD160 ea4811b0a2c871f11eec9260381c5b176cf03ece ChangeLog 2125
+SHA256 5fd316a5ec4ef19ee22b25bf81f4d3d7f03e2693e707b915567c93bfeb35d213 ChangeLog 2125
 MD5 a2d9f2a2443bce27f86169e028840007 files/digest-online-bookmarks-0.4.0 265
 RMD160 11efa03b9d724060ee6ca2a3bfb693e681ac41ba files/digest-online-bookmarks-0.4.0 265
 SHA256 6b5e3832710d269379d6a2d68d4d8247e2b645f2efbc3a60768ed330197f6e04 files/digest-online-bookmarks-0.4.0 265
-MD5 2c678ff01d3df750b18805ea0b8d8397 files/digest-online-bookmarks-0.6.4b 268
-RMD160 bba47211066b4e3f450f53aef509ed4ec9b87372 files/digest-online-bookmarks-0.6.4b 268
-SHA256 ebc74e7165b4549717602ef78d5a86a6edf79f7edc355736a8d84eb97595b480 files/digest-online-bookmarks-0.6.4b 268
-MD5 b887b7150525fd0effaa66c705c2599a files/postinstall-en.txt 96
-RMD160 3f96cfad547adebaaf5d502f86c9029a92eecc63 files/postinstall-en.txt 96
-SHA256 746b5d2a637f9b0e71f0d0646e5dc64c22228552b2af6f4e95a444f9a7839392 files/postinstall-en.txt 96
+MD5 055d70ef0bf3e3db9a3bc8a87894a6e2 files/digest-online-bookmarks-0.6.6 265
+RMD160 96df6350e411cdcc7d705af8aa0891bf622b3e48 files/digest-online-bookmarks-0.6.6 265
+SHA256 3ce8d691f3003ea04b4031b8dbabfb3e21b0a745ecb0ec614425166097e877a8 files/digest-online-bookmarks-0.6.6 265
+MD5 69fbdad701ef527a0c39ab00e0e178ae files/postinstall-en.txt 118
+RMD160 15ed42cd6b41e7ace380e47d1f4f5757fa7c1cd9 files/postinstall-en.txt 118
+SHA256 f9c6a23c8f9e228836468680dc16536409a70d238009c9c3e7e8304a565de004 files/postinstall-en.txt 118
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 RMD160 d47e924599b33a35a50f4c9f5564d325c271f83b metadata.xml 161
 SHA256 9cd891fcf0af580e98b62d2f4ded9e53671599f5a7aafd5dce692b996d2a83f4 metadata.xml 161
 MD5 b81a11ffafa1d5c4c69a4d1dcd3cb901 online-bookmarks-0.4.0.ebuild 1463
 RMD160 009e1578b34c23be5022a991d01d62d571fd8c65 online-bookmarks-0.4.0.ebuild 1463
 SHA256 5bcf547fb6246ff415933ee00fa100c13d0819a480d8cd068bc9025db80a990f online-bookmarks-0.4.0.ebuild 1463
-MD5 417afff4569dc7f6425a008f241e0563 online-bookmarks-0.6.4b.ebuild 1012
-RMD160 fdff6a31d9cc99905dcd390b58f229dc9564b1c3 online-bookmarks-0.6.4b.ebuild 1012
-SHA256 ff7d5e71621789298dd83862aca124a17360f49803f05463535e99d2a108c448 online-bookmarks-0.6.4b.ebuild 1012
+MD5 4e3afb1976252432f07a78cab07aadde online-bookmarks-0.6.6.ebuild 1026
+RMD160 0379c36db7d38480b5fb7f8bd344ace5ec4a8077 online-bookmarks-0.6.6.ebuild 1026
+SHA256 bf65727b6de1840ca835ce4de3c43fbf87901db3e394117566ad0218304c0a18 online-bookmarks-0.6.6.ebuild 1026
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD+5Q2EzitwsaoONoRAlcqAJ4y9ODlxBpA70utBL6zVxDfuw3h+gCfa2Tc
-Bqhxil5cOtQXwBmmKh2SLcY=
-=Mv85
+iD4DBQFEJsPFEzitwsaoONoRAjPYAJ0eZBqEUYw/cG9cI4CmrX9iN2877gCYj96J
+sKNHNp793apt7GeCgtVqEg==
+=dJq9
 -----END PGP SIGNATURE-----
