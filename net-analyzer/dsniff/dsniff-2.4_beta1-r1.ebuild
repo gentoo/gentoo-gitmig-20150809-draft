@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1.ebuild,v 1.5 2006/02/15 22:04:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r1.ebuild,v 1.1 2006/03/26 21:38:55 jokey Exp $
 
 inherit eutils flag-o-matic
 
@@ -42,6 +42,14 @@ src_unpack() {
 
 	# Allow amd64 compilation
 	append-ldflags -lresolv
+}
+
+src_compile() {
+	if has_version '>=sys-libs/glibc-2.4' ; then
+		append-flags -DCLK_TCK=CLOCKS_PER_SEC
+	fi
+	econf || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
