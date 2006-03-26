@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2c38ffb92a1bdd25a14afb93ec0849b5 ChangeLog 2081
+RMD160 c1932e398f7a9e3a2667b0bbec27a465d36bd808 ChangeLog 2081
+SHA256 84a68eaef4862216bd2649481ad0308e156ca5ab51e268d17a54baf34abbda82 ChangeLog 2081
 MD5 f6c880c8045d9abded5c736db2b80698 Crypt-Blowfish-2.09-r3.ebuild 586
-MD5 4e36cf1bed54ca7d01fa1afc4fb9b3aa Crypt-Blowfish-2.10.ebuild 605
+RMD160 446fd89f2758debc4142cef35d9cfcf870af216b Crypt-Blowfish-2.09-r3.ebuild 586
+SHA256 0d37594e09dffc0f1464c119523089151a80915c088af7434ecf868360c7f132 Crypt-Blowfish-2.09-r3.ebuild 586
+MD5 3a0254d05669b23b2391246cf2a3ae43 Crypt-Blowfish-2.10.ebuild 603
+RMD160 a6a2f3950d142476572524879179c202c5c55cb9 Crypt-Blowfish-2.10.ebuild 603
+SHA256 225dc177e4fa2988cf9c2c8b0770a6c1828e22fda74e622925658f3f0a622298 Crypt-Blowfish-2.10.ebuild 603
 MD5 9b7176201a0221bce2793cd2e7038de1 files/digest-Crypt-Blowfish-2.09-r3 70
-MD5 35885df7e93cfb39798073bb5f91ffb0 files/digest-Crypt-Blowfish-2.10 70
+RMD160 1d64bab0c664e023c30e438a435019fa1e0cc69a files/digest-Crypt-Blowfish-2.09-r3 70
+SHA256 27fd0ab0c1ee753f7f9b254e2e45c2d5259944648446ba220fc403f93c05ffcd files/digest-Crypt-Blowfish-2.09-r3 70
+MD5 2216dc51efdbb5b23b60cbde76568547 files/digest-Crypt-Blowfish-2.10 256
+RMD160 67e0607cef91ae9e3ffca532c5e7dce0ae5d22a2 files/digest-Crypt-Blowfish-2.10 256
+SHA256 3e77f4aac77231d390fd7d1b3c51153b70438c1c061546e618068f36ec8cc7ba files/digest-Crypt-Blowfish-2.10 256
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDx650tG5z4I8BtQoRAu8nAJ0RWPFOGXoC10abJuoXn/7T9GVtmwCdEOxi
-2O6/r3wYyW3w8CDsr3m/iy8=
-=FDVF
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
