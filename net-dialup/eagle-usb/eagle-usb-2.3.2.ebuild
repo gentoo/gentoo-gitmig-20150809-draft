@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.3.2.ebuild,v 1.2 2006/03/12 10:34:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.3.2.ebuild,v 1.3 2006/03/26 17:32:20 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -19,6 +19,16 @@ MODULE_NAMES="${PN}(net:${S}/driver)"
 CONFIG_CHECK="!IPV6 USB"
 BUILD_TARGETS=" "
 BUILD_PARAMS="KERNELSRC='${KV_DIR}'"
+
+pkg_setup() {
+	if kernel_is ge 2 6 16; then
+		eerror "This driver should be used only with kernel versions less than 2.6.16."
+		eerror "Please install and use the driver included in your kernel instead."
+		eerror "The kernel option that enables the driver is CONFIG_USB_UEAGLEATM."
+		die "unsupported kernel version"
+	fi
+	linux-mod_pkg_setup
+}
 
 src_unpack() {
 	unpack ${A}
