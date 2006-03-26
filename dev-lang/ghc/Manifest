@@ -1,24 +1,48 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8064a37d7262af5fe4a98e2a027de1b8 ChangeLog 15344
+MD5 efb87c55feb30e05a1d4640ceccd7914 ChangeLog 15593
+RMD160 8da8b6a16be5de87d8458731e6cd7a0476f8ee3c ChangeLog 15593
+SHA256 759f95a264383a828c67727e4ac21a4410e29d2f83ae7e83a9022d32d1b6faf3 ChangeLog 15593
 MD5 7e423c353b08a2c05693d13f21e067d0 files/depsort.py 1958
+RMD160 4192ad9ed14064a9da42ce1faedcf28996094da3 files/depsort.py 1958
+SHA256 7406f639d17b8acab6a1db7e398e74379b44950d4821bc36901abd3455d63b3d files/depsort.py 1958
 MD5 9e9c22452b545fd9ec1367155c15d8e2 files/digest-ghc-6.2.2 67
+RMD160 f7d90455b23505bebec1c10b96f63f28812db205 files/digest-ghc-6.2.2 67
+SHA256 8dcc9591644345db37aa15ef7ee91a72f2bc358653565d4aadfcf85264f41d9b files/digest-ghc-6.2.2 67
 MD5 75417bc4dea34cd08ea105457ccd3032 files/digest-ghc-6.4 65
+RMD160 da3f7883200986441fcccd20fcc0efcedbb8b223 files/digest-ghc-6.4 65
+SHA256 e64b36910754f2b2cf4b82aa22ed5bb4394d9971fb8de08f41cde286caf9170a files/digest-ghc-6.4 65
 MD5 7c38a5e2d5ecf8446f38ff41fa4d4152 files/digest-ghc-6.4.1-r2 67
+RMD160 232a1ace169fa7f49b88e032565d82a3d4285051 files/digest-ghc-6.4.1-r2 67
+SHA256 1c8b5dc526b93d9a85915fa851511c0d4f86928206f748d42e48a747a7aaf760 files/digest-ghc-6.4.1-r2 67
+MD5 67634d2dcbaa8444838580a45ac915d3 files/digest-ghc-6.4.1-r3 247
+RMD160 3a660bda8203ea505f0ae443df45b679d80fe6f3 files/digest-ghc-6.4.1-r3 247
+SHA256 8d86b8d15bea6298f853e838c5d0800e21ad2a4e3eaebfb6ba3c7a75768ec5c5 files/digest-ghc-6.4.1-r3 247
 MD5 1ae8c6b539b6706ba0e8b988a918a944 files/ghc-6.2.hardened.patch 525
+RMD160 499210730c5b7578f1fe371b9304db65b00f59cc files/ghc-6.2.hardened.patch 525
+SHA256 ed4c94ceb8e4749bd4d37a1542f5958175f0972b93a7137c5541698007b93d26 files/ghc-6.2.hardened.patch 525
 MD5 ffd472c0685cf2766ce6533265f9a3c9 files/ghc-6.4-powerpc.patch 908
+RMD160 007429fa9383eb214d3ee14dbb3ab6814788a3c9 files/ghc-6.4-powerpc.patch 908
+SHA256 9406b0fa32d19bfbd55e6635070f3bdb57bd061a599924d940c8af8e34f36d3d files/ghc-6.4-powerpc.patch 908
 MD5 e522470e9d323932951f9efdb3fbf7e8 files/ghc-6.4.1-configure.patch 2666
+RMD160 26568ec35d05a3855ad8cf10593d15ccaedee847 files/ghc-6.4.1-configure.patch 2666
+SHA256 7519b2fa9a9faf4c3545ed471803f85bc102b2428eb9c53ea15ae457271d28b9 files/ghc-6.4.1-configure.patch 2666
 MD5 f55d9cead45de0979d9650dccde5e168 files/ghc-6.4.1-openal.patch 1270
+RMD160 fa7b57dc78cc36c9d74e55bc4873e6efc321f353 files/ghc-6.4.1-openal.patch 1270
+SHA256 fe6db1cf73571bca4af195321112985201e695cf67ed889cf626e5dc2b54b67e files/ghc-6.4.1-openal.patch 1270
 MD5 e7ba0887c43fd8333a4d1bd92c184244 files/ghc-updater 9045
+RMD160 b044a26add18464b583702f3cac667521c5eb06f files/ghc-updater 9045
+SHA256 eafc2eb58a9c1ad0263fd498cad00f50b0d04860cd8e26aa201910f77d74efbe files/ghc-updater 9045
 MD5 49113531ecf3c15247194f067ffe00bd ghc-6.2.2.ebuild 5582
+RMD160 b028ea26d634687c73fd8d688f6088d253230f33 ghc-6.2.2.ebuild 5582
+SHA256 4473941a958beec2da286f5823b62def6737504cd0524a4dcd6aa777847ccd1d ghc-6.2.2.ebuild 5582
 MD5 023083edca77ca477112f30ab38fda1d ghc-6.4.1-r2.ebuild 6576
+RMD160 6bd768a6d64e1fc96caa9110f9108f73a5d69cef ghc-6.4.1-r2.ebuild 6576
+SHA256 0bae3a55cd34d59202ea1411ff6f3f8829c9a61acbf4351abfcd48633551226c ghc-6.4.1-r2.ebuild 6576
+MD5 1696046c8f6e6b36c3ed107b3a87ded1 ghc-6.4.1-r3.ebuild 8669
+RMD160 747e2c6a73fbee7708ba8befbf5757c88291480b ghc-6.4.1-r3.ebuild 8669
+SHA256 74ed9295c19cf20e1051740528325bb4c553a8a5c8507ee6ae8beb0873d5b9dd ghc-6.4.1-r3.ebuild 8669
 MD5 9620778937a1aff6ef88863c81222cfc ghc-6.4.ebuild 6109
+RMD160 a6588f6fdd9d5420e13ba1ef545ae35cf647a523 ghc-6.4.ebuild 6109
+SHA256 8bd0631d7a331b61f8686d8c1db0ed7d30a689a723ff53d9a029e3f8ea406a25 ghc-6.4.ebuild 6109
 MD5 c694674dcbef799cd4fdb6914683ebff metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEIwo/FdQwWVoAgN4RAlYEAKDdfKleMGl904p4OBsHePs4VSyf+QCcD3Us
-bzdAXPIgI3qHc1QVNaoxGxw=
-=k9ix
------END PGP SIGNATURE-----
+RMD160 7783e6057effb8b8f0b79cffe8b557b32c633839 metadata.xml 223
+SHA256 1d00c8be162a6cb87b3de440b3e63e10b39c12d56e8fbfe592e75aed872b2508 metadata.xml 223
