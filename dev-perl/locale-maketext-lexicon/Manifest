@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 67beb40888d236bafda25e2549f97db7 ChangeLog 3381
+RMD160 e843dc46ef413ea0f87b91e03664940668c7b07d ChangeLog 3381
+SHA256 37fd1fc5d52d42a1b9c3bd8944cc13686b6837a13e5019d8e83384cbd2676eac ChangeLog 3381
 MD5 76ad1bd287b12ead7360a4c9f8d0358f files/digest-locale-maketext-lexicon-0.35 79
+RMD160 9f3c328200230cf495f51ad06398db0b12e62fd5 files/digest-locale-maketext-lexicon-0.35 79
+SHA256 859804970bbe6eb8ef546810363ee71f0e05fd259566b3ac56da4e0732518986 files/digest-locale-maketext-lexicon-0.35 79
 MD5 69207883edbfda203c16bb3b8e5d8953 files/digest-locale-maketext-lexicon-0.46 79
-MD5 e56b1c8890a57e32d3f5a8daecf1fc4e files/digest-locale-maketext-lexicon-0.53 79
-MD5 da5cad63e4777d4f9fd923cf63a4dcdf locale-maketext-lexicon-0.35.ebuild 718
-MD5 f87c9403066121a528074daf0afe8ae9 locale-maketext-lexicon-0.46.ebuild 677
-MD5 ee98047f98f291ec3683aafaccfeaa40 locale-maketext-lexicon-0.53.ebuild 660
+RMD160 0c53320b89a1a6c586cadb8b6036df4390bbd194 files/digest-locale-maketext-lexicon-0.46 79
+SHA256 cd1d983a094dd141a087e716414ab52d4771d6344d581a19c038d122defb53e3 files/digest-locale-maketext-lexicon-0.46 79
+MD5 55e035ddf747697d66b1b681a1711f48 files/digest-locale-maketext-lexicon-0.53 283
+RMD160 983948184a8980c01064cc0142ef0677aa534748 files/digest-locale-maketext-lexicon-0.53 283
+SHA256 807e1d4988fb9a7015db90b36db581d9d13372046d190b0288fb744625cb0d27 files/digest-locale-maketext-lexicon-0.53 283
+MD5 6b92fa8458b907ac0238ba8f6196d53d locale-maketext-lexicon-0.35.ebuild 712
+RMD160 2767c1c8c13432afb9cb3a605221abf47de77b90 locale-maketext-lexicon-0.35.ebuild 712
+SHA256 d5a01ef0827d2aff559d214c8e0b6b6b6c7566e40a9fb3daee0f5f81660b273d locale-maketext-lexicon-0.35.ebuild 712
+MD5 3cdfdec1338766ba5b889e84bec9a946 locale-maketext-lexicon-0.46.ebuild 680
+RMD160 01082bf57ccde942d0cac8028940cef950db6825 locale-maketext-lexicon-0.46.ebuild 680
+SHA256 c18cacbf5665224ef59a93b669273c96771852579126e765b8f1bf0972b637b7 locale-maketext-lexicon-0.46.ebuild 680
+MD5 42475655750e19eff17fd0514c726661 locale-maketext-lexicon-0.53.ebuild 663
+RMD160 84672c70f8ab10baaf51a6a445d7a1cf6c77e6c1 locale-maketext-lexicon-0.53.ebuild 663
+SHA256 9c531a0fcf41d1cd95a54c28f2cd452f7d4be96856cbaa16ada201620fded310 locale-maketext-lexicon-0.53.ebuild 663
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8JZwtG5z4I8BtQoRAhY9AJ4lk7662LG0dbISVZlTNgOOSIXcAACfQoN2
-VbKJPwVim+ZBb+1BbszVurw=
-=bSbM
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
