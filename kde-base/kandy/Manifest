@@ -1,4 +1,4 @@
-MD5 f67d7cad3209e8f123b64371e3ee6618 ChangeLog 4613
+MD5 b3a1d25d7865f61ab14b12bad2245af5 ChangeLog 4712
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kandy-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kandy-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kandy-3.4.3 67
@@ -7,7 +7,7 @@ MD5 4505de7bf9eafb017c93b041e2fe4f2d files/digest-kandy-3.5.1 67
 MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kandy-3.5.2 247
 MD5 9c4b48cca38846bc94756c4eec33bde7 kandy-3.4.1.ebuild 553
 MD5 4e287081cb4941d8b2a8c16c4cbc38da kandy-3.4.2.ebuild 566
-MD5 4f5d7dedecb8e1d67193dfeaecc02042 kandy-3.4.3.ebuild 566
+MD5 a68d7e05d294afd148b2ec85eb8bac95 kandy-3.4.3.ebuild 568
 MD5 bcea6c635038e5716005db93607eda39 kandy-3.5.0.ebuild 532
 MD5 515eb98cf24cd03c0c9f84d264ced8d0 kandy-3.5.1.ebuild 533
 MD5 dd947ce35220d82bd7e18b693f5400d1 kandy-3.5.2.ebuild 533

@@ -1,4 +1,4 @@
-MD5 79d9d733770831d5e8ccbacebf85b1ba ChangeLog 4560
+MD5 4729632c1dfc7413a0ff1641626c4421 ChangeLog 4658
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-karm-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-karm-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-karm-3.4.3 67
@@ -7,7 +7,7 @@ MD5 4505de7bf9eafb017c93b041e2fe4f2d files/digest-karm-3.5.1 67
 MD5 4b77483fe398773d23a75714c3dd6223 files/digest-karm-3.5.2 247
 MD5 2c57dcfef40f6801e365cd219bbe3889 karm-3.4.1.ebuild 740
 MD5 2dcd6979729830efb5ef1c19c9d0783d karm-3.4.2.ebuild 753
-MD5 73af2524446f6e2eb31fe2c6333d63d9 karm-3.4.3.ebuild 752
+MD5 cc750f4adb3eca0f63e9e101469607ee karm-3.4.3.ebuild 754
 MD5 68fccb37fa3eb7502c3019785e8cdde4 karm-3.5.0.ebuild 695
 MD5 95e55c960fe1f9789386c8a5bd8bc952 karm-3.5.1.ebuild 696
 MD5 afcff12def5007644345fd2a09ae10c5 karm-3.5.2.ebuild 696
