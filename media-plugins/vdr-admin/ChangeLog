@@ -1,6 +1,6 @@
-# ChangeLog for media-video/vdr-admin
+# ChangeLog for media-plugins/vdr-admin
 # Copyright 2004-2006 Helmut Auer; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/ChangeLog,v 1.1 2006/03/15 18:13:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/ChangeLog,v 1.2 2006/03/26 20:10:17 swegener Exp $
 
 *vdr-admin-0.4.0 (15 Mar 2006)
 
