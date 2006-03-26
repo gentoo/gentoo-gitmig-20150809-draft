@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5142 2006/03/26 06:55:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5143 2006/03/26 07:08:30 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1260,7 +1260,9 @@ net-misc/powerd
 
 # <grobian@gentoo.org> (26 Mar 2006)
 # ViewPDF is not maintained anymore.  It is replaced by Vindaloo.
-gnustep-apps/viewpdf
+# However, Vindaloo needs PopplerKit, which doesn't compile.
+gnustep-libs/popplerkit
+gnustep-apps/vindaloo
 
 # <ka0ttic@gentoo.org> (21 Jul 2005)
 # Masked for testing.
