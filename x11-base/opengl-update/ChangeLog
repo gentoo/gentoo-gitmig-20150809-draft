@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.116 2006/03/24 20:23:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.117 2006/03/26 18:54:36 hansmi Exp $
+
+  26 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
+  opengl-update-3.0.0.ebuild:
+  Stable on ppc.
 
   24 Mar 2006; Jeremy Huddleston <eradicator@gentoo.org>
   opengl-update-3.0.0.ebuild:
