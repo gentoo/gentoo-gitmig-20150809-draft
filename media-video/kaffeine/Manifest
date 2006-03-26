@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 655f815ba85bef0ddd6e5d02b6f72097 ChangeLog 6710
-RMD160 2536e869b3ce4b3c7361b64b36671eafb8226c2d ChangeLog 6710
-SHA256 c6860f33f7c2fe1f21eaf3ae19ea8be28ecc8148ca2bc5e0beb59507b92719f2 ChangeLog 6710
+MD5 c6e0a302c1ce64670e67300c30c90d0d ChangeLog 7021
+RMD160 470bbb92d9e1e835820057469e6b14015943415e ChangeLog 7021
+SHA256 342b4a71fb3ddf8a30304383085678eeacc7e3a342e4cee59611d5dd6471b1d3 ChangeLog 7021
 MD5 297331248320491bcc0f2926e32ccacc files/digest-kaffeine-0.7.1 68
 RMD160 3288c303efc5f285ea122bc053f426d958331a19 files/digest-kaffeine-0.7.1 68
 SHA256 163c75a6548acea933e26e1ff891902b8744e5347ab71d4da88f8947747356d0 files/digest-kaffeine-0.7.1 68
 MD5 baa75a66b8d3d549ad9f21ff7924d9d1 files/digest-kaffeine-0.7.1-r1 250
 RMD160 d8d51761537e9c4d29cc821c5e0589a821904952 files/digest-kaffeine-0.7.1-r1 250
 SHA256 be7cdc2892bb3974674212480a401b7a94746757df65e419657a4b117dc46676 files/digest-kaffeine-0.7.1-r1 250
-MD5 849d5274cba2a51535717f014ab97942 files/digest-kaffeine-0.8 244
-RMD160 b822f853b832a7b51d6a96fa6f612d5a86413ce8 files/digest-kaffeine-0.8 244
-SHA256 f3150a31a2e25277b220cc5c5625abbfeba0b137d60739b13dd6108c80ca3014 files/digest-kaffeine-0.8 244
+MD5 849d5274cba2a51535717f014ab97942 files/digest-kaffeine-0.8-r1 244
+RMD160 b822f853b832a7b51d6a96fa6f612d5a86413ce8 files/digest-kaffeine-0.8-r1 244
+SHA256 f3150a31a2e25277b220cc5c5625abbfeba0b137d60739b13dd6108c80ca3014 files/digest-kaffeine-0.8-r1 244
 MD5 b7928429203a468028065c0c285dd5da files/kaffeine-0.7.1-respectflags.patch 782
 RMD160 5ebc90fcb28f80ed0cc16a5bd0b4e030e5116983 files/kaffeine-0.7.1-respectflags.patch 782
 SHA256 dd0ee0894669490381e9f87132a4c0d0c7ce05ce6dba0e582a573317d0354ac5 files/kaffeine-0.7.1-respectflags.patch 782
@@ -22,6 +22,9 @@ SHA256 3fab2beac8953350760c994e698fbea78b866827508fdf80eb6f0c460f081035 files/ka
 MD5 7eb46dd81c8493beac19e7078813bfc3 files/kaffeine-0.7.1-xinerama.patch 863
 RMD160 f2249fa4b723b68a68c3373df179af6a2a3355a7 files/kaffeine-0.7.1-xinerama.patch 863
 SHA256 b1509c9fd21dd163cd0db5a7b02a3dd393d0e30993b943da0495adb69ff034c8 files/kaffeine-0.7.1-xinerama.patch 863
+MD5 bea6e79df091ca27d0ca4a0c601f8498 files/kaffeine-0.8-closedev.patch 458
+RMD160 c4c961c09995a5ac150e31c8b7ce68696c151199 files/kaffeine-0.8-closedev.patch 458
+SHA256 b4f908ed5ce2bbcfc2cb8c8cfe1cdaae37634ea5245acd58cb3b870aa46180dc files/kaffeine-0.8-closedev.patch 458
 MD5 5509ae32f15b725c642bbc4ac99aefe9 files/kaffeine-0.8-respectflags.patch 802
 RMD160 ead5a7f9a21f1c62b4501ee71903ad36c5596abf files/kaffeine-0.8-respectflags.patch 802
 SHA256 3c3baee40311c9505e2c6f77960543dc5534e35698223b6d4532877ba86619a1 files/kaffeine-0.8-respectflags.patch 802
@@ -31,16 +34,16 @@ SHA256 2f781a276a11a0bd4547b72d683dc605ac23b026bce1bd2aa013c3d22d2a729b kaffeine
 MD5 9c4a5494b3cdf2d6eea3ea75aad55d28 kaffeine-0.7.1.ebuild 924
 RMD160 d602e7de068f60c6de284721fbaa578c7b59d0e5 kaffeine-0.7.1.ebuild 924
 SHA256 7ece6c6cf2a21fd7be2dec15add9daff78ac4097f21160ed00df3b358fe4bb97 kaffeine-0.7.1.ebuild 924
-MD5 3d625aeb1723fedca4da1be1063d8f7f kaffeine-0.8.ebuild 1422
-RMD160 a8378aba7f4aea6a6e784fa15fd68f79fee82d26 kaffeine-0.8.ebuild 1422
-SHA256 12471dc136732a1c3ee9bdad4897265448c32f27894bb29777da7cecf3fa3379 kaffeine-0.8.ebuild 1422
+MD5 1ff90b1cfe1daa4e46e8990ee79a7e68 kaffeine-0.8-r1.ebuild 1458
+RMD160 edd518e37da3d1326dccec1bf68368838b9d9e30 kaffeine-0.8-r1.ebuild 1458
+SHA256 fad161304f3add3ef4bf21b3a1399146a664311405729b94d7f6b1dc1d210664 kaffeine-0.8-r1.ebuild 1458
 MD5 f252d0d8aaea067fe6be5e09527ab18e metadata.xml 175
 RMD160 4e4c9dfa9b5102163a4f7b231f95672bd2266c0d metadata.xml 175
 SHA256 ee81a2309bd9eae88d896b77f0d87adbb941cf18f82eea08c025eb583ac6043d metadata.xml 175
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEJpeoAiZjviIA2XgRAu21AJ448OK0OBGZoxYT/qc3MnS1nJtNegCgwMdu
-KNyqu9t91JZa8qm4v2vTQXA=
-=hURl
+iD8DBQFEJsxpAiZjviIA2XgRAq7BAKDfJFOMgiFxUopfB+hXsLp2f2+VSQCeKDZx
+ZoTYO4NYg1raj0Y5a3sjRfQ=
+=sG2J
 -----END PGP SIGNATURE-----
