@@ -1,5 +1,25 @@
-MD5 59568eb614c7d5537214efb4dacba798 ChangeLog 845
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 aa247a9ff9fc4fd48aac3e35849c142d ChangeLog 1006
+RMD160 407e585c3cb94e79da0dbc908065cc6545d4a664 ChangeLog 1006
+SHA256 99fe90c06d79f65c547ad3e3e9590dd262d74d5c3eb797a928f1513cf3e7965a ChangeLog 1006
 MD5 72138cbe19fa4abff6f3fb2e75265683 files/digest-linuxtv-dvb-firmware-1 469
+RMD160 1109ec08ca458e728305e8332753a2b13e125ec1 files/digest-linuxtv-dvb-firmware-1 469
+SHA256 9fb9b32eb3ad08bfcd4fd8a2261ea6e5d54a2460aaddc8edb17c9b3832a15d5f files/digest-linuxtv-dvb-firmware-1 469
 MD5 cf50072da5b600c439d7c82e127a7f62 files/get_dvb_firmware-1 11537
-MD5 e5eb55fff71431e0212e871b266d7fcf linuxtv-dvb-firmware-1.ebuild 4643
+RMD160 d5bc2ef09ba19324884b98cd7a2b22cb36458f78 files/get_dvb_firmware-1 11537
+SHA256 8b16f5192d47529dafda49b7f0b7bd3182324e45965ca686bc55d5ba87d4fd61 files/get_dvb_firmware-1 11537
+MD5 31596aa73c704969caa8f97e90ce2e5e linuxtv-dvb-firmware-1.ebuild 4694
+RMD160 d1a7a3a154bfdb7f02e43a1af0099f8283863958 linuxtv-dvb-firmware-1.ebuild 4694
+SHA256 b02cd714c5ce4942147925e0d52ce16ebc5903d339564e98599f841589bdc4b3 linuxtv-dvb-firmware-1.ebuild 4694
 MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEJsASZfSl1Kp5KmoRAqUVAKCVFGqOis/rD5JyYDzPmRqXm/jy8ACg4NiI
+TpXfzsGBvWnmwic6EUIiHzU=
+=iAq5
+-----END PGP SIGNATURE-----

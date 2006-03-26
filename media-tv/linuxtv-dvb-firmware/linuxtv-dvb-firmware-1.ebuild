@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-1.ebuild,v 1.5 2005/12/03 21:22:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-1.ebuild,v 1.6 2006/03/26 16:23:09 zzam Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -111,6 +111,7 @@ NUMBER_OF_USE_FLAGS=0
 for ((CARD=0; CARD < ${#PACKET_FW_NAMES[*]}; CARD++)) do
 	SRC_URI="${SRC_URI} dvb_cards_${PACKET_FW_NAMES[CARD]}? ( ${PACKET_SRC_URI} )"
 
+	IUSE="${IUSE} dvb_cards_${PACKET_FW_NAMES[CARD]}"
 	NEGATIVE_USE_FLAGS="${NEGATIVE_USE_FLAGS} !dvb_cards_${PACKET_FW_NAMES[CARD]}? ( "
 	NUMBER_OF_USE_FLAGS=$((NUMBER_OF_USE_FLAGS+1))
 done
