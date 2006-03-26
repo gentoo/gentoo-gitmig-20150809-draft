@@ -1,18 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 626c4ee2c2a9e55e60ce5269bf3281ad ChangeLog 2138
+RMD160 2dc9be356dfd95a22c2ef23f2025ac0f6f2b5af0 ChangeLog 2138
+SHA256 5a0fed2c4188f1e311f39be2d433947467a6b39f78d0813a0e1857e14d78d8d1 ChangeLog 2138
 MD5 1cfae4f1173ae5fe839889ef982c1b55 Devel-Symdump-2.03.ebuild 527
-MD5 60c97c8944a813d705277bca25116079 Devel-Symdump-2.05.ebuild 533
-MD5 63a1e8994d6d19531069ba7c2c6ebbe8 Devel-Symdump-2.06.ebuild 533
+RMD160 3c4bbc38a4e53af81a062182edfd4de1f67fcb55 Devel-Symdump-2.03.ebuild 527
+SHA256 597e3c17e0d62995f1daa20aa5d49792b58b3e29d150e5bb8715c5ed7e15ae40 Devel-Symdump-2.03.ebuild 527
+MD5 9a6cc4573db6edbf9b55737114236732 Devel-Symdump-2.06.ebuild 531
+RMD160 6e49081cc56424ce8a083646f121b026aa666e04 Devel-Symdump-2.06.ebuild 531
+SHA256 66c1684b6b9d0e305523c6a85200d48826d688befc60122104c3e758bab34bc7 Devel-Symdump-2.06.ebuild 531
 MD5 e458f60d0c6560fd4ffef60ac20bbd6b files/digest-Devel-Symdump-2.03 68
-MD5 64eabba356e0adade89572cb86e8a3ea files/digest-Devel-Symdump-2.05 69
+RMD160 eaf267719ab252b7df0d86cabc2c2d5d0553d2f5 files/digest-Devel-Symdump-2.03 68
+SHA256 15580723d7328cdcc6836696922933951a5bc7d372a99846bee9dbd1f930c571 files/digest-Devel-Symdump-2.03 68
 MD5 a24ba419693aa9d8647b05e2fe7523fd files/digest-Devel-Symdump-2.06 69
+RMD160 aea0aac1dd5c9c0c274834d9ce8746ecf6517f6a files/digest-Devel-Symdump-2.06 69
+SHA256 d31fd257eac0d2afd13d7d8ba98f1c382eebff70f5847e94f1b1e9cc3cad31da files/digest-Devel-Symdump-2.06 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEFeIrKRy60XGEcJIRAoekAJ9R5HSnkIBNi5DGDWPwBC+TCxeIUQCghT+W
-LzAO28gpfUcAv+ZLW1O2ln4=
-=pCGb
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
