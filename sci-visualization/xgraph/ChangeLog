@@ -1,6 +1,6 @@
-# ChangeLog for media-gfx/xgraph
+# ChangeLog for sci-visualization/xgraph
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/ChangeLog,v 1.2 2006/02/05 06:34:05 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/ChangeLog,v 1.3 2006/03/26 20:17:37 swegener Exp $
 
 *xgraph-12.1-r1 (05 Feb 2006)
 

@@ -1,6 +1,6 @@
-# ChangeLog for media-gfx/opendx
+# ChangeLog for sci-visualization/opendx
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.1 2006/01/29 20:05:41 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.2 2006/03/26 20:17:14 swegener Exp $
 
   29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> +metadata.xml,
   +opendx-4.3.2.ebuild, +opendx-4.3.2-r1.ebuild:
