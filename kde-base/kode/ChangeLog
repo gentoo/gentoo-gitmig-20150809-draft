@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kode
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kode/ChangeLog,v 1.33 2006/03/22 20:15:23 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kode/ChangeLog,v 1.34 2006/03/26 16:47:26 agriffis Exp $
+
+  26 Mar 2006; Aron Griffis <agriffis@gentoo.org> kode-3.4.3.ebuild:
+  Mark 3.4.3 stable on ia64
 
 *kode-3.5.2 (22 Mar 2006)
 
