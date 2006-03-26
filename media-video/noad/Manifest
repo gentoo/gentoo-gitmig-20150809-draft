@@ -1,0 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2e308e73f7b327aceb692689896d1faa ChangeLog 503
+MD5 590e1e11b8f7cff565a3edd7c719dc6b files/digest-noad-0.6.0-r2 63
+MD5 59537f1f5164f2b2bbb0c0a5d3174112 files/noad-0.6.0-directoryfix.diff 1254
+MD5 129ab2c83615337c4242c2ec9a47a3c5 files/reccmds.noad.conf 51
+MD5 5ef1ed25dd3f6d4fc5a1fa3cdf773add files/record-20-noad.sh 1231
+MD5 4dd7bddd8e2fc8e13a875799b8491196 files/vdraddon.noad 782
+MD5 a155e781925071837c62a6c0e4926a2d metadata.xml 445
+MD5 44619081db4530e181267d23c8b4d55f noad-0.6.0-r2.ebuild 2002
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEJx3Bdn07HTTCgIoRAgweAJ9/FQraybUqx0VehzRALQsN+UxzcACfdPWa
+EuaI4VKyq66TZ74MLPUmhnk=
+=a9q2
+-----END PGP SIGNATURE-----
