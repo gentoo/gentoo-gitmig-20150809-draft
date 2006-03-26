@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.200 2006/03/25 20:26:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.201 2006/03/26 10:04:35 ferdy Exp $
+
+  26 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org>
+  vim-core-7.0_beta.ebuild:
+  Add ~alpha keyword
 
 *vim-core-7.0_beta (25 Mar 2006)
 
