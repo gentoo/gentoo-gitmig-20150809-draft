@@ -1,18 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 885a5a43f8f309eeedd949cfcf550c3e ChangeLog 2588
-MD5 6709d704408c68519a5daac2cb335e81 files/digest-renaissance-0.8.0 69
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-renaissance-0.8.1_pre20041203 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-renaissance-0.8.1_pre20050312 0
+MD5 ecb394f3f0562922bc456a0b249283aa ChangeLog 2952
+RMD160 1247e020fb039174d24b541e65ad08826c373b3f ChangeLog 2952
+SHA256 a7421af4c030cad3d5a933d7e39012f59c2ed190d34c46010f4deacd19327db1 ChangeLog 2952
+MD5 6573f317b14c7be58d1faf2115f400b8 files/digest-renaissance-0.8.0 253
+RMD160 2f561389b3e2bae525c622a0d77573e12cf1aa35 files/digest-renaissance-0.8.0 253
+SHA256 790a268f5129fbeb68e5f7cf8b17f5787028503328bd9eec27e0b7d12bccc206 files/digest-renaissance-0.8.0 253
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-renaissance-0.8.1_pre20060324 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-renaissance-0.8.1_pre20060324 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-renaissance-0.8.1_pre20060324 0
 MD5 0f403a91142d23fc03f71dbbbf7c14f1 metadata.xml 1190
-MD5 a0fe7ce633bedfd4f6b6560f43ab7e9f renaissance-0.8.0.ebuild 1130
-MD5 a30342eb74181167912d7aec43a3a620 renaissance-0.8.1_pre20041203.ebuild 1360
-MD5 4c8e74c5e493782856be22c7c1037577 renaissance-0.8.1_pre20050312.ebuild 1360
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2SqAI1lqEGTUzyQRAjRXAJ0fG2EcGRoUqWip8XtSLW7NvqKarQCeLS1G
-XtNCVJLJT4vuGtmmPziTOvo=
-=1RjM
------END PGP SIGNATURE-----
+RMD160 b7b47465f7227d34b463032476e0f348092d1dc0 metadata.xml 1190
+SHA256 eaa23d03ee18bc122c4677eb9dee2a34fdbcf9e1e54c2ef0dc0a99d060bc18cc metadata.xml 1190
+MD5 eaaea8e5526328e19ca7263b9176f494 renaissance-0.8.0.ebuild 1153
+RMD160 059d1b58df92d3b0c842f3ec1a0a684571805be4 renaissance-0.8.0.ebuild 1153
+SHA256 803c532c7e85bb382dc57eef4ab7196aa8488c9eea4121714f24556878655254 renaissance-0.8.0.ebuild 1153
+MD5 2d20502b7f9826adb5383ff3d1a22fb4 renaissance-0.8.1_pre20060324.ebuild 1179
+RMD160 58fccc1835951b15841e12a9af52d985cac54810 renaissance-0.8.1_pre20060324.ebuild 1179
+SHA256 591843599b09e31e789dfe0551eda8e2537df2da96c46b9233de11b1f668b970 renaissance-0.8.1_pre20060324.ebuild 1179

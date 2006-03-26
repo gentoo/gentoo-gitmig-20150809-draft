@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/renaissance/renaissance-0.8.0.ebuild,v 1.4 2005/07/16 15:40:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/renaissance/renaissance-0.8.0.ebuild,v 1.5 2006/03/26 09:01:37 grobian Exp $
 
 inherit gnustep
 
@@ -14,7 +14,8 @@ KEYWORDS="~x86 ~ppc"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-IUSE="doc"
+# doc is broken
+IUSE=""
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}"
 
@@ -24,16 +25,16 @@ src_install() {
 	cd ${S}
 	egnustep_env
 	egnustep_install || die
-	if use doc ; then
-		egnustep_env
-		cd Documentation
-		egnustep_make
-		egnustep_install
-		mkdir -p ${TMP}/tmpdocs
-		mv ${D}$(egnustep_install_domain)/Library/Documentation/* ${TMP}/tmpdocs
-		mkdir -p ${D}$(egnustep_install_domain)/Library/Documentation/Developer/Renaissance
-		mv ${TMP}/tmpdocs/* ${D}$(egnustep_install_domain)/Library/Documentation/Developer/Renaissance
-		cd ..
-	fi
+#	if use doc ; then
+#		egnustep_env
+#		cd Documentation
+#		egnustep_make
+#		egnustep_install
+#		mkdir -p ${TMP}/tmpdocs
+#		mv ${D}$(egnustep_install_domain)/Library/Documentation/* ${TMP}/tmpdocs
+#		mkdir -p ${D}$(egnustep_install_domain)/Library/Documentation/Developer/Renaissance
+#		mv ${TMP}/tmpdocs/* ${D}$(egnustep_install_domain)/Library/Documentation/Developer/Renaissance
+#		cd ..
+#	fi
 	egnustep_package_config
 }
