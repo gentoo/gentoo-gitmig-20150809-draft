@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.02.ebuild,v 1.1 2006/03/24 19:37:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.02.ebuild,v 1.2 2006/03/26 11:45:46 swegener Exp $
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="readline nolvmstatic clvm nocman nolvm1 nosnapshots nomirrors selinux"
 
-DEPEND=">=sys-fs/device-mapper-1.02
+DEPEND=">=sys-fs/device-mapper-1.02.03
 		clvm? ( >=sys-cluster/dlm-1.01.00
 			!nocman? ( >=sys-cluster/cman-1.01.00 ) )"
 
