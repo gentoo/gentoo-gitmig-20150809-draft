@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.24.ebuild,v 1.5 2006/03/14 01:20:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.24.ebuild,v 1.6 2006/03/26 10:07:28 robbat2 Exp $
 
 inherit flag-o-matic
 
@@ -15,8 +15,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ipv6"
 
 RDEPEND="dev-lang/perl
-	net-analyzer/rrdtool
-	|| ( mail-filter/procmail mail-mta/courier )
+	rrdtool? ( net-analyzer/rrdtool )
 	|| ( net-misc/wget www-client/fetch net-misc/curl net-ftp/ftp )
 	virtual/libc"
 DEPEND="sys-apps/sed
@@ -42,7 +41,7 @@ src_compile() {
 		cgi-bin/Makefile.in
 
 	local myconf
-	export LDFLAGS="$(bindnow-flags)"
+	append-ldflags $(bindnow-flags)
 	myconf="${myconf} --homedir=${dcc_homedir}"
 	myconf="${myconf} --libexecdir=${dcc_libexec}"
 	myconf="${myconf} --bindir=/usr/bin"
@@ -91,8 +90,17 @@ src_install() {
 	einfo "Providing cronjob"
 	mv ${D}/usr/bin/cron-dccd ${D}/etc/cron.daily/dccd
 
-	einfo "Puting system code in sbin instead of bin"
-	mv ${D}/usr/bin/{dbclean,dblist,dccd,dccsight,start-dccd,stop-dccd,wlist,dcc-stats-graph,newwebuser,dcc-stats-init,stats-get,dcc-stats-collect,dccifd,start-grey,start-dccifd,fetch-testmsg-whitelist} ${D}/usr/sbin/
+	einfo "Putting system code in sbin instead of bin"
+	mv ${D}/usr/bin/{dbclean,dblist,dccd,dccsight,start-dccd,stop-dccd,wlist,newwebuser,stats-get,dccifd,start-grey,start-dccifd,fetch-testmsg-whitelist} ${D}/usr/sbin/ || die "Failed to move apps to sbin"
+
+	statslist="${D}/usr/bin/{dcc-stats-graph,dcc-stats-init,dcc-stats-collect}"
+	if use rrdtool; then
+		einfo "Installing rrdtool interface scripts"
+		eval mv $statslist ${D}/usr/sbin/ || die "Failed to move rrdtool apps"
+	else
+		einfo "Removing rrdtool interface scripts"
+		rm -f ${statslist} || die "Failed to clean up rrdtool scripts"
+	fi
 
 	einfo "Cleaning up"
 	rm -f ${D}/usr/bin/{logger,hackmc,na-spam,ng-spam,rcDCC,start-dccm,updatedcc}
