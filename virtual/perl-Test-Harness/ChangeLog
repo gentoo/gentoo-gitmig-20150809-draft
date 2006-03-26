@@ -1,6 +1,15 @@
 # ChangeLog for virtual/perl-Test-Harness
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.4 2006/02/26 06:30:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.5 2006/03/26 16:49:19 mcummings Exp $
+
+*perl-Test-Harness-2.48 (26 Mar 2006)
+
+  26 Mar 2006; Michael Cummings <mcummings@gentoo.org>
+  +perl-Test-Harness-2.48.ebuild:
+  I realize this looks like I'm added an ebuild straight to virtual, but it
+  came up via bug 125332 that we didn't have any virtuals that could be met by
+  perl-5.8.7 for Test-Harness. Since 5.8.7 is keyworded for everyone, 
+  keywording for this was inherited that route.
 
   26 Feb 2006; Joshua Kinard <kumba@gentoo.org>
   perl-Test-Harness-2.42.ebuild:
