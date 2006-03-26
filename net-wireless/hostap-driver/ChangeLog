@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/hostap-driver
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.52 2006/02/03 10:07:03 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.53 2006/03/26 16:06:24 brix Exp $
+
+  26 Mar 2006; Henrik Brix Andersen <brix@gentoo.org>
+  hostap-driver-0.4.7.ebuild:
+  Refuse to build with linux-2.6.16 and above. Please use the in-kernel hostap
+  modules instead.
 
   03 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
   -files/hostap-driver-0.3.7-firmware.patch,

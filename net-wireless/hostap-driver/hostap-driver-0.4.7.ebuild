@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.4.7.ebuild,v 1.3 2006/01/02 18:13:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.4.7.ebuild,v 1.4 2006/03/26 16:06:24 brix Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -33,6 +33,14 @@ pkg_setup() {
 		ewarn "Linux kernel 2.6.15 and above contains a more recent version of this"
 		ewarn "module. Please consider using the in-kernel module when using"
 		ewarn "linux-2.6.15 or above."
+		ewarn
+	fi
+
+	if kernel_is ge 2 6 16; then
+		ewarn
+		ewarn "This version of hostap-driver is incompatible with linux-2.6.16 and above."
+		ewarn "Please use the more recent in-kernel version of the hostap module when using"
+		ewarn "linux-2.6.16 or above."
 		ewarn
 	fi
 
