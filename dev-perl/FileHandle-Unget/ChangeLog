@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/FileHandle-Unget
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/ChangeLog,v 1.9 2005/04/25 16:23:39 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/ChangeLog,v 1.10 2006/03/26 15:37:00 mcummings Exp $
+
+*FileHandle-Unget-0.16.21 (26 Mar 2006)
+
+  26 Mar 2006; Michael Cummings <mcummings@gentoo.org>
+  +FileHandle-Unget-0.16.21.ebuild, -FileHandle-Unget-0.1621.ebuild:
+  Fixing version numbers for 16.21 from 1621 - less confusion on next release.
+  Also, 1621 was in the tree for over a year, going ahead and unmasking for
+  sparc and x86. This may appear to be a straight to stable for some
+  monitoring scripts, hopefully folks will read the ChangeLog :)
 
 *FileHandle-Unget-0.1621 (25 Apr 2005)
 

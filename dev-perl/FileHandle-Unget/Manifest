@@ -1,16 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 75512da8f8b5af304a4cb7909f78010f ChangeLog 1258
+MD5 e83a1ddebc3774f5a295f474f1ea269b ChangeLog 1714
+RMD160 25a07fda91edd30c3f9925edfe46eed33a1f8f15 ChangeLog 1714
+SHA256 e8965ec538c96901024c7f0e6c656c83574e2d0320b59194bc7c36956fbf8a95 ChangeLog 1714
 MD5 ac25210860fa4efa514852e8f5961787 FileHandle-Unget-0.14.ebuild 557
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 7d07be43e15380b3e2273bd964ae29c4 FileHandle-Unget-0.1621.ebuild 537
+RMD160 a0e49d9eca9568fe3a61401ff7339f0963f5fec8 FileHandle-Unget-0.14.ebuild 557
+SHA256 153d2cf5e16b55ba832f61f1e88a652a48b3aecdf3c425de7df3821104213f50 FileHandle-Unget-0.14.ebuild 557
+MD5 2612bb144f3d8300394f60b1298c9b4d FileHandle-Unget-0.16.21.ebuild 609
+RMD160 f2bd1e8a652e0d21a2b2591988a0f940d1800c7c FileHandle-Unget-0.16.21.ebuild 609
+SHA256 a3fe2f088beb2340f2828c42b32c79a1acbda1d14dee93a76637cd98ad492e95 FileHandle-Unget-0.16.21.ebuild 609
 MD5 26d00edd7142bbcaf03c965bdb69df69 files/digest-FileHandle-Unget-0.14 72
-MD5 02ce7c8a64c066ae4fcdb198b238a96f files/digest-FileHandle-Unget-0.1621 74
+RMD160 b57aad493da0d4545489694c4c1385772c1466f9 files/digest-FileHandle-Unget-0.14 72
+SHA256 24ea3e28e7f62c34a3b25220de06b54971ab17eaa029430779949c4411d383ac files/digest-FileHandle-Unget-0.14 72
+MD5 1a9d01b1b2ebe1440270dffef801902c files/digest-FileHandle-Unget-0.16.21 268
+RMD160 8f644de509be753d32cf6e8b5273341def0893be files/digest-FileHandle-Unget-0.16.21 268
+SHA256 35653f80056067154a42c05b9c8a30b82de2fbe132501615b1e6044753afd114 files/digest-FileHandle-Unget-0.16.21 268
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbRmetG5z4I8BtQoRAh6QAJ9+y/n/HxAT9din/oI7OqUy98Mi1wCfYASy
-Bbe1ka5ywSq47/hispfW/+c=
-=V1Ny
+iD8DBQFEJrUGtG5z4I8BtQoRAvv1AJ9f2XL11wcdhu1fHVnhAwgofbrWowCdGD6h
+2GvmY/zytatxI28StlS07hw=
+=E71p
 -----END PGP SIGNATURE-----
