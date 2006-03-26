@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/libXt-1.0.0-r1.ebuild,v 1.3 2006/03/24 02:45:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/libXt-1.0.0-r1.ebuild,v 1.4 2006/03/26 18:16:59 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -8,6 +8,7 @@ SNAPSHOT="yes"
 inherit x-modular
 
 DESCRIPTION="X.Org Xt library"
+RESTRICT="mirror"
 #HOMEPAGE="http://foo.bar.com/"
 #SRC_URI="ftp://foo.bar.com/${P}.tar.bz2"
 #LICENSE=""

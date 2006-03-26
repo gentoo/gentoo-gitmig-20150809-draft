@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 588d884d8dcc070c0ebb7be0006874e2 ChangeLog 2052
 RMD160 66a64484e4160daa66e64a537d974bac2bcb92d7 ChangeLog 2052
 SHA256 b8b2ec517a7c9c9d2ad3819096b10d05bb89ecaac1b2571b44531afeb26fb39f ChangeLog 2052
-MD5 82e497f94e8ddbdb5a61d067a9b72f54 files/digest-libXi-1.0.0-r1 238
-RMD160 e8d915fda46928f65d3b4e4f3e7f8ec4dce07689 files/digest-libXi-1.0.0-r1 238
-SHA256 737cc81605024092f117d1ad566d0b6a81877fae8365802a10ec8af3b7c5f28e files/digest-libXi-1.0.0-r1 238
+MD5 023ed9fcd4971caf219ff70a5fd54b29 files/digest-libXi-1.0.0-r1 238
+RMD160 682be4cf7a1fa749848bf29fb7db94852ce8665c files/digest-libXi-1.0.0-r1 238
+SHA256 d237033076b5008e546eb881599d8d87e60f5df756e268a18b4c993ff1881d3c files/digest-libXi-1.0.0-r1 238
 MD5 a02c539f25bad42159c70d35be2637c5 files/fix_shadow_manpages.patch 3751
 RMD160 84d36fe0d749efe56f9eaf6da7ffd054609afb29 files/fix_shadow_manpages.patch 3751
 SHA256 93d516a32e39cf19088668b610cd3346069f1b86d4ebb6950fb94d4d5eae7418 files/fix_shadow_manpages.patch 3751
-MD5 89d4f252734c69e2ce08f072885b5f66 libXi-1.0.0-r1.ebuild 702
-RMD160 7380008d4f1f58cc59ee2d61b5782b6d4efc54a2 libXi-1.0.0-r1.ebuild 702
-SHA256 f6eede5b33ead04a0205ac4ec55dd88f69f21ed522291b33798f4a6fd2c9f3e8 libXi-1.0.0-r1.ebuild 702
+MD5 bad8e47e69f2b0fb206be48af4529f24 libXi-1.0.0-r1.ebuild 720
+RMD160 7b0cc38cddba797a89ff925caf983a6c5bd20b1f libXi-1.0.0-r1.ebuild 720
+SHA256 7a537bf97074c4a1062fa865b9cac73748ae62f1eb0fe892d49c7359665eee6f libXi-1.0.0-r1.ebuild 720
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEDlmJrHF4yAQTrARAjfCAKC9+D/0K/dTxU8cQEvqhhfL5w3b7QCgzTiX
-hQxvcDL2DhFKkVVNDsu6WXY=
-=HWg8
------END PGP SIGNATURE-----
