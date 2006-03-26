@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8aacf98e9f47a9aaabb9df09da4f7ab1 ChangeLog 2457
+MD5 8f458ce699892c73a0acf3c68222cc6f ChangeLog 2581
+RMD160 90024e4fd33e37980c11060935191a1a65f5f243 ChangeLog 2581
+SHA256 91b3a52299a830c76398ed358b36189e48295860e6221dc1098e9923d282bbcf ChangeLog 2581
 MD5 9d775f113b452664ed2d2cc9afbd6573 HTML-TokeParser-Simple-3.14.ebuild 698
-MD5 ebc2b44cc5e8a67cbaaf9bd629c246f2 HTML-TokeParser-Simple-3.15.ebuild 678
+RMD160 57a0a212107c6e6b9eb5f8af2ac94c84aed31090 HTML-TokeParser-Simple-3.14.ebuild 698
+SHA256 2919bd89a4b7c373a729e9be43181863fba3c0b0c171cae13456b1eda9e7300f HTML-TokeParser-Simple-3.14.ebuild 698
+MD5 197ca371afaf48453b43fa3cef2051fa HTML-TokeParser-Simple-3.15.ebuild 676
+RMD160 bafb156c495016b1ddd1bb5ac331345bf4d4a45f HTML-TokeParser-Simple-3.15.ebuild 676
+SHA256 f8213a28919f2bac6dfe1a26b1bd6545961071dbeacfb21d5652ecbcf43b7b75 HTML-TokeParser-Simple-3.15.ebuild 676
 MD5 b6d21108253aa41f53cdd9632136044b files/digest-HTML-TokeParser-Simple-3.14 78
+RMD160 1a6121cdd8396655c0185790e26056c44b1cde72 files/digest-HTML-TokeParser-Simple-3.14 78
+SHA256 fc7afa48dd3cf230ccdca67d764b50630451f412355fc70ad821aaed0c6c1f22 files/digest-HTML-TokeParser-Simple-3.14 78
 MD5 b956d0eaa7e24e4afcfe0403066f5e70 files/digest-HTML-TokeParser-Simple-3.15 78
+RMD160 745de2158608baea4d48174602ad71ae19fad500 files/digest-HTML-TokeParser-Simple-3.15 78
+SHA256 63750c33ee94e193ab2b50b7bdaf29ab5b871a576802d35b403fdf46e4d8d381 files/digest-HTML-TokeParser-Simple-3.15 78
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDKBIFdQwWVoAgN4RAuh6AJ9dyRzjNd5mg91ijiXtrGqRx2XzyACg1aTv
-/AFnRn1sAjwh5oTPkCj+Jco=
-=zSAw
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
