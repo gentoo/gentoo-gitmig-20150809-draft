@@ -1,0 +1,13 @@
+diff -Naur VTK/Examples/GUI/Qt/Events/GUI.ui VTK-new/Examples/GUI/Qt/Events/GUI.ui
+--- VTK/Examples/GUI/Qt/Events/GUI.ui	2005-01-28 14:23:54.000000000 -0600
++++ VTK-new/Examples/GUI/Qt/Events/GUI.ui	2006-03-25 18:47:26.000000000 -0600
+@@ -186,9 +186,4 @@
+     <function access="private" specifier="non virtual">init()</function>
+     <function access="private" specifier="non virtual">destroy()</function>
+ </functions>
+-<layoutdefaults spacing="6" margin="11"/>
+-<includehints>
+-    <includehint>qvtkwidget.h</includehint>
+-    <includehint>qvtkwidget.h</includehint>
+-</includehints>
+ </UI>

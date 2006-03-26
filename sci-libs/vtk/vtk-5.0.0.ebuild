@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.2 2006/03/06 15:35:28 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.3 2006/03/26 19:59:09 markusle Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
 LICENSE="BSD"
 KEYWORDS="~x86"
 SLOT="0"
-IUSE="doc examples java mpi patented python tcltk threads qt"
+IUSE="doc examples java mpi patented python tcltk threads qt3 qt4"
 RDEPEND="java? ( virtual/jdk )
 	mpi? ( sys-cluster/mpich )
 	python? ( >=dev-lang/python-2.0 )
@@ -32,9 +32,17 @@ RDEPEND="java? ( virtual/jdk )
 
 DEPEND="${RDEPEND}
 		>=dev-util/cmake-2.0.6
-		qt? ( $(qt_min_version 3.3.4) )"
+		qt3? ( $(qt_min_version 3.3.4) )
+		qt4? ( >=x11-libs/qt-4.1.0 )"
 
 S="${WORKDIR}"/VTK
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/vtk-qt3-qt4-gentoo.patch
+}
 
 src_compile() {
 	# gcc versions 3.2.x seem to have sse-related bugs that are 
@@ -85,17 +93,30 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_LIBRARY:PATH=/usr/$(get_libdir)/libpython${PYVER}.so"
 	fi
 
-	if use qt; then
+	if use qt3 || use qt4 ; then
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_GUISUPPORT:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_QVTK:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_WRAP_CPP:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_WRAP_UI:BOOL=ON"
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_QT_DIR:PATH=/qt/3/plugins"
+	fi
+
+	if use qt3; then
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_QT_DIR:PATH=/qt/3/plugins/${PN}"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DDESIRED_QT_VERSION:STRING=3"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_MOC_EXECUTABLE:FILEPATH=/usr/qt/3/bin/moc"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_UIC_EXECUTABLE:FILEPATH=/usr/qt/3/bin/uic"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_INCLUDE_DIR:PATH=/usr/qt/3/include"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_QMAKE_EXECUTABLE:PATH=/usr/qt/3/bin/qmake"
 	fi
 
+	if use qt4; then
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_QT_DIR:PATH=/$(get_libdir)/qt4/plugins/${PN}"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DDESIRED_QT_VERSION:STRING=4"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_MOC_EXECUTABLE:FILEPATH=/usr/bin/moc"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_UIC_EXECUTABLE:FILEPATH=/usr/bin/uic"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_INCLUDE_DIR:PATH=/usr/include/qt4"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_QMAKE_EXECUTABLE:PATH=/usr/bin/qmake"
+	fi
 
 	use tcltk && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_TCL:BOOL=ON"
 	use threads && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_PARALLEL:BOOL=ON"
@@ -106,6 +127,13 @@ src_compile() {
 	# configuration with cmake 2.2.x
 	cmake ${CMAKE_VARIABLES} . && cmake ${CMAKE_VARIABLES} . \
 		|| die "cmake configuration failed"
+
+	# fix java.lang.OutOfMemoryError on amd64 (see bug #123178)
+	if use java && [ "${ARCH}" == "amd64" ]; then
+		sed -e "s/javac/javac -J-Xmx256m/" \
+		-i "${S}"/Wrapping/Java/CMakeFiles/VTKBuildAll.dir/build.make \
+		|| die "Failed to patch javac"
+	fi
 
 	emake -j1 || die "emake failed"
 }
