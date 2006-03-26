@@ -1,12 +1,18 @@
-MD5 16bb5c72357b71f446f8072698812d49 ChangeLog 6596
-RMD160 ee1f42cae0d086d4a2a77f398e673b1370e2c931 ChangeLog 6596
-SHA256 ad45dba5841985a3decd407099cccde3216a50ad9fae197d1669c78301c8b805 ChangeLog 6596
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 83a1765868b120c10e7571eda32925e6 ChangeLog 6794
+RMD160 42248d51d77c85e20299ddb9f07133c04d62b0a8 ChangeLog 6794
+SHA256 99c641f4cba7887ab4ceb901a0a2483ba838e171ded42f937fc2308c3792837b ChangeLog 6794
 MD5 4d124b4093673bd0bfb894c666147911 clanlib-0.6.5-r3.ebuild 2435
 RMD160 b129df10c3a59b7aade0fe13856f8e5f2a319064 clanlib-0.6.5-r3.ebuild 2435
 SHA256 72d703814b19baacc1ad6fd1772e42c108f7bb75019dae7a8283672be64c5d05 clanlib-0.6.5-r3.ebuild 2435
 MD5 0a45bb3072bf6ac09557254ecfea03c2 clanlib-0.7.8-r1.ebuild 2337
 RMD160 1ea7f79ff3b93ce1b90d290e6f9e73805539ef06 clanlib-0.7.8-r1.ebuild 2337
 SHA256 b6270f6fd6bf44f302ddb2ee4fcfdcab92bbeaeb553a92447c69cae9aa943d63 clanlib-0.7.8-r1.ebuild 2337
+MD5 7d32d8f8c6a757be78a2719e999df5bf clanlib-0.7.8-r2.ebuild 2371
+RMD160 e76695abc10e27a594103c7bcdbf13c306551cb2 clanlib-0.7.8-r2.ebuild 2371
+SHA256 91607f575d05a9c144ceef1b71e84db40c3f0c7a6457eb8a5067ca8fc1e3e6a0 clanlib-0.7.8-r2.ebuild 2371
 MD5 7c2e9c0016e1bcd9daaa26d1dd55228a files/0.7.8-install-opengl-wrap.patch 346
 RMD160 9bc4dbf6ef3e75381c8de3eff571385d34e6dec0 files/0.7.8-install-opengl-wrap.patch 346
 SHA256 771d196e405f3e3d68a27030c80e1fc0d7b4c34e27fa8ed697deadfda42b6082 files/0.7.8-install-opengl-wrap.patch 346
@@ -28,12 +34,25 @@ SHA256 6c4d075d90dd2efc98139eb00030a89e2d1cfd94059fdf4e249a7d5da74f38b7 files/cl
 MD5 2b74f3abb88b08665766135f0e794ed6 files/clanlib-0.7.8-gcc41.patch 1663
 RMD160 e3a0b0b66c849598bac2c082f0d6740693b046e8 files/clanlib-0.7.8-gcc41.patch 1663
 SHA256 9d092a6b3484c22d93fc066985ae092db37b3624ee9a11dec1046a48dc615815 files/clanlib-0.7.8-gcc41.patch 1663
+MD5 0056626610eb4285f75e571aae2c6662 files/clanlib-0.7.8-refreshfix.patch 435
+RMD160 e4562f30dea51c6b1f01014611f3a7ebf0976ca5 files/clanlib-0.7.8-refreshfix.patch 435
+SHA256 1cb0bab20ef41f364d5bb4395a78213f4ad8fa187bc49cc5f85e80544f557ffa files/clanlib-0.7.8-refreshfix.patch 435
 MD5 3e439d751339f684be1c709644d71a4d files/digest-clanlib-0.6.5-r3 68
 RMD160 3ef0e3d707c3f4d3a176b2b43b2a72946f0c0bc8 files/digest-clanlib-0.6.5-r3 68
 SHA256 2b1272b156642f51d2c9de746284a62b1ec0b000bfac99a3ae2794a48f50679c files/digest-clanlib-0.6.5-r3 68
 MD5 02ebcc5ba4f293b75824427ac799d514 files/digest-clanlib-0.7.8-r1 253
 RMD160 afe72e12986e2080029071e179370ba4ceb34471 files/digest-clanlib-0.7.8-r1 253
 SHA256 2d33b72d6157f3dc50ef950fdae218e425b0faf6e38220dd98a64d46774779ac files/digest-clanlib-0.7.8-r1 253
+MD5 02ebcc5ba4f293b75824427ac799d514 files/digest-clanlib-0.7.8-r2 253
+RMD160 afe72e12986e2080029071e179370ba4ceb34471 files/digest-clanlib-0.7.8-r2 253
+SHA256 2d33b72d6157f3dc50ef950fdae218e425b0faf6e38220dd98a64d46774779ac files/digest-clanlib-0.7.8-r2 253
 MD5 33ee8adc6546aef9881086d98bfadb79 metadata.xml 3010
 RMD160 e619d1e2cbf474c526bf1deb3dd15a0117643e66 metadata.xml 3010
 SHA256 3b9b77c59757bc65889103949b95597432d5e00f69fdf4bdc909f50dcbff98ac metadata.xml 3010
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEJvFT2CTtIKiFlQIRAhxNAJ9Ye/Am4sWrzyibxqlr9G+k9Csp7wCeO2j8
+5McSMn90Gg7A6pNPTG2rq2A=
+=v3rO
+-----END PGP SIGNATURE-----
