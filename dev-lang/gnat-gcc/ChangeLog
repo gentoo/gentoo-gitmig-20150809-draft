@@ -1,6 +1,21 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.2 2006/01/23 23:44:17 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.3 2006/03/26 17:52:06 george Exp $
+
+  26 Mar 2006; George Shapovalov <george@gentoo.org> -gnat-gcc-3.4.5.ebuild:
+  removed stale and (any more) nonworking version
+
+*gnat-gcc-4.1.0 (26 Mar 2006)
+*gnat-gcc-3.4.5-r2 (26 Mar 2006)
+
+  26 Mar 2006; George Shapovalov <george@gentoo.org>
+  +files/patches/74_all_sh-pr24836.patch,
+  +files/patches/51_all_gcc-3.4-libiberty-pic.patch,
+  +files/gcc-configure-LANG.patch, +gnat-gcc-3.4.5-r2.ebuild,
+  +gnat-gcc-4.1.0.ebuild:
+  added new versions to accompany a much revorked gnatbuild.eclass. Now
+  handles multilib better, uses i386 bootstraps on x86 and fixes some misc
+  stuff. 4.1.0 has been added too..
 
 *gnat-gcc-3.4.5-r1 (23 Jan 2006)
 
