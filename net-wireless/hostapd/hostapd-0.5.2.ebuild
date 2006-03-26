@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.5.2.ebuild,v 1.1 2006/03/20 08:14:51 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.5.2.ebuild,v 1.2 2006/03/26 12:15:08 brix Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="IEEE 802.11 wireless LAN Host AP daemon"
 HOMEPAGE="http://hostap.epitest.fi"
@@ -23,6 +23,9 @@ src_unpack() {
 	local CONFIG=${S}/.config
 
 	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-ssl.patch
 
 	sed -i -e "s:/etc/hostapd:/etc/hostapd/hostapd:g" \
 		${S}/hostapd.conf
