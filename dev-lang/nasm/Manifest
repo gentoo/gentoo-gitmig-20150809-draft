@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c2e4333d3e29f596c5ec204d4f456bb6 ChangeLog 5788
+MD5 eda30f5c9e608c62d9cfc8a8bff3b5fa ChangeLog 5939
+RMD160 a19a8d78460c7af82ba0d088e4baba5324c3d526 ChangeLog 5939
+SHA256 353c2e1f77438050ccf044d59dd2bbbe9cfac08ca63a31099be23f3a7b163724 ChangeLog 5939
 MD5 98c253856c4823fdfe9095d900744ff6 files/digest-nasm-0.98.39-r1 65
+RMD160 4b8313360e69cc62da38bab0d7d5abae4c8cae01 files/digest-nasm-0.98.39-r1 65
+SHA256 965b1f70580b90a6bedda28418e3861fa411c220caa4824ccd1b29dd745cb696 files/digest-nasm-0.98.39-r1 65
 MD5 98c253856c4823fdfe9095d900744ff6 files/digest-nasm-0.98.39-r3 65
+RMD160 4b8313360e69cc62da38bab0d7d5abae4c8cae01 files/digest-nasm-0.98.39-r3 65
+SHA256 965b1f70580b90a6bedda28418e3861fa411c220caa4824ccd1b29dd745cb696 files/digest-nasm-0.98.39-r3 65
 MD5 d7164046de6edb82be4a9e5f911568fd files/nasm-0.98.39-elf-visibility.patch 4219
+RMD160 1d43d437a4fab9d4fa69b3d52ed20bb238431121 files/nasm-0.98.39-elf-visibility.patch 4219
+SHA256 fa71468b6ac380712e659c9a78bc552339e268f2907ed143500b148db81d16c8 files/nasm-0.98.39-elf-visibility.patch 4219
 MD5 8524fffd916a234a0fa40149506746ee metadata.xml 738
+RMD160 76ed8d8e8a74def53099b5457752e7c3138425a9 metadata.xml 738
+SHA256 2da3d51e900fdccea5c364911ff56e568c6c5294d04eb633cf05e664b055dc69 metadata.xml 738
 MD5 9743f23f6f6ab1ccbd29c000b04f165c nasm-0.98.39-r1.ebuild 1467
-MD5 5fefd83a20187c49d641e83d7cee6a23 nasm-0.98.39-r3.ebuild 1521
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDvLum2+ySkm8kpY0RAt6hAJ96+qbtF78mPX98vvJPYIs1+MgYiACfYzXU
-oY+oc4Jj16K7gIo7vzLiTNk=
-=u+Jg
------END PGP SIGNATURE-----
+RMD160 4404ee3541c0d869a7ed2566749e16b431dccbd1 nasm-0.98.39-r1.ebuild 1467
+SHA256 50b0d7b1301a1b962a4b2d5d0246a0ee6ace261c564a13917d9252b98fb2041f nasm-0.98.39-r1.ebuild 1467
+MD5 0f7288cd62c2641674854bfeb9d56ca6 nasm-0.98.39-r3.ebuild 1550
+RMD160 a059d48a269c6a0359ae30d83c27af3c8e2b5c99 nasm-0.98.39-r3.ebuild 1550
+SHA256 1ccafa93f8ffd3649a406f7fc0cd56dad8ea59d5486449d315503be8fe177e8b nasm-0.98.39-r3.ebuild 1550
