@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Spiffy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Spiffy/ChangeLog,v 1.2 2006/01/23 20:48:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Spiffy/ChangeLog,v 1.3 2006/03/26 13:52:59 mcummings Exp $
+
+  26 Mar 2006; Michael Cummings <mcummings@gentoo.org>
+  Class-Spiffy-0.12.ebuild:
+  60+ days, marking stable for sparc and x86
 
   23 Jan 2006; Markus Rothe <corsair@gentoo.org> Class-Spiffy-0.12.ebuild:
   Added ~ppc64; bug #119199
