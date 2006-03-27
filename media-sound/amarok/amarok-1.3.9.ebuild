@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.9.ebuild,v 1.2 2006/03/26 22:58:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.9.ebuild,v 1.3 2006/03/27 00:57:02 flameeyes Exp $
+
+RESTRICT="nomirror"
 
 LANGS="af az be bg bn br ca cs cy da de el en_GB eo es et eu fi fr ga gl he hi
 hr hu id is it ja km ko ku lo lt nb nds nl nn pa pl pt pt_BR ro ru se sl sq sr
