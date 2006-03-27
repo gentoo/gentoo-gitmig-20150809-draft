@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.13 2006/03/26 19:59:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.14 2006/03/27 16:37:41 markusle Exp $
+
+  27 Mar 2006; Markus Dittrich <markusle@gentoo.org> vtk-5.0.0.ebuild:
+  Added proper JAVA_AWT_LIBRARY cmake variable for amd64 platform.
+  Thanks to Sebastiaan <s.breedveld@erasmusmc.nl> for pointing this
+  out (c.f. bug #123178).
 
   26 Mar 2006; Markus Dittrich <markusle@gentoo.org>
   +files/vtk-qt3-qt4-gentoo.patch, vtk-5.0.0.ebuild:

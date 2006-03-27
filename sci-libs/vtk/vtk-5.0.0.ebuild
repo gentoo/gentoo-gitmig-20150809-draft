@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.3 2006/03/26 19:59:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.4 2006/03/27 16:37:41 markusle Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -76,11 +76,16 @@ src_compile() {
 	use examples && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_DATA_ROOT:PATH=/usr/share/${PN}/data -DBUILD_EXAMPLES:BOOL=ON"
 	if use java; then
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_JAVA:BOOL=ON"
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DJAVA_AWT_LIBRARY:PATH=`java-config -O`/jre/lib/i386/libjawt.so"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DJAVA_AWT_INCLUDE_PATH:PATH=`java-config -O`/include"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DJAVA_INCLUDE_PATH:PATH=`java-config -O`/include"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DJAVA_INCLUDE_PATH2:PATH=`java-config -O`/include/linux"
+		if [ "${ARCH}" == "amd64" ]; then
+			CMAKE_VARIABLES="${CMAKE_VARIABLES} -DJAVA_AWT_LIBRARY:PATH=`java-config -O`/jre/lib/${ARCH}/libjawt.so"
+		else
+			CMAKE_VARIABLES="${CMAKE_VARIABLES} -DJAVA_AWT_LIBRARY:PATH=`java-config -O`/jre/lib/i386/libjawt.so"
+		fi
 	fi
+
 	if use mpi; then
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_MPI:BOOL=ON"
 		use !threads && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_PARALLEL:BOOL=ON"
