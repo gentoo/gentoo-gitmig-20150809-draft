@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.8.0-r1.ebuild,v 1.1 2006/03/27 02:52:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.8.0-r1.ebuild,v 1.2 2006/03/27 17:29:12 agriffis Exp $
 
 inherit versionator
 
@@ -46,6 +46,7 @@ src_unpack() {
 }
 
 src_compile() {
+	addwrite /root/.PfaEdit  # fontforge, see bug 127723
 	addwrite /var/cache/fonts
 	addwrite /usr/share/texmf/fonts
 	addwrite /usr/share/texmf/ls-R
