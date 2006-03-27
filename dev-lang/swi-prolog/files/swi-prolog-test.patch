@@ -5,7 +5,7 @@
  
  check:
 -		$(DEVPL) -f $(srcdir)/test.pl -F none -g test,halt -t 'halt(1)'
-+		$(DEVPL) -f $(srcdir)/test.pl -F none -g "asserta(user:file_search_path(clpr,'../packages/clpr')),asserta(user:file_search_path(library, '../packages/clpr')),test,halt" -t 'halt(1)'
++		$(DEVPL) -f $(srcdir)/test.pl -F none -g "asserta(user:file_search_path(clpr,'../packages/clpqr')),asserta(user:file_search_path(library, '../packages/clpqr')),test,halt" -t 'halt(1)'
  
  install:	@INSTALLTARGET@
  install-version: install-arch install-libs install-vbins
