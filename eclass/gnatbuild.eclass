@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.8 2006/03/26 17:17:13 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.9 2006/03/27 15:00:33 george Exp $
 
 # ATTN!
 # set HOMEPAGE and LICENSE in appropriate ebuild, as we have
@@ -46,9 +46,7 @@ PN_GnatPro="gnat-pro"
 # GCCVER can be set in the ebuild, but then care will have to be taken
 # to set it before inheriting, which is easy to forget
 # so set it here for what we can..
-if   [[ ${PN} == "${PN_GnatGCC}" ]] ; then
-	GCCVER="${PV}"
-elif [[ ${PN} == "${PN_GnatGpl}" ]] ; then
+if  [[ ${PN} == "${PN_GnatGCC}" ]] || [[ ${PN} == "${PN_GnatGpl}" ]] ; then
 	GCCVER="${GNATRELEASE}"
 elif [[ ${PN} == "${PN_GnatPro}" ]] ; then
 # Ada Core provided stuff is really conservative and changes backends rarely
@@ -595,7 +593,7 @@ gnatbuild_src_install() {
 		# force gnatgcc to use its own specs - versions prior to 4.x read specs
 		# from system gcc location. Do the simple wrapper trick for now
 		# !ATTN! change this if eselect-gnat starts to follow eselect-compiler
-		if [[ ${GNATMAJOR} < 4 ]] ; then
+		if [[ ${GCCVER} < 3.4.6 ]] ; then
 			# gcc 4.1 uses builtin specs. What about 4.0?
 			cd "${D}${BINPATH}"
 			mv gnatgcc gnatgcc_2wrap
