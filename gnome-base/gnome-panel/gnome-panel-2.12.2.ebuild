@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.12.2.ebuild,v 1.10 2006/02/07 16:46:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.12.2.ebuild,v 1.11 2006/03/27 00:57:20 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -35,8 +35,6 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
-USE_DESTDIR="1"
-
 
 pkg_setup() {
 	G2CONF="--disable-scrollkeeper \
@@ -49,7 +47,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	gnome2_src_unpack
 
 	# FIXME : uh yeah, this is nice
 	# We should patch in a switch here and send it upstream
