@@ -1,0 +1,21 @@
+--- configure.in.original	2006-03-27 21:41:26.000000000 +0200
++++ configure.in	2006-03-27 21:41:37.000000000 +0200
+@@ -51,7 +51,7 @@
+ AC_PROG_INSTALL
+ AC_HEADER_STDC
+ 
+-CXXFLAGS="$CXXFLAGS -Wall -Werror -Wno-unused -DGUICHAN_BUILD"
++CXXFLAGS="$CXXFLAGS -Wall -Wno-unused -DGUICHAN_BUILD"
+ 
+ dnl NoX()
+ dnl {
+--- include/guichan/sdl/Makefile.am.original	2006-03-27 21:40:37.000000000 +0200
++++ include/guichan/sdl/Makefile.am	2006-03-27 21:41:07.000000000 +0200
+@@ -3,4 +3,5 @@
+ libguichaninclude_HEADERS =	\
+ 	sdlgraphics.hpp		\
+ 	sdlimageloader.hpp	\
+-	sdlinput.hpp		
+\ No newline at end of file
++	sdlinput.hpp		\
++	sdlpixel.hpp		

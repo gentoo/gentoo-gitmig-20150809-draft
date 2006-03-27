@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/guichan
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/ChangeLog,v 1.4 2005/09/10 05:35:37 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/ChangeLog,v 1.5 2006/03/27 19:54:57 tupone Exp $
+
+*guichan-0.4.0-r1 (27 Mar 2006)
+
+  27 Mar 2006; <Tupone@gentoo.org> +files/guichan-0.4.0-gentoo.patch,
+  +guichan-0.4.0-r1.ebuild:
+  Install sdlpixel.hpp, bug #118880 by Tiago Freire
 
   10 Sep 2005; Mike Frysinger <vapier@gentoo.org> guichan-0.4.0.ebuild:
   Remove -Werror hardcode from CXXFLAGS #105340 by Anatoly Kamchatnov.
