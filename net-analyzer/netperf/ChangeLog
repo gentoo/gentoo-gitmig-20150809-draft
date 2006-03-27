@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/netperf
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.27 2005/05/30 17:02:54 strerror Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.28 2006/03/27 01:27:51 jokey Exp $
+
+*netperf-2.4.0-r1 (27 Mar 2006)
+
+  27 Mar 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/netperf-2.4.0-gcc41.patch, +netperf-2.4.0-r1.ebuild:
+  glibc 2.4 / gcc 4.1 compatibility, thanks to Mikko Tiihonen
+  <mikko.tiihonen@hut.fi> wrt bug #126334
 
 *netperf-2.4.0 (30 May 2005)
 
