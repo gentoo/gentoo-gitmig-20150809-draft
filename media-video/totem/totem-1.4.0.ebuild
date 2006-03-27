@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.4.0.ebuild,v 1.2 2006/03/17 01:09:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.4.0.ebuild,v 1.3 2006/03/27 21:27:53 joem Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -113,8 +113,11 @@ src_unpack() {
 }
 
 src_compile() {
+	#fixme: why does it need write access here, probably need to set up a fake
+	#home in /var/tmp like other pkgs do
 	addpredict "/root/.gconfd"
 	addpredict "/root/.gconf"
+	addpredict "/root/.gnome2"
 	gnome2_src_compile
 }
 
