@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/kicker-applets-3.4.3.ebuild,v 1.7 2005/12/10 23:08:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/kicker-applets-3.4.3.ebuild,v 1.8 2006/03/27 15:24:12 agriffis Exp $
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="kicker-applets doc/kicker-applets"
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="kicker applets"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="xmms"
 OLDDEPEND="~kde-base/kicker-$PV
 	xmms? ( media-sound/xmms )"

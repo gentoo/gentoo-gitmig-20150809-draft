@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.42 2006/03/22 20:15:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.43 2006/03/27 15:52:21 agriffis Exp $
+
+  27 Mar 2006; Aron Griffis <agriffis@gentoo.org>
+  kdebase-startkde-3.4.3.ebuild:
+  Mark 3.4.3 stable on ia64. #112842
 
 *kdebase-startkde-3.5.2 (22 Mar 2006)
 
