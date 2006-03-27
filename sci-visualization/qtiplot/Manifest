@@ -1,43 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 274813fd4a020cf7014fa15813f2b040 ChangeLog 2198
-RMD160 dcbc53bf392a3fa35238be395acbcb06e7b2fb70 ChangeLog 2198
-SHA256 c14fe9921a8acf03b82072562114f1e4826bf6e73e00a42bc73f423b87196c7b ChangeLog 2198
-MD5 5adcb06c1529439b2546dc3afb1e3609 files/digest-qtiplot-0.7.4 62
-RMD160 3ae402d81207e2b1ff459081ff2fd9ec9b3280a6 files/digest-qtiplot-0.7.4 62
-SHA256 1de3918e3bb744fbf14eaa1a0286b504c5eed481bde09101865263b565c00d9e files/digest-qtiplot-0.7.4 62
-MD5 cab60c3e8730d451474342ca5b129198 files/digest-qtiplot-0.7.6 62
-RMD160 fcf6282bc10cf1cec998a4603b22840ab1b778e0 files/digest-qtiplot-0.7.6 62
-SHA256 34b6694a52e6e949330b684615dcf5becb472dc4310682d04ed4a0ff782970bc files/digest-qtiplot-0.7.6 62
+MD5 6cec5a3425d7401ed8fb1d12a3037227 ChangeLog 2585
+RMD160 38f500a51bc94bfa63a6b1e46ca0cbac5da6162f ChangeLog 2585
+SHA256 218b1554485f754762450fb1fb0b1daed8856be3fea458263779f1ca08fd584c ChangeLog 2585
 MD5 a3adbc9ccdf0e1bf64d330ba37aa813b files/digest-qtiplot-0.7.7 232
 RMD160 c4c81408eb4f94aea249dae351ca57045f3efbe8 files/digest-qtiplot-0.7.7 232
 SHA256 75c861de948534c8196d042ed309aad5bdada00d5e0dbee7c27ae6ee9d18fda0 files/digest-qtiplot-0.7.7 232
-MD5 4260dd304cd0920a91f163ff379938c3 files/qtiplot-0.7.4-qmake.patch 5573
-RMD160 6c6b37a5996c88b3b5fdc676b8b07345e7839bfd files/qtiplot-0.7.4-qmake.patch 5573
-SHA256 77de86ec731bdfc7c2064e8d011fc1d46a1a37b004b098c3a3894b20111dd395 files/qtiplot-0.7.4-qmake.patch 5573
-MD5 255a39958bfe0778043cbe4795eea8f2 files/qtiplot-0.7.6-qmake.patch 985
-RMD160 13f7076a15a234073bd5163925d182347d258c34 files/qtiplot-0.7.6-qmake.patch 985
-SHA256 08941617611df7fac9be938cac639a75b8c8c353e2f09a3348fe84349934e8ac files/qtiplot-0.7.6-qmake.patch 985
+MD5 316126cda49b56bd011e3836aa89b65e files/digest-qtiplot-0.8.1 232
+RMD160 adeaa9693b33cf4565d360372426f35c74e1d964 files/digest-qtiplot-0.8.1 232
+SHA256 cb7e0bafcc86e66c6e50bb074eaa7fd06b3cd0c4f3b774f19408aa3dcb0226ba files/digest-qtiplot-0.8.1 232
 MD5 7836bfdcab65707d6d53c3841de4d1f3 files/qtiplot-0.7.7-qmake.patch 11384
 RMD160 fa0491bd504d3445645817871fa831d0b70b4602 files/qtiplot-0.7.7-qmake.patch 11384
 SHA256 2d89427ab1304b1ec8165d6ceaedf474a48ba59d55dafbb4977b5ddaab8509ca files/qtiplot-0.7.7-qmake.patch 11384
+MD5 36a3324a431bedea10a0f018f599451b files/qtiplot-0.8.1-qmake.patch 11662
+RMD160 add23ae46f1ef8aae81140881935b22674cdaed0 files/qtiplot-0.8.1-qmake.patch 11662
+SHA256 f532f85b7e0466e06b10ee1c8f0e14d83e48c3ae4d1041d9c8c9f215b802aed6 files/qtiplot-0.8.1-qmake.patch 11662
 MD5 be5373660391ac23dc1d97a654ca9e79 metadata.xml 604
 RMD160 1e0ed48d48668781cafc44ef8a14c3fb1e41eb28 metadata.xml 604
 SHA256 094795782ea49d41a8c4106510bb80d360f1bdaae3ab89c23c369def31bab56c metadata.xml 604
-MD5 5e7cff1f68ef4fecfe75f3d2c1df97c5 qtiplot-0.7.4.ebuild 1049
-RMD160 1f101e2dbbed375e0db0b274459d26c3d3658c42 qtiplot-0.7.4.ebuild 1049
-SHA256 9bb6403d33e4074e110e5c2fc6de5a40359c90478100d8a16f93c7403d1ba31b qtiplot-0.7.4.ebuild 1049
-MD5 c46106ddb89756fca7bd7d0d6b299617 qtiplot-0.7.6.ebuild 1050
-RMD160 1b29ca78d02aabae40b53ec123a03213ee0d7c1f qtiplot-0.7.6.ebuild 1050
-SHA256 2488e053f47f74460ee6ba07066395c47858c5d5b993447bf0016ed7096b8ecf qtiplot-0.7.6.ebuild 1050
-MD5 a7be4c3f9f7ee8fcc89b2c26058313fe qtiplot-0.7.7.ebuild 1050
-RMD160 039f6ba25aadb084407b4f13b0ae7d8aaca9aa9c qtiplot-0.7.7.ebuild 1050
-SHA256 55a3999c10f61f0584abef5cbe7ab87404088b16596f1949f2a02c679e55afb1 qtiplot-0.7.7.ebuild 1050
+MD5 9df67f55e3de06d8f5324b1e56fa9c15 qtiplot-0.7.7.ebuild 1049
+RMD160 70f59f384b5d91349960c3d5b99f26a8b85efd69 qtiplot-0.7.7.ebuild 1049
+SHA256 9e5cf7389a3ac4d1a953f6b5ddd4d6c6049fd6244d0ae51f42aed70c87d41afa qtiplot-0.7.7.ebuild 1049
+MD5 b155136e523af4bca2fb6f07243398c8 qtiplot-0.8.1.ebuild 1050
+RMD160 f55dd5dd36e72a52c8b366e4ec710254a31dd2ac qtiplot-0.8.1.ebuild 1050
+SHA256 68b45506c2a3066c6cc52c7f7a39652517eab233bd0f0e309b47295ed796ae16 qtiplot-0.8.1.ebuild 1050
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFD9NKxI1lqEGTUzyQRAiWKAKCwfa8zlMLfc9yQM13TnEhIcefOxwCfSEqB
-PysNEVo+VLF+5xAwpldN2P8=
-=9EnN
+iD8DBQFEJzc7ntT9W3vfTuoRArr4AKCMbuQxrrLkdBpoQyFfduHBXkK1NACfQCQ2
+omsLM1jilJyTyrRRUI46v7Q=
+=z712
 -----END PGP SIGNATURE-----
