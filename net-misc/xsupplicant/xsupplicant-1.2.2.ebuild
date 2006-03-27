@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/xsupplicant-1.2.2.ebuild,v 1.2 2006/01/14 13:10:28 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/xsupplicant-1.2.2.ebuild,v 1.3 2006/03/27 10:34:56 metalgod Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/open1x/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="gsm"
 

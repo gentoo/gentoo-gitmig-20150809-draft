@@ -1,14 +1,52 @@
-MD5 c092a4d3e888e895182a32088dde04b8 ChangeLog 1592
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5cfa5a833a736ac974d3adc038a26071 ChangeLog 1718
+RMD160 90f73dbe4b86f02bf58133972ee60d5e88791523 ChangeLog 1718
+SHA256 edc9eb709e3d083fa37a9395ee639fa63cc59028f48f59088ce34eb917be8dfe ChangeLog 1718
 MD5 98df32cc0295a0acc372414a8a4b5c08 files/digest-xsupplicant-0.8b 68
+RMD160 6ee7698c50de7498d67a3f9b03c7c824057b77b2 files/digest-xsupplicant-0.8b 68
+SHA256 023a5ed71c9cf20710d540ebd4433861013f8b888c9b4ca2cd41d0d36b692fec files/digest-xsupplicant-0.8b 68
 MD5 e46d442b40e1d828c4a8fa3d51fab7c5 files/digest-xsupplicant-1.0 67
+RMD160 c931743455d92464bc97477a42715a9f5aecf914 files/digest-xsupplicant-1.0 67
+SHA256 775c9f4302b081b25a9a7fa5efc5ed4ef8d949decc3aab7546107b15e5866a77 files/digest-xsupplicant-1.0 67
 MD5 8b5c0592ffed1b7f540d7c53af133cad files/digest-xsupplicant-1.0.1 69
+RMD160 22ec8dfc3f6504de8720c34b38861f832f218b81 files/digest-xsupplicant-1.0.1 69
+SHA256 d639b6e5d3e568ee3e3c42487ad66203005e8d1e11d08ab56955c0733a29a830 files/digest-xsupplicant-1.0.1 69
 MD5 9e99a6486002c917cacb72919d64f5f6 files/digest-xsupplicant-1.2.2 69
+RMD160 c125a3fbf1a8c5a833c01f29b85e30682e535223 files/digest-xsupplicant-1.2.2 69
+SHA256 7c9b350dedf01be6f4602fa2ac1e32b346fe8b1e52a8ece0f51d9255dfd8dff7 files/digest-xsupplicant-1.2.2 69
 MD5 fc79eddd7a39a3ce80a9a6101f92670d files/xsupplicant-1.2.2-conf.d 374
+RMD160 1ea5202fe058c71512059acfff50d750de085c14 files/xsupplicant-1.2.2-conf.d 374
+SHA256 79ade4553bbb1ac7d76da60397fb0d988f36d268f6e5b3452c9cf020482683a7 files/xsupplicant-1.2.2-conf.d 374
 MD5 1c798b30dc0ed842843c120c11ac6ea9 files/xsupplicant-1.2.2-init.d 878
+RMD160 ebda8f34862933376205afb7e8466911fdb29917 files/xsupplicant-1.2.2-init.d 878
+SHA256 eb8e308d84e99f1f370a2dba8b8f91ecde36ce11099a62e10d756715eb14c82a files/xsupplicant-1.2.2-init.d 878
 MD5 336133489f2fc048046f9f712010e350 files/xsupplicant.conf.d 368
+RMD160 ac54e5aca41c452b12d3801165826e4a9e72a88c files/xsupplicant.conf.d 368
+SHA256 17ca5aea9b5413a78ccf80548ddc0497bfb6a2784543db0f7a45621938389503 files/xsupplicant.conf.d 368
 MD5 ac25b3cd354733e2f05237d0d804d1f2 files/xsupplicant.init.d 892
+RMD160 b4b91f97dae9e376cda4a978ccdcd58c21c68d5c files/xsupplicant.init.d 892
+SHA256 44be257d0fea3199568e05d59d1e060d3c4dbdbb9f8473eab8f870fbbc148f5f files/xsupplicant.init.d 892
 MD5 db76d51212bff92212cb8dd316a0931d metadata.xml 222
+RMD160 d264321b971f1166d17f4a7526eb7af93689bdb1 metadata.xml 222
+SHA256 2fb633aedb10810a6b50229f9c4b978434798139a6af2b01f821c61ba690b239 metadata.xml 222
 MD5 c49a576040df261bcd5648365763162b xsupplicant-0.8b.ebuild 809
+RMD160 f36fc10550b6a16f833c8c2060701a9506b198a7 xsupplicant-0.8b.ebuild 809
+SHA256 07e016175be296d8ac00244629f762b22b5ea567090a44bc4121ebbecc6584b2 xsupplicant-0.8b.ebuild 809
 MD5 fa581e5a6cadc7e082b8554eeffaff81 xsupplicant-1.0.1.ebuild 1286
+RMD160 e9435b8f33f85ad7cea18c743b21ea92027ad0b4 xsupplicant-1.0.1.ebuild 1286
+SHA256 94802070b6a9fe2cd3782bab07c5cbf1e678f782981cae26cdb6ee7e3b1466dd xsupplicant-1.0.1.ebuild 1286
 MD5 a7272f606860d801af53bb3e292b9352 xsupplicant-1.0.ebuild 1262
-MD5 07e56f89a2c6eaacac200908c6915cf9 xsupplicant-1.2.2.ebuild 1590
+RMD160 461062043f027bea0f1444877443e9dfc61ad848 xsupplicant-1.0.ebuild 1262
+SHA256 a18ef9b2d3c005c4ac620a9e1b1bce62ff99031691d2a3bea8a47071c3897146 xsupplicant-1.0.ebuild 1262
+MD5 a60f80a3221735da2e1b054f63b32ecb xsupplicant-1.2.2.ebuild 1601
+RMD160 6265ecca164a36cfbc4355646928f8aec406e743 xsupplicant-1.2.2.ebuild 1601
+SHA256 4dc0f99153564ec50554e6002a8530ac51188ac015012405a67b3c014761133f xsupplicant-1.2.2.ebuild 1601
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEJ83HwUpWvClEHQoRAjYvAJ9jCITnszuLHYYEbdm4MbS35/C3ywCfThGO
+sHnXNjV2Oh5q8OILjsYY7wE=
+=PQ+n
+-----END PGP SIGNATURE-----
