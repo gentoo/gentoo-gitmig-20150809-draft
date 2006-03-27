@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.0.1-r1.ebuild,v 1.1 2006/03/25 16:01:43 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.0.1-r2.ebuild,v 1.1 2006/03/27 17:56:24 rl03 Exp $
 
 inherit webapp eutils versionator
 
@@ -38,6 +38,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/CVE-2006-1386.patch
+	epatch ${FILESDIR}/CVE-2006-1387.patch
 
 	mv ${S}/bin/LocalLib.cfg.txt ${S}/bin/LocalLib.cfg
 	mv ${S}/lib/LocalSite.cfg.txt ${S}/lib/LocalSite.cfg
