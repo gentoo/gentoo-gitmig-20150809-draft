@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/base
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/ChangeLog,v 1.2 2006/02/08 19:13:06 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/ChangeLog,v 1.3 2006/03/27 00:08:04 jokey Exp $
+
+*base-1.2.4 (27 Mar 2006)
+
+  27 Mar 2006; Markus Ullmann <jokey@gentoo.org> +base-1.2.4.ebuild:
+  Version bump wrt bug #126877
 
 *base-1.2.2-r1 (08 Feb 2006)
 
