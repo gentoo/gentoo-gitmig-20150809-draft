@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a600e7dac9ee9224f154bba12600400e ChangeLog 15543
-RMD160 7fcadd20f2e2903b941f27382e6330cab8096e02 ChangeLog 15543
-SHA256 ae2a28cbb8f4684669cbcd66cb86da7db249ee655f08254912bd3c0124eafba0 ChangeLog 15543
+MD5 9586338dd0dc4e6cae474cf6f5b70f92 ChangeLog 15752
+RMD160 ef9df832f5fcab7353b06cb6f17a07837481b0c6 ChangeLog 15752
+SHA256 d51fe45fb81f2a70477d75e80b4ecc1736c63b847d43878004d708a15b00632d ChangeLog 15752
 MD5 80bd8d05a4478ae3d83d952d19e928ac dbus-0.23.4-r1.ebuild 3647
 RMD160 ca03ac02fddf891a097814dac744774d2aaa3267 dbus-0.23.4-r1.ebuild 3647
 SHA256 d08b90313aab10d5a71e7e0858e3548983cb2dfc4bd7317dfb99a57c2a0faad0 dbus-0.23.4-r1.ebuild 3647
@@ -19,6 +19,9 @@ SHA256 7cb5970a6e0cd9f63b737fa544618e48a451d0664b4d1d6568e8a4f84f9e4925 dbus-0.6
 MD5 c002c05d2aaf3510f3f13c68b500ea26 dbus-0.60-r4.ebuild 4625
 RMD160 3add3d3700d3f42b90d89053181451f38b80d1a1 dbus-0.60-r4.ebuild 4625
 SHA256 4b9ab333b66e1cfdcb15dc20f6df9e72528942d7b83c1551a40cf23003ac2d4e dbus-0.60-r4.ebuild 4625
+MD5 dd3a429554164f2dc3f505f019896426 dbus-0.61-r1.ebuild 4179
+RMD160 2200bf51a471f8e4df5ffb6a22595f1910e9c579 dbus-0.61-r1.ebuild 4179
+SHA256 52dca288779d1e9a1c21506416310dbe56243407235aaae6ca888394c125e370 dbus-0.61-r1.ebuild 4179
 MD5 783e674e9642fb13381a8f98de6cee52 dbus-0.61.ebuild 3998
 RMD160 8729028e40c215820ac1a36d63c8fab1a0e54115 dbus-0.61.ebuild 3998
 SHA256 6a783ebf6be369e4657d76ebdb57bfb04d77a71396b37aa4c3d9606480e38541 dbus-0.61.ebuild 3998
@@ -61,6 +64,9 @@ SHA256 5325185ce8db7b66ee7f00ad2c48d435ab4ec3e32bdea255f1bca6296cb6a22b files/db
 MD5 23da3594a8163850b18ac647f3e06213 files/dbus-0.60-mono-docs.patch 564
 RMD160 2706c2573d34dee361b886b80908278ea76bb6be files/dbus-0.60-mono-docs.patch 564
 SHA256 a195a8f1421ec62e6d37f9ab40437d051cbf98533aeb6bddb05ac637cbec30df files/dbus-0.60-mono-docs.patch 564
+MD5 cd3dd269a14ac3237733a63ffa7f03c9 files/dbus-0.60-mono-return-null-fix.diff 1054
+RMD160 558bcde24386162e8e26d42391fb58cdd9fa61eb files/dbus-0.60-mono-return-null-fix.diff 1054
+SHA256 1aabd0c64b541b76680623c30f07c65d0b30f4cf4adec08212c331df22bcd042 files/dbus-0.60-mono-return-null-fix.diff 1054
 MD5 9c8f954ecca28788cf0f48969cde2999 files/dbus-0.60-qdbusmarshall.patch 607
 RMD160 c9c26d63157acf201ef81a3b29b3c2b661502b3c files/dbus-0.60-qdbusmarshall.patch 607
 SHA256 27d63f2b75f10b9814e7e0566f901fb612fe7d0b9024508ad2cfcb7df3196586 files/dbus-0.60-qdbusmarshall.patch 607
@@ -91,6 +97,9 @@ SHA256 0d91b0798d84733e3f381abfd35cac1a5598213792067dd4e000467037c2f20e files/db
 MD5 c5af2408e06dd6448f6b586506fde3b8 files/dbus.init-0.60 1072
 RMD160 63739da881d1469f527523c1e3e26c7610a137bc files/dbus.init-0.60 1072
 SHA256 3fac1e5818d15183450dfc9db577f233197de9b6b0edd54258dd40261960bd2d files/dbus.init-0.60 1072
+MD5 6b195b02bd50938b45064d123e54fd3c files/dbus.init-0.61 1346
+RMD160 89cd1827c3f8991d0bb4d2024ae02509255e88ee files/dbus.init-0.61 1346
+SHA256 dccfbaf184f785e4547ab6fe3dcfe5ba5edde98a048057004dbdf3a10d718b03 files/dbus.init-0.61 1346
 MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4-r1 64
 RMD160 ec8881d37e34ba16714ec2f7f1dab83c4b561378 files/digest-dbus-0.23.4-r1 64
 SHA256 edabbea54ce1a5eca55736675ce62ccfabe8d21fea5b99b1b8b8b2dafa640bc5 files/digest-dbus-0.23.4-r1 64
@@ -109,13 +118,16 @@ SHA256 cfd4429324733e509efaea4fe88a934ab9bbcb927b6959f4373d14b2177fb15b files/di
 MD5 c58edabe96394082b354c8b061117b00 files/digest-dbus-0.61 232
 RMD160 857dde87b1e43ba473ece4ce9945c43eb8dcae25 files/digest-dbus-0.61 232
 SHA256 8ee10bf68b294a8eef518926360a7b538fa9dda198e47b1d9f6367b6de0cdbcd files/digest-dbus-0.61 232
+MD5 c58edabe96394082b354c8b061117b00 files/digest-dbus-0.61-r1 232
+RMD160 857dde87b1e43ba473ece4ce9945c43eb8dcae25 files/digest-dbus-0.61-r1 232
+SHA256 8ee10bf68b294a8eef518926360a7b538fa9dda198e47b1d9f6367b6de0cdbcd files/digest-dbus-0.61-r1 232
 MD5 d854e952b3179d33b2ece377ce9980f3 metadata.xml 222
 RMD160 cd880923dd3bbe29d863c21fdcc56700006a2bcc metadata.xml 222
 SHA256 3b1bdb4611693b7a059584a994f3760dce2f37a048d4c2c55c1756e17519e1cf metadata.xml 222
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEGY87BtvusYtCZMsRAk6sAJ4iz+BFq0Rhu3EvD2Pybpuuma6IjwCfUExi
-UP6QjedRW8RbXpVQEiaeSRY=
-=KIU/
+iD8DBQFEJ177BtvusYtCZMsRArZKAJ0ajbLzNXZiucBAbCmImEmtAMNBOgCeI3OF
+xaU2B2arUgFktKop9jWUu3o=
+=tBkE
 -----END PGP SIGNATURE-----

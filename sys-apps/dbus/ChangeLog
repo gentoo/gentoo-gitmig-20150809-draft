@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.108 2006/03/16 06:43:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.109 2006/03/27 03:40:54 cardoe Exp $
+
+*dbus-0.61-r1 (27 Mar 2006)
+
+  27 Mar 2006; Doug Goldstein <cardoe@gentoo.org>
+  +files/dbus-0.60-mono-return-null-fix.diff, +files/dbus.init-0.61,
+  +dbus-0.61-r1.ebuild:
+  Mono bindings fix. New Initscript
 
   16 Mar 2006; Doug Goldstein <cardoe@gentoo.org>
   +files/dbus-0.61-i-hate-qt-so-much.patch,
