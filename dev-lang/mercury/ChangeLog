@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.3 2006/03/25 02:27:39 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.4 2006/03/27 07:14:22 keri Exp $
+
+  27 Mar 2006; Keri Harris <keri@gentoo.org> mercury-0.12.2.ebuild:
+  Explicitly disable building dotnet grades. Thanks to Brian Danilko
+  <brian@likeablesoftware.com> in bug #127673
 
   25 Mar 2006; Keri Harris <keri@gentoo.org> mercury-0.12.2.ebuild:
   Add ~ppc keyword.
