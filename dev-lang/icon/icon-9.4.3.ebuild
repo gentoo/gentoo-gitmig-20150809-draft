@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.4.3.ebuild,v 1.1 2006/03/27 11:29:16 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.4.3.ebuild,v 1.2 2006/03/27 12:30:06 fmccor Exp $
 
 MY_PV=${PV//./}
 SRC_URI="http://www.cs.arizona.edu/icon/ftp/packages/unix/icon.v${MY_PV}src.tgz"
@@ -9,7 +9,7 @@ DESCRIPTION="very high level language"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc-macos ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc-macos sparc ~x86"
 IUSE="X iplsrc"
 
 S=${WORKDIR}/icon.v${MY_PV}src

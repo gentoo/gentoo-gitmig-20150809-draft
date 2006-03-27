@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/icon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.12 2006/03/27 11:29:16 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.13 2006/03/27 12:30:06 fmccor Exp $
+
+  27 Mar 2006; Ferris McCormick <fmccor@gentoo.org> icon-9.4.3.ebuild:
+  Add sparc keyword (Bug #114944).  This seems the least bad of several options:
+  For me, the "stable" version 9.40 flat out won't build; instead, it goes into
+  a '/bin/sh: line 0: cd: gpacks/README: Not a directory' loop.  The requested
+  version --- 9.4.3 --- builds and installs, but a couple of its tests fail with
+  FEATURES=test enabled.  But in this case, I'll mark it stable, just to help
+  get rid of 9.40.  (Note that my system is x11-base/xorg-x11-7.0-r1.)
 
 *icon-9.4.3 (27 Mar 2006)
 
