@@ -1,31 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 29127f0ca5f8fb3ea798ac1b93515954 ChangeLog 777
-RMD160 2b5640b6916c675963a1ccaf8ba056cd0473f415 ChangeLog 777
-SHA256 14498e22f4c84ad9f9b2e3fcf998497a1be9dc7245b983c8570e4fb8681f3ebd ChangeLog 777
+MD5 c888ad295ed2484e4fd61e20f27bc491 ChangeLog 1105
+RMD160 0be448ec6c8e46c5e73f8f7d0ac9a9d424177971 ChangeLog 1105
+SHA256 04a64db6f32beaa484c8f9571d9e1599005a7eaf42b82c4468c06c72384ff5bf ChangeLog 1105
 MD5 f3f1bdb05304f35fac9bd27ec98475b4 files/digest-gnat-gpl-3.4.5.1 348
 RMD160 143df6263d6f7eeff05fbb1c7764aab7c4612bcd files/digest-gnat-gpl-3.4.5.1 348
 SHA256 2b52d2b859d61be62cf3723bfe1f1d287fcd4baf785d07d93efe7505cdae93d8 files/digest-gnat-gpl-3.4.5.1 348
 MD5 f28d95fa6e19dc594ed1bfafe4795b3c files/digest-gnat-gpl-3.4.5.1-r1 354
 RMD160 d6584f35c0fc6096f934211f94d79a5ce9e32dcc files/digest-gnat-gpl-3.4.5.1-r1 354
 SHA256 e1742c6bfd303ef996228a99bea9b31908e113e3517cc1303575a497b9091590 files/digest-gnat-gpl-3.4.5.1-r1 354
+MD5 78531aa1e410b379a63633ea46d6dfaf files/digest-gnat-gpl-3.4.5.1-r2 1283
+RMD160 3bd4b25c8aa4cc87281a7173675fb9eaeba14033 files/digest-gnat-gpl-3.4.5.1-r2 1283
+SHA256 258b5ce48de1e17ecdbb5829325b8425f791c13a6c73b4b5bf8b518088cbdad3 files/digest-gnat-gpl-3.4.5.1-r2 1283
+MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/gcc-configure-LANG.patch 1686
+RMD160 4ff8355af81705058fd411910dfae94887bcd884 files/gcc-configure-LANG.patch 1686
+SHA256 dc9386b88eac48c282d63d0be7e7be81d4a0a08035a8b97138a61133e057bcea files/gcc-configure-LANG.patch 1686
 MD5 c370fea9c771c16d066a4c661e93edc7 files/gnat-Make-lang.in.patch 555
 RMD160 110c659ce235926a488eb6382bc380de7195cb13 files/gnat-Make-lang.in.patch 555
 SHA256 e213feb0c5676dac56af0d9f8d4112cfaae6bfff1e29f18fee81f4e23634e698 files/gnat-Make-lang.in.patch 555
+MD5 45951dd3bbc979c9e043c7203745cf31 files/patches/51_all_gcc-3.4-libiberty-pic.patch 350
+RMD160 4460024bbeae0a723df57657524cbdcb087f269d files/patches/51_all_gcc-3.4-libiberty-pic.patch 350
+SHA256 c67824f20231181cd351dab085d861c6d97100b22ee913c5610b160aae5f4a0d files/patches/51_all_gcc-3.4-libiberty-pic.patch 350
+MD5 48af48b8e7f8e6db47a2d7a019aeaae4 files/patches/74_all_sh-pr24836.patch 663
+RMD160 674e395da770cac6e5ac66f53553acd2612d5011 files/patches/74_all_sh-pr24836.patch 663
+SHA256 64772b8d84f82194bd8be91f6cf73d868b6ac24c41a5eddd238d559dbe109362 files/patches/74_all_sh-pr24836.patch 663
 MD5 101628a2171a4c650021c6e2c50e5886 gnat-gpl-3.4.5.1-r1.ebuild 2418
 RMD160 ccd981a95e2de9ddf9b8f258fc41d8820dba94b4 gnat-gpl-3.4.5.1-r1.ebuild 2418
 SHA256 d70d6189c70c392a8cd0ffd547a8d746e7c567014bd1285c4309245192a1c968 gnat-gpl-3.4.5.1-r1.ebuild 2418
+MD5 4b87103f111df28ea142c775cb138022 gnat-gpl-3.4.5.1-r2.ebuild 2418
+RMD160 e23a08fca2b600893b9451b228591b0d3217d73b gnat-gpl-3.4.5.1-r2.ebuild 2418
+SHA256 e6ae55d5935c5f642f452a314628f8fde116516afe8080f08804a085b6f6c342 gnat-gpl-3.4.5.1-r2.ebuild 2418
 MD5 95fe10419e38a8790cffb719372b855d gnat-gpl-3.4.5.1.ebuild 2409
 RMD160 b1ff15174782a971225bc7731bfd3978c4ece228 gnat-gpl-3.4.5.1.ebuild 2409
 SHA256 3a09f9d81fdec2337dd5a336d259f6e2602bf40f16b25935cb6efef044a1410b gnat-gpl-3.4.5.1.ebuild 2409
 MD5 63fe50d3f9c3d288e7c1d1ac98eac6d7 metadata.xml 552
 RMD160 9524b8f235d2e96967b1414cf0dfb81e7b4d7d41 metadata.xml 552
 SHA256 e90469f4de062e9432e406f068db899fec34efa03c8c505d605bab800cb54107 metadata.xml 552
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHdlNCRZPokWLroQRAkQrAKCxH7B1yPJ2oHOBwnEiwVumjrHMmwCggIPb
-lQ0TlxM5YSQQ7qQb0B2/2Ks=
-=Uoph
------END PGP SIGNATURE-----
