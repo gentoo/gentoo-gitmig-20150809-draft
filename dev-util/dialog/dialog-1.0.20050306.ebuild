@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.0.20050306.ebuild,v 1.1 2005/07/05 09:36:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.0.20050306.ebuild,v 1.2 2006/03/27 19:16:22 truedfx Exp $
 
 MY_PV="${PV/1.0./1.0-}"
 S=${WORKDIR}/${PN}-${MY_PV}
@@ -15,6 +15,16 @@ IUSE="unicode"
 
 DEPEND=">=app-shells/bash-2.04-r3
 	>=sys-libs/ncurses-5.2-r5"
+
+pkg_setup() {
+	if use unicode && ! built_with_use sys-libs/ncurses unicode; then
+		eerror "Installing dialog with the unicode flag requires ncurses be"
+		eerror "built with it as well. Please make sure your /etc/make.conf"
+		eerror "or /etc/portage/package.use enables it, and re-install"
+		eerror "ncurses with \`emerge --oneshot sys-libs/ncurses\`."
+		die "Re-emerge ncurses with the unicode flag"
+	fi
+}
 
 src_compile() {
 	#export LANG=C
