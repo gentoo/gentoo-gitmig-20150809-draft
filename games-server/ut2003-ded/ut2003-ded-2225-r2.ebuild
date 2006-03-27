@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r2.ebuild,v 1.5 2006/01/05 22:11:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r2.ebuild,v 1.6 2006/03/27 13:39:41 wolf31o2 Exp $
 
 inherit games
 
@@ -59,6 +59,7 @@ EOT
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	ewarn "NOTE: To have your server authenticate properly, you"
 	ewarn "      MUST visit the following site and request a key."
 	ewarn "http://ut2003master.epicgames.com/ut2003server/cdkey.php"
@@ -68,7 +69,4 @@ pkg_postinst() {
 	ewarn "~/.ut2003/System/UT2003.ini file and add a line that says"
 	ewarn "AccessControlClass=crashfix.iaccesscontrolini to your"
 	ewarn "[Engine.GameInfo] section to close a security issue."
-	echo
-
-	games_pkg_postinst
 }

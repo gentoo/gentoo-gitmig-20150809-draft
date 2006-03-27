@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.ebuild,v 1.2 2006/01/06 18:50:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.ebuild,v 1.3 2006/03/27 13:43:59 wolf31o2 Exp $
 
 inherit games
 
@@ -59,7 +59,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
+	games_pkg_postinst
 	einfo "The server can be started with the /etc/init.d/ut2004-ded init script."
 	echo
 	ewarn "You should take the time to edit the default server INI."
@@ -74,5 +74,4 @@ pkg_postinst() {
 	echo
 	ewarn "      http://unreal.epicgames.com/ut2004server/cdkey.php"
 	echo
-	games_pkg_postinst
 }

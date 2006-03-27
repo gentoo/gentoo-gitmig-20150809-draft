@@ -1,6 +1,10 @@
 # ChangeLog for games-server/ut2004-ded
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.9 2006/01/06 18:50:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.10 2006/03/27 13:43:59 wolf31o2 Exp $
+
+  27 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-ded-3355.ebuild, ut2004-ded-3369.ebuild:
+  Moved games_pkg_postinst to beginning of pkg_postinst.
 
   06 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-ded-3369.ebuild:
