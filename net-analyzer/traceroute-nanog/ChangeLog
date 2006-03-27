@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/traceroute-nanog
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.11 2005/11/17 22:08:52 hparker Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.12 2006/03/27 22:05:40 jokey Exp $
+
+  27 Mar 2006; Markus Ullmann <jokey@gentoo.org>
+  traceroute-nanog-6.3.10-r1.ebuild:
+  Fixed small manpage issue wrt bug #125610 -- thanks to Marcin D. Mikielewicz
+  for the patch
 
   17 Nov 2005; Homer Parker <hparker@gentoo.org>
   traceroute-nanog-6.3.10-r1.ebuild:

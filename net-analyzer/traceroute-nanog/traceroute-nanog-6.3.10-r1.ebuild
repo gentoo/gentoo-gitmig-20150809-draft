@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/traceroute-nanog-6.3.10-r1.ebuild,v 1.4 2005/11/17 22:08:52 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/traceroute-nanog-6.3.10-r1.ebuild,v 1.5 2006/03/27 22:05:40 jokey Exp $
 
 inherit eutils toolchain-funcs
 
@@ -34,5 +34,5 @@ src_compile() {
 src_install() {
 	dosbin traceroute-nanog || die "dosbin failed"
 	dodoc 0_readme.txt faq.txt
-	newman debian/traceroute.8 traceroute-nanog.8 || die "newman failed"
+	newman ${P}/debian/traceroute-nanog.8 traceroute-nanog.8 || die "newman failed"
 }
