@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Config-Tiny
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/ChangeLog,v 1.31 2006/03/23 19:29:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/ChangeLog,v 1.32 2006/03/27 11:59:27 corsair Exp $
+
+  27 Mar 2006; Markus Rothe <corsair@gentoo.org> Config-Tiny-2.04.ebuild:
+  Stable on ppc64
 
   23 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
   Config-Tiny-2.04.ebuild:
