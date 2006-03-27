@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.6 2006/01/22 19:24:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.7 2006/03/27 14:13:20 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -94,10 +94,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "To play Sid Meyer's Alpha Centauri run:"
 	einfo " smac"
 	einfo "To play Alien Crossfire run:"
 	einfo " smacx"
-
-	games_pkg_postinst
 }
