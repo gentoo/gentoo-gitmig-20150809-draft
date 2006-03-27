@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/protux
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.19 2005/10/31 11:13:44 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.20 2006/03/27 11:22:28 metalgod Exp $
+
+  27 Mar 2006; Luis Medinas <metalgod@gentoo.org> protux-0.20.1.ebuild,
+  protux-0.20.2.ebuild:
+  Modular X Love closes bug #126929.
 
   31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> protux-0.20.1.ebuild,
   protux-0.20.2.ebuild:
