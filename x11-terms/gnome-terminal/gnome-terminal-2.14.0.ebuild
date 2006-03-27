@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.14.0.ebuild,v 1.1 2006/03/13 20:18:16 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.14.0.ebuild,v 1.2 2006/03/27 00:53:25 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -37,8 +37,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	gnome2_src_unpack
 
 	# Use login shell by default (#12900) 
 	epatch ${FILESDIR}/${PN}-2-default_shell.patch

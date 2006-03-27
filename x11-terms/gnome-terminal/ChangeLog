@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.111 2006/03/13 20:18:13 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.112 2006/03/27 00:53:25 allanonjl Exp $
+
+  27 Mar 2006; John N. Laliberte <allanonjl@gentoo.org>
+  gnome-terminal-2.12.0.ebuild, gnome-terminal-2.14.0.ebuild:
+  fix scrollkeeper / qa #127678
 
 *gnome-terminal-2.14.0 (13 Mar 2006)
 
