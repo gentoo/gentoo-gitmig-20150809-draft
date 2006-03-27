@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/quake3-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.9 2006/03/22 21:52:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.10 2006/03/27 18:43:12 wolf31o2 Exp $
+
+*quake3-bin-1.32b-r5 (27 Mar 2006)
+
+  27 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake3-bin-1.31.ebuild, quake3-bin-1.32b-r4.ebuild,
+  +quake3-bin-1.32b-r5.ebuild:
+  Added initial support for quake3-teamarena.
 
   22 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   quake3-bin-1.31.ebuild, quake3-bin-1.32b-r4.ebuild:

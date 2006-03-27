@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.34_alpha632.ebuild,v 1.2 2006/03/24 20:01:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.34_alpha632.ebuild,v 1.3 2006/03/27 18:38:21 wolf31o2 Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -10,12 +10,12 @@
 if [[ ${PV} == 9999* ]] ; then
 	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
 	ESVN_REPO_URI="svn://svn.icculus.org/quake3/trunk"
-	inherit subversion games toolchain-funcs
+	inherit subversion toolchain-funcs eutils games
 
 	SRC_URI=""
 	S=${WORKDIR}/trunk
 elif [[ ${PV} == *_alpha* ]] ; then
-	inherit games toolchain-funcs
+	inherit toolchain-funcs eutils games
 
 	MY_PV=${PV/_alpha*/}
 	SNAP=${PV/*_alpha/}
@@ -23,7 +23,7 @@ elif [[ ${PV} == *_alpha* ]] ; then
 	SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 	S=${WORKDIR}/${MY_P}
 else
-	inherit games toolchain-funcs
+	inherit toolchain-funcs eutils games
 
 	SRC_URI="http://icculus.org/quake3/${P}.tar.bz2"
 fi
@@ -57,7 +57,8 @@ RDEPEND="opengl? (
 				x11-libs/libXdmcp )
 			virtual/x11 )
 		media-libs/libsdl )
-	games-fps/quake3-data"
+	games-fps/quake3-data
+	teamarena? ( games-fps/quake3-teamarena )"
 
 src_unpack() {
 	if [[ ${PV} == 9999* ]] ; then
@@ -108,7 +109,6 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	echo
 	ewarn "The source version of Quake 3 will not work with Punk Buster."
 	ewarn "If you need pb support, then use the quake3-bin package."
 	echo

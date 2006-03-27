@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r4.ebuild,v 1.7 2006/03/27 18:43:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r5.ebuild,v 1.1 2006/03/27 18:43:12 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -10,8 +10,8 @@ SRC_URI="mirror://idsoftware/quake3/linux/linuxq3apoint-${PV}-3.x86.run"
 
 LICENSE="Q3AEULA"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
-IUSE="cdinstall dedicated opengl"
+KEYWORDS="-* ~amd64 ~x86"
+IUSE="cdinstall dedicated opengl teamarena"
 RESTRICT="nostrip"
 
 RDEPEND="sys-libs/glibc
@@ -34,7 +34,8 @@ RDEPEND="sys-libs/glibc
 			|| (
 				>=media-video/nvidia-glx-1.0.6629-r3
 				>=x11-drivers/ati-drivers-8.8.25-r1 ) ) )
-	games-fps/quake3-data"
+	games-fps/quake3-data
+	teamarena? ( games-fps/quake3-teamarena )"
 
 S=${WORKDIR}
 
@@ -62,7 +63,7 @@ src_install() {
 			dosym ${GAMES_DATADIR}/quake3/${pk3} ${dir}/${pk3}
 		done
 		dosym ${GAMES_DATADIR}/quake3/baseq3/pak0.pk3 ${dir}/baseq3/pak0.pk3
-		dosym ${GAMES_DATADIR}/quake3/missionpack/pak0.pk3 \
+		use teamarena && dosym ${GAMES_DATADIR}/quake3/missionpack/pak0.pk3 \
 			${dir}/missionpack/pak0.pk3
 	else
 		insinto ${dir}/baseq3
@@ -88,6 +89,8 @@ src_install() {
 	fi
 	newicon quake3.xpm quake3-bin.xpm
 	make_desktop_entry quake3-bin "Quake III Arena (binary)" quake3-bin.xpm
+	use teamarena && make_desktop_entry "quake3-bin +set fs_game missionpack" \
+		"Quake III Team	Arena" quake3-bin.xpm
 
 	prepgamesdirs
 }
