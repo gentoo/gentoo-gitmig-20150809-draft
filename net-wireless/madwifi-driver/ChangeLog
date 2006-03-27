@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/madwifi-driver
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.40 2006/03/12 15:16:24 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.41 2006/03/27 19:47:48 brix Exp $
+
+*madwifi-driver-0.1485.20060325 (27 Mar 2006)
+
+  27 Mar 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +madwifi-driver-0.1485.20060325.ebuild:
+  New madwifi-ng snapshot.
 
 *madwifi-driver-0.1473.20060312 (12 Mar 2006)
 
