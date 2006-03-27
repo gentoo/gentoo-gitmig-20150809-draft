@@ -1,6 +1,9 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.1 2006/03/26 23:03:13 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.2 2006/03/27 13:17:24 hd_brummy Exp $
+
+  27 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org> noad-0.6.0-r2.ebuild:
+  fixed Hompage URL; #127708, thx to Natanael Copa for reporting this
 
 *noad-0.6.0-r2 (26 Mar 2006)
 
