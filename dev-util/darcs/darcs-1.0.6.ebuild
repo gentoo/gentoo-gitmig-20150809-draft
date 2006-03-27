@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.6.ebuild,v 1.2 2006/03/24 17:46:39 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.6.ebuild,v 1.3 2006/03/27 12:21:57 dcoutts Exp $
 
 inherit base
 
@@ -36,6 +36,10 @@ src_unpack() {
 	# use it with -opta too or it'll break with some CFLAGS, eg -mcpu on sparc
 	sed -i 's:\($(addprefix -optc,$(CFLAGS))\):\1 $(addprefix -opta,$(CFLAGS)):' \
 		${S}/autoconf.mk.in
+
+	# On ia64 we need to tone down the level of inlining so we don't break some
+	# of the low level ghc/gcc interaction gubbins.
+	use ia64 && sed -i 's/-funfolding-use-threshold20//' "${S}/GNUmakefile"
 }
 
 src_compile() {
