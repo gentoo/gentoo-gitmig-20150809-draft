@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/magicrescue
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/ChangeLog,v 1.4 2005/09/16 22:23:21 dragonheart Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/ChangeLog,v 1.5 2006/03/27 19:18:00 sbriesen Exp $
+
+  27 Mar 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  magicrescue-1.1.4-r1.ebuild:
+  fixed install error (broken dodir) + general ebuild cleanup.
 
   16 Sep 2005; Daniel Black <dragonheart@gentoo.org>
   -magicrescue-1.1.4.ebuild, +magicrescue-1.1.4-r1.ebuild:

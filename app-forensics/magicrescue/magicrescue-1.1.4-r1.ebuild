@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/magicrescue-1.1.4-r1.ebuild,v 1.1 2005/09/16 22:23:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/magicrescue-1.1.4-r1.ebuild,v 1.2 2006/03/27 19:18:00 sbriesen Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Find deleted files in block devices"
 HOMEPAGE="http://jbj.rapanden.dk/magicrescue/"
@@ -15,16 +15,13 @@ IUSE=""
 
 DEPEND="virtual/libc"
 
-
 src_compile() {
-	./configure --prefix=/usr || die "fake configure script failed"
-
-	emake CC="$(tc-getCC)" GCC_OPT="${CFLAGS}" \
-		|| die "make failed"
+	CC="$(tc-getCC)" ./configure --prefix=/usr || die "configure script failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	dodir usr
-	make PREFIX=${D}/usr install || die "install failed"
-	mv ${D}/usr/man ${D}/usr/share
+	dodir /usr
+	make PREFIX="${D}/usr" install || die "make install failed"
+	mv "${D}/usr/man" "${D}/usr/share"
 }
