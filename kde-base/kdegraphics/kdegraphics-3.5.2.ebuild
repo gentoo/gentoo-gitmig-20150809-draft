@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.2.ebuild,v 1.1 2006/03/25 19:44:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.2.ebuild,v 1.2 2006/03/27 19:42:23 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -23,8 +23,8 @@ DEPEND="~kde-base/kdebase-${PV}
 	openexr? ( >=media-libs/openexr-1.2 )
 	povray? ( media-gfx/povray
 		  virtual/opengl )
-	pdf? ( >=app-text/poppler-0.5.0-r1
-		>=app-text/poppler-bindings-0.5.0 )"
+	pdf? ( >=app-text/poppler-0.5.1
+		>=app-text/poppler-bindings-0.5.1 )"
 
 RDEPEND="${DEPEND}
 	tetex? (
@@ -52,14 +52,6 @@ pkg_setup() {
 		eerror "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
 		die "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
 	fi
-}
-
-src_unpack() {
-	kde_src_unpack
-
-	# Lovely when libraries changes API in micro releases.
-	has_version ">=app-text/poppler-0.5.1" && \
-		epatch "${DISTDIR}/kpdf-${PV}-poppler-0.5.1-bis.patch.bz2"
 }
 
 src_compile() {

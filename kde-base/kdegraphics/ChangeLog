@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.243 2006/03/25 19:44:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.244 2006/03/27 19:42:23 flameeyes Exp $
+
+  27 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdegraphics-3.5.2.ebuild:
+  Drop -bis patch as 3.5.2 patch defaults to using poppler 0.5.1 only.
 
 *kdegraphics-3.5.2 (25 Mar 2006)
 
