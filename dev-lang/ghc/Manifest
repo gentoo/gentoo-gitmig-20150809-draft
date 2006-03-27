@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 efb87c55feb30e05a1d4640ceccd7914 ChangeLog 15593
-RMD160 8da8b6a16be5de87d8458731e6cd7a0476f8ee3c ChangeLog 15593
-SHA256 759f95a264383a828c67727e4ac21a4410e29d2f83ae7e83a9022d32d1b6faf3 ChangeLog 15593
+MD5 61effcd8b7ee9a8bc32199e904183e21 ChangeLog 15701
+RMD160 7f3db30d486ae31cb51efd685ed6238273823abf ChangeLog 15701
+SHA256 e6ec8b0112c9ebfa4593cbaa181c2cf2aff083937361dc4930d1c8f7038e5b9b ChangeLog 15701
 MD5 7e423c353b08a2c05693d13f21e067d0 files/depsort.py 1958
 RMD160 4192ad9ed14064a9da42ce1faedcf28996094da3 files/depsort.py 1958
 SHA256 7406f639d17b8acab6a1db7e398e74379b44950d4821bc36901abd3455d63b3d files/depsort.py 1958
@@ -28,6 +28,9 @@ SHA256 9406b0fa32d19bfbd55e6635070f3bdb57bd061a599924d940c8af8e34f36d3d files/gh
 MD5 e522470e9d323932951f9efdb3fbf7e8 files/ghc-6.4.1-configure.patch 2666
 RMD160 26568ec35d05a3855ad8cf10593d15ccaedee847 files/ghc-6.4.1-configure.patch 2666
 SHA256 7519b2fa9a9faf4c3545ed471803f85bc102b2428eb9c53ea15ae457271d28b9 files/ghc-6.4.1-configure.patch 2666
+MD5 60b4661916823941a6e1f17e8c6eaf11 files/ghc-6.4.1-gcc41.patch 1449
+RMD160 dacc32425df3af36a77763f9a22c809c134ba157 files/ghc-6.4.1-gcc41.patch 1449
+SHA256 243304ce6b553c46113b7cf84db2077933af214dc92a8959ec0bef06e6fb49c1 files/ghc-6.4.1-gcc41.patch 1449
 MD5 f55d9cead45de0979d9650dccde5e168 files/ghc-6.4.1-openal.patch 1270
 RMD160 fa7b57dc78cc36c9d74e55bc4873e6efc321f353 files/ghc-6.4.1-openal.patch 1270
 SHA256 fe6db1cf73571bca4af195321112985201e695cf67ed889cf626e5dc2b54b67e files/ghc-6.4.1-openal.patch 1270
@@ -52,7 +55,7 @@ SHA256 1d00c8be162a6cb87b3de440b3e63e10b39c12d56e8fbfe592e75aed872b2508 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEJx2Z/B0cxt+cq+wRAi9CAJsGp/31vVOHC+9tZMDcProriC1pdACfa+Lk
-zHx4h9g33izmfHBDGPkCqvs=
-=AAJg
+iD8DBQFEJ87p/B0cxt+cq+wRApVLAJ0V1lUTuv6V/f/HO/8E3vgNBqRcdACfapfX
+eSpbKEDuUquSe8JL/QMqPGU=
+=DT1y
 -----END PGP SIGNATURE-----
