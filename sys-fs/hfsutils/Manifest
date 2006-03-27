@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c48d74abef408c4666f235b9fd874bf2 ChangeLog 2731
-RMD160 160efaca19b72753b4494fe82b9886017fa21817 ChangeLog 2731
-SHA256 fd0096713a1880a4c49e2b0e0d859ff0bd988103cd903751c88fd5e09a412ee0 ChangeLog 2731
+MD5 5780ca4e178e462778e19a903557fc2a ChangeLog 3062
+RMD160 aa8c3cb0aca63fdf57ede194694054e4b27c9e50 ChangeLog 3062
+SHA256 3cb26e9ac366b285c3fbe65f85cb7dc93dbf9d4472301d9d8ec705b9761a0d8f ChangeLog 3062
 MD5 fd9d7c89b89c800cd750f13d4f7385d3 files/digest-hfsutils-3.2.6 66
 RMD160 b4e8a6e255770ffac571eb9d5f512e199f30a4dd files/digest-hfsutils-3.2.6 66
 SHA256 3cde39ea0dbd5a069d0679c4d44c2c538a7488922f162f8732e4e30ed3f4cfc2 files/digest-hfsutils-3.2.6 66
@@ -16,15 +16,12 @@ SHA256 3cde39ea0dbd5a069d0679c4d44c2c538a7488922f162f8732e4e30ed3f4cfc2 files/di
 MD5 fd9d7c89b89c800cd750f13d4f7385d3 files/digest-hfsutils-3.2.6-r3 66
 RMD160 b4e8a6e255770ffac571eb9d5f512e199f30a4dd files/digest-hfsutils-3.2.6-r3 66
 SHA256 3cde39ea0dbd5a069d0679c4d44c2c538a7488922f162f8732e4e30ed3f4cfc2 files/digest-hfsutils-3.2.6-r3 66
-MD5 fd9d7c89b89c800cd750f13d4f7385d3 files/digest-hfsutils-3.2.6-r4 66
-RMD160 b4e8a6e255770ffac571eb9d5f512e199f30a4dd files/digest-hfsutils-3.2.6-r4 66
-SHA256 3cde39ea0dbd5a069d0679c4d44c2c538a7488922f162f8732e4e30ed3f4cfc2 files/digest-hfsutils-3.2.6-r4 66
+MD5 9a15b17fce5d79786e086bdcd9bce2d7 files/digest-hfsutils-3.2.6-r5 244
+RMD160 9eff110c8234fb96c4436438653c30ed3c86543c files/digest-hfsutils-3.2.6-r5 244
+SHA256 f96b8382267b0c0d0cce03f21311c20147f073dcc72d608e4b9b3d4edb1f20e4 files/digest-hfsutils-3.2.6-r5 244
 MD5 4f5ea10416823de9fd38f6121dd3b8f0 files/hfsutils-3.2.6-errno.patch 377
 RMD160 7898819eb877e487babc2c1b41199011b6a7153d files/hfsutils-3.2.6-errno.patch 377
 SHA256 06d374f92d3535d770b63c6cc98fa2e9ea942685e8f90c13270c2908ed98c735 files/hfsutils-3.2.6-errno.patch 377
-MD5 5db5db13258dc9951a09ce4c0cd42c14 files/hfsutils-3.2.6-softlinks.patch 319
-RMD160 e86fb74a521dad5ffe252cc38f69500fa492f031 files/hfsutils-3.2.6-softlinks.patch 319
-SHA256 b5555586af8573d96e9b2207dbb1cd2256407a62e7eb9eace28132acf2a781c4 files/hfsutils-3.2.6-softlinks.patch 319
 MD5 effba323c88d0e8bb3e892af288060b8 files/largerthan2gb.patch 348
 RMD160 a7fd6a37057acab3d556eed28e8257dcbebd1650 files/largerthan2gb.patch 348
 SHA256 b2952800d805852f7b1fa42a4cb32d4243fed648e62154145a90c95bc6ab2e29 files/largerthan2gb.patch 348
@@ -37,9 +34,9 @@ SHA256 cbc33b5b675ceb7d3fd2858d35f7e93d85c288439621b87cbadcdec4fa0de90c hfsutils
 MD5 13870bf825b047d43c7781ec7ae6c9b6 hfsutils-3.2.6-r3.ebuild 1070
 RMD160 d8ac28569c579c7cd74ae7368187019a0470f5e5 hfsutils-3.2.6-r3.ebuild 1070
 SHA256 bbc221b748fccd7d31b0850430484307a3ef9220a9ba5af2e3d1a5ef77515b37 hfsutils-3.2.6-r3.ebuild 1070
-MD5 1cc5f13fe7cbc15d7bb8c48dbd156d67 hfsutils-3.2.6-r4.ebuild 1176
-RMD160 696b9550c2d7c680353281ee6b0c94600e2c8a4f hfsutils-3.2.6-r4.ebuild 1176
-SHA256 0d1acf8317aefd9845252a2c5317911f9c2202083cb5509a7febba61789525be hfsutils-3.2.6-r4.ebuild 1176
+MD5 036e6d966665483f8a5b401046041b55 hfsutils-3.2.6-r5.ebuild 1127
+RMD160 26c804701ca9ee0b10b757433bf13b5eb4e0119f hfsutils-3.2.6-r5.ebuild 1127
+SHA256 3339a404db11ef679e1b68abb260c80f2b79b4c368be115dc0c7aea2ddc6ac50 hfsutils-3.2.6-r5.ebuild 1127
 MD5 1cb151f4979d1334cf2c69f4a178e758 hfsutils-3.2.6.ebuild 708
 RMD160 31f4a9202343637c4482def7fb046bf82bffb8d4 hfsutils-3.2.6.ebuild 708
 SHA256 86cc1759321e526284f572138cc8da53b6c3aeff1051b4d243d7a43b70c54ca5 hfsutils-3.2.6.ebuild 708
@@ -49,7 +46,7 @@ SHA256 d57f79be439079b5c78578b17eb3ee7d20883353b1c40a716d3f1ab06af34851 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEIgLi2+ySkm8kpY0RAkdPAKCrzqZP3wJrHByWSrqfvnNZJ6OsoQCfX9Wy
-00jvHjG6dhwqPD2CyhUSfuA=
-=EkqR
+iD8DBQFEJ7AuOpjtAl+gMRURAmS3AJ4wqF0DX6gUoMibkIJTyFiLEtlBRwCdGFxc
+bu/3LsHzURA8uPOKUFlrKPo=
+=u1Q0
 -----END PGP SIGNATURE-----

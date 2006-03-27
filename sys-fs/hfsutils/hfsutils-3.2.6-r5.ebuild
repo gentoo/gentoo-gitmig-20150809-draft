@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r4.ebuild,v 1.8 2006/03/23 02:06:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r5.ebuild,v 1.1 2006/03/27 09:28:01 eradicator Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,7 +20,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/hfsutils-3.2.6-errno.patch
-	epatch "${FILESDIR}"/hfsutils-3.2.6-softlinks.patch
 	epatch "${FILESDIR}"/largerthan2gb.patch
 }
 
