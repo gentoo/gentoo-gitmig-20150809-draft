@@ -1,6 +1,16 @@
-MD5 66dbb4887550097aade49d86f4bdad15 ChangeLog 1001
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d894d8f803b31d73956bd00660c2e11f ChangeLog 1112
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Scalar-List-Utils-1.14 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Scalar-List-Utils-1.18 0
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 1734864e042366f9b8f40deef23327c8 perl-Scalar-List-Utils-1.14.ebuild 537
-MD5 fffe3871b94056e44f570fc97c766a38 perl-Scalar-List-Utils-1.18.ebuild 542
+MD5 4369b45d60a93f5f9e5a3a3c22199cc1 perl-Scalar-List-Utils-1.18.ebuild 542
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEKDLnKRy60XGEcJIRAiW1AJ4+po9bzCbgZU0IRwU9JynMRg07rACgim16
+4i3SCgm+LVnJE75QSvG7ijU=
+=qy2O
+-----END PGP SIGNATURE-----
