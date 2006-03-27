@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-3.4.3.ebuild,v 1.9 2006/02/16 09:25:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-3.4.3.ebuild,v 1.10 2006/03/27 20:14:58 agriffis Exp $
 KMNAME=kdeaccessibility
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE text-to-speech subsystem"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="gstreamer"
 DEPEND="arts? ( $(deprange $PV $MAXKDEVER kde-base/arts) )
 	$(deprange-dual $PV $MAXKDEVER kde-base/kcontrol)
