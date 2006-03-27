@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1815 2006/03/26 22:15:26 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1816 2006/03/27 11:01:12 george Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -304,6 +304,7 @@ dev-java/swt:firefox - Build the Mozilla Embeded Component against firefox rathe
 dev-java/velocity:j2ee - Add j2ee support
 dev-lang/gdl:hdf - Adds support for the Hierarchical Data Format
 dev-lang/gdl:hdf5 - Adds support for the Hierarchical Data Format v 5
+dev-lang/icon:iplsrc  - install the icon programming library source
 dev-lang/mono:icu - Enable internationalization support via ICU lib.
 dev-lang/ocaml:latex - Add ocamldoc support for latex
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
