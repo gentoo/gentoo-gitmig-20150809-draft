@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.9 2006/03/27 20:34:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.10 2006/03/27 20:35:44 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -28,7 +28,7 @@ RDEPEND="3dfx? ( media-libs/glide-v3 )
 	ncurses? ( sys-libs/ncurses )
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
 	zlib? ( sys-libs/zlib )
-	xv? ( 
+	xv? (
 		|| (
 			(
 				x11-libs/libX11
