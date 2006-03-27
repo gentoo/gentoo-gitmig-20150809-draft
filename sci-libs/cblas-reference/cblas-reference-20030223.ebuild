@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223.ebuild,v 1.1 2006/03/25 13:07:35 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223.ebuild,v 1.2 2006/03/27 14:41:56 markusle Exp $
 
 inherit eutils fortran multilib
 
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_compile() {
 	TOP_PATH="${DESTTREE}/$(get_libdir)/blas"
-	RPATH="${TOP_PATH}/cblas-reference"
+	RPATH="${TOP_PATH}/reference"
 	cd "${S}"/src
 
 	make all FC="libtool --mode=compile --tag=F77 ${FORTRANC}" \

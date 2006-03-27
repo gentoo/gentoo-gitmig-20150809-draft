@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/cblas-reference
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.1 2006/03/25 13:07:35 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.2 2006/03/27 14:41:56 markusle Exp $
+
+  27 Mar 2006; Markus Dittrich <markusle@gentoo.org> files/c-reference,
+  cblas-reference-20030223.ebuild:
+  Moved install directory for the libraries from blas/cblas-reference
+  to blas/reference.
 
 *cblas-reference-20030223 (25 Mar 2006)
 
