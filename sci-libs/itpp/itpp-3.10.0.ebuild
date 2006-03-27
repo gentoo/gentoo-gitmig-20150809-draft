@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-3.10.0.ebuild,v 1.1 2006/03/18 12:22:48 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-3.10.0.ebuild,v 1.2 2006/03/27 15:20:34 markusle Exp $
 
 inherit fortran
 
@@ -16,15 +16,19 @@ IUSE="blas cblas debug doc fftw lapack"
 DEPEND="fftw? ( >=sci-libs/fftw-3.0.0 )
 		blas? ( virtual/blas
 				cblas? ( || ( >=sci-libs/gsl-1.4
-							>=sci-libs/blas-atlas-3.6.0 ) ) )
-		lapack? ( virtual/lapack )
+							>=sci-libs/blas-atlas-3.6.0
+							sci-libs/cblas-reference ) )
+				lapack? ( virtual/lapack ) )
 		doc? ( app-doc/doxygen
 				app-text/tetex )"
 
 pkg_setup() {
-	# cblas can only be used in conjunction with blas
+	# lapack/cblas can only be used in conjunction with blas
 	if use cblas && ! use blas; then
 		die "USE=cblas requires USE=blas to be set"
+	fi
+	if use lapack && ! use blas; then
+		die "USE=lapack requires USE=blas to be set"
 	fi
 }
 
