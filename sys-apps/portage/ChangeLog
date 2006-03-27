@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.99 2006/03/26 07:59:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.100 2006/03/27 08:32:12 zmedico Exp $
+
+*portage-2.1_pre7-r2 (27 Mar 2006)
+
+  27 Mar 2006; <zmedico@gentoo.org> +portage-2.1_pre7-r2.ebuild,
+  +files/2.1_pre7/1050_forum_3210399_empty_digest.patch:
+  Regression fix for creation of an empty digest file when SRC_URI is empty.
 
 *portage-2.1_pre7-r1 (26 Mar 2006)
 

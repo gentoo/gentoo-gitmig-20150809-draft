@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e658cc53a021ca4d9736c4f0c331b1d7 ChangeLog 10592
-RMD160 56bad1a6800b8fd461fed3786dde91901d2cd97d ChangeLog 10592
-SHA256 d533f541740a641568644b65ea8891960cb3d11a78444d53253df62c8e481fa9 ChangeLog 10592
+MD5 13332a042b6a2346f6d0d5f31265a369 ChangeLog 10829
+RMD160 6d693c0ea9f767beda55e51d4e84e01b57051311 ChangeLog 10829
+SHA256 89f625648c575b39359d82cfedf6046896f08cc60767f39315f0459afc56ef54 ChangeLog 10829
 MD5 d5d5b818347fd87b290ecb0b17516b34 files/05portage.envd 34
 RMD160 014194a1786a0983a8ba91c3924b798f353c330d files/05portage.envd 34
 SHA256 dbe8db19d03b39ad2b7f9f6dfcd24c615a14886b3fe6d5ce4dd88bac27c0e225 files/05portage.envd 34
@@ -79,6 +79,9 @@ SHA256 383ccf7caec1d78afdfbc3534d5b17771db5dac0b79f5411390afabcdc50d4b7 files/2.
 MD5 5411976690e9b0e6504bae7ce912e1c1 files/2.1_pre7/1040_r3015_user_fetch.patch 1078
 RMD160 d992189579ee7ce98ee555a1cbbc9b3c2db144e0 files/2.1_pre7/1040_r3015_user_fetch.patch 1078
 SHA256 b1302a847c2d6ac746ec19cd09efb2cf9a38b0aa9b38f2997c958651715de1a5 files/2.1_pre7/1040_r3015_user_fetch.patch 1078
+MD5 78f817f6f2dd7068087d4886ef520e60 files/2.1_pre7/1050_forum_3210399_empty_digest.patch 374
+RMD160 01adefa804a8ae31c3a9c2e533accf187b0cdf3f files/2.1_pre7/1050_forum_3210399_empty_digest.patch 374
+SHA256 37ac9b0b6f75f8b3f626564cb905ca57b5b2dfaa65ac7033ea5af99b158ad95a files/2.1_pre7/1050_forum_3210399_empty_digest.patch 374
 MD5 c906e2e6782e197725b70f84cfe112a4 files/README.RESCUE 137
 RMD160 b8d015f266501fd1f57c91899c6815de9f9d5685 files/README.RESCUE 137
 SHA256 69bea0c755eab59b6b4d90838b8551744f0b0c8eeac170b1cd13a71ee83f9ac4 files/README.RESCUE 137
@@ -97,9 +100,9 @@ SHA256 31fbf92704c8c3836a781144c1fe6c1a5d7a81e14fa79973821df688baf3f63d files/di
 MD5 3fb2faffeb73793f7928e07619991317 files/digest-portage-2.1_pre6-r7 253
 RMD160 db4da0bfd99ef42a13051e4089009e9ad3c316c2 files/digest-portage-2.1_pre6-r7 253
 SHA256 bf94181b86808452bb19e43fe4d58aeeb6736924e7bd453f38c0f166b227957c files/digest-portage-2.1_pre6-r7 253
-MD5 6aebb952d3a284aa4f52d7e5dc7791de files/digest-portage-2.1_pre7-r1 253
-RMD160 437829798fb49cf829eadb8dd84fd8353eb4fdb1 files/digest-portage-2.1_pre7-r1 253
-SHA256 f96288447c0bb578ae0fb80a0169df536c3421f00df4dd8a83d2e910ca489fb5 files/digest-portage-2.1_pre7-r1 253
+MD5 6aebb952d3a284aa4f52d7e5dc7791de files/digest-portage-2.1_pre7-r2 253
+RMD160 437829798fb49cf829eadb8dd84fd8353eb4fdb1 files/digest-portage-2.1_pre7-r2 253
+SHA256 f96288447c0bb578ae0fb80a0169df536c3421f00df4dd8a83d2e910ca489fb5 files/digest-portage-2.1_pre7-r2 253
 MD5 9e669b11a86a57aa8d2a452531085bb6 files/xterm-titles.patch 1115
 RMD160 60cea5a3cfd37b6a3a15ced00a778defaca09212 files/xterm-titles.patch 1115
 SHA256 0e23efd78cff2d7702a4e3ddcf6b53cd7de417f03234397321281066ea8c026c files/xterm-titles.patch 1115
@@ -121,13 +124,13 @@ SHA256 6f7f1500f7a6ab4a7d651a7dbe44695995fdd2a37e4c6826d5eb9de5749b458a portage-
 MD5 da44da773a57bcbbe8f0c52573812d2e portage-2.1_pre6-r7.ebuild 5819
 RMD160 1ad330182592ffd5637aabed39f3ba52dc29285d portage-2.1_pre6-r7.ebuild 5819
 SHA256 634bed09fc46df9611027f97c3e658c6a11ab237ddc2c774bf10aadeda7f7451 portage-2.1_pre6-r7.ebuild 5819
-MD5 5445e95c93d13e167a980a4918415004 portage-2.1_pre7-r1.ebuild 5469
-RMD160 c2db973d24b525de4fb0fefda65dd193beea022b portage-2.1_pre7-r1.ebuild 5469
-SHA256 ab230f20b4b1e18aa0658405849085f6f64dd3836b05e45e6a47b0eecf76b621 portage-2.1_pre7-r1.ebuild 5469
+MD5 d5c46f8e23e1bf0417b53e817b26dfbb portage-2.1_pre7-r2.ebuild 5509
+RMD160 5681f85589dbede4d0a46889e1492731a032b54c portage-2.1_pre7-r2.ebuild 5509
+SHA256 dcf6d6c1d3d6875378efea3cf14b43957bb8b6c7d6855fb52edbfc70b5fd8d73 portage-2.1_pre7-r2.ebuild 5509
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEJknY/ejvha5XGaMRAv/ZAKCayd0sUdpmon2XJdMKXVByC3/48wCg53Py
-uyk0PZKJIy3mP3W8CLi1QBU=
-=E5kP
+iD8DBQFEJ6MX/ejvha5XGaMRAiNHAJ9SAirNl0ACQDwy3pIUv/vGepU2NwCfUk0y
+WqgaNEixg9TdK2RK3fBa6rc=
+=snbc
 -----END PGP SIGNATURE-----

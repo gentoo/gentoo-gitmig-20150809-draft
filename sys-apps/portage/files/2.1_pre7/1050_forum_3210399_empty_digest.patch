@@ -1,0 +1,13 @@
+=== modified file 'pym/portage.py'
+--- pym/portage.py	
++++ pym/portage.py	
+@@ -2135,7 +2135,7 @@
+ 		if mydigests==None: # There was a problem, exit with an errorcode.
+ 			return 0
+ 
+-		if mydigests != myolddigest:
++		if mydigests != myolddigest or not os.path.exists(digestfn):
+ 			digest_lines = digestCreateLines(myarchives, mydigests)
+ 			digest_success = True
+ 			try:
+
