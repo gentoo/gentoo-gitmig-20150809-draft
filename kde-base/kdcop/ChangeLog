@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdcop
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.24 2006/01/22 22:52:53 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.25 2006/03/27 15:48:45 agriffis Exp $
+
+  27 Mar 2006; Aron Griffis <agriffis@gentoo.org> kdcop-3.4.1.ebuild:
+  Mark 3.4.1 stable on ia64. #112842
 
 *kdcop-3.5.1 (23 Jan 2006)
 
