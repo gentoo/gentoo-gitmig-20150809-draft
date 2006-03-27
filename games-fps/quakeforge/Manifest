@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 93ddcb7b41fc1be471c3db9136e80dbc ChangeLog 2389
+MD5 b24c5901886746c5a9a46e3c16c1f9f4 ChangeLog 2527
+RMD160 db1d9854939f91c400cd73edd45f20a3a324ef03 ChangeLog 2527
+SHA256 1dde84733d33af8e41e2ae5c4479d86bf73e58a6c49869fc73485e1d86415b7e ChangeLog 2527
 MD5 7c7c8315f5a4a12c1c7009e0e5a674ea files/0.5.5-ipv6.patch 302
+RMD160 7e1255c42df1c6c6ee59e87fa034324bfe2a83b5 files/0.5.5-ipv6.patch 302
+SHA256 8b473c335e6dc191e4aae7e7ada09ea5fc6d649e1132bb6230c1427fa0692e7a files/0.5.5-ipv6.patch 302
 MD5 4b19724389aab51f2894c5bf5b0a615c files/digest-quakeforge-0.5.5 70
+RMD160 e7c8959eacd6ad0c241f91805ecad5e7d91852c2 files/digest-quakeforge-0.5.5 70
+SHA256 065c91698ce01e35e0af73ca9c9d7880328aedbd01678611e7fb460123deda5d files/digest-quakeforge-0.5.5 70
 MD5 3f7a2b4d0f9510d4ab1be5cb3f6de976 metadata.xml 1486
-MD5 58dd3746cbf64c68bf2f07dcab4aa4a8 quakeforge-0.5.5.ebuild 3674
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDZGF4gIKl8Uu19MoRAllwAJ4lF1yEPm+bJyzFReMWS0wVayF3zgCePa4S
-6xWA1uQL3MZpz89B/WsYl20=
-=VCXd
------END PGP SIGNATURE-----
+RMD160 ec42888731d2ed1e27e6a6360a3b425667dbd586 metadata.xml 1486
+SHA256 4f75b5ee6da95cbd8a04c8a627f03774162b7c45f7586613b696fd05fd97a3d1 metadata.xml 1486
+MD5 2e60f612d2a4cb91a58fd935c22a590a quakeforge-0.5.5.ebuild 3881
+RMD160 7d021e3bbcd7cd76901ea0187fd4bb00cbbcb90f quakeforge-0.5.5.ebuild 3881
+SHA256 0169456fe023db8de910d99d63552701d80291417c09dcf077399bea626db2b0 quakeforge-0.5.5.ebuild 3881

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.8 2005/10/30 06:00:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.9 2006/03/27 20:34:51 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -18,12 +18,27 @@ RDEPEND="3dfx? ( media-libs/glide-v3 )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl )
 	svga? ( media-libs/svgalib )
-	X? ( virtual/x11 )
+	X? (
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXxf86vm )
+			virtual/x11 ) )
 	ncurses? ( sys-libs/ncurses )
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
 	zlib? ( sys-libs/zlib )
-	xv? ( virtual/x11 )
-	dga? ( virtual/x11 )
+	xv? ( 
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXxf86vm )
+			virtual/x11 ) )
+	dga? (
+		|| (
+			x11-libs/libXxf86dga
+			virtual/x11 ) )
 	xmms? ( media-sound/xmms )
 	alsa? ( media-libs/alsa-lib )"
 DEPEND="${RDEPEND}
