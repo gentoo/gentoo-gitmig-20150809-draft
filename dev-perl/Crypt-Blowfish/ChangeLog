@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-Blowfish
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Blowfish/ChangeLog,v 1.17 2006/03/26 18:16:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Blowfish/ChangeLog,v 1.18 2006/03/27 19:26:21 gustavoz Exp $
+
+  27 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  Crypt-Blowfish-2.10.ebuild:
+  Stable on hppa
 
   26 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
   Crypt-Blowfish-2.10.ebuild:
