@@ -1,6 +1,17 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.37 2006/02/26 03:45:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.38 2006/03/27 01:46:31 solar Exp $
+
+*portage-utils-0.1.15 (26 Mar 2006)
+
+  26 Mar 2006; <solar@gentoo.org> +portage-utils-0.1.15.ebuild:
+  - Added support for color remapping via /etc/portage/color.map - Fixed up
+  (hopefully) stderr handling on those OSes that suffer silly design - Added
+  slot handling for qlist. - Added qlop verbose mode to display PV-PR - Reworked
+  the glob handling a bit to not use glob64 by default. - Added -F flag to
+  qmerge to use in place of the -f switch when wanting to skip downloading of
+  the Packages cache - Added -F flag to quse for format handling of user defined
+  variables
 
 *portage-utils-0.1.14 (25 Feb 2006)
 
