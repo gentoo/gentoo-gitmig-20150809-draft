@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.165 2006/03/18 18:38:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.166 2006/03/27 10:49:59 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -601,7 +601,7 @@ postinst_sources() {
 	use symlink && K_SYMLINK=1
 
 	# if we are to forcably symlink, delete it if it already exists first.
-	if [[ -n ${K_SYMLINK} ]]; then
+	if [[ ${K_SYMLINK} > 0 ]]; then
 		[[ -h ${ROOT}usr/src/linux ]] && rm ${ROOT}usr/src/linux
 		MAKELINK=1
 	fi
