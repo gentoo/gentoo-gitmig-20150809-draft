@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.3 2005/10/21 18:12:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.4 2006/03/27 13:59:30 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -25,9 +25,10 @@ IUSE="doc"
 # further information on their homepage or on the game CD :(
 LICENSE="as-is"
 
-DEPEND="virtual/x11
-	virtual/opengl
+DEPEND="virtual/opengl
 	virtual/glu
+	x86? ( media-libs/libsdl )
+	ppc? ( media-libs/libsdl )
 	amd64? ( app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-sdl )"
 
