@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/kcheckpass-3.5.0.ebuild,v 1.9 2006/03/22 20:14:57 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/kcheckpass-3.5.0.ebuild,v 1.10 2006/03/27 20:51:03 agriffis Exp $
 
 KMNAME=kdebase
 MAXKDEVER=3.5.2
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-${PV}-patches-1.tar.bz2"
 
 DESCRIPTION="A simple password checker, used by any software in need of user authentication."
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="pam"
 DEPEND="pam? ( kde-base/kdebase-pam ) !pam? ( sys-apps/shadow )"
 
