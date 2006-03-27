@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/dbench
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.15 2005/11/29 04:32:10 jer Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.16 2006/03/27 04:30:36 robbat2 Exp $
+
+*dbench-3.04 (27 Mar 2006)
+
+  27 Mar 2006; Robin H. Johnson <robbat2@gentoo.org> +dbench-3.04.ebuild:
+  Bug #94977, Version bump, ebuild submitted by Ajay Sharma <ssharma@odc.net>.
 
   29 Nov 2005; Jeroen Roovers <jer@gentoo.org> dbench-2.0.ebuild:
   Marked ~hppa wrt bug 109188.
