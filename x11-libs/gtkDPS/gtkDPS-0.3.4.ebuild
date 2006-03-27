@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.22 2006/03/23 09:04:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.23 2006/03/27 21:30:10 agriffis Exp $
 
-inherit eutils multilib
+inherit eutils gnuconfig multilib
 
 DESCRIPTION="Set of functions, objects and widgets to use DPS easily with GTK"
 SRC_URI="ftp://ftp.gyve.org/pub/${PN}/${P}.tar.gz"
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-m4.patch
+	gnuconfig_update
 }
 
 src_compile() {
