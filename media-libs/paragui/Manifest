@@ -1,27 +1,19 @@
-MD5 13db26ec901ce3b6bf2165a50c1d0e83 ChangeLog 2923
-RMD160 1a8be47cb3fa58c03527da33ff5ca2fda3a5ff11 ChangeLog 2923
-SHA256 9318eeaf3af687dc7ecbdb49bf6a994f16ee599af353e5669c3c27d3493c2748 ChangeLog 2923
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 01a7b1f02dfd75425c9142d01a202ff7 ChangeLog 3134
 MD5 9534d30864250e81bfaa47900c5c7061 files/digest-paragui-1.0.4 66
-RMD160 913cde2c2a20972b70786c5812ad8560e80b5cb6 files/digest-paragui-1.0.4 66
-SHA256 9e61621f24a9ba909a8619292e808fac6fe80c8acfd9178fe3b2719873efff2e files/digest-paragui-1.0.4 66
 MD5 86d14fd1c5e607d6ad92be49ee5ec2be files/digest-paragui-1.1.7 66
-RMD160 fbebd7e262f8cc4ff67ebfbcb8ce1d018479ac00 files/digest-paragui-1.1.7 66
-SHA256 45a865119d129cdc9a683950086450505c1c0b24daf71100aba021645c2cf544 files/digest-paragui-1.1.7 66
 MD5 592b7c9ace3a853054e50036992653c3 files/digest-paragui-1.1.8 66
-RMD160 e93143cf521f4229d3c90784a3c9d2ec744df51b files/digest-paragui-1.1.8 66
-SHA256 2d23b3d45c2d76a38a7aa9509eacc1f3e64ffd67b81cdd8fdbf5ce3af4ad4cf4 files/digest-paragui-1.1.8 66
 MD5 2d8694d2a1bd2020763d9fbb18624810 files/paragui-1.1.8-header.patch 297
-RMD160 4a940c2952d993f736efdeb302d7f5433587e454 files/paragui-1.1.8-header.patch 297
-SHA256 258f0e3869b5bbaf8f3ed7f0c74e44521dd41217ab5c399c5c0e1bd3c17f6379 files/paragui-1.1.8-header.patch 297
 MD5 ed8349e980407e49b724e04ee5a9a2ed metadata.xml 231
-RMD160 c13056229989c3d4f448a7c7abcff3f4ee7ce13c metadata.xml 231
-SHA256 4595c2615fd7c9095517949b1a920d4457f92801eb9d46307b18aafe58ec2a8a metadata.xml 231
-MD5 1bd266a3ed034d07f67f0b52ee5105e3 paragui-1.0.4.ebuild 696
-RMD160 26f90a9397ad700446158efc9d50b0d2c9a24ffc paragui-1.0.4.ebuild 696
-SHA256 d9ceff2120e0eb2c6f7547544e7e89419528967bb81ba3120266e581ff517166 paragui-1.0.4.ebuild 696
-MD5 4445345d7ad9e9cabdb1345047e07f61 paragui-1.1.7.ebuild 812
-RMD160 335dd40a9a0e084ae9a7bb520d042db3430ee8ac paragui-1.1.7.ebuild 812
-SHA256 4857a0e9f15c3445e0c9a19eae41df0003e8fea64dbca563abca6443b294f023 paragui-1.1.7.ebuild 812
+MD5 363f73747537dd21b426d23d1314bdd3 paragui-1.0.4.ebuild 802
+MD5 36f6e2a1f1020bc70b0ed4f998c0000d paragui-1.1.7.ebuild 918
 MD5 9b670a126e664aa4632951de9506fa82 paragui-1.1.8.ebuild 920
-RMD160 11b2b68a5484597ba98340e3bb64e622a594bfa8 paragui-1.1.8.ebuild 920
-SHA256 7b2bcecd4d42e865efd6b620ef45dc7a3c1a5342dc3e939095d570f1b518206c paragui-1.1.8.ebuild 920
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEJ16IFdQwWVoAgN4RAoUlAKC6a/Cb45ADYWTwIdEIFxONoKW3/gCgsucf
+V5O/S9bdG3DsG7XDIIwR9Wk=
+=PrLk
+-----END PGP SIGNATURE-----

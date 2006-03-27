@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/paragui
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.22 2006/03/12 06:01:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.23 2006/03/27 03:38:58 chriswhite Exp $
+
+  27 Mar 2006; Chris White <chriswhite@gentoo.org> paragui-1.0.4.ebuild,
+  paragui-1.1.7.ebuild:
+  Backported the 1.1.8 header patch to all versions. Closes bug #104735.
+  Thanks to Shyam Mani for the report.
 
   12 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org> paragui-1.1.8.ebuild:
   fix quoting
