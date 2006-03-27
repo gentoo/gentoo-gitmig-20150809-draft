@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.8.0.ebuild,v 1.2 2006/03/26 21:51:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.8.0-r1.ebuild,v 1.1 2006/03/27 02:52:04 agriffis Exp $
 
 inherit versionator
 
@@ -34,6 +34,17 @@ DEPEND="${RDEPEND}
 	>=media-gfx/fontforge-20050624
 	sys-devel/bison !=sys-devel/bison-1.75"
 
+src_unpack() {
+	unpack ${A}
+	# lilypond python scripts *prepend* /usr/share/lilypond/2.8.0/python to
+	# sys.path, causing python to attempt to rebuild the pyc, which generates
+	# sandbox errors (and is wrong anyway).  Change this policy to use
+	# sys.path.append so that PYTHONPATH, set by the Makefiles, takes
+	# precendence.
+	grep -rlZ sys.path.insert --include \*.py ${S} \
+		| xargs -0r sed -i 's/sys.path.insert \?(0, /sys.path.append (/'
+}
+
 src_compile() {
 	addwrite /var/cache/fonts
 	addwrite /usr/share/texmf/fonts
@@ -62,15 +73,12 @@ src_install () {
 		dodir /usr/share/vim
 		mv ${D}/usr/share/lilypond/${PV}/vim \
 			${D}/usr/share/vim/vimfiles || die "lilypond vim install failed"
+	else
+		rm -r ${D}/usr/share/lilypond/${PV}/vim
 	fi
 
-	# emacs support, should this be done differently?
-	if use emacs; then
-		insinto /usr/share/${PN}/elisp
-		doins elisp/*.el \
-			|| die "lilypond emacs install failed"
-		insinto /usr/share/${PN}/elisp/out
-		doins elisp/out/lilypond-words.el \
-			|| die "lilypond emacs install failed"
+	# emacs (non-)support
+	if ! use emacs; then
+		rm -r ${D}/usr/share/emacs
 	fi
 }
