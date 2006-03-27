@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.2.ebuild,v 1.7 2005/07/07 04:41:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.2.ebuild,v 1.8 2006/03/27 10:47:21 metalgod Exp $
 
 inherit kde-functions
 
@@ -14,7 +14,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc amd64"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libXt )
+	virtual/x11 )
 	=x11-libs/qt-3*
 	media-libs/alsa-lib"
 

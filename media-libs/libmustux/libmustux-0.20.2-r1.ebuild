@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.2-r1.ebuild,v 1.2 2005/11/19 14:33:51 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.2-r1.ebuild,v 1.3 2006/03/27 10:47:21 metalgod Exp $
 
 inherit kde-functions autotools libtool multilib
 
@@ -14,7 +14,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libXt )
+	virtual/x11 )
 	=x11-libs/qt-3*
 	media-libs/alsa-lib"
 

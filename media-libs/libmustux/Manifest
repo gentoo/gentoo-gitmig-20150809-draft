@@ -1,18 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ed380ce2d94002698f3c96ce64c41dbd ChangeLog 3534
-MD5 cf5082c812a4848bacd63b5b8c0338f2 files/digest-libmustux-0.20.1 68
+MD5 34b2a06d7af808b6d122523a288b80ad ChangeLog 3728
+RMD160 adf5a42c91a07c1db89423004b7db799cff2577d ChangeLog 3728
+SHA256 999fe0348ea7e4783714cf19ef3b3caa80bc0c3e06ca9f048c8a78b97b4d167f ChangeLog 3728
 MD5 3c81d6bb6e17103411e654d928297b31 files/digest-libmustux-0.20.2 68
+RMD160 9d8268dc0cb50e51e7cc91531798e5723f7048fd files/digest-libmustux-0.20.2 68
+SHA256 3c6b9a693ebd3b3e99c17406c82a23dc5d523cb99ed82dbfa234cbbe81541e0a files/digest-libmustux-0.20.2 68
 MD5 3c81d6bb6e17103411e654d928297b31 files/digest-libmustux-0.20.2-r1 68
-MD5 76f1fc6b65c469c56e7587532b9f7fee libmustux-0.20.1.ebuild 823
-MD5 6fc3deb5ac15026519499ed48fe5dedc libmustux-0.20.2-r1.ebuild 970
-MD5 3744d889e41858e7eac25ca7d279b77d libmustux-0.20.2.ebuild 1067
+RMD160 9d8268dc0cb50e51e7cc91531798e5723f7048fd files/digest-libmustux-0.20.2-r1 68
+SHA256 3c6b9a693ebd3b3e99c17406c82a23dc5d523cb99ed82dbfa234cbbe81541e0a files/digest-libmustux-0.20.2-r1 68
+MD5 aa6470db1097a93be2164ec221f532d6 libmustux-0.20.2-r1.ebuild 1000
+RMD160 eb36b1f057b3e62af27b31b69e57b24c3b0bb666 libmustux-0.20.2-r1.ebuild 1000
+SHA256 60a7038669ccb8b6d866d227f58f5154c3b93480e555d1779d5008433a713bb9 libmustux-0.20.2-r1.ebuild 1000
+MD5 3959917835ede33c2d6a3478c9707280 libmustux-0.20.2.ebuild 1097
+RMD160 9788c1a241c2d5d20284c4ff88f8ed96c01723c4 libmustux-0.20.2.ebuild 1097
+SHA256 77cf2ab65cf87e218844a18644b3388b1592be6a5674af809e960e892ff983cd libmustux-0.20.2.ebuild 1097
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
+RMD160 600a2278f8a89283311c5bb10b02d54cebef8ca3 metadata.xml 221
+SHA256 3341e7789c5ba08aade2440d5ce6d2937e8432775731033190f11df5f64d085e metadata.xml 221
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDfzfc2G5bA0cA/ScRAmwCAKDAeLqWxglJwNIGzudnyQ62WkPvTwCgvUsD
-sCHe2roi8F/uq9NgKBhdUUM=
-=Yz+G
+iD8DBQFEJ9CfwUpWvClEHQoRAtm5AJ4qMQifSYBXdmLeDwoM0wkhAQppOQCbBhfI
+5VOvG1wR0BQau3VLx5kI49o=
+=yBur
 -----END PGP SIGNATURE-----
