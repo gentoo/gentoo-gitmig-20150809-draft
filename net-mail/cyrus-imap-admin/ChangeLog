@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.41 2006/01/10 20:34:45 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.42 2006/03/27 19:23:14 langthang Exp $
+
+*cyrus-imap-admin-2.2.12-r1 (27 Mar 2006)
+
+  27 Mar 2006; Tuấn Văn <langthang@gentoo.org>
+  +files/cyrus-imap-admin-2.2.12-gcc4.patch,
+  +cyrus-imap-admin-2.2.12-r1.ebuild:
+  gcc-4 fix. Bug #126968 reported by Patrick Lauer <patrick@gentoo.org>.
 
 *cyrus-imap-admin-2.3.1 (09 Jan 2006)
 
