@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/autotrace
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.19 2005/08/23 20:31:43 gustavoz Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.20 2006/03/27 21:32:14 agriffis Exp $
+
+  27 Mar 2006; Aron Griffis <agriffis@gentoo.org> -autotrace-0.31.1.ebuild,
+  autotrace-0.31.1-r1.ebuild:
+  Don't depend on gtkDPS or gtk+ #124047
 
   23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   autotrace-0.31.1-r1.ebuild:

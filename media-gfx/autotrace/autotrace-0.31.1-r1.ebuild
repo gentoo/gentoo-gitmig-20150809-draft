@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r1.ebuild,v 1.16 2005/12/04 20:35:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r1.ebuild,v 1.17 2006/03/27 21:32:14 agriffis Exp $
 
 inherit eutils
 
@@ -13,9 +13,7 @@ SLOT="0"
 KEYWORDS="x86 alpha ppc amd64 sparc ia64"
 IUSE="png flash imagemagick"
 
-DEPEND=">=x11-libs/gtkDPS-0.3.3
-	media-libs/libexif
-	>=x11-libs/gtk+-1.2.10-r4
+DEPEND="media-libs/libexif
 	png? ( >=media-libs/libpng-1.2.5-r4 )
 	flash? ( >=media-libs/ming-0.2a )
 	imagemagick? ( >=media-gfx/imagemagick-5.5.6-r1 )"
