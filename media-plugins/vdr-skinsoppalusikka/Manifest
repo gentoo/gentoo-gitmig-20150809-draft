@@ -1,27 +1,29 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 365d49e6db526c2c296684e9ebcd55fb ChangeLog 1798
+MD5 7f0fa39ad5743e0baeb72c053d65407b ChangeLog 1964
 MD5 2389e95514806d5977c114c3b060c115 files/digest-vdr-skinsoppalusikka-0.0.2 74
 MD5 8b77de0dee2a98388eb5d93e813d2030 files/digest-vdr-skinsoppalusikka-0.0.3 268
 MD5 97d4eb1bf4e124cf10838fdbc8b800e1 files/digest-vdr-skinsoppalusikka-0.0.4 151
 MD5 5c5cc0f6f7870dc957fa04f338204091 files/digest-vdr-skinsoppalusikka-0.0.5 74
+MD5 395922e7dd8d83fb67070ccd356d7fc6 files/digest-vdr-skinsoppalusikka-0.0.6 74
 MD5 1777a75c9e17f95cec09fd878e009e02 files/rc-addon.sh 439
 MD5 4b5392343f720f94f43026c514a3db76 files/vdr-skinsoppalusikka-0.0.2.diff 16768
 MD5 dc41b5efe2c2b63f4a47b5d4b691e7a8 files/vdr-skinsoppalusikka-0.0.3-pre-vdr-1.3.44.diff 16729
 MD5 5f0a3c95857ea0abf4dcae36ac5af604 files/vdr-skinsoppalusikka-0.0.4-pre-vdr-1.3.44.diff 17053
 MD5 95f796dd4f55b14267f6948243247786 files/vdr-skinsoppalusikka-0.0.5-pre-vdr-1.3.44.diff 13839
 MD5 a8ec14d7fd540878b19410d1f59d9524 files/vdr-skinsoppalusikka-amd64.diff 804
-MD5 28b1949ff13ae13c5c69e8e55b3a255e metadata.xml 575
+MD5 03d8bbd114fded5031979769113cdd01 metadata.xml 574
 MD5 975c0f53d81edc64ceede13f4bb0e223 vdr-skinsoppalusikka-0.0.2.ebuild 869
 MD5 b043bb947ce4972e8c1baedb870bd592 vdr-skinsoppalusikka-0.0.3.ebuild 924
 MD5 87eaaaca52a5099c2f4ff6af1dfd96a1 vdr-skinsoppalusikka-0.0.4.ebuild 1035
 MD5 2bacb5ab8624835a3efa056d641d8aba vdr-skinsoppalusikka-0.0.5.ebuild 965
+MD5 414283b79aca6d3f0fe9cb0effb21a53 vdr-skinsoppalusikka-0.0.6.ebuild 754
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 Comment: no further Information
 
-iD8DBQFEHvxvdn07HTTCgIoRApuLAJ9TF3v/9G4bqs8z8P7w7z4Z4/C2qQCfcj8h
-KMb2eVyJHYBXhyZWDBQKg3k=
-=+K7z
+iD8DBQFEKIg8dn07HTTCgIoRAvoCAKCOGOhPbQ17yBvbksBytCb89EDR+ACgmQg9
+Ya1vgjMt+qsVIleDZGS0cJ0=
+=KOV6
 -----END PGP SIGNATURE-----
