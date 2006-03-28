@@ -13,9 +13,9 @@ SHA256 e7d7b4c035fab394fb3c96408e021e5f12d01c392bb95170ee3b241eab9a21f2 files/di
 MD5 76ad3f41f45d810d7fb21122b47b84d9 files/digest-libdvdread-0.9.5-r1 250
 RMD160 9735b0c9a601e89fe683940c3e046abbc05ab4f1 files/digest-libdvdread-0.9.5-r1 250
 SHA256 7423f6f29b5de6595d1eabc412ff74327e605f12146e595bb0b52c0b3b124ddc files/digest-libdvdread-0.9.5-r1 250
-MD5 e49f6c0df4433278468746b2bee0761d files/libdvdread-0.9.5-udfsymbols.patch 1017
-RMD160 27880d174e58c82c06db35f3c45f9d24210c850e files/libdvdread-0.9.5-udfsymbols.patch 1017
-SHA256 d67977a7baeaaadaa7273e55f364de1f6138817bc2525cd7a54a72f7435497e5 files/libdvdread-0.9.5-udfsymbols.patch 1017
+MD5 6da09b072443f75b62595078cc850d2a files/libdvdread-0.9.5-udfsymbols.patch 1018
+RMD160 1b55975e6f98f64ae5581208ba963acd54f3c746 files/libdvdread-0.9.5-udfsymbols.patch 1018
+SHA256 9ae263a1c947ab8ec2fbee6a09b0d96ec5fe0f9d541678bc2f2479bdca5e3ef9 files/libdvdread-0.9.5-udfsymbols.patch 1018
 MD5 476c91d100bd986be720820a10821a81 libdvdread-0.9.4-r1.ebuild 1128
 RMD160 f404b0c5315b32815cccc758ae0db2e6b6ff5a0b libdvdread-0.9.4-r1.ebuild 1128
 SHA256 a49373fd9615d0f5c5d755d22fbbc89c7bf40965d153417c8084c1d2de0bf6c8 libdvdread-0.9.4-r1.ebuild 1128
@@ -31,7 +31,7 @@ SHA256 1a7f3e805478b42bc379b2a36944579d34d7e66ba5bf418a651e1cd58ad0a7f5 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEKcumAiZjviIA2XgRAqQaAJ4ygJKrbToTEMo3i8HKRKLG4LjEwQCfTy0H
-F+LJ7tG/orxtDoWWClgVMBo=
-=Gm6V
+iD8DBQFEKcw8AiZjviIA2XgRAiiZAKChvYhduKkTGA09QZ4w5GJOlDn94ACeNURJ
+7QwPF30uhzZvST6tGWXsAlc=
+=sLLt
 -----END PGP SIGNATURE-----

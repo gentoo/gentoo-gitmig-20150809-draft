@@ -17,5 +17,5 @@ Index: libdvdread-0.9.5/dvdread/Makefile.am
  pkgincludedir = $(includedir)/dvdread
  
 -pkginclude_HEADERS = dvd_reader.h ifo_types.h ifo_read.h \
-+pkginclude_HEADERS = dvd_reader.h ifo_types.h ifo_read.hdvd_udf.h  \
++pkginclude_HEADERS = dvd_reader.h ifo_types.h ifo_read.h dvd_udf.h  \
  	ifo_print.h nav_types.h nav_read.h nav_print.h cmd_print.h
