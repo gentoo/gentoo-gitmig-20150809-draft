@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.0.ebuild,v 1.13 2006/03/28 00:28:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.0.ebuild,v 1.14 2006/03/28 02:37:19 vapier Exp $
 
 inherit eutils
 
@@ -62,8 +62,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/1.1.0/glibc.patch
 
 	# we'll let portage do the stripping
+	# respect env CFLAGS
 	sed -i \
 		-e '/STRIPCMD:=/s:=.*:=true:' \
+		-e '/^CFLAGS=/s:=:+=:' \
 		Rules.mak
 
 	# check for a busybox config before making one of our own.
