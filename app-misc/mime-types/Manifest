@@ -28,13 +28,13 @@ SHA256 acc34d3c46ac31d5d0728b572eee0c96b355e4ad0c3a1f840561e2fe98e05806 mime-typ
 MD5 08400d10cb3831e8ba9a2799435662ef mime-types-4.ebuild 536
 RMD160 0725b4cd58767c07c8335d713f36a87f86249fe4 mime-types-4.ebuild 536
 SHA256 c2b833d8b4ee9e8176f1cf0defb7157144fc47320fb840225d4b923ca5d98b7c mime-types-4.ebuild 536
-MD5 6706b048b1fd9b4c7ee5b11652d620a2 mime-types-5.ebuild 541
-RMD160 3433e23afdab675e087315bfbd79a4fa38922aaa mime-types-5.ebuild 541
-SHA256 e41ec8c71d3573db645bc97f3e6de62dd603c3c18cef69e7e4bfacfde6763fdc mime-types-5.ebuild 541
+MD5 2b76cd6e58807bce3a2b089f0b5ea555 mime-types-5.ebuild 537
+RMD160 219a9ccccc91cfe4e63b6b5628765be0f6aea96b mime-types-5.ebuild 537
+SHA256 db5849134055adc81c04e9ba5ddd148277ea4f5b1a5621c79a480209143dcbc7 mime-types-5.ebuild 537
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEJED0JrHF4yAQTrARAgvmAKCmjX76ULVwWepVgoPlMKlacgoBwACgmrGo
-WJbyd6+yLNoI7YU9Tq/+T10=
-=vNFe
+iD8DBQFEKYK/2+ySkm8kpY0RAuXqAKCuD5+WVTGX9RrA4TWROQaGzdAQqwCeO9GD
+aWTlvIzhuF2GZ6gg8h1ViLc=
+=0+pE
 -----END PGP SIGNATURE-----
