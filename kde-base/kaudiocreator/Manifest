@@ -1,4 +1,4 @@
-MD5 471d8e4e29fd6074f2daa2cd46648dc1 ChangeLog 5622
+MD5 53c82d18b748d0c2be77c006263bfc50 ChangeLog 5792
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kaudiocreator-3.4.1 227
 MD5 453075362e3201c7f44fea430afec5d5 files/digest-kaudiocreator-3.4.2 308
 MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kaudiocreator-3.4.3 73
@@ -8,7 +8,7 @@ MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-kaudiocreator-3.5.2 265
 MD5 c2549fb388f6f9cb0e8c4e7f1934697f kaudiocreator-3.4.1.ebuild 1092
 MD5 aaac11e8f69c89ec27ff0826251fed89 kaudiocreator-3.4.2.ebuild 1105
 MD5 432106c971c2c47ac3d3b522bfc3611c kaudiocreator-3.4.3.ebuild 1106
-MD5 52565fd0d87ba37e8a35e6fbf88d8865 kaudiocreator-3.5.0.ebuild 1326
-MD5 ff7c78594865357a3cc3645565531ef3 kaudiocreator-3.5.1.ebuild 1327
-MD5 541924729e7fbe3e4d76216e665c0066 kaudiocreator-3.5.2.ebuild 1327
+MD5 d883be9ccf7f20fbd46386586ac2dfcc kaudiocreator-3.5.0.ebuild 1333
+MD5 b606e1dc8d348c18b507a6d39935f345 kaudiocreator-3.5.1.ebuild 1333
+MD5 e545f00092e674db41dd6964f92b5e79 kaudiocreator-3.5.2.ebuild 1333
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

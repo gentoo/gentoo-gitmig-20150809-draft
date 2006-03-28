@@ -1,4 +1,4 @@
-MD5 f2aa375e87574e46d0ab78581efee15c ChangeLog 4836
+MD5 47cc06928a01e75053ba719bba70fb58 ChangeLog 4980
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kttsd-3.4.1 236
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kttsd-3.4.2 320
 MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kttsd-3.4.3 76
@@ -9,7 +9,7 @@ MD5 a4a2fe961dac0445daa5ceffc2e2c841 files/kdeaccessibility-3.4.0-noarts.patch 3
 MD5 5c1f7f6fc78bde2ee93b714684f7219b kttsd-3.4.1.ebuild 1185
 MD5 47cfbc1f4e31792d4be4a2a265b9575a kttsd-3.4.2.ebuild 1204
 MD5 6301b8ef5a93c12e6d42b23fc4554a85 kttsd-3.4.3.ebuild 1203
-MD5 ecaf329e32887637e08f8acd0b96b9cb kttsd-3.5.0.ebuild 921
-MD5 bd7a8fa0382dad03d1f79bfa0bff2ebb kttsd-3.5.1.ebuild 922
-MD5 60370263988c4a1fefb874094b021b50 kttsd-3.5.2.ebuild 922
+MD5 753f5b0ab34ad7d083938ab4666b602e kttsd-3.5.0.ebuild 928
+MD5 d67a0689b9c19c81aa8dfc3267c7d079 kttsd-3.5.1.ebuild 928
+MD5 64f33d01aeefc96dfa87886320b60c6a kttsd-3.5.2.ebuild 928
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

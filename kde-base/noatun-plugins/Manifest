@@ -1,4 +1,4 @@
-MD5 ca216947d3f5107a7eb31b03851c3772 ChangeLog 4838
+MD5 603c6384bd9567ad89f1f6651d068d01 ChangeLog 5011
 MD5 440dc255b1315302c2dfbf0f1233f3bf files/configure-fix-kdeaddons-db.patch 1612
 MD5 8ad71a2139b4a330c5adfb4247b84c8c files/configure-fix-kdeaddons-sdl.patch 867
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-noatun-plugins-3.4.1 215
@@ -12,6 +12,6 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 29c3d2be2f371b987d1730480efabc4b noatun-plugins-3.4.1.ebuild 866
 MD5 7aee034eac1d6a331009f0e16647a965 noatun-plugins-3.4.2.ebuild 1216
 MD5 24b147cd09dea82bc9f009aa767c2f62 noatun-plugins-3.4.3.ebuild 1217
-MD5 8e3ee64f88a88c232455e4cafdfaf3f2 noatun-plugins-3.5.0.ebuild 1118
-MD5 6c86e258d3755649bd87e65ad548d0b3 noatun-plugins-3.5.1.ebuild 1119
-MD5 a2601e03f4eb381054c0e20ef0df0985 noatun-plugins-3.5.2.ebuild 1119
+MD5 3cddaea35f1694484ceb7019c75cec6f noatun-plugins-3.5.0.ebuild 1125
+MD5 50691654e3e0f5e5990105ffe6cede12 noatun-plugins-3.5.1.ebuild 1125
+MD5 7cd8900ac9af6b2e8bf638f5b908ce29 noatun-plugins-3.5.2.ebuild 1125

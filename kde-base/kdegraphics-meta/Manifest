@@ -1,4 +1,4 @@
-MD5 c84d31df98b8e0b2f163c267c603295e ChangeLog 6216
+MD5 383027c27d6e0f78ac54c6ae42746fb8 ChangeLog 6395
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegraphics-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegraphics-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegraphics-meta-3.4.3 0
@@ -8,7 +8,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegraphics-meta-3.5.2 0
 MD5 c81c0db835a8df4c2ae3e2895b02f1e3 kdegraphics-meta-3.4.1.ebuild 1455
 MD5 efda0d2b44d73c186d04915802b61d8b kdegraphics-meta-3.4.2.ebuild 1480
 MD5 a8a66ca9b2fa8ee07d7588b4120b061c kdegraphics-meta-3.4.3.ebuild 1471
-MD5 7a4acb6cec8df8522e2c4e33ea96bcce kdegraphics-meta-3.5.0.ebuild 1469
-MD5 f71d57dec705e09270b8b1b624b7f24e kdegraphics-meta-3.5.1.ebuild 1470
-MD5 190e8e552b0c5fb0bdb8f1c7f374192e kdegraphics-meta-3.5.2.ebuild 1470
+MD5 2347dcbda6f4a16c64c2fcd14e3a7596 kdegraphics-meta-3.5.0.ebuild 1476
+MD5 8b2481e862140ef18c9d8152cc9ff175 kdegraphics-meta-3.5.1.ebuild 1476
+MD5 e30ea17eb4c48298fb663935115bab73 kdegraphics-meta-3.5.2.ebuild 1476
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

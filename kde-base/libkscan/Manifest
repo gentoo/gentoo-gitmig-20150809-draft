@@ -1,4 +1,4 @@
-MD5 51d7c121e3469dcda4d0459d6dfb220c ChangeLog 4710
+MD5 95b7ab872769a1c744fa4778209eaf06 ChangeLog 4863
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-libkscan-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-libkscan-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-libkscan-3.4.3 71
@@ -8,7 +8,7 @@ MD5 64d3a195496428cb92d68de29ebf0fa0 files/digest-libkscan-3.5.2 259
 MD5 b08f99582e1ffcb136938310a6575a98 libkscan-3.4.1.ebuild 421
 MD5 1e3c65e6a3875a7f1a222e41869fb87d libkscan-3.4.2.ebuild 433
 MD5 2e09ba880be555fa736323ad85cb810f libkscan-3.4.3.ebuild 434
-MD5 8cc88df3608b7bf83f06fb6185bfc10b libkscan-3.5.0.ebuild 433
-MD5 4f0f80d0c647eaf39c5f9aa66afcfc37 libkscan-3.5.1.ebuild 434
-MD5 20dbbdc9f9c6043687621d1855afebc7 libkscan-3.5.2.ebuild 434
+MD5 6257a8cea5bd7924a2b7cb4bc4200a6e libkscan-3.5.0.ebuild 440
+MD5 85f032b628896974b2444aedbd6ee05d libkscan-3.5.1.ebuild 440
+MD5 e225083fba8157906053163410f9187a libkscan-3.5.2.ebuild 440
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

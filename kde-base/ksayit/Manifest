@@ -1,4 +1,4 @@
-MD5 c0cfb7c22f7c57eda6062c157e314210 ChangeLog 5283
+MD5 e83b54dfdc66158fcffca71000b95b4f ChangeLog 5430
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-ksayit-3.4.1 236
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-ksayit-3.4.2 320
 MD5 69f79fb831b8a4318ac609aefa806adb files/digest-ksayit-3.4.3 76
@@ -11,7 +11,7 @@ MD5 0d3f3e556729870be5c9bde1c883173c ksayit-3.4.1.ebuild 584
 MD5 0bcc0b65d78e83c8636236b5fbf8dc2c ksayit-3.4.2.ebuild 599
 MD5 f3dcf9f7242bc60482a560ff1e7839a2 ksayit-3.4.3-r1.ebuild 645
 MD5 f4be7b9ce16e5d2cb78e2063ef3fd6e0 ksayit-3.4.3.ebuild 597
-MD5 988bb1b67684ee5d6e14ea9c4c3189fc ksayit-3.5.0.ebuild 598
-MD5 19bea6aed20cac0efc72f538e47f269a ksayit-3.5.1.ebuild 599
-MD5 62ba3a8c430dd5f95a8e8b2b133f9511 ksayit-3.5.2.ebuild 599
+MD5 d6521ddc5197ebd0621919e0890499ae ksayit-3.5.0.ebuild 605
+MD5 7b936e23ba707154d3f0e0ed40e93abb ksayit-3.5.1.ebuild 605
+MD5 bc31967e140a399672ced25b77753d7b ksayit-3.5.2.ebuild 605
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

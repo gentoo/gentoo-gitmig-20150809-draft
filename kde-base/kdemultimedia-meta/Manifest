@@ -1,4 +1,4 @@
-MD5 f4c1c4fd5449bb2e854f8a4db9eb317d ChangeLog 5849
+MD5 554b1d9776ea1e0456bb3955bb3ed696 ChangeLog 6034
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdemultimedia-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdemultimedia-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdemultimedia-meta-3.4.3 0
@@ -8,7 +8,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdemultimedia-meta-3.5.2 0
 MD5 fd4f557d97cb49e1fcff50c9c3e2dc8a kdemultimedia-meta-3.4.1.ebuild 1472
 MD5 84165c13764e375cc3efa8f0c8b8b2cf kdemultimedia-meta-3.4.2.ebuild 1501
 MD5 3e2efd7f0992e432485ba2e5ac55d292 kdemultimedia-meta-3.4.3.ebuild 1496
-MD5 4997098cb06380cfc2bf53094c1c6103 kdemultimedia-meta-3.5.0.ebuild 1570
-MD5 f51eedc0adaa4acdb5a5125d73f55dbb kdemultimedia-meta-3.5.1.ebuild 1575
-MD5 851bf4b1cd045ee1cd5924b1d3ad7b48 kdemultimedia-meta-3.5.2.ebuild 1577
+MD5 568da0ef0499635323787dfd1298e3fd kdemultimedia-meta-3.5.0.ebuild 1577
+MD5 64f12cfd37d6efa6082e8d592515b9cd kdemultimedia-meta-3.5.1.ebuild 1581
+MD5 ade671fccf091716df1b55feab35bd8d kdemultimedia-meta-3.5.2.ebuild 1583
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
