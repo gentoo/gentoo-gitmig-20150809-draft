@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9970799c81347c2ddaf3c3f24df2af11 ChangeLog 1512
-RMD160 598842adf2cccfc1eb3a5cddfb1c253476696878 ChangeLog 1512
-SHA256 e11959e9d3d2c5fc1fe5704b9ac872ec58d9bc27e4ec52f5015d8657f132a431 ChangeLog 1512
+MD5 e7fb274c31914cd3ac392745618260d5 ChangeLog 1693
+RMD160 79d28edad1ad1960f66de73c007dcc5ec22b5c61 ChangeLog 1693
+SHA256 a41bdd3b53dcf4b113456aa731d202b2908acc5c9c78d05242ecb78ebc61063b ChangeLog 1693
 MD5 eea380f3ba6ff5002822e42d45d21036 dvdbackup-0.1.1-r1.ebuild 824
 RMD160 906b0da57ef7089c594bb65ee954d3a10dd27568 dvdbackup-0.1.1-r1.ebuild 824
 SHA256 283fda062d742b00be23ed86ef39bd4729f7371ef6cfa777fdee0e87df68650b dvdbackup-0.1.1-r1.ebuild 824
-MD5 244e204f47a5dd2fe55e0c747082bff1 dvdbackup-0.1.1-r2.ebuild 874
-RMD160 173a0fcd1b94e537d396bb15354d460ea6b18989 dvdbackup-0.1.1-r2.ebuild 874
-SHA256 a74d701d45abb54497975327929c95e5249798e326d378d64a2cde9a4c36f3d7 dvdbackup-0.1.1-r2.ebuild 874
+MD5 74fd050d25c4fc429ba3ff2fd63a89b1 dvdbackup-0.1.1-r2.ebuild 926
+RMD160 9b613bf37ae7fb92ef8cd6f250b03c10564d3ae3 dvdbackup-0.1.1-r2.ebuild 926
+SHA256 37b72f070cc5f53c1051e75cd6c5c43fc738d1a1bcc2255ba763e066ce57149e dvdbackup-0.1.1-r2.ebuild 926
 MD5 ed788d5aef0628a2098684adad1ec7b8 files/0.1.1-debian-FPE.patch 546
 RMD160 8f8c2076d01fe419a93a755880395546fdf1295b files/0.1.1-debian-FPE.patch 546
 SHA256 3150fb9b90fd99fe7ddfdf5c178a3d4f1757cf11ba1cb3b905e132f40e1339db files/0.1.1-debian-FPE.patch 546
@@ -19,6 +19,9 @@ SHA256 b04956434be7d9142b42175e5ccec43099e74d88337f2bc64a5d60ec820bd51d files/di
 MD5 a407bd72496e53b75fed9eb61a40e6d1 files/digest-dvdbackup-0.1.1-r2 66
 RMD160 7c44a91eea54a51469b58d9a0e7d2b31bc3f838d files/digest-dvdbackup-0.1.1-r2 66
 SHA256 b04956434be7d9142b42175e5ccec43099e74d88337f2bc64a5d60ec820bd51d files/digest-dvdbackup-0.1.1-r2 66
+MD5 f7c783a49090250644f06d3b15602b83 files/dvdbackup-0.1.1-dvdread.patch 364
+RMD160 c784ccd2fdca05ecf6f95c3ada330a5d113dbd63 files/dvdbackup-0.1.1-dvdread.patch 364
+SHA256 e21c86d63822371a740efad7993fde89da5809c46de3dcd8e5c4fbaf26e12cc2 files/dvdbackup-0.1.1-dvdread.patch 364
 MD5 e366405dbcfadf794d833c2a638504e2 files/dvdbackup-0.1.1-mkdir.patch 1073
 RMD160 ebf1afd6565f581807b24e799db2b0b881e2f1f2 files/dvdbackup-0.1.1-mkdir.patch 1073
 SHA256 c7a6cc1a4509c273220d2f0e2aae692bae484adc5e7fbb10059203c1fc9cfe2a files/dvdbackup-0.1.1-mkdir.patch 1073
@@ -26,9 +29,9 @@ MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
 SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD33qQcsIHjyDViGQRAlwFAKCp7zhilZRtHJF7XqM0w/j8JsXzswCfepqi
-lvVCHJlppo6e+KQ/Jixzn6E=
-=/zCw
+iD8DBQFEKcyYAiZjviIA2XgRAjkAAJ0YDEshHbUmOW26P/zzppW2ZJDNPwCgnGwZ
+4RhNBlv7Mfd84FrBipvBVEg=
+=ahKh
 -----END PGP SIGNATURE-----
