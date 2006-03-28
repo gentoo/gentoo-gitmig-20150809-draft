@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.33 2006/03/19 22:35:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.34 2006/03/28 08:11:46 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -109,9 +109,12 @@ eaclocal() {
 
 _elibtoolize() {
 	local opts
+	local lttest
 
-	# Check if we should run libtoolize
-	[[ -n $(autotools_check_macro "AC_PROG_LIBTOOL") ]] || return 0
+	# Check if we should run libtoolize (AM_PROG_LIBTOOL is an older macro,
+	# check for both it and the current AC_PROG_LIBTOOL)
+	lttest="$(autotools_check_macro "AC_PROG_LIBTOOL")$(autotools_check_macro "AM_PROG_LIBTOOL")"
+	[[ -n $lttest ]] || return 0
 
 	[[ -f Makefile.am ]] && opts="--automake"
 
