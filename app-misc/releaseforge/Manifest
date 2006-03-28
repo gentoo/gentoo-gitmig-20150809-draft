@@ -1,19 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e7c21ab10944d088f26d574b5337080d ChangeLog 360
-RMD160 addff95c83d4902216b674921b7fd43380c0f7bd ChangeLog 360
-SHA256 ad3821c3dd53da95d2a703a4390e08bb110a674d4e405d1ac2cc6cd50e8b2b8f ChangeLog 360
+MD5 c6292366bcc9d72d220069955242d7c7 ChangeLog 492
+RMD160 2c8a560b2111332db5a3f4829ea72ccf875ddaba ChangeLog 492
+SHA256 f8ac24dc1dce76076b42b1881650a1c49ed631273a56b769a82cf05926595a3d ChangeLog 492
 MD5 2eed413f57a2cec7efc2ffd464bca16a files/digest-releaseforge-0.9.8 256
 RMD160 0da41fe7cdb724caa0d435798b384575bba1ef11 files/digest-releaseforge-0.9.8 256
 SHA256 485d969dd1f3c15d954481421d1fa9ecfd1cdf5fc49d156ecb69c58d172f885f files/digest-releaseforge-0.9.8 256
+MD5 34f158958a357f5a7af01089c7f25c31 files/digest-releaseforge-0.9.9 256
+RMD160 528ef80f4807e30d1f7de63134d8bfeaeb5b90d4 files/digest-releaseforge-0.9.9 256
+SHA256 8cd6d996a58ae369130c6329418f410c299c0cb50c0c7561ef7cbfade85d949b files/digest-releaseforge-0.9.9 256
 MD5 35c18c513236846413928fcf813ea6d3 releaseforge-0.9.8.ebuild 537
 RMD160 444c59d60b4bcdf349759efb8c60717b50242371 releaseforge-0.9.8.ebuild 537
 SHA256 44e1421a8661e752081d68268146a374dd35864794eb94a05d0fa32874db5489 releaseforge-0.9.8.ebuild 537
+MD5 0c93094d0c0d1c95b841e1bbf7f602fb releaseforge-0.9.9.ebuild 537
+RMD160 2493bb574ce3a20fd8e9e9c4afd3d500244cb755 releaseforge-0.9.9.ebuild 537
+SHA256 1ab117b13798c3c7edf7b0c4e3bad4b5d6c658510b78195bacdd785c22ad9664 releaseforge-0.9.9.ebuild 537
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDRfV2+ySkm8kpY0RArZoAJ4mmoKrl5vMd9CO7HiUgKYGJtErggCfX/wX
-zWzhaiRpcrRSVW5yRs+VU6g=
-=8YSS
+iD8DBQFEKMOH2+ySkm8kpY0RArt5AJ9zmomCfs8227bzqUuQuRZwSBZaGwCgnU7Q
+BQytNmL+WZepZ3dkIgQkg3k=
+=39eU
 -----END PGP SIGNATURE-----
