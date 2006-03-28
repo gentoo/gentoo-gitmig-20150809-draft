@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a7c6ff5a0dc63b94adc85e297a08990 ChangeLog 3088
+MD5 6cf805daa218e5f9cfe4acaceb916ec8 ChangeLog 3199
 MD5 9f0335a18fa76f863d7126e9dc45d9a5 ExtUtils-CBuilder-0.05.ebuild 578
 MD5 8ebafc5b8cc8d3dbb704ebb51ecd2674 ExtUtils-CBuilder-0.12.ebuild 606
-MD5 6a451c27244ba494e64d7be1b3f6f093 ExtUtils-CBuilder-0.15.ebuild 590
+MD5 45b4f321c25b072f0d3a12b45bb4e8e4 ExtUtils-CBuilder-0.15.ebuild 589
 MD5 3d4691ee408930374086bb665dceb605 files/digest-ExtUtils-CBuilder-0.05 73
 MD5 29df3894e4b2a998727a82f6ff725f5c files/digest-ExtUtils-CBuilder-0.12 73
 MD5 2c031c95ed0d9893e57d3dd006843fb7 files/digest-ExtUtils-CBuilder-0.15 73
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEKETMKRy60XGEcJIRAqHWAJ9Cm8vbnRy3FO0cbt1hRLocvPo+sgCfeUzU
-tyy0wcrFxTbpjurcaRrZ4A0=
-=5TXR
------END PGP SIGNATURE-----
