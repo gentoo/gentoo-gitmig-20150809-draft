@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.9.ebuild,v 1.2 2005/04/23 22:44:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.9.ebuild,v 1.3 2006/03/28 16:30:26 exg Exp $
 
 inherit eutils
 
@@ -23,6 +23,9 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/otcl-1.8-badfreefix.patch
+
+	sed -i -e "s/relid'/relid/" "${S}"/configure || die
+
 	sed -i \
 		-e "s/) otkAppInit.c/) otkAppInit.c otcl.c/" \
 		-e "s/) otclAppInit.c/) otclAppInit.c otcl.c/" \
