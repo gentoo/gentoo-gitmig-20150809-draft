@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130-r1.ebuild,v 1.14 2006/03/03 14:10:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130-r1.ebuild,v 1.15 2006/03/28 05:17:36 vapier Exp $
 
 MAN_VER="3.3.5"
 PATCH_VER="1.4"
@@ -46,7 +46,6 @@ KEYWORDS="~alpha ~amd64 arm ~hppa -ia64 ~mips sh sparc x86"
 RDEPEND="virtual/libc
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.10 )
 	>=sys-libs/zlib-1.1.4
-	!sys-devel/hardened-gcc
 	elibc_glibc? ( >=sys-libs/glibc-2.3.2-r9 )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875

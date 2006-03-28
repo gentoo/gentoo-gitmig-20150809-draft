@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6.ebuild,v 1.4 2006/03/28 01:17:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6.ebuild,v 1.5 2006/03/28 05:17:36 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.0"
@@ -48,7 +48,6 @@ KEYWORDS="-* ~amd64 ~arm ~ppc64 ~sh ~sparc ~x86"
 # well tested in gentoo on any arch other than amd64!!
 RDEPEND="|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
 	>=sys-libs/zlib-1.1.4
-	!sys-devel/hardened-gcc
 	elibc_glibc? (
 		>=sys-libs/glibc-2.3.3_pre20040420-r1
 		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )

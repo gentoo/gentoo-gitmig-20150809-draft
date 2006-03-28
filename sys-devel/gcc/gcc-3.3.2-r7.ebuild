@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.25 2006/03/03 14:34:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.26 2006/03/28 05:17:36 vapier Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj emul-linux-x86"
 
@@ -680,11 +680,4 @@ pkg_postinst() {
 
 		/sbin/fix_libtool_files.sh ${OLD_GCC_VERSION} ${OLD_GCC_CHOST}
 	fi
-
-	# http://dev.gentoo.org/~pappy/hardened-gcc/docs/etdyn-ssp.html
-	if has_version '>=sys-devel/hardened-gcc-1.2'
-	then
-		[ "${ROOT}" = "/" ] && hardened-gcc -A
-	fi
 }
-
