@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.56 2006/02/17 22:18:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.57 2006/03/28 21:25:14 kevquinn Exp $
 #
 # Author: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -197,8 +197,9 @@ gcc-micro-version() {
 # gcc -dumpspecs is parsed first, followed by files listed by "gcc -v"
 # as "Reading <file>", in order.
 gcc-specs-directive() {
-	local specfiles=$($(tc-getCC) -v 2>&1 | awk '$1=="Reading" {print $NF}')
-	$(tc-getCC) -dumpspecs 2> /dev/null | cat - ${specfiles} | awk -v directive=$1 \
+	local cc=$(tc-getCC)
+	local specfiles=$(LC_ALL=C ${cc} -v 2>&1 | awk '$1=="Reading" {print $NF}')
+	${cc} -dumpspecs 2> /dev/null | cat - ${specfiles} | awk -v directive=$1 \
 'BEGIN	{ pspec=""; spec=""; outside=1 }
 $1=="*"directive":"  { pspec=spec; spec=""; outside=0; next }
 	outside || NF==0 || ( substr($1,1,1)=="*" && substr($1,length($1),1)==":" ) { outside=1; next }
