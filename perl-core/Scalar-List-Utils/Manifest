@@ -2,15 +2,27 @@
 Hash: SHA1
 
 MD5 b6f9e025df5f06f9eae341a51a116dce ChangeLog 3055
+RMD160 023e1f5c1c667d40419f863bd1761c6cdc5c9c12 ChangeLog 3055
+SHA256 921fd86b77444e08de5d402bc2d785a108b8ec813db240496832b253dba2d560 ChangeLog 3055
 MD5 b657ea963a562d35f12d99f1f5c53935 Scalar-List-Utils-1.14.ebuild 535
-MD5 0490ac787d7586add004a20190bc4db5 Scalar-List-Utils-1.18.ebuild 543
+RMD160 8f0933c5eb2b79fdeb36eb6f368f5cfe6cda99dc Scalar-List-Utils-1.14.ebuild 535
+SHA256 7f51ea78c16381d341e763d2f33cf49dd9c490245cc1a733e684e37e29e3d36e Scalar-List-Utils-1.14.ebuild 535
+MD5 0a49eab47a7ec08b3b8a95f2d1021f3b Scalar-List-Utils-1.18.ebuild 537
+RMD160 d3adb1ec5cb51bb9c63fe53aeb7edf9c86b16992 Scalar-List-Utils-1.18.ebuild 537
+SHA256 da063342c02490c6455f77cf34052fe2ff0018b48097c8d12414b6e001f4eea8 Scalar-List-Utils-1.18.ebuild 537
 MD5 1c6a66ee2aca9d7e7c6edc2eca5a65e0 files/digest-Scalar-List-Utils-1.14 73
+RMD160 9af0e4fd5ab306b5a4a150599c78eccb7fdc4777 files/digest-Scalar-List-Utils-1.14 73
+SHA256 3836936f5b5b13102c4751f5e2aec98cd959bcc6b810d45f438eee1b8c9b136e files/digest-Scalar-List-Utils-1.14 73
 MD5 929f3a745cd007be1b80fd8f2ceee61d files/digest-Scalar-List-Utils-1.18 73
+RMD160 93e8efdffc5968796a971e7ff226aff9de465268 files/digest-Scalar-List-Utils-1.18 73
+SHA256 3b396a83b678f5d637ef0fe47f8835d900165e003a1246ff6d0c2ebfbded3b93 files/digest-Scalar-List-Utils-1.18 73
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEKDKrKRy60XGEcJIRAnw/AJ9W2jvJQkXasV5t9oOuM4PmyA17UACgqmPn
-aSJKNrpiB54tfSsr9hBpMjM=
-=+g13
+iD8DBQFEKYI12+ySkm8kpY0RAjJeAJ0WzsVdk+hFX/ZcqgWbQJpEXL94mACgrTOK
+XTxAzTnnNEZwVg27DfwbWGg=
+=rTjN
 -----END PGP SIGNATURE-----
