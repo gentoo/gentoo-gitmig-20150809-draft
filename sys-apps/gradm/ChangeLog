@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.72 2006/03/19 12:15:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.73 2006/03/28 16:31:42 nixnut Exp $
+
+  28 Mar 2006; <nixnut@gentoo.org> gradm-2.1.8.200601212342-r1.ebuild:
+  Stable on ppc. Bug #127718
 
   19 Mar 2006; Markus Rothe <corsair@gentoo.org>
   gradm-2.1.8.200601212342.ebuild:
