@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.30.ebuild,v 1.1 2006/03/18 15:01:24 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.30-r1.ebuild,v 1.1 2006/03/28 01:24:32 pebenito Exp $
 
 IUSE="build nls pam"
 
-inherit eutils
+inherit eutils python
 
 EXTRAS_VER="1.15"
 SEMNG_VER="1.6"
@@ -91,23 +91,25 @@ src_unpack() {
 }
 
 src_compile() {
+	python_version
 	if useq build; then
 		einfo "Compiling setfiles"
 		emake -C ${S}/setfiles || die
 	else
 		einfo "Compiling policycoreutils"
-		emake -C ${S} || die
+		emake -C ${S} PYLIBVER="python${PYVER}" || die
 		einfo "Compiling policycoreutils-extra"
 		emake -C ${S2} || die
 	fi
 }
 
 src_install() {
+	python_version
 	if useq build; then
 		dosbin ${S}/setfiles/setfiles
 	else
 		einfo "Installing policycoreutils"
-		make DESTDIR="${D}" -C ${S} install || die
+		make DESTDIR="${D}" -C ${S} PYLIBVER="python${PYVER}" install || die
 		einfo "Installing policycoreutils-extra"
 		make DESTDIR="${D}" -C ${S2} install || die
 	fi
@@ -116,6 +118,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	python_version
+
 	if useq build; then
 		# need to ensure these
 		mkdir -p ${ROOT}/selinux
@@ -127,5 +131,12 @@ pkg_postinst() {
 		chmod 0666 ${ROOT}/dev/{ptmx,tty}
 	fi
 
+	python_mod_optimize ${ROOT}usr/lib/python${PYVER}/site-packages
+
 	throw_pam_warning
+}
+
+pkg_postrm() {
+	python_version
+	python_mod_cleanup ${ROOT}usr/lib/python${PYVER}/site-packages
 }

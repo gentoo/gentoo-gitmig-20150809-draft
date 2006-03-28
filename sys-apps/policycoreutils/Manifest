@@ -1,12 +1,15 @@
-MD5 3a3dee76d9dc60d688c76b5cc85d2d98 ChangeLog 8877
-RMD160 b561a2a859217451d1a57dd38b4007fe15e55b86 ChangeLog 8877
-SHA256 90658bb95f84a08776c66838191618b0b440899ab432c3c247b9c78188f4a921 ChangeLog 8877
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a536102e7b433b9dd1568719d098bafb ChangeLog 9083
+RMD160 b6bde173070b8888cbc723cefa3c0ceb1bb60514 ChangeLog 9083
+SHA256 0fba04be827ec6d05dfd3f514f2caf5ce7b43c5e83aedb46f2b0b2465a35bf25 ChangeLog 9083
 MD5 8b17a28b65ab524d9d67e1933c22d12e files/digest-policycoreutils-1.28 146
 RMD160 648d684e043702076703b1cef6d0f4fa0643fec5 files/digest-policycoreutils-1.28 146
 SHA256 37f11cd1e1730957453ca06c7923ed66b948f03abede3f42f721321f5057f598 files/digest-policycoreutils-1.28 146
-MD5 cf3c74184b1dd410c37c783399547acd files/digest-policycoreutils-1.30 530
-RMD160 05b9492d5cf56b4e7367287f70fcdbf0739ea27f files/digest-policycoreutils-1.30 530
-SHA256 74c296380da48f17bcfb066637952d66c245bcd35c16953f01eb7b6839086557 files/digest-policycoreutils-1.30 530
+MD5 cf3c74184b1dd410c37c783399547acd files/digest-policycoreutils-1.30-r1 530
+RMD160 05b9492d5cf56b4e7367287f70fcdbf0739ea27f files/digest-policycoreutils-1.30-r1 530
+SHA256 74c296380da48f17bcfb066637952d66c245bcd35c16953f01eb7b6839086557 files/digest-policycoreutils-1.30-r1 530
 MD5 b506c1ab31feeaa1394d45eedeaa2cc7 files/policycoreutils-1.28-quietlp.diff 817
 RMD160 cb467fd6bda873331c79163517008945010f1cde files/policycoreutils-1.28-quietlp.diff 817
 SHA256 c78d8f4fc65642c3287f951c6a25d6ad9f2fc5bfaf96f619edd3d1d72cb02d31 files/policycoreutils-1.28-quietlp.diff 817
@@ -19,6 +22,13 @@ SHA256 1d14250f52ecf63b67bed2289833d6f1ff2eba3cad9a80794b356e747917cdb7 metadata
 MD5 e969769d088771f792770d988b7515b4 policycoreutils-1.28.ebuild 3566
 RMD160 8dc00dde490d097fc36587a195fa3e4a1f9efe81 policycoreutils-1.28.ebuild 3566
 SHA256 1009800d22a1515baae61a65af5e8393076893a9e7f8189b6a773d9e70dd4361 policycoreutils-1.28.ebuild 3566
-MD5 d3c661da7257a064016a7b59fde13df0 policycoreutils-1.30.ebuild 3518
-RMD160 3bae343edccc4a2973ec24215e7a5d6c408de3f6 policycoreutils-1.30.ebuild 3518
-SHA256 01f62da7d656396e6576edd041b5731764ddd22e48cdf9d10f996ae96234d01b policycoreutils-1.30.ebuild 3518
+MD5 d55d4b96c909de805f74dce9b0a4e1ce policycoreutils-1.30-r1.ebuild 3793
+RMD160 317ede6db7c027d1d53a1487d55fd4ef22f1861d policycoreutils-1.30-r1.ebuild 3793
+SHA256 90b3243d95f1ab4c674b06435b1f7a37c5cff5278b9b91650bf8294de9c6a8b8 policycoreutils-1.30-r1.ebuild 3793
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEKJBcJ+ChZlpDtAoRAuBgAJ92f22gq2gGRjDUgau2lo044aQz1wCgj398
+8cAtGLVCarI8py8alwRQbqg=
+=KQXE
+-----END PGP SIGNATURE-----
