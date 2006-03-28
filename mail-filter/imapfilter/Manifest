@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9c080b97d250ed5e951c3f8e1acdda53 ChangeLog 2295
-RMD160 51bf6f5d70ba418dc4ffbb8827e966d729dea6d1 ChangeLog 2295
-SHA256 041fb6a68791783cfa9e3e34d40525c27560f834cc8aa721ac1cfd6b9d6d007e ChangeLog 2295
+MD5 c31b5b6c7700438a0edb42f7ec9a41d5 ChangeLog 2525
+RMD160 d6bf31298ce3107e8f55ae90c43be4ad4836b5af ChangeLog 2525
+SHA256 238320d0b6433000ddfe74de4fd250a32f233ded7a6f1863582d5995f8add721 ChangeLog 2525
 MD5 9828bc0a6addcce9ac4657f8884e189f files/digest-imapfilter-1.0 66
 RMD160 1db9ba4a96d3f027dc29fc900bc0237e20215de4 files/digest-imapfilter-1.0 66
 SHA256 d5fba7aebd518d573a793ac66dc8c9830e9848633e20d26f79af92e6e28b09ba files/digest-imapfilter-1.0 66
@@ -13,6 +13,9 @@ SHA256 0d1e47cf120ca6608c3443e479eab4d0e84b270ddcf37dae4c0882ecb6ddb98b files/di
 MD5 d85175cbb4ea722bead45df2e90c328a files/digest-imapfilter-1.1.1 68
 RMD160 f0d9973f502cd7fb9c7f743c766a1a7cbad4dafa files/digest-imapfilter-1.1.1 68
 SHA256 9f8cc98da3079a585132d656ae3d998c36e1010ba9ed645d70bfc2c91d7ad494 files/digest-imapfilter-1.1.1 68
+MD5 407d86b4cab0c741694b5964a5bb03b1 files/digest-imapfilter-1.2.1 250
+RMD160 e504df8d010afea49793ea73c7ec5a6959aed2bd files/digest-imapfilter-1.2.1 250
+SHA256 4fc964b9497ad80e8724267c1eabbbc07ab27f3c65af47f06c2ed59357f67a20 files/digest-imapfilter-1.2.1 250
 MD5 35e578391a3859a4ea8d568ab5227125 files/imapfilter-1.0.patch 405
 RMD160 0d4828cc370e752348c03632b4ec3d281c808b6d files/imapfilter-1.0.patch 405
 SHA256 5fa709d4444f08f72658ec5fe5c5382d9c078dece8517e598bfe5abd9123c53f files/imapfilter-1.0.patch 405
@@ -22,16 +25,19 @@ SHA256 493365a2f9a1321310426d21e0fca3b931ecef45b3b72fff52b5cbf3550d53e0 imapfilt
 MD5 1e65715ff28011f4530bb35e88bda4e5 imapfilter-1.0.ebuild 768
 RMD160 f1c2d4b768a09655d416bb28cbee921f2e18a510 imapfilter-1.0.ebuild 768
 SHA256 59dfca6a44edf1ebc3b271b6c83fce13a9272dd0db0eb30a65b4d75c465dd459 imapfilter-1.0.ebuild 768
-MD5 16e610ab369fdae3e14bbdda778e60d2 imapfilter-1.1.1.ebuild 805
-RMD160 82fdba2f12f7fb0441cb3857561e4480267ad326 imapfilter-1.1.1.ebuild 805
-SHA256 854f7f0b8ec1fc26869f4fbf1985a6c38e457ebcedad9c83a6cbdfd7f4f97f71 imapfilter-1.1.1.ebuild 805
-MD5 24f6f19855851e9df7f3ee9181ba416e metadata.xml 224
-RMD160 520d3a56fac06b40760b18d7252795767810eb2c metadata.xml 224
-SHA256 2a444a8aaf52604e1b570c0ee18f7216a982dc92e2777815e0cf74dcc6abea2b metadata.xml 224
+MD5 edc265caacd2a42277d400e1201573e7 imapfilter-1.1.1.ebuild 804
+RMD160 354d760cf0d77f5edde3722da64c5642b5dccdca imapfilter-1.1.1.ebuild 804
+SHA256 4bb60d803e2e27f33e41c8d92e2d95611f0ae27d7088d200252784e07989b7b2 imapfilter-1.1.1.ebuild 804
+MD5 37085e3f6b89d39a05c005ca3a4723e9 imapfilter-1.2.1.ebuild 783
+RMD160 6ce9d1bd2d9585ed25d08b6df04ed080c657b2c5 imapfilter-1.2.1.ebuild 783
+SHA256 2b08ec896af01ff391828cfdf2cfb048a75cf5489fd0f7ffa8381cef09192443 imapfilter-1.2.1.ebuild 783
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
+SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD8RH5QlM6RnzZP+IRAhFjAJoCXmcv3Wq9qxE5o8tJhUQCmFAFoACfbcnb
-B3sqdnkNO/BcuAlOXeXKPUE=
-=uQa3
+iD8DBQFEKKmP10xuJSrg3/sRAnkGAJ42EBEcO8pGm2mU4OLhDdD9FNjgJwCeKpfB
+i/gRkNhZbYD7/eEpPxNoShk=
+=xnYS
 -----END PGP SIGNATURE-----
