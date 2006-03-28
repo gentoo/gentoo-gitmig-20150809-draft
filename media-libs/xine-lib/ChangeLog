@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.314 2006/03/28 16:21:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.315 2006/03/28 19:22:44 flameeyes Exp $
+
+*xine-lib-1.1.2_pre20060328 (28 Mar 2006)
+
+  28 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +xine-lib-1.1.2_pre20060328.ebuild:
+  Add CVS snapshot to test AAC support for who still has troubles with 1.1.1-r5.
 
   28 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   xine-lib-1.1.1-r5.ebuild:
