@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 62b0cf8d8fda6a18b4bbf8511f4c3673 ChangeLog 2521
+MD5 2853b049830be7880eadf4736a091bb0 ChangeLog 2625
 MD5 a523b6aac5747379d78dd5a9a242541b ExtUtils-F77-1.13-r1.ebuild 475
 MD5 0f8b4de70de89395edb2773440c24109 ExtUtils-F77-1.14-r1.ebuild 519
 MD5 9e249f4d27d3c946424195d30c1b7788 ExtUtils-F77-1.14.ebuild 466
-MD5 1df0d9421e50d486f62ba68e7ca324a1 ExtUtils-F77-1.15.ebuild 523
+MD5 382e6a0d639aea2d24920326fdfc0bee ExtUtils-F77-1.15.ebuild 522
 MD5 3327035831837e6fee1dbfc3668dd604 files/digest-ExtUtils-F77-1.13-r1 67
 MD5 d77130a97c663e5178f45cf73fdc8f6d files/digest-ExtUtils-F77-1.14 67
 MD5 d77130a97c663e5178f45cf73fdc8f6d files/digest-ExtUtils-F77-1.14-r1 67
 MD5 1635d57c19f504e50a09329183d8684e files/digest-ExtUtils-F77-1.15 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEKEUMKRy60XGEcJIRAk0wAKCNHbm1vGjQjz2qWt64zvU7MwfwywCgnHdS
-npR2kp/jHfXnJTwpMVPWVfc=
-=o/fZ
------END PGP SIGNATURE-----
