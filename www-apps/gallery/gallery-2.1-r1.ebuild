@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.1.ebuild,v 1.1 2006/03/24 15:56:20 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.1-r1.ebuild,v 1.1 2006/03/28 12:30:34 rl03 Exp $
 
 inherit webapp eutils
 
@@ -45,4 +45,5 @@ pkg_postinst() {
 	einfo "g2data dir: cp -Rf /path/to/g2data/ /path/to/backup"
 	einfo "mysql: mysqldump --opt -u username -h hostname -p database > /path/to/backup.sql"
 	einfo "postgres: pg_dump -h hostname --format=t database > /path/to/backup.sql"
+	webapp_pkg_postinst
 }
