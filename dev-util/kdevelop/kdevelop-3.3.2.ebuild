@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.2.ebuild,v 1.1 2006/03/28 17:39:01 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.2.ebuild,v 1.2 2006/03/28 17:56:18 carlo Exp $
 
 inherit kde eutils
 
@@ -13,18 +13,16 @@ LICENSE="GPL-2"
 
 SLOT="3"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="ada clearcase fortran haskell java pascal perforce perl php python ruby sql subversion"
+IUSE="ada clearcase cvs fortran haskell java pascal perforce perl php python ruby sql subversion"
 
-DEPEND="dev-lang/perl
-	sys-devel/flex
-	sys-devel/gdb
-	>=sys-libs/db-4
-	|| ( kde-base/cervisia kde-base/kdesdk )"
-
+DEPEND="sys-devel/gdb
+	=sys-libs/db-4.1*
+	cvs? ( || ( kde-base/cervisia kde-base/kdesdk ) )"
 RDEPEND="${DEPEND}
 	subversion? ( || ( kde-base/kdesdk-kioslaves kde-base/kdesdk ) )"
-
-need-kde 3.3
+DEPEND="${DEPEND}
+	sys-devel/flex"
+need-kde 3.5
 
 src_unpack() {
 	kde_src_unpack
@@ -49,7 +47,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable java antproject)"
 
 	# version control systems
-	myconf="${myconf} $(use_enable clearcase) $(use_enable perforce)
+	myconf="${myconf} $(use_enable cvs) $(use_enable clearcase) $(use_enable perforce)
 			$(use_enable subversion)"
 
 	kde_src_compile
