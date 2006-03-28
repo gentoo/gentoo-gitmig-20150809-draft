@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkpgp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.27 2006/03/26 04:03:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.28 2006/03/28 01:12:27 agriffis Exp $
+
+  28 Mar 2006; Aron Griffis <agriffis@gentoo.org> libkpgp-3.5.0.ebuild:
+  Mark 3.5.0 ~ia64
 
   26 Mar 2006; Aron Griffis <agriffis@gentoo.org> libkpgp-3.4.1.ebuild:
   Mark 3.4.1 stable on ia64
