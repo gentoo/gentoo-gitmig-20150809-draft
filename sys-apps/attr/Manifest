@@ -1,13 +1,52 @@
-MD5 41e7323e274628441c71847e3ac93138 ChangeLog 8215
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 764239f76564fad4a36af2b9cabc951b ChangeLog 8408
+RMD160 7753a8e6297f0b8d4d97ae8584c4156e77761832 ChangeLog 8408
+SHA256 dff5ad3eab349db51602d9f807acbe511a6ee955bb8ba5c72849efa08d319dc1 ChangeLog 8408
 MD5 5bf9405e2ffb4ac628eced8fd0efcac6 attr-2.4.19-r1.ebuild 1430
+RMD160 c0797a846195f9f01083dd69c98e893cf18e6286 attr-2.4.19-r1.ebuild 1430
+SHA256 1200a21766c285927b4b50d169d6006dce34595cf295230cb0676054e07b704c attr-2.4.19-r1.ebuild 1430
 MD5 fdf15553ad62bbd1f8b040a5e69339e9 attr-2.4.23.ebuild 1291
+RMD160 bb2375227968900c7f5eb0b20733a61a161e8aea attr-2.4.23.ebuild 1291
+SHA256 7f04ef155187ff358eda93eb6137b038091442f5306108e667e1b34f550b4567 attr-2.4.23.ebuild 1291
 MD5 8b5953be5c1a5b4dfcb115662eaf1b22 attr-2.4.24.ebuild 1441
-MD5 5f385ad3b6dafb7bdd578a623150b598 attr-2.4.28.ebuild 1412
+RMD160 2f2a6bdff3c976ee03742000c4574a1ea02942a4 attr-2.4.24.ebuild 1441
+SHA256 acc5513496e0740410ba2441ce4087653b9c909644ef59522c3a55675156d4bb attr-2.4.24.ebuild 1441
+MD5 ced1e9168caf4abb035087d9448daf82 attr-2.4.28-r1.ebuild 1473
+RMD160 49b677aabdd57b043b506c09166f2f96aa7ea2dd attr-2.4.28-r1.ebuild 1473
+SHA256 1edc27a2044204dc545b70fa3aa395d6a912dbdf98ec47cfcc18b3fd6ad3e99d attr-2.4.28-r1.ebuild 1473
 MD5 c09974172d4e6f9fd20a4c4b53c0a8d4 files/attr-2.4.19-attr_copy_file-suppress-warning.patch 715
+RMD160 35f59aa90bbfed03a3829ad8bdcab7f9acfab30b files/attr-2.4.19-attr_copy_file-suppress-warning.patch 715
+SHA256 03041691b4480fc8c654765460aeb991a574421ad131fa664df38855f11afcfc files/attr-2.4.19-attr_copy_file-suppress-warning.patch 715
 MD5 6204834fe8dda5a8e61bb52b8db06673 files/attr-2.4.24-only-symlink-when-needed.patch 836
+RMD160 5b36f392f12d2382dd051c9766ae128a71b659ec files/attr-2.4.24-only-symlink-when-needed.patch 836
+SHA256 fede0dc42499b8903e42ea976d2ebfe8965750a8b2b116433364e657fbc8189d files/attr-2.4.24-only-symlink-when-needed.patch 836
+MD5 9c0ffcfd988d513cb9ec5aad45551373 files/attr-2.4.28-list-compat-segv.patch 2427
+RMD160 cd55c82b2a5c94f86a5cfa9053a89491a33d4e0c files/attr-2.4.28-list-compat-segv.patch 2427
+SHA256 0bc53e74e7ffa170b0e8a07a4bfbe8045b6762940ea36b7a4e5f831aa573658a files/attr-2.4.28-list-compat-segv.patch 2427
 MD5 8c0ffc8078bf36ce6eb5c698e9df7e0f files/attr-no-man2pages.patch 398
+RMD160 8f95063a41097c548454d9717c8f69c7fd60386c files/attr-no-man2pages.patch 398
+SHA256 2eecf6d7917f14b62726fed4126b17f58efcdd659af1d36611aafd39e908573d files/attr-no-man2pages.patch 398
 MD5 9884f12ef497050faff6f6418acae8e2 files/digest-attr-2.4.19-r1 67
+RMD160 d81755b18050c4a6e33e68f68e500d1951ec36c9 files/digest-attr-2.4.19-r1 67
+SHA256 070de47f75e00c83ac3075a70f5f7c950b9f57c2c16cd3d605fcd00d92058fbc files/digest-attr-2.4.19-r1 67
 MD5 2a77f72ca75841e774fdcf83147b8aa3 files/digest-attr-2.4.23 67
+RMD160 3fd645904ab4e660805a8c917342555745767d6a files/digest-attr-2.4.23 67
+SHA256 f308f6ce7cbc45e9cfd22795fc674d2168d3f9309968fd3f2e7a9cd8dc5c3733 files/digest-attr-2.4.23 67
 MD5 6a5a82b72177e87022374d7dbdd4aea1 files/digest-attr-2.4.24 67
-MD5 a09a158a96d2f2107e6b16c803a03084 files/digest-attr-2.4.28 67
+RMD160 519d4381ca1d31ab4923eb598c6385eca1616278 files/digest-attr-2.4.24 67
+SHA256 f0754226fbf815d892ea67b0ea7f5267690fd303b5811b22e76a6e20d91632de files/digest-attr-2.4.24 67
+MD5 a09a158a96d2f2107e6b16c803a03084 files/digest-attr-2.4.28-r1 67
+RMD160 c6faf55d5578500f3905aa634e3b35473f3e12be files/digest-attr-2.4.28-r1 67
+SHA256 4cb0bbd30f01657f342b4e9a7917b185247153a643c58b5b2ba3121c54e531e0 files/digest-attr-2.4.28-r1 67
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEKMx+2+ySkm8kpY0RAjtfAKCvscI3T21jnHAK1Op/tuOVHLXsiwCgxES9
+1l/QkTXUnjva0u/RGBYiTCk=
+=HytW
+-----END PGP SIGNATURE-----
