@@ -1,18 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 94d6f5306cfe3f5894b93240d6bd4767 kino-0.7.5-r1.ebuild 1310
 MD5 03d293c5b909a49da4e7c7204341d714 ChangeLog 4351
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 c681bc04ca61db53b8249a7646fa327b kino-0.7.6.ebuild 1358
+RMD160 98946b5d5e2a683b628e44e208922f947508b7c1 ChangeLog 4351
+SHA256 82e4a641476ed9d6c81545717467d7324f7af52890d0cf79e6b8f9721cf4d4b0 ChangeLog 4351
 MD5 30181ed68c1351c7b6eea135e5ee7ad3 files/digest-kino-0.7.5-r1 63
+RMD160 79ea5e61ae958ebf1e78eb0cfa74a317ad9571d4 files/digest-kino-0.7.5-r1 63
+SHA256 4ba44e51eed2e79a0fb2684765466d89f6d53676c863e01445f496d64013b660 files/digest-kino-0.7.5-r1 63
 MD5 2c7645b5cf0d9f0f221fb87ca44b46fe files/digest-kino-0.7.6 63
-MD5 33d7b5aeacaf3400bbd60f827ca9515b files/kino-0.7.6-configure.diff 913
+RMD160 2d01e0ee274caabe708bf88d6f5d50ac8eb144b4 files/digest-kino-0.7.6 63
+SHA256 56fb1b26ad0c822e5a2f0845b5a9a18109f4d578b70d460b8b1fbea0a92dec97 files/digest-kino-0.7.6 63
+MD5 7fd69bf21ef43a535be675250b059cfc files/digest-kino-0.8.0 235
+RMD160 0a181ad0dbcaff16267967e7d118adb524c0f167 files/digest-kino-0.8.0 235
+SHA256 2d7499da34658b3ad045df27724d439b82c3a273e76386fc7eafb5c291891e54 files/digest-kino-0.8.0 235
 MD5 3de7378299c687b8b3b8dec40d4f553c files/kino-0.7.5-ppc.diff 8058
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCjxKG06ebR+OMO78RAlc5AJ9jnOIhQAykOpXZXs/JjJ3hHqZ5FwCfUYgb
-Sa09MW9sihBg6htLNChAa9E=
-=d+RN
------END PGP SIGNATURE-----
+RMD160 78cd28a3c2c44e465b5d2dc98b0a6681d04e1729 files/kino-0.7.5-ppc.diff 8058
+SHA256 dcab7aab30d2719e0e76d438e41f2e65edda9b26353ea1a142d68be0fe9e6e22 files/kino-0.7.5-ppc.diff 8058
+MD5 33d7b5aeacaf3400bbd60f827ca9515b files/kino-0.7.6-configure.diff 913
+RMD160 469121faba0d7aa6939171b9aa1a319dd91365b6 files/kino-0.7.6-configure.diff 913
+SHA256 0bc5818f649d4fa33a9a35be727bb38ec72de723385033781214c2ff5d5d0383 files/kino-0.7.6-configure.diff 913
+MD5 de5e3f7c498faf6447901d9b864c8105 files/kino-0.8.0-configure-in.diff 2558
+RMD160 a505dae8dd279b86fc450657ea935a3a6642eded files/kino-0.8.0-configure-in.diff 2558
+SHA256 76400ef4b36f870ee1af39d8a06cda8d079cea48b5dfa62b76ab763e546d669d files/kino-0.8.0-configure-in.diff 2558
+MD5 587e070b9cac4ac19524cecdfc2ab60f files/kino-0.8.0-configure.diff 384
+RMD160 520799f6e646e5a6daf46429128b331b1349f717 files/kino-0.8.0-configure.diff 384
+SHA256 1e6028a2525515f9df2c9b1d7b6f3fe1a19016f45cf4f8f07f27d9cff86d9269 files/kino-0.8.0-configure.diff 384
+MD5 94d6f5306cfe3f5894b93240d6bd4767 kino-0.7.5-r1.ebuild 1310
+RMD160 5db1f5e083ae7b40ca9832fa6d6011ecdb066d67 kino-0.7.5-r1.ebuild 1310
+SHA256 2bb77a26b688e25ee2967501044176e332736ef4381f54593dfa0ee6b0b8ea05 kino-0.7.5-r1.ebuild 1310
+MD5 c681bc04ca61db53b8249a7646fa327b kino-0.7.6.ebuild 1358
+RMD160 ce38e18e6db6320b3ec99693d67f2106838926e1 kino-0.7.6.ebuild 1358
+SHA256 f7945b498f00d01640782e775d579727f3fcd7485787b2ccb380c57d6f3acc5b kino-0.7.6.ebuild 1358
+MD5 110dc3a614b2963ea03a28be780d7216 kino-0.8.0.ebuild 1541
+RMD160 0001de2d3fd6ca68767d7739fdee78c863ff91ce kino-0.8.0.ebuild 1541
+SHA256 af357b9a72388e573e2769a0ab01171f1bc88d2bd08d459263b62ab4dd6d2fdc kino-0.8.0.ebuild 1541
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+RMD160 6e3fccd1ae62f02a0cb28d319aa185af0020822d metadata.xml 225
+SHA256 1a7f3e805478b42bc379b2a36944579d34d7e66ba5bf418a651e1cd58ad0a7f5 metadata.xml 225

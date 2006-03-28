@@ -1,0 +1,63 @@
+--- configure.in.orig	2006-01-05 21:28:07.000000000 +0000
++++ configure.in	2006-01-06 12:09:32.000000000 +0000
+@@ -79,18 +79,22 @@
+ ])
+ 
+ # LIBQUICKTIME
+-AC_ARG_WITH(quicktime,[  --with-quicktime        Support Quicktime DV files using Quicktime4Linux or libquicktime.],
+-[
++AC_ARG_WITH(quicktime,[  --with-quicktime        Support Quicktime DV files using Quicktime4Linux or libquicktime.],with_quicktime=$withval)
++
++if test "$with_quicktime" = "yes" ; then
++
+ 	AC_CHECK_HEADERS(quicktime/quicktime.h,
+ 	[
+-		AC_CHECK_LIB(quicktimehv, quicktime_open, ,
+-			[AC_WARN(libquicktime missing; install libquicktime or quicktime4linux to support Quicktime files.)],
+-			[$LIBRAW1394_CFLAGS $LIBRAW1394_LIBS -lm]
+-		)
+-		LIBQUICKTIME_CFLAGS="-I$prefix/include/quicktime"
+-		AC_SUBST(LIBQUICKTIME_CFLAGS)
+-		AC_DEFINE(HAVE_LIBQUICKTIME, 1, [quicktime4linux present])
+-	],[
++		AC_CHECK_LIB(quicktimehv, quicktime_open, , failed_quicktime4linux=yes, [$LIBRAW1394_CFLAGS $LIBRAW1394_LIBS -lm])
++		if test "$failed_quicktime4linux" != "yes" ; then
++			have_quicktime4linux=yes
++			LIBQUICKTIME_CFLAGS="-I$prefix/include/quicktime"
++			AC_SUBST(LIBQUICKTIME_CFLAGS)
++			AC_DEFINE(HAVE_LIBQUICKTIME, 1, [quicktime4linux present])
++		fi
++	])
++
++	if test "$have_quicktime4linux" != "yes" ; then
+ 		PKG_CHECK_MODULES(LIBQUICKTIME, [libquicktime >= 0.9.5],
+ 		[
+ 			AC_DEFINE(HAVE_LIBQUICKTIME, 1, [libquicktime present])
+@@ -98,21 +102,17 @@
+ 			AC_SUBST(LIBQUICKTIME_LIBS)
+ 		],[
+ 			AC_WARN($LIBQUICKTIME_PKG_ERRORS)
++			AC_WARN(Install quicktime4linux or libquicktime to support Quicktime files.)
+ 		])
+-	])
+-])
++	fi
++fi
+ 
+ # LIBAVCODEC
+-AC_ARG_WITH(avcodec,[  --with-avcodec       Use FFMPEG libavcodec for DV video decoding instead of libdv.],
+-[
++AC_ARG_WITH(avcodec,[  --with-avcodec       Use FFMPEG libavcodec for DV video decoding instead of libdv.],with_avcodec=$withval)
+ 
+-AC_ARG_WITH(avcodec-include,[  --with-avcodec-include=PFX    prefix where local libavcodec includes are installed (optional)],
+-	  avcodec_include="$withval",avcodec_include="")
++AC_ARG_WITH(avcodec-include,[  --with-avcodec-include=PFX    prefix where local libavcodec includes are installed (optional)],avcodec_include="$withval")
+ 
+-AC_ARG_WITH(avcodec-lib,[  --with-avcodec-lib=PFX        prefix where local libavcodec libs are installed (optional)],
+-	  avcodec_lib="$withval", avcodec_lib="")
+-with_avcodec=yes
+-])
++AC_ARG_WITH(avcodec-lib,[  --with-avcodec-lib=PFX        prefix where local libavcodec libs are installed (optional)],avcodec_lib="$withval")
+ 
+ EXTRA_LIBS="$LIBS"
+ 

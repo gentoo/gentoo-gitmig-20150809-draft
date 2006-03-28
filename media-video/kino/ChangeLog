@@ -1,6 +1,13 @@
 # ChangeLog for media-video/kino
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.33 2005/05/21 10:50:19 luckyduck Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.34 2006/03/28 07:03:02 morfic Exp $
+
+*kino-0.8.0 (28 Mar 2006)
+
+  28 Mar 2006; Daniel Goller <morfic@gentoo.org>
+  +files/kino-0.8.0-configure.diff, +files/kino-0.8.0-configure-in.diff,
+  +kino-0.8.0.ebuild:
+  Bump to 0.8.0, closing bug #113923, thanks to all contributors on this bug
 
   21 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   +files/kino-0.7.6-configure.diff, kino-0.7.6.ebuild:
