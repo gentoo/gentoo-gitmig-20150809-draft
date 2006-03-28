@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c7b6a46da0f68e9113d10940486d1242 ChangeLog 6378
+MD5 54ddd5ed7b28447290f4feb68622f0ea ChangeLog 6481
 MD5 f0985e07520ccd93372582a61d920e5c files/digest-glib-perl-1.062 62
 MD5 2a320dc6f223bfb71122994c982133be files/digest-glib-perl-1.081 62
 MD5 4d74c754b3541dbd44a59805eeb904bd files/digest-glib-perl-1.101 62
@@ -13,14 +10,7 @@ MD5 9d21d09a81a7145dd384f540639a7382 files/gtypes.patch 385
 MD5 9255c8a3f432f2cd0ad1e1a045079079 glib-perl-1.062.ebuild 754
 MD5 2e8a89384245ef851a789ecbdcf41a5f glib-perl-1.081.ebuild 765
 MD5 b97f83c4f22d6e820da8c2a641d3511a glib-perl-1.101.ebuild 770
-MD5 ed535eef782e55a66c0005f131959c24 glib-perl-1.102.ebuild 1057
+MD5 c9b846d09892153ed4a9567ce0b83fb7 glib-perl-1.102.ebuild 1056
 MD5 bc816a8fc546a391c60082ccc0782efc glib-perl-1.105.ebuild 1067
 MD5 e12a48cfa5f89abbccfed520de24b3fa glib-perl-1.120.ebuild 790
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEKD9GKRy60XGEcJIRAt5pAJ9CaJNmoVj47CT3KwZ1aEM/hI5SCwCfbJaC
-lQ8BHoSbbbAvMI4NfomFvwI=
-=F8+r
------END PGP SIGNATURE-----
