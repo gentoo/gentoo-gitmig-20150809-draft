@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.41 2006/03/27 17:29:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.42 2006/03/28 00:11:12 agriffis Exp $
+
+  28 Mar 2006; Aron Griffis <agriffis@gentoo.org> lilypond-2.0.3.ebuild,
+  lilypond-2.2.4.ebuild, lilypond-2.2.6.ebuild, lilypond-2.4.2.ebuild,
+  lilypond-2.5.2.ebuild, lilypond-2.8.0-r1.ebuild:
+  Restrict older lilyponds to tetex-2 which provides /usr/bin/inimf #92040.
+  sed makefiles so that mftrace-1.1.x can be used in place of mftrace-1.0.x
+  #90334
 
   27 Mar 2006; Aron Griffis <agriffis@gentoo.org> lilypond-2.8.0-r1.ebuild:
   addwrite /root/.PfaEdit workaround #127723

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.2.6.ebuild,v 1.4 2006/03/26 21:51:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.2.6.ebuild,v 1.5 2006/03/28 00:11:13 agriffis Exp $
 
 inherit versionator
 
@@ -19,7 +19,7 @@ KEYWORDS="~alpha ~x86 ~ppc ~sparc -amd64"
 
 RDEPEND=">=dev-util/guile-1.6.4
 	virtual/ghostscript
-	virtual/tetex
+	=virtual/tetex-2*
 	>=dev-lang/python-2.2.3-r1"
 
 DEPEND="${RDEPEND}
@@ -29,13 +29,19 @@ DEPEND="${RDEPEND}
 	>=sys-devel/flex-2.5.4a-r5
 	>=sys-devel/gcc-3.1-r8
 	>=sys-devel/make-3.80
-	=app-text/mftrace-1.0*
+	>=app-text/mftrace-1.1.16
 	sys-devel/bison !=sys-devel/bison-1.75
 	doc? ( media-gfx/imagemagick
 		>=media-libs/netpbm-9.12-r4 )"
 
 src_unpack() {
-	unpack ${A} || die "unpack failed"
+	unpack ${A}
+	# Fix makefiles to work with recent mftrace #90334
+	grep -rlZ 'MFTRACE.*--pf[ab]' --include=GNUmakefile --include=\*.make ${S} | \
+		xargs -0r sed -i '
+			s/--pfa --pfb/--formats=PFA,PFB/;
+			s/--pfa/--formats=PFA/;
+			s/--pfa/--formats=PFA/'
 }
 
 src_compile() {
@@ -43,6 +49,7 @@ src_compile() {
 	# this package.  See bug 21305
 	PATH="$(echo ":${PATH}:" | sed 's/:[^:]*ccache[^:]*:/:/;s/^://;s/:$//;')"
 
+	addwrite /root/.PfaEdit  # fontforge, see bug 127723
 	addwrite /dev/stderr
 	addwrite /var/cache/fonts
 	addwrite /usr/share/texmf/fonts
