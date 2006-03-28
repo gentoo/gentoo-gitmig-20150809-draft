@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gnome2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome2/ChangeLog,v 1.22 2006/03/24 12:54:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome2/ChangeLog,v 1.23 2006/03/28 23:52:31 agriffis Exp $
+
+  29 Mar 2006; Aron Griffis <agriffis@gentoo.org> ruby-gnome2-0.14.1.ebuild:
+  Mark 0.14.1 stable on ia64
 
   24 Mar 2006; Caleb Tennis <caleb@gentoo.org> ruby-gnome2-0.14.1.ebuild:
   x86 stable
