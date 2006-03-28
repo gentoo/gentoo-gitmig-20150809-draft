@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.95 2006/03/24 18:45:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.96 2006/03/28 21:34:42 spyderous Exp $
+
+*xorg-server-1.0.2-r2 (28 Mar 2006)
+
+  28 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/xorg-server-1.0.2-64bit-fix-have-dix-config.patch,
+  +files/xorg-server-1.0.2-64bit-fix-indirect-vertex-array.patch,
+  -xorg-server-1.0.2-r1.ebuild, +xorg-server-1.0.2-r2.ebuild:
+  Re-add 64-bit direct rendering patches that got lost in the 1.0.2 bump.
 
   24 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>; +files/xprint.init,
   xorg-server-1.0.2-r1.ebuild:
