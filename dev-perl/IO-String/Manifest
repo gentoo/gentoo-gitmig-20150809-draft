@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1ef8fe03db9247c563ad0e24b60d84f5 ChangeLog 4036
+MD5 3e491a6535ea8dc74f83ff491ef88242 ChangeLog 4135
 MD5 b674d8a694bfb090ca98c2e63d04ec1a IO-String-1.03.ebuild 497
 MD5 ee67a39d11d47d860942018d316b2fbb IO-String-1.05.ebuild 549
 MD5 aa7399769f81d7124d64a2a5253a3290 IO-String-1.06.ebuild 561
 MD5 fbb3baeb4381fa9dbe9e0aa0961fb1fa IO-String-1.07.ebuild 544
-MD5 8923d74ee79e401e5a16c2491374f2bb IO-String-1.08.ebuild 557
+MD5 576f6bfbbb8ac401d5fe59f872a01b4b IO-String-1.08.ebuild 554
 MD5 8ff8dded3a891cfe559d99ca55806fd1 files/digest-IO-String-1.03 64
 MD5 aa99d018de05ab75d7092aaae720766a files/digest-IO-String-1.05 64
 MD5 db37a90951927331d6a5c665a77d181f files/digest-IO-String-1.06 64
 MD5 2ee9e7170be13f97ef595de48bab7c64 files/digest-IO-String-1.07 64
 MD5 a256d14f790a921d50f1b37b96793414 files/digest-IO-String-1.08 64
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEKZo4FdQwWVoAgN4RAjbEAJ4nlJxrfDye0Lim9zICJ5Zjbf19JACfZkbP
-vnFyGntnTiyAGJVsaBapcOk=
-=9vTd
------END PGP SIGNATURE-----
