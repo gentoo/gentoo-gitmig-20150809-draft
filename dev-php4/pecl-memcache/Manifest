@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6733330df970b72c2191ce5798919dab ChangeLog 1460
 MD5 2b340edcc01d9e1afddcf52d7cc5cb32 files/digest-pecl-memcache-2.0.0 62
 MD5 55f79d4ec9ec93e49180fd0ad95fe049 files/digest-pecl-memcache-2.0.1 232
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 MD5 2e3ac5c297ffa5ab9ef21b7d4fba7352 pecl-memcache-2.0.0.ebuild 772
 MD5 da086be31ace6fb163440410e8fe906c pecl-memcache-2.0.1.ebuild 780
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEKVkVKRy60XGEcJIRAszIAKCs82PxzUZebHzamAdj2JcO0VZQ4QCfS0zG
+A7k8S667Ro0vNnO11bhY3FI=
+=GrbE
+-----END PGP SIGNATURE-----
