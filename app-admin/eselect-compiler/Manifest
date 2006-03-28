@@ -1,17 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d0e2dd8b0d4a61e81803a2028744fccf ChangeLog 3506
-MD5 608cab81ba775e95a8c723afc7c767d7 eselect-compiler-2.0.0_beta5.ebuild 1606
-MD5 a4aa1cd28827d0c7affd00af717e0bde eselect-compiler-2.0.0_rc1-r1.ebuild 1706
-MD5 ba6df286e65b8eb34926daa051dc2ae4 files/digest-eselect-compiler-2.0.0_beta5 79
+MD5 14ff9b422d053501cd3ca829f950d887 ChangeLog 3663
+RMD160 90a402430c4dfb95b914f2513e661e7b6fa5809a ChangeLog 3663
+SHA256 34ac2aeef002f21d6be5e21492ca603ff7ec01a564bb7cfa5b386dec6e0053e9 ChangeLog 3663
+MD5 c718fa51ae54c516f0d76632b6d002b1 eselect-compiler-2.0.0_rc1-r1.ebuild 1713
+RMD160 deb4b9a24ac2b67a8378578f9e93dfc313d0679b eselect-compiler-2.0.0_rc1-r1.ebuild 1713
+SHA256 b8ade240fe60ec4229f49fe94529214df07103d66bc0d9ba4c293825add3467c eselect-compiler-2.0.0_rc1-r1.ebuild 1713
 MD5 2525fd2383bc540a5849d09fd0b095fa files/digest-eselect-compiler-2.0.0_rc1-r1 77
+RMD160 aabd0113691ae50bf23d2968a2d90547c6d09a4d files/digest-eselect-compiler-2.0.0_rc1-r1 77
+SHA256 9ffd3b0cd52cce03e81d5697b73ea34252616d1056295333e9ba3c281df07c65 files/digest-eselect-compiler-2.0.0_rc1-r1 77
 MD5 41ae1c7a156d13710a458bd1a70078f3 files/eselect-compiler-2.0.0_rc1-inherit.patch 645
+RMD160 67805308fc7dacb16730873b2cc72f902b0ed61f files/eselect-compiler-2.0.0_rc1-inherit.patch 645
+SHA256 b22f15cf016ee3e4314a88c148c3b2fd02fc97128a94af5eab0fb015939a61fe files/eselect-compiler-2.0.0_rc1-inherit.patch 645
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
+RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
+SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDYXlzOpjtAl+gMRURAiR8AKDR9XD9V8dUh9kPirOhnyN5iPCp+wCg4cWn
-9eJZWmpqCBMSt9UZdqOhEdM=
-=IuON
+iD8DBQFEKLIbOpjtAl+gMRURArvMAKCAD4GG7LrkN9VSvUacoS4LJd0zhACfcwVV
+dXNJUK91wNnLPcqI11z9E2w=
+=64Yi
 -----END PGP SIGNATURE-----
