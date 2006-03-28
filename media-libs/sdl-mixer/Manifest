@@ -28,16 +28,16 @@ SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata
 MD5 aa7bbd3504cdcced50c4ae67f94d8c89 sdl-mixer-1.2.5-r1.ebuild 1420
 RMD160 116890801a8a74ae81264310494eea3aa9921f4f sdl-mixer-1.2.5-r1.ebuild 1420
 SHA256 06c1e05374276ddb0ffdf92ce198383aa4ddc0d3a4e8c2e098ebd5dae1f77b9a sdl-mixer-1.2.5-r1.ebuild 1420
-MD5 fb170f25a4751fd27b3d855456f73308 sdl-mixer-1.2.6-r1.ebuild 1506
-RMD160 e237a954aaf60c4b988dec3a254009e0e1165fd3 sdl-mixer-1.2.6-r1.ebuild 1506
-SHA256 51f0ffb7583e64b29f2526e8f003822885b1a8b938a0cb14f37e52cca9677a4d sdl-mixer-1.2.6-r1.ebuild 1506
+MD5 f04b172f77e8b86cb2611b01a103a9fc sdl-mixer-1.2.6-r1.ebuild 1502
+RMD160 c40dba3e74b44fe1af6c4168b59ca48987f48f3a sdl-mixer-1.2.6-r1.ebuild 1502
+SHA256 ca47587d830bb01793cc3ec7a5d1264da10d4d30036af2b284157a6da3ba8d68 sdl-mixer-1.2.6-r1.ebuild 1502
 MD5 f84eb8e4df8c2d8e6cc02b8f50990127 sdl-mixer-1.2.6.ebuild 1236
 RMD160 aab79c4d370877748ec265e79432f1ceac534387 sdl-mixer-1.2.6.ebuild 1236
 SHA256 97d1363aee8e73ec729dbddda961fbf51ac4598745bf067b580c7c57ff1b3624 sdl-mixer-1.2.6.ebuild 1236
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEJCwcJrHF4yAQTrARAk6ZAJ98suyeAf35f56AnfwNfFRrn6TdBQCdHzxz
-k/buMCmfm3hZBfEQNxA+efg=
-=ukMI
+iD8DBQFEKYGt2+ySkm8kpY0RAlw1AJ9YNYtlc4VAKinrww2z2eDZkzwnwwCgw//M
+0fSWY1u/x+yzewN7Twy6atY=
+=GcLa
 -----END PGP SIGNATURE-----
