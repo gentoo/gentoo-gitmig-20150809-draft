@@ -1,12 +1,46 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b7069eb1ca729d9c93db3eb250382013 ChangeLog 21381
+RMD160 37dc2d0011566c18da8decb42c972b44c40341c7 ChangeLog 21381
+SHA256 d3c5fa10ca93a2f711e8dd7b00b3fadde8129f9020031ad61d5199e68a4e7d34 ChangeLog 21381
 MD5 219a292f64caeaa46b333eecde2197f2 files/digest-opengl-update-2.2.1 116
+RMD160 75cf33b263502c94891fc21d51a82d1911cd4f49 files/digest-opengl-update-2.2.1 116
+SHA256 bb541d5d27bebcb0dff157367ba81bf627d68e95006f0df28659eadf1623d1bd files/digest-opengl-update-2.2.1 116
 MD5 d6b4a7de2926d22a6b52f4d129ce3e7f files/digest-opengl-update-2.2.4 116
+RMD160 cf7082b620cf387a192fb8bbc7c10a64b6e7cc99 files/digest-opengl-update-2.2.4 116
+SHA256 88ad8b90636400b27bdd582c3aee2d503c1765be06e46254861504f4279cfbd4 files/digest-opengl-update-2.2.4 116
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-opengl-update-3.0.0 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-opengl-update-3.0.0 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-opengl-update-3.0.0 0
 MD5 600714175bf22abf40ed067b3dcb600d files/glxext.h-inttypes.patch 671
+RMD160 d0a9be8619ecf1e9698c3ad3fe4b97481622e8c3 files/glxext.h-inttypes.patch 671
+SHA256 90406c8e30114b4c1c4a2d0abd50b1929f69ca4e67b8539e6e80a071cda45b92 files/glxext.h-inttypes.patch 671
 MD5 78f2778d5b41874016deb3135122b189 files/opengl-update-2.2.1 9849
+RMD160 da059036779ba0d374931fb1ab0542efef235dc5 files/opengl-update-2.2.1 9849
+SHA256 6707fe14c8046b380557437be558c9ea8e21242e2b44ee8897df4aade354fa82 files/opengl-update-2.2.1 9849
 MD5 23b30f7c0b9e658f78d0068999e68a80 files/opengl-update-2.2.4 9865
+RMD160 880efc14a9e57ac0b36148cc77c2d4746c0079aa files/opengl-update-2.2.4 9865
+SHA256 8dfa8e5a602ab5d43cf8813a66832cfc8b4141e54eb9267f226676006b332b52 files/opengl-update-2.2.4 9865
 MD5 763717ca92a7b90da3ad6726770d2b77 files/opengl-update-3.0.0 4204
+RMD160 5976c32e6f0e06ef067d7ac332f06652d2d6d9f9 files/opengl-update-3.0.0 4204
+SHA256 5fe66447542e9ee002ea1e24bd1f21c07a4bfc7ee01f5a6d1e59b83f901842c2 files/opengl-update-3.0.0 4204
 MD5 69eeef9cee49974bcaae3cb9ddce8abd metadata.xml 366
+RMD160 1e4b0bac744189f46350b440bf36112272a69baa metadata.xml 366
+SHA256 19c4ff0460724296bd0a9bc7e6c385de2b46b0cbd7b1384dab7f656811861445 metadata.xml 366
 MD5 cc6d5a9012e3845a786b9105aead75e9 opengl-update-2.2.1.ebuild 2660
+RMD160 063b0235162a8540ed4a3dc5440e54ca098a3430 opengl-update-2.2.1.ebuild 2660
+SHA256 34fcbf9bb3dbdf77e9f97e3e41a89670cab6cd5fe92e6c55a9d5fe680d48f457 opengl-update-2.2.1.ebuild 2660
 MD5 ab39b781ac420927386fa5b4d33fecd1 opengl-update-2.2.4.ebuild 2569
-MD5 aa702f6ece8cb9066b4910714870af66 opengl-update-3.0.0.ebuild 750
+RMD160 4bf40ab0b3f8bc3dea6673b93430d723ff91a991 opengl-update-2.2.4.ebuild 2569
+SHA256 38f6ace494bc3b9e6889b33e2e52c308f7a994167df4c1191a2517935db7b00a opengl-update-2.2.4.ebuild 2569
+MD5 9306d798693a3763985f40b43730b1f9 opengl-update-3.0.0.ebuild 744
+RMD160 d1c64088e9a137cf018cd00cb0036d100a4a3f0e opengl-update-3.0.0.ebuild 744
+SHA256 e468c20356786f1a64893b97c23456f8b57b6b815bae1977c3134afb408a5d10 opengl-update-3.0.0.ebuild 744
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEKYJn2+ySkm8kpY0RAisvAJ46VjZ1gLf5RcBBI6zCyKQ8sw8qiACaAjSY
+n2PSst89OomDa7BrM7yeu8g=
+=Jb96
+-----END PGP SIGNATURE-----
