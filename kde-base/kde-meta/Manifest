@@ -1,4 +1,4 @@
-MD5 75e5ed75ff18695802d61cb5f1a9ab84 ChangeLog 5790
+MD5 a2f65b5aea4a329fab8f11190a54f350 ChangeLog 5943
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-meta-3.4.3 0
@@ -8,7 +8,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-meta-3.5.2 0
 MD5 ccdb1a4f9d0f8d715b4ceedffd1bad5d kde-meta-3.4.1.ebuild 1203
 MD5 0eaedc14a77dae85a3c9062f6d03bb91 kde-meta-3.4.2.ebuild 1216
 MD5 4b7544512df49372607cadc0ba33bb3a kde-meta-3.4.3.ebuild 1217
-MD5 08515e807327bc911cde735636b48cad kde-meta-3.5.0.ebuild 1217
-MD5 fb29b32db8c7e14350c1632db9a0e754 kde-meta-3.5.1.ebuild 1218
-MD5 c5d27e06bd4a199dcd90e7d75f64e5c1 kde-meta-3.5.2.ebuild 1218
+MD5 22e001dbaaf6f6d500c22f57cea206e1 kde-meta-3.5.0.ebuild 1224
+MD5 32caa2b5a019d16dafa083905e4bbaa6 kde-meta-3.5.1.ebuild 1224
+MD5 6615b32a75e26387ff54577708796498 kde-meta-3.5.2.ebuild 1224
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

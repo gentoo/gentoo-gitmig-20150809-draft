@@ -1,4 +1,4 @@
-MD5 169778cd71b2e61d9c3cd29501d304e2 ChangeLog 5069
+MD5 0ceb2ea45e4b569c147cec89ab042347 ChangeLog 5239
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kbstateapplet-3.4.1 236
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kbstateapplet-3.4.2 320
 MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kbstateapplet-3.4.3 76
@@ -8,7 +8,7 @@ MD5 2c7fe1ef1dceba63787773e4e12798cf files/digest-kbstateapplet-3.5.2 274
 MD5 41903595f1fe844227e9177091e4375e kbstateapplet-3.4.1.ebuild 481
 MD5 42cb59ec0517877178253f754357d94b kbstateapplet-3.4.2.ebuild 493
 MD5 9bb3b30ce40ab61a0ae025f3e09c552a kbstateapplet-3.4.3.ebuild 494
-MD5 6dfff88c73d8686348cacaa657abd62e kbstateapplet-3.5.0.ebuild 494
-MD5 d40a9641a1762781f213245f2f512d3a kbstateapplet-3.5.1.ebuild 495
-MD5 effa763748da8b3c1a347a58d590fcb9 kbstateapplet-3.5.2.ebuild 495
+MD5 64036e9219d6f8ce76d6460464719ecc kbstateapplet-3.5.0.ebuild 501
+MD5 572eabf87f9b2e2e78a1aad0772b282b kbstateapplet-3.5.1.ebuild 501
+MD5 4b23648a57b5d072e914f9e0bf7fe2c7 kbstateapplet-3.5.2.ebuild 501
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
