@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-memcache/pecl-memcache-2.0.1.ebuild,v 1.1 2006/02/02 06:35:05 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-memcache/pecl-memcache-2.0.1.ebuild,v 1.2 2006/03/28 15:40:54 gustavoz Exp $
 
 PHP_EXT_NAME="memcache"
 PHP_EXT_INI="yes"
@@ -8,7 +8,7 @@ PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-pecl-r1
 
-KEYWORDS="~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~hppa ~ppc ~ppc64 ~sparc ~x86"
 DESCRIPTION="PHP extension for using memcached."
 LICENSE="PHP"
 SLOT="0"
