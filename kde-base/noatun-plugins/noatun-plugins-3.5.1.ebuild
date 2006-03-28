@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/noatun-plugins-3.5.1.ebuild,v 1.1 2006/01/22 22:53:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/noatun-plugins-3.5.1.ebuild,v 1.2 2006/03/28 04:46:50 agriffis Exp $
 KMNAME=kdeaddons
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="Various plugins for noatun"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="arts sdl berkdb"
 DEPEND="$(deprange-dual $PV $MAXKDEVER kde-base/noatun)
 	arts? ( $(deprange $PV $MAXKDEVER kde-base/arts) )

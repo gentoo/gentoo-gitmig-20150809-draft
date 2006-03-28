@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/artsplugin-akode
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-akode/ChangeLog,v 1.15 2006/03/22 20:14:53 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-akode/ChangeLog,v 1.16 2006/03/28 04:47:46 agriffis Exp $
+
+  28 Mar 2006; Aron Griffis <agriffis@gentoo.org>
+  artsplugin-akode-3.5.0.ebuild, artsplugin-akode-3.5.1.ebuild,
+  artsplugin-akode-3.5.2.ebuild:
+  Mark 3.5.2 3.5.1 3.5.0 ~ia64
 
 *artsplugin-akode-3.5.2 (22 Mar 2006)
 

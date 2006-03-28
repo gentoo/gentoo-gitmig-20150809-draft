@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.44 2006/03/26 01:55:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.45 2006/03/28 04:50:19 agriffis Exp $
+
+  28 Mar 2006; Aron Griffis <agriffis@gentoo.org> juk-3.5.0.ebuild,
+  juk-3.5.1.ebuild, juk-3.5.2.ebuild:
+  Mark 3.5.2 3.5.1 3.5.0 ~ia64
 
   26 Mar 2006; Aron Griffis <agriffis@gentoo.org> juk-3.4.3.ebuild:
   Mark 3.4.3 stable on ia64
