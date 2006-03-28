@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060222.2.ebuild,v 1.1 2006/03/23 15:02:36 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060222.2.ebuild,v 1.2 2006/03/28 17:58:09 markusle Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -62,6 +62,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/comp-lked-20060222.2.patch
 	epatch "${FILESDIR}"/ddi-use-ssh-gentoo.patch
 	epatch "${FILESDIR}"/rungms-runall-20060222.2.patch
+	epatch "${FILESDIR}"/gamess-glibc-2.4-gentoo.patch
 
 	# for hardened-gcc let't turn off ssp, since it breakes
 	# a few routines
