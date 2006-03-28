@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/jpilot
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.27 2006/03/28 01:05:50 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.28 2006/03/28 13:05:49 deltacow Exp $
+
+*jpilot-0.99.8 (28 Mar 2006)
+
+  28 Mar 2006; Scott Stoddard <deltacow@gentoo.org>
+  +files/jpilot-0.99.8-glob.patch, +files/jpilot-0.99.8-memory.patch,
+  +jpilot-0.99.8.ebuild:
+  New version.  Patches applied to bring it up to date with upstream.
 
   28 Mar 2006; Scott Stoddard <deltacow@gentoo.org> jpilot-0.99.7-r1.ebuild,
   jpilot-0.99.8_pre9.ebuild:
