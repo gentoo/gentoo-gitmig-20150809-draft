@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-Maketext-Simple/Locale-Maketext-Simple-0.12.ebuild,v 1.7 2006/02/22 22:28:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-Maketext-Simple/Locale-Maketext-Simple-0.12.ebuild,v 1.8 2006/03/28 23:12:20 agriffis Exp $
 
 inherit perl-module
 
@@ -10,6 +10,6 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Locale/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~amd64 ~ia64 ~ppc sparc x86"
+KEYWORDS="~amd64 ia64 ~ppc sparc x86"
 IUSE=""
 SRC_TEST="do"
