@@ -1,6 +1,10 @@
 # ChangeLog for media-video/lsdvd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.16 2006/03/15 16:49:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.17 2006/03/28 22:56:10 flameeyes Exp $
+
+  28 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/lsdvd-0.15-types.patch, lsdvd-0.15.ebuild:
+  Add patch to allow building against latest libdvdread. Bug #127840.
 
   15 Mar 2006; Markus Rothe <corsair@gentoo.org> lsdvd-0.15.ebuild:
   Added ~ppc64
