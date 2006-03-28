@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.66 2006/03/25 12:46:04 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.67 2006/03/28 20:59:57 compnerd Exp $
 
 # GNOME 2 ECLASS
 inherit libtool gnome.org debug fdo-mime eutils
@@ -177,7 +177,15 @@ gnome2_icon_cache_update() {
 	eend ${retval}
 
 	for (( i = 0 ; i < ${#fails[@]} ; i++ )) ; do
-		eerror "Failed to update cache with icon ${fails[i]}"
+		### HACK!! This is needed until bash 3.1 is unmasked.
+		## The current stable version of bash lists the sizeof fails to be 1
+		## when there are no elements in the list because it is declared local.
+		## In order to prevent the declaration from being in global scope, we
+		## this hack to prevent an empty error message being printed for stable
+		## users. -- compnerd && allanonjl
+		if [[ "${fails[i]}" != "" ]] ; then
+			eerror "Failed to update cache with icon ${fails[i]}"
+		fi
 	done
 }
 
@@ -231,7 +239,15 @@ gnome2_omf_fix() {
 	eend $retval
 
 	for (( i = 0 ; i < ${#fails[@]} ; i++ )) ; do
-		eerror "Failed to update OMF Makefile ${fails[i]}"
+		### HACK!! This is needed until bash 3.1 is unmasked.
+		## The current stable version of bash lists the sizeof fails to be 1
+		## when there are no elements in the list because it is declared local.
+		## In order to prevent the declaration from being in global scope, we
+		## this hack to prevent an empty error message being printed for stable
+		## users. -- compnerd && allanonjl
+		if [[ "${fails[i]}" != "" ]] ; then
+			eerror "Failed to update OMF Makefile ${fails[i]}"
+		fi
 	done
 }
 
