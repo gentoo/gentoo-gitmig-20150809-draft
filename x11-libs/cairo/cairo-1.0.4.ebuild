@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.0.4.ebuild,v 1.1 2006/03/27 16:27:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.0.4.ebuild,v 1.2 2006/03/28 13:28:53 foser Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND="media-libs/fontconfig
 			x11-libs/libX11 )
 			virtual/x11 )
 		virtual/xft )
-	glitz? ( >=media-libs/glitz-0.4.4 )
+	glitz? ( =media-libs/glitz-0.4.4* )
 	png? ( media-libs/libpng )
 	!<x11-libs/cairo-0.2"
 
