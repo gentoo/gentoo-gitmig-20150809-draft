@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.5.ebuild,v 1.4 2005/12/15 21:39:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.5.ebuild,v 1.5 2006/03/28 07:16:15 flameeyes Exp $
 
 inherit ruby
 
@@ -22,7 +22,7 @@ RDEPEND="apache? ( net-www/apache )
 
 src_install() {
 	ruby_src_install
-	keepdir etc/gorg
+	keepdir /etc/gorg
 	diropts -m0750 -o apache -g apache; dodir /var/cache/gorg
 	insinto etc/gorg ; doins ${S}/etc/gorg/*
 	dodoc Changelog
