@@ -10,6 +10,9 @@ SHA256 7aecedd111bc583ee818ba22ff6707d5c541270cbe4f6c65fae0077ffc2d8fd1 files/di
 MD5 5eb459e91f6e642961fea913581bf887 files/digest-libglade-java-2.12.2 262
 RMD160 9ed144c3e3f2cc6a0a0ae7579f87273fe305c481 files/digest-libglade-java-2.12.2 262
 SHA256 ce015e994e537369084b85dcf831f608a38c1decd5d08c27f350927e9e0450b3 files/digest-libglade-java-2.12.2 262
+MD5 5eb459e91f6e642961fea913581bf887 files/digest-libglade-java-2.12.2-r1 262
+RMD160 9ed144c3e3f2cc6a0a0ae7579f87273fe305c481 files/digest-libglade-java-2.12.2-r1 262
+SHA256 ce015e994e537369084b85dcf831f608a38c1decd5d08c27f350927e9e0450b3 files/digest-libglade-java-2.12.2-r1 262
 MD5 76a4839bd8baf7f40b90050f11d17277 files/digest-libglade-java-2.8.3.1 74
 RMD160 d824f34d801cd371519275a2c3d662e7493d784b files/digest-libglade-java-2.8.3.1 74
 SHA256 ec3a1e0d2ea34191077453fe405bf78b1008c95c5e3c21c0578c23218d8bef90 files/digest-libglade-java-2.8.3.1 74
@@ -31,6 +34,9 @@ SHA256 4af8fe5d54b2b169f3db1fee4f7d0df96c7704bbbc0b61032825dd3b14fdd925 libglade
 MD5 33b3402a99af0733b451295b9a338d2f libglade-java-2.12.1.ebuild 1903
 RMD160 b257ac0ce5af7f0c42269dfb64dda7196ac7725a libglade-java-2.12.1.ebuild 1903
 SHA256 72fcc699c3eded0427d153ee4fbc00cf0936703a6958f16170a44ed67e20aad7 libglade-java-2.12.1.ebuild 1903
+MD5 82e0af1410422ba38128f8a52d90c8fa libglade-java-2.12.2-r1.ebuild 2154
+RMD160 a45da67fb6e046fe0440e9fc4f8a5d06ba150436 libglade-java-2.12.2-r1.ebuild 2154
+SHA256 8a5df819030998d290ce63e59d0a5999ff13dfb76ef4c8d62fff6f5aba3b69e8 libglade-java-2.12.2-r1.ebuild 2154
 MD5 7c82b9d5f0474fc6b3d65e786747f25a libglade-java-2.12.2.ebuild 1903
 RMD160 a00077caa5e3e931fbcab5fb39cec72fa20bc2ad libglade-java-2.12.2.ebuild 1903
 SHA256 c459ba83b149e775ba2181173782596f1af0ca1a572228715639405db8b58994 libglade-java-2.12.2.ebuild 1903

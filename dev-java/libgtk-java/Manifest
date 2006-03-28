@@ -22,6 +22,9 @@ SHA256 9cffb462c41487b3fd8264b99f88e15863a75a23f547a356e60e7c093be947c3 files/di
 MD5 76e14901f21fc3d0a5bba9d257efab75 files/digest-libgtk-java-2.8.3 256
 RMD160 8d9add6acc146446c998648a138116ad389e4e32 files/digest-libgtk-java-2.8.3 256
 SHA256 decd5e474700d86818f7c73b8f28211ad7ada309855f1ab40e5a846728d2e713 files/digest-libgtk-java-2.8.3 256
+MD5 76e14901f21fc3d0a5bba9d257efab75 files/digest-libgtk-java-2.8.3-r1 256
+RMD160 8d9add6acc146446c998648a138116ad389e4e32 files/digest-libgtk-java-2.8.3-r1 256
+SHA256 decd5e474700d86818f7c73b8f28211ad7ada309855f1ab40e5a846728d2e713 files/digest-libgtk-java-2.8.3-r1 256
 MD5 21907163f2b6597c520b7c1a4da20784 files/libgtk-java-2.4.6_find_jni.patch 369
 RMD160 3b8f9d667777aabc75e10bb1d252c3c1c70c8a26 files/libgtk-java-2.4.6_find_jni.patch 369
 SHA256 0b13fdf937bfd5fe7dd92e84ade90de93c8403b611c71eb8f8f85293f8c59696 files/libgtk-java-2.4.6_find_jni.patch 369
@@ -61,6 +64,9 @@ SHA256 412dc7565ca25976b12bc5e8b941e4e9f2e0e63229c6c38f9b3593eb061960ae libgtk-j
 MD5 1529be15d188a0377a6ee2936601b64a libgtk-java-2.8.2.ebuild 2210
 RMD160 5103026cffd3ddbc704b4a4081ae42ab494b272f libgtk-java-2.8.2.ebuild 2210
 SHA256 5531ef46a72380811dad430f9686620a83b7e434cacd45d2256ca80025c289d3 libgtk-java-2.8.2.ebuild 2210
+MD5 b90fe58b1b586ef36879ea974161fd95 libgtk-java-2.8.3-r1.ebuild 2405
+RMD160 03318cfa46f33594f06ecea2d77ad9cf0af215c0 libgtk-java-2.8.3-r1.ebuild 2405
+SHA256 0e6eb555efea73aa510c5ade31f16066addce07a4f9202b4324464f23d407275 libgtk-java-2.8.3-r1.ebuild 2405
 MD5 df67cc33aab5c4bef3328b94e727e20b libgtk-java-2.8.3.ebuild 2212
 RMD160 98e154f9e47c6f6e98b64e4037577609b5debd7d libgtk-java-2.8.3.ebuild 2212
 SHA256 c526292b2a3c3da8c152c642759220463b2d8801966f3e955a993169e98e0da2 libgtk-java-2.8.3.ebuild 2212
