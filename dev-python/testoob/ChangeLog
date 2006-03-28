@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/testoob
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.1 2006/03/04 10:22:37 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.2 2006/03/28 23:01:07 lucass Exp $
+
+*testoob-0.9 (28 Mar 2006)
+
+  28 Mar 2006; Lukasz Strzygowski <lucass@gentoo.org> +testoob-0.9.ebuild:
+  Version bump.
 
 *testoob-0.8.1 (04 Mar 2006)
 
