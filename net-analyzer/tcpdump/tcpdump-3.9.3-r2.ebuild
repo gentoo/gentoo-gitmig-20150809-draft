@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.4-r1.ebuild,v 1.2 2006/03/18 00:24:16 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.3-r2.ebuild,v 1.1 2006/03/28 15:18:18 jokey Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -51,7 +51,7 @@ src_compile() {
 	fi
 
 	local myconf
-	if use ssl ; then
+	if ! use ssl ; then
 		myconf="--without-crypto"
 	fi
 

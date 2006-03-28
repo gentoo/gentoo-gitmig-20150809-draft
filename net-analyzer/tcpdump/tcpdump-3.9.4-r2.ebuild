@@ -1,18 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3-r5.ebuild,v 1.1 2006/03/18 00:11:43 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.4-r2.ebuild,v 1.1 2006/03/28 15:18:18 jokey Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="A Tool for network monitoring and data acquisition"
 HOMEPAGE="http://www.tcpdump.org/"
-SRC_URI="mirror://sourceforge/tcpdump/${P}.tar.gz
-	http://www.tcpdump.org/release/${P}.tar.gz
+SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
 	http://www.jp.tcpdump.org/release/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ssl ipv6 samba"
 
 DEPEND="net-libs/libpcap
@@ -36,19 +35,10 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}/${P}-gentoo.patch"
-	epatch "${FILESDIR}/${P}-gcc4.patch"
-	epatch "${FILESDIR}/${P}-bgp-infinite-loop2.patch"
-
-	if use ssl ; then
-		sed -i -e 's|des\(_cbc_encrypt\)|DES\1|' "${S}"/configure || \
-			die "sed configure failed"
-	fi
-}
-
 src_compile() {
+	# tcpdump needs some optymalization. see bug #108391
+	( ! is-flag -O? || is-flag -O0 ) && append-flags -O
+
 	replace-flags -O[3-9] -O2
 	filter-flags -finline-functions
 
@@ -61,7 +51,7 @@ src_compile() {
 	fi
 
 	local myconf
-	if use ssl ; then
+	if ! use ssl ; then
 		myconf="--without-crypto"
 	fi
 
