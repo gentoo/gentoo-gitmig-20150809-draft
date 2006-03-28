@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.31 2006/03/27 19:34:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.32 2006/03/28 23:49:45 flameeyes Exp $
+
+*libdvdread-0.9.5-r1 (28 Mar 2006)
+
+  28 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libdvdread-0.9.5-udfsymbols.patch, -libdvdread-0.9.5.ebuild,
+  +libdvdread-0.9.5-r1.ebuild:
+  Restart exporting UDF symbols as 0.9.4 series.
 
 *libdvdread-0.9.5 (27 Mar 2006)
 
