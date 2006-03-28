@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.61 2006/01/29 06:14:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.62 2006/03/28 07:54:04 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -29,6 +29,9 @@ inherit eutils
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst
 
+#E17_DEFAULT_CVS="cvs.sourceforge.net:/cvsroot/enlightenment"
+E17_DEFAULT_CVS="anoncvs.enlightenment.org:/var/cvs/e"
+
 ECVS_STATE="release"
 if [[ ${PV/9999} != ${PV} ]] ; then
 	if [[ -z ${ECVS_MODULE} ]] ; then
@@ -39,7 +42,7 @@ if [[ ${PV/9999} != ${PV} ]] ; then
 			ECVS_MODULE="e17/apps/${PN}"
 		fi
 	fi
-	ECVS_SERVER=${E17_ECVS_SERVER:-${ECVS_SERVER:-cvs.sourceforge.net:/cvsroot/enlightenment}}
+	ECVS_SERVER=${E17_ECVS_SERVER:-${ECVS_SERVER:-${E17_DEFAULT_CVS}}}
 	ECVS_STATE="live"
 	inherit cvs
 elif [[ ${PV/.200[3-9][0-1][0-9][0-3][0-9]/} != ${PV} ]] ; then
