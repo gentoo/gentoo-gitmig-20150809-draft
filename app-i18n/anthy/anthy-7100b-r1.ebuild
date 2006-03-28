@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-7100b-r1.ebuild,v 1.5 2006/03/27 11:39:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-7100b-r1.ebuild,v 1.6 2006/03/28 22:14:19 agriffis Exp $
 
 inherit elisp-common eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://anthy.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp/anthy/17231/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ia64 ppc ~ppc-macos ppc64 sparc x86"
 SLOT="0"
 
 DEPEND="emacs? ( virtual/emacs )
