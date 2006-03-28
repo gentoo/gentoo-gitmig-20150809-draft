@@ -1,12 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/gridlock-1.9-r1.ebuild,v 1.2 2005/07/16 15:47:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/gridlock-1.9-r1.ebuild,v 1.3 2006/03/28 17:46:59 grobian Exp $
 
 inherit gnustep
 
 S=${WORKDIR}/${PN/g/G}
 
 DESCRIPTION="Gridlock is a collection of grid-based games"
+# 25 Mar 2006: upstream appears to be dead
 HOMEPAGE="http://dozingcat.com/"
 SRC_URI="http://dozingcat.com/Gridlock/${PN/g/G}-gnustep-${PV}.tar.gz"
 LICENSE="GPL-2"
