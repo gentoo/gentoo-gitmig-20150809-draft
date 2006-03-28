@@ -1,79 +1,25 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4260c8ec345498425fa784527b0895b4 ChangeLog 17055
-RMD160 8261d129b35fe8f31dffc6d2522d2884bce7d08f ChangeLog 17055
-SHA256 7ff4a20d74d96f868f2da625e65d742ad61fbf59914a61410198a5540f49d0c3 ChangeLog 17055
+MD5 c9b618a7a7847514ce42364a129ee41d ChangeLog 17172
 MD5 529d6ae5875e5eff1f3ec62dd5234e81 files/digest-kdevelop-3.1.2 68
-RMD160 2a46cbfed85c5aa9d9faee4545b446d6a4826db7 files/digest-kdevelop-3.1.2 68
-SHA256 70270bed329c7fc1855c440193c7a6d48771b7058701476cb6786eaa1f3d53e3 files/digest-kdevelop-3.1.2 68
 MD5 3e9fd708ae657cffd1d68041f52aabc8 files/digest-kdevelop-3.2.1-r1 68
-RMD160 c01e9a919a1a98c2d73329951d6e70f66d21acba files/digest-kdevelop-3.2.1-r1 68
-SHA256 1f7bf8ce3d5c23d479fc4663fd36e528fb00ca6f02e307dfdda4132de4df5160 files/digest-kdevelop-3.2.1-r1 68
 MD5 a94b1b00d38f496db64b8fcbd85bbb9b files/digest-kdevelop-3.2.2 68
-RMD160 3482b3bc26e64fe288a6e079baaadc091a5b6c37 files/digest-kdevelop-3.2.2 68
-SHA256 7dd00d9094ae4cf3c017222042836f92ffade61e8022794a4c908d96d62583aa files/digest-kdevelop-3.2.2 68
 MD5 34af4d3547f033e0198702768d81c2ad files/digest-kdevelop-3.2.3 68
-RMD160 e8e77111e301edc640f497e838f3bc23238598b9 files/digest-kdevelop-3.2.3 68
-SHA256 2a9a38c7b33e00198295e5e21412dd10a5de321a55a0f0b4f93131bf5c42ef94 files/digest-kdevelop-3.2.3 68
 MD5 34af4d3547f033e0198702768d81c2ad files/digest-kdevelop-3.2.3-r1 68
-RMD160 e8e77111e301edc640f497e838f3bc23238598b9 files/digest-kdevelop-3.2.3-r1 68
-SHA256 2a9a38c7b33e00198295e5e21412dd10a5de321a55a0f0b4f93131bf5c42ef94 files/digest-kdevelop-3.2.3-r1 68
 MD5 2e51b8b6ea22818559bec6f23ad1f59d files/digest-kdevelop-3.3.0 68
-RMD160 9f7cabb23e73658abc8b6ce66548f5c5be0bf663 files/digest-kdevelop-3.3.0 68
-SHA256 f535ba9bf39cf20e9cee69d81ecbdd7012a41b2486cd53cebbe043b9e580b289 files/digest-kdevelop-3.3.0 68
 MD5 e8050b7a0ef9987f4ebb6376e71c958b files/digest-kdevelop-3.3.1 68
-RMD160 1d5bbb746919f73234723a1276ffaac26c113b36 files/digest-kdevelop-3.3.1 68
-SHA256 8468cf757899e3c510fa4834057c69cf0e9c13987367c4ffca524cac67dd5954 files/digest-kdevelop-3.3.1 68
+MD5 a2c57d3d2bfee6695d34befbf38e4dd0 files/digest-kdevelop-3.3.2 68
 MD5 9baadc6b0dcbb08db8c865897cf4cf43 files/kdevelop-3.1.0-bdb-mutex.patch 656
-RMD160 48977df5e39b96fda068d80620e15a9f72a631e0 files/kdevelop-3.1.0-bdb-mutex.patch 656
-SHA256 3b19be5ed9e0f19b9efc5b211893b9294269a9bb2b7b03fa4003685aef039d90 files/kdevelop-3.1.0-bdb-mutex.patch 656
 MD5 dcdcaf1dea68db854de8dad4df83c096 files/kdevelop-3.1_beta1-bdb-fPIC.patch 391
-RMD160 ffb5d64bc795c9a58cb243ffe6ee20d01433d55c files/kdevelop-3.1_beta1-bdb-fPIC.patch 391
-SHA256 cfb0441886ddff95685ec2aa12b43a407d91e2a2a30adf0c66eae326936d5ff5 files/kdevelop-3.1_beta1-bdb-fPIC.patch 391
 MD5 72bf5d9a24a821f9584ec59ccf1a2d6e files/kdevelop-3.2.1-gcc4.patch 446
-RMD160 f49c27b92c80dea0cafb791b663b759bd7e50eae files/kdevelop-3.2.1-gcc4.patch 446
-SHA256 b7d615efce19dbc253b85fb8250d0c3c553965484c3d2f0012157a15c19c6345 files/kdevelop-3.2.1-gcc4.patch 446
 MD5 1760f21a5c2d5c152495c12af8232d04 files/kdevelop-3.2.1-makefiles.patch 815
-RMD160 1a251c1e358edec14119f83e79f32ec69e86cf42 files/kdevelop-3.2.1-makefiles.patch 815
-SHA256 5c64f714cb5a63766406aea06d563ef9dcf7bb51b253a880b0a6499b504867a3 files/kdevelop-3.2.1-makefiles.patch 815
 MD5 e904b2e0a85d8e1363b48e3a3ce623d3 files/kdevelop-3.2.3-ant.patch 968
-RMD160 2c38e000c1e3ccdb358d51a0856ac1ecb17755b9 files/kdevelop-3.2.3-ant.patch 968
-SHA256 bf91c72da6ae279d0524b1c1f1b22cec0d3a3934a55689ca0a801afd9baae791 files/kdevelop-3.2.3-ant.patch 968
 MD5 3b430a9820d4d15b32cea7937512cdcb files/kdevelop-3.3.0-makefiles.patch 3069
-RMD160 b26f749feb1120c3be815bb3016c0cb1ad3e6623 files/kdevelop-3.3.0-makefiles.patch 3069
-SHA256 0ee5e07ba0333299cadd584a2d7be40c6281fd52f9821f818e85c364c1c56ae8 files/kdevelop-3.3.0-makefiles.patch 3069
 MD5 2c2ec3055c3e463c416ac6d713f532e0 files/kdevelop-qt-3.3.5.patch 479
-RMD160 f7a9df1d541f40e4887c358e089272bcd2ce4481 files/kdevelop-qt-3.3.5.patch 479
-SHA256 91b373e190d2b7d038086b9548f21e9577fe567fe0393be17780229f9bb05ba0 files/kdevelop-qt-3.3.5.patch 479
 MD5 be27cb0ad17d922992efa60840dda2dc kdevelop-3.1.2.ebuild 2722
-RMD160 fe8465006523d47e98e77ceb6ae2672cddd76433 kdevelop-3.1.2.ebuild 2722
-SHA256 9529edc8e96695a8e049a313274e1ed7ca93ab7b160d38acdcc4f73d88b813d4 kdevelop-3.1.2.ebuild 2722
 MD5 af2bf95f6867509e24f9d4ccda1cfba9 kdevelop-3.2.1-r1.ebuild 2858
-RMD160 993e5be8944cc97df988d151b19e1587c2bdab99 kdevelop-3.2.1-r1.ebuild 2858
-SHA256 f4c73e7751e8b3f573d39affe1010d63fff8f3c908bb209f67d217264f8100dd kdevelop-3.2.1-r1.ebuild 2858
 MD5 e940bb0a107baa39c8a1b42e13e57e98 kdevelop-3.2.2.ebuild 2832
-RMD160 72be109f67fce0f0c54344f392ea3e5821f22474 kdevelop-3.2.2.ebuild 2832
-SHA256 5306322bee2d10f3a3b8f2a5c5dde722e036c51130bd9b09c94c9a44eb770edf kdevelop-3.2.2.ebuild 2832
 MD5 dec73ae3a6b2e0c29b673b50e83e7f49 kdevelop-3.2.3-r1.ebuild 2999
-RMD160 e29505215e1ae95d71803ed28227091e5993cd5b kdevelop-3.2.3-r1.ebuild 2999
-SHA256 54179ee4530b4a5c61ef1cb0da3e39bb21aa1811c8b6e38494460883e6a12c21 kdevelop-3.2.3-r1.ebuild 2999
 MD5 9a9549087cbbd316790c894ca0c96ce3 kdevelop-3.2.3.ebuild 2882
-RMD160 4a051b3460d9c835d1039626d114df35aee543bf kdevelop-3.2.3.ebuild 2882
-SHA256 3b79d55e19fab40bdf70fcb952510780409496834e660cc2e9ea5d2865317f2e kdevelop-3.2.3.ebuild 2882
 MD5 09f0712642adef858165f66654af4131 kdevelop-3.3.0.ebuild 2968
-RMD160 22d6e278fb4482a93e4380a7185ee88a0de8fc86 kdevelop-3.3.0.ebuild 2968
-SHA256 5a1281fa97ba433caa3ee822e17d68ce6f0b613ddbca11f7c3ead1de07a8e1ce kdevelop-3.3.0.ebuild 2968
 MD5 9f79d94a4a2ea9d4457ab62fae6d7f56 kdevelop-3.3.1.ebuild 2841
-RMD160 c4908f8325264fb74944d6c6812a1415d9836cb9 kdevelop-3.3.1.ebuild 2841
-SHA256 506b6dde63e8680f80b3c697a51a4249f07d664e9fc30679b6e9cdfaa00a657b kdevelop-3.3.1.ebuild 2841
+MD5 3780b51ef94d61e11ba8fba2a9d22a0a kdevelop-3.3.2.ebuild 2886
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD9EqfAiZjviIA2XgRAjtEAJ9Y+sBUh01xLNTslPZpxPqK8JPHAACfeHs1
-sSnbtPMM1+yt5Ms9qYcSFJw=
-=iRz1
------END PGP SIGNATURE-----
