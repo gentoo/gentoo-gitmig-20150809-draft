@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/cairo-java
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cairo-java/ChangeLog,v 1.6 2006/01/11 01:43:12 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cairo-java/ChangeLog,v 1.7 2006/03/28 04:10:13 nichoj Exp $
+
+*cairo-java-1.0.2-r1 (28 Mar 2006)
+
+  28 Mar 2006; <nichoj@gentoo.org> +cairo-java-1.0.2-r1.ebuild:
+  Revision bump to address bug #125646 and #121254
 
   11 Jan 2006; Karl Trygve Kalleberg <karltk@gentoo.org>
   cairo-java-1.0.2.ebuild:
