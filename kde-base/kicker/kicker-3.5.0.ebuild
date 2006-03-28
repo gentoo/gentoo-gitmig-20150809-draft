@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.0.ebuild,v 1.6 2006/01/14 09:30:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.0.ebuild,v 1.7 2006/03/28 00:02:28 agriffis Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-${PV}-patches-1.tar.bz2"
 
 DESCRIPTION="KDE panel housing varous applets"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="xcomposite"
 PATCHES="$FILESDIR/applets-configure.in.in.diff"
 
