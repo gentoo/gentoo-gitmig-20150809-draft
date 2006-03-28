@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.8_pre9.ebuild,v 1.1 2005/07/08 10:38:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.8_pre9.ebuild,v 1.2 2006/03/28 01:05:50 deltacow Exp $
 
-inherit eutils
+inherit eutils multilib
 
 MY_PV=${PV/_/-}
 DESCRIPTION="Desktop Organizer Software for the Palm Pilot"
@@ -38,6 +38,7 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} \
+		libdir=/usr/$(get_libdir) \
 		docdir=/usr/share/doc/${PF} \
 		icondir=/usr/share/pixmaps \
 		desktopdir=/usr/share/applications || die "install failed"

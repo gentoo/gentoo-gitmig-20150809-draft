@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 45bc6be3c9c614613c476f63982b8e22 ChangeLog 5213
-MD5 9ae36faaedb47becf1ed45eac2386e70 jpilot-0.99.7-r1.ebuild 1669
-MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
-MD5 cfb734dfad2a8de605c84556c36aafe7 jpilot-0.99.8_pre9.ebuild 1693
+MD5 d4cc589464cb5d04ae5004bf1122f0a0 ChangeLog 5363
+RMD160 913ccd549fecd4ac13dc802742fb4b081366075f ChangeLog 5363
+SHA256 c5b2da9bb15abdac0d311ff7b854f3537e7d2a48aa29b4727d99454e5fa9226d ChangeLog 5363
 MD5 ac0b77783e7cf50e9f7f63397d19e774 files/digest-jpilot-0.99.7-r1 66
-MD5 1a69d9c2c611a27639d15707d1a54549 files/jpilot-0.99.7-gcc2.patch 583
+RMD160 7ba31dd21e12b056d8417f0ad40cd0f7e09fab1b files/digest-jpilot-0.99.7-r1 66
+SHA256 cdc69ccadeb271aeedc66e948fd097f1d20fa6fb8b101c51fc4cc7564f3a1b7c files/digest-jpilot-0.99.7-r1 66
 MD5 077de68f5266a8517c2e4c315046f00e files/digest-jpilot-0.99.8_pre9 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzlfjTM53OX+9xmMRAiPQAKCP7Sa5W3Nq51tCw+eU6PoYX8pVSQCdHVlF
-Bq3wDLjaLIhj1W+xwHdT0zE=
-=sxy9
------END PGP SIGNATURE-----
+RMD160 4c603e431c9b6a780455bf0b48a8c6cc85dda6d9 files/digest-jpilot-0.99.8_pre9 71
+SHA256 9575b6fcb1b26d8a9d0158f31fe5ebd2976bfe354d5007e67e85924285b1b51d files/digest-jpilot-0.99.8_pre9 71
+MD5 1a69d9c2c611a27639d15707d1a54549 files/jpilot-0.99.7-gcc2.patch 583
+RMD160 b6f3ba7c0484d1966affa357baa9ac153a7bbb4b files/jpilot-0.99.7-gcc2.patch 583
+SHA256 f852f3a6539965559dc63a765fb2eb0bcfeba946af48a984cb7ad8c73b9122ad files/jpilot-0.99.7-gcc2.patch 583
+MD5 60f137e0367e0a0d1a406ca723ba2628 jpilot-0.99.7-r1.ebuild 1710
+RMD160 a077c858dda2c99b24801e3587095d403d512a9e jpilot-0.99.7-r1.ebuild 1710
+SHA256 ec38a3fce252fb14b1c0c5145fa156c5672411736091e88b93a0324c774f5703 jpilot-0.99.7-r1.ebuild 1710
+MD5 9fd7ceffce549c02bf9086bb0dce133e jpilot-0.99.8_pre9.ebuild 1733
+RMD160 bf2a439b0e9d153cb0ab6fbb4675e4d72e5a84eb jpilot-0.99.8_pre9.ebuild 1733
+SHA256 16f7f55852ef0b1b78123769c5ec53572395b9a59a4a2003461bd6f070f1d7cb jpilot-0.99.8_pre9.ebuild 1733
+MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
+RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
+SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
