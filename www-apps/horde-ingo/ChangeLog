@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-ingo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.6 2006/03/25 06:17:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.7 2006/03/28 02:31:22 halcy0n Exp $
+
+  28 Mar 2006; Mark Loeser <halcy0n@gentoo.org> horde-ingo-1.1.ebuild:
+  Stable on x86; bug #126435
 
   25 Mar 2006; Joseph Jezak <josejx@gentoo.org> horde-ingo-1.1.ebuild:
   Marked ppc stable for bug #126435.
