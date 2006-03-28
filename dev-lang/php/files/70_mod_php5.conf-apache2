@@ -5,27 +5,15 @@
 		LoadModule php5_module    modules/libphp5.so
 	</IfModule>
 
-	# If the module still isn't loaded, block access to PHP files
-	# Should help raise security, see bug #127645
-	<IfModule !mod_php5.c>
-		<Files ~ "\.ph(p|html|p3|p4|p5)">
-			Order Deny,Allow
-			Deny from all
-		</Files>
-	</IfModule>
-
-	# Set it to handle the files, if it's loaded
-	<IfModule mod_php5.c>
-		<IfModule mod_mime.c>
-			AddType application/x-httpd-php .php
-			AddType application/x-httpd-php .phtml
-			AddType application/x-httpd-php .php3
-			AddType application/x-httpd-php .php4
-			AddType application/x-httpd-php .php5
-			AddType application/x-httpd-php-source .phps
-		</IfModule>
+	# Set it to handle the files
+	<IfModule mod_mime.c>
+		AddType application/x-httpd-php .php
+		AddType application/x-httpd-php .phtml
+		AddType application/x-httpd-php .php3
+		AddType application/x-httpd-php .php4
+		AddType application/x-httpd-php .php5
+		AddType application/x-httpd-php-source .phps
 	</IfModule>
 
 	AddDirectoryIndex index.php index.phtml
-
 </IfDefine>

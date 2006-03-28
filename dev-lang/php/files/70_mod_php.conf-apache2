@@ -5,26 +5,14 @@
 		LoadModule php4_module    modules/libphp4.so
 	</IfModule>
 
-	# If the module still isn't loaded, block access to PHP files
-	# Should help raise security, see bug #127645
-	<IfModule !sapi_apache2.c>
-		<Files ~ "\.ph(p|html|p3|p4)">
-			Order Deny,Allow
-			Deny from all
-		</Files>
-	</IfModule>
-
-	# Set it to handle the files, if it's loaded
-	<IfModule sapi_apache2.c>
-		<IfModule mod_mime.c>
-			AddType application/x-httpd-php .php
-			AddType application/x-httpd-php .phtml
-			AddType application/x-httpd-php .php3
-			AddType application/x-httpd-php .php4
-			AddType application/x-httpd-php-source .phps
-		</IfModule>
+	# Set it to handle the files
+	<IfModule mod_mime.c>
+		AddType application/x-httpd-php .php
+		AddType application/x-httpd-php .phtml
+		AddType application/x-httpd-php .php3
+		AddType application/x-httpd-php .php4
+		AddType application/x-httpd-php-source .phps
 	</IfModule>
 
 	AddDirectoryIndex index.php index.phtml
-
 </IfDefine>

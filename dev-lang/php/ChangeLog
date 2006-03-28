@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.82 2006/03/28 11:04:42 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.83 2006/03/28 21:35:40 chtekk Exp $
+
+  28 Mar 2006; Luca Longinotti <chtekk@gentoo.org>
+  files/70_mod_php.conf-apache1, files/70_mod_php.conf-apache2,
+  files/70_mod_php5.conf-apache1, files/70_mod_php5.conf-apache2:
+  Revert config changes for bug #127645.
 
   28 Mar 2006; Luca Longinotti <chtekk@gentoo.org>
   files/70_mod_php.conf-apache1, files/70_mod_php.conf-apache2,
