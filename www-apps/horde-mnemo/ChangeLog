@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-mnemo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.13 2006/03/28 02:32:47 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.14 2006/03/28 17:35:15 gustavoz Exp $
+
+  28 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  horde-mnemo-2.1.ebuild:
+  Stable on hppa wrt security #126435
 
   28 Mar 2006; Mark Loeser <halcy0n@gentoo.org> horde-mnemo-2.1.ebuild:
   Stable on x86; bug #126435

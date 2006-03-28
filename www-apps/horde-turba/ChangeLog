@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-turba
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.15 2006/03/28 02:35:12 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.16 2006/03/28 17:37:52 gustavoz Exp $
+
+  28 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  horde-turba-2.1.ebuild:
+  Stable on hppa wrt security #126435
 
   28 Mar 2006; Mark Loeser <halcy0n@gentoo.org> horde-turba-2.1.ebuild:
   Stable on x86; bug #126435
