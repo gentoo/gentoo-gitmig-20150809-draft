@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.1-r2.ebuild,v 1.2 2006/03/26 17:43:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.1-r2.ebuild,v 1.3 2006/03/28 19:22:47 gustavoz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/gv/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64 ~mips ~ppc-macos ~ppc64"
+KEYWORDS="~x86 ~ppc ~alpha sparc ~amd64 ~mips ~ppc-macos ~ppc64"
 IUSE=""
 
 RDEPEND="|| ( (
