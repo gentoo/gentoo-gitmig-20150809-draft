@@ -1,4 +1,7 @@
-MD5 a02084e2c378ae81f77c79663977b934 ChangeLog 28709
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 24a337126f72fc15559f2012d50c6228 ChangeLog 28859
 MD5 33d51532d0f696fefa15593b2cf2f6de files/digest-vanilla-sources-2.0.40-r1 66
 MD5 556c7008fbfdf81750bbd4ab2beb111e files/digest-vanilla-sources-2.2.26-r1 67
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-vanilla-sources-2.4.21 67
@@ -51,6 +54,13 @@ MD5 35ad195e201dbebe6aef33c2d98f5e7d vanilla-sources-2.6.15.4.ebuild 502
 MD5 dd4be48c0142e2a74a33f894195ca250 vanilla-sources-2.6.15.5.ebuild 498
 MD5 88bf5f724c4618aa92ea255a9dee36e8 vanilla-sources-2.6.15.6.ebuild 498
 MD5 a6d1e6f6a3dd468c9363b300fb1ffde0 vanilla-sources-2.6.15.ebuild 489
-MD5 44661dbdcf0cdeb967125682a89ddd49 vanilla-sources-2.6.16.ebuild 496
+MD5 1ccb9d73df1275a48a630b5afebbb5d0 vanilla-sources-2.6.16.ebuild 493
 MD5 1b0bfa0114e892a7f294531c22c7084c vanilla-sources-2.6.5.ebuild 450
 MD5 2b03b5303004069d236540fff82d3077 vanilla-sources-2.6.7.ebuild 456
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEKUn6KRy60XGEcJIRAqLBAJ4iHE8Xzgb4J09BEFOVATSXPBYBEwCfSdZ1
+x17Czkcp8UFKtzeKtWMDKeo=
+=slzO
+-----END PGP SIGNATURE-----
