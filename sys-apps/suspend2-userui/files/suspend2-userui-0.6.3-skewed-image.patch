@@ -1,0 +1,53 @@
+Index: fbsplash/userui_fbsplash_core.c
+===================================================================
+--- fbsplash/userui_fbsplash_core.c	(revision 997)
++++ fbsplash/userui_fbsplash_core.c	(working copy)
+@@ -154,8 +154,8 @@
+ 	}
+ 	memcpy(base_image, (void*)silent_img.data, base_image_size);
+ 
+-	frame_buffer = mmap(NULL, base_image_size, PROT_READ | PROT_WRITE,
+-			MAP_SHARED, fb_fd, 0);
++	frame_buffer = mmap(NULL, fb_fix.line_length * fb_var.yres,
++			PROT_READ | PROT_WRITE, MAP_SHARED, fb_fd, 0);
+ 	if (frame_buffer == MAP_FAILED) {
+ 		frame_buffer = NULL;
+ 	}
+@@ -183,7 +183,7 @@
+ 	config_file = NULL;
+ 
+ 	if (frame_buffer) {
+-		munmap(frame_buffer, base_image_size);
++		munmap(frame_buffer, fb_fix.line_length * fb_var.yres);
+ 		frame_buffer = NULL;
+ 	}
+ 
+@@ -203,15 +203,24 @@
+ }
+ 
+ static void update_fb_img() {
++	int y;
++	int img_line_length = fb_var.xres * ((fb_var.bits_per_pixel + 7) >> 3);
++
+ 	if (!silent_img.data)
+ 		return;
+ 
+-	/* Try mmap'd I/O first */
+ 	if (frame_buffer) {
+-		memcpy(frame_buffer, silent_img.data, base_image_size);
++		/* Try mmap'd I/O if we have it */
++		for (y = 0; y < fb_var.yres; y++) {
++			memcpy(frame_buffer + y * fb_fix.line_length,
++					silent_img.data + (y * img_line_length),
++					img_line_length);
++		}
+ 	} else if (fb_fd != -1) {
+-		lseek(fb_fd, 0, SEEK_SET);
+-		write(fb_fd, silent_img.data, base_image_size);
++		for (y = 0; y < fb_var.yres; y++) {
++			lseek(fb_fd, y * fb_fix.line_length, SEEK_SET);
++			write(fb_fd, silent_img.data + (y * img_line_length), img_line_length);
++		}
+ 	}
+ }
+ 

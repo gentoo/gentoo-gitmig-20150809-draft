@@ -1,0 +1,13 @@
+Index: fbsplash/ttf.c
+===================================================================
+--- fbsplash/ttf.c	(revision 997)
++++ fbsplash/ttf.c	(working copy)
+@@ -638,7 +638,7 @@
+ 				j -= glyph->minx;
+ 			}
+ 			
+-			dst = (unsigned char *)target + i*fb_fix.line_length + j*bytespp;
++			dst = (unsigned char *)target + (i * fb_var.xres + j)*bytespp;
+ 			src = current->buffer + row*current->pitch;
+ 
+ 			add = x & 1;
