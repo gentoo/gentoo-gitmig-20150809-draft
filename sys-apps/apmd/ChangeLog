@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.27 2006/02/12 08:50:00 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.28 2006/03/28 21:09:54 steev Exp $
+
+  28 Mar 2006; Steev Klimaszewski <steev@gentoo.org> apmd-3.2.2_p5.ebuild:
+  Apply sed from Ed Catmur to apmd-3.2.2_p5 to build against system headers,
+  rather than the kernel headers.  Closes bug #124841
 
   12 Feb 2006; Steev Klimaszewski <steev@gentoo.org>
   +files/apmd-no-on_ac_power_script.patch, apmd-3.0.2-r3.ebuild,

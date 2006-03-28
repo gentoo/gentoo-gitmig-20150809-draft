@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.2_p5.ebuild,v 1.1 2006/02/12 08:50:00 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.2_p5.ebuild,v 1.2 2006/03/28 21:09:54 steev Exp $
 
 inherit eutils multilib
 
@@ -48,6 +48,8 @@ src_unpack() {
 			"${S}"/Makefile \
 			|| die "sed failed"
 	fi
+	# apmd is perfectly happy with system linux-headers
+	sed -e 's:-I/usr/src/linux/include::' -i "${S}"/Makefile
 }
 
 src_compile() {
