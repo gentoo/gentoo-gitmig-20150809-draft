@@ -1,7 +1,10 @@
-MD5 af2b85427bdc6ce35801acd4c4401e29 ChangeLog 14689
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 80a2f8f2fb8f547366396ec5182fa57e ChangeLog 14797
 MD5 ef371aabe6da10b27577d6b87f35df44 busybox-1.00-r4.ebuild 7100
 MD5 b0336ac088a950a2da4f6466bc199b02 busybox-1.01.ebuild 6933
-MD5 0ccda463f059a18020a3a33bed07008d busybox-1.1.0.ebuild 6630
+MD5 9fcb3743f0bc23397536a944d8d27213 busybox-1.1.0.ebuild 6630
 MD5 81f4a0289354f964e744acb2f74c1894 files/1.00/bash-tests.patch 1474
 MD5 02bde866363ce5357e8dfadcf870b230 files/1.00/bb.patch 155
 MD5 1587853e73bcbda7157048299fc659fe files/1.00/busybox-read-timeout.patch 1964
@@ -22,3 +25,10 @@ MD5 8eca6aae55dad92090e0136b58a9fcf7 files/digest-busybox-1.00-r4 142
 MD5 adbc93ab59ec8e00c78e1807b35a0c6c files/digest-busybox-1.01 141
 MD5 f6c0e8bba77ce0a1ed09e590071c033c files/digest-busybox-1.1.0 247
 MD5 8ef75eba39772bdd1a8facc7815dbebb metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEKIM2KRy60XGEcJIRAlLsAJsGwG/FLhmCN2u1SsJ3naO6+F5ZhwCgl1/8
+7i26MBD4pebrrjW/8DHLJUU=
+=47tM
+-----END PGP SIGNATURE-----
