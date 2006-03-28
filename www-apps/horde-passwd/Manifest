@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 545dd56b4a217c029c088967304d2f22 ChangeLog 1946
-RMD160 d5ca3b250024e4d5c67828d181f00a1f18387d1e ChangeLog 1946
-SHA256 ebcbd4b79114972061837524fbe7b8d01096f8208e19b58be140c4731d03cb34 ChangeLog 1946
+MD5 27ec412105856705717eb0ea3f597265 ChangeLog 2067
 MD5 90a30b8eff0510043a20370d85462e3d files/2.2.1-no-clear-password.patch 496
-RMD160 50df01000269e36b4f2339c115d71afef299b1a7 files/2.2.1-no-clear-password.patch 496
-SHA256 e1ee41a8fc6bb4f194736a303d6083dde18c9cf980ccaca48b910be1ebb8fb3b files/2.2.1-no-clear-password.patch 496
 MD5 a11c3fe18a03687a5e83771b2555b370 files/digest-horde-passwd-2.2.2 64
-RMD160 da820ba0e8fcbf1c2585f62b8af9d6464cd07822 files/digest-horde-passwd-2.2.2 64
-SHA256 0c328d5744f6547ebf589a559b27c8c5a8461c00ec0066ed3e221cd8bf0f239c files/digest-horde-passwd-2.2.2 64
 MD5 9a059ac5faff646369e70fe84762ecac files/digest-horde-passwd-3.0 65
-RMD160 edbdbcc11cb370e205fa37f010063b6d1d7a9ac9 files/digest-horde-passwd-3.0 65
-SHA256 f45fd1473bd3358f6e7960ad0d2adaa5cbbd798c7e8bbe5e6dbb60e675cf9389 files/digest-horde-passwd-3.0 65
 MD5 a663a0df1829b79b8197da762868127a files/horde-passwd-3.0-no-clear-password.patch 424
-RMD160 973599225a10dedb55b331bfcd55874aa5d1a90f files/horde-passwd-3.0-no-clear-password.patch 424
-SHA256 6e2c0664f029aae9688e84313b56eddc766dcc2d3ba138082dec618eb1dc5593 files/horde-passwd-3.0-no-clear-password.patch 424
 MD5 13a1020cf3bd92179d5ed3f108169933 horde-passwd-2.2.2.ebuild 546
-RMD160 d91a220e06d4819983814ab9d4ce67e420ce25f5 horde-passwd-2.2.2.ebuild 546
-SHA256 3bef118aa1c6a2c6c0c8ecb5f4fa3562af0866e023ddf0a43ee33d2cca72736d horde-passwd-2.2.2.ebuild 546
-MD5 949f059e3bd3d4b8ee9b48cfb7908add horde-passwd-3.0.ebuild 561
-RMD160 0b382c89d8cd9fcb9f46665161984c1eecb94d38 horde-passwd-3.0.ebuild 561
-SHA256 79b3f1ce5e6f9a14be0d8698912800d76e903c9ca0b7ec7892889e94020bb2d7 horde-passwd-3.0.ebuild 561
+MD5 157d49ffa03049a1fe80736353b41f88 horde-passwd-3.0.ebuild 561
 MD5 536fc68713fc6d618f6ac8c02145bddb metadata.xml 687
-RMD160 fd255d13e258027b3c62054e2ec6909c4d379660 metadata.xml 687
-SHA256 01e5d4865c945ab738843aa8a375994b3ccb11827863a27332c225ada8e391b3 metadata.xml 687
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEKKC2CRZPokWLroQRArVpAKDHPK8cHuqlAVSUBp1lQhwDqBllXACeJaG7
-h4WTgziR5fHCAIpvA1ZX1Is=
-=vAmZ
------END PGP SIGNATURE-----

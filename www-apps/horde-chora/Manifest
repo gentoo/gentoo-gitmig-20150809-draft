@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4d8b81eb69917ba6a4db5a059405f45e ChangeLog 2807
-RMD160 6381d07d06baa2a4eab81800ec95f3c33885ef51 ChangeLog 2807
-SHA256 c3bb572e61db5af2bc526eb3320cc2dbb9cda3ee6ef4e6ea4c3b5ac997bb9b5f ChangeLog 2807
+MD5 3cef8d39c36a94cf4d6bedc6078cf745 ChangeLog 2930
 MD5 a70d78711aa4fc4e80c8d7a3c88bbfc9 files/digest-horde-chora-1.2.3 63
-RMD160 6b5c1f7de4c14c2b780cec5180e100bd0df109f1 files/digest-horde-chora-1.2.3 63
-SHA256 c92dff3dd3853066cb4e89c6b98c0629ce398a4340b50ad1bed978d87d179e80 files/digest-horde-chora-1.2.3 63
 MD5 16cdd2f4b43be853174134ca398fc621 files/digest-horde-chora-2.0 64
-RMD160 97f3bcc06ee16d3565fd5f50488388a927bcc998 files/digest-horde-chora-2.0 64
-SHA256 177c693587e91c8362b71a3626f67064890b6035842db7118ce5b18a1c3e1cfa files/digest-horde-chora-2.0 64
 MD5 413cb80f0fd8feeece68a77fe1f0b6ad files/digest-horde-chora-2.0.1 66
-RMD160 7ff82bb19dffa92a803c84683c1fe2aa2c8103b3 files/digest-horde-chora-2.0.1 66
-SHA256 1883e37a0d3edf13d626f1d3bd9412d3629fd18b72d6073fe439a1814c30651b files/digest-horde-chora-2.0.1 66
 MD5 ee4f3ef5b0a7060b87702f02afb7f56f horde-chora-1.2.3.ebuild 420
-RMD160 6ae6b0aaa93a435a45c74c4d47a81a9b8e3104db horde-chora-1.2.3.ebuild 420
-SHA256 a9e8c24bd1834c77af4e362af15396778df487a4cc655fafe9dbace984ca33eb horde-chora-1.2.3.ebuild 420
-MD5 780144c04cb7290ae844a24c54fe3175 horde-chora-2.0.1.ebuild 436
-RMD160 34b096f5f5cdecc602cfcaf28a001771b260a476 horde-chora-2.0.1.ebuild 436
-SHA256 95eb0e0437299ce57ff1671542525bba765cfdc49431cf3fb482dd588aa64e07 horde-chora-2.0.1.ebuild 436
+MD5 e862cf97733b739527570d8b2cc6c5e4 horde-chora-2.0.1.ebuild 436
 MD5 1c022b77e69fc238589c4f34f4a357bc horde-chora-2.0.ebuild 436
-RMD160 0e90259b67e4b63c70ea900ff2af65e6ef209493 horde-chora-2.0.ebuild 436
-SHA256 868ffecaa75c3fd6d2338915beaf3b9d58fd590b62abe15b33831ba85c6201d8 horde-chora-2.0.ebuild 436
 MD5 6365671491544cf2ce501433af5f560d metadata.xml 1387
-RMD160 213327d79377681f3d0f88edec2777fa6808d075 metadata.xml 1387
-SHA256 3021d1c093de8a0ee57918b471ce9e0b8ca3d4fcfa5407dc71185a47dfd9eabb metadata.xml 1387
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEKJ+OCRZPokWLroQRAtiOAKDCMeFi+TlWFOBe4ySkZm6+5B6gjQCcCjMD
-HI/VZQpgCizNBRrtWob4g/I=
-=v1HI
------END PGP SIGNATURE-----

@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e44a656fc0e6c44678cbbbcecf8d5380 ChangeLog 1004
-RMD160 d033a2b0e61b6f226f45581674b908d63cd07768 ChangeLog 1004
-SHA256 0ae2f98a461db3b5c2a8d5795989bb267336f66b94e2548d285908dca9766693 ChangeLog 1004
+MD5 1ba94b805d685bee55432c12bf0ad268 ChangeLog 1127
 MD5 40f7c605a2ca03bac11f3dbeaa96b63d files/digest-horde-gollem-1.0 65
-RMD160 74cc2c77726432b8c277cf7dafdfe9d0a7725e20 files/digest-horde-gollem-1.0 65
-SHA256 20488f805da115291effa98b17e3886198f645af7ec1307417c50ff8befc89da files/digest-horde-gollem-1.0 65
 MD5 f9b56cc2de90b7eb63eb98beb48591e4 files/digest-horde-gollem-1.0.1 67
-RMD160 dcc952451ebed7de36e7c194a6a055487ba62fb4 files/digest-horde-gollem-1.0.1 67
-SHA256 b068c67554ac0b06f613e7aa31b61b273dfe4ecb8f379e02f0fb292ec3854a47 files/digest-horde-gollem-1.0.1 67
 MD5 da134309e8c3da7310094e342fc607cb files/digest-horde-gollem-1.0.2 67
-RMD160 dcb0f4c57d6397d2732817e26263cb5b438e19c6 files/digest-horde-gollem-1.0.2 67
-SHA256 9c105d395b93a5f785a23f9e3524b32098f87e0ec87d1728b6ba1793801a833f files/digest-horde-gollem-1.0.2 67
 MD5 3071d7d52e58ec972174f6413c9f36c4 horde-gollem-1.0.1.ebuild 411
-RMD160 6dd406332a85203803b0175c1a95063ac6a055a7 horde-gollem-1.0.1.ebuild 411
-SHA256 609bddd3fb40b8ec1a355a3c41898b833f7d336d6ed2efe19a45ff2f07e79f2b horde-gollem-1.0.1.ebuild 411
-MD5 dbe88d78b0aac4e31044a39eae25394e horde-gollem-1.0.2.ebuild 409
-RMD160 3b656f5bb716bba6ef252191493680f25d570828 horde-gollem-1.0.2.ebuild 409
-SHA256 8af336c3069573d7e6f3fb14bcad129eb1aca4693508018bd6a8dbca7f36f8b1 horde-gollem-1.0.2.ebuild 409
+MD5 72a7948aa839b190cbc9f4d5604433fe horde-gollem-1.0.2.ebuild 409
 MD5 3631d5cbc636f179b15dac7c091c0f1a horde-gollem-1.0.ebuild 409
-RMD160 a472a572958c1b6e250027ff672079eb144a5423 horde-gollem-1.0.ebuild 409
-SHA256 61a15b134ef4b5f030a15dcf7bc46b115dd116a5623d4ed041f9974e5626a293 horde-gollem-1.0.ebuild 409
 MD5 c8532e9fff10dd851fb682c74d1138a0 metadata.xml 222
-RMD160 320541c68d392fd67d55ab074a9863806afd7459 metadata.xml 222
-SHA256 ccadeea873dedd97b264c4e4f7c9c60604a6bb88a28cea368cadd644c0262817 metadata.xml 222
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEKJ+3CRZPokWLroQRAtBEAKCoEvaD5IalRsYPqHmzIGBXH2yFqwCfcGD6
-d/ua3CWFwN1BvlSosVzL524=
-=AGo0
------END PGP SIGNATURE-----

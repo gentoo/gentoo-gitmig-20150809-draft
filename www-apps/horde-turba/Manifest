@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 54c0b245ae79c48fc24a46542cbdf641 ChangeLog 3470
-RMD160 80b972fff8c5599e1df9936c4b5f89559a1b2183 ChangeLog 3470
-SHA256 02cb9a78a67bc1b6e533c091fce3ceb15df6d80c176768e2a89774351e91b6e4 ChangeLog 3470
+MD5 f2cbffb303901bd1406c988d94fa7b67 ChangeLog 3590
 MD5 8453ae3c91fc2fbd94a61cd9c642bb1d files/digest-horde-turba-1.2.5 63
-RMD160 b4613555623d07b93633e22995dd4601bd2e01c7 files/digest-horde-turba-1.2.5 63
-SHA256 87123cf64eafab7d13806e9f8e4d5de1f46fb568410be1cff31de2efa462b792 files/digest-horde-turba-1.2.5 63
 MD5 3de83a334b89c5e3308bc4a026d969fd files/digest-horde-turba-2.0.5 67
-RMD160 35013e3809339acf38b7fdbf6748789c3712dfec files/digest-horde-turba-2.0.5 67
-SHA256 9cbb9e18c58fd0f48bc9e22a10442a34179fe77f08a5b3aca78239db8efafbbc files/digest-horde-turba-2.0.5 67
 MD5 16dd153149d648c03fbf734b5e475fee files/digest-horde-turba-2.1 241
-RMD160 2198529e7a755f799368b4658d33f3785263370e files/digest-horde-turba-2.1 241
-SHA256 7767bd81632556a8ca066344fb143e8bcf32e33bbf7e5cdccad42782b54afbcf files/digest-horde-turba-2.1 241
 MD5 4a64c82bf8e2a72a45219595e0b212b7 horde-turba-1.2.5.ebuild 454
-RMD160 34a58edf18d52343c0e67975aa747cf9a6df76f4 horde-turba-1.2.5.ebuild 454
-SHA256 ceac85c931824cda445c773d61cf00a6aa05e1a003cdf730ccbe46e76d6f95e4 horde-turba-1.2.5.ebuild 454
 MD5 a7f7989d5610cf9ab60b4c29ab95eaed horde-turba-2.0.5.ebuild 479
-RMD160 d63b4f65a8e7fee8d74c4896a48259160ad6e5fb horde-turba-2.0.5.ebuild 479
-SHA256 55d458045b756d35059523224096b4d38368c3876e1e374c7b8553ce06b4412b horde-turba-2.0.5.ebuild 479
-MD5 6e1ed756ca588272972c6fc449e6d5e4 horde-turba-2.1.ebuild 475
-RMD160 10667d69b638f9c9e0d02cdc59c5df89fb695316 horde-turba-2.1.ebuild 475
-SHA256 77c9bf69fe999ac1f9e62be7cb173ba3cb2a2177cf2087634808f415bf381cdb horde-turba-2.1.ebuild 475
+MD5 90cccc6d486995b633764f65021704fe horde-turba-2.1.ebuild 475
 MD5 4a52cd771138efea4026da82a803a812 metadata.xml 1156
-RMD160 e3c3c5e874de736e614b7820739d97434588a81f metadata.xml 1156
-SHA256 f21ba74392c9cd17b191d2e8945524f855b206abc8504e833f93798f56bc5616 metadata.xml 1156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEKKDrCRZPokWLroQRAq98AJ9o+n3TSyGUu/GPHdulAdEBEsz/kwCfUjdC
-GpjvsAWmlQ3YQROIi7L80Ac=
-=2tvi
------END PGP SIGNATURE-----
