@@ -7,16 +7,16 @@ SHA256 92a10b2dad460d0dea146e400207f3ecdc19f04858d782b831b395c906c362c1 ChangeLo
 MD5 2965489131027c78ba33b95213f6ea30 files/digest-man-pages-de-0.4 67
 RMD160 b1fc9d08c62cc59f9c5f1189eaa42704c660f085 files/digest-man-pages-de-0.4 67
 SHA256 b460b6ccf73dfbd4b5a27570f6a3d4124247321352076ec22634363028706d1f files/digest-man-pages-de-0.4 67
-MD5 4ede715743f7524912b62f26c35ee5db man-pages-de-0.4.ebuild 931
-RMD160 c06401a9b31d36b1024f5b4198c7c4ff09af1249 man-pages-de-0.4.ebuild 931
-SHA256 637bb50715f70b1207d8ebff565acc825213e75fa980f59ca1025cb90e2fe1b4 man-pages-de-0.4.ebuild 931
+MD5 bc62740431a6690aaa4ee77fa0da688d man-pages-de-0.4.ebuild 944
+RMD160 b3ceced4dc605752ce51d2ad25c20e93dff73482 man-pages-de-0.4.ebuild 944
+SHA256 4a532a5b0bfaf83db40b408d2b9a437f82713fd226c99018b431933732b8f4f0 man-pages-de-0.4.ebuild 944
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 RMD160 5b59fc85d3bafae0872cf691e5f032bac39ba539 metadata.xml 310
 SHA256 39e1273dd60bd3ceb460e9366a648c8fa21db1c292df4573e69f41cf6c84f6fc metadata.xml 310
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD6UPq2+ySkm8kpY0RAq/rAKCsefjpbyRhLvHPRHhNl+RgGxJolQCgtN/q
-wLjXYgFcYnc0L1leOi/9Zgs=
-=Y+nn
+iD8DBQFEKNAD2+ySkm8kpY0RAhhfAJ0TzG6UsZuWGg5VgCsnG2XbVRJOrgCfYxSr
+ZTq7S3V+vDZDts6iG11fkiM=
+=DyUF
 -----END PGP SIGNATURE-----
