@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pth
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.36 2006/02/06 00:10:21 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.37 2006/03/28 22:08:55 flameeyes Exp $
+
+  28 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pth-2.0.6-ldflags.patch, pth-2.0.6.ebuild:
+  Add patch to respect ldflags and run elibtoolize, bug #127916.
 
 *pth-2.0.6 (06 Feb 2006)
 
