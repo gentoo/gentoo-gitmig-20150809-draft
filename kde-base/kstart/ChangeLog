@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.26 2006/03/27 15:44:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.27 2006/03/28 00:50:24 agriffis Exp $
+
+  28 Mar 2006; Aron Griffis <agriffis@gentoo.org> kstart-3.5.0.ebuild:
+  Mark 3.5.0 ~ia64
 
   27 Mar 2006; Aron Griffis <agriffis@gentoo.org> kstart-3.4.1.ebuild:
   Mark 3.4.1 stable on ia64. #112842
