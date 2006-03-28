@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r2.ebuild,v 1.11 2006/03/23 20:51:09 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r2.ebuild,v 1.12 2006/03/28 17:28:48 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -132,7 +132,7 @@ src_compile() {
 	# The SplitObjs feature doesn't work on several arches and it makes
 	# 'ar' take loads of RAM:
 	CHECKREQS_MEMORY="200"
-	if use alpha || use hppa || use ppc || use ppc64; then
+	if use alpha || use hppa || use ppc64; then
 		echo "SplitObjs=NO" >> mk/build.mk
 	elif ! check_reqs_conditional; then
 		einfo "Turning off ghc's 'Split Objs' feature because this machine"
