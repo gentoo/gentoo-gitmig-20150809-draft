@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.91 2006/03/27 12:38:49 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.92 2006/03/28 17:25:20 dcoutts Exp $
+
+  28 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> ghc-6.4.1-r3.ebuild:
+  Change the use of CFLAGS again. Filter out -O2 on arches where it breaks.
 
   27 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> -ghc-6.4.ebuild:
   Remove 6.4 since 6.4.1 is stable and 6.4 was rather buggy anyway.
