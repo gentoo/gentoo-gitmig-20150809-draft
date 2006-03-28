@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4dfd76155365e8d3cb50b09cec2a8f65 ChangeLog 2907
+MD5 5ebde1a31c45815488b5b85f8a71c7d6 ChangeLog 3010
 MD5 a0348deb8773a2a7ec6c2514d6057cf8 aiksaurus-0.15-r1.ebuild 842
 MD5 ef983baaef1bdc61c9a092b60d8849c7 aiksaurus-1.0.1-r1.ebuild 958
-MD5 fd100685e034b215ade1f8a8d973dbf6 aiksaurus-1.2.1.ebuild 797
+MD5 537e165bae0be1ba6250b061961ff9ad aiksaurus-1.2.1.ebuild 796
 MD5 962b0ad31b33736108a1faddc72362c9 files/aiksaurus-0.15-gentoo.patch 312
 MD5 d3f39ef49ab68aeff58a5cca93166657 files/digest-aiksaurus-0.15-r1 66
 MD5 b6c946eda769148f40910c341e520681 files/digest-aiksaurus-1.0.1-r1 67
 MD5 523efd6b969ec7366123beaa75b88e60 files/digest-aiksaurus-1.2.1 67
 MD5 a64bc5f6826b433f2a5b509240ec2242 metadata.xml 452
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD+6wpJrHF4yAQTrARAkImAKCb4mqkUYqlVBOncfjp4NJBth49TgCbB+mm
-foHt1nReaVYrpEVkEA7JePI=
-=jHQ4
------END PGP SIGNATURE-----
