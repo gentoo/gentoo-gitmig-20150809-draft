@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e66f1059d82f8c4c2fbadd01d427fa81 ChangeLog 1475
-RMD160 96a20454eaf43f0df0f489979208b5ec4073da47 ChangeLog 1475
-SHA256 6d2f2f1e438e60f1028315a4f699c29c9a43cd48604c6983eda9444186c422cc ChangeLog 1475
+MD5 62671bfca7404cccd10dea015fba52f4 ChangeLog 1579
 MD5 f055d112b7441a4c3f3b38335f835fec files/digest-pecl-fileinfo-1.0.3 61
-RMD160 eb58a49faff7ec9ed2b6c7edc5dcfe3969914f11 files/digest-pecl-fileinfo-1.0.3 61
-SHA256 d03b85aa2fdd16efe00fd0450f14560e1a4e9985d0510b17c1fee61e4f9881aa files/digest-pecl-fileinfo-1.0.3 61
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a metadata.xml 157
-SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 metadata.xml 157
-MD5 c6c90620772113a616291ca071663ae6 pecl-fileinfo-1.0.3.ebuild 517
-RMD160 dba5682c7ba6725294a8feffe41e3a6f6a3103cc pecl-fileinfo-1.0.3.ebuild 517
-SHA256 5661dea7e015e919dc1ae9bf9539d7e47c7a735bb6e742e5b8479eb342f5d57a pecl-fileinfo-1.0.3.ebuild 517
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6mvhCRZPokWLroQRAujbAKDBLErPgGkiaBL4BRDfhtbksgB7zwCgyBEv
-u+EikOODKc81uxXD3VOKrOc=
-=0asD
------END PGP SIGNATURE-----
+MD5 75d87898f8cccef4f5a0ee3db0b5409e pecl-fileinfo-1.0.3.ebuild 524

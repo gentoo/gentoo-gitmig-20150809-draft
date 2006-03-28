@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 744bda18689c783d82c04b2913b1e4cf ChangeLog 1453
-RMD160 19cb6c2da1f338be69b2dea2a58bacabd6b54961 ChangeLog 1453
-SHA256 623c555193911b8fec2f8fd2e7c8c7691c0fda27adca1f586307d8491f4f07fd ChangeLog 1453
+MD5 8f3b8133af77883e0b1d82f707fe8683 ChangeLog 1555
 MD5 2b340edcc01d9e1afddcf52d7cc5cb32 files/digest-pecl-memcache-2.0.0 62
-RMD160 191cb82f824f9a756d655ac0e292e86c8dc4cd95 files/digest-pecl-memcache-2.0.0 62
-SHA256 080666fe781d5fd9d667c2ce59b9a1573324a102a80fcccc5c67e5e8f9ca9d3d files/digest-pecl-memcache-2.0.0 62
 MD5 55f79d4ec9ec93e49180fd0ad95fe049 files/digest-pecl-memcache-2.0.1 232
-RMD160 5774dafc7e9ea79cb8cfb4d47bb038e371fe2fc2 files/digest-pecl-memcache-2.0.1 232
-SHA256 2adbae86b81e48beb022876730296fa08a9b87878001372fa53f54da4b8fc590 files/digest-pecl-memcache-2.0.1 232
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a metadata.xml 157
-SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 metadata.xml 157
 MD5 bee357817fdac15a7023b313c3887e48 pecl-memcache-2.0.0.ebuild 778
-RMD160 026eccf170df43bd97c38a009d5f9e9366d8ff5e pecl-memcache-2.0.0.ebuild 778
-SHA256 9cf6f908da613abdcb8e6e63108abb902b91fbd4f5bc4b8abcc9fa0865cc9c36 pecl-memcache-2.0.0.ebuild 778
-MD5 6a42e874052189c1365cf045c425f270 pecl-memcache-2.0.1.ebuild 782
-RMD160 c814e509ab8533ee92810e0bf8212395be498c95 pecl-memcache-2.0.1.ebuild 782
-SHA256 d8c154281cb75e48271ed2cfca36ac7f6a7b6b983e84395853b15f5133c76747 pecl-memcache-2.0.1.ebuild 782
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4aftaGfFFLhbXWkRAu1tAJ45szCrOAj4NwlsL1NO8Ry3crm7zgCggHf8
-NrTlNILhUsiQVQ0sWds1N2Q=
-=Rh0y
------END PGP SIGNATURE-----
+MD5 61bbd7fc1f7cd7641218e98ed7698056 pecl-memcache-2.0.1.ebuild 787
