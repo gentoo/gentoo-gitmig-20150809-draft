@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/Exception-Class-1.23.ebuild,v 1.3 2006/03/26 15:22:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/Exception-Class-1.23.ebuild,v 1.4 2006/03/28 22:52:44 agriffis Exp $
 
 myconf='INSTALLDIRS=vendor'
 inherit perl-module
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Exception/${P}.readme"
 IUSE=""
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ia64 ~ppc sparc x86"
 SRC_TEST="do"
 
 TDEPEND="dev-perl/Test-Pod"
