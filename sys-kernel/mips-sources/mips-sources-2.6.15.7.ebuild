@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.15.4.ebuild,v 1.1 2006/02/14 21:13:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.15.7.ebuild,v 1.1 2006/03/28 19:22:31 kumba Exp $
 
 
 # INCLUDED:
@@ -42,9 +42,9 @@ inherit kernel eutils versionator
 HOMEPAGE="http://www.linux-mips.org/ http://www.gentoo.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources virtual/alsa"
-KEYWORDS="-* ~mips"
+KEYWORDS="-* mips"
 IUSE="cobalt ip27 ip28 ip30 ip32r10k"
-
+DEPEND="<=sys-devel/gcc-3.4.5-r1"
 
 # Version Control Variables
 USE_RC="no"				# If set to "yes", then attempt to use an RC kernel
@@ -365,7 +365,6 @@ do_generic_patches() {
 		epatch ${MIPS_PATCHES}/misc-2.6.11-ip32-mace-is-always-eth0.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.15-ip32-fix-another-gbefb-typo.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.15-ip32-fix-rm52xx-support.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.15-ip32-gbefb-true-color.patch
 
 		# Cobalt Patches
 		epatch ${MIPS_PATCHES}/misc-2.6.15-cobalt-bits.patch
