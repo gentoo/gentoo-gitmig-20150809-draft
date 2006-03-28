@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.2.ebuild,v 1.2 2006/03/14 23:47:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.2.ebuild,v 1.3 2006/03/28 06:44:07 flameeyes Exp $
 
 inherit font multilib autotools flag-o-matic
 
@@ -84,6 +84,8 @@ extension_iter() {
 extension_compile() {
 	einfo "Building ${1}"
 	cd ${WORKDIR}/${1}
+
+	epatch "${FILESDIR}/libxdtv-i18n-all-${I18N_PV}-ldflags.patch"
 
 	econf || die "econf failed"
 	emake || die "emake failed"

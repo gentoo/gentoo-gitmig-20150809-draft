@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.24 2006/03/14 23:47:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.25 2006/03/28 06:44:07 flameeyes Exp $
+
+  28 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libxdtv-i18n-all-1.3.0-ldflags.patch, xdtv-2.3.2.ebuild:
+  Add patch to make i18n support respect LDFLAGS and set a soname.
 
   14 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.3.2.ebuild:
   Drop fonts installed by autotools.
