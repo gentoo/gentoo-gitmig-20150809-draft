@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/kdepim-kioslaves-3.5.2.ebuild,v 1.1 2006/03/22 20:15:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/kdepim-kioslaves-3.5.2.ebuild,v 1.2 2006/03/27 23:37:55 agriffis Exp $
 
 KMNAME=kdepim
 KMMODULE=kioslaves
@@ -10,7 +10,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="kioslaves from kdepim package"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="sasl"
 DEPEND="sasl? ( >=dev-libs/cyrus-sasl-2 )
 	$(deprange 3.5.0 $MAXKDEVER kde-base/libkmime)"

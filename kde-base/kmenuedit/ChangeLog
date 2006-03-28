@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmenuedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.31 2006/03/27 15:50:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.32 2006/03/28 00:15:27 agriffis Exp $
+
+  28 Mar 2006; Aron Griffis <agriffis@gentoo.org> kmenuedit-3.5.0.ebuild,
+  kmenuedit-3.5.1.ebuild, kmenuedit-3.5.2.ebuild:
+  Mark 3.5.2 3.5.1 3.5.0 ~ia64
 
   27 Mar 2006; Aron Griffis <agriffis@gentoo.org> kmenuedit-3.4.1.ebuild:
   Mark 3.4.1 stable on ia64. #112842

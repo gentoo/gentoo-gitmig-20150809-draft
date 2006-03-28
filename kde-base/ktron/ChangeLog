@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktron
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.37 2006/03/25 04:35:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.38 2006/03/28 00:56:59 agriffis Exp $
+
+  28 Mar 2006; Aron Griffis <agriffis@gentoo.org> ktron-3.5.0.ebuild,
+  ktron-3.5.1.ebuild, ktron-3.5.2.ebuild:
+  Mark 3.5.2 3.5.1 3.5.0 ~ia64
 
   25 Mar 2006; Aron Griffis <agriffis@gentoo.org> ktron-3.4.3.ebuild:
   Mark 3.4.3 stable on ia64

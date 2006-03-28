@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.1.ebuild,v 1.1 2006/01/22 22:52:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.1.ebuild,v 1.2 2006/03/27 23:49:29 agriffis Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-3.5.0-patches-1.tar.bz2"
 
 DESCRIPTION="KDE login manager, similar to xdm and gdm"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="pam"
 
 KMEXTRA="kdmlib/"

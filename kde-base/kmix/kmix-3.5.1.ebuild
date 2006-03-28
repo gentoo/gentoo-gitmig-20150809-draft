@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/kmix-3.5.1.ebuild,v 1.1 2006/01/22 22:53:02 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/kmix-3.5.1.ebuild,v 1.2 2006/03/28 00:17:53 agriffis Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="aRts mixer gui"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa"
 DEPEND="alsa? ( media-libs/alsa-lib )"
 KMEXTRACTONLY="kscd/configure.in.in"

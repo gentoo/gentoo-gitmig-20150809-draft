@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksync
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksync/ChangeLog,v 1.39 2006/03/26 19:23:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksync/ChangeLog,v 1.40 2006/03/28 00:51:38 agriffis Exp $
+
+  28 Mar 2006; Aron Griffis <agriffis@gentoo.org> ksync-3.5.0.ebuild,
+  ksync-3.5.1.ebuild, ksync-3.5.2.ebuild:
+  Mark 3.5.2 3.5.1 3.5.0 ~ia64
 
   26 Mar 2006; Aron Griffis <agriffis@gentoo.org> ksync-3.4.3.ebuild:
   Mark 3.4.3 stable on ia64
