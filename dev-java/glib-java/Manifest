@@ -1,6 +1,9 @@
-MD5 87f1af2123dabf158c9274b35db3ffec ChangeLog 1139
-RMD160 56db936530a41f795db0e6077d50425f5aa68f0b ChangeLog 1139
-SHA256 c291288e7a2235182eff8e296c7dc8df1c2bbf82cd21269d30b33ab34747475b ChangeLog 1139
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a9d2232757c8b485881a7c2b21c577a7 ChangeLog 1287
+RMD160 f244e6bdb6868dd730bfbbc5b40eabf6e80fa241 ChangeLog 1287
+SHA256 3cc763df05d763794f73faf6ea4dbefa68c20a77f96dcbf61d5ba44d304e2419 ChangeLog 1287
 MD5 6f1550893a37966aca2b2c7ceb220b71 files/aclocal_voodoo.patch 749
 RMD160 ae731fbbcb529dfb0231f85430aacb912d7040f3 files/aclocal_voodoo.patch 749
 SHA256 5129cfd8bffc258fa132dd2a16a01d0f95c9bd16d437219e5b75e906e38e98ef files/aclocal_voodoo.patch 749
@@ -13,6 +16,9 @@ SHA256 b49859be6b5db9178fa3826ced50c512e0777c2bfafda0e82c99f5aa70ac3436 files/di
 MD5 6fefbc436dfe3bc884f2587845ee88fe files/digest-glib-java-0.2.3 247
 RMD160 7f2e9be95b15a40aa25ffda3b77a00378e0553d4 files/digest-glib-java-0.2.3 247
 SHA256 bd3b924cdfd5e5e660414294ff4234c5015f64f7b8b83a0a4c3f83130fae0d66 files/digest-glib-java-0.2.3 247
+MD5 6fefbc436dfe3bc884f2587845ee88fe files/digest-glib-java-0.2.3-r1 247
+RMD160 7f2e9be95b15a40aa25ffda3b77a00378e0553d4 files/digest-glib-java-0.2.3-r1 247
+SHA256 bd3b924cdfd5e5e660414294ff4234c5015f64f7b8b83a0a4c3f83130fae0d66 files/digest-glib-java-0.2.3-r1 247
 MD5 b1e11a9eba5947c307093c7e951155fe files/jg_common-macromagic.patch 482
 RMD160 e5bc048435a96c0592aab2a4396985f6d48ea723 files/jg_common-macromagic.patch 482
 SHA256 a3bcb5dbee0062864e6d73333925c922e0b4cca488ee8e7021db42f399934296 files/jg_common-macromagic.patch 482
@@ -22,9 +28,19 @@ SHA256 d608b7f11073fdb46fa3e53e165b8f3dee90b2e4d72d4bd90e4c9f56cdaf9816 glib-jav
 MD5 4a88692583319263f67ae2994e3093dd glib-java-0.2.2.ebuild 2016
 RMD160 4a79176c3f8254464c8881ef1ba1e68ae0d97020 glib-java-0.2.2.ebuild 2016
 SHA256 36f3f3c4a3f9fe8e985cdcda6ba6095c14d15706118b5440f1aa36b6900bae11 glib-java-0.2.2.ebuild 2016
+MD5 a047d99606ec6a138d3480a494b21e58 glib-java-0.2.3-r1.ebuild 2194
+RMD160 7df1aa48eb5c4c688ccbe4920616bdca1f265c2d glib-java-0.2.3-r1.ebuild 2194
+SHA256 6752b4bf62f3be5e4439996a6973a1d27fd94db6315db3e65b8d624f502b7ed6 glib-java-0.2.3-r1.ebuild 2194
 MD5 3485d5c52dc53f492baa14776998ca34 glib-java-0.2.3.ebuild 2016
 RMD160 e8c9d684535f382710aa0396e6a443b03f3d0eba glib-java-0.2.3.ebuild 2016
 SHA256 78b607b0a8d07f230ea80bc1e5d174e2088d1c92ac739427b5e07fdcf36fe40a glib-java-0.2.3.ebuild 2016
 MD5 5c652987877650c412fa53be7fdc9210 metadata.xml 351
 RMD160 0e264a3a00a4e9596de198ba12c78e70a80c4971 metadata.xml 351
 SHA256 150643467149fc29f21bc81dfb154912778d0c212638490d474fe46450f26ce4 metadata.xml 351
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEKLTjndWRXhKOboURAiplAJ4l8qusnRvJAUE7mvdB11fdzG8TWgCgmG7n
+GL6EyAe0/TXPXZleQ6Lf2MY=
+=9/pn
+-----END PGP SIGNATURE-----
