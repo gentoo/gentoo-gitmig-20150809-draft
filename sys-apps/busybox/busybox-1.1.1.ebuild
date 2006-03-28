@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.1.ebuild,v 1.1 2006/03/28 02:39:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.1.ebuild,v 1.2 2006/03/28 02:47:19 vapier Exp $
 
 inherit eutils
 
@@ -166,13 +166,11 @@ src_install() {
 			die "silly options will destroy your system"
 		fi
 		make CROSS="${CROSS}" install || die
-		dodir /bin
-		cp -pPR _install/bin/* "${D}"/bin/
-		dodir /sbin
-		cp -pPR _install/sbin/* "${D}"/sbin/
+		cp -pPR _install/${x}/* "${D}"/ || die "copying links for ${x} failed"
 		cd "${D}"
+		# XXX: should really move this to pkg_preinst() ...
 		local symlink
-		for symlink in {bin,sbin}/* ; do
+		for symlink in {,usr/}{bin,sbin}/* linuxrc ; do
 			[[ -L ${symlink} ]] || continue
 			[[ -e ${ROOT}/${symlink} ]] \
 				&& eerror "Deleting symlink ${symlink} because it exists in ${ROOT}" \
