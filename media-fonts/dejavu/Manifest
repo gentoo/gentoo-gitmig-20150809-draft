@@ -1,6 +1,9 @@
-MD5 d0615369bb25b26d6564b10658d1f1d6 ChangeLog 2273
-RMD160 8732c6698ded094ae94ded9efd93a92b618cb92c ChangeLog 2273
-SHA256 970c9aeb007abffce5d7f7c4b5132fdbd171ffd762a9c551c4d8988a9ca84f51 ChangeLog 2273
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e2110f7821db78030f6cb36aa5ba0e15 ChangeLog 2489
+RMD160 ff60bbbadc9f81be73ae962de36615ffffd6ac73 ChangeLog 2489
+SHA256 aac04218d8c7647cb4523b21c369b3bdddc2f7e2ce3b61028e4eb80be16be429 ChangeLog 2489
 MD5 7a3f1efa9d879dd281009557872f65ac dejavu-1.11.ebuild 686
 RMD160 8a523e8903bb3fa5f0157f5738f0f3ea409b41da dejavu-1.11.ebuild 686
 SHA256 4f63cec6f70f2ae85e612cc0a41505889b4e7cf6b381513035ed7e488602cb06 dejavu-1.11.ebuild 686
@@ -13,6 +16,9 @@ SHA256 55866684d0287c1df9ddcf46503a895ef159489bff38cbe285d394ae6a78e057 dejavu-2
 MD5 0209c4ec66abe186215ef44cdca975a0 dejavu-2.2.ebuild 612
 RMD160 1e2b8bbb1be1d2d7a7254fddb6943b7ddbd83f0b dejavu-2.2.ebuild 612
 SHA256 3d9c11c2879496956a4f243e519f978891451b1aefd13637e6ce95fa1fec5f53 dejavu-2.2.ebuild 612
+MD5 1aba051dfe967560a7bc5489162d7f8d dejavu-2.4.ebuild 699
+RMD160 dad71a75719c4133c7594d5b51b97fe7ff5e5a1d dejavu-2.4.ebuild 699
+SHA256 88fa2b6bd07ef4af65adf0a8d2a07c86002616f23c72628ddbd773c7e7e0a6e5 dejavu-2.4.ebuild 699
 MD5 802e023d624af60a02a26f2553da0f23 files/digest-dejavu-1.11 67
 RMD160 5bb8c721bc48e900f7babf6ba995513ff207dd76 files/digest-dejavu-1.11 67
 SHA256 5a6375c6ea44a16392517bb837547c4452006e02356d74bfe713c6f36770aff2 files/digest-dejavu-1.11 67
@@ -25,6 +31,16 @@ SHA256 d43fee1ad616f20c77bc4a71fdea18de89151ff0eb286dfed933e26e4a05c211 files/di
 MD5 352bf75c9ac55c84a24b7abb6b9ab2b1 files/digest-dejavu-2.2 247
 RMD160 633a5e3ae2efd62aba0f9ee0dc287128a376fdda files/digest-dejavu-2.2 247
 SHA256 a14eeca9d6bbd89031eb8b6a0ccb8f2899067a3fc0301ee8c2125ce70b79b58b files/digest-dejavu-2.2 247
+MD5 2adcfcb548c584134edfc086433dea63 files/digest-dejavu-2.4 247
+RMD160 d01f2aba24bd4f9d6f2713a83f881c2534f10986 files/digest-dejavu-2.4 247
+SHA256 e4bfd70c28a4bf5b8cfc1c308eec13f362115121c99addb74bbfe452f8202927 files/digest-dejavu-2.4 247
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 RMD160 e563fdca0707ee5927deab77f2e5ef79816384ca metadata.xml 158
 SHA256 9a8722fb0b5a1992b3942e85f23df4e08f10cabc2d783ca887479abe115b3ea8 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEKbMOAiZjviIA2XgRAnfjAKDfOU2jHtpb94a5notud2PFPPmn8QCeLkra
+Vgb4HbgJLE01BRHYrr2VUgU=
+=szWM
+-----END PGP SIGNATURE-----
