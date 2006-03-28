@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.1.ebuild,v 1.2 2006/03/28 02:47:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.1.ebuild,v 1.3 2006/03/28 06:09:28 vapier Exp $
 
 inherit eutils
 
@@ -58,6 +58,7 @@ src_unpack() {
 
 	# patches go here!
 	epatch "${FILESDIR}"/1.1.1/bb.patch
+	epatch "${FILESDIR}"/1.1.1/insmod.patch
 
 	# check for a busybox config before making one of our own.
 	# if one exist lets return and use it.
