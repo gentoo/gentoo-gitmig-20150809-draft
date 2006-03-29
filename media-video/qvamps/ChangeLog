@@ -1,6 +1,11 @@
 # ChangeLog for media-video/qvamps
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/ChangeLog,v 1.2 2006/02/20 23:07:04 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/ChangeLog,v 1.3 2006/03/29 01:36:26 sbriesen Exp $
+
+*qvamps-0.96 (29 Mar 2006)
+
+  29 Mar 2006; Stefan Briesenick <sbriesen@gentoo.org> +qvamps-0.96.ebuild:
+  version bump, solving bug #127769.
 
   20 Feb 2006; Stefan Briesenick <sbriesen@gentoo.org> qvamps-0.21.ebuild:
   fixed sandbox errors (see bug #123397), added ~amd64.
