@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.1.ebuild,v 1.5 2006/03/20 14:57:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.1.ebuild,v 1.6 2006/03/29 16:37:39 mcummings Exp $
 
 inherit perl-module
 
@@ -226,7 +226,7 @@ pkg_postinst() {
 		ewarn "have reported that this makes no difference. ;)"
 	fi
 	einfo
-	if ! has_version 'dev-perl/Mail-SPF-QUery'; then
+	if ! has_version 'dev-perl/Mail-SPF-Query'; then
 		einfo "For spf support, please emerge dev-perl/Mail-SPF-Query"
 	fi
 	if ! has_version 'mail-filter/dcc'; then
