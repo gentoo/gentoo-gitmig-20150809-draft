@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freelords
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/ChangeLog,v 1.19 2006/03/26 09:48:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/ChangeLog,v 1.20 2006/03/29 19:40:55 mr_bones_ Exp $
+
+  29 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  freelords-0.3.7.ebuild:
+  needs sdl-mixer (turned up by bug #128007)
 
 *freelords-0.3.7 (26 Mar 2006)
 
