@@ -1,22 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9a11b06196a65e27572e42c310fb192d ChangeLog 4568
-MD5 ab59365f7f92becce9ea574af606ca09 metadata.xml 270
-MD5 f3097d238760317174f7813f089f06d2 ypserv-2.13-r1.ebuild 1900
-MD5 29efa22c0fc40c014ee9091e5df3bdc6 ypserv-2.18.ebuild 1892
+MD5 121c990d71767e9ba30925df28768753 ChangeLog 4688
+RMD160 11052c88fe978c3d9c7915fdad18c35bce8ed940 ChangeLog 4688
+SHA256 f14d0cc6cc97769b3a3f085754526b0a82fc6cc95048877a03b3544aab973ebf ChangeLog 4688
 MD5 45967caf49de0b5bc203268a007e97fa files/digest-ypserv-2.13-r1 64
-MD5 694f6f542233227781bd04bba4b915da files/rpc.yppasswdd-r1 609
-MD5 f38a0f43a932ff1e4f39d8694cdb0846 files/rpc.yppasswdd.confd 260
-MD5 b2693c779a268938115d9eee775c9dc8 files/rpc.ypxfrd 586
-MD5 7dc8e37a39eb21d796894f89ffd53262 files/rpc.ypxfrd.confd 122
-MD5 3f3f1488115fa4837c7963811e876db7 files/ypserv 577
-MD5 e5bb4de1f10631c93c5920f87059229a files/ypserv.confd 95
+RMD160 fff8f3a221255b922af7420ca1e1456374d47519 files/digest-ypserv-2.13-r1 64
+SHA256 967854e525dab10bc01d93855ccf9afc11a6832ecbd94def85e992cbe670aec2 files/digest-ypserv-2.13-r1 64
 MD5 d92cf218d3682ced6bbb86dd3d364406 files/digest-ypserv-2.18 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC+5XhArHZZzCEUG0RAjYSAJoD2CJ7dA55y/XkhTdyq67F0aHB+gCfcCyW
-vDz1kjsP2Z8dT+1HASd7I2g=
-=bki1
------END PGP SIGNATURE-----
+RMD160 1cfd608c0158867154db01ee515e279aebb7d2dc files/digest-ypserv-2.18 64
+SHA256 678bf516522a02182f872263f4c6312f69764d2f70be20fd2d5ad24e51e4ff92 files/digest-ypserv-2.18 64
+MD5 694f6f542233227781bd04bba4b915da files/rpc.yppasswdd-r1 609
+RMD160 0bfccbb0b41857f22e1aa78846c1b33ee0a7f498 files/rpc.yppasswdd-r1 609
+SHA256 e827778b8a8e6984b637c745c315a2e02ebc46af752651b7a70626ba545a84b6 files/rpc.yppasswdd-r1 609
+MD5 f38a0f43a932ff1e4f39d8694cdb0846 files/rpc.yppasswdd.confd 260
+RMD160 bf1d1393a9070b807fd2c483efe0824c20ea6b86 files/rpc.yppasswdd.confd 260
+SHA256 e46afe737bfc57aa31be1a441615fcc112e1ebf41d631c1929e00b81baca119d files/rpc.yppasswdd.confd 260
+MD5 b2693c779a268938115d9eee775c9dc8 files/rpc.ypxfrd 586
+RMD160 c24a441a1a60bb255a8a293efbf58cc714b5d361 files/rpc.ypxfrd 586
+SHA256 a6db8cbc0dc7a780bf2bcbd120bccedc53239faef7aa5c596379a92817078015 files/rpc.ypxfrd 586
+MD5 7dc8e37a39eb21d796894f89ffd53262 files/rpc.ypxfrd.confd 122
+RMD160 1620fa83b8d607ee69025d22de4ce4640ab151e5 files/rpc.ypxfrd.confd 122
+SHA256 bd1f245a362f85319e83965e8b825e66e686a4a0bf185ab8ec51fd335bc873c2 files/rpc.ypxfrd.confd 122
+MD5 3f3f1488115fa4837c7963811e876db7 files/ypserv 577
+RMD160 b07fe3bf8a16170def483c750a41fc9f16b90d21 files/ypserv 577
+SHA256 b0f4b39289d2321857ff21b007f85a39b18f5669616660499374726a5c725f7c files/ypserv 577
+MD5 e5bb4de1f10631c93c5920f87059229a files/ypserv.confd 95
+RMD160 87324950e8b5408507109ccef5c061a981732fc8 files/ypserv.confd 95
+SHA256 4edd475ca95d31cfcea20a8e6268024f8128423bc7ae67edb535e6811c64668e files/ypserv.confd 95
+MD5 ab59365f7f92becce9ea574af606ca09 metadata.xml 270
+RMD160 709ade9b3b1652e106d0e23b8c31f3dacb7b02c9 metadata.xml 270
+SHA256 13702fefeeff13437d42ecc152cfd4f2a28bce58458a5ad7920a2c70b8e6ae13 metadata.xml 270
+MD5 f3097d238760317174f7813f089f06d2 ypserv-2.13-r1.ebuild 1900
+RMD160 cfe002eb8b8f67e1892a1f60a5f3997ec298b71b ypserv-2.13-r1.ebuild 1900
+SHA256 c289edbe183c29d602c2bb233b7887dda8d3b807e21888a9548b943aed907f49 ypserv-2.13-r1.ebuild 1900
+MD5 3b20c0285c81250780f83ddbaf5b2631 ypserv-2.18.ebuild 1888
+RMD160 3adff6ff48d19f4806d9070c3abb85351b21511a ypserv-2.18.ebuild 1888
+SHA256 0a9d57e22959d5ac139b500fe4b418bf4cbae034c753480118dec829db630a28 ypserv-2.18.ebuild 1888
