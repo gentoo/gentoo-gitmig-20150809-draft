@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r2.ebuild,v 1.10 2006/03/29 16:24:40 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r2.ebuild,v 1.11 2006/03/29 23:45:39 flameeyes Exp $
 
 IUSE=""
 
@@ -46,7 +46,9 @@ src_compile() {
 	xmkmf || die "xmkmf failed"
 	make Makefiles || die "make Makefiles failed"
 
-	emake BINDIR=/usr/bin LIBDIR=/usr/$(get_libdir) || die "emake failed"
+	emake \
+		CC="$(tc-getCC)" LOCAL_LDFLAGS="${LDFLAGS}" CDEBUGFLAGS="${CFLAGS}" \
+		BINDIR=/usr/bin LIBDIR=/usr/$(get_libdir) || die "emake failed"
 }
 
 src_install() {

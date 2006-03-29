@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/transfig
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.25 2006/03/29 16:24:40 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.26 2006/03/29 23:45:38 flameeyes Exp $
+
+  29 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  transfig-3.2.4-r2.ebuild:
+  Respect CFLAGS and LDFLAGS.
 
   28 Mar 2006; <malverian@gentoo.org> transfig-3.2.4-r2.ebuild:
   Add proper dependencies for modular xorg. Thanks to Andy Kittner in bug #123073
