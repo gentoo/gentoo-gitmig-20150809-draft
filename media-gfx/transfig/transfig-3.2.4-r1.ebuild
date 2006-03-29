@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r1.ebuild,v 1.14 2005/05/30 18:48:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r1.ebuild,v 1.15 2006/03/29 16:24:40 malverian Exp $
 
 inherit toolchain-funcs eutils
 
@@ -15,9 +15,15 @@ LICENSE="BSD"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ppc64"
 IUSE=""
 
-DEPEND="virtual/x11
+RDEPEND="|| ( x11-libs/libXpm virtual/x11 )
 	>=media-libs/jpeg-6
 	media-libs/libpng"
+DEPEND="${RDEPEND}
+	|| ( ( x11-misc/imake
+			app-text/rman
+		)
+		virtual/x11
+	)"
 
 src_unpack() {
 	unpack ${A}

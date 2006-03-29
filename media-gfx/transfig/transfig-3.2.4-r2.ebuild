@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r2.ebuild,v 1.9 2006/03/22 20:38:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r2.ebuild,v 1.10 2006/03/29 16:24:40 malverian Exp $
 
 IUSE=""
 
@@ -22,7 +22,12 @@ KEYWORDS="alpha amd64 ~hppa ~ia64 ~ppc ~ppc-macos ppc64 ~sparc ~x86"
 RDEPEND="|| ( x11-libs/libXpm virtual/x11 )
 	>=media-libs/jpeg-6
 	media-libs/libpng"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	|| ( ( x11-misc/imake
+			app-text/rman
+		)
+		virtual/x11
+	)"
 
 src_unpack() {
 	unpack ${A}
