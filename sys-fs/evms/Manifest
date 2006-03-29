@@ -1,37 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5c161dbac7cce28389aaa46d2fb7b69e ChangeLog 9871
-RMD160 a8a8ccd06f90d79f98947437785abd80d439a914 ChangeLog 9871
-SHA256 27416c4392b2fbb4a01e0f9ee39824379d96b28aef66b88f4d2801202c5505f6 ChangeLog 9871
+MD5 899d5c369659ead00dc05da76a3a21aa ChangeLog 9967
 MD5 a65a8d5f94a287aac2e99eee6c70d7b3 evms-2.5.3-r1.ebuild 2427
-RMD160 dde95093f500195860d3982835de1e3c5bceb6d2 evms-2.5.3-r1.ebuild 2427
-SHA256 77b81af199f49601526139c22baa2e075311bc021fdcedc789aaafa1f4f1015d evms-2.5.3-r1.ebuild 2427
-MD5 c1c5b1017f5a855cddb9066c88474310 evms-2.5.5.ebuild 2439
-RMD160 687fcacee6b9bcf28f701ee105058bd8d4b32fd1 evms-2.5.5.ebuild 2439
-SHA256 27ea3d010fba1ee0aac2d04b6d03c433b0e1f9e3dc542ae4d2d76d728c5401c2 evms-2.5.5.ebuild 2439
+MD5 0c12f9cde8542cb7c69e9f10ece38694 evms-2.5.5.ebuild 2436
 MD5 fea531c10f3cb1d47c0f0af40bad0fa9 files/2.5.3/compaq_segments.patch 478
-RMD160 a31b6197ded598606389d590d6c36d5a5853203c files/2.5.3/compaq_segments.patch 478
-SHA256 943748998e15b603fdd66a137903a4486b0b98c935a589c297d9c446ef93557e files/2.5.3/compaq_segments.patch 478
 MD5 fbf48e09c52473403af443f9ee5d8403 files/2.5.3/md_expand.patch 2152
-RMD160 e795ba20bc9d525705b5b22f7c5b68e56ce6ae2c files/2.5.3/md_expand.patch 2152
-SHA256 56f5996874159ce456fcdc72b93aa9ac9011c4be93b2a2954fef8c75046fe85b files/2.5.3/md_expand.patch 2152
 MD5 2769ffa4ae1f09667ac42e94da8036ba files/digest-evms-2.5.3-r1 63
-RMD160 f3bcc4f4915f04c44327a58436ba4d9c9d614c02 files/digest-evms-2.5.3-r1 63
-SHA256 34b821017208669e49f9550fd6d718622704964a45fc2fab7daff6a39aca839e files/digest-evms-2.5.3-r1 63
-MD5 83e877452227406dad19b93325f98ca2 files/digest-evms-2.5.5 235
-RMD160 8b33887302192148a7f141f6c96deb68ebcf31ef files/digest-evms-2.5.5 235
-SHA256 3c7b17329fb2f3fb7c0f65550c2d12c958b315af49b88160b7b43f6538b80c3d files/digest-evms-2.5.5 235
+MD5 b82867f283940c9d13314f8119d87e6e files/digest-evms-2.5.5 63
 MD5 5eb632aa94b0537e1983f935e3706d74 files/evms2-start.sh 382
-RMD160 a9dbd94b537ddcc9b0798cb904769b075e7d529a files/evms2-start.sh 382
-SHA256 ea36fbde78590067029405ab18b09106b083913688ea4863c2e63eece8e74021 files/evms2-start.sh 382
 MD5 59d559390ca6a6d365a5d6c3012c0343 metadata.xml 387
-RMD160 17a7b8226f7c5ef9dd45acd6fa6c9cfe7ba6dcc2 metadata.xml 387
-SHA256 b63984a06d4d8c776e0a1bffb39f36e1835e730d2636ff2a15550b17bb52eb03 metadata.xml 387
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEIm/LOpjtAl+gMRURAjZuAJ44xrBHQEMKC9pZQjiBmlUZ5GRCwgCeLNGY
-Uhv3xJcxUr7deOGAUb1Lu8E=
-=cmJv
------END PGP SIGNATURE-----
