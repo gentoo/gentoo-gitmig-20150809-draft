@@ -1,12 +1,15 @@
-MD5 b4a011abc25a42cf670a75b268a45ebc ChangeLog 1419
-RMD160 f1c44ea50cab41b8cb13a2e66615b2db9c3c6fa2 ChangeLog 1419
-SHA256 460ca701f6a164783dfa69773472877f77245fd9abba7bd012836f02248bbe77 ChangeLog 1419
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 34db97999d8bcc61ca06d00c582bb8e0 ChangeLog 1507
+RMD160 5b3641bed86a45c3aacb99fc46c08b29bd4ef486 ChangeLog 1507
+SHA256 7e0f2be1157d7942054747bab6942f755b072017d1b8aa12bf703b601aaa2e56 ChangeLog 1507
 MD5 c5d86141f4b7d0c716314e3e5642a4d8 binkplayer-1.8c.ebuild 755
 RMD160 88b7fb6fa545c305e206c029f3cb1ab1de0cd7d4 binkplayer-1.8c.ebuild 755
 SHA256 6140c618f8387f39af801d65c2865d111ec1f94f73a092d2390523abfbca0921 binkplayer-1.8c.ebuild 755
-MD5 7a221d61fd2f3e8bd8b0619cad5e3329 binkplayer-1.8h.ebuild 741
-RMD160 10fdd79917cfda4063570d544c2dbe67eb860192 binkplayer-1.8h.ebuild 741
-SHA256 0c5251fa65ea0796c2c1b373da55753e72bf0ba4a0313f3681562a41b14a29e4 binkplayer-1.8h.ebuild 741
+MD5 0ef03c6ae4a65430428288b3d79af170 binkplayer-1.8h.ebuild 789
+RMD160 277f2f5a3408e596752f404c71b11c78bd4b26ee binkplayer-1.8h.ebuild 789
+SHA256 7aaa0ed0ec99b5cc1e3cbca6eeaeaa52fc2f9ef1aebba2e0a32c26d394abb713 binkplayer-1.8h.ebuild 789
 MD5 2bd9e9971bf501fde61632271c25557b files/digest-binkplayer-1.8c 64
 RMD160 c2f73e473c4d81a6f02f13873741e4ebfc1cef89 files/digest-binkplayer-1.8c 64
 SHA256 0ef3025c63c07a7184bbfb52e9b43721f70c15d7967af56dad6ebb231e36b4fd files/digest-binkplayer-1.8c 64
@@ -16,3 +19,10 @@ SHA256 f5bab2f33bc93282c2cd8afa6bff9231d487c9fe2c41b4ae21c5f6cb6b027849 files/di
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 RMD160 edfd7098309a79bf140ffa458a5aa83cba3ee2f6 metadata.xml 241
 SHA256 62d54b667daab0ce705caaf3300fac04c64f2a256b6b1ba5efc635f06dc9df2e metadata.xml 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEKozn2G5bA0cA/ScRAqkRAKCTx+xWK13vUQheudnLgVQ83pvHRACgnuks
+nVrxZg08w+nmaD5kbex0gno=
+=S38p
+-----END PGP SIGNATURE-----
