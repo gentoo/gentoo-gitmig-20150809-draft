@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2.ebuild,v 1.2 2006/03/24 12:33:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2.ebuild,v 1.3 2006/03/29 01:22:15 flameeyes Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -54,6 +54,8 @@ PATCHES="${FILESDIR}/${PN}-3.5.0-bindnow.patch
 	${FILESDIR}/${P}-xorg7-rgbtxt.patch"
 
 src_compile() {
+	rm -f ${S}/configure
+
 	# hspell is disabled because it requires version 0.9 of hspell that
 	# is not in portage yet; leaving it to autodetection tries to use it
 	# and then fails because of missing required functions
