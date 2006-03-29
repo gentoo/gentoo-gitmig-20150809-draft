@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/vamps-0.99.1.ebuild,v 1.1 2006/03/29 00:57:59 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/vamps-0.99.1.ebuild,v 1.2 2006/03/29 22:31:28 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}
 	>=media-video/dvdauthor-0.6.10"
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {

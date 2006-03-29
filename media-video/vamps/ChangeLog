@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vamps
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/ChangeLog,v 1.13 2006/03/29 00:57:58 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/ChangeLog,v 1.14 2006/03/29 22:31:28 flameeyes Exp $
+
+  29 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> vamps-0.99.1.ebuild:
+  Respect LDFLAGS, this also drops -s from them and allows to leave to portage
+  the stripping job.
 
 *vamps-0.99.1 (29 Mar 2006)
 
