@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r4.ebuild,v 1.1 2006/02/16 19:13:08 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r4.ebuild,v 1.2 2006/03/29 23:59:44 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,11 +16,17 @@ LICENSE="X11"
 SLOT="0"
 KEYWORDS="-alpha ~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="app-text/rman
+RDEPEND="app-text/rman
 	sys-libs/ncurses
 	|| ( ( x11-libs/libXmu x11-libs/libXpm x11-libs/libxkbfile )
 	     virtual/x11 )
 	Xaw3d? ( x11-libs/Xaw3d )"
+
+DEPEND="${RDEPEND}
+	|| ( (
+			x11-misc/gccmakedep
+			x11-misc/imake
+		) virtual/x11 )"
 
 src_unpack(){
 	unpack ${A}
@@ -40,18 +46,21 @@ src_unpack(){
 
 src_compile(){
 	xmkmf -a || die
-	emake EXTRA_LDOPTIONS="$(bindnow-flags)" || die
+	emake CC="$(tc-getCC)" CDEBUGFLAGS="${CFLAGS}" LOCAL_LDFLAGS="${LDFLAGS}" \
+		XAPPLOADDIR=/etc/X11/app-defaults EXTRA_LDOPTIONS="$(bindnow-flags)" || die "emake failed"
 }
 
 src_install(){
-
-	einstall DESTDIR=${D} BINDIR=/usr/bin || die
+	einstall DESTDIR=${D} BINDIR=/usr/bin XAPPLOADDIR=/etc/X11/app-defaults || die
 
 	# install man pages
 	newman kterm.man kterm.1
 	insinto /usr/share/man/ja/man1
 	iconv -f ISO-2022-JP -t EUC-JP kterm.jman > kterm.ja.1
 	newins kterm.ja.1 kterm.1
+
+	# Remove link to avoid collision
+	rm -f ${D}/usr/lib/X11/app-defaults
 
 	dodoc README.kt
 }
