@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-2.15.ebuild,v 1.1 2005/11/03 01:41:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-2.15.ebuild,v 1.2 2006/03/29 15:38:57 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="static build"
 
 DEPEND=""
