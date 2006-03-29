@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r1.ebuild,v 1.2 2006/03/18 00:53:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r1.ebuild,v 1.3 2006/03/29 04:41:23 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -818,19 +818,16 @@ want_nptl() {
 	want_tls || return 1
 	use nptl || return 1
 
-	# Archs that can use NPTL
+	# Only list the arches that cannot do NPTL
 	case $(tc-arch) in
-		alpha|amd64|ia64|mips|ppc|ppc64|s390|sh|x86)
-			return 0;
-		;;
+		hppa|m68k) return 1;;
 		sparc)
 			# >= v9 is needed for nptl.
 			[[ "${PROFILE_ARCH}" == "sparc" ]] && return 1
-			return 0;
 		;;
 	esac
 
-	return 1
+	return 0
 }
 
 want_linuxthreads() {
@@ -1092,6 +1089,7 @@ RESTRICT="nostrip multilib-pkg-force"
 # arch: we need to make sure our binutils/gcc supports TLS
 DEPEND=">=sys-devel/gcc-3.4.4
 	arm? ( >=sys-devel/binutils-2.16.90 >=sys-devel/gcc-4.1.0 )
+	ppc? ( >=sys-devel/gcc-4.0.0 )
 	nptl? ( >=sys-kernel/linux-headers-2.6.5 )
 	>=sys-devel/binutils-2.15.94
 	>=sys-devel/gcc-config-1.3.12
