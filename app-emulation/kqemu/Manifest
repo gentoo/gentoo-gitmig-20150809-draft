@@ -1,4 +1,14 @@
-MD5 53f7645b6bb9b1e93a2c600e861cd4af ChangeLog 558
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9fffb30ae4de9f693ffaf47d40d7a2c3 ChangeLog 675
 MD5 22d8bd748c6ab7d096d531da636bf5da files/digest-kqemu-0.7.2 125
-MD5 d0c6e3a842a7d26aefd8c7a62ed668e6 kqemu-0.7.2.ebuild 2552
+MD5 a3bbd803fb3b182c28cf3091ee026b2b kqemu-0.7.2.ebuild 2554
 MD5 898131aae735c3477ff2f9c6882f1178 metadata.xml 223
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEKj9qFdQwWVoAgN4RAhwdAKDc+yCiTBiIxUmGlQP8rssR5zp/bQCfZK8u
+0+gafIkDWPTVQa296eXLsPQ=
+=fXYA
+-----END PGP SIGNATURE-----
