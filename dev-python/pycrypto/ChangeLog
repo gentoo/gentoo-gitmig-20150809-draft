@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.36 2006/03/20 22:24:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.37 2006/03/29 13:52:03 agriffis Exp $
+
+  29 Mar 2006; Aron Griffis <agriffis@gentoo.org> pycrypto-2.0.1-r4.ebuild:
+  Mark 2.0.1-r4 stable on ia64
 
   20 Mar 2006; Luca Barbato <lu_zero@gentoo.org> pycrypto-2.0.1-r4.ebuild:
   Marked ppc
