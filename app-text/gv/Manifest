@@ -1,64 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f8685e5857d59a356c2e81d1b9a026ef ChangeLog 5086
-RMD160 eed651b798690a643566d1059db96f926e9f4313 ChangeLog 5086
-SHA256 f97f60ad80060217a423118c1900e6863dc1515c69e0e580da2b7083dd28fcdb ChangeLog 5086
+MD5 da203fa8d23e768611d32b575ff835dd ChangeLog 5188
 MD5 8f60d24f315a2d3035f0fd78c06a3f9c files/3.5.8-gcc3.patch 490
-RMD160 3aa6305c0ba53b207779550ee618ea176799c653 files/3.5.8-gcc3.patch 490
-SHA256 6e16e190f32fce3070b4192fca912b3ac247d8a8a780075ddd4b6b1968958a26 files/3.5.8-gcc3.patch 490
 MD5 58e541e2bfa2062aaccea95f9cbaed2b files/digest-gv-3.5.8-r4 126
-RMD160 aff80fda6379b33e0708ed60c2f7157c541cde63 files/digest-gv-3.5.8-r4 126
-SHA256 f9e5bd4caba9bb03019f52e789a73be205211be9153e33ede4d0be3b4a12ae69 files/digest-gv-3.5.8-r4 126
 MD5 05a9505958dac0203a0c43462f7e9ce2 files/digest-gv-3.6.1 123
-RMD160 58babd16a24fb0ddbcc65ff9c2e1f458b32b58ca files/digest-gv-3.6.1 123
-SHA256 0c84f5544fcc5d6639c01a914323470c639ebab5bf8957e8b5acf8d62ec843aa files/digest-gv-3.6.1 123
 MD5 05a9505958dac0203a0c43462f7e9ce2 files/digest-gv-3.6.1-r1 123
-RMD160 58babd16a24fb0ddbcc65ff9c2e1f458b32b58ca files/digest-gv-3.6.1-r1 123
-SHA256 0c84f5544fcc5d6639c01a914323470c639ebab5bf8957e8b5acf8d62ec843aa files/digest-gv-3.6.1-r1 123
 MD5 033a6aae1f6c429fbb5bdc60a8acafa2 files/digest-gv-3.6.1-r2 461
-RMD160 641d5f72d81664a6f2e92c5d09e18c6c7868526b files/digest-gv-3.6.1-r2 461
-SHA256 0f2e044da716931b46dfd338afb7d9ce427e07048413f0c52b9c025edb5e0989 files/digest-gv-3.6.1-r2 461
 MD5 edd147a5f4d3877aa67c2d6766e79d21 files/gv-3.5.8-antialias.patch 336
-RMD160 9b246e569ada62123937a5e7200b03ee9b3872db files/gv-3.5.8-antialias.patch 336
-SHA256 0166061bb5f4c284e9984ca6edfb10fb6218be0f9de10bd60334411603e4ddd5 files/gv-3.5.8-antialias.patch 336
 MD5 7d78a05e583db8e620f61c7dfefddab3 files/gv-3.5.8-r2-gentoo.diff 2577
-RMD160 b9a85e2d3a27871b1813ffa64d85a504fef4d38d files/gv-3.5.8-r2-gentoo.diff 2577
-SHA256 c8a2d109f8357e664adf4cfdabb8bb1ea0881ee67c31f288c65f6c05a74ab6b7 files/gv-3.5.8-r2-gentoo.diff 2577
 MD5 4ab2eba7eeaaab4533a4f3103d54f10c files/gv-3.5.8-setenv.diff 384
-RMD160 fe2671771a380b615c0426d0a88e01414e96bf64 files/gv-3.5.8-setenv.diff 384
-SHA256 6f2f943762a551fa66f2e44f3f1499b5c0e2eb94bfca173bd4811a1b3a72ba06 files/gv-3.5.8-setenv.diff 384
 MD5 cdda43ebb8ee0fa1525767cd36b0aa81 files/gv-3.6.1-a0.patch 2429
-RMD160 a5f563ed40cab27a2e512df15a12cb6b68156afd files/gv-3.6.1-a0.patch 2429
-SHA256 c63430027c130b10fb60a1f1a6268010cc20d371a6984b52e0762bedfda32479 files/gv-3.6.1-a0.patch 2429
 MD5 4dda8a392fb59b4a5e3c0f25ad773b34 files/gv-3.6.1-landscape.patch 464
-RMD160 8ffc632f9ef830477bdbc0be13d5bfcd4ef7c6cf files/gv-3.6.1-landscape.patch 464
-SHA256 774715b5a4f9e2d4114e49313c0c60e5cf9e05fa1f48c086e7c230e851b05b89 files/gv-3.6.1-landscape.patch 464
 MD5 365f92dfb8a1d598913847341e8fec7f files/gv-3.6.1-scrollbar.patch 395
-RMD160 0f98d24f323abb5cdd1c607e560bbdda8ad359ab files/gv-3.6.1-scrollbar.patch 395
-SHA256 093d2c8cc332336e3659a3473a420569507b0cb9fa2ac9d5954587b82ca4db4a files/gv-3.6.1-scrollbar.patch 395
 MD5 8d217b566c2eeae39312f35d950610bb files/gv-3.6.1-setenv.patch 378
-RMD160 c616fb1b0b50f14e2b3783755cbc87ade85f5541 files/gv-3.6.1-setenv.patch 378
-SHA256 6456009404d6c0d75f314901dece2c0ee33a0c45ab451c68aec1e31e9601ab68 files/gv-3.6.1-setenv.patch 378
 MD5 002ba248bf14653b1487aa1c49b4da80 gv-3.5.8-r4.ebuild 1727
-RMD160 f97e10108bf7376810014df3ceb62432641631f6 gv-3.5.8-r4.ebuild 1727
-SHA256 13d7ceb57bdbfbe0b5a9d9d22cf16ad070482bd685508a871404d32e290f75dd gv-3.5.8-r4.ebuild 1727
 MD5 651cc5e733968fbada1acd5c6daf9fe5 gv-3.6.1-r1.ebuild 1272
-RMD160 6618929bfef0ee6b0c606301b867f9880b5b9de1 gv-3.6.1-r1.ebuild 1272
-SHA256 2dd9fe31be31d21aad5e5344a58532c67aadf36bdbdc946ca7335726dd7e5075 gv-3.6.1-r1.ebuild 1272
-MD5 769db7e803187fa8ba6e5de52c15cca8 gv-3.6.1-r2.ebuild 1207
-RMD160 ab010d555c5db17f0f93d6f743df2558d5614c7b gv-3.6.1-r2.ebuild 1207
-SHA256 5bd471508e8416575c540049bd978dbaa8abcee97e470d3b17f34a3f07f86d3e gv-3.6.1-r2.ebuild 1207
+MD5 31eb1149a45b9ce8d7f711f592e28820 gv-3.6.1-r2.ebuild 1207
 MD5 a23958c6c1ce1c30e492bb849ff7ecd7 gv-3.6.1.ebuild 1228
-RMD160 865ac14bfa3f308dcc56b19d70c6ec8e44baa40d gv-3.6.1.ebuild 1228
-SHA256 56c65b5db219eb5762defa6fa9aa977ab5c2ecc9d07a32300d378fefcfce7e82 gv-3.6.1.ebuild 1228
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 metadata.xml 161
-SHA256 7c85e6739a71f5bb23e8de36c88677d772946e61f7285892f7554e37bd2bca76 metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEKsuioFw4q70f3SsRArbSAJ93N6GfT6lT0EqIs2eZxfgg+qtG9gCeNf4G
-ADZJ4hO+CX7XelEchOpSOds=
-=s9BY
------END PGP SIGNATURE-----
