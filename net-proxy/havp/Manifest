@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8e5979a00867083bef539006bbbb6723 ChangeLog 539
-MD5 5f0038e98c854750a47b461140103117 files/digest-havp-0.76 61
+MD5 a266c2f24cf956a1cc5f4804ae67c183 ChangeLog 807
 MD5 a10c233cad7f2b08b3ff13e2da257120 files/digest-havp-0.77 61
-MD5 84d09e8602d90d8f9be9fffbd4dbf0d3 files/havp-0.76-gentoo.patch 1684
+MD5 ea5ad10659ea39e44e15b16c6be4c541 files/digest-havp-0.78 60
 MD5 cd66ecd53dbfd35a54b9b087896b44b3 files/havp-0.77-gentoo.patch 1684
-MD5 2a830a7c8f88a3fc5df6dc89e67bef72 files/havp.initd 1604
-MD5 d6ea90eaf342c7105a4db463b0d22b05 havp-0.76.ebuild 1064
+MD5 f5745a5052fb698dc7078955d4735ac8 files/havp-0.78-gentoo.patch 1433
+MD5 48ac043ca62a4c30df42d90463e3ce96 files/havp.initd 1600
 MD5 d989585ab486e6582c1bc13542b64c7f havp-0.77.ebuild 1064
+MD5 9dfea6c3245ddb0b792a1846290475d3 havp-0.78.ebuild 1513
 MD5 eeef2b4ba39eb40826f14b0bd0489563 metadata.xml 309
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDIgAjG8pv1lIUX4RAg0ZAKCW2NcGX+0zkxi7QfLE31DXgSTZewCfUeMm
-PAKzGfoLbh4ff7TQl+YrAl4=
-=1m8k
+iD8DBQFEKv+NjG8pv1lIUX4RAgUyAJwOV7BJVhWaQzS+vmDUmlcCRc2OuACeO94h
+bmUzOAxyDjPEzPqjSreayAs=
+=HGp1
 -----END PGP SIGNATURE-----

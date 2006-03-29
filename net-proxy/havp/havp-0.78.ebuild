@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.76.ebuild,v 1.1 2006/01/15 20:28:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.78.ebuild,v 1.1 2006/03/29 21:43:19 mrness Exp $
 
 inherit eutils
 
@@ -11,9 +11,14 @@ SRC_URI="http://www.server-side.de/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="ssl"
 
 DEPEND="app-antivirus/clamav"
+
+pkg_setup() {
+	enewgroup havp
+	enewuser havp -1 -1 /etc/havp havp
+}
 
 src_unpack() {
 	unpack ${A}
@@ -22,8 +27,13 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --with-scanner=libclamav || die "configure failed"
+	econf --with-scanner=libclamav \
+		$(use_enable ssl ssl-tunnel) || die "configure failed"
 	emake || die "make failed"
+}
+
+pkg_preinst() {
+	pkg_setup
 }
 
 src_install() {
@@ -34,7 +44,7 @@ src_install() {
 	insinto /etc
 	doins -r etc/havp
 
-	diropts -m 0700 -o nobody -g nobody
+	diropts -m 0700 -o havp -g havp
 	keepdir /var/log/havp
 
 	diropts -m 0750
@@ -46,4 +56,12 @@ src_install() {
 pkg_postinst() {
 	ewarn "/var/tmp/havp must be on a filesystem with mandatory locks!"
 	ewarn "You should add  \"mand\" to the mount options on the relevant line in /etc/fstab."
+
+	if use ssl; then
+		echo
+		ewarn "Note: ssl USE flag only enable SSL pass-through, which means that"
+		ewarn "      HTTPS pages will not be scanned for viruses!"
+		ewarn "      It is impossible to decrypt data sent through SSL connections without knowing"
+		ewarn "      the private key of the used certificate."
+	fi
 }

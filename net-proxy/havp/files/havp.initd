@@ -40,7 +40,7 @@ checkconfig() {
 		return 1
 	fi
 
-	chown -R "${HAVP_USER:-nobody}:${HAVP_GROUP:-nobody}" /var/run/havp /var/tmp/havp /var/log/havp && \
+	chown -R "${HAVP_USER:-havp}:${HAVP_GROUP:-havp}" /var/run/havp /var/tmp/havp /var/log/havp && \
 		chmod -R 0755 /var/run/havp &&
 		chmod -R 0750 /var/tmp/havp
 }
