@@ -1,6 +1,34 @@
-MD5 02c33fd4163900c17e1548fac442288e ChangeLog 650
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a6afe08e48f399ec29c883bc3a072baf ChangeLog 776
+RMD160 d95f8925d0ade98ca63f2c0ebdef3a118b3df265 ChangeLog 776
+SHA256 0e187f28a08495851e65d4d1fb5c4b9700ea278808828440e011043051379be8 ChangeLog 776
 MD5 9b18aef59e3434127d643002b1b40d6b feedparser-3.3.ebuild 529
+RMD160 f9b8446112854fc5e52f47d3f0a99238a12af47f feedparser-3.3.ebuild 529
+SHA256 a4b673166ef315c96e26be89c3f4212ac9a0f31ee3841ac4ae008678c01f8caf feedparser-3.3.ebuild 529
 MD5 911dfda87934d40698ba5d35e4d216bd feedparser-4.0.2.ebuild 589
+RMD160 9344f4a8df56460195952e7e44562ba62e11f8eb feedparser-4.0.2.ebuild 589
+SHA256 3f06876452ae3ae510a6dee2af7f57b0d72f424afe913e41dbd781a4305bcd7c feedparser-4.0.2.ebuild 589
+MD5 b5618f1e9cea61e161f6dbbb643c1adb feedparser-4.1.ebuild 581
+RMD160 a3a7381173c41c5e33259c76e837a12f53d9cbdf feedparser-4.1.ebuild 581
+SHA256 782aa2d0043b1827da0c2c821470fa63b27af6a5249e95dfe784ae528bafd321 feedparser-4.1.ebuild 581
 MD5 b0222ca706868c50f88eb300754aef0a files/digest-feedparser-3.3 63
+RMD160 681bbbdb94224e10691f7a7f3e65ba535339592f files/digest-feedparser-3.3 63
+SHA256 0e7e3f482f179507c02bcfb63854843afe0664953aa880dee55e86b8471aa7ea files/digest-feedparser-3.3 63
 MD5 018a36a7d8917e63c612fc37dae540c0 files/digest-feedparser-4.0.2 65
+RMD160 275803c81b719b4b03794e5a7f8ca8d5381f7a3e files/digest-feedparser-4.0.2 65
+SHA256 0cade050d32b2c8bc4e5bf7bc60caede440ba0d69054cf5e8664bba3460f4251 files/digest-feedparser-4.0.2 65
+MD5 5f1d4521a9da59209661349a1e7036e6 files/digest-feedparser-4.1 235
+RMD160 a1ba4c235c14590f51071cd35903d3ded5e35aaa files/digest-feedparser-4.1 235
+SHA256 9ad79898868281c760914a2ec5093a5da5a5c74c4855275eedf0d5594a9fc9aa files/digest-feedparser-4.1 235
 MD5 539454f93a140308dd2f8c03c20bf6ed metadata.xml 262
+RMD160 a3cefad4b9969818c51b29821e04decd168b8d42 metadata.xml 262
+SHA256 663d5f1be72528c4e41547424ce620b40f15c584f2d543c8f61fe3e78a46475e metadata.xml 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEKueg2jLqHNfbg2URAjdwAKCVBi43uWjF0+4ya7pgqC+EM2xL4gCcCmTa
+yMjDIWuNuGv988ZEc21EizQ=
+=+/xf
+-----END PGP SIGNATURE-----

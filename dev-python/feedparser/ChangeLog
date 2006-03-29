@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/feedparser
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.3 2006/01/24 22:20:02 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.4 2006/03/29 20:01:15 lucass Exp $
+
+*feedparser-4.1 (29 Mar 2006)
+
+  29 Mar 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  +feedparser-4.1.ebuild:
+  Version bump.
 
   24 Jan 2006; Patrick McLean <chutzpah@gentoo.org> feedparser-4.0.2.ebuild:
   Added to ~amd64 (bug #117999).
