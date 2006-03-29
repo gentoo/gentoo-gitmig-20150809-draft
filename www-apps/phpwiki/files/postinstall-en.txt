@@ -1,3 +1,0 @@
-The default configuration uses a dbm file in /tmp
-Be sure to read the install notes in /usr/share/doc/${PN}-${PVR}/
-and edit ${MY_INSTALLDIR}/lib/config.php

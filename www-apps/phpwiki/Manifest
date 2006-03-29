@@ -1,23 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 05402f09b238564a595c82bc530e7c16 phpwiki-1.3.11_p1.ebuild 1081
-MD5 0e0656e94faa81334e0b0e937dc06b3f phpwiki-1.3.10-r2.ebuild 1229
-MD5 7870ec11a758a71d9d638a7f791ef3e4 phpwiki-1.2.10.ebuild 863
-MD5 690383a77d247fcc928f2207d6486f80 ChangeLog 2135
-MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 34741d64857cb87b65ea9400953237d8 phpwiki-1.2.4.ebuild 803
-MD5 0f4fc17101f4550723b32e758d195217 files/digest-phpwiki-1.2.10 66
-MD5 ff52ad7411357bb8e96d7f1c99707247 files/postinstall-en.txt 157
+MD5 254c1655e5f050196d889b3fb0e6f459 ChangeLog 2281
+RMD160 a95741ef90785e2d6d7b928903802e143cd46608 ChangeLog 2281
+SHA256 2e27e89c3e36d02f47cfe8324bbdd25e2ddfc252882a984c2f88de709b5a5104 ChangeLog 2281
 MD5 d6a81010992f94a63b01bf0eb9b37b43 files/digest-phpwiki-1.3.10-r2 132
+RMD160 356c6d8b9707f86b9d23470902b477649e315811 files/digest-phpwiki-1.3.10-r2 132
+SHA256 e540ab96077ecf962cb05f92d3df0075df2c682f6a380a3758aa628cfdd9371e files/digest-phpwiki-1.3.10-r2 132
 MD5 c4ad4bf7460c92c29964e31e459e4a47 files/digest-phpwiki-1.3.11_p1 69
-MD5 ff24b9aaad40f0010b48db737984659d files/postinstall-1.3-en.txt 248
+RMD160 a814d5986e360e871a44de80215e199b69558245 files/digest-phpwiki-1.3.11_p1 69
+SHA256 0a44b1dd7becf2772be4b6be008b3827ad9042f1898ab93c7a585571d10f67d2 files/digest-phpwiki-1.3.11_p1 69
 MD5 3259bf9dc4bef8f25c35478900932b96 files/phpwiki-1.3.10-xmlrpc.patch 959
-MD5 61ddc0899b2191583eb5755c954e5f14 files/digest-phpwiki-1.2.4 65
+RMD160 2905d21a1d7a374294aa709c8adc267477905f67 files/phpwiki-1.3.10-xmlrpc.patch 959
+SHA256 fdfb8144b77918dc67e0710a0b95b724956cb5c648df29eb59904eae0db87dbf files/phpwiki-1.3.10-xmlrpc.patch 959
+MD5 ff24b9aaad40f0010b48db737984659d files/postinstall-1.3-en.txt 248
+RMD160 5c573060068506d1ee2596b2d88434dff2e0d1c1 files/postinstall-1.3-en.txt 248
+SHA256 9fdf6c2c25342d247107beb7069ad7c9ab79f2cd9cea2c5993fa517135b936fd files/postinstall-1.3-en.txt 248
+MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+RMD160 d47e924599b33a35a50f4c9f5564d325c271f83b metadata.xml 161
+SHA256 9cd891fcf0af580e98b62d2f4ded9e53671599f5a7aafd5dce692b996d2a83f4 metadata.xml 161
+MD5 0e0656e94faa81334e0b0e937dc06b3f phpwiki-1.3.10-r2.ebuild 1229
+RMD160 a5ad2776a166e4a70a2cc28f7a8e454a7f229a6e phpwiki-1.3.10-r2.ebuild 1229
+SHA256 b7aa4d74d052bc4c476f826852178b055988d683cf299a866778b569d5d59db8 phpwiki-1.3.10-r2.ebuild 1229
+MD5 05402f09b238564a595c82bc530e7c16 phpwiki-1.3.11_p1.ebuild 1081
+RMD160 e0d32866fdb04559577a9a0a4e3c3b3c598c64a4 phpwiki-1.3.11_p1.ebuild 1081
+SHA256 dd6eee2b3b3061f3b9d0755aebde6820089d31d621b8a909dbbbc50e176cc3c4 phpwiki-1.3.11_p1.ebuild 1081
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDidjPEzitwsaoONoRAqa0AJ9fupqnWF/9eLWFtexPVr4JeNj3EgCeMx07
-WSkTx+w2o8WQtq7iWk+Jn3M=
-=Nl81
+iD8DBQFEKphmEzitwsaoONoRAiJZAKCS7JQeoNT0bDdd0dTr/LRt0ozj0gCfYqgx
+bB3T+qHAMUwVEzTUucnPdqg=
+=0HBX
 -----END PGP SIGNATURE-----
