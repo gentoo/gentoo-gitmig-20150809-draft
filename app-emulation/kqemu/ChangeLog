@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/kqemu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/ChangeLog,v 1.4 2006/03/29 08:02:54 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/ChangeLog,v 1.5 2006/03/29 10:46:51 lu_zero Exp $
+
+*kqemu-1.3.0_pre5 (29 Mar 2006)
+
+  29 Mar 2006; Luca Barbato <lu_zero@gentoo.org> +kqemu-1.3.0_pre5.ebuild:
+  New kqemu, thanks to Sven <skoehler@upb.de>
 
   29 Mar 2006; Chris White <chriswhite@gentoo.org> kqemu-0.7.2.ebuild:
   x86 stable for kqemu-0.7.2 bug #123972.
