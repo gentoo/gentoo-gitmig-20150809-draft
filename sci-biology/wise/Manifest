@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 97393ad84323e71d804576da8535c985 ChangeLog 977
+MD5 56b1d224e4f3a77a21143801e661a4a1 ChangeLog 1075
 MD5 ecb140907c2def41cb150412463da2c3 files/digest-wise-2.1.23c 64
 MD5 dfe3a28949733a00d7126ed491e8b3f2 files/digest-wise-2.2.0 62
 MD5 6c1b047599122f062a65ad125739936b files/wise-api.tex.patch 2234
 MD5 7321fc88d375cef4db1411e6e6c867ab files/wise-env 40
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 941a4f8bde488eb8c26a9dc20567a2de wise-2.1.23c.ebuild 1504
-MD5 c5b1dd620ba446c3af964d6969642b43 wise-2.2.0.ebuild 1692
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD/PyVJrHF4yAQTrARAs7oAKDERXz77Tav4Hd0/x8O1VTDaitvSgCfdsy6
-xm/dYnFOscMi5KBXAJglNXo=
-=GHoV
------END PGP SIGNATURE-----
+MD5 a0d4b513e26928277874cc46011c5a41 wise-2.2.0.ebuild 1691
