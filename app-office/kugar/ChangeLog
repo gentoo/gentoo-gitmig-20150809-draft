@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kugar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/ChangeLog,v 1.31 2006/03/11 15:45:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/ChangeLog,v 1.32 2006/03/29 15:04:35 carlo Exp $
+
+*kugar-1.5_rc1 (29 Mar 2006)
+
+  29 Mar 2006; Carsten Lohrke <carlo@gentoo.org> +kugar-1.5_rc1.ebuild:
+  Version bump.
 
 *kugar-1.5_beta2 (11 Mar 2006)
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.32 2006/03/11 15:44:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.33 2006/03/29 15:03:27 carlo Exp $
+
+*krita-1.5_rc1 (29 Mar 2006)
+
+  29 Mar 2006; Carsten Lohrke <carlo@gentoo.org> +krita-1.5_rc1.ebuild:
+  Version bump.
 
 *krita-1.5_beta2 (11 Mar 2006)
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.5 2006/03/11 15:57:57 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.6 2006/03/29 15:18:30 carlo Exp $
+
+*kplato-1.5_rc1 (29 Mar 2006)
+
+  29 Mar 2006; Carsten Lohrke <carlo@gentoo.org> +kplato-1.5_rc1.ebuild:
+  Version bump.
 
 *kplato-1.5_beta2 (11 Mar 2006)
 
