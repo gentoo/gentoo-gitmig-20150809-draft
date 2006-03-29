@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.62.ebuild,v 1.4 2005/05/04 11:57:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.62.ebuild,v 1.5 2006/03/29 05:09:59 rphillips Exp $
 
 DESCRIPTION="A free source code editing component for the FOX-Toolkit"
 HOMEPAGE="http://www.nongnu.org/fxscintilla"
@@ -23,8 +23,6 @@ src_install () {
 	dodoc README INSTALL
 
 	# give libraries the .so
-#	ld --soname libfxscintilla.so.16 --shared ${D}/usr/lib/libfxscintilla.16.0.0 -o ${D}/usr/lib/libfxscintilla.so.16.0.0
-#	rm -f ${D}/usr/lib/libfxscintilla.16.0.0
 	mv ${D}/usr/lib/libfxscintilla.16.0.0 ${D}/usr/lib/libfxscintilla.so.16.0.0
 	rm -f ${D}/usr/lib/libfxscintilla.16
 	rm -f ${D}/usr/lib/libfxscintilla
