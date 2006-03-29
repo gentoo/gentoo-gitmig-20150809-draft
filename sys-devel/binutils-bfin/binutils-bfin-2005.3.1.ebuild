@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-bfin/binutils-bfin-2005.3.1.ebuild,v 1.2 2006/01/13 22:54:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-bfin/binutils-bfin-2005.3.1.ebuild,v 1.3 2006/03/29 05:39:23 vapier Exp $
 
 [[ ${CTARGET} != bfin* && ${CATEGORY} == "sys-devel" ]] && export CTARGET="bfin-elf"
 
@@ -14,7 +14,7 @@ DESCRIPTION="Binutils for Blackfin targets"
 HOMEPAGE="http://blackfin.uclinux.org/"
 SRC_URI="http://blackfin.uclinux.org/frs/download.php/${STUPID_STAMP}/bfin-gcc-${MY_PV}.tar.gz"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 
 S=${WORKDIR}/bfin-gcc-${MY_PV}/binutils/binutils-${BINUTILS_VER}
 
