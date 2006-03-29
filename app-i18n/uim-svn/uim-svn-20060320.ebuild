@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.1 2006/03/20 14:52:50 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.2 2006/03/29 12:31:33 hattya Exp $
 
 inherit elisp-common flag-o-matic kde-functions multilib subversion
 
@@ -24,9 +24,6 @@ DEPEND="${RDEPEND}
 	   	 	  virtual/x11 ) )
 	nls? ( sys-devel/gettext )"
 RDEPEND="!app-i18n/uim
-	!app-i18n/uim-fep
-	!app-i18n/uim-kdehelper
-	!app-emacs/uim-el
 	X? ( || ( (
 	   	 	    x11-libs/libX11
 				x11-libs/libXft
