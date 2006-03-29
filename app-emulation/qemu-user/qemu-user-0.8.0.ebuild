@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.8.0.ebuild,v 1.2 2006/01/09 01:28:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.8.0.ebuild,v 1.3 2006/03/29 07:47:00 chriswhite Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://fabrice.bellard.free.fr/qemu/${P/-user/}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc -alpha -sparc ~amd64"
+KEYWORDS="x86 ~ppc -alpha -sparc ~amd64"
 IUSE=""  #qvm86 debug nptl qemu-fast nptlonly"
 RESTRICT="nostrip"
 

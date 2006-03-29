@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.6 2006/01/09 01:28:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.7 2006/03/29 07:47:00 chriswhite Exp $
+
+  29 Mar 2006; Chris White <chriswhite@gentoo.org> qemu-user-0.8.0.ebuild:
+  x88 stable for qemu-user-0.8.0 bug #123972.
 
   09 Jan 2006; Luca Barbato <lu_zero@gentoo.org> qemu-user-0.8.0.ebuild:
   Disable gcc checks, thanks to Robert Führicht <the_master_of_disaster@gmx.at>
