@@ -1,0 +1,11 @@
+--- Makefile	2006/03/11 00:15:55	1.1
++++ Makefile	2006/03/11 00:16:44
+@@ -15,7 +15,7 @@ KDIR ?= /lib/modules/`uname -r`/build
+ MODPATH ?= /lib/modules/`uname -r`/kernel/drivers/net/wireless
+ 
+ modules:
+-	make -C $(KDIR) CFLAGS_MODULE="$(CFLAGS)" SUBDIRS=`pwd`/drivers/net/wireless/bcm43xx CONFIG_BCM43XX=m $(DBG_CONFIG) CONFIG_BCM43XX_DMA=y CONFIG_BCM43XX_PIO=y CC="${CROSS_COMPILE}gcc" modules
++	make -C $(KDIR) SUBDIRS=`pwd`/drivers/net/wireless/bcm43xx CONFIG_BCM43XX=m $(DBG_CONFIG) CONFIG_BCM43XX_DMA=y CONFIG_BCM43XX_PIO=y CC="${CROSS_COMPILE}gcc -I/usr/include/softmac $(CFLAGS)" modules
+ 
+ install: modules
+ 	install -d $(MODPATH)

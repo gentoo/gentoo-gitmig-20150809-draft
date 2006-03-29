@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bcm43xx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/ChangeLog,v 1.7 2006/03/01 21:44:10 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/ChangeLog,v 1.8 2006/03/29 23:49:46 josejx Exp $
+
+*bcm43xx-0.0.1-r20060329 (28 Mar 2006)
+
+  28 Mar 2006; Joseph Jezak <josejx@gentoo.org> +files/fix-Makefile.patch,
+  +bcm43xx-0.0.1-r20060329.ebuild:
+  Added latest version, thanks to ecatmur for the ebuilds.
 
   01 Mar 2006; Danny van Dyk <kugelfang@gentoo.org>
   bcm43xx-0.0.1-r20060105.ebuild, bcm43xx-0.0.1-r20060125.ebuild:
