@@ -1,6 +1,34 @@
-MD5 2cf8ab9cdf5cfca1f7afd4dc773cf62d ChangeLog 1022
-MD5 139690e40ffcdc872c21b4f6ffbc0469 inform-6.21.3.ebuild 1784
-MD5 755fa07be6b6ac9469947152958d6138 inform-6.21.4.ebuild 1832
-MD5 c38827226877c41b9e3ffad18cfc5c80 metadata.xml 2460
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8cfb339e9c73a1355506dd37a74a4697 ChangeLog 1191
+RMD160 f860195b1a8b3e39af8602bbd9c7b8ab96dfae62 ChangeLog 1191
+SHA256 95b243f94142516b7be061da82e430c02398b635d6558da5b294e529ddbe3583 ChangeLog 1191
 MD5 2474dc80de3f2983d702bf01bda64cf7 files/digest-inform-6.21.3 124
+RMD160 2c5da04653eb93e4dbd843124ef44e23f3bfcf9b files/digest-inform-6.21.3 124
+SHA256 63e1ecf153c8dec516210c4f7c6fc70b508552c10a01160e32d2d4d4e17fcd9f files/digest-inform-6.21.3 124
 MD5 923565593fb09926c934ecbecb5d0027 files/digest-inform-6.21.4 124
+RMD160 0970d3851000cfbc76a83a8041a6e4684c60b850 files/digest-inform-6.21.4 124
+SHA256 cf5e0174c172fea076e676ced6c3e58b8ba23178f486f0766153dc4a3441a13d files/digest-inform-6.21.4 124
+MD5 1fc29b4715114867d2998e42c2230804 files/digest-inform-6.30.2 244
+RMD160 426aec980f5f0c42e6370be718936b81cd133303 files/digest-inform-6.30.2 244
+SHA256 b1d8237ddfc202752d72bf0a8d6c223ad5782e7e6f2757eb63cd918b9d0d56f3 files/digest-inform-6.30.2 244
+MD5 139690e40ffcdc872c21b4f6ffbc0469 inform-6.21.3.ebuild 1784
+RMD160 c450598fdebf50c15e959dcd06ce7cbd76a4eac9 inform-6.21.3.ebuild 1784
+SHA256 e0fea1eee3be01054b84855295ba753a594cbbee86d0e996eeb5ebdae77188ec inform-6.21.3.ebuild 1784
+MD5 755fa07be6b6ac9469947152958d6138 inform-6.21.4.ebuild 1832
+RMD160 da25ff8066efc31f38d46519fbf3f48a72abd4a7 inform-6.21.4.ebuild 1832
+SHA256 15dd1f4e4ee9efbccc97c33ac5966b7c8f7dc918093065f7bc4d0e732c6047e2 inform-6.21.4.ebuild 1832
+MD5 7df4d99b0e4c9666f5a4d4aebb85f71b inform-6.30.2.ebuild 956
+RMD160 a0490fb3ac6c3a06c3b2dc82da6112a3d8802a8e inform-6.30.2.ebuild 956
+SHA256 2a9674bb2f581187907df6e2773144ffbc812e9202b8e44a957362bfebf0d2be inform-6.30.2.ebuild 956
+MD5 c38827226877c41b9e3ffad18cfc5c80 metadata.xml 2460
+RMD160 2e8b03f7d8f3f804d26757a82687936702ee2dfc metadata.xml 2460
+SHA256 c276150d1a8e7def0b07a2f9c7da87913bdfb4d069e2fabfc0d5fdb00d43ea1d metadata.xml 2460
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEKutn2CTtIKiFlQIRAu61AJ98lo0Q1H9w0/6rbY+hvV2wvgyUHgCggB+u
+pR29z9H7weeunySTxpE4y6o=
+=c7ZY
+-----END PGP SIGNATURE-----
