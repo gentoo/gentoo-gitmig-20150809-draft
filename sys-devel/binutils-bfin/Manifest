@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5758a45272829b2395928d230f83438c ChangeLog 654
-MD5 3bf7651a647c641c3fbc62086b1092c0 binutils-bfin-2005.3.1.ebuild 842
-MD5 489500462a395e74c31da3a5164ebe52 binutils-bfin-2005.4_rc1.ebuild 1104
+RMD160 928facbe227a302f452e41a37a1a500b7689615c ChangeLog 654
+SHA256 6316b173818a2df5dec564ef3cca5069f0d36d1ec66cf296c81fefe02e103d13 ChangeLog 654
+MD5 25b3251dde7dba25e03a06bb2134592d binutils-bfin-2005.3.1.ebuild 854
+RMD160 990060a0537f5a87dff556377dd8492059e4ad10 binutils-bfin-2005.3.1.ebuild 854
+SHA256 c82dfa7e8ce07abef1a90433845fc48665dfc37dac56aa4ad3da581b75d791d5 binutils-bfin-2005.3.1.ebuild 854
+MD5 e99cb0ed213aa085481ad4a9adb9c6ac binutils-bfin-2005.4_rc1.ebuild 1116
+RMD160 219a17b324536ffb717f2263d0d001a226fee56d binutils-bfin-2005.4_rc1.ebuild 1116
+SHA256 309ca1f695bd16cade30ebcf9d3442d7abc98ef17d4bcd3b48fec525d9e37205 binutils-bfin-2005.4_rc1.ebuild 1116
 MD5 1e006f68961f68debad9df04f0b98955 files/binutils-bfin-2005.3.1-build.patch 881
+RMD160 b09e98efbc2d1a9fb2cadec717a9f903163c9b47 files/binutils-bfin-2005.3.1-build.patch 881
+SHA256 a3e7cc25bafef877347ff2fee3c04c09815cb162c81a2b8cfc635a4314f85e6d files/binutils-bfin-2005.3.1-build.patch 881
 MD5 2e67f8ce5d0ab15db41f211037a9bddd files/digest-binutils-bfin-2005.3.1 75
+RMD160 85dc7ae9dbfc85b0bf08653d234bcc5cb2a9d937 files/digest-binutils-bfin-2005.3.1 75
+SHA256 e96e8aa3b3d9613318dcaad1112bfae36c6cffe61ffd2ad9d0071af748c72d9f files/digest-binutils-bfin-2005.3.1 75
 MD5 6a082930e28e902cadfa76d9032da9db files/digest-binutils-bfin-2005.4_rc1 73
+RMD160 6cc11921d8d5e2b4bfbaa5489b5b1a362246e2d2 files/digest-binutils-bfin-2005.4_rc1 73
+SHA256 a3d5e46f53f25448f8ccedc21dd18bcb021514837e2e9da2c17e62de3baee586 files/digest-binutils-bfin-2005.4_rc1 73
 MD5 3dc65c334fbcf16311d3d437dc746cb5 files/elf2flt-configure-ldscript-path.patch 3539
+RMD160 505233be356c72bee28d5398e6f97278078209f9 files/elf2flt-configure-ldscript-path.patch 3539
+SHA256 907b3dc357902357559044ef94b4febc5e9427286f5d4cb3d4e9e797670e09aa files/elf2flt-configure-ldscript-path.patch 3539
 MD5 c6712d4b439bc632a23799aa1793fc84 metadata.xml 184
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzFG22+ySkm8kpY0RAlnnAKCFu3bsxh1V+nVEcoMLNOyJLOAFbgCgl2k1
-KdwKJDHXfYVIdT9705zDUqs=
-=Gr24
------END PGP SIGNATURE-----
+RMD160 e4fe3a4e7016432cc3c36954f646de345af101c6 metadata.xml 184
+SHA256 dc790a4305ce116175492077c64be59b729fac9595769c4ea09ddaa1eb8c9ee6 metadata.xml 184
