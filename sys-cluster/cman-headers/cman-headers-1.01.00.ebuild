@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-headers/cman-headers-1.01.00.ebuild,v 1.3 2006/03/24 18:41:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-headers/cman-headers-1.01.00.ebuild,v 1.4 2006/03/29 18:35:55 corsair Exp $
 
 MY_P="cluster-${PV}"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 
 IUSE=""
 DEPEND="!<sys-cluster/cman-kernel-1.01.00"

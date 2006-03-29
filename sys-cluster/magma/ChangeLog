@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/magma
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/ChangeLog,v 1.11 2006/03/24 18:47:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/ChangeLog,v 1.12 2006/03/29 18:37:26 corsair Exp $
+
+  29 Mar 2006; Markus Rothe <corsair@gentoo.org> magma-1.01.00.ebuild:
+  Added ~ppc64; bug #127097
 
   24 Mar 2006; Aron Griffis <agriffis@gentoo.org> magma-1.01.00.ebuild:
   Mark 1.01.00 ~ia64 #127097
