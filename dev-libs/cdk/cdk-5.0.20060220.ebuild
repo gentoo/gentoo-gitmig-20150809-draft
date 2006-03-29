@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20060220.ebuild,v 1.2 2006/03/25 06:37:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20060220.ebuild,v 1.3 2006/03/29 06:36:45 chriswhite Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://invisible-island.net/cdk/${MY_P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2
