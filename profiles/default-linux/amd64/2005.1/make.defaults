@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/make.defaults,v 1.4 2006/01/16 20:55:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/make.defaults,v 1.5 2006/03/29 19:12:01 genstef Exp $
 
 #removed because managers vote requires us to do so
 #("when we go nptl, we all go nptl")
@@ -35,3 +35,7 @@ MULTILIB_STRICT_EXEMPT="(perl5|gcc|gcc-lib|eclipse-3|debug|portage)"
 
 # Hack to tell baselayout to use symlinks for /lib, /usr/lib, and /usr/local/lib
 SYMLINK_LIB="yes"
+
+# 2006/03/29 - Stefan Schweizer <genstef@gentoo.org>
+# isdn USE flag defaults
+USE="pppd isdnlog"

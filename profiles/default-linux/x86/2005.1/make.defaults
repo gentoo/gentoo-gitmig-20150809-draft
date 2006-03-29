@@ -1,5 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2005.1/make.defaults,v 1.5 2005/11/16 17:00:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2005.1/make.defaults,v 1.6 2006/03/29 19:09:24 genstef Exp $
 
 USE="alsa apm arts avi bitmap-fonts cups eds emboss encode fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ogg oggvorbis opengl oss pdflib png qt quicktime sdl spell truetype truetype-fonts type1-fonts vorbis X xml2 xmms xv"
+
+# 2006/03/29 - Stefan Schweizer <genstef@gentoo.org>
+# isdn USE flag defaults
+USE="${USE} pppd isdnlog"
