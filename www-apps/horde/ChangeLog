@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.30 2006/03/29 13:14:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.31 2006/03/29 18:55:33 dertobi123 Exp $
+
+  29 Mar 2006; Tobias Scherbaum <dertobi123@gentoo.org> horde-3.1.1.ebuild:
+  ppc stable, bug #127889
 
   29 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> horde-3.1.1.ebuild:
   Stable on hppa & sparc wrt security bug #127889
