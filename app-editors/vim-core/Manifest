@@ -1,28 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 be24319616fa3624866e9571b9868a2e ChangeLog 28480
+MD5 4ca253a700150c65a69d7cd0e038d8ba ChangeLog 28734
+RMD160 43925914cfc459f18ae9105d5b6b86cebd9ac99c ChangeLog 28734
+SHA256 a024c776f441acc8a5fab05e6092856b2c629c3961b5945981979adfaf6b5dbb ChangeLog 28734
 MD5 f06702e38dc279aee7ca16c7283d67cb files/digest-vim-core-6.4 200
-MD5 bbee39c27938e2322785eb6ac82662b4 files/digest-vim-core-7.0_alpha20060228 578
-MD5 bd8265bd1db1b6618587ab372b0cca0f files/digest-vim-core-7.0_alpha20060306 578
-MD5 a6607e3b9101790ba7897afda2e6694e files/digest-vim-core-7.0_alpha20060320 578
+RMD160 014d9ccd650cea6e0d82df48c5957899449330bb files/digest-vim-core-6.4 200
+SHA256 c27a598441e79ed0b5dcbbb2e12a08d7ecd1b10fae342c4f5109e22fcd2ca522 files/digest-vim-core-6.4 200
 MD5 17f3e50d50a8d403fa26b069247ed24e files/digest-vim-core-7.0_beta 551
+RMD160 364e8688ac4095738011e13b4e31423445548b7d files/digest-vim-core-7.0_beta 551
+SHA256 50825d7a728239537942ab91acf3e39758cfaad51b3ce460bd7a4fe1cbea106c files/digest-vim-core-7.0_beta 551
 MD5 c2d0302eae7fc80b2a1cb38ddab9d3d3 files/rphillips-invalcolorpatch.diff 722
+RMD160 3051c7877483b00ff6bb43c9136bbb4b784c5f3d files/rphillips-invalcolorpatch.diff 722
+SHA256 6678f6dd8b84d9b2c2454b346eb1febb17548f3e17b9f33ca6fc877a250660a1 files/rphillips-invalcolorpatch.diff 722
 MD5 2ad354160ca3635ea115beb56e237e7c files/vimrc 3879
+RMD160 569ae0fb05218abd1b27000745b180687bbee5a8 files/vimrc 3879
+SHA256 872fd2a57b05216bcd99f719a1ddd87a7a06c94793e1466623e32492b212cbe8 files/vimrc 3879
 MD5 266f8b682476da0ec6c4d39de5a79264 files/vimrc-r1 5728
+RMD160 12d36259309713ca0ff7c2ee4ca9d2729300efa3 files/vimrc-r1 5728
+SHA256 5ec737b4ca59ecd63c0c595cfa6dbf31f3933c9122e8efdb7e36ed49d0e306fb files/vimrc-r1 5728
 MD5 bf7ffc1fe1d1852f15eb7e5f15c17482 files/vimrc-r2 6094
+RMD160 6c89b3ba4ba80ac5c9ca5af9ebf8985d00ac9ee3 files/vimrc-r2 6094
+SHA256 3425d156e71e0215599c64853f90ed9e8712b5564b3d58da2503b89ab0b0b792 files/vimrc-r2 6094
 MD5 b6d245c6729b199a5f44955ec054368a files/vimrc-r3 6047
+RMD160 9f68b2f2ce125db1f8ca10a6e0b8c5796549a029 files/vimrc-r3 6047
+SHA256 ec156b3f51aadbf20ad17248d918e61153f08fb14402c05b1255042468e7c5de files/vimrc-r3 6047
 MD5 ba542e54d91a04a85435253ae35301b6 files/xxd-completion 461
+RMD160 504f96c4b37a770678a74b16b871d410a3fcb82d files/xxd-completion 461
+SHA256 580064ca4db3ac149fd89c743bd9946241220c211721f978f7a3ef97b3c171df files/xxd-completion 461
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
+RMD160 3e105a159e09ab3231aaa16b01919bcfbf58a0a8 metadata.xml 156
+SHA256 64d20c782589b423a6e75ba6fff7edead1ec8fbae742d27dd57f5299e8328500 metadata.xml 156
 MD5 7c8ba99df7ed297f788413d7abbcee6c vim-core-6.4.ebuild 992
-MD5 b451f73efc3b3a8897dcb8192bc3f40d vim-core-7.0_alpha20060228.ebuild 766
-MD5 0ab66a38940477d1f7add0898160ce58 vim-core-7.0_alpha20060306.ebuild 766
-MD5 c8a021610911791b0d8c4d42147b1623 vim-core-7.0_alpha20060320.ebuild 762
+RMD160 81498c67ffe975f50745582b46b43183c07e9f70 vim-core-6.4.ebuild 992
+SHA256 d85fa00e113e8b8289f71471f33403d0a85ee12b6260c30a0f8f7a91fdfff974 vim-core-6.4.ebuild 992
 MD5 f6edf9dcc474848af935523c14d0bfee vim-core-7.0_beta.ebuild 678
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEJmdZViELBEf1JB0RAiw6AJ4satBW8Elu/VE1MKHUV58z6D8lnwCfYatv
-4XD+yblHHPMhMhBGaDBdf3w=
-=z2Ly
------END PGP SIGNATURE-----
+RMD160 ade49114bef92b4ba3104e41c1e71af25a8bdc1a vim-core-7.0_beta.ebuild 678
+SHA256 494b2406757872b3082dd871cd4928f2b3c152210d7eb7e2b3139bb93d680bea vim-core-7.0_beta.ebuild 678
