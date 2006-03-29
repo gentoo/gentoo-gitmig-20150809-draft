@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060302.ebuild,v 1.5 2006/03/24 03:45:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060302.ebuild,v 1.6 2006/03/29 05:34:00 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -104,6 +104,11 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 
 DEPEND="${RDEPEND}
 	app-arch/unzip
+	doc? ( >=app-text/docbook-sgml-dtd-4.1.2
+		   app-text/docbook-xml-dtd
+		   >=app-text/docbook-xml-simple-dtd-1.50.0
+		   dev-libs/libxslt
+		   )
 	nls? ( sys-devel/gettext )
 	dga? ( || ( x11-proto/xf86dgaproto virtual/x11 ) )
 	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
@@ -476,6 +481,7 @@ src_compile() {
 
 	einfo "Make"
 	make depend && emake || die "Failed to build MPlayer!"
+	cd doc && make -C DOCS/xml html-chunked
 	einfo "Make completed"
 
 	# We build the shared libpostproc.so here so that our
