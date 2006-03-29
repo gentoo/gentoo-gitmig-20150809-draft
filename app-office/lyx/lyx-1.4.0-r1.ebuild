@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.0.ebuild,v 1.1 2006/03/28 23:09:40 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.0-r1.ebuild,v 1.1 2006/03/29 16:24:23 ehmsen Exp $
 
-inherit kde-functions eutils libtool flag-o-matic
+inherit kde-functions fdo-mime eutils libtool flag-o-matic
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="cjk cups debug gtk nls qt"
+IUSE="cjk cups debug gtk nls qt gnome"
 
 RDEPEND="|| (
 		virtual/x11
@@ -82,7 +82,9 @@ src_unpack() {
 	unpack ${P}.tar.bz2 || die "unpacking lyx failed"
 	unpack latex-xft-fonts-0.1.tar.gz || die "unpacking xft-fonts failed"
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch || die
+	# bug #125309
+	epatch ${FILESDIR}/${P}-dvips-R0.patch || die
 	elibtoolize || die "elibtoolize failed "
 }
 
@@ -108,14 +110,12 @@ src_compile() {
 
 	export WANT_AUTOCONF=2.5
 
-	local flags="${CXXFLAGS} $(test_flag -fno-stack-protector) $(test_flag -fno-stack-protector-all)"
-	unset CFLAGS
-	unset CXXFLAGS
+	append-flags "$(test-flags -fno-stack-protector -fno-stack-protector-all)"
+	filter-flags "-Os"
 	econf \
 		$(use_enable nls) \
 		$(use_enable debug) \
 		${myconf} \
-		--enable-optimization="${flags/-Os}" \
 		|| die "econf failed"
 
 	# bug 57479
@@ -146,6 +146,12 @@ src_install() {
 		${D}/usr/share/fonts/latex-xft-fonts
 	HOME=/root fc-cache -f ${D}/usr/share/fonts/latex-xft-fonts
 
+	# bug #102310
+	if use gnome ; then
+		insinto /usr/share/icons/gnome/48x48/mimetypes
+		doins ${FILESDIR}/gnome-mime-application-x-lyx.png
+	fi
+
 	# fix for bug 91108
 	dodir /usr/share/texmf/tex/latex
 	cd ${D}/usr/share/texmf/tex/latex
@@ -153,13 +159,17 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	# fix for bug 91108
 	texhash
 
+	# bug #102310
+	if use gnome ; then
+		fdo-mime_desktop_database_update
+	fi
+
 	einfo ""
 	einfo "How to use Hebrew in LyX:"
-	einfo "1. emerge app-text/ivritex."
+	einfo "1. emerge dev-tex/ivritex."
 	einfo "2. unzip /usr/share/doc/${P}/preferences.gz into ~/.lyx/preferences"
 	einfo "or, read http://www.math.tau.ac.il/~dekelts/lyx/instructions2.html"
 	einfo "for instructions on using lyx's own preferences dialog to equal effect."
