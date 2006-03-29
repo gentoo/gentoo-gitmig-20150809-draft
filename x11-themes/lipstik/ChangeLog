@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/lipstik
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.13 2006/03/26 16:53:29 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.14 2006/03/29 19:40:18 corsair Exp $
+
+  29 Mar 2006; Markus Rothe <corsair@gentoo.org> lipstik-2.2.ebuild:
+  Stable on ppc64; bug #121413
 
   26 Mar 2006; Ferris McCormick <fmccor@gentoo.org> lipstik-2.2.ebuild:
   Stable on sparc (Bug #121413).
