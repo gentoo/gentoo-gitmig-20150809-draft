@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6fbf067a8c850762dd264c605dce527d ChangeLog 4550
-RMD160 3b96db0f9b8c9988e9d4e84c2b5a4686e97092c9 ChangeLog 4550
-SHA256 30bf5e0387b31f92bc79e17d0687a5c035c8924fcdb8bf21ae4129f13c9c3bda ChangeLog 4550
+MD5 c7e2533945efedb7245aa2d4eed2049c ChangeLog 4679
+RMD160 af8fb671b73de58db49b062b1ee89e9f1abcc8f7 ChangeLog 4679
+SHA256 f4c3e77960ac8a1813d35d31454c697d6fdf026a6d3a238a8ad2c303ef9bd47e ChangeLog 4679
 MD5 476df8108995ab80c9a7f211f285b6b2 cheetah-0.9.17.ebuild 625
 RMD160 b2017d6a448101a4b81369ca41c7655c121466a4 cheetah-0.9.17.ebuild 625
 SHA256 e8745391897b224ba4bbf15cc406e6eb57112c1355ca157563d4c698c042a7ae cheetah-0.9.17.ebuild 625
@@ -16,6 +16,9 @@ SHA256 bf09b49e2c186c727469c771b435f89a08a6a9eacecb3b5e7aa2ed03797ee924 cheetah-
 MD5 e71f1c34bb0b59760de8ec2d8be46cfe cheetah-2.0_beta5.ebuild 749
 RMD160 1e29da8e38a9ef6977d970fade6d3bb0fe10a9b6 cheetah-2.0_beta5.ebuild 749
 SHA256 fe5083537a990d82008bfbe9096e36f3a3fc28ec5d82e5e05a427f6e958d61e0 cheetah-2.0_beta5.ebuild 749
+MD5 51968bd8d78f53771a339c5faed2a569 cheetah-2.0_rc5.ebuild 742
+RMD160 c95c87b7e6e44ffbee0dfb3f0e7b209d549e949e cheetah-2.0_rc5.ebuild 742
+SHA256 f469602152e9a4b0542cbb13da4a730b98a0bbf9d681d93b3d4b3b64fa9bf6fc cheetah-2.0_rc5.ebuild 742
 MD5 4085c86d760d85b5948aa799ec6928fa files/digest-cheetah-0.9.17 66
 RMD160 8be29235d90d269b964584d804510e107bd67d8d files/digest-cheetah-0.9.17 66
 SHA256 281b92f1f6dec3ca8116e342d72c54fe09391bc8e3aa2b6fea549582e367c0e6 files/digest-cheetah-0.9.17 66
@@ -28,13 +31,16 @@ SHA256 fcfb7e7960c87d3a9afb054a7aacafc5e0bd73917e9f0031ddea9fb7f193420b files/di
 MD5 7daf596c282567942677ba9dff6e7f5e files/digest-cheetah-2.0_beta5 241
 RMD160 45c5399dca8fbe8aba0bb25b05a8b988bffdeb1d files/digest-cheetah-2.0_beta5 241
 SHA256 3dad3ad70dead42b93dbcee85bd1ce01590bfc790e3ac5890b11782d836c9126 files/digest-cheetah-2.0_beta5 241
+MD5 1d016ea9963269a7554daa428e8559e4 files/digest-cheetah-2.0_rc5 244
+RMD160 cc3af7ec8134f04f0769f697bfb41e092b1d94fb files/digest-cheetah-2.0_rc5 244
+SHA256 a0da871f7e4f2460f68d418ed663997155dcf06a84a49b86a1c80c7f39d69fe3 files/digest-cheetah-2.0_rc5 244
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD4+TGJrHF4yAQTrARArbtAJ92AbBJbZAJS2RIlWXgnhn9eiXDtACgk2x8
-FGxO0kkwFI3NnypUHwuVXq4=
-=Sf3c
+iD8DBQFEKlJX2jLqHNfbg2URAtNqAJ9YVjCfA0IwvXEVWVA0EBCAbAlKmgCgrzVT
+A/MQgjvtXomLQjRhRDY6F+Y=
+=xPTB
 -----END PGP SIGNATURE-----
