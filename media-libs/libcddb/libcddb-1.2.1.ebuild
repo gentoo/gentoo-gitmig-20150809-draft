@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/libcddb-1.2.1.ebuild,v 1.2 2006/01/16 09:33:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/libcddb-1.2.1.ebuild,v 1.3 2006/03/29 22:21:02 flameeyes Exp $
 
 inherit eutils
 
@@ -35,6 +35,3 @@ src_install() {
 	use doc && dohtml doc/html/*
 }
 
-pkg_postinst() {
-	preserve_old_lib_notify /usr/lib/libcddb.so.0
-}
