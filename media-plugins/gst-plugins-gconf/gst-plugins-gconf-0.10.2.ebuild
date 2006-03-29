@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/gst-plugins-gconf-0.10.2.ebuild,v 1.2 2006/03/23 19:09:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/gst-plugins-gconf-0.10.2.ebuild,v 1.3 2006/03/29 18:26:45 corsair Exp $
 
 inherit gnome2 gst-plugins-good gst-plugins10
 
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=gnome-base/gconf-2.0"
