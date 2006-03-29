@@ -1,9 +1,37 @@
-MD5 4eff12c88f0c1e88a3b870edbb38d5a5 ChangeLog 2394
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 9af9b79a175a826ed1ddbf58c2746fc0 paxctl-0.2.ebuild 727
-MD5 b7baf2626ffe222baedb846eea3a54ff paxctl-0.3-r1.ebuild 803
-MD5 0aedb84ee0dc0a5120cda9e842712695 paxctl-0.3.ebuild 721
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5cb4d7ed3b197f3be4f7c9f42381f909 ChangeLog 2536
+RMD160 c90c75b00ae2132e6cafeaa71d98cb03c718b22f ChangeLog 2536
+SHA256 a45cba9b683e8185e1dc2fb98276112d08d20d9768f3cebec83648e46add1f7e ChangeLog 2536
 MD5 7cd8adc34a7c0e7b400dcd24793ff4cf files/digest-paxctl-0.2 60
+RMD160 18a000ed9c13a8e71b15a21378546313074f53c1 files/digest-paxctl-0.2 60
+SHA256 710f727dca465ea3983e6c0663caab89619c4893254df1e68602009f37b1467c files/digest-paxctl-0.2 60
 MD5 a0ea6419bb80b6a3650accc386c91847 files/digest-paxctl-0.3 60
-MD5 a0ea6419bb80b6a3650accc386c91847 files/digest-paxctl-0.3-r1 60
+RMD160 0c67c0e0840f9f49fa5dcae91c328726d8a94784 files/digest-paxctl-0.3 60
+SHA256 6dd0672bc51ccc1fe7107ea763072d12216d37310b4d13cf01ce368bae54cd48 files/digest-paxctl-0.3 60
+MD5 7b054a1fd9ae5162417eab37c3f13dfa files/digest-paxctl-0.3-r1 226
+RMD160 b268a73f24c2b6f09bbefcac8e895455fe6c4fd0 files/digest-paxctl-0.3-r1 226
+SHA256 cf0f8d146d199072afc7d68dd289f367fe96718c30d4fd94ef1aba2042f67519 files/digest-paxctl-0.3-r1 226
 MD5 3fc2f5499fe5630cab3a2c01e4bdbbe7 files/paxctl-0.3-error-codes.patch 11421
+RMD160 3f0ae43b0c6ad21941eaf7d494cd09e6c82ef81d files/paxctl-0.3-error-codes.patch 11421
+SHA256 44b1f5cf9ed66e18633676c6502c544f1b58f04bfbe562023f910d5e0cf4c6b3 files/paxctl-0.3-error-codes.patch 11421
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 9af9b79a175a826ed1ddbf58c2746fc0 paxctl-0.2.ebuild 727
+RMD160 8b6c7b6e68f019075acb7c12476cac156ff79005 paxctl-0.2.ebuild 727
+SHA256 29059d368f70d30d4ebfb55a661a2277e409c57b2e540d326976e6c6ddf67a26 paxctl-0.2.ebuild 727
+MD5 9ff6272ccde25a7f8b2df6348892beea paxctl-0.3-r1.ebuild 894
+RMD160 69e1ded005c31bd9bb3d805608dff56d1c3706c1 paxctl-0.3-r1.ebuild 894
+SHA256 1aef947be70c83bb343908178acb223140ab0654ee4d44de99ad56f8f5dc1ab3 paxctl-0.3-r1.ebuild 894
+MD5 0aedb84ee0dc0a5120cda9e842712695 paxctl-0.3.ebuild 721
+RMD160 52ed10ac5c9e77d7acb3eafaf56e827ee5228924 paxctl-0.3.ebuild 721
+SHA256 22e9df4fa35a75289c18582f9006b875ce88a5413662da9a39d64be59011b837 paxctl-0.3.ebuild 721
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEKuKvZfNLSOUrp0sRAjsrAJ91ibZ//486fpQCOrX+3UfuxG738ACfXdHa
+vG1MH58EMH8o3KmtVa6rC98=
+=uSyv
+-----END PGP SIGNATURE-----

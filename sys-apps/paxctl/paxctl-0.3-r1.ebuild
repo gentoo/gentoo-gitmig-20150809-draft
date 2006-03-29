@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/paxctl-0.3-r1.ebuild,v 1.1 2005/06/13 21:29:30 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/paxctl-0.3-r1.ebuild,v 1.2 2006/03/29 19:38:06 kevquinn Exp $
 
 inherit flag-o-matic eutils
 
@@ -17,6 +17,9 @@ DEPEND="virtual/libc >=sys-devel/binutils-2.14.90.0.8-r1"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	# bug #127998 - paxctl tarball is user-readable only
+	chmod go+rx ${S}
+	chmod go+r ${S}/*
 	epatch ${FILESDIR}/${P}-error-codes.patch
 }
 
