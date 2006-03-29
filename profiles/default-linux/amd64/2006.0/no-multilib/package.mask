@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.13 2006/03/23 00:49:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.14 2006/03/29 13:33:11 herbs Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -130,6 +130,7 @@ media-sound/shoutcast-trans-bin
 media-sound/teamspeak2-client-bin
 media-sound/teamspeak2-server-bin
 media-sound/ventrilo-server-bin
+media-video/binkplayer
 media-video/dvdrip
 media-video/mplayer-bin
 media-video/realplayer
