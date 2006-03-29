@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.64 2006/03/27 21:34:02 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.65 2006/03/29 01:49:33 agriffis Exp $
+
+  29 Mar 2006; Aron Griffis <agriffis@gentoo.org> openafs-1.4.0-r2.ebuild:
+  Mark 1.4.0-r2 stable on ia64
 
 *openafs-1.4.0-r3 (27 Mar 2006)
 
