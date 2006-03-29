@@ -1,30 +1,66 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 61c3deba48aadd330fef3c662d96decd ChangeLog 5398
+MD5 62e98236f24857c267463dca7dc766d6 ChangeLog 5540
+RMD160 12a58aa07ce23376bcece39aa1bd5d1ed6700fa0 ChangeLog 5540
+SHA256 a2cdc532f837dac18618d5a0fafaaeb40fd18a8f1ccbc0db56310d3d21e7db2e ChangeLog 5540
 MD5 1f8638d68cffbd8b96df97dcb0868b88 files/digest-qemu-0.6.1 63
+RMD160 71dc60f0a239582276b7ef776068330b542eddbc files/digest-qemu-0.6.1 63
+SHA256 9aeb1f15341ff89a596fb868fdec0dcb4a78adb696648737dba191d79196386e files/digest-qemu-0.6.1 63
 MD5 1f8638d68cffbd8b96df97dcb0868b88 files/digest-qemu-0.6.1-r1 63
+RMD160 71dc60f0a239582276b7ef776068330b542eddbc files/digest-qemu-0.6.1-r1 63
+SHA256 9aeb1f15341ff89a596fb868fdec0dcb4a78adb696648737dba191d79196386e files/digest-qemu-0.6.1-r1 63
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-qemu-0.7.0-r1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-qemu-0.7.0-r1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-qemu-0.7.0-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-qemu-0.7.1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-qemu-0.7.1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-qemu-0.7.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-qemu-0.7.2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-qemu-0.7.2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-qemu-0.7.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-qemu-0.8.0 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-qemu-0.8.0 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-qemu-0.8.0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-qemu-0.8.0.20060329 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-qemu-0.8.0.20060329 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-qemu-0.8.0.20060329 0
 MD5 87ec2e1fa832612fb834d7dd49cf7e5c files/kqemu-sysfs.patch 2094
+RMD160 9b87cf9d9f8004a37f079fb3eda3d37275624eca files/kqemu-sysfs.patch 2094
+SHA256 4da7bb1363b9f93a1a4eec2db7c6a41febb1b0a5fa110f2bdfdadca408c67f19 files/kqemu-sysfs.patch 2094
 MD5 ac8cdb7d17555b028d8bd7ace90bee3d files/qemu-0.6.0-configure.patch 270
+RMD160 5d426c540d4c06761978ece1e5db1d753f12bfce files/qemu-0.6.0-configure.patch 270
+SHA256 5ffcd9c9974b2e712e44bbb30f9c84f21b10a47126a89fd243824bdd4a2f594b files/qemu-0.6.0-configure.patch 270
 MD5 0b85ac42eaa41830ac9b4eccf4a118bd files/qemu-0.6.0-sigaction.patch 677
+RMD160 22695d059f37704d3713b78a01869714961f8da5 files/qemu-0.6.0-sigaction.patch 677
+SHA256 3eb54adeb0a05d254b39d7bc7bcb7ddd3bd48e0f7b8d7e673de86796500c52d3 files/qemu-0.6.0-sigaction.patch 677
 MD5 f6094ee9cd2ee3a38404680796df2b75 files/qemu-0.6.0-typo.patch 528
+RMD160 ce9d17c20e4d0e321c52605778ca4caeb880903f files/qemu-0.6.0-typo.patch 528
+SHA256 bb2130e7714a03d26bed481ef55e1f9ccbc6ccbcb8a289bf0957ae68cf5abffe files/qemu-0.6.0-typo.patch 528
 MD5 8490b50dc53ceca8208becb949c02ebb files/qemu-0.6.1-20041126.patch 27697
+RMD160 f15875f55982d957fc24ebfb731823f935cdbbaf files/qemu-0.6.1-20041126.patch 27697
+SHA256 cfd1e905db2c1b2cb48c58f7e9c8d893069ecb7eaed223560587fb48edcab050 files/qemu-0.6.1-20041126.patch 27697
 MD5 3202f7445799cce82ccaac9749e1443d files/qemu-0.7.0-errno.patch 487
-MD5 898131aae735c3477ff2f9c6882f1178 metadata.xml 223
+RMD160 0ba3efb79379c96652d0a08f33adef13695c75b7 files/qemu-0.7.0-errno.patch 487
+SHA256 013031cd5c27de4dd4ab39f10a8be751813a313e006339a35b9722bb0939f193 files/qemu-0.7.0-errno.patch 487
+MD5 6f636b32783a84bffd31c7be1b60cb40 metadata.xml 222
+RMD160 8d98fcaaf7c7de70e19457776c3fae33f50ba8b7 metadata.xml 222
+SHA256 43f6f0590273110b6fa46886158dfe583245c76bb5b27cee47897e81d8decbf2 metadata.xml 222
 MD5 b035e8de3718e77cc27918198bf49fb6 qemu-0.6.1-r1.ebuild 2143
+RMD160 b001cf2005f22e8761fbb5b6474743cae06d1bdf qemu-0.6.1-r1.ebuild 2143
+SHA256 094cf884708b6c7740783d72d27c9fd9dea2373f7a3c40cb4e0db7d35f6cedce qemu-0.6.1-r1.ebuild 2143
 MD5 e65dab4abb0028ab15d60ecd60ca4ba9 qemu-0.6.1.ebuild 2071
+RMD160 ad2b696c1d204db6a768f66248333a9cfed2f7cf qemu-0.6.1.ebuild 2071
+SHA256 586dfbd1550628d21c78d5330e8dae26823b633979f57ed893fcbe781ea031b3 qemu-0.6.1.ebuild 2071
 MD5 a5f64bfa0ee03fa38a4b40c6faddd0ca qemu-0.7.0-r1.ebuild 493
+RMD160 4f7e2c7253a9f5feff80ec11468056569ff70202 qemu-0.7.0-r1.ebuild 493
+SHA256 9739fdc23e88ced387acffb8684c36e5fdb625517e5ccdb58dfa8e791ec41a60 qemu-0.7.0-r1.ebuild 493
 MD5 0acd15b543d8330d56ef04e77b5ee1a1 qemu-0.7.1.ebuild 490
+RMD160 11404da48287e3e5dc6fa940e8a747e06227f035 qemu-0.7.1.ebuild 490
+SHA256 79aae1e07b408ee0296e380dda0e08d7934073b6b0ac12faf5337abc5d05a186 qemu-0.7.1.ebuild 490
 MD5 3d713fa1f670e463c3204f254ed6e4e8 qemu-0.7.2.ebuild 505
+RMD160 fb3e3d4a62ff7daf4998eff41f79ec457863067d qemu-0.7.2.ebuild 505
+SHA256 a5ab1dce9d808be0249fb31dbc4d82f3ac9761a7d9f3b289e8d681cec2232ae1 qemu-0.7.2.ebuild 505
+MD5 a8c62969f6c8c798bd7af32458ed1d0e qemu-0.8.0.20060329.ebuild 514
+RMD160 bf0ae6d5fc058804fefe1147dfb66cfb052b96c6 qemu-0.8.0.20060329.ebuild 514
+SHA256 00210c08e4671162f0f8ea55c20013078bbd5af9c0a218474292610e2af411fb qemu-0.8.0.20060329.ebuild 514
 MD5 eff05dd911fb155fef0c122c02d3f1b0 qemu-0.8.0.ebuild 507
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEKkBtFdQwWVoAgN4RAuw0AKCjde2b1AZjDMRAvq8wlwCVuxi99wCffcEp
-GyJFjEnH08n39F4kt4MChnM=
-=oJkO
------END PGP SIGNATURE-----
+RMD160 f8f5f286451c381814c22d2362cc1a1f25eee050 qemu-0.8.0.ebuild 507
+SHA256 f93c482faad6930a0f5afd561dafd6dfc738118ffe861972eca85e15da75bbf7 qemu-0.8.0.ebuild 507
