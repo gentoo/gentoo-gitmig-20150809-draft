@@ -1,4 +1,4 @@
-MD5 6091e915c83bd8cb42ba06308d2831b5 ChangeLog 3497
+MD5 1eb1e05b98ae2db20a191199d91716f5 ChangeLog 3598
 MD5 b8ef37a0c2afb0f5505932411db81db5 files/digest-gst-plugins-raw1394-0.10.0 76
 MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-raw1394-0.10.1 76
 MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-raw1394-0.10.1-r1 76
@@ -11,7 +11,7 @@ MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-raw1394-0.8.9 71
 MD5 f11023f87340001d4099fc8c84f00480 gst-plugins-raw1394-0.10.0.ebuild 465
 MD5 e77dfbac4afc4cebc812cc0efdc4f9b7 gst-plugins-raw1394-0.10.1-r1.ebuild 528
 MD5 2f20727f247828b55a0c72e01b894cb9 gst-plugins-raw1394-0.10.1.ebuild 466
-MD5 26631bf49bc88647b92d1cdf88d04463 gst-plugins-raw1394-0.10.2.ebuild 526
+MD5 17cd2ef9b48fcb2c5d769340e118b041 gst-plugins-raw1394-0.10.2.ebuild 532
 MD5 111e1b6c28199219cf85fe111d314628 gst-plugins-raw1394-0.8.10.ebuild 467
 MD5 560a08cdacf4389844e9ad658731e21d gst-plugins-raw1394-0.8.11.ebuild 469
 MD5 db25d6013dace3695408ec10592d27b9 gst-plugins-raw1394-0.8.12.ebuild 472

@@ -1,4 +1,4 @@
-MD5 a7a4dd0276a378ed5293105712a24e26 ChangeLog 7738
+MD5 169d4b02e93cfccbd2ffe238a052879c ChangeLog 7838
 MD5 b8ef37a0c2afb0f5505932411db81db5 files/digest-gst-plugins-libpng-0.10.0 76
 MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-libpng-0.10.1 76
 MD5 fe9a62d6f739f7cfd223099d201d8834 files/digest-gst-plugins-libpng-0.10.2 274
@@ -11,7 +11,7 @@ MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-libpng-0.8.9 71
 MD5 f82346e916492119a7dc784aefc418a6 files/gst-plugins-libpng-0.8.8-colorspace.patch 592
 MD5 639bae0647a0f60b5c343f579f67f18f gst-plugins-libpng-0.10.0.ebuild 384
 MD5 b1b99569e416d8bcf7a8d373abccb8bb gst-plugins-libpng-0.10.1.ebuild 385
-MD5 6b961f1771ccbf5e17dc9cae8fe745b5 gst-plugins-libpng-0.10.2.ebuild 385
+MD5 3b0c30fbb73d4bb468ec126876df190d gst-plugins-libpng-0.10.2.ebuild 391
 MD5 8dbb4e35a8355f6c0d11512c3c55a0ff gst-plugins-libpng-0.8.10.ebuild 410
 MD5 6a3c9a80dfe00ad75fe5045d50620e39 gst-plugins-libpng-0.8.11.ebuild 410
 MD5 56eaf02c24a8af9a4689f9039673e90a gst-plugins-libpng-0.8.12.ebuild 427
