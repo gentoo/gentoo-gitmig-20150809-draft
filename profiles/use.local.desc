@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1818 2006/03/28 05:13:18 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1819 2006/03/29 21:40:25 zzam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -868,13 +868,17 @@ media-video/transcode:mjpeg - Enables mjpegtools support
 media-video/transcode:network - Enables network streaming support
 media-video/transcode:pvm - Enables private virtual machine support
 media-video/transcode:v4l2 - Enable video4linux2 support
-media-video/vdr:aio - use "all in one" patch with much additional features
-media-video/vdr:bigpatch - enable almost all additional features flying around on the net (including aio)
-media-video/vdr:jumpplay - enables automatic jumping over cut marks while watching a recording
-media-video/vdr:lnbsharing - enable support for two or more dvb cards sharing the cable to the lnb
-media-video/vdr:rcu - enable support for a special type of remote control unit
+media-video/vdr:aio - Use "all in one" patch (or its successor "liemikuutio") with much additional features
+media-video/vdr:bigpatch - Enables almost all additional features flying around on the net (including aio)
+media-video/vdr:dvbplayer - Use some special mpeg-repacker features. Most usable for old recordings or software output devices.
+media-video/vdr:jumpplay - Enables automatic jumping over cut marks while watching a recording
+media-video/vdr:lnbsharing - Enables support for two or more dvb cards sharing the cable to the lnb
+media-video/vdr:rcu - Enables support for a special type of remote control unit
+media-video/vdr:rds-timeout - Enables vdr to shutdown despite the rds-decoder of plugin vdr-radio being open.
+media-video/vdr:rotor - Enable support for plugin vdr-rotor for dish-positioner.
 media-video/vdr:setup-plugin - Enable support for the plugin vdr-setup
-media-video/vdr:sourcecaps - adds the ability to define capabilities of dvb-cards (e.g. card1 can receive Sat @28.2E)
+media-video/vdr:sourcecaps - Adds the ability to define capabilities of dvb-cards (e.g. card1 can receive Sat @28.2E).
+media-video/vdr:submenu - Enable support for the plugin vdr-submenu.
 media-video/vdr:subtitles - Enable support for the subtitles-plugin
 media-video/vdr:vfat - Allow vdr to store its recordings on vfat filesystems.
 media-video/vdr:yaepg - Enables support for the plugin vdr-yaepg.
