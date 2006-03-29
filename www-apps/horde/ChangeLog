@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.28 2006/03/29 00:56:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.29 2006/03/29 05:33:59 halcy0n Exp $
+
+  29 Mar 2006; Mark Loeser <halcy0n@gentoo.org> horde-3.1.1.ebuild:
+  Stable on x86; bug #127889
 
 *horde-3.1.1 (29 Mar 2006)
 
