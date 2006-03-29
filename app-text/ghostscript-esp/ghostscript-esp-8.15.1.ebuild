@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.11 2006/03/21 02:49:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.12 2006/03/29 12:17:43 genstef Exp $
 
 inherit eutils autotools flag-o-matic
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GPL Ghostscript with better printer support"
-HOMEPAGE="http://www.cups.org/ghostscript.php"
+HOMEPAGE="http://www.cups.org/espgs"
 
 MY_P=espgs-${PV}
 PVM=${PV%.[0-9]}
@@ -65,7 +65,7 @@ src_unpack() {
 	fi
 
 	# search path fix
-	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/${PVM}/$(get_libdir):"\
+	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/${PVM}/$(get_libdir):" \
 		Makefile.in || die "sed failed"
 	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/default/ghostscript/:' \
 		Makefile.in || die "sed failed"
@@ -110,7 +110,7 @@ src_install() {
 		doins doc/gsdoc.el
 	fi
 
-	if use cjk ; then
+	if use cjk; then
 		dodir /usr/share/ghostscript/Resource
 		dodir /usr/share/ghostscript/Resource/Font
 		dodir /usr/share/ghostscript/Resource/CIDFont
