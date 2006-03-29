@@ -9,8 +9,8 @@ diff -u -r1.10 -r1.10.2.1
   *  along with this program; if not, write to the Free Software
   *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
   *
-- *  $Id: epiphany-extensions-2.14.0.1-adblock.patch,v 1.1 2006/03/29 11:25:42 foser Exp $
-+ *  $Id: epiphany-extensions-2.14.0.1-adblock.patch,v 1.1 2006/03/29 11:25:42 foser Exp $
+- *  $Id: epiphany-extensions-2.14.0.1-adblock.patch,v 1.2 2006/03/29 11:32:23 foser Exp $
++ *  $Id: epiphany-extensions-2.14.0.1-adblock.patch,v 1.2 2006/03/29 11:32:23 foser Exp $
   */
  
  #include "config.h"

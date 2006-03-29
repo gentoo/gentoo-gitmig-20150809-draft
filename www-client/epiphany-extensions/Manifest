@@ -34,9 +34,9 @@ SHA256 91e60a62860ce009a2d719739992aef0bed68d4646581060680cd0a2636eb218 files/ep
 MD5 67ceb0a8ab526d679f2cf09219d6e6ce files/epiphany-extensions-1.8.0-fix-includes.patch 2848
 RMD160 c9e53761f7ccf40bc6b6641122ca2a8bce02ce61 files/epiphany-extensions-1.8.0-fix-includes.patch 2848
 SHA256 0821a5fd7981e0bd1f1c67acd71f6e44f4e6276ecd4987b972525da7336f16ae files/epiphany-extensions-1.8.0-fix-includes.patch 2848
-MD5 7f9be52678e23dec988ec1cd8d4d160d files/epiphany-extensions-2.14.0.1-adblock.patch 2995
-RMD160 5bbe4decdd95a53ac39e43f72785ba522aa401d2 files/epiphany-extensions-2.14.0.1-adblock.patch 2995
-SHA256 d995ec026435dc280ff9ba6a7d6ff3951ca2dee7eab1b5075c90ea4e78a2be64 files/epiphany-extensions-2.14.0.1-adblock.patch 2995
+MD5 b50922a49f6a9ed68f99590baa472ff1 files/epiphany-extensions-2.14.0.1-adblock.patch 2995
+RMD160 5b276c496c63a1229c8167e9a024302e4420de03 files/epiphany-extensions-2.14.0.1-adblock.patch 2995
+SHA256 c608f346cc963ae77d5e8cea3f36b81bc39d5fc6e89df3beeecedb500b186158 files/epiphany-extensions-2.14.0.1-adblock.patch 2995
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
