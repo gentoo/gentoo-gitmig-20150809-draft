@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 33fce33e0877417fc8ccb00e76ea7a22 ChangeLog 2579
+MD5 dbb94f2143b4a1e9eccde83383b49da2 ChangeLog 2684
 MD5 355efcc8eaed16353cd1ed41c2d63b4e files/digest-hmmer-2.3.2-r1 64
 MD5 355efcc8eaed16353cd1ed41c2d63b4e files/digest-hmmer-2.3.2-r2 64
-MD5 74f685dbd0467348912e909a4fb81ea8 hmmer-2.3.2-r1.ebuild 1161
+MD5 1c43e1c33b90f1ebfb5c5a6e3cf8fae8 hmmer-2.3.2-r1.ebuild 1160
 MD5 5daa89713d48d717637da3fcdb702ba0 hmmer-2.3.2-r2.ebuild 1157
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD/Ps5JrHF4yAQTrARAq9xAKCD+lqQkZAylOkY2kxbQpb3tn5aZACfYFzl
-eCkdnV6VwQP1JHIKFlM4w70=
-=SLHm
------END PGP SIGNATURE-----
