@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5152 2006/03/28 23:06:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5153 2006/03/29 09:53:22 foser Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marinus Schraal <foser@gentoo.org> (29 Mar 2006)
+# mask for removal
+media-gfx/sodipodi
 
 # Diego Pettenò <flameeyes@gentoo.org> (28 Mar 2006)
 # CVS snapshot for AAC testing, mask for now
