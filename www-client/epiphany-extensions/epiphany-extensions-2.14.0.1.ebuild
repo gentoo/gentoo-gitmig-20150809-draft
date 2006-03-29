@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.14.0.1.ebuild,v 1.3 2006/03/19 17:23:18 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.14.0.1.ebuild,v 1.4 2006/03/29 11:25:42 foser Exp $
 
 inherit eutils gnome2
 
@@ -20,7 +20,7 @@ RDEPEND=">=www-client/epiphany-2.14.0
 	app-text/opensp
 	!firefox? ( >=www-client/mozilla-1.7.5 )
 	firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
-	pcre? ( dev-libs/libpcre )
+	pcre? ( >=dev-libs/libpcre-3.9-r2 )
 	dbus? ( >=sys-apps/dbus-0.34 )
 	python? ( >=dev-lang/python-2.3 )"
 
@@ -28,12 +28,10 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.29"
 
-USE_DESTDIR="1"
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
-
 pkg_setup() {
-	local extensions="actions adblock auto-reload auto-scroller certificates \
+	local extensions="actions auto-reload auto-scroller certificates \
 		dashboard error-viewer extensions-manager-ui gestures page-info \
 		push-scroller sample sample-mozilla select-stylesheet sidebar smart-bookmarks \
 		tab-groups tab-states tabsmenu"
@@ -49,7 +47,7 @@ pkg_setup() {
 		use dbus && extensions="${extensions} rss"
 	fi
 
-	use pcre && extensions="${extensions} greasemonkey"
+	use pcre && extensions="${extensions} greasemonkey adblock"
 
 	use python && extensions="${extensions} python-console sample-python \
 		favicon"
@@ -67,4 +65,14 @@ pkg_setup() {
 	else
 		G2CONF="${G2CONF} --with-mozilla=mozilla"
 	fi
+}
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}/extensions/adblock
+	# fix adblock crasher (#127890)
+	epatch ${FILESDIR}/${P}-adblock.patch
+
 }
