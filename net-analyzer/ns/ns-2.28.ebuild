@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.28.ebuild,v 1.4 2006/01/29 20:23:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.28.ebuild,v 1.5 2006/03/29 13:18:32 exg Exp $
 
 inherit eutils toolchain-funcs
 
@@ -31,6 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gcc41.patch
 }
 
 src_compile() {
