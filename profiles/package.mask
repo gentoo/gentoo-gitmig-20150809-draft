@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5154 2006/03/29 12:09:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5155 2006/03/29 17:53:57 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -90,10 +90,6 @@ games-roguelike/noegnud-nethack
 # Diego Pettenò <flameeyes@gentoo.org> (18 Mar 2006)
 # Masked as it requires C++ to build the bindings
 >=dev-libs/libcdio-0.77
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (17 Mar 2006)
-# This is masked until a supporting kernel sources is released.
->=sys-fs/squashfs-tools-3.0
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (15 Mar 2006)
 # Masked for testing
