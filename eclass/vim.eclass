@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.143 2006/03/25 21:34:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.144 2006/03/29 20:21:53 hansmi Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -127,8 +127,7 @@ if [[ $(get_major_version ) -ge 7 ]] ; then
 			!app-vim/vimspell
 			!<app-vim/vimbuddy-0.9.1-r1
 			!<app-vim/autoalign-11
-			!app-vim/supertab
-			!app-vim/curcmdmode"
+			!app-vim/supertab"
 	fi
 fi
 
