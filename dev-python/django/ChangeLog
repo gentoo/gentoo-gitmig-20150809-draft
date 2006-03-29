@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.1 2006/03/28 18:25:32 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.2 2006/03/29 15:30:35 sekretarz Exp $
+
+  29 Mar 2006; Karol Wojtaszek <sekretarz@gentoo.org> django-0.91.ebuild:
+  ~amd64 keyworded, bug #114821
 
 *django-0.91 (28 Mar 2006)
 
