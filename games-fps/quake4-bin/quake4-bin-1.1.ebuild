@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.1.ebuild,v 1.1 2006/03/29 00:41:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.1.ebuild,v 1.2 2006/03/29 03:16:56 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="Sequel to Quake 2, an Id 3D first-person shooter"
 HOMEPAGE="http://www.quake4game.com/"
 SRC_URI="mirror://3dgamers/quake4/quake4-linux-${PV}.x86.run
-	mirror://idsoftware/quake4-linux/quake4-linux-${PV}.x86.run
+	mirror://idsoftware/quake4/linux/quake4-linux-${PV}.x86.run
 	http://filebase.gmpf.de/quake4/quake4-linux-${PV}.x86.run
 	http://www.holarse.de/mirror/quake4-linux-${PV}.x86.run"
 
