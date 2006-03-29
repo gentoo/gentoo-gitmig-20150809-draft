@@ -1,0 +1,23 @@
+--- encrypt.c-orig	2006-03-29 12:22:59.174610448 -0600
++++ encrypt.c	2006-03-29 12:23:48.498112136 -0600
+@@ -37,7 +37,6 @@
+ #include <signals.h>
+ #include <util.h>
+ #include <version.h>
+-#include <internal.h>
+ 
+ #include "cryptproto.h"
+ #include "cryptutil.h"
+@@ -82,6 +81,12 @@
+ G_MODULE_IMPORT GSList *gaim_accounts;
+ G_MODULE_IMPORT guint im_options;
+ 
++#define MSG_LEN 2048
++/* The above should normally be the same as BUF_LEN,
++ * but just so we're explicitly asking for the max message
++ * length. */
++#define BUF_LEN MSG_LEN
++#define BUF_LONG BUF_LEN * 2
+ 
+ #define ENCRYPT_PLUGIN_ID "gtk-obobo-gaim-encryption"
+ 
