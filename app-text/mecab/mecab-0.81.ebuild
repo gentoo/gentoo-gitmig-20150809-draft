@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.81.ebuild,v 1.2 2005/06/04 09:41:29 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.81.ebuild,v 1.3 2006/03/29 15:21:24 agriffis Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://chasen.org/~taku/software/mecab/src/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~ppc64"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="unicode"
 
 DEPEND="dev-lang/perl"
@@ -34,7 +34,7 @@ src_compile() {
 	use unicode && myconf="${myconf} --with-charset=utf8"
 
 	econf ${myconf} || die
-	emake || die
+	emake -j1 || die
 }
 
 src_install() {
