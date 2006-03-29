@@ -1,5 +1,5 @@
-MD5 4dd874e9eca3f5c2ab801881fe55a52f ChangeLog 2990
+MD5 2630edd4bfe50e1ee0d94f0b42b181fd ChangeLog 3146
 MD5 bb1358d0c54a9f19ec23bd58b8b52ef3 files/50uim-gentoo.el 120
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-uim-svn-20060320 0
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 43444019eee3e71127de41a74f2b7cc9 uim-svn-20060320.ebuild 2915
+MD5 fffe59db02026e83805c432d11807450 uim-svn-20060320.ebuild 2852
