@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.201 2006/03/26 10:04:35 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.202 2006/03/29 15:54:46 mr_bones_ Exp $
+
+  29 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -vim-core-7.0_alpha20060228.ebuild, -vim-core-7.0_alpha20060306.ebuild,
+  -vim-core-7.0_alpha20060320.ebuild:
+  remove old 7.0_alpha ebuilds since they shouldn't be used anymore (per ciaranm)
 
   26 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org>
   vim-core-7.0_beta.ebuild:
