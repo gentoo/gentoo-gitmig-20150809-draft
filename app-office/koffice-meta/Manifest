@@ -1,4 +1,4 @@
-MD5 1e9c75d066ae6509f1b9455dd63c93ac ChangeLog 4158
+MD5 abfadf73f86631ae7d1552847761dc5b ChangeLog 4158
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-koffice-meta-1.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-koffice-meta-1.5_beta1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-koffice-meta-1.5_beta2 0
@@ -6,5 +6,5 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-koffice-meta-1.5_rc1 0
 MD5 ce70c764a24d97876befe4715202f25e koffice-meta-1.4.2.ebuild 1144
 MD5 dbe17e4f71fc77433ea3376582603b6d koffice-meta-1.5_beta1.ebuild 1184
 MD5 e38218bfc32c72b426ed1f9cac1d1b1c koffice-meta-1.5_beta2.ebuild 1184
-MD5 dbe17e4f71fc77433ea3376582603b6d koffice-meta-1.5_rc1.ebuild 1184
+MD5 bea039c9c792fcccccea8c0de8805401 koffice-meta-1.5_rc1.ebuild 1182
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157

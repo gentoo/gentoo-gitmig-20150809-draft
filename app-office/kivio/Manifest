@@ -1,4 +1,4 @@
-MD5 0bcc4315f0885b6024778a849cfa3342 ChangeLog 3421
+MD5 d9079fc2bfbcc1c70865a4f0f486b4d1 ChangeLog 3421
 MD5 902823ac54984271d00a3e72454440b1 files/digest-kivio-1.4.2 250
 MD5 82af01b67d83c02945f1e26ae9529232 files/digest-kivio-1.5_beta1 253
 MD5 a08e04910037e4b3b9e9cbfb92eda61e files/digest-kivio-1.5_beta2 69
@@ -6,5 +6,5 @@ MD5 f01ddda79b7e0afa602b27c09ae05217 files/digest-kivio-1.5_rc1 72
 MD5 4867a32ce0cc078f06aa6042bc0aefd9 kivio-1.4.2.ebuild 848
 MD5 55b7d640aaccbc1f85bb956eebc8317a kivio-1.5_beta1.ebuild 840
 MD5 96a45357124cb88aca2eddd5dde4266e kivio-1.5_beta2.ebuild 840
-MD5 55b7d640aaccbc1f85bb956eebc8317a kivio-1.5_rc1.ebuild 840
+MD5 02b8750b4ddf7be2c2cf495a332ce1dc kivio-1.5_rc1.ebuild 838
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
