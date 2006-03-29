@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rman/rman-3.2.ebuild,v 1.9 2006/03/09 22:15:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rman/rman-3.2.ebuild,v 1.10 2006/03/29 23:24:21 flameeyes Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="PolyGlotMan man page translator AKA RosettaMan"
 HOMEPAGE="http://polyglotman.sourceforge.net/"
@@ -19,6 +19,11 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${PF}-gentoo.diff || die "patch failed"
+	epatch "${FILESDIR}/${P}-ldflags.patch"
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
