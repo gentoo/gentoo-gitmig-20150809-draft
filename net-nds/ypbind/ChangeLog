@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.29 2006/02/19 19:56:08 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.30 2006/03/29 20:41:13 eradicator Exp $
+
+  29 Mar 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  ypbind-1.19.1.ebuild:
+  Stable on amd64, ppc64, sparc, and x86.
 
   19 Feb 2006; Joshua Kinard <kumba@gentoo.org> ypbind-1.19.1.ebuild:
   Added ~mips to KEYWORDS.
