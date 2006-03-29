@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.2.6.ebuild,v 1.5 2006/03/28 00:11:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.2.6.ebuild,v 1.6 2006/03/29 17:31:00 agriffis Exp $
 
 inherit versionator
 
@@ -41,7 +41,7 @@ src_unpack() {
 		xargs -0r sed -i '
 			s/--pfa --pfb/--formats=PFA,PFB/;
 			s/--pfa/--formats=PFA/;
-			s/--pfa/--formats=PFA/'
+			s/--pfb/--formats=PFB/'
 }
 
 src_compile() {
