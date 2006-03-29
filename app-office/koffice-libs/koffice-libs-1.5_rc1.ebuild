@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-1.5_rc1.ebuild,v 1.1 2006/03/29 15:13:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-1.5_rc1.ebuild,v 1.2 2006/03/29 22:20:04 flameeyes Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -36,6 +36,8 @@ KMEXTRA="interfaces/
 
 KMEXTRACTONLY="
 	kchart/kdchart/"
+
+PATCHES="${FILESDIR}/${P}-kspell2.patch"
 
 need-kde 3.4
 
