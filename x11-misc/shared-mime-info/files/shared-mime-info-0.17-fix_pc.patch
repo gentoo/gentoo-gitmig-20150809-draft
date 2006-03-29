@@ -1,0 +1,14 @@
+diff -uNr shared-mime-info-0.17/shared-mime-info.pc.in shared-mime-info-0.17.patched/shared-mime-info.pc.in
+--- shared-mime-info-0.17/shared-mime-info.pc.in	2004-01-21 20:29:34.000000000 +0100
++++ shared-mime-info-0.17.patched/shared-mime-info.pc.in	2006-03-29 11:59:47.000000000 +0200
+@@ -1,7 +1,7 @@
+ prefix=@prefix@
+-exec_prefix=${prefix}
+-libdir=${exec_prefix}/lib
+-includedir=${prefix}/include
++exec_prefix=@exec_prefix@
++libdir=@libdir@
++includedir=@includedir@
+ 
+ 
+ Name: shared-mime-info
