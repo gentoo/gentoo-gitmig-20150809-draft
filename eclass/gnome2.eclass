@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.67 2006/03/28 20:59:57 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.68 2006/03/29 13:02:27 allanonjl Exp $
 
 # GNOME 2 ECLASS
 inherit libtool gnome.org debug fdo-mime eutils
@@ -183,7 +183,7 @@ gnome2_icon_cache_update() {
 		## In order to prevent the declaration from being in global scope, we
 		## this hack to prevent an empty error message being printed for stable
 		## users. -- compnerd && allanonjl
-		if [[ "${fails[i]}" != "" ]] ; then
+		if [[ "${fails[i]}" != "" && "${fails[i]}" != "()" ]] ; then
 			eerror "Failed to update cache with icon ${fails[i]}"
 		fi
 	done
@@ -245,7 +245,7 @@ gnome2_omf_fix() {
 		## In order to prevent the declaration from being in global scope, we
 		## this hack to prevent an empty error message being printed for stable
 		## users. -- compnerd && allanonjl
-		if [[ "${fails[i]}" != "" ]] ; then
+		if [[ "${fails[i]}" != "" && "${fails[i]}" != "()" ]] ; then
 			eerror "Failed to update OMF Makefile ${fails[i]}"
 		fi
 	done
