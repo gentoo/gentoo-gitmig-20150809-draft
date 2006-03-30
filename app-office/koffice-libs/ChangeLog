@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.35 2006/03/29 22:20:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.36 2006/03/30 18:01:21 carlo Exp $
+
+  30 Mar 2006; Carsten Lohrke <carlo@gentoo.org>
+  koffice-libs-1.5_rc1.ebuild:
+  Obviously, KOffice users want to print.
 
   29 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/koffice-libs-1.5_rc1-kspell2.patch, koffice-libs-1.5_rc1.ebuild:

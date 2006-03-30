@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5_rc1.ebuild,v 1.1 2006/03/29 15:08:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5_rc1.ebuild,v 1.2 2006/03/30 17:56:30 carlo Exp $
 
 inherit kde
 
@@ -37,6 +37,8 @@ RDEPEND=">=media-gfx/imagemagick-5.5.2
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	dev-util/pkgconfig"
+RDEPEND="${RDEPEND}
+	kde-base/kdeprint"
 
 # add blockers on split packages derived from this one
 for x in $(get-child-packages ${CATEGORY}/${PN}); do
@@ -44,7 +46,7 @@ for x in $(get-child-packages ${CATEGORY}/${PN}); do
 	RDEPEND="${RDEPEND} !${x}"
 done
 
-need-kde 3.3
+need-kde 3.4
 
 # TODO: kword sql plugin needs Qt compiled with sql support
 # the dependency on python is needed for scripting support in kexi
