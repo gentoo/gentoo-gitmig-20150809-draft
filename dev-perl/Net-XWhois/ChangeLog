@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-XWhois
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XWhois/ChangeLog,v 1.2 2006/01/13 22:06:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XWhois/ChangeLog,v 1.3 2006/03/30 23:08:03 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Net-XWhois-0.90.ebuild:
+  Mark 0.90 ~ia64
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   Net-XWhois-0.90.ebuild:
