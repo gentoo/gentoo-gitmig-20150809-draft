@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.2.1.ebuild,v 1.3 2006/03/25 03:56:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.3-r1.ebuild,v 1.1 2006/03/30 18:52:59 metalgod Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -86,6 +86,7 @@ src_unpack() {
 		Util/Logger.cs
 
 	epatch ${FILESDIR}/${PN}-0.2.1-multilib.patch
+	epatch ${FILESDIR}/${P}-CVE-2006-1296.patch
 
 	eautoreconf
 }

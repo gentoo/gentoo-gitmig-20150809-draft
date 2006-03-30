@@ -1,18 +1,28 @@
-MD5 c2aafc2e07a824a03ec84a8d392a44c1 ChangeLog 3101
-MD5 76fc6dcf5b9e19be1671056ac3189cff beagle-0.1.1.ebuild 3099
-MD5 6c9eeb1d3f0468b7745e166a4b7ff023 beagle-0.1.2.ebuild 2942
-MD5 bb3f90d420d3c65ef44abc33fa63ea46 beagle-0.2.1-r1.ebuild 3295
-MD5 a4d0d4e12a5c95d16915000787ccfdcd beagle-0.2.1.ebuild 3247
-MD5 7949ab2cf0c443523000b6f2e606abd3 beagle-0.2.2.1.ebuild 3089
-MD5 035bfe54a5a2feb53324ea017272b9e6 beagle-0.2.3.ebuild 3087
-MD5 3375984ea7d16737cd465bae6ed3d928 files/beagle-0.1.1-null-task-source.patch 1347
-MD5 9c5c2f0ad3f959022b402ddba4dc671d files/beagle-0.1.1-uri-serialization.patch 2704
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c633008abde82ac7235d431dc10b9b3c ChangeLog 3647
+RMD160 2334588539a48068f247b674da0f8b1ec1c03761 ChangeLog 3647
+SHA256 73df8ad3c043b010b89b84adb528ad52a8e6322b6dd42317bb75b4753977be2b ChangeLog 3647
+MD5 a01b1cb2bc3a8c8cbd5a97e36617d933 beagle-0.2.3-r1.ebuild 3137
+RMD160 3cf2f3a398989751e9e9324d818f080c47f6049e beagle-0.2.3-r1.ebuild 3137
+SHA256 c28cff1947410d91ac3867d818c0c6e6dd38372b1e2b77e55ea0bc623d83024c beagle-0.2.3-r1.ebuild 3137
 MD5 a8b3c0c4bcd3f1cd8572a271b142f3b5 files/beagle-0.2.1-multilib.patch 637
-MD5 4f027450fce7089b8233d682db4a3069 files/beagle-0.2.1-noguisettings.patch 897
-MD5 4840546d3689482f55c682ef01d4807b files/digest-beagle-0.1.1 66
-MD5 804bc08b17b5cd22cad5ceb7d6d45e9b files/digest-beagle-0.1.2 66
-MD5 28eeb69b044b7177e490c82774c03fc7 files/digest-beagle-0.2.1 244
-MD5 28eeb69b044b7177e490c82774c03fc7 files/digest-beagle-0.2.1-r1 244
-MD5 4584ba03bef906143737d8bf17542e00 files/digest-beagle-0.2.2.1 250
-MD5 61cf8ee79bc77bbf9093a7565d4a3454 files/digest-beagle-0.2.3 244
+RMD160 af87aa1d85dd0bdbf44f02a23914274d0420d2db files/beagle-0.2.1-multilib.patch 637
+SHA256 86867f480d7a0155aa5d6cc317c3d3483f45bb0751726c6c6ca5c839721f9062 files/beagle-0.2.1-multilib.patch 637
+MD5 75e9563024dda8df69aad86c615ae52a files/beagle-0.2.3-CVE-2006-1296.patch 474
+RMD160 8a997db07dc28d519212e5fe0a995a065a29971b files/beagle-0.2.3-CVE-2006-1296.patch 474
+SHA256 23e88f3ad291fd923cf9b346ca7cdcfedd975a9156683a36fa660f2a3d3852e1 files/beagle-0.2.3-CVE-2006-1296.patch 474
+MD5 61cf8ee79bc77bbf9093a7565d4a3454 files/digest-beagle-0.2.3-r1 244
+RMD160 e71c7ab57f0fa065302d460c2059307ff93c831c files/digest-beagle-0.2.3-r1 244
+SHA256 ba59a434d430c770e1bafd469dd29265b9302e2196032a0f67142b2ec78b0d8f files/digest-beagle-0.2.3-r1 244
 MD5 8c88e9a257d221daea17b7175a7f7947 metadata.xml 314
+RMD160 e3e5e79de0549124c4693d22e1a5c35a13510e87 metadata.xml 314
+SHA256 1a2e1ce6af1bd26a8f0a16c348c39be963f09c5c4986b66c3622f32c4e4f367e metadata.xml 314
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELDcJwUpWvClEHQoRAqtEAJ9Xdi5yKBoY7T57C0SJo4/sojX+dgCeOLm7
+D/res5ryPaS4A8fLoRYPsgg=
+=yOMK
+-----END PGP SIGNATURE-----

@@ -1,6 +1,18 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.18 2006/03/25 03:56:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.19 2006/03/30 18:52:59 metalgod Exp $
+
+*beagle-0.2.3-r1 (30 Mar 2006)
+
+  30 Mar 2006; Luis Medinas <metalgod@gentoo.org>
+  -files/beagle-0.1.1-null-task-source.patch,
+  -files/beagle-0.1.1-uri-serialization.patch,
+  -files/beagle-0.2.1-noguisettings.patch,
+  +files/beagle-0.2.3-CVE-2006-1296.patch, -beagle-0.1.1.ebuild,
+  -beagle-0.1.2.ebuild, -beagle-0.2.1.ebuild, -beagle-0.2.1-r1.ebuild,
+  -beagle-0.2.2.1.ebuild, -beagle-0.2.3.ebuild, +beagle-0.2.3-r1.ebuild:
+  Added a patch to fix the security hole on beagle-status fixes bug #128136.
+  Removed older and affected versions.
 
   25 Mar 2006; Joseph Jezak <josejx@gentoo.org> beagle-0.2.2.1.ebuild,
   beagle-0.2.3.ebuild:
