@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Audio-Mixer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Mixer/ChangeLog,v 1.3 2006/01/13 17:52:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Mixer/ChangeLog,v 1.4 2006/03/30 22:11:37 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Audio-Mixer-0.7.ebuild:
+  Mark 0.7 ~ia64
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   Audio-Mixer-0.7.ebuild:
