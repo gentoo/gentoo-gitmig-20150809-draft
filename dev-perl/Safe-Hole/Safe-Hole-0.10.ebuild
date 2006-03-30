@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe-Hole/Safe-Hole-0.10.ebuild,v 1.3 2006/01/13 22:16:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe-Hole/Safe-Hole-0.10.ebuild,v 1.4 2006/03/30 23:15:46 agriffis Exp $
 
 inherit perl-module
 
@@ -11,6 +11,6 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="sparc x86"
+KEYWORDS="~ia64 sparc x86"
 
 SRC_TEST="do"

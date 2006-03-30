@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7eda6a290e84d07b1ee5da180462202a ChangeLog 826
-MD5 4ce16645aaf5a47d8d25316fc312cdda Statistics-Descriptive-2.6.ebuild 559
+MD5 361a46072bae7bc37463e8acdba985e4 ChangeLog 930
+RMD160 6b6c0f9370fee217678f3f4db0f08bc464508383 ChangeLog 930
+SHA256 f76995c329a9c5c2ace1b3bc2791592da68d65fdaefa668259f4a3231b1141b7 ChangeLog 930
+MD5 1df7307febb189a3858b01cfeabb4563 Statistics-Descriptive-2.6.ebuild 564
+RMD160 248830e76cb8aea8080b16f277942c3f9391d424 Statistics-Descriptive-2.6.ebuild 564
+SHA256 e4a5c853c9b3d28c2093c45b673ca1428aa1782e0da1153dbd8a6913c76cc7a6 Statistics-Descriptive-2.6.ebuild 564
 MD5 f091af204c270052bdd176c9619a20be files/digest-Statistics-Descriptive-2.6 77
+RMD160 dfc06cfa559d8861e04d83bc55a8879823708682 files/digest-Statistics-Descriptive-2.6 77
+SHA256 a92d8699a1b313d7b945be91946858156a634f526a53c795a75f9557f8c71fcc files/digest-Statistics-Descriptive-2.6 77
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDyCertG5z4I8BtQoRAsA7AJ9UNE8OcmNlLsPe0HH+ctT9sC3XFACfYjdQ
-TfNsbmfeoS/sWagL85/O0Fc=
-=zqL2
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
