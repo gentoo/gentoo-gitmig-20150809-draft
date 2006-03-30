@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c9666795621f46f40657f2256548d9cc ChangeLog 2067
-RMD160 7c30f59f72fb6c774c9c35bf633b11c3e331f2ad ChangeLog 2067
-SHA256 29be328af59757bee9185f5ad0783ecae583836ba535d14a8eaf781164ba23e9 ChangeLog 2067
+MD5 714eb6eef7ac99316a23ac994980eab2 ChangeLog 2167
+RMD160 54eacbfa2ef19528e5e41b27610b79d2577c5eb4 ChangeLog 2167
+SHA256 b681c042d2510ec914a1777574e69ec00701f77f7d1d4ebfd524e1618fd421b1 ChangeLog 2167
 MD5 b8f8dd3fb65bc8010c1888e973947998 files/digest-synce-librapi2-0.7 70
 RMD160 ee160198f3137e1b5c5f857d4aeeb571cb9d47e4 files/digest-synce-librapi2-0.7 70
 SHA256 a27a1799bf15baaa7429d5d817916b09b95ef27d30cf02641ead9dcfa2d7de7e files/digest-synce-librapi2-0.7 70
@@ -34,13 +31,6 @@ SHA256 f9e699c341a60e94ba82ef0f3621aaa36a4562499fa937a79e2c831068f45e16 synce-li
 MD5 1587cf252b7a1eb6f84ec8cf1eb2ab5c synce-librapi2-0.9.0.ebuild 694
 RMD160 9dd8d1f6741e114105ddbfed54d64da3caebb757 synce-librapi2-0.9.0.ebuild 694
 SHA256 b0dd8ff1bbf4d8b67795d62f17e57791852765b1d469454393a2f9cd0374686a synce-librapi2-0.9.0.ebuild 694
-MD5 18d358b2dc6a9d301ec18e027c8accb6 synce-librapi2-0.9.1.ebuild 638
-RMD160 1935f931f41ac06e446a966186d0d5f714f78cf8 synce-librapi2-0.9.1.ebuild 638
-SHA256 bdb32fcf1a16e35b1f65f708dd5943f1c58a67749948e2cc3bf412f4b7ee32a1 synce-librapi2-0.9.1.ebuild 638
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD4DBQFEGbhkub4+zaPCR/oRAuEyAJjKDkKEl/N8P01naZ/pvPZnZwFyAKCm0NVp
-08066zhKTSDLEHRKcC9+IA==
-=cnQC
------END PGP SIGNATURE-----
+MD5 41d8ad88d31a0b761cbb5e34aed7d7eb synce-librapi2-0.9.1.ebuild 643
+RMD160 62e6acd28a3eee5ec0723e4908da172d4a5ca935 synce-librapi2-0.9.1.ebuild 643
+SHA256 2ebd4738578590ad15299f163cedb434fc8e2e4ba2931420514e257959dde89b synce-librapi2-0.9.1.ebuild 643
