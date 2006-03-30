@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblo/ChangeLog,v 1.5 2006/03/23 00:51:11 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblo/ChangeLog,v 1.6 2006/03/30 05:50:35 chriswhite Exp $
+
+  30 Mar 2006; Chris White <chriswhite@gentoo.org> liblo-0.23.ebuild:
+  liblo-0.23 x86 stable bug #126970
 
   23 Mar 2006; Luis Medinas <metalgod@gentoo.org> liblo-0.23.ebuild:
   Stable on amd64. Bug #126970.
