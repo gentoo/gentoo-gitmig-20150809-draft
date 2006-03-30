@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rudl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/ChangeLog,v 1.8 2005/11/01 14:22:18 caleb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/ChangeLog,v 1.9 2006/03/30 03:57:28 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> rudl-0.8.ebuild:
+  Mark 0.8 ~ia64
 
 *rudl-0.8 (01 Nov 2005)
 
