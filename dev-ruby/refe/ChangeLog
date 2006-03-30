@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/refe
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/refe/ChangeLog,v 1.6 2004/12/16 09:39:31 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/refe/ChangeLog,v 1.7 2006/03/30 03:43:13 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> refe-0.8.0.ebuild:
+  Mark 0.8.0 ~ia64
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> refe-0.8.0.ebuild:
   Stable on ppc64
