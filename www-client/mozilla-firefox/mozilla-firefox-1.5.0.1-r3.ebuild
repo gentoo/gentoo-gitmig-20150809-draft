@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1-r3.ebuild,v 1.2 2006/03/20 15:56:26 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1-r3.ebuild,v 1.3 2006/03/30 03:16:17 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -70,12 +70,9 @@ src_unpack() {
 		[[ ${X} != en ]] && xpi_unpack firefox-${X}-${PV}.xpi
 	done
 
-	if ! use alpha; then
-		rm ${WORKDIR}/patch/001_mozilla-1.3-alpha-stubs.patch.bz2
-	fi
-
 	# Apply our patches
 	cd ${S} || die "cd failed"
+	EPATCH_EXCLUDE="001_mozilla-1.3-alpha-stubs.patch.bz2"
 	EPATCH_FORCE="yes" epatch ${WORKDIR}/patch
 
 	# Fix a compilation issue using the 32-bit userland with 64-bit kernel on
