@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/podcast
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/ChangeLog,v 1.1 2006/01/10 21:25:34 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/ChangeLog,v 1.2 2006/03/30 03:39:56 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> podcast-0.0.4.ebuild:
+  Mark 0.0.4 ~ia64
 
 *podcast-0.0.4 (10 Jan 2006)
 
