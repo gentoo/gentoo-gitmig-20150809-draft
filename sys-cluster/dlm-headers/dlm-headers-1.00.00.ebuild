@@ -1,8 +1,7 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-headers/dlm-headers-1.00.00.ebuild,v 1.6 2005/11/17 01:55:24 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-headers/dlm-headers-1.00.00.ebuild,v 1.7 2006/03/30 15:35:13 xmerlin Exp $
 
-inherit eutils linux-mod
 
 MY_P="cluster-${PV}"
 
