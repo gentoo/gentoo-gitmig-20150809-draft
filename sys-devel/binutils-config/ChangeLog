@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils-config
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.18 2005/11/20 17:48:48 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.19 2006/03/30 13:50:35 flameeyes Exp $
+
+  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  binutils-config-1.8-r6.ebuild:
+  Add ~x86-fbsd keyword.
 
 *binutils-config-1.8-r6 (20 Nov 2005)
 
