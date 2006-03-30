@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.0.0.ebuild,v 1.1 2006/03/24 12:36:26 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.0.0.ebuild,v 1.2 2006/03/30 00:24:18 exg Exp $
 
 inherit libtool multilib
 
@@ -35,4 +35,11 @@ src_install() {
 	make install DESTDIR="${D}" || die
 	dodoc Changes README
 	dohtml doc/*
+}
+
+pkg_postinst() {
+	ewarn "Please note that the soname of the library changed!"
+	ewarn "If you are upgrading from a previous version you need"
+	ewarn "to fix dynamic linking inconsistencies by executing:"
+	ewarn "revdep-rebuild --library libexpat.so.0"
 }

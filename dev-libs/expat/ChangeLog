@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.49 2006/03/24 12:36:24 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.50 2006/03/30 00:24:18 exg Exp $
+
+  30 Mar 2006; Emanuele Giaquinta <exg@gentoo.org> expat-2.0.0.ebuild:
+  Add warning about the ABI change.
 
 *expat-2.0.0 (24 Mar 2006)
 
