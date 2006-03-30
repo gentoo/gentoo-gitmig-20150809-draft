@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.254 2006/03/24 04:03:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.255 2006/03/30 07:05:46 kevquinn Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1331,7 +1331,7 @@ gcc_do_make() {
 
 	if [[ ${GCC_MAKE_TARGET} == "all" ]] ; then
 		STAGE1_CFLAGS=${STAGE1_CFLAGS-"${CFLAGS}"}
-	elif [[ $(gcc-version) == "3.4" && ${GCC_BRANCH_VER} == "3.4" ]] && has_hardened ; then
+	elif [[ $(gcc-version) == "3.4" && ${GCC_BRANCH_VER} == "3.4" ]] && gcc-specs-ssp ; then
 		# See bug #79852
 		STAGE1_CFLAGS=${STAGE1_CFLAGS-"-O2"}
 	else
