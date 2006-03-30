@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1b2172f025bb12f4a3753f8d72ae9709 ChangeLog 800
-MD5 73886de053a6aeecb53b0af834379765 Ogg-Vorbis-Header-PurePerl-0.07.ebuild 656
+RMD160 e500636f1d4113b85fa892e1a7593bc2ce63730f ChangeLog 800
+SHA256 94959842951996af91b1b125b2c187e799ce3da67859e409c28305987368f19b ChangeLog 800
+MD5 170357249563d8b8039684e00cdbbcb0 Ogg-Vorbis-Header-PurePerl-0.07.ebuild 662
+RMD160 18d3abeebacbaa0bc8c36401a5a7ce441646d82d Ogg-Vorbis-Header-PurePerl-0.07.ebuild 662
+SHA256 b69d5cb5cba05fa9ca9f8c188efe1c8c98bfb7c9437e90e75eaa400f6ab883c8 Ogg-Vorbis-Header-PurePerl-0.07.ebuild 662
 MD5 f4aef2def777add4feaa102b6cc9901e files/digest-Ogg-Vorbis-Header-PurePerl-0.07 82
+RMD160 47446539054a0fe7f9d94972fcae7fb1df871529 files/digest-Ogg-Vorbis-Header-PurePerl-0.07 82
+SHA256 9c87fbfca3bd174531f75d4987b5e8adcba68e71c3a2a8a30193cce77351cb97 files/digest-Ogg-Vorbis-Header-PurePerl-0.07 82
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDyCSItG5z4I8BtQoRAsStAKCKMpSse+G+SlhKC3FyS3GnEoLFtgCgh6eC
-D/JbfCS0nkmzFVYwkptF2Hk=
-=mtL7
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305

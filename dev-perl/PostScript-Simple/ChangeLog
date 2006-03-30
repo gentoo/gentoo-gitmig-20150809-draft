@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PostScript-Simple
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PostScript-Simple/ChangeLog,v 1.6 2006/01/16 15:52:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PostScript-Simple/ChangeLog,v 1.7 2006/03/30 23:12:50 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
+  PostScript-Simple-0.07.ebuild:
+  Mark 0.07 ~ia64
 
 *PostScript-Simple-0.07 (16 Jan 2006)
 

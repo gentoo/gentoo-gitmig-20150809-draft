@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5869fcf59c8bc2534547ab379bc19f84 ChangeLog 990
+RMD160 428a3b0c345c9cb24fc0e778c17f21e84ce6fce3 ChangeLog 990
+SHA256 2242b49c48b100d09bde4666b903aedd45304528d323fd9522cdc4748502a3d5 ChangeLog 990
 MD5 641a2ec8aadab390a69eeae89fc8796f PostScript-Simple-0.06.ebuild 554
-MD5 cd7b20099725e2cea2a12ca68bb362b9 PostScript-Simple-0.07.ebuild 556
+RMD160 f214ec3704fa0069d8ef3152b28985b0c94c92ec PostScript-Simple-0.06.ebuild 554
+SHA256 165274bf8629e1fafc4522f5c537853e1600d65838dfecf6f8131fc0866b7b43 PostScript-Simple-0.06.ebuild 554
+MD5 3045bf92e96c2bf0f2895d2c557409b7 PostScript-Simple-0.07.ebuild 562
+RMD160 92815ca17a8d32c32d9b0a5f7f8b7883f75879ae PostScript-Simple-0.07.ebuild 562
+SHA256 810c73def627eaacd2c1479302de7108710fbc2edbea79e65e78ec2b271c6d7a PostScript-Simple-0.07.ebuild 562
 MD5 4804fa680c2a888daee83e9121216934 files/digest-PostScript-Simple-0.06 73
+RMD160 dc1bfe9b5107b71bf679038ec9e0d9d9c01683b6 files/digest-PostScript-Simple-0.06 73
+SHA256 73364311592cc0e18f392bbecc10056a1224a216e36e5902aaa192c3645d0f68 files/digest-PostScript-Simple-0.06 73
 MD5 634ad7fbff22abdd19d0872fef15ba86 files/digest-PostScript-Simple-0.07 73
+RMD160 57a33736d56e5e924587d70ff933eba8dd7848b4 files/digest-PostScript-Simple-0.07 73
+SHA256 424d16b2bead6b56658f12a63ea36f29aa3eccc1cdb7eb2c7729b316293ad3f5 files/digest-PostScript-Simple-0.07 73
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDy8FftG5z4I8BtQoRAvcrAJ9KwTQQSmEl8Ul1rh22wsLBl5FWkwCfcrRr
-GfL/BDvz6/GsW5p/Rbdwt+w=
-=8XEm
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
