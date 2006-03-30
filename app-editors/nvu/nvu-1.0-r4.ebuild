@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r3.ebuild,v 1.1 2006/03/20 17:18:10 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r4.ebuild,v 1.1 2006/03/30 01:49:05 anarchy Exp $
 
 inherit eutils mozconfig flag-o-matic multilib
 
@@ -26,6 +26,7 @@ src_unpack() {
 	# That can extend to future versions with much more ease. - Chris
 	epatch ${FILESDIR}/1.0/nvu-0.50-dir.patch || die "failed to apply dir. patch"
 	epatch ${FILESDIR}/1.0/nvu-0.50-freetype-compile.patch || die "failed to patch for freetype"
+	epatch ${FILESDIR}/1.0/mozilla-rpath-3.patch || die "failed to apply rpath patch"
 	epatch ${FILESDIR}/1.0/${P}-gcc4-1.patch || die "failed to apply gcc-4 patch"
 	epatch "${FILESDIR}/010_glibc-2.4.patch" || die "failed to apply glibc-2.4 patch"
 

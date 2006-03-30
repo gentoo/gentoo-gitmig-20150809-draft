@@ -1,0 +1,14 @@
+--- config/rules.mk.orig	2005-07-28 01:45:18.000000000 +0000
++++ config/rules.mk	2005-07-28 01:45:21.000000000 +0000
+@@ -507,5 +507,10 @@
+ # 
+ ifeq ($(OS_ARCH),Linux)
+ ifdef IS_COMPONENT
++DSO_LDOPTS += -Wl,-rpath,'$$ORIGIN:$$ORIGIN/..'
++OS_LDFLAGS += -Wl,-rpath,'$$ORIGIN:$$ORIGIN/..'
+ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
++else
++DSO_LDOPTS += -Wl,-rpath,'$$ORIGIN'
++OS_LDFLAGS += -Wl,-rpath,'$$ORIGIN'
+ endif
+ 
