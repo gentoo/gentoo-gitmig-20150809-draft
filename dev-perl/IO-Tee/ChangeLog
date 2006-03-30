@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Tee
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tee/ChangeLog,v 1.3 2006/01/13 20:37:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tee/ChangeLog,v 1.4 2006/03/30 22:53:15 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> IO-Tee-0.64.ebuild:
+  Mark 0.64 ~ia64
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org> IO-Tee-0.64.ebuild:
   marking stable sparc x86
