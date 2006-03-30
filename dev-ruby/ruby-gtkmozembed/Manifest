@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bc0c5c679f55255d23ad3f59b7522ddc ChangeLog 521
 RMD160 1eb3af0b75dfbf32a78b7a527975efab6affd0cc ChangeLog 521
 SHA256 261df518d38be2cb6dffba475e6dac96dce9251a0bfdc903ff12edf3aab43fa8 ChangeLog 521
@@ -10,3 +13,10 @@ SHA256 70b396ab3c7a63a81cb895b7728bd9eccdc9770afdb9919f2c54694b685f7032 metadata
 MD5 e7b80a93921592ad0460fc6a66d33af3 ruby-gtkmozembed-0.14.1.ebuild 574
 RMD160 45e5e886f1cc56e881670db36d8d674db85714cb ruby-gtkmozembed-0.14.1.ebuild 574
 SHA256 de6333b3d593dc8a0a1e08bfcb3bc78634c57ce39e08c483c19fdcb210b0db73 ruby-gtkmozembed-0.14.1.ebuild 574
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEK1WcJrHF4yAQTrARAgWUAJ0RYpQ53al1pJvKgayh7vHIiqG36ACfQlrX
+IC8z7z82Zt0GnLBAaH6GkCg=
+=dPmZ
+-----END PGP SIGNATURE-----
