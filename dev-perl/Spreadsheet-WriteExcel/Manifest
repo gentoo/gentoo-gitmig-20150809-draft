@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9372cbc674a26a5a31a9063cb87746b5 ChangeLog 2677
+MD5 0d6b9f2d80f95cafb24570cf00e198a4 ChangeLog 2783
+RMD160 b8f097a28d29aa7076265580482640c5c9aea31f ChangeLog 2783
+SHA256 e2194c37f681ff2b1b62b3c5736ba9f6f3867bdfaa2c096509ddc411b8c054cb ChangeLog 2783
 MD5 9cd7599892506017f76d5c62240a9594 Spreadsheet-WriteExcel-2.11.ebuild 597
+RMD160 2388504487f0b3ed1cbe03ac152cc7d8a3e407b6 Spreadsheet-WriteExcel-2.11.ebuild 597
+SHA256 44fe9973b30ea1d186ad663212b4c67fc26bbbf5f0a1a0b53923cafc404a9f4a Spreadsheet-WriteExcel-2.11.ebuild 597
 MD5 ff362f3de97c7d567bb9eacf2e9b4338 Spreadsheet-WriteExcel-2.15.ebuild 620
-MD5 4d9a5082313c363fe13cd20d60826ce4 Spreadsheet-WriteExcel-2.16.ebuild 623
+RMD160 07c8386f115ea5a86a1e34e4a7cc414f58f7f6ae Spreadsheet-WriteExcel-2.15.ebuild 620
+SHA256 c296b1dac7fde4e5d1a52d67604ac27bc6d2835f49274b45d4d4ac48aa72b8d0 Spreadsheet-WriteExcel-2.15.ebuild 620
+MD5 e3c4e301ccb8775ee2621dafeee24d9f Spreadsheet-WriteExcel-2.16.ebuild 628
+RMD160 3ca344ab2351dd23f538d69f6b3ad083e1f3e786 Spreadsheet-WriteExcel-2.16.ebuild 628
+SHA256 74b3fe63b816eed9060c2c999400334a99659bf3c61655df45e7af6320a98496 Spreadsheet-WriteExcel-2.16.ebuild 628
 MD5 941ec67c9b13083864b73da295185b15 files/digest-Spreadsheet-WriteExcel-2.11 79
+RMD160 def013ca64599068497e1e86c579c0cb9afbda0f files/digest-Spreadsheet-WriteExcel-2.11 79
+SHA256 136543ce4d416c9760cc0b47609a001d973869604b777b434915ff88c53ed3c8 files/digest-Spreadsheet-WriteExcel-2.11 79
 MD5 8562cc85d3009305203a833da08a6ac1 files/digest-Spreadsheet-WriteExcel-2.15 79
+RMD160 be7efb8a384f96c9f60db6b69eb7c05ee77b9a80 files/digest-Spreadsheet-WriteExcel-2.15 79
+SHA256 38fac009eaaa3078d10d4c10465017944b54d1c95692c8443d0012c5599b8907 files/digest-Spreadsheet-WriteExcel-2.15 79
 MD5 f92b8f7e89772082455523822437102b files/digest-Spreadsheet-WriteExcel-2.16 79
+RMD160 ba3d828c08d9f6eea1415ecf591efeb2b97baee6 files/digest-Spreadsheet-WriteExcel-2.16 79
+SHA256 4f681e996dcf794b1d77ba338f28616ec07a58c0a28264470c33a446cd78f2fb files/digest-Spreadsheet-WriteExcel-2.16 79
 MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8JGRtG5z4I8BtQoRAsu8AJoDm7DtItN4REv6Wg1SOxthMDbbFACeODVV
-+iiJQ6p1EjI+NpaIjpTOkVY=
-=dCr4
------END PGP SIGNATURE-----
+RMD160 20eb42c177eede01b15cb26692a3cdf9d09dbebb metadata.xml 157
+SHA256 6a11fd41a2a210a9760849de398ef8c62cf46cc742d09b2e1781def7848fa1ec metadata.xml 157
