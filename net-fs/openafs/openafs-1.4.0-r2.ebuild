@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.0-r2.ebuild,v 1.6 2006/03/29 01:49:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.0-r2.ebuild,v 1.7 2006/03/30 08:54:22 stefaan Exp $
 
 inherit flag-o-matic eutils toolchain-funcs versionator
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ia64 ~ppc ppc64 x86"
 IUSE="debug kerberos pam doc"
 
-RDEPEND="=net-fs/openafs-kernel-${PV}
+RDEPEND="=net-fs/openafs-kernel-${PV}*
 	pam? ( sys-libs/pam )
 	kerberos? ( virtual/krb5 )
 	!>=sys-libs/glibc-2.4"
