@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alltray
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.20 2005/12/10 21:00:12 swegener Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.21 2006/03/30 04:22:01 tsunam Exp $
+
+  30 Mar 2006; Joshua Jackson <tsunam@gentoo.org> alltray-0.65.ebuild:
+  Stable on x86; bug #127555
 
 *alltray-0.65 (10 Dec 2005)
 
