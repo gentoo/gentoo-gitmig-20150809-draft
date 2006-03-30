@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f10c17ceff5fa0f9e568225e926be221 ChangeLog 569
 RMD160 dc169fd0ddd2c73f89d7832b7cfb7ed29c63bf91 ChangeLog 569
 SHA256 adb7827e432dc39a700f3925225ac081baae0dc3ecdbc64f28f2bad6672665a2 ChangeLog 569
@@ -10,3 +13,10 @@ SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata
 MD5 3badbc8003f661e587e6d185e60beabb ruby-breakpoint-0.5.0.ebuild 522
 RMD160 9a530cdbff0cc50b898c549a24abfa6f94bf26dd ruby-breakpoint-0.5.0.ebuild 522
 SHA256 ab0e2d5ab8861b669f124b607fe24f266de77d193aba4de50bd91083fbe23b7b ruby-breakpoint-0.5.0.ebuild 522
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEK1R9JrHF4yAQTrARAhgFAKCt03KD3d4brAC1+mSJE8JHDwt+FQCgu5kT
+SxnD+dBylXJFIPZ8UYduals=
+=FGU0
+-----END PGP SIGNATURE-----
