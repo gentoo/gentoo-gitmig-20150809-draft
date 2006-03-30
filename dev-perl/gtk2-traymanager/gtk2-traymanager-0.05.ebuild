@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-traymanager/gtk2-traymanager-0.05.ebuild,v 1.4 2006/01/27 20:29:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-traymanager/gtk2-traymanager-0.05.ebuild,v 1.5 2006/03/30 23:49:15 agriffis Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/B/BO/BORUP/${MY_P}.tar.gz"
 HOMEPAGE="http://gtk2-perl.sf.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ppc x86"
+KEYWORDS="~ia64 ppc x86"
 IUSE=""
 
 DEPEND="${DEPEND}
