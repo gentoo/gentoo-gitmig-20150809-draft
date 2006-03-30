@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-libsynce
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-libsynce/ChangeLog,v 1.16 2006/01/11 06:14:56 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-libsynce/ChangeLog,v 1.17 2006/03/30 22:06:46 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
+  synce-libsynce-0.9.1.ebuild:
+  Mark 0.9.1 ~ia64
 
 *synce-libsynce-0.9.1 (11 Jan 2006)
 
