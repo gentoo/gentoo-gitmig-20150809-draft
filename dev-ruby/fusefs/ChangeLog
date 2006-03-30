@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fusefs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fusefs/ChangeLog,v 1.5 2006/01/22 16:58:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fusefs/ChangeLog,v 1.6 2006/03/30 03:28:23 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> fusefs-0.6.0.ebuild:
+  Mark 0.6.0 ~ia64
 
   22 Jan 2006; Caleb Tennis <caleb@gentoo.org> fusefs-0.6.0.ebuild:
   x86 stable
