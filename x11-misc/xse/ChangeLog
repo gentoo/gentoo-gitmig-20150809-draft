@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/ChangeLog,v 1.5 2006/03/16 13:15:08 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/ChangeLog,v 1.6 2006/03/30 08:58:15 taviso Exp $
+
+  30 Mar 2006; Tavis Ormandy <taviso@gentoo.org> xse-2.1.ebuild:
+  modular x deps #128083
 
   16 Mar 2006; Caleb Tennis <caleb@gentoo.org> xse-2.0.ebuild,
   xse-2.1.ebuild:
