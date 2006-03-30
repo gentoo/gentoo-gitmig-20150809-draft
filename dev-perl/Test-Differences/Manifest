@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 4a91a384b16c1d16920a3cfd71e42ad5 Test-Differences-0.47.ebuild 523
-MD5 86ad2e3860e3105907fddd3620d082b6 ChangeLog 623
+MD5 5a983d4239d79957bc7a558ae49caad4 ChangeLog 724
+RMD160 cc3f679c8bf777795095dd888fb1ad64d8ad89b9 ChangeLog 724
+SHA256 a8258ce8247db12e2fafaae077e389462c049f252cfc81c084277c4d7b5072fd ChangeLog 724
+MD5 086195c72d5af1519eda09d32a0de595 Test-Differences-0.47.ebuild 529
+RMD160 c536fb70b1af46cd11a171959cb4f5c5aadd3e76 Test-Differences-0.47.ebuild 529
+SHA256 dc4b00ba74d69e3b9d30a4700642081ba641e224bb7075b95e36a04be09030b6 Test-Differences-0.47.ebuild 529
 MD5 7511b579e7c2e3d3bb1dd12d399efed6 files/digest-Test-Differences-0.47 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC2/G/KRy60XGEcJIRAkJyAKClGBbFoExiorii5iop7s1aajaDoACgq/at
-+5JjiGnXGCq5itLeRVOMfLw=
-=UnFi
------END PGP SIGNATURE-----
+RMD160 2e417042071592e03ac8f5535757cb8a83bd4cad files/digest-Test-Differences-0.47 71
+SHA256 21cb6e57d7b0a7b95a3f392c93d74513c5837acf4a34dffabf1e73f18ddeeb31 files/digest-Test-Differences-0.47 71
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
