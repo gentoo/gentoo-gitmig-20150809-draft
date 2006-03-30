@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/frontier-rpc/frontier-rpc-0.07_beta4.ebuild,v 1.9 2005/05/09 15:14:31 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/frontier-rpc/frontier-rpc-0.07_beta4.ebuild,v 1.10 2006/03/30 23:47:20 agriffis Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://perl-xml.sourceforge.net/xml-rpc/${MY_P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="~ia64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-perl/XML-Parser
