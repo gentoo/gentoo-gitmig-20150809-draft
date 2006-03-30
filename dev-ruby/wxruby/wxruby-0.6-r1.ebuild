@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/wxruby-0.6-r1.ebuild,v 1.1 2006/01/02 22:51:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/wxruby-0.6-r1.ebuild,v 1.2 2006/03/30 04:02:12 agriffis Exp $
 
 inherit ruby wxwidgets
 
@@ -12,7 +12,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/1983/${MY_P}.tgz"
 
 LICENSE="wxWinLL-3"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~ia64 ~ppc ~sparc ~x86"
 IUSE="gtk2"
 
 DEPEND=">=dev-lang/ruby-1.8
