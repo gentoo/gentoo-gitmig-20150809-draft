@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8a33b547a9772a55a6df04888a38e748 ChangeLog 6173
-RMD160 5580695598c0ef44b4c40b40a8670e1ded78c73c ChangeLog 6173
-SHA256 1b1ef32c15d757c2b424a6a8fd1a993bb1f62beb3891c5ad8159e2de91225667 ChangeLog 6173
+MD5 8bb1940bd415ffaeee878b35fe7dfddb ChangeLog 6285
+RMD160 a00f460fbc6be399a04c583ed4c61f3d04e7348b ChangeLog 6285
+SHA256 7a7c98728dcc401febb497034bc7bb915e52bc2dbacc057cf7f5a0b1c55816b1 ChangeLog 6285
 MD5 2b8888ea3c1b05e81e1bbf61b1f2b945 diffutils-2.8.4-r4.ebuild 1933
 RMD160 d136104a8f8e9443ad1ba349524c226d49e8b97d diffutils-2.8.4-r4.ebuild 1933
 SHA256 8a835111ea2235645f7870a57584b80620dbb9b8b005a55e12739a4aeb4d7c2b diffutils-2.8.4-r4.ebuild 1933
-MD5 17ec21b61ea607cb1d6ca6d672fa2196 diffutils-2.8.7-r1.ebuild 1696
-RMD160 95f4c24a00018f3561461c48af3c5578d255521a diffutils-2.8.7-r1.ebuild 1696
-SHA256 b02fc166089af60b6543dbf4f07fdf02f166128531a3e27cddfed633b5fe1394 diffutils-2.8.7-r1.ebuild 1696
+MD5 5879e77d87a3da4d600ed7077deaeb6e diffutils-2.8.7-r1.ebuild 1709
+RMD160 8ae835d70701d29c6030da74902b0724b5c6c881 diffutils-2.8.7-r1.ebuild 1709
+SHA256 353cbe0baf529f8ce79cf2cc5eb09117ea7b7ee5ac2386ce54f9f41e9c955eb3 diffutils-2.8.7-r1.ebuild 1709
 MD5 88eef724512016e5400a58e4057ef235 files/diffutils-2.8.4-Makefile-fix-typeo.patch 1158
 RMD160 499d0a348d642de171f6d63a2bd1fa3a90a4139e files/diffutils-2.8.4-Makefile-fix-typeo.patch 1158
 SHA256 45a55f626b3c5e23a32cd822f4328fb12bf88c70b0c695ee78280afa0e22edae files/diffutils-2.8.4-Makefile-fix-typeo.patch 1158
@@ -34,7 +34,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEGKvJ2+ySkm8kpY0RAuwAAKCFNr6Iw9/0S2koMo3dztUn1HkJIwCdFIy9
-OUNEhJan4UHpxAwzNPLkJgY=
-=RPP/
+iD8DBQFEK+4bAiZjviIA2XgRAvuyAKCLzCuvvVANgWykIzfSJSvSZQVDVgCgla36
++ztH4t9guoe6aWD1Mg9NsK8=
+=OJ35
 -----END PGP SIGNATURE-----
