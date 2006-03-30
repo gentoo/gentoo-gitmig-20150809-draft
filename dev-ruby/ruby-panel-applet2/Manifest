@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d0723373551794a411a75625635817d8 ChangeLog 531
-RMD160 027045afbdaff5053908fb7d04e162ade8b6ce14 ChangeLog 531
-SHA256 4697de1b000e9de81adb0eb9f40491af714ae52409a052b56c00504704f985bd ChangeLog 531
+MD5 6b9e8305998aa4b1ed888b5ec9e4cc8b ChangeLog 673
+RMD160 60af0eb07c03cb991ca5c3935d67896b820fc3aa ChangeLog 673
+SHA256 79ebbd1f7299f2cfb014817c970bbbc2982cf051098cfb7d7365f8fb222fd045 ChangeLog 673
 MD5 f6b5cab6fd209b10594c8193c8837a35 files/digest-ruby-panel-applet2-0.14.1 271
 RMD160 5b3b60728a3f4345a67adfc07d9ce6f551a7f5a1 files/digest-ruby-panel-applet2-0.14.1 271
 SHA256 be485f8fde41e76ccf601ba67f83efee194813a10b46ec621e686a442d683cd5 files/digest-ruby-panel-applet2-0.14.1 271
 MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
 RMD160 097f8145a9994f98be4971b43b23b9e5e8bccb66 metadata.xml 158
 SHA256 70b396ab3c7a63a81cb895b7728bd9eccdc9770afdb9919f2c54694b685f7032 metadata.xml 158
-MD5 db7d1987f07872d17ef49e530aca5a27 ruby-panel-applet2-0.14.1.ebuild 535
-RMD160 3a9f68169664b30d9fe8156248b096ed4753d6d6 ruby-panel-applet2-0.14.1.ebuild 535
-SHA256 5d74297e0bbafa3b4d01c8c7782ea7a679d6dd63671bca06ead14cc0ce9511b3 ruby-panel-applet2-0.14.1.ebuild 535
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEK1X7JrHF4yAQTrARAm3ZAKCPLTDVzpDvwBC35Mt5Eu73Wz0a0gCgwvXe
-Zv3m+pJwqgcjiS2HSt/nMEE=
-=65le
------END PGP SIGNATURE-----
+MD5 d8c4d8d1d534abeedb5d6871d7148fd7 ruby-panel-applet2-0.14.1.ebuild 540
+RMD160 3750ab870b82784f4539996a727b009b72af2c67 ruby-panel-applet2-0.14.1.ebuild 540
+SHA256 7437c2658222a08cbbe3e89fdfb08ebc206791958432a67d586835f90ef3f96a ruby-panel-applet2-0.14.1.ebuild 540
