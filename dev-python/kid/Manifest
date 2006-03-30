@@ -1,8 +1,43 @@
-MD5 0875cd3ebd46abb7c6eeeef966d07bc0 ChangeLog 794
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5f67ef6b9a20331028d91081e38eb825 ChangeLog 1000
+RMD160 b15262c6d0d25e0ed34c6eed55a2d88aa770f780 ChangeLog 1000
+SHA256 0a5bf1d7ed0bd226b684cd18209433ff5a2a3f5d4344a1f9bc2975682a3864bf ChangeLog 1000
 MD5 fe1c90896206e3460519d78d6c59862b files/digest-kid-0.7.1 61
+RMD160 5b2251d0a3961ca3a7220d2439a661bc9058a6f5 files/digest-kid-0.7.1 61
+SHA256 8b57c1d34fbbbfae2735ab560d48b5d4eeb702d417091e959046d418ee0620ff files/digest-kid-0.7.1 61
 MD5 8ca404dd6fc38189f1e8080ba75ec9ad files/digest-kid-0.8 59
+RMD160 8f49aedbc108faef132e354a2552f92a17a25411 files/digest-kid-0.8 59
+SHA256 10fe2acc3fbf9b2ff1de976bba76b52e7fcfcfbef1700139c37b4d398ca7d4ea files/digest-kid-0.8 59
+MD5 cdc174c50d56cca4e8d75c06e4079214 files/digest-kid-0.9 223
+RMD160 12413fdee74312980e86e40cd0bce4239870f1ef files/digest-kid-0.9 223
+SHA256 270d117be21baade35fd604a244b520a3bb414d9875898e689f7b32eb3765e2e files/digest-kid-0.9 223
 MD5 6afe8df6927655a755c858926a52bc5e files/kid-0.7.1-ezsetup-gentoo.patch 785
+RMD160 3609931e52c63c7735e9a784f92a0b599c2f372a files/kid-0.7.1-ezsetup-gentoo.patch 785
+SHA256 5c7e61f2c7c6bfe75fe85bc5d87f28be79ff88eb991668d8c0e0cfbd2d07c1c8 files/kid-0.7.1-ezsetup-gentoo.patch 785
 MD5 d946c507fc4e90fa5fe5f516a6cd6a87 files/kid-0.8-ezsetup-gentoo.patch 743
+RMD160 1baa6390d0053f15a1b9427c3b8c6d01d90c091c files/kid-0.8-ezsetup-gentoo.patch 743
+SHA256 616dbbe5941d0d902a2629b9b668f902e3385a472bf15cd8f7d451e96a0622e2 files/kid-0.8-ezsetup-gentoo.patch 743
+MD5 7a5859c5bfd008da746339c6258370f3 files/kid-0.9-ezsetup-gentoo.patch 668
+RMD160 98d63cb19cd791188b4ca24cb2c02066843f2868 files/kid-0.9-ezsetup-gentoo.patch 668
+SHA256 426763a6a377d925fd2e2e20242772bcb43f84b97b9d0cbea31f9f1397ec320e files/kid-0.9-ezsetup-gentoo.patch 668
 MD5 450f1bddbe4ff68dec6604b7903b7158 kid-0.7.1.ebuild 742
+RMD160 157003eb33f3c106a3b640f2607efaccc51c5691 kid-0.7.1.ebuild 742
+SHA256 1b6d4df42092728254d77696ddb2c3a01f989791fec49b3a403810b90f4551bb kid-0.7.1.ebuild 742
 MD5 16d66fa95aaa9fff7f8d12fe22fc28f7 kid-0.8.ebuild 854
-MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
+RMD160 4aabd034f0dfdaf620f6f0f066cefca429fb7cfc kid-0.8.ebuild 854
+SHA256 33fba1535827e7f8f588ee8d2605204d7f2349279ed135312f0c5620565ab3cd kid-0.8.ebuild 854
+MD5 31b04f8b3b730871ebb8da4fda7c5534 kid-0.9.ebuild 833
+RMD160 867f098ebeea921be3da5383c884acfdd946ba68 kid-0.9.ebuild 833
+SHA256 6d064157146775f0361e9f1b0451395be5868237205960135ac37307ebad656f kid-0.9.ebuild 833
+MD5 b765b3c6a048e5097480c671724c63a4 metadata.xml 371
+RMD160 5055527128a0e2f45cdbd308dac21c9e4d2340bc metadata.xml 371
+SHA256 3e3b9e277f985ac5399cb74c4fa4a0d80aecce41cab903f4a7716311b75aba4c metadata.xml 371
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELE+w2jLqHNfbg2URAvTHAJ92nrgIK/ekKqWDMJ0xzNHWMy2jfQCgkBtn
+zUkTZKknyJq7gthd6I+7LUM=
+=WKiP
+-----END PGP SIGNATURE-----
