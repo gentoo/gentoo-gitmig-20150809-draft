@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-cdparanoia
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/ChangeLog,v 1.65 2006/03/25 00:10:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/ChangeLog,v 1.66 2006/03/30 02:14:09 gustavoz Exp $
+
+  30 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gst-plugins-cdparanoia-0.10.4.ebuild:
+  Keyworded ~sparc
 
   25 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   gst-plugins-cdparanoia-0.10.4.ebuild:
