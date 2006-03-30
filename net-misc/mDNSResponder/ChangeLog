@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.20 2006/03/28 05:40:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.21 2006/03/30 08:12:00 flameeyes Exp $
+
+  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  mDNSResponder-107.5.ebuild:
+  Fix java handling, thanks to Nicholas Doyle in bug #127900.
 
 *mDNSResponder-107.5 (28 Mar 2006)
 

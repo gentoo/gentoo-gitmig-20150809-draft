@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.5.ebuild,v 1.1 2006/03/28 05:40:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.5.ebuild,v 1.2 2006/03/30 08:12:00 flameeyes Exp $
 
 inherit eutils multilib base toolchain-funcs flag-o-matic
 
@@ -25,7 +25,7 @@ pkg_setup() {
 
 mdnsmake() {
 	local debug, jdk
-	use java && jdk='JDK=$(java-config -O)'
+	use java && jdk="JDK=$(java-config -O)"
 	use debug && debug='DEBUG=1'
 	einfo "Running emake " os="${os}" CC="$(tc-getCC)" LD="$(tc-getCC) -shared" \
 		${jdk} ${debug} OPT_CFLAGS="${CFLAGS}" LIBFLAGS="${LDFLAGS}" STRIP="true" "$@"
