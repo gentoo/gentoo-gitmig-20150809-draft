@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.9 2006/03/20 19:25:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.10 2006/03/30 23:29:46 wolf31o2 Exp $
+
+*vmware-player-1.0.1.19317-r2 (30 Mar 2006)
+
+  30 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/vmware-player-1.0.1.19317-config3.patch,
+  +vmware-player-1.0.1.19317-r2.ebuild:
+  Added patch for vmware-config.pl to allow for 2G/2G from 2.6.16 and closing
+  bug #127661 and bug #127023.
 
 *vmware-player-1.0.1.19317-r1 (20 Mar 2006)
 
