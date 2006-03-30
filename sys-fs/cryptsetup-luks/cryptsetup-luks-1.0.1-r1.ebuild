@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.1-r1.ebuild,v 1.9 2006/02/03 14:46:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.1-r1.ebuild,v 1.10 2006/03/30 10:16:09 strerror Exp $
 
 inherit linux-info eutils flag-o-matic
 
@@ -52,7 +52,7 @@ src_unpack() {
 src_compile() {
 	if use dynamic ; then
 		ewarn "If you need cryptsetup for an initrd or initramfs then you"
-		ewarn "should NOT use this USE flag"
+		ewarn "should NOT use the dynamic USE flag"
 		epause 5
 		econf --sbindir=/bin --disable-static $(use_enable nls) || die
 	else
