@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta1.ebuild,v 1.9 2006/02/09 17:10:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta1.ebuild,v 1.10 2006/03/30 22:13:22 flameeyes Exp $
 
 inherit kde
 
@@ -25,6 +25,8 @@ DEPEND="=dev-libs/openobex-1.0*
 
 RDEPEND="|| ( ( kde-base/kdialog kde-base/konqueror )  kde-base/kdebase )
 	net-wireless/bluez-utils"
+
+PATCHES="${FILESDIR}/${P}-gcc41.patch"
 
 need-kde 3
 

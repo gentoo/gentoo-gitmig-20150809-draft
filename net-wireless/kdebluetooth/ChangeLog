@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.38 2006/02/09 17:10:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.39 2006/03/30 22:13:22 flameeyes Exp $
+
+  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kdebluetooth-1.0_beta1-gcc41.patch, kdebluetooth-1.0_beta1.ebuild:
+  Add patch to compile with GCC 4.1, provided by Jan Spitalnik on bug #127350.
 
   09 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
   kdebluetooth-0.99_beta1-r1.ebuild, kdebluetooth-1.0_beta1.ebuild:

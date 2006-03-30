@@ -1,28 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1de2a2eb67b29d8cc78eaebb1b529fdb ChangeLog 6265
-RMD160 f8e172ceaf2857f39aba3eb210ad85c3f7eacda5 ChangeLog 6265
-SHA256 2d63c65ac229d70e71cb49a09cb9ec3ae5f113ecc450bec22401ade27fc9a6a9 ChangeLog 6265
+MD5 0cbcf900b1157a5eeff194e78b777421 ChangeLog 6474
+RMD160 34169bb2331115ae0db02ee122722ee525cf2580 ChangeLog 6474
+SHA256 9b9253755b044870586a642d96b62f9cc2948b797592ef68ae2435b0ee4e645a ChangeLog 6474
 MD5 8cc409d86fe7e8cdbe634fd6a075797d files/digest-kdebluetooth-0.99_beta1-r1 76
 RMD160 08167176a9d236f874d77c5b4f07e80f56e42486 files/digest-kdebluetooth-0.99_beta1-r1 76
 SHA256 16845708f41aac814da6626366882863354762a75060b76845f8a36fddb09208 files/digest-kdebluetooth-0.99_beta1-r1 76
 MD5 65837e8b7c7f001267c9139f49051cd2 files/digest-kdebluetooth-1.0_beta1 75
 RMD160 6a38091c17c3d3472e848720cb1c3749eec4dadb files/digest-kdebluetooth-1.0_beta1 75
 SHA256 90c5fa415bcfb19d5cff4c9eef60e9509fe163190e6ab425d80bf1b75b3adb9c files/digest-kdebluetooth-1.0_beta1 75
+MD5 36c3dda5a9a5d63617f729d76e999035 files/kdebluetooth-1.0_beta1-gcc41.patch 666
+RMD160 e14ece6e5bd0ee91a4990431cfce0119bc815a5b files/kdebluetooth-1.0_beta1-gcc41.patch 666
+SHA256 a3df51b15e79b0993928fc44eac6eedef6c5dadcaa6b832140452cb559fdee29 files/kdebluetooth-1.0_beta1-gcc41.patch 666
 MD5 8882322a8d44d082629230230be6ccfd kdebluetooth-0.99_beta1-r1.ebuild 1619
 RMD160 db052d922761708cfa6a11242ba6a5905acf2a12 kdebluetooth-0.99_beta1-r1.ebuild 1619
 SHA256 86f7dc8b3675071b224693d22708f19fbcd1619f95ad9dcd43e7c186acba5f7c kdebluetooth-0.99_beta1-r1.ebuild 1619
-MD5 593626c1deb3000ea5dabc6217518c6a kdebluetooth-1.0_beta1.ebuild 1663
-RMD160 45dd8989e3eab8b2c847f18d9471fca1d5c7557b kdebluetooth-1.0_beta1.ebuild 1663
-SHA256 8968359075d3216cd8f03fb783b1586c319db6aa22cb780c0f6765d7a8f65040 kdebluetooth-1.0_beta1.ebuild 1663
+MD5 1f2e8942e98a24d72fd694e8dd8befe0 kdebluetooth-1.0_beta1.ebuild 1704
+RMD160 aae3e4200c2ee863cb8d99d4ea1288bcd8a1782d kdebluetooth-1.0_beta1.ebuild 1704
+SHA256 121a5cc29f4dcda03bb6f23619754c1d745b0a31c6c07a390be38dfa437f050e kdebluetooth-1.0_beta1.ebuild 1704
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
 SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD63enAiZjviIA2XgRAndtAJ41Rwz7CYZqKEoqEdtDlFHxU4aYnwCeJfUZ
-sZGulNg0UGFbHqXwDIke5jU=
-=JZXV
+iD8DBQFELFggAiZjviIA2XgRAn5vAJ9ZAzGIvNtui3g6tRa3SvpOT9YM9gCgzAv9
+oXLvqGVsy9kg6vwYc8XKRs8=
+=XCLp
 -----END PGP SIGNATURE-----
