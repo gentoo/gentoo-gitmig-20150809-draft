@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre20060319.ebuild,v 1.1 2006/03/21 13:25:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre20060324.ebuild,v 1.1 2006/03/30 08:44:36 flameeyes Exp $
 
 inherit eutils flag-o-matic base
 
