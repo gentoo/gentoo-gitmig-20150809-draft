@@ -1,4 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8e056d9d12d750431e1fb8791b165879 ChangeLog 820
+RMD160 f039b1f12337184e58c686b666138145bca51768 ChangeLog 820
+SHA256 dc02bbf2cfb3f0d74508b897f42ba3d6915f6003332ffc7a36e2b1e020f1784a ChangeLog 820
+MD5 e0536dbb3c7e1949ed09c362df6c74fe files/digest-xpertmud-3.1_pre1 265
+RMD160 aac83b521dc8aabfc59b4b1455ba68de85e97832 files/digest-xpertmud-3.1_pre1 265
+SHA256 a23ef09a12132d5a4e1d1b8c125388a0fc91d3e3a233b20d60072c7e74b42410 files/digest-xpertmud-3.1_pre1 265
+MD5 39220b3b078bd9c9a1a61292ed00feb7 files/xpertmud-3.1_pre1-gcc34.patch 3711
+RMD160 3fd48b92fe1b1275cd9bebbe9166d9d09986c785 files/xpertmud-3.1_pre1-gcc34.patch 3711
+SHA256 97b1e07b99366b794cd6659213d7e15f77f23b2f1d4ad4e43ecdb65689377d6e files/xpertmud-3.1_pre1-gcc34.patch 3711
 MD5 3dad188c2c2ad974f6e512994d514f62 metadata.xml 782
-MD5 8b040aed800f640a54bca5af548a48c8 xpertmud-3.1_pre1.ebuild 922
-MD5 7d7ecc9c305449ec51be08b9c21b577c ChangeLog 666
-MD5 617e81e08bd1eda856d8edb50f6559d7 files/digest-xpertmud-3.1_pre1 73
+RMD160 4e60f0ec432e1d5495464316549caa556de60787 metadata.xml 782
+SHA256 d20cc99f01ca6536111b2aa2406dde6404030b07ab0124a404338ee0f1459a8e metadata.xml 782
+MD5 c71854daf2c251a72fc81779ea445860 xpertmud-3.1_pre1.ebuild 1007
+RMD160 0106d023d8783afa7c2c94daef5ddb278aa3f8e0 xpertmud-3.1_pre1.ebuild 1007
+SHA256 afa6f216e020415bbc56984570401909eef3da28bcd6b5d804cffb862540d49a xpertmud-3.1_pre1.ebuild 1007
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELBVI2CTtIKiFlQIRAst9AJ406qHiWHZZlD/xRYiw2c+C1J6qQACeNzVw
+3fqAda3Uh+ymConF8wIorIM=
+=FF03
+-----END PGP SIGNATURE-----

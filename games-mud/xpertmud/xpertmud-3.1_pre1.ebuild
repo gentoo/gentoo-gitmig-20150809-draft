@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/xpertmud/xpertmud-3.1_pre1.ebuild,v 1.6 2005/07/21 15:34:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/xpertmud/xpertmud-3.1_pre1.ebuild,v 1.7 2006/03/30 17:28:22 tupone Exp $
 
-inherit kde
+inherit eutils kde
 
 MY_PV="${PV/_pre/preview}"
 DESCRIPTION="the eXtensible Python pErl Ruby scripTable MUD client"
@@ -21,6 +21,12 @@ DEPEND=">=sys-devel/libperl-5.6.1
 need-kde 3
 
 S=${WORKDIR}/xpertmud-${MY_PV}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc34.patch
+}
 
 src_compile() {
 	econf \

@@ -1,0 +1,100 @@
+--- qextmdi/include/qextmdidefines.h.original	2006-03-30 01:06:51.000000000 +0200
++++ qextmdi/include/qextmdidefines.h	2006-03-30 01:06:59.000000000 +0200
+@@ -88,7 +88,7 @@
+       TabPageMode    = 2
+    };
+ 
+-}; //namespace
++} //namespace
+ 
+ 
+ //----------------------------------------------------------------------------
+--- qextmdi/src/qextmdimainfrm.cpp.original	2006-03-30 01:11:33.000000000 +0200
++++ qextmdi/src/qextmdimainfrm.cpp	2006-03-30 01:11:47.000000000 +0200
+@@ -1875,7 +1875,7 @@
+    if (m_pTaskBar)
+       m_pTaskBar->close();
+    m_pTaskBar = 0L;
+-};
++}
+ 
+ #ifndef NO_INCLUDE_MOCFILES
+ #include "qextmdimainfrm.moc"
+--- xpertmud/scripting/perl/XMPerlFactory.cc.original	2006-03-30 01:22:16.000000000 +0200
++++ xpertmud/scripting/perl/XMPerlFactory.cc	2006-03-30 01:22:34.000000000 +0200
+@@ -30,7 +30,7 @@
+   return new XMPerl(parent,name);
+ } 
+ 
+-K_EXPORT_COMPONENT_FACTORY(libxmperlinterpreter,XMPerlFactory);
++K_EXPORT_COMPONENT_FACTORY(libxmperlinterpreter,XMPerlFactory)
+ 
+ 
+ 
+--- xpertmud/scripting/python/XMPythonFactory.cc.original	2006-03-30 01:26:58.000000000 +0200
++++ xpertmud/scripting/python/XMPythonFactory.cc	2006-03-30 01:27:08.000000000 +0200
+@@ -23,7 +23,7 @@
+   return new XMPython(parent,name);
+ } 
+ 
+-K_EXPORT_COMPONENT_FACTORY(libxmpythoninterpreter,XMPythonFactory);
++K_EXPORT_COMPONENT_FACTORY(libxmpythoninterpreter,XMPythonFactory)
+ 
+ 
+ // KInstance *XMPythonFactory::s_instance = 0L;
+--- xpertmud/scripting/ruby/XMRubyFactory.cc.original	2006-03-30 01:31:07.000000000 +0200
++++ xpertmud/scripting/ruby/XMRubyFactory.cc	2006-03-30 01:31:16.000000000 +0200
+@@ -20,6 +20,6 @@
+   return new XMRuby(parent,name);
+ } 
+ 
+-K_EXPORT_COMPONENT_FACTORY(libxmrubyinterpreter,XMRubyFactory);
++K_EXPORT_COMPONENT_FACTORY(libxmrubyinterpreter,XMRubyFactory)
+ 
+ 
+--- xpertmud/plugins/example/example.cc.original	2006-03-30 01:37:36.000000000 +0200
++++ xpertmud/plugins/example/example.cc	2006-03-30 01:37:48.000000000 +0200
+@@ -42,4 +42,4 @@
+ }
+ 
+ 
+-K_EXPORT_COMPONENT_FACTORY( xmud_example, KGenericFactory<XmudExample>( "xmud_example" ) );
++K_EXPORT_COMPONENT_FACTORY( xmud_example, KGenericFactory<XmudExample>( "xmud_example" ) )
+--- xpertmud/plugins/battletech/BattleCore.h.original	2006-03-30 01:43:22.000000000 +0200
++++ xpertmud/plugins/battletech/BattleCore.h	2006-03-30 01:43:43.000000000 +0200
+@@ -199,7 +199,7 @@
+ class TextParser;
+ class HUDParser;
+ class BattleCore: public QObject {
+-  Q_OBJECT;
++  Q_OBJECT
+   typedef map<QString, BattleMap *> mapsT;
+ 
+   // mustn't go into map, because it's just temporary
+--- xpertmud/plugins/battletech/Factory.cc.original	2006-03-30 18:23:19.000000000 +0200
++++ xpertmud/plugins/battletech/Factory.cc	2006-03-30 18:23:25.000000000 +0200
+@@ -35,4 +35,4 @@
+ 
+ 
+ 
+-K_EXPORT_COMPONENT_FACTORY( xmud_battletech, BattleFactory );
++K_EXPORT_COMPONENT_FACTORY( xmud_battletech, BattleFactory )
+--- xpertmud/plugins/html/XMhtml.cc.original	2006-03-30 18:26:55.000000000 +0200
++++ xpertmud/plugins/html/XMhtml.cc	2006-03-30 18:27:06.000000000 +0200
+@@ -61,4 +61,4 @@
+ 
+ 
+ 
+-K_EXPORT_COMPONENT_FACTORY( xmud_html, KGenericFactory<XMHtml>( "xmud_html" ) );
++K_EXPORT_COMPONENT_FACTORY( xmud_html, KGenericFactory<XMHtml>( "xmud_html" ) )
+--- xpertmud/kfile-plugin/kfile_xmud.cc.original	2006-03-30 18:28:58.000000000 +0200
++++ xpertmud/kfile-plugin/kfile_xmud.cc	2006-03-30 18:29:08.000000000 +0200
+@@ -11,7 +11,7 @@
+ 
+ typedef KGenericFactory<KXmudPlugin> XmudFactory;
+ 
+-K_EXPORT_COMPONENT_FACTORY( kfile_xmud, XmudFactory( "kfile_xmud" ) );
++K_EXPORT_COMPONENT_FACTORY( kfile_xmud, XmudFactory( "kfile_xmud" ) )
+ 
+ KXmudPlugin::KXmudPlugin( QObject *parent, const char *name,
+                         const QStringList &preferredItems )
