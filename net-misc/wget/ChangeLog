@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.84 2005/12/05 00:02:24 kloeri Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.85 2006/03/30 15:10:14 flameeyes Exp $
+
+  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> wget-1.10.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Dec 2005; Bryan Østergaard <kloeri@gentoo.org> wget-1.10.2.ebuild:
   Stable on alpha.
