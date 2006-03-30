@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bf980147d2ca5e32af8a052ad684ac7a ChangeLog 753
-RMD160 4fbc6087e60b1843eddd7f217e25168a0fe26336 ChangeLog 753
-SHA256 a318c25511c05e6a01624a55b62cca9a2dbe014bc8d9f7325424f2e4c3f2ac24 ChangeLog 753
+MD5 19b02c0e81eea8d88f1337ca8027c1c8 ChangeLog 866
+RMD160 2fc63c638e5ec8d4304ba40db2131daf0bd1d6ae ChangeLog 866
+SHA256 76ccb114f051a02b6ade9cf9322faa86fbe29a0feb89bd8d9ff5655f1864412a ChangeLog 866
 MD5 ac874bd305e39302b3366db2f45c998e files/digest-portage-manpages-1.1 72
 RMD160 af4a73b4c44ae946da0f7de5a9bd86c57f1b68b7 files/digest-portage-manpages-1.1 72
 SHA256 728b904653ae6cde9da559c8aa31885990dc5f7cd70d21b2c22ec7f6b099ae3c files/digest-portage-manpages-1.1 72
@@ -16,13 +16,13 @@ SHA256 eb63f2affd0b8e3f5149df2f2f964910eb2127b650919a9e7892fae011e2b22b metadata
 MD5 773dedd0268369247a81e3ba67fa5841 portage-manpages-1.1.ebuild 551
 RMD160 ab9213600062e3c95b3113cbb231c67efb3e1251 portage-manpages-1.1.ebuild 551
 SHA256 1723c56a7f9dcbbe96b2bc25e12f6feb1dcc15d92b2ac49c3a423f7646e6a5f7 portage-manpages-1.1.ebuild 551
-MD5 d51e9f9a6a386fbd8ceac1bc7f2a2c9f portage-manpages-1.2.ebuild 533
-RMD160 5ec45d6629c6467c8fd9876f043fde08fa12466f portage-manpages-1.2.ebuild 533
-SHA256 bc71b0d3d783646b8c88695470cf7d4ad36be09566f4a5973ff64b4c7860f39f portage-manpages-1.2.ebuild 533
+MD5 a19eed01bd8f568728cd0bf9ae2cfd1d portage-manpages-1.2.ebuild 546
+RMD160 4f1b27f6ad4d6580c435507dc2f26c1ef2aa7e30 portage-manpages-1.2.ebuild 546
+SHA256 8c9d408189c7ff815e7fd24c33b18e7288ad93923522540c27a6fb68f7089b18 portage-manpages-1.2.ebuild 546
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEC7Xr2+ySkm8kpY0RAuhEAJoCRWr8BzRnDVbli+5DcXb19Xv7HACbBq6z
-9eDS5An/cVCdOwzVQOZoEkg=
-=nJ8A
+iD8DBQFEK+qmAiZjviIA2XgRAtjZAKChZNwAGz4ZMhbUGJTKqsExCTqxuACgvJyL
+uEYWkp2kUl+9ap4coE+KUsY=
+=fcu9
 -----END PGP SIGNATURE-----

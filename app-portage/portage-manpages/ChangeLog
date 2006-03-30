@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portage-manpages
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-manpages/ChangeLog,v 1.6 2005/12/31 14:00:07 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-manpages/ChangeLog,v 1.7 2006/03/30 14:26:28 flameeyes Exp $
+
+  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  portage-manpages-1.2.ebuild:
+  Add ~x86-fbsd keyword.
 
 *portage-manpages-1.2 (31 Dec 2005)
 
