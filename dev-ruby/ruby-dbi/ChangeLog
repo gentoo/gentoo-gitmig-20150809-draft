@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-dbi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.14 2006/01/12 12:49:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.15 2006/03/30 03:46:31 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> ruby-dbi-0.0.21-r2.ebuild:
+  Mark 0.0.21-r2 ~ia64
 
 *ruby-dbi-0.0.21-r2 (12 Jan 2006)
 
