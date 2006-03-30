@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/bcm43xx-0.0.1-r20060329.ebuild,v 1.1 2006/03/29 23:49:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/bcm43xx-0.0.1-r20060329.ebuild,v 1.2 2006/03/30 01:14:57 josejx Exp $
 
 inherit linux-mod eutils
 
-FWCUTTER_VERSION="003"
+FWCUTTER_VERSION="004"
 
 DESCRIPTION="Driver for Broadcom 43xx based wireless network devices"
 HOMEPAGE="http://bcm43xx.berlios.de"
