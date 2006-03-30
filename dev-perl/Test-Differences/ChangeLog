@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Differences
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Differences/ChangeLog,v 1.4 2005/07/18 18:14:34 gustavoz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Differences/ChangeLog,v 1.5 2006/03/30 23:23:23 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
+  Test-Differences-0.47.ebuild:
+  Mark 0.47 ~ia64
 
   18 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   Test-Differences-0.47.ebuild:
