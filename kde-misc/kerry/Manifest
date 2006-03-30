@@ -1,0 +1,31 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b711b0a40703c5b73c4ec4f6b395dd45 ChangeLog 620
+RMD160 f09aeb6a3d6350a8e52e1ce008bba2c2b7c1f4ea ChangeLog 620
+SHA256 a25968ede75bc37b1a18450bcb085cff2b7ef5c5d9c1c53dd0e97c9617d60f6d ChangeLog 620
+MD5 32bcd516d715b4421a047f816da2d33f files/digest-kerry-0.09 235
+RMD160 fcc8535c9f81a86a48107a24e12623dbf416714d files/digest-kerry-0.09 235
+SHA256 a1a03fc232a8376efedfd5466a04e7acd0a59ac7df10384a094eccdd98aa2565 files/digest-kerry-0.09 235
+MD5 ba908eb02cbf1346178f3a0b8c1f2235 files/kerry-0.09-del-shortcut.patch 802
+RMD160 7af3f2b00893a849ac8df6cee1a9cefc8dd58c5d files/kerry-0.09-del-shortcut.patch 802
+SHA256 23b5013c41ea0e3fe29c53c5e77348aedafec3f37307bba38e055ef09de9df1d files/kerry-0.09-del-shortcut.patch 802
+MD5 97c93802f42dc7b4568c0addf99f6f79 files/kerry-0.09-gentoo.patch 3796
+RMD160 a576335353ef8afe2e3d6d57c5320bec37c664a9 files/kerry-0.09-gentoo.patch 3796
+SHA256 323cee5374c7779e3ffbed381878014162ebd7db6883cb30e10f25878d721f29 files/kerry-0.09-gentoo.patch 3796
+MD5 2218fa5ad4bd26821c1cf21889ff18d4 files/kerry-0.09-xdg-desktop.patch 353
+RMD160 33c1ba86649c77fee895e022a5e95246b9504776 files/kerry-0.09-xdg-desktop.patch 353
+SHA256 fb5fa6ed55eb3f4bb3a36655e966071cdccf1a878cd966a1ebb900e63df9b84f files/kerry-0.09-xdg-desktop.patch 353
+MD5 856baa247fb1a82323181ead6a7d377a kerry-0.09.ebuild 695
+RMD160 d468c6fb80d9926c2ee349b6141e66aceb3170fc kerry-0.09.ebuild 695
+SHA256 d8723738fa3c1f50b22ce05f2b3d7ffb41ea9548b557a432711dffef734a3ed6 kerry-0.09.ebuild 695
+MD5 9b3a540894ad552b2bdb7538bdd95dee metadata.xml 247
+RMD160 cfbcab66aac2f2a6947df91e47d55b96d483f747 metadata.xml 247
+SHA256 3dee667978321b1af7559d4e85f8492a58f5737c5e11ba339c4e6d460313adfe metadata.xml 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEKyMqAiZjviIA2XgRAmQ9AJ91n0C+30hSa79lz+dl9kTQu5g2bwCg2HrM
+7j705EYJELKX8BM4dTWmx1U=
+=JlQq
+-----END PGP SIGNATURE-----

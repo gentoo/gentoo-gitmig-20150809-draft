@@ -1,0 +1,12 @@
+--- kerry/src.orig/kerryapp.cpp	2006-02-10 14:59:58.000000000 +0100
++++ kerry/src/kerryapp.cpp	2006-03-21 10:35:07.000000000 +0100
+@@ -110,8 +110,7 @@
+   KGlobalAccel* keys = globalKeys;
+   keys->insert( "Program:kerry", i18n("Kerry Beagle Search") );
+ 
+-  KShortcut showDialogShortcut = KShortcut(Key_F12);
+-  showDialogShortcut.append( KKey( ALT+Key_Space) );
++  KShortcut showDialogShortcut = KShortcut(ALT+Key_Space);
+   keys->insert( "Show Kerry Dialog", i18n("Show Search Dialog"), QString::null, showDialogShortcut, showDialogShortcut, hitListWindow, SLOT(showSearchDialog()) );
+   keys->insert( "Search Primary Selection with Kerry", i18n("Search Primary Selection"), QString::null, CTRL+ALT+Key_Space, CTRL+ALT+Key_Space, this, SLOT(searchPrimarySelection()) );
+   globalKeys->readSettings();
