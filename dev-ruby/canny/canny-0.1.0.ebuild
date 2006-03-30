@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/canny/canny-0.1.0.ebuild,v 1.3 2005/07/12 11:15:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/canny/canny-0.1.0.ebuild,v 1.4 2006/03/30 03:23:47 agriffis Exp $
 
 inherit ruby
 
@@ -11,7 +11,7 @@ DESCRIPTION="Canny is a template library for Ruby."
 HOMEPAGE="http://canny.sourceforge.net/"
 SRC_URI="mirror://sourceforge/canny/${P}.tar.gz"
 
-KEYWORDS="~ppc x86"
+KEYWORDS="~ia64 ~ppc x86"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
