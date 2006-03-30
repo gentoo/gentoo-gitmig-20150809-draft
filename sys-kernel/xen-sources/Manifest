@@ -1,6 +1,28 @@
-MD5 60985795b690e218e060ef8eb48246ce ChangeLog 3806
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 26d216ff225fc03a01bdd7385a0f0d07 ChangeLog 3997
+RMD160 be8ab1838f2309ad393c9a7bd05de3da3cdf3897 ChangeLog 3997
+SHA256 44f2395d636e189ac6aebc0328a40ebee8f89d3cf8c970e6a58fed781bf92775 ChangeLog 3997
 MD5 7934c87d6994825fb9e8ff09a531d0ae files/digest-xen-sources-2.6.12.6-r3 63
+RMD160 897e07562d499a7ac4f74f324031738527ae38e2 files/digest-xen-sources-2.6.12.6-r3 63
+SHA256 b503a88ad3b4457384161967969c3d341ab7f3b09bf0925e925270650fb8d378 files/digest-xen-sources-2.6.12.6-r3 63
 MD5 d1a3cf237dab5ddaafa58201760e554f files/digest-xen-sources-2.6.16_rc5 204
+RMD160 5d0ee938d66218bba752bb8ab1c900b910f7e872 files/digest-xen-sources-2.6.16_rc5 204
+SHA256 f8cf6fc2d6c39e45bcfd5f11ac35420142a80f10707bfc046b573b83535e5b40 files/digest-xen-sources-2.6.16_rc5 204
 MD5 23ec60d5040f966fda250a47d8903428 metadata.xml 252
-MD5 3a83e9e02e0e0674096669e45be2ca2c xen-sources-2.6.12.6-r3.ebuild 1398
-MD5 a8bd98a442dc63f4f77152cab7a37ce9 xen-sources-2.6.16_rc5.ebuild 1424
+RMD160 b29f688b9ee017b00ff5a8a6a71edc39087c93ad metadata.xml 252
+SHA256 3482ccebd39bcc165316fdbcc79ad9f01922ce91798a7d83455e884e696ac658 metadata.xml 252
+MD5 14f412b7909b133449f3f8300cc684a1 xen-sources-2.6.12.6-r3.ebuild 1401
+RMD160 c88a933d6b32cab8de74f12e6781d69ed822aa45 xen-sources-2.6.12.6-r3.ebuild 1401
+SHA256 08ad8c122c72cacf13de8c8bed4033b4b852f02ca9547282b59879f892be9fa8 xen-sources-2.6.12.6-r3.ebuild 1401
+MD5 b9e618cf2a79108e4ddc4f491234c811 xen-sources-2.6.16_rc5.ebuild 1434
+RMD160 5ce03b03742069e54ff85d8b50e92fa81650b0fd xen-sources-2.6.16_rc5.ebuild 1434
+SHA256 864d6b395f492edd57ed087ae7970df725f139ebb7fe4f03717e7aef47e4b037 xen-sources-2.6.16_rc5.ebuild 1434
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEK1P4JrHF4yAQTrARAirtAJ94rZmP24VmGAavjvUVbNHDaEUfewCfdZfG
+Gb+PbG2982FCubc2cDi5n+o=
+=1DiA
+-----END PGP SIGNATURE-----

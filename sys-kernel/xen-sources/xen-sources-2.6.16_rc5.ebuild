@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.16_rc5.ebuild,v 1.2 2006/03/03 12:19:46 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.16_rc5.ebuild,v 1.3 2006/03/30 03:43:43 agriffis Exp $
 
 ETYPE="sources"
 inherit kernel-2 eutils
@@ -17,7 +17,7 @@ MY_P="xen-unstable-${REV}"
 SRC_URI="${KERNEL_URI} mirror://gentoo/${MY_P}.tar.bz2"
 
 KEYWORDS="~x86 ~amd64"
-DEPEND="=app-emulation/xen-${REV}*"
+DEPEND="~app-emulation/xen-3.0.1_p${REV}"
 S="${WORKDIR}"
 RESTRICT="nostrip"
 
