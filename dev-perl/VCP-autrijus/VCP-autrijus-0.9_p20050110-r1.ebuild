@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/VCP-autrijus-0.9_p20050110-r1.ebuild,v 1.1 2006/01/15 15:15:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/VCP-autrijus-0.9_p20050110-r1.ebuild,v 1.2 2006/03/30 23:35:40 agriffis Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ IUSE=""
 SLOT="0"
 LICENSE="BSD"
 #KEYWORDS="~amd64 ~sparc ~x86"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~ia64 ~sparc ~x86"
 
 DEPEND="dev-perl/Text-Diff
 		dev-perl/XML-AutoWriter
