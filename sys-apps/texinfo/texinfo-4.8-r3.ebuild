@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8-r3.ebuild,v 1.1 2006/02/08 06:31:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8-r3.ebuild,v 1.2 2006/03/30 13:39:27 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,10 +10,11 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="nls build static"
 
-RDEPEND="!build? ( >=sys-libs/ncurses-5.2-r2 )"
+RDEPEND="!build? ( >=sys-libs/ncurses-5.2-r2 )
+	!build? ( nls? ( virtual/libintl ) )"
 DEPEND="${RDEPEND}
 	!build? ( nls? ( sys-devel/gettext ) )"
 
