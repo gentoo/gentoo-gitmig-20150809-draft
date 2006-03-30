@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/log4r-1.0.5.ebuild,v 1.2 2006/02/01 18:18:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/log4r-1.0.5.ebuild,v 1.3 2006/03/30 03:32:31 agriffis Exp $
 
 inherit ruby gems
 
@@ -12,5 +12,5 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~ia64 x86"
 DEPENDS="=dev-lang/ruby-1.8*"
