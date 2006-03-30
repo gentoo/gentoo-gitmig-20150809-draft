@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.6 2006/01/12 18:35:56 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.7 2006/03/30 16:40:07 mrness Exp $
+
+*privoxy-3.0.3-r4 (30 Mar 2006)
+
+  30 Mar 2006; Alin Nastac <mrness@gentoo.org>
+  +files/privoxy-3.0.3-zlib.patch, +privoxy-3.0.3-r4.ebuild:
+  Activate scanning on compressed pages through zlib USE flag.
+  Thanks goes to Georg Sauthoff <g_sauthoff@web.de> (#127917).
 
   12 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> privoxy-3.0.3-r3.ebuild:
   Stable on amd64.

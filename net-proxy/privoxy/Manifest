@@ -1,17 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8324e2af98dbf1b21c11b76793e3a654 ChangeLog 5684
+MD5 7ac51507c629afdde46a7db367792228 ChangeLog 5953
 MD5 56d88e9a6970c67adde3386b83dcb2ae files/digest-privoxy-3.0.3-r3 77
+MD5 56d88e9a6970c67adde3386b83dcb2ae files/digest-privoxy-3.0.3-r4 77
+MD5 b35f03c7c5b207f9c216f8a66978bac0 files/privoxy-3.0.3-zlib.patch 18288
 MD5 199b985be5ba80912fdd3bf5776e697f files/privoxy-zlib.patch 17945
 MD5 f2b6a652dbfbc65e5b89024a8ea3da7e files/privoxy.logrotate 191
 MD5 2a366b72a6ff8d6d01cf0bef2ac71f0a files/privoxy.rc7 579
 MD5 a31f52e5785898edac47ca00310413e2 metadata.xml 291
 MD5 116b629d35a9c45ff430fbbda3f46b51 privoxy-3.0.3-r3.ebuild 2355
+MD5 13c5764aef78b0863b5357d90a3edce1 privoxy-3.0.3-r4.ebuild 2418
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDKPNjG8pv1lIUX4RAnzZAKCOHPOLEnIztA1cLtpCMhvYJgdgVwCg37Dc
-6/oG2ToqMHEkFR5+J76xjYo=
-=sW5v
+iD8DBQFELA76jG8pv1lIUX4RAjbXAJ9ilI/Bh+WhaBKzGLSJIVYZzH+63ACg7KH+
+UmWpSY8qFHcD0aH68JLHHxs=
+=vULD
 -----END PGP SIGNATURE-----
