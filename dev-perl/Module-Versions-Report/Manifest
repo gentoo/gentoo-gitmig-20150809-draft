@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
-MD5 04bac916a69aa21767bf4e0fa71c35be Module-Versions-Report-1.02.ebuild 581
 MD5 71c362cad81e2018c7c3e07a145fdb03 ChangeLog 1048
+RMD160 7aac9d6eea146693ebffe546bbfacdca63a1408e ChangeLog 1048
+SHA256 a2305df2988f9a5c00622a8fbf472ca94cf288c881430878443f47bd0bd3481e ChangeLog 1048
+MD5 50b20d52e2a7197120fa28790bbf5b75 Module-Versions-Report-1.02.ebuild 587
+RMD160 2cd007a10ce6fd7d4c04adb97d56ebe81cae1558 Module-Versions-Report-1.02.ebuild 587
+SHA256 fc74556fea81efdc183a25094abb61feb6330029f487f550b567f944637338ad Module-Versions-Report-1.02.ebuild 587
 MD5 88fda53493aa5becf42b7f0c80f0148e files/digest-Module-Versions-Report-1.02 77
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCsGnnKRy60XGEcJIRAs17AJ4lrNYwhyK3MiPUhzwYnj0twrHKGACgqpcy
-G+OBk5Rmqzy+SOI0+yAFCLw=
-=Djzr
------END PGP SIGNATURE-----
+RMD160 9ccafe1dcd78cc52296c5de39829a4399818929e files/digest-Module-Versions-Report-1.02 77
+SHA256 078d1f361c07b911eaa1f55b4ba78f6354e96b1cd80d4da8bc38722c995393bb files/digest-Module-Versions-Report-1.02 77
+MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
+RMD160 20eb42c177eede01b15cb26692a3cdf9d09dbebb metadata.xml 157
+SHA256 6a11fd41a2a210a9760849de398ef8c62cf46cc742d09b2e1781def7848fa1ec metadata.xml 157
