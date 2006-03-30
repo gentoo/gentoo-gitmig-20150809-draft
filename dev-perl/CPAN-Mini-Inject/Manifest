@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 000cdececfbb5d9fa4e457e980f2c920 CPAN-Mini-Inject-0.18.ebuild 687
+MD5 c99b51fc6cd9b7da9013aa610c3cfcc6 CPAN-Mini-Inject-0.18.ebuild 693
+RMD160 24fa2326e83ca626057850799feb6eacecde2286 CPAN-Mini-Inject-0.18.ebuild 693
+SHA256 2d9f6f59f45fa0f228d81a7dd35799698fa138da3326a2339feb491c086b3b7e CPAN-Mini-Inject-0.18.ebuild 693
 MD5 55502638ad67ae214ac1503b2a04cc51 ChangeLog 749
+RMD160 8b3a90d03297f8abbaac77e6849359d6ffdae4d2 ChangeLog 749
+SHA256 b5f5b7d8a4be7ae4edbd1e1ea9add0f8df2abc781113ce3e8d6eba1bd9cd965d ChangeLog 749
 MD5 585f0284e9011b3a90377446db5412be files/digest-CPAN-Mini-Inject-0.18 72
+RMD160 7dfbd70d73e7206ca7241c427c6f6effe622c687 files/digest-CPAN-Mini-Inject-0.18 72
+SHA256 7edfc6c61b632dc90614945eb71989a5bf94480fa4e323d4eb46ab61141bbec2 files/digest-CPAN-Mini-Inject-0.18 72
 MD5 8b90c095b8ce1cae8c507c2ef195742c metadata.xml 414
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDx/57tG5z4I8BtQoRAs/vAJ9G1nj/59XhLArfwI0X5oGf5IpuhACfaY0m
-E1CirPEPhf+gDqjLbrOiSRY=
-=ci+x
------END PGP SIGNATURE-----
+RMD160 0c91c84313a083c39ddf4da3a4fc4e8b0c261c54 metadata.xml 414
+SHA256 dd795faf5180e77b3a26a886b0c66c06b1210b38371bbe3648324661c9eea525 metadata.xml 414
