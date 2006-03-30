@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/alephone
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.7 2006/03/20 22:07:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.8 2006/03/30 01:31:27 wolf31o2 Exp $
+
+  30 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/20040417-gcc34.patch, -alephone-20040417.ebuild:
+  Cleaned out some older ebuilds.
 
   20 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   alephone-20051119.ebuild:
