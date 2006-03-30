@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/wavsplit
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/ChangeLog,v 1.9 2005/09/04 10:41:26 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/ChangeLog,v 1.10 2006/03/30 05:22:37 chriswhite Exp $
+
+  30 Mar 2006; Chris White <chriswhite@gentoo.org> wavsplit-1.2.1.ebuild:
+  wavsplit-1.2.1 x86 stable bug #127679
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> wavsplit-1.0.ebuild,
   wavsplit-1.1.0.ebuild, wavsplit-1.2.1.ebuild:

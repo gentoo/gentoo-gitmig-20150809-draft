@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1c33ef68829f20e3f7493e1aadbcf74d wavsplit-1.1.0.ebuild 696
-MD5 d1d81b851a2875bac6a3573959d9b05c ChangeLog 1224
-MD5 e36b9d196a2baa560e92352c44b65d18 wavsplit-1.2.1.ebuild 791
+MD5 9e43c1beaa7ee8fa54faebb0c3d34a25 ChangeLog 1341
+MD5 614dc021dbcc9eeff1f7f30e81c6070d files/digest-wavsplit-1.0 60
+MD5 db9e42a4c6a9b5af5fafcd4ad40de35b files/digest-wavsplit-1.1.0 65
+MD5 5ff77e4d417fcb0c21cfb902cac670b4 files/digest-wavsplit-1.2.1 65
+MD5 ff908f77353445c3684934789f83b42f files/wavsplit-1.2.1-large-files.patch 6730
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 b402735415dce0755a2413b300310c4a wavsplit-1.0.ebuild 676
-MD5 db9e42a4c6a9b5af5fafcd4ad40de35b files/digest-wavsplit-1.1.0 65
-MD5 ff908f77353445c3684934789f83b42f files/wavsplit-1.2.1-large-files.patch 6730
-MD5 5ff77e4d417fcb0c21cfb902cac670b4 files/digest-wavsplit-1.2.1 65
-MD5 614dc021dbcc9eeff1f7f30e81c6070d files/digest-wavsplit-1.0 60
+MD5 1c33ef68829f20e3f7493e1aadbcf74d wavsplit-1.1.0.ebuild 696
+MD5 01b34565e5738a25961e21db160075a2 wavsplit-1.2.1.ebuild 791
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDGs9tj5H05b2HAEkRAn5pAJ9txyIIyE9/L3CE+cUbQ+5gVh7dYwCfShX3
-/+fjEbuHr1l2ENx/76Ca7JU=
-=H3f1
+iD8DBQFEK2tiFdQwWVoAgN4RAjMRAKCxaN3ELqdWzc3unFFqFlT1IsojuACgyJfe
+6RnmEUs+HcwMXdLxJivYdKE=
+=SFA0
 -----END PGP SIGNATURE-----
