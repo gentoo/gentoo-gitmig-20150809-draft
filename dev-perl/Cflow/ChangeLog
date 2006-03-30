@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cflow
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cflow/ChangeLog,v 1.3 2006/02/25 23:20:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cflow/ChangeLog,v 1.4 2006/03/30 22:18:20 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Cflow-1.051.ebuild:
+  Mark 1.051 ~ia64
 
   25 Feb 2006; Markus Ullmann <jokey@gentoo.org> Cflow-1.051.ebuild:
   Removing COPYING from docdir as it is already in standard license dir
