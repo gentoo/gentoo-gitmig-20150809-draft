@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/Term-ANSIScreen-1.42.ebuild,v 1.8 2005/05/17 14:09:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/Term-ANSIScreen-1.42.ebuild,v 1.9 2006/03/30 23:22:26 agriffis Exp $
 
 IUSE=""
 
@@ -12,6 +12,6 @@ HOMEPAGE="http://www.cpan.org/CPAN/data/ANSIScreen/ANSIScreen.html"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 amd64 ~ppc sparc"
+KEYWORDS="amd64 ~ia64 ~ppc sparc x86"
 
 SRC_TEST="do"
