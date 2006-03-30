@@ -1,0 +1,17 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/virtuals,v 1.1 2006/03/30 12:42:09 flameeyes Exp $
+
+# This file defines the virtuals that all Gentoo/*BSD need to modify respect
+# the base profile
+
+# KEEP THIS FILE SORTED ALPHABETICALLY OR RISK WRATH
+
+virtual/dhcpc			net-misc/dhcp
+virtual/eject			sys-block/unieject
+virtual/ghostscript		app-text/ghostscript-gnu
+virtual/jdk			dev-java/kaffe-sdk
+virtual/jre			dev-java/kaffe-sdk
+virtual/linux-sources		sys-kernel/gentoo-sources
+virtual/mpg123			media-sound/mpg321
+virtual/utempter		sys-libs/libutempter

@@ -1,0 +1,36 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.1 2006/03/30 12:42:09 flameeyes Exp $
+
+# Linux-dependant flags
+selinux
+uclibc
+nptl
+alsa
+v4l
+v4l2
+fbcon
+directfb
+ev6
+hal
+gpm
+icc
+icc-pgo
+ifc
+lirc
+multilib
+svga
+sysfs
+lm_sensors
+nodroproot
+caps
+vidix
+
+# This usually refers just to linux-dvb
+dvb
+
+# Hardened doesn't work on Gentoo/*BSD for now
+hardened
+
+# termcap-compat doesn't work on BSD
+termcap-compat

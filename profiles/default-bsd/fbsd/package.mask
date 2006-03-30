@@ -1,0 +1,37 @@
+# Copyright 2004-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.1 2006/03/30 12:42:09 flameeyes Exp $
+
+# As soon as the ~x86-fbsd keyword is spread enough, drop the extra masking
+# used to limit usage of unsupported packages.
+
+# Diego Pettenò <flameeyes@gentoo.org> (27 May 2005)
+# SGI's FAM is dead upstream, and requires mayor changes.
+# Gamin before 0.1.0 is not supported as missed the FreeBSD patches.
+# At the moment we rely on Gentopia's patched Gamin.
+app-admin/fam
+<app-admin/gamin-0.1.0
+
+# Diego Pettenò <flameeyes@gentoo.org> (23 May 2005)
+# Strace doesn't support FreeBSD 5. When a better port will be
+# available, this can be unmasked.
+dev-util/strace
+
+# Diego Pettenò <flameeyes@gentoo.org> (28 April 2005)
+# Those versions uses the pam_stack module instead of include format.
+<=app-admin/sudo-1.6.7_p5-r2
+<net-mail/mailbase-1
+<=net-misc/openssh-4.0_p1
+
+# Diego Pettenò <flameeyes@gentoo.org> (26 Aug 2005)
+# mpg123 has too many patches and handling it is difficult, let's default
+# to mpg321 that works out of the box.
+media-sound/mpg123
+
+# Diego Pettenò <flameeyes@gentoo.org> (9 Sep 2005)
+# New internal API and KQueue was not updated, masked until a patch is
+# done to resolve the problem.
+>=app-admin/gamin-0.1.6
+
+# Don't go with newer versions
+>=sys-apps/baselayout-1.12.0_pre16

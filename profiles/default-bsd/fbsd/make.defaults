@@ -1,0 +1,14 @@
+# Copyright 2004-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/make.defaults,v 1.1 2006/03/30 12:42:09 flameeyes Exp $
+
+FEATURES="-sandbox"
+
+USERLAND="BSD"
+KERNEL="FreeBSD"
+ELIBC="FreeBSD"
+
+MAKE="gmake"
+
+USE="pam oss tcpd"
+

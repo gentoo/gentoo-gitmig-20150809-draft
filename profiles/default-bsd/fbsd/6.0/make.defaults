@@ -1,0 +1,12 @@
+# Copyright 2004-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.0/make.defaults,v 1.1 2006/03/30 12:42:09 flameeyes Exp $
+
+# Note: CHOST must be *-gentoo-freebsd6.0, so that Gentoo can be recognized in
+# ./configure files.
+# Note: ARCH must be *-fbsd
+
+USE="readline usb"
+
+FETCHCOMMAND='/usr/bin/fetch -o "${DISTDIR}/${FILE}" "${URI}"'
+RESUMECOMMAND='/usr/bin/fetch -r -o "${DISTDIR}/${FILE}" "${URI}"'
