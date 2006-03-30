@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.2 2006/03/30 03:42:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.3 2006/03/30 15:47:36 fmccor Exp $
+
+  30 Mar 2006; Ferris McCormick <fmccor@gentoo.org> rcairo-1.0.0.ebuild:
+  Add ~sparc keyword.  Appears to be good.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> rcairo-1.0.0.ebuild:
   Mark 1.0.0 ~ia64
