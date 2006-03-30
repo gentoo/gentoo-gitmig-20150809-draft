@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r3.ebuild,v 1.3 2006/03/20 17:54:42 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r3.ebuild,v 1.4 2006/03/30 18:34:43 flameeyes Exp $
 
 inherit eutils pam
 
@@ -14,12 +14,11 @@ SRC_URI="mirror://gnu/non-gnu/cvs/source/feature/${PV}/${P}.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
 IUSE="crypt doc emacs kerberos nls pam server"
 
-DEPEND="virtual/libc
-	>=sys-libs/zlib-1.1.4
+DEPEND=">=sys-libs/zlib-1.1.4
 	kerberos? ( virtual/krb5 )
 	pam? ( virtual/pam )"
 
