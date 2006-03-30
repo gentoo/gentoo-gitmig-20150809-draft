@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.6 2006/03/15 13:41:58 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.7 2006/03/30 03:48:03 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> ruby-gd-0.7.4.ebuild:
+  Mark 0.7.4 ~ia64
 
   15 Mar 2006; Caleb Tennis <caleb@gentoo.org> ruby-gd-0.7.4.ebuild:
   Fix X to modular dep
