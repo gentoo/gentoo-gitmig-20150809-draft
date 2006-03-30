@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/metaid
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaid/ChangeLog,v 1.1 2006/01/20 23:39:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaid/ChangeLog,v 1.2 2006/03/30 03:34:02 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> metaid-1.0.ebuild:
+  Mark 1.0 ~ia64
 
 *metaid-1.0 (20 Jan 2006)
 
