@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3.ebuild,v 1.2 2006/03/30 09:45:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3.ebuild,v 1.3 2006/03/30 20:12:42 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono
 
@@ -29,7 +29,8 @@ RDEPEND="
 		!<perl-core/ExtUtils-MakeMaker-6.17 )
 	spell? ( >=app-text/gtkspell-2.0.2 )
 	gnutls? ( net-libs/gnutls )
-	!gnutls? ( >=dev-libs/nss-3.9.2-r2 )
+	!gnutls? ( >=dev-libs/nss-3.11
+		>=dev-libs/nspr-4.6.1 )
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )
 	eds? ( gnome-extra/evolution-data-server )
 	krb4? ( >=app-crypt/mit-krb5-1.3.6-r1 )
