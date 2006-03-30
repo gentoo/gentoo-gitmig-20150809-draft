@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9ed46e7fc7ec16429ac3d3bae55d244b ruby-gdkpixbuf2-0.11.0.ebuild 514
-MD5 499c627d680143fe02e69ac1b5db10d0 ruby-gdkpixbuf2-0.12.0.ebuild 466
-MD5 00ee01511e660a31fe90f0819ff07454 ruby-gdkpixbuf2-0.14.1.ebuild 467
-MD5 f4ebffbcff0c65fcc57ebd6240f32005 ruby-gdkpixbuf2-0.10.1.ebuild 495
-MD5 5db7d598a76b2f180af84c24de18d92b ChangeLog 4012
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 31e02e89d8f3aa68fed57164106640a5 files/ruby-gdkpixbuf2-0.11.0-fix-includes.patch 849
+MD5 e754937f8543962600e5c90520e2fbc7 ChangeLog 4146
+RMD160 2a86245cb9f3c8345d89b2219683258eff4b63f1 ChangeLog 4146
+SHA256 d640ead7fce6a3f34e1c925c4a9ec9fbff567432bd933fc4ee2db42b33416a9f ChangeLog 4146
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gdkpixbuf2-0.10.1 74
+RMD160 e49431d5695263dd310dd5e20efa18d8684d4906 files/digest-ruby-gdkpixbuf2-0.10.1 74
+SHA256 d657f9a43ed60a35bee960b104511f1d24fcb74261ef4d9ec8a9af8fd76509ce files/digest-ruby-gdkpixbuf2-0.10.1 74
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gdkpixbuf2-0.11.0 75
+RMD160 ceed4b0d8e2039b162364aca59dad7e9339770c8 files/digest-ruby-gdkpixbuf2-0.11.0 75
+SHA256 c6fd0fc0e6d59329556416a92126ce1c59ec5fde901ce22db41c04abe570ed9a files/digest-ruby-gdkpixbuf2-0.11.0 75
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-gdkpixbuf2-0.12.0 75
+RMD160 d1d4ddeb5b6a813439b2f32ffa151e166d3dc79e files/digest-ruby-gdkpixbuf2-0.12.0 75
+SHA256 aebae7843fb099292f727e51dec0e144e8635b971729e3383f07038b0351afd0 files/digest-ruby-gdkpixbuf2-0.12.0 75
 MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-gdkpixbuf2-0.14.1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDebofZgSmR+etHJoRAlmvAKC9tzLr3OAVv1HfM0+m8/fxqlEFxQCgzMCP
-85X5qt6HG8vCJ1ZtMJxvPH0=
-=qeRL
------END PGP SIGNATURE-----
+RMD160 78c250bf80fdc18262e8ee04a030aae9157a45fd files/digest-ruby-gdkpixbuf2-0.14.1 75
+SHA256 0ca308d4b2ac8e367873d30133ec61d5592222d3c44a1c676bbd084926b59583 files/digest-ruby-gdkpixbuf2-0.14.1 75
+MD5 31e02e89d8f3aa68fed57164106640a5 files/ruby-gdkpixbuf2-0.11.0-fix-includes.patch 849
+RMD160 a008b3adfae97f57dba9881e3af49f9d35b80eb2 files/ruby-gdkpixbuf2-0.11.0-fix-includes.patch 849
+SHA256 89ed78480108ab713a54bf252aa5385cfb6745745428e9f8e2945b1eac4f1ce9 files/ruby-gdkpixbuf2-0.11.0-fix-includes.patch 849
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
+SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
+MD5 f4ebffbcff0c65fcc57ebd6240f32005 ruby-gdkpixbuf2-0.10.1.ebuild 495
+RMD160 75b496ee5fbd914e8c302a49c88d34fb907e1d6f ruby-gdkpixbuf2-0.10.1.ebuild 495
+SHA256 b2045bd01e9548e03118a9168c0d7410453d14b75408752f573650d45fa68b9e ruby-gdkpixbuf2-0.10.1.ebuild 495
+MD5 9ed46e7fc7ec16429ac3d3bae55d244b ruby-gdkpixbuf2-0.11.0.ebuild 514
+RMD160 644b4822f0539ca8a4895da34aa16aa61fc7066b ruby-gdkpixbuf2-0.11.0.ebuild 514
+SHA256 e12a140b12a7f566c5d9f83d5e078c34d3078bd2151bc94ede5b60d243cf4f9a ruby-gdkpixbuf2-0.11.0.ebuild 514
+MD5 499c627d680143fe02e69ac1b5db10d0 ruby-gdkpixbuf2-0.12.0.ebuild 466
+RMD160 30f286bfda0fe4be66769d45e10900f29638caa4 ruby-gdkpixbuf2-0.12.0.ebuild 466
+SHA256 10d574ba2ffdac22282d6525e7dbc411b5afc5b798a8a8f93b2a127276191882 ruby-gdkpixbuf2-0.12.0.ebuild 466
+MD5 56020dd1856832de46d18e2e9f1c5df6 ruby-gdkpixbuf2-0.14.1.ebuild 462
+RMD160 4947ae776cb94646536f98a5074a16d521b9adc0 ruby-gdkpixbuf2-0.14.1.ebuild 462
+SHA256 c0f9dd54d21a027e3e4649b73171e5bd6f5108fd5c79e777b904db11b3bb7e12 ruby-gdkpixbuf2-0.14.1.ebuild 462
