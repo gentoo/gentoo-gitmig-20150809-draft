@@ -1,14 +1,52 @@
-MD5 59e42ac98f19f22c83bbe9a4de680455 ChangeLog 5182
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b22bf4d206d0d0e7667190e1d5e6258f ChangeLog 5290
+RMD160 5e2488a8795c1b0689d006137a99de6e9ce0b68e ChangeLog 5290
+SHA256 8f479ec2da8e5fa2054978c46f8ee2b614fc546a60023fd92d8c3abdf3267e6c ChangeLog 5290
 MD5 f838206eac3e3420d7ad751024f64eea files/1.1.12/conf 636
+RMD160 4bae6b67ae0941e74f6f494568ae026949ebd6fa files/1.1.12/conf 636
+SHA256 0a5b83267788e429c2be0c4af1ef6a30320e96becab78aaba5af8d7eb8ff3ee2 files/1.1.12/conf 636
 MD5 48aa3c67b8c13598a3a4880bdced44ac files/1.1.12/init 1284
+RMD160 c3456498f58e7d20e1eecd764b5b10000ab034f5 files/1.1.12/init 1284
+SHA256 3981a78a1a77297f882163cf3e8c8352eb96afaf0820797ff12a40b90e23eef7 files/1.1.12/init 1284
 MD5 7d313d0464bf2dcec9d83b20646b0a95 files/conf 537
+RMD160 5de199b3d9a76ef0efed7ee6105594e904e9f8ad files/conf 537
+SHA256 c93f522dd0fdcdd8c92c34114bc830b66edbd612f464a648c313ddc3f1ec00dd files/conf 537
 MD5 66a850e16ef028f59367429466d54cc3 files/digest-memcached-1.1.11 68
+RMD160 e4dcfa8242a38fcee75dce9da76faab93060aefb files/digest-memcached-1.1.11 68
+SHA256 d68ecc5bb7ddde2851ad65b640c9539354539fb39eb77a282ed206f8d2a85d98 files/digest-memcached-1.1.11 68
 MD5 dc66dcc94aa25e2392e3c6575324ee56 files/digest-memcached-1.1.12 68
+RMD160 19eda3e82adb4791d8271d5be09184f768e763e5 files/digest-memcached-1.1.12 68
+SHA256 e2a4e6068a012762ca12b506f7a3288029d9bbd85131c5ecd20294993ea88c3a files/digest-memcached-1.1.12 68
 MD5 dc66dcc94aa25e2392e3c6575324ee56 files/digest-memcached-1.1.12-r1 68
+RMD160 19eda3e82adb4791d8271d5be09184f768e763e5 files/digest-memcached-1.1.12-r1 68
+SHA256 e2a4e6068a012762ca12b506f7a3288029d9bbd85131c5ecd20294993ea88c3a files/digest-memcached-1.1.12-r1 68
 MD5 dc66dcc94aa25e2392e3c6575324ee56 files/digest-memcached-1.1.12-r2 68
+RMD160 19eda3e82adb4791d8271d5be09184f768e763e5 files/digest-memcached-1.1.12-r2 68
+SHA256 e2a4e6068a012762ca12b506f7a3288029d9bbd85131c5ecd20294993ea88c3a files/digest-memcached-1.1.12-r2 68
 MD5 a513989dda7189a51c6d117b5c997223 files/init 532
+RMD160 20c425b33cf01db8323159d9a4804d12a53097a2 files/init 532
+SHA256 841ca1a4ffc5b1077bdd660416b0c919038a6de6f152ab37e97b5fd85e077995 files/init 532
 MD5 4476799e5b6454df4ff1c06fcc81f3c6 memcached-1.1.11.ebuild 1028
+RMD160 f79b59013eecd86f177c47eeefd14ee7b42b7e4b memcached-1.1.11.ebuild 1028
+SHA256 ce67d442141779682c847ceb022d341cc9c45dadb0502e75c7c825127eeb8cd0 memcached-1.1.11.ebuild 1028
 MD5 475549d69ce25e2f12b8607da2741a9f memcached-1.1.12-r1.ebuild 1175
-MD5 96c78b539ddd3c21beb918be1ac82126 memcached-1.1.12-r2.ebuild 1254
+RMD160 732e6c43862ad6b092a1ca20ee1786c21adadc24 memcached-1.1.12-r1.ebuild 1175
+SHA256 449f3cdee0fc0c49a4d44113d06b417ce5deb72d50582ce350f402209cfeea26 memcached-1.1.12-r1.ebuild 1175
+MD5 20608aa96e39bb8ce89480bffacf92e5 memcached-1.1.12-r2.ebuild 1264
+RMD160 9d783f84ef3219e2cee471ce0c38b11a4a4a5eb5 memcached-1.1.12-r2.ebuild 1264
+SHA256 a38716389dd4eab26567f7550d40105c8774a15a143ba69e9cc758253fc03cf9 memcached-1.1.12-r2.ebuild 1264
 MD5 aaefa2ae771cffd672aa6c46f30e7d50 memcached-1.1.12.ebuild 1054
+RMD160 98caf28e9bd14b478cfc4fc665aa8bf43a581ff6 memcached-1.1.12.ebuild 1054
+SHA256 efe4d348ff42eb2bc0070ec3b5c33db7e8c47e493d34c859b57b9bd7450ba3da memcached-1.1.12.ebuild 1054
 MD5 0f18e4c1a9a4b09570cfc7719b927e83 metadata.xml 220
+RMD160 adeee6d24269e2c36fa264eb0f5d3105cbcf0c5f metadata.xml 220
+SHA256 6d5549afe8cd878ebb18c6e97ad3b486283e14e0fb5ad2e5e0ea413e17e36fbb metadata.xml 220
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEK1jnJrHF4yAQTrARAnh4AKC3Ky+7CyxVuD5dTIOu3qD6f4sHHgCeIdYH
+Ul7b1KOXCkh8Rlt70nWlM+s=
+=38d9
+-----END PGP SIGNATURE-----
