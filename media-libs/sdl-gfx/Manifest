@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0e7e6ac87f3068ab1aaa9216dab1bd26 ChangeLog 3343
+MD5 a29763310da600b1aa82a9d8795a63df ChangeLog 3445
+RMD160 66a3552eaa30aad6f7a71d35294aef11a9b98bcc ChangeLog 3445
+SHA256 4b38b0900f691aa0210c4bee656f6373a64ddb093d648a5b14cc2ece689bff58 ChangeLog 3445
 MD5 754377119b8dd712ea3bf57460c33257 files/digest-sdl-gfx-2.0.13-r1 66
+RMD160 46a3a9be389f045be24c15b4031cb4f30f128cbd files/digest-sdl-gfx-2.0.13-r1 66
+SHA256 922de46ff076bb7e9c783c3098619082dfbf742824a02bf142042da821a5931a files/digest-sdl-gfx-2.0.13-r1 66
 MD5 76a22a2a5a9fbd772b6501ba0463c7bb files/sdl-gfx-2.0.13-gcc34.patch 447
+RMD160 683c42b4c3ee4b0ef7bfe79b981534ba9c5d4095 files/sdl-gfx-2.0.13-gcc34.patch 447
+SHA256 62bd2b33db84244f9a7fed18cf06a575f83c736d9148e61763387540f0af193a files/sdl-gfx-2.0.13-gcc34.patch 447
 MD5 583673dbf2a4a07468a6146e77f87862 metadata.xml 814
-MD5 ded2d0fc681538d36795b674694bbc4f sdl-gfx-2.0.13-r1.ebuild 1008
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDmzIZgIKl8Uu19MoRAoCIAJ9oqi1pYgYCoXWMkDyRtHlFrADz6ACeOzUg
-XmTu+OoBkfuqyNL5Z4fOWNM=
-=jCkp
------END PGP SIGNATURE-----
+RMD160 7c27f9bb809a7e8ec09ffe500a34e787dc291398 metadata.xml 814
+SHA256 acfaa2ee674cddffcfa2bc9efad13e427caff8ad702b2ede75f77b8ea8910427 metadata.xml 814
+MD5 b502d552a7bffb60f97038e7116ef36b sdl-gfx-2.0.13-r1.ebuild 1016
+RMD160 0c33c494171e9b2cf140bc6b45bd9c3fa0e11f57 sdl-gfx-2.0.13-r1.ebuild 1016
+SHA256 4cdc343cd8bc1510206107c3f68d10f7988372624eda7385d4fc71d87b0dd1cd sdl-gfx-2.0.13-r1.ebuild 1016
