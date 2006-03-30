@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.27 2006/03/28 13:09:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.28 2006/03/30 03:19:39 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> actionpack-1.12.0.ebuild:
+  Mark 1.12.0 ~ia64
 
 *actionpack-1.12.0 (28 Mar 2006)
 
