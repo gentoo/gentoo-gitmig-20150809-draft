@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b5a047d0a00a33da0df81ab6d3df1477 pdf-writer-1.1.3.ebuild 764
-MD5 a13c388a019bafeac2cb626cd6192fd5 ChangeLog 959
-MD5 361f6d725852fb94bd54b66b6a48cea1 metadata.xml 254
+MD5 8afce35725e8ca316a12bf27fbfdc032 ChangeLog 1052
+RMD160 a4626d70e69fa927d4ce0b13c19c67dd02e0e73d ChangeLog 1052
+SHA256 0ad565374b8c48eb55aac233b0732a1a5af173fe5e4743d1bc448c53adae252c ChangeLog 1052
 MD5 837a8be7f700f1deff24ee69018f958e files/digest-pdf-writer-1.1.3 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDdhZDZgSmR+etHJoRAj65AJ9GKIcYFXnMMO1fbNn2R5/zYdwaMQCePpSq
-W6DIwNbiWAXjaWGLb4/nOok=
-=k9eH
------END PGP SIGNATURE-----
+RMD160 8c95a2e5fe5b6ef81b6d69ce086742a2e9f60176 files/digest-pdf-writer-1.1.3 65
+SHA256 280bbf046d5743b2a82e8b7ad8cf3c1caeba66446586a8531022c85055481641 files/digest-pdf-writer-1.1.3 65
+MD5 361f6d725852fb94bd54b66b6a48cea1 metadata.xml 254
+RMD160 ef5951470b150bf02b251db78fd14f8dbfe3708b metadata.xml 254
+SHA256 801df5f82150bde4556eacb067ad24d72c71ec862edf3c9d13772388d3207f53 metadata.xml 254
+MD5 219376b4fb1e06f3faeb3f57454d3113 pdf-writer-1.1.3.ebuild 771
+RMD160 2521250814c949dede39d8338e79b34eb906daba pdf-writer-1.1.3.ebuild 771
+SHA256 902830554cc46b048f1baa81078750ba621261edfbadae86c34bd9663b498933 pdf-writer-1.1.3.ebuild 771
