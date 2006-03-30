@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-zoom
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-zoom/ChangeLog,v 1.3 2006/02/01 12:56:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-zoom/ChangeLog,v 1.4 2006/03/30 03:55:25 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> ruby-zoom-0.2.0.ebuild:
+  Mark 0.2.0 ~ia64
 
   01 Feb 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   ruby-zoom-0.2.0.ebuild:
