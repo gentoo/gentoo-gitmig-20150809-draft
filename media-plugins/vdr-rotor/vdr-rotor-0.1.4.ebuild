@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rotor/vdr-rotor-0.1.4.ebuild,v 1.1 2006/03/29 21:55:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rotor/vdr-rotor-0.1.4.ebuild,v 1.2 2006/03/30 11:10:50 zzam Exp $
 
 inherit vdr-plugin
 
 IUSE=""
 SLOT="0"
 
-DESCRIPTION="vdr Plugin: DVB Frontend Status Monitor (signal strengt/noise)"
+DESCRIPTION="VDR Plugin: Add support for dishes with rotation control engine"
 HOMEPAGE="http://home.vrweb.de/~bergwinkl.thomas/"
 SRC_URI="mirror://gentoo/${P}.tgz"
 LICENSE="GPL-2"
