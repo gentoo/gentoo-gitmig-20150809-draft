@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r2.ebuild,v 1.1 2006/03/17 04:51:56 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r2.ebuild,v 1.2 2006/03/30 00:29:08 exg Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -9,8 +9,8 @@ ECVS_BRANCH="HEAD"
 
 inherit elisp-common cvs alternatives flag-o-matic eutils
 
-IUSE="X Xaw3d aqua gif gtk jpeg nls png spell tiff"
-# IUSE="X Xaw3d aqua gif gtk jpeg nls png spell tiff xft source"
+IUSE="X Xaw3d aqua gif gtk jpeg png spell tiff"
+# IUSE="X Xaw3d aqua gif gtk jpeg png spell tiff xft source"
 
 S=${WORKDIR}/emacs
 
@@ -31,7 +31,6 @@ DEPEND=">=sys-libs/ncurses-5.3
 		png? ( >=media-libs/libpng-1.2.5 )
 		gtk? ( =x11-libs/gtk+-2* )
 		!gtk? ( Xaw3d? ( x11-libs/Xaw3d ) ) )
-	nls? ( >=sys-devel/gettext-0.11.5 )
 	sys-libs/zlib
 	>=sys-apps/portage-2.0.51_rc1"
 
@@ -75,8 +74,6 @@ src_unpack() {
 }
 
 src_compile() {
-	export SANDBOX_ON=0
-
 	# no flag is allowed
 	ALLOWED_FLAGS=" "
 	strip-flags
@@ -85,8 +82,6 @@ src_compile() {
 	sed -i -e "s/-lungif/-lgif/g" configure* src/Makefile* || die
 
 	local myconf
-
-	use nls || myconf="${myconf} --disable-nls"
 
 	if use X; then
 		myconf="${myconf} --with-x"
@@ -113,7 +108,7 @@ src_compile() {
 
 	if use aqua ; then
 		einfo "Configuring to build with Carbon Emacs"
-		econf --enable-debug \
+		econf \
 			--enable-carbon-app=/Applications/Gentoo \
 			--without-x \
 			$(use_with jpeg) $(use_with tiff) \
@@ -122,7 +117,7 @@ src_compile() {
 		make bootstrap || die "make carbon emacs bootstrap failed"
 	fi
 
-	econf --enable-debug \
+	econf \
 		--program-suffix=.emacs-${SLOT} \
 		--without-carbon \
 		${myconf} || die "econf emacs failed"

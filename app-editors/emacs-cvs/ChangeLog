@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.42 2006/03/17 04:51:56 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.43 2006/03/30 00:29:08 exg Exp $
+
+  29 Mar 2006; Emanuele Giaquinta <exg@gentoo.org>
+  emacs-cvs-22.0.50-r2.ebuild:
+  Enable sandbox. Remove useless nls use flag.
 
 *emacs-cvs-22.0.50-r2 (17 Mar 2006)
 
