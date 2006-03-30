@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/pgperl-2.0.2.ebuild,v 1.8 2005/07/09 23:17:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/pgperl-2.0.2.ebuild,v 1.9 2006/03/30 23:52:04 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://gborg.postgresql.org/project/pgperl/projdisplay.php"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 amd64 sparc"
+KEYWORDS="amd64 ~ia64 sparc x86"
 IUSE=""
 
 DEPEND=">=dev-db/postgresql-7.3.2"
