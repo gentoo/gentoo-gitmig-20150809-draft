@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5ed2f0f9eba21bf7792986a3cceb9fb8 ChangeLog 950
+RMD160 ddc35ae9beefdf0fe8911d10695cba7f3d84d936 ChangeLog 950
+SHA256 85b823f57e2fb2976b218ba01e1cc70e4e034d8cc723453ce3cd463cf6016bab ChangeLog 950
 MD5 948685a43508c913dd9c0ae36cd39008 Class-Virtual-0.04.ebuild 554
-MD5 c5e533ee9c49ceb7b1bc4c02d7f988c3 Class-Virtual-0.05.ebuild 560
+RMD160 7c37640b2880afe0a63864360a5ccfbe46a798d0 Class-Virtual-0.04.ebuild 554
+SHA256 86afb93a6200dfae9c5e3149c6b2bf508f89afe4392f6918a845bd7ee3a14db0 Class-Virtual-0.04.ebuild 554
+MD5 ec08f586cdef5941439dbff7ca6acda3 Class-Virtual-0.05.ebuild 566
+RMD160 3753b1e380a48a64037a86ee0f08bf61743ae6a4 Class-Virtual-0.05.ebuild 566
+SHA256 a9a8c481cd2d4fb7744b8dd42a3061a2955b148468851a205fc082f1acadb582 Class-Virtual-0.05.ebuild 566
 MD5 85ee09a0d7fa97f2bf40a952f56b72ac files/digest-Class-Virtual-0.04 68
+RMD160 d2869857a998b54d67df1140f113bbab0577c696 files/digest-Class-Virtual-0.04 68
+SHA256 e0793266ec5c3517b62c1d3d1fad1e2381f6948b0cd2d06110708a1c17aa151b files/digest-Class-Virtual-0.04 68
 MD5 6b16f35b97df09a1926903caee2dd3d1 files/digest-Class-Virtual-0.05 68
+RMD160 bb89b0c2bd5940e672add2ca6788286b432f7eec files/digest-Class-Virtual-0.05 68
+SHA256 ced9a528cbc1d72e58ebb6fc4a196de241e54ddfc82f23d3faa3910f71a9c06d files/digest-Class-Virtual-0.05 68
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDx/Q9tG5z4I8BtQoRAsVVAJ9R2+yfDUPobhCH2g6cQ0cD4ppQ5ACfWWA7
-Kob0AlN/1kr2QkLVX72dL0g=
-=Cup6
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
