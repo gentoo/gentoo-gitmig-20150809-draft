@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.50 2006/03/30 00:24:18 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.51 2006/03/30 15:03:11 flameeyes Exp $
+
+  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> expat-1.95.8.ebuild,
+  expat-2.0.0.ebuild:
+  Add ~x86-fbsd keywords.
 
   30 Mar 2006; Emanuele Giaquinta <exg@gentoo.org> expat-2.0.0.ebuild:
   Add warning about the ABI change.

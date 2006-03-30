@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 21dbf8c66c0da99ae9de3e0397052ae3 ChangeLog 2753
+MD5 2f1729a569996b21cd0272a235e13aca ChangeLog 2852
+RMD160 9e58403ed2d9d13bf242fad33664916ab877a82f ChangeLog 2852
+SHA256 f35b2e7424b69aaf66647f8a3e1e130ce46fb21deff513d42986dfb0631ad07b ChangeLog 2852
 MD5 0933441e77d0a43c85e3d1471bbc2633 files/digest-popt-1.7-r1 60
+RMD160 faf3a1b673541f2be76cc420377a2b8f848655cc files/digest-popt-1.7-r1 60
+SHA256 38faeae43dcb067a18cf7be5ca7d339c87ab353da53022b05c859ea8d7b98d2d files/digest-popt-1.7-r1 60
 MD5 65e91b3cbc5d3c136d141bae0629fc6a files/popt-1.7-missing-tests.patch 552
+RMD160 9e13b505de24b95e03f3b9fb930f01e0c76dad1a files/popt-1.7-missing-tests.patch 552
+SHA256 50ab39942289a1ba728d025fab609556315669f6dc2a47161fcaf0c65c0e83d9 files/popt-1.7-missing-tests.patch 552
 MD5 935450b0eb6e446ec7fff46cfca6cfb7 files/popt-1.7-nls.patch 374
-MD5 8080de8dea5096f625272b6f62efebb8 popt-1.7-r1.ebuild 998
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD1+iFAiZjviIA2XgRAk9eAKDFYZNPKMXB7pN4BWiYBHeLF6svBwCdGRHS
-MXYzL1r3fXj3r+SUJ6dWR0Y=
-=y7oA
------END PGP SIGNATURE-----
+RMD160 0236a24dba80d233f330b304cec659479f525629 files/popt-1.7-nls.patch 374
+SHA256 1fa382ad289cbcd03fb345e7dc09a53b44486cb504aaf764c854dd618e8e6839 files/popt-1.7-nls.patch 374
+MD5 3583b8fb9d1b93cd3328d556f44906a0 popt-1.7-r1.ebuild 1008
+RMD160 d970fc925da944a688ccc1ffed6ca787546a1e0b popt-1.7-r1.ebuild 1008
+SHA256 97374bf771012dbe44ce91feaddfc37f7c3b07c9c121e131c542b76b95c7cea9 popt-1.7-r1.ebuild 1008
