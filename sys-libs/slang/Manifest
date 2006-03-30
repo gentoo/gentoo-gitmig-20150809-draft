@@ -1,16 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3be682f3d5a2a99f4c9c79917607f7d3 ChangeLog 6483
+MD5 469692f814a59f9dee719b07c11fbc7a ChangeLog 6671
+RMD160 0732c6206f9b22c0db78f76f699bf2aea90aba5a ChangeLog 6671
+SHA256 a9c4fbbf057797adf37ef0defa83021e64fbe9b8ffe6fdcf51a00f8241ed4868 ChangeLog 6671
 MD5 b5f98b4cf87ea619127e661ae4a35556 files/digest-slang-1.4.9-r1 494
+RMD160 6dbac91c514e2635369b6a9cb25ee6bc31992a54 files/digest-slang-1.4.9-r1 494
+SHA256 c9f9566aec42fda74490eb91710d5630b85bcf5c6a25e5c6a56b6af5638e6c4a files/digest-slang-1.4.9-r1 494
 MD5 094909eb3092af15c2557a7052fad7aa files/digest-slang-1.4.9-r2 134
+RMD160 2f993734b32336ad80dcc755ce1f712ba3e4e673 files/digest-slang-1.4.9-r2 134
+SHA256 a493e512481480ed964d6dee144cba4f5828303b98b7345ede177c419dac30d3 files/digest-slang-1.4.9-r2 134
+MD5 ae6604ecadc4c3bf3cb4d7924794260a files/slang-1.4.9-fbsdlink.patch 932
+RMD160 d23685d7011959bbee70328bc35d21e4f45727c0 files/slang-1.4.9-fbsdlink.patch 932
+SHA256 dc93f4f41721266136b6b7adb479132180ffc3051c2a32398e3515e5389f0494 files/slang-1.4.9-fbsdlink.patch 932
 MD5 bc00f0356947154d3250243bd5ec08f5 metadata.xml 219
+RMD160 355a59738ac2c3bb2de2c5cdf45b5a15a91fe4aa metadata.xml 219
+SHA256 2dd88647b8f46df7519fe3a112dba84d9af4c7933908984766cf3a25d2e30e3d metadata.xml 219
 MD5 9d14ded2d330bec23d17df71ff41547d slang-1.4.9-r1.ebuild 1847
-MD5 65dae2f111bdbc2bd01dbd01f29dbd2a slang-1.4.9-r2.ebuild 1899
+RMD160 a36cd6c819dde981829eb8836d7511e782527e25 slang-1.4.9-r1.ebuild 1847
+SHA256 14b2fe38ed50b9801d48d941f861d7ecf07f43a8905e7c55295e616af60d361c slang-1.4.9-r1.ebuild 1847
+MD5 8dbee9568b280898a200ae7013a4badb slang-1.4.9-r2.ebuild 1952
+RMD160 cdfb1bebf1294ea7701a1386ed9f9f690a25307d slang-1.4.9-r2.ebuild 1952
+SHA256 67f2be84a70d193184c45fad43d99d7841c0bc2ce0ac1f194e368c3310e72e79 slang-1.4.9-r2.ebuild 1952
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEFyiYFdQwWVoAgN4RAlVvAKDShyejwDFzxm6nE3BLFLYRKfcm3ACffS9d
-GcHaPvyc2mHUSC6581y5smU=
-=5NHM
+iD8DBQFELAGXAiZjviIA2XgRAmW5AKCwOJxcLRLeuu8RsMbVrkBWFsmqOwCgt455
+J3yhI0ClBfAwBmmlq3rHhfw=
+=Vr6T
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r2.ebuild,v 1.10 2006/03/14 20:33:21 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r2.ebuild,v 1.11 2006/03/30 16:04:26 flameeyes Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://space.mit.edu/pub/davis/slang/v1.4/${P}.tar.bz2
 
 LICENSE="|| ( GPL-2 Artistic )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ~mips ppc ~ppc-macos ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ~mips ppc ~ppc-macos ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="cjk unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
@@ -32,6 +32,9 @@ src_unpack() {
 		epatch ${WORKDIR}/slang-utf8-fix.patch
 		epatch ${WORKDIR}/slang-utf8-fix2.patch
 	fi
+
+	epatch "${FILESDIR}/${P}-fbsdlink.patch"
+
 	if use cjk ; then
 		sed -i \
 			-e "/SLANG_HAS_KANJI_SUPPORT/s/0/1/" \
