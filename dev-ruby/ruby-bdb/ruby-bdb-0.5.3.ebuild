@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ruby-bdb-0.5.3.ebuild,v 1.4 2005/12/23 20:25:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ruby-bdb-0.5.3.ebuild,v 1.5 2006/03/30 03:45:18 agriffis Exp $
 
 inherit ruby
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://moulon.inra.fr/pub/ruby/${MY_P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ia64 ppc sparc x86"
 IUSE=""
 USE_RUBY="ruby16 ruby18 ruby19"
 

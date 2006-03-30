@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-bdb
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.9 2005/12/23 20:25:48 hansmi Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.10 2006/03/30 03:45:18 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> ruby-bdb-0.5.3.ebuild:
+  Mark 0.5.3 ~ia64
 
   23 Dec 2005; Michael Hanselmann <hansmi@gentoo.org> ruby-bdb-0.5.3.ebuild:
   Stable on sparc.
