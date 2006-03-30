@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3b15a35a686d5bbfd1e56efafe84b7ad ChangeLog 582
-MD5 edb9b37e94c5e7060450769fbc60de86 Number-Format-1.45.ebuild 511
-MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
+MD5 f8a002d1e032987ecc1fefa643acab06 ChangeLog 677
+RMD160 00dd41cb1da2d8aaec704076ddc77ab8f369e4fb ChangeLog 677
+SHA256 bf485a32d0ac8d02b1cad9e7315eb25080b153b5cadeb1400847057a5524a379 ChangeLog 677
+MD5 599e84464987cf1ee9768b3abfc10e51 Number-Format-1.45.ebuild 516
+RMD160 b194b881881c76a9d2aa700d2c823fbbafac6ae9 Number-Format-1.45.ebuild 516
+SHA256 4e6c01a4273ce145b86d06d6c5d9723283eb9312171e0a7e4da477d484d166fe Number-Format-1.45.ebuild 516
 MD5 0c056bca18340369ca4bcefebe37fc98 files/digest-Number-Format-1.45 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcY/5tG5z4I8BtQoRAlaIAJ9GD8UQQ3ZAfhzsj/tzBhqYQc5qRACfWM8s
-Q6xYyknGNP0xyAjmTuFpqq0=
-=Q26N
------END PGP SIGNATURE-----
+RMD160 44a395e4ed808f68fe09818d57b04cb1a1789d8b files/digest-Number-Format-1.45 69
+SHA256 de5e2eb27b87060856fe4d5c88b91d0b3e9ad6a7f5cf118b8f14c2aacd962aac files/digest-Number-Format-1.45 69
+MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
+RMD160 20eb42c177eede01b15cb26692a3cdf9d09dbebb metadata.xml 157
+SHA256 6a11fd41a2a210a9760849de398ef8c62cf46cc742d09b2e1781def7848fa1ec metadata.xml 157
