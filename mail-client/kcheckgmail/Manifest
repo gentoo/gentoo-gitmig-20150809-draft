@@ -1,6 +1,28 @@
-MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-MD5 4b2c73e4cdaa334197ef50bab0d07790 kcheckgmail-0.5.4.ebuild 580
-MD5 77d5ec7454344a434f1bce180539aa00 ChangeLog 1593
-MD5 d3ed92f5e9cfd29217798f9d8169a092 kcheckgmail-0.5.5.ebuild 597
-MD5 9406e8a8499a4bd342656150a8b6210e files/digest-kcheckgmail-0.5.5 70
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 075706629b0e973d403a889d1e7bdef9 ChangeLog 1699
+RMD160 06f726922205e62389e64b46139f6b92e44963fd ChangeLog 1699
+SHA256 1d76a8e00d27564ba80d8fdb5094d65c0f25c7889b6e9369ee870b140d6d67ca ChangeLog 1699
 MD5 f3541a73a28bdaacf3f995c00416ad56 files/digest-kcheckgmail-0.5.4 70
+RMD160 5da34fed837e75902234950fe613ae96958bfb13 files/digest-kcheckgmail-0.5.4 70
+SHA256 c4e3a9c164425c285657528d41c201fdbd16e97dd725a0355d9caaa6a2f3383d files/digest-kcheckgmail-0.5.4 70
+MD5 9406e8a8499a4bd342656150a8b6210e files/digest-kcheckgmail-0.5.5 70
+RMD160 54cd53a02d5d222163ba72255b12e14878a84031 files/digest-kcheckgmail-0.5.5 70
+SHA256 6d59c017da564f4e2d6166519804b3c626ecef43fa0e138fb7570e1abae74b62 files/digest-kcheckgmail-0.5.5 70
+MD5 4b2c73e4cdaa334197ef50bab0d07790 kcheckgmail-0.5.4.ebuild 580
+RMD160 26d8735f4a8ed687faac3200cdd3a1621982cdce kcheckgmail-0.5.4.ebuild 580
+SHA256 8c68fd280cfd9e7ecd51047758a57daca547e60f72c434ef9cccbc65420f5d9c kcheckgmail-0.5.4.ebuild 580
+MD5 74819ba9fae7f0adf8b571a0932106a3 kcheckgmail-0.5.5.ebuild 596
+RMD160 9b1dc1cd3748abc996f1754178909db371f5c6e0 kcheckgmail-0.5.5.ebuild 596
+SHA256 2f00e932c0eb5f8401b8575085c04513244975e5ce3862d1c7bd936ba3300e64 kcheckgmail-0.5.5.ebuild 596
+MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
+RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
+SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEK12LSENan+PfizARAod3AJ9n9C171osXamDUXw7nQQOs6ynf1wCdGMcx
++ii6r+vykG1zsczPt3myXnk=
+=z+KQ
+-----END PGP SIGNATURE-----
