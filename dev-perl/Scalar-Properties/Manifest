@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4bd2830a42be76c19ce31feddb3af9be ChangeLog 727
-MD5 8e6d2e8774e18a2821ea5a45f4f1a822 Scalar-Properties-0.12.ebuild 504
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 e7194ec00c42219e78e74d7b62432c5d ChangeLog 828
+RMD160 f8507e62d6a223ed64b77ed0d91df8b768a22b32 ChangeLog 828
+SHA256 0503d45e1a6fbf218b0a8eb97ae59b007b59db8da0b310b8acaa75aaaf44608d ChangeLog 828
+MD5 2b5b4312642efe1e62dd76a3222b0d40 Scalar-Properties-0.12.ebuild 509
+RMD160 94d7f8d5cddde0523f08d4408634bafc848c18c6 Scalar-Properties-0.12.ebuild 509
+SHA256 a0c4fbac260ad0690bf2631f28a0366c4ad06a5fd69928abc2880df6f30193c3 Scalar-Properties-0.12.ebuild 509
 MD5 ef00faf29545448faaae33dfc0b6c3fd files/digest-Scalar-Properties-0.12 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcif3tG5z4I8BtQoRAooSAJ4x31xIIDJN8hewmf89UJa9nYSo6gCfc2Jf
-1LgGDE+zEDg7/PtcbTTRHHI=
-=vs8A
------END PGP SIGNATURE-----
+RMD160 579dad3a474baf3795eab811f6484888a968f65f files/digest-Scalar-Properties-0.12 73
+SHA256 a30f41065f9089d067777ab918c61c92454f78ff88dad9a77bf3bfaf42a56ece files/digest-Scalar-Properties-0.12 73
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
