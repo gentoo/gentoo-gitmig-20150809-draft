@@ -1,0 +1,184 @@
+Index: mutt.h
+===================================================================
+--- mutt.h	(revision 537)
++++ mutt.h	(working copy)
+@@ -413,6 +413,7 @@
+   OPTSTRICTMAILTO,
+   OPTSTRICTMIME,
+   OPTSTRICTTHREADS,
++  OPTSTRIPSIG,
+   OPTSTRIPWAS,
+   OPTSTUFFQUOTED,
+   OPTSUSPEND,
+Index: state.c
+===================================================================
+--- state.c	(revision 537)
++++ state.c	(working copy)
+@@ -67,6 +67,9 @@
+ 
+ void state_prefix_putc (char c, STATE * s)
+ {
++  if (s->flags & M_FINISHED)
++    return;
++
+   if (s->flags & M_PENDINGPREFIX) {
+     int i;
+ 
+@@ -77,46 +80,54 @@
+       char buf[2 * SHORT_STRING];
+       int j = 0, offset = 0;
+       regmatch_t pmatch[1];
+-#ifdef DEBUG
+       unsigned char save = '\0';
+-#endif
+ 
+-      state_reset_prefix (s);
+-      while (regexec
+-             ((regex_t *) QuoteRegexp.rx, &Quotebuf[offset], 1, pmatch,
+-              0) == 0)
+-        offset += pmatch->rm_eo;
++      /* quotebuf may be '^-- \n$' which fails to match $strip_sig */
++      if (Quotebuf[i-1] == '\n') {
++        save = Quotebuf[i-1];
++        Quotebuf[i-1] = '\0';
++      }
+ 
+-      if (!option (OPTQUOTEEMPTY) && Quotebuf[offset] == '\n') {
+-        buf[0] = '\n';
+-        buf[1] = '\0';
++      debug_print (1, ("quote == '%s\n", Quotebuf));
++
++      if (option (OPTSTRIPSIG) && (s->flags & M_REPLYING) &&
++          regexec ((regex_t*) StripSigRegexp.rx, Quotebuf, 1, pmatch, 0) == 0) {
++        debug_print (1, ("seen sig dashes, finishing\n"));
++        s->flags |= M_FINISHED;
+       }
+-      else if (!option (OPTTEXTFLOWED) && option (OPTQUOTEQUOTED) && offset) {
+-        for (i = 0; i < offset; i++)
+-          if (Quotebuf[i] != ' ')
+-            j = i;
+-        strncpy (buf, Quotebuf, j + 1);
+-        strcpy (buf + j + 1, Quotebuf + j);
+-      }
+-      else
+-        snprintf (buf, sizeof (buf), "%s%s", NONULL (s->prefix), Quotebuf);
++      else {
+ 
+-#ifdef DEBUG
+-      if (str_len (buf) >= 2) {
+-        save = buf[str_len (buf) - 1];
+-        buf[str_len (buf) - 1] = '\0';
+-        debug_print (2, ("buf = '%s'\n", buf));
+-        buf[str_len (buf)] = save;
++        if (save != '\0')
++          Quotebuf[i-1] = save;
++
++        state_reset_prefix (s);
++        while (regexec
++              ((regex_t *) QuoteRegexp.rx, &Quotebuf[offset], 1, pmatch,
++                0) == 0)
++          offset += pmatch->rm_eo;
++
++        if (!option (OPTQUOTEEMPTY) && Quotebuf[offset] == '\n') {
++          buf[0] = '\n';
++          buf[1] = '\0';
++        }
++        else if (!option (OPTTEXTFLOWED) && option (OPTQUOTEQUOTED) && offset) {
++          for (i = 0; i < offset; i++)
++            if (Quotebuf[i] != ' ')
++              j = i;
++          strncpy (buf, Quotebuf, j + 1);
++          strcpy (buf + j + 1, Quotebuf + j);
++        }
++        else
++          snprintf (buf, sizeof (buf), "%s%s", NONULL (s->prefix), Quotebuf);
++
++        state_puts (buf, s);
+       }
+-#endif
+-
+-      state_puts (buf, s);
+     }
+   }
+   else
+     state_putc (c, s);
+ 
+-  if (c == '\n') {
++  if (c == '\n' && !(s->flags & M_FINISHED)) {
+     state_set_prefix (s);
+     Quotebuf[0] = '\0';
+   }
+Index: state.h
+===================================================================
+--- state.h	(revision 537)
++++ state.h	(working copy)
+@@ -30,6 +30,7 @@
+ #define M_PRINTING	(1<<5)  /* are we printing? - M_DISPLAY "light" */
+ #define M_REPLYING	(1<<6)  /* are we replying? */
+ #define M_FIRSTDONE	(1<<7)  /* the first attachment has been done */
++#define M_FINISHED      (1<<8) /* premature end? */
+ 
+ #define state_set_prefix(s) ((s)->flags |= M_PENDINGPREFIX)
+ #define state_reset_prefix(s) ((s)->flags &= ~M_PENDINGPREFIX)
+Index: rfc3676.c
+===================================================================
+--- rfc3676.c	(revision 537)
++++ rfc3676.c	(working copy)
+@@ -142,6 +142,7 @@
+                quotelevel = 0, newql = 0;
+   int buf_off, buf_len;
+   int delsp = 0, fixed = 0;
++  regmatch_t pmatch[1];
+ 
+   /* respect DelSP of RfC3676 only with f=f parts */
+   if ((t = (char*) mutt_get_parameter ("delsp", a->parameter))) {
+@@ -201,6 +202,13 @@
+       continue;
+     }
+ 
++    if (option (OPTSTRIPSIG) && (s->flags & M_REPLYING) &&
++        regexec ((regex_t*) StripSigRegexp.rx, buf, 1, pmatch, 0) == 0) {
++      debug_print (1, ("f=f: seen sig dashes, finishing\n"));
++      s->flags |= M_FINISHED;
++      break;
++    }
++
+     /* signature separator also flushes the previous paragraph */
+     if (strcmp(buf + buf_off, "-- ") == 0 && curline && *curline) {
+       print_flowed_line (curline, s, quotelevel);
+Index: globals.h
+===================================================================
+--- globals.h	(revision 537)
++++ globals.h	(working copy)
+@@ -92,6 +92,7 @@
+ WHERE rx_t Smileys;
+ WHERE rx_t GecosMask;
+ WHERE rx_t StripWasRegexp;
++WHERE rx_t StripSigRegexp;
+ 
+ #ifdef USE_SOCKET
+ WHERE char *Preconnect INITVAL (NULL);
+Index: init.h
+===================================================================
+--- init.h	(revision 537)
++++ init.h	(working copy)
+@@ -3563,6 +3563,19 @@
+   ** trailing part of the ``Subject'' line when replying if it won't be empty
+   ** afterwards.
+   **/
++  {"strip_sig", DT_BOOL, R_NONE, OPTSTRIPSIG, "no" },
++  /**
++  ** .pp
++  ** When \fIset\fP, Mutt-ng will remove signatures when preparing replies.
++  ** .pp
++  ** Signature separators are detected by $$$strip_sig_regex.
++  **/
++  {"strip_sig_regex", DT_RX, R_NONE, UL &StripSigRegexp, "^-- $"},
++  /**
++  ** .pp
++  ** When non-empty, this regular expression specifies a signature delimiter after
++  ** which to ignore content if $$$strip_sig is \fIset\fP.
++  **/
+   {"stuff_quoted", DT_BOOL, R_BOTH, OPTSTUFFQUOTED, "no" },
+   /*
+    ** .pp
