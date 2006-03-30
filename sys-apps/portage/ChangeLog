@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.100 2006/03/27 08:32:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.101 2006/03/30 11:02:45 zmedico Exp $
+
+*portage-2.1_pre7-r3 (30 Mar 2006)
+
+  30 Mar 2006; <zmedico@gentoo.org> +portage-2.1_pre7-r3.ebuild,
+  +files/2.1_pre7/1060_r3034_bug_127897_realpath.patch,
+  +files/2.1_pre7/1070_r3036_bug_127930_unpack_timestamp.patch,
+  +files/2.1_pre7/1080_ensure_dirs.patch:
+  Regression fixes for bug #127897 and bug #127930.  Also fixes cvs-src
+  permission messages reported by marienz.
 
 *portage-2.1_pre7-r2 (27 Mar 2006)
 

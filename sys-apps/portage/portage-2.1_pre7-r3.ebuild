@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre7-r2.ebuild,v 1.1 2006/03/27 08:32:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre7-r3.ebuild,v 1.1 2006/03/30 11:02:45 zmedico Exp $
 
 inherit toolchain-funcs
 
@@ -36,7 +36,10 @@ src_unpack() {
 		1020_r3006_bug_127573_cachedir.patch
 		1030_r3009_bug_127563_ccache_stat.patch
 		1040_r3015_user_fetch.patch
-		1050_forum_3210399_empty_digest.patch"
+		1050_forum_3210399_empty_digest.patch
+		1060_r3034_bug_127897_realpath.patch
+		1070_r3036_bug_127930_unpack_timestamp.patch
+		1080_ensure_dirs.patch"
 	for patch_name in ${my_patches}; do
 		einfo "Applying ${patch_name} ..."
 		patch -p0 --no-backup-if-mismatch < \
