@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/httperf
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/ChangeLog,v 1.3 2005/10/01 09:51:32 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/ChangeLog,v 1.4 2006/03/30 04:26:02 tsunam Exp $
+
+  30 Mar 2006; Joshua Jackson <tsunam@gentoo.org> httperf-0.8.ebuild:
+  stable on x86; bug #126956
 
   01 Oct 2005; Simon Stelling <blubb@gentoo.org> httperf-0.8.ebuild:
   added ~amd64 keyword

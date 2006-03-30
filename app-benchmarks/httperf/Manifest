@@ -1,6 +1,28 @@
-MD5 eb2ddf5c5dbc4decad2550017367cbf8 ChangeLog 652
-MD5 0154bdf8df5def73a780484e96b5c558 httperf-0.8.ebuild 1016
-MD5 895c658c1644917118d147978f7d1147 metadata.xml 945
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d3d52de33f799d38a1b0f61d3fbbde75 ChangeLog 753
+RMD160 085d5b5223ab1bf22df930b1fd953cb12d5a1ae2 ChangeLog 753
+SHA256 1362663ca42a3b935e2bae545e797df545f0142078d3d10c9d3d73b02ed4a0de ChangeLog 753
 MD5 44858ef0273b02f6bb71ec6aca26c0a7 files/digest-httperf-0.8 63
+RMD160 74d97b75973c6daf77ddbc9d0800329301bb9694 files/digest-httperf-0.8 63
+SHA256 63245f3db2da300b2d9a238e4bb2814e9d52f4212a47091d0544ba755af97e96 files/digest-httperf-0.8 63
 MD5 81630570d60ade0eaf6caad7ee4a1c4a files/httperf-0.8-optional-ssl.diff 694
+RMD160 008f0bcfd5658deedb773db6d6bf007dbfb8b314 files/httperf-0.8-optional-ssl.diff 694
+SHA256 0646346a2740006c311ebd7b540cd47a1ef2a3380a53dbed9c90cca9bbee024d files/httperf-0.8-optional-ssl.diff 694
 MD5 a719ff22f9a66c55067ea922e45d13a0 files/httperf-0.8-respect-DESTDIR.diff 712
+RMD160 919301006813f5aa69f47c7e9ea3528d709602f3 files/httperf-0.8-respect-DESTDIR.diff 712
+SHA256 b5279e0211d05684f14f65fd35c6e451969ce55b92140acbdc7d8b5056ed26f1 files/httperf-0.8-respect-DESTDIR.diff 712
+MD5 776b529377a3ca7f214bf47cc7baec97 httperf-0.8.ebuild 1016
+RMD160 8ce548f8bd05ca7079b1e3dacf16e89c4c05c06b httperf-0.8.ebuild 1016
+SHA256 151a23987f089944d6a7e98c729553a915de46b0208596756a014a1549fa952a httperf-0.8.ebuild 1016
+MD5 895c658c1644917118d147978f7d1147 metadata.xml 945
+RMD160 6000f628e3ac61bf7406557c6f81d8be6e73b4e0 metadata.xml 945
+SHA256 8d47bea6a08aaf0cd61204d6130eedd09dbc204f832aa3365f0ec5ecd421feb6 metadata.xml 945
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEK13nSENan+PfizARAsYhAJ9DONiYwbCRqZpIVKVbcD++l1Tz2ACdGiOB
+xxsAGTTPbvBHg3F18TwCDvE=
+=69tE
+-----END PGP SIGNATURE-----
