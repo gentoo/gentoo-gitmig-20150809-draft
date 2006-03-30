@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/xml-simple
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.1 2004/10/23 11:32:27 usata Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.2 2006/03/30 04:02:42 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> xml-simple-1.0.6.ebuild:
+  Mark 1.0.6 ~ia64
 
 *xml-simple-1.0.6 (23 Oct 2004)
 
