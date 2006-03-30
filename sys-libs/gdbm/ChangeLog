@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.37 2006/03/09 23:48:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.38 2006/03/30 16:51:23 flameeyes Exp $
+
+  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> gdbm-1.8.3-r2.ebuild:
+  Add ~x86-fbsd keywords.
 
   09 Mar 2006; Mike Frysinger <vapier@gentoo.org> gdbm-1.8.3-r2.ebuild:
   Use revdep-rebuild --library instead of revdep-rebuild --soname #125506 by
