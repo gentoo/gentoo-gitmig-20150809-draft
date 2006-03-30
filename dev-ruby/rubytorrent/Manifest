@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 34d0a115b05906e52030585de50dfa83 ChangeLog 725
 RMD160 ee0372f95fdc2ef09175a0eb90323e601d5a731c ChangeLog 725
 SHA256 330fad761a298aac3d696294ea9b1f44033f0e1e5cca6f79ccbec2ab100b4aff ChangeLog 725
@@ -10,3 +13,10 @@ SHA256 70b396ab3c7a63a81cb895b7728bd9eccdc9770afdb9919f2c54694b685f7032 metadata
 MD5 fdb1fd3852b9db04e47ff45bd174a48a rubytorrent-0.3.ebuild 995
 RMD160 7aec37630bac7d5146d5ba3796a4dd453eaad789 rubytorrent-0.3.ebuild 995
 SHA256 449c3a50fd634bf3443539693eebb232a5a18bcc3f958d20ba1111ebc937b590 rubytorrent-0.3.ebuild 995
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEK1b1JrHF4yAQTrARAlrSAJwP77giyZeLiKnXyttayL/hueOYVwCeOamr
+6W6zYg7MIvk45Vw7M8z+R+I=
+=Zgnz
+-----END PGP SIGNATURE-----
