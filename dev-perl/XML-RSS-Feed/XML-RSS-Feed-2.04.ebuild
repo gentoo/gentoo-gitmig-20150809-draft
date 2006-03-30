@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/XML-RSS-Feed-2.04.ebuild,v 1.5 2006/02/13 14:14:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/XML-RSS-Feed-2.04.ebuild,v 1.6 2006/03/30 23:43:52 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/J/JB/JBISBEE/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 sparc"
+KEYWORDS="~ia64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"
