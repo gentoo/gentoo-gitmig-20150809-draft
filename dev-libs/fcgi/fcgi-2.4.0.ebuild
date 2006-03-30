@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/fcgi-2.4.0.ebuild,v 1.18 2005/12/17 21:35:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/fcgi-2.4.0.ebuild,v 1.19 2006/03/30 03:17:34 agriffis Exp $
 
 DESCRIPTION="FastCGI Developer's Kit"
 HOMEPAGE="http://www.fastcgi.com/"
 SRC_URI="http://www.fastcgi.com/dist/${P}.tar.gz"
 LICENSE="FastCGI"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~mips ppc ~ppc-macos ~ppc64 sparc x86"
+KEYWORDS="amd64 ~hppa ~ia64 ~mips ppc ~ppc-macos ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
