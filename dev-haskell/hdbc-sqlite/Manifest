@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8a65851fe4accc4da43f84288ba92ac1 ChangeLog 862
 RMD160 307b359f13de8bc0c1076d1549b6ad6b339483a9 ChangeLog 862
 SHA256 11146649ec166121aa23bf2130ad311d293ab56a2c39c5c6c207f929caa7c992 ChangeLog 862
 MD5 a4f371359d38e72b7175837546e5eaad files/digest-hdbc-sqlite-0.99.0.0 262
 RMD160 5e8cff6034b12192a12c184151d4ab5d3216369f files/digest-hdbc-sqlite-0.99.0.0 262
 SHA256 a8c9f7150d33e716bc3a532466c3e3827c8b5db3bd398e61b5529b50e02ffacb files/digest-hdbc-sqlite-0.99.0.0 262
+MD5 649549f92afb4acc4e516438646041b3 files/digest-hdbc-sqlite-0.99.2.0 262
+RMD160 b2e0ecb26ce92c939674e9f7cccbd71dba0c9403 files/digest-hdbc-sqlite-0.99.2.0 262
+SHA256 78f55ca365a1c289a53a51ae87a0c47e9e4d5af9470118cd664eece06df70514 files/digest-hdbc-sqlite-0.99.2.0 262
 MD5 46298aeb56f36018cf24df86a7766f51 hdbc-sqlite-0.99.0.0.ebuild 671
 RMD160 384584b9e5e9da1836e8ca15ffa51cf38a4b6556 hdbc-sqlite-0.99.0.0.ebuild 671
 SHA256 7e3349feb008897683b858de54c2143945b69a075c7e3181907eb720945620b0 hdbc-sqlite-0.99.0.0.ebuild 671
+MD5 46298aeb56f36018cf24df86a7766f51 hdbc-sqlite-0.99.2.0.ebuild 671
+RMD160 384584b9e5e9da1836e8ca15ffa51cf38a4b6556 hdbc-sqlite-0.99.2.0.ebuild 671
+SHA256 7e3349feb008897683b858de54c2143945b69a075c7e3181907eb720945620b0 hdbc-sqlite-0.99.2.0.ebuild 671
 MD5 c694674dcbef799cd4fdb6914683ebff metadata.xml 223
 RMD160 7783e6057effb8b8f0b79cffe8b557b32c633839 metadata.xml 223
 SHA256 1d00c8be162a6cb87b3de440b3e63e10b39c12d56e8fbfe592e75aed872b2508 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEEGjr/B0cxt+cq+wRAokxAJ9ZCnbRHSy/rWFBdkEdb+we3EzS3QCdHeNQ
-OkTmILBSVTAohwMm9cWlgU8=
-=kGo4
------END PGP SIGNATURE-----
