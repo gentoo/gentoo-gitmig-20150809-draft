@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.6.0.ebuild,v 1.1 2006/03/18 23:08:42 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.6.0.ebuild,v 1.2 2006/03/30 23:47:41 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ximian.com/"
 LICENSE="LGPL-2 Sleepycat"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc ipv6 kerberos krb4 ldap nntp ssl static"
+IUSE="doc ipv6 kerberos krb4 ldap nntp ssl"
 
 RDEPEND=">=dev-libs/glib-2.4
 	>=gnome-base/libbonobo-2.4.2
@@ -25,8 +25,9 @@ RDEPEND=">=dev-libs/glib-2.4
 	>=net-libs/libsoup-2.2
 	sys-libs/zlib
 	ldap? ( >=net-nds/openldap-2.0 )
-	ssl? ( >=dev-libs/nspr-4.4
-		   >=dev-libs/nss-3.9 )
+	ssl? (
+		>=dev-libs/nspr-4.4
+		>=dev-libs/nss-3.9 )
 	kerberos? ( virtual/krb5 )
 	krb4? ( virtual/krb5 )"
 
@@ -36,7 +37,6 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1.4 )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
-USE_DESTDIR="1"
 DOCS="ChangeLog MAINTAINERS NEWS TODO"
 
 
@@ -46,10 +46,7 @@ pkg_setup() {
 		$(use_enable ssl nss)          \
 		$(use_enable ssl smime)        \
 		$(use_enable ipv6)             \
-		$(use_enable nntp)             \
-		$(use_enable static)"
-
-	use ldap && G2CONF="${G2CONF} $(use_with static static-ldap)"
+		$(use_enable nntp)"
 
 	if use krb4 && ! built_with_use virtual/krb5 krb4; then
 		ewarn
