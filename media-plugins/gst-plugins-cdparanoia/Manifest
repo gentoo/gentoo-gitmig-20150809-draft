@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7f8302bc3c1e3b6ddab3f6c2fff533ca ChangeLog 7891
 MD5 73770b61668a182a437ba54871c72cc1 files/digest-gst-plugins-cdparanoia-0.10.3 277
 MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-cdparanoia-0.10.4 277
@@ -10,3 +13,10 @@ MD5 5b85da762b6b0337af02d72deab134b4 gst-plugins-cdparanoia-0.8.10.ebuild 378
 MD5 07a2cb3a3f61cc1f54c08a7d79891ea7 gst-plugins-cdparanoia-0.8.11.ebuild 379
 MD5 5923fee6607d09fe2abfdad87f0ef388 gst-plugins-cdparanoia-0.8.12.ebuild 386
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEKz8mKRy60XGEcJIRAl3QAJ98IyEA3xKDhJgM7IVcmwMFy7280ACgmoQu
+Q6UnHaC+CBg9N3EJbIgiUAY=
+=fPmv
+-----END PGP SIGNATURE-----
