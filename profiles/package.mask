@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5161 2006/03/30 15:42:16 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5162 2006/03/30 16:08:18 dcoutts Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,13 +20,6 @@
 ##
 ##   End example
 ##
-
-# Duncan Coutts <dcoutts@gentoo.org> (30 Mar 2006)
-# New revisions. Needs testing.
-=dev-haskell/hdbc-0.99.2
-=dev-haskell/hdbc-sqlite-0.99.2.0
-=dev-haskell/hdbc-odbc-0.99.2.1
-=dev-haskell/hdbc-postgresql-0.99.2.1
 
 # Mark Loeser <halcy0n@gentoo.org> (30 Mar 2006)
 # Has not had a release in almost 3 years, and is unmaintained; see bug #126597
