@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Curses-UI
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.13 2005/07/12 12:53:24 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.14 2006/03/30 22:26:53 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Curses-UI-0.95.ebuild:
+  Mark 0.95 ~ia64
 
   12 Jul 2005; Simon Stelling <blubb@gentoo.org> Curses-UI-0.95.ebuild:
   stable on amd64
