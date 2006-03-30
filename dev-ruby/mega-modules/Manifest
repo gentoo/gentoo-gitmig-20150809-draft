@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9070a4a19721c5e34f972215ab6150e3 mega-modules-0.3.1.ebuild 527
-MD5 058b572360a8ef3d09b943e491a3b819 ChangeLog 412
-MD5 1a24e0b48460c02e20931fceded24e1a metadata.xml 254
+MD5 ff72a4759e317c65637c8f0729d81bc2 ChangeLog 507
+RMD160 bf390010d7a84cfd6a1943cb94836b72e4ab3da7 ChangeLog 507
+SHA256 f7e3d9849402d7c3d09469924bf23cb7dfe3ad00df3c64bc29f9780bc48dec82 ChangeLog 507
 MD5 c3cb76c9d54ac39bc9800f1c054ac705 files/digest-mega-modules-0.3.1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDKfXSehlBotwFZuQRAtENAJ4zY2NFsoP5S4g3uW6sAn6BcpGA7ACfe1+O
-3ivbhix5U33n12YvOD6muY4=
-=jI0V
------END PGP SIGNATURE-----
+RMD160 e19722a995ce52d77929e6f027c3fda1b9b0d9d9 files/digest-mega-modules-0.3.1 60
+SHA256 25047b5b3e310052fc599fca4e419b620377b244226c2e12197fca976b30cbc8 files/digest-mega-modules-0.3.1 60
+MD5 fcd2a2327b7a86e508e30c3b46151d47 mega-modules-0.3.1.ebuild 531
+RMD160 17840fd0f93879764581120ed41c79b60238aaa1 mega-modules-0.3.1.ebuild 531
+SHA256 f4b76ff3f98405b8c67f6788670473a1ec0bc14a1caf920daa3c2288dfc399b7 mega-modules-0.3.1.ebuild 531
+MD5 1a24e0b48460c02e20931fceded24e1a metadata.xml 254
+RMD160 45352e67c97e6f541e16e45effa6cc89a075efa4 metadata.xml 254
+SHA256 793f01b5f7ab962d5845ec1c730edf86460cf792428710ef7bf6aeb046fc08bf metadata.xml 254
