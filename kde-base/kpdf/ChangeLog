@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.88 2006/03/30 17:47:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.89 2006/03/30 18:49:18 carlo Exp $
+
+  30 Mar 2006; Carsten Lohrke <carlo@gentoo.org> kpdf-3.5.2.ebuild:
+  Correct dependency for monolithic KDE.
 
   30 Mar 2006; Carsten Lohrke <carlo@gentoo.org> kpdf-3.5.2.ebuild:
   Add kdeprint as runtime dependency.
