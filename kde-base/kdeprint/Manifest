@@ -1,4 +1,4 @@
-MD5 cd78fd3eb1316cc7da5373b1d7d4d21c ChangeLog 5002
+MD5 291451246fbd9c29e01252b76eef092e ChangeLog 5132
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdeprint-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdeprint-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdeprint-3.4.3 68
@@ -10,5 +10,5 @@ MD5 f640b99375ba6c2c98e77127dff658e0 kdeprint-3.4.2.ebuild 523
 MD5 c7aa5ab3cc4252de670c2e49c9336dbe kdeprint-3.4.3.ebuild 524
 MD5 b0f88bbb63b768c320ad794cd6b2aca2 kdeprint-3.5.0.ebuild 531
 MD5 95c65750666b41b9ad4fd84241edfe96 kdeprint-3.5.1.ebuild 531
-MD5 e38b61a46618857a90072dd50b649cce kdeprint-3.5.2.ebuild 698
+MD5 c92828acd467147435ea3782947fdad2 kdeprint-3.5.2.ebuild 687
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

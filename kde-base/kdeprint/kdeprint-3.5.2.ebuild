@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeprint/kdeprint-3.5.2.ebuild,v 1.3 2006/03/30 17:38:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeprint/kdeprint-3.5.2.ebuild,v 1.4 2006/03/30 17:53:03 carlo Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -14,7 +14,7 @@ IUSE="cups"
 # TODO Makefile reads ppd models from /usr/share/cups/model  (hardcoded !!)
 DEPEND="cups? ( net-print/cups )"
 RDEPEND="${DEPEND}
-	!ia64? ( app-text/enscript )
+	app-text/enscript
 	app-text/psutils
 	kde? kde-base/kghostview"
 
