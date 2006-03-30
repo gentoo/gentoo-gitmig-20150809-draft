@@ -49,8 +49,8 @@ ppc		default-linux/ppc/ppc32/2006.0			stable
 # PPC64 Profiles
 #ppc64		default-linux/ppc64/2005.0			stable
 #ppc64		default-linux/ppc/ppc64				dev
-ppc64		default-linux/ppc/ppc64/2006.0/32bit-userland	stable
-#ppc64		default-linux/ppc/ppc64/2006.0/64bit-userland	stable
+#ppc64		default-linux/ppc/ppc64/2006.0/32bit-userland	stable
+ppc64		default-linux/ppc/ppc64/2006.0/64bit-userland	stable
 #ppc64		default-linux/ppc/ppc64/2006.0/multilib		dev
 
 # PPC Mac OS X Profiles
