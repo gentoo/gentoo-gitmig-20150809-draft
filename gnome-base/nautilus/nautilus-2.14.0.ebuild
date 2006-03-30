@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.14.0.ebuild,v 1.1 2006/03/16 20:02:18 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.14.0.ebuild,v 1.2 2006/03/30 01:56:08 allanonjl Exp $
 
 inherit virtualx gnome2 eutils
 
@@ -52,8 +52,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.28
 	>=dev-util/pkgconfig-0.9"
 
-PDEPEND="x11-themes/gnome-themes
-		 gnome? ( >=x11-themes/gnome-icon-theme-1.1.91 )"
+PDEPEND="gnome? ( >=x11-themes/gnome-icon-theme-1.1.91 )"
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README THANKS TODO"
 
