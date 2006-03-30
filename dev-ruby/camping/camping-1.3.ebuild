@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/camping-1.3.ebuild,v 1.1 2006/02/08 20:10:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/camping-1.3.ebuild,v 1.2 2006/03/30 03:23:17 agriffis Exp $
 
 inherit ruby gems
 
@@ -11,7 +11,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
 IUSE=""
 RESTRICT="test"
 
