@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.45 2006/03/30 18:56:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.46 2006/03/30 19:35:41 flameeyes Exp $
+
+  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> apr-util-0.9.7.ebuild,
+  apr-util-1.2.2.ebuild:
+  Add ~x86-fbsd keyword to the unmasked ebuild.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> apr-util-1.2.2.ebuild:
   Add ~x86-fbsd keyword.
