@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5_rc1.ebuild,v 1.2 2006/03/30 17:56:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5_rc1.ebuild,v 1.3 2006/03/30 18:36:40 carlo Exp $
 
 inherit kde
 
@@ -38,7 +38,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	dev-util/pkgconfig"
 RDEPEND="${RDEPEND}
-	kde-base/kdeprint"
+	|| ( kde-base/kdeprint kde-base/kdebase )"
 
 # add blockers on split packages derived from this one
 for x in $(get-child-packages ${CATEGORY}/${PN}); do
