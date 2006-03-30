@@ -1,6 +1,9 @@
-MD5 868285eb4a55c93719d5f57486c2dd41 ChangeLog 2186
-RMD160 6a18831b3c51f1b845fa6b7503b39f0ba6909877 ChangeLog 2186
-SHA256 af4dce760b120d5b0c50426f9ac21b67f6d3f62465bd7fe6af45cdbbbfa88b35 ChangeLog 2186
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fc4f8ef5d823fe4327b7c187da1e621e ChangeLog 2179
+RMD160 34f7bba2cf18b7d7d4e69c57798b959f1de8758c ChangeLog 2179
+SHA256 b3a1c48286be7c37f6c26bdd71234567ab3cc1180fbbcc1098c5658b39af18b6 ChangeLog 2179
 MD5 f2e48bae97dad4e6e6bccdb212124ae0 files/digest-qemu-softmmu-0.7.0-r1 127
 RMD160 503bf47e1a5a5a75182be2343b1d7482cb9e297e files/digest-qemu-softmmu-0.7.0-r1 127
 SHA256 60e3fd1eb9606bf285390f45a1fc2c12c6a825a9fc754d42423c554e23d12733 files/digest-qemu-softmmu-0.7.0-r1 127
@@ -49,3 +52,10 @@ SHA256 e0f71a7f262f2e8ce83ad01968726e57e33b9d891f38a10793aeb0cc14174f42 qemu-sof
 MD5 1ec9a403ff4db11c6cd35f095d87f340 qemu-softmmu-0.8.0.ebuild 2629
 RMD160 fe14cd1b951f1164c38599a6c9b39dff87464a2b qemu-softmmu-0.8.0.ebuild 2629
 SHA256 d90daf3fb9cba0c234ce7bde3d3c5047bf08feadb0dcb7ef4b2098a981fc43fe qemu-softmmu-0.8.0.ebuild 2629
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELDqUV3J2n04EauwRAscSAKCHiJBDs8jsMgjLOZobTE0giFsBwQCgr9pK
+e7XKSAmpoAUNuCqNnE+G0BE=
+=2mj4
+-----END PGP SIGNATURE-----
