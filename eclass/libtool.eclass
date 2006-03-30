@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.64 2006/02/03 22:20:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.65 2006/03/30 12:29:23 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -333,7 +333,8 @@ elibtoolize() {
 						;;
 					"fbsd-"*)
 						if [[ ${CHOST} == *"-freebsd"* ]] ; then
-							if [[ -z $(grep 'Handle Gentoo/FreeBSD as it was Linux' "${x}/configure") ]]; then
+							if [[ -z $(grep 'Handle Gentoo/FreeBSD as it was Linux' \
+								"${x}/configure" "${x}/../configure" 2>/dev/null) ]]; then
 								eerror "  FreeBSD patch set '${y}' failed to apply!"
 								die "FreeBSD patch set '${y}' failed to apply!"
 							fi
