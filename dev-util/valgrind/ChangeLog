@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.57 2006/03/07 18:38:19 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.58 2006/03/30 15:51:01 griffon26 Exp $
+
+*valgrind-3.1.1 (29 Mar 2006)
+
+  29 Mar 2006; Maurice van der Pot <griffon26@gentoo.org>
+  +valgrind-3.1.1.ebuild:
+  Added version 3.1.1 of valgrind, which is purely a bug fixing release.
+  Requested by Nuno Lopes <nunoplopes@sapo.pt> in bug #127766.
 
   07 Mar 2006; Maurice van der Pot <griffon26@gentoo.org>
   +files/valgrind-3.1.0-amd64-nomultilib-fix.patch, valgrind-3.1.0.ebuild:
