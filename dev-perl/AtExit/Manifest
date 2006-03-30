@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d71f0cbd7a9e745d104c1519d4e8b6df AtExit-2.01.ebuild 509
+MD5 47d3bd22e5ffe4be2213e0359aff3296 AtExit-2.01.ebuild 515
+RMD160 d7d74ea5f665a34ae226b51cd0e8da6fd63caddf AtExit-2.01.ebuild 515
+SHA256 c902c037f8598294f907c9fafbaf2b94e6d54df9557cc6a762dcd0e2ff02cc28 AtExit-2.01.ebuild 515
 MD5 d95e33d1b6beb8c5c76f52b98ba26ad1 ChangeLog 802
-MD5 139a98d9223620fbdd723a52394cec47 metadata.xml 308
+RMD160 a99de3c3e05252cab8ea5ecd4f4f7afda4020c67 ChangeLog 802
+SHA256 6b93fbd6c7a5dab84e37771d1a13a23e427d1bdc8cd7981893369f1aa71fd480 ChangeLog 802
 MD5 428bdcf8f35fd4c1204aa0a1aa9fe9ae files/digest-AtExit-2.01 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCa63JtG5z4I8BtQoRAhT+AJ40u0c/An/hqEo7sDvfap3h/cP/mQCeMHAM
-lbs+30euYM96vWwFLT655jw=
-=ONdz
------END PGP SIGNATURE-----
+RMD160 9224f513941af70c89d2ba430ee33c04f77207b6 files/digest-AtExit-2.01 61
+SHA256 e4c1bd08730ae7379bbe6eab74d2c73a855301252103d7b98c58e75189541a76 files/digest-AtExit-2.01 61
+MD5 139a98d9223620fbdd723a52394cec47 metadata.xml 308
+RMD160 de367ae0feef6001029e7f7d3bf9ef666826f9dd metadata.xml 308
+SHA256 fbe368c9a82fa401f4a38db9938cb8c4d230c225af5ffcd92b89f18d9885c072 metadata.xml 308
