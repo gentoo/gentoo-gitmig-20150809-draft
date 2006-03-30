@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.14.0.ebuild,v 1.1 2006/03/16 08:21:09 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.14.0.ebuild,v 1.2 2006/03/30 01:52:56 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -30,8 +30,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	doc? ( >=dev-util/gtk-doc-1 )"
 
-PDEPEND="x11-themes/gnome-icon-theme
-		 gnome? ( x11-themes/gnome-themes )"
+PDEPEND="x11-themes/gnome-icon-theme"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 USE_DESTDIR="1"
