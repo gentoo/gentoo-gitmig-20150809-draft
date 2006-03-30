@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5156 2006/03/30 00:26:40 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5157 2006/03/30 02:37:51 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (29 Mar 2006)
+# This is masked currently as the patch was pulled from upstream due to an issue
+# with the Windows patch that will cause the Linux patch to be re-released to
+# maintain compatibility across the network code.
+=games-fps/quake4-bin-1.1
 
 # Luca Barbato <lu_zero@gentoo.org> (29 Mar 2006)
 #pending some tests
