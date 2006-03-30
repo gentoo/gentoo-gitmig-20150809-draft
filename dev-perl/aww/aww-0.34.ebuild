@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/aww-0.34.ebuild,v 1.8 2006/02/13 14:16:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/aww-0.34.ebuild,v 1.9 2006/03/30 23:45:54 agriffis Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/aww/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~sparc x86"
+KEYWORDS="~ia64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
