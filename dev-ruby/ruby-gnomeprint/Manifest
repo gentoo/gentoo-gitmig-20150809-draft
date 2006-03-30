@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 094be777f6950b6d1d8559a11e3dc8d3 ruby-gnomeprint-0.14.1.ebuild 509
 MD5 f1eb9b98adb9ba8481e670c9cfc209e8 ChangeLog 414
+RMD160 3ec78c872b709c8f4307bb1bf9a3c44072492d6f ChangeLog 414
+SHA256 4820f8df256d9b92cf0f8a8fa9fd0934ae6ba230f7315d4f23b697a9f3d0122a ChangeLog 414
+MD5 f6b5cab6fd209b10594c8193c8837a35 files/digest-ruby-gnomeprint-0.14.1 271
+RMD160 5b3b60728a3f4345a67adfc07d9ce6f551a7f5a1 files/digest-ruby-gnomeprint-0.14.1 271
+SHA256 be485f8fde41e76ccf601ba67f83efee194813a10b46ec621e686a442d683cd5 files/digest-ruby-gnomeprint-0.14.1 271
 MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
-MD5 40c205da3125901037d4e44b9e6db96d files/digest-ruby-gnomeprint-0.14.1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDecCnZgSmR+etHJoRAqARAJ4x4gr8cF1rzwnzZbzhfzh3+mOzuACfSJyC
-JyG4fd5zeMBKJtWT/Ow1Dao=
-=32Yn
------END PGP SIGNATURE-----
+RMD160 097f8145a9994f98be4971b43b23b9e5e8bccb66 metadata.xml 158
+SHA256 70b396ab3c7a63a81cb895b7728bd9eccdc9770afdb9919f2c54694b685f7032 metadata.xml 158
+MD5 e90470b64270ff511bd44cfac32d8063 ruby-gnomeprint-0.14.1.ebuild 515
+RMD160 e38ade3b875f95a4ebbe87245e2e8546ec200544 ruby-gnomeprint-0.14.1.ebuild 515
+SHA256 7b29c7fcfeb47dbd295dc06e66e4233f87e0af738a19bd6cead25ce852ad7c4c ruby-gnomeprint-0.14.1.ebuild 515

@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomeprintui/ruby-gnomeprintui-0.14.1.ebuild,v 1.1 2005/11/15 11:07:05 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomeprintui/ruby-gnomeprintui-0.14.1.ebuild,v 1.2 2006/03/30 03:49:39 agriffis Exp $
 
 inherit ruby ruby-gnome2
 
 DESCRIPTION="Ruby bindings for gnomeprintui"
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
 IUSE=""
 USE_RUBY="ruby18 ruby19"
 DEPEND=">=gnome-base/libgnomeprintui-2.8"
