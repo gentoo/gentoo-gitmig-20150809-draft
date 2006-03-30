@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.4-r1.ebuild,v 1.1 2006/01/14 22:55:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.4-r1.ebuild,v 1.2 2006/03/30 17:43:16 agriffis Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="powerful text-to-postscript converter"
 SRC_URI="http://www.iki.fi/mtr/genscript/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/enscript/enscript.html"
 
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha ~mips ~ppc64"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="nls"
