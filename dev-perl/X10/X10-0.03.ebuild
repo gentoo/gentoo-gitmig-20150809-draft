@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X10/X10-0.03.ebuild,v 1.2 2006/01/21 18:02:18 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X10/X10-0.03.ebuild,v 1.3 2006/03/30 23:38:35 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/R/RO/ROBF/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ia64 ~ppc ~x86"
 IUSE=""
 
 SRC_TEST="do"
