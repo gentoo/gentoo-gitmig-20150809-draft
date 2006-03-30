@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.47 2006/02/18 21:42:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.48 2006/03/30 15:05:16 flameeyes Exp $
+
+  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> cpio-2.6-r5.ebuild:
+  Add ~x86-fbsd keyword.
 
   18 Feb 2006; Mike Frysinger <vapier@gentoo.org>
   +files/cpio-2.6-stpcpy-hack.patch, cpio-2.6-r5.ebuild:
