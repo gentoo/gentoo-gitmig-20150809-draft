@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.18 2006/03/12 01:03:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.19 2006/03/30 23:45:15 flameeyes Exp $
+
+  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> eselect-1.0.ebuild:
+  Add ~x86-fbsd keyword, although the env module doesn't work, as other
+  modules are needed for other packages; most of this version works fine.
 
   12 Mar 2006; Jason Wever <weeve@gentoo.org> eselect-1.0.ebuild:
   Stable on SPARC wrt bug #125630.
