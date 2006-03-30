@@ -1,16 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1739686a93854089f2ae53d63eac3e33 ChangeLog 519
+MD5 c7f20002f1fb69300c65195705ec63ba ChangeLog 631
+RMD160 c34ae5b513a9f62aa2c1c7f44d74bc640f276f60 ChangeLog 631
+SHA256 33b3df61f8d90f95874b05103448e955b7a8049718f2a6a7829fea58a85505b0 ChangeLog 631
 MD5 98f533708f605d83e0f1975193f97d04 ca-certificates-20050518.ebuild 950
-MD5 9a79f07579a8e04cf6a20a51866bf698 ca-certificates-20050804.ebuild 950
+RMD160 0b449a94a9302e1582802526c980bfaaa6655db9 ca-certificates-20050518.ebuild 950
+SHA256 5ce2ea2cd176067a1fe073a67e4e5bb7737c10c0cdc620fd112a755b02f486d1 ca-certificates-20050518.ebuild 950
+MD5 46dad22a7624ebe727b45cceb8032a27 ca-certificates-20050804.ebuild 963
+RMD160 8b2b5a9068300993f38c1e16108b63def1e253fa ca-certificates-20050804.ebuild 963
+SHA256 956d94481468959f04934923c158b328be864eda657c5c35bce3eb4feca588d8 ca-certificates-20050804.ebuild 963
 MD5 5ab224de35ee8b2ca0944f8e23bcb229 files/digest-ca-certificates-20050518 76
+RMD160 fb06e309b8db268335916e7aa07cd1a48194cb23 files/digest-ca-certificates-20050518 76
+SHA256 c8420d4885dcfe0206401ac22f10a0d4477f7cfe6f6d93896f4de620c04a6d73 files/digest-ca-certificates-20050518 76
 MD5 dfc8a161d725eb5f6af0c43e8e5e7df0 files/digest-ca-certificates-20050804 76
+RMD160 44ff6c5fc6a945c5cd7a2e91806a3bd059cadb6d files/digest-ca-certificates-20050804 76
+SHA256 4d1f447d1deff2d324c4114ed42dbea1f6b854887d282ac793916c357f99d896 files/digest-ca-certificates-20050804 76
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDtQSK2+ySkm8kpY0RAgd4AKCycMT7Ai1DaoEdvNG5zaEWTMQEAgCgpGwl
-kMrqJ3A16vltPVgxt4WzSXc=
-=Thej
+iD8DBQFEK+zkAiZjviIA2XgRAhplAKDJ65JX0Vyygg7ypqtRG26tcLLfrwCfZWDY
+a4YA/EdtO2zoowjNBPji7VE=
+=LSa8
 -----END PGP SIGNATURE-----
