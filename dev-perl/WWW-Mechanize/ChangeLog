@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/WWW-Mechanize
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.22 2006/03/19 00:54:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.23 2006/03/30 23:38:06 agriffis Exp $
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
+  WWW-Mechanize-1.0301.ebuild:
+  Mark 1.0301 ~ia64
 
 *WWW-Mechanize-1.18 (19 Mar 2006)
 
