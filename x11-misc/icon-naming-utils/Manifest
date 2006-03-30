@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b840ec128702c7d8b400262c89034b8d ChangeLog 1989
+MD5 aa2fadf66fd45e6000fd59fa9383a620 ChangeLog 2087
 MD5 bd5440b327cecc2b5eeaaba50cd9a066 files/digest-icon-naming-utils-0.6.2 74
 MD5 31f9daa04ded540b32c88bf11a98096c files/digest-icon-naming-utils-0.6.3 74
 MD5 a3f487e649e759105b08437912df1934 files/digest-icon-naming-utils-0.6.5 74
@@ -19,12 +16,5 @@ MD5 1103c8d730e23bf4d7ba8438dd7b3aff icon-naming-utils-0.6.6.ebuild 739
 MD5 697b196562c7cd050dbca56e70d0fc2a icon-naming-utils-0.6.7.ebuild 739
 MD5 eb25638e253b38a999c1d555fef7530e icon-naming-utils-0.6.8.ebuild 739
 MD5 238cfef8b7d29a733cea559216ef617f icon-naming-utils-0.7.0.ebuild 737
-MD5 8cd12f14111aa7ccb6c9f6213ce028fb icon-naming-utils-0.7.1.ebuild 739
+MD5 7c0138e81a3c9163fa122873bf8da747 icon-naming-utils-0.7.1.ebuild 745
 MD5 870a91577a60ccb6ea581e99f879e9b8 metadata.xml 248
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEHrOZKRy60XGEcJIRAjTHAJ9ohBfDZyvrlGEkuutbRXZE3IMaWACeIBEV
-Ycef96OFp9fSeI8X5u7D+6g=
-=AHwa
------END PGP SIGNATURE-----
