@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtkhtml2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.7 2006/03/30 03:50:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.8 2006/03/30 16:55:01 fmccor Exp $
+
+  30 Mar 2006; Ferris McCormick <fmccor@gentoo.org>
+  ruby-gtkhtml2-0.14.1.ebuild:
+  Stable on sparc (part of the -14.1 update).
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   ruby-gtkhtml2-0.14.1.ebuild:
