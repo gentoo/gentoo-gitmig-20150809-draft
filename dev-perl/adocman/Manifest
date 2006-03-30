@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e5695800b6973dae3e81b43261c585d2 ChangeLog 1120
+MD5 c9d2de7f90ed70a99c1bd1891d6f1eb9 ChangeLog 1209
+RMD160 e75b2bc24ac83677e67cb0057bbad866d772e183 ChangeLog 1209
+SHA256 6d86536882d92c9b6794df63b4ab70cad17342cc883b0fc54377ea75de0bb033 ChangeLog 1209
 MD5 bb4a7ce7cbfaf0ffdda13589d4c0a28d adocman-0.10.ebuild 860
+RMD160 411aabb3d610367ca3d877b8b29b98664fce9ffd adocman-0.10.ebuild 860
+SHA256 9fe585b076f6532edc837300f9e87feb400c0c26a4a3dc643fccf446e6c1ed3d adocman-0.10.ebuild 860
 MD5 ee4c688fd9b5e62beb6d7a67c7d81060 adocman-0.12.ebuild 891
-MD5 e8e4cc88027e2fcf2c180b0d2c8e02ca adocman-0.13.ebuild 898
+RMD160 c747404d85531f8b4c3adc4b9c58039a2689c32d adocman-0.12.ebuild 891
+SHA256 8ea956d4c0d8113d808dddc206c1877f4e4adb95905c981526a59b8641712ace adocman-0.12.ebuild 891
+MD5 a240bdc7fc048e2ea510bb39e0dc603f adocman-0.13.ebuild 903
+RMD160 280bdd180f504635b48996115fea04d05645d0d0 adocman-0.13.ebuild 903
+SHA256 35ab145a94ee043bc542cfe0ae6a00656c2d21a54f0c0d789fd4e850548d04cd adocman-0.13.ebuild 903
 MD5 23bf9a4344d34652e1222b455d6aaa8f files/digest-adocman-0.10 63
+RMD160 b60c76d3d1c44e11639c6ce3b5035326348fd371 files/digest-adocman-0.10 63
+SHA256 3e268adca2697189319e711ef0adb933d622e970bbd6b5869ab0dba8a874c2d3 files/digest-adocman-0.10 63
 MD5 e08483169596c01f7b5b35ebcb8c3324 files/digest-adocman-0.12 63
+RMD160 395e19fcca4059477cde2b718a28dd6f68b74199 files/digest-adocman-0.12 63
+SHA256 ce9ec614dbc07fd2a4fce96c8272a66169fffb7f4f043cb3fed7c823091910dc files/digest-adocman-0.12 63
 MD5 5bc24ed68835c463a0340dcac0b2619f files/digest-adocman-0.13 63
+RMD160 65c359b3a02ae2bf8dd35a6b4fca615075a17a58 files/digest-adocman-0.13 63
+SHA256 9ff5b320788c3e8ea345149d0ff2b950815c69424bc34961c1132d4f911ae42d files/digest-adocman-0.13 63
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8JSMtG5z4I8BtQoRAs8VAKCLcAhwOJZ0EmBHTCCMWcX7Zoz32QCfdMF7
-WVB29k8fgn2sbB5SxSq6BRI=
-=BuOA
------END PGP SIGNATURE-----
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
