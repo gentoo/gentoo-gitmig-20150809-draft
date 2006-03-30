@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Deluxe/FileHandle-Deluxe-0.92.ebuild,v 1.5 2005/04/25 15:59:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Deluxe/FileHandle-Deluxe-0.92.ebuild,v 1.6 2006/03/30 22:39:22 agriffis Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ HOMEPAGE="http://www.cpan.org/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 sparc"
+KEYWORDS="~ia64 sparc x86"
 IUSE=""
