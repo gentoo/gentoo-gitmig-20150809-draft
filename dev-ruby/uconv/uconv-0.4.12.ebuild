@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/uconv-0.4.12.ebuild,v 1.8 2004/12/16 09:36:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/uconv-0.4.12.ebuild,v 1.9 2006/03/30 04:01:40 agriffis Exp $
 
 inherit ruby
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.yoshidam.net/Ruby.html#uconv"
 SRC_URI="http://www.yoshidam.net/${P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64 ppc64"
+KEYWORDS="~amd64 ~ia64 ppc ppc64 x86"
 IUSE=""
 DEPEND="virtual/ruby"
 USE_RUBY="ruby16 ruby18 ruby19"
