@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.92.ebuild,v 1.1 2005/06/17 00:39:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.92.ebuild,v 1.2 2006/03/30 17:50:00 halcy0n Exp $
 
 inherit eutils games
 
@@ -39,6 +39,8 @@ src_unpack() {
 		-e 's/: install-docDATA/:/' \
 		-e '/^SUBDIRS/s/doc//' Makefile.in \
 		|| die "sed failed"
+
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 }
 
 src_compile() {
