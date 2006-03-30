@@ -1,6 +1,14 @@
 # ChangeLog for games-emulation/generator
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.11 2005/05/17 17:50:02 wolf31o2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.12 2006/03/30 23:01:11 wolf31o2 Exp $
+
+*generator-0.35-r1 (30 Mar 2006)
+
+  30 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +generator-0.35-r1.ebuild:
+  Added new ebuild for a patched generator. The oroginal ebuild was written by
+  Machiel Groeneveld <machiel@ideus.nl> and edited by Bernard Cafarelli
+  <voyageur@operamail.com>. Closing bug #76072.
 
   17 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> generator-0.35.ebuild:
   Cleanup for bug #92745.
