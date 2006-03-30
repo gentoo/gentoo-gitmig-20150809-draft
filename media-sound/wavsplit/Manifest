@@ -1,19 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9e43c1beaa7ee8fa54faebb0c3d34a25 ChangeLog 1341
+MD5 337eca0dbed39e2db8c16b1d8f3105af ChangeLog 1554
+RMD160 49c56f1475b61179ae752d76ba537b7a8b5cc2af ChangeLog 1554
+SHA256 073240e567b05262df25fe1184f59595fc2c563b37c5804b03f61300e24337b9 ChangeLog 1554
 MD5 614dc021dbcc9eeff1f7f30e81c6070d files/digest-wavsplit-1.0 60
+RMD160 a8891f10972061ab67e1b557bf888695a7a77241 files/digest-wavsplit-1.0 60
+SHA256 21e4f6711094141aa21d3f81ee9a9348207c7246630ae642b8b5decd7bfd193b files/digest-wavsplit-1.0 60
 MD5 db9e42a4c6a9b5af5fafcd4ad40de35b files/digest-wavsplit-1.1.0 65
-MD5 5ff77e4d417fcb0c21cfb902cac670b4 files/digest-wavsplit-1.2.1 65
-MD5 ff908f77353445c3684934789f83b42f files/wavsplit-1.2.1-large-files.patch 6730
+RMD160 271df4d2962aef053c070ea49b34b88f7c1695fe files/digest-wavsplit-1.1.0 65
+SHA256 0e78e5d553a3f085b99e9d7256817cbb324ed8664a7f718b8be24ce96ed1abdc files/digest-wavsplit-1.1.0 65
+MD5 847e1d7f35307144d9069e4c8203b46a files/digest-wavsplit-1.2.1 241
+RMD160 0b1c7ee991a4f17b4d61d4fd59d1a6b414223f0e files/digest-wavsplit-1.2.1 241
+SHA256 97e03fb1c3ba2a3bc101a25c60484992250d5890df3fa79a44f8983b0073cf5f files/digest-wavsplit-1.2.1 241
+MD5 261051ab4ccee921fce0db78a9e75a34 files/wavsplit-1.2.1-Makefile.patch 495
+RMD160 bff83202a5788ef784e77a2a0d24e7d3a687e4e1 files/wavsplit-1.2.1-Makefile.patch 495
+SHA256 969e09af86f71b9d35008ac564d1ec1818b090205fe279e57c931ddb6a3d0007 files/wavsplit-1.2.1-Makefile.patch 495
+MD5 a105da6d4cfd3db6c6061e1e64c6855e files/wavsplit-1.2.1-large-files.patch 6265
+RMD160 94addfecfd6b4341d8f435ca79f45d10ad59bc80 files/wavsplit-1.2.1-large-files.patch 6265
+SHA256 00598bfa0530ae841dedf708b802b4ee20aac3d30712ba0f556ee816fb9590e7 files/wavsplit-1.2.1-large-files.patch 6265
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 MD5 b402735415dce0755a2413b300310c4a wavsplit-1.0.ebuild 676
+RMD160 9db3575be266f4fee4c4d4274e7f7dedd908affa wavsplit-1.0.ebuild 676
+SHA256 22f4ff63fc6a62f2541f25add015727561da6349f68fe8ffb90f01ebd8f7841a wavsplit-1.0.ebuild 676
 MD5 1c33ef68829f20e3f7493e1aadbcf74d wavsplit-1.1.0.ebuild 696
-MD5 01b34565e5738a25961e21db160075a2 wavsplit-1.2.1.ebuild 791
+RMD160 2f012e0892779b002ad0d7a51524b00abfe6aa47 wavsplit-1.1.0.ebuild 696
+SHA256 f505027850424aa30decdfbaa2bef7533ddc146ca4f7ca9be9fb9f5e59aaa3aa wavsplit-1.1.0.ebuild 696
+MD5 eddf68f18528db0a6f846dfee41a8477 wavsplit-1.2.1.ebuild 1014
+RMD160 6754e7b6b65dbe5ec9909e8bed8300f883329824 wavsplit-1.2.1.ebuild 1014
+SHA256 ecc6cf4ba76f73462a9bc9e125cbb847482150a7df09ebfe3415a2bc5bf7beb1 wavsplit-1.2.1.ebuild 1014
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEK2tiFdQwWVoAgN4RAjMRAKCxaN3ELqdWzc3unFFqFlT1IsojuACgyJfe
-6RnmEUs+HcwMXdLxJivYdKE=
-=SFA0
+iD8DBQFEK6VIV3J2n04EauwRAuKMAJ4hyrAoid9jhByAypeLdN6w+vj4ZwCgxamJ
+wTTSM1aFflGqxX6q/QyU+0o=
+=JjHa
 -----END PGP SIGNATURE-----

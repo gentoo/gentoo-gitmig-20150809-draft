@@ -1,20 +1,16 @@
-diff -Nur wavsplit-1.2.1/Makefile /tmp/wavsplit-1.2.1/Makefile
---- wavsplit-1.2.1/Makefile	2004-11-17 23:19:17.000000000 +0100
-+++ /tmp/wavsplit-1.2.1/Makefile	2005-01-16 21:23:33.000000000 +0100
+--- Makefile	2004-11-17 23:19:17.000000000 +0100
++++ Makefile	2005-01-16 21:23:33.000000000 +0100
 @@ -6,7 +6,7 @@
  version = 1.2.1
  
  CC = gcc
--CFLAGS = -Wall
-+CFLAGS = -Wall -D_FILE_OFFSET_BITS=64
- LDFLAGS = -lm
+-CFLAGS += -Wall
++CFLAGS += -Wall -D_FILE_OFFSET_BITS=64
+ LIBS = -lm
  
  all: wavsplit wavren
-Dateien wavsplit-1.2.1/wavren und /tmp/wavsplit-1.2.1/wavren sind verschieden.
-Dateien wavsplit-1.2.1/wavsplit und /tmp/wavsplit-1.2.1/wavsplit sind verschieden.
-diff -Nur wavsplit-1.2.1/wavsplit.c /tmp/wavsplit-1.2.1/wavsplit.c
---- wavsplit-1.2.1/wavsplit.c	2004-11-17 23:19:17.000000000 +0100
-+++ /tmp/wavsplit-1.2.1/wavsplit.c	2005-01-16 22:04:39.000000000 +0100
+--- wavsplit.c	2004-11-17 23:19:17.000000000 +0100
++++ wavsplit.c	2005-01-16 22:04:39.000000000 +0100
 @@ -269,9 +269,9 @@
             timepos * split)
  {
@@ -165,9 +161,8 @@ diff -Nur wavsplit-1.2.1/wavsplit.c /tmp/wavsplit-1.2.1/wavsplit.c
  
    while (to_be_read) {
      n_read = read (ifd, buf, to_be_read);
-diff -Nur wavsplit-1.2.1/wavsplit.h /tmp/wavsplit-1.2.1/wavsplit.h
---- wavsplit-1.2.1/wavsplit.h	2004-11-17 23:19:17.000000000 +0100
-+++ /tmp/wavsplit-1.2.1/wavsplit.h	2005-01-16 21:23:33.000000000 +0100
+--- wavsplit.h	2004-11-17 23:19:17.000000000 +0100
++++ wavsplit.h	2005-01-16 21:23:33.000000000 +0100
 @@ -121,15 +121,15 @@
  static int split (unsigned int UseHours, unsigned int UseFrames,
                    unsigned int fps, unsigned int UseTrackLens,

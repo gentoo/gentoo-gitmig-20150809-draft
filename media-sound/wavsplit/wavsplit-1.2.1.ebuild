@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/wavsplit-1.2.1.ebuild,v 1.3 2006/03/30 05:22:37 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/wavsplit-1.2.1.ebuild,v 1.4 2006/03/30 09:30:34 tove Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="WavSplit is a simple command line tool to split WAV files"
 HOMEPAGE="http://sourceforge.net/projects/wavsplit/"
@@ -17,17 +17,19 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-large-files.patch
+	cd "${S}"
+	# remove precomplied binaries
+	rm "${S}"/{wavren,wavsplit} || die
+	epatch "${FILESDIR}"/${P}-Makefile.patch
+	epatch "${FILESDIR}"/${P}-large-files.patch
 }
 
-
-#src_compile() {
-#	emake || die
-#}
-
+src_compile(){
+	emake CC="$(tc-getCC)" || die "make failed"
+}
 src_install() {
-	dobin wavsplit wavren
-	doman wavsplit.1 wavren.1
-	dodoc BUGS CHANGES CREDITS README README.wavren
+	dobin wavren wavsplit || die "dobin failed"
+	doman wavren.1 wavsplit.1 || die "doman failed"
+	dodoc BUGS CHANGES CREDITS README README.wavren || die "dodoc failed"
 }
 
