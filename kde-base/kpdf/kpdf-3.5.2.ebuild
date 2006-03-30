@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.2.ebuild,v 1.3 2006/03/24 12:31:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.2.ebuild,v 1.4 2006/03/30 17:47:44 carlo Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -16,6 +16,8 @@ DEPEND=">=media-libs/freetype-2.0.5
 	media-libs/t1lib
 	>=app-text/poppler-0.5.1
 	>=app-text/poppler-bindings-0.5.1"
+RDEPEND="${DEPEND}
+	kde-base/kdeprint"
 
 SRC_URI="${SRC_URI}
 	mirror://gentoo/${P}-poppler.patch.bz2"
