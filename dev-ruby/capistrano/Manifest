@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 cb6850d7dcf226a323d5bf33ee45c7a1 ChangeLog 835
 RMD160 9cb5956bdbe0616096cc0cac105511e680a0c725 ChangeLog 835
 SHA256 43d21d4ec4397459d1c5e5b15ba29517b8b196437f9971f00f506d5306ce3c84 ChangeLog 835
-MD5 4c69b6898daa614e62d5a9baf325d4d9 capistrano-1.1.0.ebuild 921
-RMD160 8f5837e758d215864fd6347e23437bd298382a4d capistrano-1.1.0.ebuild 921
-SHA256 867a0eabb322c45e94fb34852fa151ae4567049c6589be16567cbd52398bbed2 capistrano-1.1.0.ebuild 921
-MD5 5d30b3d553a0917ac7165e8a307e4dde files/digest-capistrano-1.1.0 238
-RMD160 34e143b5a61824681671e6439a7d363cb7b124fd files/digest-capistrano-1.1.0 238
-SHA256 b076a6fb3954bf081d5750ebba9eef2803cf8eca9cf0a77207c47d240531acfe files/digest-capistrano-1.1.0 238
+MD5 a25db651394fd6c8a09ebf6d2b174852 capistrano-1.1.0.ebuild 927
+RMD160 c2baeefea98e383e0205427ffc7b393d89b999d8 capistrano-1.1.0.ebuild 927
+SHA256 5e2f871d39915c1dfd18433f87b3b61dc68a196ede8c52b6454328dc595a055e capistrano-1.1.0.ebuild 927
+MD5 ede4c144936be17740d1ce6c200aa554 files/digest-capistrano-1.1.0 238
+RMD160 1105d1b3f1cf9a8a021b1fc26c2bafc1a3d1fc12 files/digest-capistrano-1.1.0 238
+SHA256 ab0b789f03578fa98082f3cbe590dcc30e208f577af82ed2c6f838af3a310994 files/digest-capistrano-1.1.0 238
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
 SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEJvTfI1lqEGTUzyQRAuTHAKCi3ebeRsk/RjikKcfHySE1eya9zACeMqxl
-w9jQhaTMEUcfWqjCfRR9JK4=
-=Jnm0
------END PGP SIGNATURE-----
