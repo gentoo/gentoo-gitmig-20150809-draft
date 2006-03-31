@@ -1,22 +1,52 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bf47f68c6340e231f06690dfbef0d851 ChangeLog 4779
+MD5 bf18153189c61dee1b5f390efca6376b ChangeLog 4919
+RMD160 002c6bb80ec3a32a01e332e5bd7ec645a73c0f56 ChangeLog 4919
+SHA256 13d8d824a7158082b90bc702d0f99e8212bbd6ad9a2c0d91918896abf0903082 ChangeLog 4919
 MD5 92f73aafe5535cf0996be1b810ab7c9b files/digest-terminus-font-4.07 70
+RMD160 15cac053ae43aefa7e0ee7cfee3ad80a7efbfcf8 files/digest-terminus-font-4.07 70
+SHA256 c5c5adf71cd3668ee385505b4b6c8746735915b6698380191fdedd03dabc3dd1 files/digest-terminus-font-4.07 70
 MD5 675b78bea73e2d292d68944a6c455e73 files/digest-terminus-font-4.11 70
+RMD160 93843274398edc92492885e37953af5cce284745 files/digest-terminus-font-4.11 70
+SHA256 f09c73d1891fafab6836f4667793195df8fc468a60d2f2d43eb90451ca1d3dcd files/digest-terminus-font-4.11 70
 MD5 604792fcc99234081b4cce8320970e91 files/digest-terminus-font-4.12 70
+RMD160 18051e3caefd974af83a2b173b7f8737db0e3f6b files/digest-terminus-font-4.12 70
+SHA256 af59243e37050af3628952e90c1e9daa20e81c445a15eef9c9194e643d9fd523 files/digest-terminus-font-4.12 70
 MD5 bc7d84257a5dc86feed158e475c255f7 files/digest-terminus-font-4.14 70
+RMD160 48473b938934411bc48b537c1aab1c9b57e5e253 files/digest-terminus-font-4.14 70
+SHA256 1d5155da49854bc3e534c132dffb36c42596dbe91fd6c810743e93f81bf51793 files/digest-terminus-font-4.14 70
 MD5 bc7d84257a5dc86feed158e475c255f7 files/digest-terminus-font-4.14-r1 70
+RMD160 48473b938934411bc48b537c1aab1c9b57e5e253 files/digest-terminus-font-4.14-r1 70
+SHA256 1d5155da49854bc3e534c132dffb36c42596dbe91fd6c810743e93f81bf51793 files/digest-terminus-font-4.14-r1 70
+MD5 7d7ed2664851fa67743ee9721e951946 files/digest-terminus-font-4.20 256
+RMD160 3f8d455275bf89bed1a00095bc99984f867b7f90 files/digest-terminus-font-4.20 256
+SHA256 d64b133579cf4614e54b873b68bb4662a7fab196afff7a09ed1a74022b09252c files/digest-terminus-font-4.20 256
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+RMD160 e563fdca0707ee5927deab77f2e5ef79816384ca metadata.xml 158
+SHA256 9a8722fb0b5a1992b3942e85f23df4e08f10cabc2d783ca887479abe115b3ea8 metadata.xml 158
 MD5 4f6089d8fbe33a45a4362987278239b6 terminus-font-4.07.ebuild 1108
+RMD160 7aaed9128043a820c25e2a44f6975afda476da8b terminus-font-4.07.ebuild 1108
+SHA256 6bc6921eec264314dc55a1268c5f2ac3a7dedecd344b6ae389f41964014b5af2 terminus-font-4.07.ebuild 1108
 MD5 e21899a03a90811d9d0b67e3fb52cadf terminus-font-4.11.ebuild 1104
+RMD160 2f11aae3e80abd8a31da3fdd8348da60da9e755e terminus-font-4.11.ebuild 1104
+SHA256 49d34c87697833c0e7dfae0b94fe3415176bd77b1bcca1f7f5c0a23c534088c1 terminus-font-4.11.ebuild 1104
 MD5 aca9a9337d75444ff0336781f061a03d terminus-font-4.12.ebuild 1111
+RMD160 fa610530b0c656995768d7cda7e0b7cd193875a4 terminus-font-4.12.ebuild 1111
+SHA256 d946a6208aa79abd182a4eb7aecc35c3275de390672b81745cf91b18531dd286 terminus-font-4.12.ebuild 1111
 MD5 4c0d6f214240637d310c1d9efbd41da9 terminus-font-4.14-r1.ebuild 1120
+RMD160 580024aacd71847c5b34b78c86b38980b3eb66aa terminus-font-4.14-r1.ebuild 1120
+SHA256 432ceb94f0ffd4d7983b66c99581d907459158ceee10a7352f6cab271930fea5 terminus-font-4.14-r1.ebuild 1120
 MD5 a386fe425ebd278eeec65c6c4e6f91d8 terminus-font-4.14.ebuild 1108
+RMD160 c544d66dacebdf8ac4214501204b8de86f1361d7 terminus-font-4.14.ebuild 1108
+SHA256 e5fb1c5b2b3805a275fda9c02a713be859bcbe8bd4ce30bdcbfaee22191903e8 terminus-font-4.14.ebuild 1108
+MD5 c88aa3bd9a76be59823cbc81e9f4a25e terminus-font-4.20.ebuild 1113
+RMD160 24e86fad2a59e164c72f6011e8131e1b562180b9 terminus-font-4.20.ebuild 1113
+SHA256 d76f0ac0ec18f6f08c60e80b479a126de0983d775369db56a46584aca88aa53a terminus-font-4.20.ebuild 1113
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEFcVAKRy60XGEcJIRAp7NAJ9Mpr38aFbA5PZC2OxCfMDMTAcPnQCgpttj
-ceETcKhNyQxbWbQ6naduNm4=
-=Is9m
+iD8DBQFELWBS2iXjgNjfe5sRAubJAKC2WlFoluvEWfV0pWAWcmLYtvDSyQCgjQGA
+OqJ9P+/a8WBtFqEE5+kbT9w=
+=yp4p
 -----END PGP SIGNATURE-----
