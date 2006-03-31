@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r7.ebuild,v 1.6 2006/02/15 22:04:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r7.ebuild,v 1.7 2006/03/31 19:55:49 jokey Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="A collection of tools for network auditing and penetration testing"
 HOMEPAGE="http://monkey.org/~dugsong/${PN}/"
-SRC_URI="${HOMEPAGE}/${P}.tar.gz"
+SRC_URI="http://monkey.org/~dugsong/${PN}/${P}.tar.gz"
 LICENSE="DSNIFF"
 SLOT="0"
 KEYWORDS="alpha ppc x86"
