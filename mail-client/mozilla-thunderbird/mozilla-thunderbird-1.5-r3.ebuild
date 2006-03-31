@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5-r2.ebuild,v 1.2 2006/03/23 21:21:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5-r3.ebuild,v 1.1 2006/03/31 19:13:05 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools
@@ -95,6 +95,16 @@ src_compile() {
 	####################################
 	append-flags -freorder-blocks -fno-reorder-functions
 
+	# Export CPU_ARCH_TEST  as it is not exported by default.
+	case $(tc-arch) in
+	amd64) [[ ${ABI} == "x86" ]] && CPU_ARCH_TEST="x86" || CPU_ARCH_TEST="x86_64" ;;
+	ia64) CPU_ARCH_TEST="ia64" ;;
+	ppc) CPU_ARCH_TEST="ppc" ;;
+	*) CPU_ARCH_TEST=$(tc-arch) ;;
+	esac
+
+	export CPU_ARCH_TEST
+
 	CPPFLAGS="${CPPFLAGS}" \
 	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 	econf || die
@@ -142,6 +152,22 @@ src_install() {
 	# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
 	insinto /usr/share/applications
 	doins ${FILESDIR}/icon/mozillathunderbird.desktop
+
+	####################################
+	#
+	# Install files necessary for applications to build against firefox
+	#
+	####################################
+
+	ewarn "Installing includes and idl files..."
+	dodir ${MOZILLA_FIVE_HOME}/idl ${MOZILLA_FIVE_HOME}/include
+	cd ${S}/dist
+	cp -LfR include/* ${D}${MOZILLA_FIVE_HOME}/include || die "failed to copy"
+	cp -LfR idl/* ${D}${MOZILLA_FIVE_HOME}/idl || die "failed to copy"
+
+	# Dirty hack to get some applications using this header running
+	dosym ${MOZILLA_FIVE_HOME}/include/necko/nsIURI.h \
+		/usr/$(get_libdir)/${MOZILLA_FIVE_HOME##*/}/include/nsIURI.h
 }
 
 pkg_postinst() {

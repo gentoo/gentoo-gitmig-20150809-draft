@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.103 2006/03/23 21:21:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.104 2006/03/31 19:13:05 anarchy Exp $
+
+*mozilla-thunderbird-1.5-r3 (31 Mar 2006)
+
+  31 Mar 2006; Jory A. Pratt <anarchy@gentoo.org>
+  -mozilla-thunderbird-1.5.ebuild, -mozilla-thunderbird-1.5-r1.ebuild,
+  -mozilla-thunderbird-1.5-r2.ebuild, +mozilla-thunderbird-1.5-r3.ebuild:
+  ABI fix for third party extensions
 
   23 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   mozilla-thunderbird-1.5-r2.ebuild:
