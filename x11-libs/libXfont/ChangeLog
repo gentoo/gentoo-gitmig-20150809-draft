@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.27 2006/03/22 18:30:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.28 2006/03/31 19:57:38 flameeyes Exp $
+
+  31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> libXfont-1.0.0.ebuild:
+  Add ~x86-fbsd keyword.
 
   22 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
   libXfont-1.0.0.ebuild:
