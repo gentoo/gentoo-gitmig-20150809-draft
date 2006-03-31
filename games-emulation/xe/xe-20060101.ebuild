@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-20060101.ebuild,v 1.2 2006/02/11 04:06:03 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-20060101.ebuild,v 1.3 2006/03/31 20:34:13 wolf31o2 Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~x86"
 IUSE=""
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 RDEPEND="|| ( ( x11-libs/libXv
 				x11-libs/libXxf86vm )

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20040303.ebuild,v 1.3 2005/06/15 11:09:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20040303.ebuild,v 1.4 2006/03/31 20:28:47 wolf31o2 Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ LICENSE="CAPS"
 SLOT="0"
 KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 src_install() {
 	insinto /usr/include/caps

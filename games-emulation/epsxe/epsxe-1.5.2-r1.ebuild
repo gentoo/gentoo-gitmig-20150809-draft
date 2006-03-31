@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/epsxe/epsxe-1.5.2-r1.ebuild,v 1.5 2004/06/24 22:26:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/epsxe/epsxe-1.5.2-r1.ebuild,v 1.6 2006/03/31 20:29:58 wolf31o2 Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ LICENSE="freedist"
 SLOT="0"
 KEYWORDS="-* x86"
 IUSE="opengl"
-RESTRICT="nostrip" # For some strange reason, strip truncates the whole file
+RESTRICT="strip" # For some strange reason, strip truncates the whole file
 
 DEPEND="app-arch/unzip"
 RDEPEND=">=dev-libs/glib-1.2
