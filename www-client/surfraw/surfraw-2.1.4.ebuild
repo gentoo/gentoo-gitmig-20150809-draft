@@ -1,15 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.1.0.1.ebuild,v 1.2 2005/10/19 18:31:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.1.4.ebuild,v 1.1 2006/03/31 21:09:35 seemant Exp $
 
-inherit versionator bash-completion eutils
+inherit bash-completion eutils
 
-MY_PF=${PN}_$(replace_version_separator 3 '-')
 S=${WORKDIR}/${PN}
 DESCRIPTION="A fast unix command line interface to WWW"
 HOMEPAGE="http://alioth.debian.org/projects/surfraw/"
-SRC_URI="mirror://debian/pool/main/s/surfraw/${MY_PF}.tar.gz
-	mirror://gentoo/${P}-gentoo-patches.tar.bz2"
+SRC_URI="mirror://debian/pool/main/s/surfraw/${PN}_${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="public-domain"
@@ -20,7 +18,7 @@ src_unpack() {
 	unpack ${A}; cd ${S}
 
 	sed -i 's,/lib/,/share/,g' surfraw-bash-completion surfraw.1.in elvi.1sr.in
-	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/gentoo-patches
+	epatch ${FILESDIR}/${PN}-gentoo_pkg_tools.patch
 }
 
 src_compile() {
