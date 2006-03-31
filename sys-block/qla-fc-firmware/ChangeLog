@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/qla-fc-firmware
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/ChangeLog,v 1.1 2006/03/12 10:10:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/ChangeLog,v 1.2 2006/03/31 05:27:19 rajiv Exp $
+
+  31 Mar 2006; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  qla-fc-firmware-20060312.ebuild:
+  add ~amd64.
 
 *qla-fc-firmware-20060312 (12 Mar 2006)
 
