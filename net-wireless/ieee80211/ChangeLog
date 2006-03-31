@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/ieee80211
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.32 2006/03/26 16:45:30 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.33 2006/03/31 15:10:10 brix Exp $
+
+*ieee80211-1.1.13 (31 Mar 2006)
+
+  31 Mar 2006; Henrik Brix Andersen <brix@gentoo.org> files/remove-old,
+  +ieee80211-1.1.13.ebuild:
+  Version bump. Fixes building with KBUILD_OUTPUT or O= set, thanks to Miika
+  Linnapuomi in bug #126306. Backported remove-old bug fix from upstream.
 
   26 Mar 2006; Henrik Brix Andersen <brix@gentoo.org>
   ieee80211-1.1.12-r1.ebuild:

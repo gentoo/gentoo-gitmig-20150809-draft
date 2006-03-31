@@ -45,7 +45,7 @@ ask_remove()
 
 		n) return 1;;
 
-		""|y)	find ${KSRC} -type f -name 'ieee80211*' | \
+		""|y)	find ${KSRC} -follow -type f -name 'ieee80211*' | \
 			while read fn; do
 				[ ! -d $fn ] && (rm -f ${fn} || return 1)
 			done || return 1
@@ -60,7 +60,7 @@ do_check()
 {
 	echo "Checking in ${KSRC} for ieee80211 components..."
 
-	FILES=`find ${KSRC} -type f -name 'ieee80211*'`
+	FILES=`find ${KSRC} -follow -type f -name 'ieee80211*'`
 
 	if [ -n "${FILES}" ]; then
 		for file in $FILES; do
