@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/e16keyedit-0.2.ebuild,v 1.22 2006/02/11 05:07:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/e16keyedit-0.2.ebuild,v 1.23 2006/03/31 03:20:31 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,11 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-RDEPEND="virtual/x11
-	<x11-wm/enlightenment-0.16.8
+DEPEND="<x11-wm/enlightenment-0.16.8
 	=x11-libs/gtk+-1*"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -31,6 +28,6 @@ src_compile() {
 }
 
 src_install() {
-	 dobin e16keyedit || die
-	 dodoc README ChangeLog AUTHORS
+	dobin e16keyedit || die
+	dodoc README ChangeLog AUTHORS
 }
