@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.10 2006/03/24 07:44:39 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.11 2006/03/31 19:48:18 keri Exp $
+
+  31 Mar 2006; Keri Harris <keri@gentoo.org>
+  files/gprolog-1.2.19-noexecstack.patch, gprolog-1.2.19.ebuild:
+  Add ~ppc-macos keyword. We do not generate the GNU.stack section on macos.
+  Reported by Fabian Groffen <grobian@gentoo.org> in #87184
 
   24 Mar 2006; Keri Harris <keri@gentoo.org> gprolog-1.2.19.ebuild:
   Updated install paths to respect ${PF}. Thanks to TGL in bug #127299.
