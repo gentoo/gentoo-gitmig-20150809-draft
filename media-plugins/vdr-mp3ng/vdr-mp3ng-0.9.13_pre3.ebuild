@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.9.13_pre3.ebuild,v 1.3 2006/02/27 20:37:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.9.13_pre3.ebuild,v 1.4 2006/03/31 17:45:16 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.glaserei-franz.de/VDR/Moronimo2/downloads/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="vorbis oss imagemagick"
 
 DEPEND=">=media-video/vdr-1.2.6
