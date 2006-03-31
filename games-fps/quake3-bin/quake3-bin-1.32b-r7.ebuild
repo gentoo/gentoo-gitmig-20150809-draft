@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r6.ebuild,v 1.1 2006/03/31 00:55:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r7.ebuild,v 1.1 2006/03/31 03:41:40 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -57,20 +57,15 @@ src_unpack() {
 }
 
 src_install() {
+	dodir ${dir}/{baseq3,missionpack}
 	if use cdinstall ; then
-		dodir ${dir}/{baseq3,missionpack}
-		for pk3 in baseq3/*.pk3 missionpack/*.pk3 ; do
-			dosym ${GAMES_DATADIR}/quake3/${pk3} ${dir}/${pk3}
-		done
 		dosym ${GAMES_DATADIR}/quake3/baseq3/pak0.pk3 ${dir}/baseq3/pak0.pk3
 		use teamarena && dosym ${GAMES_DATADIR}/quake3/missionpack/pak0.pk3 \
 			${dir}/missionpack/pak0.pk3
-	else
-		insinto ${dir}/baseq3
-		doins baseq3/*.pk3 || die "ins baseq3"
-		insinto ${dir}/missionpack
-		doins missionpack/*.pk3 || die "ins missionpack"
 	fi
+	for pk3 in baseq3/*.pk3 missionpack/*.pk3 ; do
+		dosym ${GAMES_DATADIR}/quake3/${pk3} ${dir}/${pk3}
+	done
 
 	insinto ${dir}
 	doins -r Docs pb || die "ins docs/pb"
@@ -89,7 +84,7 @@ src_install() {
 			games_make_wrapper ${PN}-teamarena \
 				"./quake3.x86 +set fs_game missionpack" "${dir}" "${dir}"
 			make_desktop_entry ${PN}-teamarena \
-				"Quake III Team Arena" quake3-bin.xpm
+				"Quake III Team Arena (binary)" quake3-bin.xpm
 		fi
 	fi
 	if use dedicated
