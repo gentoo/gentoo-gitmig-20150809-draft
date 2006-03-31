@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/quake3-urbanterror-3.7.ebuild,v 1.1 2004/08/31 21:31:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/quake3-urbanterror-3.7.ebuild,v 1.2 2006/03/31 21:09:23 wolf31o2 Exp $
 
 MOD_DESC="total transformation realism based MOD"
 MOD_NAME=q3ut3
@@ -24,7 +24,7 @@ SRC_URI="ftp://ftp.edome.net/online/clientit/urbanterror3.zip
 
 LICENSE="freedist"
 SLOT="3"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 src_unpack() {
 	unpack urbanterror3.zip
