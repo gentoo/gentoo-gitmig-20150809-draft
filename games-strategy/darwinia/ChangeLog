@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/darwinia
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/ChangeLog,v 1.1 2005/11/22 00:33:14 wolf31o2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/ChangeLog,v 1.2 2006/03/31 21:59:08 wolf31o2 Exp $
+
+  31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> darwinia-1.3.0.ebuild:
+  Changed nostrip to strip.
 
 *darwinia-1.3.0 (22 Nov 2005)
 
