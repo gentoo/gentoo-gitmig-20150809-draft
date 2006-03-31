@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 31381bf2b0e43170d54f935421efd0a9 ChangeLog 1216
+MD5 e39a37a18adc680c1867ed77e3a34820 ChangeLog 1407
+RMD160 ccf73a1fa5c3ea8a338d85bbf90b0b63b276a718 ChangeLog 1407
+SHA256 b33238fbad2fe22433956c5f26bbb341e53730e12b8307012a87c66234b2ca13 ChangeLog 1407
 MD5 28265cf98171e85a67caa02a23491532 files/digest-kbibtex-0.1.3 66
-MD5 d73b24ac9d7c9901907110465a1d2d3f files/kbibtex-0.1.2-strings-fix.patch 428
-MD5 9226f3c970df369b61e2acca80b0dcfa kbibtex-0.1.3.ebuild 601
+RMD160 d00ced64157799820c75e0abc78a7a01893ba304 files/digest-kbibtex-0.1.3 66
+SHA256 b12f5673fa722b093ce2f43b449b3414af20d9454e1475d4bab77474e57169ae files/digest-kbibtex-0.1.3 66
+MD5 935b0bf61cfabd68d0e67d54686350a5 files/kbibtex-gcc-4.1.patch 405
+RMD160 7636098f7b01e890f6c58fcfd0bd442bc1ae7bba files/kbibtex-gcc-4.1.patch 405
+SHA256 ea44b09cdf7cd9892b59dca7d8502225ac94bd04989ae61a86ee059946da3324 files/kbibtex-gcc-4.1.patch 405
+MD5 b528abe3bad6d752dede0c61bf986b4a kbibtex-0.1.3.ebuild 684
+RMD160 f9e4a9dabdaffdfc05363d744099b27194805495 kbibtex-0.1.3.ebuild 684
+SHA256 fffa87c3f16b18542d96872f625849bfcf2323b8c4e6be2143c3fd40e6b19349 kbibtex-0.1.3.ebuild 684
 MD5 636e395cdc2eb9b72ab00fa7ea45ad0f metadata.xml 408
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzsqSntT9W3vfTuoRAr3DAKCE+n0z2k3FUDCrMfmvOUNdnEbVdgCeIHfg
-9+6wEzADIgjfwcw/ox0gLP8=
-=7G0y
------END PGP SIGNATURE-----
+RMD160 5ef8f5474f5f8f6120ad041015ba55ec8d890ca9 metadata.xml 408
+SHA256 46b1b928281ac18a06115173b246580b95e0cc9724ec7e9a9dfc757925bfb0b6 metadata.xml 408
