@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.8 2006/03/24 22:24:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.9 2006/03/31 21:25:24 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -12,9 +12,8 @@ LICENSE="ut2003"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="dedicated"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
-DEPEND="virtual/libc"
 RDEPEND="dedicated? ( games-server/ut2003-ded )
 	!dedicated? ( virtual/opengl )
 	games-fps/ut2003-data

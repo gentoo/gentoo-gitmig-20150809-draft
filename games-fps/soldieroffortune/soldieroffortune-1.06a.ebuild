@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.12 2005/10/21 17:40:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.13 2006/03/31 21:20:00 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://lokigames/sof/sof-${PV}-cdrom-x86.run"
 LICENSE="LOKI-EULA"
 SLOT="0"
 KEYWORDS="x86"
-RESTRICT="nostrip"
+RESTRICT="strip"
 IUSE=""
 
 DEPEND="virtual/libc
