@@ -1,18 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sysinfo/vdr-sysinfo-0.0.4a.ebuild,v 1.1 2006/03/24 11:43:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sysinfo/vdr-sysinfo-0.0.4a.ebuild,v 1.2 2006/03/31 17:48:53 hd_brummy Exp $
 
-IUSE=""
-
-inherit vdr-plugin eutils
+inherit vdr-plugin
 
 DESCRIPTION="VDR plugin: Shows information over your system (CPU/Memory usage ...)"
 HOMEPAGE="http://kikko77.altervista.org/"
-SRC_URI="http://kikko77.altervista.org/sections/Download/[12]_sysinfo/vdr-${VDRPLUGIN}-${PV}.tgz"
+SRC_URI="http://kikko77.altervista.org/sections/Download/[12]_sysinfo/${P}.tgz"
 
-KEYWORDS="~x86"
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="~x86 ~amd64"
+IUSE=""
 
 DEPEND=">=media-video/vdr-1.3.7"
 
