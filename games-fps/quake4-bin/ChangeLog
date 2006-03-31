@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/quake4-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.12 2006/03/31 00:08:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.13 2006/03/31 00:56:19 wolf31o2 Exp $
+
+*quake4-bin-1.0.6-r1 (31 Mar 2006)
+
+  31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +quake4-bin-1.0.6-r1.ebuild:
+  Made some general code cleanups and closing bug #127934.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   -quake4-bin-1.1.ebuild:
