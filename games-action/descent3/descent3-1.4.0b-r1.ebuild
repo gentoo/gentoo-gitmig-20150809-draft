@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.5 2006/03/20 21:46:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.6 2006/03/31 20:16:49 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://lokigames/${PN}/${PN}-1.4.0a-x86.run
 LICENSE="LOKI-EULA"
 SLOT="0"
 KEYWORDS="amd64 x86"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 DEPEND=""
 RDEPEND="sys-libs/glibc
