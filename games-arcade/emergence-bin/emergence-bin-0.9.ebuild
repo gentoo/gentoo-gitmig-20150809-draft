@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emergence-bin/emergence-bin-0.9.ebuild,v 1.3 2006/01/29 00:00:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emergence-bin/emergence-bin-0.9.ebuild,v 1.4 2006/03/31 20:22:17 wolf31o2 Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ LICENSE="freedist"
 SLOT="0"
 KEYWORDS="-* ~x86"
 IUSE=""
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 RDEPEND=">=sys-libs/zlib-1.2.1
 	>=media-libs/libpng-1.2.5
