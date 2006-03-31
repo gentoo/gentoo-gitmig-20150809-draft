@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/inform-6.30.2.ebuild,v 1.1 2006/03/29 20:17:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/inform-6.30.2.ebuild,v 1.2 2006/03/31 13:01:21 grobian Exp $
 
 inherit versionator
 
@@ -10,7 +10,7 @@ SRC_URI="http://mirror.ifarchive.org/if-archive/infocom/compilers/inform6/source
 
 LICENSE="Inform"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
