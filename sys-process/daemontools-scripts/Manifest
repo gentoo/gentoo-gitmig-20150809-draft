@@ -1,14 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c1273d3368053d6da67951f878736684 ChangeLog 1609
+MD5 49ab8acab8d2c921bf4cfc98788aa8ce ChangeLog 1787
+RMD160 3677803a1ac5f83d567633ea2ed28aad26fa5368 ChangeLog 1787
+SHA256 a4c8ab675d6f9347c37a5dee0259979a6bdf1e0c9caa03c96997f0fc4e7ac4b3 ChangeLog 1787
 MD5 a3d478fd7d207573465dadefe9bc8c49 daemontools-scripts-1.0.2.ebuild 1795
+RMD160 80d61b00c9503636e87c70e3cb3bf449feb55902 daemontools-scripts-1.0.2.ebuild 1795
+SHA256 312e580391beaacb3fa814d00c05e948915012ed63103685ac477013f6cc3f6f daemontools-scripts-1.0.2.ebuild 1795
+MD5 ba6dc852a574a998bb98a57543343d58 daemontools-scripts-1.0.3.ebuild 1807
+RMD160 7e46a2e0a4cf0d6c5e97f79d9f02aedf02a59922 daemontools-scripts-1.0.3.ebuild 1807
+SHA256 90da40127c76c90b38f07a60de3b31c8da17a7e8a8d6131e46d6cdadf7a307b4 daemontools-scripts-1.0.3.ebuild 1807
 MD5 71c7a292909d199a29725e94e98ff148 files/digest-daemontools-scripts-1.0.2 77
+RMD160 bd23f1a96cbd371e5cdb62534e297f94692abdfe files/digest-daemontools-scripts-1.0.2 77
+SHA256 659afd81c1edb1e869236177456ba599114e2c2ff20a10c1ec0ee9e7ba32bc9c files/digest-daemontools-scripts-1.0.2 77
+MD5 f1bb46336f8db9bc07b8395bb2827a6f files/digest-daemontools-scripts-1.0.3 274
+RMD160 436c3d583f188011b5b9de598dc66e6d4291fc29 files/digest-daemontools-scripts-1.0.3 274
+SHA256 623f8d2b29a4c3c1240c14936ff41073d24e064d129b680b6a242422a62def5d files/digest-daemontools-scripts-1.0.3 274
 MD5 7b74ebc39d0a3ddfede1e6b4fe37dacc metadata.xml 358
+RMD160 3c801c757537e0588a43053e99fbe29e90865986 metadata.xml 358
+SHA256 0637d557e904994f965e5f4a31789f689c359ea50eb48df3dcce8567975b4d08 metadata.xml 358
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFDtOSlGSBEIeh4AEYRAkvCAJ9cGjfvn1Vpt2Dk/hRfuEE1B44frQCfbwt/
-KkquboEovsum7NYxZa+H494=
-=QB/Z
+iD8DBQFELTRYGSBEIeh4AEYRAsU8AJ9hmGLWSTvhMG//BWtukN5mZ0w7yQCfXBhH
+TalPv6W4Yi6AopcSQT/TBeM=
+=Pv4S
 -----END PGP SIGNATURE-----
