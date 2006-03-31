@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.23 2005/06/04 02:47:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.24 2006/03/31 14:14:02 blubb Exp $
 
-inherit gnome.org libtool gnuconfig eutils
+inherit gnome.org libtool gnuconfig eutils multilib
 
 DESCRIPTION="A set of language and system independent CORBA interfaces"
 HOMEPAGE="http://www.gnome.org/"
@@ -26,6 +26,8 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-gcc4.patch
+	sed -i -e "s:libdir=@prefix@/lib:libdir=@prefix@/$(get_libdir):" \
+		libefs/libefs.pc.in
 }
 
 src_compile() {
