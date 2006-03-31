@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/doom3-chextrek-0.5_beta.ebuild,v 1.2 2006/03/24 21:52:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/doom3-chextrek-0.5_beta.ebuild,v 1.3 2006/03/31 20:39:28 wolf31o2 Exp $
 
 inherit versionator games
 
@@ -18,7 +18,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RESTRICT="nomirror nostrip"
+RESTRICT="mirror strip"
 
 DEPEND="games-fps/doom3
 	app-arch/unzip"

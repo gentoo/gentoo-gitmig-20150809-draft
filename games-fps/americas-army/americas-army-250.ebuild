@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.8 2006/03/21 14:56:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.9 2006/03/31 20:37:21 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -17,7 +17,7 @@ SRC_URI="http://treefort.icculus.org/armyops/${MY_P}
 LICENSE="Army-EULA"
 SLOT="0"
 KEYWORDS="amd64 x86"
-RESTRICT="nostrip nomirror"
+RESTRICT="strip mirror"
 
 IUSE="opengl dedicated"
 
