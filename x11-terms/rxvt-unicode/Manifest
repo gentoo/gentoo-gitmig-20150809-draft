@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6ec75dc2d22c51553b0d1927173099e3 ChangeLog 11122
-RMD160 d5341599c6c7ee280512e8e3f5cde66e6a75e926 ChangeLog 11122
-SHA256 7cab608cfed0d3d46a37f66bed27f4a9b827bcd2256a7e4335038bac49ef11ed ChangeLog 11122
+MD5 5e26d966ea963bacf37ba96be672db54 ChangeLog 11297
+RMD160 074618cd7067baefeb768c1402e27155428e0573 ChangeLog 11297
+SHA256 6b3579934e415a15d2641941389647cac20c7f746978fffa35c34d1ac0129a6b ChangeLog 11297
 MD5 ff186f769724f65b45dcedf2b9e7c9a3 files/digest-rxvt-unicode-3.0 69
 RMD160 f883534b49e9d7adac4e4501bb31cf0ab118d65a files/digest-rxvt-unicode-3.0 69
 SHA256 43aee00b8d8aa9258723409449e1bf57a400dde2535223d65fad85e538b35301 files/digest-rxvt-unicode-3.0 69
@@ -22,9 +22,9 @@ SHA256 042d5dc62b1f32916c43ed5ffc04f7780e2c371e110df21b23c1d630b09620b3 files/di
 MD5 ef0128bf40e8bab59b43618810ac0109 files/digest-rxvt-unicode-7.1 69
 RMD160 bdaf70bd5fdf4953d3fe6099e26543d60731f975 files/digest-rxvt-unicode-7.1 69
 SHA256 e948878fea0092d9f3a73d5e4fe306eaa48b3a4dc74ae033232cc4cedae5c653 files/digest-rxvt-unicode-7.1 69
-MD5 9832649d7101430028f13bbd85abe3a7 files/digest-rxvt-unicode-7.7 253
-RMD160 f99320e24dd3214e10c71f8633c0e7d3cf3df855 files/digest-rxvt-unicode-7.7 253
-SHA256 9135aa40a90e30be6c88719a3e042338ba6b2ab82192637234843a7ca9ce322e files/digest-rxvt-unicode-7.7 253
+MD5 9832649d7101430028f13bbd85abe3a7 files/digest-rxvt-unicode-7.7-r1 253
+RMD160 f99320e24dd3214e10c71f8633c0e7d3cf3df855 files/digest-rxvt-unicode-7.7-r1 253
+SHA256 9135aa40a90e30be6c88719a3e042338ba6b2ab82192637234843a7ca9ce322e files/digest-rxvt-unicode-7.7-r1 253
 MD5 27f475fce3946d48a23f36e0279a978c files/rxvt-unicode-2.3-font-fix.diff 431
 RMD160 1a5ea32112dd166e76905133c29672628ff99b9d files/rxvt-unicode-2.3-font-fix.diff 431
 SHA256 7274d9db13b42beabb2c438dc41868da62076d1dbd5b0db1cc8b3b2ea42d1c14 files/rxvt-unicode-2.3-font-fix.diff 431
@@ -55,13 +55,13 @@ SHA256 203701bf0f8c1225dac1dd62927fe8361c1166b2664692a02324b418d1214d8d rxvt-uni
 MD5 0cbedb63683ebc560e23b3f904bce7c6 rxvt-unicode-7.1.ebuild 1629
 RMD160 63c9865295212068f73ad496951bd29523e30463 rxvt-unicode-7.1.ebuild 1629
 SHA256 194699296b6e42b9287e8f2a575da8ff0655efdc0481ed55fdc41f498b9f3c8a rxvt-unicode-7.1.ebuild 1629
-MD5 7a2edc1ae9c7476e2b2a3be1f7c0bb70 rxvt-unicode-7.7.ebuild 1620
-RMD160 7ac51193e148469f7fd8bac7c6b7e68ea468fd09 rxvt-unicode-7.7.ebuild 1620
-SHA256 7f92c77ac11a62a262a28af407053745237e4c45396b24ff8fe0ead1ba878798 rxvt-unicode-7.7.ebuild 1620
+MD5 2235ce0b2da97bdcfd5aa9e1eceaf288 rxvt-unicode-7.7-r1.ebuild 1632
+RMD160 c9f1ad25edd3b97bedd1212ebf8886eb69418f74 rxvt-unicode-7.7-r1.ebuild 1632
+SHA256 1f3dfe30498d50148f597072982892bf1005ac80cc06f52f3d6a24b1c2ab50e9 rxvt-unicode-7.7-r1.ebuild 1632
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFELFaN2iXjgNjfe5sRAooyAKCo4QaXptXaKcsWwQjPPzflbutcywCgoQq1
-EgxCGKr6RLSwQujEpYV1frU=
-=imaC
+iD8DBQFELYXh2iXjgNjfe5sRAmN1AKCirw9jckRNkFOdznXAr1LucEU2SACgmOS7
+2n1qT4+dGfxFmgqfpUSd04A=
+=aHV6
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-7.7.ebuild,v 1.1 2006/03/30 22:12:51 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-7.7-r1.ebuild,v 1.1 2006/03/31 19:44:01 exg Exp $
 
 inherit flag-o-matic
 
@@ -52,7 +52,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--enable-everything \
-		$(use_enable xft) \
+		$(use_enable truetype xft) \
 		$(use_enable perl) \
 		--disable-text-blink \
 		--disable-iso14755 \
