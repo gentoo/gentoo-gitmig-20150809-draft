@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gnomeboyadvance
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/ChangeLog,v 1.6 2005/08/28 05:01:01 mr_bones_ Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/ChangeLog,v 1.7 2006/03/31 20:31:54 wolf31o2 Exp $
+
+  31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  gnomeboyadvance-0.1.ebuild:
+  Changing nomirror to mirror.
 
   28 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
   gnomeboyadvance-0.1.ebuild:
