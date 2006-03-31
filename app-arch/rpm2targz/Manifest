@@ -1,23 +1,49 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1df2530bbcc73c0990cbb73a8b85048b ChangeLog 5020
+MD5 7b6fb9345c328126bb0037b3256c80e9 ChangeLog 5126
+RMD160 14e223550e8616d11f8b38edbad2287112f9d951 ChangeLog 5126
+SHA256 c9de28cab44317282115d0ed1fd0c44ec13f9c6c3b895b9fb8d5e19fc9c812e6 ChangeLog 5126
 MD5 d0f2d521642a49ec038e441268ab6480 files/digest-rpm2targz-9.0-r2 63
+RMD160 eb1c4496e7c04b7c6eaaafaa4fc11a78d9fbc655 files/digest-rpm2targz-9.0-r2 63
+SHA256 d9cea39063cb6eadaa99f713c6506335e460899a43bde841eaaeda835c0d1683 files/digest-rpm2targz-9.0-r2 63
 MD5 d0f2d521642a49ec038e441268ab6480 files/digest-rpm2targz-9.0-r3 63
+RMD160 eb1c4496e7c04b7c6eaaafaa4fc11a78d9fbc655 files/digest-rpm2targz-9.0-r3 63
+SHA256 d9cea39063cb6eadaa99f713c6506335e460899a43bde841eaaeda835c0d1683 files/digest-rpm2targz-9.0-r3 63
 MD5 d0f2d521642a49ec038e441268ab6480 files/digest-rpm2targz-9.0-r4 63
+RMD160 eb1c4496e7c04b7c6eaaafaa4fc11a78d9fbc655 files/digest-rpm2targz-9.0-r4 63
+SHA256 d9cea39063cb6eadaa99f713c6506335e460899a43bde841eaaeda835c0d1683 files/digest-rpm2targz-9.0-r4 63
 MD5 6103109c4b978649b2b06ee1c2ddbdb7 files/rpm2targz-9.0-bzip2.patch 605
+RMD160 d3ebc6557dd20d75b3940ebf02afa6ee243a1685 files/rpm2targz-9.0-bzip2.patch 605
+SHA256 1825c52ec046e114d2d07ee9f66a40eca6123a9ad1b106f1b48222984223f6dd files/rpm2targz-9.0-bzip2.patch 605
 MD5 96b33b5b51d34b9764ed9c50ffac18d6 files/rpm2targz-9.0-bzip2_rpm2targz.patch 2100
+RMD160 f01f00aa748596aa9ac7e4264e7e2adb104171bc files/rpm2targz-9.0-bzip2_rpm2targz.patch 2100
+SHA256 e590bafc199dfa983c650ad5c5bde70f6997c9818b4c3cc1290cf177464adc7f files/rpm2targz-9.0-bzip2_rpm2targz.patch 2100
 MD5 a850046e92cebae159a1a554cdab3f91 files/rpm2targz-9.0-gentoo.patch 554
+RMD160 b71894d37dafb83a42ad9acd48042c5635bba28b files/rpm2targz-9.0-gentoo.patch 554
+SHA256 4c97ec99ef96c8e2b200fac3f6ee634f86fee95ef591928ab6ff001b78c95b27 files/rpm2targz-9.0-gentoo.patch 554
 MD5 2d6452f47ccae7e9748ddc16ee8e3b35 files/rpm2targz-9.0-rpm2tar.patch 1270
+RMD160 803c05b8e8d299ece2939b780b855bdf47b04eb1 files/rpm2targz-9.0-rpm2tar.patch 1270
+SHA256 5a06164b2ed91c74e96d632b7ec7d3572a2bc98887c36cbf8fd3e2fe6bd08d07 files/rpm2targz-9.0-rpm2tar.patch 1270
 MD5 8c7fec2e5a9899ecf4d30f0dc15dca71 files/rpm2targz-9.0-secure_temp_handling.patch 3552
+RMD160 94d538194546215e95990afd392adf9f4dfd9c61 files/rpm2targz-9.0-secure_temp_handling.patch 3552
+SHA256 a4c13fac2f42e5d5f418a8e51b17c2f33eaff1991814b1b0277bf1cc101abace files/rpm2targz-9.0-secure_temp_handling.patch 3552
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+RMD160 fd2bbaf1c19b4ad2d876f02846608907516e2403 metadata.xml 219
+SHA256 f39a99f0777bf9eac2d5a444a392d3b93da834a6de01613747bad25c84637138 metadata.xml 219
 MD5 448bca5e5f0e53872f20fc4464e9e0aa rpm2targz-9.0-r2.ebuild 1203
+RMD160 bf4ccfac72719ceed8862e5f7ffa8a338d0f83cc rpm2targz-9.0-r2.ebuild 1203
+SHA256 96e1141502c7004c460874915155522eba96040c2f04d5f4147f05897782fae8 rpm2targz-9.0-r2.ebuild 1203
 MD5 6517f69e4f73807f5dfe9d949d73b4e8 rpm2targz-9.0-r3.ebuild 1287
-MD5 49f4f96db1d4300875f1ceb7f32f2c4f rpm2targz-9.0-r4.ebuild 1429
+RMD160 448d2b1b6ef138f444a75c24b1670cdc71b0adad rpm2targz-9.0-r3.ebuild 1287
+SHA256 292947e4576ac6737f5fed43224f41cd5413c83829d257b6828602bafbf5d8ad rpm2targz-9.0-r3.ebuild 1287
+MD5 d6d3b27b44e0bb923c4698509820e3bf rpm2targz-9.0-r4.ebuild 1439
+RMD160 d5ad418d94b848e320fc956fafdbf52fcc96972f rpm2targz-9.0-r4.ebuild 1439
+SHA256 9949538b6fd3d21d0aba858282f4549a2e86f32f2311dc3d52784edfedb21140 rpm2targz-9.0-r4.ebuild 1439
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDa/QqgIKl8Uu19MoRAgjaAJ0Xu/zZwG1hRzqvOAFIcBJQh08dHgCfYUka
-nYNU+Fm480MOkAJrlRjyRvM=
-=IIDO
+iD8DBQFELHFvAiZjviIA2XgRAghzAJ9J23XcmCsloIibljxQaIrjy4Nk9gCdF1fQ
+DqnbdW2P/Gg5nZFIrZaRfkI=
+=/YvC
 -----END PGP SIGNATURE-----
