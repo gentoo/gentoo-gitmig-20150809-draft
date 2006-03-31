@@ -23,6 +23,12 @@
         automount: automount support (previously default)
         syslog: log to syslog daemon (previously default)
 
+3.0.22:
+	*sql backend: they were experimental, and now are marked as "deprecated"
+		upstream
+	CVE-2006-1059 security fix: 3.0.21* shipped with a bug in the debug
+		functions of winbind (debug>=5 reveals secret ids in logs)
+
 General:
     If you experience client locks in file transfers _only_, try the parameter
              use sendfile = no (man smb.conf(5), man sendfile(2))
