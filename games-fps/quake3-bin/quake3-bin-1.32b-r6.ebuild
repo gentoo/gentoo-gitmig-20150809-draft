@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r5.ebuild,v 1.1 2006/03/27 18:43:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r6.ebuild,v 1.1 2006/03/31 00:55:35 wolf31o2 Exp $
 
 inherit eutils games
 
-DESCRIPTION="Quake III Arena - 3rd installment of the classic id 3D first-person shooter"
+DESCRIPTION="3rd installment of the classic id 3D first-person shooter"
 HOMEPAGE="http://www.idsoftware.com/"
 SRC_URI="mirror://idsoftware/quake3/linux/linuxq3apoint-${PV}-3.x86.run"
 
@@ -14,28 +14,28 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE="cdinstall dedicated opengl teamarena"
 RESTRICT="nostrip"
 
-RDEPEND="sys-libs/glibc
-	opengl? (
-		virtual/opengl
-		x86? (
-			|| (
-				(
-					x11-libs/libXext
-					x11-libs/libX11
-					x11-libs/libXau
-					x11-libs/libXdmcp )
-				virtual/x11 ) ) )
-	dedicated? (
-		app-misc/screen )
+UIDEPEND="virtual/opengl
+	x86? (
+		|| (
+			(
+				x11-libs/libXext
+				x11-libs/libX11
+				x11-libs/libXau
+				x11-libs/libXdmcp )
+			virtual/x11 ) )
 	amd64? (
-		app-emulation/emul-linux-x86-baselibs
-		opengl? (
-			app-emulation/emul-linux-x86-xlibs
-			|| (
-				>=media-video/nvidia-glx-1.0.6629-r3
-				>=x11-drivers/ati-drivers-8.8.25-r1 ) ) )
+		app-emulation/emul-linux-x86-xlibs
+		|| (
+			>=media-video/nvidia-glx-1.0.6629-r3
+			>=x11-drivers/ati-drivers-8.8.25-r1 ) )"
+
+RDEPEND="sys-libs/glibc
+	dedicated? ( app-misc/screen )
+	amd64? ( app-emulation/emul-linux-x86-baselibs )
+	opengl? ( ${UIDEPEND} )
 	games-fps/quake3-data
-	teamarena? ( games-fps/quake3-teamarena )"
+	teamarena? ( games-fps/quake3-teamarena )
+	!dedicated? ( !opengl? ( ${UIDEPEND} ) )"
 
 S=${WORKDIR}
 
@@ -79,7 +79,19 @@ src_install() {
 	insinto ${dir}
 	doexe bin/Linux/x86/quake3.x86 || die "doexe"
 	doins quake3.xpm README* Q3A_EULA.txt
-	games_make_wrapper quake3-bin ./quake3.x86 "${dir}" "${dir}"
+	if use opengl || ! use dedicated
+	then
+		games_make_wrapper ${PN} ./quake3.x86 "${dir}" "${dir}"
+		newicon quake3.xpm ${PN}.xpm
+		make_desktop_entry ${PN} "Quake III Arena (binary)" ${PN}.xpm
+		if use teamarena
+		then
+			games_make_wrapper ${PN}-teamarena \
+				"./quake3.x86 +set fs_game missionpack" "${dir}" "${dir}"
+			make_desktop_entry ${PN}-teamarena \
+				"Quake III Team Arena" quake3-bin.xpm
+		fi
+	fi
 	if use dedicated
 	then
 		doexe bin/Linux/x86/q3ded || die "doexe q3ded"
@@ -87,10 +99,6 @@ src_install() {
 		newinitd "${FILESDIR}"/q3ded.rc q3ded
 		newconfd "${FILESDIR}"/q3ded.conf.d q3ded
 	fi
-	newicon quake3.xpm quake3-bin.xpm
-	make_desktop_entry quake3-bin "Quake III Arena (binary)" quake3-bin.xpm
-	use teamarena && make_desktop_entry "quake3-bin +set fs_game missionpack" \
-		"Quake III Team	Arena" quake3-bin.xpm
 
 	prepgamesdirs
 }
