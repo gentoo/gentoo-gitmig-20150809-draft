@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.4 2006/03/27 13:59:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.5 2006/03/31 22:09:39 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -16,10 +16,10 @@ SRC_URI="x86? (
 		http://www.shrapnelgames.com/downloads/manual_addenda.pdf )
 	mirror://gentoo/${PN}.png"
 
-RESTRICT="nostrip"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
+RESTRICT="strip"
 
 # I am not sure what license applies to Dominions II and I couldn't find
 # further information on their homepage or on the game CD :(

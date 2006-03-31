@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.8 2006/03/27 14:01:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.9 2006/03/31 22:11:29 wolf31o2 Exp $
 
 # 	[x] Base Install Required (+4 MB) 
 #	[x] Scenarios (+7 MB)
@@ -11,10 +11,9 @@
 #	Total 341 MB
 
 inherit games
-IUSE="nocd maps music sounds videos"
+
 DESCRIPTION="Heroes of Might and Magic III : The Restoration of Erathia - turn-based 2-D medieval combat"
 HOMEPAGE="http://www.lokigames.com/products/heroes3/"
-KEYWORDS="x86"
 
 # Since I do not have a PPC machine to test with, I will leave the PPC stuff in
 # here so someone else can stabilize loki_setupdb and loki_patch for PPC and
@@ -24,7 +23,9 @@ SRC_URI="x86? ( mirror://lokigames/${PN}/${P}-cdrom-x86.run )
 
 LICENSE="LOKI-EULA"
 SLOT="0"
-RESTRICT="nostrip"
+IUSE="nocd maps music sounds videos"
+KEYWORDS="x86"
+RESTRICT="strip"
 
 DEPEND="virtual/libc
 	games-util/loki_patch"

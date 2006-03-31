@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.2 2005/10/21 18:16:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.3 2006/03/31 22:11:53 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI=" http://demos.linuxgamepublishing.com/mindrover/${MY_P}"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 IUSE=""
 
