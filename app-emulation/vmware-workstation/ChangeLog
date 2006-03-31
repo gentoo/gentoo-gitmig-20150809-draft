@@ -1,6 +1,21 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.117 2006/03/20 19:37:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.118 2006/03/31 00:23:31 wolf31o2 Exp $
+
+*vmware-workstation-5.5.1.19175-r2 (31 Mar 2006)
+*vmware-workstation-4.5.3.19414-r2 (31 Mar 2006)
+*vmware-workstation-3.2.1.2242-r9 (31 Mar 2006)
+
+  31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/vmware-workstation-5.5.1.19175-config3.patch,
+  -vmware-workstation-3.2.1.2242-r8.ebuild,
+  +vmware-workstation-3.2.1.2242-r9.ebuild,
+  -vmware-workstation-4.5.3.19414-r1.ebuild,
+  +vmware-workstation-4.5.3.19414-r2.ebuild,
+  -vmware-workstation-5.5.1.19175-r1.ebuild,
+  +vmware-workstation-5.5.1.19175-r2.ebuild:
+  Added patch for vmware-config.pl to allow for 2G/2G from 2.6.16 and closing
+  bug #127661 and bug #127023.
 
 *vmware-workstation-5.5.1.19175-r1 (20 Mar 2006)
 *vmware-workstation-4.5.3.19414-r1 (20 Mar 2006)
