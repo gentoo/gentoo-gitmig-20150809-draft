@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.4 2006/03/30 03:32:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.5 2006/03/31 14:38:57 caleb Exp $
+
+*libxml-0.3.6 (31 Mar 2006)
+
+  31 Mar 2006; Caleb Tennis <caleb@gentoo.org> +libxml-0.3.6.ebuild:
+  Version bump and move to gems
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> libxml-0.3.4.ebuild:
   Mark 0.3.4 ~ia64
