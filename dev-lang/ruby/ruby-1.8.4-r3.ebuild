@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4.20060226.ebuild,v 1.2 2006/03/31 18:48:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.1 2006/03/31 18:48:18 caleb Exp $
 
 ONIGURUMA="onigd2_5_4"
 
-inherit flag-o-matic alternatives eutils gnuconfig multilib
+inherit flag-o-matic alternatives eutils gnuconfig multilib autotools
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
@@ -33,7 +33,7 @@ DEPEND="sys-devel/autoconf
 	${RDEPEND}"
 PROVIDE="virtual/ruby"
 
-S=${WORKDIR}/ruby
+S=${WORKDIR}/${P%_*}
 
 src_unpack() {
 	unpack ${A}
@@ -43,7 +43,7 @@ src_unpack() {
 		pushd ${WORKDIR}/oniguruma
 #		epatch ${FILESDIR}/oniguruma-2.3.1-gentoo.patch
 		econf --with-rubydir=${S} || die "econf failed"
-		make ${SLOT/./}
+		make ${PV/./}
 		popd
 	fi
 
@@ -52,9 +52,14 @@ src_unpack() {
 
 	cd ${S}
 
+	epatch ${FILESDIR}/ruby-1.8.4-glibc24-eaccess.diff
+	epatch ${FILESDIR}/ruby-1.8.4-yaml.diff
+
 	# Fix a hardcoded lib path in configure script
 	sed -i -e "s:\(RUBY_LIB_PREFIX=\"\${prefix}/\)lib:\1$(get_libdir):" \
 		configure.in || die "sed failed"
+
+	eautoreconf
 }
 
 src_compile() {
