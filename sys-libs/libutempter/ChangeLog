@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libutempter
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/ChangeLog,v 1.6 2005/12/23 19:52:51 hansmi Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/ChangeLog,v 1.7 2006/03/31 00:07:23 flameeyes Exp $
+
+  31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libutempter-1.1.2.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   23 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   libutempter-1.1.2.1.ebuild:
