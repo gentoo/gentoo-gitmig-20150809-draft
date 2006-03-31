@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.66.ebuild,v 1.2 2005/12/07 22:21:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.66.ebuild,v 1.3 2006/03/31 21:47:12 wolf31o2 Exp $
 
 inherit games
 
@@ -21,7 +21,7 @@ LICENSE="NWN-EULA"
 SLOT="0"
 KEYWORDS="-* ~amd64 x86"
 IUSE=""
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 DEPEND="app-arch/unzip"
 RDEPEND="x86? (
