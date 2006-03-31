@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a4fe7821b8ff2ac5b7d8f8727ac1123 ChangeLog 2123
-RMD160 c27f78ec423f18580f38de499952ee396615821d ChangeLog 2123
-SHA256 7a77d09a7ccce0a64fd3b803d0077a49e1027a233c1af48378f6181c4b6ad920 ChangeLog 2123
+MD5 5d73d882da607273f884df6d83cad949 ChangeLog 2227
+RMD160 2acc51747d1c2be89683263239a665d7adfa7a45 ChangeLog 2227
+SHA256 17729ede0cc69a0deea45ad8ad569486bce81a2f054980a750f6142f86fda3b1 ChangeLog 2227
 MD5 71dfacad52bef90b36fc702ad5e9924a files/digest-mkfontdir-1.0.1 247
 RMD160 52d928a8e2e3d273fdbaa7ac0adaa2640fc0c12f files/digest-mkfontdir-1.0.1 247
 SHA256 0d977544bc4aaf8a3cdb91d1cadfc5f148a0f1ea98f098ce67d2a0bc5470e57a files/digest-mkfontdir-1.0.1 247
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 29dbb353a9cb7a27d0860fd702d31338 mkfontdir-1.0.1.ebuild 484
-RMD160 7abc9e946aef1cadb31d8266705304bc14964ce2 mkfontdir-1.0.1.ebuild 484
-SHA256 20ccb4058349cba3db8546b475a20ecba4eddaeecd1dfe6478e091822e5736d8 mkfontdir-1.0.1.ebuild 484
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEEDXxJrHF4yAQTrARAhjbAKCZDnA/jjoogfZ9DvdwOty0f24Q9wCfU/AF
-Zwhim+q4TXF5957Ocxu34n8=
-=e1ap
------END PGP SIGNATURE-----
+MD5 26aa7526cddd530a1d5853e185a21ca2 mkfontdir-1.0.1.ebuild 495
+RMD160 f98d366d8394d7ac09cb0e9fd16ffb84102c686e mkfontdir-1.0.1.ebuild 495
+SHA256 03cd2e8184e67b2136fd7e0f5cb578bfac5aca97fe0b707c7b328b1d2768d092 mkfontdir-1.0.1.ebuild 495
