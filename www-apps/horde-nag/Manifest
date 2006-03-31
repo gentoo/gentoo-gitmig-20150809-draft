@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0bc615077b57fde653f6987040f9ec65 ChangeLog 2339
+MD5 02a7da9adc6c36fc45aa6cd246493e72 ChangeLog 2448
 MD5 66abde609e86dcbe7c35aab0cbb19ac7 files/digest-horde-nag-1.1.3 61
 MD5 f7471181ee592d117fa2a796aadc49e6 files/digest-horde-nag-2.0.4 65
 MD5 0ff9d76cfb4e569371f0c823d9e51ec7 files/digest-horde-nag-2.1 235
 MD5 351685ba89f1629a6beceb1465731fea horde-nag-1.1.3.ebuild 434
 MD5 ba63b6965984ec9953642fb1f2145a55 horde-nag-2.0.4.ebuild 459
-MD5 1c465470b0453be9d87605eb5566603e horde-nag-2.1.ebuild 455
+MD5 9e821f07dece01641a4f1edda7c430d3 horde-nag-2.1.ebuild 453
 MD5 6d4c399f10b562f26c52f03f47275f66 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEKXQXKRy60XGEcJIRAgq1AJ0f6gF23SrQlkrMdZYyUiR4F4uD8QCcDxUI
-WBFnWpWKJpnkEkH6qzezSgY=
-=npP9
------END PGP SIGNATURE-----
