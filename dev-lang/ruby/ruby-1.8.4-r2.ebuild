@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r2.ebuild,v 1.1 2006/03/21 13:33:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r2.ebuild,v 1.2 2006/03/31 14:42:03 caleb Exp $
 
-ONIGURUMA="onigd2_5_0"
+ONIGURUMA="onigd2_5_4"
 
 inherit flag-o-matic alternatives eutils gnuconfig multilib autotools
 
@@ -41,9 +41,9 @@ src_unpack() {
 	if use cjk ; then
 		einfo "Applying ${ONIGURUMA}"
 		pushd ${WORKDIR}/oniguruma
-		epatch ${FILESDIR}/oniguruma-2.3.1-gentoo.patch
+#		epatch ${FILESDIR}/oniguruma-2.3.1-gentoo.patch
 		econf --with-rubydir=${S} || die "econf failed"
-		make ${SLOT/./}
+		make ${PV/./}
 		popd
 	fi
 
