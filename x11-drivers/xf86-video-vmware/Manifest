@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 49ea39f49f45dfbe6b3ab1f3e37c8cd2 ChangeLog 2328
 RMD160 363a68803b3bc6b586819df8debfc0b728927a8f ChangeLog 2328
 SHA256 3becf51acfb143ecf60831c592e3fc97c7b8b61ed37d314b01c1d65388443fec ChangeLog 2328
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 8ef20ab32ad7d7e3759353d2858d77ed xf86-video-vmware-10.12.0.0.ebuild 567
 RMD160 533aa3d51329ca5c859cbf62e21b900c15766bbc xf86-video-vmware-10.12.0.0.ebuild 567
 SHA256 f78554afb168f284930e426ff41c6ade5c82b023cb5fbc5fcca1bb8dbe55d9f4 xf86-video-vmware-10.12.0.0.ebuild 567
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELY3NAiZjviIA2XgRAogMAKDuMFSNDTZnHcIr8PfimLSG+eppAACdG33x
+HTqrj59/UpTIN3qbazSOMls=
+=VTfo
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f2a5cfbd7e02b7372de5f131cf4c7e92 ChangeLog 2700
 RMD160 12bfb9dc6793bccafa78dafcf24bb616a3f9d6b1 ChangeLog 2700
 SHA256 a59e3c09d602abb23bbf01a1b15a777e0cdfd6e40f6f16613e41b048251a2494 ChangeLog 2700
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 d50d3704f18ba0b20360fd5f373b7186 xf86-input-keyboard-1.0.1.3.ebuild 607
 RMD160 e5ed9490ead6b33291566d61a53cb909e9020346 xf86-input-keyboard-1.0.1.3.ebuild 607
 SHA256 898c5dbbd88097a4b8c1265ac620bb54bae1febf10de50758387a915909925ca xf86-input-keyboard-1.0.1.3.ebuild 607
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELY5KAiZjviIA2XgRArL/AJ9AoduVj70vCvWN2DRBAee3VYaZGACfcptk
+gXMWxy0+VYfA9wl8+xwOC3I=
+=oj6h
+-----END PGP SIGNATURE-----
