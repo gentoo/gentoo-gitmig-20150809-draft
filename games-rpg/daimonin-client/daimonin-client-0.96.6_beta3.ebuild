@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/daimonin-client-0.96.6_beta3.ebuild,v 1.5 2006/03/24 19:02:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/daimonin-client-0.96.6_beta3.ebuild,v 1.6 2006/03/31 21:26:58 tupone Exp $
 
 inherit eutils flag-o-matic games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/daimonin/daimonin_client-BETA3-${MY_PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="X"
+IUSE=""
 
 DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
