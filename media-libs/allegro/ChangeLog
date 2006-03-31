@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.47 2006/01/13 22:06:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.48 2006/03/31 21:15:34 tupone Exp $
+
+*allegro-4.2.0-r1 (31 Mar 2006)
+
+  31 Mar 2006; <Tupone@gentoo.org> allegro-4.0.3.ebuild,
+  allegro-4.1.14.ebuild, allegro-4.1.18.ebuild, -allegro-4.2.0.ebuild,
+  +allegro-4.2.0-r1.ebuild:
+  Modular X dep fixes for all but last ebuild
+  4.2.0 now default to use shared, even when USE="static" from
+  Bug #111896 - David Wang
 
   13 Jan 2006; Stefan Schweizer <genstef@gentoo.org> allegro-4.2.0.ebuild:
   Add modular depends

@@ -1,12 +1,46 @@
-MD5 b5fc3f7471ebd66ab84a388c248631c4 ChangeLog 6049
-MD5 364f2f88ed70d3d2c0aa266841da8ccd allegro-4.0.3.ebuild 2176
-MD5 5e224a9b7ff1f816ab68eb06fa1eb087 allegro-4.1.14.ebuild 2031
-MD5 f45bdbfa769efb3649f3af27968bfb84 allegro-4.1.18.ebuild 2279
-MD5 f62c9bb022e04be2245437548f4e3dba allegro-4.2.0.ebuild 2625
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8f42427a8b47cbe81d842c107eb38d3e ChangeLog 6374
+RMD160 44da1884c8439796765655a05d109f59a239fc38 ChangeLog 6374
+SHA256 9a780c66fed2d22529e959f86a6924fc99aa99f48a5f81d33a3cc4ad1813dd49 ChangeLog 6374
+MD5 945c19cdbd668a5fb2c4bacb59d7d2b4 allegro-4.0.3.ebuild 2375
+RMD160 e9d7d30effde15db77c64ace87e577843e918252 allegro-4.0.3.ebuild 2375
+SHA256 03040704acec735b7b4150a7496bd4a2e3b4857f60c7ee83f450a075c1541449 allegro-4.0.3.ebuild 2375
+MD5 35f1dfbac483f5fe216c0d8f047e18f9 allegro-4.1.14.ebuild 2230
+RMD160 c70f8713179773e705ee8532867b3e17e1a12156 allegro-4.1.14.ebuild 2230
+SHA256 63c980a56f9d2f37fae3401878599ff4578fabcc99fc3cacae7c1439a36de79a allegro-4.1.14.ebuild 2230
+MD5 1222cd4ebc3aa38ba52266fb25787ce8 allegro-4.1.18.ebuild 2480
+RMD160 7a52504344357c99fa08feb5b41f17709ca45f26 allegro-4.1.18.ebuild 2480
+SHA256 03ac83d5709b79891616a0a38eafc73f94bfedcdc638e780357c243d0a22ecd4 allegro-4.1.18.ebuild 2480
+MD5 64ef5a58ff1004bf96629542ba94a9d3 allegro-4.2.0-r1.ebuild 2591
+RMD160 0ca6303cf67c438cf3f72842112c07a5640b7782 allegro-4.2.0-r1.ebuild 2591
+SHA256 94cb5928432bd86ceb492f65a09a2fca009a92ebe68686e8e79d440d82961611 allegro-4.2.0-r1.ebuild 2591
 MD5 183ff716610d14fddd546ed17fea27c8 files/allegro-4.1.18-gcc4.patch 705
+RMD160 1729db5d75acc244074cba643ac84fecfee05c3f files/allegro-4.1.18-gcc4.patch 705
+SHA256 86d71b0567201c35ab10e3521cb92a4e5782a9e0302159002be683909596da9e files/allegro-4.1.18-gcc4.patch 705
 MD5 80085d45008c152850633d5746809bd0 files/allegro-4.1.18-m4.patch 468
-MD5 9f28e5d796c572eb801998504cf84fbb files/digest-allegro-4.0.3 66
-MD5 cbde62e7be820f69c7c202d3ff4ac241 files/digest-allegro-4.1.14 67
-MD5 2f5e0d90784068cfc9473e07a4eb1b7f files/digest-allegro-4.1.18 67
-MD5 537878626a9f78b8b89876b308b3ecdc files/digest-allegro-4.2.0 66
+RMD160 3aa877cc8759890c46ea4deca9d454a9177df5ed files/allegro-4.1.18-m4.patch 468
+SHA256 8f747d187f8e72ac79a7605279890eb7b39c631b007bc3f178af6ec011d53729 files/allegro-4.1.18-m4.patch 468
+MD5 5b8917694bab160e413754d1d7e1fd99 files/digest-allegro-4.0.3 244
+RMD160 e80fe3b653ae68107f77f38942d8ed54e8867a70 files/digest-allegro-4.0.3 244
+SHA256 4701348f793595f25b22893d5ce0d0cb4bed25b286cdd668d21fd09b632e2978 files/digest-allegro-4.0.3 244
+MD5 839c3045ec079e1039f9669c1dcb8044 files/digest-allegro-4.1.14 247
+RMD160 ab790244155c1723d7fa0c11079f4704a3d63ad9 files/digest-allegro-4.1.14 247
+SHA256 910866157bc41dd88e0c9d4f97cfc98af336ca1d9c028818c04b005594ccf6d6 files/digest-allegro-4.1.14 247
+MD5 0e85c69a2481b1a5913085ce1833c999 files/digest-allegro-4.1.18 247
+RMD160 8720a15f01c8221ae261c24fee406c60866cf235 files/digest-allegro-4.1.18 247
+SHA256 4f637f4872db689f3bb9c0f3fb622d17187cc848e7bc78b41ea39cb1abb5a6e6 files/digest-allegro-4.1.18 247
+MD5 2ac185f9549cd04da9fe501611ba09a5 files/digest-allegro-4.2.0-r1 244
+RMD160 62ae56f916cfb604276666e75b12d34e7c2413df files/digest-allegro-4.2.0-r1 244
+SHA256 51789d055eb913090d7428c659fd08bfe9af906938fcee59941759f794c0bf99 files/digest-allegro-4.2.0-r1 244
 MD5 69afb3c206fdd20a361ee6dbff286ace metadata.xml 636
+RMD160 b2926813da5e98049d86fa5e2fc4a75d16b12b69 metadata.xml 636
+SHA256 e26af044016a39f2ef99c3796d0cee3e84ca728501af8e71d7f91bd1d9edb3bc metadata.xml 636
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELZwI2CTtIKiFlQIRAvc/AKDCCk+C0A8zM4P4TcZ7e+bFvLN/igCdHu2X
+WKkDt19L6ipjagwXdUG8zig=
+=07UD
+-----END PGP SIGNATURE-----

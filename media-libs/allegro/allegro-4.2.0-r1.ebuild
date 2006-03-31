@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.0.ebuild,v 1.2 2006/01/13 22:06:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.0-r1.ebuild,v 1.1 2006/03/31 21:15:34 tupone Exp $
 
 inherit flag-o-matic eutils
 
@@ -49,7 +49,6 @@ src_compile() {
 		--enable-linux \
 		--enable-vga \
 		$(use_enable static) \
-		$(use_enable static staticprog) \
 		$(use_enable mmx) \
 		$(use_enable sse) \
 		$(use_enable oss ossdigi) \
