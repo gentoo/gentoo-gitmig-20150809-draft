@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5e90dfdcd781d1cce15b7a76f2f2682 qc-usb-0.6.3.ebuild 779
-MD5 f528b3c432e850d7d6ec7533c6af4581 ChangeLog 1693
-MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 f1526160a71fa39056d7442f73383a2e files/digest-qc-usb-0.6.3 64
-MD5 97aa1789cc24610ba63d6d7a95ed8f15 files/qc-usb-0.6.0-gcc34.patch 343
+MD5 515e514ed1fffdde50504db4212ba4c7 ChangeLog 1781
+RMD160 5693cb9f3d6e840979c0289082c76cf4f07a0b57 ChangeLog 1781
+SHA256 1ef04501cc1dd8b5ebb5022d12e81ad4aff53fdccda39e612af1ab4784d785bd ChangeLog 1781
 MD5 1c7efb40ca2cfa4fec86da82641851cb files/0.6.2-linux-2.6.11.patch 495
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfqnM2G5bA0cA/ScRAgUDAKDriv9DZhhwDzndiiCL3XYhNGMN6ACeLTYb
-mTBQRKA1FgStUPVhespQyZE=
-=/GEj
------END PGP SIGNATURE-----
+RMD160 70d95bc8dcac88fee50054a20d8aa73219c1c900 files/0.6.2-linux-2.6.11.patch 495
+SHA256 0214c8f3df8babd6e9eb82a9cc52f32260ee92c1d9e85d3f9a9a9254ddff6535 files/0.6.2-linux-2.6.11.patch 495
+MD5 f1526160a71fa39056d7442f73383a2e files/digest-qc-usb-0.6.3 64
+RMD160 0e7c77511d63137d74b544f517b3f5205655823c files/digest-qc-usb-0.6.3 64
+SHA256 60a250d56c0cfaeccb06c802e8644a982943b2234c69657daeabf5e369011b0b files/digest-qc-usb-0.6.3 64
+MD5 97aa1789cc24610ba63d6d7a95ed8f15 files/qc-usb-0.6.0-gcc34.patch 343
+RMD160 aa09db835c64e8b2e3494377e46d1d6edcb5e792 files/qc-usb-0.6.0-gcc34.patch 343
+SHA256 16deea3b4f684527b47cbec09af3242e0c6b4a921ad2e00559addc1012ee89af files/qc-usb-0.6.0-gcc34.patch 343
+MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+RMD160 fd2bbaf1c19b4ad2d876f02846608907516e2403 metadata.xml 219
+SHA256 f39a99f0777bf9eac2d5a444a392d3b93da834a6de01613747bad25c84637138 metadata.xml 219
+MD5 480599a38ddf71aa2caac5abb3e114ec qc-usb-0.6.3.ebuild 824
+RMD160 01058de14234cb3130fe82cd05c4633611f22065 qc-usb-0.6.3.ebuild 824
+SHA256 b0454814a64533fe8be06914cb621a9bf60d904737dab4286a3eb9c12d509ace qc-usb-0.6.3.ebuild 824
