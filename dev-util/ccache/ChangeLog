@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.42 2006/03/20 16:09:33 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.43 2006/03/31 21:12:39 flameeyes Exp $
+
+  31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> ccache-2.4-r1.ebuild:
+  Remove virtual/libc dependency and add keyword ~x86-fbsd.
 
 *ccache-2.4-r1 (20 Mar 2006)
 

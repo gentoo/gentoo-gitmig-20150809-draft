@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.4-r1.ebuild,v 1.1 2006/03/20 16:09:33 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.4-r1.ebuild,v 1.2 2006/03/31 21:12:40 flameeyes Exp $
 
 inherit eutils
 
@@ -10,10 +10,8 @@ SRC_URI="http://samba.org/ftp/ccache/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
-
-DEPEND="virtual/libc"
 
 # Note: this version is designed to be auto-detected and used if
 # you happen to have Portage 2.0.X+ installed.
