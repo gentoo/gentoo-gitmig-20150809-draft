@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2f116ba8d9de70cb8b75bca9aea82e58 ChangeLog 2033
 RMD160 102cd84d601c7d4a9860f4953497cfa4a1f66e89 ChangeLog 2033
 SHA256 15f8ba87fa59793fb1f674dd0531ea0b9821b8e7cb1d0012bb6d3101dd3cd5f9 ChangeLog 2033
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 53b38e2d97bc3e88dc9d8d075babbb34 recordproto-1.13.2.ebuild 501
 RMD160 6f95dee52ac249ced5923aee34c85c49acf2fc16 recordproto-1.13.2.ebuild 501
 SHA256 ea73e4d132b8da3c469e5010e34c4c49467c4dc2642fc21e528b22e63e5253fe recordproto-1.13.2.ebuild 501
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELYf3AiZjviIA2XgRAv+wAJ4ma2LjkPqYgQmlVUGBc9kIt2/2bACg20Cf
+uKivpJ8tp6z6WwiOvGjoyYk=
+=42nw
+-----END PGP SIGNATURE-----

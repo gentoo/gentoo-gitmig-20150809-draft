@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 60003a714deeeb8211875bb9d7a193de ChangeLog 2125
 RMD160 eebdf96765dafa4392923ce07fbc49eb7119c2c0 ChangeLog 2125
 SHA256 b69ae89c8e345ca84bebbb0af7c5059ea4fdd06bfaafcca5716b7d7b6b255ab8 ChangeLog 2125
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 5ea3564d389fa165bc8f5f2abb5a9da1 xf86vidmodeproto-2.2.2.ebuild 516
 RMD160 6cd061dde093f4c36db9a86f9481deb97df0146f xf86vidmodeproto-2.2.2.ebuild 516
 SHA256 8c293ba6950b40cc858a0d2c1d721b0cbc7fb49be7f8c861c79414d495feb2e0 xf86vidmodeproto-2.2.2.ebuild 516
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELYqCAiZjviIA2XgRAszGAJ4gfAFJNatAF0ioANrXqgKmsfHHXQCdGndk
+3W5k5/YJXzgTto33Ao6heAQ=
+=PSdp
+-----END PGP SIGNATURE-----

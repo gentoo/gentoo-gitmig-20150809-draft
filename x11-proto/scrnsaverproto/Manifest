@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8dfcfac6b803fe4471cbd6d6c6736b49 ChangeLog 1894
 RMD160 dafc7d60371d2e708fa4a730f3159366151d329f ChangeLog 1894
 SHA256 629fac3750b83aea6beca2f059d42f0658eaad3579f5f3a4206e5597db3355e5 ChangeLog 1894
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 b4cea9f361205dccd5b016fb46d2848d scrnsaverproto-1.0.2.ebuild 491
 RMD160 ed17b7bc32e4ae69704ac3acf5258dfdca3350c2 scrnsaverproto-1.0.2.ebuild 491
 SHA256 81ef7e618bfee575a8311f9c9f1c46017afe3c8d0a0c97eec6754048c76f49bb scrnsaverproto-1.0.2.ebuild 491
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELYwbAiZjviIA2XgRAkqbAJ9M7eiULylnWidxFlwbk0YHRLmi6QCffSmy
+f6HugxY2C7UPN1ZZUPG4mII=
+=AyK/
+-----END PGP SIGNATURE-----
