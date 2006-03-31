@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.4 2006/03/21 14:55:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.5 2006/03/31 21:33:08 wolf31o2 Exp $
 
 inherit eutils multilib games
 
@@ -16,7 +16,7 @@ LICENSE="ut2003"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 # The executable pages are required.
-RESTRICT="nostrip nomirror stricter"
+RESTRICT="mirror stricter strip"
 IUSE="opengl"
 
 RDEPEND=">=games-fps/ut2004-data-3186-r2
