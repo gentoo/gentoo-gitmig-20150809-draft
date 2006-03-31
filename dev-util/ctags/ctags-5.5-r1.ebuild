@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.5-r1.ebuild,v 1.17 2005/11/21 20:56:29 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.5-r1.ebuild,v 1.18 2006/03/31 20:52:43 flameeyes Exp $
 
 DESCRIPTION="Exuberant Ctags generates an index (or tag) file of objects found in source and header files that allows these items to be quickly and easily located by a text editor or other utility. Currently supports 22 programming languages."
 HOMEPAGE="http://ctags.sourceforge.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/ctags/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 alpha x86 ~ppc sparc mips hppa ia64 ppc64 s390"
+KEYWORDS="alpha amd64 hppa ia64 mips ~ppc ppc64 s390 sparc x86"
 IUSE=""
 
 
