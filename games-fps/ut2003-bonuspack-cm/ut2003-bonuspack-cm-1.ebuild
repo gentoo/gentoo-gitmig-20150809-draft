@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-cm/ut2003-bonuspack-cm-1.ebuild,v 1.2 2004/06/24 22:49:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-cm/ut2003-bonuspack-cm-1.ebuild,v 1.3 2006/03/31 21:22:12 wolf31o2 Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://dl3.edgefiles.com/games-fusion.net/www/patches/ut2003/cbp2003.zip
 LICENSE="ut2003"
 SLOT="1"
 KEYWORDS="x86"
-RESTRICT="nostrip nomirror"
+RESTRICT="mirror strip"
 
 DEPEND="app-arch/unzip"
 RDEPEND="games-fps/ut2003"

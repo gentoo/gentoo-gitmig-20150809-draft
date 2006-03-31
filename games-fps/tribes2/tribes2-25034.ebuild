@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.11 2006/03/24 22:17:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.12 2006/03/31 21:21:30 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.libsdl.org/projects/${PN}/release/${P}-cdrom-x86.run
 LICENSE="LOKI-EULA"
 SLOT="0"
 KEYWORDS="x86"
-RESTRICT="nostrip nomirror"
+RESTRICT="mirror strip"
 
 DEPEND="virtual/libc
 	games-util/loki_patch"

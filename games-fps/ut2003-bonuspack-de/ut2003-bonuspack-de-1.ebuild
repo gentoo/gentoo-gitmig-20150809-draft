@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-de/ut2003-bonuspack-de-1.ebuild,v 1.5 2005/08/30 19:23:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-de/ut2003-bonuspack-de-1.ebuild,v 1.6 2006/03/31 21:22:38 wolf31o2 Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ LICENSE="ut2003"
 SLOT="1"
 KEYWORDS="x86"
 IUSE=""
-RESTRICT="nostrip nomirror"
+RESTRICT="mirror strip"
 
 DEPEND="app-arch/unzip"
 RDEPEND="games-fps/ut2003"

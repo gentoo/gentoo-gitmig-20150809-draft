@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.11 2006/03/24 22:19:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.12 2006/03/31 21:23:09 wolf31o2 Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.infogrames.net/misc/ut2003/UT2003-epicbonuspackone.exe
 LICENSE="ut2003"
 SLOT="1"
 KEYWORDS="x86"
-RESTRICT="nostrip nomirror"
+RESTRICT="mirror strip"
 
 DEPEND="app-arch/unzip"
 RDEPEND="games-fps/ut2003"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r2.ebuild,v 1.10 2006/01/24 18:01:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r2.ebuild,v 1.11 2006/03/31 21:18:40 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -12,9 +12,9 @@ SRC_URI="mirror://3dgamers/returnwolfenstein/Missions/${MAPS}
 
 LICENSE="RTCW"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 x86"
 IUSE="opengl dedicated"
-RESTRICT="nostrip nomirror"
+RESTRICT="strip mirror"
 
 RDEPEND="sys-libs/glibc
 	dedicated? (
