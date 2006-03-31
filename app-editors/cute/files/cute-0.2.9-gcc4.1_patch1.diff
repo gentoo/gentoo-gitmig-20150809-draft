@@ -1,0 +1,18 @@
+diff -ur cute-0.2.9.old/cute/cuteview.h cute-0.2.9/cute/cuteview.h
+--- cute-0.2.9.old/cute/cuteview.h	2004-08-03 02:01:27.000000000 +0200
++++ cute-0.2.9/cute/cuteview.h	2006-03-31 17:19:49.000000000 +0200
+@@ -144,11 +144,11 @@
+ 	/** the scintilla widget has the focus */
+ 	void setFocus() { view->setFocus(); }
+     /** return the information string for the view */
+-    QString CUTEView::infoString();
++    QString infoString();
+     /** set an information field to the info string list */
+-    void CUTEView::addInfoField(QString name, QString info);
++    void addInfoField(QString name, QString info);
+     /** remove an information field from the info string list */
+-    void CUTEView::removeInfoField(QString name);
++    void removeInfoField(QString name);
+ protected:
+ 	/** called when view is about to be closed */
+ 	void closeEvent(QCloseEvent *e);

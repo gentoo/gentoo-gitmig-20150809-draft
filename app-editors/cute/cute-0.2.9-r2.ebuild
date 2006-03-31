@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cute/cute-0.2.9-r2.ebuild,v 1.6 2006/01/15 11:47:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cute/cute-0.2.9-r2.ebuild,v 1.7 2006/03/31 17:21:50 caleb Exp $
 
-inherit distutils
+inherit distutils eutils
 
 MY_P=${PN}-${PV/*.*.*.*/${PV%.*}-${PV##*.}}
 
@@ -23,6 +23,8 @@ src_unpack() {
 	distutils_python_version
 	cd ${S} ; sed -i -e "s:qscintilla::" cute.pro
 	rm -rf ${S}/qscintilla ; cd ${S}/cute
+
+	epatch ${FILESDIR}/cute-0.2.9-gcc4.1_patch1.diff
 
 	sed -i -r -e "s:#define DOC_PATH.*:#define DOC_PATH \"${ROOT}usr/share/doc/${P}/index.html\":" config.h
 
