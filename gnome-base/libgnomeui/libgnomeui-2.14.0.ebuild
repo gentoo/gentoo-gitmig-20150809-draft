@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.14.0.ebuild,v 1.2 2006/03/30 01:52:56 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.14.0.ebuild,v 1.3 2006/03/31 00:21:06 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc esd jpeg static"
+IUSE="doc jpeg"
 
 RDEPEND=">=gnome-base/libgnome-2.13.7
 	>=gnome-base/libgnomecanvas-2
@@ -23,7 +23,6 @@ RDEPEND=">=gnome-base/libgnome-2.13.7
 	>=gnome-base/gnome-keyring-0.4
 	>=dev-libs/popt-1.5
 	>=dev-libs/glib-2.8
-	esd? ( >=media-sound/esound-0.2.26 >=media-libs/audiofile-0.2.3 )
 	jpeg? ( media-libs/jpeg )"
 
 DEPEND="${RDEPEND}
@@ -37,7 +36,7 @@ USE_DESTDIR="1"
 
 
 pkg_setup() {
-	G2CONF="$(use_enable static) $(use_with jpeg libjpeg)"
+	G2CONF="$(use_with jpeg libjpeg)"
 }
 
 src_unpack() {
