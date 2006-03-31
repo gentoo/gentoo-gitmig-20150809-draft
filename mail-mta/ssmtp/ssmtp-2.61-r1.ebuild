@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61-r1.ebuild,v 1.6 2006/02/10 04:50:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61-r1.ebuild,v 1.7 2006/03/31 21:57:56 flameeyes Exp $
 
 inherit eutils mailer
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/s/ssmtp/${P/-/_}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ssl ipv6 md5sum"
 
 DEPEND="virtual/libc
