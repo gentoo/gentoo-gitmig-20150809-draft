@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.48.ebuild,v 1.6 2006/03/28 23:01:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.48.ebuild,v 1.7 2006/03/31 18:54:00 hansmi Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://search.cpan.org/~gaas/${P}/"
 SRC_URI="mirror://cpan/authors/id/G/GA/GAAS/${P}.tar.gz"
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~alpha ~amd64 ~arm hppa ia64 ~mips ~ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="unicode"
 DEPEND=">=dev-perl/HTML-Tagset-3.03"
 mydoc="ANNOUNCEMENT TODO"
