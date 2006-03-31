@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-ingo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.8 2006/03/28 17:33:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.9 2006/03/31 20:10:16 yoswink Exp $
+
+  31 Mar 2006; Jose Luis Rivero <yoswink@gentoo.org> horde-ingo-1.1.ebuild:
+  Stable on alpha wrt bug #126435
 
   28 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> horde-ingo-1.1.ebuild:
   Stable on hppa wrt security #126435
