@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20050303-r1.ebuild,v 1.4 2006/01/20 00:56:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20050303-r1.ebuild,v 1.5 2006/03/31 00:37:20 flameeyes Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/snapshots/ntp-stable/${PV
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="logrotate parse-clocks nodroproot selinux ssl ipv6 openntpd debug"
 
 RDEPEND=">=sys-libs/ncurses-5.2
