@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-ut2k4mod.eclass,v 1.7 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-ut2k4mod.eclass,v 1.8 2006/03/31 02:39:32 wolf31o2 Exp $
 
 inherit games
 
@@ -80,18 +80,10 @@ games-ut2k4mod_src_install() {
 	dodir ${dir}
 	cp -r ${S}/unpack/* ${Ddir}
 
-	if [ -e ${S}/README.${MOD_BINS} ]
-	then
-		dodoc README.${MOD_BINS} || die "dodoc failed"
-	else
-		for tbz2 in ${MOD_TBZ2}
-		do
-			if [ -e ${S}/README.${tbz2} ]
-			then
-				dodoc README.${tbz2} || die "dodoc failed"
-			fi
-		done
-	fi
+	for readme in README*
+	do
+		dodoc ${readme} || die "dodoc failed"
+	done
 	if [ -n "${MOD_BINS}" ]
 	then
 		exeinto ${dir}
