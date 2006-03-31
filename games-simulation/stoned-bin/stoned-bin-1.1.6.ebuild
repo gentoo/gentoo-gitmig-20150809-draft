@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/stoned-bin-1.1.6.ebuild,v 1.3 2005/02/25 22:46:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/stoned-bin-1.1.6.ebuild,v 1.4 2006/03/31 21:53:06 wolf31o2 Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 RDEPEND="virtual/opengl
 	virtual/glut
