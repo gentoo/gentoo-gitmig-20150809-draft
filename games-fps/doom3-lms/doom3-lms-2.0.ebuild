@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/doom3-lms-2.0.ebuild,v 1.2 2006/03/20 00:03:26 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/doom3-lms-2.0.ebuild,v 1.3 2006/03/31 20:48:19 wolf31o2 Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
-RESTRICT="nofetch"
+RESTRICT="fetch"
 
 RDEPEND="games-fps/doom3"
 DEPEND="${RDEPEND}
