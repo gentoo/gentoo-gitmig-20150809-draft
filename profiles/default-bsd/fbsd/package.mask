@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.1 2006/03/30 12:42:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.2 2006/03/31 22:47:29 flameeyes Exp $
 
 # As soon as the ~x86-fbsd keyword is spread enough, drop the extra masking
 # used to limit usage of unsupported packages.
@@ -27,11 +27,6 @@ dev-util/strace
 # mpg123 has too many patches and handling it is difficult, let's default
 # to mpg321 that works out of the box.
 media-sound/mpg123
-
-# Diego Pettenò <flameeyes@gentoo.org> (9 Sep 2005)
-# New internal API and KQueue was not updated, masked until a patch is
-# done to resolve the problem.
->=app-admin/gamin-0.1.6
 
 # Don't go with newer versions
 >=sys-apps/baselayout-1.12.0_pre16
