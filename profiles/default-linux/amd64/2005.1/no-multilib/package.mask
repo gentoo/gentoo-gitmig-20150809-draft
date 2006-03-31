@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-multilib/package.mask,v 1.12 2006/03/23 00:51:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-multilib/package.mask,v 1.13 2006/03/31 03:14:37 wolf31o2 Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -77,6 +77,7 @@ games-fps/enemy-territory-etpro
 games-fps/enemy-territory-fortress
 games-fps/enemy-territory-truecombat
 games-fps/enemy-territory
+games-fps/glxquake-bin
 games-fps/legends
 games-fps/postal2mpdemo
 games-fps/quake3-alliance
@@ -130,6 +131,7 @@ media-sound/shoutcast-trans-bin
 media-sound/teamspeak2-client-bin
 media-sound/teamspeak2-server-bin
 media-sound/ventrilo-server-bin
+media-video/binkplayer
 media-video/dvdrip
 media-video/mplayer-bin
 media-video/realplayer
