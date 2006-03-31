@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/rubber
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/ChangeLog,v 1.4 2005/12/09 07:42:27 halcy0n Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/ChangeLog,v 1.5 2006/03/31 16:36:41 nattfodd Exp $
+
+*rubber-1.1 (31 Mar 2006)
+
+  31 Mar 2006; Alexandre Buisse <nattfodd@gentoo.org> +rubber-1.1.ebuild:
+  Bump to 1.1, as requested in bug #128219.
 
   09 Dec 2005; Mark Loeser <halcy0n@gentoo.org> rubber-0.99.8.ebuild:
   Stable on x86; bug #114654

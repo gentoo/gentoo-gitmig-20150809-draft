@@ -1,17 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6470786b4049d73edc7609f4a0a63a90 ChangeLog 914
+MD5 11149b738a6ae4983bfabeb7572c20c8 ChangeLog 1061
+RMD160 eeab538f8d63345205ecc3dc4f9efff84d79f1af ChangeLog 1061
+SHA256 8e9fe5fc560d9a240494b5c1d8af35d936960e79ec3d829becbd5200c4ed64d6 ChangeLog 1061
 MD5 fa3ee1d6122e1a65f21eee40704b33ff files/digest-rubber-0.99.8 64
+RMD160 64b7e4efd35a80cf443928530b30f347159f46db files/digest-rubber-0.99.8 64
+SHA256 ac8ab9b489a74e8316a44e4583f3cc92be49760daabc2a5a4c5a9eff5d788a41 files/digest-rubber-0.99.8 64
 MD5 e0c387bcd8776a41d556d8b061876c5d files/digest-rubber-1.0 61
+RMD160 109f8d0ae460f8c8da57776b90d74afcbb7bd958 files/digest-rubber-1.0 61
+SHA256 42182cd4551904f6212f19b83d2a192eebb552d18229c1dd8339d043db4bb279 files/digest-rubber-1.0 61
+MD5 45119085696972f54dec937d4a8191cc files/digest-rubber-1.1 229
+RMD160 4fae17a838178d7291f3b57f0f8172eff247e321 files/digest-rubber-1.1 229
+SHA256 fa9df44d63de957b5336410ac7bd3f5c528a8bf3e91d902fa28b24f1ccf8b1bc files/digest-rubber-1.1 229
 MD5 1a745ebed6ee7adc37e3e4b29cc075bb files/rubber-module-command.patch 2240
+RMD160 f228f91b0c1d635d2f7aca5f2bc9c42b65b6f407 files/rubber-module-command.patch 2240
+SHA256 28e3e9dca4385b97c2b55850550bae5dee9d36c47a8a559140e194e00a7cba13 files/rubber-module-command.patch 2240
 MD5 7a194edac6298e9939da354f820d0c6e metadata.xml 260
+RMD160 e90793c5b58af92a5ee72a43cdf68c5981a03c7d metadata.xml 260
+SHA256 b12993f054e652e75e14ef6e4d9a532888989f5e2f052a55e4c2cb192aba4103 metadata.xml 260
 MD5 0582b91034af151688a64bc6ab0519d2 rubber-0.99.8.ebuild 803
+RMD160 14f4d0f11a75f2ef565a50e8a879a74b3b510336 rubber-0.99.8.ebuild 803
+SHA256 7c273d1043515d851122e2241651f8dbf3f9cdc1d9046a5c1b79f87af33b9f71 rubber-0.99.8.ebuild 803
 MD5 8ba27e3a016b4f6564bb483cad93d2ea rubber-1.0.ebuild 732
+RMD160 ae5be0a54cb01c6519723af416e2738c6038e03d rubber-1.0.ebuild 732
+SHA256 44dbc9d6223c441b5e515fdd01d448045c62d118909d8ef146f80cb165e820ea rubber-1.0.ebuild 732
+MD5 ba97409e07e559307b7cc8ae3d295c54 rubber-1.1.ebuild 732
+RMD160 0e224559c29533ea19a84d5cd3bb79300f8c11be rubber-1.1.ebuild 732
+SHA256 a97b5e4a78bc2073a82de1b986ce768ccff88b7c68a95c52304fd960454e9ccd rubber-1.1.ebuild 732
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDmTVvCRZPokWLroQRAgmuAJ0cxQIvU7dvkglqQRz5O6uzgxwjjwCfZKnJ
-qz+CEiF4Nuayu7/KAVL4q8U=
-=A86e
+iD8DBQFELXcUwx9vvAARv2sRAvxMAJ9gRgouzcuG2W3lDInxa4L6dARzHACdFOxi
+Ipak86zI4Auvri5TkbCuiLM=
+=ldPq
 -----END PGP SIGNATURE-----
