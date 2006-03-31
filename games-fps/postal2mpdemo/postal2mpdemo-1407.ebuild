@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.15 2006/03/21 19:26:17 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.16 2006/03/31 21:26:46 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -10,9 +10,9 @@ SRC_URI="mirror://3dgamers/postal2/Missions/${PN}-lnx-${PV}.tar.bz2"
 
 LICENSE="postal2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE=""
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 RDEPEND="|| ( x11-libs/libXext
 			  virtual/x11 )
