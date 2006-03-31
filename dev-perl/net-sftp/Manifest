@@ -1,34 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5f4a240624e2b010c0d0962bd830cbc7 ChangeLog 1219
-RMD160 8dffff11bcaab591e6d5ba2d0cc5ab9b67a0007a ChangeLog 1219
-SHA256 2c21c63af93e9672100f4dc2066de948456975c99b3efd71980e3907230afacc ChangeLog 1219
+MD5 bce692c8835d78d45e16a8ea1abebca6 ChangeLog 1366
 MD5 eacf86c330b33448855b09373ef192f7 files/digest-net-sftp-0.08 64
-RMD160 7d14e9952e216b006ed9cb0318164dc88c66703c files/digest-net-sftp-0.08 64
-SHA256 50ace5d6bdac7d697751abf72bf1be798773b2892a4520cfb69eb60a5b837ca7 files/digest-net-sftp-0.08 64
 MD5 a5ce90f94ae3176f524d9acab9165285 files/digest-net-sftp-0.09 64
-RMD160 97b5bbbe7532ac347888914c17e16e681abe8232 files/digest-net-sftp-0.09 64
-SHA256 92c575cfe1dbb2d6ccf308d7f7c164e7879441e0ed9dec393c8c34e225032bea files/digest-net-sftp-0.09 64
 MD5 25bcf00437a8562efb831b6240860ba5 files/digest-net-sftp-0.10 64
-RMD160 c3cb6198f2d9a5a1849b3510b0514fc88a820959 files/digest-net-sftp-0.10 64
-SHA256 49c2d0cbf3e9892b9d94cd5d871c8cfb63c79ef7eb78f32479950a486bce9481 files/digest-net-sftp-0.10 64
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
-MD5 1588eef1e9b5129e7decdb08eb037430 net-sftp-0.08.ebuild 578
-RMD160 71a7d0aab5b121212774c1c5218207b408052d86 net-sftp-0.08.ebuild 578
-SHA256 7a73b9314e462288517afea046226f3693363988ed2972613cc2aadb64df0219 net-sftp-0.08.ebuild 578
-MD5 1386cf31972fc2682b2b10707626fa19 net-sftp-0.09.ebuild 582
-RMD160 8fdbce3f2e6c6005e7c517614f759497b1b0a68f net-sftp-0.09.ebuild 582
-SHA256 485d3c74b616bce4859f0206be205975c8c7155e43e937176a553727ee914754 net-sftp-0.09.ebuild 582
-MD5 6fcabd2ea1e5eb8d9f0b6ea441a81baf net-sftp-0.10.ebuild 579
-RMD160 dc0ddcd6dec824b4e574f46632be19918b8ddb65 net-sftp-0.10.ebuild 579
-SHA256 f1e86f556c72d4f4fe323651f329a214903db8f8ba119b2641b588c43023dfcb net-sftp-0.10.ebuild 579
+MD5 02988c0d59daf8b993f564231ebad7d3 net-sftp-0.08.ebuild 582
+MD5 899bc706dc0f1875885398eee0e19342 net-sftp-0.09.ebuild 585
+MD5 0dd7f9f3defdabdbab51e91cf120bbf7 net-sftp-0.10.ebuild 583
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD491JJrHF4yAQTrARAtN8AJ0bgEEv/5DFqCQewnRIynkVSxahjQCcCQKQ
-Ye+ImfZoFdqzL/z9doYGFCc=
-=rYgg
+iD8DBQFELZCstG5z4I8BtQoRAnzzAJ0SCjLmV5lBV/pLm+ZnsCOZm0/7bgCcCqm4
+Zv+R7Yh1NGfohdrBkmWI8dM=
+=ghKw
 -----END PGP SIGNATURE-----

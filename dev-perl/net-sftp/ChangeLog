@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/net-sftp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-sftp/ChangeLog,v 1.8 2006/01/31 23:01:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-sftp/ChangeLog,v 1.9 2006/03/31 20:27:17 mcummings Exp $
+
+  31 Mar 2006; <mcummings@gentoo.org> net-sftp-0.08.ebuild,
+  net-sftp-0.09.ebuild, net-sftp-0.10.ebuild:
+  bug 126378, homepage no longer valid
 
   31 Jan 2006; Aron Griffis <agriffis@gentoo.org> net-sftp-0.10.ebuild:
   Mark 0.10 stable on alpha
