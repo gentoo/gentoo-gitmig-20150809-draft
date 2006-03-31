@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c31b5b6c7700438a0edb42f7ec9a41d5 ChangeLog 2525
-RMD160 d6bf31298ce3107e8f55ae90c43be4ad4836b5af ChangeLog 2525
-SHA256 238320d0b6433000ddfe74de4fd250a32f233ded7a6f1863582d5995f8add721 ChangeLog 2525
+MD5 a05314fd04b04d514cfa0de513e20ef5 ChangeLog 2625
+RMD160 7d0ef7f47a478f310d1c2fc272be03782b6bbb1a ChangeLog 2625
+SHA256 c0a2a65cb1c3a993b1215e6ff6c6c83c2f10d4e7b059ec2c2bb3b14353d9b76d ChangeLog 2625
 MD5 9828bc0a6addcce9ac4657f8884e189f files/digest-imapfilter-1.0 66
 RMD160 1db9ba4a96d3f027dc29fc900bc0237e20215de4 files/digest-imapfilter-1.0 66
 SHA256 d5fba7aebd518d573a793ac66dc8c9830e9848633e20d26f79af92e6e28b09ba files/digest-imapfilter-1.0 66
@@ -25,19 +22,12 @@ SHA256 493365a2f9a1321310426d21e0fca3b931ecef45b3b72fff52b5cbf3550d53e0 imapfilt
 MD5 1e65715ff28011f4530bb35e88bda4e5 imapfilter-1.0.ebuild 768
 RMD160 f1c2d4b768a09655d416bb28cbee921f2e18a510 imapfilter-1.0.ebuild 768
 SHA256 59dfca6a44edf1ebc3b271b6c83fce13a9272dd0db0eb30a65b4d75c465dd459 imapfilter-1.0.ebuild 768
-MD5 edc265caacd2a42277d400e1201573e7 imapfilter-1.1.1.ebuild 804
-RMD160 354d760cf0d77f5edde3722da64c5642b5dccdca imapfilter-1.1.1.ebuild 804
-SHA256 4bb60d803e2e27f33e41c8d92e2d95611f0ae27d7088d200252784e07989b7b2 imapfilter-1.1.1.ebuild 804
+MD5 08c3156cf640219265fd9cd9199263e8 imapfilter-1.1.1.ebuild 804
+RMD160 0286b74e5a7bdb4abcf5f49a75a8996c444d60f2 imapfilter-1.1.1.ebuild 804
+SHA256 3a85389f56e041ebf7b790db36a506b84415717ed5800232b82017d6f7f7a7a0 imapfilter-1.1.1.ebuild 804
 MD5 37085e3f6b89d39a05c005ca3a4723e9 imapfilter-1.2.1.ebuild 783
 RMD160 6ce9d1bd2d9585ed25d08b6df04ed080c657b2c5 imapfilter-1.2.1.ebuild 783
 SHA256 2b08ec896af01ff391828cfdf2cfb048a75cf5489fd0f7ffa8381cef09192443 imapfilter-1.2.1.ebuild 783
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
 SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEKKmP10xuJSrg3/sRAnkGAJ42EBEcO8pGm2mU4OLhDdD9FNjgJwCeKpfB
-i/gRkNhZbYD7/eEpPxNoShk=
-=xnYS
------END PGP SIGNATURE-----
