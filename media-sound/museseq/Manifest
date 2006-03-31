@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 474d09d03f62d600545bb9d5925be24a ChangeLog 6189
-RMD160 62edb02ceb6b63cceddaf1de8039b2972ab3271e ChangeLog 6189
-SHA256 a25f0d6ef714f9d89d2367396f18bbefff93a1c2c0676f925594ffd30a2ff0ff ChangeLog 6189
+MD5 eb3994adde7f5ee2197234e9bd147cb3 ChangeLog 6358
+RMD160 0b631d4ca0fac7fe3ee99ca097896e4892633b27 ChangeLog 6358
+SHA256 c2e1066bab30c4b5720d23cabfe30831a0972d757da21d31fe1431c4fb9724bf ChangeLog 6358
 MD5 fbb837028f0103f8c2775f24e661888b files/digest-museseq-0.6.2-r1 64
 RMD160 2f76ade4f68e0208d9b33dc365ca2235b43cefb4 files/digest-museseq-0.6.2-r1 64
 SHA256 a658c57c0353cbc9acd1b76feeaf9183488c14277283865c9eb16749a287de6f files/digest-museseq-0.6.2-r1 64
@@ -22,6 +19,9 @@ SHA256 084df92de422a33c5ca8c532f0cbe467c943946a6b23ce86be9232c7b818571d files/di
 MD5 fad09d53bfa3d0773d50ad93b6d6e0ab files/digest-museseq-0.7.2_pre5 247
 RMD160 c514888eb4e50a1019844b9a6fffbc285873d04e files/digest-museseq-0.7.2_pre5 247
 SHA256 7f4cdf4a72439fb292936c6c592da5c89a376143a2959b7a060c48cf813f39d0 files/digest-museseq-0.7.2_pre5 247
+MD5 d1cc7efd4c49984cafa3a579d724ab83 files/digest-museseq-0.8.1 235
+RMD160 32bf0ff26e8c9ed683a8753e5eb6590e43feffe0 files/digest-museseq-0.8.1 235
+SHA256 e8aa032aa12c82d5c6bf2df2525100bd2cae24373ca1368f0af34ee6510f4108 files/digest-museseq-0.8.1 235
 MD5 49c3c1f0136766a89c7cd1ba91006bc6 files/museseq-0.6.2-drumport.patch 771
 RMD160 a701a83a322ebd03d4f682b3846cca0aa2cbcd6b files/museseq-0.6.2-drumport.patch 771
 SHA256 2dc2a1b64c5dfe4bb3e27a9d36ffc45792e7b9998659af01ec2d7e3fab707b33 files/museseq-0.6.2-drumport.patch 771
@@ -64,10 +64,6 @@ SHA256 4c4700b59c26996cc5a6d67964d5b51088a3322368a411bdf03604d7b8c73812 museseq-
 MD5 6166fdd458562ccf3658b4a397a02cb3 museseq-0.7.2_pre5.ebuild 1803
 RMD160 df9ba9b6a8b6f6913852a0a35ba5586b80a9613e museseq-0.7.2_pre5.ebuild 1803
 SHA256 42f28e95c2b4ff58594b59429ce2c9a3f28c5b2cc4fca54f021dc8e9ec561ebc museseq-0.7.2_pre5.ebuild 1803
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD49Lpvpz1081QvMkRAgQhAKCfmyC23iU70lXWZfZ7zCjJOYqRJgCcC+VW
-Q9ngBBg7RlWfiCtT8s4VhjY=
-=lpyg
------END PGP SIGNATURE-----
+MD5 9dee2627d12c5dd8a7631f9740b04246 museseq-0.8.1.ebuild 1740
+RMD160 2ee93597f927b19b6ea2af2a1bf44e775a912ec9 museseq-0.8.1.ebuild 1740
+SHA256 673a8bc1ec012b343d75d0eb2dd0e88975ffb16df7422bee45d2c9bde0e57e65 museseq-0.8.1.ebuild 1740
