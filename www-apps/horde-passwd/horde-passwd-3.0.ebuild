@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/horde-passwd-3.0.ebuild,v 1.5 2006/03/28 17:36:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/horde-passwd-3.0.ebuild,v 1.6 2006/03/31 20:41:37 yoswink Exp $
 
 HORDE_MAJ="-h3"
 inherit horde eutils
 
 DESCRIPTION="Horde Passwd is the Horde password changing application"
 
-KEYWORDS="~alpha ~amd64 hppa ppc sparc x86"
+KEYWORDS="alpha ~amd64 hppa ppc sparc x86"
 IUSE="clearpasswd"
 
 DEPEND=""
