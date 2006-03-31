@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.11 2006/03/24 21:54:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.12 2006/03/31 20:45:34 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ LICENSE="DOOM3"
 SLOT="0"
 KEYWORDS="-* x86 amd64"
 IUSE="opengl dedicated"
-RESTRICT="nostrip nomirror"
+RESTRICT="strip mirror"
 
 DEPEND="app-arch/bzip2
 	app-arch/tar"

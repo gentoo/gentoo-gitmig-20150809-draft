@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-hellcampaign/doom3-hellcampaign-1.ebuild,v 1.1 2006/03/22 03:08:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-hellcampaign/doom3-hellcampaign-1.ebuild,v 1.2 2006/03/31 20:46:20 wolf31o2 Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RESTRICT="nomirror nostrip"
+RESTRICT="mirror strip"
 
 RDEPEND="games-fps/doom3"
 DEPEND="${RDEPEND}
