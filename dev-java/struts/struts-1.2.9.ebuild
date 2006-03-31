@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.8.ebuild,v 1.1 2005/11/26 14:51:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9.ebuild,v 1.1 2006/03/31 15:49:34 karltk Exp $
 
 inherit java-pkg
 

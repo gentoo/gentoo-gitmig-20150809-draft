@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/struts
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.23 2005/12/14 16:54:43 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.24 2006/03/31 15:49:34 karltk Exp $
+
+*struts-1.2.9 (31 Mar 2006)
+
+  31 Mar 2006; Karl Trygve Kalleberg <karltk@gentoo.org>
+  -struts-1.2.8.ebuild, +struts-1.2.9.ebuild:
+  Version bump due to upstream security issues CVE-2006-1546, CVE-2006-1547,
+  and CVE-2006-1548, as indicated in mentioned in #128251.
 
   14 Dec 2005; Markus Rothe <corsair@gentoo.org> struts-1.1-r4.ebuild:
   Back to unstable on ppc64; bug #113192
