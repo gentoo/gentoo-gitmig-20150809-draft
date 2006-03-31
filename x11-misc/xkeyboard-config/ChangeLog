@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.9 2006/03/23 08:21:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.10 2006/03/31 19:42:51 flameeyes Exp $
+
+  31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xkeyboard-config-0.7-r2.ebuild:
+  Add ~x86-fbsd keyword.
 
 *xkeyboard-config-0.7-r2 (23 Mar 2006)
 
