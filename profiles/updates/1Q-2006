@@ -31,3 +31,4 @@ move sys-apps/hexdump sys-apps/esr-hexdump
 move dev-ruby/switchtower dev-ruby/capistrano
 move games-action/armagetron games-action/armagetronad
 move net-wireless/kwirelessmonitor net-wireless/kwlaninfo
+move games-board/pio games-board/pioneers
