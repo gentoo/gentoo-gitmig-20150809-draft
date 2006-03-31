@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.4 2006/02/20 13:36:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.5 2006/03/31 20:46:34 flameeyes Exp $
+
+  31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  perl-cleaner-1.03.ebuild:
+  Add ~x86-fbsd keyword.
 
 *perl-cleaner-1.03 (20 Feb 2006)
 
