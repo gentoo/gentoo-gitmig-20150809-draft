@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.24.ebuild,v 1.2 2005/12/01 04:16:43 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.24.ebuild,v 1.3 2006/03/31 18:52:16 hansmi Exp $
 
 DESCRIPTION="reimplement libdjb - excellent libraries from Dan Bernstein."
 SRC_URI="http://dl.fefe.de/${P}.tar.bz2"
@@ -33,5 +33,8 @@ src_install () {
 		LIBDIR=${D}/usr/lib \
 		MAN3DIR=${D}/usr/share/man/man3 \
 		INCLUDEDIR=${D}/usr/include/libowfat \
-		install || die
+		install || die "make install failed"
+
+	cd "${D}"/usr/share/man
+	mv man3/buffer.3 man3/owfat-buffer.3
 }
