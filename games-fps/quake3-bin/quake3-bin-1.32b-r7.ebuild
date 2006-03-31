@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r7.ebuild,v 1.1 2006/03/31 03:41:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r7.ebuild,v 1.2 2006/03/31 21:06:16 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ LICENSE="Q3AEULA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="cdinstall dedicated opengl teamarena"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 UIDEPEND="virtual/opengl
 	x86? (

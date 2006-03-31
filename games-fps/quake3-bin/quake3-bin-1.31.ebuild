@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.31.ebuild,v 1.6 2006/03/27 18:43:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.31.ebuild,v 1.7 2006/03/31 21:06:16 wolf31o2 Exp $
 
 inherit eutils games
 
-DESCRIPTION="Quake III Arena - 3rd installment of the classic id 3D first-person shooter"
+DESCRIPTION="3rd installment of the classic id 3D first-person shooter"
 HOMEPAGE="http://www.idsoftware.com/"
 SRC_URI="mirror://idsoftware/quake3/linux/linuxq3apoint-${PV}.x86.run"
 
@@ -12,7 +12,7 @@ LICENSE="Q3AEULA"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="dedicated opengl"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 RDEPEND="sys-libs/glibc
 	opengl? (
