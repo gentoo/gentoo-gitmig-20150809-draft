@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.132 2006/03/21 15:10:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.133 2006/03/31 13:59:28 blubb Exp $
+
+  31 Mar 2006; Simon Stelling <blubb@gentoo.org> +files/ffmpeg-libdir.patch,
+  ffmpeg-0.4.9_p20060302.ebuild:
+  fix wrong libdir paths in .pc files
 
   21 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/ffmpeg-0.4.9_p20051216-asneeded-configure.patch,
