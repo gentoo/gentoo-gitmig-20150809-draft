@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2.ebuild,v 1.3 2006/03/29 01:22:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2.ebuild,v 1.4 2006/03/31 12:23:23 caleb Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -21,7 +21,7 @@ RDEPEND="$(qt_min_version 3.3.3)
 	app-arch/bzip2
 	>=media-libs/freetype-2
 	media-libs/fontconfig
-	>=dev-libs/libxslt-1.1.4
+	>=dev-libs/libxslt-1.1.15
 	>=dev-libs/libxml2-2.6.6
 	>=dev-libs/libpcre-4.2
 	media-libs/libart_lgpl
