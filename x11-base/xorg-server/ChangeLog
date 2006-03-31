@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.99 2006/03/31 19:34:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.100 2006/03/31 20:16:06 flameeyes Exp $
+
+  31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xorg-server-1.0.2-r3.ebuild:
+  Add ~x86-fbsd keyword.
 
   31 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>; ChangeLog:
   Only need that ChangeLog message once.

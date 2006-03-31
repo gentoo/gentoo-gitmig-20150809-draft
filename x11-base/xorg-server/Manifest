@@ -1,6 +1,9 @@
-MD5 14fc6412639fe7e53ada83f2a34c1913 ChangeLog 20562
-RMD160 17be67eacfff81450ef527889c6d2901a661d1a4 ChangeLog 20562
-SHA256 f23fe43246fbae137e6b8c26def687c2d8e608f1e4007631ce13ec2ecdbac036 ChangeLog 20562
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6876e200a225d616c76eb4396267c6c1 ChangeLog 20673
+RMD160 876a1b5205a8cfd1baaf16e1a150f1779ef83c9d ChangeLog 20673
+SHA256 1c14bb97403da461a80fc619e9f0f0c9b8c5ef0d665400c71bfcd7ac1339a4b1 ChangeLog 20673
 MD5 6d3ecb7a2b6736047a08447cda7f8ed6 files/1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch 2021
 RMD160 5cffbd24fc7d3d817b050de268ce23e64ed83b5d files/1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch 2021
 SHA256 6c32348b9c8460250b2600ae8672c5cadce4b5cca5577b9937a703afbfc57620 files/1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch 2021
@@ -31,6 +34,13 @@ SHA256 9474c19d125d9534b93c038cba7c4bdc7c45bf3ed51279ff2e130fe031a15c13 files/xp
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 ee66e62ee0faf2430963b2f0bf4cd5cb xorg-server-1.0.2-r3.ebuild 5549
-RMD160 f8649e340fcb9ff5c8507ca7c0e008f4335623b3 xorg-server-1.0.2-r3.ebuild 5549
-SHA256 7c8dc703bdcb999cdeb4354786a7678e347c09179247c5b10d7ae0508b0b0830 xorg-server-1.0.2-r3.ebuild 5549
+MD5 f831e7e1ab71a0c6c60874777dd0fd32 xorg-server-1.0.2-r3.ebuild 5559
+RMD160 b1d34b43c1a06f4dbc2fbfe796278a506ed40dfb xorg-server-1.0.2-r3.ebuild 5559
+SHA256 e23394ec656136f0dfb4e1ed326f72a89e7f2d8ec7c70ba48c3d40ef59e738bb xorg-server-1.0.2-r3.ebuild 5559
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELY4qAiZjviIA2XgRAhWQAJ92V1oTCbLe6+2EaOKAUGwZaggljwCaA//q
+DxUDPx0JgXumWYCpd7Ktk3k=
+=EEGl
+-----END PGP SIGNATURE-----
