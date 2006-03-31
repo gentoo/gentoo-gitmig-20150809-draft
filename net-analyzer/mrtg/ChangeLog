@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.43 2006/02/11 20:34:23 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.44 2006/03/31 20:42:52 jokey Exp $
+
+  31 Mar 2006; Markus Ullmann <jokey@gentoo.org> mrtg-2.11.1.ebuild,
+  mrtg-2.12.2.ebuild, mrtg-2.13.2.ebuild:
+  Fixed COPYING issue
 
 *mrtg-2.13.2 (11 Feb 2006)
 

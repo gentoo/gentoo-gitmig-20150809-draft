@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.13.2.ebuild,v 1.1 2006/02/11 20:34:23 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.13.2.ebuild,v 1.2 2006/03/31 20:42:52 jokey Exp $
 
 DESCRIPTION="A tool to monitor the traffic load on network-links"
 HOMEPAGE="http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/"
@@ -24,7 +24,7 @@ src_install () {
 	newinitd ${FILESDIR}/mrtg.rc ${PN}
 	newconfd ${FILESDIR}/mrtg.confd ${PN}
 
-	dodoc ANNOUNCE COPYING CHANGES COPYRIGHT MANIFEST README THANKS
+	dodoc ANNOUNCE CHANGES COPYRIGHT MANIFEST README THANKS
 
 	if use doc ; then
 		docinto txt ; dodoc doc/*.txt
