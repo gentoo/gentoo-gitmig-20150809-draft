@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/glxquake-bin/glxquake-bin-0.ebuild,v 1.2 2005/06/08 18:41:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/glxquake-bin/glxquake-bin-0.ebuild,v 1.3 2006/03/31 03:24:46 wolf31o2 Exp $
 
 inherit games
 
@@ -10,10 +10,22 @@ SRC_URI="http://www.wh-hms.uni-ulm.de/~mfcn/shared/glxquake/glxquake.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 
-DEPEND="virtual/opengl"
+RDEPEND="sys-libs/glibc
+	virtual/opengl
+	x86? (
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXxf86vm
+				x11-libs/libdrm
+				x11-libs/libXau
+				x11-libs/libXdmcp )
+			virtual/x11 ) )
+	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 
 S=${WORKDIR}/glxquake
 
