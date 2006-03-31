@@ -1,6 +1,10 @@
 # ChangeLog for games-board/megamek
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/ChangeLog,v 1.4 2006/03/23 21:39:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/ChangeLog,v 1.5 2006/03/31 20:28:05 wolf31o2 Exp $
+
+  31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -megamek-0.29.10.ebuild, -megamek-0.30.6.ebuild:
+  Removing old versions.
 
 *megamek-0.30.9 (23 Mar 2006)
 
