@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060302.ebuild,v 1.6 2006/03/29 05:34:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060302.ebuild,v 1.7 2006/03/31 19:18:52 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -462,6 +462,8 @@ src_compile() {
 	else
 	unset CFLAGS CXXFLAGS
 	fi
+
+	append-flags -D__STDC_LIMIT_MACROS
 
 	CFLAGS="$CFLAGS" ./configure \
 		--prefix=/usr \
