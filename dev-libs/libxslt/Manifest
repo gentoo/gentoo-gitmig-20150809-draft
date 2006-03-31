@@ -1,25 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d2ca9bb53b30ab4b26a5aff19f86e51f ChangeLog 15270
-RMD160 99c5722fb02649340bdcbc3a180b9d8ed548908a ChangeLog 15270
-SHA256 f05004de4712edbd25bf4aba3488b7201925e394ff098b7d8ffc070fb67dce92 ChangeLog 15270
+MD5 a4b1aa97776be627485c06b05f15c517 ChangeLog 15533
+RMD160 d184020cbd12fdedda9026042fb24de3cfca5baf ChangeLog 15533
+SHA256 d987aeb35059ab748ba2ea83a41176a121b3a067bd3811fd368bee5992c283f5 ChangeLog 15533
 MD5 3f759d81e688060d55a76a9529dd41d7 files/digest-libxslt-1.1.15 68
 RMD160 baf1fde40f27ae6debf5a8475d5b8da0e33a8030 files/digest-libxslt-1.1.15 68
 SHA256 5044e560aeaef16387ac3d2fbb845893aca87dd3a7e949f07f2bcc98ad9f62af files/digest-libxslt-1.1.15 68
+MD5 661100efff83221b769292fe6f0d1993 files/digest-libxslt-1.1.15-r1 250
+RMD160 86372706ddc840f50a50991809737ba45b7a75d0 files/digest-libxslt-1.1.15-r1 250
+SHA256 588cf2cdf41c649d628086f6117addb677cd24842336430485663ed1039f2b27 files/digest-libxslt-1.1.15-r1 250
+MD5 684db3ea80f64024cc1d2c3466790f04 files/libxslt-1.1.15-pattern_fix.patch 13404
+RMD160 390c01b4988c1df5d9f6d2b77fb7d47dc18cca89 files/libxslt-1.1.15-pattern_fix.patch 13404
+SHA256 34c13e32ca69eb5c55669d23e07710f56ec1c275fd78fa8ad2d36cc7f413a0a7 files/libxslt-1.1.15-pattern_fix.patch 13404
 MD5 a772cd7aafe8f9e0fd59de02b2ea2e85 files/libxslt.m4-libxslt-1.1.8.patch 1292
 RMD160 0dcd21978aa0102784df670f2c9835da227f42c8 files/libxslt.m4-libxslt-1.1.8.patch 1292
 SHA256 0da59fb6cb50bf30e8ac79644df90394707ac07e60337aa3c0e53986781e9e0d files/libxslt.m4-libxslt-1.1.8.patch 1292
+MD5 636d561d6a3cab54c7f83792eec51db1 libxslt-1.1.15-r1.ebuild 1873
+RMD160 a813581892c1604a1a958c2e1eaf9004e3c025eb libxslt-1.1.15-r1.ebuild 1873
+SHA256 14b411ca306be6a15642bfa165a6334bd754a0f51e3a9763af90b15a1b40e95a libxslt-1.1.15-r1.ebuild 1873
 MD5 8d0a9caf015cb42e81bb61f26389f555 libxslt-1.1.15.ebuild 1749
 RMD160 8ad9e5bdf8f483eecf86176067cf1da8cafc0ded libxslt-1.1.15.ebuild 1749
 SHA256 42c7dc5790bd7ba32741cd2b810c0b00d8d1b2ddf80fa0fa34d1bcb83f067931 libxslt-1.1.15.ebuild 1749
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEH2qg2+ySkm8kpY0RAt53AJ9JJSUyG94WwIgzaeQFH5ASYgCzNQCcDDtk
-h3P/knbpVR2LyYykxBVbauY=
-=GybH
------END PGP SIGNATURE-----
