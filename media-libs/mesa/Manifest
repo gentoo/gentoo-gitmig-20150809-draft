@@ -1,6 +1,9 @@
-MD5 9adb616645e0a941ac013858c373615f ChangeLog 14165
-RMD160 25249ce29116034828f74c341cfbf07438210017 ChangeLog 14165
-SHA256 e0f912e5022109440a93859d58ac39b789467017da8b635ba8dbce26e076f3f6 ChangeLog 14165
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e175bb7923beae0cb813985d98503001 ChangeLog 14262
+RMD160 0f99bded956b06445f6541116bfb51c057b34ae0 ChangeLog 14262
+SHA256 8d8f122245a4039fefaa82c8042849f9ccc62361a6648830a4ce7e04cd215841 ChangeLog 14262
 MD5 ae36bba4e878c77dc2e823ce00e98869 files/6.4-dont-install-gles-headers.patch 421
 RMD160 70713f143d080b444089a95712efd227227c523f files/6.4-dont-install-gles-headers.patch 421
 SHA256 8f636c2e09ac7fdab0d06ebe62af5a311b52a03bf7b7bdecf4789a6e30e0777e files/6.4-dont-install-gles-headers.patch 421
@@ -31,9 +34,16 @@ SHA256 c0ec505e5fb263d4cde901ce9afe3197346acf67372460a2177231be8425e0ab files/ma
 MD5 5bd06d12cc0c1f11b9671eb7ec57f5f0 files/radeon-texture-problem.patch 363
 RMD160 d7241f061f4f0abbab57920cfaa480ad819bf9cb files/radeon-texture-problem.patch 363
 SHA256 01d74821fedfd3409d5aa5c7620c2d51e7f1ddad63b6b01d4bd25595afdfbbea files/radeon-texture-problem.patch 363
-MD5 e94fdb74446ed56b9e65765187c41dbe mesa-6.4.2-r2.ebuild 8313
-RMD160 b2549d3e52e60dec185c5c9a8316f31e4b03786a mesa-6.4.2-r2.ebuild 8313
-SHA256 1cf5993a67d13c42c3019c603e0de575253abaf6a3a7bc8ec852e2e21bd80748 mesa-6.4.2-r2.ebuild 8313
+MD5 7f17afd463c681f8cb1aa66d85fa68c9 mesa-6.4.2-r2.ebuild 8319
+RMD160 f826385ccf6bcb3a96be28f95122ce7fe16d3368 mesa-6.4.2-r2.ebuild 8319
+SHA256 b3110f2a2261b6c3e2593b6929ab2ecaec057f7b349f4b2569c251617674e414 mesa-6.4.2-r2.ebuild 8319
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELYr+AiZjviIA2XgRAkjmAKCZ9XYAOFcSviBmpzWLkfNl6tXGcQCfQvYI
+jCBAq6JxiHQ1XOaTW1ZFPzA=
+=eW7x
+-----END PGP SIGNATURE-----
