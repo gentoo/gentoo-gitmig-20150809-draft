@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyao
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.8 2006/03/04 00:53:04 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.9 2006/04/01 15:16:03 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pyao-0.82.ebuild:
+  Mark 0.82 ~ia64
 
   04 Mar 2006; Stefan Briesenick <sbriesen@gentoo.org> pyao-0.82.ebuild:
   removed 'examples' use flag, install examples unconditionally.
