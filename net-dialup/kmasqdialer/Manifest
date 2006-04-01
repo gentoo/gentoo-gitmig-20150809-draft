@@ -1,4 +1,15 @@
-MD5 24845c21655518b1f0f028d60f15ca98 kmasqdialer-2.05.ebuild 576
-MD5 c52d57d9ed3f29b5ff269e12612d2b00 ChangeLog 574
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4cdca2308334888aad1fc1ee23e8da17 ChangeLog 722
 MD5 07dbb7055d112bc5bb965e47bf36a027 files/digest-kmasqdialer-2.05 68
+MD5 5a66037e90b7d899546babd90aca0a46 files/kmasqdialer-2.05-noarts.patch 3636
+MD5 1aa0a16eb9fed84bc33099e506496f59 kmasqdialer-2.05.ebuild 618
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELurdjG8pv1lIUX4RAmFDAJ9DjrnrBVr9LPXlL0x9XKdnVCN5awCg8F4c
+I7QcyHtBVuuoc6eakG+splU=
+=aLm+
+-----END PGP SIGNATURE-----
