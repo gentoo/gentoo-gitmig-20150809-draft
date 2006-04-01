@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 65274f45994af10db3f066eae630b3cf rlcompleter2-0.95.ebuild 616
-MD5 d297498e934f71de287d9d5839f5735a ChangeLog 799
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 da8438b5e84265d9e7f656594b56d182 rlcompleter2-0.96.ebuild 615
-MD5 ec23d6d199038354c3192ec18cef4359 files/digest-rlcompleter2-0.96 68
+MD5 05ee1a5dbf85680f2d5012720af3cb4e ChangeLog 896
+RMD160 b663b8202120971f35c15a4d4aa317c81c79be5b ChangeLog 896
+SHA256 976480271eae87140008f660a3328c37427136a47e7c8f694e560fe59a693e49 ChangeLog 896
 MD5 396be63d62788796fe338ee140acdbdf files/digest-rlcompleter2-0.95 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCXsr2Kf2g/qXtneoRAgr+AJ97HOHh34TEHkDuON5l9unGpTqNeACff7VD
-Upe7ZJNdjLFU44bBHz1HlC8=
-=QznM
------END PGP SIGNATURE-----
+RMD160 9bdce8148ed1397ed39fb88da42c64e9a4bab062 files/digest-rlcompleter2-0.95 68
+SHA256 a0335da2708714c17368519e900cee1f13ff0b1a3c304e0e7c00502db77d8bd5 files/digest-rlcompleter2-0.95 68
+MD5 ec23d6d199038354c3192ec18cef4359 files/digest-rlcompleter2-0.96 68
+RMD160 87bd906cf058add7fa3b95c923c63b8946963103 files/digest-rlcompleter2-0.96 68
+SHA256 9918b1e652f88a79c7970d4b87beec9d9ad9443c3f0dba1fed5ead24e37054c1 files/digest-rlcompleter2-0.96 68
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
+SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
+MD5 65274f45994af10db3f066eae630b3cf rlcompleter2-0.95.ebuild 616
+RMD160 af8881eecb63ce07d4a883a52bfed0caf99cd42c rlcompleter2-0.95.ebuild 616
+SHA256 e9da41037515b53b9cccf5ea377190796b9afa69342eca5bf9d4c416912e806d rlcompleter2-0.95.ebuild 616
+MD5 7da4c5cf1d24272b2b9739b67d94dcfe rlcompleter2-0.96.ebuild 623
+RMD160 4f7a83d6183529b9935a54569526a277a410d8bd rlcompleter2-0.96.ebuild 623
+SHA256 3fd5855379c87aa408a77168a521f231efa8609d643985c040f15c98b4de9165 rlcompleter2-0.96.ebuild 623
