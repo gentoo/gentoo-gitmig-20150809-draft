@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a7e3e676434ccd740ca1d742e2da0dd6 pytables-0.8.1.ebuild 528
-MD5 c36665ad30aa37bd7322a00225d2e88e ChangeLog 2361
-MD5 0d508cfae59a14b100c113029021b732 pytables-0.9.1.ebuild 536
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 ab78ac37a87e443155a6718fe13b6581 pytables-0.7.2.ebuild 522
-MD5 17c1213be156b60e0e58f637f90aa08d pytables-0.8.ebuild 520
-MD5 521927168459d6ba58e49fb73e536857 files/digest-pytables-0.8 65
+MD5 8bc5cc638f7545b0abb7944981b75336 ChangeLog 2456
+RMD160 2f1cb7722eb0429a13f5e9d7f86770c5abf2b811 ChangeLog 2456
+SHA256 d4597f95ed7c5e2cecd72607e7d36378e50938eb1fabd115cbc73286e686c096 ChangeLog 2456
 MD5 215625681422b404c7b499e6ec664314 files/digest-pytables-0.7.2 66
+RMD160 b62001093216fe5ce394ac7055c2ff6b23062721 files/digest-pytables-0.7.2 66
+SHA256 6bbb870849305bfe688f6c5821ab41ad278e4c588392ff72d3df5c6f7f288974 files/digest-pytables-0.7.2 66
+MD5 521927168459d6ba58e49fb73e536857 files/digest-pytables-0.8 65
+RMD160 a629261ae3a51224d5a81c3a76584fe54e8b9c77 files/digest-pytables-0.8 65
+SHA256 61b6a86460b5cc228acf86ef06449a24bb711b34ba319aa77640254a50fe54be files/digest-pytables-0.8 65
 MD5 666811c77fb131983a32904d33c5bc3e files/digest-pytables-0.8.1 67
+RMD160 b767dcafb6d19a8da72addd7502db10dd6cc6d4b files/digest-pytables-0.8.1 67
+SHA256 9dc14604bb70ac8f9f9fcf071bcb7a4411a17a5e112a98fa700d1af10b1cc1f5 files/digest-pytables-0.8.1 67
 MD5 fd8c69b76c15d2bec91326d54c2cad8f files/digest-pytables-0.9.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZ3cnKf2g/qXtneoRApbiAKCxdxXG0hzr7LE6dIwajG9XJ7GuxACgnCDf
-qwT1Dc3eZOMVWUn7OJfSc4A=
-=QVrY
------END PGP SIGNATURE-----
+RMD160 6d4858ada60c9aa1ac2e78841a395afa7e76fbbc files/digest-pytables-0.9.1 67
+SHA256 307d3f495e6e5099f691d815c38a9179f7feb4001f0e10540be7e3f28ded0ca2 files/digest-pytables-0.9.1 67
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
+SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
+MD5 ab78ac37a87e443155a6718fe13b6581 pytables-0.7.2.ebuild 522
+RMD160 fec221753c5d43592e54de93087001a34cad5dd4 pytables-0.7.2.ebuild 522
+SHA256 7c759c63516d158321015b9dd9e9227ee140c9edaecb0cfb9ac8f301edc7f7ad pytables-0.7.2.ebuild 522
+MD5 a7e3e676434ccd740ca1d742e2da0dd6 pytables-0.8.1.ebuild 528
+RMD160 fe792e9a405779f118f54a9140297cdd8f53d0bb pytables-0.8.1.ebuild 528
+SHA256 2fff9e0666532da5246174bd0df4e298d42303522fe6e1799ca01824b95cce49 pytables-0.8.1.ebuild 528
+MD5 17c1213be156b60e0e58f637f90aa08d pytables-0.8.ebuild 520
+RMD160 c8b516e4a143343128db1730d546cbcf722ef4dc pytables-0.8.ebuild 520
+SHA256 f2ab8db8e297df001ba0827fef96c07277de90239d41b3dc4675cf68b6e4a1eb pytables-0.8.ebuild 520
+MD5 5c6aa7a0ae4a8414c209d5a5c79e754a pytables-0.9.1.ebuild 543
+RMD160 f0e9f496166dc04b1b0d75e79de0377fef36daaa pytables-0.9.1.ebuild 543
+SHA256 35d33d2d249d36db0bad86860297581f07f991690701ba0199c9337604ddb560 pytables-0.9.1.ebuild 543
