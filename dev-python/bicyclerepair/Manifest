@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0e9f3ee5b43fe7ab0f54db283ede578c ChangeLog 1244
+MD5 8f653d1d31b956c93df40dc3e51547f5 ChangeLog 1343
+RMD160 5161ecd7927125ce6de2c679cd5ba4a0d59347f6 ChangeLog 1343
+SHA256 cf66cf3c38204fe0fbe5305811caf4c243a5a8d649a722a3b2d0df1df2624944 ChangeLog 1343
 MD5 a92dd7c2f4a7798a07968997e3c35923 bicyclerepair-0.7.1-r1.ebuild 1369
+RMD160 5a0b2c0521e3e835f940144920c3d5bf198d476a bicyclerepair-0.7.1-r1.ebuild 1369
+SHA256 eea002283061051a58f9a4cce8747c83afc49e4b2401500b226ecb437ac60658 bicyclerepair-0.7.1-r1.ebuild 1369
 MD5 eaafc19eef14024c9218dc9a91c5a8af bicyclerepair-0.7.1.ebuild 1023
-MD5 3c98a190916c0b4283ef1a9bff884138 bicyclerepair-0.9.ebuild 1370
+RMD160 e17c4f72b6e1cbb50dd404e10bcb6d6cc35b5510 bicyclerepair-0.7.1.ebuild 1023
+SHA256 78fc3a57169e0e02648dd6da95d3cff94f0a20d52676f07e46501c42da91d3e1 bicyclerepair-0.7.1.ebuild 1023
+MD5 f51cadbad1d84df9b74becffa9a6e019 bicyclerepair-0.9.ebuild 1380
+RMD160 6b0ad683a615f3c72f9a1990d07aa65c45477163 bicyclerepair-0.9.ebuild 1380
+SHA256 2db40dd23c5f460452f1e6e0c4601a9e2d3dbe956c0405046914d5cf728103c2 bicyclerepair-0.9.ebuild 1380
 MD5 1929efd859e004d9dfe70dde4e1c8940 files/digest-bicyclerepair-0.7.1 70
+RMD160 6d8b09b1b62f7d1480350ee3b5ce7d18ff913552 files/digest-bicyclerepair-0.7.1 70
+SHA256 ad3946109aafb68fbe341e250d81cc4ef938e97cb23f69dc26fb1fe7b1b36d97 files/digest-bicyclerepair-0.7.1 70
 MD5 1929efd859e004d9dfe70dde4e1c8940 files/digest-bicyclerepair-0.7.1-r1 70
+RMD160 6d8b09b1b62f7d1480350ee3b5ce7d18ff913552 files/digest-bicyclerepair-0.7.1-r1 70
+SHA256 ad3946109aafb68fbe341e250d81cc4ef938e97cb23f69dc26fb1fe7b1b36d97 files/digest-bicyclerepair-0.7.1-r1 70
 MD5 a95d1f58d5a668d967f22340edd1686d files/digest-bicyclerepair-0.9 69
+RMD160 12885dfa753475a83f4c1ebfa4334700afbaee15 files/digest-bicyclerepair-0.9 69
+SHA256 13eb6640d05d2fdd402fa8856b99ece2a121e236ae5cb4a8da8f5157e5c4d061 files/digest-bicyclerepair-0.9 69
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDf7WBomPajV0RnrERAmUkAJsGVWx3qHgsYDKp6ePiclUAt0oG0wCff5sM
-iieynMNrQeiOawVM2NJq+xo=
-=pG4L
------END PGP SIGNATURE-----
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
+SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
