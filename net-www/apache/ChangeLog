@@ -1,6 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.469 2006/03/08 01:55:15 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.470 2006/04/01 02:59:30 vericgar Exp $
+
+*apache-2.0.55-r2 (31 Mar 2006)
+
+  31 Mar 2006; Michael Stewart <vericgar@gentoo.org>
+  +apache-2.0.55-r2.ebuild:
+  Replace the patch for AddDirectoryIndex with a rewritten one. This should
+  fix the segfaults reported in bug 106808
 
   08 Mar 2006; Michael Stewart <vericgar@gentoo.org> apache-2.2.0-r2.ebuild:
   Actually install apache2-builtin-mods to the location where we expect it.
