@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrtf
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/ChangeLog,v 1.1 2005/06/19 15:31:59 fserb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/ChangeLog,v 1.2 2006/04/01 18:51:22 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pyrtf-0.45.ebuild:
+  Mark 0.45 ~ia64
 
 *pyrtf-0.45 (19 Jun 2005)
 
