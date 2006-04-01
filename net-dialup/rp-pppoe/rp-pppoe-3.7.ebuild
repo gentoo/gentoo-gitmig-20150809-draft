@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.7.ebuild,v 1.5 2006/03/22 22:09:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.7.ebuild,v 1.6 2006/04/01 07:53:24 mrness Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,6 +16,19 @@ IUSE="X"
 
 DEPEND="net-dialup/ppp
 	X? ( dev-lang/tk )"
+
+pkg_setup() {
+	einfo "Gentoo is moving toward common configuration file for all network interfaces."
+	einfo "Please use baselayout adsl module for configuring your network using rp-pppoe"
+	einfo "or, better yet, use generic PPP support available in baselayout-1.12."
+
+	if [[ -x "${ROOT}/etc/init.d/rp-pppoe" ]]; then
+		echo
+		eerror "The old /etc/init.d/rp-pppoe script is incompatible with ${CATEGORY}/${P} and"
+		eerror "it should be removed before you could upgrade this package."
+		die "Unsupported old init script detected"
+	fi
+}
 
 src_unpack() {
 	unpack ${A} || die "failed to unpack"
