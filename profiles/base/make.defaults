@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.14 2005/12/03 12:12:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.15 2006/04/01 19:06:43 eradicator Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -13,7 +13,7 @@ FEATURES="autoconfig strict sfperms"
 USE_EXPAND="FRITZCAPI_CARDS FCDSL_CARDS VIDEO_CARDS DVB_CARDS INPUT_DEVICES LINGUAS USERLAND KERNEL ELIBC"
 
 CONFIG_PROTECT="/etc /var/qmail/control /usr/share/config /usr/kde/2/share/config /usr/kde/3/share/config"
-CONFIG_PROTECT_MASK="/etc/gconf"
+CONFIG_PROTECT_MASK="/etc/gconf /etc/eselect/compiler"
 
 # 'Sane' defaults
 ELIBC="glibc"
