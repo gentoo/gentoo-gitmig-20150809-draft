@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.0-r1.ebuild,v 1.3 2006/03/29 18:11:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.1.ebuild,v 1.1 2006/04/01 14:04:18 zaheerm Exp $
 
 inherit flag-o-matic eutils
 
@@ -38,7 +38,6 @@ src_compile() {
 		replace-flags -O3 -O2
 	fi
 
-	epatch ${FILESDIR}/ffmpeg_dos.patch
 	econf || die
 	emake || die
 
