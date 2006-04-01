@@ -10,6 +10,6 @@ SHA256 1a24791b6269bd32dc5ee5557a52433f60b00c4a3389f012c2ee5733cdd9d988 files/tw
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
 SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
-MD5 c6b6c51da0658e5a2313e4a18fa409e7 twisted-xish-0.1.0-r1.ebuild 515
-RMD160 664a9d72254a139188a21f24abce83ed2defc87f twisted-xish-0.1.0-r1.ebuild 515
-SHA256 89c3dd2e6865fe0fb7dbe571ebce0c43395b08085ba4a83569d6a132a416866e twisted-xish-0.1.0-r1.ebuild 515
+MD5 77706196a7f4eeb41b589483fc5ac670 twisted-xish-0.1.0-r1.ebuild 521
+RMD160 dc81a7baccc49c3ea6de4afc0381341ebc11901b twisted-xish-0.1.0-r1.ebuild 521
+SHA256 6e77b687d966ea39c109a6355ce3244b9aa0435f01e7aa41dfae728cb683a961 twisted-xish-0.1.0-r1.ebuild 521

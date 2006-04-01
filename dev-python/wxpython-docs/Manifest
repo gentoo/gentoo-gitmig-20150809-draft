@@ -1,19 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ee877bda9405c6be2fcdb9aff08b649a ChangeLog 3086
-MD5 3b06f1e87549af51d78bb7bfa33728b5 metadata.xml 182
-MD5 dbc25a6ab9efc80ac10cbdac0b6d762c wxpython-docs-2.4.2.4-r1.ebuild 1168
-MD5 af19496ef17dce374f7a10dc84688c07 wxpython-docs-2.6.0.0-r1.ebuild 1508
-MD5 2911f08ca57d7ce8297146ffd74e5fca files/digest-wxpython-docs-2.4.2.4-r1 146
-MD5 2e16d6b640e3678d8d85abe15dfbc3b0 files/digest-wxpython-docs-2.6.0.0-r1 225
+MD5 a426e1b978365d08a12759d5087e437c ChangeLog 3199
+RMD160 bc4986b6fc95739fab0516268dbfd73e9973641c ChangeLog 3199
+SHA256 a12ccbde4a1ef37af873cb54bd0d082e855ba8ebbff9ef67b02c07ed347b52a3 ChangeLog 3199
 MD5 f98b398d5de65497f6e213f8a2dec801 files/demo-2.6.0.0-version.patch 219
+RMD160 e9430c6c91051470ddcf5081cd853b11998aff71 files/demo-2.6.0.0-version.patch 219
+SHA256 8cb193e177811ea23631330d18a0ac6dfe9a889f0bbf4d1ba78a453347e0b0e9 files/demo-2.6.0.0-version.patch 219
+MD5 2911f08ca57d7ce8297146ffd74e5fca files/digest-wxpython-docs-2.4.2.4-r1 146
+RMD160 aa12b8e7f865a13d43b512853f57d7ef3f974abd files/digest-wxpython-docs-2.4.2.4-r1 146
+SHA256 56bcba7885875c299744ab849c99eb473151c40761f337e16b8ad777aa1ff495 files/digest-wxpython-docs-2.4.2.4-r1 146
+MD5 b700bf19e6bd6afd8c5f0c48c300c4f5 files/digest-wxpython-docs-2.6.0.0-r1 225
+RMD160 3e2dcf0d7de32385cfd5066d23b2642549c6d4c7 files/digest-wxpython-docs-2.6.0.0-r1 225
+SHA256 9a62e1760b589a77f2ffb795ef5be89b7c91a20a6b1ec5c57d05941d30db36ad files/digest-wxpython-docs-2.6.0.0-r1 225
 MD5 875e8ee40a9db65f42134928d4fd8e09 files/viewdocs-2.4.2.4.patch 329
+RMD160 86c02bcede99227afd7a7df3146a4b63d7412ed5 files/viewdocs-2.4.2.4.patch 329
+SHA256 68365660410ba064417e44555d64a2ee00b69f5642dd44424dfb34a02f23d360 files/viewdocs-2.4.2.4.patch 329
 MD5 f451c42589546a9015ae771ca742a53f files/wxpython-docs-2.6.0.0-writable.patch 1342
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFDd2/K/NoSW7FuNV8RAmkIAKCDZ9jLs8oF08OJBe4cXr4pxKmqgwCgwuei
-jhpJNKlY6fMu403p/nPgpXQ=
-=jrO2
------END PGP SIGNATURE-----
+RMD160 980442842929ac6cc3125341d49f667e11518ead files/wxpython-docs-2.6.0.0-writable.patch 1342
+SHA256 01a82ab9ac94b06c1cfac67e52e3e1af68963988f9d5d189ad22d325395fcedf files/wxpython-docs-2.6.0.0-writable.patch 1342
+MD5 3b06f1e87549af51d78bb7bfa33728b5 metadata.xml 182
+RMD160 fb946c0e5b0ca4cdb4e601d33334103fe37f286d metadata.xml 182
+SHA256 9a796a09c822c240917ed336dd20cf3a4e895fc394855b853c5d88438c5d8908 metadata.xml 182
+MD5 dbc25a6ab9efc80ac10cbdac0b6d762c wxpython-docs-2.4.2.4-r1.ebuild 1168
+RMD160 276f44a4b1fed15cff45f7fc07cb1dabb87552a9 wxpython-docs-2.4.2.4-r1.ebuild 1168
+SHA256 a2d99ddec3a20d3e775a20f150dbd1d63b22e558897efe77b0c85efa1f91005a wxpython-docs-2.4.2.4-r1.ebuild 1168
+MD5 d385605e015e2c7d9baf832b44a63755 wxpython-docs-2.6.0.0-r1.ebuild 1516
+RMD160 5fe6ef8ba30274e03d05d6bb453d6f2ed5bc8856 wxpython-docs-2.6.0.0-r1.ebuild 1516
+SHA256 893e9892b27dcfd80fdbd7966352b0b8d61c1838845afd6d9232e03384582359 wxpython-docs-2.6.0.0-r1.ebuild 1516
