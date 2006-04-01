@@ -1,11 +1,11 @@
                                                           -*-outline-*-
 
-* Common Lisp Controller 4.x
+* Common Lisp Controller 4.x and 5.x
 
-With version 4.x of the Debian Common Lisp Controller, the design of
-the controller was simplified so that source was compiled into
-/var/cache/, per user, on demand (ie. when you evaluate (require :foo)
-at the REPL).
+With version 4.x and 5.x of the Debian Common Lisp Controller, the
+design of the controller was simplified so that source was compiled
+into /var/cache/, per user, on demand (ie. when you evaluate (require
+:foo) at the REPL).
 
 * Common Lisp Controller 3.x 
 
