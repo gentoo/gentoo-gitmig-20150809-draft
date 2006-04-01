@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a4f52e789955b7510c0ab7d0fd9158a6 ChangeLog 1596
+MD5 ab549cfb6764a7d29bd1819f373eadbd ChangeLog 1691
+RMD160 8339178c04a96e3e38650f983892d834488480d5 ChangeLog 1691
+SHA256 f4b6e21c4f802a525cc16589dd3bc30158b801c3f2e0984299251af4dbe29dc2 ChangeLog 1691
 MD5 e0398e4fe713935f5761036dde04b7dd drpython-3.10.12.ebuild 804
-MD5 a7d28c6c2e5d9adc70de123586359993 drpython-3.10.13.ebuild 1129
+RMD160 20818173f4024e27b8e4334d2b3d289793d5a9cd drpython-3.10.12.ebuild 804
+SHA256 715bed9b454769bb80f098685ebc38829c9bf5aa7838604a1eb8ef18a9fa1b93 drpython-3.10.12.ebuild 804
+MD5 018e21e2d6bfe44e1c327b12bbf0d4eb drpython-3.10.13.ebuild 1135
+RMD160 bd8babbcee7cfa7f3c9115aea47020188ece90fb drpython-3.10.13.ebuild 1135
+SHA256 694f1eba1f1a1afac81659328f0b2ce3a396c0d51fa2b43559330d02cb721e78 drpython-3.10.13.ebuild 1135
 MD5 1ad88fcbeefa623214abdbbbc5305509 files/digest-drpython-3.10.12 65
+RMD160 77478f334789e7174adf1e8cb72d6e6251686e22 files/digest-drpython-3.10.12 65
+SHA256 a59166c6e5617fd9fcdda2e62926141a6f17f59e9fdeffcb6b8b4ff5c4a43a39 files/digest-drpython-3.10.12 65
 MD5 d50979dcdc996758a4e570dc82d0a015 files/digest-drpython-3.10.13 65
+RMD160 b7086e2f197b70554c8f2f39079c464c27b222b3 files/digest-drpython-3.10.13 65
+SHA256 253a39c6dbabd587570abd92f19f4e18f37f0dd827dcc0ad779fe1d4cf404c09 files/digest-drpython-3.10.13 65
 MD5 8f97fad63e509cc0537b92bedec9c731 files/drpython.py-3.10.12.patch 370
+RMD160 c45064437baffbb7b641e305fb0e76841a4b88c4 files/drpython.py-3.10.12.patch 370
+SHA256 64638ab22115d229e470056aaed5efe3f1744326caed7beefeadad3415258afb files/drpython.py-3.10.12.patch 370
 MD5 8f97fad63e509cc0537b92bedec9c731 files/drpython.py-3.10.13.patch 370
+RMD160 c45064437baffbb7b641e305fb0e76841a4b88c4 files/drpython.py-3.10.13.patch 370
+SHA256 64638ab22115d229e470056aaed5efe3f1744326caed7beefeadad3415258afb files/drpython.py-3.10.13.patch 370
 MD5 88f55e5d86d6886a75b1f13c95e3c8a2 metadata.xml 616
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfv7EFdQwWVoAgN4RAot2AKCBTe/P98qxXy06hQmWNrSY5roJ7ACeMDPW
-DYpc6sqn666v+MldkojNxdw=
-=EP3l
------END PGP SIGNATURE-----
+RMD160 55d32aae74924cd293b2c87b126506ee696aa947 metadata.xml 616
+SHA256 c40683b55039fafad9ee14c549b3ec4cbcaca6d52b966d884666b0e2becd4744 metadata.xml 616
