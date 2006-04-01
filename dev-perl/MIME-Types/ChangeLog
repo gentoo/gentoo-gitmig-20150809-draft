@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-Types
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.9 2006/01/13 15:12:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.10 2006/04/01 22:35:21 mcummings Exp $
+
+  01 Apr 2006; <mcummings@gentoo.org> MIME-Types-1.16.ebuild:
+  Marking stable sparc, x86
 
 *MIME-Types-1.16 (13 Jan 2006)
 
