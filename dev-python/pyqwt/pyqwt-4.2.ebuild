@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-4.2.ebuild,v 1.2 2005/03/02 07:14:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-4.2.ebuild,v 1.3 2006/04/01 18:49:38 agriffis Exp $
 
 
 inherit distutils eutils
@@ -14,7 +14,7 @@ HOMEPAGE="http://pyqwt.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
 IUSE="debug"
 
 DEPEND=">=dev-lang/python-2.3.2

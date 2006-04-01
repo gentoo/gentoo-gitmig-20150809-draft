@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyqwt
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/ChangeLog,v 1.1 2005/02/28 23:05:42 carlo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/ChangeLog,v 1.2 2006/04/01 18:49:38 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pyqwt-4.2.ebuild:
+  Mark 4.2 ~ia64
 
 *pyqwt-4.2 (01 Mar 2005)
 
