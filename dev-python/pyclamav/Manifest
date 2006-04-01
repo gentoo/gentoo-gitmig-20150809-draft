@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f8d9bc211a6ebc3e529c41c1ed064e5d ChangeLog 1090
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 27fee4bf51c0758275fe1adb75bda6a0 pyclamav-0.1.ebuild 620
-MD5 c3558148be40d445d9b305d875626dca pyclamav-0.2.1.ebuild 622
-MD5 8ccd12fe5c0456ca081a7caae1a8a618 pyclamav-0.3.1.ebuild 623
+MD5 1c8e4957d555f04518aa101a75518b37 ChangeLog 1185
+RMD160 dfe5a8d861538c536708301f07aea98dd40b5121 ChangeLog 1185
+SHA256 1cce607a487bc7cc937846a6c77fbea5de76058e3e8002ee54519b7f1f5886b9 ChangeLog 1185
 MD5 db27786d8dbdd667042c5aac7e5dd1a0 files/digest-pyclamav-0.1 62
+RMD160 766ce4893a365eee16e2cdb4974a193a665c9e05 files/digest-pyclamav-0.1 62
+SHA256 e69e008d172c274c4652a9b12e4cf33e2f9b2c4ebbb93c832625aa8dbced24bd files/digest-pyclamav-0.1 62
 MD5 02e3cc7499b0aabc2c0446747a2af320 files/digest-pyclamav-0.2.1 65
+RMD160 7d236c1b98439fd39c4a7c7d2da28c912e8fedd5 files/digest-pyclamav-0.2.1 65
+SHA256 9e608f6d5149a5a8b2035d7a19e2f494d1e9ef36d5b45e4b978e63ede949114d files/digest-pyclamav-0.2.1 65
 MD5 f178c5a3bcbcc48f704c7e6a7d152168 files/digest-pyclamav-0.3.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC45Id2jLqHNfbg2URAmMlAJ92A5idoFA5oajhjFcEMuhDRJh2eACg0gNa
-RSI1c0jxOBEjKVrxPRJFE5w=
-=Tysj
------END PGP SIGNATURE-----
+RMD160 36c7a2d0ac883906509e93e5f90ac2b7d32e763c files/digest-pyclamav-0.3.1 65
+SHA256 e1c94f4622f64165e3ab209daeb4b9b09d6503cf0b0cb41e8d4171e6159a8773 files/digest-pyclamav-0.3.1 65
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
+SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
+MD5 27fee4bf51c0758275fe1adb75bda6a0 pyclamav-0.1.ebuild 620
+RMD160 29c6bda3be3179f88f1f8d1d4675102185a7fc8f pyclamav-0.1.ebuild 620
+SHA256 79166d95066e7595d7291de8c4936d1fa2533bea55abd7b175f941dc47c734b2 pyclamav-0.1.ebuild 620
+MD5 c3558148be40d445d9b305d875626dca pyclamav-0.2.1.ebuild 622
+RMD160 8a8dd465b668be3e0c0dbab49b4d0e20fdcf5006 pyclamav-0.2.1.ebuild 622
+SHA256 312c4a2db035eed38fcd34442e44919ef09d882b1f82679bf16f2339e7498195 pyclamav-0.2.1.ebuild 622
+MD5 0cc2163f587b1ce81e3fb831896b0444 pyclamav-0.3.1.ebuild 631
+RMD160 b85078533dedbd4e3455b4a9c0598bc3afe06b7c pyclamav-0.3.1.ebuild 631
+SHA256 32d291f08b6890858aa179dd707255cfab432d2e503156e506fcd8c5165cf16a pyclamav-0.3.1.ebuild 631

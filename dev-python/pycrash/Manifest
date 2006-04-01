@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a7c1d883d3e38a2b43caf5c39366bf63 ChangeLog 1275
-RMD160 27b4d0fea43d5e8b19ccf8c222b64176386a2a4f ChangeLog 1275
-SHA256 ab7e0f6b6729715893aad8f90cdf60fb49d903b4e5beead12a6e63c72d91e368 ChangeLog 1275
+MD5 e7962f1636738665ca8cccdffe969aa1 ChangeLog 1376
+RMD160 a4c1854d340bb122a5ed410ffa3012e49f5f0f99 ChangeLog 1376
+SHA256 d433cd7d4ff9f0c34f0331247e15a4b29f765dfcea666d60971be53f9704f592 ChangeLog 1376
 MD5 46404d56ce59a154184f3c8544c8065b files/digest-pycrash-0.4_pre2 67
 RMD160 5e8939756b7b9edabf97be772166fe9d897fd434 files/digest-pycrash-0.4_pre2 67
 SHA256 7c9336240b65b2f153700989d77cdf82597055b7c89fc82c9a4f0aa746b3cdef files/digest-pycrash-0.4_pre2 67
@@ -16,13 +13,6 @@ SHA256 ba7236aa1e00503033607725ec2291ad23de55f582ee9acea2ae89d9fb7ebfe5 metadata
 MD5 05cb176a59fff9d3ef82ccde725cde6b pycrash-0.4_pre2.ebuild 563
 RMD160 c354e1162b0f53bd87eec48ad74c1d6173e652d9 pycrash-0.4_pre2.ebuild 563
 SHA256 3c7827164cf302e9a7ce6dc5319c4ed5db75291e4e3905a2d46c75da6718366f pycrash-0.4_pre2.ebuild 563
-MD5 c8dd2c5da6681f2d3bc51d108ceb5488 pycrash-0.4_pre3.ebuild 665
-RMD160 e7179462d1d95da38ecd87e2ecef0b10472faded pycrash-0.4_pre3.ebuild 665
-SHA256 8b6f0d1e25dda9cf52fe0afd9be1fea00b472b623705e6d16277d9c29da8877f pycrash-0.4_pre3.ebuild 665
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFECe+22jLqHNfbg2URAnkFAKCS3x9tLqhr+1kmXFU6ClVyIbXXMACgtwjK
-gFUBkwmEwkNri6ExzTlhP+c=
-=zD/j
------END PGP SIGNATURE-----
+MD5 522c03741d3f4d7a5c646f6419c5777d pycrash-0.4_pre3.ebuild 673
+RMD160 e8ed8306f784fa598edf4399d48e1ed1faab0826 pycrash-0.4_pre3.ebuild 673
+SHA256 b72887aaa42df065957d004442ec94628337b06afb0a79bc6a108009daefb587 pycrash-0.4_pre3.ebuild 673
