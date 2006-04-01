@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1-r4.ebuild,v 1.2 2006/03/31 20:30:56 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1-r4.ebuild,v 1.3 2006/04/01 04:39:56 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -49,9 +49,9 @@ export MOZILLA_OFFICIAL=1
 
 linguas() {
 	local LANG
-	for LANG in ${LINGUAS//_/-}; do
-		if hasq ${LANG} ${LANGS} en; then
-			echo -n "${LANG} "
+	for LANG in ${LINGUAS}; do
+		if hasq ${LANG} ${LANGS//-/_} en; then
+			echo -n "${LANG//_/-} "
 		else
 			local SLANG
 			for SLANG in ${SHORTLANGS}; do
