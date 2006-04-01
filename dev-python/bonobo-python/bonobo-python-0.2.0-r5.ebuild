@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/bonobo-python-0.2.0-r5.ebuild,v 1.6 2004/12/11 23:14:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/bonobo-python-0.2.0-r5.ebuild,v 1.7 2006/04/01 14:44:07 agriffis Exp $
 
 inherit virtualx
 
@@ -18,7 +18,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	virtual/python"
 
 SLOT="0"
-KEYWORDS="x86 sparc alpha ~ppc"
+KEYWORDS="alpha ~ia64 ~ppc sparc x86"
 LICENSE="GPL-2"
 
 src_unpack() {
