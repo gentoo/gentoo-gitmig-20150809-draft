@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.1.ebuild,v 1.3 2006/03/25 21:50:25 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.1.ebuild,v 1.4 2006/04/01 05:07:04 keri Exp $
 
-inherit eutils flag-o-matic kde-functions
+inherit eutils flag-o-matic
 
 MY_P=qp${PV}
 
