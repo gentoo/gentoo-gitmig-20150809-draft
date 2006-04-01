@@ -1,10 +1,46 @@
-MD5 4327e9604bd0bdc62d19538adc9e5ec5 ChangeLog 3530
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 51d7e50e9c4cbce1a5ddb6f13298e8b8 ChangeLog 3693
+RMD160 c97b88cdcaa61ffa885c0e9f29a7a582d09d7ac7 ChangeLog 3693
+SHA256 a6dea4f267926acba52c6c4e134a13c25a90b2c850ef4569448c965e37c26f5c ChangeLog 3693
 MD5 24037d452fff400001cf4a3a4dec3585 files/digest-portaudio-18.1 64
+RMD160 775558d35644e94c97b1afe2df619dadafebb5f4 files/digest-portaudio-18.1 64
+SHA256 e49d248e0713ad34446f0519fb353e006889a7c7c996b09f934382f1bbecef78 files/digest-portaudio-18.1 64
 MD5 24037d452fff400001cf4a3a4dec3585 files/digest-portaudio-18.1-r3 64
+RMD160 775558d35644e94c97b1afe2df619dadafebb5f4 files/digest-portaudio-18.1-r3 64
+SHA256 e49d248e0713ad34446f0519fb353e006889a7c7c996b09f934382f1bbecef78 files/digest-portaudio-18.1-r3 64
+MD5 4be0252f8cfaa06280df4e586d6a4a64 files/digest-portaudio-18.1-r4 238
+RMD160 2283eea197193ae2fd7542a0028cf9d164b5ab20 files/digest-portaudio-18.1-r4 238
+SHA256 4dd74ccf9a3e5af23c4b083062682ef447d7318e700afd29f4b7ac3bf3dcee55 files/digest-portaudio-18.1-r4 238
 MD5 4219b3627542b1f316cbaa75b3ae9d4d files/portaudio-18.1-Makefile.linux 1585
+RMD160 15e6980fe7e749aa4faaf42c9110813bb3103842 files/portaudio-18.1-Makefile.linux 1585
+SHA256 c17322d3600484695213deb5d11108413f2e453f5265f87875ad6a2f1b70f291 files/portaudio-18.1-Makefile.linux 1585
 MD5 669994e10d27eea57fd352f0336268fd files/portaudio-18.1-Makefile.macos 1584
+RMD160 2ffbe7333a42c5518fdbbc5aaf3efc9b08b6de7b files/portaudio-18.1-Makefile.macos 1584
+SHA256 981c94e1dcf32b078b346eed1ed97b16b970aac8f08626dbeffb735a52f26f82 files/portaudio-18.1-Makefile.macos 1584
 MD5 8461b4a89f5c56d005f6818a8bf410f3 files/portaudio-18.1-use-fpic.patch 3420
+RMD160 a808a293c85820d14348ef6fa2a7f6cc32660d4f files/portaudio-18.1-use-fpic.patch 3420
+SHA256 4011b1202bafc32b4c077c115074c89ec444897a2be65fb684ec50391898e13b files/portaudio-18.1-use-fpic.patch 3420
 MD5 cd67103269f0834eda38b44bd15c1b52 files/portaudio-Makefile.macos 947
+RMD160 ad6b7d646f867c22e1e7e35eccaa5adf1ce7067b files/portaudio-Makefile.macos 947
+SHA256 36c735b3c155019d84ea3848f0ec3f8e009aab1ac8e027af9323af249f12d47b files/portaudio-Makefile.macos 947
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 MD5 5d4fa3720f192e7f11ed3e169d275324 portaudio-18.1-r3.ebuild 998
+RMD160 61d6806a813636a19ddba42b4fea6c80dea8e9a4 portaudio-18.1-r3.ebuild 998
+SHA256 ecdf055b128bcabf7bd231d83cfa4d699e4b2c386ae7a53d121881ccf1841d34 portaudio-18.1-r3.ebuild 998
+MD5 37f4c31251728ffe57b5fd7333341ff0 portaudio-18.1-r4.ebuild 1052
+RMD160 08b73383e768697d0ec684b6e631f75e35bc4199 portaudio-18.1-r4.ebuild 1052
+SHA256 aef638ed41ed013de511ed48cf5c904dc76706314000cba278c50929dc3ade8b portaudio-18.1-r4.ebuild 1052
 MD5 e7355796f0c381e5e8128913f94e4b8a portaudio-18.1.ebuild 995
+RMD160 af0edc7d988953321519eefd4fb7610a326ab8aa portaudio-18.1.ebuild 995
+SHA256 0279febaa02eb0c390c3ee207239ab650ccef9d361397f0620c17719039efd71 portaudio-18.1.ebuild 995
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELh+POpjtAl+gMRURAvEtAKDUk/TMS6QlSkCQY3Q7ZxoHTFzCsQCff/D1
+SA/S6+mMaeZHpoWxGPpdukw=
+=nOkc
+-----END PGP SIGNATURE-----
