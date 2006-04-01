@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.6-r2.ebuild,v 1.1 2006/04/01 05:12:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.6-r2.ebuild,v 1.2 2006/04/01 22:48:02 eradicator Exp $
 
 IUSE="crypt ldap spell ssl filter mysql postgres nls"
 
@@ -88,7 +88,7 @@ src_unpack() {
 
 	use nls &&
 		cd ${S} &&
-		unpack all_locales-${PV}-${LOCALES_VER}.tar.bz2
+		unpack all_locales-${LOCALES_VER}.tar.bz2
 }
 
 src_compile() {
