@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.ebuild,v 1.2 2006/04/01 16:33:12 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.ebuild,v 1.3 2006/04/01 17:26:04 joshuabaergen Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -37,7 +37,7 @@ RDEPEND="dev-libs/expat
 	x11-libs/libXxf86vm
 	x11-libs/libXi
 	x11-libs/libXmu
-	>=x11-libs/libdrm-1.0.5
+	>=x11-libs/libdrm-2.0.1
 	x11-libs/libICE
 	app-admin/eselect-opengl
 	motif? ( virtual/motif )
@@ -115,7 +115,7 @@ src_unpack() {
 		add_drivers ffb
 	fi
 	if use video_cards_i810; then
-		add_drivers i810 i830 i915
+		add_drivers i810 i915
 	fi
 	if use video_cards_mga; then
 		add_drivers mga
