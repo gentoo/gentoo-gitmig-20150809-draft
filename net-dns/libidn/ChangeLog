@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.42 2006/02/26 06:51:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.43 2006/04/01 00:00:50 flameeyes Exp $
+
+  31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> libidn-0.6.1.ebuild:
+  Run elibtoolize and add ~x86-fbsd keyword.
 
   26 Feb 2006; Joshua Kinard <kumba@gentoo.org> libidn-0.5.15.ebuild:
   Marked stable on mips.
