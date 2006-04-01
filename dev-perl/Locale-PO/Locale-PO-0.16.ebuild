@@ -1,18 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/Locale-PO-0.16.ebuild,v 1.6 2006/03/31 18:58:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/Locale-PO-0.16.ebuild,v 1.7 2006/04/01 22:18:37 vapier Exp $
 
 inherit perl-module
 
 DESCRIPTION="Object-oriented interface to gettext po-file entries"
-SRC_URI="mirror://cpan/authors/id/A/AL/ALANSZ/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~alansz/${P}/"
+SRC_URI="mirror://cpan/authors/id/A/AL/ALANSZ/${P}.tar.gz"
 
-DEPEND="${DEPEND}
-	sys-devel/gettext"
-SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~alpha ~amd64 ~arm hppa ia64 ~m68k ppc ppc64 ~s390 ~sh sparc x86"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc x86"
 IUSE=""
+
+DEPEND="sys-devel/gettext"
 
 SRC_TEST="do"
