@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.1_p9029.ebuild,v 1.2 2006/03/24 23:57:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.1_p9029.ebuild,v 1.3 2006/04/01 02:06:55 agriffis Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -107,6 +107,12 @@ src_install() {
 pkg_postinst() {
 	einfo "Please visit the Xen and Gentoo wiki:"
 	einfo "http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
+
+	if ! built_with_use dev-lang/python ncurses; then
+		echo
+		ewarn "NB: Your dev-lang/python is built without USE=ncurses."
+		ewarn "Please rebuild python with USE=ncurses to make use of xenmon.py."
+	fi
 
 	if [[ -n ${XEN_UNSTABLE} ]]; then
 		echo
