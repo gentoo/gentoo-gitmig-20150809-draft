@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/tlslite-0.3.8.ebuild,v 1.1 2006/02/06 19:47:37 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/tlslite-0.3.8.ebuild,v 1.2 2006/04/01 19:09:07 agriffis Exp $
 
 inherit eutils distutils portability
 
@@ -10,7 +10,7 @@ SRC_URI="http://trevp.net/tlslite/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE="doc gmp"
 
 DEPEND="virtual/python"
