@@ -20,3 +20,14 @@
  # And here we go.
  exec "$SystemInstallDir/program/$Binary", @ooo_argv
  
+--- patches/src680/apply 
++++ patches/src680/apply 
+@@ -624,8 +624,6 @@
+ # Fix i#54730
+ buildfix-longnames-54730.diff
+ 
+-# Fix missing __cxa_guard_acquire/__cxa_guard_release - #34676 (for FC3)
+-sal-cxa-guard.diff
+ # Fix ODK Java bits
+ odk-java-wizpanel.diff
+ # add possibility to set ARCH_FLAGS when building libnas

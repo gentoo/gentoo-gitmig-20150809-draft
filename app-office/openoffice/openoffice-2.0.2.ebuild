@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2.ebuild,v 1.5 2006/03/25 18:22:29 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2.ebuild,v 1.6 2006/04/01 07:17:41 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions mono toolchain-funcs
 
 IUSE="binfilter cairo eds firefox gnome gtk java kde ldap mono mozilla xml2"
 
-MY_PV="${PV}.2"
+MY_PV="${PV}.4"
 PATCHLEVEL="OOB680"
 SRC="OOO_2_0_2"
 S="${WORKDIR}/ooo-build-${MY_PV}"
@@ -145,7 +145,7 @@ src_unpack() {
 
 	#Some fixes for our patchset
 	cd ${S}
-	epatch ${FILESDIR}/${PV}/pythonfix.diff
+	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
@@ -162,8 +162,6 @@ src_unpack() {
 	echo "`use_enable gnome gnome-vfs`" >> ${CONFFILE}
 	echo "`use_enable gnome lockdown`" >> ${CONFFILE}
 	echo "`use_enable gnome atkbridge`" >> ${CONFFILE}
-
-	echo "--with-system-curl"  >> ${CONFFILE}
 
 }
 
@@ -236,6 +234,9 @@ src_install() {
 	# Install corrected Symbol Font
 	insinto /usr/share/fonts/TTF/
 	doins fonts/*.ttf
+
+	# Fix the permissions for security reasons
+	chown -R root:root ${D} || die
 
 }
 
