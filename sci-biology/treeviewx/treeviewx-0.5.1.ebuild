@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/treeviewx-0.5.1.ebuild,v 1.4 2005/12/13 20:38:01 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/treeviewx-0.5.1.ebuild,v 1.5 2006/04/01 16:09:10 deltacow Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://darwin.zoology.gla.ac.uk/~rpage/treeviewx/"
 SRC_URI="http://darwin.zoology.gla.ac.uk/~rpage/${PN}/download/0.5/tv-${PV}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 IUSE=""
 
