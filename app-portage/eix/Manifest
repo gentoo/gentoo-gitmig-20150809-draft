@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 367ada2b3a6a2295bd7f054c2ce5c95c ChangeLog 10885
+MD5 2b5db7ce3b258adc966059384ba49d4c ChangeLog 10986
 MD5 831f9fa6fc48726ee59ba48841b396e9 eix-0.3.0-r2.ebuild 1332
-MD5 c83702361cbb56b9c35dacddcf854adf eix-0.5.1-r2.ebuild 1479
+MD5 571cbe92208b0845a332e6a47be15a01 eix-0.5.1-r2.ebuild 1478
 MD5 0586df15ea81d4717272fb72f63ff206 eix-0.5.5.ebuild 1325
 MD5 309a6ba7043e7941a8effc552ec3a1a0 files/0.3.0-datatype-mix.patch 2066
 MD5 026ea1bfa86dd00de37c3e3d1305c9c7 files/0.3.0-dbmatchcriteria-fix.patch 445
@@ -17,10 +14,3 @@ MD5 272145169b4ded93245ef18866fbe5f1 files/eix-0.5.1-bug121360.patch 757
 MD5 d49568728f1c4f806614ae6ead679b22 files/eix-0.5.1-bug122005.patch 1681
 MD5 5b4795679be3f35cca3da98b5eb37a63 files/eix-bug127184.patch 307
 MD5 ee74c7f02bf2436a61be85649d0bfade metadata.xml 344
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEKIJvKRy60XGEcJIRAhZLAKClUUcly2sKSNxzIxhvrHygCUv0hgCgsTJ4
-wzWM5WVUAVuCYdWa9pjOeGM=
-=Q6b3
------END PGP SIGNATURE-----
