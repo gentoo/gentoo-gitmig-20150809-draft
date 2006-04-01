@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/pycdf-0.5.2.ebuild,v 1.4 2004/12/28 19:05:36 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/pycdf-0.5.2.ebuild,v 1.5 2006/04/01 15:17:06 agriffis Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://nordet.qc.dfo-mpo.gc.ca/pub/soft/pycdf/${MY_P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
 IUSE="doc"
 
 DEPEND="virtual/python
