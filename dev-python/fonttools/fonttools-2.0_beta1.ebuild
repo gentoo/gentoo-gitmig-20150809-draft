@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/fonttools-2.0_beta1.ebuild,v 1.6 2005/04/21 13:56:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/fonttools-2.0_beta1.ebuild,v 1.7 2006/04/01 14:54:39 agriffis Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ~ia64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/python
