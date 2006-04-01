@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 378424109c6c7fcfd846bf83738a28df ChangeLog 6648
-RMD160 1896d7430e8638ce8f2c23ec734b45cf5147d110 ChangeLog 6648
-SHA256 5707bb138087d0a98b98137f8b9ce092a565aa2d50c32b92dc4f68a280ad8c3e ChangeLog 6648
+MD5 8dc62ea04da13b65a052cf8b29415e23 ChangeLog 6861
+RMD160 fee158e8ac41127c09e17a1942c7c284113ac54e ChangeLog 6861
+SHA256 abe84d9fbd16be83dcc2a5b67f687dcf5cb9fe26c6ad8b0741b6cc63e377ba9e ChangeLog 6861
 MD5 0b5843a63c6212b3a427b45939e1e2ae files/digest-musicbrainz-2.1.1 72
 RMD160 a810188f8645edb5597eb067c8203c76cce3dce9 files/digest-musicbrainz-2.1.1 72
 SHA256 fa17787fcd25025e8bea20b05dc7e93d23e8e4b4f6a21bd5538cdbebbed06c2b files/digest-musicbrainz-2.1.1 72
@@ -22,19 +19,12 @@ SHA256 9ae52cc670f7cc769408630ff197cab8d8b8c19f65604f63e41a3cd22a5ba2e2 files/mu
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
-MD5 a727bb3d5fb70406718d0aca55903254 musicbrainz-2.1.1-r1.ebuild 1444
-RMD160 a552a6f373ef2c6c1caf0da77a10c75120b699f8 musicbrainz-2.1.1-r1.ebuild 1444
-SHA256 da9bd2abb701c8223f5ac02b5b4fb46f45c380522057038de1a5af3d14200654 musicbrainz-2.1.1-r1.ebuild 1444
-MD5 48953e90281ee4a402bc7e824ad7782e musicbrainz-2.1.1.ebuild 1403
-RMD160 f2e26767ee8d424583032bd5589bd4981dd4299b musicbrainz-2.1.1.ebuild 1403
-SHA256 0a88db8733e9c0e322a89ac57d252ba9e36d027b3b1a2dc00f2e47e8ea2a3956 musicbrainz-2.1.1.ebuild 1403
+MD5 013a8ec8868b308de85248aa9bfb81e9 musicbrainz-2.1.1-r1.ebuild 1444
+RMD160 182ab743c592c4f44142734ade41a5f5f5e454fd musicbrainz-2.1.1-r1.ebuild 1444
+SHA256 7174a057ba8c16a24a8f0faef843c19f0c8b77fd23da870daa6518a8772d0a15 musicbrainz-2.1.1-r1.ebuild 1444
+MD5 187dc1e5124f3fec30e5f6ed598197ef musicbrainz-2.1.1.ebuild 1405
+RMD160 cf42f218c7ec6e4338ac32fa7d66882608214d91 musicbrainz-2.1.1.ebuild 1405
+SHA256 ec1c6b01cbd9dacaf9f4dabece9c8e58092cfa68ff1f955cd6cf67e043dc4713 musicbrainz-2.1.1.ebuild 1405
 MD5 fbecc96d17e93066bd8a6420e585c058 musicbrainz-2.1.2.ebuild 838
 RMD160 d2f98570c044c15b785db04a51eca3629b15a453 musicbrainz-2.1.2.ebuild 838
 SHA256 aaa55db2855daaaf78fb0547721a07b6691fe7a88723a60955f3e9255d737146 musicbrainz-2.1.2.ebuild 838
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8Qn/wUpWvClEHQoRAj4MAJ9jrPsW2OqDqzbJasJZ46KvzZnl+wCggOyC
-aQvVqk8qaiHp/vGFwYCNv94=
-=kxGU
------END PGP SIGNATURE-----
