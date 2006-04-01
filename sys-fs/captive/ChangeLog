@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/captive
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/ChangeLog,v 1.13 2006/03/25 19:50:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/ChangeLog,v 1.14 2006/04/01 18:59:28 genstef Exp $
+
+  01 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  captive-1.1.7-r1.ebuild:
+  Make postinfo note more verbose thanks to Chris Slycord <cslycord@gmail.com>
+  in bug 128215
 
 *captive-1.1.7-r1 (25 Mar 2006)
 
