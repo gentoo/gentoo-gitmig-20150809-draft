@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.116 2006/04/01 06:09:14 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.117 2006/04/01 06:27:00 antarus Exp $
+
+  01 Apr 2006; Alec Warner <antarus@gentoo.org> wxGTK-2.6.2-r1.ebuild,
+  -wxGTK-2.6.2-r2.ebuild:
+  No Revbump needed, Duh
 
 *wxGTK-2.6.2-r2 (01 Apr 2006)
 
