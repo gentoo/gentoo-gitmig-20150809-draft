@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.29 2006/03/22 01:59:59 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.30 2006/04/01 15:19:14 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pycurl-7.15.2.ebuild:
+  Mark 7.15.2 ~ia64
 
   22 Mar 2006; Marien Zwart <marienz@gentoo.org> pycurl-7.13.1.ebuild:
   Change curl dependency from =curl-7.13.1* to >=curl-7.13.1 because
