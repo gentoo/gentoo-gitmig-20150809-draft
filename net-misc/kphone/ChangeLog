@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/kphone
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.35 2005/09/24 12:13:51 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.36 2006/04/01 11:42:25 carlo Exp $
+
+  01 Apr 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/kphone-4.2-gcc4.diff, kphone-4.2.ebuild:
+  gcc 4.1 patch, thanks to Robert Marmorstein, bug #128319.
 
   24 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> kphone-4.2.ebuild:
   Stable on ppc.
