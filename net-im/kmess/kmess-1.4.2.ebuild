@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-1.4.2.ebuild,v 1.1 2005/11/25 11:06:04 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-1.4.2.ebuild,v 1.2 2006/04/01 13:11:06 carlo Exp $
 
 inherit kde eutils
 
@@ -13,4 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-need-kde 3
+need-kde 3.4
+
+PATCHES="${FILESDIR}/kmess-1.4.2-balloonbase.patch"
+
+
