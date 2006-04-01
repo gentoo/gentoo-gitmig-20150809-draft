@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/htmlgen-2.2.2.ebuild,v 1.10 2005/07/16 16:20:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/htmlgen-2.2.2.ebuild,v 1.11 2006/04/01 15:01:28 agriffis Exp $
 
 IUSE=""
 MY_P="HTMLgen"
@@ -10,7 +10,7 @@ SRC_URI="http://starship.python.net/crew/friedrich/${MY_P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~ia64 ppc x86"
 
 DEPEND="virtual/python
 		dev-python/imaging"

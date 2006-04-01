@@ -1,34 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fe27922fa0c56914b320996889db2da2 ChangeLog 1143
-RMD160 6009929e0b99cf18a5efa08485ed8d58a25ebe98 ChangeLog 1143
-SHA256 5e870cf5c04c9a8d252a1b91c06b19c0937f1a3a7a08267c80dcd8762ec9d8ac ChangeLog 1143
+MD5 3373165cedc0e8659807b8ddde751118 ChangeLog 1242
+RMD160 3393c482da5b474c1e2e38a723ae102c49464462 ChangeLog 1242
+SHA256 a5fe907e0778d75114c4d7aeed09d0d7dafc23b45830c8c3325f0629ffa52d88 ChangeLog 1242
 MD5 6f782707ef56c8f21234aac23074feff files/digest-logging-0.4.7 64
 RMD160 7d10b8e8ee65446846ae4af9e72e31a2a0ad750c files/digest-logging-0.4.7 64
 SHA256 9c43fe4f63ff2c167d5fa122e83e8e455ef11ed10307a80f948e9dba9ff0cd59 files/digest-logging-0.4.7 64
 MD5 5f6e062176313ce8144ce5483c107171 files/digest-logging-0.4.9.5 66
 RMD160 4cb58bc50ebe52e42ed40a3dff4f33d3844aec2d files/digest-logging-0.4.9.5 66
 SHA256 6ed4b09152d6631590309e0274ff834ba5eedc1be2283b8c3552e61303f3d868 files/digest-logging-0.4.9.5 66
-MD5 990ca1decad663d603271fdfb42fa649 files/digest-logging-0.4.9.6 244
-RMD160 9aeed2c423bfcc5c5d1aace0266eba721579bddd files/digest-logging-0.4.9.6 244
-SHA256 4fe8691d8014ad1b12abd2f8558ff8e9aedec0fe616ecbc26115157b2910335d files/digest-logging-0.4.9.6 244
+MD5 12cc8b4c69141e8af7c291ae9aac3054 files/digest-logging-0.4.9.6 244
+RMD160 05fe3bf61c3272937ef4958c01bc75dc3964ccaf files/digest-logging-0.4.9.6 244
+SHA256 6baa48a2c39dcce5fdd0ffada822934a5caafeb1fdcf7dff99845b3f6471546d files/digest-logging-0.4.9.6 244
 MD5 ae687b09c259e02f3566e644da372031 logging-0.4.7.ebuild 658
 RMD160 a51f48e6aa3a1cd18080eacaef714ff2be7e1961 logging-0.4.7.ebuild 658
 SHA256 4f1306f38e565d3c8692ae57d7343b88f65528e8f607037c93a9db2b962425be logging-0.4.7.ebuild 658
 MD5 65544a030fa86fb65a099e3605119b4b logging-0.4.9.5.ebuild 663
 RMD160 de7c56765a80d84adb5c2a5b24eaf84d5c6d5ea8 logging-0.4.9.5.ebuild 663
 SHA256 2779603892f307dabb09230cbfed23eb1bc9360a8888d769d4222e7c26080fbc logging-0.4.9.5.ebuild 663
-MD5 eb8fb5444d4d42b5eb530c24184ef884 logging-0.4.9.6.ebuild 631
-RMD160 8494b58a30c37668917b3ba386d730138a76bac9 logging-0.4.9.6.ebuild 631
-SHA256 9a3046991029a79f8efbb8d29b7dd112872453055c28e9f2ccc3ec9ab47ab7f4 logging-0.4.9.6.ebuild 631
+MD5 8fbe5ea2f18667a65cc53a827dfd09a3 logging-0.4.9.6.ebuild 639
+RMD160 f4a5b41eca28f220b61012f59e31114c6afb450d logging-0.4.9.6.ebuild 639
+SHA256 70a087b14acbcc9bae620a67a88b6a3ed5612d33e6b406a64604093aab4d7724 logging-0.4.9.6.ebuild 639
 MD5 e24e08919fbac3a72d00bfbaf12ea214 metadata.xml 358
 RMD160 0a6c2d1fcea3b5842c67b4d190ea5de514729728 metadata.xml 358
 SHA256 34d5c487ef899fb5ad1ce8d613eeb7c0f812d80e4750e3cc7a372d018f2a1886 metadata.xml 358
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELVfI2jLqHNfbg2URAs77AJ4uXWivF7CjglKE0jYTqRhjhHVF+ACghYnc
-BeClVF0puTvUh4gAWY4WEX4=
-=tfnQ
------END PGP SIGNATURE-----
