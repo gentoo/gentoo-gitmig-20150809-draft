@@ -1,10 +1,10 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.51 2006/04/01 19:30:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.52 2006/04/01 19:32:37 eradicator Exp $
 
   01 Apr 2006; Jeremy Huddleston <eradicator@gentoo.org>
   -libexif-0.5.12-r2.ebuild:
-  Removing old, unstable version.
+  Removing old insecure version.
 
   01 Apr 2006; Fabian Groffen <grobian@gentoo.org> libexif-0.6.12-r4.ebuild:
   Marked ppc-macos stable, should allow removal of insecure version
