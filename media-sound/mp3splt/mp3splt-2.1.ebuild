@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/mp3splt-2.1.ebuild,v 1.5 2006/03/08 20:22:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/mp3splt-2.1.ebuild,v 1.6 2006/04/01 06:11:24 halcy0n Exp $
+
+inherit eutils
 
 DESCRIPTION="A command line utility to split mp3 and vorbis files"
 HOMEPAGE="http://mp3splt.sourceforge.net/"
@@ -13,6 +15,12 @@ IUSE="vorbis"
 
 DEPEND="vorbis? ( media-libs/libvorbis )
 	media-libs/libmad"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+}
 
 src_compile() {
 	local myconf

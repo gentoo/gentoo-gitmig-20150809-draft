@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mp3splt
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.16 2006/03/08 20:22:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.17 2006/04/01 06:11:24 halcy0n Exp $
+
+  01 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/mp3splt-2.1-gcc41.patch, mp3splt-2.1.ebuild:
+  Add patch to fix compilation with gcc-4 by TGL <degrenier AT easyconnect DOT
+  fr>; bug #126814
 
   08 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> mp3splt-1.9.ebuild,
   mp3splt-2.0.ebuild, mp3splt-2.1.ebuild:
