@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.13.1.ebuild,v 1.2 2005/11/28 11:36:08 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.13.1.ebuild,v 1.3 2006/04/01 15:08:15 agriffis Exp $
 
 inherit distutils portability eutils
 
@@ -16,7 +16,7 @@ SRC_URI="http://sandbox.rulemaker.net/ngps/Dist/${MY_P}.zip
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="doc"
 
 S="${WORKDIR}/${MY_P}"
