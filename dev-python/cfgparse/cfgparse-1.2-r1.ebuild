@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cfgparse/cfgparse-1.2-r1.ebuild,v 1.1 2005/12/30 03:16:20 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cfgparse/cfgparse-1.2-r1.ebuild,v 1.2 2006/04/01 14:46:18 agriffis Exp $
 
 inherit distutils versionator
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/cfgparse/${PN}-${MY_PN}.tar.gz"
 
 LICENSE="PSF-2.3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
 IUSE=""
 
 DEPEND=""
