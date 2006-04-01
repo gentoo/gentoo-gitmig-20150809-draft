@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.26 2006/03/10 23:46:58 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.27 2006/04/01 15:24:43 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pylint-0.10.0.ebuild:
+  Mark 0.10.0 ~ia64
 
   10 Mar 2006; Marien Zwart <marienz@gentoo.org>
   +files/pylint-0.10.0-extra-gtk-disable.patch,
