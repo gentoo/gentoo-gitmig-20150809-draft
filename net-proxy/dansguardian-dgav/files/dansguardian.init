@@ -1,13 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/files/dansguardian.init,v 1.2 2005/12/08 22:39:09 mrness Exp $
 
 opts="${opts} reload"
 
 depend() {
-	need net clamd
-	use dns \
+	need net
+	use dns clamd \
 		squid apache2 bfilter mman junkbuster oops polipo privoxy tinyproxy wwwoffled
 	#dansguardian could be used in conjuction with any of the above web proxies
 }

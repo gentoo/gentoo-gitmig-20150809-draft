@@ -1,18 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b78f63a7dd0de8053231d8f88b753381 ChangeLog 2081
+MD5 0794ee2cd5144db622bfbba576b34509 ChangeLog 2395
 MD5 41b1845294f494282a35de2d43a05b8a dansguardian-dgav-6.4.3-r1.ebuild 1624
+MD5 03b2b9654aeeb2678244416e964c62eb dansguardian-dgav-6.4.4.ebuild 1631
 MD5 6328464c9d6747a4f054f17fb2c4844b files/dansguardian-dgav-6.4.3-gentoo.patch 1291
-MD5 6313b934a33da7e4308812e834494074 files/dansguardian-xnaughty-2.7.6-1.diff 2325
-MD5 40108287ed99da7e2d4f078e50288100 files/dansguardian.init 837
+MD5 19e38310930369928da2d1bc74554c87 files/dansguardian-dgav-6.4.4-gentoo.patch 1291
+MD5 c5a5dcce78812ee5b042f0e92d500ebf files/dansguardian-dgav-6.4.4-xnaughty.patch 1983
+MD5 b95490f1de290c1ad054f41fa8c60c78 files/dansguardian-xnaughty-2.7.6-1.diff 2153
+MD5 a0228f818258bfb2f17855344dbd5700 files/dansguardian.init 711
 MD5 046d9ee8033553a881d5ee0586bf2a3d files/dansguardian.logrotate 188
 MD5 f4b0b1791105f2daa56e911f08238da4 files/digest-dansguardian-dgav-6.4.3-r1 169
+MD5 52a42da7dfaf8df2f002bff2a6ff9bb4 files/digest-dansguardian-dgav-6.4.4 169
 MD5 775fe3a71382d0807bfddb0235f35f30 metadata.xml 233
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDHx9jG8pv1lIUX4RAvagAJ0fjmS0fKZNKTvX11L5xtV23O4BnACePXg3
-X1FUQu4a3R1UDHMWgRMWlxo=
-=uc8D
+iD8DBQFELufujG8pv1lIUX4RAr2OAJ96j3TmwprP1oOKM3VFf7UkfROgSwCfS3pd
+Bl4+BIxaWnvbpOupzZ1VzpE=
+=gTNh
 -----END PGP SIGNATURE-----
