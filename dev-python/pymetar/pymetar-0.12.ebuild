@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/pymetar-0.12.ebuild,v 1.2 2004/10/03 18:19:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/pymetar-0.12.ebuild,v 1.3 2006/04/01 18:46:21 agriffis Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="PyMETAR downloads the weather report for a given station ID, decode
 SRC_URI="http://www.schwarzvogel.de/pkgs/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
 DEPEND="virtual/python"
 DOCS="librarydoc.txt THANKS TODO bin/example.py README"
