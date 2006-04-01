@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20.ebuild,v 1.1 2006/03/17 00:35:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20.ebuild,v 1.2 2006/04/01 14:39:33 vivo Exp $
 
-inherit eutils
+inherit multilib eutils
 
 DESCRIPTION="The PowerDNS Daemon"
 SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
@@ -34,9 +34,19 @@ src_unpack() {
 src_compile() {
 	local modules="pipe geo" myconf=""
 
-	use mysql && modules="${modules} gmysql"
-	use postgres && modules="${modules} gpgsql"
-	use sqlite && modules="${modules} gsqlite"
+	if use mysql ; then
+		modules="${modules} gmysql"
+		myconf="${myconf} --with-mysql-lib=/usr/$(get_libdir)"
+	fi
+	if use postgres ; then
+		modules="${modules} gpgsql"
+		myconf="${myconf} --with-pgsql-lib=/usr/$(get_libdir)"
+	fi
+	if use sqlite ; then
+		modules="${modules} gsqlite"
+		myconf="${myconf} --with-sqlite-lib=/usr/$(get_libdir)"
+	fi
+
 	use ldap && modules="${modules} ldap"
 	use tdb && modules="${modules} xdb"
 	use debug && myconf="${myconf} --enable-verbose-logging"
