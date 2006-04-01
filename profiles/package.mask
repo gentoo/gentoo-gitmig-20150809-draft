@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5168 2006/04/01 06:15:37 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5169 2006/04/01 14:00:07 nattfodd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -691,10 +691,6 @@ dev-libs/luabind
 # Testing -- particularly the reconfig script
 # and reinstalling without destroying the configuration
 sci-chemistry/webmo
-
-# Marcelo Goes <vanquirius@gentoo.org> (03 Dec 2005)
-# Seems to be broken - see bug #75681
-=media-gfx/ufraw-0.6
 
 # Michael Sterrett <mr_bones_@gentoo.org> (03 Dec 2005)
 # Doesn't work with newer allegro, buggy, no release since '02
