@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.84 2006/03/10 19:23:04 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.85 2006/04/01 15:58:29 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -95,7 +95,12 @@ perl-module_src_prep() {
 
 
 	SRC_PREP="yes"
-	if [ -f ${S}/Build.PL ] && [ "${USE_BUILDER}" == "yes" ]; then
+	if [ -f ${S}/Makefile.PL ]; then
+		einfo "Using ExtUtils::MakeMaker"
+		#perl Makefile.PL ${myconf} \
+		perl Makefile.PL ${myconf} INSTALLMAN3DIR='none'\
+		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
+	elif [ -f ${S}/Build.PL ] && [ "${USE_BUILDER}" == "yes" ]; then
 		einfo "Using Module::Build"
 		if [ -z ${BUILDER_VER} ]; then
 			eerror
@@ -109,10 +114,8 @@ perl-module_src_prep() {
 			perl ${S}/Build.PL installdirs=vendor destdir=${D} libdoc=
 		fi
 	else
-		einfo "Using ExtUtils::MakeMaker"
-		#perl Makefile.PL ${myconf} \
-		perl Makefile.PL ${myconf} INSTALLMAN3DIR='none'\
-		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
+		einfo "No Make or Build file detect..."
+		return
 	fi
 }
 
@@ -179,6 +182,8 @@ perl-module_pkg_preinst() {
 
 perl-module_pkg_postinst() {
 
+	einfo "Man pages are not installed for most modules now."
+	einfo "Please use perldoc instad."
 	updatepod
 }
 
@@ -219,6 +224,7 @@ perlinfo() {
 	VENDOR_ARCH=${installvendorarch}
 
 	if [ "${USE_BUILDER}" == "yes" ]; then
+	   if [ ! -f ${S}/Makefile.PL ]; then
 		if [ -f ${S}/Build.PL ]; then
 			if [ ${PN} == "module-build" ]; then
 				BUILDER_VER="1" # A bootstrapping if you will
@@ -226,6 +232,7 @@ perlinfo() {
 				BUILDER_VER=`perl -MModule::Build -e 'print "$Module::Build::VERSION;"' `
 			fi
 		fi
+	   fi
 	fi
 
 	if [ -f /usr/bin/perl ]
