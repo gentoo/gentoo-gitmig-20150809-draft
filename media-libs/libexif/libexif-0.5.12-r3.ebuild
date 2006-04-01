@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.12-r3.ebuild,v 1.8 2005/12/29 10:39:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.12-r3.ebuild,v 1.9 2006/04/01 04:27:29 eradicator Exp $
 
 inherit eutils
 
