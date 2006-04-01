@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/oftpd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.16 2005/12/04 20:59:37 tgall Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.17 2006/04/01 03:26:02 eradicator Exp $
+
+  01 Apr 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  oftpd-0.3.7-r2.ebuild:
+  Stable amd64, ppc64, sparc.
 
   04 Dec 2005; Tom Gall <tgall@gentoo.org> 
   oftpd-0.3.7-r1.ebuild:

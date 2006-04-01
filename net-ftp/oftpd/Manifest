@@ -1,10 +1,40 @@
-MD5 39629e53de269b589c9c479838f04204 ChangeLog 2461
-MD5 0f7a846dd3f2197538502db078109b71 metadata.xml 351
-MD5 0be4a8fd5b7885debf2ecb96d2e1759c oftpd-0.3.7-r1.ebuild 830
-MD5 dd52078d730ad43aef6777c07969fc57 oftpd-0.3.7-r2.ebuild 839
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4194960dd858997a3336bfac6bfbd8a5 ChangeLog 2579
+RMD160 3d9aa427bcf41dde4c77c51e9d1b4908b2297420 ChangeLog 2579
+SHA256 1fd9c8a55fe87960f96691f3a054313f4fab50800745f8a297e103c953fa31d2 ChangeLog 2579
 MD5 b0ba4d96ae0eb98abce711409607eda4 files/conf.d.oftpd 469
+RMD160 2e70e1d86efadaf72d0f6fe56bd8f07167a7badb files/conf.d.oftpd 469
+SHA256 d1bab71ab0942df8dcb2f88bb50a3c318fe97676d278ccf26d540fdc9c4e69ba files/conf.d.oftpd 469
 MD5 dd7b994af55686281ddf1f73b8cba663 files/conf.d.oftpd-r1 578
+RMD160 84ba38720a6a2ac8f0873ebbc4cab82f0394232c files/conf.d.oftpd-r1 578
+SHA256 6ba360cac50935ee9c8ed2961b95e57d7c63c5f63dc0ce7befb942756e054f62 files/conf.d.oftpd-r1 578
 MD5 14eb385d2dee30be94c941c01703ab40 files/digest-oftpd-0.3.7-r1 62
+RMD160 aca415900ac3a6f32b52b05ea812f99b0e754074 files/digest-oftpd-0.3.7-r1 62
+SHA256 ef0f44bf6c0796ce9b17cc29c16979970b3247848e7b21a3e71bdfd00aee62e1 files/digest-oftpd-0.3.7-r1 62
 MD5 14eb385d2dee30be94c941c01703ab40 files/digest-oftpd-0.3.7-r2 62
+RMD160 aca415900ac3a6f32b52b05ea812f99b0e754074 files/digest-oftpd-0.3.7-r2 62
+SHA256 ef0f44bf6c0796ce9b17cc29c16979970b3247848e7b21a3e71bdfd00aee62e1 files/digest-oftpd-0.3.7-r2 62
 MD5 42f3108677c4a53b623f3646d6db5fe2 files/init.d.oftpd 676
+RMD160 95af3c24dda70f631f487495d0a67f280ec1277a files/init.d.oftpd 676
+SHA256 96d69985013735c39e6e4913797fe753e8971cf836e4bc8e5a8f5ed3d8dc03a2 files/init.d.oftpd 676
 MD5 72d1cf62ed5467e49076dcdb4e932d9d files/init.d.oftpd-r1 703
+RMD160 aa950de215f93b9eacdbf7cd03b7cebe30c5d42a files/init.d.oftpd-r1 703
+SHA256 b631b9a3b76cfcee2b13298150dbf0f72defa61affc25f8feb1783a17d153057 files/init.d.oftpd-r1 703
+MD5 0f7a846dd3f2197538502db078109b71 metadata.xml 351
+RMD160 4a8b37935566ffd8494d6aa07fea354b9e5b23d6 metadata.xml 351
+SHA256 b1977f6854b1afe72bf1d656404f40074a9839dd9a367d42421d4457f7d827d7 metadata.xml 351
+MD5 0be4a8fd5b7885debf2ecb96d2e1759c oftpd-0.3.7-r1.ebuild 830
+RMD160 895e298be88736f0a805ffc636e3a3957785ebc3 oftpd-0.3.7-r1.ebuild 830
+SHA256 9e10f38429d2556cd33c49382909239a4343ba8af11b220bcb50f57ee9bf4dfe oftpd-0.3.7-r1.ebuild 830
+MD5 6fee259b448aefb59ebb244fd907c28a oftpd-0.3.7-r2.ebuild 836
+RMD160 2573c468968bdc6fd64333fe4069b4451494d262 oftpd-0.3.7-r2.ebuild 836
+SHA256 c6ef345424be3adff9331eab29f9b2dde2406b7dc850a0cae7227bd08f1731d3 oftpd-0.3.7-r2.ebuild 836
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELfLWOpjtAl+gMRURAow+AKDgODFLp+x0E/JCvKPV9KfMbxkpKACfUucG
+tJMkafdI1RuyT4U3HDmDblQ=
+=B3fU
+-----END PGP SIGNATURE-----
