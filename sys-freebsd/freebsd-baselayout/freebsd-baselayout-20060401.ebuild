@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060401.ebuild,v 1.1 2006/04/01 16:43:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060401.ebuild,v 1.2 2006/04/01 17:10:00 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools
 
@@ -20,11 +20,11 @@ IUSE="bootstrap build static unicode"
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
 RDEPEND="userland_GNU? (
-		>=sys-apps/sysvinit-2.86-r3
 		!build? ( !bootstrap? (
 			>=sys-apps/coreutils-5.2.1
 		) )
 	)
+	|| ( >=sys-apps/sysvinit-2.86-r3 sys-process/pidof-bsd )
 	!build? ( !bootstrap? (
 		>=sys-libs/readline-5.0-r1
 		>=app-shells/bash-3.0-r10
