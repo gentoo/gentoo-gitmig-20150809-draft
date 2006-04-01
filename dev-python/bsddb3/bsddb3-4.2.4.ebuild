@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.2.4.ebuild,v 1.7 2005/04/24 09:14:18 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.2.4.ebuild,v 1.8 2006/04/01 14:44:38 agriffis Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pybsddb/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86 ~amd64"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/python
