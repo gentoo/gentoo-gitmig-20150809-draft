@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 86ee030c6cbd46ef7c65f70265b45f67 metakit-2.4.9.2-r1.ebuild 1499
-MD5 37980159b537512d3f6b8779dcdca7d2 metakit-2.4.9.3-r2.ebuild 1620
-MD5 e265ae5e7565700b506264c21064d5c4 metakit-2.4.7.37.ebuild 1549
-MD5 f6527c93e0c64d83806041c255e17f95 ChangeLog 3489
-MD5 0f63d5f3d5f137464097c1539a07496d files/digest-metakit-2.4.9.2-r1 67
-MD5 00fc347ece0536a96f90ddf76d90bf51 files/digest-metakit-2.4.9.3-r2 67
+MD5 f3bf6b05561ed14aba00ba1cb87dd8ba ChangeLog 3593
+RMD160 f6ef8fecc896be69652740c0ae14bf49a6d3931e ChangeLog 3593
+SHA256 135c1d176e23371b54cf08ab100b37681ecb4d2de025a62ed70b7c496cfe7e04 ChangeLog 3593
 MD5 e045e605eab23d2201a5ba644558f6e7 files/digest-metakit-2.4.7.37 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCug7WBXaUFmZvwyMRAhuoAKCXHk3eBfAezpaAxmtplgvWa94O/ACg1LSa
-GAmpeDvdDxoMgbyvO/d1s7M=
-=93fT
------END PGP SIGNATURE-----
+RMD160 e364e2b9067b5ca90bb60100bb0a1dac27a67f74 files/digest-metakit-2.4.7.37 68
+SHA256 df74104be326823708343eec57991b1ffcdd703def50cff66abc094ec857452f files/digest-metakit-2.4.7.37 68
+MD5 0f63d5f3d5f137464097c1539a07496d files/digest-metakit-2.4.9.2-r1 67
+RMD160 43fb486b0ea04b19e3c30befbd90453b621d4699 files/digest-metakit-2.4.9.2-r1 67
+SHA256 a1d28047fb333489eaa69cfc545d276de051b0e312d58d86af6e8a70fd9b78ab files/digest-metakit-2.4.9.2-r1 67
+MD5 00fc347ece0536a96f90ddf76d90bf51 files/digest-metakit-2.4.9.3-r2 67
+RMD160 de1558707682e44945c231fa41247cedf0e21ec8 files/digest-metakit-2.4.9.3-r2 67
+SHA256 787a1ade122df8aa3fe5a8c5849c7adbc04793b7dfe1aba822b2ea754fa6f0e0 files/digest-metakit-2.4.9.3-r2 67
+MD5 e265ae5e7565700b506264c21064d5c4 metakit-2.4.7.37.ebuild 1549
+RMD160 c873704559f87c2c63c57debd7b805db5962e482 metakit-2.4.7.37.ebuild 1549
+SHA256 1123596ac69e1fbbeeaf0cbeb06e8da28ad114000cc3758fce0a7f0b46170232 metakit-2.4.7.37.ebuild 1549
+MD5 86ee030c6cbd46ef7c65f70265b45f67 metakit-2.4.9.2-r1.ebuild 1499
+RMD160 fffa6e339d1ca95200690d6aa4dd8851a98c855c metakit-2.4.9.2-r1.ebuild 1499
+SHA256 b8f492ee613e17d5faaebe49f7047704388fc1ec9b0e30269199bbfd43da5a49 metakit-2.4.9.2-r1.ebuild 1499
+MD5 03ecfb1e5309b4ba6b5e473f24f8f5cd metakit-2.4.9.3-r2.ebuild 1626
+RMD160 aa39daae26ec351aaf35c909aec30a17db6638dd metakit-2.4.9.3-r2.ebuild 1626
+SHA256 a4fee751d49ab1a86c602b4db77b2988fbdb2b190004ad87ee3dc6509184c6b7 metakit-2.4.9.3-r2.ebuild 1626
