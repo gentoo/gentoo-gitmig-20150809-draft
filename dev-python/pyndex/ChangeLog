@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyndex
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyndex/ChangeLog,v 1.4 2005/02/07 04:50:29 fserb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyndex/ChangeLog,v 1.5 2006/04/01 18:46:56 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pyndex-0.3.2a.ebuild:
+  Mark 0.3.2a ~ia64
 
   07 Feb 2005; Fernando Serboncini <fserb@gentoo.org> pyndex-0.3.2a.ebuild:
   stable on x86
