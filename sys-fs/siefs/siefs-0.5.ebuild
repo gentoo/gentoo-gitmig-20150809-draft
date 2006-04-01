@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/siefs-0.5.ebuild,v 1.1 2005/04/13 18:42:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/siefs-0.5.ebuild,v 1.2 2006/04/01 10:03:32 genstef Exp $
 
 DESCRIPTION="Siemens FS"
 HOMEPAGE="http://chaos.allsiemens.com/siefs"
@@ -18,6 +18,7 @@ src_unpack() {
 	cd ${S}/siefs
 	sed -i "s:-rm -f /sbin/mount.siefs:-mkdir \$(DESTDIR)/sbin/:" Makefile.in
 	sed -i "s:-ln -s \$(DESTDIR)\$(bindir)/siefs /sbin/mount.siefs:-ln -s ..\$(bindir)/siefs \$(DESTDIR)/sbin/mount.siefs:" Makefile.in
+	sed -i "s:LDADD = \$(fuseinst)/lib/libfuse.a:LDADD = -lfuse:" Makefile.in
 }
 
 src_install() {
