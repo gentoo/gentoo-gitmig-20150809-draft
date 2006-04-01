@@ -121,6 +121,7 @@ sys-block
 sys-boot
 sys-cluster
 sys-devel
+sys-freebsd
 sys-fs
 sys-kernel
 sys-libs
