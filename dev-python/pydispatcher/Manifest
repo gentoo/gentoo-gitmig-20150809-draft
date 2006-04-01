@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 15f9a1840f5f0371073ced3168a3cf08 pydispatcher-1.0.1.ebuild 783
-MD5 7059abb339782b02382d90cce939adbf pydispatcher-1.0.0.ebuild 776
-MD5 e8ab529239f547b2ebc5b028f3c97e81 ChangeLog 854
-MD5 2a86b25b37ee0d26eb5b30ce68fbdd27 metadata.xml 158
+MD5 52c6762fac5c1dda12f4b6d092ad1475 ChangeLog 950
+RMD160 0c46e38c152b559327578fd68e5743c34dd17c4c ChangeLog 950
+SHA256 8f9231d2d7535d49c7ce8c10b1fd1345d5679ee0fcb1341d7cada57948f92c74 ChangeLog 950
 MD5 112d0f90d5bde3dabf675e265f5fb570 files/digest-pydispatcher-1.0.0 69
+RMD160 76c34c43fdb24b1bb6bca25f0cb120b2b4a3545e files/digest-pydispatcher-1.0.0 69
+SHA256 c9858795913469c9fcf5f080fca671f0abc14324df494562517895e32acc36c8 files/digest-pydispatcher-1.0.0 69
 MD5 9ddba755ab0b68b0b2bd496694c0fdc8 files/digest-pydispatcher-1.0.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCYrug06ebR+OMO78RAoh6AJ9TW0WxtRikuBYShiwubnrwdTJOrgCfQwUT
-SzeQl2f7KzHGY7frx01UFoo=
-=XyuQ
------END PGP SIGNATURE-----
+RMD160 4c97cd234ef321498346321ca84beb13e583eed9 files/digest-pydispatcher-1.0.1 69
+SHA256 d82f39089b81f62531fed9c7f1d6c913a37d4bbf8fd6ae64cc1200db516b44b0 files/digest-pydispatcher-1.0.1 69
+MD5 2a86b25b37ee0d26eb5b30ce68fbdd27 metadata.xml 158
+RMD160 c268c6da7262151f991b2251928a58683dbdc3b4 metadata.xml 158
+SHA256 376707f3a477aefe4ae6444733f162425157f2cc453d9bc19533e997eeba94d9 metadata.xml 158
+MD5 7059abb339782b02382d90cce939adbf pydispatcher-1.0.0.ebuild 776
+RMD160 fd82dc493f5480534f8335c59d2da26faeffbe52 pydispatcher-1.0.0.ebuild 776
+SHA256 b122ca10011c2cfe2900f0a75dbaf05abbe4f27e4365529a44a01fa5873a9a32 pydispatcher-1.0.0.ebuild 776
+MD5 96b8a7b9f136639f2bf7776593cd8301 pydispatcher-1.0.1.ebuild 788
+RMD160 cca6e87e3a32c42bcf3a07afdb49573fc2bee3c1 pydispatcher-1.0.1.ebuild 788
+SHA256 666a9eb4dd92cca63a790731789789045037d5d08de6653071f71228a6bf086e pydispatcher-1.0.1.ebuild 788
