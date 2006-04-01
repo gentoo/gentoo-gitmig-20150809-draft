@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ddb80fd6513759715de9697ea372d04c ChangeLog 10914
-RMD160 6de1766db510c42ddb0e603fc10903e6b4d5e6d2 ChangeLog 10914
-SHA256 76610588d18ad7d42adf79c0662dac7df40fd7b7069c48e48da8b2cee8fe4875 ChangeLog 10914
+MD5 8305f12e4675729f4d3fe983999187ba ChangeLog 11117
+RMD160 c8551a1570c7b52d4d639ff09c8c1bc26ed2c739 ChangeLog 11117
+SHA256 860c3b927366a71d382d3f31a0c9222d562d8eeb44f1dc13212592df60f7f498 ChangeLog 11117
 MD5 e876193dfd11bf13602043abf0ecec21 files/digest-poppler-0.5.0-r4 241
 RMD160 4ac5024c341597422cfd4e2a1625b6ff9f1b4e6f files/digest-poppler-0.5.0-r4 241
 SHA256 51bb8ae71c9ac143ae67a7cecb81aa02fdf8798baf3bc90ebb499692ba5d3ea7 files/digest-poppler-0.5.0-r4 241
@@ -13,6 +10,9 @@ SHA256 51bb8ae71c9ac143ae67a7cecb81aa02fdf8798baf3bc90ebb499692ba5d3ea7 files/di
 MD5 bfbec6a51d5b284cf7d771906303774e files/digest-poppler-0.5.1 241
 RMD160 1c8ffab9e42cce045bee08a442a00c45310e0fa6 files/digest-poppler-0.5.1 241
 SHA256 77347834bd17a13a58e26dbeeeb04dbec2c24683a03d7d5d29ade883897355bf files/digest-poppler-0.5.1 241
+MD5 536189ff37491801ccc8e97791212f95 files/digest-poppler-0.5.1-r1 524
+RMD160 44cded8464779364da3b5fbd4966d442fb96a244 files/digest-poppler-0.5.1-r1 524
+SHA256 a1bc0d718cd6203e4849066bcee67f97b04e8dcb80a354029daf2124a84500a7 files/digest-poppler-0.5.1-r1 524
 MD5 93baf580cd860acff7c064fe57408d32 files/poppler-0.4.3-pdf2xml.patch 840
 RMD160 2aac51766cdb8129963efe9f59316d4e5b5df3e2 files/poppler-0.4.3-pdf2xml.patch 840
 SHA256 3289b6d4f927042de50ecc37e200e066af1c351b4f360ee31f459925adc4c078 files/poppler-0.4.3-pdf2xml.patch 840
@@ -43,13 +43,9 @@ SHA256 c6ad67c593b72d92ba9c81e8042eb503d5bb87a852410297802f0f88f7997258 poppler-
 MD5 a160cfc29c948adc87b240e5fcccb9ff poppler-0.5.0-r5.ebuild 1785
 RMD160 c1d8a1cdca761276eb5eea41abf343a7a92d1815 poppler-0.5.0-r5.ebuild 1785
 SHA256 14b176770c4fbef014354f90791167ec1c8a9f3d0d66bd8d57f83768da2f2a5f poppler-0.5.0-r5.ebuild 1785
+MD5 8b36067a57417c3e224e27213a90ddda poppler-0.5.1-r1.ebuild 1548
+RMD160 0fe7c0961a398dd551ca7e02e5ad371757922cc7 poppler-0.5.1-r1.ebuild 1548
+SHA256 b56ad75c18d0631e184c21deda63f019ec9416cf76d704e428297591a670fbd9 poppler-0.5.1-r1.ebuild 1548
 MD5 852e281b5aa4b80d6b37024ee814548d poppler-0.5.1.ebuild 1426
 RMD160 b319b30bc93aa572085d998ef88fcb01b84f8d5d poppler-0.5.1.ebuild 1426
 SHA256 eabb6f11161ebdd9dfc3c217b9beccb5eeb46ea61ec1f60615d613104ef7ba35 poppler-0.5.1.ebuild 1426
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHLyBwUpWvClEHQoRAgsHAJ9XxICeLAC6tT3Bj4Uea9b6K9XnkQCdHVbu
-WaVXv79wVCtkzeuYAkhmNfg=
-=DTTR
------END PGP SIGNATURE-----

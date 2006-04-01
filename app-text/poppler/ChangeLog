@@ -1,6 +1,13 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.78 2006/03/19 02:05:06 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.79 2006/04/01 18:20:41 genstef Exp $
+
+*poppler-0.5.1-r1 (01 Apr 2006)
+
+  01 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  +poppler-0.5.1-r1.ebuild:
+  Poppler cvs drop, also fixing bug 128367 thanks to Ruben Jenster
+  <rjenster@arcor.de>
 
   19 Mar 2006; Luis Medinas <metalgod@gentoo.org> poppler-0.5.0-r5.ebuild:
   Stable on amd64. See bug #125430.
