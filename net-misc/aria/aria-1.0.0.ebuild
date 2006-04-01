@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-1.0.0.ebuild,v 1.9 2005/07/05 12:49:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-1.0.0.ebuild,v 1.10 2006/04/01 16:19:08 nixnut Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://aria.rednoah.com/storage/sources/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 DEPEND="nls? ( sys-devel/gettext dev-util/intltool )
 	dev-libs/glib

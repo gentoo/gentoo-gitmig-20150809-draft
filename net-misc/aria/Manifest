@@ -1,21 +1,43 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 31ae9137e797702096985e6d9cda67b9 ChangeLog 2446
+RMD160 6c7534dbf7817329700fdbf8e4cb5a8c6c45f32d ChangeLog 2446
+SHA256 d136c90350e0502016f22a56619dd1b888f29d659b0f30a5ecc9de0c92653350 ChangeLog 2446
 MD5 d8998cc649683ff1cd49df55d91918f9 aria-0.10.0.ebuild 804
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+RMD160 c5afe6221f7e6124f58f79ed038d9fad17c852ed aria-0.10.0.ebuild 804
+SHA256 46e54d986a0a96336b78dc89a47f36b75d3916a44b1f9e7a74f59015da1bdff5 aria-0.10.0.ebuild 804
 MD5 16373e087b195f970cebf5f8e42df7ad aria-0.10.2_beta7.ebuild 857
-MD5 088190d2cd342fb32e3e88848cca6951 ChangeLog 2359
-MD5 54a72f8b909ed172d4d9b3dfbbbd8a0d aria-1.0.0.ebuild 1176
-MD5 e49bd8fb946e7f696225f4fb9d6b7bca files/digest-aria-0.10.2_beta7 69
-MD5 650691427e963c1e71e93aca6c62f0f4 files/digest-aria-1.0.0 63
+RMD160 a78a73e3b728d2ee6c42d9c4dce9691496ac04fd aria-0.10.2_beta7.ebuild 857
+SHA256 881d8507ed503eaab0a77a71fcdd344b846b2ec25c1e6a0d67a8edda9121cb44 aria-0.10.2_beta7.ebuild 857
+MD5 17fec387c71f3c1770468190387bfb0b aria-1.0.0.ebuild 1180
+RMD160 073dd4ee31a5f628dcb7facb3f62910d0bcc5f8e aria-1.0.0.ebuild 1180
+SHA256 02e00f5874ab5d04d786aee9e44947341f17a67e1f2cbbb63ecc4d8c00e3edb6 aria-1.0.0.ebuild 1180
 MD5 6cf5cba54a93af546dd72d878553cf0d files/aria-1.0.0-bigendian.diff 684
-MD5 65d1ace3b41fe91a14721c69547c930b files/digest-aria-0.10.0 64
+RMD160 b4559dac5924b3d777ddd2b6f4e133901fe60543 files/aria-1.0.0-bigendian.diff 684
+SHA256 890b212d7516b4963b174947743dc3cfc2cbc59aee556ed40d840f10064080de files/aria-1.0.0-bigendian.diff 684
 MD5 81f59c682ea25291338ad529d3e25472 files/aria-1.0.0-savefiles-gentoo.diff 1005
+RMD160 e5db1f3dc806626e81ae7f5ed0353e84d737beb7 files/aria-1.0.0-savefiles-gentoo.diff 1005
+SHA256 4c9168cce4804d1507e0b4273883a9b6b8478118244979ee3fd3ecff8496262f files/aria-1.0.0-savefiles-gentoo.diff 1005
 MD5 eecc0279096e5be08069f7e6e6d95665 files/aria-1.0.0-xgettext-gentoo.diff 956
+RMD160 2f19bed0065c120cb0ceb45fa326896e5c9d5b9f files/aria-1.0.0-xgettext-gentoo.diff 956
+SHA256 d118d3c7dfc5cdecfbb4fd008c455dad5de7084b332d2de9cd3bce31ae0f6cd1 files/aria-1.0.0-xgettext-gentoo.diff 956
+MD5 65d1ace3b41fe91a14721c69547c930b files/digest-aria-0.10.0 64
+RMD160 78704ee754a5f32bb422987187283adf56d6dea6 files/digest-aria-0.10.0 64
+SHA256 1fdddd53deefaf14baeb097fa26ebef49f21c5e2b3cdc69977d78530375806c4 files/digest-aria-0.10.0 64
+MD5 e49bd8fb946e7f696225f4fb9d6b7bca files/digest-aria-0.10.2_beta7 69
+RMD160 efe92cbfe48a78dfa6e52353bdaf11408f14638c files/digest-aria-0.10.2_beta7 69
+SHA256 1491b0d3cbab127208c6e3ddaa275469cfe8b39ed2051330887ef8a49260a896 files/digest-aria-0.10.2_beta7 69
+MD5 650691427e963c1e71e93aca6c62f0f4 files/digest-aria-1.0.0 63
+RMD160 fe7eb9fbb8b876ae5d9c61cbdf8991cd1426ef0f files/digest-aria-1.0.0 63
+SHA256 4ac4d82277f25213355879caebe5e6bcd4de51d89efc9ac5863f7e84d75ae898 files/digest-aria-1.0.0 63
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFCyoHQKRy60XGEcJIRAklaAJ9QqPYOixV8a3SIBWwyjAQAf4cE8QCfak83
-rToDqt+zVHXaH51R0nhEzn8=
-=kNd6
+iD8DBQFELqfzoFw4q70f3SsRAksvAKCrAQK4dbgKsWwI3V8rPLFD1CcCjQCfXcwg
+zQOCvTXYnTich1LTlRvt3gE=
+=w2Ls
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aria
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.18 2005/07/05 12:49:20 gustavoz Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.19 2006/04/01 16:19:08 nixnut Exp $
+
+  01 Apr 2006; <nixnut@gentoo.org> aria-1.0.0.ebuild:
+  Added ~ppc keyword. Bug #128064
 
   05 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> aria-1.0.0.ebuild:
   Sparc stable for real
