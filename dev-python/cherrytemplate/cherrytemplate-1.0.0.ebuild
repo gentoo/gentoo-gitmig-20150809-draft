@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrytemplate/cherrytemplate-1.0.0.ebuild,v 1.2 2005/07/12 11:01:22 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrytemplate/cherrytemplate-1.0.0.ebuild,v 1.3 2006/04/01 14:47:55 agriffis Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/cherrypy/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ia64 ~ppc ~x86"
 
 IUSE=""
 DEPEND=">=dev-lang/python-2.3"
