@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.9-r1.ebuild,v 1.1 2006/03/31 23:02:34 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.9-r1.ebuild,v 1.2 2006/04/01 00:13:27 metalgod Exp $
 
 inherit eutils gnome2 mono
 
@@ -93,7 +93,8 @@ src_unpack() {
 }
 
 src_compile() {
-	addpredict "/root/.gconf/"
+	addpredict "/root/.gnome2"
+	addpredict "/root/.gconf"
 	addpredict "/root/.gconfd"
 	gnome2_src_configure
 	emake -j1 || "make failed"
