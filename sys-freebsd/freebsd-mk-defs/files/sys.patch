@@ -1,0 +1,28 @@
+--- sys.mk.orig	Wed Oct 20 15:05:43 2004
++++ sys.mk	Wed Oct 20 16:45:42 2004
+@@ -253,17 +253,17 @@
+ 
+ .endif
+ 
+-__MAKE_CONF?=/etc/make.conf
+-.if exists(${__MAKE_CONF})
+-.include "${__MAKE_CONF}"
+-.endif
++#__MAKE_CONF?=/etc/make.conf
++#.if exists(${__MAKE_CONF})
++#.include "${__MAKE_CONF}"
++#.endif
+ 
+ .include <bsd.cpu.mk>
+ 
+-.if exists(/etc/make.conf.local)
+-.error Error, /etc/make.conf.local should be renamed to /etc/make.conf.
+-.include </etc/make.conf.local>
+-.endif
++#.if exists(/etc/make.conf.local)
++#.error Error, /etc/make.conf.local should be renamed to /etc/make.conf.
++#.include </etc/make.conf.local>
++#.endif
+ 
+ # Default executable format
+ # XXX hint for bsd.port.mk

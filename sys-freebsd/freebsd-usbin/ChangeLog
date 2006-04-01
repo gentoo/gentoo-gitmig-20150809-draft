@@ -1,0 +1,150 @@
+# ChangeLog for sys-apps/freebsd-usbin
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+
+*freebsd-usbin-6.0 (01 Apr 2006)
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-usbin-5.3-r1-makefile-docpaths.patch,
+  +files/freebsd-usbin-6.0-fixmakefiles.patch,
+  +files/freebsd-usbin-fixmakefiles.patch, +files/freebsd-usbin-flex.patch,
+  +files/freebsd-usbin-nowrap.patch, +files/moused.confd,
+  +files/moused.initd, +files/nfs.confd, +files/nfs.initd,
+  +files/nfsmount.initd, +files/pw.conf, +files/rpcbind.initd,
+  +files/syslogd.initd, +metadata.xml, +freebsd-usbin-6.0.ebuild:
+  Import into portage.
+
+  28 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Symlink sys directory instead of patching everything in makefiles.
+
+  20 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Fix deprecated stuff to use NO_* syntax.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Also install hosts.lpd.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add also usbd configuration file, printcap if lpr is requested, and
+  bluetooth configuration if requested.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Build cron jobs for periodic call here instead that in baselayout.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add periodic files.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Install configuration files here instead than in baselayout. Install isdn
+  configuration files only if isdn is set.
+
+  12 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Drop wpa_supplicant and hostapd, take the one from portage on user's request.
+
+  01 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Remove pf support, as freebsd-pf will provide it.
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-usbin-5.3-r1-makefile-docpaths.patch,
+  +files/freebsd-usbin-fixmakefiles.patch, +files/freebsd-usbin-flex.patch,
+  +files/freebsd-usbin-nowrap.patch, +files/moused.confd,
+  +files/moused.initd, +files/nfs.confd, +files/nfs.initd,
+  +files/nfsmount.initd, +files/rpcbind.initd, +files/syslogd.initd,
+  +freebsd-usbin-5.4-r2.ebuild:
+  Moved to sys-freebsd.
+
+  29 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-usbin-5.4-r2.ebuild:
+  Adapt to recent bsdmk changes.
+
+  09 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/freebsd-usbin-5.3_rc1-arlcontrol-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-dconschat-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-fwcontrol-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-ipftest-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-ipresend-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-ipsend-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-iptest-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-mailwrapper-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-makefileinc.patch,
+  -files/freebsd-usbin-5.3_rc1-mlxcontrol-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-ndiscvt-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-nologin-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-pciconf-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-pcvt_keycap-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-pnpinfo-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-raycontrol-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-rpc.ypxfrd-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-setkey-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-sicontrol-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-sysinstall-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-yppush-makefile.patch,
+  -files/freebsd-usbin-5.3_rc1-ypserv-makefile.patch,
+  -files/freebsd-usbin-cron-gentoo-location.patch, -metadata.xml,
+  -freebsd-usbin-5.3.ebuild, -freebsd-usbin-5.3-r1.ebuild,
+  -freebsd-usbin-5.3.20050301.ebuild, -freebsd-usbin-5.4.ebuild,
+  -freebsd-usbin-5.4-r1.ebuild:
+  Removed old 5.3 and obsolete 5.4 versions. Removed metadata (it's in overlay
+  :P).
+
+  16 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> +files/inetd.initd,
+  +files/moused.confd, +files/moused.initd, +files/syslogd.initd,
+  freebsd-usbin-5.4-r2.ebuild:
+  Cleaned up tarball needed, dependencies and provided virtuals. Removed a lot
+  of subtargets we don't need or we use from some other ebuild. Added initd
+  and confd where present for syslogd inetd and moused (moved here from
+  baselayout).
+
+  10 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-usbin-5.4-r2.ebuild:
+  Remove tcpdump, will be maintained on its own as usual.
+
+  08 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/freebsd-usbin-minimal.patch, -files/freebsd-usbin-nontp.patch,
+  -files/freebsd-usbin-nosnmp.patch, freebsd-usbin-5.4.ebuild,
+  freebsd-usbin-5.4-r1.ebuild, freebsd-usbin-5.4-r2.ebuild:
+  Removed minimal, nosnmp and nontp patches, now using dummy_mk which avoids
+  using patches.
+
+*freebsd-usbin-5.4-r2 (04 Jun 2005)
+
+  04 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-usbin-nosnmp.patch, +freebsd-usbin-5.4-r2.ebuild:
+  Removed bsnmpd as it's now installed on its own.
+
+*freebsd-usbin-5.4-r1 (26 May 2005)
+
+  26 May 2005; Diego Pettenò <flameeyes@gentoo.org> +files/nfs.confd,
+  +files/nfs.initd, +files/nfsmount.initd, +files/rpcbind.initd,
+  +freebsd-usbin-5.4-r1.ebuild:
+  New revision: this time installs nfs and rpcbind init.d files, so you can
+  use nfs with locking support.
+
+  26 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-usbin-nontp.patch, freebsd-usbin-5.4.ebuild:
+  Added patch to avoid installing ntp, net-misc/ntp will be compilable soon,
+  in the mean time OpenNTPd should do.
+
+*freebsd-usbin-5.3.20050301 (30 Mar 2005)
+
+  30 Mar 2005; Otavio R. Piske <angusyoung@gentoo.org>
+  +files/freebsd-usbin-5.3-r1-makefile-docpaths.patch,
+  +files/freebsd-usbin-cron-gentoo-location.patch,
+  +freebsd-usbin-5.3.20050301.ebuild:
+  Added a new ebuild based on updated FreeBSD sources and with support for
+  various USE flags (Thanks to Diego Petteno <dgp85@users.sourceforge.net> for
+  the patch)
+
+  06 Oct 2004; Otavio Piske <angusyoung@gentoo.org>
+  -freebsd-usbin-5.2.1.ebuild:
+  Removed version 5.2.1 since had bugs. Default now is 5.2.1-r1
+
+*freebsd-usbin-5.2.1-r1 (29 Sep 2004)
+
+  29 Sep 2004; Aaron Walker <ka0ttic@gentoo.org>
+  freebsd-usbin-5.2.1-r1.ebuild:
+  replace_flags should be called in src_compile.
+
+  15 Sep 2004; Otavio Piske <angusyoung@gentoo.org> freebsd-usbin-5.2.1.ebuild:
+  Initial release
+
+*freebsd-usbin-5.2.1.ebuild (15 Sep 2004)

@@ -1,0 +1,49 @@
+# ChangeLog for sys-libs/freebsd-pam-modules
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/ChangeLog,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+
+*freebsd-pam-modules-6.0 (01 Apr 2006)
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> +files/5.4/README.pamd,
+  +files/5.4/pam.d/other, +files/freebsd-pam-modules-6.0-gentoo.patch,
+  +files/5.4/convert.pl, +files/5.4/pam.d/system,
+  +files/5.4/pam.d/system-auth, +files/freebsd-pam-modules-gentoo.patch,
+  +metadata.xml, +freebsd-pam-modules-6.0.ebuild:
+  Import into portage.
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> +files/5.4/README.pamd,
+  +files/5.4/convert.pl, +files/5.4/pam.d/other, +files/5.4/pam.d/system,
+  +files/5.4/pam.d/system-auth, +files/freebsd-pam-modules-gentoo.patch,
+  +freebsd-pam-modules-5.4-r2.ebuild:
+  Moved to sys-freebsd.
+
+*freebsd-pam-modules-5.4-r2 (04 Jun 2005)
+
+  04 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/freebsd-lib-fixmakefiles.patch,
+  +files/freebsd-pam-modules-gentoo.patch,
+  +files/freebsd-pam-modules-minimal.patch,
+  +files/freebsd-pam-modules-nopasswdqc.patch,
+  -freebsd-pam-modules-5.4-r1.ebuild, +freebsd-pam-modules-5.4-r2.ebuild:
+  Install modules in /lib/security as with Linux-PAM. Remove static version
+  building. Use sys-libs/openpam as pam library instead of its own. Removed
+  pam_deny, pam_permit (in sys-libs/openpam) and pam_passwdqc (in
+  sys-libs/pam_passwdqc).
+
+*freebsd-pam-modules-5.4-r1 (23 May 2005)
+
+  23 May 2005; Diego Pettenò <flameeyes@gentoo.org> +files/5.4/README.pamd,
+  +files/5.4/pam.d/other, +files/5.4/convert.pl, +files/5.4/pam.d/system,
+  +files/5.4/pam.d/system-auth, -freebsd-pam-modules-5.4.ebuild,
+  +freebsd-pam-modules-5.4-r1.ebuild:
+  New revision, this time installs correctly (pamd, not envd). Pam.d files are
+  in $FILESDIR instead than in an external tarball, as they are quite less
+  than before.
+
+*freebsd-pam-modules-5.4_rc3-r1 (03 May 2005)
+
+  03 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-pam-modules-5.4_rc3.ebuild,
+  +freebsd-pam-modules-5.4_rc3-r1.ebuild:
+  New revision which installs pam configuration files.
+

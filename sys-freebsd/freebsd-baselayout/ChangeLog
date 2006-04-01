@@ -1,0 +1,95 @@
+# ChangeLog for sys-apps/freebsd-baselayout
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.1 2006/04/01 16:43:50 flameeyes Exp $
+
+*freebsd-baselayout-20060401 (01 Apr 2006)
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> +files/profile,
+  +metadata.xml, +freebsd-baselayout-20060401.ebuild:
+  Import into portage.
+
+  28 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Fix missing installation of init-common-{pre,post}.sh, init-functions and
+  init.sh.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Drop rpc and devfs.conf.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Don't install ttys file (leave it to freebsd-lib).
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Drop a few more files.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Dropp a few more configuration files and ipfw and sysctl scripts.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Remove some more files and bluetooth directory.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Drop cron.* jobs that are added by freebsd-usbin. Drop also a few more
+  configuration files (like mail subsystem, sendmail, bind, man).
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Delete periodic directory.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add baselayout that drops the old settings files.
+
+  12 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Run keepdir on /dev and /proc only if they don't exists already, as FreeBSD
+  6.0 disallow you from writing on them.
+
+  12 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add missing static useflag to IUSE.
+
+  20 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Keepdir /dev and /proc for safety, don't keepdir /var/log here as
+  freebsd-sbin takes care.
+
+*freebsd-baselayout-0.2-r8 (01 Sep 2005)
+
+  01 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-baselayout-0.2-r7.ebuild, +freebsd-baselayout-0.2-r8.ebuild:
+  Update freebsd-baselayout to avoid ftpbase collisions.
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/checkfs-typo.patch, +files/profile,
+  +freebsd-baselayout-0.2-r7.ebuild:
+  Moved to sys-freebsd.
+
+*freebsd-baselayout-0.2-r7 (24 Aug 2005)
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-baselayout-0.2-r6.ebuild, +freebsd-baselayout-0.2-r7.ebuild:
+  New bump: make sure that /tmp and /var/tmp have the right permissions.
+
+*freebsd-baselayout-0.2-r6 (22 Aug 2005)
+
+  22 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-baselayout-0.2-r5.ebuild, +freebsd-baselayout-0.2-r6.ebuild:
+  Restore rcscripts data from baselayout.
+
+*freebsd-baselayout-0.2-r5 (20 Aug 2005)
+
+  20 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/checkfs-typo.patch, -freebsd-baselayout-0.2-r4.ebuild,
+  +freebsd-baselayout-0.2-r5.ebuild:
+  Added patch to fix a typo in checkfs init.d file.
+
+  18 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-baselayout-0.2-r4.ebuild:
+  Avoid collision with newer gawk (updated dependency).
+
+*freebsd-baselayout-0.2-r4 (29 Jul 2005)
+
+  29 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> +files/profile,
+  -freebsd-baselayout-0.2.ebuild, -freebsd-baselayout-0.2-r1.ebuild,
+  -freebsd-baselayout-0.2-r2.ebuild, -freebsd-baselayout-0.2-r3.ebuild,
+  +freebsd-baselayout-0.2-r4.ebuild:
+  Install gentoo-style /etc/profile, cleanup of ebuild, removed old ebuilds.
+
+  19 Oct 2004; Stephen Bennett <spb@gentoo.org> :
+  Adding freebsd-baselayout
+

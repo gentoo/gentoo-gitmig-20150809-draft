@@ -1,0 +1,11 @@
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/files/moused.confd,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+
+moused_type="auto"       # See man page for rc.conf(5) for available settings.
+
+moused_port="/dev/ums0" # Set to your mouse port.
+
+moused_flags=""         # Any additional flags to moused.
+
+mousechar_start=""    	# if 0xd0-0xd3 default range is occupied in your
+                        # language code table, specify alternative range
+			# start like mousechar_start=3, see vidcontrol(1)

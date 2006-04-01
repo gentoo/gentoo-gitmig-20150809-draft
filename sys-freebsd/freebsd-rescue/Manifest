@@ -1,0 +1,7 @@
+MD5 ff97696bdfc852245602c84335487d87 ChangeLog 844
+MD5 cee4693c5a234643a229f6e364b34478 files/digest-freebsd-rescue-5.4 702
+MD5 650eecb0e0799e16115bd3bf604bc239 files/digest-freebsd-rescue-6.0 701
+MD5 632f5c73843a9f84215b13c0f4e212ce files/freebsd-rescue-5.4-gentoo.patch 370
+MD5 1eb113940f2deb194fc0e8050a998b93 files/freebsd-rescue-5.4-sbin-gentoo.patch 817
+MD5 21ad0d95dc810ad9cf35b5423d2a513b freebsd-rescue-5.4.ebuild 1264
+MD5 39135ad8d1f8ca2ba6430e5425ca2f84 freebsd-rescue-6.0.ebuild 1274

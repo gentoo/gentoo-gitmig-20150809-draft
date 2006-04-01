@@ -1,0 +1,51 @@
+# ChangeLog for sys-apps/freebsd-share
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+
+*freebsd-share-6.0 (01 Apr 2006)
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-share-5.3-colldef-makefile_links.patch,
+  +files/freebsd-share-5.3-doc-locations.patch,
+  +files/freebsd-share-5.4-gentoo-skel.patch,
+  +files/freebsd-share-6.0-links.patch, +metadata.xml,
+  +freebsd-share-6.0.ebuild:
+  Import into portage.
+
+  12 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add patch to drop broken linkage, might require more work as it's just a
+  workaround.
+
+  20 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Installs default skel content in /etc/skel as usual on Gentoo, also disable
+  some content that's not Gentoo-style and might create problems to users.
+
+  02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-share-5.4-r1.ebuild:
+  Removed stray epatch lines that broke the ebuild.
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-share-5.3-colldef-makefile_links.patch,
+  +files/freebsd-share-5.3-doc-locations.patch,
+  +freebsd-share-5.4-r1.ebuild:
+  Moved to sys-freebsd.
+
+  15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-share-5.4-r1.ebuild:
+  Add nostrip restriction.
+
+*freebsd-share-5.4-r1 (15 Jul 2005)
+
+  15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-share-5.4.ebuild, +freebsd-share-5.4-r1.ebuild:
+  Don't install make.conf.5 manpage (it's for ports), close #99129. Fix
+  missing SLOT.
+
+*freebsd-share-5.3.20050301 (23 Mar 2005)
+
+  23 Mar 2005; Otavio R. Piske <angusyoung@gentoo.org>
+  +files/freebsd-share-5.3-doc-locations.patch,
+  +freebsd-share-5.3.20050301.ebuild:
+  New ebuild for freebsd-share, with support for USE Flags. Thanks for Diego
+  Petterno (dgp85@users.sourceforge.net) for submitting the patch.
+

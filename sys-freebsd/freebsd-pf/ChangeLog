@@ -1,0 +1,16 @@
+# ChangeLog for sys-freebsd/freebsd-pf
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+
+*freebsd-pf-6.0 (01 Apr 2006)
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +freebsd-pf-6.0.ebuild:
+  Import into portage.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Fix compiling. Add pf.conf and pf.os here instead that on baselayout.
+
+  01 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Added freebsd-pf package with tools to maintain pf firewall.
+

@@ -1,0 +1,11 @@
+diff -ur lib.orig/libc/locale/mblocal.h lib/libc/locale/mblocal.h
+--- lib.orig/libc/locale/mblocal.h	2005-04-29 13:57:07 +0000
++++ lib/libc/locale/mblocal.h	2005-04-29 14:00:33 +0000
+@@ -30,6 +30,7 @@
+ #define	_MBLOCAL_H_
+ 
+ #include <stddef.h>	/* XXX for rune_t */
++#include <rune.h>
+ 
+ /*
+  * Conversion function pointers for current encoding.

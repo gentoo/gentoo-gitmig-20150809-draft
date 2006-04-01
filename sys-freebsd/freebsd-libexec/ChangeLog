@@ -1,0 +1,67 @@
+# ChangeLog for sys-libs/freebsd-libexec
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+
+*freebsd-libexec-6.0 (01 Apr 2006)
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-libexec-5.3_rc1-ypxfr-makefile.patch,
+  +files/freebsd-libexec-setXid.patch, +files/ftpd.pamd, +metadata.xml,
+  +freebsd-libexec-6.0.ebuild:
+  Import into portage.
+
+  20 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Fix deprecated stuff to use NO_* syntax.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add gettytab file here instead than in baselayout.
+
+  01 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Remove pf support, as freebsd-pf will provide it.
+
+  27 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-libexec-5.4-r1.ebuild:
+  Fixed missing sys-freebsd change.
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-libexec-5.3_rc1-ypxfr-makefile.patch,
+  +files/freebsd-libexec-setXid.patch, +files/ftpd.pamd,
+  +freebsd-libexec-5.4-r1.ebuild:
+  Moved to sys-freebsd.
+
+  18 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-libexec-5.4-r1.ebuild:
+  Updated to reflect bsdmk/freebsd eclasses changes.
+
+  29 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-libexec-5.4-r1.ebuild:
+  Adapt to recent bsdmk changes.
+
+  20 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> -files/rexecd.pamd,
+  -files/rsh.pamd, -files/telnetd.pamd, freebsd-libexec-5.3.ebuild,
+  freebsd-libexec-5.3.20050301.ebuild, freebsd-libexec-5.4-r1.ebuild:
+  Use new bsdmk eclass, removed rshd rexecd rlogind and related pamd files.
+
+  16 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-libexec-5.4-r1.ebuild:
+  Remove building of sendmail and tcp-wrapper stuff.
+
+*freebsd-libexec-5.4-r1 (23 May 2005)
+
+  23 May 2005; Diego Pettenò <flameeyes@gentoo.org> +files/ftpd.pamd,
+  +files/rexecd.pamd, +files/telnetd.pamd, -freebsd-libexec-5.4.ebuild,
+  +freebsd-libexec-5.4-r1.ebuild:
+  Moved here pamd files. Added dependency over virtual/pam. Using
+  mirror://gentoo/.
+
+*freebsd-libexec-5.3.20050301 (06 Apr 2005)
+
+  06 Apr 2005; Otavio R. Piske <angusyoung@gentoo.org>
+  freebsd-libexec-5.3.20050301.ebuild:
+  New ebuild for updated sources and support for new use flags (patch provided
+  by Diego Petteno).
+
+  14 Oct 2004; Otavio R. Piske <angusyoung@gentoo.org>
+  freebsd-libexec-5.2.1.ebuild:
+  Corrected SRC_URI pointing to a wrong site
+

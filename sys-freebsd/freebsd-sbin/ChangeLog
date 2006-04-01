@@ -1,0 +1,83 @@
+# ChangeLog for sys-apps/freebsd-sbin
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+
+*freebsd-sbin-6.0 (01 Apr 2006)
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-sbin-fixmakefiles.patch, +files/freebsd-sbin-flex.patch,
+  +files/freebsd-sbin-setXid.patch, +files/freebsd-sbin-zlib.patch,
+  +files/ipfw.initd, +files/sysctl.initd, +metadata.xml,
+  +freebsd-sbin-6.0.ebuild:
+  Import into portage.
+
+  20 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Fix deprecated stuff to use NO_* syntax.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Handle also sysctl configuration file and init script.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add here ipfw init.d script and rc.firewall used by it.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add ipf scripts only if ipfilter is enabled.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Install minfree file.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add periodic files.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Start moving etc files here.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  On suggestion from Benigno B. Junior (bbj), don't extract sys, instead
+  symlink int inside ${WORKDIR}. This also drops the patch to fix makefiles.
+
+  12 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Extract also -sys as it's needed to geom/eli to build.
+
+  01 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Remove pf support, as freebsd-pf will provide it.
+
+  20 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Make sure /var/log is kept by this package instead of baselayout.
+
+  27 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-sbin-5.4.ebuild:
+  Fix dependencies for sys-freebsd move.
+
+*freebsd-sbin-5.4 (25 Aug 2005)
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-sbin-fixmakefiles.patch, +files/freebsd-sbin-flex.patch,
+  +files/freebsd-sbin-setXid.patch, +files/freebsd-sbin-zlib.patch,
+  +freebsd-sbin-5.4.ebuild:
+  Moved to sys-freebsd.
+
+  29 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-sbin-5.4.ebuild:
+  Adapt to recent bsdmk changes.
+
+  16 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-sbin-5.4.ebuild:
+  Avoid building and installing dhclient.
+
+  29 Sep 2004; Aaron Walker <ka0ttic@gentoo.org>
+  freebsd-sbin-5.2.1-r1.ebuild:
+  inherit should be the first thing under CVS header.
+
+*freebsd-sbin-5.2.1-r1 (18 Sep 2004)
+
+  18 Sep 2004; Otavio Piske <angusyoung@gentoo.org>
+  freebsd-sbin-5.2.1-r1.ebuild:
+  Updated ebuild DEPEND. Lots of dependencies are now considered. Also, 
+  corrected the problem with ebuild not handling schg/noschg flags 
+  correctly.
+
+  15 Sep 2004; Otavio Piske <angusyoung@gentoo.org> freebsd-sbin-5.2.1.ebuild:
+  Initial release
+
+*freebsd-sbin-5.2.1.ebuild (15 Sep 2004)

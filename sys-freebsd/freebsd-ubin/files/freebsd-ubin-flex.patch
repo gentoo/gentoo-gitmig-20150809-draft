@@ -1,0 +1,24 @@
+diff -ur usr.bin/colldef/Makefile usr.bin-flex/colldef/Makefile
+--- usr.bin/colldef/Makefile	2002-02-08 23:07:34 +0000
++++ usr.bin-flex/colldef/Makefile	2005-05-05 17:32:03 +0000
+@@ -5,7 +5,7 @@
+ LFLAGS=	-8 -i
+ CFLAGS+=-I. -I${.CURDIR} -I${.CURDIR}/../../lib/libc/locale
+ CFLAGS+=-DCOLLATE_DEBUG -DYY_NO_UNPUT
+-LDADD=	-ll
++LDADD=	-lfl
+ DPADD=	${LIBL}
+ 
+ .include <bsd.prog.mk>
+diff -ur usr.bin/xlint/lint1/Makefile usr.bin-flex/xlint/lint1/Makefile
+--- usr.bin/xlint/lint1/Makefile	2004-02-05 22:44:25 +0000
++++ usr.bin-flex/xlint/lint1/Makefile	2005-05-05 17:32:25 +0000
+@@ -7,7 +7,7 @@
+ MAN=	lint.7
+ CLEANFILES= lint.7
+ 
+-LDADD=	-ll -lm
++LDADD=	-lfl -lm
+ DPADD=	${LIBL} ${LIBM}
+ CFLAGS+= -I. -I${.CURDIR}
+ LINTFLAGS=-aehpz

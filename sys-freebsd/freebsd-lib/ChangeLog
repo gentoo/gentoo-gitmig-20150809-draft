@@ -1,0 +1,130 @@
+# ChangeLog for sys-libs/freebsd-lib
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.1 2006/04/01 16:43:50 flameeyes Exp $
+
+*freebsd-lib-6.0 (01 Apr 2006)
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-lib-6.0-flex-2.5.31.patch,
+  +files/freebsd-lib-6.0-gccfloat.patch, +files/freebsd-lib-6.0-pmc.patch,
+  +files/freebsd-lib-bsdxml.patch, +files/freebsd-lib-fixmakefiles.patch,
+  +files/freebsd-lib-fixmp.patch, +files/freebsd-lib-msun-fenvc.patch,
+  +files/freebsd-lib-runet.patch, +metadata.xml, +freebsd-lib-6.0.ebuild:
+  Import into portage.
+
+  20 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Fix deprecated stuff to use NO_* syntax.
+
+  20 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add patch to build with flex 2.5.31 (and hard depend on that version as the
+  change is non-backward-compatible.
+
+  14 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Make sure that /dev/zero is a character special so that we don't compile a
+  broken libc if /dev is not mounted.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Install configuration files here instead than on baselayout.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  On suggestion from Benigno B. Junior (bbj), don't extract sys and include,
+  instead symlink them inside ${WORKDIR}. This also drops the patch to fix
+  makefiles.
+
+  13 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add -static-libgcc to flags so that libc won't link to libgcc_s.
+
+  23 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Added conditional src_uri on usr.sbin for nis useflag. Thanks The_Paya @
+  #gentoo-bsd.
+
+*freebsd-lib-6.0_beta4 (19 Sep 2005)
+
+  19 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-lib-6.0-fixmakefiles.patch,
+  +files/freebsd-lib-6.0-gccfloat.patch,
+  +files/freebsd-lib-6.0-gccfloat.patch~, +files/freebsd-lib-6.0-pmc.patch,
+  +freebsd-lib-6.0_beta4.ebuild:
+  Added freebsd-lib 6.0_beta4, slotted to avoid removing the old 5.4. This can
+  be a problem, remember\!.
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-lib-bsdxml.patch, +files/freebsd-lib-fixmakefiles.patch,
+  +files/freebsd-lib-fixmp.patch, +files/freebsd-lib-msun-fenvc.patch,
+  +files/freebsd-lib-runet.patch, +freebsd-lib-5.4-r2.ebuild:
+  Moved to sys-freebsd.
+
+  18 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-lib-5.4-r2.ebuild:
+  Updated to reflect bsdmk/freebsd eclasses changes.
+
+  29 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-lib-5.4-r2.ebuild:
+  Adapt to recent bsdmk changes.
+
+  16 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-lib-5.4-r2.ebuild:
+  Removed a lot of subtargets which aren't needed on our setup.
+
+  15 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-lib-5.4-r2.ebuild:
+  libarchive has its own ebuild now.
+
+  08 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/freebsd-lib-minimal-2.patch, -files/freebsd-lib-minimal.patch,
+  -files/freebsd-lib-nosnmp.patch, freebsd-lib-5.4.ebuild,
+  freebsd-lib-5.4-r1.ebuild, freebsd-lib-5.4-r2.ebuild:
+  Moved also freebsd-lib to use dummy_mk instead of minimal patches.
+
+*freebsd-lib-5.4-r2 (08 Jun 2005)
+
+  08 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-lib-minimal-2.patch, freebsd-lib-5.3.ebuild,
+  freebsd-lib-5.3.20050301.ebuild, freebsd-lib-5.3.20050301-r1.ebuild,
+  freebsd-lib-5.4.ebuild, freebsd-lib-5.4-r1.ebuild,
+  +freebsd-lib-5.4-r2.ebuild:
+  New revision which removes a few more external libraries (which are going to
+  be added as ebuilds on their own). Sorry for this rapid-changing.
+
+*freebsd-lib-5.4-r1 (04 Jun 2005)
+
+  04 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-lib-nosnmp.patch, +freebsd-lib-5.4-r1.ebuild:
+  Remove libbsnmp and libbegemot as they're installed on their own.
+
+  26 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-lib-fixmp.patch, freebsd-lib-5.4.ebuild:
+  Added a patch to fix a compilation -ssl -> +ssl
+
+*freebsd-lib-5.4_rc4 (05 May 2005)
+
+  05 May 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  files/freebsd-lib-minimal.patch, -freebsd-lib-5.4_rc3.ebuild,
+  +freebsd-lib-5.4_rc4.ebuild:
+  Updated to rc4.
+
+*freebsd-lib-5.4_rc3 (29 Apr 2005)
+
+  29 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-lib-fixmakefiles.patch, +files/freebsd-lib-minimal.patch,
+  +files/freebsd-lib-msun-fenvc.patch, +files/freebsd-lib-runet.patch,
+  +freebsd-lib-5.4_rc3.ebuild:
+  Added new experimental 5.4_rc3 ebuild which follows the new gentooish
+  structure.
+
+*freebsd-lib-5.3.20050301-r1 (19 Apr 2005)
+
+  19 Apr 2005; Otavio R. Piske <angusyoung@gentoo.org>
+  +files/freebsd-lib-5.3-pkgs_removed.patch,
+  +freebsd-lib-5.3.20050301-r1.ebuild:
+  New ebuild with a patch to avoid compilation of ncurses.
+
+  07 Apr 2005; Otavio R. Piske <angusyoung@gentoo.org> :
+  New ebuild with support for new use flags and based on updated sources
+
+*freebsd-lib-5.2.1 (19 Oct 2004)
+
+  19 Oct 2004; Otavio R. Piske <angusyoung@gentoo.org>
+  freebsd-lib-5.2.1.ebuild:
+  Initial release
+

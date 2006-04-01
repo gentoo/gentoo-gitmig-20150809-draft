@@ -1,0 +1,142 @@
+diff -ur sys/boot/alpha/common/Makefile.common sys.boot0/boot/alpha/common/Makefile.common
+--- sys/boot/alpha/common/Makefile.common	2004-08-23 06:26:55.000000000 +0200
++++ sys.boot0/boot/alpha/common/Makefile.common	2005-06-20 19:53:39.322858584 +0200
+@@ -34,7 +34,7 @@
+ 
+ CFLAGS+=	-Wall
+ 
+-CFLAGS+=	-I${LIBSTANDDIR}
++CFLAGS+=	-I/usr/include/libstand
+ CFLAGS+=	-I${.CURDIR}/..
+ 
+ vers.c: ${.CURDIR}/../../common/newvers.sh ${.CURDIR}/version
+diff -ur sys/boot/alpha/libalpha/Makefile sys.boot0/boot/alpha/libalpha/Makefile
+--- sys/boot/alpha/libalpha/Makefile	2005-02-13 08:23:30.000000000 +0100
++++ sys.boot0/boot/alpha/libalpha/Makefile	2005-06-20 19:53:39.323858432 +0200
+@@ -5,7 +5,7 @@
+ 
+ #CFLAGS+=	-DDISK_DEBUG
+ 
+-CFLAGS+=	-I${LIBSTANDDIR}
++CFLAGS+=	-I/usr/include/libstand
+ 
+ # Pick up the bootstrap header for some interface items
+ CFLAGS+=	-I${.CURDIR}/../../common
+diff -ur sys/boot/arc/lib/Makefile sys.boot0/boot/arc/lib/Makefile
+--- sys/boot/arc/lib/Makefile	2005-02-13 08:23:30.000000000 +0100
++++ sys.boot0/boot/arc/lib/Makefile	2005-06-20 19:53:39.323858432 +0200
+@@ -7,7 +7,7 @@
+ .PATH:		${.CURDIR}/arch/${MACHINE_ARCH}
+ # XXX hack to pick up stand.h
+ LIBSTANDDIR=	${.CURDIR}/../../../../lib/libstand
+-CFLAGS+=	-I${LIBSTANDDIR}
++CFLAGS+=	-I/usr/include/libstand
+ CFLAGS+=	-DDEBUG
+ 
+ # Pick up the bootstrap header for some interface items
+diff -ur sys/boot/arc/loader/Makefile sys.boot0/boot/arc/loader/Makefile
+--- sys/boot/arc/loader/Makefile	2002-05-10 11:26:30.000000000 +0200
++++ sys.boot0/boot/arc/loader/Makefile	2005-06-20 19:53:39.323858432 +0200
+@@ -26,7 +26,7 @@
+ 
+ CFLAGS+=	-Wall
+ 
+-CFLAGS+=	-I${LIBSTANDDIR}
++CFLAGS+=	-I/usr/include/libstand
+ CFLAGS+=	-I${.CURDIR}/../include
+ CRT=		start.o
+ STRIP=
+diff -ur sys/boot/efi/libefi/Makefile sys.boot0/boot/efi/libefi/Makefile
+--- sys/boot/efi/libefi/Makefile	2005-02-13 08:23:31.000000000 +0100
++++ sys.boot0/boot/efi/libefi/Makefile	2005-06-20 19:53:39.323858432 +0200
+@@ -14,7 +14,7 @@
+ 
+ CFLAGS+=	-I${.CURDIR}/../include
+ CFLAGS+=	-I${.CURDIR}/../include/${MACHINE_ARCH}
+-CFLAGS+=	-I${.CURDIR}/../../../../lib/libstand
++CFLAGS+=	-I/usr/include/libstand
+ 
+ # Pick up the bootstrap header for some interface items
+ CFLAGS+=	-I${.CURDIR}/../../common
+diff -ur sys/boot/efi/loader/Makefile sys.boot0/boot/efi/loader/Makefile
+--- sys/boot/efi/loader/Makefile	2004-07-20 09:01:02.000000000 +0200
++++ sys.boot0/boot/efi/loader/Makefile	2005-06-20 19:53:39.324858280 +0200
+@@ -27,7 +27,7 @@
+ CFLAGS+= -I${.CURDIR}/../include/${MACHINE_ARCH}
+ CFLAGS+= -I${.CURDIR}/../../common
+ CFLAGS+= -I${.CURDIR}/../libefi
+-CFLAGS+= -I${.CURDIR}/../../../../lib/libstand
++CFLAGS+= -I/usr/include/libstand
+ CFLAGS+= -DLOADER
+ 
+ LDSCRIPT=	${.CURDIR}/../libefi/arch/${MACHINE_ARCH}/ldscript.${MACHINE_ARCH}
+diff -ur sys/boot/i386/boot2/Makefile sys.boot0/boot/i386/boot2/Makefile
+--- sys/boot/i386/boot2/Makefile	2005-03-16 19:54:37.000000000 +0100
++++ sys.boot0/boot/i386/boot2/Makefile	2005-06-20 19:31:36.871901688 +0200
+@@ -24,7 +24,6 @@
+ 	-fno-guess-branch-probability \
+ 	-fomit-frame-pointer \
+ 	-fno-unit-at-a-time \
+-	-mno-align-long-strings \
+ 	-mrtd \
+ 	-mno-mmx -mno-3dnow -mno-sse -mno-sse2 \
+ 	-D${BOOT2_UFS} \
+diff -ur sys/boot/i386/libi386/Makefile sys.boot0/boot/i386/libi386/Makefile
+--- sys/boot/i386/libi386/Makefile	2005-02-13 08:23:31.000000000 +0100
++++ sys.boot0/boot/i386/libi386/Makefile	2005-06-20 19:53:39.324858280 +0200
+@@ -28,7 +28,7 @@
+ 		-I${.CURDIR}/../../../contrib/dev/acpica \
+ 		-I${.CURDIR}/../../.. -I.
+ # the location of libstand
+-CFLAGS+=	-I${.CURDIR}/../../../../lib/libstand/
++CFLAGS+=	-I/usr/include/libstand/
+ 
+ .if ${MACHINE_ARCH} == "amd64"
+ CLEANFILES+=	machine
+diff -ur sys/boot/ia64/libski/Makefile sys.boot0/boot/ia64/libski/Makefile
+--- sys/boot/ia64/libski/Makefile	2004-02-13 05:43:41.000000000 +0100
++++ sys.boot0/boot/ia64/libski/Makefile	2005-06-20 19:53:39.324858280 +0200
+@@ -7,7 +7,7 @@
+ SRCS+=	delay.c skifs.c elf_freebsd.c bootinfo.c ssc.c
+ SRCS+=	acpi_stub.c efi_stub.c pal_stub.S sal_stub.c
+ 
+-CFLAGS+=	-I${.CURDIR}/../../../../lib/libstand
++CFLAGS+=	-I/usr/include/libstand
+ CFLAGS+=	-I${.CURDIR}/../../efi/include
+ CFLAGS+=	-I${.CURDIR}/../../efi/include/${MACHINE_ARCH}
+ 
+diff -ur sys/boot/ofw/libofw/Makefile sys.boot0/boot/ofw/libofw/Makefile
+--- sys/boot/ofw/libofw/Makefile	2005-02-13 08:23:31.000000000 +0100
++++ sys.boot0/boot/ofw/libofw/Makefile	2005-06-20 19:53:39.325858128 +0200
+@@ -7,7 +7,7 @@
+ 	ofw_memory.c ofw_module.c ofw_net.c ofw_reboot.c \
+ 	ofw_time.c openfirm.c
+ 
+-CFLAGS+=	-I${.CURDIR}/../../../../lib/libstand/
++CFLAGS+=	-I/usr/include/libstand/
+ 
+ # Pick up the bootstrap header for some interface items
+ CFLAGS+=	-I${.CURDIR}/../../common -I${.CURDIR}/../../.. -I.
+diff -ur sys/boot/pc98/libpc98/Makefile sys.boot0/boot/pc98/libpc98/Makefile
+--- sys/boot/pc98/libpc98/Makefile	2005-02-13 08:23:31.000000000 +0100
++++ sys.boot0/boot/pc98/libpc98/Makefile	2005-06-20 19:53:39.325858128 +0200
+@@ -29,6 +29,6 @@
+ 		-I${.CURDIR}/../../i386/libi386 \
+ 		-I${.CURDIR}/../../.. -I.
+ # the location of libstand
+-CFLAGS+=	-I${.CURDIR}/../../../../lib/libstand/
++CFLAGS+=	-I/usr/include/libstand/
+ 
+ .include <bsd.lib.mk>
+diff -ur sys/boot/sparc64/loader/Makefile sys.boot0/boot/sparc64/loader/Makefile
+--- sys/boot/sparc64/loader/Makefile	2004-08-16 17:45:25.000000000 +0200
++++ sys.boot0/boot/sparc64/loader/Makefile	2005-06-20 19:53:39.325858128 +0200
+@@ -63,7 +63,7 @@
+ CFLAGS+=	-I${.CURDIR}/../../ofw/libofw/
+ 
+ # where to get libstand from
+-CFLAGS+=	-I${.CURDIR}/../../../../lib/libstand/
++CFLAGS+=	-I/usr/include/libstand/
+ 
+ DPADD=		${LIBFICL} ${LIBOFW} ${LIBSTAND}
+ LDADD=		${LIBFICL} ${LIBOFW} -lstand

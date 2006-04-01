@@ -1,0 +1,69 @@
+# ChangeLog for sys-apps/freebsd-mk-defs
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+
+*freebsd-mk-defs-6.0 (01 Apr 2006)
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-mk-defs-6.0-gentoo.patch,
+  +files/freebsd-mk-defs-6.0-strip.patch, +files/freebsd-mk-defs-flex.patch,
+  +files/freebsd-mk-defs-gentoo.patch, +files/sys.patch, +metadata.xml,
+  +freebsd-mk-defs-6.0.ebuild:
+  Import into portage.
+
+  23 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add patch to avoid stripping binaries while installing, leaving that up to
+  portage.
+
+  28 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Install in alternative directory when installing on non-FreeBSD systems.
+
+*freebsd-mk-defs-6.0_beta4 (20 Sep 2005)
+
+  20 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-mk-defs-6.0-gentoo.patch,
+  +freebsd-mk-defs-6.0_beta4.ebuild:
+  freebsd-mk-defs 6.0, still not working.
+
+*freebsd-mk-defs-5.4-r1 (25 Aug 2005)
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-mk-defs-flex.patch, +files/freebsd-mk-defs-gentoo.patch,
+  +files/sys.patch, +freebsd-mk-defs-5.4-r1.ebuild:
+  Moved to sys-freebsd.
+
+  15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-mk-defs-5.4-r1.ebuild:
+  Add nostrip restriction.
+
+  10 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-mk-defs-5.4-r1.ebuild:
+  Fix SLOT.
+
+  16 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-mk-defs-5.4.ebuild:
+  Remove BASE_SRC_URI variable.
+
+*freebsd-mk-defs-5.4_rc4 (05 May 2005)
+
+  05 May 2005; Diego Petten <flameeyes@gentoo.org>
+  +freebsd-mk-defs-5.4_rc4.ebuild:
+  Added 5.4_rc4.
+
+*freebsd-mk-defs-5.3_rc1.ebuild (02 Nov 2004)
+
+  20 Nov 2004; Otavio R. Piske <angusyoung@gentoo.org>
+  freebsd-mk-defs-5.3_rc1.ebuild :
+  Initial Release
+
+*freebsd-mk-defs-5.2.1-r1.ebuild (20 Oct 2004)
+
+  20 Oct 2004; Otavio R. Piske <angusyoung@gentoo.org> 
+  freebsd-mk-defs-5.2.1-r1.ebuild :
+  New ebuild with patches that avoid having to create dirs inside an ebuild
+
+*freebsd-mk-defs-5.2.1.ebuild (15 Sep 2004)
+
+  15 Sep 2004; Otavio Piske <angusyoung@gentoo.org> freebsd-mk-defs-5.2.1.ebuild:
+  Initial release
+

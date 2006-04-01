@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/files/sysctl.initd,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+
+start() {
+    ebegin "Setting sysctl variables"
+    success=0
+
+    if [ -f /etc/sysctl.conf ]; then
+	grep -v '^#' /etc/sysctl.conf | while read var comments
+	do
+	    if [[ -n ${var} ]]; then
+		name="${var%%=*}"
+		val="${var#*=}"
+		if [[ $(sysctl -N ${name} 2>/dev/null) == ${name} ]]; then
+		    sysctl ${name}=${value} &>/dev/null
+		else
+		    eerror "Kernel doesn't like ${name}"
+		    success=1
+		fi
+	    fi
+	done
+    else
+	eerror "No /etc/sysctl.conf found."
+	success=1
+    fi
+
+    eend $success "Some errors were encountered"
+}

@@ -1,0 +1,7 @@
+MD5 3eff4143ab182b0fd34a0ffef897d7ec ChangeLog 370
+MD5 0dca9bfa7976323ccff581d97c304bf9 boot0-5.4.ebuild 521
+MD5 662426c2fc1fe191b391ee51a98b7aad boot0-6.0.ebuild 527
+MD5 f24689293c761803849391ade42168df files/boot0-6.0-gentoo.patch 4447
+MD5 55b66bbe5370224c81d28642280e096a files/boot0-gentoo.patch 5649
+MD5 d09441d1d1ddaca424c7a7f1547281f9 files/digest-boot0-5.4 70
+MD5 d5fe0ece228d8e14938856a903a0aeaf files/digest-boot0-6.0 70

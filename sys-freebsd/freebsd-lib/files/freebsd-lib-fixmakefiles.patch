@@ -1,0 +1,119 @@
+diff -ur lib.orig/libc/Makefile lib/libc/Makefile
+--- lib.orig/libc/Makefile	Thu Apr  7 12:11:33 2005
++++ lib/libc/Makefile	Thu Apr  7 12:26:50 2005
+@@ -13,7 +13,7 @@
+ SHLIB_MAJOR= 5
+ SHLIBDIR?= /lib
+ WARNS?=	2
+-CFLAGS+=-I${.CURDIR}/include -I${.CURDIR}/../../include
++CFLAGS+=-I${.CURDIR}/include -I/usr/include
+ CFLAGS+=-I${.CURDIR}/${MACHINE_ARCH}
+ CLEANFILES+=tags
+ INSTALL_PIC_ARCHIVE=
+Only in lib/libc: Makefile.orig
+diff -ur lib.orig/libc/sys/Makefile.inc lib/libc/sys/Makefile.inc
+--- lib.orig/libc/sys/Makefile.inc	Thu Apr  7 12:11:33 2005
++++ lib/libc/sys/Makefile.inc	Thu Apr  7 12:26:58 2005
+@@ -6,7 +6,7 @@
+ 
+ # Include the generated makefile containing the *complete* list
+ # of syscall names in MIASM.
+-.include "${.CURDIR}/../../sys/sys/syscall.mk"
++.include "/usr/src/sys/sys/syscall.mk"
+ 
+ # Include machine dependent definitions.
+ #
+Only in lib/libc/sys: Makefile.inc.orig
+diff -ur lib.orig/libcam/Makefile lib/libcam/Makefile
+--- lib.orig/libcam/Makefile	Thu Apr  7 12:11:33 2005
++++ lib/libcam/Makefile	Thu Apr  7 12:27:06 2005
+@@ -34,9 +34,9 @@
+ 		cam_cdbparse.3 csio_encode_visit.3 \
+ 		cam_cdbparse.3 buff_encode_visit.3
+ 
+-.PATH:		${.CURDIR}/../../sys/cam/scsi ${.CURDIR}/../../sys/cam
++.PATH:		/usr/src/sys/cam/scsi /usr/src/sys/cam
+ 
+-SDIR=		${.CURDIR}/../../sys
++SDIR=		/usr/src/sys
+ CFLAGS+=	-I${.CURDIR} -I${SDIR}
+ 
+ .include <bsd.lib.mk>
+Only in lib/libcam: Makefile.orig
+diff -ur lib.orig/libkvm/Makefile lib/libkvm/Makefile
+--- lib.orig/libkvm/Makefile	Thu Apr  7 12:11:34 2005
++++ lib/libkvm/Makefile	Thu Apr  7 12:17:40 2005
+@@ -3,7 +3,7 @@
+ 
+ LIB=	kvm
+ SHLIBDIR?= /lib
+-CFLAGS+=-DLIBC_SCCS -I${.CURDIR}
++CFLAGS+=-DLIBC_SCCS -I${.CURDIR} -I/usr/src/sys
+ SRCS=	kvm.c kvm_${MACHINE_ARCH}.c kvm_file.c kvm_getloadavg.c \
+ 	kvm_getswapinfo.c kvm_proc.c
+ INCS=	kvm.h
+Only in lib/libkvm: Makefile.orig
+diff -ur lib.orig/libncurses/Makefile lib/libncurses/Makefile
+--- lib.orig/libncurses/Makefile	Thu Apr  7 12:11:34 2005
++++ lib/libncurses/Makefile	Thu Apr  7 12:28:02 2005
+@@ -255,6 +255,7 @@
+ 
+ .if !defined(NOHTML)
+ afterinstall:
++	${INSTALL} -d ${DESTDIR}${DOCSDIR}
+ .for file in ${DOCS}
+ 	cd ${.CURDIR}/../../contrib/ncurses/doc/html ; \
+ 	${INSTALL} -o ${BINOWN} -g ${BINGRP} -m 444 ${file} \
+Only in lib/libncurses: Makefile.orig
+diff -ur lib.orig/libngatm/Makefile lib/libngatm/Makefile
+--- lib.orig/libngatm/Makefile	Thu Apr  7 12:11:34 2005
++++ lib/libngatm/Makefile	Thu Apr  7 12:27:55 2005
+@@ -8,7 +8,7 @@
+ WARNS?=	6
+ 
+ # source of the library lives in contrib
+-SDIR=	${.CURDIR}/../../sys
++SDIR=	/usr/src/sys
+ CTRB=	${.CURDIR}/../../contrib/ngatm
+ LIBBASE= ${SDIR}/contrib/ngatm
+ 
+Only in lib/libngatm: Makefile.orig
+diff -ur lib.orig/libsbuf/Makefile lib/libsbuf/Makefile
+--- lib.orig/libsbuf/Makefile	Thu Apr  7 12:11:34 2005
++++ lib/libsbuf/Makefile	Thu Apr  7 12:21:30 2005
+@@ -5,6 +5,6 @@
+ SRCS=	subr_sbuf.c 
+ WARNS?= 2
+ 
+-.PATH:	${.CURDIR}/../../sys/kern
++.PATH:	/usr/src/sys/kern
+ 
+ .include <bsd.lib.mk>
+Only in lib/libsbuf: Makefile.orig
+diff -ur lib.orig/libthr/Makefile lib/libthr/Makefile
+--- lib.orig/libthr/Makefile	Thu Apr  7 12:11:35 2005
++++ lib/libthr/Makefile	Thu Apr  7 12:28:14 2005
+@@ -14,6 +14,7 @@
+ CFLAGS+=-I${.CURDIR}/../libc/include -I${.CURDIR}/thread \
+ 	-I${.CURDIR}/../../include
+ CFLAGS+=-I${.CURDIR}/../../libexec/rtld-elf
++CFLAGS+=-I/usr/src/sys
+ 
+ # enable extra internal consistancy checks
+ CFLAGS+=-D_PTHREADS_INVARIANTS
+Only in lib/libthr: Makefile.orig
+diff -ur lib.orig/libypclnt/Makefile lib/libypclnt/Makefile
+--- lib.orig/libypclnt/Makefile	Thu Apr  7 12:11:34 2005
++++ lib/libypclnt/Makefile	Thu Apr  7 12:22:15 2005
+@@ -24,8 +24,8 @@
+ 	yppasswd_private_xdr.c
+ 
+ RPCGEN=	rpcgen -C
+-RPCSRC=	${.CURDIR}/../../include/rpcsvc/yp.x
+-RPCSRC_PW=	${.CURDIR}/../../include/rpcsvc/yppasswd.x
++RPCSRC=	/usr/include/rpcsvc/yp.x
++RPCSRC_PW=	/usr/include/rpcsvc/yppasswd.x
+ RPCSRC_PRIV=	${.CURDIR}/../../usr.sbin/rpc.yppasswdd/yppasswd_private.x
+ 
+ yp.h: ${RPCSRC}
+Only in lib/libypclnt: Makefile.orig

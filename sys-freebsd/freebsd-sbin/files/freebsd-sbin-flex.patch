@@ -1,0 +1,12 @@
+diff -ur sbin/devd/Makefile sbin-flex/devd/Makefile
+--- sbin/devd/Makefile	2003-08-17 08:40:49 +0000
++++ sbin-flex/devd/Makefile	2005-05-06 11:12:54 +0000
+@@ -8,7 +8,7 @@
+ NOSHARED?=YES
+ 
+ DPADD=	${LIBL}
+-LDADD=	-ll
++LDADD=	-lfl
+ 
+ YFLAGS+=-v
+ CFLAGS+=-I. -I${.CURDIR}

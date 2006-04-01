@@ -1,0 +1,87 @@
+# ChangeLog for sys-kernel/freebsd-sources
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+
+*freebsd-sources-6.0-r1 (01 Apr 2006)
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/SA-05-09-htt5.patch, +files/SA-05-13-ipfw.patch,
+  +files/SA-05-15-tcp.patch, +files/SA-05-17-devfs.patch,
+  +files/SA-05-19-ipsec.patch, +files/SA-06-05-80211.patch,
+  +files/freebsd-sources-6.0-gentoover.patch, +files/SA-06-04-ipfw.patch,
+  +files/SA-06-06-kmem60.patch, +files/SA-06-07-pf.patch,
+  +files/freebsd-sources-6.0-flex-2.5.31.patch,
+  +files/freebsd-sources-gentoo.patch, +metadata.xml,
+  +freebsd-sources-6.0-r1.ebuild:
+  Import into portage.
+
+  23 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Apply all the security patches missing.
+
+  23 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Make sure that we don't end up having sys-${RV} being a directory.
+
+  21 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  ADd patch to build kernel with newer flex.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Do the ${RV} symlink only if the ${PVR} is different.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Make sure a sys-${RV} symlink is present, so that we can have a sys
+  directory for the different releases (useful while building stuff.
+
+*freebsd-sources-5.4-r4 (25 Aug 2005)
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/SA-05-09-htt5.patch, +files/SA-05-13-ipfw.patch,
+  +files/SA-05-15-tcp.patch, +files/SA-05-17-devfs.patch,
+  +files/SA-05-19-ipsec.patch, +files/freebsd-sources-gentoo.patch,
+  +freebsd-sources-5.4-r4.ebuild:
+  Moved to sys-freebsd.
+
+*freebsd-sources-5.4-r3 (21 Jul 2005)
+
+  21 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/SA-05-17-devfs.patch, files/freebsd-sources-gentoo.patch,
+  -files/freebsd-sources-gentoo-gcc.patch, -freebsd-sources-5.4-r2.ebuild,
+  +freebsd-sources-5.4-r3.ebuild:
+  Update to patch for FreeBSD-SA-05:17.devfs and added branding.
+
+  15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-sources-5.4-r2.ebuild:
+  Added symlink useflag, fixed symlink creation for -rX ebuilds. Added nostrip
+  restriction (it's a sources ebuild).
+
+*freebsd-sources-5.4-r2 (30 Jun 2005)
+*freebsd-sources-5.3-r2 (30 Jun 2005)
+
+  30 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/SA-05-13-ipfw.patch, +files/SA-05-15-tcp.patch,
+  +freebsd-sources-5.3-r2.ebuild, +freebsd-sources-5.4-r2.ebuild:
+  Added patches for Security Advisories 05:13-ipfw and 05:15-tcp.
+
+  13 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-sources-gentoo.patch, freebsd-sources-5.3-r1.ebuild,
+  freebsd-sources-5.4-r1.ebuild:
+  Slotted, now installing in /usr/src/sys-${PVR} similarly to linux.
+
+*freebsd-sources-5.4-r1 (13 May 2005)
+*freebsd-sources-5.3-r1 (13 May 2005)
+
+  13 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/SA-05-09-htt5.patch, -files/ich-sound.patch,
+  -freebsd-sources-5.3.ebuild, +freebsd-sources-5.3-r1.ebuild,
+  -freebsd-sources-5.4.ebuild, +freebsd-sources-5.4-r1.ebuild:
+  Added security patch for advisory FreeBSD-SA-05:09.htt.
+
+*freebsd-sources-5.4_rc4 (05 May 2005)
+
+  05 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +freebsd-sources-5.4_rc4.ebuild:
+  Added 5.4_rc4.
+
+  15 Sep 2004; Otavio Piske <angusyoung@gentoo.org> freebsd-sources-5.2.1.ebuild:
+  Initial release
+
+*freebsd-sources-5.2.1.ebuild (15 Sep 2004)

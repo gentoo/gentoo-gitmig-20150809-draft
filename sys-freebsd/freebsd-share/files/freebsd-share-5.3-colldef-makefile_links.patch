@@ -1,0 +1,46 @@
+--- colldef/Makefile.orig	Sat Feb  5 16:47:55 2005
++++ colldef/Makefile	Sat Feb  5 16:48:21 2005
+@@ -106,42 +106,6 @@
+ uk_UA.ISO8859-5.out:	map.ISO8859-5
+ uk_UA.KOI8-U.out:       map.KOI8-U
+ 
+-afterinstall:
+-.for locale in ${LOCALES}
+-	${INSTALL} -m 644 -o ${BINOWN} -g ${BINGRP} \
+-		${locale}.out ${LOCALEDIR}/${locale}/LC_COLLATE
+-.endfor
+-.for link in ${ASCIILINKS}
+-	ln -fs ../la_LN.US-ASCII/LC_COLLATE \
+-	       ${LOCALEDIR}/${link}/LC_COLLATE
+-.endfor
+-.for link in ${ZHLINKS}
+-	ln -fs ../is_IS.ISO8859-1/LC_COLLATE \
+-	       ${LOCALEDIR}/${link}/LC_COLLATE
+-.endfor
+-.for link in ${LATIN1LINKS}
+-	ln -fs ../la_LN.ISO8859-1/LC_COLLATE \
+-	       ${LOCALEDIR}/${link}.ISO8859-1/LC_COLLATE
+-	ln -fs ../la_LN.ISO8859-15/LC_COLLATE \
+-	       ${LOCALEDIR}/${link}.ISO8859-15/LC_COLLATE
+-.endfor
+-.for link in ${LATIN2LINKS}
+-	ln -fs ../la_LN.ISO8859-2/LC_COLLATE \
+-	       ${LOCALEDIR}/${link}.ISO8859-2/LC_COLLATE
+-.endfor
+-.for link in ${DELINKS}
+-	ln -fs ../de_DE.ISO8859-1/LC_COLLATE \
+-	       ${LOCALEDIR}/${link}.ISO8859-1/LC_COLLATE
+-	ln -fs ../de_DE.ISO8859-15/LC_COLLATE \
+-	       ${LOCALEDIR}/${link}.ISO8859-15/LC_COLLATE
+-.endfor
+-	ln -fs ../cs_CZ.ISO8859-2/LC_COLLATE \
+-	       ${LOCALEDIR}/sk_SK.ISO8859-2/LC_COLLATE
+-	ln -fs ../pt_PT.ISO8859-1/LC_COLLATE \
+-		${LOCALEDIR}/pt_BR.ISO8859-1/LC_COLLATE
+-.for link in ${UTF8LINKS}
+-	ln -fs ../la_LN.US-ASCII/LC_COLLATE \
+-	       ${LOCALEDIR}/${link}.UTF-8/LC_COLLATE
+-.endfor
++#afterinstall:
+ 
+ .include <bsd.prog.mk>

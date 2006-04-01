@@ -1,0 +1,73 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/files/ipfw.initd,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+
+depend() {
+	 before net
+}
+
+start() {
+	ebegin "Starting firewall"
+	
+	retval=0
+	
+	if ! sysctl net.inet.ip.fw.enable &>/dev/null; then
+		if ! kldload ipfwl then
+			eend 1 "Unable to load firewall module"
+			return 1
+		fi
+	fi
+
+	if [ -z "${firewall_script}" -o ! -f "${firewall_script}" ]; then
+		firewall_script=/etc/rc.firewall
+	fi
+
+	if [ -r "${firewall_script}" ]; then
+		source "${firewall_script}"
+		einfo "Loaded firewall rules; starting daemons"
+
+		if [ "${natd_enable}" == "yes" ]; then
+			# Find out whether $natd_interface is using dhcp
+			ifconfig_natd_iface=$(
+				eval source /etc/conf.d/net\;
+				echo \$\{ifconfig_${natd_interface}\})
+			if [ "${ifconfig_natd_iface}" == "dhcp" ]; then
+				natd_flags="${natd_flags} -dynamic"
+			fi
+
+			if [ -n "${natd_interface}" ]; then
+				# Yes, this is ugly.
+				if grep -q -E '^[0-9]+(\.[0-9]+){0,3}$' \
+						 <<<${natd_interface}; then
+					natd_flags="${natd_flags} -a ${natd_interface}"
+				else
+					natd_flags="${natd_flags} -n ${natd_interface}"
+				fi
+			fi
+			start-stop-daemon --start --exec \
+				${natd_program:-/sbin/natd} ${natd_flags} ${natd_ifarg} || retval=1
+		fi
+	elif [ "`ipfw l 65535`" = "65535 deny ip from any to any" ]; then
+		ewarn "Kernel has firewall functionality, but firewall rules aren't enabled!"
+		ewarn "All ip services are disabled.
+	fi
+
+	# Logging
+	if [ "${firewall_logging}" == "yes" ]; then
+		einfo "Enabling firewall logging"
+		sysctl net.inet.ip.fw.verbose=1 >/dev/null
+	fi
+
+	# And enable the firewall.
+	sysctl -w net.inet.ip.fw.enable=1
+	
+	eend $retval "Failed to properly start firewall"
+}
+
+stop() {
+	ebegin "Stopping the firewall"
+	sysctl -w net.inet.ip.fw.enable=0
+	start-stop-daemon --stop --name "$(basename ${natd_program:-/sbin/natd})"
+	eend $? "Failed to properly stop the firewall"
+}

@@ -1,0 +1,11 @@
+--- msun/i387/fenv.c.orig	Mon Nov  1 01:40:10 2004
++++ msun/i387/fenv.c	Mon Nov  1 01:40:21 2004
+@@ -28,7 +28,7 @@
+ 
+ #include <sys/types.h>
+ #include <machine/npx.h>
+-#include <fenv.h>
++#include "fenv.h"
+ 
+ const fenv_t __fe_dfl_env = {
+ 	0xffff0000 | __INITIAL_NPXCW__,

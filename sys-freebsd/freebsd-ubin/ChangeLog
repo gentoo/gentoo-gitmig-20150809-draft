@@ -1,0 +1,120 @@
+# ChangeLog for sys-apps/freebsd-ubin
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+
+*freebsd-ubin-6.0-r1 (01 Apr 2006)
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-ubin-6.0-fixmakefiles.patch, +files/SA-06-02-ee.patch,
+  +files/freebsd-ubin-6.0-bsdcmp.patch, +files/freebsd-ubin-bsdcmp.patch,
+  +files/freebsd-ubin-fixmakefiles.patch, +files/freebsd-ubin-flex.patch,
+  +files/freebsd-ubin-lint-stdarg.patch, +files/freebsd-ubin-setXid.patch,
+  +files/login.pamd, +files/passwd.pamd, +files/su.pamd, +metadata.xml,
+  +freebsd-ubin-6.0-r1.ebuild:
+  Import into portage.
+
+  28 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Symlink sys directory instead of patching everything in makefiles. Should
+  fix bug #124444.
+
+  23 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add missing security patch.
+
+  20 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Fix deprecated stuff to use NO_* syntax.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Drop also opieaccess and fbtab.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add locate periodic file.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Also phones.
+
+  13 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Move /etc/remote to being provided by freebsd-ubin.
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-ubin-bsdcmp.patch, +files/freebsd-ubin-fixmakefiles.patch,
+  +files/freebsd-ubin-flex.patch, +files/freebsd-ubin-lint-stdarg.patch,
+  +files/freebsd-ubin-setXid.patch, +files/login.pamd, +files/passwd.pamd,
+  +files/su.pamd, +freebsd-ubin-5.4-r3.ebuild:
+  Moved to sys-freebsd.
+
+  18 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-ubin-5.4-r3.ebuild:
+  Updated to reflect bsdmk/freebsd eclasses changes.
+
+  13 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-ubin-5.4-r3.ebuild:
+  Fixed typo.
+
+*freebsd-ubin-5.4-r3 (08 Aug 2005)
+
+  08 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-ubin-5.4-r2.ebuild, +freebsd-ubin-5.4-r3.ebuild:
+  Restore make and mkdep from here.
+
+  30 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-ubin-5.4-r2.ebuild:
+  Fixed wrong slot.
+
+  29 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-ubin-5.4-r2.ebuild:
+  Adapt to recent bsdmk changes.
+
+  19 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-ubin-5.4-r1.ebuild:
+  Don't compile and install telnet as we don't support it from here.
+
+  16 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-ubin-5.4-r1.ebuild:
+  Removed a few more subtargets: tar file vacation nc ftp, as they have their
+  own ebuilds.
+
+  16 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-ubin-5.4-r1.ebuild:
+  tar is moved to app-arch/bsdtar package.
+
+  08 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/freebsd-ubin-minimal.patch, freebsd-ubin-5.4-r1.ebuild:
+  Made freebsd-ubin use dummy_mk instead of minimal patch.
+
+*freebsd-ubin-5.4-r1 (23 May 2005)
+
+  23 May 2005; Diego Pettenò <flameeyes@gentoo.org> +files/login.pamd,
+  +files/passwd.pamd, +files/rsh.pamd, +files/su.pamd,
+  -freebsd-ubin-5.4.ebuild, +freebsd-ubin-5.4-r1.ebuild:
+  New revision which installs pamd files. Added dependency on virtual/pam.
+  Using mirror://gentoo/.
+
+*freebsd-ubin-5.4_rc3 (03 May 2005)
+
+  03 May 2005; Diego <flame@gentoo.org>
+  +files/freebsd-ubin-fixmakefiles.patch,
+  +files/freebsd-ubin-lint-stdarg.patch, +files/freebsd-ubin-minimal.patch,
+  +files/freebsd-ubin-setXid.patch, +freebsd-ubin-5.4_rc3.ebuild:
+  Added new 5.4_rc3 with patches to build fine on 5.4 profile.
+
+*freebsd-ubin-5.3.20050301 (31 Mar 2005)
+
+  31 Mar 2005; Otavio R. Piske <angusyoung@gentoo.org>
+  +files/freebsd-ubin-5.3-nocom_err.patch, freebsd-ubin-5.3.20050301.ebuild,
+  -freebsd-ubin-5.3_rc1.ebuild:
+  New ebuild based on updated sources and support for new use flags
+
+*freebsd-ubin-5.2.1-r1 (07 Oct 2004)
+
+  07 Oct 2004; Otavio Piske <angusyoung@gentoo.org>
+  +files/freebsd-ubin-5.2.1-nocmp.patch, +freebsd-ubin-5.2.1-r1.ebuild:
+  This new ebuild avoids compilation/installation of cmp, which should be
+  provided by diffutils
+
+  30 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> freebsd-ubin-5.2.1.ebuild:
+  Removed duplicate inherit.
+
+  15 Sep 2004; Otavio Piske <angusyoung@gentoo.org> freebsd-ubin-5.2.1.ebuild:
+  Initial release
+
+*freebsd-ubin-5.2.1.ebuild (15 Sep 2004)
