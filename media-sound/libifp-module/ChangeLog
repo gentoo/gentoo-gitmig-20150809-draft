@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/libifp-module
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/libifp-module/ChangeLog,v 1.3 2006/02/27 20:53:34 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/libifp-module/ChangeLog,v 1.4 2006/04/01 19:57:16 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org>
+  libifp-module-1.0.0.2.ebuild:
+  Mark 1.0.0.2 ~ia64
 
   27 Feb 2006; Patrick McLean <chutzpah@gentoo.org>
   libifp-module-1.0.0.2.ebuild:

@@ -1,12 +1,22 @@
-MD5 52653026d1372491e2f461f5e2a85ea2 ChangeLog 583
-RMD160 3ba5fb95f544a2ab81c5cd2d5bbec7a7bce723b8 ChangeLog 583
-SHA256 dad36ec6722f467cb0570c6c995cf1bc037556845167110e2877d0f8ad07e39f ChangeLog 583
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 da689b4db34da0b7e1093d6b73b2cd64 ChangeLog 687
+RMD160 27c304d1822d068d4c756447b8278c51f7990cc7 ChangeLog 687
+SHA256 fec5ec706f51a89c201a1f0d6aa837d73d43af43b944cdd34a24e8dd7b6de503 ChangeLog 687
 MD5 222b4c8ee3a7125ba0a9e275d2ee3a45 files/digest-libifp-module-1.0.0.2 66
 RMD160 c2a39cb8642896a65b316949dff94cdbc29dacd6 files/digest-libifp-module-1.0.0.2 66
 SHA256 59829518269c099723991662b99bd7146b7cdd780acba3fb80daa327f21a3bae files/digest-libifp-module-1.0.0.2 66
-MD5 9136182f8900abb7d16326c61884d629 libifp-module-1.0.0.2.ebuild 680
-RMD160 505a97c3e83c48d57b092a845847421a3ce8c7b1 libifp-module-1.0.0.2.ebuild 680
-SHA256 73c942d3e37733e6de881b39f41cc7426b6224d7f05ff681a8745dfabf4e2f49 libifp-module-1.0.0.2.ebuild 680
+MD5 637ea952c31b90e330b2f3424b1086d1 libifp-module-1.0.0.2.ebuild 686
+RMD160 3b80fe2ac97c5762f24bed72486dd63aff2d338b libifp-module-1.0.0.2.ebuild 686
+SHA256 1adc79c11d26ddfefa1c4b0072eeeb229a398f68699cb22aa965967bd993609f libifp-module-1.0.0.2.ebuild 686
 MD5 2a8fbd9c7f76cf00c7ebbb94ff62bceb metadata.xml 365
 RMD160 99b93bef6f818027873fc8cd9d10bf5593bdab2b metadata.xml 365
 SHA256 19952326d3d012a44c485c875f064ef9bfa7a22cbc4ce4164f0483e0bfc6159a metadata.xml 365
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFELtsmJrHF4yAQTrARAhH0AJ4n6crD2oPf3AMojohWeuxbRkZ/GACbBV4w
+DYUC3VCLu1AtRaydf3WAXfc=
+=ubxt
+-----END PGP SIGNATURE-----
