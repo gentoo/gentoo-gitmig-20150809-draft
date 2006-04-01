@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/requant/requant-0.0.1.ebuild,v 1.1 2006/03/05 20:43:14 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/requant/requant-0.0.1.ebuild,v 1.2 2006/04/01 17:00:39 zzam Exp $
 
 REQUANT="M2VRequantizer"
 REQUANT_VN="20030925"
@@ -10,7 +10,7 @@ DESCRIPTION="Tool to requantize/shrink mpeg2 videos"
 HOMEPAGE="http://www.jausoft.com"
 SRC_URI="mirror://vdrfiles/requant/${JAU_FILE}.tar.bz2"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
