@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.13.ebuild,v 1.1 2006/04/01 04:27:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.13.ebuild,v 1.2 2006/04/01 05:23:55 eradicator Exp $
 
 inherit eutils
 
@@ -11,15 +11,17 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="nls"
+IUSE="nls doc"
 
-DEPEND="dev-util/pkgconfig"
+DEPEND="dev-util/pkgconfig
+	doc? ( app-doc/doxygen )"
 RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	epatch ${FILESDIR}/libexif-0.6.13-doxygen.patch
 
 	# The libexif hackers made a goof on the soname versioning.
 	sed -i 's/^LIBEXIF_AGE=0$/LIBEXIF_AGE=2/' ${S}/configure
@@ -29,7 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable nls) || die
+	econf $(use_enable nls) $(use_enable doc) || die
 	emake || die
 }
 
