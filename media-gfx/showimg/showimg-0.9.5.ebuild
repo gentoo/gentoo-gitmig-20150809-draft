@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5.ebuild,v 1.2 2006/02/13 02:38:38 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5.ebuild,v 1.3 2006/04/01 23:25:29 flameeyes Exp $
 
 inherit kde eutils
 
@@ -24,7 +24,8 @@ DEPEND="|| ( kde-base/libkonq kde-base/kdebase )
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/libpq dev-libs/libpqxx )
 	exif? ( media-libs/libkexif )
-	kipi? ( media-plugins/kipi-plugins )"
+	kipi? ( media-plugins/kipi-plugins )
+	media-libs/libexif"
 need-kde 3.4
 
 src_compile(){
