@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.6.ebuild,v 1.1 2005/04/20 15:31:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.6.ebuild,v 1.2 2006/04/01 15:11:32 agriffis Exp $
 
 inherit eutils python
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/omniorb/${MY_P}.tar.gz http://www-lce.eng.cam.ac.u
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="ssl"
 
 DEPEND=">=net-misc/omniORB-4.0.6
