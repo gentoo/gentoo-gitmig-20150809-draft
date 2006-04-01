@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 54c34862c798cb86a5e586aee2674be8 ChangeLog 1330
+RMD160 d1524d5e690c58d2ff07c5d4df6e5f06f1281f5a ChangeLog 1330
+SHA256 c26dd6bff13619d29d42d58e51f07535b72857ca5d3408f66300c77576f2c372 ChangeLog 1330
 MD5 7c5658f1ad90f125cd69096c371aae5a files/digest-pyreverse-0.4.2-r1 66
+RMD160 222fe1776912259a4b4334e159a987fba6746ba3 files/digest-pyreverse-0.4.2-r1 66
+SHA256 888dde6be8e8f80d1e6f56c8123a4ebefef8977f09f95726b4e30addb82f550c files/digest-pyreverse-0.4.2-r1 66
 MD5 7200337769d44edaecff3e7834cb7c88 files/digest-pyreverse-0.5.1 67
+RMD160 13436aa7f6ccbb159e88893a75312a2e00e869af files/digest-pyreverse-0.5.1 67
+SHA256 9cc423090b5467d44dc7352806af8f2213459c047df6ba59a19d6ef3cf009f72 files/digest-pyreverse-0.5.1 67
 MD5 7d3cd53d0cd90ce598d5f9539407c86f metadata.xml 968
+RMD160 ebf9f5da3fe2abd18158904554560edfb2b8322a metadata.xml 968
+SHA256 57838ba089121b7b65130b88208f88ae2a14ded96b39fa2b80f2c47213c4b810 metadata.xml 968
 MD5 6921e1897588866bec2399c4340983e8 pyreverse-0.4.2-r1.ebuild 656
-MD5 d7a4fbc20d772d110d5fde4eeac5b24a pyreverse-0.5.1.ebuild 666
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfwb7FdQwWVoAgN4RAia+AJ9EeR60bXro9/LUwGtmmCcIXt8dPQCfRxOY
-GZ88d3F8cnP8lzLnqXYJ0ik=
-=kKZL
------END PGP SIGNATURE-----
+RMD160 9b722e1c0e954c28aacf5ca3824d826d6c32d338 pyreverse-0.4.2-r1.ebuild 656
+SHA256 de4d220a9bd2d9d1ffeee5600530b1323c2fdc2c07fc54dc0c2cc79ca5893e11 pyreverse-0.4.2-r1.ebuild 656
+MD5 62357d264b50699119f6ad920946ef15 pyreverse-0.5.1.ebuild 672
+RMD160 405b9f3d5ffcc63ee16baec86568998a459ddffa pyreverse-0.5.1.ebuild 672
+SHA256 ab966de27f5e492d3e3aeab6cd95485d22c7eda3e7c93035928847a875e289aa pyreverse-0.5.1.ebuild 672
