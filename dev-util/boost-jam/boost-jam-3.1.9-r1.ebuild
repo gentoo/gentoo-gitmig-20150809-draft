@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-jam/boost-jam-3.1.9-r1.ebuild,v 1.4 2006/04/01 06:30:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-jam/boost-jam-3.1.9-r1.ebuild,v 1.5 2006/04/01 19:51:55 agriffis Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ RESTRICT="nomirror"
 LICENSE="as-is"
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 
 DEPEND="dev-libs/boost
 	!dev-util/jam"
