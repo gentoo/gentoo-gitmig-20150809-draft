@@ -31,16 +31,16 @@ SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata
 MD5 5d4fa3720f192e7f11ed3e169d275324 portaudio-18.1-r3.ebuild 998
 RMD160 61d6806a813636a19ddba42b4fea6c80dea8e9a4 portaudio-18.1-r3.ebuild 998
 SHA256 ecdf055b128bcabf7bd231d83cfa4d699e4b2c386ae7a53d121881ccf1841d34 portaudio-18.1-r3.ebuild 998
-MD5 37f4c31251728ffe57b5fd7333341ff0 portaudio-18.1-r4.ebuild 1052
-RMD160 08b73383e768697d0ec684b6e631f75e35bc4199 portaudio-18.1-r4.ebuild 1052
-SHA256 aef638ed41ed013de511ed48cf5c904dc76706314000cba278c50929dc3ade8b portaudio-18.1-r4.ebuild 1052
+MD5 1d3be2361ab80fa2454607d3dfa47300 portaudio-18.1-r4.ebuild 1050
+RMD160 f4c9a0ed307f996c24cb617058f80a0edd59cc0a portaudio-18.1-r4.ebuild 1050
+SHA256 d25eed2a976a8202a4e04e1abd77c550a21b0e36cdfbe8c446fa57a9ae903ccc portaudio-18.1-r4.ebuild 1050
 MD5 e7355796f0c381e5e8128913f94e4b8a portaudio-18.1.ebuild 995
 RMD160 af0edc7d988953321519eefd4fb7610a326ab8aa portaudio-18.1.ebuild 995
 SHA256 0279febaa02eb0c390c3ee207239ab650ccef9d361397f0620c17719039efd71 portaudio-18.1.ebuild 995
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFELh+POpjtAl+gMRURAvEtAKDUk/TMS6QlSkCQY3Q7ZxoHTFzCsQCff/D1
-SA/S6+mMaeZHpoWxGPpdukw=
-=nOkc
+iD8DBQFELvyy2+ySkm8kpY0RAsPyAKCdEbtGsOPLDc51usIdg2BgDUJdLgCdE4Je
+zgqpSaKd8jD9JYmUKVKzd7E=
+=BZvy
 -----END PGP SIGNATURE-----
