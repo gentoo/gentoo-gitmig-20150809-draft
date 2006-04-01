@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sancho
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.12 2006/03/28 23:37:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.13 2006/04/01 19:04:53 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> sancho-2.1-r1.ebuild:
+  Mark 2.1-r1 ~ia64
 
   28 Mar 2006; Aron Griffis <agriffis@gentoo.org> sancho-0.11-r1.ebuild:
   Mark 0.11-r1 stable on ia64
