@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-0.9.4.ebuild,v 1.2 2006/02/07 17:00:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-0.9.4.ebuild,v 1.3 2006/04/01 15:10:57 agriffis Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ DEPEND=">=dev-lang/python-2.3
 	virtual/blas"
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
 LICENSE="BSD"
 
 src_unpack() {
