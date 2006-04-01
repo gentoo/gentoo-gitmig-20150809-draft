@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.267 2006/03/26 18:40:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.268 2006/04/01 21:57:18 flameeyes Exp $
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/drkonqui-3.5.2-splitdebug.patch, kdebase-3.5.2.ebuild:
+  Add patch to make drkonqi work with splitdebug.
 
   26 Mar 2006; Dan Armak <danarmak@gentoo.org> kdebase-3.5.2.ebuild:
   Remove patches from 3.5.1 which are no longer necessary in 3.5.2.

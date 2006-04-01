@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2.ebuild,v 1.2 2006/03/26 18:40:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2.ebuild,v 1.3 2006/04/01 21:57:18 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -84,9 +84,9 @@ src_unpack() {
 
 	# Avoid using imake (kde bug 114466).
 	epatch "${WORKDIR}/patches/kdebase-3.5.0_beta2-noimake.patch"
+	rm -f ${S}/configure
 
-	# For the noimake patch.
-	make -f admin/Makefile.common || die
+	epatch "${FILESDIR}/drkonqi-${PV}-splitdebug.patch"
 }
 
 src_compile() {
