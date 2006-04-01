@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htmldoc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.29 2005/12/17 19:17:33 carlo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.30 2006/04/01 14:27:53 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> htmldoc-1.8.20-r1.ebuild,
+  htmldoc-1.8.23.ebuild, htmldoc-1.8.24.ebuild, htmldoc-1.8.25.ebuild:
+  Mark 1.8.25 ~ia64.  Fix DEPEND/RDEPEND in the older ebuilds
 
 *htmldoc-1.8.25 (17 Dec 2005)
 

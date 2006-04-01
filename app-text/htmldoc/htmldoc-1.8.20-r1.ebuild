@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.20-r1.ebuild,v 1.10 2005/01/01 16:20:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.20-r1.ebuild,v 1.11 2006/04/01 14:27:53 agriffis Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86 sparc ppc"
 IUSE=""
 
-DEPEND="virtual/x11"
-RDEPEND=">=dev-libs/openssl-0.9.6e
+DEPEND=">=dev-libs/openssl-0.9.6e
 	>=x11-libs/fltk-1.0.11"
 
 src_unpack() {
