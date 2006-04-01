@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/libexif-gtk-0.3.5.ebuild,v 1.8 2006/03/10 00:04:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/libexif-gtk-0.3.5.ebuild,v 1.9 2006/04/01 04:52:07 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -20,6 +20,8 @@ DEPEND="dev-util/pkgconfig
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/libexif-gtk-0.3.5-confcheck.patch
 }
 
 src_compile() {

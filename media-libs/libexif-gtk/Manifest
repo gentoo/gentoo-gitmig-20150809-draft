@@ -1,6 +1,9 @@
-MD5 6b4ab1ab39c070d87a140c2a41b0609e ChangeLog 1855
-RMD160 1d5a4b4d507372669ddf176557fef44403eaf314 ChangeLog 1855
-SHA256 efbd12a1a9d320800654cd3344e60d5284b1bbb623184104d21ed0ea18af3158 ChangeLog 1855
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 800728282edc11130470f151ee13b2a8 ChangeLog 2055
+RMD160 8a275d33366d8aeea1839345576010bcae725aa5 ChangeLog 2055
+SHA256 4e1878c03fe36a87787eb97f1e387ab99c663cfde8718cef71fe9908b77a9f7c ChangeLog 2055
 MD5 72e044de06d759e4f39c2f03f345fb22 files/digest-libexif-gtk-0.3.3 69
 RMD160 d09eb7926ff4b24af5cf7b59b561b67b13459d6a files/digest-libexif-gtk-0.3.3 69
 SHA256 ceba31deb39ac32eeb7e052b55efecdf17369fe3ac3cae5d07b2ce75bb9ef917 files/digest-libexif-gtk-0.3.3 69
@@ -10,12 +13,22 @@ SHA256 8bf09d53c21f4c77fe04500b3a43aaa4a0bc13a523611bfeb2ef2fa8efd0bdd8 files/di
 MD5 1cb4ed683e9dcd61ad4f896d698fb1ab files/libexif-gtk-0.3.3-gtk24.patch 1032
 RMD160 8777748f286fede8b62f2abb7e40b630c6647a64 files/libexif-gtk-0.3.3-gtk24.patch 1032
 SHA256 a15833aecc97adfed80d22e78044db2c30f38a7557651d28cab616af38e6b448 files/libexif-gtk-0.3.3-gtk24.patch 1032
+MD5 8a256c0f64ed24009ff77dff901d6e1d files/libexif-gtk-0.3.5-confcheck.patch 720
+RMD160 09c7cd5fc366259fc934170b5a1be7e6510f2bd6 files/libexif-gtk-0.3.5-confcheck.patch 720
+SHA256 eaf656d5a091ed7daf4804b94c1e8deaba14d2d522a15ae9fbd197f91be6aec0 files/libexif-gtk-0.3.5-confcheck.patch 720
 MD5 e05e9a09ac9d62e5ed5c451bc1a59ef1 libexif-gtk-0.3.3.ebuild 927
 RMD160 197d9ef55286106ac780a520ac4f3ca10836b84a libexif-gtk-0.3.3.ebuild 927
 SHA256 c239c23ef5f6a10616344f0cfafa9dbade39009bd76a57a2bc83bde83159b27f libexif-gtk-0.3.3.ebuild 927
-MD5 cae9fe1d52bf1e3d1b589897844deca6 libexif-gtk-0.3.5.ebuild 972
-RMD160 1e02e506abaf3f2c1abdeff4b7a415d7cb7915b4 libexif-gtk-0.3.5.ebuild 972
-SHA256 2d795ddd889f7a3f14efff918f22f35b922333582e85d37a5f37d0327421a034 libexif-gtk-0.3.5.ebuild 972
+MD5 ea9f2187d2241ed9c1a84628d90bc59c libexif-gtk-0.3.5.ebuild 1039
+RMD160 94a847c7728589aa223db94170ffc1b17e133d13 libexif-gtk-0.3.5.ebuild 1039
+SHA256 dd0caadc5733562ca2d2793e3e29ace7a953ec46b63c5c4271ed2ab7120ce1e1 libexif-gtk-0.3.5.ebuild 1039
 MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
 RMD160 d1f5ea37202987c54db9697175a55e5609386654 metadata.xml 259
 SHA256 14f1bab6a31d434eda6319b2783239e50179d75501edb6e255bb6c3e665418cf metadata.xml 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELgceOpjtAl+gMRURAgxNAKCSD6dKuOvCTEFG09MyvrABJjpVLgCffNPc
+tJk6BTAkblQW7xffn8rKcQo=
+=mMI3
+-----END PGP SIGNATURE-----
