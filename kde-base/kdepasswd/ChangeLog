@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepasswd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.38 2006/03/27 23:37:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.39 2006/04/01 17:39:11 flameeyes Exp $
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> kdepasswd-3.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   27 Mar 2006; Aron Griffis <agriffis@gentoo.org> kdepasswd-3.5.0.ebuild,
   kdepasswd-3.5.1.ebuild, kdepasswd-3.5.2.ebuild:
