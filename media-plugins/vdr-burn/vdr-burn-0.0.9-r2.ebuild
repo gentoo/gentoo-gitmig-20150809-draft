@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.3 2006/04/01 17:02:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.4 2006/04/01 23:00:50 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -57,7 +57,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	vdr-plugin_src_install
+	vdr-plugin_pkg_postinst
 
 	echo
 	einfo "This ebuild comes only with the standard template"
