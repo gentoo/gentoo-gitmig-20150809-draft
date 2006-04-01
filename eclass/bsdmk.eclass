@@ -1,17 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bsdmk.eclass,v 1.1 2006/04/01 15:24:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bsdmk.eclass,v 1.2 2006/04/01 15:49:11 flameeyes Exp $
 #
 # Otavio R. Piske "AngusYoung" <angusyoung@gentoo.org>
 # Diego Pettenò <flameeyes@gentoo.org>
 # Benigno B. Junior <bbj@gentoo.org>
 
-inherit toolchain-funcs portability
+inherit toolchain-funcs portability flag-o-matic
 
 EXPORT_FUNCTIONS src_compile src_install
 
+RDEPEND=""
 # this should actually be BDEPEND, but this works.
-DEPEND="!userland_BSD? ( sys-devel/pmake )"
+DEPEND="|| (
+		sys-devel/pmake
+		sys-freebsd/freebsd-ubin
+		sys-openbsd/openbsd-ubin
+	)"
 
 #### append-opt <options>
 # append options to enable or disable features
@@ -57,7 +62,7 @@ dummy_mk() {
 ############################################################################
 fix_lazy_bindings() {
 	for dir in $@; do
-		echo "LDFLAGS+= -Wl,-z,now" >> ${dir}/Makefile
+		echo "LDFLAGS+= $(bindnow-flags)" >> ${dir}/Makefile
 	done
 }
 
