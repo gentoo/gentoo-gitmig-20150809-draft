@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a88499445d0c114b5f4cde6f8d7a3e36 ChangeLog 4075
+MD5 012a81fb39b77211fc980fd3f51c654f ChangeLog 4178
 MD5 6cc8d5c2dce1643a39bb77e3e9046bb0 abook-0.5.4.ebuild 778
-MD5 209229f33dcee19a1653866cea027a80 abook-0.5.5-r1.ebuild 962
+MD5 eaf80c9543bdc058322b0f9527d29bed abook-0.5.5-r1.ebuild 960
 MD5 59b69566f05d4e988465d0a88606ae4b abook-0.5.5.ebuild 781
 MD5 379ff2ec5d24511e7beeadbb801e6431 files/digest-abook-0.5.4 63
 MD5 45b636a69be9680eb2643f72a20a1b8f files/digest-abook-0.5.5 63
 MD5 eacd4f5c7f1ce0902cb1b9b34b6ea221 files/digest-abook-0.5.5-r1 482
 MD5 ff3d843bd695f3a1a9d9ffeee60d3068 metadata.xml 277
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFELC1GKRy60XGEcJIRAuzNAJ9hikJOEgxqpPiSkmtdB45F2/BDrACgkpL9
-51KO6+uukyfrBkTrSFZ8SrQ=
-=VGr8
------END PGP SIGNATURE-----
