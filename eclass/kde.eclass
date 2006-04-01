@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.148 2006/02/27 15:14:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.149 2006/04/01 16:54:06 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -30,9 +30,11 @@ DEPEND=">=sys-devel/automake-1.7.0
 	sys-devel/make
 	dev-util/pkgconfig
 	dev-lang/perl
-	~kde-base/kde-env-3"
+	~kde-base/kde-env-3
+	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )"
 
-RDEPEND="~kde-base/kde-env-3"
+RDEPEND="~kde-base/kde-env-3
+	xinerama? ( || ( x11-libs/libXinerama virtual/x11 ) )"
 
 # overridden in other places like kde-dist, kde-source and some individual ebuilds
 SLOT="0"
