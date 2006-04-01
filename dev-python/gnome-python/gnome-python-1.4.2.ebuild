@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.2.ebuild,v 1.20 2006/02/24 17:46:33 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.2.ebuild,v 1.21 2006/04/01 14:58:42 agriffis Exp $
 
 IUSE="gnome opengl"
 
@@ -17,7 +17,7 @@ DEPEND="virtual/python
 	opengl? ( <x11-libs/gtkglarea-1.99.0 )"
 
 SLOT="1"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="alpha ~ia64 ppc sparc x86"
 LICENSE="GPL-2"
 
 src_compile() {
