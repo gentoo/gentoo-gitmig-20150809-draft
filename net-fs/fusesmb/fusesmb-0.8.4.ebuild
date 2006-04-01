@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/fusesmb-0.8.3.ebuild,v 1.2 2006/01/21 15:56:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/fusesmb-0.8.4.ebuild,v 1.1 2006/04/01 11:03:24 genstef Exp $
 
 inherit eutils
 
