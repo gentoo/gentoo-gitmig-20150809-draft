@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.27 2006/03/28 00:50:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.28 2006/04/01 20:13:39 flameeyes Exp $
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> kstart-3.5.0.ebuild:
+  Add ~x86-fbsd keyword.
 
   28 Mar 2006; Aron Griffis <agriffis@gentoo.org> kstart-3.5.0.ebuild:
   Mark 3.5.0 ~ia64
