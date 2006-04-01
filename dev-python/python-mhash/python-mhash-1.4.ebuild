@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/python-mhash-1.4.ebuild,v 1.1 2005/12/12 04:59:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/python-mhash-1.4.ebuild,v 1.2 2006/04/01 18:57:53 agriffis Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ DEPEND="${RDEPEND}
 		sys-apps/sed"
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
 LICENSE="GPL-2"
 
 src_unpack() {

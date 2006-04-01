@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-mhash
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/ChangeLog,v 1.4 2005/12/12 04:59:05 robbat2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/ChangeLog,v 1.5 2006/04/01 18:57:53 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> python-mhash-1.4.ebuild:
+  Mark 1.4 ~ia64
 
 *python-mhash-1.4 (12 Dec 2005)
 
