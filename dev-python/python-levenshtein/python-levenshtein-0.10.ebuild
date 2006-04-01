@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-levenshtein/python-levenshtein-0.10.ebuild,v 1.2 2004/06/25 01:45:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-levenshtein/python-levenshtein-0.10.ebuild,v 1.3 2006/04/01 18:57:12 agriffis Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://trific.ath.cx/resources/python/levenshtein/"
 IUSE="doc"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
 
 DEPEND="virtual/python"
 
