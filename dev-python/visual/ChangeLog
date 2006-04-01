@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.7 2006/03/02 19:52:26 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.8 2006/04/01 19:19:09 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> visual-3.2.9.ebuild:
+  Mark 3.2.9 ~ia64
 
   02 Mar 2006; Marien Zwart <marienz@gentoo.org> metadata.xml:
   Add to the python herd.
