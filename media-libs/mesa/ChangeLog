@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.72 2006/03/31 20:02:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.73 2006/04/01 04:30:44 spyderous Exp $
+
+*mesa-6.5 (01 Apr 2006)
+
+  01 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; +mesa-6.5.ebuild:
+  Bump for masked development release, needed for newer i810 drivers. Also
+  adds some GLSL (OpenGL Shading Language) support and lots of development in
+  r300 driver, among others.
 
   31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> mesa-6.4.2-r2.ebuild:
   Add ~x86-fbsd keyword.
