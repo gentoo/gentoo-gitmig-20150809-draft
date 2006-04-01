@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web2/twisted-web2-0.1.ebuild,v 1.1 2005/11/27 22:21:34 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web2/twisted-web2-0.1.ebuild,v 1.2 2006/04/01 19:14:33 agriffis Exp $
 
 MY_PACKAGE=Web2
 
@@ -8,7 +8,7 @@ inherit twisted eutils
 
 DESCRIPTION="An HTTP/1.1 Server Framework"
 
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
 
 DEPEND=">=dev-python/twisted-2"
 

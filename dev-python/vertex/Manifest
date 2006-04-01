@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2e9b70f5f784f2b618790ba5e13bc2a4 ChangeLog 536
 RMD160 84ebbcf57e4bbf007e724bc3736c84b463fb0877 ChangeLog 536
 SHA256 c51e8fb93866fa0577682c6fef4b02f1933eaabbce613d0ccc5d2975835398d6 ChangeLog 536
-MD5 f370ce4c46bdf8a3d93046b591119269 files/digest-vertex-0.1 232
-RMD160 7e5f378cde6f4b28164a81d83ad2c06316e37c2d files/digest-vertex-0.1 232
-SHA256 dae1dd15957362fedd24810cffad1fca060c1b5268f7bc15cae710d46ffc2bda files/digest-vertex-0.1 232
+MD5 88abfdc1520e83da5e8f30c6e42bed35 files/digest-vertex-0.1 232
+RMD160 ff0fbc47fcfef39d5ea73b8b6387cfab37449a93 files/digest-vertex-0.1 232
+SHA256 41cc29a3574e29001e1400422fd7c18136acf80bdcc8021b87a3ca9f905670ac files/digest-vertex-0.1 232
 MD5 23964561142ae9e0919cdb37ab1c6336 files/vertex-0.1-tests-2.2-compat.patch 867
 RMD160 6e18f9ab37958073517c905afab514817a04bd71 files/vertex-0.1-tests-2.2-compat.patch 867
 SHA256 37f0585b91311f5217ecebbfd415bbdeff48cb379cc3819549395aa8401c8b80 files/vertex-0.1-tests-2.2-compat.patch 867
 MD5 556965b9d1c03968984b4b367643abac metadata.xml 804
 RMD160 70949703b68ce47ccdc624e90b9fdd1457c1fc1b metadata.xml 804
 SHA256 d6a50e60f7da5adbd3441ffe816dee9e7e8ee0d9cf4efde8f1bb14027da55b8a metadata.xml 804
-MD5 f7b35de5f3639ebc2cbc485a1b7a96b4 vertex-0.1.ebuild 796
-RMD160 4ea3fe41dda163ab2ab1463c8af25781a5ca0815 vertex-0.1.ebuild 796
-SHA256 c3acadab1abd51690f8e9fc501c6225233ed0499edae59976413368fc210b772 vertex-0.1.ebuild 796
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8Q0qW78445TWHXcRAmrfAJ4q9qVjL4xtliXYmfmt4DbPrBd9zQCfbyqB
-Yf+CzeOYUQYjNZqG2bQEesg=
-=8alA
------END PGP SIGNATURE-----
+MD5 0c020adf41bf1c0e085e391937e8b467 vertex-0.1.ebuild 802
+RMD160 3b7690a9e015fbb214a4e52cff9373be0fbcee2e vertex-0.1.ebuild 802
+SHA256 469a58b91c035faeed504596c94cc0b60b89fadb35543392ed33ff8fa45aa728 vertex-0.1.ebuild 802
