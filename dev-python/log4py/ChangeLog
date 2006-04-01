@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/log4py
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/ChangeLog,v 1.13 2005/04/19 18:30:43 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/ChangeLog,v 1.14 2006/04/01 15:05:25 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> log4py-1.3.ebuild:
+  Mark 1.3 ~ia64
 
   19 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> log4py-1.3.ebuild:
   Stable on ppc.
