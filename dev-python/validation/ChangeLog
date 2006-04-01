@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/validation
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/validation/ChangeLog,v 1.6 2004/06/25 01:51:53 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/validation/ChangeLog,v 1.7 2006/04/01 19:18:00 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> validation-1.2.3.ebuild:
+  Mark 1.2.3 ~ia64
 
   22 Mar 2004; <kloeri@gentoo.org> validation-1.0.1.ebuild,
   validation-1.2.3.ebuild:
