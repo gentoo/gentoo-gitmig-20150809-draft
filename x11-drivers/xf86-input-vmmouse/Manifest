@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7046a48e950f8a3fd31866d2830f0fe7 ChangeLog 1455
-RMD160 ef2aabb4319ed1303756a36dca3fbdbdf387031a ChangeLog 1455
-SHA256 1c569b767fbdd86e0370ae40b86055c5a33cf502e6e3ad52dcd50128fac35bb7 ChangeLog 1455
+MD5 79a18412ce90a82cd10ca7f681986271 ChangeLog 1656
+RMD160 750150165c87b94f13c5323c07d14ef09fc1a76a ChangeLog 1656
+SHA256 85cfb71504252a197b8a8043232092503d906184fa9bbedeb28a25e27afcb493 ChangeLog 1656
 MD5 b2ce7b853100d51bbfe70170eef865ad files/digest-xf86-input-vmmouse-12.3.1.0 150
 RMD160 84e3d8f82da775b140e7a516b1798cb007ff6908 files/digest-xf86-input-vmmouse-12.3.1.0 150
 SHA256 f4b7949405c60b07f383a873ac89a20215df8e33920432d820a3e10fcf44407e files/digest-xf86-input-vmmouse-12.3.1.0 150
+MD5 e9fbb4d5cfe4c029481066a763f33f2e files/digest-xf86-input-vmmouse-12.3.2.0 542
+RMD160 678ee440d4562f09222683f83275bfd785733f72 files/digest-xf86-input-vmmouse-12.3.2.0 542
+SHA256 f5747d9b4b0e0c81f3b84615435d1ee99b880c5bbf5d9050e42a5acc41bbcb74 files/digest-xf86-input-vmmouse-12.3.2.0 542
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 MD5 6e3b5e09936e07b142633b39800c2707 xf86-input-vmmouse-12.3.1.0.ebuild 545
 RMD160 bf839f2e2e3c8b382dce8650ecc9cb9ef70fd41d xf86-input-vmmouse-12.3.1.0.ebuild 545
 SHA256 7093b0cfa3b9cdd54ae47a2a1905b21ebcdefd4799fe0909903c6f12f9850b77 xf86-input-vmmouse-12.3.1.0.ebuild 545
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELZBpAiZjviIA2XgRAvjBAJ9cQpVUKg8tkoT3ru7pr3fuev9tlgCff/xc
-ctFkrKbAEGdkrFRKzqpFBb8=
-=r/Ci
------END PGP SIGNATURE-----
+MD5 a62b82b678675c7a2acf6479e1c99a05 xf86-input-vmmouse-12.3.2.0.ebuild 549
+RMD160 34c6e7fed1a9df8bf438b880d85916d7cb8e7248 xf86-input-vmmouse-12.3.2.0.ebuild 549
+SHA256 442bfdf34621a6a9eab3f3781cb34cf124c00531c83d8b624af9cbd84e3f9770 xf86-input-vmmouse-12.3.2.0.ebuild 549
