@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyunit
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/ChangeLog,v 1.9 2005/10/28 04:20:04 weeve Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/ChangeLog,v 1.10 2006/04/01 19:00:12 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pyunit-1.4.1.ebuild:
+  Mark 1.4.1 ~ia64
 
   28 Oct 2005; Jason Wever <weeve@gentoo.org> pyunit-1.4.1.ebuild:
   Added ~sparc keyword.
