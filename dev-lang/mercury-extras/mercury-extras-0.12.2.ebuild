@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2.ebuild,v 1.2 2006/03/27 19:08:41 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2.ebuild,v 1.3 2006/04/01 06:49:18 keri Exp $
 
 inherit eutils
 
@@ -26,11 +26,14 @@ DEPEND="~dev-lang/mercury-0.12.2
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 	epatch "${FILESDIR}"/${P}-concurrency.patch
+	epatch "${FILESDIR}"/${P}-lex.patch
 	epatch "${FILESDIR}"/${P}-mercury_glut.patch
 	epatch "${FILESDIR}"/${P}-mercury_tcltk.patch
 	epatch "${FILESDIR}"/${P}-mercury_opengl.patch
 	epatch "${FILESDIR}"/${P}-odbc.patch
+	epatch "${FILESDIR}"/${P}-references.patch
 	epatch "${FILESDIR}"/${P}-trailed_update.patch
 
 	sed -i	-e "s:curs:concurrency curs:" \

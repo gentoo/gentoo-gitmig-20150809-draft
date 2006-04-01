@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.2 2006/03/27 19:08:41 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.3 2006/04/01 06:49:18 keri Exp $
+
+  01 Apr 2006; Keri Harris <keri@gentoo.org>
+  +files/mercury-extras-0.12.2-gcc4.patch,
+  +files/mercury-extras-0.12.2-lex.patch,
+  files/mercury-extras-0.12.2-odbc.patch,
+  +files/mercury-extras-0.12.2-references.patch,
+  mercury-extras-0.12.2.ebuild:
+  Update gcc patchset to gcc-4.x
 
   27 Mar 2006; Keri Harris <keri@gentoo.org> mercury-extras-0.12.2.ebuild:
   Add ~ppc keyword.
