@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-jam/boost-jam-3.1.9-r1.ebuild,v 1.3 2004/07/04 10:40:25 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-jam/boost-jam-3.1.9-r1.ebuild,v 1.4 2006/04/01 06:30:32 eradicator Exp $
 
 IUSE=""
 
@@ -38,4 +38,8 @@ src_install() {
 	cd ${S}/bin.linux${ARCH}
 	dobin bjam jam mkjambase yyacc || die "Unable to install binaries."
 	/* add check or ebuild will happilly succeed on unsupported archs and install only docs */
+}
+
+pkg_postinst() {
+	einfo "Sample code is available in /usr/share/boost/v2/example"
 }
