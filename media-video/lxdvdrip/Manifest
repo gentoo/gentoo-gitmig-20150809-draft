@@ -1,22 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c559e2385d60cead4ab019442b6d1835 ChangeLog 2921
-RMD160 82a07817060ec09e2192a2b677e542b8476e54b1 ChangeLog 2921
-SHA256 55b7420d11cdff83c89399129ec1b60e6b3c6b07c753c6350c374b0a5e3efa2f ChangeLog 2921
+MD5 0f5cd9324e5024e36b2f304a3cfdac60 ChangeLog 3188
+RMD160 87320864b2adceec69d843ae3c56e1bb4795263d ChangeLog 3188
+SHA256 a826c7b413905ecb7533f9c21363a7e36ab4bb9034b29d6785f7318e7cdf50ff ChangeLog 3188
 MD5 0e271bb785f8bc65ef7d1be75c332f6a files/digest-lxdvdrip-1.42 62
 RMD160 6238d0e86e3979f9d3d9c11a8ea4eeafc6a582e5 files/digest-lxdvdrip-1.42 62
 SHA256 cb4f1f5a1f3e61eb2c749e86f31c09bdcccaf517c05ac236f279bf3127b64f78 files/digest-lxdvdrip-1.42 62
-MD5 fe49e91889b93e446a6decf223ddc913 lxdvdrip-1.42.ebuild 861
-RMD160 e7d21a3f649aa2bbf2f18d9780638dfd72f2a1e8 lxdvdrip-1.42.ebuild 861
-SHA256 0b329a1f6331f10eaf50dc07b15253a2d508cd9de4441f7ff23d286ac23d6dca lxdvdrip-1.42.ebuild 861
+MD5 d2193d6a97445b43a88c4e85b9349bfe files/lxdvdrip-1.42-dvdread.patch 280
+RMD160 12e1fdf7c24e238cf613aebbdb8d57b6ce329b13 files/lxdvdrip-1.42-dvdread.patch 280
+SHA256 e2854d56b1d53ac09f8b8c669747cdeda2b41c83b48724dcd52fcd444f6ea41d files/lxdvdrip-1.42-dvdread.patch 280
+MD5 7a906651b458397b69aee10b1a34a9ac lxdvdrip-1.42.ebuild 989
+RMD160 bc0aa3f0be6a599b934fb6db10850ac8bf23d692 lxdvdrip-1.42.ebuild 989
+SHA256 3baf163d5e78a20d8581529ba4146cc0f958ba411ad8afbff89adad1d2f11d89 lxdvdrip-1.42.ebuild 989
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
 SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEI4Cu/aM9DdBw91cRApagAKDT5PdRo+Dve9GA8ww7SR7b/alH7gCgqtXb
-IBBPrbIpiLFBw71lGx+uLkU=
-=ozlH
+iD8DBQFELnO0AiZjviIA2XgRAsWhAKCdnIeME5RtxRDs5nA5LNbgM4h5wgCgjTok
+rhsdFtrbsZmU6opDL8riMDA=
+=Vu7Q
 -----END PGP SIGNATURE-----
