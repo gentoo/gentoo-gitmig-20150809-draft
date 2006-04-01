@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.36 2005/07/21 15:41:52 herbs Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.37 2006/04/01 06:55:13 antarus Exp $
+
+  01 Apr 2006; Alec Warner <antarus@gentoo.org> lablgl-1.00.ebuild:
+  QA issue bug 124326, sleep -> epause
 
   21 Jul 2005; Herbie Hopkins <herbs@gentoo.org> lablgl-1.00.ebuild:
   get_libdir-ized
