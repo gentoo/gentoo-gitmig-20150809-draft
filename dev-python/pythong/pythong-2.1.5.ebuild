@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5.ebuild,v 1.7 2005/03/23 14:34:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5.ebuild,v 1.8 2006/04/01 18:59:05 agriffis Exp $
 
 inherit python distutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www3.uji.es/~dllorens/downloads/pythong/linux/${MY_PN}-${MY_PV}.
 HOMEPAGE="http://www3.uji.es/~dllorens/PythonG/principal.html"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ia64 ~x86"
 SLOT="0"
 IUSE="doc"
 
