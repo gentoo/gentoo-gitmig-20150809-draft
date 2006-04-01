@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/wxpython-docs-2.6.0.0-r1.ebuild,v 1.3 2005/09/24 12:17:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/wxpython-docs-2.6.0.0-r1.ebuild,v 1.4 2006/04/01 19:20:17 agriffis Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/wxpython/wxPython-docs-${PV}.tar.gz
 
 LICENSE="wxWinFDL-3 LGPL-2.1"
 SLOT="2.6"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 S="${WORKDIR}/wxPython-${PV}"
