@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.7.0.ebuild,v 1.1 2005/06/04 15:53:48 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.7.0.ebuild,v 1.2 2006/04/01 18:45:38 agriffis Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/pyme/${P}.tar.gz"
 HOMEPAGE="http://pyme.sourceforge.net"
 DEPEND=">=app-crypt/gpgme-0.9.0"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ia64 ~ppc ~sparc ~x86"
 LICENSE="|| ( GPL-2 LGPL-2.1 )"
 IUSE=""
 
