@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/icon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.13 2006/03/27 12:30:06 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.14 2006/04/01 12:22:18 george Exp $
+
+*icon-9.4.3-r1 (01 Apr 2006)
+
+  01 Apr 2006; George Shapovalov <george@gentoo.org> +icon-9.4.3-r1.ebuild:
+  falling back to stable CFLAGS, disabled experimental features, as they are
+  causing some tests to fail
 
   27 Mar 2006; Ferris McCormick <fmccor@gentoo.org> icon-9.4.3.ebuild:
   Add sparc keyword (Bug #114944).  This seems the least bad of several options:
