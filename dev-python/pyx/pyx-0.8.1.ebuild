@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.8.1.ebuild,v 1.2 2005/11/28 11:40:23 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.8.1.ebuild,v 1.3 2006/04/01 19:00:46 agriffis Exp $
 
 inherit distutils eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/pyx/${MY_P}.tar.gz"
 HOMEPAGE="http://pyx.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="doc"
 DEPEND="virtual/python
 	virtual/tetex"
