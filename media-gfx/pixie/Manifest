@@ -1,25 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 25f49b74d555ae01f63d25e3c6404561 ChangeLog 3565
-MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
-MD5 7fac8c4c30f64a7982262cc0cd780808 pixie-1.5.1.ebuild 1390
-MD5 2890bc643293ec454fd2898947845ac4 pixie-1.4.1-r1.ebuild 1351
-MD5 38df59661a903bb445428268f760a77e pixie-1.4.5.ebuild 1390
-MD5 b8f845ec17ba57747682b96f40c7fdce pixie-1.4.7.ebuild 1390
-MD5 a5e1bbee1a7d0e59e324fca6b22d45c7 files/digest-pixie-1.4.7 65
-MD5 9c2746d29b44d65086d1464a94f0ef9f files/pixie-1.4.1-libtool.patch 9889
-MD5 850d794bc1458a3b170f1dcc64938612 files/pixie-1.4.4-libtool.patch 14591
-MD5 1bfeaf00e756addc8de83293ff0623eb files/digest-pixie-1.4.5 65
-MD5 6cc5b77de73a722c5e850636bf750a32 files/pixie-1.3.11-math.patch 365
-MD5 c47cd24a306a2475680ce9f914546c4e files/digest-pixie-1.4.1-r1 65
-MD5 48ac8837dbadef8c09f4707f8010c85f files/pixie-1.4.4-math.patch 836
+MD5 d57819c985917c31b1bbf425114906af ChangeLog 3860
+RMD160 6d3abbbd1f207ac787f2a2a644b66d1378638078 ChangeLog 3860
+SHA256 3d6517917165c8422775157692f92f9f1ad353026278d4e2cb5df0db53f4bc34 ChangeLog 3860
 MD5 89da012136dbc32c9a68dabc09e802d4 files/digest-pixie-1.5.1 65
+RMD160 52633c2285d9d1d6edc19969365d3ca4413e4f08 files/digest-pixie-1.5.1 65
+SHA256 b066f044a0f059e98ded56816063ea0a3cb390f838196c3d410aca2bb944af2b files/digest-pixie-1.5.1 65
+MD5 48ac8837dbadef8c09f4707f8010c85f files/pixie-1.4.4-math.patch 836
+RMD160 5ce5894aeb65e57fb0fc76b404f45dc7f3e2ee13 files/pixie-1.4.4-math.patch 836
+SHA256 2a87f85c7da0e4fccb7e15d1c133d1f2a24e5983de9b22e2e3ccc05c7ac4e5a8 files/pixie-1.4.4-math.patch 836
 MD5 391ca6aaedf3654e8e09f851cf502c01 files/pixie-1.4.7-libtool.patch 14583
+RMD160 75044cb4b56fdb7c550b599f94e621e07ace479f files/pixie-1.4.7-libtool.patch 14583
+SHA256 4d100d71328a22be80caf7fd28f43a750cf4b78ec8aa22ca377c7a369266208d files/pixie-1.4.7-libtool.patch 14583
+MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
+RMD160 d1f5ea37202987c54db9697175a55e5609386654 metadata.xml 259
+SHA256 14f1bab6a31d434eda6319b2783239e50179d75501edb6e255bb6c3e665418cf metadata.xml 259
+MD5 fe08794a72d5c9e98b6274122958c19d pixie-1.5.1.ebuild 1412
+RMD160 1321c5826ae15ccd4bfc975bcfb82250c9ab8a85 pixie-1.5.1.ebuild 1412
+SHA256 79e7844882882647ca8e9e192e7d64c8a57cd7b1f6e615962cc8094d0de1057e pixie-1.5.1.ebuild 1412
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDQHIlOpjtAl+gMRURAtAdAJ4qIvzt5VWIYmYOiFKzdcSHZ0QBhQCfdJWi
-b5E8np7q6j7ZxxNtdnq6OhI=
-=+j3H
+iD8DBQFELhXNOpjtAl+gMRURAk6EAJwJLXM4CEcixAB4bi4azePEQeDBnwCg1D6f
+74fQCVFJ+8zA5tX4m+DteAY=
+=uOtl
 -----END PGP SIGNATURE-----
