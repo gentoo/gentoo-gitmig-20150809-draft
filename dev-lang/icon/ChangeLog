@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.14 2006/04/01 12:22:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.15 2006/04/01 12:25:04 george Exp $
+
+  01 Apr 2006; George Shapovalov <george@gentoo.org> icon-9.40.ebuild:
+  removed sparc and ~amd64 from 9.40, will mask when 9.4.3 is stabilized on x86
 
 *icon-9.4.3-r1 (01 Apr 2006)
 
