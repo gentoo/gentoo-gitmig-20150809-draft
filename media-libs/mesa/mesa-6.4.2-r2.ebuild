@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2-r2.ebuild,v 1.2 2006/03/31 20:02:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2-r2.ebuild,v 1.3 2006/04/01 16:33:12 joshuabaergen Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -44,6 +44,9 @@ RDEPEND="dev-libs/expat
 	!<=x11-base/xorg-x11-6.9"
 DEPEND="${RDEPEND}
 	x11-misc/makedepend
+	x11-proto/inputproto
+	x11-proto/xextproto
+	!hppa? ( x11-proto/xf86driproto )
 	x11-proto/xf86vidmodeproto
 	>=x11-proto/glproto-1.4-r1
 	motif? ( x11-proto/printproto )"
