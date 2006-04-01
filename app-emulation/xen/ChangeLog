@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.30 2006/03/25 00:00:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.31 2006/04/01 14:30:49 agriffis Exp $
 
 *xen-3.0.1_p9029 (24 Mar 2006)
 *xen-3.0.1-r5 (24 Mar 2006)
@@ -16,14 +16,14 @@
 *xen-9029-r2 (05 Mar 2006)
 *xen-3.0.1-r4 (05 Mar 2006)
 
-  05 Mar 2006; <chrb@gentoo.org> -xen-3.0.1-r3.ebuild, +xen-3.0.1-r4.ebuild,
+  05 Mar 2006; Chris Bainbridge <chrb@gentoo.org> -xen-3.0.1-r3.ebuild, +xen-3.0.1-r4.ebuild,
   -xen-9029-r1.ebuild, +xen-9029-r2.ebuild:
   add ekeep for pre-created xen dirs, bug #123862
 
 *xen-9029-r1 (03 Mar 2006)
 *xen-3.0.1-r3 (03 Mar 2006)
 
-  03 Mar 2006; <chrb@gentoo.org> +files/gentoo-makefile-targets,
+  03 Mar 2006; Chris Bainbridge <chrb@gentoo.org> +files/gentoo-makefile-targets,
   -xen-3.0.1-r2.ebuild, +xen-3.0.1-r3.ebuild, -xen-9029.ebuild,
   +xen-9029-r1.ebuild:
   more pae fixes
@@ -31,31 +31,31 @@
 *xen-9029 (02 Mar 2006)
 *xen-3.0.1-r2 (02 Mar 2006)
 
-  02 Mar 2006; <chrb@gentoo.org> -xen-3.0.1-r1.ebuild, +xen-3.0.1-r2.ebuild,
+  02 Mar 2006; Chris Bainbridge <chrb@gentoo.org> -xen-3.0.1-r1.ebuild, +xen-3.0.1-r2.ebuild,
   -xen-8885.ebuild, +xen-9029.ebuild:
   Bump unstable. Add PAE support thanks to Christopher G. Stach II (bug #124355).
 
 *xen-8885 (19 Feb 2006)
 
-  19 Feb 2006; <chrb@gentoo.org> +xen-8885.ebuild:
+  19 Feb 2006; Chris Bainbridge <chrb@gentoo.org> +xen-8885.ebuild:
   new xen-unstable snapshot
 
 *xen-3.0.1-r1 (05 Feb 2006)
 
-  05 Feb 2006; <chrb@gentoo.org> -xen-3.0.1.ebuild, +xen-3.0.1-r1.ebuild:
+  05 Feb 2006; Chris Bainbridge <chrb@gentoo.org> -xen-3.0.1.ebuild, +xen-3.0.1-r1.ebuild:
   use the official 3.0.1 tarballs
 
-  04 Feb 2006; <chrb@gentoo.org> xen-3.0.1.ebuild:
+  04 Feb 2006; Chris Bainbridge <chrb@gentoo.org> xen-3.0.1.ebuild:
   fix snapshot
 
 *xen-3.0.1 (03 Feb 2006)
 
-  03 Feb 2006; <chrb@gentoo.org> +xen-3.0.1.ebuild:
+  03 Feb 2006; Chris Bainbridge <chrb@gentoo.org> +xen-3.0.1.ebuild:
   bump
 
 *xen-3.0.0-r2 (23 Dec 2005)
 
-  23 Dec 2005; <chrb@gentoo.org> files/xend-init, files/xendomains-init,
+  23 Dec 2005; Chris Bainbridge <chrb@gentoo.org> files/xend-init, files/xendomains-init,
   -xen-2.0.7.ebuild, -xen-3.0.0-r1.ebuild, +xen-3.0.0-r2.ebuild:
   Bugs #115970 (/var/xen/dump), #115969 (dhcp), #116332 (hotplug). Removed
   xen-2 as bugs are not being fixed upstream since the xen-3.0.0 release.
@@ -63,48 +63,48 @@
   21 Dec 2005; Alex Howells <astinus@gentoo.org> xen-3.0.0-r1.ebuild:
   Keyword ~amd64 added, works fine for me!
 
-  08 Dec 2005; <chrb@gentoo.org> xen-3.0.0-r1.ebuild:
+  08 Dec 2005; Chris Bainbridge <chrb@gentoo.org> xen-3.0.0-r1.ebuild:
   rename cflags -> custom-cflags (like mplayer, grub..)
 
 *xen-3.0.0-r1 (08 Dec 2005)
 
-  08 Dec 2005; <chrb@gentoo.org> -xen-3.0.0.ebuild, +xen-3.0.0-r1.ebuild:
+  08 Dec 2005; Chris Bainbridge <chrb@gentoo.org> -xen-3.0.0.ebuild, +xen-3.0.0-r1.ebuild:
   add dirs expected by xend, bug #114856
 
-  07 Dec 2005; <chrb@gentoo.org> xen-3.0.0.ebuild:
+  07 Dec 2005; Chris Bainbridge <chrb@gentoo.org> xen-3.0.0.ebuild:
   Fix CFLAGS for hardened bug #114716
 
 *xen-3.0.0 (06 Dec 2005)
 
-  06 Dec 2005; <chrb@gentoo.org> -xen-3.0.0_pre20051027.ebuild,
+  06 Dec 2005; Chris Bainbridge <chrb@gentoo.org> -xen-3.0.0_pre20051027.ebuild,
   -xen-3.0.0_pre20051122.ebuild, -xen-3.0.0_pre20051128.ebuild,
   -xen-3.0.0_pre20051128-r1.ebuild, +xen-3.0.0.ebuild:
   New 3.0.0 release.
 
 *xen-3.0.0_pre20051128-r1 (30 Nov 2005)
 
-  30 Nov 2005; <chrb@gentoo.org> xen-3.0.0_pre20051128.ebuild,
+  30 Nov 2005; Chris Bainbridge <chrb@gentoo.org> xen-3.0.0_pre20051128.ebuild,
   +xen-3.0.0_pre20051128-r1.ebuild:
   support user specified cflags (must be forced to override defaults with
   'cflags' USE flag
 
 *xen-3.0.0_pre20051128 (28 Nov 2005)
 
-  28 Nov 2005; <chrb@gentoo.org> +xen-3.0.0_pre20051128.ebuild:
+  28 Nov 2005; Chris Bainbridge <chrb@gentoo.org> +xen-3.0.0_pre20051128.ebuild:
   bump
 
 *xen-3.0.0_pre20051122 (22 Nov 2005)
 
-  22 Nov 2005; <chrb@gentoo.org> +xen-3.0.0_pre20051122.ebuild:
+  22 Nov 2005; Chris Bainbridge <chrb@gentoo.org> +xen-3.0.0_pre20051122.ebuild:
   version bump
 
-  03 Nov 2005; <chrb@gentoo.org> -xen-3.0.0_pre20051010.ebuild,
+  03 Nov 2005; Chris Bainbridge <chrb@gentoo.org> -xen-3.0.0_pre20051010.ebuild,
   -xen-3.0.0_pre20051010-r1.ebuild:
   remove old cvs snapshots
 
 *xen-3.0.0_pre20051027 (27 Oct 2005)
 
-  27 Oct 2005; <chrb@gentoo.org> files/xendomains-init,
+  27 Oct 2005; Chris Bainbridge <chrb@gentoo.org> files/xendomains-init,
   +xen-3.0.0_pre20051027.ebuild:
   version bump
 
