@@ -1,6 +1,9 @@
-MD5 ccc027de76b415fafd4df67c1cc422b1 ChangeLog 91121
-RMD160 a0fb730c5be4964ce6fae5853a8defabfe0bd8bc ChangeLog 91121
-SHA256 bbc353f93a98da0846267a126deb03c11c2e26fe0c5f21c32a0be7326248bd6c ChangeLog 91121
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a990ad92ae6b1ec47c06145244b298e9 ChangeLog 91248
+RMD160 c3615bdb0fd92622ae8dd03a8a0edadf5168cdc6 ChangeLog 91248
+SHA256 551ca079954a58157b86774c7d92000a1e8b5ae2293157e32b6bf8de662b47ac ChangeLog 91248
 MD5 941f13d27badc76c1e3704c59acaff26 files/2.3.1/glibc-2.3.1-ctype-compat-v3.patch 2823
 RMD160 f1162b7f313f7ea18fb178157d3bd6205d818e3a files/2.3.1/glibc-2.3.1-ctype-compat-v3.patch 2823
 SHA256 0bc07eb47578d5bfb98774b18bf07aee2af44a7ccd947602c223b34e0d88394a files/2.3.1/glibc-2.3.1-ctype-compat-v3.patch 2823
@@ -343,6 +346,9 @@ SHA256 8ec9b852e961654f255e4ae73c2fcc51482fb1b0519834688dba4614f8353216 files/di
 MD5 7f238701dc80be184d3b46a3babaee2b files/digest-glibc-2.4-r1 1292
 RMD160 2973b76f09f44d280289e9dec583f88ee4c636b2 files/digest-glibc-2.4-r1 1292
 SHA256 2cee383fdb2b7f9d72d4a87fcc9ae92e952f2c5bdf5cf940054bc52cf27df25e files/digest-glibc-2.4-r1 1292
+MD5 0060d3b3fde868da35b7af613c0a78c3 files/digest-glibc-2.4-r2 1292
+RMD160 cfd48df06d70a8bddd3dc6261674d0d54cc03677 files/digest-glibc-2.4-r2 1292
+SHA256 0357ed3e90ced03f9a2be733fec3e2ddbe8b5c70dd10a01f09312d9544641bde files/digest-glibc-2.4-r2 1292
 MD5 e4393f4721a207750581d6265d5f7f40 files/fix-sysctl_h.patch 376
 RMD160 b5dd68158224b09ddc42986be02351c74f81e0a0 files/fix-sysctl_h.patch 376
 SHA256 3a589f63fd1f3f6c5a00c66a10943d3d64630aefb1eb5b37e7f2a856fcea234a files/fix-sysctl_h.patch 376
@@ -424,6 +430,16 @@ SHA256 eed60a53a42b9c70b05068e15e7c58e3f1e3fc23b21f41c569fd112665f91775 glibc-2.
 MD5 fa0216b2964ec91a8986908aee8b1eef glibc-2.4-r1.ebuild 42921
 RMD160 dae3994a7aa7482591c18f28188b76fe2b0ba0ce glibc-2.4-r1.ebuild 42921
 SHA256 22384fd3875774bb0cfd4ba824bd3849dcb775b5699d2c685ea5e0a634c98dd5 glibc-2.4-r1.ebuild 42921
+MD5 8c2987c19099f4c026cee6fae761d6f3 glibc-2.4-r2.ebuild 37977
+RMD160 4bd89e002558b1e62032c0f4b1e42cbc6cfefcff glibc-2.4-r2.ebuild 37977
+SHA256 23c1bd79abaf38f40bbaf342f3272301c65b18c9632ae63b3bf36f8af3fb624b glibc-2.4-r2.ebuild 37977
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
 SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELgh02+ySkm8kpY0RAmJbAJ9hmHqtxw4KnYH6fua/y5QtiYP9WQCgo/Tw
+5UihTPXb4BrRwJoQjerHvuM=
+=MFwb
+-----END PGP SIGNATURE-----
