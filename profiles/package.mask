@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5167 2006/04/01 04:27:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5168 2006/04/01 06:15:37 halcy0n Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -742,10 +742,6 @@ app-doc/ebook-zvt
 # has security issues and will be removed from portage
 # due to upstream behaviour, see bug #106497
 app-backup/mondo-rescue
-
-# Mark Loeser <halcy0n@gentoo.org> (25 Nov 2005)
-# broken with boost >=1.32, no upstream release since 2003 (bug #113543)
-dev-libs/luabind
 
 # Marcin Kryczek <mkay@gentoo.org> (22 Nov 2005)
 # This is for testing only. Do NOT report bugs against that version
