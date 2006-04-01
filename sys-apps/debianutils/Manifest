@@ -10,9 +10,9 @@ SHA256 7aa60bdcd764e263191fc0a980034711109f0cf055a16dc62de1e9eea627e6bc debianut
 MD5 dde4623a7e4629ff3ae7a5c872e7acdf debianutils-2.14.1-r1.ebuild 1129
 RMD160 19cfbf6c147f0129c027cb5eee43e92e618ea2c6 debianutils-2.14.1-r1.ebuild 1129
 SHA256 5223d1d575184878a914e6b93dbb7fccd5f44f16db4eea35f19452c57d8c410a debianutils-2.14.1-r1.ebuild 1129
-MD5 e7a63494e45f6f810edff885b0cf3b78 debianutils-2.15.ebuild 1142
-RMD160 a0c946112347cdc0197d4697ab86f9ac79442703 debianutils-2.15.ebuild 1142
-SHA256 c04ec2e75eddf78d701e8dad32bd19eb59dec24b91126c3060bd5a99669aa9de debianutils-2.15.ebuild 1142
+MD5 d7ae05f264745b63c32d926c4e2e6e27 debianutils-2.15.ebuild 1133
+RMD160 1e3ff358a0edb979ed11b832b8b60b097d5b1f36 debianutils-2.15.ebuild 1133
+SHA256 89251d6df9ef630329265182e8506cc4fdc512ebc32bd02618bf9a2fbc386788 debianutils-2.15.ebuild 1133
 MD5 c2a83b7cc35cd0a76df37cf57c8f6563 files/debianutils-2.14.1-no-bs-namespace.patch 1412
 RMD160 20226c9f11a6e3708c39c426f46391c5e828c1b9 files/debianutils-2.14.1-no-bs-namespace.patch 1412
 SHA256 1cac8819abad2ae16568461ccddfd27e98e2adc3103a61d647358f05ef6eb365 files/debianutils-2.14.1-no-bs-namespace.patch 1412
@@ -31,7 +31,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFELCCcAiZjviIA2XgRAjYjAJ9ubFf5WTH/BFvorcG+c+w/bsD86wCgplac
-gBHyWsQU0t3UBAVTrdbymwk=
-=KulB
+iD8DBQFELvyt2+ySkm8kpY0RAuD1AKClclz1f/koR9d1w+yfJ/LP9jJo1QCeMNpw
+b6BxjQO3hXV2tgjkA9xoXEU=
+=5eH6
 -----END PGP SIGNATURE-----
