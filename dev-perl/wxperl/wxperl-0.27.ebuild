@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/wxperl/wxperl-0.27.ebuild,v 1.2 2006/02/13 14:26:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/wxperl/wxperl-0.27.ebuild,v 1.3 2006/04/01 14:36:30 agriffis Exp $
 
 inherit perl-module eutils wxwidgets
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/M/MB/MBARBON/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
 IUSE="unicode"
 
 DEPEND="x11-libs/wxGTK
