@@ -22,9 +22,9 @@ SHA256 e7f013d0362411e977f1c18172cc3568de09ba0942361cb8024c209114cb79ef docbook-
 MD5 5def4ee5107481013c6a07f2070aeaf4 docbook-xml-dtd-4.3.ebuild 975
 RMD160 ee3b86dbb1105b23847633e7dedff57ef156a857 docbook-xml-dtd-4.3.ebuild 975
 SHA256 a286aef0b1ba2c74245ac498952a16e9c52ec2f7aecb8544413cf76cb4f92a66 docbook-xml-dtd-4.3.ebuild 975
-MD5 3b021cb5dece05d40a4f7a795f077df7 docbook-xml-dtd-4.4-r1.ebuild 1391
-RMD160 6595629435aa9ab865a78e43a2195b643c09a143 docbook-xml-dtd-4.4-r1.ebuild 1391
-SHA256 447a6e6579f45ec218db3482b5116207798874220162acd53b6319f2fa9f1f58 docbook-xml-dtd-4.4-r1.ebuild 1391
+MD5 9ae0e66877a8775edf4a3f1c6355bbd4 docbook-xml-dtd-4.4-r1.ebuild 1390
+RMD160 41d2e7e1f52869bfbbec1988632fcf4939156170 docbook-xml-dtd-4.4-r1.ebuild 1390
+SHA256 71027d09f5d04d4edc405c8a00c55608e3f08e2bc576effd62b1340c578a3d13 docbook-xml-dtd-4.4-r1.ebuild 1390
 MD5 54e8a1d2314d78b9e8dedbb8686af83d docbook-xml-dtd-4.4.ebuild 1025
 RMD160 2917cf2bf2fb2b342c56cd95de00053cf86ac35b docbook-xml-dtd-4.4.ebuild 1025
 SHA256 966105ef3da09c425d1c903cf44f2f057fc9daeda82be81708b0f6223a262c49 docbook-xml-dtd-4.4.ebuild 1025
@@ -58,7 +58,7 @@ SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEKCduV3J2n04EauwRAs9EAKC/xHFTDkVwEZP2/1SJCe55ocoBgQCgre21
-f6gGYUIXZA8XHQ5lbe74ZCs=
-=EAxj
+iD8DBQFELvvy2+ySkm8kpY0RAjw4AKCpDCEoF6sqBHFYIZ2XAFi5AQ3ZdwCfeDmC
+PHHKjkHXU/hQGXG4mM5/qG4=
+=kch7
 -----END PGP SIGNATURE-----
