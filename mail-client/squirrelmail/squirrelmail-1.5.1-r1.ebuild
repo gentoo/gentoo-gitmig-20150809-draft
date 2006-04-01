@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.5.1-r1.ebuild,v 1.1 2006/04/01 05:12:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.5.1-r1.ebuild,v 1.2 2006/04/01 05:30:32 eradicator Exp $
 
 IUSE="crypt ldap spell ssl filter mysql postgres nls"
 
@@ -123,20 +123,24 @@ src_install() {
 	# NOTE that doc files go into /usr/share/doc as normal; they do NOT
 	# get installed per vhost!
 
-	for doc in AUTHORS COPYING ChangeLog INSTALL README ReleaseNotes UPGRADE; do
+	for doc in AUTHORS COPYING ChangeLog INSTALL README ReleaseNotes UPGRADE ; do
 		dodoc ${doc}
 		rm -f ${D}${MY_HTDOCSDIR}/${doc}
 	done
 
 	for doc in plugins/{README.plugins,*/{INSTALL,README,COPYRIGHTS,CHANGELOG,API,UPGRADE,TODO,README.txt,INSTALL.txt,user_example.txt}} ; do
-		docinto $(dirname ${doc})
-		dodoc ${doc}
-		rm -f ${D}${MY_HTDOCSDIR}/${doc}
+		if [[ -f ${doc} ]] ; then
+			docinto $(dirname ${doc})
+			dodoc ${doc}
+			rm -f ${D}${MY_HTDOCSDIR}/${doc}
+		fi
 	done
 
 	# Identify the configuration files that this app uses
 	for file in config/config.php plugins/*/{config.php,sqspell_config.php,gpg_local_prefs.txt}; do
-		webapp_configfile ${MY_HTDOCSDIR}/${file}
+		if [[ -f ${file} ]] ; then
+			webapp_configfile ${MY_HTDOCSDIR}/${file}
+		fi
 	done
 
 	# Identify any script files that need #! headers adding to run under
