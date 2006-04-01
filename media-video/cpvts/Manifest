@@ -1,4 +1,25 @@
-MD5 1786d83501a6a8719a664b5a81bf3c32 ChangeLog 600
-MD5 97220db3fca11df4a604d03ef85ef2cb cpvts-1.2.ebuild 596
-MD5 446c2ccebfd17f0cf3aa8e8d8b815635 metadata.xml 233
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 880a171c901dccd2f18062a411e47c9b ChangeLog 881
+RMD160 925bc5c596d391c6085273fc4d6ec3b6966d149e ChangeLog 881
+SHA256 71cedf4eeb59e8028b0f605f3f26135f1e0afba48c67b9295f5bc9490dec101f ChangeLog 881
+MD5 8b1b0d643b6122efd992583e99d27bc1 cpvts-1.2.ebuild 830
+RMD160 0aed2ced107cb1e7c7ed31f63fd1c27e6e0d70e7 cpvts-1.2.ebuild 830
+SHA256 631b029520e39b82eaf15b84a8ac2e5fa4c87823a1fa8907d3bca50e715baa81 cpvts-1.2.ebuild 830
+MD5 078962f5df15f30d7c46736c31815389 files/cpvts-1.2-dvdread.patch 315
+RMD160 218996461cc8da09ea076388014b63a63ecba027 files/cpvts-1.2-dvdread.patch 315
+SHA256 4cb1a8f7d17c3005add9592bfae577f5b6903e36cc95be25ff7fd9a4ef797fba files/cpvts-1.2-dvdread.patch 315
 MD5 cbb33c789712e1a80054963c6d74928d files/digest-cpvts-1.2 56
+RMD160 16093b8f89e8f485b692f91cdd3bdece92d0d01b files/digest-cpvts-1.2 56
+SHA256 f20096c4d23d2bf54c42e02284ebee0809aa8955327e12cce053c3e5a3fdc02d files/digest-cpvts-1.2 56
+MD5 446c2ccebfd17f0cf3aa8e8d8b815635 metadata.xml 233
+RMD160 e62d18211d353ab6d54c1bdabe20fad0705dfa37 metadata.xml 233
+SHA256 2e54b419554b54671e04a167f2fa56d52d8f0b509157ba98695c01d860b3196a metadata.xml 233
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELmoKAiZjviIA2XgRArEcAJ9XbMpp8N0TfToS8S8/YYRAYWAxuACg1bpC
+rU6snllxmOesd96q8ZOlcNQ=
+=coLc
+-----END PGP SIGNATURE-----
