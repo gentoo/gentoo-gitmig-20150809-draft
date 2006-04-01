@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.6-r1.ebuild,v 1.3 2006/03/21 23:22:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.6-r2.ebuild,v 1.1 2006/04/01 05:12:42 eradicator Exp $
 
-IUSE="crypt ldap spell ssl filter mysql postgres"
+IUSE="crypt ldap spell ssl filter mysql postgres nls"
 
 inherit webapp eutils
 
@@ -17,6 +17,7 @@ GPG_VER=2.0.1-1.4.2
 LDAP_USERDATA_VER=0.4
 SECURELOGIN_VER=1.2-1.2.8
 SHOWSSL_VER=2.1-1.2.8
+LOCALES_VER=1.4.6-20060221
 
 MY_P=${P/_rc/-RC}
 S="${WORKDIR}/${MY_P}"
@@ -30,7 +31,8 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	${PLUGINS_LOC}/admin_add.${ADMINADD_VER}.tar.gz
 	filter? ( ${PLUGINS_LOC}/amavisnewsql-0.8.0-1.4.tar.gz )
 	crypt? ( ${PLUGINS_LOC}/gpg.${GPG_VER}.tar.gz )
-	ldap? ( ${PLUGINS_LOC}/ldapuserdata-${LDAP_USERDATA_VER}.tar.gz )"
+	ldap? ( ${PLUGINS_LOC}/ldapuserdata-${LDAP_USERDATA_VER}.tar.gz )
+	nls? (mirror://sourceforge/${PN}/all_locales-${LOCALES_VER}.tar.bz2)"
 
 HOMEPAGE="http://www.squirrelmail.org/"
 
@@ -83,6 +85,10 @@ src_unpack() {
 		mv secure_login/config.php.sample secure_login/config.php &&
 		unpack show_ssl_link-${SHOWSSL_VER}.tar.gz &&
 		mv show_ssl_link/config.php.sample show_ssl_link/config.php
+
+	use nls &&
+		cd ${S} &&
+		unpack all_locales-${PV}-${LOCALES_VER}.tar.bz2
 }
 
 src_compile() {
