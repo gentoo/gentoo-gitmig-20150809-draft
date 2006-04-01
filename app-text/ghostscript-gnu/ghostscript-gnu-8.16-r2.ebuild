@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r2.ebuild,v 1.1 2006/03/29 12:06:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r2.ebuild,v 1.2 2006/04/01 01:20:09 flameeyes Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="GNU Ghostscript"
 HOMEPAGE="http://www.gnu.org/software/ghostscript/"
@@ -17,12 +17,11 @@ SRC_URI="ftp://ftp.gnu.org/gnu/ghostscript/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="X cups cjk emacs gtk"
 
 
-DEP="virtual/libc
-	>=media-libs/jpeg-6b
+DEP=">=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.5
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7
@@ -90,6 +89,8 @@ src_unpack() {
 		Makefile.in || die "sed failed"
 
 	#eautoreconf
+
+	elibtoolize
 }
 
 src_compile() {
