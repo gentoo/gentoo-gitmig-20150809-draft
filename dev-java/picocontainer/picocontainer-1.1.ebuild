@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.1.ebuild,v 1.1 2005/12/28 03:31:58 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.1.ebuild,v 1.2 2006/04/01 15:07:52 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-1.5
+	>=dev-java/ant-core-1.5
 	>=dev-java/junit-3.8.1"
 S="${WORKDIR}/${MY_P}"
 
