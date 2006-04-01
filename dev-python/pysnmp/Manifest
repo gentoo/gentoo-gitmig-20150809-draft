@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 269487196e3f1fc1025d4cf21e731241 ChangeLog 1508
+MD5 3414e15ab464e157a585606db41f0d53 ChangeLog 1599
+RMD160 a83694a353e38e0aadd6cbf4310381c3fe69e5ef ChangeLog 1599
+SHA256 bfda4a65d6ed4d2fe8759c42dd5811885a1cfdba141c4af52030ed03ab1414cd ChangeLog 1599
 MD5 b30937ff6795e9c21197fb0f017b65ce files/digest-pysnmp-2.0.8 63
+RMD160 0154bf938ff1e8f6f4a33827bc19e7e4b728d5a6 files/digest-pysnmp-2.0.8 63
+SHA256 6a9de260ebee0bb8d407056a6039ef32d323cd6053e275f0724d8a4d2e741d6e files/digest-pysnmp-2.0.8 63
 MD5 f1302fe6c3ae374b76578a63ed08b9ba files/digest-pysnmp-3.4.2 63
+RMD160 0244fb915583590a6e451b3a0cd8364920caa745 files/digest-pysnmp-3.4.2 63
+SHA256 c89a155898e2c1087b0407b6a86a65f8464be71f58a1ebbf9b99242660ac8bfe files/digest-pysnmp-3.4.2 63
 MD5 cdfb4b386b7d03da6b594f975f0f9b8e files/digest-pysnmp-4.0.1a 64
+RMD160 bf743f3c51bd887e768e4506f8b2b38150a3eb7f files/digest-pysnmp-4.0.1a 64
+SHA256 a0bcc2a7d424117d74395b10c6948a43acf6ca4d38bc3aecec7bd311faeb000e files/digest-pysnmp-4.0.1a 64
 MD5 580899131a738dbb440a5b1584cc0fad metadata.xml 1199
+RMD160 83698589fc692c47d39875e7f185f7527a38b458 metadata.xml 1199
+SHA256 ddceccce8f365dd1d2d0afe88ac7faa8658c6414a9752c262c327baa95780a4f metadata.xml 1199
 MD5 abefa6bac069de678b5b4d683cc9b17d pysnmp-2.0.8.ebuild 434
+RMD160 ae3269e81d0ac688440712ef6cdc84b19e468999 pysnmp-2.0.8.ebuild 434
+SHA256 689b9b70b6038bf47b8045fe787abfd697ac64755b84a0f2d41a2a6ea4675156 pysnmp-2.0.8.ebuild 434
 MD5 833e36cea93e9ee8674df70dd93c2db4 pysnmp-3.4.2.ebuild 571
-MD5 290041af2524a11c1b13c6e0671d080e pysnmp-4.0.1a.ebuild 567
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDfwdIFdQwWVoAgN4RAm/8AJ9kkzpZIHAJDaWMwcsFxCnVCtII7QCfWIi+
-W73jFKzwap2Evgd8BEMrms8=
-=kSi6
------END PGP SIGNATURE-----
+RMD160 527e6b8b49cb52603ce3e1e3a34b7bdb6bc8b8b2 pysnmp-3.4.2.ebuild 571
+SHA256 44dc6a7fcb88645e4f3c39f17dc62faefec96a119296af931de2ec0f832981ac pysnmp-3.4.2.ebuild 571
+MD5 7568abc0812eb9c5203342f105210cb5 pysnmp-4.0.1a.ebuild 575
+RMD160 da5d0374734f6d512cb29e57247c868fdfa111cd pysnmp-4.0.1a.ebuild 575
+SHA256 6403f6e3214219ede4909b22b0e6f7f66a633fda18a4936f4f3ab902f54bcc24 pysnmp-4.0.1a.ebuild 575
