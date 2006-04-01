@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pystatgrab
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pystatgrab/ChangeLog,v 1.4 2005/11/24 22:13:32 marienz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pystatgrab/ChangeLog,v 1.5 2006/04/01 18:53:00 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pystatgrab-0.4.ebuild:
+  Mark 0.4 ~ia64
 
 *pystatgrab-0.4 (24 Nov 2005)
 
