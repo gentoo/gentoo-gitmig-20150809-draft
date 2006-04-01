@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.12 2006/03/22 11:04:46 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.13 2006/04/01 15:00:21 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> gst-python-0.10.3.ebuild:
+  Mark 0.10.3 ~ia64
 
 *gst-python-0.10.3 (22 Mar 2006)
 
