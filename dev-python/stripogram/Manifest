@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 acbffad87530f7f067debfccf9341796 ChangeLog 734
 RMD160 43eb919aeda59d28c09a03a4181b8e2bf083794e ChangeLog 734
 SHA256 5bcacdbcbfd6ce9183e52d8c0f49190d3c12095bee36c1a1c070c91b86b30467 ChangeLog 734
@@ -10,3 +13,10 @@ SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata
 MD5 60741551270fccaf2be0d972f80a7caf stripogram-1.4.ebuild 534
 RMD160 26ef1fcfae1bd222b876487a69ca73a2d6266595 stripogram-1.4.ebuild 534
 SHA256 e11ec3e5b8ad4169ec15f3dca0973aea7788a1280b76acf61262ccae1adec666 stripogram-1.4.ebuild 534
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFELs9yJrHF4yAQTrARAhZjAJ4yiBrRXSsSxEt7Ed/HLQEzh/rzwACffDe+
+POart8+f9c/JqR9ByW6Guy0=
+=irOk
+-----END PGP SIGNATURE-----
