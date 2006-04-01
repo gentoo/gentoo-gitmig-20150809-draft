@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.91.ebuild,v 1.4 2006/04/01 14:49:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.91.ebuild,v 1.5 2006/04/01 17:55:11 nixnut Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.djangoproject.com/"
 SRC_URI="http://media.djangoproject.com/releases/${PV}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="sqlite postgres mysql"
 
 DEPEND=">=dev-lang/python-2.3

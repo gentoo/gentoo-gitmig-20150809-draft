@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.4 2006/04/01 14:49:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.5 2006/04/01 17:55:11 nixnut Exp $
+
+  01 Apr 2006; <nixnut@gentoo.org> django-0.91.ebuild:
+  Added ~ppc keyword. Bug #114821
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> django-0.91.ebuild:
   Mark 0.91 ~ia64
