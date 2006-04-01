@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/winpdb-1.0.6-r1.ebuild,v 1.1 2005/11/10 18:53:51 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/winpdb-1.0.6-r1.ebuild,v 1.2 2006/04/01 19:19:43 agriffis Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/winpdb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
 
 IUSE=""
 DEPEND=">=dev-python/pycrypto-2.0.1
