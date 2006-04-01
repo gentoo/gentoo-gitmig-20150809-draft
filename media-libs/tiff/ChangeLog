@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.67 2006/02/09 20:57:28 tove Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.68 2006/04/01 00:25:06 flameeyes Exp $
+
+  01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> tiff-3.7.4.ebuild:
+  Run elibtoolize and add ~x86-fbsd keyword.
 
 *tiff-3.7.4 (30 Sep 2005)
 
