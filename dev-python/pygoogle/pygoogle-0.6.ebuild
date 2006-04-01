@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoogle/pygoogle-0.6.ebuild,v 1.4 2005/07/02 16:48:16 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoogle/pygoogle-0.6.ebuild,v 1.5 2006/04/01 15:21:23 agriffis Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://pygoogle.sourceforge.net/"
 IUSE=""
 SLOT="0"
 LICENSE="PYTHON"
-KEYWORDS="~x86 ~ppc-macos ~amd64"
+KEYWORDS="~amd64 ~ia64 ~ppc-macos ~x86"
 
 DEPEND="virtual/python
 	>=dev-python/soappy-0.11.3"
