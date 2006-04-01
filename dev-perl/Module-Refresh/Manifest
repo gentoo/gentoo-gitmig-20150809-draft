@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b60e841301556f177d8c203091af2372 ChangeLog 839
-RMD160 1670f8c119f8a1d8239a43db198cbecd7e1137b1 ChangeLog 839
-SHA256 ce49c20721c5a6e6b1599c5882d7ac83fbeb4547128f1bb6d4e17db41229249f ChangeLog 839
+MD5 50f128f34148c0d309cbf76b1506b2d8 ChangeLog 928
 MD5 16270bad5306c58ba3bf40118ed3e7ff Module-Refresh-0.06.ebuild 501
-RMD160 35df5128ce44fc23e28d1fce44dea88b55012f7f Module-Refresh-0.06.ebuild 501
-SHA256 e5cccba14493b77d8c1fba54a8ced35d676b68da01354cca60e6e84638ec0dba Module-Refresh-0.06.ebuild 501
-MD5 decf3b6bb2ed2b8807c97a3af2f7d722 Module-Refresh-0.09.ebuild 507
-RMD160 7451e2e6598504cdf81087adb5889bcf85ba7089 Module-Refresh-0.09.ebuild 507
-SHA256 ba767b9753d547618efa23bb4235f71de74853b825527684b349f96099559f0d Module-Refresh-0.09.ebuild 507
+MD5 4d7ed9073fb78dc100a2c490b0598223 Module-Refresh-0.09.ebuild 507
 MD5 7a1ae71abd5b9e8d3a89020ff7bdd531 files/digest-Module-Refresh-0.06 70
-RMD160 b41dca5db32d2ce35ecbe1d17bd66fca88306dd2 files/digest-Module-Refresh-0.06 70
-SHA256 7bdd75314e52a98616eacf013e7a6c7caa57d1a3fed31295b9524e9304bdfd73 files/digest-Module-Refresh-0.06 70
 MD5 d46dd0950056837588d5b6692ad2e851 files/digest-Module-Refresh-0.09 70
-RMD160 a373b7b08b55aecbf2267e98a805b89aa6696a4c files/digest-Module-Refresh-0.09 70
-SHA256 10cf80f71e3455e9947da39d14e86e6f115d6fa29f5d8269ebc097b17414358d files/digest-Module-Refresh-0.09 70
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELGO8JrHF4yAQTrARAlgbAKCvdAMXRhaNs3ZW2KNIqzv9gtMDCACeO9rA
-P0osMarq0y03jK3Cu+nChuk=
-=dH9T
------END PGP SIGNATURE-----
