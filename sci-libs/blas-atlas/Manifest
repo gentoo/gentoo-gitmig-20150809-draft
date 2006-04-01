@@ -10,9 +10,9 @@ SHA256 ed0985eecc2c6c84a6b13be0c7c129c1f2efb046e8d3a961716282992cf9f17b blas-atl
 MD5 7c557aafda64ad6b2849bbb76a819ee1 blas-atlas-3.7.10.ebuild 4166
 RMD160 6fc9a32014e32bc465050722237b94b10fa51f09 blas-atlas-3.7.10.ebuild 4166
 SHA256 3212603bb6d0fed40a5c6bbd8097592c1ac43dfea3190ce10b0ecf6b611c7ed0 blas-atlas-3.7.10.ebuild 4166
-MD5 331cf3d5db82efb7bdb39e100206aac7 blas-atlas-3.7.11.ebuild 4751
-RMD160 ba488d11fa806e178886d6eacc53ebc89c919353 blas-atlas-3.7.11.ebuild 4751
-SHA256 fe3b91cab0463679d6e1e2c28ef3e29ee2a9d0b45a8fb88ddde9eccd72639506 blas-atlas-3.7.11.ebuild 4751
+MD5 54c29997bbd58d7226c66a2eb735158e blas-atlas-3.7.11.ebuild 4757
+RMD160 fa62d11604eb9b589245527355bcf785e825acbf blas-atlas-3.7.11.ebuild 4757
+SHA256 7e5829ba34fc85ed3917f8215a55b5fd9b0d40dfacdb858e0e4d10e803362c0e blas-atlas-3.7.11.ebuild 4757
 MD5 f96a214eb98219c3702fa278f0fe8ec1 files/3.7.11-allow-any-gcc-version.patch 554
 RMD160 7ae243d7fad6e2ce37cf02c41751dcc57cd9d8d6 files/3.7.11-allow-any-gcc-version.patch 554
 SHA256 2e43cbe7c4ec50c7f5a499c0cc9bde04260e673fecd7b3c0db1102bf0ed855ae files/3.7.11-allow-any-gcc-version.patch 554
@@ -31,9 +31,9 @@ SHA256 6981972ea8934f0c9cc7e527889b1d1cc57712cbdf48d15234b576810c490829 files/di
 MD5 8677e85d89d21e4f7c2826ba5a17d01e files/digest-blas-atlas-3.7.10 140
 RMD160 b31ab636dca54b465584936f9c63026a353a165f files/digest-blas-atlas-3.7.10 140
 SHA256 d0364995847e02cd4f1aeadd845d38194cbd604924b0b2835ccbcab3377d23d0 files/digest-blas-atlas-3.7.10 140
-MD5 71867a450c259619d2098f084cdadce8 files/digest-blas-atlas-3.7.11 518
-RMD160 78447c39d713863f95e6cb0ea74dba1eb5aedd09 files/digest-blas-atlas-3.7.11 518
-SHA256 66f7d379c184ccb36c22701c31b4325914770139cef1448b7862f6a4e4527c61 files/digest-blas-atlas-3.7.11 518
+MD5 37b8d5b760fea3fb4ac109827445d08a files/digest-blas-atlas-3.7.11 518
+RMD160 ca1ad7171082b3816b737a38ee424c2807aa58dd files/digest-blas-atlas-3.7.11 518
+SHA256 ad9eab1be32337d9023c9ff0d0a9b56379512de44fc5ab015831eb9e3986d52c files/digest-blas-atlas-3.7.11 518
 MD5 646c8df3efa24d6573a870dbb0f5fc8d files/f77-ATLAS 457
 RMD160 6a95aad7241ddc2a54737677d79c7720fa976558 files/f77-ATLAS 457
 SHA256 ad91197efb950f6d26032f229c3f58015c45d6997903c05dcfc39be602e6ae94 files/f77-ATLAS 457
