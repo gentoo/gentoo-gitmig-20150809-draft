@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 263a9ebaa98ac9be8bbff7e78fb3c32e ChangeLog 777
 RMD160 8bde05ea8a22cbc18402fbcc356ba365aacae7b5 ChangeLog 777
 SHA256 63eb72b9bcac7744b856fa6a2a720cf32542911fdbf48ba7fc3c2bf859b3a621 ChangeLog 777
@@ -10,3 +13,10 @@ SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata
 MD5 2ec5b6e567cfde6ee905726751139001 twisted-news-0.1.0-r1.ebuild 429
 RMD160 35cac795de3ccd5529684d96edfe97eedd4f1de8 twisted-news-0.1.0-r1.ebuild 429
 SHA256 7db99d675d92dc1c338ea373174efe49d49cff14541831e2fd126b84e71e8300 twisted-news-0.1.0-r1.ebuild 429
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFELtC0JrHF4yAQTrARAkWgAJ9uvLF3Rxxjme63XBuRgg69zBf1CwCfd9WG
+j0kwhR+F+uOOCzR5NGFghrs=
+=JCzY
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 54df0edd5c35beb4851881e692d8f426 ChangeLog 795
 RMD160 9db5449a581c686fce147afb1da101236828d51b ChangeLog 795
 SHA256 14904401bcd3b3512e26bf9fc5d7387f362300bae1021866dcbff68e8bebe876 ChangeLog 795
@@ -10,3 +13,10 @@ SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata
 MD5 54dfb53fcae45958523ae72b29436b6c twisted-runner-0.1.0-r1.ebuild 449
 RMD160 f489b2a31db8ec7cc9ff3b3ac0bcedad27e5fbe5 twisted-runner-0.1.0-r1.ebuild 449
 SHA256 9ac79b628ce3743575c1276474cda856b1268dace522cdc6284dcea9604a40d6 twisted-runner-0.1.0-r1.ebuild 449
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFELtECJrHF4yAQTrARAthpAKDLCfvP4+8E/xM7hvup5kzbgi4H2QCgqgDq
+MCXnth3JHVcAyI5n3W9Uu5M=
+=vCxc
+-----END PGP SIGNATURE-----
