@@ -1,6 +1,9 @@
-MD5 a4b1aa97776be627485c06b05f15c517 ChangeLog 15533
-RMD160 d184020cbd12fdedda9026042fb24de3cfca5baf ChangeLog 15533
-SHA256 d987aeb35059ab748ba2ea83a41176a121b3a067bd3811fd368bee5992c283f5 ChangeLog 15533
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 88fe090ef35277420693bb042cb0d3dd ChangeLog 15640
+RMD160 5148ece05bee15fa50a6ec8c1d5678011fc8af73 ChangeLog 15640
+SHA256 a82204e8157efbedf196ef257d70150ad4f579f2345710c813115f191af8afa1 ChangeLog 15640
 MD5 3f759d81e688060d55a76a9529dd41d7 files/digest-libxslt-1.1.15 68
 RMD160 baf1fde40f27ae6debf5a8475d5b8da0e33a8030 files/digest-libxslt-1.1.15 68
 SHA256 5044e560aeaef16387ac3d2fbb845893aca87dd3a7e949f07f2bcc98ad9f62af files/digest-libxslt-1.1.15 68
@@ -13,12 +16,19 @@ SHA256 34c13e32ca69eb5c55669d23e07710f56ec1c275fd78fa8ad2d36cc7f413a0a7 files/li
 MD5 a772cd7aafe8f9e0fd59de02b2ea2e85 files/libxslt.m4-libxslt-1.1.8.patch 1292
 RMD160 0dcd21978aa0102784df670f2c9835da227f42c8 files/libxslt.m4-libxslt-1.1.8.patch 1292
 SHA256 0da59fb6cb50bf30e8ac79644df90394707ac07e60337aa3c0e53986781e9e0d files/libxslt.m4-libxslt-1.1.8.patch 1292
-MD5 636d561d6a3cab54c7f83792eec51db1 libxslt-1.1.15-r1.ebuild 1873
-RMD160 a813581892c1604a1a958c2e1eaf9004e3c025eb libxslt-1.1.15-r1.ebuild 1873
-SHA256 14b411ca306be6a15642bfa165a6334bd754a0f51e3a9763af90b15a1b40e95a libxslt-1.1.15-r1.ebuild 1873
+MD5 a379ed19fb3ad41d809650e8bebe959a libxslt-1.1.15-r1.ebuild 1883
+RMD160 8781534c1c99947e138c53e21f32eb48cca93581 libxslt-1.1.15-r1.ebuild 1883
+SHA256 b135863f47dcf11b66a35aafacf9f0c9ef62ec0e7ba33a078aadcb7db19aa3fa libxslt-1.1.15-r1.ebuild 1883
 MD5 8d0a9caf015cb42e81bb61f26389f555 libxslt-1.1.15.ebuild 1749
 RMD160 8ad9e5bdf8f483eecf86176067cf1da8cafc0ded libxslt-1.1.15.ebuild 1749
 SHA256 42c7dc5790bd7ba32741cd2b810c0b00d8d1b2ddf80fa0fa34d1bcb83f067931 libxslt-1.1.15.ebuild 1749
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELerzAiZjviIA2XgRAtaiAKDFX2JYEtgkZl+LyPUPMs3baDDG7QCg2C3a
+r4MGEUQnY//ksgdXUARMaL8=
+=khPG
+-----END PGP SIGNATURE-----
