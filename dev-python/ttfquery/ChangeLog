@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ttfquery
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ttfquery/ChangeLog,v 1.4 2005/05/02 10:41:39 carlo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ttfquery/ChangeLog,v 1.5 2006/04/01 19:10:19 agriffis Exp $
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> ttfquery-1.0.0.ebuild:
+  Mark 1.0.0 ~ia64
 
   02 May 2005; Carsten Lohrke <carlo@gentoo.org> ttfquery-1.0.0.ebuild:
   QA: fixed typo, removed unneeded variable usage
