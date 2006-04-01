@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-
 	<herd>graphics</herd>
-
+	<maintainer>
+		<email>nattfodd@gentoo.org</email>
+		<name>Alexandre Buisse</name>
+	</maintainer>
 </pkgmetadata>

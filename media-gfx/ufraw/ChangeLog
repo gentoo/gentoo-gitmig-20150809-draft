@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.3 2006/01/01 20:51:03 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.4 2006/04/01 13:56:12 nattfodd Exp $
+
+*ufraw-0.7 (01 Apr 2006)
+
+  01 Apr 2006; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml,
+  +ufraw-0.7.ebuild:
+  Bump to 0.7 (closing bug #124880). I will maintain ufraw from now on, added
+  the info in metadata.xml. Also moved 0.6 out of packages.mask
 
   01 Jan 2006; Luis Medinas <metalgod@gentoo.org> ufraw-0.6.ebuild:
   Added ~amd64 keyword.

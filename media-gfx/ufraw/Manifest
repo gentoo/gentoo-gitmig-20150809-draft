@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8e9d37b9a7c095de0e002806e6117b03 ChangeLog 562
+MD5 294031e3ac5fdea9d87e4ee4a3ed0c26 ChangeLog 820
+RMD160 48e6f860cddd9ce1acc74eafd0b169325d4bfcdf ChangeLog 820
+SHA256 f8faffca6c6757cb67010cbaaac2c35d115b6aa75ec21a5c7709d4d6b7850c28 ChangeLog 820
 MD5 bc7b31ad019bc30a55625da776b5b05b files/digest-ufraw-0.5 61
+RMD160 f8e7879a4a5f9151b765adb336f616f9e00d9f6a files/digest-ufraw-0.5 61
+SHA256 ff47918238a15ff1db9c70f035c9680139cac9b5e7e2d7e38b042d5ca0382ee3 files/digest-ufraw-0.5 61
 MD5 82a09a02c6a535d43ec50aee42a297d4 files/digest-ufraw-0.6 61
-MD5 fe73035625dc6609b435f48162acae65 metadata.xml 165
+RMD160 450fa3156b4a0a896921f9314ba1950fac194e88 files/digest-ufraw-0.6 61
+SHA256 870ffd0a66105872b412dd6a94c8e0f349d85b498cc939d08cdc7e57b4ad9fd8 files/digest-ufraw-0.6 61
+MD5 a7fc9654c51c20f275126d5912eabdad files/digest-ufraw-0.7 229
+RMD160 d1d8bf125ad1bc51ffb49c1d2b072cad9d139e21 files/digest-ufraw-0.7 229
+SHA256 087719e3a8c2501f9650083a78aa9517953b2e76f8ad214ef3941c99d2be69aa files/digest-ufraw-0.7 229
+MD5 eb273e618a3cff4640008dcb0aae961b metadata.xml 261
+RMD160 a5c1ce905874e2c77c1ea74e4d138d193b5960fd metadata.xml 261
+SHA256 1fdc034e2a52b7962e269c70b7830cfe9aab26853085ee0f0c1006e3b4460b70 metadata.xml 261
 MD5 542b9dc44d903b76edbfe2d2c9dc65bb ufraw-0.5.ebuild 815
+RMD160 e6bf9f468152033bd7771585ab9bdc030f0cdea1 ufraw-0.5.ebuild 815
+SHA256 76ec277b444745233842dcd8da1e18bf285738f0fbb297ee09f4d9a2fd7e0f0b ufraw-0.5.ebuild 815
 MD5 25a2456773865c5d1421155434a4436a ufraw-0.6.ebuild 800
+RMD160 7a0f2bafc37f1218439507f89afeb7de90b5863b ufraw-0.6.ebuild 800
+SHA256 1b51b2b95407427fb374889fd2308c19727b4f29655c69a02fab6c564b9afb3e ufraw-0.6.ebuild 800
+MD5 c5a6303b08432a6bc5ed184e3e9cdd52 ufraw-0.7.ebuild 806
+RMD160 be54975c17172cfcedf79d3aa11206c91f9c15e3 ufraw-0.7.ebuild 806
+SHA256 f8369f7e310cfcc678b3f42096367aa0c53a65c53e360e9d83440ef438e3e782 ufraw-0.7.ebuild 806
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDuED1wUpWvClEHQoRAmmjAJ93jSBTM+HFpRIbMzfPh8wVk+2C9ACgikBu
-xukbxU3UenvZ7pFh4/tsFQw=
-=eCvQ
+iD8DBQFELqLjwx9vvAARv2sRAtc3AJ9up9FmxzkHGd/JZpK5zIfaSEwT5wCgsSOA
+Zy7gmZW1d0V5yGeCv3WKKzk=
+=qGiq
 -----END PGP SIGNATURE-----
