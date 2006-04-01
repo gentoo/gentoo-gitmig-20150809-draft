@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.19.1.ebuild,v 1.4 2006/03/31 19:28:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.19.1.ebuild,v 1.5 2006/04/01 06:21:24 eradicator Exp $
 
 MY_P=${PN}-mt-${PV}
 S="${WORKDIR}/${MY_P}"
@@ -22,17 +22,18 @@ DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51"
 
 src_compile() {
-	econf \
-		$(use_enable nls) \
-		$(use_enable slp) \
-		|| die
+	econf $(use_enable nls) $(use_enable slp)
 	emake || die "emake failed"
 }
 
 src_install() {
-	einstall || die
+	make install DESTDIR="${D}" || die
+
 	dodoc AUTHORS ChangeLog README THANKS TODO
-	insinto /etc ; doins etc/yp.conf
+
+	insinto /etc
+	newins etc/yp.conf yp.conf.example
+
 	newconfd ${FILESDIR}/ypbind.confd-r1 ypbind
 	newinitd ${FILESDIR}/ypbind.initd ypbind
 }
