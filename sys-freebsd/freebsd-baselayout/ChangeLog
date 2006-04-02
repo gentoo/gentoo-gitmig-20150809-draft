@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/freebsd-baselayout
+# ChangeLog for sys-freebsd/freebsd-baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.2 2006/04/01 17:10:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.3 2006/04/02 21:49:54 flameeyes Exp $
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-baselayout-20060401.ebuild:

@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/freebsd-bin
+# ChangeLog for sys-freebsd/freebsd-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/ChangeLog,v 1.1 2006/04/01 16:43:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/ChangeLog,v 1.2 2006/04/02 21:50:32 flameeyes Exp $
 
 *freebsd-bin-6.0 (01 Apr 2006)
 
