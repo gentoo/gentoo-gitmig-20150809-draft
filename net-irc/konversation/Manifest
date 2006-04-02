@@ -1,15 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 248e4fc8fe33279653c9a1ba4b6dacb6 ChangeLog 4448
-RMD160 c894a039b0b67e04b77722871e4f8670734f95ce ChangeLog 4448
-SHA256 77ccb847c545e5917dcde73ab91d205c36aa7148ffcb368169a78dd8ff9612f9 ChangeLog 4448
-MD5 16524313d45151786b72dee746cc8804 files/digest-konversation-0.15.1 73
-RMD160 6f07fb4d65aa71d20920858f49b57e471a0690a3 files/digest-konversation-0.15.1 73
-SHA256 1f95d6f6246523f54e5a0516413b0712bf6f8983a45fd6861942fb7b489cf7f7 files/digest-konversation-0.15.1 73
-MD5 c1371c333bb8d481fd2d8416a2b7669b files/digest-konversation-0.17 71
-RMD160 7d3799db40fea5c941cd51bea31411500080411f files/digest-konversation-0.17 71
-SHA256 f59085abe2da741f59c0df975bd5142ce0ff1c466f4bd75a04449af0384cc486 files/digest-konversation-0.17 71
+MD5 db403d6ea9ab99c9a9a8ceeda2f0dbf8 ChangeLog 4584
+RMD160 95462f77c8b3a639b474c8cdc433877e7d66938b ChangeLog 4584
+SHA256 799aa5c2a8551d902c75f7b6afe6fa1c987e36169e4971240fc660fe39dac738 ChangeLog 4584
 MD5 f2c8957a5d97179e302ff2660560d146 files/digest-konversation-0.18 71
 RMD160 608b8bfbb10dcebc3da778e9975ec90eada83923 files/digest-konversation-0.18 71
 SHA256 d0272ca67efb539a1b7b7fb11c1388284364254e02f48b1d1906971ca9598fff files/digest-konversation-0.18 71
@@ -22,12 +16,6 @@ SHA256 beed35bc161377ca5f3033ec8d7bec923c947f68e95f4db4cea8bfc5b56aa3cd files/ko
 MD5 9b386c5b691931c6d639276f35951471 files/konversation-0.19-slash-q-tab.patch 506
 RMD160 f6f759e3124439a1afa434a50c506e0a3583d359 files/konversation-0.19-slash-q-tab.patch 506
 SHA256 244eebc95c55207ca2355a468d98271ce49e5ec8efeeb71e791098c3c06df408 files/konversation-0.19-slash-q-tab.patch 506
-MD5 943c1c08b2bae6ad084ba17ec78c9aef konversation-0.15.1.ebuild 553
-RMD160 8a69032611fbff6be92c30e364300b866fc407f9 konversation-0.15.1.ebuild 553
-SHA256 8a096bc82ef4b3a2f1d576009fdd519e674854a17e43610d1e2e05c94a557209 konversation-0.15.1.ebuild 553
-MD5 5c2465682f4ca3cf97f010f6263cf29a konversation-0.17.ebuild 550
-RMD160 2cda1aa3c5633aa6856bba7984ce27ea72f92291 konversation-0.17.ebuild 550
-SHA256 966875173b8b3dd6ef0254a19fdfb7614e0dacec61f6cda7ffa619d01750d2fb konversation-0.17.ebuild 550
 MD5 bbaafb1a59ed3b1f8589ad6aeb77b780 konversation-0.18.ebuild 549
 RMD160 cead17157d45222594337262445e6c74bdb46a54 konversation-0.18.ebuild 549
 SHA256 fd6029f436005be3116c290349540928aea33654fb0a4b9afffbecde551a6f02 konversation-0.18.ebuild 549
@@ -40,7 +28,7 @@ SHA256 0d969af6afa28170dac4b321dd8489b27d322f49f40c39aa3f614953f85292ce metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFELyNjAiZjviIA2XgRAtwbAJwLS+5lTP069/FFnSAJTC1MZFsDOgCgvHlg
-AC8bmiUGTJuQeq6Nv1H+NBk=
-=FGey
+iD8DBQFELyUAAiZjviIA2XgRAgPtAJwOlWqoBTFqVskBH/lmnHKEvY3NUQCeM2v9
+9F1OzV92ff7tfjZTys+j0sk=
+=NVVQ
 -----END PGP SIGNATURE-----
