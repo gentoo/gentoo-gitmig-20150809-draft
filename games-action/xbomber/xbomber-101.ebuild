@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/xbomber-101.ebuild,v 1.10 2006/01/28 21:19:10 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/xbomber-101.ebuild,v 1.11 2006/04/02 08:51:54 genstef Exp $
 
 inherit eutils games
 
@@ -28,6 +28,7 @@ src_unpack() {
 		-e "s:=\"data\":=\"${GAMES_DATADIR}/${PN}\":" sound.c \
 		|| die "sed failed"
 	epatch "${FILESDIR}"/${P}-va_list.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 }
 
 src_compile() {
