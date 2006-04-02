@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.12 2006/03/29 12:17:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.13 2006/04/02 07:40:35 genstef Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -37,7 +37,6 @@ RDEPEND="${DEP}
 
 DEPEND="${DEP}
 	gtk? ( dev-util/pkgconfig )"
-PROVIDE="virtual/ghostscript"
 
 S=${WORKDIR}/${MY_P}
 
