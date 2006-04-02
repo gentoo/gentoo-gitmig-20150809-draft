@@ -36,3 +36,4 @@ move dev-php/agavi dev-php5/agavi
 move app-text/ghostscript app-text/ghostscript-esp
 move dev-php/PEAR-XML_CSSML dev-php4/PEAR-XML_CSSML
 move dev-php/PEAR-XML_XPath dev-php4/PEAR-XML_XPath
+move app-text/ghostview app-text/gv
