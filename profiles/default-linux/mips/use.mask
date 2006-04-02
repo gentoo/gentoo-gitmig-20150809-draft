@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.45 2006/03/07 18:17:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.46 2006/04/02 20:36:11 vapier Exp $
 
 # 2006/03/07 - Donnie Berkholz <spyderous@gentoo.org>
 # Modular X: mask for architectures lacking direct rendering
@@ -238,6 +238,9 @@ sparc
 x86
 x86-obsd
 x86-fbsd
+
+# should work but jasper not tested yet
+jpeg2k
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
