@@ -1,4 +1,4 @@
-MD5 4eb3bd0b06b8dfa170ddeff6b301a673 ChangeLog 39332
+MD5 739bd5e1602aa2f9205c0c5a75bf0e6f ChangeLog 39457
 MD5 7cbe28bc9f7e821c88c4f80c39752eb5 files/035_all_samba-3.0.21-winbind_log.patch 438
 MD5 4909031b1d1c775a746e4804997c65ce files/README.gentoo 2682
 MD5 8655ff25f25d7e80f85a5e527d43e94b files/digest-samba-3.0.14a-r2 209
@@ -11,7 +11,7 @@ MD5 dc35f89eee1482d5d66160435a4ed501 files/digest-samba-3.0.21b 771
 MD5 adb7ab134c8c36d103e72cf1b41c3255 files/digest-samba-3.0.21b-r1 771
 MD5 064044b71a87a5fd0d0a9991b291f1aa files/digest-samba-3.0.21c 771
 MD5 064044b71a87a5fd0d0a9991b291f1aa files/digest-samba-3.0.21c-r1 771
-MD5 1463ff1b83a8b87658e88d95b1f74493 files/digest-samba-3.0.22 768
+MD5 bf7c81fad7bea6b6fbb5d6fdee4695b1 files/digest-samba-3.0.22 210
 MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
 MD5 61f0df98191ae242f294459ac9eee7e7 samba-3.0.14a-r2.ebuild 9269
 MD5 b342ed3ffe76e40848625e839ed5820c samba-3.0.14a-r3.ebuild 9280
@@ -23,4 +23,4 @@ MD5 3f52053c36d38ea2153225d8c6f3f736 samba-3.0.21b-r1.ebuild 8717
 MD5 1f09216095d15cd2d95220aca4730b6c samba-3.0.21b.ebuild 8612
 MD5 3e03c846184396b342ea840fe7a4b5af samba-3.0.21c-r1.ebuild 8718
 MD5 5c77ef195240c56181d7e72fbbc26163 samba-3.0.21c.ebuild 8614
-MD5 710670af78f73412e0ece2eb72a39643 samba-3.0.22.ebuild 8638
+MD5 ef7585d0e94141832d897dd30259d476 samba-3.0.22.ebuild 8684
