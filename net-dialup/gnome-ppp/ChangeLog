@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gnome-ppp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.19 2006/03/12 12:38:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.20 2006/04/02 22:11:52 metalgod Exp $
+
+  02 Apr 2006; Luis Medinas <metalgod@gentoo.org> gnome-ppp-0.3.23.ebuild:
+  Added ~amd64 keyword.
 
   12 Mar 2006; Alin Nastac <mrness@gentoo.org> -gnome-ppp-0.3.21.ebuild,
   gnome-ppp-0.3.23.ebuild:
