@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.255 2006/03/30 07:05:46 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.256 2006/04/02 05:13:54 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -123,7 +123,6 @@ elif [[ ${GCC_VAR_TYPE} == "non-versioned" ]] ; then
 	STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${PREFIX}/include/g++-v3}
 fi
 
-XGCC="${WORKDIR}/build/gcc/xgcc -B${WORKDIR}/build/gcc"
 #----<< globals >>----
 
 
@@ -343,6 +342,14 @@ SRC_URI=$(get_gcc_src_uri)
 
 #---->> support checks <<----
 
+# Grab a variable from the build system (taken from linux-info.eclass)
+get_make_var() {
+	local var=$1 makefile=${2:-${WORKDIR}/build/Makefile}
+	echo -e "e:\\n\\t@echo \$(${var})\\ninclude ${makefile}" | \
+		r=${makefile%/*} emake -s -f - 2>/dev/null
+}
+XGCC() { get_make_var GCC_FOR_TARGET ; }
+
 # The gentoo piessp patches allow for 3 configurations:
 # 1) PIE+SSP by default
 # 2) PIE by default
@@ -547,114 +554,50 @@ make_gcc_hard() {
 	release_version="${release_version/Gentoo/Gentoo Hardened}"
 }
 
-create_vanilla_specs_file() {
+# now we generate different spec files so that the user can select a compiler
+# that enforces certain features in gcc itself and so we don't have to worry
+# about a certain package ignoring CFLAGS/LDFLAGS
+_create_specs_file() {
+	# Usage: _create_specs_file <USE flag> <specs name> <CFLAGS>
+	local uflag=$1 name=$2 flags=${*:3}
+	ebegin "Creating a ${name} gcc specs file"
 	pushd "${WORKDIR}"/build/gcc > /dev/null
-	if use hardened ; then
-		# if using hardened, then we need to move xgcc out of the way
-		# and recompile it
+	if [[ -z ${uflag} ]] || use ${uflag} ; then
+		# backup the compiler first
 		cp Makefile Makefile.orig
-		sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = /g' Makefile
-		mv xgcc xgcc.hard
-		mv gcc.o gcc.o.hard
-		make xgcc
-		einfo "Creating a vanilla gcc specs file"
-		./xgcc -dumpspecs > "${WORKDIR}"/build/vanilla.specs
+		sed -i -e '/^HARD_CFLAGS/s:=.*:='"${flags}"':' Makefile
+		mv xgcc xgcc.foo
+		mv gcc.o gcc.o.foo
+		emake -s xgcc
+		$(XGCC) -dumpspecs > "${WORKDIR}"/build/${name}.specs
 		# restore everything to normal
-		mv gcc.o.hard gcc.o
-		mv xgcc.hard xgcc
+		mv gcc.o.foo gcc.o
+		mv xgcc.foo xgcc
 		mv Makefile.orig Makefile
 	else
-		einfo "Creating a vanilla gcc specs file"
-		./xgcc -dumpspecs > "${WORKDIR}"/build/vanilla.specs
+		$(XGCC) -dumpspecs > "${WORKDIR}"/build/${name}.specs
 	fi
 	popd > /dev/null
+	eend $([[ -s ${WORKDIR}/build/${name}.specs ]] ; echo $?)
 }
-
-create_hardened_specs_file() {
-	pushd "${WORKDIR}"/build/gcc > /dev/null
-	if ! use hardened ; then
-		# if not using hardened, then we need to move xgcc out of the way
-		# and recompile it
-		cp Makefile Makefile.orig
-		sed -i -e "s/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_PIE_SSP ${gcc_common_hard}/g" Makefile
-		mv xgcc xgcc.vanilla
-		mv gcc.o gcc.o.vanilla
-		make xgcc
-		einfo "Creating a hardened gcc specs file"
-		./xgcc -dumpspecs > "${WORKDIR}"/build/hardened.specs
-		# restore everything to normal
-		mv gcc.o.vanilla gcc.o
-		mv xgcc.vanilla xgcc
-		mv Makefile.orig Makefile
-	else
-		einfo "Creating a hardened gcc specs file"
-		./xgcc -dumpspecs > "${WORKDIR}"/build/hardened.specs
-	fi
-	popd > /dev/null
-}
-
-create_hardenednossp_specs_file() {
-	pushd "${WORKDIR}"/build/gcc > /dev/null
-	cp Makefile Makefile.orig
-	sed -i -e "s/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_PIE ${gcc_common_hard}/g" Makefile
-	mv xgcc xgcc.moo
-	mv gcc.o gcc.o.moo
-	make xgcc
-	einfo "Creating a hardened no-ssp gcc specs file"
-	./xgcc -dumpspecs > "${WORKDIR}"/build/hardenednossp.specs
-	# restore everything to normal
-	mv gcc.o.moo gcc.o
-	mv xgcc.moo xgcc
-	mv Makefile.orig Makefile
-	popd > /dev/null
-}
-
-create_hardenednopie_specs_file() {
-	pushd "${WORKDIR}"/build/gcc > /dev/null
-	cp Makefile Makefile.orig
-	sed -i -e "s/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_SSP ${gcc_common_hard}/g" Makefile
-	mv xgcc xgcc.moo
-	mv gcc.o gcc.o.moo
-	make xgcc
-	einfo "Creating a hardened no-pie gcc specs file"
-	./xgcc -dumpspecs > "${WORKDIR}"/build/hardenednopie.specs
-	# restore everything to normal
-	mv gcc.o.moo gcc.o
-	mv xgcc.moo xgcc
-	mv Makefile.orig Makefile
-	popd > /dev/null
-}
-
-create_hardenednopiessp_specs_file() {
-	pushd "${WORKDIR}"/build/gcc > /dev/null
-	cp Makefile Makefile.orig
-	sed -i -e "s/^HARD_CFLAGS.*/HARD_CFLAGS = ${gcc_common_hard}/g" Makefile
-	mv xgcc xgcc.moo
-	mv gcc.o gcc.o.moo
-	make xgcc
-	einfo "Creating a hardened no-pie no-ssp gcc specs file"
-	./xgcc -dumpspecs > "${WORKDIR}"/build/hardenednopiessp.specs
-	# restore everything to normal
-	mv gcc.o.moo gcc.o
-	mv xgcc.moo xgcc
-	mv Makefile.orig Makefile
-	popd > /dev/null
-}
+create_vanilla_specs_file()          { _create_specs_file hardened vanilla ; }
+create_hardened_specs_file()         { _create_specs_file !hardened hardened  ${gcc_common_hard} -DEFAULT_PIE_SSP ; }
+create_hardenednossp_specs_file()    { _create_specs_file "" hardenednossp    ${gcc_common_hard} -DEFAULT_PIE ; }
+create_hardenednopie_specs_file()    { _create_specs_file "" hardenednopie    ${gcc_common_hard} -DEFAULT_SSP ; }
+create_hardenednopiessp_specs_file() { _create_specs_file "" hardenednopiessp ${gcc_common_hard} ; }
 
 split_out_specs_files() {
+	local s spec_list="hardenednopiessp vanilla"
 	if hardened_gcc_works ; then
-		create_hardened_specs_file
-		create_vanilla_specs_file
-		create_hardenednossp_specs_file
-		create_hardenednopie_specs_file
+		spec_list="${spec_list} hardened hardenednossp hardenednopie"
 	elif hardened_gcc_works pie ; then
-		create_vanilla_specs_file
-		create_hardenednossp_specs_file
+		spec_list="${spec_list} hardenednossp"
 	elif hardened_gcc_works ssp ; then
-		create_vanilla_specs_file
-		create_hardenednopie_specs_file
+		spec_list="${spec_list} hardenednopie"
 	fi
-	create_hardenednopiessp_specs_file
+	for s in ${spec_list} ; do
+		create_${s}_specs_file || return 1
+	done
 }
 
 create_gcc_env_entry() {
@@ -693,7 +636,7 @@ create_gcc_env_entry() {
 		# XXX: This breaks when cross-compiling a native compiler (CBUILD != CHOST)
 
 		local abi=${DEFAULT_ABI}
-		local MULTIDIR=$(${XGCC} -B./ $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+		local MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 		if [[ ${MULTIDIR} == "." ]] ; then
 			LDPATH=${LIBPATH}
 		else
@@ -703,7 +646,7 @@ create_gcc_env_entry() {
 		for abi in $(get_all_abis) ; do
 			[[ ${abi} == ${DEFAULT_ABI} ]] && continue
 
-			MULTIDIR=$(${XGCC} -B./ $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+			MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 			if [[ ${MULTIDIR} == "." ]] ; then
 				LDPATH=${LDPATH}:${LIBPATH}
 			else
@@ -715,8 +658,8 @@ create_gcc_env_entry() {
 	echo "LDPATH=\"${LDPATH}\"" >> ${gcc_envd_file}
 
 	local mbits
-	CC=${XGCC} has_m32 && mbits="${mbits:+${mbits} }32"
-	CC=${XGCC} has_m64 && mbits="${mbits:+${mbits} }64"
+	CC=$(XGCC) has_m32 && mbits="${mbits:+${mbits} }32"
+	CC=$(XGCC) has_m64 && mbits="${mbits:+${mbits} }64"
 	echo "GCCBITS=\"${mbits}\"" >> ${gcc_envd_file}
 
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${gcc_envd_file}
@@ -771,7 +714,7 @@ add_profile_eselect_conf() {
 		fi
 	fi
 
-	local MULTIDIR=$(${XGCC} -B./ $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+	local MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 	local LDPATH=${LIBPATH}
 	if [[ ${MULTIDIR} != "." ]] ; then
 		LDPATH="${LIBPATH}/${MULTIDIR}"
@@ -1709,12 +1652,12 @@ gcc_movelibs() {
 	# XXX: This breaks when cross-compiling a native compiler (CBUILD != CHOST)
 
 	local multiarg
-	for multiarg in $(${XGCC} -print-multi-lib) ; do
+	for multiarg in $($(XGCC) -print-multi-lib) ; do
 		multiarg=${multiarg#*;}
 		multiarg=${multiarg//@/ -}
 
-		local OS_MULTIDIR=$(${XGCC} -B./ ${multiarg} --print-multi-os-directory)
-		local MULTIDIR=$(${XGCC} -B./ ${multiarg} --print-multi-directory)
+		local OS_MULTIDIR=$($(XGCC) ${multiarg} --print-multi-os-directory)
+		local MULTIDIR=$($(XGCC) ${multiarg} --print-multi-directory)
 		local TODIR=${D}${LIBPATH}/${MULTIDIR}
 		local FROMDIR=
 
