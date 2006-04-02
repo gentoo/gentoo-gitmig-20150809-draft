@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.7 2005/10/22 00:25:40 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.8 2006/04/02 11:54:29 kevquinn Exp $
 
 # We don't have any ppc sub profiles yet. bug #74103
 altivec
@@ -16,3 +16,15 @@ altivec
 
 # nVidia XvMC support
 -nvidia
+
+# Copied from default-linux/x86 2006-04-02; bug #128490
+# Modular X: unmask for architectures on which they are available
+-input_devices_synaptics
+-input_devices_vmmouse
+-input_devices_wacom
+-video_cards_nvidia
+-video_cards_fglrx
+-video_cards_vmware
+# Modular X: mask for architectures on which they aren't available
+video_cards_newport
+
