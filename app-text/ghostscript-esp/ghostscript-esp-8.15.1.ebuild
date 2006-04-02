@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.14 2006/04/02 09:09:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1.ebuild,v 1.15 2006/04/02 16:30:44 genstef Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -26,7 +26,9 @@ DEP="virtual/libc
 	X? ( || ( x11-libs/libXt virtual/x11 ) )
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	cups? ( >=net-print/cups-1.1.20 )
-	xml? ( >=dev-libs/libxml2-2.6.8 )"
+	xml? ( >=dev-libs/libxml2-2.6.8 )
+	!app-text/ghostscript-gnu
+	!app-text/ghostscript-afpl"
 
 RDEPEND="${DEP}
 	cjk? ( media-fonts/arphicfonts
@@ -68,6 +70,8 @@ src_unpack() {
 	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/default/ghostscript/:' \
 		Makefile.in || die "sed failed"
 
+	eautoreconf
+	cd ijs
 	eautoreconf
 }
 
