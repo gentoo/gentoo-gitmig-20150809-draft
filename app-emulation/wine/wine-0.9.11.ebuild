@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.11.ebuild,v 1.1 2006/04/01 22:32:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.11.ebuild,v 1.2 2006/04/02 20:11:19 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/wine-${PV}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-* -amd64 ~x86"
-IUSE="alsa arts cups debug esd gif glut jack jpeg lcms ldap nas ncurses opengl oss scanner truetype xml2 X"
+IUSE="alsa arts cups debug esd gif glut jack jpeg lcms ldap nas ncurses opengl oss scanner truetype xml X"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -38,7 +38,7 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	ldap? ( net-nds/openldap )
 	glut? ( virtual/glut )
 	lcms? ( media-libs/lcms )
-	xml2? ( dev-libs/libxml2 dev-libs/libxslt )
+	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	truetype? ( media-libs/freetype media-gfx/fontforge )
 	scanner? ( media-gfx/sane-backends )
 	amd64? (
@@ -93,7 +93,7 @@ src_compile() {
 	config_cache cups cups/cups.h
 	config_cache alsa alsa/asoundlib.h sys/asoundlib.h asound:snd_pcm_open
 	config_cache nas audio/audiolib.h audio/soundlib.h
-	config_cache xml2 libxml/parser.h libxslt/pattern.h libxslt/transform.h
+	config_cache xml libxml/parser.h libxslt/pattern.h libxslt/transform.h
 	config_cache ldap ldap.h lber.h
 	config_cache gif gif_lib.h
 	config_cache glut glut:glutMainLoop
