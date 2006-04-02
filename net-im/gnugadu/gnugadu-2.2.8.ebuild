@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.8.ebuild,v 1.1 2005/10/23 14:14:30 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.8.ebuild,v 1.2 2006/04/02 08:53:46 spock Exp $
 
 IUSE="debug tlen esd oss xosd arts jabber perl spell gnutls"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND=">=net-libs/libgadu-20050719
+RDEPEND=">=net-libs/libgadu-20050719
 	>=x11-libs/gtk+-2.4.0
 	sys-devel/gettext
 	>=sys-devel/automake-1.7
@@ -28,7 +28,10 @@ DEPEND=">=net-libs/libgadu-20050719
 	esd? ( media-sound/esound )
 	tlen? ( net-libs/libtlen )
 	spell? ( app-text/gtkspell )
-	gnutls? ( net-libs/gnutls )"
+	gnutls? ( net-libs/gnutls )
+	|| ( x11-libs/libXScrnSaver virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( x11-proto/scrnsaverproto virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
