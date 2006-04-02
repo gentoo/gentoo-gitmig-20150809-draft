@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060302.ebuild,v 1.7 2006/03/31 19:18:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060302.ebuild,v 1.8 2006/04/02 10:40:49 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -170,6 +170,9 @@ src_unpack() {
 	# Remove kernel-2.6 workaround as the problem it works around is
 	# fixed, and the workaround breaks sparc
 	use sparc && sed -i 's:#define __KERNEL__::' osdep/kerneltwosix.h
+
+	# minor fix
+	sed -i -e "s:-O4:-O4 -D__STDC_LIMIT_MACROS:" configure
 
 }
 
@@ -459,11 +462,10 @@ src_compile() {
 			replace-flags -O3 -O2
 			filter-flags -fPIC -fPIE
 		fi
+	append-flags -D__STDC_LIMIT_MACROS
 	else
 	unset CFLAGS CXXFLAGS
 	fi
-
-	append-flags -D__STDC_LIMIT_MACROS
 
 	CFLAGS="$CFLAGS" ./configure \
 		--prefix=/usr \
