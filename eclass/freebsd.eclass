@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.1 2006/04/01 15:24:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.2 2006/04/02 15:34:43 flameeyes Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -9,7 +9,6 @@ inherit versionator eutils flag-o-matic bsdmk
 ECLASS=freebsd
 INHERITED="$INHERITED $ECLASS"
 
-KEYWORDS="~x86-fbsd ~amd64-fbsd"
 LICENSE="BSD"
 HOMEPAGE="http://www.freebsd.org/"
 
