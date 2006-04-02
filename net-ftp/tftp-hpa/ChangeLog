@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.16 2006/03/10 00:46:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.17 2006/04/02 21:59:42 robbat2 Exp $
+
+*tftp-hpa-0.42 (02 Apr 2006)
+
+  02 Apr 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/in.tftpd.confd-0.42, +tftp-hpa-0.42.ebuild:
+  Bug #111006, version bump. Note that the /proc hackery for disable PMTU
+  discovery and local port numbers are now not needed.
 
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org> tftp-hpa-0.40.1.ebuild:
   Mark 0.40.1 stable on ia64
