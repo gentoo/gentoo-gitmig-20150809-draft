@@ -1,16 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d77c6b7044ab8edb43cde04d4dfc28d9 metadata.xml 218
-MD5 34c7382234f20e990c24c899067915d1 treecc-0.3.6.ebuild 660
-MD5 953e33dadd1991dc9f72cacc0a049d11 treecc-0.3.4.ebuild 630
-MD5 32a3f9ab8d3d7835a25b9b0c51030511 ChangeLog 2100
-MD5 bf4551125834c063caffeb0fe4c1330a files/digest-treecc-0.3.6 64
+MD5 81222b60050fcff4efa915c9b730dc66 ChangeLog 2216
+RMD160 66cd390a8060764ef3a7815366530e5fe52979d0 ChangeLog 2216
+SHA256 24623acd90437caadb313a12ea36151d9a1bd1f48bfd9483c5c33e91b7657c16 ChangeLog 2216
 MD5 831c215ba797cf5d551555da52fe16c2 files/digest-treecc-0.3.4 64
+RMD160 36513b3ae97eb3cbf5b55f5eaebcb0d475cc5efa files/digest-treecc-0.3.4 64
+SHA256 fa4ec07abd6434ba849854871b81da3f0d85a1fc8e67216889f2007880c08f12 files/digest-treecc-0.3.4 64
+MD5 bf4551125834c063caffeb0fe4c1330a files/digest-treecc-0.3.6 64
+RMD160 e366fb7e2f0587f0fb8d550ff33bbd34a32ee608 files/digest-treecc-0.3.6 64
+SHA256 c4d75454f1ba96deb9d0d343441858a03c26373b7ebd0cc7170d45910bb71e54 files/digest-treecc-0.3.6 64
+MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
+RMD160 41527b6d3fa74dfdcd619b7d91c478b72ecc8ae8 metadata.xml 159
+SHA256 986c3e2fa3baa5d6e8c0b5c27a2550601780d0cc7857f7f1c01523491706d909 metadata.xml 159
+MD5 953e33dadd1991dc9f72cacc0a049d11 treecc-0.3.4.ebuild 630
+RMD160 2eba4dfbee6ee480b69c51fef9cceba60364197b treecc-0.3.4.ebuild 630
+SHA256 4c38f6c997f1da63bb04080f2535020b3da9c4380ba2051e1a6c2dbf6ac39f9d treecc-0.3.4.ebuild 630
+MD5 34c7382234f20e990c24c899067915d1 treecc-0.3.6.ebuild 660
+RMD160 1a7859f3fab49631462dd3f270b0a21771aeeace treecc-0.3.6.ebuild 660
+SHA256 a76dbc7f352de9efa1e7ac64b80c349bb9a119517dbc254543be67dde3e66fe1 treecc-0.3.6.ebuild 660
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFCuJiRQcyUawK/P5kRAv7ZAJ9n0TfG82MsRbVFfwh5rIB4qhRkQACePrpQ
-WKDP/w18o/DgB+xofwqxvOY=
-=URi0
+iD8DBQFEL4HVugEuf3OQ0akRAn06AJ402o8M5RfFp4tUdvZGQ7b/t9xoHgCffz28
+bCFutbf2zHowqwtRovK5K/Y=
+=n6zB
 -----END PGP SIGNATURE-----
