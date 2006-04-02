@@ -52,3 +52,5 @@ sybase-ct
 # mask Oracle
 oci8
 
+# cg is only provided by nvidia's binary only cg toolkit
+cg
