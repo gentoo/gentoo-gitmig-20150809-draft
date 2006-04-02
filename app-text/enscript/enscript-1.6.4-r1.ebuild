@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.4-r1.ebuild,v 1.3 2006/04/02 14:51:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.4-r1.ebuild,v 1.4 2006/04/02 14:55:03 flameeyes Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="nls"
 DEPEND="sys-devel/flex
 	sys-devel/bison
 	nls? ( sys-devel/gettext )"
-RDEPEND="nls? ( sys-devel/gettext )"
+RDEPEND="nls? ( virtual/libintl )"
 
 src_unpack() {
 	unpack ${A}
