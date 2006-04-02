@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.6 2006/03/29 16:13:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.7 2006/04/02 17:39:48 vapier Exp $
 
 inherit eutils games
 
@@ -18,7 +18,8 @@ DEPEND="X? (
 		|| (
 			x11-libs/libXext
 			virtual/x11 )
-		kde? ( kde-base/kdialog ) )
+		kde? ( || ( kde-base/kdialog kde-base/kdebase ) )
+	)
 	>=media-libs/sdl-mixer-1.2
 	>=media-libs/libsdl-1.2
 	>=media-libs/sdl-net-1.2"
