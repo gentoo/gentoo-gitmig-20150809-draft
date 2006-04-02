@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.57 2006/03/18 22:30:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.58 2006/04/02 22:55:01 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -316,6 +316,8 @@ toolchain-binutils_src_install() {
 	has noman ${FEATURES} && rm -r "${D}"/${DATAPATH}/man
 	# Remove shared info pages
 	rm -f "${D}"/${DATAPATH}/info/{dir,configure.info,standards.info}
+	# Trim all empty dirs
+	find "${D}" -type d | xargs rmdir >& /dev/null
 }
 
 toolchain-binutils_pkg_postinst() {
