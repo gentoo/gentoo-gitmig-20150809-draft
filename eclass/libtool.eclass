@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.65 2006/03/30 12:29:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.66 2006/04/02 16:00:30 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -86,11 +86,6 @@ ELT_walk_patches() {
 	local patch_set=$2
 	local patch_dir=
 	local rem_int_dep=$3
-	local version=
-	local ltmain_sh=$1
-
-	[[ ${file} == *"/configure" ]] && ltmain_sh=${ELT_LTMAIN_SH}
-	version=$(ELT_libtool_version "${ltmain_sh}")
 
 	if [[ -n ${patch_set} ]] ; then
 		if [[ -d ${ELT_PATCH_DIR}/${patch_set} ]] ; then
@@ -99,19 +94,9 @@ ELT_walk_patches() {
 			return "${ret}"
 		fi
 
-		if [[ ${version} == "0" ]] ; then
-			eerror "Could not get VERSION for ${file##*/}!"
-			die "Could not get VERSION for ${file##*/}!"
-		fi
-
 		# Go through the patches in reverse order (large to small)
 		for x in $(ls -d "${patch_dir}"/* 2> /dev/null | grep -v 'CVS' | sort -r) ; do
 			if [[ -n ${x} && -f ${x} ]] ; then
-				local ltver=$(VER_to_int "${version}")
-				local ptver=$(VER_to_int "${x##*/}")
-
-				# If libtool version smaller than patch version, skip patch.
-				[[ ${ltver} -lt ${ptver} ]] && continue
 				# For --remove-internal-dep ...
 				if [[ -n ${rem_int_dep} ]] ; then
 					# For replace @REM_INT_DEP@ with what was passed
