@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.24 2006/04/01 15:06:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.25 2006/04/02 18:19:06 lucass Exp $
+
+*logilab-common-0.15.0 (02 Apr 2006)
+
+  02 Apr 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  -files/logilab-common-0.13.0-configuration-help-test-less-strict.patch,
+  -files/logilab-common-0.13.0-dbapi-skip-tests.patch,
+  -logilab-common-0.5.0.ebuild, -logilab-common-0.10.0.ebuild,
+  -logilab-common-0.12.0.ebuild, -logilab-common-0.13.0.ebuild,
+  -logilab-common-0.13.0-r1.ebuild, +logilab-common-0.15.0.ebuild:
+  Version bump. Fixed tests. Removed older versions: 0.5.0, 0.10.0, 0.12.0,
+  0.13.0, 0.13.0-r1.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org>
   logilab-common-0.14.1.ebuild:
