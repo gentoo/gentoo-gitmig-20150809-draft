@@ -1,0 +1,14 @@
+--- gnupg-1.4.2.2/checks/defs.inc
++++ gnupg-1.4.2.2/checks/defs.inc
+@@ -156,9 +156,9 @@
+ 
+ GPG="../g10/gpg --no-permission-warning --homedir . "
+ 
+-[ -n "${BASH_VERSION+set}" ] && exec 5>/dev/stderr
+-
+ exec 2> ${pgmname}.log
+ 
++[ -n "${BASH_VERSION+set}" ] && exec 5>&2
++
+ :
+ # end

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2.2.ebuild,v 1.12 2006/03/31 22:18:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2.2.ebuild,v 1.13 2006/04/02 14:13:41 vanquirius Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -85,6 +85,9 @@ src_unpack() {
 	# Fix PIC definitions
 	sed -i -e 's:PIC:__PIC__:' mpi/i386/mpih-{add,sub}1.S intl/relocatable.c
 	sed -i -e 's:if PIC:ifdef __PIC__:' mpi/sparc32v8/mpih-mul{1,2}.S
+
+	# bug 125697 - sandbox violation with FEATURES=test
+	epatch "${FILESDIR}"/${PN}-1.4.2.2-test.patch
 }
 
 src_compile() {
