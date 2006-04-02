@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.62 2006/03/26 17:47:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.63 2006/04/02 19:14:10 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -464,12 +464,20 @@ find_module_params() {
 linux-mod_pkg_setup() {
 	linux-info_pkg_setup;
 	check_kernel_built;
-	check_modules_supported;
+	strip_modulenames;
+	[[ -n ${MODULE_NAMES} ]] && check_modules_supported
 	set_kvobj;
 	# Commented out with permission from johnm until a fixed version for arches
 	# who intentionally use different kernel and userland compilers can be
 	# introduced - Jason Wever <weeve@gentoo.org>, 23 Oct 2005
 	#check_vermagic;
+}
+
+strip_modulenames() {
+	local i
+	for i in ${MODULE_IGNORE}; do
+		MODULE_NAMES=${MODULE_NAMES//${i}(*}
+	done
 }
 
 linux-mod_src_compile() {
@@ -478,12 +486,7 @@ linux-mod_src_compile() {
 	ABI="${KERNEL_ABI}"
 
 	BUILD_TARGETS=${BUILD_TARGETS:-clean module}
-
-	for i in ${MODULE_IGNORE}
-	do
-		MODULE_NAMES=${MODULE_NAMES//${i}(*}
-	done
-
+	strip_modulenames;
 	for i in ${MODULE_NAMES}
 	do
 		unset libdir srcdir objdir
@@ -520,11 +523,7 @@ linux-mod_src_compile() {
 linux-mod_src_install() {
 	local modulename libdir srcdir objdir i n
 
-	for i in ${MODULE_IGNORE}
-	do
-		MODULE_NAMES=${MODULE_NAMES//${i}(*}
-	done
-
+	strip_modulenames;
 	for i in ${MODULE_NAMES}
 	do
 		unset libdir srcdir objdir
