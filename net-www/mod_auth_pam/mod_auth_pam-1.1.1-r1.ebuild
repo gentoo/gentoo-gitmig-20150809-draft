@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.10 2006/03/21 21:47:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.11 2006/04/02 00:36:12 vericgar Exp $
 
-inherit eutils apache-module
+inherit eutils apache-module portability
 
 RESTRICT="nomirror"
 
@@ -15,7 +15,7 @@ DEPEND="sys-libs/pam"
 SLOT="0"
 IUSE="apache2"
 
-APXS1_ARGS="-c ${PN}.c -lpam -ldl"
+APXS1_ARGS="-c ${PN}.c -lpam"
 APXS2_ARGS="-c ${PN}.c -lpam"
 
 APACHE2_EXECFILES=".libs/mod_auth_sys_group.so"
@@ -31,7 +31,7 @@ DOCFILES="INSTALL README doc/*"
 need_apache
 
 SRC_URI="apache2? ( http://pam.sourceforge.net/mod_auth_pam/dist/${PN}-2.0-${PV}.tar.gz )
-	 !apache2? ( http://pam.sourceforge.net/mod_auth_pam/dist/${PN}-${PV}.tar.gz )"
+	 !apache2? ( http://pam.sourceforge.net/mod_auth_pam/dist/${P}.tar.gz )"
 
 useq apache2 && S=${WORKDIR}/${PN}
 
@@ -67,9 +67,8 @@ pkg_postinst() {
 	if [ -z "${gid}" ]; then
 		einfo "    # groupadd shadow"
 		einfo "    # gpasswd -a apache shadow"
-		gid='shadow'
 	fi
-	einfo "    # chgrp ${gid} /etc/shadow"
+	einfo "    # chgrp shadow /etc/shadow"
 	einfo "    # chmod 640 /etc/shadow"
 	einfo
 }
