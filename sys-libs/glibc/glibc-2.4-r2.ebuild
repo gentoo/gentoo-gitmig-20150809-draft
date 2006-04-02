@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.2 2006/04/02 05:46:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.3 2006/04/02 23:02:23 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1043,6 +1043,8 @@ RESTRICT="nostrip multilib-pkg-force"
 # arch: we need to make sure our binutils/gcc supports TLS
 DEPEND=">=sys-devel/gcc-3.4.4
 	arm? ( >=sys-devel/binutils-2.16.90 >=sys-devel/gcc-4.1.0 )
+	ppc? ( >=sys-devel/gcc-4.1.0 )
+	ppc64? ( >=sys-devel/gcc-4.1.0 )
 	nptl? ( >=sys-kernel/linux-headers-2.6.5 )
 	>=sys-devel/binutils-2.15.94
 	>=sys-devel/gcc-config-1.3.12
