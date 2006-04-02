@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r1.ebuild,v 1.11 2006/04/02 09:10:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r1.ebuild,v 1.12 2006/04/02 10:21:00 kloeri Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/ghostscript/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc x86"
+KEYWORDS="alpha amd64 ppc x86"
 IUSE="X cups cjk gtk"
 
 DEPEND="virtual/libc
