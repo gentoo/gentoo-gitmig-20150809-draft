@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/linux-wlan-ng-modules-0.2.3-r1.ebuild,v 1.1 2006/04/02 10:19:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/linux-wlan-ng-modules-0.2.3-r1.ebuild,v 1.2 2006/04/02 12:04:41 betelgeuse Exp $
 
 inherit eutils linux-mod
 
@@ -20,6 +20,8 @@ IUSE="debug"
 
 BUILD_TARGETS="default"
 BUILD_PARAMS="WLAN_SRC=${S}/src"
+
+DEPEND="!<net-wireless/linux-wlan-ng-0.2.2"
 
 pkg_setup() {
 	# We have to put this to the global scope inside the function or it will be
