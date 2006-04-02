@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.259 2006/04/02 09:13:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.260 2006/04/02 09:14:56 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1647,7 +1647,7 @@ gcc-compiler_src_install() {
 # when installing gcc, it dumps internal libraries into /usr/lib
 # instead of the private gcc lib path
 gcc_movelibs() {
-	local multiarg
+	local multiarg removedirs=""
 	for multiarg in $($(XGCC) -print-multi-lib) ; do
 		multiarg=${multiarg#*;}
 		multiarg=${multiarg//@/ -}
@@ -1666,16 +1666,25 @@ gcc_movelibs() {
 			${PREFIX}/${CTARGET}/lib/${OS_MULTIDIR} \
 			${PREFIX}/lib/${MULTIDIR}
 		do
+			removedirs="${removedirs} ${FROMDIR}"
 			FROMDIR=${D}${FROMDIR}
 			if [[ ${FROMDIR} != "${TODIR}" && -d ${FROMDIR} ]] ; then
 				local files=$(find "${FROMDIR}" -maxdepth 1 ! -type d 2>/dev/null)
 				if [[ -n ${files} ]] ; then
 					mv ${files} "${TODIR}"
 				fi
-				rmdir "${FROMDIR}" 2>/dev/null
 			fi
 		done
 	done
+
+	# We remove directories separately to avoid this case:
+	#   mv SRC/lib/../lib/*.o DEST
+	#   rmdir SRC/lib/../lib/
+	#   mv SRC/lib/../lib32/*.o DEST  # Bork
+	for FROMDIR in ${removedirs} ; do
+		rmdir "${D}"${FROMDIR} >& /dev/null
+	done
+	find "${D}" -type d | xargs rmdir >& /dev/null
 
 	# make sure the libtool archives have libdir set to where they actually
 	# -are-, and not where they -used- to be.
