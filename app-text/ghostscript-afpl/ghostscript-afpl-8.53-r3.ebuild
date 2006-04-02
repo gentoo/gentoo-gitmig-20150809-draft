@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53-r3.ebuild,v 1.3 2006/04/02 07:41:28 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53-r3.ebuild,v 1.4 2006/04/02 09:09:05 genstef Exp $
 
 inherit eutils
 
@@ -30,8 +30,7 @@ DEP="virtual/libc
 	X? ( || ( x11-libs/libXt virtual/x11 ) )
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	cups? ( >=net-print/cups-1.1.20 )
-	jpeg2k? ( media-libs/jasper )
-	!virtual/ghostscript"
+	jpeg2k? ( media-libs/jasper )"
 
 RDEPEND="${DEP}
 	cjk? ( media-fonts/arphicfonts

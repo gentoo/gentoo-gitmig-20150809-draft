@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r2.ebuild,v 1.3 2006/04/02 07:37:31 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r2.ebuild,v 1.4 2006/04/02 09:10:06 genstef Exp $
 
 inherit eutils libtool
 
@@ -27,8 +27,7 @@ DEP=">=media-libs/jpeg-6b
 	>=media-libs/tiff-3.7
 	X? ( || ( x11-libs/libXt virtual/x11 ) )
 	gtk? ( >=x11-libs/gtk+-2.0 )
-	cups? ( >=net-print/cups-1.1.20 )
-	!virtual/ghostscript"
+	cups? ( >=net-print/cups-1.1.20 )"
 
 RDEPEND="${DEP}
 	cjk? ( media-fonts/arphicfonts
