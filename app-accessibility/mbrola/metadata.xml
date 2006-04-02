@@ -3,4 +3,7 @@
 <pkgmetadata>
 <herd>accessibility</herd>
 <herd>sound</herd>
+<maintainer>
+	<email>williamh@gentoo.org</email>
+</maintainer>
 </pkgmetadata>
