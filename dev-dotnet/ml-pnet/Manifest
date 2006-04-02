@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ebd68e07dadcea3ffb64ac854a7d971e ChangeLog 3608
 RMD160 3d5f69faf5a828b53b845e2bbf8949153966860f ChangeLog 3608
 SHA256 bf5e0b8f5dfa616e23c67d479096236be8ad4289d80e0422a182ba19b97ef785 ChangeLog 3608
@@ -22,3 +25,10 @@ SHA256 e8b944f8a311ad733622ebab49f2c119159bcb560f5cbef88bdadee745f09caa ml-pnet-
 MD5 855342cb01e6c5acb04c8baa2b2748c2 ml-pnet-0.7.0.ebuild 801
 RMD160 3ec879cda060c32c5bd91100ca689decaa5aea99 ml-pnet-0.7.0.ebuild 801
 SHA256 066d19f84211f39f78647f6a4d2d5b5ccd8ec1a65d984a455dfc04f9a8d99b10 ml-pnet-0.7.0.ebuild 801
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEL4GeugEuf3OQ0akRAoEdAJoCwQrsfD45oVnJ0pfQUDXtSYyW7ACeNv+/
+rC6fC7AeUqlMe1jv6zqS0jE=
+=kel8
+-----END PGP SIGNATURE-----
