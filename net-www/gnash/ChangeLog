@@ -1,6 +1,13 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.3 2006/01/29 20:28:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.4 2006/04/02 15:52:24 genstef Exp $
+
+*gnash-0.7_alpha20060331 (02 Apr 2006)
+
+  02 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  -gnash-0.7_alpha20060110.ebuild, -gnash-0.7_alpha20060129.ebuild,
+  +gnash-0.7_alpha20060331.ebuild:
+  New ebuild including firefox plugin support, bug 122659, remove old
 
 *gnash-0.7_alpha20060129 (29 Jan 2006)
 
