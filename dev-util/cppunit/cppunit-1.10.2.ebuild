@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.10.2.ebuild,v 1.11 2006/02/01 03:45:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.10.2.ebuild,v 1.12 2006/04/02 13:24:25 george Exp $
 
 inherit eutils
 
@@ -14,8 +14,8 @@ KEYWORDS="amd64 arm ppc sparc x86"
 IUSE="doc"
 RESTRICT="test"
 
-DEPEND="doc? ( app-doc/doxygen )
-	media-gfx/graphviz"
+DEPEND="doc? ( app-doc/doxygen
+	media-gfx/graphviz )"
 
 src_unpack() {
 	unpack ${A}
@@ -24,7 +24,10 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable doc doxygen) || die "configure failed"
+	econf \
+		$(use_enable doc doxygen) \
+		$(use_enable doc dot) \
+		|| die "configure failed"
 	emake || die
 }
 
