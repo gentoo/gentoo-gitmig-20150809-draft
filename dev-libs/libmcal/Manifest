@@ -1,25 +1,48 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7f433e2483c681fb45755de0d88272e9 ChangeLog 4358
+MD5 9f0dc553a3e2b7462b29044690523f1b ChangeLog 4549
+RMD160 54e08612aab2f0e2dc48c4c26f94ae319dcb5d45 ChangeLog 4549
+SHA256 2080a4733da09227c304474a3d644bd2e44a41cdcc77c2d5c881fe5007f4e8f9 ChangeLog 4549
 MD5 33ec0e0ab40e02bedea5e6b2b8ec51bc files/digest-libmcal-0.7 62
+RMD160 b8d5abb8b916bdca4f05e1c44cc95c6fa213428a files/digest-libmcal-0.7 62
+SHA256 f1bb52baca9749a1d36e82feebf6054433d0c10ac01c86c28b198e66a0891c3b files/digest-libmcal-0.7 62
 MD5 33ec0e0ab40e02bedea5e6b2b8ec51bc files/digest-libmcal-0.7-r1 62
+RMD160 b8d5abb8b916bdca4f05e1c44cc95c6fa213428a files/digest-libmcal-0.7-r1 62
+SHA256 f1bb52baca9749a1d36e82feebf6054433d0c10ac01c86c28b198e66a0891c3b files/digest-libmcal-0.7-r1 62
 MD5 e40f5b90c038f8c8703b83953b10012b files/digest-libmcal-0.7-r2 128
+RMD160 db7171836ac9fe0d09046a7e158c2640051a61d1 files/digest-libmcal-0.7-r2 128
+SHA256 e2e03f2b76fac4ecb9d648e7448492cd54ed8fbbc4f476fa7880811f72bb6786 files/digest-libmcal-0.7-r2 128
 MD5 e40f5b90c038f8c8703b83953b10012b files/digest-libmcal-0.7-r3 128
-MD5 e40f5b90c038f8c8703b83953b10012b files/digest-libmcal-0.7-r5 128
+RMD160 db7171836ac9fe0d09046a7e158c2640051a61d1 files/digest-libmcal-0.7-r3 128
+SHA256 e2e03f2b76fac4ecb9d648e7448492cd54ed8fbbc4f476fa7880811f72bb6786 files/digest-libmcal-0.7-r3 128
+MD5 d29968b241adb26ab023d56a118a69f2 files/digest-libmcal-0.7-r5 476
+RMD160 a8851eb18092404d805d5642e92bc76fbf3367f7 files/digest-libmcal-0.7-r5 476
+SHA256 dbcbc07df1a1fe407d950aea16b375396dea7da8374b3aff4c26cffc791449ed files/digest-libmcal-0.7-r5 476
+MD5 91a55ddc43f924557a463b64362dad7f files/libmcal-0.7-flexfix.patch 527
+RMD160 f9f156340a520139747b8a6a0b881a1b7af5da38 files/libmcal-0.7-flexfix.patch 527
+SHA256 e14fd29f79a86fc99ae444015a7182bae236b4348cd1f5486d5d2ad02d79eea6 files/libmcal-0.7-flexfix.patch 527
 MD5 d438648eeab0ea0e90bdf8ea2f3321c6 files/libmcal-0.7-fpic.patch 1302
+RMD160 16c71fb3e74765d612ba9c3c97f35d23fdc57cad files/libmcal-0.7-fpic.patch 1302
+SHA256 94475fb3470ecde0f285127c48354830d1d7e60f4ed8826f50b6d976c474ccc9 files/libmcal-0.7-fpic.patch 1302
 MD5 02b02066ed7c3b6049cd2f9edbdf8889 files/libmcal-0.7-gcc4.patch 1229
+RMD160 b2f075f4de4308aeb7b1434b1e3bcc9c3bee63f3 files/libmcal-0.7-gcc4.patch 1229
+SHA256 787e0c1b7946d3bf929c64e66b726a186001b9bf52b3d48396dc18dff9b0d04e files/libmcal-0.7-gcc4.patch 1229
 MD5 1c173be1ce6319004277a8847741746c files/libmcal-0.7-libdir.patch 888
+RMD160 429f565737926379055caa3601e205fd88acfb61 files/libmcal-0.7-libdir.patch 888
+SHA256 57beb59f48d973daa27706d1a35dc68d5e79ecd1d33a5e9fce827d2cf7c5a683 files/libmcal-0.7-libdir.patch 888
 MD5 d89164920848a3dd2ce99c2e24dfd7e6 libmcal-0.7-r1.ebuild 791
+RMD160 10d3f986d8b1a325bb61112f23b0135a8e5ab1e1 libmcal-0.7-r1.ebuild 791
+SHA256 cb274854e101269bc970d4cd3a2bca7b47a4282489b441b94de126450609371e libmcal-0.7-r1.ebuild 791
 MD5 e1f612bfb8da053586d4f9b087793578 libmcal-0.7-r2.ebuild 1788
+RMD160 685e750c6167fa21977cbe4fde81491d0156ac50 libmcal-0.7-r2.ebuild 1788
+SHA256 7d9160a703ed990377e1727a526c332e61a84a781de52900f583cb915dd876d2 libmcal-0.7-r2.ebuild 1788
 MD5 54153ab860d8c06b01b0e00c03ce7aad libmcal-0.7-r3.ebuild 1871
-MD5 2af4889e025a7238c3fb4f5b5e4c7270 libmcal-0.7-r5.ebuild 2000
+RMD160 6413a63285d8291776105832083ca537ed1bc749 libmcal-0.7-r3.ebuild 1871
+SHA256 0ad4a58b5a5017ac60aafc052ada11f6b0d786b5372a2fc7471b138f9005b7f0 libmcal-0.7-r3.ebuild 1871
+MD5 fe6b2e66c063a44a96165c179ccceefe libmcal-0.7-r5.ebuild 2040
+RMD160 7ca6da6a3a74131a03b33c73d7b4e349434e357b libmcal-0.7-r5.ebuild 2040
+SHA256 5f42c6b31c5103e600dfa8adbb43f4e2459e9b7062a0aa2ec6b1af7a83a9a4f1 libmcal-0.7-r5.ebuild 2040
 MD5 0d2106dd953946fad1542111a3946d62 libmcal-0.7.ebuild 691
+RMD160 f9bbe2b06502ff1d3d9e37888d906aab80180c7a libmcal-0.7.ebuild 691
+SHA256 57576090d0ab71ab489bf6c2b135d2e23048fb0bd6eef4623d92012793465771 libmcal-0.7.ebuild 691
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDz3EI2+ySkm8kpY0RApenAJ9ZVZtJm3aMbX0dXdqbhXDbppob5ACfQgLh
-Dt7dHQu7Kr8Wu0JkEja1kOU=
-=n9CQ
------END PGP SIGNATURE-----
+RMD160 f84566b5a463b59cc5ddd8a2210a54de9492ed2f metadata.xml 279
+SHA256 785db7b7f8e4f9a526dc574ce2aa10024cc83af170f38ec9af9f56c23fc15543 metadata.xml 279

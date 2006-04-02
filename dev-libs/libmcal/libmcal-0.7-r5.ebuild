@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7-r5.ebuild,v 1.11 2006/01/19 10:57:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7-r5.ebuild,v 1.12 2006/04/02 06:50:35 robbat2 Exp $
 
 inherit eutils multilib
 
@@ -31,6 +31,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-fpic.patch
 	epatch ${FILESDIR}/${P}-libdir.patch
 	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch ${FILESDIR}/${P}-flexfix.patch
 }
 
 src_compile() {
