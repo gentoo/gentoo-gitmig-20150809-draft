@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.3.0_pre5.ebuild,v 1.1 2006/03/29 10:46:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.3.0_pre5.ebuild,v 1.2 2006/04/02 10:25:27 lu_zero Exp $
 
 inherit eutils flag-o-matic linux-mod toolchain-funcs
 
@@ -29,6 +29,12 @@ pkg_setup() {
 	einfo "Please read carefully the KQEMU license"
 	einfo "and ${HOMEPAGE}qemu-accel.html"
 	einfo "if you would like to see it released under the GPL"
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}/${P}-fix_module_parm.patch"
 }
 
 src_compile() {
