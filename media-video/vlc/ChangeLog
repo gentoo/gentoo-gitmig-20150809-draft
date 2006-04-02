@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.147 2006/03/21 15:54:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.148 2006/04/02 20:38:07 flameeyes Exp $
+
+*vlc-0.8.5_beta2 (02 Apr 2006)
+
+  02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +vlc-0.8.5_beta2.ebuild:
+  New beta version from upstream, please try it out if you can. New in this
+  release the directfb support and Intel UPnP stack support.
 
   21 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4a-r1.ebuild:
   Bump patchset to fix bug #125071.
