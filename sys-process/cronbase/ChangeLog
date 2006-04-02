@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/cronbase
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.16 2005/08/24 18:15:26 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.17 2006/04/02 21:00:46 flameeyes Exp $
+
+  02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> cronbase-0.3.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> cronbase-0.3.2.ebuild:
   Create cron user with cron group, without hardcoding the gid to work when
