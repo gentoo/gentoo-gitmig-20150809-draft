@@ -1,6 +1,6 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.42 2006/04/02 14:58:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.43 2006/04/02 15:05:20 betelgeuse Exp $
 
   02 Apr 2006; Petteri Räty <betelgeuse@gentoo.org>
   -ndiswrapper-1.2.ebuild, -ndiswrapper-1.7.ebuild, -ndiswrapper-1.8.ebuild:
@@ -11,7 +11,7 @@
   02 Apr 2006; Petteri Räty <betelgeuse@gentoo.org>
   +ndiswrapper-1.11.ebuild:
   Version bump. This version includes a usb use flag to make usb support
-  optional.
+  optional. Fixes bugs #126829, #122686 and #125405.
 
 *ndiswrapper-1.9 (05 Feb 2006)
 
