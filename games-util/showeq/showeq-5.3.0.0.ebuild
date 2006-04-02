@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.3.0.0.ebuild,v 1.1 2006/03/17 21:22:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.3.0.0.ebuild,v 1.2 2006/04/02 09:04:29 tupone Exp $
 
 inherit kde games
 
@@ -19,6 +19,8 @@ RDEPEND="virtual/libpcap
 
 DEPEND="${RDEPEND}
 	|| ( x11-libs/libXt virtual/x11 )"
+
+PATCHES="${FILESDIR}/${P}"-gcc4.patch
 
 src_compile() {
 	kde_src_compile nothing
