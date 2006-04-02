@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/openmortal
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/ChangeLog,v 1.13 2006/01/29 00:00:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/ChangeLog,v 1.14 2006/04/02 13:47:04 tupone Exp $
+
+  02 Apr 2006; <Tupone@gentoo.org> +files/openmortal-0.7-gcc41.patch,
+  openmortal-0.7.ebuild:
+  Fix for gcc-4.1, bugs #120760 by Joshua Baergen
 
   28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   openmortal-0.7.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.7.ebuild,v 1.5 2006/01/29 00:00:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.7.ebuild,v 1.6 2006/04/02 13:47:04 tupone Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A spoof of the famous Mortal Combat game"
 HOMEPAGE="http://apocalypse.rulez.org/~upi/Mortal/"
@@ -20,6 +20,12 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-net
 	>=media-libs/freetype-2.1.0
 	dev-lang/perl"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
