@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font-ebdftopcf.eclass,v 1.3 2006/02/17 22:18:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font-ebdftopcf.eclass,v 1.4 2006/04/02 00:24:51 robbat2 Exp $
 
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
@@ -29,7 +29,7 @@ ebdftopcf() {
 # Public inheritable functions
 #
 font-ebdftopcf_src_compile() {
-	[ -z "${BDFFILES}" ] && BDFFILES="$(find -name '*.bdf')"
+	[ -z "${BDFFILES}" ] && BDFFILES="$(find . -name '*.bdf')"
 	ebdftopcf ${BDFFILES}
 }
 
