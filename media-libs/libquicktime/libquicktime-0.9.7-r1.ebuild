@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.8 2006/02/18 22:52:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.9 2006/04/02 11:15:03 lu_zero Exp $
 
 inherit libtool eutils autotools
 
@@ -75,8 +75,8 @@ src_install() {
 pkg_preinst() {
 	if [[ -d /usr/include/quicktime && ! -L /usr/include/quicktime ]]; then
 		einfo "For compatibility with other quicktime libraries, ${PN} was"
-		einfo "going to create a /usr/lib/quicktime symlink, but for some,"
-		einfo "on your system, that is a directory."
+		einfo "going to create a /usr/include/quicktime symlink, but for some"
+		einfo "reason that is a directory on your system."
 		einfo "Please check that is empty, and remove it, or submit a bug"
 		einfo "telling us which package owns the directory."
 		die "/usr/include/quicktime is a directory."
