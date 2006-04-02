@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.1-r1.ebuild,v 1.1 2006/04/01 18:20:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.1-r1.ebuild,v 1.2 2006/04/02 16:10:47 flameeyes Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils libtool
 
 DESCRIPTION="Poppler is a PDF rendering library based on the xpdf-3.0 code base."
 HOMEPAGE="http://poppler.freedesktop.org"
@@ -11,7 +11,7 @@ SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="jpeg"
 
 RDEPEND=">=media-libs/freetype-2.1.8
@@ -23,6 +23,13 @@ RDEPEND=">=media-libs/freetype-2.1.8
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/automake-1.9.6"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	elibtoolize
+}
 
 src_compile() {
 	epatch ${WORKDIR}/${P}-cvs20060401.patch
