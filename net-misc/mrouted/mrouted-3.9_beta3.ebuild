@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/mrouted-3.9_beta3.ebuild,v 1.9 2005/05/01 17:08:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/mrouted-3.9_beta3.ebuild,v 1.10 2006/04/02 23:17:57 robbat2 Exp $
 
 inherit eutils
 
-MY_P=${P/_}+IOS12
+MY_P="${P/_}+IOS12"
 DEB_PVER=3
 DESCRIPTION="IP multicast routing daemon"
 HOMEPAGE="http://freshmeat.net/projects/mrouted/?topic_id=87%2C150"
@@ -16,8 +16,11 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-DEPEND="virtual/os-headers
-	dev-util/yacc"
+# this does NOT compile with 2.4 or earlier headers
+# and probably some early 2.6 headers as well
+DEPEND="kernel_linux? ( >=sys-kernel/linux-headers-2.6* )
+		!kernel_linux? ( virtual/os-headers )
+		dev-util/yacc"
 RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
@@ -25,8 +28,8 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${WORKDIR}/mrouted_${PV/_/-}-${DEB_PVER}.diff
-	sed -i "s:-O:${CFLAGS}:" Makefile
+	epatch "${WORKDIR}"/"mrouted_${PV/_/-}-${DEB_PVER}.diff"
+	sed -i "/^CFLAGS/s:-O:${CFLAGS}:" Makefile
 }
 
 src_compile() {
@@ -35,8 +38,8 @@ src_compile() {
 
 src_install() {
 	dobin mrouted || die
-	doman mrouted.8
+	doman mrouted.8 || die
 
-	insinto /etc ; doins mrouted.conf
-	exeinto /etc/init.d ; newexe ${FILESDIR}/mrouted.rc mrouted
+	insinto /etc ; doins mrouted.conf || die
+	newinitd ${FILESDIR}/mrouted.rc mrouted || die
 }
