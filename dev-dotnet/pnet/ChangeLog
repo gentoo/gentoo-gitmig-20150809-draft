@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.29 2006/01/12 06:16:20 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.30 2006/04/02 07:49:41 kloeri Exp $
+
+  02 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove retired developer urilith from metadata.
 
 *pnet-0.7.2 (12 Jan 2006)
 
