@@ -1,4 +1,4 @@
-MD5 dfe22ce74f80c56002e7a0f32675cab1 ChangeLog 12200
+MD5 269dbef24bd877bf9221bcc35419c1d4 ChangeLog 12366
 MD5 0366dc766d77664dcfbe0f210a501c6a files/digest-ipw2200-1.0.10 63
 MD5 da6616526b85364cf6ef78ee68e00556 files/digest-ipw2200-1.0.11 63
 MD5 da6616526b85364cf6ef78ee68e00556 files/digest-ipw2200-1.0.11-r1 63
@@ -9,7 +9,7 @@ MD5 a6b695cd887ebc8ee6d37d99971ff62e files/digest-ipw2200-1.0.9 62
 MD5 25bb7a22f5d3b003a58fc7a82d6b85d2 files/digest-ipw2200-1.1.0 62
 MD5 d65480e8077954294f049d6c4d023b3c files/digest-ipw2200-1.1.1 62
 MD5 80ae465d8bee456dcdd765d089b758eb files/digest-ipw2200-1.1.1-r1 138
-MD5 8170b85d9159eeade505c50929b21934 files/digest-ipw2200-1.1.2 62
+MD5 c1130cde8cc7d3b62da0d2aa52412745 files/digest-ipw2200-1.1.2 62
 MD5 91e9ccbbcf86cc2b81eff3fc853cb760 files/ipw2200-1.0.11-debug.patch 3496
 MD5 a3a2dd68cce2a4d05217369daab108f1 files/ipw2200-1.0.8-broadcast.patch 594
 MD5 a2de4d35e783a2aae5708846d8a7637c files/ipw2200-1.0.8-slabcorrupt.patch 522
