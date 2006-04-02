@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.14 2006/03/18 21:10:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.15 2006/04/02 16:30:27 flameeyes Exp $
 
 inherit eutils flag-o-matic pam autotools
 
@@ -14,7 +14,7 @@ ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/test/${MY_P}-source.tar.b
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="ssl slp pam samba nls gnutls"
 
 DEP="pam? ( virtual/pam )
@@ -23,13 +23,13 @@ DEP="pam? ( virtual/pam )
 		gnutls? ( net-libs/gnutls )
 		)
 	slp? ( >=net-libs/openslp-1.0.4 )
-	nls? ( sys-devel/gettext )
 	>=media-libs/libpng-1.2.1
 	>=media-libs/tiff-3.5.5
 	>=media-libs/jpeg-6b"
 DEPEND="${DEP}
-	>=sys-devel/autoconf-2.58"
+	nls? ( sys-devel/gettext )"
 RDEPEND="${DEP}
+	nls? ( virtual/libintl )
 	!virtual/lpr
 	>=app-text/poppler-0.4.3-r1"
 PDEPEND="samba? ( >=net-fs/samba-3.0.8 )"
