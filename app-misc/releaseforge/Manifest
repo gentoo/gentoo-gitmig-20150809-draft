@@ -1,25 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c6292366bcc9d72d220069955242d7c7 ChangeLog 492
-RMD160 2c8a560b2111332db5a3f4829ea72ccf875ddaba ChangeLog 492
-SHA256 f8ac24dc1dce76076b42b1881650a1c49ed631273a56b769a82cf05926595a3d ChangeLog 492
+MD5 e36c570b50b26de8d4b6b1055858a9d2 ChangeLog 626
+RMD160 eb94d907113266fb887eece2a7ae055f13c57496 ChangeLog 626
+SHA256 525d4a1161a6924dca88b2a67bff20cf4a55ec57da1c960cfbc36e2959045e79 ChangeLog 626
 MD5 2eed413f57a2cec7efc2ffd464bca16a files/digest-releaseforge-0.9.8 256
 RMD160 0da41fe7cdb724caa0d435798b384575bba1ef11 files/digest-releaseforge-0.9.8 256
 SHA256 485d969dd1f3c15d954481421d1fa9ecfd1cdf5fc49d156ecb69c58d172f885f files/digest-releaseforge-0.9.8 256
 MD5 34f158958a357f5a7af01089c7f25c31 files/digest-releaseforge-0.9.9 256
 RMD160 528ef80f4807e30d1f7de63134d8bfeaeb5b90d4 files/digest-releaseforge-0.9.9 256
 SHA256 8cd6d996a58ae369130c6329418f410c299c0cb50c0c7561ef7cbfade85d949b files/digest-releaseforge-0.9.9 256
+MD5 70547e49774670a106264a806ccd40c9 files/digest-releaseforge-0.9.9b 259
+RMD160 8d2870a168a055247d2afd3e8e9a043df3204f15 files/digest-releaseforge-0.9.9b 259
+SHA256 964c7854e80253b276dd56759c55270ed6ade26a87a64e0727b5a34ce2b97ae0 files/digest-releaseforge-0.9.9b 259
 MD5 35c18c513236846413928fcf813ea6d3 releaseforge-0.9.8.ebuild 537
 RMD160 444c59d60b4bcdf349759efb8c60717b50242371 releaseforge-0.9.8.ebuild 537
 SHA256 44e1421a8661e752081d68268146a374dd35864794eb94a05d0fa32874db5489 releaseforge-0.9.8.ebuild 537
 MD5 0c93094d0c0d1c95b841e1bbf7f602fb releaseforge-0.9.9.ebuild 537
 RMD160 2493bb574ce3a20fd8e9e9c4afd3d500244cb755 releaseforge-0.9.9.ebuild 537
 SHA256 1ab117b13798c3c7edf7b0c4e3bad4b5d6c658510b78195bacdd785c22ad9664 releaseforge-0.9.9.ebuild 537
+MD5 1a2c4d63ecd04319c6955022310f783c releaseforge-0.9.9b.ebuild 538
+RMD160 0da55fcf368fb21c301e0bfaf6f191b426860179 releaseforge-0.9.9b.ebuild 538
+SHA256 32b721dd12925b8d03306ff01203d60ec5a3124f5fb545b7ce581676744adb62 releaseforge-0.9.9b.ebuild 538
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEKMOH2+ySkm8kpY0RArt5AJ9zmomCfs8227bzqUuQuRZwSBZaGwCgnU7Q
-BQytNmL+WZepZ3dkIgQkg3k=
-=39eU
+iD8DBQFELyo42+ySkm8kpY0RAi+ZAJ0Vuld+8kR+UKFG3ScAu56Tu0oQLgCgnWrC
+yPLVS6XnTPooN/ERWRHRq0M=
+=jwCQ
 -----END PGP SIGNATURE-----
