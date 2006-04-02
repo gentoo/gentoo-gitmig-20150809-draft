@@ -1,25 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2304c5fbf00b22c8251571efa8d668e0 ChangeLog 2911
-RMD160 2fa409613d044094c4957ca0427c0f3e489e8ac9 ChangeLog 2911
-SHA256 c4fd65e3076f778b5514059bd1c0c239386e833ff2d570e6b5c6efc62a61788b ChangeLog 2911
+MD5 b562a3c66b32032de4780de0b813616d ChangeLog 3173
 MD5 5cbb33544d36f65f595aa8b229e9b515 files/digest-soundtracker-0.6.7 70
-RMD160 abf1cd65f2dabd3e3e3470f9bde26fc2b3f50b42 files/digest-soundtracker-0.6.7 70
-SHA256 a61f395cb7a7246f7ccf5edbb38370bacdc5288ee4f3e441e7458d3bddc5abae files/digest-soundtracker-0.6.7 70
+MD5 5cbb33544d36f65f595aa8b229e9b515 files/digest-soundtracker-0.6.7-r1 70
 MD5 369a16c17d2850a6ed6d6fee6c9f72fc files/soundtracker-0.6.7-alsa1.patch 951
-RMD160 267a1e993051db9cacd8e5a6138efcbd3e11496b files/soundtracker-0.6.7-alsa1.patch 951
-SHA256 65383f3a2283b89270431349ae58ce9e61a8472079c4b4f8b9a649a9fa4f1d8e files/soundtracker-0.6.7-alsa1.patch 951
+MD5 f7a9d1e0f686f846d8009aa3d06cde89 files/soundtracker-0.6.7-invalid-free.patch 539
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 8728a8fafd784cbc4ea771130a2cb6e6 soundtracker-0.6.7-r1.ebuild 1751
 MD5 414dab02bbcd9dabb51866538731101f soundtracker-0.6.7.ebuild 1706
-RMD160 d6d7074b9da48e8435ff57f1cfef9897910529cd soundtracker-0.6.7.ebuild 1706
-SHA256 177dd063f5fa238c88035887fa85e9da9bf27f3bed2a68ac04f2c2616f20c57d soundtracker-0.6.7.ebuild 1706
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD9D63AiZjviIA2XgRAvgVAJ9DSNHJtXuDqIW6ttjKq0wc51505gCeIpxg
-HgtcpgWUOcJKl842sr3zdzg=
-=Yg9r
------END PGP SIGNATURE-----
