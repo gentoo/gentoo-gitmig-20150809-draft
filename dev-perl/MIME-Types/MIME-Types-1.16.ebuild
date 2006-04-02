@@ -1,6 +1,6 @@
- Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/MIME-Types-1.16.ebuild,v 1.2 2006/04/01 22:35:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/MIME-Types-1.16.ebuild,v 1.3 2006/04/02 16:13:52 mr_bones_ Exp $
 
 inherit perl-module
 
