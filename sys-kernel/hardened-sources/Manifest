@@ -49,16 +49,16 @@ SHA256 76b49f7ac5c1a700da35e3ef00dce4d507823366ab46b7c9a7b02a02238c2ce6 hardened
 MD5 f60dcc00b3a4fca2d4a11ae97889dce2 hardened-sources-2.6.14-r6.ebuild 792
 RMD160 c46508e1051e7c25e2854cbccee4f4e47572fa98 hardened-sources-2.6.14-r6.ebuild 792
 SHA256 947a656a0127a21f2043ae5b023e7f9d99dcbed1f50bdc239a7430f22e9b5de5 hardened-sources-2.6.14-r6.ebuild 792
-MD5 9e3b82f5c8396424965823289d14981f hardened-sources-2.6.16.ebuild 690
-RMD160 22c7cc716fe6d8f2f1c54f147f98c319b21ab486 hardened-sources-2.6.16.ebuild 690
-SHA256 4229641bcfd805f34925f4e8b73346b7e89753d55528a5561e97754adcca178d hardened-sources-2.6.16.ebuild 690
+MD5 219b7ffb13143ea5467f5d313123671f hardened-sources-2.6.16.ebuild 692
+RMD160 a17fa316f1c78fbfcb2e37278c432eff0f0f47f5 hardened-sources-2.6.16.ebuild 692
+SHA256 0838c3ce5c7439a79362a1d9b440bcd2a5bbac6228f27a4e043486db818da819 hardened-sources-2.6.16.ebuild 692
 MD5 e579a4949e6ca38c8142638e46c0fc3e metadata.xml 844
 RMD160 a5acd7050c6d9b792fd658c81eb65d3fe2e42c06 metadata.xml 844
 SHA256 dd1a85c0a10944dc2ad29ad2fccd6a938653f15cd240df19ea8efda51a1b19fc metadata.xml 844
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFELS8KNzVYcyGvtWURAg4GAKCiMugJcSzXNBjncWV/0QHshMV6ugCfdxj4
-tmAa/fUFder0w7aGdsXk1mY=
-=5kHm
+iD8DBQFELxnYNzVYcyGvtWURAoy+AJ4ig44k+DSJlXcKeHuMiO1gWI95nwCgnUL0
+USditcAx/6PCj9J1EUsXYxM=
+=Wcni
 -----END PGP SIGNATURE-----
