@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a4cc18c25decc1121506ed2eabcf72b5 ChangeLog 5099
-RMD160 2acf20ae35d9335bc4bbce41796d87145498cef8 ChangeLog 5099
-SHA256 22c0039d5ea1dd76a66bf022fe58ef9642158d383a92e66a4a8238cf66a12468 ChangeLog 5099
+MD5 8a3103a061b53251d9ebaf93c2d375ea ChangeLog 5256
+RMD160 9b7d1f8c3b9b010b9fab783b3a2346b5c0782e54 ChangeLog 5256
+SHA256 f22a3bb84db9c2fc84c2644b8eaa533231acb269d3913d26ce8fcbee84851a4e ChangeLog 5256
 MD5 a9cb3e7a732e6a24bf550867143e6e81 drkonqi-3.4.1.ebuild 426
 RMD160 d25c01583fe84d0db3bed471a23ad0523d6d2ba7 drkonqi-3.4.1.ebuild 426
 SHA256 9fc3792b2162d1c1ca472433ea7059a873831d5600ad8c793fe2a5617609657b drkonqi-3.4.1.ebuild 426
@@ -40,16 +37,9 @@ SHA256 10f133d38f99c77b6ed8c236ac66bdcfb0451b0e213dc5ec626d6adff17382b5 files/di
 MD5 612323f8728d639ddab8f055f88070ff files/digest-drkonqi-3.5.2 250
 RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-drkonqi-3.5.2 250
 SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-drkonqi-3.5.2 250
-MD5 708b51c47797b3d6ca71bb924ab3bb70 files/drkonqui-3.5.2-splitdebug.patch 799
-RMD160 211658bff9164ba46497c920cf37dd22b0b4d77e files/drkonqui-3.5.2-splitdebug.patch 799
-SHA256 df95b4607e84c05bfb5a86cf7b830f7974c493640ca25bb63aa7f2dd4a19458d files/drkonqui-3.5.2-splitdebug.patch 799
+MD5 708b51c47797b3d6ca71bb924ab3bb70 files/drkonqi-3.5.2-splitdebug.patch 799
+RMD160 211658bff9164ba46497c920cf37dd22b0b4d77e files/drkonqi-3.5.2-splitdebug.patch 799
+SHA256 df95b4607e84c05bfb5a86cf7b830f7974c493640ca25bb63aa7f2dd4a19458d files/drkonqi-3.5.2-splitdebug.patch 799
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELvbhAiZjviIA2XgRAkT1AJ0S6D63cLpIS2ypofUGsAnlRmJNbwCaAsOi
-gbv2i9TC8jl+zA92YeLVVMM=
-=owOB
------END PGP SIGNATURE-----

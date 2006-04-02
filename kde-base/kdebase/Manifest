@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 80e187db26392c56a6b69138ec19289a ChangeLog 46555
-RMD160 db444d51daf43ff44d0ffd021fc6d0990e8a0e33 ChangeLog 46555
-SHA256 ea3e49397263e67c134d47a5589fbf41716f97b7a7517099f99f32d9c1b827e1 ChangeLog 46555
+MD5 34a25ff30a53f355e943b4b3c98b103b ChangeLog 46712
+RMD160 7a8c910efc997a248ea6056e803382dd410309be ChangeLog 46712
+SHA256 550fe2c4640e65d5aa55cc581f0c581fdf40fdddb8533d27fd772f30229c0b82 ChangeLog 46712
 MD5 3403677f5c4e44815c5a97c507d4f117 files/3.3.2-r1/Xsetup 758
 RMD160 4ecb5417a842a4fb309b975608cbe68484cef22b files/3.3.2-r1/Xsetup 758
 SHA256 8c56fca90a98025ecae2364197ad3e07d2b7f86cf7efe86d07ea518d5b63fac9 files/3.3.2-r1/Xsetup 758
@@ -85,9 +82,9 @@ SHA256 5e2089f73b62efd9f20d7499ff0801b215a8a28d887d7629ca7bfa5764aea14a files/di
 MD5 c394a5050794638636403870c68ca58b files/digest-kdebase-3.5.2 518
 RMD160 bbac942550e1e2b96467a37780f4bcb29bdbdfe7 files/digest-kdebase-3.5.2 518
 SHA256 449890ab3d599d2cab0871ca61449d5473fc561a9350c6febd205353c02b306b files/digest-kdebase-3.5.2 518
-MD5 708b51c47797b3d6ca71bb924ab3bb70 files/drkonqui-3.5.2-splitdebug.patch 799
-RMD160 211658bff9164ba46497c920cf37dd22b0b4d77e files/drkonqui-3.5.2-splitdebug.patch 799
-SHA256 df95b4607e84c05bfb5a86cf7b830f7974c493640ca25bb63aa7f2dd4a19458d files/drkonqui-3.5.2-splitdebug.patch 799
+MD5 708b51c47797b3d6ca71bb924ab3bb70 files/drkonqi-3.5.2-splitdebug.patch 799
+RMD160 211658bff9164ba46497c920cf37dd22b0b4d77e files/drkonqi-3.5.2-splitdebug.patch 799
+SHA256 df95b4607e84c05bfb5a86cf7b830f7974c493640ca25bb63aa7f2dd4a19458d files/drkonqi-3.5.2-splitdebug.patch 799
 MD5 2b5419b0b173138e22fe03f4157d5660 files/kde-np.pam 379
 RMD160 a7ce9d94fac98f513e0df2b59026c17e0999c33c files/kde-np.pam 379
 SHA256 e84fa10df5ec9b81b9a19d373fa60d4ebeaad4cd748a775f3dcc15921c7657e0 files/kde-np.pam 379
@@ -184,10 +181,3 @@ SHA256 0f0a020a13f00147455a872fcc18eab3092bb2ddf50682872f7e9b28a631b1af kdebase-
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELvdMAiZjviIA2XgRApyXAKDqlaKjaDOtESlkVEJvqfFxozdO0ACgm0iY
-kCQpKX9GvUI4niL+5cu/aok=
-=m9Er
------END PGP SIGNATURE-----
