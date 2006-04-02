@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.86 2006/03/31 19:24:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.87 2006/04/02 23:30:38 flameeyes Exp $
+
+  02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> man-1.6c.ebuild:
+  Update ~x86-fbsd keyword.
 
   31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> man-1.6b-r2.ebuild:
   Add ~x86-fbsd keyword to newer version.
