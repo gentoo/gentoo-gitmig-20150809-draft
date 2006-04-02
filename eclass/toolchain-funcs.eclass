@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.57 2006/03/28 21:25:14 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.58 2006/04/02 10:10:59 robbat2 Exp $
 #
 # Author: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -35,6 +35,8 @@ tc-getAR() { tc-getPROG AR ar "$@"; }
 tc-getAS() { tc-getPROG AS as "$@"; }
 # Returns the name of the C compiler
 tc-getCC() { tc-getPROG CC gcc "$@"; }
+# Returns the name of the C preprocessor
+tc-getCPP() { tc-getPROG CPP cpp "$@"; }
 # Returns the name of the C++ compiler
 tc-getCXX() { tc-getPROG CXX g++ "$@"; }
 # Returns the name of the linker
