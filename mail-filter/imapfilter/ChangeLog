@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/imapfilter
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.14 2006/03/31 19:06:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.15 2006/04/02 16:09:32 ticho Exp $
+
+*imapfilter-1.2.1-r1 (02 Apr 2006)
+
+  02 Apr 2006; Andrej Kacian <ticho@gentoo.org> -imapfilter-1.2.1.ebuild,
+  +imapfilter-1.2.1-r1.ebuild:
+  Revert to old way of configuring, with the patch. Bug #128387, reported by
+  Stephan Weller <stephan.weller at web.de>.
 
   31 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
   imapfilter-1.1.1.ebuild:
