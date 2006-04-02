@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/qvamps-0.96.ebuild,v 1.1 2006/03/29 01:36:26 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/qvamps-0.96.ebuild,v 1.2 2006/04/02 22:09:11 flameeyes Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -32,6 +32,8 @@ src_unpack() {
 
 	# replace predefined CFLAGS with ours
 	sed -i -e "s:-pipe -O2 -fomit-frame-pointer:\$(MYCFLAGS):g" Makefile
+
+	epatch "${FILESDIR}/${P}-dvdread.patch"
 }
 
 src_compile() {

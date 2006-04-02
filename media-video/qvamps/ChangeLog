@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qvamps
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/ChangeLog,v 1.3 2006/03/29 01:36:26 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/ChangeLog,v 1.4 2006/04/02 22:09:11 flameeyes Exp $
+
+  02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/qvamps-0.96-dvdread.patch, qvamps-0.96.ebuild:
+  Add patch to fix building with latest dvdread. Bug #128570.
 
 *qvamps-0.96 (29 Mar 2006)
 
