@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9205d282906f50d955f26bbd7cf77b97 ChangeLog 4540
-RMD160 4e4436f04526b352f7329337d811bc2152c6af71 ChangeLog 4540
-SHA256 42e919913290421bfefa4c2f919b4ca5212924a3a714fc9e1411934ce85f1fa0 ChangeLog 4540
+MD5 e33856dd847d584c40640885995cb78f ChangeLog 4866
+RMD160 97c708162e4a462248b0ecb70ff4cd045e190a60 ChangeLog 4866
+SHA256 d8084e500363cfebf9ffa0155a53922cfa133114b077a06991fc00bc544d1f0d ChangeLog 4866
 MD5 9256a421446d791cc6fbc17d4d8a9780 files/SA-06-02-ee.patch 2446
 RMD160 9934e6ee6c0ebaa1998939163bf4f1e233d5eba0 files/SA-06-02-ee.patch 2446
 SHA256 1c27b3e1f5906da36a654409290e9ffb0493b70a1e83bed89704942f2a9c0d10 files/SA-06-02-ee.patch 2446
@@ -16,21 +16,15 @@ SHA256 a0a99a602538d95ddae2fc4b823150ea58862def87c8196806a379233e3ddb2c files/fr
 MD5 be995572b7a8e5d687a2998219ae2fdb files/freebsd-ubin-6.0-fixmakefiles.patch 1457
 RMD160 9fed268f43c4b8949f734900cb18d3e66a639a3d files/freebsd-ubin-6.0-fixmakefiles.patch 1457
 SHA256 318406fa003c5188163e0dac551d4cc5fed7653cc3ff0f6baa64f23572de6d7b files/freebsd-ubin-6.0-fixmakefiles.patch 1457
-MD5 d771feb031716ed9cefc78ec4c8124a6 files/freebsd-ubin-bsdcmp.patch 384
-RMD160 87525ef2823b8a2a3dd53e1e70e426c7af45d415 files/freebsd-ubin-bsdcmp.patch 384
-SHA256 6904597e552980be8528da22f55e44f3d72bebf0c51f43b8fe88090b4bc0593d files/freebsd-ubin-bsdcmp.patch 384
-MD5 277e15cd7d0f7d5fad51ff192b0bea81 files/freebsd-ubin-fixmakefiles.patch 3388
-RMD160 81554f715dda36a078c00d954342de9429a46755 files/freebsd-ubin-fixmakefiles.patch 3388
-SHA256 de7165042ef49a6765024089e3829e2a5e4811e8ae8006f7c6b00f9dbf0b7997 files/freebsd-ubin-fixmakefiles.patch 3388
-MD5 adfa3f70f7c838b518b28943187a4cb3 files/freebsd-ubin-flex.patch 725
-RMD160 45f6dec120d516baaefe082cbd75c35c9b556ac1 files/freebsd-ubin-flex.patch 725
-SHA256 2df9f10e3a8ef4fdf62ee7e1de1f2269c58376db3a2d0968ba695bb9b6d7549e files/freebsd-ubin-flex.patch 725
 MD5 8e69a5c73317c371c037446c8b5c6fba files/freebsd-ubin-lint-stdarg.patch 792
 RMD160 673ce804ebd887121160da5d1993787334099903 files/freebsd-ubin-lint-stdarg.patch 792
 SHA256 ec86f4c77b7c57f9f1651bb5f38641d198123594e770cc31d77d6775fd851bd6 files/freebsd-ubin-lint-stdarg.patch 792
 MD5 abc4cce029759b00e4a9356d6ea1ba1b files/freebsd-ubin-setXid.patch 4346
 RMD160 53e715b3098c555d3675778d079038ccea34fb60 files/freebsd-ubin-setXid.patch 4346
 SHA256 371ced78644fb65ff84712d0e4f93cbc79d363a4b67fb681999a670940b3ddb5 files/freebsd-ubin-setXid.patch 4346
+MD5 998b21442a7998c2bd30adf0e2791cb5 files/locate-updatedb-cron 93
+RMD160 11a89b414a09974b85768b2d2d27d15a60021692 files/locate-updatedb-cron 93
+SHA256 1c26d6f32a42ba8157b68e5a49034bcabd5924c675900bf80fa47099840de222 files/locate-updatedb-cron 93
 MD5 00f2f331ecabef8ea7ebb1d96c461c8a files/login.pamd 421
 RMD160 a8beb0b6d838049404a1c9459f96593153a3843c files/login.pamd 421
 SHA256 986aad109b31d055c52b55fd04be1a8f434da4b355e1a84b7d8b666b7a63fcb6 files/login.pamd 421
@@ -40,16 +34,16 @@ SHA256 ff964fd309462cac711422be051122f8a60b570da9b13756e9012b18b1864f79 files/pa
 MD5 764135d89f71d46bd96de7271f1083fc files/su.pamd 420
 RMD160 9888acbac2c2c79b64ec274cc7d96b13b86d8ad8 files/su.pamd 420
 SHA256 efe3a5efafd7e97e9305f4d24f2b4aacb44f65b261ca54bca1306b918b82cb08 files/su.pamd 420
-MD5 82ca51592671c3d705db3fc63286139e freebsd-ubin-6.0-r1.ebuild 2571
-RMD160 6e6477311145d9e9bda279493ce597c90158761a freebsd-ubin-6.0-r1.ebuild 2571
-SHA256 741591373b3b7f4cbe61a7de9db70b958bfb65bcc05de279ffd347e8437c5fd0 freebsd-ubin-6.0-r1.ebuild 2571
+MD5 e60824304a3fc9119822a69ee6ee3d6d freebsd-ubin-6.0-r1.ebuild 2516
+RMD160 ffbaec121b9cd576e13939f4d6cbeb63d72af077 freebsd-ubin-6.0-r1.ebuild 2516
+SHA256 c5cbbe92dec38e5b8df75c15d7973b281b20124057e61fafa5740922b5bdc5fd freebsd-ubin-6.0-r1.ebuild 2516
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFELq3nAiZjviIA2XgRAnymAKDahits1Ek4BUidZvU+cmftBbbmSQCeKJOi
-DQzBXIJBrfjS07uUupxlvXE=
-=0p2z
+iD8DBQFEMD2rAiZjviIA2XgRAloWAKDRq0S3PCmJlAqoiubSrluPZtBwIQCgp1ST
+F8SUlILbFFZVTsQN+bNg4xc=
+=FpQN
 -----END PGP SIGNATURE-----
