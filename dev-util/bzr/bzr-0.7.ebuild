@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.7.ebuild,v 1.1 2006/01/27 13:29:02 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.7.ebuild,v 1.2 2006/04/02 22:14:17 marienz Exp $
 
 inherit distutils bash-completion elisp-common
 
@@ -18,7 +18,7 @@ IUSE="emacs"
 DEPEND=">=dev-lang/python-2.4
 	dev-python/celementtree
 	emacs? ( virtual/emacs )
-	dev-python/paramiko"
+	>=dev-python/paramiko-1.5"
 
 S="${WORKDIR}/${MY_P}"
 

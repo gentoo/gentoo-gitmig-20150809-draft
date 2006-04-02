@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/bzr
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.9 2006/01/27 13:29:02 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.10 2006/04/02 22:14:17 marienz Exp $
+
+  02 Apr 2006; Marien Zwart <marienz@gentoo.org> -bzr-0.0.9.ebuild,
+  -bzr-0.6.ebuild, bzr-0.7.ebuild:
+  Fix paramiko dependency, thanks to AnMaster on irc for noticing it was not
+  specific enough. Remove old ebuilds.
 
 *bzr-0.7 (27 Jan 2006)
 
