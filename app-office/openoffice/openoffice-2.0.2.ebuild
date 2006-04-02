@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2.ebuild,v 1.7 2006/04/01 12:14:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2.ebuild,v 1.8 2006/04/02 16:02:16 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions mono toolchain-funcs
 
-IUSE="binfilter cairo eds firefox gnome gtk java kde ldap mono mozilla xml2"
+IUSE="binfilter cairo eds firefox gnome gtk java kde ldap mono mozilla xml"
 
 MY_PV="${PV}.4"
 PATCHLEVEL="OOB680"

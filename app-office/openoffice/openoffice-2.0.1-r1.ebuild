@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1-r1.ebuild,v 1.2 2006/04/01 12:14:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1-r1.ebuild,v 1.3 2006/04/02 16:02:16 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
-IUSE="binfilter eds gnome gtk java kde ldap mozilla xml2"
+IUSE="binfilter eds gnome gtk java kde ldap mozilla xml"
 
 MY_PV="${PV}.3"
 PATCHLEVEL="OOA680"
@@ -223,6 +223,9 @@ src_install() {
 	# Install corrected Symbol Font
 	insinto /usr/share/fonts/TTF/
 	doins fonts/*.ttf
+
+	# Fix the permissions for security reasons
+	chown -R root:root ${D} || die
 
 }
 
