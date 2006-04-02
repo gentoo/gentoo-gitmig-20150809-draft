@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.256 2006/04/02 05:13:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.257 2006/04/02 09:11:48 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -632,8 +632,6 @@ create_gcc_env_entry() {
 		# searches that directory first.  This is a temporary
 		# workaround for libtool being stupid and using .la's from
 		# conflicting ABIs by using the first one in the search path
-
-		# XXX: This breaks when cross-compiling a native compiler (CBUILD != CHOST)
 
 		local abi=${DEFAULT_ABI}
 		local MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
@@ -1516,7 +1514,6 @@ gcc-compiler_src_install() {
 	# Basic sanity check
 	is_crosscompile || [[ -r ${D}${BINPATH}/gcc ]] || die "gcc not found in ${D}"
 
-	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	create_gcc_env_entry
 
@@ -1649,8 +1646,6 @@ gcc-compiler_src_install() {
 # when installing gcc, it dumps internal libraries into /usr/lib
 # instead of the private gcc lib path
 gcc_movelibs() {
-	# XXX: This breaks when cross-compiling a native compiler (CBUILD != CHOST)
-
 	local multiarg
 	for multiarg in $($(XGCC) -print-multi-lib) ; do
 		multiarg=${multiarg#*;}
