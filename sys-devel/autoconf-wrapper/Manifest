@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7aa0b9a56f24ee20fd5e72cf463ce79f ChangeLog 2801
-RMD160 5d2b68a9a07b8cea9df6a916474d4665661c3ce7 ChangeLog 2801
-SHA256 24088b8acf0f35851a22a900a6d53d60d3b8d27bf25a9fa74da347dc78a8e9bc ChangeLog 2801
+MD5 eefda60941af2d5d7f2b607510c6e43a ChangeLog 2944
+RMD160 90e503c0efe9fe7aefb2acb3fbf03ebf747f4033 ChangeLog 2944
+SHA256 96b88d1798ac07aa9093ddf46b0d4bf862e2a32f2ebe0a708aa62f1bd4df7a40 ChangeLog 2944
 MD5 84d41809a827ec0c2e3b3e0804c14886 autoconf-wrapper-2-r1.ebuild 811
 RMD160 682292b4c20d16bebb2e80a9a8d80765a0c89be3 autoconf-wrapper-2-r1.ebuild 811
 SHA256 88146d27e9551b42027916f947aa7cb601574594afd6ff0439364051cef434d5 autoconf-wrapper-2-r1.ebuild 811
-MD5 41ce9fc8ecd5997876df02450e7f2cb1 autoconf-wrapper-3-r1.ebuild 825
-RMD160 bb81acc7d0ececcf08550c390507de8dedba6cf8 autoconf-wrapper-3-r1.ebuild 825
-SHA256 cb9586201293646c73715c15215f1f088095b2cb9cd8a3f6717a251bc43b2149 autoconf-wrapper-3-r1.ebuild 825
-MD5 00f8a5c43813f316ce9f6b09c67be559 autoconf-wrapper-3.2.ebuild 823
-RMD160 b507c4b60ef74e60e52d7d2a1194160d421af28d autoconf-wrapper-3.2.ebuild 823
-SHA256 97a113ed3e24e26d292907c8a5dd98a06eb95962201cfdf6a1ed8e8c0357f59b autoconf-wrapper-3.2.ebuild 823
+MD5 740f55bd9ef30e2958b762e60d3ef0e7 autoconf-wrapper-3-r1.ebuild 815
+RMD160 32e487693e182a1871bf0035a4d1298f9934986b autoconf-wrapper-3-r1.ebuild 815
+SHA256 cd39f71e75cb869756921beabf3e4be39b50be0b6c6269c2041f3c76477abc4c autoconf-wrapper-3-r1.ebuild 815
+MD5 89cff45f1a7c12a0975350409fcaabac autoconf-wrapper-3.2.ebuild 836
+RMD160 4c8d136b4c6a92a78b6c250cb3c5b1ce2b886e36 autoconf-wrapper-3.2.ebuild 836
+SHA256 be356301668dec656b935cda5e27bd27bf1be40f58f48efba977ee6a4deba1d8 autoconf-wrapper-3.2.ebuild 836
 MD5 5893addbc67d6e0d2fff9560a7e5198f autoconf-wrapper-3.ebuild 821
 RMD160 66e720049f26fa66733d11cb64a282f21e3920ef autoconf-wrapper-3.ebuild 821
 SHA256 22c571655bd8e6005b76c16255ee837db318f780db871062d58e043ef5aff2d9 autoconf-wrapper-3.ebuild 821
@@ -43,7 +43,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEK+IaAiZjviIA2XgRAn9uAJsHOjs2XaZOaDozVyXpkw/Vbh3xRgCfUF+c
-UuSS0y/psVUtwqRiDSipQUU=
-=zaEh
+iD8DBQFEMF8nAiZjviIA2XgRAgEZAJ9prFkPIaAz/f527oN7ElI2ohBYdACgyTuO
+pJWx9KdDpulkHSVX/9xUKGc=
+=n6eZ
 -----END PGP SIGNATURE-----
