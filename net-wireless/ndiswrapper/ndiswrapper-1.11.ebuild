@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.11.ebuild,v 1.1 2006/04/02 14:54:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.11.ebuild,v 1.2 2006/04/02 14:55:14 betelgeuse Exp $
 
 inherit eutils linux-mod
 
@@ -23,7 +23,7 @@ BUILD_PARAMS="KSRC=${ROOT}${KV_DIR} KVERS=${KV_FULL}"
 BUILD_TARGETS="all"
 MODULESD_NDISWRAPPER_ALIASES=("wlan0 ndiswrapper")
 
-ERROR_USB="You need to enable USB support in your kernel 
+ERROR_USB="You need to enable USB support in your kernel
 to use usb support in ndiswrapper."
 
 pkg_setup() {
@@ -50,7 +50,7 @@ src_compile() {
 
 	local params
 	use usb || params="DISABLE_USB=1"
-	
+
 	BUILD_PARAMS="${BUILD_PARAMS} ${params}" linux-mod_src_compile
 }
 
