@@ -7,9 +7,9 @@ SHA256 1910a37b3772ce834125b5fb9b0498ac913329dcc196d9e56376b1ffaf1a8223 files/di
 MD5 94e34c91c524fe8f5ab35746a0448fb7 files/prism2_makefile-0.2.2.patch 850
 RMD160 e613da368c6504434b65fe3e10e9e6de7756d6f7 files/prism2_makefile-0.2.2.patch 850
 SHA256 4f9fdeb557dd4bb6189e4ba21dc3a52b1ba629d1f9b3d8841b3d3773c85c6124 files/prism2_makefile-0.2.2.patch 850
-MD5 242481bb8bfca68d522792043159ddd5 linux-wlan-ng-firmware-0.2.2.ebuild 1325
-RMD160 e8f0720661bafa335f8394fd7a19816360444630 linux-wlan-ng-firmware-0.2.2.ebuild 1325
-SHA256 005585e4e33457d42b1f4ee4c62a375190221ebf58d1549b74cf54a8eda8323d linux-wlan-ng-firmware-0.2.2.ebuild 1325
+MD5 bc78790112a6f4fd4257e66676a3707c linux-wlan-ng-firmware-0.2.2.ebuild 1325
+RMD160 2830c4d3a4b135448231c484f46370df852f1f25 linux-wlan-ng-firmware-0.2.2.ebuild 1325
+SHA256 62710fe3d18bbdbcf3bb862770e992cca1b14c046887bf2077880d10df9b18ec linux-wlan-ng-firmware-0.2.2.ebuild 1325
 MD5 14539d26ec261bda643c0b9fa6098bdd metadata.xml 531
 RMD160 b301171a8ef5dc791395bd1b356593d8585c2593 metadata.xml 531
 SHA256 c4574a0ee610cdb20d16e12483722d18ec73eaea271f783d20609a84e7b7e532 metadata.xml 531

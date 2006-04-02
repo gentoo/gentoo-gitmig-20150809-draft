@@ -13,9 +13,9 @@ SHA256 9464dac4c9fd0f5b4403cf60fa86f85fbcd29588f1a1036a8a18ba5e3c41b822 files/li
 MD5 a4b2153476d6759ee96ab8b4ac7df4aa files/linux-wlan-ng-0.2.3-module_param.patch 657
 RMD160 0e21471899880143a13c5bce33e13b0051b005e9 files/linux-wlan-ng-0.2.3-module_param.patch 657
 SHA256 4c0edbb9008680c1c1e2972ee4b0bd20245e3664ae48f6cd33d3589351398c81 files/linux-wlan-ng-0.2.3-module_param.patch 657
-MD5 c103abb6630e964403d64e904105bd71 linux-wlan-ng-modules-0.2.3-r1.ebuild 2438
-RMD160 0c7f56abfcd6bd9f03cb6fcafd9cfb9f010408c2 linux-wlan-ng-modules-0.2.3-r1.ebuild 2438
-SHA256 5ab92f8d56d42cb51e1f8d29e05b63ceb5afecdfdd1fd28241117629c7d2abc7 linux-wlan-ng-modules-0.2.3-r1.ebuild 2438
+MD5 87d49f47011d487d7000c8bf1fbd8a4b linux-wlan-ng-modules-0.2.3-r1.ebuild 2438
+RMD160 9194643ed5b6288ba8d6b6442b08002c471cee31 linux-wlan-ng-modules-0.2.3-r1.ebuild 2438
+SHA256 039dc5f55c97c6cfcc39e3e7367363226249deae2cca80560f5e8dd29e0a427f linux-wlan-ng-modules-0.2.3-r1.ebuild 2438
 MD5 015b374d963ba35da2a7cbc890bc78a6 linux-wlan-ng-modules-0.2.3.ebuild 3046
 RMD160 c82309c9e0d001f92bffdb07245c7f75ff8d9a4d linux-wlan-ng-modules-0.2.3.ebuild 3046
 SHA256 b7038aee66b9a6b787aa7d6d7b181eb1dd90d2b1e7da520536dbc957072333fe linux-wlan-ng-modules-0.2.3.ebuild 3046
