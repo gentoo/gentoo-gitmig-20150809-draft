@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.0.ebuild,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.0.ebuild,v 1.2 2006/04/02 15:07:50 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="FreeBSD /usr/sbin tools"
 SLOT="0"
 KEYWORDS="~x86-fbsd"
 
-IUSE="atm bluetooth tcpd ssl usb ipv6 acpi lpr ipfilter isdn pam ssl radius
+IUSE="atm bluetooth tcpd ssl usb ipv6 acpi ipfilter isdn pam ssl radius
 	netgraph minimal ipsec nis pam suid nat radius"
 
 SRC_URI="mirror://gentoo/${P}.tar.bz2
@@ -31,9 +31,7 @@ DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	sys-devel/flex"
 
-# it provides lpr when is requested and syslogd which is a logger
-PROVIDE="lpr? virtual/lpr
-	virtual/logger"
+PROVIDE="virtual/logger"
 
 S="${WORKDIR}/usr.sbin"
 
@@ -46,7 +44,6 @@ pkg_setup() {
 	use bluetooth || mymakeopts="${mymakeopts} NO_BLUETOOTH= "
 	use ipv6 || mymakeopts="${mymakeopts} NO_INET6= "
 	use ipfilter || mymakeopts="${mymakeopts} NO_IPFILTER= "
-	use lpr || mymakeopts="${mymakeopts} NO_LPR= "
 	use ssl || mymakeopts="${mymakeopts} NO_OPENSSL= NO_CRYPT= "
 	use usb || mymakeopts="${mymakeopts} NO_USB= "
 	use acpi || mymakeopts="${mymakeopts} NO_ACPI= "
@@ -62,7 +59,7 @@ pkg_setup() {
 	use radius || mymakeopts="${mymakeopts} NO_RADIUS= "
 	use tcpd || mymakeopts="${mymakeopts} NO_WRAP= "
 
-	mymakeopts="${mymakeopts} NO_MAILWRAPPER= NO_BIND= NO_SENDMAIL= NO_PF= NO_AUTHPF="
+	mymakeopts="${mymakeopts} NO_MAILWRAPPER= NO_BIND= NO_SENDMAIL= NO_PF= NO_AUTHPF= NO_LPR="
 
 	# kldxref does not build with -O2
 	replace-flags "-O?" "-O1"
@@ -118,8 +115,6 @@ EOS
 
 	cd "${WORKDIR}/etc"
 	doins amd.map apmd.conf syslog.conf newsyslog.conf usbd.conf
-
-	use lpr && doins printcap hosts.lpd
 
 	insinto /etc/ppp
 	doins ppp/ppp.conf

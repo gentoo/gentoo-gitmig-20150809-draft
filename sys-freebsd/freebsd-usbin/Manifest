@@ -1,24 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e462e921d9bf5afa6f37712290ead418 ChangeLog 6594
-RMD160 1b9cc32c2369dd23dc54c0803cb9ecabd4d5c852 ChangeLog 6594
-SHA256 2cbdc07a4ea39a2a1113a417b26a6b3be7c462bd0537211d9432f0bcebb6f5cc ChangeLog 6594
+MD5 cd3c396fdddc04a0f37e463c3c863b57 ChangeLog 6875
+RMD160 9019968c7667738b812337bb069a97700e1db8d0 ChangeLog 6875
+SHA256 504562f6692c5c2f0d78973a0887e98546c9ce2cb136b814680efd2cfd5d6283 ChangeLog 6875
 MD5 c9135c1dd494a2530c64932b005b3a6e files/digest-freebsd-usbin-6.0 1804
 RMD160 518b8d1c0f014b712766336798e69fcde36d9eb4 files/digest-freebsd-usbin-6.0 1804
 SHA256 e220ea79f7fe0698bcd6890c46fbd7e6280194f4cfc4cf88a491e41fa5b47a9b files/digest-freebsd-usbin-6.0 1804
-MD5 5c950b98d7c2a08c6df6b7e8c3982825 files/freebsd-usbin-5.3-r1-makefile-docpaths.patch 1104
-RMD160 05c553cb62b5a751b74f2e1ff8158ac2514763f8 files/freebsd-usbin-5.3-r1-makefile-docpaths.patch 1104
-SHA256 9c6486ae7da34128efdaffb02499b87baaad0439130d72a6eb1cf6637dc1bd8c files/freebsd-usbin-5.3-r1-makefile-docpaths.patch 1104
 MD5 9554fa2aadce8c958640378b0982440b files/freebsd-usbin-6.0-fixmakefiles.patch 7377
 RMD160 237a22b28f6abeb5b34da11fbe7c1763ee71489c files/freebsd-usbin-6.0-fixmakefiles.patch 7377
 SHA256 fc8cd07547553d763ce60d1f50e8e0f0f2635da2a5173d12ac15a842ceeabf7e files/freebsd-usbin-6.0-fixmakefiles.patch 7377
-MD5 88a8a0f62bc913be59a656b755640d2e files/freebsd-usbin-fixmakefiles.patch 1283
-RMD160 90ef9335c449548f9767fb09bebc143b74919f2c files/freebsd-usbin-fixmakefiles.patch 1283
-SHA256 fd54210d0b9f0784a351fd846e5a4274d7b6753cded0e56c30cd3c1d2e3560cd files/freebsd-usbin-fixmakefiles.patch 1283
-MD5 4cb31489bc7d6a3b34ea667e48feb51b files/freebsd-usbin-flex.patch 4961
-RMD160 c9cb8a9fce26f5740e27441e5a1cc4b87e327fb3 files/freebsd-usbin-flex.patch 4961
-SHA256 79bdffd90cb26839b74f66f48597e2526b7dc33d6ae5105c15da3175d29066f2 files/freebsd-usbin-flex.patch 4961
 MD5 39d0d0915156088d99b1524fc39e8ebd files/freebsd-usbin-nowrap.patch 1229
 RMD160 2931c7cc81e6dcffdbdd9ea98ff5ae31654070cf files/freebsd-usbin-nowrap.patch 1229
 SHA256 4ae0724d5e642e0399188b6805e94495af360ccf4f99443f9bfa80c220d29a8b files/freebsd-usbin-nowrap.patch 1229
@@ -46,16 +37,16 @@ SHA256 e36107e46fe91229ee5594791d26dea9b5f9364042477d27c3817b4f8f2b0dd3 files/rp
 MD5 26bce1f4cc64c909807fecd318973e2a files/syslogd.initd 574
 RMD160 4dfc927915b794809d9570079a6fe1adf2ba8520 files/syslogd.initd 574
 SHA256 6532f12605e9f961c4e758a126db87428365779430a8e98644201bdded19461f files/syslogd.initd 574
-MD5 fd6ed301756cee420abef3a1e5d4b49f freebsd-usbin-6.0.ebuild 4459
-RMD160 a1bcc3c5f6e57eac03187b242e68e795547ed4f4 freebsd-usbin-6.0.ebuild 4459
-SHA256 09bef6d5ab545588ea5f6b75f1d5062bc3091b2ae5d4242ddc5a3aa1940c804c freebsd-usbin-6.0.ebuild 4459
+MD5 d1d4df3a027f4938bafc40c4ff2dc883 freebsd-usbin-6.0.ebuild 4293
+RMD160 674ea04f46bae621847cf14d909df3d29ad37c8e freebsd-usbin-6.0.ebuild 4293
+SHA256 22e6d566b89447b579fd5dd05e5d451ec70ac57f0715eda3b3fb977a02753a07 freebsd-usbin-6.0.ebuild 4293
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFELq3lAiZjviIA2XgRAgtGAKCJhkoPkz8jVrNR7BI9IyYOEaTLFACghTj0
-So9ATSAwiPf/P8ua/Nni47g=
-=+XVq
+iD8DBQFEL+jmAiZjviIA2XgRAmVfAJ9lQYZ92E0DKk9czlgwMSEiRKrkrwCfX7GX
+n4LanzIMaZhKKvGFtq61FsM=
+=UUiB
 -----END PGP SIGNATURE-----
