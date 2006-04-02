@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/abook
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.38 2006/04/01 17:06:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.39 2006/04/02 16:05:22 tcort Exp $
+
+  02 Apr 2006; Thomas Cort <tcort@gentoo.org> abook-0.5.5-r1.ebuild:
+  stable on alpha wrt bug #128144
 
   01 Apr 2006; <nixnut@gentoo.org> abook-0.5.5-r1.ebuild:
   Stable on ppc. Bug #128144

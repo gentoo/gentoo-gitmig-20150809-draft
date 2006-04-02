@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0061b6a17e42d7562e8fdcbb8f7aa25e ChangeLog 4265
-RMD160 f59f4feb32a5da3e85fcfb8466a206a766f93edd ChangeLog 4265
-SHA256 2923c9c6139c37f59f5616ca872ed4b1495276eae1fd61245a9a72bb797500dc ChangeLog 4265
+MD5 9887d91f58fd94aecd57b44623a05468 ChangeLog 4368
 MD5 6cc8d5c2dce1643a39bb77e3e9046bb0 abook-0.5.4.ebuild 778
-RMD160 ea60466b831fdcc5af50cdaeede6b987c34765a2 abook-0.5.4.ebuild 778
-SHA256 c903794a0749fa33b883b19057d39781b741746c699dae9f933cd5879d742d48 abook-0.5.4.ebuild 778
-MD5 ad8bc0340c8dec871f26d2ed79db52a1 abook-0.5.5-r1.ebuild 958
-RMD160 b752ac28b9fdff885e111e0430d6477ab8e555f3 abook-0.5.5-r1.ebuild 958
-SHA256 b589c65fa642ff7a743892c8d474db2f0e3108d573332b9e0f96e4a1d71fe07c abook-0.5.5-r1.ebuild 958
+MD5 d42eae7a18e41f55b30b89b5da058f4f abook-0.5.5-r1.ebuild 956
 MD5 59b69566f05d4e988465d0a88606ae4b abook-0.5.5.ebuild 781
-RMD160 1d91fa95a800c6608e367aebb6caa649164d2e5d abook-0.5.5.ebuild 781
-SHA256 d4b1c6bf3ec62308c35b594f38139f6df3d72168c69e2170416f1ccc26461547 abook-0.5.5.ebuild 781
 MD5 379ff2ec5d24511e7beeadbb801e6431 files/digest-abook-0.5.4 63
-RMD160 045cbc0b4707e9457d18c819519dd67dafca5991 files/digest-abook-0.5.4 63
-SHA256 db1fee2ee46e736b649d816acb5dd0738744ec3c00b8108652b844f6dbd53640 files/digest-abook-0.5.4 63
 MD5 45b636a69be9680eb2643f72a20a1b8f files/digest-abook-0.5.5 63
-RMD160 81839620758f60815665adc5fa801ae4a0fc08fc files/digest-abook-0.5.5 63
-SHA256 9a07bf7610f6a01f431340cd3d96d89735990ccde9fbf4734b0e6b7219606e95 files/digest-abook-0.5.5 63
 MD5 eacd4f5c7f1ce0902cb1b9b34b6ea221 files/digest-abook-0.5.5-r1 482
-RMD160 edb68ab9890722ed043ee51dc25d1f16fdb76d50 files/digest-abook-0.5.5-r1 482
-SHA256 30761c406a84161281bac6a41e505c0f01d8fa5217ae0d3accc759d9c1b024a1 files/digest-abook-0.5.5-r1 482
 MD5 ff3d843bd695f3a1a9d9ffeee60d3068 metadata.xml 277
-RMD160 714f3386e1e40ab95489b87a15b97b05f230a093 metadata.xml 277
-SHA256 b4d9ec08fcedf6ef469e5eda6cf968678daa03f8c9ad244d97acc5b3223bde1a metadata.xml 277
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELrLroFw4q70f3SsRAi0JAJ9Bxp8GZQBfZVaogp3Z6LMBl+wtxACePh/m
-ZK9jPmz0Siq5T1R05C/0s1c=
-=Lmny
------END PGP SIGNATURE-----

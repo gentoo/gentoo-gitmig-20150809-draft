@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/abook-0.5.5-r1.ebuild,v 1.4 2006/04/01 17:06:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/abook-0.5.5-r1.ebuild,v 1.5 2006/04/02 16:05:22 tcort Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/abook/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc ~ppc-macos ppc64 sparc ~x86"
+KEYWORDS="alpha ~amd64 ppc ~ppc-macos ppc64 sparc ~x86"
 IUSE="nls"
 
 RDEPEND="nls? ( virtual/libintl )"
