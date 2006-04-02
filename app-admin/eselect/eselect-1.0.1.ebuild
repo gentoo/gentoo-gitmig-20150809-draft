@@ -1,19 +1,24 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0_rc1.ebuild,v 1.2 2005/11/19 19:05:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.1.ebuild,v 1.1 2006/04/02 23:38:09 kugelfang Exp $
 
 DESCRIPTION="Modular -config replacement utility"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
-SRC_URI="http://butsugenjitemple.org/~ka0ttic/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc bash-completion"
 
 DEPEND="sys-apps/sed
-	doc? ( dev-python/docutils )"
-RDEPEND="sys-apps/sed"
+	doc? ( dev-python/docutils )
+	|| (
+		sys-apps/coreutils
+		app-admin/realpath
+	)"
+RDEPEND="sys-apps/sed
+	sys-apps/file"
 
 src_compile() {
 	econf || die "econf failed"

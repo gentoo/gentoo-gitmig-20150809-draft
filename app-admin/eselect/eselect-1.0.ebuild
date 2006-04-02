@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.ebuild,v 1.11 2006/03/30 23:45:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.ebuild,v 1.12 2006/04/02 23:38:09 kugelfang Exp $
 
 DESCRIPTION="Modular -config replacement utility"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -13,7 +13,8 @@ IUSE="doc bash-completion"
 
 DEPEND="sys-apps/sed
 	doc? ( dev-python/docutils )"
-RDEPEND="sys-apps/sed"
+RDEPEND="sys-apps/sed
+	sys-apps/file"
 
 src_compile() {
 	econf || die "econf failed"
