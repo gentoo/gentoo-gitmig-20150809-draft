@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnubg
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.20 2006/01/29 21:28:01 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.21 2006/04/02 15:15:47 tupone Exp $
+
+  02 Apr 2006; <Tupone@gentoo.org> +files/gnubg-0.14.3-gcc4.patch,
+  gnubg-0.14.3.ebuild:
+  Fix for gcc-4 compilation, bug #120836 by Joshua Baergen
 
   29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   gnubg-0.14.3.ebuild:

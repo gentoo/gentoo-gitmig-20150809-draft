@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3.ebuild,v 1.3 2006/01/29 21:28:01 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3.ebuild,v 1.4 2006/04/02 15:15:47 tupone Exp $
 
 inherit gnuconfig flag-o-matic games
 
@@ -44,6 +44,7 @@ src_unpack() {
 	cd "${S}"
 	mv ../${PN}.weights-${WPV} "${S}/${PN}.weights"
 	mv ../*bd .
+	epatch "${FILESDIR}/${P}"-gcc4.patch
 	gnuconfig_update
 }
 

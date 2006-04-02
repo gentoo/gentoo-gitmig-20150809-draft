@@ -1,12 +1,25 @@
-MD5 c811dc9372b3428b5a7345f1a26880ba ChangeLog 2662
-RMD160 f6b8df2af1e7937cb237c938e0206b8eaeff64c2 ChangeLog 2662
-SHA256 56acc9bf185d095b81080bfe6e1ee9246f3b2eda5b41bf499571cc182c811d32 ChangeLog 2662
-MD5 b66b2af80cad13b367a5e7e86e10ee17 files/digest-gnubg-0.14.3 252
-RMD160 b89c3d907992fde49de43ca499b16b45729c9b8b files/digest-gnubg-0.14.3 252
-SHA256 71fbb3e474dca7eed99494905fde1cc8b5e0ea469b8fd68a694b6ad158e6886c files/digest-gnubg-0.14.3 252
-MD5 3141bc466ad98b8c6bba82b332e962c7 gnubg-0.14.3.ebuild 2565
-RMD160 d3df37fbb77521633a5732a4417ac6a4c460fad4 gnubg-0.14.3.ebuild 2565
-SHA256 94c81a8faf114ccf0eb6c7889310e8a309d76a24a8550b6399d117c4bd5c8a18 gnubg-0.14.3.ebuild 2565
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a77f9c39ec0f1c940a6d2ed01b6f1645 ChangeLog 2805
+RMD160 6aaa3532b2d663cb99342bd2347a99a934f8eabc ChangeLog 2805
+SHA256 3cbb28c1f8ee2e3c28b2ccf313815426407697dcb5f59fdc1c34413c8707c12f ChangeLog 2805
+MD5 73279a730dd0234f743d5326bdf41b6b files/digest-gnubg-0.14.3 940
+RMD160 51f4904714d31dea82db728be317de6e1b90bcbe files/digest-gnubg-0.14.3 940
+SHA256 887bd90f455fffd6d5bfdb8ba3befc1667c22bb0ff9ed6ee91e1f54eff84963c files/digest-gnubg-0.14.3 940
+MD5 138e70fe96c2f36dc2f3187f2b1e5a29 files/gnubg-0.14.3-gcc4.patch 3589
+RMD160 28d8b654f837936db37f66e9df8e85e8369a82a3 files/gnubg-0.14.3-gcc4.patch 3589
+SHA256 0f3f7e08207f3d0ccbf4931127dde6c9ca95ec1cb4d12914d3dbc7932407c096 files/gnubg-0.14.3-gcc4.patch 3589
+MD5 bbacc30e56be1372976394a699a89aef gnubg-0.14.3.ebuild 2596
+RMD160 1cfc90cb322e790afd42666a1583dd19b1430bf8 gnubg-0.14.3.ebuild 2596
+SHA256 6cd150eb5ad4b6dbbaff70e9485eebafa487d40fcb5ba90c9ce74026ffcfe19d gnubg-0.14.3.ebuild 2596
 MD5 3f11aaf297b2fe67404a96cda13e9bfe metadata.xml 251
 RMD160 f77a8fea97ab2a02ef2d9bf1cc7b390c5c19e6cb metadata.xml 251
 SHA256 34f41062e84f1e12c08550faffc97632a2432df3579520cec76dbe8b08fb9cfe metadata.xml 251
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEL+q22CTtIKiFlQIRAqcIAKDIa1IxmPuV2ZDiMwg+HpwVNFx56ACgrlR0
+BxpUHAZSrOy/923sUagehjg=
+=qhdr
+-----END PGP SIGNATURE-----
