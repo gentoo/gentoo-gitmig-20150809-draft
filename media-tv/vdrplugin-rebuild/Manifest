@@ -1,5 +1,25 @@
-MD5 be062631020daf63530d8b1be6738143 vdrplugin-rebuild-0.1.ebuild 486
-MD5 aba74b815a3a01f501336bd8e7fc637a ChangeLog 1082
-MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
-MD5 3c570f6bf024ce532fe2e35290497335 files/vdrplugin-rebuild-0.1 6646
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1aa4735115272c32b8194d38ad9ba737 ChangeLog 1189
+RMD160 07894ac56f10737cc88eb351b3531cc29e9da6e8 ChangeLog 1189
+SHA256 f97b39faaefcfe61dad18f1bc8f1163520b831abcce4fc46e737078b719331c9 ChangeLog 1189
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-vdrplugin-rebuild-0.1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-vdrplugin-rebuild-0.1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-vdrplugin-rebuild-0.1 0
+MD5 db792d6666e43fc873af492d3e79cfef files/vdrplugin-rebuild-0.1 6693
+RMD160 a2007751db6f7496b17e9ef8d09a1d687c956349 files/vdrplugin-rebuild-0.1 6693
+SHA256 951310b2892cbfd18a7dbd28f1d51d4c8c46d997bbb8fd3b29e28f845ee291de files/vdrplugin-rebuild-0.1 6693
+MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
+RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 metadata.xml 259
+SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata.xml 259
+MD5 be062631020daf63530d8b1be6738143 vdrplugin-rebuild-0.1.ebuild 486
+RMD160 73cd2cc3592fea336cf821607de7265d1c11c2c8 vdrplugin-rebuild-0.1.ebuild 486
+SHA256 9f085d8ac33b76902a499a27240029c2de3eab1dc20e90c13a7d739256805af8 vdrplugin-rebuild-0.1.ebuild 486
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEL6gSZfSl1Kp5KmoRAkdNAJ4un/6IpKuTbZsPsybAb4j7QgraFQCfaZvG
+IVlsMi+CAwmpgE08MGAmVzQ=
+=E6Mo
+-----END PGP SIGNATURE-----
