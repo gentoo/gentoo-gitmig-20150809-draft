@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/foomatic-gui-0.6.7.ebuild,v 1.4 2005/08/08 03:11:54 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/foomatic-gui-0.6.7.ebuild,v 1.5 2006/04/02 22:17:34 genstef Exp $
 
 inherit distutils
 
@@ -17,4 +17,5 @@ RDEPEND=">=dev-lang/python-2.2.0
 	>=dev-python/gnome-python-2.0.0
 	>=net-print/foomatic-2.0.2
 	>=dev-python/pyxml-0.8
-	virtual/ghostscript"
+	virtual/ghostscript
+	x11-libs/gksu"
