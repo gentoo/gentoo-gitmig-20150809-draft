@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-0.19.ebuild,v 1.4 2006/02/26 15:54:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-0.19-r1.ebuild,v 1.1 2006/04/02 01:05:10 flameeyes Exp $
 
 LANGS="bg cs da de el en_GB es et fi fr hi it ja nl pt pt_BR ru sr sr@Latn sv ta tr"
 LANGS_DOC="da es et it nl pt sv"
@@ -20,4 +20,5 @@ IUSE=""
 
 need-kde 3
 
-PATCHES="${FILESDIR}/${P}-gcc41.patch"
+PATCHES="${FILESDIR}/${P}-gcc41.patch
+	${FILESDIR}/${P}-slash-q-tab.patch"
