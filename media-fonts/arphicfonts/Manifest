@@ -1,12 +1,22 @@
-MD5 7a90a6cf61bf709cf61abe7fe93dbfb6 ChangeLog 3608
-RMD160 accce73ba3c89bb75a389eb56baad8e4e2c38ded ChangeLog 3608
-SHA256 836b7702324e1dfcde5dabdf32f6e529e83a8c2d4dc7e299b670820f1b62cf3a ChangeLog 3608
-MD5 a6e6ccc1906d30902abf7ffa3c58f81f arphicfonts-0.1-r2.ebuild 772
-RMD160 adea15b7a3467950858e4084a3749f76205f47c9 arphicfonts-0.1-r2.ebuild 772
-SHA256 7468cd7ab1f2e93ec37fa345d7038ccfe73057ca4b24c45972f5cf7b49da7906 arphicfonts-0.1-r2.ebuild 772
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 313cb88c66ab2e8aa776d350ba2b6427 ChangeLog 3716
+RMD160 c45a0d48539f87916b04a5ecf6109aa315948a99 ChangeLog 3716
+SHA256 932b0fcdf452070ed052eb67cfd485a716cf25411ac2be8b020c17406f315a01 ChangeLog 3716
+MD5 1f53af22df76ccdd94de212631880d59 arphicfonts-0.1-r2.ebuild 785
+RMD160 016d34a19c1813b2360db57cfec3e3bd2ecf728b arphicfonts-0.1-r2.ebuild 785
+SHA256 e54dd114d14ceb6135665fba06951e44e67c7d096f7d69371c885260df64b3a6 arphicfonts-0.1-r2.ebuild 785
 MD5 2fe8346e604f4ae761d1a8cbb551f6c7 files/digest-arphicfonts-0.1-r2 244
 RMD160 796ce17f9533fc5bf833018ecb96864aa0e0a2c6 files/digest-arphicfonts-0.1-r2 244
 SHA256 4680375dc64aaf1109d7d03ecd07adbe52dfc6bd0b42b76ee53b6166f3c59b41 files/digest-arphicfonts-0.1-r2 244
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 RMD160 e22fbca96af27631c4910bc93f69d81280ddd96e metadata.xml 175
 SHA256 0dc53674ee3ca2348bedd390f639dac96f537cce8cd0c550c13917de7b61f2e8 metadata.xml 175
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEL/2CAiZjviIA2XgRAqslAJ94CwMA8iyHYU7O/MjE/LM0DUJVBQCgk7WU
+PYLe+IikDT9rB1oMbnkBh6U=
+=RyRs
+-----END PGP SIGNATURE-----
