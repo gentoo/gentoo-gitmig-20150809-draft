@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.69 2006/03/29 14:55:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.70 2006/04/02 13:36:42 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -305,7 +305,7 @@ function kde-meta_src_unpack() {
 					acinclude.m4 aclocal.m4 AUTHORS COPYING INSTALL README NEWS ChangeLog \
 					$KMMODULE $KMEXTRA $KMCOMPILEONLY $KMEXTRACTONLY $DOCS
 		do
-			extractlist="$extractlist $KMNAME-$TARBALLDIRVER/$item"
+			extractlist="$extractlist $KMNAME-$TARBALLDIRVER/${item%/}"
 		done
 
 		# xdeltas require us to uncompress to a tar file first.
