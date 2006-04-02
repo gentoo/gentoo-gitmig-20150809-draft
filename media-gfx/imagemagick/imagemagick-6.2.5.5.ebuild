@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.5.5.ebuild,v 1.12 2006/02/04 22:28:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.5.5.ebuild,v 1.13 2006/04/02 20:35:49 vapier Exp $
 
 inherit eutils perl-app multilib
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/imagemagick/${MY_P2}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc-macos ppc64 sh sparc x86"
-IUSE="bzip2 doc fpx graphviz gs jbig jpeg lcms mpeg nocxx perl png tiff truetype X wmf xml2 zlib"
+IUSE="bzip2 doc fpx graphviz gs jbig jpeg jpeg2k lcms mpeg nocxx perl png tiff truetype X wmf xml zlib"
 
 RDEPEND="bzip2? ( app-arch/bzip2 )
 	zlib? ( sys-libs/zlib )
@@ -32,11 +32,12 @@ RDEPEND="bzip2? ( app-arch/bzip2 )
 	mpeg? ( >=media-video/mpeg2vidcodec-12 )
 	png? ( media-libs/libpng )
 	tiff? ( >=media-libs/tiff-3.5.5 )
-	xml2? ( >=dev-libs/libxml2-2.4.10 )
+	xml? ( >=dev-libs/libxml2-2.4.10 )
 	truetype? ( =media-libs/freetype-2* )
 	wmf? ( >=media-libs/libwmf-0.2.8 )
 	jbig? ( media-libs/jbigkit )
 	jpeg? ( >=media-libs/jpeg-6b )
+	jpeg2k? ( media-libs/jasper )
 	perl? ( >=dev-lang/perl-5.8.6-r6 !=dev-lang/perl-5.8.7 )
 	!dev-perl/perlmagick
 	graphviz? ( media-gfx/graphviz )
@@ -71,14 +72,14 @@ src_compile() {
 		$(use_with graphviz gvc) \
 		$(use_with jbig) \
 		$(use_with jpeg jpeg) \
-		$(use_with jpeg jp2) \
+		$(use_with jpeg2k jp2) \
 		$(use_with lcms) \
 		$(use_with mpeg mpeg2) \
 		$(use_with png) \
 		$(use_with tiff) \
 		$(use_with truetype ttf) \
 		$(use_with wmf) \
-		$(use_with xml2 xml) \
+		$(use_with xml) \
 		$(use_with zlib) \
 		$(use_with X x) \
 		|| die "econf failed"

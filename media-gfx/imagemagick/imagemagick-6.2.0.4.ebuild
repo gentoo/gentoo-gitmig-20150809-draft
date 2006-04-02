@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.0.4.ebuild,v 1.11 2005/04/01 05:02:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.0.4.ebuild,v 1.12 2006/04/02 20:35:49 vapier Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -17,22 +17,30 @@ LICENSE="as-is"
 SLOT="0"
 # PLEASE BUMP AND UPDATE KEYWORDS OF dev-perl/perlmagick TO MATCH THIS. THANK YOU.
 KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
-IUSE="X cups jpeg lcms mpeg png truetype tiff xml2 wmf jbig perl graphviz fpx"
+IUSE="X cups jpeg jpeg2k lcms mpeg png truetype tiff xml wmf jbig perl graphviz fpx"
 
 DEPEND=">=sys-apps/sed-4
 	app-arch/bzip2
 	sys-libs/zlib
-	X? ( virtual/x11 )
+	X? ( || ( ( x11-libs/libXext
+				x11-libs/libXt
+				x11-libs/libICE
+				x11-libs/libSM
+			)
+			virtual/x11
+		)
+	)
 	cups?   ( virtual/ghostscript )
 	lcms? ( >=media-libs/lcms-1.06 )
 	mpeg? ( >=media-video/mpeg2vidcodec-12 )
 	png? ( media-libs/libpng )
 	tiff? ( >=media-libs/tiff-3.5.5 )
-	xml2? ( >=dev-libs/libxml2-2.4.10 )
+	xml? ( >=dev-libs/libxml2-2.4.10 )
 	truetype? ( =media-libs/freetype-2* )
 	wmf? ( >=media-libs/libwmf-0.2.8 )
 	jbig? ( media-libs/jbigkit )
 	jpeg? ( >=media-libs/jpeg-6b )
+	jpeg2k? ( media-libs/jasper )
 	perl? ( dev-lang/perl )
 	graphviz? ( media-gfx/graphviz )
 	fpx? ( media-libs/libfpx )"
@@ -64,8 +72,8 @@ src_compile() {
 		$(use_with jbig) \
 		$(use_with tiff) \
 		$(use_with lcms) \
-		$(use_with xml2 xml) \
-		$(use_with jpeg jp2) \
+		$(use_with xml) \
+		$(use_with jpeg2k jp2) \
 		$(use_with jpeg jpeg) \
 		$(use_with mpeg mpeg2) \
 		$(use_with cups gslib) \

@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cb051f533f3c313a3a986b8ee885f109 ChangeLog 26414
-RMD160 44ea2fdc05467c01e2e1e7efba2468f770f5f9cf ChangeLog 26414
-SHA256 d03dd45fcce54223a070470868a644b9eb4d1d97baa980a8ed00c0993d7c91bb ChangeLog 26414
+MD5 a16d008086136d1bf1a02c9e4044f2c7 ChangeLog 27098
+RMD160 7643086e8847e42eefdcc6b46a8964f5118710aa ChangeLog 27098
+SHA256 f790b0badf39ab6fe08762191709b5c34aa95d8d5a9de04da824251d2a9ec607 ChangeLog 27098
 MD5 42fd34630ded62400ed31be1426e3b32 files/digest-imagemagick-6.1.8.8 73
 RMD160 b8ab2774a41c932816d812352f7ea0696740bca6 files/digest-imagemagick-6.1.8.8 73
 SHA256 2040d9ce9ce31eb566380e5aaa1ba48b022e4fe1a27c7f6de906fe533da6c3c6 files/digest-imagemagick-6.1.8.8 73
@@ -58,58 +58,58 @@ SHA256 9d46c16d4700fc11c2c06619586451ed79c9edb5408b7bf192bc8f135ca34da8 files/im
 MD5 0ec169e44bbf685be7f25684344ff9a6 files/imagemagick-perlmagick.patch 1193
 RMD160 eee56765fa35231e06ced89bdf6da2852df535aa files/imagemagick-perlmagick.patch 1193
 SHA256 f5beca823effc89792fbb5a420d0a06a66f52dbc2f299a22fe73db1ab9900122 files/imagemagick-perlmagick.patch 1193
-MD5 26d349b9ac3126394eca1640b90c1e66 imagemagick-6.1.8.8.ebuild 2317
-RMD160 bed7a8e44f83dd87c395c4c823b004e4536b9c0f imagemagick-6.1.8.8.ebuild 2317
-SHA256 3b26ee6cf3dc06d3b5209abcd9145580370524ae054da6221f8406199dcd2d57 imagemagick-6.1.8.8.ebuild 2317
-MD5 4a944fd0845cf1ffc4651141bb76fbc5 imagemagick-6.2.0.4.ebuild 2281
-RMD160 ae0d305a898e2c49194654ab68d0571e7326dd79 imagemagick-6.2.0.4.ebuild 2281
-SHA256 67495a96189c0de3ea587e628424258ee1185a3a066cf211c92f37d9e148c42e imagemagick-6.2.0.4.ebuild 2281
-MD5 ba4ddb58c87859514dc6fdb4c45d3a0c imagemagick-6.2.0.6.ebuild 2290
-RMD160 cb4012996f48dcbef5bd0c4d4fe1b0559e8f3908 imagemagick-6.2.0.6.ebuild 2290
-SHA256 84a33c311948c6dccd40816c0cbf37c072eb8c978f97bfb8a896d847ba4aa4dc imagemagick-6.2.0.6.ebuild 2290
-MD5 52ba268f638346ebc1598863ce4b705c imagemagick-6.2.1.5-r1.ebuild 2608
-RMD160 8b40293bdf24eb0b45d7cc4d3b2ac50239e628c8 imagemagick-6.2.1.5-r1.ebuild 2608
-SHA256 03cb6f0b6ecd5fd46e71d8021735e41ae88c778ff488f08c0d725c54ef6f4464 imagemagick-6.2.1.5-r1.ebuild 2608
-MD5 33cea0a2ca49cd60e596d6167b5a0cb0 imagemagick-6.2.1.5.ebuild 2583
-RMD160 93b4a8cea5f66b25bbec2178ab5c936b0d54dbdf imagemagick-6.2.1.5.ebuild 2583
-SHA256 d96ed89bfb3ecac636db70f8cdd15ca24cb5e9b72b5ed9e0ba8344199d67914f imagemagick-6.2.1.5.ebuild 2583
-MD5 449d2301f9c762eec261b9f8c9c37245 imagemagick-6.2.2.0-r1.ebuild 2600
-RMD160 a95d3d39555d157a7d5a630a5bc40579285954ac imagemagick-6.2.2.0-r1.ebuild 2600
-SHA256 691e61297a8ade601082a67534479365c976b3cadea2c246de3e6b50706dcddf imagemagick-6.2.2.0-r1.ebuild 2600
-MD5 bab8142fa9a306ebdbd683edabd8eb99 imagemagick-6.2.2.0.ebuild 2576
-RMD160 7fd4b4816922bc52c84b9fe797708cea8f4c3750 imagemagick-6.2.2.0.ebuild 2576
-SHA256 95699d91522e6db9656b10f2c141af27f709eb536ffa72ad0ebc98bbf1b43708 imagemagick-6.2.2.0.ebuild 2576
-MD5 b5d84037b0b239b91aed56ce2fb75e25 imagemagick-6.2.2.3-r1.ebuild 2652
-RMD160 ca02d7a536d47a502565b049119b923cea375568 imagemagick-6.2.2.3-r1.ebuild 2652
-SHA256 36314e64e1c2d8bfa661f3fc5a851f2629ea7b429c0bc888aebc306366aeff8d imagemagick-6.2.2.3-r1.ebuild 2652
-MD5 69a5874fa82f391a16169d13ab7e8f97 imagemagick-6.2.2.3.ebuild 2576
-RMD160 79801030129334ca33ae1c61f7e49a410046fea5 imagemagick-6.2.2.3.ebuild 2576
-SHA256 58ebc8b49c00d4d499a48605f31ae43856b83ba9ed0cb5a02d982f843e5fe64b imagemagick-6.2.2.3.ebuild 2576
-MD5 05d71d7340a6ab59648cffa7a8c44a3f imagemagick-6.2.4.2-r1.ebuild 2700
-RMD160 07d019bd52d89b6411239ae9cc3bcb9e0b7ba633 imagemagick-6.2.4.2-r1.ebuild 2700
-SHA256 4ac494c46c9aa79caec7d3455f06a9ad080b181f627182f1dd7444c7b2d56573 imagemagick-6.2.4.2-r1.ebuild 2700
-MD5 5511a30e523ec782cd0fbfe640fdb64e imagemagick-6.2.4.2.ebuild 2669
-RMD160 af26d0322bdaf90dec145839cbcb6d02e0b6ecfa imagemagick-6.2.4.2.ebuild 2669
-SHA256 8d545198f44c412170a5cf44d64017a7226d9ad069ee501a785198af5b81caf2 imagemagick-6.2.4.2.ebuild 2669
-MD5 93b2c6a6f1385d05b35ae5406b8a2800 imagemagick-6.2.5.2.ebuild 2705
-RMD160 31c9b7fbe0ad22b6b4c04f01762c8d7032ea4976 imagemagick-6.2.5.2.ebuild 2705
-SHA256 e9fd18ae64340d1edc5b95f62454315f28d2a4e2a94dd62c62206cc06751730a imagemagick-6.2.5.2.ebuild 2705
-MD5 d07c1ad811fbc83b076177a93522b077 imagemagick-6.2.5.4.ebuild 2769
-RMD160 5b656092d528c3247a93535983e9b76837b9260f imagemagick-6.2.5.4.ebuild 2769
-SHA256 1472fbce44b73cbc694c29e4e9b1102094c1a82685e1a2681d90cda7e6bfafbb imagemagick-6.2.5.4.ebuild 2769
-MD5 f614fea19eee26723c65a813fa3d9e32 imagemagick-6.2.5.5.ebuild 2781
-RMD160 e1f7d3710c7be8b30138ee19218f9c585f4b32f8 imagemagick-6.2.5.5.ebuild 2781
-SHA256 27ac9439223545e160b3f9294a0fa9d441c1af5a500decb56706f599cf5671b9 imagemagick-6.2.5.5.ebuild 2781
-MD5 d34d6c2b30484dc8bfacda4d6068d023 imagemagick-6.2.6.0.ebuild 2794
-RMD160 1225e25ff7e4c7bd1550deaea1b6a06724c06914 imagemagick-6.2.6.0.ebuild 2794
-SHA256 46f2c21aed21110f2e2d83c73204c4543289a003c3d156fd49467a606cafccb4 imagemagick-6.2.6.0.ebuild 2794
+MD5 6b51dba3a65ab73eae4ec426e0eaee25 imagemagick-6.1.8.8.ebuild 2443
+RMD160 89f388ff89c25288f90471d4efd18e14f7036b72 imagemagick-6.1.8.8.ebuild 2443
+SHA256 4412ec54bc0f0aa2189d2127dbe6bf51c01ea2ad033ed82c489d145dd5f6795b imagemagick-6.1.8.8.ebuild 2443
+MD5 f5fa64bfcf8e7b37147c6d03efe22f46 imagemagick-6.2.0.4.ebuild 2407
+RMD160 f2600a46b4a317fe935f875795b2f1d169ae89bd imagemagick-6.2.0.4.ebuild 2407
+SHA256 5cceda343a7d3b67d59306ba98ace3a633d077ea84145cbe8a0c5a2aa7a53b51 imagemagick-6.2.0.4.ebuild 2407
+MD5 583e2b677b1de5077378da5a02bb0750 imagemagick-6.2.0.6.ebuild 2415
+RMD160 258d864cb21a55b43b7030b27d2af7331a6cf36d imagemagick-6.2.0.6.ebuild 2415
+SHA256 392e240595af12f4f3679c826257493d4f27739bcae55dee04b9e8f04fc428a5 imagemagick-6.2.0.6.ebuild 2415
+MD5 fe1f08319994d49e665cae256651c07e imagemagick-6.2.1.5-r1.ebuild 2733
+RMD160 20027d42b1982b601b7ca5027ef806c943fe1e4c imagemagick-6.2.1.5-r1.ebuild 2733
+SHA256 22fc1613325102c9aea38f44e49efbf93d0eb717539c05c98e36bb43d4fd56d5 imagemagick-6.2.1.5-r1.ebuild 2733
+MD5 8af3b97c86fb94ebb9aed2dcd99a0720 imagemagick-6.2.1.5.ebuild 2708
+RMD160 4aba6247fe69436fd80c58ce8e3056b8b83b38bc imagemagick-6.2.1.5.ebuild 2708
+SHA256 9c46b34fb888e465df432f416e596989af576edc18202364045c0ed45582ac8f imagemagick-6.2.1.5.ebuild 2708
+MD5 9c10a1be3c86d8051bf75aaeb8d57324 imagemagick-6.2.2.0-r1.ebuild 2725
+RMD160 b67f8e88de0817915fa2c7620b6f3b255e3b1a63 imagemagick-6.2.2.0-r1.ebuild 2725
+SHA256 3e6e6389a7892c2240fb70cb1c9c120b3aaf686600ff4c0994a5992000fafa29 imagemagick-6.2.2.0-r1.ebuild 2725
+MD5 9797183fd232487242129894b44fea38 imagemagick-6.2.2.0.ebuild 2701
+RMD160 a823aa11fe96d161ce9291b91aa67bbd5e259ca1 imagemagick-6.2.2.0.ebuild 2701
+SHA256 84c1e51caddc13af90a632f7989c2d8849a9c4f4c6cc0dbccddf5dc8d41586ec imagemagick-6.2.2.0.ebuild 2701
+MD5 a46f41692d78d787af8cf97bbc1a2058 imagemagick-6.2.2.3-r1.ebuild 2777
+RMD160 7671de6368fa64347c37bdcd7eb20d0f153ff026 imagemagick-6.2.2.3-r1.ebuild 2777
+SHA256 277b30d03270c0d37b011d61219fdd0b68afd30145993c19892dd3b01c7fcb0f imagemagick-6.2.2.3-r1.ebuild 2777
+MD5 58661ba34cda4ba159f501cb49fd4650 imagemagick-6.2.2.3.ebuild 2702
+RMD160 0276a35c1d01d98da197b551b3e480bb340df5c9 imagemagick-6.2.2.3.ebuild 2702
+SHA256 bbaf99d8a7979031724d1175aa840d742d6c65a14d3a69ad8a4fe41363372a8f imagemagick-6.2.2.3.ebuild 2702
+MD5 7d00a116e772de12ff028406e2c64bec imagemagick-6.2.4.2-r1.ebuild 2828
+RMD160 69b5d6d8d560da86cb9d385617ca9972f6a46758 imagemagick-6.2.4.2-r1.ebuild 2828
+SHA256 d54b4c0790437e4ea2b770bec8ef95ec5fe2e46487af5da81159b7fd5b414057 imagemagick-6.2.4.2-r1.ebuild 2828
+MD5 660d791cc104bc5e62fa8317e8dabe30 imagemagick-6.2.4.2.ebuild 2794
+RMD160 8360b296ec635c4560b0fae3a6544f17fe77892e imagemagick-6.2.4.2.ebuild 2794
+SHA256 d833d593759166bdea384cf61ab854f604158f5f2c4b51cc009425dc96e0b44d imagemagick-6.2.4.2.ebuild 2794
+MD5 877cbe17abfcd954ff3c70acd46078eb imagemagick-6.2.5.2.ebuild 2830
+RMD160 711fa277b030d593d040344b5e5c0bae6e3ce2a3 imagemagick-6.2.5.2.ebuild 2830
+SHA256 d680346075dd8c4630eadd0ef295be25d704834e43ac1a0d1a4cf0596fceebc1 imagemagick-6.2.5.2.ebuild 2830
+MD5 60683f96a291ff5b419f9e5b1aab78d5 imagemagick-6.2.5.4.ebuild 2799
+RMD160 e7e92f40200fccae1959326bdd51a28f8a02680d imagemagick-6.2.5.4.ebuild 2799
+SHA256 76c5ac64c3b36c46d1595450e5279b23fd7db61c95893852bdd30d2ece81d8a1 imagemagick-6.2.5.4.ebuild 2799
+MD5 e4b8d7d54a62eb20d7de3fecfaae18f8 imagemagick-6.2.5.5.ebuild 2814
+RMD160 8c074104cb97e42213967ff59f72eefee20d6ee9 imagemagick-6.2.5.5.ebuild 2814
+SHA256 d74f319d22bc250ca6358229605c5ddfeccd63540315a0d391658ff02838b09b imagemagick-6.2.5.5.ebuild 2814
+MD5 db4742bced67000c7d68129e9223d50a imagemagick-6.2.6.0.ebuild 2824
+RMD160 91685bc1516887085b2f45ac06ce3e28709b0782 imagemagick-6.2.6.0.ebuild 2824
+SHA256 3e51b3c7b899f9d0e78f66391fe2b574c198cf1155fb8706f9849886eb3ed9da imagemagick-6.2.6.0.ebuild 2824
 MD5 3dc350be33069338fa083ca16ec11cc8 metadata.xml 224
 RMD160 00e125be58c08e634a6053e3d265d2f36aab18ad metadata.xml 224
 SHA256 d7920747aa57936d24496c8ee5016502a9acc8108a5b01e8d1b813813d4250b3 metadata.xml 224
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD5Sqr2+ySkm8kpY0RAmd4AKCRTi/IvGFv2xM5j0q3DvwKPWnL0ACgwaDA
-bBjmT7UrMtWvJ2UkxtHKxJg=
-=UQtW
+iD8DBQFEMDXJ2+ySkm8kpY0RAq0CAJ9u0XABc+4c16Aj5qk+++Y4BOmGVACfQdWz
+DENOR3Xo79uQ5IBXFhhDAdI=
+=Jk9m
 -----END PGP SIGNATURE-----
