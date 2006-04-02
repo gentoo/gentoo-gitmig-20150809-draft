@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.46 2006/04/02 10:23:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.47 2006/04/02 10:27:14 genstef Exp $
+
+  02 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  -files/gv-3.5.8-antialias.patch, -files/gv-3.5.8-r2-gentoo.diff,
+  -files/gv-3.5.8-setenv.diff, -files/gv-3.6.1-scrollbar.patch,
+  -files/3.5.8-gcc3.patch, -gv-3.5.8-r4.ebuild, -gv-3.6.1.ebuild,
+  -gv-3.6.1-r1.ebuild:
+  remove old
 
   02 Apr 2006; Bryan Østergaard <kloeri@gentoo.org gv-3.6.1-r2.ebuild:
   Stable on alpha, bug 127641.
