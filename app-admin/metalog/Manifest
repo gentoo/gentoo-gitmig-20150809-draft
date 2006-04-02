@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 d06039644d90aff9d3fb85105fd1736e ChangeLog 5182
 RMD160 afe164a7a5fa73d94bd3a3ce08c78b69268cbe6c ChangeLog 5182
 SHA256 e8f825e0c4d3ede345876a494088b9a3f1a93f086ee6977135a5a0594300eccb ChangeLog 5182
-MD5 d98c4a45a864dd473935401191c1cf24 files/consolelog.sh 257
-RMD160 6dbbca420e363cd7d1b58bd8d6be42b7ad47f29a files/consolelog.sh 257
-SHA256 3a44590379c611eb00317551a7ac46755a55292b9044d40455de8b13472671d1 files/consolelog.sh 257
+MD5 18aa703af0f97e5656a5907b30b592d1 files/consolelog.sh 258
+RMD160 bf64a3d0fb8c2788b64ce8afceb668f9d8d28e35 files/consolelog.sh 258
+SHA256 dc66fed4ab8395b6406b35535ab03bbbb7bcfff09741fe0173ec4c6008037407 files/consolelog.sh 258
 MD5 ab769042aa4721d0ac745943e00c70e4 files/digest-metalog-0.7-r1 63
 RMD160 3cc17014c12d58886598bd0c4ac7d3daeb1193df files/digest-metalog-0.7-r1 63
 SHA256 0d61d608eb6a2ebdf76391a8b36aa4cb0a43d3138b66d15e89ec1525d8828a64 files/digest-metalog-0.7-r1 63
@@ -53,9 +53,9 @@ MD5 87de1e175edc04567a2c0af08e17fef0 metalog-0.8_rc1.ebuild 1405
 RMD160 7d38f8b670252e0a967d328010c20c5e51bd751c metalog-0.8_rc1.ebuild 1405
 SHA256 25cfda5d9bf72839f2306981dc4c6418bda5b5be9bce908459c618848219407f metalog-0.8_rc1.ebuild 1405
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD6UOf2+ySkm8kpY0RAsUrAKCiUdzYxNu0ZL6ioyGwtcuBwqb2hgCfacAJ
-ftBZ35VKDO48ToAldIQX1cs=
-=wtzh
+iD8DBQFEL47H2+ySkm8kpY0RAu+AAJ9orlk8kFq5lg0D9u9NHcdmeGHLRwCbBBmC
+OcIMJb4oRjvFhrXhxqfBXhQ=
+=eZB3
 -----END PGP SIGNATURE-----

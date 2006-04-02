@@ -12,5 +12,5 @@ if [ -z "${FORMAT}" ] ; then
 fi
 
 for d in ${CONSOLE} ; do
-	eval echo ${FORMAT}  ${d}
+	eval echo ${FORMAT} > ${d}
 done
