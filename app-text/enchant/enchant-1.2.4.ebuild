@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.2.0.ebuild,v 1.1 2005/12/08 03:06:07 joem Exp $
-
-inherit gnome2
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.2.4.ebuild,v 1.1 2006/04/02 13:43:26 foser Exp $
 
 DESCRIPTION="Spellchecker wrapping library"
 HOMEPAGE="http://www.abisource.com/enchant/"
@@ -18,9 +16,22 @@ IUSE=""
 # 25 Aug 2003; foser <foser@gentoo.org>
 
 RDEPEND=">=dev-libs/glib-2
-	|| ( virtual/aspell-dict app-text/ispell app-text/hspell )"
+	|| ( virtual/aspell-dict app-text/ispell app-text/hspell app-text/hunspell )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS BUGS ChangeLog HACKING MAINTAINERS NEWS README TODO"
+src_compile() {
+
+	econf || die
+	emake || die
+
+}
+
+src_install() {
+
+	make DESTDIR=${D} install || die
+
+	dodoc AUTHORS BUGS ChangeLog HACKING MAINTAINERS NEWS README TODO
+
+}
