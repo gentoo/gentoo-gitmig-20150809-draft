@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.12.ebuild,v 1.8 2005/08/04 08:08:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.12.ebuild,v 1.9 2006/04/02 09:03:06 spock Exp $
 
 inherit eutils
 
@@ -15,8 +15,9 @@ SLOT="0"
 KEYWORDS="amd64 hppa ~mips ppc sparc x86"
 IUSE="nls"
 
-DEPEND=""
-RDEPEND="nls? ( sys-devel/gettext )"
+RDEPEND="nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}

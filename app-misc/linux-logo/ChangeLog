@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/linux-logo
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.28 2005/09/16 21:31:10 ciaranm Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.29 2006/04/02 09:03:06 spock Exp $
+
+  02 Apr 2006; Michał Januszewski <spock@gentoo.org>
+  linux-logo-4.12.ebuild:
+  Fixed nls-related deps (bug #123111).
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
