@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/graphicsmagick
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.28 2006/04/01 19:53:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.29 2006/04/02 21:35:15 vapier Exp $
+
+  02 Apr 2006; Mike Frysinger <vapier@gentoo.org>
+  graphicsmagick-1.1.5.ebuild, graphicsmagick-1.1.5-r1.ebuild,
+  graphicsmagick-1.1.6.ebuild, graphicsmagick-1.1.6-r1.ebuild,
+  graphicsmagick-1.1.7.ebuild:
+  Change USE=xml2 to USE=xml #116346.  Add modular X support #126931.  Change
+  USE=jp2 to USE=jpeg2k #123699 by Fritz Heinrichmeyer.  Clean up the ebuild
+  in general.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org>
   graphicsmagick-1.1.7.ebuild:
