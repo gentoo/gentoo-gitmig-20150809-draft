@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.60 2006/03/29 01:23:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.61 2006/04/02 05:41:53 mrness Exp $
+
+  02 Apr 2006; Alin Nastac <mrness@gentoo.org> mgetty-1.1.35.ebuild:
+  Keep log directory (#128437).
 
   29 Mar 2006; Aron Griffis <agriffis@gentoo.org> mgetty-1.1.34.ebuild:
   Mark 1.1.34 stable on ia64
