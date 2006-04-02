@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 39748227e7cb38932a554572c53202d6 ChangeLog 428
+MD5 c99f1b70df9a86d474005d8e868aa96a files/digest-tkvoice-1.5 63
+MD5 a7e218aeeedf13a4651691c9270dc336 files/tkvoice.desktop 157
+MD5 e0c4435acc88bb349155aa0a39407e87 metadata.xml 328
+MD5 8659afcfc746666e902e03db6525c460 tkvoice-1.5.ebuild 1291
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEL3k2jG8pv1lIUX4RAnFPAJ9A/8juNQVNabqlgACuX+C5NIdE+ACgiUh0
+Ft6C1smYHb3yWdEqG/1YwwA=
+=33/b
+-----END PGP SIGNATURE-----
