@@ -1,6 +1,16 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.66 2005/12/09 17:21:13 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.67 2006/04/02 14:09:56 foser Exp $
+
+*gnome-spell-1.0.7 (27 Mar 2006)
+
+  27 Mar 2006; Marinus Schraal <foser@gentoo.org> gnome-spell-1.0.7.ebuild
+  files/gnome-spell-1.0.7-enchant.patch, files/gnome-spell-1.0.7-combo.patch,
+  files/gnome-spell-1.0.7-debug.patch, files/gnome-spell-1.0.7-remove_gnome_h.patch :
+  New release (#127142)
+  Update enchant & combo patch, require enchant 1.2.4
+  Add patch to enable debug output
+  Add patch to remove gnome.h inclusion, together with combo patch removes libgnomeui dep
 
   09 Dec 2005; <dang@gentoo.org> gnome-spell-1.0.6.ebuild:
   Marked stable on amd64
