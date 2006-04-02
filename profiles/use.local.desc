@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1822 2006/04/01 18:12:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1823 2006/04/02 11:40:44 robbat2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1265,6 +1265,7 @@ sci-libs/plplot:octave - Support for Octave bindings.
 sci-libs/vtk:patented - Builds patented classes.
 sci-libs/vtk:qt3 - Adds support for the Qt3 GUI/Application Toolkit.
 sci-libs/vtk:qt4 - Adds support for the Qt4 GUI/Application Toolkit.
+sci-mathematics/nusmv:minisat - Enable support for MiniSat.
 sci-mathematics/coq:ide - Build the Coq IDE, a clone of proof general using lablgtk2.
 sci-mathematics/coq:norealanalysis - Do not build real analysis modules (faster compilation).
 sci-mathematics/coq:translator - Install the translator script from coq-7.4 to coq-8.0, and its documentation if doc is set too.
