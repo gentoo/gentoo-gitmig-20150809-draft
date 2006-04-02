@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.195 2006/03/25 19:47:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.196 2006/04/02 23:57:30 flameeyes Exp $
+
+*kdemultimedia-3.5.2-r1 (02 Apr 2006)
+
+  02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/artsplugin-akode-3.5.2-memleak.patch,
+  +kdemultimedia-3.5.2-r1.ebuild:
+  Add patch to avoid memory leak in arts when using akode plugin. Thanks to
+  Matthew Stapleton for the patch in bug #128574.
 
 *kdemultimedia-3.5.2 (25 Mar 2006)
 

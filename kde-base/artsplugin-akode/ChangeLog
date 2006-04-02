@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/artsplugin-akode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-akode/ChangeLog,v 1.16 2006/03/28 04:47:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-akode/ChangeLog,v 1.17 2006/04/02 23:55:27 flameeyes Exp $
+
+*artsplugin-akode-3.5.2-r1 (02 Apr 2006)
+
+  02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/artsplugin-akode-3.5.2-memleak.patch,
+  +artsplugin-akode-3.5.2-r1.ebuild:
+  Add patch to avoid memory leak in arts when using akode plugin. Thanks to
+  Matthew Stapleton for the patch in bug #128574.
 
   28 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   artsplugin-akode-3.5.0.ebuild, artsplugin-akode-3.5.1.ebuild,
