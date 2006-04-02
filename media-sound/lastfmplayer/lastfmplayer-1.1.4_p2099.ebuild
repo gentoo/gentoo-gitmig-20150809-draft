@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.4_p2099.ebuild,v 1.1 2006/04/02 19:58:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.4_p2099.ebuild,v 1.2 2006/04/02 23:11:09 genstef Exp $
 
 inherit eutils subversion
 
@@ -13,7 +13,7 @@ ESVN_OPTIONS="--revision ${PV#*_p}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="oss"
+IUSE=""
 
 DEPEND="=x11-libs/qt-4*"
 RDEPEND="${DEPEND}"
@@ -55,8 +55,7 @@ src_install() {
 	dodir ${destination}/cache
 	keepdir ${destination}/cache
 
-	use oss || make_wrapper lastfm "aoss ./player" ${destination}
-	use oss && make_wrapper lastfm ./player ${destination}
+	make_wrapper lastfm ./player ${destination}
 	newicon data/icon.png lastfm.png
 	make_desktop_entry lastfm "Last.fm Player" lastfm.png
 

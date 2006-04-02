@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lastfmplayer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.1 2006/04/02 19:58:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.2 2006/04/02 23:11:09 genstef Exp $
+
+  02 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  lastfmplayer-1.1.4_p2099.ebuild:
+  remove oss USEflag thanks to Ryan Hill <dirtyepic.sk@gmail.com> in bug 128581
 
 *lastfmplayer-1.1.4_p2099 (02 Apr 2006)
 
