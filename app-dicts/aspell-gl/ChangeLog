@@ -1,0 +1,8 @@
+# ChangeLog for app-dicts/aspell-de
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-gl/ChangeLog,v 1.1 2006/04/02 19:05:17 arj Exp $
+
+*aspell-gl-0.50.0 (02 Apr 2006)
+
+  02 Apr 2006; Anders Rune Jensen <arj@gentoo.org> aspell-gl-0.50.0.ebuild
+  New aspell dict. Fixes #127297
