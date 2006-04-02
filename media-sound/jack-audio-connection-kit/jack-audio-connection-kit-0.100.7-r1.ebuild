@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.100.7-r1.ebuild,v 1.1 2006/04/01 17:26:15 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.100.7-r1.ebuild,v 1.2 2006/04/02 00:06:44 fvdpol Exp $
 
 inherit flag-o-matic eutils multilib
 
-NETJACK=netjack-0.11rc1
+NETJACK=netjack-0.11rc2
 
 DESCRIPTION="A low-latency audio server"
 HOMEPAGE="http://www.jackaudio.org"
