@@ -1,15 +1,28 @@
-MD5 7b52510ca505d401d043f2c1880995b1 ChangeLog 2771
-RMD160 54f2bc8ed2fdf2c2b86c692a7f371b31c9ddc622 ChangeLog 2771
-SHA256 4f4077366f461af2f28454f9c3cac0d4c020d9c378536c36aea628dfd62edecc ChangeLog 2771
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a9112422f3ca5ab5611f26da88d9f774 ChangeLog 2912
+RMD160 1738dfb3a94382350adfae7a48477180a4e7e143 ChangeLog 2912
+SHA256 0e84f88d1246a4ea9ea1b8f76c8d9595c611a5caeb42b4328e5d922c94892f80 ChangeLog 2912
 MD5 ba75ef912d119247f215f75fea97ce45 files/0.21-cvs-segfault-fix.patch 575
 RMD160 1b7707085f2d8215564af93b91396ef799d8cbb3 files/0.21-cvs-segfault-fix.patch 575
 SHA256 de4e24aa398912af6fa4dffee0ea31e34fb505f6fb5c6768f34797ff8914c7af files/0.21-cvs-segfault-fix.patch 575
-MD5 629b186fe097d16cc43e4748d648acf0 files/digest-heroes-0.21-r1 286
-RMD160 3614afd4532306f6043d0dee3bd4eb05d504d9c5 files/digest-heroes-0.21-r1 286
-SHA256 4d4b2e8fc1ec4c6871edf49009c4901d8957bcc6656474ddd6a6e3af3ff91501 files/digest-heroes-0.21-r1 286
-MD5 00ffd39225d68ad61098d623c38f659a heroes-0.21-r1.ebuild 1540
-RMD160 75b4ad75a903d6495072938729da1cba71c0a184 heroes-0.21-r1.ebuild 1540
-SHA256 5b39be134629b1cb696722595686fe0e740366a9be1bde8ef2327b8631c5caef heroes-0.21-r1.ebuild 1540
+MD5 69ae36e14d1c81c9fa019aa005ebe471 files/digest-heroes-0.21-r1 1042
+RMD160 80e21d4dce50b03710ad1d83f0bdb1c1ae11f4ac files/digest-heroes-0.21-r1 1042
+SHA256 1f3fda92a35b7d482cfc81fc8f96a7450242c8ceeb66350b6c23acb98144619a files/digest-heroes-0.21-r1 1042
+MD5 f367354b8db0b1beb117a7b334b439d8 files/heroes-0.21-gcc4.patch 6016
+RMD160 9fab374668c39fcec9e9bf2fb3ba1fe76fcf00bd files/heroes-0.21-gcc4.patch 6016
+SHA256 3ec059d2cbf978d0760ef28e24749202e97dde4c9af7194f094a06758bf9cbee files/heroes-0.21-gcc4.patch 6016
+MD5 f2b5c83d12c6f3b69ce93373bc37ab9d heroes-0.21-r1.ebuild 1571
+RMD160 c51b4d6d7592ce76e2324b957d4aa8a469d5fc1c heroes-0.21-r1.ebuild 1571
+SHA256 2d5bc669fbb0488526a2b7b96821ed5e92ec4f1cced464043cce68716676f0d3 heroes-0.21-r1.ebuild 1571
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEL81g2CTtIKiFlQIRAktXAJsEp+ZZws5GpgSKq5dxwMONjhfqCACgoSVh
+/FtvE4g4fSF0rPvr9WciKVA=
+=MdIu
+-----END PGP SIGNATURE-----

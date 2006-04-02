@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.4 2006/01/28 21:19:10 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.5 2006/04/02 13:10:39 tupone Exp $
 
 inherit eutils games
 
@@ -31,6 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}/${P}
 	epatch ${FILESDIR}/${PV}-cvs-segfault-fix.patch #56118
+	epatch "${FILESDIR}/${P}"-gcc4.patch
 }
 
 src_compile() {
