@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.7.ebuild,v 1.2 2005/12/10 21:49:17 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.8.ebuild,v 1.1 2006/04/02 22:12:35 genstef Exp $
+
+inherit eutils
 
 MY_PV="${PV/.}"
 DESCRIPTION="gsView PostScript and PDF viewer"
@@ -12,19 +14,24 @@ SLOT="0"
 LICENSE="Aladdin"
 KEYWORDS="~x86 ~ppc ~amd64"
 
-RDEPEND="=x11-libs/gtk+-1.2*
+RDEPEND="
 	app-text/epstool
 	virtual/ghostscript"
 DEPEND="app-arch/unzip"
 PROVIDE="virtual/pdfviewer
 	virtual/psviewer"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gsesp.patch
+}
+
 src_compile() {
 	## copy Unix makefile
 	ln -s srcunx/unx.mak Makefile
 
 	## respect CFLAGS
-	echo ${P}
 	sed -i -e "s:^CFLAGS=-O :CFLAGS=${CFLAGS} :g" Makefile
 	sed -i -e "s:GSVIEW_DOCPATH:\"/usr/share/doc/${PF}/html/\":" srcunx/gvx.c
 
@@ -37,7 +44,7 @@ src_install() {
 
 	doman srcunx/gsview.1
 
-	dodoc gsview.css cdorder.txt regorder.txt LICENCE
+	dodoc gsview.css cdorder.txt regorder.txt
 
 	if use doc
 	then
