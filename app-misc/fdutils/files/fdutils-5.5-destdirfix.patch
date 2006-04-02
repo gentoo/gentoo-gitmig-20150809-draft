@@ -20,11 +20,11 @@
  	if [ -n "$(INSTALL_INFO)" ] ; then \
  		if [ -f $(infodir)/dir.info ] ; then \
 -			$(INSTALL_INFO) $(infodir)/fdutils.info $(infodir)/dir.info; \
-+			$(INSTALL_INFO) $(infodir)/fdutils.info $(DESTDIR)$(infodir)/dir.info; \
++			$(INSTALL_INFO) $(DESTDIR)$(infodir)/fdutils.info $(DESTDIR)$(infodir)/dir.info; \
  		fi; \
  		if [ -f $(infodir)/dir ] ; then \
 -			$(INSTALL_INFO) $(infodir)/fdutils.info $(infodir)/dir; \
-+			$(INSTALL_INFO) $(infodir)/fdutils.info $(DESTDIR)$(infodir)/dir; \
++			$(INSTALL_INFO) $(DESTDIR)$(infodir)/fdutils.info $(DESTDIR)$(infodir)/dir; \
  		fi; \
  	fi
  

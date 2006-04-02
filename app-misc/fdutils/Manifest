@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f1dc2e162d70f5b00f207cce69bf2440 ChangeLog 2238
+MD5 6154dc8204b2c0828e4c9f6b50a155fc ChangeLog 2510
+RMD160 e5f059d8582a0776278f96ead57ecf6bf3e59a5c ChangeLog 2510
+SHA256 16fd6991d88a7eb5df83acdde7196f14521615d25541f03b3df1d12f8409a00a ChangeLog 2510
 MD5 fb33c6e876bc1cb641bb18e97263194b fdutils-5.4.20020222-r1.ebuild 1061
-MD5 a6d8fa01aaa0b53d917e3f289a5d4cc8 fdutils-5.5.ebuild 969
+RMD160 2d0a13a20ef4a747c83810435e2146e18648218d fdutils-5.4.20020222-r1.ebuild 1061
+SHA256 65f5d37cccb993d01fb10e46365d6e64d9470574e57771cd0426ccea7cd97154 fdutils-5.4.20020222-r1.ebuild 1061
+MD5 0e656872d97dc252ffdb968ee1f071f3 fdutils-5.5.ebuild 1007
+RMD160 6587b704fc1243fc1d96b312ba967df1f03fd9db fdutils-5.5.ebuild 1007
+SHA256 244349304a1ef4b2e4e50f67a4945d76b081298c692d85a7cac83cf59d7c7d34 fdutils-5.5.ebuild 1007
 MD5 c2ef222aaad9496533b756688db40543 files/digest-fdutils-5.4.20020222-r1 135
+RMD160 2adc58a9f18cdb05b12b76c4de4e974ee4c14720 files/digest-fdutils-5.4.20020222-r1 135
+SHA256 6980d8ae25f6ee6f445a6b067ba8ce1882618e122b5049bbcdedb70817ef5681 files/digest-fdutils-5.4.20020222-r1 135
 MD5 5c3161c351b422855e48edafa8b3848b files/digest-fdutils-5.5 63
-MD5 21695579553826eb26a0bb04c353aafb files/fdutils-5.5-destdirfix.patch 5679
+RMD160 12c60f42880b5ed8ffcff7a677a8290b27d66e4c files/digest-fdutils-5.5 63
+SHA256 2ecaa2463e8c0f368932dfa0e0f5c6475d7d3f2b37491341876f17616ef83410 files/digest-fdutils-5.5 63
+MD5 d9026ade4ac300a430ec8810078220c0 files/fdutils-5.5-destdirfix.patch 5699
+RMD160 dc6552f60672abfa645367b772d78581a89e151b files/fdutils-5.5-destdirfix.patch 5699
+SHA256 a2d2961738840aba6ec1b298da177bd4f474faa0b8ce01da6bf884d133ca68ee files/fdutils-5.5-destdirfix.patch 5699
 MD5 9ff6a26897281b34d5e67b3f80ab60f2 files/fdutils-no-fd.4-manpage.diff 434
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrrEcAiZjviIA2XgRAgsEAKDf5SJ51yzRSDYTdyy/YrN/vG2WLQCg8pWf
-6Y++uL7ZAYvD6BxTZTeJgmk=
-=gPJ0
------END PGP SIGNATURE-----
+RMD160 e2b69c348e1c134324d06cc0eb234d3ef4afb669 files/fdutils-no-fd.4-manpage.diff 434
+SHA256 3436f0c8b8b52b3f418696cb19cd95027f016260a85ed8cb95691b33d802c075 files/fdutils-no-fd.4-manpage.diff 434

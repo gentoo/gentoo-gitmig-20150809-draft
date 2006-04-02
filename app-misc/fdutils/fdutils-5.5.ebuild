@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.5.ebuild,v 1.4 2005/12/25 14:47:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.5.ebuild,v 1.5 2006/04/02 23:06:42 robbat2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,8 +25,8 @@ src_unpack() {
 }
 
 src_compile() {
+	append-ldflags $(bindnow-flags)
 	econf --enable-fdmount-floppy-only || die
-	append-cflags $(bindnow-flags)
 
 	if use doc;
 	then
@@ -38,5 +38,6 @@ src_compile() {
 
 src_install() {
 	dodoc Changelog
-	emake DESTDIR=${D} install || die
+	use doc && dodir /usr/share/info/
+	emake -j1 DESTDIR=${D} install || die
 }
