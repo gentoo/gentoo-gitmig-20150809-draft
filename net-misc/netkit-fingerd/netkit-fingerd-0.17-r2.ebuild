@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/netkit-fingerd-0.17-r2.ebuild,v 1.24 2004/12/01 03:56:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/netkit-fingerd-0.17-r2.ebuild,v 1.25 2006/04/02 22:20:04 robbat2 Exp $
 
 inherit eutils
 
-MY_PN=${PN/netkit/bsd}
-MY_PN=${MY_PN/rd/r}
-S=${WORKDIR}/${MY_PN}-${PV}
-DESCRIPTION="Netkit - fingerd"
+MY_PN="${PN/netkit/bsd}"
+MY_PN="${MY_PN/rd/r}"
+S="${WORKDIR}/${MY_PN}-${PV}"
+DESCRIPTION="Netkit - fingerd and finger client"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
 SRC_URI="mirror://debian/pool/main/b/${MY_PN}/${MY_PN}_${PV}.orig.tar.gz"
 
