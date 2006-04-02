@@ -1,43 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 001f342fe84747154b55bbe3d1b5e1c7 ChangeLog 4396
-RMD160 78a7344f6ad842a7f6ed14f1c906d3ddf35ca54e ChangeLog 4396
-SHA256 e1421c6c9ff36c01b4d0191e1ca2d38f5cadf036d43c6842320f6cdbda3d2f9f ChangeLog 4396
+MD5 65f91387b0c5a8b91a1a771b5468bd84 ChangeLog 4720
+RMD160 b814c0775b41f38b5ae336992c3b2a6f53c46fd7 ChangeLog 4720
+SHA256 01e0690419e636a593d4b11f3a5dfda0bcf78461c90315d34d834021b930c128 ChangeLog 4720
 MD5 3ecae1143becc2047418f67b38407479 enscript-1.6.3-r3.ebuild 913
 RMD160 8286409f197e6a5ac40835e6717a35947cc70aee enscript-1.6.3-r3.ebuild 913
 SHA256 8f9fe94e894b67daab98b09eaa17b8b5b392c983165b3753e547e1f912c69089 enscript-1.6.3-r3.ebuild 913
-MD5 965b9d97b7a5ffed960c2dc13d302bda enscript-1.6.4-r1.ebuild 1039
-RMD160 c378febbec04429381f9a79ad61ded9d235a2642 enscript-1.6.4-r1.ebuild 1039
-SHA256 89de7a3192707c1b501996c812fe3f79d0221719dbaa04c59c7388d63ad09056 enscript-1.6.4-r1.ebuild 1039
-MD5 f1204f14336bb01477ad8e1721eabee9 enscript-1.6.4.ebuild 978
-RMD160 bfad64bc13b46fffa265003650cb66d7a5bbf4ed enscript-1.6.4.ebuild 978
-SHA256 504eb07edbc8565504a30522b831ce9ced97844f41c5f6838b3cab2a655fd2cc enscript-1.6.4.ebuild 978
+MD5 b5950bf8dca22f4cdc6e4589483d350b enscript-1.6.4-r2.ebuild 1149
+RMD160 cdc34ee6bc6b5dcfaadcdfbcf3445094b3f0fdff enscript-1.6.4-r2.ebuild 1149
+SHA256 a60a07ee1eb00df54222861a9fdee73274debbc4dbb39ce4a26222739207c302 enscript-1.6.4-r2.ebuild 1149
 MD5 528d3e39a7e18ff200cccfd037ee0422 files/digest-enscript-1.6.3-r3 66
 RMD160 c52c2515f9ce3e3d10cb80fa1cd701a7ab002311 files/digest-enscript-1.6.3-r3 66
 SHA256 094066740fd5ead29905a49212ecd860f71088a4a7190bbc0e4e5e27a17d9ae2 files/digest-enscript-1.6.3-r3 66
-MD5 96b207f1bc22828660e417ebaab43d03 files/digest-enscript-1.6.4 67
-RMD160 8f3e8822e725681f7ccf15bbc7392836396cd9cc files/digest-enscript-1.6.4 67
-SHA256 31ba27c8d76c5c8964bb9c13b2770d5be9d5ed0d0a36733831ef3d882d747ce6 files/digest-enscript-1.6.4 67
-MD5 96b207f1bc22828660e417ebaab43d03 files/digest-enscript-1.6.4-r1 67
-RMD160 8f3e8822e725681f7ccf15bbc7392836396cd9cc files/digest-enscript-1.6.4-r1 67
-SHA256 31ba27c8d76c5c8964bb9c13b2770d5be9d5ed0d0a36733831ef3d882d747ce6 files/digest-enscript-1.6.4-r1 67
+MD5 f70a39f6291eddbb73355c26d4bbbad7 files/digest-enscript-1.6.4-r2 247
+RMD160 2b4a871cac2752fc37109a71130d72149060bbff files/digest-enscript-1.6.4-r2 247
+SHA256 ba8f7c5272795260040c96a372eb3fd64460a7f6364d3eb7f9d683106519c57d files/digest-enscript-1.6.4-r2 247
+MD5 7a1a122665bbefdc6a1e7df62e28ffb1 files/ebuild.st 6113
+RMD160 9d3aac83d40a3fca3d1cd7707973f6fdb275898a files/ebuild.st 6113
+SHA256 672cade9cfaddc7c21b3fb59952b0dd5f3593d41e958146467f29249f005f5ac files/ebuild.st 6113
 MD5 2982cb4ed62b45684d5e6e015c34a52e files/enscript-1.6.3-language.patch 456
 RMD160 5bc06db3e9d3ff441f2b97e94255d93d7b827e9c files/enscript-1.6.3-language.patch 456
 SHA256 b4830bb18f98749724f1382ef8c47124ae134c707af5303103fead2343710642 files/enscript-1.6.3-language.patch 456
 MD5 e105a37406fc2ff7aa4895780e4b5a66 files/enscript-1.6.3-security.patch 5447
 RMD160 d23a9a4eb478279bf56123d35fc7adc8fd292f30 files/enscript-1.6.3-security.patch 5447
 SHA256 bd9525903b9690f259f0bba8257a96b57681f03a65272d590796c796a8396052 files/enscript-1.6.3-security.patch 5447
+MD5 d87b4ba69c2c5105ffffcb7852c0e873 files/enscript-1.6.4-ebuild.st.patch 332
+RMD160 e4b03bed2014baab7a25b3d1a9cc2a2f1d6e6721 files/enscript-1.6.4-ebuild.st.patch 332
+SHA256 fae2d59559a61a3d2f0fb25695c3dc5eab917e1eb22af61844e85584281728a6 files/enscript-1.6.4-ebuild.st.patch 332
 MD5 854bcc9d4ce6d573dfa5133a55e8ddca files/enscript-catmur.patch 604
 RMD160 74dae25828a36028f877d7cec73f321f5354e4ad files/enscript-catmur.patch 604
 SHA256 23b2359b2ef4e9cf0f6b915fb9f326a0a9ebd3f43f4dcca5f4beb2602201d02c files/enscript-catmur.patch 604
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 metadata.xml 161
 SHA256 7c85e6739a71f5bb23e8de36c88677d772946e61f7285892f7554e37bd2bca76 metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEL+XXAiZjviIA2XgRAgPYAJ4151V62rBn3FaJ7maEpsnm72MKKQCff8PP
-0gVWfqbkdCkZOqo8S7zp4rs=
-=Udav
------END PGP SIGNATURE-----

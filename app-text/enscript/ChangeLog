@@ -1,6 +1,15 @@
 # ChangeLog for app-text/enscript
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.36 2006/04/02 14:55:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.37 2006/04/02 21:06:12 genstef Exp $
+
+*enscript-1.6.4-r2 (02 Apr 2006)
+
+  02 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/enscript-1.6.4-ebuild.st.patch, +files/ebuild.st,
+  -enscript-1.6.4.ebuild, -enscript-1.6.4-r1.ebuild,
+  +enscript-1.6.4-r2.ebuild:
+  New ebuild highlighting file thanks to Ed Catmur <ed@catmur.co.uk> in bug
+  121014, remove old
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   enscript-1.6.4-r1.ebuild:
