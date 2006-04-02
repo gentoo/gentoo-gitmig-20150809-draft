@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.45 2006/04/01 16:00:48 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.46 2006/04/02 10:23:37 kloeri Exp $
+
+  02 Apr 2006; Bryan Østergaard <kloeri@gentoo.org gv-3.6.1-r2.ebuild:
+  Stable on alpha, bug 127641.
 
   01 Apr 2006; Patrick McLean <chutzpah@gentoo.org> gv-3.6.1-r2.ebuild:
   Stable on amd64 (bug #127641)
