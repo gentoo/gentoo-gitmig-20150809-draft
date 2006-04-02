@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r2.ebuild,v 1.2 2006/04/01 01:20:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r2.ebuild,v 1.3 2006/04/02 07:37:31 genstef Exp $
 
 inherit eutils libtool
 
@@ -38,7 +38,6 @@ RDEPEND="${DEP}
 
 DEPEND="${DEP}
 	gtk? ( dev-util/pkgconfig )"
-PROVIDE="virtual/ghostscript"
 
 S=${WORKDIR}/${MY_P}
 

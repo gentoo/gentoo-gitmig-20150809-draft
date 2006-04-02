@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53-r3.ebuild,v 1.2 2006/02/21 21:29:48 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53-r3.ebuild,v 1.3 2006/04/02 07:41:28 genstef Exp $
 
 inherit eutils
 
@@ -41,7 +41,6 @@ RDEPEND="${DEP}
 
 DEPEND="${DEP}
 	gtk? ( dev-util/pkgconfig )"
-PROVIDE="virtual/ghostscript"
 
 S=${WORKDIR}/${MY_P}
 
