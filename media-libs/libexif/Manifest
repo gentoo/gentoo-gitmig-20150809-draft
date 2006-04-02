@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 562b6982316e91be56efe3f8dc22879e ChangeLog 7263
-RMD160 7415b27120ab2dbee3c3f1010bec3e953a0139cd ChangeLog 7263
-SHA256 6db0051b7f5a960b812e095571064ea86ddf41dae697bcd361c3db84c3c66624 ChangeLog 7263
+MD5 d90f78780d4dd1ee69c75b8ddfcc1d22 ChangeLog 7489
+RMD160 e73d904e8de3e4a62a8dc207a6b44d409305fcfa ChangeLog 7489
+SHA256 0af1bc9fe3e5fbaeb22013cfee1799010d710d545d6ef31f4ac254121f76925a ChangeLog 7489
 MD5 c6e7ee4006cd2b5bd7cb0367f816fc8a files/digest-libexif-0.5.12-r3 66
 RMD160 4162cf85f3d192b52a9c4a08d96994242ae07db7 files/digest-libexif-0.5.12-r3 66
 SHA256 890b232ff29d997a3d8f1b86a817f8e8a4a9f105f5d891050744a43ea85b4495 files/digest-libexif-0.5.12-r3 66
 MD5 651a048bdebedafaaef4c942cd1827c9 files/digest-libexif-0.6.12-r4 244
 RMD160 7f3fd2c9b8742862412df5b2be27c41a503e8162 files/digest-libexif-0.6.12-r4 244
 SHA256 a721d2469892986314a8beef62ffb84107c2e9f0848b24b31c9e213a190b6b1b files/digest-libexif-0.6.12-r4 244
-MD5 71a29ea4c5ef7e414ab84bd5a2034bac files/digest-libexif-0.6.13 247
-RMD160 2bf3f9c1ecf43d26db3de4c6efe68536db395043 files/digest-libexif-0.6.13 247
-SHA256 f1285a4b83cb8084ddbd6efac58d7df6e5fdf16798262c751e01d72528eeab6e files/digest-libexif-0.6.13 247
+MD5 71a29ea4c5ef7e414ab84bd5a2034bac files/digest-libexif-0.6.13-r1 247
+RMD160 2bf3f9c1ecf43d26db3de4c6efe68536db395043 files/digest-libexif-0.6.13-r1 247
+SHA256 f1285a4b83cb8084ddbd6efac58d7df6e5fdf16798262c751e01d72528eeab6e files/digest-libexif-0.6.13-r1 247
 MD5 a8085215f21d54708b3bfca3e1aeb612 files/libexif-0.5-CAN-2005-0664.patch 860
 RMD160 1c179d8c5e00180a4f7e28f27e3dd5f852f51ca6 files/libexif-0.5-CAN-2005-0664.patch 860
 SHA256 2affec46d9081bfacfeb5d92ce7092636451f0e752407aed0d3603c03a8f2f86 files/libexif-0.5-CAN-2005-0664.patch 860
@@ -34,22 +34,25 @@ SHA256 82b331e21fb6aa6f31dbd7b8797c3d922cc1bd357dd5c0ee09f7b3e1c40b41b5 files/li
 MD5 a800917ad4cc954929a950eb7a726f18 files/libexif-0.6.13-doxygen.patch 1631
 RMD160 251b5595d4eefbde0e3ef7cd8e9f8fc1dd2cb32c files/libexif-0.6.13-doxygen.patch 1631
 SHA256 c098d3844a2a4121dcc747822a0c25a97e81bebd983538409882dbca54dd8ade files/libexif-0.6.13-doxygen.patch 1631
+MD5 8f89c1f64e76139750aa946f964de2eb files/libexif-0.6.13-pkgconfig.patch 402
+RMD160 269822b19acf52a1be773e64fcf72f5480155e89 files/libexif-0.6.13-pkgconfig.patch 402
+SHA256 9986246ab56eb294bd93eada0847f3141beed90f23f5711f4ff0f696f38f2def files/libexif-0.6.13-pkgconfig.patch 402
 MD5 36fcf560829051ba4b58bb19b9254b59 libexif-0.5.12-r3.ebuild 1179
 RMD160 f4b8674b7ee06b0eca6fcb64523423d2d7f18f8c libexif-0.5.12-r3.ebuild 1179
 SHA256 9fd83fe926cec0e85d2fa7880ee4f4992db346e29b376b5a7b56f33398675b88 libexif-0.5.12-r3.ebuild 1179
 MD5 139d56122fdc09e435ecdb2c0c0441ea libexif-0.6.12-r4.ebuild 1661
 RMD160 99f8267471af0ca131a97de293a2d3c3701976c6 libexif-0.6.12-r4.ebuild 1661
 SHA256 1ff0be3e37e8cf31e1912d1079ad0d944466e133319b4675386c2c89e18aea25 libexif-0.6.12-r4.ebuild 1661
-MD5 e8eb84b1fb10edb4472cc79a4ead90bd libexif-0.6.13.ebuild 1549
-RMD160 46355efda6dd3add3d24e6940b28ad9705c8c720 libexif-0.6.13.ebuild 1549
-SHA256 ea95813c94ea3260a16dc6323ba262d8c61b2d99a6f0b22aaba8ae6ff8e46aca libexif-0.6.13.ebuild 1549
+MD5 d4f6ce93f2dc9c29e96223d4f725c51f libexif-0.6.13-r1.ebuild 1669
+RMD160 9a391dc808824734f5b04686fdece742db39aeaa libexif-0.6.13-r1.ebuild 1669
+SHA256 af2aa0ea55bca8c861f448ed792390ee3dda70cfe633bc2887f3b027f7d0cbd3 libexif-0.6.13-r1.ebuild 1669
 MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
 RMD160 d1f5ea37202987c54db9697175a55e5609386654 metadata.xml 259
 SHA256 14f1bab6a31d434eda6319b2783239e50179d75501edb6e255bb6c3e665418cf metadata.xml 259
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFELtVhOpjtAl+gMRURAiY/AJ4quY5A7L4nUeaQ7hng94IsTQK4TACeNEOx
-kFoMjwBu6vDPzUEXTPX7aKQ=
-=ZRlm
+iD8DBQFELz0IOpjtAl+gMRURAgm+AKCW3RYj0uNSyOTxwe4f+h6Q/F0dpQCg0u5y
+kE9IQ5YuD6uEpbuCph4TsK4=
+=CSsz
 -----END PGP SIGNATURE-----

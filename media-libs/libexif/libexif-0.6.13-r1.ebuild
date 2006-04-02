@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.13.ebuild,v 1.2 2006/04/01 05:23:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.13-r1.ebuild,v 1.1 2006/04/02 02:54:51 eradicator Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="Library for parsing, editing, and saving EXIF data"
 HOMEPAGE="http://libexif.sourceforge.net/"
@@ -14,20 +14,24 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh 
 IUSE="nls doc"
 
 DEPEND="dev-util/pkgconfig
-	doc? ( app-doc/doxygen )"
-RDEPEND=""
+	doc? ( app-doc/doxygen )
+	nls? ( sys-devel/gettext )"
+RDEPEND="nls? ( virtual/libintl )"
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
 	epatch ${FILESDIR}/libexif-0.6.13-doxygen.patch
+	epatch "${FILESDIR}/${P}-pkgconfig.patch"
 
 	# The libexif hackers made a goof on the soname versioning.
 	sed -i 's/^LIBEXIF_AGE=0$/LIBEXIF_AGE=2/' ${S}/configure
 	sed -i 's/^LIBEXIF_REVISION=0$/LIBEXIF_REVISION=2/' ${S}/configure
 	sed -i 's/^LIBEXIF_VERSION_INFO=.*$/LIBEXIF_VERSION_INFO=$LIBEXIF_CURRENT:$LIBEXIF_AGE:$LIBEXIF_REVISION/' \
 		${S}/configure
+
+	elibtoolize
 }
 
 src_compile() {
