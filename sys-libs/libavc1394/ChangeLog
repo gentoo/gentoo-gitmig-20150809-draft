@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libavc1394
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.19 2006/02/18 22:52:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.20 2006/04/02 21:36:51 josejx Exp $
+
+  02 Apr 2006; Joseph Jezak <josejx@gentoo.org> libavc1394-0.5.0.ebuild:
+  Marked ppc stable for bug #127813 thanks to tha_gamemaster for testing.
 
   18 Feb 2006; Aron Griffis <agriffis@gentoo.org> libavc1394-0.5.0.ebuild:
   Mark 0.5.0 ~ia64
