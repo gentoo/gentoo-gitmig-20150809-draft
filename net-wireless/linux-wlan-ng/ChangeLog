@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/linux-wlan-ng
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.54 2006/02/12 19:53:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.55 2006/04/02 10:19:59 betelgeuse Exp $
+
+*linux-wlan-ng-0.2.3-r1 (02 Apr 2006)
+
+  02 Apr 2006; Petteri Räty <betelgeuse@gentoo.org>
+  +linux-wlan-ng-0.2.3-r1.ebuild:
+  Removed pcmcia support in favor of better alternatives like hostap and
+  orinoco drivers.
 
   12 Feb 2006; Petteri Räty <betelgeuse@gentoo.org>
   -linux-wlan-ng-0.2.2.ebuild:
