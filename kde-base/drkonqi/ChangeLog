@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/drkonqi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.40 2006/04/01 21:55:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.41 2006/04/02 13:04:44 flameeyes Exp $
+
+  02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/drkonqi-3.5.2-splitdebug.patch,
+  -files/drkonqui-3.5.2-splitdebug.patch:
+  Fix patch naming.
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/drkonqui-3.5.2-splitdebug.patch, drkonqi-3.5.2.ebuild:
