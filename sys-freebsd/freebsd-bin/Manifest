@@ -1,28 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7d9d2f955bdec2b57de9e968bc0b7785 ChangeLog 1865
-RMD160 cfaa57172fdb492fecee2c5c50d2a01502347857 ChangeLog 1865
-SHA256 d63f5d2b56572904c310cdfe842db3ca18b0b9b8283322f877476dd007f9399c ChangeLog 1865
+MD5 6c48aeef0e7ba2a4948be1aa19493ed2 ChangeLog 1975
+RMD160 557ce1717dcbc8ba44f4ef9b5c28d1d327c2de86 ChangeLog 1975
+SHA256 6b36b2b718194112232afa72260fc99eeae7cac7eea467e648e1389489923572 ChangeLog 1975
 MD5 d9463faad21b375992f5b1e538b43331 files/digest-freebsd-bin-6.0 207
 RMD160 320ee96616a891fb3942cf8ed7bdfe11706ee935 files/digest-freebsd-bin-6.0 207
 SHA256 32ff1eba68625517dd716b71364e2ac2a81c7907809ecca0d7b08c49ca75b397 files/digest-freebsd-bin-6.0 207
 MD5 88b10ffe4168218251cdaee3994b36e2 files/freebsd-bin-6.0-flex-2.5.31.patch 277
 RMD160 3dd13f280f462964feecd54ea9cafac8608955d4 files/freebsd-bin-6.0-flex-2.5.31.patch 277
 SHA256 4c60ee85f4ec7dfb86eab1536eb0d6aae65c955c756362cd2b7f2b5a024dfb17 files/freebsd-bin-6.0-flex-2.5.31.patch 277
-MD5 63cd4a526baeaec0a46eab33beef9510 files/freebsd-bin-flex.patch 381
-RMD160 cbbd56c1a79295e51cd067ba95c3e1965f67d0c6 files/freebsd-bin-flex.patch 381
-SHA256 da877a4db08f2eac5b8cfd4af7a9ff30c6101a6133b5b85bf97e79bab4ed71e6 files/freebsd-bin-flex.patch 381
 MD5 6811b16646e89b5fb7c5219ceecbbfe4 freebsd-bin-6.0.ebuild 1085
 RMD160 f8211443e92279221350541484db0b5ace0ce4cc freebsd-bin-6.0.ebuild 1085
 SHA256 82a59057373d8773ce7753be80c5c3569a638dc82acb9fcd2befecb648488e19 freebsd-bin-6.0.ebuild 1085
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEMEc1AiZjviIA2XgRAjYBAKDMtr2HddMkGEb4i2fHkzLM+5QBOQCg7337
-1wefaHDaMrdmU6RtZaao5xg=
-=0jw4
------END PGP SIGNATURE-----

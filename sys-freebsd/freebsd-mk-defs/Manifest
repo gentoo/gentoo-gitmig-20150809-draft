@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fcba7e81b233e2e08eeedbf7ee14c55c ChangeLog 2312
-RMD160 d62b8fcd8a2fbb064d666167321ff39856ab593b ChangeLog 2312
-SHA256 1f8afeb382538ee24295589e793a174bd79f96fa53a03e64928a74dd33960bad ChangeLog 2312
+MD5 3cd7d0653ee79c2fec70fafe0ff92930 ChangeLog 2446
+RMD160 90b8f269b992cb01d353406330975014fbaca333 ChangeLog 2446
+SHA256 9d849875d954286b6c5426ae2fa8bbcd1d4437405478de3c62ed0fdcbcc07ed7 ChangeLog 2446
 MD5 7d42c5df68ad45602fc10e19633adc89 files/digest-freebsd-mk-defs-6.0 71
 RMD160 870093a61b136c922a2da1b08a5605b79a5bab0d files/digest-freebsd-mk-defs-6.0 71
 SHA256 9fcd217b73e1816c2cfa3991a0feaf5fddc52c83d619584d0d9036ed6e84422a files/digest-freebsd-mk-defs-6.0 71
@@ -16,22 +13,9 @@ SHA256 f7e976c5f699a8c968babbcee9b813ee62fb96ea220ddf52005468973d9bb063 files/fr
 MD5 7c6bf2b68cd685a9f76af8c0ea652599 files/freebsd-mk-defs-flex.patch 867
 RMD160 a6515de4317f00ec47765987ae3f5bbdd02bc489 files/freebsd-mk-defs-flex.patch 867
 SHA256 3373ded64bf6447a06e1a4e33acd0c3d758fee20488173ab9d6e891ed2399498 files/freebsd-mk-defs-flex.patch 867
-MD5 7445037000ba2b0b89ea3e199ab83343 files/freebsd-mk-defs-gentoo.patch 7020
-RMD160 0629ec395dd76ad239a9b26647e6c59adeb24000 files/freebsd-mk-defs-gentoo.patch 7020
-SHA256 d9f52076836db3c9bea74f9190c6d709d74829b56382536ff6fd844fb1e1ece9 files/freebsd-mk-defs-gentoo.patch 7020
-MD5 788ecd10236fe4acc8ed424b7a86c65f files/sys.patch 685
-RMD160 f1523b2bf70b7451580dddb5ad383856d593387d files/sys.patch 685
-SHA256 85625b0617aa220ccb1015d181842b063ce5641f12e1952a36c17c5ce452763e files/sys.patch 685
 MD5 3113de4da1ec4e43f81e228f2403c08f freebsd-mk-defs-6.0.ebuild 794
 RMD160 46beea6aeb7cb260e1c4568113a4acdd0479f7b5 freebsd-mk-defs-6.0.ebuild 794
 SHA256 4942ce1b1357f7e5782f43dd4f6851de6e3a8384572c5aae3f1ac97c547230d0 freebsd-mk-defs-6.0.ebuild 794
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEMEfcAiZjviIA2XgRAlvIAKDdS1gnWuZnQDu5Cf+b/bLd8OQJfgCeM72o
-tRvHXKhdNWydmvqf5rTO0Wk=
-=6O3j
------END PGP SIGNATURE-----

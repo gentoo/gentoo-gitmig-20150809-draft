@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d8eeaef7f74e108258ff9b04370aae03 ChangeLog 5191
-RMD160 54469e10d266c16b4e258b53ef712df9046c8a2e ChangeLog 5191
-SHA256 101ec5392c3648345b07f5bfeae3a9576477e3e28a1a56bebaef09fb09dedc15 ChangeLog 5191
+MD5 3a1c2182841f4a7433fd30ce1843ea6f ChangeLog 5380
+RMD160 d718b1f676e79581e81aab3cbd50e650f7f140cc ChangeLog 5380
+SHA256 8523be1d8a8fc9398381873efb4c029c7c0752f75bdc592d79f27c5482c58831 ChangeLog 5380
 MD5 2dc17fc8aaa45e4d1ad9c683927c016e files/digest-freebsd-lib-6.0 1554
 RMD160 5a12c440fc8ad561b5c2708aaec65d9a4d0074a2 files/digest-freebsd-lib-6.0 1554
 SHA256 b268db5b482e04f2d76887e67a1b601e69ea4655abd04184f3d6fd48c47796b3 files/digest-freebsd-lib-6.0 1554
@@ -19,28 +16,12 @@ SHA256 36ca464f0aa1ed8784c8f1edc4a3580704c9a7813963684305250d806000075f files/fr
 MD5 0fa8fbe7549748636959ef4bc4ea9660 files/freebsd-lib-bsdxml.patch 339
 RMD160 27b501cda2ac76230a72dfc3ee6593cb50f8d4b0 files/freebsd-lib-bsdxml.patch 339
 SHA256 c1ac47d6c7176475f0f4b86bb17288a980b44a799fb6f4e7b1920f69e0447dc9 files/freebsd-lib-bsdxml.patch 339
-MD5 05519435e08d33fda36ff33a30347143 files/freebsd-lib-fixmakefiles.patch 3974
-RMD160 cf54e67884dcc1902f27fc756cf379ae92ae4e4f files/freebsd-lib-fixmakefiles.patch 3974
-SHA256 5d8bac99a8014a506476dbac3cefc97b2830b26c448effafac5f84c1743580e2 files/freebsd-lib-fixmakefiles.patch 3974
 MD5 eb10216ffda9c5f69fdb28728c574114 files/freebsd-lib-fixmp.patch 548
 RMD160 91cf241eaa972c13ea6ddd1ec03a6fd7f3a2a4b3 files/freebsd-lib-fixmp.patch 548
 SHA256 bd99697872b00a4275c80935f4f5188f4f859aa358be0ecfc0c5470e9979c354 files/freebsd-lib-fixmp.patch 548
-MD5 df463935dab1512f58055115939d0cec files/freebsd-lib-msun-fenvc.patch 272
-RMD160 7adcda589dcc1b60d5a4bbb29e413fae1635b56f files/freebsd-lib-msun-fenvc.patch 272
-SHA256 02888e9c68f61a6dd9ee94ae7f87fb6367a6cea93893861af40cb7e3c5781e47 files/freebsd-lib-msun-fenvc.patch 272
-MD5 6a03dd52051da74fa1e9c7fae9eccaec files/freebsd-lib-runet.patch 346
-RMD160 5097808371642edb9927e64ebdd161f1689830c3 files/freebsd-lib-runet.patch 346
-SHA256 f6dd1d5197cc77348936757cb1a08a46a8167f9e547087193d7d726e18cbb678 files/freebsd-lib-runet.patch 346
 MD5 dbe3ec201d25e3d870e7b1a7c70029b6 freebsd-lib-6.0.ebuild 3396
 RMD160 fe8cb89eb408c83038ab14ddb849bfb93cc0a33d freebsd-lib-6.0.ebuild 3396
 SHA256 3a61084d0f8f5312227d1b18d37a21bd180c1562027b973f8925fbb5c20e60b6 freebsd-lib-6.0.ebuild 3396
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEMEecAiZjviIA2XgRAol9AKCvgilj8Ro9jnJ+rfZiV4VyOhroNACfTiO9
-KoJXepY8EQUPPcZ9z8FNArI=
-=3NVk
------END PGP SIGNATURE-----
