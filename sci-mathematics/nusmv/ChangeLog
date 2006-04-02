@@ -1,0 +1,12 @@
+# ChangeLog for sci-mathematics/nusmv
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/ChangeLog,v 1.1 2006/04/02 11:40:21 robbat2 Exp $
+
+*nusmv-2.3.1 (02 Apr 2006)
+
+  02 Apr 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/MiniSat_v1.14-optimizedlib.patch, +metadata.xml,
+  +nusmv-2.3.1.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>. This ebuild
+  may need revisiting when GCC4.2 is closer to final.
+
