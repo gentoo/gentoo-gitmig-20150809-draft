@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.1 2006/04/01 04:58:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.2 2006/04/02 05:46:16 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -343,7 +343,7 @@ toolchain-glibc_src_install() {
 
 	if is_crosscompile ; then
 		# punt all the junk not needed by a cross-compiler
-		rm -rf "${D}"/usr/{bin,etc,$(get_libdir)/{gconv,misc},sbin,share}
+		rm -rf "${D}"/{,usr/}{bin,etc,sbin,share} "${D}"/usr/*/*/{gconv,misc}
 	else
 		# zoneinfo stuff is now provided by the timezone-data package
 		rm -rf "${D}"/usr/share/zoneinfo
@@ -403,11 +403,12 @@ toolchain-glibc_src_install() {
 
 	#################################################################
 	# EVERYTHING AFTER THIS POINT IS FOR NATIVE GLIBC INSTALLS ONLY #
-	# Make sure we install the sys-include symlink so that when 
-	# we build a 2nd stage cross-compiler, gcc finds the target 
-	# system headers correctly.  See gcc/doc/gccinstall.info
+	# Make sure we install some symlink hacks so that when we build
+	# a 2nd stage cross-compiler, gcc finds the target system
+	# headers correctly.  See gcc/doc/gccinstall.info
 	if is_crosscompile ; then
 		dosym include /usr/${CTARGET}/sys-include
+		dosym . /usr/${CTARGET}/usr
 		return 0
 	fi
 
@@ -501,6 +502,7 @@ toolchain-glibc_headers_install() {
 	# we build a 2nd stage cross-compiler, gcc finds the target 
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	dosym include /usr/${CTARGET}/sys-include
+	dosym . /usr/${CTARGET}/usr
 }
 
 toolchain-glibc_pkg_postinst() {
@@ -918,7 +920,6 @@ glibc_do_configure() {
 		myconf="${myconf} --without-selinux"
 	fi
 
-	# Pick out the correct location for build headers
 	myconf="${myconf}
 		--without-cvs
 		--enable-bind-now
@@ -928,11 +929,16 @@ glibc_do_configure() {
 		--without-gd
 		--with-headers=$(alt_build_headers)
 		--prefix=/usr
+		--includedir=$(alt_headers)
 		--libdir=$(alt_usrlibdir)
 		--mandir=/usr/share/man
 		--infodir=/usr/share/info
-		--libexecdir=/usr/$(get_libdir)/misc/glibc
+		--libexecdir=$(alt_usrlibdir)/misc/glibc
 		${EXTRA_ECONF}"
+
+	# There is no configure option for this and we need to export it
+	# since the glibc build will re-run configure on itself
+	export libc_cv_slibdir=$(alt_libdir)
 
 	has_version app-admin/eselect-compiler || export CC="$(tc-getCC ${CTARGET})"
 
@@ -940,7 +946,6 @@ glibc_do_configure() {
 	mkdir -p ${GBUILDDIR}
 	cd ${GBUILDDIR}
 	einfo "Configuring GLIBC for $1 with: ${myconf// /\n\t\t}"
-	libc_cv_slibdir=$(alt_libdir) \
 	"${S}"/configure ${myconf} || die "failed to configure glibc"
 }
 
