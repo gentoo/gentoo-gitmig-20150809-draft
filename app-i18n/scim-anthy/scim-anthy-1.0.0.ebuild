@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.0.0.ebuild,v 1.1 2006/04/01 13:43:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.0.0.ebuild,v 1.2 2006/04/02 01:17:57 flameeyes Exp $
+
+inherit libtool
 
 DESCRIPTION="Japanese input method Anthy IMEngine for SCIM"
 HOMEPAGE="http://scim-imengine.sourceforge.jp/index.cgi?cmd=view;name=SCIMAnthy"
@@ -15,6 +17,13 @@ DEPEND="|| ( >=app-i18n/scim-1.2 >=app-i18n/scim-cvs-1.2 )
 	|| ( >=app-i18n/anthy-5900 >=app-i18n/anthy-ss-5911 )"
 RDEPEND="${DEPEND}
 	app-dicts/kasumi"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	elibtoolize
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
