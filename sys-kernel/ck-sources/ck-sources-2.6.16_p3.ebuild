@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.16_p2.ebuild,v 1.1 2006/03/29 22:28:38 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.16_p3.ebuild,v 1.1 2006/04/02 19:12:23 marineam Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
@@ -36,10 +36,10 @@ performance patchset and Gentoo's basic patchset."
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI}
 	ck-server? (
-	http://ck.kolivas.org/patches/cks/patch-${KV_CK/ck/cks}.bz2
+	mirror://kernel/linux/kernel/people/ck/patches/cks/patch-${KV_CK/ck/cks}.bz2
 	)
 	!ck-server? (
-	http://ck.kolivas.org/patches/2.6/${OKV}/${KV_CK}/patch-${KV_CK}.bz2 )"
+	mirror://kernel/linux/kernel/people/ck/patches/2.6/${OKV}/${KV_CK}/patch-${KV_CK}.bz2 )"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
