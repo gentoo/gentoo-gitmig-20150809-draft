@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a7dbf53c611c014d7cc29512401cc65f ChangeLog 1153
-MD5 ac8311e26614a2dd832143bfd74bf28d files/digest-libtecla-1.6.0 66
+MD5 7f986453babde4c271238f91e087e994 ChangeLog 1300
 MD5 ac8311e26614a2dd832143bfd74bf28d files/digest-libtecla-1.6.0-r1 66
 MD5 8d66304f50fad19dfdd14612d0a316b8 files/digest-libtecla-1.6.1 66
 MD5 5d9351e1c4a9b3cff95773fcc2e5f52d libtecla-1.6.0-r1.ebuild 839
-MD5 e4c85be0ed22c533cddb74eddaf0d19b libtecla-1.6.0.ebuild 681
 MD5 241478d3b89225a19f81f6ab79023083 libtecla-1.6.1.ebuild 858
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD0W4WSENan+PfizARApsMAJ9+OGNCJpIzesh73FsZuc+kHvzXBACfY3W7
-JqWGegl79tD4b5R4/JEUHVc=
-=JhBo
------END PGP SIGNATURE-----
