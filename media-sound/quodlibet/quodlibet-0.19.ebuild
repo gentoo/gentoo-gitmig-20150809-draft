@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.19.ebuild,v 1.1 2006/04/03 01:37:32 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.19.ebuild,v 1.2 2006/04/03 02:40:18 deltacow Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.sacredchao.net/~piman/software/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="aac alsa esd flac gnome mad musepack oss vorbis"
 
 DEPEND=">=virtual/python-2.3
