@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.9.0.ebuild,v 1.1 2006/03/20 18:01:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.9.0.ebuild,v 1.2 2006/04/03 23:13:52 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -369,7 +369,7 @@ cflag_setup() {
 }
 
 check_pam() {
-	if use pam && best_version x11-base/${PN}; then
+	if use pam && has_version x11-base/${PN}; then
 		einfo "Previous ${PN} installation detected."
 		einfo "Enabling PAM features in ${PN}."
 	else
@@ -617,8 +617,8 @@ host_def_setup() {
 
 		# Remove circular dep between pam and X11, bug #35468
 		# If pam is in USE and we have X11, then we can enable PAM
-#		if use pam && [ "$(best_version x11-base/xorg-x11)" ]
-		if [ "$(best_version x11-base/xorg-x11)" ]; then
+#		if use pam && has_version x11-base/xorg-x11
+		if has_version x11-base/xorg-x11; then
 			# If you want to have optional pam support, do it properly ...
 			use_build pam HasPam
 			use_build pam HasPamMisc
