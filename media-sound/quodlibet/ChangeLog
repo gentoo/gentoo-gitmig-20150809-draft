@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.14 2006/03/04 16:56:30 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.15 2006/04/03 01:37:32 tcort Exp $
+
+*quodlibet-0.19 (03 Apr 2006)
+
+  03 Apr 2006; Thomas Cort <tcort@gentoo.org> +quodlibet-0.19.ebuild:
+  Version bump to 0.19. Ebuild submitted by Kai Huuhko <kai.huuhko@gmail.com>
+  and commited slightly modified.
 
 *quodlibet-0.17.1-r2 (04 Mar 2006)
 
