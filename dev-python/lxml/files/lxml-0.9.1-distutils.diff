@@ -1,0 +1,17 @@
+--- setup.py.orig	2006-04-03 19:55:57.000000000 +0200
++++ setup.py	2006-04-03 19:56:06.000000000 +0200
+@@ -8,12 +8,8 @@
+ changelog_text = ""
+ version = open('version.txt').read().strip()
+ 
+-try:
+-    from setuptools import setup
+-    from setuptools.extension import Extension
+-except ImportError:
+-    from distutils.core import setup
+-    from distutils.extension import Extension
++from distutils.core import setup
++from distutils.extension import Extension
+ 
+ try:
+     from Pyrex.Distutils import build_ext as build_pyx
