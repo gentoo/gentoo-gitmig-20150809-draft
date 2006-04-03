@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/Net-RawIP-0.2.ebuild,v 1.10 2006/02/27 02:32:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/Net-RawIP-0.2.ebuild,v 1.11 2006/04/03 16:58:44 halcy0n Exp $
 
-inherit perl-module
+inherit eutils perl-module
 
 IUSE=""
 DESCRIPTION="Perl Net::RawIP - Raw IP packets manipulation Module"
@@ -35,4 +35,6 @@ src_unpack() {
 	# Robert Coie <rac@gentoo.org> 2003.05.08
 
 	sed -i -e "s/D_IFLIST_'\./D_IFLIST_ '\./" ${S}/Makefile.PL || die "problem fixing makefile"
+
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 }
