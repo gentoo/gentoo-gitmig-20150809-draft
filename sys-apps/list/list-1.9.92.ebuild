@@ -1,6 +1,6 @@
 # Copyright 2005-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/list/list-1.9.92.ebuild,v 1.1 2006/04/03 20:43:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/list/list-1.9.92.ebuild,v 1.2 2006/04/03 20:53:09 tcort Exp $
 
 
 inherit eutils
@@ -9,7 +9,7 @@ DESCRIPTION="Python client from www.linux-stats.org to collect your hardware and
 HOMEPAGE="http://www.linux-stats.org/"
 SRC_URI="http://www.linux-stats.org/download/LiSt-${PV}.tar.bz2"
 
-KEYWORDS="~x86 ~ppc ~ppc64 ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 LICENSE="GPL-2"
 RESTRICT=""
 SLOT="0"
