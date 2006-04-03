@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.103 2006/03/31 18:40:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.104 2006/04/03 06:49:53 zmedico Exp $
+
+*portage-2.1_pre7-r4 (03 Apr 2006)
+
+  03 Apr 2006; <zmedico@gentoo.org> +portage-2.1_pre7-r4.ebuild,
+  +files/2.1_pre7/1090_r3055_bug_128284_get_open_fds.patch,
+  +files/2.1_pre7/1100_r3063_bug_128506_distdir_error.patch:
+  Bug fixes for #128284 and #128506.
 
   31 Mar 2006; Zac Medico <zmedico@gentoo.org> portage-2.1_pre7-r3.ebuild:
   Make sandbox dependency conditional on elibc_glibc or elibc_uclibc as
