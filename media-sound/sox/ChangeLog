@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.53 2006/04/03 21:30:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.54 2006/04/03 23:01:27 tcort Exp $
+
+  03 Apr 2006; Thomas Cort <tcort@gentoo.org> sox-12.17.9.ebuild:
+  Stable on Alpha wrt Bug #125908.
 
   03 Apr 2006; Jeremy Huddleston <eradicator@gentoo.org> sox-12.17.9.ebuild:
   Stable sparc.
