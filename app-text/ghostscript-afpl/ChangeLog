@@ -1,6 +1,14 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.40 2006/04/02 07:41:28 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.41 2006/04/03 21:42:59 genstef Exp $
+
+*ghostscript-afpl-8.53-r4 (03 Apr 2006)
+
+  03 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/ghostscript-afpl-8.53-ps2epsi-afpl.diff,
+  +ghostscript-afpl-8.53-r4.ebuild:
+  ps2epsi fixes thanks to Martin von Gagern <Martin.vGagern@gmx.net> in bug
+  128650 and bug 128645
 
   02 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
   ghostscript-afpl-8.15.ebuild, -ghostscript-afpl-8.53.ebuild,
