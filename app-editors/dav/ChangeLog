@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/dav
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/dav/ChangeLog,v 1.7 2005/08/28 16:18:12 metalgod Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/dav/ChangeLog,v 1.8 2006/04/03 16:07:00 tcort Exp $
+
+  03 Apr 2006; Thomas Cort <tcort@gentoo.org> dav-0.8.5.ebuild:
+  Added ~alpha keyword.
 
   28 Aug 2005; Luis Medinas <metalgod@gentoo.org> dav-0.8.5.ebuild:
   Added ~amd64 keywords. Closes bug #103753.
