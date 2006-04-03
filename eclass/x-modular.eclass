@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.51 2006/04/03 02:03:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.52 2006/04/03 23:49:32 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -313,6 +313,9 @@ x-modular_src_install() {
 # einstall forces datadir, so we need to re-force it
 #		datadir=${XDIR}/share \
 #		mandir=${XDIR}/share/man \
+
+	# Make sure docs get compressed
+	prepalldocs
 
 	# Don't install libtool archives for server modules
 	if [[ -e ${D}/usr/lib/xorg/modules ]]; then
