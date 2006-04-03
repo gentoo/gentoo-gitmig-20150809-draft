@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.124 2006/03/30 14:13:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.125 2006/04/03 01:05:59 vapier Exp $
+
+  03 Apr 2006; Mike Frysinger <vapier@gentoo.org> files/gcc-config-1.3.13:
+  Generate a CTARGET-cpp wrapper if need be.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   gcc-config-1.3.13-r1.ebuild:
