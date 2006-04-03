@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bfb56b01697e0aa3ab75d997858b967f ChangeLog 1394
+MD5 d8c4d68df64e62ec932a71b6c055aabe ChangeLog 1545
+RMD160 0ec0e2ae34eba038770cde4a980cf8898bed27ac ChangeLog 1545
+SHA256 ae5b39cc9cc0f0227d0d669592a968372cb09744b7340c2a0ab2e29bd9f51a09 ChangeLog 1545
 MD5 0747d2460080585c48ba50648565a98e cl-html-template-0.2.0.ebuild 776
-MD5 62ae8c3eff56ac62a83acdd3a0ab6966 metadata.xml 702
+RMD160 7a450f77bc2a0a63babf7a5af8d882a4e2484793 cl-html-template-0.2.0.ebuild 776
+SHA256 1ed72a2dfb3db8547804d293ba04bd02f67dc2ad55f37c6dc05958f38fe194b1 cl-html-template-0.2.0.ebuild 776
 MD5 a829e752d84caf1d2261b632dcadf3a2 cl-html-template-0.3.1.ebuild 776
+RMD160 fb256568190faee7b35887eecf996a8149aa2204 cl-html-template-0.3.1.ebuild 776
+SHA256 a18a3d1705e42450900e14105b1e41316ad2bc741d53c01934b089a279ec4b56 cl-html-template-0.3.1.ebuild 776
+MD5 7b28b050d23ffa2e75e4a4ff3f8689d2 cl-html-template-0.4.0.ebuild 777
+RMD160 7060a281f790cb7443cab909d5933520f94f4b3d cl-html-template-0.4.0.ebuild 777
+SHA256 d1bddb770a02dfea0b01c4f0ef060644469436f303bb409e1817a2f41e956d6e cl-html-template-0.4.0.ebuild 777
 MD5 e3b4118a66058e348837040e345aeb9a files/digest-cl-html-template-0.2.0 75
+RMD160 6a60e8f83b6b7e1763e8bf6bb09ade5aeedd6b5b files/digest-cl-html-template-0.2.0 75
+SHA256 a384099e66d753307120606cd2698fc4f86ccf9073b359db1a724705e500e856 files/digest-cl-html-template-0.2.0 75
 MD5 91d5f4327e97713306b6c5e489b5c74c files/digest-cl-html-template-0.3.1 75
+RMD160 97294d0f071176bbc793c3d18b351058549901be files/digest-cl-html-template-0.3.1 75
+SHA256 cb33c12bddddecf8b1bc81a2df520dcac4028542b4ca7030babb76c97c2a7e83 files/digest-cl-html-template-0.3.1 75
+MD5 6430daa4a6e45de1e93e576dfe053af0 files/digest-cl-html-template-0.4.0 271
+RMD160 9e95fd3fcf494403de3386c5019163e81a6cd677 files/digest-cl-html-template-0.4.0 271
+SHA256 6c3a684205a3b6fd332296fcc691ef6bf0349339f06d830b8ec5648e30d80cc0 files/digest-cl-html-template-0.4.0 271
+MD5 62ae8c3eff56ac62a83acdd3a0ab6966 metadata.xml 702
+RMD160 48d653c40fefd3198f97841c0b04afdd27f06149 metadata.xml 702
+SHA256 7091dbd6822577b89fc91b9fc91cdbc213877b4eeefb336fbd7cfa8b3bd11399 metadata.xml 702
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFC88nlyiNZaEAZA+ARAiv9AJ0drNy6s3hMkSuwnGEVkWz9+gRHuACcCswT
-KY5leNqz2zPOygzjGD7lixQ=
-=A97s
+iD8DBQFEMVccyiNZaEAZA+ARAh3CAKCCCVE/Jk6OVdfc2xnTDQ+uoImDcACeNMom
+fE6Vb3lzMNUU5kiiQ6B5g3c=
+=u0uF
 -----END PGP SIGNATURE-----
