@@ -1,8 +1,34 @@
-MD5 53bd9668699932ba246281bd5da2f1fa ChangeLog 8225
-MD5 1b5537f5f9e67cf538e942748f14406c ardour-0.99.2.ebuild 2286
-MD5 3c76d48f09b4f302ccae05a0f45a65fb ardour-0.9_beta30.ebuild 2110
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ba5c73e8c2f6123b4f3ac69d9b1ce5e3 ChangeLog 8353
+RMD160 5173e3510be9e16f43839253dcc845bf80a9bde6 ChangeLog 8353
+SHA256 e4d8f61970a669d66aa8601793469327bca8d15e3e3b053515a523caefe6f542 ChangeLog 8353
+MD5 8d0a130fc6cac1141b4ba8364b5c4bd2 ardour-0.99.2.ebuild 2294
+RMD160 6d5a3df124ba57b35f1ade54552c41cf3cdb479e ardour-0.99.2.ebuild 2294
+SHA256 373df4d59434e21cadad3051e61caf79f3ddb3d6f087f2c767d8b0a49a7db83a ardour-0.99.2.ebuild 2294
+MD5 b8de9d208b3fa4445e031e06229a0ae2 ardour-0.9_beta30.ebuild 2118
+RMD160 c21544044ad7e92449bb92fdfa5e2ba2f4ca6c7d ardour-0.9_beta30.ebuild 2118
+SHA256 8be5aa23d3633521c881cdf35f28e29070761cb2716237a3d6f41bf36204dbfb ardour-0.9_beta30.ebuild 2118
 MD5 e016dfbfc8e85547954395c455b04e61 files/ardour-gcc34.patch 9562
+RMD160 66ade7ab478bdbf87a235778809e385f52f5bd21 files/ardour-gcc34.patch 9562
+SHA256 4a4dbabe6ba42bf2e6f31e534d5c082cc085350dcf11602480f8286ad222d79d files/ardour-gcc34.patch 9562
 MD5 11e862600d9c027d453d23dc2bf8763d files/ardour.aclocal.patch 8594
-MD5 2238c69eecfda1c0f071cc1ca3ff6190 files/digest-ardour-0.99.2 67
-MD5 674b91595af44849fde8356f9b4fba70 files/digest-ardour-0.9_beta30 70
+RMD160 876b4535bc8e175e39d37b8ffb93192cab31c28e files/ardour.aclocal.patch 8594
+SHA256 cc7f66c0286e31ac40c8b21c6e165dac67fe8275217dd0c5fa77f1d321f06a39 files/ardour.aclocal.patch 8594
+MD5 7f35f34f809b48f1cd8d1eaf4682c839 files/digest-ardour-0.99.2 247
+RMD160 06d0bfe32c7759efd86b7caf310b2918cdb74b38 files/digest-ardour-0.99.2 247
+SHA256 6f81720e99355917fe34885080708fc4ed90b3f671741d921983deb0ca40de8c files/digest-ardour-0.99.2 247
+MD5 e3a706760523f40ee6ebea9028441cf5 files/digest-ardour-0.9_beta30 256
+RMD160 a5d815ec5832517c9c62035b51d993b2e8b2286e files/digest-ardour-0.9_beta30 256
+SHA256 3acc783143d5fe7b4c19af499584ce7a6bf55d92cc1c88117c3c6371a5545843 files/digest-ardour-0.9_beta30 256
 MD5 60299dd26385caa83f5b1b51b507a9d8 metadata.xml 243
+RMD160 19545b1637c60d6b8eb2d1468f375b98f6cc2fd3 metadata.xml 243
+SHA256 752170bbf0b4afbcc6e29f01decc5a58f7427732dad1ecb1097e8fab394bb3fa metadata.xml 243
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEMVvXCRZPokWLroQRAkyXAKDIlATpywT+KK3nw2Y1TqJeU3giUQCfUxKu
+p9Vn//4mg4QDxZZOigZHKiA=
+=DMfH
+-----END PGP SIGNATURE-----

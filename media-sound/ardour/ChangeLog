@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.52 2006/02/21 19:29:57 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.53 2006/04/03 17:30:54 halcy0n Exp $
+
+  03 Apr 2006; Mark Loeser <halcy0n@gentoo.org> ardour-0.9_beta30.ebuild,
+  ardour-0.99.2.ebuild:
+  Fix SRC_URI; bug #127911
 
 *ardour-0.99.2 (21 Feb 2006)
 
