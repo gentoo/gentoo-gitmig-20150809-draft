@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f180c254a3858078be3be2d94e9ad9a ChangeLog 914
 MD5 d246ce1f4e71f9651546601c36dd846f files/digest-twisted-runner-0.1.0-r1 70
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 MD5 2f98cf2de2eb2ab7b381ba54f1bc93dc twisted-runner-0.1.0-r1.ebuild 448
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEMZhlKRy60XGEcJIRAgh1AJ0ZBsZIiNVysTzkiNOGq8Zx2XPHxwCgkNQ3
+erxGduBj8zREZuzLqTvLUqs=
+=CDGa
+-----END PGP SIGNATURE-----

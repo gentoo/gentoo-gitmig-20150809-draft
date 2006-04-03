@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e15c37cb33eeefb85e3fd9c989f5a49b ChangeLog 1103
 MD5 1799a75811b18557d3ad80550fffae15 files/digest-twisted-words-0.1.0-r1 71
 MD5 99ab8bd010c1d5b6abfbf45700f017db files/digest-twisted-words-0.3.0 71
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 MD5 e2d1cb180ee5ebe7a946fb6611886adc twisted-words-0.1.0-r1.ebuild 458
 MD5 3e626141c689a62a5494af2d0f9768ed twisted-words-0.3.0.ebuild 439
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEMZj/KRy60XGEcJIRAgKYAKCjmj/hh5qAa9NsqbnEcCX+e8QpFwCeJxf7
+/UV4R3oQXjzqI3vYGejBzXc=
+=uPQG
+-----END PGP SIGNATURE-----

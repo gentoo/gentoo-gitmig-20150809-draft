@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8a4bb7bb9a2a69a0114e689ad7957698 ChangeLog 1317
 MD5 4e7bf4c8e53132875fc7bc7182c590e9 files/digest-twisted-conch-0.5.0-r1 71
 MD5 e404dd5b127510d0facc3ddf3664da81 files/digest-twisted-conch-0.6.0 71
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 MD5 9efbd291e74382d80f6c94b0ac66ffde twisted-conch-0.5.0-r1.ebuild 415
 MD5 120df689c39d9ce0c52f227252594541 twisted-conch-0.6.0.ebuild 433
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD4DBQFEMZbmKRy60XGEcJIRAttVAJQKQ80oDqD/9zArHsWG/17UcwzCAKCmZPp/
+pZF2RuOjXxNa34Dmii+Vtw==
+=3nWj
+-----END PGP SIGNATURE-----

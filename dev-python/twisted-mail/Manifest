@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 80ab4825a6d9763fcc35bb9e26b74660 ChangeLog 1322
 MD5 c04aee3a8274e3e757ba9635e16ce0c3 files/digest-twisted-mail-0.1.0-r1 69
 MD5 f567d8c9949db20725b3bdc85f0d1d66 files/digest-twisted-mail-0.2.0 256
@@ -5,3 +8,10 @@ MD5 d0a02dc24a2ee5370f9f9d67324ab5e0 files/twisted-mail-0.2.0-tests-2.2-compat.p
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 MD5 a9d913dc0a097be1691d39ff3f2ea88c twisted-mail-0.1.0-r1.ebuild 410
 MD5 1712699060d415e84f862c769fa79554 twisted-mail-0.2.0.ebuild 521
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEMZf0KRy60XGEcJIRAqAwAJ9Utfmbq1ByNMEVgLU71+swbg7QRgCfXzvc
+MjoVPF8FHndo5YamSIreXNA=
+=I1M1
+-----END PGP SIGNATURE-----

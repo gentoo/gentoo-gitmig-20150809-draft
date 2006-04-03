@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6794afd5cf288e2988d26c5f3fd8b5e7 ChangeLog 894
 MD5 5ef628d4febe47ac438006f5157c0c27 files/digest-twisted-pair-0.1.0-r1 68
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 MD5 09d589b5e0fdb9d936780bd7aa28758d twisted-pair-0.1.0-r1.ebuild 399
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEMZiVKRy60XGEcJIRAlP7AJ4w1h/hfe0oHYMWCDMqMVzoJ9VWoQCfYEsY
+CCeSrXLAh7/U1p7orn6tp6s=
+=IhNz
+-----END PGP SIGNATURE-----

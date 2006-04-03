@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4b6990ffc0bae77184bfc6c1aa9eaaec ChangeLog 1224
 MD5 5c448152d766e72c9051ceb19a5e2493 files/digest-twisted-xish-0.1.0-r1 69
 MD5 81104ca8c7fafb6d7f8332a7522941b4 files/twisted-xish-0.1.0-tests-2.1-compat.patch 973
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 MD5 24a7f4c0682294f47bf27beb3f6b2541 twisted-xish-0.1.0-r1.ebuild 518
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEMZjQKRy60XGEcJIRAsMiAJ9kZSfmxWgJgvDRTzZfeiATWqityQCfbNkr
+TzrogY3jbVgOBm87yZJhz54=
+=7fcw
+-----END PGP SIGNATURE-----

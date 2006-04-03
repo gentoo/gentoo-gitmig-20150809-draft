@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7e1bf991b7eca4e59e91aa25a913591a ChangeLog 1008
 MD5 bce5421a13546c1574eb9fcd01093802 files/digest-twisted-names-0.1.0-r1 70
 MD5 472558ec0cc446ebc789865c7557fe09 files/digest-twisted-names-0.2.0 256
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 MD5 191dce115006c1e7b5de1f46b37b9a55 twisted-names-0.1.0-r1.ebuild 374
 MD5 76781105d8f20ecd16f5aa8ef393d94e twisted-names-0.2.0.ebuild 385
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEMZfFKRy60XGEcJIRAmKQAJ43jlNaH5VNMtIE8l1oCC2KeM3ygwCeI42E
+3FLxoaXsUzNYlEhW415Zjk8=
+=ofyx
+-----END PGP SIGNATURE-----

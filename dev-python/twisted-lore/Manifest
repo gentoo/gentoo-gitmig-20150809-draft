@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f5bfc1815ae7f39facfb3bce6f9f90e4 ChangeLog 894
 MD5 c36a230912611e4218de6f5eb5e3d710 files/digest-twisted-lore-0.1.0-r1 69
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 MD5 23ff9bc13b76af7da950bcadb4c0daef twisted-lore-0.1.0-r1.ebuild 400
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEMZk9KRy60XGEcJIRAi6vAJ9zYOZbT2qExBNxA48+hxNHTEQpEACfWn2t
+NrIuERZfjGN5vFTYli5p254=
+=HfUt
+-----END PGP SIGNATURE-----
