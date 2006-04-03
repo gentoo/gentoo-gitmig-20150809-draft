@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.4.ebuild,v 1.14 2006/02/13 14:46:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.4.ebuild,v 1.15 2006/04/03 18:42:16 halcy0n Exp $
 
 inherit perl-module
 
@@ -170,7 +170,7 @@ src_install () {
 	fi
 
 	cp ${FILESDIR}/secrets.cf ${D}/etc/mail/spamassassin/secrets.cf
-	fperms 0400 ${D}/etc/mail/spamassassin/secrets.cf
+	fperms 0400 /etc/mail/spamassassin/secrets.cf
 	echo " ">> ${D}/etc/mail/spamassassin/local.cf
 	echo "# Sensitive data, such as database connection info, should">> ${D}/etc/mail/spamassassin/local.cf
 	echo "# be stored in /etc/mail/spamassassin/secrets.cf with">> ${D}/etc/mail/spamassassin/local.cf
