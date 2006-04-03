@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.86 2006/04/03 11:16:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.87 2006/04/03 15:41:41 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -183,7 +183,7 @@ perl-module_pkg_preinst() {
 perl-module_pkg_postinst() {
 
 	einfo "Man pages are not installed for most modules now."
-	einfo "Please use perldoc instad."
+	einfo "Please use perldoc instead."
 	updatepod
 }
 
