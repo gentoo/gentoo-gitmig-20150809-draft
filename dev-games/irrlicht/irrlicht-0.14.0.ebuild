@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-0.14.0.ebuild,v 1.3 2006/02/10 16:13:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-0.14.0.ebuild,v 1.4 2006/04/03 22:49:17 tupone Exp $
 
 inherit eutils toolchain-funcs
 
@@ -37,6 +37,7 @@ src_unpack() {
 	unzip -qo source.zip || die "unpacking source.zip"
 	rm -f source.zip
 	cd Irrlicht
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 
 	# stupid nvidia / xorg GL differences
 	# still needed - bug #114335

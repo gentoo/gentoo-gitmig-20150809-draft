@@ -1,24 +1,37 @@
-MD5 a04c96bfe6a8f41ea44fcfd35964e915 ChangeLog 2679
-RMD160 53aedec94d3ed999d92a60b88910af17cb1e9e55 ChangeLog 2679
-SHA256 501d4c839d41702235ec55dd2ac9185d7a5adb6f16f0d9fff09aafd707182c26 ChangeLog 2679
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 966acbdc7f78f6e26958417396ad4674 ChangeLog 2824
+RMD160 e9342ead91cf9230135a7de5270bd0b45c738159 ChangeLog 2824
+SHA256 5987f2c862e4bd7a37ddffe6f14721ad5cc859ca9a546835e1a2f2b1670b13c4 ChangeLog 2824
 MD5 0ad2514a81760732b181856cf7eab90e files/digest-irrlicht-0.12.0 66
 RMD160 dad2b414e94c8489637efe003703ad71d9ac8727 files/digest-irrlicht-0.12.0 66
 SHA256 3894eb33af23438b605afa8df6922ba533179c55bf7e9f9a2746d1031b38a978 files/digest-irrlicht-0.12.0 66
-MD5 0b2f0ee114614d04ce2f822c3d7cbf3d files/digest-irrlicht-0.14.0 66
-RMD160 67c4cdc178c2c7452270bf2eb12d00e58d126db0 files/digest-irrlicht-0.14.0 66
-SHA256 7c60832a390efa2f4ddd45b43c7275762758db5c3d8ac9d9154aff959580fce3 files/digest-irrlicht-0.14.0 66
+MD5 06c03be236123be45b2abe90b9783d4c files/digest-irrlicht-0.14.0 244
+RMD160 30dfad5a4db728a958770a71fd77f52d8e7877b1 files/digest-irrlicht-0.14.0 244
+SHA256 18454d48aa533cbe66ea93acbc6adabe86f361ea07263185f6165de48716353a files/digest-irrlicht-0.14.0 244
 MD5 e03898aad8550858f91a0b78c888c3f8 files/irrlicht-0.12.0-64bit.patch 10232
 RMD160 2236e1f206d7cfef008e5c8d5ee4e3d735bdd361 files/irrlicht-0.12.0-64bit.patch 10232
 SHA256 e86f20445d6d0cbe191b29f1a57c125d226588e0dba72e6f22a9c19e8a02c66b files/irrlicht-0.12.0-64bit.patch 10232
 MD5 482fcd4ab66e17c76273ec131a05920a files/irrlicht-0.12.0-opengl.patch 655
 RMD160 83a06521306cf177581f2e547a4b9b69ef79e20b files/irrlicht-0.12.0-opengl.patch 655
 SHA256 c97b3d5f857e31de24482cd72d92f6d3c9c1b4ddb2a8ff162411d5f684967865 files/irrlicht-0.12.0-opengl.patch 655
+MD5 5182269be1187ffbd25e8461bf8866b1 files/irrlicht-0.14.0-gcc41.patch 1836
+RMD160 d637e9f49167e7b7cc79983556b2bec079de49d0 files/irrlicht-0.14.0-gcc41.patch 1836
+SHA256 e3005916b06c360d7e5cefcdac14cbaeb0d2021b1da6adbbe010efe5215d1505 files/irrlicht-0.14.0-gcc41.patch 1836
 MD5 83bf4ddba17a6c3c25fd5de2b0a55c38 irrlicht-0.12.0.ebuild 2200
 RMD160 e041687675710795299037eb34e8a1eafbe07243 irrlicht-0.12.0.ebuild 2200
 SHA256 f787a2d57c717a73c2edbb86eb3b2810c884a90362f4d81c6987d22b2e89a4c3 irrlicht-0.12.0.ebuild 2200
-MD5 0f2444cde0429e713b8aebc7f719f319 irrlicht-0.14.0.ebuild 2184
-RMD160 bb74dcd8bc375a85f80780a7919969012ca091b8 irrlicht-0.14.0.ebuild 2184
-SHA256 bd5078e6d229a6842e6a8607f32dac59be0172ca9f4eea24de837ff7e675bed4 irrlicht-0.14.0.ebuild 2184
+MD5 448b84d974a7fe58187c12391e72d02d irrlicht-0.14.0.ebuild 2221
+RMD160 ec554bcab4d0dab02059f8ac8c23968e5479fb21 irrlicht-0.14.0.ebuild 2221
+SHA256 7beec318b11265f45cf3a630fe59621e86872e3c39f194612054b9313e281b42 irrlicht-0.14.0.ebuild 2221
 MD5 ad41838cd74c70f9c72295bda4662786 metadata.xml 790
 RMD160 86dd226d08a73ae77a31e174094cb4bdfeb5426a metadata.xml 790
 SHA256 f98d87925d064aebca00d2da850d027f1e2a66586c6715e12151e34a9167fffc metadata.xml 790
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEMaZ/2CTtIKiFlQIRAs9pAJ9rIOdixVdcPcBdy57cyoXFP6ZqWwCgk5N3
+lwjdhOl5ujaxIPMkcsflm0o=
+=xJ4f
+-----END PGP SIGNATURE-----
