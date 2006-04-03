@@ -1,31 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 515b881bf5c16d4b9531f6e5c34ddec2 ChangeLog 1204
-RMD160 75c4e04f7ca9d130fcff0072584800bdbf0f2801 ChangeLog 1204
-SHA256 79dcc72e17880fa2996e58ff364d890a836e939c63c00906d801d0a852449411 ChangeLog 1204
+MD5 80ab4825a6d9763fcc35bb9e26b74660 ChangeLog 1322
 MD5 c04aee3a8274e3e757ba9635e16ce0c3 files/digest-twisted-mail-0.1.0-r1 69
-RMD160 6971d39b953c82f2c65ab61f3e4b3d8e03257213 files/digest-twisted-mail-0.1.0-r1 69
-SHA256 cad16117a2a1173d124ad35db4a4373cfd5aed51179666863a255851f879566e files/digest-twisted-mail-0.1.0-r1 69
 MD5 f567d8c9949db20725b3bdc85f0d1d66 files/digest-twisted-mail-0.2.0 256
-RMD160 e12ebceb8a0b7be09376519418d6b5b4b2652c2a files/digest-twisted-mail-0.2.0 256
-SHA256 48d3647e3c3a9627c0c66be46410f5b4aa0656d45b58df5603b63ffe5bbe838b files/digest-twisted-mail-0.2.0 256
 MD5 d0a02dc24a2ee5370f9f9d67324ab5e0 files/twisted-mail-0.2.0-tests-2.2-compat.patch 3320
-RMD160 86b7051cc14eb38bcbf7084f3fcd68e6b7172f96 files/twisted-mail-0.2.0-tests-2.2-compat.patch 3320
-SHA256 32ba2b7488d8bd0f9cdd7a9688757c21064c9e869e7aec789529cd914ad8d59f files/twisted-mail-0.2.0-tests-2.2-compat.patch 3320
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
-RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
-SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
-MD5 2486edf8a879a78a13dd75ac93c2deae twisted-mail-0.1.0-r1.ebuild 410
-RMD160 71506cf97a4e46d076d4e34ecb287f656c8a764d twisted-mail-0.1.0-r1.ebuild 410
-SHA256 44995681ab911c10a1625c4bd8efbf4e492a532f398e018c12d95ff584025e91 twisted-mail-0.1.0-r1.ebuild 410
+MD5 a9d913dc0a097be1691d39ff3f2ea88c twisted-mail-0.1.0-r1.ebuild 410
 MD5 1712699060d415e84f862c769fa79554 twisted-mail-0.2.0.ebuild 521
-RMD160 2ed32b41d8b2be627a0d23c8eded28616b681e9f twisted-mail-0.2.0.ebuild 521
-SHA256 4bf4475c846d43e9ab8c1d6e0bcb44083966a0b58ef742ab08d98107df6985f3 twisted-mail-0.2.0.ebuild 521
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8QeQW78445TWHXcRAmi0AJ9aAnbZxDZ0n2ViWezTK/z303/icgCggupL
-uteUUxZfd74Y4eI1XB3MrBU=
-=72dh
------END PGP SIGNATURE-----

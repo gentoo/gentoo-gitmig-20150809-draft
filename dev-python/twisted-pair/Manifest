@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e85d71d8e45ccd2b21abd7cd4a8253e2 ChangeLog 777
-RMD160 4d9cf43f236302de69932f36c195194e031c9b0a ChangeLog 777
-SHA256 e3fab2c23bc6a9d38565d7215012ca93f696452069f712d9dfc85ceb541c047c ChangeLog 777
+MD5 6794afd5cf288e2988d26c5f3fd8b5e7 ChangeLog 894
 MD5 5ef628d4febe47ac438006f5157c0c27 files/digest-twisted-pair-0.1.0-r1 68
-RMD160 f91b566e2a82737c24f7cc9cdef06507a43a5a57 files/digest-twisted-pair-0.1.0-r1 68
-SHA256 f64a406e2090225b68aacf4253016d44062ff1476636014b5e11252ad33a9a1e files/digest-twisted-pair-0.1.0-r1 68
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
-RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
-SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
-MD5 9847ae39a81641826cf11f6ca1015771 twisted-pair-0.1.0-r1.ebuild 400
-RMD160 fa7452fe58560f9a5fd648a0b25e8a4adf0ef87f twisted-pair-0.1.0-r1.ebuild 400
-SHA256 eacb1e0bbeb73395e17d1a61b5cad57d8b2ee978842dd7374b594b6fb44c096e twisted-pair-0.1.0-r1.ebuild 400
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELtDgJrHF4yAQTrARAlxVAKCyaRbR3oaKS/SUxv9vBiw85X4MJgCgkdxO
-vwMIAM+ErFZZuQnIBJHyXNw=
-=tM6q
------END PGP SIGNATURE-----
+MD5 09d589b5e0fdb9d936780bd7aa28758d twisted-pair-0.1.0-r1.ebuild 399

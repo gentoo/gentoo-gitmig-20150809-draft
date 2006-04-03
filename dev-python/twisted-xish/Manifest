@@ -1,25 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8d0b2441eac587545d2d53b25e70c8cb ChangeLog 1107
-RMD160 18cd1f9509122b046ee901576878fc7d24387f8c ChangeLog 1107
-SHA256 9a507e5d51d9d2979058109034f4b90715841385733fd75eae4fcbe19403269a ChangeLog 1107
+MD5 4b6990ffc0bae77184bfc6c1aa9eaaec ChangeLog 1224
 MD5 5c448152d766e72c9051ceb19a5e2493 files/digest-twisted-xish-0.1.0-r1 69
-RMD160 6bc518c13248de132524fb491432212b3c046344 files/digest-twisted-xish-0.1.0-r1 69
-SHA256 5abe3ee92733247106271acf0af946d9ba67e21f37df5af5922de2edc83e6687 files/digest-twisted-xish-0.1.0-r1 69
 MD5 81104ca8c7fafb6d7f8332a7522941b4 files/twisted-xish-0.1.0-tests-2.1-compat.patch 973
-RMD160 f2cd3f5534c107b12f5259a0bdb4450f79b3ba44 files/twisted-xish-0.1.0-tests-2.1-compat.patch 973
-SHA256 1a24791b6269bd32dc5ee5557a52433f60b00c4a3389f012c2ee5733cdd9d988 files/twisted-xish-0.1.0-tests-2.1-compat.patch 973
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
-RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
-SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
-MD5 6aea4bcdb846678256194dc92496c5ae twisted-xish-0.1.0-r1.ebuild 519
-RMD160 21c9270322fa7f2537e31bb661338a508982508d twisted-xish-0.1.0-r1.ebuild 519
-SHA256 c938ec53fc5c02f372ae443f9be6a3253ec196300e17aed93f7673c16904defa twisted-xish-0.1.0-r1.ebuild 519
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELtFlJrHF4yAQTrARAvcSAJwKu3vbmA8eqJ2+TkIYENfIo+nndQCffgPL
-e1bTJHZec1srDpS/kVH+owo=
-=pQ2v
------END PGP SIGNATURE-----
+MD5 24a7f4c0682294f47bf27beb3f6b2541 twisted-xish-0.1.0-r1.ebuild 518

@@ -1,25 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fe7e3cc73a315d021e15f796c89e3d88 ChangeLog 1195
-RMD160 68f52afa8427f9bd1e079640330c3d8ca6a3579b ChangeLog 1195
-SHA256 ca6c3eb95db1bbb9a67d3f1b9841714024dbfbcdaaed6ab1d8b2bc1b36f504f6 ChangeLog 1195
+MD5 2a2f65e67210e1c64ef17f89b516e309 ChangeLog 1312
 MD5 57f23e26014f9e6ff7598d3835af2f22 files/digest-twisted-web-0.5.0-r1 253
-RMD160 d2ee02a02a49de6adf9a55491a398c2dd7b769bb files/digest-twisted-web-0.5.0-r1 253
-SHA256 8092e2fabf7c7a484d5a071341a19a3c523e4e534399bac66f6ab8731cd0b22a files/digest-twisted-web-0.5.0-r1 253
 MD5 0d086fde8bb2de73d9d4c6b50d936f19 files/twisted-web-0.5.0-tests-2.2-compat.patch 4006
-RMD160 23b068ebde8fc096117b6beff15ddf2b559eb320 files/twisted-web-0.5.0-tests-2.2-compat.patch 4006
-SHA256 b0bd817232f37eba306a86fe0463cf509e94b8a37c7a032ebbfd0b59b8f7a24d files/twisted-web-0.5.0-tests-2.2-compat.patch 4006
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
-RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
-SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
-MD5 6181f3cd5ceb552e4bbc63f347c97fa1 twisted-web-0.5.0-r1.ebuild 509
-RMD160 fe85d49ea81d5cb324cb46e43d83ca5667fc9b29 twisted-web-0.5.0-r1.ebuild 509
-SHA256 78f0cccaab27df4138ce97f0cffee297981641d20eb613a8273176b882149742 twisted-web-0.5.0-r1.ebuild 509
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8QcLW78445TWHXcRAjGNAJ9wkRmblB9W461Ovv4Yj5zLg9fPnQCeItnG
-YyQmWMKzO3hoFCW8RyNYCxw=
-=9N4f
------END PGP SIGNATURE-----
+MD5 5923546db4cc7ddab6202c1eee3f1786 twisted-web-0.5.0-r1.ebuild 509

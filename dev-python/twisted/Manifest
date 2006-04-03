@@ -1,67 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8e080e23d4b02ee889c1b8c4fb0d3fc3 ChangeLog 12015
-RMD160 74e508c0b7f60b83822fac73aa85eb91cedf5a23 ChangeLog 12015
-SHA256 7b9759375132b89a98b92eae56e6b58dc2604d1b90200b41df20c2689e4030d8 ChangeLog 12015
+MD5 150ab71bdfd9700d6327aa25ceac61b2 ChangeLog 12123
 MD5 9e8836d4aec3a1a4f688add9c6c64877 files/digest-twisted-1.2.0 74
-RMD160 b7ac0db163e47302bf30a68202840894b993478b files/digest-twisted-1.2.0 74
-SHA256 642c76cdb39a453babb98695aed3964ff25cf2f26dce55598e976b799f927149 files/digest-twisted-1.2.0 74
 MD5 387f6df81a68c591e6f30fe8878d964b files/digest-twisted-1.3.0 74
-RMD160 c7d222b7e715a650fa11d2b98ccff4d8ba26e701 files/digest-twisted-1.3.0 74
-SHA256 38497fe8d7fea068929208838dc2fd189b5fc172b6449b7ae0fa986f746059fd files/digest-twisted-1.3.0 74
 MD5 c1f673be73ccbfbd3605c6e502d238db files/digest-twisted-2.0.1 247
-RMD160 7d6a9a0376f89291a39be221b34e96fcbb5fe779 files/digest-twisted-2.0.1 247
-SHA256 2cb3424bcfeca56e18b71c0239f3d43d41ea34ce856632acd9431e37640de198 files/digest-twisted-2.0.1 247
 MD5 f31de6220dc1b05c4ae5e7d0e4bb06bc files/digest-twisted-2.1.0 247
-RMD160 42077382825c92fc5e929bdb19a1452dfdf9318d files/digest-twisted-2.1.0 247
-SHA256 176d9d35264027ca7dcf72b0d34df0ecaa03d577138f9ce1b73bd436ce657fa2 files/digest-twisted-2.1.0 247
 MD5 3fa954d81a62bdb393e7a56df82d513c files/digest-twisted-2.2.0 247
-RMD160 d90e86737213df3b14ee67c14de08479185469a7 files/digest-twisted-2.2.0 247
-SHA256 ca85a35f8effefe40c79dd999de29da5cb548ff2606677cd2b3d52f35e8e13dd files/digest-twisted-2.2.0 247
 MD5 7ec438488427334851e2eb977e4d8073 files/twistd.conf 277
-RMD160 c959b879d6f7358b647c71c3b514a4a6c8a49eef files/twistd.conf 277
-SHA256 aa2ffa5b128973bc0c58a1251b8bbb56f6f890728bc902805ea2db7606416119 files/twistd.conf 277
 MD5 ca8f49d9aaa78d3814f75d8d2d861469 files/twistd.init 545
-RMD160 b77acc9468cd619e9af334c8a36ed3f9bb003494 files/twistd.init 545
-SHA256 c0aead865bee1fa7d88f2a59f936718621a9b52b1b623ae9e599f1226d8a0dc1 files/twistd.init 545
 MD5 371ca0d01700f9c4501da2b3dedc99ce files/twisted-2.0.1-echo-less.patch 527
-RMD160 c0a4f923a4bde04a1df183878b4c1414fad98b41 files/twisted-2.0.1-echo-less.patch 527
-SHA256 28d3a8ede3d30744c411dc86978f17601867e6e999d79e77527981b8ddb6fa49 files/twisted-2.0.1-echo-less.patch 527
 MD5 475315a298b24f292635829059a60c15 files/twisted-2.1.0-echo-less.patch 269
-RMD160 c7fd9d87325a453ce9215591fc296b4b31505369 files/twisted-2.1.0-echo-less.patch 269
-SHA256 1f190151c00c37dc5055f9b2b1dd7b0943523f29d57f78d5ca5f57723e3d9705 files/twisted-2.1.0-echo-less.patch 269
 MD5 10037b0c00b3a023d4a4330b82731cc6 files/twisted-2.1.0-trial-tests.patch 12253
-RMD160 75d31c9095f4699a1af9c96679df8f1765fee2aa files/twisted-2.1.0-trial-tests.patch 12253
-SHA256 c1a94192554d9478a904ad6069eba9ef1633455c1a7fa60b278bdd743a797691 files/twisted-2.1.0-trial-tests.patch 12253
 MD5 498397d6fc4649e363fc5fce43ce319c files/twisted-2.1.0-trial-tests2.patch 1058
-RMD160 20d9cfba5faa5ecda365a52fbc0007347096879e files/twisted-2.1.0-trial-tests2.patch 1058
-SHA256 abf94fbd130fdfd27164fe3b5d585fdfa211f7a6bd39e649daf1a74354208883 files/twisted-2.1.0-trial-tests2.patch 1058
 MD5 1dea79601dae42090b4d8f34ecfc62a7 files/twisted-2.1.0-zsh-head.patch 592
-RMD160 1fc8e7f8de64055e3801b442b4f666aef567ac71 files/twisted-2.1.0-zsh-head.patch 592
-SHA256 c9b8a994685159f21a3b0512eed1144876453db09f8d6843529dc0ef8d886029 files/twisted-2.1.0-zsh-head.patch 592
 MD5 f21532a778f6bd2aa2879327084e8aa5 metadata.xml 492
-RMD160 3e1f73c8b2f6645c1fb4d5b67c9c2491c9e73e2c metadata.xml 492
-SHA256 cf5b2de8fe20a286ef9eeb5d4069eb462b240af70fdb869f26ba4b275552f01f metadata.xml 492
 MD5 b334a51322c3da107d175c71db5c5b68 twisted-1.2.0.ebuild 996
-RMD160 5194d400fa176184e37961c54d727191c3ec08dc twisted-1.2.0.ebuild 996
-SHA256 800994ba7f45c4b98f248b7ccdec4b0625bfd4314c88fd8897132d8e93758d0d twisted-1.2.0.ebuild 996
 MD5 bf95b063077d70c2e46a438421082ae4 twisted-1.3.0.ebuild 1061
-RMD160 fa6ac04c275dec8e5ddf2b2e6fea7d4217d495ca twisted-1.3.0.ebuild 1061
-SHA256 f597d5d3ea67e9ea8a297cb1b4b4448e18b29532ba97e3744c10bc8e897c5575 twisted-1.3.0.ebuild 1061
-MD5 46f70d464817af9a3717470ebc39a447 twisted-2.0.1.ebuild 2984
-RMD160 3f7b84768b6cee72cf614780df3b01f05f4c60b1 twisted-2.0.1.ebuild 2984
-SHA256 6b853320f8e5114b21dafc50a0d11536afca94d7ef2428dd5e5ca4df8f545e00 twisted-2.0.1.ebuild 2984
+MD5 6887b1c8fdc3fcc463472c91f2afa68b twisted-2.0.1.ebuild 2984
 MD5 4667d4ec004420c85899bb26723bca2d twisted-2.1.0.ebuild 3146
-RMD160 de38146d26a383ca6073f9bb4772f76b3fe7930f twisted-2.1.0.ebuild 3146
-SHA256 3a57857b8e611f598fbe9e529a78f38e715c09bd5e5bd8f2013b858c83975d5d twisted-2.1.0.ebuild 3146
 MD5 d3d04b69fe7cadb71f640fd994f23f53 twisted-2.2.0.ebuild 3138
-RMD160 3ae8b0092aefd7c494471f4039ee42bbe6ffb438 twisted-2.2.0.ebuild 3138
-SHA256 b71385446959a2e4a0af9356473e80ac0408b0170d03fed2aaa7a3e818a26582 twisted-2.2.0.ebuild 3138
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEMZCqW78445TWHXcRAiPpAJ9snvC+QjIsHQZvtbcnO6K8I91eSwCffupJ
-4vPnkqxaR2Edxny1MCe2EDA=
-=X6iF
------END PGP SIGNATURE-----
