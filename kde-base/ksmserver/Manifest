@@ -1,40 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e48676abffd9d3c342bb8e6511b5327c ChangeLog 3986
-RMD160 9f67e344bf6a324fa11df361eb9f3382eefd17b3 ChangeLog 3986
-SHA256 cbd819c2429f6eced4504268210dd03489fe117e1f2b824d883b673caa6754b8 ChangeLog 3986
+MD5 8763e4b212eac8b74e704430441ee17e ChangeLog 4142
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ksmserver-3.4.1 212
-RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-ksmserver-3.4.1 212
-SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-ksmserver-3.4.1 212
 MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-ksmserver-3.5.0 68
-RMD160 d3d51e71028cc50fa4ab0cf69fd7863d21fa7841 files/digest-ksmserver-3.5.0 68
-SHA256 9d6bcd0fd5636da20d1bf023e31013fd753533b9290b40b67f3f89a3275b59cb files/digest-ksmserver-3.5.0 68
 MD5 358c22d072b322d89bd54d98403c5eb6 files/digest-ksmserver-3.5.1 68
-RMD160 e8de4cf825e2775377e7f125b1429912ad1e826e files/digest-ksmserver-3.5.1 68
-SHA256 10f133d38f99c77b6ed8c236ac66bdcfb0451b0e213dc5ec626d6adff17382b5 files/digest-ksmserver-3.5.1 68
 MD5 612323f8728d639ddab8f055f88070ff files/digest-ksmserver-3.5.2 250
-RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-ksmserver-3.5.2 250
-SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-ksmserver-3.5.2 250
+MD5 89749840d8a70db25cedbcd872896595 files/ksmserver-3.5.2-freebsd-time.h-test.diff 265
 MD5 f517b0f5910c8b2babf6207c12ea0e98 ksmserver-3.4.1.ebuild 521
-RMD160 4ca86aca8b13590fe8eb151ceb6307de9792300d ksmserver-3.4.1.ebuild 521
-SHA256 75e93b9853e6d1fc2c55321e406e347c2ba56f9e50c52e705e93190a5746c29a ksmserver-3.4.1.ebuild 521
 MD5 ff3cc46610c360f92a607b946927e4d5 ksmserver-3.5.0.ebuild 526
-RMD160 ebcfe914cdff4b2b97a1b15f5573bbe60bd81a9d ksmserver-3.5.0.ebuild 526
-SHA256 bac43d05e2828fc83b03990505230e82adabfd08800c4d6f6dacaced2f7e037e ksmserver-3.5.0.ebuild 526
 MD5 7b1dad12465b157816445b1a0c2808e4 ksmserver-3.5.1.ebuild 526
-RMD160 9e05d2e711e6a894ae7ee545616d35cebd9a8cf8 ksmserver-3.5.1.ebuild 526
-SHA256 54b7278c3f9e3073cfaf0db0f7995f3ff65a9551a6c33d3d6b21bd34a7f0aa42 ksmserver-3.5.1.ebuild 526
-MD5 6a951a495051cd5e53a93cf134696e62 ksmserver-3.5.2.ebuild 537
-RMD160 36955f6b3140d73ac171061f5d1fdf4b4eb6db8d ksmserver-3.5.2.ebuild 537
-SHA256 d0eb9174e5bf6b6eeb895872788e2cbe92a9af488514a2b9b27f7af4fd2fe5f4 ksmserver-3.5.2.ebuild 537
+MD5 df0dac63c7c6ed817354c3eadd84a1b0 ksmserver-3.5.2.ebuild 596
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELs5QAiZjviIA2XgRAhQWAKDj2GhDvs5Guf2g1M4zwDjFFe2aiQCgrxSk
-sxC5mQe2A/ntISu/bDCWbxg=
-=kg3H
------END PGP SIGNATURE-----

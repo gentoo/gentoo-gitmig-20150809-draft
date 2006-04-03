@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.29 2006/04/01 19:02:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.30 2006/04/03 14:15:18 carlo Exp $
+
+  03 Apr 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/ksmserver-3.5.2-freebsd-time.h-test.diff, ksmserver-3.5.2.ebuild:
+  Check for sys/time.h on FreeBSD.
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> ksmserver-3.5.2.ebuild:
   Add ~x86-fbsd keyword.
