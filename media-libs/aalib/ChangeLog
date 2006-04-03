@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/aalib
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.22 2005/11/08 18:05:42 dang Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.23 2006/04/03 05:11:23 eradicator Exp $
+
+  03 Apr 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  aalib-1.4_rc4-r2.ebuild, aalib-1.4_rc5.ebuild:
+  Stable amd64 and sparc.  Fixed modular X deps on older version.
 
   08 Nov 2005; <dang@gentoo.org> aalib-1.4_rc5.ebuild:
   Modular X deps

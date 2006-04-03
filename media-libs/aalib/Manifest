@@ -1,20 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 07a49c1791364804eb3a133c7bb47a96 ChangeLog 2890
-MD5 cdc4f11b86e45a652b93307e1c5dd496 aalib-1.4_rc4-r2.ebuild 1318
-MD5 9dc6494d44fbd759bcc96de042dccc6d aalib-1.4_rc5.ebuild 1450
+MD5 7843055b7ae542d88862d9a91b66bd6b ChangeLog 3069
+RMD160 6d51e1850d78447be16b96b2888f9d2685291972 ChangeLog 3069
+SHA256 302ce32b7f8d195bfda4020717931ae7380dda534d1edd6b5123c93bea66f834 ChangeLog 3069
+MD5 2dec76162a1d6a3b20096deb2f0b61d2 aalib-1.4_rc4-r2.ebuild 1411
+RMD160 a48bbc65cb0b1e1f2eb237be0fe5b504deddd400 aalib-1.4_rc4-r2.ebuild 1411
+SHA256 23843259b7d92fc48669932a7a1ba51745c6b30db5168500b31d0db463eb8935 aalib-1.4_rc4-r2.ebuild 1411
+MD5 5f2e347dffcf0950b2bb00bb1f20f715 aalib-1.4_rc5.ebuild 1436
+RMD160 b43703fd28d3c4f5dfca0d51375f3403fb19187c aalib-1.4_rc5.ebuild 1436
+SHA256 5f5f70af3ca96c32a4da20e54b41d9738c1419057718d3f8235bd6f0c18cd836 aalib-1.4_rc5.ebuild 1436
 MD5 4aff44ab71184e49f997a1b6f0593b83 files/aalib-1.4_rc4-gentoo.patch 1245
+RMD160 ca2df1fc54bf70ff57bec5260dad401e2a0dac12 files/aalib-1.4_rc4-gentoo.patch 1245
+SHA256 fa5d946e9d0e4a78c37187f6795b27bcb057e9e2ec00fe3a873a11e25fba23a7 files/aalib-1.4_rc4-gentoo.patch 1245
 MD5 224b7aa8488763f7d7b4bfa63948adef files/aalib-1.4_rc4-m4.patch 241
+RMD160 8da68015ba2e16647f281aebd59bcc0329fe9954 files/aalib-1.4_rc4-m4.patch 241
+SHA256 24d09cb9eb9ed8d0990c677b5fbfe43762fe872d198c146c7de6fdb39eab692f files/aalib-1.4_rc4-m4.patch 241
 MD5 09587da2537886441b0d5590bfd45d47 files/aalib-1.4_rc5-osx.patch 3121
+RMD160 2bb3378d6aa7e3715a1c9b53f69942bb883d7195 files/aalib-1.4_rc5-osx.patch 3121
+SHA256 8eda35a244cd0736ccc7bd22384419c48c88e3d370751871be607e5f355c6908 files/aalib-1.4_rc5-osx.patch 3121
 MD5 b59998ef8f5e2f1740b1e6ed0b22bb4b files/aalib-osx.patch 3399
+RMD160 cb2ec77425a3112cf908374baec9a38f497e7cbc files/aalib-osx.patch 3399
+SHA256 8ac989b3bb7e3aa1eed9e3e4d4cc654413e08cc5b9a86d41dbf8452ee5d9f739 files/aalib-osx.patch 3399
 MD5 ffa1e1a7420535a1fe146ae5145ddbd6 files/digest-aalib-1.4_rc4-r2 64
+RMD160 1a58231435357193fdb94475e71cbea57953144c files/digest-aalib-1.4_rc4-r2 64
+SHA256 9e0eecd059160e7a4bee2099c6162adcfe541d3f1548776040e874d7fc693b5c files/digest-aalib-1.4_rc4-r2 64
 MD5 da57c040ac70e4ac57714131aaaeb6c6 files/digest-aalib-1.4_rc5 64
+RMD160 9f796a4d132afd8e4117c84f19258c88370562e4 files/digest-aalib-1.4_rc5 64
+SHA256 c782d866bf3b2251c241b7d54005924f26db8aed249abe3fcb952e071322cd03 files/digest-aalib-1.4_rc5 64
 MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
+RMD160 d1f5ea37202987c54db9697175a55e5609386654 metadata.xml 259
+SHA256 14f1bab6a31d434eda6319b2783239e50179d75501edb6e255bb6c3e665418cf metadata.xml 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD075w2+ySkm8kpY0RAgPbAKCR+eBAELEiym/WbzCI7AgwM3Ck6ACeM2Nt
-hpmubTxD1JC0kgtKakNi8dE=
-=5LUS
+iD8DBQFEMK6POpjtAl+gMRURAvA6AKCCE2Wr8Df8xoiuhS+AAUHMcOKzBgCdEHR6
+u28YuNstRZOvRz1Jy7sll/o=
+=pCq/
 -----END PGP SIGNATURE-----
