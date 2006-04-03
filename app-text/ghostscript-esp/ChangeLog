@@ -1,6 +1,14 @@
 # ChangeLog for app-text/ghostscript-esp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.20 2006/04/02 16:30:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.21 2006/04/03 21:51:57 genstef Exp $
+
+*ghostscript-esp-8.15.1-r1 (03 Apr 2006)
+
+  03 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/ghostscript-esp-8.15.1-ps2epsi-esp.diff,
+  +ghostscript-esp-8.15.1-r1.ebuild:
+  ps2epsi fixes thanks to Martin von Gagern <Martin.vGagern@gmx.net> in bug
+  128647
 
   02 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
   ghostscript-esp-7.07.1-r8.ebuild, ghostscript-esp-7.07.1-r10.ebuild,
