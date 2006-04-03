@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.9.ebuild,v 1.2 2006/04/03 21:07:32 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.9.ebuild,v 1.3 2006/04/03 21:30:22 eradicator Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/sox/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc ~ppc64 sparc ~x86"
 IUSE="alsa encode mad ogg"
 
 DEPEND="virtual/libc
