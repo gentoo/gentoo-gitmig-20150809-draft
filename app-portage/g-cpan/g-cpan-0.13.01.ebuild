@@ -1,9 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-0.13.01.ebuild,v 1.1 2005/06/01 20:38:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-0.13.01.ebuild,v 1.2 2006/04/03 13:12:25 mcummings Exp $
 
 DESCRIPTION="g-cpan: generate and install CPAN modules using portage"
-HOMEPAGE="http://dev.gentoo.org/~mcummings/"
+HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
@@ -13,15 +13,6 @@ IUSE=""
 
 DEPEND="dev-lang/perl"
 
-pkg_setup() {
-	if hasq collision-protect $FEATURES; then
-		ewarn "This ebuild will fail with collision-protect in place."
-		ewarn "This ebuild is replacing a package that was previously"
-		ewarn "bundled with portage directly. Please disable "
-		ewarn "collision-protect for the installation of this package."
-		die
-	fi
-}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
