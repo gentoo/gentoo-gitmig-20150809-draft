@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.1.ebuild,v 1.3 2005/12/26 15:05:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.1.ebuild,v 1.4 2006/04/03 16:13:05 chutzpah Exp $
 
 inherit gnuconfig flag-o-matic eutils toolchain-funcs
 
@@ -39,6 +39,8 @@ src_unpack() {
 src_compile() {
 	# Bug #69536
 	[[ $(tc-arch) == "x86" ]] && append-flags "-mno-sse"
+
+	strip-linguas be bg ca de en en_CA en_GB en_US es fi fr hu it ja nl pl_PL pt_BR ru zh_CN zh_HK zh_TW
 
 	econf \
 		--disable-dependency-tracking \
