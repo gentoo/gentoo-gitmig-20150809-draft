@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.14 2006/03/21 02:21:19 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.15 2006/04/03 14:34:55 chutzpah Exp $
+
+  03 Apr 2006; Patrick McLean <chutzpah@gentoo.org> -drscheme-209.ebuild:
+  Cleaned up some old versions.
 
   21 Mar 2006; Patrick McLean <chutzpah@gentoo.org> drscheme-301-r1.ebuild:
   Add ~amd64.
