@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/kiax
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.5 2006/01/26 13:18:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.6 2006/04/03 17:23:15 genstef Exp $
+
+  03 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/kiax-0.8.4-gcc4.patch, kiax-0.8.4.ebuild:
+  gcc4 patch, thanks to Patrizio Bassi <hetfield666@gmail.com>, Marcelo Goes
+  <vanquirius@gentoo.org> and Mark Loeser <halcy0n@gentoo.org> in bug 123616
 
   26 Jan 2006; Caleb Tennis <caleb@gentoo.org> +files/configure.patch,
   kiax-0.8.4.ebuild:
