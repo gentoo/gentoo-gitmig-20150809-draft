@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtkglext
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkglext/ChangeLog,v 1.17 2006/03/30 16:18:30 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkglext/ChangeLog,v 1.18 2006/04/03 16:44:22 agriffis Exp $
+
+  03 Apr 2006; Aron Griffis <agriffis@gentoo.org>
+  ruby-gtkglext-0.14.1.ebuild:
+  Mark 0.14.1 stable on ia64
 
   30 Mar 2006; Ferris McCormick <fmccor@gentoo.org>
   ruby-gtkglext-0.14.1.ebuild:
