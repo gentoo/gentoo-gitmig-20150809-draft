@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 774d768c86cb2ad814da67cf33df81fb ChangeLog 1229
+MD5 779ed340db5ece34bd4d31319773936a ChangeLog 1315
 MD5 4b71409d939173dbcfeced4eeecc69e8 files/digest-sex-1.0 57
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 c13157210a0e9a831470e68b8c066be3 sex-1.0.ebuild 688
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDrBs+60LfUIagIAkRAgu+AKDtJrkZjejP/+qHZjMFnON5kxtwwACdFPh+
-onWFSoabeq0ynCunUCspAto=
-=bdYr
------END PGP SIGNATURE-----
+MD5 48b004ccf74a167e7977061920199f18 sex-1.0.ebuild 694
