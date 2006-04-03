@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.87 2006/04/03 15:41:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.88 2006/04/03 16:50:25 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -95,26 +95,18 @@ perl-module_src_prep() {
 
 
 	SRC_PREP="yes"
-	if [ -f Makefile.PL ]; then
+	if [ -f Makefile.PL ] && [ ! ${PN} == "module-build" ]; then
 		einfo "Using ExtUtils::MakeMaker"
 		#perl Makefile.PL ${myconf} \
 		perl Makefile.PL ${myconf} INSTALLMAN3DIR='none'\
 		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
-	elif [ -f Build.PL ] && [ "${USE_BUILDER}" == "yes" ]; then
+	fi
+	if [ -f Build.PL ] && [ ! -f Makefile ] ; then
 		einfo "Using Module::Build"
-		if [ -z ${BUILDER_VER} ]; then
-			eerror
-			eerror "Please post a bug on http://bugs.gentoo.org assigned to"
-			eerror "perl@gentoo.org - ${P} was added without a dependancy"
-			eerror "on dev-perl/module-build"
-			eerror "${BUILDER_VER}"
-			eerror
-			die
-		else
-			perl Build.PL installdirs=vendor destdir=${D} libdoc=
-		fi
-	else
-		einfo "No Make or Build file detect..."
+		perl Build.PL installdirs=vendor destdir=${D} libdoc=
+	fi
+	if [ ! -f Build.PL ] && [ ! -f Makefile.PL ]; then
+		einfo "No Make or Build file detected..."
 		return
 	fi
 }
@@ -123,10 +115,10 @@ perl-module_src_compile() {
 
 	perlinfo
 	[ "${SRC_PREP}" != "yes" ] && perl-module_src_prep
-	if [ -z ${BUILDER_VER} ]; then
+	if [ -f Makefile ]; then
 		make ${mymake} || die "compilation failed"
-	else
-		perl ${S}/Build build
+	elif [ -f Build ]; then
+		perl Build build
 	fi
 
 }
@@ -134,10 +126,10 @@ perl-module_src_compile() {
 perl-module_src_test() {
 	if [ "${SRC_TEST}" == "do" ]; then
 		perlinfo
-		if [ -z ${BUILDER_VER} ]; then
+		if [ -f Makefile ]; then
 			make test || die "test failed"
-		else
-			perl ${S}/Build  test || die "test failed"
+		elif [ -f Build ]; then
+			perl Build  test || die "test failed"
 		fi
 	fi
 }
@@ -148,9 +140,9 @@ perl-module_src_install() {
 
 	test -z ${mytargets} && mytargets="install"
 
-	if [ -z ${BUILDER_VER} ]; then
+	if [ -f Makefile ]; then
 		make ${myinst} ${mytargets} || die
-	else
+	elif [ -f Build ]; then
 		perl ${S}/Build install
 	fi
 
@@ -224,7 +216,7 @@ perlinfo() {
 	VENDOR_ARCH=${installvendorarch}
 
 	if [ "${USE_BUILDER}" == "yes" ]; then
-	   if [ ! -f ${S}/Makefile.PL ]; then
+	   if [ ! -f ${S}/Makefile.PL ] || [ ${PN} == "module-build" ]; then
 		if [ -f ${S}/Build.PL ]; then
 			if [ ${PN} == "module-build" ]; then
 				BUILDER_VER="1" # A bootstrapping if you will

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-app.eclass,v 1.3 2006/04/03 11:16:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-app.eclass,v 1.4 2006/04/03 16:50:25 mcummings Exp $
 
 #
 # Author: Michael Cummings <mcummings@gentoo.org>
@@ -16,33 +16,24 @@ inherit perl-module
 EXPORT_FUNCTIONS src_compile
 
 perl-app_src_prep() {
-
 	perlinfo
 
 	export PERL_MM_USE_DEFAULT=1
 
 
 	SRC_PREP="yes"
-	if [ -f Makefile.PL ]; then
+	if [ -f Makefile.PL ] && [ ! ${PN} == "module-build" ]; then
 		einfo "Using ExtUtils::MakeMaker"
 		#perl Makefile.PL ${myconf} \
 		perl Makefile.PL ${myconf} INSTALLMAN3DIR='none'\
 		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
-	elif [ -f Build.PL ] && [ "${USE_BUILDER}" == "yes" ]; then
+	fi
+	if [ -f Build.PL ] && [ ! -f Makefile ] ; then
 		einfo "Using Module::Build"
-		if [ -z ${BUILDER_VER} ]; then
-			eerror
-			eerror "Please post a bug on http://bugs.gentoo.org assigned to"
-			eerror "perl@gentoo.org - ${P} was added without a dependancy"
-			eerror "on dev-perl/module-build"
-			eerror "${BUILDER_VER}"
-			eerror
-			die
-		else
-			perl Build.PL installdirs=vendor destdir=${D}
-		fi
-	else
-		einfo "No Make or Build file detect..."
+		perl Build.PL installdirs=vendor destdir=${D} libdoc=
+	fi
+	if [ ! -f Build.PL ] && [ ! -f Makefile.PL ]; then
+		einfo "No Make or Build file detected..."
 		return
 	fi
 }
@@ -51,10 +42,10 @@ perl-app_src_compile() {
 
 	perlinfo
 	[ "${SRC_PREP}" != "yes" ] && perl-app_src_prep
-	if [ -z ${BUILDER_VER} ]; then
+	if [ -f Makefile ]; then
 		make ${mymake} || die "compilation failed"
-	else
-		perl ${S}/Build build
+	elif [ -f Build ]; then
+		perl Build build
 	fi
 
 }
