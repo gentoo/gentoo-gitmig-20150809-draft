@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.3 2006/04/02 23:41:45 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.4 2006/04/03 17:31:16 tcort Exp $
 
   02 Apr 2006; Scott Stoddard <deltacow@gentoo.org> mutagen-1.0.ebuild:
   Added ~amd64.
@@ -12,6 +12,6 @@
 
   02 Apr 2006; Thomas Cort <tcort@gentoo.org> +metadata.xml,
   +mutagen-1.0.ebuild:
-  Initial Commit. Slightly modified from the original ebuild Kia Huuhko
-  <kia.huuhko@gmail.com> attached to Bug #128482.
+  Initial Commit. Slightly modified from the original ebuild Kai Huuhko
+  <kai.huuhko@gmail.com> attached to Bug #128482.
 
