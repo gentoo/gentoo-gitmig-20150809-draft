@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/konq-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.39 2006/03/28 00:25:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.40 2006/04/03 13:47:44 carlo Exp $
+
+*konq-plugins-3.5.2-r1 (03 Apr 2006)
+
+  03 Apr 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/konq-plugins-3.5.2-arkplugin-crash-fix.diff,
+  +konq-plugins-3.5.2-r1.ebuild:
+  Fix crash in Konqueror Ark plugin, KDE bug #113585.
 
   28 Mar 2006; Aron Griffis <agriffis@gentoo.org> konq-plugins-3.5.0.ebuild,
   konq-plugins-3.5.1.ebuild, konq-plugins-3.5.2.ebuild:
