@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/fte
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.32 2006/03/25 23:03:10 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.33 2006/04/03 16:24:36 tcort Exp $
+
+  03 Apr 2006; Thomas Cort <tcort@gentoo.org> fte-20051115.ebuild:
+  Added ~alpha keyword.
 
 * fte-20051115 (26 Mar 2006)
 
