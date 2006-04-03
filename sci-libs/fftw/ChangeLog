@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.29 2006/03/07 22:01:43 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.30 2006/04/03 19:46:41 markusle Exp $
+
+*fftw-3.1.1 (03 Apr 2006)
+
+  03 Apr 2006; Markus Dittrich <markusle@gentoo.org> +fftw-3.1.1.ebuild:
+  Version bump. Thanks to Raphael <gentoo@lesshaste.plus.com>
+  for reporting. This fixes bug #127925.
 
   07 Mar 2006; Markus Dittrich <markusle@gentoo.org> fftw-3.1.ebuild:
   Disabled building of shared libraries on k7 architecture. Thanks
