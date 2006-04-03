@@ -1,28 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8e0699d5346144463df50c4caf5c433d ChangeLog 2401
-RMD160 3ab2a7d313b0262f30e978b0d060548b333326a7 ChangeLog 2401
-SHA256 b3570220fd0f026f4a2b176c6f9b2abc0c9c63665a390ce6c704a94d8bbdeafe ChangeLog 2401
+MD5 4ad784ef338f3ac178e8d4fa435e6234 ChangeLog 2512
 MD5 880f6fce3873cebf4cb5bd3070ab5967 files/digest-knemo-0.3.1-r1 64
-RMD160 d6e2e82bdc9b7c6d1a62ebf15dc95d85723bce86 files/digest-knemo-0.3.1-r1 64
-SHA256 eb163664a0e52d174ac72a66f1fcb51079fe30a7bbff9731470176c267a5bcf3 files/digest-knemo-0.3.1-r1 64
+MD5 491185c77a6e66da3db60f1bd6639579 files/digest-knemo-0.4.0 64
 MD5 8c94121d55cd5d246a4b6d80b4596d84 files/knemo-0.3.1-gcc41.patch 924
-RMD160 9c1769f2150573f72d04cbceff38b8218761fae7 files/knemo-0.3.1-gcc41.patch 924
-SHA256 dd63a33ea62b44e495a8560dcfdae5bca2cb9b94cbc1d3fe50c6a356eb6baf00 files/knemo-0.3.1-gcc41.patch 924
 MD5 e6a9a9aef0881e30022bd77be5ac5d90 files/knemo-0.3.1-linkquality.patch 463
-RMD160 ddab970759bf22d99b51edcb27ccb27e44952adf files/knemo-0.3.1-linkquality.patch 463
-SHA256 4fa9ff6fb42f67af0735a5d5986505d8085dc049208d8340c671893cdfa03145 files/knemo-0.3.1-linkquality.patch 463
 MD5 5e8534c64238ed2bb789735a2a9af764 knemo-0.3.1-r1.ebuild 829
-RMD160 65aa16c19141b4bfe74ee9553c0cee96ab22ae3b knemo-0.3.1-r1.ebuild 829
-SHA256 12595847eb05b1311a80787317d218f5ba3a08c5c4efd2887acc3fed3a174348 knemo-0.3.1-r1.ebuild 829
+MD5 52b3af2bb9e0cbe30eed0de00d9cf8b2 knemo-0.4.0.ebuild 874
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDB/gAiZjviIA2XgRAnLWAJ9eurb95WQ5VZKB6sg9UxohbPJaCwCgkuj1
-p4C3u6JoYjPJtfwIq4VytAY=
-=iIF/
------END PGP SIGNATURE-----
