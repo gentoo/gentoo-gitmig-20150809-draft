@@ -1,18 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6_alpha9.ebuild,v 1.4 2006/03/19 22:52:33 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6_alpha11.ebuild,v 1.1 2006/04/03 17:23:45 marienz Exp $
 
 inherit distutils
 
 MY_P=${P/_alpha/a}
+S="${WORKDIR}/${MY_P}"
+
 DESCRIPTION="A collection of enhancements to the Python distutils including easy install"
 HOMEPAGE="http://peak.telecommunity.com/DevCenter/setuptools"
 SRC_URI="http://cheeseshop.python.org/packages/source/s/setuptools/${MY_P}.zip"
+
 LICENSE="PSF-2.2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
-S="${WORKDIR}/${MY_P}"
 
 RDEPEND=">=dev-lang/python-2.4.2"
 DEPEND="${RDEPEND}
@@ -20,18 +22,15 @@ DEPEND="${RDEPEND}
 
 DOCS="EasyInstall.txt api_tests.txt pkg_resources.txt setuptools.txt"
 
-src_install() {
-	${python} setup.py install --root=${D} --no-compile \
-		--single-version-externally-managed "$@" || die
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# The files in the tarball have 666 permissions and get installed
+	# that way if we do not chmod them.
+	find -type d -print0 | xargs -0 chmod 755
+	find -type f -print0 | xargs -0 chmod 644
+}
 
-	DDOCS="CHANGELOG COPYRIGHT KNOWN_BUGS MAINTAINERS PKG-INFO"
-	DDOCS="${DDOCS} CONTRIBUTORS TODO"
-	DDOCS="${DDOCS} Change* MANIFEST* README*"
-
-	for doc in ${DDOCS}; do
-		[ -s "$doc" ] && dodoc $doc
-	done
-
-	[ -n "${DOCS}" ] && dodoc ${DOCS}
-
+src_test() {
+	"${python}" setup.py test || die "tests failed"
 }
