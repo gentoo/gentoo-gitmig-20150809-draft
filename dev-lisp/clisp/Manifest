@@ -1,32 +1,37 @@
-MD5 739d2f7559f199584aa29fbc5d9a2cf6 ChangeLog 10861
-MD5 fce61ccc24ef4d9aa4b70cc4c8fde0be clisp-2.33.2-r2.ebuild 4238
-MD5 703fc21066f759fb89bd66a28a9ee91f clisp-2.34-r1.ebuild 4160
-MD5 875bf0b817f57e16ad20f42f094ad8a1 clisp-2.35.ebuild 2879
-MD5 cd8df21d6d2351d3116a6cfafe5cdf6e clisp-2.36.ebuild 3142
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fdaa3c5ba38979d5847fcd8a11b6d95a ChangeLog 11716
+RMD160 7e7bf4e4d7b65a68019aac7b965e941471570d8a ChangeLog 11716
+SHA256 cf362bce2303846ab0dd3f98815747c76349cf79884fafd51c6a887d63d32c1c ChangeLog 11716
+MD5 18d55c8d4eac86f9ee3071fcd5830f47 clisp-2.38-r1.ebuild 3163
+RMD160 e058c5b3d60a55bb59f61d618c70b36efa6da52d clisp-2.38-r1.ebuild 3163
+SHA256 030d8425bbe6072fa79d279c36092e4316817f51bf44a469127f6443deb6134f clisp-2.38-r1.ebuild 3163
 MD5 dcf6f597090f7d2d4ad822bcf92427a9 clisp-2.38.ebuild 3141
-MD5 66e5b3968b3a6ad0301ca028447b26b3 files/2.33.2/README.Gentoo 334
-MD5 fe93240f140623bf55d2e503f6d8e01e files/2.33.2/clisp.sh 2792
-MD5 8d8449ba456d4f8b789d4349496845b6 files/2.33.2/compilefix.patch 1174
-MD5 a9325cfeff703a21e63dbd2b3aad34c1 files/2.33.2/fastcgi-Makefile.in-gentoo.patch 670
-MD5 3eb393d2fbfe2e395744f45ce0d3e4f0 files/2.33.2/glibc-linux.lisp-sigpause-gentoo.patch 622
-MD5 2f431f5c714c00d04b55e02a9d54f452 files/2.33.2/install-clc.lisp 501
-MD5 66e5b3968b3a6ad0301ca028447b26b3 files/2.34/README.Gentoo 334
-MD5 fe93240f140623bf55d2e503f6d8e01e files/2.34/clisp.sh 2792
-MD5 a68a303f8d8e4eec8542f36167df1377 files/2.34/fastcgi-Makefile.in-gentoo.patch 662
-MD5 e415e209cc23163e624face90f97e024 files/2.34/glibc-linux.lisp-sigpause-gentoo.patch 614
-MD5 2f431f5c714c00d04b55e02a9d54f452 files/2.34/install-clc.lisp 501
-MD5 66e5b3968b3a6ad0301ca028447b26b3 files/2.35/README.Gentoo 334
-MD5 fe93240f140623bf55d2e503f6d8e01e files/2.35/clisp.sh 2792
-MD5 2f431f5c714c00d04b55e02a9d54f452 files/2.35/install-clc.lisp 501
-MD5 66e5b3968b3a6ad0301ca028447b26b3 files/2.36/README.Gentoo 334
-MD5 fe93240f140623bf55d2e503f6d8e01e files/2.36/clisp.sh 2792
-MD5 2f431f5c714c00d04b55e02a9d54f452 files/2.36/install-clc.lisp 501
+RMD160 7d76975b149b88b11fe6b6f22ab9cc86ea996f09 clisp-2.38.ebuild 3141
+SHA256 a54f3acd15e422dd3af3f996eb9278781e696538ed3726e987c77ca699217c05 clisp-2.38.ebuild 3141
 MD5 66e5b3968b3a6ad0301ca028447b26b3 files/2.38/README.Gentoo 334
+RMD160 c236897c39f4c8e8f75ff9782d2ee7a7b30aece4 files/2.38/README.Gentoo 334
+SHA256 336e4287ec4cfdbe8fda692bd217431adb4e303d3f5204bdf3df0ea711fbebd6 files/2.38/README.Gentoo 334
 MD5 fe93240f140623bf55d2e503f6d8e01e files/2.38/clisp.sh 2792
+RMD160 107eccac30fc373f449d0d252ca82fa400ce0877 files/2.38/clisp.sh 2792
+SHA256 5ba7c78f3d99b9264c9cb8909135ccd0bca113d66d5a998acc520fb431dc75ad files/2.38/clisp.sh 2792
 MD5 2f431f5c714c00d04b55e02a9d54f452 files/2.38/install-clc.lisp 501
-MD5 9a2df7725b74af8b8b9f3db39b350e79 files/digest-clisp-2.33.2-r2 66
-MD5 d8868b134ba5463d87df11818719fcec files/digest-clisp-2.34-r1 64
-MD5 f9c5dbcccff51886eb3704fd7fa7c429 files/digest-clisp-2.35 64
-MD5 08b8b798be80ccd9fe2e06b3a94d11ec files/digest-clisp-2.36 64
+RMD160 c4848c195ef194fce8ec73eb4aceeb5f34b919ac files/2.38/install-clc.lisp 501
+SHA256 93ff66189e490ae806c2d227e24295af0cf01e1bb0a1d7de2cf57ff59523f09e files/2.38/install-clc.lisp 501
 MD5 b8735b2750320366c3270887f00e2fa3 files/digest-clisp-2.38 64
+RMD160 2f517a9e6e8c63fa11464dd3a2ed8ec50395d0fc files/digest-clisp-2.38 64
+SHA256 c0447d26305693b9f8d0a627a9d47d17a546da8a00a7c20137f7733f2be5b104 files/digest-clisp-2.38 64
+MD5 9210f3550260a9fcac73c39f31f2e14f files/digest-clisp-2.38-r1 238
+RMD160 60a53629c21be478cf62f91bd25afd22b09e95bf files/digest-clisp-2.38-r1 238
+SHA256 0cac2d185676cab92bb8516501d45c36c0867fde92ccef75a959ceb658460c46 files/digest-clisp-2.38-r1 238
 MD5 485cde76397408cf913fc6d4c7a45a67 metadata.xml 882
+RMD160 c1c9236c3fb6d0594a998221fbff50add9b1d1b2 metadata.xml 882
+SHA256 b55a5dec0b7c7764565517bab024bb1526dd21cf58bc4a727f09ac3d2ff4983f metadata.xml 882
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEMVubyiNZaEAZA+ARAiyDAJ400QVHhgYgNktDdQ46nuCoprfSKQCfWQk9
+0M6mXy5Ez3nczZeQ0ZVWX20=
+=yL4o
+-----END PGP SIGNATURE-----

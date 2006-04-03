@@ -1,6 +1,24 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.48 2006/01/28 10:41:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.49 2006/04/03 17:29:50 mkennedy Exp $
+
+*clisp-2.38-r1 (03 Apr 2006)
+
+  03 Apr 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/2.33.2/README.Gentoo, -files/2.33.2/clisp.sh,
+  -files/2.33.2/compilefix.patch,
+  -files/2.33.2/fastcgi-Makefile.in-gentoo.patch,
+  -files/2.33.2/glibc-linux.lisp-sigpause-gentoo.patch,
+  -files/2.33.2/install-clc.lisp, -files/2.34/README.Gentoo,
+  -files/2.34/clisp.sh, -files/2.34/fastcgi-Makefile.in-gentoo.patch,
+  -files/2.34/glibc-linux.lisp-sigpause-gentoo.patch,
+  -files/2.34/install-clc.lisp, -files/2.35/README.Gentoo,
+  -files/2.35/clisp.sh, -files/2.35/install-clc.lisp,
+  -files/2.36/README.Gentoo, -files/2.36/clisp.sh,
+  -files/2.36/install-clc.lisp, -clisp-2.33.2-r2.ebuild,
+  -clisp-2.34-r1.ebuild, -clisp-2.35.ebuild, -clisp-2.36.ebuild,
+  +clisp-2.38-r1.ebuild:
+  Missing x11-misc/imake dependencies; Resolves Bug #128288; Removed old ebuilds.
 
   28 Jan 2006; Tobias Scherbaum <dertobi123@gentoo.org> clisp-2.38.ebuild:
   ppc stable, bug #120224
