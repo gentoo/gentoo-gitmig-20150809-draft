@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/list
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/list/ChangeLog,v 1.1 2006/04/03 11:30:29 genstef Exp $
+
+*list-1.9.91 (03 Apr 2006)
+
+  03 Apr 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +list-1.9.91.ebuild:
+  New ebuild thanks to Jeremy Sands <sandsj@cse.sc.edu> and Alexander Mieland
+  <dma147@linux-stats.org>
+
