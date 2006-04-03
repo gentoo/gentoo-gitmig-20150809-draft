@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jakarta-jstl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.3 2005/08/17 19:19:38 betelgeuse Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.4 2006/04/03 23:16:09 nichoj Exp $
+
+  03 Apr 2006; Joshua Nichols <nichoj@gentoo.org> jakarta-jstl-1.1.2.ebuild:
+  Removed unecessary tomcat dependency.
 
   17 Aug 2005; Petteri Räty <betelgeuse@gentoo.org>
   jakarta-jstl-1.1.2.ebuild:
