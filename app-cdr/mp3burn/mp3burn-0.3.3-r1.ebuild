@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mp3burn/mp3burn-0.3.3-r1.ebuild,v 1.3 2005/01/01 12:19:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mp3burn/mp3burn-0.3.3-r1.ebuild,v 1.4 2006/04/03 05:04:02 eradicator Exp $
 
 IUSE=""
 
@@ -37,5 +37,5 @@ src_compile() {
 src_install() {
 	dobin mp3burn
 	doman mp3burn.1
-	dodoc Changelog INSTALL README
+	dodoc Changelog README
 }
