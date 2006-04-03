@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0_rc1.ebuild,v 1.3 2006/01/28 21:42:17 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.1.ebuild,v 1.1 2006/04/03 02:38:04 ramereth Exp $
 
-inherit eutils apache-module toolchain-funcs
+inherit eutils apache-module toolchain-funcs gnuconfig
 
 MY_P=${PN/-core}-${PV/_}
 DESCRIPTION="Nagios Core - Check daemon, CGIs, docs"
@@ -53,6 +53,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/2.x-series-nsca.patch
+	# ppc64 needs this
+	gnuconfig_update
 }
 
 src_compile() {
@@ -219,10 +221,6 @@ pkg_postinst() {
 
 	einfo
 	ewarn "Use /usr/nagios/bin/convertcfg for configuration file conversion"
-	einfo
-	einfo "Due to a mixup on how the ebuilds were versioned in portage, this"
-	einfo "upgrade might look like a downgrade. I needed to re-align the version"
-	einfo "numbering to be correct. Sorry for any confusion that may have caused."
 }
 
 pkg_prerm() {

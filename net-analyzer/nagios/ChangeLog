@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.32 2006/02/08 14:28:42 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.33 2006/04/03 02:38:25 ramereth Exp $
+
+*nagios-2.1 (03 Apr 2006)
+
+  03 Apr 2006; Lance Albertson <ramereth@gentoo.org> -nagios-2.0_rc1.ebuild,
+  -nagios-2.0_rc2.ebuild, +nagios-2.1.ebuild:
+  * Version bump
+  * Clean up older release candidates
 
 *nagios-2.0 (08 Feb 2006)
 

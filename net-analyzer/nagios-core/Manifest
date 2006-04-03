@@ -5,8 +5,7 @@ MD5 f2947dec6b9a839da79606bcc394036b files/conf.d 409
 MD5 9ead897e0a8a7edc783916948e023b1f files/digest-nagios-core-1.2-r4 218
 MD5 587bd1eafc5547df269b6f82c7d6cf29 files/digest-nagios-core-1.3 151
 MD5 97842ad243d5d658f8b20b06c92c72a5 files/digest-nagios-core-2.0 131
-MD5 0da9d84dcb3743c589a6329ef836f47e files/digest-nagios-core-2.0_rc1 134
-MD5 ba01ecd27cf87c57867f9308164da92b files/digest-nagios-core-2.0_rc2 134
+MD5 b1bb7bf2bf468173ad54269b86b0c500 files/digest-nagios-core-2.1 131
 MD5 f83fb59efe215d8191866a95685b4b39 files/nagios 1416
 MD5 dad3fb46e8f73ac54d9239a542bc82e0 files/nagios.conf 362
 MD5 cee7d66cc61be3558af44ab177d99e1f files/submit_check_result_via_nsca.patch 585
@@ -14,5 +13,4 @@ MD5 bb0bc884a0383e5be0a4bae6cba836dc metadata.xml 1049
 MD5 6e955d838dba98d7ac157ca9e3f4e0af nagios-core-1.2-r4.ebuild 7240
 MD5 cea5a3d589fdd00d45f20544f65759e5 nagios-core-1.3.ebuild 7472
 MD5 50c60e546174daae11e5a52077a98df2 nagios-core-2.0.ebuild 6013
-MD5 6aa27b93182222d1c10fe95f59f3c228 nagios-core-2.0_rc1.ebuild 6207
-MD5 ae40ff231ced3f15df1c6091c20ef40c nagios-core-2.0_rc2.ebuild 6014
+MD5 50c60e546174daae11e5a52077a98df2 nagios-core-2.1.ebuild 6013
