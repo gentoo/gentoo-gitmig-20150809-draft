@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.50 2006/04/02 00:07:55 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.51 2006/04/03 02:03:04 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -27,7 +27,7 @@
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_postrm
 
-inherit eutils libtool toolchain-funcs flag-o-matic
+inherit eutils libtool toolchain-funcs flag-o-matic autotools
 
 # Directory prefix to use for everything
 XDIR="/usr"
@@ -221,8 +221,7 @@ x-modular_reconf_source() {
 		# If possible, generate configure if it doesn't exist
 		if [ -f "${S}/configure.ac" ]
 		then
-			einfo "Running autoreconf..."
-			autoreconf -v --force --install
+			eautoreconf
 		fi
 	fi
 
