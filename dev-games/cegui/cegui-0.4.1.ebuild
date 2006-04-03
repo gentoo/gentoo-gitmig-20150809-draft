@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.4.1.ebuild,v 1.3 2006/02/26 04:33:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.4.1.ebuild,v 1.4 2006/04/03 23:14:19 tupone Exp $
 
 inherit eutils
 
@@ -30,6 +30,7 @@ src_unpack() {
 		cp -r Samples Samples.clean
 		find Samples.clean '(' -name 'Makefile*' -o -name CVS ')' -print0 | xargs -0 rm -rf
 	fi
+	epatch "${FILESDIR}/${P}"-gcc-41.patch
 }
 
 src_compile() {

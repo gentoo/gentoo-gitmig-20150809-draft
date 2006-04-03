@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.7 2006/02/26 04:33:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.8 2006/04/03 23:14:19 tupone Exp $
+
+  03 Apr 2006; <Tupone@gentoo.org> +files/cegui-0.4.1-gcc-41.patch,
+  cegui-0.4.1.ebuild:
+  gcc-4.1 patch, bug #126517 by Matteo Azzali
 
   26 Feb 2006; Mike Frysinger <vapier@gentoo.org> cegui-0.4.1.ebuild:
   Fix by basic/Tupon Alfredo for RPATH issues in sample code #117297.
