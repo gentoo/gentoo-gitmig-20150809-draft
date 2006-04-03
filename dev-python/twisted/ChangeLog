@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.61 2006/02/13 23:49:21 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.62 2006/04/03 21:16:14 marienz Exp $
+
+  03 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  +files/twisted-2.0.1-echo-less.patch,
+  +files/twisted-2.1.0-echo-less.patch, twisted-2.0.1.ebuild,
+  twisted-2.1.0.ebuild, twisted-2.2.0.ebuild:
+  Make the process tests work on a slower or loaded cpu, thanks to gustavoz
+  for reporting.
 
   13 Feb 2006; Marien Zwart <marienz@gentoo.org> twisted-2.2.0.ebuild:
   Fix minimal python requirement.

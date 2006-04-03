@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.0.1.ebuild,v 1.3 2005/12/05 17:10:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.0.1.ebuild,v 1.4 2006/04/03 21:16:14 marienz Exp $
 
 inherit eutils distutils versionator
 
@@ -24,6 +24,13 @@ DEPEND=">=dev-lang/python-2.2
 S="${WORKDIR}/${MY_P}"
 
 DOCS="ChangeLog CREDITS INSTALL NEWS README"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# give a load-sensitive test a better chance of succeeding
+	epatch "${FILESDIR}/${P}-echo-less.patch"
+}
 
 src_install() {
 	distutils_src_install

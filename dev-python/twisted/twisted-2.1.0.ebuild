@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.1.0.ebuild,v 1.5 2006/01/31 21:14:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.1.0.ebuild,v 1.6 2006/04/03 21:16:14 marienz Exp $
 
 inherit eutils distutils versionator
 
@@ -28,6 +28,8 @@ DOCS="CREDITS INSTALL NEWS README"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	# give a load-sensitive test a better chance of succeeding
+	epatch "${FILESDIR}/${P}-echo-less.patch"
 	epatch "${FILESDIR}/${P}-trial-tests.patch"
 	epatch "${FILESDIR}/${P}-trial-tests2.patch"
 	epatch "${FILESDIR}/${P}-zsh-head.patch"
