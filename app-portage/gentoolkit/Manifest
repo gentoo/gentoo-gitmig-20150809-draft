@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f45f363a1651d854d38f51dc1329f534 ChangeLog 34606
-RMD160 75fe849b197f47363b7bc404996fcb70a8c52be2 ChangeLog 34606
-SHA256 a28fa35377ae82d18f89aa5a4be4205a87721bb0e937212d075a900c86242f61 ChangeLog 34606
+MD5 43a4448a574b877adc76dacbb985df59 ChangeLog 34800
+RMD160 b9339a23af925688984c57ef717e67c8168f4654 ChangeLog 34800
+SHA256 8a89e572e0562e3702f72d3c679ed3004942ddc5aed8da44275156ed857ebfd9 ChangeLog 34800
 MD5 99dee3ece4f06bd49f471db77a5cea21 files/digest-gentoolkit-0.2.0 67
 RMD160 4754803dc19d5c50c88a425429f42c1ad426aa7f files/digest-gentoolkit-0.2.0 67
 SHA256 90170daf99434ae4ac15f938d1f5a708ca82bfc39fe351e702fbff17136c2eae files/digest-gentoolkit-0.2.0 67
@@ -16,6 +13,9 @@ SHA256 b7a1b0bb6966ffd0baf8aaf4f78424f1938e8e7739952d12931e81757d87e039 files/di
 MD5 79453799671a99a438188ef56ce9481c files/digest-gentoolkit-0.2.2_pre3 262
 RMD160 1785f2b1a66280b5d5bcd7fb17253b7016fa854d files/digest-gentoolkit-0.2.2_pre3 262
 SHA256 00154a177f9b024d32ebdeac507c89e269585d4798c443dc2a270aa45d2fd2e2 files/digest-gentoolkit-0.2.2_pre3 262
+MD5 5d33be463f09644d0e52684f514d7339 files/digest-gentoolkit-0.2.2_pre4 262
+RMD160 2a098fb3221d39d859281bb110afdf791c35c9f6 files/digest-gentoolkit-0.2.2_pre4 262
+SHA256 677c12b5a80d464bec2de7c7b0f058746f28a289d132c0271dacb01e09f30545 files/digest-gentoolkit-0.2.2_pre4 262
 MD5 35d6ebb9b58acec73ac1c363df947347 files/qpkg-deprecated.patch 1870
 RMD160 9411204f9eff6ca1fda01aa8e99d90c066c0f812 files/qpkg-deprecated.patch 1870
 SHA256 bf23db9844edff2dc41026b2895096cb0623be26741de4173d9676fad7981d2d files/qpkg-deprecated.patch 1870
@@ -34,13 +34,9 @@ SHA256 8472e4adb1ca6a4e00cb5c487dc45b2a888eba908fbda433119af4efab38f1f0 gentoolk
 MD5 346c834d2bad8df054b81ea2768f7f9f gentoolkit-0.2.2_pre3.ebuild 1565
 RMD160 1b5afcaf446293e95d55611c2b4ed9f4c24e546e gentoolkit-0.2.2_pre3.ebuild 1565
 SHA256 28a492a9d6ad54f09c96fb471e889efc27fd03ec333938a2a406f7a96bd60913 gentoolkit-0.2.2_pre3.ebuild 1565
+MD5 a0c7b93c7d7deb2d0e752591cf20baa6 gentoolkit-0.2.2_pre4.ebuild 1564
+RMD160 8abe8611e00caec25b091ce93d59e8346308586c gentoolkit-0.2.2_pre4.ebuild 1564
+SHA256 b9666f6874ef0b0f344e21de95186013ae3a5af8091031b3309e082153a35008 gentoolkit-0.2.2_pre4.ebuild 1564
 MD5 c36d3e9465a96d7220228d2ef5457bd3 metadata.xml 451
 RMD160 b1cce9123da273149c731793696937f9b3d02c60 metadata.xml 451
 SHA256 1a2def4d28f69d6bffeb0b09e97ce53e6822e457d5d9308000a1010dca32abeb metadata.xml 451
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEMGpBAiZjviIA2XgRAgd3AJ9wo7pICUNBN185FHwSRfuv3QfRSwCfXR8C
-0/7irZnHhYePSJ5oGukGQIg=
-=k2L3
------END PGP SIGNATURE-----
