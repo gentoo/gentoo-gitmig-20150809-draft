@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-app.eclass,v 1.2 2006/04/01 15:58:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-app.eclass,v 1.3 2006/04/03 11:16:52 mcummings Exp $
 
 #
 # Author: Michael Cummings <mcummings@gentoo.org>
@@ -23,12 +23,12 @@ perl-app_src_prep() {
 
 
 	SRC_PREP="yes"
-	if [ -f ${S}/Makefile.PL ]; then
+	if [ -f Makefile.PL ]; then
 		einfo "Using ExtUtils::MakeMaker"
 		#perl Makefile.PL ${myconf} \
 		perl Makefile.PL ${myconf} INSTALLMAN3DIR='none'\
 		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
-	elif [ -f ${S}/Build.PL ] && [ "${USE_BUILDER}" == "yes" ]; then
+	elif [ -f Build.PL ] && [ "${USE_BUILDER}" == "yes" ]; then
 		einfo "Using Module::Build"
 		if [ -z ${BUILDER_VER} ]; then
 			eerror
@@ -39,7 +39,7 @@ perl-app_src_prep() {
 			eerror
 			die
 		else
-			perl ${S}/Build.PL installdirs=vendor destdir=${D}
+			perl Build.PL installdirs=vendor destdir=${D}
 		fi
 	else
 		einfo "No Make or Build file detect..."
