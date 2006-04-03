@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/yadex-1.7.0.ebuild,v 1.5 2006/01/29 22:17:24 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/yadex-1.7.0.ebuild,v 1.6 2006/04/03 17:34:09 tupone Exp $
 
 inherit games
 
@@ -21,6 +21,9 @@ src_unpack() {
 		-e '/iwad/s/local\///' \
 		${S}/yadex.cfg \
 		|| die "sed yadex.cfg failed"
+	epatch "${FILESDIR}/${P}"-NULL-is-not-zero.patch
+	# Force the patched file to be old, otherwise the compile fails
+	touch -t 196910101010 ${S}/src/wadlist.cc
 }
 
 src_compile() {

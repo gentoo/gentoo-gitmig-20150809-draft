@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/yadex
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/ChangeLog,v 1.4 2006/01/29 22:17:24 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/ChangeLog,v 1.5 2006/04/03 17:34:09 tupone Exp $
+
+  03 Apr 2006; <Tupone@gentoo.org>
+  +files/yadex-1.7.0-NULL-is-not-zero.patch, yadex-1.7.0.ebuild:
+  gcc-4 patch, bug #120866 by Joshua Baergen
 
   29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org> yadex-1.7.0.ebuild:
   Add modular X dependencies.
