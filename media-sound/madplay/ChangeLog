@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/madplay
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.38 2006/02/15 13:27:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.39 2006/04/03 17:41:27 tcort Exp $
+
+  03 Apr 2006; Thomas Cort <tcort@gentoo.org> madplay-0.15.2b.ebuild:
+  New HOMEPAGE.
 
   15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> madplay-0.15.0b.ebuild,
   madplay-0.15.0b-r1.ebuild, madplay-0.15.1b.ebuild:

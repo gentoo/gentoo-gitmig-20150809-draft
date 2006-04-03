@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b.ebuild,v 1.17 2005/08/03 20:17:01 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b.ebuild,v 1.18 2006/04/03 17:41:27 tcort Exp $
 
 inherit eutils
 
 DESCRIPTION="The MAD audio player"
-HOMEPAGE="http://mad.sourceforge.net/"
+HOMEPAGE="http://www.underbit.com/products/mad/"
 SRC_URI="mirror://sourceforge/mad/${P}.tar.gz"
 
 LICENSE="GPL-2"
