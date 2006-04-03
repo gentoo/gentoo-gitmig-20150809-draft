@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.4 2006/04/03 04:21:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.5 2006/04/03 04:37:05 flameeyes Exp $
+
+  03 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-ubin-6.0-r1.ebuild:
+  Don't let cronbase being a build-time dependency, too.
 
   03 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-ubin-6.0-r1.ebuild:
