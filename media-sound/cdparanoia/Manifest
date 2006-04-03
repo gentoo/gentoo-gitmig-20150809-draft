@@ -1,18 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4231d87baacf17189a8d8bf4e3d275f6 ChangeLog 4313
-RMD160 768e35e404475dbe1f1e095ba687167898edcc18 ChangeLog 4313
-SHA256 850b70f69b63b5a9cd1a4035640f9b0f19f8a4556487a75d2c5f38f2d16df16c ChangeLog 4313
+MD5 4a0cdb0cc37c08b5646844c6b2ac8bbe ChangeLog 4655
+RMD160 a44b731c79fe68c085b85ded0c6d9bcb066c7dbb ChangeLog 4655
+SHA256 e0cf9fc070ed1bcb812ba71d030f720c19865881c0ccd7386202167fc3a66718 ChangeLog 4655
 MD5 db7d595d5d3f1a47417d753e763467df cdparanoia-3.9.8-r1.ebuild 1303
 RMD160 8ea33b580860b90a133909ee3e6cd05dbd455813 cdparanoia-3.9.8-r1.ebuild 1303
 SHA256 4ffe0e0da1385dfae6a0f4aee0ba81b449654484f2b55763d108869a92b79ed1 cdparanoia-3.9.8-r1.ebuild 1303
 MD5 a58184eb94cb4488ede5c28ddca40219 cdparanoia-3.9.8-r2.ebuild 1534
 RMD160 1712e1d282ea7a6c9b601f75bdcf7e9b0d0fdb76 cdparanoia-3.9.8-r2.ebuild 1534
 SHA256 08c29ecea581d02182639741ab128be3a1a5d829ac3dd8bd178de24d8faf8369 cdparanoia-3.9.8-r2.ebuild 1534
-MD5 5d145480f1957982b9ef96edbcdcf43d cdparanoia-3.9.8-r3.ebuild 1792
-RMD160 3dedce270d8a0f32a42d6760dee957cfb161baf2 cdparanoia-3.9.8-r3.ebuild 1792
-SHA256 f3fdba248fe87e11f5a06207d3a1c883b9e686e3ed09e996626feebfc55dc966 cdparanoia-3.9.8-r3.ebuild 1792
+MD5 e09456706aae96f098df9841b70c986b cdparanoia-3.9.8-r3.ebuild 1865
+RMD160 d94d6332918e9e3b4edd2cb2a1e9eba349d20aab cdparanoia-3.9.8-r3.ebuild 1865
+SHA256 1e1111309b343968f68dd9b346fd0b3c3668e561abecbb064be71364f00b029e cdparanoia-3.9.8-r3.ebuild 1865
 MD5 8dfcb53296c1e66ba13fb02d81eef39b files/3.9.8-gcc34.patch 772
 RMD160 c13aac76c54ac969e45a87b26f56fc62a4a72d07 files/3.9.8-gcc34.patch 772
 SHA256 ffe735303a300d358ba99fc85f6d28c4bc7bc7ce90bf42b9838803fcc99cf150 files/3.9.8-gcc34.patch 772
@@ -22,9 +19,12 @@ SHA256 d273a272f0d4b75da510aa548760dc41f92b2f60ac4adcda501ee78113141638 files/cd
 MD5 532963b39bb2da5b1961bcf17fb11e68 files/cdparanoia-3.9.8-include-cdda_interface_h.patch 452
 RMD160 59d9a6ccddd2b36ceb263843358823cd89b10152 files/cdparanoia-3.9.8-include-cdda_interface_h.patch 452
 SHA256 2da26873793dc28ce64a674b26486bdf9612f48234cbf034914797721ec21517 files/cdparanoia-3.9.8-include-cdda_interface_h.patch 452
-MD5 3a3444573a089fb2c5814e0517a060a9 files/cdparanoia-3.9.8-respectflags.patch 1592
-RMD160 54d4bd9ef765c5ad9f43f8f6d306d6c6ccadc9be files/cdparanoia-3.9.8-respectflags.patch 1592
-SHA256 00c1ac8d74e8f870e38b3eb84a23d207c523e7f0675afae25a98966c7e215149 files/cdparanoia-3.9.8-respectflags.patch 1592
+MD5 2ae8f51622c7d5c6c1bc59f5a3b93d71 files/cdparanoia-3.9.8-respectflags-pio.patch 1566
+RMD160 720921e78de47adb480372362d4ef92416858ce3 files/cdparanoia-3.9.8-respectflags-pio.patch 1566
+SHA256 f47e241dbb795602590f57e1478f7ee34146e67f73ee6249d56c81a1141a5f22 files/cdparanoia-3.9.8-respectflags-pio.patch 1566
+MD5 3a3444573a089fb2c5814e0517a060a9 files/cdparanoia-3.9.8-respectflags-sgio.patch 1592
+RMD160 54d4bd9ef765c5ad9f43f8f6d306d6c6ccadc9be files/cdparanoia-3.9.8-respectflags-sgio.patch 1592
+SHA256 00c1ac8d74e8f870e38b3eb84a23d207c523e7f0675afae25a98966c7e215149 files/cdparanoia-3.9.8-respectflags-sgio.patch 1592
 MD5 ab34ae9f60b4a00e3a9e6b7310b84746 files/cdparanoia-3.9.8-toc.patch 778
 RMD160 8ae82ca62be7fbc22eb72070d604ca89a71658e5 files/cdparanoia-3.9.8-toc.patch 778
 SHA256 bfea90816d1b04c8f538515524c419103df0c09b01dd6360cf15e1615a39a0d3 files/cdparanoia-3.9.8-toc.patch 778
@@ -43,10 +43,3 @@ SHA256 f66572ca34772c5b2611a7086eeac6b570706760ecc9fed46c836764de932b8d files/di
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEKETqwUpWvClEHQoRArufAJ9kfxV1MkCnF2hDpj+wtR+ZPFkC2gCeNDgI
-c0AC/sQlmIvPPT4ykRuuXvY=
-=lHeY
------END PGP SIGNATURE-----
