@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/spiralmodular-0.2.2a.ebuild,v 1.11 2006/04/03 15:42:37 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/spiralmodular-0.2.2a-r1.ebuild,v 1.1 2006/04/03 15:42:37 chutzpah Exp $
 
-inherit eutils
+inherit eutils multilib
 
 IUSE="alsa jack"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/spiralmodular/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=x11-libs/fltk-1.1
 	media-libs/libsndfile
@@ -22,6 +22,13 @@ DEPEND=">=x11-libs/fltk-1.1
 	media-libs/ladspa-sdk"
 
 S=${WORKDIR}/${PN}-0.2.2
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-gcc41.patch"
+}
 
 src_compile() {
 	for file in `find . -name Makefile.in`; do
@@ -44,9 +51,9 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin /usr/lib /usr/share/man /usr/share/info
+	dodir /usr/bin /usr/$(get_libdir) /usr/share/man /usr/share/info
 	dodoc Examples/*
-	make bindir=${D}/usr/bin libdir=${D}/usr/lib mandir=${D}/usr/share/man infodir=${D}/usr/share/info datadir=${D}/usr/share install || die
+	make bindir=${D}/usr/bin libdir=${D}/usr/$(get_libdir) mandir=${D}/usr/share/man infodir=${D}/usr/share/info datadir=${D}/usr/share install || die
 }
 
 pkg_postinst() {

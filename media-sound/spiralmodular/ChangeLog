@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/spiralmodular
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/ChangeLog,v 1.13 2004/12/19 06:48:12 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/ChangeLog,v 1.14 2006/04/03 15:42:37 chutzpah Exp $
+
+*spiralmodular-0.2.2a-r1 (03 Apr 2006)
+
+  03 Apr 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/spiralmodular-0.2.2a-gcc41.patch, +spiralmodular-0.2.2a-r1.ebuild:
+  Revision bump, add gcc 4.1 patch submitted by Robert Marmorstein
+  <rmmarm@wm.edu> (bug #128479). Fix up libdir references for multilib.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   spiralmodular-0.2.2a.ebuild:
