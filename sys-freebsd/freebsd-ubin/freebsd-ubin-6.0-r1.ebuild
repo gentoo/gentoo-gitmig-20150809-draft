@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.0-r1.ebuild,v 1.4 2006/04/03 04:37:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.0-r1.ebuild,v 1.5 2006/04/03 15:59:35 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -14,7 +14,8 @@ SRC_URI="mirror://gentoo/${UBIN}.tar.bz2
 		mirror://gentoo/${CONTRIB}.tar.bz2
 		mirror://gentoo/${LIB}.tar.bz2
 		mirror://gentoo/${ETC}.tar.bz2
-		mirror://gentoo/${BIN}.tar.bz2"
+		mirror://gentoo/${BIN}.tar.bz2
+		mirror://gentoo/${INCLUDE}.tar.bz2"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	kerberos? ( virtual/krb5 )
@@ -30,7 +31,7 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	sys-process/cronbase"
 
-S=${WORKDIR}/usr.bin
+S="${WORKDIR}/usr.bin"
 
 pkg_setup() {
 	use nls || mymakeopts="${mymakeopts} NO_NLS= "
@@ -50,7 +51,8 @@ PATCHES="${FILESDIR}/${PN}-${RV}-bsdcmp.patch
 	${FILESDIR}/${PN}-${RV}-fixmakefiles.patch
 	${FILESDIR}/${PN}-setXid.patch
 	${FILESDIR}/${PN}-lint-stdarg.patch
-	${FILESDIR}/SA-06-02-ee.patch"
+	${FILESDIR}/SA-06-02-ee.patch
+	${FILESDIR}/${PN}-${RV}-kdump-ioctl.patch"
 
 # Here we remove some sources we don't need because they are already
 # provided by portage's packages or similar. In order:
