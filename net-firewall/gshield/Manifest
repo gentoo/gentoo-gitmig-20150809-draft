@@ -1,14 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 791cd16769f4ef782bb507d11f386c23 ChangeLog 1578
-MD5 12b1171e8d9d1b6e69038c819576eb84 gshield-2.8-r2.ebuild 1527
-MD5 c30931b8fa657e89dfc003f26a7d99af files/gshield.init 648
+MD5 3471affc4c6bf224e8342cdf78cb6e52 ChangeLog 1682
+RMD160 5d0309698e491493b0097dbb82b39e51fe7a1491 ChangeLog 1682
+SHA256 6439899480b618f2332ebdcfbc294d99318e3272c1a97186c65e421bf1b68b52 ChangeLog 1682
 MD5 35bd7996b009c8816bc810139001de45 files/digest-gshield-2.8-r2 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDC2e8j5H05b2HAEkRAsC5AKCSjVEdTndjXaXNhXimqQWDwyBWqgCcCnPi
-mVJhxaCZ4dpQmm2bxJ3vz94=
-=hffk
------END PGP SIGNATURE-----
+RMD160 475c9e9f4f7f5a4ea5109c4db13d0ed75e2ef08b files/digest-gshield-2.8-r2 59
+SHA256 0ee4a1c9dfa08b897ac628c8488fab8609fcc5c5f09b04bb7c766861f71bc597 files/digest-gshield-2.8-r2 59
+MD5 c30931b8fa657e89dfc003f26a7d99af files/gshield.init 648
+RMD160 ab47b0c2a4f698fafe43ddf10aa15fc30122de3c files/gshield.init 648
+SHA256 5c15e6c0ac7545c21f97e7c0fc0bbaedab04b2d155656568bef023738e46787b files/gshield.init 648
+MD5 701fa6f9186cc9811dcc022cef8894b4 gshield-2.8-r2.ebuild 1533
+RMD160 47be092c1cdbbbe4253ef501243b5485eb1a4976 gshield-2.8-r2.ebuild 1533
+SHA256 bbae504ac71e037f6cad727cac956b79226ac26edea24abe5826cf3033f904b1 gshield-2.8-r2.ebuild 1533
+MD5 41acf7c8ff04d6421fee86b7142116dc metadata.xml 220
+RMD160 f0561994369fa1c98696feb4d5cb69e217fc72e8 metadata.xml 220
+SHA256 b0e4f5ee216d14691f482b5460d56a4098cdf4e4ac14a192a189beadbac9e5a5 metadata.xml 220

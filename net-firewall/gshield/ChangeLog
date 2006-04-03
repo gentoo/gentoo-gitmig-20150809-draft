@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/gshield
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/ChangeLog,v 1.5 2005/08/23 18:14:56 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/ChangeLog,v 1.6 2006/04/03 01:20:23 deltacow Exp $
+
+  03 Apr 2006; Scott Stoddard <deltacow@gentoo.org> gshield-2.8-r2.ebuild:
+  Added ~amd64 (bug 119789).
 
   23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> gshield-2.8-r2.ebuild:
   Don't use cp -a.
