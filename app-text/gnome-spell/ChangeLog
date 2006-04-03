@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.67 2006/04/02 14:09:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.68 2006/04/03 16:41:39 foser Exp $
+
+*gnome-spell-1.0.7-r1 (03 Apr 2006)
+
+  03 Apr 2006; Marinus Schraal <foser@gentoo.org> 
+  gnome-spell-1.0.7-r1.ebuild, files/gnome-spell-1.0.7-enchant-r2.patch :
+  Add new enchant patch, should fix some outstanding dictionairy detection issues
+  Remove debug flag, the stack of patches became somewhat messy
 
 *gnome-spell-1.0.7 (27 Mar 2006)
 
