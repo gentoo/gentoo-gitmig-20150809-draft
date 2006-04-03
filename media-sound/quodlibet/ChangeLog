@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.17 2006/04/03 02:48:22 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.18 2006/04/03 12:35:38 tcort Exp $
+
+*quodlibet-0.19-r2 (03 Apr 2006)
+
+  03 Apr 2006; Thomas Cort <tcort@gentoo.org> +quodlibet-0.19-r2.ebuild:
+  Fix dependencies, fix build error (bug #128621), and now byte compiles the
+  python code. Ebuild submitted by Kai Huuhko <kai.huuhko@gmail.com>
 
 *quodlibet-0.19-r1 (03 Apr 2006)
 
