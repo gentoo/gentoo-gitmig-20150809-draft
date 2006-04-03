@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/solarwolf
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/ChangeLog,v 1.13 2006/01/06 02:26:32 voxus Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/ChangeLog,v 1.14 2006/04/03 22:07:13 tcort Exp $
+
+  03 Apr 2006; Thomas Cort <tcort@gentoo.org> solarwolf-1.5.ebuild:
+  Added ~alpha keyword.
 
   06 Jan 2006; Konstantin Arkhipov <voxus@gentoo.org> solarwolf-1.5.ebuild:
   Marked amd64 stable.
