@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.11 2006/01/29 21:28:01 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.12 2006/04/03 16:34:14 tupone Exp $
 
 inherit eutils games
 
@@ -32,7 +32,8 @@ src_unpack() {
 			-e 's:-ltermcap:-lcurses:' ${f} \
 				|| die "sed ${f} failed"
 	done
-	epatch "${FILESDIR}/${PV}-errno.patch"
+	epatch "${FILESDIR}/${PV}-errno.patch" \
+		"${FILESDIR}/${P}"-gcc4.patch
 }
 
 src_compile() {
