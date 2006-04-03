@@ -1,6 +1,6 @@
 # Copyright 2005-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/list/list-1.9.91.ebuild,v 1.1 2006/04/03 11:30:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/list/list-1.9.92.ebuild,v 1.1 2006/04/03 20:43:01 genstef Exp $
 
 
 inherit eutils
