@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.0-r1.ebuild,v 1.2 2006/04/02 21:09:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.0-r1.ebuild,v 1.3 2006/04/03 04:21:51 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -20,7 +20,8 @@ RDEPEND="ssl? ( dev-libs/openssl )
 	kerberos? ( virtual/krb5 )
 	sys-libs/zlib
 	virtual/pam
-	virtual/cron"
+	sys-process/cronbase"
+
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	=sys-freebsd/freebsd-sources-${RV}*
