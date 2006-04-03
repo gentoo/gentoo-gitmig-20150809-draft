@@ -1,31 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 804eab236e0f1d52bb95d49b39d9b85a ChangeLog 3234
-RMD160 79268836d1d366fb3743c878548fedb200a34ba9 ChangeLog 3234
-SHA256 d529b5d37d1bbdf280799364a1d52ffae52dce543c39d2eb71c2df31e3cf7dcc ChangeLog 3234
+MD5 2b011fe38fc7a42abebd72354763268b ChangeLog 3319
 MD5 3c479075f74ef05646c045d14b21478a files/digest-libid3tag-0.15.0b 69
-RMD160 2f89699fab5d7efa5c990967740e769763ad3598 files/digest-libid3tag-0.15.0b 69
-SHA256 65d31e73690428865d6b79467ac3d9107c72e2567678ebfa05a5eb1deceddaac files/digest-libid3tag-0.15.0b 69
 MD5 2599ada700e902044f823c6b5be3e1ba files/digest-libid3tag-0.15.1b 69
-RMD160 18b6b60aee613e27edee5ce782c6eb66c9394e3f files/digest-libid3tag-0.15.1b 69
-SHA256 b3bf6021ee72e6f2a5367577d599bfc9b5cd7400cb2b8bebb75126a177578b6a files/digest-libid3tag-0.15.1b 69
 MD5 54aa87c4ea713263f56e3abf87b1ef12 files/id3tag.pc 222
-RMD160 f2ef95aaed166edc84d837854086ddbd45a7ff76 files/id3tag.pc 222
-SHA256 46465c31b4e7e873f10f6e7ca3e642b55cb48a398a04dd3b0605d4fdd58d3c05 files/id3tag.pc 222
 MD5 312de1ee9a749077191d699d4ebafad1 libid3tag-0.15.0b.ebuild 832
-RMD160 44fcfb75e54e4d2acc38b1c0638e29a823f60785 libid3tag-0.15.0b.ebuild 832
-SHA256 2b8ba15e6d1a7dcf3a572e197a539b5b8d585be13b62eaebbea8e7e163e0bffe libid3tag-0.15.0b.ebuild 832
-MD5 4b2fa927a263f345d413ecb6d666e47f libid3tag-0.15.1b.ebuild 1054
-RMD160 2a3919cb05ca11d8c6cb2ee07901ed343b1e7381 libid3tag-0.15.1b.ebuild 1054
-SHA256 abe666fc9253c25a9cd16ff4472c83e950d3b4b0210f28ebe32966c1b61480a8 libid3tag-0.15.1b.ebuild 1054
+MD5 73c24b85b2a22bf9fba6990b0d1baf20 libid3tag-0.15.1b.ebuild 1060
 MD5 cd51cc289ae6b56fd7fe1f3fec474f88 metadata.xml 248
-RMD160 05122080e3580393675ec87101f0eb48aba15ea5 metadata.xml 248
-SHA256 790cfd8d63ed9248363a7e773fd9bdad79266c4153368dceb5109a63b2a2aa8f metadata.xml 248
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDFFlAiZjviIA2XgRAmSeAKDxzfUfbJRxnakksI/ExK5+/26BJwCgrNh/
-NVVe/u5JvEZFq3GhSGUzJHk=
-=8CTN
------END PGP SIGNATURE-----

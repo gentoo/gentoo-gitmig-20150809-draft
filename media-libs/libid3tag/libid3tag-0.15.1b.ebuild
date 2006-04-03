@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b.ebuild,v 1.21 2006/03/06 15:12:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b.ebuild,v 1.22 2006/04/03 17:43:04 tcort Exp $
 
 inherit eutils multilib
 
 DESCRIPTION="The MAD id3tag library"
-HOMEPAGE="http://mad.sourceforge.net/"
+HOMEPAGE="http://www.underbit.com/products/mad/"
 SRC_URI="mirror://sourceforge/mad/${P}.tar.gz"
 
 LICENSE="GPL-2"
