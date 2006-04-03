@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.45 2006/04/01 17:25:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.46 2006/04/03 14:23:34 carlo Exp $
+
+*ksysguard-3.5.2-r1 (03 Apr 2006)
+
+  03 Apr 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/ksysguard-3.5.2-crash-fix.diff, +ksysguard-3.5.2-r1.ebuild:
+  Fix KSysguard crashes, e.g. KDE bugs #100298, #103022.
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> ksysguard-3.5.2.ebuild:
   Add ~x86-fbsd keyword.
