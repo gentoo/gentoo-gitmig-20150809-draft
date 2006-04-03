@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.3.ebuild,v 1.2 2006/04/01 15:00:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.3.ebuild,v 1.3 2006/04/03 21:27:02 agriffis Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://guppy-pe.sourceforge.net/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~ia64 ~x86"
+KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=">=virtual/python-2.3"

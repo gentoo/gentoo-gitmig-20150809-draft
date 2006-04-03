@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/guppy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/ChangeLog,v 1.2 2006/04/01 15:00:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/ChangeLog,v 1.3 2006/04/03 21:27:02 agriffis Exp $
+
+  03 Apr 2006; Aron Griffis <agriffis@gentoo.org> guppy-0.1.3.ebuild:
+  Remove ~ia64 since it segfaults in src_test, thanks to marienz for pointing
+  this out
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> guppy-0.1.3.ebuild:
   Mark 0.1.3 ~ia64

@@ -1,40 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 15a8b0e87d1be35b48563125a76c32d1 ChangeLog 1924
-RMD160 87ffd1715ee34f7c694ec7a0b6d89d353b1eeba2 ChangeLog 1924
-SHA256 16da38c3373d01542b5ebc04ecdf3e6d011346400f1104577d3ee914c67e4657 ChangeLog 1924
+MD5 f74312f6f31a6cd8e5d7eea91d0fa68f ChangeLog 2019
 MD5 2113c1cafc4d908581e1e3d38e2f0a8d files/digest-pyserial-1.18 61
-RMD160 adf760edee204f45f8f92eee76b8119ef6c61f07 files/digest-pyserial-1.18 61
-SHA256 a75589a5dfd142ff65a1001abdb70f0aa503bbcf6b42d090f9546efb8d6d9161 files/digest-pyserial-1.18 61
 MD5 b7667a4a031f4c96a953e61a5dc48d53 files/digest-pyserial-2.0 60
-RMD160 e807f4ef639ff00a178f76a87e9b94515c83cc6f files/digest-pyserial-2.0 60
-SHA256 33b223507e0dc1476276d8b6e2f1ec9fff6dd141fef65c7e9587fe0e7f777259 files/digest-pyserial-2.0 60
 MD5 e9357a610f14dd701ef8f69bb7e0dedf files/digest-pyserial-2.1 60
-RMD160 30346936058657d6fa13cad4d7fee1bc63114d8b files/digest-pyserial-2.1 60
-SHA256 82317ffc53a818db4c64437ab69853c547c117bf03450ccab40465dedbb04a05 files/digest-pyserial-2.1 60
 MD5 49f479eaab2c51153bd77c798a5f7b1c files/digest-pyserial-2.2 60
-RMD160 dbc89ef65537098f48fbabedfd0a6a04aed8f628 files/digest-pyserial-2.2 60
-SHA256 51f064751159a3b0a4a459011e1eae664d207e18c006be6c54bbc8e32e13f99b files/digest-pyserial-2.2 60
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
-SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
 MD5 f097db4a56037fd6a334ff3b1cb3fa8c pyserial-1.18.ebuild 463
-RMD160 ce91e55e82d96e7e735d091a1d845d3e562a00fe pyserial-1.18.ebuild 463
-SHA256 12e219b0dda97c411329669e9ea4409ad0b591148d6d0f6e1a249359ad9cc756 pyserial-1.18.ebuild 463
-MD5 fd478fcc4e2bc8eb9511010bb743308e pyserial-2.0.ebuild 500
-RMD160 6b8e286b393655bf457e4f003a1b66129e368285 pyserial-2.0.ebuild 500
-SHA256 7ab88a7c0cf20ebaa09dc4587d03e5cd73bef65a82ac42f47f01ba9decf65183 pyserial-2.0.ebuild 500
+MD5 c0a88477a4e619eab21ab856b216b12d pyserial-2.0.ebuild 501
 MD5 96a7ed399cb828757628f2135f4c9a8f pyserial-2.1.ebuild 510
-RMD160 35e20f5e192d539db73c7f65e61b8995405c2f59 pyserial-2.1.ebuild 510
-SHA256 8eef25d92e6a581e4124839d623127c842988670d350601520ca382eefc09c64 pyserial-2.1.ebuild 510
 MD5 8e4f0d17d88717437b78245ceafb0e37 pyserial-2.2.ebuild 510
-RMD160 38d63ac2db0247915040d2273cb23e910eea05f4 pyserial-2.2.ebuild 510
-SHA256 82d2c9b352a63425d77520f9235d8422b8338e1da758c929a79b94591888175b pyserial-2.2.ebuild 510
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD4+VmJrHF4yAQTrARAgP0AKCyUGMzj0AgMjIo+Os/9cxD+2+hMgCeMuL3
-IeiGCSMcM3WEvTVtcwcjT2o=
-=RyJe
------END PGP SIGNATURE-----
