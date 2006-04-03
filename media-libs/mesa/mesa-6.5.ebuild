@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.ebuild,v 1.3 2006/04/01 17:26:04 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.ebuild,v 1.4 2006/04/03 01:15:47 flameeyes Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -271,8 +271,15 @@ fix_opengl_symlinks() {
 		rm -f ${LINK}
 	done
 	# Create required symlinks
-	dosym libGL.so.1.2 /usr/$(get_libdir)/libGL.so
-	dosym libGL.so.1.2 /usr/$(get_libdir)/libGL.so.1
+	if [[ ${CHOST} == *-freebsd* ]]; then
+		# FreeBSD doesn't use major.minor versioning, so the library is only
+		# libGL.so.1 and no libGL.so.1.2 is ever used there, thus only create
+		# libGL.so symlink and leave libGL.so.1 being the real thing
+		dosym libGL.so.1 /usr/$(get_libdir)/libGL.so
+	else
+		dosym libGL.so.1.2 /usr/$(get_libdir)/libGL.so
+		dosym libGL.so.1.2 /usr/$(get_libdir)/libGL.so.1
+	fi
 }
 
 dynamic_libgl_install() {
