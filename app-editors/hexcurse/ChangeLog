@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hexcurse
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexcurse/ChangeLog,v 1.6 2005/02/20 05:04:25 gongloo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexcurse/ChangeLog,v 1.7 2006/04/03 16:17:34 tcort Exp $
+
+  03 Apr 2006; Thomas Cort <tcort@gentoo.org> hexcurse-1.55.ebuild:
+  Added ~alpha keyword.
 
   19 Feb 2005; <gongloo@gentoo.org> hexcurse-1.55.ebuild:
   Stable on ppc-macos.
