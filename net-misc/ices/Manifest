@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 758287e1a334addcd405805369192699 ChangeLog 2494
-MD5 78c238ff78ce41a0e5115cab1adc765c ices-2.0.0.ebuild 1282
-MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
-MD5 c29f1b4dd4f220a4a9fe1c8e5e7aa545 ices-2.0.1.ebuild 1259
+MD5 8e8ffdfc0b7cd342a4ff3e7daabf72e7 ChangeLog 2601
 MD5 ace2a441b6354b065c6be58e9056ec82 files/digest-ices-2.0.0 62
 MD5 c7d359105932f01bde2469d5f75591b1 files/digest-ices-2.0.1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCIPDK+uC/ViVka/0RAmA9AJ9Utd1x8j0YxHx8MRATOIjY6ngbhQCgpTyn
-8Hop9MJgNkPFXQa2laI18xE=
-=XAIE
------END PGP SIGNATURE-----
+MD5 78c238ff78ce41a0e5115cab1adc765c ices-2.0.0.ebuild 1282
+MD5 1a4b6236fc64c372badbccc24f536db7 ices-2.0.1.ebuild 1262
+MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
