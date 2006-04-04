@@ -1,0 +1,15 @@
+This patch includes net/bpf.h so that libpcap will use that instead of its own
+stripped down version, that doesnt't allow for pflogd to work correctly.
+
+Index: fbsd-6/contrib/pf/pflogd/pflogd.c
+===================================================================
+--- fbsd-6.orig/contrib/pf/pflogd/pflogd.c
++++ fbsd-6/contrib/pf/pflogd/pflogd.c
+@@ -37,6 +37,7 @@ __FBSDID("$FreeBSD: src/contrib/pf/pflog
+ #include <sys/ioctl.h>
+ #include <sys/file.h>
+ #include <sys/stat.h>
++#include <net/bpf.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>

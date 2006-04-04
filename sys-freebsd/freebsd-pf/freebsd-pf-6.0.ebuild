@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.0.ebuild,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.0.ebuild,v 1.2 2006/04/04 07:11:20 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -26,6 +26,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 SUBDIRS="libexec/ftp-proxy usr.sbin/authpf sbin/pfctl sbin/pflogd"
+
+PATCHES="${FILESDIR}/${PN}-${RV}-pcap.patch"
 
 src_unpack() {
 	freebsd_src_unpack

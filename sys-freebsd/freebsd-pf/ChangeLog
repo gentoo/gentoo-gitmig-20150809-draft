@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-pf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.2 2006/04/04 07:11:20 flameeyes Exp $
+
+  04 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-pf-6.0-pcap.patch, freebsd-pf-6.0.ebuild:
+  Add patch to allow building using portage's libpcap, see bug #124759.
 
 *freebsd-pf-6.0 (01 Apr 2006)
 
