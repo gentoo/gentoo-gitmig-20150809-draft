@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.ebuild,v 1.5 2006/01/26 22:16:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.ebuild,v 1.6 2006/04/04 17:37:18 tupone Exp $
 
 inherit eutils
 
@@ -33,6 +33,7 @@ src_unpack() {
 		-e "/^CXXFLAGS/s:-pipe -Wall -W -O2:${CXXFLAGS}:" \
 		-e '/^Makefile:/s|:.*||' \
 		Makefile || die "sed make depends failed"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_compile() {
