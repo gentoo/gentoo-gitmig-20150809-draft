@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.17 2006/03/06 03:23:45 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.18 2006/04/04 18:10:22 exg Exp $
+
+  04 Apr 2006; Emanuele Giaquinta <exg@gentoo.org> zile-2.2.13.ebuild:
+  Provide virtual/editor.
 
 *zile-2.2.13 (06 Mar 2006)
 

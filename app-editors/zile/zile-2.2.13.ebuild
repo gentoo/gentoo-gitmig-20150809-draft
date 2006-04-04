@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.2.13.ebuild,v 1.1 2006/03/06 03:23:45 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.2.13.ebuild,v 1.2 2006/04/04 18:10:22 exg Exp $
 
 inherit eutils
 
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc ~amd64"
 IUSE=""
 
-DEPEND="allegro? ( media-libs/allegro )
-	!allegro? ( sys-libs/ncurses )
+DEPEND="sys-libs/ncurses
 	>=sys-apps/texinfo-4.3"
+PROVIDE="virtual/editor"
 
 src_compile() {
 	econf || die
