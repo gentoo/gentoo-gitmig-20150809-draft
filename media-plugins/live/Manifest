@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 97a748b4055d3f6609bd2d27d0830117 ChangeLog 6767
+MD5 7fdbe203c9beeb874b7d3057a7558022 ChangeLog 6875
 MD5 2351d6af96c8b0b3bd8bc5bd838b949c files/digest-live-2004.03.27 68
 MD5 11468abfa77dd248fa59bc2adf5fae2c files/digest-live-2004.07.20 67
 MD5 ad8ee57b807e858f0f5d7de2c4caf587 files/digest-live-2004.09.30 67
@@ -15,12 +12,5 @@ MD5 89948cc5466a62b22c61fc5a27bdb9ef live-2004.07.20.ebuild 1917
 MD5 7adfcab55e4fee6c3ab94c332d713bed live-2004.09.30.ebuild 1949
 MD5 da80c01b6f5a4bfea9dc18909ea9bd2e live-2005.01.29.ebuild 2075
 MD5 ec681df189ca718d6693d9f140c30e72 live-2005.08.26.ebuild 2176
-MD5 51439cfe37b23c62cb7d45438234d309 live-2005.11.11.ebuild 2069
+MD5 adab3a0e3c4424a46dd083107d77272d live-2005.11.11.ebuild 2068
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEMToTKRy60XGEcJIRAlJVAJ0a/19TdF5coH3BRsW6JMVMhhqF8QCfRQUv
-kqgmHztYkLBezse3fNEgwqw=
-=QWxj
------END PGP SIGNATURE-----
