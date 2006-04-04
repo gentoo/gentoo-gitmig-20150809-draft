@@ -1,6 +1,14 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.49 2006/04/03 17:29:50 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.50 2006/04/04 02:39:55 mkennedy Exp $
+
+*clisp-2.38-r2 (04 Apr 2006)
+
+  04 Apr 2006; Matthew Kennedy <mkennedy@gentoo.org> +clisp-2.38-r2.ebuild:
+  Conditional support for CLISP's NEW-CLX module. If the user has X in USE and
+  does not have new-clx in USE, then the MIT-CLX module will be built. The
+  MIT-CLX module works better with some applications, eg. StumpWM and is
+  therefore the default; Resolves Bug #128572.
 
 *clisp-2.38-r1 (03 Apr 2006)
 
