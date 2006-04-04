@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.0.ebuild,v 1.2 2006/04/04 07:11:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.0.ebuild,v 1.3 2006/04/04 07:18:52 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/${USBIN}.tar.bz2
 		mirror://gentoo/${LIBEXEC}.tar.bz2
 		mirror://gentoo/${ETC}.tar.bz2"
 
-RDEPEND=""
+RDEPEND="net-libs/libpcap"
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*
 	=sys-freebsd/freebsd-sources-${RV}*

@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f1b3c55ab52a4db10d89a90e2293a746 ChangeLog 819
-RMD160 247060c87a2ac1f7c7bca35e8283945ddff39653 ChangeLog 819
-SHA256 39985b9868918e8917b286c3c7e72dfe38cf48330384770a305e53d6378c346c ChangeLog 819
+MD5 89ff29c6d8694d475f3450e5f24d6505 ChangeLog 927
+RMD160 1067970c84e0e7b86ba94245ad1d1de988f681a0 ChangeLog 927
+SHA256 a0b1ea17b98460a8a3e8a1f767c616c68b11d4f4bcf781169339f95640ec15cf ChangeLog 927
 MD5 85901762b1b5797d4c97aa0cdd7be3e1 files/digest-freebsd-pf-6.0 1295
 RMD160 dfaa6acbcc3a5282d41b3204342dda0e0c906fa8 files/digest-freebsd-pf-6.0 1295
 SHA256 24290e8449f22ded1c68fe86e421e332e96d5dc384d37a79b93aa68cbb8d2b60 files/digest-freebsd-pf-6.0 1295
 MD5 2d3b83d198f4bde2c2f5c838be5ed0f1 files/freebsd-pf-6.0-pcap.patch 556
 RMD160 ddb0733e487a7ba4eecedc82bc95695cb397f072 files/freebsd-pf-6.0-pcap.patch 556
 SHA256 1bef4f28c77386d50712dd8d5579d0dfcd4ef24b2a730597bdcfc4218fe70017 files/freebsd-pf-6.0-pcap.patch 556
-MD5 6c90ac96781f3234837132391e2f2daa freebsd-pf-6.0.ebuild 1295
-RMD160 46df430a0554fdc84520cc9895367b8e8d1ca16b freebsd-pf-6.0.ebuild 1295
-SHA256 f0e34cede6ae3ca3bfa444a8e33d9ed7c22e453eaaf16d9c0aa2dfa04e7d1d40 freebsd-pf-6.0.ebuild 1295
+MD5 a93954d26404a8418890d1539e7d85c9 freebsd-pf-6.0.ebuild 1311
+RMD160 0b9ee2e57686adfa0460656c5e7a5e8613b9fcfa freebsd-pf-6.0.ebuild 1311
+SHA256 71292e546f73f095a0b8bb8af66e86af4a68ec9b8ec586a71748a56825ea066c freebsd-pf-6.0.ebuild 1311
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEMhxCAiZjviIA2XgRAlNmAKDymGL7W0nayiWIfJwXf9lNHwxxnACdGHj2
-WWVqc81b3M3jT2/6sZ9wtKc=
-=de8j
+iD8DBQFEMh3+AiZjviIA2XgRArzGAJ9kh6ay0OW+goSe05QbkHem/tw+hQCg5LWN
+TtzHBvoQ3NrmVBGI6foutmc=
+=ex2n
 -----END PGP SIGNATURE-----

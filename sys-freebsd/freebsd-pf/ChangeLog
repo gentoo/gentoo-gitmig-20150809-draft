@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-pf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.2 2006/04/04 07:11:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.3 2006/04/04 07:18:52 flameeyes Exp $
+
+  04 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> freebsd-pf-6.0.ebuild:
+  Add dependency over libpcap.
 
   04 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/freebsd-pf-6.0-pcap.patch, freebsd-pf-6.0.ebuild:
