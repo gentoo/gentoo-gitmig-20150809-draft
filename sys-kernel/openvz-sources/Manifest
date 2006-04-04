@@ -22,9 +22,9 @@ SHA256 2c7a63a10a4834847790cca275539f1e043765db442f8ce7b444ecdb82b40168 files/di
 MD5 a696b275c129cc711c8010754bc0e97c files/digest-openvz-sources-026.005 539
 RMD160 7715cdee34ce6109d55172f83f1003048d48c5fb files/digest-openvz-sources-026.005 539
 SHA256 b570eabfb42eef97002d3869b21abe49c4af525746fc16146e402043d6465a07 files/digest-openvz-sources-026.005 539
-MD5 647244b44cdc8ef50e6dd53b4b8e88af metadata.xml 564
-RMD160 4b1ba6048ab66a1876252d9d39293eafa4358f2f metadata.xml 564
-SHA256 f43a5afc1c9b9d5f094614ee618070a32bca48c5a230f18c2ec3e070e3484933 metadata.xml 564
+MD5 ea0a561ec3e0c4ffc620051c3c41c225 metadata.xml 563
+RMD160 108fdcf814f98a73f85efd8dbb958097bd661429 metadata.xml 563
+SHA256 2f3dd3bbbc518c57717fc13b4c12dddd41413cf0aca1869c0fc8667f26ccbdfb metadata.xml 563
 MD5 bba82eb2216f91e460facf257e5a9033 openvz-sources-022.050.ebuild 800
 RMD160 3f1a7a52e61d414645aea4030232c3c19e6be0ba openvz-sources-022.050.ebuild 800
 SHA256 3194a39cede73be0213abf4adce02bd7a4f3e7687f161aab9df4562f28480bbe openvz-sources-022.050.ebuild 800
@@ -46,7 +46,7 @@ SHA256 1677dfe241be0db27ad111d91d9a11336474ac8b21edbc9233bc2f37682da073 openvz-s
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEH/NymPFBzbX68WERAh1IAJ0XdEsrrLHWUvoGWkvg6z0iCbZ2CwCcDQoG
-tkiipnt3UeONROdfFiuleNA=
-=eldW
+iD8DBQFEMjhDflZ8QqxhrsMRAg24AJ4/S2ytrd9ORFQEhI4ZhGuAIfBEtACfUWzw
+qD14iy49cIGw3DDqAK+NVOw=
+=uhZI
 -----END PGP SIGNATURE-----
