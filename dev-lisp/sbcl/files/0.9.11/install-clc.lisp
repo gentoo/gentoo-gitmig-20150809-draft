@@ -4,6 +4,10 @@
 ;;;
 ;;; License: LGPL v2
 ;;;
+
+;; This file is originally from the Debian project patch to SBCL
+;; upstream.
+
 (in-package "COMMON-LISP-USER")
 
 (handler-case
@@ -30,5 +34,4 @@
 (ignore-errors
  (format t "~%Saving to sbcl-new.core...")
  (sb-ext:gc :full t)
- (sb-ext:save-lisp-and-die "sbcl-new.core"
-			   :purify t))
+ (sb-ext:save-lisp-and-die "sbcl-new.core"))

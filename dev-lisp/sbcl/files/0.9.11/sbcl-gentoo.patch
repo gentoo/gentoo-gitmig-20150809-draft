@@ -1,6 +1,6 @@
-diff -urN sbcl-0.9.10-orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd sbcl-0.9.10/contrib/sb-bsd-sockets/sb-bsd-sockets.asd
---- sbcl-0.9.10-orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2004-08-02 06:42:56.000000000 -0500
-+++ sbcl-0.9.10/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2006-01-28 20:01:55.989010096 -0600
+diff -urN sbcl-0.9.11-orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd sbcl-0.9.11/contrib/sb-bsd-sockets/sb-bsd-sockets.asd
+--- sbcl-0.9.11-orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2004-08-02 06:42:56.000000000 -0500
++++ sbcl-0.9.11/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2006-01-28 20:01:55.989010096 -0600
 @@ -102,15 +102,3 @@
  
  (defmethod perform :after ((o load-op) (c (eql (find-system :sb-bsd-sockets))))
@@ -17,9 +17,9 @@ diff -urN sbcl-0.9.10-orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd sbcl-0.9.10
 -(defmethod perform ((o test-op) (c (eql (find-system :sb-bsd-sockets-tests))))
 -  (or (funcall (intern "DO-TESTS" (find-package "SB-RT")))
 -      (error "test-op failed")))
-diff -urN sbcl-0.9.10-orig/contrib/sb-posix/sb-posix.asd sbcl-0.9.10/contrib/sb-posix/sb-posix.asd
---- sbcl-0.9.10-orig/contrib/sb-posix/sb-posix.asd	2006-01-24 11:14:50.000000000 -0600
-+++ sbcl-0.9.10/contrib/sb-posix/sb-posix.asd	2006-01-28 20:03:25.675375696 -0600
+diff -urN sbcl-0.9.11-orig/contrib/sb-posix/sb-posix.asd sbcl-0.9.11/contrib/sb-posix/sb-posix.asd
+--- sbcl-0.9.11-orig/contrib/sb-posix/sb-posix.asd	2006-01-24 11:14:50.000000000 -0600
++++ sbcl-0.9.11/contrib/sb-posix/sb-posix.asd	2006-01-28 20:03:25.675375696 -0600
 @@ -89,33 +89,5 @@
  		  :package :sb-posix :depends-on  ("defpackage"))
  		 (:file "interface" :depends-on ("constants" "macros" "designator" "alien"))))
@@ -54,9 +54,9 @@ diff -urN sbcl-0.9.10-orig/contrib/sb-posix/sb-posix.asd sbcl-0.9.10/contrib/sb-
 -       t)
 -      (t
 -       (error "non-errno tests failed!")))))
-diff -urN sbcl-0.9.10-orig/src/runtime/runtime.c sbcl-0.9.10/src/runtime/runtime.c
---- sbcl-0.9.10-orig/src/runtime/runtime.c	2006-01-24 11:15:45.000000000 -0600
-+++ sbcl-0.9.10/src/runtime/runtime.c	2006-01-28 20:04:04.549465936 -0600
+diff -urN sbcl-0.9.11-orig/src/runtime/runtime.c sbcl-0.9.11/src/runtime/runtime.c
+--- sbcl-0.9.11-orig/src/runtime/runtime.c	2006-01-24 11:15:45.000000000 -0600
++++ sbcl-0.9.11/src/runtime/runtime.c	2006-01-28 20:04:04.549465936 -0600
 @@ -68,7 +68,7 @@
  #endif
  

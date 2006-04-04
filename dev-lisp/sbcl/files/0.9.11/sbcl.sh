@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# This file is originally from the Debian project patch to SBCL
+# upstream.  It has been modified by the Gentoo project to NOT use
+# /etc/sbcl.rc which has been confusing because SBCL docs refer
+# /etc/sbclrc.
+
 if [ ! -f /usr/share/common-lisp/source/common-lisp-controller/common-lisp-controller.lisp ] ; then
   cat <<EOF
 $0: cannot find the common-lisp-controller source.
@@ -19,7 +24,7 @@ case $1 in
 	    ( cd /usr/lib/sbcl
 	      /usr/bin/sbcl --core /usr/lib/sbcl/sbcl-dist.core \
 		   --noinform --sysinit /etc/sbclrc --userinit /dev/null \
-		   --load "/usr/lib/sbcl/install-clc.lisp" 2> /dev/null
+		   --load "/usr/lib/sbcl/install-clc.lisp" # 2> /dev/null
               mv sbcl-new.core sbcl.core || (echo FAILED ; cp sbcl-dist.core sbcl.core ) )
 	    ;;
     remove-clc)

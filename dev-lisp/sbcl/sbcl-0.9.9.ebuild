@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.9.ebuild,v 1.1 2006/01/29 05:02:47 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.9.ebuild,v 1.2 2006/04/04 15:35:43 mkennedy Exp $
 
 inherit common-lisp-common-2 eutils
 
@@ -25,7 +25,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~amd64"
 IUSE="hardened ldb nosource threads nptl unicode"
 
-DEPEND="=dev-lisp/common-lisp-controller-4*
+DEPEND=">=dev-lisp/common-lisp-controller-4*
 	>=dev-lisp/cl-asdf-1.84
 	sys-apps/texinfo"
 
