@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/adtool
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/ChangeLog,v 1.4 2005/11/08 11:58:11 satya Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/ChangeLog,v 1.5 2006/04/04 14:30:42 satya Exp $
+
+*adtool-1.3-r1 (04 Apr 2006)
+
+  04 Apr 2006; Christian Andreetta <satya@gentoo.org>
+  +files/adtool-1.3-10-asneeded.patch, +adtool-1.3-r1.ebuild:
+  ldap lib dependency fix with the --as-needed flag (bug #128678: thanks to
+  flameeyes and Mike Auty)
 
 *adtool-1.2-r1 (08 Nov 2005)
 
