@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bfabdcfc2c2e022ff0470fae2a5b7e23 ChangeLog 3125
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 3df37763a771c4c2d79f64432baf8d5b alsa-patch-bay-1.0.0-r2.ebuild 1293
+MD5 eeeb93015c71ccbfa7703a5031d941b6 ChangeLog 3223
 MD5 edb752f53038584a03b60c6de92a673d alsa-patch-bay-1.0.0-r1.ebuild 1404
-MD5 f3ba80b5a1ce25a42136ca5f4396d691 files/digest-alsa-patch-bay-1.0.0-r2 72
-MD5 f3ba80b5a1ce25a42136ca5f4396d691 files/digest-alsa-patch-bay-1.0.0-r1 72
+MD5 f2f4bc9bdd6d9907a6b759278ad51e11 alsa-patch-bay-1.0.0-r2.ebuild 1295
 MD5 3451271c44f72268abb6051fa9af1145 files/alsa-patch-bay-1.0.0-amd64.patch 2030
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZLyvKf2g/qXtneoRApcEAKCMKYvVErrG9ETkeSQod0WKAqZI8ACeMZVg
-tD0Tal+XbH4QDpw3yhzgQHc=
-=iymm
------END PGP SIGNATURE-----
+MD5 f3ba80b5a1ce25a42136ca5f4396d691 files/digest-alsa-patch-bay-1.0.0-r1 72
+MD5 f3ba80b5a1ce25a42136ca5f4396d691 files/digest-alsa-patch-bay-1.0.0-r2 72
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158

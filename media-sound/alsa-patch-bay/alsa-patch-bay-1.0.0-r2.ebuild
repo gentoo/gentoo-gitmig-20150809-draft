@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-1.0.0-r2.ebuild,v 1.2 2005/01/09 12:19:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-1.0.0-r2.ebuild,v 1.3 2006/04/04 00:27:48 tcort Exp $
 
 IUSE="alsa jack ladcca fltk gtk"
 
 inherit eutils
 
 DESCRIPTION="Graphical patch bay for the ALSA sequencer API."
-HOMEPAGE="http://pkl.net/~node/alsa-patch-bay.html"
+HOMEPAGE="http://pkl.net/~node/software/alsa-patch-bay/"
 SRC_URI="http://pkl.net/~node/software/${P}.tar.gz"
 
 LICENSE="GPL-2"
