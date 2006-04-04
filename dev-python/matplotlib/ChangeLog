@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.20 2006/02/07 00:33:31 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.21 2006/04/04 23:26:52 marienz Exp $
+
+*matplotlib-0.87.2 (04 Apr 2006)
+*matplotlib-0.86.2-r1 (04 Apr 2006)
+
+  04 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  +files/matplotlib-0.86.2-no-setuptools.patch, -matplotlib-0.86.2.ebuild,
+  +matplotlib-0.86.2-r1.ebuild, +matplotlib-0.87.2.ebuild:
+  Revision bump for 0.86.2 to disable setuptools (install with setuptools
+  present is completely broken). Version bump.
 
 *matplotlib-0.86.2 (07 Feb 2006)
 

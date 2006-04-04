@@ -1,0 +1,21 @@
+=== modified file 'setup.py'
+--- setup.py	
++++ setup.py	
+@@ -57,14 +57,8 @@
+ import os
+ if os.path.exists('MANIFEST'): os.remove('MANIFEST')
+ 
+-try:
+-    # check if we have a reasonably recent copy of setuptools
+-    from setuptools.command import bdist_egg 
+-    from setuptools import setup
+-    has_setuptools = True
+-except ImportError:
+-    from distutils.core import setup
+-    has_setuptools = False
++from distutils.core import setup
++has_setuptools = False
+     
+ import sys,os
+ import glob
+
