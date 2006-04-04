@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/vdr-dvd-scripts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/vdr-dvd-scripts/ChangeLog,v 1.4 2006/04/03 18:48:10 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/vdr-dvd-scripts/ChangeLog,v 1.5 2006/04/04 21:21:38 hd_brummy Exp $
+
+*vdr-dvd-scripts-0.0.1-r4 (04 Apr 2006)
+
+  04 Apr 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  files/0.0.1/dvdchanger_readdvd_real.sh, -vdr-dvd-scripts-0.0.1-r3.ebuild,
+  +vdr-dvd-scripts-0.0.1-r4.ebuild:
+  version bump; script creats files with *.iso.iso fixed; thanks to uwe0815 on
+  http://bugs.gentoo.de/view.php?id=404 for reporting this
 
   03 Apr 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-dvd-scripts-0.0.1-r2.ebuild:
