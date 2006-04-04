@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.18 2006/04/03 18:26:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.19 2006/04/04 12:21:07 lu_zero Exp $
+
+  04 Apr 2006; Luca Barbato <lu_zero@gentoo.org> mon-0.99.2-r3.ebuild:
+  Marked ~ppc
 
 *mon-0.99.2-r3 (03 Apr 2006)
 
