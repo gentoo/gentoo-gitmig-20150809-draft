@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7f87445a0942478ffd6f3ecd77ab120c ChangeLog 3827
-RMD160 cbff28d6eed50063e50ff6a331eac71489af5ab3 ChangeLog 3827
-SHA256 0c0962a31d156c326cbbcbb13a23689e30d3e35de26588433bd94ee6f40aad1a ChangeLog 3827
+MD5 9fdafe598ba359c313866eae0501a061 ChangeLog 4064
+RMD160 134c419dc64a12a83e277633bd498eb15ad8d16b ChangeLog 4064
+SHA256 d0853008d584fa6ce5b3fde1bd966205066ee11c137a9e5ae093c57dd9d263bf ChangeLog 4064
 MD5 bceb3186343c99afb624d2dcafac229c files/digest-openvz-sources-022.050 536
 RMD160 1e3fc83548a4cb0ec8a47c038b7c6247db94c85f files/digest-openvz-sources-022.050 536
 SHA256 e27b8a950e0b1854bfee4f0f3dced04f8639d167e2149af592407f79e2230a2c files/digest-openvz-sources-022.050 536
@@ -16,12 +16,18 @@ SHA256 2c2b73a1de51240f80504281c27faa6e63ac1571be0d1d757c536d2907a58e6a files/di
 MD5 aae1fadb854254d029c493e91c00960d files/digest-openvz-sources-022.072 536
 RMD160 3c5a1430fb6b81515a0a060a58285bc619fb6115 files/digest-openvz-sources-022.072 536
 SHA256 f3b1640dcd96afe59a5ef42ac589ab57120c88f3eaeceeb7d212dcfe4a4f29f8 files/digest-openvz-sources-022.072 536
+MD5 3e8be00546c143bb8385963f3df1e695 files/digest-openvz-sources-022.072-r1 545
+RMD160 2f44d840de56dba4de065b22bc75403e9eee11c4 files/digest-openvz-sources-022.072-r1 545
+SHA256 0079b53439aa65efec60bb9c7beec6dd511774c9489497995b1a1165096d217f files/digest-openvz-sources-022.072-r1 545
 MD5 87ebf17fa08608b3d2aa7fd3974b65a4 files/digest-openvz-sources-025.014 539
 RMD160 356c3baf6b546651b8971712422fbf70eb409b1e files/digest-openvz-sources-025.014 539
 SHA256 2c7a63a10a4834847790cca275539f1e043765db442f8ce7b444ecdb82b40168 files/digest-openvz-sources-025.014 539
 MD5 a696b275c129cc711c8010754bc0e97c files/digest-openvz-sources-026.005 539
 RMD160 7715cdee34ce6109d55172f83f1003048d48c5fb files/digest-openvz-sources-026.005 539
 SHA256 b570eabfb42eef97002d3869b21abe49c4af525746fc16146e402043d6465a07 files/digest-openvz-sources-026.005 539
+MD5 c4889f1e194f35caa4d3532df0c24c09 files/digest-openvz-sources-026.007 539
+RMD160 f9e05795dbaa8750264cca498195c1aaa0bb3147 files/digest-openvz-sources-026.007 539
+SHA256 9911a10f3b8deef866005e962ccc494eb2e1f1f52a952337014ab71f06ee3e01 files/digest-openvz-sources-026.007 539
 MD5 ea0a561ec3e0c4ffc620051c3c41c225 metadata.xml 563
 RMD160 108fdcf814f98a73f85efd8dbb958097bd661429 metadata.xml 563
 SHA256 2f3dd3bbbc518c57717fc13b4c12dddd41413cf0aca1869c0fc8667f26ccbdfb metadata.xml 563
@@ -34,6 +40,9 @@ SHA256 b6e4587e6bd0607cf0ce58b77cf9280b0748386f335b7a8601509ea8fd54b471 openvz-s
 MD5 28e153f4798e86cd96ca33bad921f55a openvz-sources-022.070.ebuild 800
 RMD160 61380998b005c11b388a824a5c97956394b101ce openvz-sources-022.070.ebuild 800
 SHA256 0daa048e7f2c7197dc8d1a79103e08982e50a914908e1720ffbc447171c0428f openvz-sources-022.070.ebuild 800
+MD5 05f74cbf0aafd5517415ea826d5c3057 openvz-sources-022.072-r1.ebuild 793
+RMD160 0fd24b86d85b7b4b5b0c4c374ea5f4fc96143ffb openvz-sources-022.072-r1.ebuild 793
+SHA256 26619d74f01ccda34c9e84eca1cd850fc458ed345fd38cc0c73df499b5aebe67 openvz-sources-022.072-r1.ebuild 793
 MD5 31bf6c817f37b957618896aa6365d53f openvz-sources-022.072.ebuild 802
 RMD160 c4a5edd66df50552f4d977e278b3e642dcbb198a openvz-sources-022.072.ebuild 802
 SHA256 ad1e552f63426ca5f1cdb3ed42b8edd231d8bd52599f6b94d13eb62f627a9cbe openvz-sources-022.072.ebuild 802
@@ -43,10 +52,13 @@ SHA256 0e6cadf6a773aca3948a5f784bcbad8a999ec03c0bf78a96ba9e523f78f93aff openvz-s
 MD5 5288b3b11c51578ec0005093464ea13e openvz-sources-026.005.ebuild 803
 RMD160 aefb0bfb8718626d08e870648c0066efbabd7179 openvz-sources-026.005.ebuild 803
 SHA256 1677dfe241be0db27ad111d91d9a11336474ac8b21edbc9233bc2f37682da073 openvz-sources-026.005.ebuild 803
+MD5 276ea6586227f18113495e842603b747 openvz-sources-026.007.ebuild 791
+RMD160 bb3c609066c917ea9a2c4d7c54fecdfd11d8feef openvz-sources-026.007.ebuild 791
+SHA256 f8438b27066171cfbf98c065723da92f3d28aff616f29e34327244df12a43edb openvz-sources-026.007.ebuild 791
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEMjhDflZ8QqxhrsMRAg24AJ4/S2ytrd9ORFQEhI4ZhGuAIfBEtACfUWzw
-qD14iy49cIGw3DDqAK+NVOw=
-=uhZI
+iD8DBQFEMkBHflZ8QqxhrsMRAn8hAKCxF4gCWUzzpkQAAQ/4sQKpq9adxwCePArE
+8pWFkvtOoLO+8nxnVaeWPfs=
+=/IXl
 -----END PGP SIGNATURE-----
