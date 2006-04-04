@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.3.2-r3.ebuild,v 1.8 2005/09/29 16:22:35 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.3.2-r3.ebuild,v 1.9 2006/04/04 20:53:00 genstef Exp $
 
 inherit kde-dist eutils
 
@@ -24,7 +24,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	jpeg2k? ( x86? ( media-libs/jasper ) )"
 
 RDEPEND="${DEPEND}
-	app-text/xpdf
+	app-text/poppler
 	tetex? (
 	|| ( >=app-text/tetex-2
 	app-text/ptex

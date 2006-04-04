@@ -1,6 +1,20 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.244 2006/03/27 19:42:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.245 2006/04/04 20:53:00 genstef Exp $
+
+  04 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  kdegraphics-3.3.2-r3.ebuild, kdegraphics-3.4.1-r1.ebuild,
+  kdegraphics-3.4.1-r3.ebuild, kdegraphics-3.4.2-r2.ebuild,
+  kdegraphics-3.4.3.ebuild, kdegraphics-3.4.3-r2.ebuild,
+  kdegraphics-3.4.3-r3.ebuild, kdegraphics-3.4.3-r4.ebuild:
+  xpdf -> poppler depend, bug 121708
+
+  04 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  kdegraphics-3.3.2-r3.ebuild, kdegraphics-3.4.1-r1.ebuild,
+  kdegraphics-3.4.1-r3.ebuild, kdegraphics-3.4.2-r2.ebuild,
+  kdegraphics-3.4.3.ebuild, kdegraphics-3.4.3-r2.ebuild,
+  kdegraphics-3.4.3-r3.ebuild, kdegraphics-3.4.3-r4.ebuild:
+  xpdf -> poppler depend, bug 121708
 
   27 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   kdegraphics-3.5.2.ebuild:
