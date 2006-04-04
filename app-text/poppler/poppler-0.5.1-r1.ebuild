@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.1-r1.ebuild,v 1.2 2006/04/02 16:10:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.1-r1.ebuild,v 1.3 2006/04/04 20:50:34 genstef Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -17,8 +17,7 @@ IUSE="jpeg"
 RDEPEND=">=media-libs/freetype-2.1.8
 	media-libs/fontconfig
 	jpeg? ( >=media-libs/jpeg-6b )
-	!app-text/pdftohtml
-	virtual/ghostscript"
+	!app-text/pdftohtml"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

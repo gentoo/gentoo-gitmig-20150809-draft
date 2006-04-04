@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.0-r5.ebuild,v 1.12 2006/03/19 02:05:06 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.0-r5.ebuild,v 1.13 2006/04/04 20:50:34 genstef Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -17,9 +17,7 @@ RDEPEND=">=media-libs/freetype-2.1.8
 	media-libs/fontconfig
 	cairo? ( >=x11-libs/cairo-0.5 )
 	jpeg? ( >=media-libs/jpeg-6b )
-	!app-text/pdftohtml
-	!<app-text/xpdf-3.01-r4
-	virtual/ghostscript"
+	!app-text/pdftohtml"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
