@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.0-r2.ebuild,v 1.1 2006/04/03 23:55:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.0-r2.ebuild,v 1.2 2006/04/04 08:39:13 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -28,6 +28,7 @@ src_unpack() {
 	cd ${S}
 	epatch "${FILESDIR}/${PN}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-flex-2.5.31.patch"
+	epatch "${FILESDIR}/${P}-asm.patch"
 
 	epatch "${FILESDIR}/SA-06-04-ipfw.patch"
 	epatch "${FILESDIR}/SA-06-05-80211.patch"
