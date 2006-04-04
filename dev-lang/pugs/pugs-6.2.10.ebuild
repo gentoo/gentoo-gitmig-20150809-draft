@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pugs/pugs-6.2.10.ebuild,v 1.1 2005/12/06 15:19:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pugs/pugs-6.2.10.ebuild,v 1.2 2006/04/04 16:12:39 mcummings Exp $
 
 inherit perl-module
 
