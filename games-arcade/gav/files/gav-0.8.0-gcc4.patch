@@ -1,0 +1,12 @@
+diff -Naur gav-0.8.0.old/automa/StatePlaying.h gav-0.8.0/automa/StatePlaying.h
+--- gav-0.8.0.old/automa/StatePlaying.h	2006-04-02 09:23:57.000000000 -0400
++++ gav-0.8.0/automa/StatePlaying.h	2006-04-02 09:24:10.000000000 -0400
+@@ -42,7 +42,7 @@
+ 		      unsigned int prevTicks, int firstTime);
+ 
+ private:
+-  void StatePlaying::setupConnection(InputState *is);
++  void setupConnection(InputState *is);
+ };
+ 
+ #endif // _STATEPLAYING_H_

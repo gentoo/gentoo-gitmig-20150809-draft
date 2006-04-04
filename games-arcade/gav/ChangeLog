@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/gav
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/ChangeLog,v 1.10 2005/05/21 18:34:57 luckyduck Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/ChangeLog,v 1.11 2006/04/04 19:40:46 tupone Exp $
+
+  04 Apr 2006; <Tupone@gentoo.org> +files/gav-0.8.0-gcc4.patch,
+  gav-0.8.0.ebuild:
+  gcc-4.1 fix, bug #128541 by Robert Marmorstein
 
   21 May 2005; Jan Brinkmann <luckyduck@gentoo.org> gav-0.8.0.ebuild:
   stable on amd64

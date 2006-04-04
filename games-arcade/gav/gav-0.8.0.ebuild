@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.8.0.ebuild,v 1.10 2005/11/15 01:30:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.8.0.ebuild,v 1.11 2006/04/04 19:40:46 tupone Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="GPL Arcade Volleyball"
 HOMEPAGE="http://gav.sourceforge.net/"
@@ -30,6 +30,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd "${S}"
 
+	epatch "${FILESDIR}/${P}"-gcc4.patch
 	for d in . automa menu net ; do
 		cp ${d}/Makefile.Linux ${d}/Makefile || die "cp ${d}/Makefile"
 	done
