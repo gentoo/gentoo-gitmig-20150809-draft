@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/net-server
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.27 2006/03/17 20:40:43 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.28 2006/04/04 09:30:56 mcummings Exp $
+
+*net-server-0.93 (04 Apr 2006)
+
+  04 Apr 2006; <mcumming@gentoo.org> +net-server-0.93.ebuild:
+  Bug 128710, bumped in support of amavisd-new :)
 
   17 Mar 2006; Chris White <chriswhite@gentoo.org> net-server-0.88.ebuild:
   Marked amd64 stable for 0.88.
