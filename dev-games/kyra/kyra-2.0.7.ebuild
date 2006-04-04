@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/kyra-2.0.7.ebuild,v 1.10 2005/08/24 23:08:03 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/kyra-2.0.7.ebuild,v 1.11 2006/04/04 17:56:38 tupone Exp $
+
+inherit eutils
 
 DESCRIPTION="Kyra Sprite Engine"
 HOMEPAGE="http://www.grinninglizard.com/kyra/"
@@ -16,6 +18,12 @@ DEPEND=">=media-libs/libsdl-1.2
 	opengl? ( virtual/opengl )"
 
 S="${WORKDIR}/${PN}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
+}
 
 src_compile() {
 	econf $(use_with opengl) || die
