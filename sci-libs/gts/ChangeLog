@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/gts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.3 2006/03/17 05:05:11 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.4 2006/04/04 15:33:32 markusle Exp $
+
+*gts-0.7.6 (04 Apr 2006)
+
+  04 Apr 2006; Markus Dittrich <markusle@gentoo.org> +gts-0.7.6.ebuild:
+  Version bump.
 
   17 Mar 2006; Scott Stoddard <deltacow@gentoo.org> gts-0.7.4.ebuild:
   Added ~amd64.
