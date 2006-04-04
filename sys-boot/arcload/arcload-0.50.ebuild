@@ -1,12 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.5.ebuild,v 1.1 2006/02/06 05:26:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.50.ebuild,v 1.1 2006/04/04 16:02:49 kumba Exp $
 
 inherit eutils toolchain-funcs
 
+# Hack until upstream renames from 0.5 to 0.50
+MY_PV="${PV/50/5}"
+
 DESCRIPTION="ARCLoad - SGI Multi-bootloader.  Able to bootload many different SGI Systems."
 HOMEPAGE="http://www.linux-mips.org/wiki/index.php/ARCLoad"
-SRC_URI="ftp://ftp.linux-mips.org/pub/linux/mips/people/skylark/${P}.tar.bz2"
+SRC_URI="ftp://ftp.linux-mips.org/pub/linux/mips/people/skylark/${PN}-${MY_PV}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~mips"
