@@ -1,6 +1,18 @@
-MD5 6e6e683b9c360cb47265ea601c389cfa ChangeLog 1331
-MD5 3a43843bc3183485e5dcd09069461cad files/digest-horde-ingo-1.0.2 65
-MD5 6ad8af09444817f17462e2fe21a17025 files/digest-horde-ingo-1.1 235
+DIST ingo-h3-1.0.2.tar.gz 853202
+DIST ingo-h3-1.1.tar.gz 995873 RMD160 c4dee2d16d8fd9b34f041835cd93f4a181ae4450 SHA256 84ad8298d6c6190bd0a7bac97b574172b3cd429b075ac6ba4c1f11825c0a30fc
+EBUILD horde-ingo-1.0.2.ebuild 428
 MD5 2b269e148e3706ae4de4888249ad8b95 horde-ingo-1.0.2.ebuild 428
+EBUILD horde-ingo-1.1.ebuild 422
 MD5 c44544c2ab7a92dc33b2de1900d67b7f horde-ingo-1.1.ebuild 422
+MISC ChangeLog 1331
+MD5 6e6e683b9c360cb47265ea601c389cfa ChangeLog 1331
+MISC metadata.xml 298
 MD5 e1bc808ac21e8a6f97dbaffbcf3c642d metadata.xml 298
+size 65 files/digest-horde-ingo-1.0.2 65
+RMD160 be9cc958f876664f6228a2bbca4d0579ea72a7cc files/digest-horde-ingo-1.0.2 65
+SHA256 b3bf1eb54eb1e64e0aacceb7e6536dff37215df27d44a13b4db0179474f7d2ec files/digest-horde-ingo-1.0.2 65
+MD5 3a43843bc3183485e5dcd09069461cad files/digest-horde-ingo-1.0.2 65
+size 235 files/digest-horde-ingo-1.1 235
+RMD160 6267a99d03a393d9bc852d22622863fba6a2858b files/digest-horde-ingo-1.1 235
+SHA256 01c042ef18aa29342700525d854850b7cd195fbaf060c3b8dc287346449b3122 files/digest-horde-ingo-1.1 235
+MD5 6ad8af09444817f17462e2fe21a17025 files/digest-horde-ingo-1.1 235

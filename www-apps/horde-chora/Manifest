@@ -1,8 +1,25 @@
-MD5 7ef8f2fcc4d87b96e7d7efb7348d440e ChangeLog 3054
-MD5 a70d78711aa4fc4e80c8d7a3c88bbfc9 files/digest-horde-chora-1.2.3 63
-MD5 16cdd2f4b43be853174134ca398fc621 files/digest-horde-chora-2.0 64
-MD5 413cb80f0fd8feeece68a77fe1f0b6ad files/digest-horde-chora-2.0.1 66
+DIST chora-1.2.3.tar.gz 199545
+DIST chora-h3-2.0.1.tar.gz 722536
+DIST chora-h3-2.0.tar.gz 655837
+EBUILD horde-chora-1.2.3.ebuild 420
 MD5 ee4f3ef5b0a7060b87702f02afb7f56f horde-chora-1.2.3.ebuild 420
+EBUILD horde-chora-2.0.1.ebuild 434
 MD5 05af2bbcb698e271647416ff17fbe62d horde-chora-2.0.1.ebuild 434
+EBUILD horde-chora-2.0.ebuild 436
 MD5 1c022b77e69fc238589c4f34f4a357bc horde-chora-2.0.ebuild 436
+MISC ChangeLog 3054
+MD5 7ef8f2fcc4d87b96e7d7efb7348d440e ChangeLog 3054
+MISC metadata.xml 1387
 MD5 6365671491544cf2ce501433af5f560d metadata.xml 1387
+size 63 files/digest-horde-chora-1.2.3 63
+RMD160 6b5c1f7de4c14c2b780cec5180e100bd0df109f1 files/digest-horde-chora-1.2.3 63
+SHA256 c92dff3dd3853066cb4e89c6b98c0629ce398a4340b50ad1bed978d87d179e80 files/digest-horde-chora-1.2.3 63
+MD5 a70d78711aa4fc4e80c8d7a3c88bbfc9 files/digest-horde-chora-1.2.3 63
+size 66 files/digest-horde-chora-2.0.1 66
+RMD160 7ff82bb19dffa92a803c84683c1fe2aa2c8103b3 files/digest-horde-chora-2.0.1 66
+SHA256 1883e37a0d3edf13d626f1d3bd9412d3629fd18b72d6073fe439a1814c30651b files/digest-horde-chora-2.0.1 66
+MD5 413cb80f0fd8feeece68a77fe1f0b6ad files/digest-horde-chora-2.0.1 66
+size 64 files/digest-horde-chora-2.0 64
+RMD160 97f3bcc06ee16d3565fd5f50488388a927bcc998 files/digest-horde-chora-2.0 64
+SHA256 177c693587e91c8362b71a3626f67064890b6035842db7118ce5b18a1c3e1cfa files/digest-horde-chora-2.0 64
+MD5 16cdd2f4b43be853174134ca398fc621 files/digest-horde-chora-2.0 64
