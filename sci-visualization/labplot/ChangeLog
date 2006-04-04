@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/labplot
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.2 2006/02/16 19:28:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.3 2006/04/04 23:45:10 carlo Exp $
+
+*labplot-1.5.1 (04 Apr 2006)
+
+  04 Apr 2006; Carsten Lohrke <carlo@gentoo.org> +labplot-1.5.1.ebuild:
+  Version bump.
 
   29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org>
   +files/labplot-1.3.0-amd64.patch, +files/getversion.patch, +metadata.xml,
