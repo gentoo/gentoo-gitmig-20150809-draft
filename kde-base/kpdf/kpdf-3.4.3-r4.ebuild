@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.4.3-r4.ebuild,v 1.8 2006/03/24 12:31:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.4.3-r4.ebuild,v 1.9 2006/04/04 12:20:05 genstef Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -15,8 +15,7 @@ KMEXTRA="kfile-plugins/pdf"
 DEPEND=">=media-libs/freetype-2.0.5
 	media-libs/t1lib"
 RDEPEND="${DEPEND}
-	|| ( >=app-text/poppler-bindings-0.4.3-r1
-	     <app-text/xpdf-3.01-r4 )" # kfile-plugins/pdf depends on "pdfinfo"
+	app-text/poppler" # kfile-plugins/pdf depends on "pdfinfo"
 
 PATCHES="${FILESDIR}/post-3.4.3-kdegraphics-CAN-2005-3193.diff
 	${FILESDIR}/post-3.4.3-kdegraphics-CVE-2006-0301.diff"

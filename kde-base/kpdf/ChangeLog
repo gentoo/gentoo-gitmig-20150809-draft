@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.90 2006/03/31 19:56:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.91 2006/04/04 12:20:05 genstef Exp $
+
+  04 Apr 2006; Stefan Schweizer <genstef@gentoo.org> kpdf-3.4.3-r3.ebuild,
+  kpdf-3.4.3-r4.ebuild:
+  xpdf -> poppler depend, bug 121708
 
   31 Mar 2006; Carsten Lohrke <carlo@gentoo.org> kpdf-3.5.2.ebuild:
   Use deprange-dual() instead deprange(), bug #128226.
