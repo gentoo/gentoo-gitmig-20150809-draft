@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.30 2006/03/12 23:06:34 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.31 2006/04/04 18:05:38 tcort Exp $
+
+  04 Apr 2006; Thomas Cort <tcort@gentoo.org> keepalived-1.1.12.ebuild:
+  Added ~alpha keyword wrt Bug #90501.
 
 *keepalived-1.1.12 (13 Mar 2006)
 
