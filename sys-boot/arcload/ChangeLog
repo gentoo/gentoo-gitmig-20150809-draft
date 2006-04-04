@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/arcload
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.5 2006/02/06 05:26:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.6 2006/04/04 16:02:49 kumba Exp $
+
+*arcload-0.50 (04 Apr 2006)
+
+  04 Apr 2006; Joshua Kinard <kumba@gentoo.org> -arcload-0.5.ebuild,
+  +arcload-0.50.ebuild:
+  Rename arcload-0.5's ebuild to arcload-0.50 so portage actually treats it as
+  an upgrade. Upstream is going to change the filename on their end, but as of
+  now, this hasn't been done. Thus, we have a kludge in place that does the
+  change until upstream changes the source filename.
 
 *arcload-0.5 (10 Feb 2006)
 
