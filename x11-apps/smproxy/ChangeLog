@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/smproxy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/smproxy/ChangeLog,v 1.10 2006/02/14 20:53:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/smproxy/ChangeLog,v 1.11 2006/04/04 00:46:34 spyderous Exp $
+
+*smproxy-1.0.2 (04 Apr 2006)
+
+  04 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +smproxy-1.0.2.ebuild:
+  Man page fix.
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org> smproxy-1.0.1.ebuild:
   Added ~ppc64
