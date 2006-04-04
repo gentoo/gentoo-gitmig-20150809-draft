@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.14.0.ebuild,v 1.1 2006/03/14 22:38:51 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.14.0.ebuild,v 1.2 2006/04/04 13:50:50 foser Exp $
 
 inherit eutils gnome2
 
@@ -47,6 +47,13 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.10-use_fr_rpm2cpio.patch
 	# fix xmllint failure
 	epatch ${FILESDIR}/${PN}-2.13.2-xmllint.patch
+
+	cd ${S}/src
+	# fix dnd drop to move instead of copy (http://bugzilla.gnome.org/show_bug.cgi?id=335659)
+	epatch ${FILESDIR}/${P}-drag_move.patch
+	# fix crasher on double unpack (http://bugzilla.gnome.org/show_bug.cgi?id=336854)
+	epatch ${FILESDIR}/${P}-double_unpack.patch
+
 }
 
 src_install() {
