@@ -1,8 +1,22 @@
-MD5 9887d91f58fd94aecd57b44623a05468 ChangeLog 4368
-MD5 6cc8d5c2dce1643a39bb77e3e9046bb0 abook-0.5.4.ebuild 778
-MD5 d42eae7a18e41f55b30b89b5da058f4f abook-0.5.5-r1.ebuild 956
-MD5 59b69566f05d4e988465d0a88606ae4b abook-0.5.5.ebuild 781
-MD5 379ff2ec5d24511e7beeadbb801e6431 files/digest-abook-0.5.4 63
-MD5 45b636a69be9680eb2643f72a20a1b8f files/digest-abook-0.5.5 63
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 157fd95acf01cbd6d46e932d330e0d8f ChangeLog 4533
+RMD160 0640be6d285651135e4b0fe9356a559a620c3eb3 ChangeLog 4533
+SHA256 e048acd9e98f18a0bc00952a609e2aed9f4509b910ccd481213761bd78acf4c2 ChangeLog 4533
+MD5 1e60c7f1cdfbdd3d1efa8fcc6ce04802 abook-0.5.5-r1.ebuild 954
+RMD160 0e49122713edd33a20c93eaee9bb0d9dd8005a79 abook-0.5.5-r1.ebuild 954
+SHA256 5d2192f14c0f88fdfe855fb33afa236cd6bfeacc6f33cc120a10cce80409383e abook-0.5.5-r1.ebuild 954
 MD5 eacd4f5c7f1ce0902cb1b9b34b6ea221 files/digest-abook-0.5.5-r1 482
+RMD160 edb68ab9890722ed043ee51dc25d1f16fdb76d50 files/digest-abook-0.5.5-r1 482
+SHA256 30761c406a84161281bac6a41e505c0f01d8fa5217ae0d3accc759d9c1b024a1 files/digest-abook-0.5.5-r1 482
 MD5 ff3d843bd695f3a1a9d9ffeee60d3068 metadata.xml 277
+RMD160 714f3386e1e40ab95489b87a15b97b05f230a093 metadata.xml 277
+SHA256 b4d9ec08fcedf6ef469e5eda6cf968678daa03f8c9ad244d97acc5b3223bde1a metadata.xml 277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEMl2iV3J2n04EauwRAgBvAKCOcjcHtyApoM3waJgOIaT5ki6q1ACfXWp8
+i6c/vuMJiNLRVjBjvOlyXno=
+=Yd3r
+-----END PGP SIGNATURE-----
