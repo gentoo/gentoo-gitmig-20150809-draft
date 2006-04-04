@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1.ebuild,v 1.1 2006/03/20 01:56:11 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1-r1.ebuild,v 1.1 2006/04/04 03:04:51 morfic Exp $
 
 DESCRIPTION="Scriptable DVD copy software"
 HOMEPAGE="http://dvdshrink.sourceforge.net/"
@@ -30,27 +30,20 @@ src_install() {
 	dobin ./usr/bin/dvdsfunctions || die "Install of dvdsfunctions failed"
 	dobin ./usr/bin/batchrip.sh || die "Install of batchrip.sh failed"
 
-	dodir /usr/share/dvdshrink
 	insinto /usr/share/dvdshrink
 	doins usr/share/applications/dvdshrink/xdvdshrink_logo.png
 
-	dodir /usr/share/dvdshrink/menus
 	insinto /usr/share/dvdshrink/menus
 	doins usr/share/applications/dvdshrink/menus/*.mpg
 
-	dodir /usr/share/dvdshrink/32x32
 	insinto /usr/share/dvdshrink/32x32
 	doins usr/share/applications/dvdshrink/32x32/dvdsrhink.xpm
 
-	dodir /usr/share/dvdshrink/64x64
 	insinto /usr/share/dvdshrink/64x64
 	doins usr/share/applications/dvdshrink/64x64/dvdshrink.xpm
 
-	dodir /usr/share/docs/dvdshrink
-	insinto /usr/share/docs/dvdshrink
-	doins usr/share/doc/dvdshrink/{INSTALL,README.txt,batchrip.txt,example.xml,gpl.txt}
+	dodoc usr/share/doc/dvdshrink/{INSTALL,README.txt,batchrip.txt,example.xml,gpl.txt}
 
-	dodir /usr/share/icons/dvdshrink
 	insinto /usr/share/icons/dvdshrink
 	doins usr/share/icons/{batchrip.xpm,dvdshrink.xpm}
 }
