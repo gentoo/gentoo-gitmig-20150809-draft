@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.4.4.ebuild,v 1.3 2006/02/06 04:14:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.4.4.ebuild,v 1.4 2006/04/04 23:42:10 carlo Exp $
 
-inherit kde-functions
+inherit kde-functions eutils
 
 MY_P="${P/_/-}-0-generic-src"
 S="${WORKDIR}/${P/_/-}"
@@ -20,6 +20,12 @@ DEPEND="kde? ( >=kde-base/kdelibs-3 )"
 RDEPEND="${DEPEND}
 	dev-util/cvs"
 need-qt 3
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/lincvs-1.4.4-gcc-4.1.diff
+}
 
 src_compile() {
 	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake -o Makefile lincvs.pro
