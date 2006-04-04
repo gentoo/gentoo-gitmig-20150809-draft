@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c3a278e846be8d38d9a1a59d705e513 ChangeLog 4896
-RMD160 d6cdb8f799ab5685a72d537420596d4df786253b ChangeLog 4896
-SHA256 4274caf2c1a4c1b336b643fae01fb09804f74e82519c6d746c429aa9b1a3ceef ChangeLog 4896
+MD5 ec63a49e8c9375a72adc51ed229bad89 ChangeLog 4996
 MD5 abf5b898fdb40aee7909eb21402b8b16 files/digest-ypbind-1.17.2-r1 69
-RMD160 4719d321ee244f458cf1155a9911ffaa1adeb675 files/digest-ypbind-1.17.2-r1 69
-SHA256 0febbcbf1f0fe02d2c38ffdf74dd8dc12f58147802920797a35bdc331601e722 files/digest-ypbind-1.17.2-r1 69
 MD5 7454d3d1218b8d4ca8dc5e06a6925f7f files/digest-ypbind-1.19.1 69
-RMD160 a73924a76be38de2a981d88f033c38f26def7361 files/digest-ypbind-1.19.1 69
-SHA256 bcc2cc1c9071a3339ab80cab807a329658a712f10ffe068926dc64ca3b4494ab files/digest-ypbind-1.19.1 69
 MD5 c5aee6bd628cd668314e4879a2cad696 files/ypbind.confd-r1 112
-RMD160 a2da2210add6bafd35e92ceb021b69825cb3a949 files/ypbind.confd-r1 112
-SHA256 79f6c6ed4875f00fe702f69e9a6180a032d5a47f3e58e892e6ba0e2746b6fec8 files/ypbind.confd-r1 112
 MD5 4a8f16abe013d049df327a1495db254c files/ypbind.initd 887
-RMD160 227d17823b6e35bbe8774fa43251e06e20875758 files/ypbind.initd 887
-SHA256 2e4a2ce1593c671ec427c48f68636237cafd87043140edaef716dc021523a8e9 files/ypbind.initd 887
 MD5 ab59365f7f92becce9ea574af606ca09 metadata.xml 270
-RMD160 709ade9b3b1652e106d0e23b8c31f3dacb7b02c9 metadata.xml 270
-SHA256 13702fefeeff13437d42ecc152cfd4f2a28bce58458a5ad7920a2c70b8e6ae13 metadata.xml 270
 MD5 c790f529fb5b830124b4acb432a42847 ypbind-1.17.2-r1.ebuild 1256
-RMD160 551bf8ec009f5d43025b20d15195e81d5e8e8fd5 ypbind-1.17.2-r1.ebuild 1256
-SHA256 81c5d56840a8aef64abe7ad2ca006be63f6f75ad5f02e25fec9b7af4c9bcfeec ypbind-1.17.2-r1.ebuild 1256
-MD5 133b18a93852083392d227018efd0a8b ypbind-1.19.1.ebuild 1276
-RMD160 e2271e97c492165bdb228c8bfb0044f3c4cf3a26 ypbind-1.19.1.ebuild 1276
-SHA256 2ff8838d562c4b6c2ae6a4602467aec91c1b38ff708aa8d3928ff3d51464ff9b ypbind-1.19.1.ebuild 1276
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELhvxOpjtAl+gMRURAqBtAKC6TNYNsxsOklz1n5W/e5tkn0KgBQCbB/25
-mw7s6l+YMrlAOH45JXuKH8I=
-=v60E
------END PGP SIGNATURE-----
+MD5 dc222e585f6cac05c49bde47655ca9e3 ypbind-1.19.1.ebuild 1273
