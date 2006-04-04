@@ -1,39 +1,97 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1f353266e9ad1b0651217d1e48455ac5 ChangeLog 3623
+MD5 536e9a784980d299896f8a9ad4d13382 ChangeLog 3802
+RMD160 a2c57bec960b6baac38402cceac57813bb18ad34 ChangeLog 3802
+SHA256 10802fb49b0c86cda126cc4540cffec8a8f17c4ac6ef9b8f81fc9e54a03fe1db ChangeLog 3802
 MD5 93ccb861f2d7f46f773ced90f3ed61ca cmucl-18e-r4.ebuild 2963
+RMD160 03b8b33f5cb986ecf95d03d75b0c07def792cd82 cmucl-18e-r4.ebuild 2963
+SHA256 f2d0a2a084bc939b340d6be652191070b9528a8da88244a5406c8670f6b6f790 cmucl-18e-r4.ebuild 2963
 MD5 06e069d6d55039826fdd58ce9222ffa2 cmucl-19a-r1.ebuild 4683
+RMD160 eaa2da32bdd0d03cddd866c0ccb2184933e6c589 cmucl-19a-r1.ebuild 4683
+SHA256 299826d074cda5d7506ecc5bcd83e860c22bb7f23816ef6611b56ea9f1222d25 cmucl-19a-r1.ebuild 4683
 MD5 10302f1464f3d8c0dc5fcddb26536441 cmucl-19b.ebuild 4848
-MD5 6f9452314110a9d40614e6e89e16e663 cmucl-19c.ebuild 5114
+RMD160 eb1a78962c2da47d57dcdb666a9157f6ef019f5a cmucl-19b.ebuild 4848
+SHA256 5ba63c5a6748dc1b485de9a96af2b33a8026d11b94dea09008f5a55f70176d7f cmucl-19b.ebuild 4848
+MD5 87badb93d1830e67f8850fa38dd1c009 cmucl-19c.ebuild 5115
+RMD160 45b8c9a6b9fc84ed06c30d8d3a002121b52ef408 cmucl-19c.ebuild 5115
+SHA256 6481178dcf5d261f73582fe65bba09a972ceef12e0633fe6accb7a690a76bb11 cmucl-19c.ebuild 5115
 MD5 997a2bfdcd98bc978f6c3b79ba8f2264 files/18e/README.Gentoo 848
+RMD160 c4ba0ce6cf147a8b339302856fbac6590609e343 files/18e/README.Gentoo 848
+SHA256 99dae09d2159ddf599a39cdc21168c300dd3c56d7ca454565f08076fb83ae064 files/18e/README.Gentoo 848
 MD5 306ba9e5615290fb688a46f7c0efdc07 files/18e/herald-save.lisp-gentoo.patch 751
+RMD160 397f940d4d0997c55a30a28f5b52f5cee2d78f86 files/18e/herald-save.lisp-gentoo.patch 751
+SHA256 c5fa5b25694828991d560eb4a3d9f3e7600780a3c1e90f053709b3370c349425 files/18e/herald-save.lisp-gentoo.patch 751
 MD5 379cf3aca883a7097c0410f96be55378 files/18e/install-clc.lisp-gentoo.patch 1294
+RMD160 7134faa4698d5bdf491a889fdd016907d114dfc0 files/18e/install-clc.lisp-gentoo.patch 1294
+SHA256 a29a1afc3d724b171fcbc179093d5591f81aaa11dc171a4ef03ce97276cbd607 files/18e/install-clc.lisp-gentoo.patch 1294
 MD5 190f38f6f6f33f3e1ceee848d2583573 files/18e/site-init.lisp.in 1935
+RMD160 b2a1c4852e4990d6fd17c59088de8f54bed6e30f files/18e/site-init.lisp.in 1935
+SHA256 308c9241da3bc81c29e2e29dd2ad1a55b0c2e5c1ede1f2ab8e3cb58945943cec files/18e/site-init.lisp.in 1935
 MD5 997a2bfdcd98bc978f6c3b79ba8f2264 files/19a/README.Gentoo 848
+RMD160 c4ba0ce6cf147a8b339302856fbac6590609e343 files/19a/README.Gentoo 848
+SHA256 99dae09d2159ddf599a39cdc21168c300dd3c56d7ca454565f08076fb83ae064 files/19a/README.Gentoo 848
 MD5 14ccb382eaa0a2c94834328a413cc906 files/19a/cmucl.sh 2701
+RMD160 31cf025b4345e7670b3b895023d1bb00d4f6fc3d files/19a/cmucl.sh 2701
+SHA256 61c4084a280e44c86b0d2e915ba79151c44b3934ed894d2256402d850b78dc25 files/19a/cmucl.sh 2701
 MD5 03cd0504ac8f5c50f17bf31d6d9d3293 files/19a/herald-save.lisp-gentoo.patch 891
+RMD160 899b30a4e0e55585145f1d31ec51efd208864274 files/19a/herald-save.lisp-gentoo.patch 891
+SHA256 1a66233675c99d0e1340fa9a89b0d891d4581c167db5f725268a22558160017a files/19a/herald-save.lisp-gentoo.patch 891
 MD5 b23a0a0d355d92b1a2123de8acd61418 files/19a/install-clc.lisp 1749
+RMD160 c336f5ed2e9fd4c75038c445df2630e5ba3cf57b files/19a/install-clc.lisp 1749
+SHA256 e87942f86ac2b9abb43b6270bbae5f4eb4854b689dfc7b7f223a7731eaef9bb8 files/19a/install-clc.lisp 1749
 MD5 190f38f6f6f33f3e1ceee848d2583573 files/19a/site-init.lisp.in 1935
+RMD160 b2a1c4852e4990d6fd17c59088de8f54bed6e30f files/19a/site-init.lisp.in 1935
+SHA256 308c9241da3bc81c29e2e29dd2ad1a55b0c2e5c1ede1f2ab8e3cb58945943cec files/19a/site-init.lisp.in 1935
 MD5 997a2bfdcd98bc978f6c3b79ba8f2264 files/19b/README.Gentoo 848
+RMD160 c4ba0ce6cf147a8b339302856fbac6590609e343 files/19b/README.Gentoo 848
+SHA256 99dae09d2159ddf599a39cdc21168c300dd3c56d7ca454565f08076fb83ae064 files/19b/README.Gentoo 848
 MD5 14ccb382eaa0a2c94834328a413cc906 files/19b/cmucl.sh 2701
+RMD160 31cf025b4345e7670b3b895023d1bb00d4f6fc3d files/19b/cmucl.sh 2701
+SHA256 61c4084a280e44c86b0d2e915ba79151c44b3934ed894d2256402d850b78dc25 files/19b/cmucl.sh 2701
 MD5 4db43f75da9d79658837b4ce0e7be3bb files/19b/herald-save.lisp-gentoo.patch 831
+RMD160 2f3a54db6ac7ec11a875fe7bb077ed1b2019b3c7 files/19b/herald-save.lisp-gentoo.patch 831
+SHA256 9c265361bbf6aadfe5d89ed8aa3d80ab0380c871b78b9c932da7749c810cc5de files/19b/herald-save.lisp-gentoo.patch 831
 MD5 b23a0a0d355d92b1a2123de8acd61418 files/19b/install-clc.lisp 1749
+RMD160 c336f5ed2e9fd4c75038c445df2630e5ba3cf57b files/19b/install-clc.lisp 1749
+SHA256 e87942f86ac2b9abb43b6270bbae5f4eb4854b689dfc7b7f223a7731eaef9bb8 files/19b/install-clc.lisp 1749
 MD5 190f38f6f6f33f3e1ceee848d2583573 files/19b/site-init.lisp.in 1935
+RMD160 b2a1c4852e4990d6fd17c59088de8f54bed6e30f files/19b/site-init.lisp.in 1935
+SHA256 308c9241da3bc81c29e2e29dd2ad1a55b0c2e5c1ede1f2ab8e3cb58945943cec files/19b/site-init.lisp.in 1935
 MD5 997a2bfdcd98bc978f6c3b79ba8f2264 files/19c/README.Gentoo 848
+RMD160 c4ba0ce6cf147a8b339302856fbac6590609e343 files/19c/README.Gentoo 848
+SHA256 99dae09d2159ddf599a39cdc21168c300dd3c56d7ca454565f08076fb83ae064 files/19c/README.Gentoo 848
 MD5 14ccb382eaa0a2c94834328a413cc906 files/19c/cmucl.sh 2701
+RMD160 31cf025b4345e7670b3b895023d1bb00d4f6fc3d files/19c/cmucl.sh 2701
+SHA256 61c4084a280e44c86b0d2e915ba79151c44b3934ed894d2256402d850b78dc25 files/19c/cmucl.sh 2701
 MD5 c210b06bf993a0933938064db9c6f8ee files/19c/herald-save.lisp-gentoo.patch 830
+RMD160 7a9da1b5bc5190a9d44f691bd1b5ca433532083b files/19c/herald-save.lisp-gentoo.patch 830
+SHA256 cd6b45f4b981dafd00ca86fd5a76313adc21ffd8d9b30aaadd72819eb40b7a8e files/19c/herald-save.lisp-gentoo.patch 830
 MD5 b23a0a0d355d92b1a2123de8acd61418 files/19c/install-clc.lisp 1749
+RMD160 c336f5ed2e9fd4c75038c445df2630e5ba3cf57b files/19c/install-clc.lisp 1749
+SHA256 e87942f86ac2b9abb43b6270bbae5f4eb4854b689dfc7b7f223a7731eaef9bb8 files/19c/install-clc.lisp 1749
 MD5 190f38f6f6f33f3e1ceee848d2583573 files/19c/site-init.lisp.in 1935
+RMD160 b2a1c4852e4990d6fd17c59088de8f54bed6e30f files/19c/site-init.lisp.in 1935
+SHA256 308c9241da3bc81c29e2e29dd2ad1a55b0c2e5c1ede1f2ab8e3cb58945943cec files/19c/site-init.lisp.in 1935
 MD5 df309c5d109052b9c57d79bb4aac5871 files/digest-cmucl-18e-r4 137
+RMD160 3f4f1f97fb8f347c8b2d01ee00dc4b937e687936 files/digest-cmucl-18e-r4 137
+SHA256 5d2fbcb9f2fa81f8a2448787c5c2870dd343381b84a17b1dda2fdcbafcceea59 files/digest-cmucl-18e-r4 137
 MD5 6d03d3afa9c49f60a0aaa0e71597cfba files/digest-cmucl-19a-r1 240
+RMD160 e056322af55aefab79a15fb546aacfc238b730ed files/digest-cmucl-19a-r1 240
+SHA256 a527279bfa466c71def3de3c39c5bfcf7d5b31deaa802575c8f3192ec1b93259 files/digest-cmucl-19a-r1 240
 MD5 a7972648eda13df8cec3a330f29a45b9 files/digest-cmucl-19b 239
-MD5 764f277b179f1114309842862b1d79b0 files/digest-cmucl-19c 239
+RMD160 4ebe57bad202128fd8927e04353531b7dcaf0d2c files/digest-cmucl-19b 239
+SHA256 d556df3b35f4e15d4144db5c3bed9a717c4f2af0f2beb7efc23d824fe935ed19 files/digest-cmucl-19b 239
+MD5 a15b9d84ca311917de90cc72d091e0b5 files/digest-cmucl-19c 855
+RMD160 27c0b3561508ee96af85c6b2290e064d374437ef files/digest-cmucl-19c 855
+SHA256 709eb27cd9c1c9f1875fea62bd95a9773ca5c3dc12f14755746badc58f9ac673 files/digest-cmucl-19c 855
 MD5 929688a2167434e2a4f0169de47e7428 metadata.xml 1107
+RMD160 7f75e590d70bc3ea17dbe0a9ec07699c533515dd metadata.xml 1107
+SHA256 36018b9216ec88b76b481c203ca13e9630ffa4b8192ed5e30fcf172702e79310 metadata.xml 1107
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDl+DUyiNZaEAZA+ARAvzpAJ40x7UlMdxgf5zBtqQfSuLmd2dLYwCbB5B6
-4f0PPh+Ax2nAMRfeBPCSkto=
-=D3V0
+iD8DBQFEMpD0yiNZaEAZA+ARAiivAJ9GqhkDa1diuS0wZCd/E/8sJbLM1wCfR1N6
+4h+OMzdHcWZHGhlUmhhgSMo=
+=h2Uh
 -----END PGP SIGNATURE-----

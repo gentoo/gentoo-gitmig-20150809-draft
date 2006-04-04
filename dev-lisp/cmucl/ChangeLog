@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cmucl
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.19 2005/12/08 07:29:12 mkennedy Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.20 2006/04/04 15:29:44 mkennedy Exp $
+
+  04 Apr 2006; Matthew Kennedy <mkennedy@gentoo.org> cmucl-19c.ebuild:
+  Update common-lisp-controller dependency to
+  >=dev-lisp/common-lisp-controller-4* (works with 5.x too).
 
 *cmucl-19c (08 Dec 2005)
 
