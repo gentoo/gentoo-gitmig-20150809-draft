@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.39 2006/03/31 20:12:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.40 2006/04/04 00:52:21 spyderous Exp $
+
+*xinit-1.0.2 (04 Apr 2006)
+
+  04 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; +xinit-1.0.2.ebuild:
+  Better portability among different /bin/sh'es.
 
   31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> xinit-1.0.1.ebuild:
   Add ~x86-fbsd keyword.
