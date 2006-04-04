@@ -1,8 +1,37 @@
-MD5 ea1664f2c0f900cbaf8d8f03ff40ef26 ChangeLog 3525
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 27cf4cf18a574f4c6e813be872f26ed6 ChangeLog 3662
+RMD160 894b5f5d00c3e7886aa5c5678f256c9c90ff68ba ChangeLog 3662
+SHA256 6527f8701102ae082da4d099b1960d35fda59e556cc20123905b239b499b27b0 ChangeLog 3662
 MD5 467a17adbf9275141feb5d5be30f0bb4 files/digest-simgear-0.3.6 65
+RMD160 bb52cd87590a63985734a0076b26d7638e567c69 files/digest-simgear-0.3.6 65
+SHA256 a95228727a3c4be14209108ec87c0fff44bb7c13a1881b8359df6c1db89afb1a files/digest-simgear-0.3.6 65
 MD5 a705ff430986a8734a54873e12a6e5cf files/digest-simgear-0.3.8 65
-MD5 854e9a945f6a5e52aa25524918086e38 files/digest-simgear-0.3.9 65
+RMD160 0d97cc601adb36ecc2570dbbf66ec25154bb845a files/digest-simgear-0.3.8 65
+SHA256 d0650986cd5c69a25a424cb411f253629d6f0985cce72ac778f5ef1300da23ef files/digest-simgear-0.3.8 65
+MD5 75204492a52a2be8eceb4ca253314c86 files/digest-simgear-0.3.9 241
+RMD160 c06d585f3cd55bd45cf53091f7fd2812a461c744 files/digest-simgear-0.3.9 241
+SHA256 73196fac0457137e655bb467a37f091ffc2b36eb2910ed507191a38c96854426 files/digest-simgear-0.3.9 241
+MD5 2e8f7f95fa0a2247ad533d991a019933 files/simgear-0.3.9-gcc41.patch 503
+RMD160 b79a59c64adc38b806c379e110ceb65ecc092d12 files/simgear-0.3.9-gcc41.patch 503
+SHA256 7538cdb107e65f5540ad862dd39aba001713e87c84134ed487540244326ccb6e files/simgear-0.3.9-gcc41.patch 503
 MD5 d1a4776c70e916317e93f7b34e541be5 metadata.xml 538
+RMD160 ad9da47ba8d1df3750dfedc20cb0d385d9118084 metadata.xml 538
+SHA256 0e2b83bd660e0709ada2f3e9b5d9db161e505ad9baf7c56dd6ee3299f5ce1963 metadata.xml 538
 MD5 7eac0e53c5d86f1bcdc17450a9f5b042 simgear-0.3.6.ebuild 706
+RMD160 6ad38d09685bd4984f120ae3f7655f4dd6fffa49 simgear-0.3.6.ebuild 706
+SHA256 1fb28ec45f53de8e48ecf47e6b8126579f77f44703c643bd6549c05844a92cae simgear-0.3.6.ebuild 706
 MD5 d9d34a68d4f2f9eb313f956d669015d2 simgear-0.3.8.ebuild 708
-MD5 314154eac974f01e1a0bf0a242d56cbf simgear-0.3.9.ebuild 709
+RMD160 800a436d0988d17a2030034241a0cc29b545e76a simgear-0.3.8.ebuild 708
+SHA256 a0880108a73a15cfd7e359848f2a8a01987ca2f68a28580515b370f19b3fd456 simgear-0.3.8.ebuild 708
+MD5 d225ed7b338fbfe505da0d79e28cd7e8 simgear-0.3.9.ebuild 805
+RMD160 f1286b35c312763e8a0a46dad16e9c6b9582dab9 simgear-0.3.9.ebuild 805
+SHA256 ed6f9582a3dd0122cbe4f91f0557596856f48b3bbb290a765c00a7ac64afe5a4 simgear-0.3.9.ebuild 805
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD4DBQFEMr802CTtIKiFlQIRAoKvAJ4rzxBtLleQlnaCC1D+2RAZ/FaJTwCXaGVn
+Nh0XbNU94MQ4etQCgKfWZA==
+=jeEh
+-----END PGP SIGNATURE-----
