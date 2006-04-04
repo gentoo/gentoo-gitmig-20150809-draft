@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.3 2006/04/02 22:26:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.4 2006/04/04 00:42:11 flameeyes Exp $
+
+  04 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-lib-6.0-binutils-asm.patch, freebsd-lib-6.0.ebuild:
+  Add patch from Emanuele Giaquinta <exg@gentoo.org> to fix building with
+  binutils 2.16.91.0.7.
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/freebsd-lib-fixmakefiles.patch,
