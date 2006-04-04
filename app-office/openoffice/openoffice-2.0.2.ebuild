@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2.ebuild,v 1.8 2006/04/02 16:02:16 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2.ebuild,v 1.9 2006/04/04 19:45:33 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions mono toolchain-funcs
 
@@ -92,7 +92,7 @@ DEPEND="${RDEPEND}
 		>=dev-libs/libxml2-2.0 )
 	ldap? ( net-nds/openldap )
 	mono? ( >=dev-lang/mono-1.1.6 )
-	xml2? ( >=dev-libs/libxml2-2.0 )"
+	xml? ( >=dev-libs/libxml2-2.0 )"
 
 PROVIDE="virtual/ooo"
 
@@ -124,7 +124,7 @@ pkg_setup() {
 		ewarn " You are building with java-support disabled, this results in some "
 		ewarn " of the OpenOffice.org functionality (i.e. help) being disabled. "
 		ewarn " If something you need does not work for you, rebuild with "
-		ewarn " java in your USE-flags. Also the xml2 use-flag is disabled with "
+		ewarn " java in your USE-flags. Also the xml use-flag is disabled with "
 		ewarn " -java to prevent build breakage. "
 		ewarn
 	elif use sparc; then
@@ -151,7 +151,7 @@ src_unpack() {
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
 
 	echo "`use_enable binfilter`" >> ${CONFFILE}
-	echo "`use_with xml2 system-libxml`" >> ${CONFFILE}
+	echo "`use_with xml system-libxml`" >> ${CONFFILE}
 
 	echo "`use_with mozilla system-mozilla`" >> ${CONFFILE}
 	echo "`use_enable mozilla`" >> ${CONFFILE}
