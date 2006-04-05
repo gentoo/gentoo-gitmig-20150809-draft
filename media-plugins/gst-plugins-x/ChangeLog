@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-x
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.3 2006/03/25 00:12:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.4 2006/04/05 16:33:04 chutzpah Exp $
+
+  05 Apr 2006; Patrick McLean <chutzpah@gentoo.org>
+  gst-plugins-x-0.10.4.ebuild:
+  Stable on amd64 (bug #128737).
 
   25 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   gst-plugins-x-0.10.4.ebuild:
