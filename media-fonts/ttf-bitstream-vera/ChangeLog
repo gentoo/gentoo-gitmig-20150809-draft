@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ttf-bitstream-vera
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ChangeLog,v 1.18 2006/03/23 20:40:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ChangeLog,v 1.19 2006/04/05 15:13:30 spyderous Exp $
+
+  05 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  ttf-bitstream-vera-1.10-r3.ebuild:
+  Fix xorg-x11 metabuild dep issues.
 
   23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
   -ttf-bitstream-vera-1.10-r2.ebuild:
