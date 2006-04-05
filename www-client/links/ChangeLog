@@ -1,6 +1,10 @@
 # ChangeLog for www-client/links
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.61 2006/02/21 14:23:21 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.62 2006/04/05 15:01:48 vanquirius Exp $
+
+  05 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> links-2.1_pre20.ebuild:
+  Fix dependencies so that it doesn't fail in non-interactive builds. Thanks
+  to Gustavo Zacarias <gustavoz at gentoo dot org> in bug 128252.
 
   21 Feb 2006; Scott Stoddard <deltacow@gentoo.org> links-2.1_pre20.ebuild:
   Stable on amd64.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre20.ebuild,v 1.11 2006/02/21 14:23:21 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre20.ebuild,v 1.12 2006/04/05 15:01:48 vanquirius Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,10 +27,15 @@ RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	gpm? ( sys-libs/gpm )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
+	fbcon? ( >=media-libs/libpng-1.2.1
+		>=media-libs/jpeg-6b
+		sys-libs/gpm )
 	tiff? ( >=media-libs/tiff-3.5.7 )
-	svga? ( >=media-libs/svgalib-1.4.3 )
+	svga? ( >=media-libs/svgalib-1.4.3
+		>=media-libs/libpng-1.2.1 )
 	X? ( || ( x11-libs/libXext
-		virtual/x11 ) )
+		virtual/x11 )
+		>=media-libs/libpng-1.2.1 )
 	directfb? ( dev-libs/DirectFB )
 	sdl? ( >=media-libs/libsdl-1.2.0 )
 	sys-libs/zlib
@@ -45,24 +50,6 @@ DEPEND="${RDEPEND}
 	javascript? ( >=sys-devel/flex-2.5.4a )"
 
 PROVIDE="virtual/textbrowser"
-
-pkg_setup (){
-	if use fbcon && ( ! use png || ! use gpm ); then
-		eerror "You have set the fbcon USE flag. You must also set the png & gpm USE flags"
-		eerror "to be able to use fbcon."
-		die "fbcon set without png & gpm set"
-	fi
-
-	if use X && ! use png; then
-		eerror "You have set the X USE flag, you must also set the png USE flag"
-		die "X set without png"
-	fi
-
-	if use svga && ! use png; then
-		eerror "You have set the svga USE flag, you must also set the png USE flag"
-		die "svga set without png"
-	fi
-}
 
 src_unpack (){
 	unpack ${A}; cd "${S}"
