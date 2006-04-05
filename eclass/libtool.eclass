@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.66 2006/04/02 16:00:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.67 2006/04/05 17:50:34 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -20,7 +20,7 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 
 ELIBTOOL_VERSION="2.0.2"
 
-ELT_PATCH_DIR="${PORTDIR}/eclass/ELT-patches"
+ELT_PATCH_DIR="${ECLASSDIR}/ELT-patches"
 ELT_APPLIED_PATCHES=
 ELT_LTMAIN_SH=
 
