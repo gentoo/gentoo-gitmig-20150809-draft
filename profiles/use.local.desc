@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1828 2006/04/04 02:31:31 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1829 2006/04/05 13:53:56 markusle Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1258,6 +1258,7 @@ sci-libs/gdal:grass - Adds support for the grasslib GIS library
 sci-libs/gdal:hdf - Adds support for the Hierarchical Data Format
 sci-libs/gdal:hdf5 - Adds support for the Hierarchical Data Format v 5
 sci-libs/gdal:ogdi - Enables support for the open geographic datastore interface
+sci-libs/gerris:dx - Enables support for opendx
 sci-libs/hdf5:hlapi - Enables support for high-level library
 sci-libs/itpp:cblas - Adds support for the cblas numerical library
 sci-libs/libghemical:mopac7 - Use the MOPAC7 package for semi-empirical calculations
