@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1-r1.ebuild,v 1.1 2006/04/03 21:51:57 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1-r1.ebuild,v 1.2 2006/04/05 07:08:23 truedfx Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -55,6 +55,7 @@ src_unpack() {
 	epatch ${FILESDIR}/ghostscript-use-external-freetype.patch
 	epatch ${FILESDIR}/ghostscript-split-font-configuration.patch
 	epatch ${FILESDIR}/${P}-fPIC.patch
+	epatch ${FILESDIR}/${P}-bsd.patch
 
 	# not submitted
 	epatch ${FILESDIR}/ijs-dirinstall.diff

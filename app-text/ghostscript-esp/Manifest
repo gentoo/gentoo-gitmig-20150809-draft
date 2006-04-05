@@ -1,6 +1,9 @@
-MD5 034dae05902415c0e533f56bdd71fb33 ChangeLog 23745
-RMD160 88bbc5443e95394159298d4831f97034d8c26f94 ChangeLog 23745
-SHA256 68f6644c1a09d71dccae01e5f1bd18e61687ef9cdcca5cf2fd3f9329a4d5421b ChangeLog 23745
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 62ed2d662b817ca100f543e9f11604b4 ChangeLog 23969
+RMD160 a0cf450eb92fefc108bbe3c5de7c33f0ab4787e3 ChangeLog 23969
+SHA256 ff2acebb52d9430b1f772dd8f94e6a8287e051aebdce853e7acbe4365ae11fff ChangeLog 23969
 MD5 7f21dcf1d3bef969610efcc5f4ec58b4 files/digest-ghostscript-esp-7.07.1-r10 404
 RMD160 ecb3fdfa5f3ae98fe799aa435a530eb905003735 files/digest-ghostscript-esp-7.07.1-r10 404
 SHA256 4fdfa61a4cf88ed4fdb50a1e81fd61d0697f1383610f3d32af0a061341f088b6 files/digest-ghostscript-esp-7.07.1-r10 404
@@ -40,6 +43,9 @@ SHA256 2c197e3f1e84193eb011212b604c4b9abc092cb00f8c56438ed418dbad58ed76 files/gh
 MD5 5b476654e84a9748e3d56d86f264b277 files/ghostscript-esp-7.07.1-64bit-cmyk.patch 1777
 RMD160 6b59d9b2583c8fbc00ad1267809b815f167c27e9 files/ghostscript-esp-7.07.1-64bit-cmyk.patch 1777
 SHA256 6261f97860549cfd27ed5c0c9a2967bf00a58076c38529828ce99e794ab083b1 files/ghostscript-esp-7.07.1-64bit-cmyk.patch 1777
+MD5 95e181c9c56fda2cbdd59a1dccd853d7 files/ghostscript-esp-8.15.1-bsd.patch 542
+RMD160 a86fe4eeaf5ac6a4ded26cb8188786df547db7bf files/ghostscript-esp-8.15.1-bsd.patch 542
+SHA256 e5d84f8ccd438398722ef9717e123431fa8c7ee5164dd6cce947cf913b41335d files/ghostscript-esp-8.15.1-bsd.patch 542
 MD5 64856e99a488d61dfa4af58e24fb24b9 files/ghostscript-esp-8.15.1-fPIC.patch 322
 RMD160 a38646a9529c8b9d52c9b7910880ec54f89886e4 files/ghostscript-esp-8.15.1-fPIC.patch 322
 SHA256 dae3f78af76da535c057276c6b9fbeb70688016b2fc42ac4d318e31d9442fc5a files/ghostscript-esp-8.15.1-fPIC.patch 322
@@ -118,12 +124,19 @@ SHA256 4ee53b22ffb749db27f4b667580b8720122dde8e3a75ab70816e37aa7847f015 ghostscr
 MD5 46ca5e0ed613d3812d9d64d3c44ed4b9 ghostscript-esp-7.07.1-r8.ebuild 5597
 RMD160 48c71eb0c46455dfc57cddd37bb3b09bc503e8b8 ghostscript-esp-7.07.1-r8.ebuild 5597
 SHA256 0ebb51a5e91a07e3e1a816a7634cd35650fa9f7d32cc723ed14e28ff02480449 ghostscript-esp-7.07.1-r8.ebuild 5597
-MD5 18334730662eada981a4c4f8681d49a1 ghostscript-esp-8.15.1-r1.ebuild 3999
-RMD160 e74ae9d47fde1137dd884aa1e695ad00db32b6eb ghostscript-esp-8.15.1-r1.ebuild 3999
-SHA256 6292ad7fdd770c082d28be9d0975f8131f9297e08140192199633d96965cf173 ghostscript-esp-8.15.1-r1.ebuild 3999
+MD5 f689ff5bf863a300e4f05ae2abc0feb4 ghostscript-esp-8.15.1-r1.ebuild 4034
+RMD160 2d4ce581e468bcc125379e0f172fd28ffbbe77ef ghostscript-esp-8.15.1-r1.ebuild 4034
+SHA256 8483b2ce09778825f273cf2323257da91df927177250ea9db162cd072a2715f4 ghostscript-esp-8.15.1-r1.ebuild 4034
 MD5 d40fb7aaaa18d6c6dfc3e1450c8346c9 ghostscript-esp-8.15.1.ebuild 3845
 RMD160 b8e292d2f8327d17f7990e05b185f769a8072121 ghostscript-esp-8.15.1.ebuild 3845
 SHA256 672abca0f80a23e301bc5f88004ffddab35551acf235ea6ff9d6733095cebe97 ghostscript-esp-8.15.1.ebuild 3845
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 metadata.xml 161
 SHA256 7c85e6739a71f5bb23e8de36c88677d772946e61f7285892f7554e37bd2bca76 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (NetBSD)
+
+iD8DBQFEM20UwnQyISwouHwRAmdEAKCOxV3fEDg94cD8hJl1AcdeG1KMLQCfZmbz
+FK7MCErS9H8sE0rE7IzWOxA=
+=10yq
+-----END PGP SIGNATURE-----

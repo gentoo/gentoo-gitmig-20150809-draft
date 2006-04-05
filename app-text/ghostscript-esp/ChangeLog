@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript-esp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.21 2006/04/03 21:51:57 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.22 2006/04/05 07:08:23 truedfx Exp $
+
+  05 Apr 2006; Harald van Dĳk <truedfx@gentoo.org>
+  +files/ghostscript-esp-8.15.1-bsd.patch, ghostscript-esp-8.15.1-r1.ebuild:
+  *BSD --enable-dynamic support, and a proper error message for systems it
+  does not support
 
 *ghostscript-esp-8.15.1-r1 (03 Apr 2006)
 
