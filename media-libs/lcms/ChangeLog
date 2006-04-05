@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.62 2006/04/05 07:11:05 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.63 2006/04/05 12:40:52 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> lcms-1.15.ebuild:
+  No more need for eautoreconf, works fine on amd64 without.
 
   05 Apr 2006; Harald van Dĳk <truedfx@gentoo.org>
   +files/lcms-1.15-bsd.patch, lcms-1.15.ebuild:

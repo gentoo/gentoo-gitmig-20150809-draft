@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.15.ebuild,v 1.3 2006/04/05 07:11:05 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.15.ebuild,v 1.4 2006/04/05 12:40:52 flameeyes Exp $
 
-inherit libtool autotools
+inherit libtool
 
 DESCRIPTION="A lightweight, speed optimized color management engine"
 HOMEPAGE="http://www.littlecms.com/"
@@ -26,10 +26,6 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-bsd.patch
-
-	# fix build on amd64, conditional for ppc-macos because it lacks the
-	# proper automake version (1.7)
-	use ppc-macos || eautoreconf || die "autoreconf failed"
 
 	elibtoolize
 }
