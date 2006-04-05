@@ -1,6 +1,14 @@
 # ChangeLog for games-strategy/wormux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.6 2006/02/26 06:17:59 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.7 2006/04/05 19:37:17 mr_bones_ Exp $
+
+*wormux-0.7 (05 Apr 2006)
+
+  05 Apr 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/wormux-0.7-fix-gettext-Makefile.patch,
+  +files/wormux-0.7-gcc41.patch, +files/wormux-0.7-user-CFLAGS.patch,
+  +wormux-0.7.ebuild:
+  version bump - ebuild and patches submitted by TGL via bug #119425
 
   26 Feb 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/wormux-0.5.1-gcc41.patch, wormux-0.5.1.ebuild:
