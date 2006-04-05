@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b3d93526a6ce09f710339ecbf5a904d4 ChangeLog 7452
-RMD160 d8e5f7d90dcf7350e058a634b4236938f5170aa5 ChangeLog 7452
-SHA256 b324114f97328c579de23b3acfbf320f72abb39e4dab272882f7e258cae8372e ChangeLog 7452
+MD5 4129c56e01daada1ccfa28ff03c693da ChangeLog 7564
+RMD160 fcc5bddb7c9596c87799e01a08c2eb53320d1fb8 ChangeLog 7564
+SHA256 010709b65224e670720ba015356edb0b02168fbee5f3e02fcc68b797fc7eb41e ChangeLog 7564
 MD5 297331248320491bcc0f2926e32ccacc files/digest-kaffeine-0.7.1 68
 RMD160 3288c303efc5f285ea122bc053f426d958331a19 files/digest-kaffeine-0.7.1 68
 SHA256 163c75a6548acea933e26e1ff891902b8744e5347ab71d4da88f8947747356d0 files/digest-kaffeine-0.7.1 68
@@ -40,9 +37,9 @@ SHA256 3c3baee40311c9505e2c6f77960543dc5534e35698223b6d4532877ba86619a1 files/ka
 MD5 e3c21f89274d06b9b8cfacab5a9ef250 kaffeine-0.7.1-r1.ebuild 1216
 RMD160 bbc549ee341907458f5a9aa5f1185da867f855c0 kaffeine-0.7.1-r1.ebuild 1216
 SHA256 2f781a276a11a0bd4547b72d683dc605ac23b026bce1bd2aa013c3d22d2a729b kaffeine-0.7.1-r1.ebuild 1216
-MD5 a8769aebb973ecdaeac99dc72db6dbf0 kaffeine-0.7.1-r2.ebuild 1246
-RMD160 9f7ea923d472d494fa7d8171d6afbdf082f5f7d9 kaffeine-0.7.1-r2.ebuild 1246
-SHA256 c79871bf96521fd8b7dd3d0b7cace860457a0b2e40c4cead6c4f12085d3abd2e kaffeine-0.7.1-r2.ebuild 1246
+MD5 b206f632e75ab9eed842159b2d7a886f kaffeine-0.7.1-r2.ebuild 1248
+RMD160 4da574de99f530d3edf04c09ab03d80528a1dfbc kaffeine-0.7.1-r2.ebuild 1248
+SHA256 7b1d80f44d971139d9ddac9f0b33ba0aa406374e95e41123b73d515d951dee0c kaffeine-0.7.1-r2.ebuild 1248
 MD5 9c4a5494b3cdf2d6eea3ea75aad55d28 kaffeine-0.7.1.ebuild 924
 RMD160 d602e7de068f60c6de284721fbaa578c7b59d0e5 kaffeine-0.7.1.ebuild 924
 SHA256 7ece6c6cf2a21fd7be2dec15add9daff78ac4097f21160ed00df3b358fe4bb97 kaffeine-0.7.1.ebuild 924
@@ -55,10 +52,3 @@ SHA256 ac12ee909b6d005ea716ffce4a178ae6bf058a9ef10a01009b504d76beb78eae kaffeine
 MD5 f252d0d8aaea067fe6be5e09527ab18e metadata.xml 175
 RMD160 4e4c9dfa9b5102163a4f7b231f95672bd2266c0d metadata.xml 175
 SHA256 ee81a2309bd9eae88d896b77f0d87adbb941cf18f82eea08c025eb583ac6043d metadata.xml 175
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEM7jQAiZjviIA2XgRAr94AKCs9ANrV1Enrb0biMr3UYBblFjEPACeN5Av
-Lc1RZFG/JlDfB+kenWBc6Aw=
-=Ra9U
------END PGP SIGNATURE-----
