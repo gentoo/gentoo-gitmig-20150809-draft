@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.14.0.ebuild,v 1.1 2006/03/15 01:46:41 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.14.0.ebuild,v 1.2 2006/04/05 14:41:58 foser Exp $
 
 inherit eutils gnome2
 
@@ -48,10 +48,6 @@ src_unpack() {
 
 	# Implement switch to enable/disable esound support. See bug #6920.
 	epatch ${FILESDIR}/${PN}-2.10.0-esd_switch.patch
-
-	# Hide the splash after defaults have been loaded, a temp workaround
-	# for http://bugzilla.gnome.org/show_bug.cgi?id=116814
-	epatch ${FILESDIR}/${PN}-2.8.1-hide_splash.patch
 
 	#Remove libnotify autocheck so we don't link against it ever. Upstream
 	#hasn't decided on any notification standards yet so we don't want to 
