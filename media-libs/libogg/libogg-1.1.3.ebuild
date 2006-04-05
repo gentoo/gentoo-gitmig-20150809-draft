@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.1.3.ebuild,v 1.2 2006/03/06 16:13:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.1.3.ebuild,v 1.3 2006/04/05 17:50:25 flameeyes Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="the Ogg media file format library"
 HOMEPAGE="http://xiph.org/ogg/"
@@ -16,6 +16,8 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	elibtoolize
 	epunt_cxx
 }
 
