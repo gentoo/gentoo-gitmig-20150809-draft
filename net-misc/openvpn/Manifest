@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4cb63766bc511105706d4bb7975b91fa ChangeLog 11593
+MD5 54bdc46570140e41bcb170fabb71bacb ChangeLog 11700
+RMD160 a4537ee88f09db5adaef1e98431294393cc5e4cb ChangeLog 11700
+SHA256 d3041391d3a8867c292ccdb2666c744d61f84fd0920df46fb5e95243a16fdadc ChangeLog 11700
 MD5 2d68e6681e5a0b149462220ad10caf66 files/digest-openvpn-2.0.5-r2 65
+RMD160 d0e78e4f0a47796ec103f9a38f6040cae5a897e8 files/digest-openvpn-2.0.5-r2 65
+SHA256 3468b243cfcdfa3b3de259c138e29325b45aac5d6a783fcce82d0e3608cd9896 files/digest-openvpn-2.0.5-r2 65
 MD5 9b5501be21ae9235fea7d51ef84b644e files/digest-openvpn-2.0.6 241
+RMD160 3bca5f56e3526082debc843084ae21fe35e65f93 files/digest-openvpn-2.0.6 241
+SHA256 cc2c7e3423898778eb6f6b45bdd4ba18d2a20be748cfa8482eba4ca20c2f80bd files/digest-openvpn-2.0.6 241
 MD5 9f0fcb64287dc55bb770ca86415e5cdd files/openvpn-2.0.4-darwin.patch 717
+RMD160 66aa5ea349329cf3e6089aa75eb7c80e0d21063b files/openvpn-2.0.4-darwin.patch 717
+SHA256 ad70b77c10bb57a07af3d512e953fc8b5a07108df5bf9795e0cb12e1ba2b2136 files/openvpn-2.0.4-darwin.patch 717
 MD5 d4061ba2232ddd94c4f4f4f26ae82586 files/openvpn.init 1441
+RMD160 4287bc944c914772348431cb6356191aa61d8215 files/openvpn.init 1441
+SHA256 0e08f772a4fbbb28c0e9190c67430da5cc8d78acadbbb1b61447b96df2c96399 files/openvpn.init 1441
 MD5 62aa0438042b29eba4a6afd971037761 metadata.xml 440
+RMD160 120089ec9c799161dfeeacd9a3adfc40b4317f06 metadata.xml 440
+SHA256 408ca4fc4f58fa21e629582d0a44a759f9695a018479d70efbd3338b6bdbcfd6 metadata.xml 440
 MD5 8533ac9753dad98c69bf979a98ac0641 openvpn-2.0.5-r2.ebuild 3866
-MD5 fa646ed71c5319ac670b488bc695b497 openvpn-2.0.6.ebuild 3868
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFENBWkKRy60XGEcJIRAlHrAJ0SwxAqg9orEk7tNghWh1XXoyJEyQCfaANN
-BpLgetVy7s+RHI6+s/JAmfI=
-=xHFR
------END PGP SIGNATURE-----
+RMD160 af06b66ebaa4d5a87242968e552b90ee1f4b2cd9 openvpn-2.0.5-r2.ebuild 3866
+SHA256 92880feb5eee1bdf41a3b627fd84119384ffd5706c09850f642fe7f42eb286d0 openvpn-2.0.5-r2.ebuild 3866
+MD5 a8e744687bebfc2ae889790499e7676e openvpn-2.0.6.ebuild 3867
+RMD160 f0be63b2bb1319f6ecade6eb4193c71091f5096c openvpn-2.0.6.ebuild 3867
+SHA256 0a7c8884ffcf0c366b2c4c170d11eb55981aeadf85e735171f4089b1e0552cdf openvpn-2.0.6.ebuild 3867
