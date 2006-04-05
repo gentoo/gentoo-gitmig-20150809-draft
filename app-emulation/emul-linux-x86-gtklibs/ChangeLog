@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.20 2006/03/17 16:11:41 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.21 2006/04/05 15:53:08 chutzpah Exp $
+
+  05 Apr 2006; Patrick McLean <chutzpah@gentoo.org>
+  emul-linux-x86-gtklibs-2.8.8.ebuild:
+  Fixed RDEPEND syntax (Bug #128779), thanks to Patrick Borjesson
+  <psycho@rift.ath.cx> for pointing this out.
 
 *emul-linux-x86-gtklibs-2.8.8 (17 Mar 2006)
 
