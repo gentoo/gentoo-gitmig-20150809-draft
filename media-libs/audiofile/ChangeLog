@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.39 2006/03/23 09:48:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.40 2006/04/05 19:00:28 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  audiofile-0.2.6-r2.ebuild:
+  Add ~x86-fbsd keyword.
 
   23 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   -audiofile-0.2.3-r1.ebuild, -audiofile-0.2.4.ebuild,
