@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.263 2006/03/31 20:01:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.264 2006/04/05 19:26:33 gustavoz Exp $
+
+  05 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gentoo-sources-2.6.16-r1.ebuild:
+  Removed from ~sparc - qlogic fc is b0rked, breaks blade 1000, 2000, 280r and
+  others
 
   31 Mar 2006; Jeremy Huddleston <eradicator@gentoo.org>
   gentoo-sources-2.6.16-r1.ebuild:
