@@ -1,6 +1,6 @@
 # Copyright 2005-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/list/list-1.9.92.ebuild,v 1.2 2006/04/03 20:53:09 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/list/list-1.9.92.ebuild,v 1.3 2006/04/05 21:34:20 twp Exp $
 
 
 inherit eutils
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/python-2.4.0
 	>=net-misc/wget-1.10.2
 	>=sys-apps/sed-4.1.4
 	>=sys-apps/util-linux-2.12r
-	!sys-apps/esr-hexdump"
+	!sys-apps/hexdump-esr"
 
 S=${WORKDIR}/LiSt-${PV}
 
