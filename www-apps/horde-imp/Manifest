@@ -1,25 +1,34 @@
-DIST imp-3.2.8.tar.gz 1587465
-DIST imp-h3-4.0.4.tar.gz 3349908
-DIST imp-h3-4.1.tar.gz 3756910 RMD160 f6dd0f41ea77cd270f91a69b5f69808afbcec8e6 SHA256 3ab27ea1b4f61dba7c25fff32ae25a8a19ff0a8de290a9d5ea035d8290cdb41e
-EBUILD horde-imp-3.2.8.ebuild 423
-MD5 0769a91faa3fbaf0814b695daf190448 horde-imp-3.2.8.ebuild 423
-EBUILD horde-imp-4.0.4.ebuild 441
-MD5 c5cf5a1e0ce3b47a6add80e73029911a horde-imp-4.0.4.ebuild 441
-EBUILD horde-imp-4.1.ebuild 435
-MD5 9d320df0bedf34c8f1dcc8ad224033e2 horde-imp-4.1.ebuild 435
-MISC ChangeLog 4744
-MD5 81da7e45f36072c6b226c6c12dbdc474 ChangeLog 4744
-MISC metadata.xml 375
-MD5 df7b9cb8aaba349bce3d45e694e2f7a1 metadata.xml 375
-size 62 files/digest-horde-imp-3.2.8 62
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 86d6d84d8c6a2eb4a6efe9b662434c93 ChangeLog 4832
+RMD160 b965f52ed2eb974e2a51428badfd76559bcd004d ChangeLog 4832
+SHA256 470562859ead62c854ca4bc1e48fe58690d3758c58f30977fe488c099066fbda ChangeLog 4832
+MD5 30858165271c5a478adad508885c92c0 files/digest-horde-imp-3.2.8 62
 RMD160 2a4f4004af911ed8f391a31fdd3bf436ce643778 files/digest-horde-imp-3.2.8 62
 SHA256 da3445c0a69324a75077c06f261e0b8c3608969169037e3bfc9bea5b931dd15a files/digest-horde-imp-3.2.8 62
-MD5 30858165271c5a478adad508885c92c0 files/digest-horde-imp-3.2.8 62
-size 65 files/digest-horde-imp-4.0.4 65
+MD5 97425b6d30965775a0d1982df040c49b files/digest-horde-imp-4.0.4 65
 RMD160 cb330d8f854fa89771627a9e4ae7271d52aee902 files/digest-horde-imp-4.0.4 65
 SHA256 7b4af86f8a660d8300ab73f1da7ebdd0ae0f5f03e45d68e83d05cd70020d1f98 files/digest-horde-imp-4.0.4 65
-MD5 97425b6d30965775a0d1982df040c49b files/digest-horde-imp-4.0.4 65
-size 235 files/digest-horde-imp-4.1 235
+MD5 0a4c51c9d4272abcb9d352c5bd1e3da7 files/digest-horde-imp-4.1 235
 RMD160 df6551708bc417d7cd534d2339f28151afb31518 files/digest-horde-imp-4.1 235
 SHA256 53577708d2c29d5a76c5d6eeccc6e2bf52c7687a64e7cac68656a475c8a94c67 files/digest-horde-imp-4.1 235
-MD5 0a4c51c9d4272abcb9d352c5bd1e3da7 files/digest-horde-imp-4.1 235
+MD5 0769a91faa3fbaf0814b695daf190448 horde-imp-3.2.8.ebuild 423
+RMD160 f82ead11dd6fdf63b564b5b307bcb180cecd15ee horde-imp-3.2.8.ebuild 423
+SHA256 c6d94a428541b08a2b06f6921210cd5cc8a0dd943d1978104b538e79d49e98f1 horde-imp-3.2.8.ebuild 423
+MD5 c5cf5a1e0ce3b47a6add80e73029911a horde-imp-4.0.4.ebuild 441
+RMD160 6066f8eb18d2160f5ec6887b926bbd3542637f3d horde-imp-4.0.4.ebuild 441
+SHA256 63af8728c0ab4a68dbcf7edba066404e281dce7daad998b34798b9ae8229eb41 horde-imp-4.0.4.ebuild 441
+MD5 196feda87de47769aebf19e26f05848c horde-imp-4.1.ebuild 432
+RMD160 190b4104121d7e628cccbea1d072a327a3118ba3 horde-imp-4.1.ebuild 432
+SHA256 6bdbc7fe452f8293b3c19ae439e78c40cb40af8bb39b2684f7c5a92e8b208df0 horde-imp-4.1.ebuild 432
+MD5 df7b9cb8aaba349bce3d45e694e2f7a1 metadata.xml 375
+RMD160 069b38c88432b439f854e798485f2241a4bf6901 metadata.xml 375
+SHA256 4bcc4074da5279a3ba54b4c3915bcba73ab7cdf585dc52c308e740da1e021f9b metadata.xml 375
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFENCCN/ejvha5XGaMRArLCAJ0frqUAWVUpGxvPDCL8oVs5LK8SvgCgvYa1
+6PMp+H5VnDQJiopmKKmVg6U=
+=uNK0
+-----END PGP SIGNATURE-----
