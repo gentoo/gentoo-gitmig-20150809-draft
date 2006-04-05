@@ -1,12 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4ef7e8b5e35d1d98dfdcb3af0fc55c3f ChangeLog 11243
-RMD160 850dbfea2dade7e3c03af3ab598371b97fcf5ed9 ChangeLog 11243
-SHA256 c93211ad83927b0b1a52286d40fd3110feaa41f7e21addf1f679def9cc03c5d9 ChangeLog 11243
+MD5 f175f89cd0884606e3dd46907cf45454 ChangeLog 11370
+RMD160 35a0449f3ecdb7e532ed1c5a54cb2d5ab46fdae5 ChangeLog 11370
+SHA256 43b2f7c89da7eaa4d285b1fa06bb9e60d52947bc32820f3aa29d86c260c60f51 ChangeLog 11370
 MD5 2d68e6681e5a0b149462220ad10caf66 files/digest-openvpn-2.0.5-r2 65
 RMD160 d0e78e4f0a47796ec103f9a38f6040cae5a897e8 files/digest-openvpn-2.0.5-r2 65
 SHA256 3468b243cfcdfa3b3de259c138e29325b45aac5d6a783fcce82d0e3608cd9896 files/digest-openvpn-2.0.5-r2 65
+MD5 9b5501be21ae9235fea7d51ef84b644e files/digest-openvpn-2.0.6 241
+RMD160 3bca5f56e3526082debc843084ae21fe35e65f93 files/digest-openvpn-2.0.6 241
+SHA256 cc2c7e3423898778eb6f6b45bdd4ba18d2a20be748cfa8482eba4ca20c2f80bd files/digest-openvpn-2.0.6 241
 MD5 9f0fcb64287dc55bb770ca86415e5cdd files/openvpn-2.0.4-darwin.patch 717
 RMD160 66aa5ea349329cf3e6089aa75eb7c80e0d21063b files/openvpn-2.0.4-darwin.patch 717
 SHA256 ad70b77c10bb57a07af3d512e953fc8b5a07108df5bf9795e0cb12e1ba2b2136 files/openvpn-2.0.4-darwin.patch 717
@@ -19,10 +22,13 @@ SHA256 408ca4fc4f58fa21e629582d0a44a759f9695a018479d70efbd3338b6bdbcfd6 metadata
 MD5 8533ac9753dad98c69bf979a98ac0641 openvpn-2.0.5-r2.ebuild 3866
 RMD160 af06b66ebaa4d5a87242968e552b90ee1f4b2cd9 openvpn-2.0.5-r2.ebuild 3866
 SHA256 92880feb5eee1bdf41a3b627fd84119384ffd5706c09850f642fe7f42eb286d0 openvpn-2.0.5-r2.ebuild 3866
+MD5 22a4f346e7be8cc4476a83c4016b9a8b openvpn-2.0.6.ebuild 3870
+RMD160 349cf1fab67b690319207436f993de6373daeea3 openvpn-2.0.6.ebuild 3870
+SHA256 f14cefb462109e8b7f3602938be33337ac7863d206e50fbff81650598a59f897 openvpn-2.0.6.ebuild 3870
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEEW7eEbVyYKaZ/NERAmMnAJ46jJBgOqcBXRLNIazEh8s6tlFAKgCfYcHG
-tPsJFZ8jMBdE+Spxyf5t2Ek=
-=OIKB
+iD8DBQFEM5eqEbVyYKaZ/NERAoCOAKCJOwFVvKZc6cjD+LsgxwWp7lBLRQCdFDuo
+IGO3s37wF+GSkp1ImSVOjZU=
+=Rhti
 -----END PGP SIGNATURE-----
