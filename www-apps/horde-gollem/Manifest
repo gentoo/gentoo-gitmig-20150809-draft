@@ -1,25 +1,24 @@
-DIST gollem-h3-1.0.1.tar.gz 604475
-DIST gollem-h3-1.0.2.tar.gz 766796
-DIST gollem-h3-1.0.tar.gz 680558
-EBUILD horde-gollem-1.0.1.ebuild 411
-MD5 3071d7d52e58ec972174f6413c9f36c4 horde-gollem-1.0.1.ebuild 411
-EBUILD horde-gollem-1.0.2.ebuild 407
-MD5 8119edc39c489590e375eb1fdec1120b horde-gollem-1.0.2.ebuild 407
-EBUILD horde-gollem-1.0.ebuild 409
-MD5 3631d5cbc636f179b15dac7c091c0f1a horde-gollem-1.0.ebuild 409
-MISC ChangeLog 1243
-MD5 86a02647e4c58a34020fbb9f0c130e67 ChangeLog 1243
-MISC metadata.xml 222
-MD5 c8532e9fff10dd851fb682c74d1138a0 metadata.xml 222
-size 67 files/digest-horde-gollem-1.0.1 67
-RMD160 dcc952451ebed7de36e7c194a6a055487ba62fb4 files/digest-horde-gollem-1.0.1 67
-SHA256 b068c67554ac0b06f613e7aa31b61b273dfe4ecb8f379e02f0fb292ec3854a47 files/digest-horde-gollem-1.0.1 67
-MD5 f9b56cc2de90b7eb63eb98beb48591e4 files/digest-horde-gollem-1.0.1 67
-size 65 files/digest-horde-gollem-1.0 65
+MD5 48a02e1bc8444a847a48ffa49df74bb3 ChangeLog 1336
+RMD160 dcba34e4db53fcd0d4d528de4163392a84c49b27 ChangeLog 1336
+SHA256 f1a3da55abef9e9a65489d20de8aaed188126ce93cd69cca32499d496cc7b96b ChangeLog 1336
+MD5 40f7c605a2ca03bac11f3dbeaa96b63d files/digest-horde-gollem-1.0 65
 RMD160 74cc2c77726432b8c277cf7dafdfe9d0a7725e20 files/digest-horde-gollem-1.0 65
 SHA256 20488f805da115291effa98b17e3886198f645af7ec1307417c50ff8befc89da files/digest-horde-gollem-1.0 65
-MD5 40f7c605a2ca03bac11f3dbeaa96b63d files/digest-horde-gollem-1.0 65
-size 67 files/digest-horde-gollem-1.0.2 67
-RMD160 dcb0f4c57d6397d2732817e26263cb5b438e19c6 files/digest-horde-gollem-1.0.2 67
-SHA256 9c105d395b93a5f785a23f9e3524b32098f87e0ec87d1728b6ba1793801a833f files/digest-horde-gollem-1.0.2 67
-MD5 da134309e8c3da7310094e342fc607cb files/digest-horde-gollem-1.0.2 67
+MD5 f9b56cc2de90b7eb63eb98beb48591e4 files/digest-horde-gollem-1.0.1 67
+RMD160 dcc952451ebed7de36e7c194a6a055487ba62fb4 files/digest-horde-gollem-1.0.1 67
+SHA256 b068c67554ac0b06f613e7aa31b61b273dfe4ecb8f379e02f0fb292ec3854a47 files/digest-horde-gollem-1.0.1 67
+MD5 3ca2c202d924836e2e0800c90f94a9c3 files/digest-horde-gollem-1.0.2 247
+RMD160 92e68948aa8006561434469f460973c21fad7a6a files/digest-horde-gollem-1.0.2 247
+SHA256 59cded4fecf3643657426da235527fc472a1b2c1ef12a5f003c81901705c95d9 files/digest-horde-gollem-1.0.2 247
+MD5 3071d7d52e58ec972174f6413c9f36c4 horde-gollem-1.0.1.ebuild 411
+RMD160 6dd406332a85203803b0175c1a95063ac6a055a7 horde-gollem-1.0.1.ebuild 411
+SHA256 609bddd3fb40b8ec1a355a3c41898b833f7d336d6ed2efe19a45ff2f07e79f2b horde-gollem-1.0.1.ebuild 411
+MD5 f12d79887282cf0f49d4046b83e8598d horde-gollem-1.0.2.ebuild 404
+RMD160 3294b4f4a55dbadda7007a460c88bcb2ce3c7dfc horde-gollem-1.0.2.ebuild 404
+SHA256 7c78d1deb0b9b66e06bd9dbb42b8970f22a063b32a99441ad907ede04b0614d7 horde-gollem-1.0.2.ebuild 404
+MD5 3631d5cbc636f179b15dac7c091c0f1a horde-gollem-1.0.ebuild 409
+RMD160 a472a572958c1b6e250027ff672079eb144a5423 horde-gollem-1.0.ebuild 409
+SHA256 61a15b134ef4b5f030a15dcf7bc46b115dd116a5623d4ed041f9974e5626a293 horde-gollem-1.0.ebuild 409
+MD5 c8532e9fff10dd851fb682c74d1138a0 metadata.xml 222
+RMD160 320541c68d392fd67d55ab074a9863806afd7459 metadata.xml 222
+SHA256 ccadeea873dedd97b264c4e4f7c9c60604a6bb88a28cea368cadd644c0262817 metadata.xml 222
