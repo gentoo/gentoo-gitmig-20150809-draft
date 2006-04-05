@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r1.ebuild,v 1.1 2006/04/03 23:38:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r2.ebuild,v 1.1 2006/04/05 13:08:55 flameeyes Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="acl alsa arts cups doc jpeg2k kerberos openexr spell ssl tiff zeroconf"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
@@ -21,7 +21,7 @@ RDEPEND="$(qt_min_version 3.3.3)
 	app-arch/bzip2
 	>=media-libs/freetype-2
 	media-libs/fontconfig
-	>=dev-libs/libxslt-1.1.4
+	>=dev-libs/libxslt-1.1.15
 	>=dev-libs/libxml2-2.6.6
 	>=dev-libs/libpcre-4.2
 	media-libs/libart_lgpl
@@ -46,6 +46,9 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig"
 
+RDEPEND="${RDEPEND}
+	|| ( x11-apps/rgb virtual/x11 )"
+
 PATCHES="${FILESDIR}/${PN}-3.5.0-bindnow.patch
 	${FILESDIR}/${PN}-3.5.0-kicker-crash.patch
 	${FILESDIR}/${P}-xorg7-rgbtxt.patch
@@ -53,6 +56,8 @@ PATCHES="${FILESDIR}/${PN}-3.5.0-bindnow.patch
 	${FILESDIR}/kdelibs-3.5.2-kate-fixes.diff"
 
 src_compile() {
+	rm -f ${S}/configure
+
 	# hspell is disabled because it requires version 0.9 of hspell that
 	# is not in portage yet; leaving it to autodetection tries to use it
 	# and then fails because of missing required functions
@@ -71,6 +76,10 @@ src_compile() {
 		myconf="${myconf} --with-aspell"
 	else
 		myconf="${myconf} --without-aspell"
+	fi
+
+	if has_version x11-apps/rgb; then
+		myconf="${myconf} --with-rgbfile=/usr/share/X11/rgb.txt"
 	fi
 
 	myconf="${myconf} --disable-fast-malloc"
