@@ -1,0 +1,49 @@
+--- loudmouth/lm-ssl.c~	2006-04-03 17:01:39.000000000 +0200
++++ loudmouth/lm-ssl.c	2006-04-05 14:06:05.000000000 +0200
+@@ -47,13 +47,14 @@
+ 
+ static void           ssl_free                  (LmSSL       *ssl);
+ 
+-#ifdef HAVE_GNUTLS
+-static gboolean       ssl_verify_certificate    (LmSSL       *ssl,
+-						 const gchar *server);
+ static LmSSLResponse  ssl_func_always_continue  (LmSSL       *ssl,
+ 						 LmSSLStatus  status,
+ 						 gpointer     user_data);
+ 
++#ifdef HAVE_GNUTLS
++static gboolean       ssl_verify_certificate    (LmSSL       *ssl,
++						 const gchar *server);
++
+ static gboolean
+ ssl_verify_certificate (LmSSL *ssl, const gchar *server)
+ {
+@@ -148,13 +149,7 @@
+ 	return TRUE;
+ }
+ 
+-static LmSSLResponse  
+-ssl_func_always_continue (LmSSL       *ssl,
+-			  LmSSLStatus  status,
+-			  gpointer     user_data)
+-{
+-	return LM_SSL_RESPONSE_CONTINUE;;
+-}
++
+ 
+ void
+ _lm_ssl_initialize (LmSSL *ssl) 
+@@ -263,6 +258,13 @@
+ }
+ #endif 
+ 
++static LmSSLResponse  
++ssl_func_always_continue (LmSSL       *ssl,
++			  LmSSLStatus  status,
++			  gpointer     user_data)
++{
++	return LM_SSL_RESPONSE_CONTINUE;;
++}
+ 
+ static void
+ ssl_free (LmSSL *ssl)
