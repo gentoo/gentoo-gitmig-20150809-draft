@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/libXfont-1.1.0-r1.ebuild,v 1.1 2006/04/04 22:05:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/libXfont-1.1.0-r1.ebuild,v 1.2 2006/04/05 13:57:44 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # SNAPSHOT="yes"
@@ -23,7 +23,8 @@ CONFIGURE_OPTIONS="$(use_enable ipv6)
 	--with-encodingsdir=/usr/share/fonts/encodings"
 
 pkg_setup() {
-	x-modular_pkg_setup
+	# No such function yet
+	# x-modular_pkg_setup
 
 	# (#125465) Broken with Bdirect support
 	filter-flags -Wl,-Bdirect

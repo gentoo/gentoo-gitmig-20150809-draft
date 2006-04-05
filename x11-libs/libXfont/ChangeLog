@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.30 2006/04/04 22:05:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.31 2006/04/05 13:57:44 spyderous Exp $
+
+  05 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  libXfont-1.1.0-r1.ebuild:
+  (#128892) x-modular_pkg_setup doesn't exist, found by Krzysiek Pawlik.
 
 *libXfont-1.1.0-r1 (04 Apr 2006)
 
