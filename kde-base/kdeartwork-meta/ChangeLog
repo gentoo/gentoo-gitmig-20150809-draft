@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.40 2006/03/27 22:03:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.41 2006/04/05 22:42:29 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kdeartwork-meta-3.5.0.ebuild, -kdeartwork-meta-3.5.1.ebuild:
+  Remove 3.5.0 and 3.5.1 -meta ebuilds.
 
   27 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   kdeartwork-meta-3.5.0.ebuild, kdeartwork-meta-3.5.1.ebuild,
