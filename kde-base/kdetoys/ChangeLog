@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.140 2006/03/25 19:51:20 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.141 2006/04/05 23:02:27 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kdetoys-3.5.0.ebuild,
+  -kdetoys-3.5.1.ebuild:
+  Remove 3.5.0 and 3.5.1 monolithic ebuilds.
 
 *kdetoys-3.5.2 (25 Mar 2006)
 

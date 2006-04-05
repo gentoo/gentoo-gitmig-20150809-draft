@@ -1,6 +1,18 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.245 2006/04/04 20:53:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.246 2006/04/05 22:57:59 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kpdf-3.5.0-cropbox-fix.patch,
+  -files/post-3.5.0-kdegraphics-CAN-2005-3193.diff,
+  -files/kdegraphics-3.5.0-kpovmodeler.patch,
+  -files/kpdf-3.5.0-splitter-io.patch,
+  -files/post-3.5.1-kdegraphics-CVE-2006-0301.diff,
+  -files/kpdf-3.5.1-saveas.patch, -kdegraphics-3.5.0.ebuild,
+  -kdegraphics-3.5.0-r2.ebuild, -kdegraphics-3.5.0-r3.ebuild,
+  -kdegraphics-3.5.0-r4.ebuild, -kdegraphics-3.5.1.ebuild,
+  -kdegraphics-3.5.1-r1.ebuild, -kdegraphics-3.5.1-r2.ebuild:
+  Remove 3.5.0 and 3.5.1 monolithic ebuilds.
 
   04 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
   kdegraphics-3.3.2-r3.ebuild, kdegraphics-3.4.1-r1.ebuild,

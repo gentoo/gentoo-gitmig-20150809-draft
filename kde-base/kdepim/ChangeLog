@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.196 2006/04/03 22:50:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.197 2006/04/05 23:01:12 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kdepim-3.5.0-kmail-branch.patch, -kdepim-3.5.0.ebuild,
+  -kdepim-3.5.0-r3.ebuild, -kdepim-3.5.1.ebuild:
+  Remove 3.5.0 and 3.5.1 monolithic ebuilds.
 
   03 Apr 2006; Aron Griffis <agriffis@gentoo.org> kdepim-3.4.3.ebuild:
   Mark 3.4.3 stable on ia64
