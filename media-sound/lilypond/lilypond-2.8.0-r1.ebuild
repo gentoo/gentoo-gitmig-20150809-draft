@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.8.0-r1.ebuild,v 1.4 2006/03/29 17:31:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.8.0-r1.ebuild,v 1.5 2006/04/05 12:11:39 genstef Exp $
 
 inherit versionator
 
@@ -16,7 +16,11 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 
 RDEPEND=">=dev-util/guile-1.6.5
-	>=virtual/ghostscript-8.15
+	|| ( 
+		>app-text/ghostscript-gnu-8
+		>app-text/ghostscript-afpl-8
+		>app-text/ghostscript-esp-8
+	)
 	virtual/tetex
 	>=dev-lang/python-2.2.3-r1
 	>=media-libs/freetype-2

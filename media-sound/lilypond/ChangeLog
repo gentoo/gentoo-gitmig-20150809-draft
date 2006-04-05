@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.43 2006/03/29 17:31:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.44 2006/04/05 12:11:39 genstef Exp $
+
+  05 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  lilypond-2.8.0-r1.ebuild:
+  Change virtual/ghostscript to || ( ) RDEPEND, bug 128887 thanks to Jean
+  Bréfort <jean.brefort@normalesup.org>
 
   29 Mar 2006; Aron Griffis <agriffis@gentoo.org> lilypond-2.0.3.ebuild,
   lilypond-2.2.4.ebuild, lilypond-2.2.6.ebuild, lilypond-2.4.2.ebuild,
