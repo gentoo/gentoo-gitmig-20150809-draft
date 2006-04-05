@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-001.ebuild,v 1.1 2006/03/26 21:36:18 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-001.ebuild,v 1.2 2006/04/05 21:49:44 deltacow Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs multilib
 
 DESCRIPTION="Userspace utilities for the Linux kernel cpufreq subsystem"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html"
@@ -25,6 +25,7 @@ src_compile() {
 
 	sed -i \
 		-e "s:^\(CFLAGS \:=.*\):\1 ${CFLAGS}:" \
+		-e "s:/usr/lib:/usr/$(get_libdir):" \
 		${S}/Makefile
 
 	emake -j1 V=true DEBUG=${debug} NLS=${nls} \
