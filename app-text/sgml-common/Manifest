@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d17855d3830ff8d4182f364ce6c9acfc ChangeLog 5131
-RMD160 a40d1a727b07839d95db48a1872d51748991747e ChangeLog 5131
-SHA256 b57ebcdb85b505f50a99bfee60d602d83e8b99855d1e4feb1e9f7ee2bdbbfc67 ChangeLog 5131
+MD5 11ffbde0cef23ea2e0eae095c899ae76 ChangeLog 5383
+RMD160 3a6822674543a56a125bf8c2df5f69cde6bbec49 ChangeLog 5383
+SHA256 ed3ad195cc8c87c25ca02da6b23888d7567cba52d90610e70564c6dacb2051ba ChangeLog 5383
 MD5 ed80d3150b7151b2db464cac2220e87b files/digest-sgml-common-0.6.3-r4 241
 RMD160 31bebdffb57759155f94d90653e17956f8e30654 files/digest-sgml-common-0.6.3-r4 241
 SHA256 32c78d10e852b45bba816c390d7ed87d87754ca91cad13a2946f717a6c22daca files/digest-sgml-common-0.6.3-r4 241
@@ -13,22 +13,22 @@ SHA256 32c78d10e852b45bba816c390d7ed87d87754ca91cad13a2946f717a6c22daca files/di
 MD5 9518ad388371b562c9376c868e64a44f files/sgml-common-0.6.3-configure.in.patch 360
 RMD160 03454741e40ff5436d58e2379ee9b8a8da8b5986 files/sgml-common-0.6.3-configure.in.patch 360
 SHA256 c1377215a0a92526cfa476dff941d00a713d156667ce37c39bf3f0fa02b71ad4 files/sgml-common-0.6.3-configure.in.patch 360
-MD5 d54c8e50cf0f9e8fc72433ca67cd848a files/sgml-common-0.6.3-install-catalog.in 4917
-RMD160 f4c330fbea31c09201f5c75cbf6e85e894327ebd files/sgml-common-0.6.3-install-catalog.in 4917
-SHA256 71db2836b286741b853897d040c22b9e632097c0039be32dc98fd0a83297b654 files/sgml-common-0.6.3-install-catalog.in 4917
+MD5 3c3dbb1383763ce8ff70062fd60e96c0 files/sgml-common-0.6.3-install-catalog.in 4919
+RMD160 df1cc3c659f9932285849ed0dac2b41eb97a1be8 files/sgml-common-0.6.3-install-catalog.in 4919
+SHA256 94547ce46267eb272f752038bc64d1fa35446c7f73e1ad45e999769a27476002 files/sgml-common-0.6.3-install-catalog.in 4919
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
 MD5 7991f940485ba5e1687d7e42c121bb29 sgml-common-0.6.3-r4.ebuild 1997
 RMD160 a0b67262bb01dfff67c35e45ee6d341b3ca706db sgml-common-0.6.3-r4.ebuild 1997
 SHA256 08553153140a8cd48399433ec9955fcee77c14a4ef2fb9556251b857c5afbb57 sgml-common-0.6.3-r4.ebuild 1997
-MD5 43b7fb0b0345a9b0c42090d480d73cb0 sgml-common-0.6.3-r5.ebuild 2054
-RMD160 12245457b00515eda5d732232d2d0ef1dfdfc62e sgml-common-0.6.3-r5.ebuild 2054
-SHA256 02fb8373681914a9bf3ac0e51a07d0eeef3b9fb874a4a3ef6e187085b60260ca sgml-common-0.6.3-r5.ebuild 2054
+MD5 428de3eabcf9d640bbadd9f09ff3d29b sgml-common-0.6.3-r5.ebuild 2065
+RMD160 77c3f2529880a7d2cd8f2a2b7e4a1289e8ef7a6b sgml-common-0.6.3-r5.ebuild 2065
+SHA256 8361a0b3b81fabba4dc593fb5d325bcb8976448fa3fb7e10e3ffc9a5eb5df812 sgml-common-0.6.3-r5.ebuild 2065
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEJrA9wx9vvAARv2sRAlJgAJ43fTdb5t2hARZO7hEEFNnu4UxInwCdHU9R
-dE+qg9fsKuX+YhBmTT3NAKE=
-=WDy7
+iD8DBQFENBmZAiZjviIA2XgRAnUYAJ0ZvgV+EGNwTFulea20Wnx6pkZQ9QCgi7kR
+yI5spi1wpqqZItt/vimQyh4=
+=/FfC
 -----END PGP SIGNATURE-----

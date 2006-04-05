@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Script to install a catalog in the centralized SGML catalog
 # Send any comments to Eric Bischoff <eric@caldera.de>
 # This program is under GPL license. See LICENSE file for details.
