@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-7.0-r1.ebuild,v 1.1 2006/03/17 17:51:35 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-7.0-r1.ebuild,v 1.2 2006/04/05 15:43:33 chutzpah Exp $
 
 inherit multilib
 
@@ -37,7 +37,7 @@ IUSE="opengl ${IUSE_VIDEO_CARDS}"
 
 DEPEND=""
 
-RDEPEND="opengl? app-admin/eselect-opengl
+RDEPEND="opengl? ( app-admin/eselect-opengl )
 	 virtual/libc
 	 >=app-emulation/emul-linux-x86-baselibs-2.5"
 

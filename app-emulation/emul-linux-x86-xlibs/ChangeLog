@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.39 2006/03/17 17:51:35 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.40 2006/04/05 15:43:33 chutzpah Exp $
+
+  05 Apr 2006; Patrick McLean <chutzpah@gentoo.org>
+  emul-linux-x86-xlibs-7.0-r1.ebuild:
+  Fixed RDEPEND syntax (Bug #128774), thanks to Patrick Borjesson
+  <psycho@rift.ath.cx> for pointing this out.
 
 *emul-linux-x86-xlibs-7.0-r1 (17 Mar 2006)
 
