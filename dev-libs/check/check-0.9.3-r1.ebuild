@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/check-0.9.3-r1.ebuild,v 1.1 2006/03/01 17:12:50 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/check-0.9.3-r1.ebuild,v 1.2 2006/04/05 21:18:00 twp Exp $
 
-inherit autotools eutils
+inherit autotools eutils libtool
 
 DESCRIPTION="A unit test framework for C"
 HOMEPAGE="http://sourceforge.net/projects/check/"
@@ -18,6 +18,7 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-libtool.patch
+	elibtoolize || die
 }
 
 src_compile() {
