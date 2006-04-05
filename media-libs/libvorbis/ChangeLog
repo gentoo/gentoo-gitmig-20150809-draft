@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.62 2006/04/05 18:05:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.63 2006/04/05 18:59:00 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> libvorbis-1.1.2.ebuild:
+  Actually remove the manual libraries symlinking; don't append -fPIC as
+  libtool now is safe, reorder flag mangling, fix SRC_URI useflag test, add
+  ~x86-fbsd keyword.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> libvorbis-1.1.2.ebuild:
   Use directly elibtoolize, it handles MacOSX by itself. Fix libraries links.
