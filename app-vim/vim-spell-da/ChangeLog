@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-da
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-da/ChangeLog,v 1.1 2006/01/16 21:35:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-da/ChangeLog,v 1.2 2006/04/05 19:39:48 chutzpah Exp $
+
+  05 Apr 2006; Patrick McLean <chutzpah@gentoo.org>
+  vim-spell-da-20060116.ebuild:
+  Add ~amd64.
 
 *vim-spell-da-20060116 (16 Jan 2006)
 
