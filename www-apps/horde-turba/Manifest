@@ -1,25 +1,24 @@
-DIST turba-1.2.5.tar.gz 537277
-DIST turba-h3-2.0.5.tar.gz 1420141
-DIST turba-h3-2.1.tar.gz 1450847 RMD160 87c86156b6e5d33715c8051d2f991ec97c7597ef SHA256 1623f8e8b8b67965706a2e2cf039956a3957bc56531fbe0bfbad39cb83143125
-EBUILD horde-turba-1.2.5.ebuild 454
-MD5 4a64c82bf8e2a72a45219595e0b212b7 horde-turba-1.2.5.ebuild 454
-EBUILD horde-turba-2.0.5.ebuild 479
-MD5 a7f7989d5610cf9ab60b4c29ab95eaed horde-turba-2.0.5.ebuild 479
-EBUILD horde-turba-2.1.ebuild 473
-MD5 c1ec2f9c0f45a64f573992101077988e horde-turba-2.1.ebuild 473
-MISC ChangeLog 3701
-MD5 2c121b5ad139f92f89ad13be57f503f1 ChangeLog 3701
-MISC metadata.xml 1156
-MD5 4a52cd771138efea4026da82a803a812 metadata.xml 1156
-size 63 files/digest-horde-turba-1.2.5 63
+MD5 af5d69e3542662bc97e113bc1e3cb4e1 ChangeLog 3791
+RMD160 5ec3de3c2f154a6a6f36d2e86efb20b4ebb07048 ChangeLog 3791
+SHA256 ad42c7440cdc888d090a7b9d6fd18ae727fa239f95bb8951e15113f80d6ba6d7 ChangeLog 3791
+MD5 8453ae3c91fc2fbd94a61cd9c642bb1d files/digest-horde-turba-1.2.5 63
 RMD160 b4613555623d07b93633e22995dd4601bd2e01c7 files/digest-horde-turba-1.2.5 63
 SHA256 87123cf64eafab7d13806e9f8e4d5de1f46fb568410be1cff31de2efa462b792 files/digest-horde-turba-1.2.5 63
-MD5 8453ae3c91fc2fbd94a61cd9c642bb1d files/digest-horde-turba-1.2.5 63
-size 67 files/digest-horde-turba-2.0.5 67
+MD5 3de83a334b89c5e3308bc4a026d969fd files/digest-horde-turba-2.0.5 67
 RMD160 35013e3809339acf38b7fdbf6748789c3712dfec files/digest-horde-turba-2.0.5 67
 SHA256 9cbb9e18c58fd0f48bc9e22a10442a34179fe77f08a5b3aca78239db8efafbbc files/digest-horde-turba-2.0.5 67
-MD5 3de83a334b89c5e3308bc4a026d969fd files/digest-horde-turba-2.0.5 67
-size 241 files/digest-horde-turba-2.1 241
+MD5 16dd153149d648c03fbf734b5e475fee files/digest-horde-turba-2.1 241
 RMD160 2198529e7a755f799368b4658d33f3785263370e files/digest-horde-turba-2.1 241
 SHA256 7767bd81632556a8ca066344fb143e8bcf32e33bbf7e5cdccad42782b54afbcf files/digest-horde-turba-2.1 241
-MD5 16dd153149d648c03fbf734b5e475fee files/digest-horde-turba-2.1 241
+MD5 4a64c82bf8e2a72a45219595e0b212b7 horde-turba-1.2.5.ebuild 454
+RMD160 34a58edf18d52343c0e67975aa747cf9a6df76f4 horde-turba-1.2.5.ebuild 454
+SHA256 ceac85c931824cda445c773d61cf00a6aa05e1a003cdf730ccbe46e76d6f95e4 horde-turba-1.2.5.ebuild 454
+MD5 a7f7989d5610cf9ab60b4c29ab95eaed horde-turba-2.0.5.ebuild 479
+RMD160 d63b4f65a8e7fee8d74c4896a48259160ad6e5fb horde-turba-2.0.5.ebuild 479
+SHA256 55d458045b756d35059523224096b4d38368c3876e1e374c7b8553ce06b4412b horde-turba-2.0.5.ebuild 479
+MD5 b0e3947e272b782603b13b8ce6974e1c horde-turba-2.1.ebuild 470
+RMD160 f955bcb82fb58ca70dad69858f46750710e7cb97 horde-turba-2.1.ebuild 470
+SHA256 5a240322d6b89f6b0be8cacb4765d19471040f4904f34a1b0d328c296646b848 horde-turba-2.1.ebuild 470
+MD5 4a52cd771138efea4026da82a803a812 metadata.xml 1156
+RMD160 e3c3c5e874de736e614b7820739d97434588a81f metadata.xml 1156
+SHA256 f21ba74392c9cd17b191d2e8945524f855b206abc8504e833f93798f56bc5616 metadata.xml 1156

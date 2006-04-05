@@ -1,25 +1,24 @@
-DIST mnemo-1.1.4.tar.gz 285368
-DIST mnemo-h3-2.0.3.tar.gz 949740
-DIST mnemo-h3-2.1.tar.gz 963758 RMD160 c26c0e56efde9692f2b2f5127cb931e5d3364641 SHA256 9ff42bf5458144bfcf3425f1a1942e9143f952dedfb683c50ac043d3eff26b11
-EBUILD horde-mnemo-1.1.4.ebuild 425
-MD5 6cad54738ea2ced39092787a784f7107 horde-mnemo-1.1.4.ebuild 425
-EBUILD horde-mnemo-2.0.3.ebuild 450
-MD5 38996ab402be2ad944058bdedd8a46ed horde-mnemo-2.0.3.ebuild 450
-EBUILD horde-mnemo-2.1.ebuild 444
-MD5 025abe5079d093a117fdc607b2d65ee3 horde-mnemo-2.1.ebuild 444
-MISC ChangeLog 2706
-MD5 8d8a7b0ed111250d7cc486baf7f9fda5 ChangeLog 2706
-MISC metadata.xml 284
-MD5 c14b95659ea882d1d9a416001fc1463e metadata.xml 284
-size 63 files/digest-horde-mnemo-1.1.4 63
+MD5 71a7670480e1154b6eda9dc22eb79dec ChangeLog 2796
+RMD160 2c6b840c6ab8aea3a62fda249298f904e6b2dc3c ChangeLog 2796
+SHA256 dcffcb0606b25086a674fe232c064748f502baeac0038cfa65431e448524107e ChangeLog 2796
+MD5 3308ae704f3012264a5e59587930c0b8 files/digest-horde-mnemo-1.1.4 63
 RMD160 f4c656361ba77a1643e160b2d2219c1792825429 files/digest-horde-mnemo-1.1.4 63
 SHA256 642120c27d318e16411821521a699a1b7e263df8802b9d10c53f3b4fcf18271f files/digest-horde-mnemo-1.1.4 63
-MD5 3308ae704f3012264a5e59587930c0b8 files/digest-horde-mnemo-1.1.4 63
-size 66 files/digest-horde-mnemo-2.0.3 66
+MD5 ebee1c7f8e7be96a271703bbec17eaf3 files/digest-horde-mnemo-2.0.3 66
 RMD160 be203c25089021c3ff40fdf2be9f99ebd5d44478 files/digest-horde-mnemo-2.0.3 66
 SHA256 786356e00f15cc5658d986ab65f7ff9a50a18b8bb2e90a7c3a5b49fa08866def files/digest-horde-mnemo-2.0.3 66
-MD5 ebee1c7f8e7be96a271703bbec17eaf3 files/digest-horde-mnemo-2.0.3 66
-size 238 files/digest-horde-mnemo-2.1 238
+MD5 0268ec51352394a068755349819b5e5a files/digest-horde-mnemo-2.1 238
 RMD160 a9eb13a4db139d6d5fa8c095c67b385e2858ff95 files/digest-horde-mnemo-2.1 238
 SHA256 98dc1a516600f0bb028178d276019dc58a45fe182e60787f258f682a3c319ba2 files/digest-horde-mnemo-2.1 238
-MD5 0268ec51352394a068755349819b5e5a files/digest-horde-mnemo-2.1 238
+MD5 6cad54738ea2ced39092787a784f7107 horde-mnemo-1.1.4.ebuild 425
+RMD160 faba41aa55d9953d0b11cebb02889d64175fda40 horde-mnemo-1.1.4.ebuild 425
+SHA256 2071b1c56dbcfd5d18f84735025aab6904d17580bc19c207f504fbc8e0fc0c70 horde-mnemo-1.1.4.ebuild 425
+MD5 38996ab402be2ad944058bdedd8a46ed horde-mnemo-2.0.3.ebuild 450
+RMD160 c83a79e0017e7296e6241675cbc6c36bab28afe1 horde-mnemo-2.0.3.ebuild 450
+SHA256 3a70675a6ee707f5fbddac20b95b1e0c00307930c72a2162c99cecceee1833bc horde-mnemo-2.0.3.ebuild 450
+MD5 7daa6fbce18eb72a173aa8d9b6b12d9b horde-mnemo-2.1.ebuild 441
+RMD160 c7eaab1a8ee648c746fc7ffab751630ef71a71bd horde-mnemo-2.1.ebuild 441
+SHA256 3661a87182e5b16720a1111120f4ff4725a7e0136e7133ed8a5ecea896a2c809 horde-mnemo-2.1.ebuild 441
+MD5 c14b95659ea882d1d9a416001fc1463e metadata.xml 284
+RMD160 6f98a9bb22ee1710ef6c3397c1703d26b5c77a8d metadata.xml 284
+SHA256 ca58dde997ee23f595c0ba3c8545eda61220ec6263a72221c264448d0f9f6fe1 metadata.xml 284
