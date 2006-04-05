@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-pl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-pl/ChangeLog,v 1.1 2006/02/18 12:57:24 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-pl/ChangeLog,v 1.2 2006/04/05 19:48:07 chutzpah Exp $
+
+  05 Apr 2006; Patrick McLean <chutzpah@gentoo.org>
+  vim-spell-pl-20060218.ebuild:
+  Add ~amd64.
 
 *vim-spell-pl-20060218 (18 Feb 2006)
 
