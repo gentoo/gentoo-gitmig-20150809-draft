@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.28 2005/11/28 18:38:37 hanno Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.29 2006/04/05 20:02:32 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> opensp-1.5.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   28 Nov 2005; Hanno Boeck <hanno@gentoo.org>
   +files/opensp-1.5.1-gcc41.patch, opensp-1.5.1.ebuild:
