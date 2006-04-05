@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 770da43dabee533598d799c055f17f9e ChangeLog 895
-RMD160 01d35315e83ed6b513cc84d555bd679e04591cc0 ChangeLog 895
-SHA256 a21a235cfb04f870b978324747dff73612ecf4a7732504084e7b31f78c6bb6b2 ChangeLog 895
+MD5 52267a2d100bd623cd7e091e789e9db9 ChangeLog 984
 MD5 d3fe61d339a4df8b6191566fbdf7c725 files/digest-yakuake-2.7.3 66
-RMD160 b3ede608a7239a7a3a252783b318b985e89043af files/digest-yakuake-2.7.3 66
-SHA256 40d427ff85122c2c6e0a9e3dfc6be438af286e68efcb5d8f26dc7c9e7a9eb894 files/digest-yakuake-2.7.3 66
 MD5 f23b5ff3ae67f2c346dc2c6ad355a5cd files/digest-yakuake-2.7.5 262
-RMD160 5b72148d3c5522e2cd8d29852b013588ddcc9a5e files/digest-yakuake-2.7.5 262
-SHA256 218d8bade25175313912e6b71d1c50cb4273a6c0a4966a0881e3b9e6f1ff28e4 files/digest-yakuake-2.7.5 262
 MD5 347e6648a3ba3fa79c7ebeb403703646 metadata.xml 504
-RMD160 843cf09ce114e456ca42494efdeab57cc693d8e9 metadata.xml 504
-SHA256 70dc1c42183487b0454f7c885071fab0896808e12a43de5f9e16e8abc9ad5e79 metadata.xml 504
 MD5 9d724c8b0a81d0e79fccb530a355b1a2 yakuake-2.7.3.ebuild 509
-RMD160 e8792a8150127bc1f8e3abc8d9b2bf202d0891e0 yakuake-2.7.3.ebuild 509
-SHA256 a1b2580e6d336e8d4fc4feccb2c860f9e500e124d439344b6c8fa97e9a0eb837 yakuake-2.7.3.ebuild 509
-MD5 e2568caad0cf695c391cf166859467e1 yakuake-2.7.5.ebuild 556
-RMD160 da9222b079d9636cb197f391617b11db7b7529b1 yakuake-2.7.5.ebuild 556
-SHA256 e89c2c8cad91a576701f61a9bb8c7b97d760755c1fb2ab5da0764849a5602b26 yakuake-2.7.5.ebuild 556
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEJzBKntT9W3vfTuoRAtDbAJ4lB0nEDsR+sEGt3pOLe/hmvl5QFACfbyLC
-PquX9rnNdDGgvgNVzs8WBhQ=
-=4Pm3
------END PGP SIGNATURE-----
+MD5 54a6d6e1fc32e06c85ff6979c48229d4 yakuake-2.7.5.ebuild 565
