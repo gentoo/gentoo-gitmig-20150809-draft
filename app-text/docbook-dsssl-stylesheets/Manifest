@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1fe6ee1ea3a0a792c5ffb33b570c5e2e ChangeLog 4540
-RMD160 e2a0bffb9c1387303309168e883280fc4ab3cfa1 ChangeLog 4540
-SHA256 2472391ce5ca21dc295e74f6091b7b2005f0aa1bc9ecf624a474710874d65b71 ChangeLog 4540
+MD5 69f9cb8520caa08a70dc3e867585b7ac ChangeLog 4664
+RMD160 54a6c9130965e6ad16dc675a6507c39e8d255988 ChangeLog 4664
+SHA256 85623a476ba721dab315a8bb3a91a122cc95f365d59b669e139202daab3bfdb5 ChangeLog 4664
 MD5 891bd397a88a2061b6d796aee7208c0c docbook-dsssl-stylesheets-1.77-r2.ebuild 1603
 RMD160 ebbe33a037d95b81fce274dfd39eb9575abe4c45 docbook-dsssl-stylesheets-1.77-r2.ebuild 1603
 SHA256 81e931e8448a3654ed621d3af5738f849bbc1d02886bdb859ba63615ebedd2f9 docbook-dsssl-stylesheets-1.77-r2.ebuild 1603
-MD5 2987efcec030b4ddc9b1c2f49b859b8b docbook-dsssl-stylesheets-1.79.ebuild 1675
-RMD160 a244f596096b77882ebd666197b9baca84209b14 docbook-dsssl-stylesheets-1.79.ebuild 1675
-SHA256 9052cd7ea2b801da4a58ad108bad2b5b2c77e6e828a0ec459d57e00b1725bdad docbook-dsssl-stylesheets-1.79.ebuild 1675
+MD5 33a641d543edf4bc799339a0980183af docbook-dsssl-stylesheets-1.79.ebuild 1688
+RMD160 658ebf53fe47c8da2737eaa35438a46f33bb579f docbook-dsssl-stylesheets-1.79.ebuild 1688
+SHA256 5f2c8cb762da6e4d6076cf37f08a35647461b002082534aa449b875b0880b419 docbook-dsssl-stylesheets-1.79.ebuild 1688
 MD5 828b0c7fd631679fa8fe2bf60d082c38 files/digest-docbook-dsssl-stylesheets-1.77-r2 70
 RMD160 3acf1c60c62edd38612ea87b0226b3a67f4523ec files/digest-docbook-dsssl-stylesheets-1.77-r2 70
 SHA256 20c9438d4084421c181541f926d68af2b5c96509d6f186bb338971b86a972e5d files/digest-docbook-dsssl-stylesheets-1.77-r2 70
@@ -22,10 +19,3 @@ SHA256 9dec10a3f0c4fbe860f4fecf49cf4470c875a95957871ab97cbeb36a484b3e14 files/do
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEH2sg2+ySkm8kpY0RAsFEAKCJHxtXg95pQ+EaLo1A0iu9ZR74pACbBNIW
-56FH9cm3zvvxrwPX15ZeQ14=
-=uVmt
------END PGP SIGNATURE-----
