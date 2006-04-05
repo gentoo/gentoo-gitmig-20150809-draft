@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4ba9cc4d1aa347cf018e0cff29f697f1 ChangeLog 16062
-RMD160 f4ebf72cdb29714b2056e85fa8aef4e6bc288d97 ChangeLog 16062
-SHA256 ab5ade1e118bd0b5b379e39f372f019c1b5ccb6582706ab980c605b3b971b123 ChangeLog 16062
+MD5 a54b851ae350998574d95df884f6e34f ChangeLog 16293
+RMD160 c1ac3c42e5be1191efbb9a32fd452a275ac926a8 ChangeLog 16293
+SHA256 d4b4b11afa4e8407f967b628d0e13caeaa2613c313357873b208c6ee6b31a6ba ChangeLog 16293
 MD5 c8eb68627dc7b53b10143626018ff597 files/0.80.2/gtk2flickerfix.patch 1969
 RMD160 a21c185c4d05ba166588e94ad064c87cb7de63eb files/0.80.2/gtk2flickerfix.patch 1969
 SHA256 50c6f7cb9691fd129364154f58f7f0eb4b9e9c80d48eb809fc8d1dd83ace08fe files/0.80.2/gtk2flickerfix.patch 1969
@@ -55,9 +55,6 @@ SHA256 24b0e6c8b118f95c17d995a161cdb6655bbc085e287be615fd9842dc88ee36e3 files/di
 MD5 8b11b75a0ece3b854bf47e03ded7e0ba files/digest-windowmaker-0.91.0-r1 144
 RMD160 74e37e0a3100b0df33d5b90be337680aac4d5556 files/digest-windowmaker-0.91.0-r1 144
 SHA256 e66726aaf2b249c043adaf29f5ceb9e226d30db0b1135cc0c3f49962de3f863a files/digest-windowmaker-0.91.0-r1 144
-MD5 4c748a4dd9d3e57dfe5c1d01ccac4b54 files/digest-windowmaker-0.91.0-r7 227
-RMD160 b31da3f02c035c4758daede724ff5891c1540c0e files/digest-windowmaker-0.91.0-r7 227
-SHA256 fff1b6d46b50988782c45a02d36274916a669740a8655ac7bfaed775e6cf4720 files/digest-windowmaker-0.91.0-r7 227
 MD5 56fa606e28d04ba426e4d4cacc8d0b2d files/digest-windowmaker-0.92.0-r1 144
 RMD160 218776f4a36887dae3d7509c6984082f2efc9a1a files/digest-windowmaker-0.92.0-r1 144
 SHA256 ea41d4af91d6e98fcf212bc31d22bf4038c33fd933486f89ab8ba8a1b4d52ca3 files/digest-windowmaker-0.92.0-r1 144
@@ -79,25 +76,22 @@ SHA256 7cf62fd49cf872941377fedc739451ea6f285dd06ad1fef2034a5fc84ddbd1ff windowma
 MD5 3ceafc6ffa736e5cd7d21d18895e2aa1 windowmaker-0.80.2-r4.ebuild 4092
 RMD160 af26dde4e0c6108b14a871f8cae362995e4983b0 windowmaker-0.80.2-r4.ebuild 4092
 SHA256 23b5e053d0ef8fe0fed30ca80bfe02b98493743ea29c3849d9b61ba665ad5e36 windowmaker-0.80.2-r4.ebuild 4092
-MD5 0b7d5f0f23bea9a4793a92f25117d9f3 windowmaker-0.91.0-r1.ebuild 5881
-RMD160 15401d0c46197d9c622f2557195387991a91728f windowmaker-0.91.0-r1.ebuild 5881
-SHA256 ad8f5120f78032a208d76d72a2ccaf49ec78c1cd0b51cec89a9a4aff10cf2f39 windowmaker-0.91.0-r1.ebuild 5881
-MD5 6dfb07e767918268038ad952d0e38029 windowmaker-0.91.0-r7.ebuild 6800
-RMD160 fe3ece5d5d91f3f5a5edf1dd3132e05a879db9d1 windowmaker-0.91.0-r7.ebuild 6800
-SHA256 5fa0d751990414399edd296e609e714d43ee18b9726cf9a51ad2d2af60c90ed7 windowmaker-0.91.0-r7.ebuild 6800
-MD5 7cd4046827ba9b7b99679af4c0a14586 windowmaker-0.92.0-r1.ebuild 5354
-RMD160 150ed9ada9911ebd989f13b74fc87ec8932d2dea windowmaker-0.92.0-r1.ebuild 5354
-SHA256 7bd59f2fc62317454bd6c74f3e57cd008d5b158974d7d90cbccb1857a4ee3006 windowmaker-0.92.0-r1.ebuild 5354
-MD5 fc719636563d4ef47b1be6726231374d windowmaker-0.92.0-r2.ebuild 5217
-RMD160 0e70f591c2e1d7e945f3fc8a39bce886e02fb541 windowmaker-0.92.0-r2.ebuild 5217
-SHA256 86a9eaaa440913533a4c830e81972ed95be6c032c049d60e66a9961cd4257917 windowmaker-0.92.0-r2.ebuild 5217
-MD5 e805bca58ab50f9eab81ca66601ba50a windowmaker-0.92.0-r3.ebuild 5267
-RMD160 4b300eaf4e646874e5f4013bb10c7cd38e00e193 windowmaker-0.92.0-r3.ebuild 5267
-SHA256 e11ba6d5c8683c2e1af41e276217ee414c1f6a1a7f3527cbb10acb4320401d9e windowmaker-0.92.0-r3.ebuild 5267
+MD5 e789860f3fed82394a8c33696ede2d3b windowmaker-0.91.0-r1.ebuild 5905
+RMD160 23f8882c14f5a8b55be3caf30b292d5b4268de78 windowmaker-0.91.0-r1.ebuild 5905
+SHA256 dd614bf090727ab2401b72e2f55fee993b7a6cd1a7a8d8c2f726da07fa9122e6 windowmaker-0.91.0-r1.ebuild 5905
+MD5 c70074f5979b8f8e43c7953fd3915813 windowmaker-0.92.0-r1.ebuild 5376
+RMD160 2edeb84454941a8a851f2e9b610e8469fcb8da04 windowmaker-0.92.0-r1.ebuild 5376
+SHA256 f820a628b03212b25a12771401f19778eac1d4b6f1dce65b651db563012f575c windowmaker-0.92.0-r1.ebuild 5376
+MD5 097e8173ab6ddec46bc051e438c76cb4 windowmaker-0.92.0-r2.ebuild 5238
+RMD160 66b7b6162f31e53b4ba7532ed32d41eefb9e3100 windowmaker-0.92.0-r2.ebuild 5238
+SHA256 de924379fa7f96391d0e022211634992cea6c62a20115b61bebc51c249b86956 windowmaker-0.92.0-r2.ebuild 5238
+MD5 cef66d7b911ca0f38104282aac25177c windowmaker-0.92.0-r3.ebuild 5288
+RMD160 171f0f3b586281f09b3c8c211d011888b0279af9 windowmaker-0.92.0-r3.ebuild 5288
+SHA256 ad1fe790182a75853056234d51e07b16ff3b195985086181242d39d3112bdcac windowmaker-0.92.0-r3.ebuild 5288
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD34rCwUpWvClEHQoRAmSoAJ4jf9AselomtWWrhf9WHGenrr0HJgCeNpPZ
-/BLiHVCujLYk1r6aZ6oOgDg=
-=huBW
+iD8DBQFEM++kwUpWvClEHQoRAmqKAJ45pCQwcJwtUIPSOVQrp3lqCmlAmACeJ2md
+nxwEQARDSO6zAb27YkY5qy8=
+=cX/S
 -----END PGP SIGNATURE-----
