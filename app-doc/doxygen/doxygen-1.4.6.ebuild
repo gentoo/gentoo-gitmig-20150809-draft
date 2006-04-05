@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.6.ebuild,v 1.3 2006/02/08 08:47:35 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.6.ebuild,v 1.4 2006/04/05 11:29:05 flameeyes Exp $
 
 inherit eutils toolchain-funcs kde-functions
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc qt tetex unicode"
 
 RDEPEND=">=media-gfx/graphviz-2.6
@@ -41,6 +41,9 @@ src_unpack() {
 	if [ $(gcc-major-version) -eq 4 ] ; then
 		epatch ${FILESDIR}/${PN}-gcc4.patch || die "gcc4 patch failed"
 	fi
+
+	# Detect correctly install command on FreeBSD
+	epatch "${FILESDIR}/${P}-freebsd.patch"
 }
 
 src_compile() {

@@ -1,0 +1,14 @@
+Index: doxygen-1.4.6/configure
+===================================================================
+--- doxygen-1.4.6.orig/configure
++++ doxygen-1.4.6/configure
+@@ -158,6 +158,9 @@ if test -z "$f_platform"; then
+       ;;
+     FreeBSD:*)
+       f_platform=freebsd-g++
++      if test "$f_insttool" = NO; then
++        f_insttool=/usr/bin/install
++      fi
+       ;;
+     HP-UX:*)
+       f_platform=hpux-g++

@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.94 2006/02/08 08:47:35 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.95 2006/04/05 11:29:05 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/doxygen-1.4.6-freebsd.patch, doxygen-1.4.6.ebuild:
+  Add patch to allow building on FreeBSD and keyword ~x86-fbsd.
 
   08 Feb 2006; Steve Arnold <nerdboy@gentoo.org> doxygen-1.4.2.ebuild,
   doxygen-1.4.3-r1.ebuild, doxygen-1.4.4.ebuild, doxygen-1.4.5.ebuild,
