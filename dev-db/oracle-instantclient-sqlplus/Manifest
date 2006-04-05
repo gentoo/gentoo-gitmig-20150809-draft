@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b062eff9e81e591d60fc1f262a7af3c8 ChangeLog 2367
 RMD160 fa0a40c7fceaf170bd84081c80376ac5a805675a ChangeLog 2367
 SHA256 d9e5c92457d6c0a5909c859d654e4daa2f54b98d3d304862f66ec3a897c3616d ChangeLog 2367
@@ -19,6 +16,9 @@ SHA256 c71641ccc8d55da7a977d83031ab9a5fc8fc30e6733e2bccd98f65598ca69adf files/di
 MD5 d61b51d7c6eeb4a8ac35e7ef51b0c7da files/digest-oracle-instantclient-sqlplus-10.2.0.1-r1 197
 RMD160 10421c07fe8a254d0591b4836b2cccbb832118fc files/digest-oracle-instantclient-sqlplus-10.2.0.1-r1 197
 SHA256 32e24e78476c3240270f3016420bc1106691406a662b366474a1a6052cc93444 files/digest-oracle-instantclient-sqlplus-10.2.0.1-r1 197
+MD5 31ddc16725da296c99fe62c2d94ea875 files/digest-oracle-instantclient-sqlplus-10.2.0.2 683
+RMD160 37606915628e142d1222f4bf14bf20eaa234584e files/digest-oracle-instantclient-sqlplus-10.2.0.2 683
+SHA256 34c99a226a805d38e7705b5149851326f4ad0c4d39fb3a1b6e446f5d8d7c5c99 files/digest-oracle-instantclient-sqlplus-10.2.0.2 683
 MD5 9f5d6b0af6c2271c1e2bbf0518bcc925 metadata.xml 388
 RMD160 f12fead3733f8a2760b2f190bcadd9a810e4bbc1 metadata.xml 388
 SHA256 fa323e9829505e837ae433af3b0ce5e7b97e1aef0ec614baa6c6ba4602def893 metadata.xml 388
@@ -37,10 +37,6 @@ SHA256 27dc5d9231543967d9cf61ed375a51662ccddaf4da445ac64d181455323ef5c3 oracle-i
 MD5 ac1cf0a5c0878fb96369c5afd33c6946 oracle-instantclient-sqlplus-10.2.0.1.ebuild 1644
 RMD160 d02d8a7fd47c67630a6b1dd2491e3b847c6fb49c oracle-instantclient-sqlplus-10.2.0.1.ebuild 1644
 SHA256 dc5d5bb3fb388552da52eb5e6ef81aabfefdfc7d4a94df6a047d6221a18394c2 oracle-instantclient-sqlplus-10.2.0.1.ebuild 1644
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHdYpCRZPokWLroQRAg5bAJ9GEOgPmy7fAP9+XFZgMVrnZVYdrgCeKDXn
-txKRbuuyuWzHUIoXTI0dt9g=
-=e96f
------END PGP SIGNATURE-----
+MD5 cf5acae9c2a4e685fd5a2ef0768493fe oracle-instantclient-sqlplus-10.2.0.2.ebuild 1821
+RMD160 14911bbcd1571f4d4b8b43dee66e7744748be1e8 oracle-instantclient-sqlplus-10.2.0.2.ebuild 1821
+SHA256 c8229c3f3f3b1a2cab90ab99f3441e4e8b64d992911c8b2a62cf845db58f8195 oracle-instantclient-sqlplus-10.2.0.2.ebuild 1821

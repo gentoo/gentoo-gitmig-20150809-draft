@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 42699a7ff76c8d661595e7c1b89458cd ChangeLog 2275
 RMD160 1c192b01794a2951134ab78b07e37c833343e94e ChangeLog 2275
 SHA256 8027970c637ad953a29b73df57c9312696d37cc9aa527a1bf8c7c6a3423a5e9b ChangeLog 2275
@@ -19,6 +16,9 @@ SHA256 a1bae28859cddec0715ebabca60f39262b3982796fb51884c8578d1395f544f2 files/di
 MD5 12e7b58aa67df0161935257e2ac97049 files/digest-oracle-instantclient-jdbc-10.2.0.1-r1 193
 RMD160 22f94550be14bbed4413dfa4219e8f7677b3e42e files/digest-oracle-instantclient-jdbc-10.2.0.1-r1 193
 SHA256 ca25ccd89f79e87361a20595c81ad4b84f3ec75353939c85bee8e2ff9c0e9130 files/digest-oracle-instantclient-jdbc-10.2.0.1-r1 193
+MD5 82d7f2980a05defd8c74fb4d6fcf82a3 files/digest-oracle-instantclient-jdbc-10.2.0.2 671
+RMD160 cd52d241c0eff90b5b45f32057c2535c649b162a files/digest-oracle-instantclient-jdbc-10.2.0.2 671
+SHA256 227b4642e0f942f7481f7bb6b773ae5169d5ef27a24ddd279cd5a4823cc96975 files/digest-oracle-instantclient-jdbc-10.2.0.2 671
 MD5 9f5d6b0af6c2271c1e2bbf0518bcc925 metadata.xml 388
 RMD160 f12fead3733f8a2760b2f190bcadd9a810e4bbc1 metadata.xml 388
 SHA256 fa323e9829505e837ae433af3b0ce5e7b97e1aef0ec614baa6c6ba4602def893 metadata.xml 388
@@ -37,10 +37,6 @@ SHA256 cf7ae7a32a477f65a43303dd3cb7457c53333a295b77c26b0eaa59e0b0598f63 oracle-i
 MD5 c3b028a7e184d838b6ae04652f420f74 oracle-instantclient-jdbc-10.2.0.1.ebuild 1297
 RMD160 9ade4d5fc5a5e35b442fc0cf2627f422b2d2d2e1 oracle-instantclient-jdbc-10.2.0.1.ebuild 1297
 SHA256 edaa13538a18ae686c99a00652fd6b4f15558e746ab61fc69b369d682883ab44 oracle-instantclient-jdbc-10.2.0.1.ebuild 1297
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHa50CRZPokWLroQRAlsBAJ4pNqvWZITI0AGSvFQzrsfv92hW1wCfV4Ys
-uPkHQ7C+KK+dkekRuSNhQog=
-=Qvxj
------END PGP SIGNATURE-----
+MD5 09bc927d6128e10bb5ce7fea85b0f2c8 oracle-instantclient-jdbc-10.2.0.2.ebuild 1475
+RMD160 081185544743bf5c156d8f29f532eca3d23c5588 oracle-instantclient-jdbc-10.2.0.2.ebuild 1475
+SHA256 74887a4404d9ff73c0676ec862e5cf98c3302cb96bdf6b03ef8d0c44f74948e5 oracle-instantclient-jdbc-10.2.0.2.ebuild 1475
