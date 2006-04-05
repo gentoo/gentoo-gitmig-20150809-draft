@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.17 2006/03/26 20:03:49 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.18 2006/04/05 15:14:31 spyderous Exp $
 
 inherit eutils
 
@@ -124,7 +124,8 @@ RDEPEND="${RDEPEND}
 
 # Some fonts
 RDEPEND="${RDEPEND}
-	>=media-fonts/font-bh-ttf-1
+	media-fonts/ttf-bitstream-vera
+	>=media-fonts/font-bh-type1-1
 	>=media-fonts/font-adobe-utopia-type1-1.0.1
 	>=media-fonts/font-bitstream-type1-1
 	>=media-fonts/font-adobe-100dpi-1"

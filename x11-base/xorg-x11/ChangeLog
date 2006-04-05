@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.529 2006/04/03 23:13:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.530 2006/04/05 15:14:31 spyderous Exp $
+
+  05 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-7.0-r1.ebuild:
+  Use font-bh-type1 instead of font-bh-ttf. Luxi fonts originated with Type1,
+  and the conversion to TrueType was poor. Also depend on ttf-bitstream-vera.
 
   03 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2-r4.ebuild, xorg-x11-6.8.2-r6.ebuild, xorg-x11-6.9.0.ebuild:
