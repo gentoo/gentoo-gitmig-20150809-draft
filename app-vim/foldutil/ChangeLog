@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/foldutil
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/foldutil/ChangeLog,v 1.13 2005/09/10 20:17:28 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/foldutil/ChangeLog,v 1.14 2006/04/05 13:58:58 chutzpah Exp $
+
+  05 Apr 2006; Patrick McLean <chutzpah@gentoo.org> foldutil-2.0.ebuild:
+  Add ~amd64
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> foldutil-2.0.ebuild:
   Mark 2.0 stable on alpha
