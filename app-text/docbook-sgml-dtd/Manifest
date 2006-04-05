@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4866a39835c918aec24b3eecb833ccdc ChangeLog 7892
-RMD160 80701cd6e6fea590572d87c0ad555e8ad303df99 ChangeLog 7892
-SHA256 ef57125c82d53f2e41bb05b1b16c1b950fa170629e04bce669604c41d3fce691 ChangeLog 7892
+MD5 3119f82fd75006952b1fa9f88618bac3 ChangeLog 8002
+RMD160 0a825d1b3442481efab5bebd82e147c4c63eb7de ChangeLog 8002
+SHA256 f9d9ad8f14995b584c31d95943673b387d84fcc4367c741c84d1d0fe800f30b3 ChangeLog 8002
 MD5 2593356ca7c16559a393dd21e311e057 docbook-sgml-dtd-3.0-r3.ebuild 1053
 RMD160 abe5cc4ae172d296b14d1c9f74273c3305da2109 docbook-sgml-dtd-3.0-r3.ebuild 1053
 SHA256 7ac37927ff3b634e56d44be72f6b0f618effb4a69d08c8af9737abf03ca97304 docbook-sgml-dtd-3.0-r3.ebuild 1053
@@ -22,9 +19,9 @@ SHA256 634a49a1a992ddc3ebc91e3288c3b99650ef344d33baf3c0f298c649bb3089f7 docbook-
 MD5 3e991e8308e4f67ac6c1fe7d4af63806 docbook-sgml-dtd-4.3-r2.ebuild 1046
 RMD160 576b8bb95956c71bb70f6299dbd06ffc0b12e7af docbook-sgml-dtd-4.3-r2.ebuild 1046
 SHA256 466705fd4241222655bf344541fbeb37d6514249549175da07abd985c88bd695 docbook-sgml-dtd-4.3-r2.ebuild 1046
-MD5 b0436eaf50b63b53d5e0336f091ea7de docbook-sgml-dtd-4.4.ebuild 1054
-RMD160 68b1ea0b9c4cabc3d6634a15f29cdd001b0e78f8 docbook-sgml-dtd-4.4.ebuild 1054
-SHA256 b3e73a5acaff0310548d58c6bc96e8784b7ae89e2e9476eb0d142e31662efd25 docbook-sgml-dtd-4.4.ebuild 1054
+MD5 c8048251718d46702649ebe8e118410d docbook-sgml-dtd-4.4.ebuild 1067
+RMD160 fb680e45eb19199b6f0f21c92f5ae58820db8523 docbook-sgml-dtd-4.4.ebuild 1067
+SHA256 83152007dac8d72df579b90362fada9d011ceb0278bfa70d0c274470e172c0dd docbook-sgml-dtd-4.4.ebuild 1067
 MD5 76d53f45afb968ea0724d75ed2e83afb files/digest-docbook-sgml-dtd-3.0-r3 55
 RMD160 650bcb08c2ad0f6c760f50a0a14459ccbf76a611 files/digest-docbook-sgml-dtd-3.0-r3 55
 SHA256 764cf3fabdebf21d77896ad2cd7caba426b66ab34c5f791e2e61a65715fb1723 files/digest-docbook-sgml-dtd-3.0-r3 55
@@ -70,10 +67,3 @@ SHA256 71183cdee2871d345437da0a6e53abd04c45acbe39747aad5fdafbd1b1b6b5a6 files/do
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENCLAAiZjviIA2XgRAhnrAJ9sab8epkrHlKM4LQ7ExYazJSsoQQCfQ1mV
-tVYgpKAcmcNkgbvJCYbk4dA=
-=KobB
------END PGP SIGNATURE-----

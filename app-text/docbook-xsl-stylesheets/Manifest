@@ -1,18 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c837539b4c5e7ab4456f046a6e57f31d ChangeLog 8461
-RMD160 79cf8187dda4cdd3bb11b7a9c1a02a6a996abbf7 ChangeLog 8461
-SHA256 dff8c313253ee87c8101d077c486bef64666a4e6fcefd7727d73586acf16711d ChangeLog 8461
+MD5 354dc0a66dfa886aa39f95a297b8ebdd ChangeLog 8585
+RMD160 258d66ad8af31d7bc652bc2b23d8fd3194f2355a ChangeLog 8585
+SHA256 630b6da842b9d7707992429773d2c3a75b816bc01561d587c472d9bf88a42c48 ChangeLog 8585
 MD5 aeab458855a8d1075990862c8309c8dc docbook-xsl-stylesheets-1.66.1.ebuild 1659
 RMD160 c39b64f458cd669b29d2af4368af9ffe33b54394 docbook-xsl-stylesheets-1.66.1.ebuild 1659
 SHA256 b1b43f5f241fab251f044c71c9e5205c5890439eeb8f099650109accfa4bf04e docbook-xsl-stylesheets-1.66.1.ebuild 1659
 MD5 ce545093031db27c72ff4179a812b39e docbook-xsl-stylesheets-1.68.1-r1.ebuild 1389
 RMD160 47afecaf66da3965de696f4d537d1276d80c3281 docbook-xsl-stylesheets-1.68.1-r1.ebuild 1389
 SHA256 2a86e680af828cd379e99112d0d0f33dc787be500f7920571e2036e2a647cd20 docbook-xsl-stylesheets-1.68.1-r1.ebuild 1389
-MD5 72df5661989b262e747791452a7f6505 docbook-xsl-stylesheets-1.69.1.ebuild 1286
-RMD160 6a89ba7cb0604be438016fca6fbf2265109ff813 docbook-xsl-stylesheets-1.69.1.ebuild 1286
-SHA256 c3743632ad156e73e1f144ef01be09476474723b9894a06d18a7dee3ae1c00e8 docbook-xsl-stylesheets-1.69.1.ebuild 1286
+MD5 5416943ee81126e7183eb57129f3fd46 docbook-xsl-stylesheets-1.69.1.ebuild 1299
+RMD160 585a6b59fb3d5769c30afebbd4ed22e71fae659e docbook-xsl-stylesheets-1.69.1.ebuild 1299
+SHA256 3a9bfb6fc901392b5ff0e420ac2ae4994c0f5ad9e02088e6d144c37f75469b3d docbook-xsl-stylesheets-1.69.1.ebuild 1299
 MD5 f417ba6045c3ea9fffe8dd97ee167acc files/digest-docbook-xsl-stylesheets-1.66.1 71
 RMD160 f1c31fce4eb50df4099d85830675f5f2e7eef5e2 files/digest-docbook-xsl-stylesheets-1.66.1 71
 SHA256 fe356314769dcd67450efaab50f596262ebc56f4ba404ce17fd666fce5efc3c3 files/digest-docbook-xsl-stylesheets-1.66.1 71
@@ -25,10 +22,3 @@ SHA256 375368d12c45fe660aa6781342be5bbfbf4ea1e61cec97c5b3504c0b3e8ebbe7 files/di
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEH2rc2+ySkm8kpY0RAjiMAJ93nXoZPPvxZH9K1//txBBY1/2MngCdEW7e
-vre9bMAtz2mPttN8JTZiaJs=
-=/Lj9
------END PGP SIGNATURE-----
