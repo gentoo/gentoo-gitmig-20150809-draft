@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/kovpn
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kovpn/ChangeLog,v 1.1 2006/04/05 14:15:54 tantive Exp $
+
+*kovpn-0.2 (05 Apr 2006)
+
+  05 Apr 2006; <tantive@gentoo.org> +kovpn-0.2.ebuild:
+  Initial import. Contributed by Michael Kaufmann <gentoo@enlighter.de>.
+  Closes #128494.
+
