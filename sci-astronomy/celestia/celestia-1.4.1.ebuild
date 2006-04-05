@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1.ebuild,v 1.4 2006/03/15 17:02:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1.ebuild,v 1.5 2006/04/05 04:25:29 morfic Exp $
 
 inherit eutils flag-o-matic gnome2 kde-functions
 
@@ -73,10 +73,12 @@ src_compile() {
 	fi
 
 	epatch "${FILESDIR}/celestia-1.4.1-gcc-4.1.patch"
+	epatch "${FILESDIR}/makefile.am.patch"
 
 	econf \
 		--with-${mygui} \
 		--with-pic \
+		--enable-pch \
 		$(use_with arts) \
 		$(use_with lua) \
 		$(use_enable threads threading) \
