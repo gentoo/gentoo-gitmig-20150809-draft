@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.2.ebuild,v 1.2 2006/03/23 01:22:15 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.2.ebuild,v 1.3 2006/04/05 18:05:07 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils toolchain-funcs
 
@@ -32,13 +32,7 @@ src_unpack() {
 		epatch ${DISTDIR}/aotuvb4.51-${P}.diff.bz2
 	fi
 
-	# Fixes some strange sed-, libtool- and ranlib-errors on
-	# Mac OS X
-	if use ppc-macos; then
-		glibtoolize
-	else
-		elibtoolize
-	fi
+	elibtoolize
 
 	epunt_cxx #74493
 }
@@ -78,11 +72,11 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 	if use ppc-macos; then
-		dosym libvorbisfile.3.1.0.dylib /usr/$(get_libdir)/libvorbisfile.3.dylib
-		dosym libvorbisenc.2.0.1.dylib /usr/$(get_libdir)/libvorbisenc.2.dylib
+		dosym libvorbisfile.3.1.1.dylib /usr/$(get_libdir)/libvorbisfile.3.dylib
+		dosym libvorbisenc.2.0.2.dylib /usr/$(get_libdir)/libvorbisenc.2.dylib
 	else
-		dosym libvorbisfile.so.3.1.0 /usr/$(get_libdir)/libvorbisfile.so.3
-		dosym libvorbisenc.so.2.0.1 /usr/$(get_libdir)/libvorbisenc.so.2
+		dosym libvorbisfile.so.3.1.1 /usr/$(get_libdir)/libvorbisfile.so.3
+		dosym libvorbisenc.so.2.0.2 /usr/$(get_libdir)/libvorbisenc.so.2
 	fi
 
 	rm -rf ${D}/usr/share/doc
