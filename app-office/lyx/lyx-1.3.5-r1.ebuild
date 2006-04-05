@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.5-r1.ebuild,v 1.11 2006/03/28 23:09:40 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.5-r1.ebuild,v 1.12 2006/04/05 07:32:03 ehmsen Exp $
 
 inherit kde-functions eutils libtool flag-o-matic
 
@@ -49,8 +49,6 @@ RDEPEND="${DEPEND}
 		)
 	)
 	virtual/ghostscript
-	virtual/pdfviewer
-	virtual/psviewer
 	virtual/aspell-dict
 	dev-tex/latex2html
 	media-gfx/imagemagick
