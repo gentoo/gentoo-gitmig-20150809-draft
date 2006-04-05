@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.22 2006/04/05 20:55:38 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.23 2006/04/05 21:13:52 deltacow Exp $
+
+  05 Apr 2006; Scott Stoddard <deltacow@gentoo.org>
+  quodlibet-0.19.1-r1.ebuild:
+  Added ~amd64.
 
 *quodlibet-0.19.1-r1 (05 Apr 2006)
 
