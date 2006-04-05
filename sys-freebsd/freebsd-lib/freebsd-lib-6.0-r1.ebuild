@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0.ebuild,v 1.2 2006/04/04 00:42:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0-r1.ebuild,v 1.1 2006/04/05 17:40:15 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="FreeBSD's base system libraries"
 SLOT="${RV}"
 KEYWORDS="~x86-fbsd"
 
-IUSE="atm bluetooth ssl usb ipv6 kerberos nis gpib"
+IUSE="atm bluetooth ssl ipv6 kerberos nis gpib"
 
 # Crypto is needed to have an internal OpenSSL header
 # sys is needed for libalias, probably we can just extract that instead of
@@ -43,7 +43,6 @@ pkg_setup() {
 	use atm || mymakeopts="${mymakeopts} NO_ATM= "
 	use bluetooth || mymakeopts="${mymakeopts} NO_BLUETOOTH= "
 	use ssl || mymakeopts="${mymakeopts} NO_OPENSSL= NO_CRYPT= "
-	use usb || mymakeopts="${mymakeopts} NO_USB= "
 	use ipv6 || mymakeopts="${mymakeopts} NO_INET6= "
 	use kerberos || mymakeopts="${mymakeopts} NO_KERBEROS= "
 	use nis || mymakeopts="${mymakeopts} NO_NIS= "
