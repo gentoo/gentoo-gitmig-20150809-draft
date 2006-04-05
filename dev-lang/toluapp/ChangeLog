@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/toluapp
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/ChangeLog,v 1.7 2005/05/13 18:31:53 twp Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/ChangeLog,v 1.8 2006/04/05 21:24:44 twp Exp $
+
+*toluapp-1.0.7_p1 (05 Apr 2006)
+
+  05 Apr 2006; Tom Payne <twp@gentoo.org> +toluapp-1.0.7_p1.ebuild:
+  Version bump. Bug # 128217.
 
 *toluapp-1.0.5_p1 (13 May 2005)
 
