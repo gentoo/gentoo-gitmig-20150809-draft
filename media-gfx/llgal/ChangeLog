@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/llgal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/ChangeLog,v 1.8 2006/03/22 13:17:50 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/ChangeLog,v 1.9 2006/04/05 18:31:06 fmccor Exp $
+
+  05 Apr 2006; Ferris McCormick <fmccor@gentoo.org> llgal-0.12.2.ebuild:
+  Add ~sparc keyword.  Runs (but noisily) and does what it's supposed to do.
+  See the "pink bug with ponies" --- Bug #120931.
 
   22 Mar 2006; Alexandre Buisse <nattfodd@gentoo.org> llgal-0.11.4.ebuild,
   llgal-0.12.2.ebuild:
