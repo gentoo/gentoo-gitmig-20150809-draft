@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d093ef857e9a1d6ab41471bf1a60f757 ChangeLog 4936
-RMD160 3b129fe1704ebfb992272dd41bd1fce7544ec19b ChangeLog 4936
-SHA256 2af85adcdb54f6957a10ebbd539d204b0d8af7c5dd3cd8e4bdd6385ff50ce9f1 ChangeLog 4936
+MD5 5ae486ffe81ba9605fc23e3d88fdc48f ChangeLog 5044
+RMD160 a43ac05cb174aa627229de582a69193d5c43b22d ChangeLog 5044
+SHA256 e80703b6450a173ae243e2eac320af7f218c068cee86bd2750392049f33bdb58 ChangeLog 5044
 MD5 2489ec77acaeae6361af8811fc31f38f audiofile-0.2.6-r1.ebuild 879
 RMD160 e5c47e79d2878101f5e7628bd9475ef16f6ecf6c audiofile-0.2.6-r1.ebuild 879
 SHA256 00e3217b9f9873274bd1a4ab69105930c9c25661729e3871d49b13cebe55eb7e audiofile-0.2.6-r1.ebuild 879
-MD5 f3e9e2264349cbb7e0dc89fb41e46d86 audiofile-0.2.6-r2.ebuild 935
-RMD160 a17aae7784248d70b02565778b278c3d07e470b4 audiofile-0.2.6-r2.ebuild 935
-SHA256 ec3a979f15bdfab55dab7fcbc0d861b7395e80ee17f12a4214afc4237cec6a29 audiofile-0.2.6-r2.ebuild 935
+MD5 0f2db06671cf3f9ec7a9913341092100 audiofile-0.2.6-r2.ebuild 945
+RMD160 de9ea0c2609b8ab1a84ed69f8e1812b264fdd8e7 audiofile-0.2.6-r2.ebuild 945
+SHA256 e63d530db595bba64073707a57c020f73f56c89f3872eee3f05657e779bde470 audiofile-0.2.6-r2.ebuild 945
 MD5 a9f80077df4cbb634b38f27805e377c8 files/audiofile-0.2.6-constantise.patch 11783
 RMD160 7477baadd07b8e0b9ffad8f1274062626eb3310a files/audiofile-0.2.6-constantise.patch 11783
 SHA256 1c71b33ae0756a56e94f42996e01991fa2b9147d9b21f7ae706df9546a3bc7a4 files/audiofile-0.2.6-constantise.patch 11783
@@ -28,10 +25,3 @@ SHA256 02193e1db0d0d9ee0c299dbb6f0225d92a2103c84f385017f0596c783452c402 files/sf
 MD5 b263ff7675308d90b75a170acae3f5ff metadata.xml 177
 RMD160 c4ff678488aa3bd8f3e5e4cf6e52a56caba3dad9 metadata.xml 177
 SHA256 dfb196addaf8aa212436c53c3d47cda0d10c2850c59fa2dcb7554dfa10190af2 metadata.xml 177
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEIm79AiZjviIA2XgRAoXgAKDxzNJG42czIWwixW6NaT3A8FJ87gCgm8aK
-d3km9P0/Fuf2gXOauu/8LEs=
-=KHDC
------END PGP SIGNATURE-----
