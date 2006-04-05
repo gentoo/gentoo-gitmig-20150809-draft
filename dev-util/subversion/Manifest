@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5db6f04c169fcde2786033037b7fad5c ChangeLog 35962
-RMD160 cd9ae89529fcdd25ac3897dc4f3684d4aca29600 ChangeLog 35962
-SHA256 23cdd6ab8fd143a3faa23e5a953e33c4b7248e6e4aaa3930e731fc3688a70398 ChangeLog 35962
+MD5 74768ddf7a588fc5d33c0da910cc5f2c ChangeLog 36149
+RMD160 d56733fe560c582803263858c3a0601d1bb4fc17 ChangeLog 36149
+SHA256 7f29c943b4ad5bd472b05c6ba58c05ddaa0cd237175607d05367f9bf82263512 ChangeLog 36149
 MD5 4fd39b311d09602c93a9ff0aceaf8596 files/70svn-gentoo.el 136
 RMD160 d130792953a0b14b78b9a54a982f0812428f0d5e files/70svn-gentoo.el 136
 SHA256 85dc5461709d3cd28be3fbdaf0f02778f98bc9c970b50bcb00ca7658e88f3274 files/70svn-gentoo.el 136
@@ -22,9 +19,15 @@ SHA256 1bc32a0a7716e4158624d978e12872aeff5a87e77df8b552c8886178117dc709 files/di
 MD5 5c719104432bb659631f0d4e9e4cea00 files/digest-subversion-1.3.0 256
 RMD160 e123cbab5da8ffb0991b4708f0d15c471a7b4598 files/digest-subversion-1.3.0 256
 SHA256 9863f7eb663f54a7514becf00404015b67459e2af0baeedbb47afac4fa540571 files/digest-subversion-1.3.0 256
+MD5 ebd5c63debfadbc4c1556fc61b7e6156 files/digest-subversion-1.3.1 256
+RMD160 f91649eba78a1dc2c83bc9e12bbee734e71b113c files/digest-subversion-1.3.1 256
+SHA256 18e41e86ec820c4c45ae1edc935e7a490b45efaf2fb0febef5df59516058a74b files/digest-subversion-1.3.1 256
 MD5 b8146e2661f55257aef6d41e79897b63 files/subversion-1.1.1-perl-vendor.patch 713
 RMD160 fdc54d38c44c3e1273b654b3d1a2f4a76f91aec3 files/subversion-1.1.1-perl-vendor.patch 713
 SHA256 d7c5994fa66d77ec956b2e1ca1020fadcf1200bdd2acce974033e9839bb8f7c3 files/subversion-1.1.1-perl-vendor.patch 713
+MD5 c357b009b610db967d0df27d61cd3704 files/subversion-1.3.1-neon-config.patch 1237
+RMD160 ccf7449e030afe6ef6388c12157831d5f2d59d6b files/subversion-1.3.1-neon-config.patch 1237
+SHA256 6e0f152a8254b7e7c0b498ce011f1798d475b2acf18d779b4dfe0758de1f3049 files/subversion-1.3.1-neon-config.patch 1237
 MD5 ce6f3698724b55cf49e647727207cca5 files/subversion-db4.patch 563
 RMD160 36a0ae5ed2bdf2d9511865e3b4d1aeb228c55d6d files/subversion-db4.patch 563
 SHA256 7d84d8ec5beb7b30e6ee6e27afdbaa2bed9e4b9e5df45c572c543547b4317f5b files/subversion-db4.patch 563
@@ -67,10 +70,6 @@ SHA256 2a23c97f9b38bb55863b6eb753cf1c677759ca28d022de431339034080856340 subversi
 MD5 9d6f84d540f50aced2ea571c46975970 subversion-1.3.0.ebuild 11515
 RMD160 2eca0cc08a29594f7dac281ffdecc9306a8b5f60 subversion-1.3.0.ebuild 11515
 SHA256 5540cd1b4516b44bd093e68f6f4884e103fd9c893f0c49cb59128eadab6041ab subversion-1.3.0.ebuild 11515
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELG65AiZjviIA2XgRAgBOAKCKysGEx4HrIe5CwMt7lfDK6ZECtQCfcfNE
-X0wI5u3WHdctSsEIa4bjYVU=
-=Wpyb
------END PGP SIGNATURE-----
+MD5 41dd890992e201040064a5f74917b9a3 subversion-1.3.1.ebuild 11518
+RMD160 3c84aaf4b4ef3ea2b6f5ca1fc6d6f247a0de1842 subversion-1.3.1.ebuild 11518
+SHA256 088b8875e74229676dcb4600470536005f48fce217e1f6321be0568581e3a764 subversion-1.3.1.ebuild 11518
