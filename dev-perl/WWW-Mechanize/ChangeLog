@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/WWW-Mechanize
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.23 2006/03/30 23:38:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.24 2006/04/05 10:44:32 mcummings Exp $
+
+  05 Apr 2006; <mcumming@gentoo.org> WWW-Mechanize-1.18.ebuild:
+  Marking ~amd64, bug 126745
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   WWW-Mechanize-1.0301.ebuild:
