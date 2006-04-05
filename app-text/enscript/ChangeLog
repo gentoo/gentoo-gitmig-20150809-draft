@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enscript
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.38 2006/04/03 21:56:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.39 2006/04/05 09:09:45 lu_zero Exp $
+
+  05 Apr 2006; Luca Barbato <lu_zero@gentoo.org> enscript-1.6.4-r2.ebuild:
+  Marked ppc
 
   03 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   enscript-1.6.4-r2.ebuild:
