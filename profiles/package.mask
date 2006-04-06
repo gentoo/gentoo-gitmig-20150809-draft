@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5182 2006/04/05 19:31:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5183 2006/04/06 11:38:53 eldad Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# <eldad@gentoo.org> (06 Apr 2005)
+# nagios-*2 having stability problems
+=net-analyzer/nagios-core-2*
+=net-analyzer/nagios-2*
 
 # Michael Sterrett <mr_bones_@gentoo.org> (03 Apr 2006)
 # masked pending unresolved security issues #128690
@@ -1248,11 +1253,6 @@ dev-lisp/cl-imho
 # Sven Wegener <swegener@gentoo.org> (30 Jan 2005)
 # Major changes, needs some more testing
 >=net-irc/ultimate-3.0.0_rc2
-
-# <dragonheart@gentoo.org> (25 Jan 2005)
-# nagios-*2 is still beta
->=net-analyzer/nagios-core-2.0b_p1
->=net-analyzer/nagios-2.0b_p1
 
 # <mkennedy@gentoo.org> (Jan 12 2005)
 # no longer needed for the time being; use app-emacs/slime instead
