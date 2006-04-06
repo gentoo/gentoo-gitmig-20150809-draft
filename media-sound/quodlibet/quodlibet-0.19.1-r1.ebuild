@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.19.1-r1.ebuild,v 1.2 2006/04/05 21:13:52 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.19.1-r1.ebuild,v 1.3 2006/04/06 01:46:32 chutzpah Exp $
 
 inherit eutils python
 
@@ -65,6 +65,13 @@ src_install() {
 
 pkg_postinst() {
 	python_mod_optimize /usr/share/${PN}
+
+	if ! use mad; then
+		einfo "MAD decoding library is disabled."
+		einfo "This means that playing mp3 will not be possible"
+		einfo ""
+		einfo "To be able to play mp3 files, please add mad useflag."
+	fi
 }
 
 pkg_postrm() {

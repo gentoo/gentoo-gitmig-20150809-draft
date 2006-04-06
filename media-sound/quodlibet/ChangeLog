@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.23 2006/04/05 21:13:52 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.24 2006/04/06 01:46:32 chutzpah Exp $
+
+  06 Apr 2006; Patrick McLean <chutzpah@gentoo.org>
+  quodlibet-0.19.1-r1.ebuild:
+  Add a warning (copied from xine-lib) to pkg_postinst that the user will not
+  be able to play mp3's when the "mad" USE flag is turned off.
 
   05 Apr 2006; Scott Stoddard <deltacow@gentoo.org>
   quodlibet-0.19.1-r1.ebuild:
