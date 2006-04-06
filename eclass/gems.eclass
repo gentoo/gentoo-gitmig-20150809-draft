@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.7 2005/09/23 00:57:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.8 2006/04/06 23:36:02 caleb Exp $
 #
 # Author: Rob Cakebread <pythonhead@gentoo.org>
 # Current Maintainer: Rob Cakebread <pythonhead@gentoo.org>
@@ -27,6 +27,7 @@ DEPEND=">=dev-ruby/rubygems-0.8.4-r1
 
 S=${WORKDIR}
 
+IUSE="doc"
 
 gems_location() {
 	local sitelibdir
@@ -48,8 +49,14 @@ gems_src_install() {
 		GEM_SRC=${DISTDIR}/${MY_P}
 	fi
 
+	if use doc; then
+		myconf="--rdoc"
+	else
+		myconf="--no-rdoc"
+	fi
+
 	dodir ${GEMSDIR}
-	gem install ${GEM_SRC} -v ${PV} -l -i ${D}/${GEMSDIR} || die "gem install failed"
+	gem install ${GEM_SRC} -v ${PV} ${myconf} -l -i ${D}/${GEMSDIR} || die "gem install failed"
 
 	if [ -d ${D}/${GEMSDIR}/bin ] ; then
 		exeinto /usr/bin
