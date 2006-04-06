@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.06-r1.ebuild,v 1.1 2006/03/14 23:49:32 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.06-r1.ebuild,v 1.2 2006/04/06 00:54:50 langthang Exp $
 
 inherit eutils multilib flag-o-matic autotools
 
@@ -20,6 +20,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch "${FILESDIR}/${P}-glibc24.patch"
+	epatch "${FILESDIR}/${P}-respectflags.patch"
 
 	eautoreconf
 
