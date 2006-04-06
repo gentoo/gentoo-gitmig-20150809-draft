@@ -1,34 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ffc53c61691425c930888c22cf615fae ChangeLog 3714
-RMD160 f4ee65d9b914b568d1a12e32ef1dd7c34dc6fb4b ChangeLog 3714
-SHA256 816d37bf719397a66a7fd7d7ca42cb4078bbd08296b5700b6e982929859b6dcf ChangeLog 3714
+MD5 74796567bb8373de61258d4f4351e049 ChangeLog 3833
+RMD160 a0351fa942948c2cdff5cb0b3efa565c2f28f7f0 ChangeLog 3833
+SHA256 5874cac1bf44e346664e2cf4f39231f924f6a5bfc59b38d1c4cd1b6194fbe7b9 ChangeLog 3833
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ksystraycmd-3.4.1 212
 RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-ksystraycmd-3.4.1 212
 SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-ksystraycmd-3.4.1 212
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-ksystraycmd-3.5.0 68
-RMD160 d3d51e71028cc50fa4ab0cf69fd7863d21fa7841 files/digest-ksystraycmd-3.5.0 68
-SHA256 9d6bcd0fd5636da20d1bf023e31013fd753533b9290b40b67f3f89a3275b59cb files/digest-ksystraycmd-3.5.0 68
 MD5 358c22d072b322d89bd54d98403c5eb6 files/digest-ksystraycmd-3.5.1 68
 RMD160 e8de4cf825e2775377e7f125b1429912ad1e826e files/digest-ksystraycmd-3.5.1 68
 SHA256 10f133d38f99c77b6ed8c236ac66bdcfb0451b0e213dc5ec626d6adff17382b5 files/digest-ksystraycmd-3.5.1 68
 MD5 972af20315fecc15cecb81ad9323bfa6 ksystraycmd-3.4.1.ebuild 446
 RMD160 48ed5f40e2332ea7af7c8cfd18600e9fefc1fc98 ksystraycmd-3.4.1.ebuild 446
 SHA256 1e550056727c6914d4d6730f227438005b8183dca0608b0420fe2ed71cccd6fb ksystraycmd-3.4.1.ebuild 446
-MD5 b0c7cbbf1741e16b3e29e878108d5135 ksystraycmd-3.5.0.ebuild 450
-RMD160 7d1f5070a714c9200a163814a946d9dbf4eb1025 ksystraycmd-3.5.0.ebuild 450
-SHA256 08b4241e236e9110000dbf5f6e533257d5f94957a0c4281ffd21fa8bf64a51ed ksystraycmd-3.5.0.ebuild 450
 MD5 51a192f32051c7bbf7abfcc6aab8bab4 ksystraycmd-3.5.1.ebuild 463
 RMD160 de99d32cc715bb6f1ebdf229596eeaacb28d8e5b ksystraycmd-3.5.1.ebuild 463
 SHA256 002a828d4181a8e9f97c43ab17318042daf530e5383aa683729aac20f3174e2a ksystraycmd-3.5.1.ebuild 463
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELrszAiZjviIA2XgRAr1YAKCrVk4G11CrsycxDjk9FCxkUCauOgCbBafw
-3+8JI/ytiHAYJb5m9Kaf9+0=
-=UaCS
------END PGP SIGNATURE-----

@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b34326b10cc8a322b753b583e92eae4a ChangeLog 6042
-RMD160 40f76573aa7544eaa184b02aeab2b56c2bbedd93 ChangeLog 6042
-SHA256 9cb3e2ab59995973ea8470432a6ba9a3f10b04c4b69f0932f6cceecc2abde985 ChangeLog 6042
+MD5 23791191f1c4d093b02634496951f899 ChangeLog 6187
+RMD160 5ec12b8256051e13b80b5c17968c200d8886d5f9 ChangeLog 6187
+SHA256 23efeab83435cad1dadc08f4e759c9522357346b5a82bc255ece809218b6e666 ChangeLog 6187
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-konqueror-3.4.1 212
 RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-konqueror-3.4.1 212
 SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-konqueror-3.4.1 212
@@ -16,12 +13,6 @@ SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/di
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-konqueror-3.4.3 68
 RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-konqueror-3.4.3 68
 SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-konqueror-3.4.3 68
-MD5 a2128e7c7d0adb0dd7af470def77f880 files/digest-konqueror-3.5.0-r1 142
-RMD160 5a25b9d5e731ecbb0238d4016eec7d640fd809ca files/digest-konqueror-3.5.0-r1 142
-SHA256 2aa9daeb1aa26a4ddbc37c210bcd1cde8dbaa15d45bfd5f58d45ac26f7d36aea files/digest-konqueror-3.5.0-r1 142
-MD5 358c22d072b322d89bd54d98403c5eb6 files/digest-konqueror-3.5.1 68
-RMD160 e8de4cf825e2775377e7f125b1429912ad1e826e files/digest-konqueror-3.5.1 68
-SHA256 10f133d38f99c77b6ed8c236ac66bdcfb0451b0e213dc5ec626d6adff17382b5 files/digest-konqueror-3.5.1 68
 MD5 612323f8728d639ddab8f055f88070ff files/digest-konqueror-3.5.2 250
 RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-konqueror-3.5.2 250
 SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-konqueror-3.5.2 250
@@ -40,22 +31,9 @@ SHA256 fe94b32011bae2dc6d366fa7e0d66a1cd2a8a37b02ddcf75ff3abe5e0dfa57d0 konquero
 MD5 7ddfc44bfabb7b27c5aa2c1065cb007f konqueror-3.4.3.ebuild 787
 RMD160 fb05abe7f7bdd624daa27f0e36fec1ded8d1312b konqueror-3.4.3.ebuild 787
 SHA256 0b199bd2f4c62034ab81341cf42e50288050ea7d898cfa21c1e75c7721bd7d72 konqueror-3.4.3.ebuild 787
-MD5 6f3941fdd44d123d7eb6fede0ac5d308 konqueror-3.5.0-r1.ebuild 1016
-RMD160 6017dff719ffb9130cde0ed9828ae8a1683be305 konqueror-3.5.0-r1.ebuild 1016
-SHA256 46156ac5b431cf75b4ffdda7cd39b11bba557c2a38d289cfb7a5a7f5f10c0e74 konqueror-3.5.0-r1.ebuild 1016
-MD5 cc474118147b9c12397f8a3e358e0f6d konqueror-3.5.1.ebuild 801
-RMD160 bed038be7bca4834a47ee5acf9a22b55b9828d73 konqueror-3.5.1.ebuild 801
-SHA256 7f0d9b44de54b8b4cfbe49626aed1bbd145bf55a6005ff629f92fcbc106d5150 konqueror-3.5.1.ebuild 801
 MD5 f7cd53683348979e1bec34e7969d11cd konqueror-3.5.2.ebuild 812
 RMD160 794ae93c48165780f828b00449fe023dc3288d18 konqueror-3.5.2.ebuild 812
 SHA256 75a19d2c97a67b37377ed6e13a648ce5cf8efa1d68295ef75045dcab686799df konqueror-3.5.2.ebuild 812
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELs6KAiZjviIA2XgRAmWaAJ4pnK+IbaCAN4DRDMs1Ypfr6WFMxwCeKrNl
-v5pNPFPaQbgb4heoRqt9ktU=
-=T05A
------END PGP SIGNATURE-----

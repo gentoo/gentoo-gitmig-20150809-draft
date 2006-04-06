@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5bddf6cf6d8e66bfbf5e2cd6bd62fd04 ChangeLog 5357
-RMD160 272d1e16619ddbf3bf7ce3e5f84157cf8fae1af3 ChangeLog 5357
-SHA256 f7717273c9a6a1a72e8de6abf9f9c7489ab664e7a45112c497491671d7edbd6a ChangeLog 5357
+MD5 d9a7dbf4a55419cd6288621384bc513e ChangeLog 5499
+RMD160 c1f91aa887b7b4a137ee12a956ef7ca1a7ba33d7 ChangeLog 5499
+SHA256 2ce8ebf84765141a915f70063a13739d3d4f559e0eba10f8229158e287ff1bb4 ChangeLog 5499
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ksplashml-3.4.1 212
 RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-ksplashml-3.4.1 212
 SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-ksplashml-3.4.1 212
@@ -13,12 +10,6 @@ SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/di
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-ksplashml-3.4.3 68
 RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-ksplashml-3.4.3 68
 SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-ksplashml-3.4.3 68
-MD5 a2128e7c7d0adb0dd7af470def77f880 files/digest-ksplashml-3.5.0 142
-RMD160 5a25b9d5e731ecbb0238d4016eec7d640fd809ca files/digest-ksplashml-3.5.0 142
-SHA256 2aa9daeb1aa26a4ddbc37c210bcd1cde8dbaa15d45bfd5f58d45ac26f7d36aea files/digest-ksplashml-3.5.0 142
-MD5 358c22d072b322d89bd54d98403c5eb6 files/digest-ksplashml-3.5.1 68
-RMD160 e8de4cf825e2775377e7f125b1429912ad1e826e files/digest-ksplashml-3.5.1 68
-SHA256 10f133d38f99c77b6ed8c236ac66bdcfb0451b0e213dc5ec626d6adff17382b5 files/digest-ksplashml-3.5.1 68
 MD5 612323f8728d639ddab8f055f88070ff files/digest-ksplashml-3.5.2 250
 RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-ksplashml-3.5.2 250
 SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-ksplashml-3.5.2 250
@@ -31,22 +22,9 @@ SHA256 f6fd300880208be394a2e78533c9fbc1975d385c5e9e4ffca6aa49072f75236b ksplashm
 MD5 299d4f92c09f9374cb492d49fcd5f200 ksplashml-3.4.3.ebuild 464
 RMD160 cdd0efa01d5e3d304018bf160d9cc975cdb09bd8 ksplashml-3.4.3.ebuild 464
 SHA256 a885933b12b54ead9e3c623a638da78d83f3621ddb96e050d15bfd8e87eb2419 ksplashml-3.4.3.ebuild 464
-MD5 6c220e0be92cc22c787dcc724901224f ksplashml-3.5.0.ebuild 907
-RMD160 829c7e43d14f85a203fbe805a50a0536a1dea5bf ksplashml-3.5.0.ebuild 907
-SHA256 5039042aa1357b1403096606692ec45de6934ef371b68a2b37679b9d2d211fdc ksplashml-3.5.0.ebuild 907
-MD5 c19b2966ffb038f71072b106e63138f3 ksplashml-3.5.1.ebuild 705
-RMD160 34f49acf662356569bd0bd93456c85877d7fbb1a ksplashml-3.5.1.ebuild 705
-SHA256 fcd97b8e09e3cd6ebbad88b39981434eca52e84cb9ff2f7eaaf1714d7c80fd94 ksplashml-3.5.1.ebuild 705
 MD5 a3a4d2c723ccd9cfd553881cef20b020 ksplashml-3.5.2.ebuild 716
 RMD160 e70e25b7b7c54df3dfd8925a0655f37e156164cb ksplashml-3.5.2.ebuild 716
 SHA256 d0e483a125f0872784ef34f87ccddf184e4ebdab7cfaffc13d856e34a0c13b53 ksplashml-3.5.2.ebuild 716
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELs6mAiZjviIA2XgRAm0FAJ0aPSJB47rl4AOBzfI3M0sHes7nUgCgufLw
-ACiqiqb2GWXUtySdOXGJrSM=
-=7RXK
------END PGP SIGNATURE-----
