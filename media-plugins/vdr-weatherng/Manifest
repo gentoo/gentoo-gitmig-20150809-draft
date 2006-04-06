@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 008a1afd460e2798253408a76a24f079 ChangeLog 1052
 RMD160 1240c511134dfc5b4f74060852c9e7dfcd3fe451 ChangeLog 1052
 SHA256 d3c772009dc791eaa4503320907f6c44a2209ead4397f3a187d42aac19778c0a ChangeLog 1052
@@ -34,16 +31,9 @@ SHA256 0c19eeb419d571e3e3b12da0f56d74105307339b5c222b830dd6b1ae5fce03c7 files/vd
 MD5 7dfb137c446412814a7c98d51eceee7e metadata.xml 484
 RMD160 d998e9058e709ce1054b1983cb12fcbf277b3496 metadata.xml 484
 SHA256 7c0d03ab5d1ceec5e64980f42a55eae20418aa6bb93b0804f4f5c390310b22e1 metadata.xml 484
-MD5 2a29186a98e3ac9a5da1ece8d0e9127f vdr-weatherng-0.0.5.ebuild 1584
-RMD160 1e6373f4a6312e974337134ad63150430c0ff564 vdr-weatherng-0.0.5.ebuild 1584
-SHA256 6ea478aedd2b0e4fd980e1415025bba88536b39b08a9440069aefd8a9022bd2e vdr-weatherng-0.0.5.ebuild 1584
-MD5 4b45f2b5c62bd50fd9b4452c2d1c5e24 vdr-weatherng-0.0.8_pre2.ebuild 1532
-RMD160 dfbc421db2bace3ae6e96ac7a334685d9171644b vdr-weatherng-0.0.8_pre2.ebuild 1532
-SHA256 f95bbab1a510ff47ebed3061c39381428d799e3a93d236e40251590e31ba3e6f vdr-weatherng-0.0.8_pre2.ebuild 1532
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEJvVyI1lqEGTUzyQRApOPAJ4o50xY9XvICjs0K8rL4bU2Oxl+KgCcCBVm
-3BfDxB6ryJhgDWf9d0gNhec=
-=8GuA
------END PGP SIGNATURE-----
+MD5 93f7e7d4ea4eb88794a20471d33c05a6 vdr-weatherng-0.0.5.ebuild 1582
+RMD160 c1c97ce8de93bf6fdf0fd73cf7991e023436198b vdr-weatherng-0.0.5.ebuild 1582
+SHA256 ec770011ade87e4788522d41bb72864571266112d8b2d7d70961388ab5545b18 vdr-weatherng-0.0.5.ebuild 1582
+MD5 c4eacafa7c0dd855b2003e8127238954 vdr-weatherng-0.0.8_pre2.ebuild 1530
+RMD160 810612d7559be786dd68e00a2c7a5e21cb832a00 vdr-weatherng-0.0.8_pre2.ebuild 1530
+SHA256 27adefd2cea0d3f6d8c2a53303388ba35635328cce94d660a2b2200c02fcff5b vdr-weatherng-0.0.8_pre2.ebuild 1530
