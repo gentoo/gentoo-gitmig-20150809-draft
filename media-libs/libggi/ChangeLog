@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.35 2006/03/25 04:02:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.36 2006/04/06 03:13:16 tsunam Exp $
+
+  06 Apr 2006; Joshua Jackson <tsunam@gentoo.org> libggi-2.1.1.ebuild:
+  Stable on x86; bug #97944
 
   25 Mar 2006; Joseph Jezak <josejx@gentoo.org> libggi-2.1.1.ebuild:
   Marked ppc stable for bug #97944.
