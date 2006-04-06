@@ -1,0 +1,88 @@
+--- ctcs/runin/src/chartst.c
++++ ctcs/runin/src/chartst.c
+@@ -9,6 +9,7 @@
+ #include <unistd.h>
+ #include <stdlib.h>
+ #include <signal.h>
++#include <string.h>
+ 
+ void handler(int i) {
+ 	exit (0);
+--- ctcs/runin/src/memtst.src/memtst.c
++++ ctcs/runin/src/memtst.src/memtst.c
+@@ -4,7 +4,8 @@
+ #include <sys/types.h>
+ #include <unistd.h>
+ #include <math.h>
+-#include <malloc.h>
++#include <stdint.h>
++#include <string.h>
+ #include "memtst.h"
+ #include "memory.h"
+ 
+@@ -347,7 +347,7 @@
+ 
+ 	/* Now compute the offset (in chars) of the error from the page
+ 	   boundary. */
+-	fail_page_offset = ((int) (&nbuf[offset])) % PAGE_SIZE;
++	fail_page_offset = ((uintptr_t) (&nbuf[offset])) % PAGE_SIZE;
+ 
+ 	kmem_file = open("/proc/kcore",0);
+ 	if (kmem_file < 0) {
+--- ctcs/runin/src/memtst.src/sizeofint.c
++++ ctcs/runin/src/memtst.src/sizeofint.c
+@@ -1,6 +1,7 @@
+ /* Jason continues to not use autoconf despite the fact he should. */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ main ()
+ {
+--- ctcs/runin/src/Makefile
++++ ctcs/runin/src/Makefile
+@@ -43,16 +43,16 @@
+ 	make -C memtst.src
+ 
+ flushb: flushb.o ;
+-	$(CC) $(CFLAGS) -o flushb flushb.o -lm
++	$(CC) $(CFLAGS) $(LDFLAGS) -o flushb flushb.o -lm
+ 
+ random: random.o ;
+-	$(CC) $(CFLAGS) -o random random.o -lm
++	$(CC) $(CFLAGS) $(LDFLAGS) -o random random.o -lm
+ 
+ prandom: prandom.o ;
+-	$(CC) $(CFLAGS) -o prandom prandom.o -lm
++	$(CC) $(CFLAGS) $(LDFLAGS) -o prandom prandom.o -lm
+ 
+ chartst: chartst.o ;
+-	$(CC) $(CFLAGS) -o chartst chartst.o -lm
++	$(CC) $(CFLAGS) $(LDFLAGS) -o chartst chartst.o -lm
+ 
+ #kconfig: kconfig.o ;
+ #	$(CC) $(CFLAGS) -o kconfig kconfig.o -lm
+--- ctcs/runin/src/memtst.src/Makefile
++++ ctcs/runin/src/memtst.src/Makefile
+@@ -8,18 +8,18 @@
+ memtst_main: memtst;
+ 
+ sizeofint: ;
+-	$(CC) sizeofint.c -o sizeofint
++	$(CC) $(CFLAGS) $(LDFLAGS) sizeofint.c -o sizeofint
+ 
+ sizeofint.h: sizeofint ;
+ 	sh -c "./sizeofint > sizeofint.h"
+ 
+ maxalloc: sizeofint.h ;
+-	$(CC) -Wall maxalloc.c -o maxalloc
++	$(CC) -Wall $(CFLAGS) $(LDFLAGS) maxalloc.c -o maxalloc
+ 
+ memtst: sizeofint.h ;
+ 	$(CC) $(MEMTST_CFLAGS) -c memory.c -o memory.o
+ 	$(CC) $(MEMTST_CFLAGS) -c memtst.c -o memtst.o
+-	$(CC) $(MEMTST_CFLAGS)  memtst_main.c memory.o memtst.o -o memtst
++	$(CC) $(MEMTST_CFLAGS) $(LDFLAGS) memtst_main.c memory.o memtst.o -o memtst
+ 
+ clean:
+ 	rm -f *.o memtst maxalloc sizeofint.h sizeofint
