@@ -1,6 +1,6 @@
-# ChangeLog for games-board/ksudoku
+# ChangeLog for games-puzzle/ksudoku
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ChangeLog,v 1.1 2006/04/03 21:34:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ChangeLog,v 1.2 2006/04/06 20:00:39 swegener Exp $
 
   03 Apr 2006; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
   +ksudoku-0.3.ebuild:
