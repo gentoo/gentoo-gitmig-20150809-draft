@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20.ebuild,v 1.2 2006/04/01 14:39:33 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20.ebuild,v 1.3 2006/04/06 20:26:42 swegener Exp $
 
 inherit multilib eutils
 
@@ -34,19 +34,9 @@ src_unpack() {
 src_compile() {
 	local modules="pipe geo" myconf=""
 
-	if use mysql ; then
-		modules="${modules} gmysql"
-		myconf="${myconf} --with-mysql-lib=/usr/$(get_libdir)"
-	fi
-	if use postgres ; then
-		modules="${modules} gpgsql"
-		myconf="${myconf} --with-pgsql-lib=/usr/$(get_libdir)"
-	fi
-	if use sqlite ; then
-		modules="${modules} gsqlite"
-		myconf="${myconf} --with-sqlite-lib=/usr/$(get_libdir)"
-	fi
-
+	use mysql && modules="${modules} gmysql"
+	use postgres && modules="${modules} gpgsql"
+	use sqlite && modules="${modules} gsqlite"
 	use ldap && modules="${modules} ldap"
 	use tdb && modules="${modules} xdb"
 	use debug && myconf="${myconf} --enable-verbose-logging"
@@ -56,6 +46,9 @@ src_compile() {
 		--with-modules= \
 		--with-dynmodules="${modules}" \
 		--with-pgsql-includes=/usr/include \
+		--with-pgsql-lib=/usr/$(get_libdir) \
+		--with-mysql-lib=/usr/$(get_libdir) \
+		--with-sqlite-lib=/usr/$(get_libdir) \
 		$(use_enable static static-binaries) \
 		$(use_enable recursor) \
 		${myconf} \
