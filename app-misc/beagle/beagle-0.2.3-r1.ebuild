@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.3-r1.ebuild,v 1.1 2006/03/30 18:52:59 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.3-r1.ebuild,v 1.2 2006/04/06 15:39:29 metalgod Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -44,7 +44,7 @@ RDEPEND="
 	evo?	(	>=dev-dotnet/evolution-sharp-0.10.2
 				>=dev-dotnet/gconf-sharp-2.3 )
 
-	ole?	(	app-text/wv
+	ole?	(	>=app-text/wv-1.2.0
 				>=dev-dotnet/gsf-sharp-0.6
 				>=app-office/gnumeric-1.4.3-r3 )
 "

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.19 2006/03/30 18:52:59 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.20 2006/04/06 15:39:29 metalgod Exp $
+
+  06 Apr 2006; Luis Medinas <metalgod@gentoo.org> beagle-0.2.3-r1.ebuild:
+  Update wv dependency. Thanks to B. Keroack <mutualaid@gmail.com> cloes bug
+  #128589.
 
 *beagle-0.2.3-r1 (30 Mar 2006)
 
