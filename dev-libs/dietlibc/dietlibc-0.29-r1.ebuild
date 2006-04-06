@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.29-r1.ebuild,v 1.1 2006/04/06 18:45:26 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.29-r1.ebuild,v 1.2 2006/04/06 18:54:00 phreak Exp $
 
 inherit eutils flag-o-matic
 
@@ -50,8 +50,8 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR="${D}" || die "make install failed"
-	dobin "${D}"/usr/diet/bin/* || die "dobin"
-	doman "${D}"/usr/diet/man/*/* || die "doman"
+	dobin "${D}"/usr/diet/bin/* || die "dobin failed"
+	doman "${D}"/usr/diet/man/*/* || die "doman failed"
 	rm -r "${D}"/usr/diet/{man,bin}
 	dodoc AUTHOR BUGS CAVEAT CHANGES README THANKS TODO PORTING
 
