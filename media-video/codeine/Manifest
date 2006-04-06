@@ -1,31 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0b6198ab75f5d9823562887d8701cb80 ChangeLog 2081
-RMD160 05c9f873af441a1ecf835c3f8022c4f4d0dbcc88 ChangeLog 2081
-SHA256 7295233a68e960d5a626a8ddcb5eede75da9d0c2a9be628cfc7f25ff6d8f2312 ChangeLog 2081
+MD5 92b569d3d2b8ff022508b189f96b1f4d ChangeLog 2233
+RMD160 3f7d932b67c176b1f85409964f3c0e26bed6b5ce ChangeLog 2233
+SHA256 847ef29e1507f6896c9d24f7c0364ae01ebb70765cbd8c24b3a813766573fc14 ChangeLog 2233
 MD5 04d5ab108c1904bc700282af4adf0910 codeine-1.0.ebuild 921
 RMD160 1d4d5e84fdc442d2c67750277ac043624abb228d codeine-1.0.ebuild 921
 SHA256 3481eb7afbef751b34b909016f2d7e11b3bebf39a9344852cb67d0dda17868d7 codeine-1.0.ebuild 921
-MD5 fb6823bcf11eeb188f9c5b0876e113ce codeine-1.0_beta1.ebuild 858
-RMD160 341bbc52ea1e9f86b75f6a5d9b86155727ff918a codeine-1.0_beta1.ebuild 858
-SHA256 ab99e5cd70fac3de13746db7db84cdc40ff119cbf2a0785dd2e52b63e578332f codeine-1.0_beta1.ebuild 858
-MD5 9d838d8987e1f759ec0f4eb891d73b52 files/codeine-xine-lib-1.0.patch 455
-RMD160 6d6584eafb436109a72a887aa0347838fca94d1b files/codeine-xine-lib-1.0.patch 455
-SHA256 b3fc3437f7669883e94d7498f3b7c551d47fb825e7b99ff70974f2b2f00a1d95 files/codeine-xine-lib-1.0.patch 455
 MD5 c1765e210c924b353cbf301ceb8f875a files/digest-codeine-1.0 238
 RMD160 3c5dac1009b58e43e78dc37e99fb3343d592e18a files/digest-codeine-1.0 238
 SHA256 50d316a0be68e04989cdab395bc45360f9d51f674847b101253adebb3a0668c5 files/digest-codeine-1.0 238
-MD5 4b415d0e0a2bd3e13d00a5890479afae files/digest-codeine-1.0_beta1 69
-RMD160 7d7fc939be0e1175b4175e3d32b360278a95862e files/digest-codeine-1.0_beta1 69
-SHA256 d0289515419991471969934995e17f49234be9ccb6ce812ac4dadcce684760f2 files/digest-codeine-1.0_beta1 69
 MD5 f252d0d8aaea067fe6be5e09527ab18e metadata.xml 175
 RMD160 4e4c9dfa9b5102163a4f7b231f95672bd2266c0d metadata.xml 175
 SHA256 ee81a2309bd9eae88d896b77f0d87adbb941cf18f82eea08c025eb583ac6043d metadata.xml 175
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEFmNWCRZPokWLroQRAgLXAJoDeWo/jPaWnUwdpapYxjRRkFmxVwCfQtPz
-l4ZrDqmNQ3tS9o8l+kbX6+4=
-=7XNL
+iD8DBQFENIL7AiZjviIA2XgRAvLpAJ0RDeCC1e8YVtOEp/5ucvtnWf4aZQCg5tDK
+fSc1Icktkeac9vcosYGDrOU=
+=aDH9
 -----END PGP SIGNATURE-----
