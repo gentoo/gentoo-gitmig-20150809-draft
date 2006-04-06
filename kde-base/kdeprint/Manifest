@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 291ae8839b69afa161cb4dd5fba2c334 ChangeLog 5613
-RMD160 05a794b7c6121e788e0cee624f5320cedb165580 ChangeLog 5613
-SHA256 e0da760c637213df9dee970e8c212e02a465464364d868f41294b8d941216cb6 ChangeLog 5613
+MD5 8010e180ca1d6c1a77d48f4d73c63163 ChangeLog 5753
+RMD160 55d7c5938834906b97129201dd6b21fea7b8e2ad ChangeLog 5753
+SHA256 440a56fb104e56ef499242f99d9c7e179a87ca0d0b3e1d03f3b079939365321b ChangeLog 5753
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdeprint-3.4.1 212
 RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-kdeprint-3.4.1 212
 SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-kdeprint-3.4.1 212
@@ -13,12 +10,6 @@ SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/di
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdeprint-3.4.3 68
 RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-kdeprint-3.4.3 68
 SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-kdeprint-3.4.3 68
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kdeprint-3.5.0 68
-RMD160 d3d51e71028cc50fa4ab0cf69fd7863d21fa7841 files/digest-kdeprint-3.5.0 68
-SHA256 9d6bcd0fd5636da20d1bf023e31013fd753533b9290b40b67f3f89a3275b59cb files/digest-kdeprint-3.5.0 68
-MD5 358c22d072b322d89bd54d98403c5eb6 files/digest-kdeprint-3.5.1 68
-RMD160 e8de4cf825e2775377e7f125b1429912ad1e826e files/digest-kdeprint-3.5.1 68
-SHA256 10f133d38f99c77b6ed8c236ac66bdcfb0451b0e213dc5ec626d6adff17382b5 files/digest-kdeprint-3.5.1 68
 MD5 612323f8728d639ddab8f055f88070ff files/digest-kdeprint-3.5.2 250
 RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-kdeprint-3.5.2 250
 SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-kdeprint-3.5.2 250
@@ -31,22 +22,9 @@ SHA256 f887c71b3cd0dd0cb9bc1e74a6730738614c9cb618db78fb739bc9dd0a748211 kdeprint
 MD5 c7aa5ab3cc4252de670c2e49c9336dbe kdeprint-3.4.3.ebuild 524
 RMD160 a33c34081d059793ace74e78aa4c9e5f5355514b kdeprint-3.4.3.ebuild 524
 SHA256 649b3127ad4a4c22c6fe33c5287c06f87406cde3a3ab7c496899d4ebcc74c341 kdeprint-3.4.3.ebuild 524
-MD5 b0f88bbb63b768c320ad794cd6b2aca2 kdeprint-3.5.0.ebuild 531
-RMD160 525aa2f9a3ba67f176dd88c8857b28933dae9463 kdeprint-3.5.0.ebuild 531
-SHA256 78f046917b86c019273a1bed7c65aed333c40a6dac78fb3807e00ff4b9a890b2 kdeprint-3.5.0.ebuild 531
-MD5 95c65750666b41b9ad4fd84241edfe96 kdeprint-3.5.1.ebuild 531
-RMD160 8df8cc11313786000f90966b6caff56708d2367c kdeprint-3.5.1.ebuild 531
-SHA256 02f3118c4c0a8ddaa7d932ed48a9a8ed54cd2d210befbf1478104dda4022f169 kdeprint-3.5.1.ebuild 531
 MD5 c7e905ebaebd534299741fb658603fce kdeprint-3.5.2.ebuild 741
 RMD160 a37a2457f73d4fe14a2a6ca45ac3544a85a7b504 kdeprint-3.5.2.ebuild 741
 SHA256 e6da31334e53c2dab1c5dbae5093ba15c3bdb2cf5179d0a5554b17cb7bdf973d kdeprint-3.5.2.ebuild 741
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELtXhAiZjviIA2XgRAkFlAJ9b+fill5azmXXddrmWSi07kFuQSACff7K9
-eo8UEt3CACaJTg9DOrKIbYw=
-=lq3Y
------END PGP SIGNATURE-----

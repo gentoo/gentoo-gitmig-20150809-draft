@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c87f8545a4395d8af6513305e133aee4 ChangeLog 5739
-RMD160 41b216b91f694cb62626030e9112519498faffa6 ChangeLog 5739
-SHA256 17bb383b6da781b49c49a9df5c77003b3b2c6ae9687953d23828b419db9245f6 ChangeLog 5739
+MD5 deadc1d01fa6015d5141a972fb40b604 ChangeLog 5879
+RMD160 afe712aa5a1cfc0b5db87a65732fdaee4c838d51 ChangeLog 5879
+SHA256 ffac4b068617c5df31adbcdf73b7aa23e047d71feaace798ccfcf95ef34a984e ChangeLog 5879
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdesktop-3.4.1 212
 RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-kdesktop-3.4.1 212
 SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-kdesktop-3.4.1 212
@@ -13,12 +10,6 @@ SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/di
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kdesktop-3.4.3 68
 RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-kdesktop-3.4.3 68
 SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-kdesktop-3.4.3 68
-MD5 a2128e7c7d0adb0dd7af470def77f880 files/digest-kdesktop-3.5.0 142
-RMD160 5a25b9d5e731ecbb0238d4016eec7d640fd809ca files/digest-kdesktop-3.5.0 142
-SHA256 2aa9daeb1aa26a4ddbc37c210bcd1cde8dbaa15d45bfd5f58d45ac26f7d36aea files/digest-kdesktop-3.5.0 142
-MD5 358c22d072b322d89bd54d98403c5eb6 files/digest-kdesktop-3.5.1 68
-RMD160 e8de4cf825e2775377e7f125b1429912ad1e826e files/digest-kdesktop-3.5.1 68
-SHA256 10f133d38f99c77b6ed8c236ac66bdcfb0451b0e213dc5ec626d6adff17382b5 files/digest-kdesktop-3.5.1 68
 MD5 612323f8728d639ddab8f055f88070ff files/digest-kdesktop-3.5.2 250
 RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-kdesktop-3.5.2 250
 SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-kdesktop-3.5.2 250
@@ -31,22 +22,9 @@ SHA256 ef27018e80107653a2faee401f9d6027bab014110baebde63acb0347aacdddec kdesktop
 MD5 af8267bae28267e4f0d0983f6b97f503 kdesktop-3.4.3.ebuild 1371
 RMD160 51d12c8909046924907cc0f4eba193e8dae98e70 kdesktop-3.4.3.ebuild 1371
 SHA256 91dace145981f8506a3f6b2f881b1e08f9cd8479d05ca49783b91c204e1c0ef8 kdesktop-3.4.3.ebuild 1371
-MD5 01cd0c9091ef33e1838c07f494c89c61 kdesktop-3.5.0.ebuild 1708
-RMD160 ba8736100b8869f9522d58cf0f5cee98b55ee6bb kdesktop-3.5.0.ebuild 1708
-SHA256 8bdf15e40296b7f89b841435441fd78d3d95727d8ccdb792cf50c19a2a05127d kdesktop-3.5.0.ebuild 1708
-MD5 a4ef4c1d963715ebb4977de6770e2c74 kdesktop-3.5.1.ebuild 1506
-RMD160 174ef33c868e70571bf933b992fa8ce08ee0362e kdesktop-3.5.1.ebuild 1506
-SHA256 a79178fb0223b807cae9dac8953ef3d629a070633302bb36dba87da6275c9cf0 kdesktop-3.5.1.ebuild 1506
 MD5 077e0a88f9ca8fd647b0d7c25b5e17c1 kdesktop-3.5.2.ebuild 1517
 RMD160 1da0245f7246231f0ad2417093011b4ac5b9812c kdesktop-3.5.2.ebuild 1517
 SHA256 1347469eb52e7d314d2b0491a8e31b4962757476f98825f63c31897c15a4e7d9 kdesktop-3.5.2.ebuild 1517
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELs3GAiZjviIA2XgRAnloAJ0ahTD1P4MxRy7ej6tFIst+xTaU/wCgqNKP
-ndB3WAfX1ZsE/kn+BXciAHI=
-=dX2d
------END PGP SIGNATURE-----

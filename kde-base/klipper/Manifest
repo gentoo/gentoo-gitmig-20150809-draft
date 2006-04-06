@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b356ac71ee76c1e5bb74db949548a673 ChangeLog 4923
-RMD160 c2758723989b84f1510f5465e70603ed7209e9a8 ChangeLog 4923
-SHA256 d983f427465fbb0925785fab07f495c106b05f24a1f284d5dd20d3a3bce5c2ba ChangeLog 4923
+MD5 6da77ab99eb158b22ae56a3192544a31 ChangeLog 5061
+RMD160 eba0aecf40bf1246f7ecbf026bae2a52d0392379 ChangeLog 5061
+SHA256 0b8197796ceef6eb912f146f7e4153f766af4cfd61f981350780e6c56294b6be ChangeLog 5061
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-klipper-3.4.1 212
 RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-klipper-3.4.1 212
 SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-klipper-3.4.1 212
@@ -13,12 +10,6 @@ SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/di
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-klipper-3.4.3 68
 RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-klipper-3.4.3 68
 SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-klipper-3.4.3 68
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-klipper-3.5.0 68
-RMD160 d3d51e71028cc50fa4ab0cf69fd7863d21fa7841 files/digest-klipper-3.5.0 68
-SHA256 9d6bcd0fd5636da20d1bf023e31013fd753533b9290b40b67f3f89a3275b59cb files/digest-klipper-3.5.0 68
-MD5 358c22d072b322d89bd54d98403c5eb6 files/digest-klipper-3.5.1 68
-RMD160 e8de4cf825e2775377e7f125b1429912ad1e826e files/digest-klipper-3.5.1 68
-SHA256 10f133d38f99c77b6ed8c236ac66bdcfb0451b0e213dc5ec626d6adff17382b5 files/digest-klipper-3.5.1 68
 MD5 612323f8728d639ddab8f055f88070ff files/digest-klipper-3.5.2 250
 RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-klipper-3.5.2 250
 SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-klipper-3.5.2 250
@@ -31,22 +22,9 @@ SHA256 4fc001fce688cd417484bfd9d59bf8d5005b5b8b164414dc856a35fa10cdedb4 klipper-
 MD5 0b636ef9f9ac07604f91389620864d54 klipper-3.4.3.ebuild 426
 RMD160 1fea6e49a6198d669257751c5ff976730ba7e04d klipper-3.4.3.ebuild 426
 SHA256 15cda272c724c2d6acd302f02a7bdc2cd2a681c7f47483336b67b807f988612d klipper-3.4.3.ebuild 426
-MD5 c4658716f815d345d17c0a18b4ce4744 klipper-3.5.0.ebuild 433
-RMD160 4944fcbb11959ced9948296f48564d9ef825f7f0 klipper-3.5.0.ebuild 433
-SHA256 e30840d35de482b09bce8b9e6f62e64c4d40e84706fca4687e2fa2d98cf9ca3f klipper-3.5.0.ebuild 433
-MD5 b833fe3d28c0dd24a57f454d3daca9ae klipper-3.5.1.ebuild 433
-RMD160 1595ff5054c05eb2edfd3ae71cac7de0c0294501 klipper-3.5.1.ebuild 433
-SHA256 0aa49a9f78228a13b493153b694ac095146b2f4726aaa8ede51c058eeb225291 klipper-3.5.1.ebuild 433
 MD5 c8ea151b1aee17c016849cc0177ad6c0 klipper-3.5.2.ebuild 444
 RMD160 713dd4d4642213d6bf733a1815bd7b63b04e8b71 klipper-3.5.2.ebuild 444
 SHA256 d2e9042931770b67a9ecc75cb8eec2a7cf14d2e8c4e981effc82069a61f08cda klipper-3.5.2.ebuild 444
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELrs+AiZjviIA2XgRAhjJAKDuuaXXlex2LgDjvEUs7QLa1EMMzgCg4Tv9
-MFZOq6TJ8HiOp1R5OIoZu+4=
-=HTsu
------END PGP SIGNATURE-----

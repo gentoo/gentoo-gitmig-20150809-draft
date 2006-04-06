@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2579b648a5507391c63498c8bfe4a18a ChangeLog 5543
-RMD160 f30a5d56f8ce0f54515110757c19bee4b32b64f9 ChangeLog 5543
-SHA256 258f92ca1b3a93ad5a7d1faa6e5688d692155426009fbbfc634c3ece610e5c37 ChangeLog 5543
+MD5 f40d777453e1b47d68bb84cf2277fa19 ChangeLog 5693
+RMD160 519f59c6e98c44c7fada0f0948a5b92cc14f385a ChangeLog 5693
+SHA256 be3681bc92a344e17ff05643e8369236df52fde9451585dacf435daaed39beb1 ChangeLog 5693
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.4.1 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeutils-meta-3.4.1 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeutils-meta-3.4.1 0
@@ -13,12 +10,6 @@ SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/di
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.4.3 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeutils-meta-3.4.3 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeutils-meta-3.4.3 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.5.0 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeutils-meta-3.5.0 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeutils-meta-3.5.0 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.5.1 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeutils-meta-3.5.1 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeutils-meta-3.5.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.5.2 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeutils-meta-3.5.2 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeutils-meta-3.5.2 0
@@ -31,22 +22,9 @@ SHA256 ab1d8c6b1a735d5a7e2d3926e551443eee4915247c17f58127d63295c7984c05 kdeutils
 MD5 792e1344b0c72dec68219812f947c578 kdeutils-meta-3.4.3.ebuild 1234
 RMD160 db712d5ecadf928bc4d5a94561c4019323cd183a kdeutils-meta-3.4.3.ebuild 1234
 SHA256 b3331f4ba551147f34487e64136505817e6ae2cdedbfca9f2029e8da7b199c45 kdeutils-meta-3.4.3.ebuild 1234
-MD5 eb3bddb5db0cf42e44f6cb8d8e4a8b0c kdeutils-meta-3.5.0.ebuild 1283
-RMD160 a276af143e99c1fb873931f372b17d692e4c11cf kdeutils-meta-3.5.0.ebuild 1283
-SHA256 074751b70d7067e71e942a028ac15e9a00e2a950012158fe3e6d572e967234b8 kdeutils-meta-3.5.0.ebuild 1283
-MD5 ee9d63f3f3c34ac09397c9ad5d2c0c95 kdeutils-meta-3.5.1.ebuild 1283
-RMD160 29e06fdf719f2939db5da98b73fd5dc7ca585689 kdeutils-meta-3.5.1.ebuild 1283
-SHA256 7675db0ead63b420192d60efc913c842871077a399b59a0d2c78ee55ea87df21 kdeutils-meta-3.5.1.ebuild 1283
 MD5 5e8ada688bb5167e2aebb9bb6fd86c74 kdeutils-meta-3.5.2.ebuild 1283
 RMD160 faaf731ba00b95dd9a6ecf4d8d03d66cbd21925e kdeutils-meta-3.5.2.ebuild 1283
 SHA256 9a967e67bcc8f9bef5a7d1aa9a4b1b615943fc800dcc4ad6e54a437f3a5ab310 kdeutils-meta-3.5.2.ebuild 1283
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENEkUAiZjviIA2XgRAobOAJ9UBYCUsE68BQoydwRJfJA6rSfAswCfT/d1
-uAju8mxfODK6ww50O1HXl2I=
-=J/E5
------END PGP SIGNATURE-----

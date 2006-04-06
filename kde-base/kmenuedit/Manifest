@@ -1,40 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2e11427bac6c0b371fddf04e9b292ab7 ChangeLog 4337
-RMD160 f44dcb681b55028e9ce972f27c8217aa4efae98e ChangeLog 4337
-SHA256 0776f7a1bbaee95c4552f5e4aa7d6e29a1c82b189268c231453e8e7ec1b57006 ChangeLog 4337
+MD5 28074cdd56ab46d22a4b45f78588dd46 ChangeLog 4479
+RMD160 5a9e79b4399a5b9ad74b249912000dcb7a79bd8d ChangeLog 4479
+SHA256 4a7556f1c13f9c03784079d44dca557e20bedc4576e864e09a3f750c3a2e0d87 ChangeLog 4479
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kmenuedit-3.4.1 212
 RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-kmenuedit-3.4.1 212
 SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-kmenuedit-3.4.1 212
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-kmenuedit-3.5.0 68
-RMD160 d3d51e71028cc50fa4ab0cf69fd7863d21fa7841 files/digest-kmenuedit-3.5.0 68
-SHA256 9d6bcd0fd5636da20d1bf023e31013fd753533b9290b40b67f3f89a3275b59cb files/digest-kmenuedit-3.5.0 68
-MD5 358c22d072b322d89bd54d98403c5eb6 files/digest-kmenuedit-3.5.1 68
-RMD160 e8de4cf825e2775377e7f125b1429912ad1e826e files/digest-kmenuedit-3.5.1 68
-SHA256 10f133d38f99c77b6ed8c236ac66bdcfb0451b0e213dc5ec626d6adff17382b5 files/digest-kmenuedit-3.5.1 68
 MD5 612323f8728d639ddab8f055f88070ff files/digest-kmenuedit-3.5.2 250
 RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-kmenuedit-3.5.2 250
 SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-kmenuedit-3.5.2 250
 MD5 9383d3a1453e8024fc401d11279b9fc8 kmenuedit-3.4.1.ebuild 400
 RMD160 6750d64e25b11d54f658c006866c5cd377abf24d kmenuedit-3.4.1.ebuild 400
 SHA256 62171a9e49287463da247014debc5344b286bd7621b8b50d24396b6930b1fcdb kmenuedit-3.4.1.ebuild 400
-MD5 1c019ce0d64e1905312178a6dd463cd0 kmenuedit-3.5.0.ebuild 404
-RMD160 c1ca20ae67bf5e99ad8ceb25bae145401ef13d1b kmenuedit-3.5.0.ebuild 404
-SHA256 609e6226afb66e30342fb47a7669be510bb4150afc9bff7e577e0d2969e697cd kmenuedit-3.5.0.ebuild 404
-MD5 6919124f6b4630d1ff60868a049d8187 kmenuedit-3.5.1.ebuild 404
-RMD160 3910fa99a9702cf88898884130ca10a1431ba1fe kmenuedit-3.5.1.ebuild 404
-SHA256 c03d7c28be9e46336b788c6cd64f67b55acb0784d540dcc124abfd66bfe980d7 kmenuedit-3.5.1.ebuild 404
 MD5 b7d6d5cf36cbe28177163a676e23642c kmenuedit-3.5.2.ebuild 415
 RMD160 2892003ee462b1d279456bab5f2914c46a86c50a kmenuedit-3.5.2.ebuild 415
 SHA256 ec9a892894811f0b8015aed3c9356a4079d9aeb9f606799305a20e536d290bc0 kmenuedit-3.5.2.ebuild 415
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELt6QAiZjviIA2XgRAuRNAJwOjjhXGcug/YUooeWJ+bpkj2ReoQCfRT2g
-s0occEZ0rcg0cvrRISM9z8Q=
-=JIXf
------END PGP SIGNATURE-----

@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 88f07219141cd1c15b162a8bb584d210 ChangeLog 5301
-RMD160 f3ee6c4b5d90fb4f49cfae3a8c9cda9e733a6bde ChangeLog 5301
-SHA256 7042811dfe3b274a2878d457b96a4d05b6e16def81ccb042b866b100633983e2 ChangeLog 5301
+MD5 af81584560b40483f002ce0b208910bd ChangeLog 5447
+RMD160 9ec35db9a286dc6590ebe9241fddb51f79c14972 ChangeLog 5447
+SHA256 b55345262ed4980039678e909f25146c05ce7febff6324c1575d6cb2a3808107 ChangeLog 5447
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-khelpcenter-3.4.1 212
 RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-khelpcenter-3.4.1 212
 SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-khelpcenter-3.4.1 212
@@ -16,12 +13,6 @@ SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/di
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-khelpcenter-3.4.3 68
 RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-khelpcenter-3.4.3 68
 SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-khelpcenter-3.4.3 68
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-khelpcenter-3.5.0 68
-RMD160 d3d51e71028cc50fa4ab0cf69fd7863d21fa7841 files/digest-khelpcenter-3.5.0 68
-SHA256 9d6bcd0fd5636da20d1bf023e31013fd753533b9290b40b67f3f89a3275b59cb files/digest-khelpcenter-3.5.0 68
-MD5 358c22d072b322d89bd54d98403c5eb6 files/digest-khelpcenter-3.5.1 68
-RMD160 e8de4cf825e2775377e7f125b1429912ad1e826e files/digest-khelpcenter-3.5.1 68
-SHA256 10f133d38f99c77b6ed8c236ac66bdcfb0451b0e213dc5ec626d6adff17382b5 files/digest-khelpcenter-3.5.1 68
 MD5 612323f8728d639ddab8f055f88070ff files/digest-khelpcenter-3.5.2 250
 RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-khelpcenter-3.5.2 250
 SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-khelpcenter-3.5.2 250
@@ -37,22 +28,9 @@ SHA256 3e73cde35800648d4896178d85366bc99c0c97b033a99e890ecd0c9fe5602cbb khelpcen
 MD5 8356095a81c2b7f23e29232853ca9f01 khelpcenter-3.4.3.ebuild 483
 RMD160 59a0a0c54694b5d646a9c3cc3d7c742a150cc92f khelpcenter-3.4.3.ebuild 483
 SHA256 42803e80f7d3b9f1c9a6bed9b4df3be4de2743172a99992811552ee9cfc8ea75 khelpcenter-3.4.3.ebuild 483
-MD5 ce911a6bbd0b1cb20488eef96745e664 khelpcenter-3.5.0.ebuild 490
-RMD160 25fbc75b165d04c3d0faa6f216af88699898d5d2 khelpcenter-3.5.0.ebuild 490
-SHA256 889357f05dbd8fd4cdf3bce7a224ecbecfe949616b62ce57966b7bf96e788605 khelpcenter-3.5.0.ebuild 490
-MD5 74654b39ce1d2d30fd550fbdfe5c5f4b khelpcenter-3.5.1.ebuild 490
-RMD160 07b3d31028cfe3f37c287614ee1963d7f9418ecc khelpcenter-3.5.1.ebuild 490
-SHA256 dabbbb119bc798b30217003c702ec3800095a9c84cdcf22342ffc55b98ba6399 khelpcenter-3.5.1.ebuild 490
 MD5 9cfd790d2ac7266cf8a8ae61ff0674c5 khelpcenter-3.5.2.ebuild 501
 RMD160 013b742c630a5d32d2b1428668c7c68776d4a84a khelpcenter-3.5.2.ebuild 501
 SHA256 420f172c498496b64aa7bc498a2f9961f59c82422b08c7bb7507b16b2273340a khelpcenter-3.5.2.ebuild 501
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELrm3AiZjviIA2XgRAvGUAJsFIFffW28c2gpUgpnV9sB+1LBsuQCg4EiZ
-P4IulPpArrWjP7FD0ve5xso=
-=6c8J
------END PGP SIGNATURE-----

@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d7cc6489f53fd057f4fadaf6af801421 ChangeLog 4813
-RMD160 5e0a7a67b0bb880005ea3204c5db6f1443cd0642 ChangeLog 4813
-SHA256 c610827a4985a59cc27d026ce6a9c414e9cb408d3591e0d0e5205503e27338b2 ChangeLog 4813
+MD5 b57afead6151d27e192355685a063aea ChangeLog 4927
+RMD160 fb7b6f6528cbdbf0fb837b1a4dadbeb4db0e62b8 ChangeLog 4927
+SHA256 cd840281b2d08b09443bba41a62ac306b1ed34aa6ecc49c01bccccb12fde9387 ChangeLog 4927
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-khotkeys-3.4.1 212
 RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-khotkeys-3.4.1 212
 SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-khotkeys-3.4.1 212
@@ -13,9 +10,6 @@ SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/di
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-khotkeys-3.4.3 68
 RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-khotkeys-3.4.3 68
 SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-khotkeys-3.4.3 68
-MD5 389ef34a2d6ba65f5836f68c0a904cf9 files/digest-khotkeys-3.5.0 68
-RMD160 d3d51e71028cc50fa4ab0cf69fd7863d21fa7841 files/digest-khotkeys-3.5.0 68
-SHA256 9d6bcd0fd5636da20d1bf023e31013fd753533b9290b40b67f3f89a3275b59cb files/digest-khotkeys-3.5.0 68
 MD5 358c22d072b322d89bd54d98403c5eb6 files/digest-khotkeys-3.5.1 68
 RMD160 e8de4cf825e2775377e7f125b1429912ad1e826e files/digest-khotkeys-3.5.1 68
 SHA256 10f133d38f99c77b6ed8c236ac66bdcfb0451b0e213dc5ec626d6adff17382b5 files/digest-khotkeys-3.5.1 68
@@ -31,19 +25,9 @@ SHA256 4125aa9051f93f1b86beda771c558366a2af342701690d19e2aa074f0a04274f khotkeys
 MD5 13250044a5c6f587bf6787de471647f9 khotkeys-3.4.3.ebuild 396
 RMD160 f1760f8a991e5ab2b0695d875af92715466c44ed khotkeys-3.4.3.ebuild 396
 SHA256 153a37a78f44bb54c1d5ff446ee5361dbbf18c8e5793b1dc0477ecea5c5d802a khotkeys-3.4.3.ebuild 396
-MD5 218642f5fabfc0f4cef296a433d628ad khotkeys-3.5.0.ebuild 403
-RMD160 1b42572d2b2fc12ce60a853a8247c0a9549a6b17 khotkeys-3.5.0.ebuild 403
-SHA256 2b767d2fef2bd6382861e31c6eaca12b1301a08e6b3090d558f0e28e17e237b2 khotkeys-3.5.0.ebuild 403
 MD5 369b3a92f39cc817206d725fb3cc1219 khotkeys-3.5.1.ebuild 416
 RMD160 9a6d904100dd8be3acecf6b3303a0d4fcc14a903 khotkeys-3.5.1.ebuild 416
 SHA256 10565e6e1e84d0ff8e00b5f20eb26aa85fd92de21889089f118b1140a24ef1a0 khotkeys-3.5.1.ebuild 416
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELrjxAiZjviIA2XgRAlejAKCxVfidw7+WjfkrOaNHsEC1Xgoc2QCg0HSt
-GhuF8i8rBO8E11O5xWKZ3o8=
-=k1MJ
------END PGP SIGNATURE-----

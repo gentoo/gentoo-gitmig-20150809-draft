@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4700bc926cc38fe1a2370a4a998112ec ChangeLog 7039
-RMD160 dcddc884124ca3684253e166caed3b31f84d7702 ChangeLog 7039
-SHA256 b19d3bc926440e8d1ae738cea2c6901e7666dbc27e6af2bddb43b91bb7fc6576 ChangeLog 7039
+MD5 9e169d32b17c3672e8c6baa9e9af9b3d ChangeLog 7179
+RMD160 336a3d9c34daab92575734163b89febe5b774840 ChangeLog 7179
+SHA256 c2cc5fa11e2d3f5e9ccad051471b0cbebe5cc7c492899c3770e72078ffa60f53 ChangeLog 7179
 MD5 64e656c39553f20b12d38eca1f8120d6 files/configure.in.in-kdm-settings.diff 686
 RMD160 e26a29248e9825c87287107e3fb2767424fead9f files/configure.in.in-kdm-settings.diff 686
 SHA256 ad228d3e7841ab73fda0987c5e8a21456787a040fb884a988a31c75e7c9f087b files/configure.in.in-kdm-settings.diff 686
@@ -22,12 +19,6 @@ SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/di
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kcontrol-3.4.3 68
 RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-kcontrol-3.4.3 68
 SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-kcontrol-3.4.3 68
-MD5 a2128e7c7d0adb0dd7af470def77f880 files/digest-kcontrol-3.5.0 142
-RMD160 5a25b9d5e731ecbb0238d4016eec7d640fd809ca files/digest-kcontrol-3.5.0 142
-SHA256 2aa9daeb1aa26a4ddbc37c210bcd1cde8dbaa15d45bfd5f58d45ac26f7d36aea files/digest-kcontrol-3.5.0 142
-MD5 358c22d072b322d89bd54d98403c5eb6 files/digest-kcontrol-3.5.1 68
-RMD160 e8de4cf825e2775377e7f125b1429912ad1e826e files/digest-kcontrol-3.5.1 68
-SHA256 10f133d38f99c77b6ed8c236ac66bdcfb0451b0e213dc5ec626d6adff17382b5 files/digest-kcontrol-3.5.1 68
 MD5 612323f8728d639ddab8f055f88070ff files/digest-kcontrol-3.5.2 250
 RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-kcontrol-3.5.2 250
 SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-kcontrol-3.5.2 250
@@ -52,22 +43,9 @@ SHA256 1199e1caa5c2fc1498410ede78f075cf0d9f61d8a1652b72dada7becc3d41461 kcontrol
 MD5 3009691b844665932075ee1768009172 kcontrol-3.4.3.ebuild 1780
 RMD160 40eee6722129a7e20d4c75491da8bcfbae53aa61 kcontrol-3.4.3.ebuild 1780
 SHA256 7e1d2d1c17c7705a826d74b3dfcd90d82346414012c72aeeb80bc18dd4f35424 kcontrol-3.4.3.ebuild 1780
-MD5 70336b043db18026301c5ffb5567e10d kcontrol-3.5.0.ebuild 1908
-RMD160 97ab841875877e62818702a7f7bb1d489f55163b kcontrol-3.5.0.ebuild 1908
-SHA256 570c03061231e54413d9f7214d9ffb06e71993ed938994a1f9800caaea99ceb0 kcontrol-3.5.0.ebuild 1908
-MD5 519173547957e43f211264546a61e8d5 kcontrol-3.5.1.ebuild 1705
-RMD160 95383d8fce9d47089635cd59f3d61904452e2e62 kcontrol-3.5.1.ebuild 1705
-SHA256 81be94740093cc0a51ab964f44d55eb03c625598062e40f375f72b455eb5cfbf kcontrol-3.5.1.ebuild 1705
 MD5 3624d749c97db915d54ad838de1d7010 kcontrol-3.5.2.ebuild 1718
 RMD160 0bdfe961f0ad08f52d0ba0478343464c2a0587b3 kcontrol-3.5.2.ebuild 1718
 SHA256 3a0724b1303ddf56f7b6ce65c5f634222859c16de5ff09c04229ee8a3c48c3a0 kcontrol-3.5.2.ebuild 1718
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELs7YAiZjviIA2XgRAgBHAJ0VYhH1Tu/CHCJ+ElQOvLU2NrxqQgCg5qRN
-MnZE/mhVo6qa6xc2zlEb4CQ=
-=DMSr
------END PGP SIGNATURE-----
