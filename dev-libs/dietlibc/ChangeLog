@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.53 2006/01/07 08:23:28 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.54 2006/04/06 18:45:25 phreak Exp $
+
+*dietlibc-0.29-r1 (06 Apr 2006)
+
+  06 Apr 2006; Christian Heim <phreak@gentoo.org> +dietlibc-0.29-r1.ebuild:
+  Adding a reworked ebuild; need to get other arches to test the ebuild
 
   07 Jan 2006; Christian Heim <phreak@gentoo.org> metadata.xml:
   Updating Copyright header, dev-libs/dietlibc is now managed by vserver-devs@g.o
