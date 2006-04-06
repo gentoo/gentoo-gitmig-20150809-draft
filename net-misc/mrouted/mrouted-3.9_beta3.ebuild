@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/mrouted-3.9_beta3.ebuild,v 1.10 2006/04/02 23:17:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/mrouted-3.9_beta3.ebuild,v 1.11 2006/04/06 20:11:54 swegener Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ IUSE=""
 
 # this does NOT compile with 2.4 or earlier headers
 # and probably some early 2.6 headers as well
-DEPEND="kernel_linux? ( >=sys-kernel/linux-headers-2.6* )
+DEPEND="kernel_linux? ( >=sys-kernel/linux-headers-2.6 )
 		!kernel_linux? ( virtual/os-headers )
 		dev-util/yacc"
 RDEPEND=""

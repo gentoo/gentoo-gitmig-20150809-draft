@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 93d7ad31f8a11d806ef9a28304c95cd4 ChangeLog 916
 RMD160 cdbee9edfb8bb01f2b55db87d55c04133ad3b4fc ChangeLog 916
 SHA256 d7f0b7a739b2d9b9c313de2f750b9ba681e2ad376c6a73572c22cacd432b188a ChangeLog 916
@@ -7,6 +10,13 @@ SHA256 96e3fddee3b7378bbaf2fbd402ef56cf8861be4f524d8343dbcd7db6ca5f9616 files/di
 MD5 b063cfdcd78a545936175411c2da590e files/mrouted.rc 712
 RMD160 383ed2bcc235738955234332da18b491ca3c27f3 files/mrouted.rc 712
 SHA256 159843d1c76fc951aa785ca62d1ee66169f334387ee61debebdc0616e5323067 files/mrouted.rc 712
-MD5 12d5750af45bad78403f3e96b3369b15 mrouted-3.9_beta3.ebuild 1166
-RMD160 2539df7d6cf002cb8ab43c51fd6c3b00f2795a3b mrouted-3.9_beta3.ebuild 1166
-SHA256 cb7bc50f79ee90f8b25d8f5af5386ba5c5b52044501009abe4b8e8f17c518607 mrouted-3.9_beta3.ebuild 1166
+MD5 1af76af6180282752e0267d0cb929674 mrouted-3.9_beta3.ebuild 1166
+RMD160 46a8385b922ba03efa9f8df9efbe0b2f3fd98396 mrouted-3.9_beta3.ebuild 1166
+SHA256 c55da5e4e64e7bb36b55cd44267d70f2d4211401a8b0204333c2cc1cf3b0fcf8 mrouted-3.9_beta3.ebuild 1166
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD4DBQFENZI3I1lqEGTUzyQRAqiOAJdzPpdVq3JoBxVE9nvAF6vDRamWAKDHuE3j
+PrMh5xfA7sdxFcdDo1BLLg==
+=wVkA
+-----END PGP SIGNATURE-----
