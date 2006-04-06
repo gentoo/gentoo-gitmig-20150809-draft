@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.133 2006/03/14 23:06:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.134 2006/04/06 22:22:30 plasmaroo Exp $
+
+*genkernel-3.3.11a (06 Apr 2006)
+
+  06 Apr 2006; <plasmaroo@gentoo.org> +genkernel-3.3.11a.ebuild:
+  Fix #128806.
 
   14 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   genkernel-3.3.11.ebuild:
