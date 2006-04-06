@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.3-r4.ebuild,v 1.1 2006/03/30 16:40:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.3-r5.ebuild,v 1.1 2006/04/06 14:31:00 mrness Exp $
 
 inherit toolchain-funcs eutils
 
@@ -29,10 +29,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
 
 	# add gzip and zlib decompression
-	epatch "${FILESDIR}/${P}-zlib.patch"
+	use zlib && epatch "${FILESDIR}/${P}-zlib.patch"
 
 	rm "${S}"/autom4te.cache/{output.0,requests,traces.0}
 
