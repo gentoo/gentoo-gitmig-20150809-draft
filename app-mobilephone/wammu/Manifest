@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 43e88892eef91037bf979a974e3fc168 ChangeLog 1642
+MD5 e97e4d9012e3d4c8b2a2c6bcd1a5bc80 ChangeLog 1846
 MD5 81a39ec268d79304eb0338b2fb77375c files/digest-wammu-0.11 62
 MD5 8348efb6f836c20c38b932b01671256f files/digest-wammu-0.12 62
-MD5 763665fca5e4ffc03b7144d95b7d785b files/digest-wammu-0.9 61
+MD5 0b8ff52e761ea73608874fbf67ae3d53 files/digest-wammu-0.13 63
 MD5 8e1fd49c29f85eea8da87d6e7de450c6 metadata.xml 165
 MD5 eb31c986cda148e78782ece1dd74b53f wammu-0.11.ebuild 981
-MD5 c029571451b5d8b1e21edcf93208d340 wammu-0.12.ebuild 983
-MD5 859d327756f02cb73cf22f4818b492c8 wammu-0.9.ebuild 971
+MD5 3f954a45ef632525edb6b559feb409ca wammu-0.12.ebuild 982
+MD5 0de42d3f506233f593cf71ab12e5a20a wammu-0.13.ebuild 966
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFEAF8IjG8pv1lIUX4RAmTVAJ9XLx6QK6TdTRaKne64JCZJc13rAQCfXDPf
-SeREplTWJx7vgbnboIx7cHI=
-=u/fx
+iD8DBQFENQpbjG8pv1lIUX4RAmY6AJ9JCwhCe6uuRlGkNCREHPwRShPyZwCffwWk
+lBhAIsPGVZgVYUI259Md1yg=
+=S1hx
 -----END PGP SIGNATURE-----

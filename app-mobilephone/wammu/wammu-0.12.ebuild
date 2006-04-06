@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.12.ebuild,v 1.1 2006/02/25 13:42:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.12.ebuild,v 1.2 2006/04/06 12:32:13 mrness Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.cihar.com/gammu/wammu/${P}.tar.bz2"
 LICENSE="GPL-2"
 IUSE="bluetooth"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 #gnome-bluetooth is used for additional functionality - see bug #101067
 RDEPEND=">=dev-python/wxpython-2.4.1.2
