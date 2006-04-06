@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 732cb568e34bac42c77fb39005760118 ChangeLog 50595
-RMD160 442162f96fb835e12ff2ee6ca52db2b5d3cc01bc ChangeLog 50595
-SHA256 f0955d6ede40023f5683c8f5a4ed629d84b5b0b8035d8c777c914763cd73143f ChangeLog 50595
+MD5 23d986c3fe63c7bf5feaacfc66e27b14 ChangeLog 50870
+RMD160 b89abb962da2235ddc388db92725defdefda3316 ChangeLog 50870
+SHA256 28767286ef7709fd537ffd9245a39aae2db85612bfb066630f00695ff2de83b2 ChangeLog 50870
 MD5 e8b51d92930950619b2139c22d4e1407 files/digest-kdelibs-3.3.2-r10 517
 RMD160 02fa5c01bcd3d1ca4d7197e6278e524ef3f3ed57 files/digest-kdelibs-3.3.2-r10 517
 SHA256 1de0e42937ee68816eabf4f32d6a445a2eb4fddbbe88ff524f466c57b4ba5d17 files/digest-kdelibs-3.3.2-r10 517
@@ -25,24 +25,6 @@ SHA256 0955ab88a478ca0674c741794f05c54ec25663013e73c381360d524b60df7c74 files/di
 MD5 e7fe23c3618de82d63dfdc90fb483a86 files/digest-kdelibs-3.4.3-r1 68
 RMD160 e797fa494c2558ef314a455adad009ddfba8937d files/digest-kdelibs-3.4.3-r1 68
 SHA256 0955ab88a478ca0674c741794f05c54ec25663013e73c381360d524b60df7c74 files/digest-kdelibs-3.4.3-r1 68
-MD5 3e56d0cc58ec7854ae2f9c23bb729028 files/digest-kdelibs-3.5.0 68
-RMD160 3317c5b777eb06a7e33f9bda5e3402a01fa02eab files/digest-kdelibs-3.5.0 68
-SHA256 eb92c0feadb4f57e7364e550381101985eeb66ca667711326a6b23cd0cf3535d files/digest-kdelibs-3.5.0 68
-MD5 3e56d0cc58ec7854ae2f9c23bb729028 files/digest-kdelibs-3.5.0-r1 68
-RMD160 3317c5b777eb06a7e33f9bda5e3402a01fa02eab files/digest-kdelibs-3.5.0-r1 68
-SHA256 eb92c0feadb4f57e7364e550381101985eeb66ca667711326a6b23cd0cf3535d files/digest-kdelibs-3.5.0-r1 68
-MD5 3e56d0cc58ec7854ae2f9c23bb729028 files/digest-kdelibs-3.5.0-r2 68
-RMD160 3317c5b777eb06a7e33f9bda5e3402a01fa02eab files/digest-kdelibs-3.5.0-r2 68
-SHA256 eb92c0feadb4f57e7364e550381101985eeb66ca667711326a6b23cd0cf3535d files/digest-kdelibs-3.5.0-r2 68
-MD5 6508f7c84d8b68a6977113b719de2ff2 files/digest-kdelibs-3.5.1 68
-RMD160 e3950ddb609ebba9312a6402983df9c3b90ace55 files/digest-kdelibs-3.5.1 68
-SHA256 c8871d11879eb9ca72d5b8d20edebc9e97d68d4fde576f6ee06603696b184044 files/digest-kdelibs-3.5.1 68
-MD5 af68605e7f8cfd7d50461c32fc00d072 files/digest-kdelibs-3.5.1-r1 250
-RMD160 d90fc43b4479c8e2c8da7793a3dcfb463916c630 files/digest-kdelibs-3.5.1-r1 250
-SHA256 4e62cda1cc268ca4be7318a16dfe9df2bc779219eedf0f2e8d64e44eff0f2a4a files/digest-kdelibs-3.5.1-r1 250
-MD5 4c4f49895caa9f8976a6dced47216f21 files/digest-kdelibs-3.5.2 250
-RMD160 350f7a5f0dcebef5284f69bf12fd63fda5d4b554 files/digest-kdelibs-3.5.2 250
-SHA256 0f76ea6e9b50e50652b39e7372552cab0d8578b6ac2f9c76d2e9efcbf3e5bc97 files/digest-kdelibs-3.5.2 250
 MD5 4c4f49895caa9f8976a6dced47216f21 files/digest-kdelibs-3.5.2-r2 250
 RMD160 350f7a5f0dcebef5284f69bf12fd63fda5d4b554 files/digest-kdelibs-3.5.2-r2 250
 SHA256 0f76ea6e9b50e50652b39e7372552cab0d8578b6ac2f9c76d2e9efcbf3e5bc97 files/digest-kdelibs-3.5.2-r2 250
@@ -79,9 +61,6 @@ SHA256 243fc766daf2e324ccc7984843c9fe27aa463acacedb35e848eec645f1a232a4 files/kd
 MD5 091d05a08330372ddbaf5ef9d426be53 files/kdelibs-3.5.0-kicker-crash.patch 1298
 RMD160 d21a8d865fb3dc94dd597221ef14e43b878864b4 files/kdelibs-3.5.0-kicker-crash.patch 1298
 SHA256 55c03dec7736a84e0ef217bef71491a223c0d4d7f9315f2f05cb935ad96b3bd8 files/kdelibs-3.5.0-kicker-crash.patch 1298
-MD5 ff8c8a3637ab8276606dfba0bf33c05b files/kdelibs-3.5.1-kurllabel.patch 1991
-RMD160 59cb8c9ce5b3da7dd87adc119bc08a6d4bf661e7 files/kdelibs-3.5.1-kurllabel.patch 1991
-SHA256 f20969493685d0890f048d3d146ab81b7a7cd3433bc95fe1a75381a3dcc62d16 files/kdelibs-3.5.1-kurllabel.patch 1991
 MD5 b90114903755198fb136b739697819eb files/kdelibs-3.5.2-kate-fixes.diff 14651
 RMD160 a6598ddd9c1c27ab97cc7d90cbb5f185c615c103 files/kdelibs-3.5.2-kate-fixes.diff 14651
 SHA256 f9942c9454a5ec0864afc02efe1b0d55ba5b9412fed7e0b944763ff4673a0473 files/kdelibs-3.5.2-kate-fixes.diff 14651
@@ -121,34 +100,16 @@ SHA256 6157936a48799baf75da7264fe1bf3fbff5a6009c94af65c896303230d26f247 kdelibs-
 MD5 8118ed2fe88987c7ed81197599658246 kdelibs-3.4.3.ebuild 3383
 RMD160 870e0416082a16fdb32316a46c3984738b50cbd5 kdelibs-3.4.3.ebuild 3383
 SHA256 b3d115570db1abe9d8582b39824cfa31a263a6cc889fcfc280960cf3330842d7 kdelibs-3.4.3.ebuild 3383
-MD5 c3c0ce25b29f40aa21a5cfbf711d63f5 kdelibs-3.5.0-r1.ebuild 3755
-RMD160 0d4d0931a54e77528d3011134edecadcdbed70e2 kdelibs-3.5.0-r1.ebuild 3755
-SHA256 10e64963cbcc97f9cd0e248d2a13334622299b1e5eece06c8fc7e08a94bf8e6c kdelibs-3.5.0-r1.ebuild 3755
-MD5 e95c1bad80bff99264f066c641a2ad17 kdelibs-3.5.0-r2.ebuild 3796
-RMD160 33be8ae1614ca147a05ce5d06fa785c3eea7a37f kdelibs-3.5.0-r2.ebuild 3796
-SHA256 6658105addb6b107bc651d80273056aff210f2f5d299c2fa9698aac459f91c65 kdelibs-3.5.0-r2.ebuild 3796
-MD5 f0e4dcbb7b8e88eeecf66511befbc047 kdelibs-3.5.0.ebuild 3718
-RMD160 3827ca40bd0ce02f36900bf385030218a7e351fa kdelibs-3.5.0.ebuild 3718
-SHA256 8644f4572b02c6a7bc9e1614ff6e33512e325778859fdef934f07b0d4890fe3d kdelibs-3.5.0.ebuild 3718
-MD5 3e314940cee355ba08804999d32fde46 kdelibs-3.5.1-r1.ebuild 3946
-RMD160 04ebf2757675588c37fe29cfc87e645f6ea6fee4 kdelibs-3.5.1-r1.ebuild 3946
-SHA256 9f928a38f3a6c5962333a85be82a4205cc72891e337314167d518d6dbafa3ba8 kdelibs-3.5.1-r1.ebuild 3946
-MD5 9ff9d154ab7cbc0932c29eb82b398ef3 kdelibs-3.5.1.ebuild 3766
-RMD160 ccbb0de5c64de324a209d6ecfd5b4d7500eeff8f kdelibs-3.5.1.ebuild 3766
-SHA256 4fc1cb704755ee4142ddd3625671fd301473834976175ffa566a4a1719181a1f kdelibs-3.5.1.ebuild 3766
 MD5 a16c66fff6c663988a028192d97a00db kdelibs-3.5.2-r2.ebuild 4092
 RMD160 a128ed65e8f7aae482b4ea30229a572c7d9bfff1 kdelibs-3.5.2-r2.ebuild 4092
 SHA256 3174528bf98032617ec1917f57ae4fd7e4d0812b6fb2d4fce049dec5a5c11c9f kdelibs-3.5.2-r2.ebuild 4092
-MD5 3b1e9e05a496be6c74c8d13bfa99cc69 kdelibs-3.5.2.ebuild 3994
-RMD160 0ca68f67ef913dd6a60419c60740de98aee0d6fd kdelibs-3.5.2.ebuild 3994
-SHA256 432f3c66f50e6238bb40a4ca8da477c7a57c6573969465dfdd395d70208d847b kdelibs-3.5.2.ebuild 3994
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEM8D3AiZjviIA2XgRAsqqAJ0UxphLzWiiX15Grxh5uteI7B9XngCeLEZC
-MF1k5SJZgPxw5tR3kcCdm5E=
-=MEXZ
+iD8DBQFENNQ6AiZjviIA2XgRAo5mAJ9dZKL6qirTLwclJKRxpt59P/9ZXACgja0k
+chstxJt0vlzP8iKZ7adP2Zw=
+=9fob
 -----END PGP SIGNATURE-----
