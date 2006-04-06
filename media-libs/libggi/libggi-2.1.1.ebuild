@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.12 2006/04/06 03:13:16 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.13 2006/04/06 11:24:10 tcort Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ggi-project.org/ftp/ggi/v2.1/${P}.src.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86"
 IUSE="X aalib svga fbcon directfb 3dfx debug mmx vis"
 
 RDEPEND=">=media-libs/libgii-0.9.0
