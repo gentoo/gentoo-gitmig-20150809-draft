@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.34 2006/02/13 18:50:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.35 2006/04/06 03:14:31 weeve Exp $
+
+*ratpoison-1.4.0 (06 Apr 2006)
+
+  06 Apr 2006; Jason Wever <weeve@gentoo.org> ratpoison-1.3.0.ebuild,
+  ratpoison-1.4.0_beta2.ebuild, +ratpoison-1.4.0.ebuild:
+  Version bump to 1.4.0.  Also adjusted 1.3.0 and 1.4.0_beta2 for modular X.
 
   13 Feb 2006; Jeroen Roovers <jer@gentoo.org> ratpoison-1.4.0_beta4.ebuild:
   Marked ~hppa (bug #114474).
