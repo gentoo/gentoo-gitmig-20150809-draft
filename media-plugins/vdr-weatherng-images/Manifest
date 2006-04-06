@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0c54d6fcad5393dd3e7eca58755573d7 ChangeLog 433
 RMD160 38edc96558d8c0375ee0d26c976a8e880024697f ChangeLog 433
 SHA256 d56191bb4c020e5ba32680502150f8c727a745db8ffbb60cbdb3ab837bc8cb7a ChangeLog 433
@@ -10,3 +13,10 @@ SHA256 64a8b189abe630e8f69187b92a9faa91e62d4198b8fa44238359c6d1a3479dfe metadata
 MD5 111e67756771281c87f97e2290dd84b6 vdr-weatherng-images-0.0.5.ebuild 688
 RMD160 b2f562edd51ceafbc7c223a53bffc04d2e75291a vdr-weatherng-images-0.0.5.ebuild 688
 SHA256 e7367b332174aee042c28e352ee9070046b54b4dca57b3ad02ff031060f2c4e3 vdr-weatherng-images-0.0.5.ebuild 688
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFENY2mI1lqEGTUzyQRAu52AKDL6dGE49LfdDemhEzuH6d3eFRUYwCcCKXd
+ZoDmsK+QF11+cbVb1GRdVog=
+=yb/J
+-----END PGP SIGNATURE-----
