@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.55 2006/04/05 21:55:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.56 2006/04/06 04:18:41 tsunam Exp $
+
+  06 Apr 2006; Joshua Jackson <tsunam@gentoo.org> sox-12.17.9.ebuild:
+  Stable on x86; bug #125908
 
   05 Apr 2006; Joseph Jezak <josejx@gentoo.org> sox-12.17.9.ebuild:
   Marked ppc stable for bug #125908.
