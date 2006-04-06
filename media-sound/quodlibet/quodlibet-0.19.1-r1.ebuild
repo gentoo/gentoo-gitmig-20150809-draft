@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.19.1-r1.ebuild,v 1.3 2006/04/06 01:46:32 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.19.1-r1.ebuild,v 1.4 2006/04/06 20:10:01 swegener Exp $
 
 inherit eutils python
 
@@ -24,7 +24,7 @@ DEPEND=">=virtual/python-2.3
 	mad? ( >=media-plugins/gst-plugins-mad-0.10.2 )
 	vorbis? ( >=media-plugins/gst-plugins-vorbis-0.10.2
 		>=media-plugins/gst-plugins-ogg-0.10.2
-		<dev-python/pyvorbis-1.4* )
+		<dev-python/pyvorbis-1.4 )
 	flac? ( >=media-plugins/gst-plugins-flac-0.10.2 )
 	aac? ( media-libs/faad2
 		>=media-plugins/gst-plugins-faad-0.10.1
