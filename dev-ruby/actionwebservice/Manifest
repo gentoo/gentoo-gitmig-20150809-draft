@@ -1,28 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 68653578d6e4c0ad3515a0ba3cf3af7f ChangeLog 4006
-RMD160 a989edcd272368f957da8b9c4083d2f61159cfff ChangeLog 4006
-SHA256 480e89cd191525379b67acd30a2482fb1aace848a95c7d448c6c1375f8c3e30c ChangeLog 4006
 MD5 c184f0d3287e4a1f5f641af899120cf1 actionwebservice-1.0.0.ebuild 762
-RMD160 362c5282b7a66a5bca5fda77de389a586ad90be5 actionwebservice-1.0.0.ebuild 762
-SHA256 e059d7c79cdc27e731af7f756e7d3fd20c07dc919a4e7a4767537c656668a2b8 actionwebservice-1.0.0.ebuild 762
 MD5 e5259c6981bc83e39c2c3e2d7d9f1bf9 actionwebservice-1.1.0.ebuild 775
-RMD160 7fed6e25b8d4048bef271ca9bba896dad7d16fca actionwebservice-1.1.0.ebuild 775
-SHA256 9e87eb4315033c546a6b2aa48be6642d316ef8c2b8106052da99f5e232fd9739 actionwebservice-1.1.0.ebuild 775
+MD5 93b091b8dacb47efe0afc5385c1df8e0 actionwebservice-1.1.1.ebuild 775
 MD5 f2fcf9353eb15b4fcb2e779effcebcce files/digest-actionwebservice-1.0.0 70
-RMD160 a063016e0fcaa07708edb25a3a0eae2b257fc710 files/digest-actionwebservice-1.0.0 70
-SHA256 d06b620142fd3fdf71e434ce14eefb20be2662490707bec86d977775ee47b84b files/digest-actionwebservice-1.0.0 70
 MD5 90179e1cd8805a2ff5dce134f5e9adc6 files/digest-actionwebservice-1.1.0 256
-RMD160 e637e436d58369d9fee5f2596eb2cc284084c36c files/digest-actionwebservice-1.1.0 256
-SHA256 d4a509cb6cb91afd5f4aa3b6340cd9c93710bd89087aa7ee58aeec13b3defb91 files/digest-actionwebservice-1.1.0 256
+MD5 42cb3459fea98477138002cba5c45ff6 files/digest-actionwebservice-1.1.1 70
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
-SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEK051JrHF4yAQTrARAlNCAKDBdmewoYQO6vcQoKTsBdYhEE5YaACgi8io
-phwYrFf5bNUKQXfYisEQAxw=
-=eLhZ
------END PGP SIGNATURE-----
