@@ -1,15 +1,6 @@
-diff -Naur ion-3ds-20060305/configure.ac ion-3ds-therp-20060305/configure.ac
---- ion-3ds-20060305/configure.ac	2006-03-05 14:45:45.000000000 +0100
-+++ ion-3ds-therp-20060305/configure.ac	2006-03-12 10:45:51.000000000 +0100
-@@ -3,7 +3,7 @@
- dnl $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/files/ion3-20060305-truetype.patch,v 1.1 2006/03/14 19:33:21 twp Exp $
- 
- AC_INIT([Ion Window Manager],
--        [3ds-20060305],
-+        [3ds-20060305-therp],
-         [tuomov@iki.fi],
-         [ion3])
- AC_PREREQ([2.58])
+diff -Naur ion-3ds-20060326/configure.ac ion-3ds/configure.ac
+--- ion-3ds-20060326/configure.ac	2006-03-26 11:37:58.000000000 +0200
++++ ion-3ds/configure.ac	2006-04-06 10:08:37.000000000 +0200
 @@ -420,6 +420,18 @@
  
  dnl }}}
@@ -29,9 +20,9 @@ diff -Naur ion-3ds-20060305/configure.ac ion-3ds-therp-20060305/configure.ac
  
  AC_OUTPUT([system-ac.mk])
  
-diff -Naur ion-3ds-20060305/de/brush.c ion-3ds-therp-20060305/de/brush.c
---- ion-3ds-20060305/de/brush.c	2006-03-05 14:45:13.000000000 +0100
-+++ ion-3ds-therp-20060305/de/brush.c	2006-03-11 18:47:19.000000000 +0100
+diff -Naur ion-3ds-20060326/de/brush.c ion-3ds/de/brush.c
+--- ion-3ds-20060326/de/brush.c	2006-03-26 11:37:34.000000000 +0200
++++ ion-3ds/de/brush.c	2006-04-06 10:08:37.000000000 +0200
 @@ -37,7 +37,9 @@
      brush->indicator_w=0;
      brush->win=win;
@@ -84,9 +75,9 @@ diff -Naur ion-3ds-20060305/de/brush.c ion-3ds-therp-20060305/de/brush.c
  /*}}}*/
  
  
-diff -Naur ion-3ds-20060305/de/brush.h ion-3ds-therp-20060305/de/brush.h
---- ion-3ds-20060305/de/brush.h	2006-03-05 14:45:13.000000000 +0100
-+++ ion-3ds-therp-20060305/de/brush.h	2006-03-11 18:18:06.000000000 +0100
+diff -Naur ion-3ds-20060326/de/brush.h ion-3ds/de/brush.h
+--- ion-3ds-20060326/de/brush.h	2006-03-26 11:37:34.000000000 +0200
++++ ion-3ds/de/brush.h	2006-04-06 10:08:37.000000000 +0200
 @@ -17,6 +17,9 @@
  #include <ioncore/common.h>
  #include <ioncore/gr.h>
@@ -116,9 +107,9 @@ diff -Naur ion-3ds-20060305/de/brush.h ion-3ds-therp-20060305/de/brush.h
 +#endif
  
  #endif /* ION_DE_BRUSH_H */
-diff -Naur ion-3ds-20060305/de/colour.c ion-3ds-therp-20060305/de/colour.c
---- ion-3ds-20060305/de/colour.c	2006-03-05 14:45:13.000000000 +0100
-+++ ion-3ds-therp-20060305/de/colour.c	2006-03-11 18:46:06.000000000 +0100
+diff -Naur ion-3ds-20060326/de/colour.c ion-3ds/de/colour.c
+--- ion-3ds-20060326/de/colour.c	2006-03-26 11:37:34.000000000 +0200
++++ ion-3ds/de/colour.c	2006-04-06 10:08:37.000000000 +0200
 @@ -12,12 +12,23 @@
  #include <ioncore/common.h>
  #include "colour.h"
@@ -206,9 +197,9 @@ diff -Naur ion-3ds-20060305/de/colour.c ion-3ds-therp-20060305/de/colour.c
 +#endif /* XFT */
  }
  
-diff -Naur ion-3ds-20060305/de/colour.h ion-3ds-therp-20060305/de/colour.h
---- ion-3ds-20060305/de/colour.h	2006-03-05 14:45:13.000000000 +0100
-+++ ion-3ds-therp-20060305/de/colour.h	2006-03-11 18:43:23.000000000 +0100
+diff -Naur ion-3ds-20060326/de/colour.h ion-3ds/de/colour.h
+--- ion-3ds-20060326/de/colour.h	2006-03-26 11:37:34.000000000 +0200
++++ ion-3ds/de/colour.h	2006-04-06 10:08:37.000000000 +0200
 @@ -15,12 +15,19 @@
  #include <ioncore/common.h>
  #include <ioncore/global.h>
@@ -236,9 +227,9 @@ diff -Naur ion-3ds-20060305/de/colour.h ion-3ds-therp-20060305/de/colour.h
 +#define XftDEDefaultVisual()    DefaultVisual(ioncore_g.dpy, 0)
  
  #endif /* ION_DE_COLOUR_H */
-diff -Naur ion-3ds-20060305/de/draw.c ion-3ds-therp-20060305/de/draw.c
---- ion-3ds-20060305/de/draw.c	2006-03-05 14:45:13.000000000 +0100
-+++ ion-3ds-therp-20060305/de/draw.c	2006-03-11 12:57:33.000000000 +0100
+diff -Naur ion-3ds-20060326/de/draw.c ion-3ds/de/draw.c
+--- ion-3ds-20060326/de/draw.c	2006-03-26 11:37:34.000000000 +0200
++++ ion-3ds/de/draw.c	2006-04-06 10:08:37.000000000 +0200
 @@ -79,7 +79,11 @@
      w--;
      h--;
@@ -347,9 +338,9 @@ diff -Naur ion-3ds-20060305/de/draw.c ion-3ds-therp-20060305/de/draw.c
      XFillRectangle(ioncore_g.dpy, brush->win, gc, 
                     geom->x, geom->y, geom->w, geom->h);
  }
-diff -Naur ion-3ds-20060305/de/font.c ion-3ds-therp-20060305/de/font.c
---- ion-3ds-20060305/de/font.c	2006-03-05 14:45:13.000000000 +0100
-+++ ion-3ds-therp-20060305/de/font.c	2006-03-12 09:33:01.000000000 +0100
+diff -Naur ion-3ds-20060326/de/font.c ion-3ds/de/font.c
+--- ion-3ds-20060326/de/font.c	2006-03-26 11:37:34.000000000 +0200
++++ ion-3ds/de/font.c	2006-04-06 10:08:37.000000000 +0200
 @@ -14,7 +14,9 @@
  #include <libtu/objp.h>
  #include <ioncore/common.h>
@@ -582,9 +573,9 @@ diff -Naur ion-3ds-20060305/de/font.c ion-3ds-therp-20060305/de/font.c
  
  void debrush_do_draw_string(DEBrush *brush, int x, int y,
                              const char *str, int len, bool needfill, 
-diff -Naur ion-3ds-20060305/de/font.h ion-3ds-therp-20060305/de/font.h
---- ion-3ds-20060305/de/font.h	2006-03-05 14:45:13.000000000 +0100
-+++ ion-3ds-therp-20060305/de/font.h	2006-03-11 18:30:32.000000000 +0100
+diff -Naur ion-3ds-20060326/de/font.h ion-3ds/de/font.h
+--- ion-3ds-20060326/de/font.h	2006-03-26 11:37:34.000000000 +0200
++++ ion-3ds/de/font.h	2006-04-06 10:08:37.000000000 +0200
 @@ -14,6 +14,9 @@
  
  #include <ioncore/common.h>
@@ -605,9 +596,9 @@ diff -Naur ion-3ds-20060305/de/font.h ion-3ds-therp-20060305/de/font.h
      DEFont *next, *prev;
  };
  
-diff -Naur ion-3ds-20060305/de/fontset.h ion-3ds-therp-20060305/de/fontset.h
---- ion-3ds-20060305/de/init.c	2006-03-05 14:45:13.000000000 +0100
-+++ ion-3ds-therp-20060305/de/init.c	2006-03-11 18:31:13.000000000 +0100
+diff -Naur ion-3ds-20060326/de/init.c ion-3ds/de/init.c
+--- ion-3ds-20060326/de/init.c	2006-03-26 11:37:34.000000000 +0200
++++ ion-3ds/de/init.c	2006-04-06 10:08:37.000000000 +0200
 @@ -113,16 +113,19 @@
  void de_get_colour_group(WRootWin *rootwin, DEColourGroup *cg, 
                           ExtlTab tab, DEStyle *based_on)
@@ -646,9 +637,9 @@ diff -Naur ion-3ds-20060305/de/fontset.h ion-3ds-therp-20060305/de/fontset.h
  bool de_init()
  {
      WRootWin *rootwin;
-diff -Naur ion-3ds-20060305/de/Makefile ion-3ds-therp-20060305/de/Makefile
---- ion-3ds-20060305/de/Makefile	2006-03-05 14:45:11.000000000 +0100
-+++ ion-3ds-therp-20060305/de/Makefile	2006-03-12 10:13:14.000000000 +0100
+diff -Naur ion-3ds-20060326/de/Makefile ion-3ds/de/Makefile
+--- ion-3ds-20060326/de/Makefile	2006-03-26 11:37:32.000000000 +0200
++++ ion-3ds/de/Makefile	2006-04-06 10:08:37.000000000 +0200
 @@ -8,13 +8,12 @@
  
  ######################################
@@ -664,9 +655,9 @@ diff -Naur ion-3ds-20060305/de/Makefile ion-3ds-therp-20060305/de/Makefile
  MAKE_EXPORTS=de
  
  ######################################
-diff -Naur ion-3ds-20060305/de/style.c ion-3ds-therp-20060305/de/style.c
---- ion-3ds-20060305/de/style.c	2006-03-05 14:45:13.000000000 +0100
-+++ ion-3ds-therp-20060305/de/style.c	2006-03-11 18:34:35.000000000 +0100
+diff -Naur ion-3ds-20060326/de/style.c ion-3ds/de/style.c
+--- ion-3ds-20060326/de/style.c	2006-03-26 11:37:34.000000000 +0200
++++ ion-3ds/de/style.c	2006-04-06 10:08:37.000000000 +0200
 @@ -74,10 +74,17 @@
      /*gcv.function=GXclear;*/
      gcv.stipple=stipple_pixmap;
@@ -726,9 +717,9 @@ diff -Naur ion-3ds-20060305/de/style.c ion-3ds-therp-20060305/de/style.c
          if(!destyle_init(style, rootwin, name)){
              free(style);
              return NULL;
-diff -Naur ion-3ds-20060305/de/style.h ion-3ds-therp-20060305/de/style.h
---- ion-3ds-20060305/de/style.h	2006-03-05 14:45:13.000000000 +0100
-+++ ion-3ds-therp-20060305/de/style.h	2006-03-11 17:15:01.000000000 +0100
+diff -Naur ion-3ds-20060326/de/style.h ion-3ds/de/style.h
+--- ion-3ds-20060326/de/style.h	2006-03-26 11:37:34.000000000 +0200
++++ ion-3ds/de/style.h	2006-04-06 10:08:37.000000000 +0200
 @@ -76,6 +76,7 @@
      Pixmap tag_pixmap;
      int tag_pixmap_w;
@@ -737,9 +728,9 @@ diff -Naur ion-3ds-20060305/de/style.h ion-3ds-therp-20060305/de/style.h
      
      DEStyle *next, *prev;
  };
-diff -Naur ion-3ds-20060305/system-ac.mk.in ion-3ds-therp-20060305/system-ac.mk.in
---- ion-3ds-20060305/system-ac.mk.in	2006-03-05 14:45:12.000000000 +0100
-+++ ion-3ds-therp-20060305/system-ac.mk.in	2006-03-12 10:10:50.000000000 +0100
+diff -Naur ion-3ds-20060326/system-ac.mk.in ion-3ds/system-ac.mk.in
+--- ion-3ds-20060326/system-ac.mk.in	2006-03-26 11:37:33.000000000 +0200
++++ ion-3ds/system-ac.mk.in	2006-04-06 10:08:37.000000000 +0200
 @@ -188,3 +188,7 @@
  STRIP=@STRIP@
  

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20060305-r1.ebuild,v 1.2 2006/03/20 08:13:21 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20060326.ebuild,v 1.1 2006/04/06 08:30:05 twp Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ S=${WORKDIR}/${MY_PN}
 
 src_unpack() {
 	unpack ${A}
-	use iontruetype && epatch ${FILESDIR}/${P}-truetype.patch
+	use iontruetype && epatch ${FILESDIR}/ion3-20060326-truetype.patch
 }
 
 src_compile() {
