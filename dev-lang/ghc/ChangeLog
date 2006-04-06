@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.93 2006/03/28 17:28:48 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.94 2006/04/06 17:15:03 dcoutts Exp $
+
+  06 Apr 2006; Duncan Coutts <dcoutts@gentoo.org> ghc-6.4.1-r3.ebuild:
+  -O* flags (from the users CFLAGS) breaks ghc on too many systems so don't
+  add it to ghc's CFLAGS. Also remove ia64 GOT patch that didn't help.
 
   28 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> ghc-6.4.1-r2.ebuild:
   Enable SplitObjs on ppc. This gives much smaller binaries.

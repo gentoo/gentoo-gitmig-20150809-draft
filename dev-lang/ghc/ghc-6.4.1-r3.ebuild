@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r3.ebuild,v 1.2 2006/03/28 17:25:20 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r3.ebuild,v 1.3 2006/04/06 17:15:03 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -101,12 +101,9 @@ ghc_setup_cflags() {
 	for flag in ${CFLAGS}; do
 		case ${flag} in
 
-			# These would just dup what ghc does anyway
-			-O|-O1) ;;
-
-			# We have to be really careful with more agressive -O flags
-			# as they do break ghc on some arches.
-			-O2|-O3|-Os) use ia64 || use sparc || append-ghc-cflags compile ${flag};;
+			# Ignore extra optimisation (ghc passes -O to gcc anyway)
+			# -O2 and above break on too many systems
+			-O*) ;;
 
 			# Arch and ABI flags are probably ok
 			-m*) append-ghc-cflags compile assemble ${flag};;
@@ -144,12 +141,6 @@ src_unpack() {
 
 	# Patch to fix parallel make
 	sed -i 's/mkDerivedConstants.c : $(H_CONFIG)/mkDerivedConstants.c :	$(H_CONFIG) $(H_PLATFORM)/' "${S}/ghc/includes/Makefile"
-
-	# We need bigger tables on ia64 to be able to load larger packages
-	sed -i  -e 's/#define GOT_SIZE            0x20000/#define GOT_SIZE 0x40000/' \
-			-e 's/#define FUNCTION_TABLE_SIZE 0x10000/#define FUNCTION_TABLE_SIZE 0x20000/' \
-			-e 's/#define PLT_SIZE            0x08000/#define PLT_SIZE 0x16000/' \
-		"${S}/ghc/rts/Linker.c"
 }
 
 src_compile() {
