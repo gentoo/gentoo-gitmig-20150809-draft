@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.14-r6.ebuild,v 1.3 2006/03/30 00:35:54 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.14-r6.ebuild,v 1.4 2006/04/06 05:07:10 tsunam Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base"
@@ -17,4 +17,4 @@ UNIPATCH_LIST="${DISTDIR}/hardened-patches-${HGPV}.extras.tar.bz2"
 DESCRIPTION="Hardened sources for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 
 SRC_URI="${KERNEL_URI} ${HGPV_URI} ${GENPATCHES_URI}"
-KEYWORDS="~alpha amd64 ppc ~x86"
+KEYWORDS="~alpha amd64 ppc x86"
