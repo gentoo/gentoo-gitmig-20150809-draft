@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.5.0.ebuild,v 1.2 2006/04/03 22:43:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.5.0.ebuild,v 1.3 2006/04/06 07:01:12 bass Exp $
 
 inherit eutils pam
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.0x50.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
-IUSE="ipv6 ssl gnutls static doc pam fcgi scgi"
+IUSE="ipv6 ssl gnutls static doc pam fastcgi scgi"
 
 RDEPEND=">=sys-libs/zlib-1.1.4-r1
 	gnutls? ( net-libs/gnutls )
@@ -68,7 +68,7 @@ src_compile() {
 		myconf="${myconf} --disable-static"
 	fi
 
-	if use fcgi ; then
+	if use fastcgi ; then
 		myconf="${myconf} --enable-fcgi"
 	fi
 
