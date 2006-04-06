@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5185 2006/04/06 19:18:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5186 2006/04/06 19:23:08 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Markus Ullmann <jokey@gentoo.org> (06 Apr 2006)
+# adding language pack builder, needs testing
+=app-text/acroread-7.0.5-r3
 
 # Christian Heim <phreak@gentoo.org> (06 Apr 2006)
 # dietlibc-0.29-r1 needs some testing
