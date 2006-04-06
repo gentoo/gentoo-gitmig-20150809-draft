@@ -18,6 +18,8 @@ svga
 tcc
 x86 
 fmod
+oci8
+oci8-direct-client
 #keep and eye on firebird and interbase as pair
 firebird
 interbase

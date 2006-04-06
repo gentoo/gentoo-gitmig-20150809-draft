@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5184 2006/04/06 18:40:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5185 2006/04/06 19:18:30 nixnut Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1132,6 +1132,7 @@ net-im/everybuddy
 =x11-libs/fox-1.2.15
 =x11-libs/fox-1.4.12
 =x11-libs/fox-1.5.4
+=x11-libs/fox-1.6.2
 =dev-ruby/fxruby-1.2.6
 =dev-ruby/fxruby-1.2.5
 =dev-ruby/fxruby-1.0.29-r1
