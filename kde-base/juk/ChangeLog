@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.45 2006/03/28 04:50:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.46 2006/04/06 00:53:04 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -juk-3.5.0.ebuild,
+  -juk-3.5.1.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
   28 Mar 2006; Aron Griffis <agriffis@gentoo.org> juk-3.5.0.ebuild,
   juk-3.5.1.ebuild, juk-3.5.2.ebuild:

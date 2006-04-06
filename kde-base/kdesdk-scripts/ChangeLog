@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-scripts
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.26 2006/03/22 20:15:13 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.27 2006/04/06 01:39:49 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kdesdk-scripts-3.5.0.ebuild, -kdesdk-scripts-3.5.1.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
 *kdesdk-scripts-3.5.2 (22 Mar 2006)
 

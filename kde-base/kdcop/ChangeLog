@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdcop
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.27 2006/04/01 20:03:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.28 2006/04/06 01:10:41 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kdcop-3.5.0.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> kdcop-3.5.1.ebuild:
   Add ~x86-fbsd keyword.

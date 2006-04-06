@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/drkonqi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.41 2006/04/02 13:04:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.42 2006/04/06 00:51:28 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -drkonqi-3.5.0.ebuild,
+  -drkonqi-3.5.1.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/drkonqi-3.5.2-splitdebug.patch,

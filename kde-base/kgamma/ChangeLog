@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.37 2006/03/27 23:56:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.38 2006/04/06 01:49:58 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kgamma-3.5.0.ebuild,
+  -kgamma-3.5.1.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
   28 Mar 2006; Aron Griffis <agriffis@gentoo.org> kgamma-3.5.0.ebuild,
   kgamma-3.5.1.ebuild, kgamma-3.5.2.ebuild:

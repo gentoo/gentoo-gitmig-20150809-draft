@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kicker
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.44 2006/04/01 17:31:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.45 2006/04/06 01:55:22 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kdebase-3.5.1-kicker.patch, -kicker-3.5.0.ebuild,
+  -kicker-3.5.1.ebuild, -kicker-3.5.1-r1.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> kicker-3.5.2.ebuild:
   Add ~x86-fbsd keyword.

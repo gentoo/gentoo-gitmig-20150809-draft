@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.91 2006/03/23 14:42:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.92 2006/04/06 01:25:33 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kde-i18n-3.5.0.ebuild,
+  -kde-i18n-3.5.1.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
 *kde-i18n-3.5.2 (23 Mar 2006)
 

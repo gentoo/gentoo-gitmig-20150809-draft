@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kaddressbook-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook-plugins/ChangeLog,v 1.37 2006/03/27 20:40:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook-plugins/ChangeLog,v 1.38 2006/04/06 00:54:39 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kaddressbook-plugins-3.5.0.ebuild, -kaddressbook-plugins-3.5.1.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
   27 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   kaddressbook-plugins-3.5.0.ebuild, kaddressbook-plugins-3.5.1.ebuild,

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kbugbuster
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/ChangeLog,v 1.30 2006/03/22 20:14:57 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/ChangeLog,v 1.31 2006/04/06 01:06:05 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kbugbuster-3.5.0.ebuild, -kbugbuster-3.5.1.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
 *kbugbuster-3.5.2 (22 Mar 2006)
 
