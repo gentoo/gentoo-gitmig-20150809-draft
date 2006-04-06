@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328.ebuild,v 1.1 2006/03/28 19:22:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328.ebuild,v 1.2 2006/04/06 01:41:51 chutzpah Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -266,8 +266,8 @@ pkg_postinst() {
 
 	if ! use mad; then
 		einfo "MAD decoding library is disabled."
-		einfo "This mean that playing mp3 will not be possible with xine-lib"
-		einfo "based players. amaroK will crash trying to."
+		einfo "This means that playing mp3 will not be possible with xine-lib"
+		einfo "based players. amaroK will crash if you try to."
 		einfo ""
 		einfo "To be able to play mp3 files, please add mad useflag."
 	fi
