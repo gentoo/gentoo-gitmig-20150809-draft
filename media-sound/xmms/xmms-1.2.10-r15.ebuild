@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r15.ebuild,v 1.12 2005/10/02 02:11:11 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r15.ebuild,v 1.13 2006/04/06 15:14:15 metalgod Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
@@ -13,9 +13,9 @@ DESCRIPTION="X MultiMedia System"
 HOMEPAGE="http://www.xmms.org/"
 SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.bz2
 	mirror://gentoo/gentoo_ice-xmms-0.2.tar.bz2
-	http://dev.gentoo.org/~eradicator/xmms/${P}-gentoo-m4-${M4_VER}.tar.bz2
-	http://dev.gentoo.org/~eradicator/xmms/${P}-gentoo-patches-${PATCH_VER}.tar.bz2
-	http://dev.gentoo.org/~eradicator/xmms/gnomexmms.xpm"
+	http://dev.gentoo.org/~metalgod/xmms/${P}-gentoo-m4-${M4_VER}.tar.bz2
+	http://dev.gentoo.org/~metalgod/xmms/${P}-gentoo-patches-${PATCH_VER}.tar.bz2
+	http://dev.gentoo.org/~metalgod/xmms/gnomexmms.xpm"
 
 LICENSE="GPL-2"
 SLOT="0"
