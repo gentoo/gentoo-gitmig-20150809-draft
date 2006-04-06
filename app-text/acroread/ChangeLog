@@ -1,6 +1,10 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.73 2006/04/06 19:56:36 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.74 2006/04/06 22:27:39 jokey Exp $
+
+  06 Apr 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/acroread-langpack.patch:
+  Adding langpack patch and whitespace cleanups
 
 *acroread-7.0.5-r3 (06 Apr 2006)
 

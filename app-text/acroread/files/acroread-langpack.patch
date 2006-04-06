@@ -1,0 +1,23 @@
+--- ./bin/acroread.orig	2006-04-07 00:00:30.996206000 +0200
++++ ./bin/acroread	2006-03-15 00:41:39.000000000 +0100
+@@ -1,6 +1,10 @@
+ #!/bin/sh
+ #
+ 
++LANGPATH=~/.adobe/Acrobat/
++LANGPACK=${LANGPATH}/.acrobat7-langpack-deu
++[ ! -e ${LANGPACK} ] && rm -rf ~/.adobe
++
+ FC=~/.adobe/Acrobat/7.0/Cache/UnixFnt07.lst
+ [ -s ${FC} ] && rm ${FC} && touch ${FC}
+ 
+@@ -680,6 +684,9 @@
+ 	export GTK_IM_MODULE
+ fi
+ 
++# mark used langpack
++mkdir -p ${LANGPATH} && touch ${LANGPACK}
++
+ if [ "$1" = "-DEBUG" ] ; then
+   if [ $# = 1 ] ; then
+     export ACRO_EXEC_CMD
