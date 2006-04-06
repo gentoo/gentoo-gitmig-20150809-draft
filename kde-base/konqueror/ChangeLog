@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.46 2006/04/01 19:03:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.47 2006/04/06 02:27:36 flameeyes Exp $
+
+  06 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -konqueror-3.5.0-r1.ebuild, -konqueror-3.5.1.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> konqueror-3.5.2.ebuild:
   Add ~x86-fbsd keyword.

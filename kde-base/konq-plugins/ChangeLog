@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konq-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.40 2006/04/03 13:47:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.41 2006/04/06 02:27:02 flameeyes Exp $
+
+  06 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -konq-plugins-3.5.0.ebuild, -konq-plugins-3.5.1.ebuild,
+  -konq-plugins-3.5.2.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
 *konq-plugins-3.5.2-r1 (03 Apr 2006)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kuser
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.38 2006/03/28 00:59:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.39 2006/04/06 03:02:35 flameeyes Exp $
+
+  06 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kuser-3.5.0.ebuild,
+  -kuser-3.5.1.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
   28 Mar 2006; Aron Griffis <agriffis@gentoo.org> kuser-3.5.0.ebuild,
   kuser-3.5.1.ebuild, kuser-3.5.2.ebuild:

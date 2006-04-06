@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kode/ChangeLog,v 1.35 2006/03/28 00:23:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kode/ChangeLog,v 1.36 2006/04/06 02:23:48 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kode-3.5.0.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
   28 Mar 2006; Aron Griffis <agriffis@gentoo.org> kode-3.5.0.ebuild,
   kode-3.5.2.ebuild:

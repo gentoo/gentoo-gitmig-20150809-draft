@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpercentage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpercentage/ChangeLog,v 1.34 2006/03/28 00:34:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpercentage/ChangeLog,v 1.35 2006/04/06 02:35:55 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kpercentage-3.5.0.ebuild, -kpercentage-3.5.1.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
   28 Mar 2006; Aron Griffis <agriffis@gentoo.org> kpercentage-3.5.0.ebuild,
   kpercentage-3.5.1.ebuild, kpercentage-3.5.2.ebuild:

@@ -16,9 +16,15 @@ SHA256 68c3f0a231df037d9f160ef681108bd3667c570c618c70c218c18be641c7e3de files/di
 MD5 37b63842d3bb2d884b13ebf46628a792 files/digest-umbrello-3.5.1 66
 RMD160 4a4f776257134dc5753f59936f47f0a5c89ead63 files/digest-umbrello-3.5.1 66
 SHA256 c55dc0a628300f22699d6bed9ebcd180dec8d93221eadc66b964184b1e09ca50 files/digest-umbrello-3.5.1 66
+MD5 3c2988dddde0b22990ae183163bd5e0b files/digest-umbrello-3.5.1-r1 244
+RMD160 faf5c8df6c8e8f93371d48641caca1ea762d60dc files/digest-umbrello-3.5.1-r1 244
+SHA256 a462032c397ef5f6f9bb0856d2c9467dac35821ee6a4a3db603ea3ec7225c12e files/digest-umbrello-3.5.1-r1 244
 MD5 735367f045761a378c59b0aedd04892c files/digest-umbrello-3.5.2 244
 RMD160 6b0561e97b2c584c31c601eabe995ca3348f8a85 files/digest-umbrello-3.5.2 244
 SHA256 85ed46a0b0c32506130eea2adbd51b3c866bbe3002ac4dcf21bbdb652ef26707 files/digest-umbrello-3.5.2 244
+MD5 a08614a7bb417292aecfb2a71b5f43e1 files/umbrello-3.5.1-fork-rectangle.patch 573
+RMD160 96b215a323662af8c2a606f21a88c65da0558d97 files/umbrello-3.5.1-fork-rectangle.patch 573
+SHA256 f7d24cd0de5f48218ca2dfcdad32ec096bb6ef53553050798df45987e2d929c5 files/umbrello-3.5.1-fork-rectangle.patch 573
 MD5 0f4007b5db8e59debdab22a1e984546f files/umbrello-qt-3.3.5.patch 788
 RMD160 b1e8de76694a94dda057432980e96e9dea28f0bc files/umbrello-qt-3.3.5.patch 788
 SHA256 98fb7801c742f4ba8f2c54eb1d83394dd07e6f40117ec0aae731eaa312b31ddf files/umbrello-qt-3.3.5.patch 788
@@ -37,6 +43,9 @@ SHA256 423af9b75af477e2bd41a6ee3efcb492019476362ccd541c345278a6bd0e1e9a umbrello
 MD5 f41eed13455396cb4dba83def6d5a28e umbrello-3.5.0.ebuild 381
 RMD160 fc8254d0d5569cc1257e2b74b90601a637e09ebc umbrello-3.5.0.ebuild 381
 SHA256 883394b8fb83ed4d912532761ad29c68c9572351efe49e0722504d4e59e68098 umbrello-3.5.0.ebuild 381
+MD5 67b16f8106c972a92befe73f7ae77547 umbrello-3.5.1-r1.ebuild 463
+RMD160 990e139e325397f4c71ea881c62bc63c53fd2776 umbrello-3.5.1-r1.ebuild 463
+SHA256 0a4e0f28c4166a003cf57ed642bfb1ef89f8d520d836ef71bb541ab69f47aa56 umbrello-3.5.1-r1.ebuild 463
 MD5 d91c1c01385ef6c73d378f29b9ef288d umbrello-3.5.1.ebuild 383
 RMD160 bf5c01f0f2040c9621198b10505eb9bf178fa2ea umbrello-3.5.1.ebuild 383
 SHA256 dee253f07aa5b0091dc39290b239db501152d8434379a39024d03ddb263f73bd umbrello-3.5.1.ebuild 383

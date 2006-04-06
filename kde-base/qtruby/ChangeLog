@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.32 2006/03/31 14:14:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.33 2006/04/06 03:22:46 flameeyes Exp $
+
+  06 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -qtruby-3.5.0.ebuild,
+  -qtruby-3.5.0-r1.ebuild, -qtruby-3.5.1.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
   31 Mar 2006; Caleb Tennis <caleb@gentoo.org> qtruby-3.5.2.ebuild:
   Change qtruby dep to latest smoke

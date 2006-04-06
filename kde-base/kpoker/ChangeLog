@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpoker
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpoker/ChangeLog,v 1.38 2006/03/28 00:35:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpoker/ChangeLog,v 1.39 2006/04/06 02:38:02 flameeyes Exp $
+
+  05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kpoker-3.5.0.ebuild,
+  -kpoker-3.5.1.ebuild:
+  Removed old 3.5.0/3.5.1 packages.
 
   28 Mar 2006; Aron Griffis <agriffis@gentoo.org> kpoker-3.5.0.ebuild,
   kpoker-3.5.1.ebuild, kpoker-3.5.2.ebuild:
