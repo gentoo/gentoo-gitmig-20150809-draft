@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.0.0_pre6.ebuild,v 1.1 2006/03/20 18:28:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.0.0_pre6-r1.ebuild,v 1.1 2006/04/06 18:09:07 seemant Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 	# Fix a bug where iso_channel property is not kept up-to-date
 	epatch ${FILESDIR}/${P}-grab_partial_image.diff
 	epatch ${FILESDIR}/${P}-vendor_avt.diff
+	epatch ${FILESDIR}/${P}-extra-failure-removal.diff
 
 	if ! use X; then
 		epatch ${FILESDIR}/nox11-2.patch

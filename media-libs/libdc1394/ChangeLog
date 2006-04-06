@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.16 2006/03/20 18:28:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.17 2006/04/06 18:09:07 seemant Exp $
+
+*libdc1394-2.0.0_pre6-r1 (06 Apr 2006)
+
+  06 Apr 2006; Seemant Kulleen <seemant@gentoo.org>
+  +files/libdc1394-2.0.0_pre6-extra-failure-removal.diff,
+  -libdc1394-2.0.0_pre6.ebuild, +libdc1394-2.0.0_pre6-r1.ebuild:
+  add a patch that gets rid of the unconditional failure return in
+  dc1394_avt_get_mirror function. Patch thanks to Phil Lamoreaux
 
 *libdc1394-2.0.0_pre6 (20 Mar 2006)
 
