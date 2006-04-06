@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.5-r3.ebuild,v 1.1 2006/04/06 19:56:36 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.5-r3.ebuild,v 1.2 2006/04/06 20:55:51 swegener Exp $
 
 inherit eutils nsplugins rpm versionator
 
@@ -8,7 +8,7 @@ DESCRIPTION="Adobe's PDF reader"
 HOMEPAGE="http://www.adobe.com/products/acrobat/"
 SRC_HEAD="http://ardownload.adobe.com/pub/adobe/reader/unix/7x/7.0.5"
 SRC_FOOT="-$(replace_version_separator 3 "-")-1.i386.rpm"
-SRC_URI="nls? ( 
+SRC_URI="nls? (
 		linguas_de? ( ${SRC_HEAD}/deu/AdobeReader_deu${SRC_FOOT} )
 		linguas_fr? ( ${SRC_HEAD}/fra/AdobeReader_fra${SRC_FOOT} )
 		linguas_sv? ( ${SRC_HEAD}/sve/AdobeReader_sve${SRC_FOOT} )
@@ -68,7 +68,7 @@ src_unpack() {
 
 				if [ ${curr_lang} != "enu" ] ; then
 
-					einfo "Preparing Language Pack for: ${curr_lang}" 
+					einfo "Preparing Language Pack for: ${curr_lang}"
 
 					# unpack rpm first
 					cd ${WORKDIR}
@@ -103,7 +103,7 @@ src_unpack() {
 	x="AdobeReader_enu${SRC_FOOT}"
 	cd ${WORKDIR}
 	rm -rf usr
-	
+
 	# now unpack the english version
 	if use x86 && ! use cups ; then
 		unpack ${DISTDIR}/libcups.so-i386.bz2
