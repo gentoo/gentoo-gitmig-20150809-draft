@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1830 2006/04/06 07:04:29 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1831 2006/04/06 14:59:12 mkennedy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1687,4 +1687,6 @@ x11-wm/matchbox-window-manager:xcomposite - Enable support for Xorg Composite ex
 x11-wm/openbox:pango - Enable pango support
 x11-wm/openbox:startup-notification - Enable application startup notification
 x11-wm/sawfish:pango - Enable pango support
+x11-wm/stumpwm-cvs:sbcl - Use SBCL for the runtime
+x11-wm/stumpwm-cvs:clisp - Use CLISP for the runtime
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
