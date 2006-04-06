@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.09.ebuild,v 1.1 2006/03/30 00:15:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.09.ebuild,v 1.2 2006/04/06 02:34:30 tsunam Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ SLOT="0"
 IUSE=""
 
 SRC_URI="http://developer.kde.org/~binner/kerry/${P}.tar.bz2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND=">=app-misc/beagle-0.2"
 DEPEND="${RDEPEND}
