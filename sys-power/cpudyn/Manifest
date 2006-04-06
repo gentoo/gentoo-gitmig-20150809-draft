@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1e51f793ac2f295cc1f813cb0b868540 ChangeLog 3080
+MD5 afff45ff5b3627fd00b1e4d6a35d79cb ChangeLog 3167
 MD5 18abb76d31091908c6f015dbebc75ba3 cpudyn-0.99.0.ebuild 1073
+MD5 c0582e442047eadb4ba5955eb1d8930b cpudyn-1.0.1.ebuild 996
 MD5 9801250e630185f8ba2de8d0b3afe083 cpudyn-1.0.ebuild 988
-MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
-MD5 9c0a878c48d407913eafec5d677e8cfe cpudyn-1.0.1.ebuild 988
 MD5 1d3f888c7c5af12d57517e8c7ebb27d8 files/cpudyn-0.99.0-init_conf_updates.patch 816
 MD5 a555aa867e558b85dc95e17ac5fa65c5 files/cpudyn.init 3047
 MD5 14510794829fd0435f8342da60c5ba46 files/digest-cpudyn-0.99.0 61
 MD5 18c8ec21370d4ce089720fe94de89e6c files/digest-cpudyn-1.0 58
 MD5 abe82c7bde2f6417bc160fad9e31d163 files/digest-cpudyn-1.0.1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1Z8Kl5AvwDPiUowRAokJAJ9SK8poc+6nEzaizxkcYiqO7Ea4MACggDxg
-ouGr3P5VcuB6dKxNk4K1DIA=
-=7YQZ
------END PGP SIGNATURE-----
+MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159

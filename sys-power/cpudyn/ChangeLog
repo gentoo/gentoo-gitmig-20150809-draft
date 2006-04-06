@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/cpudyn
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/ChangeLog,v 1.3 2005/07/13 23:08:39 smithj Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/ChangeLog,v 1.4 2006/04/06 12:58:54 corsair Exp $
+
+  06 Apr 2006; Markus Rothe <corsair@gentoo.org> cpudyn-1.0.1.ebuild:
+  Added ~ppc64
 
 *cpudyn-1.0.1 (13 Jul 2005)
 
