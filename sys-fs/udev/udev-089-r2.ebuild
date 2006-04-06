@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-089-r2.ebuild,v 1.1 2006/04/04 20:21:05 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-089-r2.ebuild,v 1.2 2006/04/06 20:13:23 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="selinux"
 # still rely on hotplug (need to fix that), but now we implement coldplug
 
 DEPEND="sys-apps/hotplug-base"
-RDEPEND="!<=sys-apps/coldplug"
+RDEPEND="!sys-apps/coldplug"
 RDEPEND="${DEPEND} ${RDEPEND}
 	>=sys-apps/baselayout-1.11.14"
 # We need the lib/rcscripts/addon support
