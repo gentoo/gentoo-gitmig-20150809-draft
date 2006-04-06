@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ifplugd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.32 2005/12/24 16:32:25 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.33 2006/04/06 12:23:08 uberlord Exp $
+
+*ifplugd-0.28-r5 (06 Apr 2006)
+
+  06 Apr 2006; Roy Marples <uberlord@gentoo.org> files/ifplugd.init,
+  +ifplugd-0.28-r5.ebuild:
+  Init script works with stable baselayout #125099
+  and now respects the SHUTDOWN configuration option again, #128988.
 
   24 Dec 2005; Simon Stelling <blubb@gentoo.org> ifplugd-0.28-r4.ebuild:
   stable on amd64
