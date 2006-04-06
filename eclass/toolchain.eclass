@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.260 2006/04/02 09:14:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.261 2006/04/06 12:58:06 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1573,12 +1573,12 @@ gcc-compiler_src_install() {
 		# These should be symlinks
 		dodir /usr/bin
 		cd "${D}"${BINPATH}
-		for x in gcc g++ c++ g77 gcj gcjh gfortran ; do
+		for x in cpp gcc g++ c++ g77 gcj gcjh gfortran ; do
 			# For some reason, g77 gets made instead of ${CTARGET}-g77...
 			# this should take care of that
 			[[ -f ${x} ]] && mv ${x} ${CTARGET}-${x}
 
-			if [[ -f ${CTARGET}-${x} ]] && ! is_crosscompile; then
+			if [[ -f ${CTARGET}-${x} ]] && ! is_crosscompile ; then
 				ln -sf ${CTARGET}-${x} ${x}
 
 				# Create version-ed symlinks
