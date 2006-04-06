@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r4.ebuild,v 1.13 2006/01/31 16:08:13 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r4.ebuild,v 1.14 2006/04/06 15:44:35 metalgod Exp $
 
 inherit eutils flag-o-matic
 filter-mfpmath "sse" "387"
@@ -11,9 +11,9 @@ MY_P=${P/windowm/WindowM}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="The fast and light GNUstep window manager"
-SRC_URI="ftp://ftp.windowmaker.org/pub/source/release/${MY_P}.tar.gz
-	 ftp://ftp.windowmaker.org/pub/source/release/WindowMaker-extra-0.1.tar.gz"
-HOMEPAGE="http://www.windowmaker.org/"
+SRC_URI="ftp://ftp.windowmaker.info/pub/source/release/${MY_P}.tar.gz
+	 ftp://ftp.windowmaker.info/pub/source/release/WindowMaker-extra-0.1.tar.gz"
+HOMEPAGE="http://www.windowmaker.info/"
 
 DEPEND="|| ( ( x11-libs/libXt ) virtual/x11 )
 	media-libs/hermes
