@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/oracle-instantclient-basic
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.13 2006/04/05 18:56:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.14 2006/04/06 19:12:15 dertobi123 Exp $
+
+  06 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  oracle-instantclient-basic-10.2.0.1-r1.ebuild,
+  oracle-instantclient-basic-10.2.0.2.ebuild:
+  Fix nofetch message, bug #129039
 
 *oracle-instantclient-basic-10.2.0.2 (05 Apr 2006)
 

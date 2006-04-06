@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.1-r1.ebuild,v 1.3 2006/02/13 18:30:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.1-r1.ebuild,v 1.4 2006/04/06 19:12:16 dertobi123 Exp $
 
 inherit eutils
 
@@ -25,14 +25,19 @@ IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND="|| ( =sys-libs/libstdc++-v3-3.3* =sys-devel/gcc-3.3* )"
 
-pkg_setup() {
+my_arch() {
 	MY_P=MY_P_${ARCH}
 	export MY_P=${!MY_P}
 	MY_PSDK=MY_PSDK_${ARCH}
 	export MY_PSDK=${!MY_PSDK}
 }
 
+pkg_setup() {
+	my_arch
+}
+
 pkg_nofetch() {
+	my_arch
 	eerror "Please go to:"
 	eerror "  ${HOMEPAGE}"
 	eerror "and download the Basic client package with SDK, which are:"

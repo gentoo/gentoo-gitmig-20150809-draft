@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.2.ebuild,v 1.1 2006/04/05 18:56:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.2.ebuild,v 1.2 2006/04/06 19:12:16 dertobi123 Exp $
 
 inherit eutils
 
@@ -26,14 +26,19 @@ DEPEND="app-arch/unzip"
 RDEPEND="|| ( =sys-libs/libstdc++-v3-3.3* =sys-devel/gcc-3.3* )
 	app-admin/eselect-oracle"
 
-pkg_setup() {
+my_arch() {
 	MY_P=MY_P_${ARCH}
 	export MY_P=${!MY_P}
 	MY_PSDK=MY_PSDK_${ARCH}
 	export MY_PSDK=${!MY_PSDK}
 }
 
+pkg_setup() {
+	my_arch
+}
+
 pkg_nofetch() {
+	my_arch
 	eerror "Please go to:"
 	eerror "  ${HOMEPAGE}"
 	eerror "and download the Basic client package with SDK, which are:"
@@ -83,6 +88,6 @@ pkg_postinst() {
 	einfo "Examples are located in /usr/share/doc/${PF}/"
 	einfo
 	ewarn "A new eselect module has been added to easily switch between"
-	ewarn "different Instantclient versions and to set your ORACLE_HOME"
+	ewarn "different Instantclient versions and to set your ORACLE_HOME."
 	ewarn "See 'eselect oracle help' for reference"
 }
