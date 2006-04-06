@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/pynmr
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pynmr/ChangeLog,v 1.1 2005/03/31 19:45:20 ribosome Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pynmr/ChangeLog,v 1.2 2006/04/06 15:35:42 ribosome Exp $
+
+*pynmr-0.37f (06 Apr 2006)
+
+  06 Apr 2006; Olivier Fisette <ribosome@gentoo.org> +pynmr-0.37f.ebuild:
+  New version.
 
 *pynmr-0.32_alpha (31 Mar 2005)
 
