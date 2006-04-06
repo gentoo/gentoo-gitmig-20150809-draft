@@ -1,6 +1,9 @@
-MD5 c511b05e9bdcefd2afa02ab0e3f2b733 ChangeLog 2301
-RMD160 82efdf04619e42cff287ba78ee04ade8e984f782 ChangeLog 2301
-SHA256 dc6f734cb636b6a56d98c03e2a0648e3536384723f608b2139ee1802669b4164 ChangeLog 2301
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dfa38a33214ba6dfd44459ef698b926c ChangeLog 2422
+RMD160 d1aa1cd42942a9f6e43b42b59b92f9ad50625002 ChangeLog 2422
+SHA256 5c75f56264eceff4562a990f3ae9817b89c50b7f696faf4c8363b84e6a0ec603 ChangeLog 2422
 MD5 e02da1081e84b4266aff297f0e422688 files/digest-postgis-0.7.5-r2 135
 RMD160 7d5f32825082af0150afe0bda570baaedfd67dba files/digest-postgis-0.7.5-r2 135
 SHA256 b23f4248f0cc23310fb967fd6588d43a728df57f5b8d3ce8e2a6076f60fa47ff files/digest-postgis-0.7.5-r2 135
@@ -13,6 +16,9 @@ SHA256 41475351bac30f025f36bb2e72975971d22f1576d717bd388cf8ff9a8b4f1f3a files/di
 MD5 068275dc19c93d08c140031a8ae1f238 files/digest-postgis-1.1.1 66
 RMD160 d3eda25ce9bd3c7bebc7c0a27e0b84597bd7d9dd files/digest-postgis-1.1.1 66
 SHA256 7f3760e5e80c97a5927fdaed3738d86c64755c7d93ab1bd3a928b3a44400fc41 files/digest-postgis-1.1.1 66
+MD5 74f40ff3f40001a4f63b8bc558aabd85 files/digest-postgis-1.1.2 244
+RMD160 6cb427bacdb15ba68c494b454526a6a5313c0061 files/digest-postgis-1.1.2 244
+SHA256 c81dd0e4008794ce0b9f9add53e8c74935f65acce6b9a1dbe9474678aefb9c28 files/digest-postgis-1.1.2 244
 MD5 12ed945462c95968c560ca03fe6de27f files/postgis-1.1.1_doc.patch 711
 RMD160 182a5127d83b18b48c5b013b63427d485f770e36 files/postgis-1.1.1_doc.patch 711
 SHA256 4c0b50b26bc22e09d60ac14ad4639880e1fca7c92eb55929d6dc10c0ec4ce691 files/postgis-1.1.1_doc.patch 711
@@ -31,3 +37,13 @@ SHA256 24294081cf70654bab9105f3f9fd4821d770902b32a57fc3863dadfa1bc4af50 postgis-
 MD5 711371bd655349d64bf4ab6f991de7f3 postgis-1.1.1.ebuild 3124
 RMD160 500e3ace07ae38be023448960adf39a284441052 postgis-1.1.1.ebuild 3124
 SHA256 44fda4fc3ddace34b1bef07c46dba6a7383299534a8434db203a55498cbb0bc4 postgis-1.1.1.ebuild 3124
+MD5 fb4d413bc72dca4fd3a89fb0af427dd4 postgis-1.1.2.ebuild 2708
+RMD160 28eeaaad9891ebf2c06bddd6171d2a15cb2fddf3 postgis-1.1.2.ebuild 2708
+SHA256 247eea372666c74b24d8e0d206cf1a40290f283f0a0a9231f009d4cac03c398d postgis-1.1.2.ebuild 2708
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFENXneGG5LT2KRH24RAgltAJ4yy0zw95zUmlO5ZMWmPWyLd2OFNACePkbJ
+0BJFpyAOuFmpvv86BNmfYWQ=
+=d+ea
+-----END PGP SIGNATURE-----
