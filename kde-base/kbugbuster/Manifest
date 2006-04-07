@@ -1,40 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e6760f062201e5070f62444d687ec08d ChangeLog 4309
-RMD160 57ca1b022f1dee74f3992b59263e84ba84e569ac ChangeLog 4309
-SHA256 3243a313055db577e459bd7b90222dff3bd9808bc74791dcf8faa37812efbaaf ChangeLog 4309
+MD5 e64d307459eb88a4284caf393b8e4a6e ChangeLog 4397
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kbugbuster-3.4.1 206
-RMD160 537c88444c961cfc4b7af18ca00a8be224f64cee files/digest-kbugbuster-3.4.1 206
-SHA256 39c922f0ac54c84622428b955b44427f3e093a3f6d089f601670375413cda7fc files/digest-kbugbuster-3.4.1 206
 MD5 0a38813829924b012d8b632f47abb45d files/digest-kbugbuster-3.4.2 280
-RMD160 595358b87b29a71b3a8461a6bcde784833edd1ad files/digest-kbugbuster-3.4.2 280
-SHA256 568edb58c6487c2343f90088a3a1f22bec8de3a242a5d269f77cd4f4d20e7f4d files/digest-kbugbuster-3.4.2 280
 MD5 c697e8b36b03bdccd95cf2d3980a0634 files/digest-kbugbuster-3.4.3 66
-RMD160 f98c638a74524f4ba73ec5e5b6937e006f0eac58 files/digest-kbugbuster-3.4.3 66
-SHA256 afdef23e83c0fedba0db5fbd5dc71a68a84f831545b9e4aa504279d91b2e4780 files/digest-kbugbuster-3.4.3 66
 MD5 735367f045761a378c59b0aedd04892c files/digest-kbugbuster-3.5.2 244
-RMD160 6b0561e97b2c584c31c601eabe995ca3348f8a85 files/digest-kbugbuster-3.5.2 244
-SHA256 85ed46a0b0c32506130eea2adbd51b3c866bbe3002ac4dcf21bbdb652ef26707 files/digest-kbugbuster-3.5.2 244
 MD5 f0185e15faeb197ecb66dc00f9562191 kbugbuster-3.4.1.ebuild 609
-RMD160 b24b00844db0d4db5b31376f67bceb435f66e8c7 kbugbuster-3.4.1.ebuild 609
-SHA256 9f558f309bfbf8e109faee9ff13c3706bfbfa8e87b5b7b9049806a0ece805971 kbugbuster-3.4.1.ebuild 609
 MD5 d4446996a1eea24d28c40f0bef4c4e98 kbugbuster-3.4.2.ebuild 617
-RMD160 8eb076f82f3e324b4e3455bb29bd4566c1db0752 kbugbuster-3.4.2.ebuild 617
-SHA256 f49159226f0660b27b275cc6198776a126a730134e20d74dd5600f9d22551fa2 kbugbuster-3.4.2.ebuild 617
 MD5 8fde1993d0c1cf4b4c0eacccd327156d kbugbuster-3.4.3.ebuild 613
-RMD160 9e34932157c4521bc9743a06a461b9abb638caca kbugbuster-3.4.3.ebuild 613
-SHA256 9f8546b9740a65a82f345fd04091ef384110b1ade814f17e927436d1a4d6043c kbugbuster-3.4.3.ebuild 613
-MD5 a2d44e48f6788418fc7a05f41d6cb4db kbugbuster-3.5.2.ebuild 559
-RMD160 3e8348a86c6d1b60d822279dbadc08130c36ddc8 kbugbuster-3.5.2.ebuild 559
-SHA256 28ceb85e551e6e5d88d733d9e38c6c317835edd38918589ac1bcbe55ad36c43b kbugbuster-3.5.2.ebuild 559
+MD5 0daa7778f02b9af7721546936643e3e8 kbugbuster-3.5.2.ebuild 565
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENGkaAiZjviIA2XgRAiVsAJ9bWudptRlzc/x0vFKcafPZwfV3YACgrNpv
-hsQdeIU+jCliMWJKEtnjz3M=
-=Qefq
------END PGP SIGNATURE-----
