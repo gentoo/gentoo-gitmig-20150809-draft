@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 230e20dc0c71ce6bfb1f43daada4cd37 ChangeLog 16835
-RMD160 15c0c0d3bd25742474667803a4f7d15351fe5c8b ChangeLog 16835
-SHA256 62dc68a2b3f89635bd9590afeac536d3f4c1c3f03cd09e6a873fe346697a30dc ChangeLog 16835
-MD5 c6ad97122b1cfc9300845c73ca3d075a amavisd-new-2.3.3-r2.ebuild 5470
-RMD160 fdbdfa2ee5f5e1c66b55d0c51756562cd88b30aa amavisd-new-2.3.3-r2.ebuild 5470
-SHA256 67c7f72366d9582689b7d564bf1721638c8437787da1482a8e29123f0d47043b amavisd-new-2.3.3-r2.ebuild 5470
+MD5 33e6dbfbbf68a3f974f3257414e24c60 ChangeLog 17022
+RMD160 8835e1e49db260fd053b5af9813346fd7bcdd5be ChangeLog 17022
+SHA256 4b27b960476a4dd717521a0ba196200b18de3817a54f14384959aa0bf8f76447 ChangeLog 17022
+MD5 b7b7fc649bb77dd63d3f3eb35b3008ba amavisd-new-2.3.3-r2.ebuild 5478
+RMD160 55d4d5e71ed838673618cc73580305ccdc0cfe18 amavisd-new-2.3.3-r2.ebuild 5478
+SHA256 eee1e7439e7eca811cc318a883daa26ea2c43b18ab1e040d926b066b3ec4c9d4 amavisd-new-2.3.3-r2.ebuild 5478
 MD5 ee33de51df853bd8426a4304f264245f files/amavisd-new-2.2.1-qmail-lf-workaround.patch 688
 RMD160 45092cfb4180d5cac8abc38068105b619945dfe6 files/amavisd-new-2.2.1-qmail-lf-workaround.patch 688
 SHA256 5e32e1fbcf172ce108ba1b494722894719ea31ed90d55610bffdb241246cfb57 files/amavisd-new-2.2.1-qmail-lf-workaround.patch 688
@@ -26,9 +26,9 @@ MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
 RMD160 c37bff1fc1cd7139c91dae9b0fa5082e1d81f153 metadata.xml 184
 SHA256 d51011aa837db802ef539a1321a4af0a4a00879d475b92fd58f3c01df7320b58 metadata.xml 184
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDywiV3J2n04EauwRAuQSAKCQLK6oSKldRU3VQN2YfHaI7qkSQwCeO1Zi
-6g5+KsMKbdkCdggg9gI6eto=
-=ebVA
+iD8DBQFENr8sQlM6RnzZP+IRAsObAKCqwtUGcbhfUX+3gz7OYrwjPP0bkQCfcT7n
+CO0dEFYxvixiHTrvt682MMc=
+=7bmi
 -----END PGP SIGNATURE-----

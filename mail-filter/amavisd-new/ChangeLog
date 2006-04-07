@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.78 2006/03/08 19:10:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.79 2006/04/07 19:35:54 ticho Exp $
+
+  07 Apr 2006; Andrej Kacian <ticho@gentoo.org> amavisd-new-2.3.3-r2.ebuild:
+  Depend on <=net-server-0.90. Closes bug #129160, reported by Jeremy
+  Huddleston <eradicator@gentoo.org>.
 
   28 Feb 2006; Andrej Kacian <ticho@gentoo.org>
   -files/amavisd-new-2.2.1-amavisd.conf-gentoo.patch,
