@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 eb9e5755c7e93c9dcbe46884ffcbc4a2 ChangeLog 1084
 RMD160 af3f93d0ca33deb698e03418ac64a0dc7842041c ChangeLog 1084
 SHA256 c3f90a472a1b2316d6c4ca45e28543fdecc2674c130e491fa79f3ecdeaa14aaf ChangeLog 1084
@@ -10,3 +13,10 @@ SHA256 106c8618581360c66c2b535fcb7a6cb9ff318f1bd8e6c8f40f2f2f2d54e6787a metadata
 MD5 61e143c2d0545c5b7d25fb9ebadab60d ntp-syntax-20031001.ebuild 533
 RMD160 d0084bda83dbb56ba17ffe1fa91e813645657d7d ntp-syntax-20031001.ebuild 533
 SHA256 0be24a266cfaed62564142c2326abadbaa2ebf97e06a2d4de8a48cfb82df2897 ntp-syntax-20031001.ebuild 533
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFENuglugEuf3OQ0akRAg9jAJ94w6xcITDhGor2opEpLlZ2aBJqrwCcCyYL
+dEcNJf9ia1t+XxAm80qTOwQ=
+=l/Ye
+-----END PGP SIGNATURE-----
