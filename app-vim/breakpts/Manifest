@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aadad823eb46f086278f59b2a3fe8f73 ChangeLog 628
-RMD160 9b73a5347bede8e5871d05b0993b73ace7a7e157 ChangeLog 628
-SHA256 0ed9daea8bffd86540a4d86f551bc8411b9d5586218820b19a14be380ec77bc3 ChangeLog 628
+MD5 099f1ffe3a6dfe4b1a4249ff4e612a7e ChangeLog 727
+RMD160 3491e2c430ecdeea68c740fcb39be92a0e439b8f ChangeLog 727
+SHA256 f53d4fd1738d536a0fceda3cdc49615864c089e7d7940f185be46aec28fa754f ChangeLog 727
 MD5 1dfc8ed582aabf93e834d24e0c85eda8 breakpts-3.1.ebuild 781
 RMD160 70a414dd747f2cc10a720c1dd66697fda47ff072 breakpts-3.1.ebuild 781
 SHA256 1f674f05268ecb2f1a8ce7b44a2adae71677dbf3b13c4b00aa3c86046fc35c8c breakpts-3.1.ebuild 781
 MD5 b85f97ca7e788bade4791f9cdfc21c1f files/digest-breakpts-3.1 64
 RMD160 a90e4eccf35511ecc11542ca5fde1b30252f9939 files/digest-breakpts-3.1 64
 SHA256 16d6bef93bde5fa5e1d5a57bd3a8a68dc304260e99e29cb5a10f4a65a7983eb9 files/digest-breakpts-3.1 64
-MD5 c12b313eed9efb8f61723cb9ebf22c36 metadata.xml 253
-RMD160 aec1a411ed3592aa10fe3b2b80952362c7bd1b6d metadata.xml 253
-SHA256 e12ae1196e99a89e610778695e0712ce305387072752329dfc7c31c07d4105c3 metadata.xml 253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9rm7LLFUmVNQ7rkRApi0AKCG0hBwzC7hirnKtBMk4pqY4jgONQCePfOz
-evtdookr0mWqcUSumCqvGYY=
-=U3J7
------END PGP SIGNATURE-----
+MD5 03408b23ff38d83b09d299387892f54d metadata.xml 157
+RMD160 adcd6494e1e562ab5e0bd090e114622782ac753a metadata.xml 157
+SHA256 106c8618581360c66c2b535fcb7a6cb9ff318f1bd8e6c8f40f2f2f2d54e6787a metadata.xml 157
