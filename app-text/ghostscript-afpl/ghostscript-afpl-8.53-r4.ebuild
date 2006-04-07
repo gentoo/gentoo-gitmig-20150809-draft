@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53-r4.ebuild,v 1.2 2006/04/05 19:05:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53-r4.ebuild,v 1.3 2006/04/07 13:23:41 blubb Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/ghostscript/${MY_P}.tar.gz
 
 LICENSE="Aladdin"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE="X cups cjk emacs gtk jpeg2k"
 
 
