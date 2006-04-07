@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 adf86bc652e67f8711fcbbc6ff61f54f ChangeLog 5733
-RMD160 d7f0077b60c77a82d5a95bf9f16c3a0ecf53182e ChangeLog 5733
-SHA256 fe90d6b2095358243a1c93225285f8dafbafe3a76d240716e6ca5fb41a849722 ChangeLog 5733
+MD5 65ea17385c2bdf4ce11c43927b4d24d3 ChangeLog 5851
+RMD160 c76bc8d95f617c6300102a7beec9d238cb45e399 ChangeLog 5851
+SHA256 c3bc7ce7a95371544146e5641cdad19c39a85a10d1607b47b043e1dde7294f51 ChangeLog 5851
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kdenetwork-filesharing-3.4.1 218
 RMD160 c0e2ee6455423ea429f99ba244685685d5674bdb files/digest-kdenetwork-filesharing-3.4.1 218
 SHA256 70e16a898005aa1ac30889b94e3788906d8a1260e736f7e4e1e030dd18f5c738 files/digest-kdenetwork-filesharing-3.4.1 218
@@ -19,16 +16,9 @@ SHA256 52b00f11fd32c8093d5737584f0602cc0a9b52fc6f29e55f8a42881836b4d0da kdenetwo
 MD5 d7d433dc4e667408d70b8acf47577b80 kdenetwork-filesharing-3.4.2.ebuild 484
 RMD160 8082f30f0fb7c1684b0f2f4d71b53b5fed3b5c95 kdenetwork-filesharing-3.4.2.ebuild 484
 SHA256 157c5adc4c77bca699689da632c4e022a386d0e46f917db3593cb7c77a739ba8 kdenetwork-filesharing-3.4.2.ebuild 484
-MD5 00cd3eb00af7d5852864607e14d6ca14 kdenetwork-filesharing-3.5.2.ebuild 488
-RMD160 1cd4bbc07030843377393f8ec411889022a91ad0 kdenetwork-filesharing-3.5.2.ebuild 488
-SHA256 230a17d2f07dd67f88020ec1e9cc266edf9c66075f1a2c4fe4ea5ebd65dd918f kdenetwork-filesharing-3.5.2.ebuild 488
+MD5 ffcd4836c5ff6247ec6f16a64c7e5382 kdenetwork-filesharing-3.5.2.ebuild 499
+RMD160 a16fd3892f01341d2b6ea6a0d7c940bad5ddee52 kdenetwork-filesharing-3.5.2.ebuild 499
+SHA256 20bce8cbb0ced5a907715f18081b212e6f28a08e369fe5faa7e2152b6ecf4650 kdenetwork-filesharing-3.5.2.ebuild 499
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENG7oAiZjviIA2XgRAsIUAKC+KcsS8wiGp+YiGz/vk/79xMq5GACg5Rwb
-u36O3qjZM8auMzdgLOCHEzA=
-=jcLT
------END PGP SIGNATURE-----

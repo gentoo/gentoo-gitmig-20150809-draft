@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 035bf4e49f658bf60dc35cea7a4b0430 ChangeLog 5843
-RMD160 5847e2d6328d835af5ddcf00730242ba11a5aaf1 ChangeLog 5843
-SHA256 149ed01aabb39e6db3a68c7835e33b78c2161292b0ec5af190e235e5ccc05aa4 ChangeLog 5843
+MD5 56c771d286516d8de55ef9a722e8a631 ChangeLog 5963
+RMD160 a3ccbd925740a735b61f9823493258dcb8d6f03a ChangeLog 5963
+SHA256 b48c227a71b06ba39c837520461594522a6d63de9907cad50c9dc337545225e6 ChangeLog 5963
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kdenetwork-kfile-plugins-3.4.1 218
 RMD160 c0e2ee6455423ea429f99ba244685685d5674bdb files/digest-kdenetwork-kfile-plugins-3.4.1 218
 SHA256 70e16a898005aa1ac30889b94e3788906d8a1260e736f7e4e1e030dd18f5c738 files/digest-kdenetwork-kfile-plugins-3.4.1 218
@@ -19,16 +16,9 @@ SHA256 0de67590a5a48ac23aea4ac3084dd342d71e48d663b5e522690f9d889641cea3 kdenetwo
 MD5 21ccb47eb1088d7eba69842e9bb1619a kdenetwork-kfile-plugins-3.4.2.ebuild 524
 RMD160 8b13ee4496dbf9a8545fe090be2767ca6d6c0aca kdenetwork-kfile-plugins-3.4.2.ebuild 524
 SHA256 e735847fe00ab1cb82b7d0ca122bc99c7b2b1965406ee2ea6fbdc962cad10f6c kdenetwork-kfile-plugins-3.4.2.ebuild 524
-MD5 b79a3496a41dd849cbbb1c567b095690 kdenetwork-kfile-plugins-3.5.2.ebuild 528
-RMD160 6ae5bbc8cf021d2b5381af0de1f9f07d4202b303 kdenetwork-kfile-plugins-3.5.2.ebuild 528
-SHA256 ff64550e54650114fcdbd3b592a8cecc32acca07039c45fc14133ed3e642231d kdenetwork-kfile-plugins-3.5.2.ebuild 528
+MD5 af8e62f2cc6bb8f0686e2aa7483cd07e kdenetwork-kfile-plugins-3.5.2.ebuild 539
+RMD160 66f8b791248f535e2bae93ee250e9a5c0035abba kdenetwork-kfile-plugins-3.5.2.ebuild 539
+SHA256 70c36924ebd9abbac50a558a197b92d506baaf91091bf4dbdb5750dcc2f440d0 kdenetwork-kfile-plugins-3.5.2.ebuild 539
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENG9CAiZjviIA2XgRApd0AJ41H7mBTwCkrm89GEa6OtM9nEGJpACeMm6T
-ju1R+SVhpizlnUM2Buw/kRA=
-=1V88
------END PGP SIGNATURE-----

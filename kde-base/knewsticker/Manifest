@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 389ed43c08c80bc86e43a855f4cb7ce4 ChangeLog 5194
-RMD160 c5aecef388065fa26051242100ac8c3f834bb7df ChangeLog 5194
-SHA256 209dac6c0fc717fb991d4216dbd2c40bce98bd86beac2783b7312c6d3f1b3781 ChangeLog 5194
+MD5 b6a8cefae2cc32c970bbaea847e98fb5 ChangeLog 5301
+RMD160 8c259b3e91dab6f960fb09ed149327def81149bc ChangeLog 5301
+SHA256 2213cecd5dc7f36ee4318859cfb7ef0333c90396f7df7d2d2e678b3cac5d5609 ChangeLog 5301
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-knewsticker-3.4.1 218
 RMD160 c0e2ee6455423ea429f99ba244685685d5674bdb files/digest-knewsticker-3.4.1 218
 SHA256 70e16a898005aa1ac30889b94e3788906d8a1260e736f7e4e1e030dd18f5c738 files/digest-knewsticker-3.4.1 218
@@ -25,16 +22,9 @@ SHA256 eed9c9cfb27daa633b9a7106029bf5630d326cd43a5425b9f9f2e9429a20423e knewstic
 MD5 b08f792d47c42322b09ffd659ce770a3 knewsticker-3.4.3.ebuild 557
 RMD160 03f7f863a4a75535919dcea4795750cc5fe8e6b7 knewsticker-3.4.3.ebuild 557
 SHA256 7bfbd66d968cdf6195f2e131613dc7ef476b04f741ac11e19bb91239350b5748 knewsticker-3.4.3.ebuild 557
-MD5 78bd3b037e7d64ab9794e2441aaa839c knewsticker-3.5.2.ebuild 529
-RMD160 358e68efe5ec6541cce0ef8480808e553cbcc370 knewsticker-3.5.2.ebuild 529
-SHA256 6e6c48a5cdc1a16ce65c745c4ad1afab2e68900c72ab193747892cf522e44cb4 knewsticker-3.5.2.ebuild 529
+MD5 acff59378f8b5cbd44e73a92961beff1 knewsticker-3.5.2.ebuild 540
+RMD160 fefdacc252cb75c51f5ea72487cfa0c66d6fa135 knewsticker-3.5.2.ebuild 540
+SHA256 7cfd20d315201458a07538fbccd72e813feaf23974ab429206807d6fa6e8d9f6 knewsticker-3.5.2.ebuild 540
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENHrSAiZjviIA2XgRAv7SAKDfk04bAuSfS1uq+cPbCBd1omeuRwCfSSGS
-7YA8CrmGy33aKFmsMFDyP2A=
-=jITm
------END PGP SIGNATURE-----
