@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.19-r1.ebuild,v 1.1 2006/04/03 02:48:22 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.19-r1.ebuild,v 1.2 2006/04/07 13:30:38 tcort Exp $
 
-inherit eutils
+inherit eutils python
 
 DESCRIPTION="Quod Libet is a new kind of audio player."
 HOMEPAGE="http://www.sacredchao.net/quodlibet"
@@ -72,3 +72,8 @@ src_install() {
 		die "install failed"
 	dodoc README NEWS
 }
+
+pkg_postrm() {
+	python_mod_cleanup /usr/share/${PN}
+}
+
