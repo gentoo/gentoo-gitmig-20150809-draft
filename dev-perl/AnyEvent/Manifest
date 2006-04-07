@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a2ffa9ff8f495aad240b254f7f8aaa8f AnyEvent-1.02.ebuild 540
 RMD160 115ad61fe5003cfe25be68913f796b849e63d5d4 AnyEvent-1.02.ebuild 540
 SHA256 ea3ea7b516309efed611bab21ebd15de8b63349fc6bbe3194b64a95ae707944e AnyEvent-1.02.ebuild 540
@@ -10,3 +13,10 @@ SHA256 d0d2a7db5a12f55076ec15838e2e69f6c1a11d68dabc9f76a6d896e1b898b739 files/di
 MD5 375c79b8107a010e078aeb0ccdb68d70 metadata.xml 307
 RMD160 2ba66b55d9468d5de0aeb64c1d4ea5e448c91d1a metadata.xml 307
 SHA256 a78bd40b10db2a2ceec8a1dc51756202461d4245c390b1c4c50203f8bf08a46e metadata.xml 307
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFENi3Z/aM9DdBw91cRAm6NAJwP40BNp9dK01YtXRwoftbQQ4c54QCg4Eg2
+8KemvztcSlISK4buDL2Jou0=
+=Gnnb
+-----END PGP SIGNATURE-----
