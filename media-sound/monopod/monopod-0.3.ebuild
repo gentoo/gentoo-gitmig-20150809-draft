@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/monopod/monopod-0.3.ebuild,v 1.2 2006/03/20 00:45:39 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/monopod/monopod-0.3.ebuild,v 1.3 2006/04/07 17:58:37 dertobi123 Exp $
 
 inherit gnome2 mono
 
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.usefulinc.com/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND=">=dev-lang/mono-1.1.6
 		>=dev-dotnet/glade-sharp-1.9.5
