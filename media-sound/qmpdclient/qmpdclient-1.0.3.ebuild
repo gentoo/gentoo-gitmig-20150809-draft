@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.3.ebuild,v 1.1 2006/04/07 21:40:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.3.ebuild,v 1.2 2006/04/07 21:53:00 ticho Exp $
 
 inherit eutils
 
@@ -10,16 +10,16 @@ SRC_URI="http://havtknut.tihlde.org/software/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE="debug"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 DEPEND=">=x11-libs/qt-4.1"
 
 src_compile() {
-	if use debug; then
-		sed -ie 's/CONFIG -= debug/CONFIG += debug/' ${S}/src/src.pro || \
-				die 'sed failed in debug'
-	fi
+#	if use debug; then
+#		sed -ie 's/CONFIG -= debug/CONFIG += debug/' ${S}/src/src.pro || \
+#				die 'sed failed in debug'
+#	fi
 
 	./configure || die "configure failed"
 	emake || die "make failed"
