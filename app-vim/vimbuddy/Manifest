@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 73f6898c0e1135fb981b03a80f86e94f ChangeLog 1366
 RMD160 857890b51ab07f7f926d16bbfc2d8b6e88aeb341 ChangeLog 1366
 SHA256 a94357f5aad7fc3e3ce1fd48c8d56e3e0f0cdee71bb6d49bb0d68008daf8c6ad ChangeLog 1366
@@ -19,3 +22,10 @@ SHA256 102b95cdb5aaa299b1346098060d33fdb43f55911333586ef894eb44446b3031 vimbuddy
 MD5 c5deab7cf5854de010da749f7ef7be37 vimbuddy-0.9.1.ebuild 507
 RMD160 df12fcce3bd213486b23afbd8b88b19844bb3402 vimbuddy-0.9.1.ebuild 507
 SHA256 e4be62eda28cda7e6e00290ac3b442bb69fc8776864c40e358c78964c4e7da6f vimbuddy-0.9.1.ebuild 507
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFENtKXugEuf3OQ0akRAqdRAKCiUwdKQ9ilHdNecwRN8EM7m1sKfgCfa3cf
+Cn3Abslyg8RWaCjfXwcj72Q=
+=RzxC
+-----END PGP SIGNATURE-----
