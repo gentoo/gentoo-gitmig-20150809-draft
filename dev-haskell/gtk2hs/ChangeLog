@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/gtk2hs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.26 2006/03/01 19:25:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.27 2006/04/07 21:29:31 araujo Exp $
+
+*gtk2hs-0.9.10-r1 (07 Apr 2006)
+
+  07 Apr 2006; Luis F. Araujo <araujo@gentoo.org>
+  +files/gtk2hs-0.9.10-store.patch, +gtk2hs-0.9.10-r1.ebuild:
+  New revision with patch for the treestore.
 
   01 Mar 2006; Markus Rothe <corsair@gentoo.org> gtk2hs-0.9.10.ebuild:
   Added ~ppc64; bug #124469
