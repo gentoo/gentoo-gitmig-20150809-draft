@@ -1,0 +1,26 @@
+diff -ur gnucap-2006-01-17/src/e_card.h gnucap-2006-01-17-plasmaroo/src/e_card.h
+--- gnucap-2006-01-17/src/e_card.h	2006-01-18 02:52:26.000000000 +0000
++++ gnucap-2006-01-17-plasmaroo/src/e_card.h	2006-04-07 23:10:54.000000000 +0100
+@@ -146,6 +146,8 @@
+     return false;
+   }
+ }
++
++CARD_LIST::fat_iterator findbranch(CS&,CARD_LIST::fat_iterator);
+ /*--------------------------------------------------------------------------*/
+ inline CARD_LIST::fat_iterator findbranch(CS& cmd, CARD_LIST* cl)
+ {
+diff -ur gnucap-2006-01-17/src/e_compon.h gnucap-2006-01-17-plasmaroo/src/e_compon.h
+--- gnucap-2006-01-17/src/e_compon.h	2006-01-18 02:52:26.000000000 +0000
++++ gnucap-2006-01-17-plasmaroo/src/e_compon.h	2006-04-07 23:10:10.000000000 +0100
+@@ -97,6 +98,10 @@
+   mutable const MODEL_CARD* _model;
+   int		_attach_count;
+ };
++
++void attach_common(COMMON_COMPONENT* c, COMMON_COMPONENT** to);
++void detach_common(COMMON_COMPONENT** from);
++
+ /*--------------------------------------------------------------------------*/
+ /* note on _attach_count ...
+  * The int argument is the initial _attach_count (default = 0)
