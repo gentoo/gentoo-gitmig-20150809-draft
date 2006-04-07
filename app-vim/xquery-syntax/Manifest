@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8020475198fddf151f2f8bd2bc1209a3 ChangeLog 1504
-RMD160 87e125f25a80f4fc0be3ce95d04232dc023e7080 ChangeLog 1504
-SHA256 927818aa07c94e18a40eb8c6b1c386cbd6f4fd94958d5bab28b54b3261dd72cd ChangeLog 1504
+MD5 ce93f7c91a1fce5ea4c7c236c9bca337 ChangeLog 1605
+RMD160 98b00e9e49e437297df85228bda3219631abdfe1 ChangeLog 1605
+SHA256 047636a37f72147cee97df004b7bf1a6f2aa9c86a6754b4827d14ceae46916e7 ChangeLog 1605
 MD5 c73e6d5d78dd2898f11ffe6bfd0157a0 files/digest-xquery-syntax-0.1 68
 RMD160 225e6a5d84dcebd1ced4dc8511635dfb6dc221ac files/digest-xquery-syntax-0.1 68
 SHA256 977b2af9ad75c41cfe7b181c46b65227451ff4b5497645bef9ab70032669323c files/digest-xquery-syntax-0.1 68
 MD5 c73e6d5d78dd2898f11ffe6bfd0157a0 files/digest-xquery-syntax-0.1-r1 68
 RMD160 225e6a5d84dcebd1ced4dc8511635dfb6dc221ac files/digest-xquery-syntax-0.1-r1 68
 SHA256 977b2af9ad75c41cfe7b181c46b65227451ff4b5497645bef9ab70032669323c files/digest-xquery-syntax-0.1-r1 68
-MD5 c12b313eed9efb8f61723cb9ebf22c36 metadata.xml 253
-RMD160 aec1a411ed3592aa10fe3b2b80952362c7bd1b6d metadata.xml 253
-SHA256 e12ae1196e99a89e610778695e0712ce305387072752329dfc7c31c07d4105c3 metadata.xml 253
+MD5 03408b23ff38d83b09d299387892f54d metadata.xml 157
+RMD160 adcd6494e1e562ab5e0bd090e114622782ac753a metadata.xml 157
+SHA256 106c8618581360c66c2b535fcb7a6cb9ff318f1bd8e6c8f40f2f2f2d54e6787a metadata.xml 157
 MD5 9f17ccdf7fab27f5d806213b6bac7495 xquery-syntax-0.1-r1.ebuild 716
 RMD160 36de8d59494df8ad3f3ba0744dfe8d5e2534e2ba xquery-syntax-0.1-r1.ebuild 716
 SHA256 a00fe97d71138a2c2b2442184898ee4f9b9ccb4c648867c952b467f7631540cd xquery-syntax-0.1-r1.ebuild 716
 MD5 c8ea498569f73d4871c6db61666015b4 xquery-syntax-0.1.ebuild 531
 RMD160 9e99d2565ac96cb0f499cf0d7b44833e2e6c2b7d xquery-syntax-0.1.ebuild 531
 SHA256 71160e64365fdfd279348ef49d862b371a8c585e370e62a0720d522b8ec74af0 xquery-syntax-0.1.ebuild 531
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9rmbLLFUmVNQ7rkRAnplAJ4w8TR4B+C9tPQ48XhIkFDkKuY43wCgvxv5
-sL6ZKa9N5i4pAISsowbxcyI=
-=dEXW
------END PGP SIGNATURE-----
