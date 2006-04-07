@@ -1,6 +1,15 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.79 2006/04/07 19:35:54 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.80 2006/04/07 20:26:10 ticho Exp $
+
+*amavisd-new-2.4.0 (07 Apr 2006)
+
+  07 Apr 2006; Andrej Kacian <ticho@gentoo.org>
+  +files/amavisd-new-2.4-amavisd.conf-gentoo.patch,
+  +files/amavisd-new-2.4-qmail-lf-workaround.patch,
+  +amavisd-new-2.4.0.ebuild:
+  Version bump. Closes bug #128698, reported by Matthew Sutton <msutton at
+  circletgsc.org>.
 
   07 Apr 2006; Andrej Kacian <ticho@gentoo.org> amavisd-new-2.3.3-r2.ebuild:
   Depend on <=net-server-0.90. Closes bug #129160, reported by Jeremy
