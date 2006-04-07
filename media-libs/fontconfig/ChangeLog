@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.65 2006/03/31 20:11:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.66 2006/04/07 11:18:52 foser Exp $
+
+*fontconfig-2.3.2-r1 (07 Apr 2006)
+
+  07 Apr 2006; Marinus Schraal <foser@gentoo.org> fontconfig-2.3.2-r1.ebuild,
+  files/fontconfig-2.3.2-pkg_config.patch, files/fontconfig-2.3.2-symbol_alias.patch :
+  Fix pkgconfig includes crudely (#83623)
+  Remove reference to /usr/X11R6 in configure (#122526)
+  Install more docs (#124287, thanks to Andy Kittner)
+  Add aliases for symbol and dingbats fonts (#124238, thanks to Florian Mickler)
 
   31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   fontconfig-2.3.2.ebuild:
