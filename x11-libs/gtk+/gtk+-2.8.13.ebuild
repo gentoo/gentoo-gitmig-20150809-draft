@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.13.ebuild,v 1.1 2006/03/03 21:09:11 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.13.ebuild,v 1.2 2006/04/07 11:25:57 flameeyes Exp $
 
 inherit gnome.org flag-o-matic eutils debug autotools
 
@@ -50,6 +50,7 @@ DEPEND="${RDEPEND}
 		>=dev-util/gtk-doc-1.4
 		~app-text/docbook-xml-dtd-4.1.2 )"
 
+RESTRICT="confcache"
 
 pkg_setup() {
 	if ! built_with_use x11-libs/cairo X; then
