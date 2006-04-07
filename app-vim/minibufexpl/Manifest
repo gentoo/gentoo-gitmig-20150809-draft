@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c7b6559f74bfcabea35acc6ef5b19f6f ChangeLog 2560
 RMD160 3554477b67aa0b19f212aff1c2959cbbdf0c062c ChangeLog 2560
 SHA256 be885934200a8de1cdfb44a98ea1efad448bfcf0788cbcef46a26791dce4b305 ChangeLog 2560
@@ -16,3 +19,10 @@ SHA256 6c8f8ff600acdffbbe919725c6139914e12eb3a3089e7dfbf2cb71d1a22eb3e2 minibufe
 MD5 8a09933512b90880a0bd01844f36dd4d minibufexpl-6.3.2.ebuild 900
 RMD160 729583af712d732767ad046f7f91e775f81718ca minibufexpl-6.3.2.ebuild 900
 SHA256 5a2f2db70f08034d8cd0353a81eb75a5a1ab0b0a6430b49fe5c79178c492d864 minibufexpl-6.3.2.ebuild 900
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFENteaugEuf3OQ0akRApLoAJ49oaeoAFk63XJc3k0eLJrhAnrwQACglGP9
+msGCXrgsbIVc58uKNs2pXnw=
+=2q3C
+-----END PGP SIGNATURE-----
