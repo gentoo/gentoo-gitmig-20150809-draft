@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.39 2006/04/06 01:51:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.40 2006/04/07 11:59:01 flameeyes Exp $
+
+  07 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> kget-3.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kget-3.5.0.ebuild,
   -kget-3.5.1.ebuild:

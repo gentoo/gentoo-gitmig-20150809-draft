@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.41 2006/04/05 22:47:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.42 2006/04/07 12:00:20 flameeyes Exp $
+
+  07 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdenetwork-meta-3.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kdenetwork-meta-3.5.0.ebuild, -kdenetwork-meta-3.5.1.ebuild:
