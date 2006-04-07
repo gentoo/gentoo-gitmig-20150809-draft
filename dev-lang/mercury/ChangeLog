@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.4 2006/03/27 07:14:22 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.5 2006/04/07 12:11:44 keri Exp $
+
+*mercury-0.13.0_beta (07 Apr 2006)
+
+  07 Apr 2006; Keri Harris <keri@gentoo.org>
+  +files/mercury-0.13.0_beta-CFLAGS.patch,
+  +files/mercury-0.13.0_beta-docs.patch,
+  +files/mercury-0.13.0_beta-portage.patch, +mercury-0.13.0_beta.ebuild:
+  Version bump to development release.
 
   27 Mar 2006; Keri Harris <keri@gentoo.org> mercury-0.12.2.ebuild:
   Explicitly disable building dotnet grades. Thanks to Brian Danilko

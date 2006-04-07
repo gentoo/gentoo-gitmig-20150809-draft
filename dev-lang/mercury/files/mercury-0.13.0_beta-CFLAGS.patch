@@ -1,0 +1,31 @@
+--- mercury-compiler-0.13.0-beta-2006-04-03.orig/scripts/mgnuc.in	2006-01-25 17:57:48.000000000 +1300
++++ mercury-compiler-0.13.0-beta-2006-04-03/scripts/mgnuc.in	2006-04-04 22:39:40.000000000 +1200
+@@ -53,7 +53,7 @@
+ # -Wenum-clash          is for C++ only
+ # -Wunused              causes various spurious warnings
+ 
+-        OPT_OPTS="-O2 $CFLAGS_FOR_NO_STRICT_ALIASING -fomit-frame-pointer"
++        OPT_OPTS="@CFLAGS_FOR_OPT@"
+         DEBUG_OPT="-g"
+         COMPILER=gcc
+         ;;
+--- mercury-compiler-0.13.0-beta-2006-04-03.orig/configure	2006-04-03 22:37:02.000000000 +1200
++++ mercury-compiler-0.13.0-beta-2006-04-03/configure	2006-04-04 22:42:25.000000000 +1200
+@@ -3739,7 +3739,7 @@
+ # the `-lc' and `-lg' libraries have different contents; specifically,
+ # only the latter contains memalign().  We need to make sure that the
+ # test for memalign() doesn't use `-g', since `ml' doesn't use `-g'.
+-CFLAGS="-O"
++# CFLAGS="-O"
+ 
+ # we also need to add the appropriate `-I' options so that the test programs
+ # can #include various Mercury runtime headers.
+@@ -10005,7 +10005,7 @@
+ 		# enable, and why, see scripts/mgnuc.in.
+ 		CFLAGS_FOR_WARNINGS="-Wall -Wwrite-strings -Wshadow -Wmissing-prototypes -Wno-unused -Wno-uninitialized -Wstrict-prototypes"
+ 
+-		CFLAGS_FOR_OPT="-O2 -fomit-frame-pointer"
++		CFLAGS_FOR_OPT="$CFLAGS"
+ 		CFLAGS_FOR_DEBUG="-g"
+ 		MCFLAGS_FOR_CC=
+ 		;;

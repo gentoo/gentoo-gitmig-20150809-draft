@@ -1,0 +1,17 @@
+--- mercury-extras-0.13.0-beta-2006-04-03.orig/lex/Mmakefile	2002-12-03 17:48:31.000000000 +1300
++++ mercury-extras-0.13.0-beta-2006-04-03/lex/Mmakefile	2006-04-01 15:14:41.000000000 +1200
+@@ -20,12 +20,12 @@
+ # necessary, and everything put there.
+ #
+ #INSTALL_PREFIX := $(INSTALL_PREFIX)/extras
+-INSTALL_PREFIX = .
++#INSTALL_PREFIX = .
+ 
+ # Omit this line if you want to install the default grades.
+ # Edit this line if you want to install with different grades.
+ #
+-LIBGRADES = asm_fast.gc hlc.gc asm_fast.gc.tr.debug
++#LIBGRADES = asm_fast.gc hlc.gc asm_fast.gc.tr.debug
+ 
+ # Any application using these libraries will also need the following
+ # in its Mmakefile:

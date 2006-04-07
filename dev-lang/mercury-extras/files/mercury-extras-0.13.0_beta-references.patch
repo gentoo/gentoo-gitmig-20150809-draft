@@ -1,0 +1,13 @@
+--- mercury-extras-0.13.0-beta-2006-04-03.orig/references/Mmakefile	2004-02-17 13:00:24.000000000 +1300
++++ mercury-extras-0.13.0-beta-2006-04-03/references/Mmakefile	2006-04-01 16:15:40.000000000 +1200
+@@ -10,7 +10,9 @@
+ 
+ # Install in an "extras" subdirectory of the main installation tree
+ INSTALL_PREFIX := $(INSTALL_PREFIX)/extras
+-LIBGRADES = asm_fast.gc.tr asm_fast.gc.tr.debug
++LIBGRADES := 	$(foreach grade,$(LIBGRADES), \
++		$(subst .tr.,$(grade),$(findstring .tr.,$(grade))) \
++		$(filter %.tr,$(grade)))
+ 
+ MAIN_TARGET = libglobal
+ 
