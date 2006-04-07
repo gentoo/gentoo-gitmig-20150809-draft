@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.8-r1.ebuild,v 1.15 2006/04/07 18:01:40 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.8-r1.ebuild,v 1.16 2006/04/07 18:02:32 smithj Exp $
 
 inherit eutils
 
@@ -37,8 +37,6 @@ src_unpack() {
 
 	# Fix for bug #74069
 	epatch ${FILESDIR}/${P}-integer-overflow-fix.diff
-	# Fix for bug #127008
-	epatch ${FILESDIR}/${P}-patched-cmyk-ycck-fix.diff
 }
 
 src_compile() {
