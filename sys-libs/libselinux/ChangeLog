@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.46 2006/03/22 22:44:44 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.47 2006/04/07 04:02:47 pebenito Exp $
+
+  07 Apr 2006; Chris PeBenito <pebenito@gentoo.org> libselinux-1.30.ebuild:
+  Split python wrapper compile into a separate emake to ensure the main
+  library is built before trying to build the wrapper. Fixes bug #129074.
 
   22 Mar 2006; Chris PeBenito <pebenito@gentoo.org> -libselinux-1.24.ebuild,
   -libselinux-1.28.ebuild, libselinux-1.28-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.30.ebuild,v 1.2 2006/03/18 15:32:06 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.30.ebuild,v 1.3 2006/04/07 04:02:47 pebenito Exp $
 
 IUSE=""
 
@@ -30,7 +30,8 @@ src_unpack() {
 
 src_compile() {
 	python_version
-	emake PYLIBVER="python${PYVER}" LDFLAGS="-fPIC ${LDFLAGS}" all pywrap || die
+	emake LDFLAGS="-fPIC ${LDFLAGS}" all || die
+	emake PYLIBVER="python${PYVER}" LDFLAGS="-fPIC ${LDFLAGS}" pywrap || die
 
 	# add compatability aliases to swig wrapper
 	cat ${FILESDIR}/compat.py >> ${S}/src/selinux.py || die

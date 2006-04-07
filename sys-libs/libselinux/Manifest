@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 09d33da197c1ff962b5eff450af8a327 ChangeLog 6637
-RMD160 31c21fb4f3054f4da14ed02cc6ca0296415f230f ChangeLog 6637
-SHA256 f5d7da07aea2ee79b16d478e03bd14ead2a85f4ffd30b0ed34f1360ff909c2c7 ChangeLog 6637
+MD5 e2b42399bf465553e62ed02658bf1ea5 ChangeLog 6860
+RMD160 eff85d74f38b2d437ad2a5975a9255175c44cccc ChangeLog 6860
+SHA256 613347197ee0cead4fdd0772cbcefb230f4022448a38a54d1c1b9bfdfcd621c5 ChangeLog 6860
 MD5 ca253cc3a0e643b8d3e209a53d66dd50 files/compat.py 461
 RMD160 ae776a51f27564321845126c39874eab953a41cd files/compat.py 461
 SHA256 d3b3efe9b9fd946c917a6faccca715c4056748b9c861080fe6f6d7cfbaf87f50 files/compat.py 461
@@ -16,16 +13,9 @@ SHA256 3b664beda14edffcc9bdf9868f503da997bca7f01cdc478114096c71486a60a9 files/di
 MD5 0d6d8d50c7f23ef61337f5f58150b53b libselinux-1.28-r1.ebuild 1120
 RMD160 ce591947e72efcace593bbb531b3ca87d8cae16c libselinux-1.28-r1.ebuild 1120
 SHA256 040775ae2a0f209879acbb3344d2f2f61f976c0974977dec734d63f7fb4147fb libselinux-1.28-r1.ebuild 1120
-MD5 7b4a0aeba500763d2260cbb6c4472844 libselinux-1.30.ebuild 1355
-RMD160 5772788711fc6de74dcb808b91d0eff10cec5d8f libselinux-1.30.ebuild 1355
-SHA256 1f903046f2e6703b0bb561cc753fd3df81322f8eba2813eb7ee2e802290f464b libselinux-1.30.ebuild 1355
+MD5 56a0fb66daf651f9ad447ac39f0626f2 libselinux-1.30.ebuild 1396
+RMD160 06938988e3f4a11e70ac95d368d7e4fb8a74a2e9 libselinux-1.30.ebuild 1396
+SHA256 6310ab542bb699ea9c1763e625efbd5902d571e6ff03cfd9caf3cf7b2b581986 libselinux-1.30.ebuild 1396
 MD5 652c5e8a0a081bf4317359f04f65a603 metadata.xml 537
 RMD160 6adcd5fc653db8ad7780299214875297beb9c931 metadata.xml 537
 SHA256 e691ecff0c45ccbd6cf813fbd7f23e489dabad664e89e6b21b8c7c1785550f9e metadata.xml 537
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEIdNrJ+ChZlpDtAoRAl6uAJ0VfBdbHpyYqDQr5Ufd8H+oNqXu/gCfSE3p
-inrq/Cux24r4hDYjCdhTWFk=
-=IstU
------END PGP SIGNATURE-----
