@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.4.ebuild,v 1.5 2006/03/20 20:35:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.4.ebuild,v 1.6 2006/04/07 17:15:12 flameeyes Exp $
 
-inherit libtool eutils flag-o-matic
+inherit libtool eutils flag-o-matic autotools
 
 DESCRIPTION="A spell checker replacement for ispell"
 HOMEPAGE="http://aspell.net/"
@@ -10,17 +10,25 @@ SRC_URI="mirror://gnu/aspell/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~sparc ~x86"
-IUSE="gpm"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="gpm nls"
 
-DEPEND=">=sys-libs/ncurses-5.2
-	gpm? ( sys-libs/gpm )"
+RDEPEND=">=sys-libs/ncurses-5.2
+	gpm? ( sys-libs/gpm )
+	nls? ( virtual/libintl )"
+
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/aspell-0.60.3-templateinstantiations.patch
 	epatch "${FILESDIR}"/aspell-0.60.4-gcc-4.1-fix.patch
+	epatch "${FILESDIR}/${P}-nls.patch"
+
+	eautomake
+	elibtoolize --reverse-deps
 }
 
 src_compile() {
@@ -28,9 +36,9 @@ src_compile() {
 	filter-flags -fno-rtti
 	filter-flags -fvisibility=hidden #77109
 	filter-flags -maltivec -mabi=altivec
-	elibtoolize --reverse-deps
 
 	econf \
+		$(use_enable nls) \
 		--disable-static \
 		--sysconfdir=/etc/aspell \
 		--enable-docdir=/usr/share/doc/${PF} || die

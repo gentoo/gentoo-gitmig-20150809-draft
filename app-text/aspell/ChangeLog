@@ -1,6 +1,11 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.78 2006/03/20 20:35:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.79 2006/04/07 17:15:12 flameeyes Exp $
+
+  07 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/aspell-0.60.4-nls.patch, aspell-0.60.4.ebuild:
+  Add ~x86-fbsd keyword after fixing linking with libintl. Add nls useflag to
+  allow enabling/disabling nls support (with proper dependencies).
 
   20 Mar 2006; Fabian Groffen <grobian@gentoo.org> aspell-0.60.4.ebuild:
   Removed ~ppc-macos for 0.60.4, it has undefined symbols during the linking
