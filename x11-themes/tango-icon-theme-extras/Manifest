@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 951a13a508687e4dea1b624c259e3701 ChangeLog 896
 RMD160 ef73eb464fc64a6f7d128287e4b406a75136b798 ChangeLog 896
 SHA256 9bbd5731756ceb6020d3976e45dfef95afe2fd9df8de1dbaf854199771a62136 ChangeLog 896
@@ -10,3 +13,10 @@ SHA256 0d544700457efe5f7c24489f30572dd20c81a6d8879bf833f7d050408a79f36a metadata
 MD5 da03e639a7f5085dd7475b12cc3d6918 tango-icon-theme-extras-0.1.0.ebuild 898
 RMD160 f44cdb7ca87527c29b616a529f4179933cbd924a tango-icon-theme-extras-0.1.0.ebuild 898
 SHA256 25375d9b67ccf50010b7cc5218d08591c73b5cfab6fc3e774f8429ec366d8c90 tango-icon-theme-extras-0.1.0.ebuild 898
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFENgcaSENan+PfizARAidQAJ9PjMUt/pD+wjl6GSRodL99Uy/3BACcD29p
+iGKQpddIUZ49srNk8GfhHv0=
+=ic1d
+-----END PGP SIGNATURE-----
