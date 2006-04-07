@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povtree/povtree-1.5.ebuild,v 1.5 2006/01/21 14:03:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povtree/povtree-1.5.ebuild,v 1.6 2006/04/07 15:55:39 vanquirius Exp $
 
 S="${WORKDIR}"
 MY_P="${PN}${PV}"
@@ -13,8 +13,7 @@ LICENSE="as-is"
 SLOT="0"
 IUSE=""
 
-RDEPEND=">=virtual/jre-1.3
-	virtual/x11"
+RDEPEND=">=virtual/jre-1.3"
 DEPEND="app-arch/unzip"
 
 src_install() {
