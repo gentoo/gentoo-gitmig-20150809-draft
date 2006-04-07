@@ -3,9 +3,6 @@
 <pkgmetadata>
 	<herd>cron</herd>
 	<maintainer>
-		<email>ciaranm@gentoo.org</email>
-	</maintainer>
-	<maintainer>
 		<email>ka0ttic@gentoo.org</email>
 	</maintainer>
 </pkgmetadata>
