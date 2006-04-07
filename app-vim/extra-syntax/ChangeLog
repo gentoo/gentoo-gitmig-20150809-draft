@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/extra-syntax
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/ChangeLog,v 1.18 2006/02/05 22:13:02 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/ChangeLog,v 1.19 2006/04/07 21:05:05 kloeri Exp $
+
+  07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove ciaranm from metadata.xml.
 
   05 Feb 2006; Ciaran McCreesh <ciaranm@gentoo.org> extra-syntax-2.ebuild:
   Fix self circular deps

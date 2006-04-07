@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vimbuddy
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimbuddy/ChangeLog,v 1.9 2005/09/12 19:18:00 gmsoft Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimbuddy/ChangeLog,v 1.10 2006/04/07 20:58:46 kloeri Exp $
+
+  07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove ciaranm from metadata.xml.
 
   12 Sep 2005; Guy Martin <gmsoft@gentoo.org> vimbuddy-0.9.1-r1.ebuild:
   Stable on hppa.
