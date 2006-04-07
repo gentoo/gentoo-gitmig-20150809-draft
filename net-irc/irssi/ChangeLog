@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.83 2006/03/25 19:20:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.84 2006/04/07 12:01:43 flameeyes Exp $
+
+  07 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> irssi-0.8.10-r2.ebuild:
+  Add ~x86-fbsd keyword.
 
   25 Mar 2006; Sven Wegener <swegener@gentoo.org> irssi-0.8.10-r2.ebuild:
   Drop myconf from econf, we don't need it anymore.
