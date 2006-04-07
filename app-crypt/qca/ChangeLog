@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.25 2006/03/09 02:06:32 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.26 2006/04/07 11:51:18 flameeyes Exp $
+
+  07 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> qca-1.0-r2.ebuild:
+  Add ~x86-fbsd keyword.
 
   09 Mar 2006; Gustavo Felisberto <humpback@gentoo.org>; qca-1.0-r2.ebuild:
   Added no strip to lib at request from Flameeyes.
