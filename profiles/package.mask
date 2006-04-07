@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5188 2006/04/07 12:41:51 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5189 2006/04/07 14:03:11 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -348,10 +348,6 @@ games-fps/cube
 # Masking pending removal unless someone adds the needed 
 # dependencies. See bug 106421
 www-apache/mod_csv
-
-# Markus Dittrich <markusle@gentoo.org> (05 Mar 2006)
-# masked version bumped sci-libs/vtk for further testing
-=sci-libs/vtk-5.0.0
 
 # Stuart Herbert <stuart@gentoo.org> (05 Mar 2006)
 # Upstream have pulled the binaries
