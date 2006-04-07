@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/kchmviewer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.12 2006/04/06 14:48:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.13 2006/04/07 11:12:43 flameeyes Exp $
+
+  07 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kchmviewer-2.5-gcc41.patch, kchmviewer-2.5.ebuild:
+  Add patch to build with GCC 4.1, patch from Sebastian T. Hafner in bug #129094.
 
 *kchmviewer-2.5 (06 Apr 2006)
 

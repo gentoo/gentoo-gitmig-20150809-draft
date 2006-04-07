@@ -1,0 +1,11 @@
+--- ./origin/src/iconstorage.h	2006-04-02 04:09:14.000000000 +0200
++++ ./kchmviewer-2.5/src/iconstorage.h	2006-04-07 09:41:34.000000000 +0200
+@@ -57,7 +57,7 @@
+ 	const QPixmap * getBookIconPixmap (unsigned int id);
+ 	const QPixmap * getToolbarPixmap (pixmap_index_t pix);
+ 	const QPixmap * getApplicationIcon();
+-	const QPixmap * KCHMIconStorage::getCloseWindowIcon();
++	const QPixmap * getCloseWindowIcon();
+ 
+ private:
+ 	const QPixmap * returnOrLoadImage (unsigned int id, const png_memory_image_t * image);
