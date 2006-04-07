@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.16 2005/08/28 01:07:18 cryos Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.17 2006/04/07 13:57:30 markusle Exp $
+
+  07 Apr 2006; Markus Dittrich <markusle@gentoo.org> +netcdf-3.6.1.ebuild:
+  Version bump. Thanks much to Jordan Dawe <freedryk@hotmail.com>
+  for his ebuild. This fixes bug #128936.
 
   28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> -netcdf-3.5.0-r4.ebuild,
   -netcdf-3.5.1.ebuild:
