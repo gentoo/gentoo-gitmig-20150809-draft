@@ -1,14 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.4 2006/02/28 02:58:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.5 2006/04/07 20:17:15 markusle Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Charm++ is a message-passing parallel language and runtime system."
 LICENSE="charm"
 HOMEPAGE="http://charm.cs.uiuc.edu/"
-SRC_URI="mirror://gentoo/${PN}-examples-gentoo.patch.bz2
-		${P}.tar.gz"
+SRC_URI="${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~x86"
@@ -30,9 +29,7 @@ pkg_nofetch() {
 	echo
 	einfo "Please download ${P}.tar.gz from"
 	einfo "${CHARM_DOWNLOAD}"
-	einfo "as well as ${PN}-examples-gentoo.patch.bz2"
-	einfo "from ${GENTOO_MIRRORS}"
-	einfo "and then move both to ${DISTDIR}"
+	einfo "and then move it to ${DISTDIR}"
 	echo
 }
 
@@ -49,7 +46,7 @@ src_unpack() {
 
 	# patch the example Makefiles so they run out of
 	# the box
-	epatch "${WORKDIR}"/${PN}-examples-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-examples-gentoo.patch
 
 	# enable proper detection of python in configure
 	epatch "${FILESDIR}"/${PN}-python-configure-gentoo.patch
@@ -122,7 +119,13 @@ src_install() {
 	cd "${S}"
 	dodoc CHANGES README  || die "Failed to install docs"
 
-	# install examples
+	# install examples after fixing path to charmc
+	find examples/ -name 'Makefile' | xargs sed \
+		-r "s:(../)+bin/charmc:/usr/bin/charmc:" -i || \
+		die "Failed to fix examples"
+	find examples/ -name 'Makefile' | xargs sed \
+		-r "s:./charmrun:./charmrun ++local:" -i || \
+		die "Failed to fix examples"
 	insinto /usr/share/doc/${PF}/examples
 	doins -r examples/charm++/*
 
