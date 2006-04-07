@@ -1,6 +1,9 @@
 # ChangeLog for www-client/links
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.62 2006/04/05 15:01:48 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.63 2006/04/07 23:50:28 flameeyes Exp $
+
+  07 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> links-2.1_pre20.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> links-2.1_pre20.ebuild:
   Fix dependencies so that it doesn't fail in non-interactive builds. Thanks
