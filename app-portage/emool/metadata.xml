@@ -5,6 +5,7 @@
 <email>blubb@gentoo.org</email>
 <name>Simon Stelling</name>
 </maintainer>
+<herd>amd64</herd>
 <longdescription lang="en">
 emool is a tool to assist amd64 users in building 32bit libraries that are often
 required for binary-only games, analogue to the emul-linux-x86-* packages in
