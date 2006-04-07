@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/pump
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.28 2005/11/18 13:05:48 uberlord Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.29 2006/04/07 23:59:37 uberlord Exp $
+
+*pump-0.8.21-r9 (07 Apr 2006)
+
+  07 Apr 2006; Roy Marples <uberlord@gentoo.org>
+  +files/pump-0.8.21-gentoo-2.patch, +pump-0.8.21-r9.ebuild:
+  New patch, now with resolvconf support.
+  Actually we don't unpatch it from Debians patch, but whatever ;)
 
 *pump-0.8.21-r8 (18 Nov 2005)
 
