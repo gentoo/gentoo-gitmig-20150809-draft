@@ -1,18 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 00e03ae993eb82e1d2962fca42020b8d ChangeLog 1907
+MD5 e8b243b84cc0b589ceb2c23d4c25f0cd ChangeLog 2009
+RMD160 4a8dce8825ccb5d94a7c11b5bcd753de8fd6c906 ChangeLog 2009
+SHA256 1c4a81f4d76f21aa915e4cfa91d82b57da635d07d6ae9ec509739144d65381ed ChangeLog 2009
 MD5 cafcc26c1c4e8e50458c1d1e923fd3d0 doxygen-syntax-1.12.ebuild 961
+RMD160 05225b638c153ae7bb35a48dcb69b800ed171c38 doxygen-syntax-1.12.ebuild 961
+SHA256 b6a8bfd9e16b6b7e83f1b50d8605a84ea374d8875f7998726c83cf2c0132978f doxygen-syntax-1.12.ebuild 961
 MD5 241820f4d4f6e2725a7edb33e9e3343b doxygen-syntax-1.15.ebuild 970
+RMD160 a94d0b939e4a04dc896be3ed570704190db33852 doxygen-syntax-1.15.ebuild 970
+SHA256 686129d0aec8f9df8e40d95129db78b340389ad5fd1f43abb5e8a2dca352529d doxygen-syntax-1.15.ebuild 970
 MD5 787e361bdd4867d04f30cb0697e0bd48 doxygen-syntax-1.9.ebuild 961
+RMD160 bfbb47f782428e4bfad4e03ccfce5362f7e72f18 doxygen-syntax-1.9.ebuild 961
+SHA256 eeeed61a389e1f88d35569f899fcc000b68bc7ee48fd79ce0b70f3eafe4b8737 doxygen-syntax-1.9.ebuild 961
 MD5 35a70c649b40a8b1b2ae7d8ee4a5a6f0 files/digest-doxygen-syntax-1.12 70
+RMD160 280238b59da85a2463d50ad9c79a1a2c53401291 files/digest-doxygen-syntax-1.12 70
+SHA256 0d9fa3ba53e76dd795f1334f8222d0963cd5d4e91337a13d390491c514cf7a14 files/digest-doxygen-syntax-1.12 70
 MD5 d2eccec50a71f9df5d97a4d779e5285c files/digest-doxygen-syntax-1.15 71
+RMD160 9be4fcccb27d263266bf421580cd418a0bed906a files/digest-doxygen-syntax-1.15 71
+SHA256 6c84434398656ac6ffb43328dbf6043a03af45580e69879b111f0d0e380d57c4 files/digest-doxygen-syntax-1.15 71
 MD5 334c4bab69544a7dc354ed192de3c87b files/digest-doxygen-syntax-1.9 69
-MD5 8886b7d7a5037909f7ad8bc2c955e9bf metadata.xml 429
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDsGiaLLFUmVNQ7rkRAojaAKCAHuCD0gu9ryagQDUFLXLIQuT2WwCfSbTY
-8s/Yo0tud/Rw81k6A7qIuo4=
-=h5dh
------END PGP SIGNATURE-----
+RMD160 915f770941a25b356fc74c2d5f21ca7edb3f4fd2 files/digest-doxygen-syntax-1.9 69
+SHA256 2894d1d8b0a08d0ffd6b21c869ca22164a0cb4a461e7c245c31c936d5a047076 files/digest-doxygen-syntax-1.9 69
+MD5 d9d476df2fe23dff1a068edf82c2e22a metadata.xml 333
+RMD160 c4519f801bf64f0caea79b33537fede693d69a64 metadata.xml 333
+SHA256 6d784c41d3a6355963964c33f505179899bb6e9332a75fbde350e8f10ae82127 metadata.xml 333
