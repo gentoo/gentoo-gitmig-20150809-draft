@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Event-RPC
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/ChangeLog,v 1.9 2006/03/30 22:34:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/ChangeLog,v 1.10 2006/04/07 00:27:04 morfic Exp $
+
+*Event-RPC-0.89 (06 Apr 2006)
+
+  06 Apr 2006; Daniel Goller <morfic@gentoo.org> +Event-RPC-0.89.ebuild:
+  Bump to 0.89 to satisfy new dvd::rip dep
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Event-RPC-0.88.ebuild:
   Mark 0.88 ~ia64
