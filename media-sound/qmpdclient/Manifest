@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4815123b33c40bef7a8b6cb7152396c3 ChangeLog 471
+RMD160 ad06510749b5dd0903ea6d31332b7ec9c1167214 ChangeLog 471
+SHA256 107ec4bd6ec4e7f5c82ac0962db816071cfa08e9ad05be551be7e1dce8e63e20 ChangeLog 471
+MD5 b2906ce5edab687f32091173796aac23 files/digest-qmpdclient-1.0.3 250
+RMD160 4f52b1f9a2d8ef056df6eeabe5d7a3db28810993 files/digest-qmpdclient-1.0.3 250
+SHA256 f235fb402aba8ceac30373bb2f8f7d502e26ee7e7c3366d366f53cc2fd4a69a4 files/digest-qmpdclient-1.0.3 250
+MD5 9e20747ca35ab90c184bea70fa4c151b metadata.xml 312
+RMD160 385fc14db78fefd87d894c15403e1356afd251f6 metadata.xml 312
+SHA256 020f7c46ae8774fc31acda9fd827b37d8618787791b6d7abc3185177949f868d metadata.xml 312
+MD5 8ad7f2825157492b8f90571e4a4f9226 qmpdclient-1.0.3.ebuild 1047
+RMD160 ee2ea39f478d40c26911aeef7aa0b0eec192d0c6 qmpdclient-1.0.3.ebuild 1047
+SHA256 a7c1c1a9b86b2d9bd1b9b97bc2c34388171785f5d6c7a8ac054ab795f326a748 qmpdclient-1.0.3.ebuild 1047
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFENtxPQlM6RnzZP+IRAqdDAKCknzRojf8Y8WjDoz55Bxsj9FSVywCgi1lj
+Fe9BjhB3A65/UKGI0mT50m8=
+=NQF2
+-----END PGP SIGNATURE-----

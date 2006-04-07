@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/qmpdclient
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.1 2006/04/07 21:40:16 ticho Exp $
+
+*qmpdclient-1.0.3 (07 Apr 2006)
+
+  07 Apr 2006; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +qmpdclient-1.0.3.ebuild:
+  Initial import. Based on an ebuild by Gorch <gorch at 12move.de> and Avuton
+  Olrich <avuton at gmail.com>. Closes bug #122048.
+
