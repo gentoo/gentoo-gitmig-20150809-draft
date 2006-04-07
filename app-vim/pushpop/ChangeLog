@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/pushpop
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/pushpop/ChangeLog,v 1.6 2005/01/01 16:53:05 eradicator Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/pushpop/ChangeLog,v 1.7 2006/04/07 22:19:20 kloeri Exp $
+
+  07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove ciaranm from metadata.xml.
 
   05 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> pushpop-2.4.ebuild:
   Added help text, bug #62559

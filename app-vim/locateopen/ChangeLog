@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/locateopen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/locateopen/ChangeLog,v 1.19 2006/01/16 23:38:00 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/locateopen/ChangeLog,v 1.20 2006/04/07 22:21:24 kloeri Exp $
+
+  07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove ciaranm from metadata.xml.
 
 *locateopen-1.3 (16 Jan 2006)
 
