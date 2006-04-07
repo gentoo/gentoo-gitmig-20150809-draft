@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.3.2-r1.ebuild,v 1.2 2006/04/07 12:45:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.3.2-r1.ebuild,v 1.3 2006/04/07 13:12:18 foser Exp $
 
-inherit eutils libtool
+inherit eutils libtool autotools
 
 DESCRIPTION="A library for configuring and customizing font access"
 HOMEPAGE="http://fontconfig.org/"
@@ -25,8 +25,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-symbol_alias.patch
 	# fix pkgconfig includes (#83623)
 	epatch ${FILESDIR}/${P}-pkg_config.patch
+	# add docbook switch so we can disable it
+	epatch ${FILESDIR}/${P}-docbook.patch
 
-	elibtoolize
+	eautoreconf
+
+	# elibtoolize
 	epunt_cxx #74077
 
 }
@@ -38,6 +42,7 @@ src_compile() {
 
 	# disable docs only disables local docs generation, they come with the tarball
 	econf --disable-docs \
+		--disable-docbook \
 		--with-docdir=/usr/share/doc/${PF} \
 		--with-default-fonts=/usr/share/fonts \
 		--with-add-fonts=/usr/local/share/fonts,/usr/X11R6/lib/X11/fonts \
