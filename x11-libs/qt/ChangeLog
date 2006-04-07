@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.298 2006/04/07 00:01:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.299 2006/04/07 00:02:52 caleb Exp $
+
+  06 Apr 2006; Caleb Tennis <caleb@gentoo.org> qt-4.1.2.ebuild:
+  remove implicit PATH and ROOTPATH from env.d file per bug #128655
 
   06 Apr 2006; Caleb Tennis <caleb@gentoo.org>
   -files/qt-4.1.0-configure-no-mysql.diff,

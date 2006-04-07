@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.2.ebuild,v 1.1 2006/03/30 21:18:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.2.ebuild,v 1.2 2006/04/07 00:02:52 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -190,8 +190,6 @@ src_install() {
 	done
 
 	cat > "${T}/44qt4" << EOF
-PATH=${QTBINDIR}
-ROOTPATH=${QTBINDIR}
 LDPATH=${libdirs:1}
 QMAKESPEC=$(qt_mkspecs_dir)
 EOF
