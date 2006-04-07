@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5186 2006/04/06 19:23:08 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5187 2006/04/07 12:05:35 keri Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Keri Harris <keri@gentoo.org> (08 Apr 2006)
+# Development release, requires careful testing.
+# Some grades fail spectacularly with gcc4.
+=dev-lang/mercury-0.13.0_beta
+=dev-lang/mercury-extras-0.13.0_beta
 
 # Markus Ullmann <jokey@gentoo.org> (06 Apr 2006)
 # adding language pack builder, needs testing
