@@ -1,40 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b63482d7d249d10f204f1cf381c7ffb7 ChangeLog 1674
-RMD160 bbc2912626dbb0dbe13d934b64c38f622559d1ff ChangeLog 1674
-SHA256 d0ce84f48deda823e3c39570ff72ed749cf0fe6982d2c240f5995341a3950fcc ChangeLog 1674
+MD5 2049d670ae067fa7548fbe63ac96987f ChangeLog 1781
 MD5 232ce6bbb6cc38936f56979269e5bd7b files/digest-gxmms-0.1.0 63
-RMD160 7adcfc0b8c7d5e9cd4243ff0d3a6a6349a3a6216 files/digest-gxmms-0.1.0 63
-SHA256 0f33bd83d91db9954410d84f3b1f06fc4d7ea1f16d8501621b920821140ffaef files/digest-gxmms-0.1.0 63
 MD5 c2f098f9e51f7348d813e4fb383ce463 files/digest-gxmms-0.1.1 63
-RMD160 b5449b9d937cfa1c22bd6c0b44db2dcf518c5068 files/digest-gxmms-0.1.1 63
-SHA256 503504dbdeb1a7731eb69da31215605f5fd04aedeb1a67c2d9c7ac9e6f2e5b17 files/digest-gxmms-0.1.1 63
 MD5 f69474d7ef5538b0c4f8355c812f2b1a files/digest-gxmms-0.2.1 63
-RMD160 2db75b98b36ec40231d79a61b4895de33b87ed88 files/digest-gxmms-0.2.1 63
-SHA256 6d575224649b8ccdb990c78ad88ce3cd29f182e9160e7fcd76ca18ccea008dae files/digest-gxmms-0.2.1 63
 MD5 aac45a6a47987e460b1fdf26497ffb9e files/digest-gxmms-0.3.0 63
-RMD160 fd6b75f0e32189861d1c79a323e6f2eb61ee815e files/digest-gxmms-0.3.0 63
-SHA256 9659390cd432922ca3e7455c7a8e30f3482f336f4695c67dff4543a885c1674d files/digest-gxmms-0.3.0 63
 MD5 17621406053b498f21fbe4d955e2bbe1 gxmms-0.1.0.ebuild 536
-RMD160 2d3f15fa247461416e261e3eedac5a16147f855b gxmms-0.1.0.ebuild 536
-SHA256 5d6291cc155c6e2906f18b237353f9fe94ca74caff0f7832f62f8c15c60ce937 gxmms-0.1.0.ebuild 536
 MD5 38b692f35c23ef2869903be0ab7fb9dd gxmms-0.1.1.ebuild 533
-RMD160 51db92d6160bd7c70fd3be6e169da761a864358e gxmms-0.1.1.ebuild 533
-SHA256 b0ac1102b37387be2f5f3e98bcc8304b37c6483053e79c4d7481a5f9d7c11bf1 gxmms-0.1.1.ebuild 533
 MD5 f83a69b0f7f5984ad25775b013c68367 gxmms-0.2.1.ebuild 540
-RMD160 db0da4dfe18bfbc5bed4a2d836c10fdba899fcbd gxmms-0.2.1.ebuild 540
-SHA256 c98502de0693c49c83cd6a0e22aae1a8e005d5d6178f6dff48535f6cff384125 gxmms-0.2.1.ebuild 540
-MD5 a86d421c5f261701c95d3d77ba509dc6 gxmms-0.3.0.ebuild 694
-RMD160 6f7026404234e0e0b35748b5a350677f42c47557 gxmms-0.3.0.ebuild 694
-SHA256 b72e2f40e0cf169da247fba474c57e2f0eb24d9e7635d96ed5abe3ffa7b47327 gxmms-0.3.0.ebuild 694
+MD5 f8a7feade7888bcb2b8ebbdb39673ba7 gxmms-0.3.0.ebuild 695
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFENf2FSENan+PfizARAqOcAJ4/BXBYYZ259Hvu8x2Y6JNLOmRKqgCgkTEE
-kRa4dPHWweARd8xCoXAvMkU=
-=nbzQ
+iD8DBQFENmQWKRy60XGEcJIRAnh5AKCEf++gd+78IN1Ry3A6py80XnSzbQCfYwvE
+brh/zWxBLBk25Kg5PKgSRIg=
+=eTIB
 -----END PGP SIGNATURE-----
