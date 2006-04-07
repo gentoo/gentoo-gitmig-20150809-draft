@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/orpie
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.2 2005/07/06 23:33:40 herbs Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.3 2006/04/07 17:10:07 dertobi123 Exp $
+
+  07 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org> orpie-1.4.1.ebuild:
+  Added to ~ppc, bug #128886
 
   06 Jul 2005; Herbie Hopkins <herbs@gentoo.org> orpie-1.4.1.ebuild:
   Marked ~amd64 wrt bug #97928.
