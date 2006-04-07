@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/breakpts
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/breakpts/ChangeLog,v 1.5 2005/01/01 16:46:18 eradicator Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/breakpts/ChangeLog,v 1.6 2006/04/07 19:46:46 kloeri Exp $
+
+  07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove ciaranm from metadata.xml.
 
   03 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> breakpts-3.1.ebuild:
   Help text, bug #62559
