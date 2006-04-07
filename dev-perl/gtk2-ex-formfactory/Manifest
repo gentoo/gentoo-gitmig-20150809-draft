@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4637fce7d4f65743f6ad55dcd028245b ChangeLog 1694
-RMD160 af3639cf38f8cc1fbcf656679c8c471463039bef ChangeLog 1694
-SHA256 bcf0bb5a66f26ea764a219f28245bbab2c9f3332ceca15e9659984928d48e72e ChangeLog 1694
+MD5 656304bbfe2ff0d2a1f6c1edee2b112c ChangeLog 1808
+RMD160 c3e2ec9a257e243963f216af789dbb96f05091d9 ChangeLog 1808
+SHA256 02142a680ed6e8c436241e5c95e5c2c77ca5c6777175cdfcda23125807463b07 ChangeLog 1808
 MD5 91ca1cbf784bf3a631251d6c3c7aeade files/digest-gtk2-ex-formfactory-0.57 75
 RMD160 b235561381e9328d3b8599c06a0df239850b6fd2 files/digest-gtk2-ex-formfactory-0.57 75
 SHA256 f4226f9e455297609c7c612d64481fd64d8b93d1b7a1d0fce0f88d239d566b73 files/digest-gtk2-ex-formfactory-0.57 75
@@ -25,16 +25,16 @@ SHA256 6f7468d56435ad715492298de6996b90acba9033d6ce099e54e779a803b805dc gtk2-ex-
 MD5 0c4187e366cafb66eef9602a41b75ba3 gtk2-ex-formfactory-0.59.ebuild 574
 RMD160 4cfe8ab45c3fbf0529c7b280a7387400cc0f1841 gtk2-ex-formfactory-0.59.ebuild 574
 SHA256 d28f6590ad173f7417cf28e082bcc24e0fdacfad604e92e76c0e6950f3d7256d gtk2-ex-formfactory-0.59.ebuild 574
-MD5 c532291488bee539ec0a19e003525814 gtk2-ex-formfactory-0.61.ebuild 585
-RMD160 0f88ece4dc81349620e0410a57648ffc7d9d7edc gtk2-ex-formfactory-0.61.ebuild 585
-SHA256 3947419f2cae26ba00bc4eb0bfa11e11b2ee386089dd28ab2e256d7ea171f6a6 gtk2-ex-formfactory-0.61.ebuild 585
+MD5 d63b4b8525ab0f4d0e770dd8275aeaa9 gtk2-ex-formfactory-0.61.ebuild 587
+RMD160 7b0518ca19c72931b28a78ea6a40dae31a964f6f gtk2-ex-formfactory-0.61.ebuild 587
+SHA256 7c2835749a0663408de728267cdd90114c421094527da792f5d13a58c25b6c9b gtk2-ex-formfactory-0.61.ebuild 587
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFENaIl/aM9DdBw91cRAtkuAJ0Wtnl6gVTC+R8HqePTMAfoEPBcCQCdGtsl
-TZrv2fZy+MOjag23s/juCjM=
-=pXhc
+iD8DBQFENaLQ/aM9DdBw91cRAqwAAJ4gxWD4ZBpC1WHWGhsrwnCeMYR+sQCgy5v/
+0IT8KpCR/dH/mmCQpHWziZA=
+=RxpS
 -----END PGP SIGNATURE-----
