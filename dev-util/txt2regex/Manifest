@@ -1,7 +1,31 @@
-MD5 ef0e29771a3844176418bb404a586ab8 metadata.xml 342
-MD5 6a73be370b5512905770d03a85038df5 txt2regex-0.8-r1.ebuild 913
-MD5 39793eac51c56b4c47e2d293cd9646de ChangeLog 2028
-MD5 67bdc98ddd22f69716b9f6de733e0ed9 txt2regex-0.8.ebuild 681
-MD5 0f685a5f25b9ba83b6846810257763cd files/digest-txt2regex-0.8-r1 61
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b55e8888f2c9cd6237a675eda96e8b82 ChangeLog 2129
+RMD160 a0060a591c358f2c48fde98f5fbde206a3562f14 ChangeLog 2129
+SHA256 296f8f0c227379cf5800a4cfa5732b3e6c60c8c00c50904795e9e26e99f081b8 ChangeLog 2129
 MD5 0f685a5f25b9ba83b6846810257763cd files/digest-txt2regex-0.8 61
+RMD160 d2d351d2ea9a0bb27739290969097d31f90ffd91 files/digest-txt2regex-0.8 61
+SHA256 c3bdf677d1ff4be6621191ca74864cab8330bf0f18e7fc47dbd9866555673cb6 files/digest-txt2regex-0.8 61
+MD5 0f685a5f25b9ba83b6846810257763cd files/digest-txt2regex-0.8-r1 61
+RMD160 d2d351d2ea9a0bb27739290969097d31f90ffd91 files/digest-txt2regex-0.8-r1 61
+SHA256 c3bdf677d1ff4be6621191ca74864cab8330bf0f18e7fc47dbd9866555673cb6 files/digest-txt2regex-0.8-r1 61
 MD5 c9bba856a23efb9636dd2f7c4d0e3008 files/txt2regex-0.8-disable-nls.patch 764
+RMD160 9251cdc3bca90b2339ccc9ca0a77e63c8a376696 files/txt2regex-0.8-disable-nls.patch 764
+SHA256 c73ce8835621c48b20183738aa54e8ebd2c466c38fb0ece7802cc06ead6c588b files/txt2regex-0.8-disable-nls.patch 764
+MD5 e2d614fd87eac1a4402def83a459af86 metadata.xml 164
+RMD160 cc7a7798af2b0129d7ce728b3d38d8b4625de71c metadata.xml 164
+SHA256 03080f40dc43565fd4bb7569351e0f607a4946a6108c15765ac42901ab16caf3 metadata.xml 164
+MD5 6a73be370b5512905770d03a85038df5 txt2regex-0.8-r1.ebuild 913
+RMD160 9f7f7d9f589b60e1296b593e568b0bf32511f3af txt2regex-0.8-r1.ebuild 913
+SHA256 1a16e6c8d23a9fdf292a92e39447356d50e859450ceda1250b2a66eb6bd9afc3 txt2regex-0.8-r1.ebuild 913
+MD5 67bdc98ddd22f69716b9f6de733e0ed9 txt2regex-0.8.ebuild 681
+RMD160 52c93097517c2b645334fa794fd97853d6a926e9 txt2regex-0.8.ebuild 681
+SHA256 5ac00c56211c2c8df46efa27acb364779e6beffee89d4a16a5174fb1252c2d4a txt2regex-0.8.ebuild 681
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFENsQLugEuf3OQ0akRAhCNAJ0Q2JK9y5qHZWGbe0QTdxNaRRtzlwCfUxNc
+XnAPhNtgSnySrsSr4uDJ2g8=
+=HbiP
+-----END PGP SIGNATURE-----

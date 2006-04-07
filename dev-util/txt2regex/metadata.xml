@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>shell-tools</herd>
-<maintainer>
-  <email>ciaranm@gentoo.org</email>
-  <description>Please Cc: the original author (Emil Erlandsson &lt;emil@buglix.org&gt;) on any bugs.</description>
-</maintainer>
 </pkgmetadata>
