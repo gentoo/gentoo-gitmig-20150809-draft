@@ -9,7 +9,7 @@ all: setarch links
 setarch.i: setarch.c
 	$(CC) $(CFLAGS) -E $< -o $@
 links: setarch.i Makefile
-	LC_ALL=C sed -n '/{PER_LINUX.* ,$$/{s:[^"]*, ::;s:,.*::;s:"::g;p}' $< > links
+	LC_ALL=C sed -n '/{PER_LINUX.*} ,$$/{s:[^"]*, ::;s:,.*::;s:"::g;p}' $< > links
 
 install: setarch
 	mkdir -p $(DESTDIR)$(bindir) $(DESTDIR)$(mandir)/man8

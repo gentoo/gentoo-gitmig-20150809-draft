@@ -1,0 +1,44 @@
+--- setarch.c
++++ setarch.c
+@@ -59,12 +59,12 @@
+     int perval;
+     char *target_arch, *result_arch;
+   } transitions[] = {
+-    {PER_LINUX32, "linux32", NULL},
+-    {PER_LINUX, "linux64", NULL},
++    {PER_LINUX32, "linux32", NULL} ,
++    {PER_LINUX, "linux64", NULL} ,
+ #if defined(__powerpc__) || defined(__powerpc64__)
+-    {PER_LINUX32, "ppc32", "ppc"},
++    {PER_LINUX32, "ppc32", "ppc"} ,
+     {PER_LINUX32, "ppc", "ppc"},
+-    {PER_LINUX, "ppc64", "ppc64"},
++    {PER_LINUX, "ppc64", "ppc64"} ,
+     {PER_LINUX, "ppc64pseries", "ppc64"},
+     {PER_LINUX, "ppc64iseries", "ppc64"},
+ #endif
+@@ -82,18 +82,18 @@
+     {PER_LINUX, "ia64", "ia64"},
+ #endif
+ #if defined(__s390x__) || defined(__s390__)
+-    {PER_LINUX32, "s390", "s390"},
+-    {PER_LINUX, "s390x", "s390x"},
++    {PER_LINUX32, "s390", "s390"} ,
++    {PER_LINUX, "s390x", "s390x"} ,
+ #endif
+ #if defined(__sparc64__) || defined(__sparc__)
+     {PER_LINUX32, "sparc", "sparc"},
+-    {PER_LINUX32, "sparc32", "sparc"},
+-    {PER_LINUX, "sparc64", "sparc64"},
++    {PER_LINUX32, "sparc32", "sparc"} ,
++    {PER_LINUX, "sparc64", "sparc64"} ,
+ #endif
+ #if defined(__mips64__) || defined(__mips__)
+-    {PER_LINUX32, "mips32", "mips"},
++    {PER_LINUX32, "mips32", "mips"} ,
+     {PER_LINUX32, "mips", "mips"},
+-    {PER_LINUX, "mips64", "mips64"},
++    {PER_LINUX, "mips64", "mips64"} ,
+ #endif
+     {-1, NULL, NULL}
+   };
