@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/xzgv
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.22 2005/12/14 04:05:16 spyderous Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.23 2006/04/07 17:57:16 smithj Exp $
+
+*xzgv-0.8-r2 (07 Apr 2006)
+
+  07 Apr 2006; <smithj@gentoo.org>
+  +files/xzgv-0.8-patched-cmyk-ycck-fix.diff, -xzgv-0.8-r1.ebuild,
+  +xzgv-0.8-r2.ebuild:
+  SECURITY: CVE-2006-1060 and gentoo bug #127008; fixed heap overflow in xzgv
 
   14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; xzgv-0.8-r1.ebuild:
   Fix modular X dependencies. GTK+-1 pulls in libX11.

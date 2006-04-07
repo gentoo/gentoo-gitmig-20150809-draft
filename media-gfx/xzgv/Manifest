@@ -1,5 +1,28 @@
-MD5 bf371b2ea232f734f06b11ad58923582 ChangeLog 2524
-MD5 df76e36ea08fa4317c30d7879eec9f93 files/digest-xzgv-0.8-r1 60
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 10f26ccbae00364916357c85cb65e8d6 ChangeLog 2753
+RMD160 ec6b8409de3acb20aeb44c823690aed198c833b7 ChangeLog 2753
+SHA256 40ecca9f4cd975280b4f77f9a4a234d5b8acff5908acc77c6fedbc0438087261 ChangeLog 2753
+MD5 e72199e9175d25ece180121f3031c93c files/digest-xzgv-0.8-r2 226
+RMD160 4dda9ce561816d5413e66004f40a1ec9cb95dedd files/digest-xzgv-0.8-r2 226
+SHA256 e77f7af9469e3de557755540e9587dc45eca766cea116786b0b9163b474ce83b files/digest-xzgv-0.8-r2 226
 MD5 9495e82307945c08599a0bd9ffc2f4f6 files/xzgv-0.8-integer-overflow-fix.diff 6374
+RMD160 bd75c87cf6f20e4fa2757afe472111e2253cb640 files/xzgv-0.8-integer-overflow-fix.diff 6374
+SHA256 c8a01e234cc0ce3a0b9f1b99d3781be0eaec65c284dc3752a68cb929a1daf71f files/xzgv-0.8-integer-overflow-fix.diff 6374
+MD5 5bd803c395982c07ce099415b6f51402 files/xzgv-0.8-patched-cmyk-ycck-fix.diff 1844
+RMD160 2e1c4cf43455b9b95c35133b5b4db308fb513340 files/xzgv-0.8-patched-cmyk-ycck-fix.diff 1844
+SHA256 ae8b857d71006d5986d5f72894e637ec0dcf63edd77195cc1c17c7f556d856c2 files/xzgv-0.8-patched-cmyk-ycck-fix.diff 1844
 MD5 ba9c20ee3f3568176dc0dd45b3cab35b metadata.xml 218
-MD5 d3e145ee87a83d9c79fdce1ea075a1c3 xzgv-0.8-r1.ebuild 1394
+RMD160 2d49623b0718e8ef5056a06bfc3bc51c65c9f6a3 metadata.xml 218
+SHA256 794091c4d1e23e2f0b2b7a3d7c52ba5b56a15f2599b55b85210aaff6cb54500e metadata.xml 218
+MD5 f7200c3b0eee94f8c6727bba4efe7708 xzgv-0.8-r2.ebuild 1465
+RMD160 1fe52c5f9701dce5b8897330019ae052b4cad536 xzgv-0.8-r2.ebuild 1465
+SHA256 940a7b29363838f6fc55dff34f2cfc61d9d188d323ba104319ae1af390ba617a xzgv-0.8-r2.ebuild 1465
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFENpxgl5AvwDPiUowRAh7zAJ9ffx9CWEJA28actOwuX+kifbQ8LQCgrNv0
+rsFx59BuyEOC53SpYkx9Wv0=
+=50Vh
+-----END PGP SIGNATURE-----
