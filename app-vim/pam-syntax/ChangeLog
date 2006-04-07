@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/pam-syntax
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/pam-syntax/ChangeLog,v 1.7 2005/09/10 06:56:53 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/pam-syntax/ChangeLog,v 1.8 2006/04/07 21:56:50 kloeri Exp $
+
+  07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove ciaranm from metadata.xml.
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   pam-syntax-20030818.ebuild:
