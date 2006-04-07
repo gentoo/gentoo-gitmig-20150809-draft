@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.65 2006/03/25 20:00:56 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.66 2006/04/07 00:41:07 morfic Exp $
+
+*dvdrip-0.97.7 (06 Apr 2006)
+
+  06 Apr 2006; Daniel Goller <morfic@gentoo.org> +dvdrip-0.97.7.ebuild:
+  Bump to 0.97.7
 
 *dvdrip-0.97.6-r1 (25 Mar 2006)
 *dvdrip-0.52.7-r1 (25 Mar 2006)
