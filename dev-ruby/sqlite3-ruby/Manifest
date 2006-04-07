@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 56df55311d0072cd962b23a298473b0b ChangeLog 685
-RMD160 b686f3941121a8d49e7632e5b4e6c2819062eb5d ChangeLog 685
-SHA256 00e0313a455ac79515038b2dad81be523b73688bd7d2db5de5431eda80b8a75f ChangeLog 685
+MD5 653892cf8c5e026da751bdddcf1e4d90 ChangeLog 802
+RMD160 4c7b46a30e62b66e71f92dc8f332660627789e5f ChangeLog 802
+SHA256 df1dbf18e064f885b78c663e75418201b53a94a991c4b2f319b6ebeb1e1570ae ChangeLog 802
 MD5 094bae6f7082b51a3256c5232f6ae754 files/digest-sqlite3-ruby-1.1.0 66
 RMD160 574960e29750ddf7233a38c49acf311ae2ea8494 files/digest-sqlite3-ruby-1.1.0 66
 SHA256 64e003b6f46bbd3493b4505a3f02d5aed4f1d661a27d545fcc6fb76205ece536 files/digest-sqlite3-ruby-1.1.0 66
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
 SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
-MD5 a7429f7a21d1d7a25170904fd1f2a9e4 sqlite3-ruby-1.1.0.ebuild 686
-RMD160 2f52ca6bfff36d6ce2dd40a85f7aa7b6011e97f8 sqlite3-ruby-1.1.0.ebuild 686
-SHA256 da608eaea34cd0826c0cfe77ae6e2b91c2de32ee0c82bb9bfd8ee0c5c9be4e9c sqlite3-ruby-1.1.0.ebuild 686
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEK1dvJrHF4yAQTrARAutIAJ9ebNlsXgsDgvnyxo+4yePYlifwegCcCzFd
-rCY8dNzeYoNr39tKFEZXLYo=
-=oVxl
------END PGP SIGNATURE-----
+MD5 2cececb6722ac8c7ea94e22b71db8ad6 sqlite3-ruby-1.1.0.ebuild 693
+RMD160 d1aef4d2b2525344f2cb51ae12b78fe6fdd55f39 sqlite3-ruby-1.1.0.ebuild 693
+SHA256 f767350c87305ceafea0225c58223fdf67aa2a13d4ceab64a06eac7eb809470a sqlite3-ruby-1.1.0.ebuild 693
