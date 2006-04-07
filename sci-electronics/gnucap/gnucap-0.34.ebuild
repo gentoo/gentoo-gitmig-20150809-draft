@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.34.ebuild,v 1.6 2005/11/04 21:37:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.34.ebuild,v 1.7 2006/04/07 20:22:38 plasmaroo Exp $
 
 inherit eutils
 
 DESCRIPTION="GNUCap is the GNU Circuit Analysis Package"
 SRC_URI="http://geda.seul.org/dist/gnucap-${PV}.tar.gz"
-HOMEPAGE="http://www.gnu.org/software/gnucap"
+HOMEPAGE="http://www.geda.seul.org/tools/gnucap"
 
 IUSE=""
 SLOT="0"
