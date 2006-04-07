@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/foldutil
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/foldutil/ChangeLog,v 1.14 2006/04/05 13:58:58 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/foldutil/ChangeLog,v 1.15 2006/04/07 21:27:43 kloeri Exp $
+
+  07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove ciaranm from metadata.xml.
 
   05 Apr 2006; Patrick McLean <chutzpah@gentoo.org> foldutil-2.0.ebuild:
   Add ~amd64

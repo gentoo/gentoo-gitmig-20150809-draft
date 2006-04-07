@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/genindent
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/genindent/ChangeLog,v 1.10 2005/05/19 18:05:32 killerfox Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/genindent/ChangeLog,v 1.11 2006/04/07 21:30:18 kloeri Exp $
+
+  07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove ciaranm from metadata.xml.
 
   19 May 2005; Rene Nussbaumer <killerfox@gentoo.org> genindent-1.0.ebuild:
   Added ~hppa
