@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e8fda8e82a0c33a3428e4c44116e0d35 ChangeLog 1823
-RMD160 a62c40cad006b170254642df0f7605397e7e3a1d ChangeLog 1823
-SHA256 edc38f423082407ff40dff3121e80754e4e8a1af612616f66ef712391c9b6243 ChangeLog 1823
+MD5 458e6b95888cc488ab6b8b68d17802bc ChangeLog 1934
+RMD160 a90073a714762c10659f94d536c09b043f5f0322 ChangeLog 1934
+SHA256 7f9951191ed12a9e283f76e653bc7d90a8faac55756d14ff36c8b3ec853c2a2c ChangeLog 1934
 MD5 f6ad40c3e91258a909647a1e4bcf1ea2 files/digest-tango-icon-theme-0.6.3 74
 RMD160 086446d93fbdd4e9d9a8b84dce654e8ba54d6184 files/digest-tango-icon-theme-0.6.3 74
 SHA256 1a7bc9a21248284b3ad512bd6b4a172889cd32c0a1b157b5e25698f739c61ba9 files/digest-tango-icon-theme-0.6.3 74
@@ -43,16 +40,9 @@ SHA256 b815fbe124d5ee18c669f1612c7202a063d341243364556494b66c53e83cd5ed tango-ic
 MD5 dc148c9f47412933ad0b964e04d9c5a1 tango-icon-theme-0.6.7.ebuild 911
 RMD160 d864610f8272ce83801120e6f1e281117ffe6bb3 tango-icon-theme-0.6.7.ebuild 911
 SHA256 4a3235d6e61f42338bb2111896704116ef1943f61994b1c2d8a85b9226e22e92 tango-icon-theme-0.6.7.ebuild 911
-MD5 8620e52cf21a8807c642e986e2b8ac3d tango-icon-theme-0.7.0.ebuild 909
-RMD160 245ed023d3c93dce972faf46d81662a1433fca94 tango-icon-theme-0.7.0.ebuild 909
-SHA256 0ebc848983d8192ce6fcd771d1c02c0d62ca25e1232ceb74fd869f9c39e386a1 tango-icon-theme-0.7.0.ebuild 909
+MD5 5bbc627b7882e154fcf7976c71c53747 tango-icon-theme-0.7.0.ebuild 906
+RMD160 ecb94169d0ef502010264b178e336059bc0bd9e4 tango-icon-theme-0.7.0.ebuild 906
+SHA256 569952f0081437ad5497cfc471496e0105429eef14ec49fb1f29f40a31b8f9db tango-icon-theme-0.7.0.ebuild 906
 MD5 6a8920722aa3587b758a9b249e867b99 tango-icon-theme-0.7.1.ebuild 911
 RMD160 a71ce85db3c2b23c36722eebfd289d1df451219f tango-icon-theme-0.7.1.ebuild 911
 SHA256 bba2e68eae10e60eabe3bf2bca205d42df4a01d80c55bca8bdf95701283f7484 tango-icon-theme-0.7.1.ebuild 911
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENZTRI1lqEGTUzyQRAhxwAKCpiKs9qlxiLJndfA06fKj8T8YogACdHBhZ
-7NSqkcDOaWE+Um4JL71yk2I=
-=5zgr
------END PGP SIGNATURE-----
