@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e58d0f434a668cb5878254fd128a485e ChangeLog 541
-MD5 c5358e2caad3a7ea9b2fc70097e9a1d2 fast-user-switch-applet-2.14.0.ebuild 1295
+MD5 8cd707f423c4b72c8b073e17739864e7 ChangeLog 670
+RMD160 46f8e4352260c34cd73c6057471b0c0367cbd9fd ChangeLog 670
+SHA256 17ebd0f825f3b0e6a0b8740018564eecb7156fcfb56e73d73e6428cf8d6be853 ChangeLog 670
+MD5 5835c068004061239442bba56f1e4a2d fast-user-switch-applet-2.14.0.ebuild 1302
+RMD160 baa7fad7556e397221a09db8e4f7c704d80e16a4 fast-user-switch-applet-2.14.0.ebuild 1302
+SHA256 9cb02d257897f2f5abde15a47da5e4f68f6601d9f0a82c1f2a4ea5b6b74edffa fast-user-switch-applet-2.14.0.ebuild 1302
 MD5 cc3c1a7a6f3661189a2f3ec08e453327 files/digest-fast-user-switch-applet-2.14.0 295
+RMD160 c9ce7e5d0eadef70344fb8679cf88f53141b8628 files/digest-fast-user-switch-applet-2.14.0 295
+SHA256 4832ebbacb530671b56609029b7a71ea92ce03767bff8310d8e210648ff2555f files/digest-fast-user-switch-applet-2.14.0 295
 MD5 8b0560553235cfd96801898935f8ff94 metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEIvQuKRy60XGEcJIRAj5cAKCZdaw0I0PMOYLEeUF3SV4mh9C8FQCfZoAW
-4Dzpzyvqrpnlm54JfSuLzow=
-=h8H+
------END PGP SIGNATURE-----
+RMD160 4aba844314249b872aefa0ef14d652f127e6334f metadata.xml 159
+SHA256 d6e10a30ac9423eb5a9ba4e7b2a76322683f40b2fb428d2f310dcdbd1cfde235 metadata.xml 159
