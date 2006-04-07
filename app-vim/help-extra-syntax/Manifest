@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cf2c9ac3b6358aecadce7907928b0af8 help-extra-syntax-20050106-r1.ebuild 766
-MD5 d0eb2058f77d01492f62b14ad7b76759 metadata.xml 379
-MD5 3a309076bb0ba7f612e830b54dc52b1f ChangeLog 1142
-MD5 985d404139d7f7086ef000dde818a888 help-extra-syntax-20050106.ebuild 562
+MD5 c140bdd08a467234df1bf20c363f4a4b ChangeLog 1244
+RMD160 9e0e34b652cc225aefc74bac699ac1a5275637fb ChangeLog 1244
+SHA256 5ae1299f5d3eb8a388165c80159b88f494dd6319b61b000d51fec114db01034e ChangeLog 1244
 MD5 4ef9160eb80a2282eb54f3bf47c4d816 files/digest-help-extra-syntax-20050106 76
+RMD160 41375072d963f5af7e44ae011b6f50b84d51dfa7 files/digest-help-extra-syntax-20050106 76
+SHA256 b1119f7b4bb2223b36cf35f100f36bfc6452d7c715c6544a2b40b8685c96faf4 files/digest-help-extra-syntax-20050106 76
 MD5 4ef9160eb80a2282eb54f3bf47c4d816 files/digest-help-extra-syntax-20050106-r1 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC99hoLLFUmVNQ7rkRAoroAJ9TVqq5PfM0lKvnpHQeQx7p2nvkYgCgzSEy
-h7l7R/LtlWWecCod56MxV/c=
-=Q74E
------END PGP SIGNATURE-----
+RMD160 41375072d963f5af7e44ae011b6f50b84d51dfa7 files/digest-help-extra-syntax-20050106-r1 76
+SHA256 b1119f7b4bb2223b36cf35f100f36bfc6452d7c715c6544a2b40b8685c96faf4 files/digest-help-extra-syntax-20050106-r1 76
+MD5 cf2c9ac3b6358aecadce7907928b0af8 help-extra-syntax-20050106-r1.ebuild 766
+RMD160 96581932b09c1f32c16ff8a48faceeba85a77085 help-extra-syntax-20050106-r1.ebuild 766
+SHA256 0a050251ba76cd8e8d88d5747b9c9e67e31966f9e7adcf7c0ce57e2c37d34d94 help-extra-syntax-20050106-r1.ebuild 766
+MD5 985d404139d7f7086ef000dde818a888 help-extra-syntax-20050106.ebuild 562
+RMD160 70cf43896ffe47cfd5758ee6aa52a0b7b2318ec8 help-extra-syntax-20050106.ebuild 562
+SHA256 6820c517045f8193d5bd1739673b001b7b7148b610c77b0ab231555d0dc0987a help-extra-syntax-20050106.ebuild 562
+MD5 4fd7d6c8658c392590665a90ed6f247f metadata.xml 283
+RMD160 ca391b188cf2985181b671b35408273424eb641f metadata.xml 283
+SHA256 27e5c254dba89fb0ff37c611655a47ab802bc063a2e51bb7dba13c8270fb023d metadata.xml 283

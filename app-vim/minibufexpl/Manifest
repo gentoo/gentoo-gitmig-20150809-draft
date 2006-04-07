@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5e9d4add5374cb631fa07daacb189157 ChangeLog 2457
-RMD160 5f9bf815a5450a907507d1543564e35f9ad85f68 ChangeLog 2457
-SHA256 d444663d2a95eb67490f831e68ebe7193cd9e3f104aa3049e39a462fd24215b6 ChangeLog 2457
+MD5 c7b6559f74bfcabea35acc6ef5b19f6f ChangeLog 2560
+RMD160 3554477b67aa0b19f212aff1c2959cbbdf0c062c ChangeLog 2560
+SHA256 be885934200a8de1cdfb44a98ea1efad448bfcf0788cbcef46a26791dce4b305 ChangeLog 2560
 MD5 32c61863835ac319af932bbe475680cb files/digest-minibufexpl-6.3.1-r1 69
 RMD160 f65857d9ac1be88e2777bd438f06adbbc84f71aa files/digest-minibufexpl-6.3.1-r1 69
 SHA256 97ebe98fe39f0b0970c2855fd3475308c52a1f72b2dd4f0bec4ea90cbb65d3f4 files/digest-minibufexpl-6.3.1-r1 69
 MD5 c8044a2b62a7cfc0eeb12f86474869a5 files/digest-minibufexpl-6.3.2 69
 RMD160 a881edf5c4ebdbf7dda7af5b70f33811bc3ba1ce files/digest-minibufexpl-6.3.2 69
 SHA256 9b01d0ee39f9efe5bea0bc30ddfbd1404d955f90ccdb2a22e99702bd464b3f86 files/digest-minibufexpl-6.3.2 69
-MD5 c12b313eed9efb8f61723cb9ebf22c36 metadata.xml 253
-RMD160 aec1a411ed3592aa10fe3b2b80952362c7bd1b6d metadata.xml 253
-SHA256 e12ae1196e99a89e610778695e0712ce305387072752329dfc7c31c07d4105c3 metadata.xml 253
+MD5 03408b23ff38d83b09d299387892f54d metadata.xml 157
+RMD160 adcd6494e1e562ab5e0bd090e114622782ac753a metadata.xml 157
+SHA256 106c8618581360c66c2b535fcb7a6cb9ff318f1bd8e6c8f40f2f2f2d54e6787a metadata.xml 157
 MD5 a51b1a56648f7280bb10713c5aac5a38 minibufexpl-6.3.1-r1.ebuild 908
 RMD160 8d3f1c08e612caaf73e09b47bd1ad77ddb70f5c1 minibufexpl-6.3.1-r1.ebuild 908
 SHA256 6c8f8ff600acdffbbe919725c6139914e12eb3a3089e7dfbf2cb71d1a22eb3e2 minibufexpl-6.3.1-r1.ebuild 908
 MD5 8a09933512b90880a0bd01844f36dd4d minibufexpl-6.3.2.ebuild 900
 RMD160 729583af712d732767ad046f7f91e775f81718ca minibufexpl-6.3.2.ebuild 900
 SHA256 5a2f2db70f08034d8cd0353a81eb75a5a1ab0b0a6430b49fe5c79178c492d864 minibufexpl-6.3.2.ebuild 900
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9roMLLFUmVNQ7rkRAueKAKCUXS4ZGulsLlA0e3n3/GYK+dwtcQCgoCH/
-mfqqxRjbDiHAHsf8tD5y0g8=
-=Rvqo
------END PGP SIGNATURE-----
