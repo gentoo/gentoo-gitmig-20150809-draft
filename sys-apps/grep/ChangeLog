@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.63 2006/04/03 00:00:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.64 2006/04/07 08:08:07 exg Exp $
+
+  07 Apr 2006; Emanuele Giaquinta <exg@gentoo.org> grep-2.5.1a.ebuild:
+  Stable on ppc.
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> grep-2.5.1a.ebuild:
   Update ~x86-fbsd keyword.
