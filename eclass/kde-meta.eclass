@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.70 2006/04/02 13:36:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.71 2006/04/07 11:53:16 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -8,7 +8,6 @@
 # This is the kde-meta eclass which supports broken-up kde-base packages.
 
 inherit kde multilib
-IUSE="kdexdeltas"
 
 # only broken-up ebuilds can use this eclass
 if [[ -z "$KMNAME" ]]; then
@@ -124,6 +123,12 @@ fi
 
 # Common xdelta code
 if [[ -n "$XDELTA_BASE" ]]; then # depends on $PV only, so is safe to modify SRC_URI inside it
+	IUSE="${IUSE} kdexdeltas"
+	
+	# Necessary dep for xdeltas. Hope like hell it doesn't worm its way into RDEPEND
+	# through the sneaky eclass dep mangling portage does.
+	DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
+
 	SRC_URI="$SRC_URI kdexdeltas? ( $XDELTA_BASE "
 	for x in $XDELTA_DELTA; do
 		SRC_URI="$SRC_URI $x"
@@ -134,10 +139,6 @@ else # xdelta don't available, for example with kde 3.4 alpha/beta/rc ebuilds.
 fi
 
 debug-print "$ECLASS: finished, SRC_URI=$SRC_URI"
-
-# Necessary dep for xdeltas. Hope like hell it doesn't worm its way into RDEPEND
-# through the sneaky eclass dep mangling portage does.
-DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
 
 # END adapted from kde-dist.eclass
 
