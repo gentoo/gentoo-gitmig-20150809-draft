@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.4.ebuild,v 1.9 2006/01/25 02:59:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.4.ebuild,v 1.10 2006/04/07 17:14:07 mr_bones_ Exp $
 
 DESCRIPTION="A multi-player 2D client/server space game"
 HOMEPAGE="http://www.xpilot.org/"
@@ -21,7 +21,9 @@ DEPEND="${RDEPEND}
 		(
 			x11-proto/xextproto
 			x11-proto/xproto
-			x11-misc/gccmakedep )
+			x11-misc/gccmakedep
+			x11-misc/imake
+			app-text/rman )
 		virtual/x11 )"
 
 src_unpack() {
