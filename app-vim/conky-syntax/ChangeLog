@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/conky-syntax
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/conky-syntax/ChangeLog,v 1.8 2006/04/07 06:35:22 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/conky-syntax/ChangeLog,v 1.9 2006/04/07 20:47:35 kloeri Exp $
+
+  07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove ciaranm from metadata.xml.
 
   07 Apr 2006; Joshua Jackson <tsunam@gentoo.org>
   conky-syntax-20050923.ebuild:
