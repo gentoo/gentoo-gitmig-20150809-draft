@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/colorschemes
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.24 2005/12/07 20:29:49 ciaranm Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.25 2006/04/07 20:06:01 kloeri Exp $
+
+  07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
+  Remove ciaranm from metadata.xml.
 
   07 Dec 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   -colorschemes-20031113.ebuild, -colorschemes-20040821.ebuild:
