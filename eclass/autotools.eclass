@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.34 2006/03/28 08:11:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.35 2006/04/07 16:49:32 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -65,7 +65,7 @@ eautoreconf() {
 	_elibtoolize --copy --force
 	eautoconf
 	eautoheader
-	eautomake ${AM_OPTS}
+	FROM_EAUTORECONF="yes" eautomake ${AM_OPTS}
 
 	# Normally run by econf()
 	[[ ${AT_GNUCONF_UPDATE} == "yes" ]] && gnuconfig_update
@@ -146,6 +146,22 @@ eautomake() {
 	local extra_opts
 
 	[[ -f Makefile.am ]] || return 0
+
+	if [[ -z ${FROM_EAUTORECONF} && -f Makefile.in ]]; then
+		local used_automake
+		local installed_automake
+
+		installed_automake=$(automake --version | head -n 1 | \
+			sed -e 's:.*(GNU automake) ::')
+		used_automake=$(head -n 1 < Makefile.in | \
+			sed -e 's:.*by automake \(.*\) from .*:\1:')
+
+		if [[ ${installed_automake} != ${used_automake} ]]; then
+			einfo "Automake used for the package (${used_automake}) differs from"
+			einfo "the installed version (${installed_automake})."
+			eautoreconf
+		fi
+	fi
 
 	[[ -f INSTALL && -f AUTHORS && -f ChangeLog && -f NEWS ]] \
 		|| extra_opts="${extra_opts} --foreign"
