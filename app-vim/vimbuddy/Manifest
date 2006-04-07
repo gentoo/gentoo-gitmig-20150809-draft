@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fc7368ef395813d65c34b4a5fb3a3ae1 ChangeLog 1262
-RMD160 87fec96f936cfed8b584c8b6336493fd4b36307d ChangeLog 1262
-SHA256 518393ca8b1ec3da38a83833aab833b3e72daa5d9023e1763379c9bda8ce118f ChangeLog 1262
+MD5 73f6898c0e1135fb981b03a80f86e94f ChangeLog 1366
+RMD160 857890b51ab07f7f926d16bbfc2d8b6e88aeb341 ChangeLog 1366
+SHA256 a94357f5aad7fc3e3ce1fd48c8d56e3e0f0cdee71bb6d49bb0d68008daf8c6ad ChangeLog 1366
 MD5 9c0337695e108d207088b8d12847ebb0 files/digest-vimbuddy-0.9.1 65
 RMD160 2b6ca510fdde23bb533e2e7f897104e0bec624df files/digest-vimbuddy-0.9.1 65
 SHA256 9005ba3333f97a0089e45c48a1980e3bc5d104cc0a73ae668cd42e63845b797f files/digest-vimbuddy-0.9.1 65
@@ -13,19 +10,12 @@ SHA256 9005ba3333f97a0089e45c48a1980e3bc5d104cc0a73ae668cd42e63845b797f files/di
 MD5 e0d33a1c6b2e25c864687ce3b04fc2bc files/vimbuddy-0.9.1-colon-problems.patch 2227
 RMD160 eb3c1b8be402bf65252b97991e9ad62ab37fb5e1 files/vimbuddy-0.9.1-colon-problems.patch 2227
 SHA256 e80b27278e296d650ed68b3fc5eefc3dc899cd23d4ba4a936fe95e097cb097d9 files/vimbuddy-0.9.1-colon-problems.patch 2227
-MD5 c12b313eed9efb8f61723cb9ebf22c36 metadata.xml 253
-RMD160 aec1a411ed3592aa10fe3b2b80952362c7bd1b6d metadata.xml 253
-SHA256 e12ae1196e99a89e610778695e0712ce305387072752329dfc7c31c07d4105c3 metadata.xml 253
+MD5 03408b23ff38d83b09d299387892f54d metadata.xml 157
+RMD160 adcd6494e1e562ab5e0bd090e114622782ac753a metadata.xml 157
+SHA256 106c8618581360c66c2b535fcb7a6cb9ff318f1bd8e6c8f40f2f2f2d54e6787a metadata.xml 157
 MD5 a1ad07466e0bbe074463e8612946c72a vimbuddy-0.9.1-r1.ebuild 608
 RMD160 72860183a2ed3875732b0c8f5ba076bb58d338ca vimbuddy-0.9.1-r1.ebuild 608
 SHA256 102b95cdb5aaa299b1346098060d33fdb43f55911333586ef894eb44446b3031 vimbuddy-0.9.1-r1.ebuild 608
 MD5 c5deab7cf5854de010da749f7ef7be37 vimbuddy-0.9.1.ebuild 507
 RMD160 df12fcce3bd213486b23afbd8b88b19844bb3402 vimbuddy-0.9.1.ebuild 507
 SHA256 e4be62eda28cda7e6e00290ac3b442bb69fc8776864c40e358c78964c4e7da6f vimbuddy-0.9.1.ebuild 507
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9rm+LLFUmVNQ7rkRAkL6AJ4oju4euvdm27R7HaY42KwlGBtGAACeNyen
-ZTxRJ3WasjOPFv58jee5Xe0=
-=2zd8
------END PGP SIGNATURE-----
