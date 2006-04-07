@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p8.ebuild,v 1.11 2006/04/07 12:13:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p8.ebuild,v 1.12 2006/04/07 17:13:30 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -35,7 +35,7 @@ src_unpack() {
 			die "patch ${i} missing - please report to bugs.gentoo.org"
 		fi
 	done
-	
+
 	# Fix hppa 1.1 computation bug
 	[[ ${CHOST} == hppa[^2]* ]]  && sed -e 's/__hpux/__hppa__/' -i "${S}/mul.c"
 }
