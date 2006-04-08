@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9-r1.ebuild,v 1.11 2006/03/29 01:12:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9-r1.ebuild,v 1.12 2006/04/08 00:19:15 flameeyes Exp $
 
-inherit flag-o-matic toolchain-funcs eutils
+inherit flag-o-matic toolchain-funcs eutils libtool
 
 DESCRIPTION="Simple Direct Media Layer"
 HOMEPAGE="http://www.libsdl.org/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ppc-macos ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ppc-macos ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 # WARNING:
 # if you have the noaudio, novideo, nojoystick, or noflagstrip use flags
 # in USE and something breaks, you pick up the pieces.  Be prepared for
@@ -93,6 +93,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-endian-cvs-updates.patch
 
 	./autogen.sh || die "autogen failed"
+	elibtoolize
 	epunt_cxx
 }
 
