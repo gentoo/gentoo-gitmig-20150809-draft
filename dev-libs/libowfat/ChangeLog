@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libowfat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.18 2006/03/31 18:52:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.19 2006/04/08 16:27:32 dertobi123 Exp $
+
+  08 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  libowfat-0.24.ebuild:
+  ppc stable
 
   31 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> libowfat-0.24.ebuild:
   Fixed man page installation, provided by Christian Heim, see bug 128243.
