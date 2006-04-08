@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0e60e90f78f97fae5736a1bf1279aa4a ChangeLog 1396
 RMD160 fc6d488f0e43e7a27e88b4992b8cd4c28b50e038 ChangeLog 1396
 SHA256 90a1a6bd0ec370b62faa73ced673881bbfe8c81418907ea701feaffb743f3d7d ChangeLog 1396
 MD5 1d62a555ec71d8c1841d374fd334c588 ferrisloki-2.0.5.ebuild 600
 RMD160 95f59512223bfff4ad75ccc4b10f52a08af2838b ferrisloki-2.0.5.ebuild 600
 SHA256 73fa0956a9b1d0cb9df24cdc2650298fe5fc47aac75c127bc05281aee9506f32 ferrisloki-2.0.5.ebuild 600
-MD5 bf170cf44eff50868ed88937ef4eb1bd ferrisloki-2.1.1.ebuild 601
-RMD160 1a3df0b84aab5ed90ceb10430633f10e067f2802 ferrisloki-2.1.1.ebuild 601
-SHA256 ce34b8943e43f6b765911574ab3b55218d28a24096212b0b7291a0555444e283 ferrisloki-2.1.1.ebuild 601
+MD5 e3acde12522d25051e3dbd5d16213149 ferrisloki-2.1.1.ebuild 599
+RMD160 2b876b361f61129e4f5f9860a7504a1e079dabde ferrisloki-2.1.1.ebuild 599
+SHA256 f462dfaea23564db8d54243cdc611a8338dacb6f3e4cbc504d8944c8b56a5fce ferrisloki-2.1.1.ebuild 599
 MD5 90d9add007a730555de148496f13a943 ferrisloki-2.1.2.ebuild 603
 RMD160 ce9f8e0cab2cc0f844a55a0e409641a897b4d769 ferrisloki-2.1.2.ebuild 603
 SHA256 dc7b320f5143928af7e592d174c926196cfa23c0e6eb26eadaebe1e891339d33 ferrisloki-2.1.2.ebuild 603
@@ -31,10 +28,3 @@ SHA256 553058ba1967fafdfa19e10176c57fe7b99c8e9d2e232de02113b96c0a668fa9 files/di
 MD5 92329f92aff2f9d589eb69df1fc2c9fe metadata.xml 283
 RMD160 8a99eefeca08f1b7c2a0515786ac11ab30e0601c metadata.xml 283
 SHA256 7151b2bbede09c81cc68100d49e69d401f1128fc30c619f588479b440d77c09c metadata.xml 283
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEIgI92+ySkm8kpY0RAniyAKCErhfTyn9A3kp+ahHrN2DyDd8mQQCgpjwh
-oG4CRoyr1gqnQXovF8JSc6Q=
-=k2lT
------END PGP SIGNATURE-----
