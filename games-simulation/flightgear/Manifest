@@ -1,10 +1,46 @@
-MD5 d18369125734e4f411fb3480febd4499 ChangeLog 4775
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0167ac77be6f4938e489a00bd405d61a ChangeLog 4886
+RMD160 407101d44eac4ce98be98c4db4fb7af2e5c549fc ChangeLog 4886
+SHA256 7a3214d125dffc9744fe6ba2fb78bbf26e4c314377625ee4d630112d5c17f3f0 ChangeLog 4886
+MD5 d5d311dc07c723d9ff44578e7c5a2bf4 files/digest-flightgear-0.9.10 518
+RMD160 220167dbfd4bbcbcd7324ef8be4a90a09caac50f files/digest-flightgear-0.9.10 518
+SHA256 dcbff79a4ab297cc409177f1560d0ce632f8d9fb411fae4d6472e591ef1f7e5e files/digest-flightgear-0.9.10 518
 MD5 791042f02ab42bb5ce5b38d24c9be717 files/digest-flightgear-0.9.4 139
+RMD160 f2768da970526d85bb57bcb474e3aa53aa5b6b18 files/digest-flightgear-0.9.4 139
+SHA256 74a0a6e6aebdd9cc6daada08ad174c748a5116241df46ad7fe7d98a491c2a06b files/digest-flightgear-0.9.4 139
 MD5 e77a8fdf3764bab350ecb01d917fb43a files/digest-flightgear-0.9.5 139
+RMD160 3ec8c43303b8df36e08d676cf8e8db21918c01bf files/digest-flightgear-0.9.5 139
+SHA256 1b99023bb058e728fdf803fb02e8cb081cd267e28c103e7ecfdc12b2655c63d6 files/digest-flightgear-0.9.5 139
 MD5 71196a8e0d1fe4b810caf1f80abc485c files/digest-flightgear-0.9.8 139
+RMD160 f44451e2a3ad7d3359ed8b319112b89f6b191173 files/digest-flightgear-0.9.8 139
+SHA256 b0dcfef60e526cabac5a0d386012ea30f582e451f2d178b98e9297350e2b996c files/digest-flightgear-0.9.8 139
 MD5 bf3c4c4e935f9fe6955b78b12d5c3218 files/digest-flightgear-0.9.9 139
+RMD160 614c9f484b71fcd3fe866ee1370736bca1012033 files/digest-flightgear-0.9.9 139
+SHA256 687119576352b35ac46f9ff66f1974a6847b4205bdafcda2452b0749523a2da9 files/digest-flightgear-0.9.9 139
+MD5 468f9caf9c67333ea9326d283d7cc28d flightgear-0.9.10.ebuild 1155
+RMD160 fc9cd00d01f417ee6a257fb5ba8c0abe90bbd8ef flightgear-0.9.10.ebuild 1155
+SHA256 56bb1c2f2be9004457ff617b285292ec3e8acff6550d8cd4655d824bd4aa9a02 flightgear-0.9.10.ebuild 1155
 MD5 c7c9b825f26cfceeaad1dfac7f864b74 flightgear-0.9.4.ebuild 1295
+RMD160 c6d50f8b100dcb1bc32b6b5aa5da1b7e562331a0 flightgear-0.9.4.ebuild 1295
+SHA256 09ba719711a66f1e8c6dddc475610e9cdba26c1a43d40b787156fbe6f4c56a2f flightgear-0.9.4.ebuild 1295
 MD5 4c0bd1367e6e63e1a19393d0d30909cd flightgear-0.9.5.ebuild 1358
+RMD160 8ad164c18c63be925fd04547c6e3d7f30bd6c211 flightgear-0.9.5.ebuild 1358
+SHA256 ab940e12ce9bfa226d319baab79c6f413c33fc9d0f62f0178f727211e09548b2 flightgear-0.9.5.ebuild 1358
 MD5 a5ca3114a3e7745f4e2446368741da43 flightgear-0.9.8.ebuild 1153
+RMD160 eca04ccee2f9cc4de6b5f8ac06ecb835f17d1b7d flightgear-0.9.8.ebuild 1153
+SHA256 b74f6e169e7e8fdcf2d2824458f4f2ce32a7a46b60a73ee522ce6c304ecbe334 flightgear-0.9.8.ebuild 1153
 MD5 0a52e3890aaef1816957fcf1adb05746 flightgear-0.9.9.ebuild 1152
+RMD160 e521bdb356926c2afcf18324337802699db627b0 flightgear-0.9.9.ebuild 1152
+SHA256 3651829218e69aa6b2fa6a3c070ef9ca7c8b09a7ad8701f7d78651f8e55f0d3f flightgear-0.9.9.ebuild 1152
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFENxXf2CTtIKiFlQIRAhBBAKCyE4i/RMdsj2UtXpBvNMO+ay77DACffRa+
+E0wreYXaHudF4uWQc0lXkuw=
+=rCwS
+-----END PGP SIGNATURE-----

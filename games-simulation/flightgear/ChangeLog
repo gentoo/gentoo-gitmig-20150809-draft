@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/flightgear
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.22 2005/12/07 16:30:03 seemant Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.23 2006/04/08 01:45:49 tupone Exp $
+
+*flightgear-0.9.10 (08 Apr 2006)
+
+  08 Apr 2006; <Tupone@gentoo.org> +flightgear-0.9.10.ebuild:
+  Version bump
 
 *flightgear-0.9.9 (07 Dec 2005)
 
