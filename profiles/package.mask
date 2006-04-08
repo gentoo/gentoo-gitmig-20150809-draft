@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5194 2006/04/08 17:21:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5195 2006/04/08 20:16:35 lu_zero Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+
+# Luca Barbato <lu_zero@gentoo.org> (08 Apr 2006)
+# Pending configure fixes
+=media-video/mplayer-1.0.20060408
 
 # Christian Heim <phreak@gentoo.org> (08 Apr 2006)
 # masking baselayout-vserver-1.12.0_pre17 for testing
