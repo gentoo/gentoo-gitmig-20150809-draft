@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.66 2006/04/07 00:41:07 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.67 2006/04/08 04:23:37 morfic Exp $
+
+  08 Apr 2006; Daniel Goller <morfic@gentoo.org>
+  -files/dvdrip-fix_nptl_workaround.patch, -dvdrip-0.97.6-r1.ebuild,
+  dvdrip-0.97.7.ebuild:
+  Remove superceeded version, cleanup 0.97.7
 
 *dvdrip-0.97.7 (06 Apr 2006)
 
