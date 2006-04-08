@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5191 2006/04/08 04:07:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5192 2006/04/08 16:10:24 plasmaroo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Tim Yamin <plasmaroo@gentoo.org> (08 Apr 2006)
+# Upstream seems dead and needs GCC 4.1 reworking; bug #125192.
+# You should consider ng-spice-rework as a replacement to this
+# package. Masked pending removal on 8th of May.
+sci-electronics/tclspice
 
 # Joe Sapp <nixphoeni@gentoo.org> (07 Apr 2006)
 # Upstream is dead and it fails to build with the version of
