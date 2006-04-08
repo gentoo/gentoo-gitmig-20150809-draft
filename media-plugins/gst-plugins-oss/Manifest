@@ -31,9 +31,9 @@ SHA256 e0a0a0758fc7ff303d6170d0b75521a310185a039df7fc1898f87aee98534235 gst-plug
 MD5 4c99bcfff429736ac4ad671e06e6c767 gst-plugins-oss-0.10.1.ebuild 340
 RMD160 3e61705dc2d6a66e5038a94f2977930604b75130 gst-plugins-oss-0.10.1.ebuild 340
 SHA256 222dac74c0bfc7cf8e69fca73dcc3320db3597ea6f8759a4604945fd5d622815 gst-plugins-oss-0.10.1.ebuild 340
-MD5 241a475755b56e8c0266f130674ca4c1 gst-plugins-oss-0.10.2.ebuild 360
-RMD160 a362da5c715106e4eed4ad6872452226d062eb41 gst-plugins-oss-0.10.2.ebuild 360
-SHA256 479ca0ce070818b002a01f5dde43d16b78d2fc0d4d766be6e0dfade1bc6e6313 gst-plugins-oss-0.10.2.ebuild 360
+MD5 8dab9b093339cfe469efccc381408fa5 gst-plugins-oss-0.10.2.ebuild 365
+RMD160 6ab6a7747f3d4ce12b6252e2c6c39934d380c2d5 gst-plugins-oss-0.10.2.ebuild 365
+SHA256 675997a5181646d6d2a7b7e4eb8e6f8564c453ef39a6f2895cb44bdd201bb116 gst-plugins-oss-0.10.2.ebuild 365
 MD5 556fab9eb50cbad73b88fa034776d7b0 gst-plugins-oss-0.8.10.ebuild 375
 RMD160 1e46800684353952594448e18c02c054cfe4fae6 gst-plugins-oss-0.8.10.ebuild 375
 SHA256 1c75d88cdd1eb8a4a0b773091bf9a51728ed16a0f301d8dca8bdbc0502c3dda8 gst-plugins-oss-0.8.10.ebuild 375

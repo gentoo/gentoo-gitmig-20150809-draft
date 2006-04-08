@@ -43,9 +43,9 @@ SHA256 e0ef08cf3118e09b3f99f747dac1c94f0c110f9faed48da835ef17ec778eae11 gst-plug
 MD5 97f494d51a980c6e2af2cc286c3b21a6 gst-plugins-alsa-0.10.3.ebuild 387
 RMD160 4061c5d1043e89f4207afac607459e835faca636 gst-plugins-alsa-0.10.3.ebuild 387
 SHA256 2555c805be8a7ef9879cc52b42f6261a8f48f112e4f13778a54acafcd0db6002 gst-plugins-alsa-0.10.3.ebuild 387
-MD5 741084fa11a93113e8de3b0e4abad5d6 gst-plugins-alsa-0.10.4.ebuild 407
-RMD160 339a9494605e3e04b680634729a6caf8e7c4e41e gst-plugins-alsa-0.10.4.ebuild 407
-SHA256 1b970cb2e7c310d24d52636d6ec04cd50edc0ddf2e9aa5fc15fc76d1d090fdfa gst-plugins-alsa-0.10.4.ebuild 407
+MD5 2c9241414397c01c4b1940f315c98b3b gst-plugins-alsa-0.10.4.ebuild 412
+RMD160 c91b73c1d9b2ec51c5a559dc041a0492ff42fdc5 gst-plugins-alsa-0.10.4.ebuild 412
+SHA256 e1e9a86fc11433918e22cdc1648716df3d957b1ccca5ba480d7891ac4bfc9e2a gst-plugins-alsa-0.10.4.ebuild 412
 MD5 e71865f8f646448ec2f305f8cfaf5e12 gst-plugins-alsa-0.8.10.ebuild 382
 RMD160 14aea7afc47a1f22472485f40d4227b025bf74fc gst-plugins-alsa-0.8.10.ebuild 382
 SHA256 8c6915b54321cdb4d7d24c6ee7af10442acef5dca46dab4d1c11877d44173c60 gst-plugins-alsa-0.8.10.ebuild 382

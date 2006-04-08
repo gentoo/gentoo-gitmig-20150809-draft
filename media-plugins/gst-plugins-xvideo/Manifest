@@ -46,9 +46,9 @@ SHA256 c6b8e3e8f6facffcdde1363d893be21997b2d9deee6bc379bedc3e998f46805f gst-plug
 MD5 62746e09cb86386a9f13b15e9c23e734 gst-plugins-xvideo-0.10.3.ebuild 460
 RMD160 3e581be8d64ba352df7abd4e551c661272a6b9c4 gst-plugins-xvideo-0.10.3.ebuild 460
 SHA256 f849b568ed7189bcfaebf697038e49dd39d4ad28ae87fdd411d3c6530761a211 gst-plugins-xvideo-0.10.3.ebuild 460
-MD5 05e109e464850dd9095289bfc5d40690 gst-plugins-xvideo-0.10.4-r1.ebuild 704
-RMD160 4eb4ed526e3a4306394c6e19bc5e45f19e9ac084 gst-plugins-xvideo-0.10.4-r1.ebuild 704
-SHA256 b1750ece18d09df9fcdebe4a2d063d84625c5fdcbc56ce6cb40bfcd46e5ec163 gst-plugins-xvideo-0.10.4-r1.ebuild 704
+MD5 2c8ad3579e3eea3a2680724ca72a1939 gst-plugins-xvideo-0.10.4-r1.ebuild 709
+RMD160 6f96eccf048760d1cf9681fc7d22e352872434e8 gst-plugins-xvideo-0.10.4-r1.ebuild 709
+SHA256 3b6ebb0b7054098f3f582f46f3ece5139099d329f2ddadac556e7e11cacb597a gst-plugins-xvideo-0.10.4-r1.ebuild 709
 MD5 37de62055a351f0b83b2ef6caa9f50fe gst-plugins-xvideo-0.10.4.ebuild 527
 RMD160 fedb00c743b18a1a2db36ef718e07816170f6fe8 gst-plugins-xvideo-0.10.4.ebuild 527
 SHA256 e05efecaf7b6faab140d35883fd488133889621bbf8258af98f261e3fe542980 gst-plugins-xvideo-0.10.4.ebuild 527
