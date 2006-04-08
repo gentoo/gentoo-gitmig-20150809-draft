@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/simgear
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.20 2006/04/04 18:46:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.21 2006/04/08 01:36:40 tupone Exp $
+
+*simgear-0.3.10 (08 Apr 2006)
+
+  08 Apr 2006; <Tupone@gentoo.org> +simgear-0.3.10.ebuild:
+  Version bump
 
   04 Apr 2006; <Tupone@gentoo.org> +files/simgear-0.3.9-gcc41.patch,
   simgear-0.3.9.ebuild:
