@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/cutg
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.39 2006/02/22 21:20:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.40 2006/04/08 10:29:16 blubb Exp $
+
+  08 Apr 2006; Simon Stelling <blubb@gentoo.org> cutg-150.ebuild:
+  stable on amd64
 
   22 Feb 2006; Fabian Groffen <grobian@gentoo.org> cutg-150.ebuild:
   Marked ppc-macos stable (bug #123333)
