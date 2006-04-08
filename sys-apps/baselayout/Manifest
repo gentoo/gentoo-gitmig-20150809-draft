@@ -37,9 +37,9 @@ SHA256 3bdaae5c1ce59856f77b57e8312a369b61fe1f3cbb17993454a699ea7703e0a6 files/ba
 MD5 6a8967d43dfa400cdfbab80fc49a7e85 files/baselayout-1.11.14-udhcpc.patch 1301
 RMD160 e07f8165814a29dee4aa044e6817f8b79193403f files/baselayout-1.11.14-udhcpc.patch 1301
 SHA256 99c2274703515f7f52c8480e55c93beea28968a284abb351250bd14a111431fc files/baselayout-1.11.14-udhcpc.patch 1301
-MD5 321a6a9c29a81532b6a890f2d29c6481 files/baselayout-1.11.14-uniqify.patch 517
-RMD160 c6dd300480e890371220b92ac8854e36c520d062 files/baselayout-1.11.14-uniqify.patch 517
-SHA256 1c15cfb8d4bb366bc6886f8231288a5b11dfe4b69ddbe55107c0420e48caa2f5 files/baselayout-1.11.14-uniqify.patch 517
+MD5 08385e878922e351d020a26fed4de4de files/baselayout-1.11.14-uniqify.patch 2080
+RMD160 3bbe90a05bd9db1ae552217ce5043cca80abf609 files/baselayout-1.11.14-uniqify.patch 2080
+SHA256 80290bcd0292af7911e865beae03e8e53d8d45486127ae394d3a843e1cdc8962 files/baselayout-1.11.14-uniqify.patch 2080
 MD5 ad54dfecf1af6424be9130191942ea61 files/baselayout-1.12.0_pre16-depscan.patch 4240
 RMD160 30944e22e039cba13a56fe59b96378473ddd7a52 files/baselayout-1.12.0_pre16-depscan.patch 4240
 SHA256 2e8b48e891a0ebd487f0c2ff70203ecca02521a0b9e584a4c5146dc3a3cba3b6 files/baselayout-1.12.0_pre16-depscan.patch 4240
