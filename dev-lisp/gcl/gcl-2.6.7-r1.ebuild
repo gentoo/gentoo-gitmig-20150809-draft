@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r1.ebuild,v 1.1 2006/01/27 19:42:18 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r1.ebuild,v 1.2 2006/04/08 23:37:58 mkennedy Exp $
 
 inherit elisp-common flag-o-matic autotools
 
@@ -123,6 +123,8 @@ src_compile() {
 ${myconfig}"
 	econf ${myconfig} || die
 	make || die
+
+	sed -e 's,@EXT@,,g' debian/in.gcl.1 >gcl.1
 }
 
 src_install() {
@@ -157,6 +159,8 @@ src_install() {
 	for i in ${D}/usr/share/doc/gcl-{tk,si}; do
 		mv $i ${D}/usr/share/doc/${PF}
 	done
+
+	doman gcl.1
 
 	find ${D}/usr/lib/gcl-${PV}/ -type f \( -perm 640 -o -perm 750 \) -exec chmod 0644 '{}' \;
 }

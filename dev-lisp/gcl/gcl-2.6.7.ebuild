@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7.ebuild,v 1.6 2006/01/12 22:51:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7.ebuild,v 1.7 2006/04/08 23:37:58 mkennedy Exp $
 
 inherit elisp-common flag-o-matic autotools
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~ppc amd64 sparc"
 IUSE="emacs readline debug X tcltk custreloc dlopen gprof doc ansi"
 
 RDEPEND="emacs? ( virtual/emacs )
-	X? ( virtual/x11 )
+	X? ( || ( ( x11-libs/libXt x11-libs/libXext x11-libs/libXmu x11-libs/libXaw ) virtual/x11 ) )
 	readline? ( sys-libs/readline )
 	>=dev-libs/gmp-4.1
 	tcltk? ( dev-lang/tk )"
