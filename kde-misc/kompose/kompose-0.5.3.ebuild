@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/kompose-0.5.3.ebuild,v 1.5 2006/03/02 16:56:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/kompose-0.5.3.ebuild,v 1.6 2006/04/08 09:33:51 blubb Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://kompose.berlios.de"
 SRC_URI="mirror://gentoo/${P}g.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="media-libs/imlib2"

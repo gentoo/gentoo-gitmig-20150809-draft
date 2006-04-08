@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ef5060710d8badba72b1984c06493422 ChangeLog 2743
+MD5 19e935ff7c5967f93a199995feea324c ChangeLog 2830
+RMD160 50ae8454f7855a52b850848e65dea77a8cf7cf75 ChangeLog 2830
+SHA256 fc32aef5163d2a0d06d23dff05f80c544494484c70578fa93825671ee054f8ec ChangeLog 2830
 MD5 bb8349056aacdedf127c2fc397eee839 files/digest-kompose-0.5.1 66
+RMD160 ed00ad68a07ee72fb81bc4468fb66f170d3db1fa files/digest-kompose-0.5.1 66
+SHA256 b8c7bfcf883c7d0460015ae72d29b3dff0daa98b23730110b1434f20fa93f527 files/digest-kompose-0.5.1 66
 MD5 163415b92497270bb6d8471405c92953 files/digest-kompose-0.5.3 67
+RMD160 3ad462873f7380a8770a75d8affd29eacc0eec65 files/digest-kompose-0.5.3 67
+SHA256 40716fc74a8b59a80f4b6d516497d1856b80cb07f8b9d96fda26e2b3c76c758e files/digest-kompose-0.5.3 67
 MD5 91f0c9146c5ea9fb176886b380ed25c6 kompose-0.5.1.ebuild 797
-MD5 22550f3ea0a3292afd427826e1c88c2d kompose-0.5.3.ebuild 878
+RMD160 289452362365c60d82e143c6fd755d8f70e94cc2 kompose-0.5.1.ebuild 797
+SHA256 347dc725ee4946dec4d92b3f49e8b79bc28a48797207967dd16ce55024b9bab6 kompose-0.5.1.ebuild 797
+MD5 232fc9abc70dcf6af39dbe95f29ea015 kompose-0.5.3.ebuild 874
+RMD160 8eab6c498d5aed5e1083ac8a5dbdeb66ffb858bb kompose-0.5.3.ebuild 874
+SHA256 bb6feacc603ac0a0a55fa0b6d76fa6165285cd0e1a2a758f5dc04e8cba69b314 kompose-0.5.3.ebuild 874
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEByPOKRy60XGEcJIRAp5vAJ9sKsxUoLLk69qZ5XzOJ8Mj/chfvACffU8O
-HyEJHdQ9vlxLuKJ4ApGorhA=
-=c37D
------END PGP SIGNATURE-----
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
