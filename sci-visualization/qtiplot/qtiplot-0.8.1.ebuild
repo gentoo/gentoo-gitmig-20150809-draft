@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.8.1.ebuild,v 1.1 2006/03/27 00:51:59 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.8.1.ebuild,v 1.2 2006/04/08 09:23:35 nixnut Exp $
 
 inherit eutils multilib qt3
 
@@ -10,7 +10,7 @@ SRC_URI="http://soft.proindependent.com/src/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="$(qt_min_version 3.3)
