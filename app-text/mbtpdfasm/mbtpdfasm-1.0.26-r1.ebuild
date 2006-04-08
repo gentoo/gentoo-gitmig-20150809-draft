@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mbtpdfasm/mbtpdfasm-1.0.26.ebuild,v 1.1 2006/03/23 02:08:36 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mbtpdfasm/mbtpdfasm-1.0.26-r1.ebuild,v 1.1 2006/04/08 10:56:34 sbriesen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,6 +24,7 @@ src_unpack() {
 	cd "${S}"
 
 	edos2unix *.txt
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 
 	# patch location of help files
 	sed -i -e "s:\(aide.txt\):/usr/share/doc/${PF}/\1:g" \
