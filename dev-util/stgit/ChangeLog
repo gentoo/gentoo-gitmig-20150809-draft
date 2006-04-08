@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/stgit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.9 2006/02/18 12:19:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.10 2006/04/08 11:18:18 ferdy Exp $
+
+*stgit-0.9 (08 Apr 2006)
+
+  08 Apr 2006; Fernando J. Pereda <ferdy@gentoo.org> +stgit-0.9.ebuild:
+  New upstream version
 
   18 Feb 2006; Simon Stelling <blubb@gentoo.org> stgit-0.8.1.ebuild:
   added ~amd64 keyword
