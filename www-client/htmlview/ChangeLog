@@ -1,6 +1,9 @@
 # ChangeLog for www-client/htmlview
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/ChangeLog,v 1.1 2004/11/12 10:48:52 usata Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/ChangeLog,v 1.2 2006/04/08 18:51:00 nixnut Exp $
+
+  08 Apr 2006; <nixnut@gentoo.org> htmlview-3.0.0.ebuild:
+  Added ~ppc to satisfy dependency of app-shells/fish
 
 *htmlview-3.0.0 (12 Nov 2004)
 
