@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.56 2006/02/06 03:36:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.57 2006/04/08 21:19:56 mkennedy Exp $
+
+*cscope-15.5-r5 (08 Apr 2006)
+
+  08 Apr 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/cscope-15.5-memset.patch, +cscope-15.5-r5.ebuild:
+  Added HAVE_MEMSET patch to support building on Gentoo/*BSD; Add ~x86-fbsd
+  keyword; Resolves Bug #129128.
 
   06 Feb 2006; Aron Griffis <agriffis@gentoo.org> cscope-15.5-r4.ebuild:
   Mark 15.5-r4 stable on alpha

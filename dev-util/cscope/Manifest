@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e869ae0218813310568edc9601dac573 ChangeLog 7186
-RMD160 b60003cbb4e0eab3bccdaca5b6d0a6ba0b0a81c4 ChangeLog 7186
-SHA256 edc03d07fd05627c9e415001cb8252308c5f9798b6fc5843511de6b048ae07e3 ChangeLog 7186
+MD5 8f048c52fe297ae71cb25f69a3e9a12f ChangeLog 7439
+RMD160 c176c1515d9ef69a6adc65d4731392c954b82f64 ChangeLog 7439
+SHA256 f148a9be3abf419d97d746faad0438a0073828e23a5660b645b2a4a8986462e1 ChangeLog 7439
 MD5 e996540d4833ca538c4f8e02bf0d9d41 cscope-15.5-r3.ebuild 1643
 RMD160 84f04a1c3526112e0ae5daa7f2816f32a55270db cscope-15.5-r3.ebuild 1643
 SHA256 1b82defef00ec817e8be552fa50536e7f31bac0567e7bf03301a42615aac3cef cscope-15.5-r3.ebuild 1643
 MD5 8975f3f6251cde8893710176ba9189f1 cscope-15.5-r4.ebuild 1732
 RMD160 379bf3143a7248a7df951a929478642e25a400f2 cscope-15.5-r4.ebuild 1732
 SHA256 f2e26e41cfedadc77b9e487b51e58492903dcbed2c75742881c5276b6766bd0a cscope-15.5-r4.ebuild 1732
+MD5 a8b923d3e42fb39200364f433c10101c cscope-15.5-r5.ebuild 1823
+RMD160 20d6abbd5d9a02199c2523e8f8a07250c1f639a9 cscope-15.5-r5.ebuild 1823
+SHA256 4fd9f2ad324f19b7105492f87ef309a642a1a9e0e70b85d3680788f1378f5394 cscope-15.5-r5.ebuild 1823
 MD5 22e8d669b78f301c45e9075e2793dfd3 files/15.5-noclobber-tempfile-rexotec.patch 1055
 RMD160 7ed807c7946ca134cbaee89bb3eb4c03e5c0bbf9 files/15.5-noclobber-tempfile-rexotec.patch 1055
 SHA256 c5cd253327e131825c6d6620a5683a4e1ab0a2f6b41906fe8009ab0e5dfef522 files/15.5-noclobber-tempfile-rexotec.patch 1055
@@ -22,6 +25,9 @@ SHA256 827984ff55ccb2fec0f3641027485e3161587d15f4ea7078a29fd6769d662cca files/cs
 MD5 38db4f8e35aac0bbea3287c6deb5f644 files/cscope-15.5-gcc295.patch 685
 RMD160 2bc68fd0c6c436b86c92550d8dcd71fbfabe8ef1 files/cscope-15.5-gcc295.patch 685
 SHA256 0e77a0d037a81c5d4fe035bc4021a3bf2f06770e827f9fb0985156579dd3cc2b files/cscope-15.5-gcc295.patch 685
+MD5 cb92cc645956e1c1c2dd4bbee987f477 files/cscope-15.5-memset.patch 410
+RMD160 6bbecad930ecb1a5652229a0e2c39aac88b25ac8 files/cscope-15.5-memset.patch 410
+SHA256 3cf28093f03554a758991f656d64e19f04f0de5442d2dee46b6c4bd15df8cf47 files/cscope-15.5-memset.patch 410
 MD5 9df689ed914642c87166dd98eafb5017 files/cscope-15.5-prog-info.patch 638
 RMD160 7ef9aa309f8196b2f1ff85533c43e2b3550b3cda files/cscope-15.5-prog-info.patch 638
 SHA256 6e3d6afc3259e9af29ed8b383a808b768e77395685d6a20932485996c5197822 files/cscope-15.5-prog-info.patch 638
@@ -34,13 +40,16 @@ SHA256 dbb30746575f40d28f13b0f00f17587c9d94102c85cde57c4038d3f6c44ae05f files/di
 MD5 4b40350acbcab41cabb7e20f19243dd1 files/digest-cscope-15.5-r4 235
 RMD160 b64d39e0c116defb66f2fedd959b04164a5474d0 files/digest-cscope-15.5-r4 235
 SHA256 c5ecf545ac3d96b8d1500621f91cdb18af0ba795ad672d464126b1190ca8b70d files/digest-cscope-15.5-r4 235
+MD5 4b40350acbcab41cabb7e20f19243dd1 files/digest-cscope-15.5-r5 235
+RMD160 b64d39e0c116defb66f2fedd959b04164a5474d0 files/digest-cscope-15.5-r5 235
+SHA256 c5ecf545ac3d96b8d1500621f91cdb18af0ba795ad672d464126b1190ca8b70d files/digest-cscope-15.5-r5 235
 MD5 79094d1585cb050b3855fbfe440f22b9 metadata.xml 790
 RMD160 7889067edaf88f6188a74c114c39160fcf827f71 metadata.xml 790
 SHA256 c357e749a49ff673990a6cfdda92bd8589d6b5d2d8a4f45e8976d7bd7eb384d8 metadata.xml 790
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD5sRDJrHF4yAQTrARAqBZAKCDq/LHiiy61F4IcbrEDwjMQFFiawCgmIZR
-yowebOegno9tfmxGHWjGB0k=
-=kK9Z
+iD8DBQFEOCkJyiNZaEAZA+ARAsvwAJ9VnqKamv9DjOpqaWHOoJmRHLJ13ACfWwGL
+R2nrS/8HVHDPP4Qx9r0wg6o=
+=u002
 -----END PGP SIGNATURE-----

@@ -1,0 +1,13 @@
+Index: cscope-15.5/src/egrep.y
+===================================================================
+--- cscope-15.5.orig/src/egrep.y
++++ cscope-15.5/src/egrep.y
+@@ -605,7 +605,7 @@ done:	(void) fclose(fptr);
+ 
+ /* FIXME HBB: should export this to a separate file and use
+  * AC_REPLACE_FUNCS() */
+-#if BSD
++#ifndef HAVE_MEMSET
+ /*LINTLIBRARY*/
+ /*
+  * Set an array of n chars starting at sp to the character c.
