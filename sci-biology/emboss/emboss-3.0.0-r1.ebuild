@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-3.0.0-r1.ebuild,v 1.6 2006/02/22 21:19:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-3.0.0-r1.ebuild,v 1.7 2006/04/08 10:32:30 blubb Exp $
 
 DESCRIPTION="The European Molecular Biology Open Software Suite - A sequence analysis package"
 HOMEPAGE="http://emboss.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://${PN}.open-bio.org/pub/EMBOSS/EMBOSS-${PV}.tar.gz"
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc-macos ppc64 x86"
+KEYWORDS="amd64 ppc ppc-macos ppc64 x86"
 IUSE="X png minimal"
 
 DEPEND="X? ( || ( x11-libs/libXt virtual/x11 ) )
