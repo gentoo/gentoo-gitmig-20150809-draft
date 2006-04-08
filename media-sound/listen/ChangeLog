@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/listen
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.1 2006/04/08 22:56:18 bass Exp $
+
+*listen-0.4.2-r2 (9 Apr 2006)
+
+  9 Apr 2006: Jose Alberto Suarez Lopez <bass@gentoo.org> listen-0.4.2-r2.ebuild:
+  First relase.
+
