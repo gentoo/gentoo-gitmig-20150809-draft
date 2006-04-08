@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler-bindings
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.26 2006/04/08 11:15:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.27 2006/04/08 21:41:14 flameeyes Exp $
+
+  08 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/poppler-0.5.1-qt-pthread.patch:
+  Update patch with the right version. More coffee for me in the morning.
 
   08 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/poppler-0.5.1-qt-pthread.patch, poppler-bindings-0.5.1-r1.ebuild:

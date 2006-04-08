@@ -2,7 +2,7 @@ Index: poppler-0.5.1/m4/qt.m4
 ===================================================================
 --- poppler-0.5.1.orig/m4/qt.m4
 +++ poppler-0.5.1/m4/qt.m4
-@@ -53,8 +53,28 @@ if test "x$qt_libdir" != "xno" ; then
+@@ -53,8 +53,34 @@ if test "x$qt_libdir" != "xno" ; then
  fi
  
  if test "x$have_qt" == "xyes"; then
@@ -10,19 +10,25 @@ Index: poppler-0.5.1/m4/qt.m4
 +    pthread_needed=no
 +
 +    save_LDFLAGS=$LDFLAGS
++    save_CXXFLAGS=$CXXFLAGS
++    save_LIBS=$LIBS
++    CXXFLAGS="$CXXFLAGS -I$qt_incdir"
++    LIBS="$LIBS $qt_libdir/$qt_test_library"
 +    AC_MSG_CHECKING([if Qt needs -pthread])
 +    AC_TRY_LINK([#include <qt.h>], [QString s;], [pthread_needed=no], [pthread_needed=yes])
-+    if "x$pthread_needed" = "xyes"; then
++    if test "x$pthread_needed" = "xyes"; then
 +        LDFLAGS="$LDFLAGS -pthread"
-+        AC_TRY_LINK([#include <qt.h>], [Qstring s;], [pthread_needed=yes], [pthread_needed=yes])
-+	LDFLAGS=$save_LDFLAGS
++        AC_TRY_LINK([#include <qt.h>], [QString s;], [pthread_needed=yes], [pthread_needed=no])
 +    fi
 +    AC_MSG_RESULT([$pthread_needed])
++    LDFLAGS=$save_LDFLAGS
++    CXXFLAGS=$save_CXXFLAGS
++    LIBS=$save_LIBS
 +
 +    AC_LANG_POP
 +
 +    qtpthread=''
-+    if "x$pthread_needed" = "xyes"; then
++    if test "x$pthread_needed" = "xyes"; then
 +        qtpthread="-pthread"
 +    fi
 +
