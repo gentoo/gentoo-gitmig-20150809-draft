@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a19694ca3e562f36987b8da304f7c20c ChangeLog 2200
-RMD160 1aafb5850872fe9abdb669d60a783cc6d81a53a2 ChangeLog 2200
-SHA256 8b5f7773303d5e7f0b0249fda3fa673d42ec7e40feac015dc861a3308d44ac1c ChangeLog 2200
+MD5 61c0784542a954563d34b8dfa29ffc2d ChangeLog 2311
+RMD160 b679ad64aec2671a22aad8f1e2e6d3159d838829 ChangeLog 2311
+SHA256 56483d9af26510149896f8c8c6af2e553b0b42f2eb368887a3989cbe5e50ce10 ChangeLog 2311
 MD5 bd5440b327cecc2b5eeaaba50cd9a066 files/digest-icon-naming-utils-0.6.2 74
 RMD160 073c874f976921f63802707814a65d6b8ea0ed3c files/digest-icon-naming-utils-0.6.2 74
 SHA256 5e59a9c98eabd146a8ac09e3401e5043f6b0534c57295a7b3c38957f571ca190 files/digest-icon-naming-utils-0.6.2 74
@@ -55,16 +52,9 @@ SHA256 5961d2d60472bcb9775c0f096caa9fc63e77ca6b76484477803ec7610109e085 icon-nam
 MD5 9fe0878ca8486f5e67a7fa9231d1f95f icon-naming-utils-0.7.0.ebuild 734
 RMD160 95556e5e6c42a8deff4f0f58328630b306ab3eca icon-naming-utils-0.7.0.ebuild 734
 SHA256 28dc68fc5dd551040541a5ad465fa88770810f990b7d4ca5c4797cbeb00f05c1 icon-naming-utils-0.7.0.ebuild 734
-MD5 7c0138e81a3c9163fa122873bf8da747 icon-naming-utils-0.7.1.ebuild 745
-RMD160 bf5b4cd0d5d6bb655c477bd8611c5800ca72b99d icon-naming-utils-0.7.1.ebuild 745
-SHA256 bb3da9f22a08010d3d44922bfcb40ff028de05b8ad2ae335be16b357ecf32e7e icon-naming-utils-0.7.1.ebuild 745
+MD5 44722c1c189df7dc7c1b89eb3bf4881f icon-naming-utils-0.7.1.ebuild 753
+RMD160 be71d1ef3d40498be3657e92e09c5ef2f155fc00 icon-naming-utils-0.7.1.ebuild 753
+SHA256 add5c767e088381df10d333fb6af194188606c8c8f40f92fd60ea63c00991580 icon-naming-utils-0.7.1.ebuild 753
 MD5 870a91577a60ccb6ea581e99f879e9b8 metadata.xml 248
 RMD160 507fd60616d5d14e274ac0628255acdddc90e4d4 metadata.xml 248
 SHA256 0d544700457efe5f7c24489f30572dd20c81a6d8879bf833f7d050408a79f36a metadata.xml 248
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENgZVSENan+PfizARAoKiAJ49CyuW/4i524KHL5Ns/YzLoKZSCgCcCtMY
-65L/xtJdBDIbpkxt9kBwLb0=
-=Tqtr
------END PGP SIGNATURE-----
