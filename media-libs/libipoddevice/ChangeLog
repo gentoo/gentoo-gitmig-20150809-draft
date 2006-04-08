@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libipoddevice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.3 2006/02/13 11:56:04 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.4 2006/04/08 14:57:04 dertobi123 Exp $
+
+  08 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  libipoddevice-0.4.1.ebuild:
+  Added to ~ppc, bug #115865
 
 *libipoddevice-0.4.1 (13 Feb 2006)
 

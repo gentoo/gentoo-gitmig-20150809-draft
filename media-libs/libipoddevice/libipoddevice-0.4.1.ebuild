@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.4.1.ebuild,v 1.1 2006/02/13 11:56:04 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.4.1.ebuild,v 1.2 2006/04/08 14:57:04 dertobi123 Exp $
 
 inherit multilib eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://banshee-project.org/files/libipoddevice/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=sys-apps/dbus-0.60
