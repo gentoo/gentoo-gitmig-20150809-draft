@@ -1,0 +1,21 @@
+--- sbin/functions.sh	(revision 1964)
++++ sbin/functions.sh	(working copy)
+@@ -757,6 +757,18 @@
+ 	return 1
+ }
+ 
++# char* uniqify(char *arg, ...)
++#
++#   Ensure that params are unique
++#
++uniqify() {
++    local result= x=
++    while [[ -n "$1" ]] ; do
++		[[ " ${result} " != *" $1 "* ]] && result="${result} $1"
++		shift
++	done
++    echo "${result# *}"
++}
+ 
+ ##############################################################################
+ #                                                                            #
