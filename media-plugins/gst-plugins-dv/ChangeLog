@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-dv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dv/ChangeLog,v 1.26 2006/03/29 18:08:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dv/ChangeLog,v 1.27 2006/04/08 12:50:04 dertobi123 Exp $
+
+  08 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  gst-plugins-dv-0.10.2.ebuild:
+  Added to ~ppc
 
   29 Mar 2006; Markus Rothe <corsair@gentoo.org>
   gst-plugins-dv-0.10.2.ebuild:

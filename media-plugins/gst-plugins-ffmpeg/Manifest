@@ -19,9 +19,9 @@ SHA256 30455208cf8c0ecc1d7ec2df01e4770e28793ffd1d7f3b1efabb474c4f756e7d files/gs
 MD5 2963f26bd29fbec176f2e0fb08213e75 files/gst-plugins-ffmpeg-0.8.5-gmake.patch 322
 RMD160 e7c91a5daea308d991a2cb36314a10edaaef24db files/gst-plugins-ffmpeg-0.8.5-gmake.patch 322
 SHA256 15d17051747b52e56f0c566e60d694ce86ab0622fb0853b8f3c257742964e0c2 files/gst-plugins-ffmpeg-0.8.5-gmake.patch 322
-MD5 2bc44a459e1725ccff2f1bd0afa877d2 gst-plugins-ffmpeg-0.10.1.ebuild 1306
-RMD160 739d94f2063a81ea765c93c1d80943f13087a019 gst-plugins-ffmpeg-0.10.1.ebuild 1306
-SHA256 b7ef9a2e0a062fe57172c31e97ae557d22e0eaef9074a3ce2d9c3f755b27aa32 gst-plugins-ffmpeg-0.10.1.ebuild 1306
+MD5 d1f1f19131ad229ace26107314bbc851 gst-plugins-ffmpeg-0.10.1.ebuild 1311
+RMD160 41605fc43290411ea153170864a1eb259ecbb141 gst-plugins-ffmpeg-0.10.1.ebuild 1311
+SHA256 96ce768de65a72e7d975042bfce8b394f9cd62d53086972cc7e869e79cae1a4b gst-plugins-ffmpeg-0.10.1.ebuild 1311
 MD5 40c7a2ab85c7d6b2389c4b51b187a4f2 gst-plugins-ffmpeg-0.8.7-r1.ebuild 1639
 RMD160 4688893c3f34bf05fecc30c0afb94176e1c28174 gst-plugins-ffmpeg-0.8.7-r1.ebuild 1639
 SHA256 05c087516324008fd3765a2d16747f38ae0a72fba5e34226c3f061a1358f2c71 gst-plugins-ffmpeg-0.8.7-r1.ebuild 1639
