@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.1.6.ebuild,v 1.3 2006/03/17 22:40:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.1.6.ebuild,v 1.4 2006/04/08 23:37:34 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -25,6 +25,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/1.1.6-gcc41-fix.patch
 
 	echo "Categories=Application;Development;" >>"${S}"/mysql-administrator/MySQLAdministrator.desktop.in
 }
