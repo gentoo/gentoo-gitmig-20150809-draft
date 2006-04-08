@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060408.ebuild,v 1.1 2006/04/08 16:33:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060408.ebuild,v 1.2 2006/04/08 22:21:01 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,9 +8,9 @@ RESTRICT="nostrip"
 IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl bindist
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
 dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
-lirc live livecd lzo mad matroska matrox mmx mmxext musepack nas nls nvidia
-vorbis opengl openal oss png real rtc samba sdl sse sse2 svga tga theora
-truetype v4l v4l2 win32codecs X x264 xanim xinerama xmms xv xvid xvmc"
+lirc live livecd lzo mad matroska matrox mmx mmxext musepack nas nvidia
+unicode vorbis opengl openal oss png real rtc samba sdl sse sse2 svga tga
+theora truetype v4l v4l2 win32codecs X x264 xanim xinerama xmms xv xvid xvmc"
 # openal
 BLUV=1.4
 SVGV=1.9.17
@@ -244,6 +244,7 @@ src_compile() {
 
 
 	local myconf="--disable-external-faad --disable-tv-bsdbt848"
+	myconf="--disable-external-vidix"
 	################
 	#Optional features#
 	###############
@@ -253,6 +254,9 @@ src_compile() {
 	fi
 
 	myconf="${myconf} $(use_enable bidi fribidi)"
+	if use unicode; then
+		myconf="${myconf} --charset=utf8"
+	fi
 	myconf="${myconf} $(use_enable cdparanoia)"
 	if use dvd; then
 		myconf="${myconf} $(use_enable dvdread) $(use_enable !dvdread mpdvdkit)"
@@ -356,7 +360,7 @@ src_compile() {
 	then
 		myconf="${myconf} --enable-svga"
 	else
-		myconf="${myconf} --disable-svga --disable-vidix"
+		myconf="${myconf} --disable-svga --disable-internal-vidix"
 	fi
 
 	myconf="${myconf} $(use_enable tga)"
@@ -412,7 +416,6 @@ src_compile() {
 	use x86 && myconf="${myconf} $(use_enable mmx)"
 	use x86 && myconf="${myconf} $(use_enable mmxext mmx2)"
 	myconf="${myconf} $(use_enable debug)"
-	myconf="${myconf} $(use_enable nls i18n)"
 
 	# mplayer now contains SIMD assembler code for amd64
 	# AMD64 Team decided to hardenable SIMD assembler for all users
@@ -484,15 +487,9 @@ src_compile() {
 	MAKEOPTS="${MAKEOPTS} -j1"
 
 	einfo "Make"
-	make depend && emake || die "Failed to build MPlayer!"
-	cd doc && make -C DOCS/xml html-chunked
+	emake || die "Failed to build MPlayer!"
+	use doc && make -C DOCS/xml html-chunked
 	einfo "Make completed"
-
-	# We build the shared libpostproc.so here so that our
-	# mplayer binary is not linked to it, ensuring that we
-	# do not run into issues ... (bug #14479)
-	cd ${S}/libavcodec/libpostproc
-	make SHARED_PP="yes" || die "Failed to build libpostproc.so!"
 }
 
 src_install() {
