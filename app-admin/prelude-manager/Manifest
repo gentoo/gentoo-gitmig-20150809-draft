@@ -4,9 +4,9 @@ SHA256 04093f6ae0569b7cf1ea363db84ee2675c783299591d10f8766ad2c06c5f6332 ChangeLo
 MD5 0f09014053460960e939fb9331994e5c files/digest-prelude-manager-0.8.10 74
 RMD160 8f751ba7d637a14d4fcddc0182b68ca1489bcd26 files/digest-prelude-manager-0.8.10 74
 SHA256 a30ed512c0b125bb87d971ea465ddd3f3d156b7fe608446d0ae006c046a802d6 files/digest-prelude-manager-0.8.10 74
-MD5 11e48a8ca4cdff08bf27ed5137a0c0bd files/digest-prelude-manager-0.9.1-r1 73
-RMD160 4a36bcda5e40b02469ae7c5267dcad7d405bffad files/digest-prelude-manager-0.9.1-r1 73
-SHA256 bbdbf504e7c6850942affef765f2663d05d201721409b94463f6ffb997e271ba files/digest-prelude-manager-0.9.1-r1 73
+MD5 ed2df4800facdfbbe8b2960addcd1537 files/digest-prelude-manager-0.9.1-r1 265
+RMD160 720dbaf633086eda27632bd06fb6b57df2a9431f files/digest-prelude-manager-0.9.1-r1 265
+SHA256 88a1f16dcb7eb46fc246691c39d361248981d893cf2ba29624d9b38ae65b4a9c files/digest-prelude-manager-0.9.1-r1 265
 MD5 22bf9765c65ff95b310b92107d14df45 files/digest-prelude-manager-0.9.3 73
 RMD160 41da94917b3388148b7014e12949540e91ef30f2 files/digest-prelude-manager-0.9.3 73
 SHA256 45a0432efb1022cd58f3f4b8b58983a9abd65c8d6eee0ced5d4e8c198d24854e files/digest-prelude-manager-0.9.3 73
