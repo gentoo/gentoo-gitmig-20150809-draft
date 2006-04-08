@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/misdnuser
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdnuser/ChangeLog,v 1.2 2006/02/28 00:15:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdnuser/ChangeLog,v 1.3 2006/04/08 17:32:00 genstef Exp $
+
+*misdnuser-0.1_pre20060307 (08 Apr 2006)
+
+  08 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  -misdnuser-0.1_pre20060203.ebuild, -misdnuser-0.1_pre20060222.ebuild,
+  +misdnuser-0.1_pre20060307.ebuild:
+  version bump, remove old
 
 *misdnuser-0.1_pre20060222 (28 Feb 2006)
 
