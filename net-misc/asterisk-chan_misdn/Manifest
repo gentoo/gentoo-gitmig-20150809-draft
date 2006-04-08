@@ -1,18 +1,27 @@
-MD5 7b5b46f0b5aeeaab04ca8846e48b5cf1 ChangeLog 585
-RMD160 ef3a92e1ffab8f84966fc164e5cb798db917eb81 ChangeLog 585
-SHA256 150be417601fae84fe26da2999b7fda4663c06cb9c95f93e809ace8429356e90 ChangeLog 585
-MD5 122e31481cb93ce613e2fac531021a2e asterisk-chan_misdn-0.3.0_rc15.ebuild 858
-RMD160 f33627d4f252400c74f90a337b1e57885ad0f6bc asterisk-chan_misdn-0.3.0_rc15.ebuild 858
-SHA256 3de2bf954393b4b379cd873370ab9e2e114eb5d529f41ebc5915c82788396abb asterisk-chan_misdn-0.3.0_rc15.ebuild 858
-MD5 8357bfd60e9d9cc9549c5a4e44ebae1e asterisk-chan_misdn-0.3.0_rc23.ebuild 858
-RMD160 08aa55cef89ec66a341cb3e60a3d9e6b939c934d asterisk-chan_misdn-0.3.0_rc23.ebuild 858
-SHA256 f7717f746acbf902120c5c18e5db1b443378ff22ef04e6fa0e380b8443292ced asterisk-chan_misdn-0.3.0_rc23.ebuild 858
-MD5 f3e2edd5f3e68a09d012d086dc38bce3 files/digest-asterisk-chan_misdn-0.3.0_rc15 262
-RMD160 62f8cdb0f58cb4cb2b61722c0f1d9dca2522b900 files/digest-asterisk-chan_misdn-0.3.0_rc15 262
-SHA256 6dcdfe45670a32c83208adab1733bdf25d2c9b7e15d7c2a301f581c85d935047 files/digest-asterisk-chan_misdn-0.3.0_rc15 262
-MD5 391be4dcd9543b29d15ac8dbb21d8674 files/digest-asterisk-chan_misdn-0.3.0_rc23 262
-RMD160 dc977107b46698cd83c4e360c00d5840d4922d14 files/digest-asterisk-chan_misdn-0.3.0_rc23 262
-SHA256 b3959cee819ea2456c2afd64cf7db39b22f7e92651e783deb6b761e8608e1748 files/digest-asterisk-chan_misdn-0.3.0_rc23 262
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST chan_misdn-0.3.0.tar.gz 77065 RMD160 d49b64b3f6c8b58a2d564c8838ac4727088a09f9 SHA1 62e6bba98df55b57a392db42322cf69c77ebfa21 SHA256 ad754695893ccb1a9dc9f260b168c871637b2f6e1371d6d92851ce4c24c9b112
+EBUILD asterisk-chan_misdn-0.3.0.ebuild 847 RMD160 53ce7b605de871fe69f2898363af3604d881bf6c SHA1 620e976fb9a95bb5c6f9245d6f40352a9a41999c SHA256 b6ec2f303db3d96ac01fbddb018cc023ff2321905e779cd245f9307809f0c120
+MD5 46ae68cd41558fe6faa96f18469bc631 asterisk-chan_misdn-0.3.0.ebuild 847
+RMD160 53ce7b605de871fe69f2898363af3604d881bf6c asterisk-chan_misdn-0.3.0.ebuild 847
+SHA256 b6ec2f303db3d96ac01fbddb018cc023ff2321905e779cd245f9307809f0c120 asterisk-chan_misdn-0.3.0.ebuild 847
+MISC ChangeLog 827 RMD160 aee5d0ad79e668ab252c182c287ca6a1efc57679 SHA1 31081dd63deb41f0f1f359be288c8b4f0daeaf06 SHA256 8477d88666337347ea6374e6da99598d1fd00a4a758a299fc1144dac28313225
+MD5 a788e495a6d1ff00f0d26fc159870599 ChangeLog 827
+RMD160 aee5d0ad79e668ab252c182c287ca6a1efc57679 ChangeLog 827
+SHA256 8477d88666337347ea6374e6da99598d1fd00a4a758a299fc1144dac28313225 ChangeLog 827
+MISC metadata.xml 163 RMD160 df94c60cc0bb7abe5913b464a33966b142b2fe1e SHA1 d8332605fd22c32f15438bbdf24aa622c3d2738a SHA256 1137a0fd866641cf719b0c2e9e77ca9fa4541a42f2cc851fe4659cf2677acca3
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 RMD160 df94c60cc0bb7abe5913b464a33966b142b2fe1e metadata.xml 163
 SHA256 1137a0fd866641cf719b0c2e9e77ca9fa4541a42f2cc851fe4659cf2677acca3 metadata.xml 163
+size 247 files/digest-asterisk-chan_misdn-0.3.0 247
+RMD160 4ac2faed0a3765ef71bd8624ab571c1936fd19f6 files/digest-asterisk-chan_misdn-0.3.0 247
+SHA256 353ca5d581d828ee4f4cac069668ccde4fa56c851c0228f7e019195940b4610d files/digest-asterisk-chan_misdn-0.3.0 247
+MD5 b06e19203b1a1419a83ada7d21ea6e96 files/digest-asterisk-chan_misdn-0.3.0 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEN/QeNJowsmZ/PzARAvSZAJ45P4BW+quVGLaG4Qw7JYvrS1ukGQCfe5zQ
+EwBbqBtntAHVxJgY0oIh2Mg=
+=TUT+
+-----END PGP SIGNATURE-----

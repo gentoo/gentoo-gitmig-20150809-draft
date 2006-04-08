@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk-chan_misdn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_misdn/ChangeLog,v 1.2 2006/02/28 00:17:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_misdn/ChangeLog,v 1.3 2006/04/08 17:34:00 genstef Exp $
+
+*asterisk-chan_misdn-0.3.0 (08 Apr 2006)
+
+  08 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  -asterisk-chan_misdn-0.3.0_rc15.ebuild,
+  -asterisk-chan_misdn-0.3.0_rc23.ebuild, +asterisk-chan_misdn-0.3.0.ebuild:
+  version bump, remove old
 
 *asterisk-chan_misdn-0.3.0_rc23 (28 Feb 2006)
 
