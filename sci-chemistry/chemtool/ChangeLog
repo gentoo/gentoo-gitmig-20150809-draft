@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/chemtool
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.10 2006/04/02 17:07:48 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.11 2006/04/08 11:31:39 markusle Exp $
+
+  08 Apr 2006; Markus Dittrich <markusle@gentoo.org> ChangeLog:
+  Version bump. Thanks to boozo <gagnmat@yahoo.fr> for his ebuild.
+  This fixes bug #128651.
 
   02 Apr 2006; Olivier Fisette <ribosome@gentoo.org> -chemtool-1.6.3.ebuild,
   -chemtool-1.6.4.ebuild, -chemtool-1.6.6.ebuild, -chemtool-1.6.7.ebuild:
