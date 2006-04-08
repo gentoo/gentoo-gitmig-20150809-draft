@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/sge-030809.ebuild,v 1.1 2006/04/08 03:00:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/sge-030809.ebuild,v 1.2 2006/04/08 18:32:26 vapier Exp $
 
 inherit eutils
 
@@ -37,14 +37,6 @@ src_compile() {
 		USE_IMG=$(yesno image) \
 		USE_FT=$(yesno truetype) \
 		|| die "emake failed"
-
-	if use examples ; then
-		cd examples
-		emake -j1 \
-			USE_IMG=$(yesno image) \
-			USE_FT=$(yesno truetype) \
-			|| die "emake (examples) failed"
-	fi
 }
 
 src_install() {
