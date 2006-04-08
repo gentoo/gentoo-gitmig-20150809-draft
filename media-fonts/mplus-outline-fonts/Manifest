@@ -1,6 +1,28 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b373ac38ee2a771aae832faf0f370bc9 ChangeLog 939
+RMD160 a9ebb233f1ef5c771ef61db57cacc6e3ebee5337 ChangeLog 939
+SHA256 218d032cfb3accd963d667f4b8454e3af5cea065815786c19bb8092109ee9cc9 ChangeLog 939
 MD5 b72b8485ae4b08697e6ea6444495a31a files/digest-mplus-outline-fonts-0_pre010 157
+RMD160 41a0e5d4eb295b12f2a7ead5aebb697d297b3d98 files/digest-mplus-outline-fonts-0_pre010 157
+SHA256 e01f3c5f2acc4d9a98299a43da364bbe28da54b10c31e2a7b43b417282215ac4 files/digest-mplus-outline-fonts-0_pre010 157
 MD5 d995f3449110cc2a80f73cb7c7d5266a files/digest-mplus-outline-fonts-0_pre011 157
+RMD160 4ba94108606f84f720485ea6d1e842c5f64c72fd files/digest-mplus-outline-fonts-0_pre011 157
+SHA256 9377db78b5fe376047762ae73c7ead4125f6369646de377a9f0378bfb530685c files/digest-mplus-outline-fonts-0_pre011 157
 MD5 9c69ff3ce8108c99baa12b2b38780494 metadata.xml 175
+RMD160 4be49b8c0297a54a570715005c60f91a178807bf metadata.xml 175
+SHA256 5c2b5892c4a52e0f1585a34ed70e94042c3684a5f1021f077b2c5756d51120ce metadata.xml 175
 MD5 e6d21fd458d4c10e73dac29edd709cb0 mplus-outline-fonts-0_pre010.ebuild 1005
-MD5 f6b66fce4a69b379716d3999146ee972 mplus-outline-fonts-0_pre011.ebuild 1003
+RMD160 cc98e8aad23c18f10d69892d1fc2971cade8e653 mplus-outline-fonts-0_pre010.ebuild 1005
+SHA256 e1f07c0c87b5b6f9a9437a644008ba847e2d2aafbc51b0d69451ee5e0f498cda mplus-outline-fonts-0_pre010.ebuild 1005
+MD5 fc713beb33ede14807115807da203391 mplus-outline-fonts-0_pre011.ebuild 984
+RMD160 622d26829ab6fd1e4a5f1817bf53e33cfa0ce35c mplus-outline-fonts-0_pre011.ebuild 984
+SHA256 405e817f4ff374923da0762b83bc5ab82342494f459cd7c0d289fb8d515fa911 mplus-outline-fonts-0_pre011.ebuild 984
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEN0x02+ySkm8kpY0RAqT7AJkBVHTJq4JJeAp1Q1v4K2DJOoGN+wCgo5r0
+iTGjynEwXN2aRdo0YFybh+A=
+=frBF
+-----END PGP SIGNATURE-----
