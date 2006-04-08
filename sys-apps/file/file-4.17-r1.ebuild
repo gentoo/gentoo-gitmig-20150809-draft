@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.17-r1.ebuild,v 1.2 2006/03/30 15:10:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.17-r1.ebuild,v 1.3 2006/04/08 22:54:14 flameeyes Exp $
 
 inherit distutils libtool
 
@@ -22,6 +22,8 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-init-mem.patch #126012
 	epatch "${FILESDIR}"/${PN}-4.15-libtool.patch #99593
+	rm -f "${S}/ltconfig"
+
 	elibtoolize
 
 	# make sure python links against the current libmagic #54401
