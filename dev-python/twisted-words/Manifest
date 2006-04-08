@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e15c37cb33eeefb85e3fd9c989f5a49b ChangeLog 1103
+MD5 9255973103830181c5d4af099deb437f ChangeLog 1194
+RMD160 96785fbb68e9265b49354bad57b1509e23b82d34 ChangeLog 1194
+SHA256 0660137fc5c13183e9439c41e1e874b68689bfaa678bd8e5a2f18e811c8f6aca ChangeLog 1194
 MD5 1799a75811b18557d3ad80550fffae15 files/digest-twisted-words-0.1.0-r1 71
+RMD160 01098d07ce00bcc177fe9df964ffef9921cb6f95 files/digest-twisted-words-0.1.0-r1 71
+SHA256 6cf380a39fc0d4cd159dcd585caf87c492709c60b05a128e85b594f94cfbda92 files/digest-twisted-words-0.1.0-r1 71
 MD5 99ab8bd010c1d5b6abfbf45700f017db files/digest-twisted-words-0.3.0 71
+RMD160 dd69b26c8d356560f594a4b390d19e861bd7dde6 files/digest-twisted-words-0.3.0 71
+SHA256 f46caeabc5be820631dc520b99bf76f29c127c768030f50b7acd6ddcec2a6d10 files/digest-twisted-words-0.3.0 71
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
-MD5 e2d1cb180ee5ebe7a946fb6611886adc twisted-words-0.1.0-r1.ebuild 458
+RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
+SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
+MD5 50f11320c5133258933caf4fb25dbea0 twisted-words-0.1.0-r1.ebuild 461
+RMD160 9429ac39d5250d9cf265ec6787106ef01cc2919d twisted-words-0.1.0-r1.ebuild 461
+SHA256 a3d4c3055bac8f852531cb2cb98e18befc16fdb697bdb200f036b7023fe98f33 twisted-words-0.1.0-r1.ebuild 461
 MD5 3e626141c689a62a5494af2d0f9768ed twisted-words-0.3.0.ebuild 439
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEMZj/KRy60XGEcJIRAgKYAKCjmj/hh5qAa9NsqbnEcCX+e8QpFwCeJxf7
-/UV4R3oQXjzqI3vYGejBzXc=
-=uPQG
------END PGP SIGNATURE-----
+RMD160 adc011f147fcbe983f9b74758305b0d327bfc574 twisted-words-0.3.0.ebuild 439
+SHA256 20b6920fe52967a17b9aac625e6c964bac1c8fbef039db9f45c25216e403fa89 twisted-words-0.3.0.ebuild 439

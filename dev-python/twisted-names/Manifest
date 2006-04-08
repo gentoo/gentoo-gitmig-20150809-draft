@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7e1bf991b7eca4e59e91aa25a913591a ChangeLog 1008
+MD5 3e72baa16f289edbca2f1b3af48b25cc ChangeLog 1099
+RMD160 0cf4fba439f361ff3a087db5edeedd50ee92a792 ChangeLog 1099
+SHA256 2e24b9ec98973aef79f7d504cede37a772248d225b28ff1a7feaa2d9de02aa57 ChangeLog 1099
 MD5 bce5421a13546c1574eb9fcd01093802 files/digest-twisted-names-0.1.0-r1 70
+RMD160 cecc8126edaff230e73b9557dc3f5fb2fb0bcbf9 files/digest-twisted-names-0.1.0-r1 70
+SHA256 a6b22dad11cbbe031b6a6bb62cea97a58dfeccf7d5f7123c6a30cbb195d1654d files/digest-twisted-names-0.1.0-r1 70
 MD5 472558ec0cc446ebc789865c7557fe09 files/digest-twisted-names-0.2.0 256
+RMD160 85ec90b1a6f4d274266f85d19b8398039faf84a1 files/digest-twisted-names-0.2.0 256
+SHA256 4596545207237f9bf018eed6a629133b7e7a3b34f508e37e0223fe87b8065aa5 files/digest-twisted-names-0.2.0 256
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
-MD5 191dce115006c1e7b5de1f46b37b9a55 twisted-names-0.1.0-r1.ebuild 374
+RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
+SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
+MD5 25473265ae102713e0d1dda4535caa7b twisted-names-0.1.0-r1.ebuild 377
+RMD160 9eadb272b415cf25f6e5e78c7b44e9fc1c0aa065 twisted-names-0.1.0-r1.ebuild 377
+SHA256 5dc5f16366ee8a3733025d8dd98794965398ce93058425f3d8c5b73ef35e4ab0 twisted-names-0.1.0-r1.ebuild 377
 MD5 76781105d8f20ecd16f5aa8ef393d94e twisted-names-0.2.0.ebuild 385
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEMZfFKRy60XGEcJIRAmKQAJ43jlNaH5VNMtIE8l1oCC2KeM3ygwCeI42E
-3FLxoaXsUzNYlEhW415Zjk8=
-=ofyx
------END PGP SIGNATURE-----
+RMD160 6a54f3664480b423b6f8b6d7b3b545395269bb9d twisted-names-0.2.0.ebuild 385
+SHA256 186f036571071387e07414fc0e247434cebb8d99611cccb3e04462adf27e697c twisted-names-0.2.0.ebuild 385

@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5f180c254a3858078be3be2d94e9ad9a ChangeLog 914
+MD5 10b1e55e7d477f47c5c6e2e54772137f ChangeLog 1006
+RMD160 a91d919112c97ef39aa5f9bde91ee2d711eaee00 ChangeLog 1006
+SHA256 60697111e20e30e0addb5134b1a103bc89b6ee37ff7452ee9b6ba4192e5324b4 ChangeLog 1006
 MD5 d246ce1f4e71f9651546601c36dd846f files/digest-twisted-runner-0.1.0-r1 70
+RMD160 3089aeb471a094993ff1b9180bb2a333fbb4212c files/digest-twisted-runner-0.1.0-r1 70
+SHA256 76a1eeb4176560cbe94e98362f0f766aa13688bdb4590b6f69c1438ce5b1e1dc files/digest-twisted-runner-0.1.0-r1 70
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
-MD5 2f98cf2de2eb2ab7b381ba54f1bc93dc twisted-runner-0.1.0-r1.ebuild 448
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEMZhlKRy60XGEcJIRAgh1AJ0ZBsZIiNVysTzkiNOGq8Zx2XPHxwCgkNQ3
-erxGduBj8zREZuzLqTvLUqs=
-=CDGa
------END PGP SIGNATURE-----
+RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
+SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
+MD5 f6c6e87ed59672d3ff1882c142bed59d twisted-runner-0.1.0-r1.ebuild 451
+RMD160 839272811f3e9c06a7901f088fa32337c71a6e4c twisted-runner-0.1.0-r1.ebuild 451
+SHA256 eed9676f3114bb10d8b04856cb945ce5fbc14d563f8a8a62d4f87430ceb97f6f twisted-runner-0.1.0-r1.ebuild 451

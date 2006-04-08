@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 80ab4825a6d9763fcc35bb9e26b74660 ChangeLog 1322
+MD5 5d382e075db353bbac61d8a15f1bbe44 ChangeLog 1412
+RMD160 e6d8f620f855db03c47cd9677c4669d3888043e1 ChangeLog 1412
+SHA256 74350341981a11b71848c176fba9dca7c15382e5acc87196aa37df5b97c5ab33 ChangeLog 1412
 MD5 c04aee3a8274e3e757ba9635e16ce0c3 files/digest-twisted-mail-0.1.0-r1 69
+RMD160 6971d39b953c82f2c65ab61f3e4b3d8e03257213 files/digest-twisted-mail-0.1.0-r1 69
+SHA256 cad16117a2a1173d124ad35db4a4373cfd5aed51179666863a255851f879566e files/digest-twisted-mail-0.1.0-r1 69
 MD5 f567d8c9949db20725b3bdc85f0d1d66 files/digest-twisted-mail-0.2.0 256
+RMD160 e12ebceb8a0b7be09376519418d6b5b4b2652c2a files/digest-twisted-mail-0.2.0 256
+SHA256 48d3647e3c3a9627c0c66be46410f5b4aa0656d45b58df5603b63ffe5bbe838b files/digest-twisted-mail-0.2.0 256
 MD5 d0a02dc24a2ee5370f9f9d67324ab5e0 files/twisted-mail-0.2.0-tests-2.2-compat.patch 3320
+RMD160 86b7051cc14eb38bcbf7084f3fcd68e6b7172f96 files/twisted-mail-0.2.0-tests-2.2-compat.patch 3320
+SHA256 32ba2b7488d8bd0f9cdd7a9688757c21064c9e869e7aec789529cd914ad8d59f files/twisted-mail-0.2.0-tests-2.2-compat.patch 3320
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
-MD5 a9d913dc0a097be1691d39ff3f2ea88c twisted-mail-0.1.0-r1.ebuild 410
+RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
+SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
+MD5 d1bbd0c81fb1948c7d5a5354c399edcc twisted-mail-0.1.0-r1.ebuild 413
+RMD160 91c9ddd2f2f3b3ebda1936157f2473d714f64466 twisted-mail-0.1.0-r1.ebuild 413
+SHA256 6340a0fada14a641254359977f0edc0961116528b7a18432bebe20aa22861ef8 twisted-mail-0.1.0-r1.ebuild 413
 MD5 1712699060d415e84f862c769fa79554 twisted-mail-0.2.0.ebuild 521
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEMZf0KRy60XGEcJIRAqAwAJ9Utfmbq1ByNMEVgLU71+swbg7QRgCfXzvc
-MjoVPF8FHndo5YamSIreXNA=
-=I1M1
------END PGP SIGNATURE-----
+RMD160 2ed32b41d8b2be627a0d23c8eded28616b681e9f twisted-mail-0.2.0.ebuild 521
+SHA256 4bf4475c846d43e9ab8c1d6e0bcb44083966a0b58ef742ab08d98107df6985f3 twisted-mail-0.2.0.ebuild 521

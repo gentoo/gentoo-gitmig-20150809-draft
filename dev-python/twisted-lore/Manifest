@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f5bfc1815ae7f39facfb3bce6f9f90e4 ChangeLog 894
+MD5 0cdfdd959ac0ab120572d430ef1392fa ChangeLog 984
+RMD160 6bac490eaf6e1b616981a352abfb9242059e2bc3 ChangeLog 984
+SHA256 132f8438b88e4d1e418f01e2a1d86a965873d9593e60ff70dd91d294cf4fec5a ChangeLog 984
 MD5 c36a230912611e4218de6f5eb5e3d710 files/digest-twisted-lore-0.1.0-r1 69
+RMD160 3825fa961c2eb14be5b3be7385bfeff6ac68159a files/digest-twisted-lore-0.1.0-r1 69
+SHA256 9a1e788431bed5707cf2f5f464bdf463ea542f7449ae45b9202262e7c5e58909 files/digest-twisted-lore-0.1.0-r1 69
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
-MD5 23ff9bc13b76af7da950bcadb4c0daef twisted-lore-0.1.0-r1.ebuild 400
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEMZk9KRy60XGEcJIRAi6vAJ9zYOZbT2qExBNxA48+hxNHTEQpEACfWn2t
-NrIuERZfjGN5vFTYli5p254=
-=HfUt
------END PGP SIGNATURE-----
+RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
+SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
+MD5 99b3dc4fc92e89e7216ca60df928fd9d twisted-lore-0.1.0-r1.ebuild 403
+RMD160 37a9a82b81082380a4c5e82b8cc969037b453cb5 twisted-lore-0.1.0-r1.ebuild 403
+SHA256 b3cafc821684734ba47328a066fb5558b9ef11030b13e89080fc203bbece4932 twisted-lore-0.1.0-r1.ebuild 403
