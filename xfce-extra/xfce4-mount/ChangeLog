@@ -1,6 +1,15 @@
 # ChangeLog for xfce-extra/xfce4-mount
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/ChangeLog,v 1.9 2006/02/20 18:21:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/ChangeLog,v 1.10 2006/04/08 21:42:43 dostrow Exp $
+
+  08 Apr 2006; Daniel Ostrow <dostrow@gentoo.org> -xfce4-mount-0.3.ebuild:
+  Clean up old ebuilds.
+
+*xfce4-mount-0.3.3 (08 Apr 2006)
+
+  08 Apr 2006; Daniel Ostrow <dostrow@gentoo.org> +xfce4-mount-0.3.3.ebuild:
+  Version bump. Thanks for the note goes to Anton Romanov <theli@ukr.net> on bug
+  #126988.
 
   20 Feb 2006; Markus Rothe <corsair@gentoo.org> xfce4-mount-0.3.2.ebuild:
   Stable on ppc64
