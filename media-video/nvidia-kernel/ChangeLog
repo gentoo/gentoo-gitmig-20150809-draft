@@ -1,6 +1,12 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.135 2006/03/24 21:45:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.136 2006/04/08 03:45:24 augustus Exp $
+
+*nvidia-kernel-1.0.8756 (08 Apr 2006)
+
+  08 Apr 2006; Kristopher Kersey <augustus@gentoo.org>
+  +nvidia-kernel-1.0.8756.ebuild:
+  Version bump to 8756.  Bug #129153.
 
   24 Mar 2006; Jeremy Huddleston <eradicator@gentoo.org> files/nvidia:
   Added note about NVreg_Mobile.  This closes bug #122295.

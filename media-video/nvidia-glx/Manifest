@@ -14,6 +14,7 @@ MD5 ef2c4ecedb45b67d79b43ffe58c660cf files/digest-nvidia-glx-1.0.7667-r1 163
 MD5 607f9700f7ddac6b9108db6457ecc06f files/digest-nvidia-glx-1.0.7676-r3 867
 MD5 1a1465bd0435ddf0f8379a41416141e0 files/digest-nvidia-glx-1.0.8174-r2 584
 MD5 2052e159a0f171feb2af48a8cafecc99 files/digest-nvidia-glx-1.0.8178-r1 164
+MD5 fd91b5143517828d72c387da3596a8df files/digest-nvidia-glx-1.0.8756 164
 MD5 6e47667cc38d8ce4ac2f4c7dbb392abe files/libGL.la-r2 751
 MD5 e06e73d71a54036f83abf35efc6322e3 metadata.xml 302
 MD5 e2d67c038b937b1c344969e46833c5cb nvidia-glx-1.0.6111-r3.ebuild 8279
@@ -24,3 +25,4 @@ MD5 a1755dd26fa5a4385585393fdd289085 nvidia-glx-1.0.7667-r1.ebuild 8439
 MD5 067191a8f5c7e105953f8522b354d31d nvidia-glx-1.0.7676-r3.ebuild 9294
 MD5 b6ddb17fdc29b823272485f371376028 nvidia-glx-1.0.8174-r2.ebuild 9412
 MD5 0d47a7e41733212fe7e9253a5a395f03 nvidia-glx-1.0.8178-r1.ebuild 8556
+MD5 095c16b6e3096fd4634166bd04dfb6aa nvidia-glx-1.0.8756.ebuild 8362
