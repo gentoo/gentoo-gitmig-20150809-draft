@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-2.0.ebuild,v 1.5 2006/03/15 00:43:31 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-2.0.ebuild,v 1.6 2006/04/08 10:51:45 slarti Exp $
 
 inherit eutils gnome2 multilib flag-o-matic
 
@@ -34,6 +34,10 @@ DEPEND=">=x11-libs/gtk+-2.6
 	sylpheed? ( virtual/sylpheed )"
 
 pkg_setup() {
+	if use evolution ; then
+		EVO_VERSION="$(best_version mail-client/evolution)"
+	fi
+
 	G2CONF="${G2CONF} $(use_enable ssl)"
 	G2CONF="${G2CONF} $(use_enable sasl)"
 	G2CONF="${G2CONF} $(use_enable ipv6)"
@@ -42,7 +46,7 @@ pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable pop pop3)"
 	G2CONF="${G2CONF} $(use_enable gmail)"
 	G2CONF="${G2CONF} $(use_enable evolution)"
-	G2CONF="${G2CONF} --with-evolution-source-dir=/usr/include/evolution-2.4/"
+	G2CONF="${G2CONF} --with-evolution-source-dir=/usr/include/${EVO_VERSION}/"
 	G2CONF="${G2CONF} $(use_enable sylpheed)"
 }
 
@@ -50,9 +54,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-evolution-2.4.diff
-	epatch ${FILESDIR}/${P}-buildfix.diff
-	epatch ${FILESDIR}/${P}-gmail-properties-fix.diff
+	epatch "${FILESDIR}/${P}-evolution-${EVO_VERSION}.diff"
+	epatch "${FILESDIR}/${P}-buildfix.diff"
+	epatch "${FILESDIR}/${P}-gmail-properties-fix.diff"
 
 	gnome2_omf_fix
 }
@@ -63,7 +67,8 @@ src_compile() {
 }
 
 src_install() {
-	gnome2_src_install evolution_plugindir="/usr/$(get_libdir)/evolution/2.4/plugins"
+	gnome2_src_install
+	evolution_plugindir="/usr/$(get_libdir)/evolution/${EVO_VERSION}/plugins"
 }
 
 pkg_postinst() {

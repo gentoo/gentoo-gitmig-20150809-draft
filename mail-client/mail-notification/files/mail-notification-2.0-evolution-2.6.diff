@@ -1,0 +1,52 @@
+--- configure.orig	Mon Oct 24 10:40:20 2005
++++ configure	Mon Oct 24 10:40:46 2005
+@@ -24784,12 +24784,12 @@
+   if test "x$ac_cv_env_EVOLUTION_PLUGIN_CFLAGS_set" = "xset"; then
+ 	pkg_cv_EVOLUTION_PLUGIN_CFLAGS=$ac_cv_env_EVOLUTION_PLUGIN_CFLAGS_value
+ elif test -n "$PKG_CONFIG"; then
+-	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"evolution-plugin-2.2 \$evolution_plugin_min_version\" >/dev/null 2>&1") >&5
+-  ($PKG_CONFIG --exists "evolution-plugin-2.2 $evolution_plugin_min_version" >/dev/null 2>&1) 2>&5
++	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"evolution-plugin-2.6 \$evolution_plugin_min_version\" >/dev/null 2>&1") >&5
++  ($PKG_CONFIG --exists "evolution-plugin-2.6 $evolution_plugin_min_version" >/dev/null 2>&1) 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-		pkg_cv_EVOLUTION_PLUGIN_CFLAGS=`$PKG_CONFIG --cflags "evolution-plugin-2.2 $evolution_plugin_min_version" 2>/dev/null`
++		pkg_cv_EVOLUTION_PLUGIN_CFLAGS=`$PKG_CONFIG --cflags "evolution-plugin-2.6 $evolution_plugin_min_version" 2>/dev/null`
+ 	else
+ 		pkg_failed=yes
+ 	fi
+@@ -24807,12 +24807,12 @@
+   if test "x$ac_cv_env_EVOLUTION_PLUGIN_LIBS_set" = "xset"; then
+ 	pkg_cv_EVOLUTION_PLUGIN_LIBS=$ac_cv_env_EVOLUTION_PLUGIN_LIBS_value
+ elif test -n "$PKG_CONFIG"; then
+-	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"evolution-plugin-2.2 \$evolution_plugin_min_version\" >/dev/null 2>&1") >&5
+-  ($PKG_CONFIG --exists "evolution-plugin-2.2 $evolution_plugin_min_version" >/dev/null 2>&1) 2>&5
++	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"evolution-plugin-2.6 \$evolution_plugin_min_version\" >/dev/null 2>&1") >&5
++  ($PKG_CONFIG --exists "evolution-plugin-2.6 $evolution_plugin_min_version" >/dev/null 2>&1) 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-		pkg_cv_EVOLUTION_PLUGIN_LIBS=`$PKG_CONFIG --libs "evolution-plugin-2.2 $evolution_plugin_min_version" 2>/dev/null`
++		pkg_cv_EVOLUTION_PLUGIN_LIBS=`$PKG_CONFIG --libs "evolution-plugin-2.6 $evolution_plugin_min_version" 2>/dev/null`
+ 	else
+ 		pkg_failed=yes
+ 	fi
+@@ -24824,7 +24824,7 @@
+ echo "${ECHO_T}$pkg_cv_EVOLUTION_PLUGIN_LIBS" >&6
+ 
+ if test $pkg_failed = yes; then
+-	EVOLUTION_PLUGIN_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "evolution-plugin-2.2 $evolution_plugin_min_version"`
++	EVOLUTION_PLUGIN_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "evolution-plugin-2.6 $evolution_plugin_min_version"`
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$EVOLUTION_PLUGIN_PKG_ERRORS" 1>&5
+ 
+@@ -24841,7 +24841,7 @@
+ if test $found = yes; then
+ 	echo "$as_me:$LINENO: checking for the Evolution plugin directory" >&5
+ echo $ECHO_N "checking for the Evolution plugin directory... $ECHO_C" >&6
+-	evolution_plugindir=`$PKG_CONFIG --variable=plugindir evolution-plugin-2.2 2>/dev/null`
++	evolution_plugindir=`$PKG_CONFIG --variable=plugindir evolution-plugin-2.6 2>/dev/null`
+ 	if test -n "$evolution_plugindir"; then
+ 		echo "$as_me:$LINENO: result: $evolution_plugindir" >&5
+ echo "${ECHO_T}$evolution_plugindir" >&6

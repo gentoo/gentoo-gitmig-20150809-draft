@@ -1,6 +1,9 @@
-MD5 11b1a3f05201099dd3335959faa09f1f ChangeLog 5257
-RMD160 ec43bbe2cf7e93bb22bd171a0bf6db1797697e18 ChangeLog 5257
-SHA256 6317a38c23be10c160a57d082670f4c5c566412d17bf5f399ddd7abdf0406c46 ChangeLog 5257
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e38e67d24fc3ecedeb7ed518aa0f69c2 ChangeLog 5554
+RMD160 88b1d89307b6c381b40790529eff191254ccc115 ChangeLog 5554
+SHA256 ac0e79822096d96dca691380ff366e5b2fb144b1417b1426356a5c25326c0406 ChangeLog 5554
 MD5 4f3f62c7c6d7b58791bba1c52b9dcc52 files/digest-mail-notification-0.8.1 75
 RMD160 8b78eab849b15135c34ced1d79db5ed62879acfc files/digest-mail-notification-0.8.1 75
 SHA256 dfa76ffa3b4f494e8269af1d99ba4623d711b701002c27b97654ecfed53f7d22 files/digest-mail-notification-0.8.1 75
@@ -19,6 +22,9 @@ SHA256 e48536498bdb7daf1e375de2bab7675941ff7cd044868d7e561f5b4f5c4810ca files/ma
 MD5 7dd1180fe96bd0bf9a9ccad1ffe2fe7a files/mail-notification-2.0-evolution-2.4.diff 3130
 RMD160 5068ae2d6c916213d24b9a15e049abbc0e47fe2b files/mail-notification-2.0-evolution-2.4.diff 3130
 SHA256 ac2d9447bd5d2d9d6c583fe23e0f5e6f41cbc38f8af62f200e8f2029100f7d0d files/mail-notification-2.0-evolution-2.4.diff 3130
+MD5 fad49951071e2100ec4b93169e8d44cd files/mail-notification-2.0-evolution-2.6.diff 3130
+RMD160 c1b97f3fdc17551c19e2a7540bc521dba88c19bd files/mail-notification-2.0-evolution-2.6.diff 3130
+SHA256 4fd78df7788a4d99fd01d17ad8e7b43e2ad335c9e32678620835d48b31f8efad files/mail-notification-2.0-evolution-2.6.diff 3130
 MD5 7e2243b625802214a46bce8d633b94dc files/mail-notification-2.0-gmail-properties-fix.diff 508
 RMD160 bf15014f598fb7315cb1c5f14729a640e93f8c7f files/mail-notification-2.0-gmail-properties-fix.diff 508
 SHA256 e33432eb0ee1ef63eaceb4ea2391b04cc2f9c473d562fe9a92e3d8921c508ca9 files/mail-notification-2.0-gmail-properties-fix.diff 508
@@ -31,9 +37,16 @@ SHA256 abc2ab321f9c4837865832fa15b68f0715f22b27129dcb5caf5678c01f28e45b mail-not
 MD5 4ec34f3718248e51520bb199155a10aa mail-notification-1.1.ebuild 1814
 RMD160 f624800bafed0197af056f47bed8486c14e6df24 mail-notification-1.1.ebuild 1814
 SHA256 fed80ef505695252856a8c64d44e79799ca7b3fa714d4c08fd52fc84b90cd072 mail-notification-1.1.ebuild 1814
-MD5 0ed614c88b6d5dfcdda4498f6c067c81 mail-notification-2.0.ebuild 2366
-RMD160 125abf775414bb0a39b70e7bce6be79fab442f0a mail-notification-2.0.ebuild 2366
-SHA256 c0a214d26442532fcf6d684d0692e524cd52f3f8744050b79931c60c94139927 mail-notification-2.0.ebuild 2366
+MD5 20beda968a967b7af002a68229f17210 mail-notification-2.0.ebuild 2477
+RMD160 92bff452d13e758257c59d3bafd63e9d29c5a864 mail-notification-2.0.ebuild 2477
+SHA256 0fb49dc37cb84bbd1b1f08dfb19b1d61421593e3dda03671c83d42802ed3cb08 mail-notification-2.0.ebuild 2477
 MD5 5d240c2111a6535d744ec8bbc7cc692c metadata.xml 249
 RMD160 dce0c80c556a885e8059693e236acc50c67e7163 metadata.xml 249
 SHA256 e7a2ee2e040e05b0780ea52daab475449bd2e93e9aaef741b65a7eb9cf33b4c5 metadata.xml 249
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEN6Q0CHk4+ZoBpvsRAhGJAKCG3IYwVTzwO8V53S3bK6pMKqOZggCeNqP4
+Epatw03osEiVUjEDUIwKcTI=
+=3gVV
+-----END PGP SIGNATURE-----

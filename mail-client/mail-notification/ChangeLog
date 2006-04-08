@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.27 2006/03/15 00:43:31 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.28 2006/04/08 10:51:45 slarti Exp $
+
+  08 Apr 2006; Tom Martin <slarti@gentoo.org>
+  +files/mail-notification-2.0-evolution-2.6.diff,
+  mail-notification-2.0.ebuild:
+  Add a few ebuild fixes for Evolution 2.6; thanks to Ben Davis
+  <ben@xsusio.com> in bug #127430. The ebuilds should now scale better to
+  future versions of Evolution.
 
   14 Mar 2006; John N. Laliberte <allanonjl@gentoo.org>
   mail-notification-2.0.ebuild:
