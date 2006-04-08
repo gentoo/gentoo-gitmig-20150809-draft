@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.0.ebuild,v 1.1 2005/06/26 02:23:31 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.1.ebuild,v 1.1 2006/04/08 10:45:13 reb Exp $
+
+inherit eutils
 
 DESCRIPTION="Pure Tcl implementation of an XML parser."
 HOMEPAGE="http://tclxml.sourceforge.net/"
@@ -18,6 +20,14 @@ DEPEND=">=dev-lang/tcl-8.2
 	!dev-tcltk/tclxml-expat"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${PN}-3_configure.patch
+	epatch ${FILESDIR}/${PN}-3_include_path.patch
+}
 
 src_compile() {
 	local myconf=""
