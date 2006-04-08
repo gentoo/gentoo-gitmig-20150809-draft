@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.3.ebuild,v 1.1 2005/12/02 09:02:20 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.3.ebuild,v 1.2 2006/04/08 09:01:52 latexer Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 IUSE="idea ipv6 pam rc5 readline selinux"
 
 DEPEND="virtual/libc
-	>=sys-kernel/linux-headers-2.6
+	!<sys-kernel/linux-headers-2.6
 	readline? ( sys-libs/readline )
 	pam? ( sys-libs/pam )
 	>=dev-libs/openssl-0.9.6"
