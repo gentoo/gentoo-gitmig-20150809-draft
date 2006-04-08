@@ -1,6 +1,14 @@
 # ChangeLog for xfce-extra/xfce4-netload
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/ChangeLog,v 1.31 2005/10/18 15:21:04 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/ChangeLog,v 1.32 2006/04/08 22:19:19 dostrow Exp $
+
+*xfce4-netload-0.3.3 (08 Apr 2006)
+
+  08 Apr 2006; Daniel Ostrow <dostrow@gentoo.org>
+  -xfce4-netload-0.2.3-r1.ebuild, -xfce4-netload-0.2.4.ebuild,
+  -xfce4-netload-0.3.1.ebuild, +xfce4-netload-0.3.3.ebuild:
+  Cleanup and version bump. Thanks to Alexander Brüning <lama@lamamail.de> on
+  bug #123287 for the note.
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   xfce4-netload-0.3.2.ebuild:

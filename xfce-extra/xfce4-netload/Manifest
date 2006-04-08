@@ -1,22 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f654bb33908e7c21450c157bc5ea043e xfce4-netload-0.3.2.ebuild 396
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 ebf170065064f7b69168aa018bd952c5 xfce4-netload-0.3.2-r1.ebuild 402
-MD5 49cb35a7c86f76bb5658512e6e83b744 ChangeLog 3582
-MD5 0224c87896f3e6f6a038f882cde32ec1 xfce4-netload-0.2.3-r1.ebuild 396
-MD5 b1f6fa3a2c5709e9d9c1cf114731aceb xfce4-netload-0.2.4.ebuild 385
-MD5 723415976fbf3ffd1471b0de57c55459 xfce4-netload-0.3.1.ebuild 403
-MD5 2c91dfa041ede312bf559f62213dffdc files/digest-xfce4-netload-0.2.4 78
-MD5 19335b87c54a1cf33825330c46903f87 files/digest-xfce4-netload-0.2.3-r1 78
+MD5 ceb5822a803f24e388919db7733d6ad9 ChangeLog 3898
+RMD160 5cd2989e3411d86fe79ca15645e2f9a3e89aafba ChangeLog 3898
+SHA256 81097ebe97ad6ec2cfec536abb16f46171f45b1099689bcd248003c6547deb00 ChangeLog 3898
 MD5 1057e2f9ea55ebb89533861a319cf6c7 files/digest-xfce4-netload-0.3.2 79
+RMD160 64a9f1702984f5a9db00fa151a0c20085b96f1ee files/digest-xfce4-netload-0.3.2 79
+SHA256 55bcf535bbf60f47dafc979e575fae812644dbd7a00d59997009fdb1ff297a23 files/digest-xfce4-netload-0.3.2 79
 MD5 1057e2f9ea55ebb89533861a319cf6c7 files/digest-xfce4-netload-0.3.2-r1 79
-MD5 a477599ba752f810601381daeab01e56 files/digest-xfce4-netload-0.3.1 79
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDVRL3JrHF4yAQTrARAr6/AJwPkaCbB/X+GrnSXCgNXTz+dvhQrgCeO6Vd
-rycBjczYksU/U1ns8Xt1paM=
-=6wzX
------END PGP SIGNATURE-----
+RMD160 64a9f1702984f5a9db00fa151a0c20085b96f1ee files/digest-xfce4-netload-0.3.2-r1 79
+SHA256 55bcf535bbf60f47dafc979e575fae812644dbd7a00d59997009fdb1ff297a23 files/digest-xfce4-netload-0.3.2-r1 79
+MD5 05ce7239579ce8097cdd1a458310cb90 files/digest-xfce4-netload-0.3.3 283
+RMD160 d8f1409126e2b010bc3911ceb3d6ba4bd4e95844 files/digest-xfce4-netload-0.3.3 283
+SHA256 22ee56f7747b132f67edd2681ef27bf66a3f39dbfe3ec569c06216ac83895a35 files/digest-xfce4-netload-0.3.3 283
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
+MD5 ebf170065064f7b69168aa018bd952c5 xfce4-netload-0.3.2-r1.ebuild 402
+RMD160 0d62ac4d3c5b34206501512451ee98c6580cabff xfce4-netload-0.3.2-r1.ebuild 402
+SHA256 11a73c138c464640c5085703a156d2b401a174e021f9a5fbbe9c2bb20080cdca xfce4-netload-0.3.2-r1.ebuild 402
+MD5 f654bb33908e7c21450c157bc5ea043e xfce4-netload-0.3.2.ebuild 396
+RMD160 69739cb6f049a95ecf74329e24a99737e6ec05a9 xfce4-netload-0.3.2.ebuild 396
+SHA256 a06e41f08210a5c07b89856a3edeab8af86047c3f0e606c7a00464f56a172fc3 xfce4-netload-0.3.2.ebuild 396
+MD5 fcf23e808f9ef49af536fd772582a562 xfce4-netload-0.3.3.ebuild 400
+RMD160 03ffbc20b934ab88adaa7621edc5fe142bd4e1a8 xfce4-netload-0.3.3.ebuild 400
+SHA256 c02ce0490e97cb9265b6149ca314c7ccccdcf391ef272842b5ea17c99fc1935c xfce4-netload-0.3.3.ebuild 400
