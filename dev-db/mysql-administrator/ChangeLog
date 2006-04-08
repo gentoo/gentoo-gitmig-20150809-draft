@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/mysql-administrator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/ChangeLog,v 1.27 2006/02/25 16:27:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/ChangeLog,v 1.28 2006/04/08 23:36:28 swegener Exp $
+
+  08 Apr 2006; Sven Wegener <swegener@gentoo.org>
+  -files/1.0.22a-optional-4.1-support.patch,
+  -files/1.1.2-optional-4.1-support.patch, +files/1.1.6-gcc41-fix.patch,
+  -mysql-administrator-1.0.22a.ebuild, -mysql-administrator-1.1.2.ebuild,
+  -mysql-administrator-1.1.4.ebuild, -mysql-administrator-1.1.5.ebuild,
+  mysql-administrator-1.1.6.ebuild:
+  Fix building with gcc-4.1, thanks to Salvatore Ansani in bug #129287. Remove
+  old ebuilds.
 
   25 Feb 2006; Sven Wegener <swegener@gentoo.org>
   mysql-administrator-1.1.6.ebuild:
