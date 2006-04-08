@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfmedia
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/ChangeLog,v 1.10 2006/04/08 21:22:31 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/ChangeLog,v 1.11 2006/04/08 21:28:04 dostrow Exp $
+
+  08 Apr 2006; Daniel Ostrow <dostrow@gentoo.org> xfmedia-0.9.1-r1.ebuild,
+  xfmedia-0.9.1-r2.ebuild:
+  Fix dbus use flag stupidity.
 
   08 Apr 2006; Daniel Ostrow <dostrow@gentoo.org>
   -xfmedia-0.6.0-r1.ebuild, -xfmedia-0.7.0.ebuild, 

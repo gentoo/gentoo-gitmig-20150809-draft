@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/xfmedia-0.9.1-r1.ebuild,v 1.3 2005/10/06 18:38:54 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/xfmedia-0.9.1-r1.ebuild,v 1.4 2006/04/08 21:28:04 dostrow Exp $
 
 inherit xfce42
 
@@ -16,7 +16,7 @@ RDEPEND="|| ( ( x11-libs/libX11
 	virtual/x11 )
 	>=xfce-base/libxfce4mcs-4.2.2-r1
 	xfce-extra/exo
-	dbus? ( sys-apps/dbus )
+	sys-apps/dbus
 	media-libs/xine-lib
 	media-libs/taglib"
 DEPEND="${RDEPEND}
