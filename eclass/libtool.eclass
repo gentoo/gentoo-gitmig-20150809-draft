@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.67 2006/04/05 17:50:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.68 2006/04/08 00:46:22 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -178,7 +178,7 @@ elibtoolize() {
 		elt_patches="${elt_patches} uclibc-conf uclibc-ltconf"
 
 	[[ ${CHOST} == *"-freebsd"* ]] && \
-		elt_patches="${elt_patches} fbsd-conf"
+		elt_patches="${elt_patches} fbsd-conf fbsd-ltconf"
 
 	if useq ppc-macos ; then
 		local opts
@@ -255,6 +255,12 @@ elibtoolize() {
 					elif [[ ! -e ${x}/configure && -e ${x}/../configure && \
 					        -n $(grep 'version_type=freebsd-' "${x}/../configure") ]] ; then
 						ELT_walk_patches "${x}/../configure" "${y}"
+						ret=$?
+					fi
+					;;
+				"fbsd-ltconf")
+					if [[ -s ${x}/ltconfig ]] ; then
+						ELT_walk_patches "${x}/ltconfig" "${y}"
 						ret=$?
 					fi
 					;;
