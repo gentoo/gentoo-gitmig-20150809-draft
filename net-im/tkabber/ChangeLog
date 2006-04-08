@@ -1,6 +1,12 @@
 # ChangeLog for net-im/tkabber
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.23 2005/09/16 00:56:39 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.24 2006/04/08 11:14:17 reb Exp $
+
+*tkabber-0.9.8 (08 Apr 2006)
+
+  08 Apr 2006; <reb@gentoo.org> +tkabber-0.9.8.ebuild:
+  tkabber now depend on >=dev-tcltk/tclxml-3.0 bug #97113; version bump bug
+  #99856
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> tkabber-0.9.6_beta.ebuild:
   Mark 0.9.6_beta stable on alpha

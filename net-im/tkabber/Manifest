@@ -1,8 +1,40 @@
-MD5 99349637a2bdcf708eb1d84c6741604e tkabber-0.9.7.ebuild 988
-MD5 47df4821ffc2d976d42388e14f9014dc tkabber-0.9.5b.ebuild 951
-MD5 cd9273bd69fcf81aa554c63b904726df metadata.xml 328
-MD5 ded836db2a590f4bd55dde5388a18bea ChangeLog 3106
-MD5 f0fb04c55c05309573c6d626ce1ccdd4 tkabber-0.9.6_beta.ebuild 1044
-MD5 7157d1f9fa47d3801d41735957b78e4c files/digest-tkabber-0.9.6_beta 69
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ed8f2231eaf7a933cdfaf243c003f81c ChangeLog 3272
+RMD160 7dc461df301afefd582505f9ba5fb46ccd0a14c8 ChangeLog 3272
+SHA256 15180e6a1015ad67d3fa852cc935ba4c6f63e8bca42d7691e024cac80cc1820f ChangeLog 3272
 MD5 7602cd4d7daafafe0bf585fa67b29bed files/digest-tkabber-0.9.5b 69
+RMD160 9301deefe4a2eec6aedbee32a05b2fda3c1239ca files/digest-tkabber-0.9.5b 69
+SHA256 fa1548d1354670767c93f14b912269d569a703338ebaaeccef6bdb794daaf119 files/digest-tkabber-0.9.5b 69
+MD5 7157d1f9fa47d3801d41735957b78e4c files/digest-tkabber-0.9.6_beta 69
+RMD160 eb14e399f1cf553ae4eaab7ddca9e796612b5c22 files/digest-tkabber-0.9.6_beta 69
+SHA256 862bb6c68fa3fdf4bd211f291749f7e2ec97eb32f7177ebae4116127795f95e5 files/digest-tkabber-0.9.6_beta 69
 MD5 4e2858f909c71b96869a466c000cc7cd files/digest-tkabber-0.9.7 65
+RMD160 7017956137f686ae98eebcb4078a17cd89ee3a14 files/digest-tkabber-0.9.7 65
+SHA256 f62fcabc9c46bd3cafef2bc79d409edb762ecafa51584e1d3192757f0c6da02b files/digest-tkabber-0.9.7 65
+MD5 845c77fe2076160694f94a3cf3a4e00c files/digest-tkabber-0.9.8 241
+RMD160 4f2944881d2bf2c4b69431c129bdbf658aaeb9b2 files/digest-tkabber-0.9.8 241
+SHA256 e3d91c7cf8f3e2a3e7513f55d6a5347d2c4d148b8ab6ab8fe89cc83989f92c27 files/digest-tkabber-0.9.8 241
+MD5 cd9273bd69fcf81aa554c63b904726df metadata.xml 328
+RMD160 b5060e2fedfc631212b9caa91f6a03038a2a6483 metadata.xml 328
+SHA256 36a582e2e60e10e38aea6ac729445310a48c73d2f24572bfc514e56b05800feb metadata.xml 328
+MD5 47df4821ffc2d976d42388e14f9014dc tkabber-0.9.5b.ebuild 951
+RMD160 3024739a2e1eaa80b96274039f0a37ee241fbd41 tkabber-0.9.5b.ebuild 951
+SHA256 698272dcbaed41294f8d02bd47da66cb0aab7535a7079a1a0e14110d982f79da tkabber-0.9.5b.ebuild 951
+MD5 f0fb04c55c05309573c6d626ce1ccdd4 tkabber-0.9.6_beta.ebuild 1044
+RMD160 f5b307e3568e5ce8dcb45022ec4cd02ab50a95a9 tkabber-0.9.6_beta.ebuild 1044
+SHA256 ff3946bfdf0d7e0190234079b188aa7981133b7a11c0302b16bcd0c4d91006da tkabber-0.9.6_beta.ebuild 1044
+MD5 99349637a2bdcf708eb1d84c6741604e tkabber-0.9.7.ebuild 988
+RMD160 bc6eac2e0c1c0ba465304022acda7492d41706d8 tkabber-0.9.7.ebuild 988
+SHA256 605fcb43010f80181b8e99737709ff7dfdde7e0046ad989946d3695880dc46eb tkabber-0.9.7.ebuild 988
+MD5 eea7268f40bfd9921a07e3b7c91449de tkabber-0.9.8.ebuild 1602
+RMD160 f3ea6492e53d52fdc0647f61d837460be9e14a3e tkabber-0.9.8.ebuild 1602
+SHA256 88a9a14601aa2dbdedef08da9e47c6de68a9855a4eeaf86d21e070328b8d3768 tkabber-0.9.8.ebuild 1602
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEN5sg3mryvu3JUUURAh4eAJwKfEaACuDGkn6m01rVlDCUalnx6QCfXdqK
+kxt+Y7sPFEvqYK/tT+nsh2w=
+=wX4p
+-----END PGP SIGNATURE-----
