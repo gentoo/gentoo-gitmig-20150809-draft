@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xzgv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.23 2006/04/07 17:57:16 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.24 2006/04/08 13:18:26 dertobi123 Exp $
+
+  08 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org> xzgv-0.8-r2.ebuild:
+  ppc stable, bug #127008
 
 *xzgv-0.8-r2 (07 Apr 2006)
 
