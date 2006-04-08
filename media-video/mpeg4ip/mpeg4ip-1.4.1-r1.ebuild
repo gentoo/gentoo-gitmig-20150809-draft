@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1.ebuild,v 1.8 2006/04/08 22:11:12 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1-r1.ebuild,v 1.1 2006/04/08 22:11:12 tester Exp $
 
 inherit eutils multilib
 
@@ -14,9 +14,9 @@ LICENSE="MPL-1.1 LGPL-2 GPL-2 LGPL-2.1 BSD UCL MPEG4"
 
 SLOT="0"
 
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="ipv6 mmx v4l2 xvid nas alsa esd arts ffmpeg a52 mpeg2 lame id3 player mp4live"
+IUSE="ipv6 mmx v4l2 xvid nas alsa esd arts ffmpeg a52 mpeg2 lame aac id3 player mp4live x264"
 
 RDEPEND=" media-libs/libsdl
 	player? (
@@ -30,7 +30,9 @@ RDEPEND=" media-libs/libsdl
 	mp4live? (
 		>=x11-libs/gtk+-2
 		lame? ( >=media-sound/lame-3.92 )
+		aac? ( >=media-libs/faac-1.24-r1 )
 		ffmpeg? ( >=media-video/ffmpeg-0.4.7 )
+		x264? ( media-libs/x264-svn )
 	)
 	nas? ( media-libs/nas || ( x11-libs/libXt virtual/x11 ) )
 	alsa? ( media-libs/alsa-lib )
@@ -67,8 +69,6 @@ src_compile() {
 			$(use_enable esd)
 			$(use_enable alsa)
 			$(use_enable arts)
-			--disable-x264
-			--disable-faac
 			--disable-srtp" # need ot add libsrtp to portage
 
 
@@ -94,12 +94,16 @@ src_compile() {
 	# those can only be used for mp4live
 	use mp4live && myconf="${myconf}
 			$(use_enable v4l2)
-			$(use_enable lame mp3lame)"
+			$(use_enable lame mp3lame)
+			$(use_enable aac faac)
+			$(use_enable x264)"
 			# $(use_enable alsa mp4live-alsa)
 	use mp4live || myconf="${myconf}
 			--disable-v4l2
 			--disable-mp3lame
-			--disable-mp4live-alsa"
+			--disable-faac
+			--disable-mp4live-alsa
+			--disable-x264"
 
 	./bootstrap --prefix=/usr \
 		--host=${CHOST} \
