@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.16 2006/04/04 04:50:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.17 2006/04/08 19:07:28 spyderous Exp $
+
+  08 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; fish-1.18.2.ebuild,
+  fish-1.19.0.ebuild, fish-1.20.0.ebuild, fish-1.20.1.ebuild,
+  fish-1.20.2.ebuild, fish-1.21.1.ebuild, fish-1.21.3.ebuild:
+  (#129102) Add dep on htmlview, needed for help functions.
 
 *fish-1.21.3 (04 Apr 2006)
 
