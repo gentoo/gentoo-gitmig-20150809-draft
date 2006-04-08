@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.4.1.ebuild,v 1.12 2006/03/20 17:38:13 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.4.1.ebuild,v 1.13 2006/04/08 21:35:29 tester Exp $
 
 inherit multilib eutils
 
@@ -11,7 +11,7 @@ LICENSE="MPL-1.1"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=""
 RDEPEND="!<media-video/mpeg4ip-1.4.1
