@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.78 2006/03/22 22:54:35 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.79 2006/04/08 14:47:50 dertobi123 Exp $
+
+  08 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  mono-1.1.13.2.ebuild:
+  ppc stable, bug #126119
 
   22 Mar 2006; Mark Loeser <halcy0n@gentoo.org> mono-1.1.13.2.ebuild:
   Stable on x86; bug #126119
