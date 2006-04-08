@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.24 2006/02/10 04:09:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.25 2006/04/08 00:33:44 vapier Exp $
+
+*mdadm-2.4 (08 Apr 2006)
+
+  08 Apr 2006; Mike Frysinger <vapier@gentoo.org> +mdadm-2.4.ebuild:
+  Version bump #128790 by Nathan Blomquist.
 
   10 Feb 2006; Mike Frysinger <vapier@gentoo.org>
   +files/mdadm-2.3.1-endian.patch, mdadm-2.3.1.ebuild:
