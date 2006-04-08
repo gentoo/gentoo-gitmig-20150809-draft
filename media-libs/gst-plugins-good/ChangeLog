@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-good
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.7 2006/04/05 10:22:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.8 2006/04/08 12:04:59 dertobi123 Exp $
+
+  08 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  gst-plugins-good-0.10.2.ebuild:
+  Added to ~ppc
 
   05 Apr 2006; Marinus Schraal <foser@gentoo.org> :
   Fix gst-plugins-base dep (#128885)
