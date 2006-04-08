@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 10209daca31ccc65c9326618530ee22b ChangeLog 2889
-RMD160 d63ba12ddcf72fa408a82404fa22a43e9a0a88da ChangeLog 2889
-SHA256 711483086fb487b44b0c7be9e8796deb961c06894fd187b0ff203c13af6d7523 ChangeLog 2889
+MD5 f208695969303b3f3ece1f64323a9e1c ChangeLog 2979
+RMD160 9d529a4fceecd458d9be4331caca144061b0e4b9 ChangeLog 2979
+SHA256 79a44a720b66da51699d38c6c9507338324b45960ec125a12e189f88837d7cdf ChangeLog 2979
 MD5 a981f8bcdc65aea1c67d4f038fb8cdff files/digest-libetpan-0.42 65
 RMD160 0f63bb3de2a43c8bc1f95f288086fc63c7ccbf9f files/digest-libetpan-0.42 65
 SHA256 84c1f896af26fbbcea76f97df4ec7ecfdfff5ff3d329f377175cc3df81ee2f74 files/digest-libetpan-0.42 65
@@ -13,9 +10,9 @@ SHA256 cd0c5ec10d211b790f46dcb1463d4ac7ff03ba343de507a0a45344c36a33cb5f files/di
 MD5 a6b599b46b0abea3f13589cfbdb2c52c files/digest-libetpan-0.45 241
 RMD160 a9a527df84f12514270c1de10631059b1bc0e24c files/digest-libetpan-0.45 241
 SHA256 52b3c435f62e6ff2ab6b1f3298acfff8f0330c2743ff43a2a058c60862dc62b5 files/digest-libetpan-0.45 241
-MD5 00efba5619527ed2bc82add1da22adf2 libetpan-0.42.ebuild 1136
-RMD160 b37260482aa70ca91543e65221a7d00110349096 libetpan-0.42.ebuild 1136
-SHA256 9eee820827ad73fc2578c1cf0cb79b46282b276db8916669fc3e9149a12bb2f8 libetpan-0.42.ebuild 1136
+MD5 1e7b5bbf852c6f47f9fbbaa02b958465 libetpan-0.42.ebuild 1134
+RMD160 99f601f1f66f8dda29330b2bcc0f4fc847f95c0c libetpan-0.42.ebuild 1134
+SHA256 f62ba1adcb981ff1d134ddd637dee44d9e9735de33920c8a50086c6773de4b44 libetpan-0.42.ebuild 1134
 MD5 5ee6ae870754cc9121ff61ad98168970 libetpan-0.43.ebuild 1211
 RMD160 dacbf98e58b4e746c3e0625d060fbf79345b5e95 libetpan-0.43.ebuild 1211
 SHA256 f8fd9aae15264ff7e2227410e342e4b06d6d9e4cd6882c9eb35c6fd6af969a7a libetpan-0.43.ebuild 1211
@@ -25,10 +22,3 @@ SHA256 64519c3e8c3921ca524b37a21f4c45ca08ebf6f887498f1e4fc23d937be1183a libetpan
 MD5 509fe3ad1d5f4dfbeab7ff814984a262 metadata.xml 612
 RMD160 8f6d53edf733661ebab8f1648d2fd4791e132ab9 metadata.xml 612
 SHA256 77cc13e9465f67ca7f9df424a0ef7dabb57deef39585eacc8bf1f66132f52044 metadata.xml 612
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEIew610xuJSrg3/sRAmv9AJ4gSpq51+NSMwnwtrTXvmc6hJWspQCcDoPX
-4AIecicai9BNo/nC/q1SdkQ=
-=x/Vl
------END PGP SIGNATURE-----
