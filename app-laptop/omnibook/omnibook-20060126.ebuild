@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20060126.ebuild,v 1.1 2006/03/02 01:30:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20060126.ebuild,v 1.2 2006/04/08 15:56:39 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	epatch ${FILESDIR}/omnibook-fix-obtest-segfault.patch
 	epatch ${FILESDIR}/remove-legacy-isa-fromio.patch
 	convert_to_m Makefile
+	sed -i 's:MODULE_PARM(\([^,]*\), "i");:module_param(\1, int, 0);:' init.c
 }
 
 src_compile() {
