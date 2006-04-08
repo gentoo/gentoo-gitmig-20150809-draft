@@ -1,6 +1,17 @@
 # ChangeLog for xfce-extra/xfmedia
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/ChangeLog,v 1.9 2005/10/06 07:58:35 bcowan Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/ChangeLog,v 1.10 2006/04/08 21:22:31 dostrow Exp $
+
+  08 Apr 2006; Daniel Ostrow <dostrow@gentoo.org>
+  -xfmedia-0.6.0-r1.ebuild, -xfmedia-0.7.0.ebuild, 
+  -xfmedia-0.8.0.ebuild, -xfmedia-0.9.1.ebuild:
+  Clean up old versions.
+
+*xfmedia-0.9.1-r2 (08 Apr 2006)
+
+  08 Apr 2006; Daniel Ostrow <dostrow@gentoo.org>
+  +files/xfmedia-dbus-0.6-support.patch, +xfmedia-0.9.1-r2.ebuild:
+  Patch xfmedia for >=dbus-0.60 api.
 
 *xfmedia-0.9.1-r1 (06 Oct 2005)
 
