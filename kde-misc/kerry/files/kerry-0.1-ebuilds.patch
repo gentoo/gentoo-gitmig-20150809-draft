@@ -1,0 +1,82 @@
+Index: kerry/src/beaglesearch.cpp
+===================================================================
+--- kerry.orig/src/beaglesearch.cpp
++++ kerry/src/beaglesearch.cpp
+@@ -83,6 +83,11 @@ static const PropertyInfo propertiesInfo
+        { BeagleSearch::Website, "dc:title", 0 },
+        { BeagleSearch::Website, "Title", 0 },
+        { BeagleSearch::Note, "dc:title", 0 },
++// Gentoo ebuilds
++       { BeagleSearch::Ebuilds, "dc:title", I18N_NOOP("Title: %1")"<br>" },
++       { BeagleSearch::Ebuilds, "dc:description", I18N_NOOP("Description: %1")"<br>" },
++       { BeagleSearch::Ebuilds, "fixme:version", I18N_NOOP("Version: %1")"<br>" },
++       { BeagleSearch::Ebuilds, "dc:source", I18N_NOOP("Homepage: %1")"<br>" },
+        { BeagleSearch::Unknown, "dc:author", I18N_NOOP("Author: %1")"<br>" },
+        { BeagleSearch::Unknown, "dc:title", I18N_NOOP("Title: %1")"<br>" },
+ // Calendar
+@@ -148,6 +153,7 @@ static const HitFlavorInfo hitflavorinfo
+        { BeagleSearch::Website, 0, "Google", 0 },
+        { BeagleSearch::Website, 0, "WebHistory", 0 },
+        { BeagleSearch::Website, 0, 0, "beagle/x-konq-cache" },
++       { BeagleSearch::Ebuilds, "*.ebuild", 0, 0 },
+        { BeagleSearch::Unknown, "file://", "File", 0 },  // mimetype wildcard must be last
+        { 0, 0, 0, 0}
+ };
+Index: kerry/src/beaglesearch.h
+===================================================================
+--- kerry.orig/src/beaglesearch.h
++++ kerry/src/beaglesearch.h
+@@ -51,7 +51,8 @@ enum TileGroup {
+ 	Conversations,  // in combo box
+ 	Website,        // in combo box
+ 	Feed,
+-	Note
++	Note,
++	Ebuilds
+ };
+ 
+ typedef QValueList<QString> PropertyList;
+Index: kerry/src/searchdlg.cpp
+===================================================================
+--- kerry.orig/src/searchdlg.cpp
++++ kerry/src/searchdlg.cpp
+@@ -669,6 +669,9 @@ void SearchDlg::displayResults(BeagleSea
+           case Website:
+ 		show = ( result->tilegroup == BeagleSearch::Website);
+ 		break;
++          case Ebuilds:
++		show = ( result->tilegroup == BeagleSearch::Ebuilds);
++		break;
+           default:
+ 		break;
+         }
+Index: kerry/src/searchdlg.h
+===================================================================
+--- kerry.orig/src/searchdlg.h
++++ kerry/src/searchdlg.h
+@@ -42,7 +42,8 @@ class SearchDlg : public HitsLayout, vir
+ 		Conversations,
+ 		Images,
+ 		Media,
+-                Website
++                Website,
++		Ebuilds
+ 	};
+ 
+ 	enum SortType {
+Index: kerry/src/searchdlg_layout.ui
+===================================================================
+--- kerry.orig/src/searchdlg_layout.ui
++++ kerry/src/searchdlg_layout.ui
+@@ -250,6 +250,11 @@
+                             <string>Web Pages</string>
+                         </property>
+ 		    </item>
++                    <item>
++                        <property name="text">
++                            <string>Ebuilds</string>
++                        </property>
++		    </item>
+                     <property name="name">
+                         <cstring>comboShow</cstring>
+                     </property>
