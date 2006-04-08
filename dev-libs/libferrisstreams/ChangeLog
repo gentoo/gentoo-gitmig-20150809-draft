@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libferrisstreams
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/ChangeLog,v 1.13 2006/03/23 02:03:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/ChangeLog,v 1.14 2006/04/08 11:34:51 blubb Exp $
+
+  08 Apr 2006; Simon Stelling <blubb@gentoo.org>
+  libferrisstreams-0.4.1.ebuild:
+  stable on amd64
 
 *libferrisstreams-0.5.0 (23 Mar 2006)
 

@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1b88fab145920b683227b8c0be732570 ChangeLog 1774
-RMD160 fa33c636c44acca35d14cace6ee6198a908c82ec ChangeLog 1774
-SHA256 9010c749d14adb64a209829fe8325db65569874c49a43e1eb848446dc76e4fbd ChangeLog 1774
+MD5 05ef1312afaeea148f110e181133e1fe ChangeLog 1874
+RMD160 43806a38ed31caf4ea8874bf5c5f23a07fd5d2d7 ChangeLog 1874
+SHA256 30b981ef52093eb7f4bec1b21436dac16d34d8c6944c3487b3314df78d83649b ChangeLog 1874
 MD5 f597c9b8fb4a444896a678f68cb21287 files/digest-libferrisstreams-0.3.11 73
 RMD160 91dd6485bd4d029c0ce64e1062716fc430def0cb files/digest-libferrisstreams-0.3.11 73
 SHA256 7eb794364633c44bc95f789098ff5b4ad3419f81a6225bbde046655a9d652744 files/digest-libferrisstreams-0.3.11 73
@@ -25,9 +22,9 @@ SHA256 ac1b072e6ab7478dd6e650b8a291e598d4fb8c84e2d3366788ee9e1fe6d22020 libferri
 MD5 90ceb36ca69059c71ff7a84874ac2841 libferrisstreams-0.3.12.ebuild 726
 RMD160 8db5de69dbfb5113c1c4bc62a29ddf91b025d6ba libferrisstreams-0.3.12.ebuild 726
 SHA256 bc65db0f7c2a6637e449cd6b36aed2f5706d3a96bbf6812d6b2c0291e1840c64 libferrisstreams-0.3.12.ebuild 726
-MD5 bf0a0f4f52a1a75ba0b22c856e2d2d82 libferrisstreams-0.4.1.ebuild 731
-RMD160 d5437d4853a520308f0406682ea21e85b7b900de libferrisstreams-0.4.1.ebuild 731
-SHA256 004d68e50a332beeef8ef9bb103bca9f243887ee78d39df82b4564aaecb29b42 libferrisstreams-0.4.1.ebuild 731
+MD5 b0a986b982263a2b89629e841691be49 libferrisstreams-0.4.1.ebuild 729
+RMD160 12042b35e93b68c7fd475f8f7eef8c7462158c9f libferrisstreams-0.4.1.ebuild 729
+SHA256 90add812ffb13f29bffd3a43a4b53d6f1ea2ae2ef06e54c4ca7a1659797b1cdc libferrisstreams-0.4.1.ebuild 729
 MD5 185c966f491375cff674eb436b8b290a libferrisstreams-0.4.2.ebuild 733
 RMD160 61e8b262d358cc511b1ce23074bf68e4b4734293 libferrisstreams-0.4.2.ebuild 733
 SHA256 71f3131154c517f09facbf6ecd3b308dcac3b8270db668dac3ae64de3a273ca5 libferrisstreams-0.4.2.ebuild 733
@@ -37,10 +34,3 @@ SHA256 014ce1cd955203884849193dfeea3eef89d117a3dfd8c6ccdaf1f697f72981dd libferri
 MD5 92329f92aff2f9d589eb69df1fc2c9fe metadata.xml 283
 RMD160 8a99eefeca08f1b7c2a0515786ac11ab30e0601c metadata.xml 283
 SHA256 7151b2bbede09c81cc68100d49e69d401f1128fc30c619f588479b440d77c09c metadata.xml 283
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEIi7E2+ySkm8kpY0RAiBvAKCuf9TsWCUubYpWt+DbkwtGtM4iTQCaAh5q
-c5a2YBypQ4SJ1QKpgUxm6MA=
-=OuxC
------END PGP SIGNATURE-----
