@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.2.5.ebuild,v 1.1 2006/04/05 18:16:19 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.2.6.ebuild,v 1.1 2006/04/08 11:14:12 ferdy Exp $
 
 inherit python toolchain-funcs eutils
 
-DOC_VER=${PV}
+DOC_VER="1.2.5"
 
 DESCRIPTION="GIT - the stupid content tracker"
 HOMEPAGE="http://kernel.org/pub/software/scm/git/"
