@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ExtUtils-CBuilder
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-CBuilder/ChangeLog,v 1.27 2006/03/31 18:49:23 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-CBuilder/ChangeLog,v 1.28 2006/04/08 19:22:59 mcummings Exp $
+
+  08 Apr 2006; <mcummings@gentoo.org> ExtUtils-CBuilder-0.15.ebuild:
+  Marking stable mips, tested on raq2, closes bug 124850
 
   31 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
   ExtUtils-CBuilder-0.15.ebuild:
