@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/baselayout-vserver
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/ChangeLog,v 1.31 2006/04/08 16:44:36 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/ChangeLog,v 1.32 2006/04/08 17:27:03 phreak Exp $
+
+*baselayout-vserver-1.11.14-r5 (08 Apr 2006)
+
+  08 Apr 2006; Christian Heim <phreak@gentoo.org>
+  +files/baselayout-vserver-1.11.14-depscan.patch,
+  +files/baselayout-vserver-1.11.14-uniqify.patch,
+  +baselayout-vserver-1.11.14-r5.ebuild:
+  1.11.14 branch now supports the following:
+  - uniqify function for resolvconf-gentoo
+  - Added --svcdir to depscan.sh
 
 *baselayout-vserver-1.12.0_pre17 (08 Apr 2006)
 
