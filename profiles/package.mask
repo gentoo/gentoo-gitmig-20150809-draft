@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5190 2006/04/07 15:45:29 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5191 2006/04/08 04:07:11 halcy0n Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -25,7 +25,7 @@
 # Upstream is dead and it fails to build with the version of
 # x11-libs/cairo in the tree.  Masked pending me fixing (or
 # removing) it - see bug 127241.
-x11-wm/waimea
+#x11-wm/waimea
 
 # Keri Harris <keri@gentoo.org> (08 Apr 2006)
 # Development release, requires careful testing.
