@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.7.ebuild,v 1.2 2006/03/30 15:08:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.7-r1.ebuild,v 1.1 2006/04/08 00:51:46 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -35,8 +35,8 @@ src_compile() {
 
 	econf \
 		$(use_with build included-popt) \
-		$(use_with acl acl-support) \
-		$(use_with acl xattr-support) \
+		$(use_enable acl acl-support) \
+		$(use_enable acl xattr-support) \
 		$(use_enable ipv6) \
 		--with-rsyncd-conf=/etc/rsyncd.conf \
 		|| die
