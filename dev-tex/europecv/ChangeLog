@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/europecv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.8 2006/03/19 23:52:31 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.9 2006/04/08 13:04:48 blubb Exp $
+
+  08 Apr 2006; Simon Stelling <blubb@gentoo.org> europecv-20040603.ebuild:
+  stable on amd64
 
   19 Mar 2006; Mark Loeser <halcy0n@gentoo.org> europecv-20060123.ebuild:
   Add DEPEND on app-arch/unzip

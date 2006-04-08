@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/europecv-20040603.ebuild,v 1.5 2005/08/07 13:31:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/europecv-20040603.ebuild,v 1.6 2006/04/08 13:04:50 blubb Exp $
 
 inherit latex-package
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="LPPL-1.2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 IUSE=""
 
