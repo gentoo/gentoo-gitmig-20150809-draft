@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.1-r1.ebuild,v 1.1 2006/04/01 18:30:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.1-r1.ebuild,v 1.2 2006/04/08 11:15:57 flameeyes Exp $
 
 inherit autotools eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://poppler.freedesktop.org/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gtk qt cairo qt4"
 
 RDEPEND="~app-text/poppler-${PV}
@@ -36,6 +36,9 @@ src_unpack(){
 	epatch ${WORKDIR}/${MY_P}-cvs20060401.patch
 	epatch ${FILESDIR}/${MY_P}-r1-bindings.patch
 	epatch ${FILESDIR}/${MY_P}-arthur.patch
+
+	epatch "${FILESDIR}/${MY_P}-qt-pthread.patch"
+
 	AT_M4DIR="m4" eautoreconf
 	sed -i s:/usr/lib/qt:/usr/lib/qt4: configure
 }
