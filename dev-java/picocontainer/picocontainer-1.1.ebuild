@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.1.ebuild,v 1.2 2006/04/01 15:07:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.1.ebuild,v 1.3 2006/04/08 13:25:46 dertobi123 Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://docs.codehaus.org/display/PICO/"
 SRC_URI="http://dist.codehaus.org/${PN}/distributions/${MY_P}-src.tar.gz"
 LICENSE="PicoContainer"
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="doc"
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
