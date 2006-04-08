@@ -1,15 +1,28 @@
-MD5 778ca7545bd17c2e05c03d5f788e5555 ChangeLog 1121
-RMD160 57fa615571df121b5fbe3dd0d77d330bfe10cb9e ChangeLog 1121
-SHA256 4feef09725f3146bbc7b0f91a2795078b31aa079e3b3d193b9d028271a1b191a ChangeLog 1121
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dd463d297b40e262490f074a03d39423 ChangeLog 1315
+RMD160 32eac6b2b7c2ffdd07cbc96894374588223d1914 ChangeLog 1315
+SHA256 9b167d37ba04573686ae6a5c652c105badd7da327b8cef871d1ed1067f27ae72 ChangeLog 1315
 MD5 4ff4ee620da1798d09f9290e211ad780 files/digest-searchandrescue-0.8.2 554
 RMD160 8c6a7dea21fbbc4653130e31e8b898649e38720e files/digest-searchandrescue-0.8.2 554
 SHA256 4a6f51def5fdfee9a0ff9776c6c5df3c3e0290154a77961382b8cc6bef10e8ff files/digest-searchandrescue-0.8.2 554
 MD5 08d186b8d3ec9636687f7453c0981c9b files/searchandrescue-0.8.2-gcc33.patch 883
 RMD160 cbfe9e3c4e794906cad26245ca5a307ef6b19166 files/searchandrescue-0.8.2-gcc33.patch 883
 SHA256 f0a91651eb634e71f302b6e706feffc02bd9fe31e159276d4fa339d7848c0991 files/searchandrescue-0.8.2-gcc33.patch 883
+MD5 7da4043a90e8ccae653eaa65afed506b files/searchandrescue-0.8.2-gcc41.patch 18686
+RMD160 5e5e67441982ebc0a4647301dabb73be974f2bd3 files/searchandrescue-0.8.2-gcc41.patch 18686
+SHA256 f641198e8e3408c43511253130269a99fed596e1629891850bf5c78c70099620 files/searchandrescue-0.8.2-gcc41.patch 18686
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 3370127d0823b44f6e8f6516c4a24df5 searchandrescue-0.8.2.ebuild 1858
-RMD160 170460aecc0400b91523ef4f0d794471d4ed5829 searchandrescue-0.8.2.ebuild 1858
-SHA256 6db3e661ece3688a3f296d2f367ea77785ff483a64a88f3f07fb5e1198240082 searchandrescue-0.8.2.ebuild 1858
+MD5 5ace38b759952153aed52b1c61f84d30 searchandrescue-0.8.2.ebuild 1893
+RMD160 17236f3d08c314e949477d4eba70910e4a33f0d2 searchandrescue-0.8.2.ebuild 1893
+SHA256 064ced3639cddd03f19987b8c1dba754dfe6502658b794670d5851374e3604bc searchandrescue-0.8.2.ebuild 1893
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEN5Xe2CTtIKiFlQIRAsf8AJ4rxd2HSHU5Qeu/L5dKhtTtR1hxJwCfV4Xe
+Dq1S5F61C0LujEB8a6G9Cmg=
+=fo9D
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/searchandrescue-0.8.2.ebuild,v 1.3 2006/02/22 22:02:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/searchandrescue-0.8.2.ebuild,v 1.4 2006/04/08 10:51:45 tupone Exp $
 
 inherit eutils games
 
@@ -44,7 +44,8 @@ src_unpack() {
 	mkdir data ; cd data
 	unpack ${MY_PN}-data-${PV}.tar.bz2
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc33.patch
+	epatch "${FILESDIR}"/${P}-gcc33.patch \
+		"${FILESDIR}"/${P}-gcc41.patch
 	bunzip2 sar/man/${MY_PN}.6.bz2
 	sed -i \
 		-e '/FeatureCFLAGS.*march/s:=.*:=:g' sar/platforms.ini \
