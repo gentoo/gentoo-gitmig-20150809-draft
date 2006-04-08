@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060401.ebuild,v 1.2 2006/04/01 17:10:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060401-r1.ebuild,v 1.1 2006/04/08 10:56:02 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools
 
@@ -292,6 +292,12 @@ src_install() {
 	# doinitd doesnt respect symlinks
 	dodir /etc/init.d
 	cp -P "${S}"/init.d/* "${D}"/etc/init.d/ || die "doinitd"
+	# These two aren't working on Gentoo/FreeBSD, replace with dummy modules in
+	# the time being
+	rm -f "${D}"/etc/init.d/{clock,modules}
+	newinitd "${FILESDIR}/dummy.initd" clock
+	newinitd "${FILESDIR}/dummy.initd" modules
+
 	#doinitd "${S}"/init.d/* || die "doinitd"
 	doconfd "${S}"/etc/conf.d/* || die "doconfd"
 	doenvd "${S}"/etc/env.d/* || die "doenvd"
@@ -394,8 +400,10 @@ src_install() {
 	# Original design had these in /etc/net.modules.d but that is too
 	# problematic with CONFIG_PROTECT
 	dodir ${rcscripts_dir}
-	cp -pPR "${S}"/lib/rcscripts/net.modules.d ${D}${rcscripts_dir}
+	cp -pPR "${S}"/net-scripts/net.modules.d ${D}${rcscripts_dir}
 	chown -R root:0 ${D}${rcscripts_dir}
+	newinitd "${S}"/net-scripts/init.d/net.lo net.lo0
+	doconfd "${S}"/net-scripts/conf.d/net{,.example}
 
 	#
 	# Install baselayout documentation

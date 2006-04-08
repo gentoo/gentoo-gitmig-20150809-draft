@@ -1,6 +1,14 @@
 # ChangeLog for sys-freebsd/freebsd-baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.3 2006/04/02 21:49:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.4 2006/04/08 10:56:02 flameeyes Exp $
+
+*freebsd-baselayout-20060401-r1 (08 Apr 2006)
+
+  08 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> +files/dummy.initd,
+  -freebsd-baselayout-20060401.ebuild,
+  +freebsd-baselayout-20060401-r1.ebuild:
+  Add dummy clock and modules init.d scripts to avoid dying during startup.
+  Bug #129166.
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-baselayout-20060401.ebuild:
