@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.7.ebuild,v 1.4 2006/03/20 00:44:18 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.7.ebuild,v 1.5 2006/04/08 15:00:39 dertobi123 Exp $
 
 inherit eutils gnome2 mono
 
@@ -12,7 +12,7 @@ SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="aac doc daap ipod flac mad njb real vorbis"
 
 RDEPEND=">=dev-lang/mono-1.1.10
