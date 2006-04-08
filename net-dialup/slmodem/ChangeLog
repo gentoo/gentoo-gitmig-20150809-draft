@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.57 2006/03/22 20:46:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.58 2006/04/08 16:12:26 genstef Exp $
+
+  08 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  slmodem-2.9.11_pre20051101.ebuild:
+  Add module_param sed-fix
 
   22 Mar 2006; Stefan Schweizer <genstef@gentoo.org>
   -slmodem-2.9.11_pre20050816.ebuild, -slmodem-2.9.11_pre20051009.ebuild,
