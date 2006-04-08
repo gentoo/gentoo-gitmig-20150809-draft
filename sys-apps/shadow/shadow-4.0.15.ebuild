@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.15.ebuild,v 1.1 2006/03/21 02:47:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.15.ebuild,v 1.2 2006/04/08 00:58:48 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic autotools pam
 
@@ -136,7 +136,7 @@ src_install() {
 		local INSTALL_SYSTEM_PAMD="yes"
 
 		# Do not install below pam.d files if we have pam-0.78 or later
-		portageq has_version / '>=sys-libs/pam-0.78' && \
+		has_version '>=sys-libs/pam-0.78' && \
 			INSTALL_SYSTEM_PAMD="no"
 
 		for x in "${FILESDIR}"/pam.d-include/*; do
