@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8656ad7acc19735517ba3877a51ed990 ChangeLog 15063
-RMD160 5589a9f3d7cfd743529819f8bb98d9562b10879b ChangeLog 15063
-SHA256 0da85bb5904a9585bbbecd91436ed503d0dd9a3d5de04d0b8fcd27334d8dbac3 ChangeLog 15063
+MD5 184cab696e5be1eea2dfc727c51eed34 ChangeLog 506
+RMD160 3b689497aa5fefcc447d65fbe92137214adfda5f ChangeLog 506
+SHA256 17241c79738662f1a30501532289711bc3de6e60748d2237f68dae3dca8d1e6d ChangeLog 506
 MD5 ae36bba4e878c77dc2e823ce00e98869 files/6.4-dont-install-gles-headers.patch 421
 RMD160 70713f143d080b444089a95712efd227227c523f files/6.4-dont-install-gles-headers.patch 421
 SHA256 8f636c2e09ac7fdab0d06ebe62af5a311b52a03bf7b7bdecf4789a6e30e0777e files/6.4-dont-install-gles-headers.patch 421
@@ -37,19 +37,19 @@ SHA256 c0ec505e5fb263d4cde901ce9afe3197346acf67372460a2177231be8425e0ab files/ma
 MD5 5bd06d12cc0c1f11b9671eb7ec57f5f0 files/radeon-texture-problem.patch 363
 RMD160 d7241f061f4f0abbab57920cfaa480ad819bf9cb files/radeon-texture-problem.patch 363
 SHA256 01d74821fedfd3409d5aa5c7620c2d51e7f1ddad63b6b01d4bd25595afdfbbea files/radeon-texture-problem.patch 363
-MD5 25dea3a0f2c9f6b2af49b2b75ae8382d mesa-6.4.2-r2.ebuild 8701
-RMD160 27e30d96dc973e1a5f9732c3c800a02a94cedf3a mesa-6.4.2-r2.ebuild 8701
-SHA256 ddc99bf66efe8f98474a643cb746a7ff3486319af60a3e068ffd77bc3748ac48 mesa-6.4.2-r2.ebuild 8701
-MD5 3ab845ec89cc7b15da0ff2c0b193e3a0 mesa-6.5.ebuild 8435
-RMD160 70adef7fe131a435bc9801e2c5d864b8f3613503 mesa-6.5.ebuild 8435
-SHA256 640bcbdd320468c3fdb99920b0f95547887cb807554eb39d63aa3a46cc1a7502 mesa-6.5.ebuild 8435
+MD5 ffaefbcfe50fb00810770e2342ee8430 mesa-6.4.2-r2.ebuild 9076
+RMD160 5ceb3bbe2801d01999875a670232e7966d02125f mesa-6.4.2-r2.ebuild 9076
+SHA256 458b92ef427553d05e75e0ff4ccb0a330ba5b1c7660bbd721b2ac41a871f25d8 mesa-6.4.2-r2.ebuild 9076
+MD5 031467cd2fc95caabcb10b14d703344d mesa-6.5.ebuild 8810
+RMD160 7022c60019fddda6fd88ec0858a476ba8c216a10 mesa-6.5.ebuild 8810
+SHA256 2c820275f2b6c91e602fc9c1ee4032dd835bca9bb8b079d134b200aa32bf395f mesa-6.5.ebuild 8810
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEMHdSAiZjviIA2XgRAp3eAJ9u4oJpqwA0Sa8esm9X2b9Lb8SqXgCg1zUM
-irDGkAm7XSIEPRJ9RscraQE=
-=5JSz
+iD8DBQFEODHaAiZjviIA2XgRAmM/AJ9fdAmPVWp7xUYRScL6jc0X50yi2wCgp9cS
+GqbkAYs/S5TuwsSUPruaGkU=
+=mru/
 -----END PGP SIGNATURE-----

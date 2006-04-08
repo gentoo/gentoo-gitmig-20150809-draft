@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.ebuild,v 1.4 2006/04/03 01:15:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.ebuild,v 1.5 2006/04/08 21:57:12 flameeyes Exp $
 
-inherit eutils toolchain-funcs multilib flag-o-matic
+inherit eutils toolchain-funcs multilib flag-o-matic portability
 
 OPENGL_DIR="xorg-x11"
 
@@ -246,6 +246,14 @@ src_install() {
 	doins ${FILESDIR}/lib/libGLU.la
 	insinto /usr/$(get_libdir)/opengl/xorg-x11/lib
 	doins ${FILESDIR}/lib/libGL.la
+
+	# On *BSD libcs dlopen() and similar functions are present directly in
+	# libc.so and does not require linking to libdl. portability eclass takes
+	# care of finding the needed library (if needed) witht the dlopen_lib
+	# function.
+	sed -i -e 's:-ldl:'$(dlopen_lib)':g' \
+		${D}/usr/$(get_libdir)/libGLU.la \
+		${D}/usr/$(get_libdir)/opengl/xorg-x11/lib/libGL.la
 
 	# Create the two-number versioned libs (.so.#.#), since only .so.# and
 	# .so.#.#.# were made
