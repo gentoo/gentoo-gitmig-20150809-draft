@@ -1,4 +1,12 @@
-MD5 35f96912be3c745eda8a9122cc1c63ac ChangeLog 840
-MD5 a67326d80ac5e8c2d083cb7ae0bbe88c files/digest-rt2570-1.1.0_beta1 137
-MD5 a68fe0595dd4cb5bf30608f8aed94849 metadata.xml 254
+DIST rt2570-1.1.0-b1.tar.gz 377676
+DIST rt2570-cvs-update.patch.gz 19820
+EBUILD rt2570-1.1.0_beta1.ebuild 1369
 MD5 58099717eb763ac2592d2117ec76db86 rt2570-1.1.0_beta1.ebuild 1369
+MISC ChangeLog 840
+MD5 35f96912be3c745eda8a9122cc1c63ac ChangeLog 840
+MISC metadata.xml 254
+MD5 a68fe0595dd4cb5bf30608f8aed94849 metadata.xml 254
+size 137 files/digest-rt2570-1.1.0_beta1 137
+RMD160 de74ce52673b00c95e2458dc3cd213299a0c2e51 files/digest-rt2570-1.1.0_beta1 137
+SHA256 d8ec4f60301e2bbd5ce72f7398fadf6af2f998a1d7876f5f44c13dd1fed9b95b files/digest-rt2570-1.1.0_beta1 137
+MD5 a67326d80ac5e8c2d083cb7ae0bbe88c files/digest-rt2570-1.1.0_beta1 137

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/rt2570-1.1.0_beta1.ebuild,v 1.3 2005/12/31 16:45:44 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/rt2570-1.1.0_beta1.ebuild,v 1.4 2006/04/08 10:40:33 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -33,6 +33,7 @@ pkg_setup() {
 src_compile() {
 	if kernel_is ge 2 6 14 ; then
 		epatch "${WORKDIR}"/rt2570-cvs-update.patch
+		sed -i "s:.owner.*::" Module/rtusb_main.c
 	fi
 	linux-mod_src_compile
 }
