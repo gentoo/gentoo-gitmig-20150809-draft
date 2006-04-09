@@ -1,0 +1,15 @@
+# Beagle Crawl Setup
+
+CRAWL_ENABLED="no"
+
+CRAWL_INDEX_NAME="portage"
+
+CRAWL_PATHS="/usr/portage /var/db/pkg"
+
+CRAWL_ALLOW_PATTERNS="*.ebuild,ChangeLog,metadata.xml"
+
+CRAWL_RECURSIVE="yes"
+
+CRAWL_DISABLE_FILTERING="no"
+
+CRAWL_CACHE_TEXT="no"
