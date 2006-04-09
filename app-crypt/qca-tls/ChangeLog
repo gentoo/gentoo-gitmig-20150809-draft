@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca-tls
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.35 2006/03/09 02:22:33 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.36 2006/04/09 13:45:24 flameeyes Exp $
+
+  09 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> qca-tls-1.0-r3.ebuild:
+  Add ~x86-fbsd keyword.
 
   09 Mar 2006; Gustavo Felisberto <humpback@gentoo.org>;
   qca-tls-1.0-r3.ebuild:
