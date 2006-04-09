@@ -10,9 +10,9 @@ SHA256 60fb0102c01215a53ba818d0c80cd021cc0682b8d6e4e37cc56d40544ec2f62d Class-Me
 MD5 74446d14a6f3dfd8abf059c0e2c894fc Class-MethodMaker-2.07-r2.ebuild 582
 RMD160 13eacdeca449d5865171e2fff25cbab43c1aca6a Class-MethodMaker-2.07-r2.ebuild 582
 SHA256 2d63ccf169945844f640fa0f7739cfac3514d85fd2c309d3aebda4b2e150d320 Class-MethodMaker-2.07-r2.ebuild 582
-MD5 da2bccfdbceffb275ef88010e5885ad2 Class-MethodMaker-2.08.ebuild 586
-RMD160 a4f444bffd7114901ec784649fe1dfa00841f7d8 Class-MethodMaker-2.08.ebuild 586
-SHA256 f0234dbd0c605093f0d5e8e9016470978dce5964e90a1dd4e1f7709e95da9aa7 Class-MethodMaker-2.08.ebuild 586
+MD5 51b85052d8c37f3c9aafd30f15043785 Class-MethodMaker-2.08.ebuild 600
+RMD160 f71ca3087dde111894cfc74d5ec5ad1d649aae97 Class-MethodMaker-2.08.ebuild 600
+SHA256 4a773f7c422609f92a7e598b023bbf0cc57723061da8e070da481b2c5cae8f78 Class-MethodMaker-2.08.ebuild 600
 MD5 a2a1bcd1e4774ec6755462b1bc3795c2 files/digest-Class-MethodMaker-1.11 73
 RMD160 141214f68f0072e6e48e7d81322d4ef3ea108446 files/digest-Class-MethodMaker-1.11 73
 SHA256 2048b0e113c9a2bdefd62ea49d3d55e76ec4d424cf1352deedcc1a785406f601 files/digest-Class-MethodMaker-1.11 73
@@ -26,9 +26,9 @@ MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFELFmOJrHF4yAQTrARAiFvAJ9OMoezRYREjtvcs43QaJ05dBhPOACfXaWE
-bogvKxlw8kB7td8OZ0Gule0=
-=1XKo
+iD8DBQFEOUiO2+ySkm8kpY0RAqwOAJ4qI8tI8F7yDCqkE6muRPMX4fYpKgCgrIZN
+PLbLespWwNgeVlnZbLPIJyA=
+=L1ch
 -----END PGP SIGNATURE-----
