@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.362 2006/04/08 22:21:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.363 2006/04/09 17:05:44 killerfox Exp $
+
+  09 Apr 2006; Rene Nussbaumer <killerfox@gentoo.org>
+  mplayer-1.0.20060408.ebuild:
+  Stable on hppa. See bug #127969.
 
   08 Apr 2006; Luca Barbato <lu_zero@gentoo.org>
   mplayer-1.0.20060408.ebuild:
