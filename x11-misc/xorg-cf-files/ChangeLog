@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xorg-cf-files
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.15 2006/02/14 22:55:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.16 2006/04/09 14:30:40 flameeyes Exp $
+
+  09 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xorg-cf-files-1.0.1-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org>
   xorg-cf-files-1.0.1-r1.ebuild:

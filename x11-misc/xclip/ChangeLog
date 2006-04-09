@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xclip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.13 2006/03/25 03:14:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.14 2006/04/09 14:29:14 flameeyes Exp $
+
+  09 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> xclip-0.08-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
 *xclip-0.08-r1 (25 Mar 2006)
 
