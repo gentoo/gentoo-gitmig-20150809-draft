@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c2abb924dab166d72787f1dd9ba918e4 ChangeLog 1004
-RMD160 131bb89e355bbfb51f9b8ac908cde95e6a698b2f ChangeLog 1004
-SHA256 12e4054b3f9cedbf478c05adc97330c5d784abd00abd351a97c16a41031a0eb5 ChangeLog 1004
+MD5 ab641546c7cfcf22226fe0b63331a013 ChangeLog 1111
+RMD160 efb25d59216018b8eeb5f82738e13ed244425361 ChangeLog 1111
+SHA256 6f0b66e5ede6183e5120528044120b300c5e99be956d04ecc26d7de8c4300e47 ChangeLog 1111
 MD5 f286994bc4b6be508d4a9e943b44794b files/digest-xen-tools-3.0.1 235
 RMD160 77a42023b130ceef29f79a0c28742a7e8731eadf files/digest-xen-tools-3.0.1 235
 SHA256 2bdbb205f6f9f9ed4a9a06093a63768214a9d14df48cf32e0f10c2cbfbfb8098 files/digest-xen-tools-3.0.1 235
 MD5 2ddf0133ffa840ddb0ff85770d2a8770 files/digest-xen-tools-3.0.1_p9029 259
 RMD160 79c9eaf49563f42eea950aea8597fa1cc309786e files/digest-xen-tools-3.0.1_p9029 259
 SHA256 a035a6a1cd2752da07db13617674322479f049833240b801f7ad828ddab38557 files/digest-xen-tools-3.0.1_p9029 259
+MD5 6923762444fb7024862461773f66c0e6 files/digest-xen-tools-3.0.2 235
+RMD160 81bcec08f6decd6b204f370926fb43afc1b5248d files/digest-xen-tools-3.0.2 235
+SHA256 a1c65be37f1287699413ecebc10f13f7447db890995c5c2fc9cefc0e3845f86e files/digest-xen-tools-3.0.2 235
 MD5 0664978b7f05728a0f4ffdbacec90f01 files/xend-conf 357
 RMD160 e2b04f3d7cfb4fa8407adf2a4470e461901f9681 files/xend-conf 357
 SHA256 7edcef347bfd373144140883ff9f38c9ff76614b71d912759fa635fb840911bc files/xend-conf 357
@@ -31,10 +31,6 @@ SHA256 c2a5eeabbd6fa369faa3a23b98b96b525c728bc11480dc5a4b9425f3cd9c8c88 xen-tool
 MD5 7bdb691d507e782cc8789d35661e1690 xen-tools-3.0.1_p9029.ebuild 3362
 RMD160 8607db57f8b0192edb03c609a08a6b3d0d94d5db xen-tools-3.0.1_p9029.ebuild 3362
 SHA256 e0537312563f6fa1a610ed2bb8e696bbf6deaaf95d34ec347a1904af5086e66c xen-tools-3.0.1_p9029.ebuild 3362
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELeBKJrHF4yAQTrARAj5jAJ9Yi2e6AoPc6mOoeNiNJjQmNTKkBwCfROvM
-lFmKp47kFVNpllOwWm3aYvw=
-=gJl1
------END PGP SIGNATURE-----
+MD5 c2c6247a847c33cf95d185bd854db22d xen-tools-3.0.2.ebuild 3363
+RMD160 c050efc21a14208f04119f739f395dfe571ae583 xen-tools-3.0.2.ebuild 3363
+SHA256 c2a5eeabbd6fa369faa3a23b98b96b525c728bc11480dc5a4b9425f3cd9c8c88 xen-tools-3.0.2.ebuild 3363
