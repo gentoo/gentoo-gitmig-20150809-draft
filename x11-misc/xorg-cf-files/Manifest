@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 db6d84ac57dba60c450bbad183a78114 ChangeLog 2461
 RMD160 2ecf78f26877f7ae96ee8043cbf46cc5ffa52c93 ChangeLog 2461
 SHA256 b4dae816f27e1dcb896c3248389d2617cb1334262c4bf9367206e743157b61f8 ChangeLog 2461
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 4c1cf6e64f4f72453c14db98c68412b1 xorg-cf-files-1.0.1-r1.ebuild 610
 RMD160 9a3bb6a3593c7bde4d70a9c22fec3b6a1f1f6f94 xorg-cf-files-1.0.1-r1.ebuild 610
 SHA256 99d3c7c393cef51ceb9c1d841b0c95f799a018f8c9e756a5ba8a69e0b33046e4 xorg-cf-files-1.0.1-r1.ebuild 610
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEORqdAiZjviIA2XgRAihjAJ9tpaUGZK0molqTPQ2YDiXIDXaIpgCgnSAI
+zC+EjRLLHSy/zJk3sclcEuE=
+=RPq+
+-----END PGP SIGNATURE-----
