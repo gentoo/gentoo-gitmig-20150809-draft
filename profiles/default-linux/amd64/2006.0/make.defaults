@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/make.defaults,v 1.12 2006/03/29 19:12:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/make.defaults,v 1.13 2006/04/09 13:13:16 blubb Exp $
 
 FEATURES="sandbox autoconfig"
 
@@ -9,6 +9,7 @@ DEFAULT_ABI="amd64"
 ABI=${DEFAULT_ABI}
 
 #CFLAGS_amd64="-m64"
+#CXXFLAGS_amd64="-m64"
 #LDFLAGS_amd64="-m elf_x86_64"
 CHOST_amd64="x86_64-pc-linux-gnu"
 CDEFINE_amd64="__x86_64__"
@@ -17,6 +18,7 @@ LIBDIR_amd64="lib64"
 # Added -L/emul* workaround to aid compilation of 32bit packages
 # See bug #88725 for more info - Herbie Hopkins <herbs@gentoo.org> 2005/04/19
 CFLAGS_x86="-m32 -L/emul/linux/x86/lib -L/emul/linux/x86/usr/lib"
+CXXFLAGS_x86="-m32 -L/emul/linux/x86/lib -L/emul/linux/x86/usr/lib"
 LDFLAGS_x86="-m elf_i386 -L/emul/linux/x86/lib -L/emul/linux/x86/usr/lib"
 CHOST_x86="i686-pc-linux-gnu"
 CDEFINE_x86="__i386__"
