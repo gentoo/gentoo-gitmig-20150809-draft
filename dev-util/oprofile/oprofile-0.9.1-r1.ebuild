@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.1-r1.ebuild,v 1.2 2006/03/05 09:27:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.1-r1.ebuild,v 1.3 2006/04/09 15:40:19 spock Exp $
 
 inherit eutils qt3
 
@@ -21,7 +21,6 @@ DEPEND=">=dev-libs/popt-1.7-r1
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/oprofile-0.8.2.patch
 	epatch ${FILESDIR}/oprofile-0.9.1-opcontrol_path.diff
 	epatch ${FILESDIR}/oprofile-0.9.1-gcc41-compilation-fix.diff
 }
