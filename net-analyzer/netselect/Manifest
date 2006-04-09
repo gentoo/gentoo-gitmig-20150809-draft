@@ -1,16 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aac2db4afe3a96784044cefa516c3821 ChangeLog 2870
-MD5 7396c62cc3e5735019287ae62229dd48 files/digest-netselect-0.3 64
+MD5 b831bb381e0c6e0951afd4c077a7dfd4 ChangeLog 2988
+RMD160 e62b8a068919b00dd0c19028570252f8d4815176 ChangeLog 2988
+SHA256 a6b4693137a970db451e585e53f16913077d221a299213950dcbfefaf419e897 ChangeLog 2988
 MD5 7396c62cc3e5735019287ae62229dd48 files/digest-netselect-0.3-r1 64
+RMD160 11ad3c9ac18b5b1f43aa599f132145445edd9995 files/digest-netselect-0.3-r1 64
+SHA256 ce5c46fd4ee2a789a19fcfb215ea6d1bc00df78993f2e4152aaa56d7c1099a51 files/digest-netselect-0.3-r1 64
 MD5 b4a519c8440c3016ab875b1e47ad33e2 metadata.xml 227
-MD5 68a55810b0fd65ee45b2ce00089080fe netselect-0.3-r1.ebuild 1159
-MD5 ed9af38651ff81fcae36bbdd710f83de netselect-0.3.ebuild 772
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDrrUeAiZjviIA2XgRAv6eAJ9qjNCyvsvTIVGUHxywcC+zz79RiQCgicnx
-JuBYoYZBo+g6FgvqF4hSk6A=
-=BFpP
------END PGP SIGNATURE-----
+RMD160 917eb39a2068e2e2a26f5d8b8999abbe9f48bb4b metadata.xml 227
+SHA256 645ebb9d76e7763a81c4dee499147688e00258373d297ceb0b83b32eeb5fe44b metadata.xml 227
+MD5 9cead0c2b2ece8f5b554c4616c7ab5ab netselect-0.3-r1.ebuild 1155
+RMD160 1d9e3507346447f6ac321f3b7f9293a1bdc996c2 netselect-0.3-r1.ebuild 1155
+SHA256 1c34ef464ed4bda6be34a689d37c59eb9745cbd0bc70cfc1a302947b57cead47 netselect-0.3-r1.ebuild 1155

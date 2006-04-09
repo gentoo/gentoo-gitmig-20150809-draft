@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/netselect-0.3-r1.ebuild,v 1.15 2005/12/25 15:04:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/netselect-0.3-r1.ebuild,v 1.16 2006/04/09 11:27:05 jokey Exp $
 
 inherit flag-o-matic
 
@@ -36,6 +36,6 @@ src_compile() {
 src_install () {
 	dobin netselect || die "dobin failed"
 	fowners root:wheel /usr/bin/netselect
-	fperms 4710 /usr/bin/netselect
+	fperms 4711 /usr/bin/netselect
 	dodoc ChangeLog HISTORY README*
 }

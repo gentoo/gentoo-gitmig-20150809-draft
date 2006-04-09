@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netselect
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.26 2005/12/25 15:04:43 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.27 2006/04/09 11:27:05 jokey Exp $
+
+  09 Apr 2006; Markus Ullmann <jokey@gentoo.org> netselect-0.3-r1.ebuild:
+  Changing fperms wrt bug #129265 and clean up
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   netselect-0.3-r1.ebuild:
