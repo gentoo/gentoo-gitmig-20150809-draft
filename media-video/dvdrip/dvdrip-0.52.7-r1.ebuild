@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.7-r1.ebuild,v 1.2 2006/03/25 21:08:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.7-r1.ebuild,v 1.3 2006/04/09 05:30:49 morfic Exp $
 
 inherit perl-module eutils flag-o-matic
 
@@ -58,7 +58,7 @@ src_unpack() {
 
 src_install() {
 	newicon lib/Video/DVDRip/icon.xpm dvdrip.xpm
-	make_desktop_entry dvdrip dvd::rip dvdrip.xpm Video
+	make_desktop_entry dvdrip dvd::rip dvdrip.xpm AudioVideo
 
 	perl-module_src_install
 }
