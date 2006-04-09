@@ -1,14 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3e1e7d215f91214aa5d641ceaec78e9f kboincspy-0.9.0.ebuild 473
-MD5 59414920cde9de837de1c65187f9d652 ChangeLog 549
-MD5 10e572c9f7332fc95779bc1ca0e6d788 metadata.xml 680
+MD5 65d5b06409a767287ad53b2754a3774f ChangeLog 694
+RMD160 6b9db3bf54bd48b5e178e781fbed90769843c1a2 ChangeLog 694
+SHA256 2e87697a4055477593e5d74b1976b00d54f91fb04f43f995adcab13babb1cc9c ChangeLog 694
 MD5 0af919c74243294c1bdd9d47df54a1f1 files/digest-kboincspy-0.9.0 69
+RMD160 1885fb7ae65aac1d166eed4b627a654351eb1a2f files/digest-kboincspy-0.9.0 69
+SHA256 8f7178127ce3100aacebe8f08666e9096a9174220702ba028fbb60adae6907f9 files/digest-kboincspy-0.9.0 69
+MD5 79518390d8ea5008e425cfaac1789213 files/digest-kboincspy-0.9.1 253
+RMD160 0cb0cfffb07da8291d6cd1fa954f289512936528 files/digest-kboincspy-0.9.1 253
+SHA256 04e7f1125193cb241706a989dfbae5dd97b726108b394cb85f2a0d397b7ca8fe files/digest-kboincspy-0.9.1 253
+MD5 3e1e7d215f91214aa5d641ceaec78e9f kboincspy-0.9.0.ebuild 473
+RMD160 3766a5c45b42b3361934f6f379bc197b2a7179b4 kboincspy-0.9.0.ebuild 473
+SHA256 ccad2b332478f2f1d3df6de5566bbb7324473e45010b48a0294ad841b2443455 kboincspy-0.9.0.ebuild 473
+MD5 15cbbbc6f58442f9ad2017d474b89723 kboincspy-0.9.1.ebuild 473
+RMD160 65404ec5c2aa6b6d047a4814cbd1a4bb9a20eb2a kboincspy-0.9.1.ebuild 473
+SHA256 999f2ab14f7b7074d39f8517ce85b38592f12732b0183aea70ced9b4369e0f3b kboincspy-0.9.1.ebuild 473
+MD5 10e572c9f7332fc95779bc1ca0e6d788 metadata.xml 680
+RMD160 1105507f20280a20d29ec900762b058f7fdae65a metadata.xml 680
+SHA256 111e9c265c4a554b8c4d60a90beb9736654c952e928880231f20057ab7ad5c8c metadata.xml 680
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDEPjCntT9W3vfTuoRAgj+AJ9uNMDKyy0DJUlfuyUw4QjBMK8/sACgiJAI
-I+ty/I6oLKpAGF+pwAOeE6w=
-=9zSX
+iD8DBQFEOZlhntT9W3vfTuoRAtc4AJ9T8yO9cVUKnNhQwC2Z3nDOGedKWACeN/bz
+pwYtosV8tH3vqM2dvoAmQ/o=
+=28d4
 -----END PGP SIGNATURE-----
