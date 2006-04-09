@@ -1,28 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f8de5ca2d75c0007c18488e4b46cdb6a ChangeLog 776
-RMD160 14f39b3c6ed1cc7cd3be246b8c80ecafb7feb0ef ChangeLog 776
-SHA256 c109651abf19e00bce7961f8433ef02ea7db9d426467c77b259b9c71fdbed27c ChangeLog 776
-MD5 2bc063a44a7f4f2767c2d31151b7682c files/digest-veusz-0.8 61
-RMD160 a7a3f7ee6b84575c692c6b0dddf185daba8ac7e9 files/digest-veusz-0.8 61
-SHA256 36904452e6a9d6daf767dbf54d1b5d4090a73caa9b77c328f8871b4a8bfdf591 files/digest-veusz-0.8 61
+MD5 735baffef933ede398d91a3f4cc624f1 ChangeLog 904
+RMD160 764755c88d7d22a100a4ae45a8f07dd6bae9397f ChangeLog 904
+SHA256 8e1f1e3ad4f81307d08806d7ae2e650d6fdf70ba2cfcb6ea0c200a42dc4fbb1b ChangeLog 904
 MD5 82498f10f9727479e0747463912965a8 files/digest-veusz-0.9 61
 RMD160 e676f78f7af438a22b2df43223a0b4ff84292324 files/digest-veusz-0.9 61
 SHA256 66d20ddbe0695f2b897a609535e758c94a31c4a932cfd0bf6df4316af6b4b4f2 files/digest-veusz-0.9 61
 MD5 5feee5e85a6981f386b3e2b34a29ace6 metadata.xml 505
 RMD160 ea74ab2adddf405964e77e97674f8ab3c4eeb70c metadata.xml 505
 SHA256 25615f1addc84569b2df04451b96cbe399e8427235da78fe3a11c4b440c2e6a5 metadata.xml 505
-MD5 d8ae1d9d1b4341875fcae183182ec0db veusz-0.8.ebuild 927
-RMD160 501ae0cb58ee750ae7c5b419b70b8b687fec4187 veusz-0.8.ebuild 927
-SHA256 cb6490cb246775ef07229fedc3b1a36767d18cf632ebbac9127181cc2a9b8539 veusz-0.8.ebuild 927
-MD5 ceda8cbd63848cfabc1e6c857962ff0a veusz-0.9.ebuild 927
-RMD160 6a274d6f68d9b4bc6017dbbd70098ac1e1cdd7b8 veusz-0.9.ebuild 927
-SHA256 8eeb5ce51ba8234c229bf2135d2337a1a9c191f5e89f3a2d871e070539f955da veusz-0.9.ebuild 927
+MD5 c023bedd3b53d2aea2025f002d8ca425 veusz-0.9.ebuild 926
+RMD160 c0d75da4c4a83e15414d2e45dd7ed88fcaa6fd0f veusz-0.9.ebuild 926
+SHA256 3fe5017c452b4170d3d828e3661c955eeffacddce6443c163589a0da69a7d7e4 veusz-0.9.ebuild 926
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD9NM9I1lqEGTUzyQRAmQQAJ9cWa3gSCL4tFRcQWB/qCebU9TS6gCfQ7qh
-bKnwn+fpTF/JBBPKTg8AZKU=
-=h7hP
+iD8DBQFEOZVOntT9W3vfTuoRAnCcAJ9vdUaKQoNIXi/3L6sSSEQ5o5N/cwCgneHT
+2Y8I3ZqQrmlo/Y6RlENpkcs=
+=9uHn
 -----END PGP SIGNATURE-----
