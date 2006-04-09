@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.0.ebuild,v 1.3 2006/02/03 21:55:42 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.0.ebuild,v 1.4 2006/04/09 13:42:16 spock Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="bittorrent bzip2 debug finger ftp gnutls gopher gpm guile idn ipv6 \
-	  javascript lua nls nntp perl ruby samba ssl X zlib"
+	  javascript lua nls nntp perl ruby samba ssl unicode X zlib"
 RESTRICT="test"
 
 DEPEND=">=dev-libs/expat-1.95.4
@@ -46,6 +46,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gcc4-inline.patch
 	epatch ${FILESDIR}/${P}-make.patch
 	epatch ${FILESDIR}/${P}-ruby.patch
+	if use unicode ; then
+		epatch ${FILESDIR}/elinks-0.10.1-utf_8_io-default.patch
+	fi
 }
 
 src_compile() {
