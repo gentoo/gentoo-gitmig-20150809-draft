@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.35 2006/04/07 16:49:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.36 2006/04/09 12:59:22 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -160,6 +160,7 @@ eautomake() {
 			einfo "Automake used for the package (${used_automake}) differs from"
 			einfo "the installed version (${installed_automake})."
 			eautoreconf
+			return 0
 		fi
 	fi
 
