@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6fec15311dca8cc5807cd520664ca8da ChangeLog 884
 RMD160 ce33f87b920155359ea53af96bdee6a1a611b3e0 ChangeLog 884
 SHA256 7ab16968d017cc73d147e1e07863610d4b57c02ff32814280dac77ac0c2ff24e ChangeLog 884
@@ -34,3 +37,10 @@ SHA256 16aa6297e19e4e961a4933f05621f7c842a9dda794ce068abb7f0f770f59b14e perl-dig
 MD5 189a22660ca43b9edb39d6e62723d4b2 perl-digest-base-1.14.ebuild 505
 RMD160 b331989b0d7cccb571c36b86bcbbd38673bac406 perl-digest-base-1.14.ebuild 505
 SHA256 cb2440f885790ccd214e7feba55373833dcf5622a52f1c4d184b80f636ec7dc1 perl-digest-base-1.14.ebuild 505
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEOUuv2+ySkm8kpY0RAj8nAKC9SfH/Oubj0DgttmUGpfU8GqPaHQCgskCX
+vNqgtwfa+SNsANh+Azrwj5Q=
+=Y+CE
+-----END PGP SIGNATURE-----
