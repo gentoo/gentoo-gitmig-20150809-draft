@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre17.ebuild,v 1.1 2006/04/07 23:45:09 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre17.ebuild,v 1.2 2006/04/09 18:10:46 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -610,7 +610,15 @@ pkg_postinst() {
 			echo
 	fi
 
-	if [[ -e ${ROOT}/etc/env.d/01hostname ]] ; then
-		rm -f ${ROOT}/etc/env.d/01hostname
+	# Remove old stuff that may cause problems.
+	if [[ -e "${ROOT}"/etc/env.d/01hostname ]] ; then
+		rm -f "${ROOT}"/etc/env.d/01hostname
+	fi
+	if [[ -e "${ROOT}"/etc/init.d/domainname ]] ; then
+		rm -f "${ROOT}"/etc/init.d/domainname
+		rm -f "${ROOT}"/etc/runlevels/*/domainname
+		ewarn "The domainname init script has been removed in this version."
+		ewarn "Consult ${ROOT}/etc/conf.d/net.example for details about how"
+		ewarn "to apply dns/nis information to the loopback interface."
 	fi
 }
