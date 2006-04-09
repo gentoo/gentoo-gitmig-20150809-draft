@@ -1,34 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 93f53b72b66f791515a50fd0c15d213e ChangeLog 2670
-RMD160 9007f765f07820dd2583adf7124cca7c62cb9e00 ChangeLog 2670
-SHA256 a59b34c49553acff0a240892908dd0906125433873f35b3001dcd29977b6b112 ChangeLog 2670
+MD5 299718344581f1f33aaf61422567a4ce ChangeLog 2906
+RMD160 1756962ccfeadec77d864e4f450baaee9595e377 ChangeLog 2906
+SHA256 9f8150c3edda70b86e6bd4801ca3c33038cf8ce57b1ba63fa1accf42b851582b ChangeLog 2906
 MD5 a3adbc9ccdf0e1bf64d330ba37aa813b files/digest-qtiplot-0.7.7 232
 RMD160 c4c81408eb4f94aea249dae351ca57045f3efbe8 files/digest-qtiplot-0.7.7 232
 SHA256 75c861de948534c8196d042ed309aad5bdada00d5e0dbee7c27ae6ee9d18fda0 files/digest-qtiplot-0.7.7 232
-MD5 316126cda49b56bd011e3836aa89b65e files/digest-qtiplot-0.8.1 232
-RMD160 adeaa9693b33cf4565d360372426f35c74e1d964 files/digest-qtiplot-0.8.1 232
-SHA256 cb7e0bafcc86e66c6e50bb074eaa7fd06b3cd0c4f3b774f19408aa3dcb0226ba files/digest-qtiplot-0.8.1 232
+MD5 fbb799531dbb8e4d4984a4b74a55d2e5 files/digest-qtiplot-0.8.2 244
+RMD160 bf2ded132cea1f9af0b0e8af77b5489c40d25d63 files/digest-qtiplot-0.8.2 244
+SHA256 57d853f3041638a6b971ddec9558507621ebaf57363d513f6a91e02cfdeb9342 files/digest-qtiplot-0.8.2 244
 MD5 7836bfdcab65707d6d53c3841de4d1f3 files/qtiplot-0.7.7-qmake.patch 11384
 RMD160 fa0491bd504d3445645817871fa831d0b70b4602 files/qtiplot-0.7.7-qmake.patch 11384
 SHA256 2d89427ab1304b1ec8165d6ceaedf474a48ba59d55dafbb4977b5ddaab8509ca files/qtiplot-0.7.7-qmake.patch 11384
-MD5 36a3324a431bedea10a0f018f599451b files/qtiplot-0.8.1-qmake.patch 11662
-RMD160 add23ae46f1ef8aae81140881935b22674cdaed0 files/qtiplot-0.8.1-qmake.patch 11662
-SHA256 f532f85b7e0466e06b10ee1c8f0e14d83e48c3ae4d1041d9c8c9f215b802aed6 files/qtiplot-0.8.1-qmake.patch 11662
+MD5 71d42ab3d4637e5b7193f65b68cc98f6 files/qtiplot-0.8.2-qmake.patch 11053
+RMD160 d8b9b0a1b1a135f9790343db08673f2fb6f8854a files/qtiplot-0.8.2-qmake.patch 11053
+SHA256 8f1d964ea647f320be98dba664af3ea11c3017d25ceba4a30f7feb00c286bc1a files/qtiplot-0.8.2-qmake.patch 11053
 MD5 be5373660391ac23dc1d97a654ca9e79 metadata.xml 604
 RMD160 1e0ed48d48668781cafc44ef8a14c3fb1e41eb28 metadata.xml 604
 SHA256 094795782ea49d41a8c4106510bb80d360f1bdaae3ab89c23c369def31bab56c metadata.xml 604
 MD5 9df67f55e3de06d8f5324b1e56fa9c15 qtiplot-0.7.7.ebuild 1049
 RMD160 70f59f384b5d91349960c3d5b99f26a8b85efd69 qtiplot-0.7.7.ebuild 1049
 SHA256 9e5cf7389a3ac4d1a953f6b5ddd4d6c6049fd6244d0ae51f42aed70c87d41afa qtiplot-0.7.7.ebuild 1049
-MD5 1346401e3273ae7f3bcc3a45afbe9bf1 qtiplot-0.8.1.ebuild 1056
-RMD160 cc5b0edcd5919eb7a98eaa636cdf3642f3b24382 qtiplot-0.8.1.ebuild 1056
-SHA256 58e6c06b90f939d0ff05e826a2489542d6baaf4dafba205db5f40cf88c0d63f2 qtiplot-0.8.1.ebuild 1056
+MD5 30bbd4676accc85d1fcb33bd7a671024 qtiplot-0.8.2.ebuild 1022
+RMD160 ce4b4c666550e51e6b75514ae38558490e11552c qtiplot-0.8.2.ebuild 1022
+SHA256 189e6bd8f09b75b4b530681567329cc0ce5155ba855c8f840b0d2d2f3cf312c7 qtiplot-0.8.2.ebuild 1022
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEN4EBoFw4q70f3SsRArTGAJ9T2CEiZx3Abvwadj4GF/MlOSv73wCdFqQG
-DOJdqRyA/xKedsgqMmnF1q4=
-=YNtQ
+iD8DBQFEOYZdntT9W3vfTuoRAseeAKCQApJCof1CicfBZ0cLaNiZXdRTbgCfRwIz
+vx+udStl9UWdVHCo4O0kTDQ=
+=uo/U
 -----END PGP SIGNATURE-----

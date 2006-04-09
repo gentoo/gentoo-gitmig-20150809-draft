@@ -1,6 +1,6 @@
---- qtiplot.pro.orig	2006-03-27 01:25:39.000000000 +0100
-+++ qtiplot.pro	2006-03-27 01:28:55.000000000 +0100
-@@ -1,202 +1,202 @@
+--- qtiplot.pro.orig	2006-04-09 22:58:29.000000000 +0100
++++ qtiplot.pro	2006-04-09 23:01:48.000000000 +0100
+@@ -1,198 +1,190 @@
 -TARGET  = qtiplot
 -TEMPLATE     = app
 -CONFIG      += qt warn_on release thread opengl 
@@ -12,22 +12,18 @@
 -
 -TRANSLATIONS = translations/qtiplot_de.ts \
 -			   translations/qtiplot_es.ts \
--			   translations/qtiplot_fr.ts \
--			   translations/qtiplot_ja.ts \
--			   translations/qtiplot_pt.ts 
+-			   translations/qtiplot_fr.ts 
 -
+-
+-INCLUDEPATH       += ../3rdparty/qwt/include
+-unix:INCLUDEPATH  += -I /usr/include/qwtplot3d
+-win32:INCLUDEPATH += ../3rdparty/qwtplot3d/include
 -win32:INCLUDEPATH += C:/WinGsl
 -
--INCLUDEPATH += ../3rdparty/qwt/include
--INCLUDEPATH += ../3rdparty/qwtplot3d/include
--
--win32:LIBS     += ../3rdparty/qwt/lib/qwt.lib 
--win32:LIBS     += ../3rdparty/qwtplot3d/lib/qwtplot3d.lib 
--win32:LIBS     += C:/WinGsl/Lib/WinGsl.lib 
--
--unix:LIBS += -L../3rdparty/qwt/lib -lqwt
--unix:LIBS += -L../3rdparty/qwtplot3d/lib -lqwtplot3d
--unix:LIBS += -L /usr/lib -lgsl -lgslcblas
+-LIBS              += ../3rdparty/qwt/lib/libqwt.a
+-unix:LIBS         += -L /usr/lib -lgsl -lgslcblas -lqwtplot3d 
+-win32:LIBS        += ../3rdparty/qwtplot3d/lib/qwtplot3d.lib 
+-win32:LIBS        += C:/WinGsl/Lib/WinGsl.lib 
 -
 -unix:target.path=/usr/bin
 -unix:INSTALLS += target
@@ -178,7 +174,7 @@
 -	 src/filterDialog.cpp\
 -	 src/fftDialog.cpp
 -
--#parser (muParser_v1.24)
+-#parser (muParser_v1.26)
 -HEADERS+=../3rdparty/muParser/muParser.h \
 -         ../3rdparty/muParser/muParserBase.h \ 
 -	     ../3rdparty/muParser/muParserInt.h \
@@ -202,8 +198,6 @@
 -
 -#Origin Import (liborigin)
 -HEADERS+=../3rdparty/liborigin/OPJFile.h   
--SOURCES+=../3rdparty/liborigin/OPJFile.cpp
-\ No newline at end of file
 +TARGET  = qtiplot
 +TEMPLATE     = app
 +CONFIG      += qt warn_on release thread opengl 
@@ -211,35 +205,23 @@
 +OBJECTS_DIR  = ../tmp/qtiplot
 +DESTDIR           = ./
 +DEFINES += QT_PLUGIN
-+win32:DEFINES  += QT_DLL QWT_DLL QT_THREAD_SUPPORT GSL_DLL QWTPLOT3D_DLL 
 +
 +TRANSLATIONS = translations/qtiplot_de.ts \
 +			   translations/qtiplot_es.ts \
-+			   translations/qtiplot_fr.ts \
-+			   translations/qtiplot_ja.ts \
-+			   translations/qtiplot_pt.ts 
++			   translations/qtiplot_fr.ts 
 +
-+win32:INCLUDEPATH += C:/WinGsl
++INCLUDEPATH  += /usr/include/qwt
++INCLUDEPATH  += /usr/include/qwtplot3d
 +
-+INCLUDEPATH += /usr/include/qwt
-+INCLUDEPATH += /usr/include/qwtplot3d
-+
-+win32:LIBS     += ../3rdparty/qwt/lib/qwt.lib 
-+win32:LIBS     += ../3rdparty/qwtplot3d/lib/qwtplot3d.lib 
-+win32:LIBS     += C:/WinGsl/Lib/WinGsl.lib 
-+
-+unix:LIBS += -L../3rdparty/qwt/lib -lqwt
-+unix:LIBS += -L../3rdparty/qwtplot3d/lib -lqwtplot3d
-+unix:LIBS += -L_LIBDIR_ -lgsl -lgslcblas -lqwt -lqwtplot3d
++unix:LIBS         += -L_LIBDIR_ -lgsl -lgslcblas -lqwt -lqwtplot3d
 +
 +unix:target.path=/usr/bin
 +unix:INSTALLS += target
 +
-+unix:documentation.path = /usr/share/doc/_PF_
++unix:documentation.path = /usr/share/doc/qtiplot
 +unix:documentation.files = doc/*
 +unix:INSTALLS += documentation
 + 
-+win32:RC_FILE     = src/iPlot.rc
 +HEADERS  = src/application.h \
 +     src/graph.h \
 +     src/graph3D.h \
@@ -381,7 +363,7 @@
 +	 src/filterDialog.cpp\
 +	 src/fftDialog.cpp
 +
-+#parser (muParser_v1.24)
++#parser (muParser_v1.26)
 +HEADERS+=../3rdparty/muParser/muParser.h \
 +         ../3rdparty/muParser/muParserBase.h \ 
 +	     ../3rdparty/muParser/muParserInt.h \
@@ -405,4 +387,4 @@
 +
 +#Origin Import (liborigin)
 +HEADERS+=../3rdparty/liborigin/OPJFile.h   
-+SOURCES+=../3rdparty/liborigin/OPJFile.cpp
+ SOURCES+=../3rdparty/liborigin/OPJFile.cpp
