@@ -1,0 +1,28 @@
+diff -Nru freeradius-1.1.1.orig/src/lib/Makefile freeradius-1.1.1/src/lib/Makefile
+--- freeradius-1.1.1.orig/src/lib/Makefile	2006-04-09 19:06:02.000000000 +0300
++++ freeradius-1.1.1/src/lib/Makefile	2006-04-09 19:24:09.858954750 +0300
+@@ -50,5 +50,3 @@
+ install: all
+ 	$(LIBTOOL) --mode=install $(INSTALL) -c $(TARGET).la \
+ 		$(R)$(libdir)/$(TARGET).la
+-	rm -f $(R)$(libdir)/$(TARGET)-$(RADIUSD_VERSION).la;
+-	ln -s $(TARGET).la $(R)$(libdir)/$(TARGET)-$(RADIUSD_VERSION).la
+diff -Nru freeradius-1.1.1.orig/src/modules/rlm_eap/libeap/Makefile freeradius-1.1.1/src/modules/rlm_eap/libeap/Makefile
+--- freeradius-1.1.1.orig/src/modules/rlm_eap/libeap/Makefile	2006-02-10 21:47:09.000000000 +0200
++++ freeradius-1.1.1/src/modules/rlm_eap/libeap/Makefile	2006-04-09 19:25:02.234228000 +0300
+@@ -39,5 +39,3 @@
+ 
+ install: all
+ 	$(LIBTOOL) --mode=install $(INSTALL) -c $(TARGET).la $(R)$(libdir)
+-	rm -f $(R)$(libdir)/$(TARGET)-$(RADIUSD_VERSION).la;
+-	ln -s $(TARGET).la $(R)$(libdir)/$(TARGET)-$(RADIUSD_VERSION).la
+diff -Nru freeradius-1.1.1.orig/src/modules/rules.mak freeradius-1.1.1/src/modules/rules.mak
+--- freeradius-1.1.1.orig/src/modules/rules.mak	2006-02-10 21:47:05.000000000 +0200
++++ freeradius-1.1.1/src/modules/rules.mak	2006-04-09 19:25:57.657691750 +0300
+@@ -157,6 +157,4 @@
+ 	if [ "x$(TARGET)" != "x" ]; then \
+ 	    $(LIBTOOL) --mode=install $(INSTALL) -c \
+ 		$(TARGET).la $(R)$(libdir)/$(TARGET).la || exit $?;\
+-	    rm -f $(R)$(libdir)/$(TARGET)-$(RADIUSD_VERSION).la || exit %?; \
+-	    ln -s $(TARGET).la $(R)$(libdir)/$(TARGET)-$(RADIUSD_VERSION).la || exit $?;\
+ 	fi
