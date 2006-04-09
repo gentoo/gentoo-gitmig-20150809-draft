@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>mysql</herd>
 <maintainer>
-	<email>mysql_bugs@gentoo.org</email>
+	<email>mysql-bugs@gentoo.org</email>
 	<description>MySQL herd will not have a mysql@gentoo.org email</description>
 </maintainer>
 </pkgmetadata>
