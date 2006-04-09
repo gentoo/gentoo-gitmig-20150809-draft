@@ -1,0 +1,31 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/files/htpdate.init,v 1.1 2006/04/09 05:50:24 dertobi123 Exp $
+
+depend() {
+	need net
+	use dns logger
+}
+
+checkconfig() {
+	if [ ! -n "${SERVERS}" ] ; then
+                eerror "You need to set at least one http server to use in /etc/conf.d/htpdate"
+		return 1
+        fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting htpdate"
+	start-stop-daemon --quiet --start --pidfile /var/run/htpdate.pid --exec /usr/sbin/htpdate \
+	-- -D ${HTPDATE_OPTS} ${PROXY} ${SERVERS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping htpdate"
+	start-stop-daemon --stop --quiet --pidfile /var/run/htpdate.pid
+	rm -f /var/run/htpdate.pid
+	eend $?
+}
