@@ -1,12 +1,22 @@
-DIST rt2570-1.1.0-b1.tar.gz 377676
-DIST rt2570-cvs-update.patch.gz 19820
-EBUILD rt2570-1.1.0_beta1.ebuild 1369
-MD5 58099717eb763ac2592d2117ec76db86 rt2570-1.1.0_beta1.ebuild 1369
-MISC ChangeLog 840
-MD5 35f96912be3c745eda8a9122cc1c63ac ChangeLog 840
-MISC metadata.xml 254
-MD5 a68fe0595dd4cb5bf30608f8aed94849 metadata.xml 254
-size 137 files/digest-rt2570-1.1.0_beta1 137
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0be89a99b6ab1ffcf6a93cd28e9efc48 ChangeLog 938
+RMD160 ee7f886c1a327883885241210e383e83f28b55e6 ChangeLog 938
+SHA256 da44ef64d5d8ce5c8bd763e133c868e57bd464b7c0eb9b42200876fdcfa9a881 ChangeLog 938
+MD5 a67326d80ac5e8c2d083cb7ae0bbe88c files/digest-rt2570-1.1.0_beta1 137
 RMD160 de74ce52673b00c95e2458dc3cd213299a0c2e51 files/digest-rt2570-1.1.0_beta1 137
 SHA256 d8ec4f60301e2bbd5ce72f7398fadf6af2f998a1d7876f5f44c13dd1fed9b95b files/digest-rt2570-1.1.0_beta1 137
-MD5 a67326d80ac5e8c2d083cb7ae0bbe88c files/digest-rt2570-1.1.0_beta1 137
+MD5 a68fe0595dd4cb5bf30608f8aed94849 metadata.xml 254
+RMD160 d8fa3bfbd937f0683a708e82c2c6a5002f04a199 metadata.xml 254
+SHA256 e143315518ecbccd1fedde0713a9ba88eb918153c44b11f6d44b89500f9e628f metadata.xml 254
+MD5 49cec3cab3334a325dbf2d08f7d92eb6 rt2570-1.1.0_beta1.ebuild 1415
+RMD160 b29ece0583f76ff0a8d7eca138cefc3552ab9051 rt2570-1.1.0_beta1.ebuild 1415
+SHA256 7b5c6c9a2c4c53877da30118fe7b9a958f95433f87ef2385f7460d8f0defca3a rt2570-1.1.0_beta1.ebuild 1415
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEOUxVI1lqEGTUzyQRAiDbAKCwCNvgNNkZQwS+qI13T75S50W47QCfX0/S
+aI7W0amcCLglhpmHwzr8kqk=
+=JR1F
+-----END PGP SIGNATURE-----
