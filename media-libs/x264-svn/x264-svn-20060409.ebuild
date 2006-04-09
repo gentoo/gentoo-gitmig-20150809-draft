@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060302-r1.ebuild,v 1.5 2006/04/09 16:34:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060409.ebuild,v 1.1 2006/04/09 16:34:09 lu_zero Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -26,13 +26,13 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch "${FILESDIR}/${P}-nostrip.patch"
+	epatch "${FILESDIR}/${PN}-20060302-nostrip.patch"
 }
 
 src_compile() {
 	./configure --prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
-		--enable-pic \
+		--enable-pic --enable-shared \
 		"--extra-cflags=${CFLAGS}" \
 		"--extra-ldflags=${LDFLAGS}" \
 		"--extra-asflags=${ASFLAGS}" \
@@ -46,5 +46,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS TODO COPYING
+	dodoc AUTHORS 
 }

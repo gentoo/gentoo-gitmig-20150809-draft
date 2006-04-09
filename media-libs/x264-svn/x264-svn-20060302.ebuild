@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060302.ebuild,v 1.2 2006/03/03 18:23:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060302.ebuild,v 1.3 2006/04/09 16:34:09 lu_zero Exp $
 
 inherit multilib
 
 IUSE="debug threads"
 
-DESCRIPTION="A free libary for encoding X264/AVC streams."
+DESCRIPTION="A free library for encoding X264/AVC streams."
 HOMEPAGE="http://developers.videolan.org/x264.html"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
