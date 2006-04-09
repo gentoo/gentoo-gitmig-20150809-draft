@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/evolution-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.6 2006/04/08 11:44:39 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.7 2006/04/09 15:24:49 cretin Exp $
+
+*evolution-sharp-0.10.2-r2 (09 Apr 2006)
+
+  09 Apr 2006; Stefan Jones <cretin@gentoo.org>
+  +files/evolution-sharp-0.10.2-check-evo-2.6.patch,
+  +evolution-sharp-0.10.2-r2.ebuild:
+  Fix so that beagle-0.2.4 and evo-2.6 can compile
 
   08 Apr 2006; Herbie Hopkins <herbs@gentoo.org>
   evolution-sharp-0.10.2-r1.ebuild:
