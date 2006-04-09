@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.8 2006/04/03 21:44:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.9 2006/04/09 22:53:15 marienz Exp $
+
+*twisted-web-0.5.0-r2 (09 Apr 2006)
+
+  09 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  +files/twisted-web-0.5.0-tests-2.2-compat-14780.patch,
+  +files/twisted-web-0.5.0-tests-2.2-compat-14782.patch,
+  +files/twisted-web-0.5.0-tests-2.2-compat-14786.patch,
+  +twisted-web-0.5.0-r2.ebuild:
+  Revision bump with patches to pass the tests with twisted-2.2.0. Test
+  changes only. See bug #128688. Thanks to nixnut for noticing.
 
   03 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   twisted-web-0.5.0-r1.ebuild:
