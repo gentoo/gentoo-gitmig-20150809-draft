@@ -1,46 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f7e937fae8c779bfd0fc3383bb65c6c5 ChangeLog 1065
-RMD160 ab33b7666a32b91aa40bba101215cb07ee89c387 ChangeLog 1065
-SHA256 e06a9f0dce765b60c09d07fa8990bc22f7c87e3b34565cdecdc04d33485bc388 ChangeLog 1065
-MD5 32bcd516d715b4421a047f816da2d33f files/digest-kerry-0.09 235
-RMD160 fcc8535c9f81a86a48107a24e12623dbf416714d files/digest-kerry-0.09 235
-SHA256 a1a03fc232a8376efedfd5466a04e7acd0a59ac7df10384a094eccdd98aa2565 files/digest-kerry-0.09 235
-MD5 e957fb9753ff8e4cb15d6a10a4d44d40 files/digest-kerry-0.1 232
-RMD160 b4c3d46edadf4079688c0d9f1196f8e58361e3b8 files/digest-kerry-0.1 232
-SHA256 677b0dc673b779dd975d196eea0c6d985f222b3ed65bd13b5ce35a6c93378b70 files/digest-kerry-0.1 232
-MD5 e957fb9753ff8e4cb15d6a10a4d44d40 files/digest-kerry-0.1-r1 232
-RMD160 b4c3d46edadf4079688c0d9f1196f8e58361e3b8 files/digest-kerry-0.1-r1 232
-SHA256 677b0dc673b779dd975d196eea0c6d985f222b3ed65bd13b5ce35a6c93378b70 files/digest-kerry-0.1-r1 232
+MD5 8b9e4299a9959937ec4bacf93bbd54bc ChangeLog 1456
+RMD160 a4c3f872c3e84b4efae5a95ca537129856225b1e ChangeLog 1456
+SHA256 4e9c065d9b1c0d5ff512958dcbaf371065a5b4b4974c41a8b93a1fd840e6a7e3 ChangeLog 1456
+MD5 e957fb9753ff8e4cb15d6a10a4d44d40 files/digest-kerry-0.1-r2 232
+RMD160 b4c3d46edadf4079688c0d9f1196f8e58361e3b8 files/digest-kerry-0.1-r2 232
+SHA256 677b0dc673b779dd975d196eea0c6d985f222b3ed65bd13b5ce35a6c93378b70 files/digest-kerry-0.1-r2 232
 MD5 ba908eb02cbf1346178f3a0b8c1f2235 files/kerry-0.09-del-shortcut.patch 802
 RMD160 7af3f2b00893a849ac8df6cee1a9cefc8dd58c5d files/kerry-0.09-del-shortcut.patch 802
 SHA256 23b5013c41ea0e3fe29c53c5e77348aedafec3f37307bba38e055ef09de9df1d files/kerry-0.09-del-shortcut.patch 802
-MD5 97c93802f42dc7b4568c0addf99f6f79 files/kerry-0.09-gentoo.patch 3796
-RMD160 a576335353ef8afe2e3d6d57c5320bec37c664a9 files/kerry-0.09-gentoo.patch 3796
-SHA256 323cee5374c7779e3ffbed381878014162ebd7db6883cb30e10f25878d721f29 files/kerry-0.09-gentoo.patch 3796
-MD5 2218fa5ad4bd26821c1cf21889ff18d4 files/kerry-0.09-xdg-desktop.patch 353
-RMD160 33c1ba86649c77fee895e022a5e95246b9504776 files/kerry-0.09-xdg-desktop.patch 353
-SHA256 fb5fa6ed55eb3f4bb3a36655e966071cdccf1a878cd966a1ebb900e63df9b84f files/kerry-0.09-xdg-desktop.patch 353
-MD5 84206944725b85d14b4dc2523df1db1b files/kerry-0.1-ebuilds.patch 3047
-RMD160 bda4cb13b82e064ffc1adbd6c814edc03e73c7a9 files/kerry-0.1-ebuilds.patch 3047
-SHA256 99aac0435fbf401a246e406e26c13a36c475fa6e1faca01685b83a5a2c427aea files/kerry-0.1-ebuilds.patch 3047
-MD5 70b051498210f67e20ebbd60b016767c kerry-0.09.ebuild 693
-RMD160 c252fe97663e15e97f09afd30a123e9ea1cffdfe kerry-0.09.ebuild 693
-SHA256 833b81342d90ae85172f731fac6361d2613bd6ae73cf632f60626f78789d5188 kerry-0.09.ebuild 693
-MD5 f3eb5ba689cf0ae358a16444070c951f kerry-0.1-r1.ebuild 667
-RMD160 3f0a991e3a9d7591c666aac26b28d8b2bf7a1ec1 kerry-0.1-r1.ebuild 667
-SHA256 b18dbea09772f22486a5e2b81471dd376fb37dceddd89c75dc7c5275aeba5a74 kerry-0.1-r1.ebuild 667
-MD5 6f5956a15ffe1b825de424771fafcb47 kerry-0.1.ebuild 632
-RMD160 a78f718bea52e1db4a5f42d431337ef8b6d8dbd2 kerry-0.1.ebuild 632
-SHA256 70cdc6b7cfce0dda195f1a01c85c6a0c66171791e9487550105f8afc751ba34f kerry-0.1.ebuild 632
+MD5 4324bfffc9365fd8a74af9b2cb084866 files/kerry-0.1-ebuilds-2.patch 8098
+RMD160 9917f250793f9c512eae9c9f283c0c1eb048901d files/kerry-0.1-ebuilds-2.patch 8098
+SHA256 8817d9faa923efb3066cff611afb5014049df5a908e67c30280445c55bf35d73 files/kerry-0.1-ebuilds-2.patch 8098
+MD5 da13f606c2b9cc756357496aa88fe27d kerry-0.1-r2.ebuild 669
+RMD160 60f7be33d8aa5d059275c81f0cf3ecb13f0f1df6 kerry-0.1-r2.ebuild 669
+SHA256 3b3973c53915e308539f83a8bc4f4469cd48e9b7b645669e84132907ae4e4266 kerry-0.1-r2.ebuild 669
 MD5 9b3a540894ad552b2bdb7538bdd95dee metadata.xml 247
 RMD160 cfbcab66aac2f2a6947df91e47d55b96d483f747 metadata.xml 247
 SHA256 3dee667978321b1af7559d4e85f8492a58f5737c5e11ba339c4e6d460313adfe metadata.xml 247
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEN+kvAiZjviIA2XgRAmFoAJ9nMJ5nFlTTTetccMld+sOx2+po5wCfc/uZ
-b8hqB+H93zzLqnswseDMFO0=
-=MISa
+iD8DBQFEOR2OAiZjviIA2XgRAtAuAJ9EyOYEjRJ12GQ89iCsSEAmLrVnFwCgmIV/
+s+/eg88epDKqcMdDHE4s8aI=
+=LHHi
 -----END PGP SIGNATURE-----

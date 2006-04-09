@@ -1,0 +1,205 @@
+diff -ru kerry-0.1/src/beaglesearch.cpp kerry-0.1-double/src/beaglesearch.cpp
+--- kerry-0.1/src/beaglesearch.cpp	2006-04-03 10:50:47.000000000 -0500
++++ kerry-0.1-double/src/beaglesearch.cpp	2006-04-07 17:01:50.000000000 -0500
+@@ -83,6 +83,14 @@
+        { BeagleSearch::Website, "dc:title", 0 },
+        { BeagleSearch::Website, "Title", 0 },
+        { BeagleSearch::Note, "dc:title", 0 },
++// Gentoo ebuilds
++       { BeagleSearch::Ebuilds, "dc:title", I18N_NOOP("Title: %1")"<br>" },
++       { BeagleSearch::Ebuilds, "dc:description", 0 },
++       { BeagleSearch::Ebuilds, "fixme:version", I18N_NOOP("Version: %1")"<br>" },
++       { BeagleSearch::Ebuilds, "dc:source", 0 },
++       { BeagleSearch::Ebuilds, "fixme:download_size", 0 },
++       { BeagleSearch::Ebuilds, "fixme:install_time", 0 },
++       { BeagleSearch::Ebuilds, "fixme:contents_byte_count", 0 },
+        { BeagleSearch::Unknown, "dc:author", I18N_NOOP("Author: %1")"<br>" },
+        { BeagleSearch::Unknown, "dc:title", I18N_NOOP("Title: %1")"<br>" },
+ // Calendar
+@@ -148,6 +156,7 @@
+        { BeagleSearch::Website, 0, "Google", 0 },
+        { BeagleSearch::Website, 0, "WebHistory", 0 },
+        { BeagleSearch::Website, 0, 0, "beagle/x-konq-cache" },
++       { BeagleSearch::Ebuilds, "*.ebuild", 0, 0 },
+        { BeagleSearch::Unknown, "file://", "File", 0 },  // mimetype wildcard must be last
+        { 0, 0, 0, 0}
+ };
+Only in kerry-0.1-double/src: beaglesearch.cpp.orig
+diff -ru kerry-0.1/src/beaglesearch.h kerry-0.1-double/src/beaglesearch.h
+--- kerry-0.1/src/beaglesearch.h	2006-02-14 05:07:44.000000000 -0600
++++ kerry-0.1-double/src/beaglesearch.h	2006-04-07 16:59:14.000000000 -0500
+@@ -51,7 +51,8 @@
+ 	Conversations,  // in combo box
+ 	Website,        // in combo box
+ 	Feed,
+-	Note
++	Note,
++	Ebuilds
+ };
+ 
+ typedef QValueList<QString> PropertyList;
+diff -ru kerry-0.1/src/searchdlg.cpp kerry-0.1-double/src/searchdlg.cpp
+--- kerry-0.1/src/searchdlg.cpp	2006-03-13 04:40:58.000000000 -0600
++++ kerry-0.1-double/src/searchdlg.cpp	2006-04-08 19:52:37.000000000 -0500
+@@ -548,6 +548,82 @@
+         item->insertHeaderWidget(0,headerFileLabel);
+         connect(headerFileLabel, SIGNAL(leftClickedURL()), SLOT(slotOpen()));
+       }
++      else if (result->tilegroup == BeagleSearch::Ebuilds) {
++        item->icon->setPixmap(KGlobal::iconLoader()->loadIcon("kuroo", KIcon::NoGroup, KIcon::SizeLarge));
++    
++        KerryLabel *headerFileLabel = new KerryLabel(item);
++        headerFileLabel->setText(url.fileName());
++        headerFileLabel->setTipText(url.prettyURL());
++        headerFileLabel->setUseTips();
++        headerFileLabel->setURL(*(result->uri));
++        item->insertHeaderWidget(0,headerFileLabel);
++        connect(headerFileLabel, SIGNAL(leftClickedURL()), SLOT(slotOpen()));
++    
++        QLabel *headerLabel = new QLabel(item);
++        headerLabel->setText(i18n(" from "));
++        headerLabel->setAlignment(headerLabel->alignment() | Qt::SingleLine);
++        item->insertHeaderWidget(1,headerLabel);
++    
++        QStringList _properties(result->properties);
++        QString homepage = takeProperty("dc:source",_properties);
++	if (!homepage.isEmpty())
++	{
++		KerryLabel *headerFileLabel = new KerryLabel(item);
++		headerFileLabel->setText(homepage);
++		headerFileLabel->setAlignment(headerFileLabel->alignment() | Qt::SingleLine);
++		headerFileLabel->setURL(homepage);
++		item->insertHeaderWidget(2,headerFileLabel);
++		connect(headerFileLabel, SIGNAL(leftClickedURL(const QString&)), SLOT(slotOpenURL(const QString&)));
++	}
++
++        item->setDescriptionText(takeProperty("dc:description", _properties));
++    
++        QString properties;
++	QString install_time_str = takeProperty("fixme:install_time", _properties);
++	if (!install_time_str.isEmpty())
++	{
++            properties=properties+i18n("Installed On: %1").arg(KGlobal::locale()->formatDateTime(datetimeFromString(install_time_str),false))+"<br>";
++	}
++
++	QString install_size_str = takeProperty("fixme:contents_byte_count", _properties);
++	if (!install_size_str.isEmpty())
++	{
++            properties=properties+i18n("Installed Size: %1").arg(formatBytes(install_size_str))+"<br>";
++	}
++
++	QString download_size_str = takeProperty("fixme:download_size", _properties);
++	if (!download_size_str.isEmpty())
++	{
++            properties=properties+i18n("Download Size: %1").arg(formatBytes(download_size_str))+"<br>";
++	}
++		
++        BeagleSearch::PropertyList::iterator it;
++        for ( it = _properties.begin(); it != _properties.end(); ++it )
++	{
++                properties=properties+(*it);
++	}
++
++        if (result->snippet) {
++          if (!properties.isEmpty())
++             properties=properties+"<br>";
++          properties=properties+*(result->snippet);
++        }
++   
++        if (!properties.isEmpty())
++            item->setPropertiesText("<qt>"+properties+"</qt>");
++    
++
++        item->insertHitSpacing(2,10);
++        buttonGo = new KURLLabel(item);
++        buttonGo->setPixmap(SmallIcon("kfm"));
++        item->insertHitWidget(3,buttonGo);
++        connect(buttonGo, SIGNAL(leftClickedURL()), SLOT(slotOpenDir()));
++    
++        buttonGo = new KURLLabel(item);
++        buttonGo->setText(i18n("Reveal in File Manager"));
++        item->insertHitWidget(4,buttonGo);
++        connect(buttonGo, SIGNAL(leftClickedURL()), SLOT(slotOpenDir()));
++      }
+       else {
+         KFileItem *fileitem=new KFileItem(*(result->uri),*(result->mime_type),KFileItem::Unknown);
+         item->icon->setPixmap(fileitem->pixmap(KIcon::SizeHuge, KIcon::DefaultState));
+@@ -669,6 +745,9 @@
+           case Website:
+ 		show = ( result->tilegroup == BeagleSearch::Website);
+ 		break;
++          case Ebuilds:
++		show = ( result->tilegroup == BeagleSearch::Ebuilds);
++		break;
+           default:
+ 		break;
+         }
+@@ -780,6 +859,24 @@
+     }
+ }
+ 
++void SearchDlg::slotOpenURL(const QString& url)
++{
++    KURL urlObj(url);
++    //KRun run(urlObj);
++    //run.setAutoDelete(false);
++    KRun::runURL(url, "text/html", false, true);
++}
++
++QString SearchDlg::formatBytes(QString& bytesStr) const
++{
++        static double kilobyte = 1024.0;
++        static double megabyte = 1024.0*1024.0;
++	double bytes = KGlobal::locale()->readNumber(bytesStr);
++        if (bytes < megabyte)
++                return KGlobal::locale()->formatNumber(bytes/kilobyte, 2) + "K";
++        return KGlobal::locale()->formatNumber(bytes/megabyte, 2) + "M";
++}
++
+ void SearchDlg::slotStartBeagle()
+ {
+     if (cb_beagleStart->isChecked()) {
+diff -ru kerry-0.1/src/searchdlg.h kerry-0.1-double/src/searchdlg.h
+--- kerry-0.1/src/searchdlg.h	2006-01-10 10:13:29.000000000 -0600
++++ kerry-0.1-double/src/searchdlg.h	2006-04-08 19:50:37.000000000 -0500
+@@ -42,7 +42,8 @@
+ 		Conversations,
+ 		Images,
+ 		Media,
+-                Website
++                Website,
++		Ebuilds
+ 	};
+ 
+ 	enum SortType {
+@@ -85,6 +86,7 @@
+     void slotOpenDir();
+     void slotMailTo(const QString&);
+     void slotOpenEvolution(const QString&);
++    void slotOpenURL(const QString&);
+     void slotContextMenu( int row, int col, const QPoint & pos );
+     void slotPreview(const KFileItem *, const QPixmap &);
+     void slotPreviewResult();
+@@ -99,6 +101,7 @@
+     void fillTableHits();
+     void updateStatus();
+     void showQuickTips();
++    QString formatBytes(QString& bytesStr) const;
+     QCheckBox* cb_beagleStart;
+ 
+     void displayResults(BeagleSearch::BeagleResultList &items);
+diff -ru kerry-0.1/src/searchdlg_layout.ui kerry-0.1-double/src/searchdlg_layout.ui
+--- kerry-0.1/src/searchdlg_layout.ui	2006-03-24 02:58:25.000000000 -0600
++++ kerry-0.1-double/src/searchdlg_layout.ui	2006-04-07 16:59:14.000000000 -0500
+@@ -250,6 +250,11 @@
+                             <string>Web Pages</string>
+                         </property>
+ 		    </item>
++                    <item>
++                        <property name="text">
++                            <string>Ebuilds</string>
++                        </property>
++		    </item>
+                     <property name="name">
+                         <cstring>comboShow</cstring>
+                     </property>

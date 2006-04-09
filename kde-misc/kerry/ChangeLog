@@ -1,6 +1,15 @@
 # ChangeLog for kde-misc/kerry
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/ChangeLog,v 1.4 2006/04/08 16:47:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/ChangeLog,v 1.5 2006/04/09 14:43:12 flameeyes Exp $
+
+*kerry-0.1-r2 (09 Apr 2006)
+
+  09 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kerry-0.1-ebuilds.patch, +files/kerry-0.1-ebuilds-2.patch,
+  -files/kerry-0.09-gentoo.patch, -files/kerry-0.09-xdg-desktop.patch,
+  -kerry-0.1.ebuild, -kerry-0.1-r1.ebuild, +kerry-0.1-r2.ebuild,
+  -kerry-0.09.ebuild:
+  Add newer patch to improve ebuilds filter, thanks to Pat Double in bug #129298.
 
 *kerry-0.1-r1 (08 Apr 2006)
 

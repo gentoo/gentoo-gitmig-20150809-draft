@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.09.ebuild,v 1.3 2006/04/06 19:50:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.1-r2.ebuild,v 1.1 2006/04/09 14:43:12 flameeyes Exp $
 
 inherit kde
 
@@ -21,7 +21,6 @@ S=${WORKDIR}/${PN}
 
 need-kde 3.4
 
-PATCHES="${FILESDIR}/${P}-del-shortcut.patch
-	${FILESDIR}/${P}-gentoo.patch
-	${FILESDIR}/${P}-xdg-desktop.patch"
+PATCHES="${FILESDIR}/${P}-ebuilds-2.patch
+	${FILESDIR}/${PN}-0.09-del-shortcut.patch"
 
