@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r4.ebuild,v 1.13 2006/03/14 03:33:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r4.ebuild,v 1.14 2006/04/09 16:56:28 steev Exp $
 
 inherit eutils mono python multilib debug qt3 autotools toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/${P}.tar.gz"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="doc gcj gtk mono python qt selinux X xml2"
+IUSE="doc gcj gtk mono python qt selinux X xml"
 
 RDEPEND=">=dev-libs/glib-2.6
 	X? ( || ( ( x11-libs/libXt x11-libs/libX11 ) virtual/x11 ) )
@@ -20,8 +20,8 @@ RDEPEND=">=dev-libs/glib-2.6
 	python? ( >=dev-lang/python-2.4 >=dev-python/pyrex-0.9.3-r2 )
 	qt? ( $(qt_min_version 3.3) )
 	selinux? ( sys-libs/libselinux )
-	xml2? ( >=dev-libs/libxml2-2.6.21 )
-	!xml2? ( dev-libs/expat )"
+	xml? ( >=dev-libs/libxml2-2.6.21 )
+	!xml? ( dev-libs/expat )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -64,7 +64,7 @@ src_compile() {
 	local myconf=""
 
 	# Choose which xml library to use
-	if use xml2; then
+	if use xml; then
 		myconf="${myconf} --with-xml=libxml"
 	else
 		myconf="${myconf} --with-xml=expat"

@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23.4-r1.ebuild,v 1.15 2006/02/16 21:15:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23.4-r1.ebuild,v 1.16 2006/04/09 16:56:28 steev Exp $
 
 # because of the experimental nature debug by default
 inherit debug eutils mono python multilib qt3
 
 # FIXME : fix docs
-#IUSE="X gtk qt python mono doc xml2"
-IUSE="X gtk qt python mono xml2"
+#IUSE="X gtk qt python mono doc xml"
+IUSE="X gtk qt python mono xml"
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to eachother"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -18,8 +18,8 @@ LICENSE="|| ( GPL-2 AFL-2.1 )"
 KEYWORDS="amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 
 RDEPEND=">=dev-libs/glib-2
-	xml2? ( >=dev-libs/libxml2-2.6 )
-	!xml2? ( dev-libs/expat )
+	xml? ( >=dev-libs/libxml2-2.6 )
+	!xml? ( dev-libs/expat )
 	X? (
 		|| (
 			(
@@ -70,7 +70,7 @@ src_compile() {
 
 	local myconf
 
-	if use xml2; then
+	if use xml; then
 		myconf="--with-xml=libxml";
 	else
 		myconf="--with-xml=expat";

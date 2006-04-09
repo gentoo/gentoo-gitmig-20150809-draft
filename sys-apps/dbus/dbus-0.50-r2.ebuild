@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50-r2.ebuild,v 1.6 2006/01/19 20:40:35 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50-r2.ebuild,v 1.7 2006/04/09 16:56:28 steev Exp $
 
 inherit eutils mono python multilib autotools debug qt3
 
-IUSE="X gtk qt python mono doc xml2"
+IUSE="X gtk qt python mono doc xml"
 # gcj - this still doesnt work properly
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to eachother"
@@ -16,8 +16,8 @@ LICENSE="|| ( GPL-2 AFL-2.1 )"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND=">=dev-libs/glib-2.6
-	xml2? ( >=dev-libs/libxml2-2.6.21 )
-	!xml2? ( dev-libs/expat )
+	xml? ( >=dev-libs/libxml2-2.6.21 )
+	!xml? ( dev-libs/expat )
 	X? ( || (
 		(
 		x11-libs/libXt
@@ -64,7 +64,7 @@ src_compile() {
 	local myconf=""
 
 	# Choose which xml library to use
-	if use xml2; then
+	if use xml; then
 		myconf="${myconf} --with-xml=libxml"
 	else
 		myconf="${myconf} --with-xml=expat"
