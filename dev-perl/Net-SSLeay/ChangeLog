@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SSLeay
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.34 2005/10/03 14:31:56 matsuu Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.35 2006/04/09 17:27:03 flameeyes Exp $
+
+  09 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> Net-SSLeay-1.25.ebuild:
+  Add ~x86-fbsd keyword.
 
   03 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> Net-SSLeay-1.25.ebuild:
   Stable on sh.
