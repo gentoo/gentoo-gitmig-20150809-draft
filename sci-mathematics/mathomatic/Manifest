@@ -1,18 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4dfa60b6f19079a9638224c4465f8adb ChangeLog 2918
+MD5 1b3fa36cebf7df01001ba59190d28f9a ChangeLog 3150
+RMD160 00a1d00e366472b57828587f27067128576e0c1e ChangeLog 3150
+SHA256 e7a3b23779fbca4199899d5f9e50d124760a6282139b3f7ee1981ab86d66ac95 ChangeLog 3150
 MD5 32a964754f69321292b8d2b29b2d89c0 files/digest-mathomatic-12.4.5 66
-MD5 7bbafc3bbfff74faef15beb3f2f9f022 files/digest-mathomatic-12.5.3 70
+RMD160 629e2421697b0cb55a3409be6ea9195feb51cce2 files/digest-mathomatic-12.4.5 66
+SHA256 092bc2861ce59f7163ab555c7fb52c41ae2008483b9a5de06b43546c75da741f files/digest-mathomatic-12.4.5 66
+MD5 ef792e91757cfade6776c06e62327d3e files/digest-mathomatic-12.5.13 259
+RMD160 4c08e54c6f2fcd4763fdd0c1430b6b91531b11c4 files/digest-mathomatic-12.5.13 259
+SHA256 daf7152d9a1de67b0f95d0cbd7210d5b87ec60bb27081a8642f7c87c0ee7645f files/digest-mathomatic-12.5.13 259
 MD5 fd8b32bd96a2df85515b851a0c6bbfd7 files/digest-mathomatic-12.5.6 70
+RMD160 da20fde09b973142211906d88541452f6c80567a files/digest-mathomatic-12.5.6 70
+SHA256 b517b1199e5732368e9ba38365f93a8e12eedf398f87e4c581afc929b400bc49 files/digest-mathomatic-12.5.6 70
 MD5 f38bccf593e0f1fb97f5b13047bdd99e mathomatic-12.4.5.ebuild 942
-MD5 19ff8a3c5c6784fa27d9601ecf71ddc0 mathomatic-12.5.3.ebuild 964
-MD5 c368ed9f048cbb379529377cd6653f5e mathomatic-12.5.6.ebuild 961
+RMD160 2eb42f9684dce0c1e34c6745011be113b85ad410 mathomatic-12.4.5.ebuild 942
+SHA256 eb71e110de06cbb77f71c25bf3e23365b278dcffa72c0a078671175fcab3e4c6 mathomatic-12.4.5.ebuild 942
+MD5 d2e52e54ae6040743056634ae2038a50 mathomatic-12.5.13.ebuild 962
+RMD160 f8f0867df863449a4af8243977bc7158c70c9f84 mathomatic-12.5.13.ebuild 962
+SHA256 9bfaef641594fe68f036d10711fd0d6e940c65b77b2561e907f981773f4796cd mathomatic-12.5.13.ebuild 962
+MD5 e7d79701bd8667e7068d8dbe733ba54c mathomatic-12.5.6.ebuild 960
+RMD160 ef2a2cd6564cdc2ec79cbcc17499df601e965fd6 mathomatic-12.5.6.ebuild 960
+SHA256 c53f63e1da1a9af9692f93c710df98fe028c558b3b2316acea550542cf6d315f mathomatic-12.5.6.ebuild 960
 MD5 ee7955cc2715e3bac994bb045163c8b1 metadata.xml 479
+RMD160 f9ed224cf43223da66ddac37820c9a0970c5df24 metadata.xml 479
+SHA256 1a85cdcb0b9882e41320adf2c2138dc5793e0891f1bb44fa25a6b84be337e56f metadata.xml 479
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD0SRnntT9W3vfTuoRAgHsAJ9x6A8oE0BFeQ0yQzljw+0Moi7pEwCeI9+K
-+NOZWWsFiGPLBJclU90vGGw=
-=Zm7G
+iD8DBQFEOZ2mntT9W3vfTuoRAoysAJ4/BJi9xLMsyVmaOYBttrR0bi8lvQCgsj65
+yPALwkiJmUr6BcqSBCHaq54=
+=ITYx
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-12.5.3.ebuild,v 1.2 2006/01/20 16:20:37 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-12.5.13.ebuild,v 1.1 2006/04/09 23:49:47 cryos Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.panix.com/~gesslein/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc icc"
 
 DEPEND="sys-libs/readline
@@ -29,7 +29,7 @@ src_install() {
 	# It was easier just to install the files manually
 	dobin mathomatic
 	dodoc changes.txt README.txt
-	doman doc/mathomatic.1
+	doman mathomatic.1
 
 	if use doc; then
 		dohtml doc/*
