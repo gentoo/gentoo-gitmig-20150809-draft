@@ -1,0 +1,162 @@
+diff -upr vnstat-1.4.orig/Makefile vnstat-1.4/Makefile
+--- vnstat-1.4.orig/Makefile	2006-04-09 17:03:42.000000000 +0200
++++ vnstat-1.4/Makefile	2006-04-09 17:19:03.000000000 +0200
+@@ -9,12 +9,6 @@ vnstat:
+ 64bit:
+ 	+make -C src 64bit
+ 
+-single:
+-	+make -C src single
+-
+-64bitsingle:
+-	+make -C src 64bitsingle
+-
+ clean:
+ 	make -C src clean
+ 
+diff -upr vnstat-1.4.orig/man/vnstat.1 vnstat-1.4/man/vnstat.1
+--- vnstat-1.4.orig/man/vnstat.1	2006-04-09 17:03:42.000000000 +0200
++++ vnstat-1.4/man/vnstat.1	2006-04-09 17:53:23.000000000 +0200
+@@ -16,6 +16,9 @@ vnStat \- a console-based network traffi
+ ] [
+ .B \-\-days
+ ] [
++.B \-\-dbdir
++.I [dir]
++] [
+ .B \-\-debug
+ ] [
+ .B \-\-disable
+@@ -123,6 +126,17 @@ Show traffic for 7 days, current and pre
+ .BI "--cleartop"
+ Remove all top10 entries.
+ .TP
++.BI "--dbdir " [dir]
++If the parameter
++.I dir
++is specified, set the database directory to it. If
++.I dir
++is not specified, set the database directory to $HOME/.vnstat.
++If this parameter is not specified at all, the database directory
++is the global one.
++.I dir
++must not begin with a dash (-).
++.TP
+ .BI "--dumpdb"
+ Instead of showing the database with a formated output, this output will
+ dump the whole database in a format that should be easy to parse with most
+diff -upr vnstat-1.4.orig/src/Makefile vnstat-1.4/src/Makefile
+--- vnstat-1.4.orig/src/Makefile	2006-04-09 17:03:42.000000000 +0200
++++ vnstat-1.4/src/Makefile	2006-04-09 17:19:15.000000000 +0200
+@@ -11,12 +11,6 @@ vnstat: $(OBJS) vnstat.c vnstat.h
+ 64bit: $(OBJS64) vnstat.c vnstat.h
+ 	$(CC) $(CFLAGS) -o vnstat vnstat.c $(OBJS64) -DBLIMIT
+ 
+-single: $(OBJS) vnstat.c vnstat.h
+-	$(CC) $(CFLAGS) -o vnstat vnstat.c $(OBJS) -DSINGLE
+-
+-64bitsingle: $(OBJS64) vnstat.c vnstat.h
+-	$(CC) $(CFLAGS) -o vnstat vnstat.c $(OBJS64) -DSINGLE -DBLIMIT
+-
+ proc.o: proc.c proc.h vnstat.h db.h
+ 	$(CC) $(CFLAGS) -c proc.c
+ 
+diff -upr vnstat-1.4.orig/src/vnstat.c vnstat-1.4/src/vnstat.c
+--- vnstat-1.4.orig/src/vnstat.c	2006-04-09 17:03:42.000000000 +0200
++++ vnstat-1.4/src/vnstat.c	2006-04-09 17:55:42.000000000 +0200
+@@ -44,38 +44,7 @@ int main(int argc, char *argv[]) {
+ 	current=time(NULL);
+ 
+ 	/* init dirname */
+-#ifdef SINGLE
+-	strncpy(dirname, getenv("HOME"), 500);
+-	strcat(dirname,"/.vnstat");
+-#else
+ 	strncpy(dirname, DATABASEDIR, 500);
+-#endif
+-
+-	/* check if the database dir exists and if it contains files */
+-	if ((dir=opendir(dirname))!=NULL) {
+-		if (debug)
+-			printf("Dir OK\n");
+-		while ((di=readdir(dir))) {
+-			if (di->d_name[0]!='.') {
+-				strncpy(definterface, di->d_name, 32);
+-				files++;
+-			}
+-		}
+-		if (debug)
+-			printf("%d files found\n", files);
+-		if (files) {
+-			query=1;
+-			if (files>1)
+-				strncpy(definterface, DEFIFACE, 32);
+-		}
+-		closedir(dir);
+-	} else {
+-		printf("Error:\nUnable to open database directory \"%s\".\n", dirname);
+-		printf("Make sure it exists and is read enabled for this user.\n");
+-		printf("Exiting...\n");
+-		exit(0);
+-	}
+-
+ 
+ 	/* parse parameters, maybe not the best way but... */
+ 	for (currentarg=1; currentarg<argc; currentarg++) {
+@@ -110,6 +79,8 @@ int main(int argc, char *argv[]) {
+ 			printf("\t -D, --debug\t\t show some additional debug information\n");
+ 			printf("\t -v, --version\t\t show version\n");
+ 			printf("\t -tr, --traffic\t\t calculate traffic\n");
++			printf("\t --dbdir [DIR]\t\t change database directory to DIR\n");
++			printf("\t              \t\t DIR defaults to $HOME/.vnstat\n");
+ 			printf("\t --testkernel\t\t check if the kernel is broken\n");
+ 			printf("\t --longhelp\t\t display this help\n\n");
+ 
+@@ -211,6 +182,14 @@ int main(int argc, char *argv[]) {
+ 		} else if (strcmp(argv[currentarg],"--testkernel")==0) {
+ 			kerneltest();
+ 			exit(0);
++		} else if (strncmp(argv[currentarg], "--dbdir", 7)==0) {
++			if ((currentarg + 1) < argc && argv[currentarg + 1][0] != '-') {
++				strncpy(dirname, argv[currentarg + 1], 510);
++				currentarg++;
++			} else {
++				strncpy(dirname, getenv("HOME"), 500);
++				strcat(dirname, "/.vnstat");
++			}
+ 		} else if ((strcmp(argv[currentarg],"-v")==0) || (strcmp(argv[currentarg],"--version"))==0) {
+ 			printf("vnStat %s by Teemu Toivola <tst at iki dot fi>\n", VNSTATVERSION);
+ #ifndef SINGLE
+@@ -238,6 +217,31 @@ int main(int argc, char *argv[]) {
+ 		
+ 	}
+ 
++	/* check if the database dir exists and if it contains files */
++	if ((dir=opendir(dirname))!=NULL) {
++		if (debug)
++			printf("Dir OK\n");
++		while ((di=readdir(dir))) {
++			if (di->d_name[0]!='.') {
++				strncpy(definterface, di->d_name, 32);
++				files++;
++			}
++		}
++		if (debug)
++			printf("%d files found\n", files);
++		if (files) {
++			query=1;
++			if (files>1)
++				strncpy(definterface, DEFIFACE, 32);
++		}
++		closedir(dir);
++	} else {
++		printf("Error:\nUnable to open database directory \"%s\".\n", dirname);
++		printf("Make sure it exists and is read enabled for this user.\n");
++		printf("Exiting...\n");
++		exit(0);
++	}
++
+ 	/* counter reset */
+ 	if (reset) {
+ 		if (!spacecheck(dirname) && !force) {
+Only in vnstat-1.4/src: .vnstat.c.swp
