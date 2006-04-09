@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/distcc-config
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc-config/ChangeLog,v 1.2 2005/09/16 11:18:57 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc-config/ChangeLog,v 1.3 2006/04/09 15:51:06 pyrania Exp $
+
+*distcc-config-1.3-r1 (09 Apr 2006)
+
+  09 Apr 2006; <pyrania@gentoo.org> +distcc-config-1.3-r1.ebuild:
+  Fixed bug #104085.
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org> distcc-config-1.3.ebuild:
   Mark 1.3 stable on alpha
