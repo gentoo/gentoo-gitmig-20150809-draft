@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2/xml2-0.3.ebuild,v 1.2 2005/01/01 16:43:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2/xml2-0.3-r1.ebuild,v 1.1 2006/04/09 18:42:22 leonardop Exp $
 
 inherit eutils
 
@@ -16,18 +16,18 @@ SLOT="0"
 
 KEYWORDS="~x86"
 
-IUSE="xml2"
+IUSE=""
 
-DEPEND="xml2? ( dev-libs/libxml2 )
-	!xml2? ( dev-libs/libxml )"
+DEPEND="dev-libs/libxml2"
+
 
 src_unpack() {
-	unpack ${A}; cd ${S}
+	unpack "${A}"
+	cd "${S}"
 
-	if use xml2 ; then
-		epatch ${FILESDIR}/${P}-libxml2.patch
-	fi
-	sed -i -e "s:CFLAGS=-g -Wall:CFLAGS=${CFLAGS}:" makefile || die
+	epatch ${FILESDIR}/${P}-libxml2.patch
+	sed -i -e "s:CFLAGS=-g -Wall:CFLAGS=${CFLAGS}:" makefile || \
+		die "Sed expression failed"
 }
 
 src_compile() {
