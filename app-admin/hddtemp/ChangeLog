@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.32 2006/02/19 15:46:59 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.33 2006/04/09 14:43:41 spock Exp $
+
+  09 Apr 2006; Michał Januszewski <spock@gentoo.org>
+  +files/hddtemp-0.3_beta14-sizeofdsk.patch, hddtemp-0.3_beta14-r1.ebuild:
+  Fixed segfaulting when running hddtemp for 2 or more drives which are not in
+  its database (bug #126775).
 
 *hddtemp-0.3_beta14-r1 (19 Feb 2006)
 

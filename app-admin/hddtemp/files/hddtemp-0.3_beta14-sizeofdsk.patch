@@ -1,0 +1,12 @@
+diff -Naurp hddtemp-0.3-beta14-orig/src/hddtemp.c hddtemp-0.3-beta14/src/hddtemp.c
+--- hddtemp-0.3-beta14-orig/src/hddtemp.c	2006-04-09 16:35:14.000000000 +0200
++++ hddtemp-0.3-beta14/src/hddtemp.c	2006-04-09 16:36:32.000000000 +0200
+@@ -400,7 +400,7 @@ int main(int argc, char* argv[]) {
+ 
+     assert(dsk);
+ 
+-    memset(dsk, 0, sizeof(dsk));
++    memset(dsk, 0, sizeof(struct disk));
+ 
+     p = strchr(argv[i], ':');
+     if(p == NULL)
