@@ -1,0 +1,11 @@
+--- gradm2/gradm_analyze.c	2006/01/08 17:45:37	1.36
++++ gradm2/gradm_analyze.c	2006/03/05 00:35:52	1.37
+@@ -260,6 +260,8 @@ handle_notrojan_mode(void)
+ 					for_each_role(role2, current_role) {
+ 						if (!strcmp(role2->rolename, ":::kernel:::"))
+ 							continue;
++						if (role2->roletype & GR_ROLE_GOD)
++							continue;
+ 						for_each_subject(subj2, role2) {
+ 							if (subj2 == subj
+ 							    || (subj2->

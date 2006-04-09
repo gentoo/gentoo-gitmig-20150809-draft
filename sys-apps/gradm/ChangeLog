@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.77 2006/04/09 16:29:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.78 2006/04/09 16:30:53 johnm Exp $
+
+*gradm-2.1.9.200602141850 (09 Apr 2006)
+
+  09 Apr 2006; John Mylchreest <johnm@gentoo.org>
+  +files/gradm_2.1.9.200602141850-fix-admin-role.patch,
+  +files/gradm_2.1.9.200602141850-fix-define-order.patch,
+  +gradm-2.1.9.200602141850.ebuild:
+  gradm bump to 2.1.9
 
   09 Apr 2006; Markus Rothe <corsair@gentoo.org>
   gradm-2.1.8.200601212342-r1.ebuild:

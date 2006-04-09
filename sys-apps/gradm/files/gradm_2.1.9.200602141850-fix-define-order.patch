@@ -1,0 +1,17 @@
+--- gradm2/gradm_sym.c	2004/12/15 21:21:50	1.8
++++ gradm2/gradm_sym.c	2006/03/13 23:07:49	1.9
+@@ -10,8 +10,12 @@ static unsigned int symtab_size = 0;
+ 
+ void interpret_variable(struct var_object *var)
+ {
+-	for (; var; var = var->prev) {
+-		add_proc_object_acl(current_subject, var->filename, var->mode, GR_FEXIST);
++	struct var_object *tmp;
++	for (tmp = var; tmp->prev; tmp = tmp->prev)
++		;
++
++	for (; tmp; tmp = tmp->next) {
++		add_proc_object_acl(current_subject, tmp->filename, tmp->mode, GR_FEXIST);
+ 	}
+ 
+ 	return;
