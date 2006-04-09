@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.15 2006/02/17 22:10:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.16 2006/04/09 18:16:11 swegener Exp $
+
+  09 Apr 2006; Sven Wegener <swegener@gentoo.org> -x11vnc-0.7.2.ebuild:
+  Remove old ebuild.
 
 *x11vnc-0.8 (17 Feb 2006)
 
