@@ -1,0 +1,11 @@
+--- icewm-1.2.25/src/ylocale.cc.orig	2006-04-08 19:03:17.000000000 -0500
++++ icewm-1.2.25/src/ylocale.cc	2006-04-08 19:04:46.000000000 -0500
+@@ -152,7 +152,7 @@ YUChar *YLocale::unicodeString(const YLC
+     char * inbuf((char *) lStr), * outbuf((char *) uStr);
+     size_t inlen(lLen), outlen(4 * lLen);
+ 
+-    if (0 > (int) iconv(instance->toUnicode, const_cast<const char **>(&inbuf), &inlen, &outbuf, &outlen))
++    if (0 > (int) iconv(instance->toUnicode, &inbuf, &inlen, &outbuf, &outlen))
+         warn(_("Invalid multibyte string \"%s\": %s"), lStr, strerror(errno));
+ 
+     *((YUChar *) outbuf) = 0;

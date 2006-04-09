@@ -1,19 +1,43 @@
-MD5 45e2a36b7d18af232c54c6cfc980ed4a ChangeLog 16989
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ac2b503b7459b1f9706027fe9d852e00 ChangeLog 17502
+RMD160 cc39f3e2ccb89a510f08efb58ee93a5927e4a4b3 ChangeLog 17502
+SHA256 871ef1c84d3853796d63ed58cd7672c6275ee7a14b7bd764b47a845d63d20790 ChangeLog 17502
 MD5 9028fc0d1b794c88e4a2db9cf28f66f0 files/IceWM.desktop 200
-MD5 1ba6fc06d92e0a7d0d4357d83db74493 files/digest-icewm-1.2.20 64
-MD5 ab0c279c830a4148e8c4bba52df974b0 files/digest-icewm-1.2.21 64
-MD5 a644431b77f0f8026d82b40033a46d3e files/digest-icewm-1.2.22 64
+RMD160 0b1de8ea8569d3e15006dcee81d582404d73685f files/IceWM.desktop 200
+SHA256 7564e6a573365eae529b849c7f5723eaef39258d785fd83de42e122cdf8e0eb1 files/IceWM.desktop 200
 MD5 39a926bf34be3c704ff71518f13a175b files/digest-icewm-1.2.23 65
-MD5 cea1a375dba2fc5a6d9675d7255229aa files/icewm-1.2.20.iceicon.patch 394
-MD5 b3bb2875e9f96c7fbd5620a7388626b0 files/icewm-1.2.20.testmap.patch 529
-MD5 0adfec296f9e1a9eb08a326c0690c28e files/icewm-1.2.20.ybutton.cc.patch 591
-MD5 b3bb2875e9f96c7fbd5620a7388626b0 files/icewm-1.2.21.testmap.patch 529
-MD5 0adfec296f9e1a9eb08a326c0690c28e files/icewm-1.2.21.ybutton.cc.patch 591
-MD5 0adfec296f9e1a9eb08a326c0690c28e files/icewm-1.2.22.ybutton.cc.patch 591
+RMD160 7b7caa354e7d4a343acdd611bca860209bf26a6e files/digest-icewm-1.2.23 65
+SHA256 177cef1d0f60dc8c53e55285d43d5a4aa823d5825954517962150e6ed220beda files/digest-icewm-1.2.23 65
+MD5 7ac15125978a7d74b831baad4a1d0807 files/digest-icewm-1.2.25 241
+RMD160 9fceccb15a08e608f5a4d49f5ae6cf90dab2a6b8 files/digest-icewm-1.2.25 241
+SHA256 5e0f35eedf89314f542276cd7576f7f238e7784a42356cd0afcb1312b96ae73d files/digest-icewm-1.2.25 241
 MD5 6c31373fef2347787b0ac6b504642f6e files/icewm-1.2.23-gcc41.patch 1521
+RMD160 6de0933e58fa4c4e0144da977eb73d8c6b996086 files/icewm-1.2.23-gcc41.patch 1521
+SHA256 9c9fdf5f78d821bee818bd51f9bf3de6b1edb3800bf0bf9a72762751524269f4 files/icewm-1.2.23-gcc41.patch 1521
 MD5 0adfec296f9e1a9eb08a326c0690c28e files/icewm-1.2.23.ybutton.cc.patch 591
-MD5 e74fd3f8b677b9a200feacf2fdc7f244 icewm-1.2.20.ebuild 2310
-MD5 646a3a2aa9a92246bec0db5211f16133 icewm-1.2.21.ebuild 2270
-MD5 1179ec44ecc2f0198fb5ef3de42a108d icewm-1.2.22.ebuild 2228
+RMD160 1ade595dadaaa5494b84e4ba6ce76c88eb900e5d files/icewm-1.2.23.ybutton.cc.patch 591
+SHA256 2a5f61bfba0affa9734a6ce167db2b76a2750033db69e7ae692d8c8ab3b1324a files/icewm-1.2.23.ybutton.cc.patch 591
+MD5 50083fec82eb79a039a23fb96bad2fc7 files/icewm-1.2.25-gcc41.patch 608
+RMD160 dab0e7d33df2c277de8a9430c0dfebcd6049e7de files/icewm-1.2.25-gcc41.patch 608
+SHA256 bfe473799b8564da15bbe2b00779dc472c9c854d827d70ba5efe005219770027 files/icewm-1.2.25-gcc41.patch 608
+MD5 0adfec296f9e1a9eb08a326c0690c28e files/icewm-1.2.25.ybutton.cc.patch 591
+RMD160 1ade595dadaaa5494b84e4ba6ce76c88eb900e5d files/icewm-1.2.25.ybutton.cc.patch 591
+SHA256 2a5f61bfba0affa9734a6ce167db2b76a2750033db69e7ae692d8c8ab3b1324a files/icewm-1.2.25.ybutton.cc.patch 591
 MD5 9714ddd60475f1070463e9f2bb15df39 icewm-1.2.23.ebuild 2541
+RMD160 f0f9efeee8e17b93a68f235911c90398d602eba6 icewm-1.2.23.ebuild 2541
+SHA256 9ca12a913d0a54a2671999044dd55095e1aec70af6ef2ea54cb4f96b7a36ad15 icewm-1.2.23.ebuild 2541
+MD5 8ceaa9bbd185849888804d0cab0b9e90 icewm-1.2.25.ebuild 2543
+RMD160 89265483bd3e1780b406fb267d186d4dbabf0efa icewm-1.2.25.ebuild 2543
+SHA256 9c89a7f806609bfd2231b13bca361fc63374c3a64ba55f76175dc4575931a8ea icewm-1.2.25.ebuild 2543
 MD5 a26b94d92c1e03083b7020e2f4c1afe9 metadata.xml 630
+RMD160 8ccd4a508c55ae60ea8df12a6dc885dcb194ce82 metadata.xml 630
+SHA256 f953ed71f13606da930e0bf27997358533008989364c1d3badf31b0276b80191 metadata.xml 630
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEOFVr/aM9DdBw91cRAs4fAJ442R5tT6S6wfWgN25Mxqq6+SSxSQCfT5o3
+3M2G6QOARKCGtbUF/2nPyiE=
+=P1P/
+-----END PGP SIGNATURE-----
