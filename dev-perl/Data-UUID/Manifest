@@ -1,4 +1,16 @@
-MD5 a77bfb4b6fb546a5b8862a3cab2a3366 ChangeLog 988
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cf0a8f7f9d9933c6e3de0da5a1fdf28d ChangeLog 1151
 MD5 315f555363611b21b90595925caf12e4 Data-UUID-0.11.ebuild 577
+MD5 bcd0da67db541ff71cdd4ca2d4b85ad7 Data-UUID-0.14.ebuild 584
 MD5 2160eaec62a0b3f852be37e4b4e69d34 files/digest-Data-UUID-0.11 65
+MD5 66befbc25fb22718bbd0b5e8f0739bba files/digest-Data-UUID-0.14 65
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEOPqqtG5z4I8BtQoRAj9JAJ4rXAQGA+6iH89+4vIphUmJ5dNepgCdFp+b
+k9evaUtUde+vmkc7+y81UsM=
+=Mw7v
+-----END PGP SIGNATURE-----
