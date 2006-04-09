@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.50.ebuild,v 1.1 2006/04/04 16:02:49 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.50.ebuild,v 1.2 2006/04/09 19:55:30 kumba Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,6 +16,7 @@ KEYWORDS="-* ~mips"
 IUSE=""
 DEPEND="sys-boot/dvhtool"
 RESTRICT="nostrip"
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 
 pkg_setup() {
