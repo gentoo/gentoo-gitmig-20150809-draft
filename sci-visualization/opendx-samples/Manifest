@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dbb13f9b3e1d51b64a625fe2370cfcb1 ChangeLog 972
-RMD160 72a300f547d560b7fd8f84f9c34c58cc2d12f54b ChangeLog 972
-SHA256 b6678770112a30bf1eb43dbd0614460b5dee9ff94225afac30b19f77307c2232 ChangeLog 972
+MD5 1ac6bc9a0ca6bfd8b9a6874d1c72311f ChangeLog 1072
+RMD160 6b2549399fbf39952f753678773c209c838dd335 ChangeLog 1072
+SHA256 c41c492054dc232aeda6438d1e282de4e7edf2c5c6fd87a99475d0ffd1454f29 ChangeLog 1072
 MD5 79e9088507c29d4854546506167d851c files/digest-opendx-samples-4.3.2 68
 RMD160 fcf3c80c7ebb8562bbb7a2a993b1f20f9f4dda25 files/digest-opendx-samples-4.3.2 68
 SHA256 cdee1fc1922f2072656ce3977d450fff1b35b6660e6ce9c4747b3efe89b410cb files/digest-opendx-samples-4.3.2 68
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 RMD160 dc078172bfebcb25d69bdf8731714f9cce9d3e36 metadata.xml 156
 SHA256 5d22100902db7507a5b5493dd4a66cdb08025faf80a2c0b75e6392315c47f900 metadata.xml 156
-MD5 b6f6b3275d8afb3785e85073588ab1c6 opendx-samples-4.3.2.ebuild 1218
-RMD160 78d04c556d3ddcea848b9c0b47ddfad34596959d opendx-samples-4.3.2.ebuild 1218
-SHA256 caf8910df02b65cb4e29bb23fac33d3e3b05b1c83974628d744a2fc0976987e0 opendx-samples-4.3.2.ebuild 1218
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9NKDI1lqEGTUzyQRApBeAKCKcg7Gktzj/6RNBIDPHMQyf4oRvgCgod1o
-tvz+3KY55Wr8q2y9xex6+Ug=
-=14SK
------END PGP SIGNATURE-----
+MD5 38fbb99ddebec9085ec84e18d3b2e53e opendx-samples-4.3.2.ebuild 1217
+RMD160 925c11d7e7cd97eaf873715632bb506cabfeb239 opendx-samples-4.3.2.ebuild 1217
+SHA256 6ba81c63cf0097278f49fcbe3a35a0d3e2a3b06150849799148ffecdfe5db88e opendx-samples-4.3.2.ebuild 1217
