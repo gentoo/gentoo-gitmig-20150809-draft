@@ -1,7 +1,17 @@
-MD5 83ff9b882a330ba68cf559b8225b2bef ChangeLog 2813
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9a85aa064f78500d3bf0222356cb67e3 ChangeLog 2917
 MD5 a507a3e3da835a4e8d763cdea183d071 files/digest-x11-ssh-askpass-1.2.2-r1 72
 MD5 a5820e00831335cc416df383e206a5eb files/digest-x11-ssh-askpass-1.2.4.1-r1 74
 MD5 1a90e521c0674c6fd9a34b9c6ebfcb62 files/stupid-imake.diff 548
 MD5 2c1edf73176f0cce9f6ee1753c6c08d9 metadata.xml 298
 MD5 d8d330386e303b9b36044d872224b3e8 x11-ssh-askpass-1.2.2-r1.ebuild 1035
-MD5 c79e22beb9b34829a67a2815a2664833 x11-ssh-askpass-1.2.4.1-r1.ebuild 1114
+MD5 d7aad5ac84dd9c9da88b3bc8dd56130e x11-ssh-askpass-1.2.4.1-r1.ebuild 1111
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEOHyFoGcCqvCmTSIRAr/yAKCTMADHzoAq3UE6P/UC2mRfjCNBMQCglN+F
+55PEZT462yrWiaerGyDnPFE=
+=MRCF
+-----END PGP SIGNATURE-----

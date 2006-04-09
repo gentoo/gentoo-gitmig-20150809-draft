@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.4.1-r1.ebuild,v 1.4 2006/04/04 14:58:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.4.1-r1.ebuild,v 1.5 2006/04/09 03:15:36 tester Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.liquidmeme.net/software/x11-ssh-askpass/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ia64 ~ppc ~sparc ~x86"
 
 DEPEND="virtual/libc
 	|| 	(
