@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/kalamaris
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kalamaris/ChangeLog,v 1.5 2006/02/02 17:18:04 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kalamaris/ChangeLog,v 1.6 2006/04/09 23:42:48 cryos Exp $
+
+  09 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org> -kalamaris-0.7.1.ebuild,
+  kalamaris-0.7.1-r1.ebuild:
+  Marked ~amd64, pruned old version.
 
 *kalamaris-0.7.1-r1 (02 Feb 2006)
 
