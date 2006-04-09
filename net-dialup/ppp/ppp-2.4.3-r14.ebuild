@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r13.ebuild,v 1.1 2006/03/23 22:17:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r14.ebuild,v 1.1 2006/04/09 09:53:38 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20060221.tar.gz
+	mirror://gentoo/${P}-patches-20060409.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
@@ -86,6 +86,7 @@ src_unpack() {
 	epatch "${WORKDIR}/patch/killaddr-smarter.patch"
 	epatch "${WORKDIR}/patch/upstream-fixes.patch"
 	epatch "${WORKDIR}/patch/rp-pppoe-any-interface.patch"
+	epatch "${WORKDIR}/patch/quiet-pppoatm-modprobe.patch"
 	epatch "${WORKDIR}/patch/wait-children.patch"
 
 	use eap-tls && {
