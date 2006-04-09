@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.106 2006/04/09 05:48:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.107 2006/04/09 06:56:52 zmedico Exp $
+
+*portage-2.1_pre7-r5 (09 Apr 2006)
+
+  09 Apr 2006; <zmedico@gentoo.org> +portage-2.1_pre7-r5.ebuild,
+  +files/2.1_pre7/1110_r3096_emerge_args_validation.patch,
+  +files/2.1_pre7/1120_r3094_bug_129193.patch,
+  +files/2.1_pre7/1130_r3087_bug_129098.patch,
+  +files/2.1_pre7/1140_r3077_noclean.patch,
+  +files/2.1_pre7/1150_r3082_bug_117713.patch,
+  +files/2.1_pre7/1160_r3083_bug_126801.patch,
+  +files/2.1_pre7/1170_r3084_bug_128362.patch:
+  Bug fixes for #129098, #117713, #129193, #126801, #128362 and more.
 
   08 Apr 2006; <zmedico@gentoo.org> -portage-2.1_pre8.ebuild:
   Withdrawing 2.1_pre8 due to bug #128946.

@@ -1,0 +1,27 @@
+=== modified file 'bin/emerge'
+--- bin/emerge	
++++ bin/emerge	
+@@ -614,6 +614,10 @@
+ if "--debug" in myopts:
+ 	print "myaction", myaction
+ 	print "myopts", myopts
++
++if not myaction and not myfiles and "--resume" not in myopts:
++	help()
++	sys.exit(1)
+ 
+ # check if root user is the current user for the actions where emerge needs this
+ if portage.secpass < 2:
+@@ -3285,11 +3289,6 @@
+ 			if not ("--quiet" in myopts):
+ 				print "\b\b... done!"
+ 		else:
+-			if not myfiles:
+-				print "emerge: please tell me what to do."
+-				help()
+-				sys.exit(1)
+-				#we don't have any files to process; skip this step and exit
+ 			if not ("--quiet" in myopts):
+ 				print "Calculating dependencies  ",
+ 				sys.stdout.flush()
+

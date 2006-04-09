@@ -1,0 +1,13 @@
+=== modified file 'pym/portage_util.py'
+--- pym/portage_util.py	
++++ pym/portage_util.py	
+@@ -627,6 +627,8 @@
+ 				super(atomic_ofstream, self).__init__(tmp_name, mode=mode, **kargs)
+ 				return
+ 			except (OSError, IOError), e:
++				if canonical_path == filename:
++					raise
+ 				writemsg("!!! Failed to open file: '%s'\n" % tmp_name)
+ 				writemsg("!!! %s\n" % str(e))
+ 
+
