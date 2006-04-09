@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.4-r1.ebuild,v 1.5 2005/08/11 18:02:02 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.4-r1.ebuild,v 1.6 2006/04/09 16:14:56 herbs Exp $
 
-inherit qt3
+inherit qt3 multilib
 
 DESCRIPTION="nice Qt partition tool for Linux"
 HOMEPAGE="http://qtparted.sourceforge.net/"
@@ -24,7 +24,9 @@ RDEPEND="${DEPEND}
 	x11-libs/gksu"
 
 src_compile() {
-	local myconf="--disable-reiserfs --enable-labels"
+	local myconf="--disable-reiserfs
+				--enable-labels
+				--with-qt-libraries=${QTDIR}/$(get_libdir)"
 
 	econf ${myconf} || die "configure failed"
 	emake || die "make failed"

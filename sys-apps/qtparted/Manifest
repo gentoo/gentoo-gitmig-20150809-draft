@@ -1,6 +1,28 @@
-MD5 1a7c8f8a8a18a7bd8df3e82d4776c6c2 qtparted-0.4.4.ebuild 736
-MD5 a7f3b834f57d2a671dae8e2af59bf228 qtparted-0.4.4-r1.ebuild 931
-MD5 4cf391148b287687d0d1c3451150d447 ChangeLog 2948
-MD5 a62858e8c9d87aaaaa3356a1c94ef18d metadata.xml 170
-MD5 bd75fd4cc142dbf238fdb44969bfb98e files/digest-qtparted-0.4.4-r1 67
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8b646dba5159f461595d3604655ab91b ChangeLog 3037
+RMD160 b3d70a08db4fd8f689e7db9e224c8f228c4d14d0 ChangeLog 3037
+SHA256 7fe030ff942bac3e76d3e04f509c82e81347dfad102abccc17898a9e66eae236 ChangeLog 3037
 MD5 bd75fd4cc142dbf238fdb44969bfb98e files/digest-qtparted-0.4.4 67
+RMD160 7a486e031c971348bffa4adbef584b3bd9b03385 files/digest-qtparted-0.4.4 67
+SHA256 9446ca804958c710a42ebf01c0c1e008e219d973a3c70473437cc212c4f6afc4 files/digest-qtparted-0.4.4 67
+MD5 3242aec4dad44bb15f6ef54c58faafee files/digest-qtparted-0.4.4-r1 247
+RMD160 926ecce59072290743611adde5a711a66475b865 files/digest-qtparted-0.4.4-r1 247
+SHA256 8f98a0a155a24b0fde8f1fcc0f60d1b022fc9d12ba46d5e2a2e62f9aad859a56 files/digest-qtparted-0.4.4-r1 247
+MD5 a62858e8c9d87aaaaa3356a1c94ef18d metadata.xml 170
+RMD160 0c6b102787098d03cbf0bdbed37dabbd0de6654e metadata.xml 170
+SHA256 53b07ee8fc55e6e45232b2d798d00da0d1056ef3f963816e46b410bbdb676623 metadata.xml 170
+MD5 6ca331230f09e3549f7746d151ea212a qtparted-0.4.4-r1.ebuild 990
+RMD160 b1128d9a5403de65ebca02bcaeb00282bcb68111 qtparted-0.4.4-r1.ebuild 990
+SHA256 dfc3a4c179653e19e5cfdb47ac1b798c20bad2ebc10cc56fe1b2165d006f2771 qtparted-0.4.4-r1.ebuild 990
+MD5 1a7c8f8a8a18a7bd8df3e82d4776c6c2 qtparted-0.4.4.ebuild 736
+RMD160 f21df4c1c8c089e8f7e2ea430afba16e036ce1a8 qtparted-0.4.4.ebuild 736
+SHA256 5330adb673e9a4733269c5b7ac9a00f6c592ef5e0c21fef3d4c80379f89c66e1 qtparted-0.4.4.ebuild 736
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEOTMQ2G5bA0cA/ScRApWzAKDmglkDGhY4mrcKQDKLc9j+7jIwhgCgjy90
+CJiq6Mtlfia1HR3Eq7lCQC4=
+=hrzX
+-----END PGP SIGNATURE-----
