@@ -1,0 +1,11 @@
+--- STLport/stlport/cwchar.orig	2006-03-22 16:35:19.000000000 +0100
++++ STLport/stlport/cwchar	2006-03-22 16:35:31.000000000 +0100
+@@ -191,7 +191,7 @@
+ #        if (!defined(__MSL__) || __MSL__ > 0x7001 ) && !defined(_STLP_WCE_NET) && \
+              !defined(_STLP_USE_UCLIBC) /* at least in uClibc 0.9.26 */
+ 
+-using _STLP_VENDOR_CSTD::wcsftime;
++using ::wcsftime;
+ #        endif
+ using _STLP_VENDOR_CSTD::wcstok;
+ 
