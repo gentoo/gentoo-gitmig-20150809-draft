@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.14 2006/03/05 17:15:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.15 2006/04/09 17:13:34 jer Exp $
+
+  09 Apr 2006; Jeroen Roovers <jer@gentoo.org> fbida-2.03-r2.ebuild:
+  Marked ~hppa (bug #119923).
 
   05 Mar 2006; Markus Rothe <corsair@gentoo.org> fbida-2.03-r2.ebuild:
   Stable on ppc64; bug #119923
