@@ -1,10 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.6.ebuild,v 1.4 2006/04/05 11:29:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.6.ebuild,v 1.5 2006/04/09 00:33:58 nerdboy Exp $
 
-inherit eutils toolchain-funcs kde-functions
+inherit eutils toolchain-funcs qt3
 
-DESCRIPTION="Documentation and analysis tool for C++, C, Java, IDL, PHP and C#"
+DESCRIPTION="Doxygen is a documentation system for C++, C, Java, Objective-C,
+	Python, IDL , and other C-like languages."
 HOMEPAGE="http://www.doxygen.org/"
 SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz
 		unicode? ( mirror://gentoo/${PN}-utf8-ru.patch.gz )"
@@ -15,24 +16,22 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc
 IUSE="doc qt tetex unicode"
 
 RDEPEND=">=media-gfx/graphviz-2.6
-	qt? ( =x11-libs/qt-3* )
+	qt? ( $(qt_min_version 3.3) )
 	tetex? ( virtual/tetex )
 	virtual/ghostscript"
 DEPEND=">=sys-apps/sed-4
 	${RDEPEND}"
 
-if use qt; then need-qt 3; fi
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# use CFLAGS and CXXFLAGS (on linux and ppc-macos)
-	sed -i.orig -e "s:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= ${CFLAGS}:" \
-		-e "s:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= ${CXXFLAGS}:" \
-		tmake/lib/{linux-g++,macosx-c++}/tmake.conf
+	# use CFLAGS, CXXFLAGS, LDFLAGS
+	sed -i.orig -e 's:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= $(ECFLAGS):' \
+		-e 's:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= $(ECXXFLAGS):' \
+		-e 's:^\(TMAKE_LFLAGS_RELEASE\s*\)=.*$:\1= $(ELDFLAGS):' \
+		tmake/lib/{{linux,freebsd,netbsd,openbsd,solaris}-g++,macosx-c++}/tmake.conf
 
 	epatch ${FILESDIR}/doxygen-1.4.3-cp1251.patch
-#	epatch ${FILESDIR}/doxygen-1.4.4-darwin.patch
 
 	if use unicode; then
 		epatch ${WORKDIR}/${PN}-utf8-ru.patch || die "utf8-ru patch failed"
@@ -47,10 +46,10 @@ src_unpack() {
 }
 
 src_compile() {
+	export ECFLAGS="${CFLAGS}" ECXXFLAGS="${CXXFLAGS}" ELDFLAGS="${LDFLAGS}"
 	# set ./configure options (prefix, Qt based wizard, docdir)
 	local my_conf="--prefix ${D}usr"
 	if use qt; then
-	    einfo "using QT version: '$QTVER'."
 	    einfo "using QTDIR: '$QTDIR'."
 	    export LD_LIBRARY_PATH=${QTDIR}/$(get_libdir):${LD_LIBRARY_PATH}
 	    export LIBRARY_PATH=${QTDIR}/$(get_libdir):${LIBRARY_PATH}
@@ -62,7 +61,8 @@ src_compile() {
 	fi
 
 	# and compile
-	emake all || die 'emake failed'
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINK="$(tc-getCXX)" \
+	    LINK_SHLIB="$(tc-getCXX)" all || die 'emake failed'
 
 	# generate html and pdf (if tetex in use) documents.
 	# errors here are not considered fatal, hence the ewarn message
@@ -110,5 +110,7 @@ pkg_postinst() {
 	einfo "and other goodies, see the source tarball.  For some example"
 	einfo "output, run doxygen on the doxygen source using the Doxyfile"
 	einfo "provided in the top-level source dir."
+	einfo ""
+	einfo "See the Doxygen homepage for additional language support tools."
 	ewarn
 }

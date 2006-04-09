@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.3-r1.ebuild,v 1.11 2006/02/08 08:47:35 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.3-r1.ebuild,v 1.12 2006/04/09 00:33:58 nerdboy Exp $
 
-inherit eutils toolchain-funcs kde-functions
+inherit eutils toolchain-funcs qt3
 
 DESCRIPTION="Documentation and analysis tool for C++, C, Java, IDL, PHP and C#"
 HOMEPAGE="http://www.doxygen.org/"
@@ -15,13 +15,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 sparc x86 ~ppc-
 IUSE="doc qt tetex unicode"
 
 RDEPEND="media-gfx/graphviz
-	qt? ( =x11-libs/qt-3* )
+	qt? ( $(qt_min_version 3.3) )
 	tetex? ( virtual/tetex )
 	virtual/ghostscript"
 DEPEND=">=sys-apps/sed-4
 	${RDEPEND}"
-
-if use qt; then need-qt 3; fi
 
 src_unpack() {
 	unpack ${A}
@@ -53,7 +51,6 @@ src_compile() {
 	# set ./configure options (prefix, Qt based wizard, docdir)
 	local my_conf="--prefix ${D}usr"
 	if use qt; then
-	    einfo "using QT version: '$QTVER'."
 	    einfo "using QTDIR: '$QTDIR'."
 	    export LD_LIBRARY_PATH=${QTDIR}/$(get_libdir):${LD_LIBRARY_PATH}
 	    export LIBRARY_PATH=${QTDIR}/$(get_libdir):${LIBRARY_PATH}

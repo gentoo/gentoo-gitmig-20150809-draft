@@ -6,5 +6,10 @@
     <email>nerdboy@gentoo.org</email>
     <name>Steve Arnold</name>
 </maintainer>
-<longdescription>Doxygen is a tool for analyzing, documenting, and reverse-engineering source code of various languages using a variety of output formats (try it and see).</longdescription>
+<longdescription>Doxygen is a tool for analyzing, documenting, and reverse-engineering 
+    source code of various languages using a variety of output formats 
+    (try it and see).  Doxygen supports C++, C, Java, Objective-C, Python, 
+    IDL (Corba and Microsoft flavors) and to some extent PHP, C#, and D,
+    as well as other languages (using additional helper tools).
+</longdescription>
 </pkgmetadata>
