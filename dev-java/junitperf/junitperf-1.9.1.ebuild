@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1.ebuild,v 1.9 2005/10/21 16:01:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1.ebuild,v 1.10 2006/04/09 15:23:37 nichoj Exp $
 
 inherit java-pkg
 
@@ -18,7 +18,8 @@ DEPEND=">=virtual/jdk-1.3
 	junit? ( dev-java/ant-tasks )
 	source? ( app-arch/zip )"
 
-RDEPEND=">=virtual/jre-1.3"
+RDEPEND=">=virtual/jre-1.3
+	dev-java/junit"
 
 src_unpack () {
 	unpack ${A}
