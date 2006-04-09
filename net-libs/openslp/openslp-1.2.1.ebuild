@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.2.1.ebuild,v 1.14 2006/04/09 13:44:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.2.1.ebuild,v 1.15 2006/04/09 16:55:10 flameeyes Exp $
 
 inherit gnuconfig libtool eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/openslp/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/libc"
