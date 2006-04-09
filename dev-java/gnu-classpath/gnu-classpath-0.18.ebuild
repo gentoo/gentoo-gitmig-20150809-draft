@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.18.ebuild,v 1.7 2006/02/04 18:13:29 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.18.ebuild,v 1.8 2006/04/09 13:20:12 nichoj Exp $
 
 inherit eutils autotools
 
@@ -17,12 +17,12 @@ KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~ppc64"
 #See their bug 24025
 
 #enable cairo support after >=0.5.0 is out of package.mask
-IUSE="examples gtk xml2"
+IUSE="examples gtk xml"
 
 #cairo? ( >=x11-libs/cairo-0.5.0 )
 RDEPEND="gtk? ( >=x11-libs/gtk+-2.4
 				>=dev-libs/glib-2.0 )
-		 xml2? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )"
+		 xml? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )"
 
 DEPEND="app-arch/zip
 		dev-java/jikes
@@ -50,7 +50,7 @@ src_compile() {
 	econf ${compiler} \
 		$(use_enable examples) \
 		$(use_enable gtk gtk-peer) \
-		$(use_enable xml2 xmlj) \
+		$(use_enable xml xmlj) \
 		--enable-jni \
 		|| die "configure failed"
 

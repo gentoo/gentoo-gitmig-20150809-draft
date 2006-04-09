@@ -1,6 +1,9 @@
-MD5 6c5249e1626173e56f1cf4ad15162ed8 ChangeLog 7533
-RMD160 65b53177c46c655ee32db71ba3cc9d3e33453c0e ChangeLog 7533
-SHA256 63906e60160d0d5e9cf3dfc0bd0ac2da4a9584913ef895b9dfefae6d016c9d4d ChangeLog 7533
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 440ed9ba9e1e25b7151db6b14228c22b ChangeLog 7787
+RMD160 a995709db2bbb60df22319252b03cf3248acecfd ChangeLog 7787
+SHA256 dc2a15afcda067ef80593f5fb438f278a6009a57aa8f41681f5c658a03f8fdbe ChangeLog 7787
 MD5 4c21037c9eaf2d9fe12e88ced8caab80 files/0.19-dssi.patch 1410
 RMD160 4cb4bcf9f35ab966e25ecca5e6b9d96dd5b0dae1 files/0.19-dssi.patch 1410
 SHA256 914528fd87325f949f11db8271410a14b2befd352ae0eecda8938818a8da7da9 files/0.19-dssi.patch 1410
@@ -25,21 +28,28 @@ SHA256 3d292ab35abca43e6a7259848428839997f9a5c7c41398d762edaefe9712ec73 files/di
 MD5 887f044e4350323f1324cc1368943c1a files/gtk28.patch 1522
 RMD160 06b593568abfa7a757c6d805ca89e856be7bca7a files/gtk28.patch 1522
 SHA256 6005431e565f0cf3c5bd207601e227abb6f909b8fae558c450d06fcc94fba581 files/gtk28.patch 1522
-MD5 ec2c61a53f357f39abc46e9eb71f3551 gnu-classpath-0.14.ebuild 1148
-RMD160 59e83bbe0c79b67b64efa1d3a5746bbbaac1f0f2 gnu-classpath-0.14.ebuild 1148
-SHA256 d43e8c2d92083f9bccd5408a76752abd9f70fef0193b5d77076f89a1e662f1fe gnu-classpath-0.14.ebuild 1148
-MD5 6c9872b9933574fb5cc69813ae5f2c13 gnu-classpath-0.18.ebuild 1928
-RMD160 d15e09b5c7146b398cd7738020142aff89fc8797 gnu-classpath-0.18.ebuild 1928
-SHA256 022013f8d934ba8d3d32f6aa6179c3dff94024f4779ef133dde8c6d99a3672a3 gnu-classpath-0.18.ebuild 1928
-MD5 1e23f7ac645245d53081fa6df0f377ed gnu-classpath-0.19.ebuild 2573
-RMD160 2abea09c0b3cee04c783d3ff795b630aff3ed912 gnu-classpath-0.19.ebuild 2573
-SHA256 10ae00e374959f8fa32070f950837b74ea2487f16080f92ced502eb6b33c481c gnu-classpath-0.19.ebuild 2573
-MD5 24ed58c2b63a48749bce80413725c5ec gnu-classpath-0.20.ebuild 2388
-RMD160 8e8df2489dbc8040dfe538e711c79dc74159e9c3 gnu-classpath-0.20.ebuild 2388
-SHA256 96f835caa47900ff0ca2cfb852ec9c1020c3147c9b1a5740d81d799b72dce550 gnu-classpath-0.20.ebuild 2388
-MD5 43abcc2abcca1a1be38aa972b0b3cd53 gnu-classpath-0.90.ebuild 2388
-RMD160 5b596baff5dd522cd047cdcfe1e7537cd2f06048 gnu-classpath-0.90.ebuild 2388
-SHA256 0758a2d99098c5f56475af7520cbb7fdf8f66c732f2a0c0476b8f6cb75c73e42 gnu-classpath-0.90.ebuild 2388
+MD5 723f09e819c3802bd28a1a06edccd360 gnu-classpath-0.14.ebuild 1145
+RMD160 95cb32f1a68d943f7d4b1aa81bc7b2e3beda7072 gnu-classpath-0.14.ebuild 1145
+SHA256 3f6dfffef3e3fae6afad75402d0d483530fb6a8ecd3d42506fd9f41cf773a0d1 gnu-classpath-0.14.ebuild 1145
+MD5 c85fafc9d5da5f019450c47c4394e625 gnu-classpath-0.18.ebuild 1926
+RMD160 0151e5450c1ae8d348b0f27ab499b60d9427f06e gnu-classpath-0.18.ebuild 1926
+SHA256 afef7406acf419c54dff50413dd6c5ba2c698c0e9d60b7b191fcfa774d008c28 gnu-classpath-0.18.ebuild 1926
+MD5 1eb3603ac325cd994981bd5ff9c23db5 gnu-classpath-0.19.ebuild 2566
+RMD160 68f5caec02ae9e61a39684fbc93ec5f3fd41fd59 gnu-classpath-0.19.ebuild 2566
+SHA256 117efda62626b0d2869de8c672bf788d5eeedfe05796988dafd1e4889cedd0ee gnu-classpath-0.19.ebuild 2566
+MD5 f8379fd8d81f62a14b5abd7602a7d830 gnu-classpath-0.20.ebuild 2381
+RMD160 56b741ce0ad0e01823ed8163b74ba61c00cfa825 gnu-classpath-0.20.ebuild 2381
+SHA256 c38a01f3af18753e2f116817684a3ad31a69c659a254eb87fa1ba03825e011dc gnu-classpath-0.20.ebuild 2381
+MD5 b5f6966523cfae0241f56dcf3e0e50fb gnu-classpath-0.90.ebuild 2381
+RMD160 b81d4e72a5d2ec2990d58618d6905b1b127b0182 gnu-classpath-0.90.ebuild 2381
+SHA256 11757de19aa16f79c8c255e05e632ae369b6c9adc536f1cd0d340c013dafd7ee gnu-classpath-0.90.ebuild 2381
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEOQp8ndWRXhKOboURAs7VAKCnGWlDsppDrDae85t4TMiRvQ6dUwCdH4WJ
+W1nXjcv6qlcAnXriFm8sSHc=
+=4PiJ
+-----END PGP SIGNATURE-----

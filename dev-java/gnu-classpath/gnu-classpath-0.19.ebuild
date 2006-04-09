@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.19.ebuild,v 1.5 2006/02/05 14:25:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.19.ebuild,v 1.6 2006/04/09 13:20:12 nichoj Exp $
 
 inherit eutils autotools
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 # Add the doc use flag after the upstream build system is improved
 # See their bug 24025
 
-IUSE="alsa cairo debug dssi examples gtk xml2"
+IUSE="alsa cairo debug dssi examples gtk xml"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 		dssi? ( >=media-libs/dssi-0.9 )
@@ -32,7 +32,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 				   )
 				cairo? ( >=x11-libs/cairo-0.5.0 )
 		     )
-		xml2? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )"
+		xml? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )"
 
 DEPEND="app-arch/zip
 		dev-java/jikes
@@ -72,7 +72,7 @@ src_compile() {
 		$(use_enable debug ) \
 		$(use_enable examples) \
 		$(use_enable gtk gtk-peer) \
-		$(use_enable xml2 xmlj) \
+		$(use_enable xml xmlj) \
 		$(use_enable dssi ) \
 		--enable-jni \
 		--disable-dependency-tracking \

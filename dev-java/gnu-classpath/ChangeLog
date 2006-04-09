@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.52 2006/04/02 14:03:26 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.53 2006/04/09 13:20:12 nichoj Exp $
+
+  09 Apr 2006; Joshua Nichols <nichoj@gentoo.org> gnu-classpath-0.14.ebuild,
+  gnu-classpath-0.18.ebuild, gnu-classpath-0.19.ebuild,
+  gnu-classpath-0.20.ebuild, gnu-classpath-0.90.ebuild:
+  Now using the xml use flag, in favor of xml2, as per bug #116346.
 
 *gnu-classpath-0.90 (02 Apr 2006)
 
