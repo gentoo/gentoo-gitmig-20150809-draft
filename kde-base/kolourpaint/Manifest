@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 389b7e1fedf521133324ba836b73bbd1 ChangeLog 5490
-RMD160 7ba6878bc6ec6a2fdaa8d2ace0a58157a74f7c64 ChangeLog 5490
-SHA256 828b7af5e4aab256ca9c4dceddf4ade5c6c3c3e62dce2774e4847a6becd1168d ChangeLog 5490
+MD5 f539b530ec8b0443b962a0bf8a5bb63b ChangeLog 5597
+RMD160 7849796e1b7b808c6999ea79663043bd947e6485 ChangeLog 5597
+SHA256 7d4f9923dd775eaae7f07a048cd5f2c3e52c29be2b67005f0f0c41c1d2acdd30 ChangeLog 5597
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kolourpaint-3.4.1 221
 RMD160 ce80baa4c1806e9aacce02a4860a401e0ed7408f files/digest-kolourpaint-3.4.1 221
 SHA256 a5c43c1dc911a886d673620d40b300bcc9d5847fd0c55deaa7fa4fbc3b435c71 files/digest-kolourpaint-3.4.1 221
@@ -25,16 +22,9 @@ SHA256 dd22d14478fa730a9b8e84df80daa60987a17bf51f8fe7f75f7ef19f30ff9ab3 kolourpa
 MD5 f839bea79332736b6c94eb94b38aa0b8 kolourpaint-3.4.3.ebuild 409
 RMD160 c492f8e08913ec7b590e4c1a13ef885be127f979 kolourpaint-3.4.3.ebuild 409
 SHA256 5d9dcc1dc09f31eb04dc73039137214d7619833f36fa22da8634976f61c1e00a kolourpaint-3.4.3.ebuild 409
-MD5 4af779b8be42f2d6190bd71b563ed44f kolourpaint-3.5.2.ebuild 417
-RMD160 c6a2e69bfc699bcd9953a0541c52a2572a334cf7 kolourpaint-3.5.2.ebuild 417
-SHA256 bcd6da9a3686897d6512d910f936b07297215651ea58ce931f98436682fda530 kolourpaint-3.5.2.ebuild 417
+MD5 a79f59c8c5d86b3a5d79c590bf0965a8 kolourpaint-3.5.2.ebuild 428
+RMD160 d1c6276510d03bc4544f1729fc5f055a99ff2f13 kolourpaint-3.5.2.ebuild 428
+SHA256 8fec1025d81cf7582cf2cbd90010c10a1fe667e047107ceeb60104b4d5b1d4fe kolourpaint-3.5.2.ebuild 428
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENHu5AiZjviIA2XgRAvjAAJ46hS9Zl8WCj2Jcj8tAPWOLMkzVzQCbBgAS
-8o75zD0S2aClz1W64EMyyxw=
-=oF/P
------END PGP SIGNATURE-----

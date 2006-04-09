@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2b2be300eaebb9a57df9bb718f8cc795 ChangeLog 5613
-RMD160 fb1a2eec0a810b2de6c91e40cf3cb3f88b31da82 ChangeLog 5613
-SHA256 d6a95b9712f4855b18f015d9e09c6fa0a43c2e860727d322010ba85aa575b3be ChangeLog 5613
+MD5 dee3f75b4909dd57a16ee33ff84fce65 ChangeLog 5719
+RMD160 6c71645126df556a79705044b76749ead711aea6 ChangeLog 5719
+SHA256 37fc3fc0d85575ff2792feb152a8c7596b7472f4d2fef04c1a0095a2a6823b25 ChangeLog 5719
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kviewshell-3.4.1 221
 RMD160 ce80baa4c1806e9aacce02a4860a401e0ed7408f files/digest-kviewshell-3.4.1 221
 SHA256 a5c43c1dc911a886d673620d40b300bcc9d5847fd0c55deaa7fa4fbc3b435c71 files/digest-kviewshell-3.4.1 221
@@ -28,16 +25,9 @@ SHA256 b6dfba55fe9bec08f5a69e84c4dfafa6c07bb09f703e70470c2e9d0233c4dc98 kviewshe
 MD5 b2ca6b12b2b6e78684a2685baee48ec0 kviewshell-3.4.3.ebuild 432
 RMD160 aca0a012d28a6da296c489f08ff2a214544979b7 kviewshell-3.4.3.ebuild 432
 SHA256 49adfd0a099962860ab62e2835ab2ec7ef077a673ed5f2d73a3c918c5602450d kviewshell-3.4.3.ebuild 432
-MD5 e93a9f61ebe60522a4fb62ebd29b5dda kviewshell-3.5.2.ebuild 440
-RMD160 e9261bf4002df7d09fbc87efa3f3e031c99ab778 kviewshell-3.5.2.ebuild 440
-SHA256 3500e9a84048488a445647ef783f0dd85da8eaab01190edf1d965742bcda4aad kviewshell-3.5.2.ebuild 440
+MD5 cf1f070e869213ab3c343cf260c50066 kviewshell-3.5.2.ebuild 451
+RMD160 273b3c41dcff1ff27b37a47876ab21f64eced587 kviewshell-3.5.2.ebuild 451
+SHA256 7a80dfd93cb380679d5b2374da7ed4d1a48d76a289bc09bab9944c515dfd35c3 kviewshell-3.5.2.ebuild 451
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENITSAiZjviIA2XgRAkxjAJ4jBAz2QnBgvlB/wRxzae+W/4n9CQCg8u6U
-928SPxxy6//wPkSJJTrmmAc=
-=QfIv
------END PGP SIGNATURE-----

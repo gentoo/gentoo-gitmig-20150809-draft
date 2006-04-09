@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4faba89a6633b94fb62c060e80dac2e2 ChangeLog 6357
-RMD160 402ccd3ace96d6a4d8821f9dd67bec1666ace820 ChangeLog 6357
-SHA256 c0d855bbb739152a433ebfc936cb2980c9f97bb9d254a6d4d6013c74568690ef ChangeLog 6357
+MD5 b7c431db0c26e4c979b9b0666d774da4 ChangeLog 6478
+RMD160 3fe56b1b6cbefddb205aaf2ac3bf4d24b6f6bc18 ChangeLog 6478
+SHA256 e29502d39b3c7a2d22730e402c0ad29513b92f6c2fccbaf046870b65a23a9f9e ChangeLog 6478
 MD5 d34b4b86b659b21184ada6cc00ec5569 files/configure-fix-kdegraphics-openexr.patch 704
 RMD160 6b0414d2709b3efe5ca7c7a9c7a41905b19d0be6 files/configure-fix-kdegraphics-openexr.patch 704
 SHA256 b0a2bfee291d830ad6f936ad112eecd4cc4325d218508a7faa2c10d5cbb105f1 files/configure-fix-kdegraphics-openexr.patch 704
@@ -28,16 +25,9 @@ SHA256 bd2da0a002817b7b725c938b3aa99a9fec462857e4865bf58a2ec5fd6897b9d2 kdegraph
 MD5 c9d15b1ba2dba1943f1c10f6cd66cba0 kdegraphics-kfile-plugins-3.4.3.ebuild 755
 RMD160 45d3d3ea621bac1f289ee94bf88b48d18403ed82 kdegraphics-kfile-plugins-3.4.3.ebuild 755
 SHA256 a47564e5506b03b92216e9e89118dfb16b4e0d81b6d85c7d3e9f23c2e7fb7be5 kdegraphics-kfile-plugins-3.4.3.ebuild 755
-MD5 2a3058fa4920c3d34e9e3ac78e412794 kdegraphics-kfile-plugins-3.5.2.ebuild 793
-RMD160 d3d1b5bd60a8abe087e09bfc87cb05a226884e58 kdegraphics-kfile-plugins-3.5.2.ebuild 793
-SHA256 2b81e74a213501c5dcfd8511be64dde90661fbea2ab0b8c7d85bac8847efffd4 kdegraphics-kfile-plugins-3.5.2.ebuild 793
+MD5 8a83036796002b808678cf956c957476 kdegraphics-kfile-plugins-3.5.2.ebuild 804
+RMD160 6e332531947ea601d6166200a10fda4f5a8e4bd3 kdegraphics-kfile-plugins-3.5.2.ebuild 804
+SHA256 6c2dfd6ae71f1aee0ef2b9edac5cee8d345f4956c9defbf6cf874f11d5a32cbd kdegraphics-kfile-plugins-3.5.2.ebuild 804
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENG1TAiZjviIA2XgRAne3AJ9jmDtIfR4TXevdYBtJfKoRggC2zgCfS/wI
-DZk33lc+L5L+cqXl0KTxeeg=
-=7Eyg
------END PGP SIGNATURE-----
