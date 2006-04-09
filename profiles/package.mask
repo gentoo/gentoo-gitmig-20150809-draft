@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5196 2006/04/09 03:00:31 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5197 2006/04/09 06:51:42 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -92,10 +92,6 @@ app-misc/colortail
 # Diego Pettenò <flameeyes@gentoo.org> (2 Apr 2006)
 # Test version
 >=media-video/vlc-0.8.5_beta
-
-# Petteri Räty <betelgeuse@gentoo.org> (2 Apr 2006)
-# Package masked until I can test this with hardware
-=net-wireless/ndiswrapper-1.11
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (1 Apr 2006)
 # X Server snapshots
