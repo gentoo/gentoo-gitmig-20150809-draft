@@ -1,9 +1,40 @@
-MD5 03336769f6b7c61f397b7bda8a68cf3a openslp-1.2.1.ebuild 939
-MD5 fb07378e184212e79f4c4008b0e69239 openslp-1.0.11.ebuild 855
-MD5 16d4985dc3bbc616a5d8c0f08d9878fa openslp-1.0.9a.ebuild 705
-MD5 077a4c10c7fa821820e9f9612e0a2ab4 ChangeLog 3998
-MD5 d7f79cffa0ae6dc390e87781e51f4248 metadata.xml 220
-MD5 97a5b3202b42cbb36942b17299b2701d files/digest-openslp-1.2.1 65
-MD5 f87ab978aa65541b72c9aef6e1e5677e files/slpd-init 2294
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9fbc76c46934bb07f48f13b8db34daa7 ChangeLog 4193
+RMD160 dfcea49f720c26fbd6ea6254992c90b785ca516f ChangeLog 4193
+SHA256 2d2f164c37ec5d39a101642dd8f60e2a72b8e831dd5fff64debff4fee5e173f4 ChangeLog 4193
 MD5 570fc57cfed48b272c0d000a21927d26 files/digest-openslp-1.0.11 66
+RMD160 33ab2ddd7ce53e6016571ba233534d962f393e35 files/digest-openslp-1.0.11 66
+SHA256 c8a3d629d53dbb18c7e74b9dd98f21936699d7c203246471649587cf6bd0bf3f files/digest-openslp-1.0.11 66
 MD5 67fd195194d45cffe4a08f4d0d0c5c2f files/digest-openslp-1.0.9a 66
+RMD160 20fddfd7b15f90fa5abacd99e2fb27e0019b5183 files/digest-openslp-1.0.9a 66
+SHA256 5d1be65685043975bb1b946aa953a0260a19d6900911157547913f10fcb9a64f files/digest-openslp-1.0.9a 66
+MD5 97a5b3202b42cbb36942b17299b2701d files/digest-openslp-1.2.1 65
+RMD160 334c21c35112fc3cb202c41fe4b85f5ef04a27b1 files/digest-openslp-1.2.1 65
+SHA256 db3bef95602577fb23b1acc6a3524243522a7985514587fecdda99b22b07a78b files/digest-openslp-1.2.1 65
+MD5 a4fd1073d151f2454579eb6507088ca1 files/openslp-1.2.1-fbsd.patch 346
+RMD160 e44601bd0529ed38b2d51faaa37628ebc4600927 files/openslp-1.2.1-fbsd.patch 346
+SHA256 131caf1dafc81f519d2e50bead9a2658e4efcb3594777ab189fd60a23f097da9 files/openslp-1.2.1-fbsd.patch 346
+MD5 f87ab978aa65541b72c9aef6e1e5677e files/slpd-init 2294
+RMD160 096c7061c9453b4b30fdab6fb1aef548c975e546 files/slpd-init 2294
+SHA256 7b2254f118c34345ad20c793dcb2207c3970251947ba431161014f332172a999 files/slpd-init 2294
+MD5 d7f79cffa0ae6dc390e87781e51f4248 metadata.xml 220
+RMD160 0a92537b6168da77e7c1f5189768ad0ec4cc5382 metadata.xml 220
+SHA256 8ff75eb2d29ebd42d0be30bb7f0cd0cba55b405f14c9b22bd475de4fe5be58a9 metadata.xml 220
+MD5 fb07378e184212e79f4c4008b0e69239 openslp-1.0.11.ebuild 855
+RMD160 4e2969bda7453b29f3f47554475b3a550b25dbd2 openslp-1.0.11.ebuild 855
+SHA256 4e6da9f12c2425f31e97689d29068714d3aeec7dd01b0d8fdd5dcb3349394d5c openslp-1.0.11.ebuild 855
+MD5 16d4985dc3bbc616a5d8c0f08d9878fa openslp-1.0.9a.ebuild 705
+RMD160 f5ee536db460e946ce90e98843f70227f1e3872d openslp-1.0.9a.ebuild 705
+SHA256 6e2d1b4f995f1c9a8e59b75f42f046c0045b1e387c7a257696f32815b83fc50d openslp-1.0.9a.ebuild 705
+MD5 2ef8c569b739a6e24f72e4bd0dc0d4ca openslp-1.2.1.ebuild 1031
+RMD160 88e06f9f1125b069e83f0e1f54171ae2407b352f openslp-1.2.1.ebuild 1031
+SHA256 54a149694458cbd661127f0bb2efc351192e512c681c02645dbc0d7e5fad34a5 openslp-1.2.1.ebuild 1031
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEOQ/VAiZjviIA2XgRAsSkAJ0SG0Q+JRv8R5OqO7guQtRTmX2+vgCgh83T
+KvfWl+b+lSw1bSoIsp5dUsw=
+=h7ac
+-----END PGP SIGNATURE-----

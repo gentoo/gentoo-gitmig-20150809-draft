@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.2.1.ebuild,v 1.13 2005/10/02 04:58:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.2.1.ebuild,v 1.14 2006/04/09 13:44:26 flameeyes Exp $
 
-inherit gnuconfig
+inherit gnuconfig libtool eutils autotools
 
 DESCRIPTION="An open-source implementation of Service Location Protocol"
 HOMEPAGE="http://www.openslp.org/"
@@ -21,6 +21,11 @@ src_unpack() {
 	# needed at least by alpha and amd64
 	cd ${S}
 	gnuconfig_update
+
+	epatch "${FILESDIR}/${P}-fbsd.patch"
+	eautomake
+
+	elibtoolize
 }
 
 src_compile() {
