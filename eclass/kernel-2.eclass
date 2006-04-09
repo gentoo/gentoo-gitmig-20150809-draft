@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.166 2006/03/27 10:49:59 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.167 2006/04/09 13:59:38 blubb Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -1031,6 +1031,7 @@ kernel-2_pkg_postinst() {
 }
 
 kernel-2_pkg_setup() {
+	ABI="${KERNEL_ABI}"
 	[[ ${ETYPE} == headers ]] && setup_headers
 	[[ ${ETYPE} == sources ]] && echo ">>> Preparing to unpack ..."
 }
