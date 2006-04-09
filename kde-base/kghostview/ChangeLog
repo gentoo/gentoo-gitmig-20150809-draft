@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kghostview
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/ChangeLog,v 1.42 2006/04/06 01:51:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/ChangeLog,v 1.43 2006/04/09 16:48:39 flameeyes Exp $
+
+  09 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kghostview-3.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kghostview-3.5.0.ebuild, -kghostview-3.5.1.ebuild:
