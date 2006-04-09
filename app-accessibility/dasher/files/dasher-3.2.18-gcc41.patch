@@ -1,0 +1,25 @@
+diff -ur dasher-3.2.18-orig/Src/DasherCore/DasherViewSquare.h dasher-3.2.18/Src/DasherCore/DasherViewSquare.h
+--- dasher-3.2.18-orig/Src/DasherCore/DasherViewSquare.h	2006-03-30 19:36:15.000000000 -0500
++++ dasher-3.2.18/Src/DasherCore/DasherViewSquare.h	2006-03-30 19:37:57.000000000 -0500
+@@ -33,7 +33,7 @@
+ 	virtual void RenderNodes();
+ 	
+ 	void ChangeScreen(CDasherScreen* NewScreen);
+-	void CDasherViewSquare::DrawGoTo(screenint mousex, screenint mousey);
++	void DrawGoTo(screenint mousex, screenint mousey);
+ 	void DrawMouse(screenint mousex, screenint mousey);
+ 	void DrawMouseLine(screenint mousex, screenint mousey);
+ 	void DrawKeyboard();
+diff -ur dasher-3.2.18-orig/Src/DasherCore/LanguageModelling/SymbolAlphabet.h dasher-3.2.18/Src/DasherCore/LanguageModelling/SymbolAlphabet.h
+--- dasher-3.2.18-orig/Src/DasherCore/LanguageModelling/SymbolAlphabet.h	2006-03-30 19:36:15.000000000 -0500
++++ dasher-3.2.18/Src/DasherCore/LanguageModelling/SymbolAlphabet.h	2006-03-30 19:36:45.000000000 -0500
+@@ -38,7 +38,7 @@
+ 		// iSize is the number of Symbols - please dont change the constructor
+ 		// Add functions to set customizable behaviour
+ 
+-		CSymbolAlphabet::CSymbolAlphabet(int iSize)
++		CSymbolAlphabet(int iSize)
+ 			: m_iSize(iSize)
+ 		{
+ 		  //			DASHER_ASSERT(iSize>0);
+

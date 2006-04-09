@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.18.ebuild,v 1.10 2006/02/06 04:54:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.18.ebuild,v 1.11 2006/04/09 04:34:57 halcy0n Exp $
 
 inherit eutils gnome2
 
@@ -65,7 +65,9 @@ src_unpack() {
 	cd "${S}"
 
 	# Poor pointer management causes segfault at startup
-	epatch ${FILESDIR}/${PN}-3.2.15-buildwindowtree.patch
+	epatch "${FILESDIR}"/${PN}-3.2.15-buildwindowtree.patch
+
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 
 	gnome2_omf_fix Data/Help/Gnome/*/Makefile.in
 }
