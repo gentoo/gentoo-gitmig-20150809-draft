@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.0.2.ebuild,v 1.2 2006/04/09 03:58:07 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.0.2.ebuild,v 1.3 2006/04/09 19:09:39 halcy0n Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -46,7 +46,7 @@ src_unpack() {
 src_compile() {
 	cd "${S}"/build/lib
 	./configure \
-		--with-boost \
+		--without-boost \
 		--with-extra-cxxflags="${CXXFLAGS}" || die "configure failed"
 	cd ../..
 

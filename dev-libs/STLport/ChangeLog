@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.29 2006/04/09 03:58:07 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.30 2006/04/09 19:09:39 halcy0n Exp $
+
+  09 Apr 2006; Mark Loeser <halcy0n@gentoo.org> STLport-5.0.2.ebuild:
+  That should have been --without-boost
 
   09 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/STLport-5.0.2-gcc41.patch, STLport-5.0.2.ebuild:
