@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.10 2006/03/25 03:05:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.11 2006/04/09 15:06:34 flameeyes Exp $
+
+  09 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> k9copy-1.0.3b.ebuild,
+  k9copy-1.0.4_beta2.ebuild, k9copy-1.0.4_beta3.ebuild:
+  Fix homepage as per bug #129342, thanks to J. C. Wren.
 
 *k9copy-1.0.4_beta3 (25 Mar 2006)
 
