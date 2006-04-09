@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SVN-Mirror
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/ChangeLog,v 1.21 2006/02/22 22:48:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/ChangeLog,v 1.22 2006/04/09 12:17:34 mcummings Exp $
+
+  09 Apr 2006; <mcummings@gentoo.org> -SVN-Mirror-0.68.ebuild,
+  SVN-Mirror-0.68-r1.ebuild:
+  Remarking 0.68 ~amd64, bug 119099
 
   22 Feb 2006; Aron Griffis <agriffis@gentoo.org> SVN-Mirror-0.68-r1.ebuild:
   Mark 0.68-r1 ~ia64

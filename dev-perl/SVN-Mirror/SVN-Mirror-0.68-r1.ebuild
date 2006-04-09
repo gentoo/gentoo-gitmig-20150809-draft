@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/SVN-Mirror-0.68-r1.ebuild,v 1.3 2006/02/22 22:48:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/SVN-Mirror-0.68-r1.ebuild,v 1.4 2006/04/09 12:17:34 mcummings Exp $
 
 inherit perl-module
 
@@ -10,8 +10,7 @@ HOMEPAGE="http://www.cpan.org/authors/id/C/CL/CLKAO/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-#KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-KEYWORDS="~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="${DEPEND}
