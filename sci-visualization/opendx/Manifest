@@ -1,12 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1d28159c734ee5e6146efff48916ccb5 ChangeLog 2496
-RMD160 e6e4e7b2e2073b3ad3570f36bc414d0099b1c864 ChangeLog 2496
-SHA256 58f0122d6ba14b2f7ec9a7e8da3de64f72197d34edbc1815683439814b5a0ae6 ChangeLog 2496
-MD5 e8b3b97f7766dc0b83d6dfd1cd0b753e files/digest-opendx-4.3.2 61
-RMD160 419c2f820ecd439cee9cdb2156b1c346a2d29621 files/digest-opendx-4.3.2 61
-SHA256 f84213c913289f4c3ada0443745645ba17aed3d2932ef52bfa3b32f8d5ca482f files/digest-opendx-4.3.2 61
+MD5 02abaf48a17ec0de4ecf6edc25cb78b2 ChangeLog 2589
+RMD160 b713163d51c12acea5afe2175f92af61681cd7a3 ChangeLog 2589
+SHA256 61ccbdcf9d324fec11e31969b853891409d97f27eee47a031d40d64e7e43de40 ChangeLog 2589
 MD5 e8b3b97f7766dc0b83d6dfd1cd0b753e files/digest-opendx-4.3.2-r1 61
 RMD160 419c2f820ecd439cee9cdb2156b1c346a2d29621 files/digest-opendx-4.3.2-r1 61
 SHA256 f84213c913289f4c3ada0443745645ba17aed3d2932ef52bfa3b32f8d5ca482f files/digest-opendx-4.3.2-r1 61
@@ -16,13 +13,10 @@ SHA256 5d22100902db7507a5b5493dd4a66cdb08025faf80a2c0b75e6392315c47f900 metadata
 MD5 a0fba05a7e34d88dffd0a65b01e66fa9 opendx-4.3.2-r1.ebuild 2881
 RMD160 bf58b91e37525cadc312190b1ae7d86e34b1bc2d opendx-4.3.2-r1.ebuild 2881
 SHA256 05e7041de0666102b9ab9b86880f69ef16dfdf9b93553c17039fad4e4853f54d opendx-4.3.2-r1.ebuild 2881
-MD5 97cfedfc9b2e3af5eb7cae6ba80f6b23 opendx-4.3.2.ebuild 2899
-RMD160 0117c5d2743fa35b67cc8b61fb0fafa94bb21a27 opendx-4.3.2.ebuild 2899
-SHA256 5fc00b113cb98aefa938bbfbb8b3babec55c57801a96f8ab2a2fb81bb0bfa075 opendx-4.3.2.ebuild 2899
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEJvbTI1lqEGTUzyQRAlD7AKCpeIgjPqJ3Tu6OFBE1U3IGseDRbwCfdsJZ
-vxFniWfWltDF6GjfaxVdZk8=
-=m9ri
+iD8DBQFEOYIhntT9W3vfTuoRAqoDAJ9W2kTWMAyjTlFAPQcfVSQQ/JLvvgCffVJz
+TyFHH+mtSmMJSrDivXJnkaU=
+=kfua
 -----END PGP SIGNATURE-----
