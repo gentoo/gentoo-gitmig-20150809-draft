@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kpl/kpl-3.3.ebuild,v 1.2 2006/03/17 10:29:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kpl/kpl-3.3.ebuild,v 1.3 2006/04/09 21:50:13 cryos Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://frsl06.physik.uni-freiburg.de/privat/stille/kpl/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 need-kde 3.2
