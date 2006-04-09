@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.28 2006/03/30 22:07:28 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.29 2006/04/09 13:28:12 tcort Exp $
+
+  09 Apr 2006; Thomas Cort <tcort@gentoo.org> rezound-0.12.2_beta-r1.ebuild:
+  Uncommented ppc fixes wrt Bug #116655
 
 *rezound-0.12.2_beta-r1 (30 Mar 2006)
 

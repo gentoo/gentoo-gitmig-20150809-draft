@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.2_beta-r1.ebuild,v 1.1 2006/03/30 22:07:29 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.2_beta-r1.ebuild,v 1.2 2006/04/09 13:28:12 tcort Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ src_unpack() {
 src_compile() {
 	# fix compilation errors on ppc, where some
 	# of the required functions aren't defined
-	#test "${ARCH}" = ppc && epatch ${FILESDIR}/undefined-functions.patch
+	test "${ARCH}" = ppc && epatch ${FILESDIR}/undefined-functions.patch
 
 	# following features can't be disabled if already installed:
 	# -> flac, oggvorbis, soundtouch
