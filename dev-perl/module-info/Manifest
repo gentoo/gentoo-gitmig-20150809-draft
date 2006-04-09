@@ -1,4 +1,4 @@
-MD5 17e74d96d60b4c759ef9709136394915 ChangeLog 3183
+MD5 545ff46c86c73b6fdc43d61bf2694cb1 ChangeLog 3277
 MD5 18663cc44364f4bed4075ed501e97aeb files/digest-module-info-0.20 67
 MD5 3c184afb8a1c566d42f6ae18ab3906d1 files/digest-module-info-0.26 67
 MD5 822c2be3cda4b067bc2908248faed33c files/digest-module-info-0.28 67
@@ -7,4 +7,4 @@ MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 9ff536ec3c684c553720e812c9c6f69e module-info-0.20.ebuild 602
 MD5 37a079103ddebdaccc3eb41be2fbb9d1 module-info-0.26.ebuild 602
 MD5 e39cdd6a080f2bc41966ced8a129c037 module-info-0.28.ebuild 638
-MD5 7cfc2857d555c84aa5759067a01f68a6 module-info-0.29.0.ebuild 670
+MD5 ba7c131986baee58b8d7509b713d11d0 module-info-0.29.0.ebuild 668
