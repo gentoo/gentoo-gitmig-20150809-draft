@@ -1,10 +1,40 @@
-MD5 a43315d39549f2ae58a63a1e4bc57c64 ChangeLog 2855
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3bfaab60ce20532d3572ca712b3eb619 ChangeLog 2960
+RMD160 1d9a7d3d0527179a681efb48a0aa8e921921ff17 ChangeLog 2960
+SHA256 ae91dfc43baeb1f664a7b83969f5baf5c7ea14ca32be437c2b31e3cc8e8bdcdb ChangeLog 2960
 MD5 9a610e878fe5f7a2a3e5a855a54b41a5 files/digest-fribidi-0.10.4 67
+RMD160 f98908f884d3884546186f41487e563d3736c5eb files/digest-fribidi-0.10.4 67
+SHA256 64a79bf498be671cedbe6dda9c8c3673df1e67be313a2b9a6bdf1ba512055c07 files/digest-fribidi-0.10.4 67
 MD5 4357156c0cae180a994311c435a82ac9 files/digest-fribidi-0.10.5 66
+RMD160 ec470a1c6c49188b768c6ff1ecf45869af63a8b5 files/digest-fribidi-0.10.5 66
+SHA256 a0a927b40d1db752c0b2b8816cadd4aa4775039c652a74199fe5ce1a4ecf9fb9 files/digest-fribidi-0.10.5 66
 MD5 b650b1d2db0fd027692963a7f8df9cd6 files/digest-fribidi-0.10.7 66
+RMD160 88b8e970b0c3eacd1e77558c0f0cd307b8f6b96f files/digest-fribidi-0.10.7 66
+SHA256 3de71b2ec36b25c441559f69e4debc4f4649db0f25117e6773c38b32a87e8d1d files/digest-fribidi-0.10.7 66
 MD5 987f5f0968bd4cfe9fe788dd78cf734c files/fribidi-0.10.5-darwin.patch 459
+RMD160 c82903cb1b7b5fae4a7d9d01db28e5f43faa1021 files/fribidi-0.10.5-darwin.patch 459
+SHA256 fbf9d951a356a8e9338b20ac28b6be8dc8ca0e4a48be74d20d8877dbff893400 files/fribidi-0.10.5-darwin.patch 459
 MD5 40046ccf090ce4962be3ac75a4329013 files/fribidi-macos.patch 437
+RMD160 f390024a41d7907d669d851ff7862e3f1bda3344 files/fribidi-macos.patch 437
+SHA256 c707797eda69f8842eecf2722db59ece4c8ddd6730079f5db6c14c03065727c0 files/fribidi-macos.patch 437
 MD5 2f25089e4cdb7f083d0797a5f1093de9 fribidi-0.10.4.ebuild 811
+RMD160 831a34eb3031a292978d174e8a9869f581c55d1a fribidi-0.10.4.ebuild 811
+SHA256 6b28c1aa45cbd03bbfcd9c89e19e7f757937fdb11c424ae97c9d6ec61cc2d429 fribidi-0.10.4.ebuild 811
 MD5 1eda7fbdb4b72a2056a359ce32548092 fribidi-0.10.5.ebuild 813
-MD5 9d6d6fd0f21d10d8601b4fc44a5c1e9a fribidi-0.10.7.ebuild 723
+RMD160 9f44e92d3f629564ac2fa7ea11446ca886a34186 fribidi-0.10.5.ebuild 813
+SHA256 d1a7eb632654510203b5720fe1129224f301e5e08a6620a5abb28224c90c79b2 fribidi-0.10.5.ebuild 813
+MD5 919c6698624ca3f828adac2b0ea7a841 fribidi-0.10.7.ebuild 736
+RMD160 58118f78a667199564afaa47d15ed24b889c4a30 fribidi-0.10.7.ebuild 736
+SHA256 9f0e7d92abc70bbbe1c95755af70106cd5c99dcbf73ee5ebb88446b120312ecf fribidi-0.10.7.ebuild 736
 MD5 9cf27d810e5266f1790cc19be2845747 metadata.xml 228
+RMD160 d65a6255b8f07a80a55bbee3b75d4fbf409e7bbb metadata.xml 228
+SHA256 9247f2e9698ec5fdf342458b10c5a7e671c4e10b1551f09de2a9e31193532bdb metadata.xml 228
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEOTx8AiZjviIA2XgRAn4vAKCKYo1wq+Y9R3q3eB7hkdmk9g4/JwCgu/w0
+jMZ5C4KaPS+j1Aw3q0LEwac=
+=T0Fg
+-----END PGP SIGNATURE-----
