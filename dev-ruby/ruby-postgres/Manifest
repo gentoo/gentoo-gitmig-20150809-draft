@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 57621d6b829be72a324909e2d7eada72 ChangeLog 936
-RMD160 bd1d266a4270b7a363992b5e2eed46a8019c94b0 ChangeLog 936
-SHA256 23f1e8375d881094d9085d8a24ac6249c10cddb952c7945733cf62c5f4a1b848 ChangeLog 936
+MD5 4c9a2d4785a9b521edd5099a2a1a08b6 ChangeLog 1061
 MD5 89569b9ff1cdd82d778f55e66ec9a706 files/digest-ruby-postgres-0.7.1 256
-RMD160 fa8b36ce06f7efc27b4301eeedeb1db6e08085c7 files/digest-ruby-postgres-0.7.1 256
-SHA256 4e3ec25340d5243f11425cc4e1cf5824926f714000a4044fa052d5d93acb705f files/digest-ruby-postgres-0.7.1 256
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
-SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
-MD5 eb827561899e9dd219b7c75f02523560 ruby-postgres-0.7.1.ebuild 686
-RMD160 cf394f79476f89429b5824c12d7c12e66ae18ded ruby-postgres-0.7.1.ebuild 686
-SHA256 232a0bda15a6b4107d0124a7a0f754057df6a5e797e0cd0b34ffde2f2bc9589d ruby-postgres-0.7.1.ebuild 686
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD7ld1JrHF4yAQTrARAqsEAJ9Q5YX1LWaEKjMNfEOpyfDqZW3fSgCfUs6B
-XfYel4iuHFdcJ6wkyeKtLpY=
-=j4/R
------END PGP SIGNATURE-----
+MD5 98b549342b38722ebad2e9228ad78b52 ruby-postgres-0.7.1.ebuild 568
