@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.07.ebuild,v 1.6 2006/04/08 22:41:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.07.ebuild,v 1.7 2006/04/09 11:42:08 mcummings Exp $
 
-inherit perl-module
+inherit perl-module depend.apache
 
 IUSE=""
 
@@ -20,8 +20,10 @@ DEPEND="${DEPEND}
 	>=www-apache/mod_perl-2"
 
 mydoc="TODO README CHANGES INSTALL"
-myconf="--with-apache2-apxs=/usr/sbin/apxs2"
+myconf="--with-apache2-apxs=${APXS2}"
 SRC_TEST="skip"
+
+need_apache2
 
 src_unpack() {
 	unpack ${A}
@@ -58,7 +60,7 @@ src_install() {
 	# install the html docs
 	dohtml ${S}/docs/html/*.html
 
-	insinto /etc/apache2/modules.d
+	insinto ${APACHE2_MODULES_CONFDIR}
 	doins ${FILESDIR}/76_mod_apreq.conf
 
 	fixlocalpod
@@ -81,7 +83,7 @@ pkg_postinst() {
 	einfo "To enable ${PN}, you need to edit your /etc/conf.d/apache2 file and"
 	einfo "add '-D APREQ' to APACHE2_OPTS."
 	einfo "Configuration file installed as"
-	einfo "    /etc/apache2/modules.d/76_mod_apreq.conf"
+	einfo "    ${APACHE2_MODULES_CONFDIR}/76_mod_apreq.conf"
 	einfo "You may want to edit it before turning the module on in /etc/conf.d/apache2"
 	einfo
 

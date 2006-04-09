@@ -1,43 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2c3bfb02bb875fd0364a93b0bf6ea190 ChangeLog 2305
-RMD160 58f524cfce4bda4f265356360a5997f243ade123 ChangeLog 2305
-SHA256 ef4d22027067b8e28d8c9d6c6c7f77a31245abbdbf46806c6cb3f35d8dd7cff6 ChangeLog 2305
+MD5 41370ddcaf2d7e2dccc93a2ef37b539b ChangeLog 2403
 MD5 72ff7fa68f0ab905336522c6398b4f17 files/76_mod_apreq.conf 384
-RMD160 9e2d4e0ffa5ab3d65becd958bdabc4cd149d291c files/76_mod_apreq.conf 384
-SHA256 7d308028c10f8c5a5f665ae894b219282de6088bd68ab3a43b51b788878f4a4e files/76_mod_apreq.conf 384
 MD5 1fad30fc51874d46cd39dd7ada8d17d8 files/digest-libapreq2-2.04.03 73
-RMD160 81f3e3dac368a19326a8796744105a2a27837b4a files/digest-libapreq2-2.04.03 73
-SHA256 bd019285ebf0fcda13f97c3f55a9413c159aa9e2017485136693a81b9c94b191 files/digest-libapreq2-2.04.03 73
 MD5 7c185f467441ea2ade1d365a6a917343 files/digest-libapreq2-2.06 70
-RMD160 a8e6acbff0a71bd0fbd983c30a01508841cd6dc8 files/digest-libapreq2-2.06 70
-SHA256 44d8cbbfacc6177f8e0b1c00864233380f754ba5ffaf176cfc1becd37f5ef91a files/digest-libapreq2-2.06 70
 MD5 6b093f1baf1ea28c0fdd2a3e91ce3458 files/digest-libapreq2-2.07 66
-RMD160 596c044834e54ae8026d043842b898ac32311cc0 files/digest-libapreq2-2.07 66
-SHA256 b8102b0c3066c6539e78894ac6a2d181b0fe730cd23eabf5a42e4b3b5d37255e files/digest-libapreq2-2.07 66
 MD5 b6b2398e58512016392bd02a5bd2b548 files/libapreq2-2.0-binloc.patch 3154
-RMD160 d95215452341d4f37374ae33262e8930faf64e00 files/libapreq2-2.0-binloc.patch 3154
-SHA256 ce2be0098984f50eff8c03eb38eb1c42c938ec4ff4a4986a4283853facbd8cf7 files/libapreq2-2.0-binloc.patch 3154
 MD5 7e7f7ff87f41a04bb85b1bf4792eafd5 files/libapreq2-2.0-sandbox.patch 1169
-RMD160 877dbf70eba927c56e7295a3943979a575bb15df files/libapreq2-2.0-sandbox.patch 1169
-SHA256 e0647cc7cacf1e4e88e19834b08643117cbc233355f2a33d4bcb87c3021f63cd files/libapreq2-2.0-sandbox.patch 1169
 MD5 a83c3b6aae9a87c91ae07f18aa0322a8 libapreq2-2.04.03.ebuild 2923
-RMD160 514cf62de048a0551e1f0c806c9e14bef6c0b421 libapreq2-2.04.03.ebuild 2923
-SHA256 d41dae5d986c1593cf5c7300fa5f5af6346b3c797054552c3431971386a7e435 libapreq2-2.04.03.ebuild 2923
 MD5 f76c209e0875c570c00b888bad5e90a7 libapreq2-2.06.ebuild 2029
-RMD160 ee34d2698e44bf241e618398fe1bc3fbead3b7f9 libapreq2-2.06.ebuild 2029
-SHA256 19ffa4aa58a543c3415c94c32b35f31652b1ba1179620fa406f84ffb9a5cf390 libapreq2-2.06.ebuild 2029
-MD5 1690437439bc6ce2a1c6b34705a7c0cf libapreq2-2.07.ebuild 2228
-RMD160 2ca781bccb208e794109202a3a74341872cbadb6 libapreq2-2.07.ebuild 2228
-SHA256 b5b5e352f44cf191d9cb13f9ddcd28c7bfa06bbd0f35be5ea76915a0bd99ad49 libapreq2-2.07.ebuild 2228
+MD5 5da4474450a4d25826bb3a8e62b35bbd libapreq2-2.07.ebuild 2260
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEODwZugEuf3OQ0akRAmLTAKCcH7nu54EMOK+vO64zmEyCSEkHOACeNU9Q
-oVL4wmEtKW+yrxzMi+Ooi/4=
-=z39X
+iD8DBQFEOPMBtG5z4I8BtQoRAv8aAJwKl4bIkBuR1t7amXyich+g7TBGCwCfb6qk
+vXvmWidc+RSWNmyup5lkrrQ=
+=mBfg
 -----END PGP SIGNATURE-----
