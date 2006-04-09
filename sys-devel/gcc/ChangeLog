@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.517 2006/04/08 20:11:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.518 2006/04/09 21:39:20 gmsoft Exp $
+
+  09 Apr 2006; Guy Martin <gmsoft@gentoo.org> gcc-4.1.0.ebuild:
+  Added ~hppa to KEYWORDS.
 
   08 Apr 2006; <nixnut@gentoo.org> gcc-3.4.6.ebuild:
   Added ~ppc

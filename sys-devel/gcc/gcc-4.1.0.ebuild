@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0.ebuild,v 1.10 2006/03/28 05:17:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0.ebuild,v 1.11 2006/04/09 21:39:20 gmsoft Exp $
 
 PATCH_VER="1.1"
 UCLIBC_VER="1.1"
@@ -20,7 +20,7 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+s
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="-* ~amd64 ~ppc ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~x86 ~hppa"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
@@ -41,7 +41,9 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 		nls? ( sys-devel/gettext )
 	)"
 if [[ ${CATEGORY} != cross-* ]] ; then
-	RDEPEND="${RDEPEND} elibc_glibc? ( >=sys-libs/glibc-2.3.6 )"
+	RDEPEND="${RDEPEND} elibc_glibc? (
+	hppa? ( >=sys-libs/glibc-2.3.4 ) !hppa? ( >=sys-libs/glibc-2.3.6 )
+	)"
 fi
 DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
