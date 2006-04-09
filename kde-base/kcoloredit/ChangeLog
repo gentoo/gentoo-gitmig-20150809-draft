@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcoloredit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcoloredit/ChangeLog,v 1.36 2006/04/06 01:08:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcoloredit/ChangeLog,v 1.37 2006/04/09 13:53:22 flameeyes Exp $
+
+  09 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kcoloredit-3.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kcoloredit-3.5.0.ebuild, -kcoloredit-3.5.1.ebuild:
