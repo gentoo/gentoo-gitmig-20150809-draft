@@ -1,30 +1,20 @@
-MD5 d92ce32b43d2cee4257905f3db845489 ChangeLog 3980
-RMD160 2f6ad320513053dd689a0cdde094c89f837cf123 ChangeLog 3980
-SHA256 83f539963566129d7ee57f75b9529ee63deb933d5e2865baab534a346a7c42ab ChangeLog 3980
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 38d1ecdbd438b3129e1f86c278a84332 ChangeLog 4090
 MD5 a556924d584687a8f363eed4bb9c743f files/digest-loudmouth-0.17.2-r2 69
-RMD160 62ec29854a03843a7722eb4cefa0770b8574a35c files/digest-loudmouth-0.17.2-r2 69
-SHA256 4ac10e37f0beec486ceb516fe0d799b3f0632bcf7e658dacbf507260541b7858 files/digest-loudmouth-0.17.2-r2 69
 MD5 26c44f134406e99f0210b82d0df1d541 files/digest-loudmouth-1.0.1 68
-RMD160 30e4d674410d10247f4818cb1c4175886b6e5bc3 files/digest-loudmouth-1.0.1 68
-SHA256 475d47be876fe28f481f5c2d5a3e9534cd941be60280608bf05d4c1831ebf36f files/digest-loudmouth-1.0.1 68
 MD5 4f4aae2241abe2190d6c8f3c62a39d98 files/digest-loudmouth-1.0.2 250
-RMD160 cd7063461a9a95d956869c4f8b7d01fd303a04d8 files/digest-loudmouth-1.0.2 250
-SHA256 782847dccfff4857bccf4c1b8a1e84c81ebaeb5b5d20f45ec5bac57bad59c5c1 files/digest-loudmouth-1.0.2 250
 MD5 3683fa9c59f744e00481d05e55c763cf files/loudmouth-0.17.2-gnutls_deprecation.patch 782
-RMD160 a13b1ba37a6d1cc1bcafef122da88320f3d21c76 files/loudmouth-0.17.2-gnutls_deprecation.patch 782
-SHA256 b77b85442d738d8d647a94449df0f6eab12dbb76b0b4ae05ee1a3060a2ca7627 files/loudmouth-0.17.2-gnutls_deprecation.patch 782
 MD5 943b98486f505d1231db25cee51ddd02 files/loudmouth-1.0.2-build_without_ssl.patch 1154
-RMD160 6b4c085077f34346a13fd9506d0c8a59e5c11234 files/loudmouth-1.0.2-build_without_ssl.patch 1154
-SHA256 035f9dafe2d66fb127c2758fb4da804e5a9bcc2a9a398040722a62c71a1f6869 files/loudmouth-1.0.2-build_without_ssl.patch 1154
 MD5 d3a8e167c56545ba1a2aaf703d9c894c loudmouth-0.17.2-r2.ebuild 908
-RMD160 66904e39e24d616744ff94815038d9a2749f9f50 loudmouth-0.17.2-r2.ebuild 908
-SHA256 5bcb9c8d5707f7054b685ec842bcfb1e8efe68976f287e4b7546e27a97a4f169 loudmouth-0.17.2-r2.ebuild 908
-MD5 810f306abbf85d1a65e4e3252b737c52 loudmouth-1.0.1.ebuild 616
-RMD160 5a4e56055c44ef298cd1d155b3d58e21600f21d2 loudmouth-1.0.1.ebuild 616
-SHA256 dcf8c83ea54b966909ed5d5d6303c1b6c6cc59e4533c10d769d8189be601f7fb loudmouth-1.0.1.ebuild 616
+MD5 624c5582d877a19f39625dae5fc78ddc loudmouth-1.0.1.ebuild 614
 MD5 9bdd56e7008e5c077a6fea0c2062f0b8 loudmouth-1.0.2.ebuild 835
-RMD160 733fb0d8036125741b36a0466facb027a699d7dc loudmouth-1.0.2.ebuild 835
-SHA256 87636e00f789d98baabfeadd4d0239640f2541e4493616e70b854828767305e2 loudmouth-1.0.2.ebuild 835
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEOVJPoGcCqvCmTSIRAvyIAKDVUCA8LadqJwttBsANO0nbGopi3QCcCJEB
+Tnkmc5D7Q0u88gMxS9hnCc0=
+=Xduh
+-----END PGP SIGNATURE-----
