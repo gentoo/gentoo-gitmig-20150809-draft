@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.35 2006/04/10 08:13:16 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.36 2006/04/10 13:23:20 chrb Exp $
+
+  10 Apr 2006; <chrb@gentoo.org> xen-3.0.2.ebuild:
+  fix pae, again, #124355
 
   10 Apr 2006; <chrb@gentoo.org> xen-3.0.2.ebuild:
   remove sed fix, #129429

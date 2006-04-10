@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.2 2006/04/10 08:11:31 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.3 2006/04/10 13:23:20 chrb Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -42,7 +42,7 @@ src_unpack() {
 src_compile() {
 	local myopt
 	use debug && myopt="${myopt} debug=y"
-	use pae && myopt="${myopt} XEN_TARGET_X86_PAE=y"
+	use pae && myopt="${myopt} pae=y"
 
 	if use custom-cflags; then
 		filter-flags -fPIE -fstack-protector
@@ -55,7 +55,7 @@ src_compile() {
 
 src_install() {
 	local myopt
-	use pae && myopt="${myopt} XEN_TARGET_X86_PAE=y"
+	use pae && myopt="${myopt} pae=y"
 
 	make DESTDIR=${D} ${myopt} install-xen \
 		|| die "install failed"
