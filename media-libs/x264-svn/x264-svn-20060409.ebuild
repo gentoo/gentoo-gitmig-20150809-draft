@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060409.ebuild,v 1.2 2006/04/10 17:42:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060409.ebuild,v 1.3 2006/04/10 23:41:42 flameeyes Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -27,6 +27,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch "${FILESDIR}/${PN}-20060302-nostrip.patch"
+	epatch "${FILESDIR}/${P}-gnustack.patch"
 }
 
 src_compile() {

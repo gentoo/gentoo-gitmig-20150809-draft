@@ -1,0 +1,30 @@
+Index: x264-svn/common/amd64/amd64inc.asm
+===================================================================
+--- x264-svn.orig/common/amd64/amd64inc.asm
++++ x264-svn/common/amd64/amd64inc.asm
+@@ -27,6 +27,10 @@ BITS 64
+ ; This is true in practice (since we never do any 64bit arithmetic on strides),
+ ; but is not guaranteed by the ABI.
+ 
++%ifidn __YASM_OBJFMT__,elf
++section ".note.GNU-stack" noalloc noexec nowrite progbits
++%endif
++
+ %macro cglobal 1
+     %ifdef PREFIX
+         global _%1
+Index: x264-svn/common/i386/i386inc.asm
+===================================================================
+--- x264-svn.orig/common/i386/i386inc.asm
++++ x264-svn/common/i386/i386inc.asm
+@@ -26,6 +26,10 @@ BITS 32
+ ; Macros and other preprocessor constants
+ ;=============================================================================
+ 
++%ifidn __OUTPUT_FORMAT__,elf
++section .note.GNU-stack noalloc noexec nowrite progbits
++%endif
++
+ ; Symbol prefix for C linkage
+ %macro cglobal 1
+     %ifdef PREFIX
