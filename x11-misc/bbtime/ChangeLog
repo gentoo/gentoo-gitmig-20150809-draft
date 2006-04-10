@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbtime
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbtime/ChangeLog,v 1.7 2005/01/18 15:47:08 ka0ttic Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbtime/ChangeLog,v 1.8 2006/04/10 06:57:10 pyrania Exp $
+
+  10 Apr 2006; <pyrania@gentoo.org> bbtime-0.1.5.ebuild:
+  Fixed HOMEPAGE, see bug #119174.
 
   18 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
   bbtime-0.1.5.ebuild:
