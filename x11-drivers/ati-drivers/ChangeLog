@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.30 2006/03/21 15:17:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.31 2006/04/10 12:38:49 chrb Exp $
+
+  10 Apr 2006; <chrb@gentoo.org> ati-drivers-8.23.7.ebuild:
+  Add warning about UseFastTLS and multi-threaded apps, #126805
 
   21 Mar 2006; Jory A. Pratt <anarchy@gentoo.org>
   +files/ati-drivers-8.23.7-noiommu.patch, ati-drivers-8.23.7.ebuild:

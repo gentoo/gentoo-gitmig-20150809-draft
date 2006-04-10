@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.23.7.ebuild,v 1.4 2006/03/21 15:17:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.23.7.ebuild,v 1.5 2006/04/10 12:38:49 chrb Exp $
 
 IUSE="opengl"
 
@@ -321,6 +321,10 @@ pkg_postinst() {
 	ewarn "the intended behaviour please add opengl to your useflag and issue"
 	ewarn "# emerge -Nu ati-drivers"
 	fi
+	echo
+	einfo "If you experience unexplained segmentation faults and kernel crashes"
+	einfo "with this driver and multi-threaded applications such as wine,"
+	einfo "set UseFastTLS in xorg.conf to either 0 or 1, but not 2."
 	# DRM module
 	linux-mod_pkg_postinst
 }
