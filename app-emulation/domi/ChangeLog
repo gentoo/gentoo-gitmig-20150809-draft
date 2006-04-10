@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/domi
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/domi/ChangeLog,v 1.1 2006/04/10 07:52:06 chrb Exp $
+
+*domi-20060406 (10 Apr 2006)
+
+  10 Apr 2006; Chris Bainbridge <chrb@gentoo.org> +files/domi.conf,
+  +metadata.xml, +domi-20060406.ebuild:
+  This package was submitted by Charles Bobo and Marlboro in bug #112407
+
