@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060401-r1.ebuild,v 1.1 2006/04/08 10:56:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060401-r2.ebuild,v 1.1 2006/04/10 23:07:46 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools
 
@@ -62,6 +62,9 @@ src_unpack() {
 	# take the sources from released baselayout
 	rm -rf "${WORKDIR}/${origbaselayout}/src/"{awk,filefuncs}
 	cp -r "${WORKDIR}/${origbaselayout}/src" "${S}"
+
+	cd "${S}/src"
+	epatch "${FILESDIR}/ssd-fbsd.patch"
 }
 
 src_compile() {
@@ -423,6 +426,11 @@ src_install() {
 
 	# Hack to fix bug 9849, continued in pkg_postinst
 	unkdir
+
+	# On FreeBSD rc-daemon.sh doesn't seem to behave correctly; provide useful
+	# working system until this is fixed by removing it and forcing use of s-s-d
+	# directly.
+	rm -f ${D}/lib/rcscripts/sh/rc-daemon.sh
 }
 
 # Support function for remapping old wireless dns vars
