@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/krename
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.26 2006/02/26 16:09:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.27 2006/04/10 00:49:16 cryos Exp $
+
+  10 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org> -krename-3.0.6.ebuild,
+  -krename-3.0.10.ebuild:
+  Pruned old versions.
 
   26 Feb 2006; Markus Rothe <corsair@gentoo.org> krename-3.0.11.ebuild:
   Added ~ppc64
