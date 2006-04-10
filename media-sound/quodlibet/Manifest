@@ -1,7 +1,5 @@
-MD5 a74c0eaa171dfe06bb3b4544aafcf5c7 ChangeLog 4443
+MD5 a89f7bbb91c450ef21b7bae3f81c1bdb ChangeLog 4795
 MD5 704b13a70e462cea62a9f57f66a7330e files/digest-quodlibet-0.11-r1 66
-MD5 9fe2cf94756025872c8fd235c6371c70 files/digest-quodlibet-0.19-r1 66
-MD5 9fe2cf94756025872c8fd235c6371c70 files/digest-quodlibet-0.19-r2 66
 MD5 1ec70a8114b68ed7ec71b3757c002ab8 files/digest-quodlibet-0.19.1 68
 MD5 1ec70a8114b68ed7ec71b3757c002ab8 files/digest-quodlibet-0.19.1-r1 68
 MD5 a1c9620cc4536cfdb260002b24be843a files/quodlibet-0.17.1-multilibfix.patch 303
@@ -11,7 +9,5 @@ MD5 b05966282b90b48bed11240b6b732138 files/quodlibet-0.19-oss.patch 518
 MD5 fd52db4ce4d1ea6d4c0fbe27c37fbe37 files/quodlibet-0.19.1-ctypes.patch 2540
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 80b6e1e0c43599a4b17d8b92e18ca3a9 quodlibet-0.11-r1.ebuild 867
-MD5 3c7815afb2a60a9b4e3a96c999d88b2c quodlibet-0.19-r1.ebuild 2131
-MD5 12ba54aebe60d2f22350a80a00f090ca quodlibet-0.19-r2.ebuild 2010
-MD5 fba0ec037a0d42684e77d8db7eda49c3 quodlibet-0.19.1-r1.ebuild 2367
+MD5 01808ec586ad8fcef6a72fb0aa86a680 quodlibet-0.19.1-r1.ebuild 2573
 MD5 aeac42d223bfc8deec0cf06e71404e37 quodlibet-0.19.1.ebuild 2130

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.19.1-r1.ebuild,v 1.4 2006/04/06 20:10:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.19.1-r1.ebuild,v 1.5 2006/04/10 22:31:38 tcort Exp $
 
 inherit eutils python
 
@@ -72,6 +72,12 @@ pkg_postinst() {
 		einfo ""
 		einfo "To be able to play mp3 files, please add mad useflag."
 	fi
+
+	einfo ""
+	einfo "Installing Quod Libet from an ebuild is not supported"
+	einfo "upstream. If you encounter any problems, file bugs on"
+	einfo "bugs.gentoo.org. DO NOT USE THE UPSTREAM BUG SYSTEM."
+	einfo ""
 }
 
 pkg_postrm() {
