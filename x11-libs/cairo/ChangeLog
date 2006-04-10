@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.63 2006/04/09 19:51:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.64 2006/04/10 14:49:25 wolf31o2 Exp $
+
+  10 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> cairo-1.0.4.ebuild:
+  Stable on x86 wrt bug #127323.
 
   09 Apr 2006; Markus Rothe <corsair@gentoo.org> cairo-1.0.4.ebuild:
   Stable on ppc64; bug #127323
