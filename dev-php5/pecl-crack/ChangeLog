@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-crack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-crack/ChangeLog,v 1.9 2006/02/03 17:32:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-crack/ChangeLog,v 1.10 2006/04/10 21:26:08 blubb Exp $
+
+  10 Apr 2006; Simon Stelling <blubb@gentoo.org> pecl-crack-0.3.ebuild:
+  added ~amd64 keyword
 
   03 Feb 2006; <nixnut@gentoo.org> pecl-crack-0.3.ebuild:
   Added ~ppc keyword. bug 121024
