@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/exiftool
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.1 2006/04/10 23:32:33 nattfodd Exp $
+
+*exiftool-6.13 (10 Apr 2006)
+
+  10 Apr 2006; Alexandre Buisse <nattfodd@gentoo.org> +metadata.xml,
+  +exiftool-6.13.ebuild:
+  Initial import. This is a graphics package, but it includes some perl dark
+  magic so belongs to both herds.
+
