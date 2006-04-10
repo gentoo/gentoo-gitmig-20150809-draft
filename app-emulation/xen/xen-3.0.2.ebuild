@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.1 2006/04/09 21:24:11 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.2 2006/04/10 08:11:31 chrb Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -36,8 +36,6 @@ src_unpack() {
 			-e 's/CFLAGS\(.*\)=\(.*\)-g3*\s\(.*\)/CFLAGS\1=\2 \3/' \
 			-e 's/CFLAGS\(.*\)=\(.*\)-O2\(.*\)/CFLAGS\1=\2\3/' \
 			-i {} \;
-		# odd fixes
-		sed -e "s/int mode/int mode=-1/" -i ${S}/tools/misc/xc_shadow.c
 	fi
 }
 
