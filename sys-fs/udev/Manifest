@@ -106,9 +106,9 @@ SHA256 1f83a3594b63ed2a298c6d45a8c0201fe54a48d3cb4f988fc129bb8e304998e9 files/ud
 MD5 14a2eadeef22ce407dcc3cfa046e487e files/udev-start-079.sh 4391
 RMD160 9e887518ac6a58f9693c4b3a10c06713c68900bd files/udev-start-079.sh 4391
 SHA256 3883ca94546f7b3b0c57e45489a70ec6bf2075c9d27c44999221d59cd89d35e7 files/udev-start-079.sh 4391
-MD5 34bffd3d9d7d1a29ec0ec99f5cfdbfd2 files/udev-start-089.sh 4388
-RMD160 ee1fe69ba1d99eef87ebc5e7b398f5995bcdceec files/udev-start-089.sh 4388
-SHA256 060e1ee196c00ada13cc92b5f6eeb8cb83f70793d8d16a055081f1a8bc4065e6 files/udev-start-089.sh 4388
+MD5 b42c25d045a1e49c9276c3dabdace9bc files/udev-start-089.sh 4431
+RMD160 27d733e545a1b1d16b88d20c70e607dcaea833d1 files/udev-start-089.sh 4431
+SHA256 a47ebeae0ee554f3620119c575490bc1f2f905c75cb15fbe41ea8f1d631cea91 files/udev-start-089.sh 4431
 MD5 622f085dff7fb6138f3e2c992d569593 files/udev-start.sh 2460
 RMD160 97afa40bab5aed0106e3a3b065ae480ce329e11c files/udev-start.sh 2460
 SHA256 0527b03ac666dd9e4c94811b10d499f04b3f6f8ae2f03e6460727c1b570d985d files/udev-start.sh 2460
@@ -247,7 +247,7 @@ SHA256 75ec8b137530c984a027f9ba669591052b7957a4d58361bce0618a7f5b0669d9 udev-089
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEOUhe2+ySkm8kpY0RAtChAJ4hm9KY/uaGPmHfwtIN4jZ1yR/d4QCeJwr9
-VGPjW1smCR+qmqpMAH321j0=
-=jCPw
+iD8DBQFEOc9u2+ySkm8kpY0RAgt+AJ4t0u68YLHGeB+eRwwN4Yb5kyThoACdGLZg
+Zx7zEyo32AbUBkzMcbeb4K0=
+=g1dw
 -----END PGP SIGNATURE-----

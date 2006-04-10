@@ -79,7 +79,9 @@ seed_dev() {
 	ebegin "Seeding /dev with needed nodes"
 
 	# copy over any persistant things
-	cp --preserve=all --recursive --update /lib/udev/devices/* /dev
+	if [[ -d /lib/udev/devices ]] ; then
+		cp --preserve=all --recursive --update /lib/udev/devices/* /dev
+	fi
 
 	# Not provided by sysfs but needed
 	ln -snf /proc/self/fd /dev/fd
