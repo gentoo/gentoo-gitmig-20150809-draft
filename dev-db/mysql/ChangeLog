@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.312 2006/03/24 16:03:07 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.313 2006/04/10 21:34:03 vivo Exp $
+
+*mysql-5.0.19-r1 (10 Apr 2006)
+*mysql-4.1.18-r61 (10 Apr 2006)
+*mysql-4.1.14-r1 (10 Apr 2006)
+
+  10 Apr 2006; Francesco Riosa <vivo@gentoo.org> -mysql-4.1.14.ebuild,
+  +mysql-4.1.14-r1.ebuild, -mysql-4.1.18-r60.ebuild,
+  +mysql-4.1.18-r61.ebuild, -mysql-5.0.18-r60.ebuild, -mysql-5.0.19.ebuild,
+  +mysql-5.0.19-r1.ebuild, mysql-5.1.7_beta.ebuild:
+  fix Bug #128713 dev-db/mysql: Query Logging Bypass Vulnerability
+  (CVE-2006-0903)
+  Raphael Marichez has ported the upstream patch to 4.1.14, thanks!
 
   24 Mar 2006; Francesco Riosa <vivo@gentoo.org> mysql-4.1.14.ebuild:
   Fix Bug 111073 also for stable ebuilds
