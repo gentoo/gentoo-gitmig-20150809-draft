@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 faa6f2e0a6f8824099cc02fa8a760408 ChangeLog 6998
 MD5 e14e67d33b928cfcc3be483f8e2547c8 files/digest-xfprint-4.2.1 65
 MD5 1f1fb819d071d1344ba00d62d36dcf1d files/digest-xfprint-4.2.2 65
@@ -8,3 +11,10 @@ MD5 6af0235a577815460d6bdaea94110ad2 xfprint-4.2.1.ebuild 446
 MD5 c8052bd66e412ca0e47f282b1f54219f xfprint-4.2.2-r1.ebuild 534
 MD5 d70503e91eab97c90d511af02285e579 xfprint-4.2.2.ebuild 433
 MD5 268ad3398ef4f73f9ad7ca5ef887438e xfprint-4.2.3.ebuild 532
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEOrtBKRy60XGEcJIRAu/ZAKCH3G/i3KXaeEpND36txqqxW2ho7QCfc/vf
+ks8s1lPO2YG6QbJBH0RGIRc=
+=AqKl
+-----END PGP SIGNATURE-----
