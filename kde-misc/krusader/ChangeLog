@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.36 2006/04/03 00:23:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.37 2006/04/10 00:52:22 cryos Exp $
+
+  10 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org> -krusader-1.60.0.ebuild,
+  -krusader-1.60.1.ebuild, -krusader-1.60.1-r1.ebuild,
+  -krusader-1.70.0_beta2.ebuild, krusader-1.70.0.ebuild:
+  Marked stable on amd64, pruned old versions.
 
   03 Apr 2006; Jason Wever <weeve@gentoo.org> krusader-1.70.0.ebuild:
   Stable on SPARC.
