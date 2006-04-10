@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.17-r1.ebuild,v 1.4 2006/04/09 22:27:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.17-r1.ebuild,v 1.5 2006/04/10 02:05:14 vapier Exp $
 
 inherit distutils libtool
 
@@ -22,6 +22,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-init-mem.patch #126012
 	epatch "${FILESDIR}"/${PN}-4.15-libtool.patch #99593
+
+	# file includes left overs from older libtool versions
+	rm ltconfig || die
 
 	elibtoolize
 
