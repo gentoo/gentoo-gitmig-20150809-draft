@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vserver-utils/vserver-utils-1.0.3.ebuild,v 1.1 2006/01/22 18:51:58 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vserver-utils/vserver-utils-1.0.3.ebuild,v 1.2 2006/04/10 12:03:22 phreak Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -46,5 +46,5 @@ src_install() {
 
 	keepdir /var/lock/vservers
 
-	dodoc README ChangeLog AUTHORS INSTALL
+	dodoc README ChangeLog AUTHORS
 }
