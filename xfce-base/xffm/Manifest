@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 704172f5e7e9a1d15d6ab1e71d764462 ChangeLog 6676
 MD5 17d63062c07dc2d9b26b9e0fbcc4c5db files/digest-xffm-4.2.1 63
 MD5 0b27bca27a4a9346415ea2f3cfa8ec5b files/digest-xffm-4.2.2 63
@@ -9,3 +12,10 @@ MD5 8c0e95fbe0e57dd74da3f7119ee40019 xffm-4.2.1.ebuild 529
 MD5 f3963081b0ddd901205355c2d0b3efea xffm-4.2.2-r1.ebuild 615
 MD5 46b214d13ba23141abd861a5f020bbf2 xffm-4.2.2.ebuild 525
 MD5 5cf9547dfa0d83122060d29f032bfed1 xffm-4.2.3.ebuild 613
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEOry6KRy60XGEcJIRAsb+AKCDvuNta70nnm/C0uBglOVRqP0EWgCghtbM
+F+HBanTS5SXmP6/yAg5Egvg=
+=cCzI
+-----END PGP SIGNATURE-----
