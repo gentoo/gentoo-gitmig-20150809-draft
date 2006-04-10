@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.11 2006/02/01 03:46:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.12 2006/04/10 00:05:26 vapier Exp $
 
 # Format of /etc/env.d/binutils/:
 #  config-TARGET:	CURRENT=version for TARGET
@@ -11,8 +11,9 @@ cd /
 
 trap ":" INT QUIT TSTP
 
+argv0=${0##*/}
 source /etc/init.d/functions.sh || {
-	echo "$0: Could not source /etc/init.d/functions.sh!"
+	echo "${argv0}: Could not source /etc/init.d/functions.sh!" 1>&2
 	exit 1
 }
 umask 022
@@ -167,7 +168,7 @@ switch_profile() {
 
 uninstall_target() {
 	if [[ ${TARGET} == ${HOST} ]] ; then
-		eerror "$0: Refusing to uninstall native binutils"
+		eerror "${argv0}: Refusing to uninstall native binutils"
 		exit 1
 	fi
 
@@ -179,7 +180,7 @@ uninstall_target() {
 		rm -f "${ENV_D}"/${PROFILE}
 	done
 	if [[ -z ${PROFILE} ]] && [[ ! -e ${ENV_D}/config-${TARGET} ]] ; then
-		eerror "$0: No profiles exist for '${TARGET}'"
+		eerror "${argv0}: No profiles exist for '${TARGET}'"
 		exit 1
 	fi
 
@@ -209,14 +210,14 @@ uninstall_target() {
 
 get_current_profile() {
 	if [[ ! -f ${ENV_D}/config-${PROFILE} ]] ; then
-		eerror "$0: No binutils profile is active!"
+		eerror "${argv0}: No binutils profile is active!"
 		return 1
 	fi
 
 	source "${ENV_D}/config-${PROFILE}"
 
 	if [[ -z ${CURRENT} ]] ; then
-		eerror "$0: No binutils profile is active!"
+		eerror "${argv0}: No binutils profile is active!"
 		return 1
 	fi
 
@@ -304,7 +305,7 @@ while [[ $# -gt 0 ]] ; do
 			exit 0
 			;;
 		-v|--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.11 2006/02/01 03:46:46 vapier Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.12 2006/04/10 00:05:26 vapier Exp $"
 			cvsver=${cvsver##*binutils-config-}
 			echo "binutils-config-${cvsver%%,v *}"
 			exit 0
@@ -328,7 +329,7 @@ while [[ $# -gt 0 ]] ; do
 			;;
 		*)
 			if [[ -n ${PROFILE} ]] && [[ ${PROFILE} != "current" ]] ; then
-				eerror "$0: Too many arguments!  Run $0 without parameters for help."
+				eerror "${argv0}: Too many arguments!  Run ${argv0} without parameters for help."
 				exit 1
 			fi
 
@@ -356,7 +357,7 @@ while [[ $# -gt 0 ]] ; do
 					if [[ -f ${ENV_D}/${HOST}-${x} ]] ; then
 						x=${HOST}-${x}
 					else
-						eerror "$0: Could not locate '$x' in '${ENV_D}/'!"
+						eerror "${argv0}: Could not locate '$x' in '${ENV_D}/'!"
 						exit 1
 					fi
 				fi

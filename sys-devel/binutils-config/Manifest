@@ -7,9 +7,9 @@ SHA256 396de175158f1a4c772ccda60e1e6db2b3eebb78562b01bacec6ed9b429e4395 ChangeLo
 MD5 bdcfb966ea96cc8dd990649559be472d binutils-config-1.8-r6.ebuild 575
 RMD160 00ea7c09d0b293d9c0091a5ae407d53a022e1ba0 binutils-config-1.8-r6.ebuild 575
 SHA256 266e308d5e79509e845d1148fae6a022cadf0a0cc31bfc23ac65806feff8fb83 binutils-config-1.8-r6.ebuild 575
-MD5 641a1f247a290bbd2a1bdfa0fa7e0a5e files/binutils-config-1.8 9987
-RMD160 f243b9776dc485758798d2461c254a6428b65a51 files/binutils-config-1.8 9987
-SHA256 d0ed8818eac3a629c0affb08188f9dcc10e3269711db025f410afabea7cdf965 files/binutils-config-1.8 9987
+MD5 43c7ead858241a2576a39a7e5849a98c files/binutils-config-1.8 10055
+RMD160 71ecfff1daeb1b1729c89d2d0aa3030e3cf2c0e1 files/binutils-config-1.8 10055
+SHA256 8de6a37984f851b549ebf640b9aeddfffbde51010c50fb877bd8ec7f5ce05f48 files/binutils-config-1.8 10055
 MD5 953efbc2a688428dfb75ecfa3c2d3d43 files/binutils-config.8 2989
 RMD160 afb26717c9466456bbbdf6a3d6b93aeb63ff9416 files/binutils-config.8 2989
 SHA256 ffc462de3eaa865f77f00e36275a0a9b0b51782d9d4d5fcfad18583a13adf6e5 files/binutils-config.8 2989
@@ -22,7 +22,7 @@ SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEK+I6AiZjviIA2XgRAq0CAKCy9GDutqhiLyof1bDkJqcx+5R/OgCgiVcb
-enVJ9/rPKlltWbXIgozga/s=
-=63J7
+iD8DBQFEOaGZ2+ySkm8kpY0RAsUpAJwKY6RtVX+Wvd7u5tWGLv2tbbyFGQCfclEq
+bKRoLjUjcWV/ewFy/3HX5yY=
+=d8pk
 -----END PGP SIGNATURE-----
