@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.48 2006/01/30 20:52:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.49 2006/04/10 07:27:36 pyrania Exp $
+
+  10 Apr 2006; <pyrania@gentoo.org> blackbox-0.70.0.ebuild:
+  LICENCE change. See bug #123375.
 
   30 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> blackbox-0.70.0.ebuild:
   Fix modular-X deps.
