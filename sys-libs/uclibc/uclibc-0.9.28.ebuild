@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.21 2006/03/15 01:47:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.22 2006/04/10 23:21:01 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -51,27 +51,13 @@ fi
 
 S=${WORKDIR}/${MY_P}
 
-alt_kprefix() {
+alt_build_kprefix() {
 	if [[ ${CBUILD} == ${CHOST} && ${CTARGET} == ${CHOST} ]] \
 	   || [[ -n ${UCLIBC_AND_GLIBC} ]]
 	then
 		echo /usr
 	else
-		echo /usr/${CTARGET}
-	fi
-}
-alt_prefix() {
-	if [[ ${CTARGET} == ${CHOST} ]] ; then
-		echo /usr
-	else
-		echo /usr/${CTARGET}
-	fi
-}
-alt_rprefix() {
-	if [[ ${CTARGET} == ${CHOST} ]] ; then
-		echo /
-	else
-		echo /usr/${CTARGET}/
+		echo /usr/${CTARGET}/usr
 	fi
 }
 just_headers() {
@@ -150,9 +136,9 @@ src_unpack() {
 	check_cpu_opts
 
 	echo
-	einfo "Runtime Prefix: $(alt_rprefix)"
-	einfo "Kernel Prefix:  $(alt_kprefix)"
-	einfo "Devel Prefix:   $(alt_prefix)"
+	einfo "Runtime Prefix: /"
+	einfo "Devel Prefix:   /usr"
+	einfo "Kernel Prefix:  $(alt_build_kprefix)"
 	einfo "CBUILD:         ${CBUILD}"
 	einfo "CHOST:          ${CHOST}"
 	einfo "CTARGET:        ${CTARGET}"
@@ -342,10 +328,10 @@ src_unpack() {
 	type -p ${cross}ar > /dev/null || cross=""
 	sed -i \
 		-e "/^CROSS_COMPILER_PREFIX/s:=.*:=\"${cross}\":" \
-		-e "/^KERNEL_SOURCE/s:=.*:=\"$(alt_kprefix)\":" \
-		-e "/^SHARED_LIB_LOADER_PREFIX/s:=.*:=\"$(alt_rprefix)$(get_libdir)\":" \
-		-e "/^DEVEL_PREFIX/s:=.*:=\"$(alt_prefix)\":" \
-		-e "/^RUNTIME_PREFIX/s:=.*:=\"$(alt_rprefix)\":" \
+		-e "/^KERNEL_SOURCE/s:=.*:=\"$(alt_build_kprefix)\":" \
+		-e "/^SHARED_LIB_LOADER_PREFIX/s:=.*:=\"/$(get_libdir)\":" \
+		-e "/^DEVEL_PREFIX/s:=.*:=\"/usr\":" \
+		-e "/^RUNTIME_PREFIX/s:=.*:=\"/\":" \
 		.config || die
 
 	yes "" 2> /dev/null | make -s oldconfig > /dev/null || die "could not make oldconfig"
@@ -408,24 +394,26 @@ src_test() {
 }
 
 src_install() {
+	local sysroot=${D}
+	[[ ${CHOST} != ${CTARGET} ]] && sysroot="${sysroot}/usr/${CTARGET}"
+
 	local target="install"
 	just_headers && target="install_dev"
-	make PREFIX="${D}" ${target} || die "install failed"
+	make DESTDIR="${sysroot}" ${target} || die "install failed"
 
 	# remove files coming from kernel-headers
-	rm -rf "${D}"$(alt_prefix)/include/{linux,asm*}
+	rm -rf "${sysroot}"/usr/include/{linux,asm*}
 
 	# Make sure we install the sys-include symlink so that when 
 	# we build a 2nd stage cross-compiler, gcc finds the target 
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
-		dosym include $(alt_prefix)/sys-include
-		dosym . $(alt_prefix)/usr
+		dosym usr/include /usr/${CTARGET}/sys-include
 		return 0
 	fi
 
 	if [[ ${CHOST} == *-uclibc ]] ; then
-		make PREFIX="${D}" install_utils || die "install-utils failed"
+		make DESTDIR="${D}" install_utils || die "install-utils failed"
 		dobin extra/scripts/getent
 	fi
 
