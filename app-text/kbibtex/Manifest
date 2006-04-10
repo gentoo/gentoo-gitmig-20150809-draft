@@ -1,15 +1,31 @@
-MD5 e39a37a18adc680c1867ed77e3a34820 ChangeLog 1407
-RMD160 ccf73a1fa5c3ea8a338d85bbf90b0b63b276a718 ChangeLog 1407
-SHA256 b33238fbad2fe22433956c5f26bbb341e53730e12b8307012a87c66234b2ca13 ChangeLog 1407
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9cfe4463fd6025321f1d400677fde979 ChangeLog 1543
+RMD160 35faddf9e2d14eed84382fec35a9624d7e5084f9 ChangeLog 1543
+SHA256 a8e05b8d2e5300a8f876304426513c215e9d3ae4cee21f9ed463b957e5c1afa5 ChangeLog 1543
 MD5 28265cf98171e85a67caa02a23491532 files/digest-kbibtex-0.1.3 66
 RMD160 d00ced64157799820c75e0abc78a7a01893ba304 files/digest-kbibtex-0.1.3 66
 SHA256 b12f5673fa722b093ce2f43b449b3414af20d9454e1475d4bab77474e57169ae files/digest-kbibtex-0.1.3 66
+MD5 d74750ce9e69e3e13c8b658dc991c34a files/digest-kbibtex-0.1.4_beta4 253
+RMD160 c1bbb57f941e1499c09cab97bded6574c7641c93 files/digest-kbibtex-0.1.4_beta4 253
+SHA256 356428f32b9a851cdcbc627c2e6f9a06bbd76b98ec85e77aabc494b2589545da files/digest-kbibtex-0.1.4_beta4 253
 MD5 935b0bf61cfabd68d0e67d54686350a5 files/kbibtex-gcc-4.1.patch 405
 RMD160 7636098f7b01e890f6c58fcfd0bd442bc1ae7bba files/kbibtex-gcc-4.1.patch 405
 SHA256 ea44b09cdf7cd9892b59dca7d8502225ac94bd04989ae61a86ee059946da3324 files/kbibtex-gcc-4.1.patch 405
 MD5 b528abe3bad6d752dede0c61bf986b4a kbibtex-0.1.3.ebuild 684
 RMD160 f9e4a9dabdaffdfc05363d744099b27194805495 kbibtex-0.1.3.ebuild 684
 SHA256 fffa87c3f16b18542d96872f625849bfcf2323b8c4e6be2143c3fd40e6b19349 kbibtex-0.1.3.ebuild 684
+MD5 0fb2c56c6771afac34db399871d8793b kbibtex-0.1.4_beta4.ebuild 660
+RMD160 dca92ab918f38ae8f4b4bc414d22a1d39ab6660c kbibtex-0.1.4_beta4.ebuild 660
+SHA256 1cae60df3d45ff6c005892027c13379036ed90eafd2c2f0360b0fe8e706fc008 kbibtex-0.1.4_beta4.ebuild 660
 MD5 636e395cdc2eb9b72ab00fa7ea45ad0f metadata.xml 408
 RMD160 5ef8f5474f5f8f6120ad041015ba55ec8d890ca9 metadata.xml 408
 SHA256 46b1b928281ac18a06115173b246580b95e0cc9724ec7e9a9dfc757925bfb0b6 metadata.xml 408
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEOaC2ntT9W3vfTuoRAgUnAJ4ycRjw9XsOOb2r+wc4/AL3sSSF9ACfYhfC
+wC9qaXnTKBQeSnVQewo/6hw=
+=WZYK
+-----END PGP SIGNATURE-----
