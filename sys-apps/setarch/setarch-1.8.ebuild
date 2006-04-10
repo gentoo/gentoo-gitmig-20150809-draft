@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setarch/setarch-1.8.ebuild,v 1.3 2006/02/21 05:42:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setarch/setarch-1.8.ebuild,v 1.4 2006/04/10 23:08:16 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="-* amd64 ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 RDEPEND="!sys-apps/linux32
