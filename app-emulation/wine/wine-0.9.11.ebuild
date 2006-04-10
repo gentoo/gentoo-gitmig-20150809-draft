@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.11.ebuild,v 1.3 2006/04/09 17:49:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.11.ebuild,v 1.4 2006/04/10 23:07:01 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/wine-${PV}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="-* -amd64 ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="alsa arts cups debug esd gif glut jack jpeg lcms ldap nas ncurses opengl oss scanner truetype xml X"
 RESTRICT="test" #72375
 
@@ -59,9 +59,8 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
-pkg_setup() {
-	use amd64 && has_multilib_profile && export ABI=x86
-}
+# this will not build as 64bit code
+export ABI=x86
 
 src_unpack() {
 	unpack wine-${PV}.tar.bz2
@@ -71,6 +70,14 @@ src_unpack() {
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
 	epatch "${FILESDIR}"/wine-gentoo-no-ssp.patch #66002
 	sed -i '/^MimeType/d' tools/wine.desktop || die #117785
+
+	# disable X include / lib searching as we setup our toolchain
+	# to properly locate the files ... otherwise, it'll use the host
+	# `xmkmf` binary which reports 'lib64' on amd64.  boo!
+	sed -i \
+		-e '/^x_includes=/s:=NONE:=:' \
+		-e '/^x_libraries=/s:=NONE:=:' \
+		configure || die
 }
 
 config_cache() {
