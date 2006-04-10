@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-pear/horde-pear-1.3-r3.ebuild,v 1.12 2005/06/18 10:44:12 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-pear/horde-pear-1.3-r3.ebuild,v 1.13 2006/04/10 22:49:59 vapier Exp $
 
 DESCRIPTION="Meta package for the PEAR packages required by Horde."
 HOMEPAGE="http://pear.php.net/"
@@ -15,6 +15,7 @@ IUSE=""
 S=${WORKDIR}
 
 RDEPEND="dev-php/PEAR-Log
+	dev-php/PEAR-Net_Sieve
 	dev-php/PEAR-Mail_Mime
 	>=dev-php/PEAR-DB-1.6.0
 	dev-php/PEAR-File
