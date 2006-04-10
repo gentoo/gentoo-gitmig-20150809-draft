@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfcalendar
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfcalendar/ChangeLog,v 1.46 2005/12/09 21:10:10 dostrow Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfcalendar/ChangeLog,v 1.47 2006/04/10 00:46:11 jer Exp $
+
+  10 Apr 2006; Jeroen Roovers <jer@gentoo.org> xfcalendar-4.2.3.ebuild:
+  Stable on hppa (bug #129371).
 
 *xfcalendar-4.2.3 (09 Dec 2005)
 
