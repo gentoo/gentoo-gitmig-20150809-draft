@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.264 2006/03/09 22:32:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.265 2006/04/10 14:49:58 chrb Exp $
+
+*postgresql-8.1.3-r1 (10 Apr 2006)
+
+  10 Apr 2006; <chrb@gentoo.org> +postgresql-8.1.3-r1.ebuild:
+  Re-add threads support
 
   09 Mar 2006; Aron Griffis <agriffis@gentoo.org> postgresql-8.0.7.ebuild:
   Mark 8.0.7 stable on ia64
