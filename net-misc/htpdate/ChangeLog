@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/htpdate
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.19 2006/04/09 08:12:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.20 2006/04/10 00:10:58 ticho Exp $
+
+  10 Apr 2006; Andrej Kacian <ticho@gentoo.org> htpdate-0.9.0.ebuild:
+  Stable on x86, bug #129317.
 
   09 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   htpdate-0.9.0.ebuild:
