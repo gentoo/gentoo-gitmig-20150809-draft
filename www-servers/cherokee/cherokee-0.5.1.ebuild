@@ -1,17 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.29.ebuild,v 1.3 2006/01/19 07:25:30 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.5.1.ebuild,v 1.1 2006/04/10 12:27:40 bass Exp $
 
 inherit eutils pam
 
+NAME=cherokee
+S="${WORKDIR}/${NAME}-${PV}"
+
 DESCRIPTION="An extremely fast and tiny web server."
-SRC_URI="http://www.0x50.org/download/${PV%.*}/${PV}/${P}.tar.gz"
+SRC_URI="http://www.0x50.org/download/${PV%.*}/${PV}/${NAME}-${PV}.tar.gz"
 HOMEPAGE="http://www.0x50.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
-IUSE="ipv6 ssl gnutls static doc pam"
+KEYWORDS="~x86 ~ppc ~sparc"
+IUSE="ipv6 ssl gnutls static doc pam fastcgi scgi"
 
 RDEPEND=">=sys-libs/zlib-1.1.4-r1
 	gnutls? ( net-libs/gnutls )
@@ -65,6 +68,14 @@ src_compile() {
 		myconf="${myconf} --disable-static"
 	fi
 
+	if use fastcgi ; then
+		myconf="${myconf} --enable-fcgi"
+	fi
+
+	if use scgi ; then
+		myconf="${myconf} --enable-scgi"
+	fi
+
 	econf \
 		${myconf} \
 		$(use_enable pam) \
@@ -96,4 +107,10 @@ src_install () {
 pkg_postinst() {
 	enewgroup cherokee
 	enewuser cherokee -1 -1 /var/www/localhost cherokee
+	echo
+	einfo "Since version 0.4.30 /etc/cherokee/mime.conf is deprecated so"
+	einfo "you need to update your cherokee.conf with: "
+	einfo "		""MimeFile /etc/cherokee/mime.types"
+	einfo "		""MimeFile /etc/cherokee/mime.compression.types"
+	echo
 }
