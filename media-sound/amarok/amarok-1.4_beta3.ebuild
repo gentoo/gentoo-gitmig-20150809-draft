@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4_beta3.ebuild,v 1.1 2006/04/10 02:28:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4_beta3.ebuild,v 1.2 2006/04/10 14:54:48 flameeyes Exp $
 
 LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja km
 ko lt nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz xx
@@ -28,15 +28,13 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="aac arts exscalibar flac gstreamer kde mysql noamazon opengl postgres xine
+IUSE="aac exscalibar flac gstreamer kde mysql noamazon opengl postgres
 xmms visualization musicbrainz ipod akode real ifp"
 # kde: enables compilation of the konqueror sidebar plugin
 
 DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase )
 		|| ( kde-base/kdemultimedia-kioslaves kde-base/kdemultimedia ) )
-	arts? ( kde-base/arts
-	        || ( kde-base/kdemultimedia-arts kde-base/kdemultimedia ) )
-	xine? ( >=media-libs/xine-lib-1_rc4 )
+	>=media-libs/xine-lib-1_rc4
 	gstreamer? ( =media-libs/gstreamer-0.10*
 		=media-libs/gst-plugins-base-0.10* )
 	musicbrainz? ( >=media-libs/tunepimp-0.3 )
@@ -62,20 +60,6 @@ DEPEND="${DEPEND}
 
 need-kde 3.3
 
-pkg_setup() {
-	if ! use xine && ! use gstreamer && ! use akode && ! use real; then
-		eerror "amaroK needs either aRts (deprecated), Xine (preferred) or GStreamer to work,"
-		eerror "please try again enabling at least one of akode, xine, gstreamer or real"
-		eerror "useflags."
-		die
-	fi
-
-	# check whether kdelibs was compiled with arts support
-	kde_pkg_setup
-
-	append-flags -fno-inline
-}
-
 src_unpack() {
 	kde_src_unpack
 
@@ -86,9 +70,10 @@ src_unpack() {
 }
 
 src_compile() {
+	append-flags -fno-inline
+
 	# Extra, unsupported engines are forcefully disabled.
-	local myconf="$(use_with arts) $(use_with xine)
-				  $(use_with gstreamer gstreamer10)
+	local myconf="$(use_with gstreamer gstreamer10)
 	              $(use_enable mysql) $(use_enable postgres postgresql)
 	              $(use_with opengl) $(use_with xmms)
 	              $(use_with visualization libvisual)
@@ -100,6 +85,7 @@ src_compile() {
 				  $(use_with aac mp4v2)
 				  $(use_with real helix)
 				  $(use_with ifp)
+				  --with-xine
 	              --without-mas
 	              --without-nmm"
 
