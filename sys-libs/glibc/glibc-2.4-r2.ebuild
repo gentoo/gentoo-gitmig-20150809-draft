@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.3 2006/04/02 23:02:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.4 2006/04/10 03:35:22 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,7 +27,7 @@ GLIBC_MANPAGE_VERSION="none"
 GLIBC_INFOPAGE_VERSION="none"
 
 # Gentoo patchset
-PATCH_VER="1.4"
+PATCH_VER="1.5"
 
 # Fedora addons (like c_stubs)
 # sniped from RHEL's glibc-2.4-4.src.rpm
@@ -327,28 +327,28 @@ toolchain-glibc_src_install() {
 		MYMAINBUILDDIR=build-${ABI}-${CTARGET}-nptl
 	fi
 
+	local install_root=${D}
+	if is_crosscompile ; then
+		install_root="${install_root}/usr/${CTARGET}"
+	fi
 	if want_linuxthreads ; then
 		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-linuxthreads
 		einfo "Installing GLIBC ${ABI} with linuxthreads ..."
 		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
-			install_root="${D}" \
+			install_root="${install_root}" \
 			install || die
 	else
 		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-nptl
 		einfo "Installing GLIBC ${ABI} with NPTL ..."
 		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
-			install_root="${D}" \
+			install_root="${install_root}" \
 			install || die
 	fi
 
 	if is_crosscompile ; then
 		# punt all the junk not needed by a cross-compiler
-		rm -rf "${D}"/{,usr/}{bin,etc,sbin,share} "${D}"/usr/*/*/{gconv,misc}
-	else
-		# zoneinfo stuff is now provided by the timezone-data package
-		rm -rf "${D}"/usr/share/zoneinfo
-		rm -f "${D}"/usr/bin/tzselect
-		rm -f "${D}"/usr/sbin/{zic,zdump}
+		cd "${D}"/usr/${CTARGET} || die
+		rm -rf ./{,usr/}{bin,etc,sbin,share} ./{,usr/}*/{gconv,misc}
 	fi
 
 	if want_linuxthreads && want_nptl ; then
@@ -407,8 +407,18 @@ toolchain-glibc_src_install() {
 	# a 2nd stage cross-compiler, gcc finds the target system
 	# headers correctly.  See gcc/doc/gccinstall.info
 	if is_crosscompile ; then
-		dosym include /usr/${CTARGET}/sys-include
-		dosym . /usr/${CTARGET}/usr
+		dosym usr/include /usr/${CTARGET}/sys-include
+
+		# When cross-compiling for a non-multilib setup, make sure we have
+		# lib and a proper symlink setup
+		if ! use multilib && [[ $(get_libdir) != "lib" ]] ; then
+			cd "${D}"$(alt_libdir)/..
+			mv $(get_libdir) lib || die
+			ln -s lib $(get_libdir) || die
+			cd "${D}"$(alt_usrlibdir)/..
+			mv $(get_libdir) lib || die
+			ln -s lib $(get_libdir) || die
+		fi
 		return 0
 	fi
 
@@ -501,8 +511,7 @@ toolchain-glibc_headers_install() {
 	# Make sure we install the sys-include symlink so that when 
 	# we build a 2nd stage cross-compiler, gcc finds the target 
 	# system headers correctly.  See gcc/doc/gccinstall.info
-	dosym include /usr/${CTARGET}/sys-include
-	dosym . /usr/${CTARGET}/usr
+	dosym usr/include /usr/${CTARGET}/sys-include
 }
 
 toolchain-glibc_pkg_postinst() {
@@ -571,7 +580,7 @@ toolchain-glibc_pkg_postinst() {
 alt_headers() {
 	if [[ -z ${ALT_HEADERS} ]] ; then
 		if is_crosscompile ; then
-			ALT_HEADERS="/usr/${CTARGET}/include"
+			ALT_HEADERS="/usr/${CTARGET}/usr/include"
 		else
 			ALT_HEADERS="/usr/include"
 		fi
@@ -596,7 +605,7 @@ alt_libdir() {
 
 alt_usrlibdir() {
 	if is_crosscompile ; then
-		echo /usr/${CTARGET}/$(get_libdir)
+		echo /usr/${CTARGET}/usr/$(get_libdir)
 	else
 		echo /usr/$(get_libdir)
 	fi
@@ -929,16 +938,15 @@ glibc_do_configure() {
 		--without-gd
 		--with-headers=$(alt_build_headers)
 		--prefix=/usr
-		--includedir=$(alt_headers)
-		--libdir=$(alt_usrlibdir)
+		--libdir=/usr/$(get_libdir)
 		--mandir=/usr/share/man
 		--infodir=/usr/share/info
-		--libexecdir=$(alt_usrlibdir)/misc/glibc
+		--libexecdir=/usr/$(get_libdir)/misc/glibc
 		${EXTRA_ECONF}"
 
 	# There is no configure option for this and we need to export it
 	# since the glibc build will re-run configure on itself
-	export libc_cv_slibdir=$(alt_libdir)
+	export libc_cv_slibdir=/$(get_libdir)
 
 	has_version app-admin/eselect-compiler || export CC="$(tc-getCC ${CTARGET})"
 
@@ -1082,7 +1090,7 @@ pkg_setup() {
 		die "nptlonly without nptl"
 	fi
 
-	if ! type -p scanelf ; then
+	if ! type -p scanelf > /dev/null ; then
 		eerror "You do not have pax-utils installed."
 		die "install pax-utils"
 	fi
