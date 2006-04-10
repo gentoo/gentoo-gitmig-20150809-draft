@@ -1,21 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 21125ffc6e68dd04c1d8a31f14f70b25 ChangeLog 2870
-RMD160 1bbcb028a444459505ce5c716d9d9c161164ef7d ChangeLog 2870
-SHA256 f65d8dd962f95c4c1986d6b383331093150d0d4795dcb842d67a4e47000818f5 ChangeLog 2870
+MD5 11100055ee2020680091e3125fa30e91 ChangeLog 3075
+RMD160 3d4cef03309be95f3183fda291b910eb37b62c54 ChangeLog 3075
+SHA256 43250f44a725ed4a7dddb199938f3ae59f6862ad45da79be9793542fe0e3078c ChangeLog 3075
 MD5 149ef0ef857ecaa5596a4efc341027a9 files/digest-kio-locate-0.3.4 68
 RMD160 a1394621a2da3506856b87b1e5caa5f96e2803f3 files/digest-kio-locate-0.3.4 68
 SHA256 cfa92a2d33362ddf20fad613babfd1a9e5f12d32b788adbd80469c380465908f files/digest-kio-locate-0.3.4 68
-MD5 5bd3f548f1edfa37dd7bb8ec16792269 files/digest-kio-locate-0.4.3 68
-RMD160 249e8bd35defce4979e71a1a19b7551abfda5728 files/digest-kio-locate-0.4.3 68
-SHA256 0667c0ed32a66a2e4da266ccf9bfdb54cf2021da347fec4c8fd13f3e8702e3f2 files/digest-kio-locate-0.4.3 68
-MD5 303a3e274ff1ef17146ee7e057475c89 files/digest-kio-locate-0.4.4 68
-RMD160 b115d60d034cf7c0b1f01b13530c614d5e30befe files/digest-kio-locate-0.4.4 68
-SHA256 4e70e26cf9709a5f1aaa9c657952a6d117ce8f391a52110a1f60a39f8f0791f6 files/digest-kio-locate-0.4.4 68
 MD5 303a3e274ff1ef17146ee7e057475c89 files/digest-kio-locate-0.4.4-r1 68
 RMD160 b115d60d034cf7c0b1f01b13530c614d5e30befe files/digest-kio-locate-0.4.4-r1 68
 SHA256 4e70e26cf9709a5f1aaa9c657952a6d117ce8f391a52110a1f60a39f8f0791f6 files/digest-kio-locate-0.4.4-r1 68
+MD5 aa840b001aa1132a4eedf72c812f0418 files/digest-kio-locate-0.4.5 250
+RMD160 d0b8bee9a4d8c0165cf5c657551084e367d296e9 files/digest-kio-locate-0.4.5 250
+SHA256 f9aa3152b20e2693541996f90adb1cc50da0149a518fe367332026ca5dcd708e files/digest-kio-locate-0.4.5 250
 MD5 b4f99851d93b23a06933e2cc883efcdb files/kde.py-bksys-1.5.1.diff 504
 RMD160 ee9bffd0f1f4fc750178ccadec270d82f0d872dd files/kde.py-bksys-1.5.1.diff 504
 SHA256 afcfef367276d6b786a0c5cc5a1bc7dceee2d2799e52bd54ca89e4ceb80582c3 files/kde.py-bksys-1.5.1.diff 504
@@ -25,22 +22,19 @@ SHA256 4dc34fa1880253f29524dc11589b4bfa9c31e2e7785644da21931f8208cae301 files/ki
 MD5 9236f23e7ccb7fe8cec20c2c5ca5e9ec kio-locate-0.3.4.ebuild 538
 RMD160 e1e60977ea73ba7118b4c0464170ef7040868010 kio-locate-0.3.4.ebuild 538
 SHA256 2b8efb5c61629a426f41728bc048cdd7429ef29c6d40560b73716d5c4c5499f5 kio-locate-0.3.4.ebuild 538
-MD5 2efa12b98b3032c685f76b471f206bc1 kio-locate-0.4.3.ebuild 1053
-RMD160 79eb8f6cafa8be884daabec939c70303e1bbc5cc kio-locate-0.4.3.ebuild 1053
-SHA256 2131655da0044ce526271d7c22c1b1b59417cc67f76d772842ba24302ef92a5b kio-locate-0.4.3.ebuild 1053
 MD5 90fcb7855765421059cf107008a1992f kio-locate-0.4.4-r1.ebuild 1157
 RMD160 b9c28c0d52ebbe053a92ca5832bfbc9b1a960d81 kio-locate-0.4.4-r1.ebuild 1157
 SHA256 4ff65bb92fc789e115786793a9973c86795014e69b5276d415878b10e9979996 kio-locate-0.4.4-r1.ebuild 1157
-MD5 855dac34e9133c80debdd59366f30c03 kio-locate-0.4.4.ebuild 1053
-RMD160 4b2b07ca0511311a153367231d8f633e2b6a39ff kio-locate-0.4.4.ebuild 1053
-SHA256 91fc32ac9f65b7c5403ba76334d9ab3b344a0422b9ee3ad99029875bf702f5fb kio-locate-0.4.4.ebuild 1053
+MD5 1f2d7233fcfbc77bcf6926aaed0d8199 kio-locate-0.4.5.ebuild 1158
+RMD160 dc16cd58af74cb37f9046c7817c32543ab0e1557 kio-locate-0.4.5.ebuild 1158
+SHA256 0abeb04f2ddf285235fba11123e0269113e3e664afcd77b3565b743d0e048b05 kio-locate-0.4.5.ebuild 1158
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
 SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEOadXntT9W3vfTuoRAnM8AJ9B8O84ddoMzEkOqJc0jNbFi+x/0ACcCWOd
-mzOi88QjwJLCAsZ7KelgX1g=
-=0OPB
+iD8DBQFEOajnntT9W3vfTuoRAsWDAJ9u6Hss8fBKEus6YCYNIiORvC6hFACfcz3Y
+WBGZneLmUIJ68bY+f9sqoiU=
+=Lwej
 -----END PGP SIGNATURE-----
