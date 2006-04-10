@@ -1,6 +1,14 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.47 2006/04/02 10:27:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.48 2006/04/10 14:08:25 genstef Exp $
+
+*gv-3.6.1-r3 (10 Apr 2006)
+
+  10 Apr 2006; Stefan Schweizer <genstef@gentoo.org> -gv-3.6.1-r2.ebuild,
+  +gv-3.6.1-r3.ebuild:
+  Fix sandboxing again thanks to Ulrich Mueller <ulm@kph.uni-mainz.de> and
+  Willem Jan Palenstijn <wpalenst@math.leidenuniv.nl> in bug 111024, stbale
+  because it is minor and was already fixed before
 
   02 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
   -files/gv-3.5.8-antialias.patch, -files/gv-3.5.8-r2-gentoo.diff,
