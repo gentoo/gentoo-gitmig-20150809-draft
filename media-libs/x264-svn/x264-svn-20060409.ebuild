@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060409.ebuild,v 1.1 2006/04/09 16:34:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060409.ebuild,v 1.2 2006/04/10 17:42:03 mr_bones_ Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -46,5 +46,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS 
+	dodoc AUTHORS
 }
