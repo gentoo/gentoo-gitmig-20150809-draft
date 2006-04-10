@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_beta5.ebuild,v 1.1 2006/04/10 13:14:07 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_beta5.ebuild,v 1.2 2006/04/10 13:41:25 uberlord Exp $
 
 inherit eutils
 
@@ -16,8 +16,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 IUSE="debug ipv6 kerberos ldap mbox mysql pop3d pam postgres ssl vpopmail"
 
-DEPEND=">=sys-libs/db-3.2
-	>=sys-apps/sed-4
+DEPEND=">=sys-apps/sed-4
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
 	pam? ( virtual/pam )

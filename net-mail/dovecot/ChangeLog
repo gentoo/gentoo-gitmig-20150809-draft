@@ -1,11 +1,15 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.40 2006/04/10 13:14:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.41 2006/04/10 13:41:25 uberlord Exp $
+
+  10 Apr 2006; Roy Marples <uberlord@gentoo.org> dovecot-1.0_beta5.ebuild:
+  Removed berkdb depenency as afaik dovecot does not use berkdb anymore.
+  Fixes #124039.
 
 *dovecot-1.0_beta5 (10 Apr 2006)
 
   10 Apr 2006; Roy Marples <uberlord@gentoo.org> +dovecot-1.0_beta5.ebuild:
-  New release.
+  New release, #129295.
   ipv6 USE flag now enables listening on ipv6 by default in the config file.
 
   26 Feb 2006; Stefaan De Roeck <stefaan@gentoo.org>
