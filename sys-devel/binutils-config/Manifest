@@ -1,28 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2f1393136bbae1eb82ba0e2aae6023cc ChangeLog 3545
-RMD160 6ae7fe2e8210c61216c3bb31f833e0e164319019 ChangeLog 3545
-SHA256 396de175158f1a4c772ccda60e1e6db2b3eebb78562b01bacec6ed9b429e4395 ChangeLog 3545
-MD5 bdcfb966ea96cc8dd990649559be472d binutils-config-1.8-r6.ebuild 575
-RMD160 00ea7c09d0b293d9c0091a5ae407d53a022e1ba0 binutils-config-1.8-r6.ebuild 575
-SHA256 266e308d5e79509e845d1148fae6a022cadf0a0cc31bfc23ac65806feff8fb83 binutils-config-1.8-r6.ebuild 575
-MD5 43c7ead858241a2576a39a7e5849a98c files/binutils-config-1.8 10055
-RMD160 71ecfff1daeb1b1729c89d2d0aa3030e3cf2c0e1 files/binutils-config-1.8 10055
-SHA256 8de6a37984f851b549ebf640b9aeddfffbde51010c50fb877bd8ec7f5ce05f48 files/binutils-config-1.8 10055
+MD5 44a90e28818ffabd7cb493c2e30b0346 ChangeLog 3768
+RMD160 53251c1bb872435e4f12b686c32536f905c8e059 ChangeLog 3768
+SHA256 9336115b758abb56ff8e9bff47c6d8fd922b92b694fb575c03ac21220b11b8bb ChangeLog 3768
+MD5 5c065fbfad62f4fa969c3ade59bea58a binutils-config-1.8-r7.ebuild 572
+RMD160 ad5b5a729de7841ff268e1e88a945440ccbe3b71 binutils-config-1.8-r7.ebuild 572
+SHA256 cf8484c6f46b796de428dd5ce081aa14f1babf6247430517e5d796c0c26382b3 binutils-config-1.8-r7.ebuild 572
+MD5 8063d22c39a76899105ca802cbc860ed files/binutils-config-1.8 10077
+RMD160 c5b93f82339633b0f3cc7b3a4ef222d3499e7645 files/binutils-config-1.8 10077
+SHA256 7be40114277fdd0407d20cfed827e3d42d41826bf597277dd91c55211a0af674 files/binutils-config-1.8 10077
 MD5 953efbc2a688428dfb75ecfa3c2d3d43 files/binutils-config.8 2989
 RMD160 afb26717c9466456bbbdf6a3d6b93aeb63ff9416 files/binutils-config.8 2989
 SHA256 ffc462de3eaa865f77f00e36275a0a9b0b51782d9d4d5fcfad18583a13adf6e5 files/binutils-config.8 2989
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.8-r6 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-binutils-config-1.8-r6 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-binutils-config-1.8-r6 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.8-r7 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-binutils-config-1.8-r7 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-binutils-config-1.8-r7 0
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
 SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEOaGZ2+ySkm8kpY0RAsUpAJwKY6RtVX+Wvd7u5tWGLv2tbbyFGQCfclEq
-bKRoLjUjcWV/ewFy/3HX5yY=
-=d8pk
+iD8DBQFEOb/M2+ySkm8kpY0RAokCAJ0S+++vji/5Y0ZREMn8gFAbS/jd3QCfb9in
+EINejlrfZ7PiEg+EcbONdXU=
+=VP18
 -----END PGP SIGNATURE-----

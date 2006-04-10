@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/binutils-config
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.19 2006/03/30 13:50:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.20 2006/04/10 02:15:29 vapier Exp $
+
+*binutils-config-1.8-r7 (10 Apr 2006)
+
+  10 Apr 2006; Mike Frysinger <vapier@gentoo.org> files/binutils-config-1.8,
+  -binutils-config-1.8-r6.ebuild, +binutils-config-1.8-r7.ebuild:
+  Use sysroot-ed path for the include dir.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   binutils-config-1.8-r6.ebuild:
