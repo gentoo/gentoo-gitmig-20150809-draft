@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ecb4eb71577ac228a6420d94181ad28a ChangeLog 1058
+MD5 49657d9324c17858e2ffd85ffb5cf615 ChangeLog 1153
+RMD160 c6ac35a2c284b77e5c46b4f9aa7122e18eaa043b ChangeLog 1153
+SHA256 cccb485f3f5134aa6fef562080c7c0c069902a1780f51182b212b77bf733a04b ChangeLog 1153
 MD5 23b550fda581d450144e8ef0ca019082 files/digest-pecl-crack-0.2 56
+RMD160 c631364c0f14722645001fd637d95dfe14c0897c files/digest-pecl-crack-0.2 56
+SHA256 c402ae0b6ed1ad1c9716ac0f0b83503ac2acc1440ce7f2657c0d6d7ddec0f157 files/digest-pecl-crack-0.2 56
 MD5 2ba367c254f48def392daa2084c1e6b7 files/digest-pecl-crack-0.3 57
+RMD160 4ae42b06e551905316bb8c6241562b7d38a46d4b files/digest-pecl-crack-0.3 57
+SHA256 f984f761f23ccdff8c6826ebf1b8af8ff2defa1b7108321bb89b1ec232e35e35 files/digest-pecl-crack-0.3 57
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
+RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a metadata.xml 157
+SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 metadata.xml 157
 MD5 c453a3cc376b139df2851d6fea490aa9 pecl-crack-0.2.ebuild 486
-MD5 d916b57f53f7bb5a4ccf4eb625ce8c88 pecl-crack-0.3.ebuild 453
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD45M7oFw4q70f3SsRArkHAJ99uUiv3MbQL/FmQbqziPQc76yv5ACgtYki
-/lX6TyRIUKhYAs5SOXhc3n4=
-=R6tc
------END PGP SIGNATURE-----
+RMD160 2b60162bb21ea3a17b18508ce79310ac64874b78 pecl-crack-0.2.ebuild 486
+SHA256 967fcb7544faebe1b747e9c8cc291b60c28b05211efb7a55c85fe58044f0b28f pecl-crack-0.2.ebuild 486
+MD5 fe719bc5a00bd71ad6f7fc9ab954eef3 pecl-crack-0.3.ebuild 459
+RMD160 410f008638f2f3b2f1947a71f720b7de403afa72 pecl-crack-0.3.ebuild 459
+SHA256 798d549fc88ce0426cf151564d00e8a74585e6354f679b5e8e8d56f56cecee2f pecl-crack-0.3.ebuild 459
