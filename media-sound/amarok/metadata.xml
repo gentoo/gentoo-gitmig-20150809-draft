@@ -3,4 +3,8 @@
 <pkgmetadata>
 <herd>kde</herd>
 <herd>sound</herd>
+<maintainer>
+<email>flameeyes@gentoo.org</email>
+<name>Diego Pettenò</name>
+</maintainer>
 </pkgmetadata>
