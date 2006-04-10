@@ -1,24 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4fccb1a780d89a76b2e57797aab6334d ChangeLog 2983
-RMD160 cbaa752237b1b5ea0dc2212d39d8fb779a98cc21 ChangeLog 2983
-SHA256 f8c4d3c4fa36d887e5ef000999d4daa90c91b82205e7557383b28ba4d1d3e1df ChangeLog 2983
-MD5 86ea7c47156ba3ab7bd460ad939b1d57 files/digest-htpdate-0.8.2 64
-RMD160 f6861c78f69b19509cdd3b12034cb2854f19598e files/digest-htpdate-0.8.2 64
-SHA256 97e8ec910afc3532959a942dc87989434a112bf4bec57e89a0bc693992dc3992 files/digest-htpdate-0.8.2 64
-MD5 04f4c6fdd660e39f608b45bb648846db files/digest-htpdate-0.8.7 64
-RMD160 d2f867d6c41011a966dfbba39c383a313d764d48 files/digest-htpdate-0.8.7 64
-SHA256 27410389711c4448d97b3eda8bd19d5cf426693cc9a7f567008932da7090a2ed files/digest-htpdate-0.8.7 64
-MD5 74a2c3ca0bc4ee7f4e0ad78119c993bb files/digest-htpdate-0.8.8 64
-RMD160 fe13dde457ee9e7d3504022d9e579a8560ad02e3 files/digest-htpdate-0.8.8 64
-SHA256 ef2c10f93f07677928d3e97647dd3661cbaa42b0a7edf20155ddc754a6adf0a1 files/digest-htpdate-0.8.8 64
+MD5 ec1040e32fb394f4666c480ad75fc4c8 ChangeLog 3181
+RMD160 4617ef16d4e0a52a02bd50ebf0c6c0c6d8a48d35 ChangeLog 3181
+SHA256 b32ad84d49f0af0909e5b74ffa2356a308ae01286c9248291efae1aaca498783 ChangeLog 3181
 MD5 0a8feb6a7e073e64c6efb82188d6007d files/digest-htpdate-0.9.0 238
 RMD160 6a7d77c7edb54d23cb7519ca445bbd44a8d00454 files/digest-htpdate-0.9.0 238
 SHA256 59bfdf92e850eee613183f28930ed8aa04bd8c6e56f0ff833bc8e3e9c48d9302 files/digest-htpdate-0.9.0 238
-MD5 6d38dc8a7fc38b9949bc745c5e0e199b files/digest-htpdate-0.9.1 238
-RMD160 1eae51fab5f2a887c0d3cc5fda794d1d2839b5b2 files/digest-htpdate-0.9.1 238
-SHA256 09473df0699c396292e78f99a47a033e63e838650ce5f89c46864bc4eef4603a files/digest-htpdate-0.9.1 238
 MD5 6d38dc8a7fc38b9949bc745c5e0e199b files/digest-htpdate-0.9.1-r1 238
 RMD160 1eae51fab5f2a887c0d3cc5fda794d1d2839b5b2 files/digest-htpdate-0.9.1-r1 238
 SHA256 09473df0699c396292e78f99a47a033e63e838650ce5f89c46864bc4eef4603a files/digest-htpdate-0.9.1-r1 238
@@ -28,34 +13,12 @@ SHA256 b09ba6abc1a7eec4423aa89468d4887b994ebc4e84cc55ba938ae26ea71084a2 files/ht
 MD5 b7ec80c98a548a101b0bb1f702662225 files/htpdate.init 800
 RMD160 63b0e469069e86b4afca6c6012a50deab1300567 files/htpdate.init 800
 SHA256 a88fe72b6dd62cf8287e31fcdd8be15449c636bd6469455b7cf2f9d81a96247e files/htpdate.init 800
-MD5 ec81f587e402abf72a7e9e7f7f35e31b files/ppc.patch 474
-RMD160 3bb4baa74ee2b7b12ddbd6c9754efeffdf726c1f files/ppc.patch 474
-SHA256 53a7cb3b18ebe3c10d8a95a88f9781a80ceb158864bdedb739af072a80dd6834 files/ppc.patch 474
-MD5 4e9e22bee0560930aec77a469440d7e9 htpdate-0.8.2.ebuild 767
-RMD160 bea51c3cb3b6ea7ee29988c893eea4e071772b83 htpdate-0.8.2.ebuild 767
-SHA256 6e7233da539f92e3aaf63ede76153f7ff6de7154f906f09c9bcf13b21f9de10a htpdate-0.8.2.ebuild 767
-MD5 11f78d6f0b02d8063677fc547fb7b188 htpdate-0.8.7.ebuild 742
-RMD160 568220e23ad886917d17cd61da5a69982aa60aaf htpdate-0.8.7.ebuild 742
-SHA256 1328354549d09e1e0c5115dccc80fe0cd7045097b6ebb76ae1395d6adf76c663 htpdate-0.8.7.ebuild 742
-MD5 cc6cc424526214bbc57e828f1052d018 htpdate-0.8.8.ebuild 743
-RMD160 1e7e5b91572a1202a8c13dc13eb8b94438c4038b htpdate-0.8.8.ebuild 743
-SHA256 7e017a28fff1e13ec3089f8ff0dbf47430f03e886b87cf69d334f1bf38c053dd htpdate-0.8.8.ebuild 743
 MD5 ad0f2624dee3271c651e577d5670ece2 htpdate-0.9.0.ebuild 736
 RMD160 f7b014cb7de7e5e1a9f30b33e35d7887eddef5c4 htpdate-0.9.0.ebuild 736
 SHA256 9ceb3ebc8212db358b6070e2afa77f24498902e2e1456aad147e1fd9b63e2591 htpdate-0.9.0.ebuild 736
 MD5 9dbe8a54a737327183416baeff4c4a70 htpdate-0.9.1-r1.ebuild 971
 RMD160 90613d0342fa2d96b814daaf09062de54e1bc173 htpdate-0.9.1-r1.ebuild 971
 SHA256 d2aa9a7e2bb09cafc6633fc2f7a224f84d8dcd99ac5c76f36098f68cbf01183a htpdate-0.9.1-r1.ebuild 971
-MD5 0df7140bfa787683e1e7b2f427d93bdc htpdate-0.9.1.ebuild 745
-RMD160 7d2ee21ce08afe9ad1fff8966fcf59cc09d62d2e htpdate-0.9.1.ebuild 745
-SHA256 0542270a4d3deb5fbda34001bdd5b9d1e608db41e08da9429dfead21dca54441 htpdate-0.9.1.ebuild 745
 MD5 ff2b63df63e17d0b2714390e4c9ff1e1 metadata.xml 256
 RMD160 7ba7e5dfce95b75377cf4a30745dcc4dbde95086 metadata.xml 256
 SHA256 f4325cb611d6c7b7e2f87f8c89d325eb086df309605b53de578d6f8bc62b07ae metadata.xml 256
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEOaK3QlM6RnzZP+IRAnBMAJ4o4wSBrG2IhimDJdZPUNAg9fBjgACffA/x
-C4WhFjhhFWjRy/gZGgxQt1M=
-=o3gL
------END PGP SIGNATURE-----
