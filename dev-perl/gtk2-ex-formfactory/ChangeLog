@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/gtk2-ex-formfactory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-ex-formfactory/ChangeLog,v 1.12 2006/04/07 00:22:55 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-ex-formfactory/ChangeLog,v 1.13 2006/04/10 23:47:44 mcummings Exp $
+
+*gtk2-ex-formfactory-0.62 (10 Apr 2006)
+
+  10 Apr 2006; <mcummings@gentoo.org> -gtk2-ex-formfactory-0.61.ebuild,
+  +gtk2-ex-formfactory-0.62.ebuild:
+  Version bump, bug fix, thanks morfic :)
 
   06 Apr 2006; Daniel Goller <morfic@gentoo.org>
   gtk2-ex-formfactory-0.61.ebuild:
