@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.64.ebuild,v 1.21 2006/03/16 13:18:17 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.64.ebuild,v 1.22 2006/04/10 09:11:01 ehmsen Exp $
 
 DESCRIPTION="Perl script that converts Texinfo to HTML"
 SRC_URI="http://www.mathematik.uni-kl.de/~obachman/Texi2html/Distrib/${P}.tar.gz"
@@ -27,8 +27,7 @@ src_install () {
 		htmldir=/usr/share/doc/${PF}/html \
 		install || die "Installation Failed"
 
-	dodoc AUTHORS COPYING ChangeLog INTRODUCTION NEWS \
-		README TODO
+	dodoc AUTHORS ChangeLog INTRODUCTION NEWS README TODO
 }
 
 pkg_preinst() {
