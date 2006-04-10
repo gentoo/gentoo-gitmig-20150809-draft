@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.7.11.ebuild,v 1.1 2006/01/27 00:46:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.7.11.ebuild,v 1.2 2006/04/10 23:02:53 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-no-compress-docs.patch #129486
 	# Inject our own CFLAGS / docpath
 	sed -i \
 		-e '/^GCFLAGS/s:-O1::' \
