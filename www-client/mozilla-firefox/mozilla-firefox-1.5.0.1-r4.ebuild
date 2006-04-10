@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1-r4.ebuild,v 1.3 2006/04/01 04:39:56 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.1-r4.ebuild,v 1.4 2006/04/10 22:45:11 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -48,25 +48,32 @@ export BUILD_OFFICIAL=1
 export MOZILLA_OFFICIAL=1
 
 linguas() {
+	linguas=
 	local LANG
 	for LANG in ${LINGUAS}; do
 		if hasq ${LANG} ${LANGS//-/_} en; then
-			echo -n "${LANG//_/-} "
+			hasq ${LANG//_/-} ${linguas} || \
+				linguas="${linguas} ${LANG//_/-}"
+			continue
 		else
 			local SLANG
 			for SLANG in ${SHORTLANGS}; do
-				[[ ${LANG} == ${SLANG%%-*} ]] && \
-					echo -n "${SLANG} "
+				if [[ ${LANG} == ${SLANG%%-*} ]]; then
+					hasq ${SLANG} ${linguas} || \
+						linguas="${linguas} ${SLANG}"
+					continue 2
+				fi
 			done
 		fi
+		ewarn "Sorry, but mozilla-firefox does not support the ${LANG} LINGUA"
 	done
 }
 
 src_unpack() {
 	unpack firefox-${PV}-source.tar.bz2  ${P}-patches-${PVER}.tar.bz2
 
-	LINGUAS=$(linguas)
-	for X in ${LINGUAS}; do
+	linguas
+	for X in ${linguas}; do
 		[[ ${X} != en ]] && xpi_unpack firefox-${X}-${PV}.xpi
 	done
 
@@ -184,12 +191,12 @@ src_install() {
 	dodir ${MOZILLA_FIVE_HOME}
 	cp -RL ${S}/dist/bin/* ${D}${MOZILLA_FIVE_HOME}
 
-	LINGUAS=$(linguas)
-	for X in ${LINGUAS}; do
+	linguas
+	for X in ${linguas}; do
 		[[ ${X} != en ]] && xpi_install ${WORKDIR}/firefox-${X}-${PV}
 	done
 
-	local LANG=${LINGUAS%% *}
+	local LANG=${linguas%% *}
 	if [[ ${LANG} != "" && ${LANG} != "en" ]]; then
 		ebegin "Setting default locale to ${LANG}"
 		sed -i "s:pref(\"general.useragent.locale\", \"en-US\"):pref(\"general.useragent.locale\", \"${LANG}\"):" \
