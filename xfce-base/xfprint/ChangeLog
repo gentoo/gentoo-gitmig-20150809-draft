@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfprint
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.57 2005/12/09 21:23:25 dostrow Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.58 2006/04/10 00:44:28 jer Exp $
+
+  10 Apr 2006; Jeroen Roovers <jer@gentoo.org> xfprint-4.2.3.ebuild:
+  Stable on hppa (bug #129371).
 
 *xfprint-4.2.3 (09 Dec 2005)
 
