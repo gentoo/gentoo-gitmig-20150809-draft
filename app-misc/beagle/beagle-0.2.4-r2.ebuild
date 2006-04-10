@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.4-r2.ebuild,v 1.1 2006/04/10 19:05:49 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.4-r2.ebuild,v 1.2 2006/04/10 23:26:10 cretin Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -122,7 +122,7 @@ src_install() {
 
 	keepdir /usr/$(get_libdir)/beagle/Backends
 	keepdir /var/lib/cache/beagle/indexes
-	chmod beagleindex:beagleindex /var/lib/cache/beagle/indexes
+	chown beagleindex:beagleindex "${D}"/var/lib/cache/beagle/indexes
 }
 
 pkg_postinst() {
