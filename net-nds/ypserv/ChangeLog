@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.31 2006/04/04 15:10:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.32 2006/04/10 20:00:18 eradicator Exp $
+
+  10 Apr 2006; Jeremy Huddleston <eradicator@gentoo.org> files/ypserv,
+  -ypserv-2.13-r1.ebuild:
+  Removing old version. Changing to use domainnamen instead of need in the
+  init script since newer baselayouts don't provide domainname.
 
   04 Apr 2006; Aron Griffis <agriffis@gentoo.org> ypserv-2.18.ebuild:
   Mark 2.18 stable on ia64
