@@ -1,13 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.1.ebuild,v 1.4 2006/04/01 14:34:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.1.ebuild,v 1.5 2006/04/10 22:33:28 vapier Exp $
 
 inherit fortran toolchain-funcs
 
-IUSE="blas jpeg nls png readline tcltk X lapack"
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
-SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz"
 HOMEPAGE="http://www.r-project.org/"
+SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz"
+
+LICENSE="GPL-2 LGPL-2.1"
+SLOT="0"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="blas jpeg nls png readline tcltk X lapack"
+
 RDEPEND=">=dev-lang/perl-5.6.1-r3
 	readline? ( >=sys-libs/readline-4.1-r3 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
@@ -22,15 +27,13 @@ DEPEND="${RDEPEND}
 		x11-libs/libXt
 		x11-libs/libX11 )
 		virtual/x11 ) )"
-SLOT="0"
-LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+
 AT_M4DIR="${S}/m4"
 
 pkg_setup() {
 	# Test for a 64 bit architecture - f2c won't work on 64 bit archs with R.
 	# Thanks to vapier for providing the test.
-	cd ${T}
+	cd "${T}"
 	echo 'int main(){}' > test.c
 	$(tc-getCC) -c test.c -o test.o
 	if file test.o | grep -qs 64-bit ; then
