@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1835 2006/04/09 19:09:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1836 2006/04/10 19:08:23 bass Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -766,6 +766,7 @@ media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
 media-sound/jack-audio-connection-kit:netjack - Build with support for Realtime Audio Transport over generic IP
 media-sound/kid3:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
 media-sound/lilypond:vim - Enable installation of lilypond vim plugins
+media-sound/listen:ipod - Support for ipod devices via libgpod
 media-sound/mhwaveedit:ladspa - Enables the ability to support ladspa plugins
 media-sound/mhwaveedit:libsamplerate - Build with libsamplerate support
 media-sound/moc:libsamplerate - Support for libsamplerate (Sampling Conversion)
