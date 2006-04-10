@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5202 2006/04/10 17:54:56 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5203 2006/04/10 20:07:50 smithj Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,7 +21,11 @@
 ##   End example
 ##
 
-# Carsten Lohrke <carlo@gentoo.org> (10 Apr 2005)
+# Jonathan Smith <smithj@gentoo.org> (19 Apr 2006)
+# Masked due to masked dependencies (>=glib-2.9). see bug #126830
+>=x11-misc/devilspie-0.17.1
+
+# Carsten Lohrke <carlo@gentoo.org> (10 Apr 2006)
 # Masked, since there's no compatible pykde version, yet.
 >=dev-python/sip-4.4.1
 >=dev-python/PyQt-3.16
