@@ -1,6 +1,16 @@
 # ChangeLog for app-doc/ebookmerge
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.4 2005/11/27 17:58:21 bass Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.5 2006/04/10 23:14:53 bass Exp $
+
+  10 Apr 2006; J. Alberto Suárez López <bass@gentoo.org>
+  +ebookmerge-0.9.1.ebuild:
+  Added -m option to use a mirror.
+
+*ebookmerge-0.9.1 (10 Apr 2006)
+
+  10 Apr 2006; J. Alberto Suárez López <bass@gentoo.org>
+  +ebookmerge-0.9.1.ebuild:
+  Added -m option to use a mirror.
 
 *ebookmerge-0.9 (27 Nov 2005)
 
