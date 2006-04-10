@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.261 2006/04/06 12:58:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.262 2006/04/10 02:15:38 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -621,7 +621,7 @@ create_gcc_env_entry() {
 
 	if use multilib && ! has_multilib_profile; then
 		LDPATH="${LIBPATH}"
-		for path in 32 64 o32 ; do
+		for path in 32 64 ; do
 			[[ -d ${LIBPATH}/${path} ]] && LDPATH="${LDPATH}:${LIBPATH}/${path}"
 		done
 	else
