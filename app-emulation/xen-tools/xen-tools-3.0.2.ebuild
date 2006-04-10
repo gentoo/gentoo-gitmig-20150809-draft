@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2.ebuild,v 1.4 2006/04/10 13:52:48 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2.ebuild,v 1.5 2006/04/10 18:51:09 chrb Exp $
 
 inherit mount-boot flag-o-matic eutils
 
@@ -51,6 +51,13 @@ src_unpack() {
 			-e 's/CFLAGS\(.*\)=\(.*\)-g3*\s\(.*\)/CFLAGS\1=\2 \3/' \
 			-e 's/CFLAGS\(.*\)=\(.*\)-O2\(.*\)/CFLAGS\1=\2\3/' \
 			-i {} \;
+	fi
+	# for some reason the xen gcc checks don't work on gentoo-hardened
+	if use hardened; then
+		HARDFLAGS="-nopie -fno-stack-protector -fno-stack-protector-all"
+		sed -e "s/CFLAGS :=/CFLAGS := ${HARDFLAGS}/" \
+		-i ${S}/tools/firmware/hvmloader/Makefile \
+		${S}/tools/firmware/vmxassist/Makefile
 	fi
 }
 
