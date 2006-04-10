@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbacpi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbacpi/ChangeLog,v 1.5 2006/02/11 16:22:05 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbacpi/ChangeLog,v 1.6 2006/04/10 19:23:19 smithj Exp $
+
+  10 Apr 2006; <smithj@gentoo.org> -bbacpi-0.1.3.ebuild,
+  bbacpi-0.1.5.ebuild:
+  x86 stable and removed stale versions
 
 *bbacpi-0.1.5 (11 Feb 2006)
 
