@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.10.1.ebuild,v 1.1 2006/03/13 21:36:52 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.10.2.ebuild,v 1.1 2006/04/10 14:01:44 foser Exp $
 
 inherit gnome.org libtool eutils flag-o-matic debug
 
@@ -18,12 +18,13 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.14
 	>=sys-devel/gettext-0.11
 	doc?	(
-				>=dev-util/gtk-doc-1.4
-				~app-text/docbook-xml-dtd-4.1.2
-			)"
+		>=dev-util/gtk-doc-1.4
+		~app-text/docbook-xml-dtd-4.1.2
+	)"
 
 
 src_unpack() {
+
 	unpack ${A}
 	cd ${S}
 
@@ -33,18 +34,33 @@ src_unpack() {
 	fi
 
 	epatch ${FILESDIR}/${PN}-2.8.3-macos.patch
+
 }
 
 src_compile() {
+
 	epunt_cxx
 	elibtoolize
 
-	econf $(use_enable doc gtk-doc) $(use_enable debug) \
-		  --with-threads=posix || die "configure failed"
+	local myconf
+
+	# Building with --disable-debug highly unrecommended.  It will build glib in
+	# an unusable form as it disables some commonly used API.  Please do not
+	# convert this to the use_enable form, as it results in a broken build.
+	# -- compnerd (3/27/06)
+	use debug && myconf="--enable-debug"
+
+	econf \
+		$(use_enable doc gtk-doc) \
+		${myconf} \
+		--with-threads=posix || die "configure failed"
+
 	emake || die "make failed"
+
 }
 
 src_install() {
+
 	make DESTDIR="${D}" install || die "Installation failed"
 
 	# Do not install charset.alias for ppc-macos since it already exists.
@@ -60,4 +76,5 @@ src_install() {
 	echo "G_FILENAME_ENCODING=UTF-8" >> ${D}/etc/env.d/50glib2
 
 	dodoc AUTHORS ChangeLog* NEWS* README
+
 }

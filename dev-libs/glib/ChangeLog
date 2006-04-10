@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.192 2006/03/31 23:35:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.193 2006/04/10 14:01:44 foser Exp $
+
+*glib-2.10.2 (10 Apr 2006)
+
+  10 Apr 2006; Marinus Schraal <foser@gentoo.org> glib-2.10.2.ebuild :
+  New release
 
   31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> glib-2.8.6.ebuild:
   Drop virtual/libc dep, fix gettext and libintl dependency and add ~x86-fbsd.
