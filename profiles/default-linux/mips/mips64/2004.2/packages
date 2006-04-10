@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/2004.2/packages,v 1.3 2004/09/27 09:12:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/2004.2/packages,v 1.4 2006/04/10 23:14:45 vapier Exp $
 
 # mips64 o32 packages
 
@@ -10,4 +10,4 @@
 
 # Sometimes necessary to trick programs into thinking we're really
 # a mips32 system.
-*sys-devel/mips32
+*sys-apps/setarch

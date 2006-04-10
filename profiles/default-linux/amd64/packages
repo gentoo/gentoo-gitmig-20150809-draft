@@ -1,6 +1,1 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/packages,v 1.8 2005/01/25 19:19:47 wolf31o2 Exp $
-
-*sys-apps/linux32
-
+*sys-apps/setarch

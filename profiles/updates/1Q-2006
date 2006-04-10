@@ -33,3 +33,7 @@ move games-action/armagetron games-action/armagetronad
 move net-wireless/kwirelessmonitor net-wireless/kwlaninfo
 move games-board/pio games-board/pioneers
 move games-board/ksudoku games-puzzle/ksudoku
+move sys-apps/linux32 sys-apps/setarch
+move sys-devel/mips32 sys-apps/setarch
+move sys-devel/ppc32 sys-apps/setarch
+move sys-devel/sparc32 sys-apps/setarch
