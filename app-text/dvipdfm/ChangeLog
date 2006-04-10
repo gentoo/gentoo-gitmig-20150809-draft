@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipdfm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.11 2006/03/16 13:43:00 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.12 2006/04/10 09:20:07 ehmsen Exp $
+
+  10 Apr 2006; Martin Ehmsen <ehmsen@gentoo.org> dvipdfm-0.13.2c.ebuild:
+  Removed INSTALL, found by QA script.
 
   16 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org> dvipdfm-0.13.2c.ebuild:
   Changed depend from =app-tetex-1* to !>=app-tetex-2.

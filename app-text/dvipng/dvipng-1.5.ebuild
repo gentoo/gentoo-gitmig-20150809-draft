@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.5.ebuild,v 1.1 2005/05/29 05:07:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.5.ebuild,v 1.2 2006/04/10 09:16:50 ehmsen Exp $
 
 IUSE="truetype"
 DESCRIPTION="A program to translate a DVI (DeVice Independent) files into PNG (Portable Network Graphics) bitmaps"
@@ -27,5 +27,5 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "Install failed"
 
-	dodoc ChangeLog INSTALL README RELEASE || die "dodoc failed"
+	dodoc ChangeLog README RELEASE || die "dodoc failed"
 }
