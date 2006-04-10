@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.17 2006/04/06 18:09:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.18 2006/04/10 21:08:01 stefaan Exp $
+
+  10 Apr 2006; Stefaan De Roeck <stefaan@gentoo.org>
+  libdc1394-2.0.0_pre6-r1.ebuild:
+  Fixed building with USE="-X", and updated dependency on libraw1394
 
 *libdc1394-2.0.0_pre6-r1 (06 Apr 2006)
 
