@@ -1,4 +1,6 @@
-MD5 85fc43ce64da83c6a922af4180fd2a5d ChangeLog 3129
+MD5 77aa80c27de4fd016f111a28a9c776a0 ChangeLog 3323
 MD5 f4b109c12b4271eee4e18fdc9acbec81 files/digest-gliv-1.9.4 63
+MD5 1ed23aabe31294ceed654eaa5f51b624 files/digest-gliv-1.9.5 63
 MD5 5a1444df0a98b0dec79dc607fc1f8fac gliv-1.9.4.ebuild 924
+MD5 89d83c716a723ddda1bb49858d6a04b1 gliv-1.9.5.ebuild 925
 MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
