@@ -7,9 +7,9 @@ SHA256 2bdbb205f6f9f9ed4a9a06093a63768214a9d14df48cf32e0f10c2cbfbfb8098 files/di
 MD5 2ddf0133ffa840ddb0ff85770d2a8770 files/digest-xen-tools-3.0.1_p9029 259
 RMD160 79c9eaf49563f42eea950aea8597fa1cc309786e files/digest-xen-tools-3.0.1_p9029 259
 SHA256 a035a6a1cd2752da07db13617674322479f049833240b801f7ad828ddab38557 files/digest-xen-tools-3.0.1_p9029 259
-MD5 6923762444fb7024862461773f66c0e6 files/digest-xen-tools-3.0.2 235
-RMD160 81bcec08f6decd6b204f370926fb43afc1b5248d files/digest-xen-tools-3.0.2 235
-SHA256 a1c65be37f1287699413ecebc10f13f7447db890995c5c2fc9cefc0e3845f86e files/digest-xen-tools-3.0.2 235
+MD5 6618adc624bc8ab64af0f4555c33529a files/digest-xen-tools-3.0.2 235
+RMD160 ad3a1d2a82c40b0bca653431c2d7964809580e5e files/digest-xen-tools-3.0.2 235
+SHA256 274536fc8a3cb10fda114e533062b0dbddcda4ae15f52033a39b85785b221794 files/digest-xen-tools-3.0.2 235
 MD5 0664978b7f05728a0f4ffdbacec90f01 files/xend-conf 357
 RMD160 e2b04f3d7cfb4fa8407adf2a4470e461901f9681 files/xend-conf 357
 SHA256 7edcef347bfd373144140883ff9f38c9ff76614b71d912759fa635fb840911bc files/xend-conf 357
