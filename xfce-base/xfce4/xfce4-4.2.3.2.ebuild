@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.3.2.ebuild,v 1.2 2005/12/10 02:46:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.3.2.ebuild,v 1.3 2006/04/10 01:06:41 jer Exp $
 
 inherit versionator
 
 DESCRIPTION="Xfce 4 base ebuild"
 HOMEPAGE="http://www.xfce.org/"
 LICENSE="GPL-2 BSD LGPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 IUSE=""
 
