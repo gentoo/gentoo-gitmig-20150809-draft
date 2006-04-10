@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xzgv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.26 2006/04/09 19:51:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.27 2006/04/10 14:20:02 gustavoz Exp $
+
+  10 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> xzgv-0.8-r2.ebuild:
+  Stable on sparc wrt security #127008
 
   09 Apr 2006; Simon Stelling <blubb@gentoo.org> xzgv-0.8-r2.ebuild:
   stable on amd64

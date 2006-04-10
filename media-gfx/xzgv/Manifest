@@ -1,24 +1,18 @@
-MD5 3546fd4cd631a7e97f16ae84baa17a74 ChangeLog 3054
-RMD160 963dde3d5a0260bad8674424cf299aef98d4cef6 ChangeLog 3054
-SHA256 7bf10b7eec85768671bc1a4066109492ae66590f3bd9e7e2192512ee98ea1a7a ChangeLog 3054
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c56385b84b73b2b09fe3e2fa5d5830e7 ChangeLog 3171
 MD5 e72199e9175d25ece180121f3031c93c files/digest-xzgv-0.8-r1 226
-RMD160 4dda9ce561816d5413e66004f40a1ec9cb95dedd files/digest-xzgv-0.8-r1 226
-SHA256 e77f7af9469e3de557755540e9587dc45eca766cea116786b0b9163b474ce83b files/digest-xzgv-0.8-r1 226
 MD5 e72199e9175d25ece180121f3031c93c files/digest-xzgv-0.8-r2 226
-RMD160 4dda9ce561816d5413e66004f40a1ec9cb95dedd files/digest-xzgv-0.8-r2 226
-SHA256 e77f7af9469e3de557755540e9587dc45eca766cea116786b0b9163b474ce83b files/digest-xzgv-0.8-r2 226
 MD5 9495e82307945c08599a0bd9ffc2f4f6 files/xzgv-0.8-integer-overflow-fix.diff 6374
-RMD160 bd75c87cf6f20e4fa2757afe472111e2253cb640 files/xzgv-0.8-integer-overflow-fix.diff 6374
-SHA256 c8a01e234cc0ce3a0b9f1b99d3781be0eaec65c284dc3752a68cb929a1daf71f files/xzgv-0.8-integer-overflow-fix.diff 6374
 MD5 5bd803c395982c07ce099415b6f51402 files/xzgv-0.8-patched-cmyk-ycck-fix.diff 1844
-RMD160 2e1c4cf43455b9b95c35133b5b4db308fb513340 files/xzgv-0.8-patched-cmyk-ycck-fix.diff 1844
-SHA256 ae8b857d71006d5986d5f72894e637ec0dcf63edd77195cc1c17c7f556d856c2 files/xzgv-0.8-patched-cmyk-ycck-fix.diff 1844
 MD5 ba9c20ee3f3568176dc0dd45b3cab35b metadata.xml 218
-RMD160 2d49623b0718e8ef5056a06bfc3bc51c65c9f6a3 metadata.xml 218
-SHA256 794091c4d1e23e2f0b2b7a3d7c52ba5b56a15f2599b55b85210aaff6cb54500e metadata.xml 218
 MD5 72bcbe17722af56b599a478b250ae931 xzgv-0.8-r1.ebuild 1391
-RMD160 31a0a8f7ade8a0b345cc9360b64a654678598cc8 xzgv-0.8-r1.ebuild 1391
-SHA256 5a4e39b5b49258104c2f54f91ba7014e5313ccd969e899ecffffccc7390fbeb7 xzgv-0.8-r1.ebuild 1391
-MD5 2acee95e4d5fc1ec4ba2322dc5ea89c9 xzgv-0.8-r2.ebuild 1465
-RMD160 083cea5ae82dd16889fc2abbc5db6506280b211a xzgv-0.8-r2.ebuild 1465
-SHA256 ee91acd8a525cdc2fbc6af10643e3a02f91a7d382b752b8bd0570d2bb981d125 xzgv-0.8-r2.ebuild 1465
+MD5 d6e715e94624b968e216a9e38509a932 xzgv-0.8-r2.ebuild 1467
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEOmmhKRy60XGEcJIRAtw7AJ9GgF61JU2C+pSvuDJie4cS+mBXtwCfXXA7
+NrgAflXz+FpMmHoM75ylXDU=
+=2Css
+-----END PGP SIGNATURE-----
