@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/ChangeLog,v 1.12 2006/03/30 18:16:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/ChangeLog,v 1.13 2006/04/10 13:43:52 dang Exp $
+
+*mplayer-bin-1.0.20060408 (10 Apr 2006)
+
+  10 Apr 2006; Daniel Gryniewicz +mplayer-bin-1.0.20060408.ebuild:
+  Bump mplayer-bin.  Fixes bug #127969 and bug #127936
 
 *mplayer-bin-1.0.20060302 (30 Mar 2006)
 
