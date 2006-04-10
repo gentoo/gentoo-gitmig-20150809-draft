@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krename
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.27 2006/04/10 00:49:16 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.28 2006/04/10 21:35:59 chriswhite Exp $
+
+  10 Apr 2006; Chris White <chriswhite@gentoo.org> krename-3.0.11.ebuild:
+  Marked amd64 stable for krename-3.0.11 bug #129474.
 
   10 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org> -krename-3.0.6.ebuild,
   -krename-3.0.10.ebuild:
