@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ae6d1af40d9ce0da5bd100d2e0eb5558 ChangeLog 769
+MD5 d9e0279785104e6d22c2a003f80b2fc5 ChangeLog 980
+RMD160 84e68201d3960fc65189bb6819aee1d712db6ce6 ChangeLog 980
+SHA256 e62642b7a1936151d49f2024ac31ec29510b6968cec07d7cab826f64b9e06954 ChangeLog 980
 MD5 440cd21909331ca481aa59611cc5d544 files/digest-vserver-utils-1.0 70
+RMD160 13a7412d4d67858fd64596f9a88cfabc56d258e2 files/digest-vserver-utils-1.0 70
+SHA256 62e8d6264c9eb2aadd6134aa202cc401628192a240a6b344f947c2448033eea9 files/digest-vserver-utils-1.0 70
 MD5 d0d555e419a9af9d4c5691562a4024de files/digest-vserver-utils-1.0.1 72
+RMD160 2e48c5f2ebb8fd21b68683372dbe35bb99140ebc files/digest-vserver-utils-1.0.1 72
+SHA256 35f3765b73c08fb805e1eadc8bda4152078d800a043c4c11286ffb2f8407a808 files/digest-vserver-utils-1.0.1 72
 MD5 9a71e16b4292f184dbcf3a00580bcc6c files/digest-vserver-utils-1.0.2 72
+RMD160 a6d6eced9fa30473ec17edee6925850746cef790 files/digest-vserver-utils-1.0.2 72
+SHA256 7ea367e5aa19538ce2f8e6b512ef390a2d8fdf8bd7d7d6517a6a9f635bd35ede files/digest-vserver-utils-1.0.2 72
 MD5 9a596a24d22b8ca7ac80fb70d298779a files/digest-vserver-utils-1.0.3 72
+RMD160 077a5996471e2027b3cfc5f8fa682b238451695a files/digest-vserver-utils-1.0.3 72
+SHA256 b78eea235061e034bb855d811cf986d7802d1f4892d0a93a9826ff10b87a2fb6 files/digest-vserver-utils-1.0.3 72
 MD5 1d5b1e7a691174285268a3fb8a93b63e metadata.xml 582
-MD5 083a1a1798c7eafdb6bb68b0244b57e3 vserver-utils-1.0.1.ebuild 1159
-MD5 ab6e6d871a04596e23929fc2909f1343 vserver-utils-1.0.2.ebuild 1159
-MD5 0c5b7c92701b7e9310b71b5cf7340fbf vserver-utils-1.0.3.ebuild 1229
-MD5 0418f476bb8307fc2c0848dc28238021 vserver-utils-1.0.ebuild 1157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD09RdmPFBzbX68WERAisJAKCDRBqxboEuiandxPcv42Z1DFR+DQCglD9I
-WqSdZLdOp3zsyAeXVzC5rK4=
-=QoAX
------END PGP SIGNATURE-----
+RMD160 0849e00e8cc97646bb74469e4cdacaf033b70988 metadata.xml 582
+SHA256 463cb694c5422d4c1403b0cf492adda1c23d42ac4514d28dd769376b3228d6f5 metadata.xml 582
+MD5 ebe209c4136408e971c0ed1d0600377c vserver-utils-1.0.1.ebuild 1151
+RMD160 7ced6e358c0f8f6742f7c6a20c1959531f1780ed vserver-utils-1.0.1.ebuild 1151
+SHA256 c5392ceb167ed68a70b6155ec25f672c874b6a3e7c44bfcad3e69c9b412a6501 vserver-utils-1.0.1.ebuild 1151
+MD5 5ebb62c9f70089aca34f728dab2476af vserver-utils-1.0.2.ebuild 1151
+RMD160 ea58956dea1af51b27c0275f2cb2db68ba118de0 vserver-utils-1.0.2.ebuild 1151
+SHA256 6567c6182bdcd1112b39e112dbe30b7fd0594b20ec86f493b90f0ac0240f146c vserver-utils-1.0.2.ebuild 1151
+MD5 5c62b6d4ec49a32a9f426f36212aa9b5 vserver-utils-1.0.3.ebuild 1221
+RMD160 0c5057c4c7fabcbea04d8f75ca0d8518698bc768 vserver-utils-1.0.3.ebuild 1221
+SHA256 499529f49b463a3fb7e1ade3fa1c5e9fc5cf406e9de9abf314359a5071f2e21a vserver-utils-1.0.3.ebuild 1221
+MD5 adc2fb138b5e5b1dbdf1d711dc1c45d9 vserver-utils-1.0.ebuild 1149
+RMD160 3e5434ed0cef31b1b2a3773487180030d63c9bab vserver-utils-1.0.ebuild 1149
+SHA256 3b3dafb81b83292e33177c4ff22f54b038de9074294e8f695693e2424960ff1c vserver-utils-1.0.ebuild 1149
