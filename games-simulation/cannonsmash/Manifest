@@ -1,12 +1,15 @@
-MD5 eb7874cf7ab7bce721adf93e2e2a981a ChangeLog 2254
-RMD160 a010ca9558d5ac335b46afebfdc60dfaf58b91b1 ChangeLog 2254
-SHA256 143b4b137f437ba79b37f085170f15f62e56b9a231aa4cc6f25081db453cedd0 ChangeLog 2254
-MD5 d52ea12ad1283a0a9c17d2b492056ffe cannonsmash-0.6.6.ebuild 1448
-RMD160 66c3f5285ed73f318bae361e88d343f8dff63530 cannonsmash-0.6.6.ebuild 1448
-SHA256 415fa55665881736ce9f31338745cc6978e4d239aa9aae3613ed4d3323fdb840 cannonsmash-0.6.6.ebuild 1448
-MD5 2ca70e3856451ca1226bb3461a653895 files/0.6.5-loadparts.patch 348
-RMD160 5716c46612ad18a253d17d511df1a3f335e87c91 files/0.6.5-loadparts.patch 348
-SHA256 7d409f3c9e9f0112fbacd39e2a161a256eef9766f312d47df1ad24cd06ee383e files/0.6.5-loadparts.patch 348
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bcf65ee705e731bd704c43ac3d9a5526 ChangeLog 2400
+RMD160 ca662abc619e873520754136c03540ff1d5061db ChangeLog 2400
+SHA256 a2d6dfa7c41ed0785bd86e6e99b72eb9f0f07160ca90ed1c2ad21256c9c783cb ChangeLog 2400
+MD5 7095f101d42fc0b97d252eb1df7fc112 cannonsmash-0.6.6.ebuild 1483
+RMD160 cf198ec569e1ef97e89d09682ed3501f823292e1 cannonsmash-0.6.6.ebuild 1483
+SHA256 5e865ae728c6afaa34f7c3bbfbfadb4caa957cbfc1387abc0462f4fe94dc1208 cannonsmash-0.6.6.ebuild 1483
+MD5 2ffbd16a7577ab027afa03466bff1ad6 files/cannonsmash-0.6.6-gcc41.patch 586
+RMD160 b32e17b299d5ee16f42132fe0561c0c6d658bc5a files/cannonsmash-0.6.6-gcc41.patch 586
+SHA256 8f8f53f8eb715984fd65409d178bc586e9610842a4f2a2a9249e3bf6adeacf62 files/cannonsmash-0.6.6-gcc41.patch 586
 MD5 112758236b8f2e754e515d821380787e files/cannonsmash-0.6.6-sizeof-cast.patch 358
 RMD160 e9d53d5d83ad316aacd1a826b229cd54d7824b45 files/cannonsmash-0.6.6-sizeof-cast.patch 358
 SHA256 a896a7f05317080500663aa49a6f61642c41e690b5889095f1f193a82cd4cbe6 files/cannonsmash-0.6.6-sizeof-cast.patch 358
@@ -19,3 +22,10 @@ SHA256 b2e418ef9ca25533fffb48f696fa8b5e8f129f234b4ee52edb0cc22acd92187b files/di
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEOuCr2CTtIKiFlQIRAilcAKCoiGGLd1fCvC6EOXEXuqNQeNxA8gCgsbzq
+ac/WR3wAkpsG8ahWkxL/i44=
+=zGxl
+-----END PGP SIGNATURE-----

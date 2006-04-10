@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/cannonsmash
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/ChangeLog,v 1.13 2006/02/22 21:50:16 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/ChangeLog,v 1.14 2006/04/10 22:47:50 tupone Exp $
+
+  10 Apr 2006; <Tupone@gentoo.org> +files/cannonsmash-0.6.6-gcc41.patch,
+  -files/0.6.5-loadparts.patch, cannonsmash-0.6.6.ebuild:
+  gcc-4.1 fix
 
   22 Feb 2006; <Tupone@gentoo.org> cannonsmash-0.6.6.ebuild:
   Modular X dependency fix

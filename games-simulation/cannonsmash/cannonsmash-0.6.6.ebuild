@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.10 2006/02/22 21:50:16 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.11 2006/04/10 22:47:52 tupone Exp $
 
 inherit eutils games
 
@@ -30,7 +30,8 @@ src_unpack() {
 	cd "${S}"
 	epatch \
 		"${FILESDIR}"/${P}-x-inc.patch \
-		"${FILESDIR}"/${P}-sizeof-cast.patch
+		"${FILESDIR}"/${P}-sizeof-cast.patch \
+		"${FILESDIR}"/${P}-gcc41.patch
 	if use vorbis ; then
 		cp "${DISTDIR}"/${MY_OGG} "${S}"/ || die "cp failed"
 		sed -i \
