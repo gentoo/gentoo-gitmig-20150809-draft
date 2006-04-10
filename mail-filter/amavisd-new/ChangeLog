@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.80 2006/04/07 20:26:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.81 2006/04/10 20:35:03 eradicator Exp $
+
+  10 Apr 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  amavisd-new-2.3.3-r2.ebuild, amavisd-new-2.4.0.ebuild:
+  s/domainname/dnsdomainname/ We want the dns domain name, not the nis domain
+  name...
 
 *amavisd-new-2.4.0 (07 Apr 2006)
 

@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 789e2ddcb49acf336da368dfa58352d2 ChangeLog 17332
-RMD160 8753dea19f9584cb0cce94dd8210fc8daaca57e6 ChangeLog 17332
-SHA256 4a5f38bad39d21c0ed05b371f2161b1087d87b1fbee980737993669685dfa813 ChangeLog 17332
-MD5 b7b7fc649bb77dd63d3f3eb35b3008ba amavisd-new-2.3.3-r2.ebuild 5478
-RMD160 55d4d5e71ed838673618cc73580305ccdc0cfe18 amavisd-new-2.3.3-r2.ebuild 5478
-SHA256 eee1e7439e7eca811cc318a883daa26ea2c43b18ab1e040d926b066b3ec4c9d4 amavisd-new-2.3.3-r2.ebuild 5478
-MD5 0997a4d688a0908d91fe6f3bf7b316a0 amavisd-new-2.4.0.ebuild 5330
-RMD160 fbbf5340bbb03b8d75e6ded9e72af37e087fcc4f amavisd-new-2.4.0.ebuild 5330
-SHA256 6c225b5d4cb54f98263ea7b5e3c4c897df9115ea3e5fdae44ce7a2ece9a3e006 amavisd-new-2.4.0.ebuild 5330
+MD5 4e27bdf3e8ea04f14b0c248faa24ea63 ChangeLog 17540
+RMD160 16009c8f47f771484700019b9ab179cb0da2cbef ChangeLog 17540
+SHA256 f853d2f13d8f5c1894eb8b32d03d032309e0cae9c0ce3ba0b58b42d8009f59d7 ChangeLog 17540
+MD5 de7d1997fec041935959665b31b9269e amavisd-new-2.3.3-r2.ebuild 5489
+RMD160 e1957c225187e0d85652adb83e2b3fe4c4b2a559 amavisd-new-2.3.3-r2.ebuild 5489
+SHA256 883d41ea495fe942dc20078a38fc897634fab91b0a0d248f78e23dbeee876a51 amavisd-new-2.3.3-r2.ebuild 5489
+MD5 a5e2c52b30bbf16a0610381849fa769d amavisd-new-2.4.0.ebuild 5341
+RMD160 e4fdf7045941c2689e448ce3cbc9b6fc6749f39c amavisd-new-2.4.0.ebuild 5341
+SHA256 d4b6cb5426f6de4a4001db7027a5d55b08043dd735fc37b4f30e6276de1035fe amavisd-new-2.4.0.ebuild 5341
 MD5 ee33de51df853bd8426a4304f264245f files/amavisd-new-2.2.1-qmail-lf-workaround.patch 688
 RMD160 45092cfb4180d5cac8abc38068105b619945dfe6 files/amavisd-new-2.2.1-qmail-lf-workaround.patch 688
 SHA256 5e32e1fbcf172ce108ba1b494722894719ea31ed90d55610bffdb241246cfb57 files/amavisd-new-2.2.1-qmail-lf-workaround.patch 688
@@ -40,7 +40,7 @@ SHA256 d51011aa837db802ef539a1321a4af0a4a00879d475b92fd58f3c01df7320b58 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFENtX8QlM6RnzZP+IRAh0hAJ4we1dsF2yv2EdXGdyzKv7DDy4kqgCgh0P+
-jYqOT3E6qghL3vNHQH6XKBs=
-=Ccme
+iD8DBQFEOsGKOpjtAl+gMRURAn8SAJ0c/MjCW9vTLDdN4e8z+KGNhPd8mQCfW/Rw
+F/0orNHwNJvg+Vsvf4uIMJ4=
+=uv5S
 -----END PGP SIGNATURE-----
