@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/cksfv-1.3.8.ebuild,v 1.1 2006/01/01 21:38:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/cksfv-1.3.8.ebuild,v 1.2 2006/04/10 03:42:06 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -10,10 +10,11 @@ SRC_URI="http://zakalwe.virtuaalipalvelin.net/~shd/foss/cksfv/files/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE=""
 
 DEPEND=""
+
 src_compile() {
 	# note: not an autoconf configure script
 	./configure \
@@ -27,5 +28,5 @@ src_compile() {
 
 src_install() {
 	make install || die
-	dodoc ChangeLog INSTALL README TODO
+	dodoc ChangeLog README TODO
 }
