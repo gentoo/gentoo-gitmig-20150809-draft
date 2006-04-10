@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1f5b54d600ec6fa2c3b7a7a1de2d1788 ChangeLog 8075
 MD5 a0eef084e3e56e5ec39c1189ac0b2fef files/digest-xfce4-trigger-launcher-4.2.1 80
 MD5 a191282a90e86d29725ab15b539d0edf files/digest-xfce4-trigger-launcher-4.2.2 80
@@ -8,3 +11,10 @@ MD5 e83d679268efd229d0ae3097af815f57 xfce4-trigger-launcher-4.2.1.ebuild 433
 MD5 004d9d7b9dd55ce01d175fa64969643b xfce4-trigger-launcher-4.2.2-r1.ebuild 447
 MD5 b9a14f530e8a86648778c6256de805a8 xfce4-trigger-launcher-4.2.2.ebuild 420
 MD5 1f16b709c42f34a10c3e6ab3199844c3 xfce4-trigger-launcher-4.2.3.ebuild 445
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEOrwlKRy60XGEcJIRAsJQAJ4gy3adUYz4//9667vwhnfvBXS3lgCfYa44
+BCsMr+iJZYtffsfpfl7fWgI=
+=gGQ9
+-----END PGP SIGNATURE-----

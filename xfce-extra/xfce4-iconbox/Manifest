@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 96948bf15ec71e0553e353305705cb41 ChangeLog 7419
 MD5 5f893748301a580b15184398cf6613bc files/digest-xfce4-iconbox-4.2.1 71
 MD5 aa53567f90f6508bc2d48db4fdeda41c files/digest-xfce4-iconbox-4.2.2 71
@@ -8,3 +11,10 @@ MD5 1e9dbbf03132ef8c5abfbdabe720614d xfce4-iconbox-4.2.1.ebuild 394
 MD5 def301c52eb8072ff5ab441efe3fdbf5 xfce4-iconbox-4.2.2-r1.ebuild 537
 MD5 3114250c061b866fa14c1c134691392f xfce4-iconbox-4.2.2.ebuild 381
 MD5 a88493acaabb7588a24d8fc51a441b2b xfce4-iconbox-4.2.3.ebuild 535
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEOrvuKRy60XGEcJIRAmguAKCeanR2LZnaK0nlVSgSD/LPauo3CACfal0O
+6LPtrVmYtlaVTmr15pGjLTs=
+=lar1
+-----END PGP SIGNATURE-----
