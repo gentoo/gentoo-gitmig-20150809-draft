@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1836 2006/04/10 19:08:23 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1837 2006/04/10 21:13:38 zzam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -876,6 +876,7 @@ media-video/transcode:pvm - Enables private virtual machine support
 media-video/transcode:v4l2 - Enable video4linux2 support
 media-video/vdr:aio - Use "all in one" patch (or its successor "liemikuutio") with much additional features
 media-video/vdr:bigpatch - Enables almost all additional features flying around on the net (including aio)
+media-video/vdr:child-protection - Enable support for the plugin vdr-pin (Protecting some recordings / channels with a PIN)
 media-video/vdr:dvbplayer - Use some special mpeg-repacker features. Most usable for old recordings or software output devices.
 media-video/vdr:jumpplay - Enables automatic jumping over cut marks while watching a recording
 media-video/vdr:lnbsharing - Enables support for two or more dvb cards sharing the cable to the lnb
