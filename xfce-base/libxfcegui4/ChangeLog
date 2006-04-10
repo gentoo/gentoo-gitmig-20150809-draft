@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfcegui4
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.66 2006/03/13 20:40:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.67 2006/04/10 00:20:04 jer Exp $
+
+  10 Apr 2006; Jeroen Roovers <jer@gentoo.org> libxfcegui4-4.2.3.ebuild:
+  Stable on hppa (bug #129371).
 
   13 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   libxfcegui4-4.2.2-r1.ebuild:
