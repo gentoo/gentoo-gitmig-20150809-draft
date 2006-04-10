@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1731d4a5b3da497191b456549f14a436 ChangeLog 1471
+MD5 55f21148dc3cd8676a96da2185dd7d9d ChangeLog 1605
 MD5 616f5a976b502d68519681fa0e781aba files/digest-klive-0.16 62
 MD5 aac140656a00574e6a4b0cbd6319507e files/klive.init.d 645
-MD5 ef7c9ed4514055e938f46f280ff59fdf klive-0.16.ebuild 1628
+MD5 d2be2aea1ad7fd3b18b499a200e5b34f klive-0.16.ebuild 1656
 MD5 a76f13cb946fc2720c04b189616da2de metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHdNXViELBEf1JB0RAmS2AJ4t/8jeYSzNVt/sHutkAdf6BZYnNACfWiS4
-ojlWKn4nSXsX6FfZmPU/reQ=
-=KPRs
------END PGP SIGNATURE-----

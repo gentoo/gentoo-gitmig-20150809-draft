@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.16.ebuild,v 1.4 2006/03/19 21:55:18 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.16.ebuild,v 1.5 2006/04/10 11:48:53 r3pek Exp $
 
 inherit eutils
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND="dev-lang/python
 		>=dev-python/twisted-2.0.0"
+RDEPEND="sys-apps/pciutils"
 
 S=${WORKDIR}/${PN}
 
