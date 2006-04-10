@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.28 2006/03/07 23:14:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.29 2006/04/10 20:42:54 mkennedy Exp $
+
+*erlang-10.2.10 (10 Apr 2006)
+
+  10 Apr 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/glibc-2.4-fix.patch, +erlang-10.2.10.ebuild:
+  Include GLIBC 2.4 build fix; Resolves Bug #122383; Please see
+  http://www.erlang.org/ml-archive/erlang-questions/200601/msg00500.html for
+  more information on the GLIBC build fix.
 
   07 Mar 2006; Mike Frysinger <vapier@gentoo.org> erlang-8b.ebuild,
   erlang-9c.ebuild, erlang-9c-r1.ebuild, erlang-9c-r2.ebuild,
