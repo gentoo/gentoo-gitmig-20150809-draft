@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 215e7ab18487c39b1d3b5926bd33aaa4 ChangeLog 20366
-RMD160 5f8bd61e28dbd75c24b47b301bd358824b9395ba ChangeLog 20366
-SHA256 f4996c5ddf524678b27484071df3c41ac30a453926ae3ed765427e2c1bddf5ba ChangeLog 20366
+MD5 ca2f378b290ba1fe7899cd063afc22bd ChangeLog 20473
+RMD160 5f7233f2f1df6601555795d36c4e8916516090f3 ChangeLog 20473
+SHA256 3b65d9d63c4299270f0589f9bf4f28ff073bca4470bd7a761812e4fc2219fe47 ChangeLog 20473
 MD5 5a2a9ad0ab6a40d5ee27662bf265bc41 cdrtools-2.01-r1.ebuild 2830
 RMD160 e40b7f64ecbc7b18b2371004a81c3bef979260ed cdrtools-2.01-r1.ebuild 2830
 SHA256 e4216cc3aafd2189bfd9e80987368c9c9ca0b7d0874036e5320ed283b97780cd cdrtools-2.01-r1.ebuild 2830
@@ -13,9 +10,9 @@ SHA256 ed93e40def27c710ecefbaa47b233e3c867ce9cad77c776839b2f760b28444dd cdrtools
 MD5 1ce4f552cf0369d91baebde6ab823eb0 cdrtools-2.01.01_alpha01-r2.ebuild 3881
 RMD160 06392ee3090bb536fa8c73bd67f20a9517716c8d cdrtools-2.01.01_alpha01-r2.ebuild 3881
 SHA256 184596af31571302fed27b68ebfe23aa523053a2b01a9396e2992721e24b104d cdrtools-2.01.01_alpha01-r2.ebuild 3881
-MD5 41a514cbfae63937b5a34e9eba0e4206 cdrtools-2.01.01_alpha07.ebuild 3429
-RMD160 245600484f435190a44ad72a7a607fb17a724c25 cdrtools-2.01.01_alpha07.ebuild 3429
-SHA256 971c213b3c9e50698acc18078a99c76e57fd972701ffec5561dc282d0a802ece cdrtools-2.01.01_alpha07.ebuild 3429
+MD5 879edb038e7d0fcbee70675b299af163 cdrtools-2.01.01_alpha07.ebuild 3427
+RMD160 65efa18bb76bc2ffbadc577cbcbcb99afbf9ce10 cdrtools-2.01.01_alpha07.ebuild 3427
+SHA256 16ac8f7240937bd5f5747e28b674bbf72a86fb21d2124228d5c218553a35f918 cdrtools-2.01.01_alpha07.ebuild 3427
 MD5 3b1ffea11e1653b7b16c2c89597d1c5a files/cdrtools-2.01-scsi-remote.patch 938
 RMD160 146ba7ddd5a0d987ea554bcf7e50aea5bf0690ff files/cdrtools-2.01-scsi-remote.patch 938
 SHA256 93719cbcbf594be14e0aa993b49157fc6be2885e94f4a92947ea73bd58ed2a62 files/cdrtools-2.01-scsi-remote.patch 938
@@ -49,10 +46,3 @@ SHA256 608868e8d5e7d0d4fd7469a7a1f7271e63590fb645fdbdf3d6251678aad41745 files/mk
 MD5 015ab4293805faaa417d5ac5304750c4 metadata.xml 254
 RMD160 f274a70fa23d8064efddcce296e0aed3344bd86b metadata.xml 254
 SHA256 21400abf2dad3e5b7b0d2f7f9586c33cba6336b42a97e1f2b3e7e8b9db0daae5 metadata.xml 254
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEEyGKwUpWvClEHQoRApI0AJsE2jhmgxM9y0RxO3uZDAEzigsLKACbBGqq
-jB9WuPULsArXwG2SJUYZ//s=
-=Ntg9
------END PGP SIGNATURE-----
