@@ -1,12 +1,18 @@
-MD5 9bbd699ab5658e79d30e66cb75b6aad6 ChangeLog 4413
-RMD160 578b44edc3e722bee2f6cae7c186f4378e53e515 ChangeLog 4413
-SHA256 f7b9f3f007ee524440d6f67c56fe5f40aada60b40821c6b5ef5916c5b21a081c ChangeLog 4413
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 207d81e6aed931ba435d5c474b40d00a ChangeLog 4878
+RMD160 2c33f2fe51c3a1ca6974502c0bf041a2e4bdd2ae ChangeLog 4878
+SHA256 6664580a0991ef8ffa4460f92ff8afb48e0199a3c0635766cd585d5d9ae84c0e ChangeLog 4878
 MD5 a33caf56fdf32402acce053372e6433a beagle-0.2.3-r1.ebuild 3145
 RMD160 d8e45344d7c43a93cf89d6506a33befa5d5c4f42 beagle-0.2.3-r1.ebuild 3145
 SHA256 24855cf6f2b5a7c3635035d403156c4071c55c3416e2f6ee3edef3b096594461 beagle-0.2.3-r1.ebuild 3145
 MD5 0ad7c2206dd751312fc71baada5cca6a beagle-0.2.4-r1.ebuild 3770
 RMD160 ba779bf404d198859da426c933f00768dce5ecc8 beagle-0.2.4-r1.ebuild 3770
 SHA256 17a904fb9f87e26fe6de2cdc2af846ac0a7cf6d19ad7897761a0ec644af52155 beagle-0.2.4-r1.ebuild 3770
+MD5 940eb32b9409bedb17994393b1b0f8b0 beagle-0.2.4-r2.ebuild 3807
+RMD160 a70a89f28d165662ef1fe7ddb54421fdc05d69a1 beagle-0.2.4-r2.ebuild 3807
+SHA256 09796e8008cde2dc7a5f4815947cf8f5db2be00b96f83e5ceefceebb09d62dcf beagle-0.2.4-r2.ebuild 3807
 MD5 ecc70d92c1ff9a94a443526fb89600c2 beagle-0.2.4.ebuild 3142
 RMD160 be8d34898655a620f312550eff69db7af948de4b beagle-0.2.4.ebuild 3142
 SHA256 6c96ff4bb1872e7e648b32f74d7122f6261ed1885584def2b1c07a3e9dd7e59b beagle-0.2.4.ebuild 3142
@@ -19,12 +25,15 @@ SHA256 23e88f3ad291fd923cf9b346ca7cdcfedd975a9156683a36fa660f2a3d3852e1 files/be
 MD5 1a8c708b3a3d59b7474acbebf8cfecd0 files/beagle-0.2.4-CVE-2006-1296.patch 556
 RMD160 2fd1ca379d45dc719c8e96703fcb624ffba964ca files/beagle-0.2.4-CVE-2006-1296.patch 556
 SHA256 fe578c1c594001f652c4f5f977cb28474f7c44dc64a0e4a63e3006d7ab7f287e files/beagle-0.2.4-CVE-2006-1296.patch 556
-MD5 5ccebeca286dc86fcff481bae0c78efe files/beagle-0.2.4-crawltweek.patch 905
-RMD160 d6e00ebf33d77417b68c37475fe98320b32494cd files/beagle-0.2.4-crawltweek.patch 905
-SHA256 cd5fdec3ebc8bd4235f42863cba8cddda68cea272cb13351750302123325ed84 files/beagle-0.2.4-crawltweek.patch 905
-MD5 fb0e78a46198d9730e9f559a129c2cb0 files/crawl-portage 241
-RMD160 eb4bf9abac3f06788d699dd410e8644300fd4145 files/crawl-portage 241
-SHA256 aa5588402cf469195b3f0ea70b60c34047ad2119d177b8911411fc70349534b1 files/crawl-portage 241
+MD5 e5bc2c5dacc6c334775a08437c6d92bd files/beagle-0.2.4-crawltweek.patch 947
+RMD160 becc7a5ce1675d7a429933016a8159b6f80ad0b9 files/beagle-0.2.4-crawltweek.patch 947
+SHA256 3776720d29ba1453f28e188ce72d2e3d212cdba32cb7ffa4b00d85ad82138454 files/beagle-0.2.4-crawltweek.patch 947
+MD5 a8f5a7c90d5e400111b0c452365b0adb files/beagle-0.2.4-searchfix.patch 360
+RMD160 47eb53b90d9a2b7171be9232857a172555a99410 files/beagle-0.2.4-searchfix.patch 360
+SHA256 b7c847520a4f68ea3b9ea0cdefbc61cc8447f4b99af7fd7f8a444be373fd394d files/beagle-0.2.4-searchfix.patch 360
+MD5 6a176c3c40db57456ec64629fc70e106 files/crawl-portage 239
+RMD160 43f2980af52308c2bf9d5da87cd2cf4b9884636c files/crawl-portage 239
+SHA256 b0cfb78e4455508a32396e8173708aa74d2e0d89121a2c4b9b805203a6eec8c2 files/crawl-portage 239
 MD5 61cf8ee79bc77bbf9093a7565d4a3454 files/digest-beagle-0.2.3-r1 244
 RMD160 e71c7ab57f0fa065302d460c2059307ff93c831c files/digest-beagle-0.2.3-r1 244
 SHA256 ba59a434d430c770e1bafd469dd29265b9302e2196032a0f67142b2ec78b0d8f files/digest-beagle-0.2.3-r1 244
@@ -34,6 +43,16 @@ SHA256 a62f3cd6363b760d83f091c12cb18cab0f48590d44dbc144cd159fad62d848b1 files/di
 MD5 5c3dbe77ffde45cb741b4ca94991fbd9 files/digest-beagle-0.2.4-r1 244
 RMD160 48fde338edc40a4429d5cceaad4d4d08349a9f88 files/digest-beagle-0.2.4-r1 244
 SHA256 a62f3cd6363b760d83f091c12cb18cab0f48590d44dbc144cd159fad62d848b1 files/digest-beagle-0.2.4-r1 244
+MD5 5c3dbe77ffde45cb741b4ca94991fbd9 files/digest-beagle-0.2.4-r2 244
+RMD160 48fde338edc40a4429d5cceaad4d4d08349a9f88 files/digest-beagle-0.2.4-r2 244
+SHA256 a62f3cd6363b760d83f091c12cb18cab0f48590d44dbc144cd159fad62d848b1 files/digest-beagle-0.2.4-r2 244
 MD5 8c88e9a257d221daea17b7175a7f7947 metadata.xml 314
 RMD160 e3e5e79de0549124c4693d22e1a5c35a13510e87 metadata.xml 314
 SHA256 1a2e1ce6af1bd26a8f0a16c348c39be963f09c5c4986b66c3622f32c4e4f367e metadata.xml 314
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEOqvQwUpWvClEHQoRAjEnAJ9qDwlNo+yAlRZUQ1GBNqtZ2wndpgCfdP3r
+3USnIxC66uwnyZ8EQTVokec=
+=VDGp
+-----END PGP SIGNATURE-----

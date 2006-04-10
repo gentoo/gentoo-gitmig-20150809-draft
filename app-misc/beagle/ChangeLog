@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.23 2006/04/09 23:44:09 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.24 2006/04/10 19:05:48 metalgod Exp $
+
+*beagle-0.2.4-r2 (10 Apr 2006)
+
+  10 Apr 2006; Luis Medinas <metalgod@gentoo.org>
+  files/beagle-0.2.4-crawltweek.patch, +files/beagle-0.2.4-searchfix.patch,
+  files/crawl-portage, +beagle-0.2.4-r2.ebuild:
+  Revbump to modify the crawl-portage to use portdir instead of /usr/portage.
+  Added kde paths to our crawltweek patch and add a upstream patch to fix a
+  search crash thanks to Arif Lukito <maxima.bugs@gmail.com> and Pat Double
+  <double@inebraska.com>.
 
   09 Apr 2006; Stefan Jones <cretin@gentoo.org> beagle-0.2.4-r1.ebuild:
   You want chown not chmod :-)

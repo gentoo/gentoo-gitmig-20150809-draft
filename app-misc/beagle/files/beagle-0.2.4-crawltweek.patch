@@ -5,7 +5,7 @@
  CRAWL_INDEX_NAME="applications"
  
 -CRAWL_PATHS="/usr/share/applications /usr/local/share/applications /opt/gnome/share/applications /opt/kde3/share/applications"
-+CRAWL_PATHS="/usr/share/applications /usr/local/share/applications /usr/kde"
++CRAWL_PATHS="/usr/share/applications /usr/local/share/applications /usr/kde/*/share/applications"
  
  CRAWL_RECURSIVE="yes"
  
@@ -16,7 +16,7 @@
  CRAWL_INDEX_NAME="documentation"
  
 -CRAWL_PATHS="/usr/share/doc /usr/local/share/doc /opt/kde3/share/doc /opt/gnome/share/gnome/help"
-+CRAWL_PATHS="/usr/share/doc /usr/local/share/doc /usr/share/gnome/html /usr/share/gnome/help"
++CRAWL_PATHS="/usr/share/doc /usr/local/share/doc /usr/share/gnome/html /usr/share/gnome/help /usr/kde/*/share/doc"
  
  CRAWL_ALLOW_PATTERNS="*.xml,*.html,*.docbook"
  
