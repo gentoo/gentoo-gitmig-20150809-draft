@@ -1,9 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.26 2006/03/17 20:17:53 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.27 2006/04/10 21:35:55 vivo Exp $
+# $ID: $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
-# Maintainer: Francesco Riosa <vivo at gentoo.org>
+# Maintainer: Luca Longinotti <chtekk at gentoo.org>
 
 # MYSQL_VERSION_ID will be
 # major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo magic number, all [0..99]
@@ -22,7 +23,7 @@ if [[ -z ${MYSQL_VERSION_ID} ]] ; then
 	MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
 fi
 
-[[ -z ${MY_EXTRAS_VER} ]] && MY_EXTRAS_VER="20060316"
+[[ -z ${MY_EXTRAS_VER} ]] && MY_EXTRAS_VER="20060410"
 
 DEPEND="${DEPEND}
 	>=sys-libs/readline-4.1
