@@ -1,15 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 940c7bb3f099e26bdb594d04cc048c0d ChangeLog 1227
+MD5 52b6fe8cbf66198c58f68cb7c7b39794 ChangeLog 1320
+RMD160 6f06431eb6493f1cef659a6dd1ee2eaafb973e60 ChangeLog 1320
+SHA256 d2f55e5ef3a2aed4790c097c1d2bb5e4a871380f2f018d0dd1e6c08c8958481e ChangeLog 1320
 MD5 f501ad837ca304264a23f6ef285aae0c files/digest-kalbum-0.8.0 65
+RMD160 ab92021540398f4e848199e61e06c2c46f2bcea7 files/digest-kalbum-0.8.0 65
+SHA256 50b4c989a346ec657e1def6da77b313c281601fdc7192b5b77f0ff18ecbc6902 files/digest-kalbum-0.8.0 65
 MD5 cce166f5aa37a81de6a408c4a1661d2f files/kalbum-0.8.0-configure-arts.patch 3133
-MD5 15e0cfdceb139ce2d939193a9b8cad26 kalbum-0.8.0.ebuild 657
+RMD160 48f614ee13b8282d9cacc975145df631625cb004 files/kalbum-0.8.0-configure-arts.patch 3133
+SHA256 b0df2c4b6d68f3f81767f73a255c707621925743b5297756b31f45e41e2aba82 files/kalbum-0.8.0-configure-arts.patch 3133
+MD5 27939da5b5a49cae0527254551a46ca3 kalbum-0.8.0.ebuild 656
+RMD160 ba8a4de1fd11b5186d33950649268f7b1a2ab833 kalbum-0.8.0.ebuild 656
+SHA256 0973375e8130f43220ed3670da0858303fadaf9974874f3311dee5e913a40212 kalbum-0.8.0.ebuild 656
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDl29QntT9W3vfTuoRAqqvAJ41Q0cHoP8isPihyMwYB4gD22uDxQCggjLi
-isj64PVxVZCf2zTuP+Hu47A=
-=2aL6
+iD8DBQFEOaQzntT9W3vfTuoRAmrZAJ0ZLkaghgKVLWTmWRE0ewdV3NGmwwCfWRoz
+j+cdl0A1c0UeiqkxEiR4VeQ=
+=u42X
 -----END PGP SIGNATURE-----
