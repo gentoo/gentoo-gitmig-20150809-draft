@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.4.ebuild,v 1.1 2006/03/02 11:37:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.4.ebuild,v 1.2 2006/04/11 20:53:21 gustavoz Exp $
 
 inherit eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sh ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~sh sparc ~x86"
 IUSE="howl vorbis avahi"
 
 DEPEND="sys-libs/zlib
