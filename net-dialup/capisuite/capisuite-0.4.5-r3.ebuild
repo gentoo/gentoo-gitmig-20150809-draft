@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r3.ebuild,v 1.3 2005/10/04 21:22:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r3.ebuild,v 1.4 2006/04/11 22:59:24 sbriesen Exp $
 
-inherit eutils flag-o-matic python
+inherit eutils flag-o-matic multilib python
 
 DESCRIPTION="ISDN telecommunication suite providing fax and voice services"
 HOMEPAGE="http://www.capisuite.de"
@@ -14,11 +14,10 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND="virtual/python
-	virtual/libc
 	sys-devel/automake
 	>=sys-devel/autoconf-2.50
 	media-sound/sox
-	media-libs/tiff
+	>=media-libs/tiff-3.7.1
 	media-gfx/jpeg2ps
 	media-gfx/sfftobmp
 	virtual/ghostscript
@@ -50,8 +49,8 @@ src_compile() {
 	eend $?
 
 	econf --localstatedir=/var \
-		--with-docdir="/usr/share/doc/${PF}" || die "econf failed."
-	emake || die "parallel make failed."
+		--with-docdir="/usr/share/doc/${PF}" || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -79,10 +78,9 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_compile "${ROOT}usr/lib/python${PYVER}/site-packages/cs_helpers.py"
+	python_mod_compile ${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/cs_helpers.py
 }
 
 pkg_postrm() {
-	python_version
-	python_mod_cleanup "${ROOT}usr/lib/python${PYVER}/site-packages"
+	python_mod_cleanup ${ROOT}usr/$(get_libdir)/python*/site-packages
 }
