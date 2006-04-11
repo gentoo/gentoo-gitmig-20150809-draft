@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2004-bonuspack-mega
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-mega/ChangeLog,v 1.5 2006/03/31 21:30:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-mega/ChangeLog,v 1.6 2006/04/11 11:48:44 wolf31o2 Exp $
+
+  11 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-bonuspack-mega-1-r1.ebuild:
+  Marking stable on amd64/x86 to bring in new Mega bonuspack and to close bug
+  #129373.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-bonuspack-mega-1-r1.ebuild:
