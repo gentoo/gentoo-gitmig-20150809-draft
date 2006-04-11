@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.107 2006/04/09 06:56:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.108 2006/04/11 22:15:44 zmedico Exp $
+
+*portage-2.1_pre8-r1 (11 Apr 2006)
+
+  11 Apr 2006; <zmedico@gentoo.org> +portage-2.1_pre8-r1.ebuild,
+  +files/2.1/pre8/1000_r3120_fetchlist_dict.patch,
+  +files/2.1/pre8/1010_r3123_manifest2_fixes.patch,
+  +files/2.1/pre8/1020_r3118_bug_121368.patch,
+  +files/2.1/pre8/1030_r3128_bug_129559_qmerge.patch,
+  +files/2.1/pre8/1040_r3126_bug_129244_ebuild_phase.patch,
+  +files/2.1/pre8/1050_r3131_lazy_databases.patch:
+  2.1_pre8-r1 bug fix revbump. This is in package.mask because the new
+  Manifest2 support (see GLEP 44) needs testing.  Gentoo devs, please limit the
+  number of repoman commits with Manifest2 while we test this.
 
 *portage-2.1_pre7-r5 (09 Apr 2006)
 
