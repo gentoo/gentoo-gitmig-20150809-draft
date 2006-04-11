@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.300 2006/04/07 11:49:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.301 2006/04/11 15:13:19 flameeyes Exp $
+
+  11 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> qt-3.3.4-r8.ebuild,
+  qt-3.3.4-r9.ebuild, qt-3.3.6.ebuild:
+  Replace dolib with dolib.so to ensure executable bit is set.
 
   07 Apr 2006; Caleb Tennis <caleb@gentoo.org>
   -files/qt-3.3.5-uic-fix.patch, -qt-3.3.5.ebuild, -qt-3.3.5-r1.ebuild:

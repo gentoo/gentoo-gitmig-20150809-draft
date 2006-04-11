@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6.ebuild,v 1.5 2006/04/01 03:35:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6.ebuild,v 1.6 2006/04/11 15:13:21 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -230,9 +230,9 @@ src_install() {
 			ln -s ${lib} ${lib/-mt/}
 		done
 	else
-		dolib lib/lib{editor,qassistantclient,designercore}.a
-		dolib lib/libqt-mt.la
-		dolib lib/libqt-mt.so.${PV} lib/libqui.so.1.0.0
+		dolib.so lib/lib{editor,qassistantclient,designercore}.a
+		dolib.so lib/libqt-mt.la
+		dolib.so lib/libqt-mt.so.${PV} lib/libqui.so.1.0.0
 		cd ${D}/${QTBASE}/$(get_libdir)
 
 		for x in libqui.so ; do
