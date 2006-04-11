@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.57 2006/03/30 00:12:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.58 2006/04/11 00:19:44 vapier Exp $
 
 cd /
 
@@ -383,6 +383,14 @@ if [[ $(env -u CHOST portageq envvar CHOST) == ${CTARGET} ]] ; then
 	eerror "target name as your host utils."
 	exit 1
 fi
+
+# grab user settings
+for v in ABI UCLIBC_CPU USE BVER GVER KVER LVER STAGE ; do
+	if [[ -e /etc/portage/crossdev/${CTARGET}/${v} ]] ; then
+		export ${v}=$(</etc/portage/crossdev/${CTARGET}/${v})
+		einfo "Restoring user setting '${v}' to '${!v}'"
+	fi
+done
 
 #####################
 ### do the emerge ###
