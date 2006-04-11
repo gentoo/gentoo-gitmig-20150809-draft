@@ -1,0 +1,88 @@
+diff -ruN john-1.6.40-before/src/bench.c john-1.6.40/src/bench.c
+--- john-1.6.40-before/src/bench.c	2004-11-09 14:13:03.000000000 +0100
++++ john-1.6.40/src/bench.c	2006-03-13 23:15:56.000000000 +0100
+@@ -127,7 +127,7 @@
+ 	it.it_value.tv_sec = BENCHMARK_TIME;
+ 	if (setitimer(ITIMER_REAL, &it, NULL)) pexit("setitimer");
+ #else
+-	sig_timer_emu_init(BENCHMARK_TIME * CLK_TCK);
++	sig_timer_emu_init(BENCHMARK_TIME * CLOCKS_PER_SEC);
+ #endif
+ 
+ 	start_real = times(&buf);
+@@ -174,7 +174,7 @@
+ 	int64 tmp;
+ 
+ 	tmp.lo = count; tmp.hi = 0;
+-	mul64by32(&tmp, CLK_TCK);
++	mul64by32(&tmp, CLOCKS_PER_SEC);
+ 	cps_hi = div64by32lo(&tmp, time);
+ 
+ 	if (cps_hi >= 1000000)
+diff -ruN john-1.6.40-before/src/idle.c john-1.6.40/src/idle.c
+--- john-1.6.40-before/src/idle.c	2001-07-26 16:56:25.000000000 +0200
++++ john-1.6.40/src/idle.c	2006-03-13 23:16:09.000000000 +0100
+@@ -68,7 +68,7 @@
+ 	current = times(&buf);
+ 	if (!last_adj) last_adj = current;
+ 
+-	if (current - last_adj >= CLK_TCK) {
++	if (current - last_adj >= CLOCKS_PER_SEC) {
+ 		calls_per_tick = calls_since_adj / (current - last_adj);
+ 		calls_since_adj = 0;
+ 		last_adj = current;
+@@ -79,6 +79,6 @@
+ 		last_check = current;
+ 		sched_yield();
+ 		current = times(&buf);
+-	} while (current - last_check > 1 && current - last_adj < CLK_TCK);
++	} while (current - last_check > 1 && current - last_adj < CLOCKS_PER_SEC);
+ #endif
+ }
+diff -ruN john-1.6.40-before/src/status.c john-1.6.40/src/status.c
+--- john-1.6.40-before/src/status.c	2004-11-09 13:54:21.000000000 +0100
++++ john-1.6.40/src/status.c	2006-03-13 23:16:20.000000000 +0100
+@@ -58,9 +58,9 @@
+ 	if (status.crypts.hi != saved_hi) {
+ 		ticks = get_time() - status.start_time;
+ 		if (ticks > ((clock_t)1 << (sizeof(clock_t) * 8 - 2))) {
+-			time = ticks / CLK_TCK;
++			time = ticks / CLOCKS_PER_SEC;
+ 			status_restored_time += time;
+-			status.start_time += (clock_t)time * CLK_TCK;
++			status.start_time += (clock_t)time * CLOCKS_PER_SEC;
+ 		}
+ 	}
+ }
+@@ -68,7 +68,7 @@
+ unsigned int status_get_time(void)
+ {
+ 	return status_restored_time +
+-		(get_time() - status.start_time) / CLK_TCK;
++		(get_time() - status.start_time) / CLOCKS_PER_SEC;
+ }
+ 
+ static char *status_get_cps(char *buffer)
+@@ -85,11 +85,11 @@
+ 	if (use_ticks)
+ 		time = ticks;
+ 	else
+-		time = status_restored_time + ticks / CLK_TCK;
++		time = status_restored_time + ticks / CLOCKS_PER_SEC;
+ 	if (!time) time = 1;
+ 
+ 	cps = status.crypts;
+-	if (use_ticks) mul64by32(&cps, CLK_TCK);
++	if (use_ticks) mul64by32(&cps, CLOCKS_PER_SEC);
+ 	div64by32(&cps, time);
+ 
+ 	if (cps.hi || cps.lo >= 1000000000)
+@@ -102,7 +102,7 @@
+ 		sprintf(buffer, "%u", cps.lo);
+ 	else {
+ 		tmp = status.crypts;
+-		if (use_ticks) mul64by32(&tmp, CLK_TCK);
++		if (use_ticks) mul64by32(&tmp, CLOCKS_PER_SEC);
+ 		mul64by32(&tmp, 100);
+ 		cps_100 = div64by32lo(&tmp, time) % 100;
+ 		sprintf(buffer, "%u.%02u", cps.lo, cps_100);

@@ -1,19 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 87c0d587e533cd8a20b37f3b5026ab9f ChangeLog 7253
+MD5 2952b7317bed639d6e460310e63d056e ChangeLog 7456
+RMD160 99c1a0b12a6d6a4967dd895279a18f88dfda78b1 ChangeLog 7456
+SHA256 d4c5ca46ac489f9638be8d759405c8290d4937963b0e0ba90b92eede30140714 ChangeLog 7456
+MD5 686dc0787082b89b5eb11489e71e4474 files/clk_tck.patch 2864
+RMD160 ffcc335bdff4c609574472e3a947d482e123b13e files/clk_tck.patch 2864
+SHA256 57921f1d742e3a42dd1d9b74f70c2d54b78155bc68bf33cad5ffc241f770f7f8 files/clk_tck.patch 2864
 MD5 2a2c77e0b8b4692a9e20de4d68983071 files/digest-johntheripper-1.6 123
+RMD160 87fb56f0f93f91e3fcd63884bdf02e661b55cf79 files/digest-johntheripper-1.6 123
+SHA256 83d8b6f7e4f6408338ae400a22b8e6c5019fbf220d0c642353ea8113db48245b files/digest-johntheripper-1.6 123
 MD5 dd34c8d2b730b0a8ae9eec5582698fc2 files/digest-johntheripper-1.6-r3 126
-MD5 d9ceb6148f478e763e8e358aa324e71a files/digest-johntheripper-1.6.40 152
+RMD160 f63babf1f4691a7bab339500ceaec3f342b0ddad files/digest-johntheripper-1.6-r3 126
+SHA256 a69b037e98e69ab1babc6546e4eb4d88f67f92262cd1a77027604a4277d53af3 files/digest-johntheripper-1.6-r3 126
+MD5 4780ee0f7c3f0ea092133667f7b7bf48 files/digest-johntheripper-1.6.40 548
+RMD160 c57518be35c160a39511b57f59a90860eed2cf64 files/digest-johntheripper-1.6.40 548
+SHA256 7ce5546f48a6e3746583d713f9781b46f6d23c9f8d30e6d46d042a9bd99c6db4 files/digest-johntheripper-1.6.40 548
 MD5 647f92814e453cb358ef2d0df669f026 files/john-ntlm.skey.patch 1168
+RMD160 7c52da1f85e4bebfcc7d183dcbf2ee94f2a9b84e files/john-ntlm.skey.patch 1168
+SHA256 bb0b60717f16810106a1dc3e26f0abdfd5becde8ede39d4120de6beb3fb1f794 files/john-ntlm.skey.patch 1168
 MD5 c2397a54695976b1b2071df0701986a6 johntheripper-1.6-r3.ebuild 3017
-MD5 b21277490b290bb6cbbfd82c53a136d2 johntheripper-1.6.40.ebuild 3376
+RMD160 06eecffd51dd76708dd99882719bfe4b27932d05 johntheripper-1.6-r3.ebuild 3017
+SHA256 a4ad767c85699d599463cbad8b9656dacf78d31753d1fe0aec5ebd5d84b7ab14 johntheripper-1.6-r3.ebuild 3017
+MD5 7dd046e1b16a297284de6ce7c7e724e2 johntheripper-1.6.40.ebuild 3410
+RMD160 eeadcd9407ffcc761b780b0667f9c94ac354e71d johntheripper-1.6.40.ebuild 3410
+SHA256 cfa959bdc7e7eb55c368d8615dc6499bbcc818c4a9f8363882d0fd339f576681 johntheripper-1.6.40.ebuild 3410
 MD5 c5ce19f2b06dcc439b8a854a95b9b1e1 johntheripper-1.6.ebuild 1477
+RMD160 0d7d8fdb290e75ba79795d0b9e42b285fb38fab3 johntheripper-1.6.ebuild 1477
+SHA256 024f3a6c96ba8e38ef40fbfa232a03b90cbcb22729a4311a40fbdb27a46f0b6d johntheripper-1.6.ebuild 1477
 MD5 1da04b916dc5d18f323ec583c17a7208 metadata.xml 259
+RMD160 4812e9c62c33ad724e0c8b1efd02dbd7de6fe9d6 metadata.xml 259
+SHA256 57fc5e4177fcff4246f112f412880daba075e4041251478551aa7f06f97686e8 metadata.xml 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDyNAemdTrptrqvGERAl90AJ4k3yXqRae54Q97zAfLRILLJsaRXQCfV3Of
-M64Y71GlsPbzAzLWWKnq70s=
-=W2JD
+iD8DBQFEPBbtmdTrptrqvGERAlAGAJ4okSqmbpSDgHckYh5lMaaBY1hMtACfVkPl
+sLIMW0UZ5wuncgc3zWofQrU=
+=p7Yx
 -----END PGP SIGNATURE-----

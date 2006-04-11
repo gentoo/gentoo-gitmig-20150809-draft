@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.36 2006/01/14 09:13:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.37 2006/04/11 20:43:24 dragonheart Exp $
+
+  11 Apr 2006; Daniel Black <dragonheart@gentoo.org> +files/clk_tck.patch,
+  johntheripper-1.6.40.ebuild:
+  CLK_TCK to CLOCKS_PER_SEC bug #126102 refers. Thanks to Michael Terepeta and
+  Mikko Tiihonen
 
   14 Jan 2006; Daniel Black <dragonheart@gentoo.org>
   johntheripper-1.6-r3.ebuild:
