@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/atheme-0.2.2.ebuild,v 1.2 2005/11/10 18:19:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/atheme-0.2.2.ebuild,v 1.3 2006/04/11 21:09:53 swegener Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A portable, secure set of open source, and modular IRC services"
 HOMEPAGE="http://atheme.org/"
@@ -13,41 +13,75 @@ SLOT="0"
 KEYWORDS="~sparc ~x86"
 IUSE="largenet postgres"
 
-DEPEND=">=sys-devel/autoconf-2.59"
 RDEPEND="postgres? ( dev-db/postgresql )"
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.59"
 
 src_unpack() {
-	unpack ${A} || die "unpack failed"
-	cd ${S} || die "cd '${S}' failed"
+	unpack ${A}
+	cd ${S}
 
-	epatch ${FILESDIR}/make-postgresql-support-optional.patch \
-		|| die "epacth failed"
-	epatch ${FILESDIR}/makefile-DESTDIR-support.patch \
-		|| die "epatch failed"
+	epatch ${FILESDIR}/make-postgresql-support-optional.patch || die "epacth failed"
+	epatch ${FILESDIR}/makefile-DESTDIR-support.patch || die "epatch failed"
+
+	eautoreconf
 }
 
 src_compile() {
-	autoreconf -i || die "autoreconf failed"
-	./configure \
+	econf \
 		--prefix=/var/lib/atheme \
-		`use_with postgresql` \
-		`use_with largenet large-net` \
-		|| die "configure failed"
-
-	make DESTDIR="${D}" || die "make failed"
+		$(use_with postgresql) \
+		$(use_with largenet large-net) \
+		|| die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "emake install failed"
-	cp "${D}"/var/lib/atheme/etc/{example,atheme}.conf || die "cp failed"
-	dodoc ChangeLog INSTALL README || die "dodoc failed"
-	dodoc doc/{example_module.c,LICENSE,POSTGRESQL,RELEASE,ROADMAP} \
+	local dir
+
+	make DESTDIR="${D}" install || die "make install failed"
+
+	dodir /{etc,usr/{lib,share}}/atheme
+	keepdir /var/lib/atheme/var
+	fowners atheme:atheme /etc/atheme /var/lib/atheme/var
+	fperms 750 /etc/atheme /var/lib/atheme/var
+
+	for dir in backend contrib modules protocol
+	do
+		mv "${D}"/var/lib/atheme/${dir} "${D}"/usr/lib/atheme
+		dosym /usr/lib/atheme/${dir} /var/lib/atheme
+	done
+
+	mv "${D}"/var/lib/atheme/help "${D}"/usr/share/atheme
+	dosym /usr/share/atheme/help /var/lib/atheme
+
+	mv "${D}"/var/lib/atheme/etc/example.conf ${D}/etc/atheme/atheme.conf
+	fowners root:atheme /etc/atheme/atheme.conf
+	fperms 640 /etc/atheme/atheme.conf
+
+	rm -rf "${D}"/var/lib/atheme/etc
+	dosym /etc/atheme /var/lib/atheme/etc
+
+	dobin "${D}"/var/lib/atheme/bin/atheme || die "dobin failed"
+
+	dodoc \
+		ChangeLog INSTALL README \
+		doc/{example_module.c,LICENSE,POSTGRESQL,RELEASE,ROADMAP} \
 		|| die "dodoc failed"
-	rm -rf "${D}"/var/lib/atheme/doc
+
+	newinitd "${FILESDIR}"/atheme.initd atheme
+
+	# And remove stuff we don't need
+	rm -rf "${D}"/var/lib/atheme/{bin,doc}
+}
+
+pkg_setup() {
+	enewgroup atheme
+	enewuser atheme -1 -1 /var/lib/atheme atheme
 }
 
 pkg_postinst() {
 	einfo
-	einfo "Don't forget to edit /var/lib/atheme/etc/atheme.conf!"
+	einfo "Don't forget to edit /etc/atheme/atheme.conf!"
 	einfo
 }
