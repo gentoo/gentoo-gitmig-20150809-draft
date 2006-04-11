@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0c56575a6383a712b14b18796d13051b ChangeLog 1415
 MD5 f31d83714c7ad3ac1a2e44c4f96fc2f3 files/digest-subtitleripper-0.3.4 68
 MD5 f31d83714c7ad3ac1a2e44c4f96fc2f3 files/digest-subtitleripper-0.3.4-r1 68
 MD5 71d5fd4d13e0c7036447e796c292131d metadata.xml 228
 MD5 44efe42ecc8930b3572bbd2b308b2b85 subtitleripper-0.3.4-r1.ebuild 1288
 MD5 801e72f2e970f4d42d05a6fc5d037f22 subtitleripper-0.3.4.ebuild 763
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEPDiyKRy60XGEcJIRAnk5AJ4ruRJ/feTNFOq+ewsnm+BNA4uXvgCffK+x
+x500NY97zmIZEQhDSFj5yNM=
+=Cigy
+-----END PGP SIGNATURE-----
