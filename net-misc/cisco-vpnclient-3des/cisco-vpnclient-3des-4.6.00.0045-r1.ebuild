@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.00.0045-r1.ebuild,v 1.8 2006/03/24 18:09:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.00.0045-r1.ebuild,v 1.9 2006/04/11 12:00:51 wolf31o2 Exp $
 
 inherit eutils linux-info
 
@@ -38,6 +38,11 @@ src_unpack() {
 	epatch ${FILESDIR}/driver_build_CC.patch
 	# Patch submitted to bug #69870 by James Ward <jennyandjamesward@yahoo.com>
 	epatch ${FILESDIR}/${PV}-supported_device.patch
+	#Fix problems with the linux >=2.6.14 kernel.
+	if kernel_is 2 6 && [ ${KV_PATCH} -ge 14 ]
+	then
+		epatch ${FILESDIR}/${PV}-2.6.14.patch
+	fi
 }
 
 src_compile () {
