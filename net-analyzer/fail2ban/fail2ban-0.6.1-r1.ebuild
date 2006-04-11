@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.6.1.ebuild,v 1.1 2006/04/10 23:28:20 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.6.1-r1.ebuild,v 1.1 2006/04/11 22:25:46 vanquirius Exp $
 
 DESCRIPTION="Bans IP that make too many password failures"
 HOMEPAGE="http://sourceforge.net/projects/fail2ban"
@@ -20,7 +20,7 @@ src_install() {
 
 	# Use fail2ban.conf.default as default config file
 	insinto /etc
-	newins config/fail2ban.conf.default fail2ban.conf
+	newins config/fail2ban.conf.iptables fail2ban.conf
 	# Install initd scripts
 	exeinto /etc/init.d
 	newexe config/gentoo-initd fail2ban

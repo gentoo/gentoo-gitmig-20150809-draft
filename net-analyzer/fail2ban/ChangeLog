@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.8 2006/04/10 23:28:20 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.9 2006/04/11 22:25:46 vanquirius Exp $
+
+*fail2ban-0.6.1-r1 (11 Apr 2006)
+
+  11 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> -fail2ban-0.6.1.ebuild,
+  +fail2ban-0.6.1-r1.ebuild:
+  Template configuration file is now called fail2ban.conf.iptables, not
+  fail2ban.conf.default. Thanks to Guillaume Castagnino <casta at xwing dot
+  info> in bug 129477.
 
 *fail2ban-0.6.1 (10 Apr 2006)
 
