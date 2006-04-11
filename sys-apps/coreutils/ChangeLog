@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.158 2006/03/04 22:11:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.159 2006/04/11 00:59:02 vapier Exp $
+
+*coreutils-5.94-r2 (11 Apr 2006)
+
+  11 Apr 2006; Mike Frysinger <vapier@gentoo.org> +coreutils-5.94-r2.ebuild:
+  Re-enable support for system regex #128040 by Emanuele Giaquinta.
 
   04 Mar 2006; Luca Barbato <lu_zero@gentoo.org> coreutils-5.94-r1.ebuild:
   Missing acl logic
