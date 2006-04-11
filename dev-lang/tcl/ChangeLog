@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.66 2006/03/21 22:03:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.67 2006/04/11 16:27:32 flameeyes Exp $
+
+  11 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> tcl-8.4.12.ebuild:
+  Add ~x86-fbsd keyword.
 
   21 Mar 2006; Aron Griffis <agriffis@gentoo.org> tcl-8.4.9.ebuild:
   Port bash-3 fix from tcl-8.4.11.ebuild to tcl-8.4.9.ebuild #117744
