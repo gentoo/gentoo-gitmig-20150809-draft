@@ -1,10 +1,13 @@
 # ChangeLog for app-text/dvipng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.5 2006/04/11 14:09:52 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.6 2006/04/11 14:14:57 fmccor Exp $
+
+  11 Apr 2006; Ferris McCormick <fmccor@gentoo.org> ChangeLog:
+  Fix spelling error in ChangeLog entry.
 
   11 Apr 2006; Ferris McCormick <fmccor@gentoo.org> dvipng-1.8.ebuild:
   Add ~sparc keyword.  This package is required for app-text/tetex-3.0_p1-r3 to
-  retain functionality, as tetex relys on this package for dvipng capability.
+  retain functionality, as tetex relies on this package for dvipng capability.
   Package builds and runs fine.
 
   10 Apr 2006; Martin Ehmsen <ehmsen@gentoo.org> dvipng-1.5.ebuild,
