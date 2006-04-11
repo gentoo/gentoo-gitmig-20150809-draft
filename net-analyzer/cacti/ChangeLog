@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.65 2006/04/03 02:47:37 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.66 2006/04/11 01:08:53 ramereth Exp $
+
+*cacti-0.8.6h_p20060108-r2 (11 Apr 2006)
+
+  11 Apr 2006; Lance Albertson <ramereth@gentoo.org>
+  +cacti-0.8.6h_p20060108-r2.ebuild:
+  * Rev bump to fix security bug #129284
 
 *cacti-0.8.6h_p20060108-r1 (03 Apr 2006)
 
