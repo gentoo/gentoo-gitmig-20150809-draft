@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.43.ebuild,v 1.2 2005/02/23 09:41:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.43.ebuild,v 1.3 2006/04/11 15:19:06 george Exp $
 
 inherit gnat
 
@@ -12,7 +12,10 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${MY_PV}/gcc-core-${MY_PV}.tar.b
 	ppc? ( mirror://gentoo/gnat-3.15p-powerpc-unknown-linux-gnu.tar.bz2 )"
 HOMEPAGE="http://www.gnat.com/"
 
-DEPEND="x86? ( >=app-shells/tcsh-6.0 )"
+DEPEND="x86? ( >=app-shells/tcsh-6.0 )
+	!dev-lang/gnat-gcc
+	!dev-lang/gnat-gpl"
+
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 LICENSE="GMGPL"

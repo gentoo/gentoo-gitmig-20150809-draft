@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.45.ebuild,v 1.6 2006/03/11 22:46:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.45.ebuild,v 1.7 2006/04/11 15:19:06 george Exp $
 
 inherit gnat flag-o-matic
 
@@ -14,7 +14,9 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${MY_PV}/gcc-core-${MY_PV}.tar.b
 	amd64? ( http://dev.gentoo.org/~george/src/gcc-3.4-amd64.tar.gz )"
 HOMEPAGE="http://www.gnat.com/"
 
-DEPEND="=sys-devel/gcc-3.4*"
+DEPEND="=sys-devel/gcc-3.4*
+	!dev-lang/gnat-gcc
+	!dev-lang/gnat-gpl"
 
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
