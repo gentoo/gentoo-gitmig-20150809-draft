@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b8afdd07bfeff012d99a8b8532610b23 AnyEvent-1.02.ebuild 536
 MD5 28299c19b587e349ab5fc4450c2b5184 ChangeLog 810
 MD5 29e9939acaa67e11597173af5d35766e files/digest-AnyEvent-1.02 235
 MD5 375c79b8107a010e078aeb0ccdb68d70 metadata.xml 307
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEPCHuKRy60XGEcJIRAuIlAJ4qgqaOjeIzfFRaGSJlg8B5eOekjwCglV53
+kA6F+42xAsBgbOGbI1wugrU=
+=MOQa
+-----END PGP SIGNATURE-----

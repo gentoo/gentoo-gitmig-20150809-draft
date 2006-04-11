@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 765e196c66684c41afa16e4407a51666 ChangeLog 992
 MD5 f247e7e2707d8e92d647240d3950d92d Event-ExecFlow-0.61.ebuild 565
 MD5 364330dee594a8f0b8a7adffcc1ae327 files/digest-Event-ExecFlow-0.61 256
 MD5 375c79b8107a010e078aeb0ccdb68d70 metadata.xml 307
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEPCI0KRy60XGEcJIRApxlAJ9Zj1tsVEUDP5He2t0J5IKSZjs00gCgrXr9
+3iWy/2xYFuau8I9kUdp/Ujc=
+=9S6l
+-----END PGP SIGNATURE-----
