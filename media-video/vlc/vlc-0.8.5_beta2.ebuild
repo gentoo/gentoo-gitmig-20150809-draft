@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5_beta2.ebuild,v 1.1 2006/04/02 20:38:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5_beta2.ebuild,v 1.2 2006/04/11 06:40:44 flameeyes Exp $
 
 inherit eutils wxwidgets nsplugins multilib autotools toolchain-funcs
 
@@ -24,7 +24,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="a52 3dfx nls debug altivec httpd vlm gnutls live v4l cdda ogg matroska
 dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc stream
-mp3 xv bidi sdl png xml samba daap corba screen mod speex nsplugin shout real
+mp3 xv bidi sdl png xml samba daap corba screen mod speex nsplugin shout rtsp
 win32codecs skins hal avahi xinerama cddb directfb upnp"
 
 RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
@@ -189,7 +189,7 @@ src_compile () {
 		$(use_enable speex) \
 		$(use_enable nsplugin mozilla) \
 		$(use_enable shout) \
-		$(use_enable real) $(use_enable real realrtsp) \
+		$(use_enable rtsp) $(use_enable rtsp realrtsp) \
 		$(use_enable win32codecs loader) \
 		$(use_enable skins skins2) \
 		$(use_enable hal) \
