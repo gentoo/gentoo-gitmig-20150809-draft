@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.4.9-r1.ebuild,v 1.1 2006/04/07 16:17:29 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.4.9-r1.ebuild,v 1.2 2006/04/11 05:46:01 sebastian Exp $
 
 inherit depend.php
 
 ARCHIVE_TAR="1.3.1"
 CONSOLE_GETOPT="1.2"
 PEAR="1.4.9"
-XML_RPC="1.4.6"
+XML_RPC="1.4.7"
 
 [ -z "${PEAR_CACHEDIR}" ] && PEAR_CACHEDIR="/tmp/pear/cache"
 
