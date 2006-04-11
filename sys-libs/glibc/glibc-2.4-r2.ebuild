@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.4 2006/04/10 03:35:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.5 2006/04/11 04:21:59 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -517,9 +517,9 @@ toolchain-glibc_headers_install() {
 toolchain-glibc_pkg_postinst() {
 	# Mixing nptlonly and -nptlonly glibc can prove dangerous if libpthread
 	# isn't removed in unmerge which happens sometimes.  See bug #87671
-	if ! is_crosscompile && want_linuxthreads ; then
+	if ! is_crosscompile && want_linuxthreads && [[ ${ROOT} == "/" ]] ; then
 		for libdir in $(get_all_libdirs) ; do
-			for f in ${ROOT}/${libdir}/libpthread-2.* ${ROOT}/${libdir}/libpthread-0.6* ; do
+			for f in "${ROOT}"/${libdir}/libpthread-2.* "${ROOT}"/${libdir}/libpthread-0.6* ; do
 				if [[ -f ${f} ]] ; then
 					rm -f ${f}
 					ldconfig
@@ -537,24 +537,24 @@ toolchain-glibc_pkg_postinst() {
 	#   -f && -e  will fail
 	#   -L will succeed
 	#
-	if [ ! -e "${ROOT}/etc/localtime" ] ; then
+	if [[ ! -e ${ROOT}/etc/localtime ]] ; then
 		echo "Please remember to set your timezone using the zic command."
-		rm -f ${ROOT}/etc/localtime
-		ln -s ../usr/share/zoneinfo/Factory ${ROOT}/etc/localtime
+		rm -f "${ROOT}"/etc/localtime
+		ln -s ../usr/share/zoneinfo/Factory "${ROOT}"/etc/localtime
 	fi
 
-	if ! is_crosscompile && [ -x "${ROOT}/usr/sbin/iconvconfig" ] ; then
+	if ! tc-is-cross-compiler && [[ -x ${ROOT}/usr/sbin/iconvconfig ]] ; then
 		# Generate fastloading iconv module configuration file.
-		${ROOT}/usr/sbin/iconvconfig --prefix=${ROOT}
+		"${ROOT}"/usr/sbin/iconvconfig --prefix="${ROOT}"
 	fi
 
-	if [ ! -e "${ROOT}/lib/ld.so.1" ] && use ppc64 && ! has_multilib_profile ; then
+	if [[ ! -e ${ROOT}/lib/ld.so.1 ]] && use ppc64 && ! has_multilib_profile ; then
 		## SHOULDN'T THIS BE lib64??
 		ln -s ld64.so.1 ${ROOT}/lib/ld.so.1
 	fi
 
 	# Reload init ...
-	if ! is_crosscompile && [ "${ROOT}" = "/" ] ; then
+	if ! is_crosscompile && [[ ${ROOT} == "/" ]] ; then
 		/sbin/init U &> /dev/null
 	fi
 
