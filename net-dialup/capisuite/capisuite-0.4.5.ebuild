@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5.ebuild,v 1.5 2005/10/04 21:22:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5.ebuild,v 1.6 2006/04/11 23:02:37 sbriesen Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="dev-lang/python
 	virtual/libc
 	media-sound/sox
-	media-libs/tiff
+	>=media-libs/tiff-3.7.1
 	media-gfx/jpeg2ps
 	media-gfx/sfftobmp
 	virtual/ghostscript
