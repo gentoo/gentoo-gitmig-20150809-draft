@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.151 2006/04/11 00:36:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.152 2006/04/11 01:33:55 tsunam Exp $
+
+  11 Apr 2006; Joshua Jackson <tsunam@gentoo.org>
+  util-linux-2.12r-r3.ebuild:
+  Stable on x86; bug #129540
 
 *util-linux-2.12r-r4 (11 Apr 2006)
 
