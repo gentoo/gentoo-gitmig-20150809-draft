@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.1.ebuild,v 1.2 2006/04/11 04:58:06 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.1.ebuild,v 1.3 2006/04/11 06:07:07 markusle Exp $
 
-inherit flag-o-matic eutils toolchain-funcs
+inherit flag-o-matic eutils toolchain-funcs autotools
 
 DESCRIPTION="C subroutine library for computing the Discrete Fourier Transform (DFT)"
 HOMEPAGE="http://www.fftw.org/"
@@ -25,6 +25,7 @@ src_unpack() {
 
 	# fix altivec compilation problems (bug #129304)
 	epatch "${FILESDIR}"/${PN}-altivec-headers.patch
+	eautoconf
 
 	cd "${WORKDIR}"
 	mv ${P} ${P}-single
