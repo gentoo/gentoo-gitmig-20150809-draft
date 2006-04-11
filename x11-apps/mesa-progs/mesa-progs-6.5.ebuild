@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-6.5.ebuild,v 1.1 2006/04/01 18:23:44 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-6.5.ebuild,v 1.2 2006/04/11 20:49:29 spyderous Exp $
 
 inherit toolchain-funcs
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/glut
 	virtual/opengl
 	virtual/glu"
 
-DEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/Mesa-${PV}
 
