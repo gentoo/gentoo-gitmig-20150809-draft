@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.6e.ebuild,v 1.1 2004/12/24 17:04:44 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.6e.ebuild,v 1.2 2006/04/11 04:50:05 markusle Exp $
 
 Name="Raster3D"
 S="${WORKDIR}/${Name}_${PV}"
@@ -13,7 +13,12 @@ SLOT="0"
 IUSE=""
 KEYWORDS="x86"
 
-DEPEND="virtual/x11"
+RDEPEND="media-libs/jpeg
+	media-libs/libpng
+	media-libs/tiff"
+
+DEPEND="${RDEPEND}
+	|| ( x11-misc/imake virtual/x11 )"
 
 src_compile() {
 	sed "/prefix/s/\/usr\/local/\/usr/" ${S}/Makefile.template > ${S}/Makefile.template.new

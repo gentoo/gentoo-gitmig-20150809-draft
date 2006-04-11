@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.2 2006/01/18 06:55:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.3 2006/04/11 04:50:06 markusle Exp $
+
+inherit toolchain-funcs fortran
 
 NAME="Raster3D"
 
@@ -16,25 +18,31 @@ KEYWORDS="~x86"
 RDEPEND="media-libs/jpeg
 	media-libs/libpng
 	media-libs/tiff"
-DEPEND="${RDEPEND}"
+
+DEPEND="${RDEPEND}
+	   || ( x11-misc/imake virtual/x11 )"
 
 S="${WORKDIR}/${NAME}_${PV}"
 
 src_compile() {
-	sed -e "/prefix/s/\/usr\/local/\/usr/" -i ${S}/Makefile.template || die \
-		"Failed to patch makefile."
+	cd "${S}"
+
+	# fix Makefile to honor user's CFLAGS/FFLAGS
+	sed -e "s:gcc:$(tc-getCC):" \
+		-e "s:g77:${FORTRANC}:" \
+		-e "s:-g -m486 -w:${CFLAGS}:" \
+		-e "s:-g -O -w -malign-double:${FFLAGS} -w:" \
+		-i Makefile || die "Failed to patch makefile"
+
+	sed -e "s:prefix  = /usr/local:prefix  = /usr:" \
+		-i Makefile.template || \
+		die "Failed to patch makefile.template"
 
 	make linux || die "Failed to make linux target."
 	make all || die "Failed to make all target."
 }
 
 src_install() {
-	#dodir /usr/bin
-	#dodir /usr/share/Raster3D/materials
-	#dodir /usr/share/Raster3D/html
-	#dodir /usr/share/Raster3D/examples
-	#dodir /usr/share/man/man1
-
 	emake prefix="${D}"/usr \
 			bindir="${D}"/usr/bin \
 			datadir="${D}"/usr/share/Raster3D/materials \
@@ -43,7 +51,8 @@ src_install() {
 			examdir="${D}"/usr/share/Raster3D/examples \
 			install || die "Failed to install application."
 
-	#dodir /etc/env.d
+	dodir /etc/env.d
 	echo -e "R3D_LIB=/usr/share/${NAME}/materials" > \
-		"${D}"/etc/env.d/10raster3d "Failed to install env file."
+		"${D}"/etc/env.d/10raster3d || \
+		die "Failed to install env file."
 }
