@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.32 2006/03/02 22:08:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.33 2006/04/11 19:02:39 swegener Exp $
+
+  11 Apr 2006; Sven Wegener <swegener@gentoo.org>
+  -files/avahi-0.6.3-mono-docs.patch,
+  -files/0.6.1-need-dbus-initscript.patch, -avahi-0.6.4.ebuild,
+  -avahi-0.6.8.ebuild, avahi-0.6.9.ebuild:
+  Made the glib dependency unconditional.
 
 *avahi-0.6.9 (02 Mar 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.9.ebuild,v 1.1 2006/03/02 22:08:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.9.ebuild,v 1.2 2006/04/11 19:02:39 swegener Exp $
 
 inherit eutils qt3 mono python
 
@@ -15,15 +15,17 @@ IUSE="bookmarks howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python q
 
 RDEPEND=">=dev-libs/libdaemon-0.5
 	dev-libs/expat
+	>=dev-libs/glib-2
 	gdbm? ( sys-libs/gdbm )
 	qt? ( $(qt_min_version 3.3) )
 	gtk? (
 		>=x11-libs/gtk+-2
 		>=gnome-base/libglade-2
-		>=dev-libs/glib-2
 	)
 	mono? ( >=dev-lang/mono-1.1.10 )
-	dbus? ( >=sys-apps/dbus-0.30 )
+	dbus? (
+		>=sys-apps/dbus-0.30
+	)
 	python? (
 		>=virtual/python-2.4
 		dbus? (
@@ -60,6 +62,7 @@ pkg_preinst() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	epatch "${FILESDIR}"/${PN}-0.6.1-no-ipv6.patch
 }
 
@@ -85,6 +88,7 @@ src_compile() {
 		--disable-pygtk \
 		--disable-xmltoman \
 		--disable-monodoc \
+		--enable-glib \
 		$(use_enable mdnsresponder-compat compat-libdns_sd) \
 		$(use_enable howl-compat compat-howl) \
 		$(use_enable doc doxygen-doc) \
@@ -93,7 +97,6 @@ src_compile() {
 		$(use_enable python) \
 		$(use_enable gtk) \
 		$(use_enable qt qt3) \
-		$(use_enable gtk glib) \
 		$(use_enable gdbm) \
 		${myconf} \
 		|| die "econf failed"
