@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cf78bdd52f61ddfa1a94d55f4766ec16 ChangeLog 6624
-RMD160 09c582f69012c60deb71b51cd5321d8f783b43f6 ChangeLog 6624
-SHA256 efb6c4c54a23b3897cf27d6c6da2ae66a164f7a38f4952d3aaed5243411a7a7f ChangeLog 6624
+MD5 a0c8a22fcf3bdf91d5217824cb455a27 ChangeLog 6763
+RMD160 7a0bb1fd669a98c755ec206c9fd222939b6f9a22 ChangeLog 6763
+SHA256 9947a3665423aa873d9d072228dd90b10bd2b0f362ec923c58a4c3a9df33d764 ChangeLog 6763
 MD5 a606b2936c8c356719e090b99d181839 alsa-jack-1.0.10.ebuild 973
 RMD160 fca1fe497bad9ea9fcfb58eeff31dd2dbf156c6b alsa-jack-1.0.10.ebuild 973
 SHA256 abb18b80034933e64edd26cb74e204c3756c526a04f00bbe0ade6daf57f3f122 alsa-jack-1.0.10.ebuild 973
@@ -13,6 +13,9 @@ SHA256 6b0d8cd6270eace364552697c703d540ba8ab495665b8090bd391b908018c8dc alsa-jac
 MD5 46b87b05b52162fd963708cf0f48761a alsa-jack-1.0.11_rc4.ebuild 977
 RMD160 dc0f9844022520f13aa7471dc9a6a73fb1d1c547 alsa-jack-1.0.11_rc4.ebuild 977
 SHA256 f24602ba72f781ea20ae8f41cd9f152d7e2796c41fa4064099b80c4912db7523 alsa-jack-1.0.11_rc4.ebuild 977
+MD5 b7bc9b20727fc8fc85cbb7018ac1ef0c alsa-jack-1.0.11_rc5.ebuild 977
+RMD160 3704c9c278a8cdbadba0910b681f5f71f983c3cc alsa-jack-1.0.11_rc5.ebuild 977
+SHA256 d69cc230b98f082e1522b4d1f819b5f8c140d5f216e849fac2ad480d6f71db5c alsa-jack-1.0.11_rc5.ebuild 977
 MD5 bd783eaa84e2bc2a133cc7a53ea9fd9b alsa-jack-1.0.8.ebuild 969
 RMD160 edab3033071170eb92ca880de588a035d5d707e0 alsa-jack-1.0.8.ebuild 969
 SHA256 186b5df4a4875875cfac4dd40eb122fb67f7693ed1704af5999d677907afe1ed alsa-jack-1.0.8.ebuild 969
@@ -28,6 +31,9 @@ SHA256 cf28e24f1455544d7b038e43d25d220c4cffdce609d9eb25d4a3675c51cf53e9 files/di
 MD5 313abfd07696025c5623cb89844fc17c files/digest-alsa-jack-1.0.11_rc4 271
 RMD160 609c31de3a9da5aa939e4198331f7d336f6c7a98 files/digest-alsa-jack-1.0.11_rc4 271
 SHA256 f78b0f9bc409989f0c1645a79c2d0d916cef9846317f2841ea85b2825c52019d files/digest-alsa-jack-1.0.11_rc4 271
+MD5 d466977bd2a0f9eb7d5b4696e2ca61c9 files/digest-alsa-jack-1.0.11_rc5 271
+RMD160 f75d9f5a740ddbb4ef9dfac84acf9fffd2a5832f files/digest-alsa-jack-1.0.11_rc5 271
+SHA256 d079f9d03b03d968acd189d578424b7a99625f05ed045713cc962be5064e10d2 files/digest-alsa-jack-1.0.11_rc5 271
 MD5 46a389b403bc763310e942cc9fc6d7b1 files/digest-alsa-jack-1.0.8 67
 RMD160 bd8c992a6ae2a84ab36fbd450988231be43dad64 files/digest-alsa-jack-1.0.8 67
 SHA256 ff1c6d7153e3b27574f089ef7b701034eef8b7af71c53ac07b565d215535ada0 files/digest-alsa-jack-1.0.8 67
@@ -40,7 +46,7 @@ SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEI/qqAiZjviIA2XgRAiejAJwMAJsXy8Ga28G3h5phuZftN6vQFQCghNGG
-D5LGHfktXHFUXNH2g3aJSr4=
-=rs6p
+iD8DBQFEPAYSAiZjviIA2XgRAiCyAJ9/1IQ0DBUahUYx4sdh1I/yvmLA/QCg8juQ
+G1j6/CMtnbSYYuegHBa7FT0=
+=HVIa
 -----END PGP SIGNATURE-----
