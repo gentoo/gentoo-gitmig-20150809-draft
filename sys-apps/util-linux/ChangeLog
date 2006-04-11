@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.150 2006/03/13 19:33:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.151 2006/04/11 00:36:34 vapier Exp $
+
+*util-linux-2.12r-r4 (11 Apr 2006)
+
+  11 Apr 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.12r-umount-no-special.patch,
+  +util-linux-2.12r-r4.ebuild:
+  Update loop aes #129496 by Alon Bar-Lev and fix building on sparc/arm
+  systems with gcc-4.1 by ignoring the bogus code.
 
   13 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   util-linux-2.13_pre6.ebuild:
