@@ -1,0 +1,236 @@
+Index: init.d/halt.sh
+===================================================================
+--- init.d/halt.sh	(revision 1964)
++++ init.d/halt.sh	(working copy)
+@@ -119,9 +119,6 @@
+ done
+ eend 0
+ 
+-# Try to remove any dm-crypt mappings
+-stop_addon dm-crypt
+-
+ # Stop LVM, etc
+ stop_volumes
+ 
+Index: init.d/checkfs
+===================================================================
+--- init.d/checkfs	(revision 1964)
++++ init.d/checkfs	(working copy)
+@@ -9,9 +9,6 @@
+ start() {
+ 	local retval=0
+ 
+-	# Setup dm-crypt mappings if any
+-	start_addon dm-crypt
+-
+ 	if [[ -f /fastboot ]] || [[ -n ${CDBOOT} ]] ; then
+ 		rm -f /fastboot
+ 	else
+Index: init.d/localmount
+===================================================================
+--- init.d/localmount	(revision 1964)
++++ init.d/localmount	(working copy)
+@@ -38,9 +38,6 @@
+ 	ebegin "Activating (possibly) more swap"
+ 	/sbin/swapon -a
+ 	eend $?
+-
+-	# Start dm-crypt mappings, if any
+-	start_addon dm-crypt
+ }
+ 
+ 
+Index: etc/conf.d/rc
+===================================================================
+--- etc/conf.d/rc	(revision 1964)
++++ etc/conf.d/rc	(working copy)
+@@ -16,6 +16,13 @@
+ 
+ RC_INTERACTIVE="yes"
+ 
++# Dynamic /dev managers can trigger coldplug events which cause services to
++# start before we are ready for them. If this happens, we can defer these
++# services to start in the boot runlevel. If you don't want this then set
++# RC_COLDPLUG to no.
++
++RC_COLDPLUG="yes"
++
+ # RC_NET_STRICT_CHECKING allows some flexibility with the 'net' service.
+ # The following values are allowed:
+ #  none  - The 'net' service is always considered up.
+@@ -41,7 +48,7 @@
+ # for various volume managers (MD, EVMS2, LVM, DM, etc).  Note that they are
+ # stopped in reverse order.
+ 
+-RC_VOLUME_ORDER="raid evms lvm dm"
++RC_VOLUME_ORDER="raid evms lvm dm dm-crypt"
+ 
+ # RC_VERBOSE will make init scripts more verbose. Only networking scripts
+ # really use this at this time, and this is useful for trouble shooting
+Index: lib/rcscripts/net.modules.d/udhcpc.sh
+===================================================================
+--- lib/rcscripts/net.modules.d/udhcpc.sh	(revision 1964)
++++ lib/rcscripts/net.modules.d/udhcpc.sh	(working copy)
+@@ -126,9 +126,15 @@
+ 		fi
+ 	fi
+ 
+-	eval start-stop-daemon --start --exec /sbin/udhcpc \
+-		--pidfile "${pidfile}" \
+-		-- "${opts}" --interface="${iface}" --now \
++	# Don't use s-s-d if the user wants to quit on lease.
++	if [[ " ${opts} " == *" -q "* || " ${opts} " == *" --quit "*  ]]; then
++		x="/sbin/udhcpc"
++	else
++		x="start-stop-daemon --start --exec /sbin/udhcpc \
++			--pidfile \"${pidfile}\" --"
++	fi
++	
++	eval "${x}" "${opts}" --interface="${iface}" --now \
+ 		--script=/lib/rcscripts/sh/udhcpc.sh \
+ 		--pidfile="${pidfile}" >/dev/null
+ 	eend $? || return 1
+Index: lib/rcscripts/net.modules.d/ccwgroup.sh
+===================================================================
+--- lib/rcscripts/net.modules.d/ccwgroup.sh	(revision 1964)
++++ lib/rcscripts/net.modules.d/ccwgroup.sh	(working copy)
+@@ -11,30 +11,44 @@
+ 
+ ccwgroup_pre_start() {
+ 	local iface="$1" ifvar="$(bash_variable "$1")"
+-	local ccwgroup="ccwgroup_${ifvar}[@]"
++	local ccw="ccwgroup_${ifvar}[@]"
++	local -a ccwgroup=( "${!ccw}" )
+ 
+-	[[ -z ${!ccwgroup} ]] && return 0
++	[[ -z ${!ccw} ]] && return 0
+ 	if [[ ! -d /sys/bus/ccwgroup ]] ; then
+ 		eerror "ccwgroup support missing in kernel"
+ 		return 1
+ 	fi
+ 
+ 	einfo "Enabling ccwgroup on ${iface}"
+-	echo "${!ccwgroup// /,}" > /sys/bus/ccwgroup/drivers/qeth/group
+-	echo "1" > /sys/devices/qeth/"${!ccwgroup[0]}"/online
++	echo "${!ccw// /,}" > /sys/bus/ccwgroup/drivers/qeth/group
++	echo "1" > /sys/devices/qeth/"${ccwgroup[0]}"/online
+ 	eend $?
+ }
+ 
+-ccwgroup_post_stop() {
++ccwgroup_pre_stop() {
+ 	local iface="$1"
++
++	# Erase any existing ccwgroup to be safe
++	save_options ccwgroup_device ""
+ 	
+ 	[[ ! -L /sys/class/net/"${iface}"/driver ]] && return 0
+ 	local driver="$(readlink /sys/class/net/"${iface}"/driver)"
+ 	[[ ${driver} != *"/bus/ccwgroup/"* ]] && return 0
++
++	local device="$(readlink /sys/class/net/"${iface}"/device)"
++	device="${device##*/}"
++	save_options ccwgroup_device "${device}"
++}
++
++ccwgroup_post_stop() {
++	local iface="$1" device="$(get_options ccwgroup_device)"
+ 	
++	[[ -z ${device} ]] && return 0
++	
+ 	einfo "Disabling ccwgroup on ${iface}"
+-	echo "0"  > /sys/class/net/"${iface}"/device/online
+-	echo "1"  > /sys/class/net/"${iface}"/device/ungroup
++	echo "0"  > /sys/devices/qeth/"${device}"/online
++	echo "1"  > /sys/devices/qeth/"${device}"/ungroup
+ 	eend $?
+ }
+ 
+Index: init.d/net.lo
+===================================================================
+--- init.d/net.lo	(revision 1964)
++++ init.d/net.lo	(working copy)
+@@ -1086,19 +1086,6 @@
+ # which localises variables and unsets functions
+ start() {
+ 	declare -r IFACE="${SVCNAME#*.}"
+-	if [[ ${IN_HOTPLUG} == "1" ]] ; then
+-		# If we've been called by hotplug, check if we have
+-		# a policy for the interface for not starting
+-		local x ifvar="$(bash_variable "${IFACE}")"
+-		x="hotplug_${ifvar}"
+-		if [[ ${!x} == "no" || ${!x} == "false" ]] ; then
+-			eerror "Not starting interface ${IFACE} due to hotplug policy"
+-			unset -f exit
+-			mark_service_stopped "net.${IFACE}"
+-			exit 1
+-		fi
+-	fi
+-
+ 	einfo "Starting ${IFACE}"
+ 	run "${IFACE}" start
+ }
+Index: etc/conf.d/net.example
+===================================================================
+--- etc/conf.d/net.example	(revision 1964)
++++ etc/conf.d/net.example	(working copy)
+@@ -21,15 +21,6 @@
+ # read through the rest of this file.
+ 
+ ##############################################################################
+-# DEFAULTS
+-#
+-# hotplug_eth0="yes"
+-# Do we allow hotplug to bring up interfaces or not? The default is we do,
+-# otherwise put no in the above value.
+-# NOTE: hotplug just has to be installed for hotplugging to work - it does
+-# not matter if it's in any runlevel or not.
+-
+-##############################################################################
+ # MODULES
+ #
+ # We now support modular networking scripts which means we can easily
+@@ -361,7 +352,7 @@
+ #link_ppp0="/dev/ttyS0" 		# Most PPP links will use a serial port
+ #link_ppp0="eth0"       		# PPPoE requires an ethernet interface
+ #link_ppp0="/dev/null"			# PPPoA and ISDN links should have this
+-#link_ppp0="pty $(your_link_command)"	# PPP links over ssh, rsh, etc
++#link_ppp0="pty 'your_link_command'"	# PPP links over ssh, rsh, etc
+ #
+ # Here you should specify what pppd plugins you want to use
+ # Available plugins are: pppoe, pppoa, capi, dhcpc, minconn, radius,
+Index: sbin/runscript.sh
+===================================================================
+--- sbin/runscript.sh	(revision 1964)
++++ sbin/runscript.sh	(working copy)
+@@ -27,10 +27,13 @@
+ # until after rc sysinit has completed so we punt them to the boot runlevel
+ if [[ -e /dev/.rcsysinit ]] ; then
+ 	eerror "ERROR:  cannot run ${SVCNAME} until sysinit completes"
+-	eerror "${SVCNAME} will be started in the ${BOOTLEVEL} runlevel"
+-	if [[ ! -L /dev/.rcboot/"${SVCNAME}" ]] ; then
+-		[[ ! -d /dev/.rcboot ]] && mkdir /dev/.rcboot
+-		ln -snf "$1" /dev/.rcboot/"${SVCNAME}"
++	if [[ ${RC_COLDPLUG} == "yes" \
++	|| " ${RC_COLDPLUG} " == *" ${SVCNAME} "* ]] ; then
++		eerror "${SVCNAME} will be started in the ${BOOTLEVEL} runlevel"
++		if [[ ! -L /dev/.rcboot/"${SVCNAME}" ]] ; then
++			[[ ! -d /dev/.rcboot ]] && mkdir /dev/.rcboot
++			ln -snf "$1" /dev/.rcboot/"${SVCNAME}"
++		fi
+ 	fi
+ 	exit 1
+ fi
+Index: sbin/rc
+===================================================================
+--- sbin/rc	(revision 1964)
++++ sbin/rc	(working copy)
+@@ -164,7 +164,7 @@
+ 			CRITICAL_SERVICES="${CRITICAL_SERVICES} ${x##*/}"
+ 		done
+ 	else
+-		CRITICAL_SERVICES="checkroot modules checkfs localmount clock bootmisc"
++		CRITICAL_SERVICES="checkroot modules checkfs localmount clock"
+ 	fi
+ 
+ 	export CRITICAL_SERVICES

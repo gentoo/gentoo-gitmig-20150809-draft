@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0a1ac1f3fd737249be52cf2b80f8780f ChangeLog 71825
-RMD160 a3cbf5727d15894c96ea4f0446e42da7930eb20d ChangeLog 71825
-SHA256 89497a99c5f4240faaca93d33751dc5763cf611073a2d9978394c5522cc15bd4 ChangeLog 71825
+MD5 a717fe19a5bc366e780228678e2998ea ChangeLog 72090
+RMD160 15f7d435644f942ceafddd34bd96a3a934f75184 ChangeLog 72090
+SHA256 e750b852d7f67d12f5789dcb306c4d7f7e5ce1d5ae135e8f82a10debae1f3627 ChangeLog 72090
 MD5 22a10db577b1b646d12ba31ed7b77a6c baselayout-1.11.13-r2.ebuild 19014
 RMD160 3d1348291157e3f973f4ad16e4f222fd32645593 baselayout-1.11.13-r2.ebuild 19014
 SHA256 236d09bf8aed1a3f73c26bdb287957a21212646ecb6eec21abaafa9ef6e3b2ef baselayout-1.11.13-r2.ebuild 19014
@@ -16,6 +16,9 @@ SHA256 02e7a275423bbb0f9ce5002e485f501d4367ad21a27772ab9a16e36fc2d7d656 baselayo
 MD5 1477c97f802e043d07a97bda08cf279b baselayout-1.12.0_pre16-r3.ebuild 19378
 RMD160 09fd44e7b8e7088bd022d0aff3bf5c17d7e47758 baselayout-1.12.0_pre16-r3.ebuild 19378
 SHA256 bd5def9cf7b389e7866ae944344d95c6383aab20b46224f9ef7707a8f66c639c baselayout-1.12.0_pre16-r3.ebuild 19378
+MD5 cce7d94746ff6e496e9053bcf921961b baselayout-1.12.0_pre17-r1.ebuild 19919
+RMD160 011a365f240c5498355f754ab8a8c15661e7404f baselayout-1.12.0_pre17-r1.ebuild 19919
+SHA256 a2cff5bfae0590291586a368ef151f22a90bf0988fc8601094c4e29571bd0781 baselayout-1.12.0_pre17-r1.ebuild 19919
 MD5 1d3a41684700da19c585deb8a07b6829 baselayout-1.12.0_pre17.ebuild 19786
 RMD160 4fa8a52da6f8c8161f7acd3aad61cff4d3ce3da9 baselayout-1.12.0_pre17.ebuild 19786
 SHA256 38c26b33e33728d92fe514ce81efcbeb4a393fcc985895424962ddc1fd213f70 baselayout-1.12.0_pre17.ebuild 19786
@@ -49,6 +52,9 @@ SHA256 2e8b48e891a0ebd487f0c2ff70203ecca02521a0b9e584a4c5146dc3a3cba3b6 files/ba
 MD5 1bfe1cc270a840e3a8fd6762445485ea files/baselayout-1.12.0_pre16-sv.patch 473
 RMD160 ed1c71c282895e5b40d78ec78b6dfeb074d4a517 files/baselayout-1.12.0_pre16-sv.patch 473
 SHA256 e68b407eabbfd65e097dc6863b5cd8aa834a59a6051df952c1a522c980bb626a files/baselayout-1.12.0_pre16-sv.patch 473
+MD5 6d553c411fe150bde35e25fee2ad3f86 files/baselayout-1.12.0_pre17-1975.patch 7809
+RMD160 a942cda68bdc15ef9c39eb624ded502b1abfdbdb files/baselayout-1.12.0_pre17-1975.patch 7809
+SHA256 1f51e451aafe19e27b2b9e819eedfc20a9d6a377643f02571261d04ec84b7c3d files/baselayout-1.12.0_pre17-1975.patch 7809
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 RMD160 43e295598125f39e375a1fcee6e642e37c8b8bd8 files/copyright 2099
 SHA256 38db4636f65ce40ea505a6337138b041ac6be5998982193d16b1fbdeebb2bacd files/copyright 2099
@@ -67,13 +73,16 @@ SHA256 4800938394cdc3186eb178b7e9a0dc7d2f24954b860f697d00dfdb02fce94e74 files/di
 MD5 9320336a070776b1cbb6b259829e7f14 files/digest-baselayout-1.12.0_pre17 274
 RMD160 f9d171553d6780f16569e2982362574d0d4d404c files/digest-baselayout-1.12.0_pre17 274
 SHA256 b402993965f1966e2b1dc15bb82ae7ca967c39ee6c11323bdb235700864b8fc4 files/digest-baselayout-1.12.0_pre17 274
+MD5 9320336a070776b1cbb6b259829e7f14 files/digest-baselayout-1.12.0_pre17-r1 274
+RMD160 f9d171553d6780f16569e2982362574d0d4d404c files/digest-baselayout-1.12.0_pre17-r1 274
+SHA256 b402993965f1966e2b1dc15bb82ae7ca967c39ee6c11323bdb235700864b8fc4 files/digest-baselayout-1.12.0_pre17-r1 274
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEOxNv2+ySkm8kpY0RAq1PAJ9UeEAqCWGg2QBwHy5hsv94e+iFwACfd6aw
-hXd7SzHSnqhQHKo7cOLHBVA=
-=y/I4
+iD8DBQFEO8NOEbVyYKaZ/NERAnLbAJ0fsVd2QZ438+rwliZ69zEUdVM6tQCcD1Ar
+BGtUmeVBsz98IvddeI0uR0A=
+=xApe
 -----END PGP SIGNATURE-----
