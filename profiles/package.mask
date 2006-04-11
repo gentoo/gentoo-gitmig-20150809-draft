@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5203 2006/04/10 20:07:50 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5204 2006/04/11 10:16:28 chrb Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -699,7 +699,7 @@ sys-kernel/openblocks-sources
 # bugs.gentoo.org if they are related to the ebuild or otherwise Gentoo
 # spefific. Any bug reports to the Gentoo bugzilla that are not Gentoo specific
 # will be resolved as "UPSTREAM".
->=sys-kernel/xen-sources-2.6.16_rc3-r1
+<sys-kernel/xen-sources-2.6.16
 
 # Paul Varner <fuzzyray@gentoo.org> (21 Dec 2005)
 # porthole-0.5.0 being added to the tree for testing. 
