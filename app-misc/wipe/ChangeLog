@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/wipe
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.12 2005/04/21 19:46:40 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.13 2006/04/11 15:49:38 gustavoz Exp $
+
+  11 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> wipe-2.2.0.ebuild:
+  Keyworded ~sparc wrt jforman
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> wipe-2.2.0.ebuild:
   stable on amd64

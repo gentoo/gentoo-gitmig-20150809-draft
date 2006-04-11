@@ -1,4 +1,14 @@
-MD5 b4013a33b59b5bb7a7ac3e0a80a41b75 ChangeLog 1147
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 322e54bfd7eca1b63d1c57f9723c57eb wipe-2.2.0.ebuild 710
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bc7b6738f8013965b4364a46ddda5183 ChangeLog 1255
 MD5 96d676b2df2cb0830d62488f0264581c files/digest-wipe-2.2.0 62
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 36acded4a5177af2bb5952c093c61e49 wipe-2.2.0.ebuild 721
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEO9AlKRy60XGEcJIRAh8JAJ41bCj3UNgv+g/NENPLGc5k3j0pcQCePk9D
+mkf7+b/TizYimzXQAG5Rhno=
+=DV6E
+-----END PGP SIGNATURE-----
