@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10.10.ebuild,v 1.3 2005/12/20 17:01:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10.10.ebuild,v 1.4 2006/04/11 14:28:45 blubb Exp $
 
 inherit eutils
 
@@ -16,9 +16,9 @@ IUSE="doc ccache cdr examples"
 DEPEND=""
 RDEPEND="dev-lang/python
 	amd64? (
-		sys-apps/linux32 )
+		sys-apps/setarch )
 	ppc64? (
-		sys-devel/ppc32 )
+		sys-apps/setarch )
 	ccache? (
 		dev-util/ccache )
 	cdr? (

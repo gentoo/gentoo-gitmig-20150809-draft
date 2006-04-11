@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc41.ebuild,v 1.1 2006/04/04 16:11:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc41.ebuild,v 1.2 2006/04/11 14:28:45 blubb Exp $
 
 inherit eutils
 
@@ -17,9 +17,9 @@ DEPEND=""
 RDEPEND="dev-lang/python
 	app-crypt/shash
 	amd64? (
-		sys-apps/linux32 )
+		sys-apps/setarch )
 	ppc64? (
-		sys-devel/ppc32 )
+		sys-apps/setarch )
 	ccache? (
 		dev-util/ccache )
 	cdr? (
