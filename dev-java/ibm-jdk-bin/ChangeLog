@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.52 2006/04/05 22:48:31 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.53 2006/04/11 03:44:16 wormo Exp $
+
+  10 Apr 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  ibm-jdk-bin-1.4.2.04.ebuild:
+  tell non-amd64 users to fetch from old-releases homepage (bug #125178)
 
   05 Apr 2006; <nichoj@gentoo.org> ibm-jdk-bin-1.4.2.03.ebuild:
   Updated HOMEPAGE to point to older downloads page. Updated pkg_nofetch

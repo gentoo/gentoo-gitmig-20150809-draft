@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.04.ebuild,v 1.2 2006/03/12 13:35:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.04.ebuild,v 1.3 2006/04/11 03:44:16 wormo Exp $
 
 inherit java eutils
 
@@ -28,6 +28,8 @@ fi
 
 DESCRIPTION="IBM Java Development Kit"
 HOMEPAGE="http://www-106.ibm.com/developerworks/java/jdk/"
+# bug #125178
+ALT_HOMEPAGE="http://www-106.ibm.com/developerworks/java/jdk/linux/older_download.html"
 SRC_URI="x86? ( IBMJava2-SDK-142-SR4.tgz )
 		 amd64? ( IBMJava2-SDK-AMD64-142.x86_64-SR4.tgz )
 		 ppc? ( IBMJava2-SDK-142.ppc-SR4.tgz )
@@ -83,8 +85,12 @@ fi
 
 pkg_nofetch() {
 	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
-	einfo "Please visit: ${HOMEPAGE}"
-	einfo "Download: ${JDK_DIST}"
+	if use amd64; then
+		einfo "Please visit: ${HOMEPAGE}"
+	else
+		einfo "Please visit: ${ALT_HOMEPAGE}"
+	fi
+	einfo "Under Java 1.4.2, download SR4: ${JDK_DIST}"
 	if use javacomm ; then
 		einfo "Download: ${JAVACOMM_DIST}"
 	fi
