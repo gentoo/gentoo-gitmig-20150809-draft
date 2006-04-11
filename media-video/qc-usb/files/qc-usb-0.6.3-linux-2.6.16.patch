@@ -1,0 +1,12 @@
+diff -Naur qc-usb-0.6.3.ori/qc-driver.c qc-usb-0.6.3/qc-driver.c
+--- qc-usb-0.6.3.ori/qc-driver.c	2005-04-15 20:32:49.000000000 +0100
++++ qc-usb-0.6.3/qc-driver.c	2006-03-27 13:02:14.000000000 +0100
+@@ -3027,7 +3027,7 @@
+ 	name:		qc_name,
+ 	probe:		qc_usb_probe,
+ 	disconnect:	qc_usb_disconnect,
+-#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0) && LINUX_VERSION_CODE <= KERNEL_VERSION(2,6,15)
+ 	owner:		THIS_MODULE,
+ #endif
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,0)
