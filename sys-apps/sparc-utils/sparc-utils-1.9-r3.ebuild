@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r3.ebuild,v 1.1 2006/04/11 15:25:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r3.ebuild,v 1.2 2006/04/11 23:23:51 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,16 +9,15 @@ HOMEPAGE="http://www.debian.org/"
 SRC_URI=" http://http.us.debian.org/debian/pool/main/s/${PN}/${PN}_${PV}.orig.tar.gz
 	mirror://gentoo/${PN}_${PV}-2.diff.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="-* sparc"
 IUSE=""
 
 DEPEND="virtual/os-headers"
-RDEPEND="virtual/libc
-	sys-apps/setarch"
+RDEPEND="sys-apps/setarch"
 
-S="${WORKDIR}/${P}.orig"
+S=${WORKDIR}/${P}.orig
 
 src_unpack() {
 	unpack ${A}
@@ -47,8 +46,8 @@ src_install() {
 
 	dobin audioctl-1.3/audioctl || die
 
-	exeinto /etc/init.d; newexe ${FILESDIR}/audioctl.init audioctl || die
-	insinto /etc/conf.d; newins debian/audioctl.def audioctl || die
+	newinitd "${FILESDIR}"/audioctl.init audioctl || die
+	newconfd debian/audioctl.def audioctl || die
 
 	doman audioctl-1.3/audioctl.1
 	doman elftoaout-2.3/elftoaout.1
