@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.0.4.ebuild,v 1.2 2006/04/10 12:01:23 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.0.4.ebuild,v 1.3 2006/04/11 11:07:29 phreak Exp $
 
 inherit eutils toolchain-funcs versionator linux-info
 
@@ -17,7 +17,7 @@ SRC_URI="http://download.openvz.org/utils/${PN}/${MY_PV}/src/${MY_P}.tar.bz2
 
 LICENSE="QPL-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="app-admin/logrotate
