@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/audacious-show/audacious-show-1.2.0.ebuild,v 1.2 2006/03/11 17:33:53 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/audacious-show/audacious-show-1.2.0.ebuild,v 1.3 2006/04/11 19:10:53 swegener Exp $
 
 DESCRIPTION="XChat plugin to control audacious and to show whatever you're
 currently playing to others"
@@ -22,7 +22,6 @@ src_compile() {
 }
 
 src_install() {
-	mv audacious-show-1.2.0.so audacious-show.so
-	insinto  ${ROOT}/usr/lib/xchat/plugins/
-	doins audacious-show.so
+	insinto /usr/lib/xchat/plugins/
+	newins audacious-show-1.2.0.so audacious-show.so
 }
