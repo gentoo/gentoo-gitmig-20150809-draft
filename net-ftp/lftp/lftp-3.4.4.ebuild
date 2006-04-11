@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.4.0-r1.ebuild,v 1.3 2006/02/18 01:50:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.4.4.ebuild,v 1.1 2006/04/11 21:39:11 dragonheart Exp $
 
-inherit eutils
+#inherit eutils
 
 DESCRIPTION="A sophisticated ftp/http client, file transfer program"
-HOMEPAGE="http://ftp.yars.free.net/projects/lftp/"
+HOMEPAGE="http://lftp.yar.ru/"
 
 #SRC_URI="http://the.wiretapped.net/mirrors/lftp/${P}.tar.bz2"
 # Was a bit too slow and unreliable last time I tried (dragonheart)
@@ -33,12 +33,6 @@ DEPEND="${RDEPEND}
 	sys-apps/gawk
 	sys-devel/bison
 	sys-devel/libtool"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}/src
-	epatch ${FILESDIR}/${P}-remote-completion-false.patch
-}
 
 src_compile() {
 	local myconf="$(use_enable nls)"

@@ -1,15 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.13.ebuild,v 1.14 2006/02/18 01:50:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.13.ebuild,v 1.15 2006/04/11 21:39:11 dragonheart Exp $
 
 inherit eutils
 
 DESCRIPTION="A sophisticated ftp/http client, file transfer program"
-HOMEPAGE="http://ftp.yars.free.net/projects/lftp/"
+HOMEPAGE="http://lftp.yar.ru/"
 
-#SRC_URI="http://the.wiretapped.net/mirrors/lftp/${P}.tar.bz2"
-# Was a bit too slow and unreliable last time I tried (dragonheart)
-SRC_URI="http://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

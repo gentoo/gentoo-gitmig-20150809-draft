@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.97 2006/02/25 21:29:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.98 2006/04/11 21:39:11 dragonheart Exp $
+
+*lftp-3.4.4 (11 Apr 2006)
+
+  11 Apr 2006; Daniel Black <dragonheart@gentoo.org> lftp-3.0.13.ebuild,
+  -lftp-3.4.0-r1.ebuild, lftp-3.4.2.ebuild, +lftp-3.4.4.ebuild:
+  version bump and home page changes as per bug #129147 thanks David Watzke.
+  Remove old vesions. Made 3.0.13 SRC_URI valid again.
 
 *lftp-3.4.2 (25 Feb 2006)
 
