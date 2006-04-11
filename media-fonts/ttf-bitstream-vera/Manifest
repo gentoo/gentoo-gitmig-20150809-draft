@@ -1,12 +1,22 @@
-MD5 0ee64633bd42f6451fe26c593540952f ChangeLog 2757
-RMD160 1a44fb48a59940716df52fd24fde525862b61dd4 ChangeLog 2757
-SHA256 9bb204a2806a4c7449ccab1188a8053a975f98e87b7de0ffb3626de2c93b66b2 ChangeLog 2757
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bd9f063fe3e270f98d7b3ffa21760d0c ChangeLog 2873
+RMD160 9d17dd10d10b392530d74112b87f3428ed24d2b2 ChangeLog 2873
+SHA256 015d416669fdc403cb1c804836c7964bc0f2dd1f15196b72856a7e2d16ec9727 ChangeLog 2873
 MD5 b3b71688c1c8be372f8e519910114e01 files/digest-ttf-bitstream-vera-1.10-r3 76
 RMD160 80562133d364f4608560b0909c9f0865b0defbba files/digest-ttf-bitstream-vera-1.10-r3 76
 SHA256 0ecd969882389dbf09ca705a6ab7e7786cc226c1c6a46921a00e91f9a27c2eb0 files/digest-ttf-bitstream-vera-1.10-r3 76
 MD5 ae53b17794c309c40f6b45f8f37259c0 metadata.xml 286
 RMD160 1b9f96d207803342ed86512e8fbfde5660569d6e metadata.xml 286
 SHA256 3610e9d9eacc0d192a54da9e3437be8264deda8126ad8ec411d38e77ec7a48a6 metadata.xml 286
-MD5 4772fefb1593b46b7c34c942c297ebb8 ttf-bitstream-vera-1.10-r3.ebuild 538
-RMD160 d4660b5f8c6384b75d8173dd0783a58776c9e24b ttf-bitstream-vera-1.10-r3.ebuild 538
-SHA256 8262c9264eda4535d1aae1160b46b11212801a685dba515c329a4e6aac459eae ttf-bitstream-vera-1.10-r3.ebuild 538
+MD5 39c21ef8199dfbae2063aa157a124bfa ttf-bitstream-vera-1.10-r3.ebuild 548
+RMD160 bb54c8a9e6b707bce4afcb84f92a07126bafd500 ttf-bitstream-vera-1.10-r3.ebuild 548
+SHA256 065c4904fd71fcebd7c0cd8b2d437d30605afa6216000f89802e05db0e3b5704 ttf-bitstream-vera-1.10-r3.ebuild 548
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEPA/YAiZjviIA2XgRAlmSAJ9V4qVy1GXcGexn4dx+b0X1C+0ElACgiuJL
+RmPx7s3lenWD32HRNfZTS1Q=
+=PXXn
+-----END PGP SIGNATURE-----
