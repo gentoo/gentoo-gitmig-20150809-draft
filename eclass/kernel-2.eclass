@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.169 2006/04/11 00:14:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.170 2006/04/11 23:35:10 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -445,10 +445,27 @@ compile_headers() {
 		ln -sf asm-${KARCH} "${S}"/include/asm
 		cross_pre_c_headers && return 0
 
-		make ${K_DEFCONFIG} HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "defconfig failed"
+		make ${K_DEFCONFIG} HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "defconfig failed (${K_DEFCONFIG})"
+		if compile_headers_tweak_config ; then
+			yes "" | make oldconfig HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "2nd oldconfig failed"
+		fi
 		make prepare HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "prepare failed"
 		make prepare-all HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "prepare failed"
 	fi
+}
+
+compile_headers_tweak_config() {
+	# some targets can be very very picky, so let's finesse the
+	# .config based upon any info we may have
+	case ${CTARGET} in
+	sh*)
+		sed -i '/CONFIG_CPU_SH/d' .config
+		echo "CONFIG_CPU_SH${CTARGET:2:1}=y" >> .config
+		return 0;;
+	esac
+
+	# no changes, so lets do nothing
+	return 1
 }
 
 compile_manpages() {
