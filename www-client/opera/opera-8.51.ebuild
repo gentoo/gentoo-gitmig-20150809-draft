@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.51.ebuild,v 1.6 2006/01/03 22:18:04 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.51.ebuild,v 1.7 2006/04/11 14:28:31 blubb Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ SRC_URI="
 
 # Dependencies may be augmented later (see below).
 DEPEND=">=sys-apps/sed-4
-	amd64? ( sys-apps/linux32 )"
+	amd64? ( sys-apps/setarch )"
 
 RDEPEND="|| ( ( x11-libs/libXrandr
 				x11-libs/libXp

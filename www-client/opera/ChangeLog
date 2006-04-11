@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.37 2006/02/27 19:19:39 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.38 2006/04/11 14:28:31 blubb Exp $
+
+  11 Apr 2006; Simon Stelling <blubb@gentoo.org> opera-8.51.ebuild,
+  opera-8.52.ebuild:
+  change depend from linux32 to sys-apps/setarch; bug 129571
 
   27 Feb 2006; Patrick McLean <chutzpah@gentoo.org> opera-8.52.ebuild:
   Stable on amd64 (bug #123159).
