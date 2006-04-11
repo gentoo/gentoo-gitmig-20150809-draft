@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.3.ebuild,v 1.5 2006/04/11 12:16:36 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.3.ebuild,v 1.6 2006/04/11 16:56:30 swegener Exp $
 
 inherit linux-mod eutils multilib
 
@@ -20,7 +20,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	
+
 	# Linux 2.6.16 compatibility, bug #127018
 	epatch ${FILESDIR}/${P}-linux-2.6.16.patch
 }
