@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.54 2006/04/06 18:45:25 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.55 2006/04/11 10:23:21 phreak Exp $
+
+  11 Apr 2006; Christian Heim <phreak@gentoo.org> dietlibc-0.29-r1.ebuild:
+  Fixing SRC_URI, cleaning up the patch-mess; Logic cleanup
 
 *dietlibc-0.29-r1 (06 Apr 2006)
 
