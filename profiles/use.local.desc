@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1838 2006/04/11 06:42:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1839 2006/04/11 20:10:08 grobian Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -186,6 +186,7 @@ app-pda/multisync:kdepim - Adds support for KDEPIM sync.
 app-pda/multisync:nokia6600 - Adds support for Nokia 6600.
 app-pda/synce-kde:avantgo - Adds support for syncing Avantgo accounts.
 app-shells/bash:bashlogger - Log ALL commands typed into bash; should ONLY be used in restricted environments such as honeypots
+app-shells/tcsh:catalogs - Adds support for NLS catalogs
 app-shells/scsh-install-lib:scsh - Use a non-FHS directory layout.
 app-shells/scsh:scsh - Use a non-FHS directory layout.
 app-shells/shish:diet - Use dietlibc
