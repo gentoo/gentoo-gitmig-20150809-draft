@@ -1,12 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8aa58738f2a485534a6ee251977c24c3 ChangeLog 351
-RMD160 a63432c0c4e8b8260d235f49238f3ea46c41cc16 ChangeLog 351
-SHA256 e9b9b435f08de485266a849f9baea15b4360bb063327204be7ab0b9e62a8813a ChangeLog 351
-MD5 d55aa0e2dd2a5398de12ce2cf490058d binutils-nios2-5.1.ebuild 578
-RMD160 58986079ef60243a9a18eec06459f2a377447a13 binutils-nios2-5.1.ebuild 578
-SHA256 ae2dcc8065671abc3a57c282b64f16a7bc47c136aa397f64c83151b6d5807c23 binutils-nios2-5.1.ebuild 578
+MD5 58df59310865ba778a9f22acc9dfa60f ChangeLog 504
+RMD160 401881342fcf0207df7a9ab4dcf1d38607b7245c ChangeLog 504
+SHA256 fc5c7f2ff3bbb3a44f61738e6e734f925354da3d7668556811954bfe6e212597 ChangeLog 504
+MD5 1df29fe49852efc9d2039bbc155ff6e1 binutils-nios2-5.1.ebuild 706
+RMD160 0ab768ccf191ddc20006d73065d9452e8bf82d1c binutils-nios2-5.1.ebuild 706
+SHA256 39d3fd5b7300c3645216a394f5cc8a8641944fb03ecc9c911ca83a3aa072dcd4 binutils-nios2-5.1.ebuild 706
+MD5 8333d702f5d354425f1d02e92b2316d4 files/binutils-nios2-5.1-gcc4.patch 644
+RMD160 39be4d94c58679ee5b46221d33e0a5edaa50af58 files/binutils-nios2-5.1-gcc4.patch 644
+SHA256 8da84a4c953d353028f54e4d6fe6efbbac0e733bee255a4df8fab42d5f48f864 files/binutils-nios2-5.1-gcc4.patch 644
 MD5 ed47fd0f9c30cce962253d287689be92 files/digest-binutils-nios2-5.1 74
 RMD160 0b48ac30485d6872183fbc267a322a55f86bc00c files/digest-binutils-nios2-5.1 74
 SHA256 15741170639a278c5d933fc08fb81d163a7a1b72dcdc4e2d1de13a630b2424ba files/digest-binutils-nios2-5.1 74
@@ -16,7 +19,7 @@ SHA256 dc790a4305ce116175492077c64be59b729fac9595769c4ea09ddaa1eb8c9ee6 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEKh3i2+ySkm8kpY0RAlGvAKCliLkl16UVXLSIb6fYT4YYjuXLTACfZQ96
-zXkwBfvLRZUqszs8s/5k6sc=
-=6/CE
+iD8DBQFEOvWh2+ySkm8kpY0RAjvUAKCgiadeo5MBl7xc9LWlyrD2EnuX9gCfdxnH
+diWhxdOFgT556pQE+2gy4Vo=
+=6LDx
 -----END PGP SIGNATURE-----

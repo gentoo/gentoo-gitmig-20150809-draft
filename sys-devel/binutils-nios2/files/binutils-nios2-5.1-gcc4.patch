@@ -1,0 +1,20 @@
+--- src/binutils/gas/config/tc-nios2.c
++++ src/binutils/gas/config/tc-nios2.c
+@@ -1792,7 +1792,7 @@
+ 
+ 
+ 	  /* apply the rightshift */
+-	  (signed) fixup >>= howto->rightshift;
++	  fixup = (signed)fixup >> howto->rightshift;
+ 
+ 	  /* truncate the fixup to right size */
+ 	  switch (fixP->fx_r_type)
+@@ -1837,7 +1837,7 @@
+ nios2_check_overflow (valueT fixup, reloc_howto_type * howto)
+ {
+   /* apply the rightshift before checking for overflow */
+-  (signed) fixup >>= howto->rightshift;
++  fixup = (signed)fixup >> howto->rightshift;
+ 
+   /* check for overflow - return TRUE if overflow, FALSE if not */
+   switch (howto->complain_on_overflow)
