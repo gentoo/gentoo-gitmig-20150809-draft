@@ -1,5 +1,17 @@
 --- src/signals.c
 +++ src/signals.c
+@@ -110,7 +110,10 @@
+ 		  if ( currState == &dhcpReboot )
+ 		    siglongjmp(env,4);  /* failed to acquire the same IP address */
+ 		  else
+-	            syslog(LOG_ERR,"timed out waiting for a valid DHCP server response\n");
++		    {
++	              syslog(LOG_ERR,"timed out waiting for a valid DHCP server response\n");
++		      fprintf(stderr,"timed out waiting for a valid DHCP server response\n");
++		    }
+ 		}
+ 	    }
+         }
 @@ -129,7 +129,7 @@
    if (!Persistent && sig != SIGTERM)
      dhcpStop();
@@ -9,14 +21,3 @@
  }
  /*****************************************************************************/
  void signalSetup()
---- src/dhcpcd.c
-+++ src/dhcpcd.c
-@@ -427,7 +427,7 @@
-   if ( killFlag ) killPid(killFlag);
-   if ( ! TestCase ) checkIfAlreadyRunning();
-   if ( versionFlag ) print_version();
--  openlog(PACKAGE,LOG_PID|(DebugFlag?LOG_CONS:0),LOG_LOCAL0);
-+  openlog(PACKAGE,LOG_PID|(DebugFlag?LOG_CONS:0)|LOG_PERROR,LOG_LOCAL0);
-   signalSetup();
-   if ( mkdir(ConfigDir,S_IRUSR|S_IWUSR|S_IXUSR|S_IRGRP|S_IXGRP|S_IROTH|S_IXOTH) && errno != EEXIST )
-     {
