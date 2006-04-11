@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ba8842727863578d3db51208ee0090b7 ChangeLog 65323
+MD5 4637260e0e761e096a011cac7a531b97 ChangeLog 65515
 MD5 c6fcd70c34bed04e59808ec71c5bedfb files/digest-mysql-3.23.58-r1 140
 MD5 0feb3b501c47708ea13707c8e4cdde9c files/digest-mysql-4.0.25-r2 139
 MD5 201c8b31cd9eb58eec712e37d6f0c328 files/digest-mysql-4.0.26 139
-MD5 1ca98cd683238725cc83ecfc2153afee files/digest-mysql-4.1.14-r1 139
-MD5 7d6ee95044f8b76d7cb638ceade89707 files/digest-mysql-4.1.18-r61 139
-MD5 6bc6ccf48fbe547dde505bec40a25f20 files/digest-mysql-5.0.19-r1 139
+MD5 7352bd0d1bbc366404581ed2bc1cadff files/digest-mysql-4.1.14-r1 139
+MD5 44925fe64123da8913ea479baea38cca files/digest-mysql-4.1.18-r61 139
+MD5 10b40b3e7750fe15ebf30c639489e33a files/digest-mysql-5.0.19-r1 139
 MD5 f44a6f043f6f73c159e771a8d2c87a9e files/digest-mysql-5.1.7_beta 142
 MD5 631d741e2c56442abacaa4c1ca5db499 files/logrotate-slot.mysql 502
 MD5 d200345efa421d012cf858134d2c8884 files/logrotate.mysql 440
@@ -35,7 +35,7 @@ MD5 e68d4c95d889652fca71ddc906e013dc mysql-5.1.7_beta.ebuild 876
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEO6PvKolR564NvWYRAtsCAJ4syuOwZ+r1197DTgg8JAkE8kX+1wCghLUp
-iXs9Vq1eDowNrMzlXj6bfHI=
-=CnCW
+iD8DBQFEO+YoKolR564NvWYRAvUzAJ4j0hvlBb1bDV32r+wghmLXjZ+WCwCeO6+7
++3j9YozdI+1El08DwgE4Bgs=
+=9z9j
 -----END PGP SIGNATURE-----
