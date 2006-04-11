@@ -1,0 +1,26 @@
+--- configure.ac
++++ configure.ac
+@@ -230,6 +230,12 @@
+ fi
+ AC_SUBST(SIMD_CFLAGS)
+ 
++dnl Some headers require the simd cflags (like altivec.h)
++save_CFLAGS="$CFLAGS"
++save_CPPFLAGS="$CPPFLAGS"
++CFLAGS="$CFLAGS $SIMD_CFLAGS"
++CPPFLAGS="$CPPFLAGS $SIMD_CFLAGS"
++
+ dnl Checks for header files.
+ AC_HEADER_STDC
+ AC_CHECK_HEADERS([libintl.h malloc.h stddef.h stdlib.h string.h strings.h sys/time.h unistd.h limits.h c_asm.h intrinsics.h stdint.h mach/mach_time.h sys/sysctl.h altivec.h])
+@@ -237,6 +243,10 @@
+ dnl intrinsics.h: cray unicos
+ dnl sys/sysctl.h: MacOS X altivec detection
+ 
++dnl restore normal flags
++CFLAGS="$save_CFLAGS"
++CPPFLAGS="$save_CPPFLAGS"
++
+ dnl Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST
+ AC_C_INLINE

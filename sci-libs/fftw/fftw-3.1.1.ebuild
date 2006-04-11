@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.1.ebuild,v 1.1 2006/04/03 19:46:42 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.1.ebuild,v 1.2 2006/04/11 04:58:06 markusle Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -11,15 +11,22 @@ SRC_URI="http://www.fftw.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="3.0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
-IUSE="3dnow altivec sse sse2"
+IUSE="altivec sse sse2"
 
 DEPEND=""
 
 src_unpack() {
-	unpack "${P}.tar.gz"
+	unpack ${A}
 	cd "${S}"
+
+	if [[ "${ARCH}" == "ppc-macos" ]];then
+		epatch "${FILESDIR}"/${PN}-ppc-macos.patch
+	fi
+
+	# fix altivec compilation problems (bug #129304)
+	epatch "${FILESDIR}"/${PN}-altivec-headers.patch
+
 	cd "${WORKDIR}"
-	use ppc-macos && epatch "${FILESDIR}"/${PN}-ppc-macos.patch
 	mv ${P} ${P}-single
 	cp -pPR ${P}-single ${P}-double
 }
@@ -36,27 +43,14 @@ src_compile() {
 		myconfdouble="$myconfdouble --enable-sse2"
 	elif use sse; then
 		myconfsingle="$myconfsingle --enable-sse"
-	elif use 3dnow; then
-		myconfsingle="$myconfsingle --enable-k7"
-	fi
-
-	# disable building of shared libs for k7 (c.f. bug #125218)
-	if ! use 3dnow; then
-		myconfsingle="$myconfsingle --enable-shared"
-		myconfdouble="$myconfdouble --enable-shared"
-	fi
-
-
-	# Altivec-support in fftw is currently broken
-	# with gcc 3.4
-	if [ "`gcc-version`" != "3.4" ]; then
-		myconfsingle="$myconfsingle `use_enable altivec`"
 	fi
 
 	cd "${S}-single"
 	econf \
+		--enable-shared \
 		--enable-threads \
 		--enable-float \
+		$(use_enable altivec) \
 		${myconfsingle} || \
 			die "./configure in single failed"
 	emake || die
@@ -64,7 +58,9 @@ src_compile() {
 	#the only difference here is no --enable-float
 	cd "${S}-double"
 	econf \
+		--enable-shared \
 		--enable-threads \
+		$(use_enable altivec) \
 		${myconfdouble} || \
 		die "./configure in double failed"
 	emake || die

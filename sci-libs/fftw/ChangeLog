@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.30 2006/04/03 19:46:41 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.31 2006/04/11 04:58:06 markusle Exp $
+
+  11 Apr 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/fftw-altivec-headers.patch, fftw-3.1.1.ebuild:
+  Removed 3dnow use flag since building of shared libs is currently
+  broken on k7 (see bug #125218). Also, added patch to fix compilation
+  failure when using altivec support. Thanks to SpanKY 
+  <vapier@gentoo.org> for his patch (this fixes bug #129304).
 
 *fftw-3.1.1 (03 Apr 2006)
 
