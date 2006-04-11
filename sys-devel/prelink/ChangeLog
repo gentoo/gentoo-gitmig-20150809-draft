@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/prelink
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.43 2005/12/02 16:28:26 azarah Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.44 2006/04/11 21:33:09 cretin Exp $
+
+*prelink-20060213 (11 Apr 2006)
+
+  11 Apr 2006; Stefan Jones <cretin@gentoo.org>
+  +files/prelink-20060213-symloop.patch, +files/prelink.confd,
+  +files/prelink.cron, +prelink-20060213.ebuild:
+  New version from FC5 plus cronjob
 
 *prelink-20050901 (02 Dec 2005)
 
