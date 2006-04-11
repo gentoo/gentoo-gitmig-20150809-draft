@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-nios2/gcc-nios2-5.1.ebuild,v 1.2 2006/02/04 18:14:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-nios2/gcc-nios2-5.1.ebuild,v 1.3 2006/04/11 00:17:38 vapier Exp $
 
 [[ ${CTARGET} != nios* && ${CATEGORY} == "sys-devel" ]] && export CTARGET="nios2-elf"
 GCC_A_FAKEIT=${A}
@@ -17,7 +17,7 @@ DESCRIPTION="Compiler for Nios2 targets"
 SRC_URI="mirror://gentoo/niosii-gnutools-src-${PV}.tgz
 	mirror://gentoo/nios2-${PV}.patch.bz2"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 
 DEPEND="${CATEGORY}/binutils-nios2"
 
