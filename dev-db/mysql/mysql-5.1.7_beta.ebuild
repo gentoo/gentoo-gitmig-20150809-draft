@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.7_beta.ebuild,v 1.4 2006/04/10 22:02:55 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.7_beta.ebuild,v 1.5 2006/04/11 12:40:53 vivo Exp $
 
 MY_EXTRAS_VER="20060316"
+MYSQL_VERSION_ID=""
+
 inherit mysql
 KEYWORDS="-*"
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.314 2006/04/10 22:02:55 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.315 2006/04/11 12:40:53 vivo Exp $
+
+  11 Apr 2006; Francesco Riosa <vivo@gentoo.org> mysql-4.1.14-r1.ebuild,
+  mysql-4.1.18-r61.ebuild, mysql-5.0.19-r1.ebuild, mysql-5.1.7_beta.ebuild:
+  Initialize must have variables in ebuilds, portage cache may create a fake
+  SRC_URI if those are not present.
 
   10 Apr 2006; Francesco Riosa <vivo@gentoo.org> mysql-5.1.7_beta.ebuild:
   MySQL 5.1 keyword back to "-*" on request.
