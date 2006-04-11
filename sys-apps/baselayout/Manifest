@@ -52,9 +52,9 @@ SHA256 2e8b48e891a0ebd487f0c2ff70203ecca02521a0b9e584a4c5146dc3a3cba3b6 files/ba
 MD5 1bfe1cc270a840e3a8fd6762445485ea files/baselayout-1.12.0_pre16-sv.patch 473
 RMD160 ed1c71c282895e5b40d78ec78b6dfeb074d4a517 files/baselayout-1.12.0_pre16-sv.patch 473
 SHA256 e68b407eabbfd65e097dc6863b5cd8aa834a59a6051df952c1a522c980bb626a files/baselayout-1.12.0_pre16-sv.patch 473
-MD5 6d553c411fe150bde35e25fee2ad3f86 files/baselayout-1.12.0_pre17-1975.patch 7809
-RMD160 a942cda68bdc15ef9c39eb624ded502b1abfdbdb files/baselayout-1.12.0_pre17-1975.patch 7809
-SHA256 1f51e451aafe19e27b2b9e819eedfc20a9d6a377643f02571261d04ec84b7c3d files/baselayout-1.12.0_pre17-1975.patch 7809
+MD5 ddd83e64a002a0e78c72faf4502224c4 files/baselayout-1.12.0_pre17-1975.patch 8299
+RMD160 a59144710782422c1cbfdf62c4457f096269ccbf files/baselayout-1.12.0_pre17-1975.patch 8299
+SHA256 7850e0aa4c25e5ef427de5376dde696f86e026b40ea65bba30fed98159c8e47e files/baselayout-1.12.0_pre17-1975.patch 8299
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 RMD160 43e295598125f39e375a1fcee6e642e37c8b8bd8 files/copyright 2099
 SHA256 38db4636f65ce40ea505a6337138b041ac6be5998982193d16b1fbdeebb2bacd files/copyright 2099
@@ -82,7 +82,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEO8NOEbVyYKaZ/NERAnLbAJ0fsVd2QZ438+rwliZ69zEUdVM6tQCcD1Ar
-BGtUmeVBsz98IvddeI0uR0A=
-=xApe
+iD8DBQFEO8gMEbVyYKaZ/NERAq4pAJ4yKzIk1UtwLy0naPaRdes0BJCTHgCeNrOs
+3tF+romqlAiIZyhz4fnha2Q=
+=F93D
 -----END PGP SIGNATURE-----

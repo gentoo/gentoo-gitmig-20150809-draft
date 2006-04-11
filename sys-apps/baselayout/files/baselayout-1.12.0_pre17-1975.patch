@@ -234,3 +234,16 @@ Index: sbin/rc
  	fi
  
  	export CRITICAL_SERVICES
+Index: lib/rcscripts/net.modules.d/ifconfig.sh
+===================================================================
+--- lib/rcscripts/net.modules.d/ifconfig.sh	(revision 1975)
++++ lib/rcscripts/net.modules.d/ifconfig.sh	(working copy)
+@@ -109,7 +109,7 @@
+ ifconfig_is_up() {
+ 	local check="\<UP\>" addr="${2:-false}"
+ 	${addr} && check="\<inet addr:.*${check}"
+-	ifconfig "$1" | grep -Eq "${check}" && return 0
++	ifconfig "$1" | tr '\n' ' ' | grep -Eq "${check}" && return 0
+ 	return 1
+ }
+ 
