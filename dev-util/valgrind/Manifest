@@ -1,37 +1,91 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 99a4d689a5eb1150259f89b7ca664cef ChangeLog 7316
+MD5 962fc36345394f3fa29744f9ed3b9a3c ChangeLog 7416
+RMD160 4e29008532c8d567bdc310d827a707296f84cec9 ChangeLog 7416
+SHA256 5cc3b6d88c7d12b3e40810f1e94c797fee7a2446182e72549c04379e01845df4 ChangeLog 7416
 MD5 26192577445b467e528408118f7ee6ec files/digest-valgrind-2.2.0-r2 139
+RMD160 4298b59bb5a09a9c5e745acd3093a662cfa0c3ae files/digest-valgrind-2.2.0-r2 139
+SHA256 0087ab32c877e5899bdeb34a1a53f472bdaf7aeb084b18e43c5ec0b0f3e39ca5 files/digest-valgrind-2.2.0-r2 139
 MD5 c6fe697b4c25fb9e5c7482496ebabf06 files/digest-valgrind-2.4.0 140
+RMD160 58c304a58440a7fbe37d9bad26bce219b3b84594 files/digest-valgrind-2.4.0 140
+SHA256 0c7db9e97d4934a2989e316a4930f4c67ef59660e0e92bb2f43c76e72299c02d files/digest-valgrind-2.4.0 140
 MD5 a5dde62cbb4bb255219643b61493b950 files/digest-valgrind-2.4.1 68
+RMD160 e8205e58dc57317a0712596e49a5222f5f72984f files/digest-valgrind-2.4.1 68
+SHA256 30584d1cc79cacc9cfde96c3e3e05277370112f607967d8a2a1cfacc954855f8 files/digest-valgrind-2.4.1 68
 MD5 af6b49666df28ad2a40f2f644fefce83 files/digest-valgrind-3.0.0 68
+RMD160 65559d9bba51a9a0b1a778fa516dc4832583f6a5 files/digest-valgrind-3.0.0 68
+SHA256 d9c2214440d0dc31bf4a4380a3ca309cf4ab98869dede549e1479c5de6e895e2 files/digest-valgrind-3.0.0 68
 MD5 bcce75140a2ec484339b6d1844e20a0a files/digest-valgrind-3.0.1 68
+RMD160 93997c527a03d86e1e3b5587f30f946279f3285b files/digest-valgrind-3.0.1 68
+SHA256 02440b8f15eb07079a4f768cae07a63eaf8d71da705852b5e616cfd00b821b2d files/digest-valgrind-3.0.1 68
 MD5 bcce75140a2ec484339b6d1844e20a0a files/digest-valgrind-3.0.1-r1 68
+RMD160 93997c527a03d86e1e3b5587f30f946279f3285b files/digest-valgrind-3.0.1-r1 68
+SHA256 02440b8f15eb07079a4f768cae07a63eaf8d71da705852b5e616cfd00b821b2d files/digest-valgrind-3.0.1-r1 68
 MD5 d2a70491913b3d5db35a7ea10fa50b71 files/digest-valgrind-3.1.0 68
+RMD160 88f884fa24fd7fca154b1735fe8b98140758da28 files/digest-valgrind-3.1.0 68
+SHA256 c51055977c6c046ddcc12b36ee4e66a792e6bdce6d00254db6be7610332d31fa files/digest-valgrind-3.1.0 68
 MD5 bcc96896f598c7ebd3ca8b23a585ac61 files/digest-valgrind-3.1.1 68
+RMD160 11838fd248c09d788756c5d467338832d37a79a7 files/digest-valgrind-3.1.1 68
+SHA256 67f91a0772ec13a33cc0632a04d2d400d1287b1cdfcc0896fbd1c747926ca3e6 files/digest-valgrind-3.1.1 68
 MD5 d10a593e8cb1c5074c438adc226d1c81 files/valgrind-2.2.0-current-macro-clash.patch 1871
+RMD160 2d484e70e054c46d17a36d6051bf1d4cb515f5e4 files/valgrind-2.2.0-current-macro-clash.patch 1871
+SHA256 1274f5a8c06f762d0c252363bfd6498e30319427bd767b78fd2e966ad58551e6 files/valgrind-2.2.0-current-macro-clash.patch 1871
 MD5 fc1dda2b6f2603a4244ad25f555f2034 files/valgrind-2.2.0-no-exec-stack.patch 1711
+RMD160 0f4e81a4ee2ebd8b25026eda2d47b8122d90aec7 files/valgrind-2.2.0-no-exec-stack.patch 1711
+SHA256 daaab5eba58d399671ca1847d8d48436fff5abcdd3b9964717333ce5f94a9825 files/valgrind-2.2.0-no-exec-stack.patch 1711
 MD5 e878f97b4c6308515baf5abaee045ce7 files/valgrind-2.4.0-pie-fix.patch 2335
+RMD160 742118ee6835dde0d231eec787936441c61a426d files/valgrind-2.4.0-pie-fix.patch 2335
+SHA256 c89c1c803b9875cd01b560ec27686119b1cb98bea0c2bcfb95e2fdd34ebded4d files/valgrind-2.4.0-pie-fix.patch 2335
 MD5 c67ef295757f9c8b4e9be146f6c4f873 files/valgrind-2.4.1-dont-trample-cflags.patch 442
+RMD160 2c0e629a8dd8ee8b1d360182bde4e5fb6f620338 files/valgrind-2.4.1-dont-trample-cflags.patch 442
+SHA256 05ff6b41aebf903978934ac35aa56c737b50a1e7c98f10c4136060782f562907 files/valgrind-2.4.1-dont-trample-cflags.patch 442
 MD5 d177de2c2f79d24d4ad74644ee49f667 files/valgrind-2.4.1-static-const.patch 4397
+RMD160 01e3d311208aaba08c2c68517917ee20351dbb4a files/valgrind-2.4.1-static-const.patch 4397
+SHA256 8c07119eae91fbd4d718df56987b23ba3465318c97dc7e1b8417b29bde611644 files/valgrind-2.4.1-static-const.patch 4397
 MD5 24971d28d91da6c61168fa217d10b47b files/valgrind-3.0.0-pie-fix.patch 864
+RMD160 48248f353a2bb147a56414241db640d3d7509bfb files/valgrind-3.0.0-pie-fix.patch 864
+SHA256 406c9b7e866fa6e4b0f2f793fa455ee05f643f3e77483a91cebb81547dc58bf8 files/valgrind-3.0.0-pie-fix.patch 864
 MD5 9af0c7aae878323f117ea148ee2930d4 files/valgrind-3.0.1-mfence.patch 600
+RMD160 7acfbe3addb18d5a95b19e15333e351e3cb84a3c files/valgrind-3.0.1-mfence.patch 600
+SHA256 17cd814a2518a5f6e54f837751cbfbdddaf0e37c1e70fc246b043dfbefff4de0 files/valgrind-3.0.1-mfence.patch 600
 MD5 fc133b72d5c0341cc194c9cee839c058 files/valgrind-3.0.1-pic-fix.patch 3565
+RMD160 81491fe07dc9bd38f8a50fb13655d5409d905398 files/valgrind-3.0.1-pic-fix.patch 3565
+SHA256 5ab69e6366833ab0805ec318dfd0756d4d01b9e105973e668d502d63f284823e files/valgrind-3.0.1-pic-fix.patch 3565
 MD5 2622d413602e236208128310f4736453 files/valgrind-3.1.0-amd64-nomultilib-fix.patch 302
+RMD160 50340968e8eb5aa261c8b65c3d69ed9c9405f2e7 files/valgrind-3.1.0-amd64-nomultilib-fix.patch 302
+SHA256 61ad946583bf37742271adcec9731d092cd78917312ebc00248364af7620795b files/valgrind-3.1.0-amd64-nomultilib-fix.patch 302
 MD5 799f0b61a3a686b4074bd61acc572c5c metadata.xml 1003
+RMD160 e8ef4473e3545a4b98d46101edb49923112ac9e0 metadata.xml 1003
+SHA256 2bf62ba94d772ac968485392127cf4f4303cccf5a1e6d0733d80507005ca7847 metadata.xml 1003
 MD5 9c6171e63f2c500b26cd6c2dd98d42e8 valgrind-2.2.0-r2.ebuild 1716
+RMD160 5fca00eac1ea175aada2b8eff15e7f8ba142628d valgrind-2.2.0-r2.ebuild 1716
+SHA256 aa0dd7255e4d0d7b48a7d54d5724e95ad3cc346c8559757fab85531412c6f7ae valgrind-2.2.0-r2.ebuild 1716
 MD5 98fd3a4e78d2c75a2de9d2f7595a649c valgrind-2.4.0.ebuild 1407
+RMD160 d3d67b8119232ca102969cfad151b81d93bdcc0c valgrind-2.4.0.ebuild 1407
+SHA256 162add90c1de50c1539bb41b3cc793d2c16be12a24441852bb88bce386153319 valgrind-2.4.0.ebuild 1407
 MD5 cb18085a00f509803e6e539543cb20f9 valgrind-2.4.1.ebuild 1881
+RMD160 75276b7b29e6d0ee8a076d4ac2649a09719a065e valgrind-2.4.1.ebuild 1881
+SHA256 ebc0538abf9031aae05955c214b5ce4843f9329d7e9986bfff65899ff08574f0 valgrind-2.4.1.ebuild 1881
 MD5 16efe20081a8edc14768a1ea1e4664be valgrind-3.0.0.ebuild 1799
+RMD160 8b2df2daf4ce24bffa1c5d04375945df3e518733 valgrind-3.0.0.ebuild 1799
+SHA256 74298e11501d343539e679692012bb16f23c06487f2f118d5acd54f46b9f0d54 valgrind-3.0.0.ebuild 1799
 MD5 c824aeed84391f896caea42dc444afc6 valgrind-3.0.1-r1.ebuild 1887
+RMD160 04b887cae6481f028d2e144ee235b3ea0cd0994a valgrind-3.0.1-r1.ebuild 1887
+SHA256 7a29eb1d82e83daf384fe0c8a8654f8cc80f1a37b6221b121ac6a7090f2aa226 valgrind-3.0.1-r1.ebuild 1887
 MD5 fc311d6ac7b19d831f6e18e9588c2053 valgrind-3.0.1.ebuild 1690
+RMD160 2489815f61b0573bc688d9182e65be0a2cd41045 valgrind-3.0.1.ebuild 1690
+SHA256 f5477fa65f3193042f7cb5fc726d243f6decc5602dfa06575649f7606d8f7534 valgrind-3.0.1.ebuild 1690
 MD5 35c90975bda820631eb617e6b33038af valgrind-3.1.0.ebuild 2354
-MD5 14586a32a5efa2ff18ccb00556f49995 valgrind-3.1.1.ebuild 2354
+RMD160 0c6c87ff6600df311908838b369d499b50f6c4d9 valgrind-3.1.0.ebuild 2354
+SHA256 446743e9b3b448fada2278eb052452b40cc844a96161d9269159694d2483bc17 valgrind-3.1.0.ebuild 2354
+MD5 39f29e81d8b3a3671397ea7b8d7bb859 valgrind-3.1.1.ebuild 2350
+RMD160 abf1b906a90fcaf6d3f2361f080d88615dcce957 valgrind-3.1.1.ebuild 2350
+SHA256 acafb5367c3d9c1b954e9d3fde7623804db6fa66d0b3cf3e3ce245f8c20029e0 valgrind-3.1.1.ebuild 2350
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEK/5yMGnpIbeahxwRAjNfAKCHcB9N0jCEhj1USBlZqaz4V8gFqwCeNaj/
-dU5Lav0I7OS4j9anzA79VIk=
-=nKew
+iD8DBQFEOzbxSENan+PfizARAl7CAJ4wwNiM0zVYHYKjptI0dOQq/yt6UgCbB1Bv
+EPZSzM1VgWj19AUY8cRjajA=
+=lMlS
 -----END PGP SIGNATURE-----
