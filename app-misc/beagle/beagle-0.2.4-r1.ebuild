@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.4-r1.ebuild,v 1.2 2006/04/09 23:44:09 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.4-r1.ebuild,v 1.3 2006/04/11 23:41:33 metalgod Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -68,7 +68,7 @@ pkg_setup() {
 	fi
 
 	enewgroup beagleindex
-	enewuser beagleindex -1 /bin/bash /var/lib/cache/beagle beagleindex
+	enewuser beagleindex -1 /bin/false /var/lib/cache/beagle beagleindex
 }
 
 src_unpack() {
