@@ -1,4 +1,6 @@
-MD5 449dbb442d222401281a26acacc04e8a ChangeLog 570
+MD5 f91e6b51fcbaa348f49d310941d85a2b ChangeLog 712
 MD5 9b7c7d50b8b12daa20440329d74423c0 files/digest-wispy-tools-2006.01.1 74
+MD5 e6a8634e79b239724387bfe104b4a364 files/digest-wispy-tools-2006.03.1 74
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 eaf33f1791e267087245d83f8bed0861 wispy-tools-2006.01.1.ebuild 1019
+MD5 028611a3ed71a197b697a257e1b51845 wispy-tools-2006.03.1.ebuild 1005
