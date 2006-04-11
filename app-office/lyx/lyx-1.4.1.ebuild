@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.0-r1.ebuild,v 1.2 2006/04/05 07:32:03 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.1.ebuild,v 1.1 2006/04/11 11:55:15 ehmsen Exp $
 
 inherit kde-functions fdo-mime eutils libtool flag-o-matic
 
@@ -68,14 +68,13 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	if use cjk ; then
 		eerror
-		eerror "There is currently no CJK support for lyx-1.4.*"
-		eerror "If you like this to change you will either have to wait for lyx-1.5,"
-		eerror "or help create new patches for lyx-1.4.*"
-		eerror "A good starting point is http://cellular.phys.pusan.ac.kr/cjk.html"
+		eerror "There is currently no CJK support for lyx-1.4.1"
+		eerror "but there is CJK support for lyx-1.4.0."
 		eerror
-		eerror "Until then, you will have to disable the cjk use flag for lyx or"
-		eerror "continue to use lyx-1.3.6"
-		die "lyx-1.4.* does not currently support CJK."
+		eerror "Until there is support for CJK in lyx-1.4.1,"
+		eerror "you will have to disable the cjk use flag for lyx or"
+		eerror "use lyx-1.4.0."
+		die "lyx-1.4.1 does not currently support CJK."
 	fi
 	unpack ${P}.tar.bz2 || die "unpacking lyx failed"
 	unpack latex-xft-fonts-0.1.tar.gz || die "unpacking xft-fonts failed"
