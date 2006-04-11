@@ -1,0 +1,25 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.1/2.4/package.mask,v 1.1 2006/04/11 21:27:09 gustavoz Exp $
+
+# Gustavo Zacarias <gustavoz@gentoo.org>
+# We mask core 2.6 stuff to avoid bootstrap issues
+>=sys-kernel/gentoo-sources-2.6.0
+>=sys-kernel/vanilla-sources-2.6.0
+sys-fs/udev
+
+# Jason Wever <weeve@gentoo.org>
+# Jack related maskings
+media-sound/bitscope
+media-sound/freqtweak
+media-sound/glmix
+media-sound/jaaa
+media-sound/jack-rack
+media-sound/kaconnect
+media-sound/meterbridge
+media-sound/timemachine
+media-sound/vkeybd                                                
+media-libs/bio2jack                                              
+media-libs/libjackasyn
+media-plugins/xmms-jack
+media-sound/bitscope
