@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e00a3e2c69686a1f50d7bd6ca4973468 ChangeLog 13341
-RMD160 de1f4c2ded79099450c60941f264f37c1e40aa4e ChangeLog 13341
-SHA256 f0940153caaaf9f12294a6764576dcc1a4d089770965d6ae3fd35e2be75ad539 ChangeLog 13341
+MD5 006bcd34232626fee29f8896d67117ef ChangeLog 13563
+RMD160 3366abd1fba49643ef898dc47bdf08777b9e0414 ChangeLog 13563
+SHA256 ec8295ddc7fbb4505ad66a97343d571f7b568ebdd0fc7edce2045269d6d7dbb0 ChangeLog 13563
 MD5 ffcb7188c78099edf2d2f753c4e5b780 alsa-tools-1.0.10.ebuild 2404
 RMD160 aa90eceadb72dac0a0f54a05f363ccacfba8cbbd alsa-tools-1.0.10.ebuild 2404
 SHA256 c093e49f753d6ed4328c720845f32cba073c14d8ee60ee9e35dad2c7ae685aa5 alsa-tools-1.0.10.ebuild 2404
@@ -13,6 +10,9 @@ SHA256 c133ceba01551d79517319daca49efa04a093aba7b2fd10353d7cef890219575 alsa-too
 MD5 98d368a210c5abb30e8e902d5a6ca88c alsa-tools-1.0.11_rc4.ebuild 2416
 RMD160 fd9907d9657c5463fa6e4499d282ca1537359f31 alsa-tools-1.0.11_rc4.ebuild 2416
 SHA256 9ee54fe053bb691e037c7e745fd5ca51f4a0542c6ab4f0177014fb9723133ce5 alsa-tools-1.0.11_rc4.ebuild 2416
+MD5 673a4f47090d80394f7c81605cb6024a alsa-tools-1.0.11_rc5.ebuild 2416
+RMD160 6b9c20bfc1903c994cea89fcd69652d6ccc0046d alsa-tools-1.0.11_rc5.ebuild 2416
+SHA256 57498517ed81edcbed72e9a82aacf3d01c388d2a510ecfca5f4c38010fa2a2a6 alsa-tools-1.0.11_rc5.ebuild 2416
 MD5 f679ba128fdc2882d1f7197dbc2a04d8 files/digest-alsa-tools-1.0.10 71
 RMD160 dcbf501cb7a97b61e50444fa5c6935e292245851 files/digest-alsa-tools-1.0.10 71
 SHA256 5168d7bf0b826864d5a76c634119923a4f5d25d87d29e2dd56898de913c5ece6 files/digest-alsa-tools-1.0.10 71
@@ -22,13 +22,9 @@ SHA256 074fdaa6dbad994d4811f6c92efda6f257595035813009d65fa8fe0c779c2a02 files/di
 MD5 c899d7d0fa38ece5ece9ed1e3c607223 files/digest-alsa-tools-1.0.11_rc4 268
 RMD160 7b40cf63f2a1768e8eca1427894352d9383f6c2d files/digest-alsa-tools-1.0.11_rc4 268
 SHA256 fec0d3edb42a50cf249bd68d962b15e01d56b55b946248ffefe9f96f1416eff4 files/digest-alsa-tools-1.0.11_rc4 268
+MD5 6459e141edb20187c1a04dddbbb59a60 files/digest-alsa-tools-1.0.11_rc5 268
+RMD160 0c777976d4627695c9bc27e6caa9aec6947ef492 files/digest-alsa-tools-1.0.11_rc5 268
+SHA256 828482e0d53f16d66e4f21ada4b95ee6e2126af17b7f61514f09653ae6121659 files/digest-alsa-tools-1.0.11_rc5 268
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEI/tWAiZjviIA2XgRAmucAJ9fMAq0mzyiJcewriRJFk8Ji1LemgCeO+c9
-eam1i5ltyF0KkJ/Hi9Pj6Eg=
-=PaDD
------END PGP SIGNATURE-----

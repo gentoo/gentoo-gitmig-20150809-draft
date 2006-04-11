@@ -10,6 +10,9 @@ SHA256 bf5ede710428f340a046aca1e8448e0c0363ac25346323d3d5ac3338de4cd09e alsa-dri
 MD5 60c719c894533fe39e30bbab38e9f73a alsa-driver-1.0.11_rc4.ebuild 4758
 RMD160 559797866ec2ad0a7be93bc281ee01b2c0759c55 alsa-driver-1.0.11_rc4.ebuild 4758
 SHA256 5ea2837c6fe9b6a6c7df945e5fd297e4c5da0c33822d510fc329b573c7464559 alsa-driver-1.0.11_rc4.ebuild 4758
+MD5 60c719c894533fe39e30bbab38e9f73a alsa-driver-1.0.11_rc5.ebuild 4758
+RMD160 559797866ec2ad0a7be93bc281ee01b2c0759c55 alsa-driver-1.0.11_rc5.ebuild 4758
+SHA256 5ea2837c6fe9b6a6c7df945e5fd297e4c5da0c33822d510fc329b573c7464559 alsa-driver-1.0.11_rc5.ebuild 4758
 MD5 075d7776dfb62176431e206a9cd5fc84 files/alsa-driver-1.0.10-gfp-flags.patch 955
 RMD160 ed4d383d6608110c5c3a7ebef2a0fc636ea77d82 files/alsa-driver-1.0.10-gfp-flags.patch 955
 SHA256 f7976e121aad036e11550212b26f2d4568cc688687e950bcdc14ef5932f3eb66 files/alsa-driver-1.0.10-gfp-flags.patch 955
@@ -28,6 +31,9 @@ SHA256 53dc683ef507689fecbe33ff0615deb88adf131799241ee655ac281a1978c20b files/di
 MD5 09e9346d55ab2091eba9aa5c52fc5270 files/digest-alsa-driver-1.0.11_rc4 271
 RMD160 8cdbc46bd08d711c2d6c1e46c64b209eb5ab550a files/digest-alsa-driver-1.0.11_rc4 271
 SHA256 a2d1c5b0dff007ee76f6ad487d5938bb3a82ef3657c66615db07e4b4a4aa9efa files/digest-alsa-driver-1.0.11_rc4 271
+MD5 0a6446e4d78eea67548ef389b87581a7 files/digest-alsa-driver-1.0.11_rc5 271
+RMD160 f820669b70b58507dc69740e3648ab0ae0348824 files/digest-alsa-driver-1.0.11_rc5 271
+SHA256 40cf5da27580788064d53a1e8572c0039f436aa133e2de97ffea684ca20d7a77 files/digest-alsa-driver-1.0.11_rc5 271
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
