@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r2.ebuild,v 1.7 2005/11/23 20:42:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r3.ebuild,v 1.1 2006/04/11 15:25:47 gustavoz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="virtual/os-headers"
 RDEPEND="virtual/libc
-	sys-devel/sparc32"
+	sys-apps/setarch"
 
 S="${WORKDIR}/${P}.orig"
 
@@ -26,19 +26,13 @@ src_unpack() {
 }
 
 src_compile() {
-	local CFLAGS="-O3"
-
 	emake -C elftoaout-2.3 CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 	emake -C src piggyback piggyback64 CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 	emake -C prtconf-1.3 CC="$(tc-getCC)" all || die
 	emake -C audioctl-1.3 CC="$(tc-getCC)" || die
-
-	# sparc32 is in sys-devel/sparc32
-	# emake -C sparc32-1.1
 }
 
 src_install() {
-
 	# since the debian/piggyback64.1 manpage is a pointer to the
 	# debian/piggyback.1 manpage, copy debian/piggyback.1 to
 	# debian/piggyback64.1
