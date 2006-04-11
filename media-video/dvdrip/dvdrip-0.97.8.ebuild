@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.97.7.ebuild,v 1.3 2006/04/09 05:30:49 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.97.8.ebuild,v 1.1 2006/04/11 03:01:44 morfic Exp $
 
 
 inherit perl-module eutils flag-o-matic
@@ -30,7 +30,7 @@ DEPEND="gnome? ( gnome-extra/gtkhtml )
 	>=media-video/transcode-0.6.14
 	>=media-gfx/imagemagick-5.5.3
 	dev-perl/gtk2-perl
-	>=dev-perl/gtk2-ex-formfactory-0.61
+	>=dev-perl/gtk2-ex-formfactory-0.62
 	>=dev-perl/Event-RPC-0.89
 	>=dev-perl/Event-ExecFlow-0.61
 	virtual/perl-Storable
