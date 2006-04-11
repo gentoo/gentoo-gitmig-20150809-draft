@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8301654b66f37743e7cc22f26436ddc1 ChangeLog 7662
-RMD160 b5857c50fcb305987be57319854376c82504ca2d ChangeLog 7662
-SHA256 6e82c98ec4840ce0f4106f839b02a83d9f3c960bca57c1f323a683a0d0d666b1 ChangeLog 7662
+MD5 ef5704b4c98f6f6ebfe4bdc214e5bb76 ChangeLog 7944
+RMD160 ec4023bfe583e1b87566ad2a624a81df60f53014 ChangeLog 7944
+SHA256 79cf865168e6b9f116fc5e9565e85118ca78166eb67fc0a9d1d20d54edf2ff38 ChangeLog 7944
 MD5 a0ed4cfc65c5d37392c6b3816d3fbdbe files/digest-sharutils-4.2.1-r11 67
 RMD160 28edfa46fb93ac6b155b800bee4fd150b216de1c files/digest-sharutils-4.2.1-r11 67
 SHA256 1d361b3508c26fc8ea27ac00246a991ee64b0aa597f3c6cf02f88a846b59f047 files/digest-sharutils-4.2.1-r11 67
@@ -16,9 +16,9 @@ SHA256 84f7dc822525b9f540c334f0b8dd626c99f5d896693fcb18f3e2ad51d7cae2dd files/di
 MD5 e57c4bf3e92322439b3e269e2340424e files/digest-sharutils-4.6.1 509
 RMD160 7759e3749da80046e7386faf864b5404a3ccb8cc files/digest-sharutils-4.6.1 509
 SHA256 0a032518f03adf6d2953ceb5f9fbc7e2e8301fb8c08c61dbfd971fb52918dc8b files/digest-sharutils-4.6.1 509
-MD5 2b368d65f6d5ffc4ae3116c0cff0ed03 files/digest-sharutils-4.6.1_pre4 72
-RMD160 a75ecf4690ff9d4c31b8a03c8f70dafcf60dfc60 files/digest-sharutils-4.6.1_pre4 72
-SHA256 7f5e75d7301ec33c743e052b212a5525c28c733839b4a06e4a63a83cbd5fe39d files/digest-sharutils-4.6.1_pre4 72
+MD5 1687a0f3d718b394049083b036a22560 files/digest-sharutils-4.6.2 509
+RMD160 8bfdc7b6192a4e05f17326acb2c8e86c7ef4e1ff files/digest-sharutils-4.6.2 509
+SHA256 da190cd168f68b8b41875ead2b8d598c1a706f7b1901e354cedf88ccb36a61e1 files/digest-sharutils-4.6.2 509
 MD5 aeb2dc437bac48b13e8ebc1d632013ad files/sharutils-4.2.1-buffer-check.patch 2416
 RMD160 98fe20fd590ed09c843ced898acc7e35c65770fc files/sharutils-4.2.1-buffer-check.patch 2416
 SHA256 887d21b0b398124e40557b9adb05f045f65dc96667dc860e442ab30548c32359 files/sharutils-4.2.1-buffer-check.patch 2416
@@ -40,19 +40,19 @@ SHA256 42b5fb933a35b7fb6150b750cc18913bbd607c337ed14c278a4fe6a9adf5313c sharutil
 MD5 6719e6ff2d5d0f203dd385a59adf89eb sharutils-4.5.ebuild 775
 RMD160 76691f7402f986002b7427a649da19dd48a62813 sharutils-4.5.ebuild 775
 SHA256 3322eb34c0ad5ebf5adeccb17b3425e17f64334be1bb8413f9959895bcd39b0c sharutils-4.5.ebuild 775
-MD5 6f9c24aa3f7cbee3c4d8b93fbc8a8b98 sharutils-4.6.1.ebuild 1076
-RMD160 329aa5b6085ab1ace73389d217dac03349da1385 sharutils-4.6.1.ebuild 1076
-SHA256 0fbf75f105650f872fa432c9235918f51fbc8a14da6216c46d5a9d9220c1c1f7 sharutils-4.6.1.ebuild 1076
-MD5 58769d7dc7e2e68f1b8e839e8a681863 sharutils-4.6.1_pre4.ebuild 1065
-RMD160 5ad760d1443d692d6d6e4b68b4ac5b4f569045ef sharutils-4.6.1_pre4.ebuild 1065
-SHA256 d25e31abbb86f266d1ebf7865d437eef44e7f1b26cb0df5c54942c615b747ebd sharutils-4.6.1_pre4.ebuild 1065
+MD5 f607cbdcdfbfa31fc4cb1901e6f2efac sharutils-4.6.1.ebuild 1103
+RMD160 1593afd55a2be470092e3dde099acebe83593101 sharutils-4.6.1.ebuild 1103
+SHA256 e783376d42ec4460436c80d338dacb7228affce83b6fde998b1fa8cb22670809 sharutils-4.6.1.ebuild 1103
+MD5 86423c183a78d49ad181198c18cf45e6 sharutils-4.6.2.ebuild 1103
+RMD160 73ab6fdc86dd50d62b7e173cb04d41cc1ab2fd31 sharutils-4.6.2.ebuild 1103
+SHA256 b52a30d0701c3f3a646c48e58d675b1a46f6f5cc623f00fd19079c5e1ac1dd3a sharutils-4.6.2.ebuild 1103
 MD5 6e9706ede2bd6a3411c36490de4a2617 sharutils-4.6.ebuild 960
 RMD160 99f6c4303e6d10fe842073664ebf98cfe420501e sharutils-4.6.ebuild 960
 SHA256 76682fe2bb7207c0f5d16af838a203310ef17b687a13eef1c0a9eff360779b44 sharutils-4.6.ebuild 960
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEHP0r2+ySkm8kpY0RAiK9AJ9W3vpX2S5kV28sHC3RTEl/9uLXaACguTx3
-K0Kqqrv7i09V0jl+QfR1PfE=
-=hLcn
+iD8DBQFEPB3QmdTrptrqvGERAgbwAJ9z4EWiJQDjylbGniXfa2COu7T4iACfaBMp
+7Iw0P0FlPtRpuZb8+ysODrM=
+=AfGC
 -----END PGP SIGNATURE-----

@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.41 2006/02/26 08:43:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.42 2006/04/11 21:12:43 dragonheart Exp $
+
+*sharutils-4.6.2 (11 Apr 2006)
+
+  11 Apr 2006; Daniel Black <dragonheart@gentoo.org>
+  -sharutils-4.6.1_pre4.ebuild, sharutils-4.6.1.ebuild,
+  +sharutils-4.6.2.ebuild:
+  fixed linguas as per bug #126336 thanks to Chris White. Version bumped cause
+  I could. removed old prerelease
 
 *sharutils-4.6.1 (26 Feb 2006)
 
