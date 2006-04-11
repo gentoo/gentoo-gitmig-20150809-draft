@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.0-r1.ebuild,v 1.6 2006/04/11 20:34:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.1.ebuild,v 1.1 2006/04/11 20:34:50 dragonheart Exp $
 
 inherit eutils
 
@@ -10,8 +10,8 @@ SRC_URI="mirror://sourceforge/conky/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
-IUSE="truetype X ipv6 xmms infopipe audacious"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="truetype X ipv6 bmpx bmp xmms infopipe audacious"
 
 DEPEND_COMMON="
 	virtual/libc
@@ -26,6 +26,10 @@ DEPEND_COMMON="
 				virtual/x11
 		)
 		truetype? ( >=media-libs/freetype-2 )
+		bmpx? ( media-sound/bmpx
+				>=sys-apps/dbus-0.35
+			)
+		bmp? ( media-sound/beep-media-player )
 		audacious? ( media-sound/audacious )
 		infopipe? ( media-plugins/xmms-infopipe )
 		xmms? ( media-sound/xmms )
@@ -46,11 +50,6 @@ DEPEND="
 	sys-apps/grep
 	sys-apps/sed"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/portmon-mpd.patch || die "epatch failed"
-}
 
 src_compile() {
 	local mymake
@@ -66,11 +65,13 @@ src_compile() {
 	fi
 	local myconf
 	myconf="--enable-double-buffer --enable-own-window --enable-proc-uptime \
-		--enable-mpd --enable-mldonkey --disable-bmpx"
+		--enable-mpd --enable-mldonkey"
 	econf \
 		${myconf} \
 		$(use_enable truetype xft) \
 		$(use_enable X x11) \
+		$(use_enable bmpx) \
+		$(use_enable bmp) \
 		$(use_enable xmms) \
 		$(use_enable audacious) \
 		$(use_enable infopipe) \
