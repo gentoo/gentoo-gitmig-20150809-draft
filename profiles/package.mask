@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5205 2006/04/11 18:52:02 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5206 2006/04/11 21:38:29 zmedico Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Zac Medico <zmedico@gentoo.org> (11 Apr 2006)
+# New Manifest2 support (see glep 44) needs testing.
+>=sys-apps/portage-2.1_pre8
 
 # Jonathan Smith <smithj@gentoo.org> (19 Apr 2006)
 # Masked due to masked dependencies (>=glib-2.9). see bug #126830
