@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6.ebuild,v 1.7 2006/04/08 20:11:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6.ebuild,v 1.8 2006/04/11 03:04:49 kumba Exp $
 
 MAN_VER=""
 PATCH_VER="1.0"
@@ -40,7 +40,7 @@ inherit toolchain eutils
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
-KEYWORDS="-* ~amd64 ~arm ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="-* ~amd64 ~arm ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 # NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
@@ -126,12 +126,8 @@ src_unpack() {
 			# All that said, the abilities of this patch are disabled by default and need
 			# to be enabled by passing -mip28-cache-barrier.  Only used to build kernels, 
 			# There is the possibility it may be used for very specific userland apps too.
-			if use ip28; then
-				epatch ${FILESDIR}/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v3.patch
-			elif use ip32r10k; then
-				# similar to the above patch, but we force a whole ton of cache barriers to be
-				# generated for ther super-experimental ip32-r10k system
-				epatch ${FILESDIR}/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v3-ip32r10k.patch
+			if use ip28 or use ip32r10k; then
+				epatch ${FILESDIR}/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch
 			fi
 			;;
 		amd64)

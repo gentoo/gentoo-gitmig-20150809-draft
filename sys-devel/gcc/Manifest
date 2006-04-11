@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c14d9b9d4feaebb6bf5546d8192471a7 ChangeLog 103913
-RMD160 ba3b99548ebe4805d1e527a8de3cffc23548879b ChangeLog 103913
-SHA256 19f0775334eb125eb06f7c1b1e8275c83c7e339a0fb88bd901b540ae9277989d ChangeLog 103913
+MD5 9692b306c71cfe5af718cdbfd116e645 ChangeLog 104402
+RMD160 a52130ec57fd64c96b128907d63c3b3c0af307e3 ChangeLog 104402
+SHA256 75464666f745d69c1fcb9a10da081cb25cfff5cf42b5c5eab04ce62eea5604c1 ChangeLog 104402
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
 RMD160 8bb0e9133923821daf2e9d10a27a0a1930e00bbd files/3.2.1/gcc31-loop-load-final-value.patch 3324
 SHA256 70aa8433fb19c95f334b6cbc155cae22a3b61a6892ed9e18f95860509d0091a8 files/3.2.1/gcc31-loop-load-final-value.patch 3324
@@ -127,6 +124,9 @@ SHA256 733d3a698d6ab7cf6ab2675c12d7ada8fef4d9abc26d91cc7fdac7758f6c6634 files/3.
 MD5 acdb18a5f884fefc22c13e3d448a689a files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v3.patch 15860
 RMD160 33822eb5fb3edb067c8a40eb1801de20eaec9d15 files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v3.patch 15860
 SHA256 466a66dafbca7ec8f2e05be88851f334bdb01ea15d0b43d03931aba7cdf8d48c files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v3.patch 15860
+MD5 d49acaf7a8dc1f939f4d05cee97ac3a5 files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch 12951
+RMD160 fa7caaf9b41ed22ed5ccb1649c693248895ec3fb files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch 12951
+SHA256 8cef3779bc962b9a9c20daabea28791514b6f54824659e2f5824c493cdc3f6c7 files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch 12951
 MD5 b2922cfe76692e7d2b373a0a255f405e files/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch 14248
 RMD160 25f72003b241836ec3e08ae4108a39b0ffd9b170 files/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch 14248
 SHA256 10d6947954f03145d8ac16f497826cf25583d37f0e1e63b9df1a33d91f59e2c8 files/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch 14248
@@ -289,9 +289,9 @@ SHA256 76294313a14085f0c156a18aa2697d824db1845ebe5d29382f6d42d173b6d689 gcc-3.4.
 MD5 6903d912f2f3858ff91b15657bc04d58 gcc-3.4.5.ebuild 5015
 RMD160 e7e5c9910801a156ed7f8537b22f076e9e48b677 gcc-3.4.5.ebuild 5015
 SHA256 7c2bb48fc3a905ff47d184b301561d2a2b57c787bdc4bddd76f46e9f0b9529a0 gcc-3.4.5.ebuild 5015
-MD5 ee9f19eb7ac25e1696632edf04e0d92d gcc-3.4.6.ebuild 5320
-RMD160 f73cdb813420f707dc509d203e3510c5e61000d5 gcc-3.4.6.ebuild 5320
-SHA256 2e66f17399ab29ef43f54fd9447358e3fdcab2feda4c7593f082e44ce5e923e2 gcc-3.4.6.ebuild 5320
+MD5 3b08b20e7a045980d7d515b5393d8581 gcc-3.4.6.ebuild 5088
+RMD160 b43213118f2451f8f7960a7c70627384a3fab4f1 gcc-3.4.6.ebuild 5088
+SHA256 df349d5bfc51abc1208869468119dfc4898da164d666252da3efffb5b4a8fdd2 gcc-3.4.6.ebuild 5088
 MD5 96fd0545d0a2b543d27f5f3167cfee40 gcc-4.0.2-r3.ebuild 2074
 RMD160 684a1fa5a061d0cf4856e1dfb44d1466281831a3 gcc-4.0.2-r3.ebuild 2074
 SHA256 f1f8d4b39cd82904477c301b20b556914e04427314c4bac2792deb3be63c694a gcc-4.0.2-r3.ebuild 2074
@@ -304,10 +304,3 @@ SHA256 970250ed8ee7c4505b057b9a6d52154bacb56a88a36c68f2951f0bb32f9c447a gcc-4.1.
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
 SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEOd1d2+ySkm8kpY0RAupRAJ436hG2jvi7q1ffbTc2OYDucGEQGQCgpR1k
-ILPLXoMNIdjWxCJof69V9+g=
-=O3ZP
------END PGP SIGNATURE-----

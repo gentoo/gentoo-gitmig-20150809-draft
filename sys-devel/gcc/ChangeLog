@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.518 2006/04/09 21:39:20 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.519 2006/04/11 03:04:45 kumba Exp $
+
+  11 Apr 2006; Joshua Kinard <kumba@gentoo.org>
+  +files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch,
+  gcc-3.4.6.ebuild:
+  Added a 4th version of the cache barriers patch for mips to gcc-3.4.6 that
+  shifts the bulk of th generation code to the mips backend vs. being in
+  final.c. This newer patch also has a switch to generate barriers on store
+  only, load only, or both loads and stores, making it suitable for both IP28
+  and R10K IP32 testing. Also keyworded 3.4.6 for ~mips.
 
   09 Apr 2006; Guy Martin <gmsoft@gentoo.org> gcc-4.1.0.ebuild:
   Added ~hppa to KEYWORDS.
