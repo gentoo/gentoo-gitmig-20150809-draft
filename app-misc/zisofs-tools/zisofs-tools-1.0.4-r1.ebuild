@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/zisofs-tools-1.0.4-r1.ebuild,v 1.18 2006/04/11 23:20:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/zisofs-tools-1.0.4-r1.ebuild,v 1.19 2006/04/11 23:21:13 vapier Exp $
 
 inherit flag-o-matic
 
@@ -22,6 +22,6 @@ src_compile() {
 }
 
 src_install() {
-	make INSTALLROOT=${D} install || die
+	make INSTALLROOT="${D}" install || die
 	dodoc CHANGES INSTALL README
 }

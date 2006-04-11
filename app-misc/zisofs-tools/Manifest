@@ -10,16 +10,16 @@ SHA256 d3d44dbe03d5659020b14c81a698d487ff9e57ddde74f647e0effd0060d95458 files/di
 MD5 f6a64dc4d04cf4ef74e7b4c385bf60c3 files/digest-zisofs-tools-1.0.6 70
 RMD160 2c2a01f6d7a7bec2e85acd75e721193097aa0e25 files/digest-zisofs-tools-1.0.6 70
 SHA256 7740406464e286594a283dee2500b8f51c9435b1e4dff8d3aa1163692044a049 files/digest-zisofs-tools-1.0.6 70
-MD5 bd150da6e3f8309afe11b8defe5bbd2c zisofs-tools-1.0.4-r1.ebuild 731
-RMD160 d4d0733e3905964e3ffd6d549e0827b843520646 zisofs-tools-1.0.4-r1.ebuild 731
-SHA256 3de22147804f0dd6f9bcf0b9899b641bc4586f0306fd8a95bc2d157587d535ce zisofs-tools-1.0.4-r1.ebuild 731
-MD5 056d417857653f4f71ba208a788be5ac zisofs-tools-1.0.6.ebuild 750
-RMD160 8e8c416c588c97ffc0f0b3cf67df20e40ae85930 zisofs-tools-1.0.6.ebuild 750
-SHA256 7ac9e00f4e368ed1cde4f7dc1ef986b315787840721fc5a34933e2fbd2bf7311 zisofs-tools-1.0.6.ebuild 750
+MD5 51722fef1496cb52c43ce88e5f92b05a zisofs-tools-1.0.4-r1.ebuild 733
+RMD160 d38cafa477c070004884aa95fb4e91320c7258df zisofs-tools-1.0.4-r1.ebuild 733
+SHA256 da25385af4ee2b6fe304cf9264afeb225b700109bc5f3a55baf36c5dab7dc0ad zisofs-tools-1.0.4-r1.ebuild 733
+MD5 134b7a6565da75a382b4d46d838ce5c3 zisofs-tools-1.0.6.ebuild 752
+RMD160 921b9c3a3cca8dcdfdb168ff599ed80100dfb631 zisofs-tools-1.0.6.ebuild 752
+SHA256 ba7e7028592f3a1f275a7d27e8403060d05b051fc52158feb00604a55db68b4b zisofs-tools-1.0.6.ebuild 752
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEPDnP2+ySkm8kpY0RAozrAJ44S1om2TB0unryi+O7zde5bpDDRgCeM1HI
-hsAqRKNmBUm0ZoeFJDpT2+4=
-=Q1IQ
+iD8DBQFEPDn+2+ySkm8kpY0RAtCrAJ92pQWEYW3Zy6UatJv80W8z+Y0HSQCgrl9Z
+2truW/IeLcPaiWIsH0fjxP0=
+=USDF
 -----END PGP SIGNATURE-----
