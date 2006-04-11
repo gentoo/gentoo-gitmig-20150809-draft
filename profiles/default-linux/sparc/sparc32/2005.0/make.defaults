@@ -1,9 +1,5 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2005.0/make.defaults,v 1.8 2006/03/29 19:15:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2005.0/make.defaults,v 1.9 2006/04/11 21:28:33 gustavoz Exp $
 
 USE="arts berkdb bitmap-fonts crypt cups dlloader fortran fbcon foomaticdb gdbm gif gtk gtk2 imlib jpeg kde gnome libwww mikmod motif mad mpeg ncurses nls opengl pam perl png python qt readline slang spell ssl tcpd truetype truetype-fonts type1-fonts X xv zlib"
-
-# 2006/03/29 - Stefan Schweizer <genstef@gentoo.org>
-# isdn USE flag defaults
-USE="${USE} isdnlog"
