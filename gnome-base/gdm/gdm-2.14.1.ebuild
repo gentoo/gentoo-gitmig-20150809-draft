@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.14.0.ebuild,v 1.1 2006/03/17 23:43:37 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.14.1.ebuild,v 1.1 2006/04/11 18:35:52 leonardop Exp $
 
 inherit eutils pam gnome2
 
@@ -33,30 +33,24 @@ RDEPEND="pam? ( virtual/pam )
 	>=media-libs/libart_lgpl-2.3.11
 	selinux? ( sys-libs/libselinux )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	||	(
-			(
-				x11-libs/libX11
-				x11-libs/libXdmcp
-				x11-libs/libXi
-				x11-libs/libXext
-				x11-libs/libXinerama
-				x11-libs/libdmx
-				x11-libs/libXau
-				x11-apps/sessreg
-				accessibility? ( x11-libs/libXevie )
-			)
-			virtual/x11
-		)
+	|| ( (
+			x11-libs/libX11
+			x11-libs/libXdmcp
+			x11-libs/libXi
+			x11-libs/libXext
+			x11-libs/libXinerama
+			x11-libs/libdmx
+			x11-libs/libXau
+			x11-apps/sessreg
+			accessibility? ( x11-libs/libXevie ) )
+		virtual/x11 )
 	sys-devel/gettext"
 
 DEPEND="${RDEPEND}
-	||	(
-			(
-				x11-proto/inputproto
-				x11-proto/dmxproto
-			)
-			virtual/x11
-		)
+	|| ( (
+			x11-proto/inputproto
+			x11-proto/dmxproto )
+		virtual/x11 )
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.28
 	>=app-text/scrollkeeper-0.1.4"
@@ -64,6 +58,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 USE_DESTDIR="1"
 MAKEOPTS="${MAKEOPTS} -j1"
+
 
 pkg_setup() {
 	G2CONF="--sysconfdir=/etc/X11         \
@@ -89,13 +84,16 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# remove unneeded linker directive for selinux (#41022)
-	epatch ${FILESDIR}/${PN}-2.13.0.1-selinux-remove-attr.patch
+	epatch "${FILESDIR}"/${PN}-2.13.0.1-selinux-remove-attr.patch
 
 	# Fix missing intllib
-	epatch ${FILESDIR}/${PN}-2.13.0.7-gdm-dmx-intllibs.patch
+	epatch "${FILESDIR}"/${PN}-2.13.0.7-gdm-dmx-intllibs.patch
+
+	# Missing file from the tarball
+	cp -f "${FILESDIR}"/${P}-gdmthemetester.in gui/greeter/gdmthemetester.in
 
 	gnome2_omf_fix docs/*/Makefile.in docs/Makefile.in
 }

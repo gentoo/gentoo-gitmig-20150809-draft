@@ -1,19 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.1-r1.ebuild,v 1.11 2006/03/15 00:50:19 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.7-r1.ebuild,v 1.1 2006/04/11 18:35:52 leonardop Exp $
 
-inherit eutils pam versionator gnome2
+inherit eutils pam gnome2
 
 DESCRIPTION="GNOME Display Manager"
-HOMEPAGE="http://yippi.hypermall.com/gdm/index.shtml"
+HOMEPAGE="http://www.gnome.org/projects/gdm/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
-IUSE="ipv6 pam selinux static tcpd xinerama"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="ipv6 pam selinux tcpd xinerama"
 
 # Name of the tarball with gentoo specific files
-GDM_EXTRA="${PN}-$(get_version_component_range 1-2)-gentoo-files-r2"
+GDM_EXTRA="${PN}-2.8-gentoo-files-r2"
+
 SRC_URI="${SRC_URI}
 	mirror://gentoo/gentoo-gdm-theme-r2.tar.bz2
 	mirror://gentoo/${GDM_EXTRA}.tar.bz2"
@@ -31,21 +32,31 @@ RDEPEND="pam? ( virtual/pam )
 	>=dev-libs/libxml2-2.4.12
 	>=media-libs/libart_lgpl-2.3.11
 	selinux? ( sys-libs/libselinux )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+	|| ( ( x11-libs/libdmx
+		x11-apps/sessreg )
+		virtual/x11 )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.28
 	>=app-text/scrollkeeper-0.1.4"
 
-DOCS="AUTHORS ChangeLog NEWS README* TODO"
+DOCS="AUTHORS ChangeLog NEWS README TODO"
+USE_DESTDIR="1"
+MAKEOPTS="${MAKEOPTS} -j1"
 
 
 pkg_setup() {
-	G2CONF="--sysconfdir=/etc/X11 --localstatedir=/var \
-		--with-xdmcp $(use_enable ipv6) $(use_with tcpd tcp-wrappers) \
-		$(use_with xinerama) $(use_with selinux) $(use_enable static) \
-		$(use_with pam pam-prefix /etc)"
+	G2CONF="--sysconfdir=/etc/X11 \
+		--localstatedir=/var          \
+		--with-xdmcp                  \
+		--with-pam-prefix=/etc        \
+		$(use_enable ipv6)            \
+		$(use_with tcpd tcp-wrappers) \
+		$(use_with xinerama)          \
+		$(use_with selinux)"
+
 
 	if use pam; then
 		G2CONF="${G2CONF} --enable-authentication-scheme=pam"
@@ -53,26 +64,31 @@ pkg_setup() {
 		G2CONF="${G2CONF} --enable-console-helper=no \
 			--enable-authentication-scheme=shadow"
 	fi
+
+	enewgroup gdm
+	enewuser gdm -1 -1 /var/lib/gdm gdm
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# remove unneeded linker directive for selinux (#41022)
 	epatch ${FILESDIR}/${PN}-2.4.4-selinux_remove_attr.patch
 
-	autoconf || die "autoconf failed"
+	# Fix locale string translation (Bug #100753)
+	epatch ${FILESDIR}/${PN}-2.13.0.4-esperanto.patch
+
+	# Fix for ~/.ICEauthority checks (bug #129151)
+	epatch ${FILESDIR}/${PN}-2.8-CVE-2006-1057.patch
+
+	gnome2_omf_fix docs/*/Makefile.in
 }
 
 src_install() {
+	gnome2_src_install
+
 	local gentoodir="${WORKDIR}/${GDM_EXTRA}"
-	local pam_prefix=""
-
-	use pam && pam_prefix="PAM_PREFIX=${D}/etc"
-
-	gnome2_src_install ${pam_prefix} sysconfdir=/etc/X11 \
-		localstatedir=/var
 
 	# gdm-binary should be gdm to work with our init (#5598)
 	rm -f ${D}/usr/sbin/gdm
@@ -96,7 +112,7 @@ src_install() {
 	doexe ${gentoodir}/custom.desktop
 
 	# We replace the pam stuff by our own
-	rm -f ${D}/etc/pam.d/gdm
+	rm -rf ${D}/etc/pam.d
 
 	dopamd ${gentoodir}/pam.d/*
 	dopamsecurity console.apps ${gentoodir}/security/console.apps/gdmsetup
@@ -107,6 +123,8 @@ src_install() {
 	# list available users
 	dosed "s:^#MinimalUID=.*:MinimalUID=1000:" /etc/X11/gdm/gdm.conf
 	dosed "s:^#IncludeAll=.*:IncludeAll=true:" /etc/X11/gdm/gdm.conf
+	# Fix old X11R6 paths
+	dosed "s:/usr/X11R6/bin:/usr/bin:" /etc/X11/gdm/gdm.conf
 
 	# Move Gentoo theme in
 	mv ${WORKDIR}/gentoo-*  ${D}/usr/share/gdm/themes
@@ -119,11 +137,9 @@ pkg_postinst() {
 	# Soft restart, assumes Gentoo defaults for file locations
 	FIFOFILE=/var/gdm/.gdmfifo
 	PIDFILE=/var/run/gdm.pid
-	if [ -w ${FIFOFILE} ] ; then
-		if [ -f ${PIDFILE} ] ; then
-			if kill -0 `cat ${PIDFILE}`; then
-				(echo;echo SOFT_RESTART) >> ${FIFOFILE}
-			fi
+	if [ -w "${FIFOFILE}" ] && [ -f "${PIDFILE}" ] ; then
+		if kill -0 `cat ${PIDFILE}`; then
+			(echo;echo SOFT_RESTART) >> ${FIFOFILE}
 		fi
 	fi
 
@@ -133,10 +149,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-
 	gnome2_pkg_postrm
 
 	einfo "To remove GDM from startup please execute"
 	einfo "'rc-update del xdm default'"
-
 }
