@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.263 2006/04/10 04:28:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.264 2006/04/11 23:40:19 halcy0n Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -983,6 +983,13 @@ gcc_src_unpack() {
 	einfo "patching gcc version: ${version_string} (${release_version})"
 	gcc_version_patch "${version_string}" "${release_version}"
 
+	if [[ ${GCCMAJOR}.${GCCMINOR} > 4.0 ]] ; then
+		if [[ -n ${SNAPSHOT} || -n ${PRERELEASE} ]] ; then
+			echo ${PV/_/-} > "${S}"/gcc/BASE-VER
+			echo "" > "${S}"/gcc/DATESTAMP
+		fi
+	fi
+
 	# Misdesign in libstdc++ (Redhat)
 	if [[ ${GCCMAJOR} -ge 3 ]] && [[ -e ${S}/libstdc++-v3/config/cpu/i486/atomicity.h ]] ; then
 		cp -pPR "${S}"/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
@@ -1179,8 +1186,16 @@ gcc_do_configure() {
 				confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
 			fi
 		fi
+
+		if [[ ${GCCMAJOR}.${GCCMINOR} > 4.1 ]] ; then
+			confgcc="${confgcc} --disable-bootstrap"
+		fi
 	else
 		confgcc="${confgcc} --enable-shared --enable-threads=posix"
+
+		if [[ ${GCCMAJOR}.${GCCMINOR} > 4.1 ]] ; then
+			confgcc="${confgcc} --enable-bootstrap"
+		fi
 	fi
 	# __cxa_atexit is "essential for fully standards-compliant handling of
 	# destructors", but apparently requires glibc.
@@ -1300,6 +1315,16 @@ gcc_do_make() {
 		BOOT_CFLAGS="${BOOT_CFLAGS}" \
 		${GCC_MAKE_TARGET} \
 		|| die "emake failed with ${GCC_MAKE_TARGET}"
+
+	einfo "Running make LDFLAGS=\"${LDFLAGS}\" STAGE1_CFLAGS=\"${STAGE1_CFLAGS}\" LIBPATH=\"${LIBPATH}\" BOOT_CFLAGS=\"${BOOT_CFLAGS}\" proto"
+	# Build protoize
+	emake -C gcc \
+		LDFLAGS="${LDFLAGS}" \
+		STAGE1_CFLAGS="${STAGE1_CFLAGS}" \
+		LIBPATH="${LIBPATH}" \
+		BOOT_CFLAGS="${BOOT_CFLAGS}" \
+		proto \
+		|| die "emake failed with proto"
 
 	if ! use build && ! is_crosscompile && ! use nocxx && use doc ; then
 		if type -p doxygen > /dev/null ; then
