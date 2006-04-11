@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.3-r2.ebuild,v 1.11 2005/12/26 17:58:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.3-r2.ebuild,v 1.12 2006/04/11 04:36:39 fserb Exp $
 
 inherit eutils
 
@@ -15,7 +15,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 
-DEPEND="virtual/x11
+DEPEND="|| ( (
+		xinerama? ( x11-libs/libXinerama )
+		x11-libs/libXpm
+		x11-libs/libXrandr
+		x11-libs/libXrender
+		)
+		virtual/x11
+	)
 	truetype? ( virtual/xft )
 	perl? ( dev-libs/libpcre )"
 
