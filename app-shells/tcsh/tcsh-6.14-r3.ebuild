@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r3.ebuild,v 1.11 2006/02/19 19:21:49 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r3.ebuild,v 1.12 2006/04/11 20:13:02 grobian Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.astron.com/pub/tcsh/${MY_P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
-IUSE="perl"
+IUSE="perl catalogs"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	perl? ( dev-lang/perl )
@@ -26,6 +26,14 @@ src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}/${MY_P}"-debian-dircolors.patch # bug #120792
 	epatch "${FILESDIR}/${P}"-r2.patch
+
+	if use catalogs ;
+	then
+		einfo "enabling NLS catalogs support..."
+		sed -i -e "s/#undef NLS_CATALOGS/#define NLS_CATALOGS/" \
+			${WORKDIR}/${MY_P}/config_f.h || die
+		eend $?
+	fi
 }
 
 src_compile() {

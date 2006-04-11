@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.61 2006/02/19 19:21:49 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.62 2006/04/11 20:13:01 grobian Exp $
+
+  11 Apr 2006; Fabian Groffen <grobian@gentoo.org> tcsh-6.14-r3.ebuild:
+  Adding USE-flag catalogs for NLS catalogs support. Thanks to Kouya Sakamoto
+  <krs at) juno.ocn dot ne.jp> (bug #128439)
 
   19 Feb 2006; Joshua Kinard <kumba@gentoo.org> tcsh-6.14-r3.ebuild:
   Marked stable on mips.
