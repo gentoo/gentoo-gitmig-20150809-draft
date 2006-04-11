@@ -1,5 +1,25 @@
-MD5 03bdbcabbe6a151da9ce0e537e916b2c metadata.xml 618
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d82fb01fba40541b56070e6afeb95b6d ChangeLog 1063
-MD5 1219be39943fff3ab3592d422ba999b4 epplets-0.7-r1.ebuild 867
-MD5 106830bd4b3cfc951a50a5498e925346 files/digest-epplets-0.7-r1 64
+RMD160 3da0d7a8b125b1f9c0da70da62d9ddcdc20d8113 ChangeLog 1063
+SHA256 cde053ad41c4a45235b37b231991c644dfc7f461c3ac3571d9c99cb6689840f8 ChangeLog 1063
+MD5 7d5f091888294ac979f9a4129f55ddf3 epplets-0.7-r1.ebuild 1026
+RMD160 05de3b8177b741708642bfa9c8f2ea7e7d324348 epplets-0.7-r1.ebuild 1026
+SHA256 501f0e24223abba0a9ddc3c621aa423af37c471ce2b44d7548b3c6a5a08ebdc8 epplets-0.7-r1.ebuild 1026
 MD5 5b32a2cbac5456c47ed90d9f55ab0a1c files/0.7-compmgr-fix.patch 1134
+RMD160 5ce2b300c127ae098f4f1754054e2e73df7d342e files/0.7-compmgr-fix.patch 1134
+SHA256 83272080e5f71710d097577df390c3fab6c9e3cfbaba666f322daf8e2ab9eac0 files/0.7-compmgr-fix.patch 1134
+MD5 106830bd4b3cfc951a50a5498e925346 files/digest-epplets-0.7-r1 64
+RMD160 bbddf7bcdeed9e52a7d7e6440507a8229ce7ee6a files/digest-epplets-0.7-r1 64
+SHA256 f41bd495043aaaa2ec59d8d79558486a201c4fba438b3dd98013756ee4f67396 files/digest-epplets-0.7-r1 64
+MD5 03bdbcabbe6a151da9ce0e537e916b2c metadata.xml 618
+RMD160 9c019d998802615528b9e997ac21545999659db2 metadata.xml 618
+SHA256 662a07ac085c07e1f4b349ea68c6e47383afe546c0dd2659bac3077d805be214 metadata.xml 618
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEOw/v2+ySkm8kpY0RAl/HAJ9IBLiqxnYP40KZqu7GtpqGFpiYgwCfRVcD
+L83sZ6M7CqOXKA9BeT/e3W4=
+=HUQ3
+-----END PGP SIGNATURE-----

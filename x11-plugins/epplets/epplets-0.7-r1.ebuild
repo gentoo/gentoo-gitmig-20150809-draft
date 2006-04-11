@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/epplets-0.7-r1.ebuild,v 1.4 2005/09/17 02:10:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/epplets-0.7-r1.ebuild,v 1.5 2006/04/11 02:09:35 vapier Exp $
 
 inherit eutils
 
@@ -13,16 +13,19 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/x11
+RDEPEND="|| ( ( x11-libs/libX11 x11-libs/libXext ) virtual/x11 )
 	virtual/glut
 	>=media-libs/imlib-1.9.10
 	>=x11-wm/enlightenment-0.16.6
+	<=x11-wm/enlightenment-0.16.8
 	media-sound/esound"
+DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xproto x11-proto/xextproto ) virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-compmgr-fix.patch #68057
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-compmgr-fix.patch #68057
 }
 
 src_compile() {
