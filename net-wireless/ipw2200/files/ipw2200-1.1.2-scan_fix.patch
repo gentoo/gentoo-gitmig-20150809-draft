@@ -1,0 +1,48 @@
+diff -urp ipw2200-1.1.2/ipw2200.c ipw2200-1.1.2-new/ipw2200.c
+--- ipw2200-1.1.2/ipw2200.c	2006-04-01 09:47:24.000000000 +0800
++++ ipw2200-1.1.2-new/ipw2200.c	2006-04-05 17:36:32.000000000 +0800
+@@ -4745,7 +4745,8 @@ static void ipw_rx_notification(struct i
+ 			 * on how the scan was initiated. User space can just
+ 			 * sync on periodic scan to get fresh data...
+ 			 * Jean II */
+-			if (x->status == SCAN_COMPLETED_STATUS_COMPLETE) {
++			//if (x->status == SCAN_COMPLETED_STATUS_COMPLETE) {
++			{
+ 				union iwreq_data wrqu;
+ 
+ 				wrqu.data.length = 0;
+@@ -6514,8 +6515,6 @@ static void ipw_wpa_assoc_frame(struct i
+ {
+ 	/* make sure WPA is enabled */
+ 	ipw_wpa_enable(priv, 1);
+-
+-	ipw_disassociate(priv);
+ }
+ 
+ static int ipw_set_rsn_capa(struct ipw_priv *priv,
+@@ -7119,6 +7118,7 @@ static int ipw_wx_set_auth(struct net_de
+ 
+ 	case IW_AUTH_WPA_ENABLED:
+ 		ret = ipw_wpa_enable(priv, param->value);
++		ipw_disassociate(priv);
+ 		break;
+ 
+ 	case IW_AUTH_RX_UNENCRYPTED_EAPOL:
+@@ -8050,7 +8050,7 @@ static int ipw_associate(void *data)
+ 	if (!network) {
+ 		ipw_debug_config(priv);
+ 
+-		if (!(priv->status & STATUS_SCANNING)) {
++		if (!(priv->status & STATUS_SCANNING) && !priv->ieee->wpa_enabled) {
+ 			if (!(priv->config & CFG_SPEED_SCAN))
+ 				queue_delayed_work(priv->workqueue,
+ 						   &priv->request_scan,
+@@ -11187,7 +11187,7 @@ static void ipw_link_down(struct ipw_pri
+ 
+ 	ipw_reset_stats(priv);
+ 
+-	if (!(priv->status & STATUS_EXIT_PENDING)) {
++	if (!(priv->status & STATUS_EXIT_PENDING) && !priv->ieee->wpa_enabled) {
+ 		/* Queue up another scan... */
+ 		queue_work(priv->workqueue, &priv->request_scan);
+ 	}
