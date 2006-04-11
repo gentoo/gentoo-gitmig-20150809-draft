@@ -1,0 +1,9 @@
+# ChangeLog for games-puzzle/ngstar
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ChangeLog,v 1.1 2006/04/11 23:24:16 tupone Exp $
+
+*ngstar-2.1.8 (11 Apr 2006)
+
+  11 Apr 2006; <Tupone@gentoo.org> +metadata.xml, +ngstar-2.1.8.ebuild:
+  Initial import. Ebuild submitted by Alexandru Toma, bug #66294
+
