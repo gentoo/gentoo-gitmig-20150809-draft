@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.21.ebuild,v 1.5 2006/03/23 19:38:13 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.21.ebuild,v 1.6 2006/04/11 22:00:26 gustavoz Exp $
 
 inherit nsplugins multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 -hppa ia64 ppc ~sparc x86"
+KEYWORDS="~alpha amd64 -hppa ia64 ppc sparc x86"
 IUSE="gecko-sdk gtk"
 
 DEPEND=">=media-video/mplayer-1.0_pre5
