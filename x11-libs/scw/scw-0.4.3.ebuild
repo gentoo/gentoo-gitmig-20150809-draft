@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/scw-0.4.3.ebuild,v 1.1 2006/04/10 12:32:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/scw-0.4.3.ebuild,v 1.2 2006/04/11 16:55:49 swegener Exp $
 
 DESCRIPTION="A GTK+ widget set specifically designed for chat programs."
 HOMEPAGE="http://corrie.scp.fi/users/kalle.vahlman/scw/"
@@ -13,15 +13,10 @@ IUSE=""
 DEPEND="virtual/libc
 	sys-devel/libtool
 	dev-util/pkgconfig
-	>=dev-libs/glib-2.4*
-	>=x11-libs/gtk+-2.4*"
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-}
+	>=dev-libs/glib-2.4
+	>=x11-libs/gtk+-2.4"
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc README NEWS ChangeLog AUTHORS
 }
