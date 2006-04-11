@@ -1,6 +1,9 @@
-MD5 efbcca11c06914c1eda704b6098b4f28 ChangeLog 1452
-RMD160 ba0d07919de640bbfda9995289fba7c009ca6104 ChangeLog 1452
-SHA256 29cf2ef160a87a54938b011d79b173fb64356db33f61672e82d5e04f7310da87 ChangeLog 1452
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 17c8d66bd4351ece4c69f215b9d38ce7 ChangeLog 1555
+RMD160 1d5635bd6db479dccd6cbb61b00c4421abb4418d ChangeLog 1555
+SHA256 f9d55fcfae96be876c114ddaf73a2da4e9ef5984e1fc54c2e5fcaab8d8b5b5dc ChangeLog 1555
 MD5 be0bda1e61a418231b438f1d8ac57d2a files/digest-flobopuyo-0.20 64
 RMD160 ba05e9366060b4c27a6f62fc6024ff52f3a56884 files/digest-flobopuyo-0.20 64
 SHA256 b58145d77d76ae811f45bda793698f438f082987d221a4505d744b33378be685 files/digest-flobopuyo-0.20 64
@@ -13,9 +16,16 @@ SHA256 a3cbc69a50dcdbe810353afbba1eaab3dc44341ddccff9f913ff1cb70d079da2 files/fl
 MD5 9ebc7b7f7dd4085ca3dd01bb2b43eed4 files/flobopuyo-0.20-libs.patch 1763
 RMD160 18223569555d9223f1027ce8ebf09a43f814fa72 files/flobopuyo-0.20-libs.patch 1763
 SHA256 6b33ec6f589e62faa5e2340034041576228357c32278522bde50f35417c3cb72 files/flobopuyo-0.20-libs.patch 1763
-MD5 e99b93e71c5e20cd216b37fdb8b859dd flobopuyo-0.20.ebuild 1347
-RMD160 c93dae498349e7311fb51a718bf458ca2b4b203d flobopuyo-0.20.ebuild 1347
-SHA256 09ec811b85250026936b2a046300f59faa47c4ea317150438fb152c6b439c207 flobopuyo-0.20.ebuild 1347
+MD5 c905374ee1ce42d1559aa2ca2febba61 flobopuyo-0.20.ebuild 1359
+RMD160 94baca3c93861c371b6f48b3cff612a67869f406 flobopuyo-0.20.ebuild 1359
+SHA256 65bf24a959ca613437a83e146147a6c01adec95b1afd1b0e8457a79e70bbbbcf flobopuyo-0.20.ebuild 1359
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEPAd/AiZjviIA2XgRAovZAKCqxji73EdrVxgthMhOgDHy/xpFWwCgmUox
+RTdyJcBbuvAq6TZOud0HnDc=
+=vp+S
+-----END PGP SIGNATURE-----

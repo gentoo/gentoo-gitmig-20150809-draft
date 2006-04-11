@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/flobopuyo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/ChangeLog,v 1.8 2006/03/20 20:18:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/ChangeLog,v 1.9 2006/04/11 19:45:52 flameeyes Exp $
+
+  11 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> flobopuyo-0.20.ebuild:
+  Add ~x86-fbsd keyword.
 
   20 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/flobopuyo-0.20-libs.patch, flobopuyo-0.20.ebuild:
