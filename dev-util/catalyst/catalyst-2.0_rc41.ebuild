@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc41.ebuild,v 1.2 2006/04/11 14:28:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc41.ebuild,v 1.3 2006/04/11 23:23:59 vapier Exp $
 
 inherit eutils
 
@@ -16,28 +16,21 @@ IUSE="ccache cdr"
 DEPEND=""
 RDEPEND="dev-lang/python
 	app-crypt/shash
-	amd64? (
-		sys-apps/setarch )
-	ppc64? (
-		sys-apps/setarch )
-	ccache? (
-		dev-util/ccache )
+	amd64? ( sys-apps/setarch )
+	ppc64? ( sys-apps/setarch )
+	ccache? ( dev-util/ccache )
 	cdr? (
 		virtual/cdrtools
-		ia64? (
-			sys-fs/dosfstools )
-		!sh? (
-			app-misc/zisofs-tools )
-		!mips? (
-			!sh? (
-				>=sys-fs/squashfs-tools-2.1 ) ) )
+		ia64? ( sys-fs/dosfstools )
+		app-misc/zisofs-tools
+		>=sys-fs/squashfs-tools-2.1
+	)
 	examples? (
 		dev-util/livecd-kconfigs
 		dev-util/livecd-specs )"
 
 pkg_setup() {
-	if use ccache
-	then
+	if use ccache ; then
 		einfo "Enabling ccache support for catalyst."
 	else
 		ewarn "By default, ccache support for catalyst is disabled."
@@ -53,7 +46,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-slot.patch
+	epatch "${FILESDIR}"/${P}-slot.patch
 }
 
 src_install() {
