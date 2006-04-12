@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.148 2006/04/12 16:40:05 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.149 2006/04/12 23:16:01 dang Exp $
+
+  12 Apr 2006; Daniel Gryniewicz <dang@gentoo.org> gdm-2.8.0.7-r1.ebuild:
+  Marked stable on amd64 Per bug# 129151
 
   12 Apr 2006; Thomas Cort <tcort@gentoo.org> gdm-2.8.0.7-r1.ebuild:
   Stable on alpha wrt security Bug #129151
