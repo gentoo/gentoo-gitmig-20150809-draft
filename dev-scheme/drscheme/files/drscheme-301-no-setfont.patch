@@ -1,0 +1,15 @@
+Index: src/wxxt/src/DeviceContexts/WindowDC.cc
+===================================================================
+--- src/wxxt/src/DeviceContexts/WindowDC.cc	(revision 2652)
++++ src/wxxt/src/DeviceContexts/WindowDC.cc	(revision 2653)
+@@ -2676,8 +2676,10 @@
+     if (!(current_font = font)) // nothing to do without a font
+ 	return;
+ 
++#if 0
+     xfs  =(XFontStruct*)font->GetInternalFont(scale_x, scale_y);
+     XSetFont(DPY, TEXT_GC, xfs->fid);
++#endif
+ }
+ 
+ void wxWindowDC::SetTextForeground(wxColour *col)
