@@ -1,4 +1,4 @@
-MD5 0d3a61e65e2c7b681750d0a2169ad3cd ChangeLog 5159
+MD5 9c32526f175318b8706d70fd2c100d83 ChangeLog 5290
 MD5 4858dd29941b51d0944ff1066f30af13 files/digest-kmymoney2-0.6.4 69
 MD5 fa6af21632e62a658f44f23999defe50 files/digest-kmymoney2-0.8 67
 MD5 e548b46016c0cae59266ac01e45fc5e0 files/digest-kmymoney2-0.8.1 69
@@ -9,7 +9,7 @@ MD5 c3b80300877c3e8f27d4b4a87895799a files/kmymoney2-0.6.4-configure-arts.patch 
 MD5 f89ae557f762bf894669b2f0b2a3af8f kmymoney2-0.6.4.ebuild 604
 MD5 6205153abe0b22a4f3c321d82eee7d6a kmymoney2-0.8.1.ebuild 788
 MD5 d4b89127a234e17c2fedb9915898f3c7 kmymoney2-0.8.2.ebuild 787
-MD5 7a7d5b0ae3b6303fdd349a9b6e970e87 kmymoney2-0.8.3-r1.ebuild 1066
-MD5 f709c45e3a60de8b204584f6aa3f06ed kmymoney2-0.8.3.ebuild 787
+MD5 bf0791a5010808b031d91d7bde3755b5 kmymoney2-0.8.3-r1.ebuild 1340
+MD5 4a0dca5f9f19497e99a5282e0cb225ca kmymoney2-0.8.3.ebuild 1061
 MD5 077b7b737ada5603a62cfe16e96024e1 kmymoney2-0.8.ebuild 782
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
