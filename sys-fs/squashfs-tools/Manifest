@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4299c9b0c9eecb80a70a0867f788cf65 ChangeLog 4664
-RMD160 5476ceb6b06cd1ecaa577361ccdbf0f1efd97a89 ChangeLog 4664
-SHA256 04a599f06f62b0c22ce7826daec0df9972d36f5751c45cbb17a168229980131c ChangeLog 4664
+MD5 dc5cb21b1ecca107095ed8a7d9976e43 ChangeLog 4778
+RMD160 6625dbbae34a4e75e7c190e026704d9a7b4a1a40 ChangeLog 4778
+SHA256 d970e55558ac72988e0505e588e9eae760600322f26fcbb6cf37100cfe8caba0 ChangeLog 4778
 MD5 79b98e5d18ebd17486dca6802a1ac7d4 files/digest-squashfs-tools-2.1_p2-r1 66
 RMD160 0ba02053b00423cbe218c3e63325045d9e9f8671 files/digest-squashfs-tools-2.1_p2-r1 66
 SHA256 dc9411ad5faf997aa80841a1caf4b1822bad6cc4b8f05a1f99fe305f50c4cca0 files/digest-squashfs-tools-2.1_p2-r1 66
@@ -19,16 +19,16 @@ SHA256 b6e17484225400d76c65d178bf5a10dc0a8da7f345993c2acc63d1093a77c90d metadata
 MD5 775b98e784ddd48e7168e2e4cce3cf12 squashfs-tools-2.1_p2-r1.ebuild 952
 RMD160 ac14beda699db7b69bcdbb6fc1300bb60a195057 squashfs-tools-2.1_p2-r1.ebuild 952
 SHA256 9896ea57ed44ce93c68871532a2e3d6af0c082d06c9e74883b202d79b8bca4d8 squashfs-tools-2.1_p2-r1.ebuild 952
-MD5 d5356d761615addb0509574c4fa341d1 squashfs-tools-2.2_p2.ebuild 949
-RMD160 ae22df3c12ccbd09c3165d992d7d4c1431131f02 squashfs-tools-2.2_p2.ebuild 949
-SHA256 15dd9d646efbc4b366ce9961f234e449cf347d1109a5e758f07e626bed1e6139 squashfs-tools-2.2_p2.ebuild 949
+MD5 72f216a02126991f82f3e8537d65718d squashfs-tools-2.2_p2.ebuild 948
+RMD160 c42318f265896959febf21539840b068a7070e07 squashfs-tools-2.2_p2.ebuild 948
+SHA256 d9f5d05b18df8b1866571e40f74b6269363c7124d0344fafe078f38b1eaefcb6 squashfs-tools-2.2_p2.ebuild 948
 MD5 4d5d5107148fd7637cac329574f69fcc squashfs-tools-3.0.ebuild 930
 RMD160 23029e662d78b189d99bec015dda6270b79b18ac squashfs-tools-3.0.ebuild 930
 SHA256 e893cc16d9710fdf8972790948eec0f85ec4b088f16283100d9f67e69aff314d squashfs-tools-3.0.ebuild 930
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEPDng2+ySkm8kpY0RAuQRAKCajLqVgh1Oxu3BGXlZ844eUTkr1gCeLE+s
-OuJHgXXpIC17tS1oxd0wZSE=
-=DMND
+iD8DBQFEPUWbugEuf3OQ0akRAqPoAJ4/+f0NSuHG+30yiPvZi/+heI5t7wCfdbiS
+hAn6wo/WB5vc0hrJHPY6LrA=
+=NbpB
 -----END PGP SIGNATURE-----
