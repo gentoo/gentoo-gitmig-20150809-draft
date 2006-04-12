@@ -1,40 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e8e321b4e6bee60b921cd8a7a213f139 ChangeLog 2335
-RMD160 21461e5b10295612ecddacf7cbc41d70045ffd23 ChangeLog 2335
-SHA256 53b99489735033feed3415c627c17413babec54acd29e629089e12f5e588fa7c ChangeLog 2335
+MD5 03f1efd88cfe376328071563661bb89e ChangeLog 2428
 MD5 86148ed6cd259ca05147ab24675e5df3 files/digest-libopendaap-0.2.3 70
-RMD160 396a5613f5fcb6337af42d36dd782cd524727f28 files/digest-libopendaap-0.2.3 70
-SHA256 a06c6416df093f661eed777674c2738b27921b5c99dba5310d12beebeffee26e files/digest-libopendaap-0.2.3 70
 MD5 fb7b43fda414c12b64540db818f4c497 files/digest-libopendaap-0.3.0 70
-RMD160 455d77b02e031edb0f5c9d7ec9684db0ec329606 files/digest-libopendaap-0.3.0 70
-SHA256 82ca94a34bff5410b862a9c8baa82d465950154e9039c2efaec41d17806f72a1 files/digest-libopendaap-0.3.0 70
 MD5 c16e2833e4aa6d3ab76e63fd9a36bd09 files/digest-libopendaap-0.4.0 70
-RMD160 80529a763122288839980782c8be66ea04bb040a files/digest-libopendaap-0.4.0 70
-SHA256 d1e924276ffa36f7ef3d88d55a109968083fad8bbd28a9d70df97e0d12342edc files/digest-libopendaap-0.4.0 70
 MD5 fb066ffc6e3189f97e3b7b934d1604ed files/libopendaap-0.2.3-types.h 704
-RMD160 b6e84695fb080eebdc5b75bf6e4f9534d10c8f0a files/libopendaap-0.2.3-types.h 704
-SHA256 4dae32b3ee37146aad6568c8d28c3b3d8fc663d0bb48fe62b0e9861ab7d6e966 files/libopendaap-0.2.3-types.h 704
 MD5 5d449c7e532679f6cb0aca9271b5c4c0 files/libopendaap-0.3.0-types.h 610
-RMD160 b81782131cf643f34e729aab275be23fba7b1aeb files/libopendaap-0.3.0-types.h 610
-SHA256 60293bfa981ec124bdd6655bcecf250e4e2316aa7440cab2eed1463e5b47ff8f files/libopendaap-0.3.0-types.h 610
 MD5 0267fcdc10785b38d793ee087e7210c6 libopendaap-0.2.3.ebuild 743
-RMD160 aa74dcd1dc8e2dbda147bdf9aa9fbb16a9d77b3c libopendaap-0.2.3.ebuild 743
-SHA256 d93d702ca6e1362db57d9ac300041390ee263e5cc3213ab543af3c5d104803c0 libopendaap-0.2.3.ebuild 743
 MD5 9e3954a4aa6939352f2fafb0c8429c8e libopendaap-0.3.0.ebuild 751
-RMD160 bee46c64aa3c71a6b55a80846f8c71411a41a291 libopendaap-0.3.0.ebuild 751
-SHA256 0126319a98b834220e438aa4b11a883c2845de7cd421ae2058e3d2078eb4ffbf libopendaap-0.3.0.ebuild 751
-MD5 5a8843e470963d233bef5450e5bf0ec2 libopendaap-0.4.0.ebuild 674
-RMD160 e2a74d04c8c0c4bb431bbbe70239ffc704538fbd libopendaap-0.4.0.ebuild 674
-SHA256 546eab22cb0314dbf0fa138321dd1e289e6a4b63f7c19b43aedbbb0087e0ced8 libopendaap-0.4.0.ebuild 674
+MD5 20c4077ece9de3105e53c91dede4aee2 libopendaap-0.4.0.ebuild 677
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-RMD160 828887200387b28c37fc97111fc6bc3a0a2fcccd metadata.xml 160
-SHA256 fe06593409e7f28665c032001005e94cb650299711a0af7f1a558bdb56c4004f metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDGBoAiZjviIA2XgRAkWhAJ9N32qn9sF9WB1a8nSPx0ddkmFMiACgpsvx
-N4XtAe51rJ5eySC30w8R78o=
-=W3PP
------END PGP SIGNATURE-----
