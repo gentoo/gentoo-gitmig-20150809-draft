@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.6 2006/04/09 22:14:24 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.7 2006/04/12 01:22:49 ramereth Exp $
+
+  12 Apr 2006; Lance Albertson <ramereth@gentoo.org>
+  dokuwiki-20060309.ebuild:
+  * Commented out one of the config sections (bug #129473). Need to find time to
+  fix it later on.
 
 *dokuwiki-20060309 (09 Apr 2006)
 

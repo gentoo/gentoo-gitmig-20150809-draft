@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20060309.ebuild,v 1.1 2006/04/09 22:14:24 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20060309.ebuild,v 1.2 2006/04/12 01:22:49 ramereth Exp $
 
 inherit webapp
 
@@ -57,6 +57,7 @@ src_install() {
 
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
 	webapp_configfile ${MY_HTDOCSDIR}/.htaccess
-	webapp_configfile ${MY_HTDOCSDIR}/conf/*
+	# Commented out until I have time to fix this (bug #129473)
+	#webapp_configfile ${MY_HTDOCSDIR}/conf/*
 	webapp_src_install
 }
