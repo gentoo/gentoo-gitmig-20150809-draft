@@ -1,17 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 12ba3cc8b079672ef33a628dc93f1529 ChangeLog 2784
-MD5 185b50ff504c7da6807fffb4e73fc017 metadata.xml 1267
-MD5 1caa527f86025f78b25c0a4667b74a64 slime-cvs-0-r4.ebuild 2223
 MD5 cbdca05ee34078c6bd9fb424fd4dda02 files/70slime-gentoo.el 563
-MD5 cd3eddef773c2bdc1eac336383f13ec6 files/swank-loader.lisp 68
-MD5 f728ed37ea34eb35320fb9544f3d5ed6 files/swank.asd 1934
+MD5 1ab5127efd37110d1dc0711ec5626a92 files/README.Gentoo 347
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-slime-cvs-0-r4 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/wKtyiNZaEAZA+ARAqfVAJ9ZgLm3uaI6xnSIOn7wW/ynPDQqogCdEL78
-yGsx9fYsAzSMGuTTAxkpqYA=
-=CJAb
------END PGP SIGNATURE-----
+MD5 cd3eddef773c2bdc1eac336383f13ec6 files/swank-loader.lisp 68
+MD5 3db8ecc0c00fcdc30651f1a5fb9cb8bf files/swank.asd 2158
+MD5 185b50ff504c7da6807fffb4e73fc017 metadata.xml 1267
+MD5 275e94f10f804b49b39d158fd9d507d4 slime-cvs-0-r4.ebuild 1904

@@ -3,10 +3,7 @@
 
 (add-to-list 'load-path "@SITELISP@")
 (require 'slime)
-(add-hook 'lisp-mode-hook
-	  (lambda () (slime-mode t)))
-(add-hook 'inferior-lisp-mode-hook
-	  (lambda () (inferior-slime-mode t)))
+(slime-setup)
 
 ;; this prevents us from requiring the user get dev-lisp/hyperspec
 ;; (which is non-free) as a hard dependency

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0-r4.ebuild,v 1.1 2005/04/06 07:24:17 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0-r4.ebuild,v 1.2 2006/04/12 16:47:17 mkennedy Exp $
 
 ECVS_SERVER="common-lisp.net:/project/slime/cvsroot"
 if [ -z "${ECVS_BRANCH}" ]; then
@@ -67,19 +67,5 @@ pkg_postrm() {
 pkg_postinst() {
 	register-common-lisp-source $CLPACKAGE || die
 	elisp-site-regen || die
-	while read line; do einfo "${line}"; done <<EOF
-
-SLIME notes for Gentoo
-----------------------
-
-If you're interested in hacking this ebuild, slime-cvs uses its own
-swank.asd system definition file and swank-loader.lisp.
-
-As always with CVS ebuilds, DO NOT report problems to upstream.
-Always report problems to the Gentoo Bugzilla at
-http://bugs.gentoo.org.
-
-Matthew Kennedy <mkennedy@gentoo.org>
-
-EOF
+	zcat /usr/share/doc/${PF}/README.Gentoo |while read line; do einfo "${line}"; done
 }

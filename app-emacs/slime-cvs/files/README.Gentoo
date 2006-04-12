@@ -1,0 +1,12 @@
+SLIME notes for Gentoo
+----------------------
+
+If you're interested in hacking this ebuild, Gentoo uses its own
+swank.asd system definition file and swank-loader.lisp.
+
+As always with CVS ebuilds, DO NOT report problems to upstream.
+Always report problems to the Gentoo Bugzilla at
+http://bugs.gentoo.org/.
+
+Matthew Kennedy <mkennedy@gentoo.org>
+
