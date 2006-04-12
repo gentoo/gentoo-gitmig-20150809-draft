@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1841 2006/04/12 07:57:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1842 2006/04/12 13:22:18 chtekk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -404,6 +404,8 @@ dev-php/php-cgi:mkconfig - Package up files required for php-config package (for
 dev-php/php:mkconfig - Package up files required for php-config package (for maintainer use only)
 dev-php4/eaccelerator:inode - Enable inode-based caching.
 dev-php4/pecl-imagick:graphicsmagick - Use graphicsmagick instead of imagemagick
+dev-php5/eaccelerator:contentcache - Enable content caching.
+dev-php5/eaccelerator:disassembler - Enable the eA disassembler.
 dev-php5/eaccelerator:inode - Enable inode-based caching.
 dev-php5/pecl-imagick:graphicsmagick - Use graphicsmagick instead of imagemagick
 dev-php5/pecl-pdo:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
