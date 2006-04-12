@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.1.3.ebuild,v 1.1 2006/03/07 23:34:36 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.1.3.ebuild,v 1.2 2006/04/12 21:38:21 carlo Exp $
 
 inherit distutils
 
@@ -15,7 +15,7 @@ LICENSE="kinterbasdb"
 SLOT="0"
 
 DEPEND="virtual/python
-	>=dev-db/firebird-1.0_rc1
+	=dev-db/firebird-1*
 	>=dev-python/egenix-mx-base-2.0.1"
 
 DOCS="docs/*.txt"
