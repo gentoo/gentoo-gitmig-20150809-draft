@@ -1,16 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c8eb0c450b5ffaebe77ea68fa4df41d0 ChangeLog 9601
-MD5 8c3b348cd7951d7c21c115f602e22f31 files/digest-mplayerplug-in-3.11 71
+MD5 1c889c63b2b46fac33ea912afb2670e6 ChangeLog 9725
+RMD160 e784e8dcdd84930263dcc4b997630305e18cd93d ChangeLog 9725
+SHA256 4a2c107ca2bb44331b6e6e0b87c9bc73af6667037596fe300dab2259ef7ac21a ChangeLog 9725
 MD5 7c690099f5b5643d3271bd349c1b38fa files/digest-mplayerplug-in-3.21 71
+RMD160 9c316fd5bb79cf880cd297b6163a92dcf033a678 files/digest-mplayerplug-in-3.21 71
+SHA256 154ead6b1bb67a4b5de74a9e22516f79c8096094a519cd6b7f2dbc5915823c96 files/digest-mplayerplug-in-3.21 71
 MD5 66c156160ef60780ee4c80a28873e766 metadata.xml 250
-MD5 47df4e37849f4d9beb81a01c3862439c mplayerplug-in-3.11.ebuild 1910
+RMD160 b217596057a0f66de68ba60b3aa6c9e7e505c82f metadata.xml 250
+SHA256 c2c5efc70c34197524037240b015bbdb5beb3b62883dc2eacb21926c69883324 metadata.xml 250
 MD5 de88b3ec904b0cb5118430137c2ed815 mplayerplug-in-3.21.ebuild 2111
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEPCcPKRy60XGEcJIRAnhJAJwJpMUD2oooTj4U77HzNeqHLpcxxACfYxF0
-OTuau86bxAoFY/Z8jYExJOI=
-=bJwB
------END PGP SIGNATURE-----
+RMD160 78e67c389d0215e7bac07ce051fe5ff9827230a5 mplayerplug-in-3.21.ebuild 2111
+SHA256 222fcd0a3260b1ebbfd8cc66406e7a1a4d26f1cca3bbab6204b885acd1641444 mplayerplug-in-3.21.ebuild 2111
