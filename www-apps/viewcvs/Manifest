@@ -1,19 +1,67 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b437a89bb09bcc5d830074821221de3a ChangeLog 8081
-MD5 fa8daabae86da3beefbc3ea1e5ccd42c metadata.xml 779
-MD5 5c453b1274f323a9abbfa87e169d77b8 viewcvs-0.9.3.ebuild 1477
-MD5 1efa77758ff6f9f8fa039c77a4e4d032 viewcvs-1.0_pre20050523.ebuild 1523
-MD5 3eecfba60ea8dc21c55c1e6d44a7cd22 viewcvs-0.9.4.ebuild 1478
-MD5 1c738f44ce7a084b6122c8baed0470a3 viewcvs-1.0_pre20050929.ebuild 3426
-MD5 de35d046cef5f9b95a5ddce9f2bf990d viewcvs-0.9.2_p20041207-r1.ebuild 2536
-MD5 1ebd12b88a2c6a6964c0d02b5c82911a files/digest-viewcvs-0.9.3 65
-MD5 63be22bf657c7d52e524b1a74c92cf2c files/digest-viewcvs-1.0_pre20050523 69
-MD5 26ecfea58fa51e62bc28985ff0f73048 files/digest-viewcvs-0.9.4 65
-MD5 6ad94993c3421b9b0413f3268e5f09b6 files/digest-viewcvs-1.0_pre20050929 69
-MD5 8dd7c985d9b13ffa051e8f293e88ddb1 files/postinstall-new-en.txt 933
-MD5 fee1dd762ebcd6fe9707794740684836 files/viewcvs-commitid-fix.patch 844
-MD5 9777bfdf8cffc9f8a930dca991d05c11 files/postinstall-en.txt 354
-MD5 12fb198ba0e0736a29ee719e25ab44fb files/reconfig 962
-MD5 9b65df9cd8e1bae9bca4fcf9623396e7 files/viewcvs-mysql-4.0.sql 2495
+RMD160 f8e70c5b679fb744c824ea794c1508b5f836ee77 ChangeLog 8081
+SHA256 fa35b11a1e11500237b452bec80b0d68bba14d27d5aaaea079a7ce5bf8ad85ac ChangeLog 8081
 MD5 48783b2b9bd95be9a4eb1525a0bf708a files/digest-viewcvs-0.9.2_p20041207-r1 69
-MD5 6260728f582a42a165dcf791a36b4825 files/viewcvs-mysql-4.1.sql 2422
+RMD160 2ac7224b076c10f8250f0e5998618a563fc03789 files/digest-viewcvs-0.9.2_p20041207-r1 69
+SHA256 39b0e9d472247aabbc8c71c007831a32333eae69c13c99fed4e435ce72382aba files/digest-viewcvs-0.9.2_p20041207-r1 69
+MD5 1ebd12b88a2c6a6964c0d02b5c82911a files/digest-viewcvs-0.9.3 65
+RMD160 097d4b518c986f54e1be254b43e44dfb6c8e205f files/digest-viewcvs-0.9.3 65
+SHA256 b978d63cf8bf7c6ef2304bd498ebf1d58fee7de8ab36d807f5c5c600fc9b57d8 files/digest-viewcvs-0.9.3 65
+MD5 26ecfea58fa51e62bc28985ff0f73048 files/digest-viewcvs-0.9.4 65
+RMD160 9813be93d9622b6bf94a1488f830b25c4175634a files/digest-viewcvs-0.9.4 65
+SHA256 6a85aa465f9418119212b75a927c48cf3575ba93e2f8c5c964d9b760487d0004 files/digest-viewcvs-0.9.4 65
+MD5 63be22bf657c7d52e524b1a74c92cf2c files/digest-viewcvs-1.0_pre20050523 69
+RMD160 5ecb8c999ab487657bfbdda5f31de1b7a333b826 files/digest-viewcvs-1.0_pre20050523 69
+SHA256 a6c8fa266132d4da3e3564e9fb9135643aae193769f1973cca3e2e180fcd2c3e files/digest-viewcvs-1.0_pre20050523 69
+MD5 6ad94993c3421b9b0413f3268e5f09b6 files/digest-viewcvs-1.0_pre20050929 69
+RMD160 30a58ef4c530ee774b7860490f83e428a1611869 files/digest-viewcvs-1.0_pre20050929 69
+SHA256 d19d3745e143f6bf56399ba4092a4ddd49a9e269f53ff9837c8038a03236d446 files/digest-viewcvs-1.0_pre20050929 69
+MD5 9777bfdf8cffc9f8a930dca991d05c11 files/postinstall-en.txt 354
+RMD160 a7fa6995186af4811961a4e2e199356ef6a65d4d files/postinstall-en.txt 354
+SHA256 79a1e0cb1c25040648543a7374dcefab367e8ebefbfed02ce629ff57a9a44eed files/postinstall-en.txt 354
+MD5 8dd7c985d9b13ffa051e8f293e88ddb1 files/postinstall-new-en.txt 933
+RMD160 cfafc5c605864fb14d442f322ddd2db3cb76529e files/postinstall-new-en.txt 933
+SHA256 1b93572b290ba836a757c9af9344ef20b1ba10f20f04b18d5bf71e61e42aac60 files/postinstall-new-en.txt 933
+MD5 12fb198ba0e0736a29ee719e25ab44fb files/reconfig 962
+RMD160 a03df7b743199c8df8d8875c71d232a1ea44de8e files/reconfig 962
+SHA256 5f4bc72a5b9feda770255d3c4c6012a87bdb9746c2e88f978995fe858511624f files/reconfig 962
 MD5 550579a3a648e62d01ec4c3c3ee47327 files/viewcvs-CAN-2004-1062.patch 341
+RMD160 d3a42b8c5fb11e02cbdea20d45f1f91f4ef1f678 files/viewcvs-CAN-2004-1062.patch 341
+SHA256 f2f4614f4769acaff688da14565715e16216285a2887d29957885b337aabb162 files/viewcvs-CAN-2004-1062.patch 341
+MD5 fee1dd762ebcd6fe9707794740684836 files/viewcvs-commitid-fix.patch 844
+RMD160 4b531c2da22d7196b7978d1f02897c5d632f3cfa files/viewcvs-commitid-fix.patch 844
+SHA256 e62b7d92a9b50092bb630d6da573a6ca61e353706afdd01312093699733557c5 files/viewcvs-commitid-fix.patch 844
+MD5 9b65df9cd8e1bae9bca4fcf9623396e7 files/viewcvs-mysql-4.0.sql 2495
+RMD160 731995af84dafe3c464b8b04b1346493d3733ca9 files/viewcvs-mysql-4.0.sql 2495
+SHA256 031a9194c3351c8353ef561d818e4336b6e8fcf22df223e240fd74bf8ab327f9 files/viewcvs-mysql-4.0.sql 2495
+MD5 6260728f582a42a165dcf791a36b4825 files/viewcvs-mysql-4.1.sql 2422
+RMD160 d67ed2e7b3b1e4549f5dde0f8f4595d076531aad files/viewcvs-mysql-4.1.sql 2422
+SHA256 1cff9ac4b38f2f99e942d42eb34a330c71a137b82cf3d14ffd58cda900399717 files/viewcvs-mysql-4.1.sql 2422
+MD5 fa8daabae86da3beefbc3ea1e5ccd42c metadata.xml 779
+RMD160 d6bf0d3fa984dc6c6e932c68d3c293a57c8fa23a metadata.xml 779
+SHA256 b1dddfb98757cc30ab35217e350301ea6b63a4f3fa49ecad899f1b39242b9337 metadata.xml 779
+MD5 934c2241377403c796813091ba172dea viewcvs-0.9.2_p20041207-r1.ebuild 2527
+RMD160 953e867ca9353a0ce4e319f8aa6273f055ba8242 viewcvs-0.9.2_p20041207-r1.ebuild 2527
+SHA256 58a3a9742fab62faf1242157c20b0d1cca0a72b0fc85bdc254fe86e36b1b74f4 viewcvs-0.9.2_p20041207-r1.ebuild 2527
+MD5 c70f1a31fa43d7987bb278bafa59276b viewcvs-0.9.3.ebuild 1466
+RMD160 c4b25e7da128d0196abdc5c2242ba5e061dac367 viewcvs-0.9.3.ebuild 1466
+SHA256 b797278ff02c14c304d97693860e7018d0f819da76026cf34af9caaedf37e4d6 viewcvs-0.9.3.ebuild 1466
+MD5 24e3e00544d5e6cd56815f7fac701157 viewcvs-0.9.4.ebuild 1469
+RMD160 7feddbeb488134f04419c60197a522181c4aadcf viewcvs-0.9.4.ebuild 1469
+SHA256 9aa17a5c1f4409fe01c041ec3dca8765a5d1bf042e11a3c13ea228d2f5bb57e9 viewcvs-0.9.4.ebuild 1469
+MD5 119b139145bcd3f4f756884d5402d4a1 viewcvs-1.0_pre20050523.ebuild 1514
+RMD160 bfbf31ff3ba195fc492e8faec636647d2801de61 viewcvs-1.0_pre20050523.ebuild 1514
+SHA256 61b5a00c7dbd6d5fa11d08016da4670921d69ba457351c8ae9f8a800c38f29b0 viewcvs-1.0_pre20050523.ebuild 1514
+MD5 ecad5ddee3bce307f9b46e768fe02cfb viewcvs-1.0_pre20050929.ebuild 3415
+RMD160 ba4b7c4a74efaf0230846d5874e148a54a3d6287 viewcvs-1.0_pre20050929.ebuild 3415
+SHA256 82e3d1f042bcf3c025c55b540baa65822aea3f599ec1accee5c3cdccb07a4455 viewcvs-1.0_pre20050929.ebuild 3415
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEPEUc2+ySkm8kpY0RAhtYAJ496zVuFwmC7uYcRmgZABJjdxWvUwCfUHlz
++HHwJnvERJI9CkSX+R/++b8=
+=IyRF
+-----END PGP SIGNATURE-----

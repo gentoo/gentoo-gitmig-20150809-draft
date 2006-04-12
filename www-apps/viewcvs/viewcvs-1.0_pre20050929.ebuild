@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-1.0_pre20050929.ebuild,v 1.3 2005/10/09 22:17:08 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-1.0_pre20050929.ebuild,v 1.4 2006/04/12 00:08:38 vapier Exp $
 
 inherit webapp depend.apache eutils
 
 PDATE=${PV/1.0_pre/}
-DESCRIPTION="Viewcvs, a web interface to cvs and subversion"
+DESCRIPTION="a web interface to cvs and subversion"
 HOMEPAGE="http://viewcvs.sourceforge.net/"
 SRC_URI="mirror://gentoo/${PN}-${PDATE}.tar.bz2"
 
