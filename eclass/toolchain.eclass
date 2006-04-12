@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.264 2006/04/11 23:40:19 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.265 2006/04/12 02:36:51 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -839,10 +839,12 @@ gcc-compiler_pkg_postinst() {
 		do_gcc_config
 	fi
 
-	echo
-	einfo "If you have issues with packages unable to locate libstdc++.la,"
-	einfo "then try running 'fix_libtool_files.sh' on the old gcc versions."
-	echo
+	if ! is_crosscompile ; then
+		echo
+		einfo "If you have issues with packages unable to locate libstdc++.la,"
+		einfo "then try running 'fix_libtool_files.sh' on the old gcc versions."
+		echo
+	fi
 
 	# If our gcc-config version doesn't like '-' in it's version string,
 	# tell our users that gcc-config will yell at them, but it's all good.
