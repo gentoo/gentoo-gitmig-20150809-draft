@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.3.ebuild,v 1.3 2006/03/29 19:00:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.3.ebuild,v 1.4 2006/04/12 19:13:36 chutzpah Exp $
 
 inherit eutils
 
@@ -11,12 +11,17 @@ SRC_URI="mirror://sourceforge/pstoedit/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=""
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}/${MY_P}-amd64.patch"
+}
 
 src_compile() {
 	econf --enable-editing || die

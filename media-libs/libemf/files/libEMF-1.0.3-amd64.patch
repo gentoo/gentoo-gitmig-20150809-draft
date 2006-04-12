@@ -1,0 +1,87 @@
+diff -ur libEMF-1.0.3-orig/include/libEMF/wine/winnt.h libEMF-1.0.3/include/libEMF/wine/winnt.h
+--- libEMF-1.0.3-orig/include/libEMF/wine/winnt.h	2006-04-12 14:49:11.000000000 -0400
++++ libEMF-1.0.3/include/libEMF/wine/winnt.h	2006-04-12 15:07:05.000000000 -0400
+@@ -41,6 +41,10 @@
+ # define WORDS_BIGENDIAN
+ # define BITFIELDS_BIGENDIAN
+ # undef  ALLOW_UNALIGNED_ACCESS
++#elif defined(__x86_64__)
++# undef  WORDS_BIGENDIAN
++# undef  BITFIELDS_BIGENDIAN
++# define ALLOW_UNALIGNED_ACCESS
+ #elif !defined(RC_INVOKED)
+ # error Unknown CPU architecture!
+ #endif
+@@ -222,8 +226,13 @@
+ typedef unsigned short  WORD,       *PWORD,    *LPWORD;
+ typedef int             INT,        *PINT,     *LPINT;
+ typedef unsigned int    UINT,       *PUINT,    *LPUINT;
++#if !defined(__x86_64__)
+ typedef unsigned long   DWORD,      *PDWORD,   *LPDWORD;
+ typedef unsigned long   ULONG,      *PULONG,   *LPULONG;
++#else /* defined(__x86_64__) */
++typedef unsigned int   DWORD,      *PDWORD,   *LPDWORD;
++typedef unsigned int   ULONG,      *PULONG,   *LPULONG;
++#endif /* !defined(__x86_64__) */
+ typedef float           FLOAT,      *PFLOAT,   *LPFLOAT;
+ typedef double          DOUBLE,     *PDOUBLE,  *LPDOUBLE;
+ typedef double          DATE;
+@@ -263,7 +272,11 @@
+ typedef BYTE            BOOLEAN,    *PBOOLEAN;
+ typedef char            CHAR,       *PCHAR;
+ typedef short           SHORT,      *PSHORT;
++#if !defined(__x86_64__)
+ typedef long            LONG,       *PLONG,    *LPLONG;
++#else /* defined(__x86_64__) */
++typedef int             LONG,       *PLONG,    *LPLONG;
++#endif /* !defined(__x86_64__) */
+ 
+ /* Some systems might have wchar_t, but we really need 16 bit characters */
+ #ifndef WINE_WCHAR_DEFINED
+@@ -1047,6 +1060,11 @@
+ 
+ #endif  /* __sparc__ */
+ 
++#if defined(__x86_64__)
++#define CONTEXT_FULL 1
++typedef struct _CONTEXT CONTEXT;
++#endif
++
+ #if !defined(CONTEXT_FULL) && !defined(RC_INVOKED)
+ #error You need to define a CONTEXT for your CPU
+ #endif
+diff -ur libEMF-1.0.3-orig/libemf/libemf.h libEMF-1.0.3/libemf/libemf.h
+--- libEMF-1.0.3-orig/libemf/libemf.h	2006-04-12 14:49:11.000000000 -0400
++++ libEMF-1.0.3/libemf/libemf.h	2006-04-12 15:03:19.000000000 -0400
+@@ -340,6 +340,7 @@
+ 	fread( &dword, sizeof(DWORD), 1, fp_ );
+       return *this;
+     }
++#if !defined(__x86_64__)
+     /*!
+      * Output a long int to the stream (swabbed).
+      * \param long long int to output.
+@@ -374,6 +375,7 @@
+ 	fread( &long_, sizeof(LONG), 1, fp_ );
+       return *this;
+     }
++#endif
+     /*!
+      * Output a (long) int to the stream (swabbed).
+      * \param int_ (long) int to output.
+@@ -408,6 +410,7 @@
+ 	fread( &int_, sizeof(INT), 1, fp_ );
+       return *this;
+     }
++#if !defined(__x86_64__)
+     /*!
+      * Output a (long) unsigned int to the stream (swabbed).
+      * \param uint (long) unsigned int to output.
+@@ -442,6 +445,7 @@
+ 	fread( &uint, sizeof(UINT), 1, fp_ );
+       return *this;
+     }
++#endif
+     /*!
+      * Output a single precision float to the stream (swabbed).
+      * \param float_ single precision float to output.
