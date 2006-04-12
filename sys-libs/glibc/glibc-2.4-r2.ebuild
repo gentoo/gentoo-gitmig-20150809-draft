@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.5 2006/04/11 04:21:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.6 2006/04/12 04:13:52 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -401,6 +401,17 @@ toolchain-glibc_src_install() {
 	# Handle includes for different ABIs
 	prep_ml_includes $(alt_headers)
 
+	# When cross-compiling for a non-multilib setup, make sure we have
+	# lib and a proper symlink setup
+	if ! use multilib && ! has_multilib_profile && [[ $(get_libdir) != "lib" ]] ; then
+		cd "${D}"$(alt_libdir)/..
+		mv $(get_libdir) lib || die
+		ln -s lib $(get_libdir) || die
+		cd "${D}"$(alt_usrlibdir)/..
+		mv $(get_libdir) lib || die
+		ln -s lib $(get_libdir) || die
+	fi
+
 	#################################################################
 	# EVERYTHING AFTER THIS POINT IS FOR NATIVE GLIBC INSTALLS ONLY #
 	# Make sure we install some symlink hacks so that when we build
@@ -408,17 +419,6 @@ toolchain-glibc_src_install() {
 	# headers correctly.  See gcc/doc/gccinstall.info
 	if is_crosscompile ; then
 		dosym usr/include /usr/${CTARGET}/sys-include
-
-		# When cross-compiling for a non-multilib setup, make sure we have
-		# lib and a proper symlink setup
-		if ! use multilib && [[ $(get_libdir) != "lib" ]] ; then
-			cd "${D}"$(alt_libdir)/..
-			mv $(get_libdir) lib || die
-			ln -s lib $(get_libdir) || die
-			cd "${D}"$(alt_usrlibdir)/..
-			mv $(get_libdir) lib || die
-			ln -s lib $(get_libdir) || die
-		fi
 		return 0
 	fi
 
