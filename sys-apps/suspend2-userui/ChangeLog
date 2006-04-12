@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/suspend2-userui
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/ChangeLog,v 1.9 2006/03/28 20:20:45 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/ChangeLog,v 1.10 2006/04/12 21:14:55 morfic Exp $
+
+  12 Apr 2006; Daniel Goller <morfic@gentoo.org>
+  suspend2-userui-0.6.3-r1.ebuild:
+  Adding ~amd64 so x86_64 users get to enjoy the goodness too
 
 *suspend2-userui-0.6.3-r1 (28 Mar 2006)
 
