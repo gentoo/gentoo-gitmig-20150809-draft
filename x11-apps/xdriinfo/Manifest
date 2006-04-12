@@ -1,12 +1,22 @@
-MD5 179cc82fd1403b7c4f04673df26f80c0 ChangeLog 2108
-RMD160 88e0d5c7f4a8ebeffd3f4dbb8b8bcef9602c5f7c ChangeLog 2108
-SHA256 e1d6562a3f64d9738865c62dffa2bafc918321e149f97e2c9f8daee5861d7a1c ChangeLog 2108
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ba1f0954f1eb9867fbef361c7695e758 ChangeLog 2192
+RMD160 d4b52614c8ec18adf0c74659688247bdaf473cd5 ChangeLog 2192
+SHA256 4cc8e227d584dca7cb99b6aac52f9aa5d0996a36a16da1cd9488ea2fd399a4d2 ChangeLog 2192
 MD5 30f0a2fb92e25e4acda03433fd938a19 files/digest-xdriinfo-1.0.1 244
 RMD160 071b8418b69a4c461c77acd4e8102b455f17327d files/digest-xdriinfo-1.0.1 244
 SHA256 4dda5afea8f8275723df6142aabb2432485c52bee1edc7bfac53fec499ed8c06 files/digest-xdriinfo-1.0.1 244
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 299833a67c86dfeb9bd71d8fa8709fac xdriinfo-1.0.1.ebuild 460
-RMD160 6944ed68e624a70e48823d63e5046a96664d032e xdriinfo-1.0.1.ebuild 460
-SHA256 5a17c8ddc4b1ad84f321b93a006865e645c37c4bd3e9fb2070107ff647ed202a xdriinfo-1.0.1.ebuild 460
+MD5 7d75bf20854fe099b9170d5a9aee3264 xdriinfo-1.0.1.ebuild 462
+RMD160 0e25ca1c97243421ed76e5e424fd25475be0ccc7 xdriinfo-1.0.1.ebuild 462
+SHA256 2cd5f10fd3df18efdd0ac4bf3cc9417399bac68d9e0389c3fd1af9ffa92dcc24 xdriinfo-1.0.1.ebuild 462
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEPRQvomPajV0RnrERAgGUAJ0aL7tS4PAX9vTQjog0+I2WtndX1wCfXjP/
+BoW3GNw9/3xqMm+vQN1hnsg=
+=FvSR
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdriinfo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.14 2006/04/08 21:01:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.15 2006/04/12 14:52:52 dang Exp $
+
+  12 Apr 2006; Daniel Gryniewicz <dang@gentoo.org> xdriinfo-1.0.1.ebuild:
+  Mark ~amd64
 
   08 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
   -files/nvidia-glx-fix.patch, -xdriinfo-1.0.0-r1.ebuild:
