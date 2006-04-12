@@ -1,15 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 59ec56f34bdb9f6fcd826ea46f08019f ChangeLog 1606
-RMD160 53579b9fc9140e37c44a3eb1b6b26a232db22fe7 ChangeLog 1606
-SHA256 bdfdfa4f697431e9c0ca5f9390d2b0074eb590f593eefe5c58bab117e0a9254d ChangeLog 1606
+MD5 7673cba670f83f4b767113847ef657ae ChangeLog 1799
+RMD160 d9483e1dabaa2fff88469366d5574576b460c554 ChangeLog 1799
+SHA256 b06347caba29317ed3f55d28fdf823b761d30538952752ed543611aa6a45a18c ChangeLog 1799
 MD5 115805b7a6c017324593b25605e987c5 files/digest-qmailadmin-1.2.1 68
 RMD160 e12b6ec30c9435af5dc205eb93f85aed9bdd0690 files/digest-qmailadmin-1.2.1 68
 SHA256 7b175263b796c2a6f56f571c6663c994641e6a771db550303f2fbdd01f3cfd8a files/digest-qmailadmin-1.2.1 68
 MD5 115805b7a6c017324593b25605e987c5 files/digest-qmailadmin-1.2.1-r1 68
 RMD160 e12b6ec30c9435af5dc205eb93f85aed9bdd0690 files/digest-qmailadmin-1.2.1-r1 68
 SHA256 7b175263b796c2a6f56f571c6663c994641e6a771db550303f2fbdd01f3cfd8a files/digest-qmailadmin-1.2.1-r1 68
+MD5 c7faccb05e12bc74ab6a2e917712e484 files/digest-qmailadmin-1.2.9 250
+RMD160 234ef58ac741815f42053046f5b7877cb36b2a1a files/digest-qmailadmin-1.2.9 250
+SHA256 27422005ccd200b0309b71fcf544d0bdaed5ddb07c73de69b1cae3b5f2aa3c76 files/digest-qmailadmin-1.2.9 250
+MD5 6f26b5241bba6022ae31ac83bb9e40ef files/qmailadmin-1.2.9-maildir.patch 253
+RMD160 d3f2ec39cd95a83ee274dd07651245bf077175d6 files/qmailadmin-1.2.9-maildir.patch 253
+SHA256 038e72a7770883e6418a10dfacd80d414ff504d554d798e2f42b5a2dadf98caf files/qmailadmin-1.2.9-maildir.patch 253
 MD5 d027ffd7aeae11a98cc1c8711c678c07 metadata.xml 221
 RMD160 40a06bc55daa54462d2424a7f55dba2b7451382c metadata.xml 221
 SHA256 1897b5da49912ff52e9e4972d74bc6e1ed185ea67cce31a7a64c3b98dac636cf metadata.xml 221
@@ -19,10 +25,13 @@ SHA256 0db385148d6575a6116b4e0830d8741c55d73e5931639f5c2eac1500d839a277 qmailadm
 MD5 a6867fb9f3a892619bc79a759be23301 qmailadmin-1.2.1.ebuild 2344
 RMD160 60c7bdd056d79f9c58ad794216d9d7682fdd70f9 qmailadmin-1.2.1.ebuild 2344
 SHA256 7b55e2ce19f490bf612322c24ea7551aa4a346615d4d1012c3951496df14b79b qmailadmin-1.2.1.ebuild 2344
+MD5 4262da70ae72ca38693cb63dbaaf0ff5 qmailadmin-1.2.9.ebuild 2245
+RMD160 620690c81511d9b713e1fff60e8a866eaf835a7c qmailadmin-1.2.9.ebuild 2245
+SHA256 b045e3aa4f54761beea6ca853b78c9a462448de557eb2dcbf7c72ae75180c079 qmailadmin-1.2.9.ebuild 2245
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEPEgA2+ySkm8kpY0RArHbAKCO6oDO2EzZXQ8UifJ+6ohpl/G3kgCfWT+v
-rpNyHR8+0Vi8WeAyfE3oOjs=
-=m9Ak
+iD8DBQFEPEhl2+ySkm8kpY0RArzeAJwNsF1qePl1UOZ8RrV4oAYjue49xACggW/r
+WnsrbqWiosSy7ULHxtisqq4=
+=sHd5
 -----END PGP SIGNATURE-----
