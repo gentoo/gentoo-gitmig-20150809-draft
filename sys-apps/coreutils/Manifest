@@ -2,20 +2,42 @@
 Hash: SHA1
 
 MD5 ae7785d73316c1b44c91605e8aa031f0 ChangeLog 25618
+RMD160 83d526e7cb3e4de7debad814bdfaa58853b625d1 ChangeLog 25618
+SHA256 5542cb68395fcc18f539028ec9adb3a9005ca95cab19f1a44fc3fab665f9e5a9 ChangeLog 25618
 MD5 62a8961741a00d0c2f21edcc66ce68c5 coreutils-5.2.1-r7.ebuild 4601
+RMD160 6122837d159f7eda321ba547d7e6f4e461c456ac coreutils-5.2.1-r7.ebuild 4601
+SHA256 b701db720b631ac35228588a0c4715ac56063e738ca7f8538313e50b051a6787 coreutils-5.2.1-r7.ebuild 4601
 MD5 1bc0abc0240008e18c239b0b21d86ef5 coreutils-5.3.0-r2.ebuild 4297
-MD5 852d5face2372ecfa27f129cb67fad47 coreutils-5.94-r1.ebuild 4518
+RMD160 b4609ee6eabc3b31168946d7b498c63b551768e8 coreutils-5.3.0-r2.ebuild 4297
+SHA256 e88b94b02b3ee72a6b907f33009e26fa146ad2c49d593e63a88d044747bea164 coreutils-5.3.0-r2.ebuild 4297
+MD5 7c1fb9c2e33a4a48145fc41a1a21a602 coreutils-5.94-r1.ebuild 4510
+RMD160 b97887e8b9f97adaca9fa2e8a2461a95e8639998 coreutils-5.94-r1.ebuild 4510
+SHA256 f8cbbfbebcc9d9f688d15cc4aa87ff5890a4bca6fea8303b631e3909e4738743 coreutils-5.94-r1.ebuild 4510
 MD5 4082767ad725714315f61225fb9d688c coreutils-5.94-r2.ebuild 4548
+RMD160 48c42fa8f8cc483d5cc42251d5e5ef1cfd8ef1ef coreutils-5.94-r2.ebuild 4548
+SHA256 255d61e6a9d325b65c18e7ea9ba6fc5573ec784831c6469e2e0fda1ff2b10e6d coreutils-5.94-r2.ebuild 4548
 MD5 8c4e2e82c0b5e6fc4088d1bc496681b4 files/DIR_COLORS 3593
+RMD160 677f738160a23ee81b8a3c93d28939c26768a0d2 files/DIR_COLORS 3593
+SHA256 4fd0221c327865ee050fce4e65e74868f5797fb187f2a789d135e6bc241dd748 files/DIR_COLORS 3593
 MD5 caa7a4a1b50dda12a878ff8b2d146da0 files/digest-coreutils-5.2.1-r7 148
+RMD160 780fcd15f60aec3c3c86087b7d2562a3f657711f files/digest-coreutils-5.2.1-r7 148
+SHA256 62fa8f95e9e286c9124e79a47ae3a1151084f366e57bcb77b747e9fafe02c73a files/digest-coreutils-5.2.1-r7 148
 MD5 6971790215509377129f29b52928ecae files/digest-coreutils-5.3.0-r2 148
+RMD160 487376953d931a2f11235ef631d57b6ec7bbb150 files/digest-coreutils-5.3.0-r2 148
+SHA256 2b7ad3f7cfe2029e4ab6b8b9a4b504524a4713b5cf4f887aad0f590f31938b8b files/digest-coreutils-5.3.0-r2 148
 MD5 7c0fbf160186d90e1ea82400f3146f1c files/digest-coreutils-5.94-r1 530
+RMD160 6eae72ca075bd831e19ec078569e7a630fe787e0 files/digest-coreutils-5.94-r1 530
+SHA256 128084403ad40e38c01af98502f08c00c1509e9584a5a0e5d2301b27c781cb52 files/digest-coreutils-5.94-r1 530
 MD5 32efafe6f58e2787966ff63e90a5b4fa files/digest-coreutils-5.94-r2 530
+RMD160 dcad788c6ab1a2136cde5d0809a269e458be1640 files/digest-coreutils-5.94-r2 530
+SHA256 1153b0816e664ec76f1b8d4d8a2127ac3ae56f2c97e6e72575d2ca87238637d5 files/digest-coreutils-5.94-r2 530
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEPBFWKRy60XGEcJIRArB2AJ4mCW3+e2WthUkvh40qpSvnAkz83QCfVW9U
-RlD1n9+/6u0SQLED/nn/rzk=
-=y/0d
+iD8DBQFEPEed2+ySkm8kpY0RAh/hAKCOZzngd05ieAOC3+NG/1/NZ9g+8QCcDHb2
+2emgYLXlJJTCdogI/TDFbjk=
+=jtL1
 -----END PGP SIGNATURE-----
