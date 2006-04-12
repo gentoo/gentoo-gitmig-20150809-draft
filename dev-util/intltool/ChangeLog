@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.77 2006/02/08 22:44:44 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.78 2006/04/12 14:48:37 flameeyes Exp $
+
+  12 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> intltool-0.34.2.ebuild:
+  Add ~x86-fbsd keyword.
 
 *intltool-0.34.2 (08 Feb 2006)
 
