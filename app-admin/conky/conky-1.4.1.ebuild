@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.1.ebuild,v 1.1 2006/04/11 20:34:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.1.ebuild,v 1.2 2006/04/12 10:46:59 dragonheart Exp $
 
 inherit eutils
 
@@ -49,6 +49,12 @@ DEPEND="
 	)
 	sys-apps/grep
 	sys-apps/sed"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/conky-sigaction.patch
+}
 
 
 src_compile() {

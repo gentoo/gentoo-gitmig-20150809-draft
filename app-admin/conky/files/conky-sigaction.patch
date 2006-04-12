@@ -1,0 +1,14 @@
+Index: src/libmpdclient.c
+===================================================================
+--- src/libmpdclient.c	(revision 618)
++++ src/libmpdclient.c	(working copy)
+@@ -216,9 +216,6 @@
+ 	sapipe.sa_handler = mpd_signalHandler;
+ //	sapipe.sa_mask = 0;
+ 	sapipe.sa_flags = 0;
+-#ifdef __linux__
+-	sapipe.sa_restorer = NULL;
+-#endif /* __linux__ */
+ 	sigaction(SIGPIPE,&sapipe,NULL);
+ 
+ 	/* connect stuff */
