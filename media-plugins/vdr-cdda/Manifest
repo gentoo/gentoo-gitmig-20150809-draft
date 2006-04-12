@@ -1,16 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 180678153ada60b6788b4e95da226162 ChangeLog 855
-MD5 7a723a079564c3e97231c2f5b0be1e38 files/digest-vdr-cdda-0.1.0 65
-MD5 e3c20761b800512efc35c78a61d0f91e files/vdr-cdda-0.1.0.patch 1222
+MD5 b41addc45f8ad88b260795d7c035303c ChangeLog 1126
+RMD160 b4209799466f8c14f3e243fcd8bd942c24c88a8a ChangeLog 1126
+SHA256 ce59a6268c95304b5b50f1e22486bcbdc9a94f4d3d6237cb188a21c985b3bac8 ChangeLog 1126
+MD5 246d44977fc2ee67fe617b355b8b9e5d files/digest-vdr-cdda-0.1.0-r1 241
+RMD160 9ea3f938b7ff3b71683ab530b8ea657afcaa4dbe files/digest-vdr-cdda-0.1.0-r1 241
+SHA256 656bc097a3983043d9a359be607a756ef69609c7e3fb5c1270e3046d1882d8e7 files/digest-vdr-cdda-0.1.0-r1 241
+MD5 90ad12d3de0556fe6e38a25d6f3207ff files/vdr-cdda-0.1.0-cdspeed.diff 607
+RMD160 367e1b7fda29821d67f3ab6ca410419bf590ac8b files/vdr-cdda-0.1.0-cdspeed.diff 607
+SHA256 996bc3032c57a26ddf52f9933cfffc5aed1ef7a0dfdb79c5590e17fad7f57f77 files/vdr-cdda-0.1.0-cdspeed.diff 607
+MD5 c87c921b79d2d98e5aae3d8ba7ac2be9 files/vdr-cdda-0.1.0.patch 1472
+RMD160 2afca5cfe8bbbfd90b7af389be82d12895c014b5 files/vdr-cdda-0.1.0.patch 1472
+SHA256 1871b9035839e7c9cb0e57f61cce5afb6e77639be749e17dac63602e101004b8 files/vdr-cdda-0.1.0.patch 1472
 MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
-MD5 fe1ce36c7108584ab8755368bb7d16bb vdr-cdda-0.1.0.ebuild 562
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
+MD5 c3071f0aa6c0edeee8c13fa8ffb02ee0 vdr-cdda-0.1.0-r1.ebuild 590
+RMD160 a6b3b45d37bfab6db7d2060b0439afdf7f6c00fb vdr-cdda-0.1.0-r1.ebuild 590
+SHA256 e092e77837ecdea3ca22d2ad42f56be94e407810fbe77b378257902d452e020d vdr-cdda-0.1.0-r1.ebuild 590
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
-Comment: no further Information
 
-iD8DBQFEIAwbdn07HTTCgIoRAnk5AJ9yRVs5vXLZ/pLU8cQlYPUvM86cLACgn2Z9
-f25zhrWNQpXuoFkYTnf9uUI=
-=duih
+iD8DBQFEPV+RZfSl1Kp5KmoRAiBdAJ9X3clWvmpNO2RNoyff+HpadAyHkgCgseHU
+X3RT8vIChIf/DmgeyR+r6c8=
+=52WO
 -----END PGP SIGNATURE-----
