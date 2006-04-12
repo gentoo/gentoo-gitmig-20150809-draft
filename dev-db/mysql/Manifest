@@ -13,15 +13,15 @@ SHA256 73e7594c9077f91f96b89e2528e2aed4f31c8d28bf4bb0acdffbfc7c5df81f7c files/di
 MD5 1c7b9fbd650a5aa48bdff4ac53285ff2 files/digest-mysql-4.0.26 331
 RMD160 46f2f9d5a4cac98484c52be45a6f29bbc9440c6a files/digest-mysql-4.0.26 331
 SHA256 ed1d917cb6618a539759cb9ad74afe07cf10d3b8e2a76975ce2a473a8becf67d files/digest-mysql-4.0.26 331
-MD5 c2fc375267167b6221d4976a8abd102c files/digest-mysql-4.1.14-r1 328
-RMD160 26e7aba11ee9427e1b8678ebbf09204c225b2752 files/digest-mysql-4.1.14-r1 328
-SHA256 630100a5377dc628729891cfaff59aa91b9bd9f857343b3eb00cebd343136aef files/digest-mysql-4.1.14-r1 328
-MD5 8bc5dfb3309efc25fe2f13d1311120e4 files/digest-mysql-4.1.18-r61 506
-RMD160 2c4ee85734bd3aaebed23015c96259611ab10d6f files/digest-mysql-4.1.18-r61 506
-SHA256 82f834ad174ae5f145850aa2b3e29a3fbb2bb0fbdf286b1a823ab9ae8385b705 files/digest-mysql-4.1.18-r61 506
-MD5 32bc3210c24c601b06c897fbbd204d6a files/digest-mysql-5.0.19-r1 506
-RMD160 72e4dc7a0be4bc3e48c2705498ea11e2e2e491e7 files/digest-mysql-5.0.19-r1 506
-SHA256 c5082ff62026d5da2cc68da6bb575d1335cda5fe5003092ba3e4a7f50f48e4c8 files/digest-mysql-5.0.19-r1 506
+MD5 952476d6f938513831408e00c4e11a25 files/digest-mysql-4.1.14-r1 331
+RMD160 3cb6e15c4ec0735a07acad9a717d05193dc28108 files/digest-mysql-4.1.14-r1 331
+SHA256 3da2d689a001c4fd4fc4a3fb137cb9baa042a6a793a119c5d810064e62f6045a files/digest-mysql-4.1.14-r1 331
+MD5 c5d06b52808e93245bf66777e3774059 files/digest-mysql-4.1.18-r61 509
+RMD160 bbfedc0da467cf81cc71bc62fc69649394f15949 files/digest-mysql-4.1.18-r61 509
+SHA256 9129853d9bfee626dafa39981b6f8798ddd3874e57fb37c8f87534eea3edfc5e files/digest-mysql-4.1.18-r61 509
+MD5 c254d0ff45e50dd27871b015cab39b2d files/digest-mysql-5.0.19-r1 509
+RMD160 a0ced5cf6cc8dc623c8d882f52330fdcc4eb02bd files/digest-mysql-5.0.19-r1 509
+SHA256 4d06587767c5a1cf1d6119514f3d10336d069790884b2ab3a044919cda23f539 files/digest-mysql-5.0.19-r1 509
 MD5 1960fc44fdd8eaaa78c5785f6a3df741 files/digest-mysql-5.1.7_beta 332
 RMD160 436ba2df164ff2d5d1218057eebe7b6f03ed3968 files/digest-mysql-5.1.7_beta 332
 SHA256 5dc04639527e9f7c078f25f8190188d7c8f36df0d01c7e1e9e8ffce9f182dd14 files/digest-mysql-5.1.7_beta 332
@@ -97,7 +97,7 @@ SHA256 94ad2ab575a7fcd33cab94941a2e8dd65da612bea67a852358b7c8f301343566 mysql-5.
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEPH8EOpjtAl+gMRURAs77AKCACOFNVdsQR5Eo7lbUGO61usCjFgCfb3DG
-4C4uzhWp0XEHTGJKDszJ2i4=
-=3CJj
+iD8DBQFEPKK4OpjtAl+gMRURAkCnAJ4rDONT4tleXyHFRKXR+0UTc9iOoACeI29y
+ap9J3obEVvcL+FTvfWLhPjQ=
+=SoA1
 -----END PGP SIGNATURE-----
