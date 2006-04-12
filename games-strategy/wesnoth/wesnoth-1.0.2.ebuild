@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.0.2.ebuild,v 1.6 2006/01/20 21:13:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.0.2.ebuild,v 1.7 2006/04/12 19:07:55 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
 MY_PV=${PV/_/}
-DESCRIPTION="A fantasy turn-based strategy game"
+DESCRIPTION="Battle for Wesnoth - A fantasy turn-based strategy game"
 HOMEPAGE="http://www.wesnoth.org/"
 SRC_URI="mirror://sourceforge/wesnoth/${PN}-${MY_PV}.tar.gz"
 
