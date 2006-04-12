@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4_beta3-r2.ebuild,v 1.1 2006/04/11 12:56:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4_beta3-r2.ebuild,v 1.2 2006/04/12 15:57:26 flameeyes Exp $
 
 LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja km
 ko lt nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz xx
@@ -31,11 +31,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="aac exscalibar flac gstreamer kde mysql noamazon opengl postgres
-xmms visualization musicbrainz ipod akode ifp real"
+xmms visualization musicbrainz ipod ifp real"
 # kde: enables compilation of the konqueror sidebar plugin
 
-DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase )
-		|| ( kde-base/kdemultimedia-kioslaves kde-base/kdemultimedia ) )
+DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	>=media-libs/xine-lib-1_rc4
 	gstreamer? ( =media-libs/gstreamer-0.10*
 		=media-libs/gst-plugins-base-0.10* )
@@ -48,7 +47,6 @@ DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase )
 	visualization? ( media-libs/libsdl
 	                 >=media-plugins/libvisual-plugins-0.2 )
 	ipod? ( media-libs/libgpod )
-	akode? ( media-libs/akode )
 	aac? ( media-libs/libmp4v2 )
 	exscalibar? ( media-libs/exscalibar )
 	ifp? ( media-libs/libifp )
@@ -74,7 +72,6 @@ src_compile() {
 	              $(use_with musicbrainz)
 	              $(use_with exscalibar)
 				  $(use_with ipod libgpod)
-				  $(use_with akode)
 				  $(use_with aac mp4v2)
 				  $(use_with ifp)
 				  $(use_with real helix)
