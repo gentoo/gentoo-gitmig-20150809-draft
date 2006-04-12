@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.19-r1.ebuild,v 1.2 2006/04/11 12:40:53 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.19-r1.ebuild,v 1.3 2006/04/12 04:12:06 eradicator Exp $
 
 MYSQL_VERSION_ID=""
 MY_EXTRAS_VER=""
@@ -30,3 +30,4 @@ src_test() {
 		einfo "Skipping server tests due to minimal build."
 	fi
 }
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.25-r2.ebuild,v 1.26 2006/02/18 11:35:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.25-r2.ebuild,v 1.27 2006/04/12 04:12:06 eradicator Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -471,4 +471,5 @@ pkg_config() {
 
 	einfo "done"
 }
+
 
