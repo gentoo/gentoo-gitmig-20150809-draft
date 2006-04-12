@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6876e200a225d616c76eb4396267c6c1 ChangeLog 20673
-RMD160 876a1b5205a8cfd1baaf16e1a150f1779ef83c9d ChangeLog 20673
-SHA256 1c14bb97403da461a80fc619e9f0f0c9b8c5ef0d665400c71bfcd7ac1339a4b1 ChangeLog 20673
+MD5 ff79e0d4cd8417375bf3afd2c7a51175 ChangeLog 20914
+RMD160 f542cfe0d8a0f8651189c10d34c948702421dbeb ChangeLog 20914
+SHA256 c7637ff8fb27321b7f8586946ac806d84ea5b911fc477fdbad8ffd46c2276d60 ChangeLog 20914
 MD5 6d3ecb7a2b6736047a08447cda7f8ed6 files/1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch 2021
 RMD160 5cffbd24fc7d3d817b050de268ce23e64ed83b5d files/1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch 2021
 SHA256 6c32348b9c8460250b2600ae8672c5cadce4b5cca5577b9937a703afbfc57620 files/1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch 2021
@@ -13,6 +10,9 @@ SHA256 65193968dffac2127626ef9e05aa8da9ec32d39703e4c3530e89bab059dfed74 files/1.
 MD5 a36a121279d71c130aefdf8f84e432cf files/digest-xorg-server-1.0.2-r3 771
 RMD160 1e76b7ca2a6430d0901f036dc90692bb1bf14546 files/digest-xorg-server-1.0.2-r3 771
 SHA256 8d9ab78da2938d08246fae35c4f61a04a7b9932cd722a549707731c9d9a87ab8 files/digest-xorg-server-1.0.2-r3 771
+MD5 2c19dfdb77621385755288fe88c4e0d8 files/digest-xorg-server-1.0.99.2 509
+RMD160 20bdd7703966bd67540349089d6853b62e2405e5 files/digest-xorg-server-1.0.99.2 509
+SHA256 29dee5a695cc7d935fe1f2cccaf449f3255f8ba6e9d17a490ee234da128f2351 files/digest-xorg-server-1.0.99.2 509
 MD5 900d8194df467de2c86276d446522062 files/xorg-server-1.0.2-64bit-fix-for-glx.patch 414
 RMD160 17732b6ebe06e1533ce8f9b97e6ca8d7e4347a88 files/xorg-server-1.0.2-64bit-fix-for-glx.patch 414
 SHA256 1b2337fa0438c72fc8a17d710133f79ed17d49650efd9bc530bbb97b116427c4 files/xorg-server-1.0.2-64bit-fix-for-glx.patch 414
@@ -37,10 +37,6 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 f831e7e1ab71a0c6c60874777dd0fd32 xorg-server-1.0.2-r3.ebuild 5559
 RMD160 b1d34b43c1a06f4dbc2fbfe796278a506ed40dfb xorg-server-1.0.2-r3.ebuild 5559
 SHA256 e23394ec656136f0dfb4e1ed326f72a89e7f2d8ec7c70ba48c3d40ef59e738bb xorg-server-1.0.2-r3.ebuild 5559
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELY4qAiZjviIA2XgRAhWQAJ92V1oTCbLe6+2EaOKAUGwZaggljwCaA//q
-DxUDPx0JgXumWYCpd7Ktk3k=
-=EEGl
------END PGP SIGNATURE-----
+MD5 582d3c9afd5816ae8428bc4b206bbb73 xorg-server-1.0.99.2.ebuild 5343
+RMD160 376b0cabf4cd313f90fba9111433e9fbbf5f8d03 xorg-server-1.0.99.2.ebuild 5343
+SHA256 2395f5a3276c5c4b917457c99a48a8361bf53fa4cebc5ad900ff2eb7c4855e6c xorg-server-1.0.99.2.ebuild 5343
