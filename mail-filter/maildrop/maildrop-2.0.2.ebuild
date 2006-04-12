@@ -1,23 +1,19 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.2.ebuild,v 1.1 2006/03/01 22:27:19 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.2.ebuild,v 1.2 2006/04/12 00:35:07 vapier Exp $
 
-inherit eutils gnuconfig flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="Mail delivery agent/filter"
-[[ -z ${PV/?.?/} ]] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
+[[ -z ${PV/?.?/}   ]] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 [[ -z ${PV/?.?.?/} ]] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
-[[ -z ${SRC_URI} ]] && SRC_URI="http://www.courier-mta.org/beta/${PN}/${P%%_pre}.tar.bz2"
+[[ -z ${SRC_URI}   ]] && SRC_URI="http://www.courier-mta.org/beta/${PN}/${P%%_pre}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/maildrop/"
-S="${WORKDIR}/${P%%_pre}"
 
-SLOT="0"
 LICENSE="GPL-2"
-
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="berkdb debug fam gdbm ldap mysql postgres authlib"
-
-PROVIDE="virtual/mda"
 
 DEPEND="!mail-mta/courier
 	dev-libs/libpcre
@@ -35,41 +31,39 @@ DEPEND="!mail-mta/courier
 		)
 	)
 	>=sys-devel/automake-1.9.3"
-
 RDEPEND="${DEPEND}
 	dev-lang/perl"
+PROVIDE="virtual/mda"
+
+S=${WORKDIR}/${P%%_pre}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Do not use lazy bindings on /usr/bin/maildrop
 	sed -i -e "s~^maildrop_LDFLAGS =~& $(bindnow-flags)~g" maildrop/Makefile.in
-
-	# Be nice with uclibc also
-	use elibc_uclibc && sed -i -e 's~linux-gnu\*~& | linux-uclibc~' config.sub
 
 	# Prefer gdbm over berkdb
 	if use gdbm ; then
 		use berkdb && einfo "Both gdbm and berkdb selected. Using gdbm."
 	elif use berkdb ; then
-			epatch ${FILESDIR}/${PN}-1.8.0-db4.patch
-			cd ${S}/bdbobj
+			epatch "${FILESDIR}"/${PN}-1.8.0-db4.patch
+			cd "${S}"/bdbobj
 			libtoolize --copy --force
 			WANT_AUTOCONF=2.59 autoconf || die "recreate configure failed (bdbobj)"
 	fi
 
 	if ! use fam ; then
-		cd ${S}
-		epatch ${FILESDIR}/${PN}-1.8.1-disable-fam.patch
-		cd ${S}/maildir
+		cd "${S}"
+		epatch "${FILESDIR}"/${PN}-1.8.1-disable-fam.patch
+		cd "${S}"/maildir
 		WANT_AUTOCONF=2.59 autoconf || die "recreate configure failed (maildir)"
 	fi
 
 	# Only recreate configure if needed
 	if ! use fam || { ! use gdbm && use berkdb ; } ; then
-		cd ${S}
-		gnuconfig_update
+		cd "${S}"
 		libtoolize --copy --force
 		WANT_AUTOCONF=2.59 autoconf || die "recreate configure failed (topdir)"
 	fi
@@ -111,25 +105,25 @@ src_compile() {
 		--enable-maildrop-gid=mail \
 		--with-default-maildrop=./.maildir/ \
 		--enable-sendmail=/usr/sbin/sendmail \
-		--cache-file=${S}/configuring.cache \
+		--cache-file="${S}"/configuring.cache \
 		${myconf} || die
 
 	emake || die "compile problem"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	fperms 4755 /usr/bin/maildrop
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README \
+	dodoc AUTHORS ChangeLog INSTALL NEWS README \
 		README.postfix UPGRADE maildroptips.txt
 
 	dodir /usr/share/doc/${PF}
-	mv ${D}/usr/share/maildrop/html ${D}/usr/share/doc/${PF}
+	mv "${D}"/usr/share/maildrop/html "${D}"/usr/share/doc/${PF}/
 
 	dohtml {INSTALL,README,UPGRADE}.html
 
 	insinto /etc
-	doins ${FILESDIR}/maildroprc
+	doins "${FILESDIR}"/maildroprc
 }
