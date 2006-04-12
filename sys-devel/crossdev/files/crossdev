@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.58 2006/04/11 00:19:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.59 2006/04/12 00:47:36 vapier Exp $
 
 cd /
 
@@ -204,8 +204,8 @@ parse_target() {
 }
 
 setup_portage_vars() {
-	PORTDIR_OVERLAY=$(portageq envvar PORTDIR_OVERLAY)
-	PORTDIR_OVERLAY=${PORTDIR_OVERLAY%% *}
+	PORTDIR_OVERLAYS=$(portageq envvar PORTDIR_OVERLAY)
+	PORTDIR_OVERLAY=${PORTDIR_OVERLAYS%% *}
 	PORTDIR=$(portageq envvar PORTDIR)
 	PORT_LOGDIR=$(portageq envvar PORT_LOGDIR)
 	PORT_LOGDIR=${PORT_LOGDIR:-/var/log/portage}
@@ -457,13 +457,15 @@ set_use() {
 }
 set_links() {
 	local cat=$1 pkg=$2
-	[[ -e ${PORTDIR_OVERLAY}/cross-${CTARGET}/${pkg} ]] \
-		&& rm -f "${PORTDIR_OVERLAY}"/cross-${CTARGET}/${pkg}
-	local srcdir=${PORTDIR}
-	if [[ -e ${PORTDIR_OVERLAY}/${cat}/${pkg} ]] ; then
-		einfo "Using ${cat}/${pkg} from ${PORTDIR_OVERLAY} instead of ${PORTDIR}"
-		srcdir=${PORTDIR_OVERLAY}
-	fi
+	local s srcdir=${PORTDIR}
+	rm -f "${PORTDIR_OVERLAY}"/cross-${CTARGET}/${pkg}
+	for s in ${PORTDIR_OVERLAYS} ; do
+		if [[ -d ${s}/${cat}/${pkg} ]] ; then
+			einfo "Using ${cat}/${pkg} from ${s} instead of ${PORTDIR}"
+			srcdir=${s}
+			break
+		fi
+	done
 	ln -s "${srcdir}"/${cat}/${pkg} "${PORTDIR_OVERLAY}"/cross-${CTARGET}/${pkg}
 }
 set_portage() {

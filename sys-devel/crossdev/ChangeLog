@@ -1,11 +1,17 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.32 2006/04/11 00:19:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.33 2006/04/12 00:47:36 vapier Exp $
+
+*crossdev-0.9.15 (12 Apr 2006)
+
+  12 Apr 2006; Mike Frysinger <vapier@gentoo.org> files/crossdev,
+  +crossdev-0.9.15.ebuild:
+  Add support for multiple PORTDIR_OVERLAY values; fixes from Joel Martin.
 
 *crossdev-0.9.14 (11 Apr 2006)
 
   11 Apr 2006; Mike Frysinger <vapier@gentoo.org> files/crossdev,
-  -crossdev-0.9.13.ebuild, +crossdev-0.9.14.ebuild:
+  +crossdev-0.9.14.ebuild:
   Add support for storing env vars in config files in /etc/portage/crossdev.
 
 *crossdev-0.9.13 (14 Mar 2006)
@@ -18,33 +24,33 @@
 *crossdev-0.9.12-r1 (23 Jan 2006)
 
   23 Jan 2006; Mike Frysinger <vapier@gentoo.org> files/crossdev,
-  -crossdev-0.9.12.ebuild, +crossdev-0.9.12-r1.ebuild:
+  +crossdev-0.9.12-r1.ebuild:
   Forgot to use the disabled gcc flags for stage1 as pointed out by Kumba.
 
 *crossdev-0.9.12 (22 Jan 2006)
 
   22 Jan 2006; Mike Frysinger <vapier@gentoo.org> files/crossdev,
-  -crossdev-0.9.11-r1.ebuild, +crossdev-0.9.12.ebuild:
+  +crossdev-0.9.12.ebuild:
   J. Christopher Six says in #119934: make sure objc-gc is disabled for newer
   versions of gcc.
 
 *crossdev-0.9.11-r1 (08 Jan 2006)
 
   08 Jan 2006; Mike Frysinger <vapier@gentoo.org> files/crossdev,
-  -crossdev-0.9.11.ebuild, +crossdev-0.9.11-r1.ebuild:
+  +crossdev-0.9.11-r1.ebuild:
   Fix typo in avr CPOST logic #118208 by Sandro.
 
 *crossdev-0.9.11 (02 Jan 2006)
 
   02 Jan 2006; Mike Frysinger <vapier@gentoo.org> files/crossdev,
-  -crossdev-0.9.10.ebuild, +crossdev-0.9.11.ebuild:
+  +crossdev-0.9.11.ebuild:
   Add support for nios2/bfin embedded targets and update help output to
   include information about softfloat toolchains.
 
 *crossdev-0.9.10 (18 Nov 2005)
 
   18 Nov 2005; Mike Frysinger <vapier@gentoo.org> files/crossdev,
-  -crossdev-0.9.9-r3.ebuild, +crossdev-0.9.10.ebuild:
+  +crossdev-0.9.10.ebuild:
   Add support for building bootstrap gcc with libc/kernel headers
   (--with-headers), fix cleaning of categories/package.keywords files, add
   generic support for future --with-/--without- options, better detect when a
@@ -54,7 +60,7 @@
 *crossdev-0.9.9-r3 (08 Oct 2005)
 
   08 Oct 2005; Mike Frysinger <vapier@gentoo.org> files/crossdev,
-  -crossdev-0.9.9-r2.ebuild, +crossdev-0.9.9-r3.ebuild:
+  +crossdev-0.9.9-r3.ebuild:
   Add support for passing -d to portage #108383 by Jan Kobler and allow env
   USE/ABI to be passed in.
 
@@ -67,7 +73,7 @@
 *crossdev-0.9.9-r1 (23 Aug 2005)
 
   23 Aug 2005; Mike Frysinger <vapier@gentoo.org> files/crossdev,
-  -crossdev-0.9.9.ebuild, +crossdev-0.9.9-r1.ebuild:
+  +crossdev-0.9.9-r1.ebuild:
   Touchup help output, add more error checking, clean more directories when
   uninstalling, be a bit more user friendly with cmdline options, add untested
   support for klibc, touchup internal syntax, and improve ABI faking out.
@@ -107,7 +113,7 @@
 
   18 Apr 2005; Mike Frysinger <vapier@gentoo.org>
   -files/crossdev-0.4-fixes-one.patch, files/crossdev,
-  -crossdev-0.9.5-r1.ebuild, +crossdev-0.9.6.ebuild:
+  +crossdev-0.9.6.ebuild:
   Add some initial support for ps2 targets (ee/iop/dvp).
 
 *crossdev-0.9.5-r1 (25 Mar 2005)
@@ -119,14 +125,14 @@
 *crossdev-0.9.5 (16 Mar 2005)
 
   16 Mar 2005; Mike Frysinger <vapier@gentoo.org> files/crossdev,
-  -crossdev-0.9.1-r2.ebuild, +crossdev-0.9.5.ebuild:
+  +crossdev-0.9.5.ebuild:
   Make binutils/gcc/linux-headers dynamic package names (to support
   mips-headers). Add support for pulling in avr libc (thanks to Scott).
 
 *crossdev-0.9.1-r2 (12 Mar 2005)
 
   12 Mar 2005; Mike Frysinger <vapier@gentoo.org> files/crossdev,
-  -crossdev-0.9.1-r1.ebuild, +crossdev-0.9.1-r2.ebuild:
+  +crossdev-0.9.1-r2.ebuild:
   Add a --stage0 (for binutils), use a diff PORTAGE_TMPDIR, and make sure that
   the diff PKGDIR is actually used.
 
@@ -140,14 +146,14 @@
 *crossdev-0.9.1 (09 Mar 2005)
 
   09 Mar 2005; Mike Frysinger <vapier@gentoo.org> files/crossdev,
-  -crossdev-0.9-r3.ebuild, +crossdev-0.9.1.ebuild:
+  +crossdev-0.9.1.ebuild:
   Add sanity checks for host system and add support for avr (fixes from Scott
   L Price).
 
 *crossdev-0.9-r3 (04 Mar 2005)
 
   04 Mar 2005; Mike Frysinger <vapier@gentoo.org> files/crossdev,
-  -crossdev-0.9-r2.ebuild, +crossdev-0.9-r3.ebuild:
+  +crossdev-0.9-r3.ebuild:
   Fix option collsion between internal -b (--binutils) and portages -b (build
   package).
 
